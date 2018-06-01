@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2018/04/16 14:35:11 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2018/06/01 17:04:55 youri Exp $
 #
 
 DISTNAME=	gnome-settings-daemon-2.32.1
@@ -47,8 +47,8 @@ BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.74
 .include "../../x11/gnome-desktop/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.21.2
 .include "../../x11/gtk2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libgnomekbd+=	libgnomekbd>=2.31.2
-.include "../../x11/libgnomekbd/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libgnomekbd2+=	libgnomekbd2>=2.31.2
+.include "../../x11/libgnomekbd2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libxklavier+=	libxklavier>=5.0
 .include "../../x11/libxklavier/buildlink3.mk"
 
