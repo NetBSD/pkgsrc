@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2658 2018/06/01 07:16:43 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2659 2018/06/01 07:19:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3814,3 +3814,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Devel-CheckLib to 1.12 [wen 2018-06-01]
 	Updated math/R-VGAM to 1.0.5 [wen 2018-06-01]
 	Updated security/p5-String-Random to 0.30 [wen 2018-06-01]
+	Updated devel/cmake to 3.11.3 [adam 2018-06-01]
+	Updated shells/dash to 0.5.10.2 [adam 2018-06-01]
