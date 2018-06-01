@@ -1,3 +1,4 @@
+$NetBSD: patch-settings_xfae-dialog.c,v 1.2 2018/06/01 14:15:47 youri Exp $
 
 With xfce4-session built from git (after the gtk3
 migration work), trying to add or edit an application
