@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/04/15 21:58:24 brook Exp $
+# $NetBSD: Makefile,v 1.12 2018/06/01 06:36:49 wen Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -8,8 +8,10 @@ HOMEPAGE=	${R_HOMEPAGE_BASE}/akima/
 COMMENT=	Linear or cubic spline interpolation for irregular gridded data
 LICENSE=	acm-license
 
+DEPENDS+=	R-sp>=0:../../math/R-sp
+
 R_PKGNAME=	akima
-R_PKGVER=	0.5-7
+R_PKGVER=	0.6-2
 
 # Note: the ACM license requires notification prior to distribution of
 # modified versions of this package.  If patches are required, then to
