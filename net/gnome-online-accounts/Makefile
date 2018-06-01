@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2018/05/31 14:44:30 youri Exp $
+# $NetBSD: Makefile,v 1.22 2018/06/01 22:00:06 youri Exp $
 
-DISTNAME=	gnome-online-accounts-3.29.1
+DISTNAME=	gnome-online-accounts-3.28.0
 CATEGORIES=	net devel
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-online-accounts/3.29/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-online-accounts/3.28/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
