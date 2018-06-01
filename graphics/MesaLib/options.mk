@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.59 2018/05/17 16:11:23 maya Exp $
+# $NetBSD: options.mk,v 1.60 2018/06/01 14:54:43 maya Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -15,7 +15,7 @@ PKG_SUGGESTED_OPTIONS+=		llvm
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" ||		\
 	${OPSYS} == "DragonFly" || ${OPSYS} == "Linux" ||	\
 	${OPSYS} == "SunOS" || ${OPSYS} == "Darwin" ||		\
-	(${OPSYS} == "NetBSD" && ${X11_TYPE} == "modular")
+	${OPSYS} == "NetBSD"
 PKG_SUGGESTED_OPTIONS+=		dri
 .endif
 
