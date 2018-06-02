@@ -1,0 +1,2 @@
+This library provides a target-independ implementation of the runtime
+interface for Apple's "Blocks" extension.
