@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2671 2018/06/02 00:11:51 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.2672 2018/06/02 09:57:25 roy Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3829,3 +3829,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated geography/proj to 5.1.0 [gdt 2018-06-01]
 	Updated lang/rust to 1.26.1 [ryoon 2018-06-02]
 	Updated mail/mailfront to 2.20 [schmonz 2018-06-02]
+	Updated net/dhcpcd to 7.0.5 [roy 2018-06-02]
