@@ -1,6 +1,7 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2018/05/07 22:19:34 minskim Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2018/06/02 19:13:45 joerg Exp $
 
 Avoid conflicts with pkgsrc's CMAKE_MODULE_PATH override.
+Disable examples as they require Linux specific headers.
 
 --- CMakeLists.txt.orig	2018-01-24 06:58:01.000000000 +0000
 +++ CMakeLists.txt
@@ -135,3 +136,12 @@ Avoid conflicts with pkgsrc's CMAKE_MODULE_PATH override.
                  )
          endif (BUILD_AVX512)
          add_library(hs_exec_common_shared OBJECT
+@@ -1319,8 +1318,3 @@ if (NOT BUILD_STATIC_LIBS)
+     # use shared lib without having to change all the targets
+     add_library(hs ALIAS hs_shared)
+ endif ()
+-
+-
+-if(NOT WIN32)
+-    add_subdirectory(examples)
+-endif()
