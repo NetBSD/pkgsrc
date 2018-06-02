@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2674 2018/06/02 13:17:11 prlw1 Exp $
+$NetBSD: CHANGES-2018,v 1.2675 2018/06/02 19:12:28 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3832,3 +3832,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/dhcpcd to 7.0.5 [roy 2018-06-02]
 	Updated multimedia/minidlna to 1.2.1.20180601 [jmcneill 2018-06-02]
 	Updated benchmarks/glmark2 to 2017.07 [prlw1 2018-06-02]
+	Added lang/libBlocksRuntime version 6.0.0 [joerg 2018-06-02]
+	Added lang/libBlocksRuntime version 6.0.0 [joerg 2018-06-02]
+	Added lang/libBlocksRuntime version 6.0.0 [joerg 2018-06-02]
