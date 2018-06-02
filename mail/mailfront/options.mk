@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2018/06/02 00:10:48 schmonz Exp $
+# $NetBSD: options.mk,v 1.3 2018/06/02 00:13:58 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mailfront
 PKG_SUPPORTED_OPTIONS+=	lua gnutls
-#PKG_SUGGESTED_OPTIONS+=	lua gnutls
+PKG_SUGGESTED_OPTIONS+=	gnutls
 
 .include "../../mk/bsd.options.mk"
 
