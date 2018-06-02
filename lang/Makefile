@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.482 2018/05/21 10:06:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.483 2018/06/02 19:11:22 joerg Exp $
 #
 
 COMMENT=	Programming languages
@@ -116,6 +116,7 @@ SUBDIR+=	kaffe-x11
 SUBDIR+=	kali
 SUBDIR+=	konoha
 SUBDIR+=	ksi
+SUBDIR+=	libBlocksRuntime
 SUBDIR+=	libLLVM
 SUBDIR+=	libLLVM34
 SUBDIR+=	libduktape
