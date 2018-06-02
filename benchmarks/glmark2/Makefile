@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.10 2017/01/01 14:43:24 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2018/06/02 13:16:42 prlw1 Exp $
 
-DISTNAME=	glmark2-2014.03
-PKGREVISION=	2
+DISTNAME=	glmark2-2017.07
 CATEGORIES=	benchmarks
 MASTER_SITES=	${MASTER_SITE_GITHUB:=glmark2/}
-GITHUB_TAG=	acac90b257a14bd14a1492cd442b79dcaa1c13cf
+GITHUB_TAG=	168d2f1650c84be3f13d1a5b76ccec8cbb89188e
 
 MAINTAINER=	prlw1@cam.ac.uk
 HOMEPAGE=	https://github.com/glmark2/glmark2
 COMMENT=	OpenGL 2.0 and ES 2.0 benchmark
 LICENSE=	gnu-gpl-v3 AND modified-bsd
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36
 
