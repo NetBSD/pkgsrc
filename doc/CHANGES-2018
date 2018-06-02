@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2670 2018/06/01 23:42:40 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.2671 2018/06/02 00:11:51 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3828,3 +3828,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/gnome-online-accounts to 3.28.0 [youri 2018-06-01]
 	Updated geography/proj to 5.1.0 [gdt 2018-06-01]
 	Updated lang/rust to 1.26.1 [ryoon 2018-06-02]
+	Updated mail/mailfront to 2.20 [schmonz 2018-06-02]
