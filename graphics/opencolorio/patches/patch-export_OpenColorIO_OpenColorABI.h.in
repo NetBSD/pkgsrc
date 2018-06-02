@@ -1,0 +1,27 @@
+$NetBSD: patch-export_OpenColorIO_OpenColorABI.h.in,v 1.1 2018/06/02 19:06:55 joerg Exp $
+
+--- export/OpenColorIO/OpenColorABI.h.in.orig	2018-06-02 18:44:34.294762599 +0000
++++ export/OpenColorIO/OpenColorABI.h.in
+@@ -50,17 +50,17 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ #define OCIO_NAMESPACE_EXIT using namespace OCIO_VERSION_NS; }
+ #define OCIO_NAMESPACE_USING using namespace OCIO_NAMESPACE;
+ 
++#include <cstddef>
++
+ // shared_ptr / dynamic_pointer_cast
+ #if OCIO_USE_BOOST_PTR
+ #include <boost/shared_ptr.hpp>
+ #define OCIO_SHARED_PTR boost::shared_ptr
+ #define OCIO_DYNAMIC_POINTER_CAST boost::dynamic_pointer_cast
+-#elif __GNUC__ >= 4
+-#include <tr1/memory>
+-#define OCIO_SHARED_PTR std::tr1::shared_ptr
+-#define OCIO_DYNAMIC_POINTER_CAST std::tr1::dynamic_pointer_cast
+ #else
+-#error OCIO needs gcc 4 or later to get access to <tr1/memory> (or specify USE_BOOST_PTR instead)
++#include <memory>
++#define OCIO_SHARED_PTR std::shared_ptr
++#define OCIO_DYNAMIC_POINTER_CAST std::dynamic_pointer_cast
+ #endif
+ 
+ // If supported, define OCIOEXPORT, OCIOHIDDEN
