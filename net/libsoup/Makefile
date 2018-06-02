@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2018/05/26 21:48:31 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2018/06/02 22:48:34 youri Exp $
 
 DISTNAME=	libsoup-2.62.2
 CATEGORIES=	net gnome
@@ -21,7 +21,8 @@ CONFIGURE_ENV+=		DATADIRNAME=share
 
 # XXX: disable Vala bindings otherwise the configure phase fails because is not
 # XXX: able to find vapigen.
-CONFIGURE_ARGS+=	--enable-vala=no
+CONFIGURE_ARGS+=	--enable-vala=no \
+			--disable-tls-check
 
 PKGCONFIG_OVERRIDE+=	libsoup-2.4.pc.in
 PKGCONFIG_OVERRIDE+=	libsoup-gnome-2.4.pc.in
