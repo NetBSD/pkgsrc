@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/05/23 06:10:48 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2018/06/02 22:29:11 youri Exp $
 
 DISTNAME=	vte-0.50.3
 PKGNAME=	${DISTNAME:S/vte/vte3/}
@@ -20,7 +20,7 @@ USE_LANGUAGES=		c c++
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "SunOS"
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--disable-Bsymbolic
 .else
 CONFIGURE_ARGS+=	--enable-Bsymbolic=auto
