@@ -1,0 +1,14 @@
+$NetBSD: patch-configure.ac,v 1.1 2018/06/02 12:53:10 jmcneill Exp $
+
+--- configure.ac.orig	2018-05-04 23:11:25.000000000 +0000
++++ configure.ac
+@@ -638,6 +638,9 @@ case "$target_os" in
+ 		;;
+         linux*)
+ 		;;
++	netbsd*)
++		OS_URL=http://www.NetBSD.org/
++		;;
+         openbsd*)
+                 OS_URL=http://www.openbsd.org/
+                 ;;

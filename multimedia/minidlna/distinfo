@@ -1,7 +1,12 @@
-$NetBSD: distinfo,v 1.8 2016/07/07 08:31:20 wiz Exp $
+$NetBSD: distinfo,v 1.9 2018/06/02 12:53:10 jmcneill Exp $
 
-SHA1 (minidlna-1.1.5.tar.gz) = 8185337621f5f9111118d8a4bca1e8cfcdd19505
-RMD160 (minidlna-1.1.5.tar.gz) = 6a86c63ca1186105ef4cdc5e98d06e95d536d1b8
-SHA512 (minidlna-1.1.5.tar.gz) = 2a8eaa42fcda6f98648f1726af5cdba6d2358c386440dd0de933364cfbd1ced2fee5f883033e1a5a692b760749beb2c12798020a3591ddcea22663102d4f3dfa
-Size (minidlna-1.1.5.tar.gz) = 488191 bytes
+SHA1 (minidlna-git-799e6cf505ec470b2bf0ae4118143380aa16b837.zip) = 20e445226350a138f85554a00ffae2ecb5cff50a
+RMD160 (minidlna-git-799e6cf505ec470b2bf0ae4118143380aa16b837.zip) = ecd8872943fe8d95f21670d9ef706bb13d4f2a97
+SHA512 (minidlna-git-799e6cf505ec470b2bf0ae4118143380aa16b837.zip) = 9e9643ea67f305134172bd98789a6bc0ce7a8e6c0022484d04daf9f8031a1718373c9c21a9ec55f396fe5e23c8a05255fea897949a319811aeef5ecee7bab830
+Size (minidlna-git-799e6cf505ec470b2bf0ae4118143380aa16b837.zip) = 388259 bytes
+SHA1 (patch-configure.ac) = 514c50b89599f0dfdc5b5f75e0fd67848980da19
 SHA1 (patch-icons.c) = 953a0fa460c674c0cacba133c640028ef282fd8f
+SHA1 (patch-kqueue.c) = fb698c407bf21046625ae73b0051fa75eef71ff6
+SHA1 (patch-monitor.c) = 82df49892a8967d9af28f8fe1ef1cdb01698400b
+SHA1 (patch-monitor__kqueue.c) = f55df2390c7364aa3fc4945cab2cab66bd79d95a
+SHA1 (patch-utils.h) = 3748c6eabade231d01adabfd08594965d242e128
