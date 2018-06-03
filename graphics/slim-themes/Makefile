@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2018/05/18 15:10:15 youri Exp $
+# $NetBSD: Makefile,v 1.2 2018/06/03 22:12:13 youri Exp $
 
 GHCOMMIT=	13cba0d7d6abf286047c3d551d84db415cc7ea52
 DISTNAME=	${GHCOMMIT}
-PKGNAME=	slim-themes-02142018
+PKGNAME=	slim-themes-20180214
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=adi1090x/slim_themes/archive/}
 
