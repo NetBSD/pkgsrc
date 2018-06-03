@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2018/04/16 14:33:48 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2018/06/03 22:11:14 youri Exp $
 
 DISTNAME=	libwnck-3.24.1
 PKGNAME=	${DISTNAME:S/libwnck/libwnck3/}
@@ -25,7 +25,6 @@ CONFIGURE_ARGS+=	--disable-tools
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
-.include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.22.0
 .include "../../x11/gtk3/buildlink3.mk"
