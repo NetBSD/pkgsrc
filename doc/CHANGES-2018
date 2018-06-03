@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2676 2018/06/02 20:02:04 he Exp $
+$NetBSD: CHANGES-2018,v 1.2677 2018/06/03 21:50:41 ast Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3805,6 +3805,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/gnome-online-accounts to 3.29.1 [youri 2018-05-31]
 	Updated graphics/clutter to 1.26.2 [youri 2018-05-31]
 	Updated pkgtools/pkgin to 0.10.1 [jperkin 2018-05-31]
+	Updated graphics/ImageMagick to 7.0.7.37 [ast 2018-05-31]
 	Updated devel/R-inline to 0.3.15 [wen 2018-06-01]
 	Updated devel/R-rlang to 0.2.1 [wen 2018-06-01]
 	Updated devel/p5-Test-Warn to 0.34 [wen 2018-06-01]
