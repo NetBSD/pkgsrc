@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2017/09/24 14:35:08 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2018/06/03 01:32:23 markd Exp $
 
 DISTNAME=	mptopdf
 PKGNAME=	tex-${DISTNAME}-2017
+PKGREVISION=	1
 TEXLIVE_REV=	44856
 
 MAINTAINER=	minskim@NetBSD.org
@@ -16,7 +17,7 @@ SUPERSEDES+=	tex-supp-pdf<2010
 
 INSTALLATION_DIRS=	bin
 
-TEX_FORMATS+=		"mptopdf pdftex -translate-file=cp227.tcx mptopdf.tex\\n"
+TEX_FORMATS+=		"mptopdf pdftex - -translate-file=cp227.tcx mptopdf.tex\\n"
 
 .include "../../print/texlive/package.mk"
 
