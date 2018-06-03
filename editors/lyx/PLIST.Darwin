@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST.Darwin,v 1.1 2011/03/09 18:48:51 minskim Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.2 2018/06/03 02:28:07 youri Exp $
 Applications/LyX.app/Contents/Info.plist
 Applications/LyX.app/Contents/Library/Spotlight/LyX-Metadata.mdimporter/Contents/Info.plist
 Applications/LyX.app/Contents/MacOS/lyxeditor
 Applications/LyX.app/Contents/PkgInfo
 Applications/LyX.app/Contents/Resources/COPYING
 Applications/LyX.app/Contents/Resources/LyX.icns
+Applications/LyX.app/Contents/Resources/LyX.sdef
 Applications/LyX.app/Contents/Resources/LyXapp.icns
+Applications/LyX.app/Contents/Resources/dmg-background.png
 Applications/LyX.app/Contents/Resources/lyxrc.dist

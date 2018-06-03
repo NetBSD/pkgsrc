@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2018/04/29 21:31:35 adam Exp $
+# $NetBSD: Makefile,v 1.67 2018/06/03 02:28:07 youri Exp $
 
 DISTNAME=		lyx-2.2.2
 PKGREVISION=		6
@@ -58,11 +58,11 @@ DEPENDS+=		tex-xypic-[0-9]*:../../graphics/tex-xypic
 
 UNLIMIT_RESOURCES+=	datasize
 
-USE_LANGUAGES=		c c++
-GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake perl:run pkg-config xgettext
-USE_LIBTOOL=		YES
-USE_PKGLOCALEDIR=	YES
+USE_LANGUAGES=			c c++
+GNU_CONFIGURE=			YES
+USE_TOOLS+=			gmake perl:run pkg-config xgettext
+USE_LIBTOOL=			YES
+USE_PKGLOCALEDIR=		YES
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.6.10
 
 CXXFLAGS.Linux+=	-fpermissive
@@ -78,6 +78,8 @@ CONFIGURE_ARGS+=	--with-extra-prefix=${BUILDLINK_PREFIX.qt4-libs} \
 
 .include "../../mk/bsd.prefs.mk"
 
+PLIST_VARS+=		x11
+
 .if ${OPSYS} == "Darwin"
 GNU_CONFIGURE_PREFIX=	${PREFIX}/Applications/LyX.app
 PLIST_SUBST+=		BIN_DIR=Applications/LyX.app/Contents/MacOS \
@@ -89,6 +91,7 @@ PLIST_SUBST+=		BIN_DIR=bin \
 			LYX=lyx \
 			MAN_DIR="${PKGMANDIR}" \
 			SHARE_DIR=share/lyx
+PLIST.x11=		yes
 .endif
 
 PRINT_PLIST_AWK+=	{ sub(/bin\//, "$${BIN_DIR}/"); \
