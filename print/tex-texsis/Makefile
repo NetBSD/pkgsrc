@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/31 06:45:33 markd Exp $
+# $NetBSD: Makefile,v 1.2 2018/06/03 01:28:35 markd Exp $
 
 DISTNAME=	texsis
 PKGNAME=	tex-${DISTNAME}-2.18
+PKGREVISION=	1
 TEXLIVE_REV=	31958
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,7 +14,7 @@ DEPENDS+=	tex-tex-[0-9]*:../../print/tex-tex
 
 INSTALLATION_DIRS+=	bin
 
-TEX_FORMATS+=	"texsis pdftex -translate-file=cp227.tcx texsis.ini\\n"
+TEX_FORMATS+=	"texsis pdftex - -translate-file=cp227.tcx texsis.ini\\n"
 
 .include "../../print/texlive/package.mk"
 
