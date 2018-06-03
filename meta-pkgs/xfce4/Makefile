@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.84 2018/05/29 00:17:17 youri Exp $
+# $NetBSD: Makefile,v 1.85 2018/06/03 02:35:27 youri Exp $
 
 META_PACKAGE=	yes
 
-PKGREVISION= 12
+PKGREVISION= 13
 .include "Makefile.common"
 
 DISTNAME=	xfce4-${XFCE4_VERSION}
@@ -27,6 +27,7 @@ DEPENDS+=	xfce4-xarchiver>=0.5.2:../../sysutils/xfce4-xarchiver
 DEPENDS+=	elementary-xfce-icon-theme>=0.5:../../graphics/elementary-xfce-icon-theme
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 DEPENDS+=	mate-polkit-[0-9]*:../../security/mate-polkit
+DEPENDS+=	gnome-themes-standard>=3.20.2:../../graphics/gnome-themes-standard
 
 pre-extract:
 	${MKDIR} ${WRKSRC}
