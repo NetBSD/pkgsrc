@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/16 10:30:14 markd Exp $
+# $NetBSD: Makefile,v 1.2 2018/06/03 01:25:25 markd Exp $
 
 DISTNAME=	amstex
 PKGNAME=	tex-${DISTNAME}-2.2
+PKGREVISION=	1
 TEXLIVE_REV=	33736
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,7 +14,7 @@ DEPENDS+=	tex-tex-[0-9]*:../../print/tex-tex
 
 INSTALLATION_DIRS=	bin
 
-TEX_FORMATS+=	"amstex pdftex -translate-file=cp227.tcx *amstex.ini\\n"
+TEX_FORMATS+=	"amstex pdftex - -translate-file=cp227.tcx *amstex.ini\\n"
 
 .include "../../print/texlive/package.mk"
 
