@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.63 2018/05/20 06:16:20 maya Exp $
+@comment $NetBSD: PLIST,v 1.64 2018/06/03 22:27:02 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -134,6 +134,9 @@ ${PYSITELIB}/youtube_dl/extractor/anysex.pyo
 ${PYSITELIB}/youtube_dl/extractor/aol.py
 ${PYSITELIB}/youtube_dl/extractor/aol.pyc
 ${PYSITELIB}/youtube_dl/extractor/aol.pyo
+${PYSITELIB}/youtube_dl/extractor/apa.py
+${PYSITELIB}/youtube_dl/extractor/apa.pyc
+${PYSITELIB}/youtube_dl/extractor/apa.pyo
 ${PYSITELIB}/youtube_dl/extractor/aparat.py
 ${PYSITELIB}/youtube_dl/extractor/aparat.pyc
 ${PYSITELIB}/youtube_dl/extractor/aparat.pyo
@@ -275,6 +278,12 @@ ${PYSITELIB}/youtube_dl/extractor/c56.pyo
 ${PYSITELIB}/youtube_dl/extractor/camdemy.py
 ${PYSITELIB}/youtube_dl/extractor/camdemy.pyc
 ${PYSITELIB}/youtube_dl/extractor/camdemy.pyo
+${PYSITELIB}/youtube_dl/extractor/cammodels.py
+${PYSITELIB}/youtube_dl/extractor/cammodels.pyc
+${PYSITELIB}/youtube_dl/extractor/cammodels.pyo
+${PYSITELIB}/youtube_dl/extractor/camtube.py
+${PYSITELIB}/youtube_dl/extractor/camtube.pyc
+${PYSITELIB}/youtube_dl/extractor/camtube.pyo
 ${PYSITELIB}/youtube_dl/extractor/camwithher.py
 ${PYSITELIB}/youtube_dl/extractor/camwithher.pyc
 ${PYSITELIB}/youtube_dl/extractor/camwithher.pyo
@@ -1364,6 +1373,9 @@ ${PYSITELIB}/youtube_dl/extractor/pbs.pyo
 ${PYSITELIB}/youtube_dl/extractor/pearvideo.py
 ${PYSITELIB}/youtube_dl/extractor/pearvideo.pyc
 ${PYSITELIB}/youtube_dl/extractor/pearvideo.pyo
+${PYSITELIB}/youtube_dl/extractor/peertube.py
+${PYSITELIB}/youtube_dl/extractor/peertube.pyc
+${PYSITELIB}/youtube_dl/extractor/peertube.pyo
 ${PYSITELIB}/youtube_dl/extractor/people.py
 ${PYSITELIB}/youtube_dl/extractor/people.pyc
 ${PYSITELIB}/youtube_dl/extractor/people.pyo
