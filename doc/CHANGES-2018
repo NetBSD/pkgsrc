@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2677 2018/06/03 21:50:41 ast Exp $
+$NetBSD: CHANGES-2018,v 1.2678 2018/06/03 22:27:25 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3837,3 +3837,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added lang/libBlocksRuntime version 6.0.0 [joerg 2018-06-02]
 	Added lang/libBlocksRuntime version 6.0.0 [joerg 2018-06-02]
 	Updated lang/LuaJIT2 to 2.0.5nb1 [he 2018-06-02]
+	Updated net/youtube-dl to 20180604 [leot 2018-06-03]
