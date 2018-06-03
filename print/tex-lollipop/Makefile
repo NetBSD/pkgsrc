@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2016/08/07 09:09:39 markd Exp $
+# $NetBSD: Makefile,v 1.4 2018/06/03 01:27:21 markd Exp $
 
 DISTNAME=	lollipop
 PKGNAME=	tex-${DISTNAME}-1.07
+PKGREVISION=	1
 TEXLIVE_REV=	41438
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,16 +14,11 @@ DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
 
 INSTALLATION_DIRS+=	bin
 
-TEX_FORMATS+=	"lollipop pdftex -translate-file=cp227.tcx *lollipop.ini\\n"
-
-# execute AddFormat name=lualollipop engine=luatex         options="lualollipop.ini"
-# execute AddFormat name=xelollipop engine=xetex         options="-etex xelollipop.ini"
-# execute AddFormat name=dvilollipop mode=disabled engine=pdftex         options="-translate-file=cp227.tcx *lollipop.ini"
-# execute AddFormat name=dvilualollipop mode=disabled engine=luatex         options="-translate-file=cp227.tcx lualollipop.ini"
+TEX_FORMATS+=	"lollipop tex - lollipop.ini\\n"
 
 .include "../../print/texlive/package.mk"
 
 post-install:
-	${LN} -sf pdftex ${DESTDIR}${PREFIX}/bin/lollipop
+	${LN} -sf tex ${DESTDIR}${PREFIX}/bin/lollipop
 
 .include "../../mk/bsd.pkg.mk"
