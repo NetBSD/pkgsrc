@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2018/04/16 10:19:37 morr Exp $
+@comment $NetBSD: PLIST,v 1.40 2018/06/04 09:05:00 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -51,6 +51,7 @@ share/vim/${VIM_SUBDIR}/autoload/xml/xhtml11.vim
 share/vim/${VIM_SUBDIR}/autoload/xml/xsd.vim
 share/vim/${VIM_SUBDIR}/autoload/xml/xsl.vim
 share/vim/${VIM_SUBDIR}/autoload/xmlcomplete.vim
+share/vim/${VIM_SUBDIR}/autoload/xmlformat.vim
 share/vim/${VIM_SUBDIR}/autoload/zip.vim
 share/vim/${VIM_SUBDIR}/bugreport.vim
 share/vim/${VIM_SUBDIR}/colors/README.txt
@@ -70,6 +71,7 @@ share/vim/${VIM_SUBDIR}/colors/peachpuff.vim
 share/vim/${VIM_SUBDIR}/colors/ron.vim
 share/vim/${VIM_SUBDIR}/colors/shine.vim
 share/vim/${VIM_SUBDIR}/colors/slate.vim
+share/vim/${VIM_SUBDIR}/colors/tools/check_colors.vim
 share/vim/${VIM_SUBDIR}/colors/torte.vim
 share/vim/${VIM_SUBDIR}/colors/zellner.vim
 share/vim/${VIM_SUBDIR}/compiler/README.txt
@@ -836,6 +838,7 @@ share/vim/${VIM_SUBDIR}/syntax/dcd.vim
 share/vim/${VIM_SUBDIR}/syntax/dcl.vim
 share/vim/${VIM_SUBDIR}/syntax/debchangelog.vim
 share/vim/${VIM_SUBDIR}/syntax/debcontrol.vim
+share/vim/${VIM_SUBDIR}/syntax/debcopyright.vim
 share/vim/${VIM_SUBDIR}/syntax/debsources.vim
 share/vim/${VIM_SUBDIR}/syntax/def.vim
 share/vim/${VIM_SUBDIR}/syntax/denyhosts.vim
