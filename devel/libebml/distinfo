@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.31 2018/04/22 21:38:22 adam Exp $
+$NetBSD: distinfo,v 1.32 2018/06/04 20:27:09 mrg Exp $
 
 SHA1 (libebml-1.3.6.tar.xz) = f37cc15c651db8c28f7bc3d69c7a81c08600dd0e
 RMD160 (libebml-1.3.6.tar.xz) = a5ec0996a02b59c3514586e1285072df13b71186
 SHA512 (libebml-1.3.6.tar.xz) = 6a31a56dcde39642848f25353a462f4621d6cfd3bc9ef62add1b00d098c6a80b3c2b50ecf4d6dd50650c609eb39a6150c6d1b69ea3a77a3928bd3300af7dd91f
 Size (libebml-1.3.6.tar.xz) = 57764 bytes
+SHA1 (patch-src_EbmlSInteger.cpp) = 102271d4d1f8fe3356562f84a4235159026f1538
