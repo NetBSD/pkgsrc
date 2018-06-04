@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2018/05/16 15:40:32 youri Exp $
+# $NetBSD: Makefile,v 1.41 2018/06/04 01:01:50 youri Exp $
 
 CONSOLEKIT_VER=	1.2.1
+PKGREVISION=	1
 DISTNAME=	ConsoleKit2-${CONSOLEKIT_VER}
 PKGNAME=	consolekit-${CONSOLEKIT_VER}
 CATEGORIES=	sysutils
