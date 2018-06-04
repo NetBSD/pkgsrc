@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2018/06/03 02:35:27 youri Exp $
+# $NetBSD: Makefile,v 1.86 2018/06/04 01:39:48 youri Exp $
 
 META_PACKAGE=	yes
 
@@ -12,7 +12,6 @@ COMMENT=	Xfce
 DEPENDS+=	xfce4-tumbler>=0.1.27:../../x11/xfce4-tumbler
 DEPENDS+=	xfce4-appfinder>=4.10.0:../../sysutils/xfce4-appfinder
 DEPENDS+=	xfce4-desktop>=4.10.0:../../x11/xfce4-desktop
-DEPENDS+=	xfce4-gtk2-engine>=3.0.1:../../x11/xfce4-gtk2-engine
 DEPENDS+=	xfce4-mousepad>=0.3.0:../../editors/xfce4-mousepad
 DEPENDS+=	xfce4-panel>=4.10.0:../../x11/xfce4-panel
 DEPENDS+=	xfce4-power-manager>=1.6.1:../../sysutils/xfce4-power-manager
