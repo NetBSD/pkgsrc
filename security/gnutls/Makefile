@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.180 2018/06/04 11:16:12 youri Exp $
+# $NetBSD: Makefile,v 1.181 2018/06/04 12:45:47 leot Exp $
 
 DISTNAME=	gnutls-3.6.0
 PKGREVISION=	2
@@ -23,6 +23,7 @@ CONFIGURE_ARGS+=		--disable-libdane
 CONFIGURE_ARGS+=		--without-tpm
 CONFIGURE_ARGS+=		--disable-valgrind-tests
 CONFIGURE_ARGS+=		--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
+CONFIGURE_ARGS+=		--enable-local-libopts
 # Assembler support is broken for SunOS in 3.2.9.
 CONFIGURE_ARGS.SunOS+=		--disable-hardware-acceleration
 CONFIGURE_ARGS.FreeBSD+=	ac_cv_type_max_align_t=yes
