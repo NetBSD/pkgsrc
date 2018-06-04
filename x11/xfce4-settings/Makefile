@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2018/05/15 22:18:03 youri Exp $
+# $NetBSD: Makefile,v 1.41 2018/06/04 01:34:12 youri Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 VERSION=	4.13.2
+PKGREVISION=	1
 DISTNAME=	xfce4-settings-${VERSION}
 CATEGORIES=	x11
 MASTER_SITES=	http://archive.xfce.org/src/xfce/xfce4-settings/4.13/
@@ -14,6 +15,7 @@ BUILD_DEFS+=		PKG_SYSCONFBASE
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ARGS+=	--enable-sound-settings
+CONFIGURE_ARGS+=	--enable-pluggable-dialog
 
 PKG_SYSCONFSUBDIR=	xdg
 
@@ -35,6 +37,7 @@ MAKE_DIRS+=	${PKG_SYSCONFDIR}/menus \
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
+.include "../../sysutils/upower/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
