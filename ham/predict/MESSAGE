@@ -1,0 +1,23 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2018/06/04 07:18:47 dbj Exp $
+
+The TLE database included in this package has not been updated since 2006.
+You probably should update it from online sources such as:
+
+https://www.amsat.org/amsat/ftp/keps/current/nasabare.txt
+https://www.celestrak.com/NORAD/elements/amateur.txt
+https://www.celestrak.com/NORAD/elements/visual.txt
+https://www.celestrak.com/NORAD/elements/weather.txt
+https://www.celestrak.com/NORAD/elements/goes.txt
+https://www.celestrak.com/NORAD/elements/stations.txt
+
+Similarly, many of the default satellites loaded on first run
+are no longer available.  You can edit them with the [E] menu
+option and change the name and catalog number before loading new
+elements.
+
+Alternately, you can edit the list in
+  ~/.predict/predict.tle
+after first launch to include the satellites you wish to track.
+
+===========================================================================
