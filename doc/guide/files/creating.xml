@@ -1,4 +1,4 @@
-<!-- $NetBSD: creating.xml,v 1.26 2017/11/26 09:43:02 wiz Exp $ -->
+<!-- $NetBSD: creating.xml,v 1.27 2018/06/04 23:55:00 minskim Exp $ -->
 
 <chapter id="creating">
 <title>Creating a new pkgsrc package from scratch</title>
@@ -411,7 +411,7 @@ large, I didn't want to fix it. So I added the following to the package
 
 <programlisting>
 CPPFLAGS+=              -I${BUILDLINK_PREFIX.libIDL}/include/libIDL-2.0
-BUILDLINK_TRANSFORM+=   -l:IDL:IDL-2
+BUILDLINK_TRANSFORM+=   l:IDL:IDL-2
 </programlisting>
 
 <para>The latter line is needed because the package expects the library
