@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.285 2018/05/28 08:46:32 wiz Exp $
+# $NetBSD: Makefile,v 1.286 2018/06/04 05:32:13 dbj Exp $
 
 DISTNAME=	gimp-2.10.2
 CATEGORIES=	graphics
@@ -40,6 +40,11 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
 PLIST_VARS+=		remote
+.if ${OPSYS} == "Darwin"
+PLIST_SUBST+=  GIMP_DEBUG_TOOL_DIR="bin"
+.else
+PLIST_SUBST+=  GIMP_DEBUG_TOOL_DIR="libexec"
+.endif
 
 .include "options.mk"
 
