@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2018/05/15 22:18:03 youri Exp $
+$NetBSD: distinfo,v 1.10 2018/06/04 01:34:12 youri Exp $
 
 SHA1 (xfce4-settings-4.13.2.tar.bz2) = dc1257ac084100f061f96a9fca085447879155a3
 RMD160 (xfce4-settings-4.13.2.tar.bz2) = babfcab442abae05e1f2c9cd544e27bae6ec75e6
@@ -6,4 +6,4 @@ SHA512 (xfce4-settings-4.13.2.tar.bz2) = 3564ee50914a6cb1955457c2b7bc5b515815142
 Size (xfce4-settings-4.13.2.tar.bz2) = 1043277 bytes
 SHA1 (patch-xfce4-settings-manager_Makefile.in) = c02cd0ccede9cea56c5d123eb1b5146039712f39
 SHA1 (patch-xfsettingsd_Makefile.in) = ebe7d40d67fedaa846273242e1ba25f4a74a2b20
-SHA1 (patch-xfsettingsd_xsettings.xml) = ac1573b8443888946d88880cb910a9fa3d1e0fc9
+SHA1 (patch-xfsettingsd_xsettings.xml) = 2748f68097a2f1a13e509d4aee9a1bbe77e6b995
