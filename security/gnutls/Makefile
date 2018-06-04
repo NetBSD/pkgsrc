@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.179 2018/04/29 06:03:44 dholland Exp $
+# $NetBSD: Makefile,v 1.180 2018/06/04 11:16:12 youri Exp $
 
 DISTNAME=	gnutls-3.6.0
 PKGREVISION=	2
@@ -11,21 +11,21 @@ HOMEPAGE=	http://www.gnutls.org/
 COMMENT=	GNU Transport Layer Security library
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2.1
 
-USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake gsed perl pkg-config
-GNU_CONFIGURE=		yes
+USE_LANGUAGES=			c c++
+USE_LIBTOOL=			yes
+USE_PKGLOCALEDIR=		yes
+USE_TOOLS+=			gmake gsed perl pkg-config
+GNU_CONFIGURE=			yes
 # this library duplicates (and conflicts with) openssl
-CONFIGURE_ARGS+=	--disable-openssl-compatibility
-CONFIGURE_ARGS+=	--disable-guile
-CONFIGURE_ARGS+=	--disable-libdane
-CONFIGURE_ARGS+=	--without-tpm
-CONFIGURE_ARGS+=	--disable-valgrind-tests
-CONFIGURE_ARGS+=	--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
+CONFIGURE_ARGS+=		--disable-openssl-compatibility
+CONFIGURE_ARGS+=		--disable-guile
+CONFIGURE_ARGS+=		--disable-libdane
+CONFIGURE_ARGS+=		--without-tpm
+CONFIGURE_ARGS+=		--disable-valgrind-tests
+CONFIGURE_ARGS+=		--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
 # Assembler support is broken for SunOS in 3.2.9.
-CONFIGURE_ARGS.SunOS+=	--disable-hardware-acceleration
-CONFIGURE_ARGS.FreeBSD+=ac_cv_type_max_align_t=yes
+CONFIGURE_ARGS.SunOS+=		--disable-hardware-acceleration
+CONFIGURE_ARGS.FreeBSD+=	ac_cv_type_max_align_t=yes
 
 # as of 3.5.8, 0 test failures
 TEST_TARGET=		check
@@ -63,9 +63,8 @@ post-install:
 
 .include "../../archivers/lzo/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/autogen/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gmp+=		gmp>=5.0   
+BUILDLINK_API_DEPENDS.gmp+=		gmp>=5.0
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/libcfg+/buildlink3.mk"
 # Avoid creating a fake zlib.pc, because if it does
