@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2679 2018/06/03 22:32:48 ast Exp $
+$NetBSD: CHANGES-2018,v 1.2680 2018/06/04 02:12:04 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3839,3 +3839,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/LuaJIT2 to 2.0.5nb1 [he 2018-06-02]
 	Updated net/youtube-dl to 20180604 [leot 2018-06-03]
 	Updated graphics/ImageMagick to 7.0.7.38 [ast 2018-06-03]
+        Removed x11/xfce4-gtk2-engine [youri 2018-06-04]
