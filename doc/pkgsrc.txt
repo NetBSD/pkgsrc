@@ -2891,7 +2891,7 @@ quite large, I didn't want to fix it. So I added the following to the package
 Makefile and tried again:
 
 CPPFLAGS+=              -I${BUILDLINK_PREFIX.libIDL}/include/libIDL-2.0
-BUILDLINK_TRANSFORM+=   -l:IDL:IDL-2
+BUILDLINK_TRANSFORM+=   l:IDL:IDL-2
 
 The latter line is needed because the package expects the library libIDL.so,
 but only libIDL-2.so is available. So I told the compiler wrapper to rewrite
