@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2683 2018/06/04 08:26:59 yyamano Exp $
+$NetBSD: CHANGES-2018,v 1.2684 2018/06/04 09:39:32 morr Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3842,3 +3842,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/ImageMagick to 7.0.7.38 [ast 2018-06-03]
         Removed x11/xfce4-gtk2-engine [youri 2018-06-04]
         Updated devel/apache-maven to 3.5.3 [yyamano 2018-06-04]
+	Updated editors/vim-share to 8.1.0031 [morr 2018-06-04]
