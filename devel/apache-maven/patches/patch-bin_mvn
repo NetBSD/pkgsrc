@@ -1,10 +1,10 @@
-$NetBSD: patch-bin_mvn,v 1.6 2017/09/06 10:17:51 fhajny Exp $
+$NetBSD: patch-bin_mvn,v 1.7 2018/06/04 08:23:11 yyamano Exp $
 
 Reconcile JAVA_HOME evaluated at run time on Darwin vs. hardcoded
 via PKG_JAVA_HOME elsewhere.
 Follow pkgsrc path convention.
 
---- bin/mvn.orig	2017-04-03 19:36:16.000000000 +0000
+--- bin/mvn.orig	2018-02-24 19:46:02.000000000 +0000
 +++ bin/mvn
 @@ -45,6 +45,7 @@ mingw=false;
  case "`uname`" in
@@ -44,13 +44,15 @@ Follow pkgsrc path convention.
  CLASSWORLDS_LAUNCHER=org.codehaus.plexus.classworlds.launcher.Launcher
  
  # For Cygwin, switch paths to Windows format before running java
-@@ -190,6 +196,8 @@ exec "$JAVACMD" \
+@@ -192,8 +198,10 @@ exec "$JAVACMD" \
    $MAVEN_OPTS \
    $MAVEN_DEBUG_OPTS \
    -classpath "${CLASSWORLDS_JAR}" \
 -  "-Dclassworlds.conf=${MAVEN_HOME}/bin/m2.conf" \
 +  "-Dclassworlds.conf=@PKG_SYSCONFDIR@/m2.conf" \
-   "-Dmaven.home=${MAVEN_HOME}" "-Dmaven.multiModuleProjectDirectory=${MAVEN_PROJECTBASEDIR}" \
+   "-Dmaven.home=${MAVEN_HOME}" \
+   "-Dlibrary.jansi.path=${MAVEN_HOME}/lib/jansi-native" \
+   "-Dmaven.multiModuleProjectDirectory=${MAVEN_PROJECTBASEDIR}" \
 +  "-Dorg.apache.maven.global-settings=@PKG_SYSCONFDIR@/settings.xml" \
 +  "-Dorg.apache.maven.global-plugin-registry=@PKG_SYSCONFDIR@/plugin-registry.xml" \
    ${CLASSWORLDS_LAUNCHER} "$@"
