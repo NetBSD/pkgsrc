@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2684 2018/06/04 09:39:32 morr Exp $
+$NetBSD: CHANGES-2018,v 1.2685 2018/06/04 10:11:31 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3843,3 +3843,4 @@ Changes to the packages collection and infrastructure in 2018:
         Removed x11/xfce4-gtk2-engine [youri 2018-06-04]
         Updated devel/apache-maven to 3.5.3 [yyamano 2018-06-04]
 	Updated editors/vim-share to 8.1.0031 [morr 2018-06-04]
+	Updated devel/yarn to 1.7.0 [jmcneill 2018-06-04]
