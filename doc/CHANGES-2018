@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2685 2018/06/04 10:11:31 jmcneill Exp $
+$NetBSD: CHANGES-2018,v 1.2686 2018/06/04 10:20:10 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3844,3 +3844,4 @@ Changes to the packages collection and infrastructure in 2018:
         Updated devel/apache-maven to 3.5.3 [yyamano 2018-06-04]
 	Updated editors/vim-share to 8.1.0031 [morr 2018-06-04]
 	Updated devel/yarn to 1.7.0 [jmcneill 2018-06-04]
+	Updated databases/py-peewee to 3.5.0 [fhajny 2018-06-04]
