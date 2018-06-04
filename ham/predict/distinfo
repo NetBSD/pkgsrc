@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2018/06/04 07:18:47 dbj Exp $
+
+SHA1 (predict-2.2.3.tar.gz) = 1eb4fcc9cf1aca79d890ef62b512763617453c9e
+RMD160 (predict-2.2.3.tar.gz) = b0ec4efcad5ca530f787b2a83d3ba9bb80489d6e
+SHA512 (predict-2.2.3.tar.gz) = 7ab964db85d8fa0e7f32d9d93904599e25d7b50baa79e80cb72407991bf5522aaa91d266b09ce25e1281e4f013124f7e955ca85b46e44cc1c2035331aa54bc6e
+Size (predict-2.2.3.tar.gz) = 1639784 bytes
+SHA1 (patch-predict.c) = 0c7c53edba937737694f98127df32f08df83695a
