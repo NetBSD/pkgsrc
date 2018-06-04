@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2017/06/23 17:20:56 youri Exp $
+# $NetBSD: options.mk,v 1.3 2018/06/04 12:35:51 youri Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mate-media
 PKG_SUPPORTED_OPTIONS=	pulseaudio
-PKG_SUGGESTED_OPTIONS=	pulseaudio
+PKG_SUGGESTED_OPTIONS=
 
 PLIST_VARS+=	pulse
 
