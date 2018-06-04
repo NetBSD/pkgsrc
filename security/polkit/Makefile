@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/06/04 01:21:08 youri Exp $
+# $NetBSD: Makefile,v 1.11 2018/06/04 01:23:41 youri Exp $
 
 DISTNAME=	polkit-0.114
 PKGREVISION=	1
@@ -12,6 +12,8 @@ LICENSE=	gnu-lgpl-v2
 
 BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+
+NOT_PAX_MPROTECT_SAFE=	lib/polkit-1/polkitd
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++11
@@ -64,12 +66,6 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths+=	docs/man/pkexec.xml
 SUBST_FILES.paths+=	src/examples/org.freedesktop.policykit.examples.pkexec.policy.in
 SUBST_SED.paths+=	-e 's,/usr/bin/,${PREFIX}/bin/,g'
-
-# On NetBSD, polkitd crashes because of PaX MPROTECT
-.if ${OPSYS} == "NetBSD"
-post-install:
-	paxctl +m ${DESTDIR}${PREFIX}/lib/polkit-1/polkitd
-.endif
 
 
 .include "../../lang/spidermonkey52/buildlink3.mk"
