@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.683 2018/05/30 16:26:31 bsiegert Exp $
+# $NetBSD: Makefile,v 1.684 2018/06/05 15:54:20 jaapb Exp $
 #
 
 COMMENT=	Security tools
@@ -218,6 +218,7 @@ SUBDIR+=	nfsbug
 SUBDIR+=	nikto
 SUBDIR+=	oath-toolkit
 SUBDIR+=	ocaml-cryptokit
+SUBDIR+=	ocaml-safepass
 SUBDIR+=	ocaml-ssl
 SUBDIR+=	opencdk
 SUBDIR+=	openct
