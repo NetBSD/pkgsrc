@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2702 2018/06/05 19:34:38 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2703 2018/06/05 22:28:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3862,3 +3862,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-curl to 7.43.0.2 [wiz 2018-06-05]
 	Updated www/py-google-api-python-client to 1.7.1 [wiz 2018-06-05]
 	Added devel/py-doc8 version 0.8.0 [minskim 2018-06-05]
+	Updated archivers/xz to 5.2.4 [adam 2018-06-05]
