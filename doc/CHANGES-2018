@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2692 2018/06/05 15:53:28 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.2693 2018/06/05 16:02:56 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3852,3 +3852,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added databases/ocaml-macaque version 0.7.4 [jaapb 2018-06-05]
 	Added devel/ocaml-lwt_camlp4 version 20180325 [jaapb 2018-06-05]
 	Added security/ocaml-safepass version 2.0 [jaapb 2018-06-05]
+	Added www/ocsigen-i18n version 3.1.0 [jaapb 2018-06-05]
