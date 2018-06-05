@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2689 2018/06/05 09:15:42 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.2690 2018/06/05 15:37:36 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3849,3 +3849,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-django2 to 2.0.6 [adam 2018-06-04]
 	Updated mail/nmh to 1.7.1nb2 [leot 2018-06-04]
 	Updated devel/gradle to 4.8 [fhajny 2018-06-05]
+	Added databases/ocaml-macaque version 0.7.4 [jaapb 2018-06-05]
