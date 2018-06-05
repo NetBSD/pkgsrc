@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2688 2018/06/04 17:53:46 leot Exp $
+$NetBSD: CHANGES-2018,v 1.2689 2018/06/05 09:15:42 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3848,3 +3848,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-uvloop to 0.10.1 [adam 2018-06-04]
 	Updated www/py-django2 to 2.0.6 [adam 2018-06-04]
 	Updated mail/nmh to 1.7.1nb2 [leot 2018-06-04]
+	Updated devel/gradle to 4.8 [fhajny 2018-06-05]
