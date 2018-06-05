@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.13 2017/04/05 17:56:18 adam Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.14 2018/06/05 18:50:31 wiz Exp $
 ${PYSITELIB}/curl/__init__.py
 ${PYSITELIB}/curl/__init__.pyc
 ${PYSITELIB}/curl/__init__.pyo
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/pycurl.so
 share/doc/pycurl${PYVERSSUFFIX}/AUTHORS
 share/doc/pycurl${PYVERSSUFFIX}/COPYING-LGPL
@@ -14,6 +14,7 @@ share/doc/pycurl${PYVERSSUFFIX}/RELEASE-NOTES.rst
 share/doc/pycurl${PYVERSSUFFIX}/examples/basicfirst.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/file_upload.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/linksys.py
+share/doc/pycurl${PYVERSSUFFIX}/examples/opensocketexception.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/file_upload_buffer.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/file_upload_real.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/file_upload_real_fancy.py
@@ -21,7 +22,11 @@ share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/follow_redirect.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/form_post.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/get.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/get_python2.py
+share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/get_python2_https.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/get_python3.py
+share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/get_python3_https.py
+share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/put_buffer.py
+share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/put_file.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/response_headers.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/response_info.py
 share/doc/pycurl${PYVERSSUFFIX}/examples/quickstart/write_file.py
