@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.387 2018/05/24 22:25:21 minskim Exp $
+# $NetBSD: Makefile,v 1.388 2018/06/05 22:58:32 minskim Exp $
 
 COMMENT=	Mathematics
 
@@ -58,6 +58,7 @@ SUBDIR+=	R-lmtest
 SUBDIR+=	R-mapproj
 SUBDIR+=	R-maps
 SUBDIR+=	R-minqa
+SUBDIR+=	R-moonsun
 SUBDIR+=	R-mvtnorm
 SUBDIR+=	R-ncdf
 SUBDIR+=	R-nloptr
