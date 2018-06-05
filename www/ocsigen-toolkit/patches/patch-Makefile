@@ -1,0 +1,26 @@
+$NetBSD: patch-Makefile,v 1.1 2018/06/05 16:10:43 jaapb Exp $
+
+Don't use ocamlfind to query for install directories
+--- Makefile.orig	2018-02-08 17:52:50.000000000 +0000
++++ Makefile
+@@ -154,13 +154,13 @@ META: META.in
+ 
+ install: all META
+ 	$(OCAMLFIND) install $(PKG_NAME) META
+-	mkdir -p `$(OCAMLFIND) query $(PKG_NAME)`/client
+-	mkdir -p `$(OCAMLFIND) query $(PKG_NAME)`/server
+-	cp $(CLIENT_CMI) `$(OCAMLFIND) query $(PKG_NAME)`/client
+-	cp $(CLIENT_CMO) `$(OCAMLFIND) query $(PKG_NAME)`/client
+-	cp $(SERVER_CMI) `$(OCAMLFIND) query $(PKG_NAME)`/server
+-	cp $(SERVER_CMX) `$(OCAMLFIND) query $(PKG_NAME)`/server
+-	cp $(LIBDIR)/$(PKG_NAME).server.cm* `$(OCAMLFIND) query $(PKG_NAME)`/server
++	mkdir -p $(DESTDIR)$(PREFIX)/$(OCAML_SITELIBDIR)/$(PKG_NAME)/client
++	mkdir -p $(DESTDIR)$(PREFIX)/$(OCAML_SITELIBDIR)/$(PKG_NAME)/server
++	cp $(CLIENT_CMI) $(DESTDIR)$(PREFIX)/$(OCAML_SITELIBDIR)/$(PKG_NAME)/client
++	cp $(CLIENT_CMO) $(DESTDIR)$(PREFIX)/$(OCAML_SITELIBDIR)/$(PKG_NAME)/client
++	cp $(SERVER_CMI) $(DESTDIR)$(PREFIX)/$(OCAML_SITELIBDIR)/$(PKG_NAME)/server
++	cp $(SERVER_CMX) $(DESTDIR)$(PREFIX)/$(OCAML_SITELIBDIR)/$(PKG_NAME)/server
++	cp $(LIBDIR)/$(PKG_NAME).server.cm* $(DESTDIR)$(PREFIX)/$(OCAML_SITELIBDIR)/$(PKG_NAME)/server
+ 
+ uninstall:
+ 	rm -rf `$(OCAMLFIND) query $(PKG_NAME)`/client
