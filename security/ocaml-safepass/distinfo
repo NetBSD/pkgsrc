@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/06/05 15:53:14 jaapb Exp $
+
+SHA1 (ocaml-safepass-2.0.tar.gz) = 7b493833ff160e256188e8c0905aad5e9c2efba0
+RMD160 (ocaml-safepass-2.0.tar.gz) = 8b975a91a1f6e02a5eca243ef02f723fd8e8ed90
+SHA512 (ocaml-safepass-2.0.tar.gz) = a5475b9e1f7233393fc255ae52c44d4f4373fcddf99764bb17dafb86dfbd3b3c5fa01f74254e10fe9a9889e3e5d2ee8d190ed728aad0ed5f0fdfb71856c5754d
+Size (ocaml-safepass-2.0.tar.gz) = 72314 bytes
