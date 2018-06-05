@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2018/06/05 16:17:10 jaapb Exp $
+
+SHA1 (ocsigen-start-1.1.0.tar.gz) = 17227ab765b6a7a794938353415d226cbfcfc885
+RMD160 (ocsigen-start-1.1.0.tar.gz) = bc5a6814054a4abf6d40a5c70c6b26293a81668e
+SHA512 (ocsigen-start-1.1.0.tar.gz) = 0e55c602dac8e24df03b462d9c4924fab0a0151a8877aafe44ad3ef0f17338ee758b5803dbebc911ed9818cba97751d6cea2623ffb3dd3887a1d79f1dd8d6f0a
+Size (ocsigen-start-1.1.0.tar.gz) = 1034520 bytes
+SHA1 (patch-Makefile.options) = 0291679dc7250c0abac1f2cd7a960c77202fd96e
