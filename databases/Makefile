@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.562 2018/05/21 08:06:39 adam Exp $
+# $NetBSD: Makefile,v 1.563 2018/06/05 15:39:15 jaapb Exp $
 
 COMMENT=	Databases
 
@@ -111,6 +111,7 @@ SUBDIR+=	nss-pgsql
 SUBDIR+=	nss_ldap
 SUBDIR+=	ocaml-dbm
 SUBDIR+=	ocaml-ldap
+SUBDIR+=	ocaml-macaque
 SUBDIR+=	ocaml-mysql
 SUBDIR+=	ocaml-sqlite3
 SUBDIR+=	odbc-postgresql
