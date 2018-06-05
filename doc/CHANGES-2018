@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2696 2018/06/05 16:19:31 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.2697 2018/06/05 18:29:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3856,3 +3856,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added www/ocsigen-toolkit version 1.1.0 [jaapb 2018-06-05]
 	Added www/ocsigen-start version 1.1.0 [jaapb 2018-06-05]
 	Updated devel/js_of_ocaml to 3.1.0nb1 [jaapb 2018-06-05]
+	Updated emulators/mame to 0.198 [wiz 2018-06-05]
