@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2700 2018/06/05 18:50:40 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2701 2018/06/05 18:57:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3860,3 +3860,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/libgit2 to 0.27.1 [wiz 2018-06-05]
 	Updated devel/py-pygit2 to 0.27.1 [wiz 2018-06-05]
 	Updated www/py-curl to 7.43.0.2 [wiz 2018-06-05]
+	Updated www/py-google-api-python-client to 1.7.1 [wiz 2018-06-05]
