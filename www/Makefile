@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1326 2018/05/09 12:23:39 manu Exp $
+# $NetBSD: Makefile,v 1.1327 2018/06/05 16:03:47 jaapb Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -207,6 +207,7 @@ SUBDIR+=	nvu
 SUBDIR+=	ocaml-curl
 SUBDIR+=	ocaml-http
 SUBDIR+=	ocsigen
+SUBDIR+=	ocsigen-i18n
 SUBDIR+=	opera
 SUBDIR+=	opera-acroread7
 SUBDIR+=	opera-plugins
