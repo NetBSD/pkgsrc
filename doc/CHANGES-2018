@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2691 2018/06/05 15:48:49 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.2692 2018/06/05 15:53:28 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3851,3 +3851,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/gradle to 4.8 [fhajny 2018-06-05]
 	Added databases/ocaml-macaque version 0.7.4 [jaapb 2018-06-05]
 	Added devel/ocaml-lwt_camlp4 version 20180325 [jaapb 2018-06-05]
+	Added security/ocaml-safepass version 2.0 [jaapb 2018-06-05]
