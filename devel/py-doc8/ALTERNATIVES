@@ -1,0 +1,1 @@
+bin/doc8 @PREFIX@/bin/doc8-@PYVERSSUFFIX@
