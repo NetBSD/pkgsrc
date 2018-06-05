@@ -1,4 +1,4 @@
-# $NetBSD: go-package.mk,v 1.11 2018/01/27 15:49:30 rillig Exp $
+# $NetBSD: go-package.mk,v 1.12 2018/06/05 15:42:20 leot Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 #
@@ -66,7 +66,7 @@ USE_TOOLS+=		pax
 GO_PLATFORM=		${LOWER_OPSYS}_${GOARCH}
 GOTOOLDIR=		${PREFIX}/go/pkg/tool/${GO_PLATFORM}
 
-PRINT_PLIST_AWK+=	{ gsub(/${GO_PLATFORM}/, \
+PRINT_PLIST_AWK+=	/${GO_PLATFORM}/ { gsub(/${GO_PLATFORM}/, \
 			"$${GO_PLATFORM}"); \
 			print; next; }
 
