@@ -1,0 +1,15 @@
+$NetBSD: patch-mkspecs_features_toolchain.prf,v 1.1 2018/06/05 06:06:55 dbj Exp $
+
+Avoid "Variable QMAKE_CXX.COMPILER_MACROS is not defined" errors when using clang
+
+--- mkspecs/features/toolchain.prf.orig	2017-11-30 13:49:46.000000000 +0000
++++ mkspecs/features/toolchain.prf
+@@ -198,6 +198,8 @@ isEmpty($${target_prefix}.COMPILER_MACRO
+         }
+     } else: gcc {
+         vars = $$qtVariablesFromGCC($$QMAKE_CXX)
++    } else: clang {
++        vars = $$qtVariablesFromGCC($$QMAKE_CXX)
+     }
+     for (v, vars) {
+         contains(v, $${LITERAL_HASH}.*)|contains(v, " *"): next()
