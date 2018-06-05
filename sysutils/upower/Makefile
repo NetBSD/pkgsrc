@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2018/05/31 14:28:13 youri Exp $
+# $NetBSD: Makefile,v 1.13 2018/06/05 19:14:29 youri Exp $
 
 DISTNAME=	upower-0.99.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	https://upower.freedesktop.org/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -11,6 +11,7 @@ HOMEPAGE=	https://upower.freedesktop.org/
 COMMENT=	Power management system message bus service
 LICENSE=	gnu-gpl-v2
 
+USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config intltool xgettext msgmerge msgfmt
 
