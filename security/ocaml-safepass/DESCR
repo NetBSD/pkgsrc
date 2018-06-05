@@ -1,0 +1,3 @@
+OCaml-safepass is a library offering facilities for the safe storage of
+user passwords.  By "safe" we mean that passwords are salted and hashed
+using the Bcrypt algorithm
