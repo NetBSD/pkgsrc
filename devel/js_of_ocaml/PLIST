@@ -1,7 +1,29 @@
-@comment $NetBSD: PLIST,v 1.16 2018/04/13 12:59:41 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.17 2018/06/05 16:19:16 jaapb Exp $
 bin/js_of_ocaml
 bin/jsoo_link
 bin/jsoo_minify
+${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/META
+${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/deriving/js_of_ocaml-camlp4.deriving.dune
+${PLIST.camlp4}${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-camlp4/deriving/pa_deriving_Json.a
+${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/deriving/pa_deriving_Json.cma
+${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/deriving/pa_deriving_Json.cmi
+${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/deriving/pa_deriving_Json.cmt
+${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/deriving/pa_deriving_Json.cmti
+${PLIST.camlp4}${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-camlp4/deriving/pa_deriving_Json.cmx
+${PLIST.camlp4}${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-camlp4/deriving/pa_deriving_Json.cmxa
+${PLIST.camlp4}${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-camlp4/deriving/pa_deriving_Json.cmxs
+${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/deriving/pa_deriving_Json.ml
+${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/deriving/pa_deriving_Json.mli
+${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/js_of_ocaml-camlp4.dune
+${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/opam
+${PLIST.camlp4}${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-camlp4/pa_js.a
+${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/pa_js.cma
+${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/pa_js.cmi
+${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/pa_js.cmt
+${PLIST.camlp4}${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-camlp4/pa_js.cmx
+${PLIST.camlp4}${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-camlp4/pa_js.cmxa
+${PLIST.camlp4}${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-camlp4/pa_js.cmxs
+${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/pa_js.ml
 ${OCAML_SITELIB}/js_of_ocaml-compiler/META
 ${OCAML_SITELIB}/js_of_ocaml-compiler/annot_lexer.ml
 ${OCAML_SITELIB}/js_of_ocaml-compiler/annot_lexer.mli
@@ -617,6 +639,9 @@ ${OCAML_SITELIB}/stublibs/dlljs_of_ocaml_stubs.so
 man/man1/js_of_ocaml.1
 man/man1/jsoo_link.1
 man/man1/jsoo_minify.1
+${PLIST.camlp4}share/doc/js_of_ocaml-camlp4/CHANGES
+${PLIST.camlp4}share/doc/js_of_ocaml-camlp4/LICENSE
+${PLIST.camlp4}share/doc/js_of_ocaml-camlp4/README.md
 share/doc/js_of_ocaml-compiler/CHANGES
 share/doc/js_of_ocaml-compiler/LICENSE
 share/doc/js_of_ocaml-compiler/README.md
