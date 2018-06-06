@@ -1,4 +1,4 @@
-# $NetBSD: u-boot.mk,v 1.10 2018/05/31 20:25:15 wiz Exp $
+# $NetBSD: u-boot.mk,v 1.11 2018/06/06 21:58:28 wiz Exp $
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
@@ -53,4 +53,3 @@ do-install:
 .endfor
 
 .include "../../lang/python/tool.mk"
-.include "../../mk/bsd.pkg.mk"
