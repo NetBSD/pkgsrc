@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2715 2018/06/06 09:13:43 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2716 2018/06/06 09:45:20 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3875,3 +3875,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/p5-DateTime-TimeZone to 2.19 [wen 2018-06-06]
 	Updated textproc/p5-YAML to 1.26 [wen 2018-06-06]
 	Updated textproc/p5-Text-Format to 0.61 [wen 2018-06-06]
+	Updated www/ocsigen-start to 1.1.0nb1 [jaapb 2018-06-06]
