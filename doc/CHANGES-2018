@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2718 2018/06/06 10:51:16 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.2719 2018/06/06 11:00:58 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3878,3 +3878,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/ocsigen-start to 1.1.0nb1 [jaapb 2018-06-06]
 	Updated textproc/p5-Search-Indexer to 0.79 [wen 2018-06-06]
 	Updated www/ocsigen-start to 1.1.0nb2 [jaapb 2018-06-06]
+	Updated textproc/p5-Lingua-EN-Tagger to 0.29 [wen 2018-06-06]
