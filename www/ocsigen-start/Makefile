@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2018/06/05 16:17:10 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2018/06/06 09:45:01 jaapb Exp $
 
 GITHUB_PROJECT=	ocsigen-start
 DISTNAME=	${GITHUB_PROJECT}-1.1.0
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
@@ -25,7 +26,17 @@ MAKE_ENV+=	NATIVE=no
 
 DEPENDS+=	eliom>=6.3:../../www/eliom
 
-MAKE_JOBS_SAFE=	no # for debugging, remove before flight
+SUBST_CLASSES+=	fix-settings
+SUBST_STAGE.fix-settings=	pre-configure
+SUBST_FILES.fix-settings= template.distillery/Makefile.db
+SUBST_FILES.fix-settings+=	template.distillery/Makefile.options
+SUBST_SED.fix-settings=	-e 's,$$(shell opam config var lib),${PREFIX}/${OCAML_SITELIBDIR},'
+SUBST_SED.fix-settings+=	-e 's,$$(shell $$(OPAM) config var share),${PREFIX}/share,'
+SUBST_SED.fix-settings+=	-e '/USE_SASS/s,yes,no,'
+SUBST_SED.fix-settings+=	-e '/USE_NPM/s,yes,no,'
+
+pre-configure:
+	${RUN} cd ${WRKSRC} && rm -f template.distillery/*.orig
 
 .include "../../databases/ocaml-macaque/buildlink3.mk"
 .include "../../devel/ocaml-lwt_camlp4/buildlink3.mk"
