@@ -1,9 +1,15 @@
-# $NetBSD: Makefile,v 1.40 2017/10/24 23:41:39 gdt Exp $
+# $NetBSD: Makefile,v 1.41 2018/06/06 22:45:58 gdt Exp $
 #
 
-DISTNAME=	hamlib-3.1
+DISTNAME=	hamlib-${VERSION}
+# V.rcN, VrcN, V~rcN
+VERSION=	3.2
+VERSIOND=	3.2
+VERSIONF=	3.2
 CATEGORIES=	ham
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hamlib/}
+MASTER_SITES=	https://github.com/Hamlib/Hamlib/releases/download/${VERSIOND}/
+#MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hamlib/}
+WRKSRC=		${WRKDIR}/hamlib-${VERSIONF}
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://hamlib.sourceforge.net/
@@ -25,7 +31,6 @@ CONFIGURE_ARGS+=--without-tcl-binding \
 
 TEST_TARGET=	check
 
-# \todo Consider adding readline.
-
-.include "../../devel/libltdl/buildlink3.mk"
+.include "../../devel/libusb1/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
