@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2723 2018/06/06 14:50:02 prlw1 Exp $
+$NetBSD: CHANGES-2018,v 1.2724 2018/06/06 14:53:27 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3883,3 +3883,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated pkgtools/pkgin to 0.10.2 [jperkin 2018-06-06]
 	Updated misc/p5-Locale-Codes to 3.57 [wen 2018-06-06]
 	Updated print/evince3 to 3.28.2 [prlw1 2018-06-06]
+	Updated editors/ne to 3.15 [prlw1 2018-06-06]
