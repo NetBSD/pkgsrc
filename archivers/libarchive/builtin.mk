@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.6 2017/02/28 14:58:09 joerg Exp $
+# $NetBSD: builtin.mk,v 1.7 2018/06/06 14:21:09 prlw1 Exp $
 
 BUILTIN_PKG:=	libarchive
 
@@ -88,3 +88,39 @@ USE_BUILTIN.libarchive!=	\
 .  endif  # PREFER.libarchive
 .endif
 MAKEVARS+=	USE_BUILTIN.libarchive
+
+###
+### The section below only applies if we are not including this file
+### solely to determine whether a built-in implementation exists.
+###
+CHECK_BUILTIN.libarchive?= no
+.if !empty(CHECK_BUILTIN.libarchive:M[nN][oO])
+.  if !empty(USE_BUILTIN.libarchive:M[yY][eE][sS])
+
+BUILDLINK_TARGETS+=     fake-libarchive-pc
+
+_FAKE_LIBARCHIVE_PC=${BUILDLINK_DIR}/lib/pkgconfig/libarchive.pc
+
+fake-libarchive-pc:
+	${RUN}  \
+	sedsrc=../../archivers/libarchive/files/build/pkgconfig/libarchive.pc.in;	\
+	src=${BUILDLINK_PREFIX.libarchive}/lib${LIBABISUFFIX}/pkgconfig/libarchive.pc;	\
+	dst=${_FAKE_LIBARCHIVE_PC};				  			\
+	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig;					\
+	if [ ! -f $${dst} ]; then       						\
+		if [ -f $${src} ]; then 						\
+			${ECHO_BUILDLINK_MSG} "Symlinking $${src}";     		\
+			${LN} -sf $${src} $${dst};					\
+		else									\
+			${ECHO_BUILDLINK_MSG} "Creating $${dst}";			\
+			${SED}  -e s,@prefix@,${BUILDLINK_PREFIX.libarchive},		\
+					-e s,@exec_prefix@,${BUILDLINK_PREFIX.libarchive},\
+					-e s,@libdir@,${BUILDLINK_PREFIX.libarchive}/lib${LIBABISUFFIX},\
+					-e s,@includedir@,${BUILDLINK_PREFIX.libarchive}/include,\
+					-e s,@VERSION@,${BUILTIN_VERSION.libarchive},	\
+					-e s,@LIBS@,-llzma -lbz2 -lz,			\
+				$${sedsrc} > $${dst};					\
+		fi									\
+	fi
+.  endif
+.endif
