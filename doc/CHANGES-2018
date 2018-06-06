@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2722 2018/06/06 11:17:25 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2723 2018/06/06 14:50:02 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3882,3 +3882,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/p5-Net-DNS-SEC to 1.09 [wen 2018-06-06]
 	Updated pkgtools/pkgin to 0.10.2 [jperkin 2018-06-06]
 	Updated misc/p5-Locale-Codes to 3.57 [wen 2018-06-06]
+	Updated print/evince3 to 3.28.2 [prlw1 2018-06-06]
