@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2714 2018/06/06 09:06:34 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2715 2018/06/06 09:13:43 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3874,3 +3874,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/p5-HTTP-OAI to 4.07 [wen 2018-06-06]
 	Updated time/p5-DateTime-TimeZone to 2.19 [wen 2018-06-06]
 	Updated textproc/p5-YAML to 1.26 [wen 2018-06-06]
+	Updated textproc/p5-Text-Format to 0.61 [wen 2018-06-06]
