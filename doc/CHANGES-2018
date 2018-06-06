@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2725 2018/06/06 19:28:19 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2726 2018/06/06 22:46:07 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3886,3 +3886,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated editors/ne to 3.15 [prlw1 2018-06-06]
 	Updated devel/py-hypothesis to 3.57.0 [adam 2018-06-06]
 	Updated devel/py-test to 3.6.1 [adam 2018-06-06]
+	Updated ham/hamlib to 3.2 [gdt 2018-06-06]
