@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.58 2018/05/05 14:19:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.59 2018/06/06 04:44:51 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -86,6 +86,7 @@ ${GEM_LIBDIR}/doc/release_notes/5.5.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.6.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.7.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.8.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.9.0.txt
 ${GEM_LIBDIR}/doc/schema_modification.rdoc
 ${GEM_LIBDIR}/doc/security.rdoc
 ${GEM_LIBDIR}/doc/sharding.rdoc
@@ -193,6 +194,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/datetime_parse_to_time.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/duplicate_columns_handler.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/empty_array_consider_nulls.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/error_sql.rb
+${GEM_LIBDIR}/lib/sequel/extensions/escaped_like.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/eval_inspect.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/freeze_datasets.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/from_block.rb
@@ -404,6 +406,7 @@ ${GEM_LIBDIR}/spec/extensions/eager_each_spec.rb
 ${GEM_LIBDIR}/spec/extensions/empty_array_consider_nulls_spec.rb
 ${GEM_LIBDIR}/spec/extensions/error_splitter_spec.rb
 ${GEM_LIBDIR}/spec/extensions/error_sql_spec.rb
+${GEM_LIBDIR}/spec/extensions/escaped_like_spec.rb
 ${GEM_LIBDIR}/spec/extensions/eval_inspect_spec.rb
 ${GEM_LIBDIR}/spec/extensions/finder_spec.rb
 ${GEM_LIBDIR}/spec/extensions/force_encoding_spec.rb
