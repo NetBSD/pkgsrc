@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2707 2018/06/06 04:46:26 taca Exp $
+$NetBSD: CHANGES-2018,v 1.2708 2018/06/06 07:37:44 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3867,3 +3867,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated pkgtools/x11-links to 1.12 [snj 2018-06-06]
 	Updated databases/ruby-sequel to 5.9.0 [taca 2018-06-06]
 	Updated devel/ruby-rugged to 0.27.1 [taca 2018-06-06]
+	Updated www/p5-libwww to 6.34 [wen 2018-06-06]
