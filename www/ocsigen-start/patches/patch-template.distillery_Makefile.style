@@ -1,0 +1,14 @@
+$NetBSD: patch-template.distillery_Makefile.style,v 1.1 2018/06/06 10:50:51 jaapb Exp $
+
+Correct invocation of sed
+--- template.distillery/Makefile.style.orig	2018-03-09 16:47:43.000000000 +0000
++++ template.distillery/Makefile.style
+@@ -9,7 +9,7 @@ check_sed:
+ ifneq ($(shell sed --version 2> /dev/null),)
+ SED = sed -i
+ else
+-SED = sed -i .css
++SED = sed -i.css
+ endif
+ 
+ css: import-external-css $(CSS_DEST)
