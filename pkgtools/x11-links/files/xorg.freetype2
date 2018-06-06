@@ -1,4 +1,4 @@
-# $NetBSD: xorg.freetype2,v 1.25 2018/05/10 03:46:53 maya Exp $
+# $NetBSD: xorg.freetype2,v 1.26 2018/06/06 03:13:49 snj Exp $
 #
 bin/freetype-config
 include/freetype2/config/ftconfig.h
@@ -122,6 +122,7 @@ lib/libfreetype.so.17.4.11
 lib/libfreetype.so.18.0
 lib/libfreetype.so.18.0.12
 lib/libfreetype.so.18.0.13
+lib/libfreetype.so.18.16.1
 lib/libfreetype.so.18.1
 lib/libfreetype.so.18.3
 lib/libfreetype.so.20.0
