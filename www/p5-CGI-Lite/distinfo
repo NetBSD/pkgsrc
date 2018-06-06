@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/02/02 12:48:18 mef Exp $
+$NetBSD: distinfo,v 1.6 2018/06/06 08:23:06 wen Exp $
 
-SHA1 (CGI-Lite-3.01.tar.gz) = 287c5eb30c24f4e8e39a10985f2aa03d1672e97c
-RMD160 (CGI-Lite-3.01.tar.gz) = 82638447c6382ff8fff81cdcabea80fe2c745d24
-SHA512 (CGI-Lite-3.01.tar.gz) = 9d82f035afaad8147bc95135be956f8c910057f60543d814bf4a2b47ed3577e370251793c721004900ebcfa6a6475ee473f0fc579bc20a239aba1852a74a4711
-Size (CGI-Lite-3.01.tar.gz) = 37561 bytes
+SHA1 (CGI-Lite-3.02.tar.gz) = 0d59460dce5a275fad05378385802c7ebf5fd9b8
+RMD160 (CGI-Lite-3.02.tar.gz) = b8df3f72b48e71ef966734ca23311c2c773ccf7b
+SHA512 (CGI-Lite-3.02.tar.gz) = 773bdc39ec3b2b1d6e85293ef6f2eeecef2dacab548046828239e0afbd8761b2d72c626dd60756bb2a787ca313310d1ea6dc33fbd814c941ee6fbfcc919f91ba
+Size (CGI-Lite-3.02.tar.gz) = 38073 bytes
