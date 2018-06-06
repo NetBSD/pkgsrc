@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2017/08/27 16:08:06 prlw1 Exp $
+$NetBSD: distinfo,v 1.15 2018/06/06 14:49:41 prlw1 Exp $
 
-SHA1 (evince-3.24.1.tar.xz) = 53f13c0b0369248ebe58b735fec18d3068d5ef22
-RMD160 (evince-3.24.1.tar.xz) = 202e8b0acb02327d074ff5ec425daf40d9c62804
-SHA512 (evince-3.24.1.tar.xz) = 205c1c9b68c9215bdcebf0c36841a35898e056ef8e56208db62c1fac04c4efad8fbc0800f410e3c94c526536adba5e8ead68bebec8f81061a3831789c5173726
-Size (evince-3.24.1.tar.xz) = 3511576 bytes
+SHA1 (evince-3.28.2.tar.xz) = b9eee551124ec1da7baf6f7656afe8285670b28e
+RMD160 (evince-3.28.2.tar.xz) = 74ab8a732463ea3da4984534888dc44aaf6ab0e5
+SHA512 (evince-3.28.2.tar.xz) = 6deeefc5ed52d79627ae892b227bcf023c6ea45ac02c6a3a7c9fa1004f5da2e36051bfea73f6838cb8f9aed8cadfd145173a5d3b2be405f1d1f06bd4fdadae23
+Size (evince-3.28.2.tar.xz) = 3379552 bytes
