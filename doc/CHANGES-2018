@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2711 2018/06/06 08:34:55 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.2712 2018/06/06 08:42:11 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3871,3 +3871,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/p5-HTTP-Message to 6.18 [wen 2018-06-06]
 	Updated www/p5-CGI-Lite to 3.02 [wen 2018-06-06]
 	Updated www/eliom to 6.3.0nb1 [jaapb 2018-06-06]
+	Updated www/p5-HTTP-OAI to 4.07 [wen 2018-06-06]
