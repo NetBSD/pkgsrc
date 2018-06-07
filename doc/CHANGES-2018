@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2734 2018/06/07 19:13:53 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.2735 2018/06/07 19:15:53 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3896,3 +3896,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/nss to 3.37.3 [ryoon 2018-06-08]
 	Added cross/mingw-w64 version 5.0.4 [ryoon 2018-06-08]
 	Added cross/mingw-w64-x86_64-binutils version 2.30 [ryoon 2018-06-08]
+	Added cross/mingw-w64-x86_64-headers version 5.0.4 [ryoon 2018-06-08]
