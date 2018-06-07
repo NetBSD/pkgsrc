@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2730 2018/06/07 18:54:53 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.2731 2018/06/07 18:56:33 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3892,3 +3892,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-pylint to 1.9.2 [adam 2018-06-07]
 	Updated databases/sqlite3 to 3.24.0 [adam 2018-06-07]
 	Updated security/stunnel to 5.46 [ryoon 2018-06-08]
+	Updated mail/mew to 6.8 [ryoon 2018-06-08]
