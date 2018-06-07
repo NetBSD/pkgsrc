@@ -1,0 +1,16 @@
+# $NetBSD: Makefile.common,v 1.1 2018/06/07 19:09:24 ryoon Exp $
+#
+# used by cross/mingw-w64-x86_64-binutils/Makefile.common
+# used by cross/mingw-w64-x86_64-headers/Makefile.common
+# used by cross/mingw-w64-x86_64-gcc-bootstrap/Makefile.common
+# used by cross/mingw-w64-x86_64-gcc/Makefile.common
+# used by cross/mingw-w64-x86_64-crt/Makefile.common
+
+.if !defined(MINGW_MAKEFILECOMMON)
+MINGW_MAKEFILECOMMON=	# defined
+
+MASTER_SITE_MINGW=		${MASTER_SITE_SOURCEFORGE:=mingw-w64/}
+MINGW_W64_32_TARGET?=		i686-w64-mingw32
+MINGW_W64_64_TARGET?=		x86_64-w64-mingw32
+MINGW_W64_ARM32_TARGET?=	armv7-w64-mingw32
+.endif
