@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2731 2018/06/07 18:56:33 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.2732 2018/06/07 19:05:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3893,3 +3893,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/sqlite3 to 3.24.0 [adam 2018-06-07]
 	Updated security/stunnel to 5.46 [ryoon 2018-06-08]
 	Updated mail/mew to 6.8 [ryoon 2018-06-08]
+	Updated devel/nss to 3.37.3 [ryoon 2018-06-08]
