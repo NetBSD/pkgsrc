@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18393 2018/06/05 18:57:01 wiz Exp $
+$NetBSD: TODO,v 1.18394 2018/06/07 18:54:53 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1359,7 +1359,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o strace-4.18
 	o stratagus-2.2.5.5
 	o streamtuner-2.2.0
-	o stunnel-5.45
 	o subtitleeditor-0.52.1
 	o subversion-1.10
 	o subversion-base-1.10.0
