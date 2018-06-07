@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/05/26 17:54:09 jmcneill Exp $
+# $NetBSD: Makefile,v 1.4 2018/06/07 00:58:27 jmcneill Exp $
 #
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
@@ -37,6 +37,7 @@ DEPENDS+=	u-boot-pine-h64-[0-9]*:../../sysutils/u-boot-pine-h64
 DEPENDS+=	u-boot-pine64-[0-9]*:../../sysutils/u-boot-pine64
 DEPENDS+=	u-boot-pinebook-[0-9]*:../../sysutils/u-boot-pinebook
 DEPENDS+=	u-boot-pocketchip-[0-9]*:../../sysutils/u-boot-pocketchip
+DEPENDS+=	u-boot-sopine-baseboard-[0-9]*:../../sysutils/u-boot-sopine-baseboard
 
 META_PACKAGE=	yes
 

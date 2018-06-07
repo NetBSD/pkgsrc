@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2018/06/07 00:58:27 jmcneill Exp $
+share/u-boot/sopine-baseboard/u-boot-sunxi-with-spl.bin
