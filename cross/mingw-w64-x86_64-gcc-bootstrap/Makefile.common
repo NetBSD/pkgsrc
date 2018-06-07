@@ -1,0 +1,46 @@
+# $NetBSD: Makefile.common,v 1.1 2018/06/07 19:16:50 ryoon Exp $
+#
+# used by cross/mingw-w64-x86_64-gcc-bootstrap/Makefile.common
+
+DISTNAME=		gcc-8.1.0
+CATEGORIES=		cross
+MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${PKGVERSION_NOREV}/}
+EXTRACT_SUFX=		.tar.xz
+
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		https://mingw-w64.org/
+
+PATCHDIR=		${.CURDIR}/../../cross/mingw-w64-x86_64-gcc/patches
+DISTINFO_FILE=		${.CURDIR}/../../cross/mingw-w64-x86_64-gcc/distinfo
+
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake
+GNU_CONFIGURE=		yes
+GNU_CONFIGURE_PREFIX=	${PREFIX}/cross/${MINGW_TARGET}-bootstrap
+OBJDIR=			../build
+CONFIGURE_DIRS=		${OBJDIR}
+CONFIGURE_SCRIPT=	../${DISTNAME}/configure
+CONFIGURE_ARGS+=	--target=${MINGW_TARGET}
+CONFIGURE_ARGS+=	--with-sysroot=${PREFIX}/cross/${MINGW_TARGET}
+CONFIGURE_ARGS+=	--with-ld=${PREFIX}/cross/${MINGW_TARGET}/${MINGW_TARGET}/bin/ld
+CONFIGURE_ARGS+=	--with-as=${PREFIX}/cross/${MINGW_TARGET}/${MINGW_TARGET}/bin/as
+CONFIGURE_ARGS+=	--disable-nls
+CONFIGURE_ARGS+=	--enable-languages=c,lto
+CONFIGURE_ARGS+=	--enable-static
+CONFIGURE_ARGS+=	--enable-lto
+CONFIGURE_ARGS+=	--disable-dw2-exceptions
+CONFIGURE_ARGS+=	--enable-version-specific-runtime-libs
+CONFIGURE_ARGS+=	--disable-multilib
+
+INFO_FILES=		yes
+
+BUILD_TARGET=		all-gcc
+INSTALL_TARGET=		install-gcc
+
+pre-configure:
+	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
+
+.include "../../cross/mingw-w64/Makefile.common"
+.include "../../devel/gmp/buildlink3.mk"
+.include "../../math/mpfr/buildlink3.mk"
+.include "../../math/mpcomplex/buildlink3.mk"
