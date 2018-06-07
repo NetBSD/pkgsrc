@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.76 2018/04/12 10:21:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.77 2018/06/07 07:36:49 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -68,6 +68,7 @@ share/doc/sqlite3/c3ref/c_sync_dataonly.html
 share/doc/sqlite3/c3ref/c_testctrl_always.html
 share/doc/sqlite3/c3ref/c_trace.html
 share/doc/sqlite3/c3ref/c_vtab_constraint_support.html
+share/doc/sqlite3/c3ref/c_win32_data_directory_type.html
 share/doc/sqlite3/c3ref/cancel_auto_extension.html
 share/doc/sqlite3/c3ref/changes.html
 share/doc/sqlite3/c3ref/clear_bindings.html
@@ -121,6 +122,7 @@ share/doc/sqlite3/c3ref/int64.html
 share/doc/sqlite3/c3ref/interrupt.html
 share/doc/sqlite3/c3ref/intro.html
 share/doc/sqlite3/c3ref/io_methods.html
+share/doc/sqlite3/c3ref/keyword_check.html
 share/doc/sqlite3/c3ref/last_insert_rowid.html
 share/doc/sqlite3/c3ref/libversion.html
 share/doc/sqlite3/c3ref/limit.html
@@ -172,6 +174,11 @@ share/doc/sqlite3/c3ref/stmt_readonly.html
 share/doc/sqlite3/c3ref/stmt_scanstatus.html
 share/doc/sqlite3/c3ref/stmt_scanstatus_reset.html
 share/doc/sqlite3/c3ref/stmt_status.html
+share/doc/sqlite3/c3ref/str.html
+share/doc/sqlite3/c3ref/str_append.html
+share/doc/sqlite3/c3ref/str_errcode.html
+share/doc/sqlite3/c3ref/str_finish.html
+share/doc/sqlite3/c3ref/str_new.html
 share/doc/sqlite3/c3ref/strglob.html
 share/doc/sqlite3/c3ref/stricmp.html
 share/doc/sqlite3/c3ref/strlike.html
@@ -202,6 +209,7 @@ share/doc/sqlite3/c3ref/wal_autocheckpoint.html
 share/doc/sqlite3/c3ref/wal_checkpoint.html
 share/doc/sqlite3/c3ref/wal_checkpoint_v2.html
 share/doc/sqlite3/c3ref/wal_hook.html
+share/doc/sqlite3/c3ref/win32_set_directory.html
 share/doc/sqlite3/c_interface.html
 share/doc/sqlite3/capi3.html
 share/doc/sqlite3/capi3ref.html
@@ -302,6 +310,7 @@ share/doc/sqlite3/images/books/kreibich.gif
 share/doc/sqlite3/images/books/newman.jpg
 share/doc/sqlite3/images/books/nishizawa2.jpg
 share/doc/sqlite3/images/books/owens.jpg
+share/doc/sqlite3/images/books/sanderson2018.jpg
 share/doc/sqlite3/images/books/symbiansql.jpg
 share/doc/sqlite3/images/books/vanderLans.jpg
 share/doc/sqlite3/images/btreemodule_balance_deeper.svg
@@ -363,6 +372,8 @@ share/doc/sqlite3/images/foreignlogos/flame.gif
 share/doc/sqlite3/images/foreignlogos/ge.gif
 share/doc/sqlite3/images/foreignlogos/google.gif
 share/doc/sqlite3/images/foreignlogos/intuit.gif
+share/doc/sqlite3/images/foreignlogos/loc.gif
+share/doc/sqlite3/images/foreignlogos/loc.jpg
 share/doc/sqlite3/images/foreignlogos/mcaffee.gif
 share/doc/sqlite3/images/foreignlogos/microsoft.gif
 share/doc/sqlite3/images/foreignlogos/monotone.gif
@@ -397,6 +408,7 @@ share/doc/sqlite3/images/harmony.gif
 share/doc/sqlite3/images/index-ex1-x-b.gif
 share/doc/sqlite3/images/indirect1b1.gif
 share/doc/sqlite3/images/joe1.jpg
+share/doc/sqlite3/images/loc.jpg
 share/doc/sqlite3/images/ne.gif
 share/doc/sqlite3/images/ne.png
 share/doc/sqlite3/images/nocopy.gif
@@ -496,6 +508,7 @@ share/doc/sqlite3/images/syntax/table-or-subquery.gif
 share/doc/sqlite3/images/syntax/type-name.gif
 share/doc/sqlite3/images/syntax/update-stmt-limited.gif
 share/doc/sqlite3/images/syntax/update-stmt.gif
+share/doc/sqlite3/images/syntax/upsert-clause.gif
 share/doc/sqlite3/images/syntax/vacuum-stmt.gif
 share/doc/sqlite3/images/syntax/with-clause.gif
 share/doc/sqlite3/images/table-ex1b2.gif
@@ -508,6 +521,7 @@ share/doc/sqlite3/isolation.html
 share/doc/sqlite3/json1.html
 share/doc/sqlite3/keyword_index.html
 share/doc/sqlite3/lang.html
+share/doc/sqlite3/lang_UPSERT.html
 share/doc/sqlite3/lang_aggfunc.html
 share/doc/sqlite3/lang_altertable.html
 share/doc/sqlite3/lang_analyze.html
@@ -545,6 +559,7 @@ share/doc/sqlite3/lemon.html
 share/doc/sqlite3/limits.html
 share/doc/sqlite3/loadext.html
 share/doc/sqlite3/lockingv3.html
+share/doc/sqlite3/locrsf.html
 share/doc/sqlite3/lts.html
 share/doc/sqlite3/malloc.html
 share/doc/sqlite3/mingw.html
@@ -620,6 +635,7 @@ share/doc/sqlite3/releaselog/3_21_0.html
 share/doc/sqlite3/releaselog/3_22_0.html
 share/doc/sqlite3/releaselog/3_23_0.html
 share/doc/sqlite3/releaselog/3_23_1.html
+share/doc/sqlite3/releaselog/3_24_0.html
 share/doc/sqlite3/releaselog/3_2_0.html
 share/doc/sqlite3/releaselog/3_2_1.html
 share/doc/sqlite3/releaselog/3_2_2.html
@@ -881,6 +897,7 @@ share/doc/sqlite3/syntax/table-or-subquery.html
 share/doc/sqlite3/syntax/type-name.html
 share/doc/sqlite3/syntax/update-stmt-limited.html
 share/doc/sqlite3/syntax/update-stmt.html
+share/doc/sqlite3/syntax/upsert-clause.html
 share/doc/sqlite3/syntax/vacuum-stmt.html
 share/doc/sqlite3/syntax/with-clause.html
 share/doc/sqlite3/syntaxdiagrams.html
@@ -900,6 +917,7 @@ share/doc/sqlite3/version3.html
 share/doc/sqlite3/versionnumbers.html
 share/doc/sqlite3/vfs.html
 share/doc/sqlite3/vtab.html
+share/doc/sqlite3/vtablist.html
 share/doc/sqlite3/wal.html
 share/doc/sqlite3/walformat.html
 share/doc/sqlite3/whentouse.html
