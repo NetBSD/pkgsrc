@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2728 2018/06/07 06:44:31 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2729 2018/06/07 07:39:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3890,3 +3890,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added sysutils/u-boot-sopine-baseboard version 2018.05 [jmcneill 2018-06-06]
 	Updated devel/py-astroid to 1.6.5 [adam 2018-06-07]
 	Updated devel/py-pylint to 1.9.2 [adam 2018-06-07]
+	Updated databases/sqlite3 to 3.24.0 [adam 2018-06-07]
