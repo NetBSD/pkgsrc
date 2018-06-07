@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.8 2018/06/07 11:47:58 leot Exp $
+# $NetBSD: builtin.mk,v 1.9 2018/06/07 14:28:42 leot Exp $
 
 BUILTIN_PKG:=	libarchive
 
@@ -99,12 +99,13 @@ CHECK_BUILTIN.libarchive?= no
 
 BUILDLINK_TARGETS+=     fake-libarchive-pc
 
-_FAKE_LIBARCHIVE_PC=${BUILDLINK_DIR}/lib/pkgconfig/libarchive.pc
+_FAKE_LIBARCHIVE_PC=	${BUILDLINK_DIR}/lib/pkgconfig/libarchive.pc
+_LIBARCHIVE_LIBS=	-llzma -lbz2 -lz
 
 fake-libarchive-pc:
 	${RUN}  \
 	sedsrc=../../archivers/libarchive/files/build/pkgconfig/libarchive.pc.in;	\
-	src=${BUILDLINK_PREFIX.libarchive}/lib${LIBABISUFFIX}/pkgconfig/libarchive.pc;	\
+	src=${BUILDLINK_PREFIX.libarchive:Q}/lib${LIBABISUFFIX}/pkgconfig/libarchive.pc;\
 	dst=${_FAKE_LIBARCHIVE_PC};				  			\
 	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig;					\
 	if [ ! -f $${dst} ]; then       						\
@@ -113,12 +114,12 @@ fake-libarchive-pc:
 			${LN} -sf $${src} $${dst};					\
 		else									\
 			${ECHO_BUILDLINK_MSG} "Creating $${dst}";			\
-			${SED}  -e 's,@prefix@,${BUILDLINK_PREFIX.libarchive},'		\
-					-e 's,@exec_prefix@,${BUILDLINK_PREFIX.libarchive},'\
-					-e 's,@libdir@,${BUILDLINK_PREFIX.libarchive}/lib${LIBABISUFFIX},'\
-					-e 's,@includedir@,${BUILDLINK_PREFIX.libarchive}/include,'\
-					-e 's,@VERSION@,${BUILTIN_VERSION.libarchive},'	\
-					-e 's,@LIBS@,-llzma -lbz2 -lz,'			\
+			${SED}  -e s,@prefix@,${BUILDLINK_PREFIX.libarchive:Q},		\
+					-e s,@exec_prefix@,${BUILDLINK_PREFIX.libarchive:Q},\
+					-e s,@libdir@,${BUILDLINK_PREFIX.libarchive:Q}/lib${LIBABISUFFIX},\
+					-e s,@includedir@,${BUILDLINK_PREFIX.libarchive:Q}/include,\
+					-e s,@VERSION@,${BUILTIN_VERSION.libarchive},	\
+					-e s,@LIBS@,${_LIBARCHIVE_LIBS:Q},		\
 				$${sedsrc} > $${dst};					\
 		fi									\
 	fi
