@@ -1,0 +1,35 @@
+# $NetBSD: Makefile.common,v 1.1 2018/06/07 19:19:46 ryoon Exp $
+#
+# used by cross/mingw-w64-x86_64-crt/Makefile
+
+DISTNAME=		mingw-w64-v5.0.4
+CATEGORIES=		cross
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mingw-w64/}
+EXTRACT_SUFX=		.tar.bz2
+
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		https://mingw-w64.org/
+
+PATCHDIR=		${.CURDIR}/../../cross/mingw-w64-x86_64-headers/patches
+DISTINFO_FILE=		${.CURDIR}/../../cross/mingw-w64-x86_64-headers/distinfo
+
+MAKE_JOBS_SAFE=		no
+
+WRKSRC=			${WRKDIR}/${DISTNAME}/mingw-w64-crt
+
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake perl:build
+
+USE_GNU_CONFIGURE_HOST=	no
+
+GNU_CONFIGURE=		yes
+GNU_CONFIGURE_PREFIX=	${PREFIX}/cross/${MINGW_TARGET}/mingw
+CONFIGURE_ARGS+=	--host=${MINGW_TARGET}
+CONFIGURE_ARGS+=	--with-sysroot=${PREFIX}/cross/${MINGW_TARGET}
+CONFIGURE_ARGS+=	--enable-wildcard
+CONFIGURE_ENV+=		ac_cv_prog_CC=${MINGW_TARGET}-gcc
+
+PREPEND_PATH+=		${PREFIX}/cross/${MINGW_TARGET}/bin
+PREPEND_PATH+=		${PREFIX}/cross/${MINGW_TARGET}-bootstrap/bin
+
+.include "../../cross/mingw-w64/Makefile.common"
