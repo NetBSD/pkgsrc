@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2018/06/07 19:10:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.73 2018/06/07 19:12:57 ryoon Exp $
 #
 
 COMMENT=	Cross-platform development utilities
@@ -44,6 +44,7 @@ SUBDIR+=	mingw-gcc
 SUBDIR+=	mingw-runtime-bin
 SUBDIR+=	mingw-w32api-bin
 SUBDIR+=	mingw-w64
+SUBDIR+=	mingw-w64-x86_64-binutils
 #SUBDIR+=	nios2			# just contains makefile fragments
 SUBDIR+=	nios2-binutils
 SUBDIR+=	nios2-gcc
