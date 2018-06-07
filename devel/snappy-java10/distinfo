@@ -1,16 +1,16 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 17:41:17 agc Exp $
+$NetBSD: distinfo,v 1.7 2018/06/07 16:34:45 fhajny Exp $
 
 SHA1 (snappy-java10/snappy-1.0.5.tar.gz) = 3a3df859cf33f78f8e945c3f67f28685f0f38bb1
 RMD160 (snappy-java10/snappy-1.0.5.tar.gz) = c9dec9a8a2faac7bf85b79bcf82f8080713103aa
 SHA512 (snappy-java10/snappy-1.0.5.tar.gz) = 4f772673dd1bf482f13db0f09299b46d0ee47b7052c43e69c2c5361d352031152f3132c25faf86ffcf1bfbe0e68625d7eef8fa669be873b568adfc160a82f25b
 Size (snappy-java10/snappy-1.0.5.tar.gz) = 1731382 bytes
-SHA1 (snappy-java10/snappy-java-1.0.5-deps.tar.gz) = 0792db245c10cd995cf28b0fb8352c12441a43a2
-RMD160 (snappy-java10/snappy-java-1.0.5-deps.tar.gz) = 8ca8c99eaed520b2f7b9c3cf068f2557b4b8e702
-SHA512 (snappy-java10/snappy-java-1.0.5-deps.tar.gz) = ee8e287817530f3b85313037629e5beeacad997c897b1cfc009bf1ad076499b1b63fdefb46322f018be605150ee12a758c296d451be8ceada034cc86e522114b
-Size (snappy-java10/snappy-java-1.0.5-deps.tar.gz) = 9874187 bytes
 SHA1 (snappy-java10/snappy-java-1.0.5.tar.gz) = 61c9585aa64eba6cec77f9af61f0f5ea6fd418fb
 RMD160 (snappy-java10/snappy-java-1.0.5.tar.gz) = 65cf54742b55f4797dcc560215cca5cae1a11973
 SHA512 (snappy-java10/snappy-java-1.0.5.tar.gz) = 7ab443fbbe5a9caebc65720427bc6a11c5fec1f155928b268dde109f2996d3093a7600aaae0c5ef8c7e050c839e5a63ce037c6a4c42fccd682b976405bc7f581
 Size (snappy-java10/snappy-java-1.0.5.tar.gz) = 5739368 bytes
+SHA1 (snappy-java10/snappy-java-deps-1.0.5nb1.tar.gz) = 3ff19882907aef93579b96e56e3d191c49e34e15
+RMD160 (snappy-java10/snappy-java-deps-1.0.5nb1.tar.gz) = 48b28e2d091838b8e80dd16b46bd1ef603c4d5b9
+SHA512 (snappy-java10/snappy-java-deps-1.0.5nb1.tar.gz) = f5148b0ded3b6beeb688b1b57dbc7fe64d40cd927140e9c4c35baf5f2fba25fb533dc38736736f153fd2e2cf76f0d0092cc676d9446f3baba102f2af64c56258
+Size (snappy-java10/snappy-java-deps-1.0.5nb1.tar.gz) = 13148358 bytes
 SHA1 (patch-Makefile) = cb15c6016dab4670fce0ace6f1dd21e7c7bb1097
 SHA1 (patch-Makefile.common) = 83eeaf91c7dbd6ac3c4b3405d53acec9caa260aa
