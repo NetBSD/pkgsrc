@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2732 2018/06/07 19:05:36 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.2733 2018/06/07 19:10:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3894,3 +3894,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/stunnel to 5.46 [ryoon 2018-06-08]
 	Updated mail/mew to 6.8 [ryoon 2018-06-08]
 	Updated devel/nss to 3.37.3 [ryoon 2018-06-08]
+	Added cross/mingw-w64 version 5.0.4 [ryoon 2018-06-08]
