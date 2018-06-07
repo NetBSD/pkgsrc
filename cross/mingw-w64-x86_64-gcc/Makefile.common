@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2018/06/07 19:21:46 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.2 2018/06/07 19:39:30 ryoon Exp $
 #
 # used by cross/mingw-w64-x86_64-gcc/Makefile
 
@@ -9,6 +9,9 @@ EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://mingw-w64.org/
+
+PATCHDIR=		${.CURDIR}/../../cross/mingw-w64-x86_64-gcc/patches
+DISTINFO_FILE=		${.CURDIR}/../../cross/mingw-w64-x86_64-gcc/distinfo
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl:build
