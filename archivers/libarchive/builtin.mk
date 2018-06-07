@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.7 2018/06/06 14:21:09 prlw1 Exp $
+# $NetBSD: builtin.mk,v 1.8 2018/06/07 11:47:58 leot Exp $
 
 BUILTIN_PKG:=	libarchive
 
@@ -113,12 +113,12 @@ fake-libarchive-pc:
 			${LN} -sf $${src} $${dst};					\
 		else									\
 			${ECHO_BUILDLINK_MSG} "Creating $${dst}";			\
-			${SED}  -e s,@prefix@,${BUILDLINK_PREFIX.libarchive},		\
-					-e s,@exec_prefix@,${BUILDLINK_PREFIX.libarchive},\
-					-e s,@libdir@,${BUILDLINK_PREFIX.libarchive}/lib${LIBABISUFFIX},\
-					-e s,@includedir@,${BUILDLINK_PREFIX.libarchive}/include,\
-					-e s,@VERSION@,${BUILTIN_VERSION.libarchive},	\
-					-e s,@LIBS@,-llzma -lbz2 -lz,			\
+			${SED}  -e 's,@prefix@,${BUILDLINK_PREFIX.libarchive},'		\
+					-e 's,@exec_prefix@,${BUILDLINK_PREFIX.libarchive},'\
+					-e 's,@libdir@,${BUILDLINK_PREFIX.libarchive}/lib${LIBABISUFFIX},'\
+					-e 's,@includedir@,${BUILDLINK_PREFIX.libarchive}/include,'\
+					-e 's,@VERSION@,${BUILTIN_VERSION.libarchive},'	\
+					-e 's,@LIBS@,-llzma -lbz2 -lz,'			\
 				$${sedsrc} > $${dst};					\
 		fi									\
 	fi
