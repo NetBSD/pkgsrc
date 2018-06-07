@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2017/07/30 22:32:18 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2018/06/07 16:34:45 fhajny Exp $
 
 DISTNAME=	snappy-java-${SNAPPYVER}
 PKGNAME=	${DISTNAME:S/java/java10/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xerial/}
 
@@ -16,10 +16,10 @@ SNAPPYVER=	1.0.5
 
 DIST_SUBDIR=	${PKGBASE}
 DISTFILES=	${DEFAULT_DISTFILES}
-DISTFILES+=	snappy-java-${SNAPPYVER}-deps.tar.gz
+DISTFILES+=	snappy-java-deps-${SNAPPYVER}nb1.tar.gz
 DISTFILES+=	snappy-${SNAPPYVER}.tar.gz
 SITES.snappy-${SNAPPYVER}.tar.gz=		https://snappy.googlecode.com/files/
-SITES.snappy-java-${SNAPPYVER}-deps.tar.gz=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/fhajny/
+SITES.snappy-java-deps-${SNAPPYVER}nb1.tar.gz=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/fhajny/
 EXTRACT_DIR.snappy-${SNAPPYVER}.tar.gz=		${WRKSRC}/target
 
 TOOL_DEPENDS+=	apache-maven-[0-9]*:../../devel/apache-maven
