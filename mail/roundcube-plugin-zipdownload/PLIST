@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/12/05 16:16:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.2.14.1 2018/06/08 09:34:34 bsiegert Exp $
 share/examples/roundcube/plugins/zipdownload/config.inc.php
 share/roundcube/plugins/zipdownload/README
 share/roundcube/plugins/zipdownload/composer.json
@@ -32,6 +32,7 @@ share/roundcube/plugins/zipdownload/localization/fi_FI.inc
 share/roundcube/plugins/zipdownload/localization/fo_FO.inc
 share/roundcube/plugins/zipdownload/localization/fr_FR.inc
 share/roundcube/plugins/zipdownload/localization/fy_NL.inc
+share/roundcube/plugins/zipdownload/localization/ga_IE.inc
 share/roundcube/plugins/zipdownload/localization/gl_ES.inc
 share/roundcube/plugins/zipdownload/localization/he_IL.inc
 share/roundcube/plugins/zipdownload/localization/hr_HR.inc
@@ -49,6 +50,7 @@ share/roundcube/plugins/zipdownload/localization/ku_IQ.inc
 share/roundcube/plugins/zipdownload/localization/lb_LU.inc
 share/roundcube/plugins/zipdownload/localization/lt_LT.inc
 share/roundcube/plugins/zipdownload/localization/lv_LV.inc
+share/roundcube/plugins/zipdownload/localization/mk_MK.inc
 share/roundcube/plugins/zipdownload/localization/ml_IN.inc
 share/roundcube/plugins/zipdownload/localization/mn_MN.inc
 share/roundcube/plugins/zipdownload/localization/nb_NO.inc
@@ -64,8 +66,10 @@ share/roundcube/plugins/zipdownload/localization/sl_SI.inc
 share/roundcube/plugins/zipdownload/localization/sq_AL.inc
 share/roundcube/plugins/zipdownload/localization/sr_CS.inc
 share/roundcube/plugins/zipdownload/localization/sv_SE.inc
+share/roundcube/plugins/zipdownload/localization/th_TH.inc
 share/roundcube/plugins/zipdownload/localization/tr_TR.inc
 share/roundcube/plugins/zipdownload/localization/uk_UA.inc
+share/roundcube/plugins/zipdownload/localization/uz.inc
 share/roundcube/plugins/zipdownload/localization/vi_VN.inc
 share/roundcube/plugins/zipdownload/localization/zh_CN.inc
 share/roundcube/plugins/zipdownload/localization/zh_TW.inc
