@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2018/01/28 16:24:15 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2018/06/08 19:40:44 nros Exp $
 
-DISTNAME=	qore-xml-module-1.3
-PKGREVISION=	2
+DISTNAME=	qore-xml-module-1.4.1
 CATEGORIES=	textproc
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=qorelanguage/}
 EXTRACT_SUFX=   .tar.bz2
@@ -22,6 +21,8 @@ PTHREAD_OPTS+=	native
 
 CONFIGURE_ARGS+=--with-libsuffix=""
 
+REPLACE_QORE=	bin/soaputil
+
 #This is needed in order to comply the with MIT license and binary distribution
 #Install docs
 INSTALLATION_DIRS+=     share/doc/${PKGBASE}
@@ -36,6 +37,7 @@ post-install:
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 
+.include "../../lang/qore/application.mk"
 .include "../../lang/qore/module.mk"
 .include "options.mk"
 
