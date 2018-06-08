@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2016/12/05 16:16:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.2.14.1 2018/06/08 09:31:25 bsiegert Exp $
 share/examples/roundcube/plugins/password/config.inc.php
 share/roundcube/plugins/password/README
 share/roundcube/plugins/password/composer.json
 share/roundcube/plugins/password/drivers/chpasswd.php
 share/roundcube/plugins/password/drivers/cpanel.php
+share/roundcube/plugins/password/drivers/cpanel_webmail.php
 share/roundcube/plugins/password/drivers/dbmail.php
 share/roundcube/plugins/password/drivers/directadmin.php
 share/roundcube/plugins/password/drivers/domainfactory.php
@@ -12,6 +13,7 @@ share/roundcube/plugins/password/drivers/gearman.php
 share/roundcube/plugins/password/drivers/hmail.php
 share/roundcube/plugins/password/drivers/kpasswd.php
 share/roundcube/plugins/password/drivers/ldap.php
+share/roundcube/plugins/password/drivers/ldap_ppolicy.php
 share/roundcube/plugins/password/drivers/ldap_simple.php
 share/roundcube/plugins/password/drivers/pam.php
 share/roundcube/plugins/password/drivers/plesk.php
@@ -24,6 +26,7 @@ share/roundcube/plugins/password/drivers/virtualmin.php
 share/roundcube/plugins/password/drivers/vpopmaild.php
 share/roundcube/plugins/password/drivers/ximss.php
 share/roundcube/plugins/password/drivers/xmail.php
+share/roundcube/plugins/password/helpers/change_ldap_pass.pl
 share/roundcube/plugins/password/helpers/chgdbmailusers.c
 share/roundcube/plugins/password/helpers/chgsaslpasswd.c
 share/roundcube/plugins/password/helpers/chgvirtualminpasswd.c
@@ -60,6 +63,7 @@ share/roundcube/plugins/password/localization/fi_FI.inc
 share/roundcube/plugins/password/localization/fo_FO.inc
 share/roundcube/plugins/password/localization/fr_FR.inc
 share/roundcube/plugins/password/localization/fy_NL.inc
+share/roundcube/plugins/password/localization/ga_IE.inc
 share/roundcube/plugins/password/localization/gl_ES.inc
 share/roundcube/plugins/password/localization/he_IL.inc
 share/roundcube/plugins/password/localization/hr_HR.inc
@@ -77,6 +81,7 @@ share/roundcube/plugins/password/localization/ku_IQ.inc
 share/roundcube/plugins/password/localization/lb_LU.inc
 share/roundcube/plugins/password/localization/lt_LT.inc
 share/roundcube/plugins/password/localization/lv_LV.inc
+share/roundcube/plugins/password/localization/mk_MK.inc
 share/roundcube/plugins/password/localization/ml_IN.inc
 share/roundcube/plugins/password/localization/mn_MN.inc
 share/roundcube/plugins/password/localization/nb_NO.inc
@@ -93,9 +98,11 @@ share/roundcube/plugins/password/localization/sl_SI.inc
 share/roundcube/plugins/password/localization/sq_AL.inc
 share/roundcube/plugins/password/localization/sr_CS.inc
 share/roundcube/plugins/password/localization/sv_SE.inc
+share/roundcube/plugins/password/localization/th_TH.inc
 share/roundcube/plugins/password/localization/ti.inc
 share/roundcube/plugins/password/localization/tr_TR.inc
 share/roundcube/plugins/password/localization/uk_UA.inc
+share/roundcube/plugins/password/localization/uz.inc
 share/roundcube/plugins/password/localization/vi_VN.inc
 share/roundcube/plugins/password/localization/zh_CN.inc
 share/roundcube/plugins/password/localization/zh_TW.inc
