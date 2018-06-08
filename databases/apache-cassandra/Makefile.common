@@ -1,10 +1,11 @@
-# $NetBSD: Makefile.common,v 1.2 2017/04/19 11:24:36 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.3 2018/06/08 09:52:44 fhajny Exp $
 # used by databases/apache-cassandra/Makefile
 # used by databases/apache-cassandra2/Makefile
 #
 
 DISTNAME=	apache-cassandra-${CASSANDRA_VER}
 CATEGORIES=	databases
+MASTER_SITES=	${MASTER_SITE_APACHE:=cassandra/${CASSANDRA_VER:C/-.*//}/}
 DISTFILES=	${DISTNAME}-bin${EXTRACT_SUFX}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,7 +16,6 @@ LICENSE=	apache-2.0
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
 USE_JAVA=	run
-USE_JAVA2=	6
 USE_TOOLS+=	bash:run pax
 
 FILESDIR=	${.CURDIR}/../../databases/apache-cassandra/files
@@ -43,6 +43,7 @@ PKG_SYSCONFVAR=		cass
 PKG_SYSCONFDIR.cass=	${CASSANDRA_HOME}/${PKG_SYSCONFSUBDIR}
 PKG_SYSCONFDIR_PERMS=	${CASSANDRA_USER} ${CASSANDRA_GROUP} 0755
 
+OWN_DIRS_PERMS+=	${CASSANDRA_HOME}/conf/triggers ${CASSANDRA_USER} ${CASSANDRA_GROUP} 0755
 OWN_DIRS_PERMS+=	${VARBASE}/lib/cassandra ${CASSANDRA_USER} ${CASSANDRA_GROUP} 0751
 OWN_DIRS_PERMS+=	${VARBASE}/log/cassandra ${CASSANDRA_USER} ${CASSANDRA_GROUP} 0755
 
@@ -54,7 +55,7 @@ FILES_SUBST+=		JAVA_HOME=${PKG_JAVA_HOME}		\
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-install
 SUBST_MESSAGE.path=	Fixing default paths
-SUBST_FILES.path=	bin/cassandra.in.sh bin/cassandra
+SUBST_FILES.path=	bin/cassandra.in.sh bin/cassandra conf/cassandra-env.sh
 SUBST_VARS.path=	VARBASE
 
 .for f in ${EGFILES}
@@ -62,14 +63,19 @@ CONF_FILES_PERMS+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f} \
 			${CASSANDRA_USER} ${CASSANDRA_GROUP} 0644
 .endfor
 
-REPLACE_BASH+=		bin/cassandra
+REPLACE_BASH+=		bin/cassandra bin/cqlsh bin/cqlsh.py bin/debug-cql	\
+			bin/nodetool bin/sstable*
 
 INSTALLATION_DIRS+=	${CASSANDRA_HOME} ${EGDIR} ${DOCDIR}
 INSTALLATION_DIRS+=	${CASSANDRA_HOME} ${CASSANDRA_HOME}/bin ${EGDIR} ${DOCDIR}
 
+CHECK_SSP_SUPPORTED=	no
 CHECK_INTERPRETER_SKIP+=share/cassandra/interface/cassandra.thrift
 CHECK_INTERPRETER_SKIP+=share/cassandra/pylib/setup.py
 CHECK_INTERPRETER_SKIP+=share/cassandra/tools/bin/token-generator
+
+# Skip checks on other arch libs to keep this simple
+CHECK_SHLIBS_SKIP+=	share/cassandra/lib/sigar-bin/*
 
 do-install:
 .for d in ${WORK_DIRS}
