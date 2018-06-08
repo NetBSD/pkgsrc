@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2018/06/08 16:58:16 jperkin Exp $
+# $NetBSD: Makefile,v 1.89 2018/06/08 19:59:01 jperkin Exp $
 
 DISTNAME=	gnupg-2.2.7
 PKGNAME=	${DISTNAME:S/gnupg-/gnupg2-/}
@@ -14,7 +14,8 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	pinentry-[0-9]*:../../security/pinentry
 
-CONFLICTS=	dirmngr-[0-9]*
+CONFLICTS+=	dirmngr-[0-9]*
+SUPERSEDES+=	dirmngr-[0-9]*
 
 BUILD_DEFS+=		VARBASE
 USE_PKGLOCALEDIR=	yes
