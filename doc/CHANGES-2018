@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2749 2018/06/08 20:36:19 nros Exp $
+$NetBSD: CHANGES-2018,v 1.2750 2018/06/08 22:00:07 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3917,3 +3917,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/qore-json-module to 1.7 [nros 2018-06-08]
 	Updated security/qore-ssh2-module to 1.2 [nros 2018-06-08]
 	Updated textproc/qore-yaml-module to 0.6 [nros 2018-06-08]
+	Updated pkgtools/pkgin to 0.11.0 [jperkin 2018-06-08]
