@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2744 2018/06/08 01:36:25 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2745 2018/06/08 01:41:15 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3906,3 +3906,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added cross/mingw-w64-i686-crt version 5.0.4 [ryoon 2018-06-08]
 	Added cross/mingw-w64-i686-gcc version 8.1.0 [ryoon 2018-06-08]
 	Updated devel/p5-Alien-Build to 1.43 [wen 2018-06-08]
+	Updated devel/p5-Alien-Base-ModuleBuild to 1.04 [wen 2018-06-08]
