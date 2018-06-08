@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2748 2018/06/08 20:17:56 leot Exp $
+$NetBSD: CHANGES-2018,v 1.2749 2018/06/08 20:36:19 nros Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3910,3 +3910,10 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/apache-cassandra2 to 2.2.12 [fhajny 2018-06-08]
 	Updated databases/apache-cassandra to 3.11.2 [fhajny 2018-06-08]
 	Updated devel/boehm-gc to 7.6.4nb2 [leot 2018-06-08]
+	Updated lang/qore to 0.8.13.5 [nros 2018-06-08]
+	Updated databases/qore-pgsql-module to 2.4.1 [nros 2018-06-08]
+	Updated databases/qore-mysql-module to 2.0.2.1 [nros 2018-06-08]
+	Updated textproc/qore-xml-module to 1.4.1 [nros 2018-06-08]
+	Updated textproc/qore-json-module to 1.7 [nros 2018-06-08]
+	Updated security/qore-ssh2-module to 1.2 [nros 2018-06-08]
+	Updated textproc/qore-yaml-module to 0.6 [nros 2018-06-08]
