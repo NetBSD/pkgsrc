@@ -10,7 +10,7 @@
     <dependency name="filesystem" grouping="require_all" restart_on="error" type="service">
       <service_fmri value="svc:/system/filesystem/local" />
     </dependency>
-      <method_context project="@SMF_NAME@" working_directory="@CASSANDRA_HOME@">
+      <method_context working_directory="@CASSANDRA_HOME@">
       <method_credential user="@CASSANDRA_USER@" group="@CASSANDRA_GROUP@" />
       <method_environment>
         <envvar name="JAVA_HOME" value="@JAVA_HOME@" />
