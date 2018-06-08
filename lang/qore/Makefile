@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2018/01/28 16:24:11 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2018/06/08 18:38:29 nros Exp $
 
-DISTNAME=	qore-0.8.13
-PKGREVISION=	1
+DISTNAME=	qore-0.8.13.5
 CATEGORIES=	lang
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=qorelanguage/}
 EXTRACT_SUFX=   .tar.bz2
@@ -9,7 +8,7 @@ EXTRACT_SUFX=   .tar.bz2
 GITHUB_RELEASE=	release-${PKGVERSION_NOREV}
 
 MAINTAINER=	nros@NetBSD.org
-COMMENT=	Qore programming language
+COMMENT=	Embeddable multithreaded scripting language
 HOMEPAGE=	http://www.qore.org/
 LICENSE=	gnu-gpl-v2 OR gnu-lgpl-v2.1 OR mit
 
@@ -26,10 +25,6 @@ REPLACE_QORE+=		bin/qget bin/rest bin/schema-reverse
 REPLACE_QORE+=		bin/sfrest bin/sqlutil doxygen/qdx
 
 CONFIGURE_ARGS+=--with-libsuffix=""
-
-#pre-configure:
-#	set -e; cd ${WRKSRC}; \
-#	autoheader; autoconf
 
 #This is needed in order to comply the with MIT license and binary distribution
 #Install docs
