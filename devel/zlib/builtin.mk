@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.13 2017/04/04 08:57:33 adam Exp $
+# $NetBSD: builtin.mk,v 1.14 2018/06/08 07:51:33 leot Exp $
 
 BUILTIN_PKG:=	zlib
 
@@ -93,7 +93,7 @@ _FAKE_ZLIB_PC=${BUILDLINK_DIR}/lib/pkgconfig/zlib.pc
 fake-zlib-pc:
 	${RUN}	\
 	sedsrc=../../devel/zlib/files/zlib.pc.in;	\
-	src=${BUILDLINK_PREFIX.zlib}/lib${LIBABISUFFIX}/pkgconfig/zlib.pc;\
+	src=${BUILDLINK_PREFIX.zlib:Q}/lib${LIBABISUFFIX}/pkgconfig/zlib.pc;\
 	dst=${_FAKE_ZLIB_PC};					\
 	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig;\
 	if [ ! -f $${dst} ]; then	\
@@ -102,12 +102,12 @@ fake-zlib-pc:
 			${LN} -sf $${src} $${dst};			\
 		else	\
 			${ECHO_BUILDLINK_MSG} "Creating $${dst}";	\
-			${SED}	-e s,@prefix@,${BUILDLINK_PREFIX.zlib},\
-					-e s,@exec_prefix@,${BUILDLINK_PREFIX.zlib},\
-					-e s,@libdir@,${BUILDLINK_PREFIX.zlib}/lib${LIBABISUFFIX},\
+			${SED}	-e s,@prefix@,${BUILDLINK_PREFIX.zlib:Q},\
+					-e s,@exec_prefix@,${BUILDLINK_PREFIX.zlib:Q},\
+					-e s,@libdir@,${BUILDLINK_PREFIX.zlib:Q}/lib${LIBABISUFFIX},\
 					-e s,@VERSION@,${BUILTIN_VERSION.zlib},\
-					-e s,@includedir@,${BUILDLINK_PREFIX.zlib}/include,\
-					-e s,@sharedlibdir@,${BUILDLINK_PREFIX.zlib}/lib,\
+					-e s,@includedir@,${BUILDLINK_PREFIX.zlib:Q}/include,\
+					-e s,@sharedlibdir@,${BUILDLINK_PREFIX.zlib:Q}/lib,\
 				$${sedsrc} > $${dst};			\
 		fi	\
 	fi
