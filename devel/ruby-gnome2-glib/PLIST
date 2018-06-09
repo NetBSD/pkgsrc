@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2017/11/19 10:38:38 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.22 2018/06/09 03:36:07 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/glib-enum-types.h
@@ -11,6 +11,8 @@ ${GEM_EXTSDIR}/rbgobject.h
 ${GEM_EXTSDIR}/rbgutil.h
 ${GEM_EXTSDIR}/rbgutil_list.h
 ${GEM_EXTSDIR}/rbgutildeprecated.h
+${GEM_LIBDIR}/COPYING.LIB
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/ext/glib2/depend
 ${GEM_LIBDIR}/ext/glib2/extconf.rb
@@ -19,6 +21,7 @@ ${GEM_LIBDIR}/ext/glib2/glib-enum-types.h
 ${GEM_LIBDIR}/ext/glib2/glib2.def
 ${GEM_LIBDIR}/ext/glib2/rbgcompat.h
 ${GEM_LIBDIR}/ext/glib2/rbglib-bytes.c
+${GEM_LIBDIR}/ext/glib2/rbglib-gc.c
 ${GEM_LIBDIR}/ext/glib2/rbglib-variant-type.c
 ${GEM_LIBDIR}/ext/glib2/rbglib-variant.c
 ${GEM_LIBDIR}/ext/glib2/rbglib.c
@@ -91,6 +94,7 @@ ${GEM_LIBDIR}/ext/glib2/rbgutil_list.h
 ${GEM_LIBDIR}/ext/glib2/rbgutildeprecated.c
 ${GEM_LIBDIR}/ext/glib2/rbgutildeprecated.h
 ${GEM_LIBDIR}/extconf.rb
+${GEM_LIBDIR}/glib2.gemspec
 ${GEM_LIBDIR}/lib/glib-enum-types.h
 ${GEM_LIBDIR}/lib/glib-mkenums.rb
 ${GEM_LIBDIR}/lib/glib2.rb
@@ -133,26 +137,28 @@ ${GEM_LIBDIR}/test/run-test.rb
 ${GEM_LIBDIR}/test/test-binding.rb
 ${GEM_LIBDIR}/test/test-bytes.rb
 ${GEM_LIBDIR}/test/test-date-time.rb
+${GEM_LIBDIR}/test/test-enum.rb
+${GEM_LIBDIR}/test/test-file-utils.rb
+${GEM_LIBDIR}/test/test-flags.rb
+${GEM_LIBDIR}/test/test-glib2.rb
 ${GEM_LIBDIR}/test/test-iochannel.rb
+${GEM_LIBDIR}/test/test-key-file.rb
 ${GEM_LIBDIR}/test/test-match-info.rb
+${GEM_LIBDIR}/test/test-mkenums.rb
+${GEM_LIBDIR}/test/test-poll-fd.rb
 ${GEM_LIBDIR}/test/test-regex.rb
+${GEM_LIBDIR}/test/test-signal.rb
+${GEM_LIBDIR}/test/test-source.rb
+${GEM_LIBDIR}/test/test-spawn.rb
 ${GEM_LIBDIR}/test/test-time-zone.rb
+${GEM_LIBDIR}/test/test-timeout.rb
 ${GEM_LIBDIR}/test/test-type-interface.rb
+${GEM_LIBDIR}/test/test-unicode.rb
+${GEM_LIBDIR}/test/test-utils.rb
+${GEM_LIBDIR}/test/test-value.rb
 ${GEM_LIBDIR}/test/test-variant-type.rb
+${GEM_LIBDIR}/test/test-variant.rb
 ${GEM_LIBDIR}/test/test-version.rb
-${GEM_LIBDIR}/test/test_enum.rb
-${GEM_LIBDIR}/test/test_file_utils.rb
-${GEM_LIBDIR}/test/test_flags.rb
-${GEM_LIBDIR}/test/test_glib2.rb
-${GEM_LIBDIR}/test/test_key_file.rb
-${GEM_LIBDIR}/test/test_mkenums.rb
-${GEM_LIBDIR}/test/test_poll_fd.rb
-${GEM_LIBDIR}/test/test_signal.rb
-${GEM_LIBDIR}/test/test_source.rb
-${GEM_LIBDIR}/test/test_spawn.rb
-${GEM_LIBDIR}/test/test_timeout.rb
-${GEM_LIBDIR}/test/test_unicode.rb
-${GEM_LIBDIR}/test/test_utils.rb
-${GEM_LIBDIR}/test/test_value.rb
-${GEM_LIBDIR}/test/test_win32.rb
+${GEM_LIBDIR}/test/test-win32.rb
+${GEM_LIBDIR}/version.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec

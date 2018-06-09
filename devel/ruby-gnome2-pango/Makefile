@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2018/05/03 12:04:02 tsutsui Exp $
+# $NetBSD: Makefile,v 1.61 2018/06/09 03:36:08 tsutsui Exp $
 #
 
 DISTNAME=		pango-${VERSION}
@@ -10,12 +10,11 @@ MAINTAINER=		tsutsui@NetBSD.org
 
 CONFLICTS+=		ruby-gnome2-pango-[0-9]*
 
-DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-glib>=${VERSION}:../../devel/ruby-gnome2-glib
-DEPENDS+=		${RUBY_PKGPREFIX}-cairo>=1.14.3:../../graphics/ruby-cairo
 DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-cairo-gobject>=${VERSION}:../../graphics/ruby-gnome2-cairo-gobject
 
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/ruby-gnome2-glib/buildlink3.mk"
+.include "../../devel/ruby-gnome2-gobject-introspection/buildlink3.mk"
 .include "../../graphics/ruby-cairo/buildlink3.mk"
 .include "../../meta-pkgs/ruby-gnome2/Makefile.common"
 .include "../../lang/ruby/gem.mk"
