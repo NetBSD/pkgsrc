@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2015/11/25 12:49:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2018/06/09 20:34:56 fhajny Exp $
 
 VERSION=	13.1.2
 DISTNAME=	ideaIC-${VERSION:S/.0.0//}-src
 PKGNAME=	intellij-idea-ce-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://download.jetbrains.com/idea/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,7 +20,7 @@ USE_JAVA2=	7
 
 USE_TOOLS+=	pax tar
 
-DEPENDS+=	snappy-java10-[0-9]*:../../devel/snappy-java10
+DEPENDS+=	snappy-java>=1.0.5<1.1:../../devel/snappy-java10
 BUILD_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
 
 SUBST_CLASSES+=		dos_eol
@@ -76,7 +77,7 @@ do-install:
 		pax -rw -pmp ${DESTDIR}${PREFIX}/${PKGNAME}
 	cd ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}/lib && \
 	${RM} -f snappy-java-1.0.5.jar && \
-	${LN} -sf ${PREFIX}/lib/java/snappy-java/snappy-java-1.0.5.jar .
+	${LN} -sf ${PREFIX}/lib/java/snappy-java/snappy-java.jar .
 
 .include "../../mk/java-env.mk"
 .include "../../mk/java-vm.mk"
