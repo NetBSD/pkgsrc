@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2751 2018/06/09 01:41:57 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2752 2018/06/09 01:51:57 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3919,3 +3919,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/qore-yaml-module to 0.6 [nros 2018-06-08]
 	Updated pkgtools/pkgin to 0.11.0 [jperkin 2018-06-08]
 	Updated devel/p5-App-perlbrew to 0.83 [wen 2018-06-09]
+	Updated devel/p5-Date-Manip to 6.72 [wen 2018-06-09]
