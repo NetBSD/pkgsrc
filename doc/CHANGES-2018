@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2758 2018/06/09 11:23:20 leot Exp $
+$NetBSD: CHANGES-2018,v 1.2759 2018/06/09 11:36:56 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3947,3 +3947,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/libsixel to 1.8.0 [tsutsui 2018-06-09]
 	Updated multimedia/adobe-flash-player to 30.0.0.113 [tsutsui 2018-06-09]
 	Updated misc/tmux to 2.7nb1 [leot 2018-06-09]
+	Updated devel/snappy-java10 to 1.0.5.4 [fhajny 2018-06-09]
