@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2018/04/18 08:26:42 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2018/06/09 02:38:43 youri Exp $
 
 DISTNAME=	dconf-0.28.0
 CATEGORIES=	devel gnome
@@ -39,12 +39,21 @@ PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 .include "../../mk/bsd.prefs.mk"
 
-SUBST_CLASSES.Darwin+=	libname
-SUBST_STAGE.libname=	pre-configure
-SUBST_FILES.libname=	client/Makefile.in
-SUBST_FILES.libname+=	gsettings/Makefile.in
-SUBST_SED.libname=	-e "s|-Wl,-soname=|-install_name ${PREFIX}/lib/|g"
-SUBST_SED.libname+=	-e "/^libdconfsettings_so_LDFLAGS/s,$$, -install_name ${PREFIX}/lib/gio/modules/libdconfsettings.so,g"
+post-install:
+.if ${OPSYS} == "Darwin"
+	install_name_tool \
+	    -id ${PREFIX}/lib/libdconf.dylib \
+	    -change \
+	    "@rpath/libdconf.1.dylib" \
+	    "${PREFIX}/lib/libdconf.1.dylib" \
+	    ${PREFIX}/lib/libdconf.1.dylib
+	install_name_tool \
+	    -id ${PREFIX}/lib/gio/modules/libdconfsettings.dylib \
+	    -change \
+	    "@rpath/libdconfsettings.dylib" \
+	    "${PREFIX}/gio/modules/libdconfsettings.dylib" \
+	    ${PREFIX}/lib/gio/modules/libdconfsettings.dylib
+.endif
 
 BUILDLINK_DEPMETHOD.vala=	build
 .include "../../lang/vala/buildlink3.mk"
