@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2759 2018/06/09 11:36:56 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.2760 2018/06/09 18:08:47 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3948,3 +3948,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/adobe-flash-player to 30.0.0.113 [tsutsui 2018-06-09]
 	Updated misc/tmux to 2.7nb1 [leot 2018-06-09]
 	Updated devel/snappy-java10 to 1.0.5.4 [fhajny 2018-06-09]
+	Updated security/gnupg2 to 2.2.8 [leot 2018-06-09]
