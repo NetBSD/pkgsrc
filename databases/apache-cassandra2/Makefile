@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2018/06/08 09:34:01 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2018/06/09 11:37:49 fhajny Exp $
 #
 
 CASSANDRA_VER=	2.2.12
+PKGREVISION=	1
 
 MASTER_SITES=	${MASTER_SITE_APACHE:=cassandra/${CASSANDRA_VER:C/-.*//}/}
 
-DEPENDS+=	snappy-java10>=1.0.5:../../devel/snappy-java10
+DEPENDS+=	snappy-java>=1.0.5.4<1.1:../../devel/snappy-java10
 
 USE_JAVA2=	6
 
@@ -25,7 +26,7 @@ post-extract:
 	${RM} -f ${WRKSRC}/lib/snappy-java-*.jar
 
 post-install:
-	${LN} -sf ${PREFIX}/lib/java/snappy-java/snappy-java-1.0.5.jar \
+	${LN} -sf ${PREFIX}/lib/java/snappy-java/snappy-java.jar \
 		${DESTDIR}${PREFIX}/share/cassandra/lib/snappy-java.jar
 
 .include "../../mk/bsd.pkg.mk"
