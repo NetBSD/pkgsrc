@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2753 2018/06/09 02:08:08 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2754 2018/06/09 02:19:37 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3921,3 +3921,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-App-perlbrew to 0.83 [wen 2018-06-09]
 	Updated devel/p5-Date-Manip to 6.72 [wen 2018-06-09]
 	Updated devel/p5-Devel-CheckLib to 1.13 [wen 2018-06-09]
+	Updated devel/p5-Devel-NYTProf to 6.06 [wen 2018-06-09]
