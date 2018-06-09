@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2018/04/10 08:03:16 wen Exp $
+$NetBSD: distinfo,v 1.21 2018/06/09 02:18:14 wen Exp $
 
-SHA1 (Devel-NYTProf-6.05.tar.gz) = e81569b4455ef07779e84c1936154a5b62f3e86a
-RMD160 (Devel-NYTProf-6.05.tar.gz) = 6c0b72089636424e0883f700a724c00c5987a061
-SHA512 (Devel-NYTProf-6.05.tar.gz) = 99b781e3ffdea888e144c66e9fbf3bbd2a1d6a7465655f4bef913133e6e988948ff1749c971ef91bb52f49609d84024d4863e6f829c11141a7877449e387daf9
-Size (Devel-NYTProf-6.05.tar.gz) = 467105 bytes
+SHA1 (Devel-NYTProf-6.06.tar.gz) = b1f3fbe3b784dcc0081a485c318931a86ff48cc4
+RMD160 (Devel-NYTProf-6.06.tar.gz) = cc3e2193f263de9a43c612688649fb1e83a14219
+SHA512 (Devel-NYTProf-6.06.tar.gz) = e1fdab3208646ff9283eb606b856f0c25025479b55eddecadfdb7f9b2a9db144c003713b8abf333d03fb8ba420b7f3fbc885de360cd815d72e73ae3bffc27426
+Size (Devel-NYTProf-6.06.tar.gz) = 468188 bytes
