@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2018/06/07 16:34:45 fhajny Exp $
+# $NetBSD: Makefile,v 1.8 2018/06/09 11:36:45 fhajny Exp $
 
-DISTNAME=	snappy-java-${SNAPPYVER}
-PKGNAME=	${DISTNAME:S/java/java10/}
-PKGREVISION=	2
+DISTNAME=	snappy-java-${SNAPVER}${SNAPJVER}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xerial/}
 
@@ -12,15 +10,16 @@ COMMENT=	Snappy compressor/decompressor for Java
 LICENSE=	apache-2.0
 
 GITHUB_PROJECT=	snappy-java
-SNAPPYVER=	1.0.5
+SNAPVER=	1.0.5
+SNAPJVER=	.4
 
 DIST_SUBDIR=	${PKGBASE}
 DISTFILES=	${DEFAULT_DISTFILES}
-DISTFILES+=	snappy-java-deps-${SNAPPYVER}nb1.tar.gz
-DISTFILES+=	snappy-${SNAPPYVER}.tar.gz
-SITES.snappy-${SNAPPYVER}.tar.gz=		https://snappy.googlecode.com/files/
-SITES.snappy-java-deps-${SNAPPYVER}nb1.tar.gz=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/fhajny/
-EXTRACT_DIR.snappy-${SNAPPYVER}.tar.gz=		${WRKSRC}/target
+DISTFILES+=	snappy-java-deps-${SNAPVER}${SNAPJVER}.tar.gz
+DISTFILES+=	snappy-${SNAPVER}.tar.gz
+SITES.snappy-${SNAPVER}.tar.gz=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/fhajny/
+SITES.snappy-java-deps-${SNAPVER}${SNAPJVER}.tar.gz=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/fhajny/
+EXTRACT_DIR.snappy-${SNAPVER}.tar.gz=		${WRKSRC}/target
 
 TOOL_DEPENDS+=	apache-maven-[0-9]*:../../devel/apache-maven
 
@@ -41,10 +40,11 @@ INSTALLATION_DIRS+=	lib/java/snappy-java
 
 post-extract:
 	${TOUCH} ${WRKSRC}/target/snappy-extracted.log
+	${RM} -rf ${WRKSRC}/src/main/resources/org/xerial/snappy/native/*
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/target/snappy-java-${SNAPPYVER}.jar \
-		${DESTDIR}${PREFIX}/lib/java/snappy-java
+	${INSTALL_DATA} ${WRKSRC}/target/snappy-java-${SNAPVER}${SNAPJVER}.jar \
+		${DESTDIR}${PREFIX}/lib/java/snappy-java/snappy-java.jar
 
 .include "../../mk/java-env.mk"
 .include "../../mk/java-vm.mk"
