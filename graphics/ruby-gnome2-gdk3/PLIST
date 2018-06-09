@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2017/06/10 08:27:20 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/06/09 03:36:08 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
+${GEM_LIBDIR}/COPYING.LIB
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/dependency-check/Rakefile
+${GEM_LIBDIR}/gdk3.gemspec
 ${GEM_LIBDIR}/lib/gdk3.rb
 ${GEM_LIBDIR}/lib/gdk3/atom.rb
 ${GEM_LIBDIR}/lib/gdk3/cairo.rb
