@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2016/11/18 12:41:34 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/06/09 03:36:07 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/gobject_introspection.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/rb-gobject-introspection.h
+${GEM_LIBDIR}/COPYING.LIB
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/ext/gobject-introspection/depend
 ${GEM_LIBDIR}/ext/gobject-introspection/extconf.rb
@@ -43,6 +45,7 @@ ${GEM_LIBDIR}/ext/gobject-introspection/rb-gobject-introspection.c
 ${GEM_LIBDIR}/ext/gobject-introspection/rb-gobject-introspection.h
 ${GEM_LIBDIR}/ext/gobject-introspection/rbgiversion.h
 ${GEM_LIBDIR}/extconf.rb
+${GEM_LIBDIR}/gobject-introspection.gemspec
 ${GEM_LIBDIR}/lib/gi.rb
 ${GEM_LIBDIR}/lib/gobject-introspection.rb
 ${GEM_LIBDIR}/lib/gobject-introspection/arg-info.rb

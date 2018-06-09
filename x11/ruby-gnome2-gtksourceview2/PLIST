@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2016/01/24 05:03:24 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/06/09 03:36:09 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/gtksourceview2.${RUBY_DLEXT}
-${GEM_LIBDIR}/README
+${GEM_LIBDIR}/COPYING.LIB
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/ext/gtksourceview2/depend
 ${GEM_LIBDIR}/ext/gtksourceview2/extconf.rb
@@ -20,6 +21,7 @@ ${GEM_LIBDIR}/ext/gtksourceview2/rbgtksourcestylescheme.c
 ${GEM_LIBDIR}/ext/gtksourceview2/rbgtksourcestyleschememanager.c
 ${GEM_LIBDIR}/ext/gtksourceview2/rbgtksourceview.c
 ${GEM_LIBDIR}/extconf.rb
+${GEM_LIBDIR}/gtksourceview2.gemspec
 ${GEM_LIBDIR}/lib/gtksourceview2.rb
 ${GEM_LIBDIR}/lib/gtksourceview2.${RUBY_DLEXT}
 ${GEM_LIBDIR}/sample/sourcelanguagemanager.rb
