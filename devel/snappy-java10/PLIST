@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2014/04/24 16:15:43 ryoon Exp $
-lib/java/snappy-java/snappy-java-${PKGVERSION}.jar
+@comment $NetBSD: PLIST,v 1.2 2018/06/09 11:36:45 fhajny Exp $
+lib/java/snappy-java/snappy-java.jar
