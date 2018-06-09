@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2017/12/30 13:18:47 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2018/06/09 01:40:20 wen Exp $
 
-DISTNAME=	App-perlbrew-0.82
+DISTNAME=	App-perlbrew-0.83
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=App/}
@@ -27,10 +27,13 @@ BUILD_DEPENDS+=	p5-Test-Spec>=0:../../devel/p5-Test-Spec
 BUILD_DEPENDS+=	p5-Path-Class>=0:../../devel/p5-Path-Class
 BUILD_DEPENDS+=	p5-IO-All>=0.46:../../devel/p5-IO-All
 BUILD_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
+BUILD_DEPENDS+=	p5-Test-TempDir-Tiny>=0:../../devel/p5-Test-TempDir-Tiny
 #		File::Temp in perl 5.14
 
 USE_LANGUAGES=		# empty
 USE_TOOLS+=		perl
+PERL5_MODULE_TYPE=	Module::Build::Tiny
+
 PERL5_PACKLIST=		auto/App/perlbrew/.packlist
 
 .include "../../lang/perl5/module.mk"
