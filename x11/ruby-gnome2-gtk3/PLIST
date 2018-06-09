@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.13 2018/04/13 16:31:11 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.14 2018/06/09 03:36:09 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/gtk3.${RUBY_DLEXT}
+${GEM_LIBDIR}/COPYING.LIB
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/ext/gtk3/depend
 ${GEM_LIBDIR}/ext/gtk3/extconf.rb
@@ -16,11 +18,13 @@ ${GEM_LIBDIR}/ext/gtk3/rb-gtk3-window.c
 ${GEM_LIBDIR}/ext/gtk3/rb-gtk3.c
 ${GEM_LIBDIR}/ext/gtk3/rb-gtk3.h
 ${GEM_LIBDIR}/extconf.rb
+${GEM_LIBDIR}/gtk3.gemspec
 ${GEM_LIBDIR}/lib/gtk3.rb
 ${GEM_LIBDIR}/lib/gtk3.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/gtk3/about-dialog.rb
 ${GEM_LIBDIR}/lib/gtk3/action-group.rb
 ${GEM_LIBDIR}/lib/gtk3/action.rb
+${GEM_LIBDIR}/lib/gtk3/application.rb
 ${GEM_LIBDIR}/lib/gtk3/binding-set.rb
 ${GEM_LIBDIR}/lib/gtk3/border.rb
 ${GEM_LIBDIR}/lib/gtk3/box.rb
@@ -38,6 +42,7 @@ ${GEM_LIBDIR}/lib/gtk3/css-provider.rb
 ${GEM_LIBDIR}/lib/gtk3/deprecated.rb
 ${GEM_LIBDIR}/lib/gtk3/dialog.rb
 ${GEM_LIBDIR}/lib/gtk3/entry-buffer.rb
+${GEM_LIBDIR}/lib/gtk3/entry.rb
 ${GEM_LIBDIR}/lib/gtk3/file-chooser-dialog.rb
 ${GEM_LIBDIR}/lib/gtk3/font-chooser-dialog.rb
 ${GEM_LIBDIR}/lib/gtk3/gdk-drag-context.rb
@@ -149,6 +154,7 @@ ${GEM_LIBDIR}/sample/gtk-demo/data/symbolic-source.svg
 ${GEM_LIBDIR}/sample/gtk-demo/decor1.png
 ${GEM_LIBDIR}/sample/gtk-demo/decor2.png
 ${GEM_LIBDIR}/sample/gtk-demo/default_cursor.png
+${GEM_LIBDIR}/sample/gtk-demo/demo-3.18.ui
 ${GEM_LIBDIR}/sample/gtk-demo/demo.gresource.xml
 ${GEM_LIBDIR}/sample/gtk-demo/demo.ui
 ${GEM_LIBDIR}/sample/gtk-demo/dialog.rb
@@ -253,6 +259,7 @@ ${GEM_LIBDIR}/sample/gtk-demo/panes.rb
 ${GEM_LIBDIR}/sample/gtk-demo/pickers.rb
 ${GEM_LIBDIR}/sample/gtk-demo/pixbufs.rb
 ${GEM_LIBDIR}/sample/gtk-demo/pointer_cursor.png
+${GEM_LIBDIR}/sample/gtk-demo/popover-3.18.ui
 ${GEM_LIBDIR}/sample/gtk-demo/popover.rb
 ${GEM_LIBDIR}/sample/gtk-demo/popover.ui
 ${GEM_LIBDIR}/sample/gtk-demo/printing.rb
@@ -450,6 +457,7 @@ ${GEM_LIBDIR}/test/fixture/simple_window.gresource.xml
 ${GEM_LIBDIR}/test/fixture/simple_window.ui
 ${GEM_LIBDIR}/test/gtk-test-utils.rb
 ${GEM_LIBDIR}/test/run-test.rb
+${GEM_LIBDIR}/test/test-application.rb
 ${GEM_LIBDIR}/test/test-calendar.rb
 ${GEM_LIBDIR}/test/test-check-menu-item.rb
 ${GEM_LIBDIR}/test/test-gc.rb
