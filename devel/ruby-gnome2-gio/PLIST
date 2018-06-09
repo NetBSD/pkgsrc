@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.9 2017/01/29 07:54:19 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/06/09 03:36:07 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/gio2.${RUBY_DLEXT}
+${GEM_LIBDIR}/COPYING.LIB
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/ext/gio2/depend
 ${GEM_LIBDIR}/ext/gio2/extconf.rb
@@ -10,6 +12,7 @@ ${GEM_LIBDIR}/ext/gio2/rb-gio2-pollable-source.c
 ${GEM_LIBDIR}/ext/gio2/rb-gio2.c
 ${GEM_LIBDIR}/ext/gio2/rb-gio2.h
 ${GEM_LIBDIR}/extconf.rb
+${GEM_LIBDIR}/gio2.gemspec
 ${GEM_LIBDIR}/lib/gio2.rb
 ${GEM_LIBDIR}/lib/gio2.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/gio2/action-map.rb
@@ -21,6 +24,7 @@ ${GEM_LIBDIR}/lib/gio2/file.rb
 ${GEM_LIBDIR}/lib/gio2/inet-address.rb
 ${GEM_LIBDIR}/lib/gio2/input-stream.rb
 ${GEM_LIBDIR}/lib/gio2/loader.rb
+${GEM_LIBDIR}/lib/gio2/menu-item.rb
 ${GEM_LIBDIR}/lib/gio2/pollable-input-stream.rb
 ${GEM_LIBDIR}/lib/gio2/pollable-output-stream.rb
 ${GEM_LIBDIR}/lib/gio2/resources.rb
@@ -53,6 +57,7 @@ ${GEM_LIBDIR}/test/test-inet-address.rb
 ${GEM_LIBDIR}/test/test-input-stream.rb
 ${GEM_LIBDIR}/test/test-memory-input-stream.rb
 ${GEM_LIBDIR}/test/test-memory-output-stream.rb
+${GEM_LIBDIR}/test/test-menu-item.rb
 ${GEM_LIBDIR}/test/test-mount.rb
 ${GEM_LIBDIR}/test/test-output-stream.rb
 ${GEM_LIBDIR}/test/test-pollable-input-stream.rb

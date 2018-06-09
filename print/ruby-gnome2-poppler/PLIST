@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2017/10/21 01:22:56 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/06/09 03:36:09 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
+${GEM_LIBDIR}/COPYING.LIB
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/dependency-check/Rakefile
 ${GEM_LIBDIR}/lib/poppler.rb
@@ -15,6 +17,7 @@ ${GEM_LIBDIR}/lib/poppler/loader.rb
 ${GEM_LIBDIR}/lib/poppler/page.rb
 ${GEM_LIBDIR}/lib/poppler/rectangle.rb
 ${GEM_LIBDIR}/lib/poppler/version.rb
+${GEM_LIBDIR}/poppler.gemspec
 ${GEM_LIBDIR}/sample/number-pdf.rb
 ${GEM_LIBDIR}/sample/pdf2.rb
 ${GEM_LIBDIR}/sample/pdf2svg.rb
