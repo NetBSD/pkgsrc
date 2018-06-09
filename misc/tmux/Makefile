@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2018/05/26 17:05:28 leot Exp $
+# $NetBSD: Makefile,v 1.45 2018/06/09 11:23:05 leot Exp $
 
 DISTNAME=	tmux-2.7
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tmux/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -14,6 +15,13 @@ GNU_CONFIGURE=	yes
 USE_TERMINFO=	yes
 
 USE_TOOLS+=	pkg-config
+
+SUBST_CLASSES+=			sysconfdir
+SUBST_STAGE.sysconfdir=		pre-configure
+SUBST_MESSAGE.sysconfdir=	Do not force sysconfdir to /etc
+SUBST_FILES.sysconfdir=		configure configure.ac
+SUBST_SED.sysconfdir=		-e '/Default tmux\.conf goes in \/etc/d'
+SUBST_SED.sysconfdir+=		-e '/sysconfdir=\/etc/d'
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
