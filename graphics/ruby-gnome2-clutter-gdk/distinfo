@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2018/05/03 12:04:03 tsutsui Exp $
+$NetBSD: distinfo,v 1.9 2018/06/09 03:36:08 tsutsui Exp $
 
-SHA1 (clutter-gdk-3.2.5.gem) = 21895a81ecf8c784a328ae7a40997b3dd156a84b
-RMD160 (clutter-gdk-3.2.5.gem) = 887bd0dd088e39f1b47792646d238a7cc5a6a8a0
-SHA512 (clutter-gdk-3.2.5.gem) = 7d408f59db7ebc1bc89dde13d034c3d8cbd416b2aa90a642e585b5128550e51eb00a24e78c988faab0ea661042535b3b52f34870b08a67102a0806d6696d367c
-Size (clutter-gdk-3.2.5.gem) = 5632 bytes
+SHA1 (clutter-gdk-3.2.7.gem) = a82c94a6a7a67e6ea11535abf887578da875e4e5
+RMD160 (clutter-gdk-3.2.7.gem) = 9f1c8900ec950c909ca26f0b59ce265413b3e8e2
+SHA512 (clutter-gdk-3.2.7.gem) = c92ed6c3799d16c64be2413ee4a0f99117711982a17ad88e0d5b2b91edaeabeabe45dfe177120b0fa2353216b9988b92b908a2ba3b645885e831cd1ee5f3a18f
+Size (clutter-gdk-3.2.7.gem) = 15360 bytes

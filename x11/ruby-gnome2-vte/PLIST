@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2016/01/24 05:03:24 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/06/09 03:36:09 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/vte.${RUBY_DLEXT}
-${GEM_LIBDIR}/README
+${GEM_LIBDIR}/COPYING.LIB
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/ext/vte/depend
 ${GEM_LIBDIR}/ext/vte/extconf.rb
@@ -19,4 +20,5 @@ ${GEM_LIBDIR}/lib/vte.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/vte/deprecated.rb
 ${GEM_LIBDIR}/sample/multiterm.rb
 ${GEM_LIBDIR}/sample/terminal.rb
+${GEM_LIBDIR}/vte.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
