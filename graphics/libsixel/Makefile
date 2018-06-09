@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2018/06/09 04:19:50 tsutsui Exp $
+# $NetBSD: Makefile,v 1.34 2018/06/09 11:24:48 tsutsui Exp $
 
 DISTNAME=		libsixel-1.8.0
 CATEGORIES=		graphics
@@ -6,7 +6,7 @@ MASTER_SITES=		${MASTER_SITE_GITHUB:=saitoha/}
 GITHUB_PROJECT=		libsixel
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		tsutsui@NetBSD.org
 HOMEPAGE=		http://saitoha.github.io/libsixel/
 COMMENT=		DEC SIXEL graphics codec encoder/decoder and converter
 LICENSE=		mit AND public-domain
