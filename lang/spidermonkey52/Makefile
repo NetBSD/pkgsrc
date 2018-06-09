@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/05/20 17:45:52 maya Exp $
+# $NetBSD: Makefile,v 1.6 2018/06/09 03:01:12 youri Exp $
 
 DISTNAME=	mozjs-52.7.4
 PKGREVISION=	1
@@ -32,6 +32,8 @@ PKGCONFIG_OVERRIDE+=	js/src/js.pc.in
 
 PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_FOR_BUILD_ONLY=		yes
+
+DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 .if ${MACHINE_ARCH} == "i386"
 # Needs 8 byte atomics.
