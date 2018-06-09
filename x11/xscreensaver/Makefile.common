@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.123 2017/09/26 10:27:23 wiz Exp $
+# $NetBSD: Makefile.common,v 1.124 2018/06/09 03:51:02 youri Exp $
 #
 # used by x11/xscreensaver/Makefile
 # used by x11/xscreensaver-demo/Makefile
@@ -52,6 +52,10 @@ CFLAGS+=		-I/usr/include/kerberosIV
 .  else
 CONFIGURE_ARGS+=	--without-kerberos
 .  endif
+.endif
+
+.if ${OPSYS} == "Darwin"
+PLIST_SRC+=	PLIST.Darwin
 .endif
 
 .include "../../mk/compiler.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2015/01/24 06:09:13 obache Exp $
+# $NetBSD: options.mk,v 1.10 2018/06/09 03:51:02 youri Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xscreensaver
 PKG_SUPPORTED_OPTIONS=	pam webcollage opengl
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--without-pam
 #CONFIGURE_ARGS+=	--without-shadow
 .endif
 
-PLIST_SRC=	PLIST
+PLIST_SRC+=	PLIST
 .if !empty(PKG_OPTIONS:Mwebcollage)
 PLIST_SRC+=	PLIST.webcollage
 .else
