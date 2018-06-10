@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2018/03/25 16:02:07 wiz Exp $
+$NetBSD: distinfo,v 1.11 2018/06/10 13:57:37 wen Exp $
 
-SHA1 (Text-SimpleTable-2.04.tar.gz) = 1a9e11b0bf08cd5ffae07f5d490b1f7eb1fc1226
-RMD160 (Text-SimpleTable-2.04.tar.gz) = fde2f5e8125fbc89a23078e9310f72531c785c27
-SHA512 (Text-SimpleTable-2.04.tar.gz) = 34057fd0d055b4d39957f2f3a61e260ad54a19f1e1c311cce2d8f573b6ef9b8e75116a41b61a265ea309190f3a2d05c6b7726a0c8c56091a37c992d33d5d1a04
-Size (Text-SimpleTable-2.04.tar.gz) = 9408 bytes
+SHA1 (Text-SimpleTable-2.05.tar.gz) = 105ea0cbb59d2d6b440fc3556f716173dc53d7bc
+RMD160 (Text-SimpleTable-2.05.tar.gz) = 988d69dd1fdd8237c7caa1b230b6c6def597caff
+SHA512 (Text-SimpleTable-2.05.tar.gz) = 52a5f3a7469bf9c757c309315c5bd90ae28e854f6e19459c6a9ef5f863155e0dd02ae9bf39abfc2ec8c0b705775a1138c7e3d617e2b21f1b7a35c09cbc309a46
+Size (Text-SimpleTable-2.05.tar.gz) = 9654 bytes
