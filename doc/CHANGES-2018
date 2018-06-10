@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2774 2018/06/10 13:45:06 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2775 2018/06/10 13:58:47 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3963,3 +3963,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/p5-Time-Local to 1.27 [wen 2018-06-10]
 	Updated time/p5-DateTime-Locale to 1.22 [wen 2018-06-10]
 	Updated textproc/p5-YAML-LibYAML to 0.70 [wen 2018-06-10]
+	Updated textproc/p5-Text-SimpleTable to 2.05 [wen 2018-06-10]
