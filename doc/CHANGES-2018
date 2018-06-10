@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2771 2018/06/10 12:59:39 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2772 2018/06/10 13:03:52 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3960,3 +3960,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/gallery-dl to 1.4.0 [leot 2018-06-10]
 	Updated net/hub to 2.4.0 [leot 2018-06-10]
 	Updated math/py-numpy to 1.14.4 [wen 2018-06-10]
+	Updated time/p5-Time-Local to 1.27 [wen 2018-06-10]
