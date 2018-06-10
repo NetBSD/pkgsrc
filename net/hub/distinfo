@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2018/06/10 10:42:56 leot Exp $
+$NetBSD: distinfo,v 1.4 2018/06/10 12:14:30 leot Exp $
 
-SHA1 (hub-2.3.0.tar.gz) = 5e88d5f1226d21f129d844d7a2daaf72297fd040
-RMD160 (hub-2.3.0.tar.gz) = 9f1ce6f14d35f550e5bc3b7c845519cf5b5d9aac
-SHA512 (hub-2.3.0.tar.gz) = 560b4efde80d9074111b2adcf7fe29ce751d2bc185d5e5f9a86b05dbc62f9df9d712a5684c8ff9acd73047d2eb99735beb087a69f23cf162a14488655fd77bdf
-Size (hub-2.3.0.tar.gz) = 978882 bytes
+SHA1 (hub-2.4.0.tar.gz) = 4b04365f84169eede7e1414838fde2017a869102
+RMD160 (hub-2.4.0.tar.gz) = 2bec11625461b6ca68632c9486bf9ded383c514f
+SHA512 (hub-2.4.0.tar.gz) = 302a508b7353ed96f969d399d87cd395b5561490c41f46043969a49eaa997a63d2649b3f6f23a565f1b8c821f93c4db1b8c7104c85d0b08fc6d96f03e765f2f7
+Size (hub-2.4.0.tar.gz) = 984312 bytes
 SHA1 (patch-github_editor.go) = fa21efb055ea91c689eceb676548cf528a6aaefe
