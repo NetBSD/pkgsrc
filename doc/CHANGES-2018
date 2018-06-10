@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2761 2018/06/09 19:23:53 tsutsui Exp $
+$NetBSD: CHANGES-2018,v 1.2762 2018/06/10 04:09:55 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3950,3 +3950,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/snappy-java10 to 1.0.5.4 [fhajny 2018-06-09]
 	Updated security/gnupg2 to 2.2.8 [leot 2018-06-09]
 	Updated graphics/libsixel to 1.8.1 [tsutsui 2018-06-09]
+	Updated www/firefox to 60.0.2 [ryoon 2018-06-10]
