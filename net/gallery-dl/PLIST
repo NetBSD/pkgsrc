@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2018/05/06 10:01:56 leot Exp $
+@comment $NetBSD: PLIST,v 1.12 2018/06/10 12:00:24 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -264,6 +264,9 @@ ${PYSITELIB}/gallery_dl/extractor/senmanga.pyo
 ${PYSITELIB}/gallery_dl/extractor/sensescans.py
 ${PYSITELIB}/gallery_dl/extractor/sensescans.pyc
 ${PYSITELIB}/gallery_dl/extractor/sensescans.pyo
+${PYSITELIB}/gallery_dl/extractor/simplyhentai.py
+${PYSITELIB}/gallery_dl/extractor/simplyhentai.pyc
+${PYSITELIB}/gallery_dl/extractor/simplyhentai.pyo
 ${PYSITELIB}/gallery_dl/extractor/slideshare.py
 ${PYSITELIB}/gallery_dl/extractor/slideshare.pyc
 ${PYSITELIB}/gallery_dl/extractor/slideshare.pyo
@@ -303,12 +306,30 @@ ${PYSITELIB}/gallery_dl/extractor/yandere.pyo
 ${PYSITELIB}/gallery_dl/job.py
 ${PYSITELIB}/gallery_dl/job.pyc
 ${PYSITELIB}/gallery_dl/job.pyo
+${PYSITELIB}/gallery_dl/oauth.py
+${PYSITELIB}/gallery_dl/oauth.pyc
+${PYSITELIB}/gallery_dl/oauth.pyo
 ${PYSITELIB}/gallery_dl/option.py
 ${PYSITELIB}/gallery_dl/option.pyc
 ${PYSITELIB}/gallery_dl/option.pyo
 ${PYSITELIB}/gallery_dl/output.py
 ${PYSITELIB}/gallery_dl/output.pyc
 ${PYSITELIB}/gallery_dl/output.pyo
+${PYSITELIB}/gallery_dl/postprocessor/__init__.py
+${PYSITELIB}/gallery_dl/postprocessor/__init__.pyc
+${PYSITELIB}/gallery_dl/postprocessor/__init__.pyo
+${PYSITELIB}/gallery_dl/postprocessor/classify.py
+${PYSITELIB}/gallery_dl/postprocessor/classify.pyc
+${PYSITELIB}/gallery_dl/postprocessor/classify.pyo
+${PYSITELIB}/gallery_dl/postprocessor/common.py
+${PYSITELIB}/gallery_dl/postprocessor/common.pyc
+${PYSITELIB}/gallery_dl/postprocessor/common.pyo
+${PYSITELIB}/gallery_dl/postprocessor/exec.py
+${PYSITELIB}/gallery_dl/postprocessor/exec.pyc
+${PYSITELIB}/gallery_dl/postprocessor/exec.pyo
+${PYSITELIB}/gallery_dl/postprocessor/zip.py
+${PYSITELIB}/gallery_dl/postprocessor/zip.pyc
+${PYSITELIB}/gallery_dl/postprocessor/zip.pyo
 ${PYSITELIB}/gallery_dl/text.py
 ${PYSITELIB}/gallery_dl/text.pyc
 ${PYSITELIB}/gallery_dl/text.pyo
