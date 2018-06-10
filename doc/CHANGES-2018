@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2773 2018/06/10 13:11:52 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2774 2018/06/10 13:45:06 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3962,3 +3962,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/py-numpy to 1.14.4 [wen 2018-06-10]
 	Updated time/p5-Time-Local to 1.27 [wen 2018-06-10]
 	Updated time/p5-DateTime-Locale to 1.22 [wen 2018-06-10]
+	Updated textproc/p5-YAML-LibYAML to 0.70 [wen 2018-06-10]
