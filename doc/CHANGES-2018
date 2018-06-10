@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2762 2018/06/10 04:09:55 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.2763 2018/06/10 04:13:08 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3951,3 +3951,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/gnupg2 to 2.2.8 [leot 2018-06-09]
 	Updated graphics/libsixel to 1.8.1 [tsutsui 2018-06-09]
 	Updated www/firefox to 60.0.2 [ryoon 2018-06-10]
+	Updated www/firefox-l10n to 60.0.2 [ryoon 2018-06-10]
