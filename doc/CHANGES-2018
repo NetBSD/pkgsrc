@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2768 2018/06/10 10:43:10 leot Exp $
+$NetBSD: CHANGES-2018,v 1.2769 2018/06/10 12:01:23 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3957,3 +3957,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/nsd to 4.1.21 [ryoon 2018-06-10]
 	Updated www/php-nextcloud to 13.0.3 [ryoon 2018-06-10]
 	Updated net/hub to 2.3.0nb1 [leot 2018-06-10]
+	Updated net/gallery-dl to 1.4.0 [leot 2018-06-10]
