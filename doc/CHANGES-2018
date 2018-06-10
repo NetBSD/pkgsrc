@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2776 2018/06/10 14:13:03 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2777 2018/06/10 14:47:12 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3965,3 +3965,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/p5-YAML-LibYAML to 0.70 [wen 2018-06-10]
 	Updated textproc/p5-Text-SimpleTable to 2.05 [wen 2018-06-10]
 	Updated devel/p5-Config-AutoConf to 0.317 [wen 2018-06-10]
+	Updated devel/p5-glib2 to 1.327 [wen 2018-06-10]
