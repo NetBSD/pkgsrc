@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2018/04/29 10:16:20 adam Exp $
+# $NetBSD: Makefile,v 1.37 2018/06/11 15:01:49 fhajny Exp $
 
 DISTNAME=	tesseract-3.05.01
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tesseract-ocr/}
 DISTFILES=	${DEFAULT_DISTFILES}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/tesseract-ocr/tesseract
 COMMENT=	Open Source OCR Engine
 LICENSE=	apache-2.0
 
-LANGVER=	4.00
+LANGVER=	3.04.00
 DISTFILES+=	tessdata-${LANGVER}${EXTRACT_SUFX}
 SITES.tessdata-${LANGVER}.tar.gz=	-${MASTER_SITES:Q}tessdata/archive/${LANGVER}.tar.gz
 
