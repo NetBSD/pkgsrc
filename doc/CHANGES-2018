@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2782 2018/06/11 14:09:33 tsutsui Exp $
+$NetBSD: CHANGES-2018,v 1.2783 2018/06/11 16:14:11 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3971,3 +3971,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/cups to 2.2.8 [adam 2018-06-11]
 	Updated net/unbound to 1.7.2 [he 2018-06-11]
 	Updated net/mikutter to 3.7.2 [tsutsui 2018-06-11]
+	Updated devel/go-sanitized_anchor_name to 0.0.20170919 [minskim 2018-06-11]
