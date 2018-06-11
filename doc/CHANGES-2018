@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2780 2018/06/11 10:04:50 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2781 2018/06/11 10:07:41 he Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3969,3 +3969,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/hplip to 3.18.5 [schnoebe 2018-06-10]
 	Updated multimedia/mkvtoolnix to 24.0.0 [adam 2018-06-11]
 	Updated print/cups to 2.2.8 [adam 2018-06-11]
+	Updated net/unbound to 1.7.2 [he 2018-06-11]
