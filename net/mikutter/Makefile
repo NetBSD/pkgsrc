@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.160 2018/05/27 05:17:40 tsutsui Exp $
+# $NetBSD: Makefile,v 1.161 2018/06/11 14:09:11 tsutsui Exp $
 #
 
-DISTNAME=	mikutter.3.7.1
+DISTNAME=	mikutter.3.7.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/./-/}
 CATEGORIES=	net
 MASTER_SITES=	https://mikutter.hachune.net/bin/
@@ -17,7 +17,6 @@ RUBY_VERSIONS_ACCEPTED=	23 24
 
 DEPENDS+=	${RUBY_PKGPREFIX}-pluggaloid>=1.1.1:../../net/ruby-pluggaloid
 DEPENDS+=	${RUBY_PKGPREFIX}-diva>=0.3.2:../../devel/ruby-diva
-DEPENDS+=	${RUBY_PKGPREFIX}-json-pure>=1.8:../../textproc/ruby-json-pure
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtk>=3.2.4nb2:../../x11/ruby-gnome2-gtk
 DEPENDS+=	${RUBY_PKGPREFIX}-gettext>=3.0.1:../../devel/ruby-gettext
 DEPENDS+=	${RUBY_PKGPREFIX}-oauth>=0.5.1:../../security/ruby-oauth
