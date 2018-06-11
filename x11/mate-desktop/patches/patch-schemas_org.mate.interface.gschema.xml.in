@@ -1,0 +1,15 @@
+$NetBSD: patch-schemas_org.mate.interface.gschema.xml.in,v 1.1 2018/06/11 23:43:40 youri Exp $
+
+Use the faenza icon theme by default.
+
+--- schemas/org.mate.interface.gschema.xml.in.orig	2018-02-06 20:13:24.000000000 +0000
++++ schemas/org.mate.interface.gschema.xml.in
+@@ -56,7 +56,7 @@
+       <description>Length of the cursor blink cycle, in milliseconds.</description>
+     </key>
+     <key name="icon-theme" type="s">
+-      <default>'menta'</default>
++      <default>'matefaenza'</default>
+       <summary>Icon Theme</summary>
+       <description>Icon theme to use for the panel, Caja etc.</description>
+     </key>

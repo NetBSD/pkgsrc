@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/05/14 12:55:02 youri Exp $
+# $NetBSD: Makefile,v 1.11 2018/06/11 23:43:40 youri Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
@@ -13,6 +13,12 @@ TOOL_DEPENDS+=		libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 PKGCONFIG_OVERRIDE+=	libmate-desktop/mate-desktop-2.0.pc.in
 
 REPLACE_SH+=	tools/mate-gsettings-toggle
+
+SUBST_CLASSES=		prefix
+SUBST_FILES.prefix=	schemas/org.mate.background.gschema.xml
+SUBST_MESSAGE.prefix=	Fixing prefix
+SUBST_STAGE.prefix=	pre-install
+SUBST_SED.prefix=	-e 's,$${prefix},${PREFIX},'
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
