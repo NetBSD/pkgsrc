@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.5 2018/04/05 16:31:45 leot Exp $
+$NetBSD: distinfo,v 1.6 2018/06/11 10:04:24 adam Exp $
 
-SHA1 (cups-2.2.7-source.tar.gz) = aa2ae7c486d5957c9fc5f00aec63e453b19311b4
-RMD160 (cups-2.2.7-source.tar.gz) = ae82e358d8e24e14b2a633ec12e4db1fc8eacd48
-SHA512 (cups-2.2.7-source.tar.gz) = 780a6a484f38967ff678456ec7b532aa8445a9562663e4e4f6f7a24aac6ec9e8eae36459ee3c025dff053d59ad1d9ecfb823e8a832bae9d384db3d1a10d8860e
-Size (cups-2.2.7-source.tar.gz) = 10330296 bytes
+SHA1 (cups-2.2.8-source.tar.gz) = f8c572d5b2405091e3be6836523a6abdda645f60
+RMD160 (cups-2.2.8-source.tar.gz) = 79bc052e3f70408a698bfbe2556b53d2f0140b2c
+SHA512 (cups-2.2.8-source.tar.gz) = 6ed44c5e6f1c46c85b06691713ce476330c93834243720ad2c04fa983e20cde9f6ebfc2eb2ba8bb3700f11320471b99856d6402d3641038da690f89c49fbd261
+Size (cups-2.2.8-source.tar.gz) = 10374921 bytes
 SHA1 (patch-ae) = f34ec899f4816bdcf96ff315e001e3ac5a960200
 SHA1 (patch-af) = 6ae6ae6006387db69bf7c15f7c8500708c9e8f56
 SHA1 (patch-ai) = 2c1ca67ea6f6c1dedb4c8ff97736f328a2b9a7c6
@@ -18,11 +18,11 @@ SHA1 (patch-config-scripts_cups-manpages.m4) = 5cc943738df29f11fc366557938b82c1e
 SHA1 (patch-config-scripts_cups-opsys.m4) = 2bbacc401d4d8dbc157889b6a6cf66684c52357b
 SHA1 (patch-cups-tls.c) = f89c25f8089d9e11a983a270adbb2cbde3c22511
 SHA1 (patch-doc-help-man-cups-files.conf.html) = fcd3d06c00b0a85b6c0790235ccb68685252ea68
-SHA1 (patch-man-cups-files.conf.man.in) = 1563a7be3327a975ce8753a3287947f1594975a3
+SHA1 (patch-man-cups-files.conf.man.in) = 820da58aa3f854018a48b68256d0cf0dc75b986e
 SHA1 (patch-ppdc_Makefile) = cdeb0ef9a68f9dd85453ef3076a0120ad9983698
 SHA1 (patch-scheduler-conf.c) = 179964f8d251be3c21f4cfc7b67f3196beda29dc
 SHA1 (patch-scheduler-conf.h) = d11f3b789af096dcaca13a38f6484727ff895bee
 SHA1 (patch-scheduler-main.c) = cb31fa7427b497108ce7724bbfee1b784b9330ab
-SHA1 (patch-scheduler_auth.c) = 9f329eab415dea7d53e45f39e7ce9ff66ba0a128
+SHA1 (patch-scheduler_auth.c) = 8c9a5338c9eb84336db0d487008795227fa9e7f0
 SHA1 (patch-scheduler_dirsvc.c) = aae5b924fb8fb39007cf04d8b83747e8724485cf
 SHA1 (patch-test_ippfind.c) = 6db56b9b1b9a26d5c40336af4dc6cde98abd9c19
