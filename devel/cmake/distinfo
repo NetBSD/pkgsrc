@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.121 2018/06/01 07:16:03 adam Exp $
+$NetBSD: distinfo,v 1.122 2018/06/11 17:33:51 tron Exp $
 
 SHA1 (cmake-3.11.3.tar.gz) = 73261a5b7f71abf7277c1d2a418ca3c4cf170c89
 RMD160 (cmake-3.11.3.tar.gz) = 90e5ae01c3a68b31095967b5d1c8e245065bb294
@@ -13,6 +13,7 @@ SHA1 (patch-Modules_FindX11.cmake) = 124a2d51155cb4455e8b829dc74598cbd50a4e1c
 SHA1 (patch-Modules_Platform_UnixPaths.cmake) = 38720e11b7b62cb702e80da19e044f070298f2db
 SHA1 (patch-Source_CMakeLists.txt) = 533667d43048b8bc2be17a766b5dc32f3101866e
 SHA1 (patch-Source_Checks_cm__cxx17__check.cpp) = 37772f3e7edc2413cb2e294462312aff18e5c989
+SHA1 (patch-Source_Checks_cm_cxx_features.cmake) = 83eb2bedb84972637d02d12f72fec0ccf74563eb
 SHA1 (patch-Source_CursesDialog_ccmake.cxx) = d7baafe6612b6ac9b0542ed10ffcf90cd8d1df87
 SHA1 (patch-Utilities_KWIML_CMakeLists.txt) = e4bdf9fc58757e87bf7e3e3e195839eededbc796
 SHA1 (patch-bootstrap) = 9d99cfe9f9ae826250f94bc297f5a22b8de09e84
