@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2784 2018/06/11 23:56:27 youri Exp $
+$NetBSD: CHANGES-2018,v 1.2785 2018/06/11 23:58:16 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3973,3 +3973,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/mikutter to 3.7.2 [tsutsui 2018-06-11]
 	Updated devel/go-sanitized_anchor_name to 0.0.20170919 [minskim 2018-06-11]
 	Added sysutils/accountsservice version 0.6.42 [youri 2018-06-11]
+	Added x11/caribou version 0.4.21 [youri 2018-06-11]
