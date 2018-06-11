@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2018/03/30 11:56:23 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6 2018/06/11 16:12:09 minskim Exp $
 
-DISTNAME=	sanitized_anchor_name-0.0.20151028
+DISTNAME=	sanitized_anchor_name-0.0.20170919
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	2
-MASTER_SITES=	${MASTER_SITE_GITHUB:=shurcooL/}
 CATEGORIES=	devel
-GITHUB_TAG=	10ef21a441db47d8b13ebcc5fd2310f636973c77
+MASTER_SITES=	${MASTER_SITE_GITHUB:=shurcooL/}
+GITHUB_TAG=	86672fcb3f950f35f2e675df2240550f2a50762f
 GITHUB_PROJECT= ${PKGBASE:S/^go-//}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
