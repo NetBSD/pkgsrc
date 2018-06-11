@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2778 2018/06/10 17:54:17 schnoebe Exp $
+$NetBSD: CHANGES-2018,v 1.2779 2018/06/11 07:23:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3967,3 +3967,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Config-AutoConf to 0.317 [wen 2018-06-10]
 	Updated devel/p5-glib2 to 1.327 [wen 2018-06-10]
 	Updated print/hplip to 3.18.5 [schnoebe 2018-06-10]
+	Updated multimedia/mkvtoolnix to 24.0.0 [adam 2018-06-11]
