@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2800 2018/06/12 23:00:49 youri Exp $
+$NetBSD: CHANGES-2018,v 1.2801 2018/06/12 23:50:12 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3994,3 +3994,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/go to 1.10.3 [bsiegert 2018-06-12]
 	Updated print/tex-beamer to 3.50nb1 [leot 2018-06-12]
 	Updated x11/vte3 to 0.52.2 [youri 2018-06-12]
+	Added textproc/go-glob version 0.2.3 [minskim 2018-06-12]
