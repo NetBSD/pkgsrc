@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2789 2018/06/12 09:06:54 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.2790 2018/06/12 09:23:03 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3978,3 +3978,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Added sysutils/py-pyinotify version 0.9.6 [youri 2018-06-12]
 	Updated net/py-lexicon to 2.4.0 [fhajny 2018-06-12]
 	Updated lang/nodejs to 10.4.0 [fhajny 2018-06-12]
+	Updated security/py-acme to 0.25.0 [fhajny 2018-06-12]
+	Updated security/py-certbot to 0.25.0 [fhajny 2018-06-12]
