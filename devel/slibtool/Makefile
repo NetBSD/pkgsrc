@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2018/02/09 21:49:45 wiedi Exp $
+# $NetBSD: Makefile,v 1.6 2018/06/12 12:04:24 wiedi Exp $
 
-DISTNAME=	slibtool-0.5.18
+DISTNAME=	slibtool-0.5.19
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=midipix-project/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
