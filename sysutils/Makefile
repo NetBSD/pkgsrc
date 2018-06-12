@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.762 2018/06/11 23:56:14 youri Exp $
+# $NetBSD: Makefile,v 1.763 2018/06/12 01:01:30 youri Exp $
 #
 
 COMMENT=	System utilities
@@ -473,6 +473,7 @@ SUBDIR+=	py-pathtools
 SUBDIR+=	py-pefile
 SUBDIR+=	py-psutil
 SUBDIR+=	py-ptyprocess
+SUBDIR+=	py-pyinotify
 SUBDIR+=	py-setconf
 SUBDIR+=	py-setproctitle
 SUBDIR+=	py-structlog
