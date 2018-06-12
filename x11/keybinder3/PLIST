@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2018/06/12 00:18:31 youri Exp $
+include/keybinder-3.0/keybinder.h
+lib/girepository-1.0/Keybinder-3.0.typelib
+lib/libkeybinder-3.0.la
+lib/pkgconfig/keybinder-3.0.pc
+share/gir-1.0/Keybinder-3.0.gir
+share/gtk-doc/html/keybinder-3.0/annotation-glossary.html
+share/gtk-doc/html/keybinder-3.0/api-index-full.html
+share/gtk-doc/html/keybinder-3.0/ch01.html
+share/gtk-doc/html/keybinder-3.0/deprecated-api-index.html
+share/gtk-doc/html/keybinder-3.0/home.png
+share/gtk-doc/html/keybinder-3.0/index.html
+share/gtk-doc/html/keybinder-3.0/keybinder-3.0.devhelp2
+share/gtk-doc/html/keybinder-3.0/keybinder-keybinder.html
+share/gtk-doc/html/keybinder-3.0/left-insensitive.png
+share/gtk-doc/html/keybinder-3.0/left.png
+share/gtk-doc/html/keybinder-3.0/object-tree.html
+share/gtk-doc/html/keybinder-3.0/right-insensitive.png
+share/gtk-doc/html/keybinder-3.0/right.png
+share/gtk-doc/html/keybinder-3.0/style.css
+share/gtk-doc/html/keybinder-3.0/up-insensitive.png
+share/gtk-doc/html/keybinder-3.0/up.png
