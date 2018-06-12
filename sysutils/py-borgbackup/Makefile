@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2018/04/21 12:36:17 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2018/06/12 14:22:25 bsiegert Exp $
 
-DISTNAME=	borgbackup-1.1.5
+DISTNAME=	borgbackup-1.1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/borgbackup/}
 
