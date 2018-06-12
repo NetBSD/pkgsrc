@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2791 2018/06/12 10:31:10 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2792 2018/06/12 11:06:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3982,3 +3982,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/py-certbot to 0.25.0 [fhajny 2018-06-12]
 	Updated graphics/libimagequant to 2.12.1 [adam 2018-06-12]
 	Updated databases/py-asyncpg to 0.16.0 [adam 2018-06-12]
+	Updated emulators/libspectrum to 1.4.3 [adam 2018-06-12]
+	Updated emulators/fuse-emulator to 1.5.4 [adam 2018-06-12]
+	Updated emulators/fuse-emulator-utils to 1.4.2 [adam 2018-06-12]
