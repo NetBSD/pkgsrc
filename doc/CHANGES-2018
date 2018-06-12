@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2786 2018/06/12 00:18:40 youri Exp $
+$NetBSD: CHANGES-2018,v 1.2787 2018/06/12 01:01:04 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3975,3 +3975,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added sysutils/accountsservice version 0.6.42 [youri 2018-06-11]
 	Added x11/caribou version 0.4.21 [youri 2018-06-11]
 	Added x11/keybinder3 version 0.3.2 [youri 2018-06-12]
+	Added sysutils/py-pyinotify version 0.9.6 [youri 2018-06-12]
