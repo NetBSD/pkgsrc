@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/03/13 10:08:51 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/06/12 09:22:35 fhajny Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -31,6 +31,10 @@ ${PYSITELIB}/acme/jws.pyo
 ${PYSITELIB}/acme/jws.pyc
 ${PYSITELIB}/acme/jws_test.pyo
 ${PYSITELIB}/acme/jws_test.pyc
+${PYSITELIB}/acme/magic_typing.pyo
+${PYSITELIB}/acme/magic_typing.pyc
+${PYSITELIB}/acme/magic_typing_test.pyo
+${PYSITELIB}/acme/magic_typing_test.pyc
 ${PYSITELIB}/acme/messages.pyo
 ${PYSITELIB}/acme/messages.pyc
 ${PYSITELIB}/acme/messages_test.pyo
@@ -57,6 +61,8 @@ ${PYSITELIB}/acme/fields.py
 ${PYSITELIB}/acme/fields_test.py
 ${PYSITELIB}/acme/jws.py
 ${PYSITELIB}/acme/jws_test.py
+${PYSITELIB}/acme/magic_typing.py
+${PYSITELIB}/acme/magic_typing_test.py
 ${PYSITELIB}/acme/messages.py
 ${PYSITELIB}/acme/messages_test.py
 ${PYSITELIB}/acme/standalone.py
@@ -78,6 +84,7 @@ ${PYSITELIB}/acme/testdata/csr-san.pem
 ${PYSITELIB}/acme/testdata/csr.der
 ${PYSITELIB}/acme/testdata/csr.pem
 ${PYSITELIB}/acme/testdata/dsa512_key.pem
+${PYSITELIB}/acme/testdata/rsa1024_cert.pem
 ${PYSITELIB}/acme/testdata/rsa1024_key.pem
 ${PYSITELIB}/acme/testdata/rsa2048_cert.pem
 ${PYSITELIB}/acme/testdata/rsa2048_key.pem
