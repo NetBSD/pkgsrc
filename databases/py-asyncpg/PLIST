@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2017/12/30 10:31:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/06/12 10:30:39 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/asyncpg/__init__.py
 ${PYSITELIB}/asyncpg/__init__.pyc
@@ -72,6 +73,7 @@ ${PYSITELIB}/asyncpg/protocol/codecs/range.pyx
 ${PYSITELIB}/asyncpg/protocol/codecs/record.pyx
 ${PYSITELIB}/asyncpg/protocol/codecs/text.pyx
 ${PYSITELIB}/asyncpg/protocol/codecs/textutils.pyx
+${PYSITELIB}/asyncpg/protocol/codecs/tid.pyx
 ${PYSITELIB}/asyncpg/protocol/codecs/tsearch.pyx
 ${PYSITELIB}/asyncpg/protocol/codecs/txid.pyx
 ${PYSITELIB}/asyncpg/protocol/codecs/uuid.pyx
