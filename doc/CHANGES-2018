@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2794 2018/06/12 12:05:13 wiedi Exp $
+$NetBSD: CHANGES-2018,v 1.2795 2018/06/12 12:16:20 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3987,3 +3987,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated emulators/fuse-emulator-utils to 1.4.2 [adam 2018-06-12]
 	Updated editors/nano to 2.9.8 [wiedi 2018-06-12]
 	Updated devel/slibtool to 0.5.19 [wiedi 2018-06-12]
+	Updated sysutils/znapzend to 0.18.0 [wiedi 2018-06-12]
