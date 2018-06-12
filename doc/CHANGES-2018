@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2795 2018/06/12 12:16:20 wiedi Exp $
+$NetBSD: CHANGES-2018,v 1.2796 2018/06/12 14:22:53 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3988,3 +3988,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated editors/nano to 2.9.8 [wiedi 2018-06-12]
 	Updated devel/slibtool to 0.5.19 [wiedi 2018-06-12]
 	Updated sysutils/znapzend to 0.18.0 [wiedi 2018-06-12]
+	Updated sysutils/py-borgbackup to 1.1.6 [bsiegert 2018-06-12]
