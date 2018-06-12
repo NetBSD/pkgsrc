@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2018/06/12 01:00:56 youri Exp $
+
+SHA1 (Pyinotify-0.9.6.tar.gz) = 815c5e5699669d44042efb12122b60e97cae7bf4
+RMD160 (Pyinotify-0.9.6.tar.gz) = 298d687320e30c80905ed7969143028045983e92
+SHA512 (Pyinotify-0.9.6.tar.gz) = 144db691c1cdfd4e52b838b8ed839b8d50d84d26a91a59b7460c3170f58a1c96b3ce4f51e6273835835291781215a87b8f2d2d87d1abf012e4c14b2cd4b3f4cf
+Size (Pyinotify-0.9.6.tar.gz) = 61159 bytes
+SHA1 (patch-setup.py) = 084ca354ca5d0b2ee3a68e609fe7c4778eb0e7b7
