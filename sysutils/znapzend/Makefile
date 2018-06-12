@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2017/09/25 10:50:27 wiedi Exp $
+# $NetBSD: Makefile,v 1.14 2018/06/12 12:15:45 wiedi Exp $
 
-DISTNAME=	znapzend-0.17.0
-PKGREVISION=	1
+DISTNAME=	znapzend-0.18.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=oetiker/}
 
