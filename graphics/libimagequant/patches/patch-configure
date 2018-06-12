@@ -1,9 +1,9 @@
-$NetBSD: patch-configure,v 1.7 2018/03/12 16:47:35 adam Exp $
+$NetBSD: patch-configure,v 1.8 2018/06/12 10:15:03 adam Exp $
 
 Remove unwanted compiler flags.
 Avoid leaving scratch files in /tmp.
 
---- configure.orig	2018-03-10 12:31:19.000000000 +0000
+--- configure.orig	2018-06-03 19:46:28.000000000 +0000
 +++ configure
 @@ -5,7 +5,7 @@ PREFIX="/usr/local"
  LIBDIR="$PREFIX/lib"
@@ -14,17 +14,7 @@ Avoid leaving scratch files in /tmp.
  
  DEBUG=
  QUIET=0
-@@ -143,7 +143,8 @@ if [ "$QUIET" -ne 1 ]; then
- fi
- 
- # /tmp, because mingw has problems opening /dev/null and gives false negative
--if ! echo "int main(){}" | "$CC" -xc -std=c99 -o /tmp/gcccheck - > /dev/null; then
-+# not /tmp, because that's not safe
-+if ! echo "int main(){}" | "$CC" -xc -std=c99 -o ./tmp-gcccheck - > /dev/null; then
-     error "Compiler" "$CC failed to compile anything (make sure it's installed and supports C99)"
- fi
- 
-@@ -155,7 +156,7 @@ cflags "-std=c99 -I."
+@@ -157,7 +157,7 @@ cflags "-std=c99 -I."
  
  # DEBUG
  if [ -z "$DEBUG" ]; then
@@ -33,7 +23,7 @@ Avoid leaving scratch files in /tmp.
      status "Debug" "no"
  else
      cflags "-O1 -g"
-@@ -193,15 +194,9 @@ if [ -n "$OPENMP" ]; then
+@@ -195,15 +195,9 @@ if [ -n "$OPENMP" ]; then
      else
          OPENMPFLAGS="-fopenmp"
      fi
@@ -49,16 +39,16 @@ Avoid leaving scratch files in /tmp.
  else
      # silence warnings about omp pragmas
      cflags "-Wno-unknown-pragmas"
-@@ -209,20 +204,10 @@ else
+@@ -211,20 +205,9 @@ else
      status "OpenMP" "no"
  fi
  
 -# Cocoa
 -if [[ "$OSTYPE" =~ "darwin" ]]; then
--    cflags "-mmacosx-version-min=10.6"
--    lflags "-mmacosx-version-min=10.6"
+-    cflags "-mmacosx-version-min=10.7"
+-    lflags "-mmacosx-version-min=10.7"
 -fi
- 
+-
  if [[ "$OSTYPE" =~ "darwin" ]]; then
      SOLIBSUFFIX=dylib
  

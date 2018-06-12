@@ -1,8 +1,8 @@
-$NetBSD: patch-Makefile,v 1.4 2018/03/12 16:47:35 adam Exp $
+$NetBSD: patch-Makefile,v 1.5 2018/06/12 10:15:03 adam Exp $
 
 Libtoolize.
 
---- Makefile.orig	2018-03-10 12:31:19.000000000 +0000
+--- Makefile.orig	2018-06-03 19:46:28.000000000 +0000
 +++ Makefile
 @@ -1,7 +1,7 @@
  -include config.mk
@@ -11,9 +11,9 @@ Libtoolize.
 -SHAREDLIB=libimagequant.$(SOLIBSUFFIX)
 +SHAREDLIB=libimagequant.la
  SOVER=0
- 
- JNILIB=libimagequant.jnilib
-@@ -45,13 +45,13 @@ $(STATICLIB): $(OBJS)
+ ifeq ($(SOLIBSUFFIX),dylib)
+ 	SHAREDLIBVER=libimagequant.$(SOVER).$(SOLIBSUFFIX)
+@@ -52,15 +52,11 @@ $(STATICLIB): $(OBJS)
  	$(AR) $(ARFLAGS) $@ $^
  
  $(SHAREDOBJS):
@@ -21,15 +21,15 @@ Libtoolize.
 +	${LIBTOOL} --mode=compile $(CC) -fPIC $(CFLAGS) -c $(@:.lo=.c) -o $@
  
 -libimagequant.so: $(SHAREDOBJS)
--	$(CC) -shared -Wl,-soname,$(SHAREDLIB).$(SOVER) -o $(SHAREDLIB).$(SOVER) $^ $(LDFLAGS)
--	ln -fs $(SHAREDLIB).$(SOVER) $(SHAREDLIB)
--	sed -i "s#^prefix=.*#prefix=$(PREFIX)#" $(PKGCONFIG)
--	sed -i "s#^Version:.*#Version: $(VERSION)#" $(PKGCONFIG)
+-	$(CC) -shared -Wl,-soname,$(SHAREDLIBVER) -o $(SHAREDLIBVER) $^ $(LDFLAGS)
+-	ln -fs $(SHAREDLIBVER) $(SHAREDLIB)
+-
+-libimagequant.dylib: $(SHAREDOBJS)
+-	$(CC) -shared -o $(SHAREDLIBVER) $^ $(LDFLAGS)
+-	ln -fs $(SHAREDLIBVER) $(SHAREDLIB)
 +$(SHAREDLIB): $(SHAREDOBJS)
 +	${LIBTOOL} --mode=link $(CC) -o $(SHAREDLIB) $^ $(LDFLAGS) \
 +		-rpath ${PREFIX}/lib -version-info $(subst .,:,$(basename $(VERSION)))
-+	sed -e "s#^prefix=.*#prefix=$(PREFIX)#" $(PKGCONFIG) > $(PKGCONFIG).new
-+	sed -e "s#^Version:.*#Version: $(VERSION)#" $(PKGCONFIG).new > $(PKGCONFIG)
  
- libimagequant.dylib: $(SHAREDOBJS)
- 	$(CC) -shared -o $(SHAREDLIB).$(SOVER) $^ $(LDFLAGS)
+ $(OBJS): $(wildcard *.h) config.mk
+ 
