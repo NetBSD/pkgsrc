@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/05/08 04:54:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/06/12 15:28:53 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -11,6 +11,9 @@ ${PYSITELIB}/aiohttp/_cparser.pxd
 ${PYSITELIB}/aiohttp/_frozenlist.c
 ${PYSITELIB}/aiohttp/_frozenlist.pyx
 ${PYSITELIB}/aiohttp/_frozenlist.so
+${PYSITELIB}/aiohttp/_helpers.c
+${PYSITELIB}/aiohttp/_helpers.pyx
+${PYSITELIB}/aiohttp/_helpers.so
 ${PYSITELIB}/aiohttp/_http_parser.c
 ${PYSITELIB}/aiohttp/_http_parser.pyx
 ${PYSITELIB}/aiohttp/_http_parser.so
@@ -23,6 +26,9 @@ ${PYSITELIB}/aiohttp/_websocket.so
 ${PYSITELIB}/aiohttp/abc.py
 ${PYSITELIB}/aiohttp/abc.pyc
 ${PYSITELIB}/aiohttp/abc.pyo
+${PYSITELIB}/aiohttp/base_protocol.py
+${PYSITELIB}/aiohttp/base_protocol.pyc
+${PYSITELIB}/aiohttp/base_protocol.pyo
 ${PYSITELIB}/aiohttp/client.py
 ${PYSITELIB}/aiohttp/client.pyc
 ${PYSITELIB}/aiohttp/client.pyo
