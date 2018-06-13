@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2803 2018/06/13 12:57:56 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.2804 2018/06/13 13:25:52 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3998,3 +3998,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated audio/py-audioread to 2.1.6 [adam 2018-06-13]
 	Updated www/py-idna to 2.7 [adam 2018-06-13]
 	Updated www/passenger to 5.3.2 [fhajny 2018-06-13]
+	Added sysutils/binwalk version 2.1.1 [maya 2018-06-13]
