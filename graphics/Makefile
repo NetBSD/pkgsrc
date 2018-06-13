@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.795 2018/06/13 15:57:18 youri Exp $
+# $NetBSD: Makefile,v 1.796 2018/06/13 16:19:34 minskim Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -205,6 +205,7 @@ SUBDIR+=	gnome-icon-theme-symbolic
 SUBDIR+=	gnome-themes-standard
 SUBDIR+=	gnuplot
 SUBDIR+=	go-image
+SUBDIR+=	go-resize
 SUBDIR+=	gocr
 SUBDIR+=	goocanvas
 SUBDIR+=	goocanvas2
