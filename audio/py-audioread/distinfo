@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2017/07/31 04:55:26 adam Exp $
+$NetBSD: distinfo,v 1.6 2018/06/13 06:34:09 adam Exp $
 
-SHA1 (audioread-2.1.5.tar.gz) = af43ea49e51bade2a1c990f13fffc1df389111c0
-RMD160 (audioread-2.1.5.tar.gz) = 478f8a3e8eda9c57d3c3c79a5ef5a9756ae4d897
-SHA512 (audioread-2.1.5.tar.gz) = 7589b03f9f4b11475e97ab9d114ab1bf08be8e5f9d20f3db70c9d421607f99ed66747a65d1b5e124595e520ab698e17ae9fb9a2eb453ee904ee2b6debf8b3a5c
-Size (audioread-2.1.5.tar.gz) = 15615 bytes
+SHA1 (audioread-2.1.6.tar.gz) = bf442a68c1933b13cf701fedd89d2115db006336
+RMD160 (audioread-2.1.6.tar.gz) = 81cc5cb0a7d8c5d5be0fea835130432857bcdc58
+SHA512 (audioread-2.1.6.tar.gz) = eae1e33ef34079b8168b1b27ab2cc921bdf2ba3de31a6460b1fb49b35279879e7cf44321b900c636272fe08d12478e27e247585be247476eac29349faef81fe9
+Size (audioread-2.1.6.tar.gz) = 15838 bytes
