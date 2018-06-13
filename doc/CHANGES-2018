@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2801 2018/06/12 23:50:12 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2802 2018/06/13 06:39:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3995,3 +3995,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/tex-beamer to 3.50nb1 [leot 2018-06-12]
 	Updated x11/vte3 to 0.52.2 [youri 2018-06-12]
 	Added textproc/go-glob version 0.2.3 [minskim 2018-06-12]
+	Updated audio/py-audioread to 2.1.6 [adam 2018-06-13]
+	Updated www/py-idna to 2.7 [adam 2018-06-13]
