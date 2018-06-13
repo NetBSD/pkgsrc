@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/05/15 14:13:57 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/06/13 12:57:47 fhajny Exp $
 bin/passenger
 bin/passenger-config
 bin/passenger-install-apache2-module
@@ -11,6 +11,7 @@ lib/passenger/common/libpassenger_common/Exceptions.o
 lib/passenger/common/libpassenger_common/FileTools/FileManip.o
 lib/passenger/common/libpassenger_common/FileTools/PathManip.o
 lib/passenger/common/libpassenger_common/FileTools/PathManipCBindings.o
+lib/passenger/common/libpassenger_common/FileTools/PathSecurityCheck.o
 lib/passenger/common/libpassenger_common/JsonTools/CBindings.o
 lib/passenger/common/libpassenger_common/LoggingKit.o
 lib/passenger/common/libpassenger_common/MemoryKit/mbuf.o
@@ -37,6 +38,7 @@ lib/passenger/nginx_dynamic/module_libpassenger_common/Exceptions.o
 lib/passenger/nginx_dynamic/module_libpassenger_common/FileTools/FileManip.o
 lib/passenger/nginx_dynamic/module_libpassenger_common/FileTools/PathManip.o
 lib/passenger/nginx_dynamic/module_libpassenger_common/FileTools/PathManipCBindings.o
+lib/passenger/nginx_dynamic/module_libpassenger_common/FileTools/PathSecurityCheck.o
 lib/passenger/nginx_dynamic/module_libpassenger_common/JsonTools/CBindings.o
 lib/passenger/nginx_dynamic/module_libpassenger_common/LoggingKit.o
 lib/passenger/nginx_dynamic/module_libpassenger_common/ProcessManagement/Spawn.o
