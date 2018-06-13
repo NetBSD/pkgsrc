@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2018/05/15 14:13:57 fhajny Exp $
+$NetBSD: distinfo,v 1.8 2018/06/13 12:57:47 fhajny Exp $
 
-SHA1 (passenger-5.3.1.tar.gz) = f4b1d7f0c3755b8f34d9dd92b1f9300ee58f7d6c
-RMD160 (passenger-5.3.1.tar.gz) = 0012372c5d48157216eccbfa212fa3ba6eb2f8ef
-SHA512 (passenger-5.3.1.tar.gz) = 973338f934a1fc484058cf15748695129ab7ddb8c0d4d8527100fefd111a0b794d60b2e59f8f494c4ef5703c72c7ebfeef5539ed9b4a6e736114e2077e83ccdd
-Size (passenger-5.3.1.tar.gz) = 7033258 bytes
+SHA1 (passenger-5.3.2.tar.gz) = 18af22f590629e56e325c3b02272a5ff32c176c8
+RMD160 (passenger-5.3.2.tar.gz) = 8c2884ec6a1964822d644838fdd370fab2508b70
+SHA512 (passenger-5.3.2.tar.gz) = 97900a0e0de67cc3c3770c291c85c6fe937fceab5632c9832bc5c461d3b4e586a47c9733a1a50a805834f591e5af90651789ed74bf74e0eed4d6ce8084c51967
+Size (passenger-5.3.2.tar.gz) = 7039759 bytes
 SHA1 (patch-build_common__library.rb) = fc019cb2774245400e74741d34b43b87b4b8b0c8
 SHA1 (patch-build_packaging.rb) = b50c291c8e3989bbd8d128dab98c06f5e6a30e51
 SHA1 (patch-src_cxx__supportlib_LoggingKit_Context.h) = ff8dd506a6f5cd110c8e4317ecceab480a8f90c4
