@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2018/06/13 19:10:25 youri Exp $
+# $NetBSD: Makefile,v 1.34 2018/06/13 19:35:51 youri Exp $
 
 DISTNAME=	gnome-backgrounds-3.28.0
 CATEGORIES=	graphics gnome
@@ -11,6 +11,8 @@ COMMENT=	Set of background images for the GNOME Desktop
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=		gmake intltool msgfmt
+
+_TOOLS_USE_PKGSRC.msgfmt=	yes
 
 .include "../../devel/py-meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
