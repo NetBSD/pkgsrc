@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2015/11/03 21:34:01 agc Exp $
+$NetBSD: distinfo,v 1.19 2018/06/13 19:10:25 youri Exp $
 
-SHA1 (gnome-backgrounds-2.32.0.tar.bz2) = 59e04c69547060b02eb7c328478510ed8cad9d71
-RMD160 (gnome-backgrounds-2.32.0.tar.bz2) = b018251367155745683555932bf08d693c8c410a
-SHA512 (gnome-backgrounds-2.32.0.tar.bz2) = cff3291695ded2737aca02a6d24afd5888ff528351d62e5a8d7bb11931268f7f64eaa527d31af5071d6905f43706a8b03bd0955fbc118b2f602f1ea49fffd89a
-Size (gnome-backgrounds-2.32.0.tar.bz2) = 9919651 bytes
+SHA1 (gnome-backgrounds-3.28.0.tar.xz) = 78ea9bb8932c8ff1ddb0f19b750a78a18ac00498
+RMD160 (gnome-backgrounds-3.28.0.tar.xz) = bf0751a3f01c36716403c54c436b6e685c6a1b44
+SHA512 (gnome-backgrounds-3.28.0.tar.xz) = bc4aed99e83725994ee455ea86d28ee50c396901cb1d1626778ee4fa22256ed57209f3edb31e2197bf6841f8d0149ae7ce97d17b6fa5bcfdc63c65c14f2d52d2
+Size (gnome-backgrounds-3.28.0.tar.xz) = 26134776 bytes
