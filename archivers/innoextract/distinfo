@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/04/15 10:23:10 wiz Exp $
+$NetBSD: distinfo,v 1.5 2018/06/13 17:18:09 wiz Exp $
 
-SHA1 (innoextract-1.6.tar.gz) = 0cbbe80bb362db93c9b230c47ee100828cd93bec
-RMD160 (innoextract-1.6.tar.gz) = 6c659ba6a4740e33ee2439df095c2e9c7336c011
-SHA512 (innoextract-1.6.tar.gz) = 4c1b50a050d45e1a56d7236150a801cb85d15de8c80f5f1fd94750f3dd2392bdfb3f0e98c214e9504fe6132c7dce3a0dfbe0815ede438aa0f76a88380ceeef62
-Size (innoextract-1.6.tar.gz) = 183380 bytes
+SHA1 (innoextract-1.7.tar.gz) = e29c478de7a7b221764abf13376d68a8e33bcbe3
+RMD160 (innoextract-1.7.tar.gz) = db53c4c68eaf7b665b04cb46bf6dab162e4f78d1
+SHA512 (innoextract-1.7.tar.gz) = 5e92625a411a4351dd4639d4b63e8664519c6697122a0679c010412e94a1e5da95324c33be16211f91c2b25b8cea40fe4ba4da5e19c12d0c27a4916159465ca4
+Size (innoextract-1.7.tar.gz) = 195123 bytes
