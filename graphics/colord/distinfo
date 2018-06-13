@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1 2018/06/13 15:49:40 youri Exp $
+
+SHA1 (colord-1.3.5.tar.xz) = 17123eceefe56fc60ca347e8e4980e6e2b04f4b5
+RMD160 (colord-1.3.5.tar.xz) = de68b32ae72ab37204197ccf68c6a7d40b6100c0
+SHA512 (colord-1.3.5.tar.xz) = a0084ad2c08ae88c8023b8bade68f6cf25e13c77a6a37ef127b2914e86b06e6a7a783f9ab3585243d975dbbe1120d5daae13bdb586aefe519bf675458683025f
+Size (colord-1.3.5.tar.xz) = 1263488 bytes
+SHA1 (patch-client_cd-util.c) = 1044802d94fab3ffc9bd884959d6f5bf55ffea16
+SHA1 (patch-configure.ac) = cc2d522faee09f3af388210962ea7283879ff4a6
+SHA1 (patch-data_Makefile.am) = 1e0a3bfc0c8a76d44b619906c9fd77e0f4a83486
+SHA1 (patch-lib_colord_cd-icc-store.c) = 6c379033d35a696496d9300db5845279a61136db
+SHA1 (patch-src_Makefile.am) = e0667c0408e6dc5ee0536a84ed992c962ec8e8a7
+SHA1 (patch-src_Makefile.in) = 7f9ebf08ca8fec6c0e6a5f8a948e5a979fd6ca02
+SHA1 (patch-src_cd-main.c) = e9a8f970a5f1a2e761bd271a42e37a531953dca9
