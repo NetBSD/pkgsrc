@@ -1,0 +1,18 @@
+$NetBSD: patch-src_Makefile.am,v 1.1 2018/06/13 15:49:40 youri Exp $
+
+Fix installation.
+
+--- src/Makefile.am.orig	2016-07-27 13:26:53.000000000 +0000
++++ src/Makefile.am
+@@ -160,11 +160,6 @@ cd_self_test_LDADD =					\
+ cd_self_test_CFLAGS = $(WARN_CFLAGS)
+ 
+ install-data-hook:
+-	if test -w $(DESTDIR)$(prefix)/; then \
+-		mkdir -p $(DESTDIR)$(CD_SYSTEM_PROFILES_DIR); \
+-		chown $(daemon_user) $(DESTDIR)$(localstatedir)/lib/colord; \
+-		chmod 0755 $(DESTDIR)$(localstatedir)/lib/colord; \
+-	fi
+ 
+ BUILT_SOURCES =						\
+ 	cd-resources.c					\

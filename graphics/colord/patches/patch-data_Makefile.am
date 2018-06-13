@@ -1,0 +1,15 @@
+$NetBSD: patch-data_Makefile.am,v 1.1 2018/06/13 15:49:40 youri Exp $
+
+Handle CONF_FILES.
+
+--- data/Makefile.am.orig	2016-02-17 13:31:21.000000000 +0000
++++ data/Makefile.am
+@@ -9,7 +9,7 @@ SUBDIRS = 						\
+ 	ti1
+ 
+ if HAVE_DAEMON
+-dbusdir = $(sysconfdir)/dbus-1/system.d
++dbusdir = $(datadir)/examples/colord
+ dist_dbus_DATA = org.freedesktop.ColorManager.conf
+ 
+ dbusservicemaindir = $(datadir)/dbus-1/system-services
