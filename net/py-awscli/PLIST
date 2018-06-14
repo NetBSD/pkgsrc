@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/04/03 18:44:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/06/14 07:24:07 bsiegert Exp $
 bin/aws
 bin/aws.cmd
 bin/aws_bash_completer
@@ -1906,3 +1906,37 @@ ${PYSITELIB}/awscli/topictags.pyo
 ${PYSITELIB}/awscli/utils.py
 ${PYSITELIB}/awscli/utils.pyc
 ${PYSITELIB}/awscli/utils.pyo
+${PYSITELIB}/awscli/customizations/s3events.py
+${PYSITELIB}/awscli/customizations/s3events.pyc
+${PYSITELIB}/awscli/customizations/s3events.pyo
+${PYSITELIB}/awscli/examples/acm-pca/create-certificate-authority-audit-report.rst
+${PYSITELIB}/awscli/examples/acm-pca/create-certificate-authority.rst
+${PYSITELIB}/awscli/examples/acm-pca/delete-certificate-authority.rst
+${PYSITELIB}/awscli/examples/acm-pca/describe-certificate-authority-audit-report.rst
+${PYSITELIB}/awscli/examples/acm-pca/describe-certificate-authority.rst
+${PYSITELIB}/awscli/examples/acm-pca/get-certificate-authority-certificate.rst
+${PYSITELIB}/awscli/examples/acm-pca/get-certificate-authority-csr.rst
+${PYSITELIB}/awscli/examples/acm-pca/get-certificate.rst
+${PYSITELIB}/awscli/examples/acm-pca/import-certificate-authority-certificate.rst
+${PYSITELIB}/awscli/examples/acm-pca/issue-certificate.rst
+${PYSITELIB}/awscli/examples/acm-pca/list-certificate-authorities.rst
+${PYSITELIB}/awscli/examples/acm-pca/list-tags.rst
+${PYSITELIB}/awscli/examples/acm-pca/revoke-certificate.rst
+${PYSITELIB}/awscli/examples/acm-pca/tag-certificate-authority.rst
+${PYSITELIB}/awscli/examples/acm-pca/untag-certificate-authority.rst
+${PYSITELIB}/awscli/examples/acm-pca/update-certificate-authority.rst
+${PYSITELIB}/awscli/examples/secretsmanager/cancel-rotate-secret.rst
+${PYSITELIB}/awscli/examples/secretsmanager/create-secret.rst
+${PYSITELIB}/awscli/examples/secretsmanager/delete-secret.rst
+${PYSITELIB}/awscli/examples/secretsmanager/describe-secret.rst
+${PYSITELIB}/awscli/examples/secretsmanager/get-random-password.rst
+${PYSITELIB}/awscli/examples/secretsmanager/get-secret-value.rst
+${PYSITELIB}/awscli/examples/secretsmanager/list-secret-version-ids.rst
+${PYSITELIB}/awscli/examples/secretsmanager/list-secrets.rst
+${PYSITELIB}/awscli/examples/secretsmanager/put-secret-value.rst
+${PYSITELIB}/awscli/examples/secretsmanager/restore-secret.rst
+${PYSITELIB}/awscli/examples/secretsmanager/rotate-secret.rst
+${PYSITELIB}/awscli/examples/secretsmanager/tag-resource.rst
+${PYSITELIB}/awscli/examples/secretsmanager/untag-resource.rst
+${PYSITELIB}/awscli/examples/secretsmanager/update-secret-version-stage.rst
+${PYSITELIB}/awscli/examples/secretsmanager/update-secret.rst
