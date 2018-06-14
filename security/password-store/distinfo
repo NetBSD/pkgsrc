@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.4 2018/05/06 11:56:58 leot Exp $
+$NetBSD: distinfo,v 1.5 2018/06/14 16:08:39 leot Exp $
 
-SHA1 (password-store-1.7.1.tar.xz) = e7982416eaea8773ead0836f0b4c7a475ef33cb3
-RMD160 (password-store-1.7.1.tar.xz) = ebd86a7ae52559eeac5001e9634306dc0b8bdd5f
-SHA512 (password-store-1.7.1.tar.xz) = 2ba2ebc80c90454bbab1da3c43c2cfc87135f838f381e2616eef7c36b0c1de01e491cf587a666bb052d6dfd475fa429bc8fd82b0269325bd2b70afbb897b923e
-Size (password-store-1.7.1.tar.xz) = 62340 bytes
-SHA1 (patch-contrib_dmenu_passmenu) = 025e88b68b68936d80e6eca914e7e6e44d1d887e
-SHA1 (patch-src_password-store.sh) = 21741ae5c3c7f4f1cae713ce8ba2f029c6318625
-SHA1 (patch-tests_t0300-reencryption.sh) = 281b25c8fa46d0412b87725aaa375dc902bf971f
+SHA1 (password-store-1.7.2.tar.xz) = d8027e01634cec0694a5513ab6950e639cf2c69c
+RMD160 (password-store-1.7.2.tar.xz) = 69f8482fa565f3b5990de74cbf4429b20addd577
+SHA512 (password-store-1.7.2.tar.xz) = e6719a7125af6ecd80fdbeb38b4e2e89e7358ff16e18739d68a04b72dfdf860294b54f7ec0ec9676a62d2e270db8f54784a357c82217a478694472f8136e3657
+Size (password-store-1.7.2.tar.xz) = 63620 bytes
+SHA1 (patch-contrib_dmenu_passmenu) = 24458d7100df28232f87ffc414e133d38565ba6f
+SHA1 (patch-src_password-store.sh) = 765a0c6eee25b924d370122426fd7491dd22b2ea
