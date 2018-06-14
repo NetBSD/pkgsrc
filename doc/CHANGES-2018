@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2811 2018/06/14 07:32:43 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.2812 2018/06/14 07:57:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4006,3 +4006,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Added sysutils/qdirstat version 1.0 [markd 2018-06-13]
 	Added lang/py-python-lua version 20170109 [agc 2018-06-13]
 	Updated net/py-awscli to 1.15.37 [bsiegert 2018-06-14]
+	Updated www/py-daphne to 2.2.0 [adam 2018-06-14]
+	Updated www/py-channels to 2.1.2 [adam 2018-06-14]
