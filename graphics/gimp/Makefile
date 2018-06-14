@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.286 2018/06/04 05:32:13 dbj Exp $
+# $NetBSD: Makefile,v 1.287 2018/06/14 16:25:52 jperkin Exp $
 
 DISTNAME=	gimp-2.10.2
 CATEGORIES=	graphics
@@ -28,6 +28,9 @@ CONFIGURE_ARGS+=	--without-mac-twain
 PKG_SYSCONFSUBDIR=	gimp/2.0
 PKGCONFIG_OVERRIDE=	gimp.pc.in
 UNLIMIT_RESOURCES+=	datasize
+
+# GCC 4.x C++14 support is not new enough.
+GCC_REQD+=	5.0
 
 .include "../../mk/bsd.prefs.mk"
 
