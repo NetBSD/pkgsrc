@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.764 2018/06/13 13:25:02 maya Exp $
+# $NetBSD: Makefile,v 1.765 2018/06/14 00:25:21 markd Exp $
 #
 
 COMMENT=	System utilities
@@ -482,6 +482,7 @@ SUBDIR+=	py-supervisor
 SUBDIR+=	py-syslog-ng
 SUBDIR+=	py-watchdog
 SUBDIR+=	py-xattr
+SUBDIR+=	qdirstat
 SUBDIR+=	qlogtools
 SUBDIR+=	radeontool
 SUBDIR+=	radmind
