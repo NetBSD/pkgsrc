@@ -1,0 +1,19 @@
+$NetBSD: patch-configure,v 1.1 2018/06/14 14:53:38 jperkin Exp $
+
+dirfd is a function not a declaration.
+
+--- configure.orig	2018-05-21 18:46:45.000000000 +0000
++++ configure
+@@ -3662,10 +3662,10 @@ _ACEOF
+ fi
+ done
+ 
+-ac_fn_c_check_decl "$LINENO" "dirfd" "ac_cv_have_decl_dirfd" "#include <sys/types.h>
++ac_fn_c_check_func "$LINENO" "dirfd" "ac_cv_have_func_dirfd" "#include <sys/types.h>
+        #include <dirent.h>
+ "
+-if test "x$ac_cv_have_decl_dirfd" = xyes; then :
++if test "x$ac_cv_have_func_dirfd" = xyes; then :
+ 
+ $as_echo "#define HAVE_DIRFD 1" >>confdefs.h
+ 
