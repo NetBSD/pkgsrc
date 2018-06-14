@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2818 2018/06/14 10:54:34 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.2819 2018/06/14 11:32:46 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4016,3 +4016,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/nodejs6 to 6.14.3 [fhajny 2018-06-14]
 	Updated lang/nodejs8 to 8.11.3 [fhajny 2018-06-14]
 	Updated lang/nodejs to 10.4.1 [fhajny 2018-06-14]
+	Updated devel/apache-ivy to 2.4.0 [fhajny 2018-06-14]
