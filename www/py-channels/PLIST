@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/04/13 11:13:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/06/14 07:57:32 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -55,6 +55,9 @@ ${PYSITELIB}/channels/management/commands/runserver.pyo
 ${PYSITELIB}/channels/management/commands/runworker.py
 ${PYSITELIB}/channels/management/commands/runworker.pyc
 ${PYSITELIB}/channels/management/commands/runworker.pyo
+${PYSITELIB}/channels/middleware.py
+${PYSITELIB}/channels/middleware.pyc
+${PYSITELIB}/channels/middleware.pyo
 ${PYSITELIB}/channels/routing.py
 ${PYSITELIB}/channels/routing.pyc
 ${PYSITELIB}/channels/routing.pyo
