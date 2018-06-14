@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2812 2018/06/14 07:57:50 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2813 2018/06/14 08:28:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4008,3 +4008,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/py-awscli to 1.15.37 [bsiegert 2018-06-14]
 	Updated www/py-daphne to 2.2.0 [adam 2018-06-14]
 	Updated www/py-channels to 2.1.2 [adam 2018-06-14]
+	Updated net/py-botocore to 1.10.38 [adam 2018-06-14]
+	Updated net/py-boto3 to 1.7.38 [adam 2018-06-14]
+	Updated net/py-awscli to 1.15.38 [adam 2018-06-14]
