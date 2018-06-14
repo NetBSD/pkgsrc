@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2810 2018/06/14 01:57:49 agc Exp $
+$NetBSD: CHANGES-2018,v 1.2811 2018/06/14 07:32:43 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4005,3 +4005,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/gnome-backgrounds to 3.28.0 [youri 2018-06-13]
 	Added sysutils/qdirstat version 1.0 [markd 2018-06-13]
 	Added lang/py-python-lua version 20170109 [agc 2018-06-13]
+	Updated net/py-awscli to 1.15.37 [bsiegert 2018-06-14]
