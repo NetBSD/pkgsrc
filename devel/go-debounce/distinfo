@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/06/14 15:15:58 minskim Exp $
+
+SHA1 (debounce-1.1.0.tar.gz) = 7487a73663a55f9baba98812dfda40b621248229
+RMD160 (debounce-1.1.0.tar.gz) = 88c7408a4f908f8f0c494c864c7115aa3dda38a2
+SHA512 (debounce-1.1.0.tar.gz) = bb74d56cd460af55f95c95f47b5a00998d9294db2bc36aa3029263623714ee3db83664392dae0b2eb0b475f4b84448abd42e81405f2dee8da2a123449252f572
+Size (debounce-1.1.0.tar.gz) = 3496 bytes
