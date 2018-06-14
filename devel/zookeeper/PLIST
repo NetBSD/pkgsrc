@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2017/09/06 11:12:19 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/06/14 11:48:35 fhajny Exp $
 bin/zkCli.sh
 libexec/zkEnv.sh
 sbin/zkServer.sh
@@ -6,6 +6,7 @@ share/examples/zookeeper/configuration.xsl
 share/examples/zookeeper/log4j.properties
 share/examples/zookeeper/zoo.cfg
 share/examples/zookeeper/zookeeper-env.sh
+share/zookeeper/audience-annotations-0.5.0.jar
 share/zookeeper/cobertura/README.txt
 share/zookeeper/contrib/ZooInspector/${PKGNAME}-ZooInspector.jar
 share/zookeeper/contrib/fatjar/${PKGNAME}-fatjar.jar
@@ -43,9 +44,9 @@ share/zookeeper/jdiff/zookeeper_3.1.1.xml
 share/zookeeper/jdiff/zookeeper_${PKGVERSION}.xml
 share/zookeeper/jline-0.9.94.LICENSE.txt
 share/zookeeper/jline-0.9.94.jar
-share/zookeeper/log4j-1.2.16.LICENSE.txt
-share/zookeeper/log4j-1.2.16.jar
-share/zookeeper/netty-3.10.5.Final.jar
+share/zookeeper/log4j-1.2.17.LICENSE.txt
+share/zookeeper/log4j-1.2.17.jar
+share/zookeeper/netty-3.10.6.Final.jar
 share/zookeeper/recipes/election/${PKGNAME}-recipes-election.jar
 share/zookeeper/recipes/lock/build.xml
 share/zookeeper/recipes/lock/src/c/INSTALL
@@ -90,9 +91,9 @@ share/zookeeper/recipes/queue/src/c/tests/zkServer.sh
 share/zookeeper/recipes/queue/src/java/org/apache/zookeeper/recipes/queue/DistributedQueue.java
 share/zookeeper/recipes/queue/test/org/apache/zookeeper/recipes/queue/DistributedQueueTest.java
 share/zookeeper/recipes/queue/${PKGNAME}-recipes-queue.jar
-share/zookeeper/slf4j-1.6.1.LICENSE.txt
-share/zookeeper/slf4j-api-1.6.1.jar
-share/zookeeper/slf4j-log4j12-1.6.1.jar
+share/zookeeper/slf4j-1.7.25.LICENSE.txt
+share/zookeeper/slf4j-api-1.7.25.jar
+share/zookeeper/slf4j-log4j12-1.7.25.jar
 share/zookeeper/templates/conf/zoo.cfg
 share/zookeeper/templates/conf/zookeeper-env.sh
 share/zookeeper/${PKGNAME}.jar
