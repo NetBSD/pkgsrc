@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2816 2018/06/14 10:52:42 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.2817 2018/06/14 10:53:17 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4014,3 +4014,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/beats to 6.3.0 [fhajny 2018-06-14]
 	Updated www/nghttp2 to 1.32.0 [fhajny 2018-06-14]
 	Updated lang/nodejs6 to 6.14.3 [fhajny 2018-06-14]
+	Updated lang/nodejs8 to 8.11.3 [fhajny 2018-06-14]
