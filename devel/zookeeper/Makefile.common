@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.3 2017/09/06 11:12:19 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.4 2018/06/14 11:48:35 fhajny Exp $
 #
 # used by devel/libzookeeper/Makefile
 # used by devel/zookeeper/Makefile
 
-DISTNAME=	zookeeper-3.4.10
+DISTNAME=	zookeeper-3.4.12
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_APACHE:=zookeeper/${DISTNAME}/}
 
