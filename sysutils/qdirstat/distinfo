@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2018/06/14 00:24:26 markd Exp $
+
+SHA1 (qdirstat-1.0.tar.gz) = dd459a622ca014ca96b0ed853525ccb56ee15fa6
+RMD160 (qdirstat-1.0.tar.gz) = 057f20e284117cd102b3ef31eeaad3470531eda7
+SHA512 (qdirstat-1.0.tar.gz) = 9e98ea690fd84b435f1b4078c79350a7c0ee6b48560dc500fc9410633a650539c2db16f0526e181700580de0ee8b3044d1219eafc9870cd7e421511159b6d11d
+Size (qdirstat-1.0.tar.gz) = 805110 bytes
+SHA1 (patch-src_DirReadJob.cpp) = da39fbb62c5e008961097bd65fad783de109f5ab
