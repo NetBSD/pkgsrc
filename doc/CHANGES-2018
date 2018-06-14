@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2821 2018/06/14 11:48:45 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.2822 2018/06/14 15:16:09 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4019,3 +4019,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/apache-ivy to 2.4.0 [fhajny 2018-06-14]
 	Updated pkgtools/pkgin to 0.11.1 [jperkin 2018-06-14]
 	Updated devel/zookeeper to 3.4.12 [fhajny 2018-06-14]
+	Added devel/go-debounce version 1.1.0 [minskim 2018-06-14]
