@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2814 2018/06/14 10:13:54 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.2815 2018/06/14 10:51:29 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4012,3 +4012,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/py-boto3 to 1.7.38 [adam 2018-06-14]
 	Updated net/py-awscli to 1.15.38 [adam 2018-06-14]
 	Updated sysutils/beats to 6.3.0 [fhajny 2018-06-14]
+	Updated www/nghttp2 to 1.32.0 [fhajny 2018-06-14]
