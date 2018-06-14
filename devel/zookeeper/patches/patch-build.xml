@@ -1,9 +1,9 @@
-$NetBSD: patch-build.xml,v 1.2 2017/09/06 11:12:20 fhajny Exp $
+$NetBSD: patch-build.xml,v 1.3 2018/06/14 11:48:35 fhajny Exp $
 
 Don't look for a specific Ivy version.
 Add Ivy resolver tasks to let us forbid fetch on demand.
 
---- build.xml.orig	2017-03-23 10:14:59.000000000 +0000
+--- build.xml.orig	2018-03-27 04:32:33.000000000 +0000
 +++ build.xml
 @@ -108,7 +108,7 @@ xmlns:cs="antlib:com.puppycrawl.tools.ch
      <property name="contrib.dir" value="${src.dir}/contrib"/>
@@ -14,7 +14,7 @@ Add Ivy resolver tasks to let us forbid fetch on demand.
      <property name="ivy.url"
                value="https://repo1.maven.org/maven2/org/apache/ivy/ivy" />
      <property name="ivy.home" value="${user.home}/.ant" />
-@@ -364,33 +364,45 @@ xmlns:cs="antlib:com.puppycrawl.tools.ch
+@@ -403,27 +403,37 @@ xmlns:cs="antlib:com.puppycrawl.tools.ch
      </target>
  
      <target name="ivy-retrieve" depends="init,ivy-init">
@@ -50,8 +50,9 @@ Add Ivy resolver tasks to let us forbid fetch on demand.
 +      <ivy:resolve settingsRef="${ant.project.name}" conf="releaseaudit"
 +                    useCacheOnly="true"/>
        <ivy:retrieve settingsRef="${ant.project.name}" conf="releaseaudit"
-                     pattern="${ivy.lib}/[artifact]-[revision].[ext]"/>
+                     pattern="${ivy.releaseaudit.lib}/[artifact]-[revision].[ext]"/>
        <ivy:cachepath pathid="releaseaudit-classpath" conf="releaseaudit"/>
+@@ -436,6 +446,8 @@ xmlns:cs="antlib:com.puppycrawl.tools.ch
      </target>
  
      <target name="ivy-retrieve-mvn-ant-task" depends="init,ivy-init">
