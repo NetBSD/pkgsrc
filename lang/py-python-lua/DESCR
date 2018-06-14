@@ -1,0 +1,5 @@
+This script converts a python 3 to lua.
+
+It can be used for standalone scripts, or embedded.
+
+Lua can be embedded in the python script.
