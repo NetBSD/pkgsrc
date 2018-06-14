@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2823 2018/06/14 16:08:54 leot Exp $
+$NetBSD: CHANGES-2018,v 1.2824 2018/06/14 21:29:48 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4021,3 +4021,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/zookeeper to 3.4.12 [fhajny 2018-06-14]
 	Added devel/go-debounce version 1.1.0 [minskim 2018-06-14]
 	Updated security/password-store to 1.7.2 [leot 2018-06-14]
+	Updated security/mate-polkit to 1.20.0nb1 [youri 2018-06-14]
