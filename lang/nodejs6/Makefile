@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2018/05/12 08:59:56 fhajny Exp $
+# $NetBSD: Makefile,v 1.28 2018/06/14 10:52:32 fhajny Exp $
 
-DISTNAME=	node-v6.14.2
-PKGREVISION=	1
+DISTNAME=	node-v6.14.3
 
 .include "options.mk"
 
