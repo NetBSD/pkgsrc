@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/10/11 06:35:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/06/15 11:47:10 adam Exp $
 bin/wsdump${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -44,7 +44,6 @@ ${PYSITELIB}/websocket/_url.pyo
 ${PYSITELIB}/websocket/_utils.py
 ${PYSITELIB}/websocket/_utils.pyc
 ${PYSITELIB}/websocket/_utils.pyo
-${PYSITELIB}/websocket/cacert.pem
 ${PYSITELIB}/websocket/tests/__init__.py
 ${PYSITELIB}/websocket/tests/__init__.pyc
 ${PYSITELIB}/websocket/tests/__init__.pyo
