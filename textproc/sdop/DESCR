@@ -1,0 +1,5 @@
+SDoP is a Simple DocBook Processor. It reads DocBook XML input and
+writes PostScript output. This version has some support for almost
+all the elements that are part of Simplified DocBook. The main
+omissions are support for bibliographies, multiple authors, subtables
+within tables, and some element attributes.
