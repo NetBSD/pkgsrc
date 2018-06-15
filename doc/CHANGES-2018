@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2829 2018/06/15 09:19:04 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2830 2018/06/15 11:47:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4032,3 +4032,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated fonts/py-fonttools to 3.27.1 [adam 2018-06-15]
 	Updated x11/xkbcomp to 1.4.2 [wiz 2018-06-15]
 	Updated games/MyGoGrinder to 2.3.1 [wiz 2018-06-15]
+	Updated textproc/py-pytoml to 0.1.16 [adam 2018-06-15]
+	Updated www/py-websocket-client to 0.48.0 [adam 2018-06-15]
