@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: kdc.sh,v 1.2 2005/04/10 07:15:25 jlam Exp $
+# $NetBSD: kdc.sh,v 1.3 2018/06/15 20:46:01 tez Exp $
 #
 # PROVIDE: kdc
 # REQUIRE: NETWORKING

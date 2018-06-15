@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2016/03/15 15:16:39 tez Exp $
+@comment $NetBSD: PLIST,v 1.19 2018/06/15 20:46:01 tez Exp $
 bin/compile_et
 bin/gss-client
 bin/k5srvutil
@@ -45,10 +45,13 @@ include/kdb.h
 include/krad.h
 include/krb5.h
 include/krb5/ccselect_plugin.h
+include/krb5/certauth_plugin.h
 include/krb5/clpreauth_plugin.h
 include/krb5/hostrealm_plugin.h
+include/krb5/kadm5_auth_plugin.h
 include/krb5/kadm5_hook_plugin.h
 include/krb5/kdcpreauth_plugin.h
+include/krb5/kdcpolicy_plugin.h
 include/krb5/krb5.h
 include/krb5/localauth_plugin.h
 include/krb5/locate_plugin.h
@@ -131,3 +134,4 @@ share/examples/krb5/kdc.conf
 share/examples/krb5/krb5.conf
 share/examples/krb5/services.append
 share/locale/en_US/LC_MESSAGES/mit-krb5.mo
+share/locale/de/LC_MESSAGES/mit-krb5.mo
