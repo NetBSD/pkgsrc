@@ -1,0 +1,6 @@
+Aspic is a program that processes a textual description of a line
+art graphic, and converts it into a form that is suitable for
+inclusion in another document. The default output format is
+Encapsulated PostScript, but there is also support for Scalable
+Vector Graphics (SVG), and there is legacy support for the SGCAL
+text processor.
