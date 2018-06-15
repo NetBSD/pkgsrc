@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.4 2016/03/15 15:16:39 tez Exp $
+$NetBSD: patch-ae,v 1.5 2018/06/15 20:46:01 tez Exp $
 
 Add --enable-pkgsrc-libtool option
 

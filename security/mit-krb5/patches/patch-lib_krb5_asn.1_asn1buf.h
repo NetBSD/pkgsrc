@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_krb5_asn.1_asn1buf.h,v 1.2 2016/03/15 15:16:39 tez Exp $
+$NetBSD: patch-lib_krb5_asn.1_asn1buf.h,v 1.3 2018/06/15 20:46:01 tez Exp $
 
 Clang does not like this kind of inlines.
 
