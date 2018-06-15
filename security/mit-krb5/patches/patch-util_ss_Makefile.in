@@ -1,8 +1,8 @@
-$NetBSD: patch-util_ss_Makefile.in,v 1.3 2016/03/15 15:16:39 tez Exp $
+$NetBSD: patch-util_ss_Makefile.in,v 1.4 2018/06/15 20:46:01 tez Exp $
 
 Only build a static library as this library is not installed.
 
---- util/ss/Makefile.in.orig	2016-02-29 19:50:13.000000000 +0000
+--- util/ss/Makefile.in.orig	2018-05-03 14:34:47.000000000 +0000
 +++ util/ss/Makefile.in
 @@ -13,6 +13,8 @@ LIBBASE=ss
  LIBMAJOR=1
@@ -12,4 +12,4 @@ Only build a static library as this library is not installed.
 +SHLIB_RDIRS=${KRB5_LIBDIR}
  
  clean-unix:: clean-liblinks clean-libs clean-libobjs
- install-unix:: install-libs
+ install-unix: install-libs
