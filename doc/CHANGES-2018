@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2832 2018/06/15 13:13:06 prlw1 Exp $
+$NetBSD: CHANGES-2018,v 1.2833 2018/06/15 13:15:42 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4036,3 +4036,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-websocket-client to 0.48.0 [adam 2018-06-15]
 	Added textproc/xfpt version 0.09 [prlw1 2018-06-15]
 	Added textproc/sdop version 0.80 [prlw1 2018-06-15]
+	Added textproc/aspic version 1.05 [prlw1 2018-06-15]
