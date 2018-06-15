@@ -1,0 +1,8 @@
+xfpt is a program that reads a marked-up ASCII source file, and
+converts it into XML. It was written with DocBook XML in mind, but
+can also be used for other forms of XML. Unlike AsciiDoc, xfpt does
+not try to produce XML from a document that is also usable as a
+freestanding ASCII document. The input for xfpt is very definitely
+"marked up". This makes it less ambiguous for large and/or complicated
+documents. xfpt is also much faster than AsciiDoc because it is
+written in C and does not rely on pattern matching.

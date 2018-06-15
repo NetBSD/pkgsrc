@@ -1,0 +1,41 @@
+$NetBSD: patch-Makefile.in,v 1.1 2018/06/15 13:08:52 prlw1 Exp $
+
+Add destdir support.
+
+--- Makefile.in.orig	2012-05-18 08:15:54.000000000 +0000
++++ Makefile.in
+@@ -13,9 +13,10 @@ LFLAGS=@LFLAGS@
+ INSTALL = @INSTALL@
+ INSTALL_DATA = @INSTALL_DATA@
+ 
+-BINDIR=@prefix@/bin
+-DATADIR=@prefix@/share/xfpt
+-MANDIR=@prefix@/man
++prefix  = @prefix@
++BINDIR  = @prefix@/bin
++DATADIR = @datadir@/xfpt
++MANDIR  = @mandir@
+ 
+ # BINDIR is the directory in which the commands are installed.
+ # DATADIR is the directory in which the include styles are installed.
+@@ -48,13 +49,13 @@ distclean:;     rm Makefile config.cache
+ test:; cd testing; runtest
+ 
+ install:        build
+-		$(mkinstalldirs) $(BINDIR)
+-		$(mkinstalldirs) $(DATADIR)
+-		$(mkinstalldirs) $(MANDIR)
+-		$(mkinstalldirs) $(MANDIR)/man1
+-		$(INSTALL) src/xfpt $(BINDIR)/xfpt
+-		$(INSTALL_DATA) share/* $(DATADIR)
+-		$(INSTALL_DATA) doc/xfpt.1 $(MANDIR)/man1
++		$(mkinstalldirs) $(DESTDIR)$(BINDIR)
++		$(mkinstalldirs) $(DESTDIR)$(DATADIR)
++		$(mkinstalldirs) $(DESTDIR)$(MANDIR)
++		$(mkinstalldirs) $(DESTDIR)$(MANDIR)/man1
++		$(INSTALL) src/xfpt $(DESTDIR)$(BINDIR)/xfpt
++		$(INSTALL_DATA) share/* $(DESTDIR)$(DATADIR)
++		$(INSTALL_DATA) doc/xfpt.1 $(DESTDIR)$(MANDIR)/man1
+ 
+ uninstall:;     rm -rf \
+ 		$(BINDIR)/xfpt \
