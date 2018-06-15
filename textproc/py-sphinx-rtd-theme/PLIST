@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/04/06 08:39:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/06/15 07:41:43 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -15,14 +15,30 @@ ${PYSITELIB}/sphinx_rtd_theme/search.html
 ${PYSITELIB}/sphinx_rtd_theme/searchbox.html
 ${PYSITELIB}/sphinx_rtd_theme/static/css/badge_only.css
 ${PYSITELIB}/sphinx_rtd_theme/static/css/theme.css
-${PYSITELIB}/sphinx_rtd_theme/static/fonts/Inconsolata-Bold.ttf
-${PYSITELIB}/sphinx_rtd_theme/static/fonts/Inconsolata-Regular.ttf
-${PYSITELIB}/sphinx_rtd_theme/static/fonts/Lato-Bold.ttf
-${PYSITELIB}/sphinx_rtd_theme/static/fonts/Lato-BoldItalic.ttf
-${PYSITELIB}/sphinx_rtd_theme/static/fonts/Lato-Italic.ttf
-${PYSITELIB}/sphinx_rtd_theme/static/fonts/Lato-Regular.ttf
-${PYSITELIB}/sphinx_rtd_theme/static/fonts/RobotoSlab-Bold.ttf
-${PYSITELIB}/sphinx_rtd_theme/static/fonts/RobotoSlab-Regular.ttf
+${PYSITELIB}/sphinx_rtd_theme/static/fonts/Lato/lato-bold.eot
+${PYSITELIB}/sphinx_rtd_theme/static/fonts/Lato/lato-bold.ttf
+${PYSITELIB}/sphinx_rtd_theme/static/fonts/Lato/lato-bold.woff
+${PYSITELIB}/sphinx_rtd_theme/static/fonts/Lato/lato-bold.woff2
+${PYSITELIB}/sphinx_rtd_theme/static/fonts/Lato/lato-bolditalic.eot
+${PYSITELIB}/sphinx_rtd_theme/static/fonts/Lato/lato-bolditalic.ttf
+${PYSITELIB}/sphinx_rtd_theme/static/fonts/Lato/lato-bolditalic.woff
+${PYSITELIB}/sphinx_rtd_theme/static/fonts/Lato/lato-bolditalic.woff2
+${PYSITELIB}/sphinx_rtd_theme/static/fonts/Lato/lato-italic.eot
+${PYSITELIB}/sphinx_rtd_theme/static/fonts/Lato/lato-italic.ttf
+${PYSITELIB}/sphinx_rtd_theme/static/fonts/Lato/lato-italic.woff
+${PYSITELIB}/sphinx_rtd_theme/static/fonts/Lato/lato-italic.woff2
+${PYSITELIB}/sphinx_rtd_theme/static/fonts/Lato/lato-regular.eot
+${PYSITELIB}/sphinx_rtd_theme/static/fonts/Lato/lato-regular.ttf
+${PYSITELIB}/sphinx_rtd_theme/static/fonts/Lato/lato-regular.woff
+${PYSITELIB}/sphinx_rtd_theme/static/fonts/Lato/lato-regular.woff2
+${PYSITELIB}/sphinx_rtd_theme/static/fonts/RobotoSlab/roboto-slab-v7-bold.eot
+${PYSITELIB}/sphinx_rtd_theme/static/fonts/RobotoSlab/roboto-slab-v7-bold.ttf
+${PYSITELIB}/sphinx_rtd_theme/static/fonts/RobotoSlab/roboto-slab-v7-bold.woff
+${PYSITELIB}/sphinx_rtd_theme/static/fonts/RobotoSlab/roboto-slab-v7-bold.woff2
+${PYSITELIB}/sphinx_rtd_theme/static/fonts/RobotoSlab/roboto-slab-v7-regular.eot
+${PYSITELIB}/sphinx_rtd_theme/static/fonts/RobotoSlab/roboto-slab-v7-regular.ttf
+${PYSITELIB}/sphinx_rtd_theme/static/fonts/RobotoSlab/roboto-slab-v7-regular.woff
+${PYSITELIB}/sphinx_rtd_theme/static/fonts/RobotoSlab/roboto-slab-v7-regular.woff2
 ${PYSITELIB}/sphinx_rtd_theme/static/fonts/fontawesome-webfont.eot
 ${PYSITELIB}/sphinx_rtd_theme/static/fonts/fontawesome-webfont.svg
 ${PYSITELIB}/sphinx_rtd_theme/static/fonts/fontawesome-webfont.ttf
