@@ -1,4 +1,4 @@
-$NetBSD: patch-scripts_mk__util.py,v 1.3 2018/03/13 00:31:16 khorben Exp $
+$NetBSD: patch-scripts_mk__util.py,v 1.4 2018/06/15 15:11:35 jperkin Exp $
 
 --- scripts/mk_util.py.orig	2016-11-07 22:02:30.000000000 +0000
 +++ scripts/mk_util.py
@@ -28,8 +28,12 @@ $NetBSD: patch-scripts_mk__util.py,v 1.3 2018/03/13 00:31:16 khorben Exp $
  def is_openbsd():
      return IS_OPENBSD
  
-@@ -607,6 +612,8 @@ elif os.name == 'posix':
-         IS_LINUX=True
+@@ -603,16 +608,18 @@ elif os.name == 'posix':
+     if os.uname()[0] == 'Darwin':
+         IS_OSX=True
+         PREFIX="/usr/local"
+-    elif os.uname()[0] == 'Linux':
+-        IS_LINUX=True
      elif os.uname()[0] == 'FreeBSD':
          IS_FREEBSD=True
 +    elif os.uname()[0] == 'NetBSD':
@@ -37,6 +41,14 @@ $NetBSD: patch-scripts_mk__util.py,v 1.3 2018/03/13 00:31:16 khorben Exp $
      elif os.uname()[0] == 'OpenBSD':
          IS_OPENBSD=True
      elif os.uname()[0][:6] == 'CYGWIN':
+         IS_CYGWIN=True
+         if (CC != None and "mingw" in CC):
+             IS_CYGWIN_MINGW=True
++    else:
++        IS_LINUX=True
+ 
+ def display_help(exit_code):
+     print("mk_make.py: Z3 Makefile generator\n")
 @@ -623,6 +630,7 @@ def display_help(exit_code):
      print("  -s, --silent                  do not print verbose messages.")
      if not IS_WINDOWS:
@@ -107,7 +119,7 @@ $NetBSD: patch-scripts_mk__util.py,v 1.3 2018/03/13 00:31:16 khorben Exp $
  
  class PythonComponent(Component): 
      def __init__(self, name, libz3Component):
-@@ -1403,7 +1413,7 @@ class PythonComponent(Component): 
+@@ -1403,7 +1413,7 @@ class PythonComponent(Component):
              return
  
          src = os.path.join(build_path, 'python', 'z3')
@@ -156,6 +168,15 @@ $NetBSD: patch-scripts_mk__util.py,v 1.3 2018/03/13 00:31:16 khorben Exp $
  
      def mk_install(self, out):
          if is_java_enabled() and self.install:
+@@ -2437,7 +2449,7 @@ def mk_config():
+         if sysname == 'Darwin':
+             SO_EXT    = '.dylib'
+             SLIBFLAGS = '-dynamiclib'
+-        elif sysname == 'Linux':
++        elif sysname == 'Linux' or sysname == 'SunOS':
+             CXXFLAGS       = '%s -fno-strict-aliasing -D_LINUX_' % CXXFLAGS
+             OS_DEFINES     = '-D_LINUX_'
+             SO_EXT         = '.so'
 @@ -2451,6 +2463,13 @@ def mk_config():
              LDFLAGS        = '%s -lrt' % LDFLAGS
              SLIBFLAGS      = '-shared'
