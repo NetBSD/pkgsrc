@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2824 2018/06/14 21:29:48 youri Exp $
+$NetBSD: CHANGES-2018,v 1.2825 2018/06/15 08:03:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4022,3 +4022,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/go-debounce version 1.1.0 [minskim 2018-06-14]
 	Updated security/password-store to 1.7.2 [leot 2018-06-14]
 	Updated security/mate-polkit to 1.20.0nb1 [youri 2018-06-14]
+	Updated textproc/py-openpyxl to 2.5.4 [adam 2018-06-15]
+	Updated textproc/py-sphinx-rtd-theme to 0.4.0 [adam 2018-06-15]
+	Updated www/py-pylint-django to 0.11.1 [adam 2018-06-15]
+	Updated www/py-yarl to 1.2.6 [adam 2018-06-15]
