@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2827 2018/06/15 08:26:49 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2828 2018/06/15 08:50:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4030,3 +4030,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-orderedmultidict to 1.0 [adam 2018-06-15]
 	Updated www/py-furl to 1.1 [adam 2018-06-15]
 	Updated fonts/py-fonttools to 3.27.1 [adam 2018-06-15]
+	Updated x11/xkbcomp to 1.4.2 [wiz 2018-06-15]
