@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2016/02/25 15:49:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.32 2018/06/15 11:49:17 tsutsui Exp $
 #
 
 DISTNAME=	smpeg-0.4.4
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	devel multimedia
 MASTER_SITES=	#
 
@@ -29,8 +29,11 @@ post-wrapper:
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${MACHINE_ARCH} == "i386" && ${OPSYS} != "Darwin"
+.if ${MACHINE_ARCH} == "i386"
+. if ${OPSYS} != "Darwin" && \
+     empty(MACHINE_PLATFORM:MNetBSD-[89].*-i386)
 CONFIGURE_ARGS+=	--enable-mmx
+. endif
 .endif
 
 MAKE_ENV.SunOS+=	SunOS_LDFLAGS="-shared -mimpure-text"
