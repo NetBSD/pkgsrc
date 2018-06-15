@@ -1,12 +1,12 @@
-$NetBSD: patch-config_pre.in,v 1.2 2016/06/21 14:58:17 fhajny Exp $
+$NetBSD: patch-config_pre.in,v 1.3 2018/06/15 20:46:01 tez Exp $
 
 Add --enable-pkgsrc-libtool option
 Use $(ROOT_USER) in place of root
 Make sure LDFLAGS are not ignored
 
---- config/pre.in.orig	2016-02-29 19:50:13.000000000 +0000
+--- config/pre.in.orig	2018-05-03 14:34:47.000000000 +0000
 +++ config/pre.in
-@@ -168,6 +168,7 @@ PTHREAD_LIBS = @PTHREAD_LIBS@
+@@ -171,6 +171,7 @@ PTHREAD_LIBS = @PTHREAD_LIBS@
  THREAD_LINKOPTS = $(PTHREAD_CFLAGS) $(PTHREAD_LIBS)
  CPPFLAGS = @CPPFLAGS@
  DEFS = @DEFS@
@@ -14,7 +14,7 @@ Make sure LDFLAGS are not ignored
  CC = @CC@
  CXX = @CXX@
  LD = $(PURE) @LD@
-@@ -177,11 +178,12 @@ LIBS = @LIBS@
+@@ -180,11 +181,12 @@ LIBS = @LIBS@
  
  INSTALL=@INSTALL@
  INSTALL_STRIP=
@@ -30,7 +30,7 @@ Make sure LDFLAGS are not ignored
  ## This is needed because autoconf will sometimes define @exec_prefix@ to be
  ## ${prefix}.
  prefix=@prefix@
-@@ -312,6 +314,10 @@ PROG_RPATH_FLAGS=@PROG_RPATH_FLAGS@
+@@ -315,6 +317,10 @@ PROG_RPATH_FLAGS=@PROG_RPATH_FLAGS@
  # depending on whether we're building with shared libraries.
  DEPLIBEXT=@DEPLIBEXT@
  
@@ -41,7 +41,7 @@ Make sure LDFLAGS are not ignored
  KDB5_PLUGIN_DEPLIBS = @KDB5_PLUGIN_DEPLIBS@
  KDB5_PLUGIN_LIBS = @KDB5_PLUGIN_LIBS@
  
-@@ -329,12 +335,12 @@ COM_ERR_DEPLIB-k5 = $(TOPLIBD)/libcom_er
+@@ -332,12 +338,12 @@ COM_ERR_DEPLIB-k5 = $(TOPLIBD)/libcom_er
  SUPPORT_LIBNAME=krb5support
  SUPPORT_DEPLIB	= $(TOPLIBD)/lib$(SUPPORT_LIBNAME)$(DEPLIBEXT)
  
@@ -57,7 +57,7 @@ Make sure LDFLAGS are not ignored
  
  KRB5_BASE_DEPLIBS	= $(KRB5_DEPLIB) $(CRYPTO_DEPLIB) $(COM_ERR_DEPLIB) $(SUPPORT_DEPLIB)
  KDB5_DEPLIBS		= $(KDB5_DEPLIB) $(KDB5_PLUGIN_DEPLIBS)
-@@ -373,7 +379,7 @@ RL_LIBS		= @RL_LIBS@
+@@ -376,7 +382,7 @@ RL_LIBS		= @RL_LIBS@
  
  SS_LIB		= $(SS_LIB-@SS_VERSION@)
  SS_LIB-sys	= @SS_LIB@
@@ -66,17 +66,17 @@ Make sure LDFLAGS are not ignored
  KDB5_LIB	= -lkdb5 $(KDB5_PLUGIN_LIBS)
  
  VERTO_DEPLIB	= $(VERTO_DEPLIB-@VERTO_VERSION@)
-@@ -552,6 +558,9 @@ MAKE_DYNOBJ_COMMAND=@MAKE_DYNOBJ_COMMAND
+@@ -556,6 +562,9 @@ MAKE_DYNOBJ_COMMAND=@MAKE_DYNOBJ_COMMAND
  DYNOBJ_EXPDEPS=@DYNOBJ_EXPDEPS@
  DYNOBJ_EXPFLAGS=@DYNOBJ_EXPFLAGS@
  
 +# usually .la
 +LALIBEXT=@LALIBEXT@
 +
- # File with symbol names to be exported, both functions and data,
- # currently not distinguished.
- SHLIB_EXPORT_FILE=$(srcdir)/$(LIBPREFIX)$(LIBBASE).exports
-@@ -573,6 +582,7 @@ SHLIB_RPATH_FLAGS=@SHLIB_RPATH_FLAGS@
+ # For some platforms, a flag which causes shared library creation to
+ # check for undefined symbols.  Suppressed when using --enable-asan.
+ UNDEF_CHECK=@UNDEF_CHECK@
+@@ -587,6 +596,7 @@ SHLIB_RPATH_FLAGS=@SHLIB_RPATH_FLAGS@
  # flags for explicit libraries depending on this one,
  # e.g. "$(SHLIB_RPATH_FLAGS) $(SHLIB_SHLIB_DIRFLAGS) $(SHLIB_EXPLIBS)"
  SHLIB_EXPFLAGS=@SHLIB_EXPFLAGS@
@@ -84,7 +84,7 @@ Make sure LDFLAGS are not ignored
  
  ## Parameters to be set by configure for use in libobj.in:
  
-@@ -584,6 +594,11 @@ OBJLISTS=@OBJLISTS@
+@@ -598,6 +608,11 @@ OBJLISTS=@OBJLISTS@
  # the suffix substitution will break on some platforms!
  SHLIBOBJS=$(STLIBOBJS:.o=@SHOBJEXT@)
  PFLIBOBJS=$(STLIBOBJS:.o=@PFOBJEXT@)
