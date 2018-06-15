@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2826 2018/06/15 08:11:45 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2827 2018/06/15 08:26:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4028,3 +4028,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-yarl to 1.2.6 [adam 2018-06-15]
 	Updated archivers/py-libarchive-c to 2.8 [adam 2018-06-15]
 	Updated databases/py-orderedmultidict to 1.0 [adam 2018-06-15]
+	Updated www/py-furl to 1.1 [adam 2018-06-15]
+	Updated fonts/py-fonttools to 3.27.1 [adam 2018-06-15]
