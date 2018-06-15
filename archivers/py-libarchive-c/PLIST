@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/12/02 15:14:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/06/15 08:08:18 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -18,6 +18,9 @@ ${PYSITELIB}/libarchive/extract.pyo
 ${PYSITELIB}/libarchive/ffi.py
 ${PYSITELIB}/libarchive/ffi.pyc
 ${PYSITELIB}/libarchive/ffi.pyo
+${PYSITELIB}/libarchive/flags.py
+${PYSITELIB}/libarchive/flags.pyc
+${PYSITELIB}/libarchive/flags.pyo
 ${PYSITELIB}/libarchive/read.py
 ${PYSITELIB}/libarchive/read.pyc
 ${PYSITELIB}/libarchive/read.pyo
