@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2835 2018/06/15 21:52:54 tez Exp $
+$NetBSD: CHANGES-2018,v 1.2836 2018/06/15 22:25:36 tez Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4039,3 +4039,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added textproc/aspic version 1.05 [prlw1 2018-06-15]
 	Updated security/mit-krb5 to 1.16.1 [tez 2018-06-15]
 	Updated security/gnupg to 1.4.23 [tez 2018-06-15]
+	Updated www/lynx to lynx-2.8.8.2nb9 [tez 2018-06-15]
