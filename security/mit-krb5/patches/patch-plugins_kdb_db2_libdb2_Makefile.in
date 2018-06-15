@@ -1,4 +1,4 @@
-$NetBSD: patch-plugins_kdb_db2_libdb2_Makefile.in,v 1.1 2016/03/15 15:16:39 tez Exp $
+$NetBSD: patch-plugins_kdb_db2_libdb2_Makefile.in,v 1.2 2018/06/15 20:46:01 tez Exp $
 
 Add --enable-pkgsrc-libtool option
 

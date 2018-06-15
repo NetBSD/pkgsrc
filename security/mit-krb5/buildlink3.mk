@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2013/10/26 05:28:43 richard Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2018/06/15 20:46:01 tez Exp $
 
 BUILDLINK_TREE+=	mit-krb5
 
