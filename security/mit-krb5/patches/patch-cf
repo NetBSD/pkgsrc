@@ -1,4 +1,4 @@
-$NetBSD: patch-cf,v 1.3 2016/03/15 15:16:39 tez Exp $
+$NetBSD: patch-cf,v 1.4 2018/06/15 20:46:01 tez Exp $
 
 Add needed headers
 

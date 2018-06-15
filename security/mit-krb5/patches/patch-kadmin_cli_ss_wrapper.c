@@ -1,4 +1,4 @@
-$NetBSD: patch-kadmin_cli_ss_wrapper.c,v 1.1 2016/10/28 20:56:14 tez Exp $
+$NetBSD: patch-kadmin_cli_ss_wrapper.c,v 1.2 2018/06/15 20:46:01 tez Exp $
 
 Fix build on OS X (missing time_t definition)
 
