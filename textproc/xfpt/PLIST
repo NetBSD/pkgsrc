@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2018/06/15 13:08:52 prlw1 Exp $
+bin/xfpt
+man/man1/xfpt.1
+share/xfpt/stdflags
+share/xfpt/stdmacs
