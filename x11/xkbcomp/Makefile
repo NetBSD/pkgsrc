@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2018/03/07 11:57:46 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2018/06/15 08:50:25 wiz Exp $
 
-DISTNAME=		xkbcomp-1.4.1
-PKGREVISION=		1
+DISTNAME=		xkbcomp-1.4.2
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
