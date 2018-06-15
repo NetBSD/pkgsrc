@@ -1,17 +1,17 @@
-$NetBSD: patch-lib_apputils_Makefile.in,v 1.1 2016/03/15 15:16:39 tez Exp $
+$NetBSD: patch-lib_apputils_Makefile.in,v 1.2 2018/06/15 20:46:01 tez Exp $
 
 libapputils is an internal library, so make it a convenience libtool archive.
 (was patch-ck)
 
---- lib/apputils/Makefile.in.orig	2016-02-29 19:50:13.000000000 +0000
+--- lib/apputils/Makefile.in.orig	2018-05-03 14:34:47.000000000 +0000
 +++ lib/apputils/Makefile.in
 @@ -14,6 +14,9 @@ SED = sed
  
- STLIBOBJS=net-server.o @LIBOBJS@
+ STLIBOBJS=net-server.o udppktinfo.o @LIBOBJS@
  LIBBASE=apputils
 +LIBTOOL_TAIL=
 +PROG_RPATH=	${KRB5_LIBDIR}
 +SHLIB_RDIRS=	${KRB5_LIBDIR}
  
- all-unix:: all-liblinks
+ all-unix: all-liblinks
  clean-unix:: clean-liblinks clean-libs clean-libobjs

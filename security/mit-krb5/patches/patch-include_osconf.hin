@@ -1,4 +1,4 @@
-$NetBSD: patch-include_osconf.hin,v 1.1 2016/03/15 15:16:39 tez Exp $
+$NetBSD: patch-include_osconf.hin,v 1.2 2018/06/15 20:46:01 tez Exp $
 
 prefer @SYSCONFDIR as location for krb5.conf
 (was patch-ah)

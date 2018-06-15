@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.95 2017/10/10 21:22:53 tez Exp $
+# $NetBSD: Makefile,v 1.96 2018/06/15 20:46:01 tez Exp $
 
-DISTNAME=	krb5-1.14.6
+DISTNAME=	krb5-1.16.1
 PKGNAME=	mit-${DISTNAME}
 CATEGORIES=	security
 MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5/${PKGVERSION_NOREV:R}/

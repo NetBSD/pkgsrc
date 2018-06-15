@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.13 2015/11/04 15:32:34 jperkin Exp $
+# $NetBSD: builtin.mk,v 1.14 2018/06/15 20:46:01 tez Exp $
 
 BUILTIN_PKG:=	mit-krb5
 

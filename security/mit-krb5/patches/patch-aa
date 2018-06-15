@@ -1,20 +1,20 @@
-$NetBSD: patch-aa,v 1.5 2016/03/15 15:16:39 tez Exp $
+$NetBSD: patch-aa,v 1.6 2018/06/15 20:46:01 tez Exp $
 
 Don't make sunpro warnings into errors (warnings are seen in gcc too)
 Add --enable-pkgsrc-libtool option
 
---- aclocal.m4.orig	2012-05-31 23:49:44.000000000 +0000
+--- aclocal.m4.orig	2018-05-03 14:34:47.000000000 +0000
 +++ aclocal.m4
-@@ -611,7 +611,7 @@ else
-     # works, but it also means that declaration-in-code warnings won't
-     # be issued.
-     # -v -fd -errwarn=E_DECLARATION_IN_CODE ...
--    WARN_CFLAGS="-errtags=yes -errwarn=E_BAD_PTR_INT_COMBINATION,E_BAD_PTR_INT_COMB_ARG,E_PTR_TO_VOID_IN_ARITHMETIC,E_NO_IMPLICIT_DECL_ALLOWED,E_ATTRIBUTE_PARAM_UNDEFINED"
-+    WARN_CFLAGS="-errtags=yes"
-     WARN_CXXFLAGS="-errtags=yes +w +w2 -xport64"
-   fi
- fi
-@@ -1038,6 +1038,9 @@ AC_SUBST(SHLIBVEXT)
+@@ -633,7 +633,7 @@ else
+     if test "x$krb5_ac_warn_cflags_set" = xset ; then
+       AC_MSG_NOTICE(not adding extra warning flags because WARN_CFLAGS was set)
+     else
+-      WARN_CFLAGS="-errtags=yes -errwarn=E_BAD_PTR_INT_COMBINATION,E_BAD_PTR_INT_COMB_ARG,E_PTR_TO_VOID_IN_ARITHMETIC,E_NO_IMPLICIT_DECL_ALLOWED,E_ATTRIBUTE_PARAM_UNDEFINED"
++      WARN_CFLAGS="-errtags=yes"
+     fi
+     if test "x$krb5_ac_warn_cxxflags_set" = xset ; then
+       AC_MSG_NOTICE(not adding extra warning flags because WARN_CXXFLAGS was set)
+@@ -1068,6 +1068,9 @@ AC_SUBST(SHLIBVEXT)
  AC_SUBST(SHLIBSEXT)
  AC_SUBST(DEPLIBEXT)
  AC_SUBST(PFLIBEXT)
@@ -24,7 +24,7 @@ Add --enable-pkgsrc-libtool option
  AC_SUBST(LIBINSTLIST)
  AC_SUBST(DYNOBJEXT)
  AC_SUBST(MAKE_DYNOBJ_COMMAND)
-@@ -1054,6 +1057,7 @@ AC_SUBST(OBJLISTS)
+@@ -1085,6 +1088,7 @@ AC_SUBST(OBJLISTS)
  AC_SUBST(STOBJEXT)
  AC_SUBST(SHOBJEXT)
  AC_SUBST(PFOBJEXT)
@@ -32,7 +32,7 @@ Add --enable-pkgsrc-libtool option
  AC_SUBST(PICFLAGS)
  AC_SUBST(PROFFLAGS)])
  
-@@ -1168,11 +1172,42 @@ else
+@@ -1199,11 +1203,42 @@ else
  	KDB5_PLUGIN_DEPLIBS=
  	KDB5_PLUGIN_LIBS=
  fi
