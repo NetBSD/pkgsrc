@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/04/24 13:06:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/06/15 08:01:07 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -129,6 +129,9 @@ ${PYSITELIB}/pylint_django/tests/input/func_noerror_models_py33.pyo
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_protected_meta_access.py
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_protected_meta_access.pyc
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_protected_meta_access.pyo
+${PYSITELIB}/pylint_django/tests/input/func_noerror_style_members.py
+${PYSITELIB}/pylint_django/tests/input/func_noerror_style_members.pyc
+${PYSITELIB}/pylint_django/tests/input/func_noerror_style_members.pyo
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_test_wsgi_request.py
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_test_wsgi_request.pyc
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_test_wsgi_request.pyo
@@ -144,6 +147,9 @@ ${PYSITELIB}/pylint_django/tests/input/func_noerror_urls.pyo
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_uuid_field.py
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_uuid_field.pyc
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_uuid_field.pyo
+${PYSITELIB}/pylint_django/tests/input/func_noerror_views.py
+${PYSITELIB}/pylint_django/tests/input/func_noerror_views.pyc
+${PYSITELIB}/pylint_django/tests/input/func_noerror_views.pyo
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_wsgi.py
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_wsgi.pyc
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_wsgi.pyo
@@ -157,6 +163,12 @@ ${PYSITELIB}/pylint_django/tests/input/migrations/0002_new_column.txt
 ${PYSITELIB}/pylint_django/tests/input/migrations/__init__.py
 ${PYSITELIB}/pylint_django/tests/input/migrations/__init__.pyc
 ${PYSITELIB}/pylint_django/tests/input/migrations/__init__.pyo
+${PYSITELIB}/pylint_django/tests/input/models/__init__.py
+${PYSITELIB}/pylint_django/tests/input/models/__init__.pyc
+${PYSITELIB}/pylint_django/tests/input/models/__init__.pyo
+${PYSITELIB}/pylint_django/tests/input/models/discount.py
+${PYSITELIB}/pylint_django/tests/input/models/discount.pyc
+${PYSITELIB}/pylint_django/tests/input/models/discount.pyo
 ${PYSITELIB}/pylint_django/tests/test_func.py
 ${PYSITELIB}/pylint_django/tests/test_func.pyc
 ${PYSITELIB}/pylint_django/tests/test_func.pyo
@@ -169,6 +181,9 @@ ${PYSITELIB}/pylint_django/transforms/fields.pyo
 ${PYSITELIB}/pylint_django/transforms/foreignkey.py
 ${PYSITELIB}/pylint_django/transforms/foreignkey.pyc
 ${PYSITELIB}/pylint_django/transforms/foreignkey.pyo
+${PYSITELIB}/pylint_django/transforms/transforms/__init__.py
+${PYSITELIB}/pylint_django/transforms/transforms/__init__.pyc
+${PYSITELIB}/pylint_django/transforms/transforms/__init__.pyo
 ${PYSITELIB}/pylint_django/transforms/transforms/django_contrib_postgres_fields.py
 ${PYSITELIB}/pylint_django/transforms/transforms/django_contrib_postgres_fields.pyc
 ${PYSITELIB}/pylint_django/transforms/transforms/django_contrib_postgres_fields.pyo
@@ -196,6 +211,9 @@ ${PYSITELIB}/pylint_django/transforms/transforms/django_utils_translation.pyo
 ${PYSITELIB}/pylint_django/transforms/transforms/django_views_generic_base.py
 ${PYSITELIB}/pylint_django/transforms/transforms/django_views_generic_base.pyc
 ${PYSITELIB}/pylint_django/transforms/transforms/django_views_generic_base.pyo
+${PYSITELIB}/pylint_django/transforms/transforms/model_utils_managers.py
+${PYSITELIB}/pylint_django/transforms/transforms/model_utils_managers.pyc
+${PYSITELIB}/pylint_django/transforms/transforms/model_utils_managers.pyo
 ${PYSITELIB}/pylint_django/transforms/transforms/mongoengine.py
 ${PYSITELIB}/pylint_django/transforms/transforms/mongoengine.pyc
 ${PYSITELIB}/pylint_django/transforms/transforms/mongoengine.pyo
