@@ -1,4 +1,4 @@
-$NetBSD: patch-src_app_app.cc,v 1.1 2018/06/12 23:00:34 youri Exp $
+$NetBSD: patch-src_app_app.cc,v 1.2 2018/06/15 10:44:15 jperkin Exp $
 
 Fix NetBSD build.
 
@@ -12,6 +12,17 @@ Fix NetBSD build.
  
  #include <glib.h>
  #include <glib/gprintf.h>
+@@ -78,8 +79,8 @@ public:
+         char** exec_argv{nullptr};
+         char** environment{nullptr};
+         GdkPixbuf* background_pixbuf{nullptr};
+-        GdkRGBA bg_color{1.0, 1.0, 1.0, 1.0};
+-        GdkRGBA fg_color{0.0, 0.0, 0.0, 1.0};
++        GdkRGBA bg_color{(gdouble)1.0, (gdouble)1.0, (gdouble)1.0, (gdouble)1.0};
++        GdkRGBA fg_color{(gdouble)0.0, (gdouble)0.0, (gdouble)0.0, (gdouble)1.0};
+         GdkRGBA cursor_bg_color{};
+         GdkRGBA cursor_fg_color{};
+         GdkRGBA hl_bg_color{};
 @@ -1257,7 +1258,7 @@ vteapp_window_fork(VteappWindow* window,
          auto pid = fork();
          switch (pid) {
