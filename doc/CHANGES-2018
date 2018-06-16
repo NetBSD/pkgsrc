@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2837 2018/06/16 03:11:33 markd Exp $
+$NetBSD: CHANGES-2018,v 1.2838 2018/06/16 06:24:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4042,3 +4042,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/lynx to lynx-2.8.8.2nb9 [tez 2018-06-15]
 	Added fonts/tex-mathalfa version 1.09 [markd 2018-06-16]
 	Added fonts/tex-mathalfa-doc version 1.09 [markd 2018-06-16]
+	Updated multimedia/ffmpeg4 to 4.0.1 [adam 2018-06-16]
+	Updated multimedia/ffplay4 to 4.0.1 [adam 2018-06-16]
+	Updated devel/py-faker to 0.8.16 [adam 2018-06-16]
+	Updated www/py-test-django to 3.3.0 [adam 2018-06-16]
