@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2018/05/29 11:44:09 adam Exp $
+# $NetBSD: Makefile,v 1.11 2018/06/16 12:27:56 adam Exp $
 
-DISTNAME=	python-crontab-2.3.3
+DISTNAME=	python-crontab-2.3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-crontab/}
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	https://github.com/doctormo/python-crontab
+HOMEPAGE=	https://gitlab.com/doctormo/python-crontab
 COMMENT=	Python Crontab API
 LICENSE=	gnu-gpl-v3
 
