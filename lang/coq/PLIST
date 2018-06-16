@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2018/04/09 11:29:23 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.27 2018/06/16 10:25:51 markd Exp $
 bin/coq-tex
 bin/coq_makefile
 bin/coqc
@@ -5312,7 +5312,7 @@ ${PLIST.doc}share/doc/coq/ps/Library.ps
 ${PLIST.doc}share/doc/coq/ps/RecTutorial.ps
 ${PLIST.doc}share/doc/coq/ps/Reference-Manual.ps
 ${PLIST.doc}share/doc/coq/ps/Tutorial.ps
-${PLIST.doc}share/texmf-dist/tex/latex/coq/coqdoc.sty
+share/texmf-dist/tex/latex/coq/coqdoc.sty
 share/emacs/site-lisp/coq-font-lock.el
 share/emacs/site-lisp/coq-inferior.el
 share/emacs/site-lisp/gallina-db.el
