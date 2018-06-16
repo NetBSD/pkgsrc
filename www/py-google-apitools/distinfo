@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/02/04 15:04:00 bsiegert Exp $
+$NetBSD: distinfo,v 1.2 2018/06/16 20:31:12 bsiegert Exp $
 
-SHA1 (google-apitools-0.5.21.tar.gz) = c33a6f2469c578f6867dc47e19b3435556121ec7
-RMD160 (google-apitools-0.5.21.tar.gz) = 612e5d221ed4d0c6f8bf638de3695e0ae631f588
-SHA512 (google-apitools-0.5.21.tar.gz) = 369157c2f5ccde2e32fff4c98d01793bfe8a941dcc1b77c4aeb869e8256faffbb47c8570535fa72c44546d09e366d9d869fb930bbccbe7030bdd934c15417342
-Size (google-apitools-0.5.21.tar.gz) = 275370 bytes
-SHA1 (patch-google__apitools.egg-info_requires.txt) = fd69d00d5cc6062009a19e7df1b1c12ec4fd7774
-SHA1 (patch-setup.py) = 94e4a7b395cdb055c312372836213e4e0c7188e1
+SHA1 (google-apitools-0.5.23.tar.gz) = c9753a104444205d76b290f1d88ee26df81e40e5
+RMD160 (google-apitools-0.5.23.tar.gz) = 02a632f81652a55a279e907bb700bff54592f23e
+SHA512 (google-apitools-0.5.23.tar.gz) = c1c72fa733c84e37af356e33bf2e9af927c2824564194f09149065f1d8bdd0fee9cea6ccb2b8fe224db1613c6ae0537df9c1cada00b09ba48465875a8ecdaa7a
+Size (google-apitools-0.5.23.tar.gz) = 236548 bytes
