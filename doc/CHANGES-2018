@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2844 2018/06/16 15:24:21 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2845 2018/06/16 20:32:07 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4057,3 +4057,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/py-gsutil to 4.31 [bsiegert 2018-06-16]
 	Updated sysutils/salt to 2018.3.1 [adam 2018-06-16]
 	Updated sysutils/salt-docs to 2018.3.1 [adam 2018-06-16]
+	Updated www/py-google-apitools to 0.5.23 [bsiegert 2018-06-16]
