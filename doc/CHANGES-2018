@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2836 2018/06/15 22:25:36 tez Exp $
+$NetBSD: CHANGES-2018,v 1.2837 2018/06/16 03:11:33 markd Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4040,3 +4040,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/mit-krb5 to 1.16.1 [tez 2018-06-15]
 	Updated security/gnupg to 1.4.23 [tez 2018-06-15]
 	Updated www/lynx to lynx-2.8.8.2nb9 [tez 2018-06-15]
+	Added fonts/tex-mathalfa version 1.09 [markd 2018-06-16]
+	Added fonts/tex-mathalfa-doc version 1.09 [markd 2018-06-16]
