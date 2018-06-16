@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2843 2018/06/16 14:51:50 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.2844 2018/06/16 15:24:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4055,3 +4055,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated audio/mpg321 to 0.3.2nb1 [leot 2018-06-16]
 	Updated net/py-gcs-oauth2-boto-plugin to 2.1 [bsiegert 2018-06-16]
 	Updated net/py-gsutil to 4.31 [bsiegert 2018-06-16]
+	Updated sysutils/salt to 2018.3.1 [adam 2018-06-16]
+	Updated sysutils/salt-docs to 2018.3.1 [adam 2018-06-16]
