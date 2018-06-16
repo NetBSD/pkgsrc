@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/02/04 15:04:00 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/06/16 20:31:12 bsiegert Exp $
 bin/gen_client
 ${PYSITELIB}/apitools/__init__.py
 ${PYSITELIB}/apitools/__init__.pyc
@@ -45,18 +45,12 @@ ${PYSITELIB}/apitools/base/protorpclite/util_test.pyo
 ${PYSITELIB}/apitools/base/py/__init__.py
 ${PYSITELIB}/apitools/base/py/__init__.pyc
 ${PYSITELIB}/apitools/base/py/__init__.pyo
-${PYSITELIB}/apitools/base/py/app2.py
-${PYSITELIB}/apitools/base/py/app2.pyc
-${PYSITELIB}/apitools/base/py/app2.pyo
 ${PYSITELIB}/apitools/base/py/base_api.py
 ${PYSITELIB}/apitools/base/py/base_api.pyc
 ${PYSITELIB}/apitools/base/py/base_api.pyo
 ${PYSITELIB}/apitools/base/py/base_api_test.py
 ${PYSITELIB}/apitools/base/py/base_api_test.pyc
 ${PYSITELIB}/apitools/base/py/base_api_test.pyo
-${PYSITELIB}/apitools/base/py/base_cli.py
-${PYSITELIB}/apitools/base/py/base_cli.pyc
-${PYSITELIB}/apitools/base/py/base_cli.pyo
 ${PYSITELIB}/apitools/base/py/batch.py
 ${PYSITELIB}/apitools/base/py/batch.pyc
 ${PYSITELIB}/apitools/base/py/batch.pyo
@@ -69,9 +63,6 @@ ${PYSITELIB}/apitools/base/py/buffered_stream.pyo
 ${PYSITELIB}/apitools/base/py/buffered_stream_test.py
 ${PYSITELIB}/apitools/base/py/buffered_stream_test.pyc
 ${PYSITELIB}/apitools/base/py/buffered_stream_test.pyo
-${PYSITELIB}/apitools/base/py/cli.py
-${PYSITELIB}/apitools/base/py/cli.pyc
-${PYSITELIB}/apitools/base/py/cli.pyo
 ${PYSITELIB}/apitools/base/py/compression.py
 ${PYSITELIB}/apitools/base/py/compression.pyc
 ${PYSITELIB}/apitools/base/py/compression.pyo
@@ -157,9 +148,6 @@ ${PYSITELIB}/apitools/gen/__init__.pyo
 ${PYSITELIB}/apitools/gen/client_generation_test.py
 ${PYSITELIB}/apitools/gen/client_generation_test.pyc
 ${PYSITELIB}/apitools/gen/client_generation_test.pyo
-${PYSITELIB}/apitools/gen/command_registry.py
-${PYSITELIB}/apitools/gen/command_registry.pyc
-${PYSITELIB}/apitools/gen/command_registry.pyo
 ${PYSITELIB}/apitools/gen/extended_descriptor.py
 ${PYSITELIB}/apitools/gen/extended_descriptor.pyc
 ${PYSITELIB}/apitools/gen/extended_descriptor.pyo
@@ -191,12 +179,6 @@ ${PYSITELIB}/apitools/gen/util_test.pyo
 ${PYSITELIB}/apitools/scripts/__init__.py
 ${PYSITELIB}/apitools/scripts/__init__.pyc
 ${PYSITELIB}/apitools/scripts/__init__.pyo
-${PYSITELIB}/apitools/scripts/oauth2l.py
-${PYSITELIB}/apitools/scripts/oauth2l.pyc
-${PYSITELIB}/apitools/scripts/oauth2l.pyo
-${PYSITELIB}/apitools/scripts/oauth2l_test.py
-${PYSITELIB}/apitools/scripts/oauth2l_test.pyc
-${PYSITELIB}/apitools/scripts/oauth2l_test.pyo
 ${PYSITELIB}/apitools/scripts/testdata/fake_client_secrets.json
 ${PYSITELIB}/apitools/scripts/testdata/noninstalled_client_secrets.json
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -214,9 +196,6 @@ ${PYSITELIB}/samples/dns_sample/__init__.pyo
 ${PYSITELIB}/samples/dns_sample/dns_v1/__init__.py
 ${PYSITELIB}/samples/dns_sample/dns_v1/__init__.pyc
 ${PYSITELIB}/samples/dns_sample/dns_v1/__init__.pyo
-${PYSITELIB}/samples/dns_sample/dns_v1/dns_v1.py
-${PYSITELIB}/samples/dns_sample/dns_v1/dns_v1.pyc
-${PYSITELIB}/samples/dns_sample/dns_v1/dns_v1.pyo
 ${PYSITELIB}/samples/dns_sample/dns_v1/dns_v1_client.py
 ${PYSITELIB}/samples/dns_sample/dns_v1/dns_v1_client.pyc
 ${PYSITELIB}/samples/dns_sample/dns_v1/dns_v1_client.pyo
@@ -232,9 +211,6 @@ ${PYSITELIB}/samples/fusiontables_sample/__init__.pyo
 ${PYSITELIB}/samples/fusiontables_sample/fusiontables_v1/__init__.py
 ${PYSITELIB}/samples/fusiontables_sample/fusiontables_v1/__init__.pyc
 ${PYSITELIB}/samples/fusiontables_sample/fusiontables_v1/__init__.pyo
-${PYSITELIB}/samples/fusiontables_sample/fusiontables_v1/fusiontables_v1.py
-${PYSITELIB}/samples/fusiontables_sample/fusiontables_v1/fusiontables_v1.pyc
-${PYSITELIB}/samples/fusiontables_sample/fusiontables_v1/fusiontables_v1.pyo
 ${PYSITELIB}/samples/fusiontables_sample/fusiontables_v1/fusiontables_v1_client.py
 ${PYSITELIB}/samples/fusiontables_sample/fusiontables_v1/fusiontables_v1_client.pyc
 ${PYSITELIB}/samples/fusiontables_sample/fusiontables_v1/fusiontables_v1_client.pyo
@@ -250,9 +226,6 @@ ${PYSITELIB}/samples/iam_sample/iam_client_test.pyo
 ${PYSITELIB}/samples/iam_sample/iam_v1/__init__.py
 ${PYSITELIB}/samples/iam_sample/iam_v1/__init__.pyc
 ${PYSITELIB}/samples/iam_sample/iam_v1/__init__.pyo
-${PYSITELIB}/samples/iam_sample/iam_v1/iam_v1.py
-${PYSITELIB}/samples/iam_sample/iam_v1/iam_v1.pyc
-${PYSITELIB}/samples/iam_sample/iam_v1/iam_v1.pyo
 ${PYSITELIB}/samples/iam_sample/iam_v1/iam_v1_client.py
 ${PYSITELIB}/samples/iam_sample/iam_v1/iam_v1_client.pyc
 ${PYSITELIB}/samples/iam_sample/iam_v1/iam_v1_client.pyo
@@ -271,9 +244,6 @@ ${PYSITELIB}/samples/servicemanagement_sample/messages_test.pyo
 ${PYSITELIB}/samples/servicemanagement_sample/servicemanagement_v1/__init__.py
 ${PYSITELIB}/samples/servicemanagement_sample/servicemanagement_v1/__init__.pyc
 ${PYSITELIB}/samples/servicemanagement_sample/servicemanagement_v1/__init__.pyo
-${PYSITELIB}/samples/servicemanagement_sample/servicemanagement_v1/servicemanagement_v1.py
-${PYSITELIB}/samples/servicemanagement_sample/servicemanagement_v1/servicemanagement_v1.pyc
-${PYSITELIB}/samples/servicemanagement_sample/servicemanagement_v1/servicemanagement_v1.pyo
 ${PYSITELIB}/samples/servicemanagement_sample/servicemanagement_v1/servicemanagement_v1_client.py
 ${PYSITELIB}/samples/servicemanagement_sample/servicemanagement_v1/servicemanagement_v1_client.pyc
 ${PYSITELIB}/samples/servicemanagement_sample/servicemanagement_v1/servicemanagement_v1_client.pyo
