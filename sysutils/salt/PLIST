@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2018/04/13 07:58:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2018/06/16 15:23:35 adam Exp $
 bin/salt
 bin/salt-api
 bin/salt-call
@@ -1283,9 +1283,9 @@ ${PYSITELIB}/salt/modules/jboss7.pyo
 ${PYSITELIB}/salt/modules/jboss7_cli.py
 ${PYSITELIB}/salt/modules/jboss7_cli.pyc
 ${PYSITELIB}/salt/modules/jboss7_cli.pyo
-${PYSITELIB}/salt/modules/jenkins.py
-${PYSITELIB}/salt/modules/jenkins.pyc
-${PYSITELIB}/salt/modules/jenkins.pyo
+${PYSITELIB}/salt/modules/jenkinsmod.py
+${PYSITELIB}/salt/modules/jenkinsmod.pyc
+${PYSITELIB}/salt/modules/jenkinsmod.pyo
 ${PYSITELIB}/salt/modules/junos.py
 ${PYSITELIB}/salt/modules/junos.pyc
 ${PYSITELIB}/salt/modules/junos.pyo
@@ -4533,6 +4533,9 @@ ${PYSITELIB}/salt/utils/win_functions.pyo
 ${PYSITELIB}/salt/utils/win_osinfo.py
 ${PYSITELIB}/salt/utils/win_osinfo.pyc
 ${PYSITELIB}/salt/utils/win_osinfo.pyo
+${PYSITELIB}/salt/utils/win_reg.py
+${PYSITELIB}/salt/utils/win_reg.pyc
+${PYSITELIB}/salt/utils/win_reg.pyo
 ${PYSITELIB}/salt/utils/win_runas.py
 ${PYSITELIB}/salt/utils/win_runas.pyc
 ${PYSITELIB}/salt/utils/win_runas.pyo
@@ -4566,6 +4569,9 @@ ${PYSITELIB}/salt/utils/yast.pyo
 ${PYSITELIB}/salt/utils/zeromq.py
 ${PYSITELIB}/salt/utils/zeromq.pyc
 ${PYSITELIB}/salt/utils/zeromq.pyo
+${PYSITELIB}/salt/utils/zfs.py
+${PYSITELIB}/salt/utils/zfs.pyc
+${PYSITELIB}/salt/utils/zfs.pyo
 ${PYSITELIB}/salt/version.py
 ${PYSITELIB}/salt/version.pyc
 ${PYSITELIB}/salt/version.pyo
