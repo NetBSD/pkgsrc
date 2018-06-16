@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2841 2018/06/16 13:09:27 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2842 2018/06/16 14:43:35 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4052,3 +4052,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/py-crontab to 2.3.4 [adam 2018-06-16]
 	Updated time/py-pendulum to 2.0.2 [adam 2018-06-16]
 	Updated devel/py-requests to 2.19.1 [adam 2018-06-16]
+	Updated audio/mpg321 to 0.3.2nb1 [leot 2018-06-16]
