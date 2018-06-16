@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2018/05/13 11:56:22 markd Exp $
+# $NetBSD: Makefile,v 1.36 2018/06/16 03:13:45 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2018pre1
+PKGNAME=	texlive-${DISTNAME}-2018pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	47224
@@ -667,7 +667,7 @@ DEPENDS+=	tex-manfnt-[0-9]*:../../fonts/tex-manfnt
 # depend marginfix
 DEPENDS+=	tex-marginnote-[0-9]*:../../print/tex-marginnote
 # depend markdown
-# depend mathalfa
+DEPENDS+=	tex-mathalfa-[0-9]*:../../fonts/tex-mathalfa
 # depend mathastext
 # depend mathexam
 # depend mathfam256
