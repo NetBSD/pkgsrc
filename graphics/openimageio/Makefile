@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.47 2018/04/29 21:31:21 adam Exp $
+# $NetBSD: Makefile,v 1.48 2018/06/16 11:22:37 markd Exp $
 
 OIIOVER=	1.5.16
 DISTNAME=	oiio-Release-${OIIOVER}
 PKGNAME=	${DISTNAME:S/oiio-Release/openimageio/}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	graphics
 MASTER_SITES=	-https://github.com/OpenImageIO/oiio/archive/Release-${OIIOVER}.tar.gz
 
@@ -23,6 +23,7 @@ CMAKE_ARGS+=		-DOPENJPEG_HOME:STRING=${BUILDLINK_PREFIX.openjpeg15}
 CMAKE_ARGS+=		-DOPENEXR_HOME:STRING=${BUILDLINK_PREFIX.openexr}
 CMAKE_ARGS+=		-DINSTALL_DOCS:BOOL=OFF
 CMAKE_ARGS+=		-DUSE_LIBRAW:BOOL=OFF
+CMAKE_ARGS+=		-DUSE_OCIO:BOOL=OFF
 
 # For redefinition of _rotl macro.
 BUILDLINK_TRANSFORM+=	rm:-Werror
