@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18396 2018/06/15 12:16:51 wiz Exp $
+$NetBSD: TODO,v 1.18397 2018/06/16 08:39:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -413,7 +413,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o asc-2.6.0
 	o asn1c-0.9.27
 	o aspell-nb-2.0.10
-	o asterisk13-13.17.1
+	o asterisk13-13.21.1
 	o aterm-1.0.1
 	o attica-qt5-5.45.0
 	o aubio-0.4.2
@@ -461,7 +461,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cal3d-0.11.0
 	o calc-2.11.10.1
 	o calcoo-2.1.0
-	o calibre-3.26.0
+	o calibre-3.26.1
 	o calligra-3.0.1 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-1.1
@@ -1243,6 +1243,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-pendrell-0.3.7
 	o py-ptt-1.10.2
 	o py-pycountry-1.20
+	o py-requests-2.19.0
 	o py-requests-oauthlib-1.0.0
 	o py-simpletal-5.1
 	o py-spf-2.0.12t
@@ -1364,7 +1365,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o stegavorto-2011.05.26
 	o stella-5.0.2
 	o stlport-4.6.2
-	o strace-4.18
+	o strace-4.23
 	o stratagus-2.2.5.5
 	o streamtuner-2.2.0
 	o subtitleeditor-0.52.1
@@ -1487,6 +1488,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o windowlab-1.40
 	o wine-3.0
 	o wine-devel-3.7
+	o wkhtmltopdf-0.12.5
 	o wmi-11
 	o wmx-8
 	o wmx-gnome-8
