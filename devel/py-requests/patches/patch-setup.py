@@ -1,16 +1,16 @@
-$NetBSD: patch-setup.py,v 1.4 2017/08/16 07:17:58 adam Exp $
+$NetBSD: patch-setup.py,v 1.5 2018/06/16 13:08:32 adam Exp $
 
 Allow newer versions of dependencies.
 
---- setup.py.orig	2017-08-15 13:19:39.000000000 +0000
+--- setup.py.orig	2018-06-12 14:39:23.000000000 +0000
 +++ setup.py
-@@ -42,13 +42,13 @@ if sys.argv[-1] == 'publish':
+@@ -49,13 +49,13 @@ else:
  packages = ['requests']
  
  requires = [
 -    'chardet>=3.0.2,<3.1.0',
--    'idna>=2.5,<2.7',
--    'urllib3>=1.21.1,<1.23',
+-    'idna>=2.5,<2.8',
+-    'urllib3>=1.21.1,<1.24',
 +    'chardet>=3.0.2',
 +    'idna>=2.5',
 +    'urllib3>=1.21.1',
