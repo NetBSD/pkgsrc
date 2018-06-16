@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/03/04 16:24:55 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2018/06/16 14:19:42 bsiegert Exp $
 
 DISTNAME=	SocksiPy-branch-1.01
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
@@ -9,6 +9,8 @@ MAINTAINER=     kethzer.dr@gmail.com
 HOMEPAGE=	https://pypi.python.org/pypi/SocksiPy-branch/
 COMMENT=        Python SOCKS module
 LICENSE=        modified-bsd
+
+CONFLICTS=	${PYPKGPREFIX}-Socks-branch-[0-9]*
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
