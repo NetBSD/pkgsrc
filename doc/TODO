@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18397 2018/06/16 08:39:37 wiz Exp $
+$NetBSD: TODO,v 1.18398 2018/06/16 13:09:27 adam Exp $
 
 Suggested new packages
 ======================
@@ -1243,7 +1243,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-pendrell-0.3.7
 	o py-ptt-1.10.2
 	o py-pycountry-1.20
-	o py-requests-2.19.0
 	o py-requests-oauthlib-1.0.0
 	o py-simpletal-5.1
 	o py-spf-2.0.12t
