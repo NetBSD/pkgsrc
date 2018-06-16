@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/04/26 07:56:58 adam Exp $
+# $NetBSD: Makefile,v 1.2 2018/06/16 06:19:32 adam Exp $
 
 PKGNAME=	${DISTNAME:S/ffmpeg/ffplay4/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -19,6 +19,9 @@ CONFIGURE_ARGS+=	--disable-bsfs
 CONFIGURE_ARGS+=	--disable-protocols
 CONFIGURE_ARGS+=	--disable-devices
 CONFIGURE_ARGS+=	--disable-filters
+CONFIGURE_ARGS+=	--disable-htmlpages
+CONFIGURE_ARGS+=	--disable-podpages
+CONFIGURE_ARGS+=	--disable-txtpages
 CONFIGURE_ARGS+=	--enable-ffplay
 CONFIGURE_ARGS+=	--enable-dct
 CONFIGURE_ARGS+=	--enable-mdct
