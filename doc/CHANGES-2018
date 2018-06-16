@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2839 2018/06/16 12:11:17 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2840 2018/06/16 12:28:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4048,3 +4048,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-test-django to 3.3.0 [adam 2018-06-16]
 	Updated devel/py-hypothesis to 3.59.0 [adam 2018-06-16]
 	Updated www/py-urllib3 to 1.23 [adam 2018-06-16]
+	Updated devel/py-decorator to 4.3.0 [adam 2018-06-16]
+	Updated sysutils/py-crontab to 2.3.4 [adam 2018-06-16]
