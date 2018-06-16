@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2018/04/25 22:39:02 kamil Exp $
+$NetBSD: distinfo,v 1.27 2018/06/16 09:49:00 markd Exp $
 
 SHA1 (vlc-2.2.6.tar.xz) = d299dce6a5c94af4292657b6cb99c44654024f70
 RMD160 (vlc-2.2.6.tar.xz) = b2727834bcbbf0d274e3a0b4a3317f3b914f9ad4
@@ -14,6 +14,7 @@ SHA1 (patch-include_vlc_atomic.h) = 3f3acc51e2e3645951b8c39c2cf61dab6c7d756d
 SHA1 (patch-modules_access_directory.c) = 95bc95cb7eb0bf44684c04d2cecc2c4e8339f0f7
 SHA1 (patch-modules_access_file.c) = 22eb568aa5a1fea765e65a770432282024baaaf1
 SHA1 (patch-modules_access_rtp_Makefile.am) = cd2c1bcbde8fc04c15f4030ff8708e32b800dd53
+SHA1 (patch-modules_codec_x264.c) = f2377f13f366c464505f751f97a4b8966888c88b
 SHA1 (patch-modules_gui_qt4_components_controller.cpp) = 5822f018f910d1b0e441782ffeff193ebc35b6d2
 SHA1 (patch-modules_gui_qt4_components_extended__panels.cpp) = eaa7a4732fa5a462d5769fc71e097366e5bc2f70
 SHA1 (patch-modules_gui_qt4_components_interface__widgets.cpp) = b630de531ec90afd1f2aecc769f34952780b6ddb
