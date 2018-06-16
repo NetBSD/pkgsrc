@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.317 2018/05/13 13:23:33 markd Exp $
+# $NetBSD: Makefile,v 1.318 2018/06/16 03:09:38 markd Exp $
 #
 
 COMMENT=	Fonts
@@ -615,6 +615,8 @@ SUBDIR+=	tex-mathabx
 SUBDIR+=	tex-mathabx-doc
 SUBDIR+=	tex-mathabx-type1
 SUBDIR+=	tex-mathabx-type1-doc
+SUBDIR+=	tex-mathalfa
+SUBDIR+=	tex-mathalfa-doc
 SUBDIR+=	tex-mathdesign
 SUBDIR+=	tex-mathdesign-doc
 SUBDIR+=	tex-mathpazo
