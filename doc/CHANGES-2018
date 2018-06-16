@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2838 2018/06/16 06:24:02 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2839 2018/06/16 12:11:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4046,3 +4046,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/ffplay4 to 4.0.1 [adam 2018-06-16]
 	Updated devel/py-faker to 0.8.16 [adam 2018-06-16]
 	Updated www/py-test-django to 3.3.0 [adam 2018-06-16]
+	Updated devel/py-hypothesis to 3.59.0 [adam 2018-06-16]
+	Updated www/py-urllib3 to 1.23 [adam 2018-06-16]
