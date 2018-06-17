@@ -1,39 +1,29 @@
-$NetBSD: patch-am,v 1.22 2017/01/26 23:10:35 wiz Exp $
+$NetBSD: patch-setup.py,v 1.1 2018/06/17 19:21:21 adam Exp $
 
-Disabled modules for normal build:
-bsddb
-bsddb185
-curses
-curses_panel
-elementtree
-sqlite3
-tkinter
-gdbm
-pyexpat
-readline
-{linux,oss,sun}audiodev
-spwd
-Those have separate packages where needed.
-
+Disable certain modules, so they can be built as separate packages.
 Only check the BUILDLINK_DIR for libraries etc, do not pick up random
 headers and libraries from the system.
+
+Do not look for ncursesw.
+Assume panel_library is correct; this is a fix for ncurses' gnupanel
+  which will get transformed to panel in buildlink.
 
 Build the _ssl module with pkgsrc choiced OpenSSL.
 
 cygwin 2.7.3-no-libm.patch
 
---- setup.py.orig	2016-06-25 21:49:32.000000000 +0000
+--- setup.py.orig	2018-04-29 22:47:33.000000000 +0000
 +++ setup.py
-@@ -33,7 +33,7 @@
+@@ -33,7 +33,7 @@ host_platform = get_platform()
  COMPILED_WITH_PYDEBUG = ('--with-pydebug' in sysconfig.get_config_var("CONFIG_ARGS"))
  
  # This global variable is used to hold the list of modules to be disabled.
 -disabled_module_list = []
-+disabled_module_list = ["_bsddb", "bsddb185", "_curses", "_curses_panel", "_elementtree", "_sqlite3", "_tkinter", "gdbm", "pyexpat", "readline", "linuxaudiodev", "ossaudiodev", "spwd", "sunaudiodev"]
++disabled_module_list = ["_bsddb", "bsddb185", "_curses", "_curses_panel", "_elementtree", "gdbm", "pyexpat", "readline", "_sqlite3", "_tkinter", "linuxaudiodev", "ossaudiodev", "sunaudiodev"]
  
  def add_dir_to_list(dirlist, dir):
      """Add the directory 'dir' to the list 'dirlist' (at the front) if
-@@ -454,10 +454,15 @@
+@@ -454,10 +454,15 @@ class PyBuildExt(build_ext):
              os.unlink(tmpfile)
  
      def detect_modules(self):
@@ -53,7 +43,7 @@ cygwin 2.7.3-no-libm.patch
          if cross_compiling:
              self.add_gcc_paths()
          self.add_multiarch_paths()
-@@ -569,7 +574,7 @@
+@@ -569,7 +574,7 @@ class PyBuildExt(build_ext):
  
          # Check for MacOS X, which doesn't need libm.a at all
          math_libs = ['m']
@@ -62,7 +52,16 @@ cygwin 2.7.3-no-libm.patch
              math_libs = []
  
          # XXX Omitted modules: gl, pure, dl, SGI-specific modules
-@@ -809,11 +814,10 @@
+@@ -745,8 +750,6 @@ class PyBuildExt(build_ext):
+         # use the same library for the readline and curses modules.
+         if 'curses' in readline_termcap_library:
+             curses_library = readline_termcap_library
+-        elif self.compiler.find_library_file(lib_dirs, 'ncursesw'):
+-            curses_library = 'ncursesw'
+         elif self.compiler.find_library_file(lib_dirs, 'ncurses'):
+             curses_library = 'ncurses'
+         elif self.compiler.find_library_file(lib_dirs, 'curses'):
+@@ -809,11 +812,10 @@ class PyBuildExt(build_ext):
                                 libraries=math_libs) )
          # Detect SSL support for the socket module (via _ssl)
          search_for_ssl_incs_in = [
@@ -77,7 +76,7 @@ cygwin 2.7.3-no-libm.patch
                               )
          if ssl_incs is not None:
              krb5_h = find_file('krb5.h', inc_dirs,
-@@ -821,9 +825,7 @@
+@@ -821,9 +823,7 @@ class PyBuildExt(build_ext):
              if krb5_h:
                  ssl_incs += krb5_h
          ssl_libs = find_library_file(self.compiler, 'ssl',lib_dirs,
@@ -88,7 +87,7 @@ cygwin 2.7.3-no-libm.patch
  
          if (ssl_incs is not None and
              ssl_libs is not None):
-@@ -842,7 +844,7 @@
+@@ -842,7 +842,7 @@ class PyBuildExt(build_ext):
  
          # look for the openssl version header on the compiler search path.
          opensslv_h = find_file('openssl/opensslv.h', [],
@@ -97,7 +96,7 @@ cygwin 2.7.3-no-libm.patch
          if opensslv_h:
              name = os.path.join(opensslv_h[0], 'openssl/opensslv.h')
              if host_platform == 'darwin' and is_macosx_sdk_path(name):
-@@ -942,175 +944,6 @@
+@@ -942,175 +942,6 @@ class PyBuildExt(build_ext):
              else:
                  raise ValueError("unknown major BerkeleyDB version", major)
  
@@ -273,7 +272,7 @@ cygwin 2.7.3-no-libm.patch
          # The sqlite interface
          sqlite_setup_debug = False   # verbose debug prints from this script?
  
-@@ -1216,46 +1049,32 @@
+@@ -1216,46 +1047,32 @@ class PyBuildExt(build_ext):
          else:
              missing.append('_sqlite3')
  
@@ -343,7 +342,7 @@ cygwin 2.7.3-no-libm.patch
              config_args = [arg.strip("'")
                             for arg in sysconfig.get_config_var("CONFIG_ARGS").split()]
              dbm_args = [arg for arg in config_args
-@@ -1267,7 +1086,7 @@
+@@ -1267,7 +1084,7 @@ class PyBuildExt(build_ext):
              dbmext = None
              for cand in dbm_order:
                  if cand == "ndbm":
@@ -352,7 +351,7 @@ cygwin 2.7.3-no-libm.patch
                          # Some systems have -lndbm, others have -lgdbm_compat,
                          # others don't have either
                          if self.compiler.find_library_file(lib_dirs,
-@@ -1311,18 +1130,14 @@
+@@ -1311,18 +1128,14 @@ class PyBuildExt(build_ext):
                                  libraries = gdbm_libs)
                              break
                  elif cand == "bdb":
@@ -379,7 +378,17 @@ cygwin 2.7.3-no-libm.patch
              if dbmext is not None:
                  exts.append(dbmext)
              else:
-@@ -2250,9 +2065,9 @@
+@@ -1383,8 +1196,7 @@ class PyBuildExt(build_ext):
+             missing.append('_curses')
+ 
+         # If the curses module is enabled, check for the panel module
+-        if (module_enabled(exts, '_curses') and
+-            self.compiler.find_library_file(lib_dirs, panel_library)):
++        if (module_enabled(exts, '_curses')):
+             exts.append( Extension('_curses_panel', ['_curses_panel.c'],
+                                    include_dirs = curses_incs,
+                                    libraries = [panel_library] + curses_libs) )
+@@ -2296,9 +2108,9 @@ def main():
            ext_modules=[Extension('_struct', ['_struct.c'])],
  
            # Scripts to install

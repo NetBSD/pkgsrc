@@ -1,4 +1,6 @@
-$NetBSD: patch-Lib_distutils_command_install.py,v 1.1 2017/01/01 14:34:27 adam Exp $
+$NetBSD: patch-Lib_distutils_command_install.py,v 1.2 2018/06/17 19:21:22 adam Exp $
+
+Conditionally install Python eggs.
 
 --- Lib/distutils/command/install.py.orig	2016-12-23 02:21:19.000000000 +0000
 +++ Lib/distutils/command/install.py
