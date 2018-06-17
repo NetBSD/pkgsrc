@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2871 2018/06/17 16:33:45 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2872 2018/06/17 17:09:51 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4089,3 +4089,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/poppler-qt5 to 0.65.0 [wiz 2018-06-17]
 	Updated print/poppler-utils to 0.65.0 [wiz 2018-06-17]
 	Added sysutils/fluent-bit version 0.13.2 [minskim 2018-06-17]
+	Added print/tex-fundus-calligra version 1.2 [minskim 2018-06-17]
