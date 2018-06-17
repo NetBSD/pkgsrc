@@ -1,14 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1 2017/08/17 01:17:16 gavan Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/06/17 02:25:38 minskim Exp $
 gopkg/pkg/${GO_PLATFORM}/github.com/russross/blackfriday.a
 gopkg/src/github.com/russross/blackfriday/LICENSE.txt
 gopkg/src/github.com/russross/blackfriday/README.md
 gopkg/src/github.com/russross/blackfriday/block.go
 gopkg/src/github.com/russross/blackfriday/block_test.go
+gopkg/src/github.com/russross/blackfriday/doc.go
 gopkg/src/github.com/russross/blackfriday/html.go
 gopkg/src/github.com/russross/blackfriday/inline.go
 gopkg/src/github.com/russross/blackfriday/inline_test.go
 gopkg/src/github.com/russross/blackfriday/latex.go
 gopkg/src/github.com/russross/blackfriday/markdown.go
+gopkg/src/github.com/russross/blackfriday/markdown_test.go
 gopkg/src/github.com/russross/blackfriday/ref_test.go
 gopkg/src/github.com/russross/blackfriday/smartypants.go
 gopkg/src/github.com/russross/blackfriday/testdata/Amps and angle encoding.html
