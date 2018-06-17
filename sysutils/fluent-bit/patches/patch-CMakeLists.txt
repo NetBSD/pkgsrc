@@ -1,0 +1,32 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2018/06/17 16:33:36 minskim Exp $
+
+Disable in-tree msgpack.
+
+--- CMakeLists.txt.orig	2018-05-21 16:59:19.000000000 +0000
++++ CMakeLists.txt
+@@ -186,7 +186,7 @@ include_directories(
+   lib/
+   lib/flb_libco
+   lib/sha1
+-  lib/msgpack-2.1.3/include
++# lib/msgpack-2.1.3/include
+   ${MONKEY_INCLUDE_DIR}
+   )
+ 
+@@ -203,11 +203,11 @@ endif()
+ set(WITH_SYSTEM_MALLOC  1 CACHE BOOL "Use system memory allocator")
+ 
+ # MsgPack options
+-option(MSGPACK_ENABLE_CXX             OFF)
+-option(MSGPACK_ENABLE_SHARED          OFF)
+-option(MSGPACK_BUILD_TESTS            OFF)
+-option(MSGPACK_BUILD_EXAMPLES         OFF)
+-add_subdirectory(lib/msgpack-2.1.3 EXCLUDE_FROM_ALL)
++#option(MSGPACK_ENABLE_CXX             OFF)
++#option(MSGPACK_ENABLE_SHARED          OFF)
++#option(MSGPACK_BUILD_TESTS            OFF)
++#option(MSGPACK_BUILD_EXAMPLES         OFF)
++#add_subdirectory(lib/msgpack-2.1.3 EXCLUDE_FROM_ALL)
+ 
+ # Lib: build the core libraries used by Fluent-Bit
+ FLB_DEFINITION(JSMN_PARENT_LINKS)
