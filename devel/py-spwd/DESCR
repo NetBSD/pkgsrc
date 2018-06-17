@@ -1,2 +1,0 @@
-This module provides access to the Unix shadow password database.  It is
-available on most Unix variants.
