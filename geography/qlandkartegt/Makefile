@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.50 2018/04/29 21:31:42 adam Exp $
-#
+# $NetBSD: Makefile,v 1.51 2018/06/17 06:56:30 wiz Exp $
 
 DISTNAME=	qlandkartegt-1.4.2
 PKGREVISION=	30
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qlandkartegt/}
 
-MAINTAINER=	jkunz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.qlandkarte.org/
 COMMENT=	GPS visualisation and mapping tool, supports Garmin devices
 LICENSE=	gnu-gpl-v2
