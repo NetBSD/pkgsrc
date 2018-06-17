@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2018/05/23 08:11:16 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2018/06/17 19:50:52 maya Exp $
 
 GCC_PKGNAME=		gcc7
-PKGREVISION=		1
+PKGREVISION=		2
 .include		"version.mk"
 
 DISTNAME=	gcc-${GCC7_DIST_VERSION}
