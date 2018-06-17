@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q1,v 1.1.2.7 2018/05/19 09:21:07 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q1,v 1.1.2.8 2018/06/17 21:06:34 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q1 branch:
 
@@ -102,4 +102,38 @@ www/apachetop: security update
 
 Pullup ticket #5759 - requested by bsiegert
 mail/roundcube: security update
+
+Pullup ticket #5760 - requested by spz
+lang/python27: security fix
+
+Pullup ticket #5761 - requested by taca
+mail/roundcube-plugin-password: build fix
+
+Pullup ticket #5762 - requested by taca
+mail/roundcube-plugin-zipdownload: build fix
+
+Pullup ticket #5763 - requested by taca
+mail/roundcube-plugin-enigma: build fix
+
+Pullup ticket #5764 - requested by leot
+lang/python27: build fix
+devel/py-curses: build fix
+
+Pullup ticket #5769 - requested by leot
+devel/git: security fix
+
+Pullup ticket #5770 - requested by leot
+security/gpgme: build fix
+
+Pullup ticket #5765 - requested by bsiegert
+security/mcrypt: security patches
+
+Pullup ticket #5766 - requested by bsiegert
+devel/jq: security patch
+
+Pullup ticket #5767 - requested by bsiegert
+www/firefox52: security update
+
+Pullup ticket #5768 - requested by bsiegert
+mail/thunderbird: security update
 
