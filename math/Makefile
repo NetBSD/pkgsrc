@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.388 2018/06/05 22:58:32 minskim Exp $
+# $NetBSD: Makefile,v 1.389 2018/06/17 01:11:14 minskim Exp $
 
 COMMENT=	Mathematics
 
@@ -142,6 +142,7 @@ SUBDIR+=	gnumeric
 SUBDIR+=	gnumeric110
 SUBDIR+=	gnumeric112
 SUBDIR+=	go-stats
+SUBDIR+=	go-units
 SUBDIR+=	gp-autpgrp
 SUBDIR+=	gp-factint
 SUBDIR+=	gp-fplsa
