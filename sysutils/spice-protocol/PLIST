@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/04/13 18:06:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/06/17 09:10:32 wiz Exp $
 include/spice-1/spice/barrier.h
 include/spice-1/spice/controller_prot.h
 include/spice-1/spice/end-packed.h
@@ -12,6 +12,7 @@ include/spice-1/spice/qxl_dev.h
 include/spice-1/spice/qxl_windows.h
 include/spice-1/spice/start-packed.h
 include/spice-1/spice/stats.h
+include/spice-1/spice/stream-device.h
 include/spice-1/spice/types.h
 include/spice-1/spice/vd_agent.h
 include/spice-1/spice/vdi_dev.h
