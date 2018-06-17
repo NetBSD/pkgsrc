@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.69 2018/06/03 07:49:27 leot Exp $
+$NetBSD: distinfo,v 1.70 2018/06/17 19:21:21 adam Exp $
 
 SHA1 (Python-2.7.15.tar.xz) = f99348a095ec4a6411c84c0d15343d11920c9724
 RMD160 (Python-2.7.15.tar.xz) = 4bbb2b0012b82e1b27661a08305fad461371679f
@@ -6,26 +6,27 @@ SHA512 (Python-2.7.15.tar.xz) = 27ea43eb45fc68f3d2469d5f07636e10801dee11635a430e
 Size (Python-2.7.15.tar.xz) = 12642436 bytes
 SHA1 (patch-Include_pyerrors.h) = 0d2cd52d18cc719b895fa32ed7e11c6cb15bae54
 SHA1 (patch-Include_pyport.h) = f3e4ddbc954425a65301465410911222ca471320
+SHA1 (patch-Lib_ctypes_util.py) = 6fa516c7b43f08992427a0afcbe80c17bcc070f1
+SHA1 (patch-Lib_distutils_command_build__ext.py) = ea4feba4e93dbcff07050c82a00d591bb650e934
+SHA1 (patch-Lib_distutils_command_install.py) = e6aef090b444b455fe351308d251e670329b7dc3
 SHA1 (patch-Lib_distutils_unixccompiler.py) = db16c9aca2f29730945f28247b88b18828739bbb
+SHA1 (patch-Lib_distutils_util.py) = 5bcfad96f8e490351160f1a7c1f4ece7706a33fa
 SHA1 (patch-Lib_multiprocessing_process.py) = 15699bd8ec822bf54a0631102e00e0a34f882803
+SHA1 (patch-Lib_plistlib.py) = 96ae702995d434e2d7ec0ac62e37427a90b61d13
+SHA1 (patch-Lib_sysconfig.py) = 8a7a0e5cbfec279a05945dffafea1b1131a76f0e
 SHA1 (patch-Makefile.pre.in) = ceaf34237588b527478ce1f9163c9168382fa201
 SHA1 (patch-Modules___multiprocessing_multiprocessing.h) = 7ca8fe22ba4bdcde6d39dd50fe2e86c25994c146
 SHA1 (patch-Modules___multiprocessing_semaphore.c) = 03b9c33ef38da383d5f7c2c84c17fe38cdd2911e
 SHA1 (patch-Modules__ssl.c) = 6e68f88ad205106691900f091a897ffe0a4c363c
 SHA1 (patch-Modules_getaddrinfo.c) = aa699d257f1bc98b9a3183a21324053e134409d1
 SHA1 (patch-Modules_getpath.c) = 9bb2c040895ad6bbe4d0b5807803723b5437d47b
+SHA1 (patch-Modules_makesetup) = 9aad78714c4fe1a21cf66a6627d97d164ecea196
+SHA1 (patch-Modules_nismodule.c) = 129ef7b32779944c2f1827c6b078a3aafab60729
 SHA1 (patch-Modules_posixmodule.c) = 5105d380cd49bf49b8adbd9aa5ffb245195728ed
+SHA1 (patch-Modules_selectmodule.c) = 01e113b0bd251978b555caaaa60b79c372edebce
 SHA1 (patch-Modules_socketmodule.c) = 16848d90947b3de1f921a0813fa5c317f76961d4
-SHA1 (patch-ab) = ea4feba4e93dbcff07050c82a00d591bb650e934
-SHA1 (patch-ad) = 96ae702995d434e2d7ec0ac62e37427a90b61d13
-SHA1 (patch-ae) = d836d77854a2b3d79fa34a06a8e2493bf0a503e6
-SHA1 (patch-al) = 999700e96dd227cdd16cea3ae1001eb887ab8fee
-SHA1 (patch-am) = 25c29f3799cb02db962d5c42d71ec59b4748466f
-SHA1 (patch-an) = 9aad78714c4fe1a21cf66a6627d97d164ecea196
-SHA1 (patch-ao) = 5bcfad96f8e490351160f1a7c1f4ece7706a33fa
-SHA1 (patch-av) = e6aef090b444b455fe351308d251e670329b7dc3
-SHA1 (patch-aw) = d07129531ec1427669092c504c12247206408c2d
-SHA1 (patch-ax) = 8a7a0e5cbfec279a05945dffafea1b1131a76f0e
-SHA1 (patch-az) = 01e113b0bd251978b555caaaa60b79c372edebce
+SHA1 (patch-Modules_sunaudiodev.c) = d836d77854a2b3d79fa34a06a8e2493bf0a503e6
+SHA1 (patch-Python_thread__pthread.h) = 517cfefc2f2e13631d22bad28c327513cdf17c10
+SHA1 (patch-configure) = 999700e96dd227cdd16cea3ae1001eb887ab8fee
 SHA1 (patch-pyconfig.h.in) = a0143ecdc2a3fb10220d0e3ee94fb9779a45e9e1
-SHA1 (patch-xa) = 517cfefc2f2e13631d22bad28c327513cdf17c10
+SHA1 (patch-setup.py) = bf9763d5a3584970474d5951ed1fc73eb03ea11c
