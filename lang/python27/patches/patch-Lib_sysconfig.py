@@ -1,4 +1,4 @@
-$NetBSD: patch-ax,v 1.6 2015/04/24 03:01:36 rodent Exp $
+$NetBSD: patch-Lib_sysconfig.py,v 1.1 2018/06/17 19:21:21 adam Exp $
 
 chop "-RELEASE" or "-DEVELOPMENT" from release for DragonFly.
 

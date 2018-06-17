@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.73 2017/11/22 19:16:20 bsiegert Exp $
+# $NetBSD: Makefile,v 1.74 2018/06/17 19:21:21 adam Exp $
 
 .include "dist.mk"
 
 PKGNAME=	python27-${PY_DISTVERSION}
+PKGREVISION=	1
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,22 +15,20 @@ DEPENDS=	mozilla-rootcerts>=1.0.20150804nb1:../../security/mozilla-rootcerts
 
 CONFLICTS+=	python-[0-9]*
 
+USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-threads
 CONFIGURE_ARGS+=	--enable-shared
-CONFIGURE_ARGS+=	OPT=${CFLAGS:Q}
-CONFIGURE_ARGS+=	--with-system-ffi
 CONFIGURE_ARGS+=	--with-dbmliborder=ndbm:bdb
+CONFIGURE_ARGS+=	--with-system-ffi
+CONFIGURE_ARGS+=	--with-threads
 CONFIGURE_ENV+=		MKDIR_P=${MKDIR:Q}
-
+CONFIGURE_ENV+=		OPT=${CFLAGS:Q}
 PKGCONFIG_OVERRIDE+=	Misc/python.pc.in
 
 LDFLAGS+=		-L${WRKSRC}
 
 # $RANDOM usage there is fine
 CHECK_PORTABILITY_SKIP=	Tools/faqwiz/move-faqwiz.sh
-
-USE_LANGUAGES=		c c++
 
 PTHREAD_OPTS+=		require
 PTHREAD_AUTO_VARS=	yes
@@ -51,12 +50,6 @@ CFLAGS+=	-fwrapv
 LIBS.SunOS+=		-lrt
 
 PY_VER_SUFFIX=		2.7
-
-PLIST_SRC=	${.CURDIR}/../../lang/python27/PLIST.common
-.if exists(${.CURDIR}/../../lang/python27/PLIST.${OPSYS})
-PLIST_SRC+=	${.CURDIR}/../../lang/python27/PLIST.${OPSYS}
-.endif
-PLIST_SRC+=	${.CURDIR}/../../lang/python27/PLIST.common_end
 
 .if ${OPSYS} == "NetBSD"
 # XXX work around a botched autoconf check which ignores libintl
@@ -103,7 +96,7 @@ PLIST.extra-so=	yes
 # For Xcode 5 we need to search the SDK path for headers, otherwise certain
 # modules will not be built.
 .if ${OPSYS} == "Darwin" && exists(${OSX_SDK_PATH}/usr/include)
-CFLAGS+=		-I${OSX_SDK_PATH}/usr/include
+CFLAGS+=		-I${OSX_SDK_PATH:Q}/usr/include
 .endif
 
 PLIST_VARS+=	dll nis no-nis
@@ -135,8 +128,38 @@ INSTALL_TARGET=	altinstall
 REPLACE_INTERPRETER+=	py27
 REPLACE.py27.old=	.*python[^ ]*
 REPLACE.py27.new=	${PREFIX}/bin/python${PY_VER_SUFFIX}
-REPLACE_FILES.py27=	Lib/*.py Lib/*/*.py Lib/*/*/*.py
-REPLACE_FILES.py27+=	Lib/*/*/*/*.py
+REPLACE_FILES.py27=	Lib/UserString.py
+REPLACE_FILES.py27+=	Lib/base64.py
+REPLACE_FILES.py27+=	Lib/cProfile.py
+REPLACE_FILES.py27+=	Lib/cgi.py
+REPLACE_FILES.py27+=	Lib/encodings/rot_13.py
+REPLACE_FILES.py27+=	Lib/idlelib/PyShell.py
+REPLACE_FILES.py27+=	Lib/keyword.py
+REPLACE_FILES.py27+=	Lib/lib2to3/pgen2/token.py
+REPLACE_FILES.py27+=	Lib/lib2to3/tests/data/different_encoding.py
+REPLACE_FILES.py27+=	Lib/lib2to3/tests/data/false_encoding.py
+REPLACE_FILES.py27+=	Lib/lib2to3/tests/pytree_idempotency.py
+REPLACE_FILES.py27+=	Lib/mimify.py
+REPLACE_FILES.py27+=	Lib/pdb.py
+REPLACE_FILES.py27+=	Lib/plat-mac/appletrunner.py
+REPLACE_FILES.py27+=	Lib/plat-mac/bundlebuilder.py
+REPLACE_FILES.py27+=	Lib/platform.py
+REPLACE_FILES.py27+=	Lib/profile.py
+REPLACE_FILES.py27+=	Lib/pydoc.py
+REPLACE_FILES.py27+=	Lib/quopri.py
+REPLACE_FILES.py27+=	Lib/smtpd.py
+REPLACE_FILES.py27+=	Lib/smtplib.py
+REPLACE_FILES.py27+=	Lib/symbol.py
+REPLACE_FILES.py27+=	Lib/tabnanny.py
+REPLACE_FILES.py27+=	Lib/test/bisect.py
+REPLACE_FILES.py27+=	Lib/test/curses_tests.py
+REPLACE_FILES.py27+=	Lib/test/re_tests.py
+REPLACE_FILES.py27+=	Lib/test/pystone.py
+REPLACE_FILES.py27+=	Lib/test/regrtest.py
+REPLACE_FILES.py27+=	Lib/timeit.py
+REPLACE_FILES.py27+=	Lib/trace.py
+REPLACE_FILES.py27+=	Lib/uu.py
+REPLACE_FILES.py27+=	Lib/webbrowser.py
 
 SUBST_CLASSES+=		libffi
 SUBST_MESSAGE.libffi=	Fixing libffi include path on Darwin.
@@ -155,12 +178,6 @@ SUBST_SED.findlib=	-e 's,/usr/local,${PREFIX},'
 # >>> from ctypes.util import find_library
 # >>> find_library("m")
 # 'libm.so.0'
-# >>> find_library("crypto")
-# 'libcrypto.so.11'
-# >>> find_library("GL")
-# 'libGL.so.2'
-# >>> find_library("curl")
-# 'libcurl.so.4'
 
 SUBST_CLASSES+=		pfindlib
 SUBST_MESSAGE.pfindlib=	Fixing find_library() on POSIX-like (excluding Darwin) systems.

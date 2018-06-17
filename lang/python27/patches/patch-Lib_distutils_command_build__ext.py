@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2015/04/24 03:01:36 rodent Exp $
+$NetBSD: patch-Lib_distutils_command_build__ext.py,v 1.1 2018/06/17 19:21:21 adam Exp $
 
 --- Lib/distutils/command/build_ext.py.orig	2014-12-10 15:59:34.000000000 +0000
 +++ Lib/distutils/command/build_ext.py

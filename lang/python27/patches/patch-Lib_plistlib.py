@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.3 2015/04/24 03:01:36 rodent Exp $
+$NetBSD: patch-Lib_plistlib.py,v 1.1 2018/06/17 19:21:21 adam Exp $
 
 Add ability to parse unsigned integers as externalized by NetBSD proplib(3).
 

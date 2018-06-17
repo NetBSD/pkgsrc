@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2018/02/23 15:26:15 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2018/06/17 19:21:21 adam Exp $
 
 .include "dist.mk"
 
 PKGNAME=	python34-${PY_DISTVERSION}
+PKGREVISION=	1
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -18,18 +19,16 @@ PRINT_PLIST_AWK+=	/^[^@]/ && /[^\/]+\.py[co]$$/ {
 PRINT_PLIST_AWK+=	gsub(/__pycache__\//, "")
 PRINT_PLIST_AWK+=	gsub(/\.cpython-34/, "")}
 
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-threads
-CONFIGURE_ARGS+=	--enable-shared
-CONFIGURE_ARGS+=	OPT=${CFLAGS:M*:Q}
-CONFIGURE_ARGS+=	--with-system-ffi
-CONFIGURE_ARGS+=	--without-pymalloc
-CONFIGURE_ARGS+=	--without-ensurepip
-CONFIGURE_ENV+=		ac_cv_path_mkdir=${TOOLS_PATH.mkdir}
-
-PKGCONFIG_OVERRIDE+=	Misc/python.pc.in
-
 USE_LANGUAGES=		c c++
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-shared
+CONFIGURE_ARGS+=	--with-system-ffi
+CONFIGURE_ARGS+=	--with-threads
+CONFIGURE_ARGS+=	--without-ensurepip
+CONFIGURE_ARGS+=	--without-pymalloc
+CONFIGURE_ENV+=		OPT=${CFLAGS:M*:Q}
+CONFIGURE_ENV+=		ac_cv_path_mkdir=${TOOLS_PATH.mkdir}
+PKGCONFIG_OVERRIDE+=	Misc/python.pc.in
 
 PTHREAD_OPTS+=	require
 .include "../../mk/pthread.buildlink3.mk"
@@ -104,15 +103,58 @@ PRINT_PLIST_AWK+=	{ gsub(/python${PY_VER_SUFFIX}/, \
 TEST_TARGET=	test
 INSTALL_TARGET=	altinstall
 
-REPLACE_INTERPRETER+=	py34
-REPLACE.py34.old=	.*python[^ ]*
-REPLACE.py34.new=	${PREFIX}/bin/python${PY_VER_SUFFIX}
-REPLACE_FILES.py34=	Lib/*.py Lib/*/*.py Lib/*/*/*.py Lib/*/*/*/*.py
+REPLACE_INTERPRETER+=	python
+REPLACE.python.old=	.*python[^ ]*
+REPLACE.python.new=	${PREFIX}/bin/python${PY_VER_SUFFIX}
+REPLACE_FILES.python=	Lib/base64.py
+REPLACE_FILES.python+=	Lib/cProfile.py
+REPLACE_FILES.python+=	Lib/cgi.py
+REPLACE_FILES.python+=	Lib/encodings/rot_13.py
+REPLACE_FILES.python+=	Lib/idlelib/PyShell.py
+REPLACE_FILES.python+=	Lib/keyword.py
+REPLACE_FILES.python+=	Lib/lib2to3/pgen2/token.py
+REPLACE_FILES.python+=	Lib/lib2to3/tests/data/different_encoding.py
+REPLACE_FILES.python+=	Lib/lib2to3/tests/data/false_encoding.py
+REPLACE_FILES.python+=	Lib/lib2to3/tests/pytree_idempotency.py
+REPLACE_FILES.python+=	Lib/pdb.py
+REPLACE_FILES.python+=	Lib/platform.py
+REPLACE_FILES.python+=	Lib/profile.py
+REPLACE_FILES.python+=	Lib/pydoc.py
+REPLACE_FILES.python+=	Lib/quopri.py
+REPLACE_FILES.python+=	Lib/smtpd.py
+REPLACE_FILES.python+=	Lib/smtplib.py
+REPLACE_FILES.python+=	Lib/symbol.py
+REPLACE_FILES.python+=	Lib/tabnanny.py
+REPLACE_FILES.python+=	Lib/tarfile.py
+REPLACE_FILES.python+=	Lib/test/crashers/recursive_call.py
+REPLACE_FILES.python+=	Lib/test/curses_tests.py
+REPLACE_FILES.python+=	Lib/test/pystone.py
+REPLACE_FILES.python+=	Lib/test/re_tests.py
+REPLACE_FILES.python+=	Lib/test/regrtest.py
+REPLACE_FILES.python+=	Lib/timeit.py
+REPLACE_FILES.python+=	Lib/trace.py
+REPLACE_FILES.python+=	Lib/turtledemo/__main__.py
+REPLACE_FILES.python+=	Lib/turtledemo/bytedesign.py
+REPLACE_FILES.python+=	Lib/turtledemo/clock.py
+REPLACE_FILES.python+=	Lib/turtledemo/forest.py
+REPLACE_FILES.python+=	Lib/turtledemo/fractalcurves.py
+REPLACE_FILES.python+=	Lib/turtledemo/lindenmayer.py
+REPLACE_FILES.python+=	Lib/turtledemo/minimal_hanoi.py
+REPLACE_FILES.python+=	Lib/turtledemo/paint.py
+REPLACE_FILES.python+=	Lib/turtledemo/peace.py
+REPLACE_FILES.python+=	Lib/turtledemo/penrose.py
+REPLACE_FILES.python+=	Lib/turtledemo/planet_and_moon.py
+REPLACE_FILES.python+=	Lib/turtledemo/tree.py
+REPLACE_FILES.python+=	Lib/turtledemo/yinyang.py
+REPLACE_FILES.python+=	Lib/uu.py
+REPLACE_FILES.python+=	Lib/webbrowser.py
 
 SUBST_CLASSES+=		findlib
 SUBST_MESSAGE.findlib=	Fixing find_library_file on Darwin.
 SUBST_STAGE.findlib=	pre-configure
-SUBST_FILES.findlib=	Lib/distutils/unixccompiler.py
+SUBST_FILES.findlib=	Lib/ctypes/macholib/dyld.py
+SUBST_FILES.findlib+=	Lib/ctypes/util.py
+SUBST_FILES.findlib+=	Lib/distutils/unixccompiler.py
 SUBST_SED.findlib=	-e 's,/usr/local,${PREFIX},'
 
 # XXX: It might be needed to add manually more paths like ${PREFIX}/qt5/lib
@@ -120,12 +162,6 @@ SUBST_SED.findlib=	-e 's,/usr/local,${PREFIX},'
 # >>> from ctypes.util import find_library
 # >>> find_library("m")
 # 'libm.so.0'
-# >>> find_library("crypto")
-# 'libcrypto.so.11'
-# >>> find_library("GL")
-# 'libGL.so.2'
-# >>> find_library("curl")
-# 'libcurl.so.4'
 
 SUBST_CLASSES+=		pfindlib
 SUBST_MESSAGE.pfindlib=	Fixing find_library() on POSIX-like (excluding Darwin) systems.
