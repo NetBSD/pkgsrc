@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2864 2018/06/17 09:14:10 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2865 2018/06/17 09:16:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4077,3 +4077,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/spice-protocol to 0.12.14 [wiz 2018-06-17]
 	Updated devel/py-click-log to 0.3.2 [wiz 2018-06-17]
 	Updated time/py-vdirsyncer to 0.16.6 [wiz 2018-06-17]
+	Updated devel/py-gobject3-common to 3.28.3 [wiz 2018-06-17]
