@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2018/03/11 18:08:28 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2018/06/17 08:37:59 wiz Exp $
 
-DISTNAME=	anki-2.0.50-source
+DISTNAME=	anki-2.0.52-source
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:C/anki/anki2/:C/-source//}
 CATEGORIES=	misc x11
 MASTER_SITES=	https://apps.ankiweb.net/downloads/current/
