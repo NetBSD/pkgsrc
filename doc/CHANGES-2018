@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2847 2018/06/17 01:12:15 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2848 2018/06/17 02:25:56 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4060,3 +4060,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-google-apitools to 0.5.23 [bsiegert 2018-06-16]
 	Updated editors/vim-share to 8.1.0061 [morr 2018-06-17]
 	Added math/go-units version 0.0.20151021 [minskim 2018-06-17]
+	Updated devel/go-blackfriday to 1.5.1 [minskim 2018-06-17]
