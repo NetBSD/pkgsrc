@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.127 2018/04/28 20:15:17 wiz Exp $
+$NetBSD: distinfo,v 1.128 2018/06/17 14:29:55 wiz Exp $
 
-SHA1 (poppler-0.64.0.tar.xz) = 2b78d021a14f29681202654d04cb227909a7fc2e
-RMD160 (poppler-0.64.0.tar.xz) = dee563d1a8d4d42cd3f5f2a9d247411fc010d77d
-SHA512 (poppler-0.64.0.tar.xz) = 2799c3f628e63803eb11a25e54798a136aad91ea843d4bc1fb284af478f4a8cde87b7f95fc28cf23baf25975fbde6ca93f6ac91befb87af42e642c7650053f1c
-Size (poppler-0.64.0.tar.xz) = 1449904 bytes
+SHA1 (poppler-0.65.0.tar.xz) = 181630b228ec036be3e587c23ada1a50f617fc61
+RMD160 (poppler-0.65.0.tar.xz) = eeb55ce5f712287eeb01bd054df0033663a255ce
+SHA512 (poppler-0.65.0.tar.xz) = 4a2c31307ab703bd25e1b5ac1185a897e1c96de13daa4fc4849974f6ea6cec8066e8cd9ea061f65620c71ea56a09b2cd355c4e42e9a4eb9a674a11648e3ec977
+Size (poppler-0.65.0.tar.xz) = 1451720 bytes
 SHA1 (patch-aq) = da845661ef7f7aca3072dbeebde0444b4d8f01aa
 SHA1 (patch-poppler_CMap.cc) = d37745ea4cbeae76ad43c4ac74e942531f7b7dd8
