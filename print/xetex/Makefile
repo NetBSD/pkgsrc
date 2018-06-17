@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.76 2018/05/13 13:06:29 markd Exp $
+# $NetBSD: Makefile,v 1.77 2018/06/17 14:37:03 wiz Exp $
 
 DISTNAME=	texlive-20180414-source
 PKGNAME=	xetex-0.99999
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2018/
 EXTRACT_SUFX=	.tar.xz
