@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2874 2018/06/17 19:32:21 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2875 2018/06/17 19:52:32 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4096,3 +4096,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/python35 to 3.5.5nb1 [adam 2018-06-17]
 	Updated lang/python36 to 3.6.5nb1 [adam 2018-06-17]
 	Removed devel/py-spwd [adam 2018-06-17]
+	Updated lang/gcc7 to 7.3.0nb2 [maya 2018-06-17]
