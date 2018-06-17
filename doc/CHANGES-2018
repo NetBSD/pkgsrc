@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2869 2018/06/17 13:54:49 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2870 2018/06/17 14:31:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4082,3 +4082,9 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated fonts/harfbuzz to 1.8.1 [wiz 2018-06-17]
 	Updated devel/py-mercurial to 4.6.1 [wiz 2018-06-17]
 	Updated www/webkit-gtk to 2.20.3 [wiz 2018-06-17]
+	Updated print/poppler to 0.65.0 [wiz 2018-06-17]
+	Updated print/poppler-cpp to 0.65.0 [wiz 2018-06-17]
+	Updated print/poppler-glib to 0.65.0 [wiz 2018-06-17]
+	Updated print/poppler-includes to 0.65.0 [wiz 2018-06-17]
+	Updated print/poppler-qt5 to 0.65.0 [wiz 2018-06-17]
+	Updated print/poppler-utils to 0.65.0 [wiz 2018-06-17]
