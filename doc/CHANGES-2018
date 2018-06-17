@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2867 2018/06/17 09:24:02 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2868 2018/06/17 11:24:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4080,3 +4080,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-gobject3-common to 3.28.3 [wiz 2018-06-17]
 	Updated devel/py-gobject3 to 3.28.3 [wiz 2018-06-17]
 	Updated fonts/harfbuzz to 1.8.1 [wiz 2018-06-17]
+	Updated devel/py-mercurial to 4.6.1 [wiz 2018-06-17]
