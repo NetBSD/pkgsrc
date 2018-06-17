@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2018/01/10 22:20:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2018/06/17 14:29:55 wiz Exp $
 include/poppler/Annot.h
 include/poppler/Array.h
 include/poppler/BuiltinFont.h
@@ -85,7 +85,6 @@ include/poppler/fofi/FoFiTrueType.h
 include/poppler/fofi/FoFiType1.h
 include/poppler/fofi/FoFiType1C.h
 include/poppler/goo/FixedPoint.h
-include/poppler/goo/GooHash.h
 include/poppler/goo/GooLikely.h
 include/poppler/goo/GooList.h
 include/poppler/goo/GooMutex.h
