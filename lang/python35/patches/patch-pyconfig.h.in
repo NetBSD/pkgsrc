@@ -1,10 +1,21 @@
-$NetBSD: patch-pyconfig.h.in,v 1.1 2017/05/30 14:04:54 bouyer Exp $
+$NetBSD: patch-pyconfig.h.in,v 1.2 2018/06/17 19:21:22 adam Exp $
 
-detect netcan/can.h on NetBSD
+Detect is_pad() (taken from Python 3.7).
+Detect netcan/can.h on NetBSD
 
---- pyconfig.h.in.orig	2017-01-17 08:57:54.000000000 +0100
-+++ pyconfig.h.in	2017-05-30 15:41:41.207090795 +0200
-@@ -540,6 +540,9 @@
+--- pyconfig.h.in.orig	2018-02-04 23:40:56.000000000 +0000
++++ pyconfig.h.in
+@@ -146,6 +146,9 @@
+ /* Define to 1 if you have the <curses.h> header file. */
+ #undef HAVE_CURSES_H
+ 
++/* Define if you have the 'is_pad' function or macro. */
++#undef HAVE_CURSES_IS_PAD
++
+ /* Define if you have the 'is_term_resized' function. */
+ #undef HAVE_CURSES_IS_TERM_RESIZED
+ 
+@@ -540,6 +543,9 @@
  /* Define to 1 if you have the <linux/can/raw.h> header file. */
  #undef HAVE_LINUX_CAN_RAW_H
  
