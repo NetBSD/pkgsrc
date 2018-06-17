@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2018/01/14 17:34:00 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2018/06/17 13:48:16 wiz Exp $
 
 DISTNAME=		monsterz-0.7.1
 PKGREVISION=		4
 CATEGORIES=		games
 MASTER_SITES=		http://sam.zoy.org/monsterz/
 
-MAINTAINER=		wiz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sam.zoy.org/monsterz/
 COMMENT=		Puzzle game similar to the famous Bejeweled or Zookeeper
 
