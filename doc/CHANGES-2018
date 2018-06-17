@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2873 2018/06/17 17:10:26 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2874 2018/06/17 19:32:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4091,3 +4091,8 @@ Changes to the packages collection and infrastructure in 2018:
 	Added sysutils/fluent-bit version 0.13.2 [minskim 2018-06-17]
 	Added print/tex-fundus-calligra version 1.2 [minskim 2018-06-17]
 	Added print/tex-fundus-calligra-doc version 1.2 [minskim 2018-06-17]
+	Updated lang/python27 to 2.7.15nb1 [adam 2018-06-17]
+	Updated lang/python34 to 3.4.8nb1 [adam 2018-06-17]
+	Updated lang/python35 to 3.5.5nb1 [adam 2018-06-17]
+	Updated lang/python36 to 3.6.5nb1 [adam 2018-06-17]
+	Removed devel/py-spwd [adam 2018-06-17]
