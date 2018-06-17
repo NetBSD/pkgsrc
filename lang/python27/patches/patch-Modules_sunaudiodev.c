@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.3 2015/04/24 03:01:36 rodent Exp $
+$NetBSD: patch-Modules_sunaudiodev.c,v 1.1 2018/06/17 19:21:21 adam Exp $
 
 XXXbjs:  I use amd64, and audioop is broken on 64-bit platforms.
 Thus, this needs to be tested.
