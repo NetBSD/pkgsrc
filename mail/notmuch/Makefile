@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2018/04/29 10:00:16 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2018/06/17 09:07:53 wiz Exp $
 
-DISTNAME=	notmuch-0.26.2
+DISTNAME=	notmuch-0.27
 CATEGORIES=	mail
 MASTER_SITES=	https://notmuchmail.org/releases/
 
@@ -13,14 +13,16 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	gmake makeinfo pkg-config
 MAKE_FLAGS+=	PYTHON=${PYTHONBIN}
+INFO_FILES=	yes
 #TEST_TARGET=	check
 
 .include "options.mk"
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
+CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
 CONFIGURE_ARGS+=	--without-ruby
 
 SUBST_CLASSES.SunOS+=	gnuld
@@ -39,7 +41,7 @@ LDFLAGS.SunOS+=	-lnsl
 .include "../../lang/python/application.mk"
 BUILDLINK_API_DEPENDS.gmime3+=	gmime3>=3.0.3
 .include "../../mail/gmime3/buildlink3.mk"
-BUILDLINK_API_DEPENDS.xapian+=	xapian>=1.2.6
+BUILDLINK_API_DEPENDS.xapian+=	xapian>=1.4
 .include "../../textproc/xapian/buildlink3.mk"
 .include "../../devel/talloc/buildlink3.mk"
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.5.2
