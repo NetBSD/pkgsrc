@@ -1,0 +1,24 @@
+$NetBSD: patch-libgcc_config.host,v 1.1 2018/06/17 19:50:52 maya Exp $
+
+netbsd/arm EABI support
+
+--- libgcc/config.host.orig	2018-01-08 13:39:11.000000000 +0000
++++ libgcc/config.host
+@@ -396,7 +396,16 @@ arm*-*-freebsd*)                # ARM Fr
+ 	tmake_file="${tmake_file} t-softfp-sfdf t-softfp-excl arm/t-softfp t-softfp"
+ 	;;
+ arm*-*-netbsdelf*)
+-	tmake_file="$tmake_file arm/t-arm arm/t-netbsd t-slibgcc-gld-nover"
++	tmake_file="$tmake_file arm/t-arm"
++	case ${host} in
++	arm*-*-netbsdelf-*eabi*)
++	  tmake_file="${tmake_file} arm/t-netbsd-eabi"
++	  unwind_header=config/arm/unwind-arm.h
++	;;
++	*)
++	  tmake_file="${tmake_file} arm/t-netbsd t-slibgcc-gld-nover"
++	  ;;
++	esac
+ 	;;
+ arm*-*-linux*)			# ARM GNU/Linux with ELF
+ 	tmake_file="${tmake_file} arm/t-arm t-fixedpoint-gnu-prefix t-crtfm"
