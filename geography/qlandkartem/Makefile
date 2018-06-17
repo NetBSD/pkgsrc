@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2018/04/29 21:31:42 adam Exp $
-#
+# $NetBSD: Makefile,v 1.48 2018/06/17 06:56:30 wiz Exp $
 
 DISTNAME=	QLandkarteM.0.2.0
 PKGNAME=	qlandkartem-0.2.0
@@ -7,7 +6,7 @@ PKGREVISION=	41
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qlandkartegt/}
 
-MAINTAINER=	jkunz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.qlandkarte.org/
 COMMENT=	QLandkarteM is a moving map application for mobile devices
 LICENSE=	gnu-gpl-v2
