@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2846 2018/06/16 22:47:43 morr Exp $
+$NetBSD: CHANGES-2018,v 1.2847 2018/06/17 01:12:15 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4059,3 +4059,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/salt-docs to 2018.3.1 [adam 2018-06-16]
 	Updated www/py-google-apitools to 0.5.23 [bsiegert 2018-06-16]
 	Updated editors/vim-share to 8.1.0061 [morr 2018-06-17]
+	Added math/go-units version 0.0.20151021 [minskim 2018-06-17]
