@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2858 2018/06/17 08:51:10 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2859 2018/06/17 09:03:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4071,3 +4071,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/py-anki2 to 2.0.52 [wiz 2018-06-17]
 	Updated security/py-requests-oauthlib to 1.0.0 [wiz 2018-06-17]
 	Updated www/py-google-api-python-client to 1.7.3 [wiz 2018-06-17]
+	Updated graphics/ImageMagick to 7.0.8.0 [wiz 2018-06-17]
