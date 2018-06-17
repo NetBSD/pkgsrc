@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2018/04/14 20:21:51 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2018/06/17 09:14:01 wiz Exp $
 
-DISTNAME=	vdirsyncer-0.16.4
+DISTNAME=	vdirsyncer-0.16.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/vdirsyncer/}
 
@@ -15,7 +14,7 @@ EXTRACT_USING=	bsdtar	# gtar cannot handle pre-1970 timestamps
 
 DEPENDS+=	${PYPKGPREFIX}-atomicwrites>=0.1.7:../../devel/py-atomicwrites
 DEPENDS+=	${PYPKGPREFIX}-click>=5.0:../../devel/py-click
-DEPENDS+=	${PYPKGPREFIX}-click-log>=0.2.0:../../devel/py-click-log
+DEPENDS+=	${PYPKGPREFIX}-click-log>=0.3.0:../../devel/py-click-log
 DEPENDS+=	${PYPKGPREFIX}-click-threading>=0.2.0:../../devel/py-click-threading
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.9.1:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-requests-oauthlib-[0-9]*:../../security/py-requests-oauthlib
