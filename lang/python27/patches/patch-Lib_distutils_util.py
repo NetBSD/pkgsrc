@@ -1,4 +1,4 @@
-$NetBSD: patch-ao,v 1.6 2015/04/24 03:01:36 rodent Exp $
+$NetBSD: patch-Lib_distutils_util.py,v 1.1 2018/06/17 19:21:21 adam Exp $
 
 --- Lib/distutils/util.py.orig	2014-12-10 15:59:35.000000000 +0000
 +++ Lib/distutils/util.py

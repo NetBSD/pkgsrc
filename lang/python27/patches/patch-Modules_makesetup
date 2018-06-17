@@ -1,9 +1,6 @@
-$NetBSD: patch-an,v 1.2 2014/05/09 09:19:06 wiz Exp $
+$NetBSD: patch-Modules_makesetup,v 1.1 2018/06/17 19:21:21 adam Exp $
 
-Support -pthread compiler flag.
-http://bugs.python.org/issue21461
-
---- Modules/makesetup.orig	2008-06-11 05:26:20.000000000 +0000
+--- Modules/makesetup.orig	2014-12-10 15:59:55.000000000 +0000
 +++ Modules/makesetup
 @@ -164,6 +164,7 @@ sed -e 's/[ 	]*#.*//' -e '/^[ 	]*$/d' |
  			-rpath)		libs="$libs $arg"; skip=libs;;

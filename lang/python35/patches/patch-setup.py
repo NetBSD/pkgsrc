@@ -1,27 +1,31 @@
-$NetBSD: patch-setup.py,v 1.4 2017/01/26 09:45:23 jperkin Exp $
+$NetBSD: patch-setup.py,v 1.5 2018/06/17 19:21:22 adam Exp $
 
---- setup.py.orig	2017-01-17 07:57:54.000000000 +0000
+Disable certain modules, so they can be built as separate packages.
+Do not look for ncursesw.
+Assume panel_library is correct; this is a fix for ncurses' gnupanel
+  which will get transformed to panel in buildlink.
+
+--- setup.py.orig	2018-02-04 23:40:56.000000000 +0000
 +++ setup.py
 @@ -7,7 +7,7 @@ import importlib._bootstrap
  import importlib.util
  import sysconfig
  
 -from distutils import log
-+from distutils import log,text_file
++from distutils import log, text_file
  from distutils.errors import *
  from distutils.core import Extension, setup
  from distutils.command.build_ext import build_ext
-@@ -43,7 +43,8 @@ host_platform = get_platform()
+@@ -43,7 +43,7 @@ host_platform = get_platform()
  COMPILED_WITH_PYDEBUG = ('--with-pydebug' in sysconfig.get_config_var("CONFIG_ARGS"))
  
  # This global variable is used to hold the list of modules to be disabled.
 -disabled_module_list = []
-+disabled_module_list = ["_curses", "_curses_panel", "_elementtree",
-+"_sqlite3", "_tkinter", "_gdbm", "pyexpat", "readline", "spwd", "xxlimited"]
++disabled_module_list = ["_curses", "_curses_panel", "_elementtree", "_gdbm", "pyexpat", "readline", "_sqlite3", "_tkinter", "xxlimited"]
  
  def add_dir_to_list(dirlist, dir):
      """Add the directory 'dir' to the list 'dirlist' (after any relative
-@@ -487,15 +488,15 @@ class PyBuildExt(build_ext):
+@@ -487,15 +487,15 @@ class PyBuildExt(build_ext):
              return ['m']
  
      def detect_modules(self):
@@ -46,17 +50,26 @@ $NetBSD: patch-setup.py,v 1.4 2017/01/26 09:45:23 jperkin Exp $
          self.add_multiarch_paths()
  
          # Add paths specified in the environment variables LDFLAGS and
-@@ -808,8 +809,7 @@ class PyBuildExt(build_ext):
+@@ -742,8 +742,6 @@ class PyBuildExt(build_ext):
+         # use the same library for the readline and curses modules.
+         if 'curses' in readline_termcap_library:
+             curses_library = readline_termcap_library
+-        elif self.compiler.find_library_file(lib_dirs, 'ncursesw'):
+-            curses_library = 'ncursesw'
+         elif self.compiler.find_library_file(lib_dirs, 'ncurses'):
+             curses_library = 'ncurses'
+         elif self.compiler.find_library_file(lib_dirs, 'curses'):
+@@ -808,8 +806,7 @@ class PyBuildExt(build_ext):
                                 depends = ['socketmodule.h']) )
          # Detect SSL support for the socket module (via _ssl)
          search_for_ssl_incs_in = [
 -                              '/usr/local/ssl/include',
 -                              '/usr/contrib/ssl/include/'
-+                              '/usr/include'
++                              '@SSLBASE@/include'
                               ]
          ssl_incs = find_file('openssl/ssl.h', inc_dirs,
                               search_for_ssl_incs_in
-@@ -820,9 +820,7 @@ class PyBuildExt(build_ext):
+@@ -820,9 +817,7 @@ class PyBuildExt(build_ext):
              if krb5_h:
                  ssl_incs += krb5_h
          ssl_libs = find_library_file(self.compiler, 'ssl',lib_dirs,
@@ -67,7 +80,7 @@ $NetBSD: patch-setup.py,v 1.4 2017/01/26 09:45:23 jperkin Exp $
  
          if (ssl_incs is not None and
              ssl_libs is not None):
-@@ -841,7 +839,7 @@ class PyBuildExt(build_ext):
+@@ -841,7 +836,7 @@ class PyBuildExt(build_ext):
  
          # look for the openssl version header on the compiler search path.
          opensslv_h = find_file('openssl/opensslv.h', [],
@@ -76,7 +89,7 @@ $NetBSD: patch-setup.py,v 1.4 2017/01/26 09:45:23 jperkin Exp $
          if opensslv_h:
              name = os.path.join(opensslv_h[0], 'openssl/opensslv.h')
              if host_platform == 'darwin' and is_macosx_sdk_path(name):
-@@ -1215,6 +1213,30 @@ class PyBuildExt(build_ext):
+@@ -1215,6 +1210,30 @@ class PyBuildExt(build_ext):
          dbm_order = ['gdbm']
          # The standard Unix dbm module:
          if host_platform not in ['cygwin']:
@@ -107,7 +120,7 @@ $NetBSD: patch-setup.py,v 1.4 2017/01/26 09:45:23 jperkin Exp $
              config_args = [arg.strip("'")
                             for arg in sysconfig.get_config_var("CONFIG_ARGS").split()]
              dbm_args = [arg for arg in config_args
-@@ -1226,7 +1248,7 @@ class PyBuildExt(build_ext):
+@@ -1226,7 +1245,7 @@ class PyBuildExt(build_ext):
              dbmext = None
              for cand in dbm_order:
                  if cand == "ndbm":
@@ -116,7 +129,17 @@ $NetBSD: patch-setup.py,v 1.4 2017/01/26 09:45:23 jperkin Exp $
                          # Some systems have -lndbm, others have -lgdbm_compat,
                          # others don't have either
                          if self.compiler.find_library_file(lib_dirs,
-@@ -2028,10 +2050,7 @@ class PyBuildExt(build_ext):
+@@ -1363,8 +1382,7 @@ class PyBuildExt(build_ext):
+             missing.append('_curses')
+ 
+         # If the curses module is enabled, check for the panel module
+-        if (module_enabled(exts, '_curses') and
+-            self.compiler.find_library_file(lib_dirs, panel_library)):
++        if (module_enabled(exts, '_curses')):
+             exts.append( Extension('_curses_panel', ['_curses_panel.c'],
+                                    include_dirs=curses_includes,
+                                    define_macros=curses_defines,
+@@ -2031,10 +2049,7 @@ class PyBuildExt(build_ext):
              depends = ['_decimal/docstrings.h']
          else:
              srcdir = sysconfig.get_config_var('srcdir')
@@ -128,7 +151,7 @@ $NetBSD: patch-setup.py,v 1.4 2017/01/26 09:45:23 jperkin Exp $
              libraries = []
              sources = [
                '_decimal/_decimal.c',
-@@ -2277,7 +2296,7 @@ def main():
+@@ -2280,7 +2295,7 @@ def main():
            # If you change the scripts installed here, you also need to
            # check the PyBuildScripts command above, and change the links
            # created by the bininstall target in Makefile.pre.in

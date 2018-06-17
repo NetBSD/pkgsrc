@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.19 2018/05/19 06:54:55 spz Exp $
+@comment $NetBSD: PLIST,v 1.1 2018/06/17 19:21:21 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -2052,10 +2052,10 @@ lib/python${PY_VER_SUFFIX}/lib-tk/ttk.pyo
 lib/python${PY_VER_SUFFIX}/lib-tk/turtle.py
 lib/python${PY_VER_SUFFIX}/lib-tk/turtle.pyc
 lib/python${PY_VER_SUFFIX}/lib-tk/turtle.pyo
-lib/python${PY_VER_SUFFIX}/lib2to3/Grammar.txt
 lib/python${PY_VER_SUFFIX}/lib2to3/Grammar${PKGVERSION}.final.0.pickle
-lib/python${PY_VER_SUFFIX}/lib2to3/PatternGrammar.txt
+lib/python${PY_VER_SUFFIX}/lib2to3/Grammar.txt
 lib/python${PY_VER_SUFFIX}/lib2to3/PatternGrammar${PKGVERSION}.final.0.pickle
+lib/python${PY_VER_SUFFIX}/lib2to3/PatternGrammar.txt
 lib/python${PY_VER_SUFFIX}/lib2to3/__init__.py
 lib/python${PY_VER_SUFFIX}/lib2to3/__init__.pyc
 lib/python${PY_VER_SUFFIX}/lib2to3/__init__.pyo
