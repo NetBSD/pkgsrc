@@ -1,15 +1,6 @@
-$NetBSD: distinfo,v 1.65 2018/05/25 13:04:56 joerg Exp $
+$NetBSD: distinfo,v 1.66 2018/06/17 11:24:12 wiz Exp $
 
-SHA1 (mercurial-4.6.tar.gz) = 00b218892e244e549c6a1987a43e831951d7df2e
-RMD160 (mercurial-4.6.tar.gz) = 8ec766dc74c65d6540290c1d1f6e5093fae0a7e8
-SHA512 (mercurial-4.6.tar.gz) = 2a7e94a338727afc97aab9c33ce4810a17088f5f477a83b581dcbf594e455062e69e6a3782f1665b24ffc011963b0eead6f7e637a63f241d256378d30b006c45
-Size (mercurial-4.6.tar.gz) = 6226745 bytes
-SHA1 (patch-mercurial_bundle2.py) = 34548c7e02933bed8613d8732c0c5dcea01841f1
-SHA1 (patch-tests_test-bundle.t) = 6dca93568f21ae407aad03cb5e8c820385d5f998
-SHA1 (patch-tests_test-clonebundles.t) = 0beb9bcd172513d60fd0ba790b1aef524ae60087
-SHA1 (patch-tests_test-http-bad-server.t) = 110f43f13d639ad75a1a9ce3ae7a1cfdecef3ed6
-SHA1 (patch-tests_test-lfs-serve-access.t) = a3a08489c3f1a72835bbd0d2f598146c3c9a2316
-SHA1 (patch-tests_test-obsolete-changeset-exchange.t) = 4ae81fe1f76d30558197ac8276e0889440483e75
-SHA1 (patch-tests_test-patchbomb.t) = a71d8925eaa79b9d12821654e6eed8a997dc1f34
-SHA1 (patch-tests_test-rebase-conflicts.t) = 037be577490e66506ca793857308ea6dcd89d9b8
-SHA1 (patch-tests_test-strip.t) = 9fd2985744d915e57644be358d1b139a37891720
+SHA1 (mercurial-4.6.1.tar.gz) = df2bb1487e6a64c7321a93767baf43c6ca1e9b5f
+RMD160 (mercurial-4.6.1.tar.gz) = a9dd32a52d7b46f81d27d89625004b8f09c83552
+SHA512 (mercurial-4.6.1.tar.gz) = 0c7737ca803691b135b4906cc527b20595e314009096d8a19f37814ee192b182e7c5360fbf993f632d6071da1f9fca38677e7190c14ed92bafa8add72a4a27d9
+Size (mercurial-4.6.1.tar.gz) = 6407380 bytes
