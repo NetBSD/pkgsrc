@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.102 2018/06/15 09:17:02 jperkin Exp $
+$NetBSD: distinfo,v 1.103 2018/06/17 13:54:39 wiz Exp $
 
-SHA1 (webkitgtk-2.20.2.tar.xz) = 2cc5099b1c70f61abe4c27f949b03bbf93a01d21
-RMD160 (webkitgtk-2.20.2.tar.xz) = 41a17b5552a575e7419f4180e33d0e8f1c0179aa
-SHA512 (webkitgtk-2.20.2.tar.xz) = 8b8078994d0fe9a759d7062e6fe528edbe8931a3a0a198b4d9b9459417ee0521d964746341bfa5813469129bfa4c52d648d7016481f9e57c4f7355931c93a847
-Size (webkitgtk-2.20.2.tar.xz) = 16622048 bytes
+SHA1 (webkitgtk-2.20.3.tar.xz) = 279a4209ca0c93743aa9cd9c9ccc0b91d5b0354b
+RMD160 (webkitgtk-2.20.3.tar.xz) = 6bc2c007fe00f696c6014d72137280835c117765
+SHA512 (webkitgtk-2.20.3.tar.xz) = 69a7b27e294de6fd43240ce1d314cd1ccdbf29674c97967674459fd02720b31fa53e5412efbd93dc1e805d38e38feb7fe9a12cdd9c472471676b8db3c11734de
+Size (webkitgtk-2.20.3.tar.xz) = 16623456 bytes
 SHA1 (patch-CMakeLists.txt) = 684aad9e5bcc25b1afc128a1b5df00f34f1208e9
 SHA1 (patch-Source_JavaScriptCore_assembler_ARMAssembler.h) = 99e46f9d9b26a8d9ba6b29c66d7ce5326c4ffeb6
 SHA1 (patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp) = f78e6150ed8901b3fe046b2ef182f50f1c7500a4
@@ -14,7 +14,6 @@ SHA1 (patch-Source_WTF_wtf_StackBounds.cpp) = 0b35ab065e4cccbb63199cd8a9add0d510
 SHA1 (patch-Source_WTF_wtf_ThreadSpecific.h) = 38a85e10a72fe38d286a2ce747e090a2955b8791
 SHA1 (patch-Source_WebCore_platform_FileSystem.cpp) = adef1a42c4e210f0a3dcb82807e2d2039684a0ec
 SHA1 (patch-Source_WebCore_platform_graphics_filters_FEMorphology.cpp) = 16b36d2d91fd7f43156b9ee09bcafd19602ebbd9
-SHA1 (patch-Source_WebCore_platform_network_soup_SoupNetworkSession.h) = f30deae48f120b97cec9a55811eb188cc4f3dfde
 SHA1 (patch-Source_WebCore_rendering_shapes_RasterShape.cpp) = 551e47698dee50d097b11e3218f13bb3447edfea
 SHA1 (patch-Source_WebKit_CMakeLists.txt) = 228cc4734de3b08a3877ac839b1ffa2fbf2d3aa8
 SHA1 (patch-Source_WebKit_NetworkProcess_cache_NetworkCacheFileSystem.cpp) = 6a8c147b0606a55c18f4bef46a3bbf2932349c58
