@@ -1,0 +1,70 @@
+$NetBSD: patch-doc_mcrypt.1,v 1.1.2.2 2018/06/17 11:40:03 spz Exp $
+
+* Spelling and grammar fixes. 
+
+  From: Red Hat, SUSE
+
+--- doc/mcrypt.1.orig	2003-09-08 17:25:41.000000000 +0000
++++ doc/mcrypt.1
+@@ -81,7 +81,7 @@ two blocks in CBC and CFB modes, but onl
+ Mcrypt uses a 32 bit CRC to check for errors in the encrypted files.
+ .PP
+ .B Extra security:
+-For the very paranoid, if mcrypt is executed with superuser priviledges it
++For the very paranoid, if mcrypt is executed with superuser privileges it
+ ensures that no important data (keys etc.) are written to disk, as swap etc.
+ Keep in mind that mcrypt was not designed to be a setuid program, so you
+ shouldn't make it one.
+@@ -165,11 +165,11 @@ license and quit.
+ .TP
+ .B \-o --keymode MODE
+ MODE may be one of the keymodes listed by the --list-keymodes parameter.
+-It actually is the convertion to the key before it is fed to the algorithm.
++It actually is the conversion to the key before it is fed to the algorithm.
+ It is recommended to leave it as is, if you do not know what it is.
+ However if you still want to use this option, you might want to
+ use the 'hex' mode which allows you to specify the key in hex
+-(and no convertion will by applied).
++(and no conversion will be applied).
+ .TP
+ .B \-h --hash HASH_ALGORITHM
+ HASH_ALGORITHM may be one of the algorithms listed by the --list-hash parameter.
+@@ -194,10 +194,10 @@ The security lies on the algorithm not o
+ default. This flag must also be specified when decrypting a bare encrypted 
+ file. 
+ When the bare flag is specified decryption and encryption are faster. This
+-may be usefull when using mcrypt to encrypt a link or something like that.
++may be useful when using mcrypt to encrypt a link or something like that.
+ .TP
+ .B --flush
+-Flushes the output (ciphertext or plaintext) immediately. Usefull if mcrypt
++Flushes the output (ciphertext or plaintext) immediately. Useful if mcrypt
+ is used with pipes.
+ .TP
+ .B --time
+@@ -205,7 +205,7 @@ Prints some timing information (encrypti
+ .TP
+ .B --nodelete
+ When this option is specified mcrypt does not delete the output file, even
+-if decryption failed. This is usefull if you want to decrypt a corrupted
++if decryption failed. This is useful if you want to decrypt a corrupted
+ file.
+ .TP
+ .B \-q --quiet
+@@ -217,13 +217,13 @@ succeeds. This is not the default in ord
+ to remove sensitive data.
+ .TP
+ .B \ --list
+-Lists all the algorithms current supported.
++Lists all the algorithms currently supported.
+ .TP
+ .B \ --list-keymodes
+-Lists all the key modes current supported.
++Lists all the key modes currently supported.
+ .TP
+ .B \ --list-hash
+-Lists all the hash algorithms current supported.
++Lists all the hash algorithms currently supported.
+ .TP
+ .B \-r --random
+ Use /dev/(s)random instead of /dev/urandom. This may need some key input

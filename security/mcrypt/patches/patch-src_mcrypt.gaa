@@ -1,0 +1,27 @@
+$NetBSD: patch-src_mcrypt.gaa,v 1.1.2.2 2018/06/17 11:40:03 spz Exp $
+
+* Make native format default like in Debian, Red Hat, and SUSE since
+  openpgp format handling is seriously broken.
+
+From: Debian, Red Hat, SUSE
+
+--- src/mcrypt.gaa.orig	2007-06-09 08:38:38.000000000 +0000
++++ src/mcrypt.gaa
+@@ -12,7 +12,7 @@ helpnode "Mcrypt encrypts and decrypts f
+ 
+ #int openpgp;
+ option (g, openpgp) { $openpgp = 1 } "Use the OpenPGP (RFC2440) file format."
+-option (no-openpgp) { $openpgp = 0 } "Use the native (mcrypt) file format."
++option (no-openpgp) { $openpgp = 0 } "Use the native (mcrypt) file format. (DEFAULT)"
+ 
+ #int openpgp_z;
+ option (openpgp-z) INT "INTEGER" { $openpgp_z = $1 } "Sets the compression level for openpgp packets (0 disables)."
+@@ -119,7 +119,7 @@ init { $force=0; $quiet=1; $real_random_
+        $config_file=NULL; $mode=NULL; $input=NULL; $ed_specified=0;
+        $double_check=0; $noecho=1; $flush=0; $keysize=0;
+        $algorithms_directory=NULL; $modes_directory=NULL; $nodelete=0;
+-       $hash=NULL; $timer=0; $openpgp=1; $openpgp_z = 0; }
++       $hash=NULL; $timer=0; $openpgp=0; $openpgp_z = 0; }
+ 
+ INCOMP kf
+ INCOMP Vq

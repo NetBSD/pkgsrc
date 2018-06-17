@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2015/03/05 22:47:54 tnn Exp $
+# $NetBSD: Makefile,v 1.26.28.1 2018/06/17 11:40:03 spz Exp $
 
 DISTNAME=	mcrypt-2.6.8
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mcrypt/}
 

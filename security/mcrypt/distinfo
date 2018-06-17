@@ -1,6 +1,14 @@
-$NetBSD: distinfo,v 1.8 2015/11/04 01:17:50 agc Exp $
+$NetBSD: distinfo,v 1.8.22.1 2018/06/17 11:40:03 spz Exp $
 
 SHA1 (mcrypt-2.6.8.tar.gz) = 8ae0e866714fbbb96a0a6fa9f099089dc93f1d86
 RMD160 (mcrypt-2.6.8.tar.gz) = 5115c679ee5d34b9fb9e976c12240c48370df514
 SHA512 (mcrypt-2.6.8.tar.gz) = eae5f831e950df69eb93efc8314100b4b5dc8a535b1d00f500e6b25382efcec321346776a92dadf101b878ef46a47de2e9e81f5ddf5c73563ece4741f169c8d1
 Size (mcrypt-2.6.8.tar.gz) = 471915 bytes
+SHA1 (patch-doc_mcrypt.1) = 93ccc6b07b09535e09d65e2862571b1c592fc141
+SHA1 (patch-src_errors.c) = b8467130c6cc7f3a650d8a737e1b5a75c8db5e9e
+SHA1 (patch-src_extra.c) = f265989f7e8ad7ec6fd8afece3b8a785f49d13ae
+SHA1 (patch-src_gaaout.c) = 73001f8b98dc87354f7550e2080ac7ab3a59ceb6
+SHA1 (patch-src_mcrypt.c) = c1c99aa4dcf5912e43ab831f0ee32611ea029400
+SHA1 (patch-src_mcrypt.gaa) = 1fefccbf336a99bcb83dd05739c53a40b1f0a9ce
+SHA1 (patch-src_mcrypt__int.h) = 94caaff9bb0d48c6c6406e3f8965db82e7f93408
+SHA1 (patch-src_rfc2440.c) = 4c7b885bfa9e451f3082e3338eadcaedbbb9d6cc
