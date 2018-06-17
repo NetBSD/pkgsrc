@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2018/06/13 13:25:02 maya Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/06/17 11:46:26 wiz Exp $
 bin/binwalk
-${PYSITELIB}/binwalk-2.1.1-py${PYVERSSUFFIX}.egg-info
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/binwalk/__init__.py
 ${PYSITELIB}/binwalk/__init__.pyc
 ${PYSITELIB}/binwalk/__init__.pyo
