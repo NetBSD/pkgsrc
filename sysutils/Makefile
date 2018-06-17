@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.765 2018/06/14 00:25:21 markd Exp $
+# $NetBSD: Makefile,v 1.766 2018/06/17 16:33:38 minskim Exp $
 #
 
 COMMENT=	System utilities
@@ -173,6 +173,7 @@ SUBDIR+=	findutils
 SUBDIR+=	fix4SA110rev2
 SUBDIR+=	fixelfprot
 SUBDIR+=	flashrom
+SUBDIR+=	fluent-bit
 SUBDIR+=	foremost
 SUBDIR+=	free
 SUBDIR+=	fs-kit
