@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.31 2017/11/29 14:09:00 wiz Exp $
+$NetBSD: distinfo,v 1.32 2018/06/17 08:21:58 wiz Exp $
 
-SHA1 (mc-4.8.20.tar.bz2) = 04738a43446efa27f31b7db413ed9dae3eb1b445
-RMD160 (mc-4.8.20.tar.bz2) = 8249937a26dac23e49c6c96b6093c4ab0ad6dbea
-SHA512 (mc-4.8.20.tar.bz2) = 533aff7079374e070c8df9e967c151ef09f44ad507517dd3e607d58eba7357cb6ba3cad31b6a0b27c52791a163b28f8c8218e12eda1d900e83bb25daf9d47849
-Size (mc-4.8.20.tar.bz2) = 3398307 bytes
+SHA1 (mc-4.8.21.tar.bz2) = bb1c3b7107cc0fa877edf669628e7c7a8ffdc962
+RMD160 (mc-4.8.21.tar.bz2) = 9e74eafcce2c59afc25fd17d4caa0ee2ddd1c031
+SHA512 (mc-4.8.21.tar.bz2) = 20799b5936f0cc166869af42b5bf7b737bbccee4adfc24be16d3b4ebd2f911d60d48359a081f69ecd06cf02182aeeab98e8ac352bc219fe3560c4cfe5374451e
+Size (mc-4.8.21.tar.bz2) = 3381888 bytes
 SHA1 (patch-ac) = d01357b685acd8e863510248ed7519ae2821757f
 SHA1 (patch-ad) = 4484b91511cf5bac73f4ae940988d46239e2cd95
 SHA1 (patch-configure) = 8fdc579fb4d8d4c018488b9b160bb24f9a82aa42
