@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2854 2018/06/17 08:25:51 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2855 2018/06/17 08:29:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4067,3 +4067,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/mc to 4.8.21 [wiz 2018-06-17]
 	Updated fonts/harfbuzz to 1.8.0 [wiz 2018-06-17]
 	Updated net/libfilezilla to 0.12.3 [wiz 2018-06-17]
+	Updated net/tor to 0.3.3.7 [wiz 2018-06-17]
