@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/02/20 10:00:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/06/17 08:39:43 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -26,6 +26,9 @@ ${PYSITELIB}/requests_oauthlib/compliance_fixes/linkedin.pyo
 ${PYSITELIB}/requests_oauthlib/compliance_fixes/mailchimp.py
 ${PYSITELIB}/requests_oauthlib/compliance_fixes/mailchimp.pyc
 ${PYSITELIB}/requests_oauthlib/compliance_fixes/mailchimp.pyo
+${PYSITELIB}/requests_oauthlib/compliance_fixes/plentymarkets.py
+${PYSITELIB}/requests_oauthlib/compliance_fixes/plentymarkets.pyc
+${PYSITELIB}/requests_oauthlib/compliance_fixes/plentymarkets.pyo
 ${PYSITELIB}/requests_oauthlib/compliance_fixes/slack.py
 ${PYSITELIB}/requests_oauthlib/compliance_fixes/slack.pyc
 ${PYSITELIB}/requests_oauthlib/compliance_fixes/slack.pyo
