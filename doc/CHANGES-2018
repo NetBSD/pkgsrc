@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2850 2018/06/17 08:14:33 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2851 2018/06/17 08:19:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4063,3 +4063,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/go-blackfriday to 1.5.1 [minskim 2018-06-17]
 	Updated net/syncthing to 0.14.48 [wiz 2018-06-17]
 	Updated x11/xkeyboard-config to 2.24 [wiz 2018-06-17]
+	Updated misc/calibre to 3.26.1 [wiz 2018-06-17]
