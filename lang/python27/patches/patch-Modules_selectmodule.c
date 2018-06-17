@@ -1,4 +1,4 @@
-$NetBSD: patch-az,v 1.5 2015/04/24 03:01:36 rodent Exp $
+$NetBSD: patch-Modules_selectmodule.c,v 1.1 2018/06/17 19:21:21 adam Exp $
 
 --- Modules/selectmodule.c.orig	2014-12-10 15:59:55.000000000 +0000
 +++ Modules/selectmodule.c

@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2015/12/05 17:12:13 adam Exp $
+@comment $NetBSD: PLIST.Linux,v 1.2 2018/06/17 19:21:22 adam Exp $
 lib/python${PY_VER_SUFFIX}/lib-dynload/ossaudiodev.so
+lib/python${PY_VER_SUFFIX}/lib-dynload/spwd.so
 lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDROM.py
 lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDROM.pyc
 lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDROM.pyo

@@ -1,17 +1,14 @@
-$NetBSD: patch-al,v 1.6 2017/05/30 14:04:53 bouyer Exp $
+$NetBSD: patch-configure,v 1.1 2018/06/17 19:21:21 adam Exp $
 
-MirBSD support
-http://bugs.python.org/issue21458
+- recognize MirBSD, Interix
+- remove special-case library version hack for FreeBSD
+- don't set Mac OS X target version: stick to the current one
+- honor pkgsrc LDFLAGS
+- other stuff not previously commented (XXX)
 
-Changes for consistency across pkgsrc platforms.
-
-XXX: Not sure what the BLDSHARED changes are about.
-
-detect netcan/can.h on NetBSD
-
---- configure.orig	2017-01-17 08:57:47.000000000 +0100
-+++ configure	2017-05-30 15:49:43.508649775 +0200
-@@ -3369,7 +3369,7 @@
+--- configure.orig	2018-04-29 22:47:33.000000000 +0000
++++ configure
+@@ -3356,7 +3356,7 @@ case $ac_sys_system/$ac_sys_release in
    # Reconfirmed for OpenBSD 3.3 by Zachary Hamm, for 3.4 by Jason Ish.
    # In addition, Stefan Krah confirms that issue #1244610 exists through
    # OpenBSD 4.6, but is fixed in 4.7.
@@ -20,14 +17,14 @@ detect netcan/can.h on NetBSD
      define_xopen_source=no
      # OpenBSD undoes our definition of __BSD_VISIBLE if _XOPEN_SOURCE is
      # also defined. This can be overridden by defining _BSD_SOURCE
-@@ -5650,15 +5650,10 @@
- 	      PY3LIBRARY=libpython3.so
- 	  fi
+@@ -5481,15 +5481,10 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
+ 	  RUNSHARED=LD_LIBRARY_PATH=`pwd`${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+ 	  INSTSONAME="$LDLIBRARY".$SOVERSION
            ;;
 -    Linux*|GNU*|NetBSD*|FreeBSD*|DragonFly*|OpenBSD*)
-+    Linux*|GNU*|NetBSD*|FreeBSD*|DragonFly*|OpenBSD*|MirBSD*)
- 	  LDLIBRARY='libpython$(LDVERSION).so'
- 	  BLDLIBRARY='-L. -lpython$(LDVERSION)'
++    Linux*|GNU*|NetBSD*|FreeBSD*|DragonFly*|OpenBSD*|Interix*|MirBSD*)
+ 	  LDLIBRARY='libpython$(VERSION).so'
+ 	  BLDLIBRARY='-L. -lpython$(VERSION)'
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 -	  case $ac_sys_system in
 -	      FreeBSD*)
@@ -35,29 +32,45 @@ detect netcan/can.h on NetBSD
 -		;;
 -	  esac
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
- 	  if test "$with_pydebug" != yes
-           then
-@@ -7283,7 +7278,7 @@
+ 	  ;;
+     hp*|HP*)
+@@ -5523,6 +5518,11 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
+ 	LDLIBRARY='libpython$(VERSION).so'
+ 	RUNSHARED=LIBPATH=`pwd`${LIBPATH:+:${LIBPATH}}
+ 	;;
++    SCO_SV*)
++	LDLIBRARY='libpython$(VERSION).so'
++	RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
++	INSTSONAME="$LDLIBRARY".$SOVERSION
++	;;
  
- 
- # On Linux, can.h and can/raw.h require sys/socket.h
--for ac_header in linux/can.h linux/can/raw.h linux/can/bcm.h
-+for ac_header in linux/can.h linux/can/raw.h linux/can/bcm.h netcan/can.h
- do :
-   as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
- ac_fn_c_check_header_compile "$LINENO" "$ac_header" "$as_ac_Header" "
-@@ -8561,8 +8556,8 @@
+   esac
+ else # shared is disabled
+@@ -6193,9 +6193,7 @@ $as_echo_n "checking which MACOSX_DEPLOY
+         cur_target_minor=`sw_vers -productVersion | \
+                 sed 's/\([0-9]*\)\.\([0-9]*\).*/\2/'`
+         cur_target="${cur_target_major}.${cur_target_minor}"
+-        if test ${cur_target_major} -eq 10 && \
+-           test ${cur_target_minor} -ge 3 && \
+-           test ${cur_target_minor} -le 5
++        if false
+         then
+             # OS X 10.3 through 10.5
+             cur_target=10.3
+@@ -8617,9 +8615,9 @@ then
  			LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  		else
  			# No framework, use the Python app as bundle-loader
 -			BLDSHARED="$LDSHARED "'-bundle_loader $(BUILDPYTHON)'
 -			LDSHARED="$LDSHARED "'-bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
+-			LDCXXSHARED="$LDCXXSHARED "'-bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
 +			BLDSHARED="$LDSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BUILDPYTHON)'
 +			LDSHARED="$LDSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
- 			LDCXXSHARED="$LDCXXSHARED "'-bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
++			LDCXXSHARED="$LDCXXSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
  		fi ;;
  	Darwin/*)
-@@ -8586,9 +8581,9 @@
+ 		# Use -undefined dynamic_lookup whenever possible (10.3 and later).
+@@ -8642,9 +8640,9 @@ then
  				LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  			else
  				# No framework, use the Python app as bundle-loader
@@ -70,7 +83,16 @@ detect netcan/can.h on NetBSD
  			fi
  		else
  			# building for OS X 10.3 and later
-@@ -8627,6 +8622,9 @@
+@@ -8655,7 +8653,7 @@ then
+ 		;;
+ 	Linux*|GNU*|QNX*)
+ 		LDSHARED='$(CC) -shared'
+-		LDCXXSHARED='$(CXX) -shared';;
++		LDCXXSHARED='$(CXX) -shared'" ${LDFLAGS}";;
+ 	BSD/OS*/4*)
+ 		LDSHARED="gcc -shared"
+ 		LDCXXSHARED="g++ -shared";;
+@@ -8683,6 +8681,9 @@ then
  				   ;;
  				esac
  		fi;;
@@ -80,16 +102,17 @@ detect netcan/can.h on NetBSD
  	NetBSD*|DragonFly*)
  		LDSHARED='$(CC) -shared'
  		LDCXXSHARED='$(CXX) -shared';;
-@@ -8670,7 +8668,7 @@
+@@ -8729,7 +8730,8 @@ then
  		 fi;;
  	Linux*|GNU*) CCSHARED="-fPIC";;
  	BSD/OS*/4*) CCSHARED="-fpic";;
 -	FreeBSD*|NetBSD*|OpenBSD*|DragonFly*) CCSHARED="-fPIC";;
 +	FreeBSD*|NetBSD*|OpenBSD*|MirBSD*|DragonFly*) CCSHARED="-fPIC";;
++	Interix*) CCSHARED="";;
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then CCSHARED="-fPIC"
-@@ -8719,7 +8717,7 @@
+@@ -8781,11 +8783,12 @@ then
  	OpenUNIX*|UnixWare*) LINKFORSHARED="-Wl,-Bexport";;
  	SCO_SV*) LINKFORSHARED="-Wl,-Bexport";;
  	ReliantUNIX*) LINKFORSHARED="-W1 -Blargedynsym";;
@@ -98,12 +121,19 @@ detect netcan/can.h on NetBSD
  		if [ "`$CC -dM -E - </dev/null | grep __ELF__`" != "" ]
  		then
  			LINKFORSHARED="-Wl,--export-dynamic"
-@@ -14017,8 +14015,6 @@
- 
- 
- case $ac_sys_system in
--    Linux*|GNU*)
--	EXT_SUFFIX=.${SOABI}${SHLIB_SUFFIX};;
-     *)
- 	EXT_SUFFIX=${SHLIB_SUFFIX};;
- esac
+ 		fi;;
++	Interix*) LINKFORSHARED="-Wl,-E";;
+ 	SunOS/5*) case $CC in
+ 		  *gcc*)
+ 		    if $CC -Xlinker --help 2>&1 | grep export-dynamic >/dev/null
+@@ -10798,6 +10801,10 @@ int
+ main ()
+ {
+ int x=kqueue()
++/* SCO OpenServer 5.0.7/3.2 has not kqueue, but detected as yes. */
++#if defined(_SCO_DS)
++#error no kqueue
++#endif
+   ;
+   return 0;
+ }

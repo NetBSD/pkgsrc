@@ -1,4 +1,6 @@
-$NetBSD: patch-aw,v 1.3 2015/04/24 03:01:36 rodent Exp $
+$NetBSD: patch-Modules_nismodule.c,v 1.1 2018/06/17 19:21:21 adam Exp $
+
+Add DragonFly support.
 
 --- Modules/nismodule.c.orig	2014-12-10 15:59:55.000000000 +0000
 +++ Modules/nismodule.c

@@ -1,4 +1,4 @@
-$NetBSD: patch-av,v 1.1 2014/05/09 02:27:14 wen Exp $
+$NetBSD: patch-Lib_distutils_command_install.py,v 1.1 2018/06/17 19:21:21 adam Exp $
 
 --- Lib/distutils/command/install.py.orig	2012-02-23 20:22:44.000000000 +0000
 +++ Lib/distutils/command/install.py
