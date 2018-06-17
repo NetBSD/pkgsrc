@@ -1,0 +1,32 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2018/06/17 16:33:36 minskim Exp $
+
+- Set shared library versions.
+- Change the configuration file location.
+
+--- src/CMakeLists.txt.orig	2018-05-21 16:59:19.000000000 +0000
++++ src/CMakeLists.txt
+@@ -194,7 +194,9 @@ if(NOT FLB_WITHOUT_SHARED_LIB)
+   add_library(fluent-bit-shared SHARED ${src})
+   target_link_libraries(fluent-bit-shared ${FLB_DEPS} -lpthread)
+   set_target_properties(fluent-bit-shared
+-    PROPERTIES OUTPUT_NAME fluent-bit)
++    PROPERTIES OUTPUT_NAME fluent-bit
++    VERSION ${FLB_VERSION_STR}
++    SOVERSION ${FLB_VERSION_MAJOR})
+ 
+   # Library install routines
+   install(TARGETS fluent-bit-shared LIBRARY DESTINATION lib)
+@@ -255,11 +257,11 @@ if(NOT FLB_WITHOUT_BIN)
+ 
+   install(FILES
+     "${PROJECT_SOURCE_DIR}/conf/fluent-bit.conf"
+-    DESTINATION "${CMAKE_INSTALL_SYSCONFDIR}/${FLB_OUT_NAME}/"
++    DESTINATION "${EGDIR}/"
+     RENAME "${FLB_OUT_NAME}.conf")
+ 
+   install(FILES
+     "${PROJECT_SOURCE_DIR}/conf/parsers.conf"
+-    DESTINATION "${CMAKE_INSTALL_SYSCONFDIR}/${FLB_OUT_NAME}/")
++    DESTINATION "${EGDIR}/")
+ 
+ endif()
