@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.64 2018/06/03 22:27:02 leot Exp $
+@comment $NetBSD: PLIST,v 1.65 2018/06/18 18:00:52 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -605,6 +605,9 @@ ${PYSITELIB}/youtube_dl/extractor/everyonesmixtape.pyo
 ${PYSITELIB}/youtube_dl/extractor/expotv.py
 ${PYSITELIB}/youtube_dl/extractor/expotv.pyc
 ${PYSITELIB}/youtube_dl/extractor/expotv.pyo
+${PYSITELIB}/youtube_dl/extractor/expressen.py
+${PYSITELIB}/youtube_dl/extractor/expressen.pyc
+${PYSITELIB}/youtube_dl/extractor/expressen.pyo
 ${PYSITELIB}/youtube_dl/extractor/extractors.py
 ${PYSITELIB}/youtube_dl/extractor/extractors.pyc
 ${PYSITELIB}/youtube_dl/extractor/extractors.pyo
@@ -1055,6 +1058,9 @@ ${PYSITELIB}/youtube_dl/extractor/mangomolo.pyo
 ${PYSITELIB}/youtube_dl/extractor/manyvids.py
 ${PYSITELIB}/youtube_dl/extractor/manyvids.pyc
 ${PYSITELIB}/youtube_dl/extractor/manyvids.pyo
+${PYSITELIB}/youtube_dl/extractor/markiza.py
+${PYSITELIB}/youtube_dl/extractor/markiza.pyc
+${PYSITELIB}/youtube_dl/extractor/markiza.pyo
 ${PYSITELIB}/youtube_dl/extractor/massengeschmacktv.py
 ${PYSITELIB}/youtube_dl/extractor/massengeschmacktv.pyc
 ${PYSITELIB}/youtube_dl/extractor/massengeschmacktv.pyo
@@ -1976,6 +1982,9 @@ ${PYSITELIB}/youtube_dl/extractor/tvland.pyo
 ${PYSITELIB}/youtube_dl/extractor/tvn24.py
 ${PYSITELIB}/youtube_dl/extractor/tvn24.pyc
 ${PYSITELIB}/youtube_dl/extractor/tvn24.pyo
+${PYSITELIB}/youtube_dl/extractor/tvnet.py
+${PYSITELIB}/youtube_dl/extractor/tvnet.pyc
+${PYSITELIB}/youtube_dl/extractor/tvnet.pyo
 ${PYSITELIB}/youtube_dl/extractor/tvnoe.py
 ${PYSITELIB}/youtube_dl/extractor/tvnoe.pyc
 ${PYSITELIB}/youtube_dl/extractor/tvnoe.pyo
