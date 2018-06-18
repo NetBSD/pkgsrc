@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2892 2018/06/18 14:42:06 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2893 2018/06/18 14:48:03 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4122,3 +4122,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-flakes to 2.0.0 [adam 2018-06-18]
 	Updated devel/py-flake8 to 3.5.0nb2 [adam 2018-06-18]
 	Updated devel/p5-Glib-Object-Introspection to 0.045 [wen 2018-06-18]
+	Updated devel/p5-Hash-MoreUtils to 0.06 [wen 2018-06-18]
