@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2018/06/18 09:43:12 leot Exp $
+
+Do not use bundled sqlite3.
+
+--- configure.orig	2018-02-09 20:31:52.000000000 +0000
++++ configure
+@@ -16261,7 +16261,7 @@ $as_echo_n "checking for sqlite3 support
+ # Check whether --with-sqlite3 was given.
+ if test "${with_sqlite3+set}" = set; then :
+   withval=$with_sqlite3;
+-	#LDFLAGS="$LDFLAGS -lsqlite3"
++	LDFLAGS="$LDFLAGS -lsqlite3"
+ 
+ $as_echo "#define USE_SQLITE3 1" >>confdefs.h
+ 
