@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2890 2018/06/18 11:00:39 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.2891 2018/06/18 11:18:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4119,3 +4119,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-cheroot to 6.3.2 [adam 2018-06-18]
 	Updated www/py-cherrypy to 16.0.0 [adam 2018-06-18]
 	Updated net/ucspi-ssl to 0.99d [schmonz 2018-06-18]
+	Updated devel/py-flakes to 2.0.0 [adam 2018-06-18]
+	Updated devel/py-flake8 to 3.5.0nb2 [adam 2018-06-18]
