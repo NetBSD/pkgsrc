@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2879 2018/06/18 07:15:52 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2880 2018/06/18 07:27:30 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4105,3 +4105,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/py-amqp to 2.3.2 [adam 2018-06-18]
 	Updated net/py-kombu to 4.2.1 [adam 2018-06-18]
 	Updated net/py-celery to 4.2.0 [adam 2018-06-18]
+	Updated devel/p5-CPAN-Perl-Releases to 3.60 [wen 2018-06-18]
