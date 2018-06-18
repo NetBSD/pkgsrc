@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2018/05/23 09:33:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2018/06/18 10:54:17 adam Exp $
 bin/cherryd-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -67,9 +67,6 @@ ${PYSITELIB}/cherrypy/favicon.ico
 ${PYSITELIB}/cherrypy/lib/__init__.py
 ${PYSITELIB}/cherrypy/lib/__init__.pyc
 ${PYSITELIB}/cherrypy/lib/__init__.pyo
-${PYSITELIB}/cherrypy/lib/auth.py
-${PYSITELIB}/cherrypy/lib/auth.pyc
-${PYSITELIB}/cherrypy/lib/auth.pyo
 ${PYSITELIB}/cherrypy/lib/auth_basic.py
 ${PYSITELIB}/cherrypy/lib/auth_basic.pyc
 ${PYSITELIB}/cherrypy/lib/auth_basic.pyo
@@ -94,9 +91,6 @@ ${PYSITELIB}/cherrypy/lib/encoding.pyo
 ${PYSITELIB}/cherrypy/lib/gctools.py
 ${PYSITELIB}/cherrypy/lib/gctools.pyc
 ${PYSITELIB}/cherrypy/lib/gctools.pyo
-${PYSITELIB}/cherrypy/lib/httpauth.py
-${PYSITELIB}/cherrypy/lib/httpauth.pyc
-${PYSITELIB}/cherrypy/lib/httpauth.pyo
 ${PYSITELIB}/cherrypy/lib/httputil.py
 ${PYSITELIB}/cherrypy/lib/httputil.pyc
 ${PYSITELIB}/cherrypy/lib/httputil.pyo
@@ -246,12 +240,18 @@ ${PYSITELIB}/cherrypy/test/test_mime.pyo
 ${PYSITELIB}/cherrypy/test/test_misc_tools.py
 ${PYSITELIB}/cherrypy/test/test_misc_tools.pyc
 ${PYSITELIB}/cherrypy/test/test_misc_tools.pyo
+${PYSITELIB}/cherrypy/test/test_native.py
+${PYSITELIB}/cherrypy/test/test_native.pyc
+${PYSITELIB}/cherrypy/test/test_native.pyo
 ${PYSITELIB}/cherrypy/test/test_objectmapping.py
 ${PYSITELIB}/cherrypy/test/test_objectmapping.pyc
 ${PYSITELIB}/cherrypy/test/test_objectmapping.pyo
 ${PYSITELIB}/cherrypy/test/test_params.py
 ${PYSITELIB}/cherrypy/test/test_params.pyc
 ${PYSITELIB}/cherrypy/test/test_params.pyo
+${PYSITELIB}/cherrypy/test/test_plugins.py
+${PYSITELIB}/cherrypy/test/test_plugins.pyc
+${PYSITELIB}/cherrypy/test/test_plugins.pyo
 ${PYSITELIB}/cherrypy/test/test_proxy.py
 ${PYSITELIB}/cherrypy/test/test_proxy.pyc
 ${PYSITELIB}/cherrypy/test/test_proxy.pyo
