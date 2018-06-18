@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2899 2018/06/18 18:01:05 leot Exp $
+$NetBSD: CHANGES-2018,v 1.2900 2018/06/18 20:46:55 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4129,3 +4129,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/pear-Crypt_GPG to 1.6.3 [taca 2018-06-18]
 	Updated devel/p5-Log-Report to 1.27 [wen 2018-06-18]
 	Updated net/youtube-dl to 20180618 [leot 2018-06-18]
+	Added archivers/go-xz version 0.5.4 [minskim 2018-06-18]
