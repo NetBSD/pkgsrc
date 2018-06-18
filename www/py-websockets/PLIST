@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2017/11/03 11:17:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/06/18 10:46:26 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/websockets/__init__.py
 ${PYSITELIB}/websockets/__init__.pyc
 ${PYSITELIB}/websockets/__init__.pyo
