@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1329 2018/06/05 16:17:46 jaapb Exp $
+# $NetBSD: Makefile,v 1.1330 2018/06/18 02:14:42 wen Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -372,6 +372,7 @@ SUBDIR+=	p5-HTMLObject
 SUBDIR+=	p5-HTTP-Async
 SUBDIR+=	p5-HTTP-Body
 SUBDIR+=	p5-HTTP-Cache-Transparent
+SUBDIR+=	p5-HTTP-CookieJar
 SUBDIR+=	p5-HTTP-CookieMonster
 SUBDIR+=	p5-HTTP-Cookies
 SUBDIR+=	p5-HTTP-DAV
