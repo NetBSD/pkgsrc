@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.157 2017/11/03 20:07:12 bsiegert Exp $
+# $NetBSD: Makefile,v 1.158 2018/06/18 20:46:49 minskim Exp $
 #
 
 COMMENT=	Archivers
@@ -26,6 +26,7 @@ SUBDIR+=	fcrackzip
 SUBDIR+=	file-roller
 SUBDIR+=	freeze
 SUBDIR+=	gcpio
+SUBDIR+=	go-xz
 SUBDIR+=	gsharutils
 SUBDIR+=	gtar
 SUBDIR+=	gtar-base
