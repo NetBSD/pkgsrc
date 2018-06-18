@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2875 2018/06/17 19:52:32 maya Exp $
+$NetBSD: CHANGES-2018,v 1.2876 2018/06/18 02:16:47 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4097,3 +4097,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/python36 to 3.6.5nb1 [adam 2018-06-17]
 	Removed devel/py-spwd [adam 2018-06-17]
 	Updated lang/gcc7 to 7.3.0nb2 [maya 2018-06-17]
+	Added www/p5-HTTP-CookieJar version 0.008 [wen 2018-06-18]
