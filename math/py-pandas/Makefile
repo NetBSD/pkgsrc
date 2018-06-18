@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2018/05/30 07:56:30 adam Exp $
+# $NetBSD: Makefile,v 1.23 2018/06/18 07:08:23 adam Exp $
 
-DISTNAME=	pandas-0.23.0
+DISTNAME=	pandas-0.23.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pandas/}
@@ -11,7 +11,7 @@ COMMENT=	Python Data Analysis Library
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-bottleneck-[0-9]*:../../math/py-bottleneck
-DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
+DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.5.0:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-numexpr-[0-9]*:../../math/py-numexpr
 DEPENDS+=	${PYPKGPREFIX}-pytables>=2.2:../../math/py-pytables
