@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2885 2018/06/18 09:43:26 leot Exp $
+$NetBSD: CHANGES-2018,v 1.2886 2018/06/18 10:45:00 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4112,3 +4112,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-psycopg2 to 2.7.5 [adam 2018-06-18]
 	Updated devel/py-deprecation to 2.0.3 [adam 2018-06-18]
 	Updated devel/global to 6.6.2nb2 [leot 2018-06-18]
+	Updated net/djbdns to 1.05nb13 [schmonz 2018-06-18]
