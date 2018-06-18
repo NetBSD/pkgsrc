@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2883 2018/06/18 07:43:34 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2884 2018/06/18 07:51:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4109,3 +4109,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-CPANPLUS to 0.9176 [wen 2018-06-18]
 	Updated devel/p5-Devel-Hide to 0.0010 [wen 2018-06-18]
 	Updated devel/p5-FFI-CheckLib to 0.20 [wen 2018-06-18]
+	Updated databases/py-psycopg2 to 2.7.5 [adam 2018-06-18]
+	Updated devel/py-deprecation to 2.0.3 [adam 2018-06-18]
