@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2016/12/15 12:04:20 schmonz Exp $
+# $NetBSD: options.mk,v 1.19 2018/06/18 10:44:38 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.djbdns
 PKG_SUPPORTED_OPTIONS+=		# inet6
@@ -6,23 +6,19 @@ PKG_SUPPORTED_OPTIONS+=		djbdns-cachestats djbdns-ignoreip2
 PKG_SUPPORTED_OPTIONS+=		djbdns-tinydns64
 PKG_OPTIONS_OPTIONAL_GROUPS=	qmerge
 PKG_OPTIONS_GROUP.qmerge=	djbdns-qmerge1 djbdns-qmerge2
-PKG_SUGGESTED_OPTIONS+=		djbdns-qmerge2
-
-
-.if ${MACHINE_ARCH} == "sparc64" || \
-	${MACHINE_ARCH} == "alpha" || \
-	${MACHINE_ARCH} == "x86_64"
-PKG_SUGGESTED_OPTIONS+=   djbdns-tinydns64
-.endif
+PKG_SUGGESTED_OPTIONS+=		djbdns-qmerge2 djbdns-tinydns64
 
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=			inet6
 #.if !empty(PKG_OPTIONS:Minet6)
-#IPV6_PATCH=			djbdns-1.05-test27.diff.bz2
+#IPV6_PATCH=			djbdns-1.05-test28.diff.xz
 #PATCHFILES+=			${IPV6_PATCH}
 #SITES.${IPV6_PATCH}=		http://www.fefe.de/dns/
+#USE_TOOLS+=			xzcat
+#PATCH_DIST_CAT.${IPV6_PATCH}=	xzcat < ${IPV6_PATCH}
 #PATCH_DIST_STRIP.${IPV6_PATCH}=	-p1
+#MAKE_JOBS_SAFE=			no
 #PLIST.inet6=			yes
 #.endif
 
