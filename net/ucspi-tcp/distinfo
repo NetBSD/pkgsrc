@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2017/01/04 02:14:12 schmonz Exp $
+$NetBSD: distinfo,v 1.12 2018/06/18 10:54:30 schmonz Exp $
 
 SHA1 (rblsmtpd-nodefaultrbl.patch) = 5d6048b5928257c13ff5cbcddb40ed0eee9997c0
 RMD160 (rblsmtpd-nodefaultrbl.patch) = fa93dd4522ccc77c5b43d0a79f741ae2ab54f075
@@ -16,4 +16,4 @@ SHA1 (ucspi-tcp-0.88.tar.gz) = 793b4189795b563085602c030dd8aa0d206ddc0e
 RMD160 (ucspi-tcp-0.88.tar.gz) = eb20085ea6ffd5d137a805f7c8768e0312c1f56a
 SHA512 (ucspi-tcp-0.88.tar.gz) = 44efbd477dacf31d39fc970e2d2f74526dc815b905742f6127f0d5c80928ecc7e743089eaab0492386a58d5b97905113fbe8bbc7214ae179b7be27966b7566c7
 Size (ucspi-tcp-0.88.tar.gz) = 53019 bytes
-SHA1 (patch-aa) = 8b0a1fdadec118e1647cd422f6d09fcd60b5f813
+SHA1 (patch-Makefile) = ff965829c788c9cfe52bee4d8fd527213dc954d3
