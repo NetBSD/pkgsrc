@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2018/04/14 08:46:28 adam Exp $
+# $NetBSD: Makefile,v 1.6 2018/06/18 07:47:40 adam Exp $
 
-DISTNAME=	deprecation-2.0.2
+DISTNAME=	deprecation-2.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/deprecation/}
