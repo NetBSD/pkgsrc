@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/04/23 14:30:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/06/18 15:01:46 taca Exp $
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/ace/README.md
 ${CT_WEBDIR}/assets/ace/composer.json
@@ -432,7 +432,6 @@ ${CT_WEBDIR}/assets/tinymce4/js/langs/nl.js
 ${CT_WEBDIR}/assets/tinymce4/js/langs/pl.js
 ${CT_WEBDIR}/assets/tinymce4/js/langs/ru.js
 ${CT_WEBDIR}/assets/tinymce4/js/langs/sl_SI.js
-${CT_WEBDIR}/assets/tinymce4/js/langs/sr.js
 ${CT_WEBDIR}/assets/tinymce4/js/langs/zh_CN.js
 ${CT_WEBDIR}/assets/tinymce4/js/plugins/autosave/plugin.min.js
 ${CT_WEBDIR}/assets/tinymce4/js/plugins/charmap/plugin.min.js
@@ -1040,6 +1039,11 @@ ${CT_WEBDIR}/vendor/contao/comments-bundle/src/Resources/contao/languages/pl/mod
 ${CT_WEBDIR}/vendor/contao/comments-bundle/src/Resources/contao/languages/pl/tl_comments.xlf
 ${CT_WEBDIR}/vendor/contao/comments-bundle/src/Resources/contao/languages/pl/tl_content.xlf
 ${CT_WEBDIR}/vendor/contao/comments-bundle/src/Resources/contao/languages/pl/tl_module.xlf
+${CT_WEBDIR}/vendor/contao/comments-bundle/src/Resources/contao/languages/pt/default.xlf
+${CT_WEBDIR}/vendor/contao/comments-bundle/src/Resources/contao/languages/pt/modules.xlf
+${CT_WEBDIR}/vendor/contao/comments-bundle/src/Resources/contao/languages/pt/tl_comments.xlf
+${CT_WEBDIR}/vendor/contao/comments-bundle/src/Resources/contao/languages/pt/tl_content.xlf
+${CT_WEBDIR}/vendor/contao/comments-bundle/src/Resources/contao/languages/pt/tl_module.xlf
 ${CT_WEBDIR}/vendor/contao/comments-bundle/src/Resources/contao/languages/ru/default.xlf
 ${CT_WEBDIR}/vendor/contao/comments-bundle/src/Resources/contao/languages/ru/modules.xlf
 ${CT_WEBDIR}/vendor/contao/comments-bundle/src/Resources/contao/languages/ru/tl_comments.xlf
@@ -1730,6 +1734,34 @@ ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/ru/tl_them
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/ru/tl_undo.xlf
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/ru/tl_user.xlf
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/ru/tl_user_group.xlf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/sl/countries.xlf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/sl/default.xlf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/sl/exception.xlf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/sl/explain.xlf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/sl/languages.xlf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/sl/modules.xlf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/sl/tl_article.xlf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/sl/tl_content.xlf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/sl/tl_files.xlf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/sl/tl_form.xlf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/sl/tl_form_field.xlf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/sl/tl_image_size.xlf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/sl/tl_image_size_item.xlf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/sl/tl_layout.xlf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/sl/tl_log.xlf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/sl/tl_maintenance.xlf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/sl/tl_member.xlf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/sl/tl_member_group.xlf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/sl/tl_module.xlf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/sl/tl_page.xlf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/sl/tl_settings.xlf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/sl/tl_style.xlf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/sl/tl_style_sheet.xlf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/sl/tl_templates.xlf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/sl/tl_theme.xlf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/sl/tl_undo.xlf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/sl/tl_user.xlf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/sl/tl_user_group.xlf
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/sr/countries.xlf
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/sr/default.xlf
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/languages/sr/exception.xlf
@@ -2752,13 +2784,13 @@ ${CT_WEBDIR}/vendor/contao/image/src/ResizerInterface.php
 ${CT_WEBDIR}/vendor/contao/imagine-svg/.editorconfig
 ${CT_WEBDIR}/vendor/contao/imagine-svg/.gitignore
 ${CT_WEBDIR}/vendor/contao/imagine-svg/.php_cs.dist
-${CT_WEBDIR}/vendor/contao/imagine-svg/.scrutinizer.yml
 ${CT_WEBDIR}/vendor/contao/imagine-svg/.travis.yml
 ${CT_WEBDIR}/vendor/contao/imagine-svg/CHANGELOG.md
 ${CT_WEBDIR}/vendor/contao/imagine-svg/README.md
 ${CT_WEBDIR}/vendor/contao/imagine-svg/appveyor.yml
 ${CT_WEBDIR}/vendor/contao/imagine-svg/composer.json
 ${CT_WEBDIR}/vendor/contao/imagine-svg/phpunit.xml.dist
+${CT_WEBDIR}/vendor/contao/imagine-svg/src/Effects.php
 ${CT_WEBDIR}/vendor/contao/imagine-svg/src/Image.php
 ${CT_WEBDIR}/vendor/contao/imagine-svg/src/Imagine.php
 ${CT_WEBDIR}/vendor/contao/imagine-svg/src/RelativeBox.php
@@ -2812,6 +2844,7 @@ ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messag
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.nl.xlf
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.pl.xlf
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.ru.xlf
+${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.sl.xlf
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.tr.xlf
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.zh.xlf
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/views/configuration_error.html.twig
@@ -2950,6 +2983,8 @@ ${CT_WEBDIR}/vendor/contao/manager-bundle/src/Routing/RouteLoader.php
 ${CT_WEBDIR}/vendor/contao/manager-plugin/.gitignore
 ${CT_WEBDIR}/vendor/contao/manager-plugin/.php_cs.dist
 ${CT_WEBDIR}/vendor/contao/manager-plugin/.travis.yml
+${CT_WEBDIR}/vendor/contao/manager-plugin/CONTRIBUTORS.md
+${CT_WEBDIR}/vendor/contao/manager-plugin/LICENSE
 ${CT_WEBDIR}/vendor/contao/manager-plugin/README.md
 ${CT_WEBDIR}/vendor/contao/manager-plugin/composer.json
 ${CT_WEBDIR}/vendor/contao/manager-plugin/phpunit.xml.dist
@@ -2979,8 +3014,6 @@ ${CT_WEBDIR}/vendor/contao/news-bundle/.php_cs.dist
 ${CT_WEBDIR}/vendor/contao/news-bundle/.travis.yml
 ${CT_WEBDIR}/vendor/contao/news-bundle/.tx/config
 ${CT_WEBDIR}/vendor/contao/news-bundle/CHANGELOG.md
-${CT_WEBDIR}/vendor/contao/news-bundle/CONTRIBUTORS.md
-${CT_WEBDIR}/vendor/contao/news-bundle/LICENSE
 ${CT_WEBDIR}/vendor/contao/news-bundle/README.md
 ${CT_WEBDIR}/vendor/contao/news-bundle/UPGRADE.md
 ${CT_WEBDIR}/vendor/contao/news-bundle/appveyor.yml
@@ -3099,15 +3132,6 @@ ${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/pl/tl_news
 ${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/pl/tl_news_feed.xlf
 ${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/pl/tl_user.xlf
 ${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/pl/tl_user_group.xlf
-${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/pt/default.xlf
-${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/pt/modules.xlf
-${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/pt/tl_layout.xlf
-${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/pt/tl_module.xlf
-${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/pt/tl_news.xlf
-${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/pt/tl_news_archive.xlf
-${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/pt/tl_news_feed.xlf
-${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/pt/tl_user.xlf
-${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/pt/tl_user_group.xlf
 ${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/ru/default.xlf
 ${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/ru/modules.xlf
 ${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/ru/tl_layout.xlf
@@ -3176,8 +3200,6 @@ ${CT_WEBDIR}/vendor/contao/newsletter-bundle/.gitignore
 ${CT_WEBDIR}/vendor/contao/newsletter-bundle/.php_cs.dist
 ${CT_WEBDIR}/vendor/contao/newsletter-bundle/.tx/config
 ${CT_WEBDIR}/vendor/contao/newsletter-bundle/CHANGELOG.md
-${CT_WEBDIR}/vendor/contao/newsletter-bundle/CONTRIBUTORS.md
-${CT_WEBDIR}/vendor/contao/newsletter-bundle/LICENSE
 ${CT_WEBDIR}/vendor/contao/newsletter-bundle/README.md
 ${CT_WEBDIR}/vendor/contao/newsletter-bundle/UPGRADE.md
 ${CT_WEBDIR}/vendor/contao/newsletter-bundle/composer.json
@@ -3286,15 +3308,6 @@ ${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/pl/t
 ${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/pl/tl_newsletter_recipients.xlf
 ${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/pl/tl_user.xlf
 ${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/pl/tl_user_group.xlf
-${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/pt/default.xlf
-${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/pt/modules.xlf
-${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/pt/tl_member.xlf
-${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/pt/tl_module.xlf
-${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/pt/tl_newsletter.xlf
-${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/pt/tl_newsletter_channel.xlf
-${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/pt/tl_newsletter_recipients.xlf
-${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/pt/tl_user.xlf
-${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/pt/tl_user_group.xlf
 ${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/ru/default.xlf
 ${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/ru/modules.xlf
 ${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/ru/tl_member.xlf
@@ -3750,7 +3763,6 @@ ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/VarDateTimeImmutableTy
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/VarDateTimeType.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Version.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/VersionAwarePlatformDriver.php
-${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/Changelog.md
 ${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/Command/CreateDatabaseDoctrineCommand.php
 ${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/Command/DoctrineCommand.php
 ${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/Command/DropDatabaseDoctrineCommand.php
@@ -3802,6 +3814,7 @@ ${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.h
 ${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/Resources/views/Collector/icon.svg
 ${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/Twig/DoctrineExtension.php
 ${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/composer.json
+${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/phpcs.xml.dist
 ${CT_WEBDIR}/vendor/doctrine/doctrine-cache-bundle/.coveralls.yml
 ${CT_WEBDIR}/vendor/doctrine/doctrine-cache-bundle/.gitignore
 ${CT_WEBDIR}/vendor/doctrine/doctrine-cache-bundle/.travis.yml
@@ -3938,6 +3951,7 @@ ${CT_WEBDIR}/vendor/friendsofsymfony/http-cache-bundle/src/Configuration/Invalid
 ${CT_WEBDIR}/vendor/friendsofsymfony/http-cache-bundle/src/Configuration/Tag.php
 ${CT_WEBDIR}/vendor/friendsofsymfony/http-cache-bundle/src/DependencyInjection/Compiler/HashGeneratorPass.php
 ${CT_WEBDIR}/vendor/friendsofsymfony/http-cache-bundle/src/DependencyInjection/Compiler/LoggerPass.php
+${CT_WEBDIR}/vendor/friendsofsymfony/http-cache-bundle/src/DependencyInjection/Compiler/SessionListenerRemovePass.php
 ${CT_WEBDIR}/vendor/friendsofsymfony/http-cache-bundle/src/DependencyInjection/Compiler/TagListenerPass.php
 ${CT_WEBDIR}/vendor/friendsofsymfony/http-cache-bundle/src/DependencyInjection/Configuration.php
 ${CT_WEBDIR}/vendor/friendsofsymfony/http-cache-bundle/src/DependencyInjection/FOSHttpCacheExtension.php
@@ -4017,6 +4031,7 @@ ${CT_WEBDIR}/vendor/friendsofsymfony/http-cache/src/Exception/MissingHostExcepti
 ${CT_WEBDIR}/vendor/friendsofsymfony/http-cache/src/Exception/ProxyResponseException.php
 ${CT_WEBDIR}/vendor/friendsofsymfony/http-cache/src/Exception/ProxyUnreachableException.php
 ${CT_WEBDIR}/vendor/friendsofsymfony/http-cache/src/Exception/UnsupportedProxyOperationException.php
+${CT_WEBDIR}/vendor/friendsofsymfony/http-cache/src/ProxyClient/Dispatcher.php
 ${CT_WEBDIR}/vendor/friendsofsymfony/http-cache/src/ProxyClient/HttpDispatcher.php
 ${CT_WEBDIR}/vendor/friendsofsymfony/http-cache/src/ProxyClient/HttpProxyClient.php
 ${CT_WEBDIR}/vendor/friendsofsymfony/http-cache/src/ProxyClient/Invalidation/BanCapable.php
@@ -4037,6 +4052,9 @@ ${CT_WEBDIR}/vendor/friendsofsymfony/http-cache/src/SymfonyCache/CustomTtlListen
 ${CT_WEBDIR}/vendor/friendsofsymfony/http-cache/src/SymfonyCache/DebugListener.php
 ${CT_WEBDIR}/vendor/friendsofsymfony/http-cache/src/SymfonyCache/EventDispatchingHttpCache.php
 ${CT_WEBDIR}/vendor/friendsofsymfony/http-cache/src/SymfonyCache/Events.php
+${CT_WEBDIR}/vendor/friendsofsymfony/http-cache/src/SymfonyCache/HttpCacheAware.php
+${CT_WEBDIR}/vendor/friendsofsymfony/http-cache/src/SymfonyCache/HttpCacheProvider.php
+${CT_WEBDIR}/vendor/friendsofsymfony/http-cache/src/SymfonyCache/KernelDispatcher.php
 ${CT_WEBDIR}/vendor/friendsofsymfony/http-cache/src/SymfonyCache/PurgeListener.php
 ${CT_WEBDIR}/vendor/friendsofsymfony/http-cache/src/SymfonyCache/PurgeTagsListener.php
 ${CT_WEBDIR}/vendor/friendsofsymfony/http-cache/src/SymfonyCache/RefreshListener.php
@@ -4456,7 +4474,8 @@ ${CT_WEBDIR}/vendor/league/uri-hostname-parser/src/functions.php
 ${CT_WEBDIR}/vendor/league/uri-hostname-parser/src/functions_include.php
 ${CT_WEBDIR}/vendor/league/uri-interfaces/LICENSE
 ${CT_WEBDIR}/vendor/league/uri-interfaces/composer.json
-${CT_WEBDIR}/vendor/league/uri-interfaces/src/Uri.php
+${CT_WEBDIR}/vendor/league/uri-interfaces/src/Interfaces/Uri.php
+${CT_WEBDIR}/vendor/league/uri-interfaces/src/UriInterface.php
 ${CT_WEBDIR}/vendor/league/uri-manipulations/LICENSE
 ${CT_WEBDIR}/vendor/league/uri-manipulations/composer.json
 ${CT_WEBDIR}/vendor/league/uri-manipulations/phpstan.src.neon
@@ -5580,6 +5599,11 @@ ${CT_WEBDIR}/vendor/symfony/polyfill-apcu/LICENSE
 ${CT_WEBDIR}/vendor/symfony/polyfill-apcu/README.md
 ${CT_WEBDIR}/vendor/symfony/polyfill-apcu/bootstrap.php
 ${CT_WEBDIR}/vendor/symfony/polyfill-apcu/composer.json
+${CT_WEBDIR}/vendor/symfony/polyfill-ctype/Ctype.php
+${CT_WEBDIR}/vendor/symfony/polyfill-ctype/LICENSE
+${CT_WEBDIR}/vendor/symfony/polyfill-ctype/README.md
+${CT_WEBDIR}/vendor/symfony/polyfill-ctype/bootstrap.php
+${CT_WEBDIR}/vendor/symfony/polyfill-ctype/composer.json
 ${CT_WEBDIR}/vendor/symfony/polyfill-intl-icu/LICENSE
 ${CT_WEBDIR}/vendor/symfony/polyfill-intl-icu/README.md
 ${CT_WEBDIR}/vendor/symfony/polyfill-intl-icu/bootstrap.php
@@ -5643,6 +5667,8 @@ ${CT_WEBDIR}/vendor/symfony/swiftmailer-bundle/composer.json
 ${CT_WEBDIR}/vendor/symfony/swiftmailer-bundle/phpunit.xml.dist
 ${CT_WEBDIR}/vendor/symfony/symfony/.composer/config.json
 ${CT_WEBDIR}/vendor/symfony/symfony/.editorconfig
+${CT_WEBDIR}/vendor/symfony/symfony/.github/CODEOWNERS
+${CT_WEBDIR}/vendor/symfony/symfony/.github/CODE_OF_CONDUCT.md
 ${CT_WEBDIR}/vendor/symfony/symfony/.github/ISSUE_TEMPLATE.md
 ${CT_WEBDIR}/vendor/symfony/symfony/.github/PULL_REQUEST_TEMPLATE.md
 ${CT_WEBDIR}/vendor/symfony/symfony/.github/build-packages.php
@@ -5733,7 +5759,8 @@ ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/PhpUnit/CoverageListener.
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/PhpUnit/DeprecationErrorHandler.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/PhpUnit/DnsMock.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/PhpUnit/LICENSE
-${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/PhpUnit/Legacy/Command.php
+${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/PhpUnit/Legacy/CommandForV5.php
+${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/PhpUnit/Legacy/CommandForV6.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/PhpUnit/Legacy/CoverageListenerForV5.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/PhpUnit/Legacy/CoverageListenerForV6.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/PhpUnit/Legacy/CoverageListenerForV7.php
@@ -5742,7 +5769,9 @@ ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/PhpUnit/Legacy/SymfonyTes
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/PhpUnit/Legacy/SymfonyTestsListenerForV6.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/PhpUnit/Legacy/SymfonyTestsListenerForV7.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/PhpUnit/Legacy/SymfonyTestsListenerTrait.php
-${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/PhpUnit/Legacy/TestRunner.php
+${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/PhpUnit/Legacy/TestRunnerForV5.php
+${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/PhpUnit/Legacy/TestRunnerForV6.php
+${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/PhpUnit/Legacy/TestRunnerForV7.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/PhpUnit/README.md
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/PhpUnit/SymfonyTestsListener.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/PhpUnit/TextUI/Command.php
@@ -6053,6 +6082,7 @@ ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Debug/Trac
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Debug/WrappedListener.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/DependencyInjection/Compiler/AddSecurityVotersPass.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/DependencyInjection/Compiler/AddSessionDomainConstraintPass.php
+${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/DependencyInjection/Compiler/RegisterCsrfTokenClearingLogoutHandlerPass.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/DependencyInjection/MainConfiguration.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/DependencyInjection/Security/Factory/AbstractFactory.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/DependencyInjection/Security/Factory/FormLoginFactory.php
@@ -8835,6 +8865,7 @@ ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Csrf/LICENSE
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Csrf/README.md
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Csrf/TokenGenerator/TokenGeneratorInterface.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Csrf/TokenGenerator/UriSafeTokenGenerator.php
+${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Csrf/TokenStorage/ClearableTokenStorageInterface.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Csrf/TokenStorage/NativeSessionTokenStorage.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Csrf/TokenStorage/SessionTokenStorage.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Csrf/TokenStorage/TokenStorageInterface.php
@@ -8901,6 +8932,7 @@ ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Http/Firewall
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Http/HttpUtils.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Http/LICENSE
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Http/Logout/CookieClearingLogoutHandler.php
+${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Http/Logout/CsrfTokenClearingLogoutHandler.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Http/Logout/DefaultLogoutSuccessHandler.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Http/Logout/LogoutHandlerInterface.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Http/Logout/LogoutSuccessHandlerInterface.php
