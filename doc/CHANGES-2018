@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2877 2018/06/18 02:53:23 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2878 2018/06/18 02:57:15 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4099,3 +4099,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/gcc7 to 7.3.0nb2 [maya 2018-06-17]
 	Added www/p5-HTTP-CookieJar version 0.008 [wen 2018-06-18]
 	Updated www/p5-Dancer to 1.3400 [wen 2018-06-18]
+	Updated devel/p5-Class-Load to 0.25 [wen 2018-06-18]
