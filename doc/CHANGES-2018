@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2887 2018/06/18 10:47:37 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2888 2018/06/18 10:50:32 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4115,3 +4115,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/djbdns to 1.05nb13 [schmonz 2018-06-18]
 	Updated archivers/py-zstandard to 0.9.1 [adam 2018-06-18]
 	Updated www/py-websockets to 5.0.1 [adam 2018-06-18]
+	Updated net/ucspi-tcp to 0.88nb5 [schmonz 2018-06-18]
