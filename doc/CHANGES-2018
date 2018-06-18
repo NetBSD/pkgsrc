@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2889 2018/06/18 10:54:52 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2890 2018/06/18 11:00:39 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4118,3 +4118,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/ucspi-tcp to 0.88nb5 [schmonz 2018-06-18]
 	Updated www/py-cheroot to 6.3.2 [adam 2018-06-18]
 	Updated www/py-cherrypy to 16.0.0 [adam 2018-06-18]
+	Updated net/ucspi-ssl to 0.99d [schmonz 2018-06-18]
