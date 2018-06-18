@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2898 2018/06/18 15:08:53 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2899 2018/06/18 18:01:05 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4128,3 +4128,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/contao45 to 4.5.9 [taca 2018-06-18]
 	Updated security/pear-Crypt_GPG to 1.6.3 [taca 2018-06-18]
 	Updated devel/p5-Log-Report to 1.27 [wen 2018-06-18]
+	Updated net/youtube-dl to 20180618 [leot 2018-06-18]
