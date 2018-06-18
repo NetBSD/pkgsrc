@@ -1,0 +1,28 @@
+$NetBSD: patch-libglibc_Makefile.in,v 1.1 2018/06/18 09:43:12 leot Exp $
+
+Do not use bundled sqlite3.
+
+--- libglibc/Makefile.in.orig	2018-02-09 20:31:54.000000000 +0000
++++ libglibc/Makefile.in
+@@ -116,8 +116,7 @@ am__objects_1 = regex.$(OBJEXT) getopt.$
+ 	snprintf.$(OBJEXT) obstack.$(OBJEXT) hash-string.$(OBJEXT) \
+ 	fnmatch.$(OBJEXT)
+ @USE_SQLITE3_FALSE@am_libgloglibc_a_OBJECTS = $(am__objects_1)
+-@USE_SQLITE3_TRUE@am_libgloglibc_a_OBJECTS = $(am__objects_1) \
+-@USE_SQLITE3_TRUE@	sqlite3.$(OBJEXT)
++@USE_SQLITE3_TRUE@am_libgloglibc_a_OBJECTS = $(am__objects_1)
+ libgloglibc_a_OBJECTS = $(am_libgloglibc_a_OBJECTS)
+ AM_V_P = $(am__v_P_@AM_V@)
+ am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
+@@ -361,9 +360,9 @@ noinst_LIBRARIES = libgloglibc.a
+ INCS = regex.h getopt.h obstack.h hash-string.h getopt_int.h fnmatch.h
+ SRCS = regex.c getopt.c getopt1.c snprintf.c obstack.c hash-string.c fnmatch.c
+ @USE_SQLITE3_FALSE@noinst_HEADERS = $(INCS)
+-@USE_SQLITE3_TRUE@noinst_HEADERS = $(INCS) sqlite3.h
++@USE_SQLITE3_TRUE@noinst_HEADERS = $(INCS)
+ @USE_SQLITE3_FALSE@libgloglibc_a_SOURCES = $(SRCS)
+-@USE_SQLITE3_TRUE@libgloglibc_a_SOURCES = $(SRCS) sqlite3.c
++@USE_SQLITE3_TRUE@libgloglibc_a_SOURCES = $(SRCS)
+ libgloglibc_a_DEPENDENCIES = $(libgloglibc_a_LIBADD)
+ all: all-am
+ 
