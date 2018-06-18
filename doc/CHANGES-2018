@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2886 2018/06/18 10:45:00 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.2887 2018/06/18 10:47:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4113,3 +4113,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-deprecation to 2.0.3 [adam 2018-06-18]
 	Updated devel/global to 6.6.2nb2 [leot 2018-06-18]
 	Updated net/djbdns to 1.05nb13 [schmonz 2018-06-18]
+	Updated archivers/py-zstandard to 0.9.1 [adam 2018-06-18]
+	Updated www/py-websockets to 5.0.1 [adam 2018-06-18]
