@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2895 2018/06/18 15:01:26 taca Exp $
+$NetBSD: CHANGES-2018,v 1.2896 2018/06/18 15:02:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4125,3 +4125,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Hash-MoreUtils to 0.06 [wen 2018-06-18]
 	Updated devel/p5-List-SomeUtils-XS to 0.58 [wen 2018-06-18]
 	Updated www/contao44 to 4.4.19 [taca 2018-06-18]
+	Updated www/contao45 to 4.5.9 [taca 2018-06-18]
