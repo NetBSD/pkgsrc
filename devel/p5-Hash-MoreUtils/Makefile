@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2017/06/05 14:23:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2018/06/18 14:47:00 wen Exp $
 #
 
-DISTNAME=	Hash-MoreUtils-0.05
+DISTNAME=	Hash-MoreUtils-0.06
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Hash/}
 
@@ -14,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Hash/MoreUtils/.packlist
-PERL5_MODULE_TYPE=	Module::Build
+#PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
