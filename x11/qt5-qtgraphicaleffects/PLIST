@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/03/01 20:09:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/06/19 07:21:24 adam Exp $
 qt5/qml/QtGraphicalEffects/Blend.qml
 qt5/qml/QtGraphicalEffects/BrightnessContrast.qml
 qt5/qml/QtGraphicalEffects/ColorOverlay.qml
@@ -27,21 +27,21 @@ qt5/qml/QtGraphicalEffects/ZoomBlur.qml
 qt5/qml/QtGraphicalEffects/libqtgraphicaleffectsplugin.so
 qt5/qml/QtGraphicalEffects/plugins.qmltypes
 qt5/qml/QtGraphicalEffects/private/DropShadowBase.qml
-${PLIST.jit}qt5/qml/QtGraphicalEffects/private/DropShadowBase.qmlc
+qt5/qml/QtGraphicalEffects/private/DropShadowBase.qmlc
 qt5/qml/QtGraphicalEffects/private/FastGlow.qml
-${PLIST.jit}qt5/qml/QtGraphicalEffects/private/FastGlow.qmlc
+qt5/qml/QtGraphicalEffects/private/FastGlow.qmlc
 qt5/qml/QtGraphicalEffects/private/FastInnerShadow.qml
-${PLIST.jit}qt5/qml/QtGraphicalEffects/private/FastInnerShadow.qmlc
+qt5/qml/QtGraphicalEffects/private/FastInnerShadow.qmlc
 qt5/qml/QtGraphicalEffects/private/FastMaskedBlur.qml
-${PLIST.jit}qt5/qml/QtGraphicalEffects/private/FastMaskedBlur.qmlc
+qt5/qml/QtGraphicalEffects/private/FastMaskedBlur.qmlc
 qt5/qml/QtGraphicalEffects/private/GaussianDirectionalBlur.qml
-${PLIST.jit}qt5/qml/QtGraphicalEffects/private/GaussianDirectionalBlur.qmlc
+qt5/qml/QtGraphicalEffects/private/GaussianDirectionalBlur.qmlc
 qt5/qml/QtGraphicalEffects/private/GaussianGlow.qml
-${PLIST.jit}qt5/qml/QtGraphicalEffects/private/GaussianGlow.qmlc
+qt5/qml/QtGraphicalEffects/private/GaussianGlow.qmlc
 qt5/qml/QtGraphicalEffects/private/GaussianInnerShadow.qml
-${PLIST.jit}qt5/qml/QtGraphicalEffects/private/GaussianInnerShadow.qmlc
+qt5/qml/QtGraphicalEffects/private/GaussianInnerShadow.qmlc
 qt5/qml/QtGraphicalEffects/private/GaussianMaskedBlur.qml
-${PLIST.jit}qt5/qml/QtGraphicalEffects/private/GaussianMaskedBlur.qmlc
+qt5/qml/QtGraphicalEffects/private/GaussianMaskedBlur.qmlc
 qt5/qml/QtGraphicalEffects/private/libqtgraphicaleffectsprivate.so
 qt5/qml/QtGraphicalEffects/private/qmldir
 qt5/qml/QtGraphicalEffects/qmldir

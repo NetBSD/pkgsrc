@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2018/01/31 12:36:57 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.26 2018/06/19 07:21:23 adam Exp $
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
 # used by x11/qt5-psql/Makefile
@@ -46,14 +46,11 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-rpath-link,${PREFIX}/qt5/lib
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-rpath-link,${WRKSRC}/lib
 
 MAKE_ENV+=		QTPREFIX=${QTPREFIX:Q}
-PLIST_VARS+=		jit mac unix
+PLIST_VARS+=		mac unix
 .if ${OPSYS} == "Darwin"
 PLIST.mac=		yes
 .else
 PLIST.unix=		yes
-.endif
-.if ${OPSYS} != "NetBSD"
-PLIST.jit=		yes
 .endif
 
 # avoid creating a .qt directory in the users home directory
@@ -63,5 +60,5 @@ SCRIPTS_ENV+=		HOME=${WRKDIR}
 	&& empty(PKGPATH:Mx11/qt5-odbc) && empty(PKGPATH:Mx11/qt5-mysql) \
 	&& empty(PKGPATH:Mx11/qt5-psql)
 do-configure:
-	cd ${WRKSRC} && ${QTPREFIX}/bin/qmake -o Makefile
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${QTPREFIX}/bin/qmake -o Makefile
 .endif
