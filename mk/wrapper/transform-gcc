@@ -1,4 +1,4 @@
-# $NetBSD: transform-gcc,v 1.32 2016/03/14 20:11:56 markd Exp $
+# $NetBSD: transform-gcc,v 1.33 2018/06/19 05:02:10 khorben Exp $
 #
 # This file handles the transformations needed for gcc that can be done
 # looking at only one argument at a time.
@@ -165,6 +165,11 @@ case $arg in
 # option for `ld'.
 -errwarn=*		|\
 -errwarn		) transform_discard_with_warning ;;
+
+# Disable the flags for PKGSRC_MKPIE.
+-fno-pie		|\
+-fno-PIE		|\
+-nopie			) MKPIE_CFLAGS=; MKPIE_LDFLAGS=; transform_pass ;;
 
 # Unknown options.
 -*			) transform_pass_with_warning ;;
