@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2915 2018/06/19 15:03:09 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2916 2018/06/19 22:46:12 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4148,3 +4148,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/rust to 1.26.2 [ryoon 2018-06-19]
 	Updated devel/p5-SDL to 2.548 [wen 2018-06-19]
 	Updated mail/p5-Email-Simple to 2.216 [wen 2018-06-19]
+	Updated cross/pdp11-aout-binutils to 2.30 [ryoon 2018-06-19]
