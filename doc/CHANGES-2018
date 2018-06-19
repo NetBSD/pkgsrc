@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2900 2018/06/18 20:46:55 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2901 2018/06/19 03:01:41 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4130,3 +4130,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Log-Report to 1.27 [wen 2018-06-18]
 	Updated net/youtube-dl to 20180618 [leot 2018-06-18]
 	Added archivers/go-xz version 0.5.4 [minskim 2018-06-18]
+	Updated devel/p5-Module-Starter to 1.75 [wen 2018-06-19]
