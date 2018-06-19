@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2017/08/25 06:24:03 adam Exp $
+# $NetBSD: Makefile,v 1.26 2018/06/19 12:12:25 adam Exp $
 
-DISTNAME=	Nevow-0.14.3
+DISTNAME=	Nevow-0.14.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=N/Nevow/}
