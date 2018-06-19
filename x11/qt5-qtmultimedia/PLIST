@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2018/04/11 12:24:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2018/06/19 07:21:24 adam Exp $
 lib/pkgconfig/Qt5Multimedia.pc
 lib/pkgconfig/Qt5MultimediaWidgets.pc
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/gstvideoconnector_p.h
@@ -113,6 +113,7 @@ qt5/include/QtMultimedia/QCameraViewfinderSettings
 qt5/include/QtMultimedia/QCameraViewfinderSettingsControl
 qt5/include/QtMultimedia/QCameraViewfinderSettingsControl2
 qt5/include/QtMultimedia/QCameraZoomControl
+qt5/include/QtMultimedia/QCustomAudioRoleControl
 qt5/include/QtMultimedia/QImageEncoderControl
 qt5/include/QtMultimedia/QImageEncoderSettings
 qt5/include/QtMultimedia/QMediaAudioProbeControl
@@ -205,6 +206,7 @@ qt5/include/QtMultimedia/qcameralockscontrol.h
 qt5/include/QtMultimedia/qcameraviewfindersettings.h
 qt5/include/QtMultimedia/qcameraviewfindersettingscontrol.h
 qt5/include/QtMultimedia/qcamerazoomcontrol.h
+qt5/include/QtMultimedia/qcustomaudiorolecontrol.h
 qt5/include/QtMultimedia/qimageencodercontrol.h
 qt5/include/QtMultimedia/qmediaaudioprobecontrol.h
 qt5/include/QtMultimedia/qmediaavailabilitycontrol.h
@@ -296,22 +298,22 @@ qt5/lib/libQt5Multimedia.prl
 qt5/lib/libQt5Multimedia.so
 qt5/lib/libQt5Multimedia.so.${PKGVERSION}
 qt5/lib/libQt5Multimedia.so.5
-qt5/lib/libQt5Multimedia.so.5.10
+qt5/lib/libQt5Multimedia.so.5.11
 ${PLIST.unix}qt5/lib/libQt5MultimediaGstTools.prl
 ${PLIST.unix}qt5/lib/libQt5MultimediaGstTools.so
 ${PLIST.unix}qt5/lib/libQt5MultimediaGstTools.so.${PKGVERSION}
 ${PLIST.unix}qt5/lib/libQt5MultimediaGstTools.so.5
-${PLIST.unix}qt5/lib/libQt5MultimediaGstTools.so.5.10
+${PLIST.unix}qt5/lib/libQt5MultimediaGstTools.so.5.11
 qt5/lib/libQt5MultimediaQuick.prl
 qt5/lib/libQt5MultimediaQuick.so
 qt5/lib/libQt5MultimediaQuick.so.${PKGVERSION}
 qt5/lib/libQt5MultimediaQuick.so.5
-qt5/lib/libQt5MultimediaQuick.so.5.10
+qt5/lib/libQt5MultimediaQuick.so.5.11
 qt5/lib/libQt5MultimediaWidgets.prl
 qt5/lib/libQt5MultimediaWidgets.so
 qt5/lib/libQt5MultimediaWidgets.so.${PKGVERSION}
 qt5/lib/libQt5MultimediaWidgets.so.5
-qt5/lib/libQt5MultimediaWidgets.so.5.10
+qt5/lib/libQt5MultimediaWidgets.so.5.11
 qt5/lib/pkgconfig/Qt5Multimedia.pc
 qt5/lib/pkgconfig/Qt5MultimediaWidgets.pc
 qt5/mkspecs/modules/qt_lib_multimedia.pri
