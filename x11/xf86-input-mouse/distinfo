@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.20 2018/05/12 12:16:00 ryoon Exp $
+$NetBSD: distinfo,v 1.21 2018/06/19 07:12:45 wiz Exp $
 
-SHA1 (xf86-input-mouse-1.9.2.tar.bz2) = d3a0839ad5a33665bb261a4fba33e3a6271817dc
-RMD160 (xf86-input-mouse-1.9.2.tar.bz2) = c7d68c0de19787ceda4e4307b113b6d74e0cb62d
-SHA512 (xf86-input-mouse-1.9.2.tar.bz2) = 30fdc4f699d434e2fb4a9f8d2f4f980538d646a6e4d2d572737fc5498c0bce0fb1ba080173ea0aa3480f574dde3f58d5a7ac837afdb29640ccb092b3f18ff209
-Size (xf86-input-mouse-1.9.2.tar.bz2) = 377685 bytes
-SHA1 (patch-src_mouse.c) = 0e593e5c805af8d0be04925a8e0af97961fa4dd3
+SHA1 (xf86-input-mouse-1.9.3.tar.bz2) = b3982998808ba43117fc066c4ecc94ce67c5818e
+RMD160 (xf86-input-mouse-1.9.3.tar.bz2) = f73da46dfc7d389531d52e0495db2c2bc4990027
+SHA512 (xf86-input-mouse-1.9.3.tar.bz2) = d99f5b4b1ef1aa4cbf1a92549e412f54f121bc804e4d6643248ad7ea18081b38b958bd289dc8476ebc0f6ef5f7424c2f2a8abcfaa30cae5378829549af6b148f
+Size (xf86-input-mouse-1.9.3.tar.bz2) = 382013 bytes
 SHA1 (patch-src_sun__mouse.c) = e23157bc9bdb5840ac008648d1c9a894e7a900cc
