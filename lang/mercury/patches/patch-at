@@ -1,7 +1,9 @@
-$NetBSD: patch-at,v 1.5 2015/12/26 11:58:19 joerg Exp $
+$NetBSD: patch-at,v 1.6 2018/06/19 02:04:04 maya Exp $
 
 Support shared libraries.
 Don't capture value of HOME.
+
+No non-local gotos on powerpc32, too
 
 --- configure.orig	2014-09-08 04:56:03.000000000 +0000
 +++ configure
@@ -14,6 +16,17 @@ Don't capture value of HOME.
  
  For better control, use the options below.
  
+@@ -9318,8 +9318,8 @@ case "$ac_cv_c_compiler_gnu" in yes)
+             mercury_cv_asm_labels=no
+             mercury_cv_gcc_labels=no
+             ;;
+-        powerpc64-*)
+-            echo "gcc labels do not work on PPC64" 1>&6
++        powerpc*-*)
++            echo "gcc labels do not work on PPC" 1>&6
+             mercury_cv_asm_labels=no
+             mercury_cv_gcc_labels=no
+             ;;
 @@ -11481,7 +11481,7 @@ $as_echo "yes" >&6; }
          EXT_FOR_SHARED_LIB=so
          EXT_FOR_LINK_WITH_PIC_OBJECTS=o
