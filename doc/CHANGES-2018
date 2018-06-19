@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2909 2018/06/19 07:23:02 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2910 2018/06/19 11:39:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4139,3 +4139,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/xf86-input-mouse to 1.9.3 [wiz 2018-06-19]
 	Updated x11/libXaw3d to 1.6.3 [wiz 2018-06-19]
 	Updated x11/qt5 to 5.11.0 [adam 2018-06-19]
+	Updated security/py-asyncssh to 1.13.1 [adam 2018-06-19]
+	Updated www/py-cherrypy to 16.0.2 [adam 2018-06-19]
