@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2916 2018/06/19 22:46:12 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.2917 2018/06/19 22:47:29 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4149,3 +4149,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-SDL to 2.548 [wen 2018-06-19]
 	Updated mail/p5-Email-Simple to 2.216 [wen 2018-06-19]
 	Updated cross/pdp11-aout-binutils to 2.30 [ryoon 2018-06-19]
+	Updated cross/pdp11-aout-gcc to 8.1.0 [ryoon 2018-06-19]
