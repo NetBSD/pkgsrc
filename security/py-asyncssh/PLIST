@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/05/29 07:18:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/06/19 11:37:28 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -76,15 +76,9 @@ ${PYSITELIB}/asyncssh/crypto/umac.pyo
 ${PYSITELIB}/asyncssh/crypto/x509.py
 ${PYSITELIB}/asyncssh/crypto/x509.pyc
 ${PYSITELIB}/asyncssh/crypto/x509.pyo
-${PYSITELIB}/asyncssh/dh.py
-${PYSITELIB}/asyncssh/dh.pyc
-${PYSITELIB}/asyncssh/dh.pyo
 ${PYSITELIB}/asyncssh/dsa.py
 ${PYSITELIB}/asyncssh/dsa.pyc
 ${PYSITELIB}/asyncssh/dsa.pyo
-${PYSITELIB}/asyncssh/ecdh.py
-${PYSITELIB}/asyncssh/ecdh.pyc
-${PYSITELIB}/asyncssh/ecdh.pyo
 ${PYSITELIB}/asyncssh/ecdsa.py
 ${PYSITELIB}/asyncssh/ecdsa.pyc
 ${PYSITELIB}/asyncssh/ecdsa.pyo
@@ -112,6 +106,15 @@ ${PYSITELIB}/asyncssh/gss_win32.pyo
 ${PYSITELIB}/asyncssh/kex.py
 ${PYSITELIB}/asyncssh/kex.pyc
 ${PYSITELIB}/asyncssh/kex.pyo
+${PYSITELIB}/asyncssh/kex_dh.py
+${PYSITELIB}/asyncssh/kex_dh.pyc
+${PYSITELIB}/asyncssh/kex_dh.pyo
+${PYSITELIB}/asyncssh/kex_ecdh.py
+${PYSITELIB}/asyncssh/kex_ecdh.pyc
+${PYSITELIB}/asyncssh/kex_ecdh.pyo
+${PYSITELIB}/asyncssh/kex_rsa.py
+${PYSITELIB}/asyncssh/kex_rsa.pyc
+${PYSITELIB}/asyncssh/kex_rsa.pyo
 ${PYSITELIB}/asyncssh/known_hosts.py
 ${PYSITELIB}/asyncssh/known_hosts.pyc
 ${PYSITELIB}/asyncssh/known_hosts.pyo
