@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.992 2018/06/15 13:17:51 prlw1 Exp $
+# $NetBSD: Makefile,v 1.993 2018/06/19 06:37:21 wen Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -483,6 +483,7 @@ SUBDIR+=	p5-PDF-Reuse-Barcode
 SUBDIR+=	p5-PDF-Table
 SUBDIR+=	p5-POD2-Base
 SUBDIR+=	p5-PPI-HTML
+SUBDIR+=	p5-PPIx-QuoteLike
 SUBDIR+=	p5-Pod-Abstract
 SUBDIR+=	p5-Pod-Coverage
 SUBDIR+=	p5-Pod-Coverage-TrustPod
