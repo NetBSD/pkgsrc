@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2017/09/17 12:51:02 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2018/06/19 06:44:31 wen Exp $
 #
 
-DISTNAME=	Perl-Critic-1.130
+DISTNAME=	Perl-Critic-1.132
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Perl/}
@@ -15,13 +15,14 @@ REPLACE_PERL=	lib/Test/Perl/Critic/Policy.pm
 
 DEPENDS+=	p5-B-Keywords>=1.05:../../devel/p5-B-Keywords
 DEPENDS+=	p5-Config-Tiny>=2:../../devel/p5-Config-Tiny
-DEPENDS+=	p5-Email-Address>=1.889:../../mail/p5-Email-Address
 DEPENDS+=	p5-Exception-Class>=1.23:../../devel/p5-Exception-Class
 DEPENDS+=	p5-File-HomeDir-[0-9]*:../../devel/p5-File-HomeDir
 DEPENDS+=	p5-File-Which-[0-9]*:../../devel/p5-File-Which
 DEPENDS+=	p5-IO-String-[0-9]*:../../devel/p5-IO-String
 DEPENDS+=	p5-List-MoreUtils>=0.19:../../devel/p5-List-MoreUtils
+DEPENDS+=	p5-Module-Pluggable>=3.1:../../devel/p5-Module-Pluggable
 DEPENDS+=	p5-PPI>=1.224:../../devel/p5-PPI
+DEPENDS+=	p5-PPIx-QuoteLike>=0:../../textproc/p5-PPIx-QuoteLike
 DEPENDS+=	p5-PPIx-Regexp>=0.022:../../devel/p5-PPIx-Regexp
 DEPENDS+=	p5-PPIx-Utilities>=1.001:../../devel/p5-PPIx-Utilities
 DEPENDS+=	p5-Perl-Tidy-[0-9]*:../../devel/p5-Perl-Tidy
