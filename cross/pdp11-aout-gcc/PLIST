@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/07/03 17:32:14 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/06/19 22:47:01 ryoon Exp $
 cross-pdp11-aout/bin/pdp11-aout-c++
 cross-pdp11-aout/bin/pdp11-aout-cpp
 cross-pdp11-aout/bin/pdp11-aout-g++
@@ -87,12 +87,10 @@ cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/cfgrtl.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/cgraph.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/chkp-builtins.def
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/cif-code.def
-cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/cilk-builtins.def
-cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/cilk.h
-cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/cilkplus.def
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/collect-utils.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/collect2-aix.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/collect2.h
+cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/color-macros.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/conditions.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/config.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/config/initfini-array.h
@@ -108,6 +106,7 @@ cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/cp/cp-tree.def
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/cp/cp-tree.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/cp/cxx-pretty-print.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/cp/name-lookup.h
+cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/cp/operators.def
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/cp/type-utils.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/cppbuiltin.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/cppdefault.h
@@ -144,6 +143,7 @@ cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/expmed.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/expr.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/fibonacci_heap.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/file-find.h
+cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/file-prefix-map.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/filenames.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/fixed-value.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/flag-types.h
@@ -173,6 +173,8 @@ cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/gimple-low.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/gimple-match.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/gimple-predict.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/gimple-pretty-print.h
+cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/gimple-ssa-evrp-analyze.h
+cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/gimple-ssa-warn-restrict.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/gimple-ssa.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/gimple-streamer.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/gimple-walk.h
@@ -214,15 +216,20 @@ cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/insn-addr.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/insn-codes.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/insn-constants.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/insn-flags.h
+cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/insn-modes-inline.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/insn-modes.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/insn-notes.def
+cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/int-vector-builder.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/internal-fn.def
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/internal-fn.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/intl.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/ipa-chkp.h
+cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/ipa-fnsummary.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/ipa-icf-gimple.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/ipa-icf.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/ipa-inline.h
+cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/ipa-param-manipulation.h
+cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/ipa-predicate.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/ipa-prop.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/ipa-ref.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/ipa-reference.h
@@ -261,6 +268,7 @@ cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/omp-general.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/omp-grid.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/omp-low.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/omp-offload.h
+cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/omp-simd-clone.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/optabs-libfuncs.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/optabs-query.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/optabs-tree.h
@@ -283,12 +291,15 @@ cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/plugin-api.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/plugin-version.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/plugin.def
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/plugin.h
+cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/poly-int-types.h
+cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/poly-int.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/predict.def
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/predict.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/prefix.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/pretty-print.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/print-rtl.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/print-tree.h
+cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/profile-count.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/profile.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/read-md.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/read-rtl-function.h
@@ -309,15 +320,16 @@ cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/rtl.def
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/rtl.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/rtlhash.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/rtlhooks-def.h
+cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/rtx-vector-builder.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/run-rtl-passes.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/safe-ctype.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/sanitizer.def
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/sbitmap.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/sched-int.h
-cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/sdbout.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/sel-sched-dump.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/sel-sched-ir.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/sel-sched.h
+cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/selftest-diagnostic.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/selftest-rtl.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/selftest.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/sese.h
@@ -386,6 +398,7 @@ cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/tree-ssa-addres
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/tree-ssa-alias.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/tree-ssa-ccp.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/tree-ssa-coalesce.h
+cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/tree-ssa-dce.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/tree-ssa-dom.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/tree-ssa-live.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/tree-ssa-loop-ivopts.h
@@ -396,14 +409,15 @@ cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/tree-ssa-operan
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/tree-ssa-propagate.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/tree-ssa-sccvn.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/tree-ssa-scopedtables.h
+cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/tree-ssa-strlen.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/tree-ssa-ter.h
-cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/tree-ssa-threadbackward.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/tree-ssa-threadedge.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/tree-ssa-threadupdate.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/tree-ssa.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/tree-ssanames.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/tree-stdarg.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/tree-streamer.h
+cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/tree-vector-builder.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/tree-vectorizer.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/tree-vrp.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/tree.def
@@ -417,10 +431,14 @@ cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/ubsan.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/valtrack.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/value-prof.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/varasm.h
+cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/vec-perm-indices.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/vec.h
+cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/vector-builder.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/version.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/vmsdbg.h
+cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/vr-values.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/vtable-verify.h
+cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/wide-int-bitmask.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/wide-int-print.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/wide-int.h
 cross-pdp11-aout/lib/gcc/pdp11-aout/${PKGVERSION}/plugin/include/xcoff.h
