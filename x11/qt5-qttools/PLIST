@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/04/11 12:28:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/06/19 07:21:25 adam Exp $
 lib/pkgconfig/Qt5Designer.pc
 lib/pkgconfig/Qt5Help.pc
 lib/pkgconfig/Qt5UiTools.pc
@@ -268,17 +268,17 @@ qt5/lib/libQt5Designer.prl
 qt5/lib/libQt5Designer.so
 qt5/lib/libQt5Designer.so.${PKGVERSION}
 qt5/lib/libQt5Designer.so.5
-qt5/lib/libQt5Designer.so.5.10
+qt5/lib/libQt5Designer.so.5.11
 qt5/lib/libQt5DesignerComponents.prl
 qt5/lib/libQt5DesignerComponents.so
 qt5/lib/libQt5DesignerComponents.so.${PKGVERSION}
 qt5/lib/libQt5DesignerComponents.so.5
-qt5/lib/libQt5DesignerComponents.so.5.10
+qt5/lib/libQt5DesignerComponents.so.5.11
 qt5/lib/libQt5Help.prl
 qt5/lib/libQt5Help.so
 qt5/lib/libQt5Help.so.${PKGVERSION}
 qt5/lib/libQt5Help.so.5
-qt5/lib/libQt5Help.so.5.10
+qt5/lib/libQt5Help.so.5.11
 qt5/lib/libQt5UiTools.a
 qt5/lib/libQt5UiTools.prl
 qt5/lib/pkgconfig/Qt5Designer.pc

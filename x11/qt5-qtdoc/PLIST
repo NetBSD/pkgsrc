@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/03/01 20:09:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/06/19 07:21:23 adam Exp $
 qt5/doc/qtdoc.qch
 qt5/doc/qtdoc/accelerators.html
 qt5/doc/qtdoc/accessibility.html
@@ -151,6 +151,7 @@ qt5/doc/qtdoc/ios-support.html
 qt5/doc/qtdoc/ipc.html
 qt5/doc/qtdoc/known-issues.html
 qt5/doc/qtdoc/lgpl.html
+qt5/doc/qtdoc/license-changes.html
 qt5/doc/qtdoc/licenses-used-in-qt.html
 qt5/doc/qtdoc/licensing.html
 qt5/doc/qtdoc/linux-building.html
@@ -167,6 +168,7 @@ qt5/doc/qtdoc/modules.html
 qt5/doc/qtdoc/namespaces.html
 qt5/doc/qtdoc/newclasses51.html
 qt5/doc/qtdoc/newclasses510.html
+qt5/doc/qtdoc/newclasses511.html
 qt5/doc/qtdoc/newclasses52.html
 qt5/doc/qtdoc/newclasses53.html
 qt5/doc/qtdoc/newclasses54.html
@@ -190,7 +192,6 @@ qt5/doc/qtdoc/platform-notes-android.html
 qt5/doc/qtdoc/platform-notes-integrity.html
 qt5/doc/qtdoc/platform-notes-ios.html
 qt5/doc/qtdoc/platform-notes-qnx.html
-qt5/doc/qtdoc/platform-notes-vxworks.html
 qt5/doc/qtdoc/plugins-howto.html
 qt5/doc/qtdoc/porting-to-ios.html
 qt5/doc/qtdoc/portingcppapp.html
@@ -207,6 +208,7 @@ qt5/doc/qtdoc/qmltypes.html
 qt5/doc/qtdoc/qpa.html
 qt5/doc/qtdoc/qt-activex.html
 qt5/doc/qtdoc/qt-attribution-cmake-macros.html
+qt5/doc/qtdoc/qt-attribution-llvm.html
 qt5/doc/qtdoc/qt-attribution-llvmpipe.html
 qt5/doc/qtdoc/qt-conf.html
 qt5/doc/qtdoc/qt-embedded-fonts.html
@@ -229,7 +231,6 @@ qt5/doc/qtdoc/qtquick-internationalization.html
 qt5/doc/qtdoc/qtquick-performance.html
 qt5/doc/qtdoc/qtquick-porting-qt5.html
 qt5/doc/qtdoc/qtquick-qmlscene.html
-qt5/doc/qtdoc/qtquick-qtquicktest.html
 qt5/doc/qtdoc/qtquick-usecase-animations.html
 qt5/doc/qtdoc/qtquick-usecase-integratingjs.html
 qt5/doc/qtdoc/qtquick-usecase-layouts.html
@@ -284,6 +285,7 @@ qt5/doc/qtdoc/vxworks.html
 qt5/doc/qtdoc/whatsnew50.html
 qt5/doc/qtdoc/whatsnew51.html
 qt5/doc/qtdoc/whatsnew510.html
+qt5/doc/qtdoc/whatsnew511.html
 qt5/doc/qtdoc/whatsnew52.html
 qt5/doc/qtdoc/whatsnew53.html
 qt5/doc/qtdoc/whatsnew54.html

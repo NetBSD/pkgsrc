@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.8 2018/03/01 20:09:49 adam Exp $
+# $NetBSD: Makefile.common,v 1.9 2018/06/19 07:21:23 adam Exp $
 # used by x11/qt5-qtbase/Makefile.common
 # used by inputmethod/qt5-uim/Makefile
 
-QTVERSION=	5.10.1
+QTVERSION=	5.11.0
 
 .include "../../mk/bsd.prefs.mk"
 
