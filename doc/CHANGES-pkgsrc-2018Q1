@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q1,v 1.1.2.8 2018/06/17 21:06:34 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q1,v 1.1.2.9 2018/06/19 12:05:44 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q1 branch:
 
@@ -136,4 +136,10 @@ www/firefox52: security update
 
 Pullup ticket #5768 - requested by bsiegert
 mail/thunderbird: security update
+
+Pullup ticket #5772 - requested by leot
+audio/mpg321: bugfix
+
+Pullup ticket #5773 - requested by maya
+x11/qt5-qtbase: Linux build fix
 
