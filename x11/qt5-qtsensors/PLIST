@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/01/17 19:30:48 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/06/19 07:21:24 adam Exp $
 lib/pkgconfig/Qt5Sensors.pc
 qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/qaccelerometer_p.h
 qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/qaltimeter_p.h
@@ -135,9 +135,9 @@ qt5/lib/cmake/Qt5Sensors/Qt5Sensors_QtSensorGesturePlugin.cmake
 qt5/lib/cmake/Qt5Sensors/Qt5Sensors_genericSensorPlugin.cmake
 qt5/lib/libQt5Sensors.prl
 qt5/lib/libQt5Sensors.so
-qt5/lib/libQt5Sensors.so.5
-qt5/lib/libQt5Sensors.so.5.10
 qt5/lib/libQt5Sensors.so.${PKGVERSION}
+qt5/lib/libQt5Sensors.so.5
+qt5/lib/libQt5Sensors.so.5.11
 qt5/lib/pkgconfig/Qt5Sensors.pc
 qt5/mkspecs/modules/qt_lib_sensors.pri
 qt5/mkspecs/modules/qt_lib_sensors_private.pri

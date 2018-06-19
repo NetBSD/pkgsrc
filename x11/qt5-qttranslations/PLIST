@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/03/01 20:09:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/06/19 07:21:25 adam Exp $
 qt5/translations/assistant_ar.qm
 qt5/translations/assistant_bg.qm
 qt5/translations/assistant_cs.qm
@@ -44,6 +44,7 @@ qt5/translations/linguist_en.qm
 qt5/translations/linguist_es.qm
 qt5/translations/linguist_fr.qm
 qt5/translations/linguist_hu.qm
+qt5/translations/linguist_it.qm
 qt5/translations/linguist_ja.qm
 qt5/translations/linguist_ko.qm
 qt5/translations/linguist_pl.qm
@@ -80,6 +81,7 @@ qt5/translations/qt_es.qm
 qt5/translations/qt_fa.qm
 qt5/translations/qt_fi.qm
 qt5/translations/qt_fr.qm
+qt5/translations/qt_gd.qm
 qt5/translations/qt_gl.qm
 qt5/translations/qt_he.qm
 qt5/translations/qt_help_ar.qm
@@ -107,6 +109,7 @@ qt5/translations/qt_it.qm
 qt5/translations/qt_ja.qm
 qt5/translations/qt_ko.qm
 qt5/translations/qt_lt.qm
+qt5/translations/qt_lv.qm
 qt5/translations/qt_pl.qm
 qt5/translations/qt_pt.qm
 qt5/translations/qt_ru.qm
@@ -137,21 +140,12 @@ qt5/translations/qtbase_pl.qm
 qt5/translations/qtbase_ru.qm
 qt5/translations/qtbase_sk.qm
 qt5/translations/qtbase_uk.qm
-qt5/translations/qtconfig_hu.qm
-qt5/translations/qtconfig_ja.qm
-qt5/translations/qtconfig_ko.qm
-qt5/translations/qtconfig_pl.qm
-qt5/translations/qtconfig_ru.qm
-qt5/translations/qtconfig_sk.qm
-qt5/translations/qtconfig_sl.qm
-qt5/translations/qtconfig_uk.qm
-qt5/translations/qtconfig_zh_CN.qm
-qt5/translations/qtconfig_zh_TW.qm
 qt5/translations/qtconnectivity_bg.qm
 qt5/translations/qtconnectivity_da.qm
 qt5/translations/qtconnectivity_de.qm
 qt5/translations/qtconnectivity_en.qm
 qt5/translations/qtconnectivity_es.qm
+qt5/translations/qtconnectivity_hu.qm
 qt5/translations/qtconnectivity_ko.qm
 qt5/translations/qtconnectivity_pl.qm
 qt5/translations/qtconnectivity_ru.qm
@@ -163,6 +157,7 @@ qt5/translations/qtdeclarative_en.qm
 qt5/translations/qtdeclarative_es.qm
 qt5/translations/qtdeclarative_fi.qm
 qt5/translations/qtdeclarative_fr.qm
+qt5/translations/qtdeclarative_hu.qm
 qt5/translations/qtdeclarative_ja.qm
 qt5/translations/qtdeclarative_ko.qm
 qt5/translations/qtdeclarative_lv.qm
@@ -176,6 +171,7 @@ qt5/translations/qtlocation_de.qm
 qt5/translations/qtlocation_en.qm
 qt5/translations/qtlocation_es.qm
 qt5/translations/qtlocation_fr.qm
+qt5/translations/qtlocation_hu.qm
 qt5/translations/qtlocation_ko.qm
 qt5/translations/qtlocation_pl.qm
 qt5/translations/qtlocation_ru.qm
@@ -218,10 +214,13 @@ qt5/translations/qtquick1_sk.qm
 qt5/translations/qtquick1_uk.qm
 qt5/translations/qtquickcontrols2_ar.qm
 qt5/translations/qtquickcontrols2_bg.qm
+qt5/translations/qtquickcontrols2_da.qm
 qt5/translations/qtquickcontrols2_en.qm
+qt5/translations/qtquickcontrols2_hu.qm
 qt5/translations/qtquickcontrols2_ko.qm
 qt5/translations/qtquickcontrols2_uk.qm
 qt5/translations/qtquickcontrols_bg.qm
+qt5/translations/qtquickcontrols_da.qm
 qt5/translations/qtquickcontrols_de.qm
 qt5/translations/qtquickcontrols_en.qm
 qt5/translations/qtquickcontrols_fi.qm
