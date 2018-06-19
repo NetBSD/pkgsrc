@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/07/03 17:28:39 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/06/19 22:45:36 ryoon Exp $
 cross-pdp11-aout/bin/pdp11-aout-addr2line
 cross-pdp11-aout/bin/pdp11-aout-ar
 cross-pdp11-aout/bin/pdp11-aout-as
@@ -51,6 +51,7 @@ cross-pdp11-aout/pdp11-aout/bin/readelf
 cross-pdp11-aout/pdp11-aout/bin/strip
 cross-pdp11-aout/pdp11-aout/lib/ldscripts/pdp11.x
 cross-pdp11-aout/pdp11-aout/lib/ldscripts/pdp11.xbn
+cross-pdp11-aout/pdp11-aout/lib/ldscripts/pdp11.xe
 cross-pdp11-aout/pdp11-aout/lib/ldscripts/pdp11.xn
 cross-pdp11-aout/pdp11-aout/lib/ldscripts/pdp11.xr
 cross-pdp11-aout/pdp11-aout/lib/ldscripts/pdp11.xu
