@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2913 2018/06/19 13:23:54 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.2914 2018/06/19 14:23:53 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4146,3 +4146,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-natsort to 5.3.2 [adam 2018-06-19]
 	Updated www/py-nevow to 0.14.4 [adam 2018-06-19]
 	Updated lang/rust to 1.26.2 [ryoon 2018-06-19]
+	Updated devel/p5-SDL to 2.548 [wen 2018-06-19]
