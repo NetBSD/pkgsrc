@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2907 2018/06/19 07:12:54 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2908 2018/06/19 07:14:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4137,3 +4137,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Perl-Critic to 1.132 [wen 2018-06-19]
 	Updated devel/p5-PPIx-Regexp to 0.060 [wen 2018-06-19]
 	Updated x11/xf86-input-mouse to 1.9.3 [wiz 2018-06-19]
+	Updated x11/libXaw3d to 1.6.3 [wiz 2018-06-19]
