@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/04/24 13:08:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/06/19 11:46:11 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -377,6 +377,9 @@ ${PYSITELIB}/django_countries/templatetags/countries.pyo
 ${PYSITELIB}/django_countries/tests/__init__.py
 ${PYSITELIB}/django_countries/tests/__init__.pyc
 ${PYSITELIB}/django_countries/tests/__init__.pyo
+${PYSITELIB}/django_countries/tests/apps.py
+${PYSITELIB}/django_countries/tests/apps.pyc
+${PYSITELIB}/django_countries/tests/apps.pyo
 ${PYSITELIB}/django_countries/tests/custom_countries.py
 ${PYSITELIB}/django_countries/tests/custom_countries.pyc
 ${PYSITELIB}/django_countries/tests/custom_countries.pyo
