@@ -1,20 +1,20 @@
-@comment $NetBSD: PLIST.Linux,v 1.3 2018/01/17 19:30:46 markd Exp $
+@comment $NetBSD: PLIST.Linux,v 1.3.2.1 2018/06/19 12:05:26 bsiegert Exp $
 qt5/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qevdevkeyboard_defaultmap_p.h
-qt5/include/QtInputSupport/5.10.0/QtInputSupport/private/qevdevkeyboardhandler_p.h
-qt5/include/QtInputSupport/5.10.0/QtInputSupport/private/qevdevkeyboardmanager_p.h
-qt5/include/QtInputSupport/5.10.0/QtInputSupport/private/qevdevmousehandler_p.h
-qt5/include/QtInputSupport/5.10.0/QtInputSupport/private/qevdevmousemanager_p.h
-qt5/include/QtInputSupport/5.10.0/QtInputSupport/private/qevdevtablethandler_p.h
-qt5/include/QtInputSupport/5.10.0/QtInputSupport/private/qevdevtabletmanager_p.h
-qt5/include/QtInputSupport/5.10.0/QtInputSupport/private/qevdevtouchfilter_p.h
-qt5/include/QtInputSupport/5.10.0/QtInputSupport/private/qevdevtouchhandler_p.h
-qt5/include/QtInputSupport/5.10.0/QtInputSupport/private/qevdevtouchmanager_p.h
-qt5/include/QtInputSupport/5.10.0/QtInputSupport/private/qlibinputhandler_p.h
-qt5/include/QtInputSupport/5.10.0/QtInputSupport/private/qlibinputkeyboard_p.h
-qt5/include/QtInputSupport/5.10.0/QtInputSupport/private/qlibinputpointer_p.h
-qt5/include/QtInputSupport/5.10.0/QtInputSupport/private/qlibinputtouch_p.h
-qt5/include/QtInputSupport/5.10.0/QtInputSupport/private/qtouchoutputmapping_p.h
-qt5/include/QtInputSupport/5.10.0/QtInputSupport/private/qtslib_p.h
+qt5/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qevdevkeyboardhandler_p.h
+qt5/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qevdevkeyboardmanager_p.h
+qt5/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qevdevmousehandler_p.h
+qt5/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qevdevmousemanager_p.h
+qt5/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qevdevtablethandler_p.h
+qt5/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qevdevtabletmanager_p.h
+qt5/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qevdevtouchfilter_p.h
+qt5/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qevdevtouchhandler_p.h
+qt5/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qevdevtouchmanager_p.h
+qt5/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qlibinputhandler_p.h
+qt5/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qlibinputkeyboard_p.h
+qt5/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qlibinputpointer_p.h
+qt5/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qlibinputtouch_p.h
+qt5/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qtouchoutputmapping_p.h
+qt5/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qtslib_p.h
 qt5/include/QtInputSupport/QIntegrityHIDManager
 qt5/include/QtInputSupport/qintegrityhidmanager.h
 qt5/include/QtInputSupport/QtInputSupport
