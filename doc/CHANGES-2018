@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2918 2018/06/19 22:53:10 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.2919 2018/06/19 22:58:56 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4152,3 +4152,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated cross/pdp11-aout-gcc to 8.1.0 [ryoon 2018-06-19]
 	Updated converters/nkf to 2.14 [ryoon 2018-06-19]
 	Updated converters/p5-nkf to 2.14 [ryoon 2018-06-19]
+	Updated graphics/ImageMagick to 7.0.8.2 [ryoon 2018-06-19]
+	Updated graphics/p5-PerlMagick to 7.0.8.2 [ryoon 2018-06-19]
