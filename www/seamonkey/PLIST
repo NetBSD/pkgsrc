@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.60 2018/03/03 22:14:41 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.61 2018/06/19 01:30:26 maya Exp $
 bin/seamonkey
 lib/seamonkey/application.ini
 lib/seamonkey/blocklist.xml
@@ -4596,8 +4596,8 @@ lib/seamonkey/isp/rss.rdf
 lib/seamonkey/libldap60.so
 lib/seamonkey/libldif60.so
 lib/seamonkey/liblgpllibs.so
-lib/seamonkey/libmozavcodec.so
-lib/seamonkey/libmozavutil.so
+${PLIST.avx86}lib/seamonkey/libmozavcodec.so
+${PLIST.avx86}lib/seamonkey/libmozavutil.so
 ${PLIST.gtk3}lib/seamonkey/libmozgtk.so
 lib/seamonkey/libmozsqlite3.so
 lib/seamonkey/libprldap60.so
