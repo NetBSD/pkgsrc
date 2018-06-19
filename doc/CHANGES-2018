@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2905 2018/06/19 06:45:37 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2906 2018/06/19 06:52:53 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4135,3 +4135,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Net-Netmask to 1.9103 [wen 2018-06-19]
 	Added textproc/p5-PPIx-QuoteLike version 0.005 [wen 2018-06-19]
 	Updated devel/p5-Perl-Critic to 1.132 [wen 2018-06-19]
+	Updated devel/p5-PPIx-Regexp to 0.060 [wen 2018-06-19]
