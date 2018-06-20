@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.22 2017/09/29 12:40:27 wiz Exp $
+# $NetBSD: modules.mk,v 1.23 2018/06/20 11:15:44 mef Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -41,7 +41,7 @@
 #			The user's favourite Emacs version.  The default
 #			value is set in mk/defaults/mk.conf.
 #		Possible values:
-#			emacs25, emacs21, emacs21nox, emacs20,
+#			emacs26, emacs25, emacs21, emacs21nox, emacs20,
 #			xemacs215, xemacs215nox, xemacs214, xemacs214nox
 #		Default value:
 #			emacs25
@@ -61,10 +61,10 @@
 #		Description:
 #			Versions the ELP accepts (supports).
 #		Possible values:
-#			emacs25, emacs21, emacs21nox, emacs20,
+#			emacs26, emacs25, emacs21, emacs21nox, emacs20,
 #			xemacs215, xemacs215nox, xemacs214, xemacs214nox
 #		Default value:
-#			emacs25, emacs21, emacs21nox, emacs20,
+#			emacs26, emacs25, emacs21, emacs21nox, emacs20,
 #			xemacs215, xemacs215nox, xemacs214, xemacs214nox
 #
 #	EMACS_BUILDLINK
@@ -174,10 +174,10 @@
 #		Possible values:
 #			XXX
 #
-#	FOR_{emacs25,emacs21,emacs21nox,emacs20,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
+#	FOR_{emacs26,emacs25,emacs21,emacs21nox,emacs20,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
 #	FOR_{emacs,xemacs}
 #	FOR_{emacs_x,emacs_nox}
-#	NOTFOR_{emacs25,emacs21,emacs21nox,emacs20,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
+#	NOTFOR_{emacs26,emacs25,emacs21,emacs21nox,emacs20,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
 #	NOTFOR_{emacs,xemacs}
 #	NOTFOR_{emacs_x,emacs_nox}
 #		Description:
@@ -221,7 +221,7 @@ BUILD_DEFS_EFFECTS+=	${_SYS_VARS.emacs}
 #
 
 _EMACS_VERSIONS_ALL= \
-	emacs20 emacs21 emacs21nox emacs25 emacs25nox \
+	emacs20 emacs21 emacs21nox emacs25 emacs25nox emacs26 emacs26nox\
 	xemacs214 xemacs214nox xemacs215 xemacs215nox
 
 _EMACS_PKGDIR_MAP= \
@@ -230,6 +230,8 @@ _EMACS_PKGDIR_MAP= \
 	emacs21nox@../../editors/emacs21-nox11 \
 	emacs25@../../editors/emacs25 \
 	emacs25nox@../../editors/emacs25-nox11 \
+	emacs26@../../editors/emacs26 \
+	emacs26nox@../../editors/emacs26-nox11 \
 	xemacs214@../../editors/xemacs \
 	xemacs214nox@../../editors/xemacs-nox11 \
 	xemacs215@../../editors/xemacs-current \
@@ -340,10 +342,11 @@ PRINT_PLIST_AWK+=	{ gsub(/${EMACS_LISPPREFIX:S|${PREFIX}/||:S|/|\\/|g}/, \
 
 .if defined(EMACS_BUILDLINK)
 _EMACS_DIR=	${BUILDLINK_DIR}/share/emacs
-.  if empty(EMACS_TYPE:Memacs26)
-ALL_ENV+=	EMACSLOADPATH=${_EMACS_DIR}/${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}/lisp:${_EMACS_DIR}/site-lisp
-.  else
+#  development version usually claims three digit, say, 27.0.50 etc
+.  if !empty(EMACS_TYPE:Memacs27)
 ALL_ENV+=	EMACSLOADPATH=${_EMACS_DIR}/${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}.${_EMACS_VERSION_MICRO}/lisp:${_EMACS_DIR}/site-lisp
+.  else
+ALL_ENV+=	EMACSLOADPATH=${_EMACS_DIR}/${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}/lisp:${_EMACS_DIR}/site-lisp
 .  endif
 .include	"${_EMACS_PKGDIR}/buildlink3.mk"
 .endif
