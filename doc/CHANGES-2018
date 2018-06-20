@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2922 2018/06/20 07:53:02 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2923 2018/06/20 09:29:59 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4157,3 +4157,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added math/p5-Math-Matrix version 0.8 [mef 2018-06-20]
 	Added math/p5-Math-Systems version 0.01 [mef 2018-06-20]
 	Updated security/libgcrypt to 1.8.3 [adam 2018-06-20]
+	Updated pkgtools/pkgin to 0.11.2 [jperkin 2018-06-20]
