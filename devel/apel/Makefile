@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.36 2018/01/04 16:36:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.37 2018/06/20 11:57:46 ryoon Exp $
 
-DISTNAME=	apel-10.8
+DISTNAME=	apel-10.8.0.20170122
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel
-MASTER_SITES=	http://kanji.zinbun.kyoto-u.ac.jp/~tomo/lemi/dist/apel/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=wanderlust/}
+GITHUB_PROJECT=	apel
+GITHUB_TAG=	339eb28ffae3165255a79de9b1fd362f43cd37c3
 
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://git.chise.org/elisp/apel/
@@ -24,6 +25,7 @@ MAKE_FLAGS+=	${MAKE_FLAGS.${EMACS_FLAVOR}}
 
 # apel is included in xemacs-packages
 EMACS_VERSIONS_ACCEPTED=	emacs25 emacs25nox emacs21 emacs21nox emacs20
+EMACS_VERSIONS_ACCEPTED+=	emacs26 emacs26nox
 
 BUILD_TARGET.emacs=	elc
 BUILD_TARGET.xemacs=	package
