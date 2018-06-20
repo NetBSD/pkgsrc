@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2018/01/14 17:34:02 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2018/06/20 22:21:25 sevan Exp $
 #
 
-DISTNAME=	wtf-20150206
+DISTNAME=	wtf-20180615
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bsdwtf/}
 
@@ -21,6 +21,10 @@ SUBST_STAGE.paths=	pre-configure
 REPLACE_SH=		wtf
 
 INSTALLATION_DIRS+=	bin share/wtf ${PKGMANDIR}/man6
+
+post-extract:
+	${RM} ${WRKSRC}/acronyms-o.fake
+	${MV} ${WRKSRC}/acronyms-o.real ${WRKSRC}/acronyms-o
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/wtf ${DESTDIR}${PREFIX}/bin
