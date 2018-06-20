@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2926 2018/06/20 12:40:51 tpaul Exp $
+$NetBSD: CHANGES-2018,v 1.2927 2018/06/20 15:08:34 tpaul Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4162,3 +4162,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added editors/emacs26-nox11 version 26.1 [makoto 2018-06-20]
 	Updated devel/apel to 10.8.0.20170122 [ryoon 2018-06-20]
 	Updated sysutils/salt to 2018.3.1nb1 [tpaul 2018-06-20]
+	Updated sysutils/salt to 2018.3.1nb2 [tpaul 2018-06-20]
