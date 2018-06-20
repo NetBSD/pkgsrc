@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.77 2018/05/11 19:20:11 kamil Exp $
+$NetBSD: distinfo,v 1.78 2018/06/20 06:18:53 adam Exp $
 
-SHA1 (libgcrypt-1.8.2.tar.bz2) = ab8aae5d7a68f8e0988f90e11e7f6a4805af5c8d
-RMD160 (libgcrypt-1.8.2.tar.bz2) = e0bed861b328fe411faa74daca0db388fb5aed88
-SHA512 (libgcrypt-1.8.2.tar.bz2) = 1e8c414f95bf6b50e778102ca7c1b3b1f30d8320826d9fff747a0a098ef85499cdc3e6de736853b9cd4e5dadda35c7c0a291e13643dcac5eaef44f2ddc7a6c09
-Size (libgcrypt-1.8.2.tar.bz2) = 2966534 bytes
+SHA1 (libgcrypt-1.8.3.tar.bz2) = 13bd2ce69e59ab538e959911dfae80ea309636e3
+RMD160 (libgcrypt-1.8.3.tar.bz2) = 3cf9040b3fa0860b07075df2373a71617aff34ec
+SHA512 (libgcrypt-1.8.3.tar.bz2) = 8c873204303f173dd3f49817a81035c1d504b2fc885965c9bc074a6e3fb108ceb6dca366d85e840a40712a6890fc325018ea9b8c1b7b8804c51c44b296cb96a0
+Size (libgcrypt-1.8.3.tar.bz2) = 2989166 bytes
 SHA1 (patch-aa) = 60b3f4453b217ed8879a2ffd8d485c0195ffb5f8
 SHA1 (patch-cipher_rijndael-arm.S) = ef3cb7f481022440780eb48ae31cbfad0a3ec115
 SHA1 (patch-random_jitterentropy-base.c) = 5a14676aae7ad5d12f9f0bed366af5183aaf22ad
