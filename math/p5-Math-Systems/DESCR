@@ -1,0 +1,22 @@
+Solves systems of equations using Krammer's rule. If you look at the
+Solve method you'll understand Krammer's rule (I think?)
+
+Basically a system of equations is more than one equation/variable your
+solving. This module REQUIRES you have 1 equation per each coefficent.
+Try not to use too many equations. 3 equations is probably the limit of
+reason. But if you don't mind long compilation time, go for as many as
+you want.
+
+This module uses (and ovbiously requires you have) Math::Matrix to do
+all the Matrix work. Please take a look at that module for details do
+you can see exactly what is happening. There are no arguements in this
+module except for the Matrix which will be brought to Math::Matrix.
+
+Also, keep in mind, there are no error messenging. I will of course
+change that someday, but for now I'm satisfied that I can solve systems
+of equations. Don't allow error-prone things to be written in. But,
+there are of course times when you won't be able to figure out the
+stupid answer and this module will absolutly act like it did a great
+job, and at the same time, fail. So, keep that in mind.
+
+BETA means something. It's not good.
