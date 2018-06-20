@@ -1,0 +1,19 @@
+ The following methods are available:
+  new
+  clone
+  size  of matrix
+  concat
+  transpose
+  multiply
+  solve
+  multiply_scalar
+  add
+  substract
+  equal
+  slice
+  determinant
+  dot_product
+  absolute
+  normalizing
+  cross_product
+  print
