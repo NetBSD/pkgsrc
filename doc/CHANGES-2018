@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2920 2018/06/20 05:14:34 mef Exp $
+$NetBSD: CHANGES-2018,v 1.2921 2018/06/20 05:16:33 mef Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4154,5 +4154,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated converters/p5-nkf to 2.14 [ryoon 2018-06-19]
 	Updated graphics/ImageMagick to 7.0.8.2 [ryoon 2018-06-19]
 	Updated graphics/p5-PerlMagick to 7.0.8.2 [ryoon 2018-06-19]
-	Updated math/p5-Math-Matrix to 0.8 [mef 2018-06-20]
-	Updated math/p5-Math-Systems to 0.01 [mef 2018-06-20]
+	Added math/p5-Math-Matrix version 0.8 [mef 2018-06-20]
+	Added math/p5-Math-Systems version 0.01 [mef 2018-06-20]
