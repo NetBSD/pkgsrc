@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.60 2018/06/01 14:54:43 maya Exp $
+# $NetBSD: options.mk,v 1.61 2018/06/20 01:37:15 maya Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -8,14 +8,15 @@ PKG_SUGGESTED_OPTIONS=
 # is also required to support the latest RADEON GPUs, so enable it
 # by default on platforms where such GPUs might be encountered.
 .if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") && \
-	${OPSYS} != "SunOS" && ${OPSYS} != "Darwin"
+	${OPSYS} != "SunOS" && ${OPSYS} != "Darwin" && \
+	(${OPSYS} == "NetBSD" && ${X11_TYPE} == "modular")
 PKG_SUGGESTED_OPTIONS+=		llvm
 .endif
 
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" ||		\
 	${OPSYS} == "DragonFly" || ${OPSYS} == "Linux" ||	\
 	${OPSYS} == "SunOS" || ${OPSYS} == "Darwin" ||		\
-	${OPSYS} == "NetBSD"
+	(${OPSYS} == "NetBSD" && ${X11_TYPE} == "modular")
 PKG_SUGGESTED_OPTIONS+=		dri
 .endif
 
