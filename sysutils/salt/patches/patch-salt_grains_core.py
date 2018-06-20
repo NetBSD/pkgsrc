@@ -1,4 +1,4 @@
-$NetBSD: patch-salt_grains_core.py,v 1.5 2018/06/20 11:50:56 tpaul Exp $
+$NetBSD: patch-salt_grains_core.py,v 1.6 2018/06/20 15:00:16 tpaul Exp $
 
 Prevent crash on NetBSD and OpenBSD when no swap is configured.
 https://github.com/saltstack/salt/pull/47600
@@ -12,7 +12,7 @@ PR: pkg/53278
              swapctl = salt.utils.path.which('swapctl')
 -            swap_total = __salt__['cmd.run']('{0} -sk'.format(swapctl)).split(' ')[1]
 +            swap_total = __salt__['cmd.run']('{0} -sk'.format(swapctl))
-+            if swap_data == 'no swap devices configured':
++            if swap_total == 'no swap devices configured':
 +                swap_total = 0
 +            else:
 +                swap_total = swap_data.split(' ')[1]
