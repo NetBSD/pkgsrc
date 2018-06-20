@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.124 2018/03/11 17:49:53 wiz Exp $
+$NetBSD: distinfo,v 1.125 2018/06/20 18:22:45 tez Exp $
 
 SHA1 (libxml2-2.9.8.tar.gz) = 66bcefd98a6b7573427cf66f9d3841b59eb5b8c3
 RMD160 (libxml2-2.9.8.tar.gz) = a3bf30ed652cfa2e06c64ae62c95a5ebd889c7a7
@@ -13,3 +13,4 @@ SHA1 (patch-encoding.c) = 6cf0a7d421828b9f40a4079ee85adb791c54d096
 SHA1 (patch-python_libxml.py) = 869a72ae5ba2e27e6d46552878890acb22337675
 SHA1 (patch-python_libxml2.py) = 209d105b0f3aedb834091390a7c6819705108e34
 SHA1 (patch-python_setup.py) = 7771fd02ee6779463f1d3321f099d7e6d19cd1b1
+SHA1 (patch-xzlib.c) = eb20e3ef1504dacf1363f86c662918365306e84c
