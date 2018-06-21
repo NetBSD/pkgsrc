@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2018/04/14 07:34:02 adam Exp $
+# $NetBSD: Makefile,v 1.20 2018/06/21 06:47:02 markd Exp $
 
 DISTNAME=	solid-${KF5VER}
-PKGREVISION=	1
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -16,4 +15,5 @@ USE_TOOLS+=	flex bison
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
 BUILDLINK_DEPMETHOD.qt5-qttools= build
 .include "../../x11/qt5-qttools/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
