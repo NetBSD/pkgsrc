@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2933 2018/06/21 15:33:00 he Exp $
+$NetBSD: CHANGES-2018,v 1.2934 2018/06/21 20:55:44 seb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4246,3 +4246,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/tinyproxy to 1.8.4 [adam 2018-06-21]
 	Updated net/wireshark to 2.6.1nb1 [adam 2018-06-21]
 	Updated net/unbound to 1.7.3 [he 2018-06-21]
+	Updated devel/jsonnet to 0.10.0 [seb 2018-06-21]
