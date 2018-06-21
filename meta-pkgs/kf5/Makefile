@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/05/27 06:41:38 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2018/06/21 08:24:25 markd Exp $
 
 DISTNAME=	kf5-${KF5VER}
 CATEGORIES=	meta-pkgs x11 kde
@@ -9,7 +9,7 @@ MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://www.kde.org/
 COMMENT=	"meta-package" for the KDE Frameworks 5
 
-KF5VER=		5.44.0
+KF5VER=		5.47.0
 
 DEPENDS+=	attica-qt5-${KF5VER}{,nb[0-9]*}:../../misc/attica-qt5
 DEPENDS+=	baloo5-${KF5VER}{,nb[0-9]*}:../../sysutils/baloo5
@@ -41,6 +41,7 @@ DEPENDS+=	kemoticons-${KF5VER}{,nb[0-9]*}:../../misc/kemoticons
 DEPENDS+=	kfilemetadata5-${KF5VER}{,nb[0-9]*}:../../sysutils/kfilemetadata5
 DEPENDS+=	kglobalaccel-${KF5VER}{,nb[0-9]*}:../../x11/kglobalaccel
 DEPENDS+=	kguiaddons-${KF5VER}{,nb[0-9]*}:../../x11/kguiaddons
+DEPENDS+=	kholidays-${KF5VER}{,nb[0-9]*}:../../time/kholidays
 DEPENDS+=	ki18n-${KF5VER}{,nb[0-9]*}:../../devel/ki18n
 DEPENDS+=	kiconthemes-${KF5VER}{,nb[0-9]*}:../../graphics/kiconthemes
 DEPENDS+=	kidletime-${KF5VER}{,nb[0-9]*}:../../devel/kidletime
