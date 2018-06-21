@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2018/04/11 11:50:38 markd Exp $
+$NetBSD: distinfo,v 1.5 2018/06/21 06:44:59 markd Exp $
 
-SHA1 (kfilemetadata-5.44.0.tar.xz) = 27bcaed7877bd31abed1619ae43241c08b958b7a
-RMD160 (kfilemetadata-5.44.0.tar.xz) = 7eab1c6b94432bc198d55ae2ad22bad78122ff67
-SHA512 (kfilemetadata-5.44.0.tar.xz) = 9c3c9edc107743e357a6db3f9cad9732602a4286968d10c380e70e4434be8ee16b5aadf9d0a452b78e6262cfc9d765a2d6a1470d664e4c41d33cb9aa4e12484f
-Size (kfilemetadata-5.44.0.tar.xz) = 219528 bytes
+SHA1 (kfilemetadata-5.47.0.tar.xz) = 3532a4d1c837ed87519db129a5a98f5448a9d03f
+RMD160 (kfilemetadata-5.47.0.tar.xz) = 4c13317fc8974e1c95a3199b964dbca8484592e1
+SHA512 (kfilemetadata-5.47.0.tar.xz) = 2ff4b7321c5ecbf64283ea2cf5674c282400a2a544e40653212384d6ae5339f5dfa0cacc5104054a84caed815610fdf1c9d5f3af333f1eaffff18ec90a157e23
+Size (kfilemetadata-5.47.0.tar.xz) = 254044 bytes
 SHA1 (patch-cmake_FindFFmpeg.cmake) = 94c7699d9a62b86f3c188ad162385bc3319b7753
