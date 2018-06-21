@@ -1,6 +1,7 @@
-$NetBSD: patch-ae,v 1.4 2011/01/23 23:58:01 dholland Exp $
+$NetBSD: patch-ae,v 1.5 2018/06/21 22:36:36 tez Exp $
 
 Fix build with libpng 1.5.
+Fix CVE-2017-18215 from https://bugzilla.suse.com/show_bug.cgi?id=1043479
 
 --- xvpng.c.orig	2007-05-14 00:53:28.000000000 +0000
 +++ xvpng.c
@@ -514,7 +515,7 @@ Fix build with libpng 1.5.
 -                     info_ptr->text[i].text_length + 2;
 +    for (i = 0; i < num_text; i++)
 +      commentsize += strlen(text[i].key) + 1 +
-+                     text[i].text_length + 2;
++                     strlen(text[i].text) + 2;
  
      if ((pinfo->comment = malloc(commentsize)) == NULL) {
        png_warning(png_ptr,"can't allocate comment string");
