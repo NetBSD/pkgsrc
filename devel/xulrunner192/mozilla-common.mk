@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.11 2017/01/01 14:43:37 wiz Exp $
+# $NetBSD: mozilla-common.mk,v 1.12 2018/06/21 10:42:22 jperkin Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -69,6 +69,13 @@ CONFIGURE_ENV.NetBSD+=	ac_cv_thread_keyword=no
 .if ${OPSYS} == "SunOS"
 # native libbz2.so hides BZ2_crc32Table
 PREFER.bzip2?=	pkgsrc
+
+# As yet unclear why these libraries are missing SSP
+CHECK_SSP_SKIP+=	lib/xulrunner192-sdk/sdk/lib/libplc4.so
+CHECK_SSP_SKIP+=	lib/xulrunner192-sdk/sdk/lib/libxpcom.so
+CHECK_SSP_SKIP+=	lib/xulrunner192/libplc4.so
+CHECK_SSP_SKIP+=	lib/xulrunner192/libxpcom.so
+CHECK_SSP_SKIP+=	lib/xulrunner192/plugins/libunixprintplugin.so
 .endif
 
 .if ${OPSYS} == "Linux"
