@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/01/01 18:16:39 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2018/06/21 13:05:14 ryoon Exp $
 
 DISTNAME=		tacshell-0.91
 PKGREVISION=		1
@@ -6,7 +6,7 @@ CATEGORIES=		security
 MASTER_SITES=		http://www.rezrov.net/software/
 
 MAINTAINER=		sekiya@NetBSD.org
-#HOMEPAGE=		http://www.rezrov.net/software/tacshell.html
+HOMEPAGE=		http://www.rezrov.net/software/tacshell.html
 COMMENT=		RSA ACE/Server sdshell workalike, using TACACS+
 
 GNU_CONFIGURE=		YES
