@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2018/04/11 11:50:39 markd Exp $
+$NetBSD: distinfo,v 1.5 2018/06/21 06:55:35 markd Exp $
 
-SHA1 (syntax-highlighting-5.44.0.tar.xz) = b11c502b0b141c946c08e0a720d57c6142b7277b
-RMD160 (syntax-highlighting-5.44.0.tar.xz) = c8eb6d01211cd21e4c3e96463d1cf9e387ee40ad
-SHA512 (syntax-highlighting-5.44.0.tar.xz) = 6d503648c7572ec049a2e534318cc1bc5f0d83a1460e92f5c0fb46f29a6891ea1005ec0cf6bf19525d543a3d983c9e0c5834cffd2f46c449701ca9d53f3adce1
-Size (syntax-highlighting-5.44.0.tar.xz) = 1125324 bytes
+SHA1 (syntax-highlighting-5.47.0.tar.xz) = e2c0ef711decd79f7ff77b6706a541ce16132437
+RMD160 (syntax-highlighting-5.47.0.tar.xz) = 0668e534f7f14d841abc3f0826fe3c4dd2652ca8
+SHA512 (syntax-highlighting-5.47.0.tar.xz) = 64e3711fec589e17301fced98f91fb018ccf5efdaaf55e3bdcdc8602b3dfd1686cd09856f206dc069bbe42a3c998f27c398ea3da8719e2c36638d14c29537c5a
+Size (syntax-highlighting-5.47.0.tar.xz) = 1171756 bytes
 SHA1 (patch-autotests_input_highlight.sh) = a03c2d3a389b066d914a1c1aab97977013af4626
