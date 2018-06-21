@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2928 2018/06/21 00:36:23 markd Exp $
+$NetBSD: CHANGES-2018,v 1.2929 2018/06/21 04:34:13 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4167,3 +4167,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/phonon-qt5 to 4.10.1 [markd 2018-06-21]
 	Updated multimedia/phonon-backend-vlc to 0.10.1 [markd 2018-06-21]
 	Updated multimedia/phonon-qt5-backend-vlc to 0.10.1 [markd 2018-06-21]
+	Updated mail/mailfront to 2.21 [schmonz 2018-06-21]
