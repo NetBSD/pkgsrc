@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/04/11 11:50:39 markd Exp $
+$NetBSD: distinfo,v 1.5 2018/06/21 07:14:55 markd Exp $
 
-SHA1 (kded-5.44.0.tar.xz) = 4e1db7fc237b1eb61eb58571466abfcd6f18d24b
-RMD160 (kded-5.44.0.tar.xz) = 929f9f870e72c753365a438b7b30234ad77e6331
-SHA512 (kded-5.44.0.tar.xz) = 571dc3e54e5d17dd46b99080c15314d711da93d26fd2e4cc39f6acd14f34ec775ec504275459b40d81613421d19411c5480f23ddcd783027e0f621ac2160a1b7
-Size (kded-5.44.0.tar.xz) = 37744 bytes
+SHA1 (kded-5.47.0.tar.xz) = 09dd0bfc20b56a7c92d40f174704b8e313e718e9
+RMD160 (kded-5.47.0.tar.xz) = 77b4f66a1154125cc3263d33f39aa38999ca3a36
+SHA512 (kded-5.47.0.tar.xz) = db020d194bef308981a2180e959957276c50c2cedf5a500f20e99fa03ab6517223aedc881fdd160fe547da8e296d78bdb5f1bca518f54301ab7e31119200725d
+Size (kded-5.47.0.tar.xz) = 37876 bytes
