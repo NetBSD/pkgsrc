@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2018/04/11 11:50:34 markd Exp $
+$NetBSD: distinfo,v 1.7 2018/06/21 05:20:43 markd Exp $
 
-SHA1 (karchive-5.44.0.tar.xz) = bcc26e1a85133458313247633d3fffe1eda33edb
-RMD160 (karchive-5.44.0.tar.xz) = 1a0711596d9c47305a8f3685cdc2def1a7d1bcea
-SHA512 (karchive-5.44.0.tar.xz) = 9476493f310c4ef66df18bb5b7832319b2f2ab9d6a5e4ae27b373119113e40339ffe53c6751ca983a7629703f8bbf519118ba1374b2968149e42bcf798a94558
-Size (karchive-5.44.0.tar.xz) = 113480 bytes
+SHA1 (karchive-5.47.0.tar.xz) = 3f68e3297c69a16b0445d6c45d9f5de80e6440ac
+RMD160 (karchive-5.47.0.tar.xz) = 08ce1488549533c4989d8365ddb0efd2f58412b7
+SHA512 (karchive-5.47.0.tar.xz) = d115eeae96fec151342c18a2012c4bdb59d5b86e0429efe79e8c6ffbb31249c2eb24fccfbe59430e32fdf76aee8e72211de34689a2e63927d2978a1a0c65f4c6
+Size (karchive-5.47.0.tar.xz) = 438604 bytes
