@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2927 2018/06/20 15:08:34 tpaul Exp $
+$NetBSD: CHANGES-2018,v 1.2928 2018/06/21 00:36:23 markd Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4163,3 +4163,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/apel to 10.8.0.20170122 [ryoon 2018-06-20]
 	Updated sysutils/salt to 2018.3.1nb1 [tpaul 2018-06-20]
 	Updated sysutils/salt to 2018.3.1nb2 [tpaul 2018-06-20]
+	Updated multimedia/phonon to 4.10.1 [markd 2018-06-21]
+	Updated multimedia/phonon-qt5 to 4.10.1 [markd 2018-06-21]
+	Updated multimedia/phonon-backend-vlc to 0.10.1 [markd 2018-06-21]
+	Updated multimedia/phonon-qt5-backend-vlc to 0.10.1 [markd 2018-06-21]
