@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/06/18 07:47:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/06/21 06:43:05 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,6 +7,3 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/deprecation.py
 ${PYSITELIB}/deprecation.pyc
 ${PYSITELIB}/deprecation.pyo
-${PYSITELIB}/sample.py
-${PYSITELIB}/sample.pyc
-${PYSITELIB}/sample.pyo
