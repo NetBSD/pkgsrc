@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2935 2018/06/21 22:36:59 tez Exp $
+$NetBSD: CHANGES-2018,v 1.2936 2018/06/21 23:12:04 tez Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4248,3 +4248,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/unbound to 1.7.3 [he 2018-06-21]
 	Updated devel/jsonnet to 0.10.0 [seb 2018-06-21]
 	Updated graphics/xv to xv-3.10anb24 [tez 2018-06-21]
+	Updated graphics/tiff to tiff-4.0.9nb3 [tez 2018-06-21]
