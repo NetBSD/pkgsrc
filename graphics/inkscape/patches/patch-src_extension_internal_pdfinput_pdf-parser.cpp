@@ -1,4 +1,4 @@
-$NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 06:17:11 wiz Exp $
+$NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.8 2018/06/21 10:25:35 wiz Exp $
 
 - Object.h is included in pdf-parser.h -- see patch for pdf-parser.h.
 - Support poppler 0.58
@@ -7,8 +7,11 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
 
 --- src/extension/internal/pdfinput/pdf-parser.cpp.orig	2017-08-06 20:44:00.000000000 +0000
 +++ src/extension/internal/pdfinput/pdf-parser.cpp
-@@ -41,7 +41,7 @@ extern "C" {
- #include "goo/GooHash.h"
+@@ -38,10 +38,9 @@ extern "C" {
+ 
+ #include "goo/gmem.h"
+ #include "goo/GooTimer.h"
+-#include "goo/GooHash.h"
  #include "GlobalParams.h"
  #include "CharTypes.h"
 -#include "Object.h"
@@ -16,7 +19,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
  #include "Array.h"
  #include "Dict.h"
  #include "Stream.h"
-@@ -414,13 +414,21 @@ void PdfParser::parse(Object *obj, GBool
+@@ -414,13 +413,21 @@ void PdfParser::parse(Object *obj, GBool
  
    if (obj->isArray()) {
      for (int i = 0; i < obj->arrayGetLength(); ++i) {
@@ -38,7 +41,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
      }
    } else if (!obj->isStream()) {
  	error(errInternal, -1, "Weird page contents");
-@@ -439,7 +447,11 @@ void PdfParser::go(GBool /*topLevel*/)
+@@ -439,7 +446,11 @@ void PdfParser::go(GBool /*topLevel*/)
  
    // scan a sequence of objects
    int numArgs = 0;
@@ -50,7 +53,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
    while (!obj.isEOF()) {
  
      // got a command - execute it
-@@ -457,14 +469,20 @@ void PdfParser::go(GBool /*topLevel*/)
+@@ -457,14 +468,20 @@ void PdfParser::go(GBool /*topLevel*/)
        // Run the operation
        execOp(&obj, args, numArgs);
  
@@ -71,7 +74,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
  
      // too many arguments - something is wrong
      } else {
-@@ -475,13 +493,21 @@ void PdfParser::go(GBool /*topLevel*/)
+@@ -475,13 +492,21 @@ void PdfParser::go(GBool /*topLevel*/)
  	printf("\n");
  	fflush(stdout);
        }
@@ -93,7 +96,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
  
    // args at end with no command
    if (numArgs > 0) {
-@@ -495,8 +521,10 @@ void PdfParser::go(GBool /*topLevel*/)
+@@ -495,8 +520,10 @@ void PdfParser::go(GBool /*topLevel*/)
        printf("\n");
        fflush(stdout);
      }
@@ -104,7 +107,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
    }
  }
  
-@@ -692,9 +720,13 @@ void PdfParser::opSetDash(Object args[],
+@@ -692,9 +719,13 @@ void PdfParser::opSetDash(Object args[],
    if (length != 0) {
      dash = (double *)gmallocn(length, sizeof(double));
      for (int i = 0; i < length; ++i) {
@@ -118,7 +121,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
      }
    }
    state->setLineDash(dash, length, args[1].getNum());
-@@ -744,12 +776,18 @@ void PdfParser::opSetExtGState(Object ar
+@@ -744,12 +775,18 @@ void PdfParser::opSetExtGState(Object ar
    GBool haveBackdropColor = gFalse;
    GBool alpha = gFalse;
  
@@ -137,7 +140,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
      return;
    }
    if (printCommands) {
-@@ -759,7 +797,11 @@ void PdfParser::opSetExtGState(Object ar
+@@ -759,7 +796,11 @@ void PdfParser::opSetExtGState(Object ar
    }
  
    // transparency support: blend mode, fill/stroke opacity
@@ -149,7 +152,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
      GfxBlendMode mode = gfxBlendNormal;
      if (state->parseBlendMode(&obj2, &mode)) {
        state->setBlendMode(mode);
-@@ -767,40 +809,71 @@ void PdfParser::opSetExtGState(Object ar
+@@ -767,40 +808,71 @@ void PdfParser::opSetExtGState(Object ar
        error(errSyntaxError, getPos(), "Invalid blend mode in ExtGState");
      }
    }
@@ -221,7 +224,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
    }
    if (obj2.isName(const_cast<char*>("Default")) ||
        obj2.isName(const_cast<char*>("Identity"))) {
-@@ -809,9 +882,15 @@ void PdfParser::opSetExtGState(Object ar
+@@ -809,9 +881,15 @@ void PdfParser::opSetExtGState(Object ar
    } else if (obj2.isArray() && obj2.arrayGetLength() == 4) {
      int pos = 4;
      for (int i = 0; i < 4; ++i) {
@@ -237,7 +240,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
        if (!funcs[i]) {
  	pos = i;
  	break;
-@@ -828,21 +907,37 @@ void PdfParser::opSetExtGState(Object ar
+@@ -828,21 +906,37 @@ void PdfParser::opSetExtGState(Object ar
    } else if (!obj2.isNull()) {
      error(errSyntaxError, getPos(), "Invalid transfer function in ExtGState");
    }
@@ -275,7 +278,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
  	funcs[0] = Function::parse(&obj3);
  	if (funcs[0]->getInputSize() != 1 ||
  	    funcs[0]->getOutputSize() != 1) {
-@@ -851,26 +946,45 @@ void PdfParser::opSetExtGState(Object ar
+@@ -851,26 +945,45 @@ void PdfParser::opSetExtGState(Object ar
  	  funcs[0] = NULL;
  	}
        }
@@ -321,7 +324,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
  #if defined(POPPLER_EVEN_NEWER_NEW_COLOR_SPACE_API)
  	    blendingColorSpace = GfxColorSpace::parse(NULL, &obj5, NULL, NULL);
  #elif defined(POPPLER_EVEN_NEWER_COLOR_SPACE_API)
-@@ -879,15 +993,25 @@ void PdfParser::opSetExtGState(Object ar
+@@ -879,15 +992,25 @@ void PdfParser::opSetExtGState(Object ar
  	    blendingColorSpace = GfxColorSpace::parse(&obj5, NULL);
  #endif
  	  }
@@ -347,7 +350,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
  	  if (!haveBackdropColor) {
  	    if (blendingColorSpace) {
  	      blendingColorSpace->getDefaultColor(&backdropColor);
-@@ -906,18 +1030,24 @@ void PdfParser::opSetExtGState(Object ar
+@@ -906,18 +1029,24 @@ void PdfParser::opSetExtGState(Object ar
  	} else {
  	  error(errSyntaxError, getPos(), "Invalid soft mask in ExtGState - missing group");
  	}
@@ -372,7 +375,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
  }
  
  void PdfParser::doSoftMask(Object *str, GBool alpha,
-@@ -938,43 +1068,79 @@ void PdfParser::doSoftMask(Object *str, 
+@@ -938,43 +1067,79 @@ void PdfParser::doSoftMask(Object *str, 
    dict = str->streamGetDict();
  
    // check form type
@@ -452,7 +455,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
    resDict = obj1.isDict() ? obj1.getDict() : (Dict *)NULL;
  
    // draw it
-@@ -987,7 +1153,9 @@ void PdfParser::doSoftMask(Object *str, 
+@@ -987,7 +1152,9 @@ void PdfParser::doSoftMask(Object *str, 
    if (blendingColorSpace) {
      delete blendingColorSpace;
    }
@@ -462,7 +465,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
  }
  
  void PdfParser::opSetRenderingIntent(Object /*args*/[], int /*numArgs*/)
-@@ -1084,7 +1252,11 @@ void PdfParser::opSetFillColorSpace(Obje
+@@ -1084,7 +1251,11 @@ void PdfParser::opSetFillColorSpace(Obje
    Object obj;
  
    state->setFillPattern(NULL);
@@ -474,7 +477,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
  
    GfxColorSpace *colorSpace = 0;
  #if defined(POPPLER_EVEN_NEWER_NEW_COLOR_SPACE_API)
-@@ -1106,7 +1278,9 @@ void PdfParser::opSetFillColorSpace(Obje
+@@ -1106,7 +1277,9 @@ void PdfParser::opSetFillColorSpace(Obje
      colorSpace = GfxColorSpace::parse(&obj, NULL);
    }
  #endif
@@ -484,7 +487,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
    if (colorSpace) {
    GfxColor color;
      state->setFillColorSpace(colorSpace);
-@@ -1125,7 +1299,11 @@ void PdfParser::opSetStrokeColorSpace(Ob
+@@ -1125,7 +1298,11 @@ void PdfParser::opSetStrokeColorSpace(Ob
    GfxColorSpace *colorSpace = 0;
  
    state->setStrokePattern(NULL);
@@ -496,7 +499,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
  #if defined(POPPLER_EVEN_NEWER_NEW_COLOR_SPACE_API)
    if (obj.isNull()) {
      colorSpace = GfxColorSpace::parse(NULL, &args[0], NULL, NULL);
-@@ -1145,7 +1323,9 @@ void PdfParser::opSetStrokeColorSpace(Ob
+@@ -1145,7 +1322,9 @@ void PdfParser::opSetStrokeColorSpace(Ob
      colorSpace = GfxColorSpace::parse(&obj, NULL);
    }
  #endif
@@ -506,7 +509,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
    if (colorSpace) {
      GfxColor color;
      state->setStrokeColorSpace(colorSpace);
-@@ -2310,7 +2490,7 @@ void PdfParser::opShowText(Object args[]
+@@ -2310,7 +2489,7 @@ void PdfParser::opShowText(Object args[]
      builder->updateFont(state);
      fontChanged = gFalse;
    }
@@ -515,7 +518,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
  }
  
  // TODO not good that numArgs is ignored but args[] is used:
-@@ -2331,7 +2511,7 @@ void PdfParser::opMoveShowText(Object ar
+@@ -2331,7 +2510,7 @@ void PdfParser::opMoveShowText(Object ar
    ty = state->getLineY() - state->getLeading();
    state->textMoveTo(tx, ty);
    builder->updateTextPosition(tx, ty);
@@ -524,7 +527,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
  }
  
  // TODO not good that numArgs is ignored but args[] is used:
-@@ -2354,7 +2534,7 @@ void PdfParser::opMoveSetShowText(Object
+@@ -2354,7 +2533,7 @@ void PdfParser::opMoveSetShowText(Object
    ty = state->getLineY() - state->getLeading();
    state->textMoveTo(tx, ty);
    builder->updateTextPosition(tx, ty);
@@ -533,7 +536,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
  }
  
  // TODO not good that numArgs is ignored but args[] is used:
-@@ -2375,7 +2555,11 @@ void PdfParser::opShowSpaceText(Object a
+@@ -2375,7 +2554,11 @@ void PdfParser::opShowSpaceText(Object a
    wMode = state->getFont()->getWMode();
    a = args[0].getArray();
    for (int i = 0; i < a->getLength(); ++i) {
@@ -545,7 +548,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
      if (obj.isNum()) {
        // this uses the absolute value of the font size to match
        // Acrobat's behavior
-@@ -2388,11 +2572,13 @@ void PdfParser::opShowSpaceText(Object a
+@@ -2388,11 +2571,13 @@ void PdfParser::opShowSpaceText(Object a
        }
        builder->updateTextShift(state, obj.getNum());
      } else if (obj.isString()) {
@@ -560,7 +563,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
    }
  }
  
-@@ -2465,7 +2651,11 @@ void PdfParser::doShowText(GooString *s)
+@@ -2465,7 +2650,11 @@ void PdfParser::doShowText(GooString *s)
        //out->updateCTM(state, 1, 0, 0, 1, 0, 0);
        if (0){ /*!out->beginType3Char(state, curX + riseX, curY + riseY, tdx, tdy,
  			       code, u, uLen)) {*/
@@ -572,7 +575,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
  	if ((resDict = ((Gfx8BitFont *)font)->getResources())) {
  	  pushResources(resDict);
  	}
-@@ -2478,7 +2668,9 @@ void PdfParser::doShowText(GooString *s)
+@@ -2478,7 +2667,9 @@ void PdfParser::doShowText(GooString *s)
  	if (resDict) {
  	  popResources();
  	}
@@ -582,7 +585,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
        }
        restoreState();
        // GfxState::restore() does *not* restore the current position,
-@@ -2540,24 +2732,44 @@ void PdfParser::opXObject(Object args[],
+@@ -2540,24 +2731,44 @@ void PdfParser::opXObject(Object args[],
  {
    Object obj1, obj2, obj3, refObj;
  
@@ -628,7 +631,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
  /*    out->psXObject(obj1.getStream(),
      		   obj3.isStream() ? obj3.getStream() : (Stream *)NULL);*/
    } else if (obj2.isName()) {
-@@ -2565,8 +2777,10 @@ void PdfParser::opXObject(Object args[],
+@@ -2565,8 +2776,10 @@ void PdfParser::opXObject(Object args[],
    } else {
      error(errSyntaxError, getPos(), "XObject subtype is missing or wrong type");
    }
@@ -639,7 +642,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
  }
  
  void PdfParser::doImage(Object * /*ref*/, Stream *str, GBool inlineImg)
-@@ -2593,10 +2807,18 @@ void PdfParser::doImage(Object * /*ref*/
+@@ -2593,10 +2806,18 @@ void PdfParser::doImage(Object * /*ref*/
      dict = str->getDict();
      
      // get size
@@ -658,7 +661,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
      }
      if (obj1.isInt()){
          width = obj1.getInt();
-@@ -2607,11 +2829,19 @@ void PdfParser::doImage(Object * /*ref*/
+@@ -2607,11 +2828,19 @@ void PdfParser::doImage(Object * /*ref*/
      else {
          goto err2;
      }
@@ -678,7 +681,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
      }
      if (obj1.isInt()) {
          height = obj1.getInt();
-@@ -2622,26 +2852,46 @@ void PdfParser::doImage(Object * /*ref*/
+@@ -2622,26 +2851,46 @@ void PdfParser::doImage(Object * /*ref*/
      else {
          goto err2;
      }
@@ -725,7 +728,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
      }
      mask = gFalse;
      if (obj1.isBool()) {
-@@ -2650,14 +2900,24 @@ void PdfParser::doImage(Object * /*ref*/
+@@ -2650,14 +2899,24 @@ void PdfParser::doImage(Object * /*ref*/
      else if (!obj1.isNull()) {
          goto err2;
      }
@@ -750,7 +753,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
          }
          if (obj1.isInt()) {
              bits = obj1.getInt();
-@@ -2666,7 +2926,9 @@ void PdfParser::doImage(Object * /*ref*/
+@@ -2666,7 +2925,9 @@ void PdfParser::doImage(Object * /*ref*/
          } else {
              goto err2;
          }
@@ -760,7 +763,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
      }
      
      // display a mask
-@@ -2676,21 +2938,37 @@ void PdfParser::doImage(Object * /*ref*/
+@@ -2676,21 +2937,37 @@ void PdfParser::doImage(Object * /*ref*/
              goto err1;
          }
          invert = gFalse;
@@ -798,7 +801,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
          
          // draw it
          builder->addImageMask(state, str, width, height, invert, interpolate);
-@@ -2698,18 +2976,36 @@ void PdfParser::doImage(Object * /*ref*/
+@@ -2698,18 +2975,36 @@ void PdfParser::doImage(Object * /*ref*/
      } else {
          // get color space and color map
          GfxColorSpace *colorSpace;
@@ -835,7 +838,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
              }
          }
          if (!obj1.isNull()) {
-@@ -2729,17 +3025,29 @@ void PdfParser::doImage(Object * /*ref*/
+@@ -2729,17 +3024,29 @@ void PdfParser::doImage(Object * /*ref*/
          } else {
              colorSpace = NULL;
          }
@@ -865,7 +868,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
          if (!colorMap->isOk()) {
              delete colorMap;
              goto err1;
-@@ -2753,8 +3061,13 @@ void PdfParser::doImage(Object * /*ref*/
+@@ -2753,8 +3060,13 @@ void PdfParser::doImage(Object * /*ref*/
          int maskHeight = 0;
          maskInvert = gFalse;
          GfxImageColorMap *maskColorMap = NULL;
@@ -879,7 +882,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
          Dict* maskDict;
          if (smaskObj.isStream()) {
              // soft mask
-@@ -2763,58 +3076,108 @@ void PdfParser::doImage(Object * /*ref*/
+@@ -2763,58 +3075,108 @@ void PdfParser::doImage(Object * /*ref*/
              }
              maskStr = smaskObj.getStream();
              maskDict = smaskObj.streamGetDict();
@@ -988,7 +991,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
  	            }
              }
  #if defined(POPPLER_EVEN_NEWER_NEW_COLOR_SPACE_API)
-@@ -2824,17 +3187,29 @@ void PdfParser::doImage(Object * /*ref*/
+@@ -2824,17 +3186,29 @@ void PdfParser::doImage(Object * /*ref*/
  #else
              GfxColorSpace *maskColorSpace = GfxColorSpace::parse(&obj1, NULL);
  #endif
@@ -1018,7 +1021,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
              if (!maskColorMap->isOk()) {
                  delete maskColorMap;
                  goto err1;
-@@ -2845,9 +3220,15 @@ void PdfParser::doImage(Object * /*ref*/
+@@ -2845,9 +3219,15 @@ void PdfParser::doImage(Object * /*ref*/
              // color key mask
              int i;
              for (i = 0; i < maskObj.arrayGetLength() && i < 2*gfxColorMaxComps; ++i) {
@@ -1034,7 +1037,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
              }
                haveColorKeyMask = gTrue;
          } else if (maskObj.isStream()) {
-@@ -2857,61 +3238,111 @@ void PdfParser::doImage(Object * /*ref*/
+@@ -2857,61 +3237,111 @@ void PdfParser::doImage(Object * /*ref*/
              }
              maskStr = maskObj.getStream();
              maskDict = maskObj.streamGetDict();
@@ -1146,7 +1149,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
              haveExplicitMask = gTrue;
          }
          
-@@ -2929,14 +3360,18 @@ void PdfParser::doImage(Object * /*ref*/
+@@ -2929,14 +3359,18 @@ void PdfParser::doImage(Object * /*ref*/
          }
          delete colorMap;
          
@@ -1165,7 +1168,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
   err1:
      error(errSyntaxError, getPos(), "Bad image parameters");
  }
-@@ -2961,52 +3396,97 @@ void PdfParser::doForm(Object *str) {
+@@ -2961,52 +3395,97 @@ void PdfParser::doForm(Object *str) {
    dict = str->streamGetDict();
  
    // check form type
@@ -1263,7 +1266,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
  #if defined(POPPLER_EVEN_NEWER_NEW_COLOR_SPACE_API)
  	blendingColorSpace = GfxColorSpace::parse(NULL, &obj3, NULL, NULL);
  #elif defined(POPPLER_EVEN_NEWER_COLOR_SPACE_API)
-@@ -3015,19 +3495,32 @@ void PdfParser::doForm(Object *str) {
+@@ -3015,19 +3494,32 @@ void PdfParser::doForm(Object *str) {
  	blendingColorSpace = GfxColorSpace::parse(&obj3, NULL);
  #endif
        }
@@ -1296,7 +1299,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
  
    // draw it
    ++formDepth;
-@@ -3038,7 +3531,9 @@ void PdfParser::doForm(Object *str) {
+@@ -3038,7 +3530,9 @@ void PdfParser::doForm(Object *str) {
    if (blendingColorSpace) {
      delete blendingColorSpace;
    }
@@ -1306,7 +1309,7 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 0
  }
  
  void PdfParser::doForm1(Object *str, Dict *resDict, double *matrix, double *bbox,
-@@ -3166,35 +3661,61 @@ Stream *PdfParser::buildImageStream() {
+@@ -3166,35 +3660,61 @@ Stream *PdfParser::buildImageStream() {
    Stream *str;
  
    // build dictionary
