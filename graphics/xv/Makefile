@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.91 2018/01/14 14:58:40 rillig Exp $
+# $NetBSD: Makefile,v 1.92 2018/06/21 22:36:36 tez Exp $
 
 DISTNAME=	xv-3.10a
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	graphics x11
 MASTER_SITES=	ftp://ftp.cis.upenn.edu/pub/xv/
 DISTFILES=	${DEFAULT_DISTFILES} ${JUMBO_PATCHES}
