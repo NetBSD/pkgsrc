@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2018/03/23 08:58:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2018/06/21 06:41:14 adam Exp $
 bin/py.test-${PYVERSSUFFIX}
 bin/pytest-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -50,9 +50,18 @@ ${PYSITELIB}/_pytest/capture.pyo
 ${PYSITELIB}/_pytest/compat.py
 ${PYSITELIB}/_pytest/compat.pyc
 ${PYSITELIB}/_pytest/compat.pyo
-${PYSITELIB}/_pytest/config.py
-${PYSITELIB}/_pytest/config.pyc
-${PYSITELIB}/_pytest/config.pyo
+${PYSITELIB}/_pytest/config/__init__.py
+${PYSITELIB}/_pytest/config/__init__.pyc
+${PYSITELIB}/_pytest/config/__init__.pyo
+${PYSITELIB}/_pytest/config/argparsing.py
+${PYSITELIB}/_pytest/config/argparsing.pyc
+${PYSITELIB}/_pytest/config/argparsing.pyo
+${PYSITELIB}/_pytest/config/exceptions.py
+${PYSITELIB}/_pytest/config/exceptions.pyc
+${PYSITELIB}/_pytest/config/exceptions.pyo
+${PYSITELIB}/_pytest/config/findpaths.py
+${PYSITELIB}/_pytest/config/findpaths.pyc
+${PYSITELIB}/_pytest/config/findpaths.pyo
 ${PYSITELIB}/_pytest/debugging.py
 ${PYSITELIB}/_pytest/debugging.pyc
 ${PYSITELIB}/_pytest/debugging.pyo
