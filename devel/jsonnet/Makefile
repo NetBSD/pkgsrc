@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2017/10/09 08:37:09 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2018/06/21 20:55:29 seb Exp $
 
-DISTNAME=	jsonnet-0.9.5
-CATEGORIES=	devel local
+DISTNAME=	jsonnet-0.10.0
+CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
@@ -16,6 +16,7 @@ USE_LANGUAGES=	c c++11
 
 USE_TOOLS+=	gmake bash mktemp
 REPLACE_BASH+=	examples/check.sh examples/terraform/check.sh
+REPLACE_BASH+=	test_cmd/run_cmd_tests.sh
 REPLACE_BASH+=	test_suite/run_tests.sh test_suite/run_fmt_tests.sh
 REPLACE_BASH+=	test_suite/run_fmt_idempotence_tests.sh
 
