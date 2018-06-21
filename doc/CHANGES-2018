@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2932 2018/06/21 12:22:46 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2933 2018/06/21 15:33:00 he Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4245,3 +4245,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated meta-pkgs/kf5 to 5.47.0 [markd 2018-06-21]
 	Updated www/tinyproxy to 1.8.4 [adam 2018-06-21]
 	Updated net/wireshark to 2.6.1nb1 [adam 2018-06-21]
+	Updated net/unbound to 1.7.3 [he 2018-06-21]
