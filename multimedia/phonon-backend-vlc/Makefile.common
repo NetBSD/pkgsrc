@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.4 2018/04/25 22:45:40 kamil Exp $
+# $NetBSD: Makefile.common,v 1.5 2018/06/21 00:34:18 markd Exp $
 
 CATEGORIES=	multimedia
-MASTER_SITES=	${MASTER_SITE_KDE:=phonon/phonon-backend-vlc/0.9.0/}
+MASTER_SITES=	${MASTER_SITE_KDE:=phonon/phonon-backend-vlc/0.10.1/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	markd@NetBSD.org
@@ -17,7 +17,7 @@ USE_CMAKE=	yes
 CMAKE_ARG_PATH=	..
 CONFIGURE_DIRS=	_build
 
-WRKSRC=		${WRKDIR}/phonon-vlc-0.9.0
+WRKSRC=		${WRKDIR}/phonon-vlc-0.10.1
 
 pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/

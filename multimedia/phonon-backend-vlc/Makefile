@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2018/04/25 22:45:40 kamil Exp $
+# $NetBSD: Makefile,v 1.18 2018/06/21 00:34:18 markd Exp $
 
-DISTNAME=	phonon-backend-vlc-0.9.0
+DISTNAME=	phonon-backend-vlc-0.10.1
 
 COMMENT=	Multimedia API for KDE and QT - VLC backend
-PKGREVISION=	2
 
 .include "Makefile.common"
 
