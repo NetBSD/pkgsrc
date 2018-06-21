@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2018/06/15 13:46:48 jperkin Exp $
+# $NetBSD: Makefile,v 1.25 2018/06/21 05:42:07 markd Exp $
 
 DISTNAME=	kio-${KF5VER}
-PKGREVISION=	1
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -12,7 +11,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	msgmerge
 
-CMAKE_ARGS+=	-DKAUTH_DBUS_DIR=${PREFIX}/share/examples/kio
+#CMAKE_ARGS+=	-DKAUTH_DBUS_DIR=${PREFIX}/share/examples/kio
 
 LDFLAGS.SunOS+=	-lsocket
 
@@ -29,9 +28,9 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/accept-languages.codes \
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kshorturifilterrc \
 		${PKG_SYSCONFDIR}/xdg/kshorturifilterrc
 
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/dbus-1/system.d
-CONF_FILES+=	${PREFIX}/share/examples/kio/org.kde.kio.file.conf \
-		${PKG_SYSCONFDIR}/dbus-1/system.d/org.kde.kio.file.conf
+#MAKE_DIRS+=	${PKG_SYSCONFDIR}/dbus-1/system.d
+#CONF_FILES+=	${PREFIX}/share/examples/kio/org.kde.kio.file.conf \
+#		${PKG_SYSCONFDIR}/dbus-1/system.d/org.kde.kio.file.conf
 
 # generation of kcookieserver.moc fails when ${PREFIX}/include in the moc include path
 SUBST_CLASSES+=		fix-moc
