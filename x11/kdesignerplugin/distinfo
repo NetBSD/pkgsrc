@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/04/11 11:50:40 markd Exp $
+$NetBSD: distinfo,v 1.5 2018/06/21 07:17:31 markd Exp $
 
-SHA1 (kdesignerplugin-5.44.0.tar.xz) = 3c9fe5a2d8304e0fa148d58156a8fcebc7e1a833
-RMD160 (kdesignerplugin-5.44.0.tar.xz) = 46a0f09b8878a1c5ec7acc1f27fef7726aa881e1
-SHA512 (kdesignerplugin-5.44.0.tar.xz) = 1283f34fa6bd1687aa55dbd9632a9aa8220b106b062fa399a16040f86cc5dc36b1aa81f2d69302a20376439020b9bdf873ee67afaae230da61bff2081e559ee9
-Size (kdesignerplugin-5.44.0.tar.xz) = 90732 bytes
+SHA1 (kdesignerplugin-5.47.0.tar.xz) = 8018d6a007c17ee20d8c824aaf090439de6430de
+RMD160 (kdesignerplugin-5.47.0.tar.xz) = e42ef44c7aabda0a0e9fcce7c80dcfee3705398b
+SHA512 (kdesignerplugin-5.47.0.tar.xz) = de28032ee58e960c903fd99e626bc358c50e0334e18aeb3af397a7fb01a55b3a7ec02a8898cadcdb549621b47d124f620a85be569f15a9b088793c3b91283c00
+Size (kdesignerplugin-5.47.0.tar.xz) = 90728 bytes
