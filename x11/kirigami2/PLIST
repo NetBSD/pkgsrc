@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2018/04/11 11:50:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/06/21 07:26:15 markd Exp $
 include/KF5/Kirigami2/KirigamiPluginFactory
 include/KF5/Kirigami2/PlatformTheme
+include/KF5/Kirigami2/TabletModeWatcher
 include/KF5/Kirigami2/kirigami2_export.h
 include/KF5/Kirigami2/kirigamipluginfactory.h
 include/KF5/Kirigami2/platformtheme.h
+include/KF5/Kirigami2/tabletmodewatcher.h
 lib/cmake/KF5Kirigami2/KF5Kirigami2Config.cmake
 lib/cmake/KF5Kirigami2/KF5Kirigami2ConfigVersion.cmake
 lib/cmake/KF5Kirigami2/KF5Kirigami2Macros.cmake
@@ -16,6 +18,7 @@ qt5/mkspecs/modules/qt_Kirigami2.pri
 qt5/qml/org/kde/kirigami.2/AbstractApplicationHeader.qml
 qt5/qml/org/kde/kirigami.2/AbstractApplicationItem.qml
 qt5/qml/org/kde/kirigami.2/AbstractApplicationWindow.qml
+qt5/qml/org/kde/kirigami.2/AbstractCard.qml
 qt5/qml/org/kde/kirigami.2/AbstractItemViewHeader.qml
 qt5/qml/org/kde/kirigami.2/AbstractListItem.qml
 qt5/qml/org/kde/kirigami.2/Action.qml
@@ -23,13 +26,18 @@ qt5/qml/org/kde/kirigami.2/ApplicationHeader.qml
 qt5/qml/org/kde/kirigami.2/ApplicationItem.qml
 qt5/qml/org/kde/kirigami.2/ApplicationWindow.qml
 qt5/qml/org/kde/kirigami.2/BasicListItem.qml
+qt5/qml/org/kde/kirigami.2/Card.qml
+qt5/qml/org/kde/kirigami.2/CardsGridView.qml
+qt5/qml/org/kde/kirigami.2/CardsLayout.qml
+qt5/qml/org/kde/kirigami.2/CardsListView.qml
 qt5/qml/org/kde/kirigami.2/ContextDrawer.qml
 qt5/qml/org/kde/kirigami.2/FormLayout.qml
 qt5/qml/org/kde/kirigami.2/GlobalDrawer.qml
 qt5/qml/org/kde/kirigami.2/Heading.qml
-qt5/qml/org/kde/kirigami.2/Icon.qml
+qt5/qml/org/kde/kirigami.2/InlineMessage.qml
 qt5/qml/org/kde/kirigami.2/ItemViewHeader.qml
 qt5/qml/org/kde/kirigami.2/Label.qml
+qt5/qml/org/kde/kirigami.2/ListItemDragHandle.qml
 qt5/qml/org/kde/kirigami.2/OverlayDrawer.qml
 qt5/qml/org/kde/kirigami.2/OverlaySheet.qml
 qt5/qml/org/kde/kirigami.2/Page.qml
@@ -49,6 +57,10 @@ qt5/qml/org/kde/kirigami.2/private/ActionMenuItemBase.qml
 qt5/qml/org/kde/kirigami.2/private/ActionMenuItemQt510.qml
 qt5/qml/org/kde/kirigami.2/private/ActionMenuItemQt59.qml
 qt5/qml/org/kde/kirigami.2/private/ActionsMenu.qml
+qt5/qml/org/kde/kirigami.2/private/BannerGroup.qml
+qt5/qml/org/kde/kirigami.2/private/BannerImage.qml
+qt5/qml/org/kde/kirigami.2/private/CardsGridViewPrivate.qml
+qt5/qml/org/kde/kirigami.2/private/CardsListViewPrivate.qml
 qt5/qml/org/kde/kirigami.2/private/CornerShadow.qml
 qt5/qml/org/kde/kirigami.2/private/DefaultListItemBackground.qml
 qt5/qml/org/kde/kirigami.2/private/EdgeShadow.qml
@@ -69,15 +81,19 @@ qt5/qml/org/kde/kirigami.2/styles/org.kde.desktop/SwipeListItem.qml
 qt5/qml/org/kde/kirigami.2/styles/org.kde.desktop/Theme.qml
 qt5/qml/org/kde/kirigami.2/styles/org.kde.desktop/Units.qml
 qt5/qml/org/kde/kirigami.2/templates/AbstractApplicationHeader.qml
+qt5/qml/org/kde/kirigami.2/templates/AbstractCard.qml
 qt5/qml/org/kde/kirigami.2/templates/AbstractListItem.qml
 qt5/qml/org/kde/kirigami.2/templates/ApplicationHeader.qml
 qt5/qml/org/kde/kirigami.2/templates/FormLayout.qml
+qt5/qml/org/kde/kirigami.2/templates/InlineMessage.qml
 qt5/qml/org/kde/kirigami.2/templates/OverlayDrawer.qml
 qt5/qml/org/kde/kirigami.2/templates/OverlaySheet.qml
 qt5/qml/org/kde/kirigami.2/templates/SwipeListItem.qml
 qt5/qml/org/kde/kirigami.2/templates/private/BackButton.qml
 qt5/qml/org/kde/kirigami.2/templates/private/ContextIcon.qml
 qt5/qml/org/kde/kirigami.2/templates/private/ForwardButton.qml
+qt5/qml/org/kde/kirigami.2/templates/private/GenericDrawerIcon.qml
+qt5/qml/org/kde/kirigami.2/templates/private/IconPropertiesGroup.qml
 qt5/qml/org/kde/kirigami.2/templates/private/MenuIcon.qml
 qt5/qml/org/kde/kirigami.2/templates/private/PassiveNotification.qml
 qt5/qml/org/kde/kirigami.2/templates/private/ScrollView.qml
