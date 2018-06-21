@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2018/04/14 07:34:05 adam Exp $
+# $NetBSD: Makefile,v 1.24 2018/06/21 07:16:07 markd Exp $
 
 DISTNAME=	kdelibs4support-${KF5VER}
-PKGREVISION=	1
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -9,7 +8,7 @@ COMMENT=	Porting aid from KDELibs4
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 .include "../../meta-pkgs/kde/kf5.mk"
-MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/5.44/portingAids/}
+MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/${KF5VER:R}/portingAids/}
 
 BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
 BUILD_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
