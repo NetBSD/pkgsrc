@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2017/10/09 08:37:09 wiz Exp $
+$NetBSD: distinfo,v 1.4 2018/06/21 20:55:29 seb Exp $
 
-SHA1 (jsonnet-0.9.5.tar.gz) = d0a9ea7fbe0edf95276c9f4923f18e6334ee19d0
-RMD160 (jsonnet-0.9.5.tar.gz) = 65781115ede9ac7ae0ef8f44501746a1258169bc
-SHA512 (jsonnet-0.9.5.tar.gz) = 630941b0f9a86cf4697f242cbec3fdb565a194fa391c39b199c9adddac6994afbf45dccb1881c325d92e6729e1bd62915690363e8fb5b65a894f3e00dae4d47d
-Size (jsonnet-0.9.5.tar.gz) = 573335 bytes
+SHA1 (jsonnet-0.10.0.tar.gz) = d1d17b2880c77284c874a68e69532b84dc40b587
+RMD160 (jsonnet-0.10.0.tar.gz) = 933ab6e3daa41ed53609b7c7edad914f3bf4f32e
+SHA512 (jsonnet-0.10.0.tar.gz) = 1154064e1f9238ab3eafdb1754e675bc0cdf5649f586b0cb667371e98d3cb61ca224e42be33dfcfb5030e254869bf9a3b29d72f2b22b4a50be8556ccbc424510
+Size (jsonnet-0.10.0.tar.gz) = 600377 bytes
 SHA1 (patch-Makefile) = d9d10b82704399bc115df785015c69f390a641aa
 SHA1 (patch-test__suite_tests.source) = 14fc92f664269ab4012c7f90b337276de77110f5
