@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/04/11 11:50:39 markd Exp $
+$NetBSD: distinfo,v 1.5 2018/06/21 06:57:37 markd Exp $
 
-SHA1 (kdewebkit-5.44.0.tar.xz) = 5fc7808ed04c82a315a78b4a6a83b6b2c04a4b7b
-RMD160 (kdewebkit-5.44.0.tar.xz) = 758da379f0296ee356f4a4fc388f4fb73220b84b
-SHA512 (kdewebkit-5.44.0.tar.xz) = a78afafea87fb0214218bc7503c820ccbb7beb035c8323a0c7da9151c0b449ceff9191be9de1a78b658667bd7533c59a07b3281eb0abf6c61487ce006f8c4dfb
-Size (kdewebkit-5.44.0.tar.xz) = 29280 bytes
+SHA1 (kdewebkit-5.47.0.tar.xz) = 4d1d0d49a40f98711c07b6e35f815d7d6a30ac10
+RMD160 (kdewebkit-5.47.0.tar.xz) = af66f417279a8b8e3254fff2591aea1a2cbce2e5
+SHA512 (kdewebkit-5.47.0.tar.xz) = 9d641a85962c9a03e2ee24a9b111ab57e05a13fca6ad9f150ec376e43c47b236405318924b4c53b0e51fb0e0bb024a2539849701b8c726643020ba18985ca056
+Size (kdewebkit-5.47.0.tar.xz) = 29276 bytes
