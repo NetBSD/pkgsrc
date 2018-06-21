@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2018/04/11 11:50:39 markd Exp $
+$NetBSD: distinfo,v 1.4 2018/06/21 07:03:38 markd Exp $
 
-SHA1 (kjs-5.44.0.tar.xz) = 50b21e51f16ea86290f1cee29644330bafef0137
-RMD160 (kjs-5.44.0.tar.xz) = 97775f852b7762838d8976db7ea4b9c3016e62da
-SHA512 (kjs-5.44.0.tar.xz) = 5fe5ae87f9fac4c423d68c1a3ed0b5d256bded92426e0b4c64452f7689fa681e3c43507e47159bdd670fcd3b10f2e7ec6d83c3f031de8d380293b79938982e91
-Size (kjs-5.44.0.tar.xz) = 294760 bytes
+SHA1 (kjs-5.47.0.tar.xz) = 41b8322099f7d84a3b9bc0c4dedd7136ee1eadbb
+RMD160 (kjs-5.47.0.tar.xz) = 1a7a8b74e3779f53ada01a951c9a23a01de01664
+SHA512 (kjs-5.47.0.tar.xz) = 08948c50539fd067bf06f3bc93c88264fdf2dc3f2a4ccfa2aa85b734928fd172eb202bf73ef836d83b5dff9cc41f55227f54b169fbd7b3879e72464cbe788925
+Size (kjs-5.47.0.tar.xz) = 294896 bytes
 SHA1 (patch-src_kjs_JSImmediate.h) = 1d8c55b64244cca2faf97cc4367325d69794337d
 SHA1 (patch-src_wtf_DisallowCType.h) = 7fa9115842df5339a457851090b80f072cbf4944
