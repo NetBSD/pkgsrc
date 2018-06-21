@@ -1,4 +1,4 @@
-# $NetBSD: kf5.mk,v 1.1 2018/04/11 11:34:57 markd Exp $
+# $NetBSD: kf5.mk,v 1.2 2018/06/21 05:18:00 markd Exp $
 # used by misc/attica-qt5/Makefile
 # used by sysutils/baloo5/Makefile
 # used by x11/frameworkintegration/Makefile
@@ -60,9 +60,9 @@
 # used by x11/qqc2-desktop-style/Makefile
 # used by graphics/prison/Makefile
 
-KF5VER=		5.44.0
+KF5VER=		5.47.0
 CATEGORIES+=	kde
-MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/5.44/}
+MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/${KF5VER:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 BUILD_DEPENDS+= extra-cmake-modules>=${KF5VER}:../../devel/extra-cmake-modules
