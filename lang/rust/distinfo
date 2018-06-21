@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2018/06/19 13:23:25 ryoon Exp $
+$NetBSD: distinfo,v 1.26 2018/06/21 17:13:13 jperkin Exp $
 
 SHA1 (rust-1.25.0-i686-apple-darwin.tar.gz) = a8581e6741b326f717cf8a5f263363212ba67793
 RMD160 (rust-1.25.0-i686-apple-darwin.tar.gz) = 883e0dad512ca16697161a41fae0215439c7ac01
@@ -20,6 +20,10 @@ SHA1 (rust-1.25.0-x86_64-apple-darwin.tar.gz) = 30e7d674007b87d19eda9ae9147472e7
 RMD160 (rust-1.25.0-x86_64-apple-darwin.tar.gz) = 4ee6418816c7f54cfd76951e7519ee302d5f4856
 SHA512 (rust-1.25.0-x86_64-apple-darwin.tar.gz) = f38ed1e6b30bde9dc972675c9f0270fd62df25f829638bb315333fca09c241305d55da52bbe11512192b7f8c532da27c3940dd3554ba77f2ab42289ec76ffb03
 Size (rust-1.25.0-x86_64-apple-darwin.tar.gz) = 143715436 bytes
+SHA1 (rust-1.25.0-x86_64-sun-solaris.tar.gz) = bc2b46829ea5ef798414e05711c7d80220122d4d
+RMD160 (rust-1.25.0-x86_64-sun-solaris.tar.gz) = f6f51fd4190fdb410c330021e4ecadadb211a925
+SHA512 (rust-1.25.0-x86_64-sun-solaris.tar.gz) = 8247acca5e356468baed02ea8e3ddcbba7ad8cc6533163433ed0aa1b825cace4a37de016b07e1d15dc57f605c38440ce994cdc3e44d17c73985022a5bca78a49
+Size (rust-1.25.0-x86_64-sun-solaris.tar.gz) = 172771923 bytes
 SHA1 (rust-1.25.0-x86_64-unknown-freebsd.tar.gz) = fb0420d1548d63dc470bce8aea13f6947be63c18
 RMD160 (rust-1.25.0-x86_64-unknown-freebsd.tar.gz) = feb779bbbb666ad4cfc7dd0aa780e79655d8d9d6
 SHA512 (rust-1.25.0-x86_64-unknown-freebsd.tar.gz) = 85ed03069e2febcafe22e9b86b4e1573e5069720919140a27a3cdcc516a9843a772be79640dc43d0e395d0ae88780d4e0332af0cead81b41f1b6534e739033f3
@@ -72,4 +76,6 @@ SHA1 (patch-src_bootstrap_bin_rustc.rs) = d9787517f03162d3548e89a91ecf933fd67774
 SHA1 (patch-src_bootstrap_lib.rs) = d86e173b931099730a4f18d044d7977c89f87b91
 SHA1 (patch-src_libbacktrace_configure) = b2c1e9b93a99408aad42ab9f1af27704cc81bdd8
 SHA1 (patch-src_libstd_build.rs) = 32dad8a474300f9f37bce8b92acca762cf8cc4ab
+SHA1 (patch-src_llvm_CMakeLists.txt) = ffdf4337fdc84d8314c97c4e492e6b84244a99d1
 SHA1 (patch-src_llvm_cmake_modules_AddLLVM.cmake) = 282d97cce8d01cfefe565185d4999c2db9ccc13f
+SHA1 (patch-src_llvm_include_llvm_Support_DataTypes.h.cmake) = 61cba4480d97e740d361708eb8e5c9b13bb2d36e
