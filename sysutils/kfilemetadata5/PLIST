@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/04/11 11:50:38 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/06/21 06:44:59 markd Exp $
 include/KF5/KFileMetaData/KFileMetaData/ExtractionResult
 include/KF5/KFileMetaData/KFileMetaData/Extractor
 include/KF5/KFileMetaData/KFileMetaData/ExtractorCollection
@@ -35,6 +35,7 @@ lib/cmake/KF5FileMetaData/KF5FileMetaDataTargets.cmake
 lib/libKF5FileMetaData.so
 lib/libKF5FileMetaData.so.3
 lib/libKF5FileMetaData.so.${PKGVERSION}
+qt5/mkspecs/modules/qt_KFileMetaData.pri
 qt5/plugins/kf5/kfilemetadata/kfilemetadata_epubextractor.so
 qt5/plugins/kf5/kfilemetadata/kfilemetadata_exiv2extractor.so
 qt5/plugins/kf5/kfilemetadata/kfilemetadata_ffmpegextractor.so
