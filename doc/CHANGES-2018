@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2931 2018/06/21 08:34:08 markd Exp $
+$NetBSD: CHANGES-2018,v 1.2932 2018/06/21 12:22:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4243,3 +4243,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/qqc2-desktop-style to 5.47.0 [markd 2018-06-21]
 	Added time/kholidays version 5.47.0 [markd 2018-06-21]
 	Updated meta-pkgs/kf5 to 5.47.0 [markd 2018-06-21]
+	Updated www/tinyproxy to 1.8.4 [adam 2018-06-21]
+	Updated net/wireshark to 2.6.1nb1 [adam 2018-06-21]
