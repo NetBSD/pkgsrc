@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2018/04/14 07:34:03 adam Exp $
+# $NetBSD: Makefile,v 1.23 2018/06/21 06:58:56 markd Exp $
 
 DISTNAME=	khtml-${KF5VER}
-PKGREVISION=	1
 CATEGORIES=	www
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -9,7 +8,7 @@ COMMENT=	HTML rendering engine
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2.1
 
 .include "../../meta-pkgs/kde/kf5.mk"
-MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/5.44/portingAids/}
+MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/${KF5VER:R}/portingAids/}
 
 USE_TOOLS+=	perl msgfmt
 
