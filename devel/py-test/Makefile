@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2018/06/06 19:27:51 adam Exp $
+# $NetBSD: Makefile,v 1.50 2018/06/21 06:41:14 adam Exp $
 
-DISTNAME=	pytest-3.6.1
+DISTNAME=	pytest-3.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest/}
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-atomicwrites>=1.0:../../devel/py-atomicwrites
 DEPENDS+=	${PYPKGPREFIX}-attrs>=17.4.0:../../devel/py-attrs
-DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+#DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=	${PYPKGPREFIX}-more-itertools>=4.0.0:../../devel/py-more-itertools
 DEPENDS+=	${PYPKGPREFIX}-pluggy>=0.5:../../devel/py-pluggy
 DEPENDS+=	${PYPKGPREFIX}-py>=1.5.0:../../devel/py-py
