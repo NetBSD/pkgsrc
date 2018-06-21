@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2018/05/03 23:02:39 wiz Exp $
+# $NetBSD: options.mk,v 1.19 2018/06/21 12:22:10 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.wireshark
 PKG_SUPPORTED_OPTIONS=		gtk3 lua
@@ -64,9 +64,9 @@ INSTALLATION_DIRS+=	share/icons/hicolor/scalable/apps
 ICON_SIZES=		16 32 48
 MIMEICON_SIZES=		16 24 32 48 64 128 256
 
-.      for d in ${ICON_SIZES}
+.    for d in ${ICON_SIZES}
 INSTALLATION_DIRS+=	share/icons/hicolor/${d}x${d}/apps
-.      endfor
+.    endfor
 
 .    for d in ${MIMEICON_SIZES}
 INSTALLATION_DIRS+=	share/icons/hicolor/${d}x${d}/mimetypes
