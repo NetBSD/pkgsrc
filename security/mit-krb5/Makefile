@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.96 2018/06/15 20:46:01 tez Exp $
+# $NetBSD: Makefile,v 1.97 2018/06/22 09:16:07 hauke Exp $
 
 DISTNAME=	krb5-1.16.1
 PKGNAME=	mit-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.gz
@@ -27,8 +28,13 @@ CONFLICTS+=	kth-krb4-[0-9]*
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		autoconf gzip m4 perl yacc msgfmt
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		autoconf gzip m4 perl msgfmt
+.if ${OPSYS} == "SunOS"
+USE_TOOLS+=		bison
+.else
+USE_TOOLS+=		yacc
+.endif
 
 # The actual KDC databases are stored in ${MIT_KRB5_STATEDIR}/krb5kdc.
 MIT_KRB5_STATEDIR?=	${VARBASE}
