@@ -1,9 +1,10 @@
-$NetBSD: patch-src_pty.cc,v 1.2 2018/05/15 09:50:49 jperkin Exp $
+$NetBSD: patch-src_pty.cc,v 1.3 2018/06/22 14:34:43 jperkin Exp $
 
 NetBSD fix
 Use correct includes on SunOS.
+Don't use packet mode on SunOS.
 
---- src/pty.cc.orig	2018-04-09 21:43:51.000000000 +0000
+--- src/pty.cc.orig	2018-05-21 19:30:33.000000000 +0000
 +++ src/pty.cc
 @@ -60,7 +60,9 @@
  #ifdef HAVE_PTY_H
@@ -16,7 +17,22 @@ Use correct includes on SunOS.
  #include <stropts.h>
  #endif
  #include <glib.h>
-@@ -624,7 +626,12 @@ _vte_pty_open_posix(void)
+@@ -605,12 +607,14 @@ fd_setup(int fd)
+                 return -1;
+         }
+ 
++#ifndef __sun
+         if (fd_set_cpkt(fd) < 0) {
+                 vte::util::restore_errno errsv;
+                 _vte_debug_print(VTE_DEBUG_PTY,
+                                  "%s failed: %s", "ioctl(TIOCPKT)", g_strerror(errsv));
+                 return -1;
+         }
++#endif
+ 
+         return 0;
+ }
+@@ -632,7 +636,12 @@ _vte_pty_open_posix(void)
          fd = posix_openpt(O_RDWR | O_NOCTTY | O_NONBLOCK | O_CLOEXEC);
  #ifndef __linux__
          /* Other kernels may not support CLOEXEC or NONBLOCK above, so try to fall back */
@@ -30,3 +46,18 @@ Use correct includes on SunOS.
          if (fd == -1 && errno == EINVAL) {
                  /* Try without NONBLOCK and apply the flag afterward */
                  need_nonblocking = true;
+@@ -668,12 +677,14 @@ _vte_pty_open_posix(void)
+         }
+ #endif /* !linux */
+ 
++#ifndef __sun
+         if (fd_set_cpkt(fd) < 0) {
+                 vte::util::restore_errno errsv;
+                 _vte_debug_print(VTE_DEBUG_PTY,
+                                  "%s failed: %s", "ioctl(TIOCPKT)", g_strerror(errsv));
+                 return -1;
+         }
++#endif
+ 
+ 	_vte_debug_print(VTE_DEBUG_PTY, "Allocated pty on fd %d.\n", (int)fd);
+ 
