@@ -1,20 +1,9 @@
-$NetBSD: patch-configure,v 1.16 2018/03/09 14:38:15 tsutsui Exp $
+$NetBSD: patch-configure,v 1.17 2018/06/22 14:17:15 tsutsui Exp $
 
 - setuid root is handled by SPECIAL_PERMS in pkgsrc
-- apply an upstream patch
- http://sourceforge.net/projects/mlterm/files/01release/mlterm-3.8.5/mlterm-3.8.5-fixes.patch/download
 
 --- configure.orig	2018-03-07 13:17:24.000000000 +0000
 +++ configure
-@@ -19871,7 +19871,7 @@ if test "$gui" = "fb,xlib" -o "$gui" = "
- 	fi
- 	mkdir -p ${top_srcdir-$srcdir}/fb
- 	for file in ChangeLog Makefile.in common configure etc gtk inputmethod java \
--		main man vtemu script scrollbar uitoolkit doc ; do
-+		main man vtemu script scrollbar uitoolkit doc libvterm ; do
- 		cp -R ${top_srcdir-$srcdir}/$file ${top_srcdir-$srcdir}/fb/
- 	done
- fi
 @@ -22185,7 +22185,7 @@ else
  fi
  
