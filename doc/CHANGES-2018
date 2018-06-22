@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2938 2018/06/21 23:27:02 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.2939 2018/06/22 06:38:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4251,3 +4251,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/tiff to tiff-4.0.9nb3 [tez 2018-06-21]
 	Updated security/libressl to 2.7.4 [ryoon 2018-06-21]
 	Updated www/php-owncloud to 10.0.8 [ryoon 2018-06-21]
+	Updated x11/qt5 to 5.11.1 [adam 2018-06-22]
+	Updated archivers/py-lz4 to 2.0.1 [adam 2018-06-22]
