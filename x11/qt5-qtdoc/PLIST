@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/06/19 07:21:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/06/22 06:29:20 adam Exp $
 qt5/doc/qtdoc.qch
 qt5/doc/qtdoc/accelerators.html
 qt5/doc/qtdoc/accessibility.html
@@ -7,6 +7,7 @@ qt5/doc/qtdoc/accessible-qwidget.html
 qt5/doc/qtdoc/accessible.html
 qt5/doc/qtdoc/activeqt-idc.html
 qt5/doc/qtdoc/activeqt-testcon.html
+qt5/doc/qtdoc/activeqt.html
 qt5/doc/qtdoc/all-examples.html
 qt5/doc/qtdoc/android-runtime-licensing-notes.html
 qt5/doc/qtdoc/android-support.html
@@ -39,6 +40,7 @@ qt5/doc/qtdoc/examples-gestures.html
 qt5/doc/qtdoc/examples-ios.html
 qt5/doc/qtdoc/examples-ipc.html
 qt5/doc/qtdoc/examples-layouts.html
+qt5/doc/qtdoc/examples-manifest.xml
 qt5/doc/qtdoc/examples-sql.html
 qt5/doc/qtdoc/examples-statemachine.html
 qt5/doc/qtdoc/examples-threadandconcurrent.html
@@ -67,6 +69,10 @@ qt5/doc/qtdoc/images/btn_next.png
 qt5/doc/qtdoc/images/btn_prev.png
 qt5/doc/qtdoc/images/bullet_dn.png
 qt5/doc/qtdoc/images/bullet_sq.png
+qt5/doc/qtdoc/images/coffee_machine_emptycup.png
+qt5/doc/qtdoc/images/coffee_machine_modify.png
+qt5/doc/qtdoc/images/coffee_machine_overview.png
+qt5/doc/qtdoc/images/coffee_machine_selection.png
 qt5/doc/qtdoc/images/controlstexteditor_designer.png
 qt5/doc/qtdoc/images/controlstexteditor_main.png
 qt5/doc/qtdoc/images/controlstexteditor_navigator.png
@@ -136,6 +142,24 @@ qt5/doc/qtdoc/images/thread-examples.png
 qt5/doc/qtdoc/images/threadsandobjects.png
 qt5/doc/qtdoc/images/threadvisual-example.png
 qt5/doc/qtdoc/images/tool-examples.png
+qt5/doc/qtdoc/images/used-in-examples/Americano.png
+qt5/doc/qtdoc/images/used-in-examples/Espresso.png
+qt5/doc/qtdoc/images/used-in-examples/Latte.png
+qt5/doc/qtdoc/images/used-in-examples/Macchiato.png
+qt5/doc/qtdoc/images/used-in-examples/cappucino.png
+qt5/doc/qtdoc/images/used-in-examples/coffee.png
+qt5/doc/qtdoc/images/used-in-examples/coffee_cup_back.png
+qt5/doc/qtdoc/images/used-in-examples/coffee_cup_coverplate.png
+qt5/doc/qtdoc/images/used-in-examples/coffee_cup_front.png
+qt5/doc/qtdoc/images/used-in-examples/coffee_cup_large.png
+qt5/doc/qtdoc/images/used-in-examples/coffee_cup_outline.png
+qt5/doc/qtdoc/images/used-in-examples/line.png
+qt5/doc/qtdoc/images/used-in-examples/liquid_coffee.png
+qt5/doc/qtdoc/images/used-in-examples/liquid_foam.png
+qt5/doc/qtdoc/images/used-in-examples/liquid_milk.png
+qt5/doc/qtdoc/images/used-in-examples/milk.png
+qt5/doc/qtdoc/images/used-in-examples/sugar.png
+qt5/doc/qtdoc/images/used-in-examples/white.png
 qt5/doc/qtdoc/images/xml-examples.png
 qt5/doc/qtdoc/index.html
 qt5/doc/qtdoc/integrity-building-monolith.html
@@ -159,7 +183,6 @@ qt5/doc/qtdoc/linux-deployment.html
 qt5/doc/qtdoc/linux-issues.html
 qt5/doc/qtdoc/linux-requirements.html
 qt5/doc/qtdoc/linux.html
-qt5/doc/qtdoc/mac-licensing.html
 qt5/doc/qtdoc/mobiledevelopment.html
 qt5/doc/qtdoc/moc.html
 qt5/doc/qtdoc/modules-cpp.html
@@ -218,6 +241,27 @@ qt5/doc/qtdoc/qt-gui-concepts.html
 qt5/doc/qtdoc/qt5-intro.html
 qt5/doc/qtdoc/qtconcurrent-mtexamples.html
 qt5/doc/qtdoc/qtconcurrentexamples.html
+qt5/doc/qtdoc/qtdoc-attribution-coffeeexample-titillium.html
+qt5/doc/qtdoc/qtdoc-coffee-applicationflow-qml.html
+qt5/doc/qtdoc/qtdoc-coffee-applicationflowform-ui-qml.html
+qt5/doc/qtdoc/qtdoc-coffee-brewing-qml.html
+qt5/doc/qtdoc/qtdoc-coffee-brewingform-ui-qml.html
+qt5/doc/qtdoc/qtdoc-coffee-choosingcoffee-ui-qml.html
+qt5/doc/qtdoc/qtdoc-coffee-coffee-pro.html
+qt5/doc/qtdoc/qtdoc-coffee-coffeebutton-qml.html
+qt5/doc/qtdoc/qtdoc-coffee-cup-qml.html
+qt5/doc/qtdoc/qtdoc-coffee-cupform-ui-qml.html
+qt5/doc/qtdoc/qtdoc-coffee-emptycup-qml.html
+qt5/doc/qtdoc/qtdoc-coffee-emptycupform-ui-qml.html
+qt5/doc/qtdoc/qtdoc-coffee-example.html
+qt5/doc/qtdoc/qtdoc-coffee-imports-coffee-constants-qml.html
+qt5/doc/qtdoc/qtdoc-coffee-imports-coffee-qmldir.html
+qt5/doc/qtdoc/qtdoc-coffee-main-cpp.html
+qt5/doc/qtdoc/qtdoc-coffee-main-qml.html
+qt5/doc/qtdoc/qtdoc-coffee-navigationbutton-ui-qml.html
+qt5/doc/qtdoc/qtdoc-coffee-qml-qrc.html
+qt5/doc/qtdoc/qtdoc-coffee-sidebar-qml.html
+qt5/doc/qtdoc/qtdoc-coffee-sidebarform-ui-qml.html
 qt5/doc/qtdoc/qtdoc.index
 qt5/doc/qtdoc/qtdoc.qhp
 qt5/doc/qtdoc/qtdoc.qhp.sha1
