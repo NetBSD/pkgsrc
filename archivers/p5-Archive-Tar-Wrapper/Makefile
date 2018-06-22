@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.6 2017/06/05 14:22:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2018/06/22 07:52:01 wen Exp $
 
-DISTNAME=	Archive-Tar-Wrapper-0.23
+DISTNAME=	Archive-Tar-Wrapper-0.28
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Archive/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~mschilli/Archive-Tar-Wrapper/
 COMMENT=	API wrapper around the 'tar' utility
-LICENSE=	${PERL5_LICENSE}
+LICENSE=	gnu-gpl-v3
 
 # for make test
 BUILD_DEPENDS+=	p5-Log-Log4perl-[0-9]*:../../devel/p5-Log-Log4perl
