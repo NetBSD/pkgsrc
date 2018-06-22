@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/06/19 07:21:23 adam Exp $
+$NetBSD: distinfo,v 1.6 2018/06/22 06:29:20 adam Exp $
 
-SHA1 (qtdoc-everywhere-src-5.11.0.tar.xz) = 9a7e29db6de178150411f86076a269f947b02d6b
-RMD160 (qtdoc-everywhere-src-5.11.0.tar.xz) = dc51f8f0a62e1a12f290e8dfdce7b283517c1a22
-SHA512 (qtdoc-everywhere-src-5.11.0.tar.xz) = 1b9da20e711cbb712fd67069bcc107fe84213b28bf56d2e96c373905ea9de959fb14cd582cf08e18e195868a2e72c71552bbf600bd14277770d566078f19d378
-Size (qtdoc-everywhere-src-5.11.0.tar.xz) = 3327252 bytes
+SHA1 (qtdoc-everywhere-src-5.11.1.tar.xz) = 9ffcb309c57954e2430fd9b0b6535d0e95bb4917
+RMD160 (qtdoc-everywhere-src-5.11.1.tar.xz) = 039aef1dc656ed5c7c357996ffd117d186601133
+SHA512 (qtdoc-everywhere-src-5.11.1.tar.xz) = dd2682b6a74d75c9e1ba3b8937a9f4dcc7ee77709c2ff8ebbef066f25f40327db2d52609f79bdbe0006b3b45881953c686e78fe7065dd329da058c3615665b26
+Size (qtdoc-everywhere-src-5.11.1.tar.xz) = 3328164 bytes
