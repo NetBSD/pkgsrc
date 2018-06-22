@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2018/06/19 07:21:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2018/06/22 06:29:20 adam Exp $
 lib/pkgconfig/Qt5Concurrent.pc
 lib/pkgconfig/Qt5Core.pc
 lib/pkgconfig/Qt5DBus.pc
@@ -636,6 +636,7 @@ qt5/include/QtCore/qarraydatapointer.h
 qt5/include/QtCore/qatomic.h
 qt5/include/QtCore/qatomic_bootstrap.h
 qt5/include/QtCore/qatomic_cxx11.h
+qt5/include/QtCore/qatomic_msvc.h
 qt5/include/QtCore/qbasicatomic.h
 qt5/include/QtCore/qbasictimer.h
 qt5/include/QtCore/qbitarray.h
@@ -996,6 +997,7 @@ qt5/include/QtGui/${PKGVERSION}/QtGui/private/qinputcontrol_p.h
 qt5/include/QtGui/${PKGVERSION}/QtGui/private/qinputdevicemanager_p.h
 qt5/include/QtGui/${PKGVERSION}/QtGui/private/qinputdevicemanager_p_p.h
 qt5/include/QtGui/${PKGVERSION}/QtGui/private/qinputmethod_p.h
+qt5/include/QtGui/${PKGVERSION}/QtGui/private/qinternalmimedata_p.h
 qt5/include/QtGui/${PKGVERSION}/QtGui/private/qkeymapper_p.h
 qt5/include/QtGui/${PKGVERSION}/QtGui/private/qkeysequence_p.h
 qt5/include/QtGui/${PKGVERSION}/QtGui/private/qlayoutpolicy_p.h
