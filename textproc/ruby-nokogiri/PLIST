@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2018/02/18 05:45:37 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.26 2018/06/22 14:20:27 tsutsui Exp $
 bin/nokogiri${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -19,6 +19,7 @@ ${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/ROADMAP.md
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/SECURITY.md
 ${GEM_LIBDIR}/STANDARD_RESPONSES.md
 ${GEM_LIBDIR}/Y_U_NO_GEMSPEC.md
 ${GEM_LIBDIR}/appveyor.yml
@@ -159,6 +160,7 @@ ${GEM_LIBDIR}/lib/nokogiri/xml/xpath_context.rb
 ${GEM_LIBDIR}/lib/nokogiri/xslt.rb
 ${GEM_LIBDIR}/lib/nokogiri/xslt/stylesheet.rb
 ${GEM_LIBDIR}/lib/xsd/xmlparser/nokogiri.rb
+${GEM_LIBDIR}/patches/libxml2/0001-Revert-Do-not-URI-escape-in-server-side-includes.patch
 ${GEM_LIBDIR}/patches/sort-patches-by-date
 ${GEM_LIBDIR}/suppressions/README.txt
 ${GEM_LIBDIR}/suppressions/nokogiri_ruby-2.supp
@@ -210,6 +212,7 @@ ${GEM_LIBDIR}/test/html/sax/test_parser.rb
 ${GEM_LIBDIR}/test/html/sax/test_parser_context.rb
 ${GEM_LIBDIR}/test/html/sax/test_parser_text.rb
 ${GEM_LIBDIR}/test/html/sax/test_push_parser.rb
+${GEM_LIBDIR}/test/html/test_attributes.rb
 ${GEM_LIBDIR}/test/html/test_builder.rb
 ${GEM_LIBDIR}/test/html/test_document.rb
 ${GEM_LIBDIR}/test/html/test_document_encoding.rb
