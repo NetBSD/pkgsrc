@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/06/18 15:27:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/06/22 10:08:48 hauke Exp $
 share/davical/dba/appuser_permissions.txt
 share/davical/dba/base-data.sql
 share/davical/dba/better_perms.sql
@@ -198,6 +198,7 @@ share/davical/scripts/tz-update.php
 share/doc/davical/COPYING
 share/doc/davical/CREDITS
 share/doc/davical/ChangeLog
+share/doc/davical/Doxyfile
 share/doc/davical/INSTALL
 share/doc/davical/README
 share/doc/davical/TODO
