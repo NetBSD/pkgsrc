@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2951 2018/06/22 14:17:41 tsutsui Exp $
+$NetBSD: CHANGES-2018,v 1.2952 2018/06/22 14:20:45 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4265,3 +4265,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/php-libawl to 0.59 [hauke 2018-06-22]
 	Updated www/drupal8 to 8.5.4 [wen 2018-06-22]
 	Updated x11/mlterm to 3.8.6 [tsutsui 2018-06-22]
+	Updated textproc/ruby-nokogiri to 1.8.3 [tsutsui 2018-06-22]
