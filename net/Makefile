@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1216 2018/05/17 08:09:11 adam Exp $
+# $NetBSD: Makefile,v 1.1217 2018/06/22 17:09:43 he Exp $
 #
 
 COMMENT=	Networking tools
@@ -485,6 +485,7 @@ SUBDIR+=	p5-Net-DNS-Resolver-Mock
 SUBDIR+=	p5-Net-DNS-Resolver-Programmable
 SUBDIR+=	p5-Net-DNS-Zone-Parser
 SUBDIR+=	p5-Net-DNSServer
+SUBDIR+=	p5-Net-DRI
 SUBDIR+=	p5-Net-Daemon
 SUBDIR+=	p5-Net-Dev-MIBLoadOrder
 SUBDIR+=	p5-Net-Domain-TLD
