@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2018/06/11 15:01:49 fhajny Exp $
+# $NetBSD: Makefile,v 1.38 2018/06/22 09:50:16 adam Exp $
 
-DISTNAME=	tesseract-3.05.01
-PKGREVISION=	7
+DISTNAME=	tesseract-3.05.02
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tesseract-ocr/}
 DISTFILES=	${DEFAULT_DISTFILES}
@@ -19,11 +18,9 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf automake make pax pkg-config
 GNU_CONFIGURE=		yes
-
 CONFIGURE_ENV+=		LIBLEPT_HEADERSDIR=${BUILDLINK_PREFIX.leptonica}/include
 
 INSTALL_TARGET=		install training-install
-
 INSTALLATION_DIRS=	libexec share/doc/tesseract share/tesseract
 
 post-extract:
