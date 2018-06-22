@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2018/06/19 07:21:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2018/06/22 06:29:20 adam Exp $
 lib/pkgconfig/Qt5Qml.pc
 lib/pkgconfig/Qt5Quick.pc
 lib/pkgconfig/Qt5QuickTest.pc
@@ -15,7 +15,7 @@ qt5/bin/qmlscene
 qt5/bin/qmltestrunner
 qt5/include/QtPacketProtocol/${PKGVERSION}/QtPacketProtocol/private/qpacket_p.h
 qt5/include/QtPacketProtocol/${PKGVERSION}/QtPacketProtocol/private/qpacketprotocol_p.h
-qt5/include/QtPacketProtocol/${PKGVERSION}/QtPacketProtocol/private/qqmldebugpacket_p.h
+qt5/include/QtPacketProtocol/${PKGVERSION}/QtPacketProtocol/private/qversionedpacket_p.h
 qt5/include/QtPacketProtocol/QtPacketProtocol
 qt5/include/QtPacketProtocol/QtPacketProtocolDepends
 qt5/include/QtPacketProtocol/QtPacketProtocolVersion
@@ -287,6 +287,7 @@ qt5/include/QtQmlDebug/${PKGVERSION}/QtQmlDebug/private/qqmlenginecontrolclient_
 qt5/include/QtQmlDebug/${PKGVERSION}/QtQmlDebug/private/qqmlenginecontrolclient_p_p.h
 qt5/include/QtQmlDebug/${PKGVERSION}/QtQmlDebug/private/qqmlprofilerclient_p.h
 qt5/include/QtQmlDebug/${PKGVERSION}/QtQmlDebug/private/qqmlprofilerclient_p_p.h
+qt5/include/QtQmlDebug/${PKGVERSION}/QtQmlDebug/private/qqmlprofilerclientdefinitions_p.h
 qt5/include/QtQmlDebug/${PKGVERSION}/QtQmlDebug/private/qqmlprofilerevent_p.h
 qt5/include/QtQmlDebug/${PKGVERSION}/QtQmlDebug/private/qqmlprofilereventlocation_p.h
 qt5/include/QtQmlDebug/${PKGVERSION}/QtQmlDebug/private/qqmlprofilereventreceiver_p.h
