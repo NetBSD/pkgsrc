@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2947 2018/06/22 10:00:32 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2948 2018/06/22 10:09:23 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4261,3 +4261,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/git to 2.18.0 [adam 2018-06-22]
 	Updated graphics/tesseract to 3.05.02 [adam 2018-06-22]
 	Updated net/p5-Net-Frame-Dump to 1.17 [wen 2018-06-22]
+	Updated www/davical to 1.1.7 [hauke 2018-06-22]
