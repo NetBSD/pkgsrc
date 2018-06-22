@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2017/08/14 23:42:08 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2018/06/22 15:56:56 schmonz Exp $
 
+GITHUB_PROJECT=		cpputest
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 DISTNAME=		cpputest-3.8
 PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=cpputest/}
-GITHUB_TAG=		v${PKGVERSION_NOREV}
-GITHUB_PROJECT=		cpputest
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://cpputest.github.io/
