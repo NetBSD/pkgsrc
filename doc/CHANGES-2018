@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2952 2018/06/22 14:20:45 tsutsui Exp $
+$NetBSD: CHANGES-2018,v 1.2953 2018/06/22 14:35:43 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4266,3 +4266,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/drupal8 to 8.5.4 [wen 2018-06-22]
 	Updated x11/mlterm to 3.8.6 [tsutsui 2018-06-22]
 	Updated textproc/ruby-nokogiri to 1.8.3 [tsutsui 2018-06-22]
+	Updated x11/vte3 to 0.52.2nb1 [jperkin 2018-06-22]
