@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2018/05/09 12:11:29 wen Exp $
+# $NetBSD: Makefile,v 1.7 2018/06/22 12:59:08 wen Exp $
 
-DISTNAME=	drupal-8.5.3
+DISTNAME=	drupal-8.5.4
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.drupal.org/files/projects/
