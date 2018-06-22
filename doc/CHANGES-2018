@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2950 2018/06/22 13:02:05 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2951 2018/06/22 14:17:41 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4264,3 +4264,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/davical to 1.1.7 [hauke 2018-06-22]
 	Updated devel/php-libawl to 0.59 [hauke 2018-06-22]
 	Updated www/drupal8 to 8.5.4 [wen 2018-06-22]
+	Updated x11/mlterm to 3.8.6 [tsutsui 2018-06-22]
