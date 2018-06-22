@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2018/04/05 12:01:54 adam Exp $
+# $NetBSD: Makefile,v 1.17 2018/06/22 06:38:14 adam Exp $
 
-DISTNAME=	lz4-1.1.0
+DISTNAME=	lz4-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lz4/}
