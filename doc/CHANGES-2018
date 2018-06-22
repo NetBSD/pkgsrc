@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2942 2018/06/22 08:02:30 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2943 2018/06/22 08:12:44 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4256,3 +4256,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated archivers/p5-Archive-Tar to 2.30 [wen 2018-06-22]
 	Updated archivers/p5-Archive-Tar-Wrapper to 0.28 [wen 2018-06-22]
 	Updated mail/p5-Email-Address-XS to 1.04 [wen 2018-06-22]
+	Updated mail/p5-Mail-DKIM to 0.53 [wen 2018-06-22]
