@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2018/04/02 08:45:24 wiz Exp $
+$NetBSD: distinfo,v 1.2 2018/06/23 08:20:36 wiz Exp $
 
-SHA1 (keepassxc-2.3.0.tar.gz) = e7b5b9bcd98406cbc495c3e72a134692c32b828d
-RMD160 (keepassxc-2.3.0.tar.gz) = 538ef14052960a11b0f93d897a19f354fed1cb7b
-SHA512 (keepassxc-2.3.0.tar.gz) = 5fa49d44fb821ab131955999aada7f7c3901a98973aca4db7f3884b5c2e3fe31f64178fa36c931a3da9fa833d65dd5e602c101d55bd0b5b15927b55bafd86938
-Size (keepassxc-2.3.0.tar.gz) = 4730464 bytes
-SHA1 (patch-src_CMakeLists.txt) = b49b2f8648d82fb8618ebd8f1f15afd5344bf460
+SHA1 (keepassxc-2.3.3.tar.gz) = 4c1b53bbb28ba772b3338fd0ed58f8f7ce08f438
+RMD160 (keepassxc-2.3.3.tar.gz) = 6e3140e30a7f4b5607bfd44bd6485e63bfeb65ca
+SHA512 (keepassxc-2.3.3.tar.gz) = fb9f65a9978293022451c8378933f0c9283f1a7e88cca77e67fdbe278d99177918132b8d5e9843282f7ea10af8bc8c585ec5a3f9f975f4a443e796716e8da748
+Size (keepassxc-2.3.3.tar.gz) = 5116879 bytes
+SHA1 (patch-src_gui_entry_EditEntryWidget.cpp) = 02970a3499a1041f60455886155539827f3427e2
