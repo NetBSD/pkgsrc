@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.766 2018/06/17 16:33:38 minskim Exp $
+# $NetBSD: Makefile,v 1.767 2018/06/23 10:49:13 jmcneill Exp $
 #
 
 COMMENT=	System utilities
@@ -623,6 +623,7 @@ SUBDIR+=	u-boot-nanopi-neo2
 SUBDIR+=	u-boot-orangepi-2
 SUBDIR+=	u-boot-orangepi-one
 SUBDIR+=	u-boot-orangepi-plus2e
+SUBDIR+=	u-boot-orangepi-zero
 SUBDIR+=	u-boot-pine-h64
 SUBDIR+=	u-boot-pine64
 SUBDIR+=	u-boot-pinebook
