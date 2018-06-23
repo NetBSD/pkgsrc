@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2018/06/10 12:00:24 leot Exp $
+@comment $NetBSD: PLIST,v 1.13 2018/06/23 08:53:31 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -327,6 +327,9 @@ ${PYSITELIB}/gallery_dl/postprocessor/common.pyo
 ${PYSITELIB}/gallery_dl/postprocessor/exec.py
 ${PYSITELIB}/gallery_dl/postprocessor/exec.pyc
 ${PYSITELIB}/gallery_dl/postprocessor/exec.pyo
+${PYSITELIB}/gallery_dl/postprocessor/ugoira.py
+${PYSITELIB}/gallery_dl/postprocessor/ugoira.pyc
+${PYSITELIB}/gallery_dl/postprocessor/ugoira.pyo
 ${PYSITELIB}/gallery_dl/postprocessor/zip.py
 ${PYSITELIB}/gallery_dl/postprocessor/zip.pyc
 ${PYSITELIB}/gallery_dl/postprocessor/zip.pyo
