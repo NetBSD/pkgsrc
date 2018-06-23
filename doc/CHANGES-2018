@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2954 2018/06/22 17:10:23 he Exp $
+$NetBSD: CHANGES-2018,v 1.2955 2018/06/23 08:20:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4268,3 +4268,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/ruby-nokogiri to 1.8.3 [tsutsui 2018-06-22]
 	Updated x11/vte3 to 0.52.2nb1 [jperkin 2018-06-22]
 	Updated net/p5-Net-DRI to 0.96 [he 2018-06-22]
+	Updated security/keepassxc to 2.3.3 [wiz 2018-06-23]
