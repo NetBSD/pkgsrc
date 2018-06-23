@@ -1,8 +1,8 @@
-$NetBSD: patch-xfsettingsd_xsettings.xml,v 1.4 2018/06/04 01:34:12 youri Exp $
+$NetBSD: patch-xfsettingsd_xsettings.xml,v 1.5 2018/06/23 22:08:54 youri Exp $
 
 Use a good icon theme by default.
 
---- xfsettingsd/xsettings.xml.orig	2018-03-18 20:59:33.000000000 +0000
+--- xfsettingsd/xsettings.xml.orig	2018-06-20 22:37:58.000000000 +0000
 +++ xfsettingsd/xsettings.xml
 @@ -6,8 +6,8 @@
  <?xml version="1.0" encoding="UTF-8"?>
@@ -10,8 +10,8 @@ Use a good icon theme by default.
    <property name="Net" type="empty">
 -    <property name="ThemeName" type="empty"/>
 -    <property name="IconThemeName" type="empty"/>
-+    <property name="ThemeName" type="string" value="Adwaita"/>
-+    <property name="IconThemeName" type="string" value="elementary-xfce"/>
++    <property name="ThemeName" type="Adwaita"/>
++    <property name="IconThemeName" type="elementary-xfce"/>
      <property name="DoubleClickTime" type="int" value="400"/>
      <property name="DoubleClickDistance" type="int" value="5"/>
      <property name="DndDragThreshold" type="int" value="8"/>
