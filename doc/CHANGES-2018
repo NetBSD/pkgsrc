@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2955 2018/06/23 08:20:48 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2956 2018/06/23 08:53:44 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4269,3 +4269,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/vte3 to 0.52.2nb1 [jperkin 2018-06-22]
 	Updated net/p5-Net-DRI to 0.96 [he 2018-06-22]
 	Updated security/keepassxc to 2.3.3 [wiz 2018-06-23]
+	Updated net/gallery-dl to 1.4.1 [leot 2018-06-23]
