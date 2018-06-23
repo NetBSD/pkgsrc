@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2016/03/01 13:25:01 wiz Exp $
+$NetBSD: distinfo,v 1.6 2018/06/23 09:40:53 wiz Exp $
 
 SHA1 (swift-3.0.tar.gz) = 2bafacd9cfffea1044bc8ff6b3547c771aa5547c
 RMD160 (swift-3.0.tar.gz) = 7b25e3655855f18446e0fb5053f37f490f68bda3
@@ -6,3 +6,4 @@ SHA512 (swift-3.0.tar.gz) = 3d635e9a904a48a8553e153627242e44fad5d57c48152d3c698c
 Size (swift-3.0.tar.gz) = 11084214 bytes
 SHA1 (patch-BuildTools_SCons_SConscript.boot) = f134f01b73e6862171c432c76088947d616c6d3d
 SHA1 (patch-BuildTools_SCons_SConstruct) = a2d68e60a41ea74ad753b17f97c7887cbd458c46
+SHA1 (patch-Swift_QtUI_UserSearch_QtUserSearchWindow.h) = 2ada5f6a38f48c89142371817918121b01819aa7

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2018/04/29 21:31:29 adam Exp $
+# $NetBSD: Makefile,v 1.37 2018/06/23 09:40:53 wiz Exp $
 
 DISTNAME=	swift-3.0
 PKGREVISION=	22
@@ -7,7 +7,7 @@ MASTER_SITES=	http://swift.im/downloads/releases/${DISTNAME}/
 
 MAINTAINER=	eric@cirr.com
 HOMEPAGE=	http://swift.im/
-COMMENT=	Swift XMPP Client
+COMMENT=	Graphical XMPP Client
 LICENSE=	gnu-gpl-v3
 
 # would be nicer to build with pkgsrc version, but
