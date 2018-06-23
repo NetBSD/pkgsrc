@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2956 2018/06/23 08:53:44 leot Exp $
+$NetBSD: CHANGES-2018,v 1.2957 2018/06/23 10:49:59 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4270,3 +4270,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/p5-Net-DRI to 0.96 [he 2018-06-22]
 	Updated security/keepassxc to 2.3.3 [wiz 2018-06-23]
 	Updated net/gallery-dl to 1.4.1 [leot 2018-06-23]
+	Added sysutils/u-boot-orangepi-zero version 2018.05 [jmcneill 2018-06-23]
