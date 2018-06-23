@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2959 2018/06/23 13:38:10 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.2960 2018/06/23 20:27:48 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4273,3 +4273,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added sysutils/u-boot-orangepi-zero version 2018.05 [jmcneill 2018-06-23]
 	Updated x11/py-qt5 to 5.10.1nb1 [wiz 2018-06-23]
 	Updated lang/nodejs to 10.5.0 [fhajny 2018-06-23]
+	Updated sysutils/xfce4-thunar to 1.8.1 [youri 2018-06-23]
