@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2961 2018/06/23 20:37:37 youri Exp $
+$NetBSD: CHANGES-2018,v 1.2962 2018/06/23 22:09:04 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4275,3 +4275,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/nodejs to 10.5.0 [fhajny 2018-06-23]
 	Updated sysutils/xfce4-thunar to 1.8.1 [youri 2018-06-23]
 	Updated x11/xfce4-exo to 0.12.2 [youri 2018-06-23]
+	Updated x11/xfce4-settings to 4.13.4 [youri 2018-06-23]
