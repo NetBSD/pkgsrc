@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.128 2018/06/14 10:54:26 fhajny Exp $
+$NetBSD: distinfo,v 1.129 2018/06/23 13:38:00 fhajny Exp $
 
-SHA1 (node-v10.4.1.tar.gz) = e924e35d3547445b230df025317dc0fa6e44558c
-RMD160 (node-v10.4.1.tar.gz) = a74cf9c9be184de4c6ea736390f8a6eec601b19c
-SHA512 (node-v10.4.1.tar.gz) = 7b3d53501d30fc04e4e133d646b14aa90d069483cb0bed3169e221d4724fd57b04e57602c940fa8d6b5ea6941fa959b3489e9599a035bb1ed51346891f587485
-Size (node-v10.4.1.tar.gz) = 35360626 bytes
+SHA1 (node-v10.5.0.tar.gz) = d7c6dfcdaf04cdc94e26c1e97c8821a447f3d10d
+RMD160 (node-v10.5.0.tar.gz) = 75b83ffdbcf75b4ddfb19a7854f6504abc039210
+SHA512 (node-v10.5.0.tar.gz) = ed2588405c76b16e5b11b1cb92080ab6967b9af7a27a1434ceb518b67a7db2ae0ce5ffbf8c601e612013805ff13370216d262897e056dc7953a3366d24b4c9f6
+Size (node-v10.5.0.tar.gz) = 35441207 bytes
 SHA1 (patch-common.gypi) = de37949f38d9bd39a18b59d59ec74e528bd323ac
 SHA1 (patch-deps_cares_cares.gyp) = 2235eb44bc984fa2e745fdf1786f1ae6de6ef80f
 SHA1 (patch-deps_openssl_config_opensslconf__asm.h) = 7b074ebd5353dff662ac66cf4012926f12dd7b7e
