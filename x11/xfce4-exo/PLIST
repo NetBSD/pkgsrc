@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2018/05/15 22:36:44 youri Exp $
+@comment $NetBSD: PLIST,v 1.12 2018/06/23 20:37:26 youri Exp $
 bin/exo-csource
 bin/exo-desktop-item-edit
 bin/exo-open
@@ -53,6 +53,8 @@ lib/pkgconfig/exo-1.pc
 lib/pkgconfig/exo-2.pc
 lib/xfce4/exo-1/exo-compose-mail-1
 lib/xfce4/exo-1/exo-helper-1
+man/man1/exo-csource.1
+man/man1/exo-open.1
 share/applications/exo-file-manager.desktop
 share/applications/exo-mail-reader.desktop
 share/applications/exo-preferred-applications.desktop
@@ -170,8 +172,6 @@ share/locale/vi/LC_MESSAGES/exo-1.mo
 share/locale/zh_CN/LC_MESSAGES/exo-1.mo
 share/locale/zh_HK/LC_MESSAGES/exo-1.mo
 share/locale/zh_TW/LC_MESSAGES/exo-1.mo
-man/man1/exo-csource.1
-man/man1/exo-open.1
 share/pixmaps/exo-1/exo-thumbnail-frame.png
 share/xfce4/helpers/Thunar.desktop
 share/xfce4/helpers/aterm.desktop
@@ -207,6 +207,7 @@ share/xfce4/helpers/nautilus.desktop
 share/xfce4/helpers/netscape-navigator.desktop
 share/xfce4/helpers/nxterm.desktop
 share/xfce4/helpers/opera-browser.desktop
+share/xfce4/helpers/pcmanfm-qt.desktop
 share/xfce4/helpers/pcmanfm.desktop
 share/xfce4/helpers/qterminal.desktop
 share/xfce4/helpers/qtfm.desktop
