@@ -1,13 +1,13 @@
-$NetBSD: patch-xfsettingsd_Makefile.in,v 1.2 2017/06/18 22:41:54 youri Exp $
+$NetBSD: patch-xfsettingsd_Makefile.in,v 1.3 2018/06/23 22:08:54 youri Exp $
 
-Adjust config path.
+Adjust install paths.
 
---- xfsettingsd/Makefile.in.orig	2015-02-28 19:10:30.000000000 +0000
+--- xfsettingsd/Makefile.in.orig	2018-06-23 20:33:39.000000000 +0000
 +++ xfsettingsd/Makefile.in
-@@ -535,9 +535,9 @@ xfsettingsd_LDADD = $(GTK_LIBS) $(GLIB_L
- 	$(LIBXFCE4KBD_PRIVATE_LIBS) $(LIBXKLAVIER_LIBS) $(XI_LIBS) \
- 	$(LIBX11_LIBS) $(LIBNOTIFY_LIBS) $(FONTCONFIG_LIBS) \
- 	$(LIBINPUT_LIBS) -lm $(am__append_3) $(am__append_6)
+@@ -547,9 +547,9 @@ xfsettingsd_LDADD = $(GTK_LIBS) $(GLIB_L
+ 	$(LIBXKLAVIER_LIBS) $(XI_LIBS) $(LIBX11_LIBS) \
+ 	$(LIBNOTIFY_LIBS) $(FONTCONFIG_LIBS) $(LIBINPUT_LIBS) -lm \
+ 	$(am__append_3) $(am__append_6)
 -settingsdir = $(sysconfdir)/xdg/xfce4/xfconf/xfce-perchannel-xml
 +settingsdir = $(datadir)/examples/xfce4/xfconf/xfce-perchannel-xml
  settings_DATA = xsettings.xml
