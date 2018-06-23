@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2958 2018/06/23 11:23:57 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2959 2018/06/23 13:38:10 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4272,3 +4272,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/gallery-dl to 1.4.1 [leot 2018-06-23]
 	Added sysutils/u-boot-orangepi-zero version 2018.05 [jmcneill 2018-06-23]
 	Updated x11/py-qt5 to 5.10.1nb1 [wiz 2018-06-23]
+	Updated lang/nodejs to 10.5.0 [fhajny 2018-06-23]
