@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2957 2018/06/23 10:49:59 jmcneill Exp $
+$NetBSD: CHANGES-2018,v 1.2958 2018/06/23 11:23:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4271,3 +4271,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/keepassxc to 2.3.3 [wiz 2018-06-23]
 	Updated net/gallery-dl to 1.4.1 [leot 2018-06-23]
 	Added sysutils/u-boot-orangepi-zero version 2018.05 [jmcneill 2018-06-23]
+	Updated x11/py-qt5 to 5.10.1nb1 [wiz 2018-06-23]
