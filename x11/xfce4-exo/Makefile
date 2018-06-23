@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2018/05/15 22:36:44 youri Exp $
+# $NetBSD: Makefile,v 1.53 2018/06/23 20:37:26 youri Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	0.12.0
+VERSION=	0.12.2
 DISTNAME=	exo-${VERSION}
 PKGNAME=	xfce4-exo-${VERSION}
 CATEGORIES=	x11
