@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3003 2018/06/24 14:18:55 taca Exp $
+$NetBSD: CHANGES-2018,v 1.3004 2018/06/24 14:20:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4327,3 +4327,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added graphics/pngquant version 2.12.0 [fhajny 2018-06-24]
 	Added devel/ruby-highline17 version 1.7.10 [taca 2018-06-24]
 	Updated games/ruby-squib to 0.14.1nb1 [taca 2018-06-24]
+	Updated misc/ruby-commander to 4.4.5 [taca 2018-06-24]
