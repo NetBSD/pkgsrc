@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2983 2018/06/24 09:38:03 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2984 2018/06/24 09:41:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4302,3 +4302,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/h2o to 2.2.5 [adam 2018-06-24]
 	Updated net/openvpn to 2.4.6nb1 [adam 2018-06-24]
 	Updated www/p5-HTML-Lint to 2.32 [wiz 2018-06-24]
+	Updated www/p5-Mojolicious to 7.85 [wiz 2018-06-24]
