@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2018/03/19 08:25:49 adam Exp $
+# $NetBSD: Makefile,v 1.5 2018/06/24 10:36:58 adam Exp $
 
-DISTNAME=	sure-1.4.9
+DISTNAME=	sure-1.4.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sure/}
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_LANGUAGES=	# none
 
