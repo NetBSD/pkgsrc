@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.7 2001/04/20 12:33:53 fredb Exp $
+$NetBSD: patch-Library_src_HTStyle.c,v 1.1 2018/06/24 16:54:59 adam Exp $
+
+Define application-wide style sheet.
 
 --- Library/src/HTStyle.c.orig	Mon Feb 22 16:10:12 1999
 +++ Library/src/HTStyle.c
@@ -6,7 +8,7 @@ $NetBSD: patch-ac,v 1.7 2001/04/20 12:33:53 fredb Exp $
  #include "WWWUtil.h"
  #include "HTStyle.h"
  
-+PUBLIC HTStyleSheet * styleSheet; /* application-wide style sheet */
++PUBLIC HTStyleSheet * styleSheet;
 +
  struct _HTStyle {
      char *	name;		/* Style name */
