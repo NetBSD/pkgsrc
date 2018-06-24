@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2018/06/24 09:09:34 adam Exp $
+# $NetBSD: Makefile,v 1.36 2018/06/24 09:10:31 adam Exp $
 
 DISTNAME=	libuv-1.21.0
 CATEGORIES=	devel
@@ -16,9 +16,6 @@ GNU_CONFIGURE=	yes
 TEST_TARGET=	check
 
 INSTALLATION_DIRS+=	include/uv
-
-#HEADERS=	uv-aix.h uv-bsd.h uv-darwin.h uv-linux.h uv-sunos.h \
-#		uv-unix.h uv-win.h pthread-barrier.h
 
 .include "../../mk/bsd.prefs.mk"
 
