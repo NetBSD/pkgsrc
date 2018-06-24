@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2017/09/27 16:54:13 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2018/06/24 10:11:27 wiz Exp $
 
-DISTNAME=	WWW-Mechanize-Shell-0.56
+DISTNAME=	WWW-Mechanize-Shell-0.57
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=WWW/}
@@ -19,6 +19,7 @@ DEPENDS+=	p5-WWW-Mechanize-FormFiller>=0.05:../../www/p5-WWW-Mechanize-FormFille
 DEPENDS+=	p5-Hook-LexWrap>0.20:../../devel/p5-Hook-LexWrap
 DEPENDS+=	p5-HTML-Display-[0-9]*:../../www/p5-HTML-Display
 DEPENDS+=	p5-HTML-TokeParser-Simple>=2.0:../../www/p5-HTML-TokeParser-Simple
+TEST_DEPENDS+=	p5-Test-HTTP-LocalServer-[0-9]*:../../devel/p5-Test-HTTP-LocalServer
 
 USE_LANGUAGES=		# empty
 PERL5_MODULE_TYPE=	MakeMaker
