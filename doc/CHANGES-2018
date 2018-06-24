@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2980 2018/06/24 09:17:35 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2981 2018/06/24 09:20:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4294,3 +4294,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/p5-Unix-Statgrab to 0.112 [wiz 2018-06-24]
 	Updated textproc/p5-Test-YAML to 1.07 [wiz 2018-06-24]
 	Updated textproc/p5-ack to 2.24 [wiz 2018-06-24]
+	Updated time/p5-Time-Local to 1.28 [wiz 2018-06-24]
