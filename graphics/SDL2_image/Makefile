@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2017/02/28 15:20:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2018/06/24 10:29:32 adam Exp $
 
-DISTNAME=	SDL2_image-2.0.1
-PKGREVISION=	1
+DISTNAME=	SDL2_image-2.0.3
 CATEGORIES=	graphics devel
 MASTER_SITES=	http://www.libsdl.org/projects/SDL_image/release/
 
@@ -10,14 +9,12 @@ HOMEPAGE=	http://www.libsdl.org/projects/SDL_image/
 COMMENT=	Load images as SDL surfaces
 LICENSE=	zlib
 
-USE_LANGUAGES=		c
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	ac_cv_prog_ac_ct_OBJC=${CC:Q}
 
 INSTALLATION_DIRS=	bin
 PKGCONFIG_OVERRIDE=	SDL2_image.pc.in
-CHECK_PORTABILITY_SKIP=	external/tiff-4.0.3/configure
 
 post-install:
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/showimage \
