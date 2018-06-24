@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.72 2018/06/17 14:37:02 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2018/06/24 11:16:12 wiz Exp $
 
 DISTNAME=	texlive-20180414-source
 PKGNAME=	luatex-1.07.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2018/
 EXTRACT_SUFX=	.tar.xz
