@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3001 2018/06/24 12:00:37 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.3002 2018/06/24 14:17:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4325,3 +4325,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/py-cryptodome to 3.6.3 [adam 2018-06-24]
 	Updated devel/py-babel to 2.6.0 [adam 2018-06-24]
 	Added graphics/pngquant version 2.12.0 [fhajny 2018-06-24]
+	Added devel/ruby-highline17 version 1.7.10 [taca 2018-06-24]
