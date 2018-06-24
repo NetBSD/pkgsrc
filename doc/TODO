@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18425 2018/06/24 10:16:58 wiz Exp $
+$NetBSD: TODO,v 1.18426 2018/06/24 10:20:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -402,7 +402,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ap22-authnz-external-3.3.2
 	o ap22-limitipconn-0.24
 	o ap22-vhost-ldap-2.4.0
-	o apache-ant-1.10.4
 	o apollo-1.7
 	o apr0-2.4.1
 	o ardour-5.11
