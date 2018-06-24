@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2997 2018/06/24 11:09:15 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2998 2018/06/24 11:14:51 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4319,3 +4319,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated converters/TECkit to 2.5.8 [wiz 2018-06-24]
 	Updated lang/vala to 0.40.7 [wiz 2018-06-24]
 	Updated print/poppler to 0.66.0 [wiz 2018-06-24]
+	Added sysutils/dosfstools version 4.1 [bsiegert 2018-06-24]
