@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.5 2014/06/15 22:44:15 tron Exp $
+$NetBSD: patch-src_utils_directory.cc,v 1.1 2018/06/24 16:59:52 adam Exp $
 
 Fix build under DragonFly.
 
