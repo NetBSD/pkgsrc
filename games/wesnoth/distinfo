@@ -1,14 +1,9 @@
-$NetBSD: distinfo,v 1.58 2016/06/18 21:18:16 leot Exp $
+$NetBSD: distinfo,v 1.59 2018/06/24 16:02:50 adam Exp $
 
-SHA1 (wesnoth-1.12.6.tar.bz2) = 225b018d9e61191d3c48663a515ecca82c4d8995
-RMD160 (wesnoth-1.12.6.tar.bz2) = 8a097e8b711e428799ebc0b95e8d771d83035db6
-SHA512 (wesnoth-1.12.6.tar.bz2) = 12ca3b5de8fd385b05cc8e76604f7aed68127a7542599d6e97cce793e10636e00bd65dcb088701e20ccc7191f41b1d67a00b291f885df880fac00d13d6fbde7a
-Size (wesnoth-1.12.6.tar.bz2) = 387869758 bytes
-SHA1 (patch-CMakeLists.txt) = 1f17a95793db0d311508f1ff93f9aacedc7782f9
-SHA1 (patch-ae) = 17c9f08bbe2aeb12771fc1c3430b1cf84ee75e15
-SHA1 (patch-af) = ed3ef2d26a33b87e42e8c820c669315b81bf7938
-SHA1 (patch-ah) = b63017ae43c4748aced31ab64dc141682e535ff2
-SHA1 (patch-data_tools_addon__manager_html_py) = 5cacb24b3441916d3e8832f9d9a6e96d2e1c63a8
-SHA1 (patch-data_tools_castle-clutter_mk_all-castles_sh) = 0c05566e6cf361199031d2104608e5e78e807a9e
-SHA1 (patch-data_tools_unit__tree_helpers_py) = 79de075b33eb7d6d30a8d69635de7f48c19a8c30
-SHA1 (patch-data_tools_wesnoth_campaignserver__client_py) = b7591e23b4c049ee22e080ea20160d82dd631722
+SHA1 (wesnoth-1.14.3.tar.bz2) = 41e1c9aef297f76b443c9566bdbb2a352dead83f
+RMD160 (wesnoth-1.14.3.tar.bz2) = fd3db82d975ec18a91d1c791d8289af9c356ca14
+SHA512 (wesnoth-1.14.3.tar.bz2) = da9343e7a83f183bba5f8cad6397745370b64de2e8e319eae256097d27bba536b871d1899f472685e74584bc601f59d16da8c14359c74eea0a6fb074c078bb9d
+Size (wesnoth-1.14.3.tar.bz2) = 450194119 bytes
+SHA1 (patch-CMakeLists.txt) = 116bb4eb53408f04223c26c81efead19edb58fe6
+SHA1 (patch-src_CMakeLists.txt) = 5839663ab11a9fdc31e89b74ce2708a251155d9f
+SHA1 (patch-src_wesnoth.cpp) = 73fa69b47de231c5ce16f66a52b449d5242ffe67
