@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3007 2018/06/24 15:54:32 he Exp $
+$NetBSD: CHANGES-2018,v 1.3008 2018/06/24 16:04:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4331,3 +4331,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ruby-highline to 2.0.0 [taca 2018-06-24]
 	Updated devel/ruby-ffi to 1.9.25 [taca 2018-06-24]
 	Updated inputmethod/scim to 1.4.15nb11 [he 2018-06-24]
+	Updated games/wesnoth to 1.14.3 [adam 2018-06-24]
