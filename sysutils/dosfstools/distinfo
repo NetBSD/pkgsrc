@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/06/24 11:13:58 bsiegert Exp $
+
+SHA1 (dosfstools-4.1.tar.gz) = db39f667c3cb51bdf321f07f9cf17c726ca50323
+RMD160 (dosfstools-4.1.tar.gz) = 537b5418e6a78728ff8b94023966ce2155d64d6a
+SHA512 (dosfstools-4.1.tar.gz) = c45b26779c126c128ff64668403d552b9ed70e9205ced968fa9c80e7220c2b24c3f24007ae41ee20e8993637ec2aca584142458d25db42df6488edf18fb6185b
+Size (dosfstools-4.1.tar.gz) = 233766 bytes

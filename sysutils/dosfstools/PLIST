@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2018/06/24 11:13:58 bsiegert Exp $
+man/man8/fatlabel.8
+man/man8/fsck.fat.8
+man/man8/mkfs.fat.8
+sbin/fatlabel
+sbin/fsck.fat
+sbin/mkfs.fat
+share/doc/dosfstools/ANNOUNCE.mkdosfs
+share/doc/dosfstools/ChangeLog.dosfsck
+share/doc/dosfstools/ChangeLog.dosfstools-2.x
+share/doc/dosfstools/ChangeLog.mkdosfs
+share/doc/dosfstools/README.dosfsck
+share/doc/dosfstools/README.dosfstools-2.x
+share/doc/dosfstools/README.mkdosfs
+share/doc/dosfstools/TODO.dosfstools-2.x
