@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2018/05/08 04:14:30 adam Exp $
+# $NetBSD: Makefile,v 1.35 2018/06/24 09:09:34 adam Exp $
 
-DISTNAME=	libuv-1.20.3
+DISTNAME=	libuv-1.21.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libuv/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,8 +15,10 @@ USE_TOOLS+=	autoconf automake pkg-config
 GNU_CONFIGURE=	yes
 TEST_TARGET=	check
 
-HEADERS=	uv-aix.h uv-bsd.h uv-darwin.h uv-linux.h uv-sunos.h \
-		uv-unix.h uv-win.h pthread-barrier.h
+INSTALLATION_DIRS+=	include/uv
+
+#HEADERS=	uv-aix.h uv-bsd.h uv-darwin.h uv-linux.h uv-sunos.h \
+#		uv-unix.h uv-win.h pthread-barrier.h
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -29,8 +31,6 @@ pre-configure:
 	${RUN} cd ${WRKSRC} && ${SH} ./autogen.sh
 
 post-install:
-.for file in ${HEADERS}
-	${INSTALL_DATA} ${WRKSRC}/include/${file} ${DESTDIR}${PREFIX}/include
-.endfor
+	${INSTALL_DATA} ${WRKSRC}/include/uv/* ${DESTDIR}${PREFIX}/include/uv/
 
 .include "../../mk/bsd.pkg.mk"
