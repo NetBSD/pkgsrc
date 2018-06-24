@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2018/04/04 11:00:56 fhajny Exp $
+# $NetBSD: Makefile,v 1.25 2018/06/24 11:43:49 adam Exp $
 
-DISTNAME=	Babel-2.5.3
+DISTNAME=	Babel-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=B/Babel/}
@@ -13,9 +13,6 @@ LICENSE=	modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 
 USE_LANGUAGES=	# none
-
-post-extract:
-	cd ${WRKSRC} && ${FIND} * -exec ${CHMOD} g-w,o-w \{} \;
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} pybabel pybabel-${PYVERSSUFFIX} || ${TRUE}
