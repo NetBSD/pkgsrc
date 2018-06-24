@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2966 2018/06/24 06:55:56 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2967 2018/06/24 06:57:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4280,3 +4280,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-App-perlbrew to 0.84 [wiz 2018-06-24]
 	Updated devel/p5-CPAN-Perl-Releases to 3.66 [wiz 2018-06-24]
 	Updated devel/p5-Devel-PatchPerl to 1.52 [wiz 2018-06-24]
+	Updated devel/p5-Devel-Size to 0.82 [wiz 2018-06-24]
