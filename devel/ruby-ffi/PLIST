@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2018/02/28 16:30:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2018/06/24 15:46:49 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/ffi_c.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
@@ -6,6 +6,7 @@ ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.gitmodules
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/.yardopts
+${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
@@ -20,8 +21,8 @@ ${GEM_LIBDIR}/ext/ffi_c/ArrayType.h
 ${GEM_LIBDIR}/ext/ffi_c/Buffer.c
 ${GEM_LIBDIR}/ext/ffi_c/Call.c
 ${GEM_LIBDIR}/ext/ffi_c/Call.h
-${GEM_LIBDIR}/ext/ffi_c/Closure.c
-${GEM_LIBDIR}/ext/ffi_c/Closure.h
+${GEM_LIBDIR}/ext/ffi_c/ClosurePool.c
+${GEM_LIBDIR}/ext/ffi_c/ClosurePool.h
 ${GEM_LIBDIR}/ext/ffi_c/DataConverter.c
 ${GEM_LIBDIR}/ext/ffi_c/DynamicLibrary.c
 ${GEM_LIBDIR}/ext/ffi_c/DynamicLibrary.h
@@ -66,17 +67,24 @@ ${GEM_LIBDIR}/ext/ffi_c/libffi.mk
 ${GEM_LIBDIR}/ext/ffi_c/libffi.vc.mk
 ${GEM_LIBDIR}/ext/ffi_c/libffi.vc64.mk
 ${GEM_LIBDIR}/ext/ffi_c/libffi/.appveyor.yml
+${GEM_LIBDIR}/ext/ffi_c/libffi/.github/issue_template.md
 ${GEM_LIBDIR}/ext/ffi_c/libffi/.gitignore
 ${GEM_LIBDIR}/ext/ffi_c/libffi/.travis.yml
+${GEM_LIBDIR}/ext/ffi_c/libffi/.travis/ar-lib
+${GEM_LIBDIR}/ext/ffi_c/libffi/.travis/build.sh
+${GEM_LIBDIR}/ext/ffi_c/libffi/.travis/compile
 ${GEM_LIBDIR}/ext/ffi_c/libffi/.travis/install.sh
+${GEM_LIBDIR}/ext/ffi_c/libffi/.travis/moxie-sim.exp
+${GEM_LIBDIR}/ext/ffi_c/libffi/.travis/site.exp
 ${GEM_LIBDIR}/ext/ffi_c/libffi/ChangeLog.libffi
 ${GEM_LIBDIR}/ext/ffi_c/libffi/ChangeLog.libffi-3.1
 ${GEM_LIBDIR}/ext/ffi_c/libffi/ChangeLog.libgcj
 ${GEM_LIBDIR}/ext/ffi_c/libffi/ChangeLog.v1
 ${GEM_LIBDIR}/ext/ffi_c/libffi/LICENSE
+${GEM_LIBDIR}/ext/ffi_c/libffi/LICENSE-BUILDTOOLS
 ${GEM_LIBDIR}/ext/ffi_c/libffi/Makefile.am
 ${GEM_LIBDIR}/ext/ffi_c/libffi/Makefile.in
-${GEM_LIBDIR}/ext/ffi_c/libffi/README
+${GEM_LIBDIR}/ext/ffi_c/libffi/README.md
 ${GEM_LIBDIR}/ext/ffi_c/libffi/acinclude.m4
 ${GEM_LIBDIR}/ext/ffi_c/libffi/autogen.sh
 ${GEM_LIBDIR}/ext/ffi_c/libffi/config.guess
@@ -112,6 +120,7 @@ ${GEM_LIBDIR}/ext/ffi_c/libffi/m4/ax_configure_args.m4
 ${GEM_LIBDIR}/ext/ffi_c/libffi/m4/ax_enable_builddir.m4
 ${GEM_LIBDIR}/ext/ffi_c/libffi/m4/ax_gcc_archflag.m4
 ${GEM_LIBDIR}/ext/ffi_c/libffi/m4/ax_gcc_x86_cpuid.m4
+${GEM_LIBDIR}/ext/ffi_c/libffi/m4/ax_require_defined.m4
 ${GEM_LIBDIR}/ext/ffi_c/libffi/man/Makefile.am
 ${GEM_LIBDIR}/ext/ffi_c/libffi/man/Makefile.in
 ${GEM_LIBDIR}/ext/ffi_c/libffi/man/ffi.3
@@ -204,6 +213,9 @@ ${GEM_LIBDIR}/ext/ffi_c/libffi/src/powerpc/ppc_closure.S
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/powerpc/sysv.S
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/prep_cif.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/raw_api.c
+${GEM_LIBDIR}/ext/ffi_c/libffi/src/riscv/ffi.c
+${GEM_LIBDIR}/ext/ffi_c/libffi/src/riscv/ffitarget.h
+${GEM_LIBDIR}/ext/ffi_c/libffi/src/riscv/sysv.S
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/s390/ffi.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/s390/ffitarget.h
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/s390/internal.h
@@ -248,7 +260,15 @@ ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/config/default.exp
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/lib/libffi.exp
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/lib/target-libpath.exp
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/lib/wrapper.exp
+${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.bhaible/Makefile
+${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.bhaible/README
+${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.bhaible/alignof.h
+${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.bhaible/bhaible.exp
+${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.bhaible/test-call.c
+${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.bhaible/test-callback.c
+${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.bhaible/testcases.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/align_mixed.c
+${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/align_stdcall.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/call.exp
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/closure_fn0.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/closure_fn1.c
@@ -379,6 +399,7 @@ ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/strlen2.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/strlen3.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/strlen4.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/struct1.c
+${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/struct10.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/struct2.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/struct3.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/struct4.c
@@ -472,8 +493,13 @@ ${GEM_LIBDIR}/lib/ffi/platform/i386-solaris/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/i386-windows/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/ia64-linux/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/mips-linux/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/mips64-linux/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/mips64el-linux/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/mipsel-linux/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/mipsisa32r6-linux/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/mipsisa32r6el-linux/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/mipsisa64r6-linux/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/mipsisa64r6el-linux/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/powerpc-aix/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/powerpc-darwin/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/powerpc-linux/types.conf
