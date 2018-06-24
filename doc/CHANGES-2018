@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2965 2018/06/24 06:54:41 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2966 2018/06/24 06:55:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4279,3 +4279,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated converters/p5-Cpanel-JSON-XS to 4.04 [wiz 2018-06-24]
 	Updated devel/p5-App-perlbrew to 0.84 [wiz 2018-06-24]
 	Updated devel/p5-CPAN-Perl-Releases to 3.66 [wiz 2018-06-24]
+	Updated devel/p5-Devel-PatchPerl to 1.52 [wiz 2018-06-24]
