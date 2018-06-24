@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.8 2018/03/01 13:59:11 mef Exp $
+$NetBSD: distinfo,v 1.9 2018/06/24 13:02:00 mef Exp $
 
 SHA1 (kicad-4.0.7.tar.xz) = 6e4276edd0761f47008038c5ba8435653b2aee59
 RMD160 (kicad-4.0.7.tar.xz) = 7bd4c81b1bf7ffc4c6d85e37dc5ec710783089d9
 SHA512 (kicad-4.0.7.tar.xz) = 7b2acd9efadf5d48565f71bd0df2474ecc8fc04145953c13ac27363d48dbe6b0de091e311713635f603aed89ce0759a1d623abb37a139e2c87184ca4e717145b
 Size (kicad-4.0.7.tar.xz) = 10678656 bytes
 SHA1 (patch-CMakeLists.txt) = 8b1b7f5fa321958e303dff44bdc2a612085f14b8
+SHA1 (patch-CMakeModules_CheckCXXSymbolExists.cmake) = b77a90db7d8f816714d6eb641d4c31cc3737c503
 SHA1 (patch-CMakeModules_Functions.cmake) = ef22da244c8ed43aec6c149ae6b05a8e464cf809
 SHA1 (patch-CMakeModules_WriteVersionHeader.cmake) = 3ee7e7b121c8691ae5fa3bee03ec62e3ee1aee2b
 SHA1 (patch-CMakeModules_config.h.cmake) = 3988783a0058ed1b5489bc54d903cab2a724f755
