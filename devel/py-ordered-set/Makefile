@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/10/10 07:27:10 adam Exp $
+# $NetBSD: Makefile,v 1.2 2018/06/24 10:45:19 adam Exp $
 
-DISTNAME=	ordered-set-2.0.2
+DISTNAME=	ordered-set-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/ordered-set/}
@@ -10,9 +10,13 @@ HOMEPAGE=	https://github.com/LuminosoInsight/ordered-set
 COMMENT=	MutableSet that remembers its order
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
+
+do-test:
+	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} test.py
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
