@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.23 2018/06/20 11:15:44 mef Exp $
+# $NetBSD: modules.mk,v 1.24 2018/06/24 21:19:10 wiz Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -41,10 +41,11 @@
 #			The user's favourite Emacs version.  The default
 #			value is set in mk/defaults/mk.conf.
 #		Possible values:
-#			emacs26, emacs25, emacs21, emacs21nox, emacs20,
-#			xemacs215, xemacs215nox, xemacs214, xemacs214nox
+#			emacs26, emacs26nox, emacs25, emacs25nox, emacs21,
+#			emacs21nox, emacs20, xemacs215, xemacs215nox,
+#			xemacs214, xemacs214nox
 #		Default value:
-#			emacs25
+#			emacs26
 #
 # Variables ELPs can provide:
 #
@@ -61,11 +62,13 @@
 #		Description:
 #			Versions the ELP accepts (supports).
 #		Possible values:
-#			emacs26, emacs25, emacs21, emacs21nox, emacs20,
-#			xemacs215, xemacs215nox, xemacs214, xemacs214nox
+#			emacs26, emacs26nox, emacs25, emacs25nox, emacs21,
+#			emacs21nox, emacs20, xemacs215, xemacs215nox,
+#			xemacs214, xemacs214nox
 #		Default value:
-#			emacs26, emacs25, emacs21, emacs21nox, emacs20,
-#			xemacs215, xemacs215nox, xemacs214, xemacs214nox
+#			emacs26, emacs26nox, emacs25, emacs25nox, emacs21,
+#			emacs21nox, emacs20, xemacs215, xemacs215nox,
+#			xemacs214, xemacs214nox
 #
 #	EMACS_BUILDLINK
 #		Description:
@@ -128,7 +131,7 @@
 #		Description:
 #			Emacs major version.
 #		Possible values:
-#			20, 21, 22, 23, 24, 25, <integers more than that in the future>
+#			20, 21, 25, 26, <integers more than that in the future>
 #
 #	EMACS_VERSION_MINOR
 #		Description:
@@ -174,10 +177,10 @@
 #		Possible values:
 #			XXX
 #
-#	FOR_{emacs26,emacs25,emacs21,emacs21nox,emacs20,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
+#	FOR_{emacs26,emacs26nox,emacs25,emacs25nox,emacs21,emacs21nox,emacs20,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
 #	FOR_{emacs,xemacs}
 #	FOR_{emacs_x,emacs_nox}
-#	NOTFOR_{emacs26,emacs25,emacs21,emacs21nox,emacs20,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
+#	NOTFOR_{emacs26,eemacs26nox,macs25,emacs25nox,emacs21,emacs21nox,emacs20,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
 #	NOTFOR_{emacs,xemacs}
 #	NOTFOR_{emacs_x,emacs_nox}
 #		Description:
