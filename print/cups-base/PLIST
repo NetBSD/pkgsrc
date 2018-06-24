@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/11/12 14:10:15 khorben Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/06/24 10:17:42 bouyer Exp $
 bin/cancel
 bin/cups-config
 bin/cupstestdsc
@@ -40,7 +40,7 @@ ${PLIST.apple}libexec/cups/apple/http
 ${PLIST.apple}libexec/cups/apple/https
 ${PLIST.apple}libexec/cups/apple/ipp
 ${PLIST.apple}libexec/cups/apple/ipps
-${PLIST.dnssd}libexec/cups/backend/dnssd
+${PLIST.dnssd-backend}libexec/cups/backend/dnssd
 libexec/cups/backend/http
 libexec/cups/backend/https
 libexec/cups/backend/ipp
