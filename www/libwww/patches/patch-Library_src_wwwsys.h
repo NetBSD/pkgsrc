@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.3 2005/05/31 20:51:46 salo Exp $
+$NetBSD: patch-Library_src_wwwsys.h,v 1.1 2018/06/24 16:54:59 adam Exp $
+
+Fix building.
 
 --- Library/src/wwwsys.h.orig	Wed Dec 20 05:00:07 2000
 +++ Library/src/wwwsys.h
