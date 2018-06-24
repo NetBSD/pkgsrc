@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2975 2018/06/24 07:32:32 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2976 2018/06/24 07:37:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4289,3 +4289,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Test-POE-Client-TCP to 1.16 [wiz 2018-06-24]
 	Updated devel/p5-Test-Warn to 0.36 [wiz 2018-06-24]
 	Updated graphics/p5-Image-ExifTool to 11.01 [wiz 2018-06-24]
+	Updated math/p5-Alien-GMP to 1.11 [wiz 2018-06-24]
