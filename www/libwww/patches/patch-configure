@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1 2018/06/24 16:54:59 adam Exp $
+
+Explicit declaration of SSL_library_init().
+Portability fix.
+
+--- configure.orig	2017-06-24 06:11:34.000000000 +0000
++++ configure
+@@ -15439,7 +15439,7 @@ if test "x$ac_cv_func_remove" = xyes; th
+ 
+ fi
+ 
+-     if test "$ac_cv_func_remove" == yes ; then
++     if test "$ac_cv_func_remove" = yes ; then
+ 
+ $as_echo "#define unlink remove" >>confdefs.h
+ 
+@@ -16420,6 +16420,7 @@ $as_echo "no" >&6; }
+     LIBS="$LIBS $withval"
+     cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
++#include <openssl/ssl.h>
+ 
+ int
+ main ()

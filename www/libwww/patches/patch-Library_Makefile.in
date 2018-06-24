@@ -1,0 +1,15 @@
+$NetBSD: patch-Library_Makefile.in,v 1.1 2018/06/24 16:54:59 adam Exp $
+
+Build only necessary stuff.
+
+--- Library/Makefile.in.orig	2018-06-20 16:07:11.000000000 +0000
++++ Library/Makefile.in
+@@ -352,7 +352,7 @@ DOCS := $(wildcard *.html *.gif)
+ EXTRA_DIST = \
+ 	$(DOCS)
+ 
+-SUBDIRS = src User Examples External cvs2sql # Test
++SUBDIRS = src User # Examples External cvs2sql # Test
+ all: all-recursive
+ 
+ .SUFFIXES:
