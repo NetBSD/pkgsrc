@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.41 2018/04/27 06:40:28 adam Exp $
+$NetBSD: distinfo,v 1.42 2018/06/24 09:26:12 adam Exp $
 
 SHA1 (openvpn-2.4.6.tar.xz) = 4742492867df31aadc0aeea5c8b4422d1a624e69
 RMD160 (openvpn-2.4.6.tar.xz) = 9fb17a39b70d96ecc3075a78011496b239e741d6
@@ -6,3 +6,4 @@ SHA512 (openvpn-2.4.6.tar.xz) = da4301a4655a5bc224de59ba74fe15005ea856cc43b404aa
 Size (openvpn-2.4.6.tar.xz) = 943376 bytes
 SHA1 (patch-configure) = 240342a88baed7642dfd63ed0a2ab4c0a75adbd4
 SHA1 (patch-src_compat_compat-basename.c) = 45a58ef2e05f6e0265f229da8540760e60e65143
+SHA1 (patch-src_openvpn_tun.c) = 32b52e0ecd4f8a190bc3c87b49da30e40fb7f241
