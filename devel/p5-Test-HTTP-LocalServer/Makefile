@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2018/06/24 10:00:36 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2018/06/24 10:04:19 wiz Exp $
 
 DISTNAME=	Test-HTTP-LocalServer-0.63
+PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/C/CO/CORION/
 
