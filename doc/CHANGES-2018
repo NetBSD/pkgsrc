@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2970 2018/06/24 07:01:28 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2971 2018/06/24 07:02:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4284,3 +4284,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-File-ShareDir to 1.114 [wiz 2018-06-24]
 	Updated devel/p5-IPC-Run to 20180523.0 [wiz 2018-06-24]
 	Updated devel/p5-Make to 1.2.0 [wiz 2018-06-24]
+	Updated devel/p5-Module-CoreList to 5.20180622 [wiz 2018-06-24]
