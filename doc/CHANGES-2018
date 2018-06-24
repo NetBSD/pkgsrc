@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2986 2018/06/24 10:01:30 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2987 2018/06/24 10:11:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4306,3 +4306,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-test-timeout to 1.3.0 [adam 2018-06-24]
 	Updated textproc/py-lxml to 4.2.2 [adam 2018-06-24]
 	Added devel/p5-Test-HTTP-LocalServer version 0.63 [wiz 2018-06-24]
+	Updated www/p5-WWW-Mechanize-Shell to 0.57 [wiz 2018-06-24]
