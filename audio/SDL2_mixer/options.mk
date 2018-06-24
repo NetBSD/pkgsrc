@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2014/02/02 15:39:01 rodent Exp $
+# $NetBSD: options.mk,v 1.2 2018/06/24 10:28:45 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.SDL2_mixer
-PKG_SUPPORTED_OPTIONS=	flac fluidsynth modplug smpeg2 static vorbis
-PKG_SUGGESTED_OPTIONS+=	flac modplug smpeg2 static vorbis
+PKG_SUPPORTED_OPTIONS=	flac fluidsynth modplug mpg123 vorbis
+PKG_SUGGESTED_OPTIONS+=	flac modplug mpg123 vorbis
 
 .include "../../mk/bsd.options.mk"
 
@@ -27,17 +27,11 @@ CONFIGURE_ARGS+=	--enable-music-mod-modplug=yes
 CONFIGURE_ARGS+=	--enable-music-mod-modplug=no
 .endif
 
-.if !empty(PKG_OPTIONS:Msmpeg2)
-.include "../../multimedia/smpeg2/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-music-mp3-smpeg=yes
+.if !empty(PKG_OPTIONS:Mmpg123)
+.include "../../audio/mpg123/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-music-mp3-mpg123=yes
 .else
-CONFIGURE_ARGS+=	--enable-music-mp3-smpeg=no
-.endif
-
-.if !empty(PKG_OPTIONS:Mstatic)
-CONFIGURE_ARGS+=	--enable-static=yes
-.else
-CONFIGURE_ARGS+=	--enable-static=no
+CONFIGURE_ARGS+=	--enable-music-mp3-mpg123=no
 .endif
 
 .if !empty(PKG_OPTIONS:Mvorbis)
