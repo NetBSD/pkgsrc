@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2018/05/25 20:49:52 jakllsch Exp $
+$NetBSD: distinfo,v 1.14 2018/06/24 23:18:01 thorpej Exp $
 
 SHA1 (u-boot-2018.05.tar.bz2) = 605543501f7450ffa4e9c7fd98d2f36dbc0657b0
 RMD160 (u-boot-2018.05.tar.bz2) = b305357058feb875233c3a32f41e14548b97855d
@@ -9,3 +9,6 @@ SHA1 (patch-arch_arm_dts_sun50i-h5-nanopi-neo-plus2.dts) = 5aae66cd400e7d48312fd
 SHA1 (patch-drivers_video_sunxi_sunxi__display.c) = 8e6a6a781cce25af5cba289fc2ca76e30b62aff6
 SHA1 (patch-include_configs_tegra-common.h) = 4cda8f9df2c7fc2b9cd9d4139ec679a42648e4f8
 SHA1 (patch-lib_bch.c) = b1f1c7418f1004c151b9e5e06ab7047a1736ae47
+SHA1 (patch-arch_arm_dts_Makefile) = 1730c74c5ca78a4156cea4a903e153b1d61b3171
+SHA1 (patch-arch_arm_dts_sun50i-h5-orangepi-zero-plus.dts) = 191402f0f68c1916196430819c50a36a4808b79f
+SHA1 (patch-configs_orangepi_zero_plus_defconfig) = 328204fda6f202a2468c34b60fda71e0aa72e92a
