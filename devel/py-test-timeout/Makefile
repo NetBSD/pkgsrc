@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2017/11/30 08:18:31 adam Exp $
+# $NetBSD: Makefile,v 1.5 2018/06/24 09:45:13 adam Exp $
 
-DISTNAME=	pytest-timeout-1.2.1
+DISTNAME=	pytest-timeout-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-timeout/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://bitbucket.org/pytest-dev/pytest-timeout/
 COMMENT=	Py.test plugin to abort hanging tests
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-test>=2.8.0:../../devel/py-test
+DEPENDS+=	${PYPKGPREFIX}-test>=3.6.0:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
