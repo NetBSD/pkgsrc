@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2991 2018/06/24 10:30:06 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2992 2018/06/24 10:35:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4312,3 +4312,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/gtksourceview3 to 3.24.8 [wiz 2018-06-24]
 	Updated audio/SDL2_mixer to 2.0.2 [adam 2018-06-24]
 	Updated graphics/SDL2_image to 2.0.3 [adam 2018-06-24]
+	Updated lang/php72 to 7.2.7 [taca 2018-06-24]
