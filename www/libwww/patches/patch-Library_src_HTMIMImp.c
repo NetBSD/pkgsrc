@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.9 2001/04/20 12:33:53 fredb Exp $
+$NetBSD: patch-Library_src_HTMIMImp.c,v 1.1 2018/06/24 16:54:59 adam Exp $
+
+Fix buidling.
 
 --- Library/src/HTMIMImp.c.orig	Mon Feb 22 16:10:11 1999
 +++ Library/src/HTMIMImp.c
