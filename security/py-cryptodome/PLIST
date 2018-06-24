@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/04/18 04:34:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/06/24 11:39:32 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -166,6 +166,8 @@ ${PYSITELIB}/Crypto/Hash/_SHA512.so
 ${PYSITELIB}/Crypto/Hash/__init__.py
 ${PYSITELIB}/Crypto/Hash/__init__.pyc
 ${PYSITELIB}/Crypto/Hash/__init__.pyo
+${PYSITELIB}/Crypto/Hash/_ghash_clmul.so
+${PYSITELIB}/Crypto/Hash/_ghash_portable.so
 ${PYSITELIB}/Crypto/Hash/_keccak.so
 ${PYSITELIB}/Crypto/Hash/keccak.py
 ${PYSITELIB}/Crypto/Hash/keccak.pyc
@@ -669,14 +671,13 @@ ${PYSITELIB}/Crypto/Util/RFC1751.pyo
 ${PYSITELIB}/Crypto/Util/__init__.py
 ${PYSITELIB}/Crypto/Util/__init__.pyc
 ${PYSITELIB}/Crypto/Util/__init__.pyo
-${PYSITELIB}/Crypto/Util/_cpuid.so
+${PYSITELIB}/Crypto/Util/_cpuid.py
+${PYSITELIB}/Crypto/Util/_cpuid.pyc
+${PYSITELIB}/Crypto/Util/_cpuid.pyo
+${PYSITELIB}/Crypto/Util/_cpuid_c.so
 ${PYSITELIB}/Crypto/Util/_file_system.py
 ${PYSITELIB}/Crypto/Util/_file_system.pyc
 ${PYSITELIB}/Crypto/Util/_file_system.pyo
-${PYSITELIB}/Crypto/Util/_galois.so
-${PYSITELIB}/Crypto/Util/_number_new.py
-${PYSITELIB}/Crypto/Util/_number_new.pyc
-${PYSITELIB}/Crypto/Util/_number_new.pyo
 ${PYSITELIB}/Crypto/Util/_raw_api.py
 ${PYSITELIB}/Crypto/Util/_raw_api.pyc
 ${PYSITELIB}/Crypto/Util/_raw_api.pyo
