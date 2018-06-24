@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/01/11 14:07:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/06/24 11:19:33 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -32,6 +32,3 @@ ${PYSITELIB}/pytest_django/migrations.pyo
 ${PYSITELIB}/pytest_django/plugin.py
 ${PYSITELIB}/pytest_django/plugin.pyc
 ${PYSITELIB}/pytest_django/plugin.pyo
-${PYSITELIB}/pytest_django/pytest_compat.py
-${PYSITELIB}/pytest_django/pytest_compat.pyc
-${PYSITELIB}/pytest_django/pytest_compat.pyo
