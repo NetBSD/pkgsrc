@@ -1,10 +1,13 @@
-$NetBSD: distinfo,v 1.37 2017/12/26 23:14:42 he Exp $
+$NetBSD: distinfo,v 1.38 2018/06/24 16:57:58 adam Exp $
 
-SHA1 (libtorrent-0.13.6.tar.gz) = 493691929b701f4402f13c725840addf95231ad2
-RMD160 (libtorrent-0.13.6.tar.gz) = a143a0ef9e86cf989c2c7dff6c86a41d23ddc244
-SHA512 (libtorrent-0.13.6.tar.gz) = b8aea4060357a8a40d15d42f1f698ef6f3ebdc885000bfbfa5bf9c81af8c88b5503a107e05c214e3e8489126928d336356c5e7e0eaf836b6b84a3cf74633b050
-Size (libtorrent-0.13.6.tar.gz) = 781253 bytes
+SHA1 (libtorrent-0.13.7.tar.gz) = 2c859b5b382786646ba6001058faa07db67c5a48
+RMD160 (libtorrent-0.13.7.tar.gz) = 071f6311fd32e53447bdf7f6d97bc7585dbaff70
+SHA512 (libtorrent-0.13.7.tar.gz) = 7bf3e87dbd19eb4e6806dff8a01c3ec61ea960bbd809d4bcbee96a46e169f97d0baf0fc85ab4a1efbbab07850e9b1060bae46c453ea6c42f5c23f8d921295efb
+Size (libtorrent-0.13.7.tar.gz) = 782854 bytes
+SHA1 (patch-config.h.in) = 7ea6ef87727756afe3882aad769a48488fc22c86
+SHA1 (patch-configure) = 6c91606fc317d2d77c5b34d2b47d22a66a2f22c3
 SHA1 (patch-src_Makefile.am) = d965bdfd967a71d14ebcad6b32564a1c0908739d
 SHA1 (patch-src_Makefile.in) = 05f55223073fb57cc11fbb307708ba262899d85f
 SHA1 (patch-src_data_chunk__list.cpp) = 92a5f36d7ae993667123051b39e6033c73169f4e
-SHA1 (patch-src_torrent_poll__kqueue.cc) = b6158ea858f4a12db8c763ac77eb09d62c65f804
+SHA1 (patch-src_torrent_poll__kqueue.cc) = 1f98ec93dcaaa587351de9b239712504aef6374b
+SHA1 (patch-src_utils_diffie__hellman.cc) = 65c7e6e305d23504b6c0d07d9e78b8483676d8ee

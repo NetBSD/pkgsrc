@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.58 2017/12/26 23:14:42 he Exp $
+# $NetBSD: Makefile,v 1.59 2018/06/24 16:57:58 adam Exp $
 
-DISTNAME=	libtorrent-0.13.6
-PKGREVISION=	2
+DISTNAME=	libtorrent-0.13.7
 CATEGORIES=	net
 MASTER_SITES=	http://rtorrent.net/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rakshasa.github.io/rtorrent/
+HOMEPAGE=	https://github.com/rakshasa/libtorrent
 COMMENT=	BitTorrent library written in C++ for *nix
 LICENSE=	gnu-gpl-v2
 
@@ -29,7 +28,7 @@ GCC_REQD+=		4.2.1
 
 # configure check is fooled by trap & emulate of unaligned access on alpha
 .if (${MACHINE_ARCH} == "alpha")
-CONFIGURE_ARGS+= --enable-aligned
+CONFIGURE_ARGS+=	--enable-aligned
 .endif
 
 .if !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly" || ${OPSYS} == "Darwin"
