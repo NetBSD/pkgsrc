@@ -1,12 +1,10 @@
-$NetBSD: distinfo,v 1.36 2015/11/04 00:35:34 agc Exp $
+$NetBSD: distinfo,v 1.37 2018/06/24 16:59:52 adam Exp $
 
-SHA1 (rtorrent-0.9.6.tar.gz) = c306a2fe1f329eec9da74522c034b249b0eb7230
-RMD160 (rtorrent-0.9.6.tar.gz) = 8ac9730ccd5544ee0f64628538a892d4f1d86081
-SHA512 (rtorrent-0.9.6.tar.gz) = 704f7b79d5bc78b817da21a6886662a5a97fde210a110c50f708bdc18e1dcf3ef5c5f4e2740261d41221cfc69c19926bf34e10057adf10601da9e6e06b2cef75
-Size (rtorrent-0.9.6.tar.gz) = 610845 bytes
-SHA1 (patch-ad) = b3b38e1d9d0887711ac54433e948bfc28112b985
-SHA1 (patch-ae) = a370881bfdd8534eb25fcbcff8d258b19797941f
-SHA1 (patch-af) = 842a01cbc75e61092b4d33fe9155a728e7c502e6
-SHA1 (patch-ag) = c0278f1d1ce7f635c5d10542026fc565dcff1927
-SHA1 (patch-src_display_window__file__list.cc) = ba005aa1a12317f190a6ec47277e7545b37f2a1c
-SHA1 (patch-src_signal__handler.cc) = a79d2dcd9a14de1e221ab94d2a14fe70b9b9ce36
+SHA1 (rtorrent-0.9.7.tar.gz) = 69d9ff5160f6fe7266b4b0f7a46045fd6370a650
+RMD160 (rtorrent-0.9.7.tar.gz) = 3eb3743d58581a59349ea4dddc23b5f36f2769f8
+SHA512 (rtorrent-0.9.7.tar.gz) = e663bd8984bcec91868beaf16d215708bdea8872338365ba6a05c9ea830b2aff045257bbc8bd0414d84009ee85852822c97bb073dfb41c21e3b0081ecaeecc00
+Size (rtorrent-0.9.7.tar.gz) = 610149 bytes
+SHA1 (patch-src_display_canvas.h) = 6b10c508158d594bcb0633c9e7f3e2885f8456d1
+SHA1 (patch-src_main.cc) = bdd4ebef64c3e137c226fdf1a1ad96c680b28add
+SHA1 (patch-src_utils_directory.cc) = b3b38e1d9d0887711ac54433e948bfc28112b985
+SHA1 (patch-src_utils_directory.h) = a370881bfdd8534eb25fcbcff8d258b19797941f
