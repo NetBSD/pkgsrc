@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2979 2018/06/24 09:13:38 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2980 2018/06/24 09:17:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4293,3 +4293,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/rust to 1.27.0 [ryoon 2018-06-24]
 	Updated sysutils/p5-Unix-Statgrab to 0.112 [wiz 2018-06-24]
 	Updated textproc/p5-Test-YAML to 1.07 [wiz 2018-06-24]
+	Updated textproc/p5-ack to 2.24 [wiz 2018-06-24]
