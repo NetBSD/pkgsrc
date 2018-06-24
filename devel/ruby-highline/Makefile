@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2018/03/13 17:00:07 taca Exp $
+# $NetBSD: Makefile,v 1.21 2018/06/24 14:22:04 taca Exp $
 
-DISTNAME=	highline-1.7.10
+DISTNAME=	highline-2.0.0
 CATEGORIES=	net security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
