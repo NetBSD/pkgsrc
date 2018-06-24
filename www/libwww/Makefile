@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2018/06/24 16:54:59 adam Exp $
+# $NetBSD: Makefile,v 1.93 2018/06/24 17:01:58 adam Exp $
 
 DISTNAME=	w3c-libwww-5.4.2
 PKGNAME=	${DISTNAME:S/^w3c-//}
@@ -12,7 +12,7 @@ COMMENT=	The W3C Reference Library
 LICENSE=	w3c
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		automake14 gmake gzcat perl
+USE_TOOLS+=		gmake gzcat perl
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-expat=${BUILDLINK_PREFIX.expat}
 CONFIGURE_ARGS+=	--with-ssl #=${SSLBASE:Q}
