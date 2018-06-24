@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2018/04/29 10:10:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2018/06/24 10:20:08 wiz Exp $
 bin/ant
 bin/antRun
 lib/java/ant/ant-antlr.jar
@@ -788,7 +788,9 @@ share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/depend/constantpoo
 share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/depend/constantpool/MethodHandleCPInfo.html
 share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/depend/constantpool/MethodRefCPInfo.html
 share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/depend/constantpool/MethodTypeCPInfo.html
+share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/depend/constantpool/ModuleCPInfo.html
 share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/depend/constantpool/NameAndTypeCPInfo.html
+share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/depend/constantpool/PackageCPInfo.html
 share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/depend/constantpool/StringCPInfo.html
 share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/depend/constantpool/Utf8CPInfo.html
 share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/depend/constantpool/package-frame.html
@@ -1145,6 +1147,7 @@ share/doc/java/ant/api/org/apache/tools/ant/types/Parameterizable.html
 share/doc/java/ant/api/org/apache/tools/ant/types/Path.PathElement.html
 share/doc/java/ant/api/org/apache/tools/ant/types/Path.html
 share/doc/java/ant/api/org/apache/tools/ant/types/PatternSet.NameEntry.html
+share/doc/java/ant/api/org/apache/tools/ant/types/PatternSet.PatternFileNameEntry.html
 share/doc/java/ant/api/org/apache/tools/ant/types/PatternSet.html
 share/doc/java/ant/api/org/apache/tools/ant/types/Permissions.Permission.html
 share/doc/java/ant/api/org/apache/tools/ant/types/Permissions.html
@@ -1317,6 +1320,8 @@ share/doc/java/ant/api/org/apache/tools/ant/types/selectors/NoneSelector.html
 share/doc/java/ant/api/org/apache/tools/ant/types/selectors/NotSelector.html
 share/doc/java/ant/api/org/apache/tools/ant/types/selectors/OrSelector.html
 share/doc/java/ant/api/org/apache/tools/ant/types/selectors/OwnedBySelector.html
+share/doc/java/ant/api/org/apache/tools/ant/types/selectors/PosixGroupSelector.html
+share/doc/java/ant/api/org/apache/tools/ant/types/selectors/PosixPermissionsSelector.html
 share/doc/java/ant/api/org/apache/tools/ant/types/selectors/PresentSelector.FilePresence.html
 share/doc/java/ant/api/org/apache/tools/ant/types/selectors/PresentSelector.html
 share/doc/java/ant/api/org/apache/tools/ant/types/selectors/ReadableSelector.html
@@ -1417,6 +1422,7 @@ share/doc/java/ant/api/org/apache/tools/ant/util/ScriptRunnerCreator.html
 share/doc/java/ant/api/org/apache/tools/ant/util/ScriptRunnerHelper.html
 share/doc/java/ant/api/org/apache/tools/ant/util/SourceFileScanner.html
 share/doc/java/ant/api/org/apache/tools/ant/util/SplitClassLoader.html
+share/doc/java/ant/api/org/apache/tools/ant/util/StreamUtils.html
 share/doc/java/ant/api/org/apache/tools/ant/util/StringTokenizer.html
 share/doc/java/ant/api/org/apache/tools/ant/util/StringUtils.html
 share/doc/java/ant/api/org/apache/tools/ant/util/SymbolicLinkUtils.html
