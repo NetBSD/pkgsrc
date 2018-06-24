@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.3 2012/05/16 17:42:37 tron Exp $
+$NetBSD: patch-src_utils_directory.h,v 1.1 2018/06/24 16:59:52 adam Exp $
 
 Fix build under Solaris and DragonFly.
 
