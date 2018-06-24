@@ -1,0 +1,36 @@
+$NetBSD: patch-configure,v 1.1 2018/06/24 12:00:22 fhajny Exp $
+
+Add support for dynamic libimagequant lookup and linking.
+
+--- configure.orig	2018-06-03 14:42:43.000000000 +0000
++++ configure
+@@ -221,11 +221,11 @@ find_library() {
+     LIBRARY_FOUND_VERSION=
+     LIBRARY_FOUND_BUILD=
+ 
+-    if [ "imagequant" = "$LIBNAME" -a -n "$LIQSRCDIR" -a -f "$LIQSRCDIR"/"$HEADERPATTERN" ]; then
++    if [ "imagequant" = "$LIBNAME" -a -n "$LIQSRCDIR" -a -f "$LIQSRCDIR"/include/"$HEADERPATTERN" ]; then
+         status "$LIBNAME" "build static"
+-        cflags "-I$LIQSRCDIR"
+-        lflags "$LIQSRCDIR/libimagequant.a"
+-        LIBRARY_FOUND_HEADER="$LIQSRCDIR"/"$HEADERPATTERN"
++        cflags "-I$LIQSRCDIR/include"
++        lflags "-limagequant"
++        LIBRARY_FOUND_HEADER="$LIQSRCDIR"/include/"$HEADERPATTERN"
+         LIBRARY_FOUND_BUILD="$LIQSRCDIR"
+         return 0;
+     fi
+@@ -398,11 +398,11 @@ if find_library "imagequant" "imagequant
+     fi
+ 
+     if [ -n "$LIBRARY_FOUND_BUILD" ]; then
+-        STATICLIBDEPS="$LIBRARY_FOUND_BUILD/libimagequant.h $LIBRARY_FOUND_BUILD/libimagequant.a"
++        STATICLIBDEPS="$LIBRARY_FOUND_BUILD/include/libimagequant.h $LIBRARY_FOUND_BUILD/lib/libimagequant.a"
+         LIQSRCDIR="$LIBRARY_FOUND_BUILD"
+     fi
+ else
+-    if [ -n "$LIQSRCDIR" -a ! -f "$LIQSRCDIR"/libimagequant.h ]; then
++    if [ -n "$LIQSRCDIR" -a ! -f "$LIQSRCDIR"/include/libimagequant.h ]; then
+         echo "If you're using git, do clone with --recursive, or download from https://github.com/ImageOptim/libimagequant"
+         error "imagequant" "libimagequant.h not found in $LIQSRCDIR/"
+     else
