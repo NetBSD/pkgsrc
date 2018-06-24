@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2018/04/17 04:20:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2018/06/24 10:58:14 wiz Exp $
 bin/vala
 bin/vala-0.40
 bin/vala-gen-introspect
@@ -106,6 +106,8 @@ share/vala-0.40/vapi/goocanvas.vapi
 share/vala-0.40/vapi/graphene-1.0.deps
 share/vala-0.40/vapi/graphene-1.0.vapi
 share/vala-0.40/vapi/gsl.vapi
+share/vala-0.40/vapi/gst-editing-services-1.0.deps
+share/vala-0.40/vapi/gst-editing-services-1.0.vapi
 share/vala-0.40/vapi/gstreamer-0.10.deps
 share/vala-0.40/vapi/gstreamer-0.10.vapi
 share/vala-0.40/vapi/gstreamer-1.0.vapi
