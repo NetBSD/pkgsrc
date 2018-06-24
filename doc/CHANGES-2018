@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2977 2018/06/24 08:11:18 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.2978 2018/06/24 09:09:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4291,3 +4291,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/p5-Image-ExifTool to 11.01 [wiz 2018-06-24]
 	Updated math/p5-Alien-GMP to 1.11 [wiz 2018-06-24]
 	Updated lang/rust to 1.27.0 [ryoon 2018-06-24]
+	Updated sysutils/p5-Unix-Statgrab to 0.112 [wiz 2018-06-24]
