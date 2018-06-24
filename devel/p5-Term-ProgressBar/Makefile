@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2017/09/17 13:11:25 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2018/06/24 07:13:44 wiz Exp $
 
-DISTNAME=	Term-ProgressBar-2.21
+DISTNAME=	Term-ProgressBar-2.22
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SZ/SZABGAB/}
@@ -14,9 +14,10 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Class-MethodMaker>=1.02:../../devel/p5-Class-MethodMaker
 DEPENDS+=	p5-Term-ReadKey>=2.24:../../devel/p5-Term-ReadKey
-# for make test
-BUILD_DEPENDS+=	p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+
+TEST_DEPENDS+=	p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
+TEST_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TEST_DEPENDS+=	p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-r1$//}
 
