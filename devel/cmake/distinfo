@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.122 2018/06/11 17:33:51 tron Exp $
+$NetBSD: distinfo,v 1.123 2018/06/24 09:13:22 adam Exp $
 
-SHA1 (cmake-3.11.3.tar.gz) = 73261a5b7f71abf7277c1d2a418ca3c4cf170c89
-RMD160 (cmake-3.11.3.tar.gz) = 90e5ae01c3a68b31095967b5d1c8e245065bb294
-SHA512 (cmake-3.11.3.tar.gz) = a91301bfb51bdf6a6c6ea71a26f05b6017eb375a4fc9c14934a83f2231d7af758bc67d8d9656111d1de56ec3df41dbcd61cb3cf50471bc0901f5bcccdf5267dc
-Size (cmake-3.11.3.tar.gz) = 7954155 bytes
+SHA1 (cmake-3.11.4.tar.gz) = 6bcf931844964fefc4ccfd7d025ba4ec2c7c2abb
+RMD160 (cmake-3.11.4.tar.gz) = 6182b0a029c127db27bd88208bbb7f94923ecb2d
+SHA512 (cmake-3.11.4.tar.gz) = c5d03ad66a004292038e49e391c390ebc328fbb089ea699742a9b75f0ada9398c3dc971b868f75d8438bf437ecbeaa62541beb53cae14a699bf244ad101a2290
+Size (cmake-3.11.4.tar.gz) = 7955301 bytes
 SHA1 (patch-CMakeLists.txt) = a0b03f2fad5ea174095c4fe52cea67d94cf46e2d
 SHA1 (patch-Modules_Compiler_GNU.cmake) = e091c53ac3f3a6cd811119d3231563df32e76bf9
 SHA1 (patch-Modules_FindCurses.cmake) = 09fcd7adfbc2dfc2cd8af4e047d870a5243d77dc
@@ -15,5 +15,6 @@ SHA1 (patch-Source_CMakeLists.txt) = 533667d43048b8bc2be17a766b5dc32f3101866e
 SHA1 (patch-Source_Checks_cm__cxx17__check.cpp) = 37772f3e7edc2413cb2e294462312aff18e5c989
 SHA1 (patch-Source_Checks_cm_cxx_features.cmake) = 83eb2bedb84972637d02d12f72fec0ccf74563eb
 SHA1 (patch-Source_CursesDialog_ccmake.cxx) = d7baafe6612b6ac9b0542ed10ffcf90cd8d1df87
+SHA1 (patch-Source_Modules_FindLibUV.cmake) = 54773f03e8122904985c192c14d56c01f8f98e6c
 SHA1 (patch-Utilities_KWIML_CMakeLists.txt) = e4bdf9fc58757e87bf7e3e3e195839eededbc796
 SHA1 (patch-bootstrap) = 9d99cfe9f9ae826250f94bc297f5a22b8de09e84
