@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2018/04/18 04:34:13 adam Exp $
+# $NetBSD: Makefile,v 1.14 2018/06/24 11:39:32 adam Exp $
 
-DISTNAME=	pycryptodome-3.6.1
+DISTNAME=	pycryptodome-3.6.3
 PKGNAME=	${DISTNAME:S/^py/${PYPKGPREFIX}-/}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycryptodome/}
