@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2981 2018/06/24 09:20:03 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2982 2018/06/24 09:27:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4295,3 +4295,9 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/p5-Test-YAML to 1.07 [wiz 2018-06-24]
 	Updated textproc/p5-ack to 2.24 [wiz 2018-06-24]
 	Updated time/p5-Time-Local to 1.28 [wiz 2018-06-24]
+	Downgraded security/easy-rsa to 3.0.4 [adam 2018-06-24]
+	Updated devel/libuv to 1.21.0 [adam 2018-06-24]
+	Updated devel/cmake to 3.11.4 [adam 2018-06-24]
+	Updated www/wslay to 1.1.0 [adam 2018-06-24]
+	Updated www/h2o to 2.2.5 [adam 2018-06-24]
+	Updated net/openvpn to 2.4.6nb1 [adam 2018-06-24]
