@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2992 2018/06/24 10:35:15 taca Exp $
+$NetBSD: CHANGES-2018,v 1.2993 2018/06/24 10:47:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4313,3 +4313,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated audio/SDL2_mixer to 2.0.2 [adam 2018-06-24]
 	Updated graphics/SDL2_image to 2.0.3 [adam 2018-06-24]
 	Updated lang/php72 to 7.2.7 [taca 2018-06-24]
+	Updated devel/py-sure to 1.4.11 [adam 2018-06-24]
+	Updated devel/py-ordered-set to 3.0.0 [adam 2018-06-24]
