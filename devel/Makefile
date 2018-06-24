@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2691 2018/06/24 10:01:20 wiz Exp $
+# $NetBSD: Makefile,v 1.2692 2018/06/24 14:17:10 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2408,6 +2408,7 @@ SUBDIR+=	ruby-gnome2-pango
 SUBDIR+=	ruby-hashery
 SUBDIR+=	ruby-heckle
 SUBDIR+=	ruby-highline
+SUBDIR+=	ruby-highline17
 SUBDIR+=	ruby-hike
 SUBDIR+=	ruby-hike1
 SUBDIR+=	ruby-i18n
