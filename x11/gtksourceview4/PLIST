@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/03/11 20:23:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/06/24 10:49:44 wiz Exp $
 include/gtksourceview-4/gtksourceview/completion-providers/words/gtksourcecompletionwords.h
 include/gtksourceview-4/gtksourceview/gtksource-enumtypes.h
 include/gtksourceview-4/gtksourceview/gtksource.h
@@ -82,6 +82,24 @@ share/gtk-doc/html/gtksourceview-4.0/GtkSourceUndoManager.html
 share/gtk-doc/html/gtksourceview-4.0/GtkSourceView.html
 share/gtk-doc/html/gtksourceview-4.0/annexes.html
 share/gtk-doc/html/gtksourceview-4.0/annotation-glossary.html
+share/gtk-doc/html/gtksourceview-4.0/api-index-2-0.html
+share/gtk-doc/html/gtksourceview-4.0/api-index-2-10.html
+share/gtk-doc/html/gtksourceview-4.0/api-index-2-12.html
+share/gtk-doc/html/gtksourceview-4.0/api-index-2-2.html
+share/gtk-doc/html/gtksourceview-4.0/api-index-2-4.html
+share/gtk-doc/html/gtksourceview-4.0/api-index-2-8.html
+share/gtk-doc/html/gtksourceview-4.0/api-index-3-0.html
+share/gtk-doc/html/gtksourceview-4.0/api-index-3-10.html
+share/gtk-doc/html/gtksourceview-4.0/api-index-3-12.html
+share/gtk-doc/html/gtksourceview-4.0/api-index-3-14.html
+share/gtk-doc/html/gtksourceview-4.0/api-index-3-16.html
+share/gtk-doc/html/gtksourceview-4.0/api-index-3-18.html
+share/gtk-doc/html/gtksourceview-4.0/api-index-3-20.html
+share/gtk-doc/html/gtksourceview-4.0/api-index-3-22.html
+share/gtk-doc/html/gtksourceview-4.0/api-index-3-24.html
+share/gtk-doc/html/gtksourceview-4.0/api-index-3-4.html
+share/gtk-doc/html/gtksourceview-4.0/api-index-4-0.html
+share/gtk-doc/html/gtksourceview-4.0/api-index-deprecated.html
 share/gtk-doc/html/gtksourceview-4.0/api-index-full.html
 share/gtk-doc/html/gtksourceview-4.0/api-reference.html
 share/gtk-doc/html/gtksourceview-4.0/completion.html
@@ -183,6 +201,7 @@ share/gtksourceview-4/language-specs/language.dtd
 share/gtksourceview-4/language-specs/language.rng
 share/gtksourceview-4/language-specs/language2.rng
 share/gtksourceview-4/language-specs/latex.lang
+share/gtksourceview-4/language-specs/less.lang
 share/gtksourceview-4/language-specs/lex.lang
 share/gtksourceview-4/language-specs/libtool.lang
 share/gtksourceview-4/language-specs/llvm.lang
@@ -227,6 +246,7 @@ share/gtksourceview-4/language-specs/rust.lang
 share/gtksourceview-4/language-specs/scala.lang
 share/gtksourceview-4/language-specs/scheme.lang
 share/gtksourceview-4/language-specs/scilab.lang
+share/gtksourceview-4/language-specs/scss.lang
 share/gtksourceview-4/language-specs/sh.lang
 share/gtksourceview-4/language-specs/sml.lang
 share/gtksourceview-4/language-specs/sparql.lang
@@ -239,6 +259,7 @@ share/gtksourceview-4/language-specs/tcl.lang
 share/gtksourceview-4/language-specs/tera.lang
 share/gtksourceview-4/language-specs/texinfo.lang
 share/gtksourceview-4/language-specs/thrift.lang
+share/gtksourceview-4/language-specs/toml.lang
 share/gtksourceview-4/language-specs/vala.lang
 share/gtksourceview-4/language-specs/vbnet.lang
 share/gtksourceview-4/language-specs/verilog.lang
