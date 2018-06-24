@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.796 2018/06/13 16:19:34 minskim Exp $
+# $NetBSD: Makefile,v 1.797 2018/06/24 12:01:12 fhajny Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -424,6 +424,7 @@ SUBDIR+=	png
 SUBDIR+=	png2html
 SUBDIR+=	pngcheck
 SUBDIR+=	pngcrush
+SUBDIR+=	pngquant
 SUBDIR+=	potrace
 SUBDIR+=	povray
 SUBDIR+=	prag
