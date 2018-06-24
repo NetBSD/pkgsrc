@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2018/06/21 17:13:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.39 2018/06/24 08:05:25 ryoon Exp $
 
-DISTNAME=	rustc-1.26.2-src
+DISTNAME=	rustc-1.27.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
 CATEGORIES=	lang
 MASTER_SITES=	http://static.rust-lang.org/dist/
@@ -74,7 +74,7 @@ CONFIGURE_ARGS+=	--disable-jemalloc
 # own bootstrap.  See the stage0-bootstrap below for more details.
 #
 DISTFILES:=		${DEFAULT_DISTFILES}
-RUST_STAGE0_VER=	1.25.0
+RUST_STAGE0_VER=	1.26.2
 #
 .if !empty(MACHINE_PLATFORM:MDarwin-*-i386) || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH:=		i686-apple-darwin
@@ -171,6 +171,12 @@ post-extract:
 		cd ${WRKDIR}/rust-std-${RUST_STAGE0_VER}-${RUST_ARCH};		\
 		${TOOLS_BASH} ./install.sh --prefix=${RUST_BOOTSTRAP_PATH};	\
 	fi
+# patch(1) in NetBSD does not handle .cargo-checksum.json like long width file.
+	cat ${WRKSRC}/src/vendor/libc/.cargo-checksum.json | \
+		${SED} -e 's/2613f2912a9e8f3485debba424437608433b4e1c8b9050176ef975efdf4a412e/f48ef2dac3c28161f30a797a2fbe7fbcb9161ea23390789fe52c497f229b6c5a/' > \
+		${WRKSRC}/src/vendor/libc/.cargo-checksum.json.patched
+	${CP} -f ${WRKSRC}/src/vendor/libc/.cargo-checksum.json.patched \
+		${WRKSRC}/src/vendor/libc/.cargo-checksum.json
 
 .if ${OPSYS} != "SunOS"
 LD_LIBRARY_PATH=	${RUST_BOOTSTRAP_PATH}/lib
