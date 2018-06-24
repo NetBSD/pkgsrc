@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2973 2018/06/24 07:29:01 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2974 2018/06/24 07:30:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4287,3 +4287,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Module-CoreList to 5.20180622 [wiz 2018-06-24]
 	Updated devel/p5-Term-ProgressBar to 2.22 [wiz 2018-06-24]
 	Updated devel/p5-Test-POE-Client-TCP to 1.16 [wiz 2018-06-24]
+	Updated devel/p5-Test-Warn to 0.36 [wiz 2018-06-24]
