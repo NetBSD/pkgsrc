@@ -1,7 +1,9 @@
-$NetBSD: patch-desktop_scripts_soffice.sh,v 1.2 2018/06/25 13:34:48 ryoon Exp $
+$NetBSD: patch-desktop_scripts_soffice.sh,v 1.3 2018/06/25 21:51:38 wiz Exp $
 
 1. chunk: ?
+
 other chunks: javaPathHelper is OpenBSD-specific
+https://cgit.freedesktop.org/libreoffice/core/commit/?id=8db53bfd74e48f60e3002b2ae5f7f13c9387725a
 
 --- desktop/scripts/soffice.sh.orig	2018-05-04 13:30:05.000000000 +0000
 +++ desktop/scripts/soffice.sh

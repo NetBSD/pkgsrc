@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.57 2018/06/25 13:34:48 ryoon Exp $
+$NetBSD: distinfo,v 1.58 2018/06/25 21:51:37 wiz Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -209,8 +209,8 @@ SHA1 (patch-autogen.sh) = eedd0091745cf6a32ee9b33227502baaa661270e
 SHA1 (patch-bridges_source_cpp__uno_gcc3__linux__intel_share.hxx) = c1f5a013b88e847dd9ecfb4e4abe78b1b5965a0b
 SHA1 (patch-bridges_source_cpp__uno_gcc3__linux__x86-64_share.hxx) = f7eaf2748c66a27a772fdbdb370a4c6b3bdafca4
 SHA1 (patch-configure.ac) = 13024963b8d5ee21b2b8268bf6e1d442e5838454
-SHA1 (patch-desktop_scripts_soffice.sh) = 3d5b64f11258e204f6078e951a2183dd3ef104b4
-SHA1 (patch-desktop_scripts_unopkg.sh) = 72682ee689e43f420b5d229871223d828ca6c1c7
+SHA1 (patch-desktop_scripts_soffice.sh) = 8017e34da0da404d106397288da02fae4aef4bfc
+SHA1 (patch-desktop_scripts_unopkg.sh) = 99ac585db4dbf815d73035a7b606ea38362e2236
 SHA1 (patch-desktop_unx_source_pagein.c) = 2aeee1be9db348989bb30c033da49386989c7075
 SHA1 (patch-download.lst) = cc6e6ad0599751b9f3c2c1331f62cbf1ed6e39b8
 SHA1 (patch-external_harfbuzz_UnpackedTarball__harfbuzz.mk) = 60e2ef2081b59b23bd5cc7a7262880513ac03eee
@@ -230,7 +230,7 @@ SHA1 (patch-lotuswordpro_source_filter_localtime.cxx) = 8db23e81f54b5a71e331dfcc
 SHA1 (patch-mysqlc_Library__mysqlc.mk) = b040cfdb25f41896c77df3acafd4c31dc41dd590
 SHA1 (patch-opencl_source_openclconfig.cxx) = 2178f73aa08148cfd54d9a8c79eb29bf535f2e6b
 SHA1 (patch-solenv_gbuild_Module.mk) = cbd6ca3acae187458e49fe76d973e6475ed5fe1d
-SHA1 (patch-svx_source_gengal_gengal.sh) = 2ed5885bf00e95cd6e93a88cf5442dc979d50540
+SHA1 (patch-svx_source_gengal_gengal.sh) = 3313785a2cf2d22634a28fd6cf7a0ff19afcea62
 SHA1 (patch-vcl_Executable__visualbackendtest.mk) = 2db5f3e7daabb2a79181de5e136de019d5264b58
 SHA1 (patch-vcl_inc_scrptrun.h) = 52877f7f6c867e2baeed525c200ce7d75a97574a
 SHA1 (patch-xmloff_source_draw_ximp3dscene.cxx) = bdd0b2563e54424dd468c2334e17ab23057a69fb
