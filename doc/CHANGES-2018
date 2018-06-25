@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3009 2018/06/24 17:00:17 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3010 2018/06/25 08:02:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4335,3 +4335,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/libwww to 5.4.2 [adam 2018-06-24]
 	Updated net/libtorrent to 0.13.7 [adam 2018-06-24]
 	Updated net/rtorrent to 0.9.7 [adam 2018-06-24]
+	Updated finance/gnucash to 3.2 [wiz 2018-06-25]
