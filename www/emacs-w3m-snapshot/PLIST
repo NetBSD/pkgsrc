@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/09/29 12:40:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/06/25 13:39:14 ryoon Exp $
 info/emacs-w3m-ja.info
 info/emacs-w3m.info
 ${EMACS_LISPPREFIX}/w3m/ChangeLog
@@ -83,8 +83,6 @@ ${EMACS_LISPPREFIX}/w3m/sb-ffii.el.gz
 ${EMACS_LISPPREFIX}/w3m/sb-ffii.elc
 ${EMACS_LISPPREFIX}/w3m/sb-fml.el.gz
 ${EMACS_LISPPREFIX}/w3m/sb-fml.elc
-${EMACS_LISPPREFIX}/w3m/sb-gendai-net.el.gz
-${EMACS_LISPPREFIX}/w3m/sb-gendai-net.elc
 ${EMACS_LISPPREFIX}/w3m/sb-geocrawler.el.gz
 ${EMACS_LISPPREFIX}/w3m/sb-geocrawler.elc
 ${EMACS_LISPPREFIX}/w3m/sb-glimpse.el.gz
@@ -119,6 +117,8 @@ ${EMACS_LISPPREFIX}/w3m/sb-kantei.el.gz
 ${EMACS_LISPPREFIX}/w3m/sb-kantei.elc
 ${EMACS_LISPPREFIX}/w3m/sb-kde.el.gz
 ${EMACS_LISPPREFIX}/w3m/sb-kde.elc
+${EMACS_LISPPREFIX}/w3m/sb-kyoko-np.el.gz
+${EMACS_LISPPREFIX}/w3m/sb-kyoko-np.elc
 ${EMACS_LISPPREFIX}/w3m/sb-laut-de.el.gz
 ${EMACS_LISPPREFIX}/w3m/sb-laut-de.elc
 ${EMACS_LISPPREFIX}/w3m/sb-linuxce-jp.el.gz
@@ -161,6 +161,8 @@ ${EMACS_LISPPREFIX}/w3m/sb-namazu.el.gz
 ${EMACS_LISPPREFIX}/w3m/sb-namazu.elc
 ${EMACS_LISPPREFIX}/w3m/sb-netbsd.el.gz
 ${EMACS_LISPPREFIX}/w3m/sb-netbsd.elc
+${EMACS_LISPPREFIX}/w3m/sb-nikkangendai.el.gz
+${EMACS_LISPPREFIX}/w3m/sb-nikkangendai.elc
 ${EMACS_LISPPREFIX}/w3m/sb-nikkansports.el.gz
 ${EMACS_LISPPREFIX}/w3m/sb-nikkansports.elc
 ${EMACS_LISPPREFIX}/w3m/sb-nikkei.el.gz
@@ -273,6 +275,8 @@ ${EMACS_LISPPREFIX}/w3m/sb-yomiuri-html.el.gz
 ${EMACS_LISPPREFIX}/w3m/sb-yomiuri-html.elc
 ${EMACS_LISPPREFIX}/w3m/sb-yomiuri.el.gz
 ${EMACS_LISPPREFIX}/w3m/sb-yomiuri.elc
+${EMACS_LISPPREFIX}/w3m/sb-yoshirin.el.gz
+${EMACS_LISPPREFIX}/w3m/sb-yoshirin.elc
 ${EMACS_LISPPREFIX}/w3m/sb-zdnet-jp.el.gz
 ${EMACS_LISPPREFIX}/w3m/sb-zdnet-jp.elc
 ${EMACS_LISPPREFIX}/w3m/sb-zeit-de.el.gz
