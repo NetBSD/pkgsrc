@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2018/05/15 13:06:19 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.16 2018/06/25 17:14:19 fhajny Exp $
 bin/dqtool
 bin/loggen
 bin/pdbtool
@@ -67,6 +67,9 @@ include/syslog-ng/gsocket.h
 include/syslog-ng/host-id.h
 include/syslog-ng/host-resolve.h
 include/syslog-ng/hostname.h
+include/syslog-ng/late_ack_tracker.h
+include/syslog-ng/loggen_helper.h
+include/syslog-ng/loggen_plugin.h
 include/syslog-ng/logmatcher.h
 include/syslog-ng/logmpx.h
 include/syslog-ng/logmsg/gsockaddr-serialize.h
@@ -156,6 +159,7 @@ include/syslog-ng/secret-storage.h
 include/syslog-ng/seqnum.h
 include/syslog-ng/serialize.h
 include/syslog-ng/service-management.h
+include/syslog-ng/signal-handler.h
 include/syslog-ng/stats/stats-cluster-logpipe.h
 include/syslog-ng/stats/stats-cluster-single.h
 include/syslog-ng/stats/stats-cluster.h
@@ -190,7 +194,13 @@ include/syslog-ng/timeutils.h
 include/syslog-ng/tls-support.h
 include/syslog-ng/tlscontext.h
 include/syslog-ng/transport/logtransport.h
+include/syslog-ng/transport/multitransport.h
 include/syslog-ng/transport/transport-aux-data.h
+include/syslog-ng/transport/transport-factory-id.h
+include/syslog-ng/transport/transport-factory-registry.h
+include/syslog-ng/transport/transport-factory-socket.h
+include/syslog-ng/transport/transport-factory-tls.h
+include/syslog-ng/transport/transport-factory.h
 include/syslog-ng/transport/transport-file.h
 include/syslog-ng/transport/transport-pipe.h
 include/syslog-ng/transport/transport-socket.h
@@ -205,6 +215,8 @@ include/syslog-ng/value-pairs/transforms.h
 include/syslog-ng/value-pairs/value-pairs.h
 include/syslog-ng/versioning.h
 lib/libevtlog.la
+lib/libloggen_helper.la
+lib/libloggen_plugin.la
 lib/libsecret-storage.la
 lib/libsyslog-ng-native-connector.a
 lib/libsyslog-ng.la
@@ -240,6 +252,8 @@ lib/syslog-ng/libsystem-source.la
 lib/syslog-ng/libtags-parser.la
 lib/syslog-ng/libtfgetent.la
 lib/syslog-ng/libxml.la
+lib/syslog-ng/loggen/libloggen_socket_plugin.la
+lib/syslog-ng/loggen/libloggen_ssl_plugin.la
 sbin/syslog-ng
 sbin/syslog-ng-ctl
 sbin/syslog-ng-debun
@@ -278,6 +292,7 @@ share/syslog-ng/include/scl/syslogconf/README
 share/syslog-ng/include/scl/syslogconf/convert-syslogconf.awk
 share/syslog-ng/include/scl/syslogconf/plugin.conf
 share/syslog-ng/include/scl/system/plugin.conf
+share/syslog-ng/include/scl/telegram/telegram.conf
 share/syslog-ng/include/scl/windowseventlog/plugin.conf
 share/syslog-ng/include/scl/windowseventlog/windowseventlog.xml
 share/syslog-ng/tools/cfg-grammar.y
