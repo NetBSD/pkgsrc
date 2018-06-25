@@ -1,10 +1,16 @@
-# $NetBSD: options.mk,v 1.2 2018/06/24 10:17:42 bouyer Exp $
+# $NetBSD: options.mk,v 1.3 2018/06/25 10:01:51 leot Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.cups
+PKG_OPTIONS_VAR=	PKG_OPTIONS.cups-base
 PKG_SUPPORTED_OPTIONS=	acl dnssd kerberos pam tcpwrappers
 PKG_SUGGESTED_OPTIONS=	dnssd kerberos
 
 PLIST_VARS+=		apple dbus dnssd dnssd-backend ippfind libusb pam
+
+.if defined(PKG_OPTIONS.cups)
+PKG_LEGACY_OPTIONS+=		${PKG_OPTIONS.cups}
+PKG_OPTIONS_DEPRECATED_WARNINGS+= \
+	"Deprecated variable PKG_OPTIONS.cups used, use ${PKG_OPTIONS_VAR} instead."
+.endif
 
 .if ${OPSYS} == "Darwin"
 PLIST.apple=		yes
