@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2018/06/24 08:05:25 ryoon Exp $
+$NetBSD: distinfo,v 1.28 2018/06/25 13:31:11 ryoon Exp $
 
 SHA1 (rust-1.26.2-i686-apple-darwin.tar.gz) = 7a353c1875f4656e95a14ec4822c3c2a408d1d26
 RMD160 (rust-1.26.2-i686-apple-darwin.tar.gz) = 9377bd2f7373c5cf7b7e936e51d2749bea8f687f
@@ -76,6 +76,7 @@ SHA1 (patch-src_bootstrap_bin_rustc.rs) = d9787517f03162d3548e89a91ecf933fd67774
 SHA1 (patch-src_bootstrap_lib.rs) = d86e173b931099730a4f18d044d7977c89f87b91
 SHA1 (patch-src_libbacktrace_configure) = b2c1e9b93a99408aad42ab9f1af27704cc81bdd8
 SHA1 (patch-src_libstd_build.rs) = 32dad8a474300f9f37bce8b92acca762cf8cc4ab
+SHA1 (patch-src_libstd_sys_unix_thread.rs) = 2a0b7ea8e7e09623826f306f9f1d0611799173d4
 SHA1 (patch-src_llvm_CMakeLists.txt) = ffdf4337fdc84d8314c97c4e492e6b84244a99d1
 SHA1 (patch-src_llvm_cmake_modules_AddLLVM.cmake) = 282d97cce8d01cfefe565185d4999c2db9ccc13f
 SHA1 (patch-src_llvm_include_llvm_Support_DataTypes.h.cmake) = 61cba4480d97e740d361708eb8e5c9b13bb2d36e
