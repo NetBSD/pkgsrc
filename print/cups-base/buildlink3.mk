@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2018/04/17 22:29:33 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2018/06/25 10:01:51 leot Exp $
 
 BUILDLINK_TREE+=	cups-base
 
@@ -12,15 +12,15 @@ BUILDLINK_PKGSRCDIR.cups-base?=		../../print/cups-base
 pkgbase := cups-base
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.cups:Mkerberos)
+.if !empty(PKG_BUILD_OPTIONS.cups-base:Mkerberos)
 .include "../../mk/krb5.buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.cups:Mdnssd)
+.if !empty(PKG_BUILD_OPTIONS.cups-base:Mdnssd)
 .include "../../net/mDNSResponder/buildlink3.mk"
 .endif
 
-.if ${OPSYS} != "Darwin" && !empty(PKG_BUILD_OPTIONS.cups:Mavahi)
+.if ${OPSYS} != "Darwin" && !empty(PKG_BUILD_OPTIONS.cups-base:Mavahi)
 .include "../../net/avahi/buildlink3.mk"
 .endif
 
