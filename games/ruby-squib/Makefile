@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/06/24 14:18:33 taca Exp $
+# $NetBSD: Makefile,v 1.13 2018/06/25 05:47:37 taca Exp $
 
 DISTNAME=	squib-0.14.1
 PKGREVISION=	1
@@ -22,7 +22,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-pango>=3.2.1:../../devel/ruby-gnome2-pango
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-rsvg>=3.2.1:../../graphics/ruby-gnome2-rsvg
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gobject-introspection>=3.2.1:../../devel/ruby-gnome2-gobject-introspection
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gio>=3.2.1:../../devel/ruby-gnome2-gio
-DEPENDS+=	${RUBY_PKGPREFIX}-highline>=1.7.10<1.8:../../devel/ruby-highline17
+DEPENDS+=	${RUBY_PKGPREFIX}-highline17>=1.7.10<1.8:../../devel/ruby-highline17
 
 RUBYGEM_OPTIONS+=	--format-executable
 
