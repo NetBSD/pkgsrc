@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18432 2018/06/24 16:04:53 adam Exp $
+$NetBSD: TODO,v 1.18433 2018/06/25 08:42:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1515,7 +1515,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xrn-9.02
 	o xsc-1.6
 	o xscorch-0.2.1
-	o xscreensaver-5.39
 	o xsd-3.3.0
 	o xtraceroute-0.9.1
 	o xtux-20030306

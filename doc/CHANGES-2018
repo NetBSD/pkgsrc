@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3012 2018/06/25 08:22:10 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3013 2018/06/25 08:42:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4338,3 +4338,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated finance/gnucash to 3.2 [wiz 2018-06-25]
 	Updated finance/gnucash-docs to 3.2 [wiz 2018-06-25]
 	Updated security/pam-pwauth_suid to 1.2nb1 [wiz 2018-06-25]
+	Updated x11/xscreensaver to 5.39 [wiz 2018-06-25]
