@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2018/02/13 13:03:06 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.28 2018/06/25 13:34:48 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -1371,6 +1371,38 @@ ${PKGNAME}/lib/libreoffice/program/resource/fr/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fr/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fr/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fr/LC_MESSAGES/xsc.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/acc.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/avmedia.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/basctl.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/chart.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/cnr.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/cui.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/dba.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/dkt.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/editeng.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/flt.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/for.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/fps.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/frm.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/fwk.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/pcr.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/rpt.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/sb.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/sc.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/sca.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/scc.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/sd.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/sfx.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/sm.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/svl.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/svt.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/svx.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/sw.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/uui.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/vcl.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/wiz.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/wpt.mo
+${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/xsc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ga/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ga/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ga/LC_MESSAGES/basctl.mo
@@ -4106,6 +4138,7 @@ ${PKGNAME}/lib/libreoffice/readmes/README_eu
 ${PKGNAME}/lib/libreoffice/readmes/README_fa
 ${PKGNAME}/lib/libreoffice/readmes/README_fi
 ${PKGNAME}/lib/libreoffice/readmes/README_fr
+${PKGNAME}/lib/libreoffice/readmes/README_fy
 ${PKGNAME}/lib/libreoffice/readmes/README_ga
 ${PKGNAME}/lib/libreoffice/readmes/README_gd
 ${PKGNAME}/lib/libreoffice/readmes/README_gl
@@ -4222,6 +4255,7 @@ ${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_eu.propertie
 ${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_fa.properties
 ${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_fi.properties
 ${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_fr.properties
+${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_fy.properties
 ${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_ga.properties
 ${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_gd.properties
 ${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_gl.properties
@@ -6455,6 +6489,7 @@ ${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_eu.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_fa.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_fi.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_fr.properties
+${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_fy.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_ga.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_gd.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_gl.properties
@@ -6688,6 +6723,7 @@ ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_eu.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_fa.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_fi.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_fr.properties
+${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_fy.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_ga.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_gd.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_gl.properties
@@ -6981,6 +7017,7 @@ ${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_eu.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_fa.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_fi.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_fr.properties
+${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_fy.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_ga.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_gd.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_gl.properties
@@ -7204,6 +7241,7 @@ ${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-eu.t
 ${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-fa.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-fi.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-fr.txt
+${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-fy.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-ga.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-gd.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-gl.txt
@@ -8394,6 +8432,7 @@ ${PKGNAME}/lib/libreoffice/share/registry/Langpack-eu.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/Langpack-fa.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/Langpack-fi.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/Langpack-fr.xcd
+${PKGNAME}/lib/libreoffice/share/registry/Langpack-fy.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/Langpack-ga.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/Langpack-gd.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/Langpack-gl.xcd
@@ -8544,6 +8583,7 @@ ${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_eu.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_fa.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_fi.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_fr.xcd
+${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_fy.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_ga.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_gd.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_gl.xcd
@@ -8656,6 +8696,7 @@ ${PKGNAME}/lib/libreoffice/share/registry/res/registry_eu.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/registry_fa.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/registry_fi.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/registry_fr.xcd
+${PKGNAME}/lib/libreoffice/share/registry/res/registry_fy.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/registry_ga.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/registry_gd.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/registry_gl.xcd
@@ -8916,6 +8957,7 @@ ${PKGNAME}/lib/libreoffice/share/wizards/resources_eu.properties
 ${PKGNAME}/lib/libreoffice/share/wizards/resources_fa.properties
 ${PKGNAME}/lib/libreoffice/share/wizards/resources_fi.properties
 ${PKGNAME}/lib/libreoffice/share/wizards/resources_fr.properties
+${PKGNAME}/lib/libreoffice/share/wizards/resources_fy.properties
 ${PKGNAME}/lib/libreoffice/share/wizards/resources_ga.properties
 ${PKGNAME}/lib/libreoffice/share/wizards/resources_gd.properties
 ${PKGNAME}/lib/libreoffice/share/wizards/resources_gl.properties
@@ -9564,6 +9606,7 @@ share/mime/packages/libreoffice.xml
 @pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/gl
 @pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/gd
 @pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/ga
+@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/fy
 @pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/eu
 @pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/et
 @pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/eo
