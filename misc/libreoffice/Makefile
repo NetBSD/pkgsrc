@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.157 2018/06/24 11:16:10 wiz Exp $
+# $NetBSD: Makefile,v 1.158 2018/06/25 13:34:48 ryoon Exp $
 
-VERREL=		6.0.4
+VERREL=		6.0.5
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -101,14 +100,14 @@ MORE_DISTFILES= \
 	ReemKufi-0.6.tar.gz \
 	Scheherazade-2.100.zip
 
-MORE_DISTFILES+=		harfbuzz-1.7.6.tar.bz2
+MORE_DISTFILES+=		harfbuzz-1.8.1.tar.bz2
 
 .for md in ${MORE_DISTFILES}
 DISTFILES+=		${md}
 SITES.${md}=		http://dev-www.libreoffice.org/src/
 .endfor
 
-SITES.harfbuzz-1.7.6.tar.bz2=	http://www.freedesktop.org/software/harfbuzz/release/
+SITES.harfbuzz-1.8.1.tar.bz2=	http://www.freedesktop.org/software/harfbuzz/release/
 
 .include "options.mk"
 

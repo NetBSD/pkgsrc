@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.java,v 1.6 2017/08/01 11:57:36 ryoon Exp $
+@comment $NetBSD: PLIST.java,v 1.7 2018/06/25 13:34:48 ryoon Exp $
 ${PKGNAME}/lib/libreoffice/program/JREProperties.class
 ${PKGNAME}/lib/libreoffice/program/classes/ScriptFramework.jar
 ${PKGNAME}/lib/libreoffice/program/classes/ScriptProviderForBeanShell.jar
@@ -118,6 +118,7 @@ ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/description-eu.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/description-fa.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/description-fi.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/description-fr.txt
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/description-fy.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/description-ga.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/description-gd.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/description-gl.txt
@@ -520,6 +521,16 @@ ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/fr/help.idxl/segments
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/fr/help.jar
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/fr/help.key_
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/fr/help.tree
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/fy-xhp.done
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/fy.done
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/fy/help.db_
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/fy/help.ht_
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/fy/help.idxl/_0.cfs
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/fy/help.idxl/segments.gen
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/fy/help.idxl/segments_3
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/fy/help.jar
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/fy/help.key_
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/fy/help.tree
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/ga-xhp.done
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/ga.done
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/ga/help.db_
@@ -1363,6 +1374,7 @@ ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_eu.
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_fa.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_fi.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_fr.properties
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_fy.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_ga.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_gd.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_gl.properties
@@ -1477,6 +1489,7 @@ ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDial
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_fa.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_fi.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_fr.properties
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_fy.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_ga.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_gd.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_gl.properties
@@ -1608,6 +1621,7 @@ ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/description-eu.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/description-fa.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/description-fi.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/description-fr.txt
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/description-fy.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/description-ga.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/description-gd.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/description-gl.txt
@@ -2018,6 +2032,16 @@ ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/fr/help.idxl/seg
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/fr/help.jar
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/fr/help.key_
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/fr/help.tree
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/fy-xhp.done
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/fy.done
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/fy/help.db_
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/fy/help.ht_
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/fy/help.idxl/_0.cfs
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/fy/help.idxl/segments.gen
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/fy/help.idxl/segments_3
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/fy/help.jar
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/fy/help.key_
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/fy/help.tree
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/ga-xhp.done
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/ga.done
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/ga/help.db_
