@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2018/06/23 22:08:54 youri Exp $
+# $NetBSD: Makefile,v 1.43 2018/06/25 11:23:26 youri Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -14,7 +14,7 @@ BUILD_DEFS+=		PKG_SYSCONFBASE
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ARGS+=	--enable-sound-settings
-CONFIGURE_ARGS+=	--enable-pluggable-dialog
+CONFIGURE_ARGS+=	--enable-pluggable-dialogs
 
 PKG_SYSCONFSUBDIR=	xdg
 
