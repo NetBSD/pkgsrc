@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.67 2018/04/30 06:06:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.68 2018/06/25 08:02:36 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -241,7 +241,6 @@ lib/gnucash/libgncmod-ledger-core.so
 lib/gnucash/libgncmod-locale-reports-us.so
 lib/gnucash/libgncmod-log-replay.so
 lib/gnucash/libgncmod-qif-import.so
-lib/gnucash/libgncmod-qif.so
 lib/gnucash/libgncmod-register-core.so
 lib/gnucash/libgncmod-register-gnome.so
 lib/gnucash/libgncmod-report-gnome.so
@@ -265,6 +264,7 @@ lib/gnucash/scm/ccache/2.2/gnucash/baz.go
 lib/gnucash/scm/ccache/2.2/gnucash/business-core.go
 lib/gnucash/scm/ccache/2.2/gnucash/core-utils.go
 lib/gnucash/scm/ccache/2.2/gnucash/engine.go
+lib/gnucash/scm/ccache/2.2/gnucash/engine/test/srfi64-extras.go
 lib/gnucash/scm/ccache/2.2/gnucash/engine/test/test-extras.go
 lib/gnucash/scm/ccache/2.2/gnucash/foo.go
 lib/gnucash/scm/ccache/2.2/gnucash/gettext.go
@@ -301,13 +301,12 @@ lib/gnucash/scm/ccache/2.2/gnucash/report/receivables.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/report-gnome.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/report-system.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/report-system/collectors.go
-lib/gnucash/scm/ccache/2.2/gnucash/report/report-system/list-extras.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/report-system/report-collectors.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/report-system/test/test-collectors.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/report-system/test/test-extras.go
-lib/gnucash/scm/ccache/2.2/gnucash/report/report-system/test/test-list-extras.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/report-system/test/test-load-report-system-module.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/report-system/test/test-report-utilities.go
+lib/gnucash/scm/ccache/2.2/gnucash/report/report-system/test/test-test-extras.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/standard-reports.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/standard-reports/account-piecharts.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/standard-reports/account-summary.go
@@ -328,17 +327,13 @@ lib/gnucash/scm/ccache/2.2/gnucash/report/standard-reports/general-journal.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/standard-reports/general-ledger.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/standard-reports/income-gst-statement.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/standard-reports/income-statement.go
-lib/gnucash/scm/ccache/2.2/gnucash/report/standard-reports/net-barchart.go
-lib/gnucash/scm/ccache/2.2/gnucash/report/standard-reports/net-linechart.go
+lib/gnucash/scm/ccache/2.2/gnucash/report/standard-reports/net-charts.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/standard-reports/portfolio.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/standard-reports/price-scatter.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/standard-reports/register.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/standard-reports/sx-summary.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/standard-reports/test/test-cash-flow.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/standard-reports/test/test-cashflow-barchart.go
-lib/gnucash/scm/ccache/2.2/gnucash/report/standard-reports/test/test-generic-category-report.go
-lib/gnucash/scm/ccache/2.2/gnucash/report/standard-reports/test/test-generic-net-barchart.go
-lib/gnucash/scm/ccache/2.2/gnucash/report/standard-reports/test/test-generic-net-linechart.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/standard-reports/test/test-standard-category-report.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/standard-reports/test/test-standard-net-barchart.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/standard-reports/test/test-standard-net-linechart.go
@@ -366,6 +361,7 @@ lib/gnucash/scm/ccache/2.2/gnucash/unittest-support.go
 lib/gnucash/scm/ccache/2.2/gnucash/utilities.go
 lib/gnucash/scm/ccache/2.2/hooks.go
 lib/gnucash/scm/ccache/2.2/html-acct-table.go
+lib/gnucash/scm/ccache/2.2/html-anytag.go
 lib/gnucash/scm/ccache/2.2/html-barchart.go
 lib/gnucash/scm/ccache/2.2/html-document.go
 lib/gnucash/scm/ccache/2.2/html-fonts.go
@@ -377,6 +373,10 @@ lib/gnucash/scm/ccache/2.2/html-style-sheet.go
 lib/gnucash/scm/ccache/2.2/html-table.go
 lib/gnucash/scm/ccache/2.2/html-text.go
 lib/gnucash/scm/ccache/2.2/html-utilities.go
+lib/gnucash/scm/ccache/2.2/json.go
+lib/gnucash/scm/ccache/2.2/json/builder.go
+lib/gnucash/scm/ccache/2.2/json/parser.go
+lib/gnucash/scm/ccache/2.2/json/syntax.go
 lib/gnucash/scm/ccache/2.2/migrate-prefs.go
 lib/gnucash/scm/ccache/2.2/options-utilities.go
 lib/gnucash/scm/ccache/2.2/options.go
@@ -1023,6 +1023,7 @@ share/gnucash/scm/gnucash/baz.scm
 share/gnucash/scm/gnucash/business-core.scm
 share/gnucash/scm/gnucash/core-utils.scm
 share/gnucash/scm/gnucash/engine.scm
+share/gnucash/scm/gnucash/engine/test/srfi64-extras.scm
 share/gnucash/scm/gnucash/engine/test/test-extras.scm
 share/gnucash/scm/gnucash/foo.scm
 share/gnucash/scm/gnucash/gettext.scm
@@ -1063,13 +1064,12 @@ share/gnucash/scm/gnucash/report/receivables.scm
 share/gnucash/scm/gnucash/report/report-gnome.scm
 share/gnucash/scm/gnucash/report/report-system.scm
 share/gnucash/scm/gnucash/report/report-system/collectors.scm
-share/gnucash/scm/gnucash/report/report-system/list-extras.scm
 share/gnucash/scm/gnucash/report/report-system/report-collectors.scm
 share/gnucash/scm/gnucash/report/report-system/test/test-collectors.scm
 share/gnucash/scm/gnucash/report/report-system/test/test-extras.scm
-share/gnucash/scm/gnucash/report/report-system/test/test-list-extras.scm
 share/gnucash/scm/gnucash/report/report-system/test/test-load-report-system-module.scm
 share/gnucash/scm/gnucash/report/report-system/test/test-report-utilities.scm
+share/gnucash/scm/gnucash/report/report-system/test/test-test-extras.scm
 share/gnucash/scm/gnucash/report/standard-reports.scm
 share/gnucash/scm/gnucash/report/standard-reports/account-piecharts.scm
 share/gnucash/scm/gnucash/report/standard-reports/account-summary.scm
@@ -1090,17 +1090,13 @@ share/gnucash/scm/gnucash/report/standard-reports/general-journal.scm
 share/gnucash/scm/gnucash/report/standard-reports/general-ledger.scm
 share/gnucash/scm/gnucash/report/standard-reports/income-gst-statement.scm
 share/gnucash/scm/gnucash/report/standard-reports/income-statement.scm
-share/gnucash/scm/gnucash/report/standard-reports/net-barchart.scm
-share/gnucash/scm/gnucash/report/standard-reports/net-linechart.scm
+share/gnucash/scm/gnucash/report/standard-reports/net-charts.scm
 share/gnucash/scm/gnucash/report/standard-reports/portfolio.scm
 share/gnucash/scm/gnucash/report/standard-reports/price-scatter.scm
 share/gnucash/scm/gnucash/report/standard-reports/register.scm
 share/gnucash/scm/gnucash/report/standard-reports/sx-summary.scm
 share/gnucash/scm/gnucash/report/standard-reports/test/test-cash-flow.scm
 share/gnucash/scm/gnucash/report/standard-reports/test/test-cashflow-barchart.scm
-share/gnucash/scm/gnucash/report/standard-reports/test/test-generic-category-report.scm
-share/gnucash/scm/gnucash/report/standard-reports/test/test-generic-net-barchart.scm
-share/gnucash/scm/gnucash/report/standard-reports/test/test-generic-net-linechart.scm
 share/gnucash/scm/gnucash/report/standard-reports/test/test-standard-category-report.scm
 share/gnucash/scm/gnucash/report/standard-reports/test/test-standard-net-barchart.scm
 share/gnucash/scm/gnucash/report/standard-reports/test/test-standard-net-linechart.scm
@@ -1130,6 +1126,7 @@ share/gnucash/scm/gnucash/unittest-support.scm
 share/gnucash/scm/gnucash/utilities.scm
 share/gnucash/scm/hooks.scm
 share/gnucash/scm/html-acct-table.scm
+share/gnucash/scm/html-anytag.scm
 share/gnucash/scm/html-barchart.scm
 share/gnucash/scm/html-document.scm
 share/gnucash/scm/html-fonts.scm
@@ -1141,6 +1138,10 @@ share/gnucash/scm/html-style-sheet.scm
 share/gnucash/scm/html-table.scm
 share/gnucash/scm/html-text.scm
 share/gnucash/scm/html-utilities.scm
+share/gnucash/scm/json.scm
+share/gnucash/scm/json/builder.scm
+share/gnucash/scm/json/parser.scm
+share/gnucash/scm/json/syntax.scm
 share/gnucash/scm/migrate-prefs.scm
 share/gnucash/scm/options-utilities.scm
 share/gnucash/scm/options.scm
