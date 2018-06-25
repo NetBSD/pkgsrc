@@ -1,6 +1,7 @@
-$NetBSD: patch-svx_source_gengal_gengal.sh,v 1.1 2018/06/25 13:34:48 ryoon Exp $
+$NetBSD: patch-svx_source_gengal_gengal.sh,v 1.2 2018/06/25 21:51:38 wiz Exp $
 
 javaPathHelper is OpenBSD-specific
+https://cgit.freedesktop.org/libreoffice/core/commit/?id=8db53bfd74e48f60e3002b2ae5f7f13c9387725a
 
 --- svx/source/gengal/gengal.sh.orig	2018-05-04 13:30:05.000000000 +0000
 +++ svx/source/gengal/gengal.sh
