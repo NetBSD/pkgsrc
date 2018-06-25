@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3018 2018/06/25 15:19:48 taca Exp $
+$NetBSD: CHANGES-2018,v 1.3019 2018/06/25 17:14:28 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4345,3 +4345,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/sdcc3 to 3.7.0 [bouyer 2018-06-25]
 	Updated www/php-nextcloud to 13.0.4 [ryoon 2018-06-25]
 	Updated lang/php71 to 7.1.19 [taca 2018-06-25]
+	Updated sysutils/syslog-ng to 3.16.1 [fhajny 2018-06-25]
