@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3011 2018/06/25 08:09:53 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3012 2018/06/25 08:22:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4337,3 +4337,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/rtorrent to 0.9.7 [adam 2018-06-24]
 	Updated finance/gnucash to 3.2 [wiz 2018-06-25]
 	Updated finance/gnucash-docs to 3.2 [wiz 2018-06-25]
+	Updated security/pam-pwauth_suid to 1.2nb1 [wiz 2018-06-25]
