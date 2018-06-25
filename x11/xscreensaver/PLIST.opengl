@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.opengl,v 1.4 2018/06/24 05:51:58 wiz Exp $
+@comment $NetBSD: PLIST.opengl,v 1.5 2018/06/25 08:42:39 wiz Exp $
 bin/xscreensaver-gl-helper
 libexec/xscreensaver/antinspect
 libexec/xscreensaver/antmaze
@@ -33,6 +33,7 @@ libexec/xscreensaver/config/circuit.xml
 libexec/xscreensaver/config/cityflow.xml
 libexec/xscreensaver/config/companioncube.xml
 libexec/xscreensaver/config/crackberg.xml
+libexec/xscreensaver/config/crumbler.xml
 libexec/xscreensaver/config/cube21.xml
 libexec/xscreensaver/config/cubenetic.xml
 libexec/xscreensaver/config/cubestack.xml
@@ -45,6 +46,7 @@ libexec/xscreensaver/config/dymaxionmap.xml
 libexec/xscreensaver/config/endgame.xml
 libexec/xscreensaver/config/energystream.xml
 libexec/xscreensaver/config/engine.xml
+libexec/xscreensaver/config/esper.xml
 libexec/xscreensaver/config/extrusion.xml
 libexec/xscreensaver/config/flipflop.xml
 libexec/xscreensaver/config/flipscreen3d.xml
@@ -79,6 +81,7 @@ libexec/xscreensaver/config/klein.xml
 libexec/xscreensaver/config/lament.xml
 libexec/xscreensaver/config/lavalite.xml
 libexec/xscreensaver/config/lockward.xml
+libexec/xscreensaver/config/maze3d.xml
 libexec/xscreensaver/config/menger.xml
 libexec/xscreensaver/config/mirrorblob.xml
 libexec/xscreensaver/config/moebius.xml
@@ -86,6 +89,7 @@ libexec/xscreensaver/config/moebiusgears.xml
 libexec/xscreensaver/config/molecule.xml
 libexec/xscreensaver/config/morph3d.xml
 libexec/xscreensaver/config/noof.xml
+libexec/xscreensaver/config/peepers.xml
 libexec/xscreensaver/config/photopile.xml
 libexec/xscreensaver/config/pinion.xml
 libexec/xscreensaver/config/pipes.xml
@@ -97,6 +101,7 @@ libexec/xscreensaver/config/pulsar.xml
 libexec/xscreensaver/config/quasicrystal.xml
 libexec/xscreensaver/config/queens.xml
 libexec/xscreensaver/config/raverhoop.xml
+libexec/xscreensaver/config/razzledazzle.xml
 libexec/xscreensaver/config/romanboy.xml
 libexec/xscreensaver/config/rubik.xml
 libexec/xscreensaver/config/rubikblocks.xml
@@ -123,6 +128,7 @@ libexec/xscreensaver/config/vigilance.xml
 libexec/xscreensaver/config/voronoi.xml
 libexec/xscreensaver/config/winduprobot.xml
 libexec/xscreensaver/crackberg
+libexec/xscreensaver/crumbler
 libexec/xscreensaver/cube21
 libexec/xscreensaver/cubenetic
 libexec/xscreensaver/cubestack
@@ -135,6 +141,7 @@ libexec/xscreensaver/dymaxionmap
 libexec/xscreensaver/endgame
 libexec/xscreensaver/energystream
 libexec/xscreensaver/engine
+libexec/xscreensaver/esper
 libexec/xscreensaver/extrusion
 libexec/xscreensaver/flipflop
 libexec/xscreensaver/flipscreen3d
@@ -169,6 +176,7 @@ libexec/xscreensaver/klein
 libexec/xscreensaver/lament
 libexec/xscreensaver/lavalite
 libexec/xscreensaver/lockward
+libexec/xscreensaver/maze3d
 libexec/xscreensaver/menger
 libexec/xscreensaver/mirrorblob
 libexec/xscreensaver/moebius
@@ -176,6 +184,7 @@ libexec/xscreensaver/moebiusgears
 libexec/xscreensaver/molecule
 libexec/xscreensaver/morph3d
 libexec/xscreensaver/noof
+libexec/xscreensaver/peepers
 libexec/xscreensaver/photopile
 libexec/xscreensaver/pinion
 libexec/xscreensaver/pipes
@@ -187,6 +196,7 @@ libexec/xscreensaver/pulsar
 libexec/xscreensaver/quasicrystal
 libexec/xscreensaver/queens
 libexec/xscreensaver/raverhoop
+libexec/xscreensaver/razzledazzle
 libexec/xscreensaver/romanboy
 libexec/xscreensaver/rubik
 libexec/xscreensaver/rubikblocks
@@ -229,6 +239,7 @@ man/man6/circuit.6
 man/man6/cityflow.6
 man/man6/companioncube.6
 man/man6/crackberg.6
+man/man6/crumbler.6
 man/man6/cube21.6
 man/man6/cubenetic.6
 man/man6/cubestack.6
@@ -241,6 +252,7 @@ man/man6/dymaxionmap.6
 man/man6/endgame.6
 man/man6/energystream.6
 man/man6/engine.6
+man/man6/esper.6
 man/man6/extrusion.6
 man/man6/flipflop.6
 man/man6/flipscreen3d.6
@@ -275,6 +287,7 @@ man/man6/klein.6
 man/man6/lament.6
 man/man6/lavalite.6
 man/man6/lockward.6
+man/man6/maze3d.6
 man/man6/menger.6
 man/man6/mirrorblob.6
 man/man6/moebius.6
@@ -282,6 +295,7 @@ man/man6/moebiusgears.6
 man/man6/molecule.6
 man/man6/morph3d.6
 man/man6/noof.6
+man/man6/peepers.6
 man/man6/photopile.6
 man/man6/pinion.6
 man/man6/pipes.6
@@ -293,6 +307,7 @@ man/man6/pulsar.6
 man/man6/quasicrystal.6
 man/man6/queens.6
 man/man6/raverhoop.6
+man/man6/razzledazzle.6
 man/man6/romanboy.6
 man/man6/rubik.6
 man/man6/rubikblocks.6
