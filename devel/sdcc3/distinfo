@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.8 2016/09/14 14:50:07 dholland Exp $
+$NetBSD: distinfo,v 1.9 2018/06/25 14:02:45 bouyer Exp $
 
-SHA1 (sdcc-src-3.6.0.tar.bz2) = e0e69deca22d7947ad1d53f9601a7c95ffd69326
-RMD160 (sdcc-src-3.6.0.tar.bz2) = 6fd429f63057f4457e8279e59c1af77861833b1f
-SHA512 (sdcc-src-3.6.0.tar.bz2) = fd05cf13f7acf0b71a35a99f99dc6ef8abcb4f41fbe1ab0cf25348842b57317217410b4a521ea1a70db93d8e7e4e6dac272ec14d893cdbcfa584ee963f42ad2f
-Size (sdcc-src-3.6.0.tar.bz2) = 17993788 bytes
+SHA1 (sdcc-src-3.7.0.tar.bz2) = 67153fa08e04b7a79f95c23b68e1a0144dbf7f2b
+RMD160 (sdcc-src-3.7.0.tar.bz2) = 816b428f200770adb045276593bf07106877bc02
+SHA512 (sdcc-src-3.7.0.tar.bz2) = f36a7471eb14dd03bd42b676f73c3aedb26831eede7bcbbff6c3875326ce6be350d963496b6c2104e1bd7db18926d6f78cb51e9bc14a5cc0121d4a6b7d28cc87
+Size (sdcc-src-3.7.0.tar.bz2) = 17944920 bytes
 SHA1 (patch-Makefile_in) = 58be6bfe1ddc055883ef171adc71f363e6ade121
 SHA1 (patch-aa) = fc702b7de0c871761f959a4fbdfee26f5e1a2cc5
 SHA1 (patch-device_non-free_lib_Makefile.in) = 49894224d38ccf614c636831a61e569a48921850
 SHA1 (patch-device_non-free_lib_pic14_libdev_Makefile.in) = 4b77e9bd4fb4571afa317ebbd5bc3537d8dda491
-SHA1 (patch-doc_Makefile_in) = cbb9f7300dbd19032454253adf81eeb89bfb080a
+SHA1 (patch-doc_Makefile_in) = 8679551d6439dcd0064afbd2a43125f9bd1fb7d3
 SHA1 (patch-sim_ucsim_cmd.src_Makefile.in) = d29c69af814d4404aba64328e69e93189220a49d
 SHA1 (patch-sim_ucsim_doc_Makefile_in) = 781a8cf0a9eb3b5d6130e0621ef464a53b0086d6
 SHA1 (patch-sim_ucsim_sim.src_Makefile.in) = 2ad1a61fd9f21f6d767e0cb4e09aee1480a29000
