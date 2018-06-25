@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3016 2018/06/25 14:03:35 bouyer Exp $
+$NetBSD: CHANGES-2018,v 1.3017 2018/06/25 14:12:01 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4343,3 +4343,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/emacs-w3m-snapshot to 1.4.625.20180518 [ryoon 2018-06-25]
 	Updated devel/gputils to 1.5.0 [bouyer 2018-06-25]
 	Updated devel/sdcc3 to 3.7.0 [bouyer 2018-06-25]
+	Updated www/php-nextcloud to 13.0.4 [ryoon 2018-06-25]
