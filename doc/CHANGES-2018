@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3015 2018/06/25 13:39:43 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.3016 2018/06/25 14:03:35 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4341,3 +4341,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/xscreensaver to 5.39 [wiz 2018-06-25]
 	Updated misc/libreoffice to 6.0.5.2 [ryoon 2018-06-25]
 	Updated www/emacs-w3m-snapshot to 1.4.625.20180518 [ryoon 2018-06-25]
+	Updated devel/gputils to 1.5.0 [bouyer 2018-06-25]
+	Updated devel/sdcc3 to 3.7.0 [bouyer 2018-06-25]
