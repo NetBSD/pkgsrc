@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.23 2016/09/18 05:28:02 dholland Exp $
+# $NetBSD: Makefile,v 1.24 2018/06/25 14:01:45 bouyer Exp $
 
-DISTNAME=	gputils-1.4.2-1
-PKGNAME=	gputils-1.4.2.1
-PKGREVISION=	1
+DISTNAME=	gputils-1.5.0
+#PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gputils/}
 
 MAINTAINER=	dogcow@NetBSD.org
 HOMEPAGE=	http://gputils.sourceforge.net/
 COMMENT=	Collection of tools for Microchip's PIC micro-processors
+LICENSE=	gnu-gpl-v2
 
 CONFLICTS=	gpasm-[0-9]*
-WRKSRC=		${WRKDIR}/gputils-1.4.2
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	bison flex gmake
