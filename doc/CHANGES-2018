@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3021 2018/06/26 04:23:28 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3022 2018/06/26 09:55:32 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4348,3 +4348,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/syslog-ng to 3.16.1 [fhajny 2018-06-25]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2018Q2 branch [gdt 2018-06-25]
 	Updated devel/py-uvloop to 0.10.2 [adam 2018-06-26]
+	Updated x11/mate-screensaver to 1.20.0nb1 [jperkin 2018-06-26]
