@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.29 2018/02/06 12:55:52 jperkin Exp $
+$NetBSD: distinfo,v 1.30 2018/06/26 10:49:10 jperkin Exp $
 
 SHA1 (darktable-2.2.5.tar.xz) = f60ab3f9118e96c311f286a87102ad0d647cb111
 RMD160 (darktable-2.2.5.tar.xz) = 1a66797ca24dc7ef06fc5bb2fbed98724d50c0f8
 SHA512 (darktable-2.2.5.tar.xz) = fbc79398660b51e580d22dbdfc9a74d213f69335d6058e2844ef397951a1e840264b6d03d1b52b424319fb647a274ac14ff23ee9a9c60071f71497988bdf989b
 Size (darktable-2.2.5.tar.xz) = 3092540 bytes
 SHA1 (patch-src_CMakeLists.txt) = 4535599cf1d0f6aae1909bd4dc09281311e23e0c
+SHA1 (patch-src_common_system__signal__handling.c) = 296f5618c618a9b16af2ca5a1d9ff408c437c220
 SHA1 (patch-src_external_rawspeed_RawSpeed_AriDecoder.cpp) = c1c7f8b03f63295361138ec1d6dbd1d323fa69ba
 SHA1 (patch-src_external_rawspeed_RawSpeed_ArwDecoder.cpp) = 435e99db5d512f6568048a8e6382f6def6e7430f
 SHA1 (patch-src_external_rawspeed_RawSpeed_ColorFilterArray.cpp) = 3abfbca5078d1ed068199e96e16b8eaea4eb662d
