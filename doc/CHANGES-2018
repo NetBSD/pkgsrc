@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3022 2018/06/26 09:55:32 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.3023 2018/06/26 15:21:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4349,3 +4349,5 @@ Changes to the packages collection and infrastructure in 2018:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2018Q2 branch [gdt 2018-06-25]
 	Updated devel/py-uvloop to 0.10.2 [adam 2018-06-26]
 	Updated x11/mate-screensaver to 1.20.0nb1 [jperkin 2018-06-26]
+	Updated www/contao44 to 4.4.20 [taca 2018-06-26]
+	Updated www/contao45 to 4.5.10 [taca 2018-06-26]
