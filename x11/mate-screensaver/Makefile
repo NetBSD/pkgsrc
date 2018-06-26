@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2018/06/01 14:28:28 youri Exp $
+# $NetBSD: Makefile,v 1.13 2018/06/26 08:58:49 jperkin Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
+PKGREVISION=	1
 DISTNAME=	mate-screensaver-${VERSION}
 CATEGORIES=	x11
 
@@ -27,7 +28,10 @@ CONF_FILES+=	${PREFIX}/share/examples/mate-screensaver/xdg/menus/mate-screensave
 
 PLIST_VARS+=		pam
 
-.if ${OPSYS} != "Darwin" && ${OPSYS} != "SunOS"
+.if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--disable-pam
+SPECIAL_PERMS+=		libexec/mate-screensaver-dialog ${SETUID_ROOT_PERMS}
+.else
 DEPENDS+=		pam-pwauth_suid-[0-9]*:../../security/pam-pwauth_suid
 INSTALLATION_DIRS+=	${PREFIX}/share/examples/pam.d
 
