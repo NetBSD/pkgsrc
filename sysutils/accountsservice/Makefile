@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/06/11 23:55:50 youri Exp $
+# $NetBSD: Makefile,v 1.2 2018/06/26 09:54:30 jperkin Exp $
 
 DISTNAME=	accountsservice-0.6.42
 CATEGORIES=	sysutils
@@ -12,12 +12,15 @@ LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config intltool gmake autoconf autoreconf automake
+USE_TOOLS+=	pkg-config intltool gmake autoconf autoreconf automake msgfmt
 
 EGDIR=		${PREFIX}/share/examples/accountsservice
 
 CONFIGURE_ARGS+=	--disable-systemd \
 			--sysconfdir=${EGDIR}
+
+CONFIGURE_ENV.SunOS+=	ac_cv_have_decl_WTMPX_FILENAME=yes
+CPPFLAGS.SunOS+=	-DWTMPX_FILENAME=WTMPX_FILE
 
 LDFLAGS.NetBSD+=	-lutil # pw_getpwconf
 
