@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/06/13 15:49:40 youri Exp $
+# $NetBSD: Makefile,v 1.2 2018/06/26 10:10:59 jperkin Exp $
 
 DISTNAME=	colord-1.3.5
 CATEGORIES=	graphics gnome
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config gmake intltool autoconf aclocal automake
+USE_TOOLS+=	pkg-config gmake intltool autoconf aclocal automake msgfmt
 
 COLORD_USER=	colord
 COLORD_GROUP=	colord
