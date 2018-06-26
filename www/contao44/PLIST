@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2018/06/18 15:01:02 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2018/06/26 15:20:30 taca Exp $
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/ace/README.md
 ${CT_WEBDIR}/assets/ace/composer.json
@@ -1144,6 +1144,9 @@ ${CT_WEBDIR}/vendor/contao/core-bundle/UPGRADE.md
 ${CT_WEBDIR}/vendor/contao/core-bundle/VERSIONING.md
 ${CT_WEBDIR}/vendor/contao/core-bundle/appveyor.yml
 ${CT_WEBDIR}/vendor/contao/core-bundle/composer.json
+${CT_WEBDIR}/vendor/contao/core-bundle/gulpfile.js
+${CT_WEBDIR}/vendor/contao/core-bundle/package-lock.json
+${CT_WEBDIR}/vendor/contao/core-bundle/package.json
 ${CT_WEBDIR}/vendor/contao/core-bundle/phpunit.xml.dist
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Analyzer/HtaccessAnalyzer.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Cache/ContaoCacheClearer.php
@@ -2114,6 +2117,7 @@ ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icon
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/copychilds.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/copychilds_.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/css.svg
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/css_.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/cssimport.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/cut.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/cut_.svg
@@ -2171,6 +2175,7 @@ ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icon
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/important.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/invisible.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/layout.svg
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/layout_.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/left.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/loading.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/lock-locked.svg
@@ -2190,6 +2195,7 @@ ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icon
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/mgroup.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/mgroup_.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/modules.svg
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/modules_.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/monitor.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/movel.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/mover.svg
@@ -2238,6 +2244,7 @@ ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icon
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/settings.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/show.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/sizes.svg
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/sizes_.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/stop.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/store.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/su.svg
@@ -2245,6 +2252,7 @@ ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icon
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/sync.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/tablewizard.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/theme_export.svg
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/theme_export_.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/theme_import.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/themes.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/undo.svg
@@ -5983,6 +5991,7 @@ ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Debug/Trac
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Debug/WrappedListener.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/DependencyInjection/Compiler/AddSecurityVotersPass.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/DependencyInjection/Compiler/AddSessionDomainConstraintPass.php
+${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/DependencyInjection/Compiler/RegisterCsrfTokenClearingLogoutHandlerPass.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/DependencyInjection/MainConfiguration.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/DependencyInjection/Security/Factory/AbstractFactory.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/DependencyInjection/Security/Factory/FormLoginFactory.php
@@ -8765,6 +8774,7 @@ ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Csrf/LICENSE
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Csrf/README.md
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Csrf/TokenGenerator/TokenGeneratorInterface.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Csrf/TokenGenerator/UriSafeTokenGenerator.php
+${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Csrf/TokenStorage/ClearableTokenStorageInterface.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Csrf/TokenStorage/NativeSessionTokenStorage.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Csrf/TokenStorage/SessionTokenStorage.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Csrf/TokenStorage/TokenStorageInterface.php
@@ -8831,6 +8841,7 @@ ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Http/Firewall
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Http/HttpUtils.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Http/LICENSE
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Http/Logout/CookieClearingLogoutHandler.php
+${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Http/Logout/CsrfTokenClearingLogoutHandler.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Http/Logout/DefaultLogoutSuccessHandler.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Http/Logout/LogoutHandlerInterface.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Http/Logout/LogoutSuccessHandlerInterface.php
