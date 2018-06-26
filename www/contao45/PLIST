@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/06/18 15:01:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/06/26 15:21:04 taca Exp $
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/ace/README.md
 ${CT_WEBDIR}/assets/ace/composer.json
@@ -2105,6 +2105,7 @@ ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icon
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/copychilds.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/copychilds_.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/css.svg
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/css_.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/cssimport.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/cut.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/cut_.svg
@@ -2162,6 +2163,7 @@ ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icon
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/important.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/invisible.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/layout.svg
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/layout_.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/left.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/loading.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/lock-locked.svg
@@ -2181,6 +2183,7 @@ ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icon
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/mgroup.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/mgroup_.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/modules.svg
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/modules_.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/monitor.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/movel.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/mover.svg
@@ -2229,6 +2232,7 @@ ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icon
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/settings.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/show.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/sizes.svg
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/sizes_.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/stop.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/store.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/su.svg
@@ -2236,6 +2240,7 @@ ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icon
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/sync.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/tablewizard.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/theme_export.svg
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/theme_export_.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/theme_import.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/themes.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/undo.svg
@@ -3014,6 +3019,8 @@ ${CT_WEBDIR}/vendor/contao/news-bundle/.php_cs.dist
 ${CT_WEBDIR}/vendor/contao/news-bundle/.travis.yml
 ${CT_WEBDIR}/vendor/contao/news-bundle/.tx/config
 ${CT_WEBDIR}/vendor/contao/news-bundle/CHANGELOG.md
+${CT_WEBDIR}/vendor/contao/news-bundle/CONTRIBUTORS.md
+${CT_WEBDIR}/vendor/contao/news-bundle/LICENSE
 ${CT_WEBDIR}/vendor/contao/news-bundle/README.md
 ${CT_WEBDIR}/vendor/contao/news-bundle/UPGRADE.md
 ${CT_WEBDIR}/vendor/contao/news-bundle/appveyor.yml
@@ -3132,6 +3139,15 @@ ${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/pl/tl_news
 ${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/pl/tl_news_feed.xlf
 ${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/pl/tl_user.xlf
 ${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/pl/tl_user_group.xlf
+${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/pt/default.xlf
+${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/pt/modules.xlf
+${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/pt/tl_layout.xlf
+${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/pt/tl_module.xlf
+${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/pt/tl_news.xlf
+${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/pt/tl_news_archive.xlf
+${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/pt/tl_news_feed.xlf
+${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/pt/tl_user.xlf
+${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/pt/tl_user_group.xlf
 ${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/ru/default.xlf
 ${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/ru/modules.xlf
 ${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/ru/tl_layout.xlf
@@ -3200,6 +3216,8 @@ ${CT_WEBDIR}/vendor/contao/newsletter-bundle/.gitignore
 ${CT_WEBDIR}/vendor/contao/newsletter-bundle/.php_cs.dist
 ${CT_WEBDIR}/vendor/contao/newsletter-bundle/.tx/config
 ${CT_WEBDIR}/vendor/contao/newsletter-bundle/CHANGELOG.md
+${CT_WEBDIR}/vendor/contao/newsletter-bundle/CONTRIBUTORS.md
+${CT_WEBDIR}/vendor/contao/newsletter-bundle/LICENSE
 ${CT_WEBDIR}/vendor/contao/newsletter-bundle/README.md
 ${CT_WEBDIR}/vendor/contao/newsletter-bundle/UPGRADE.md
 ${CT_WEBDIR}/vendor/contao/newsletter-bundle/composer.json
@@ -3308,6 +3326,15 @@ ${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/pl/t
 ${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/pl/tl_newsletter_recipients.xlf
 ${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/pl/tl_user.xlf
 ${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/pl/tl_user_group.xlf
+${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/pt/default.xlf
+${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/pt/modules.xlf
+${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/pt/tl_member.xlf
+${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/pt/tl_module.xlf
+${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/pt/tl_newsletter.xlf
+${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/pt/tl_newsletter_channel.xlf
+${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/pt/tl_newsletter_recipients.xlf
+${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/pt/tl_user.xlf
+${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/pt/tl_user_group.xlf
 ${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/ru/default.xlf
 ${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/ru/modules.xlf
 ${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/ru/tl_member.xlf
