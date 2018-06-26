@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3020 2018/06/25 23:32:19 gdt Exp $
+$NetBSD: CHANGES-2018,v 1.3021 2018/06/26 04:23:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4347,3 +4347,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/php71 to 7.1.19 [taca 2018-06-25]
 	Updated sysutils/syslog-ng to 3.16.1 [fhajny 2018-06-25]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2018Q2 branch [gdt 2018-06-25]
+	Updated devel/py-uvloop to 0.10.2 [adam 2018-06-26]
