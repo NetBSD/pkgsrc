@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2018/03/03 22:15:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.43 2018/06/26 23:30:21 maya Exp $
 #
 
-SM_VER=		2.49.2
+SM_VER=		2.49.3
 PKGNAME=	seamonkey-l10n-${SM_VER:S/b/beta/}
 DISTNAME=	# empty
 CATEGORIES=	www
