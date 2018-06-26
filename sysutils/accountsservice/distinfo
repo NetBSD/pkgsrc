@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2018/06/11 23:55:50 youri Exp $
+$NetBSD: distinfo,v 1.2 2018/06/26 09:54:30 jperkin Exp $
 
 SHA1 (accountsservice-0.6.42.tar.xz) = 4461347acf3878e100afcc2e3f960fb2c9fd87f4
 RMD160 (accountsservice-0.6.42.tar.xz) = 72b3025468b855d50517729530a92e5cb31ca82e
@@ -8,4 +8,5 @@ SHA1 (patch-data_Makefile.am) = b059cd214a346adb371e4a006f497d652c9d9234
 SHA1 (patch-src_daemon.c) = b39c9e4fe82b086002d760eb191de55ac791dc91
 SHA1 (patch-src_libaccountsservice_act-user.c) = 50015cd0d4c32d1b97efa3620697790cca1db541
 SHA1 (patch-src_user.c) = a55c2daf41a8c833de4af0517d353d3fcb73beff
+SHA1 (patch-src_util.c) = 1acd3a534e4c6c3892078f1e89456f732bbee813
 SHA1 (patch-src_wtmp-helper.c) = eb32d598784f31e9baac44bd63ab248f5873c9c3
