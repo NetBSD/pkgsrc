@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2018/06/04 15:06:46 adam Exp $
+# $NetBSD: Makefile,v 1.9 2018/06/26 04:22:32 adam Exp $
 
-DISTNAME=	uvloop-0.10.1
+DISTNAME=	uvloop-0.10.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uvloop/}
