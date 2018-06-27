@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3024 2018/06/26 23:34:26 maya Exp $
+$NetBSD: CHANGES-2018,v 1.3025 2018/06/27 11:52:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4355,3 +4355,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/seamonkey to 2.49.3 [maya 2018-06-26]
 	Updated www/firefox52 to 52.9.0 [maya 2018-06-26]
 	Updated www/firefox52-l10n to 52.9.0 [maya 2018-06-26]
+	Updated graphics/optipng to 0.7.7 [adam 2018-06-27]
