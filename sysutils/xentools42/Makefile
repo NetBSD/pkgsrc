@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2018/04/13 13:55:37 jaapb Exp $
+# $NetBSD: Makefile,v 1.66 2018/06/27 10:44:15 maya Exp $
 
 VERSION=	4.2.5
 VERSION_IPXE=	1.0.0
@@ -20,9 +20,9 @@ LICENSE=		gnu-gpl-v2
 
 # XXX add version check: Xen requires dev86 >= 0.16.14
 BUILD_DEPENDS+= dev86-[0-9]*:../../devel/dev86 # needed to build firmware
-.if !exists(/usr/bin/iasl)
+#.if !exists(/usr/bin/iasl) # XXX broken with iasl 20171110
 BUILD_DEPENDS+= acpica-utils-[0-9]*:../../sysutils/acpica-utils
-.endif
+#.endif
 DEPENDS+=		${PYPKGPREFIX}-curses>=0nb4:../../devel/py-curses
 DEPENDS+=		${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 
