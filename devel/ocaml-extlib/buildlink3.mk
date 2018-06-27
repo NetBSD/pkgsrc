@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2018/01/10 16:53:08 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2018/06/27 19:32:24 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml-extlib
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ocaml-extlib
 OCAML_EXTLIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-extlib+=	ocaml-extlib>=1.7.0
-BUILDLINK_ABI_DEPENDS.ocaml-extlib+=	ocaml-extlib>=1.7.2nb2
+BUILDLINK_ABI_DEPENDS.ocaml-extlib+=	ocaml-extlib>=1.7.4
 BUILDLINK_PKGSRCDIR.ocaml-extlib?=	../../devel/ocaml-extlib
 
 .endif	# OCAML_EXTLIB_BUILDLINK3_MK
