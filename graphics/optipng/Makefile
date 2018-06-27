@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2016/06/17 14:03:10 adam Exp $
+# $NetBSD: Makefile,v 1.34 2018/06/27 11:52:17 adam Exp $
 
-DISTNAME=	optipng-0.7.6
+DISTNAME=	optipng-0.7.7
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=optipng/}
 
@@ -10,13 +10,13 @@ COMMENT=	Advanced PNG Optimizer
 LICENSE=	zlib
 
 HAS_CONFIGURE=		yes
-CONFIGURE_ARGS+=	-prefix=${PREFIX}
 CONFIGURE_ARGS+=	-mandir=${PREFIX}/${PKGMANDIR}
-CONFIGURE_ARGS+=	-with-system-zlib
+CONFIGURE_ARGS+=	-prefix=${PREFIX}
 CONFIGURE_ARGS+=	-with-system-libpng
+CONFIGURE_ARGS+=	-with-system-zlib
 
+BUILDLINK_API_DEPENDS.png+=	png>=1.6.34
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.2
-BUILDLINK_API_DEPENDS.png+=	png>=1.2.9nb2
 
 INSTALLATION_DIRS+=		bin ${PKGMANDIR}/man1
 
