@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2018/04/13 13:55:31 jaapb Exp $
+# $NetBSD: Makefile,v 1.13 2018/06/27 19:32:24 jaapb Exp $
 
-VERSION=	1.7.2
+VERSION=	1.7.4
 GITHUB_PROJECT=	ocaml-extlib
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
-PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ygrek/}
 
@@ -22,5 +21,4 @@ OCAML_USE_FINDLIB=	yes
 BUILD_TARGET=	build
 
 .include "../../devel/ocaml-cppo/buildlink3.mk"
-#.include "../../lang/camlp4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
