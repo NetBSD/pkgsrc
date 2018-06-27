@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3025 2018/06/27 11:52:39 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3026 2018/06/27 19:30:34 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4356,3 +4356,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/firefox52 to 52.9.0 [maya 2018-06-26]
 	Updated www/firefox52-l10n to 52.9.0 [maya 2018-06-26]
 	Updated graphics/optipng to 0.7.7 [adam 2018-06-27]
+	Updated devel/ocaml-cppo to 1.6.4 [jaapb 2018-06-27]
