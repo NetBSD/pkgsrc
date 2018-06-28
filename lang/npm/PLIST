@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/05/24 14:14:43 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/06/28 11:28:01 fhajny Exp $
 bin/npm
 bin/npx
 lib/node_modules/npm/.github/CODEOWNERS
@@ -6543,4 +6543,3 @@ man/man7/npm-scope.7
 man/man7/npm-scripts.7
 man/man7/removing-npm.7
 man/man7/semver.7
-@pkgdir share
