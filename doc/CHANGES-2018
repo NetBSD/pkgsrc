@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3027 2018/06/27 19:32:41 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.3028 2018/06/28 02:31:03 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4358,3 +4358,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/optipng to 0.7.7 [adam 2018-06-27]
 	Updated devel/ocaml-cppo to 1.6.4 [jaapb 2018-06-27]
 	Updated devel/ocaml-extlib to 1.7.4 [jaapb 2018-06-27]
+	Updated sysutils/xentools45 to 4.5.5nb11 [maya 2018-06-28]
