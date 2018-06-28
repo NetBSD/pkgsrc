@@ -1,0 +1,16 @@
+===========================================================================
+$NetBSD: MESSAGE.Linux,v 1.1 2018/06/28 01:11:29 bacon Exp $
+
+The above refers to NetBSD.  Linux init and systemd scripts are available in
+
+	${PREFIX}/share/examples/ganglia/
+
+On RHEL and similar systems:
+
+Init scripts should be copied to /etc/rc.d/init.d/.
+Systemd scripts go in /etc/systemd/system/multi-user.target.wants/.
+
+Check the system documentation for other Linux-based operating systems to
+determine the equivalent locations.
+
+===========================================================================
