@@ -1,15 +1,15 @@
-$NetBSD: patch-toolkit_mozapps_installer_packager.mk,v 1.1 2018/01/24 16:52:08 ryoon Exp $
+$NetBSD: patch-toolkit_mozapps_installer_packager.mk,v 1.2 2018/06/28 13:52:37 ryoon Exp $
 
 * Symbolic link to lib/firefox/firefox causes 'Couldn't load XPCOM.' error.
 
---- toolkit/mozapps/installer/packager.mk.orig	2018-01-11 20:17:05.000000000 +0000
+--- toolkit/mozapps/installer/packager.mk.orig	2018-06-21 20:04:02.000000000 +0000
 +++ toolkit/mozapps/installer/packager.mk
-@@ -137,7 +137,7 @@ endif
+@@ -123,7 +123,7 @@ endif
  	  (cd $(DESTDIR)$(installdir) && tar -xf -)
  	$(NSINSTALL) -D $(DESTDIR)$(bindir)
  	$(RM) -f $(DESTDIR)$(bindir)/$(MOZ_APP_NAME)
 -	ln -s $(installdir)/$(MOZ_APP_NAME) $(DESTDIR)$(bindir)
 +	#ln -s $(installdir)/$(MOZ_APP_NAME) $(DESTDIR)$(bindir)
  
- checksum:
- 	mkdir -p `dirname $(CHECKSUM_FILE)`
+ upload:
+ 	$(PYTHON) -u $(MOZILLA_DIR)/build/upload.py --base-path $(DIST) $(UPLOAD_FILES)

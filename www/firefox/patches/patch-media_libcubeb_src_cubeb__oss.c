@@ -1,10 +1,10 @@
-$NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.10 2018/05/10 20:01:53 ryoon Exp $
+$NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.11 2018/06/28 13:52:37 ryoon Exp $
 
 * Restore OSS audio support code
 
---- media/libcubeb/src/cubeb_oss.c.orig	2018-05-09 10:25:44.118207555 +0000
+--- media/libcubeb/src/cubeb_oss.c.orig	2018-06-26 19:15:51.303299728 +0000
 +++ media/libcubeb/src/cubeb_oss.c
-@@ -0,0 +1,454 @@
+@@ -0,0 +1,453 @@
 +/*
 + * Copyright © 2014 Mozilla Foundation
 + *
@@ -441,7 +441,6 @@ $NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.10 2018/05/10 20:01:53 ryoon 
 +  .get_max_channel_count = oss_get_max_channel_count,
 +  .get_min_latency = oss_get_min_latency,
 +  .get_preferred_sample_rate = oss_get_preferred_sample_rate,
-+  .get_preferred_channel_layout = NULL,
 +  .enumerate_devices = NULL,
 +  .device_collection_destroy = NULL,
 +  .destroy = oss_destroy,
