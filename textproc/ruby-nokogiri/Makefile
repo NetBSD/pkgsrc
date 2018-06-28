@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2018/06/22 14:20:27 tsutsui Exp $
+# $NetBSD: Makefile,v 1.41 2018/06/28 15:16:51 jperkin Exp $
 
 DISTNAME=	nokogiri-1.8.3
 CATEGORIES=	textproc
@@ -14,9 +14,10 @@ USE_GCC_RUNTIME=	yes
 USE_TOOLS+=		pkg-config
 MAKE_ENV+=		NOKOGIRI_USE_SYSTEM_LIBRARIES=yes
 RUBYGEM_OPTIONS+=	--format-executable
-OVERRIDE_GEMSPEC+=	:files ports/archives/libxml2-2.9.2.tar.gz= \
-				ports/archives/libxslt-1.1.28.tar.gz=
+OVERRIDE_GEMSPEC+=	:files ports/archives/libxml2-2.9.8.tar.gz= \
+				ports/archives/libxslt-1.1.32.tar.gz=
 
+.include "../../devel/ruby-pkg-config/tool.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../lang/ruby/gem.mk"
