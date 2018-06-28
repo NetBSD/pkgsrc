@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.58 2018/04/16 14:35:04 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2018/06/28 01:05:01 bacon Exp $
 #
 
 DISTNAME=		ganglia-3.7.2
 PKGNAME=		ganglia-monitor-core-3.7.2
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		net parallel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ganglia/}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		bacon@NetBSD.org
 HOMEPAGE=		http://ganglia.sourceforge.net/
 COMMENT=		Ganglia cluster monitor, monitoring daemon
 LICENSE=		modified-bsd
@@ -23,6 +23,7 @@ PLIST_VARS+=		python
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ganglia
 PKG_SUPPORTED_OPTIONS=	python		# Gmond support for python modules
+BUILD_DEFS+=		VARBASE
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -68,9 +69,33 @@ SUBST_FILES.paths=	configure ganglia.html			\
 			gmond/modules/conf.d/modpython.conf.in	\
 			gmond/modules/python/README.in		\
 			mans/gmetad.1 mans/gmetric.1 mans/gmond.1
-SUBST_SED.paths+=	-e 's,/etc/ganglia,${PKG_SYSCONFDIR},g'
-SUBST_SED.paths+=	-e 's,/usr/lib/ganglia,${PREFIX}/lib/ganglia,g'
+SUBST_SED.paths+=	-e 's|/etc/ganglia|${PKG_SYSCONFDIR}|g'
+SUBST_SED.paths+=	-e 's|/usr/lib/ganglia|${PREFIX}/lib/ganglia|g'
 SUBST_VARS.paths+=	GANGLIA_VARBASE
+
+## gmond.conf.5 and gmond.conf.html can be generated from conf.pod, but
+## doing so requires perl installed in the build stage.
+SUBST_CLASSES+=		etcdir
+SUBST_STAGE.etcdir=	post-patch
+SUBST_FILES.etcdir=	${WRKSRC}/README \
+			${WRKSRC}/mans/gmetad.1 \
+			${WRKSRC}/mans/gmond.1
+SUBST_SED.etcdir=	-e "s|/etc/ganglia/\(gm.*d\.conf\)|${PREFIX}/etc/\1|g"
+
+SUBST_CLASSES+=			linux_init
+SUBST_STAGE.linux_init=		post-patch
+SUBST_FILES.linux_init=		gmond/gmond.init
+SUBST_FILES.linux_init+=	gmetad/gmetad.init
+SUBST_SED.linux_init=		-e 's|/usr/sbin|${PREFIX}/sbin|g'
+SUBST_SED.linux_init+=		-e 's|/etc/sysconfig|${PREFIX}&|g'
+SUBST_SED.linux_init+=		-e 's|/etc/ganglia|${PREFIX}&|g'
+SUBST_SED.linux_init+=		-e 's|/var/lock/subsys|${PREFIX}&|g'
+
+SUBST_CLASSES+=		systemd
+SUBST_STAGE.systemd=	post-patch
+SUBST_FILES.systemd=	gmond/gmond.service gmetad/gmetad.service
+SUBST_SED.systemd=	-e 's|@runstatedir@|${PREFIX}/var/run|g'
+SUBST_SED.systemd+=	-e 's|@sbindir@|${PREFIX}/sbin|g'
 
 FILES_SUBST+=		GANGLIA_VARBASE=${GANGLIA_VARBASE}
 
@@ -84,10 +109,24 @@ SMF_NAME=		ganglia
 SMF_INSTANCES=		${RCD_SCRIPTS}
 
 INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
+INSTALLATION_DIRS+=	var/lock/subsys
+
+post-extract:
+	${CP} ${FILESDIR}/gmond.service.in ${WRKSRC}/gmond/gmond.service
+	${CP} ${FILESDIR}/gmetad.service.in ${WRKSRC}/gmetad/gmetad.service
 
 post-install:
 	${WRKSRC}/gmond/gmond -t > ${DESTDIR}${EGDIR}/gmond.conf
-	${INSTALL_DATA} ${WRKSRC}/gmond/modules/python/README ${DESTDIR}${DOCDIR}/
+	${INSTALL_DATA} ${WRKSRC}/gmond/modules/python/README \
+		${DESTDIR}${DOCDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/gmond/gmond.init \
+		${DESTDIR}${EGDIR}/gmond.init.linux
+	${INSTALL_SCRIPT} ${WRKSRC}/gmond/gmond.service \
+		${DESTDIR}${EGDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/gmetad/gmetad.init \
+		${DESTDIR}${EGDIR}/gmetad.init.linux
+	${INSTALL_SCRIPT} ${WRKSRC}/gmetad/gmetad.service \
+		${DESTDIR}${EGDIR}
 
 .include "../../databases/rrdtool/buildlink3.mk"
 .include "../../devel/apr/buildlink3.mk"
