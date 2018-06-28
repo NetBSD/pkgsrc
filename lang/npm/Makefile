@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/05/24 14:14:43 fhajny Exp $
+# $NetBSD: Makefile,v 1.7 2018/06/28 11:28:01 fhajny Exp $
 
 DISTNAME=	npm-6.1.0
 CATEGORIES=	lang
@@ -36,13 +36,13 @@ CHECK_INTERPRETER_SKIP+=lib/node_modules/npm/*
 .include "../../mk/bsd.prefs.mk"
 
 pre-build:
-	cd ${WRKSRC} && node bin/npm-cli.js install ${WRKDIR}/${MARKED} --no-global --no-timing --no-save
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} node bin/npm-cli.js install ${WRKDIR}/${MARKED} --no-global --no-timing --no-save
 
 do-install:
 	${FIND} ${WRKSRC} -type f -name '*.orig' -delete
-	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${PREFIX}/bin/node \
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ${PREFIX}/bin/node \
 		bin/npm-cli.js pack
-	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${PREFIX}/bin/node \
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ${PREFIX}/bin/node \
 		bin/npm-cli.js install -g -f ${DISTNAME}.tgz
 .if ${PKGMANDIR} != "share/man"
 	${RM} -f -r ${DESTDIR}${PREFIX}/${PKGMANDIR}
