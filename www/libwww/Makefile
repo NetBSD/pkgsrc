@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2018/06/24 17:01:58 adam Exp $
+# $NetBSD: Makefile,v 1.94 2018/06/28 15:45:46 jperkin Exp $
 
 DISTNAME=	w3c-libwww-5.4.2
 PKGNAME=	${DISTNAME:S/^w3c-//}
@@ -26,16 +26,8 @@ CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--with-regex
 .endif
 
-PLIST_VARS+=		md5
-.if ${OPSYS} == "SunOS"
-# Solaris has a /usr/lib/libmd5 which seems to be enough, and
-# /usr/local/lib/libmd5 breaks /usr/lib/librt
-CONFIGURE_ARGS+=	--without-md5
-.else
-PLIST.md5=		yes
-.  if !exists(/usr/include/md5.h)
+.if !exists(/usr/include/md5.h)
 CONFIGURE_ARGS+=	--with-md5=${SSLBASE:Q}
-.  endif
 .endif
 
 .include "options.mk"
