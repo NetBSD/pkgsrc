@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/01/01 22:29:51 rillig Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/06/28 01:05:01 bacon Exp $
 bin/ganglia-config
 bin/gmetric
 bin/gstat
@@ -31,4 +31,8 @@ sbin/gmond
 share/doc/ganglia/README
 ${PLIST.python}share/examples/ganglia/conf.d/modpython.conf
 share/examples/ganglia/gmetad.conf
+share/examples/ganglia/gmetad.init.linux
+share/examples/ganglia/gmetad.service
 share/examples/ganglia/gmond.conf
+share/examples/ganglia/gmond.init.linux
+share/examples/ganglia/gmond.service
