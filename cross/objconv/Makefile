@@ -1,17 +1,21 @@
-# $NetBSD: Makefile,v 1.3 2017/03/03 04:54:10 sevan Exp $
+# $NetBSD: Makefile,v 1.4 2018/06/28 09:02:14 jperkin Exp $
+#
+# The upstream distfile is unversioned and replaced every time a new version
+# is released, so we must put a copy of it up in LOCAL_PORTS with DIST_SUBDIR
+# set and download from there.
+#
 
 DISTNAME=	objconv
 PKGNAME=	${DISTNAME}-2.39
 CATEGORIES=	cross
-MASTER_SITES=	http://www.agner.org/optimize/
+MASTER_SITES=	${MASTER_SITE_LOCAL:=${PKGNAME_NOREV}/}
+DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.agner.org/optimize/
 COMMENT=	Object file converter and disassembler
 LICENSE=	gnu-gpl-v3
-
-DIST_SUBDIR=	${PKGNAME_NOREV}
 
 USE_TOOLS+=	unzip:build
 
