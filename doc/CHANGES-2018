@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3029 2018/06/28 13:53:33 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.3030 2018/06/28 13:54:48 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4360,3 +4360,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ocaml-extlib to 1.7.4 [jaapb 2018-06-27]
 	Updated sysutils/xentools45 to 4.5.5nb11 [maya 2018-06-28]
 	Updated www/firefox to 61.0 [ryoon 2018-06-28]
+	Updated www/firefox-l10n to 61.0 [ryoon 2018-06-28]
