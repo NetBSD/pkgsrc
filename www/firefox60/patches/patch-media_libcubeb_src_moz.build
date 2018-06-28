@@ -1,0 +1,28 @@
+$NetBSD: patch-media_libcubeb_src_moz.build,v 1.1 2018/06/28 14:04:10 ryoon Exp $
+
+* Add OSS audio support
+* Support system library
+
+--- media/libcubeb/src/moz.build.orig	2018-05-03 16:58:30.000000000 +0000
++++ media/libcubeb/src/moz.build
+@@ -22,6 +22,12 @@ if CONFIG['MOZ_ALSA']:
+     ]
+     DEFINES['USE_ALSA'] = True
+ 
++if CONFIG['MOZ_OSS']:
++    SOURCES += [
++        'cubeb_oss.c',
++    ]
++    DEFINES['USE_OSS'] = True
++
+ if CONFIG['MOZ_PULSEAUDIO'] or CONFIG['MOZ_JACK']:
+     SOURCES += [
+         'cubeb_resampler.cpp',
+@@ -87,6 +93,7 @@ if CONFIG['OS_TARGET'] == 'Android':
+ FINAL_LIBRARY = 'gkmedias'
+ 
+ CFLAGS += CONFIG['MOZ_ALSA_CFLAGS']
++CFLAGS += CONFIG['MOZ_OSS_CFLAGS']
+ CFLAGS += CONFIG['MOZ_PULSEAUDIO_CFLAGS']
+ 
+ # We allow warnings for third-party code that can be updated from upstream.
