@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.33 2018/01/27 19:11:41 abs Exp $
+$NetBSD: distinfo,v 1.34 2018/06/28 02:26:49 maya Exp $
 
 SHA1 (ipxe-git-9a93db3f0947484e30e753bbd61a10b17336e20e.tar.gz) = fecadf952821e830ce1a1d19655288eef8488f88
 RMD160 (ipxe-git-9a93db3f0947484e30e753bbd61a10b17336e20e.tar.gz) = 539bfa12db7054228250d6dd380bbf96c1a040f8
@@ -38,7 +38,7 @@ SHA1 (patch-debugger_gdbsx_Makefile) = 1e16761b20604bb5a9ee22174f0bb46005fb19c7
 SHA1 (patch-examples_Makefile) = 5fe7bb876d254cf0c4f774ed0f08dcaea5b355ff
 SHA1 (patch-firmware_etherboot_Makefile) = f55e14948b7191e533a82b8fc3575f1052f23c45
 SHA1 (patch-firmware_etherboot_patches_series) = 2fa1342c78094c6dd5d60a07c236c4a1c0599fc4
-SHA1 (patch-firmware_hvmloader_Makefile) = bc5e81ddfc5e95887c2af4bb32eced9c5748b3c6
+SHA1 (patch-firmware_hvmloader_Makefile) = 029877d4f0f5955a01512c7e79ae12d31f318da5
 SHA1 (patch-hotplug_NetBSD_Makefile) = 6f6ec768b595c332a8757437a64509c0370e52da
 SHA1 (patch-hotplug_NetBSD_block) = f7ef26d13578b00138f459f6d16662d53820458c
 SHA1 (patch-hotplug_NetBSD_vif-bridge) = ac4cc7446715330b504b8cce8cbd47c8035cf33c
@@ -73,6 +73,8 @@ SHA1 (patch-qemu-xen-traditional_hw_pt-msi.h) = e2028d255bdfaee9e7eb4ca3be2edb06
 SHA1 (patch-qemu-xen-traditional_i386-dm_hookstarget.mak) = 50c6bc068406effe94b638ffced7d8edf5729717
 SHA1 (patch-qemu-xen-traditional_xen-hooks.mak) = ccc055fdb56ee796e1464f709aa576ab8cd9c6f1
 SHA1 (patch-qemu-xen_audio_audio.c) = 8452d63fe90e38a64111d0cf425bacd565fe6d82
+SHA1 (patch-qemu-xen_hw_i386_ssdt_misc.dsl) = 309c8785a4c7d947fc31bdc513adc789b68c69ba
+SHA1 (patch-qemu-xen_hw_i386_ssdt_pcihp.dsl) = fd8768f997c9baee5e5681676e90b58e3162e2e5
 SHA1 (patch-qemu-xen_qemu-doc.texi) = 721e80d15ac30ac71df3d6c4c485b0bf70897cf9
 SHA1 (patch-qemu-xen_util_hbitmap.c) = 5a495ae2b47d1ff6dd342633b8d655582f21dffe
 SHA1 (patch-qemu-xen_xen-hvm.c) = 11d4deb5de577e8beb2d1c6c3ca886e3d7563f8a
