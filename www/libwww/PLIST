@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/06/24 16:54:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/06/28 15:45:46 jperkin Exp $
 bin/libwww-config
 bin/w3c
 bin/webbot
@@ -162,7 +162,7 @@ include/w3c-libwww/WWWXML.h
 include/w3c-libwww/WWWZip.h
 include/w3c-libwww/wwwsys.h
 include/wwwconf.h
-${PLIST.md5}lib/libmd5.la
+lib/libmd5.la
 lib/libpics.la
 lib/libwwwapp.la
 lib/libwwwcache.la
