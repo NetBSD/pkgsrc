@@ -1,13 +1,12 @@
-$NetBSD: distinfo,v 1.319 2018/06/26 09:37:09 jperkin Exp $
+$NetBSD: distinfo,v 1.320 2018/06/28 13:52:37 ryoon Exp $
 
-SHA1 (firefox-60.0.2.source.tar.xz) = 44e60ed14ada854af8a978a9bc46c22a601356e8
-RMD160 (firefox-60.0.2.source.tar.xz) = 448ef6236799c190df4fa1f0f9c84ceb8eba3e30
-SHA512 (firefox-60.0.2.source.tar.xz) = 6fd6425660dad43aae15b97076347e33a0d830cf97545366ac2fd6922e06500a4001a31e6bf0e382733180d315ec2ae3698d09f9a2c665382ecef5a00a6de2ab
-Size (firefox-60.0.2.source.tar.xz) = 271930220 bytes
-SHA1 (patch-aa) = fdabcc9b055f6439fdbda9b38ab7cec08ff3e231
-SHA1 (patch-browser_app_profile_firefox.js) = 9a43095d94f83f315b9a3ce4a7b0a4301e9c40e6
+SHA1 (firefox-61.0.source.tar.xz) = 37a22afff86a22926bb32739e58cff1129235c86
+RMD160 (firefox-61.0.source.tar.xz) = 457c7a7518d5502e34037239079e330297867543
+SHA512 (firefox-61.0.source.tar.xz) = 5a3c2a15109159becbf983616edb3f86ce7a0b44bf1918c98c4f45ae3604cd6d105c2023e7706bc5de73c0901447415bf7697bb2dd41745490004feeaf48c139
+Size (firefox-61.0.source.tar.xz) = 266932956 bytes
+SHA1 (patch-aa) = 94c03ed9a0e72bb87c850f2e1965fb8755933822
+SHA1 (patch-browser_app_profile_firefox.js) = 30e93d7817c7e17b96ba96d3d3fb3701020260d4
 SHA1 (patch-build_moz.configure_old.configure) = 1df6867eaf73a350fbe8fcd5bd34e1fcab09d707
-SHA1 (patch-dom_fetch_FetchConsumer.cpp) = a164b68b968633e2f2e29c1c3917a77ac55a886b
 SHA1 (patch-dom_media_CubebUtils.cpp) = 3632cd0dd4b95f53f01050b8898b33fe198916b6
 SHA1 (patch-gfx_angle_checkout_src_common_third__party_smhasher_src_PMurHash.cpp) = f1d0adae2873545818072adb4e8599267bc4e6c5
 SHA1 (patch-gfx_webrender_src_query.rs) = 6434b0fc1d6441ddb555a2a3b199564b488ec336
@@ -25,8 +24,8 @@ SHA1 (patch-js_src_wasm_WasmSignalHandlers.cpp) = 1c665a9383638774c00f6c5fead5d7
 SHA1 (patch-media_libcubeb_gtest_moz.build) = 921a001726cda9e9782df5e59ae02b19d76ef47e
 SHA1 (patch-media_libcubeb_src_cubeb.c) = 1b1b8d57eb710cad13518ded79a0ddee2681881b
 SHA1 (patch-media_libcubeb_src_cubeb__alsa.c) = 3ee36f58bb525767c7d2b9e814ba4ccaa4868717
-SHA1 (patch-media_libcubeb_src_cubeb__oss.c) = ccd7ad6f09977dab358632107cfd9078b4649f99
-SHA1 (patch-media_libcubeb_src_moz.build) = f243068c8908dcb16434221edef8c65db3bb0c83
+SHA1 (patch-media_libcubeb_src_cubeb__oss.c) = 42899898662ce11481db8ceccdc0151013d79216
+SHA1 (patch-media_libcubeb_src_moz.build) = c8d9afaf605960a0ad5e9b9be4453c1bd735dd8d
 SHA1 (patch-media_libcubeb_update.sh) = 3a322de06bbe9aafba9da349954ef022bd094992
 SHA1 (patch-media_libpng_pngpriv.h) = c8084332560017cd7c9b519b61d125fa28af0dbc
 SHA1 (patch-media_libyuv_libyuv_source_mjpeg__decoder.cc) = 8a264c439fa4749cd7c5acf96e1ae3f9bae0a886
@@ -35,12 +34,10 @@ SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info_
 SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_video__capture__linux.cc) = a69bc7b7096b410582e725f9dbec57fee90d6686
 SHA1 (patch-modules_pdfium_update.sh) = b0bf091325c9322c54880de067871354cd689038
 SHA1 (patch-servo_components_style_build__gecko.rs) = fca2260a70b496fc010f165ff4d68788b7e28632
-SHA1 (patch-third__party_rust_libloading_.cargo-checksum.json) = 00bb69b7e72911de1658f97b338d1d77e9d11cdb
-SHA1 (patch-third__party_rust_libloading_build.rs) = 279b0381546d9e2868d4a6e20a8bd195792fc034
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = 5b6d2e5c9f685d32894898d3ef3aec09a1a1e5ce
 SHA1 (patch-toolkit_library_moz.build) = ecb6125e996d5496335c58ecd3433ad3214f29f0
 SHA1 (patch-toolkit_moz.configure) = 40ee147cc1d2c62dd6c83b3f67ce9e61f758ea57
-SHA1 (patch-toolkit_mozapps_installer_packager.mk) = 6f557fb732f0b9dabf059ffac0400d3db4e79e47
+SHA1 (patch-toolkit_mozapps_installer_packager.mk) = b2343fbad2556504dfd13601c02e6e2357c7d2bc
 SHA1 (patch-toolkit_xre_glxtest.cpp) = cf048491778610454b914400e53072afedd96e7b
 SHA1 (patch-xpcom_base_nscore.h) = d7c96eda884d7f370442749c43caba50da61bbe4
 SHA1 (patch-xpcom_build_BinaryPath.h) = 88a815a142356bf76024e5a4326b677122c844c1
