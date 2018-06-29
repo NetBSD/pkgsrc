@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/06/20 11:08:22 mef Exp $
+# $NetBSD: Makefile,v 1.2 2018/06/29 15:39:33 gdt Exp $
 
 PKGNAME=        ${DISTNAME:S/emacs/emacs26/:S/-/-nox11-/}
 CONFLICTS+=	emacs26-[0-9]*
@@ -18,6 +18,7 @@ CONFIGURE_ARGS+=        --without-gconf
 CONFIGURE_ARGS+=        --without-imagemagick
 CONFIGURE_ARGS+=        --without-xaw3d
 CONFIGURE_ARGS+=        --without-xft --without-libotf --without-m17n-flt
+CONFIGURE_ARGS+=	--without-ns
 
 CONFIGURE_ARGS+=        --without-x
 CONFIGURE_ARGS+=        --without-xpm
