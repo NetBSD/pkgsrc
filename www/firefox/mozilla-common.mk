@@ -1,9 +1,20 @@
-# $NetBSD: mozilla-common.mk,v 1.108 2018/03/21 16:06:29 taca Exp $
+# $NetBSD: mozilla-common.mk,v 1.109 2018/06/29 12:51:55 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
 # used by www/firefox/Makefile
 # used by www/seamonkey/Makefile
+
+# Python 2.7 and Python 3.5 or later are required simultaneously.
+PYTHON_VERSIONS_ACCEPTED=	27
+PYTHON_FOR_BUILD_ONLY=		tool
+.if !empty(PYTHON_VERSION_DEFAULT:M36) || !empty(PYTHON_VERSION_DEFAULT:M35)
+TOOL_DEPENDS+=		python${PYTHON_VERSION_DEFAULT}-[0-9]*:../../lang/python${PYTHON_VERSION_DEFAULT}
+ALL_ENV+=	PYTHON3=${LOCALBASE}/bin/python${PYTHON_VERSION_DEFAULT:S/3/3./}
+.else
+TOOL_DEPENDS+=		python36-[0-9]*:../../lang/python36
+ALL_ENV+=	PYTHON3=${LOCALBASE}/bin/python3.6
+.endif
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
@@ -36,7 +47,7 @@ test:
 TOOLS_PLATFORM.tar=	${TOOLS_PATH.bsdtar}
 USE_TOOLS+=		bsdtar
 .endif
-GCC_REQD+=		4.9
+GCC_REQD+=		6.1
 .if ${MACHINE_ARCH} == "i386"
 # Fix for PR pkg/48152.
 CXXFLAGS+=		-march=i586
@@ -192,7 +203,7 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.18
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nss+=	nss>=3.35
+BUILDLINK_API_DEPENDS.nss+=	nss>=3.37.3
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
@@ -215,3 +226,4 @@ BUILDLINK_API_DEPENDS.pixman+= pixman>=0.25.2
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
+.include "../../lang/python/pyversion.mk"
