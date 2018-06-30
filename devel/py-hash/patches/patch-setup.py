@@ -1,4 +1,4 @@
-$NetBSD: patch-setup.py,v 1.2 2016/06/21 18:00:02 joerg Exp $
+$NetBSD: patch-setup.py,v 1.3 2018/06/30 19:01:52 fhajny Exp $
 
 print is a function in Python 3.
 
@@ -12,25 +12,19 @@ print is a function in Python 3.
  
  from ez_setup import use_setuptools
  use_setuptools()
-@@ -56,14 +57,22 @@ elif os.name == "posix" and sys.platform
+@@ -56,14 +57,16 @@ elif os.name == "posix" and sys.platform
          '/opt/local/include',
          '/usr/local/include'
      ]
 -    libraries += ["boost_python-mt"]
 -    extra_compile_args += ["-msse4.2"]
-+    if sys.version_info.major == 2:
-+        libraries += ["boost_python-mt"]
-+    else:
-+        libraries += ["boost_python3-mt"]
++    libraries += ["boost_python" + os.environ.get('PYVER') + "-mt"]
 +    if platform.machine() in ("i386", "amd64"):
 +        extra_compile_args += ["-msse4.2"]
  elif os.name == "posix":
 -    libraries += ["boost_python", "rt"]
 -    extra_compile_args += ["-msse4.2"]
-+    if sys.version_info.major == 2:
-+        libraries += ["boost_python", "rt"]
-+    else:
-+        libraries += ["boost_python3", "rt"]
++    libraries += ["boost_python" + os.environ.get('PYVER'), "rt"]
 +    if platform.machine() in ("i386", "amd64"):
 +        extra_compile_args += ["-msse4.2"]
  
