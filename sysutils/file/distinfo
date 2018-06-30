@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.30 2017/12/12 03:11:51 ryoon Exp $
+$NetBSD: distinfo,v 1.31 2018/06/30 09:27:02 bsiegert Exp $
 
 SHA1 (file-5.32.tar.gz) = c2858a8043387d1229d8768ad42762a803d017db
 RMD160 (file-5.32.tar.gz) = b7d41a4c6b2c28d9f202d740e353416e2036c1ef
@@ -6,4 +6,5 @@ SHA512 (file-5.32.tar.gz) = 315343229fa196335389544ee8010e9e80995ef4721938492ded
 Size (file-5.32.tar.gz) = 797025 bytes
 SHA1 (patch-aa) = dc787ea0d77d7ba88bcb1e17d38b26b13153a1c5
 SHA1 (patch-src_fsmagic.c) = ee770cf37dfdfbc5a7c123d2691312610b76e76e
+SHA1 (patch-src_readelf.c) = 2dca756d757509643f72937595c470378fb4f3d1
 SHA1 (patch-src_softmagic.c) = bd8871c9050ca521f02b62066d0023a5fbb2d168
