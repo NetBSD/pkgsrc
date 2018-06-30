@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.73 2018/04/25 05:53:53 markd Exp $
+$NetBSD: distinfo,v 1.74 2018/06/30 12:43:28 maya Exp $
 
 SHA1 (abiword-3.0.1.tar.gz) = 7badf9663564a144e16764a456cadda18df70991
 RMD160 (abiword-3.0.1.tar.gz) = 05d92a7304e4e419776970d7b35065ceb59f7681
@@ -7,11 +7,14 @@ Size (abiword-3.0.1.tar.gz) = 11144990 bytes
 SHA1 (patch-configure.ac) = 239c0635c2c616c7e0a986a5fd92428393af38b7
 SHA1 (patch-plugin-configure.m4) = a8b8db3bdbd69339e32eefec1de7b1b59467db40
 SHA1 (patch-plugins_aiksaurus_Makefile.am) = 1529d5098b7fb798c428fe02cc50879374cb3e9d
+SHA1 (patch-plugins_collab_backends_service_xp_RealmProtocol.cpp) = 8b46d71b4ebb23aa4720e6d2d544004e178c1f2f
+SHA1 (patch-plugins_collab_backends_service_xp_soa__soup.cpp) = 219532cffebd67a9ed2e62fd318ccfb7eee57036
 SHA1 (patch-plugins_collab_backends_service_xp_tls__tunnel.cpp) = f8eed4520951653822c6de8da371c8cb42dcbc89
 SHA1 (patch-plugins_command_Makefile.am) = e003a6bf9a6e0566abc85f09868fdf1aa93234d7
 SHA1 (patch-plugins_gimp_xp_AbiGimp.cpp) = 15692cf15fd4099e7ad4ad854b6b57b103717269
 SHA1 (patch-plugins_goffice_Makefile.am) = 1959eea3b4e19f085aeb56870f682ce44561d445
 SHA1 (patch-plugins_grammar_linkgrammarwrap_LinkGrammarWrap.cpp) = f3916dbc0b208bfe9dbb55eac850a3094683694c
+SHA1 (patch-plugins_latex_xp_ie__exp__LaTeX.cpp) = bffa5e143147214af4baf8bf778123ca7223a8eb
 SHA1 (patch-plugins_mht_xp_tidyReader.h) = fa4ef0ee7f893fb070b76e21aaad4efd9b8b27ee
 SHA1 (patch-plugins_paint_xp_AbiGeneric.cpp) = 0c29c7ddf0dbd55d4bb6ab90311e40f2cff7130b
 SHA1 (patch-plugins_paint_xp_AbiPaint.cpp) = bf1ea7eb25fb384014523554f7ca55e6507bcbe6
@@ -22,6 +25,7 @@ SHA1 (patch-plugins_wordperfect_xp_ie__imp__WordPerfect.h) = 6e1e264506edabf0e1c
 SHA1 (patch-plugins_wordperfect_xp_ie__impexp__WordPerfect.cpp) = c87bc227eebcfcc2ab11ee6b5237ef8fcc47c0bc
 SHA1 (patch-plugins_wordperfect_xp_ie__impexp__WordPerfect.h) = 0a75276dc0d1d99b97155f61d9f98de7126fb0a3
 SHA1 (patch-plugins_wpg_xp_ie__impGraphic__WPG.cpp) = 36d7ca7855ddc504701e392c28e3d8530f78b81e
+SHA1 (patch-plugins_xslfo_xp_ie__exp__XSL-FO.cpp) = 8dfb1c643d70ff1813fd3d9eaa71074e8954975a
 SHA1 (patch-src_af_util_xp_ut__endian.h) = e1dd4cc0df3b0eb66dbd673fb5c0d2e3b24b30a4
 SHA1 (patch-src_af_util_xp_ut__iconv.cpp) = 613f162d4db0ba9520e0481a98564e59ccd862d4
 SHA1 (patch-src_af_util_xp_ut__iconv.h) = bbcfa2098ea77d393feb50d69de9ae29fcce302f
