@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/07/30 22:32:16 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2018/06/30 19:01:52 fhajny Exp $
 
 DISTNAME=	pyfasthash-0.6.2
 PKGNAME=	${DISTNAME:S/pyfast/${PYPKGPREFIX}-/}
@@ -15,6 +15,8 @@ GITHUB_PROJECT=	pyfasthash
 USE_LANGUAGES=	c c++
 
 EGG_NAME=	${DISTNAME:S/fast//}
+
+MAKE_ENV+=	PYVER=${_PYTHON_VERSION}
 
 .include "../../mk/endian.mk"
 .if ${MACHINE_ENDIAN} == "little"
