@@ -1,11 +1,17 @@
-# $NetBSD: Makefile,v 1.12 2018/05/29 01:22:50 christos Exp $
+# $NetBSD: Makefile,v 1.13 2018/07/01 15:47:17 christos Exp $
 #
 
-DISTNAME=		racoon2-20100526a
-PKGREVISION=		10
 CATEGORIES=		security net
-MASTER_SITES=		ftp://ftp.racoon2.wide.ad.jp/pub/racoon2/
-EXTRACT_SUFX=		.tgz
+#DISTNAME=		racoon2-20100526a
+#PKGREVISION=		10
+#MASTER_SITES=		ftp://ftp.racoon2.wide.ad.jp/pub/racoon2/
+#EXTRACT_SUFX=		.tgz
+
+DISTNAME=		racoon2
+PKGNAME=		racoon2-20180701
+MASTER_SITES= 		${MASTER_SITE_GITHUB:=zoulasc/}
+GITHUB_PROJECT=		racoon2
+GITHUB_TAG=		b2a193fc9875d1fb89c0a51690745379bc135fcf
 
 MAINTAINER=		kamada@nanohz.org
 HOMEPAGE=		http://www.racoon2.wide.ad.jp/
@@ -55,7 +61,7 @@ CONF_FILES_PERMS+=	${EGDIR}/racoon2.conf ${PKG_SYSCONFDIR}/racoon2.conf \
 				${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 600
 CONF_FILES_PERMS+=	${EGDIR}/vals.conf ${PKG_SYSCONFDIR}/vals.conf \
 				${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 600
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} --enable-natt
 
 MAKE_DIRS_PERMS+=	${VARBASE}/run/racoon2 ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
 
