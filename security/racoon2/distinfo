@@ -1,36 +1,6 @@
-$NetBSD: distinfo,v 1.6 2018/05/29 01:22:50 christos Exp $
+$NetBSD: distinfo,v 1.7 2018/07/01 15:47:17 christos Exp $
 
-SHA1 (racoon2-20100526a.tgz) = 268429af8a031dbbc279580cf98ea18331f0e2d9
-RMD160 (racoon2-20100526a.tgz) = 014cdcf78cc82ab21235a21491850cdcd1f883bf
-SHA512 (racoon2-20100526a.tgz) = 0a75fe0338c5747e3ecd7d68e28adc6d4a66ad2d33210d3d027de72bad6712068a92506caaaf8f6c6f81b204db9be2a1779cb3b1bb8bd75445210cfa746eb88a
-Size (racoon2-20100526a.tgz) = 1017077 bytes
-SHA1 (patch-aa) = e3bc810f72dac266bec992f0430572b00768cc22
-SHA1 (patch-ab) = eb6d901108ebcca90571851817137b4b3f3c594b
-SHA1 (patch-ac) = 081a2d3d694d4c20cf1fa2d9718577577280288e
-SHA1 (patch-ad) = 0d04dc7027c100de6bc04db00eddb30a12fd8715
-SHA1 (patch-ae) = 937cf84a2b6f1e8f8d288703a0556faf500bab95
-SHA1 (patch-iked_crypto__impl.h) = e6b274258eb7428cbd01cefc33ae85e001260542
-SHA1 (patch-iked_crypto__openssl.c) = 0a013e5aa5ce9747da61b8095440a16ee78de4e9
-SHA1 (patch-iked_ike__conf.c) = 82e09465e69b082abb12b3fead16eae8a7bc103b
-SHA1 (patch-iked_ikev1_ikev1.c) = ce9b22b2be12bc4cd5fa0e171cbd39c0d88d5406
-SHA1 (patch-iked_ikev1_ipsec__doi.c) = 3673d0643359eb8a68bbd867e941e1a1aae02b01
-SHA1 (patch-iked_ikev1_oakley.c) = 8823a898ec8190d177d3eda8d6c474040b08d2a1
-SHA1 (patch-iked_ikev1_pfkey.c) = 064df06b876504b611008a8a20b44266a83c5789
-SHA1 (patch-iked_ikev2.c) = 857805c92e3c78ec5f05a9068acbba03e91030b3
-SHA1 (patch-iked_ikev2__child.c) = f7f268f3e7666a3e23efd3b71c4474eeb9f8a046
-SHA1 (patch-iked_ikev2__notify.c) = 688d5b46451912b00dbf1500e7ff66f4290d7d8a
-SHA1 (patch-kinkd-crypto__openssl.c) = 4acd36a5462d3296a53966f85fb39e8888650d5a
-SHA1 (patch-kinkd-ipsec__doi.c) = f72d62de7dce9e02d4de77162926491fef3761d1
-SHA1 (patch-kinkd_bbkk__heimdal.c) = 55a4e8121df28272d2838376823bc85ec108d93f
-SHA1 (patch-kinkd_isakmp__quick.c) = 1b177838621336bfabf0416d9fc09d6e581b8c05
-SHA1 (patch-kinkd_session.c) = 6b2ec8329d0fda0b850116c21bda2a4d06634f0d
-SHA1 (patch-lib_cfparse.y) = 9e0b8ec9c09c315edde171103b97a8c403ba748e
-SHA1 (patch-lib_cfsetup.c) = 70c2409bc69ff85cef6d2e2b4e222e12537c323e
-SHA1 (patch-lib_cftoken.l) = cbda1153f7fd34713248d3d7d188a50b27d9ddcd
-SHA1 (patch-lib_if__pfkeyv2.c) = 9eb969ff0f289bc7c4aa1fa234c221b4d70d1da7
-SHA1 (patch-lib_if__spmd.c) = 0b5e5412afb826f502c040153ca5b0e50ad3d682
-SHA1 (patch-spmd_fqdn__query.c) = d44af49981bfc503fe097a40a0448215ff2367d8
-SHA1 (patch-spmd_main.c) = 7ee34b1a5b18d938806f490abe2d8cdf25caa426
-SHA1 (patch-spmd_shell.c) = 37a52cb9062fd44e0d358c7ae1605481a3604f71
-SHA1 (patch-spmd_spmd__pfkey.c) = 2bf3e70f41a779989d63d7099b2e7031a7441a27
-SHA1 (patch-spmd_spmdctl.c) = 26cd17a8b9932bbc5af8aa5d476eb0a5fad8e323
+SHA1 (racoon2-b2a193fc9875d1fb89c0a51690745379bc135fcf.tar.gz) = 5f36bf656682f794d933584485296c2556500536
+RMD160 (racoon2-b2a193fc9875d1fb89c0a51690745379bc135fcf.tar.gz) = ad6c26b5a2f818bc38989bf687f4a623b995c0df
+SHA512 (racoon2-b2a193fc9875d1fb89c0a51690745379bc135fcf.tar.gz) = b3dcbe43f7f2454f0befd4434a9335df6063e4468924d8c6ab22c960dc45802c7733f0e8720b2674666fbe953309668221352ee25c6bb1ffaafc7eab4666ce49
+Size (racoon2-b2a193fc9875d1fb89c0a51690745379bc135fcf.tar.gz) = 1144364 bytes
