@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3034 2018/06/29 11:28:05 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.3035 2018/07/02 18:53:07 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4365,3 +4365,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added www/firefox60-l10n version 60.1.0 [ryoon 2018-06-28]
 	Updated security/py-acme to 0.25.0nb1 [taca 2018-06-28]
 	Updated pkgtools/pkgin to 0.11.3 [jperkin 2018-06-29]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2018Q2 branch [gdt 2018-07-02]
