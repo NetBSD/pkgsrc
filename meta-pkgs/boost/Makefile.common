@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.73 2018/04/30 00:21:12 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.74 2018/07/02 20:32:09 adam Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -89,7 +89,7 @@ post-wrapper:
 # We can't do this at post-extract because the extract cookie will get a future
 # timestamp than the sources.  If this happens, print-PLIST does not work.
 pre-configure:
-	${FIND} ${WRKSRC} -type f -exec ${TOUCH} {} \;
+	${FIND} ${WRKSRC} -type f -exec ${TOUCH} {} +
 
 # Generate a new user.hpp or use the installed one, depending on the package
 # we are building.
