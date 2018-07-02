@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2018/06/11 23:44:15 youri Exp $
+# $NetBSD: options.mk,v 1.13 2018/07/02 17:10:29 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk3
 PKG_SUPPORTED_OPTIONS=	gtk3-atk-bridge cups debug
@@ -7,7 +7,7 @@ PKG_OPTIONS_GROUP.gdk-target=	x11
 .if exists(/System/Library/Frameworks/Quartz.framework)
 PKG_OPTIONS_GROUP.gdk-target+=	quartz
 .endif
-PKG_SUGGESTED_OPTIONS=		gtk3-atk-bridge x11 cups
+PKG_SUGGESTED_OPTIONS=		gtk3-atk-bridge x11
 
 .include "../../mk/bsd.options.mk"
 
