@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2018/04/03 09:24:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2018/07/03 07:44:00 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -280,10 +280,10 @@ ${PYSITELIB}/PIL/_tkinter_finder.pyo
 ${PYSITELIB}/PIL/_util.py
 ${PYSITELIB}/PIL/_util.pyc
 ${PYSITELIB}/PIL/_util.pyo
+${PYSITELIB}/PIL/_version.py
+${PYSITELIB}/PIL/_version.pyc
+${PYSITELIB}/PIL/_version.pyo
 ${PYSITELIB}/PIL/_webp.so
 ${PYSITELIB}/PIL/features.py
 ${PYSITELIB}/PIL/features.pyc
 ${PYSITELIB}/PIL/features.pyo
-${PYSITELIB}/PIL/version.py
-${PYSITELIB}/PIL/version.pyc
-${PYSITELIB}/PIL/version.pyo
