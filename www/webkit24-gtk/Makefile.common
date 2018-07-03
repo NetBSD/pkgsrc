@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2017/09/06 09:03:05 wiz Exp $
+# $NetBSD: Makefile.common,v 1.11 2018/07/03 05:03:42 adam Exp $
 # used by www/webkit24-gtk/Makefile
 # used by www/webkit24-gtk3/Makefile
 
@@ -59,7 +59,7 @@ BUILD_DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
 CONFIGURE_ENV+=	RUBY=${RUBY}
 
 PYTHON_FOR_BUILD_ONLY=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.10.2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 1.10.2
 .include "../../lang/python/application.mk"
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/01/01 14:43:35 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2018/07/03 05:03:12 adam Exp $
 
 DISTNAME=	pytemplate-1.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ COMMENT=	Pytemplate gives python developpers a starting framework
 USE_LANGUAGES=			# none
 
 REPLACE_PYTHON=			${WRKSRC}/*.py
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.5.1
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 1.5.1
 
 EGDIR=				${PREFIX}/share/examples/${PYPKGPREFIX}-pytemplate
 
