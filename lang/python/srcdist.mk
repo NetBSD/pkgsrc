@@ -1,4 +1,4 @@
-# $NetBSD: srcdist.mk,v 1.36 2017/01/01 14:34:26 adam Exp $
+# $NetBSD: srcdist.mk,v 1.37 2018/07/03 03:55:40 adam Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -11,7 +11,7 @@ WRKSRC=		${WRKDIR}/${PYSUBDIR}
 # This is used for standard modules shipped with Python but build as
 # separate packages.
 
-.  if ${PYVERSSUFFIX} == "3.5" || ${PYVERSSUFFIX} == "3.6"
+.  if ${PYVERSSUFFIX} == "3.5" || ${PYVERSSUFFIX} == "3.6" || ${PYVERSSUFFIX} == "3.7"
 EXTRACT_ELEMENTS+=	${PYSUBDIR}/Modules/clinic
 .  endif
 
