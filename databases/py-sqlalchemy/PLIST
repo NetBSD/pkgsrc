@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2018/01/18 09:12:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2018/07/03 05:34:20 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -520,6 +520,9 @@ ${PYSITELIB}/sqlalchemy/testing/schema.pyo
 ${PYSITELIB}/sqlalchemy/testing/suite/__init__.py
 ${PYSITELIB}/sqlalchemy/testing/suite/__init__.pyc
 ${PYSITELIB}/sqlalchemy/testing/suite/__init__.pyo
+${PYSITELIB}/sqlalchemy/testing/suite/test_cte.py
+${PYSITELIB}/sqlalchemy/testing/suite/test_cte.pyc
+${PYSITELIB}/sqlalchemy/testing/suite/test_cte.pyo
 ${PYSITELIB}/sqlalchemy/testing/suite/test_ddl.py
 ${PYSITELIB}/sqlalchemy/testing/suite/test_ddl.pyc
 ${PYSITELIB}/sqlalchemy/testing/suite/test_ddl.pyo
