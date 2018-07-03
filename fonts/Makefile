@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.318 2018/06/16 03:09:38 markd Exp $
+# $NetBSD: Makefile,v 1.319 2018/07/03 06:00:25 maya Exp $
 #
 
 COMMENT=	Fonts
@@ -50,6 +50,7 @@ SUBDIR+=	chkfontpath
 SUBDIR+=	consolamono-ttf
 SUBDIR+=	courier-prime
 SUBDIR+=	croscorefonts
+SUBDIR+=	culmus
 SUBDIR+=	cyberbase-ttf
 SUBDIR+=	cyberbit-ttf
 SUBDIR+=	cyr-rfx-bulgarian-mik
