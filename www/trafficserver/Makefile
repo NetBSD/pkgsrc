@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/04/29 21:32:08 adam Exp $
+# $NetBSD: Makefile,v 1.8 2018/07/03 05:03:41 adam Exp $
 
 DISTNAME=	trafficserver-7.1.2
 PKGREVISION=	1
@@ -19,7 +19,7 @@ GNU_CONFIGURE=	yes
 
 # For man pages
 PYTHON_FOR_BUILD_ONLY=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37
 BUILD_DEPENDS+=			${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
 .include "../../mk/bsd.prefs.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/04/26 10:16:43 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/03 05:03:11 adam Exp $
 
 DISTNAME=	flufl.testing-0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://gitlab.com/warsaw/flufl.testing/
 COMMENT=	Small collection of test tool plugins
 LICENSE=	apache-2.0
 
-PYTHON_VERSIONS_ACCEPTED=	36 35 34
+PYTHON_VERSIONS_ACCEPTED=	37 36 35 34
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

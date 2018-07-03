@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.version,v 1.62 2018/06/17 11:24:12 wiz Exp $
+# $NetBSD: Makefile.version,v 1.63 2018/07/03 05:03:12 adam Exp $
 
 VERSION=	4.6.1
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 4.3
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 4.3
 # see also https://www.mercurial-scm.org/wiki/SupportedPythonVersions
 #
 # the following setup argument was requested when compiling

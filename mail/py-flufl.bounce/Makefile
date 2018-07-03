@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/04/25 20:17:03 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/03 05:03:23 adam Exp $
 
 DISTNAME=	flufl.bounce-3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://launchpad.net/flufl.bounce/
 COMMENT=	Email bounce detectors
 LICENSE=	apache-2.0
 
-PYTHON_VERSIONS_ACCEPTED=	36 35 34
+PYTHON_VERSIONS_ACCEPTED=	37 36 35 34
 
 DEPENDS+=	${PYPKGPREFIX}-atpublic-[0-9]*:../../devel/py-atpublic
 DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface

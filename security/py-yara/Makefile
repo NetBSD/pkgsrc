@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/06/07 20:46:34 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2018/07/03 05:03:32 adam Exp $
 
 DISTNAME=	yara-python-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-yara-${VERSION}
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=VirusTotal/}
 
 COMMENT=	Yara python bindings
 
-PYTHON_VERSIONS_INCOMPATIBLE=   34 35 36
+PYTHON_VERSIONS_INCOMPATIBLE=   34 35 36 37
 
 .include "../../security/yara/Makefile.common"
 .include "../../security/yara/buildlink3.mk"

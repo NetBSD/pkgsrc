@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/11/24 22:15:59 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2018/07/03 05:03:37 adam Exp $
 
 DISTNAME=	relatorio-0.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 
 USE_LANGUAGES=		#none
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2 via py-pycha
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-gtk2 via py-pycha
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

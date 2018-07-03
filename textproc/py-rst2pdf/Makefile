@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/03/16 20:00:39 darcy Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/03 05:03:37 adam Exp $
 
 DISTNAME=      rst2pdf-0.93
 PKGNAME=       ${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=       Convert restructured text to PDF via reportlab
 LICENSE=       mit
 
 USE_LANGUAGES=      # none
-PYTHON_VERSIONS_INCOMPATIBLE= 33 34 35 36
+PYTHON_VERSIONS_INCOMPATIBLE= 33 34 35 36 37
 REPLACE_PYTHON= rst2pdf/__init__.py
 
 DEPENDS+= ${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils

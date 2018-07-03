@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2018/04/29 21:31:48 adam Exp $
+# $NetBSD: Makefile,v 1.34 2018/07/03 05:03:21 adam Exp $
 
 DISTNAME=		uhd-3.11.0.0
 PKGREVISION=		1
@@ -15,7 +15,7 @@ BUILD_DEPENDS+=		${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah
 BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 BUILD_DEPENDS+=		${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-cheetah
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-cheetah
 
 CMAKE_ARGS+=		-DRST2HTML_EXECUTABLE=${PREFIX}/bin/rst2html-${PYVERSSUFFIX}.py
 CMAKE_ARGS+=		-Wno-dev

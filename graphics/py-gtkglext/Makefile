@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2018/04/16 14:34:40 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2018/07/03 05:03:20 adam Exp $
 
 DISTNAME=	pygtkglext-1.1.0
 PKGNAME=	${PYPKGPREFIX}-pygtkglext-1.1.0
@@ -16,7 +16,7 @@ CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-gtk2
 
 PKGCONFIG_OVERRIDE+=	pygtkglext.pc.in
 

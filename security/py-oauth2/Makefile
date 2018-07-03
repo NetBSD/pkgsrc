@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/07/31 05:29:30 adam Exp $
+# $NetBSD: Makefile,v 1.9 2018/07/03 05:03:32 adam Exp $
 
 DISTNAME=	oauth2-1.5.211
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-httplib2>=0.7.7:../../www/py-httplib2
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.5.211
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 1.5.211
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

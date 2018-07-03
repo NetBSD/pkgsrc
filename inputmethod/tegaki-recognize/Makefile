@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/01/01 14:43:44 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2018/07/03 05:03:22 adam Exp $
 
 DISTNAME=	tegaki-recognize-0.3.1.2
 PKGREVISION=	1
@@ -15,7 +15,7 @@ DEPENDS+=	tegaki-pygtk>=0.2:../../inputmethod/tegaki-pygtk
 USE_LANGUAGES=	# none
 
 REPLACE_PYTHON=	bin/tegaki-recognize
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 0.3.1.2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 0.3.1.2
 
 .include "../../lang/python/distutils.mk"
 .include "../../lang/python/application.mk"

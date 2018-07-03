@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2017/01/01 14:43:26 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2018/07/03 05:03:05 adam Exp $
 
 .include "../../chat/xchat/Makefile.common"
 
@@ -28,7 +28,7 @@ SUBST_FILES.libutil=	configure
 SUBST_SED.libutil=	-e 's/ -lutil//g'
 .endif
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 2.8.8
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 2.8.8
 
 .include "../../lang/python/application.mk"
 .include "../../mk/pthread.buildlink3.mk"
