@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/02/20 17:00:35 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2018/07/03 05:03:15 adam Exp $
 
 DISTNAME=	nts-78
 PKGREVISION=	1
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-wxWidgets>=2.8.7:../../x11/py-wxWidgets
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-wxWidgets
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-wxWidgets
 
 USE_LANGUAGES=	# none
 

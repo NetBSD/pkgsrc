@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2017/09/03 08:37:00 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2018/07/03 05:03:32 adam Exp $
 
 DISTNAME=		prewikka-${VERSION}
 PKGNAME=		${PYPKGPREFIX}-prewikka-${VERSION}
@@ -24,7 +24,7 @@ USE_TOOLS+=		msgfmt
 PYDISTUTILSPKG=		yes
 PYSETUP=		setup.py
 REPLACE_PYTHON=	scripts/prewikka-httpd
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-cheetah
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-cheetah
 
 PREWIKKA_USER?=		prewikka
 PREWIKKA_GROUP?=	prewikka

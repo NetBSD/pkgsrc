@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/09/04 18:08:20 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2018/07/03 05:03:08 adam Exp $
 
 DISTNAME=	RBTools-0.7.6
 CATEGORIES=	devel
@@ -13,7 +13,7 @@ USE_LANGUAGES=	# none
 
 REPLACE_PYTHON=		ez_setup.py setup.py rbtools/postreview.py
 REPLACE_PYTHON+=	contrib/internal/release.py
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 0.2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 0.2
 
 DEPENDS+=   ${PYPKGPREFIX}-six>=1.8.0:../../lang/py-six
 

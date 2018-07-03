@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2018/04/16 14:35:02 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2018/07/03 05:03:27 adam Exp $
 
 VERSION=	1.0.1
 DISTNAME=	Nagstamon-${VERSION}
@@ -26,7 +26,7 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 REPLACE_PYTHON=		${WRKSRC}/*.py
 REPLACE_PYTHON+=	${WRKSRC}/Nagstamon/Server/Multisite.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-libxslt, py-ORBit via py-gnome2, py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-libxslt, py-ORBit via py-gnome2, py-gtk2
 
 SUBST_CLASSES+=		mandir
 SUBST_STAGE.mandir=	pre-configure

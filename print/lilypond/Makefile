@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2018/04/16 14:35:06 wiz Exp $
+# $NetBSD: Makefile,v 1.117 2018/07/03 05:03:30 adam Exp $
 
 DISTNAME=	lilypond-2.18.2
 PKGREVISION=	11
@@ -54,7 +54,7 @@ CONFIGURE_ARGS+=	--with-ncsb-dir=${PREFIX}/share/fonts/urw
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
 REPLACE_PYTHON+= scripts/build/yyout2grammar.py
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 2.18.0
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 2.18.0
 PLIST_SUBST+=	PKGVERSION=${PKGVERSION:S/nb${PKGREVISION}//}
 
 # needs FlexLexer.h

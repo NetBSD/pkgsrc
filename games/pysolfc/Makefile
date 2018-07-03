@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2018/01/14 17:34:01 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2018/07/03 05:03:18 adam Exp $
 
 DISTNAME=	PySolFC-2.0
 PKGNAME=	${DISTNAME:tl}
@@ -13,7 +13,7 @@ COMMENT=	Over 1000 solitaire games
 LICENSE=	gnu-gpl-v3
 
 PYDISTUTILSPKG=			yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-imaging
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-imaging
 
 REPLACE_PYTHON+= \
 	data/themes/clearlooks/create_imgs.py \

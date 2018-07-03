@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.139 2018/06/17 13:54:39 wiz Exp $
+# $NetBSD: Makefile,v 1.140 2018/07/03 05:03:41 adam Exp $
 
 DISTNAME=	webkitgtk-2.20.3
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
@@ -147,7 +147,7 @@ BUILD_DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
 CMAKE_ARGS+=	-DRUBY_EXECUTABLE=${RUBY}
 
 PYTHON_FOR_BUILD_ONLY=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.10.2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 1.10.2
 .include "../../lang/python/application.mk"
 CMAKE_ARGS+=	-DPYTHON_EXECUTABLE=${PYTHONBIN}
 
