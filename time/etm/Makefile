@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2017/02/20 17:00:36 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2018/07/03 05:03:37 adam Exp $
 
 DISTNAME=	etm-877
 PKGREVISION=	1
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-wxWidgets>=2.8.7:../../x11/py-wxWidgets
 DEPENDS+=	${PYPKGPREFIX}-icalendar>=2.0.1:../../time/py-icalendar
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-wxWidgets
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-wxWidgets
 
 USE_LANGUAGES=	# none
 

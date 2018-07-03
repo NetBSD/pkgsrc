@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2017/01/01 14:43:45 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2018/07/03 05:03:22 adam Exp $
 
 DISTNAME=	basicproperty-0.6.9a
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ USE_LANGUAGES=	c
 
 REPLACE_PYTHON=	basicproperty/tests/test.py
 EGG_NAME=	${DISTNAME}0
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37
 
 post-extract:
 	# wrong architecture binary

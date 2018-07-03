@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2018/06/27 10:44:15 maya Exp $
+# $NetBSD: Makefile,v 1.67 2018/07/03 05:03:35 adam Exp $
 
 VERSION=	4.2.5
 VERSION_IPXE=	1.0.0
@@ -26,7 +26,7 @@ BUILD_DEPENDS+= acpica-utils-[0-9]*:../../sysutils/acpica-utils
 DEPENDS+=		${PYPKGPREFIX}-curses>=0nb4:../../devel/py-curses
 DEPENDS+=		${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-xml
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-xml
 
 PKG_SYSCONFSUBDIR=	xen
 

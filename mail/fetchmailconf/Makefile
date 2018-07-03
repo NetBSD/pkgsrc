@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2018/05/22 09:23:33 triaxx Exp $
+# $NetBSD: Makefile,v 1.97 2018/07/03 05:03:22 adam Exp $
 
 DISTNAME=	fetchmail-6.3.26
 PKGNAME=	${DISTNAME:S/fetchmail/fetchmailconf/}
@@ -30,7 +30,7 @@ INSTALL_TARGET=		install-pythonPYTHON
 
 PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
 REPLACE_PYTHON=	fetchmailconf.py
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 6.3.22
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 6.3.22
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/fetchmailconf.py ${DESTDIR}${PREFIX}/bin/fetchmailconf

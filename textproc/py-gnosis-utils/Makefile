@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2017/01/01 14:44:01 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2018/07/03 05:03:36 adam Exp $
 
 DISTNAME=	Gnosis_Utils-1.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Gnosis_Utils/gnosis-utils/}
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 USE_LANGUAGES=	#none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.2.2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 1.2.2
 
 CONFLICTS+=	${PYPKGPREFIX}-Gnosis-Utils-[0-9]*
 
