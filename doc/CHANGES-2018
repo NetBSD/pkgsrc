@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3044 2018/07/03 07:16:52 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3045 2018/07/03 07:48:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4382,3 +4382,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-selenium to 3.13.0 [adam 2018-07-03]
 	Updated devel/py-py to 1.5.4 [adam 2018-07-03]
 	Updated textproc/py-lxml to 4.2.3 [adam 2018-07-03]
+	Updated graphics/py-Pillow to 5.2.0 [adam 2018-07-03]
+	Updated devel/py-hypothesis to 3.65.0 [adam 2018-07-03]
