@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3047 2018/07/03 11:01:48 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.3048 2018/07/03 12:28:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4390,3 +4390,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/erlang-doc to 21.0 [fhajny 2018-07-03]
 	Updated lang/erlang-man to 21.0 [fhajny 2018-07-03]
 	Updated lang/erlang to 21.0 [fhajny 2018-07-03]
+	Updated converters/py-simplejson to 3.16.0 [adam 2018-07-03]
+	Updated devel/py-ruamel-yaml to 0.15.42 [adam 2018-07-03]
