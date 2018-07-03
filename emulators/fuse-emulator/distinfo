@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.11 2018/06/12 11:02:39 adam Exp $
+$NetBSD: distinfo,v 1.12 2018/07/03 14:34:40 adam Exp $
 
-SHA1 (fuse-1.5.4.tar.gz) = 4ebd5033941a6dde7c95eaf055797a88633f567b
-RMD160 (fuse-1.5.4.tar.gz) = 4ef9403cfa3bc1e7076d281fcee35b1390ca280b
-SHA512 (fuse-1.5.4.tar.gz) = 17db93dc9aed8aceaf2eca7035a2cf0b00b77a77c6f56875f57336fc983e206efad8693c1b9235562fbcc914cdff857d97e41786b5048d21e5703a12055d882f
-Size (fuse-1.5.4.tar.gz) = 1627729 bytes
+SHA1 (fuse-1.5.5.tar.gz) = 2fb0f030d7a721e4c9919304c01b77193f1ac119
+RMD160 (fuse-1.5.5.tar.gz) = 3b2f8be24cb388bc063dc9da799d2a56c23d50ea
+SHA512 (fuse-1.5.5.tar.gz) = 186635b632df9767b9ffcbba484370adc47833bd06240474db9c4dfe88b03209e15fc0c86a2f200b2cc7bd95ad93bf1f93f38d7f669b5c163f68e80802fb1041
+Size (fuse-1.5.5.tar.gz) = 1629577 bytes
 SHA1 (patch-configure) = 0b8b90751bd34efcee5c1bd9e4cb8687e972b127
 SHA1 (patch-sound_coreaudiosound.c) = e293cd00d9466af4e49a7c0a1cb9b535aebf6f4d
 SHA1 (patch-sound_osssound.c) = e83d80c984592b4e52faccbea35cdc9b54b71933
