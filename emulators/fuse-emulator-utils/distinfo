@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2018/06/12 11:05:08 adam Exp $
+$NetBSD: distinfo,v 1.10 2018/07/03 14:37:16 adam Exp $
 
-SHA1 (fuse-utils-1.4.2.tar.gz) = 8a89f911ae4198bef613de6915829003ceb4a643
-RMD160 (fuse-utils-1.4.2.tar.gz) = 51fb40385870401b71c1c1a1a81bcdae996a24e6
-SHA512 (fuse-utils-1.4.2.tar.gz) = 144d4a51be8b1c49285d4fe4dbca9e855f98833d6f774c2f0a032a7f3cfccbf1d76a20427eca5706e8a1fc84d98ae3698213099be4c6a5f12bb110ca19e1271d
-Size (fuse-utils-1.4.2.tar.gz) = 500692 bytes
+SHA1 (fuse-utils-1.4.3.tar.gz) = 8f6f71c6af4264829cf373bbc4edca9c786029f3
+RMD160 (fuse-utils-1.4.3.tar.gz) = 8677aad5cced5fee274e1e1253dfa9c12bf0cc92
+SHA512 (fuse-utils-1.4.3.tar.gz) = 13404d1be81a2de9262cd79cce9dd8dc3f17238fdbb75da8a724b76b0976c03f34da9978af36b808103fedcf3f5d5da4bb10f251c5510127d59ca8de5607b99e
+Size (fuse-utils-1.4.3.tar.gz) = 501006 bytes
 SHA1 (patch-configure) = bfcc95f0a558f0d10037c9ac125021171f641b67
