@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3051 2018/07/03 14:29:15 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3052 2018/07/03 14:37:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4396,3 +4396,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/xentools46 to 4.6.6nb5 [maya 2018-07-03]
 	Updated archivers/zstd to 1.3.5 [adam 2018-07-03]
 	Updated archivers/unrar to 5.6.5 [adam 2018-07-03]
+	Updated emulators/libspectrum to 1.4.4 [adam 2018-07-03]
+	Updated emulators/fuse-emulator to 1.5.5 [adam 2018-07-03]
+	Updated emulators/fuse-emulator-utils to 1.4.3 [adam 2018-07-03]
