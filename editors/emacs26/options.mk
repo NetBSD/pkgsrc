@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2018/06/20 11:04:19 mef Exp $
+# $NetBSD: options.mk,v 1.2 2018/07/03 11:24:08 mef Exp $
 
 ### Set options
 PKG_OPTIONS_VAR=			PKG_OPTIONS.emacs
@@ -17,7 +17,7 @@ PKG_SUGGESTED_OPTIONS.Darwin=		nextstep
 # gtk in next line implies gtk2, xaw = athena = lucid
 PKG_OPTIONS_GROUP.toolkit=		gtk motif xaw lucid
 # gtk is default in the logic below (even not included in SUGGESTED_=
-# gconf, gtk and xft2 will be ingnored for nextstep even shown as selected.
+# gconf, gtk and xft2 will be ignored for nextstep even shown as selected.
 
 PKG_SUGGESTED_OPTIONS=	dbus gconf gnutls imagemagick svg xaw3d xft2 xml x11
 
@@ -82,11 +82,11 @@ CONFIGURE_ARGS+=	--without-gconf
 ###
 ### Support ImageMagick
 ###
-.if !empty(PKG_OPTIONS:Mimagemagick)
+.  if !empty(PKG_OPTIONS:Mimagemagick)
 .include "../../graphics/ImageMagick/buildlink3.mk"
-.else
+.  else
 CONFIGURE_ARGS+=	--without-imagemagick
-.endif
+.  endif
 
 ###
 ### Support Xaw3d (This is only valid with Lucid Toolkit)
