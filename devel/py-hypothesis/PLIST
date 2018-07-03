@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2018/06/16 12:09:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2018/07/03 07:47:45 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -102,6 +102,9 @@ ${PYSITELIB}/hypothesis/internal/coverage.pyo
 ${PYSITELIB}/hypothesis/internal/detection.py
 ${PYSITELIB}/hypothesis/internal/detection.pyc
 ${PYSITELIB}/hypothesis/internal/detection.pyo
+${PYSITELIB}/hypothesis/internal/entropy.py
+${PYSITELIB}/hypothesis/internal/entropy.pyc
+${PYSITELIB}/hypothesis/internal/entropy.pyo
 ${PYSITELIB}/hypothesis/internal/escalation.py
 ${PYSITELIB}/hypothesis/internal/escalation.pyc
 ${PYSITELIB}/hypothesis/internal/escalation.pyo
@@ -129,12 +132,16 @@ ${PYSITELIB}/hypothesis/internal/validation.pyo
 ${PYSITELIB}/hypothesis/provisional.py
 ${PYSITELIB}/hypothesis/provisional.pyc
 ${PYSITELIB}/hypothesis/provisional.pyo
+${PYSITELIB}/hypothesis/py.typed
 ${PYSITELIB}/hypothesis/reporting.py
 ${PYSITELIB}/hypothesis/reporting.pyc
 ${PYSITELIB}/hypothesis/reporting.pyo
 ${PYSITELIB}/hypothesis/searchstrategy/__init__.py
 ${PYSITELIB}/hypothesis/searchstrategy/__init__.pyc
 ${PYSITELIB}/hypothesis/searchstrategy/__init__.pyo
+${PYSITELIB}/hypothesis/searchstrategy/attrs.py
+${PYSITELIB}/hypothesis/searchstrategy/attrs.pyc
+${PYSITELIB}/hypothesis/searchstrategy/attrs.pyo
 ${PYSITELIB}/hypothesis/searchstrategy/collections.py
 ${PYSITELIB}/hypothesis/searchstrategy/collections.pyc
 ${PYSITELIB}/hypothesis/searchstrategy/collections.pyo
