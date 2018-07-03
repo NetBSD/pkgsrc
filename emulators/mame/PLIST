@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2018/04/29 20:52:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.26 2018/07/03 05:40:15 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -241,6 +241,7 @@ share/mame/hash/hp85_rom.xml
 share/mame/hash/hp9835a_rom.xml
 share/mame/hash/hp9845a_rom.xml
 share/mame/hash/hp9845b_rom.xml
+share/mame/hash/hp9k3xx_flop.xml
 share/mame/hash/hp_ipc.xml
 share/mame/hash/ht68k.xml
 share/mame/hash/hx20_rom.xml
@@ -469,6 +470,7 @@ share/mame/hash/special_flop.xml
 share/mame/hash/specpls3_flop.xml
 share/mame/hash/spectrum_cart.xml
 share/mame/hash/spectrum_cass.xml
+share/mame/hash/squale_cart.xml
 share/mame/hash/st_cart.xml
 share/mame/hash/st_flop.xml
 share/mame/hash/stepone_flop.xml
