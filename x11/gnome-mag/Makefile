@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2018/04/16 14:33:59 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2018/07/03 05:03:42 adam Exp $
 
 DISTNAME=		gnome-mag-0.16.3
 PKGREVISION=		28
@@ -28,7 +28,7 @@ SUBST_SED.doxy=		-e 's,SUBDIRS = reference,SUBDIRS =,'
 DEPENDS+=	${PYPKGPREFIX}-gnome2-desktop-[0-9]*:../../x11/py-gnome2-desktop
 REPLACE_PYTHON=	colorblind/colorblind-applet.py
 PY_PATCHPLIST=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-ORBit via py-gnome2, py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-ORBit via py-gnome2, py-gtk2
 .include "../../misc/colorblind/buildlink3.mk"
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/01/01 14:43:49 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2018/07/03 05:03:26 adam Exp $
 
 DISTNAME=	sickbeard-507
 PKGREVISION=	3
@@ -29,7 +29,7 @@ AUTO_MKDIRS=	yes
 
 PY_PATCHPLIST=			yes
 REPLACE_PYTHON=			*.py */*.py */*/*.py
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-cheetah
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-cheetah
 
 BUILD_DEFS+=		VARBASE
 OWN_DIRS_PERMS=		${VARBASE}/sickbeard /sickbeard sickbeard 750

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2018/04/29 04:45:30 dholland Exp $
+# $NetBSD: Makefile,v 1.57 2018/07/03 05:03:30 adam Exp $
 
 DISTNAME=		scribus-1.4.3
 PKGREVISION=		17
@@ -20,7 +20,7 @@ CMAKE_ARGS+=	-DPNG_LIBRARY_RELEASE=${LOCALBASE}/lib
 # XXX not yet
 #CMAKE_ARGS+=	-DWANT_HUNSPELL:BOOL=ON
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.4.3
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 1.4.3
 
 INSTALLATION_DIRS+=	share/pixmaps
 

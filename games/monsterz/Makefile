@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/06/17 13:48:16 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2018/07/03 05:03:18 adam Exp $
 
 DISTNAME=		monsterz-0.7.1
 PKGREVISION=		4
@@ -13,7 +13,7 @@ DEPENDS+=		${PYPKGPREFIX}-game-[0-9]*:../../devel/py-game
 DEPENDS+=		${PYPKGPREFIX}-Numeric-[0-9]*:../../math/py-Numeric
 
 REPLACE_PYTHON=			monsterz.py
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-Numeric
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-Numeric
 
 MAKE_ENV+=		GAMEOWN=${GAMEOWN:Q}
 MAKE_ENV+=		GAMEGRP=${GAMEGRP:Q}

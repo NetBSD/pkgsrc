@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/01/01 14:43:34 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2018/07/03 05:03:12 adam Exp $
 
 DISTNAME=	06d46e3de6f7
 PKGNAME=	${PYPKGPREFIX}-open-vcdiff-0.1pre${DISTNAME}
@@ -16,7 +16,7 @@ WRKSRC=		${WRKDIR}/bluehorn-openvcdiff-python-${DISTNAME}
 
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 06d46e3de6f7
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 06d46e3de6f7
 
 .include "../../devel/open-vcdiff/buildlink3.mk"
 .include "../../lang/python/egg.mk"

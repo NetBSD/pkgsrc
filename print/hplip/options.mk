@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2017/01/01 14:43:53 wiz Exp $
+# $NetBSD: options.mk,v 1.14 2018/07/03 05:03:30 adam Exp $
 #
 # HPLIP dependencies are detailed in the following page:
 # http://hplipopensource.com/hplip-web/install/manual/distros/other.html
@@ -48,7 +48,7 @@ MAKE_DIRS+=		${PKG_SYSCONFDIR}/dbus-1/system.d
 .include "../../security/policykit/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 DEPENDS+=	${PYPKGPREFIX}-notify-[0-9]*:../../sysutils/py-notify
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-notify
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-notify
 . if !empty(PKG_OPTIONS:Mqt4)
 PLIST_SRC+=		PLIST.qt4
 CONFIGURE_ARGS+=	--enable-qt4

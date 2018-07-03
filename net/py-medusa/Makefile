@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/09/04 18:00:58 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2018/07/03 05:03:28 adam Exp $
 
 DISTNAME=	medusa-0.5.4
 PKGREVISION=	1
@@ -12,7 +12,7 @@ COMMENT=	Framework for writing asynchronous socket-based servers
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
