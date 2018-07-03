@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.84 2018/04/01 20:29:38 fhajny Exp $
+# $NetBSD: Makefile,v 1.85 2018/07/03 11:01:21 fhajny Exp $
 
-DISTNAME=		otp_src_${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}
+DISTNAME=		otp_src_${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}${!empty(DIST_VERSION_PATCH):?.:}${DIST_VERSION_PATCH}
 PKGNAME=		${DISTNAME:S/otp_src_/erlang-/}
 CATEGORIES=		lang
 MASTER_SITES=		http://www.erlang.org/download/
@@ -15,7 +15,7 @@ DIST_SUBDIR=		erlang
 GNU_CONFIGURE=		yes
 USE_GNU_CONFIGURE_HOST=	${USE_CROSS_COMPILE}
 OVERRIDE_DIRDEPTH=	4
-USE_TOOLS+=		gmake perl:run flex
+USE_TOOLS+=		awk gmake perl:run flex
 
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 
@@ -80,16 +80,27 @@ CHECK_RELRO_SKIP+=	lib/erlang/lib/megaco-${VERSION.megaco}/priv/lib/megaco_flex_
 
 .include "options.mk"
 
-.include "Makefile.versions"
-
 ###
 ### Ensure this gets rebuilt.
 ###
 pre-build:
 	${RUN} ${RM} -f ${WRKSRC}/lib/stdlib/ebin/dets_v9.beam
 
+###
+### Generata list of module versions.
+###
+.PHONY: versions
+versions: do-extract
+	@${ECHO} "# \$$NetBSD\$$" > ${.CURDIR}/versions.mk
+	@${ECHO} "# Do not edit, regenerate using 'make versions'" >> ${.CURDIR}/versions.mk
+	@${ECHO} "_VERSIONS= \\" >> ${.CURDIR}/versions.mk
+	${AWK} -F: '/OTP-${PKGVERSION_NOREV} :/{print $$2}' ${WRKSRC}/otp_versions.table |\
+		${SED} -e 's/# //g' -e 's/-/ /g' >> ${.CURDIR}/versions.mk
+
 post-install:
 	chmod -R go-w ${DESTDIR}${PREFIX}/lib/erlang/lib
+
+.include "Makefile.versions"
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
