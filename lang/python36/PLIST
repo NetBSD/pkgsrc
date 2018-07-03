@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2018/03/29 15:28:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2018/07/03 03:52:41 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1351,7 +1351,7 @@ lib/python${PY_VER_SUFFIX}/ensurepip/__init__.pyo
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.py
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyo
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-9.0.3-py2.py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-10.0.1-py2.py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-39.0.1-py2.py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyc
@@ -1569,6 +1569,9 @@ lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_browser.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_calltips.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_calltips.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_calltips.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_codecontext.py
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_codecontext.pyc
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_codecontext.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_colorizer.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_colorizer.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_colorizer.pyo
@@ -2864,6 +2867,9 @@ lib/python${PY_VER_SUFFIX}/test/libregrtest/save_env.pyo
 lib/python${PY_VER_SUFFIX}/test/libregrtest/setup.py
 lib/python${PY_VER_SUFFIX}/test/libregrtest/setup.pyc
 lib/python${PY_VER_SUFFIX}/test/libregrtest/setup.pyo
+lib/python${PY_VER_SUFFIX}/test/libregrtest/utils.py
+lib/python${PY_VER_SUFFIX}/test/libregrtest/utils.pyc
+lib/python${PY_VER_SUFFIX}/test/libregrtest/utils.pyo
 lib/python${PY_VER_SUFFIX}/test/list_tests.py
 lib/python${PY_VER_SUFFIX}/test/list_tests.pyc
 lib/python${PY_VER_SUFFIX}/test/list_tests.pyo
@@ -3132,6 +3138,9 @@ lib/python${PY_VER_SUFFIX}/test/test_base64.pyo
 lib/python${PY_VER_SUFFIX}/test/test_baseexception.py
 lib/python${PY_VER_SUFFIX}/test/test_baseexception.pyc
 lib/python${PY_VER_SUFFIX}/test/test_baseexception.pyo
+lib/python${PY_VER_SUFFIX}/test/test_bdb.py
+lib/python${PY_VER_SUFFIX}/test/test_bdb.pyc
+lib/python${PY_VER_SUFFIX}/test/test_bdb.pyo
 lib/python${PY_VER_SUFFIX}/test/test_bigaddrspace.py
 lib/python${PY_VER_SUFFIX}/test/test_bigaddrspace.pyc
 lib/python${PY_VER_SUFFIX}/test/test_bigaddrspace.pyo
