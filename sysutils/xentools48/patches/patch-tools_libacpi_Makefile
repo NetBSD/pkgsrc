@@ -1,0 +1,25 @@
+$NetBSD: patch-tools_libacpi_Makefile,v 1.1 2018/07/03 14:06:41 maya Exp $
+
+Fix for newer iasl. From royger upstream.
+https://xenbits.xen.org/gitweb/?p=xen.git;a=commit;h=858dbaaeda33b05c1ac80aea0ba9a03924e09005
+
+--- tools/libacpi/Makefile.orig	2018-01-23 13:49:58.000000000 +0000
++++ tools/libacpi/Makefile
+@@ -43,7 +43,7 @@ all: $(C_SRC) $(H_SRC)
+ 
+ $(H_SRC): $(ACPI_BUILD_DIR)/%.h: %.asl iasl
+ 	iasl -vs -p $(ACPI_BUILD_DIR)/$*.$(TMP_SUFFIX) -tc $<
+-	sed -e 's/AmlCode/$*/g' $(ACPI_BUILD_DIR)/$*.hex >$@
++	sed -e 's/AmlCode/$*/g' -e 's/_aml_code//g' $(ACPI_BUILD_DIR)/$*.hex >$@
+ 	rm -f $(addprefix $(ACPI_BUILD_DIR)/, $*.aml $*.hex)
+  
+ $(MK_DSDT): mk_dsdt.c
+@@ -76,7 +76,7 @@ $(ACPI_BUILD_DIR)/dsdt_anycpu_arm.asl: $
+ 
+ $(C_SRC): $(ACPI_BUILD_DIR)/%.c: iasl $(ACPI_BUILD_DIR)/%.asl
+ 	iasl -vs -p $(ACPI_BUILD_DIR)/$*.$(TMP_SUFFIX) -tc $(ACPI_BUILD_DIR)/$*.asl
+-	sed -e 's/AmlCode/$*/g' $(ACPI_BUILD_DIR)/$*.hex > $@.$(TMP_SUFFIX)
++	sed -e 's/AmlCode/$*/g' -e 's/_aml_code//g' $(ACPI_BUILD_DIR)/$*.hex > $@.$(TMP_SUFFIX)
+ 	echo "int $*_len=sizeof($*);" >> $@.$(TMP_SUFFIX)
+ 	mv -f $@.$(TMP_SUFFIX) $@
+ 	rm -f $(addprefix $(ACPI_BUILD_DIR)/, $*.aml $*.hex)

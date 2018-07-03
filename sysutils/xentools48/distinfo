@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2018/03/13 15:15:01 bouyer Exp $
+$NetBSD: distinfo,v 1.11 2018/07/03 14:06:41 maya Exp $
 
 SHA1 (xen48/gmp-4.3.2.tar.bz2) = c011e8feaf1bb89158bd55eaabd7ef8fdd101a2c
 RMD160 (xen48/gmp-4.3.2.tar.bz2) = a8f3f41501ece290c348aeb4444bbea40bc53e71
@@ -83,6 +83,7 @@ SHA1 (patch-tools_hotplug_NetBSD_vif-bridge) = 6d5288c9c47fe81b388ea73f9a71ca397
 SHA1 (patch-tools_hotplug_NetBSD_vif-ip) = cb8fd1150f6ac24fa853444618437f7d984b4282
 SHA1 (patch-tools_hotplug_common_Makefile) = 71059eddc2d7183b8b43aa976d9ae5f3a1fd75df
 SHA1 (patch-tools_include_xen-sys_NetBSD_gntdev.h) = ce4f7160e92d23afa029c9548cead180fe980ff4
+SHA1 (patch-tools_libacpi_Makefile) = 8a98783e8fcfcd9414176fdde24e7e08b2873c7f
 SHA1 (patch-tools_libs_call_netbsd.c) = c5e166212b0069220d9155636b41028f0f7f9e9e
 SHA1 (patch-tools_libs_call_private.h) = caeaf937ae379836c3187bee97ac0b986af53f9f
 SHA1 (patch-tools_libs_evtchn_netbsd.c) = 1abb0f128ab0702b606e22f199d297d1e9c0aae5
