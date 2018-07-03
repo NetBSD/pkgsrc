@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/08/22 08:08:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/07/03 09:56:28 adam Exp $
 bin/calc-prorate${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -19,3 +19,6 @@ ${PYSITELIB}/tempora/tests/test_schedule.pyo
 ${PYSITELIB}/tempora/timing.py
 ${PYSITELIB}/tempora/timing.pyc
 ${PYSITELIB}/tempora/timing.pyo
+${PYSITELIB}/tempora/utc.py
+${PYSITELIB}/tempora/utc.pyc
+${PYSITELIB}/tempora/utc.pyo
