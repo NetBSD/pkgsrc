@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3042 2018/07/03 06:01:05 maya Exp $
+$NetBSD: CHANGES-2018,v 1.3043 2018/07/03 06:48:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4377,3 +4377,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/neomutt to 20180622 [wiz 2018-07-03]
 	Updated emulators/mame to 0.199 [wiz 2018-07-03]
 	Added fonts/culmus version 0.132 [maya 2018-07-03]
+	Updated www/py-django to 1.11.14 [adam 2018-07-03]
+	Updated www/py-django2 to 2.0.7 [adam 2018-07-03]
+	Updated www/py-selenium to 3.13.0 [adam 2018-07-03]
