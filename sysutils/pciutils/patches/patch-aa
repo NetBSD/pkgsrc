@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.20 2017/11/20 03:14:42 msaitoh Exp $
+$NetBSD: patch-aa,v 1.21 2018/07/03 03:35:37 msaitoh Exp $
 
---- Makefile.orig	2017-11-17 22:00:27.000000000 +0900
-+++ Makefile	2017-11-20 12:02:45.561593424 +0900
+--- Makefile.orig	2018-07-01 06:42:41.000000000 +0900
++++ Makefile	2018-07-02 13:10:53.668692813 +0900
 @@ -1,8 +1,7 @@
  # Makefile for The PCI Utilities
- # (c) 1998--2017 Martin Mares <mj@ucw.cz>
+ # (c) 1998--2018 Martin Mares <mj@ucw.cz>
  
 -OPT=-O2
 -CFLAGS=$(OPT) -Wall -W -Wno-parentheses -Wstrict-prototypes -Wmissing-prototypes
 +CFLAGS=-Wall -W -Wno-parentheses -Wstrict-prototypes -Wmissing-prototypes
  
- VERSION=3.5.6
- DATE=2017-11-17
+ VERSION=3.6.0
+ DATE=2018-06-30
 @@ -13,7 +12,7 @@ RELEASE=
  CROSS_COMPILE=
  
@@ -54,7 +54,7 @@ $NetBSD: patch-aa,v 1.20 2017/11/20 03:14:42 msaitoh Exp $
  AR=$(CROSS_COMPILE)ar
  RANLIB=$(CROSS_COMPILE)ranlib
  
-@@ -110,12 +109,18 @@ distclean: clean
+@@ -118,12 +117,18 @@ distclean: clean
  
  install: all
  # -c is ignored on Linux, but required on FreeBSD
@@ -79,7 +79,7 @@ $NetBSD: patch-aa,v 1.20 2017/11/20 03:14:42 msaitoh Exp $
  ifeq ($(SHARED),yes)
  ifeq ($(LIBEXT),dylib)
  	ln -sf $(PCILIB) $(DESTDIR)$(LIBDIR)/$(LIBNAME)$(ABI_VERSION).$(LIBEXT)
-@@ -129,13 +134,14 @@ install: install-pcilib
+@@ -137,13 +142,14 @@ install: install-pcilib
  endif
  
  install-pcilib: lib/$(PCILIB)
