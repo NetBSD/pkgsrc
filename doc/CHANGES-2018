@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3045 2018/07/03 07:48:11 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3046 2018/07/03 09:56:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4384,3 +4384,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-lxml to 4.2.3 [adam 2018-07-03]
 	Updated graphics/py-Pillow to 5.2.0 [adam 2018-07-03]
 	Updated devel/py-hypothesis to 3.65.0 [adam 2018-07-03]
+	Updated textproc/py-guessit to 3.0.0 [adam 2018-07-03]
+	Updated time/py-pytz to 2018.5 [adam 2018-07-03]
+	Updated time/py-tempora to 1.12 [adam 2018-07-03]
