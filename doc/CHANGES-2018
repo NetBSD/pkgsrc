@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3041 2018/07/03 05:40:24 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3042 2018/07/03 06:01:05 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4376,3 +4376,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-sqlalchemy to 1.2.9 [adam 2018-07-03]
 	Updated mail/neomutt to 20180622 [wiz 2018-07-03]
 	Updated emulators/mame to 0.199 [wiz 2018-07-03]
+	Added fonts/culmus version 0.132 [maya 2018-07-03]
