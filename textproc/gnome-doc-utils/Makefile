@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2017/07/30 22:47:56 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2018/07/03 05:03:35 adam Exp $
 
 DISTNAME=	gnome-doc-utils-0.20.10
 PKGREVISION=	2
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-libxslt>=1.1.12:../../textproc/py-libxslt
 DEPENDS+=	docbook-xml>=4.5:../../textproc/docbook-xml
 DEPENDS+=	getopt-[0-9]*:../../misc/getopt
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-libxslt
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-libxslt
 
 USE_TOOLS+=		intltool pkg-config gmake gawk msgfmt bash:run
 GNU_CONFIGURE=		YES
