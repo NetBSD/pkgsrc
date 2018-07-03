@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.68 2018/06/05 18:29:39 wiz Exp $
+$NetBSD: distinfo,v 1.69 2018/07/03 05:40:15 wiz Exp $
 
-SHA1 (mame-0.198.tar.gz) = 0e7c88762f3649b8a58e0f61fad8080171c0853e
-RMD160 (mame-0.198.tar.gz) = 5886423aff2cd311fa7c2bf640320fec93bb5cd5
-SHA512 (mame-0.198.tar.gz) = b6d07e4aff9a4a049954a32a9b9fe2faf4d55c61e13744577225a7dee0f21fc2b259eaf704781e91c2f41a99e499ab98aee8920a771943412d847d363035b5bb
-Size (mame-0.198.tar.gz) = 127166350 bytes
+SHA1 (mame-0.199.tar.gz) = 359689a83883f5e1ce480d23f0b0aaa1e3a16100
+RMD160 (mame-0.199.tar.gz) = 69b596d7f6d36df84f63dc1ec3ba055186528f86
+SHA512 (mame-0.199.tar.gz) = a2009e1e152c285b593ed3f7204cf0a6cbb445e8d3c78ed769bdb24e1e6d521888c32d835b782969afb3a80dd78a6e4a5e16d1c304e16e3fab772cbdd952e2dd
+Size (mame-0.199.tar.gz) = 127237019 bytes
 SHA1 (patch-3rdparty_asio_include_asio_detail_config.hpp) = 9b0d6139e853d8efb9d51270bbfa5382feac42a7
 SHA1 (patch-3rdparty_bgfx_examples_common_font_font__manager.cpp) = e39b2dff553505531adb5f0a31b0a22306b8e2e4
 SHA1 (patch-3rdparty_bx_include_bx_platform.h) = caa57597d7c0916f82b3dbdc6ebf2e4851984e70
