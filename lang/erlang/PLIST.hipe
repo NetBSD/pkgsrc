@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.hipe,v 1.5 2017/07/04 11:40:48 fhajny Exp $
+@comment $NetBSD: PLIST.hipe,v 1.6 2018/07/03 11:01:21 fhajny Exp $
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/elf_format.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_adj_list.beam
@@ -113,6 +113,7 @@ lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_rtl_to_ppc.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_rtl_to_sparc.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_rtl_to_x86.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_rtl_varmap.beam
+lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_rtl_verify_gcsafe.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_sdi.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_segment_trees.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_sparc.beam
@@ -203,5 +204,6 @@ lib/erlang/lib/hipe-${VERSION.hipe}/rtl/hipe_rtl_ssa_const_prop.erl
 lib/erlang/lib/hipe-${VERSION.hipe}/rtl/hipe_rtl_ssapre.erl
 lib/erlang/lib/hipe-${VERSION.hipe}/rtl/hipe_rtl_symbolic.erl
 lib/erlang/lib/hipe-${VERSION.hipe}/rtl/hipe_rtl_varmap.erl
+lib/erlang/lib/hipe-${VERSION.hipe}/rtl/hipe_rtl_verify_gcsafe.erl
 lib/erlang/lib/hipe-${VERSION.hipe}/rtl/hipe_tagscheme.erl
 lib/erlang/lib/hipe-${VERSION.hipe}/util/hipe_vectors.erl
