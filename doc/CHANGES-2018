@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3039 2018/07/03 05:36:24 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3040 2018/07/03 05:39:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4374,3 +4374,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-psycopg2 to 2.7.5nb1 [adam 2018-07-03]
 	Updated databases/py-alembic to 0.9.10 [adam 2018-07-03]
 	Updated databases/py-sqlalchemy to 1.2.9 [adam 2018-07-03]
+	Updated mail/neomutt to 20180622 [wiz 2018-07-03]
