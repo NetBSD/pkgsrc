@@ -1,8 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2012/02/13 22:38:06 gls Exp $
+# $NetBSD: options.mk,v 1.3 2018/07/03 03:48:38 adam Exp $
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.asciidoc
+PKG_OPTIONS_VAR=	PKG_OPTIONS.asciidoc
 PKG_SUPPORTED_OPTIONS=	pdf epub highlight
-PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
 
