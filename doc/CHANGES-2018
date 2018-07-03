@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3049 2018/07/03 12:30:54 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.3050 2018/07/03 13:57:53 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4393,3 +4393,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated converters/py-simplejson to 3.16.0 [adam 2018-07-03]
 	Updated devel/py-ruamel-yaml to 0.15.42 [adam 2018-07-03]
 	Updated sysutils/consul to 1.2.0 [fhajny 2018-07-03]
+	Updated sysutils/xentools46 to 4.6.6nb5 [maya 2018-07-03]
