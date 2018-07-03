@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/09/30 14:13:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/07/03 09:46:42 adam Exp $
 bin/guessit${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -53,6 +53,12 @@ ${PYSITELIB}/guessit/rules/common/formatters.pyo
 ${PYSITELIB}/guessit/rules/common/numeral.py
 ${PYSITELIB}/guessit/rules/common/numeral.pyc
 ${PYSITELIB}/guessit/rules/common/numeral.pyo
+${PYSITELIB}/guessit/rules/common/pattern.py
+${PYSITELIB}/guessit/rules/common/pattern.pyc
+${PYSITELIB}/guessit/rules/common/pattern.pyo
+${PYSITELIB}/guessit/rules/common/quantity.py
+${PYSITELIB}/guessit/rules/common/quantity.pyc
+${PYSITELIB}/guessit/rules/common/quantity.pyo
 ${PYSITELIB}/guessit/rules/common/validators.py
 ${PYSITELIB}/guessit/rules/common/validators.pyc
 ${PYSITELIB}/guessit/rules/common/validators.pyo
@@ -77,6 +83,9 @@ ${PYSITELIB}/guessit/rules/properties/__init__.pyo
 ${PYSITELIB}/guessit/rules/properties/audio_codec.py
 ${PYSITELIB}/guessit/rules/properties/audio_codec.pyc
 ${PYSITELIB}/guessit/rules/properties/audio_codec.pyo
+${PYSITELIB}/guessit/rules/properties/bit_rate.py
+${PYSITELIB}/guessit/rules/properties/bit_rate.pyc
+${PYSITELIB}/guessit/rules/properties/bit_rate.pyo
 ${PYSITELIB}/guessit/rules/properties/bonus.py
 ${PYSITELIB}/guessit/rules/properties/bonus.pyc
 ${PYSITELIB}/guessit/rules/properties/bonus.pyo
@@ -107,9 +116,6 @@ ${PYSITELIB}/guessit/rules/properties/episodes.pyo
 ${PYSITELIB}/guessit/rules/properties/film.py
 ${PYSITELIB}/guessit/rules/properties/film.pyc
 ${PYSITELIB}/guessit/rules/properties/film.pyo
-${PYSITELIB}/guessit/rules/properties/format.py
-${PYSITELIB}/guessit/rules/properties/format.pyc
-${PYSITELIB}/guessit/rules/properties/format.pyo
 ${PYSITELIB}/guessit/rules/properties/language.py
 ${PYSITELIB}/guessit/rules/properties/language.pyc
 ${PYSITELIB}/guessit/rules/properties/language.pyo
@@ -131,6 +137,9 @@ ${PYSITELIB}/guessit/rules/properties/screen_size.pyo
 ${PYSITELIB}/guessit/rules/properties/size.py
 ${PYSITELIB}/guessit/rules/properties/size.pyc
 ${PYSITELIB}/guessit/rules/properties/size.pyo
+${PYSITELIB}/guessit/rules/properties/source.py
+${PYSITELIB}/guessit/rules/properties/source.pyc
+${PYSITELIB}/guessit/rules/properties/source.pyo
 ${PYSITELIB}/guessit/rules/properties/streaming_service.py
 ${PYSITELIB}/guessit/rules/properties/streaming_service.pyc
 ${PYSITELIB}/guessit/rules/properties/streaming_service.pyo
@@ -153,6 +162,7 @@ ${PYSITELIB}/guessit/test/config/dummy.txt
 ${PYSITELIB}/guessit/test/config/test.json
 ${PYSITELIB}/guessit/test/config/test.yaml
 ${PYSITELIB}/guessit/test/config/test.yml
+${PYSITELIB}/guessit/test/enable_disable_properties.yml
 ${PYSITELIB}/guessit/test/episodes.yml
 ${PYSITELIB}/guessit/test/movies.yml
 ${PYSITELIB}/guessit/test/rules/__init__.py
@@ -166,7 +176,6 @@ ${PYSITELIB}/guessit/test/rules/date.yml
 ${PYSITELIB}/guessit/test/rules/edition.yml
 ${PYSITELIB}/guessit/test/rules/episodes.yml
 ${PYSITELIB}/guessit/test/rules/film.yml
-${PYSITELIB}/guessit/test/rules/format.yml
 ${PYSITELIB}/guessit/test/rules/language.yml
 ${PYSITELIB}/guessit/test/rules/other.yml
 ${PYSITELIB}/guessit/test/rules/part.yml
@@ -177,9 +186,11 @@ ${PYSITELIB}/guessit/test/rules/processors_test.pyo
 ${PYSITELIB}/guessit/test/rules/release_group.yml
 ${PYSITELIB}/guessit/test/rules/screen_size.yml
 ${PYSITELIB}/guessit/test/rules/size.yml
+${PYSITELIB}/guessit/test/rules/source.yml
 ${PYSITELIB}/guessit/test/rules/title.yml
 ${PYSITELIB}/guessit/test/rules/video_codec.yml
 ${PYSITELIB}/guessit/test/rules/website.yml
+${PYSITELIB}/guessit/test/streaming_services.yaml
 ${PYSITELIB}/guessit/test/test-input-file.txt
 ${PYSITELIB}/guessit/test/test_api.py
 ${PYSITELIB}/guessit/test/test_api.pyc
