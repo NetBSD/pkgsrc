@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3038 2018/07/03 03:58:10 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3039 2018/07/03 05:36:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4372,3 +4372,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/python36 to 3.6.6 [adam 2018-07-03]
 	Added lang/python37 version 3.7.0 [adam 2018-07-03]
 	Updated databases/py-psycopg2 to 2.7.5nb1 [adam 2018-07-03]
+	Updated databases/py-alembic to 0.9.10 [adam 2018-07-03]
+	Updated databases/py-sqlalchemy to 1.2.9 [adam 2018-07-03]
