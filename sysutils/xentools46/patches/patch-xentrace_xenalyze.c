@@ -1,6 +1,6 @@
-$NetBSD: patch-xentrace_xenalyze.c,v 1.1 2018/07/03 13:57:20 maya Exp $
+$NetBSD: patch-xentrace_xenalyze.c,v 1.2 2018/07/03 14:05:04 maya Exp $
 
-Remove unused function, guard misleading indentation (also upstream)
+Remove unused function, guard misleading indentation (from upstream)
 
 --- xentrace/xenalyze.c.orig	2017-07-06 07:04:28.000000000 +0000
 +++ xentrace/xenalyze.c
