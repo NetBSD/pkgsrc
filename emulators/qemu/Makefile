@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.185 2018/04/29 21:31:35 adam Exp $
+# $NetBSD: Makefile,v 1.186 2018/07/03 05:03:16 adam Exp $
 
 DISTNAME=	qemu-2.12.0
 PKGREVISION=	1
@@ -80,7 +80,7 @@ PKG_SYSCONFSUBDIR=	qemu
 
 REPLACE_PERL+=		scripts/texi2pod.pl
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported yet as of 2.10.0
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported yet as of 2.10.0
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/doc/qemu
 

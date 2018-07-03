@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/03/07 11:57:30 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2018/07/03 05:03:19 adam Exp $
 
 DISTNAME?=	${MESA_DISTNAME}
 PKGNAME=	MesaLib7-${MESA_PKGVERSION}
@@ -46,7 +46,7 @@ CONFIGURE_ARGS+=	--disable-egl
 .include "glx-config.mk"
 
 PYTHON_FOR_BUILD_ONLY=		tool
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 7.11.2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 7.11.2
 
 MAKE_ENV+=		MAKE=${GMAKE:Q}
 

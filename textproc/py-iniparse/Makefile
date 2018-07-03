@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/09/16 19:27:19 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2018/07/03 05:03:36 adam Exp $
 
 DISTNAME=	iniparse-0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	mit AND python-software-foundation
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37
 
 post-install:
 	${CHMOD} -x ${DESTDIR}${PREFIX}/share/doc/iniparse-0.4/index.html
