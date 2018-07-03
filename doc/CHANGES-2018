@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3046 2018/07/03 09:56:59 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3047 2018/07/03 11:01:48 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4387,3 +4387,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-guessit to 3.0.0 [adam 2018-07-03]
 	Updated time/py-pytz to 2018.5 [adam 2018-07-03]
 	Updated time/py-tempora to 1.12 [adam 2018-07-03]
+	Updated lang/erlang-doc to 21.0 [fhajny 2018-07-03]
+	Updated lang/erlang-man to 21.0 [fhajny 2018-07-03]
+	Updated lang/erlang to 21.0 [fhajny 2018-07-03]
