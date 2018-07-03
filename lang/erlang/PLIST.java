@@ -1,33 +1,4 @@
-@comment $NetBSD: PLIST.java,v 1.11 2015/09/25 15:15:58 fhajny Exp $
-lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/Any.java
-lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/AnyHelper.java
-lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/AnyHolder.java
-lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/BooleanHolder.java
-lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/ByteHolder.java
-lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/CharHolder.java
-lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/DoubleHolder.java
-lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/Environment.java
-lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/FloatHolder.java
-lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/Holder.java
-lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/IntHolder.java
-lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/LongHolder.java
-lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/Pid.java
-lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/PidHelper.java
-lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/PidHolder.java
-lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/Port.java
-lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/PortHelper.java
-lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/PortHolder.java
-lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/Ref.java
-lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/RefHelper.java
-lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/RefHolder.java
-lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/ShortHolder.java
-lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/StringHolder.java
-lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/TCKind.java
-lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/Term.java
-lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/TermHelper.java
-lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/TermHolder.java
-lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/TypeCode.java
-lib/erlang/lib/ic-${VERSION.ic}/priv/ic.jar
+@comment $NetBSD: PLIST.java,v 1.12 2018/07/03 11:01:21 fhajny Exp $
 lib/erlang/lib/jinterface-${VERSION.jinterface}/ebin/jinterface.app
 lib/erlang/lib/jinterface-${VERSION.jinterface}/ebin/jinterface.appup
 lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang/AbstractConnection.java
@@ -87,4 +58,3 @@ lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang
 lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang/OtpTransport.java
 lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang/OtpTransportFactory.java
 lib/erlang/lib/jinterface-${VERSION.jinterface}/priv/OtpErlang.jar
-lib/erlang/lib/orber-${VERSION.orber}/java_src/Orber/InitialReference.java
