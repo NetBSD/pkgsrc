@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2018/04/04 14:18:32 wen Exp $
+# $NetBSD: Makefile,v 1.23 2018/07/04 12:45:57 wen Exp $
 
-DISTNAME=		yabasic-2.78.5
+DISTNAME=		yabasic-2.79.2
 CATEGORIES=		lang
 MASTER_SITES=		http://www.yabasic.de/download/
 
