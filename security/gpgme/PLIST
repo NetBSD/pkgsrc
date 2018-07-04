@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.20 2017/08/29 11:26:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2018/07/04 12:46:29 adam Exp $
 bin/gpgme-config
+bin/gpgme-json
 bin/gpgme-tool
 include/gpgme++/configuration.h
 include/gpgme++/context.h
