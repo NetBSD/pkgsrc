@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2016/04/20 12:10:26 nros Exp $
+# $NetBSD: Makefile,v 1.20 2018/07/04 13:40:08 jperkin Exp $
 #
 
 DISTNAME=	gramofile-1.6
@@ -25,7 +25,7 @@ do-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${LN} -s bplay_gramo brec_gramo
 
 SUBST_CLASSES+=		snd
-SUBST_STAGE.snd=	post-patch
+SUBST_STAGE.snd=	pre-configure
 SUBST_FILES.snd=	bplaysrc/sndfunc.c
 SUBST_SED.snd=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 SUBST_MESSAGE.snd=	Fixing harcoded audio device.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2017/09/04 18:01:02 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2018/07/04 13:40:39 jperkin Exp $
 #
 
 DISTNAME=	rfc-3.2
@@ -24,7 +24,7 @@ RFCINDEXURL=	http://www.ietf.org/download/
 INSTALLATION_DIRS=	bin
 
 SUBST_CLASSES+=		rfcutil
-SUBST_STAGE.rfcutil=	post-patch
+SUBST_STAGE.rfcutil=	pre-configure
 SUBST_FILES.rfcutil=	rfc
 SUBST_SED.rfcutil+=	-e 's,/usr/local,${PREFIX},'
 SUBST_SED.rfcutil+=	-e '/VIEWER=/s,w3m lynx,${RFCVIEWER},'

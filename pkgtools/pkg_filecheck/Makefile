@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2018/01/27 19:07:47 rillig Exp $
+# $NetBSD: Makefile,v 1.44 2018/07/04 13:40:32 jperkin Exp $
 #
 
 PKGNAME=	pkg_filecheck-0.4
@@ -31,7 +31,7 @@ SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@PERL5@,${PERL5},g'
 SUBST_SED.paths+=	-e 's,@PKG_DBDIR@,${PKG_DBDIR},g'
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 
 post-extract:
 .for f in builddb.pl builddb.1 pkg_filecheck.conf pkg_filecheck.conf.5 \

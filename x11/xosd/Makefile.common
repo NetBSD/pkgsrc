@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2017/09/06 09:03:06 wiz Exp $
+# $NetBSD: Makefile.common,v 1.29 2018/07/04 13:40:44 jperkin Exp $
 #
 # used by x11/xmms-osd/Makefile
 
@@ -19,7 +19,7 @@ USE_LIBTOOL=		yes
 SHLIBTOOL_OVERRIDE=	libtool-disable-static
 
 SUBST_CLASSES+=		fixme
-SUBST_STAGE.fixme=	post-patch
+SUBST_STAGE.fixme=	pre-configure
 SUBST_FILES.fixme=	configure
 SUBST_SED.fixme=	-e "s|-lpthread|"${PTHREAD_LIBS:M*:Q}"|g"
 

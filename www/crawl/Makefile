@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2017/08/01 14:59:07 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2018/07/04 13:40:41 jperkin Exp $
 
 DISTNAME=	crawl-0.4
 PKGREVISION=	12
@@ -25,7 +25,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/crawl.conf ${DESTDIR}${PREFIX}/share/examples/crawl/crawl.conf
 
 SUBST_CLASSES+=		path
-SUBST_STAGE.path=	post-patch
+SUBST_STAGE.path=	pre-configure
 SUBST_FILES.path=	cfg.h
 SUBST_SED.path=		-e 's,crawl.conf,${PKG_SYSCONFDIR}/crawl.conf,g'
 SUBST_MESSAGE.path=	Fixing hardcoded path.

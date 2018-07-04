@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2015/04/25 14:23:05 tnn Exp $
+# $NetBSD: Makefile,v 1.27 2018/07/04 13:40:20 jperkin Exp $
 #
 
 DISTNAME=	xrick-021212
@@ -20,7 +20,7 @@ NO_SRC_ON_FTP=	    ${RESTRICTED}
 USE_TOOLS+=		gmake gunzip
 
 SUBST_CLASSES+=		data
-SUBST_STAGE.data=	post-patch
+SUBST_STAGE.data=	pre-configure
 SUBST_MESSAGE.data=	Adjusting path to data.zip
 SUBST_FILES.data=	src/xrick.c
 SUBST_SED.data=		-e "s|data.zip|${PREFIX}/share/xrick/&|"

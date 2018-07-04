@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2016/07/09 06:38:28 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2018/07/04 13:40:22 jperkin Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/-maildir-/}
@@ -63,7 +63,7 @@ SUBST_SED.paths+=	-e 's,@MKDIR@,${MKDIR},g'
 SUBST_SED.paths+=	-e 's,@RM@,${RM},g'
 SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
 SUBST_SED.paths+=	-e 's,@TEST@,${TEST},g'
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 
 post-extract:
 	${CP} ${FILESDIR}/sharedindexupdate.sh ${WRKDIR}/sharedindexupdate.sh

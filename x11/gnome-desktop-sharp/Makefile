@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2018/04/17 22:29:34 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2018/07/04 13:40:43 jperkin Exp $
 #
 
 DISTNAME=	gnome-desktop-sharp-2.26.0
@@ -26,7 +26,7 @@ PKGCONFIG_OVERRIDE+=	vte/vte-sharp-0.16.pc.in
 PKGCONFIG_OVERRIDE+=	wnck/wnck-sharp-1.0.pc.in
 
 SUBST_CLASSES=		pc
-SUBST_STAGE.pc=		post-patch
+SUBST_STAGE.pc=		pre-configure
 SUBST_FILES.pc=		${PKGCONFIG_OVERRIDE}
 SUBST_SED.pc=		-e "s|\$${pcfiledir}/../..|@prefix@|g"
 SUBST_MESSAGE.pc=	Fixing hardcoded paths.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2018/04/22 17:57:47 tron Exp $
+# $NetBSD: Makefile,v 1.117 2018/07/04 13:40:36 jperkin Exp $
 
 DISTNAME=	cdrtools-3.01
 PKGNAME=	${DISTNAME:S/a/alpha/:S/-pre/pre/}
@@ -79,7 +79,7 @@ INSTALLATION_DIRS=	bin lib/siconv ${PKGMANDIR}/man1 ${PKGMANDIR}/man8 \
 			share/examples/cdrtools
 
 SUBST_CLASSES+=		fix
-SUBST_STAGE.fix=	post-patch
+SUBST_STAGE.fix=	pre-configure
 SUBST_FILES.fix=	btcflash/btcflash.1
 SUBST_FILES.fix+=	cdrecord/cdrecord.1
 SUBST_FILES.fix+=	libcdrdeflt/cdrdeflt.c
@@ -89,7 +89,7 @@ SUBST_SED.fix=		-e "s,/etc/default/cdrecord,${CDRECORD_CONF},g"
 SUBST_MESSAGE.fix=	Fixing paths.
 
 SUBST_CLASSES+=		oss
-SUBST_STAGE.oss=	post-patch
+SUBST_STAGE.oss=	pre-configure
 SUBST_FILES.oss=	cdda2wav/local.cnf.in
 SUBST_SED.oss=		-e "s,/dev/dsp,${DEVOSSSOUND},g"
 SUBST_MESSAGE.oss=	Fixing OSS sound device path.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2017/08/23 17:54:53 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2018/07/04 13:40:40 jperkin Exp $
 
 DISTNAME=	CGI-SpeedyCGI-2.22
 PKGNAME=	SpeedyCGI-2.22
@@ -18,7 +18,7 @@ PERL5_PACKLIST= 	auto/CGI/SpeedyCGI/.packlist
 MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
 
 SUBST_CLASSES+=		run
-SUBST_STAGE.run=	post-patch
+SUBST_STAGE.run=	pre-configure
 SUBST_FILES.run=	src/optdefs
 SUBST_SED.run+=		-e "s|@@PREFIX@@|${PREFIX}|g"
 SUBST_MESSAGE.run=	Fixing hardcoded paths.

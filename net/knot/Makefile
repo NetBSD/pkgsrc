@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2018/04/17 22:29:45 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2018/07/04 13:40:28 jperkin Exp $
 
 DISTNAME=	knot-2.5.7
 PKGREVISION=	1
@@ -50,7 +50,7 @@ PKG_SYSCONFSUBDIR=	knot
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKSRC}/samples/Makefile.in
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_SED.paths=	-e 's,@EGDIR@,${EGDIR},'
 
 CONF_FILES=	${EGDIR}/knot.sample.conf \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2016/07/09 06:37:58 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2018/07/04 13:40:12 jperkin Exp $
 #
 
 DISTNAME=	cc65-sources-2.13.3
@@ -23,7 +23,7 @@ INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
 
 SUBST_CLASSES+=		perl
 SUBST_MESSAGE.perl=	Fixing the path of perl.
-SUBST_STAGE.perl=	post-patch
+SUBST_STAGE.perl=	pre-configure
 SUBST_FILES.perl=	src/ca65/macpack/cvt-mac.pl src/ld65/cfg/cvt-cfg.pl
 SUBST_SED.perl=		-e "s,/usr/bin/perl,${PREFIX}/bin/perl,g"
 

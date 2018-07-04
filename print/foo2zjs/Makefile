@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/07/28 16:42:03 rumko Exp $
+# $NetBSD: Makefile,v 1.5 2018/07/04 13:40:33 jperkin Exp $
 #
 
 DISTNAME=	foo2zjs
@@ -25,7 +25,7 @@ SUBST_FILES.paths=	Makefile icc2ps/Makefile
 SUBST_SED.paths=	-e "s,@PREFIX@,${DESTDIR}${PREFIX},"
 SUBST_SED.paths+=	-e "s,@PKGMANDIR@,${DESTDIR}${PREFIX}/${PKGMANDIR},"
 SUBST_SED.paths+=	-e "s,@RUNPREFIX@,${PREFIX},"
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 
 do-build:
 	cd ${WRKSRC} && ${GMAKE} ${PROGS}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/09/25 22:39:56 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2018/07/04 13:40:42 jperkin Exp $
 #
 
 DISTNAME=		siege-3.1.3
@@ -25,7 +25,7 @@ CONF_FILES=		${EGDIR}/urls.txt ${PKG_SYSCONFDIR}/urls.txt
 CONF_FILES+=		${EGDIR}/siegerc ${PKG_SYSCONFDIR}/siegerc
 
 SUBST_CLASSES+=		siege
-SUBST_STAGE.siege=	post-patch
+SUBST_STAGE.siege=	pre-configure
 SUBST_FILES.siege=	doc/Makefile.am doc/Makefile.in
 SUBST_SED.siege+=	-e "s|@EGDIR@|${EGDIR}|g"
 

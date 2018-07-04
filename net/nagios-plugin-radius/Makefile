@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2017/07/04 19:48:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2018/07/04 13:40:29 jperkin Exp $
 #
 
 PKGNAME=	nagios-plugin-radius-${PLUGINSVERSION}
@@ -21,7 +21,7 @@ BUILD_DEFS+=	PKG_SYSCONFBASE
 BINARY_TARGET=	check_radius
 
 SUBST_CLASSES+=		config
-SUBST_STAGE.config=	post-patch
+SUBST_STAGE.config=	pre-configure
 SUBST_FILES.config=	plugins/check_radius.c
 SUBST_SED.config=	-e "s|@SYSCONFDIR@|${PKG_SYSCONFBASE}|g"
 SUBST_MESSAGE.config=	Fixing configuration file path.

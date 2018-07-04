@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2018/03/12 11:17:10 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2018/07/04 13:40:25 jperkin Exp $
 #
 
 DISTNAME=	zyGrib-7.0.0
@@ -21,7 +21,7 @@ USE_TOOLS+=	make
 CONFIGURE_ENV+=	QTDIR=${QTDIR}
 
 SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Fixing shared data paths.
 SUBST_FILES.paths=	util/Util.h
 SUBST_VARS.paths=	PREFIX

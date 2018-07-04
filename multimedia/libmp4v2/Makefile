@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/02/05 18:37:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.22 2018/07/04 13:40:26 jperkin Exp $
 
 DISTNAME=		mpeg4ip-1.6.1
 PKGNAME=		libmp4v2-1.6.1
@@ -29,7 +29,7 @@ BUILD_DIRS=		. lib/mp4v2/util
 
 # lowercase min,max cannot be used as macros, conflicts with libstdc++6
 SUBST_CLASSES+=		minmax
-SUBST_STAGE.minmax=	post-patch
+SUBST_STAGE.minmax=	pre-configure
 SUBST_FILES.minmax=	common/video/iso-mpeg4/src/*
 SUBST_SED.minmax=	-e 's,min *(,MIN(,g' -e 's,max *(,MAX(,g'
 SUBST_MESSAGE.minmax=	replace lowercase min,max with uppercase
