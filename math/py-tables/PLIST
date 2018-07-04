@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2018/03/29 18:08:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.1 2018/07/04 06:46:49 adam Exp $
 bin/pt2to3${PYVERSSUFFIX}
 bin/ptdump${PYVERSSUFFIX}
 bin/ptrepack${PYVERSSUFFIX}
@@ -255,6 +255,9 @@ ${PYSITELIB}/tables/tests/test_tables.pyo
 ${PYSITELIB}/tables/tests/test_tablesMD.py
 ${PYSITELIB}/tables/tests/test_tablesMD.pyc
 ${PYSITELIB}/tables/tests/test_tablesMD.pyo
+${PYSITELIB}/tables/tests/test_timestamps.py
+${PYSITELIB}/tables/tests/test_timestamps.pyc
+${PYSITELIB}/tables/tests/test_timestamps.pyo
 ${PYSITELIB}/tables/tests/test_timetype.py
 ${PYSITELIB}/tables/tests/test_timetype.pyc
 ${PYSITELIB}/tables/tests/test_timetype.pyo
