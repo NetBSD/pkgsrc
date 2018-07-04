@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3071 2018/07/04 14:41:28 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.3072 2018/07/04 21:46:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4424,3 +4424,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Module-CoreList to 5.20180626 [wen 2018-07-04]
 	Updated devel/p5-MooseX-Emulate-Class-Accessor-Fast to 0.009032 [wen 2018-07-04]
 	Updated www/passenger to 5.3.3 [fhajny 2018-07-04]
+	Updated multimedia/bitstream to 1.4 [adam 2018-07-04]
