@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3061 2018/07/04 08:06:37 wen Exp $
+$NetBSD: CHANGES-2018,v 1.3062 2018/07/04 08:10:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4412,3 +4412,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-CPAN-Perl-Releases to 3.68 [wen 2018-07-04]
 	Updated devel/p5-Event-RPC to 1.10 [wen 2018-07-04]
 	Updated devel/p5-File-ShareDir to 1.116 [wen 2018-07-04]
+	Updated devel/py-serpent to 1.25 [adam 2018-07-04]
+	Updated math/py-numexpr to 2.6.5 [adam 2018-07-04]
