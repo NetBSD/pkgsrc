@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/05/02 10:59:49 markd Exp $
+# $NetBSD: Makefile,v 1.4 2018/07/04 13:40:35 jperkin Exp $
 
 DISTNAME=	requests-kerberos-0.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-requests>=1.1.0:../../devel/py-requests
 USE_LANGUAGES=	# none
 
 SUBST_CLASSES+=		requires
-SUBST_STAGE.requires=	post-patch
+SUBST_STAGE.requires=	pre-configure
 SUBST_FILES.requires=	setup.py
 SUBST_SED.requires=	-e 's/pykerberos/kerberos/'
 

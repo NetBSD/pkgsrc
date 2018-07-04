@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2015/08/18 07:31:04 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2018/07/04 13:40:13 jperkin Exp $
 
 DISTNAME=	cscope-15.8a
 PKGREVISION=	2
@@ -20,7 +20,7 @@ SUBST_CLASSES+=		path
 SUBST_SED.path=		-e "s,PATH=\"\\(.*\\),PATH=\"${PREFIX}/bin:\\1,"
 SUBST_FILES.path=	contrib/xcscope/cscope-indexer
 SUBST_MESSAGE.path=	Fixing path in cscope-indexer.
-SUBST_STAGE.path=	post-patch
+SUBST_STAGE.path=	pre-configure
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/contrib/xcscope/cscope-indexer \

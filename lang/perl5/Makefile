@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.245 2018/04/27 09:44:27 adam Exp $
+# $NetBSD: Makefile,v 1.246 2018/07/04 13:40:22 jperkin Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -278,7 +278,7 @@ SUBST_SED.cpprun=	-e "s/cpprun=''/cpprun='cc -E'/"
 # let's substitute what pkgsrc says instead.
 #
 SUBST_CLASSES+=		dirmode
-SUBST_STAGE.dirmode=	post-patch
+SUBST_STAGE.dirmode=	pre-configure
 SUBST_FILES.dirmode=	installhtml install_lib.pl
 SUBST_SED.dirmode=	-e "s/755/${PKGDIRMODE}/g;/umask(/d"
 

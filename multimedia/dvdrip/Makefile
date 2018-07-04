@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2017/08/01 14:59:02 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2018/07/04 13:40:26 jperkin Exp $
 
 DISTNAME=	dvdrip-0.98.11
 PKGREVISION=	7
@@ -38,7 +38,7 @@ MAKE_JOBS_SAFE=		no
 PERL5_PACKLIST= auto/Video/DVDRip/.packlist
 
 SUBST_CLASSES+=		fping
-SUBST_STAGE.fping=	post-patch
+SUBST_STAGE.fping=	pre-configure
 SUBST_FILES.fping+=	lib/Video/DVDRip/Cluster/Master.pm
 SUBST_SED.fping=	-e "s|/usr/sbin|${PREFIX}/sbin|g"
 SUBST_MESSAGE.fping=	Fixing hardcoded path.

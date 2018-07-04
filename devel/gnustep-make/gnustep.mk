@@ -1,4 +1,4 @@
-#	$NetBSD: gnustep.mk,v 1.26 2017/12/31 16:39:41 gdt Exp $
+#	$NetBSD: gnustep.mk,v 1.27 2018/07/04 13:40:14 jperkin Exp $
 
 .if !defined(GNUSTEP_MK)
 GNUSTEP_MK=		#defined
@@ -64,7 +64,7 @@ GNUSTEP_LDFLAGS=	${GNUSTEP_LFLAGS} ${GNUSTEP_RFLAGS}
 
 .if defined(FIX_GNUSTEP_INSTALLATION_DIR)
 SUBST_CLASSES+=				gnustep_installation_dir
-SUBST_STAGE.gnustep_installation_dir=	post-patch
+SUBST_STAGE.gnustep_installation_dir=	pre-configure
 SUBST_FILES.gnustep_installation_dir?=	GNUmakefile
 SUBST_SED.gnustep_installation_dir+=	-e 's|GNUSTEP_INSTALLATION_DIR.*=.*..GNUSTEP_\(.*\)_ROOT.*|GNUSTEP_INSTALLATION_DOMAIN = \1|'
 SUBST_SED.gnustep_installation_dir+=	-e 's|\$$(GNUSTEP_INSTALLATION_DIR)/Libraries|$${DESTDIR}${GNUSTEP_LIB_DIR}/Libraries/${PKGNAME_NOREV}|g'

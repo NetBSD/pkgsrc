@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2015/04/29 15:55:47 christos Exp $
+# $NetBSD: Makefile,v 1.25 2018/07/04 13:40:33 jperkin Exp $
 #
 
 DISTNAME=		chkrootkit-0.50
@@ -19,7 +19,7 @@ PROGRAMS=	chkdirs chklastlog chkproc chkwtmp ifpromisc strings-static \
 DOCDIR=		${PREFIX}/share/doc/chkrootkit
 
 SUBST_CLASSES+=		helper
-SUBST_STAGE.helper=	post-patch
+SUBST_STAGE.helper=	pre-configure
 SUBST_FILES.helper=	chkrootkit
 SUBST_SED.helper=	-e "s|./chklastlog|${PREFIX}/bin/chklastlog|g"
 SUBST_SED.helper+=	-e "s|./chkproc|${PREFIX}/bin/chkproc|g"

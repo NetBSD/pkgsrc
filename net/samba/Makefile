@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.268 2018/04/17 22:29:46 wiz Exp $
+# $NetBSD: Makefile,v 1.269 2018/07/04 13:40:30 jperkin Exp $
 
 DISTNAME=	samba-${VERSION}
 CATEGORIES=	net
@@ -104,7 +104,7 @@ RCD_SCRIPTS+=	samba nmbd smbd ${WINBINDD_RCD_SCRIPT}
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing paths.
 SUBST_FILES.paths=	${WRKDIR}/adduser.sh ${WRKDIR}/deluser.sh
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_VARS.paths+=	AWK CAT MKTEMP RM PWD_MKDB SH
 
 SUBST_CLASSES+=		def-cfg

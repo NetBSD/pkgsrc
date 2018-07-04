@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/06/14 13:41:46 mef Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/04 13:40:31 jperkin Exp $
 
 DISTNAME=	twittering-mode-3.0.0
 CATEGORIES=	net
@@ -17,7 +17,7 @@ USE_LANGUAGES=	# none
 # to tell a user the version number by this command (mef@).
 SUBST_CLASSES+=		version
 SUBST_MESSAGE.version=	Replace version string 'HEAD' by ${PKGVERSION}
-SUBST_STAGE.version=	post-patch
+SUBST_STAGE.version=	pre-configure
 SUBST_FILES.version=	twittering-mode.el
 SUBST_SED.version=	-e '/defconst/s,HEAD,${PKGVERSION},'
 

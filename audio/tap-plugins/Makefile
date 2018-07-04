@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/09/16 19:26:42 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2018/07/04 13:40:09 jperkin Exp $
 #
 
 DISTNAME=	tap-plugins-0.7.2
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 USE_GCC_RUNTIME=	yes
 
 SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	post-patch
+SUBST_STAGE.prefix=	pre-configure
 SUBST_MESSAGE.prefix=	Fixing PREFIX.
 SUBST_FILES.prefix=	Makefile
 SUBST_SED.prefix=	-e 's|/usr/local|${DESTDIR}${PREFIX}|'

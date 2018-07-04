@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2017/01/03 18:00:19 roy Exp $
+# $NetBSD: Makefile,v 1.35 2018/07/04 13:40:27 jperkin Exp $
 
 DISTNAME=	chrony-1.31.1
 PKGREVISION=	4
@@ -29,7 +29,7 @@ SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${EGFILES:S/^/examples\//} conf.c
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 SUBST_SED.paths+=	-e 's,@VARBASE@,${VARBASE},g'
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 
 post-install:
 	set -e; for file in ${EGFILES}; do			\

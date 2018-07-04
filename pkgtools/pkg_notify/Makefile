@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2016/10/10 07:42:53 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2018/07/04 13:40:32 jperkin Exp $
 
 PKGNAME=	pkg_notify-0.4.6
 CATEGORIES=	pkgtools
@@ -22,7 +22,7 @@ CONF_FILES=		${EGDIR}/${PKGBASE}.list \
 .include "../../mk/bsd.prefs.mk"
 
 SUBST_CLASSES+=			pkg_notify
-SUBST_STAGE.pkg_notify=		post-patch
+SUBST_STAGE.pkg_notify=		pre-configure
 SUBST_FILES.pkg_notify=		pkg_notify
 SUBST_FILES.pkg_notify+=	pkg_notify.1
 SUBST_SED.pkg_notify=		-e 's|@PKGSRCDIR@|${PKGSRCDIR}|'

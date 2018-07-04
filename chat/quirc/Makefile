@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2018/03/12 11:16:11 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2018/07/04 13:40:11 jperkin Exp $
 #
 
 DISTNAME=	quirc-0.9.84
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--with-wish=${TOOLS_PATH.wish}
 MAKE_FLAGS+=	docdir=${PREFIX}/share/doc/quirc
 
 SUBST_CLASSES+=		T86
-SUBST_STAGE.T86=	post-patch
+SUBST_STAGE.T86=	pre-configure
 SUBST_FILES.T86=	configure configure.in
 SUBST_MESSAGE.T86=	Changing tcl/tk 8.3 search into tcl/tk 8.6 search
 SUBST_SED.T86=		-e 's,8_3,8_6,g'

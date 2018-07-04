@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.install,v 1.21 2016/05/17 10:32:07 fhajny Exp $
+# $NetBSD: Makefile.install,v 1.22 2018/07/04 13:40:15 jperkin Exp $
 
 .include "dirs.mk"
 
@@ -31,12 +31,12 @@ SUBST_STAGE.prefix=	pre-configure
 SUBST_CLASSES+=		etcpath
 SUBST_FILES.etcpath=	sbin/rt-setup-database.in
 SUBST_SED.etcpath=	-e 's,\$$RT::EtcPath,"${RT_SHARE_DIR}/etc",'
-SUBST_STAGE.etcpath=	post-patch
+SUBST_STAGE.etcpath=	pre-configure
 
 SUBST_CLASSES+=		path
 SUBST_FILES.path=	bin/webmux.pl.in lib/RT/Interface/CLI.pm
 SUBST_SED.path=		-e 's,/bin:/usr/bin,/bin:/usr/bin:${PREFIX}/bin,'
-SUBST_STAGE.path=	post-patch
+SUBST_STAGE.path=	pre-configure
 
 SUBST_CLASSES+=		hardwired
 SUBST_FILES.hardwired=	share/html/NoAuth/RichText/FCKeditor/editor/dialog/fck_spellerpages/spellerpages/server-scripts/spellchecker.pl \
@@ -44,7 +44,7 @@ SUBST_FILES.hardwired=	share/html/NoAuth/RichText/FCKeditor/editor/dialog/fck_sp
 			etc/upgrade/shrink_transactions_table.pl \
 			etc/upgrade/upgrade-mysql-schema.pl
 SUBST_SED.hardwired=	-e 's,/usr/bin/perl,'${PERL5}','
-SUBST_STAGE.hardwired=	post-patch
+SUBST_STAGE.hardwired=	pre-configure
 
 RT_CONFIG_FILES=	RT_Config.pm RT_SiteConfig.pm
 

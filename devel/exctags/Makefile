@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2015/11/14 06:01:02 richard Exp $
+# $NetBSD: Makefile,v 1.29 2018/07/04 13:40:14 jperkin Exp $
 #
 
 DISTNAME=	ctags-5.8
@@ -24,7 +24,7 @@ CPPFLAGS+=		-DETAGS="\"exetags\""
 CFLAGS+=		${CPPFLAGS}
 
 SUBST_CLASSES+=		man
-SUBST_STAGE.man=	post-patch
+SUBST_STAGE.man=	pre-configure
 SUBST_FILES.man=	ctags.1
 SUBST_SED.man=		-e 's|^ctags \\-|exctags \\-|'
 SUBST_SED.man+=		-e 's|fBctags|fBexctags|g'
@@ -34,7 +34,7 @@ SUBST_SED.man+=		-e 's|"etags|"exetags|g'
 SUBST_SED.man+=		-e 's|/usr/local|${PREFIX}|g'
 
 SUBST_CLASSES+=		rename
-SUBST_STAGE.rename=	post-patch
+SUBST_STAGE.rename=	pre-configure
 SUBST_FILES.rename=	c.c eiffel.c general.h lregex.c lua.c main.c \
 			options.c parse.c routines.c
 SUBST_SED.rename=	-e 's|__unused__|__unused_|g'

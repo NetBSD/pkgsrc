@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2017/06/05 14:24:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.21 2018/07/04 13:40:34 jperkin Exp $
 
 DISTNAME=	pcsc-perl-1.4.14
 PKGNAME=	p5-${DISTNAME:S/-perl//}
@@ -15,7 +15,7 @@ PERL5_MODULE_TYPE=	MakeMaker
 LICENSE=		gnu-gpl-v2
 
 SUBST_CLASSES+=		perl
-SUBST_STAGE.perl=	post-patch
+SUBST_STAGE.perl=	pre-configure
 SUBST_FILES.perl=	Card/t/test.t examples/test_iso_error.pl examples/gsm_directory.pl t/test.t test/multiple_readers.pl test/single_reader.pl
 SUBST_SED.perl=		-e 's,/usr/bin/perl,${PERL5},'
 

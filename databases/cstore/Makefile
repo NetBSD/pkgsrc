@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/01/19 18:52:04 agc Exp $
+# $NetBSD: Makefile,v 1.15 2018/07/04 13:40:12 jperkin Exp $
 
 DISTNAME=	cstore0.2
 PKGNAME=	cstore-0.2
@@ -20,7 +20,7 @@ WRKSRC=			${WRKDIR}/cstore
 REPLACE_PERL=		Build/BSsrcs
 
 SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	post-patch
+SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	Build/makefile.init
 SUBST_SED.prefix=	-e 's|@PREFIX@|'${PREFIX}'|g'
 

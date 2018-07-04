@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2017/11/11 19:43:06 maya Exp $
+# $NetBSD: Makefile,v 1.40 2018/07/04 13:40:31 jperkin Exp $
 
 DISTNAME=	socat-1.7.3.2
 PKGREVISION=	1
@@ -32,7 +32,7 @@ CONFIGURE_ENV+=		ac_cv_ispeed_offset=9
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	doc/socat.1
 SUBST_SED.paths=	-e 's,/usr/,${PREFIX}/,g'
 

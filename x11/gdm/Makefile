@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.189 2018/04/16 14:35:20 wiz Exp $
+# $NetBSD: Makefile,v 1.190 2018/07/04 13:40:43 jperkin Exp $
 #
 
 DISTNAME=	gdm-2.20.11
@@ -83,7 +83,7 @@ SUBST_SED.desktop+=	-e 's|^PreFetchProgram=.*$$|PreFetchProgram=${PREFIX}/libexe
 
 SUBST_CLASSES+=		gdmsetup
 SUBST_MESSAGE.gdmsetup=	Patching gdmsetup theme installer to use ${REAL_ROOT_USER}:${REAL_ROOT_GROUP}
-SUBST_STAGE.gdmsetup=	post-patch
+SUBST_STAGE.gdmsetup=	pre-configure
 SUBST_FILES.gdmsetup=	gui/gdmsetup.c
 SUBST_SED.gdmsetup=	-e 's/root:root/${REAL_ROOT_USER}:${REAL_ROOT_GROUP}/g'
 

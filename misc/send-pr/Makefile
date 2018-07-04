@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/08 09:57:37 asau Exp $
+# $NetBSD: Makefile,v 1.4 2018/07/04 13:40:25 jperkin Exp $
 
 DISTNAME=	gnats-3.113.1
 PKGNAME=	send-pr-${GNATS_VERSION}
@@ -49,7 +49,7 @@ MAKE_DIRS+=		${PKG_SYSCONFDIR}/gnats \
 			${PKG_SYSCONFDIR}/gnats/gnats-adm
 
 SUBST_CLASSES+=		fix-paths
-SUBST_STAGE.fix-paths=	post-patch
+SUBST_STAGE.fix-paths=	pre-configure
 SUBST_MESSAGE.fix-paths=Fixing paths
 SUBST_FILES.fix-paths=	send-pr.sh
 SUBST_SED.fix-paths=	-e 's,install-sid,${PREFIX}/bin/install-sid,'

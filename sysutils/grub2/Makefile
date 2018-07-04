@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/05/23 10:45:54 maya Exp $
+# $NetBSD: Makefile,v 1.14 2018/07/04 13:40:37 jperkin Exp $
 
 DISTNAME=		grub-2.02
 PKGNAME=		${DISTNAME:S/grub/grub2/}
@@ -102,7 +102,7 @@ do-install-custom-config:
 # Force installation of all OS configuration scripts in ${EGDIR}.
 #
 SUBST_CLASSES+=			fix-os-conf
-SUBST_STAGE.fix-os-conf=	post-patch
+SUBST_STAGE.fix-os-conf=	pre-configure
 SUBST_MESSAGE.fix-os-conf=	Fixing installation of OS configuration scripts.
 SUBST_FILES.fix-os-conf=	Makefile.in
 SUBST_SED.fix-os-conf=		-e 's,^@COND_HOST_[A-Z]*_TRUE@,,g'
@@ -111,7 +111,7 @@ SUBST_SED.fix-os-conf=		-e 's,^@COND_HOST_[A-Z]*_TRUE@,,g'
 # Adjust the configuration paths in scripts.
 #
 SUBST_CLASSES+=			fix-paths-1
-SUBST_STAGE.fix-paths-1=	post-patch
+SUBST_STAGE.fix-paths-1=	pre-configure
 SUBST_MESSAGE.fix-paths-1=	Fixing configuration paths in scripts.
 SUBST_FILES.fix-paths-1=	util/grub-install.in util/grub-mkconfig.in
 SUBST_SED.fix-paths-1=		-e 's,\(\$${sysconfdir}"\{0\,1\}\)/grub.d,\1,g'
@@ -130,7 +130,7 @@ SUBST_SED.fix-dejavu=		-e 's, \(/usr/share/fonts/dejavu\), \1 ${PREFIX}/share/fo
 # Do not use `\t' with sed, as it's not portable.
 #
 SUBST_CLASSES+=			fix-sed-tabs
-SUBST_STAGE.fix-sed-tabs=	post-patch
+SUBST_STAGE.fix-sed-tabs=	pre-configure
 SUBST_MESSAGE.fix-sed-tabs=	Fixing tabulations for sed in scripts.
 SUBST_FILES.fix-sed-tabs=	util/grub.d/*.in
 SUBST_SED.fix-sed-tabs=		-e 's,\\t,	,g'

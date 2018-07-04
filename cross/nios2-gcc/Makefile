@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/01/28 16:24:12 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2018/07/04 13:40:12 jperkin Exp $
 .include		"../../cross/nios2/Makefile.common"
 PKGNAME=		nios2-gcc-${PKG_VERSION}
 PKG_VERSION=		4.7.3
@@ -38,7 +38,7 @@ SUBST_CLASSES+=			host-subdir
 # Work around for the problem
 # gmake[2]: *** No rule to make target `../.././gcc/libgcc.mvars'.  Stop.
 SUBST_MESSAGE.host-subdir= 	Purely work-around, replacing @host-subdir@ in advance
-SUBST_STAGE.host-subdir=	post-patch
+SUBST_STAGE.host-subdir=	pre-configure
 SUBST_FILES.host-subdir=	libgcc/Makefile.in
 SUBST_SED.host-subdir=		'-e /host_subdir = @host_subdir@/s,@host_subdir@,host-${MACHINE_ARCH}--${OPSYS:tl},'
 

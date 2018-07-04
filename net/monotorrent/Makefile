@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2018/04/14 07:34:00 adam Exp $
+# $NetBSD: Makefile,v 1.26 2018/07/04 13:40:28 jperkin Exp $
 
 DISTNAME=	monotorrent-0.72
 PKGREVISION=	19
@@ -15,7 +15,7 @@ USE_TOOLS+=	gmake bsdtar pkg-config
 EXTRACT_USING=	bsdtar
 
 SUBST_CLASSES+=		fix-mcs
-SUBST_STAGE.fix-mcs=	post-patch
+SUBST_STAGE.fix-mcs=	pre-configure
 SUBST_MESSAGE.fix-mcs=	Fix compiler name
 SUBST_FILES.fix-mcs=	configure MonoTorrent/Makefile.in
 SUBST_SED.fix-mcs=	-e 's,gmcs,mcs,'

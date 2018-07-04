@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2018/01/29 11:32:59 adam Exp $
+# $NetBSD: Makefile,v 1.109 2018/07/04 13:40:30 jperkin Exp $
 
 DISTNAME=	rsync-3.1.3
 CATEGORIES=	net
@@ -28,7 +28,7 @@ SMF_NAME=		rsyncd
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	rsync.1 rsyncd.conf.5
 SUBST_SED.paths=	-e 's|/etc/rsyncd|${PKG_SYSCONFDIR}/rsyncd|g'
 SUBST_SED.paths+=	-e 's|/usr/bin/rsync|${PREFIX}/bin/rsync|g'

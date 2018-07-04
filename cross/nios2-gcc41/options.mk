@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2016/07/07 13:26:16 rillig Exp $
+# $NetBSD: options.mk,v 1.4 2018/07/04 13:40:12 jperkin Exp $
 
 ### Set options
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nios2-gcc
@@ -15,7 +15,7 @@ CFLAGS+=		-DTARGET_SYSTEM_ROOT=0 -DTARGET_SYSTEM_ROOT_RELOCATABLE
 # conditional SUBST_CLASSES
 .if empty(PKG_OPTIONS:Mdoc)
 SUBST_CLASSES+=		nios
-SUBST_STAGE.nios=	post-patch
+SUBST_STAGE.nios=	pre-configure
 SUBST_FILES.nios=	gcc/Makefile.in
 SUBST_SED.nios=		-e s/@@DOC@@//
 SUBST_SED.nios+=	-e s/@@INSTALL_HTML@@//
@@ -32,7 +32,7 @@ BUILD_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
 PLIST.doc=		yes
 
 SUBST_CLASSES+=		nios
-SUBST_STAGE.nios=	post-patch
+SUBST_STAGE.nios=	pre-configure
 SUBST_FILES.nios=	gcc/Makefile.in
 SUBST_SED.nios=		-e s/@@DOC@@/doc/
 SUBST_SED.nios+=	-e s/@@INSTALL_HTML@@/install-html/

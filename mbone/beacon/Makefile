@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2017/08/01 16:47:39 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2018/07/04 13:40:25 jperkin Exp $
 #
 
 DISTNAME=	beacon-1.3
@@ -21,7 +21,7 @@ PERL5_PACKLIST=		auto/Net/Multicast/Beacon/.packlist
 
 SUBST_CLASSES+=		conf
 SUBST_FILES.conf=	src/beacon.in
-SUBST_STAGE.conf=	post-patch
+SUBST_STAGE.conf=	pre-configure
 SUBST_SED.conf=		-e s,@prefix@/etc,${PKG_SYSCONFDIR},
 
 CONF_FILES+=	${PREFIX}/share/examples/beacon/beacon.conf \

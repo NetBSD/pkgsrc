@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/10/02 13:36:32 wiedi Exp $
+# $NetBSD: Makefile,v 1.7 2018/07/04 13:40:16 jperkin Exp $
 #
 
 DISTNAME=	zzuf-0.15
@@ -22,7 +22,7 @@ SUBST_CLASSES+=		fix-paths
 SUBST_FILES.fix-paths=	doc/libzzuf.3.in
 SUBST_MESSAGE.fix-paths=Fixing hard-coded pathnames
 SUBST_SED.fix-paths=	-e 's,/usr,${PREFIX},g'
-SUBST_STAGE.fix-paths=	post-patch
+SUBST_STAGE.fix-paths=	pre-configure
 
 .include "../../mk/bsd.fast.prefs.mk"
 

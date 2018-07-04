@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/12/21 10:36:44 plunky Exp $
+# $NetBSD: Makefile,v 1.13 2018/07/04 13:40:36 jperkin Exp $
 
 DISTNAME=		bcmfw-2.2
 CATEGORIES=		sysutils
@@ -33,7 +33,7 @@ PLIST_SUBST+=		FIRMWARE_DIR=${FIRMWARE_DIR}
 SUBST_CLASSES+=		dir
 SUBST_FILES.dir=	bcmfw.8
 SUBST_SED.dir=		-e 's,/libdata/bcmfw,${PREFIX}/${FIRMWARE_DIR}&,'
-SUBST_STAGE.dir=	post-patch
+SUBST_STAGE.dir=	pre-configure
 SUBST_MESSAGE.dir=	Fixing path to firmware directory.
 
 USE_BSD_MAKEFILE=	yes

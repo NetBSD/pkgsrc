@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2016/04/20 12:10:28 nros Exp $
+# $NetBSD: Makefile,v 1.27 2018/07/04 13:40:08 jperkin Exp $
 #
 
 DISTNAME=	libvisual-0.4.0
@@ -26,7 +26,7 @@ RT_LIB_SCHED=		# empty
 .endif
 MAKE_ENV+=		RT_LIB_SCHED=${RT_LIB_SCHED}
 SUBST_CLASSES+=	rtlib
-SUBST_STAGE.rtlib=	post-patch
+SUBST_STAGE.rtlib=	pre-configure
 SUBST_FILES.rtlib=	libvisual.pc.in
 SUBST_VARS.rtlib=	RT_LIB_SCHED
 

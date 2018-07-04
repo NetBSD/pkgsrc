@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/04/25 14:20:44 tnn Exp $
+# $NetBSD: Makefile,v 1.21 2018/07/04 13:40:17 jperkin Exp $
 #
 
 DISTNAME=		fceu-0.98.13.src
@@ -17,7 +17,7 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
 SUBST_CLASSES+=		dsp
-SUBST_STAGE.dsp=	post-patch
+SUBST_STAGE.dsp=	pre-configure
 SUBST_MESSAGE.dsp=	Adjusting sound device path.
 SUBST_FILES.dsp=	src/drivers/sexyal/drivers/oss.c
 SUBST_SED.dsp=		-e "s|/dev/dsp|${DEVOSSAUDIO}|"

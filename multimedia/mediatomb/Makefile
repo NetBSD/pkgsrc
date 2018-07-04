@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2018/04/29 21:31:57 adam Exp $
+# $NetBSD: Makefile,v 1.60 2018/07/04 13:40:26 jperkin Exp $
 
 DISTNAME=	mediatomb-0.12.1
 PKGREVISION=	38
@@ -39,7 +39,7 @@ MEDIATOMB_HOME=		${PKG_HOME.${MEDIATOMB_USER}}
 SUBST_CLASSES+=		config
 SUBST_FILES.config=	config.xml mediatomb.desktop
 SUBST_VARS.config=	MEDIATOMB_HOME PREFIX OPSYS
-SUBST_STAGE.config=	post-patch
+SUBST_STAGE.config=	pre-configure
 
 INSTALLATION_DIRS+=	share/applications share/examples/mediatomb
 

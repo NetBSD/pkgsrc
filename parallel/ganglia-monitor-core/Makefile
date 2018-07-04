@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2018/06/28 01:05:01 bacon Exp $
+# $NetBSD: Makefile,v 1.60 2018/07/04 13:40:31 jperkin Exp $
 #
 
 DISTNAME=		ganglia-3.7.2
@@ -76,14 +76,14 @@ SUBST_VARS.paths+=	GANGLIA_VARBASE
 ## gmond.conf.5 and gmond.conf.html can be generated from conf.pod, but
 ## doing so requires perl installed in the build stage.
 SUBST_CLASSES+=		etcdir
-SUBST_STAGE.etcdir=	post-patch
+SUBST_STAGE.etcdir=	pre-configure
 SUBST_FILES.etcdir=	${WRKSRC}/README \
 			${WRKSRC}/mans/gmetad.1 \
 			${WRKSRC}/mans/gmond.1
 SUBST_SED.etcdir=	-e "s|/etc/ganglia/\(gm.*d\.conf\)|${PREFIX}/etc/\1|g"
 
 SUBST_CLASSES+=			linux_init
-SUBST_STAGE.linux_init=		post-patch
+SUBST_STAGE.linux_init=		pre-configure
 SUBST_FILES.linux_init=		gmond/gmond.init
 SUBST_FILES.linux_init+=	gmetad/gmetad.init
 SUBST_SED.linux_init=		-e 's|/usr/sbin|${PREFIX}/sbin|g'
@@ -92,7 +92,7 @@ SUBST_SED.linux_init+=		-e 's|/etc/ganglia|${PREFIX}&|g'
 SUBST_SED.linux_init+=		-e 's|/var/lock/subsys|${PREFIX}&|g'
 
 SUBST_CLASSES+=		systemd
-SUBST_STAGE.systemd=	post-patch
+SUBST_STAGE.systemd=	pre-configure
 SUBST_FILES.systemd=	gmond/gmond.service gmetad/gmetad.service
 SUBST_SED.systemd=	-e 's|@runstatedir@|${PREFIX}/var/run|g'
 SUBST_SED.systemd+=	-e 's|@sbindir@|${PREFIX}/sbin|g'

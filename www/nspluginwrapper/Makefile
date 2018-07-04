@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2018/04/29 21:32:07 adam Exp $
+# $NetBSD: Makefile,v 1.63 2018/07/04 13:40:41 jperkin Exp $
 #
 
 DISTNAME=	nspluginwrapper-1.4.4
@@ -38,7 +38,7 @@ PLUGIN_SRCDIR=		${WRKDIR}/usr/${PLUGIN_SUBDIR}
 LDFLAGS.DragonFly=	-lgmodule-2.0
 
 SUBST_CLASSES+=		npw-config
-SUBST_STAGE.npw-config=	post-patch
+SUBST_STAGE.npw-config=	pre-configure
 SUBST_FILES.npw-config=	src/npw-config.c
 SUBST_SED.npw-config=	-e "s|/usr/pkg/|${PREFIX}/|g"
 

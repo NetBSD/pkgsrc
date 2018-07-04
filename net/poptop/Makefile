@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/23 17:18:59 asau Exp $
+# $NetBSD: Makefile,v 1.22 2018/07/04 13:40:29 jperkin Exp $
 
 DISTNAME=	pptpd-1.3.4
 PKGNAME=	${DISTNAME:S/pptpd/poptop/}
@@ -16,12 +16,12 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libwrap
 
 SUBST_CLASSES+=		sysconf
-SUBST_STAGE.sysconf=	post-patch
+SUBST_STAGE.sysconf=	pre-configure
 SUBST_FILES.sysconf=	defaults.h pptpd.8 pptpd.conf.5
 SUBST_SED.sysconf=	-e s,@@PKGSYSCONFDIR@@,${PKG_SYSCONFDIR},
 
 SUBST_CLASSES+=		logwtmp
-SUBST_STAGE.logwtmp=	post-patch
+SUBST_STAGE.logwtmp=	pre-configure
 SUBST_FILES.logwtmp=	pptpctrl.c
 SUBST_SED.logwtmp=	-e s,@@PREFIX@@,${PREFIX},
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2018/04/21 13:38:06 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2018/07/04 13:40:33 jperkin Exp $
 
 DISTNAME=	xpdf-3.04
 CATEGORIES=	print
@@ -40,7 +40,7 @@ SUBST_CLASSES+=		paths
 SUBST_FILES.paths+=	doc/sample-xpdfrc doc/xpdf.1 doc/xpdfrc.5
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 
 OWN_DIRS=		share/xpdf
 

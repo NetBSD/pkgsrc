@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2018/04/14 07:34:30 adam Exp $
+# $NetBSD: Makefile,v 1.93 2018/07/04 13:40:23 jperkin Exp $
 
 DISTNAME=	dspam-3.10.2
 PKGREVISION=	21
@@ -26,7 +26,7 @@ REPLACE_PERL+=		webui/cgi-bin/templates/*/strings.pl
 PKGCONFIG_OVERRIDE+=	src/dspam.pc.in
 
 SUBST_CLASSES+=		cgi
-SUBST_STAGE.cgi=	post-patch
+SUBST_STAGE.cgi=	pre-configure
 SUBST_FILES.cgi=	webui/cgi-bin/templates/nav_performance.html
 SUBST_FILES.cgi+=	webui/cgi-bin/configure.pl.in
 SUBST_FILES.cgi+=	webui/cgi-bin/dspam.cgi webui/cgi-bin/admin.cgi

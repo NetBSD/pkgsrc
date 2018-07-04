@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2018/07/03 05:03:07 adam Exp $
+# $NetBSD: Makefile,v 1.26 2018/07/04 13:40:13 jperkin Exp $
 
 DISTNAME=	ExmanIDE-0.9.4
 PKGREVISION=	7
@@ -21,20 +21,20 @@ PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-wxWidgets
 
 SUBST_CLASSES+=		mod
 SUBST_MESSAGE.mod=	Fixing deprecated module names.
-SUBST_STAGE.mod=	post-patch
+SUBST_STAGE.mod=	pre-configure
 SUBST_FILES.mod=	Profile.py SourceEditor.py StcStyle.py
 SUBST_SED.mod=		-e 's,wxPython\.lib\.PyCrust,wxPython.py,g'
 SUBST_SED.mod+=		-e 's,wxPython\.py,wx.py,g'
 
 SUBST_CLASSES+=		py
 SUBST_MESSAGE.py=	Fixing paths in a wrapper script.
-SUBST_STAGE.py=		post-patch
+SUBST_STAGE.py=		pre-configure
 SUBST_FILES.py=		ExmanIDE
 SUBST_SED.py=		-e 's,python \$$0\.pyw,${PYTHONBIN} ${PREFIX}/share/${PKGBASE}/ExmanIDE.pyw,g'
 
 SUBST_CLASSES+=		py2
 SUBST_MESSAGE.py2=	Fixing path in Python module.
-SUBST_STAGE.py2=	post-patch
+SUBST_STAGE.py2=	pre-configure
 SUBST_FILES.py2=	ExmanIDE.pyw
 SUBST_SED.py2=		-e 's,/usr/bin/env python.*$$,${PYTHONBIN},'
 

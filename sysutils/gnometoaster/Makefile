@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2017/08/16 20:45:45 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2018/07/04 13:40:37 jperkin Exp $
 #
 
 DISTNAME=	gtoaster1.0Beta5
@@ -24,7 +24,7 @@ LDFLAGS.DragonFly=	-lintl
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	audio_oss.c
 SUBST_SED.paths+=	-e 's,@DEVOSSAUDIO@,${DEVOSSAUDIO},g'
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2015/11/14 14:14:46 leot Exp $
+# $NetBSD: Makefile,v 1.43 2018/07/04 13:40:22 jperkin Exp $
 
 DISTNAME=		scheme48-1.9.2
 CATEGORIES=		lang
@@ -31,7 +31,7 @@ REPLACE_FILES.scheme=	build/scheme48-config.in
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 SUBST_CLASSES+=		pthr
-SUBST_STAGE.pthr=	post-patch
+SUBST_STAGE.pthr=	pre-configure
 SUBST_FILES.pthr=	configure
 SUBST_MESSAGE.pthr=	Hardcoding -pthread in CFLAGS and LDFLAGS
 SUBST_SED.pthr=		-e 's,pthreads_done=\"no\",pthreads_done=\"yes\"; CFLAGS=\"$$CFLAGS -pthread\"; LDFLAGS=\"$$LDFLAGS -pthread\",'

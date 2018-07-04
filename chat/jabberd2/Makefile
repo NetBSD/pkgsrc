@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2018/04/14 07:34:11 adam Exp $
+# $NetBSD: Makefile,v 1.122 2018/07/04 13:40:10 jperkin Exp $
 
 DISTNAME=	jabberd-2.6.1
 PKGREVISION=	3
@@ -30,7 +30,7 @@ LIBS+=		${PTHREAD_LIBS}
 CFLAGS.SunOS+=		-D__EXTENSIONS__	# sockaddr_storage
 
 SUBST_CLASSES+=		path
-SUBST_STAGE.path=	post-patch
+SUBST_STAGE.path=	pre-configure
 SUBST_FILES.path=	configure
 SUBST_MESSAGE.path=	Fixing configure script.
 SUBST_SED.path=		-e "s,/usr/local,${PREFIX},g"

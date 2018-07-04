@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2009/11/20 13:14:13 fhajny Exp $
+# $NetBSD: options.mk,v 1.2 2018/07/04 13:40:24 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pfqueue
 
@@ -34,7 +34,7 @@ PLIST.socket=	yes
 .endif
 
 SUBST_CLASSES+=		backends
-SUBST_STAGE.backends=	post-patch
+SUBST_STAGE.backends=	pre-configure
 SUBST_MESSAGE.backends=	Enabling backends
 SUBST_FILES.backends=	backends/Makefile.in
 SUBST_SED.backends=	-e 's|@PFQ_BACKENDS@|${PFQ_BACKENDS:Q}|'

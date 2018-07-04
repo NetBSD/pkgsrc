@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2018/07/03 05:03:42 adam Exp $
+# $NetBSD: Makefile,v 1.43 2018/07/04 13:40:43 jperkin Exp $
 
 DISTNAME=	avant-window-navigator-0.4.0
 PKGREVISION=	29
@@ -26,13 +26,13 @@ GCONF_SCHEMAS+=		avant-window-navigator.schemas
 GCONF_SCHEMAS+=		awn-applet-taskmanager.schemas
 
 SUBST_CLASSES+=		python
-SUBST_STAGE.python=	post-patch
+SUBST_STAGE.python=	pre-configure
 SUBST_MESSAGE.python=	Fixing python path
 SUBST_FILES.python=	applet-activation/main.c
 SUBST_SED.python=	-e "s,@PYTHONBIN@,${PYTHONBIN},"
 
 SUBST_CLASSES+=		pathfix
-SUBST_STAGE.pathfix=	post-patch
+SUBST_STAGE.pathfix=	pre-configure
 SUBST_MESSAGE.pathfix=	Fixing hardcoded paths
 SUBST_FILES.pathfix=	applets/taskmanager/awn-applet-taskmanager.schema-ini.in
 SUBST_FILES.pathfix+=	doc/reference/html/*.html

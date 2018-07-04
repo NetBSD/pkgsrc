@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/08/07 17:56:13 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2018/07/04 13:40:27 jperkin Exp $
 #
 
 APOLLOVERS=	1.4
@@ -30,7 +30,7 @@ SUBST_CLASSES+=		home
 SUBST_FILES.home=	${WRKSRC}/bin/apollo
 SUBST_SED.home=		-e 's,@APOLLO_HOME@,${PREFIX},'
 SUBST_SED.home+=	-e 's,@JAVA_HOME@,${PKG_JAVA_HOME},'
-SUBST_STAGE.home=	post-patch
+SUBST_STAGE.home=	pre-configure
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/apollo ${DESTDIR}${PREFIX}/bin

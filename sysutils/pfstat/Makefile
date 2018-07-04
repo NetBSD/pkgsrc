@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2018/03/12 11:17:37 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2018/07/04 13:40:38 jperkin Exp $
 
 DISTNAME=	pfstat-2.5
 PKGREVISION=	11
@@ -18,7 +18,7 @@ MAKE_ENV+=	PF_VERSION=${PF_VERSION:S/.//} NOGCCERROR=yes
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8 ${PKGMANDIR}/cat8 share/examples/pfstat
 
 SUBST_CLASSES+=		conf
-SUBST_STAGE.conf=	post-patch
+SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	pfstat.8 pfstat.c pfstat.conf.example
 SUBST_SED.conf=		-e "s|/etc/pfstat.conf|${PKG_SYSCONFDIR}/pfstat.conf|g"
 SUBST_MESSAGE.conf=	Fixing configuration file paths.

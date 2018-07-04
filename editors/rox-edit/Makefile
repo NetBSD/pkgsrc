@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/05/17 16:10:44 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2018/07/04 13:40:16 jperkin Exp $
 #
 
 DISTNAME=	edit-2.0
@@ -27,7 +27,7 @@ INSTALLATION_DIRS=	share/rox/Edit
 
 SUBST_CLASSES+=		lib
 SUBST_MESSAGE.lib=	Fixing hardcoded paths for ROX-Lib.
-SUBST_STAGE.lib=	post-patch
+SUBST_STAGE.lib=	pre-configure
 SUBST_FILES.lib=	findrox.py
 SUBST_SED.lib=		-e 's,/usr/local/lib,${PREFIX}/share/rox,g'
 

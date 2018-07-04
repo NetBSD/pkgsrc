@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/04/20 08:05:30 sborrill Exp $
+# $NetBSD: Makefile,v 1.11 2018/07/04 13:40:38 jperkin Exp $
 #
 
 # Values from XenServer 6.5.0 = 6, 5, 0, 90977
@@ -34,13 +34,13 @@ NO_BUILD=	yes
 
 RCD_SCRIPTS=		xenguest
 SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	${SRCFILES}
 SUBST_SED.paths=	-e "s,@VARBASE@,${VARBASE},g"
 SUBST_SED.paths+=	-e "s,@PREFIX@,${PREFIX},g"
 
 SUBST_CLASSES+=		version
-SUBST_STAGE.version=	post-patch
+SUBST_STAGE.version=	pre-configure
 SUBST_FILES.version=	xe-update-guest-attrs
 SUBST_SED.version=	-e "s,@XENMAJOR@,${XENMAJOR},g"
 SUBST_SED.version+=	-e "s,@XENMINOR@,${XENMINOR},g"

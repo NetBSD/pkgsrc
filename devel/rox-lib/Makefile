@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2018/07/03 05:03:14 adam Exp $
+# $NetBSD: Makefile,v 1.26 2018/07/04 13:40:15 jperkin Exp $
 
 DISTNAME=	rox-lib-2.0.2
 PKGREVISION=	14
@@ -30,7 +30,7 @@ INSTALLATION_DIRS=	share/rox/ROX-Lib2
 
 SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Fixing hardcoded paths.
-SUBST_STAGE.path=	post-patch
+SUBST_STAGE.path=	pre-configure
 SUBST_FILES.path=	python/rox/basedir.py
 SUBST_FILES.path+=	python/rox/choices.py
 SUBST_FILES.path+=	tests/python/testbasedir.py
@@ -39,7 +39,7 @@ SUBST_SED.path=		-e 's,/usr/local,${PREFIX},g'
 
 SUBST_CLASSES+=		lib
 SUBST_MESSAGE.lib=	Fixing hardcoded paths for ROX-Lib.
-SUBST_STAGE.lib=	post-patch
+SUBST_STAGE.lib=	pre-configure
 SUBST_FILES.lib=	Help/findrox.py
 SUBST_SED.lib=		-e 's,/usr/local/lib,${PREFIX}/share/rox,g'
 

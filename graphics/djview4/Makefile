@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2018/03/12 11:16:40 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2018/07/04 13:40:20 jperkin Exp $
 #
 
 DISTNAME=	djview-4.10.6
@@ -18,7 +18,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 
 SUBST_CLASSES+=		nsdejavu
-SUBST_STAGE.nsdejavu=	post-patch
+SUBST_STAGE.nsdejavu=	pre-configure
 SUBST_MESSAGE.nsdejavu=	Fixing hardcoded paths.
 SUBST_FILES.nsdejavu=	nsdejavu/nsdejavu.c
 SUBST_SED.nsdejavu=	-e 's:/usr/local/lib:${LOCALBASE}/lib:'

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/10/08 14:05:55 taca Exp $
+# $NetBSD: Makefile,v 1.9 2018/07/04 13:40:30 jperkin Exp $
 
 DISTNAME=	drizztbsd-stompserver-1c7a275
 PKGNAME=	${RUBY_PKGPREFIX}-stompserver-1.0.0
@@ -75,7 +75,7 @@ OWN_DIRS_PERMS+=	${ST_ROOT}/${STOMPSERVER_CFGDIR}	\
 			${STOMPSERVER_USER} ${STOMPSERVER_GROUP} 0700
 
 SUBST_CLASSES+=		cfg
-SUBST_STAGE.cfg=	post-patch
+SUBST_STAGE.cfg=	pre-configure
 SUBST_FILES.cfg=	config/stompserver.conf
 SUBST_SED.cfg=		-e 's,@STOMPSERVER_WRKDIR@,${STOMPSERVER_WRKDIR},g'
 SUBST_SED.cfg+=		-e 's,@STOMPSERVER_LOGDIR@,${STOMPSERVER_LOGDIR},g'

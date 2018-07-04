@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2018/04/16 14:34:31 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2018/07/04 13:40:19 jperkin Exp $
 #
 
 DISTNAME=	pioneers-0.11.3
@@ -18,7 +18,7 @@ USE_PKGLOCALEDIR=	YES
 BUILDLINK_DEPMETHOD.librsvg=	build	# generates icons
 
 SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 SUBST_FILES.paths=	docs/*.6
 SUBST_SED.paths=	-e s,/usr/share/,${PREFIX}/share/,

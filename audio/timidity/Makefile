@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2018/04/16 14:34:10 wiz Exp $
+# $NetBSD: Makefile,v 1.108 2018/07/04 13:40:09 jperkin Exp $
 
 DISTNAME=	TiMidity++-2.14.0
 PKGNAME=	${DISTNAME:S/TiMidity++/timidity/}
@@ -33,7 +33,7 @@ CONFIGURE_ARGS.Linux+=	--enable-alsaseq
 
 SUBST_CLASSES+=		confdir
 SUBST_MESSAGE.confdir=	Configuring to use PKG_SYSCONFDIR.
-SUBST_STAGE.confdir=	post-patch
+SUBST_STAGE.confdir=	pre-configure
 SUBST_FILES.confdir=	doc/C/timidity.cfg.5 doc/ja_JP.eucJP/timidity.cfg.5
 SUBST_SED.confdir=	-e 's,/usr/local/share/timidity,${PKG_SYSCONFDIR},g'
 

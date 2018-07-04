@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2018/02/02 00:20:45 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2018/07/04 13:40:23 jperkin Exp $
 
 DISTNAME=	dk-milter-1.0.2
 PKGREVISION=	1
@@ -18,7 +18,7 @@ USE_TOOLS+=		gm4
 .include "../../mk/bsd.prefs.mk"
 
 SUBST_CLASSES+=		libs
-SUBST_STAGE.libs=	post-patch
+SUBST_STAGE.libs=	pre-configure
 SUBST_FILES.libs=	site.config.m4.dist dk-filter/Makefile.m4 \
 			devtools/M4/header.m4
 SUBST_SED.libs=		-e 's|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g'

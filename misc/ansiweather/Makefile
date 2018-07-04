@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/02/21 11:36:43 maya Exp $
+# $NetBSD: Makefile,v 1.8 2018/07/04 13:40:25 jperkin Exp $
 
 DISTNAME=	ansiweather-1.10
 CATEGORIES=	misc
@@ -29,7 +29,7 @@ CONF_FILES+=	${EGDIR}/ansiweatherrc.example ${PKG_SYSCONFDIR}/ansiweatherrc
 SUBST_CLASSES+=		config
 SUBST_FILES.config=	ansiweather
 SUBST_SED.config=	-e 's,~/.ansiweatherrc,${PKG_SYSCONFDIR}/ansiweatherrc,'
-SUBST_STAGE.config=	post-patch
+SUBST_STAGE.config=	pre-configure
 
 AUTO_MKDIRS=		yes
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1

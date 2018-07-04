@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2018/04/13 13:55:29 jaapb Exp $
+# $NetBSD: Makefile,v 1.36 2018/07/04 13:40:44 jperkin Exp $
 
 .include "../../lang/ocaml/Makefile.common"
 DISTINFO_FILE= ${PKGDIR}/../../lang/ocaml/distinfo
@@ -43,19 +43,19 @@ PLIST_SRC+=	${PKGDIR}/PLIST.stub
 BUILDLINK_DEPMETHOD.ocaml=	full
 
 SUBST_CLASSES+=		depend
-SUBST_STAGE.depend=	post-patch
+SUBST_STAGE.depend=	pre-configure
 SUBST_FILES.depend=	otherlibs/graph/.depend
 SUBST_SED.depend=	-e 's,/usr/X11R6,${X11BASE},g'
 SUBST_MESSAGE.depend=	Fixing .depend in otherlibs/graph.
 
 SUBST_CLASSES+=		mklib
-SUBST_STAGE.mklib=	post-patch
+SUBST_STAGE.mklib=	pre-configure
 SUBST_FILES.mklib=	otherlibs/Makefile.shared
 SUBST_SED.mklib=	-e 's,^MKLIB=.*,MKLIB=ocamlmklib,g'
 SUBST_MESSAGE.mklib=	Fixing MKLIB in otherlibs/Makefile.shared.
 
 SUBST_CLASSES+=		comp
-SUBST_STAGE.comp=	post-patch
+SUBST_STAGE.comp=	pre-configure
 SUBST_FILES.comp=	otherlibs/Makefile
 SUBST_SED.comp=		-e 's,^CAMLC=.*,CAMLC=ocamlc,g'
 SUBST_SED.comp+=	-e '/^CAMLOPT=/{;N;s,^CAMLOPT=.*,CAMLOPT=ocamlopt,g;}'
@@ -63,7 +63,7 @@ SUBST_SED.comp+=	-e 's,^MKLIB=.*,MKLIB=ocamlmklib,g'
 SUBST_MESSAGE.comp=	Fixing CAMLC OCAMLOPT MKLIB in otherlibs/Makefile.
 
 SUBST_CLASSES+=		comp2
-SUBST_STAGE.comp2=	post-patch
+SUBST_STAGE.comp2=	pre-configure
 SUBST_FILES.comp2=	otherlibs/graph/Makefile
 SUBST_SED.comp2=	-e 's,..CAMLRUN..*ocamldep,ocamldep,g'
 SUBST_MESSAGE.comp2=	Fixing ocamldep in otherlibs/graph/Makefile.

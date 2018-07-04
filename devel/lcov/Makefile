@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/04/10 01:26:26 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2018/07/04 13:40:14 jperkin Exp $
 #
 
 DISTNAME=	lcov-1.13
@@ -16,7 +16,7 @@ USE_TOOLS+=		perl
 REPLACE_PERL=		bin/gendesc bin/genhtml bin/geninfo bin/genpng bin/lcov
 
 SUBST_CLASSES+=		egdir
-SUBST_STAGE.egdir=      post-patch
+SUBST_STAGE.egdir=      pre-configure
 SUBST_FILES.egdir=	bin/genhtml
 SUBST_FILES.egdir+=	bin/geninfo
 SUBST_FILES.egdir+=	bin/lcov

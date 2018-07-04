@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2015/04/25 14:22:54 tnn Exp $
+# $NetBSD: Makefile,v 1.36 2018/07/04 13:40:19 jperkin Exp $
 #
 
 DISTNAME=	fillets-ng-0.7.3
@@ -19,7 +19,7 @@ LDFLAGS.DragonFly=	-lX11
 LDFLAGS.SunOS+=		-lX11
 
 SUBST_CLASSES+=		man
-SUBST_STAGE.man=	post-patch
+SUBST_STAGE.man=	pre-configure
 SUBST_FILES.man=	fillets.6
 SUBST_MESSAGE.man=	Fixing documentation path in the manual page.
 SUBST_SED.man=		"s,/usr/share/doc/fillets-ng/html/manual.html,${PREFIX}/share/doc/html/fillets-ng/manual.html,"

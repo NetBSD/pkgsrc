@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/09/11 07:45:33 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2018/07/04 13:40:13 jperkin Exp $
 
 PKGNAME=	${DISTNAME:S/-r2704//}
 DISTNAME=	bullet-2.82-r2704
@@ -22,7 +22,7 @@ CMAKE_ARGS+=	-DBUILD_SHARED_LIBS:BOOL=on
 CMAKE_ARGS+=	-DINSTALL_LIBS:BOOL=on
 
 SUBST_CLASSES+=	lcompat
-SUBST_STAGE.lcompat=	post-patch
+SUBST_STAGE.lcompat=	pre-configure
 SUBST_FILES.lcompat=	Demos/AllBulletDemos/CMakeLists.txt
 SUBST_SED.lcompat=	-e "s|{OPENGL_glu_LIBRARY}|{OPENGL_glu_LIBRARY} -lcompat|g"
 SUBST_MESSAGE.lcompat=	Adding -lcompat for demos

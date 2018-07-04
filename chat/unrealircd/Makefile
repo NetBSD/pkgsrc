@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2018/04/29 21:31:29 adam Exp $
+# $NetBSD: Makefile,v 1.53 2018/07/04 13:40:11 jperkin Exp $
 
 DISTNAME=	Unreal3.2.10.5
 PKGNAME=	${DISTNAME:tl:S/l/lircd-/1}
@@ -79,7 +79,7 @@ FILES_SUBST+=	UIRCD_USER=${UIRCD_USER}
 FILES_SUBST+=	UIRCD_GROUP=${UIRCD_GROUP}
 
 SUBST_CLASSES+=		homedir
-SUBST_STAGE.homedir=	post-patch
+SUBST_STAGE.homedir=	pre-configure
 SUBST_FILES.homedir=	doc/example.conf
 SUBST_SED.homedir=	-e "s|src/modules|${IRCD_SHARE}/modules|g"
 SUBST_SED.homedir+=	-e "s|include \"|include \"${IRCD_SHARE}/|g"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2018/07/03 05:03:04 adam Exp $
+# $NetBSD: Makefile,v 1.70 2018/07/04 13:40:11 jperkin Exp $
 
 DISTNAME=		spectrum-1.4.8
 PKGREVISION=		45
@@ -55,7 +55,7 @@ CONF_FILES+=		${EGDIR}/spectrum.cfg ${PKG_SYSCONFDIR}/spectrum.cfg
 .include "options.mk"
 
 SUBST_CLASSES+=		cfgpath
-SUBST_STAGE.cfgpath=	post-patch
+SUBST_STAGE.cfgpath=	pre-configure
 SUBST_FILES.cfgpath+=	src/configfile.cpp
 SUBST_FILES.cfgpath+=	tools/migrate-db/main.cpp
 SUBST_FILES.cfgpath+=	spectrumctl/spectrumctl.py
@@ -65,13 +65,13 @@ SUBST_SED.cfgpath=	-e 's,/etc/spectrum,${PKG_SYSCONFDIR},g'
 SUBST_SED.cfgpath+=	-e 's,@ETC_SPECTRUM@,${PKG_SYSCONFDIR},g'
 
 SUBST_CLASSES+=		manpath
-SUBST_STAGE.manpath=	post-patch
+SUBST_STAGE.manpath=	pre-configure
 SUBST_FILES.manpath=	CMakeLists.txt
 SUBST_MESSAGE.manpath=	Correcting man page directory
 SUBST_SED.manpath+=	-e 's,@PKGMANDIR@,${PKGMANDIR},g'
 
 SUBST_CLASSES+=		users
-SUBST_STAGE.users=	post-patch
+SUBST_STAGE.users=	pre-configure
 SUBST_FILES.users=	spectrumctl/spectrumctl.py
 SUBST_FILES.users+=	spectrumctl/spectrum/env.py
 SUBST_FILES.users+=	man/spectrumctl.8
@@ -79,7 +79,7 @@ SUBST_MESSAGE.users=	Correcting spectrum user
 SUBST_SED.users=	-e 's/@SPECTRUM_USER@/${JABBER_USER}/g'
 
 SUBST_CLASSES+=		cfg
-SUBST_STAGE.cfg=	post-patch
+SUBST_STAGE.cfg=	pre-configure
 SUBST_FILES.cfg=	spectrum.cfg
 SUBST_MESSAGE.cfg=	Fixing paths in default config file
 SUBST_SED.cfg=		-e 's,/var/run/spectrum,${SPECTRUM_RUN},g'

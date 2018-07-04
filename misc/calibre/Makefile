@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.206 2018/06/24 11:16:11 wiz Exp $
+# $NetBSD: Makefile,v 1.207 2018/07/04 13:40:25 jperkin Exp $
 
 DISTNAME=	calibre-3.26.1
 PKGREVISION=	2
@@ -55,14 +55,14 @@ FIX_PYTHON_FILES+=	*/*/*/*/*/*/*.py
 SUBST_CLASSES+=		prefix
 SUBST_SED.prefix=	-e "s,^QMAKE =.*,QMAKE = '${PREFIX}/qt5/bin/qmake',"
 SUBST_MESSAGE.prefix=	Fixing path to QMAKE
-SUBST_STAGE.prefix=	post-patch
+SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	setup/build_environment.py
 
 # This one is for /usr/bin/env python (or even /usr/bin/env Python or /usr/bin/python2)
 SUBST_CLASSES+=		path
 SUBST_SED.path=		-e "s,\#! */usr/bin/env *[Pp]ython[0-9.]*,\#!${PYTHONBIN},"
 SUBST_MESSAGE.path=	Fixing path to python.
-SUBST_STAGE.path=	post-patch
+SUBST_STAGE.path=	pre-configure
 SUBST_FILES.path=	${FIX_PYTHON_FILES}
 
 REPLACE_BASH+=		resources/calibre-portable.sh

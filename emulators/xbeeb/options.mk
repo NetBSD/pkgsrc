@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2018/03/07 11:57:29 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2018/07/04 13:40:18 jperkin Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -10,7 +10,7 @@ PKG_SUGGESTED_OPTIONS=
 # Unfortunately it doesn't support both at once.
 .if empty(PKG_OPTIONS:Mmitshm)
 SUBST_CLASSES+=		nomitshm
-SUBST_STAGE.nomitshm=	post-patch
+SUBST_STAGE.nomitshm=	pre-configure
 SUBST_MESSAGE.nomitshm=	Disabling MIT-SHM
 SUBST_FILES.nomitshm=	src/Config.h
 SUBST_SED.nomitshm=	-e "s|\#define	*MITSHM|\#undef MITSHM|"

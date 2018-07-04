@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2018/01/01 18:16:36 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2018/07/04 13:40:21 jperkin Exp $
 
 DISTNAME=		ecl-16.1.2
 CATEGORIES=		lang
@@ -19,7 +19,7 @@ INFO_FILES=		yes
 CONFIGURE_ARGS+=	--enable-boehm=system --with-system-gmp
 
 SUBST_CLASSES+=			fix-libffi-include
-SUBST_STAGE.fix-libdir=		post-patch
+SUBST_STAGE.fix-libdir=		pre-configure
 SUBST_MESSAGE.fix-libdir=	Fixing libffi layout.
 SUBST_FILES.fix-libdir=		src/c/ffi.d
 SUBST_SED.fix-libdir=		-e '/include.*<ffi/ffi.h>/s:ffi/ffi.h:ffi.h:'

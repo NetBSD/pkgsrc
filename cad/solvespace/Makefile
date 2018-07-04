@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/04/16 14:34:12 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2018/07/04 13:40:10 jperkin Exp $
 #
 #
 # Both of these hashes need to be updated when the solvespace version
@@ -38,13 +38,13 @@ USE_CMAKE=		yes
 CMAKE_ARGS+=		-DGIT_COMMIT_HASH=${SOLVESPACE_HASH}
 
 SUBST_CLASSES+=		desktop
-SUBST_STAGE.desktop=	post-patch
+SUBST_STAGE.desktop=	pre-configure
 SUBST_MESSAGE.desktop=	Fixing absolute path in desktop file
 SUBST_FILES.desktop=	src/unix/solvespace.desktop
 SUBST_SED.desktop=	-e "s,/usr/bin,${PREFIX}/bin,"
 
 SUBST_CLASSES+=		libdxfrw
-SUBST_STAGE.libdxfrw=	post-patch
+SUBST_STAGE.libdxfrw=	pre-configure
 SUBST_MESSAGE.libdxfrw=	Set libdxfrw directory
 SUBST_FILES.libdxfrw=	CMakeLists.txt
 SUBST_SED.libdxfrw=	-e "s,extlib/libdxfrw,extlib/libdxfrw-${LIBDXF_HASH},"

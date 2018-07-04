@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2018/03/23 14:31:46 taca Exp $
+# $NetBSD: Makefile,v 1.36 2018/07/04 13:40:38 jperkin Exp $
 
 DISTNAME=		puppet-5.5.0
 CATEGORIES=		sysutils
@@ -20,7 +20,7 @@ PKG_SYSCONFSUBDIR=	puppet
 RCD_SCRIPTS=		puppetd puppetmasterd
 
 SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	post-patch
+SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	install.rb
 SUBST_FILES.prefix+=	lib/puppet/face/module/changes.rb
 SUBST_FILES.prefix+=	lib/puppet/face/module/install.rb

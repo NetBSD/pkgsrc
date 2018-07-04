@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/10/19 22:27:46 alnsn Exp $
+# $NetBSD: Makefile,v 1.14 2018/07/04 13:40:22 jperkin Exp $
 #
 
 DISTNAME=	osbf-lua-2.0.4
@@ -18,7 +18,7 @@ USE_TOOLS+=		gmake
 INSTALL_TARGET=	install install_spamfilter
 
 SUBST_CLASSES+=		path
-SUBST_STAGE.path=	post-patch
+SUBST_STAGE.path=	pre-configure
 SUBST_MESSAGE.path=	Fixing paths in config
 SUBST_FILES.path=	config
 SUBST_FILES.path+=	spamfilter/getopt.lua

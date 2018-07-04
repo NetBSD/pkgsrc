@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2017/06/16 09:48:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.31 2018/07/04 13:40:41 jperkin Exp $
 
 DISTNAME=	Catalyst-Plugin-Session-0.40
 PKGNAME=	p5-${DISTNAME}
@@ -31,7 +31,7 @@ BUILD_DEPENDS+=	p5-Test-Exception>=0:../../devel/p5-Test-Exception
 
 SUBST_CLASSES+=		perl
 SUBST_MESSAGE.perl=	Fixing the path of perl.
-SUBST_STAGE.perl=	post-patch
+SUBST_STAGE.perl=	pre-configure
 SUBST_FILES.perl=	lib/Catalyst/Plugin/Session.pm lib/Catalyst/Plugin/Session/State.pm \
 			lib/Catalyst/Plugin/Session/Store.pm lib/Catalyst/Plugin/Session/Store/Dummy.pm \
 			lib/Catalyst/Plugin/Session/Test/Store.pm

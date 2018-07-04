@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2016/07/09 06:39:11 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2018/07/04 13:40:40 jperkin Exp $
 #
 
 DISTNAME=	bannerfilter-1.31
@@ -18,7 +18,7 @@ CONF_FILES=	${SHAREDIR}/bannerfilter.conf ${PKG_SYSCONFDIR}/bannerfilter.conf
 REPLACE_PERL=	redirector.pl
 
 SUBST_CLASSES+=	bf
-SUBST_STAGE.bf=	post-patch
+SUBST_STAGE.bf=	pre-configure
 SUBST_FILES.bf=	bannerfilter.conf
 SUBST_SED.bf=	-e s,@SHAREDIR@,${SHAREDIR},g
 

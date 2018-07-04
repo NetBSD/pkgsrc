@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.161 2018/03/04 16:26:24 wiz Exp $
+# $NetBSD: Makefile.common,v 1.162 2018/07/04 13:40:17 jperkin Exp $
 
 # used by editors/vim/Makefile
 # used by editors/vim-gtk2/Makefile
@@ -60,7 +60,7 @@ ALTERNATIVES_SRC=
 
 SUBST_CLASSES+=		sysconfdir
 SUBST_FILES.sysconfdir=	feature.h
-SUBST_STAGE.sysconfdir=	post-patch
+SUBST_STAGE.sysconfdir=	pre-configure
 SUBST_VARS.sysconfdir=	PKG_SYSCONFDIR
 
 post-patch:

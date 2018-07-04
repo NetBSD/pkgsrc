@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/23 17:18:27 asau Exp $
+# $NetBSD: Makefile,v 1.17 2018/07/04 13:40:28 jperkin Exp $
 #
 
 DISTNAME=		hf6to4-1.3
@@ -31,7 +31,7 @@ SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	hf6to4
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 
 post-extract:
 	${CP} ${FILESDIR}/hf6to4 ${WRKSRC}/hf6to4

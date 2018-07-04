@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2018/04/14 07:34:20 adam Exp $
+# $NetBSD: Makefile,v 1.40 2018/07/04 13:40:18 jperkin Exp $
 #
 
 DISTNAME=	svnfs-0.4
@@ -22,7 +22,7 @@ REPLACE_PERL=	svn-config.pl
 SUBST_CLASSES+=		svn
 SUBST_FILES.svn=	svn-config.pl
 SUBST_MESSAGE.svn=	Fixing subversion pathnames in ${SUBST_FILES.svn}
-SUBST_STAGE.svn=	post-patch
+SUBST_STAGE.svn=	pre-configure
 SUBST_VARS.svn=		LOCALBASE
 
 BUILDLINK_ABI_DEPENDS.subversion-base+=	subversion-base>=1.4.3nb2

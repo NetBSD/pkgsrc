@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2017/08/05 15:21:03 schmonz Exp $
+# $NetBSD: Makefile,v 1.45 2018/07/04 13:40:24 jperkin Exp $
 #
 
 DISTNAME=		qmail-run-20170805
@@ -59,7 +59,7 @@ SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
 SUBST_SED.paths+=	-e 's,@SED@,${SED},g'
 SUBST_SED.paths+=	-e 's,@PKGNAME@,${PKGNAME},g'
 SUBST_SED.paths+=	-e 's,@TRUE@,${TRUE},g'
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 
 .include "options.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/07/03 05:03:26 adam Exp $
+# $NetBSD: Makefile,v 1.5 2018/07/04 13:40:26 jperkin Exp $
 
 DISTNAME=	sickbeard-507
 PKGREVISION=	3
@@ -43,7 +43,7 @@ SUBST_FILES.paths=	sickbeard.sh
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
 SUBST_SED.paths+=	-e 's,@VARBASE@,${VARBASE},g'
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 
 post-extract:
 	${CP} ${FILESDIR}/sickbeard.sh ${WRKSRC}/sickbeard.sh

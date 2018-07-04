@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2018/04/29 21:31:25 adam Exp $
+# $NetBSD: Makefile,v 1.70 2018/07/04 13:40:43 jperkin Exp $
 
 DISTNAME=	kde-workspace-4.11.22
 PKGNAME=	${DISTNAME:S/-4/4-4/}
@@ -87,17 +87,17 @@ CONF_FILES+=		${PREFIX}/share/examples/kde4-dbus/org.kde.powerdevil.backlighthel
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	kdm/kcm/main.cpp
 SUBST_SED.paths=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 
 SUBST_CLASSES+=		qtpath
 SUBST_FILES.qtpath=	startkde.cmake
 SUBST_VARS.qtpath=	QTDIR
-SUBST_STAGE.qtpath=	post-patch
+SUBST_STAGE.qtpath=	pre-configure
 
 SUBST_CLASSES+=		isocodes
 SUBST_FILES.isocodes=	kcontrol/keyboard/iso_codes.h
 SUBST_SED.isocodes=	-e 's,/usr/share/xml/iso-codes,${BUILDLINK_PREFIX.iso-codes}/share/xml/iso-codes,g'
-SUBST_STAGE.isocodes=	post-patch
+SUBST_STAGE.isocodes=	pre-configure
 
 ICONDIR=		share/icons
 

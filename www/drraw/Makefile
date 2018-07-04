@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2016/07/09 06:39:12 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2018/07/04 13:40:41 jperkin Exp $
 #
 
 DISTNAME=		drraw-2.2b2
@@ -45,7 +45,7 @@ do-install:
 .endfor
 
 SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	post-patch
+SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	drraw.cgi
 SUBST_SED.prefix=	-e "s,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g"
 SUBST_MESSAGE.prefix=	Fixing harcoded paths.

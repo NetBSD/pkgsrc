@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/09/06 11:12:19 fhajny Exp $
+# $NetBSD: Makefile,v 1.6 2018/07/04 13:40:16 jperkin Exp $
 #
 
 .include "Makefile.common"
@@ -43,7 +43,7 @@ BUILDDIR=		${WRKSRC}/build/${DISTNAME}
 EGDIR=			share/examples/zookeeper
 
 SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Fixing ZooKeeper default paths
 SUBST_FILES.paths=	conf/zoo_sample.cfg
 SUBST_FILES.paths+=	src/packages/templates/conf/zookeeper-env.sh

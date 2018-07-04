@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2013/09/19 05:07:11 obache Exp $
+# $NetBSD: options.mk,v 1.3 2018/07/04 13:40:22 jperkin Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.akonadi
 
@@ -27,7 +27,7 @@ CMAKE_ARGS+=	-DAKONADI_BUILD_QSQLITE=off
 PKG_FAIL_RESASON+=	"Unknown MySQL version: ${_MYSQL_VERSION}"
 .  endif
 SUBST_CLASSES+=		mysql
-SUBST_STAGE.mysql=	post-patch
+SUBST_STAGE.mysql=	pre-configure
 SUBST_MESSAGE.mysql=	Fix mysqld path.
 SUBST_FILES.mysql=	server/CMakeLists.txt
 SUBST_SED.mysql=	-e "s:MYSQLD_EXECUTABLE mysqld:MYSQLD_EXECUTABLE mysqld ${PREFIX}/libexec:"

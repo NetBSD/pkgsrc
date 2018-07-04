@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/06/24 07:31:09 adam Exp $
+# $NetBSD: Makefile,v 1.7 2018/07/04 13:40:34 jperkin Exp $
 
 DISTNAME=	EasyRSA-3.0.4
 PKGNAME=	${DISTNAME:S/EasyRSA/easy-rsa/}
@@ -29,7 +29,7 @@ REQD_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
 SUBST_CLASSES+=		sysconf
-SUBST_STAGE.sysconf=	post-patch
+SUBST_STAGE.sysconf=	pre-configure
 SUBST_FILES.sysconf=	easyrsa vars.example
 SUBST_SED.sysconf=	-e "s|@SYSCONFDIR@|${PKG_SYSCONFDIR}|"
 

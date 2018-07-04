@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/31 11:19:53 asau Exp $
+# $NetBSD: Makefile,v 1.10 2018/07/04 13:40:16 jperkin Exp $
 
 DISTNAME=	vanessa_logger-0.0.8
 CATEGORIES=	devel
@@ -17,7 +17,7 @@ GNU_CONFIGURE=		yes
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Msunpro)
 SUBST_CLASSES+=			__function__
-SUBST_STAGE.__function__=	post-patch
+SUBST_STAGE.__function__=	pre-configure
 SUBST_FILES.__function__=	libvanessa_logger/vanessa_logger.h
 SUBST_SED.__function__=		-e "s|__FUNCTION__|__FILE__|g"
 .endif

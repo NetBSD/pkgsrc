@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2015/04/19 04:13:26 manu Exp $
+# $NetBSD: Makefile,v 1.58 2018/07/04 13:40:14 jperkin Exp $
 
 DISTNAME=	gnustep-make-2.6.2
 PKGREVISION=	2
@@ -44,7 +44,7 @@ GNUSTEP_ARCH=	${MACHINE_ARCH}
 PLIST_SUBST+=	GNUSTEP_ARCH=${GNUSTEP_ARCH}
 
 SUBST_CLASSES+=		target
-SUBST_STAGE.target=	post-patch
+SUBST_STAGE.target=	pre-configure
 SUBST_FILES.target=	target.make
 SUBST_SED.target+=	-e 's|/usr/pkg|${PREFIX}|g'
 

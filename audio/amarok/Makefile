@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.179 2018/04/29 21:31:25 adam Exp $
+# $NetBSD: Makefile,v 1.180 2018/07/04 13:40:08 jperkin Exp $
 
 DISTNAME=	amarok-${VERS}
 VERS=		2.8.0
@@ -30,7 +30,7 @@ CMAKE_ARGS+=	-DKDE4_BUILD_TESTS:BOOL=OFF
 REPLACE_PERL+=	src/kconf_update/amarok-2.4.1-tokens_syntax_update.pl
 
 SUBST_CLASSES+=		mysql
-SUBST_STAGE.mysql=	post-patch
+SUBST_STAGE.mysql=	pre-configure
 SUBST_MESSAGE.mysql=	Fixup paths for MySQL embedded
 SUBST_FILES.mysql=	cmake/modules/FindMySQLAmarok.cmake
 SUBST_FILES.mysql+=	src/core-impl/collections/db/sql/mysqlecollection/CMakeLists.txt

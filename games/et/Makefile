@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2017/08/16 20:45:37 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2018/07/04 13:40:19 jperkin Exp $
 #
 
 DISTNAME=	et-linux-2.56-2.x86
@@ -28,7 +28,7 @@ SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKDIR}/et ${WRKDIR}/etded
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 
 pre-extract:
 	${MKDIR} ${WRKSRC}

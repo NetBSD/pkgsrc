@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/03/04 16:26:51 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2018/07/04 13:40:25 jperkin Exp $
 
 DISTNAME=	vimpager-1.8.9
 CATEGORIES=	misc
@@ -16,7 +16,7 @@ NO_BUILD=	yes
 USE_TOOLS+=	sh:run bash:run
 
 SUBST_CLASSES+=		vimpager
-SUBST_STAGE.vimpager=	post-patch
+SUBST_STAGE.vimpager=	pre-configure
 SUBST_FILES.vimpager=	vimpager
 SUBST_SED.vimpager=	-e 's,/usr/local/etc/,${PKG_SYSCONFDIR}/,g'
 

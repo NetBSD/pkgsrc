@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2012/10/06 11:54:34 asau Exp $
+# $NetBSD: Makefile.common,v 1.7 2018/07/04 13:40:18 jperkin Exp $
 # used by games/crossfire-client/Makefile
 # used by games/crossfire-client-gtk/Makefile
 # used by games/crossfire-client-gtk2/Makefile
@@ -21,7 +21,7 @@ GNU_CONFIGURE=		yes
 REPLACE_PERL+=		common/items.pl utils/deftoheader.pl
 
 SUBST_CLASSES+=		dsp
-SUBST_STAGE.dsp=	post-patch
+SUBST_STAGE.dsp=	pre-configure
 SUBST_MESSAGE.dsp=	Adjusting path to sound device.
 SUBST_FILES.dsp=	sound-src/cfsndserv.c
 SUBST_SED.dsp=		-e "s|/dev/dsp|${DEVOSSAUDIO}|"

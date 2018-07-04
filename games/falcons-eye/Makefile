@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2016/05/17 10:32:07 fhajny Exp $
+# $NetBSD: Makefile,v 1.46 2018/07/04 13:40:19 jperkin Exp $
 #
 
 DISTNAME=		nethack_source_331_jtp_193
@@ -33,7 +33,7 @@ LIBS.SunOS+=		-lm
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Configuring program paths.
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	include/config.h src/fe-config.in
 SUBST_FILES.paths+=	sys/unix/nethack.sh
 SUBST_SED.paths=	-e "s,XXXPREFIXXXX,${PREFIX},g"
@@ -41,7 +41,7 @@ SUBST_SED.paths+=	-e "s,@GZIP_PROGRAM@,${GZIP_CMD:M*gzip},g"
 
 SUBST_CLASSES.NetBSD+=	unixconf
 SUBST_MESSAGE.unixconf=	Configuring to use NetBSD presets.
-SUBST_STAGE.unixconf=	post-patch
+SUBST_STAGE.unixconf=	pre-configure
 SUBST_FILES.unixconf=	include/unixconf.h
 SUBST_SED.unixconf=	-e 's,^\/\* \#define BSD 1 \*\/,\#define BSD 1,'
 SUBST_SED.unixconf+=	-e 's,^\#define SYSV,\/\* \#define SYSV \*\/,'

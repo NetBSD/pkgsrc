@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/01/01 18:16:37 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2018/07/04 13:40:23 jperkin Exp $
 
 DISTNAME=	deliver-2.1.14
 PKGREVISION=	3
@@ -34,7 +34,7 @@ SPECIAL_PERMS+=		bin/deliver ${SETUID_ROOT_PERMS}
 .endif
 
 SUBST_CLASSES+=			sources
-SUBST_STAGE.sources=		post-patch
+SUBST_STAGE.sources=		pre-configure
 SUBST_MESSAGE.sources=		Fixing source code.
 SUBST_FILES.sources=		config.h deliver.8 conf/os-netbsd.h
 SUBST_SED.sources=		-e 's,@DELIVER_CONF_PREFIX@,${PKG_SYSCONFDIR},g'

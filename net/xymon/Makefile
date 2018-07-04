@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2018/04/16 14:35:04 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2018/07/04 13:40:31 jperkin Exp $
 #
 
 DISTNAME=		xymon-4.3.28
@@ -125,7 +125,7 @@ CONFIGURE_ENV+=		MANROOT=${PREFIX}/${PKGMANDIR}/
 SUBST_CLASSES+=		bashpath
 SUBST_FILES.bashpath=	xymond/xymonreports.sh.DIST
 SUBST_SED.bashpath=	-e 's,/bin/bash,'${BASH:Q}','
-SUBST_STAGE.bashpath=	post-patch
+SUBST_STAGE.bashpath=	pre-configure
 
 USE_TOOLS+=	awk:run		cat:run		cp:run
 USE_TOOLS+=	cut:run		date:run	egrep:run

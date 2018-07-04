@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2015/04/25 14:23:03 tnn Exp $
+# $NetBSD: Makefile,v 1.30 2018/07/04 13:40:20 jperkin Exp $
 #
 
 DISTNAME=	quake2-0.3
@@ -25,11 +25,11 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/*.txt ${DESTDIR}${PREFIX}/share/doc/quake2forge
 
 SUBST_CLASSES+=		snd data
-SUBST_STAGE.snd=	post-patch
+SUBST_STAGE.snd=	pre-configure
 SUBST_FILES.snd=	src/snd_dma.c data/baseq2/config.cfg
 SUBST_SED.snd=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 SUBST_MESSAGE.snd=	Fixing hardcoded audio device.
-SUBST_STAGE.data=	post-patch
+SUBST_STAGE.data=	pre-configure
 SUBST_FILES.data=	configure
 SUBST_SED.data=		-e s,PACKAGE=\'quake2\',PACKAGE=\'${PKGBASE}\',g
 SUBST_MESSAGE.data=	Fixing installation directories.

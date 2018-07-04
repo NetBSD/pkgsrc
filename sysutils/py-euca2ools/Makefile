@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/04/14 13:57:30 adam Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/04 13:40:38 jperkin Exp $
 
 DISTNAME=	euca2ools-3.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,7 +25,7 @@ PYTHON_VERSIONS_ACCEPTED=	27
 EGG_NAME=	${DISTNAME:C/-([^0-9])/_\1/g:S/.1$/_devel/}
 
 SUBST_CLASSES+=		setup
-SUBST_STAGE.setup=	post-patch
+SUBST_STAGE.setup=	pre-configure
 SUBST_MESSAGE.setup=	Fixing setup.
 SUBST_FILES.setup=	setup.py
 SUBST_SED.setup=	-e 's,share/man,${PKGMANDIR},g'

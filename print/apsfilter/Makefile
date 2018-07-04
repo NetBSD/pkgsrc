@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2017/10/03 15:12:42 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2018/07/04 13:40:32 jperkin Exp $
 
 DISTNAME=	apsfilter-7.2.8
 PKGREVISION=	1
@@ -33,7 +33,7 @@ CONF_FILES=	${PREFIX}/share/apsfilter/template/apsfilterrc \
 		${PKG_SYSCONFDIR}/apsfilterrc
 
 SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	post-patch
+SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	bin/apsfilter.in SETUP.in tools/prtmgmt
 SUBST_SED.prefix=	-e 's,/usr/local,${LOCALBASE},g'
 SUBST_SED.prefix+=	-e 's,/usr/X11R6,${X11BASE},g'

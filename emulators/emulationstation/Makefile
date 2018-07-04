@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/04/29 21:31:35 adam Exp $
+# $NetBSD: Makefile,v 1.15 2018/07/04 13:40:17 jperkin Exp $
 
 DISTNAME=	abba19584636c28cd98e3810e857f493cb63d06c
 PKGNAME=	emulationstation-2.0.0_rc1_20150210
@@ -22,19 +22,19 @@ WRKSRC=		${WRKDIR}/EmulationStation-${DISTNAME}
 INSTALLATION_DIRS=	bin share/doc/emulationstation
 
 SUBST_CLASSES+=		fceu
-SUBST_STAGE.fceu=	post-patch
+SUBST_STAGE.fceu=	pre-configure
 SUBST_MESSAGE.fceu=	Adjusting config file path to retroarch backend
 SUBST_FILES.fceu=	es-app/src/SystemData.cpp
 SUBST_SED.fceu=		-e "s|~/cores/libretro-fceumm.so|${PREFIX}/lib/libretro/fceumm_libretro.so|"
 
 SUBST_CLASSES+=		ra
-SUBST_STAGE.ra=		post-patch
+SUBST_STAGE.ra=		pre-configure
 SUBST_MESSAGE.ra=	Adjusting path to retroarch backends in documentation
 SUBST_FILES.ra=		SYSTEMS.md
 SUBST_SED.ra=		-e "s|/usr|${PREFIX}|"
 
 SUBST_CLASSES+=		etc
-SUBST_STAGE.etc=	post-patch
+SUBST_STAGE.etc=	pre-configure
 SUBST_MESSAGE.etc=	Adjusting path to global configuration files
 SUBST_FILES.etc=	es-app/src/SystemData.cpp es-core/src/ThemeData.cpp
 SUBST_FILES.etc+=	GAMELISTS.md README.md THEMES.md

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2018/04/21 13:38:06 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2018/07/04 13:40:33 jperkin Exp $
 
 DISTNAME=	xpdf-korean-2011-sep-02
 PKGNAME=	xpdf-korean-20110902
@@ -22,7 +22,7 @@ INSTALLATION_DIRS+=	share/xpdf/korean/CMap
 
 SUBST_CLASSES+=		xpdfrc
 SUBST_MESSAGE.xpdfrc=	Adjusting xpdfrc wedge.
-SUBST_STAGE.xpdfrc=	post-patch
+SUBST_STAGE.xpdfrc=	pre-configure
 SUBST_FILES.xpdfrc=	add-to-xpdfrc
 SUBST_SED.xpdfrc+=	-e 's,/usr/\.\.\.\.,'${PREFIX}'/share/fonts/X11/TTF,' \
 			-e 's:/usr/local:'${PREFIX}':g' \

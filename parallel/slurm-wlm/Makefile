@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/04/29 21:32:01 adam Exp $
+# $NetBSD: Makefile,v 1.4 2018/07/04 13:40:32 jperkin Exp $
 
 DISTNAME=	slurm-17.11.5
 PKGNAME=	slurm-wlm-17.11.5
@@ -50,7 +50,7 @@ PKG_SHELL.slurm=	${NOLOGIN}
 RCD_SCRIPTS+=		slurmd slurmctld
 
 SUBST_CLASSES+=		linuxinit
-SUBST_STAGE.linuxinit=	post-patch
+SUBST_STAGE.linuxinit=	pre-configure
 SUBST_FILES.linuxinit=	etc/init.d.slurm.in
 SUBST_SED.linuxinit=	-e 's|^exec_prefix=|&${PREFIX}|'
 SUBST_SED.linuxinit+=	-e 's|^prefix=|&${PREFIX}|'
@@ -61,7 +61,7 @@ SUBST_SED.linuxinit+=	-e 's|@sysconfdir@|$${prefix}/etc|'
 
 # Configure flag to disable gtk does not work, so set an impossible requirement
 SUBST_CLASSES+=		gtk
-SUBST_STAGE.gtk=	post-patch
+SUBST_STAGE.gtk=	pre-configure
 SUBST_SED.gtk=		-e 's|min_gtk_version=.*|min_gtk_version=2000.0.0|'
 SUBST_FILES.gtk=	configure
 

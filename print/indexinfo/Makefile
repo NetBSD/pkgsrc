@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/12/05 19:54:15 marino Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/04 13:40:33 jperkin Exp $
 
 PKGNAME=	indexinfo-0.2.6
 CATEGORIES=	print
@@ -17,7 +17,7 @@ pre-install:
 
 .if ${OPSYS} != "FreeBSD" && ${OPSYS} != "DragonFly"
 SUBST_CLASSES+=		reallocf
-SUBST_STAGE.reallocf=	post-patch
+SUBST_STAGE.reallocf=	pre-configure
 SUBST_FILES.reallocf=	indexinfo.c
 SUBST_SED.reallocf=	-e "s|reallocf|realloc|"
 SUBST_MESSAGE.reallocf=	Replace reallocf with realloc on ${OPSYS}

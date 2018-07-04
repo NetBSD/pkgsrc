@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/04/19 11:24:37 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2018/07/04 13:40:14 jperkin Exp $
 #
 
 #
@@ -20,7 +20,7 @@ GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c c++
 
 SUBST_CLASSES+=		exampledir
-SUBST_STAGE.exampledir=	post-patch
+SUBST_STAGE.exampledir=	pre-configure
 SUBST_MESSAGE.exampledir=	Fixing up examples directory path
 SUBST_FILES.exampledir=		demo/ccm/Makefile demo/Makefile demo/MakeVars
 SUBST_FILES.exampledir+=	demo/csiv2/Makefile demo/csiv2/interop/Makefile

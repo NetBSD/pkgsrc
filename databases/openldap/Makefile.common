@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.40 2018/04/21 13:38:04 wiz Exp $
+# $NetBSD: Makefile.common,v 1.41 2018/07/04 13:40:12 jperkin Exp $
 #
 # used by databases/openldap-client/Makefile
 # used by databases/openldap-cloak/Makefile
@@ -50,7 +50,7 @@ PKG_USERS_VARS+=	SLAPD_USER
 # the internal avl_* prototypes conflict with those in <sys/avl.h> which
 # is included by another system header file on Solaris, so subst them.
 SUBST_CLASSES.SunOS+=	conflict
-SUBST_STAGE.conflict=	post-patch
+SUBST_STAGE.conflict=	pre-configure
 SUBST_FILES.conflict=	${WRKSRC}/*/*.h
 SUBST_FILES.conflict+=	${WRKSRC}/*/*/*.c ${WRKSRC}/*/*/*/*.c
 SUBST_SED.conflict+=	-e 's,avl_free,openldap_avl_free,g'

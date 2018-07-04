@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2016/09/15 14:02:08 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2018/07/04 13:40:15 jperkin Exp $
 
 DISTNAME=	slib-3b5
 #
@@ -29,7 +29,7 @@ INFO_FILES=	yes
 INSTALLATION_DIRS=	${PKGINFODIR} share/slib share/doc/slib
 
 SUBST_CLASSES+=		scmpath
-SUBST_STAGE.scmpath=	post-patch
+SUBST_STAGE.scmpath=	pre-configure
 SUBST_FILES.scmpath=	guile.init
 SUBST_SED.scmpath=	-e "s|/usr/share/slib|${PREFIX}/share/slib|"
 

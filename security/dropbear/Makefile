@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2017/11/09 19:00:25 snj Exp $
+# $NetBSD: Makefile,v 1.35 2018/07/04 13:40:33 jperkin Exp $
 
 DISTNAME=	dropbear-2017.75
 CATEGORIES=	security
@@ -25,7 +25,7 @@ PKG_SUPPORTED_OPTIONS=	pam
 CONFIGURE_ARGS+=	--enable-pam
 SUBST_CLASSES+=		pam
 SUBST_MESSAGE.pam=	Enabling PAM in options.h
-SUBST_STAGE.pam=	post-patch
+SUBST_STAGE.pam=	pre-configure
 SUBST_FILES.pam=	options.h
 SUBST_SED.pam=		-e "s/ENABLE_SVR_PASSWORD_AUTH/ENABLE_SVR_PAM_AUTH/"
 .endif

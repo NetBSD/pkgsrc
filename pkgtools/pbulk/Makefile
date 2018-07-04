@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2016/12/18 22:59:35 joerg Exp $
+# $NetBSD: Makefile,v 1.82 2018/07/04 13:40:32 jperkin Exp $
 
 PKGNAME=	pbulk-0.65
 COMMENT=	Modular bulk build framework
@@ -21,7 +21,7 @@ TARGET_MAKE=	$${prefix}/bin/bmake
 NEATO=		${PREFIX}/bin/neato
 
 SUBST_CLASSES+=		tools
-SUBST_STAGE.tools=	post-patch
+SUBST_STAGE.tools=	pre-configure
 SUBST_MESSAGE.tools=	Fixing references to tools
 SUBST_FILES.tools=	pbulk.conf scripts/build scripts/build-client-start \
 	scripts/bulkbuild scripts/bulkbuild-rebuild scripts/bulkbuild-restart \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2018/01/27 19:07:47 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2018/07/04 13:40:32 jperkin Exp $
 
 DISTNAME=	pkg-1.9.99.4
 PKGREVISION=	1
@@ -80,7 +80,7 @@ SUBST_SED.portsdir=	-e "s|/usr/ports|${PKG.portsdir}|g" \
 SUBST_MESSAGE.portsdir=	Correct reference to FreeBSD portsdir.
 
 SUBST_CLASSES+=		config
-SUBST_STAGE.config=	post-patch
+SUBST_STAGE.config=	pre-configure
 SUBST_FILES.config=	libpkg/pkg_config.c
 SUBST_SED.config=	-e "s|/usr/ports|${PKG.portsdir}|g" \
 			-e "s|/var/db/pkg|${PKGNG_DBDIR}|g" \
@@ -88,7 +88,7 @@ SUBST_SED.config=	-e "s|/usr/ports|${PKG.portsdir}|g" \
 SUBST_MESSAGE.config=	Update pkg(8) defaults.
 
 SUBST_CLASSES+=		vuxml
-SUBST_STAGE.vuxml=	post-patch
+SUBST_STAGE.vuxml=	pre-configure
 SUBST_FILES.vuxml=	libpkg/pkg_audit.c
 SUBST_SED.vuxml=	-e "s|https://vuxml.FreeBSD.org/freebsd|http://muscles.dragonflybsd.org/pkgsrc-vuxml/reports|"
 SUBST_MESSAGE.vuxml=	Direct audit reports to Pkgsrc vuxml

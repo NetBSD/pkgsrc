@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/03/22 08:14:52 adam Exp $
+# $NetBSD: Makefile,v 1.21 2018/07/04 13:40:37 jperkin Exp $
 
 DISTNAME=	mc-4.6.1
 PKGREVISION=	21
@@ -30,7 +30,7 @@ PLIST_SRC+=		${PKGDIR}/PLIST
 
 PKG_SYSCONFSUBDIR=	mc
 SUBST_CLASSES+=		conf
-SUBST_STAGE.conf=	post-patch
+SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	vfs/extfs.c vfs/sfs.c
 SUBST_VARS.conf=	PKG_SYSCONFDIR
 
