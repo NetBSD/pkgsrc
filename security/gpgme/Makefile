@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.87 2017/12/21 09:47:31 adam Exp $
+# $NetBSD: Makefile,v 1.88 2018/07/04 12:46:29 adam Exp $
 
-DISTNAME=	gpgme-1.10.0
+DISTNAME=	gpgme-1.11.1
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gpgme/
 EXTRACT_SUFX=	.tar.bz2
@@ -27,7 +27,6 @@ CPPFLAGS.Darwin=	-D_POSIX_C_SOURCE=200809L
 LIBS.SunOS+=		-lnsl -lsocket
 
 TEST_TARGET=		check
-#TEST_ENV+=		GPGME_DEBUG=9
 
 .include "options.mk"
 
