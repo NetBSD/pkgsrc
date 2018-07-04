@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2017/09/16 19:26:48 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2018/07/04 09:05:16 adam Exp $
 
-DISTNAME=	pbr-3.1.1
+DISTNAME=	pbr-4.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pbr/}
@@ -11,16 +11,12 @@ COMMENT=	Python Build Reasonableness
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
-
-# TEST_DEPENDS
-# some of these depend on pbr
-#BUILD_DEPENDS+=	${PYPKGPREFIX}-virtualenv-[0-9]*:../../devel/py-virtualenv
-#BUILD_DEPENDS+=	${PYPKGPREFIX}-testresources-[0-9]*:../../devel/py-testresources
-#BUILD_DEPENDS+=	${PYPKGPREFIX}-testscenarios-[0-9]*:../../devel/py-testscenarios
-#BUILD_DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
-# unpackages:
-# testrepository
-# oslosphinx
+TEST_DEPENDS+=	${PYPKGPREFIX}-testrepository>=0.0.18:../../devel/py-testrepository
+TEST_DEPENDS+=	${PYPKGPREFIX}-testresources>=2.0.0:../../devel/py-testresources
+TEST_DEPENDS+=	${PYPKGPREFIX}-testscenarios>=0.4:../../devel/py-testscenarios
+TEST_DEPENDS+=	${PYPKGPREFIX}-testtools>=2.2.0:../../devel/py-testtools
+TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv>=14.0.6:../../devel/py-virtualenv
+TEST_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 REPLACE_PYTHON+=	pbr/tests/testpackage/setup.py
 
