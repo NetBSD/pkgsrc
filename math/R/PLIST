@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2018/05/31 10:23:02 wen Exp $
+@comment $NetBSD: PLIST,v 1.30 2018/07/04 07:27:13 wen Exp $
 bin/R
 bin/Rscript
 info/R-FAQ.info.gz
@@ -1065,7 +1065,6 @@ lib/R/library/survival/R/survival.rdx
 lib/R/library/survival/data/Rdata.rdb
 lib/R/library/survival/data/Rdata.rds
 lib/R/library/survival/data/Rdata.rdx
-lib/R/library/survival/data/datalist
 lib/R/library/survival/doc/adjcurve.R
 lib/R/library/survival/doc/adjcurve.Rnw
 lib/R/library/survival/doc/adjcurve.pdf
@@ -1076,6 +1075,9 @@ lib/R/library/survival/doc/index.html
 lib/R/library/survival/doc/multi.R
 lib/R/library/survival/doc/multi.Rnw
 lib/R/library/survival/doc/multi.pdf
+lib/R/library/survival/doc/population.R
+lib/R/library/survival/doc/population.Rnw
+lib/R/library/survival/doc/population.pdf
 lib/R/library/survival/doc/splines.R
 lib/R/library/survival/doc/splines.Rnw
 lib/R/library/survival/doc/splines.pdf
