@@ -1,4 +1,4 @@
-$NetBSD: patch-makeint.h,v 1.7 2018/07/04 09:42:56 bsiegert Exp $
+$NetBSD: patch-makeint.h,v 1.8 2018/07/04 14:09:07 bsiegert Exp $
 
 * Do not override stack limits by default.
   It can dramatically increase the memory use of multi-threaded programs.
