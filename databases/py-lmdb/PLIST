@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2018/07/04 05:18:06 minskim Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/lmdb/__init__.py
+${PYSITELIB}/lmdb/__main__.py
+${PYSITELIB}/lmdb/__init__.pyo
+${PYSITELIB}/lmdb/__init__.pyc
+${PYSITELIB}/lmdb/__main__.pyo
+${PYSITELIB}/lmdb/__main__.pyc
+${PYSITELIB}/lmdb/_config.pyo
+${PYSITELIB}/lmdb/_config.pyc
+${PYSITELIB}/lmdb/cffi.pyo
+${PYSITELIB}/lmdb/cffi.pyc
+${PYSITELIB}/lmdb/tool.pyo
+${PYSITELIB}/lmdb/tool.pyc
+${PYSITELIB}/lmdb/_config.py
+${PYSITELIB}/lmdb/cffi.py
+${PYSITELIB}/lmdb/cpython.so
+${PYSITELIB}/lmdb/tool.py
