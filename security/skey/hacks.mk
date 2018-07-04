@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.4 2008/12/13 12:07:54 obache Exp $
+# $NetBSD: hacks.mk,v 1.5 2018/07/04 13:40:36 jperkin Exp $
 
 .if !defined(SKEY_HACKS_MK)
 SKEY_HACKS_MK=	# defined
@@ -11,7 +11,7 @@ PKG_HACKS+=		enforce-troff-style-man-pages
 CONFIGURE_ARGS+=	--with-catman=man
 SUBST_CLASSES+=		tsmp
 SUBST_MESSAGE.tsmp=	enforce use of troff style man pages
-SUBST_STAGE.tsmp=	post-patch
+SUBST_STAGE.tsmp=	pre-configure
 SUBST_FILES.tsmp=	configure
 SUBST_SED.tsmp=		-e 's,$$(CATMAN),$$(TROFFMAN),g'
 
@@ -22,7 +22,7 @@ SUBST_SED.tsmp=		-e 's,$$(CATMAN),$$(TROFFMAN),g'
 PKG_HACKS+=		use-sginap-instead-of-usleep
 SUBST_CLASSES+=		sginap
 SUBST_MESSAGE.sginap=	use sginap() instead of usleep()
-SUBST_STAGE.sginap=	post-patch
+SUBST_STAGE.sginap=	pre-configure
 SUBST_FILES.sginap=	skeyinit.c skeylogin.c
 SUBST_SED.sginap=	-e 's,usleep(100000),sginap(CLK_TCK/10),g'
 .endif

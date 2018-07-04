@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2017/08/16 20:45:44 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2018/07/04 13:40:34 jperkin Exp $
 
 DISTNAME=	ike-scan-1.9
 PKGREVISION=	5
@@ -13,7 +13,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 
 SUBST_CLASSES+=		man
-SUBST_STAGE.man=	post-patch
+SUBST_STAGE.man=	pre-configure
 SUBST_FILES.man=	ike-scan.1
 SUBST_SED.man=		-e "s|/usr/local|${PREFIX}|g"
 SUBST_MESSAGE.man=	Fixing man pages.

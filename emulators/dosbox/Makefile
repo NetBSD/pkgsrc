@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2017/09/16 03:27:20 maya Exp $
+# $NetBSD: Makefile,v 1.45 2018/07/04 13:40:17 jperkin Exp $
 
 DISTNAME=	dosbox-0.74
 PKGREVISION=	10
@@ -22,7 +22,7 @@ LDFLAGS.SunOS+=		-lsocket
 INSTALLATION_DIRS=	share/doc/dosbox
 
 SUBST_CLASSES+=		fixme
-SUBST_STAGE.fixme=	post-patch
+SUBST_STAGE.fixme=	pre-configure
 SUBST_FILES.fixme=	docs/dosbox.1
 SUBST_SED.fixme=	-e s,/usr/share/,${PREFIX}/share/,g
 

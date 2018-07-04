@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/02/11 15:53:45 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2018/07/04 13:40:31 jperkin Exp $
 
 DISTNAME=		sysmon-0.93
 CATEGORIES=		net
@@ -23,7 +23,7 @@ CONF_FILES=		${EGDIR}/sysmon.conf.dist \
 
 SUBST_CLASSES+=         paths
 SUBST_FILES.paths=      ${WRKSRC}/autoconf/Makefile.in
-SUBST_STAGE.paths=      post-patch
+SUBST_STAGE.paths=      pre-configure
 SUBST_SED.paths=        -e 's,@destdir@,${DESTDIR},g'
 
 INSTALLATION_DIRS=      share/examples/sysmon

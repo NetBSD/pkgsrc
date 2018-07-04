@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2017/08/16 20:45:36 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2018/07/04 13:40:16 jperkin Exp $
 #
 
 DISTNAME=	lpe-1.2.6
@@ -26,7 +26,7 @@ MAKE_ENV=		EXPORT_SYMBOLS_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
 CFLAGS=			-DPREFIX="\"${PREFIX}\""
 
 SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	man/lpe.1.cs man/lpe.1.de man/lpe.1.en man/lpe.1.es
 SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},'
 

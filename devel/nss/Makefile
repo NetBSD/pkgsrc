@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.153 2018/06/07 19:04:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.154 2018/07/04 13:40:15 jperkin Exp $
 
 DISTNAME=		nss-${NSS_RELEASE:S/.0$//}
 NSS_RELEASE=		3.37.3
@@ -59,7 +59,7 @@ MAKE_ENV.SunOS+=	CC_IS_CLANG=YES
 .endif
 
 SUBST_CLASSES+=		64bit
-SUBST_STAGE.64bit=	post-patch
+SUBST_STAGE.64bit=	pre-configure
 SUBST_FILES.64bit=	nss/lib/freebl/*
 SUBST_SED.64bit=	-e 's,NSS_USE_64,_LP64,g'
 SUBST_MESSAGE.conf=	Use a generic 64bit check

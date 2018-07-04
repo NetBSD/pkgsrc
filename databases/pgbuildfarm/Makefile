@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2016/07/09 06:38:01 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2018/07/04 13:40:13 jperkin Exp $
 
 DISTNAME=		build-farm-4_15_1
 PKGNAME=		${DISTNAME:S/build-farm/pgbuildfarm/:S/_/./g}
@@ -29,7 +29,7 @@ CONF_FILES=		${EGDIR}/build-farm.conf \
 PKG_SYSCONFSUBDIR=	pgbuildfarm
 
 SUBST_CLASSES+=		conf
-SUBST_STAGE.conf=	post-patch
+SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	setnotes.pl update_personality.pl PGBuild/Options.pm
 SUBST_SED.conf=		-e 's,build-farm.conf,${PKG_SYSCONFDIR}/build-farm.conf,'
 SUBST_MESSAGE.conf=	Fixing default value for build-farm.conf

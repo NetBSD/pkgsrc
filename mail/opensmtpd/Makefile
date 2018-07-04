@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/09/03 08:53:10 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2018/07/04 13:40:24 jperkin Exp $
 
 VERSION=	5.7.3p2
 DISTNAME=	opensmtpd-${VERSION}
@@ -48,7 +48,7 @@ RCD_SCRIPTS=	opensmtpd
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKDIR}/mailer.conf
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 
 SUBST_CLASSES+=			exampledir
 SUBST_STAGE.exampledir=		pre-configure

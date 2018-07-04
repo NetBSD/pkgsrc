@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2016/12/01 15:47:24 marino Exp $
+# $NetBSD: Makefile,v 1.66 2018/07/04 13:40:44 jperkin Exp $
 
 DISTNAME=	pixman-0.34.0
 PKGREVISION=	1
@@ -23,7 +23,7 @@ PKGCONFIG_OVERRIDE+=	pixman-1.pc.in
 PKGCONFIG_OVERRIDE+=	pixman-1-uninstalled.pc.in
 
 SUBST_CLASSES=		subdirs
-SUBST_STAGE.subdirs=	post-patch
+SUBST_STAGE.subdirs=	pre-configure
 SUBST_FILES.subdirs=	Makefile.in
 SUBST_SED.subdirs=	-e "s|pixman demos test|pixman|"
 SUBST_MESSAGE.lbase=	Skip building demos and test SUBDIRS

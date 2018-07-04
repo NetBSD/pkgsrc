@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/09/06 10:40:26 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2018/07/04 13:40:16 jperkin Exp $
 
 DISTNAME=	ucpp-1.3.2
 CATEGORIES=	devel
@@ -17,7 +17,7 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 CFLAGS+=	-DSTD_MACROS=0 -DSTD_ASSERT=0 -DNO_UCPP_BUF
 SUBST_CLASSES+=	config
-SUBST_STAGE.config=	post-patch
+SUBST_STAGE.config=	pre-configure
 SUBST_FILES.config=	config.h
 # remove /usr/local/include from default path
 SUBST_SED.config=	-e 's|"/usr/local/include", ||'

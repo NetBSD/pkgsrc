@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/08/01 17:40:14 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2018/07/04 13:40:25 jperkin Exp $
 #
 
 DISTNAME=	brs.4.00.l1
@@ -15,7 +15,7 @@ WRKSRC=		${WRKDIR}/bible
 BUILD_TARGET=	bible
 
 SUBST_CLASSES+=		man
-SUBST_STAGE.man=	post-patch
+SUBST_STAGE.man=	pre-configure
 SUBST_FILES.man=	bible.1
 SUBST_SED.man=		-e s,/usr/local/lib,${PREFIX}/libdata/${PKGBASE},
 BUILDLINK_TRANSFORM+=	rm:-fwritable-strings	# gcc4 doesn't know it.

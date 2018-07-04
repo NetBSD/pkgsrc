@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2018/03/12 11:17:21 wiz Exp $
+# $NetBSD: Makefile,v 1.125 2018/07/04 13:40:29 jperkin Exp $
 
 DISTNAME=	mrtg-2.17.4
 PKGREVISION=	11
@@ -27,7 +27,7 @@ CONF_FILES=	${EGDIR}/mrtg.conf ${PKG_SYSCONFDIR}/mrtg.conf
 .include "options.mk"
 
 SUBST_CLASSES+=		files
-SUBST_STAGE.files=	post-patch
+SUBST_STAGE.files=	pre-configure
 SUBST_FILES.files=	../mrtg.conf.example ../netstat2mrtg	\
 			../sys2mrtg ../envstat2mrtg
 SUBST_SED.files=	-e "s|@PREFIX@|${PREFIX}|g"

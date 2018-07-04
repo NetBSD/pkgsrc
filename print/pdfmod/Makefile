@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/04/16 14:35:06 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2018/07/04 13:40:33 jperkin Exp $
 
 DISTNAME=	pdfmod-0.9.1
 PKGREVISION=	20
@@ -20,7 +20,7 @@ REPLACE_SH=		icon-theme-installer
 INSTALLATION_DIRS+=	lib/pdfmod
 
 SUBST_CLASSES+=		fix-mcs
-SUBST_STAGE.fix-mcs=	post-patch
+SUBST_STAGE.fix-mcs=	pre-configure
 SUBST_MESSAGE.fix-mcs=	Fix compiler name
 SUBST_FILES.fix-mcs=	configure
 SUBST_SED.fix-mcs=	-e 's,gmcs,mcs,'
