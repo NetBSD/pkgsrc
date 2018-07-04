@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.17 2017/06/07 14:42:23 ryoon Exp $
+$NetBSD: distinfo,v 1.18 2018/07/04 07:43:59 wen Exp $
 
-SHA1 (Class-Accessor-Grouped-0.10012.tar.gz) = d0efafd95c34746c12ead9dd3dd585e39f612f98
-RMD160 (Class-Accessor-Grouped-0.10012.tar.gz) = d4537b6deda7fb397f66a68cc84017103821133f
-SHA512 (Class-Accessor-Grouped-0.10012.tar.gz) = 195c4b1f9897b50753231ab6c893987a3e49e6283713175d612843651428c8cb2eb791a5385e25607a1db189861811efade33f94ef33c36cd41624e793ca20d1
-Size (Class-Accessor-Grouped-0.10012.tar.gz) = 47830 bytes
-SHA1 (patch-Makefile.PL) = f855f14babf4dd0ff934d306e49eb44aef48d430
+SHA1 (Class-Accessor-Grouped-0.10014.tar.gz) = 23ce24acc23e2cff8bca20c9c16dcadeb7c32940
+RMD160 (Class-Accessor-Grouped-0.10014.tar.gz) = f8bbd85267bb9d40b147c7d9eb533c54f994ca69
+SHA512 (Class-Accessor-Grouped-0.10014.tar.gz) = d69fe27c3a12845bb4d0abe6c73d1a82eaf550821184f0945c3802e3932c7742e04c6f655e550386923c2a005e7f893f44ed950c56e6e80785b5a23e7b3c80b3
+Size (Class-Accessor-Grouped-0.10014.tar.gz) = 28703 bytes
