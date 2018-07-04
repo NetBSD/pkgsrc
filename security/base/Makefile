@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2018/02/21 12:25:23 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2018/07/04 13:40:33 jperkin Exp $
 
 DISTNAME=	base-1.4.3.1
 PKGREVISION=	12
@@ -58,7 +58,7 @@ CONF_FILES_PERMS=	${EGDIR}/base_conf.php ${BASE_DIR}/base_conf.php \
 BUILD_DEFS+=		APACHE_USER APACHE_GROUP
 
 SUBST_CLASSES+=		conf
-SUBST_STAGE.conf=	post-patch
+SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	base.conf base_conf.php.dist
 SUBST_SED.conf=		-e "s|@BASE_DIR@|${BASE_DIR}|g"
 SUBST_SED.conf+=	-e "s|@DBTYPE@|${DBTYPE}|g"

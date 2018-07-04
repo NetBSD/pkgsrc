@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2016/07/09 06:38:25 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2018/07/04 13:40:22 jperkin Exp $
 
 DISTNAME=	ghc-6.8.3
 PKGREVISION=	7
@@ -30,7 +30,7 @@ CONFIGURE_ENV+=		PerlCmd=${PERL5:Q}
 USE_TOOLS+=		gmake perl:run
 
 SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	post-patch
+SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix+=	../ghc-6.4.2/mk/bootstrap.mk
 SUBST_FILES.prefix+=	../ghc-6.4.2/ghc/rts/package.conf.in
 SUBST_FILES.prefix+=	../ghc-6.4.2/libraries/readline/package.conf.in

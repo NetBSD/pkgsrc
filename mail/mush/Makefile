@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2016/02/25 15:00:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.30 2018/07/04 13:40:24 jperkin Exp $
 
 DISTNAME=	mush-7.2.5
 PKGNAME=	mush-7.2.6.b4.pl1
@@ -40,7 +40,7 @@ SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	config.h-dist ${PLAT_MAKEFILE}
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@MANDIR@,${PREFIX}/${PKGMANDIR},g'
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 
 pre-configure:
 	${CP} ${WRKSRC}/config.h-dist ${WRKSRC}/config.h

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2013/02/06 19:30:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.36 2018/07/04 13:40:27 jperkin Exp $
 #
 
 DISTNAME=	arpwatch-2.1a15
@@ -21,7 +21,7 @@ PLIST_SUBST+=	VARBASE=${VARBASE:Q}
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	arpsnmp.8 arpwatch.8
 SUBST_SED.paths=	-e 's,/usr/operator/arpwatch,${VARBASE}/db/arpwatch,g'
 

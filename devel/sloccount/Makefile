@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/09/06 09:03:01 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2018/07/04 13:40:15 jperkin Exp $
 
 
 DISTNAME=	sloccount-2.26
@@ -50,14 +50,14 @@ REPLACE_PERL+=		sql_count
 
 SUBST_CLASSES+=		generic
 SUBST_MESSAGE.generic=	Fixing path to internal generic_count binary.
-SUBST_STAGE.generic=	post-patch
+SUBST_STAGE.generic=	pre-configure
 SUBST_SED.generic=	-e 's,^generic_count,${PREFIX}/libexec/sloccount/&,g'
 SUBST_FILES.generic=	ada_count awk_count csh_count exp_count lisp_count \
 			makefile_count ruby_count sed_count sh_count tcl_count
 
 SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Fixing path to internal binaries.
-SUBST_STAGE.prefix=	post-patch
+SUBST_STAGE.prefix=	pre-configure
 SUBST_SED.prefix=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_FILES.prefix=	compute_all compute_sloc_lang lex_count sloccount
 

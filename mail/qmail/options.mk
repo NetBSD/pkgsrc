@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.48 2018/05/28 12:57:36 schmonz Exp $
+# $NetBSD: options.mk,v 1.49 2018/07/04 13:40:24 jperkin Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=		eai sasl syncdir tls
@@ -88,7 +88,7 @@ PATCH_DIST_STRIP.${SRS_PATCH}=	-l
 PATCH_DIST_CAT.${SRS_PATCH}=	${SED} -e 's|binm3 binm3+df|binm3 binm3+df update_tmprsadh|g' < ${SRS_PATCH}
 SUBST_CLASSES+=			srsnetq1 srsnetq2
 SUBST_STAGE.srsnetq1=		pre-patch
-SUBST_STAGE.srsnetq2=		post-patch
+SUBST_STAGE.srsnetq2=		pre-configure
 SUBST_FILES.srsnetq1=		Makefile
 SUBST_FILES.srsnetq2=		Makefile
 SUBST_SED.srsnetq1=		-e 's|^auto_split.o env.a$$|auto_split.o|'

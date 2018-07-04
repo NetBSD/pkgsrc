@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.217 2018/02/20 07:04:54 dholland Exp $
+# $NetBSD: Makefile,v 1.218 2018/07/04 13:40:21 jperkin Exp $
 
 DISTNAME=	netpbm-10.79.04
 CATEGORIES=	graphics
@@ -43,7 +43,7 @@ WRKSRC=		${WRKDIR}/netpbm
 WRAPPER_REORDER_CMDS+=	reorder:l:rle:netpbm
 
 SUBST_CLASSES+=		rgb_txt
-SUBST_STAGE.rgb_txt=	post-patch
+SUBST_STAGE.rgb_txt=	pre-configure
 SUBST_MESSAGE.rgb_txt=	Configure RGB_TXT
 SUBST_FILES.rgb_txt=	config.mk
 SUBST_SED.rgb_txt+=	-e 's,/usr/share/netpbm/rgb.txt,${PREFIX}/share/netpbm/rgb.txt,'

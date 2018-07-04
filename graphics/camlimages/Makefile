@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2018/04/17 22:29:39 wiz Exp $
+# $NetBSD: Makefile,v 1.106 2018/07/04 13:40:20 jperkin Exp $
 
 VERSION=		4.0.1
 PKGNAME=		camlimages-${VERSION}
@@ -21,7 +21,7 @@ MAKE_JOBS_SAFE=		no
 WRKSRC=			${WRKDIR}/camlspotter-camlimages-v${VERSION}
 
 SUBST_CLASSES+=		omf
-SUBST_STAGE.omf=	post-patch
+SUBST_STAGE.omf=	pre-configure
 SUBST_FILES.omf=	OMakefile
 SUBST_SED.omf=		-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.omf+=		-e 's,@X11BASE@,${X11BASE},g'
