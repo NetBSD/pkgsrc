@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2016/09/16 21:36:43 wiedi Exp $
+# $NetBSD: Makefile,v 1.20 2018/07/04 13:40:16 jperkin Exp $
 #
 
 DISTNAME=		uno_v213
@@ -35,7 +35,7 @@ BUILDLINK_TRANSFORM+=	rm:-m32
 .endif
 
 SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	post-patch
+SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	makefile
 SUBST_SED.prefix=	-e "s,/usr/bin,${PREFIX}/bin,g"
 SUBST_MESSAGE.prefix=	Fixing hardcoded paths.

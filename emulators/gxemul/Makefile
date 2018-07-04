@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2017/08/24 22:52:55 mrg Exp $
+# $NetBSD: Makefile,v 1.60 2018/07/04 13:40:17 jperkin Exp $
 
 DISTNAME=	gxemul-0.6.0.1
 PKGREVISION=	6
@@ -37,7 +37,7 @@ PKG_SUGGESTED_OPTIONS=	x11
 .if !empty(PKG_OPTIONS:Mx11)
 GLOBAL_LDFLAGS=		-L${X11BASE}/lib ${COMPILER_RPATH_FLAG}${X11BASE}/lib
 SUBST_CLASSES+=		x11
-SUBST_STAGE.x11=	post-patch
+SUBST_STAGE.x11=	pre-configure
 SUBST_FILES.x11=	configure
 SUBST_SED.x11=		-e 's|-L/usr/X11R6/lib|${GLOBAL_LDFLAGS:Q}|g'
 SUBST_SED.x11+=		-e 's|/usr/X11R6|${X11BASE}|g'

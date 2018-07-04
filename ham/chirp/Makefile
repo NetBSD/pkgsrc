@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/04/16 14:34:42 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2018/07/04 13:40:21 jperkin Exp $
 
 DISTNAME=	chirp-0.4.1
 PKGREVISION=	6
@@ -18,13 +18,13 @@ DEPENDS+=       ${PYPKGPREFIX}-serial>=2.7:../../comms/py-serial
 .include "../../mk/bsd.prefs.mk"
 
 SUBST_CLASSES+=			fix-manpaths
-SUBST_STAGE.fix-manpaths=	post-patch
+SUBST_STAGE.fix-manpaths=	pre-configure
 SUBST_MESSAGE.fix-manpaths=	Fixing man paths
 SUBST_FILES.fix-manpaths=	setup.py
 SUBST_SED.fix-manpaths=		-e 's,share/man/man1,${PKGMANDIR}/man1,g'
 
 SUBST_CLASSES+=			fix-sharepaths
-SUBST_STAGE.fix-sharepaths=	post-patch
+SUBST_STAGE.fix-sharepaths=	pre-configure
 SUBST_MESSAGE.fix-sharepaths=	Fixing /usr/share paths
 SUBST_FILES.fix-sharepaths=	chirpw
 SUBST_FILES.fix-sharepaths+=	chirp/generic_xml.py

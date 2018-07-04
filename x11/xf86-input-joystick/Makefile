@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/03/07 11:57:41 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2018/07/04 13:40:44 jperkin Exp $
 
 DISTNAME=	xf86-input-joystick-1.6.3
 PKGREVISION=	2
@@ -20,7 +20,7 @@ PKGCONFIG_OVERRIDE+=	xorg-joystick.pc.in
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 
 SUBST_CLASSES.DragonFly+=	usbhid
-SUBST_STAGE.usbhid=		post-patch
+SUBST_STAGE.usbhid=		pre-configure
 SUBST_FILES.usbhid=		configure
 SUBST_FILES.usbhid+=		src/backend_bsd.c
 SUBST_SED.usbhid=		-e 's,dev/usb/,bus/u4b/,g'

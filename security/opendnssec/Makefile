@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2018/04/14 07:34:39 adam Exp $
+# $NetBSD: Makefile,v 1.71 2018/07/04 13:40:34 jperkin Exp $
 #
 
 DISTNAME=	opendnssec-1.4.13
@@ -50,7 +50,7 @@ PKG_SYSCONFSUBDIR=	opendnssec
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKSRC}/conf/Makefile.in
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_SED.paths=	-e 's,@EGDIR@,${EGDIR},'
 
 CXXFLAGS.NetBSD+=	-D_NETBSD_SOURCE

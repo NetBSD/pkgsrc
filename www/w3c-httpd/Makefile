@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2016/02/26 10:57:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.28 2018/07/04 13:40:42 jperkin Exp $
 
 DISTNAME=	w3c-httpd-3.0A
 PKGREVISION=	1
@@ -30,7 +30,7 @@ CPPFLAGS.Darwin+=	-Dunix
 CFLAGS+=	${CPPFLAGS}
 
 SUBST_CLASSES+=		strcasestr
-SUBST_STAGE.strcasestr=	post-patch
+SUBST_STAGE.strcasestr=	pre-configure
 SUBST_FILES.strcasestr=	Daemon/Implementation/HTWild.c \
 	Library/Implementation/HTString.c \
 	Library/Implementation/HTString.h \

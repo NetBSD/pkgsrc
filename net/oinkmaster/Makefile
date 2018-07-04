@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2016/07/09 06:38:44 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2018/07/04 13:40:29 jperkin Exp $
 
 DISTNAME=	oinkmaster-2.0
 PKGREVISION=	5
@@ -28,7 +28,7 @@ REPLACE_PERL+=	${WRKSRC}/oinkmaster.pl
 PKG_SYSCONFSUBDIR=	snort
 
 SUBST_CLASSES+=		pub
-SUBST_STAGE.pub=	post-patch
+SUBST_STAGE.pub=	pre-configure
 SUBST_FILES.pub=	oinkmaster.pl oinkmaster.conf oinkmaster.1
 SUBST_SED.pub=		-e "s|/usr/local/etc|${PKG_SYSCONFDIR}|g"
 SUBST_SED.pub+=		-e "s|/usr/local|${PREFIX}|g"

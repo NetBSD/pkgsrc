@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/23 17:19:00 asau Exp $
+# $NetBSD: Makefile,v 1.18 2018/07/04 13:40:29 jperkin Exp $
 
 DISTNAME=	pptp-1.7.1
 PKGREVISION=	1
@@ -39,7 +39,7 @@ MAKE_FLAGS+=	PPPD=/usr/sbin/pppd
 
 SUBST_CLASSES+=		pptp
 SUBST_MESSAGE.pptp=	"Fixing hardcoded paths."
-SUBST_STAGE.pptp=	post-patch
+SUBST_STAGE.pptp=	pre-configure
 SUBST_FILES.pptp=	pptp.8
 SUBST_SED.pptp=		-e 's,/usr,${PREFIX},g'
 

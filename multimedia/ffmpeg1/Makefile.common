@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2018/01/25 14:15:25 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.8 2018/07/04 13:40:26 jperkin Exp $
 # used by multimedia/ffplay1/Makefile
 # used by multimedia/ffmpeg1/Makefile
 
@@ -66,7 +66,7 @@ REPLACE_PERL+=	doc/texi2pod.pl
 REPLACE_SH+=	configure version.sh
 
 SUBST_CLASSES+=		conf
-SUBST_STAGE.conf=	post-patch
+SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	ffserver.c
 SUBST_SED.conf=		-e 's,/etc/ffserver.conf,${PKG_SYSCONFDIR}/ffserver.conf,g'
 SUBST_MESSAGE.conf=	Fixing configuration path.

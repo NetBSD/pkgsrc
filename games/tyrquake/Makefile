@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/03/07 11:57:30 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2018/07/04 13:40:20 jperkin Exp $
 
 DISTNAME=	tyrquake-0.61_20140630
 PKGREVISION=	2
@@ -19,7 +19,7 @@ WRKSRC=		${WRKDIR}/tyrquake
 LDFLAGS+=	${LIBOSSAUDIO}
 
 SUBST_CLASSES+=		audio
-SUBST_STAGE.audio=	post-patch
+SUBST_STAGE.audio=	pre-configure
 SUBST_MESSAGE.audio=	Fixing path to the audio device.
 SUBST_FILES.audio=	common/snd_oss.c
 SUBST_SED.audio=	-e "s|/dev/dsp|${DEVOSSAUDIO}|"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/05/14 21:06:11 mef Exp $
+# $NetBSD: Makefile,v 1.8 2018/07/04 13:40:08 jperkin Exp $
 
 DISTNAME=	sarab-1.0.0
 CATEGORIES=	archivers
@@ -25,20 +25,20 @@ CONF_FILES+= ${EGDIR}/sarab.conf	${PKG_SYSCONFDIR}/sarab.conf
 CONF_FILES+= ${EGDIR}/sarab.dcf	${PKG_SYSCONFDIR}/sarab.dcf
 
 SUBST_CLASSES+=		dar
-SUBST_STAGE.dar=	post-patch
+SUBST_STAGE.dar=	pre-configure
 SUBST_MESSAGE.dar=	Fix path to DAR utilities
 SUBST_FILES.dar=	etc/sarab.conf
 SUBST_SED.dar=		-e "s|/usr/local/bin/dar|${PREFIX}/bin/dar|"
 
 # archivers/dar disables building "dar_static"
 SUBST_CLASSES+=		nocopy
-SUBST_STAGE.nocopy=	post-patch
+SUBST_STAGE.nocopy=	pre-configure
 SUBST_MESSAGE.nocopy=	Do not copy dar_static
 SUBST_FILES.nocopy=	etc/sarab.conf
 SUBST_SED.nocopy=	-e "s|COPY_DAR=\"yes\"|COPY_DAR=\"no\"|"
 
 SUBST_CLASSES+=		conf
-SUBST_STAGE.conf=	post-patch
+SUBST_STAGE.conf=	pre-configure
 SUBST_MESSAGE.conf=	Fix path to SaraB configuration files
 SUBST_FILES.conf=	sarab.sh etc/sarab.conf
 SUBST_SED.conf=		-e "s|/etc/sarab|${PKG_SYSCONFDIR}|"
@@ -46,7 +46,7 @@ SUBST_SED.conf=		-e "s|/etc/sarab|${PKG_SYSCONFDIR}|"
 # NetBSD has /kern, and does not have /sys.  Other platforms might
 # differ.
 SUBST_CLASSES+=		prune
-SUBST_STAGE.prune=	post-patch
+SUBST_STAGE.prune=	pre-configure
 SUBST_MESSAGE.prune=	Prune /kern instead of /sys
 SUBST_FILES.prune=	etc/sarab.dcf
 SUBST_SED.prune=	-e "s|--prune sys|--prune kern|"

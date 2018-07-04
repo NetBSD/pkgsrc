@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2017/08/01 14:59:01 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2018/07/04 13:40:23 jperkin Exp $
 #
 
 DISTNAME=		gld-1.7
@@ -29,11 +29,11 @@ PKG_GROUPS_VARS+=	GLD_GROUP
 PKG_USERS_VARS+=	GLD_USER
 
 SUBST_CLASSES+=		gld users
-SUBST_STAGE.gld=	post-patch
+SUBST_STAGE.gld=	pre-configure
 SUBST_FILES.gld=	gld.h
 SUBST_SED.gld=		-e "s,/etc,${PKG_SYSCONFDIR},"
 SUBST_MESSAGE.gld=	Fixing harcoded paths.
-SUBST_STAGE.users=	post-patch
+SUBST_STAGE.users=	pre-configure
 SUBST_FILES.users=	gld.conf
 SUBST_SED.users+=	-e "s|^USER=nobody|USER=${GLD_USER}|"
 SUBST_SED.users+=	-e "s|^GROUP=nobody|GROUP=${GLD_GROUP}|"

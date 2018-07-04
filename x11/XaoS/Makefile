@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2015/12/29 13:41:58 bsiegert Exp $
+# $NetBSD: Makefile,v 1.39 2018/07/04 13:40:43 jperkin Exp $
 #
 
 DISTNAME=		xaos-3.6
@@ -18,7 +18,7 @@ INFO_FILES=		yes
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	configure
 SUBST_SED.paths=	-e 's,/usr/share/locale,${PREFIX}/${PKGLOCALEDIR}/locale,g'
 

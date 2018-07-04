@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2018/03/06 15:50:44 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2018/07/04 13:40:18 jperkin Exp $
 
 DISTNAME=	xbeeb-0.4.1
 PKGREVISION=	3
@@ -31,13 +31,13 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 .if ${OSS_TYPE} != "none"
 
 SUBST_CLASSES+=		dsp
-SUBST_STAGE.dsp=	post-patch
+SUBST_STAGE.dsp=	pre-configure
 SUBST_MESSAGE.dsp=	Adjusting sound device path
 SUBST_FILES.dsp=	src/SoundOSS.c
 SUBST_SED.dsp=		-e "s|\"/dev/dsp\"|\"${DEVOSSAUDIO}\"|"
 
 SUBST_CLASSES+=		osslib
-SUBST_STAGE.osslib=	post-patch
+SUBST_STAGE.osslib=	pre-configure
 SUBST_MESSAGE.osslib=	Linking OSS library
 SUBST_FILES.osslib=	src/Imakefile
 SUBST_SED.osslib=	-e "s|\\(SYS_LIBRARIES[	 ]*=.*\\)|\\1 ${LIBOSSAUDIO}|"
@@ -45,7 +45,7 @@ SUBST_SED.osslib=	-e "s|\\(SYS_LIBRARIES[	 ]*=.*\\)|\\1 ${LIBOSSAUDIO}|"
 .else
 
 SUBST_CLASSES+=		nooss
-SUBST_STAGE.nooss=	post-patch
+SUBST_STAGE.nooss=	pre-configure
 SUBST_MESSAGE.nooss=	Disabling sound support: No OSS on this platform
 SUBST_FILES.nooss=	src/Config.h
 SUBST_SED.nooss=	-e "s|^\#define\\([	 ]*SOUND_OSS.*\\)\$$|\#undef\\1|"
@@ -53,7 +53,7 @@ SUBST_SED.nooss=	-e "s|^\#define\\([	 ]*SOUND_OSS.*\\)\$$|\#undef\\1|"
 .endif # OSS_TYPE
 
 SUBST_CLASSES+=		beebroot
-SUBST_STAGE.beebroot=	post-patch
+SUBST_STAGE.beebroot=	pre-configure
 SUBST_MESSAGE.beebroot=	Adjusting XBEEBROOT path
 SUBST_FILES.beebroot=	src/Config.h
 SUBST_SED.beebroot=	-e "s|^\\(\#define[	 ]*XBEEBROOT[	 ]*\\)[^	 ].*\$$|\\1\"${PREFIX}/${XBEEBROOT}/\"|"

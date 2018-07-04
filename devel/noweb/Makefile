@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2013/10/30 02:58:19 minskim Exp $
+# $NetBSD: Makefile,v 1.42 2018/07/04 13:40:15 jperkin Exp $
 
 DISTNAME=		noweb-2.11b
 PKGREVISION=		1
@@ -25,7 +25,7 @@ SUBST_FILES.mktemp+=	src/shell/roff.mm contrib/conrado/d2tex
 SUBST_FILES.mktemp+=	contrib/jobling/correct-refs.nw
 SUBST_FILES.mktemp+=	contrib/norman/htmlgif/pstopbm
 SUBST_SED.mktemp+=	-e 's,@MKTEMP@,${TOOLS_PATH.mktemp},g'
-SUBST_STAGE.mktemp=	post-patch
+SUBST_STAGE.mktemp=	pre-configure
 
 .if ${OPSYS} != "SunOS"
 do-configure:

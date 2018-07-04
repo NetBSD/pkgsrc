@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2018/07/03 05:03:23 adam Exp $
+# $NetBSD: Makefile,v 1.82 2018/07/04 13:40:23 jperkin Exp $
 
 DISTNAME=	mailman-2.1.25
 PKGNAME=	mailman-2.1.25
@@ -95,7 +95,7 @@ SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKDIR}/mailman.conf.dist
 SUBST_SED.paths+=	-e 's,@EXECDIR@,${EXECDIR},g'
 SUBST_SED.paths+=	-e 's,@MAILMAN_DATADIR@,${MAILMAN_DATADIR},g'
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 
 DOCFILELIST=	ACKNOWLEDGMENTS BUGS FAQ INSTALL NEWS README \
 		README-I18N.en README.CONTRIB README.NETSCAPE \

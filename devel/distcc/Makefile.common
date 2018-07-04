@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2014/04/25 16:13:31 adam Exp $
+# $NetBSD: Makefile.common,v 1.12 2018/07/04 13:40:13 jperkin Exp $
 # used by devel/distcc-pump/Makefile
 # used by devel/distccmon-gnome/Makefile
 # used by devel/distccmon-gtk/Makefile
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CHECK_PORTABILITY_SKIP+=	contrib/redhat/*
 
 SUBST_CLASSES+=		doc
-SUBST_STAGE.doc=	post-patch
+SUBST_STAGE.doc=	pre-configure
 SUBST_FILES.doc=	src/distcc.c src/hosts.c
 SUBST_SED.doc=		-e "s|%s/distcc/hosts|%s/hosts|g"
 SUBST_MESSAGE.doc=	Fixing paths.

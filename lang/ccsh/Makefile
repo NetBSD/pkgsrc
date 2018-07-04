@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/10/09 14:06:37 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2018/07/04 13:40:21 jperkin Exp $
 #
 
 DISTNAME=		ccsh-0.0.4
@@ -14,7 +14,7 @@ USE_TOOLS+=		gmake
 
 SUBST_CLASSES+=		options
 SUBST_MESSAGE.options=	Preventing CFLAGS from being overridden.
-SUBST_STAGE.options=	post-patch
+SUBST_STAGE.options=	pre-configure
 SUBST_FILES.options=	Makefile
 SUBST_SED.options=	-e 's,^CFLAGS =,\#CFLAGS =,g'
 

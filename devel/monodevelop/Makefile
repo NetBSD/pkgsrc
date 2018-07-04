@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2018/04/16 14:33:48 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2018/07/04 13:40:15 jperkin Exp $
 
 MD_VERSION=	5.0.1
 DISTNAME=	monodevelop-${MD_VERSION}-0
@@ -35,13 +35,13 @@ MAKE_OVERRIDE+=	src/addins/MonoDevelop.Autotools/templates/rules.make
 MAKE_OVERRIDE+=	src/addins/MonoDevelop.Autotools/SimpleProjectMakefileHandler.cs
 
 SUBST_CLASSES+=			fix-gmake
-SUBST_STAGE.fix-gmake=		post-patch
+SUBST_STAGE.fix-gmake=		pre-configure
 SUBST_MESSAGE.fix-gmake=	Fixing GNU make references
 SUBST_FILES.fix-gmake=		${MAKE_OVERRIDE}
 SUBST_SED.fix-gmake=		-e 's,MAKEPROGRAM,${MAKE_PROGRAM},'
 
 SUBST_CLASSES+=		fix-mcs
-SUBST_STAGE.fix-mcs=	post-patch
+SUBST_STAGE.fix-mcs=	pre-configure
 SUBST_MESSAGE.fix-mcs=	Fix compiler name
 SUBST_FILES.fix-mcs=	configure
 SUBST_SED.fix-mcs=	-e 's,gmcs,mcs,'

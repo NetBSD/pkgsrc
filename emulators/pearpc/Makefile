@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/03/17 01:27:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.21 2018/07/04 13:40:17 jperkin Exp $
 
 DISTNAME=		pearpc-0.5
 CATEGORIES=		emulators
@@ -40,7 +40,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/ppccfg.example ${DESTDIR}${EGDIR}
 
 SUBST_CLASSES+=		conf
-SUBST_STAGE.conf=	post-patch
+SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	ppccfg.example
 SUBST_SED.conf=		-e "s|\"nvram\"|\"/tmp/nvram\"|"
 SUBST_MESSAGE.conf=	Fixing configuration file.

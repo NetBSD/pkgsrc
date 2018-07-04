@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2017/12/21 12:22:13 wiz Exp $
+# $NetBSD: options.mk,v 1.12 2018/07/04 13:40:24 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.neomutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
@@ -63,7 +63,7 @@ LDFLAGS.SunOS+=			${COMPILER_RPATH_FLAG}/usr/xpg4/lib${LIBABISUFFIX}
 .else
 SUBST_CLASSES+=		curse
 SUBST_MESSAGE.curse=	Fixing mutt to avoid ncursesw
-SUBST_STAGE.curse=	post-patch
+SUBST_STAGE.curse=	pre-configure
 SUBST_FILES.curse=	configure.ac
 SUBST_SED.curse=	-e 's,for lib in ncurses ncursesw,for lib in ncurses,'
 .endif

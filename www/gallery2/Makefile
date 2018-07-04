@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/08/08 16:39:12 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2018/07/04 13:40:41 jperkin Exp $
 #
 
 DISTNAME=		gallery-2.3.2-full
@@ -58,7 +58,7 @@ SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKDIR}/gallery2.conf
 SUBST_FILES.paths+=	${WRKDIR}/config.php
 SUBST_VARS.paths+=	G2DIR G2DATA
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 
 OWN_DIRS_PERMS+=	${G2DATA} ${APACHE_USER} ${APACHE_GROUP} 755
 

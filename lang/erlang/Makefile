@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2018/07/03 11:01:21 fhajny Exp $
+# $NetBSD: Makefile,v 1.86 2018/07/04 13:40:21 jperkin Exp $
 
 DISTNAME=		otp_src_${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}${!empty(DIST_VERSION_PATCH):?.:}${DIST_VERSION_PATCH}
 PKGNAME=		${DISTNAME:S/otp_src_/erlang-/}
@@ -55,7 +55,7 @@ REPLACE_FILES.escript=	\
 	lib/snmp/src/compile/snmpc.src
 
 SUBST_CLASSES+=		target
-SUBST_STAGE.target=	post-patch
+SUBST_STAGE.target=	pre-configure
 SUBST_FILES.target=	make/target.mk
 SUBST_SED.target=	-e "s|=.*config.guess)|= ${MACHINE_GNU_PLATFORM}|"
 SUBST_MESSAGE.target=	Fixing target name.

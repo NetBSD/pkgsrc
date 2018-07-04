@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2015/03/06 23:22:25 tnn Exp $
+# $NetBSD: Makefile,v 1.50 2018/07/04 13:40:36 jperkin Exp $
 
 # See here for new version: http://www.mcafee.com/apps/downloads/free-evaluations/default.aspx?pc=aaad13320&plat=linux&pid=&eid=&ilv=LatestVersions&sz=25&pg=1&segment=false&region=us
 BROKEN=			distfile is gone, package must be updated to version 6.0.4
@@ -51,7 +51,7 @@ SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	update_dat.sh uvscan.sh
 SUBST_VARS.paths=	AWK BASENAME CP DATFILES ECHO GTAR MKDIR MV	\
 			PREFIX RM SED UVSCANDIR
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 
 post-extract:
 	${CP} ${FILESDIR}/update_dat.sh ${WRKSRC}/update_dat.sh

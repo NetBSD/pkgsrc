@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/10/18 03:58:31 tsutsui Exp $
+# $NetBSD: Makefile,v 1.16 2018/07/04 13:40:21 jperkin Exp $
 
 CANNA_MODULE=	canuum
 
@@ -14,7 +14,7 @@ INSTALL_MAKE_FLAGS+=	INSTUGIDFLAGS=
 
 .include "../../mk/curses.buildlink3.mk"
 SUBST_CLASSES+=		fix_curs
-SUBST_STAGE.fix_curs=	post-patch
+SUBST_STAGE.fix_curs=	pre-configure
 SUBST_MESSAGE.fix_curs=	Fixing curses
 SUBST_FILES.fix_curs+=	canuum/Imakefile
 SUBST_SED.fix_curs+=	-e 's/TERMCAP_LIB = .*/TERMCAP_LIB = -l'${BUILDLINK_LIBNAME.curses}'/g'

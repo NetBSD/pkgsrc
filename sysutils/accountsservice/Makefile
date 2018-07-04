@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/06/26 09:54:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2018/07/04 13:40:36 jperkin Exp $
 
 DISTNAME=	accountsservice-0.6.42
 CATEGORIES=	sysutils
@@ -35,7 +35,7 @@ CONF_FILES+=	${EGDIR}/dbus-1/system.d/org.freedesktop.Accounts.conf \
 
 SUBST_CLASSES+=		gdm
 SUBST_FILES.gdm=	src/daemon.c
-SUBST_STAGE.gdm=	post-patch
+SUBST_STAGE.gdm=	pre-configure
 SUBST_SED.gdm=		-e 's,/etc/gdm/custom.conf,${PKG_SYSCONFDIR}/gdm/custom.conf,g'
 
 BUILD_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen

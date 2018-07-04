@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2018/05/20 10:43:53 wen Exp $
+# $NetBSD: Makefile,v 1.64 2018/07/04 13:40:41 jperkin Exp $
 
 DISTNAME=	moodle-3.5
 CATEGORIES=	www
@@ -56,7 +56,7 @@ PLIST_SRC+=		${PKGDIR}/PLIST ${WRKDIR}/PLIST.AUTO
 
 SUBST_CLASSES+=		conf
 SUBST_MESSAGE.conf=	Fixing pathnames in configuration file.
-SUBST_STAGE.conf=	post-patch
+SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	../moodle.conf
 SUBST_SED.conf=		-e "s,@MOODLEDIR@,${MOODLEDIR},g"
 SUBST_SED.conf+=	-e "s,@MOODLEDATADIR@,${MOODLEDATADIR},g"
@@ -67,7 +67,7 @@ SUBST_SED.conf+=	-e "s,Allow from all,Require all granted,g"
 
 SUBST_CLASSES+=		php
 SUBST_MESSAGE.php=	Fixing the path of php.
-SUBST_STAGE.php=	post-patch
+SUBST_STAGE.php=	pre-configure
 SUBST_FILES.php=	admin/cli/mysql_engine.php admin/cli/maintenance.php admin/cli/cron.php
 SUBST_FILES.php+=	admin/cli/reset_password.php admin/cli/automated_backups.php
 SUBST_FILES.php+=	admin/cli/install.php admin/cli/install_database.php admin/cli/upgrade.php
@@ -78,7 +78,7 @@ SUBST_SED.php=		-e "s,/usr/bin/php,${PREFIX}/bin/php,g"
 
 SUBST_CLASSES+=		perl
 SUBST_MESSAGE.perl=	Fixing the path of perl.
-SUBST_STAGE.perl=	post-patch
+SUBST_STAGE.perl=	pre-configure
 SUBST_FILES.perl=	filter/algebra/algebra2tex.pl
 SUBST_SED.perl=		-e "s,/usr/bin/perl,${PREFIX}/bin/perl,g"
 

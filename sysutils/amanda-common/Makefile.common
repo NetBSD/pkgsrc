@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.42 2016/02/29 05:50:40 mlelstv Exp $
+# $NetBSD: Makefile.common,v 1.43 2018/07/04 13:40:36 jperkin Exp $
 
 # used by sysutils/amanda-common/Makefile
 # used by sysutils/amanda-client/Makefile
@@ -54,7 +54,7 @@ AUTO_MKDIRS=		yes
 
 SUBST_CLASSES+=		bool
 SUBST_MESSAGE.bool=	Fix SWIG messing with stdbool.h.
-SUBST_STAGE.bool=	post-patch
+SUBST_STAGE.bool=	pre-configure
 SUBST_FILES.bool=	perl/Amanda/*.c perl/Amanda/*/*.c
 SUBST_SED.bool=	-e '/undef bool/d'
 

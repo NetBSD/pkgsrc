@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2018/03/07 11:57:30 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2018/07/04 13:40:20 jperkin Exp $
 
 DISTNAME=		quakeforge-0.5.5
 PKGREVISION=		16
@@ -18,7 +18,7 @@ USE_TOOLS+=		bison gmake
 USE_LIBTOOL=		YES
 
 SUBST_CLASSES+=		dsp
-SUBST_STAGE.dsp=	post-patch
+SUBST_STAGE.dsp=	pre-configure
 SUBST_MESSAGE.dsp=	Adjusting sound device path.
 SUBST_FILES.dsp=	libs/audio/targets/snd_oss.c
 SUBST_SED.dsp=		-e "s|/dev/dsp|${DEVOSSAUDIO}|"

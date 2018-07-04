@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2018/05/14 10:31:14 maya Exp $
+# $NetBSD: Makefile,v 1.35 2018/07/04 13:40:40 jperkin Exp $
 
 DISTNAME=		wmii+ixp-3.9.2
 PKGNAME=		wmii-3.9.2
@@ -50,7 +50,7 @@ CONF_FILES+=		${EGDIR}/${EGSUBDIR.${subdir}}/${file} \
 LDFLAGS.SunOS+=		-lsocket -lnsl -liconv
 
 SUBST_CLASSES+=		vars
-SUBST_STAGE.vars=	post-patch
+SUBST_STAGE.vars=	pre-configure
 SUBST_FILES.vars=	util/compile
 SUBST_VARS.vars=	EGREP SED SH AWK
 

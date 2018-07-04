@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2018/06/24 08:05:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.40 2018/07/04 13:40:22 jperkin Exp $
 
 DISTNAME=	rustc-1.27.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -158,7 +158,7 @@ TOOLS_PATH.md5sum=	${PREFIX}/bin/gmd5sum
 .endif
 
 SUBST_CLASSES+=		rpath
-SUBST_STAGE.rpath=	post-patch
+SUBST_STAGE.rpath=	pre-configure
 SUBST_FILES.rpath=	src/bootstrap/bin/rustc.rs
 SUBST_VARS.rpath=	PREFIX
 

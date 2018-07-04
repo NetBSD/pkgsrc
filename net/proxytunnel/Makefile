@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/03/05 11:29:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2018/07/04 13:40:30 jperkin Exp $
 #
 
 DISTNAME=	proxytunnel-1.9.0
@@ -18,7 +18,7 @@ BUILD_TARGET=	proxytunnel
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 bin
 
 SUBST_CLASSES+=			fix-paths
-SUBST_STAGE.fix-paths=		post-patch
+SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
 SUBST_FILES.fix-paths=		proxytunnel.1
 SUBST_SED.fix-paths=		-e 's,/usr,${PREFIX},g'

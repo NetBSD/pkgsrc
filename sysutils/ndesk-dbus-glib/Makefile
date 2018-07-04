@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2018/04/14 07:34:02 adam Exp $
+# $NetBSD: Makefile,v 1.28 2018/07/04 13:40:38 jperkin Exp $
 
 DISTNAME=	ndesk-dbus-glib-0.4.1
 PKGREVISION=	23
@@ -15,7 +15,7 @@ USE_TOOLS+=	pkg-config gmake
 PKGCONFIG_OVERRIDE+=	ndesk-dbus-glib-1.0.pc.in
 
 SUBST_CLASSES+=		fix-mcs
-SUBST_STAGE.fix-mcs=	post-patch
+SUBST_STAGE.fix-mcs=	pre-configure
 SUBST_MESSAGE.fix-mcs=	Fix compiler name
 SUBST_FILES.fix-mcs=	configure
 SUBST_SED.fix-mcs=	-e 's,gmcs,mcs,'

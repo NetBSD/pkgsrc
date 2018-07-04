@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/08/16 20:45:43 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2018/07/04 13:40:29 jperkin Exp $
 #
 
 DISTNAME=	nipper-cli-0.12.0
@@ -15,7 +15,7 @@ USE_LANGUAGES=	c++ c
 USE_CMAKE=	yes
 
 SUBST_CLASSES+=		config
-SUBST_STAGE.config=	post-patch
+SUBST_STAGE.config=	pre-configure
 SUBST_FILES.config=	CMakeLists.txt nipper.cpp
 SUBST_SED.config=	-e "s|@@PREFIX@@|${PREFIX}|g"
 SUBST_SED.config+=	-e "s|@@PKGMANDIR@@|${PKGMANDIR}|g"

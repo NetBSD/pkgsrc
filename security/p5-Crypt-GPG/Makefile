@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/06/05 14:24:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.16 2018/07/04 13:40:34 jperkin Exp $
 #
 
 DISTNAME=		Crypt-GPG-1.64
@@ -21,7 +21,7 @@ DEPENDS+=		p5-TimeDate-[0-9]*:../../time/p5-TimeDate
 SUBST_CLASSES+=		local
 SUBST_FILES.local=	GPG.pm
 SUBST_SED.local=	-e s,/usr/local,${PREFIX},
-SUBST_STAGE.local=	post-patch
+SUBST_STAGE.local=	pre-configure
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Crypt/GPG/.packlist

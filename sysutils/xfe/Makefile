@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2018/03/12 11:17:39 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2018/07/04 13:40:39 jperkin Exp $
 
 DISTNAME=	xfe-1.40
 PKGREVISION=	3
@@ -19,7 +19,7 @@ LDFLAGS.DragonFly=	-lXft -lX11
 PTHREAD_AUTO_VARS=	yes
 
 SUBST_CLASSES+=		conf
-SUBST_STAGE.conf=	post-patch
+SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	src/XFileExplorer.cpp
 SUBST_SED.conf=		-e "s|/usr/local|${PREFIX}|"
 SUBST_MESSAGE.conf=	Fixing hardcoded path.

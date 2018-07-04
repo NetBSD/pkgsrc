@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/06/26 10:10:59 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2018/07/04 13:40:20 jperkin Exp $
 
 DISTNAME=	colord-1.3.5
 CATEGORIES=	graphics gnome
@@ -41,7 +41,7 @@ CONF_FILES+=	${CONF_DIR}/org.freedesktop.ColorManager.conf \
 
 SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Fix prefix
-SUBST_STAGE.prefix=	post-patch
+SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	lib/colord/cd-icc-store.c
 SUBST_FILES.prefix+=	src/cd-main.c
 SUBST_FILES.prefix+=	client/cd-util.c

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/06/12 17:50:25 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6 2018/07/04 13:40:28 jperkin Exp $
 
 DISTNAME=	libquic-0.0.3
 PKGREVISION=	2
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 BUILD_DEPENDS+=		go-[0-9]*:../../lang/go
 
 SUBST_CLASSES+=		path
-SUBST_STAGE.link=	post-patch
+SUBST_STAGE.link=	pre-configure
 SUBST_MESSAGE.link=	Fix paths
 SUBST_FILES.link=	src/base/base_paths_posix.cc
 SUBST_SED.link=		-e 's|@PREFIX@|'${PREFIX}'|'

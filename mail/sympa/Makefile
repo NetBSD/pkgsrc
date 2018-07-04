@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2018/02/02 00:20:45 rillig Exp $
+# $NetBSD: Makefile,v 1.68 2018/07/04 13:40:24 jperkin Exp $
 
 DISTNAME=	sympa-6.2.16
 #PKGREVISION=	3
@@ -173,7 +173,7 @@ INSTALLATION_DIRS+=	share/doc/sympa
 .include "../../mk/bsd.prefs.mk"
 
 SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	configure
 SUBST_SED.paths=	-e "s|localstatedir/lib/sympa|localstatedir|g"
 SUBST_SED.paths+=	-e "s|prefix/static_content|prefix/sympa/static_content|g"

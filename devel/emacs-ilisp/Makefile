@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2017/08/01 14:58:55 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2018/07/04 13:40:13 jperkin Exp $
 #
 
 DISTNAME=	ilisp-20021222
@@ -18,7 +18,7 @@ BUILD_TARGET=	compile
 SITELISP=	${EMACS_LISPPREFIX}/ilisp
 
 SUBST_CLASSES+=			string-to-int
-SUBST_STAGE.string-to-int=	post-patch
+SUBST_STAGE.string-to-int=	pre-configure
 SUBST_MESSAGE.string-to-int=	obsolete function (as of 22.1); use `string-to-number' instead
 SUBST_FILES.string-to-int+=	ilisp-acl.el
 SUBST_SED.string-to-int=	-e 's/string-to-int/string-to-number/'

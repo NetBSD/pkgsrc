@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/08/16 20:45:43 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2018/07/04 13:40:28 jperkin Exp $
 #
 
 DISTNAME=	libnipper-0.12.1
@@ -17,7 +17,7 @@ CONF_FILES+=	${PREFIX}/share/examples/nipper.conf \
 		${PKG_SYSCONFDIR}/nipper.conf
 
 SUBST_CLASSES+=		config
-SUBST_STAGE.config=	post-patch
+SUBST_STAGE.config=	pre-configure
 SUBST_FILES.config=	CMakeLists.txt libnipper.cpp nipper.cpp
 SUBST_SED.config=	-e "s|@@PREFIX@@|${PREFIX}|g"
 SUBST_SED.config+=	-e "s|@@PKGMANDIR@@|${PKGMANDIR}|g"

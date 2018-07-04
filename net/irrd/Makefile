@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2016/07/09 06:38:42 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2018/07/04 13:40:28 jperkin Exp $
 
 DISTNAME=		irrd2.3.9
 PKGNAME=		irrd-2.3.9
@@ -65,7 +65,7 @@ SUBST_CLASSES+=		confpaths
 SUBST_FILES.confpaths=	../samples/irrd.conf.sample
 SUBST_SED.confpaths=	-e 's,/var/spool/irr_database,'${VARBASE}'/irrd/db,'
 SUBST_SED.confpaths+=	-e 's,/var/log/irrd,'${VARBASE}'/irrd/log/irrd.log,'
-SUBST_STAGE.confpaths=	post-patch
+SUBST_STAGE.confpaths=	pre-configure
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/../samples/irrd.conf.sample ${DESTDIR}${EGDIR}/irrd.conf

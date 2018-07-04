@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/05/28 11:50:07 maya Exp $
+# $NetBSD: Makefile,v 1.14 2018/07/04 13:40:22 jperkin Exp $
 
 DISTNAME=		dcc-1.3.159
 #PKGREVISION=		2
@@ -26,7 +26,7 @@ FILES_SUBST+=		DCC_FIXMAP=${PREFIX}/libexec/fix-map
 
 # enabling/disabling daemons is done in rc.conf
 SUBST_CLASSES+=		dae
-SUBST_STAGE.dae=	post-patch
+SUBST_STAGE.dae=	pre-configure
 SUBST_FILES.dae=	homedir/dcc_conf.in
 SUBST_SED.dae=		-e 's/^\(DCCD_ENABLE=\).*$$/\1on/'
 SUBST_SED.dae+=		-e 's/^\(GREY_ENABLE=\).*$$/\1on/'

@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.2 2006/05/14 21:10:01 schwarz Exp $
+# $NetBSD: hacks.mk,v 1.3 2018/07/04 13:40:27 jperkin Exp $
 
 .if !defined(ORBIT_HACKS_MK)
 ORBIT_HACKS_MK=	# defined
@@ -14,7 +14,7 @@ _SOCKLEN_T_TYPEDEFD!=	${GREP} -c '^typedef\ .*\ socklen_t;$$' ${LOCALBASE}/inclu
 PKG_HACKS+=		socklen_t-already-typedefd-in-pthread.h
 SUBST_CLASSES+=		socklen_t
 SUBST_FILES.socklen_t=	configure
-SUBST_STAGE.socklen_t=	post-patch
+SUBST_STAGE.socklen_t=	pre-configure
 SUBST_SED.socklen_t=	-e 's/^\#define\ socklen_t\ size_t$$//'
 # remark: \ before # needed to prevent make from interpreting
 #         remainder of line as a comment

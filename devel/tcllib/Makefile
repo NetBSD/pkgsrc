@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2016/11/06 19:55:15 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2018/07/04 13:40:15 jperkin Exp $
 
 DISTNAME=		tcllib-1.18
 CATEGORIES=		devel
@@ -16,13 +16,13 @@ NO_BUILD=		yes
 CONFIGURE_ENV+=		ac_cv_path_tclsh=${TCLSH:Q}
 
 SUBST_CLASSES+=		fix
-SUBST_STAGE.fix=	post-patch
+SUBST_STAGE.fix=	pre-configure
 SUBST_FILES.fix=	modules/doctools/mpformats/_html.tcl
 SUBST_SED.fix=		-e "s,/usr/bin/wget -q -O,${FETCH_CMD:Q} -V -o,g"
 SUBST_MESSAGE.fix=	Fixing hardcoded ftp binary.
 
 SUBST_CLASSES+=		tclsh
-SUBST_STAGE.tclsh=	post-patch
+SUBST_STAGE.tclsh=	pre-configure
 SUBST_FILES.tclsh=	modules/pki/pki.tcl apps/dtplite apps/nns apps/nnsd\
 SUBST_FILES.tclsh+=	apps/nnslog apps/page apps/pt apps/tcldocstrip
 SUBST_SED.tclsh=	-e "s,/usr/bin/env.*tclsh,${TCLSH},g"

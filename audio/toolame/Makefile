@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2017/09/06 09:03:00 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2018/07/04 13:40:09 jperkin Exp $
 
 DISTNAME=	toolame-02l
 PKGREVISION=	4
@@ -25,7 +25,7 @@ INSTALLATION_DIRS=	bin share/doc/toolame
 .if !empty(PKGSRC_COMPILER:Msunpro)
 SUBST_CLASSES+=		inline
 SUBST_MESSAGE.inline=	Disable inline on Sun Studio
-SUBST_STAGE.inline=	post-patch
+SUBST_STAGE.inline=	pre-configure
 SUBST_FILES.inline=	Makefile
 SUBST_SED.inline=	-e 's,INLINE=inline,INLINE=,'
 .endif

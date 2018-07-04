@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2018/04/16 14:34:57 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2018/07/04 13:40:26 jperkin Exp $
 #
 
 DISTNAME=		mplayerplug-in-3.55
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--disable-gtk1
 CONFIGURE_ENV+=		ac_cv_path_GECKO_XPIDL=${BUILDLINK_PREFIX.xulrunner192}/lib/xulrunner192/xpidl
 
 SUBST_CLASSES+=		conf
-SUBST_STAGE.conf=	post-patch
+SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	Source/plugin-setup.cpp
 SUBST_SED.conf=		-e "s|/etc/|${PKG_SYSCONFDIR}/|g"
 SUBST_MESSAGE.conf=	Fixing harcoded paths.

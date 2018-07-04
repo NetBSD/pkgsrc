@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2017/04/18 13:30:57 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2018/07/04 13:40:12 jperkin Exp $
 
 DISTNAME=	minicom-2.7.1
 CATEGORIES=	comms
@@ -24,7 +24,7 @@ EGDIR=			${PREFIX}/share/examples/minicom
 
 SUBST_CLASSES+=		minicom
 SUBST_MESSAGE.minicom=	Fixing hardcoded paths.
-SUBST_STAGE.minicom=	post-patch
+SUBST_STAGE.minicom=	pre-configure
 SUBST_FILES.minicom=	src/rwconf.c
 SUBST_VARS.minicom=	PREFIX
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/01/01 11:52:15 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2018/07/04 13:40:18 jperkin Exp $
 
 DISTNAME=	afpfs-ng-0.8.1
 PKGNAME=	fuse-${DISTNAME}
@@ -21,7 +21,7 @@ REPLACE_SH+=	fuse/afpfs
 .include "../../mk/readline.buildlink3.mk"
 
 SUBST_CLASSES+=		termcap
-SUBST_STAGE.termcap=	post-patch
+SUBST_STAGE.termcap=	pre-configure
 SUBST_FILES.termcap=	configure.ac configure cmdline/Makefile.*
 .if ${TERMCAP_TYPE} == none
 SUBST_SED.termcap+=	-e 's|ncurses||'

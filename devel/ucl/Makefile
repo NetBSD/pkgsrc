@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2015/10/12 23:19:40 agc Exp $
+# $NetBSD: Makefile,v 1.24 2018/07/04 13:40:16 jperkin Exp $
 #
 
 DISTNAME=	ucl-1.03
@@ -17,7 +17,7 @@ CONFIGURE_ARGS+=	--enable-shared=yes
 
 # Avoid path to build directory in example Makefile
 SUBST_CLASSES+=		example
-SUBST_STAGE.example=	post-patch
+SUBST_STAGE.example=	pre-configure
 SUBST_FILES.example=	examples/Makefile.in
 SUBST_SED.example=	-e "s|@MAKEINFO@||g"
 

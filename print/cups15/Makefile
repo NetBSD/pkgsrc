@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2017/08/20 23:55:54 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2018/07/04 13:40:33 jperkin Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -143,20 +143,20 @@ OWN_DIRS_PERMS+=	${CUPS_CACHE}/rss ${REAL_ROOT_USER} ${CUPS_GROUP} 0775
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKDIR}/cups.pam
 SUBST_SED.paths+=	-e 's,@LOCALBASE@,${LOCALBASE},g'
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 
 SUBST_CLASSES+=		rpathfix
 SUBST_FILES.rpathfix=	cups-config.in
 SUBST_MESSAGE.rpathfix=	Adding rpath to cups-config.
 SUBST_SED.rpathfix=	-e 's|@EXPORT_LDFLAGS@|${COMPILER_RPATH_FLAG}${PREFIX}/lib|g'
-SUBST_STAGE.rpathfix=	post-patch
+SUBST_STAGE.rpathfix=	pre-configure
 
 .if !empty(OPSYS:MNetBSD) && !empty(MACHINE_ARCH:Mpowerpc)
 SUBST_CLASSES+=		piefix
 SUBST_FILES.piefix=	Makedefs.in
 SUBST_MESSAGE.piefix=	Removing PIE flags
 SUBST_SED.piefix=	-e 's|@PIEFLAGS@||g'
-SUBST_STAGE.piefix=	post-patch
+SUBST_STAGE.piefix=	pre-configure
 .endif
 
 INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} ${MIMEDIR}

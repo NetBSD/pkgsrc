@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2017/01/19 18:52:27 agc Exp $
+# $NetBSD: Makefile,v 1.55 2018/07/04 13:40:39 jperkin Exp $
 
 DISTNAME=	eb-4.3
 PKGREVISION=	8
@@ -65,7 +65,7 @@ EGDIR=		${PREFIX}/share/examples/eb
 # -    ZLIBLIBS="-L$z_libdir -lz"
 # +    ZLIBLIBS="-Wl,-R$z_libdir -L$z_libdir -lz"
 SUBST_CLASSES+=		runpath
-SUBST_STAGE.runpath=	post-patch
+SUBST_STAGE.runpath=	pre-configure
 SUBST_FILES.runpath=	configure configure.ac
 SUBST_SED.runpath=	-e 's|^\(.*LIBS=['\''"]\)-L\(\$$[^[:blank:]][^[:blank:]]*\)\(.*\)$$|\1${COMPILER_RPATH_FLAG}\2 -L\2\3|'
 

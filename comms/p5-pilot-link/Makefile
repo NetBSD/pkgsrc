@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2017/06/05 14:22:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.58 2018/07/04 13:40:12 jperkin Exp $
 #
 
 .include "../../comms/pilot-link/Makefile.common"
@@ -40,7 +40,7 @@ BUILD_DIRS+=		src
 BUILD_DIRS+=		${INSTALL_DIRS}
 
 SUBST_CLASSES+=		progs
-SUBST_STAGE.progs=	post-patch
+SUBST_STAGE.progs=	pre-configure
 SUBST_MESSAGE.progs=	Trim programs to build
 SUBST_FILES.progs=	src/Makefile.in
 SUBST_SED.progs=	-e s:@ENABLE_CONDUITS_TRUE@bin_PROGRAMS:@ENABLE_CONDUITS_TRUE@bin_PROGRAMSX:

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2015/10/27 08:49:01 jnemeth Exp $
+# $NetBSD: options.mk,v 1.9 2018/07/04 13:40:11 jperkin Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.asterisk
 PKG_SUPPORTED_OPTIONS=		zaptel x11 unixodbc ilbc webvmail ldap spandsp
@@ -78,7 +78,7 @@ post-configure:
 .if !empty(PKG_OPTIONS:Mwebvmail)
 DEPENDS+=		p5-DBI-[0-9]*:../../databases/p5-DBI
 SUBST_CLASSES+=		webvmail
-SUBST_STAGE.webvmail=	post-patch
+SUBST_STAGE.webvmail=	pre-configure
 SUBST_FILES.webvmail=	contrib/scripts/vmail.cgi
 SUBST_SED.webvmail+=	-e 's|@ASTETCDIR@|${ASTETCDIR}|'
 SUBST_SED.webvmail+=	-e "s|@ASTSPOOLDIR@|${ASTSPOOLDIR}|"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/01/14 17:34:01 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2018/07/04 13:40:19 jperkin Exp $
 
 DISTNAME=	prboom-plus-2.5.1.3
 PKGREVISION=	1
@@ -14,7 +14,7 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-waddir=${PREFIX}/share/doom
 
 SUBST_CLASSES+=		gamesdir
-SUBST_STAGE.gamesdir=	post-patch
+SUBST_STAGE.gamesdir=	pre-configure
 SUBST_MESSAGE.gamesdir=	Fixing hard-coded gamesdir
 SUBST_FILES.gamesdir=	src/Makefile.in
 SUBST_SED.gamesdir+=	-e '/^gamesdir =/ s;/games;/bin;g'
