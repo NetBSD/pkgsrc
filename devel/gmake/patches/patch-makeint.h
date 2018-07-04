@@ -1,14 +1,13 @@
-$NetBSD: patch-makeint.h,v 1.6 2016/12/17 14:14:06 joerg Exp $
+$NetBSD: patch-makeint.h,v 1.7 2018/07/04 09:42:56 bsiegert Exp $
 
-* [SV 43434] Handle NULL returns from ttyname().
 * Do not override stack limits by default.
   It can dramatically increase the memory use of multi-threaded programs.
 
---- makeint.h.orig	2014-10-05 16:24:51.000000000 +0000
+--- makeint.h.orig	2016-05-21 20:22:32.000000000 +0000
 +++ makeint.h
-@@ -408,9 +408,6 @@ extern int unixy_shell;
- 
- #define STOP_SET(_v,_m) ANY_SET (stopchar_map[(unsigned char)(_v)],(_m))
+@@ -442,9 +442,6 @@ extern int unixy_shell;
+ #define NEXT_TOKEN(s)   while (ISSPACE (*(s))) ++(s)
+ #define END_OF_TOKEN(s) while (! STOP_SET (*(s), MAP_SPACE|MAP_NUL)) ++(s)
  
 -#if defined(HAVE_SYS_RESOURCE_H) && defined(HAVE_GETRLIMIT) && defined(HAVE_SETRLIMIT)
 -# define SET_STACK_SIZE
@@ -16,16 +15,3 @@ $NetBSD: patch-makeint.h,v 1.6 2016/12/17 14:14:06 joerg Exp $
  #ifdef SET_STACK_SIZE
  # include <sys/resource.h>
  extern struct rlimit stack_limit;
-@@ -424,10 +421,11 @@ extern struct rlimit stack_limit;
- /* The number of bytes needed to represent the largest integer as a string.  */
- #define INTSTR_LENGTH         CSTRLEN ("18446744073709551616")
- 
-+#define DEFAULT_TTYNAME "true"
- #ifdef HAVE_TTYNAME
- # define TTYNAME(_f) ttyname (_f)
- #else
--# define TTYNAME(_f) "true"
-+# define TTYNAME(_f) DEFAULT_TTYNAME
- #endif
- 
- 
