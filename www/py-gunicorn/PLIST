@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2018/04/30 08:48:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/07/04 03:43:12 adam Exp $
 bin/gunicorn-${PYVERSSUFFIX}
 bin/gunicorn_paster-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -101,12 +101,12 @@ ${PYSITELIB}/gunicorn/workers/__init__.pyo
 ${PYSITELIB}/gunicorn/workers/_gaiohttp.py
 ${PLIST.py3x}${PYSITELIB}/gunicorn/workers/_gaiohttp.pyc
 ${PLIST.py3x}${PYSITELIB}/gunicorn/workers/_gaiohttp.pyo
-${PYSITELIB}/gunicorn/workers/async.py
-${PYSITELIB}/gunicorn/workers/async.pyc
-${PYSITELIB}/gunicorn/workers/async.pyo
 ${PYSITELIB}/gunicorn/workers/base.py
 ${PYSITELIB}/gunicorn/workers/base.pyc
 ${PYSITELIB}/gunicorn/workers/base.pyo
+${PYSITELIB}/gunicorn/workers/base_async.py
+${PYSITELIB}/gunicorn/workers/base_async.pyc
+${PYSITELIB}/gunicorn/workers/base_async.pyo
 ${PYSITELIB}/gunicorn/workers/gaiohttp.py
 ${PYSITELIB}/gunicorn/workers/gaiohttp.pyc
 ${PYSITELIB}/gunicorn/workers/gaiohttp.pyo
