@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2018/01/28 16:24:12 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2018/07/04 13:40:12 jperkin Exp $
 
 DISTNAME=		gcc-4.8.3
 PKGNAME=		${DISTNAME:C/^/avr-/}
@@ -39,7 +39,7 @@ MAKE_ENV+=		CPPFLAGS_FOR_BUILD=${CPPFLAGS_FOR_BUILD:Q}
 SUBST_CLASSES+=		sed
 SUBST_FILES.sed=	fixincludes/fixincl.x
 SUBST_SED.sed=		-e 's|@SED@|${TOOLS_PATH.sed}|g'
-SUBST_STAGE.sed=	post-patch
+SUBST_STAGE.sed=	pre-configure
 
 pre-configure:
 	${MKDIR} ${WRKDIR}/obj

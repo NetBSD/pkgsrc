@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2018/01/02 21:11:10 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2018/07/04 13:40:43 jperkin Exp $
 #
 
 DISTNAME=	xbae-4.51.01
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--with-motif-libraries=${MOTIFBASE}/lib
 INSTALLATION_DIRS=	share/aclocal
 
 SUBST_CLASSES+=		dirs
-SUBST_STAGE.dirs=	post-patch
+SUBST_STAGE.dirs=	pre-configure
 SUBST_FILES.dirs=	Makefile.in doc/Makefile.in doc/images/Makefile.in src/Makefile.in
 SUBST_SED.dirs=		-e '/^mandir =/         s,=.*,= @mandir@,'
 SUBST_SED.dirs+=	-e '/^SUBDIRS =/        s,examples,,'

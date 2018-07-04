@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/07/30 22:32:17 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2018/07/04 13:40:15 jperkin Exp $
 
 DISTNAME=	rebar-2.6.4
 CATEGORIES=	devel
@@ -18,7 +18,7 @@ do-install:
 SUBST_CLASSES+=		shebang
 SUBST_FILES.shebang=	src/rebar_escripter.erl
 SUBST_SED.shebang+=	-e 's,/usr/bin/env escript,${PREFIX}/bin/escript,'
-SUBST_STAGE.shebang=	post-patch
+SUBST_STAGE.shebang=	pre-configure
 
 .include "../../lang/erlang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

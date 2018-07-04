@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2017/02/10 10:38:42 he Exp $
+# $NetBSD: Makefile,v 1.25 2018/07/04 13:40:12 jperkin Exp $
 #
 
 PKGVER=		8.2.1
@@ -41,7 +41,7 @@ CONF_FILES+=	${EGDIR}/conserver.passwd ${PKG_SYSCONFDIR}/conserver.passwd
 OWN_DIRS=	${VARBASE}/consoles
 
 SUBST_CLASSES+=		conf
-SUBST_STAGE.conf=	post-patch
+SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	conserver.cf/conserver.cf
 SUBST_SED.conf=		-e "s,/var/consoles,${VARBASE}/consoles,"
 

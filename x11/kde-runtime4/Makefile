@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2018/04/29 21:31:25 adam Exp $
+# $NetBSD: Makefile,v 1.88 2018/07/04 13:40:43 jperkin Exp $
 
 DISTNAME=	kde-runtime-15.12.0
 PKGNAME=	${DISTNAME:S/-1/4-1/}
@@ -44,7 +44,7 @@ PLIST.x11=	yes
 .endif
 
 SUBST_CLASSES+=		htdig
-SUBST_STAGE.htdig=	post-patch
+SUBST_STAGE.htdig=	pre-configure
 SUBST_MESSAGE.htdig=	Fix htdig paths.
 SUBST_FILES.htdig=	khelpcenter/searchhandlers/khc_htsearch.pl
 SUBST_SED.htdig=	-e s:/srv/www/cgi-bin:${PREFIX}/libexec/cgi-bin:
@@ -52,7 +52,7 @@ SUBST_SED.htdig=	-e s:/srv/www/cgi-bin:${PREFIX}/libexec/cgi-bin:
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	kioslave/info/kde-info2html.conf
 SUBST_SED.paths=	-e 's,@LOCALBASE@,${LOCALBASE},g'
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 
 REPLACE_PERL+= \
 	khelpcenter/searchhandlers/khc_docbookdig.pl.cmake \

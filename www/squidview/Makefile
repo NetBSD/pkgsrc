@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/12/23 22:30:50 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2018/07/04 13:40:42 jperkin Exp $
 
 DISTNAME=	squidview-0.80
 PKGREVISION=	3
@@ -16,7 +16,7 @@ GNU_CONFIGURE=		yes
 .include "../../www/squid3/Makefile.common"
 
 SUBST_CLASSES+=	files
-SUBST_STAGE.files=	post-patch
+SUBST_STAGE.files=	pre-configure
 SUBST_FILES.files=	squidview.h squidview.1
 SUBST_SED.files=	-e "s|/var/log/squid|${LOGDIR}|g"
 SUBST_MESSAGE.files=	Fixing logfile location.

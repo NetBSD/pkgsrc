@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/04/14 07:34:39 adam Exp $
+# $NetBSD: Makefile,v 1.4 2018/07/04 13:40:35 jperkin Exp $
 
 PKGNAME=	qca2-qt5-gnupg-${DISTNAME:C/.*-//}
 PKGREVISION=	2
@@ -16,7 +16,7 @@ CMAKE_ARGS+=	-DBUILD_TOOLS=OFF
 CMAKE_ARGS+=	-DINST_QCA_LIB_NAME=-lqca-qt5
 
 SUBST_CLASSES+=		libname
-SUBST_STAGE.libname=	post-patch
+SUBST_STAGE.libname=	pre-configure
 SUBST_MESSAGE.libname=	Use installed lib.
 SUBST_FILES.libname=	plugins/qca-gnupg/CMakeLists.txt
 SUBST_SED.libname=	-e 's:{QCA_LIB_NAME}:{INST_QCA_LIB_NAME}:'

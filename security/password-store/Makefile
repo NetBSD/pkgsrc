@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/06/14 16:08:39 leot Exp $
+# $NetBSD: Makefile,v 1.8 2018/07/04 13:40:34 jperkin Exp $
 
 DISTNAME=	password-store-1.7.2
 CATEGORIES=	security
@@ -26,7 +26,7 @@ REPLACE_BASH+=	src/password-store.sh
 REPLACE_BASH+=	tests/*.sh
 
 SUBST_CLASSES+=		fixsh
-SUBST_STAGE.fixsh=	post-patch
+SUBST_STAGE.fixsh=	pre-configure
 SUBST_MESSAGE.fixsh=	Fixing shell script
 SUBST_FILES.fixsh=	src/password-store.sh
 SUBST_SED.fixsh+=	-e 's,GETOPT="getopt",GETOPT="${PREFIX}/bin/getopt",'

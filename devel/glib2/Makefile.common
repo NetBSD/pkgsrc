@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.63 2018/04/23 08:26:50 adam Exp $
+# $NetBSD: Makefile.common,v 1.64 2018/07/04 13:40:14 jperkin Exp $
 #
 # used by devel/glib2/Makefile
 # used by devel/gdbus-codegen/Makefile
@@ -55,7 +55,7 @@ CPPFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 
 .if ${OPSYS} == "FreeBSD"
 SUBST_CLASSES+=		thr
-SUBST_STAGE.thr=	post-patch
+SUBST_STAGE.thr=	pre-configure
 SUBST_FILES.thr=	gthread/Makefile.in
 .  if ${OS_VERSION:R} >= 5
 SUBST_SED.thr+=		-e "s|@G_THREAD_LIBS_FOR_GTHREAD@|-lpthread|g"
@@ -106,7 +106,7 @@ CONFIGURE_ARGS+=	--disable-threads
 BUILD_DEFS+=		VARBASE
 SUBST_CLASSES+=		dbusdb
 SUBST_MESSAGE.dbusdb=	Adjust dbus machine uuid path to dbus package
-SUBST_STAGE.dbusdb=	post-patch
+SUBST_STAGE.dbusdb=	pre-configure
 SUBST_FILES.dbusdb=	gio/gdbusconnection.c
 SUBST_FILES.dbusdb+=	gio/gdbusprivate.c
 SUBST_FILES.dbusdb+=	po/glib20.pot

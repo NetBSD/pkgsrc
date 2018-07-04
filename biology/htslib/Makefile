@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/04/30 16:51:54 bacon Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/04 13:40:09 jperkin Exp $
 
 DISTNAME=	htslib-1.8
 CATEGORIES=	biology
@@ -16,7 +16,7 @@ GNU_CONFIGURE=	yes
 REPLACE_PERL=	test/compare_sam.pl test/test.pl
 
 SUBST_CLASSES+=		version
-SUBST_STAGE.version=	post-patch
+SUBST_STAGE.version=	pre-configure
 SUBST_SED.version=	-e "s|m4_esyscmd_s(\[make print-version\])|[${PKGVERSION_NOREV}]|"
 SUBST_FILES.version=	${WRKSRC}/configure.ac
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/04/14 07:34:45 adam Exp $
+# $NetBSD: Makefile,v 1.12 2018/07/04 13:40:43 jperkin Exp $
 
 DISTNAME=	hyena-0.5
 PKGREVISION=	11
@@ -20,7 +20,7 @@ PKGCONFIG_OVERRIDE+=	build/pkg-config/hyena.gui.pc.in
 PKGCONFIG_OVERRIDE+=	build/pkg-config/hyena.pc.in
 
 SUBST_CLASSES+=		fix-mcs
-SUBST_STAGE.fix-mcs=	post-patch
+SUBST_STAGE.fix-mcs=	pre-configure
 SUBST_MESSAGE.fix-mcs=	Fix compiler name
 SUBST_FILES.fix-mcs=	configure
 SUBST_SED.fix-mcs=	-e 's,gmcs,mcs,'

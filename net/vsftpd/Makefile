@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2018/02/09 16:46:42 triaxx Exp $
+# $NetBSD: Makefile,v 1.45 2018/07/04 13:40:31 jperkin Exp $
 
 DISTNAME=	vsftpd-3.0.3
 CATEGORIES=	net
@@ -32,7 +32,7 @@ SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	vsftpd.8 vsftpd.conf.5 vsftpd.conf
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 SUBST_SED.paths+=	-e 's,@VARBASE@,${VARBASE},g'
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 
 MAKE_ENV+=		LIBS=${LIBS:Q}
 

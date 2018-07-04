@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2017/01/04 16:50:31 roy Exp $
+# $NetBSD: Makefile,v 1.19 2018/07/04 13:40:08 jperkin Exp $
 #
 
 DISTNAME=	juke-0.7
@@ -20,7 +20,7 @@ CONF_FILES=	${EGDIR}/juke.conf.default ${PKG_SYSCONFDIR}/juke.conf
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	doc/juke.1 MANUAL src/conf.c
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_SED.paths=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},'
 
 INSTALLATION_DIRS=	${EGDIR} share/doc/juke

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/09/08 11:57:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.15 2018/07/04 13:40:24 jperkin Exp $
 #
 
 DISTNAME=	pfqueue-0.5.6
@@ -32,7 +32,7 @@ SUBST_SED.make+=	-e 's,-module,,'
 
 SUBST_CLASSES+=		conf
 SUBST_MESSAGE.conf=	Fixing path to config file
-SUBST_STAGE.conf=	post-patch
+SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	pfqconfig.c pfqueue.conf.5
 SUBST_SED.conf=		-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g'
 

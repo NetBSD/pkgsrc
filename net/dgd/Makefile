@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/10/09 14:06:44 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2018/07/04 13:40:28 jperkin Exp $
 
 DISTNAME=	dgd-1.2p4
 PKGNAME=	dgd-1.2.0.4
@@ -18,7 +18,7 @@ BUILD_DIRS=		src
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths and command names.
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	mud.dgd
 SUBST_SED.paths=	-e 's,/home/dworkin/,${PREFIX}/libdata/,g'
 

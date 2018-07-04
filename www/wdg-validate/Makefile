@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2016/07/09 06:39:15 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2018/07/04 13:40:42 jperkin Exp $
 #
 
 DISTNAME=	validate-1.2.2
@@ -25,7 +25,7 @@ NO_BUILD=	YES
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	validate
 SUBST_SED.paths=	-e 's,/usr/local/share,${PREFIX}/share,g'
 SUBST_SED.paths+=	-e 's,/usr/local/bin/lq-nsgmls,${LOCALBASE}/bin/lq-nsgmls,g'

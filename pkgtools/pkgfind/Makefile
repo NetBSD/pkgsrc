@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2014/10/09 14:06:50 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2018/07/04 13:40:32 jperkin Exp $
 
 PKGNAME=	pkgfind-20111022
 CATEGORIES=	pkgtools
@@ -23,7 +23,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/pkgfind.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/pkgfind.1
 
 SUBST_CLASSES+=		path
-SUBST_STAGE.path=	post-patch
+SUBST_STAGE.path=	pre-configure
 SUBST_FILES.path=	pkgfind.c pkgfind.1
 SUBST_SED.path=		-e "s,/usr/pkgsrc,${PKGSRCDIR},g"
 SUBST_MESSAGE.path=	Adjusting pkgsrc directory.
