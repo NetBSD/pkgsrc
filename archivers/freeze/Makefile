@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2014/10/09 14:05:51 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2018/07/04 13:40:07 jperkin Exp $
 
 DISTNAME=	freeze-2.5
 PKGREVISION=	3
@@ -19,7 +19,7 @@ CFLAGS+=	-DCOMPAT=1
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 SUBST_CLASSES+=		freeze
-SUBST_STAGE.freeze=	post-patch
+SUBST_STAGE.freeze=	pre-configure
 SUBST_FILES.freeze=	*.1
 SUBST_SED.freeze=	-e 's|@PREFIX@|${PREFIX}|g'
 

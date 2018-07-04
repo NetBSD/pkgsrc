@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2017/01/19 18:52:16 agc Exp $
+# $NetBSD: Makefile,v 1.53 2018/07/04 13:40:23 jperkin Exp $
 
 DISTNAME=	mm2.7
 PKGNAME=	metamail-2.7
@@ -34,11 +34,11 @@ REPLACE_CSH+=	fonts/Xmailto-hebrew fonts/Xshownonascii
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man4 ${EGDIR}
 
 SUBST_CLASSES+=		awk sys
-SUBST_STAGE.awk=	post-patch
+SUBST_STAGE.awk=	pre-configure
 SUBST_MESSAGE.awk=	Adjusting the path to awk
 SUBST_FILES.awk=	bin/sun2mime
 SUBST_SED.awk=		-e "s|/bin/nawk|${AWK}|"
-SUBST_STAGE.sys=	post-patch
+SUBST_STAGE.sys=	pre-configure
 SUBST_MESSAGE.sys=	Adjusting the path for PKG_SYSCONFDIR.
 SUBST_FILES.sys=	config.h
 SUBST_SED.sys=		-e "s|PKG_SYSCONFDIR|\"${PKG_SYSCONFDIR}\"|g"

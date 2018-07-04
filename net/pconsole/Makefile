@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/07/03 11:55:30 wiedi Exp $
+# $NetBSD: Makefile,v 1.12 2018/07/04 13:40:29 jperkin Exp $
 #
 
 DISTNAME=	pconsole-1.0
@@ -18,7 +18,7 @@ USE_TOOLS+=	ksh:run
 REPLACE_KSH=	pconsole.sh.in
 
 SUBST_CLASSES=		path
-SUBST_STAGE.path=	post-patch
+SUBST_STAGE.path=	pre-configure
 SUBST_FILES.path=	pconsole.sh.in
 SUBST_VARS.path=	PREFIX X11BASE
 

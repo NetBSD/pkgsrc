@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2017/01/19 18:52:14 agc Exp $
+# $NetBSD: Makefile,v 1.33 2018/07/04 13:40:22 jperkin Exp $
 #
 
 DISTNAME=	snobol4-1.3
@@ -20,7 +20,7 @@ LICENSE=	2-clause-bsd
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 SUBST_CLASSES+=			snobol-config
-SUBST_STAGE.snobol-config=	post-patch
+SUBST_STAGE.snobol-config=	pre-configure
 SUBST_FILES.snobol-config=	Makefile
 SUBST_SED.snobol-config+=	-e s\|M4=m4\|M4=${TOOLS_PATH.m4:Q}\|
 

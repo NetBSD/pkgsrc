@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2018/03/12 11:15:25 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2018/07/04 13:40:09 jperkin Exp $
 #
 
 DISTNAME=	WSoundServer-0.4.0
@@ -24,7 +24,7 @@ EGDIR=			${PREFIX}/share/examples/wsoundserver
 CONF_FILES=		${EGDIR:Q}/WMSound ${PKG_SYSCONFDIR:Q}/WMSound
 
 SUBST_CLASSES+=		1x
-SUBST_STAGE.1x=		post-patch
+SUBST_STAGE.1x=		pre-configure
 SUBST_MESSAGE.1x=	Changing the man page category from 1x to 1.
 SUBST_FILES.1x=		doc/*
 SUBST_SED.1x=		-e s,1x,1,g

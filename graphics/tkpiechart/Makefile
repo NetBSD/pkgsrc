@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2014/10/09 14:06:37 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2018/07/04 13:40:21 jperkin Exp $
 
 DISTNAME=	tkpiechart-5.4
 PKGREVISION=	1
@@ -17,7 +17,7 @@ NO_BUILD=	yes
 
 SUBST_CLASSES+=		patch
 SUBST_MESSAGE.patch=	Remove version numbers for required packages.
-SUBST_STAGE.patch=	post-patch
+SUBST_STAGE.patch=	pre-configure
 SUBST_FILES.patch=	demo demo.tcl instapkg.tcl piechart.htm
 SUBST_SED.patch=	-e '/require/s/stooop 3.7/stooop/g'
 SUBST_SED.patch+=	-e '/require/s/switched 1.4/switched/g'

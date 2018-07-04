@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/05/22 21:37:29 bacon Exp $
+# $NetBSD: Makefile,v 1.3 2018/07/04 13:40:10 jperkin Exp $
 
 DISTNAME=	ncbi-blast-${PV}+-src
 PKGNAME=	ncbi-blast+-${PV}
@@ -15,7 +15,7 @@ LICENSE=	public-domain
 # Fix "undefined _ThreadRuneLocale" error on FreeBSD 10.0
 # Fix "unknown options" in configure
 SUBST_CLASSES+=		configure
-SUBST_STAGE.configure=	post-patch
+SUBST_STAGE.configure=	pre-configure
 SUBST_SED.configure+=	-e 's|-D_THREAD_SAFE|-D_THREAD_SAFE -D__RUNETYPE_INTERNAL|'
 SUBST_SED.configure+=	-e '/--infodir=DIR/d'
 SUBST_SED.configure+=	-e '/--mandir=DIR/d'

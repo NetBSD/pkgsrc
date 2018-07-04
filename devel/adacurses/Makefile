@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/04/02 09:30:06 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2018/07/04 13:40:13 jperkin Exp $
 
 PKGNAME=	adacurses-${ACVERSION}
 CATEGORIES=	devel
@@ -28,17 +28,17 @@ PLIST_SUBST=	atic=adacurses/terminal_interface-curses
 USE_BUILTIN.ncurses=	no
 SUBST_CLASSES=		adagen pragma sample
 
-SUBST_STAGE.adagen=	post-patch
+SUBST_STAGE.adagen=	pre-configure
 SUBST_FILES.adagen=	gen/Makefile.in
 SUBST_SED.adagen=	-e '/(INSTALL_PROG)/d' -e 's|@ADAGEN_LDFLAGS@||'
 SUBST_MESSAGE.adagen=	Adjust gen Makefile
 
-SUBST_STAGE.sample=	post-patch
+SUBST_STAGE.sample=	pre-configure
 SUBST_FILES.sample=	samples/Makefile.in
 SUBST_SED.sample=	-e 's|@LIBS@|@LIBS@ -lmenu -lform -lpanel|'
 SUBST_MESSAGE.sample=	Adjust samples Makefile
 
-SUBST_STAGE.pragma=	post-patch
+SUBST_STAGE.pragma=	pre-configure
 SUBST_FILES.pragma=	gen/terminal_interface-curses.ads.m4 \
 			gen/terminal_interface-curses-menus.ads.m4 \
 			gen/terminal_interface-curses-forms.ads.m4 \

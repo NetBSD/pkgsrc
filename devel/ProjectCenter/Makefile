@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2018/04/14 07:34:15 adam Exp $
+# $NetBSD: Makefile,v 1.52 2018/07/04 13:40:13 jperkin Exp $
 
 DISTNAME=	ProjectCenter-0.6.2
 PKGREVISION=	8
@@ -18,7 +18,7 @@ NO_CONFIGURE=	yes
 MAKE_FILE=	GNUmakefile
 
 SUBST_CLASSES+=		gmake
-SUBST_STAGE.gmake=	post-patch
+SUBST_STAGE.gmake=	pre-configure
 SUBST_FILES.gmake+=	Framework/GNUmakefile.preamble
 SUBST_FILES.gmake+=	Modules/Preferences/Build/PCBuildPrefs.h
 SUBST_SED.gmake+=	-e 's|.(GMAKE)|${GMAKE:Q}|g'

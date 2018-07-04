@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2018/03/12 11:17:30 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2018/07/04 13:40:35 jperkin Exp $
 
 PKGNAME=	qca2-ossl-${DISTNAME:C/.*-//}
 PKGREVISION=	1
@@ -15,7 +15,7 @@ CMAKE_ARGS+=	-DBUILD_TOOLS=OFF
 CMAKE_ARGS+=	-DINST_QCA_LIB_NAME=-lqca
 
 SUBST_CLASSES+=		libname
-SUBST_STAGE.libname=	post-patch
+SUBST_STAGE.libname=	pre-configure
 SUBST_MESSAGE.libname=	Use installed lib.
 SUBST_FILES.libname=	plugins/qca-ossl/CMakeLists.txt
 SUBST_SED.libname=	-e 's:{QCA_LIB_NAME}:{INST_QCA_LIB_NAME}:'

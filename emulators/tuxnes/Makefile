@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/03/07 11:57:29 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2018/07/04 13:40:17 jperkin Exp $
 
 DISTNAME=		tuxnes-0.75
 PKGREVISION=		4
@@ -17,13 +17,13 @@ USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 
 SUBST_CLASSES+=		dsp
-SUBST_STAGE.dsp=	post-patch
+SUBST_STAGE.dsp=	pre-configure
 SUBST_MESSAGE.dsp=	Adjusting sound device path.
 SUBST_FILES.dsp=	consts.h
 SUBST_SED.dsp=		-e "s|/dev/dsp|${DEVOSSAUDIO}|"
 
 SUBST_CLASSES.SunOS+=	gld
-SUBST_STAGE.gld=	post-patch
+SUBST_STAGE.gld=	pre-configure
 SUBST_MESSAGE.gld=	Using GNU ld to create table.o
 SUBST_FILES.gld=	Makefile.in
 SUBST_SED.gld=		-e "/ld -r/s/ld/gld/"

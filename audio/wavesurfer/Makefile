@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2016/04/20 12:10:33 nros Exp $
+# $NetBSD: Makefile,v 1.20 2018/07/04 13:40:09 jperkin Exp $
 
 DISTNAME=	wavesurfer-1.8.5
 CATEGORIES=	audio
@@ -20,7 +20,7 @@ USE_LANGUAGES=	# empty
 
 SUBST_CLASSES+=		wish
 SUBST_MESSAGE.wish=	Fixing hardcoded command names.
-SUBST_STAGE.wish=	post-patch
+SUBST_STAGE.wish=	pre-configure
 SUBST_FILES.wish=	wavesurfer.tcl
 SUBST_SED.wish=		-e 's,wish8.4,wish,g'
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2017/01/19 18:52:04 agc Exp $
+# $NetBSD: Makefile,v 1.69 2018/07/04 13:40:11 jperkin Exp $
 
 DISTNAME=	silc-server-1.1.18
 PKGREVISION=	2
@@ -64,7 +64,7 @@ OWN_DIRS_PERMS+=	${VARBASE}/log/silcd ${SILCD_USER} ${SILCD_GROUP} 0700
 .include "options.mk"
 
 SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	motd.txt
 SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},'
 
