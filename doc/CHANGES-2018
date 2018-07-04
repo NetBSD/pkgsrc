@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3055 2018/07/04 05:18:31 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.3056 2018/07/04 06:49:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4405,3 +4405,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-peewee to 3.5.2 [adam 2018-07-04]
 	Updated devel/py-test-testmon to 0.9.12 [adam 2018-07-04]
 	Added databases/py-lmdb version 0.94 [minskim 2018-07-04]
+	Renamed math/py-pytables to math/py-tables [adam 2018-07-04]
+	Updated math/py-tables to 3.4.4 [adam 2018-07-04]
