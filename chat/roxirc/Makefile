@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/09/04 18:00:50 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2018/07/04 13:40:11 jperkin Exp $
 #
 
 DISTNAME=	roxirc-1.8
@@ -19,7 +19,7 @@ EXAMPLESDIR=	${PREFIX}/share/examples/roxirc
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded command names.
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	roxirc
 SUBST_SED.paths=	-e 's,wish8.3,wish,g'
 

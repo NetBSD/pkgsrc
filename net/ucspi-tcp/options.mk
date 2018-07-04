@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2017/01/04 02:14:12 schmonz Exp $
+# $NetBSD: options.mk,v 1.6 2018/07/04 13:40:31 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ucspi-tcp
 PKG_SUPPORTED_OPTIONS+=	inet6 ucspi-tcp-nodefaultrbl
@@ -15,7 +15,7 @@ PATCH_DIST_STRIP.${IPV6_PATCH}=	-p1
 PLIST.inet6=			yes
 
 SUBST_CLASSES+=		hier
-SUBST_STAGE.hier=	post-patch
+SUBST_STAGE.hier=	pre-configure
 SUBST_MESSAGE.hier=	Fixing manpage path.
 SUBST_FILES.hier=	hier.c
 SUBST_SED.hier=		-e 's,man,${PKGMANDIR},'

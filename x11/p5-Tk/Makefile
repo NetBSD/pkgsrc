@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2017/09/04 12:45:32 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2018/07/04 13:40:44 jperkin Exp $
 
 DISTNAME=	Tk-804.034
 PKGNAME=	p5-${DISTNAME}
@@ -25,7 +25,7 @@ REPLACE_PERL+=		pTk/mkVFunc
 REPLACE_PERL+=		demos/widget
 
 SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	post-patch
+SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	PNG/Makefile.PL
 SUBST_SED.prefix=	-e 's,%%LOCALBASE%%,${LOCALBASE},g'
 

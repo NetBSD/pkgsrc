@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/04/03 19:58:19 adam Exp $
+# $NetBSD: Makefile,v 1.5 2018/07/04 13:40:14 jperkin Exp $
 
 .include "../../databases/sqlite3/Makefile.common"
 
@@ -25,7 +25,7 @@ INSTALLATION_DIRS=	bin share/lemon share/doc/lemon
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	lemon.c
 SUBST_SED.paths+=	-e 's,"lempar.c","${PREFIX}/share/lemon/lempar.c",g'
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 
 do-build:
 	cd ${WRKSRC}/tool && ${CC} ${CFLAGS} ${LDFLAGS} lemon.c -o lemon

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2018/04/17 22:29:49 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2018/07/04 13:40:33 jperkin Exp $
 
 DISTNAME=	pycups-1.9.73
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -19,7 +19,7 @@ SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fix cups paths.
 SUBST_FILES.paths=	cupsconnection.c
 SUBST_SED.paths=	-e 's:"/usr/share/cups":"${BUILDLINK_PREFIX.cups-base}/share/cups/", "/usr/share/cups":'
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 
 .include "../../lang/python/distutils.mk"
 .include "../../print/cups-base/buildlink3.mk"

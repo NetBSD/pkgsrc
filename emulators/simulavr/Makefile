@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2015/08/18 07:31:07 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2018/07/04 13:40:17 jperkin Exp $
 #
 DISTNAME=		simulavr-1.0.0
 PKGREVISION=		3
@@ -35,7 +35,7 @@ INFO_FILES=		yes
 
 # Interim fix
 SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	post-patch
+SUBST_STAGE.prefix=	pre-configure
 SUBST_MESSAGE.prefix=	Fix include path finding Python.h
 SUBST_FILES.prefix=	src/Makefile.in
 SUBST_VARS.prefix=	PREFIX
@@ -44,7 +44,7 @@ SUBST_VARS.prefix=	PREFIX
 # See also
 #  http://savannah.nongnu.org/bugs/?35737
 SUBST_CLASSES+=		compare2
-SUBST_STAGE.compare2=	post-patch
+SUBST_STAGE.compare2=	pre-configure
 SUBST_MESSAGE.compare2=	Convert poisoned SIG_OUTPUT_COMPARE2 to TIMER2_COMP_vect
 SUBST_FILES.compare2=	examples/atmega128_timer/main.c
 SUBST_FILES.compare2+=	examples/python/example.c
@@ -58,14 +58,14 @@ SUBST_SED.compare2=	-e 's/SIG_OUTPUT_COMPARE2/TIMER2_COMP_vect/g'
 # kb.c:39:8: error: attempt to use poisoned "SIG_INTERRUPT0"
 
 SUBST_CLASSES+=		uart0
-SUBST_STAGE.uart0=	post-patch
+SUBST_STAGE.uart0=	pre-configure
 SUBST_MESSAGE.uart0=	Convert poisoned SIG_UART0_RECV to USART0_RX_vect
 SUBST_FILES.uart0=	examples/atmel_key/StdDefs.h
 SUBST_SED.uart0=	-e 's/SIG_UART0_RECV/USART0_RX_vect/g'
 SUBST_SED.uart0+=	-e 's/SIG_UART0_DATA/USART0_UDRE_vect/g'
 
 SUBST_CLASSES+=		intrpt0
-SUBST_STAGE.intrpt0=	post-patch
+SUBST_STAGE.intrpt0=	pre-configure
 SUBST_MESSAGE.intrpt0=	Convert poisoned SIG_INTERRUPT0 to INT0_vect
 SUBST_FILES.intrpt0=	examples/atmel_key/kb.c
 SUBST_FILES.intrpt0+=	examples/python/multicore.c
