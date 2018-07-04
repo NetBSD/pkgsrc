@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3069 2018/07/04 12:57:54 wen Exp $
+$NetBSD: CHANGES-2018,v 1.3070 2018/07/04 13:27:41 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4422,3 +4422,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Modern-Perl to 1.20180701 [wen 2018-07-04]
 	Updated security/gpgme to 1.11.1 [adam 2018-07-04]
 	Updated devel/p5-Module-CoreList to 5.20180626 [wen 2018-07-04]
+	Updated devel/p5-MooseX-Emulate-Class-Accessor-Fast to 0.009032 [wen 2018-07-04]
