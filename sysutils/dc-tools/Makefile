@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/01/19 18:52:25 agc Exp $
+# $NetBSD: Makefile,v 1.15 2018/07/04 13:40:37 jperkin Exp $
 
 DISTNAME=	dc-tools-1.6
 CATEGORIES=	sysutils
@@ -28,7 +28,7 @@ EXTRACT_CMD=	${CP} ${DISTDIR}/${DIST_SUBDIR}/scramble.c ${WRKSRC} && \
 	${TAR} -xzf ${DISTDIR}/${DIST_SUBDIR}/serial_slave.tar.gz -C serial
 
 SUBST_CLASSES+=		IP_TMPL
-SUBST_STAGE.IP_TMPL=	post-patch
+SUBST_STAGE.IP_TMPL=	pre-configure
 SUBST_FILES.IP_TMPL=	makeip.c
 SUBST_SED.IP_TMPL=	-e "s|"IP.TMPL"|"${PREFIX}/share/dc-tools/IP.TMPL"|"
 SUBST_MESSAGE.IP_TMPL=	Update path to IP.TMPL

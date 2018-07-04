@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2018/04/17 22:29:37 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2018/07/04 13:40:15 jperkin Exp $
 
 DISTNAME=	mono-tools-3.10
 PKGREVISION=	17
@@ -20,7 +20,7 @@ MAKE_JOBS_SAFE=		no
 CONFIGURE_ARGS+=	--mandir=${PKGMANDIR}
 
 SUBST_CLASSES+=		fix-mcs
-SUBST_STAGE.fix-mcs=	post-patch
+SUBST_STAGE.fix-mcs=	pre-configure
 SUBST_MESSAGE.fix-mcs=	Fix compiler name
 SUBST_FILES.fix-mcs=	configure
 SUBST_SED.fix-mcs=	-e 's,gmcs,mcs,'

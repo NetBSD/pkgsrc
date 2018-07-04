@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/01/16 12:43:17 mef Exp $
+# $NetBSD: Makefile,v 1.5 2018/07/04 13:40:12 jperkin Exp $
 
 GITHUB_PROJECT=	MySQLTuner-perl
 DISTNAME=	1.7.2
@@ -25,7 +25,7 @@ SUBST_CLASSES+=		docdir
 SUBST_FILES.docdir=	mysqltuner.pl
 SUBST_MESSAGE.docdir=	Fixing DOCDIR.
 SUBST_SED.docdir=	-e "s|/usr/share/mysqltuner|${PREFIX}/${PKGDOCDIR}|1"
-SUBST_STAGE.docdir=	post-patch
+SUBST_STAGE.docdir=	pre-configure
 
 INSTALLATION_DIRS+=	bin ${PKGDOCDIR}
 

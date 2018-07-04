@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2018/07/03 05:03:21 adam Exp $
+# $NetBSD: Makefile.common,v 1.16 2018/07/04 13:40:21 jperkin Exp $
 # This Makefile fragment is included in the package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
@@ -107,7 +107,7 @@ SUBST_MESSAGE.alsa=	Arrange the patched line depepending on alsa is in PKG_OPTIO
 SUBST_FILES.alsa+=	gr-audio/lib/CMakeLists.txt
 ## The value of ${ALSA_ENABLED} is either '#' or '' by options.mk.
 SUBST_SED.alsa=		-e 's,@@ALSA@@,${ALSA_ENABLED},'
-SUBST_STAGE.alsa=	post-patch
+SUBST_STAGE.alsa=	pre-configure
 
 SUBST_CLASSES+=		pyvers
 SUBST_FILES.pyvers=	cmake/Modules/FindSphinx.cmake

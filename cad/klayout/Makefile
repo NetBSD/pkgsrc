@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/03/12 11:16:08 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2018/07/04 13:40:10 jperkin Exp $
 
 DISTNAME=	klayout-0.24.10
 PKGREVISION=	1
@@ -19,7 +19,7 @@ NO_CONFIGURE=	yes
 SUBST_CLASSES+= 	rpath
 SUBST_MESSAGE.rpath=	Add COMPILER_RPATH_FLAG and PREFIX to NetBSD specific config file
 SUBST_FILES.rpath+=	config/Makefile.conf.netbsd-32-gcc-release
-SUBST_STAGE.rpath=	post-patch
+SUBST_STAGE.rpath=	pre-configure
 SUBST_VARS.rpath=	COMPILER_RPATH_FLAG PREFIX
 SUBST_SED.rpath=	-e 's|@@LDFLAGS@@|${LDFLAGS}|'
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2018/03/21 23:18:09 gdt Exp $
+# $NetBSD: Makefile,v 1.61 2018/07/04 13:40:42 jperkin Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}-stable-src
@@ -62,7 +62,7 @@ FILES_SUBST+=		PRIVOXY_USER=${PRIVOXY_USER:Q}
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	config
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 
 .include "options.mk"
 

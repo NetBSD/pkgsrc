@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/11/25 12:52:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2018/07/04 13:40:30 jperkin Exp $
 
 DISTNAME=		publicfile-run-20150109
 CATEGORIES=		net
@@ -30,7 +30,7 @@ FILES_SUBST+=		PKGNAME=${PKGNAME:Q}
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Substituting paths.
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	libexec-pubftpd
 SUBST_VARS.paths=	PREFIX
 

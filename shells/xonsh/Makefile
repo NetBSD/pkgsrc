@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/08/21 11:34:57 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/04 13:40:36 jperkin Exp $
 
 DISTNAME=	xonsh-0.4.5
 CATEGORIES=	shells python
@@ -21,7 +21,7 @@ PKG_SHELL=	${PREFIX}/bin/xon.sh
 PKG_SHELL+=	${PREFIX}/bin/xonsh
 
 SUBST_CLASSES+=		xonsh
-SUBST_STAGE.xonsh=	post-patch
+SUBST_STAGE.xonsh=	pre-configure
 SUBST_FILES.xonsh=	scripts/xon.sh
 SUBST_SED.xonsh=	-e 's,python3,${PYTHONBIN},'
 

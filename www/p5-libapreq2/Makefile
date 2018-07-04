@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2017/06/05 14:25:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.41 2018/07/04 13:40:42 jperkin Exp $
 
 DISTNAME=	libapreq2-2.13
 PKGNAME=	p5-${APACHE_PKG_PREFIX}-${DISTNAME}
@@ -18,7 +18,7 @@ USE_LIBTOOL=	YES
 PERL5_PACKLIST=	auto/libapreq2/.packlist
 
 SUBST_CLASSES+=		apxs
-SUBST_STAGE.apxs=	post-patch
+SUBST_STAGE.apxs=	pre-configure
 SUBST_FILES.apxs=	env/Makefile.in
 SUBST_SED.apxs=		-e "s|@APACHE2_APXS@ -i -a -n|@APACHE2_APXS@ -i -n|g"
 SUBST_MESSAGE.apxs=	Fixing module installation.

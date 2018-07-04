@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/09/04 18:08:29 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2018/07/04 13:40:39 jperkin Exp $
 #
 
 DISTNAME=	robodoc-3.2.3
@@ -16,7 +16,7 @@ USE_TOOLS+=	gm4 gmake
 SUBST_CLASSES+=		gm4
 SUBST_FILES.gm4=	Docs/makefile.in
 SUBST_SED.gm4+=		-e 's,@M4@,${TOOLS_M4},g'
-SUBST_STAGE.gm4=	post-patch
+SUBST_STAGE.gm4=	pre-configure
 
 MAKE_FILE=	makefile
 

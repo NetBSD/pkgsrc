@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2016/02/26 10:24:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2018/07/04 13:40:38 jperkin Exp $
 #
 
 DISTNAME=		su2-1.3
@@ -20,7 +20,7 @@ NO_CONFIGURE=		yes
 
 SUBST_CLASSES+=		preproc
 SUBST_MESSAGE.preproc=	Correcting C preprocessor directives.
-SUBST_STAGE.preproc=	post-patch
+SUBST_STAGE.preproc=	pre-configure
 SUBST_FILES.preproc=	su2.c
 SUBST_SED.preproc=	-e 's,^\(\# *else\).*,\1,'
 SUBST_SED.preproc=	-e 's,^\(\# *endif\).*,\1,'

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2018/04/14 07:34:04 adam Exp $
+# $NetBSD: Makefile,v 1.44 2018/07/04 13:40:41 jperkin Exp $
 
 DISTNAME=	xsp-3.8
 PKGNAME=	mono-${DISTNAME}
@@ -25,7 +25,7 @@ SUBST_SED.unwrap_mk=		-e 's,^MAKEINFO = .*,MAKEINFO = makeinfo,'
 SUBST_SED.unwrap_mk+=		-e 's,^PKG_CONFIG = .*,PKG_CONFIG = ${PREFIX}/bin/pkg-config,'
 
 SUBST_CLASSES+=         fix-mcs
-SUBST_STAGE.fix-mcs=    post-patch
+SUBST_STAGE.fix-mcs=    pre-configure
 SUBST_MESSAGE.fix-mcs=  Fix compiler name
 SUBST_FILES.fix-mcs=    configure
 SUBST_SED.fix-mcs=      -e 's,gmcs,mcs,'

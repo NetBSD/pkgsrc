@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2017/08/16 20:21:15 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2018/07/04 13:40:39 jperkin Exp $
 #
 
 DISTNAME=		helpdeco-2.1.3
@@ -22,7 +22,7 @@ USE_TOOLS+=		gmake
 
 SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Configuring to use PREFIX.
-SUBST_STAGE.prefix=	post-patch
+SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	Makefile
 SUBST_SED.prefix=	-e "s,/usr/local,${DESTDIR}${PREFIX},g"
 

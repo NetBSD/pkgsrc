@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2017/08/16 20:45:46 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2018/07/04 13:40:40 jperkin Exp $
 #
 
 DISTNAME=	larswm-7.5.3
@@ -27,7 +27,7 @@ CPPFLAGS+=	-DPKG_SYSCONFDIR=\"${PKG_SYSCONFDIR:Q}\"
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	larswm.man
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 
 INSTALLATION_DIRS=	share/doc/larswm share/examples/larswm
 

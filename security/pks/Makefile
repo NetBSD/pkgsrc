@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2017/09/03 08:36:59 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2018/07/04 13:40:35 jperkin Exp $
 
 DISTNAME=	pks-0.9.4
 PKGREVISION=	5
@@ -57,7 +57,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${EGDIR:Q}
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	pks-commands.html
 SUBST_SED.paths=	-e "s|localhost|${PKS_SERVER}|g"
 

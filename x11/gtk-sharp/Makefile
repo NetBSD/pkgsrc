@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2018/04/16 14:35:21 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2018/07/04 13:40:43 jperkin Exp $
 #
 
 DISTNAME=		gtk-sharp-2.12.26
@@ -29,7 +29,7 @@ PKGCONFIG_OVERRIDE+=	glade/glade-sharp-2.0.pc.in
 
 SUBST_CLASSES+=		relprefix
 SUBST_MESSAGE.relprefix=Replacing relative prefix in pkg-config files.
-SUBST_STAGE.relprefix=	post-patch
+SUBST_STAGE.relprefix=	pre-configure
 SUBST_FILES.relprefix=	${PKGCONFIG_OVERRIDE}
 SUBST_SED.relprefix=	-e 's|$${pcfiledir}/../..|@prefix@|g'
 

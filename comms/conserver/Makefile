@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2017/09/11 15:21:27 hauke Exp $
+# $NetBSD: Makefile,v 1.31 2018/07/04 13:40:11 jperkin Exp $
 #
 
 DISTNAME=	conserver-7.2.7
@@ -39,7 +39,7 @@ CONF_FILES+=	${EGDIR}/conserver.passwd.example ${PKG_SYSCONFDIR}/conserver.passw
 OWN_DIRS=	${VARBASE}/consoles
 
 SUBST_CLASSES+=		conf
-SUBST_STAGE.conf=	post-patch
+SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	conserver.cf/conserver.cf
 SUBST_SED.conf=		-e s,/var/consoles,${VARBASE}/consoles,
 

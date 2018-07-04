@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2018/01/28 20:10:42 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2018/07/04 13:40:09 jperkin Exp $
 
 DISTNAME=	mt-daapd-0.2.4.2
 PKGREVISION=	5
@@ -39,7 +39,7 @@ OWN_DIRS_PERMS=		${VARBASE}/cache/mt-daapd \
 .include "options.mk"
 
 SUBST_CLASSES+=		conf
-SUBST_STAGE.conf=	post-patch
+SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	contrib/mt-daapd.conf
 SUBST_SED.conf=		-e "s,@PREFIX@,${PREFIX},"
 SUBST_SED.conf+=	-e "s,@VARBASE@,${VARBASE},g"
@@ -48,7 +48,7 @@ SUBST_SED.conf+=	-e "s,@MTDAAPD_USER@,${MTDAAPD_USER},"
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	src/main.c
 SUBST_SED.paths=	-e "s,/etc,${PKG_SYSCONFDIR},"
 SUBST_SED.paths+=	-e "s,/var,${VARBASE},"

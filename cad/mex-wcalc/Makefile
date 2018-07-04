@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/08 13:25:14 asau Exp $
+# $NetBSD: Makefile,v 1.11 2018/07/04 13:40:10 jperkin Exp $
 #
 
 .include "../../cad/wcalc/Makefile.common"
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--without-octave
 CONFIGURE_ARGS+=	--without-scilab
 
 SUBST_CLASSES+=		mwc
-SUBST_STAGE.mwc=	post-patch
+SUBST_STAGE.mwc=	pre-configure
 SUBST_FILES.mwc=	mex-wcalc/mexopts.sh.in
 SUBST_SED.mwc=		-e 's;\.\./libwcalc;${BUILDLINK_DIR}/lib;g'
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/04/17 22:29:43 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2018/07/04 13:40:24 jperkin Exp $
 #
 
 PKGREVISION=		15
@@ -18,7 +18,7 @@ REPLACE.r.new=		${PREFIX}/bin/R
 REPLACE_FILES.r=	inst/examples/dangerous.R inst/examples/trivial.R
 
 SUBST_CLASSES+=			fix-paths
-SUBST_STAGE.fix-paths=		post-patch
+SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
 SUBST_FILES.fix-paths=		inst/cgi-bin/R.cgi
 SUBST_SED.fix-paths=		-e 's,/usr/local,${PREFIX},g'

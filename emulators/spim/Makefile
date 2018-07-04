@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2012/10/03 12:55:18 asau Exp $
+# $NetBSD: Makefile,v 1.44 2018/07/04 13:40:17 jperkin Exp $
 
 DISTNAME=	spim-8.0
 PKGREVISION=	1
@@ -19,7 +19,7 @@ USE_TOOLS+=		gzip flex yacc
 INSTALL_TARGET=		install
 
 SUBST_CLASSES+=		cpudir
-SUBST_STAGE.cpudir=	post-patch
+SUBST_STAGE.cpudir=	pre-configure
 SUBST_MESSAGE.cpudir=	rename CPU_DIR
 SUBST_FILES.cpudir=	spim/Makefile xspim/Imakefile
 SUBST_SED.cpudir=	-e s:CPU_DIR:CPUDIR:

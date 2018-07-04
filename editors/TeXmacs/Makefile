@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2018/04/17 22:29:37 wiz Exp $
+# $NetBSD: Makefile,v 1.119 2018/07/04 13:40:16 jperkin Exp $
 #
 # changelog at http://www.texmacs.org/tmweb/about/changes.en.html
 
@@ -35,7 +35,7 @@ REPLACE_PYTHON+=	plugins/sage/bin/tm_sage
 REPLACE_PYTHON+=	plugins/mathematica/bin/realpath.py
 
 SUBST_CLASSES+=		init
-SUBST_STAGE.init=	post-patch
+SUBST_STAGE.init=	pre-configure
 SUBST_FILES.init=	plugins/python/progs/init-python.scm
 SUBST_SED.init=		-e 's,@PYTHONBIN@,${PYTHONBIN},g'
 

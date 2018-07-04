@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2017/09/03 08:36:59 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2018/07/04 13:40:34 jperkin Exp $
 
 DISTNAME=	nikto-2.1.5
 PKGREVISION=	2
@@ -17,20 +17,20 @@ NO_BUILD=	yes
 AUTO_MKDIRS=	yes
 
 SUBST_CLASSES+=		conf
-SUBST_STAGE.conf=	post-patch
+SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	nikto.pl docs/nikto.1
 SUBST_SED.conf=		-e "s|/etc/nikto\.conf|${PKG_SYSCONFDIR}/nikto.conf|g"
 SUBST_SED.conf+=	-e "s|/etc/nikto\\\&\.conf|${PKG_SYSCONFDIR}/nikto\\\\\\&.conf|g"
 SUBST_MESSAGE.conf=	Fixing path to nikto.conf
 
 SUBST_CLASSES+=		execdir
-SUBST_STAGE.execdir=	post-patch
+SUBST_STAGE.execdir=	pre-configure
 SUBST_FILES.execdir=	nikto.conf
 SUBST_SED.execdir=	-e "s|^\# EXECDIR=/opt/nikto|EXECDIR=${PREFIX}/libdata/nikto|g"
 SUBST_MESSAGE.execdir=	Fixing path to EXECDIR
 
 SUBST_CLASSES+=		manual
-SUBST_STAGE.manual=	post-patch
+SUBST_STAGE.manual=	pre-configure
 SUBST_FILES.manual=	docs/nikto.1
 SUBST_SED.manual=	-e "s|/usr/local/bin/nikto|nikto|g"
 SUBST_MESSAGE.manual=	Fixing path to nikto

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2018/03/07 11:57:46 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2018/07/04 13:40:44 jperkin Exp $
 
 DISTNAME=		xfstt-1.9.3
 PKGREVISION=		1
@@ -32,7 +32,7 @@ INSTALLATION_DIRS=	bin			\
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	doc/FAQ
 SUBST_SED.paths=	-e 's,/usr,${PREFIX},g'
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/xfstt ${DESTDIR}${PREFIX}/bin

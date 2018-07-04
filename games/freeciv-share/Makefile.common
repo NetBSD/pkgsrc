@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.51 2018/07/03 05:03:18 adam Exp $
+# $NetBSD: Makefile.common,v 1.52 2018/07/04 13:40:19 jperkin Exp $
 
 # used by games/freeciv-share/Makefile
 # used by games/freeciv-client/Makefile
@@ -28,7 +28,7 @@ REPLACE_PYTHON=			${WRKSRC}/common/generate_packets.py
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 2.3.2
 
 SUBST_CLASSES+=		data
-SUBST_STAGE.data=	post-patch
+SUBST_STAGE.data=	pre-configure
 SUBST_FILES.data=	data/Makefile.in
 SUBST_SED.data+=	-e "s|@CLIENT_FALSE@|@MAKE_DATA_FALSE@|g"
 SUBST_SED.data+=	-e "s|@CLIENT_TRUE@|@MAKE_DATA_TRUE@|g"

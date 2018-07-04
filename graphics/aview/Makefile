@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2014/09/08 21:24:44 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2018/07/04 13:40:20 jperkin Exp $
 
 DISTNAME=	aview-1.3.0rc1
 PKGNAME=	aview-1.3.0.1
@@ -25,7 +25,7 @@ USE_TOOLS+=	mktemp:run
 .include "../../mk/bsd.prefs.mk"
 
 SUBST_CLASSES+=		programs
-SUBST_STAGE.programs=	post-patch
+SUBST_STAGE.programs=	pre-configure
 SUBST_MESSAGE.programs=	Filling @placeholders@.
 SUBST_FILES.programs=	Makefile.in
 .if (${MACHINE_ARCH} == "i386")

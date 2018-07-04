@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/10/09 14:06:50 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2018/07/04 13:40:32 jperkin Exp $
 
 PKGNAME=	pkgclean-20051116
 CATEGORIES=	pkgtools
@@ -20,7 +20,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/pkgclean.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/pkgclean.1
 
 SUBST_CLASSES+=		path
-SUBST_STAGE.path=	post-patch
+SUBST_STAGE.path=	pre-configure
 SUBST_FILES.path=	pkgclean.sh pkgclean.1
 SUBST_SED.path+=	-e 's,@SH@,${SH},g'
 SUBST_SED.path+=	-e 's,@PKGSRCDIR@,${PKGSRCDIR},g'

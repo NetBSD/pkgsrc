@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2018/07/03 05:03:29 adam Exp $
+# $NetBSD: Makefile,v 1.45 2018/07/04 13:40:30 jperkin Exp $
 
 DISTNAME=	samba-${VERSION}
 PKGREVISION=	7
@@ -149,7 +149,7 @@ SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing paths.
 SUBST_FILES.paths=	${WRKDIR}/adduser.sh ${WRKDIR}/deluser.sh
 SUBST_FILES.paths+=	source3/script/findsmb.in source4/heimdal_build/roken.h
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_SED.paths+=	-e 's,@PERL@,${PERL5},g'
 SUBST_VARS.paths=	AWK CAT MKTEMP RM PWD_MKDB SH PERL PKG_SYSCONFBASE
 

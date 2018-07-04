@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/04/29 08:49:45 plunky Exp $
+# $NetBSD: Makefile,v 1.4 2018/07/04 13:40:20 jperkin Exp $
 
 DISTNAME=	kplex-1.3.2
 CATEGORIES=	geography
@@ -10,7 +10,7 @@ COMMENT=	Multitransport NMEA-0183 software data multiplexer
 LICENSE=	gnu-gpl-v3
 
 SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Fixing path to config file
 SUBST_FILES.paths=	README kplex.h kplex.conf.ex
 SUBST_SED.paths=	-e "s|/etc/kplex.conf|${PKG_SYSCONFDIR}/kplex.conf|"

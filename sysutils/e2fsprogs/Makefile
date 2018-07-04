@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2017/12/08 08:12:58 adam Exp $
+# $NetBSD: Makefile,v 1.27 2018/07/04 13:40:37 jperkin Exp $
 
 DISTNAME=	e2fsprogs-1.43.7
 CATEGORIES=	sysutils
@@ -40,7 +40,7 @@ INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} root_sysconfdir=${EGDIR}
 
 SUBST_CLASSES+=		man
 SUBST_MESSAGE.man=	Give correct path for man page
-SUBST_STAGE.man=	post-patch
+SUBST_STAGE.man=	pre-configure
 SUBST_FILES.man+=	misc/mke2fs.8.in
 SUBST_FILES.man+=	misc/mke2fs.conf.5.in
 SUBST_FILES.man+=	e2fsck/e2fsck.conf.5.in

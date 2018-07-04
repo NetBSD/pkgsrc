@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2018/03/08 15:14:54 maya Exp $
+# $NetBSD: Makefile,v 1.52 2018/07/04 13:40:23 jperkin Exp $
 
 DISTNAME=	exim-3.36
 PKGREVISION=	18
@@ -79,7 +79,7 @@ SUBST_SED.paths+=	-e 's,@GZIP_CMD@,${GZIP_CMD},g'
 SUBST_SED.paths+=	-e 's,@GZCAT@,${GZCAT},g'
 SUBST_SED.paths+=	-e 's,@PERL5@,${PERL5},g'
 SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/examples/exim
 

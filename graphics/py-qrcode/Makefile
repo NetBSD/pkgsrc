@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/09/16 19:26:58 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2018/07/04 13:40:21 jperkin Exp $
 
 DISTNAME=	qrcode-5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,7 +23,7 @@ SUBST_CLASSES+=			pkgmandir
 SUBST_FILES.pkgmandir=		setup.py
 SUBST_MESSAGE.pkgmandir=	Fixing PKGMANDIR path.
 SUBST_SED.pkgmandir=		-e "s|share/man|${PKGMANDIR}|1"
-SUBST_STAGE.pkgmandir=		post-patch
+SUBST_STAGE.pkgmandir=		pre-configure
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/qr \

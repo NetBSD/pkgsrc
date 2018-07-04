@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/08/01 16:47:42 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2018/07/04 13:40:28 jperkin Exp $
 
 DISTNAME=		ez-ipupdate-3.0.11b7
 PKGREVISION=		1
@@ -15,7 +15,7 @@ EGDIR=			${PREFIX}/share/examples/ez-ipupdate
 RCD_SCRIPTS=		ez-ipupdate
 
 SUBST_CLASSES+=		path
-SUBST_STAGE.path=	post-patch
+SUBST_STAGE.path=	pre-configure
 SUBST_MESSAGE.path=	Correcting paths in example scripts.
 SUBST_FILES.path=	example-*.conf example.conf
 SUBST_SED.path=		-e "s|/usr/local|${PREFIX}|g"

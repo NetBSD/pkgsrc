@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2016/02/25 16:20:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2018/07/04 13:40:27 jperkin Exp $
 #
 
 DISTNAME=	aget-0.4
@@ -14,7 +14,7 @@ NO_CONFIGURE=	yes
 
 SUBST_CLASSES+=		options
 SUBST_MESSAGE.options=	Fixing build options.
-SUBST_STAGE.options=	post-patch
+SUBST_STAGE.options=	pre-configure
 SUBST_FILES.options=	Makefile Makefile.Solaris
 SUBST_SED.options=	-e 's,CFLAGS =,\#CFLAGS =,'
 SUBST_SED.options+=	-e 's,LDFLAGS =,\#LDFLAGS =,'

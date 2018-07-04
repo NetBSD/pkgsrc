@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/04/14 07:34:02 adam Exp $
+# $NetBSD: Makefile,v 1.18 2018/07/04 13:40:37 jperkin Exp $
 #
 
 DISTNAME=	dbus-sharp-0.7.0
@@ -18,7 +18,7 @@ USE_LANGUAGES=	# none
 PKGCONFIG_OVERRIDE+=	dbus-sharp-1.0.pc.in
 
 SUBST_CLASSES+=         fix-mcs
-SUBST_STAGE.fix-mcs=    post-patch
+SUBST_STAGE.fix-mcs=    pre-configure
 SUBST_MESSAGE.fix-mcs=  Fix compiler name
 SUBST_FILES.fix-mcs=    configure
 SUBST_SED.fix-mcs=      -e 's,gmcs,mcs,'

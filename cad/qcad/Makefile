@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2018/03/24 17:11:57 joerg Exp $
+# $NetBSD: Makefile,v 1.71 2018/07/04 13:40:10 jperkin Exp $
 #
 
 DISTNAME=		qcad-3.19.1.0
@@ -23,7 +23,7 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 
 SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Attending to hard-coded paths.
 SUBST_FILES.paths+=	shared.pri src/core/RS.cpp src/core/RSettings.cpp
 SUBST_FILES.paths+=	scripts/Help/ShowReadme/ShowReadme.js

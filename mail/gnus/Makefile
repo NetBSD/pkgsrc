@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2014/11/23 05:59:45 mef Exp $
+# $NetBSD: Makefile,v 1.24 2018/07/04 13:40:23 jperkin Exp $
 
 DISTNAME=	gnus-5.10.10
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -28,7 +28,7 @@ INFO_FILES=		yes
 
 SUBST_CLASSES+=		destdir
 SUBST_FILES.destdir=	etc/Makefile.in lisp/Makefile.in texi/Makefile.in
-SUBST_STAGE.destdir=	post-patch
+SUBST_STAGE.destdir=	pre-configure
 SUBST_MESSAGE.destdir=	Convert install to ${DESTDIR}
 SUBST_SED.destdir=	-e  '/(etcdir)/s,\$$(etcdir),\$$(DESTDIR)/\$$(etcdir)/,'
 SUBST_SED.destdir+=	-e '/(lispdir)/s,\$$(lispdir),\$$(DESTDIR)/\$$(lispdir)/,'

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2018/05/22 16:07:01 youri Exp $
+# $NetBSD: Makefile,v 1.19 2018/07/04 13:40:44 jperkin Exp $
 
 DISTNAME=	lxsession-0.5.3
 CATEGORIES=	x11
@@ -23,7 +23,7 @@ CONF_FILES+=	${LXDE_CONF}/lxpolkit.desktop \
 
 SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Fixing paths.
-SUBST_STAGE.prefix=	post-patch
+SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	lxsession/environement.c
 SUBST_FILES.prefix+=	lxsession/app.c
 SUBST_FILES.prefix+=	lxsession/settings.c

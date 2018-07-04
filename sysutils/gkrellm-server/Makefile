@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2014/02/16 00:45:28 wiedi Exp $
+# $NetBSD: Makefile,v 1.33 2018/07/04 13:40:37 jperkin Exp $
 
 .include "../../sysutils/gkrellm/Makefile.common"
 
@@ -32,7 +32,7 @@ PKG_SUPPORTED_OPTIONS=	glib1
 .include "../../mk/bsd.options.mk"
 
 SUBST_CLASSES+=		gkprefix
-SUBST_STAGE.gkprefix=	post-patch
+SUBST_STAGE.gkprefix=	pre-configure
 SUBST_FILES.gkprefix=	server/gkrellmd.h
 SUBST_SED.gkprefix=	-e '/GKRELLMD_SYS_ETC/{s!/etc!${PKG_SYSCONFDIR}!;}'
 

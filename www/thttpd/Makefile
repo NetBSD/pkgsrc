@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2018/05/07 07:01:37 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2018/07/04 13:40:42 jperkin Exp $
 
 DISTNAME=	thttpd-2.28
 CATEGORIES=	www
@@ -34,7 +34,7 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/thttpd ${EGDIR}
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	thttpd.conf
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 
 MAKE_JOBS_SAFE=	no
 

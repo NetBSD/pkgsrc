@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2018/04/29 21:32:07 adam Exp $
+# $NetBSD: Makefile,v 1.69 2018/07/04 13:40:40 jperkin Exp $
 #
 # When updating this package, make sure that no strings like
 # "PR 12345" are in the commit message. Upstream likes
@@ -109,7 +109,7 @@ FIX_MAN_PERMS+=		man8/apachectl.8 man1/ab.1 man1/httxt2dbm.1
 
 # Fix paths in the apache manpages.
 SUBST_CLASSES+=		man
-SUBST_STAGE.man=	post-patch
+SUBST_STAGE.man=	pre-configure
 SUBST_MESSAGE.man=	Fixing paths in man pages.
 SUBST_FILES.man=	docs/man/*.1 docs/man/*.8
 SUBST_SED.man=		-e 's,/usr/local/etc/apache,${PKG_SYSCONFDIR},'

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/08/07 09:42:32 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2018/07/04 13:40:37 jperkin Exp $
 #
 
 DISTNAME=	mcollective-2.1.1
@@ -45,13 +45,13 @@ SUBST_FILES.confpath=	${WRKSRC}/bin/mcollectived		\
 			${WRKSRC}/lib/mcollective/util.rb	\
 			${WRKSRC}/lib/mcollective/rpc.rb
 SUBST_SED.confpath=	-e "s,/etc/mcollective,${PKG_SYSCONFDIR},"
-SUBST_STAGE.confpath=	post-patch
+SUBST_STAGE.confpath=	pre-configure
 
 SUBST_CLASSES+=		sharepath
 SUBST_FILES.sharepath=	${WRKSRC}/etc/server.cfg.dist		\
 			${WRKSRC}/etc/client.cfg.dist
 SUBST_SED.sharepath=	-e "s,/usr/libexec/mcollective,${PREFIX}/share,"
-SUBST_STAGE.sharepath=	post-patch
+SUBST_STAGE.sharepath=	pre-configure
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/mcollectived ${DESTDIR}${PREFIX}/sbin

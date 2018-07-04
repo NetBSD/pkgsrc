@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/06/26 04:29:56 dholland Exp $
+# $NetBSD: Makefile,v 1.9 2018/07/04 13:40:40 jperkin Exp $
 
 DISTNAME=	xmonad-0.12
 PKGNAME=	${DISTNAME}
@@ -15,7 +15,7 @@ SUBST_FILES.1=	xmonad.cabal
 SUBST_SED.1=	-e "s|executable xmonad|executable xmonad+    buildable: False|"
 
 SUBST_CLASSES+=	2
-SUBST_STAGE.2=	post-patch
+SUBST_STAGE.2=	pre-configure
 SUBST_FILES.2=	xmonad.cabal
 SUBST_FILTER_CMD.2=	${TR} '+' \\n
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2018/01/13 23:18:26 rillig Exp $
+# $NetBSD: Makefile,v 1.52 2018/07/04 13:40:10 jperkin Exp $
 #
 
 DISTNAME=	ircservices-5.0.64
@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	${empty(LDFLAGS):?:-lflags ${LDFLAGS:Q}}
 CONFIGURE_ARGS+=	${empty(LIBS):?:-libs ${LIBS:Q}}
 
 SUBST_CLASSES+=		install
-SUBST_STAGE.install=	post-patch
+SUBST_STAGE.install=	pre-configure
 SUBST_FILES.install=	install-script tools/ircservices-chk.in
 SUBST_SED.install=	-e "s|/bin/cp|${CP}|g"
 SUBST_SED.install+=	-e "s|/bin/chown|${CHOWN}|g"
@@ -42,7 +42,7 @@ SUBST_SED.install+=	-e "s|@DATDEST@|${VARBASE}/run|g"
 SUBST_MESSAGE.install=	Fixing scripts.
 
 SUBST_CLASSES+=		utils
-SUBST_STAGE.utils=	post-patch
+SUBST_STAGE.utils=	pre-configure
 SUBST_FILES.utils=	data/Makefile tools/Makefile
 SUBST_SED.utils=	-e "s|chgrp|${CHGRP}|g"
 SUBST_SED.utils+=	-e "s|chmod|${CHMOD}|g"
@@ -50,7 +50,7 @@ SUBST_SED.utils+=	-e "s|find|${FIND}|g"
 SUBST_MESSAGE.utils=	Fixing paths of hard-coded utilities.
 
 SUBST_CLASSES+=		conf
-SUBST_STAGE.conf=	post-patch
+SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	data/example-ircservices.conf data/example-modules.conf
 SUBST_SED.conf=		-e "s|/usr/local|${PREFIX}|g"
 SUBST_SED.conf+=	-e "s|ircservices.log|${VARBASE}/log/ircservices.log|g"
