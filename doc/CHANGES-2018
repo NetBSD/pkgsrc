@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3066 2018/07/04 12:47:29 wen Exp $
+$NetBSD: CHANGES-2018,v 1.3067 2018/07/04 12:52:20 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4419,3 +4419,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-model_mommy to 1.6.0 [adam 2018-07-04]
 	Updated devel/gmake to 4.2.1 [bsiegert 2018-07-04]
 	Updated lang/yabasic to 2.79.2 [wen 2018-07-04]
+	Updated devel/p5-Modern-Perl to 1.20180701 [wen 2018-07-04]
