@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2018/04/17 22:29:46 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2018/07/04 13:40:31 jperkin Exp $
 #
 
 DISTNAME=		snort-2.9.9.0
@@ -65,7 +65,7 @@ CONF_FILES+=		${EGDIR}/rules/white_list.rules \
 			${PKG_SYSCONFDIR}/rules/white_list.rules
 
 SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	etc/snort.conf src/snort.c
 SUBST_SED.paths=	-e "s|/usr/local|${PREFIX}|g"
 SUBST_SED.paths+=	-e "s|../rules|rules|g"

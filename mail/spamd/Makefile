@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2017/09/04 18:00:57 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2018/07/04 13:40:24 jperkin Exp $
 
 DISTNAME=		spamd-20060330
 PKGREVISION=		2
@@ -30,7 +30,7 @@ SPAMD_CONF=		${PKG_SYSCONFDIR}/spamd.conf
 CONF_FILES=		${PREFIX}/share/examples/spamd/spamd.conf ${SPAMD_CONF}
 
 SUBST_CLASSES+=		fix
-SUBST_STAGE.fix=	post-patch
+SUBST_STAGE.fix=	pre-configure
 SUBST_FILES.fix=	spamd/spamd.8
 SUBST_FILES.fix+=	spamd-setup/spamd-setup.8
 SUBST_SED.fix=		-e 's,/etc/spamd.conf,${SPAMD_CONF},g'

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2017/09/12 06:14:08 dholland Exp $
+# $NetBSD: Makefile.common,v 1.13 2018/07/04 13:40:34 jperkin Exp $
 #
 # used by security/libprelude/Makefile
 # used by security/libprelude-lua/Makefile
@@ -50,7 +50,7 @@ MAKE_DIRS=		${PKG_SYSCONFDIR}/default ${PKG_SYSCONFDIR}/profile
 MAKE_DIRS_PERMS+=	${PKG_SYSCONFDIR}/profile ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0711
 
 SUBST_CLASSES+=		make
-SUBST_STAGE.make=	post-patch
+SUBST_STAGE.make=	pre-configure
 SUBST_FILES.make=	Makefile.in
 SUBST_SED.make=		-e 's,@EGDIR@,${EGDIR},g'
 

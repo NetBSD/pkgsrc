@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/04/02 09:30:06 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2018/07/04 13:40:14 jperkin Exp $
 
 DISTNAME=	gprbuild-aux-${SNAPSHOT}
 CATEGORIES=	devel
@@ -21,7 +21,7 @@ BUILD_DIRS=		${WRKSRC}/construction
 
 SUBST_CLASSES=		lbase
 
-SUBST_STAGE.lbase=	post-patch
+SUBST_STAGE.lbase=	pre-configure
 SUBST_FILES.lbase=	share/gprconfig/compilers.xml
 SUBST_SED.lbase=	-e "s|/usr/local|${LOCALBASE}|"
 SUBST_MESSAGE.lbase=	Ensure pkgsrc localbase is used

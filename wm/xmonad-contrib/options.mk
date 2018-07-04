@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2014/08/25 13:58:21 szptvlfn Exp $
+# $NetBSD: options.mk,v 1.2 2018/07/04 13:40:40 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xmonad-contrib
 PKG_SUPPORTED_OPTIONS= xft2
@@ -15,7 +15,7 @@ SUBST_FILES.1=	xmonad-contrib.cabal
 SUBST_SED.1=	-e "s|render text|render text+  default: False|"
 
 SUBST_CLASSES+=	2
-SUBST_STAGE.2=	post-patch
+SUBST_STAGE.2=	pre-configure
 SUBST_FILES.2=	xmonad-contrib.cabal
 SUBST_FILTER_CMD.2=	${TR} '+' \\n
 .endif

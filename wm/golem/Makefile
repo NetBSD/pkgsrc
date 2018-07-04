@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2014/06/24 06:28:02 dholland Exp $
+# $NetBSD: Makefile,v 1.33 2018/07/04 13:40:40 jperkin Exp $
 #
 
 DISTNAME=	golem-0.0.5
@@ -42,7 +42,7 @@ CONF_FILES=	${EGDIR}/golemrc.default ${PKG_SYSCONFDIR}/golemrc
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	sample.golem/golemrc
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 
 INSTALLATION_DIRS=	${EGDIR}
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} \

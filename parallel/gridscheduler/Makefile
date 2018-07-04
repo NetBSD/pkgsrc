@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2018/01/01 18:16:38 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2018/07/04 13:40:31 jperkin Exp $
 
 PKGNAME=	gridscheduler-2011.11.1
 PKGREVISION=	2
@@ -113,7 +113,7 @@ post-patch:
 	${ECHO} "BERKELEYDBBASE=${BUILDLINK_PREFIX.db4}" ) > ${WRKSRC}/source/distinst.private
 
 SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	source/dist/util/arch_variables
 SUBST_SED.paths=	-e 's;@rcd_dir@;${RCD_SCRIPTS_DIR};'
 

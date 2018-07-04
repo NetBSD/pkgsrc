@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2015/08/18 07:31:17 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2018/07/04 13:40:37 jperkin Exp $
 
 DISTNAME=	grub-0.97
 PKGREVISION=	10
@@ -60,7 +60,7 @@ CONFIGURE_ARGS+=	${GRUB_SCAN_ARGS}
 .endif
 
 SUBST_CLASSES+=		grubterm
-SUBST_STAGE.grubterm=	post-patch
+SUBST_STAGE.grubterm=	pre-configure
 SUBST_MESSAGE.grubterm=	Changing references to <term.h> to <grubterm.h>
 SUBST_FILES.grubterm=	grub/*.c stage2/Makefile.in stage2/*.c
 SUBST_SED.grubterm=	-e "s,<term.h>,<grubterm.h>,g"

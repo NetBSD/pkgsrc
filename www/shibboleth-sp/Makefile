@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2018/04/29 21:32:08 adam Exp $
+# $NetBSD: Makefile,v 1.27 2018/07/04 13:40:42 jperkin Exp $
 #
 
 DISTNAME=	shibboleth-sp-2.5.5
@@ -34,7 +34,7 @@ PLIST_SUBST+=	PKG_APACHE_NUM=${PKG_APACHE:S/apache//}
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKSRC}/configs/Makefile.in
 SUBST_FILES.paths+=	${WRKSRC}/configs/keygen.sh
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_SED.paths=	-e 's,@EGDIR@,${EGDIR},'
 SUBST_SED.paths+=	-e 's,@SHIB_CONFDIR@,${SHIB_CONFDIR},'
 

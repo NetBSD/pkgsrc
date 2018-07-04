@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2018/07/03 05:03:17 adam Exp $
+# $NetBSD: Makefile,v 1.30 2018/07/04 13:40:18 jperkin Exp $
 
 DISTNAME=	blindmine-0.3-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -17,7 +17,7 @@ NO_BUILD=	yes
 
 SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Fixing paths.
-SUBST_STAGE.path=	post-patch
+SUBST_STAGE.path=	pre-configure
 SUBST_FILES.path=	blindmine.py sdl_ui.py
 SUBST_SED.path=		-e 's,/usr/bin/env python,${PYTHONBIN},g'
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2016/12/16 15:24:20 hans Exp $
+# $NetBSD: Makefile,v 1.25 2018/07/04 13:40:40 jperkin Exp $
 
 DISTNAME=	album-4.15
 PKGREVISION=	
@@ -26,7 +26,7 @@ AUTO_MKDIRS=		yes
 
 SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Adjust Install Path to ${PREFIX}
-SUBST_STAGE.prefix=	post-patch
+SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	album
 SUBST_VARS.prefix=	PREFIX
 

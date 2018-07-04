@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2017/08/01 17:40:14 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2018/07/04 13:40:27 jperkin Exp $
 
 DISTNAME=	dctc-0.85.9
 PKGREVISION=	13
@@ -23,7 +23,7 @@ CPPFLAGS+=		-I${BDBBASE}/include/${BDB_TYPE}
 BUILDLINK_TRANSFORM+=	l:db4:${BDB_TYPE}
 
 SUBST_CLASSES+=		inethack
-SUBST_STAGE.inethack=	post-patch
+SUBST_STAGE.inethack=	pre-configure
 SUBST_FILES.inethack=	src/dc_manage.c src/dc_manage_master.c
 SUBST_FILES.inethack+=	src/main.c src/main_master.c src/var.h
 SUBST_SED.inethack+=	-e 's,\(G_.*LOCK.*(\)inet_ntoa,\1my_inet_ntoa,g'

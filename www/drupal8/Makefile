@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/06/22 12:59:08 wen Exp $
+# $NetBSD: Makefile,v 1.8 2018/07/04 13:40:41 jperkin Exp $
 
 DISTNAME=	drupal-8.5.4
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -43,7 +43,7 @@ REPLACE_FILES.php+=	core/scripts/update-countries.sh
 REPLACE_FILES.php+=	core/scripts/rebuild_token_calculator.sh
 
 SUBST_CLASSES+=		sh
-SUBST_STAGE.sh=		post-patch
+SUBST_STAGE.sh=		pre-configure
 SUBST_MESSAGE.sh=	Fixing path to sh
 SUBST_FILES.sh+=	vendor/paragonie/random_compat/build-phar.sh
 SUBST_SED.sh=		-e "s|/usr/bin/env bash|${SH}|"

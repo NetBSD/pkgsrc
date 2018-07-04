@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2018/04/16 14:34:07 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2018/07/04 13:40:09 jperkin Exp $
 #
 
 DISTNAME=	MuSE-0.9
@@ -28,7 +28,7 @@ MAKE_FLAGS+=		docsdir=${PREFIX:Q}/share/doc/MuSE
 LIBS.SunOS+=		-lsocket -lnsl
 
 SUBST_CLASSES+=		dsp
-SUBST_STAGE.dsp=	post-patch
+SUBST_STAGE.dsp=	pre-configure
 SUBST_FILES.dsp=	src/jmixer.cpp src/libmpeg/fileplayer.cc
 SUBST_SED.dsp=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 SUBST_MESSAGE.dsp=	Fixing hardcoded audio device.

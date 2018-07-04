@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/03/12 11:15:27 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2018/07/04 13:40:14 jperkin Exp $
 #
 
 DISTNAME=	grantlee-0.5.1
@@ -15,7 +15,7 @@ USE_LANGUAGES=  c c++
 USE_CMAKE=      yes
 
 SUBST_CLASSES+=		fix-inc
-SUBST_STAGE.fix-inc=	post-patch
+SUBST_STAGE.fix-inc=	pre-configure
 SUBST_MESSAGE.fix-inc=	Fixing install dir for includes
 SUBST_FILES.fix-inc+=	CMakeLists.txt
 SUBST_SED.fix-inc+=	-e 's,INCLUDE_INSTALL_DIR include,INCLUDE_INSTALL_DIR include/grantlee-qt4,'

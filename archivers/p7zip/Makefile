@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2018/03/21 18:47:02 kamil Exp $
+# $NetBSD: Makefile,v 1.66 2018/07/04 13:40:08 jperkin Exp $
 
 DISTNAME=	p7zip_16.02_src_all
 PKGNAME=	${DISTNAME:S/_src_all//S/_/-/}
@@ -33,7 +33,7 @@ INSTALLATION_DIRS+=	share/doc/p7zip/switches
 SUBST_CLASSES+=		lib
 SUBST_FILES.lib+=	CPP/7zip/UI/Common/LoadCodecs.cpp
 SUBST_SED.lib+=		-e "s,getenv(.P7ZIP_HOME_DIR.),\"${PREFIX}/lib/\","
-SUBST_STAGE.lib=	post-patch
+SUBST_STAGE.lib=	pre-configure
 
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}

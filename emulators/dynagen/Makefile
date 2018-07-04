@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/08/01 16:47:38 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2018/07/04 13:40:17 jperkin Exp $
 
 DISTNAME=	dynagen-0.11.0
 PKGREVISION=	4
@@ -18,7 +18,7 @@ REPLACE_PYTHON+= dynagen confConsole.py console.py dynamips_lib.py pemu_lib.py \
 		pemubin.py pemuwrapper.py
 
 SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	dynagen
 SUBST_SED.paths=	-e "s|@SYSCONFDIR@|${PKG_SYSCONFDIR}|"
 SUBST_SED.paths+=	-e "s|@PREFIX@|${PREFIX}|"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2018/01/27 19:07:46 rillig Exp $
+# $NetBSD: Makefile,v 1.39 2018/07/04 13:40:32 jperkin Exp $
 
 PKGNAME=		libkver-${VERSION}
 CATEGORIES=		pkgtools
@@ -34,7 +34,7 @@ SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	kver/kver.sh kver/kver.8 lib/kver.3
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 
 INSTALLATION_DIRS+=	sbin ${PKGMANDIR}/man8 ${PKGMANDIR}/cat8
 INSTALLATION_DIRS+=	lib ${PKGMANDIR}/man3 ${PKGMANDIR}/cat3

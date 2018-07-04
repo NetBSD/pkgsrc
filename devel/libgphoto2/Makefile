@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2018/03/31 22:43:01 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2018/07/04 13:40:14 jperkin Exp $
 
 DISTNAME=	libgphoto2-2.5.8
 PKGREVISION=	3
@@ -30,7 +30,7 @@ PLIST_VARS+=	libusb
 BUILDLINK_TRANSFORM.SunOS+=	opt:-Wl,--version-script=./libgphoto2_port.ver:-Wl,-M./libgphoto2_port.ver
 
 SUBST_CLASSES.SunOS+=	mapfile
-SUBST_STAGE.mapfile=	post-patch
+SUBST_STAGE.mapfile=	pre-configure
 SUBST_FILES.mapfile=	libgphoto2_port/libgphoto2_port/libgphoto2_port.ver
 SUBST_SED.mapfile=	-e '/gpi_gphoto_port_type_map/d'
 
