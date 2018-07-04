@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.563 2018/06/05 15:39:15 jaapb Exp $
+# $NetBSD: Makefile,v 1.564 2018/07/04 05:18:15 minskim Exp $
 
 COMMENT=	Databases
 
@@ -344,6 +344,7 @@ SUBDIR+=	py-firebase
 SUBDIR+=	py-gdbm
 SUBDIR+=	py-ldap
 SUBDIR+=	py-ldap3
+SUBDIR+=	py-lmdb
 SUBDIR+=	py-metakit
 SUBDIR+=	py-mongo
 SUBDIR+=	py-mssql
