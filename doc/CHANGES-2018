@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3063 2018/07/04 08:15:51 wen Exp $
+$NetBSD: CHANGES-2018,v 1.3064 2018/07/04 09:08:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4415,3 +4415,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-serpent to 1.25 [adam 2018-07-04]
 	Updated math/py-numexpr to 2.6.5 [adam 2018-07-04]
 	Updated devel/R-bit to 1.1.14 [wen 2018-07-04]
+	Updated devel/py-pbr to 4.0.4 [adam 2018-07-04]
+	Updated www/py-model_mommy to 1.6.0 [adam 2018-07-04]
