@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.35 2018/07/04 09:42:56 bsiegert Exp $
+$NetBSD: distinfo,v 1.36 2018/07/04 14:09:07 bsiegert Exp $
 
 SHA1 (make-4.2.1.tar.bz2) = 7d9d11eb36cfb752da1fb11bb3e521d2a3cc8830
 RMD160 (make-4.2.1.tar.bz2) = 7cf74e2fd9764ffeb48f40a49077099874ad8a54
@@ -10,3 +10,4 @@ SHA1 (patch-configure.ac) = 7d22c8f5e5d349687885f55120fa2f7c1251e399
 SHA1 (patch-dir.c) = 1616d8e26c0761c8734063806fa581ae8884b4e8
 SHA1 (patch-makeint.h) = cb5f0889d84874a16fc10bc6f91e18c2277194cc
 SHA1 (patch-pa) = 2c0168db7afec3da98b30392290e5b9464ea7b5e
+SHA1 (patch-posixos.c) = 4c566b23442bcc87f776181be531957c254162de
