@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3070 2018/07/04 13:27:41 wen Exp $
+$NetBSD: CHANGES-2018,v 1.3071 2018/07/04 14:41:28 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4423,3 +4423,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/gpgme to 1.11.1 [adam 2018-07-04]
 	Updated devel/p5-Module-CoreList to 5.20180626 [wen 2018-07-04]
 	Updated devel/p5-MooseX-Emulate-Class-Accessor-Fast to 0.009032 [wen 2018-07-04]
+	Updated www/passenger to 5.3.3 [fhajny 2018-07-04]
