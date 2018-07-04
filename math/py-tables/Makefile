@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2018/03/29 18:08:27 adam Exp $
+# $NetBSD: Makefile,v 1.1 2018/07/04 06:46:49 adam Exp $
 
-DISTNAME=	tables-3.4.2
-PKGNAME=	${PYPKGPREFIX}-py${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	tables-3.4.4
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tables/}
 
@@ -17,16 +16,17 @@ PYSETUPBUILDARGS+=	--hdf5=${BUILDLINK_PREFIX.hdf5}
 PYSETUPBUILDARGS+=	--lzo=${BUILDLINK_PREFIX.lzo}
 
 DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
-DEPENDS+=	${PYPKGPREFIX}-numexpr>=2.0:../../math/py-numexpr
+DEPENDS+=	${PYPKGPREFIX}-numexpr>=2.5.2:../../math/py-numexpr
+DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 
 USE_LANGUAGES=		c c++
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-		mv pt2to3 pt2to3${PYVERSSUFFIX} && \
-		mv ptdump ptdump${PYVERSSUFFIX} && \
-		mv ptrepack ptrepack${PYVERSSUFFIX} && \
-		mv pttree pttree${PYVERSSUFFIX}
+		${MV} pt2to3 pt2to3${PYVERSSUFFIX} && \
+		${MV} ptdump ptdump${PYVERSSUFFIX} && \
+		${MV} ptrepack ptrepack${PYVERSSUFFIX} && \
+		${MV} pttree pttree${PYVERSSUFFIX} || ${TRUE}
 
 do-test:
 	cd ${WRKSRC}/tables/tests && ${PYTHONBIN} test_all.py

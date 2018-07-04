@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.17 2017/05/21 07:52:55 adam Exp $
-
-SHA1 (tables-3.4.2.tar.gz) = ebc3cb44eac73f6efaf5c16d6c09dfee7249a470
-RMD160 (tables-3.4.2.tar.gz) = bf652291d53a7a2078be2f774f0fe67dda5eb1cc
-SHA512 (tables-3.4.2.tar.gz) = 8c3bb9113e5082f8b44866b04728a04dae37fbd576c3259309fc305fd4cc0c4f74925557e74f6bd1bd1fc5150d8091648139c4c702e5ed9f53e0ace11c2ac58b
-Size (tables-3.4.2.tar.gz) = 7593471 bytes
