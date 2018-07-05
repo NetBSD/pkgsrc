@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3074 2018/07/05 06:48:39 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3075 2018/07/05 09:22:07 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4428,3 +4428,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/go-fnmatch version 0.0.20160404 [minskim 2018-07-05]
 	Updated devel/py-uvloop to 0.11.0 [adam 2018-07-05]
 	Updated devel/py-test to 3.6.3 [adam 2018-07-05]
+	Updated finance/py-alphalens to 0.3.2 [minskim 2018-07-05]
