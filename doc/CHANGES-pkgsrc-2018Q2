@@ -1,3 +1,7 @@
-$NetBSD: CHANGES-pkgsrc-2018Q2,v 1.1.2.1 2018/07/02 18:51:15 gdt Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q2,v 1.1.2.2 2018/07/05 08:46:04 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q2 branch:
+
+Pullup ticket #5780 - requested by maya
+sysutils/xentools46: NetBSD build fix
+
