@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2018/05/14 06:39:32 adam Exp $
+# $NetBSD: Makefile,v 1.34 2018/07/05 04:31:05 minskim Exp $
 
 DISTNAME=	scipy-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -27,6 +27,8 @@ BROKEN=		Requires fortran 95
 
 CPPFLAGS+=	-D__STDC_FORMAT_MACROS
 FFLAGS+=	-fPIC
+
+LDFLAGS.Darwin+=	-headerpad_max_install_names
 
 REPLACE_PYTHON+=	scipy/cluster/setup.py
 REPLACE_PYTHON+=	scipy/cluster/tests/test_hierarchy.py
