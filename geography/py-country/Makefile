@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.3 2018/02/27 13:08:03 adam Exp $
+# $NetBSD: Makefile,v 1.4 2018/07/05 11:39:10 adam Exp $
 
-DISTNAME=	pycountry-18.2.23
+DISTNAME=	pycountry-18.5.26
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	geography python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycountry/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	https://pypi.python.org/pypi/pycountry
+HOMEPAGE=	https://bitbucket.org/flyingcircus/pycountry
 COMMENT=	ISO country, subdivision, language, currency and script
 LICENSE=	gnu-lgpl-v2.1
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
