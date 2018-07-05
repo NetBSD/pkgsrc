@@ -927,7 +927,7 @@ and dashes.</p>
 	quarterly basis from the current branch and only gets modified
 	for security updates. The names of the stable branches are built
 	from the year and the quarter, for example
-	<code class="literal">2018Q1</code>.</p>
+	<code class="literal">2018Q2</code>.</p>
 <p>The second step is to decide <span class="emphasis"><em>how</em></span> you
 	want to download pkgsrc. You can get it as a tar file or via CVS.
 	Both ways are described here.</p>
@@ -953,11 +953,11 @@ and dashes.</p>
 	respectively.
 	</p>
 <p>You can fetch the same files using FTP.</p>
-<p>The tar file for the stable branch 2018Q1 is in the
-	directory <code class="filename">pkgsrc-2018Q1</code> and is also called <a class="ulink" href="https://cdn.NetBSD.org/pub/pkgsrc/pkgsrc-2018Q1/pkgsrc.tar.gz" target="_top"><code class="filename">pkgsrc.tar.gz</code></a>.</p>
+<p>The tar file for the stable branch 2018Q2 is in the
+	directory <code class="filename">pkgsrc-2018Q2</code> and is also called <a class="ulink" href="https://cdn.NetBSD.org/pub/pkgsrc/pkgsrc-2018Q2/pkgsrc.tar.gz" target="_top"><code class="filename">pkgsrc.tar.gz</code></a>.</p>
 <p>To download the latest pkgsrc stable tarball, run:</p>
 <pre class="screen">
-<code class="prompt">$</code> <strong class="userinput"><code>ftp ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2018Q1/pkgsrc.tar.gz</code></strong></pre>
+<code class="prompt">$</code> <strong class="userinput"><code>ftp ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2018Q2/pkgsrc.tar.gz</code></strong></pre>
 <p>If you prefer, you can also fetch it using "wget", "curl",
 	or your web browser.</p>
 <p>Then, extract it with:</p>
@@ -972,7 +972,7 @@ and dashes.</p>
 <div class="titlepage"><div><div><h3 class="title">
 <a name="getting-via-cvs"></a>2.1.2. Via anonymous CVS</h3></div></div></div>
 <p>To fetch a specific pkgsrc stable branch, run:</p>
-<pre class="screen"><code class="prompt">$</code> <strong class="userinput"><code>cd /usr &amp;&amp; cvs -q -z2 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -r pkgsrc-2018Q1 -P pkgsrc</code></strong>
+<pre class="screen"><code class="prompt">$</code> <strong class="userinput"><code>cd /usr &amp;&amp; cvs -q -z2 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -r pkgsrc-2018Q2 -P pkgsrc</code></strong>
 </pre>
 <p>This will create the directory <code class="filename">pkgsrc/</code> 
 	in your <code class="filename">/usr/</code> directory and all the package source 
@@ -1057,7 +1057,7 @@ release -d
 	by adding the option <span class="quote">&#8220;<span class="quote">-A</span>&#8221;</span> after the
 	<span class="quote">&#8220;<span class="quote">update</span>&#8221;</span> keyword. To switch from the current branch
 	back to the stable branch, add the
-	<span class="quote">&#8220;<span class="quote">-rpkgsrc-2018Q1</span>&#8221;</span> option.</p>
+	<span class="quote">&#8220;<span class="quote">-rpkgsrc-2018Q2</span>&#8221;</span> option.</p>
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
@@ -3352,7 +3352,7 @@ large, I didn't want to fix it. So I added the following to the package
 <code class="filename">Makefile</code> and tried again:</p>
 <pre class="programlisting">
 CPPFLAGS+=              -I${BUILDLINK_PREFIX.libIDL}/include/libIDL-2.0
-BUILDLINK_TRANSFORM+=   -l:IDL:IDL-2
+BUILDLINK_TRANSFORM+=   l:IDL:IDL-2
 </pre>
 <p>The latter line is needed because the package expects the library
 <code class="filename">libIDL.so</code>, but only
@@ -4158,7 +4158,11 @@ are just copied.</p>
 correctly. But the echo command may additionally interpret strings with a
 leading dash or those containing backslashes.</p>
 <p>Example 3 can handle arbitrary strings, since <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?printf+1.i386+NetBSD-7.1.2"><span class="citerefentry"><span class="refentrytitle">printf</span>(1)</span></a> only
-interprets the format string, but not the next argument.</p>
+interprets the format string, but not the next argument. The trailing
+single quotes handle the case when the string is empty. In that case, the
+:Q modifier would result in an empty string too, which would then be
+skipped by the shell. For <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?printf+1.i386+NetBSD-7.1.2"><span class="citerefentry"><span class="refentrytitle">printf</span>(1)</span></a> this doesn't make a difference,
+but other programs may care.</p>
 <p>In example 4, the <code class="varname">EXAMPLE_ENV</code> does not
 need to be quoted because the quoting has already been done
 when adding elements to the list.</p>
@@ -8835,7 +8839,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm80406480"></a><dl>
+<a name="idm79158224"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -8880,7 +8884,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm80406096"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm79157840"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -8896,7 +8900,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm80402000"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="idm79137360"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -8914,7 +8918,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm80397520"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm79133008"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -8932,7 +8936,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm80393424"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm79128784"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -8945,7 +8949,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm80391248"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm79126608"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -8961,7 +8965,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm80388048"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm79123408"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="code">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -8985,7 +8989,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm80381136"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm79116624"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9010,7 +9014,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm80377424"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm79112784"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9058,7 +9062,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm80370896"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm79106256"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
