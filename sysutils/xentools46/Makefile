@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.30 2018/06/27 10:44:15 maya Exp $
+# $NetBSD: Makefile,v 1.30.2.1 2018/07/05 08:45:27 bsiegert Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 .include		"version.mk"
 
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools46-${VERSION}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		sysutils
 MASTER_SITES=		https://downloads.xenproject.org/release/xen/${VERSION}/
 
@@ -20,9 +20,9 @@ LICENSE=		gnu-gpl-v2
 
 # XXX add version check: Xen requires dev86 >= 0.16.14
 BUILD_DEPENDS+=	dev86-[0-9]*:../../devel/dev86 # needed to build firmware
-#.if !exists(/usr/bin/iasl) # XXX broken with iasl 20171110
+.if !exists(/usr/bin/iasl)
 BUILD_DEPENDS+=	acpica-utils-[0-9]*:../../sysutils/acpica-utils
-#.endif
+.endif
 DEPENDS+=	${PYPKGPREFIX}-curses>=0:../../devel/py-curses
 
 PKG_SYSCONFSUBDIR=	xen

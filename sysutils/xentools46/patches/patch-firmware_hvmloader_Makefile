@@ -1,13 +1,25 @@
-$NetBSD: patch-firmware_hvmloader_Makefile,v 1.1.1.1 2016/07/04 07:30:51 jnemeth Exp $
+$NetBSD: patch-firmware_hvmloader_Makefile,v 1.1.1.1.18.1 2018/07/05 08:45:27 bsiegert Exp $
 
---- firmware/hvmloader/Makefile.orig	2016-02-09 14:44:19.000000000 +0000
-+++ firmware/hvmloader/Makefile
-@@ -28,7 +28,7 @@ LOADADDR = 0x100000
- # SMBIOS spec requires format mm/dd/yyyy
- SMBIOS_REL_DATE ?= $(shell date +%m/%d/%Y)
+Fix for newer iasl. From royger upstream.
+https://xenbits.xen.org/gitweb/?p=xen.git;a=commit;h=858dbaaeda33b05c1ac80aea0ba9a03924e09005
+
+--- firmware/hvmloader/acpi/Makefile.orig	2017-07-06 07:04:28.000000000 +0000
++++ firmware/hvmloader/acpi/Makefile
+@@ -27,7 +27,7 @@ all: acpi.a
  
--CFLAGS += $(CFLAGS_xeninclude)
-+CFLAGS += $(CFLAGS_xeninclude) $(EXTRA_CFLAGS)
+ ssdt_s3.h ssdt_s4.h ssdt_pm.h ssdt_tpm.h: %.h: %.asl iasl
+ 	iasl -vs -p $* -tc $<
+-	sed -e 's/AmlCode/$*/g' $*.hex >$@
++	sed -e 's/AmlCode/$*/g' -e 's/_aml_code//g' $*.hex >$@
+ 	rm -f $*.hex $*.aml
  
- # We mustn't use tools-only public interfaces.
- CFLAGS += -U__XEN_TOOLS__ -D__XEN_INTERFACE_VERSION__=__XEN_LATEST_INTERFACE_VERSION__
+ mk_dsdt: mk_dsdt.c
+@@ -44,7 +44,7 @@ dsdt_%cpu.asl: dsdt.asl mk_dsdt
+ 
+ $(filter dsdt_%.c,$(C_SRC)): %.c: iasl %.asl
+ 	iasl -vs -p $* -tc $*.asl
+-	sed -e 's/AmlCode/$*/g' $*.hex >$@
++	sed -e 's/AmlCode/$*/g' -e 's/_aml_code//g' $*.hex >$@
+ 	echo "int $*_len=sizeof($*);" >>$@
+ 	rm -f $*.aml $*.hex
+ 
