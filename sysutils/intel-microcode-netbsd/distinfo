@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2018/05/07 04:32:49 msaitoh Exp $
+$NetBSD: distinfo,v 1.19 2018/07/05 07:34:50 msaitoh Exp $
 
-SHA1 (microcode-20180425.tgz) = e702609ced8880121e36b94d28d1ef706c35a94d
-RMD160 (microcode-20180425.tgz) = 034b18e656a368fa23b13ad6f401f6f99bd5670f
-SHA512 (microcode-20180425.tgz) = 6cea53cc0f486891fb9ddffc1e03e8e0a6d1d91df6bfda81250b2c60714e7b4111caa9df5afa7f13d8144e591550ef7eb4fd1e153fc67fc904afb83ccc2e3bb0
-Size (microcode-20180425.tgz) = 1565473 bytes
+SHA1 (microcode-20180703.tgz) = c59801e0e25ca8f630ae3b02b01bfaf491d1039d
+RMD160 (microcode-20180703.tgz) = eed8287d3d9ee0dd1e3cc64498e6d2a2d48fc965
+SHA512 (microcode-20180703.tgz) = 25af4158f97fba2fb88f05a44f42ed7d2415001ccc58f573d366f405ff198472517468f619628f4f6e5a371793c41ea8faf5a932d2362b2a51726bb5c84e0eed
+Size (microcode-20180703.tgz) = 1550181 bytes
