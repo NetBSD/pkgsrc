@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3076 2018/07/05 10:57:48 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3077 2018/07/05 11:39:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4430,3 +4430,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-test to 3.6.3 [adam 2018-07-05]
 	Updated finance/py-alphalens to 0.3.2 [minskim 2018-07-05]
 	Updated devel/py-tox to 3.0.0 [adam 2018-07-05]
+	Updated devel/py-lama to 7.4.3nb1 [adam 2018-07-05]
+	Updated geography/py-country to 18.5.26 [adam 2018-07-05]
