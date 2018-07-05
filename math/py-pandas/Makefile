@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2018/07/04 06:50:04 adam Exp $
+# $NetBSD: Makefile,v 1.25 2018/07/05 01:21:05 minskim Exp $
 
 DISTNAME=	pandas-0.23.1
 PKGREVISION=	1
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-numexpr-[0-9]*:../../math/py-numexpr
 DEPENDS+=	${PYPKGPREFIX}-pytz>=1.5:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
-DEPENDS+=	${PYPKGPREFIX}-tables>=2.2:../../math/py-pytables
+DEPENDS+=	${PYPKGPREFIX}-tables>=2.2:../../math/py-tables
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 # 20 test failures as of 0.18.1, see
 # https://github.com/pydata/pandas/issues/12337
