@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2018/05/11 13:47:35 wiz Exp $
+# $NetBSD: Makefile.common,v 1.23 2018/07/05 14:28:11 jperkin Exp $
 # used by x11/modular-xorg-server/Makefile
 # used by x11/modular-xorg-xephyr/Makefile
 
@@ -99,6 +99,9 @@ CONFIGURE_ENV.NetBSD+=	ac_cv_header_sys_event_h=no
 
 # Avoid picking up epoll on illumos
 CONFIGURE_ENV.SunOS+=	ac_cv_func_epoll_create1=no
+
+# Only available in newer releases
+CONFIGURE_ENV.SunOS+=	ac_cv_func_mkostemp=no
 
 INSTALLATION_DIRS+=	lib/xorg/modules/drivers lib/xorg/modules/input
 
