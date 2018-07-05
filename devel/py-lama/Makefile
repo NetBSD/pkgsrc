@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/09/15 12:54:31 adam Exp $
+# $NetBSD: Makefile,v 1.4 2018/07/05 11:23:29 adam Exp $
 
 DISTNAME=	pylama-7.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylama/}
 
@@ -16,8 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-flakes>=1.5.0:../../devel/py-flakes
 DEPENDS+=	${PYPKGPREFIX}-mccabe>=0.5.2:../../devel/py-mccabe
 DEPENDS+=	${PYPKGPREFIX}-py-[0-9]*:../../devel/py-py
 DEPENDS+=	${PYPKGPREFIX}-radon-[0-9]*:../../devel/py-radon
-# TEST_DEPENDS
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} pylama pylama${PYVERSSUFFIX} || ${TRUE}
