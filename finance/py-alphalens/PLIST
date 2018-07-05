@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/02/02 20:17:54 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/07/05 09:21:29 minskim Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -10,9 +10,14 @@ ${PYSITELIB}/alphalens/__init__.pyo
 ${PYSITELIB}/alphalens/_version.py
 ${PYSITELIB}/alphalens/_version.pyc
 ${PYSITELIB}/alphalens/_version.pyo
+${PYSITELIB}/alphalens/examples/daily_factor_synthetic_data.ipynb
 ${PYSITELIB}/alphalens/examples/event_study.ipynb
+${PYSITELIB}/alphalens/examples/event_study_synthetic_data.ipynb
 ${PYSITELIB}/alphalens/examples/ic_tear.png
+${PYSITELIB}/alphalens/examples/intraday_factor.ipynb
+${PYSITELIB}/alphalens/examples/intraday_factor_synthetic_data.ipynb
 ${PYSITELIB}/alphalens/examples/predictive_vs_non-predictive_factor.ipynb
+${PYSITELIB}/alphalens/examples/pyfolio_integration.ipynb
 ${PYSITELIB}/alphalens/examples/returns_tear.png
 ${PYSITELIB}/alphalens/examples/sector_tear.png
 ${PYSITELIB}/alphalens/examples/table_tear.png
