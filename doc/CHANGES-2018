@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3073 2018/07/05 04:34:26 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.3074 2018/07/05 06:48:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4426,3 +4426,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/passenger to 5.3.3 [fhajny 2018-07-04]
 	Updated multimedia/bitstream to 1.4 [adam 2018-07-04]
 	Added devel/go-fnmatch version 0.0.20160404 [minskim 2018-07-05]
+	Updated devel/py-uvloop to 0.11.0 [adam 2018-07-05]
+	Updated devel/py-test to 3.6.3 [adam 2018-07-05]
