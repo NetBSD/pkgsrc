@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3072 2018/07/04 21:46:27 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3073 2018/07/05 04:34:26 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4425,3 +4425,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-MooseX-Emulate-Class-Accessor-Fast to 0.009032 [wen 2018-07-04]
 	Updated www/passenger to 5.3.3 [fhajny 2018-07-04]
 	Updated multimedia/bitstream to 1.4 [adam 2018-07-04]
+	Added devel/go-fnmatch version 0.0.20160404 [minskim 2018-07-05]
