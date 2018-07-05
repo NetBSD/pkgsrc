@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2692 2018/06/24 14:17:10 taca Exp $
+# $NetBSD: Makefile,v 1.2693 2018/07/05 04:34:12 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -340,6 +340,7 @@ SUBDIR+=	go-ed25519
 SUBDIR+=	go-emoji
 SUBDIR+=	go-errors
 SUBDIR+=	go-flags-svent
+SUBDIR+=	go-fnmatch
 SUBDIR+=	go-fs
 SUBDIR+=	go-fsnotify
 SUBDIR+=	go-fsync
