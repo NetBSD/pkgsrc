@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3083 2018/07/06 03:47:11 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.3084 2018/07/06 03:54:24 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4439,3 +4439,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated emulators/openmsx to 0.14.0 [ryoon 2018-07-06]
 	Added math/py-Theano version 1.0.2 [minskim 2018-07-06]
 	Added math/py-pymc3 version 3.4.1 [minskim 2018-07-06]
+	Added finance/py-pyfolio version 0.8.0 [minskim 2018-07-06]
