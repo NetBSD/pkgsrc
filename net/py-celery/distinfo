@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.7 2018/06/18 07:15:17 adam Exp $
+$NetBSD: distinfo,v 1.8 2018/07/06 07:51:21 adam Exp $
 
 SHA1 (celery-4.2.0.tar.gz) = 75a7f526efcdb93d3c8ce5028b129d9683cff6a5
 RMD160 (celery-4.2.0.tar.gz) = c5b575e8f3e20ea6eea9ce2a36b85fc8285f1cf1
 SHA512 (celery-4.2.0.tar.gz) = ad7d18c318b6383e2a44a03f55f44d30f4d2fb6f3d05529376f0b05cbc28a8acbf3961a8d24a039e46917f439c1679d1f55a5957e4bc9587a6643a5c766ca487
 Size (celery-4.2.0.tar.gz) = 1351778 bytes
+SHA1 (patch-celery_backends_redis.py) = bf2c356adf6cb79a7a0cfb4483a83352a472acbf
+SHA1 (patch-celery_backends_rpc.py) = efb7a2acda99b4f998aa1c34dec8a2ab631e2347
+SHA1 (patch-requirements_test.txt) = d2aa5524643e9804e72235cc1af0aa17123cf2b7
