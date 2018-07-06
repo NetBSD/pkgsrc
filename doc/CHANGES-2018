@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3084 2018/07/06 03:54:24 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.3085 2018/07/06 07:07:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4440,3 +4440,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Added math/py-Theano version 1.0.2 [minskim 2018-07-06]
 	Added math/py-pymc3 version 3.4.1 [minskim 2018-07-06]
 	Added finance/py-pyfolio version 0.8.0 [minskim 2018-07-06]
+	Updated textproc/libyaml to 0.2.1 [adam 2018-07-06]
+	Updated sysutils/py-ptyprocess to 0.6.0 [adam 2018-07-06]
