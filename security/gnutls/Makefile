@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.182 2018/06/04 16:12:52 wiz Exp $
+# $NetBSD: Makefile,v 1.183 2018/07/06 16:15:28 prlw1 Exp $
 
-DISTNAME=	gnutls-3.6.0
-PKGREVISION=	3
+DISTNAME=	gnutls-3.6.2
 CATEGORIES=	security devel
 MASTER_SITES=	ftp://ftp.gnutls.org/gcrypt/gnutls/v3.6/
 EXTRACT_SUFX=	.tar.xz
@@ -21,6 +20,7 @@ CONFIGURE_ARGS+=		--disable-openssl-compatibility
 CONFIGURE_ARGS+=		--disable-guile
 CONFIGURE_ARGS+=		--disable-libdane
 CONFIGURE_ARGS+=		--without-tpm
+CONFIGURE_ARGS+=		--disable-destructive-tests
 CONFIGURE_ARGS+=		--disable-valgrind-tests
 CONFIGURE_ARGS+=		--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
 CONFIGURE_ARGS+=		--enable-local-libopts
