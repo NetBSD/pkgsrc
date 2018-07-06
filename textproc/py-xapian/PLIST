@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/07/10 17:34:04 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/07/06 16:23:11 schmonz Exp $
 ${PYSITELIB}/xapian/__init__.py
 ${PYSITELIB}/xapian/__init__.pyc
 ${PYSITELIB}/xapian/__init__.pyo
@@ -24,10 +24,11 @@ share/doc/xapian-bindings/python${PYTHON_3_OR_EMPTY}/html/_static/comment-close.
 share/doc/xapian-bindings/python${PYTHON_3_OR_EMPTY}/html/_static/comment.png
 share/doc/xapian-bindings/python${PYTHON_3_OR_EMPTY}/html/_static/default.css
 share/doc/xapian-bindings/python${PYTHON_3_OR_EMPTY}/html/_static/doctools.js
+share/doc/xapian-bindings/python${PYTHON_3_OR_EMPTY}/html/_static/documentation_options.js
 share/doc/xapian-bindings/python${PYTHON_3_OR_EMPTY}/html/_static/down-pressed.png
 share/doc/xapian-bindings/python${PYTHON_3_OR_EMPTY}/html/_static/down.png
 share/doc/xapian-bindings/python${PYTHON_3_OR_EMPTY}/html/_static/file.png
-share/doc/xapian-bindings/python${PYTHON_3_OR_EMPTY}/html/_static/jquery-3.1.0.js
+share/doc/xapian-bindings/python${PYTHON_3_OR_EMPTY}/html/_static/jquery-3.2.1.js
 share/doc/xapian-bindings/python${PYTHON_3_OR_EMPTY}/html/_static/jquery.js
 share/doc/xapian-bindings/python${PYTHON_3_OR_EMPTY}/html/_static/minus.png
 share/doc/xapian-bindings/python${PYTHON_3_OR_EMPTY}/html/_static/plus.png
