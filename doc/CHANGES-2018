@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3086 2018/07/06 07:52:59 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3087 2018/07/06 08:03:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4444,3 +4444,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/py-ptyprocess to 0.6.0 [adam 2018-07-06]
 	Updated net/py-celery to 4.2.0nb1 [adam 2018-07-06]
 	Updated security/py-ntlm-auth to 1.2.0 [adam 2018-07-06]
+	Updated textproc/py-pytoml to 0.1.18 [adam 2018-07-06]
+	Updated devel/py-xopen to 0.3.5 [adam 2018-07-06]
