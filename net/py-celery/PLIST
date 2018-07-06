@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2017/08/25 20:03:39 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/07/06 07:51:21 adam Exp $
 bin/celery${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -79,9 +79,9 @@ ${PYSITELIB}/celery/backends/__init__.pyo
 ${PYSITELIB}/celery/backends/amqp.py
 ${PYSITELIB}/celery/backends/amqp.pyc
 ${PYSITELIB}/celery/backends/amqp.pyo
-${PYSITELIB}/celery/backends/async.py
-${PYSITELIB}/celery/backends/async.pyc
-${PYSITELIB}/celery/backends/async.pyo
+${PYSITELIB}/celery/backends/asynchronous.py
+${PYSITELIB}/celery/backends/asynchronous.pyc
+${PYSITELIB}/celery/backends/asynchronous.pyo
 ${PYSITELIB}/celery/backends/base.py
 ${PYSITELIB}/celery/backends/base.pyc
 ${PYSITELIB}/celery/backends/base.pyo
