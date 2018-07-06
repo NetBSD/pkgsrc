@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/08/07 20:01:40 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2018/07/06 16:23:11 schmonz Exp $
 
 PKGNAME=		${LUA_PKGPREFIX}-${PKGNAME_MODULE}
-PKGREVISION=		1
 COMMENT=		Lua bindings for Xapian search engine
 HOMEPAGE=		https://xapian.org/docs/bindings/lua/
 

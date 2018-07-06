@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/08/02 04:42:23 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2018/07/06 16:23:12 schmonz Exp $
 
 PKGNAME=		${RUBY_PKGPREFIX}-${PKGNAME_MODULE}
-PKGREVISION=		1
 COMMENT=		Ruby bindings for Xapian search engine
 HOMEPAGE=		https://xapian.org/docs/bindings/ruby/
 
