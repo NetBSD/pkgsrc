@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3089 2018/07/06 10:36:10 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3090 2018/07/06 11:20:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4450,3 +4450,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-furl to 1.2 [adam 2018-07-06]
 	Updated sysutils/py-psutil to 5.4.6 [adam 2018-07-06]
 	Updated devel/py-deprecation to 2.0.5 [adam 2018-07-06]
+	Updated textproc/py-odfpy to 1.3.6 [adam 2018-07-06]
+	Updated textproc/py-tablib to 0.12.1nb2 [adam 2018-07-06]
+	Updated www/py-django-cors-headers to 2.3.0 [adam 2018-07-06]
+	Updated www/py-django-admin-rangefilter to 0.3.7 [adam 2018-07-06]
