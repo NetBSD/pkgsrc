@@ -1,0 +1,6 @@
+pyfolio is a Python library for performance and risk analysis of
+financial portfolios developed by Quantopian Inc. It works well with
+the Zipline open source backtesting library. At the core of pyfolio is
+a so-called tear sheet that consists of various individual plots that
+provide a comprehensive image of the performance of a trading
+algorithm.
