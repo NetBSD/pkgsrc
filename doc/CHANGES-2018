@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3090 2018/07/06 11:20:28 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3091 2018/07/06 14:11:20 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4454,3 +4454,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-tablib to 0.12.1nb2 [adam 2018-07-06]
 	Updated www/py-django-cors-headers to 2.3.0 [adam 2018-07-06]
 	Updated www/py-django-admin-rangefilter to 0.3.7 [adam 2018-07-06]
+	Updated audio/pulseaudio to 12.0 [ryoon 2018-07-06]
