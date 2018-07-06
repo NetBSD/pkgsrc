@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3088 2018/07/06 08:11:37 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3089 2018/07/06 10:36:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4448,3 +4448,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-xopen to 0.3.5 [adam 2018-07-06]
 	Updated devel/py-astor to 0.7.1 [adam 2018-07-06]
 	Updated www/py-furl to 1.2 [adam 2018-07-06]
+	Updated sysutils/py-psutil to 5.4.6 [adam 2018-07-06]
+	Updated devel/py-deprecation to 2.0.5 [adam 2018-07-06]
