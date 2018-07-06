@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2018/04/17 22:29:45 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2018/07/06 15:06:49 ryoon Exp $
 
 DISTNAME=	freerdp-1.0.2
-PKGREVISION=	30
+PKGREVISION=	31
 CATEGORIES=	net
 MASTER_SITES=	http://pub.freerdp.com/releases/
 

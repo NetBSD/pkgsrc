@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2018/01/28 20:10:43 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2018/07/06 15:06:44 ryoon Exp $
 
 DISTNAME=	speech-dispatcher-0.8.4
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	http://devel.freebsoft.org/pub/projects/speechd/
 
