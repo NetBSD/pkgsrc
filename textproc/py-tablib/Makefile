@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2018/03/24 13:55:08 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2018/07/06 11:15:23 adam Exp $
 
 DISTNAME=	tablib-0.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tablib/}
 
@@ -13,12 +13,11 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-odfpy-[0-9]*:../../textproc/py-odfpy
 DEPENDS+=	${PYPKGPREFIX}-openpyxl-[0-9]*:../../textproc/py-openpyxl
-DEPENDS+=	${PYPKGPREFIX}-pandas-[0-9]*:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-unicodecsv-[0-9]*:../../databases/py-unicodecsv
 DEPENDS+=	${PYPKGPREFIX}-xlrd-[0-9]*:../../textproc/py-xlrd
 DEPENDS+=	${PYPKGPREFIX}-xlwt-[0-9]*:../../textproc/py-xlwt
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
