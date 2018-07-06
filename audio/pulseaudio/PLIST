@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2017/10/02 19:21:15 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.27 2018/07/06 14:10:15 ryoon Exp $
 bin/esdcompat
 bin/pacat
 bin/pacmd
@@ -85,6 +85,8 @@ lib/pulse-${PULSELIBVER}/modules/module-allow-passthrough.a
 lib/pulse-${PULSELIBVER}/modules/module-allow-passthrough.so
 lib/pulse-${PULSELIBVER}/modules/module-always-sink.a
 lib/pulse-${PULSELIBVER}/modules/module-always-sink.so
+lib/pulse-${PULSELIBVER}/modules/module-always-source.a
+lib/pulse-${PULSELIBVER}/modules/module-always-source.so
 lib/pulse-${PULSELIBVER}/modules/module-augment-properties.a
 lib/pulse-${PULSELIBVER}/modules/module-augment-properties.so
 ${PLIST.bonjour}lib/pulse-${PULSELIBVER}/modules/module-bonjour-publish.a
@@ -135,6 +137,8 @@ lib/pulse-${PULSELIBVER}/modules/module-filter-apply.a
 lib/pulse-${PULSELIBVER}/modules/module-filter-apply.so
 lib/pulse-${PULSELIBVER}/modules/module-filter-heuristics.a
 lib/pulse-${PULSELIBVER}/modules/module-filter-heuristics.so
+${PLIST.gsettings}lib/pulse-${PULSELIBVER}/modules/module-gsettings.a
+${PLIST.gsettings}lib/pulse-${PULSELIBVER}/modules/module-gsettings.so
 lib/pulse-${PULSELIBVER}/modules/module-http-protocol-tcp.a
 lib/pulse-${PULSELIBVER}/modules/module-http-protocol-tcp.so
 lib/pulse-${PULSELIBVER}/modules/module-http-protocol-unix.a
@@ -236,6 +240,7 @@ ${PLIST.avahi}lib/pulse-${PULSELIBVER}/modules/module-zeroconf-publish.so
 lib/pulseaudio/libpulsecommon-${PULSELIBVER}.la
 lib/pulseaudio/libpulsecore-${PULSELIBVER}.la
 ${PLIST.oss}lib/pulseaudio/libpulsedsp.la
+${PLIST.gsettings}libexec/pulse/gsettings-helper
 man/man1/esdcompat.1
 man/man1/pacat.1
 man/man1/pacmd.1
@@ -253,6 +258,7 @@ man/man5/default.pa.5
 man/man5/pulse-cli-syntax.5
 man/man5/pulse-client.conf.5
 man/man5/pulse-daemon.conf.5
+${PLIST.gsettings}share/GConf/gsettings/pulseaudio.convert
 share/bash-completion/completions/pacat
 share/bash-completion/completions/pacmd
 share/bash-completion/completions/pactl
@@ -268,6 +274,7 @@ share/examples/pulseaudio/default.pa
 share/examples/pulseaudio/pulseaudio-system.conf
 ${PLIST.x11}share/examples/pulseaudio/pulseaudio.desktop
 share/examples/pulseaudio/system.pa
+${PLIST.gsettings}share/glib-2.0/schemas/org.freedesktop.pulseaudio.gschema.xml
 share/locale/as/LC_MESSAGES/pulseaudio.mo
 share/locale/be/LC_MESSAGES/pulseaudio.mo
 share/locale/bn_IN/LC_MESSAGES/pulseaudio.mo
