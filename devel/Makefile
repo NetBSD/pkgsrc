@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2693 2018/07/05 04:34:12 minskim Exp $
+# $NetBSD: Makefile,v 1.2694 2018/07/06 03:13:48 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -2037,6 +2037,7 @@ SUBDIR+=	py-isort
 SUBDIR+=	py-jaraco.classes
 SUBDIR+=	py-jaraco_util
 SUBDIR+=	py-jersey
+SUBDIR+=	py-joblib
 SUBDIR+=	py-jupyter_client
 SUBDIR+=	py-jupyter_core
 SUBDIR+=	py-kafka
