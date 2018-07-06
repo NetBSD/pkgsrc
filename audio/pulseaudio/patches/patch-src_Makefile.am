@@ -1,11 +1,11 @@
-$NetBSD: patch-src_Makefile.am,v 1.1 2014/06/09 13:08:19 ryoon Exp $
+$NetBSD: patch-src_Makefile.am,v 1.2 2018/07/06 14:10:15 ryoon Exp $
 
 Install files into pkgsrc example paths; will be correctly
 installed by pkgsrc configuration file framework.
 
---- src/Makefile.am.orig	2014-02-14 13:45:45.000000000 +0000
+--- src/Makefile.am.orig	2018-06-18 13:33:47.000000000 +0000
 +++ src/Makefile.am
-@@ -27,14 +27,14 @@ pulseincludedir=$(includedir)/pulse
+@@ -25,14 +25,14 @@ pulseincludedir=$(includedir)/pulse
  pulsecoreincludedir=$(includedir)/pulsecore
  pulselibexecdir=$(libexecdir)/pulse
  if HAVE_X11
@@ -20,5 +20,5 @@ installed by pkgsrc configuration file framework.
 -dbuspolicydir=$(sysconfdir)/dbus-1/system.d
 +dbuspolicydir=${EGDIR}
  endif
- 
- ###################################
+ if HAVE_GSETTINGS
+ gsettingsdataconvertdir=$(datadir)/GConf/gsettings

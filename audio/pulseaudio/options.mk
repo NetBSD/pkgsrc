@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.7 2018/03/07 11:57:28 wiz Exp $
+# $NetBSD: options.mk,v 1.8 2018/07/06 14:10:15 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pulseaudio
-PKG_SUPPORTED_OPTIONS=	avahi fftw x11
+PKG_SUPPORTED_OPTIONS=	avahi fftw gsettings x11
 PKG_SUGGESTED_OPTIONS=	avahi x11
 PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
 .include "../../mk/bsd.options.mk"
@@ -14,6 +14,16 @@ PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
 PLIST.avahi=		yes
 .else
 CONFIGURE_ARGS+=	--disable-avahi
+.endif
+
+###
+### gsettings
+###
+.if !empty(PKG_OPTIONS:Mgsettings)
+PLIST.gsettings=	yes
+CONFIGURE_ARGS+=	--enable-gsettings
+.else
+CONFIGURE_ARGS+=	--disable-gsettings
 .endif
 
 ###
