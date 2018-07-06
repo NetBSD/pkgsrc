@@ -1,0 +1,11 @@
+bin/csv2ods @PREFIX@/bin/csv2ods-@PYVERSSUFFIX@
+bin/mailodf @PREFIX@/bin/mailodf-@PYVERSSUFFIX@
+bin/odf2mht @PREFIX@/bin/odf2mht-@PYVERSSUFFIX@
+bin/odf2xhtml @PREFIX@/bin/odf2xhtml-@PYVERSSUFFIX@
+bin/odf2xml @PREFIX@/bin/odf2xml-@PYVERSSUFFIX@
+bin/odfimgimport @PREFIX@/bin/odfimgimport-@PYVERSSUFFIX@
+bin/odflint @PREFIX@/bin/odflint-@PYVERSSUFFIX@
+bin/odfmeta @PREFIX@/bin/odfmeta-@PYVERSSUFFIX@
+bin/odfoutline @PREFIX@/bin/odfoutline-@PYVERSSUFFIX@
+bin/odfuserfield @PREFIX@/bin/odfuserfield-@PYVERSSUFFIX@
+bin/xml2odf @PREFIX@/bin/xml2odf-@PYVERSSUFFIX@

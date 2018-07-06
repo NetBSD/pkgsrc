@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2017/09/04 19:50:16 adam Exp $
-bin/csv2ods
-bin/mailodf
-bin/odf2mht
-bin/odf2xhtml
-bin/odf2xml
-bin/odfimgimport
-bin/odflint
-bin/odfmeta
-bin/odfoutline
-bin/odfuserfield
-bin/xml2odf
+@comment $NetBSD: PLIST,v 1.2 2018/07/06 11:03:10 adam Exp $
+bin/csv2ods-${PYVERSSUFFIX}
+bin/mailodf-${PYVERSSUFFIX}
+bin/odf2mht-${PYVERSSUFFIX}
+bin/odf2xhtml-${PYVERSSUFFIX}
+bin/odf2xml-${PYVERSSUFFIX}
+bin/odfimgimport-${PYVERSSUFFIX}
+bin/odflint-${PYVERSSUFFIX}
+bin/odfmeta-${PYVERSSUFFIX}
+bin/odfoutline-${PYVERSSUFFIX}
+bin/odfuserfield-${PYVERSSUFFIX}
+bin/xml2odf-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
