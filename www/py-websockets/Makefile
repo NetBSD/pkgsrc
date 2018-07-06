@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/06/18 10:46:26 adam Exp $
+# $NetBSD: Makefile,v 1.6 2018/07/06 08:04:21 adam Exp $
 
 DISTNAME=	websockets-5.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ PLIST_VARS+=	py35 py36
 .if !empty(_PYTHON_VERSION:M35)
 PLIST.py35=		yes
 .endif
-.if !empty(_PYTHON_VERSION:M36)
+.if !empty(_PYTHON_VERSION:M3[67])
 PLIST.py35=		yes
 PLIST.py36=		yes
 .endif
