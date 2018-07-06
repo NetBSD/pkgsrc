@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2018/02/21 16:59:59 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2018/07/06 18:15:40 tsutsui Exp $
 #
 
 DISTNAME=		gobject-introspection-${VERSION}
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-${DISTNAME}
+PKGREVISION=		1
 COMMENT=		Ruby binding of Gobject Introspection
 CATEGORIES=		devel
 
