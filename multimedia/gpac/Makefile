@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2018/04/29 21:31:56 adam Exp $
+# $NetBSD: Makefile,v 1.61 2018/07/06 15:06:48 ryoon Exp $
 
 DISTNAME=	gpac-0.7.1
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gpac/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
