@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2017/11/23 10:29:03 adam Exp $
+$NetBSD: distinfo,v 1.8 2018/07/06 08:09:50 adam Exp $
 
-SHA1 (astor-0.6.2.tar.gz) = cce1bf23ddfb36620ac3518b2d6a7758da248adc
-RMD160 (astor-0.6.2.tar.gz) = 17d3fc5ae1752bfa414cf6a1bc98d7c5f2d20c98
-SHA512 (astor-0.6.2.tar.gz) = a6df0e65f429025caa0fbdd95f119fff94867709c10ade99fdc681a9886e916b67411384bf6ca37ceea478c65add5dc0a74585e17aafc706c8f0363e3c8585a4
-Size (astor-0.6.2.tar.gz) = 29494 bytes
+SHA1 (astor-0.7.1.tar.gz) = 19f3a07d02f44b08dc0748395f79afef28f2e561
+RMD160 (astor-0.7.1.tar.gz) = c00e731d5db77b91acf9a550171f69b17e440734
+SHA512 (astor-0.7.1.tar.gz) = c52fa0b8ec5003c04d978c23361d423283a43be2c027d8d39ce1c45528dbbedb98b2a269ce97152bd9a4c942d95a6ec55720757b7811df4f34bb6744e2fff781
+Size (astor-0.7.1.tar.gz) = 30633 bytes
