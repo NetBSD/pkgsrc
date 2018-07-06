@@ -1,17 +1,14 @@
-$NetBSD: distinfo,v 1.65 2018/06/19 02:25:58 maya Exp $
+$NetBSD: distinfo,v 1.66 2018/07/06 14:10:15 ryoon Exp $
 
-SHA1 (pulseaudio-11.1.tar.xz) = 53bde72b6bfe715c19b1519db8845f7a58346b67
-RMD160 (pulseaudio-11.1.tar.xz) = bb625751165be83c3ff4cbb0b22c5a28007e61fe
-SHA512 (pulseaudio-11.1.tar.xz) = 8863d8d7aede0d9a4d158e84e7bece91747c335f9ac98c7b21fafe76b762f8817e1125307aa46e561e540d2c40525e91f51a55ec34ac55d58fd5980199856a7a
-Size (pulseaudio-11.1.tar.xz) = 1648924 bytes
-SHA1 (patch-aa) = d99611639f360bb274a2a24636a3cce122cb10fc
-SHA1 (patch-configure.ac) = ec7b610376aa3504dc9244de83e3d7d053819ee3
-SHA1 (patch-src_Makefile.am) = debe40be5d1155f6cb0d5ae90119dece4e090b02
-SHA1 (patch-src_modules_module-detect.c) = f202194b03a2023959d772392d58297f963f0ada
+SHA1 (pulseaudio-12.0.tar.xz) = 9b0dcd62ae4c24542e13644e5fac3de5b13d6db7
+RMD160 (pulseaudio-12.0.tar.xz) = 213986308164c1993bb2b471aba8d8b60037b4b6
+SHA512 (pulseaudio-12.0.tar.xz) = e9b02522f1e9cc2cf2e9db3364153fff5bc70561df34bc8e254e373a24c45585c1c722de8b6ebd7cd1814f523cf29b67c6940390a6fcc1ccbdde5aeff48f8d8c
+Size (pulseaudio-12.0.tar.xz) = 1657212 bytes
+SHA1 (patch-aa) = 212768eaacf1a2a29449665bc6b48ace6f1af9c8
+SHA1 (patch-configure.ac) = a9d2e6e7a6b4d9bbaf2cefdd6e6ea0432d544e4a
+SHA1 (patch-src_Makefile.am) = 5dc602576f0d01498596cf8d1c3f3c12bfb5830b
+SHA1 (patch-src_modules_module-detect.c) = 09cce0611e8a8d793c7636e8d2a76e505ac7f0ef
 SHA1 (patch-src_modules_oss_module-oss.c) = 399ac178ae832619253ce8dd985edbed23db86e7
 SHA1 (patch-src_modules_raop_raop-client.h) = 9fb7ae86a6852022f53aee3765777bd136250ffb
-SHA1 (patch-src_pulsecore_memfd-wrappers.h) = e39b3bff363bb5f8a4f21f879d56cd6f3df460ac
 SHA1 (patch-src_pulsecore_mix__neon.c) = 6f6d33d38024d65045d637d48276e1ba92b81342
-SHA1 (patch-src_pulsecore_svolume__mmx.c) = c34d153e3bfdb812eb7bd70fa330a9ec674c2dc2
-SHA1 (patch-src_pulsecore_svolume__sse.c) = 47c97c1af947133f2a7b330aed38792bb0e7ef09
 SHA1 (patch-src_tests_rtpoll-test.c) = 3584aeda2b6f7eb14af9cb5c665a31d972a306ae
