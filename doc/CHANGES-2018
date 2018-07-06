@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3094 2018/07/06 16:15:46 prlw1 Exp $
+$NetBSD: CHANGES-2018,v 1.3095 2018/07/06 16:22:06 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4458,3 +4458,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/p11-kit to 0.23.12 [prlw1 2018-07-06]
 	Updated devel/ruby-activesupport32 to 3.2.22.5nb2 [taca 2018-07-06]
 	Updated security/gnutls to 3.6.2 [prlw1 2018-07-06]
+	Updated textproc/xapian to 1.4.6 [schmonz 2018-07-06]
