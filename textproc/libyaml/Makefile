@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2016/09/01 16:22:02 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2018/07/06 06:50:40 adam Exp $
 
-DISTNAME=	yaml-0.1.7
+DISTNAME=	yaml-0.2.1
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	http://pyyaml.org/download/libyaml/
@@ -10,8 +10,8 @@ HOMEPAGE=	http://pyyaml.org/wiki/LibYAML
 COMMENT=	YAML 1.1 parser and emitter written in C
 LICENSE=	mit
 
-GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	yaml-0.1.pc.in
 TEST_TARGET=		check
 
