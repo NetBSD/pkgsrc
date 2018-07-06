@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2018/04/18 00:46:25 schmonz Exp $
+# $NetBSD: Makefile,v 1.8 2018/07/06 15:33:39 prlw1 Exp $
 
-DISTNAME=	p11-kit-0.23.10
+DISTNAME=	p11-kit-0.23.12
 CATEGORIES=	security
 #MASTER_SITES=	http://p11-glue.freedesktop.org/releases/
 MASTER_SITES+=	${MASTER_SITE_GITHUB:=p11-glue/}
