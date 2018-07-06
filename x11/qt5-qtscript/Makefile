@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2018/06/19 07:21:24 adam Exp $
+# $NetBSD: Makefile,v 1.38 2018/07/06 15:06:42 ryoon Exp $
 
 DISTNAME=	qtscript-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtscript-${QTVERSION}
+PKGREVISION=	2
 COMMENT=	Qt5 module for script
 
 BUILD_TARGET=		sub-src
