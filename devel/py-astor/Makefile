@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2017/11/23 10:29:03 adam Exp $
+# $NetBSD: Makefile,v 1.9 2018/07/06 08:09:50 adam Exp $
 
-DISTNAME=	astor-0.6.2
+DISTNAME=	astor-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/astor/}
