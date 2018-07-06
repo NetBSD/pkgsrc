@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.19 2017/09/20 13:19:29 jperkin Exp $
+$NetBSD: patch-aa,v 1.20 2018/07/06 14:10:15 ryoon Exp $
 
 ioctl() takes u_long argument on NetBSD.
 On NetBSD<6 and 6.99.0-6.99.7, use third parameter in ioctl instead of varargs.
@@ -6,7 +6,7 @@ stat() system call has been versioned, use latest version when dlopen()ing.
 Try more typical device names.
 SOUND_PCM_* is not available on SunOS.
 
---- src/utils/padsp.c.orig	2017-09-03 11:41:12.000000000 +0000
+--- src/utils/padsp.c.orig	2018-05-11 11:43:31.000000000 +0000
 +++ src/utils/padsp.c
 @@ -48,6 +48,10 @@
  #include <linux/sockios.h>
@@ -109,13 +109,14 @@ SOUND_PCM_* is not available on SunOS.
      return ret;
  }
  
+-#ifndef __GLIBC__
 +/* NetBSD < 6 and 6.99.0 - 6.99.6 used a different ioctl() definition */
 +#if defined(__NetBSD__) && (__NetBSD_Version__ < 600000000 ||  \
 +    (__NetBSD_Version__ > 699000000 && __NetBSD_Version__ < 699000700) )
 +# define OLD_NETBSD_IOCTL_CALL
 +#endif
 +
- #ifdef sun
++#if !defined(__GLIBC__) && !defined(__NetBSD__)
  int ioctl(int fd, int request, ...) {
 +#elif defined(OLD_NETBSD_IOCTL_CALL)
 +int ioctl(int fd, u_long request, void *_argp) {
