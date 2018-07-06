@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.110 2018/07/05 14:20:43 jperkin Exp $
+# $NetBSD: mozilla-common.mk,v 1.111 2018/07/06 20:50:03 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -8,12 +8,13 @@
 # Python 2.7 and Python 3.5 or later are required simultaneously.
 PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_FOR_BUILD_ONLY=		tool
-.if !empty(PYTHON_VERSION_DEFAULT:M36) || !empty(PYTHON_VERSION_DEFAULT:M35)
+.if !empty(PYTHON_VERSION_DEFAULT:M37) || !empty(PYTHON_VERSION_DEFAULT:M36) \
+	|| !empty(PYTHON_VERSION_DEFAULT:M35)
 TOOL_DEPENDS+=		python${PYTHON_VERSION_DEFAULT}-[0-9]*:../../lang/python${PYTHON_VERSION_DEFAULT}
 ALL_ENV+=	PYTHON3=${LOCALBASE}/bin/python${PYTHON_VERSION_DEFAULT:S/3/3./}
 .else
-TOOL_DEPENDS+=		python36-[0-9]*:../../lang/python36
-ALL_ENV+=	PYTHON3=${LOCALBASE}/bin/python3.6
+TOOL_DEPENDS+=		python37-[0-9]*:../../lang/python37
+ALL_ENV+=	PYTHON3=${LOCALBASE}/bin/python3.7
 .endif
 
 HAS_CONFIGURE=		yes
