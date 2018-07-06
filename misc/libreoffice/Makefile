@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.158 2018/06/25 13:34:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.159 2018/07/06 03:28:45 ryoon Exp $
 
 VERREL=		6.0.5
 VERRC=		2
@@ -31,7 +31,7 @@ pre-build:
 .endif
 
 GCC_REQD+=	4.6
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 
 CHECK_SHLIBS_SUPPORTED=	no
 # configure will be regenerated.
