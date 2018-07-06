@@ -1,18 +1,9 @@
-$NetBSD: patch-lib_Makefile.in,v 1.8 2017/09/06 13:41:26 wiz Exp $
+$NetBSD: patch-lib_Makefile.in,v 1.9 2018/07/06 16:15:28 prlw1 Exp $
 
 Correct path to locale files.
 
 --- lib/Makefile.in.orig	2015-05-03 17:30:56.000000000 +0000
 +++ lib/Makefile.in
-@@ -386,7 +386,7 @@ am__v_lt_0 = --silent
- am__v_lt_1 = 
- libgnutls_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
- 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
--	$(libgnutls_la_LDFLAGS) $(LDFLAGS) -o $@
-+	$(libgnutls_la_LDFLAGS) $(LDFLAGS) -lgmp -o $@
- @ENABLE_CXX_TRUE@libgnutlsxx_la_DEPENDENCIES = libgnutls.la
- am__libgnutlsxx_la_SOURCES_DIST = gnutlsxx.cpp
- @ENABLE_CXX_TRUE@am_libgnutlsxx_la_OBJECTS =  \
 @@ -1443,7 +1443,7 @@ infodir = @infodir@
  install_sh = @install_sh@
  libdir = @libdir@
