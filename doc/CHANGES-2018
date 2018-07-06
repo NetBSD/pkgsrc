@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3096 2018/07/06 16:24:04 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.3097 2018/07/06 19:13:00 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4460,3 +4460,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/gnutls to 3.6.2 [prlw1 2018-07-06]
 	Updated textproc/xapian to 1.4.6 [schmonz 2018-07-06]
 	Updated textproc/xapian-omega to 1.4.6 [schmonz 2018-07-06]
+	Updated textproc/ruby-nokogiri to 1.8.4 [tsutsui 2018-07-06]
