@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.46 2018/04/17 12:58:21 mef Exp $
+$NetBSD: distinfo,v 1.47 2018/07/07 12:41:47 mef Exp $
 
-SHA1 (gtkwave-3.3.89.tar.gz) = 1fe2aad8c749185a696ce2cd82a5ffe9ccdd757f
-RMD160 (gtkwave-3.3.89.tar.gz) = 2339be910f70a9f1a9dbe0c83ef31662b1af1e41
-SHA512 (gtkwave-3.3.89.tar.gz) = fc90f4231184fcf8a5d6a91718e74a1b647c678e610ea9e323a221c4d1527586c7db5589802ad6ca81ffc1c0f103934ba791461cea9be695d3223b0606aa6542
-Size (gtkwave-3.3.89.tar.gz) = 4183880 bytes
+SHA1 (gtkwave-3.3.91.tar.gz) = ef4375fd2273a4f89ec0d1bdcfcee1389c493bfc
+RMD160 (gtkwave-3.3.91.tar.gz) = 716150c029d29f59bab7a9f7e92ee2802b66714d
+SHA512 (gtkwave-3.3.91.tar.gz) = 5182f17d5453059e472928a7be9ce3eefe1cb33e03307bee10f3ce812e68f15ea9d59f86ec4c29b6b7a415bfe5736729c70bbdfd76b40002cad0056461d26a97
+Size (gtkwave-3.3.91.tar.gz) = 4189023 bytes
 SHA1 (patch-aa) = b734be7195cfcddf15ddc7741a53e9d32b56b1f2
 SHA1 (patch-ab) = a1f6aca8fca90f8bc88a41bde275665b2ea098d1
 SHA1 (patch-contrib_bundle__for__osx_gtkwave__bin__launcher.sh) = ca5fcdf744a4f89d06385f3d80696732295f8760
