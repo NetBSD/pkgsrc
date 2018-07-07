@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.13 2016/11/15 11:19:09 jperkin Exp $
+$NetBSD: README,v 1.14 2018/07/07 13:18:29 bsiegert Exp $
 
 To try to get pkgsrc working on your system, please try the following
 as root:
@@ -24,6 +24,12 @@ The defaults for the arguments are as follows:
 
 The working directory will be created if it doesn't exist and has to be
 writable by the user executing ./bootstrap.
+
+The bootstrap script will exit if the bootstrap directory already exists,
+for example if you have run the script before. In this case, clean it up
+by running:
+
+# ./cleanup
 
 Make sure that you have a working C compiler and make(1) binary in
 your path.  Please note that on some systems (IRIX and SunOS, for example),
