@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3111 2018/07/07 10:32:28 wen Exp $
+$NetBSD: CHANGES-2018,v 1.3112 2018/07/07 11:19:02 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4478,3 +4478,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/py-tempora to 1.13 [adam 2018-07-07]
 	Updated devel/p5-parent to 0.237 [wen 2018-07-07]
 	Updated devel/p5-Log-Any to 1.706 [wen 2018-07-07]
+	Updated textproc/p5-String-CRC32 to 1.7 [wen 2018-07-07]
