@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1217 2018/06/22 17:09:43 he Exp $
+# $NetBSD: Makefile,v 1.1218 2018/07/07 12:37:52 bsiegert Exp $
 #
 
 COMMENT=	Networking tools
@@ -357,7 +357,6 @@ SUBDIR+=	monsoon
 SUBDIR+=	mosh
 SUBDIR+=	mouse-pppoe
 SUBDIR+=	mping
-SUBDIR+=	mppe-lkm
 SUBDIR+=	mrstat
 SUBDIR+=	mrt
 SUBDIR+=	mrtg
