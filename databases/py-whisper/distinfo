@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2015/12/11 21:34:15 riz Exp $
+$NetBSD: distinfo,v 1.2 2018/07/07 04:56:45 minskim Exp $
 
-SHA1 (whisper-0.9.15.tar.gz) = 7adfeb16a952dcf3f3aacb1d030f5e1865472ce3
-RMD160 (whisper-0.9.15.tar.gz) = 308426c54834272e0a829bd6c4be60c115f2983a
-SHA512 (whisper-0.9.15.tar.gz) = 2fe7613ad15a994a63cb8dc0c4e91984c97d33e85f2b0016f329bbaccbd95f8641d8b30ed041b069ff1d639eec6fceef330aaa86313576daece9234121ca0eba
-Size (whisper-0.9.15.tar.gz) = 21083 bytes
+SHA1 (whisper-1.1.3.tar.gz) = 3a4a959c5859f5d7260dd251c0c5a4000a77255f
+RMD160 (whisper-1.1.3.tar.gz) = e3e774b9ceec193c04d1e953b76c5633bddeb38c
+SHA512 (whisper-1.1.3.tar.gz) = abad7c8abbf6ea4dd07a644ec6347be24ebac2a669fc584e5be8a41aa6476544ccbbb16b96a867496e701d04a0fe6bf91c1d70af2e360bfdc0dd6034eb9a7003
+Size (whisper-1.1.3.tar.gz) = 24490 bytes
+SHA1 (patch-bin_rrd2whisper.py) = 332b5ceec5d7ebec9f7428b94875bacece5a5f43
