@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3115 2018/07/07 11:43:01 wen Exp $
+$NetBSD: CHANGES-2018,v 1.3116 2018/07/07 11:59:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4482,3 +4482,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/p5-Text-CSV_XS to 1.36 [wen 2018-07-07]
 	Updated time/p5-Test-Time to 0.06 [wen 2018-07-07]
 	Updated time/p5-Time-Duration-Parse to 0.14 [wen 2018-07-07]
+	Updated graphics/gnuplot to 5.2.4 [adam 2018-07-07]
+	Updated games/openttd to 1.8.0 [adam 2018-07-07]
