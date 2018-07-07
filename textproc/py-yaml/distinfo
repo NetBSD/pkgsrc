@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2016/09/01 17:01:46 wiz Exp $
+$NetBSD: distinfo,v 1.9 2018/07/07 08:21:59 adam Exp $
 
-SHA1 (PyYAML-3.12.tar.gz) = cb7fd3e58c129494ee86e41baedfec69eb7dafbe
-RMD160 (PyYAML-3.12.tar.gz) = 8134421eb1b091ca3ee66ddf8d385f92069e7b73
-SHA512 (PyYAML-3.12.tar.gz) = e16d8b7f4f026b6a95b11fb59c54ec5f114f6f516294eaa95e718abdf5d37c17a9c4b5e0a0a61fca04e801792d9b7fb801087cf849ff22b9581f6af204b1883a
-Size (PyYAML-3.12.tar.gz) = 253011 bytes
+SHA1 (PyYAML-3.13.tar.gz) = 22f95fe2f5ef29ab17110f92c7186e2cfde6b419
+RMD160 (PyYAML-3.13.tar.gz) = 83e7c03acd667f95cf68ed4559aec3ecf3fc79ac
+SHA512 (PyYAML-3.13.tar.gz) = 93642286d0317e2fe970632c36d38ce6030f7cabcf971f28e3a1054f07390fcee5baaf7f167e7c9690dbd7b2adc61f5b7d75a218ace0abca34ff8815486cfdd7
+Size (PyYAML-3.13.tar.gz) = 270607 bytes
 SHA1 (patch-setup.py) = 8718125829210a220c8eaf2d87744cc05f024b38
