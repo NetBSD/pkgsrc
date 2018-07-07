@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3109 2018/07/07 09:03:58 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3110 2018/07/07 10:27:19 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4476,3 +4476,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-jaraco.classes to 1.5 [adam 2018-07-07]
 	Added devel/py-jaraco.functools version 1.20 [adam 2018-07-07]
 	Updated time/py-tempora to 1.13 [adam 2018-07-07]
+	Updated devel/p5-parent to 0.237 [wen 2018-07-07]
