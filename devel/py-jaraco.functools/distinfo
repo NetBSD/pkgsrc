@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/07/07 09:00:15 adam Exp $
+
+SHA1 (jaraco.functools-1.20.tar.gz) = 9cb562de7aa057cc7cea157165c4e7729712795e
+RMD160 (jaraco.functools-1.20.tar.gz) = a28c899336c9cf2e4249be98689a0a70cc3712a2
+SHA512 (jaraco.functools-1.20.tar.gz) = ba17b567dfcadb0d8ff1cc7a6ed07f2a23abfd42e73f3d815a6fa19d9be97d6af0c90bff7fb5e7ef67012ea5d931e9babc963da8a7105ba6a92d5c43c7126e04
+Size (jaraco.functools-1.20.tar.gz) = 11063 bytes

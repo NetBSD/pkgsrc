@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2695 2018/07/07 08:16:21 joerg Exp $
+# $NetBSD: Makefile,v 1.2696 2018/07/07 09:00:15 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2036,6 +2036,7 @@ SUBDIR+=	py-iso-639
 SUBDIR+=	py-iso3166
 SUBDIR+=	py-isort
 SUBDIR+=	py-jaraco.classes
+SUBDIR+=	py-jaraco.functools
 SUBDIR+=	py-jaraco_util
 SUBDIR+=	py-jersey
 SUBDIR+=	py-joblib
