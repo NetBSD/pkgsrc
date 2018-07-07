@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3110 2018/07/07 10:27:19 wen Exp $
+$NetBSD: CHANGES-2018,v 1.3111 2018/07/07 10:32:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4477,3 +4477,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/py-jaraco.functools version 1.20 [adam 2018-07-07]
 	Updated time/py-tempora to 1.13 [adam 2018-07-07]
 	Updated devel/p5-parent to 0.237 [wen 2018-07-07]
+	Updated devel/p5-Log-Any to 1.706 [wen 2018-07-07]
