@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2017/07/10 14:01:11 wen Exp $
+$NetBSD: distinfo,v 1.7 2018/07/07 11:18:15 wen Exp $
 
-SHA1 (String-CRC32-1.6.tar.gz) = 4394e420754c7f5d5e857e482657182d4ac1e866
-RMD160 (String-CRC32-1.6.tar.gz) = 0d96fa78a58845a6f763bb731c84680808092d54
-SHA512 (String-CRC32-1.6.tar.gz) = e8915066edca5407de5c42cf6ec6367cfc8662d3c353ee7b9150e372fccbca136946a8e30ec18f4ccba3a08d4864387f3cad01b3b0117e019927b72c9081fe39
-Size (String-CRC32-1.6.tar.gz) = 7713 bytes
+SHA1 (String-CRC32-1.7.tar.gz) = 56a3763d0632ba6da2e4e57e1f05a8e986fe892a
+RMD160 (String-CRC32-1.7.tar.gz) = 523df32127fad05aa725645542ef9ec6279a68f0
+SHA512 (String-CRC32-1.7.tar.gz) = 395ea153e808e8011aa8b4c68d4ae8d8bce24edc2f60b55d56d87f95d20b4cc5ee7a6278e45a1580cdff8fcb1eac8723ac011350906ad69649aa933c46f9b31d
+Size (String-CRC32-1.7.tar.gz) = 7859 bytes
