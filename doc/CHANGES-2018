@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3108 2018/07/07 08:31:02 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3109 2018/07/07 09:03:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4473,3 +4473,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/py-hg-evolve version 8.0.1 [joerg 2018-07-07]
 	Updated textproc/py-yaml to 3.13 [adam 2018-07-07]
 	Updated textproc/py-m2r to 0.1.15 [adam 2018-07-07]
+	Updated devel/py-jaraco.classes to 1.5 [adam 2018-07-07]
+	Added devel/py-jaraco.functools version 1.20 [adam 2018-07-07]
+	Updated time/py-tempora to 1.13 [adam 2018-07-07]
