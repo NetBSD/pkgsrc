@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3102 2018/07/07 04:57:08 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.3103 2018/07/07 07:22:12 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4466,3 +4466,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/wordpress to 4.9.7 [wen 2018-07-07]
 	Added math/sundials version 3.1.1 [minskim 2018-07-07]
 	Updated databases/py-whisper to 1.1.3 [minskim 2018-07-07]
+	Updated inputmethod/libskk to 1.0.4 [ryoon 2018-07-07]
