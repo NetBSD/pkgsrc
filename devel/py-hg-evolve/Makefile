@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/07/07 08:15:41 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/07 21:17:02 joerg Exp $
 
 DISTNAME=	hg-evolve-8.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-mercurial>=4.3.1:../../devel/py-mercurial
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # See Mercurial itself.
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # See Mercurial itself.
 PYDISTUTILSPKG=	YES
 
 post-install:
