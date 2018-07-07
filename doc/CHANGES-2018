@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3099 2018/07/06 20:54:16 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.3100 2018/07/07 02:57:35 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4463,3 +4463,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/ruby-nokogiri to 1.8.4 [tsutsui 2018-07-06]
 	Updated www/firefox to 61.0.1 [ryoon 2018-07-06]
 	Updated www/firefox-l10n to 61.0.1 [ryoon 2018-07-06]
+	Updated www/wordpress to 4.9.7 [wen 2018-07-07]
