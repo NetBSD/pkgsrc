@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18441 2018/07/07 11:59:35 adam Exp $
+$NetBSD: TODO,v 1.18442 2018/07/07 12:19:19 wen Exp $
 
 Suggested new packages
 ======================
@@ -348,7 +348,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o PAM-0.99.7.1
 	o Pantomime-1.2.2
 	o R-DAAG-1.22
-	o R-RPostgreSQL-0.4
 	o R-RandomFields-3.1.8
 	o R-akima-11
 	o R-gdata-2.17.0
