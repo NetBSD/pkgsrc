@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2018/05/26 21:26:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.66 2018/07/07 11:48:18 gdt Exp $
 
 DISTNAME=	openjdk-1.8.172-20180527
 PKGNAME=	openjdk8-1.8.172
@@ -270,6 +270,9 @@ MAKE_ENV+=	STRIP=${PREFIX}/bin/gstrip
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+# \todo Explain why cups needs to be included, because having the
+# package installed is unexpected for those who have not chosen to use
+# cups.
 BUILDLINK_DEPMETHOD.cups-base?=	build
 .include "../../print/cups-base/buildlink3.mk"
 .include "../../mk/java-env.mk"
