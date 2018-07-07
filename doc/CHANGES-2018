@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3105 2018/07/07 07:52:17 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3106 2018/07/07 07:53:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4469,3 +4469,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated inputmethod/libskk to 1.0.4 [ryoon 2018-07-07]
 	Updated x11/libXinerama to 1.1.4 [wiz 2018-07-07]
 	Updated x11/libXxf86misc to 1.0.4 [wiz 2018-07-07]
+	Updated x11/libXScrnSaver to 1.2.3 [wiz 2018-07-07]
