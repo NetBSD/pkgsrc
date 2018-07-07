@@ -1,0 +1,3 @@
+The Evolve Extension extends the "changeset evolution" features of
+Mercurial core. It provides a set of commands to easily mutate history as
+well as the topics extension.
