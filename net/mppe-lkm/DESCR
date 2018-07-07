@@ -1,4 +1,0 @@
-To get encryption over a PPTP connection, you need the kernel to support the
-MPPE algorithm.  It is used as a PPP compression module, and the mppe-lkm
-package provides a LKM (Loadable Kernel Module) that will install the
-functionality into your NetBSD kernel.
