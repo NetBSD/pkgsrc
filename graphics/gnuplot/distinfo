@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.37 2017/11/03 15:00:10 adam Exp $
+$NetBSD: distinfo,v 1.38 2018/07/07 11:59:05 adam Exp $
 
-SHA1 (gnuplot-5.2.1.tar.gz) = 4e42e668fd0694c2bd475b0104a010eac64e268d
-RMD160 (gnuplot-5.2.1.tar.gz) = 5df7dc77b507815cc3616000c30daa39d70dadaf
-SHA512 (gnuplot-5.2.1.tar.gz) = e0ef984472ded7b77dbf2094782b18de717c67dcee8d1cc0576f996fcfe88a182f71fb7e1f7eacf2321fdb093250fcb95069512c48216027170f7cf95e7d5929
-Size (gnuplot-5.2.1.tar.gz) = 5295961 bytes
+SHA1 (gnuplot-5.2.4.tar.gz) = e31e8d9875216f65f9ed0e57b2f62d9dfb0f0714
+RMD160 (gnuplot-5.2.4.tar.gz) = fcf8e239cb40b9bd0e4bf19b3da398e81b4abec5
+SHA512 (gnuplot-5.2.4.tar.gz) = b276e379fe5e493a176750d9ccd84a8b02c8784b1d8701dc4252945a7e9e0455eebba0085d0d98824a4acf5da0def3b71ad3362803365a32e7c29f18af7854bb
+Size (gnuplot-5.2.4.tar.gz) = 5292321 bytes
 SHA1 (patch-configure) = 0881a50206c9796a2f34b93b72f6cd6eae127a15
-SHA1 (patch-src_command.c) = 1ba4112b77256b72e18b43b0f769aec7869d3131
 SHA1 (patch-src_gp__hist.h) = b1549572ba1bacad5ae76e7a5a6b632e693b74a7
 SHA1 (patch-src_plot.c) = a91ef7ff92917c54e37f3cca765e92d9857a47a5
 SHA1 (patch-src_readline.h) = ae138bb783a5a5e68f89850cdd861cc545399aaf
