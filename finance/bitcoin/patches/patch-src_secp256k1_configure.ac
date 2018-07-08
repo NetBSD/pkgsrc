@@ -1,0 +1,15 @@
+$NetBSD: patch-src_secp256k1_configure.ac,v 1.1 2018/07/08 11:13:46 khorben Exp $
+
+Portability fix for the configure script generated.
+
+--- src/secp256k1/configure.ac.orig	2017-04-20 09:28:25.000000000 +0000
++++ src/secp256k1/configure.ac
+@@ -466,7 +466,7 @@ AM_CONDITIONAL([USE_BENCHMARK], [test x"
+ AM_CONDITIONAL([USE_ECMULT_STATIC_PRECOMPUTATION], [test x"$set_precomp" = x"yes"])
+ AM_CONDITIONAL([ENABLE_MODULE_ECDH], [test x"$enable_module_ecdh" = x"yes"])
+ AM_CONDITIONAL([ENABLE_MODULE_RECOVERY], [test x"$enable_module_recovery" = x"yes"])
+-AM_CONDITIONAL([USE_JNI], [test x"$use_jni" == x"yes"])
++AM_CONDITIONAL([USE_JNI], [test x"$use_jni" = x"yes"])
+ AM_CONDITIONAL([USE_EXTERNAL_ASM], [test x"$use_external_asm" = x"yes"])
+ AM_CONDITIONAL([USE_ASM_ARM], [test x"$set_asm" = x"arm"])
+ 
