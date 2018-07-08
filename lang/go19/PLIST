@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/07/08 17:59:07 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/07/08 18:40:40 bsiegert Exp $
 go19/AUTHORS
 go19/CONTRIBUTING.md
 go19/CONTRIBUTORS
@@ -1818,6 +1818,16 @@ go19/src/cmd/go/testdata/local/easysub/main.go
 go19/src/cmd/go/testdata/local/hard.go
 go19/src/cmd/go/testdata/local/sub/sub.go
 go19/src/cmd/go/testdata/local/sub/sub/subsub.go
+go19/src/cmd/go/testdata/modlegacy/src/new/go.mod
+go19/src/cmd/go/testdata/modlegacy/src/new/new.go
+go19/src/cmd/go/testdata/modlegacy/src/new/p1/p1.go
+go19/src/cmd/go/testdata/modlegacy/src/new/p2/p2.go
+go19/src/cmd/go/testdata/modlegacy/src/new/sub/go.mod
+go19/src/cmd/go/testdata/modlegacy/src/new/sub/inner/go.mod
+go19/src/cmd/go/testdata/modlegacy/src/new/sub/inner/x/x.go
+go19/src/cmd/go/testdata/modlegacy/src/new/sub/x/v1/y/y.go
+go19/src/cmd/go/testdata/modlegacy/src/old/p1/p1.go
+go19/src/cmd/go/testdata/modlegacy/src/old/p2/p2.go
 go19/src/cmd/go/testdata/norunexample/example_test.go
 go19/src/cmd/go/testdata/norunexample/test_test.go
 go19/src/cmd/go/testdata/rundir/sub/sub.go
@@ -4081,6 +4091,7 @@ go19/src/net/http/main_test.go
 go19/src/net/http/method.go
 go19/src/net/http/npn_test.go
 go19/src/net/http/pprof/pprof.go
+go19/src/net/http/pprof/pprof_test.go
 go19/src/net/http/proxy_test.go
 go19/src/net/http/race.go
 go19/src/net/http/range_test.go
@@ -6863,6 +6874,9 @@ go19/test/fixedbugs/issue22458.go
 go19/test/fixedbugs/issue22683.go
 go19/test/fixedbugs/issue22683.out
 go19/test/fixedbugs/issue22781.go
+go19/test/fixedbugs/issue23719.go
+go19/test/fixedbugs/issue23812.go
+go19/test/fixedbugs/issue24817.go
 go19/test/fixedbugs/issue2615.go
 go19/test/fixedbugs/issue3552.dir/one.go
 go19/test/fixedbugs/issue3552.dir/two.go
@@ -7468,3 +7482,4 @@ go19/test/varerr.go
 go19/test/varinit.go
 go19/test/writebarrier.go
 go19/test/zerodivide.go
+@pkgdir bin
