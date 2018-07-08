@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2018/05/27 05:17:40 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.42 2018/07/08 06:08:09 tsutsui Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -235,6 +235,7 @@ share/mikutter/core/plugin/core/.mikutter.yml
 share/mikutter/core/plugin/core/core.rb
 share/mikutter/core/plugin/current_world/.mikutter.yml
 share/mikutter/core/plugin/current_world/current_world.rb
+share/mikutter/core/plugin/current_world/error.rb
 share/mikutter/core/plugin/direct_message/.mikutter.yml
 share/mikutter/core/plugin/direct_message/direct_message.rb
 share/mikutter/core/plugin/direct_message/dmlistview.rb
