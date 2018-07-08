@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3123 2018/07/08 09:40:32 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3124 2018/07/08 11:14:20 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4494,3 +4494,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/py-asttokens to 1.1.11 [adam 2018-07-08]
 	Updated textproc/py-vobject to 0.9.6 [adam 2018-07-08]
 	Updated textproc/py-natsort to 5.3.3 [adam 2018-07-08]
+	Added finance/bitcoin version 0.16.1 [khorben 2018-07-08]
