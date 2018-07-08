@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.63 2018/03/05 12:42:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.64 2018/07/08 09:27:31 bsiegert Exp $
 
 .include "version.mk"
 
 DISTNAME=	go${GO_VERSION}.src
 PKGNAME=	go-${GO_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://storage.googleapis.com/golang/
 EXTRACT_USING=	bsdtar
@@ -102,9 +103,6 @@ do-install:
 	cd ${WRKSRC} && rm -rf .hgignore .hgtags pkg/obj
 	cd ${WRKDIR} && pax -rw go ${DESTDIR}${PREFIX}
 	find ${DESTDIR}${PREFIX}/go -name \*.orig -exec rm {} \;
-.for cmd in go gofmt
-	cd ${DESTDIR}${PREFIX}/bin && ln -sf ../go/bin/${cmd} ${cmd}
-.endfor
 
 do-test:
 	cd ${WRKSRC}/src && GOROOT=${WRKSRC} PATH=${WRKSRC}/bin:${PATH} ${GOOPT} ${BASH} run.bash --no-rebuild --banner ""
