@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3127 2018/07/08 17:16:33 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.3128 2018/07/08 18:00:05 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4498,3 +4498,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/py-google-cloud-sdk to 96.0.0nb1 [leot 2018-07-08]
 	Updated audio/mpg321 to 0.3.2nb2 [leot 2018-07-08]
 	Updated textproc/go-text to 0.3.0 [bsiegert 2018-07-08]
+	Added lang/go19 version 1.9.4 [bsiegert 2018-07-08]
