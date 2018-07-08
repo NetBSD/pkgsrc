@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2016/04/02 08:26:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2018/07/08 12:22:56 leot Exp $
 
 GCLOUDVER=	96.0.0
 DISTNAME=	google-cloud-sdk-${GCLOUDVER}-linux-x86
 PKGNAME=	${PYPKGPREFIX}-google-cloud-sdk-${GCLOUDVER}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/
 
@@ -22,6 +23,13 @@ REPLACE_PYTHON+=	bin/bootstrapping/*
 
 PLIST_SUBST+=		PYPKGPREFIX=${PYPKGPREFIX}
 MESSAGE_SUBST+=		PYPKGPREFIX=${PYPKGPREFIX}
+
+SUBST_CLASSES+=		python
+SUBST_STAGE.python=	pre-configure
+SUBST_MESSAGE.python=	Replacing hard coded python executable name
+SUBST_FILES.python=	lib/googlecloudsdk/core/*
+SUBST_FILES.python+=	bin/*
+SUBST_SED.python=	-e "/CLOUDSDK_PYTHON=/ s,python$$,${PYTHONBIN},"
 
 INSTALLATION_DIRS=	${PKGBASE}
 
