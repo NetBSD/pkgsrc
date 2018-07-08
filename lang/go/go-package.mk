@@ -1,4 +1,4 @@
-# $NetBSD: go-package.mk,v 1.12 2018/06/05 15:42:20 leot Exp $
+# $NetBSD: go-package.mk,v 1.13 2018/07/08 12:55:00 bsiegert Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 #
@@ -51,6 +51,11 @@
 
 .include "../../lang/go/version.mk"
 
+# How to find the Go tool.
+GOVERSSUFFIX?=
+GO=			${PREFIX}/go${GOVERSSUFFIX}/bin/go
+
+
 _GO_DIST_BASE!=		basename ${GO_SRCPATH}
 GO_DIST_BASE?=		${_GO_DIST_BASE}
 GO_BUILD_PATTERN?=	${GO_SRCPATH}/...
@@ -79,12 +84,12 @@ post-extract:
 
 .if !target(do-build)
 do-build:
-	${RUN} env GOPATH=${WRKDIR}:${BUILDLINK_DIR}/gopkg go install -v ${GO_BUILD_PATTERN}
+	${RUN} env GOPATH=${WRKDIR}:${BUILDLINK_DIR}/gopkg ${GO} install -v ${GO_BUILD_PATTERN}
 .endif
 
 .if !target(do-test)
 do-test:
-	${RUN} env GOPATH=${WRKDIR}:${BUILDLINK_DIR}/gopkg go test -v ${GO_BUILD_PATTERN}
+	${RUN} env GOPATH=${WRKDIR}:${BUILDLINK_DIR}/gopkg ${GO} test -v ${GO_BUILD_PATTERN}
 .endif
 
 .if !target(do-install)
