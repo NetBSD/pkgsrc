@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/06/12 17:50:27 bsiegert Exp $
+# $NetBSD: Makefile,v 1.14 2018/07/08 13:54:39 bsiegert Exp $
 
 DISTNAME=	mongo-tools-3.4.4
 PKGREVISION=	1
@@ -37,7 +37,7 @@ do-build:
 .for tool in ${MONGO_TOOLS}
 	cd ${WRKSRC} && \
 	  ${SETENV} GOPATH=${WRKSRC}:${WRKSRC}/vendor:${PREFIX}/gopkg \
-	  go build -tags "${MONGO_TAGS}" -o bin/${tool} ${tool}/main/${tool}.go
+	  ${GO} build -tags "${MONGO_TAGS}" -o bin/${tool} ${tool}/main/${tool}.go
 .endfor
 
 do-install:
@@ -45,6 +45,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/${tool} ${DESTDIR}${PREFIX}/bin/${tool}
 .endfor
 
-.include "../../devel/go-sys/buildlink3.mk"
 .include "../../lang/go/version.mk"
+.include "../../devel/go-sys/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
