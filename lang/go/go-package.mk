@@ -1,4 +1,4 @@
-# $NetBSD: go-package.mk,v 1.13 2018/07/08 12:55:00 bsiegert Exp $
+# $NetBSD: go-package.mk,v 1.14 2018/07/08 13:53:42 bsiegert Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 #
@@ -50,11 +50,6 @@
 #
 
 .include "../../lang/go/version.mk"
-
-# How to find the Go tool.
-GOVERSSUFFIX?=
-GO=			${PREFIX}/go${GOVERSSUFFIX}/bin/go
-
 
 _GO_DIST_BASE!=		basename ${GO_SRCPATH}
 GO_DIST_BASE?=		${_GO_DIST_BASE}
