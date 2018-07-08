@@ -1,4 +1,4 @@
-$NetBSD: patch-mpg321.c,v 1.2 2018/06/16 14:43:21 leot Exp $
+$NetBSD: patch-mpg321.c,v 1.3 2018/07/08 13:42:13 leot Exp $
 
 - Ensure structs are zero'd before use.
 - Do not unlock uninitialized main_lock
@@ -13,12 +13,18 @@ $NetBSD: patch-mpg321.c,v 1.2 2018/06/16 14:43:21 leot Exp $
      playbuf.pl = pl = new_playlist();
  
      if (!pl)
-@@ -750,8 +751,6 @@ int main(int argc, char *argv[])
- 	    	    if (tcgetattr(0, &terminal_settings) < 0)
- 	    		    perror("tcgetattr()");
- 	    	    memcpy(&old_terminal_settings, &terminal_settings, sizeof(struct termios));
--		    /* Early thread start */
--		    sem_post(&main_lock);
- 	    }
+@@ -728,12 +729,13 @@ int main(int argc, char *argv[])
+ //	    options.volume = mad_f_tofixed((long)100.0/100.0);
      }
-     /* Play the mpeg files or zip it! */
+ 
++    sem_init(&main_lock,0,0);
++
+     if (!(options.opt & MPG321_REMOTE_PLAY))
+     {
+ 	     if(options.opt & MPG321_ENABLE_BASIC)
+ 	     {
+ 	 	     /* Now create and detach the basic controls thread */
+-		     sem_init(&main_lock,0,0);
+ 	 	     pthread_create(&keyb_thread,NULL,read_keyb,NULL);
+ 		     pthread_detach(keyb_thread);
+ 	     }
