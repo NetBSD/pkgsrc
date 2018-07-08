@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3124 2018/07/08 11:14:20 khorben Exp $
+$NetBSD: CHANGES-2018,v 1.3125 2018/07/08 12:23:06 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4495,3 +4495,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-vobject to 0.9.6 [adam 2018-07-08]
 	Updated textproc/py-natsort to 5.3.3 [adam 2018-07-08]
 	Added finance/bitcoin version 0.16.1 [khorben 2018-07-08]
+	Updated net/py-google-cloud-sdk to 96.0.0nb1 [leot 2018-07-08]
