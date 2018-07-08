@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2018/06/12 17:50:29 bsiegert Exp $
+# $NetBSD: Makefile,v 1.17 2018/07/08 17:15:42 bsiegert Exp $
 
-DISTNAME=		go-text-20151217
-PKGREVISION=		10
+DISTNAME=		go-text-0.3.0
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=golang/}
 GITHUB_PROJECT=		text
-GITHUB_TAG=		cf4986612c
+GITHUB_TAG=		v0.3.0
 
 MAINTAINER=		bsiegert@NetBSD.org
 HOMEPAGE=		http://golang.org/
@@ -13,9 +12,12 @@ COMMENT=		Supplementary text processing libraries for Go
 LICENSE=		modified-bsd
 
 GO_SRCPATH=		golang.org/x/text
-GO_DIST_BASE=		${GITHUB_PROJECT}-${GITHUB_TAG}*
+GO_DIST_BASE=		${DISTNAME:S/go-//}
 
 CHECK_RELRO_SKIP+=	bin/colcmp
+
+pre-patch:
+	${RM} -rf ${WRKSRC}/cmd/gotext ${WRKSRC}/message/pipeline
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
