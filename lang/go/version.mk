@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.38 2018/06/12 17:37:59 bsiegert Exp $
+# $NetBSD: version.mk,v 1.39 2018/07/08 13:53:42 bsiegert Exp $
 
 SSP_SUPPORTED=	no
 
@@ -6,6 +6,10 @@ SSP_SUPPORTED=	no
 
 GO_VERSION=	1.10.3
 GO14_VERSION=	1.4.3
+
+# How to find the Go tool
+GOVERSSUFFIX?=
+GO=			${PREFIX}/go${GOVERSSUFFIX}/bin/go
 
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64 *-*-earmv[67]hf
 NOT_FOR_PLATFORM=	SunOS-*-i386
