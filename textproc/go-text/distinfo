@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/01/03 20:06:35 bsiegert Exp $
+$NetBSD: distinfo,v 1.5 2018/07/08 17:15:42 bsiegert Exp $
 
-SHA1 (go-text-20151217-cf4986612c.tar.gz) = d351a09afcc5c0a7475e862d0ed5d852e02f4508
-RMD160 (go-text-20151217-cf4986612c.tar.gz) = 5e8cc0ecda2ad14531508f42d848c8fcfe53ec56
-SHA512 (go-text-20151217-cf4986612c.tar.gz) = 80708a245d36111da610ff2238fd2ec4fe681fe2a755e0b53357006ad12b41745c391f8b16ec872caf588ca62dd57ea0a9b9e610fa1ef5e23535ff45eddf715e
-Size (go-text-20151217-cf4986612c.tar.gz) = 3912867 bytes
+SHA1 (go-text-0.3.0.tar.gz) = 5033f2028bcbe3f7ecab0c94343f585c936e7a18
+RMD160 (go-text-0.3.0.tar.gz) = 96c9fc9705b27a71e3027b9eb39761d515ed54f0
+SHA512 (go-text-0.3.0.tar.gz) = bd60dfaa7d9dbfca171a3ba40b51f5663c01257cf3b12b618d35689a97ab2212d316d5716ff09681bf40b099f7e20a0e0df8cfc065699cb6a07ad1dc2e2bc189
+Size (go-text-0.3.0.tar.gz) = 6102619 bytes
