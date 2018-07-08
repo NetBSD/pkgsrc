@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2018/06/16 14:43:21 leot Exp $
+# $NetBSD: Makefile,v 1.21 2018/07/08 13:42:13 leot Exp $
 
 DISTNAME=	mpg321_0.3.2.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpg321/}
 
