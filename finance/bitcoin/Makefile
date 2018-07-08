@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2018/07/08 11:13:45 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/08 11:17:58 khorben Exp $
 
 DISTNAME=	bitcoin-0.16.1
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bitcoin/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	noud4@users.sourceforge.net
+MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://github.com/bitcoin/bitcoin/
 COMMENT=	P2P electronic cash system
 LICENSE=	mit
