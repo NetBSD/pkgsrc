@@ -1,11 +1,11 @@
-# $NetBSD: version.mk,v 1.40 2018/07/08 18:00:56 bsiegert Exp $
+# $NetBSD: version.mk,v 1.41 2018/07/08 18:40:40 bsiegert Exp $
 
 SSP_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
 
 GO_VERSION=	1.10.3
-GO19_VERSION=	1.9.4
+GO19_VERSION=	1.9.7
 GO14_VERSION=	1.4.3
 
 # How to find the Go tool
