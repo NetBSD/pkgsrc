@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3122 2018/07/08 09:04:12 wiedi Exp $
+$NetBSD: CHANGES-2018,v 1.3123 2018/07/08 09:40:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4490,3 +4490,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated cad/gtkwave to 3.3.91 [makoto 2018-07-07]
 	Updated devel/guile-gnome to 2.16.5 [gdt 2018-07-07]
 	Updated sysutils/znapzend to 0.19.1 [wiedi 2018-07-08]
+	Updated archivers/py-lz4 to 2.0.2 [adam 2018-07-08]
+	Updated lang/py-asttokens to 1.1.11 [adam 2018-07-08]
+	Updated textproc/py-vobject to 0.9.6 [adam 2018-07-08]
+	Updated textproc/py-natsort to 5.3.3 [adam 2018-07-08]
