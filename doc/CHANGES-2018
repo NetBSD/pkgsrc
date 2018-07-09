@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3133 2018/07/09 07:18:10 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3134 2018/07/09 07:39:11 morr Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4507,3 +4507,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-flake8-import-order to 0.18 [adam 2018-07-09]
 	Updated devel/py-cached-property to 1.4.3 [adam 2018-07-09]
 	Updated net/py-portend to 2.3 [adam 2018-07-09]
+	Updated net/haproxy to 1.8.12 [morr 2018-07-09]
