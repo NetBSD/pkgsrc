@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2018/05/29 11:45:06 adam Exp $
+# $NetBSD: Makefile,v 1.46 2018/07/09 06:34:28 adam Exp $
 
-DISTNAME=	Cython-0.28.3
+DISTNAME=	Cython-0.28.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/Cython/}
