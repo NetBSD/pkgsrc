@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2018/02/26 08:32:32 adam Exp $
+# $NetBSD: Makefile,v 1.6 2018/07/09 06:17:14 adam Exp $
 
-DISTNAME=	parsel-1.4.0
+DISTNAME=	parsel-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/parsel/}
@@ -14,9 +14,8 @@ DEPENDS+=	${PYPKGPREFIX}-cssselect>=0.9:../../textproc/py-cssselect
 DEPENDS+=	${PYPKGPREFIX}-lxml>=2.3:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-six>=1.5.2:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-w3lib>=1.8.0:../../www/py-w3lib
-# TEST_DEPENDS
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
