@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2018/04/17 18:23:23 adam Exp $
+$NetBSD: distinfo,v 1.7 2018/07/09 08:00:30 adam Exp $
 
-SHA1 (apsw-3.22.0-r1.zip) = 6301bbd4720217fa4c9cff03036ea3501bea7e16
-RMD160 (apsw-3.22.0-r1.zip) = 805602e28ba5ad8f14a313b5c6f3c9f1a1caf1ac
-SHA512 (apsw-3.22.0-r1.zip) = c82de649a9245283dd0acc37700270c6c4dde1995cdc88bf7afb7cb3913a6f1a4a7a077e80eeb70cccf2fcb058406b610c9f05f478c6dc9ee8f7ff9cde7c7395
-Size (apsw-3.22.0-r1.zip) = 680988 bytes
+SHA1 (apsw-3.23.1-r1.zip) = e356f210925374882645f69a226ad153c886942e
+RMD160 (apsw-3.23.1-r1.zip) = 152dd60da2779c789cccb9f53bfa4ee65a3e1997
+SHA512 (apsw-3.23.1-r1.zip) = 8f3bc9e619ed8671a0804e6d3c9ecf34d452a4e6fe540fb23bfb6ae67578971013300ad6cdffe3be2fc1197c4fd3af096802aef5994cbe53253467133363ac62
+Size (apsw-3.23.1-r1.zip) = 682088 bytes
