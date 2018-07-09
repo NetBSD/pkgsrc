@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2018/04/03 13:19:56 adam Exp $
+# $NetBSD: Makefile,v 1.30 2018/07/09 17:47:01 adam Exp $
 
-DISTNAME=	icalendar-4.0.1
+DISTNAME=	icalendar-4.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/icalendar/}
