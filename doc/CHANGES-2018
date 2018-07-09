@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3138 2018/07/09 18:04:21 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3139 2018/07/09 19:18:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4517,3 +4517,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/py-pandas to 0.23.3 [adam 2018-07-09]
 	Updated time/py-icalendar to 4.0.2 [adam 2018-07-09]
 	Updated time/py-jdcal to 1.4 [adam 2018-07-09]
+	Updated www/libsass to 3.5.4 [adam 2018-07-09]
+	Updated devel/py-rply to 0.7.6 [adam 2018-07-09]
