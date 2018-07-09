@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3137 2018/07/09 08:23:17 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3138 2018/07/09 18:04:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4515,3 +4515,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Renamed audio/py-discogs_client to audio/py-discogs-client [adam 2018-07-09]
 	Updated audio/py-discogs-client to 2.2.1 [adam 2018-07-09]
 	Updated math/py-pandas to 0.23.3 [adam 2018-07-09]
+	Updated time/py-icalendar to 4.0.2 [adam 2018-07-09]
+	Updated time/py-jdcal to 1.4 [adam 2018-07-09]
