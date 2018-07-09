@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2018/07/04 09:05:16 adam Exp $
+# $NetBSD: Makefile,v 1.22 2018/07/09 14:11:01 hauke Exp $
 
 DISTNAME=	pbr-4.0.4
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pbr/}
@@ -21,6 +22,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 REPLACE_PYTHON+=	pbr/tests/testpackage/setup.py
 
 post-install:
+	chmod -R g-w,o-w ${DESTDIR}${PREFIX}/${PYSITELIB}/pbr/tests/testpackage
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} pbr pbr${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
