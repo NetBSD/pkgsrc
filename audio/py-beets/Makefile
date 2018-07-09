@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2018/01/30 14:10:11 adam Exp $
+# $NetBSD: Makefile,v 1.22 2018/07/09 08:06:18 adam Exp $
 
-DISTNAME=	beets-1.4.6
+DISTNAME=	beets-1.4.7
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/beets/}
 

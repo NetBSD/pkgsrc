@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2017/07/23 19:04:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2018/07/09 08:06:18 adam Exp $
 bin/beet${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -260,6 +260,9 @@ ${PYSITELIB}/beetsplug/scrub.pyo
 ${PYSITELIB}/beetsplug/smartplaylist.py
 ${PYSITELIB}/beetsplug/smartplaylist.pyc
 ${PYSITELIB}/beetsplug/smartplaylist.pyo
+${PYSITELIB}/beetsplug/sonosupdate.py
+${PYSITELIB}/beetsplug/sonosupdate.pyc
+${PYSITELIB}/beetsplug/sonosupdate.pyo
 ${PYSITELIB}/beetsplug/spotify.py
 ${PYSITELIB}/beetsplug/spotify.pyc
 ${PYSITELIB}/beetsplug/spotify.pyo
