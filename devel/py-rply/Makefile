@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2017/09/16 19:26:49 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2018/07/09 19:18:19 adam Exp $
 
-DISTNAME=	rply-0.7.5
+DISTNAME=	rply-0.7.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rply/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/alex/rply/
+HOMEPAGE=	https://github.com/alex/rply
 COMMENT=	Pure Python Lex/Yacc that works with RPython
 LICENSE=	modified-bsd
 
