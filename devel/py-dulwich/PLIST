@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2018/04/09 09:05:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2018/07/09 07:53:23 adam Exp $
 bin/dul-receive-pack${PYVERSSUFFIX}
 bin/dul-upload-pack${PYVERSSUFFIX}
 bin/dulwich${PYVERSSUFFIX}
@@ -122,6 +122,9 @@ ${PYSITELIB}/dulwich/repo.pyo
 ${PYSITELIB}/dulwich/server.py
 ${PYSITELIB}/dulwich/server.pyc
 ${PYSITELIB}/dulwich/server.pyo
+${PYSITELIB}/dulwich/stash.py
+${PYSITELIB}/dulwich/stash.pyc
+${PYSITELIB}/dulwich/stash.pyo
 ${PYSITELIB}/dulwich/stdint.h
 ${PYSITELIB}/dulwich/tests/__init__.py
 ${PYSITELIB}/dulwich/tests/__init__.pyc
@@ -310,6 +313,9 @@ ${PYSITELIB}/dulwich/tests/test_repository.pyo
 ${PYSITELIB}/dulwich/tests/test_server.py
 ${PYSITELIB}/dulwich/tests/test_server.pyc
 ${PYSITELIB}/dulwich/tests/test_server.pyo
+${PYSITELIB}/dulwich/tests/test_stash.py
+${PYSITELIB}/dulwich/tests/test_stash.pyc
+${PYSITELIB}/dulwich/tests/test_stash.pyo
 ${PYSITELIB}/dulwich/tests/test_utils.py
 ${PYSITELIB}/dulwich/tests/test_utils.pyc
 ${PYSITELIB}/dulwich/tests/test_utils.pyo
