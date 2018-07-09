@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/11/29 11:29:03 adam Exp $
+$NetBSD: distinfo,v 1.4 2018/07/09 07:17:51 adam Exp $
 
-SHA1 (portend-2.2.tar.gz) = dc19cbd80937579f945ce9a4dca4e80e3b74282e
-RMD160 (portend-2.2.tar.gz) = c26f2cf5c2a422d75e1e0bb60b80d40df11f31fa
-SHA512 (portend-2.2.tar.gz) = 1782132b0dec5b678892190b70ab795b1748dfa17e257b6655fc803f0cf19652725778cd329c3609353f969959501dd11fd2b9726cfcdf2c58689e2ce280c146
-Size (portend-2.2.tar.gz) = 7974 bytes
+SHA1 (portend-2.3.tar.gz) = 1992bf210f11504e4d1b9668eeb8963c8f238666
+RMD160 (portend-2.3.tar.gz) = 9bbb0301bdcdc4f036e7475f8ae22f2eacffe8fa
+SHA512 (portend-2.3.tar.gz) = eb438c9967bd1540534bc9deb5bdb8b7ed41c7328aeee0c9376b00018ec6c07773c0d782efe3f460cf6e68bd4d899bceedf0c581dd29080cd3fe44a3a17b0004
+Size (portend-2.3.tar.gz) = 8585 bytes
