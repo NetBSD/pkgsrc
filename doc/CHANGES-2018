@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3134 2018/07/09 07:39:11 morr Exp $
+$NetBSD: CHANGES-2018,v 1.3135 2018/07/09 07:54:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4508,3 +4508,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-cached-property to 1.4.3 [adam 2018-07-09]
 	Updated net/py-portend to 2.3 [adam 2018-07-09]
 	Updated net/haproxy to 1.8.12 [morr 2018-07-09]
+	Updated net/py-gevent to 1.3.4 [adam 2018-07-09]
+	Updated devel/py-dulwich to 0.19.5 [adam 2018-07-09]
