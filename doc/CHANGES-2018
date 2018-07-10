@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3139 2018/07/09 19:18:53 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3140 2018/07/10 01:17:02 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4519,3 +4519,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/py-jdcal to 1.4 [adam 2018-07-09]
 	Updated www/libsass to 3.5.4 [adam 2018-07-09]
 	Updated devel/py-rply to 0.7.6 [adam 2018-07-09]
+	Added devel/py-kafka-python version 1.4.3 [minskim 2018-07-10]
