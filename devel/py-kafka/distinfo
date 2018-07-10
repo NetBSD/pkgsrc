@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2018/04/29 23:20:41 minskim Exp $
-
-SHA1 (kafka-1.3.5.tar.gz) = 13dd8297c48e1797fe143ce99646b6e4c78c83d5
-RMD160 (kafka-1.3.5.tar.gz) = 91f981311e0174186d828c974e31712e5275ad38
-SHA512 (kafka-1.3.5.tar.gz) = 5c7934031f2e8102cfbeaed47ef188d476359962e08ffc621f887b1aecbbb9e4b5ec4938e897c728e0db29eb4e186260590817fc91e16814aacdbaae4cdfd879
-Size (kafka-1.3.5.tar.gz) = 227516 bytes
