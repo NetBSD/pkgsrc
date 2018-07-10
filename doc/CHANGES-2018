@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3141 2018/07/10 01:20:24 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.3142 2018/07/10 08:11:22 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4521,3 +4521,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-rply to 0.7.6 [adam 2018-07-09]
 	Added devel/py-kafka-python version 1.4.3 [minskim 2018-07-10]
 	Removed devel/py-kafka successor devel/py-kafka-python [minskim 2018-07-10]
+	Updated www/moodle to 3.5.1 [wen 2018-07-10]
