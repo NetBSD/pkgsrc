@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/07/10 01:16:37 minskim Exp $
+
+SHA1 (kafka-python-1.4.3.tar.gz) = c6ab39a03301fad5a8190bf3c382d3d3a7383ff4
+RMD160 (kafka-python-1.4.3.tar.gz) = 35a0f1a9753c5ff1292e09a2fff59d5d16d4d2cf
+SHA512 (kafka-python-1.4.3.tar.gz) = a3102d910a16da5dd9bc5067c4628f93771549beeaf7a00ea6466193dbe3c0f8af781210d46dfee4174eeaf22b4eb1e7bb5236e746ea56e7a41ea1ec94ae7215
+Size (kafka-python-1.4.3.tar.gz) = 262992 bytes
