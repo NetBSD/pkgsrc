@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2018/05/16 15:00:19 fhajny Exp $
+# $NetBSD: Makefile,v 1.13 2018/07/10 13:49:10 fhajny Exp $
 #
 
 BUILDLINK_DEPMETHOD.libestr=	full
-BUILDLINK_DEPMETHOD.liblogging=	full
 BUILDLINK_DEPMETHOD.libuuid=	full
 
 .include "../../sysutils/rsyslog/Makefile.common"
