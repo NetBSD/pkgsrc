@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3143 2018/07/10 08:18:07 wen Exp $
+$NetBSD: CHANGES-2018,v 1.3144 2018/07/10 08:23:34 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4523,3 +4523,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Removed devel/py-kafka successor devel/py-kafka-python [minskim 2018-07-10]
 	Updated www/moodle to 3.5.1 [wen 2018-07-10]
 	Updated devel/p5-Test-CleanNamespaces to 0.23 [wen 2018-07-10]
+	Updated devel/p5-Test-MockObject to 1.20180705 [wen 2018-07-10]
