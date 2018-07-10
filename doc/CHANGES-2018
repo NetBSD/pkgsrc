@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3145 2018/07/10 08:30:00 wen Exp $
+$NetBSD: CHANGES-2018,v 1.3146 2018/07/10 08:31:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4525,3 +4525,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Test-CleanNamespaces to 0.23 [wen 2018-07-10]
 	Updated devel/p5-Test-MockObject to 1.20180705 [wen 2018-07-10]
 	Updated devel/p5-Test-POE-Client-TCP to 1.18 [wen 2018-07-10]
+	Updated devel/libuv to 1.22.0 [adam 2018-07-10]
+	Updated devel/waf to 2.0.9 [adam 2018-07-10]
