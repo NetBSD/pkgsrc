@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2017/03/15 14:07:12 mef Exp $
+$NetBSD: distinfo,v 1.28 2018/07/10 07:05:06 dbj Exp $
 
 SHA1 (gnuradio-3.7.11.tar.gz) = 574df5079b02cfcd80f03930d90a20b2fa9cfcb8
 RMD160 (gnuradio-3.7.11.tar.gz) = 72207c6c048f256cbd93a679c09345a5ca45f307
@@ -9,3 +9,6 @@ SHA1 (patch-gnuradio_runtime_include_gnuradio_high__res__timer__h) = 59ad8192e7a
 SHA1 (patch-gnuradio_runtime_lib_thread_thread_cc) = c05628aa88ac968928f9eabd8c56d4527e258767
 SHA1 (patch-gr-audio_lib_CMakeLists.txt) = 00ff8c14658acd2d1dc8be18ea6a19ace8d12968
 SHA1 (patch-gr-audio_lib_alsa_alsa__impl_h) = d61dcd31058c04a6050479a6e8c321ca15420d49
+SHA1 (patch-gr-blocks_lib_message__strobe__impl.cc) = 22e9a876660d8582c091ee27b4e46df562168aed
+SHA1 (patch-gr-blocks_lib_message__strobe__random__impl.cc) = a87d3e8b4243bcb5040961608bbc2644c43b9e76
+SHA1 (patch-gr-uhd_lib_usrp__block__impl.cc) = 7b8344474f94598c621dea6349d9f3224cddbae7
