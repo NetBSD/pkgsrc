@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3147 2018/07/10 13:49:22 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.3148 2018/07/10 15:57:10 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4528,3 +4528,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/libuv to 1.22.0 [adam 2018-07-10]
 	Updated devel/waf to 2.0.9 [adam 2018-07-10]
 	Updated sysutils/rsyslog to 8.36.0 [fhajny 2018-07-10]
+	Updated lang/npm to 6.1.0nb1 [jperkin 2018-07-10]
