@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3156 2018/07/11 12:05:06 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.3157 2018/07/11 16:20:33 gson Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4538,3 +4538,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/gcc49-libs to 4.9.4nb8 [jperkin 2018-07-11]
 	Updated multimedia/adobe-flash-player to 30.0.0.134 [tsutsui 2018-07-11]
 	Updated devel/ocaml-extlib to 1.7.5 [jaapb 2018-07-11]
+	Updated graphics/py-matplotlib to 2.2.2nb1 [gson 2018-07-11]
