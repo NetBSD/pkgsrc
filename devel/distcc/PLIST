@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2014/03/11 14:05:01 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.17 2018/07/11 07:30:40 adam Exp $
 bin/distcc
 bin/distccd
 bin/distccmon-text
@@ -7,6 +7,7 @@ man/man1/distcc.1
 man/man1/distccd.1
 man/man1/distccmon-text.1
 man/man1/include_server.1
+man/man1/lsdistcc.1.gz
 man/man1/pump.1
 share/doc/distcc/AUTHORS
 share/doc/distcc/COPYING
@@ -15,12 +16,19 @@ share/doc/distcc/NEWS
 share/doc/distcc/README
 share/doc/distcc/README.pump
 share/doc/distcc/TODO
+share/doc/distcc/example/README
+share/doc/distcc/example/default
+share/doc/distcc/example/hosts.allow
 share/doc/distcc/example/init
 share/doc/distcc/example/init-suse
 share/doc/distcc/example/logrotate
+share/doc/distcc/example/services
 share/doc/distcc/example/xinetd
 share/doc/distcc/protocol-1.txt
 share/doc/distcc/protocol-2.txt
+share/doc/distcc/protocol-3-impl.txt
+share/doc/distcc/protocol-3.txt
+share/doc/distcc/protocol-gssapi.txt
 share/doc/distcc/reporting-bugs.txt
 share/doc/distcc/status-1.txt
 share/doc/distcc/survey.txt

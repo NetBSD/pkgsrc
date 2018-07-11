@@ -1,16 +1,16 @@
-# $NetBSD: Makefile.common,v 1.12 2018/07/04 13:40:13 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.13 2018/07/11 07:30:40 adam Exp $
 # used by devel/distcc-pump/Makefile
 # used by devel/distccmon-gnome/Makefile
 # used by devel/distccmon-gtk/Makefile
 
-# XXX: in the future, remove rc1 substitutions from Makefiles mentioned above
-DISTNAME=	distcc-3.2rc1
+DISTNAME=	distcc-3.3
 CATEGORIES=	devel
-MASTER_SITES=	http://distcc.googlecode.com/files/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=distcc/}
+GITHUB_PROJECT=	distcc
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://distcc.org/
+HOMEPAGE=	https://github.com/distcc/distcc
 LICENSE=	gnu-gpl-v2
 
 DISTINFO_FILE=		${.CURDIR}/../../devel/distcc/distinfo
@@ -21,7 +21,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-Werror
 CONFIGURE_ARGS+=	--enable-rfc2553
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-#CONFIGURE_ENV+=	ac_cv_path_PYTHON=/dev/null
+CONFIGURE_ARGS+=	--without-avahi
+CONFIGURE_ARGS+=	--without-libiberty
 
 CHECK_PORTABILITY_SKIP+=	contrib/redhat/*
 

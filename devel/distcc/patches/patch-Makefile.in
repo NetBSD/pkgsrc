@@ -1,26 +1,38 @@
-$NetBSD: patch-ae,v 1.1 2009/01/17 13:27:48 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.1 2018/07/11 07:30:40 adam Exp $
 
---- Makefile.in.orig	2008-12-02 22:50:31.000000000 +0100
+Do not install stuff that requires Python.
+
+--- Makefile.in.orig	2018-03-07 23:03:59.000000000 +0000
 +++ Makefile.in
-@@ -447,7 +447,7 @@ check_include_server_PY = \
+@@ -420,8 +420,7 @@ bin_PROGRAMS = \
+ 	lsdistcc@EXEEXT@ \
+ 	@GNOME_BIN@ 
+ 
+-sbin_PROGRAMS = \
+-	update-distcc-symlinks
++sbin_PROGRAMS =
+ 
+ check_PROGRAMS = \
+ 	h_argvtostr@EXEEXT@ \
+@@ -465,7 +464,7 @@ check_include_server_PY = \
  
  ## NOTE: "all" must be the first (default) rule, aside from patterns.
  
--all: $(bin_PROGRAMS) pump include-server
-+all: $(bin_PROGRAMS)
+-all: $(bin_PROGRAMS) $(sbin_PROGRAMS) pump include-server
++all: $(bin_PROGRAMS) $(sbin_PROGRAMS)
  
  #  src/config.h.in is used by config.status
  Makefile: Makefile.in src/config.h.in config.status
-@@ -1010,7 +1010,7 @@ showpaths:
+@@ -1040,7 +1039,7 @@ showpaths:
  # tricky features so mkinstalldirs and cp will do
  
  install: showpaths install-doc install-man install-programs \
 -	install-include-server install-example @INSTALL_GNOME@ install-conf
 +	install-example @INSTALL_GNOME@
  
- install-programs: $(bin_PROGRAMS)
+ install-programs: $(bin_PROGRAMS) $(sbin_PROGRAMS)
  	$(mkinstalldirs) "$(DESTDIR)$(bindir)"
-@@ -1064,7 +1064,7 @@ install-include-server: include-server p
+@@ -1098,7 +1097,7 @@ install-include-server: include-server p
  	  INCLUDE_SERVER=`grep '/include_server.py$$' "$(include_server_builddir)/install.log"` && \
  	  sed "s,^include_server='',include_server='$$INCLUDE_SERVER'," \
  	    pump > "$(include_server_builddir)/pump" && \
