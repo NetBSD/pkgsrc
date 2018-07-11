@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3153 2018/07/11 09:02:31 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3154 2018/07/11 11:21:38 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4535,3 +4535,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/distcc to 3.3 [adam 2018-07-11]
 	Updated security/py-cryptodome to 3.6.4 [adam 2018-07-11]
 	Updated databases/py-asyncpg to 0.17.0 [adam 2018-07-11]
+	Updated lang/gcc49-libs to 4.9.4nb8 [jperkin 2018-07-11]
