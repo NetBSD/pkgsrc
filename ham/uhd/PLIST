@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/03/11 06:23:54 mef Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/07/11 04:16:20 dbj Exp $
 bin/octoclock_firmware_burner
 bin/uhd_cal_rx_iq_balance
 bin/uhd_cal_tx_dc_offset
@@ -154,6 +154,7 @@ lib/uhd/tests/devtest/benchmark_rate_test.py
 lib/uhd/tests/devtest/bitbang_test.py
 lib/uhd/tests/devtest/devtest_b2xx.py
 lib/uhd/tests/devtest/devtest_e3xx.py
+lib/uhd/tests/devtest/devtest_n3x0.py
 lib/uhd/tests/devtest/devtest_x3x0.py
 lib/uhd/tests/devtest/gpio_test.py
 lib/uhd/tests/devtest/list_sensors_test.py
@@ -422,6 +423,7 @@ share/uhd/rfnoc/blocks/ddc_single.xml
 share/uhd/rfnoc/blocks/dma_fifo.xml
 share/uhd/rfnoc/blocks/dma_fifo_x4.xml
 share/uhd/rfnoc/blocks/duc.xml
+share/uhd/rfnoc/blocks/duc_single.xml
 share/uhd/rfnoc/blocks/fft.xml
 share/uhd/rfnoc/blocks/fifo.xml
 share/uhd/rfnoc/blocks/fir.xml
