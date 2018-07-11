@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/04/08 06:06:13 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2018/07/11 11:21:26 jperkin Exp $
 
 GCC_PKGNAME=	gcc49
 .include	"../../lang/${GCC_PKGNAME}/version.mk"
@@ -9,7 +9,7 @@ PKGNAME=	${GCC_PKGNAME}-libs-${GCC49_DIST_VERSION}
 ## The PKGREVISION of this package needs to be at least 1 more than the
 ## PKGREVISION of the lang/gcc49 package so that with the dependence pattern
 ## '{gcc49,gcc49-libs}>=4.9.*' pkg_add will choose gcc49-libs over gcc49.
-PKGREVISION=	7
+PKGREVISION=	8
 
 CATEGORIES=	lang
 MASTER_SITES=	# empty
@@ -60,6 +60,12 @@ do-install: ${LIBRARY_FILES}
 		${MKDIR} ${DESTDIR}${LIBGCC_PREFIX}/${GCC_TARGET_MACHINE}/lib
 	cd ${LIBGCC_PREFIX} && 						\
 	  ${PAX} -rw ${DESTDIR}${LIBGCC_PREFIX}/${GCC_TARGET_MACHINE} <${LIBRARY_FILES}
+.if ${OPSYS} == "Darwin"
+	while read lib; do \
+	  install_name_tool -id ${LIBGCC_PREFIX}/${GCC_TARGET_MACHINE}/$${lib} \
+	    ${DESTDIR}${LIBGCC_PREFIX}/${GCC_TARGET_MACHINE}/$${lib}; \
+	done <${LIBRARY_FILES}
+.endif
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
