@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.192 2018/05/24 05:47:21 wiz Exp $
+# $NetBSD: gcc.mk,v 1.193 2018/07/11 11:11:52 jperkin Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -632,7 +632,8 @@ _USE_GCC_SHLIB?=	yes
 # USE_GCC_RUNTIME for packages which create shared libraries but do not use
 # libtool to do so.
 #
-.if ${OPSYS} == "SunOS" && (defined(USE_LIBTOOL) || defined(USE_GCC_RUNTIME))
+.if (${OPSYS} == "Darwin" || ${OPSYS} == "SunOS") && \
+    (defined(USE_LIBTOOL) || defined(USE_GCC_RUNTIME))
 _USE_GCC_SHLIB= yes
 .endif
 
