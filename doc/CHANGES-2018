@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3155 2018/07/11 11:59:37 tsutsui Exp $
+$NetBSD: CHANGES-2018,v 1.3156 2018/07/11 12:05:06 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4537,3 +4537,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-asyncpg to 0.17.0 [adam 2018-07-11]
 	Updated lang/gcc49-libs to 4.9.4nb8 [jperkin 2018-07-11]
 	Updated multimedia/adobe-flash-player to 30.0.0.134 [tsutsui 2018-07-11]
+	Updated devel/ocaml-extlib to 1.7.5 [jaapb 2018-07-11]
