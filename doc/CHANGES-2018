@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3152 2018/07/11 07:59:51 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3153 2018/07/11 09:02:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4534,3 +4534,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated ham/uhd to 3.11.1.0 [dbj 2018-07-10]
 	Updated devel/distcc to 3.3 [adam 2018-07-11]
 	Updated security/py-cryptodome to 3.6.4 [adam 2018-07-11]
+	Updated databases/py-asyncpg to 0.17.0 [adam 2018-07-11]
