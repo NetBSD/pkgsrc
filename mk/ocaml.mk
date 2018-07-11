@@ -1,4 +1,4 @@
-# $NetBSD: ocaml.mk,v 1.20 2018/05/31 11:22:46 jaapb Exp $
+# $NetBSD: ocaml.mk,v 1.21 2018/07/11 09:18:28 jaapb Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
 #
@@ -204,7 +204,7 @@ do-configure:
 
 # Redefine build target
 do-build:
-	${RUN} cd ${WRKSRC} && \
+	${RUN} ${_ULIMIT_CMD} cd ${WRKSRC} && \
 		${SETENV} ${MAKE_ENV} ${OASIS_EXEC} -build ${OASIS_BUILD_ARGS}
 
 # Redefine install target
@@ -219,7 +219,7 @@ do-install:
 .if ${OCAML_USE_TOPKG} == "yes"
 
 do-build:
-	${RUN} cd ${WRKSRC} && \
+	${RUN} ${_ULIMIT_CMD} cd ${WRKSRC} && \
 		${SETENV} ${MAKE_ENV} ocaml pkg/pkg.ml build
 
 .endif # topkg
@@ -252,11 +252,13 @@ do-install:
 
 do-build:
 .if !empty(JBUILDER_BUILD_PACKAGES)
-	${RUN} cd ${WRKSRC} && jbuilder build -j ${MAKE_JOBS} \
+	${RUN} ${_ULIMIT_CMD} \
+		cd ${WRKSRC} && jbuilder build -j ${MAKE_JOBS} \
 		${JBUILDER_BUILD_FLAGS} -p ${JBUILDER_BUILD_PACKAGES:ts,} \
 		${JBUILDER_BUILD_TARGETS}
 .else
-	${RUN} cd ${WRKSRC} && jbuilder build -j ${MAKE_JOBS} \
+	${RUN} ${_ULIMIT_CMD} \
+		cd ${WRKSRC} && jbuilder build -j ${MAKE_JOBS} \
 		${JBUILDER_BUILD_FLAGS} ${JBUILDER_BUILD_TARGETS}
 .endif
 
