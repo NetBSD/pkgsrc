@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2018/01/01 18:16:37 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2018/07/11 11:21:26 jperkin Exp $
 
 BUILDLINK_TREE+=	gcc49-libs
 
@@ -27,9 +27,17 @@ LIBGCC_SUBPREFIX=	gcc49
 LIBGCC_PREFIX=		${BUILDLINK_PREFIX.gcc49-libs}/${LIBGCC_SUBPREFIX}
 GCC_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
 
+# On Darwin we need to modify the libgcc linkage, by default it will try to
+# use stub libraries which we cannot change the library name for, leading to
+# check-shlibs failures as it thinks they come from the main gcc49 package.
 ${SPECS_LIBGCC}:
 	@${ECHO} "*link_libgcc:" >${SPECS_LIBGCC}
 	@${ECHO} "%D ${LINKER_RPATH_FLAG}${LIBGCC_PREFIX}/${GCC_TARGET_MACHINE}/lib/%M" >>${SPECS_LIBGCC}
+.  if ${OPSYS} == "Darwin"
+	@${ECHO} "" >>${SPECS_LIBGCC}
+	@${ECHO} "*libgcc:" >>${SPECS_LIBGCC}
+	@${ECHO} "%{static-libgcc|static: -lgcc_eh -lgcc; shared-libgcc|fexceptions|fgnu-runtime: -lgcc; : -lgcc }" >>${SPECS_LIBGCC}
+.  endif
 
 _WRAP_EXTRA_ARGS.CC+=	-specs=${SPECS_LIBGCC}
 _WRAP_EXTRA_ARGS.CXX+=	-specs=${SPECS_LIBGCC}
