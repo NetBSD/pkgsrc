@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.23 2015/11/03 03:27:23 agc Exp $
+$NetBSD: distinfo,v 1.24 2018/07/11 07:30:40 adam Exp $
 
-SHA1 (distcc-3.2rc1.tar.bz2) = 7564e4a4890ad6ff78ec0de620329b71179361e7
-RMD160 (distcc-3.2rc1.tar.bz2) = 505447b910d90ea403a98fe0d0a3a0fa92cd7039
-SHA512 (distcc-3.2rc1.tar.bz2) = 98b2e8423d724bbb6a615d946d170441a8e293310785f867d7a277b318c043a37b0af39ae8ed1f7a0667803de9db1d1925199bad85130cf9bd9cb347635125ee
-Size (distcc-3.2rc1.tar.bz2) = 609904 bytes
+SHA1 (distcc-3.3.tar.gz) = 20c9f3085d7211945b7f3f8a60bce704a8a0f127
+RMD160 (distcc-3.3.tar.gz) = b74efe4c744b1bd1c4c6c998d4c8c481c38e293f
+SHA512 (distcc-3.3.tar.gz) = 459c175c8ac905bc70299e77ac11b6d24782bd69c9152126249c9af8fbb4c269e6f7317b02abf50cf6cc0405dd0f887e803320e19dc528a19c4c488640c615dc
+Size (distcc-3.3.tar.gz) = 1171281 bytes
+SHA1 (patch-Makefile.in) = c5da08b6269413857b04854592b0271d76337982
 SHA1 (patch-aa) = f459c5e80a60b80f391d9d6c37d8ad2574740372
 SHA1 (patch-ab) = c3a306be0a3576b33f506bd6516d8242ceec07ca
 SHA1 (patch-ac) = 618015e2954dc54c6db3712381749feb17106647
-SHA1 (patch-ae) = d4e5eba767f08a1c346c0223ddf88e98a5ed7c59
-SHA1 (patch-src_io.c) = 5c662a4f9af20b5cffbd6285a3b0d6d6c4066571
