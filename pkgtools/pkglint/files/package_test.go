@@ -295,7 +295,7 @@ func (s *Suite) Test_Package_checkPossibleDowngrade(c *check.C) {
 	G.Pkg.checkPossibleDowngrade()
 
 	t.CheckOutputLines(
-		"WARN: category/pkgbase/Makefile:5: The package is being downgraded from 1.8 (see ../../doc/CHANGES:116) to 1.0nb15")
+		"WARN: category/pkgbase/Makefile:5: The package is being downgraded from 1.8 (see ../../doc/CHANGES:116) to 1.0nb15.")
 
 	G.Pkgsrc.LastChange["category/pkgbase"].Version = "1.0nb22"
 
@@ -314,7 +314,7 @@ func (s *Suite) Test_checkdirPackage(c *check.C) {
 	G.checkdirPackage(t.TmpDir())
 
 	t.CheckOutputLines(
-		"WARN: ~/Makefile: Neither PLIST nor PLIST.common exist, and PLIST_SRC is unset. Are you sure PLIST handling is ok?",
+		"WARN: ~/Makefile: Neither PLIST nor PLIST.common exist, and PLIST_SRC is unset.",
 		"WARN: ~/distinfo: File not found. Please run \""+confMake+" makesum\" or define NO_CHECKSUM=yes in the package Makefile.",
 		"ERROR: ~/Makefile: Each package must define its LICENSE.",
 		"WARN: ~/Makefile: No COMMENT given.")
@@ -509,7 +509,7 @@ func (s *Suite) Test_Package_includeAfterExists(c *check.C) {
 	G.checkdirPackage(G.CurrentDir)
 
 	t.CheckOutputLines(
-		"WARN: ~/category/package/Makefile: Neither PLIST nor PLIST.common exist, and PLIST_SRC is unset. Are you sure PLIST handling is ok?",
+		"WARN: ~/category/package/Makefile: Neither PLIST nor PLIST.common exist, and PLIST_SRC is unset.",
 		"WARN: ~/category/package/distinfo: File not found. Please run \"@BMAKE@ makesum\" or define NO_CHECKSUM=yes in the package Makefile.",
 		"ERROR: ~/category/package/Makefile: Each package must define its LICENSE.",
 		"WARN: ~/category/package/Makefile: No COMMENT given.",

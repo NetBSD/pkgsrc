@@ -95,7 +95,7 @@ func (v *version) Add(i int) {
 	v.v = append(v.v, i)
 }
 func isdigit(b byte) bool {
-	return b-'0' <= 9
+	return '0' <= b && b <= '9'
 }
 func (v *version) Place(i int) int {
 	if i < len(v.v) {

@@ -142,7 +142,7 @@ func (s *Suite) Test_MkLineChecker_checkVarassign(c *check.C) {
 	MkLineChecker{G.Mk.mklines[1]}.checkVarassign()
 
 	t.CheckOutputLines(
-		"WARN: Makefile:2: ac_cv_libpari_libs is defined but not used. Spelling mistake?")
+		"WARN: Makefile:2: ac_cv_libpari_libs is defined but not used.")
 }
 
 func (s *Suite) Test_MkLineChecker_checkVarassignDefPermissions(c *check.C) {
@@ -231,8 +231,8 @@ func (s *Suite) Test_MkLineChecker__unclosed_varuse(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"WARN: Makefile:2: Unclosed Make variable starting at \"${EGDIR/apparmor.d $...\"",
-		"WARN: Makefile:2: EGDIRS is defined but not used. Spelling mistake?",
+		"WARN: Makefile:2: Unclosed Make variable starting at \"${EGDIR/apparmor.d $...\".",
+		"WARN: Makefile:2: EGDIRS is defined but not used.",
 		"WARN: Makefile:2: Pkglint parse error in MkLine.Tokenize at "+
 			"\"${EGDIR/apparmor.d ${EGDIR/dbus-1/system.d ${EGDIR/pam.d\".")
 }
