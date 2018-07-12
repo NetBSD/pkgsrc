@@ -238,6 +238,11 @@ func (ck *PlistChecker) checkDuplicate(pline *PlistLine) {
 func (ck *PlistChecker) checkpathBin(pline *PlistLine, dirname, basename string) {
 	if contains(dirname, "/") {
 		pline.line.Warnf("The bin/ directory should not have subdirectories.")
+		Explain(
+			"The programs in bin/ are collected there to be executable by the",
+			"user without having to type an absolute path.  This advantage does",
+			"not apply to programs in subdirectories of bin/.  These programs",
+			"should rather be placed in libexec/PKGBASE.")
 		return
 	}
 }

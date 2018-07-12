@@ -206,7 +206,7 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk_multiple_inclusion_wrong(c *check.C)
 	ChecklinesBuildlink3Mk(mklines)
 
 	t.CheckOutputLines(
-		"WARN: buildlink3.mk:6: UNRELATED_BUILDLINK3_MK is defined but not used. Spelling mistake?",
+		"WARN: buildlink3.mk:6: UNRELATED_BUILDLINK3_MK is defined but not used.",
 		"WARN: buildlink3.mk:6: This line should contain the following text: HS_X11_BUILDLINK3_MK:=")
 }
 
@@ -225,7 +225,7 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk_missing_endif(c *check.C) {
 	ChecklinesBuildlink3Mk(mklines)
 
 	t.CheckOutputLines(
-		"WARN: buildlink3.mk:EOF: Expected .endif")
+		"WARN: buildlink3.mk:EOF: Expected \".endif\".")
 }
 
 func (s *Suite) Test_ChecklinesBuildlink3Mk_unknown_dependency_patterns(c *check.C) {

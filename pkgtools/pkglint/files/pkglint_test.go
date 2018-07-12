@@ -251,7 +251,7 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 			"(distinfo has asdfasdf, patch file has e775969de639ec703866c0336c4c8e0fdd96309c). "+
 			"Run \""+confMake+" makepatchsum\".",
 		"WARN: ~/sysutils/checkperms/patches/patch-checkperms.c:12: Premature end of patch hunk "+
-			"(expected 1 lines to be deleted and 0 lines to be added)",
+			"(expected 1 lines to be deleted and 0 lines to be added).",
 		"2 errors and 2 warnings found.",
 		"(Run \"pkglint -e\" to show explanations.)",
 		"(Run \"pkglint -fs\" to show what can be fixed automatically.)",

@@ -173,6 +173,75 @@ func (s *Suite) Test_SubstContext__nested_conditionals(c *check.C) {
 		"WARN: Makefile:25: Incomplete SUBST block: SUBST_FILES.os missing.")
 }
 
+func (s *Suite) Test_SubstContext__post_patch(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wextra,no-space", "--show-autofix")
+	t.SetupVartypes()
+
+	mklines := t.NewMkLines("os.mk",
+		MkRcsID,
+		"",
+		"SUBST_CLASSES+=         os",
+		"SUBST_STAGE.os=         post-patch",
+		"SUBST_FILES.os=         guess-os.h",
+		"SUBST_SED.os=           -e s,@OPSYS@,Darwin,")
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"WARN: os.mk:4: Substitutions should not happen in the patch phase.",
+		"AUTOFIX: os.mk:4: Replacing \"post-patch\" with \"pre-configure\".")
+}
+
+func (s *Suite) Test_SubstContext__adjacent(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wextra")
+	t.SetupVartypes()
+
+	mklines := t.NewMkLines("os.mk",
+		MkRcsID,
+		"",
+		"SUBST_CLASSES+=         1",
+		"SUBST_STAGE.1=          pre-configure",
+		"SUBST_FILES.1=          file1",
+		"SUBST_SED.1=            -e s,subst1,repl1,",
+		"SUBST_CLASSES+=         2",
+		"SUBST_SED.1+=           -e s,subst1b,repl1b,", // Misplaced
+		"SUBST_STAGE.2=          pre-configure",
+		"SUBST_FILES.2=          file2",
+		"SUBST_SED.2=            -e s,subst2,repl2,")
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"WARN: os.mk:8: Variable \"SUBST_SED.1\" does not match SUBST class \"2\".")
+}
+
+func (s *Suite) Test_SubstContext__do_patch(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wextra,no-space")
+	t.SetupVartypes()
+
+	mklines := t.NewMkLines("os.mk",
+		MkRcsID,
+		"",
+		"SUBST_CLASSES+=         os",
+		"SUBST_STAGE.os=         do-patch",
+		"SUBST_FILES.os=         guess-os.h",
+		"SUBST_SED.os=           -e s,@OPSYS@,Darwin,")
+
+	mklines.Check()
+
+	// No warning, since there is nothing to fix automatically.
+	// This case also doesn't occur in practice.
+	t.CheckOutputEmpty()
+}
+
+// simulateSubstLines only tests some of the inner workings of SubstContext.
+// It is not realistic for all cases. If in doubt, use MkLines.Check.
 func simulateSubstLines(t *Tester, texts ...string) {
 	ctx := NewSubstContext()
 	for _, lineText := range texts {

@@ -56,6 +56,9 @@ func logs(level *LogLevel, fname, lineno, format, msg string) bool {
 	if fname != "" {
 		fname = cleanpath(fname)
 	}
+	if G.Testing && format != "Magic-Autofix-Format" && !hasSuffix(format, ".") && !hasSuffix(format, ": %s") && !hasSuffix(format, ". %s") {
+		panic(fmt.Sprintf("Format %q must end in a period.", format))
+	}
 
 	if !G.opts.LogVerbose && loggedAlready(fname, lineno, msg) {
 		return false
@@ -77,7 +80,7 @@ func logs(level *LogLevel, fname, lineno, format, msg string) bool {
 		text += sep + level.GccName + ":"
 		sep = " "
 	}
-	if G.opts.Profiling && format != "" {
+	if G.opts.Profiling && format != "Magic-Autofix-Format" {
 		G.loghisto.Add(format, 1)
 	}
 	text += sep + msg + "\n"
@@ -100,6 +103,9 @@ func logs(level *LogLevel, fname, lineno, format, msg string) bool {
 	return true
 }
 
+// Explain outputs an explanation for the preceding diagnostic
+// if the --explain option is given. Otherwise it just records
+// that an explanation is available.
 func Explain(explanation ...string) {
 	if G.Testing {
 		for _, s := range explanation {

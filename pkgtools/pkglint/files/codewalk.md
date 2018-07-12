@@ -24,7 +24,7 @@ When running pkglint, the `G` variable is set up first.
 It contains the whole global state of pkglint.
 (Except for some of the subpackages, which have to be initialized separately.)
 All the interesting code is in the `Pkglint` type.
-This code structure makes it easy to test the code.
+Having only a single global variable makes it easy to reset the global state during testing.
 
 ### Testing pkglint
 
@@ -80,8 +80,9 @@ The path of the pkgsrc directory is determined from the first command
 line argument, which in this file is `DESCR`. From there, the pkgsrc
 root is usually reachable via `../../`, and this is what pkglint tries.
 
-After the initialization of everything,
-all items from the TODO list are worked off and handed over to `CheckDirent`.
+After initializing the pkgsrc metadata,
+all items from the TODO list are worked off and handed over to `CheckDirent`,
+one after another.
 
 ```codewalk
 file   pkglint.go
@@ -121,7 +122,10 @@ end    ^\}
 Now we are where the actual action takes place.
 The code looks straight-forward here.
 First, each line is checked on its own,
-and the final check is for too long files. 
+and the final check is for too long files.
+Pkglint takes great care to output all diagnostics in a logical order,
+that is file by file, and top to bottom within each file.
+Therefore the checks for individual lines happen before the other check.
 
 The call to `SaveAutofixChanges` at the end looks a bit strange
 since none of the visible checks fixes anything.
@@ -135,12 +139,19 @@ end    ^\}
 ```
 
 This code is a typical example for using the autofix feature.
-Some more details are described at the `Autofix` type itself:
+Some more details are described at the `Autofix` type itself
+and at its typical call site `Line.Autofix()`:
 
 ```codewalk
 file   linechecker.go
 start  /^type Autofix/ upwhile /^\/\//
 end    /^type Autofix/
+```
+
+```codewalk
+file   line.go
+start  /^func .* Autofix/ upwhile /^\/\//
+end    /^func .* Autofix/
 ```
 
 The journey ends here, and it hasn't been that difficult.
@@ -184,6 +195,11 @@ end    ^\}
 
 ### MkLine
 
+Most of the pkgsrc infrastructure is written in Makefiles. 
+In these, there may be line continuations  (the ones ending in backslash).
+Plus, they may contain Make variables of the form `${VARNAME}` or `${VARNAME:Modifiers}`,
+and these are handled specially.
+
 ```codewalk
 file   mkline.go
 start  ^type MkLine =
@@ -195,14 +211,10 @@ start  ^type MkLineImpl struct
 end    ^\}
 ```
 
-Most of the pkgsrc infrastructure is written in Makefiles. 
-In these, there may be line continuations  (the ones ending in backslash).
-Plus, they may contain Make variables of the form `${VARNAME}` or `${VARNAME:Modifiers}`,
-and these are handled specially.
-
 ### ShellLine
 
-The instructions for building and installing packages are written in Shell.
+The instructions for building and installing packages are written in shell commands,
+which are embedded in Makefile fragments.
 The `ShellLine` type provides methods for checking shell commands and their individual parts.
 
 ```codewalk

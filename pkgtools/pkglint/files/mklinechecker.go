@@ -24,10 +24,10 @@ func (ck MkLineChecker) Check() {
 	case mkline.IsVarassign():
 		ck.checkVarassign()
 
-	case mkline.IsShellcmd():
-		shellcmd := mkline.Shellcmd()
-		ck.checkText(shellcmd)
-		NewShellLine(mkline).CheckShellCommandLine(shellcmd)
+	case mkline.IsShellCommand():
+		shellCommand := mkline.ShellCommand()
+		ck.checkText(shellCommand)
+		NewShellLine(mkline).CheckShellCommandLine(shellCommand)
 
 	case mkline.IsComment():
 		if hasPrefix(mkline.Text, "# url2pkg-marker") {
@@ -49,7 +49,7 @@ func (ck MkLineChecker) checkInclude() {
 		ck.checkDirectiveIndentation(G.Mk.indentation.Depth("include"))
 	}
 
-	includefile := mkline.Includefile()
+	includefile := mkline.IncludeFile()
 	mustExist := mkline.MustExist()
 	if trace.Tracing {
 		trace.Step2("includingFile=%s includefile=%s", mkline.Filename, includefile)
@@ -309,7 +309,7 @@ func (ck MkLineChecker) CheckVaruse(varuse *MkVarUse, vuc *VarUseContext) {
 		!varIsUsed(varname) &&
 		!(G.Mk != nil && G.Mk.forVars[varname]) &&
 		!containsVarRef(varname) {
-		mkline.Warnf("%s is used but not defined. Spelling mistake?", varname)
+		mkline.Warnf("%s is used but not defined.", varname)
 	}
 
 	if hasPrefix(varuse.Mod(), ":=") && vartype != nil && !vartype.IsConsideredList() {
@@ -674,7 +674,7 @@ func (ck MkLineChecker) checkVarassign() {
 		} else if deprecated := G.Pkgsrc.Deprecated; deprecated[varname] != "" || deprecated[varcanon] != "" {
 			// Ok
 		} else {
-			mkline.Warnf("%s is defined but not used. Spelling mistake?", varname)
+			mkline.Warnf("%s is defined but not used.", varname)
 		}
 	}
 

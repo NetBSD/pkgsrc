@@ -40,7 +40,7 @@ type mkLineConditional struct {
 	args      string
 }
 type mkLineInclude struct {
-	mustexist     bool
+	mustExist     bool
 	sys           bool
 	indent        string
 	includeFile   string
@@ -156,12 +156,12 @@ func (mkline *MkLineImpl) IsCommentedVarassign() bool {
 	return ok && data.commented
 }
 
-// IsShellcmd returns true for tab-indented lines that are assigned to a Make
+// IsShellCommand returns true for tab-indented lines that are assigned to a Make
 // target. Example:
 //
 //  pre-configure:    # IsDependency
-//          ${ECHO}   # IsShellcmd
-func (mkline *MkLineImpl) IsShellcmd() bool {
+//          ${ECHO}   # IsShellCommand
+func (mkline *MkLineImpl) IsShellCommand() bool {
 	_, ok := mkline.data.(mkLineShell)
 	return ok
 }
@@ -227,7 +227,7 @@ func (mkline *MkLineImpl) Value() string      { return mkline.data.(mkLineAssign
 // In the above line, the comment is "# comment".
 // The leading "#" is included so that pkglint can distinguish between no comment at all and an empty comment.
 func (mkline *MkLineImpl) VarassignComment() string { return mkline.data.(mkLineAssign).comment }
-func (mkline *MkLineImpl) Shellcmd() string         { return mkline.data.(mkLineShell).command }
+func (mkline *MkLineImpl) ShellCommand() string     { return mkline.data.(mkLineShell).command }
 func (mkline *MkLineImpl) Indent() string {
 	if mkline.IsCond() {
 		return mkline.data.(mkLineConditional).indent
@@ -237,8 +237,8 @@ func (mkline *MkLineImpl) Indent() string {
 }
 func (mkline *MkLineImpl) Directive() string   { return mkline.data.(mkLineConditional).directive }
 func (mkline *MkLineImpl) Args() string        { return mkline.data.(mkLineConditional).args }
-func (mkline *MkLineImpl) MustExist() bool     { return mkline.data.(mkLineInclude).mustexist }
-func (mkline *MkLineImpl) Includefile() string { return mkline.data.(mkLineInclude).includeFile }
+func (mkline *MkLineImpl) MustExist() bool     { return mkline.data.(mkLineInclude).mustExist }
+func (mkline *MkLineImpl) IncludeFile() string { return mkline.data.(mkLineInclude).includeFile }
 func (mkline *MkLineImpl) Targets() string     { return mkline.data.(mkLineDependency).targets }
 func (mkline *MkLineImpl) Sources() string     { return mkline.data.(mkLineDependency).sources }
 
