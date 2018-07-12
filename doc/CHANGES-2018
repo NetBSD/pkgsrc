@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3159 2018/07/11 22:43:09 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.3160 2018/07/12 02:28:04 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4542,3 +4542,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/libdatrie to 0.2.12 [adam 2018-07-11]
 	Updated www/curl to 7.61.0 [adam 2018-07-11]
 	Updated net/ucspi-ssl to 0.99e [schmonz 2018-07-11]
+	Added devel/py-typing-extensions version 3.6.5 [minskim 2018-07-12]
