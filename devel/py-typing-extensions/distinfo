@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/07/12 02:27:38 minskim Exp $
+
+SHA1 (typing_extensions-3.6.5.tar.gz) = f8e190e63522ae0dec395308e24eba54ae90d4e1
+RMD160 (typing_extensions-3.6.5.tar.gz) = 9809b4ac90e7ae6fbea32efc8af9f122e353855f
+SHA512 (typing_extensions-3.6.5.tar.gz) = 28663ebc02ec20487d0903cb4af99d07c4709934d6054b5ae6bc1fdb315ed7de5bfc44729cb0b4b5ae6a204c046d5087744bf9cc72497ca5961501e2f4b507f2
+Size (typing_extensions-3.6.5.tar.gz) = 27146 bytes
