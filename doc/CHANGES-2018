@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3161 2018/07/12 14:10:34 maya Exp $
+$NetBSD: CHANGES-2018,v 1.3162 2018/07/12 16:23:58 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4544,3 +4544,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/ucspi-ssl to 0.99e [schmonz 2018-07-11]
 	Added devel/py-typing-extensions version 3.6.5 [minskim 2018-07-12]
 	Updated graphics/krita to 4.1.0 [maya 2018-07-12]
+	Updated pkgtools/pkglint to 5.5.13 [rillig 2018-07-12]
