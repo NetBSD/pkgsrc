@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2018/07/06 15:06:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2018/07/12 14:10:14 maya Exp $
 
-DISTNAME=		krita-4.0.1
-PKGREVISION=		7
+DISTNAME=		krita-4.1.0
 CATEGORIES=		misc kde
-MASTER_SITES=		${MASTER_SITE_KDE:=krita/4.0.1/}
+MASTER_SITES=		${MASTER_SITE_KDE:=krita/${DISTNAME:S/krita-//}/}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		maya@NetBSD.org
 HOMEPAGE=		http://www.krita.org/
 COMMENT=		Raster graphics editor for digital painting
 LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2.1
@@ -33,6 +32,9 @@ BUILDLINK_TRANSFORM+=		rm:-Werror=implicit-function-declaration
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kritarc \
 		${PKG_SYSCONFDIR}/xdg/kritarc
 
+PYTHON_VERSIONS_INCOMPATIBLE=	26 27
+
+.include "../../lang/python/application.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
