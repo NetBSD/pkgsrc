@@ -20,7 +20,7 @@ func (s *Suite) Test_CheckdirCategory_totally_broken(c *check.C) {
 	t.CheckOutputLines(
 		"ERROR: ~/archivers/Makefile:1: Expected \"# $"+"NetBSD$\".",
 		"WARN: ~/archivers/Makefile:4: Line contains invalid characters (U+2019).",
-		"WARN: ~/archivers/Makefile:4: SUBDIR- is defined but not used. Spelling mistake?",
+		"WARN: ~/archivers/Makefile:4: SUBDIR- is defined but not used.",
 		"ERROR: ~/archivers/Makefile:6: \"../mk/category.mk\" does not exist.",
 		"ERROR: ~/archivers/Makefile:2: COMMENT= line expected.",
 		"WARN: ~/archivers/Makefile:2: Indentation should be a single tab character.",

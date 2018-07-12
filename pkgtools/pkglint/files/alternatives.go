@@ -30,7 +30,8 @@ func CheckfileAlternatives(filename string, plistFiles map[string]bool) {
 			fix := line.Autofix()
 			fix.Notef("@PREFIX@/ can be omitted from the file name.")
 			fix.Explain(
-				"The alternative implementation is always interpreted relative to ${PREFIX}.")
+				"The alternative implementation is always interpreted relative to",
+				"${PREFIX}.")
 			fix.ReplaceAfter(space, "@PREFIX@/", "")
 			fix.Apply()
 		} else {

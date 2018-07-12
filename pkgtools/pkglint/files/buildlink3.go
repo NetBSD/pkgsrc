@@ -101,7 +101,7 @@ func ChecklinesBuildlink3Mk(mklines *MkLines) {
 	indentLevel := 1 // The first .if is from the second paragraph.
 	for {
 		if exp.EOF() {
-			exp.CurrentLine().Warnf("Expected .endif")
+			exp.CurrentLine().Warnf("Expected \".endif\".")
 			return
 		}
 
@@ -112,11 +112,6 @@ func ChecklinesBuildlink3Mk(mklines *MkLines) {
 			exp.Advance()
 			varname, value := mkline.Varname(), mkline.Value()
 			doCheck := false
-
-			const (
-				reDependencyCmp      = `^((?:\$\{[\w_]+\}|[\w_\.+]|-[^\d])+)[<>]=?(\d[^-*?\[\]]*)$`
-				reDependencyWildcard = `^(-(?:\[0-9\]\*|\d[^-]*)$`
-			)
 
 			if varname == "BUILDLINK_ABI_DEPENDS."+pkgbase {
 				abiLine = line
