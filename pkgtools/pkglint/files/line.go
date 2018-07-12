@@ -160,6 +160,8 @@ func (line *LineImpl) String() string {
 	return line.Filename + ":" + line.Linenos() + ": " + line.Text
 }
 
+// Autofix returns the autofix instance belonging to the line.
+//
 // Usage:
 //
 //  fix := line.Autofix()
