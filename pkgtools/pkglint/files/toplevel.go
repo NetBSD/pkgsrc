@@ -61,7 +61,7 @@ func (ctx *Toplevel) checkSubdir(line Line, commentedOut bool, indentation, subd
 	case subdir == "archivers" && prev == "x11":
 		// This exception is documented in the top-level Makefile.
 	default:
-		line.Warnf("%s should come before %s", subdir, prev)
+		line.Warnf("%s should come before %s.", subdir, prev)
 	}
 	ctx.previousSubdir = subdir
 

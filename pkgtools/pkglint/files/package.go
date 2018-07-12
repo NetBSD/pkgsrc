@@ -11,7 +11,7 @@ import (
 	"strings"
 )
 
-const rePkgname = `^([\w\-.+]+)-(\d(?:\w|\.\d)*)$`
+const rePkgname = `^([\w\-.+]+)-(\d[.0-9A-Z_a-z]*)$`
 
 // Package contains data for the pkgsrc package that is currently checked.
 type Package struct {
@@ -103,7 +103,7 @@ func (pkg *Package) checkPossibleDowngrade() {
 	if change.Action == "Updated" {
 		changeVersion := regex.Compile(`nb\d+$`).ReplaceAllString(change.Version, "")
 		if pkgver.Compare(pkgversion, changeVersion) < 0 {
-			mkline.Warnf("The package is being downgraded from %s (see %s) to %s", change.Version, change.Line.ReferenceFrom(mkline.Line), pkgversion)
+			mkline.Warnf("The package is being downgraded from %s (see %s) to %s.", change.Version, change.Line.ReferenceFrom(mkline.Line), pkgversion)
 			Explain(
 				"The files in doc/CHANGES-*, in which all version changes are",
 				"recorded, have a higher version number than what the package says.",
@@ -122,7 +122,7 @@ func (pkg *Package) checklinesBuildlink3Inclusion(mklines *MkLines) {
 	includedFiles := make(map[string]MkLine)
 	for _, mkline := range mklines.mklines {
 		if mkline.IsInclude() {
-			file := mkline.Includefile()
+			file := mkline.IncludeFile()
 			if m, bl3 := match1(file, `^\.\./\.\./(.*)/buildlink3\.mk`); m {
 				includedFiles[bl3] = mkline
 				if pkg.bl3[bl3] == nil {
@@ -320,7 +320,7 @@ func (pkg *Package) readMakefile(fname string, mainLines *MkLines, allLines *MkL
 
 		var includeFile, incDir, incBase string
 		if mkline.IsInclude() {
-			inc := mkline.Includefile()
+			inc := mkline.IncludeFile()
 			includeFile = resolveVariableRefs(mkline.ResolveVarsInRelativePath(inc, true))
 			if containsVarRef(includeFile) {
 				if !contains(fname, "/mk/") {
@@ -420,7 +420,7 @@ func (pkg *Package) checkfilePackageMakefile(fname string, mklines *MkLines) {
 		!vars.Defined("META_PACKAGE") &&
 		!fileExists(G.CurrentDir+"/"+pkg.Pkgdir+"/PLIST") &&
 		!fileExists(G.CurrentDir+"/"+pkg.Pkgdir+"/PLIST.common") {
-		NewLineWhole(fname).Warnf("Neither PLIST nor PLIST.common exist, and PLIST_SRC is unset. Are you sure PLIST handling is ok?")
+		NewLineWhole(fname).Warnf("Neither PLIST nor PLIST.common exist, and PLIST_SRC is unset.")
 	}
 
 	if (vars.Defined("NO_CHECKSUM") || vars.Defined("META_PACKAGE")) && isEmptyDir(G.CurrentDir+"/"+pkg.Patchdir) {
@@ -918,7 +918,7 @@ func (pkg *Package) CheckInclude(mkline MkLine, indentation *Indentation) {
 	}
 
 	if path.Dir(abspath(mkline.Filename)) == abspath(G.CurrentDir) {
-		includefile := mkline.Includefile()
+		includefile := mkline.IncludeFile()
 
 		if indentation.IsConditional() {
 			pkg.conditionalIncludes[includefile] = mkline
