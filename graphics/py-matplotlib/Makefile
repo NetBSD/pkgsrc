@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.52 2018/04/14 12:52:56 adam Exp $
+# $NetBSD: Makefile,v 1.52.2.1 2018/07/12 19:47:37 spz Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 COMMENT=	Matlab-style plotting package for Python
 
 DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo

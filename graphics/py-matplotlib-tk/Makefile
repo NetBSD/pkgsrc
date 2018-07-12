@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2018/04/14 12:52:56 adam Exp $
+# $NetBSD: Makefile,v 1.33.2.1 2018/07/12 19:47:37 spz Exp $
 
+PKGREVISION= 1
 .include "../../graphics/py-matplotlib/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-/-tk-/}
