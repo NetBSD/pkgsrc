@@ -60,7 +60,11 @@ func (ctx *SubstContext) Varassign(mkline MkLine) {
 			mkline.Warnf("Please add only one class at a time to SUBST_CLASSES.")
 		}
 		if ctx.id != "" && ctx.id != classes[0] {
-			mkline.Warnf("SUBST_CLASSES should only appear once in a SUBST block.")
+			if ctx.IsComplete() {
+				ctx.Finish(mkline)
+			} else {
+				mkline.Warnf("SUBST_CLASSES should only appear once in a SUBST block.")
+			}
 		}
 		ctx.id = classes[0]
 		return
@@ -97,6 +101,21 @@ func (ctx *SubstContext) Varassign(mkline MkLine) {
 	switch varbase {
 	case "SUBST_STAGE":
 		ctx.dupString(mkline, &ctx.stage, varname, value)
+		if value == "pre-patch" || value == "post-patch" {
+			fix := mkline.Autofix()
+			fix.Warnf("Substitutions should not happen in the patch phase.")
+			fix.Explain(
+				"Performing substitutions during post-patch breaks tools such as",
+				"mkpatches, making it very difficult to regenerate correct patches",
+				"after making changes, and often leading to substituted string",
+				"replacements being committed.",
+				"",
+				"Instead of pre-patch, use post-extract.",
+				"Instead of post-patch, use pre-configure.")
+			fix.Replace("pre-patch", "post-extract")
+			fix.Replace("post-patch", "pre-configure")
+			fix.Apply()
+		}
 	case "SUBST_MESSAGE":
 		ctx.dupString(mkline, &ctx.message, varname, value)
 	case "SUBST_FILES":

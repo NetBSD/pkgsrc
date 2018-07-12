@@ -1,7 +1,7 @@
 package pkgver
 
 import (
-	check "gopkg.in/check.v1"
+	"gopkg.in/check.v1"
 	"testing"
 )
 
@@ -24,6 +24,7 @@ func (s *Suite) Test_newVersion(c *check.C) {
 	c.Check(newVersion("1.0.1a"), check.DeepEquals, &version{[]int{1, 0, 0, 0, 1, 1}, 0})
 	c.Check(newVersion("1.0.1z"), check.DeepEquals, &version{[]int{1, 0, 0, 0, 1, 26}, 0})
 	c.Check(newVersion("0pre20160620"), check.DeepEquals, &version{[]int{0, -1, 20160620}, 0})
+	c.Check(newVersion("3.5.DEV1710"), check.DeepEquals, &version{[]int{3, 0, 5, 0, 4, 5, 22, 1710}, 0})
 }
 
 func (s *Suite) Test_Compare(c *check.C) {
@@ -37,8 +38,9 @@ func (s *Suite) Test_Compare(c *check.C) {
 		{"1", "1.0", "1.0.0"},
 		{"1.0nb1"},
 		{"1.0nb2"},
-		{"1.0.1a"},
+		{"1.0.1a", "1.0.a1", "1.0.aa"},
 		{"1.0.1z"},
+		{"1.0.11", "1.0.k"},
 		{"2.0pre", "2.0rc"},
 		{"2.0", "2.0pl"},
 		{"2.0.1nb4"},

@@ -108,7 +108,7 @@ func (mklines *MkLines) Check() {
 
 		case mkline.IsInclude():
 			mklines.target = ""
-			switch path.Base(mkline.Includefile()) {
+			switch path.Base(mkline.IncludeFile()) {
 			case "bsd.prefs.mk", "bsd.fast.prefs.mk", "bsd.builtin.mk":
 				mklines.setSeenBsdPrefsMk()
 			}
@@ -124,8 +124,8 @@ func (mklines *MkLines) Check() {
 			ck.checkDependencyRule(allowedTargets)
 			mklines.target = mkline.Targets()
 
-		case mkline.IsShellcmd():
-			mkline.Tokenize(mkline.Shellcmd())
+		case mkline.IsShellCommand():
+			mkline.Tokenize(mkline.ShellCommand())
 		}
 	}
 	lastMkline := mklines.mklines[len(mklines.mklines)-1]
