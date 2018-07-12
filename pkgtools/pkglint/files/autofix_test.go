@@ -287,12 +287,12 @@ func (s *Suite) Test_Autofix_InsertBefore(c *check.C) {
 	line := t.NewLine("Makefile", 30, "original")
 
 	fix := line.Autofix()
-	fix.Warnf("Dummy")
+	fix.Warnf("Dummy.")
 	fix.InsertBefore("inserted")
 	fix.Apply()
 
 	t.CheckOutputLines(
-		"WARN: Makefile:30: Dummy",
+		"WARN: Makefile:30: Dummy.",
 		"AUTOFIX: Makefile:30: Inserting a line \"inserted\" before this line.",
 		"+\tinserted",
 		">\toriginal")
@@ -305,12 +305,12 @@ func (s *Suite) Test_Autofix_Delete(c *check.C) {
 	line := t.NewLine("Makefile", 30, "to be deleted")
 
 	fix := line.Autofix()
-	fix.Warnf("Dummy")
+	fix.Warnf("Dummy.")
 	fix.Delete()
 	fix.Apply()
 
 	t.CheckOutputLines(
-		"WARN: Makefile:30: Dummy",
+		"WARN: Makefile:30: Dummy.",
 		"AUTOFIX: Makefile:30: Deleting this line.",
 		"-\tto be deleted")
 }
@@ -401,7 +401,7 @@ func (s *Suite) Test_Autofix_CustomFix(c *check.C) {
 
 	doFix := func(line Line) {
 		fix := line.Autofix()
-		fix.Warnf("Please write in ALL-UPPERCASE")
+		fix.Warnf("Please write in ALL-UPPERCASE.")
 		fix.Custom(func(printAutofix, autofix bool) {
 			fix.Describef(int(line.firstLine), "Converting to uppercase")
 			if printAutofix || autofix {
@@ -414,14 +414,14 @@ func (s *Suite) Test_Autofix_CustomFix(c *check.C) {
 	doFix(lines[0])
 
 	t.CheckOutputLines(
-		"WARN: Makefile:1: Please write in ALL-UPPERCASE")
+		"WARN: Makefile:1: Please write in ALL-UPPERCASE.")
 
 	t.SetupCommandLine("--show-autofix")
 
 	doFix(lines[1])
 
 	t.CheckOutputLines(
-		"WARN: Makefile:2: Please write in ALL-UPPERCASE",
+		"WARN: Makefile:2: Please write in ALL-UPPERCASE.",
 		"AUTOFIX: Makefile:2: Converting to uppercase")
 	c.Check(lines[1].Text, equals, "LINE2")
 
@@ -432,4 +432,20 @@ func (s *Suite) Test_Autofix_CustomFix(c *check.C) {
 	t.CheckOutputLines(
 		"AUTOFIX: Makefile:3: Converting to uppercase")
 	c.Check(lines[2].Text, equals, "LINE3")
+}
+
+func (s *Suite) Test_Autofix_Explain(c *check.C) {
+	t := s.Init(c)
+
+	line := t.NewLine("Makefile", 74, "line1")
+
+	fix := line.Autofix()
+	fix.Warnf("Please write row instead of line.")
+	fix.Replace("line", "row")
+	fix.Explain("Explanation")
+	fix.Apply()
+
+	t.CheckOutputLines(
+		"WARN: Makefile:74: Please write row instead of line.")
+	c.Check(G.explanationsAvailable, equals, true)
 }

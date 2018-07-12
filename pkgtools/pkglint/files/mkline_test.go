@@ -139,8 +139,8 @@ func (s *Suite) Test_NewMkLine(c *check.C) {
 	c.Check(ln[0].Value(), equals, "value")
 	c.Check(ln[0].VarassignComment(), equals, "# varassign comment")
 
-	c.Check(ln[1].IsShellcmd(), equals, true)
-	c.Check(ln[1].Shellcmd(), equals, "shell command # shell comment")
+	c.Check(ln[1].IsShellCommand(), equals, true)
+	c.Check(ln[1].ShellCommand(), equals, "shell command # shell comment")
 
 	c.Check(ln[2].IsComment(), equals, true)
 
@@ -154,12 +154,12 @@ func (s *Suite) Test_NewMkLine(c *check.C) {
 	c.Check(ln[5].IsInclude(), equals, true)
 	c.Check(ln[5].Indent(), equals, "    ")
 	c.Check(ln[5].MustExist(), equals, true)
-	c.Check(ln[5].Includefile(), equals, "../../mk/bsd.prefs.mk")
+	c.Check(ln[5].IncludeFile(), equals, "../../mk/bsd.prefs.mk")
 
 	c.Check(ln[6].IsSysinclude(), equals, true)
 	c.Check(ln[6].Indent(), equals, "    ")
 	c.Check(ln[6].MustExist(), equals, true)
-	c.Check(ln[6].Includefile(), equals, "subdir.mk")
+	c.Check(ln[6].IncludeFile(), equals, "subdir.mk")
 
 	c.Check(ln[7].IsDependency(), equals, true)
 	c.Check(ln[7].Targets(), equals, "target1 target2")
@@ -247,12 +247,12 @@ func (s *Suite) Test_NewMkLine_numbersign(c *check.C) {
 
 	mklineCommandEscaped := t.NewMkLine("fname", 1, "\tsed -e 's,\\#,hash,g'")
 
-	c.Check(mklineCommandEscaped.Shellcmd(), equals, "sed -e 's,\\#,hash,g'")
+	c.Check(mklineCommandEscaped.ShellCommand(), equals, "sed -e 's,\\#,hash,g'")
 
 	// From shells/zsh/Makefile.common, rev. 1.78
 	mklineCommandUnescaped := t.NewMkLine("fname", 1, "\t# $ sha1 patches/patch-ac")
 
-	c.Check(mklineCommandUnescaped.Shellcmd(), equals, "# $ sha1 patches/patch-ac")
+	c.Check(mklineCommandUnescaped.ShellCommand(), equals, "# $ sha1 patches/patch-ac")
 	t.CheckOutputEmpty() // No warning about parsing the lonely dollar sign.
 
 	mklineVarassignUnescaped := t.NewMkLine("fname", 1, "SED_CMD=\t's,#,hash,'")
