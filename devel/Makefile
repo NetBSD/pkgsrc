@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2700 2018/07/11 00:05:44 minskim Exp $
+# $NetBSD: Makefile,v 1.2701 2018/07/12 02:27:49 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -2288,6 +2288,7 @@ SUBDIR+=	py-txgithub
 SUBDIR+=	py-txrequests
 SUBDIR+=	py-typed-ast
 SUBDIR+=	py-typing
+SUBDIR+=	py-typing-extensions
 SUBDIR+=	py-unit
 SUBDIR+=	py-unitgui
 SUBDIR+=	py-unittest-mixins
