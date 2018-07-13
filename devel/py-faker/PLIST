@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2018/04/13 07:18:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2018/07/13 13:54:01 adam Exp $
 bin/faker${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -527,6 +527,9 @@ ${PYSITELIB}/faker/providers/job/ru_RU/__init__.pyo
 ${PYSITELIB}/faker/providers/job/uk_UA/__init__.py
 ${PYSITELIB}/faker/providers/job/uk_UA/__init__.pyc
 ${PYSITELIB}/faker/providers/job/uk_UA/__init__.pyo
+${PYSITELIB}/faker/providers/job/zh_CN/__init__.py
+${PYSITELIB}/faker/providers/job/zh_CN/__init__.pyc
+${PYSITELIB}/faker/providers/job/zh_CN/__init__.pyo
 ${PYSITELIB}/faker/providers/job/zh_TW/__init__.py
 ${PYSITELIB}/faker/providers/job/zh_TW/__init__.pyc
 ${PYSITELIB}/faker/providers/job/zh_TW/__init__.pyo
