@@ -1,0 +1,66 @@
+# $NetBSD: Makefile.common,v 1.16 2018/07/13 17:27:32 adam Exp $
+# used by games/mirrormagic/Makefile
+# used by games/rocksndiamonds/Makefile
+
+CATEGORIES=	games
+MASTER_SITES=	http://www.artsoft.org/RELEASES/unix/${PKGBASE}/
+
+MAINTAINER?=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.artsoft.org/${PKGBASE}/
+LICENSE=	gnu-gpl-v2
+
+PATCHDIR=	${.CURDIR}/../../games/rocksndiamonds/patches
+
+USE_GAMESGROUP=		yes
+USE_TOOLS+=		gmake
+
+INSTALLATION_DIRS+=	bin
+
+BUILD_DEFS+=		VARBASE SCORE_PATH
+BUILD_DIRS=		src
+
+SHARESUBDIR=		share/${PKGBASE}
+SHAREDIR=		${PREFIX}/${SHARESUBDIR}
+SCORE_PATH=		${VARBASE}/games/${PKGBASE}
+REQD_DIRS+=		${SHARESUBDIR}
+
+OWN_DIRS_PERMS+=	${SCORE_PATH:Q} ${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
+OWN_DIRS_PERMS+=	${SCORE_PATH:Q}/scores ${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
+.for dir in ${LEVEL_NAMES}
+OWN_DIRS_PERMS+=	${SCORE_PATH:Q}/scores/${dir} ${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
+.endfor
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "Darwin"
+SPECIAL_PERMS=		bin/${PKGBASE} ${SETGID_GAMES_PERMS}
+.endif
+
+PLIST_SRC=	PLIST ${WRKDIR}/PLIST.F
+
+.if (${MACHINE} == "i386" || ${MACHINE} == "prep" || ${MACHINE} == "cats" || \
+      ${MACHINE} == "shark")
+MAKE_FLAGS+=	JOYSTICK=-DHAVE_JOYSTICK
+.endif
+
+MAKE_FLAGS+=	RO_GAME_DIR=${PREFIX}/share/${PKGBASE}
+MAKE_FLAGS+=	RW_GAME_DIR=${SCORE_PATH:Q}
+MAKE_FLAGS+=	TARGET=sdl2
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/${PKGBASE} ${DESTDIR}${PREFIX}/bin/
+	# auto-generated PLIST
+	rm -f ${WRKDIR}/PLIST.F
+	${RUN} cd ${WRKSRC} && for d in graphics levels music sounds; do \
+		${FIND} "$${d}" -type d -print | while read s; do \
+			${INSTALL_DATA_DIR} ${DESTDIR}${SHAREDIR}/"$${s}"; \
+		done; \
+		${FIND} "$${d}" -type f -print | while read f; do \
+			${INSTALL_DATA} "$${f}"	${DESTDIR}${SHAREDIR}/"$${f}"; \
+			${ECHO} ${SHARESUBDIR}/"$${f}" >> ${WRKDIR}/PLIST.F; \
+		done; \
+	done
+
+.include "../../audio/SDL2_mixer/buildlink3.mk"
+.include "../../graphics/SDL2_image/buildlink3.mk"
+.include "../../net/SDL2_net/buildlink3.mk"
