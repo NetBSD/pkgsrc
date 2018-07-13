@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.131 2018/06/17 08:29:11 wiz Exp $
+# $NetBSD: Makefile,v 1.132 2018/07/13 15:26:32 adam Exp $
 
-DISTNAME=	tor-0.3.3.7
+DISTNAME=	tor-0.3.3.8
 CATEGORIES=	net security
-MASTER_SITES=	http://www.torproject.org/dist/
+MASTER_SITES=	https://dist.torproject.org/
 
 MAINTAINER=	reezer@reezer.org
 HOMEPAGE=	http://www.torproject.org/
@@ -12,9 +12,9 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=		c99
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-
-CONFIGURE_ENV+=		CPP=${CPP:Q}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
+CONFIGURE_ENV+=		CPP=${CPP:Q}
 
 # one test failure in 0.3.0.10
 # https://trac.torproject.org/projects/tor/ticket/23250
@@ -37,8 +37,6 @@ PKG_USERS=		${TOR_USER}:${TOR_GROUP}
 USER_GROUP=		${TOR_USER} ${TOR_GROUP}
 
 OWN_DIRS_PERMS+=	${PKG_HOME.${TOR_USER}} ${USER_GROUP} 0700
-
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
 CONF_FILES+=		${PREFIX}/share/examples/tor/torrc.sample 	\
 				${PKG_SYSCONFDIR}/torrc
