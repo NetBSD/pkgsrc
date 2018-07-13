@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2017/12/17 16:47:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2018/07/13 07:10:46 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -27,6 +27,8 @@ ${PYSITELIB}/reportlab/fonts/_ebi____.pfb
 ${PYSITELIB}/reportlab/fonts/_ei_____.pfb
 ${PYSITELIB}/reportlab/fonts/_er_____.pfb
 ${PYSITELIB}/reportlab/fonts/bitstream-vera-license.txt
+${PYSITELIB}/reportlab/fonts/callig15.afm
+${PYSITELIB}/reportlab/fonts/callig15.pfb
 ${PYSITELIB}/reportlab/fonts/cob_____.pfb
 ${PYSITELIB}/reportlab/fonts/cobo____.pfb
 ${PYSITELIB}/reportlab/fonts/com_____.pfb
@@ -38,7 +40,6 @@ ${PYSITELIB}/reportlab/fonts/zy______.pfb
 ${PYSITELIB}/reportlab/graphics/__init__.py
 ${PYSITELIB}/reportlab/graphics/__init__.pyc
 ${PYSITELIB}/reportlab/graphics/__init__.pyo
-${PYSITELIB}/reportlab/graphics/_renderPM.so
 ${PYSITELIB}/reportlab/graphics/barcode/__init__.py
 ${PYSITELIB}/reportlab/graphics/barcode/__init__.pyc
 ${PYSITELIB}/reportlab/graphics/barcode/__init__.pyo
@@ -237,7 +238,6 @@ ${PYSITELIB}/reportlab/lib/PyFontify.pyo
 ${PYSITELIB}/reportlab/lib/__init__.py
 ${PYSITELIB}/reportlab/lib/__init__.pyc
 ${PYSITELIB}/reportlab/lib/__init__.pyo
-${PYSITELIB}/reportlab/lib/_rl_accel.so
 ${PYSITELIB}/reportlab/lib/abag.py
 ${PYSITELIB}/reportlab/lib/abag.pyc
 ${PYSITELIB}/reportlab/lib/abag.pyo
@@ -277,7 +277,6 @@ ${PYSITELIB}/reportlab/lib/formatters.pyo
 ${PYSITELIB}/reportlab/lib/geomutils.py
 ${PYSITELIB}/reportlab/lib/geomutils.pyc
 ${PYSITELIB}/reportlab/lib/geomutils.pyo
-${PYSITELIB}/reportlab/lib/hyphen.mashed
 ${PYSITELIB}/reportlab/lib/logger.py
 ${PYSITELIB}/reportlab/lib/logger.pyc
 ${PYSITELIB}/reportlab/lib/logger.pyo
@@ -405,6 +404,9 @@ ${PYSITELIB}/reportlab/pdfbase/_fontdata_widths_timesroman.pyo
 ${PYSITELIB}/reportlab/pdfbase/_fontdata_widths_zapfdingbats.py
 ${PYSITELIB}/reportlab/pdfbase/_fontdata_widths_zapfdingbats.pyc
 ${PYSITELIB}/reportlab/pdfbase/_fontdata_widths_zapfdingbats.pyo
+${PYSITELIB}/reportlab/pdfbase/_glyphlist.py
+${PYSITELIB}/reportlab/pdfbase/_glyphlist.pyc
+${PYSITELIB}/reportlab/pdfbase/_glyphlist.pyo
 ${PYSITELIB}/reportlab/pdfbase/acroform.py
 ${PYSITELIB}/reportlab/pdfbase/acroform.pyc
 ${PYSITELIB}/reportlab/pdfbase/acroform.pyo
