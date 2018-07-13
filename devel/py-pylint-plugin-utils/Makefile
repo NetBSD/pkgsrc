@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/12/21 10:15:03 adam Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/13 07:54:02 adam Exp $
 
-DISTNAME=	pylint-plugin-utils-0.2.6
+DISTNAME=	pylint-plugin-utils-0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylint-plugin-utils/}
@@ -14,6 +14,8 @@ DEPENDS+=	${PYPKGPREFIX}-astroid-[0-9]*:../../devel/py-astroid
 DEPENDS+=	${PYPKGPREFIX}-pylint-[0-9]*:../../devel/py-pylint
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
