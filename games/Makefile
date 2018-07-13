@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.415 2018/02/28 22:21:17 wiz Exp $
+# $NetBSD: Makefile,v 1.416 2018/07/13 17:28:46 adam Exp $
 #
 
 COMMENT=	Games
@@ -238,7 +238,6 @@ SUBDIR+=	marathon-evil
 SUBDIR+=	marathon-trilogy
 SUBDIR+=	minami
 SUBDIR+=	mirrormagic
-SUBDIR+=	mirrormagic-sdl
 SUBDIR+=	monsterz
 SUBDIR+=	moon-buggy
 SUBDIR+=	moria
