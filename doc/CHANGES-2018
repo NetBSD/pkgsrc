@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3165 2018/07/13 07:09:33 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3166 2018/07/13 07:14:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4551,3 +4551,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-ordered-set to 3.0.1 [adam 2018-07-13]
 	Updated www/py-cheroot to 6.3.3 [adam 2018-07-13]
 	Updated www/py-cherrypy to 16.0.3 [adam 2018-07-13]
+	Updated print/py-reportlab to 3.5.0 [adam 2018-07-13]
+	Updated textproc/py-alabaster to 0.7.11 [adam 2018-07-13]
