@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2011/12/01 16:35:12 is Exp $
+$NetBSD: patch-aa,v 1.2 2018/07/13 04:24:39 dbj Exp $
 
---- Makefile.orig	2011-02-15 15:29:03.000000000 +0000
+--- Makefile.orig	2016-09-30 11:33:14.000000000 +0000
 +++ Makefile
-@@ -27,7 +27,7 @@
+@@ -18,7 +18,7 @@
  
  include makeinclude
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2011/12/01 16:35:12 is Exp $
  
  all: makeinclude fltk-config
  	for dir in $(DIRS); do\
-@@ -35,6 +35,14 @@ all: makeinclude fltk-config
+@@ -26,6 +26,14 @@ all: makeinclude fltk-config
  		(cd $$dir; $(MAKE) $(MFLAGS)) || exit 1;\
  	done
  
