@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2015/12/29 06:02:25 dholland Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/07/13 04:24:39 dbj Exp $
 bin/fltk-config
 bin/fluid
+include/FL/abi-version.h
 include/FL/Enumerations.H
 ${PLIST.cs}include/FL/Enumerations.h
 include/FL/Fl.H
