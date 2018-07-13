@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/09/28 10:33:29 adam Exp $
+# $NetBSD: Makefile,v 1.4 2018/07/13 07:13:49 adam Exp $
 
-DISTNAME=	alabaster-0.7.10
+DISTNAME=	alabaster-0.7.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/alabaster/}
