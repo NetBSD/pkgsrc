@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3166 2018/07/13 07:14:09 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3167 2018/07/13 08:06:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4553,3 +4553,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-cherrypy to 16.0.3 [adam 2018-07-13]
 	Updated print/py-reportlab to 3.5.0 [adam 2018-07-13]
 	Updated textproc/py-alabaster to 0.7.11 [adam 2018-07-13]
+	Updated devel/py-pylint-plugin-utils to 0.3 [adam 2018-07-13]
+	Updated devel/py-ruamel-yaml to 0.15.43 [adam 2018-07-13]
