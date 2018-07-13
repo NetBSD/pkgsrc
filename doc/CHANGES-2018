@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3163 2018/07/13 00:56:48 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.3164 2018/07/13 04:36:54 dbj Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4546,3 +4546,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/krita to 4.1.0 [maya 2018-07-12]
 	Updated pkgtools/pkglint to 5.5.13 [rillig 2018-07-12]
 	Added www/go-gogs-client version 0.0.20171114 [minskim 2018-07-13]
+	Updated x11/fltk13 to 1.3.4 [dbj 2018-07-12]
