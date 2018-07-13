@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2018/07/06 15:33:39 prlw1 Exp $
+# $NetBSD: Makefile,v 1.9 2018/07/13 11:21:29 prlw1 Exp $
 
 DISTNAME=	p11-kit-0.23.12
+PKGREVISION=	1
 CATEGORIES=	security
 #MASTER_SITES=	http://p11-glue.freedesktop.org/releases/
 MASTER_SITES+=	${MASTER_SITE_GITHUB:=p11-glue/}
@@ -22,6 +23,9 @@ USE_TOOLS+=	pkg-config
 
 # dirfd(3)
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
+
+# reallocarray(3)
+CFLAGS.NetBSD+=	-D_OPENBSD_SOURCE
 
 CFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
 LDFLAGS.SunOS+=	-lsocket -lnsl
