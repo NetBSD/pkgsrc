@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2018/03/11 17:49:53 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2018/07/13 11:31:58 jperkin Exp $
 
 .include "../../textproc/libxml2/Makefile.common"
 
@@ -21,6 +21,15 @@ SUBST_SED.setup+=	-e "/^\"/s,/usr/include,${BUILDLINK_PREFIX.iconv}/include,g"
 SUBST_SED.setup+=	-e "/^\"/s,/usr/local/include,${BUILDLINK_PREFIX.iconv}/include,g"
 
 BUILDLINK_TRANSFORM.Darwin+=	opt:-bundle:-dynamiclib
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+post-install: fix-darwin-install-name
+fix-darwin-install-name:
+	install_name_tool -id ${PREFIX}/${PYSITELIB}/libxml2mod.so \
+	    ${DESTDIR}${PREFIX}/${PYSITELIB}/libxml2mod.so
+.endif
 
 EGG_NAME=	${DISTNAME:S/-/_python-/}
 
