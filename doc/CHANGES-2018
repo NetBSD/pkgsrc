@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3169 2018/07/13 15:27:15 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3170 2018/07/13 17:29:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4557,3 +4557,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-ruamel-yaml to 0.15.43 [adam 2018-07-13]
 	Updated devel/py-faker to 0.8.17 [adam 2018-07-13]
 	Updated net/tor to 0.3.3.8 [adam 2018-07-13]
+	Updated games/rocksndiamonds to 4.1.0.0 [adam 2018-07-13]
+	Updated games/mirrormagic to 3.0.0 [adam 2018-07-13]
