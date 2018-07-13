@@ -1,11 +1,6 @@
-$NetBSD: distinfo,v 1.22 2018/02/24 00:13:35 maya Exp $
+$NetBSD: distinfo,v 1.23 2018/07/13 07:10:46 adam Exp $
 
-SHA1 (pfbfer-20070710.zip) = 238af8f6eab6308f3d24903bbce7d071bae63841
-RMD160 (pfbfer-20070710.zip) = 15eced15df3d46d3baa1929dc9467b3ea5a9b8ee
-SHA512 (pfbfer-20070710.zip) = 6fd4a5d955464b10d13a7b748703450c1fe120d5ed09e8cfa1b4dfa9c183c59fe001df29433af551796b0df62544b7ddc364f9bb1bdcc2cd300434340ffcc4f2
-Size (pfbfer-20070710.zip) = 677333 bytes
-SHA1 (reportlab-3.4.0.tar.gz) = bd7be4e532b00bc2535d08eef84d5de39814d23c
-RMD160 (reportlab-3.4.0.tar.gz) = 280bcf0a3a88eab6930d75e21b6ae3d75be77b59
-SHA512 (reportlab-3.4.0.tar.gz) = 7f00074b93be49e1aa7650e61381e285598599911b12a6b63c0f12d6eb64bc59afb6907b683350740b0a81c99a3164373b27e18cfccc0f9da12405c3dacd1ff7
-Size (reportlab-3.4.0.tar.gz) = 1995779 bytes
-SHA1 (patch-src_rl__addons_renderPM_gt1_gt1-namecontext.c) = 4d7d456eaf027ee747b0e77c4a18f8181a7e1acc
+SHA1 (reportlab-3.5.0.tar.gz) = 8f10455a94a19258149a76cd46061f09f81efb5d
+RMD160 (reportlab-3.5.0.tar.gz) = 4435adb23469748fba518b9d76499046819d15c8
+SHA512 (reportlab-3.5.0.tar.gz) = 1f66a8ab77353b6f7a725816ddf3343d0e3533cf7bb0d1e2f527053327a64a9a8f5e66347fda5ef7ff76e5d754fb93603b88a34cc5a56a20ce3a8d6d608459ce
+Size (reportlab-3.5.0.tar.gz) = 1804818 bytes
