@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3164 2018/07/13 04:36:54 dbj Exp $
+$NetBSD: CHANGES-2018,v 1.3165 2018/07/13 07:09:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4547,3 +4547,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated pkgtools/pkglint to 5.5.13 [rillig 2018-07-12]
 	Added www/go-gogs-client version 0.0.20171114 [minskim 2018-07-13]
 	Updated x11/fltk13 to 1.3.4 [dbj 2018-07-12]
+	Updated math/py-lmfit to 0.9.11 [adam 2018-07-13]
+	Updated devel/py-ordered-set to 3.0.1 [adam 2018-07-13]
+	Updated www/py-cheroot to 6.3.3 [adam 2018-07-13]
+	Updated www/py-cherrypy to 16.0.3 [adam 2018-07-13]
