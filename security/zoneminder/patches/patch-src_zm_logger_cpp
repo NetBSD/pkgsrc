@@ -1,4 +1,4 @@
-$NetBSD: patch-src_zm_logger_cpp,v 1.4 2018/07/13 02:05:11 gdt Exp $
+$NetBSD: patch-src_zm_logger_cpp,v 1.5 2018/07/14 15:03:57 gdt Exp $
 
 If the system has syscall() but not SYS_gettid [E.g. NetBSD], don't attempt
 to use SYS_gettid.
@@ -27,7 +27,7 @@ to use SYS_gettid.
  
              mysql_real_escape_string( &mDbConnection, escapedString, syslogStart, strlen(syslogStart) );
 -            snprintf( sql, sizeof(sql), "insert into Logs ( TimeKey, Component, Pid, Level, Code, Message, File, Line ) values ( %ld.%06ld, '%s', %d, %d, '%s', '%s', '%s', %d )", timeVal.tv_sec, timeVal.tv_usec, mId.c_str(), tid, level, classString, escapedString, file, line );
-+            snprintf( sql, sizeof(sql), "insert into Logs ( TimeKey, Component, Pid, Level, Code, Message, File, Line ) values ( %ld.%06ld, '%s', %d, %d, '%s', '%s', '%s', %d )", (long) timeVal.tv_sec, timeVal.tv_usec, mId.c_str(), tid, level, classString, escapedString, file, line );
++            snprintf( sql, sizeof(sql), "insert into Logs ( TimeKey, Component, Pid, Level, Code, Message, File, Line ) values ( %jd.%06ld, '%s', %d, %d, '%s', '%s', '%s', %d )", (intmax_t) timeVal.tv_sec, timeVal.tv_usec, mId.c_str(), tid, level, classString, escapedString, file, line );
              if ( mysql_query( &mDbConnection, sql ) )
              {
                  databaseLevel( NOLOG );
