@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "HUB" "1" "May 2018" "" ""
+.TH "HUB" "1" "July 2018" "" ""
 .
 .SH "NAME"
 \fBhub\fR \- make git easier with GitHub
@@ -90,12 +90,20 @@ hub\-create(1)
 Create a new repository on GitHub and add a git remote for it\.
 .
 .TP
+hub\-delete(1)
+Delete a repository on Github\.
+.
+.TP
 hub\-fork(1)
 Fork the current project on GitHub and add a git remote for it\.
 .
 .TP
 hub\-pull\-request(1)
 Create a GitHub pull request\.
+.
+.TP
+hub\-pr(1)
+List and checkout GitHub pull requests\.
 .
 .TP
 hub\-issue(1)
@@ -170,7 +178,7 @@ Enable verbose output from hub commands\.
 .
 .TP
 \fBHUB_CONFIG\fR
-Set the location of a custom config file (default: \fB~/\.config/hub\fR)\.
+The file path where hub configuration is read from and stored\. If \fBXDG_CONFIG_HOME\fR is present, the default is \fB$XDG_CONFIG_HOME/hub\fR; otherwise it\'s \fB$HOME/\.config/hub\fR\. The configuration file is also searched for in \fBXDG_CONFIG_DIRS\fR per XDG Base Directory Specification\.
 .
 .TP
 \fBHUB_PROTOCOL\fR
