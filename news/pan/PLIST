@@ -1,10 +1,18 @@
-@comment $NetBSD: PLIST,v 1.13 2012/04/09 23:00:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2018/07/14 15:15:12 maya Exp $
 bin/pan
+man/man1/pan.1
+share/appdata/pan.appdata.xml
 share/applications/pan.desktop
+share/icons/hicolor/16x16/apps/pan.png
+share/icons/hicolor/24x24/apps/pan.png
+share/icons/hicolor/256x256/apps/pan.png
+share/icons/hicolor/32x32/apps/pan.png
+share/icons/hicolor/48x48/apps/pan.png
 share/locale/am/LC_MESSAGES/pan.mo
 share/locale/ar/LC_MESSAGES/pan.mo
 share/locale/az/LC_MESSAGES/pan.mo
 share/locale/bg/LC_MESSAGES/pan.mo
+share/locale/bs/LC_MESSAGES/pan.mo
 share/locale/ca/LC_MESSAGES/pan.mo
 share/locale/cs/LC_MESSAGES/pan.mo
 share/locale/da/LC_MESSAGES/pan.mo
@@ -41,11 +49,10 @@ share/locale/sk/LC_MESSAGES/pan.mo
 share/locale/sl/LC_MESSAGES/pan.mo
 share/locale/sq/LC_MESSAGES/pan.mo
 share/locale/sr/LC_MESSAGES/pan.mo
-share/locale/sr@Latn/LC_MESSAGES/pan.mo
+share/locale/sr@latin/LC_MESSAGES/pan.mo
 share/locale/sv/LC_MESSAGES/pan.mo
 share/locale/tr/LC_MESSAGES/pan.mo
 share/locale/uk/LC_MESSAGES/pan.mo
 share/locale/vi/LC_MESSAGES/pan.mo
 share/locale/zh_CN/LC_MESSAGES/pan.mo
 share/locale/zh_TW/LC_MESSAGES/pan.mo
-share/pixmaps/pan.png
