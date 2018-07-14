@@ -1,0 +1,2 @@
+Webhooks allows for easy receiving and parsing of GitHub, Bitbucket
+and GitLab Webhook Events. It only accepts json payloads.
