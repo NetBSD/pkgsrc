@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3175 2018/07/14 11:09:41 leot Exp $
+$NetBSD: CHANGES-2018,v 1.3176 2018/07/14 11:39:24 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4564,3 +4564,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/pciutils to 3.6.1 [msaitoh 2018-07-14]
 	Updated net/hub to 2.5.0 [leot 2018-07-14]
 	Updated net/gallery-dl to 1.4.2 [leot 2018-07-14]
+	Updated net/youtube-dl to 20180710 [leot 2018-07-14]
