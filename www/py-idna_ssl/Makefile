@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/03/13 11:44:13 adam Exp $
+# $NetBSD: Makefile,v 1.3 2018/07/14 18:59:31 adam Exp $
 
-DISTNAME=	idna-ssl-1.0.1
+DISTNAME=	idna-ssl-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/idna_ssl/}
@@ -11,6 +11,7 @@ COMMENT=	Patch ssl.match_hostname for Unicode(idna) domains support
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.0:../../www/py-idna
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
