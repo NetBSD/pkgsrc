@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3183 2018/07/14 16:59:46 tsutsui Exp $
+$NetBSD: CHANGES-2018,v 1.3184 2018/07/14 18:23:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4573,3 +4573,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated news/pan to 0.145 [maya 2018-07-14]
 	Updated emulators/vice to 3.2 [maya 2018-07-14]
 	Updated net/mikutter to 3.7.3 [tsutsui 2018-07-14]
+	Updated net/zeromq to 4.2.5 [adam 2018-07-14]
+	Updated net/py-zmq to 17.1.0 [adam 2018-07-14]
