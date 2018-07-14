@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3184 2018/07/14 18:23:24 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3185 2018/07/14 18:46:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4575,3 +4575,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/mikutter to 3.7.3 [tsutsui 2018-07-14]
 	Updated net/zeromq to 4.2.5 [adam 2018-07-14]
 	Updated net/py-zmq to 17.1.0 [adam 2018-07-14]
+	Updated multimedia/ffmpeg3 to 3.4.3 [adam 2018-07-14]
+	Updated databases/py-bsddb3 to 6.2.6 [adam 2018-07-14]
