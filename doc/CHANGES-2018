@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3173 2018/07/14 07:36:40 msaitoh Exp $
+$NetBSD: CHANGES-2018,v 1.3174 2018/07/14 11:06:30 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4562,3 +4562,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/bind910 to 9.10.8 [taca 2018-07-14]
 	Updated net/bind99 to 9.9.13 [taca 2018-07-14]
 	Updated sysutils/pciutils to 3.6.1 [msaitoh 2018-07-14]
+	Updated net/hub to 2.5.0 [leot 2018-07-14]
