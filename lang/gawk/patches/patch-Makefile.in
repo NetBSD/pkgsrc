@@ -1,18 +1,29 @@
-$NetBSD: patch-Makefile.in,v 1.4 2015/05/28 06:35:25 wiz Exp $
+$NetBSD: patch-Makefile.in,v 1.5 2018/07/14 13:47:32 adam Exp $
 
-Correct locale location, use names gawk and pgawk unconditionally
---- Makefile.in.orig	2015-05-19 13:38:35.000000000 +0000
+Correct locale location, use names gawk and pgawk unconditionally.
+Do not install extras.
+
+--- Makefile.in.orig	2018-02-25 17:06:29.000000000 +0000
 +++ Makefile.in
-@@ -324,7 +324,7 @@ CFLAGS = @CFLAGS@
+@@ -328,7 +328,7 @@ CFLAGS = @CFLAGS@
  CPP = @CPP@
  CPPFLAGS = @CPPFLAGS@
  CYGPATH_W = @CYGPATH_W@
--DEFS = -DDEFPATH=$(DEFPATH) -DDEFLIBPATH=$(DEFLIBPATH) -DSHLIBEXT=$(SHLIBEXT) -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"$(datadir)/locale"'
-+DEFS = -DDEFPATH=$(DEFPATH) -DDEFLIBPATH=$(DEFLIBPATH) -DSHLIBEXT=$(SHLIBEXT) -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"$(prefix)/$(PKGLOCALEDIR)/locale"'
+-DEFS = -DDEFPATH=$(DEFPATH) -DDEFLIBPATH=$(DEFLIBPATH) -DSHLIBEXT=$(SHLIBEXT) -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"$(datadir)/locale"' -I"$(srcdir)/support"
++DEFS = -DDEFPATH=$(DEFPATH) -DDEFLIBPATH=$(DEFLIBPATH) -DSHLIBEXT=$(SHLIBEXT) -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"$(prefix)/$(PKGLOCALEDIR)/locale"' -I"$(srcdir)/support"
  DEPDIR = @DEPDIR@
  ECHO_C = @ECHO_C@
  ECHO_N = @ECHO_N@
-@@ -1178,9 +1178,7 @@ install-exec-hook:
+@@ -484,7 +484,7 @@ EXTRA_DIST = \
+ 
+ # Build in awklib after in doc, since we want to extract
+ # sample files if doc/gawk.texi changed.
+-SUBDIRS = support . $(am__append_1) extras doc awklib po test
++SUBDIRS = support . $(am__append_1) doc awklib po test
+ include_HEADERS = gawkapi.h
+ 
+ # sources for both gawk and dgawk
+@@ -1161,9 +1161,7 @@ install-exec-hook:
  	(cd $(DESTDIR)$(bindir); \
  	name=`echo gawk | sed '$(transform)'` ; \
  	$(LN) $${name}$(EXEEXT) gawk-$(VERSION)$(EXEEXT) 2>/dev/null ; \

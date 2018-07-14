@@ -1,14 +1,12 @@
-$NetBSD: distinfo,v 1.38 2017/01/14 01:03:39 ryoon Exp $
+$NetBSD: distinfo,v 1.39 2018/07/14 13:47:32 adam Exp $
 
-SHA1 (gawk-4.1.4.tar.xz) = d67e00e2f6178e9cbd2c0ba923ae157bc0b3b570
-RMD160 (gawk-4.1.4.tar.xz) = 7f0b1ec45c207cf365bc9b93c7e0b247e6c57186
-SHA512 (gawk-4.1.4.tar.xz) = 6a0e9cf086544212f54b54261dcd517b611aaf495ef99c4b7740d07e363bb00c5632f3d7fd5e12a954d5aa9793764162a57453e0e18884b29c6c54b5f444c097
-Size (gawk-4.1.4.tar.xz) = 2367832 bytes
-SHA1 (patch-Makefile.in) = 8330ac068dcb712539465a467a42f713ee4a8a73
+SHA1 (gawk-4.2.1.tar.xz) = 71fc3595865ea6ea859587cbbb35cbf9aeb39d2d
+RMD160 (gawk-4.2.1.tar.xz) = 4a7a4ddccb871626d8c3ec3019de65c47b71fb29
+SHA512 (gawk-4.2.1.tar.xz) = 0e3006a795dc3ac91359a7d2590c0cccbfd39b18a1d491617d68505c55a2800355b1439050681b4fcacf65fb0d533151a046babe0fd774503037bab363ef2ae4
+Size (gawk-4.2.1.tar.xz) = 2985412 bytes
+SHA1 (patch-Makefile.in) = 2f9e8c3ca477ece817d251e22345bf2476fccd00
 SHA1 (patch-awk.h) = 2292be5ec392e7fea5688fbb18012a735e43803f
-SHA1 (patch-debug.c) = 40c423e2ddbb7de1eb35bb4b7b4452f8f2ebec01
-SHA1 (patch-extension_Makefile.in) = 7a03efc54d0fe54ef94fbe6f35d5145b61cb0f07
-SHA1 (patch-extension_filefuncs.c) = 212774354ab55f69ff67728470ab23b43e038093
+SHA1 (patch-extension_Makefile.in) = 3d0d904327e891169568e4e5ec927daada6e3c17
 SHA1 (patch-extension_gawkfts.c) = a88ac0ed14be5133cf081bf25ab8663f0f3372a7
-SHA1 (patch-extension_inplace.c) = 3a8f5c091cfa4d6f8a8d048bd74166defbd85908
-SHA1 (patch-test_Makefile.in) = 7610407e0735f4b78b568e24717f3f103f8566d3
+SHA1 (patch-extension_inplace.c) = 84b1d8f18ed78a872cd7befa65def30b4bcb3252
+SHA1 (patch-test_Makefile.in) = 1be6ffd773bc0616adc66f357fe07c42d2727e87
