@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1332 2018/07/13 00:56:32 minskim Exp $
+# $NetBSD: Makefile,v 1.1333 2018/07/14 22:20:23 minskim Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -121,6 +121,7 @@ SUBDIR+=	go-gogs-client
 SUBDIR+=	go-gohtml
 SUBDIR+=	go-toml-burntsushi
 SUBDIR+=	go-toml-pelletier
+SUBDIR+=	go-webhooks
 SUBDIR+=	goaccess
 SUBDIR+=	grafana
 SUBDIR+=	gtkasp2php
