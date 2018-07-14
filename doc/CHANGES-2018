@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3187 2018/07/14 19:15:39 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3188 2018/07/14 20:16:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4581,3 +4581,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-idna_ssl to 1.1.0 [adam 2018-07-14]
 	Updated devel/py-dash to 4.6.0 [adam 2018-07-14]
 	Updated net/py-ncclient to 0.6.0 [adam 2018-07-14]
+	Updated mail/dovecot2 to 2.3.2.1 [adam 2018-07-14]
+	Updated mail/dovecot2-pigeonhole to 0.5.2 [adam 2018-07-14]
