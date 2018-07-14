@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3171 2018/07/14 03:55:41 taca Exp $
+$NetBSD: CHANGES-2018,v 1.3172 2018/07/14 03:57:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4560,3 +4560,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated games/rocksndiamonds to 4.1.0.0 [adam 2018-07-13]
 	Updated games/mirrormagic to 3.0.0 [adam 2018-07-13]
 	Updated net/bind910 to 9.10.8 [taca 2018-07-14]
+	Updated net/bind99 to 9.9.13 [taca 2018-07-14]
