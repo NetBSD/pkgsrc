@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2018/06/14 13:13:35 jperkin Exp $
+$NetBSD: distinfo,v 1.20.2.1 2018/07/14 17:41:26 spz Exp $
 
 SHA1 (mysql-5.7.22.tar.gz) = 734b98efa9f9691b056b9d788c7d936bc52bbde3
 RMD160 (mysql-5.7.22.tar.gz) = a0e7bcb650543c8b54579399f641430e338c76e2
@@ -26,7 +26,7 @@ SHA1 (patch-mysys_my__symlink.c) = 23b57cd5922357d0bc72f5c15100a9fe1f89cfb2
 SHA1 (patch-mysys_stacktrace.c) = 3e0794f544f0e35f44a694330885478247657842
 SHA1 (patch-rapid_plugin_group__replication_libmysqlgcs_src_bindings_xcom_xcom_sock__probe__ix.c) = 1a389fca13ada1be74d96276e11baee16bbc2363
 SHA1 (patch-rapid_plugin_group__replication_libmysqlgcs_src_bindings_xcom_xcom_xcom__memory.c) = 7077900830f904c74c79439b856d9d176fc27f15
-SHA1 (patch-rapid_plugin_group__replication_libmysqlgcs_src_bindings_xcom_xcom_xcom__ssl__transport.c) = 5860b1b5511acf3fd6a2ce9f3ba58cfa45a06297
+SHA1 (patch-rapid_plugin_group__replication_libmysqlgcs_src_bindings_xcom_xcom_xcom__ssl__transport.c) = da85cb9b6ca434ec4faa29b1bcb0b04ffd419319
 SHA1 (patch-rapid_plugin_group__replication_libmysqlgcs_src_bindings_xcom_xcom_xcom__transport.c) = d7f87bff5a41ff6a130fcf74dc520b38cedf5924
 SHA1 (patch-rapid_plugin_group__replication_rpcgen.cmake) = 5c14be97bd1fd04b2b845f1a2422452445733474
 SHA1 (patch-rapid_plugin_x_CMakeLists.txt) = aedf7d93889d4e7b4e04d182fe1a6775134f97e8
