@@ -1,14 +1,14 @@
-# $NetBSD: options.mk,v 1.8 2017/08/16 17:54:09 adam Exp $
+# $NetBSD: options.mk,v 1.9 2018/07/14 16:05:19 maya Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vice
 PKG_SUPPORTED_OPTIONS=		ffmpeg vte
 PKG_OPTIONS_REQUIRED_GROUPS=	gui
-PKG_OPTIONS_GROUP.gui=		gtk2 gtk3 sdl xaw
-PKG_SUGGESTED_OPTIONS=		gtk3
+PKG_OPTIONS_GROUP.gui=		gtk2 gtk3wip sdl xaw
+PKG_SUGGESTED_OPTIONS=		gtk2
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	pcf sdl x11
+PLIST_VARS+=	mo pcf sdl x11
 
 # Cocoa user interface works only in application bundle.
 #.if !empty(PKG_OPTIONS:Mcocoa)
@@ -22,13 +22,14 @@ USE_TOOLS+=		bdftopcf
 
 .if !empty(PKG_OPTIONS:Mgtk2)
 CONFIGURE_ARGS+=	--enable-gnomeui
+PLIST.mo=		yes
 PLIST.pcf=		yes
 PLIST.x11=		yes
 .  include "../../x11/gtk2/buildlink3.mk"
 .endif
 
-.if !empty(PKG_OPTIONS:Mgtk3)
-CONFIGURE_ARGS+=	--enable-gnomeui3
+.if !empty(PKG_OPTIONS:Mgtk3wip)
+CONFIGURE_ARGS+=	--enable-native-gtk3ui
 PLIST.pcf=		yes
 PLIST.x11=		yes
 .  include "../../x11/gtk3/buildlink3.mk"
@@ -36,7 +37,6 @@ PLIST.x11=		yes
 
 .if !empty(PKG_OPTIONS:Msdl)
 CONFIGURE_ARGS+=	--enable-sdlui2
-PLIST.pcf=		yes
 PLIST.sdl=		yes
 .  include "../../devel/SDL2/buildlink3.mk"
 .endif
@@ -50,10 +50,15 @@ CONFIGURE_ARGS+=	--enable-external-ffmpeg
 .endif
 
 .if !empty(PKG_OPTIONS:Mvte)
-.  include "../../x11/vte/buildlink3.mk"
+.  if !empty(PKG_OPTIONS:Mgtk2) || !empty(PKG_OPTIONS:Mgtk3wip)
+.    include "../../x11/vte/buildlink3.mk"
+.  else
+#    vte only makes sense with gtk*
+.  endif
 .endif
 
 .if !empty(PKG_OPTIONS:Mxaw)
+PLIST.mo=		yes
 PLIST.pcf=		yes
 PLIST.x11=		yes
 .  include "../../x11/libXt/buildlink3.mk"
