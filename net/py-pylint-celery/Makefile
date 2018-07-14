@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/12/21 10:24:12 adam Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/14 12:12:08 adam Exp $
 
 DISTNAME=	pylint-celery-0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-pylint>=1.0:../../devel/py-pylint
 DEPENDS+=	${PYPKGPREFIX}-pylint-plugin-utils>=0.2.1:../../devel/py-pylint-plugin-utils
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # pylint-plugin-utils
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
