@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.20 2018/06/09 07:23:58 tsutsui Exp $
+$NetBSD: distinfo,v 1.20.2.1 2018/07/14 07:49:05 spz Exp $
 
-SHA1 (adobe-flash-player-30.0.0.113/flash_player_npapi_linux.i386.tar.gz) = 9048c908b7a0fcfeebd59d28f71acd00857dccc3
-RMD160 (adobe-flash-player-30.0.0.113/flash_player_npapi_linux.i386.tar.gz) = a818b524960135479f4d4452fadfd6f5f6562030
-SHA512 (adobe-flash-player-30.0.0.113/flash_player_npapi_linux.i386.tar.gz) = ff56f3a182d85cae4882956034d5bce0e0a80eec34dab0835e8041b9371609b57d361ef67899c8088b4ee0748857a9269f8eb961723b58eabf8386f47d80b9a0
-Size (adobe-flash-player-30.0.0.113/flash_player_npapi_linux.i386.tar.gz) = 8525678 bytes
-SHA1 (adobe-flash-player-30.0.0.113/flash_player_npapi_linux.x86_64.tar.gz) = 536ae75d2cd3c83e4948cfc057ea37504befa904
-RMD160 (adobe-flash-player-30.0.0.113/flash_player_npapi_linux.x86_64.tar.gz) = 583aa4f78540ece9c8926a6493e23006e4346aa1
-SHA512 (adobe-flash-player-30.0.0.113/flash_player_npapi_linux.x86_64.tar.gz) = cff833da87d2ae24bd19f3669690c6ce071804e518612c7fd3fd7839bf5881afe57c472f10cb972362598d287f1bc840e1b61a07b6502ff5b916b7c4fb76c647
-Size (adobe-flash-player-30.0.0.113/flash_player_npapi_linux.x86_64.tar.gz) = 9045060 bytes
+SHA1 (adobe-flash-player-30.0.0.134/flash_player_npapi_linux.i386.tar.gz) = 27034cb9dd0b682990cd495be4f6037dab1c5fbe
+RMD160 (adobe-flash-player-30.0.0.134/flash_player_npapi_linux.i386.tar.gz) = f540a7d6b51aa7ec1f3b71b37ee81a883cf07da4
+SHA512 (adobe-flash-player-30.0.0.134/flash_player_npapi_linux.i386.tar.gz) = 163e265a20377beeae786a8a3dadb06fbc8c3f8d936c4517eae6727f85dd6be7fb19aeae7dcb4e16c7e8155859a3fe6bfcba6719e411805f584e84968e18a701
+Size (adobe-flash-player-30.0.0.134/flash_player_npapi_linux.i386.tar.gz) = 8523733 bytes
+SHA1 (adobe-flash-player-30.0.0.134/flash_player_npapi_linux.x86_64.tar.gz) = aca34e370ae2bd010dd5c68efa94d33703038024
+RMD160 (adobe-flash-player-30.0.0.134/flash_player_npapi_linux.x86_64.tar.gz) = 1c67497698bd13b71eb016caf50b616e95f3dbdd
+SHA512 (adobe-flash-player-30.0.0.134/flash_player_npapi_linux.x86_64.tar.gz) = 7895ae695fc151c38a5b01ef35b7e81b76b02dba582a1898663b377aaf599187da335d5bbac2fed8cdec424b97ede66b0b5cd642a835989a2f6099f2f690aecc
+Size (adobe-flash-player-30.0.0.134/flash_player_npapi_linux.x86_64.tar.gz) = 9042379 bytes
