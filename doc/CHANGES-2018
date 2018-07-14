@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3186 2018/07/14 19:00:02 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3187 2018/07/14 19:15:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4579,3 +4579,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-bsddb3 to 6.2.6 [adam 2018-07-14]
 	Updated devel/talloc to 2.1.14 [adam 2018-07-14]
 	Updated www/py-idna_ssl to 1.1.0 [adam 2018-07-14]
+	Updated devel/py-dash to 4.6.0 [adam 2018-07-14]
+	Updated net/py-ncclient to 0.6.0 [adam 2018-07-14]
