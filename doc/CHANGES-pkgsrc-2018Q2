@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q2,v 1.1.2.4 2018/07/14 09:51:29 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q2,v 1.1.2.5 2018/07/14 20:28:59 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q2 branch:
 
@@ -12,4 +12,19 @@ graphics/py-matplotlib-tk: functionality patch
 
 Pullup ticket #5785 - requested by taca
 devel/ruby-activesupport32: build fix
+
+Pullup ticket #5783 - requested by bsiegert
+multimedia/adobe-flash-player: security update
+
+Pullup ticket #5784 - requested by bsiegert
+www/curl: security update
+
+Pullup ticket #5787 - requested by taca
+databases/mysql57-client: build fix for databases/mysql57-server
+
+Pullup ticket #5788 - requested by taca
+net/bind910: security update
+
+Pullup ticket #5789 - requested by taca
+net/bind99: security update
 
