@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.17 2018/04/16 21:33:00 wiz Exp $
+$NetBSD: distinfo,v 1.18 2018/07/14 18:51:22 adam Exp $
 
-SHA1 (talloc-2.1.13.tar.gz) = e4e85e40bdb8225e8987a2f5ade7694b49390a94
-RMD160 (talloc-2.1.13.tar.gz) = 52492e55261e9b05ec2bfc5f01f996fcd7665eb1
-SHA512 (talloc-2.1.13.tar.gz) = 003588fbcde340096b069ed4de0dc6c3e6a489b72abec83e9d3dedf40571a1bf07232d410cc86d8ca505ee49f7483a0043360e913de69106493346fae16a0e2b
-Size (talloc-2.1.13.tar.gz) = 444608 bytes
+SHA1 (talloc-2.1.14.tar.gz) = 9d563b768148b620bdae1c97b36cfc30928a1044
+RMD160 (talloc-2.1.14.tar.gz) = 3edf77e31e14a4335f2b5a659c40ae592a412cde
+SHA512 (talloc-2.1.14.tar.gz) = 1fcc70bf283a4d9fb61faf1c57f80a9c158efbe996452740db9755e879ad72ee7bff6f6c9bed358e085c5c7f97c78800bb903161143af2202952b702141cc130
+Size (talloc-2.1.14.tar.gz) = 444589 bytes
 SHA1 (patch-buildtools_wafsamba_samba__conftests.py) = 8e40688a23fbf6112153b82a538df8801bf96247
