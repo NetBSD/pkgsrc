@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2018/05/22 22:50:25 jmcneill Exp $
+# $NetBSD: options.mk,v 1.5 2018/07/14 17:12:56 tsutsui Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.mpg123
 PKG_OPTIONS_OPTIONAL_GROUPS=	fpu
@@ -9,7 +9,8 @@ PKG_SUGGESTED_OPTIONS+=		mpg123-fifo
 
 .if (${MACHINE_ARCH} == "i386")
 .  if empty(MACHINE_PLATFORM:MDarwin-11.*-i386) && \
-      empty(MACHINE_PLATFORM:MSunOS-*)
+      empty(MACHINE_PLATFORM:MSunOS-*) && \
+      empty(MACHINE_PLATFORM:MNetBSD-[89]*-i386)
 PKG_OPTIONS_GROUP.fpu=		mpg123-x86-dither mpg123-with-fpu
 PKG_SUGGESTED_OPTIONS+=		mpg123-x86-dither
 .  else
