@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q2,v 1.1.2.3 2018/07/12 20:48:55 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q2,v 1.1.2.4 2018/07/14 09:51:29 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q2 branch:
 
@@ -9,4 +9,7 @@ Pullup ticket #5782 - requested by bsiegert
 graphics/py-matplotlib: functionality patch
 graphics/py-matplotlib-gtk2: functionality patch
 graphics/py-matplotlib-tk: functionality patch
+
+Pullup ticket #5785 - requested by taca
+devel/ruby-activesupport32: build fix
 
