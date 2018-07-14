@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3180 2018/07/14 15:04:01 maya Exp $
+$NetBSD: CHANGES-2018,v 1.3181 2018/07/14 15:15:29 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4570,3 +4570,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/stellarium to 0.18.1 [adam 2018-07-14]
 	Updated lang/gawk to 4.2.1 [adam 2018-07-14]
 	Updated wm/ctwm to 4.0.1 [maya 2018-07-14]
+	Updated news/pan to 0.145 [maya 2018-07-14]
