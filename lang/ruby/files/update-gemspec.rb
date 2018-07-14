@@ -1,9 +1,10 @@
 #!/usr/pkg/bin/ruby
 # -*- coding: utf-8 -*-
 #
-# $NetBSD: update-gemspec.rb,v 1.9 2017/04/09 15:49:50 taca Exp $
+# $NetBSD: update-gemspec.rb,v 1.9.12.1 2018/07/14 09:22:39 bsiegert Exp $
 #
-# Copyright (c) 2011, 2012, 2013, 2014, 2015, 2016 The NetBSD Foundation, Inc.
+# Copyright (c) 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018
+# The NetBSD Foundation, Inc.
 # All rights reserved.
 #
 # This code is derived from software contributed to The NetBSD Foundation
@@ -106,8 +107,8 @@ class GemSpecUpdater
       update = @requirements[dep.name]
       if not update.nil? and update[:method] == :update
         r = dep.requirement.requirements
-        r[0][0] = update[:op]
-        r[0][1] = update[:version]
+        r.clear
+        r[0] = [update[:op], update[:version]]
         unless update[:name].nil?
           dep.name = update[:name]
         end
