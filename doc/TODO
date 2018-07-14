@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18444 2018/07/14 15:15:29 maya Exp $
+$NetBSD: TODO,v 1.18445 2018/07/14 16:05:51 maya Exp $
 
 Suggested new packages
 ======================
@@ -1442,7 +1442,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vera-1.23
 	o veusz-1.26.1
 	o vfu-4.09
-	o vice-3.2
 	o vicq-0.4.2
 	o vile-9.8q
 	o vinagre-3.16.1
