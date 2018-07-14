@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.65 2018/06/18 18:00:52 leot Exp $
+@comment $NetBSD: PLIST,v 1.66 2018/07/14 11:27:05 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -695,6 +695,9 @@ ${PYSITELIB}/youtube_dl/extractor/freespeech.pyo
 ${PYSITELIB}/youtube_dl/extractor/freshlive.py
 ${PYSITELIB}/youtube_dl/extractor/freshlive.pyc
 ${PYSITELIB}/youtube_dl/extractor/freshlive.pyo
+${PYSITELIB}/youtube_dl/extractor/frontendmasters.py
+${PYSITELIB}/youtube_dl/extractor/frontendmasters.pyc
+${PYSITELIB}/youtube_dl/extractor/frontendmasters.pyo
 ${PYSITELIB}/youtube_dl/extractor/funimation.py
 ${PYSITELIB}/youtube_dl/extractor/funimation.pyc
 ${PYSITELIB}/youtube_dl/extractor/funimation.pyo
