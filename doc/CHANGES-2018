@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3192 2018/07/15 20:17:34 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3193 2018/07/15 21:23:20 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4587,3 +4587,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/p5-Search-Xapian to 1.2.25.1 [schmonz 2018-07-15]
 	Added net/dnscrypt-proxy2 version 2.0.15 [bsiegert 2018-07-15]
 	Updated www/surfraw to 2.3.0nb1 [wiz 2018-07-15]
+	Added lang/R-codetools version 0.2.15 [minskim 2018-07-15]
