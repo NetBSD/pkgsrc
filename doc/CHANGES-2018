@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3191 2018/07/15 16:12:07 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.3192 2018/07/15 20:17:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4586,3 +4586,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added www/go-webhooks version 3.12.0 [minskim 2018-07-14]
 	Updated textproc/p5-Search-Xapian to 1.2.25.1 [schmonz 2018-07-15]
 	Added net/dnscrypt-proxy2 version 2.0.15 [bsiegert 2018-07-15]
+	Updated www/surfraw to 2.3.0nb1 [wiz 2018-07-15]
