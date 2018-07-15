@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/07/15 21:22:46 minskim Exp $
+
+SHA1 (R/codetools_0.2-15.tar.gz) = a6a384b17adae4f8c92ddeeab4f1393a0ff732c1
+RMD160 (R/codetools_0.2-15.tar.gz) = 30e7c648579d6685ad340506ac2303b2bcb5cbf4
+SHA512 (R/codetools_0.2-15.tar.gz) = 79493badfd6fb32ecdff693b8e31aa3a87664eafd636b226220a2deb7c6ee6be47576cdf6a9b07867be9d547dff1d0959c4614728c34f26ec3f104123532622a
+Size (R/codetools_0.2-15.tar.gz) = 12930 bytes
