@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3189 2018/07/14 22:20:42 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.3190 2018/07/15 08:51:34 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4584,3 +4584,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/dovecot2 to 2.3.2.1 [adam 2018-07-14]
 	Updated mail/dovecot2-pigeonhole to 0.5.2 [adam 2018-07-14]
 	Added www/go-webhooks version 3.12.0 [minskim 2018-07-14]
+	Updated textproc/p5-Search-Xapian to 1.2.25.1 [schmonz 2018-07-15]
