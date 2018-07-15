@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2018/07/15 16:10:32 bsiegert Exp $
+bin/dnscrypt-proxy

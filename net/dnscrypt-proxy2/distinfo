@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/07/15 16:10:32 bsiegert Exp $
+
+SHA1 (dnscrypt-proxy-2.0.15.tar.gz) = f348d81d32ebc80638ab494692a6f08e3eabd79f
+RMD160 (dnscrypt-proxy-2.0.15.tar.gz) = c4a1b4babe7cac742c61031dab5c4f13238cf4c5
+SHA512 (dnscrypt-proxy-2.0.15.tar.gz) = 4517ab7b7eb1474f8c9e133a289caf6c02f472b51b910f1fbe1e5ffd6d389943626c8878e68f7f27a47b00301a427dfe9c563bc82b67cafab32f4ab3bc4c84b9
+Size (dnscrypt-proxy-2.0.15.tar.gz) = 2887764 bytes
