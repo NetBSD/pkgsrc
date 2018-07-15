@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2018/07/03 11:24:08 mef Exp $
+# $NetBSD: options.mk,v 1.3 2018/07/15 15:21:28 mef Exp $
 
 ### Set options
 PKG_OPTIONS_VAR=			PKG_OPTIONS.emacs
@@ -12,14 +12,15 @@ PKG_OPTIONS_GROUP.window-system=	x11 nextstep
 
 PKG_OPTIONS_OPTIONAL_GROUPS+=		toolkit
 PKG_SUGGESTED_OPTIONS.Darwin=		nextstep
-#  --with-x-toolkit=KIT    use an X toolkit (KIT one of: yes or gtk, gtk2,
+#  --with-x-toolkit=KIT    use an X toolkit (KIT one of: yes or  gtk2,
 #                          gtk3, lucid or athena, motif, no)
 # gtk in next line implies gtk2, xaw = athena = lucid
-PKG_OPTIONS_GROUP.toolkit=		gtk motif xaw lucid
+PKG_OPTIONS_GROUP.toolkit=		gtk gtk2 gtk3 motif xaw lucid
+# gtk2 and gtk has the same effect
 # gtk is default in the logic below (even not included in SUGGESTED_=
 # gconf, gtk and xft2 will be ignored for nextstep even shown as selected.
 
-PKG_SUGGESTED_OPTIONS=	dbus gconf gnutls imagemagick svg xaw3d xft2 xml x11
+PKG_SUGGESTED_OPTIONS=	dbus gconf gnutls gtk3 svg xaw3d xft2 xml x11
 
 .include "../../mk/bsd.options.mk"
 
@@ -80,10 +81,11 @@ CONFIGURE_ARGS+=	--without-gconf
 .  endif
 
 ###
-### Support ImageMagick
+### Support ImageMagick (not recognized for now, sorry)
 ###
 .  if !empty(PKG_OPTIONS:Mimagemagick)
 .include "../../graphics/ImageMagick/buildlink3.mk"
+# DEPENDS+=	py[0-9]*-wand-[0-9]*:../../graphics/py-wand
 .  else
 CONFIGURE_ARGS+=	--without-imagemagick
 .  endif
@@ -112,14 +114,14 @@ CONFIGURE_ARGS+=	--without-xft --without-libotf --without-m17n-flt
 ### Toolkit selection
 ###
 .  if (empty(PKG_OPTIONS:Mxaw) && empty(PKG_OPTIONS:Mlucid) &&  empty(PKG_OPTIONS:Mmotif))
-# defaults to gtk
+# defaults to gtk3
+USE_TOOLS+=		pkg-config
+.include "../../x11/gtk3/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-x-toolkit=gtk3
+.  elif !empty(PKG_OPTIONS:Mgtk2) || !empty(PKG_OPTIONS:Mgtk)
 USE_TOOLS+=		pkg-config
 .include "../../x11/gtk2/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-x-toolkit=gtk
-.  elif !empty(PKG_OPTIONS:Mgtk)
-USE_TOOLS+=		pkg-config
-.include "../../x11/gtk2/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-x-toolkit=gtk
+CONFIGURE_ARGS+=	--with-x-toolkit=gtk2
 .  elif !empty(PKG_OPTIONS:Mxaw)
 .include "../../mk/xaw.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-x-toolkit=athena
