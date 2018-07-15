@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.111 2018/07/06 20:50:03 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.112 2018/07/15 23:15:01 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -48,7 +48,11 @@ test:
 TOOLS_PLATFORM.tar=	${TOOLS_PATH.bsdtar}
 USE_TOOLS+=		bsdtar
 .endif
-GCC_REQD+=		6.1
+GCC_REQD=		6.1
+.if !empty(MACHINE_PLATFORM:MNetBSD-[0-7]**-*) || \
+	!empty(MACHINE_PLATFORM:MNetBSD-8.[0-8]*-*)
+USE_PKGSRC_GCC_RUNTIME=	yes
+.endif
 .if ${MACHINE_ARCH} == "i386"
 # Fix for PR pkg/48152.
 CXXFLAGS+=		-march=i586
