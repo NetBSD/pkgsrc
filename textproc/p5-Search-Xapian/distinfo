@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2017/09/27 21:03:05 wiz Exp $
+$NetBSD: distinfo,v 1.17 2018/07/15 08:51:15 schmonz Exp $
 
-SHA1 (Search-Xapian-1.2.25.0.tar.gz) = 0cec172acc340e6724616cfff56ef9ef41947f5e
-RMD160 (Search-Xapian-1.2.25.0.tar.gz) = 276a407c1acf3d654ca6d0f08a1053945dd0a7a8
-SHA512 (Search-Xapian-1.2.25.0.tar.gz) = 2bb0bea59ddfd8159df0b3051034ca28478cb74832cfe7a103b8a4dbeddbd41f6223be6ad56eb3dcb8c7a785d2f7d500844c41f35da3997a843b3ba624a4e795
-Size (Search-Xapian-1.2.25.0.tar.gz) = 72097 bytes
+SHA1 (Search-Xapian-1.2.25.1.tar.gz) = 01d12512e5678e55e68a51ac3fddff29f8dbd5d2
+RMD160 (Search-Xapian-1.2.25.1.tar.gz) = 2a0695287da44fd235e053c548d65490804ef840
+SHA512 (Search-Xapian-1.2.25.1.tar.gz) = 7cb78c1304b69a733b75c1a9b5ae4197be519e67528214a46e4bb9da660cda79f8e9ecf46219af09f174bf652b6000e0eeb50f736a80f2e6f47be46b2d58ef8d
+Size (Search-Xapian-1.2.25.1.tar.gz) = 72320 bytes
