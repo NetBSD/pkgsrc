@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2018/04/04 10:47:49 fhajny Exp $
+# $NetBSD: Makefile,v 1.38 2018/07/15 23:35:35 maya Exp $
 
 DISTNAME=	redis-4.0.9
 CATEGORIES=	databases
@@ -54,6 +54,11 @@ CHECK_PORTABILITY_SKIP+=	deps/jemalloc/configure
 
 post-extract:
 	${CHMOD} -R g-w ${WRKSRC}
+
+.if ${MACHINE_ARCH} == "i386"
+# Need 8 byte atomics.
+CFLAGS+=		-march=i586
+.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/redis.conf ${DESTDIR}${EGDIR}/redis.conf.example
