@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3204 2018/07/16 07:57:38 mef Exp $
+$NetBSD: CHANGES-2018,v 1.3205 2018/07/16 11:03:03 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4599,3 +4599,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/firefox to 61.0.1nb2 [ryoon 2018-07-16]
 	Updated www/drupal8 to 8.5.5 [wen 2018-07-16]
 	Updated ham/gnuradio-core to 3.7.13.3 [makoto 2018-07-16]
+	Updated lang/php70 to 7.0.30nb1 [maya 2018-07-16]
+	Updated lang/php71 to 7.1.19nb1 [maya 2018-07-16]
+	Updated lang/php72 to 7.2.7nb1 [maya 2018-07-16]
