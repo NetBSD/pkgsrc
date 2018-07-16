@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/03/15 14:07:12 mef Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/07/16 07:55:22 mef Exp $
 include/gnuradio/digital/additive_scrambler_bb.h
 include/gnuradio/digital/api.h
 include/gnuradio/digital/binary_slicer_fb.h
@@ -22,6 +22,7 @@ include/gnuradio/digital/correlate_access_code_bb.h
 include/gnuradio/digital/correlate_access_code_bb_ts.h
 include/gnuradio/digital/correlate_access_code_ff_ts.h
 include/gnuradio/digital/correlate_access_code_tag_bb.h
+include/gnuradio/digital/correlate_access_code_tag_ff.h
 include/gnuradio/digital/correlate_and_sync_cc.h
 include/gnuradio/digital/costas_loop_cc.h
 include/gnuradio/digital/cpmmod_bc.h
@@ -46,6 +47,7 @@ include/gnuradio/digital/header_format_crc.h
 include/gnuradio/digital/header_format_default.h
 include/gnuradio/digital/header_format_ofdm.h
 include/gnuradio/digital/header_payload_demux.h
+include/gnuradio/digital/interpolating_resampler_type.h
 include/gnuradio/digital/kurtotic_equalizer_cc.h
 include/gnuradio/digital/lfsr.h
 include/gnuradio/digital/lms_dd_equalizer_cc.h
@@ -87,6 +89,9 @@ include/gnuradio/digital/scrambler_bb.h
 include/gnuradio/digital/simple_correlator.h
 include/gnuradio/digital/simple_framer.h
 include/gnuradio/digital/simple_framer_sync.h
+include/gnuradio/digital/symbol_sync_cc.h
+include/gnuradio/digital/symbol_sync_ff.h
+include/gnuradio/digital/timing_error_detector_type.h
 include/gnuradio/swig/constellation.i
 include/gnuradio/swig/digital_swig0.i
 include/gnuradio/swig/digital_swig0_doc.i
@@ -220,6 +225,9 @@ share/gnuradio/examples/digital/demod/gfsk_loopback.grc
 share/gnuradio/examples/digital/demod/mpsk_demod.grc
 share/gnuradio/examples/digital/demod/pam_sync.grc
 share/gnuradio/examples/digital/demod/pam_timing.grc
+share/gnuradio/examples/digital/demod/symbol_sync_test_complex.grc
+share/gnuradio/examples/digital/demod/symbol_sync_test_float.grc
+share/gnuradio/examples/digital/demod/symbol_sync_test_float_ted_gain.m
 share/gnuradio/examples/digital/demod/test_corr_and_sync.grc
 share/gnuradio/examples/digital/demod/test_corr_est.grc
 share/gnuradio/examples/digital/demod/uhd_corr_and_sync_rx.grc
@@ -291,7 +299,7 @@ share/gnuradio/grc/blocks/digital_constellation_rect.xml
 share/gnuradio/grc/blocks/digital_constellation_soft_decoder_cf.xml
 share/gnuradio/grc/blocks/digital_corr_est_cc.xml
 share/gnuradio/grc/blocks/digital_correlate_access_code_bb.xml
-share/gnuradio/grc/blocks/digital_correlate_access_code_tag_bb.xml
+share/gnuradio/grc/blocks/digital_correlate_access_code_tag_xx.xml
 share/gnuradio/grc/blocks/digital_correlate_access_code_xx_ts.xml
 share/gnuradio/grc/blocks/digital_correlate_and_sync_cc.xml
 share/gnuradio/grc/blocks/digital_costas_loop_cc.xml
@@ -356,4 +364,5 @@ share/gnuradio/grc/blocks/digital_qam_mod.xml
 share/gnuradio/grc/blocks/digital_scrambler_bb.xml
 share/gnuradio/grc/blocks/digital_simple_correlator.xml
 share/gnuradio/grc/blocks/digital_simple_framer.xml
+share/gnuradio/grc/blocks/digital_symbol_sync_xx.xml
 share/gnuradio/grc/blocks/variable_header_format_default.xml

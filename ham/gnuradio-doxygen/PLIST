@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2017/05/30 22:47:57 gdt Exp $
+@comment $NetBSD: PLIST,v 1.15 2018/07/16 07:55:22 mef Exp $
 share/doc/gnuradio-${PKGVERSION}/dial_tone.py
 share/doc/gnuradio-${PKGVERSION}/fm_demod.py
 share/doc/gnuradio-${PKGVERSION}/fm_rx.grc
@@ -39,6 +39,7 @@ share/doc/gnuradio-${PKGVERSION}/html/HistogramDisplayPlot_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/HistogramDisplayPlot_8h__incl.md5
 share/doc/gnuradio-${PKGVERSION}/html/HistogramDisplayPlot_8h__incl.png
 share/doc/gnuradio-${PKGVERSION}/html/HistogramDisplayPlot_8h_source.html
+share/doc/gnuradio-${PKGVERSION}/html/License.html
 share/doc/gnuradio-${PKGVERSION}/html/SpectrumGUIClass_8h.html
 share/doc/gnuradio-${PKGVERSION}/html/SpectrumGUIClass_8h__dep__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/SpectrumGUIClass_8h__dep__incl.md5
@@ -511,6 +512,12 @@ share/doc/gnuradio-${PKGVERSION}/html/calc__metric_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/calc__metric_8h__incl.md5
 share/doc/gnuradio-${PKGVERSION}/html/calc__metric_8h__incl.png
 share/doc/gnuradio-${PKGVERSION}/html/calc__metric_8h_source.html
+share/doc/gnuradio-${PKGVERSION}/html/catv__config_8h.html
+share/doc/gnuradio-${PKGVERSION}/html/catv__config_8h.js
+share/doc/gnuradio-${PKGVERSION}/html/catv__config_8h__dep__incl.map
+share/doc/gnuradio-${PKGVERSION}/html/catv__config_8h__dep__incl.md5
+share/doc/gnuradio-${PKGVERSION}/html/catv__config_8h__dep__incl.png
+share/doc/gnuradio-${PKGVERSION}/html/catv__config_8h_source.html
 share/doc/gnuradio-${PKGVERSION}/html/catv__frame__sync__enc__bb_8h.html
 share/doc/gnuradio-${PKGVERSION}/html/catv__frame__sync__enc__bb_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/catv__frame__sync__enc__bb_8h__incl.md5
@@ -1296,6 +1303,9 @@ share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1blocks_1_1divide__ss.js
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1blocks_1_1endian__swap-members.html
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1blocks_1_1endian__swap.html
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1blocks_1_1endian__swap.js
+share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1blocks_1_1exponentiate__const__cci-members.html
+share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1blocks_1_1exponentiate__const__cci.html
+share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1blocks_1_1exponentiate__const__cci.js
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1blocks_1_1file__descriptor__sink-members.html
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1blocks_1_1file__descriptor__sink.html
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1blocks_1_1file__descriptor__sink.js
@@ -1683,6 +1693,9 @@ share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1blocks_1_1tag__debug.js
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1blocks_1_1tag__gate-members.html
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1blocks_1_1tag__gate.html
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1blocks_1_1tag__gate.js
+share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1blocks_1_1tag__share-members.html
+share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1blocks_1_1tag__share.html
+share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1blocks_1_1tag__share.js
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1blocks_1_1tagged__file__sink-members.html
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1blocks_1_1tagged__file__sink.html
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1blocks_1_1tagged__file__sink.js
@@ -1938,6 +1951,9 @@ share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1digital_1_1correlate__access__c
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1digital_1_1correlate__access__code__tag__bb-members.html
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1digital_1_1correlate__access__code__tag__bb.html
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1digital_1_1correlate__access__code__tag__bb.js
+share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1digital_1_1correlate__access__code__tag__ff-members.html
+share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1digital_1_1correlate__access__code__tag__ff.html
+share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1digital_1_1correlate__access__code__tag__ff.js
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1digital_1_1correlate__and__sync__cc-members.html
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1digital_1_1correlate__and__sync__cc.html
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1digital_1_1correlate__and__sync__cc.js
@@ -2139,6 +2155,12 @@ share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1digital_1_1simple__framer.js
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1digital_1_1snr__est__m2m4-members.html
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1digital_1_1snr__est__m2m4.html
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1digital_1_1snr__est__m2m4.js
+share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1digital_1_1symbol__sync__cc-members.html
+share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1digital_1_1symbol__sync__cc.html
+share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1digital_1_1symbol__sync__cc.js
+share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1digital_1_1symbol__sync__ff-members.html
+share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1digital_1_1symbol__sync__ff.html
+share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1digital_1_1symbol__sync__ff.js
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1dtv_1_1atsc__deinterleaver-members.html
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1dtv_1_1atsc__deinterleaver.html
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1dtv_1_1atsc__deinterleaver.js
@@ -2637,6 +2659,12 @@ share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1filter_1_1mmse__fir__interpolat
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1filter_1_1mmse__fir__interpolator__ff-members.html
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1filter_1_1mmse__fir__interpolator__ff.html
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1filter_1_1mmse__fir__interpolator__ff.js
+share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1filter_1_1mmse__interp__differentiator__cc-members.html
+share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1filter_1_1mmse__interp__differentiator__cc.html
+share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1filter_1_1mmse__interp__differentiator__cc.js
+share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1filter_1_1mmse__interp__differentiator__ff-members.html
+share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1filter_1_1mmse__interp__differentiator__ff.html
+share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1filter_1_1mmse__interp__differentiator__ff.js
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1filter_1_1pfb__arb__resampler__ccc-members.html
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1filter_1_1pfb__arb__resampler__ccc.html
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1filter_1_1pfb__arb__resampler__ccc.js
@@ -3396,6 +3424,11 @@ share/doc/gnuradio-${PKGVERSION}/html/correlate__access__code__tag__bb_8h__incl.
 share/doc/gnuradio-${PKGVERSION}/html/correlate__access__code__tag__bb_8h__incl.md5
 share/doc/gnuradio-${PKGVERSION}/html/correlate__access__code__tag__bb_8h__incl.png
 share/doc/gnuradio-${PKGVERSION}/html/correlate__access__code__tag__bb_8h_source.html
+share/doc/gnuradio-${PKGVERSION}/html/correlate__access__code__tag__ff_8h.html
+share/doc/gnuradio-${PKGVERSION}/html/correlate__access__code__tag__ff_8h__incl.map
+share/doc/gnuradio-${PKGVERSION}/html/correlate__access__code__tag__ff_8h__incl.md5
+share/doc/gnuradio-${PKGVERSION}/html/correlate__access__code__tag__ff_8h__incl.png
+share/doc/gnuradio-${PKGVERSION}/html/correlate__access__code__tag__ff_8h_source.html
 share/doc/gnuradio-${PKGVERSION}/html/correlate__and__sync__cc_8h.html
 share/doc/gnuradio-${PKGVERSION}/html/correlate__and__sync__cc_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/correlate__and__sync__cc_8h__incl.md5
@@ -4035,6 +4068,11 @@ share/doc/gnuradio-${PKGVERSION}/html/expj_8h__incl.md5
 share/doc/gnuradio-${PKGVERSION}/html/expj_8h__incl.png
 share/doc/gnuradio-${PKGVERSION}/html/expj_8h_source.html
 share/doc/gnuradio-${PKGVERSION}/html/exploring__gnuradio_8dox.html
+share/doc/gnuradio-${PKGVERSION}/html/exponentiate__const__cci_8h.html
+share/doc/gnuradio-${PKGVERSION}/html/exponentiate__const__cci_8h__incl.map
+share/doc/gnuradio-${PKGVERSION}/html/exponentiate__const__cci_8h__incl.md5
+share/doc/gnuradio-${PKGVERSION}/html/exponentiate__const__cci_8h__incl.png
+share/doc/gnuradio-${PKGVERSION}/html/exponentiate__const__cci_8h_source.html
 share/doc/gnuradio-${PKGVERSION}/html/fading__model_8h.html
 share/doc/gnuradio-${PKGVERSION}/html/fading__model_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/fading__model_8h__incl.md5
@@ -4369,6 +4407,8 @@ share/doc/gnuradio-${PKGVERSION}/html/form_52.png
 share/doc/gnuradio-${PKGVERSION}/html/form_53.png
 share/doc/gnuradio-${PKGVERSION}/html/form_54.png
 share/doc/gnuradio-${PKGVERSION}/html/form_55.png
+share/doc/gnuradio-${PKGVERSION}/html/form_56.png
+share/doc/gnuradio-${PKGVERSION}/html/form_57.png
 share/doc/gnuradio-${PKGVERSION}/html/form_6.png
 share/doc/gnuradio-${PKGVERSION}/html/form_7.png
 share/doc/gnuradio-${PKGVERSION}/html/form_8.png
@@ -4730,6 +4770,7 @@ share/doc/gnuradio-${PKGVERSION}/html/globals_u.html
 share/doc/gnuradio-${PKGVERSION}/html/globals_v.html
 share/doc/gnuradio-${PKGVERSION}/html/globals_vars.html
 share/doc/gnuradio-${PKGVERSION}/html/globals_w.html
+share/doc/gnuradio-${PKGVERSION}/html/globals_x.html
 share/doc/gnuradio-${PKGVERSION}/html/globals_z.html
 share/doc/gnuradio-${PKGVERSION}/html/gnuradio-logo.svg
 share/doc/gnuradio-${PKGVERSION}/html/gnuradio-runtime_2include_2gnuradio_2api_8h.html
@@ -5494,6 +5535,12 @@ share/doc/gnuradio-${PKGVERSION}/html/inherit_graph_161.png
 share/doc/gnuradio-${PKGVERSION}/html/inherit_graph_162.map
 share/doc/gnuradio-${PKGVERSION}/html/inherit_graph_162.md5
 share/doc/gnuradio-${PKGVERSION}/html/inherit_graph_162.png
+share/doc/gnuradio-${PKGVERSION}/html/inherit_graph_163.map
+share/doc/gnuradio-${PKGVERSION}/html/inherit_graph_163.md5
+share/doc/gnuradio-${PKGVERSION}/html/inherit_graph_163.png
+share/doc/gnuradio-${PKGVERSION}/html/inherit_graph_164.map
+share/doc/gnuradio-${PKGVERSION}/html/inherit_graph_164.md5
+share/doc/gnuradio-${PKGVERSION}/html/inherit_graph_164.png
 share/doc/gnuradio-${PKGVERSION}/html/inherit_graph_17.map
 share/doc/gnuradio-${PKGVERSION}/html/inherit_graph_17.md5
 share/doc/gnuradio-${PKGVERSION}/html/inherit_graph_17.png
@@ -5816,6 +5863,9 @@ share/doc/gnuradio-${PKGVERSION}/html/interleaver__fifo_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/interleaver__fifo_8h__incl.md5
 share/doc/gnuradio-${PKGVERSION}/html/interleaver__fifo_8h__incl.png
 share/doc/gnuradio-${PKGVERSION}/html/interleaver__fifo_8h_source.html
+share/doc/gnuradio-${PKGVERSION}/html/interp__differentiator__taps_8h.html
+share/doc/gnuradio-${PKGVERSION}/html/interp__differentiator__taps_8h.js
+share/doc/gnuradio-${PKGVERSION}/html/interp__differentiator__taps_8h_source.html
 share/doc/gnuradio-${PKGVERSION}/html/interp__fir__filter__ccc_8h.html
 share/doc/gnuradio-${PKGVERSION}/html/interp__fir__filter__ccc_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/interp__fir__filter__ccc_8h__incl.md5
@@ -5846,6 +5896,12 @@ share/doc/gnuradio-${PKGVERSION}/html/interp__fir__filter__scc_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/interp__fir__filter__scc_8h__incl.md5
 share/doc/gnuradio-${PKGVERSION}/html/interp__fir__filter__scc_8h__incl.png
 share/doc/gnuradio-${PKGVERSION}/html/interp__fir__filter__scc_8h_source.html
+share/doc/gnuradio-${PKGVERSION}/html/interpolating__resampler__type_8h.html
+share/doc/gnuradio-${PKGVERSION}/html/interpolating__resampler__type_8h.js
+share/doc/gnuradio-${PKGVERSION}/html/interpolating__resampler__type_8h__dep__incl.map
+share/doc/gnuradio-${PKGVERSION}/html/interpolating__resampler__type_8h__dep__incl.md5
+share/doc/gnuradio-${PKGVERSION}/html/interpolating__resampler__type_8h__dep__incl.png
+share/doc/gnuradio-${PKGVERSION}/html/interpolating__resampler__type_8h_source.html
 share/doc/gnuradio-${PKGVERSION}/html/interpolator__taps_8h.html
 share/doc/gnuradio-${PKGVERSION}/html/interpolator__taps_8h.js
 share/doc/gnuradio-${PKGVERSION}/html/interpolator__taps_8h_source.html
@@ -5941,6 +5997,7 @@ share/doc/gnuradio-${PKGVERSION}/html/lfsr__32k__source__s_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/lfsr__32k__source__s_8h__incl.md5
 share/doc/gnuradio-${PKGVERSION}/html/lfsr__32k__source__s_8h__incl.png
 share/doc/gnuradio-${PKGVERSION}/html/lfsr__32k__source__s_8h_source.html
+share/doc/gnuradio-${PKGVERSION}/html/license_8dox.html
 share/doc/gnuradio-${PKGVERSION}/html/lms__dd__equalizer__cc_8h.html
 share/doc/gnuradio-${PKGVERSION}/html/lms__dd__equalizer__cc_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/lms__dd__equalizer__cc_8h__incl.md5
@@ -6098,6 +6155,16 @@ share/doc/gnuradio-${PKGVERSION}/html/mmse__fir__interpolator__ff_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/mmse__fir__interpolator__ff_8h__incl.md5
 share/doc/gnuradio-${PKGVERSION}/html/mmse__fir__interpolator__ff_8h__incl.png
 share/doc/gnuradio-${PKGVERSION}/html/mmse__fir__interpolator__ff_8h_source.html
+share/doc/gnuradio-${PKGVERSION}/html/mmse__interp__differentiator__cc_8h.html
+share/doc/gnuradio-${PKGVERSION}/html/mmse__interp__differentiator__cc_8h__incl.map
+share/doc/gnuradio-${PKGVERSION}/html/mmse__interp__differentiator__cc_8h__incl.md5
+share/doc/gnuradio-${PKGVERSION}/html/mmse__interp__differentiator__cc_8h__incl.png
+share/doc/gnuradio-${PKGVERSION}/html/mmse__interp__differentiator__cc_8h_source.html
+share/doc/gnuradio-${PKGVERSION}/html/mmse__interp__differentiator__ff_8h.html
+share/doc/gnuradio-${PKGVERSION}/html/mmse__interp__differentiator__ff_8h__incl.map
+share/doc/gnuradio-${PKGVERSION}/html/mmse__interp__differentiator__ff_8h__incl.md5
+share/doc/gnuradio-${PKGVERSION}/html/mmse__interp__differentiator__ff_8h__incl.png
+share/doc/gnuradio-${PKGVERSION}/html/mmse__interp__differentiator__ff_8h_source.html
 share/doc/gnuradio-${PKGVERSION}/html/modulate__vector_8h.html
 share/doc/gnuradio-${PKGVERSION}/html/modulate__vector_8h.js
 share/doc/gnuradio-${PKGVERSION}/html/modulate__vector_8h__incl.map
@@ -6391,6 +6458,7 @@ share/doc/gnuradio-${PKGVERSION}/html/namespacemembers_eval_r.html
 share/doc/gnuradio-${PKGVERSION}/html/namespacemembers_eval_s.html
 share/doc/gnuradio-${PKGVERSION}/html/namespacemembers_eval_t.html
 share/doc/gnuradio-${PKGVERSION}/html/namespacemembers_eval_v.html
+share/doc/gnuradio-${PKGVERSION}/html/namespacemembers_eval_w.html
 share/doc/gnuradio-${PKGVERSION}/html/namespacemembers_f.html
 share/doc/gnuradio-${PKGVERSION}/html/namespacemembers_func.html
 share/doc/gnuradio-${PKGVERSION}/html/namespacemembers_func.js
@@ -6488,6 +6556,7 @@ share/doc/gnuradio-${PKGVERSION}/html/navtreeindex42.js
 share/doc/gnuradio-${PKGVERSION}/html/navtreeindex43.js
 share/doc/gnuradio-${PKGVERSION}/html/navtreeindex44.js
 share/doc/gnuradio-${PKGVERSION}/html/navtreeindex45.js
+share/doc/gnuradio-${PKGVERSION}/html/navtreeindex46.js
 share/doc/gnuradio-${PKGVERSION}/html/navtreeindex5.js
 share/doc/gnuradio-${PKGVERSION}/html/navtreeindex6.js
 share/doc/gnuradio-${PKGVERSION}/html/navtreeindex7.js
@@ -7004,7 +7073,6 @@ share/doc/gnuradio-${PKGVERSION}/html/polar__common_8h__incl.md5
 share/doc/gnuradio-${PKGVERSION}/html/polar__common_8h__incl.png
 share/doc/gnuradio-${PKGVERSION}/html/polar__common_8h_source.html
 share/doc/gnuradio-${PKGVERSION}/html/polar__decoder__common_8h.html
-share/doc/gnuradio-${PKGVERSION}/html/polar__decoder__common_8h.js
 share/doc/gnuradio-${PKGVERSION}/html/polar__decoder__common_8h__dep__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/polar__decoder__common_8h__dep__incl.md5
 share/doc/gnuradio-${PKGVERSION}/html/polar__decoder__common_8h__dep__incl.png
@@ -7692,6 +7760,8 @@ share/doc/gnuradio-${PKGVERSION}/html/search/enums_0.html
 share/doc/gnuradio-${PKGVERSION}/html/search/enums_0.js
 share/doc/gnuradio-${PKGVERSION}/html/search/enums_1.html
 share/doc/gnuradio-${PKGVERSION}/html/search/enums_1.js
+share/doc/gnuradio-${PKGVERSION}/html/search/enums_10.html
+share/doc/gnuradio-${PKGVERSION}/html/search/enums_10.js
 share/doc/gnuradio-${PKGVERSION}/html/search/enums_2.html
 share/doc/gnuradio-${PKGVERSION}/html/search/enums_2.js
 share/doc/gnuradio-${PKGVERSION}/html/search/enums_3.html
@@ -7828,6 +7898,8 @@ share/doc/gnuradio-${PKGVERSION}/html/search/functions_17.html
 share/doc/gnuradio-${PKGVERSION}/html/search/functions_17.js
 share/doc/gnuradio-${PKGVERSION}/html/search/functions_18.html
 share/doc/gnuradio-${PKGVERSION}/html/search/functions_18.js
+share/doc/gnuradio-${PKGVERSION}/html/search/functions_19.html
+share/doc/gnuradio-${PKGVERSION}/html/search/functions_19.js
 share/doc/gnuradio-${PKGVERSION}/html/search/functions_2.html
 share/doc/gnuradio-${PKGVERSION}/html/search/functions_2.js
 share/doc/gnuradio-${PKGVERSION}/html/search/functions_3.html
@@ -8468,6 +8540,16 @@ share/doc/gnuradio-${PKGVERSION}/html/sub__ss_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/sub__ss_8h__incl.md5
 share/doc/gnuradio-${PKGVERSION}/html/sub__ss_8h__incl.png
 share/doc/gnuradio-${PKGVERSION}/html/sub__ss_8h_source.html
+share/doc/gnuradio-${PKGVERSION}/html/symbol__sync__cc_8h.html
+share/doc/gnuradio-${PKGVERSION}/html/symbol__sync__cc_8h__incl.map
+share/doc/gnuradio-${PKGVERSION}/html/symbol__sync__cc_8h__incl.md5
+share/doc/gnuradio-${PKGVERSION}/html/symbol__sync__cc_8h__incl.png
+share/doc/gnuradio-${PKGVERSION}/html/symbol__sync__cc_8h_source.html
+share/doc/gnuradio-${PKGVERSION}/html/symbol__sync__ff_8h.html
+share/doc/gnuradio-${PKGVERSION}/html/symbol__sync__ff_8h__incl.map
+share/doc/gnuradio-${PKGVERSION}/html/symbol__sync__ff_8h__incl.md5
+share/doc/gnuradio-${PKGVERSION}/html/symbol__sync__ff_8h__incl.png
+share/doc/gnuradio-${PKGVERSION}/html/symbol__sync__ff_8h_source.html
 share/doc/gnuradio-${PKGVERSION}/html/syminfo__impl_8h.html
 share/doc/gnuradio-${PKGVERSION}/html/syminfo__impl_8h.js
 share/doc/gnuradio-${PKGVERSION}/html/syminfo__impl_8h__dep__incl.map
@@ -8531,6 +8613,11 @@ share/doc/gnuradio-${PKGVERSION}/html/tag__gate_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/tag__gate_8h__incl.md5
 share/doc/gnuradio-${PKGVERSION}/html/tag__gate_8h__incl.png
 share/doc/gnuradio-${PKGVERSION}/html/tag__gate_8h_source.html
+share/doc/gnuradio-${PKGVERSION}/html/tag__share_8h.html
+share/doc/gnuradio-${PKGVERSION}/html/tag__share_8h__incl.map
+share/doc/gnuradio-${PKGVERSION}/html/tag__share_8h__incl.md5
+share/doc/gnuradio-${PKGVERSION}/html/tag__share_8h__incl.png
+share/doc/gnuradio-${PKGVERSION}/html/tag__share_8h_source.html
 share/doc/gnuradio-${PKGVERSION}/html/tagged__decoder_8h.html
 share/doc/gnuradio-${PKGVERSION}/html/tagged__decoder_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/tagged__decoder_8h__incl.md5
@@ -8697,6 +8784,12 @@ share/doc/gnuradio-${PKGVERSION}/html/timerasterdisplayform_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/timerasterdisplayform_8h__incl.md5
 share/doc/gnuradio-${PKGVERSION}/html/timerasterdisplayform_8h__incl.png
 share/doc/gnuradio-${PKGVERSION}/html/timerasterdisplayform_8h_source.html
+share/doc/gnuradio-${PKGVERSION}/html/timing__error__detector__type_8h.html
+share/doc/gnuradio-${PKGVERSION}/html/timing__error__detector__type_8h.js
+share/doc/gnuradio-${PKGVERSION}/html/timing__error__detector__type_8h__dep__incl.map
+share/doc/gnuradio-${PKGVERSION}/html/timing__error__detector__type_8h__dep__incl.md5
+share/doc/gnuradio-${PKGVERSION}/html/timing__error__detector__type_8h__dep__incl.png
+share/doc/gnuradio-${PKGVERSION}/html/timing__error__detector__type_8h_source.html
 share/doc/gnuradio-${PKGVERSION}/html/top__block_8h.html
 share/doc/gnuradio-${PKGVERSION}/html/top__block_8h.js
 share/doc/gnuradio-${PKGVERSION}/html/top__block_8h__dep__incl.map
@@ -8844,6 +8937,7 @@ share/doc/gnuradio-${PKGVERSION}/html/unpacked__to__packed__ss_8h__incl.png
 share/doc/gnuradio-${PKGVERSION}/html/unpacked__to__packed__ss_8h_source.html
 share/doc/gnuradio-${PKGVERSION}/html/usage_8dox.html
 share/doc/gnuradio-${PKGVERSION}/html/usrp__block_8h.html
+share/doc/gnuradio-${PKGVERSION}/html/usrp__block_8h.js
 share/doc/gnuradio-${PKGVERSION}/html/usrp__block_8h__dep__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/usrp__block_8h__dep__incl.md5
 share/doc/gnuradio-${PKGVERSION}/html/usrp__block_8h__dep__incl.png
@@ -9073,12 +9167,19 @@ share/doc/gnuradio-${PKGVERSION}/html/xor__ss_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/xor__ss_8h__incl.md5
 share/doc/gnuradio-${PKGVERSION}/html/xor__ss_8h__incl.png
 share/doc/gnuradio-${PKGVERSION}/html/xor__ss_8h_source.html
+share/doc/gnuradio-${PKGVERSION}/html/xoroshiro128p_8h.html
+share/doc/gnuradio-${PKGVERSION}/html/xoroshiro128p_8h.js
+share/doc/gnuradio-${PKGVERSION}/html/xoroshiro128p_8h__incl.map
+share/doc/gnuradio-${PKGVERSION}/html/xoroshiro128p_8h__incl.md5
+share/doc/gnuradio-${PKGVERSION}/html/xoroshiro128p_8h__incl.png
+share/doc/gnuradio-${PKGVERSION}/html/xoroshiro128p_8h_source.html
 share/doc/gnuradio-${PKGVERSION}/html/zeromq_8dox.html
 share/doc/gnuradio-${PKGVERSION}/xml/ConstellationDisplayPlot_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/DisplayPlot_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/FrequencyDisplayPlot_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/GrAtscSegSymSyncImpl__export_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/HistogramDisplayPlot_8h.xml
+share/doc/gnuradio-${PKGVERSION}/xml/License.xml
 share/doc/gnuradio-${PKGVERSION}/xml/SpectrumGUIClass_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/TimeDomainDisplayPlot_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/TimeRasterDisplayPlot_8h.xml
@@ -9166,6 +9267,7 @@ share/doc/gnuradio-${PKGVERSION}/xml/build__guide_8dox.xml
 share/doc/gnuradio-${PKGVERSION}/xml/build_guide.xml
 share/doc/gnuradio-${PKGVERSION}/xml/burst__tagger_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/calc__metric_8h.xml
+share/doc/gnuradio-${PKGVERSION}/xml/catv__config_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/catv__frame__sync__enc__bb_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/catv__randomizer__bb_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/catv__reed__solomon__enc__bb_8h.xml
@@ -9419,6 +9521,7 @@ share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1blocks_1_1divide__ff.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1blocks_1_1divide__ii.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1blocks_1_1divide__ss.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1blocks_1_1endian__swap.xml
+share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1blocks_1_1exponentiate__const__cci.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1blocks_1_1file__descriptor__sink.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1blocks_1_1file__descriptor__source.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1blocks_1_1file__meta__sink.xml
@@ -9548,6 +9651,7 @@ share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1blocks_1_1sub__ii.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1blocks_1_1sub__ss.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1blocks_1_1tag__debug.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1blocks_1_1tag__gate.xml
+share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1blocks_1_1tag__share.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1blocks_1_1tagged__file__sink.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1blocks_1_1tagged__stream__align.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1blocks_1_1tagged__stream__multiply__length.xml
@@ -9633,6 +9737,7 @@ share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1digital_1_1correlate__access__co
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1digital_1_1correlate__access__code__bb__ts.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1digital_1_1correlate__access__code__ff__ts.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1digital_1_1correlate__access__code__tag__bb.xml
+share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1digital_1_1correlate__access__code__tag__ff.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1digital_1_1correlate__and__sync__cc.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1digital_1_1costas__loop__cc.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1digital_1_1cpmmod__bc.xml
@@ -9700,6 +9805,8 @@ share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1digital_1_1scrambler__bb.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1digital_1_1simple__correlator.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1digital_1_1simple__framer.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1digital_1_1snr__est__m2m4.xml
+share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1digital_1_1symbol__sync__cc.xml
+share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1digital_1_1symbol__sync__ff.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1dtv_1_1atsc__deinterleaver.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1dtv_1_1atsc__depad.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1dtv_1_1atsc__derandomizer.xml
@@ -9866,6 +9973,8 @@ share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1filter_1_1kernel_1_1pfb__arb__re
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1filter_1_1kernel_1_1polyphase__filterbank.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1filter_1_1mmse__fir__interpolator__cc.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1filter_1_1mmse__fir__interpolator__ff.xml
+share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1filter_1_1mmse__interp__differentiator__cc.xml
+share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1filter_1_1mmse__interp__differentiator__ff.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1filter_1_1pfb__arb__resampler__ccc.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1filter_1_1pfb__arb__resampler__ccf.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1filter_1_1pfb__arb__resampler__fff.xml
@@ -10090,6 +10199,7 @@ share/doc/gnuradio-${PKGVERSION}/xml/correlate__access__code__bb_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/correlate__access__code__bb__ts_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/correlate__access__code__ff__ts_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/correlate__access__code__tag__bb_8h.xml
+share/doc/gnuradio-${PKGVERSION}/xml/correlate__access__code__tag__ff_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/correlate__and__sync__cc_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/costas__loop__cc_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/count__bits_8h.xml
@@ -10305,6 +10415,7 @@ share/doc/gnuradio-${PKGVERSION}/xml/equalizer__lms__impl_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/equalizer__nop__impl_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/expj_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/exploring__gnuradio_8dox.xml
+share/doc/gnuradio-${PKGVERSION}/xml/exponentiate__const__cci_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/fading__model_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/fake__single__viterbi__impl_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/fastnoise__source__c_8h.xml
@@ -10526,12 +10637,14 @@ share/doc/gnuradio-${PKGVERSION}/xml/interleave_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/interleaved__char__to__complex_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/interleaved__short__to__complex_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/interleaver__fifo_8h.xml
+share/doc/gnuradio-${PKGVERSION}/xml/interp__differentiator__taps_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/interp__fir__filter__ccc_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/interp__fir__filter__ccf_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/interp__fir__filter__fcc_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/interp__fir__filter__fff_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/interp__fir__filter__fsf_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/interp__fir__filter__scc_8h.xml
+share/doc/gnuradio-${PKGVERSION}/xml/interpolating__resampler__type_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/interpolator__taps_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/io__signature_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/keep__m__in__n_8h.xml
@@ -10548,6 +10661,7 @@ share/doc/gnuradio-${PKGVERSION}/xml/lfsr_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/lfsr__15__1__0_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/lfsr__32k_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/lfsr__32k__source__s_8h.xml
+share/doc/gnuradio-${PKGVERSION}/xml/license_8dox.xml
 share/doc/gnuradio-${PKGVERSION}/xml/lms__dd__equalizer__cc_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/log2__const_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/logger_8dox.xml
@@ -10577,6 +10691,8 @@ share/doc/gnuradio-${PKGVERSION}/xml/min__ss_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/misc_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/mmse__fir__interpolator__cc_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/mmse__fir__interpolator__ff_8h.xml
+share/doc/gnuradio-${PKGVERSION}/xml/mmse__interp__differentiator__cc_8h.xml
+share/doc/gnuradio-${PKGVERSION}/xml/mmse__interp__differentiator__ff_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/modulate__vector_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/moving__average__cc_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/moving__average__ff_8h.xml
@@ -10613,7 +10729,7 @@ share/doc/gnuradio-${PKGVERSION}/xml/mute__cc_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/mute__ff_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/mute__ii_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/mute__ss_8h.xml
-share/doc/gnuradio-${PKGVERSION}/xml/namespace_0D236.xml
+share/doc/gnuradio-${PKGVERSION}/xml/namespace_0D237.xml
 share/doc/gnuradio-${PKGVERSION}/xml/namespaceapache.xml
 share/doc/gnuradio-${PKGVERSION}/xml/namespaceapache_1_1thrift.xml
 share/doc/gnuradio-${PKGVERSION}/xml/namespaceapache_1_1thrift_1_1server.xml
@@ -10978,6 +11094,8 @@ share/doc/gnuradio-${PKGVERSION}/xml/sub__ii_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/sub__msg__source_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/sub__source_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/sub__ss_8h.xml
+share/doc/gnuradio-${PKGVERSION}/xml/symbol__sync__cc_8h.xml
+share/doc/gnuradio-${PKGVERSION}/xml/symbol__sync__ff_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/syminfo__impl_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/sync__block_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/sync__decimator_8h.xml
@@ -10988,6 +11106,7 @@ share/doc/gnuradio-${PKGVERSION}/xml/sys__pri_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/tag__checker_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/tag__debug_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/tag__gate_8h.xml
+share/doc/gnuradio-${PKGVERSION}/xml/tag__share_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/tagged__decoder_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/tagged__encoder_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/tagged__file__sink_8h.xml
@@ -11017,6 +11136,7 @@ share/doc/gnuradio-${PKGVERSION}/xml/time__sink__f_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/timecontrolpanel_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/timedisplayform_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/timerasterdisplayform_8h.xml
+share/doc/gnuradio-${PKGVERSION}/xml/timing__error__detector__type_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/top__block_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/tpb__detail_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/tpc__common_8h.xml
@@ -11090,4 +11210,5 @@ share/doc/gnuradio-${PKGVERSION}/xml/wvps__ff_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/xor__bb_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/xor__ii_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/xor__ss_8h.xml
+share/doc/gnuradio-${PKGVERSION}/xml/xoroshiro128p_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/zeromq_8dox.xml
