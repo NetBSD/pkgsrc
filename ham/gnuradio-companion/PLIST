@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/01/13 22:03:35 mef Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/07/16 07:55:22 mef Exp $
 bin/gnuradio-companion
 ${PYSITELIB}/gnuradio/grc/__init__.py
 ${PYSITELIB}/gnuradio/grc/__init__.pyc
@@ -72,6 +72,9 @@ ${PYSITELIB}/gnuradio/grc/core/utils/expr_utils.pyo
 ${PYSITELIB}/gnuradio/grc/core/utils/extract_docs.py
 ${PYSITELIB}/gnuradio/grc/core/utils/extract_docs.pyc
 ${PYSITELIB}/gnuradio/grc/core/utils/extract_docs.pyo
+${PYSITELIB}/gnuradio/grc/core/utils/hide_bokeh_gui_options_if_not_installed.py
+${PYSITELIB}/gnuradio/grc/core/utils/hide_bokeh_gui_options_if_not_installed.pyc
+${PYSITELIB}/gnuradio/grc/core/utils/hide_bokeh_gui_options_if_not_installed.pyo
 ${PYSITELIB}/gnuradio/grc/core/utils/odict.py
 ${PYSITELIB}/gnuradio/grc/core/utils/odict.pyc
 ${PYSITELIB}/gnuradio/grc/core/utils/odict.pyo
@@ -159,6 +162,7 @@ ${PYSITELIB}/gnuradio/grc/gui/__init__.pyo
 ${PYSITELIB}/gnuradio/grc/gui/external_editor.py
 ${PYSITELIB}/gnuradio/grc/gui/external_editor.pyc
 ${PYSITELIB}/gnuradio/grc/gui/external_editor.pyo
+${PYSITELIB}/gnuradio/grc/gui/icon.png
 ${PYSITELIB}/gnuradio/grc/main.py
 ${PYSITELIB}/gnuradio/grc/main.pyc
 ${PYSITELIB}/gnuradio/grc/main.pyo

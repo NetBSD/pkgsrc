@@ -1,15 +1,15 @@
-$NetBSD: patch-gr-audio_lib_CMakeLists.txt,v 1.1 2014/10/17 09:51:56 mef Exp $
+$NetBSD: patch-gr-audio_lib_CMakeLists.txt,v 1.2 2018/07/16 07:55:22 mef Exp $
 
 Patch and SUBST to disable/enable ALSA depending on PKGOPTIONS.
 
---- gr-audio/lib/CMakeLists.txt.orig	2014-08-18 02:53:59.000000000 +0900
-+++ gr-audio/lib/CMakeLists.txt	2014-10-14 21:39:56.000000000 +0900
-@@ -44,7 +44,7 @@ endif(ENABLE_GR_CTRLPORT)
+--- gr-audio/lib/CMakeLists.txt.orig	2018-06-14 06:42:48.000000000 +0900
++++ gr-audio/lib/CMakeLists.txt	2018-07-08 07:53:35.184868747 +0900
+@@ -42,7 +42,7 @@ endif(ENABLE_GR_CTRLPORT)
  ########################################################################
  ## ALSA Support
  ########################################################################
 -find_package(ALSA)
 +@@ALSA@@find_package(ALSA)
  
- if(ALSA_FOUND)
+ if((ALSA_FOUND) AND NOT (CMAKE_SYSTEM_NAME STREQUAL "kFreeBSD") AND NOT (CMAKE_SYSTEM_NAME STREQUAL GNU))
  

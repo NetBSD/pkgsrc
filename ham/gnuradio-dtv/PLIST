@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/07/12 11:36:47 mef Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/07/16 07:55:22 mef Exp $
 include/gnuradio/dtv/api.h
 include/gnuradio/dtv/atsc_consts.h
 include/gnuradio/dtv/atsc_deinterleaver.h
@@ -16,6 +16,7 @@ include/gnuradio/dtv/atsc_rs_encoder.h
 include/gnuradio/dtv/atsc_sync.h
 include/gnuradio/dtv/atsc_trellis_encoder.h
 include/gnuradio/dtv/atsc_viterbi_decoder.h
+include/gnuradio/dtv/catv_config.h
 include/gnuradio/dtv/catv_frame_sync_enc_bb.h
 include/gnuradio/dtv/catv_randomizer_bb.h
 include/gnuradio/dtv/catv_reed_solomon_enc_bb.h
@@ -95,6 +96,35 @@ share/gnuradio/examples/dtv/uhd_rx_atsc.grc
 share/gnuradio/examples/dtv/vv003-cr23.grc
 share/gnuradio/examples/dtv/vv009-4kfft.grc
 share/gnuradio/examples/dtv/vv018-miso.grc
+share/gnuradio/examples/dtv/README.atsc
+share/gnuradio/examples/dtv/germany-g1.grc
+share/gnuradio/examples/dtv/germany-g10.grc
+share/gnuradio/examples/dtv/germany-g2.grc
+share/gnuradio/examples/dtv/germany-g3.grc
+share/gnuradio/examples/dtv/germany-g4.grc
+share/gnuradio/examples/dtv/germany-g5.grc
+share/gnuradio/examples/dtv/germany-g6.grc
+share/gnuradio/examples/dtv/germany-g7.grc
+share/gnuradio/examples/dtv/germany-g8.grc
+share/gnuradio/examples/dtv/germany-g9.grc
+share/gnuradio/examples/dtv/uhd_atsc_tx.grc
+share/gnuradio/examples/dtv/vv001-cr35.grc
+share/gnuradio/examples/dtv/vv004-8kfft.grc
+share/gnuradio/examples/dtv/vv005-8kfft.grc
+share/gnuradio/examples/dtv/vv007-16kfft.grc
+share/gnuradio/examples/dtv/vv008-16kfft.grc
+share/gnuradio/examples/dtv/vv010-2kfft.grc
+share/gnuradio/examples/dtv/vv011-1kfft.grc
+share/gnuradio/examples/dtv/vv012-64qam45.grc
+share/gnuradio/examples/dtv/vv013-64qam56.grc
+share/gnuradio/examples/dtv/vv014-64qam34.grc
+share/gnuradio/examples/dtv/vv015-8kfft.grc
+share/gnuradio/examples/dtv/vv016-256qam34.grc
+share/gnuradio/examples/dtv/vv017-paprtr.grc
+share/gnuradio/examples/dtv/vv019-norot.grc
+share/gnuradio/examples/dtv/vv034-dtg016.grc
+share/gnuradio/examples/dtv/vv035-dtg052.grc
+share/gnuradio/examples/dtv/vv036-dtg091.grc
 share/gnuradio/grc/blocks/dtv_atsc_deinterleaver.xml
 share/gnuradio/grc/blocks/dtv_atsc_depad.xml
 share/gnuradio/grc/blocks/dtv_atsc_derandomizer.xml
