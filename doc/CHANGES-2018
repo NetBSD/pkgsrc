@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3194 2018/07/15 23:38:07 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.3195 2018/07/16 00:58:03 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4589,3 +4589,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/surfraw to 2.3.0nb1 [wiz 2018-07-15]
 	Added lang/R-codetools version 0.2.15 [minskim 2018-07-15]
 	Updated print/qpdf to 8.1.0 [ryoon 2018-07-15]
+	Updated mail/p5-Mail-Mbox-MessageParser to 1.5111 [wen 2018-07-16]
