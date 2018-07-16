@@ -1,12 +1,7 @@
-# $NetBSD: Makefile.php,v 1.4 2018/02/05 08:51:25 jdolecek Exp $
+# $NetBSD: Makefile.php,v 1.5 2018/07/16 10:58:50 maya Exp $
 # used by lang/php72/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
-
-# PHP bug #74526 - segfaults on build with GCC 4.8.5 i386
-.if ${MACHINE_ARCH} == "i386"
-GCC_REQD+=              4.9
-.endif
 
 # the binary actually needs full dep on PCRE
 BUILDLINK_DEPMETHOD.pcre=	full
