@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.93 2018/06/14 17:41:58 jperkin Exp $
+$NetBSD: distinfo,v 1.94 2018/07/16 01:15:56 ryoon Exp $
 
-SHA1 (gimp-2.10.2.tar.bz2) = 97aae35f11675af7a055c8cb2073db72d88b7b88
-RMD160 (gimp-2.10.2.tar.bz2) = b095eedc575120714aeb28f5453b75cdacb6cd77
-SHA512 (gimp-2.10.2.tar.bz2) = 6e351294e018a9f879993700355bdf5f10bccc6862604ae1950c4d235d32cdfcd6a0195b37377819adeef53ab3d24f32ed1de60cba6bafe58608ed0906a6fbcf
-Size (gimp-2.10.2.tar.bz2) = 30863771 bytes
+SHA1 (gimp-2.10.4.tar.bz2) = 8ab998e11bb0b9eaafa0c92a35f29af30e63e86e
+RMD160 (gimp-2.10.4.tar.bz2) = 40120b1488579dc1fc54402ac4947c9ec2ace70b
+SHA512 (gimp-2.10.4.tar.bz2) = 9d0cc8d97b82423687b579907edaab6044f19a8207426edf4f7428de23fa82481112bb0a53b06bb7037b68d92336517b1eddef4600519707e7feedb64e5414f7
+Size (gimp-2.10.4.tar.bz2) = 31064613 bytes
 SHA1 (patch-aa) = 403c46d7070de208769e99e512922ba3a5b7129b
 SHA1 (patch-ab) = 37820b9e03702248294f0030ffbd09e7f14f3dcb
 SHA1 (patch-app_core_gimpbrush-transform.cc) = 2524948ed5b04ab2b50f169f5dfd5eba4aac4395
