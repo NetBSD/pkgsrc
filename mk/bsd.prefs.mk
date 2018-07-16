@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.397 2018/05/23 11:26:54 maya Exp $
+# $NetBSD: bsd.prefs.mk,v 1.398 2018/07/16 19:53:53 maya Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -817,8 +817,7 @@ _SYS_VARS.dirs=		WRKDIR DESTDIR PKG_SYSCONFBASEDIR
 # Keywords: BROKEN_ON_PLATFORM 64bit
 #
 LP64PLATFORMS=		*-*-aarch64 *-*-aarch64eb *-*-alpha *-*-ia64 \
-			*-*-mips64eb *-*-mips64el *-*-powerpc64 *-*-riscv64 \
-			*-*-sparc64 *-*-x86_64
+			*-*-powerpc64 *-*-riscv64 *-*-sparc64 *-*-x86_64
 
 # Lists of big-endian and little-endian platforms, to be used with
 # BROKEN_ON_PLATFORM.
