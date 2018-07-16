@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3198 2018/07/16 01:11:08 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.3199 2018/07/16 01:16:42 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4593,3 +4593,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/gnupg2 to 2.2.9 [ryoon 2018-07-16]
 	Updated graphics/babl to 0.1.52 [ryoon 2018-07-16]
 	Updated graphics/gegl to 0.4.4 [ryoon 2018-07-16]
+	Updated graphics/gimp to 2.10.4 [ryoon 2018-07-16]
