@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.64 2018/06/15 20:46:01 tez Exp $
+$NetBSD: distinfo,v 1.65 2018/07/16 10:26:40 jperkin Exp $
 
 SHA1 (krb5-1.16.1.tar.gz) = 8353f2d900a7d52499c7c2605d5e295f71dd5e67
 RMD160 (krb5-1.16.1.tar.gz) = 26a423032841a67974d377ad65d7361b51aa7058
@@ -21,11 +21,13 @@ SHA1 (patch-include_osconf.hin) = d31a8164f417bc31a787c8e16d1bd24f27b7140d
 SHA1 (patch-kadmin_cli_ss_wrapper.c) = e32e6180f8d508cb2eb18489ce2fef0a1ad0f51d
 SHA1 (patch-lib_apputils_Makefile.in) = 085004041a2bb8c4bb3074c2e71e71f22f4f06d7
 SHA1 (patch-lib_apputils_udppktinfo.c) = 47ac861181faebfe5f95c28be329ce917ece872c
+SHA1 (patch-lib_kdb_kdb__log.c) = 87052d7940db0f5a41ffce250c19c0b338b37d60
 SHA1 (patch-lib_krb5_asn.1_asn1buf.h) = 74d7d172ec4c8d7f68a093befc6b40c99b119e37
 SHA1 (patch-lib_krb5_ccache_Makefile.in) = 330ae21ec3b290ae16478c2c49a138acac5bf2fd
 SHA1 (patch-plugins_kdb_db2_Makefile.in) = f374fc5915b735075fbb751ef736f4ce54abc289
 SHA1 (patch-plugins_kdb_db2_libdb2_Makefile.in) = b4b7e8e4192b5e5318f1e42c49315789619f3ae9
 SHA1 (patch-plugins_preauth_otp_Makefile.in) = 8c779e3b37cab4138f300f4a09325387092c79f8
 SHA1 (patch-plugins_preauth_pkinit_Makefile.in) = c778366d5bd1cae85424643a582013101fc9632d
+SHA1 (patch-slave_kproplog.c) = a238c8740aeb5e4068775148f03a8692bd514423
 SHA1 (patch-util_k5ev_verto-k5ev.c) = 8f074ddccbaaa03576f0302437aed3aaad1b738d
 SHA1 (patch-util_ss_Makefile.in) = 5ca0bf7295a8f4c1d8e59097863940f88d224ee7
