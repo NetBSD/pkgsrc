@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2018/05/27 12:53:43 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2018/07/16 01:07:36 ryoon Exp $
 
-DISTNAME=	babl-0.1.50
+DISTNAME=	babl-0.1.52
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.gimp.org/pub/babl/0.1/
 EXTRACT_SUFX=	.tar.bz2
