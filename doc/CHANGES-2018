@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3210 2018/07/16 19:57:54 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3211 2018/07/16 20:50:52 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4607,3 +4607,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/e2guardian to 5.1.1 [sborrill 2018-07-16]
 	Updated chat/py-hangups to 0.4.5 [leot 2018-07-16]
 	Updated mail/neomutt to 20180716 [wiz 2018-07-16]
+	Removed comms/asterisk18 [jnemeth 2018-07-16]
