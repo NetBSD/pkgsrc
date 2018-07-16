@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3201 2018/07/16 01:59:29 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.3202 2018/07/16 02:03:38 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4596,3 +4596,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/gimp to 2.10.4 [ryoon 2018-07-16]
 	Updated databases/p5-SQL-Abstract to 1.86 [wen 2018-07-16]
 	Updated lang/rust to 1.27.1 [ryoon 2018-07-16]
+	Updated www/firefox to 61.0.1nb2 [ryoon 2018-07-16]
