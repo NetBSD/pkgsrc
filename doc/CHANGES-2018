@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3200 2018/07/16 01:23:35 wen Exp $
+$NetBSD: CHANGES-2018,v 1.3201 2018/07/16 01:59:29 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4595,3 +4595,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/gegl to 0.4.4 [ryoon 2018-07-16]
 	Updated graphics/gimp to 2.10.4 [ryoon 2018-07-16]
 	Updated databases/p5-SQL-Abstract to 1.86 [wen 2018-07-16]
+	Updated lang/rust to 1.27.1 [ryoon 2018-07-16]
