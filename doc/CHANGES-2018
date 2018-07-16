@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3209 2018/07/16 17:43:39 leot Exp $
+$NetBSD: CHANGES-2018,v 1.3210 2018/07/16 19:57:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4606,3 +4606,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated cross/avr-binutils to 2.30 [mef 2018-07-16]
 	Updated www/e2guardian to 5.1.1 [sborrill 2018-07-16]
 	Updated chat/py-hangups to 0.4.5 [leot 2018-07-16]
+	Updated mail/neomutt to 20180716 [wiz 2018-07-16]
