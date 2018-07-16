@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3211 2018/07/16 20:50:52 jnemeth Exp $
+$NetBSD: CHANGES-2018,v 1.3212 2018/07/16 21:53:22 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4608,3 +4608,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated chat/py-hangups to 0.4.5 [leot 2018-07-16]
 	Updated mail/neomutt to 20180716 [wiz 2018-07-16]
 	Removed comms/asterisk18 [jnemeth 2018-07-16]
+	Added comms/asterisk15 version 15.4.1 [joerg 2018-07-16]
