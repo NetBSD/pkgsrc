@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2018/02/15 07:45:42 adam Exp $
+# $NetBSD: Makefile,v 1.4 2018/07/16 17:43:24 leot Exp $
 
-DISTNAME=	hangups-0.4.4
+DISTNAME=	hangups-0.4.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hangups/}
@@ -13,6 +13,7 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-MechanicalSoup>=0.6.0:../../www/py-MechanicalSoup
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=1.3:../../www/py-aiohttp
 DEPENDS+=	${PYPKGPREFIX}-appdirs>=1.4.0:../../devel/py-appdirs
+DEPENDS+=	${PYPKGPREFIX}-async-timeout>=2:../../devel/py-async-timeout
 DEPENDS+=	${PYPKGPREFIX}-configargparse>=0.11.0:../../devel/py-configargparse
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=3.1.0:../../devel/py-protobuf
 DEPENDS+=	${PYPKGPREFIX}-readlike>=0.1.2:../../devel/py-readlike
