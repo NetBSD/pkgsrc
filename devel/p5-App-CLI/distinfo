@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2017/11/08 16:26:24 wiz Exp $
+$NetBSD: distinfo,v 1.7 2018/07/16 11:03:57 wen Exp $
 
-SHA1 (App-CLI-0.49.tar.gz) = 2022262eadfbfe35eddb9d46d1c94ffef2eca4bb
-RMD160 (App-CLI-0.49.tar.gz) = 8ba5d3150b2ed7c198ff470f7cc71b23068ae766
-SHA512 (App-CLI-0.49.tar.gz) = ce158ae2381cd9a7fe8cef20d6be205251efb02b24be7bea095e6c87ae26c96f81eef100a8c5ed237c3d97a166997523e89a5377bc5a85573473c2d6b06345d2
-Size (App-CLI-0.49.tar.gz) = 15428 bytes
+SHA1 (App-CLI-0.50.tar.gz) = 95884dff6db1233ad042bc023219fc76a39e3bfb
+RMD160 (App-CLI-0.50.tar.gz) = c4f26851c1236cee4dc10e39870869a6ed907e9f
+SHA512 (App-CLI-0.50.tar.gz) = 177e1a7b4724b7369df28a235c268ce5ac5103b3973995f68afd20ac6b2d37640049837624f472b29ea2eed9ec736bf25ae97af34a9dcd28b90b293e0139a572
+Size (App-CLI-0.50.tar.gz) = 15624 bytes
