@@ -5,4 +5,7 @@ comments in the configuration and list files themselves.
 
 e2guardian is a fork of DansGuardian and the maintainers fully acknowledge
 the work carried out by and the copyright of Daniel Baron and other
-contributors to the Dansguardian project.
+contributors to the DansGuardian project.
+
+Please note that version 5 is not backward compatible with v4 (and earlier)
+configuration files.
