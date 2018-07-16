@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.60 2018/06/04 05:32:13 dbj Exp $
+@comment $NetBSD: PLIST,v 1.61 2018/07/16 01:15:56 ryoon Exp $
 bin/gimp
 bin/gimp-2.10
 bin/gimp-console
 bin/gimp-console-2.10
 bin/gimptool-2.0
+bin/gimp-test-clipboard-2.0
 include/gimp-2.0/libgimp/gimp.h
 include/gimp-2.0/libgimp/gimp_pdb.h
 include/gimp-2.0/libgimp/gimp_pdb_headers.h
@@ -177,6 +178,7 @@ include/gimp-2.0/libgimpthumb/gimpthumb.h
 include/gimp-2.0/libgimpthumb/gimpthumbnail.h
 include/gimp-2.0/libgimpwidgets/gimp3migration.h
 include/gimp-2.0/libgimpwidgets/gimpbrowser.h
+include/gimp-2.0/libgimpwidgets/gimpbusybox.h
 include/gimp-2.0/libgimpwidgets/gimpbutton.h
 include/gimp-2.0/libgimpwidgets/gimpcairo-utils.h
 include/gimp-2.0/libgimpwidgets/gimpcellrenderercolor.h
@@ -252,6 +254,7 @@ lib/gimp/2.0/plug-ins/animation-play
 lib/gimp/2.0/plug-ins/blinds
 lib/gimp/2.0/plug-ins/blur
 lib/gimp/2.0/plug-ins/border-average
+lib/gimp/2.0/plug-ins/busy-dialog
 lib/gimp/2.0/plug-ins/cartoon
 lib/gimp/2.0/plug-ins/checkerboard
 lib/gimp/2.0/plug-ins/cml-explorer
@@ -3288,6 +3291,8 @@ share/gtk-doc/html/libgimp/GimpProgressBar.html
 share/gtk-doc/html/libgimp/GimpSelectButton.html
 share/gtk-doc/html/libgimp/GimpZoomPreview.html
 share/gtk-doc/html/libgimp/api-index-2-10.html
+share/gtk-doc/html/libgimp/api-index-2-10-2.html
+share/gtk-doc/html/libgimp/api-index-2-10-4.html
 share/gtk-doc/html/libgimp/api-index-2-2.html
 share/gtk-doc/html/libgimp/api-index-2-4.html
 share/gtk-doc/html/libgimp/api-index-2-6.html
@@ -3578,6 +3583,7 @@ share/gtk-doc/html/libgimpwidgets/GimpUnitMenu.html
 share/gtk-doc/html/libgimpwidgets/GimpUnitStore.html
 share/gtk-doc/html/libgimpwidgets/GimpZoomModel.html
 share/gtk-doc/html/libgimpwidgets/api-index-2-10.html
+share/gtk-doc/html/libgimpwidgets/api-index-2-10-4.html
 share/gtk-doc/html/libgimpwidgets/api-index-2-2.html
 share/gtk-doc/html/libgimpwidgets/api-index-2-4.html
 share/gtk-doc/html/libgimpwidgets/api-index-2-6.html
