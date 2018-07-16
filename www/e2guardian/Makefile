@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2017/05/12 11:42:33 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2018/07/16 14:12:34 sborrill Exp $
 
-DISTNAME=	e2guardian-3.5.1
-PKGREVISION=	1
+DISTNAME=	e2guardian-5.1.1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=e2guardian/}
 GITHUB_PROJECT=	e2guardian
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	V${PKGVERSION_NOREV}
 
 MAINTAINER=	prlw1@cam.ac.uk
 HOMEPAGE=	http://www.e2guardian.org/
@@ -50,6 +49,8 @@ CONFIGURE_ARGS+=	--with-logdir=${VARBASE}/log/${E2G_LOG}
 CONFIGURE_ARGS+=	--enable-ntlm
 
 LIBS.SunOS+=		-liconv
+
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
 .include "options.mk"
 

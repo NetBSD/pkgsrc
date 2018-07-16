@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2017/03/15 13:42:03 sborrill Exp $
+# $NetBSD: options.mk,v 1.3 2018/07/16 14:12:34 sborrill Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.e2guardian
-PKG_SUPPORTED_OPTIONS=	debug email commandline clamd ssl
+PKG_SUPPORTED_OPTIONS=	debug email commandline clamd ssl icap
 PKG_SUGGESTED_OPTIONS=	email ssl
 
 .include "../../mk/bsd.options.mk"
@@ -15,6 +15,16 @@ CONFIGURE_ARGS+=	--with-dgdebug
 ##
 .if !empty(PKG_OPTIONS:Memail)
 CONFIGURE_ARGS+=	--enable-email
+.endif
+
+##
+## Enable support for ICAP AV server content scanner
+##
+PLIST_VARS+=		icap
+.if !empty(PKG_OPTIONS:Micap)
+CONFIGURE_ARGS+=	--enable-icap
+PLIST.icap=		yes
+EGFILES_EXTRA+=		contentscanners/icap.conf
 .endif
 
 ##
