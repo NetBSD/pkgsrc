@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2018/05/27 13:16:47 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2018/07/16 01:10:30 ryoon Exp $
 
-DISTNAME=	gegl-0.4.2
+DISTNAME=	gegl-0.4.4
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.gimp.org/pub/gegl/0.4/
 EXTRACT_SUFX=	.tar.bz2
@@ -30,6 +30,9 @@ PLIST.v4l=	yes
 .endif
 
 .include "options.mk"
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} gcut gegl-gcut
 
 BUILDLINK_API_DEPENDS.babl+=	babl>=0.1.48
 .include "../../graphics/babl/buildlink3.mk"
