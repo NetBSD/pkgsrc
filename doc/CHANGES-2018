@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3207 2018/07/16 12:57:02 mef Exp $
+$NetBSD: CHANGES-2018,v 1.3208 2018/07/16 14:13:54 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4604,3 +4604,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/php72 to 7.2.7nb1 [maya 2018-07-16]
 	Updated devel/p5-App-CLI to 0.50 [wen 2018-07-16]
 	Updated cross/avr-binutils to 2.30 [mef 2018-07-16]
+	Updated www/e2guardian to 5.1.1 [sborrill 2018-07-16]
