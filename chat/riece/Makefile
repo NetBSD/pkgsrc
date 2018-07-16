@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2018/01/13 23:18:26 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2018/07/16 05:56:10 mef Exp $
 #
 
 DISTNAME=	riece-9.0.0
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat japanese
 MASTER_SITES=	http://download.savannah.gnu.org/releases/riece/
 LICENSE=	gnu-gpl-v3
@@ -16,7 +16,7 @@ INSTALLATION_DIRS=	${EMACS_LISPPREFIX:C|^${PREFIX}/||}/riece \
 			${EMACS_INFOPREFIX:C|^${PREFIX}/||}
 
 EMACS_VERSIONS_ACCEPTED= \
-		emacs25 emacs25nox emacs21 emacs21nox \
+		emacs27 emacs26 emacs26nox emacs25 emacs25nox emacs21 emacs21nox \
 		xemacs215 xemacs215nox xemacs214 xemacs214nox
 EMACS_MODULES=	base
 
