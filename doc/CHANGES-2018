@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3206 2018/07/16 11:05:46 wen Exp $
+$NetBSD: CHANGES-2018,v 1.3207 2018/07/16 12:57:02 mef Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4603,3 +4603,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/php71 to 7.1.19nb1 [maya 2018-07-16]
 	Updated lang/php72 to 7.2.7nb1 [maya 2018-07-16]
 	Updated devel/p5-App-CLI to 0.50 [wen 2018-07-16]
+	Updated cross/avr-binutils to 2.30 [mef 2018-07-16]
