@@ -441,9 +441,6 @@ REPLACE_PYTHON = \
 	gr-blocks/python/blocks/qa_plateau_detector_fb.py \
 	gr-blocks/python/blocks/parse_file_metadata.py \
 	gr-blocks/examples/tags/test_file_tags.py \
-	gr-trellis/doc/make_numbered_listing.py \
-	gr-trellis/doc/test_tcm.py \
-	gr-trellis/doc/test_viterbi_equalization1.py \
 	gr-trellis/python/trellis/qa_trellis.py \
 	gr-trellis/python/trellis/__init__.py \
 	gr-trellis/examples/python/test_cpm.py \
