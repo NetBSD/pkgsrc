@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.18 2018/04/30 05:06:00 ryoon Exp $
-bin/gcut
+@comment $NetBSD: PLIST,v 1.19 2018/07/16 01:10:30 ryoon Exp $
 bin/gegl
+bin/gegl-gcut
 bin/gegl-imgcmp
 include/gegl-0.4/gegl-apply.h
 include/gegl-0.4/gegl-audio-fragment.h
