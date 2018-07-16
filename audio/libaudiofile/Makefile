@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2017/11/11 13:13:15 maya Exp $
+# $NetBSD: Makefile,v 1.64 2018/07/16 21:22:32 maya Exp $
 
 DISTNAME=	audiofile-0.3.6
 PKGNAME=	lib${DISTNAME}
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Sound library for SGI audio file
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c99 c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	audiofile.pc.in
