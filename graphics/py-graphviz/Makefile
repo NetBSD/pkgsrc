@@ -1,18 +1,25 @@
-# $NetBSD: Makefile,v 1.3 2018/03/12 11:16:48 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2018/07/17 13:05:47 adam Exp $
 
-DISTNAME=	pygraphviz-1.3.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	1
-CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygraphviz/}
+DISTNAME=	graphviz-0.8.4
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	graphics python
+MASTER_SITES=	${MASTER_SITE_PYPI:=g/graphviz/}
+EXTRACT_SUFX=	.zip
 
-MAINTAINER=	helgoman@users.sourceforge.net
-HOMEPAGE=	http://networkx.lanl.gov/pygraphviz/index.html
-COMMENT=	Python interface to the Graphviz package
-LICENSE=	original-bsd
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/xflr6/graphviz
+COMMENT=	Create and render graph descriptions in DOT language
+LICENSE=	mit
 
-USE_TOOLS+=	pkg-config
+DEPENDS+=	graphviz-[0-9]*:../../graphics/graphviz
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.4:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=1.8:../../devel/py-test-mock
 
-.include "../../graphics/graphviz/buildlink3.mk"
+USE_LANGUAGES=	# none
+
+do-test:
+	cd ${WRKSRC}/tests && pytest-${PYVERSSUFFIX}
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
