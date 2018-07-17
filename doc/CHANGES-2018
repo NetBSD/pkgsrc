@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3215 2018/07/17 03:55:17 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.3216 2018/07/17 06:14:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4612,3 +4612,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated comms/asterisk to 11.25.3 [jnemeth 2018-07-16]
 	Updated devel/go-i18n to 1.10.0 [minskim 2018-07-17]
 	Added textproc/go-tablewriter version 0.0.20180506 [minskim 2018-07-17]
+	Updated net/tor to 0.3.3.9 [wiz 2018-07-17]
