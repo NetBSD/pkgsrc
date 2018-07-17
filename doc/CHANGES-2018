@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3216 2018/07/17 06:14:14 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3217 2018/07/17 06:41:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4613,3 +4613,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/go-i18n to 1.10.0 [minskim 2018-07-17]
 	Added textproc/go-tablewriter version 0.0.20180506 [minskim 2018-07-17]
 	Updated net/tor to 0.3.3.9 [wiz 2018-07-17]
+	Updated devel/py-automat to 0.7.0 [adam 2018-07-17]
+	Updated security/libgpg-error to 1.32 [adam 2018-07-17]
