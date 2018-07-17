@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2018/06/07 06:33:54 adam Exp $
+# $NetBSD: Makefile,v 1.18 2018/07/17 10:05:46 adam Exp $
 
-DISTNAME=	astroid-1.6.5
+DISTNAME=	astroid-2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/astroid/}
@@ -13,15 +13,20 @@ LICENSE=	gnu-lgpl-v3
 DEPENDS+=	${PYPKGPREFIX}-lazy-object-proxy-[0-9]*:../../devel/py-lazy-object-proxy
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-wrapt-[0-9]*:../../devel/py-wrapt
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 .include "../../lang/python/pyversion.mk"
-.if "${PYPKGPREFIX}" == "py27"
-DEPENDS+=	${PYPKGPREFIX}-backports.functools_lru_cache-[0-9]*:../../devel/py-backports.functools_lru_cache
-DEPENDS+=	${PYPKGPREFIX}-enum34>-1.1.3:../../devel/py-enum34
-DEPENDS+=	${PYPKGPREFIX}-singledispatch-[0-9]*:../../devel/py-singledispatch
+.if !empty(_PYTHON_VERSION:M34)
+DEPENDS+=	${PYPKGPREFIX}-typing-[0-9]*:../../devel/py-typing
+.endif
+.if !empty(_PYTHON_VERSION:M3[456])
+DEPENDS+=	${PYPKGPREFIX}-typed-ast-[0-9]*:../../devel/py-typed-ast
 .endif
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
