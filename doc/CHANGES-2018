@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3217 2018/07/17 06:41:51 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3218 2018/07/17 06:54:37 tron Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4615,3 +4615,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/tor to 0.3.3.9 [wiz 2018-07-17]
 	Updated devel/py-automat to 0.7.0 [adam 2018-07-17]
 	Updated security/libgpg-error to 1.32 [adam 2018-07-17]
+	Updated mail/mutt to 1.10.1 [tron 2018-07-17]
