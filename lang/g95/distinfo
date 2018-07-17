@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2017/10/27 20:57:16 khorben Exp $
+$NetBSD: distinfo,v 1.33 2018/07/17 21:38:39 joerg Exp $
 
 SHA1 (g95_source.tgz) = b5e503fd6459b65cbda73190685f9490230d9cff
 RMD160 (g95_source.tgz) = 98d03e9a1835f4b3553a72a798bdf1d90a757176
@@ -8,7 +8,7 @@ SHA1 (gcc-core-4.1.2.tar.bz2) = d6875295f6df1bec4a6f4ab8f0da54bfb8d97306
 RMD160 (gcc-core-4.1.2.tar.bz2) = 612cbd5b795f7095fb3f565e6a8eaaee82c472c5
 SHA512 (gcc-core-4.1.2.tar.bz2) = 002a2025f809781e8d427c00dfe884429ae094ad417edc3393f5bae249ae6049ea0c27e43caf51f9f15525bd35e24ad2c993c57f191b9196fdb68fd20e503f6e
 Size (gcc-core-4.1.2.tar.bz2) = 17485561 bytes
-SHA1 (patch-ab) = a8ec156302d30374b05d520bfe0141ab9d97e1ef
+SHA1 (patch-ab) = 254dd8c3402c07bb4919c73d72712839f348824e
 SHA1 (patch-configure) = 48450808201d4ea5ddb993627c4efeaf43d53bd2
 SHA1 (patch-g95spec.c) = d6f434e715835cd39511c45ed18632c8401b78a2
 SHA1 (patch-gcc_Makefile.in) = cc5cc142a85612ebf2d38513e4b05db0ae795268
@@ -22,6 +22,7 @@ SHA1 (patch-gcc_config_mips_netbsd.h) = 8888ecaa470e38a82ec56e332658fd32c9e5e86c
 SHA1 (patch-gcc_config_rs600_netbsd.h) = 2e568e48f84024b7182762107c4ee76ee87fe43c
 SHA1 (patch-gcc_config_t-dragonfly) = dd8d5919af737dfb9e3c18be9a41b4e2c6f31155
 SHA1 (patch-gcc_config_t-dragonfly-thread) = ebdb58dacf0dc5d0bf2f1f1707a7c6ab29ee308c
+SHA1 (patch-gcc_gcc.c) = 035bfdacd9fbe9b2775df74601a70aa249163975
 SHA1 (patch-gcc_ginclude_stddef.h) = db0fade3d40f2354b1dd418c25e7254dc97e5bcf
 SHA1 (patch-gcc_toplev.h) = 6a51de1296e3a4711ce8fd37b1c95fe68b1e2c4e
 SHA1 (patch-libf95.a-0.92_io_atof.c) = 0c3a209815be3a97d984cb9a15ee888f93110d1d
