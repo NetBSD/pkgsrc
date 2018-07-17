@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3221 2018/07/17 12:35:23 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.3222 2018/07/17 13:07:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4620,3 +4620,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-astroid to 2.0 [adam 2018-07-17]
 	Updated devel/py-pylint to 2.0.0 [adam 2018-07-17]
 	Updated graphics/mypaint to 1.2.1 [ryoon 2018-07-17]
+	Renamed graphics/py-graphviz to graphics/py-pygraphviz [adam 2018-07-17]
+	Added graphics/py-graphviz version 0.8.4 [adam 2018-07-17]
