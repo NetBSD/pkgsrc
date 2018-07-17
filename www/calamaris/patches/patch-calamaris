@@ -1,0 +1,22 @@
+$NetBSD: patch-calamaris,v 1.1 2018/07/17 19:17:17 bsiegert Exp $
+
+--- calamaris.orig	2004-06-06 16:26:14.000000000 +0000
++++ calamaris
+@@ -1341,7 +1341,7 @@ Thank You.\n\n";
+   $time_end = $log_date if $log_date > $time_end;';
+   if ( defined $opt_p ) {
+     $loop .= '
+-  if ( defined(@peak_all) ) {
++  if ( @peak_all ) {
+     if ( $log_date < $peak_all[$#peak_all] ) {
+       $peak_warn =
+ 	\'Peak values are most likely wrong due to unsorted input!\';
+@@ -2606,7 +2606,7 @@ if ($opt_t) {
+ 	    100, 100 * $tcp_hit / $tcp );
+   }
+   outstop(10);
+-  if ( defined(%tcp_content) ) {
++  if ( %tcp_content ) {
+     outstart(11);
+     if ( $tcp == 0 ) {
+       outline( 11, 'no matching requests' );
