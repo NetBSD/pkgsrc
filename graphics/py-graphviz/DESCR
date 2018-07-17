@@ -1,6 +1,7 @@
-PyGraphviz is a Python interface to the Graphviz graph layout
-and visualization package. With PyGraphviz you can create,
-edit, read, write, and draw graphs using Python to access the
-Graphviz graph data structure and layout algorithms. PyGraphviz
-is independent from NetworkX but provides a similar programming
-interface.
+This package facilitates the creation and rendering of graph descriptions in
+the DOT language of the Graphviz graph drawing software (master repo) from
+Python.
+
+Create a graph object, assemble the graph by adding nodes and edges, and
+retrieve its DOT source code string. Save the source code to a file and render
+it with the Graphviz installation of your system.
