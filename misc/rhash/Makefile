@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/03/20 12:41:53 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2018/07/17 10:56:24 jperkin Exp $
 
 DISTNAME=	rhash-1.3.6
 PKGREVISION=	1
@@ -14,6 +14,7 @@ LICENSE=	mit
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/rh/RH/}
 HAS_CONFIGURE=		yes
+USE_GCC_RUNTIME=	yes
 CONFIGURE_ARGS+=	--disable-symlinks
 CONFIGURE_ARGS+=	--disable-openssl-runtime
 CONFIGURE_ARGS+=	--enable-lib-shared

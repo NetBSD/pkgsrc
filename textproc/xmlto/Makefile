@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2018/01/21 18:45:27 roy Exp $
+# $NetBSD: Makefile,v 1.33 2018/07/17 10:56:24 jperkin Exp $
 
 DISTNAME=	xmlto-0.0.28
 PKGREVISION=	2
@@ -15,6 +15,7 @@ DEPENDS+=		getopt-[0-9]*:../../misc/getopt
 DEPENDS+=		docbook-xsl>=1.67.0nb1:../../textproc/docbook-xsl
 DEPENDS+=		libxml2>=2.6.2:../../textproc/libxml2
 
+USE_GCC_RUNTIME=	yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		mktemp
 GNU_CONFIGURE=		yes
