@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2018/07/17 13:07:50 ryoon Exp $
+
+SHA1 (grafx2-2.5.1960-src.tgz) = eb9b59eae66fce644de36b4819b27ca02501b929
+RMD160 (grafx2-2.5.1960-src.tgz) = 2e7eccdfbe2d5f53c16b5588422c189f689d1d43
+SHA512 (grafx2-2.5.1960-src.tgz) = 42aeebd52c6a643d422fb906b396c0325d0d4adbc1b6eda1264c1c35e50d57ae242d82fee267e46331d1c6ecf520ac7a9834d30454bfcbdfb322c37f131e4fb2
+Size (grafx2-2.5.1960-src.tgz) = 888914 bytes
+SHA1 (patch-Makefile) = dde5929e5c4979fd427a0029015faaf403839852
+SHA1 (patch-main.c) = 32ab12bd3a3b39cc89004afde815dbd4fddc0802
+SHA1 (patch-misc.c) = 28373720742bf6a0327f4f1b3410350c014a5c33
