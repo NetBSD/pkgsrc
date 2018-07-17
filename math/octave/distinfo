@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.52 2017/08/01 11:06:18 maya Exp $
+$NetBSD: distinfo,v 1.53 2018/07/17 09:55:36 maya Exp $
 
 SHA1 (octave-4.2.0.tar.gz) = 9fac578c08a7efabd79ccc38bc196b9627e3212f
 RMD160 (octave-4.2.0.tar.gz) = 07ff9bae3a0128c93f9113ebf952dea129b58284
@@ -8,6 +8,7 @@ SHA1 (patch-configure) = fe31eb2e1b0f15ff77838c2514d4a434f4e59360
 SHA1 (patch-configure.ac) = 0dba5f4b862e9862687021f985109451ea2672e7
 SHA1 (patch-fseeko-fpos_t.c) = b38e7a38be2e0b323cd7f168f1d22d3df998691c
 SHA1 (patch-libgnu_stdio.in.h) = 112a424655d46c75fb68531fe7a84d9a0e97a984
+SHA1 (patch-libgui_src_settings-dialog.h) = 5bf82e5d313e06ec470a1da1a615c39f74bb880f
 SHA1 (patch-libinterp_build-env.in.cc) = 09431962403996d0f979c7dcd080b721dad55055
 SHA1 (patch-libinterp_dldfcn_config-module.awk) = 0746cca7f69995abbe3af793181b96a99cf866c3
 SHA1 (patch-libinterp_dldfcn_module.mk) = a38b2b70780d33ed7e5c0f586fc9521367be0e28
