@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3228 2018/07/17 20:23:13 maya Exp $
+$NetBSD: CHANGES-2018,v 1.3229 2018/07/17 21:53:40 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4628,3 +4628,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/yaws to 2.0.6 [fhajny 2018-07-17]
 	Updated www/calamaris to 2.59nb5 [bsiegert 2018-07-17]
 	Updated x11/qt5-qtlocation to 5.11.1nb1 [maya 2018-07-17]
+	Updated lang/lua53 to 5.3.5 [alnsn 2018-07-17]
