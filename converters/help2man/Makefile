@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2018/03/05 13:35:45 adam Exp $
+# $NetBSD: Makefile,v 1.44 2018/07/17 10:56:23 jperkin Exp $
 
 DISTNAME=	help2man-1.47.6
 CATEGORIES=	converters
@@ -14,6 +14,7 @@ DEPENDS+=		p5-gettext>=1.01:../../devel/p5-gettext
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		yes
+USE_GCC_RUNTIME=	yes
 USE_TOOLS+=		perl:run msgfmt gmake
 
 SUBST_CLASSES+=		paths
