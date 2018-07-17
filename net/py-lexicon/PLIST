@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2018/05/28 13:46:12 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.21 2018/07/17 16:14:46 fhajny Exp $
 bin/lexicon${PYVERSSUFFIX}
 ${PYSITELIB}/dns_${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/dns_${EGG_INFODIR}/SOURCES.txt
@@ -48,6 +48,8 @@ ${PYSITELIB}/lexicon/providers/dnspod.pyo
 ${PYSITELIB}/lexicon/providers/dnspod.pyc
 ${PYSITELIB}/lexicon/providers/easydns.pyo
 ${PYSITELIB}/lexicon/providers/easydns.pyc
+${PYSITELIB}/lexicon/providers/exoscale.pyo
+${PYSITELIB}/lexicon/providers/exoscale.pyc
 ${PYSITELIB}/lexicon/providers/gandi.pyo
 ${PYSITELIB}/lexicon/providers/gandi.pyc
 ${PYSITELIB}/lexicon/providers/gehirn.pyo
@@ -56,6 +58,8 @@ ${PYSITELIB}/lexicon/providers/glesys.pyo
 ${PYSITELIB}/lexicon/providers/glesys.pyc
 ${PYSITELIB}/lexicon/providers/godaddy.pyo
 ${PYSITELIB}/lexicon/providers/godaddy.pyc
+${PYSITELIB}/lexicon/providers/googleclouddns.pyo
+${PYSITELIB}/lexicon/providers/googleclouddns.pyc
 ${PYSITELIB}/lexicon/providers/linode.pyo
 ${PYSITELIB}/lexicon/providers/linode.pyc
 ${PYSITELIB}/lexicon/providers/linode4.pyo
@@ -72,6 +76,8 @@ ${PYSITELIB}/lexicon/providers/nsone.pyo
 ${PYSITELIB}/lexicon/providers/nsone.pyc
 ${PYSITELIB}/lexicon/providers/onapp.pyo
 ${PYSITELIB}/lexicon/providers/onapp.pyc
+${PYSITELIB}/lexicon/providers/online.pyo
+${PYSITELIB}/lexicon/providers/online.pyc
 ${PYSITELIB}/lexicon/providers/ovh.pyo
 ${PYSITELIB}/lexicon/providers/ovh.pyc
 ${PYSITELIB}/lexicon/providers/pointhq.pyo
@@ -96,6 +102,8 @@ ${PYSITELIB}/lexicon/providers/vultr.pyo
 ${PYSITELIB}/lexicon/providers/vultr.pyc
 ${PYSITELIB}/lexicon/providers/yandex.pyo
 ${PYSITELIB}/lexicon/providers/yandex.pyc
+${PYSITELIB}/lexicon/providers/zeit.pyo
+${PYSITELIB}/lexicon/providers/zeit.pyc
 ${PYSITELIB}/lexicon/providers/zonomi.pyo
 ${PYSITELIB}/lexicon/providers/zonomi.pyc
 ${PYSITELIB}/lexicon/providers/aurora.py
@@ -110,10 +118,12 @@ ${PYSITELIB}/lexicon/providers/dnsmadeeasy.py
 ${PYSITELIB}/lexicon/providers/dnspark.py
 ${PYSITELIB}/lexicon/providers/dnspod.py
 ${PYSITELIB}/lexicon/providers/easydns.py
+${PYSITELIB}/lexicon/providers/exoscale.py
 ${PYSITELIB}/lexicon/providers/gandi.py
 ${PYSITELIB}/lexicon/providers/gehirn.py
 ${PYSITELIB}/lexicon/providers/glesys.py
 ${PYSITELIB}/lexicon/providers/godaddy.py
+${PYSITELIB}/lexicon/providers/googleclouddns.py
 ${PYSITELIB}/lexicon/providers/linode.py
 ${PYSITELIB}/lexicon/providers/linode4.py
 ${PYSITELIB}/lexicon/providers/luadns.py
@@ -122,6 +132,7 @@ ${PYSITELIB}/lexicon/providers/namecheap.py
 ${PYSITELIB}/lexicon/providers/namesilo.py
 ${PYSITELIB}/lexicon/providers/nsone.py
 ${PYSITELIB}/lexicon/providers/onapp.py
+${PYSITELIB}/lexicon/providers/online.py
 ${PYSITELIB}/lexicon/providers/ovh.py
 ${PYSITELIB}/lexicon/providers/pointhq.py
 ${PYSITELIB}/lexicon/providers/powerdns.py
@@ -134,4 +145,5 @@ ${PYSITELIB}/lexicon/providers/subreg.py
 ${PYSITELIB}/lexicon/providers/transip.py
 ${PYSITELIB}/lexicon/providers/vultr.py
 ${PYSITELIB}/lexicon/providers/yandex.py
+${PYSITELIB}/lexicon/providers/zeit.py
 ${PYSITELIB}/lexicon/providers/zonomi.py
