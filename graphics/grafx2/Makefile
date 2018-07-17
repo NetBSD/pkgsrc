@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/07/17 13:07:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/17 21:32:19 ryoon Exp $
 
 DISTNAME=	grafx2-2.5.1960-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -20,6 +20,8 @@ SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Set PREFIX
 SUBST_FILES.fix-paths=		main.c
 SUBST_VARS.fix-paths=		PREFIX
+
+BUILD_MAKE_FLAGS+=	LFLAGS=${COMPILER_RPATH_FLAG}${X11BASE}/lib
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/SDL_ttf/buildlink3.mk"
