@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3220 2018/07/17 10:09:02 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3221 2018/07/17 12:35:23 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4619,3 +4619,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/octave to 4.2.0nb26 [maya 2018-07-17]
 	Updated devel/py-astroid to 2.0 [adam 2018-07-17]
 	Updated devel/py-pylint to 2.0.0 [adam 2018-07-17]
+	Updated graphics/mypaint to 1.2.1 [ryoon 2018-07-17]
