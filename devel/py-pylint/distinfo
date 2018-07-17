@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2018/06/07 06:44:02 adam Exp $
+$NetBSD: distinfo,v 1.16 2018/07/17 10:08:42 adam Exp $
 
-SHA1 (pylint-1.9.2.tar.gz) = 6ac673ad4d57c19decf8a58721571f98a340b188
-RMD160 (pylint-1.9.2.tar.gz) = 9b682e1380ad5eea89fa6ffbc3fc61548ac52f20
-SHA512 (pylint-1.9.2.tar.gz) = c920d54626d145541e435a0b5a7a2182eb4b3ec1c45c3317a178e0cc500c384aef4de730cc23c8ad7bf3d8c64f413f131b6166e26d5885543d437fd9c696f2be
-Size (pylint-1.9.2.tar.gz) = 516869 bytes
+SHA1 (pylint-2.0.0.tar.gz) = c0a0a5836df77141bcb89422dba1c6187d100bcf
+RMD160 (pylint-2.0.0.tar.gz) = 9d0e0d3c00b0e9362421fe909e4544951661c5c3
+SHA512 (pylint-2.0.0.tar.gz) = affab5bff8e77236b6c082886e365eeaae32a1da226814056795d289bf64997b27610cd54a50d666cff82cdf538ceb700fd91214676f1406ce79bfda97276652
+Size (pylint-2.0.0.tar.gz) = 550631 bytes
