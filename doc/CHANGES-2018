@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3218 2018/07/17 06:54:37 tron Exp $
+$NetBSD: CHANGES-2018,v 1.3219 2018/07/17 09:55:53 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4616,3 +4616,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-automat to 0.7.0 [adam 2018-07-17]
 	Updated security/libgpg-error to 1.32 [adam 2018-07-17]
 	Updated mail/mutt to 1.10.1 [tron 2018-07-17]
+	Updated math/octave to 4.2.0nb26 [maya 2018-07-17]
