@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2017/01/19 18:52:03 agc Exp $
+# $NetBSD: Makefile,v 1.41 2018/07/17 14:58:05 joerg Exp $
 
 DISTNAME=		benchfft-2.0
 PKGREVISION=		5
@@ -15,7 +15,6 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake csh:run
 USE_LANGUAGES=		c fortran77
 USE_LIBTOOL=		yes
-PKGSRC_FORTRAN=		gfortran
 
 LIBTOOL_OVERRIDE=	libtool ../fftw-*/libtool
 CONFIG_GUESS_OVERRIDE=	config.guess ../fftw-*/config.guess
@@ -34,7 +33,13 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/submit-script \
 		${DESTDIR}${PREFIX}/bin/run-fftbench
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/compiler.mk"
+
+.if defined(PKGSRC_FORTRAN) && !empty(PKGSRC_FORTRAN:Mg95)
+MAKE_ENV+=	G95_NO_OPT=-O0
+.else
+MAKE_ENV+=	G95_NO_OPT=
+.endif
 
 benchmark:
 .if defined(BATCH)
