@@ -1,19 +1,22 @@
-# $NetBSD: Makefile,v 1.32 2018/07/03 05:03:19 adam Exp $
+# $NetBSD: Makefile,v 1.33 2018/07/17 12:34:52 ryoon Exp $
 
-DISTNAME=	mypaint-1.1.0
-PKGREVISION=	6
+DISTNAME=	mypaint-1.2.1
 CATEGORIES=	graphics
-MASTER_SITES=	http://download.gna.org/mypaint/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=mypaint/}
+EXTRACT_SUFX=	.tar.xz
+GITHUB_PROJECT=	mypaint
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://mypaint.org/
 COMMENT=	Fast and easy open-source graphics application for digital painters
 LICENSE=	gnu-gpl-v2
 
+CONFLICTS+=	libmypaint-[0-9]*
+
 BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
-DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
-DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
+DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
 USE_LANGUAGES=	c c++
 
@@ -33,9 +36,13 @@ LDFLAGS+=	-lintl
 REPLACE_BASH=			brushes/label-brush-mypaint.sh
 
 do-build:
+	${LN} -sf ${PREFIX}/bin/swig2.0 \
+		${BUILDLINK_DIR}/bin/swig
 	cd ${WRKSRC} && cd ${BUILD_DIRS} && \
 		${SETENV} ${MAKE_ENV} \
-		${LOCALBASE}/bin/scons prefix=${DESTDIR}${PREFIX}
+		${LOCALBASE}/bin/scons \
+			prefix=${DESTDIR}${PREFIX} \
+			enable_profiling=False
 
 do-install:
 	cd ${WRKSRC} && cd ${INSTALL_DIRS} && \
@@ -48,8 +55,8 @@ do-install:
 .include "../../devel/swig2/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../devel/py-gobject/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
+.include "../../devel/py-gobject3-common/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
