@@ -1,11 +1,9 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 21:34:10 agc Exp $
+$NetBSD: distinfo,v 1.9 2018/07/17 12:34:52 ryoon Exp $
 
-SHA1 (mypaint-1.1.0.tar.bz2) = 9e4f0bc2cee6c369f1a40d7c24435b7c26cc3795
-RMD160 (mypaint-1.1.0.tar.bz2) = c34aaf96c66fd62117379b6f2553645c94501fae
-SHA512 (mypaint-1.1.0.tar.bz2) = a3eef378ddcaa0a33f9afc49cc587489ecfff6f3e46e2238aab83f89d682f2407e2760e6029eaac3591f0a8955c95280c12839adcb42ec452cefbcdb142ab9b9
-Size (mypaint-1.1.0.tar.bz2) = 37416388 bytes
-SHA1 (patch-SConscript) = a1027dc48d9ccde6e8c273e7b28611bc9338534c
-SHA1 (patch-SConstruct) = 11111493804031c54b62f36b7eb290fae49d3630
-SHA1 (patch-brushlib_SConscript) = afab91876d916f5497017b3a4280d9d26afd280b
-SHA1 (patch-lib_SConscript) = 4f476bb0daf8bbb21a6a11cf1acc662c023f4140
+SHA1 (mypaint-1.2.1.tar.xz) = 89456062e477cff1acb357d0407827f08a479d33
+RMD160 (mypaint-1.2.1.tar.xz) = fd57a9df4ad1900c52c0b4979231a0074a2f57be
+SHA512 (mypaint-1.2.1.tar.xz) = 1783765e495b9535669a83a29d27ba684e6201fdfe0875bdd2c167b1dab8af05993b19025767fe0b2770ed9e578e4709f75d8a4820ac945812cba85609f9eb9b
+Size (mypaint-1.2.1.tar.xz) = 37897196 bytes
+SHA1 (patch-SConscript) = b640d6084797c12c5418387c821f4786bcc426e1
+SHA1 (patch-SConstruct) = f903a23506e35ad18202996ade4ad8afdd70af0f
 SHA1 (patch-lib_colorchanger__crossed__bowl.hpp) = b64b8695fe8b787df94ddc588a714b991954084b
