@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3213 2018/07/16 23:24:40 jnemeth Exp $
+$NetBSD: CHANGES-2018,v 1.3214 2018/07/17 03:52:11 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4610,3 +4610,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Removed comms/asterisk18 [jnemeth 2018-07-16]
 	Added comms/asterisk15 version 15.4.1 [joerg 2018-07-16]
 	Updated comms/asterisk to 11.25.3 [jnemeth 2018-07-16]
+	Updated devel/go-i18n to 1.10.0 [minskim 2018-07-17]
