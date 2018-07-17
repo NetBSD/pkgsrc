@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.171 2018/07/17 09:55:36 maya Exp $
+# $NetBSD: Makefile,v 1.172 2018/07/17 15:07:19 joerg Exp $
 
 DISTNAME=	octave-4.2.0
 PKGREVISION=	26
@@ -25,7 +25,6 @@ USE_TOOLS+=		autoconf gsed gmake:run perl pkg-config bison bsdtar:run
 GNU_CONFIGURE=		yes
 
 USE_LANGUAGES=		c c++ fortran77
-PKGSRC_FORTRAN=		gfortran
 
 # needed for loading of shared objects such as those in the
 # octave-forge package or user written ones compiled with mkoctfile
