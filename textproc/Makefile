@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.993 2018/06/19 06:37:21 wen Exp $
+# $NetBSD: Makefile,v 1.994 2018/07/17 03:55:01 minskim Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -205,6 +205,7 @@ SUBDIR+=	go-mmark
 SUBDIR+=	go-prose
 SUBDIR+=	go-runewidth
 SUBDIR+=	go-sentences
+SUBDIR+=	go-tablewriter
 SUBDIR+=	go-text
 SUBDIR+=	grep
 SUBDIR+=	grepcidr
