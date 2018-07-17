@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.9 2017/10/27 20:57:16 khorben Exp $
+$NetBSD: patch-ab,v 1.10 2018/07/17 21:38:39 joerg Exp $
 
 Use $(host_alias) as the program prefix so it matches ${MACHINE_GNU_PLATFORM}
 
@@ -14,7 +14,16 @@ Pass down correct path for libf95 to g95specs.c.
  
  VPATH = @srcdir@
  pkgdatadir = $(datadir)/@PACKAGE@
-@@ -1418,7 +1419,7 @@ clean-local:
+@@ -319,7 +320,7 @@ top_srcdir = @top_srcdir@
+ @GCC_TRUE@	    @GCC_DIR@/g95/gcc/intl.o @GCC_DIR@/g95/libiberty/libiberty.a \
+ @GCC_TRUE@	    @LDADD0@
+ 
+-@GCC_TRUE@g95_DATA = @PARTS@ @GCC_DIR@/g95/gcc/libgcc.a
++@GCC_TRUE@g95_DATA = @PARTS@
+ @GCC_TRUE@g95dir = @DEST_LIBDIR@
+ EXTRA_DIST = MANIFEST CONTRIB BUGS lang.opt autogen.sh G95Manual.pdf COPYING \
+ ggc-page40.c ggc-page41.c
+@@ -1418,35 +1419,17 @@ clean-local:
  	rm -f options.tmp options.c options.h version.c
  
  install-exec-hook:
@@ -23,20 +32,30 @@ Pass down correct path for libf95 to g95specs.c.
  
  install-data-hook:
  	-ln -sf f951$(EXEEXT) $(DESTDIR)@DEST_LIBDIR@/cc1
-@@ -1429,8 +1430,9 @@ install-data-hook:
- 	  ranlib $(DESTDIR)@DEST_LIBDIR@/libgcc_eh.a ; \
- 	  ranlib $(DESTDIR)@DEST_LIBDIR@/libgcc.a ; \
- 	fi
+-	if test "`uname`" = "Darwin" ; then \
+-	  ar x /usr/lib/libgcc.a darwin-fpsave.o ; \
+-	  ar rs $(DESTDIR)@DEST_LIBDIR@/libgcc.a darwin-fpsave.o ; \
+-	  rm ./darwin-fpsave.o ; \
+-	  ranlib $(DESTDIR)@DEST_LIBDIR@/libgcc_eh.a ; \
+-	  ranlib $(DESTDIR)@DEST_LIBDIR@/libgcc.a ; \
+-	fi
 -	cp INSTALL $(DESTDIR)@DEST_LIBDIR@/../../../..
 -	cp G95Manual.pdf $(DESTDIR)@DEST_LIBDIR@/../../../..
+-	if test -n "`ls @GCC_DIR@/g95/gcc/libgcc_s.*`" ; then \
+-	   (cd @GCC_DIR@/g95/gcc; tar cf - libgcc_s.*) | \
+-           (cd $(DESTDIR)@DEST_LIBDIR@; tar xf -) ; \
+-	fi
+-	if test -n "`ls @GCC_DIR@/g95/gcc/libunwind.*`" ; then \
+-	   (cd @GCC_DIR@/g95/gcc; tar cf - libunwind.*) | \
+-	   (cd $(DESTDIR)@DEST_LIBDIR@; tar xf -) ; \
+-	fi
+-	if test -n "`ls @GCC_DIR@/g95/gcc/libgcc_eh.*`" ; then \
+-	   (cd @GCC_DIR@/g95/gcc; tar cf - libgcc_eh.*) | \
+-	   (cd $(DESTDIR)@DEST_LIBDIR@; tar xf -) ; \
+-	fi
 +	test -z "$(docdir)" || $(MKDIR_P) "$(DESTDIR)$(docdir)"
 +	$(INSTALL_DATA) INSTALL $(DESTDIR)$(docdir)
 +	$(INSTALL_DATA) G95Manual.pdf $(DESTDIR)$(docdir)
- 	if test -n "`ls @GCC_DIR@/g95/gcc/libgcc_s.*`" ; then \
- 	   (cd @GCC_DIR@/g95/gcc; tar cf - libgcc_s.*) | \
-            (cd $(DESTDIR)@DEST_LIBDIR@; tar xf -) ; \
-@@ -1445,8 +1447,8 @@ install-data-hook:
- 	fi
  
  ggc-page.o: $(srcdir)/ggc-page40.c $(srcdir)/ggc-page41.c
 -@GCC41_TRUE@	$(CC) -c -g -o ggc-page.o -I. $(CPPFLAGS) -DIN_GCC $(srcdir)/ggc-page41.c
