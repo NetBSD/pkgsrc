@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3227 2018/07/17 20:07:09 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.3228 2018/07/17 20:23:13 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4627,3 +4627,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/py-certbot to 0.26.0 [fhajny 2018-07-17]
 	Updated www/yaws to 2.0.6 [fhajny 2018-07-17]
 	Updated www/calamaris to 2.59nb5 [bsiegert 2018-07-17]
+	Updated x11/qt5-qtlocation to 5.11.1nb1 [maya 2018-07-17]
