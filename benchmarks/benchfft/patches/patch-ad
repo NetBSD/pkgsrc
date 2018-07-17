@@ -1,9 +1,9 @@
-$NetBSD: patch-ad,v 1.6 2012/01/12 12:36:13 hans Exp $
+$NetBSD: patch-ad,v 1.7 2018/07/17 14:58:05 joerg Exp $
 
 link required fortran library.
 
---- Makefile.in.orig	Tue Oct 20 12:42:00 1998
-+++ Makefile.in	Fri May 12 17:11:17 2000
+--- Makefile.in.orig	1998-10-20 16:42:00.000000000 +0000
++++ Makefile.in
 @@ -365,7 +365,7 @@ LIBPATHS = -L$(FFTWDIR)/fftw/.libs -L$(F
  INCLUDE_FLAGS = -I. -I$(FFTWDIR)/fftw -I$(FFTWDIR)/src -I$(FFTWDIR)/rfftw
  
@@ -21,7 +21,19 @@ link required fortran library.
  F90 = @F90@
  F90FLAGS = @FFLAGS@
  
-@@ -495,7 +496,7 @@ bench_utils.o: bench_utils.h bench-confi
+@@ -393,8 +394,10 @@ all: bench
+ 		-DFFLAGS="\"$(FFLAGS)\"" \
+ 		$< -o $@
+ 
++FFLAGS.f_source/brenner.f= $(G95_NO_OPT)
++
+ .f.o:
+-	$(F77) -c $(FFLAGS) $< -o $@
++	$(F77) -c $(FFLAGS) $(FFLAGS.$<) $< -o $@
+ 
+ ###########################################################################
+ 
+@@ -495,7 +498,7 @@ bench_utils.o: bench_utils.h bench-confi
  bench.o: bench_utils.h bench-config.h
  
  bench: $(OBJECTS)
