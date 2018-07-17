@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2018/07/15 16:26:07 bsiegert Exp $
+# $NetBSD: Makefile,v 1.72 2018/07/17 19:20:42 bsiegert Exp $
 
 # Upstream regularly breaks protocol compatibility.  While users of
 # pkgsrc syncthing on multiple systems can update synchronously, an
@@ -69,6 +69,8 @@ SUBST_MESSAGE.version=	Fixing version string
 SUBST_FILES.version=	build.go
 SUBST_SED.version=	-e 's|runError("git", "describe", "--always", "--dirty")|runError("echo","v${PKGVERSION_NOREV}")|'
 SUBST_SED.version+=	-e 's|runError("git", "show", "-s", "--format=%ct")|runError("false")|'
+SUBST_SED.version+=	-e 's|"go"|"${GO}"|'
+
 
 # Create WRKPLACE's parent, but not WRKPLACE.  Move the contents of
 # the distribution tarball to the directory name desired by upstream's
