@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/01/31 06:21:39 mef Exp $
+# $NetBSD: Makefile,v 1.5 2018/07/18 00:06:11 joerg Exp $
 #
 
 VERS=		2.3.6
@@ -14,7 +14,7 @@ COMMENT=	Design PCR primers
 LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/${PKGNAME}
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 USE_TOOLS+=	gmake
 BUILD_DIRS=	src
 NO_CONFIGURE=	yes

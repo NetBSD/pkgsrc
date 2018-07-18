@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2018/07/03 05:03:30 adam Exp $
+# $NetBSD: Makefile,v 1.47 2018/07/18 00:06:23 joerg Exp $
 
 DISTNAME=	Botan-1.10.17
 PKGNAME=	${DISTNAME:tl}
@@ -12,7 +12,7 @@ COMMENT=	Portable, easy to use, and efficient C++ crypto library
 LICENSE=	2-clause-bsd
 
 HAS_CONFIGURE=		yes
-USE_LANGUAGES=		c++
+USE_LANGUAGES=		c++03
 
 PYTHON_FOR_BUILD_ONLY=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 1.8.14; 1.10 is supposedly better

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/02/05 01:40:45 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/18 00:06:14 joerg Exp $
 
 DISTNAME=	gambatte-libretro-20150204
 PKGNAME=	libretro-gambatte-20150204
@@ -12,7 +12,7 @@ COMMENT=	Libretro core based on the Gambatte Game Boy Color emulator
 LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/gambatte-libretro-master/libgambatte
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 MAKE_FILE=	Makefile.libretro
 USE_TOOLS+=	gmake
 

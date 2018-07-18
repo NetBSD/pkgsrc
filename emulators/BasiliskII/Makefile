@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2017/08/01 16:47:37 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2018/07/18 00:06:14 joerg Exp $
 
 DISTNAME=	BasiliskII_src_01052006
 PKGNAME=	BasiliskII-1.0.20060501
@@ -12,7 +12,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Open Source 68k Macintosh emulator
 
 WRKSRC=			${WRKDIR}/BasiliskII-1.0
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		src/Unix

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/03/12 11:17:43 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2018/07/18 00:06:24 joerg Exp $
 
 DISTNAME=	icewm-1.3.8
 PKGREVISION=	2
@@ -15,7 +15,7 @@ CONFLICTS+=	icewm-imlib-[0-9]*
 FILESDIR=	${.CURDIR}/../../wm/icewm/files
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c++03
 USE_TOOLS+=	msgfmt pkg-config
 
 post-extract:

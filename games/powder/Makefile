@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/04/25 14:23:02 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2018/07/18 00:06:17 joerg Exp $
 #
 
 DISTNAME=	powder117_src
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.zincland.com/powder/index.php?pagename=about
 COMMENT=	Multiplatform roguelike game with graphics
 LICENSE=	powder-license
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 USE_TOOLS+=	bash gmake
 
 INSTALLATION_DIRS=	bin share/doc/powder
