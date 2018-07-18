@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3234 2018/07/18 19:18:59 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.3235 2018/07/18 22:57:47 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4634,3 +4634,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/go-md2man to 1.0.8 [minskim 2018-07-18]
 	Updated devel/gradle to 4.9 [fhajny 2018-07-18]
 	Updated sysutils/upower to 0.99.4nb4 [bsiegert 2018-07-18]
+	Updated lang/gcc5 to 5.5.0nb2 [maya 2018-07-18]
+	Updated lang/gcc6 to 6.4.0nb3 [maya 2018-07-18]
+	Updated lang/gcc7 to 7.3.0nb3 [maya 2018-07-18]
+	Updated lang/gcc8 to 8.1.0nb1 [maya 2018-07-18]
