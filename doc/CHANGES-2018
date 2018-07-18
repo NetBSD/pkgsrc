@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3230 2018/07/17 22:19:00 alnsn Exp $
+$NetBSD: CHANGES-2018,v 1.3231 2018/07/18 02:38:35 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4630,3 +4630,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/qt5-qtlocation to 5.11.1nb1 [maya 2018-07-17]
 	Updated lang/lua53 to 5.3.5 [alnsn 2018-07-17]
 	Updated devel/lua-rocks to 2.4.4 [alnsn 2018-07-17]
+	Added devel/go-sync version 0.0.20180314 [minskim 2018-07-18]
