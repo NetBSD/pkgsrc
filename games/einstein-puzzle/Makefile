@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/09/29 12:09:48 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2018/07/18 00:06:16 joerg Exp $
 
 DISTNAME=	einstein-puzzle-2.1.1
 PKGREVISION=	1
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/lksj/einstein-puzzle/
 COMMENT=	Computer implementation of a puzzle invented by Albert Einstein
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c++03
 
 MAKE_FLAGS+=		PREFIX=${PREFIX}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2016/06/01 13:31:29 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2018/07/18 00:06:14 joerg Exp $
 #
 
 DISTNAME=	dgen-sdl-1.32
@@ -22,7 +22,7 @@ PLIST_VARS+=	arm
 PLIST.arm=	yes
 .endif
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
 

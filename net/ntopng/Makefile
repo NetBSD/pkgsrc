@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2018/04/29 21:32:00 adam Exp $
+# $NetBSD: Makefile,v 1.23 2018/07/18 00:06:22 joerg Exp $
 
 DISTNAME=	ntopng-2.4-stable
 PKGNAME=	ntopng-2.4
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	redis-[0-9]*:../../databases/redis
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf automake gmake pkg-config
 GNU_CONFIGURE=		yes

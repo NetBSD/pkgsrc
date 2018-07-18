@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/03/12 11:15:49 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2018/07/18 00:06:25 joerg Exp $
 
 VERS=		6129
 PKGREVISION=	14
@@ -14,7 +14,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.fltk.org/
 COMMENT=	Fast Light Tool Kit for graphical user interfaces
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_TOOLS+=		gmake
 TEST_TARGET=		test
 

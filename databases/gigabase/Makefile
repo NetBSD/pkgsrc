@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/02/25 11:46:20 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2018/07/18 00:06:12 joerg Exp $
 #
 
 DISTNAME=	gigabase-3.82
@@ -13,7 +13,7 @@ COMMENT=	Object-Relational Database Management System
 WRKSRC=			${WRKDIR}/gigabase
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_TOOLS+=		gmake
 PTHREAD_AUTO_VARS=	yes
 
