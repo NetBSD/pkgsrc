@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3233 2018/07/18 14:28:00 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.3234 2018/07/18 19:18:59 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4633,3 +4633,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/go-sync version 0.0.20180314 [minskim 2018-07-18]
 	Updated textproc/go-md2man to 1.0.8 [minskim 2018-07-18]
 	Updated devel/gradle to 4.9 [fhajny 2018-07-18]
+	Updated sysutils/upower to 0.99.4nb4 [bsiegert 2018-07-18]
