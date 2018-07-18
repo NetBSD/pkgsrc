@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2018/07/16 01:58:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.43 2018/07/18 16:24:38 jperkin Exp $
 
 DISTNAME=	rustc-1.27.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -256,7 +256,7 @@ stage0-bootstrap: install
 	for f in ${BOOTSTRAP_TMPDIR}/lib/*.so*; do \
 		/usr/bin/elfedit -e 'dyn:runpath $$ORIGIN:$$ORIGIN/pkgsrc' $$f; \
 	done
-	for f in ${BOOTSTRAP_TMPDIR}/lib/rustlib/${RUST_ARCH}/lib/*.so*; do \
+	for f in ${BOOTSTRAP_TMPDIR}/lib/rustlib/${RUST_ARCH}/*/*.so*; do \
 		/usr/bin/elfedit -e 'dyn:runpath $$ORIGIN:$$ORIGIN/../../..:$$ORIGIN/../../../pkgsrc' $$f; \
 	done
 .endif
