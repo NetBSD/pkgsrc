@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2018/06/12 17:50:29 bsiegert Exp $
+# $NetBSD: Makefile,v 1.9 2018/07/18 07:20:21 minskim Exp $
 
-DISTNAME=	go-md2man-1.0.6
+DISTNAME=	go-md2man-1.0.8
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cpuguy83/}
-PKGREVISION=	4
 CATEGORIES=	textproc
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
@@ -13,6 +12,8 @@ LICENSE=	mit
 
 GO_DIST_BASE=	${DISTNAME}
 GO_SRCPATH=	github.com/cpuguy83/go-md2man
+
+REPLACE_SH=	script/setup/dev-tools script/validate/vendor
 
 post-install:
 	${RM} -rf ${DESTDIR}${PREFIX}/gopkg/pkg/${GO_PLATFORM}/${GO_SRCPATH}/vendor
