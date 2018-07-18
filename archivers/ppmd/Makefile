@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/02/28 13:55:04 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2018/07/18 00:06:10 joerg Exp $
 
 DISTNAME=	ppmdi1
 PKGNAME=	ppmd-9.1
@@ -15,7 +15,7 @@ MAKE_FILE=	makefile.gmk
 BUILD_TARGET=	ppmd
 
 WRKSRC=		${WRKDIR}
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c++03
 
 INSTALLATION_DIRS=	bin
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/04/01 21:09:32 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2018/07/18 00:06:24 joerg Exp $
 
 DISTNAME=	blackbox-0.70.1
 PKGNAME=	blackbox70-0.70.1
@@ -13,7 +13,7 @@ COMMENT=	Small and fast X11R6 window manager
 CONFLICTS=	bsetroot-[0-9]*
 CONFLICTS+=	blackbox-[0-9]*
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config

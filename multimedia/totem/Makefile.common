@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.67 2018/07/03 05:03:26 adam Exp $
+# $NetBSD: Makefile.common,v 1.68 2018/07/18 00:06:22 joerg Exp $
 #
 # used by multimedia/totem-browser-plugin/Makefile
 # used by multimedia/totem-nautilus/Makefile
@@ -20,7 +20,7 @@ GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake intltool msgfmt pkg-config gawk
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 
 GCONF_SCHEMAS=	totem.schemas
 GCONF_SCHEMAS+=	totem-handlers.schemas

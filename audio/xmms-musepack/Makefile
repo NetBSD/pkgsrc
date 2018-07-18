@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2016/04/20 12:10:34 nros Exp $
+# $NetBSD: Makefile,v 1.26 2018/07/18 00:06:11 joerg Exp $
 #
 
 DISTNAME=	xmms-musepack-1.1
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.musepack.net/
 COMMENT=	XMMS plugin for musepack (mpc) files
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config

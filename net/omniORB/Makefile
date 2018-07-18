@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/07/03 05:03:27 adam Exp $
+# $NetBSD: Makefile,v 1.16 2018/07/18 00:06:22 joerg Exp $
 
 DISTNAME=		omniORB-4.1.7
 PKGREVISION=		1
@@ -13,7 +13,7 @@ COMMENT=		CORBA ORB
 MAKE_FILE=		GNUmakefile
 
 GNU_CONFIGURE=	YES
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 USE_TOOLS+=	gmake
 
 PKGCONFIG_OVERRIDE+= contrib/pkgconfig/omniCOS4.pc.in

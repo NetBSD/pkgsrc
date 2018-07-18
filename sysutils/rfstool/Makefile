@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/09/04 18:01:01 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2018/07/18 00:06:23 joerg Exp $
 #
 
 DISTNAME=	rfstool-0.14-source
@@ -14,7 +14,7 @@ COMMENT=	Tools to access ReiserFS partitions
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}/RFSTOOL
 MAKE_FILE=	makefile.gcc3x
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c++03
 
 INSTALLATION_DIRS=	sbin
 

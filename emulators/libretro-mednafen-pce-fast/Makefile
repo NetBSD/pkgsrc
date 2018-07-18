@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/02/11 00:16:25 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/18 00:06:15 joerg Exp $
 
 DISTNAME=	mednafen-pce-fast-libretro-20150210
 PKGNAME=	libretro-mednafen-pce-fast-20150210
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/beetle-pce-fast-libretro-master
 USE_TOOLS+=	gmake
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 
 PKGCONFIG_OVERRIDE+=	mednafen/tremor/vorbisidec.pc.in
 

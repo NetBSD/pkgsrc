@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/04/25 14:22:53 tnn Exp $
+# $NetBSD: Makefile,v 1.13 2018/07/18 00:06:16 joerg Exp $
 
 DISTNAME=		chromium-bsu-0.9.15.1
 PKGREVISION=		1
@@ -12,7 +12,7 @@ COMMENT=		Fast paced, arcade-style, top-scrolling space shooter
 DEPENDS=		uralic-ttf-[0-9]*:../../fonts/uralic-ttf
 
 USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 LDFLAGS+=		${BUILDLINK_LDADD.gettext}

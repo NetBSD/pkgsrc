@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2018/04/29 21:31:36 adam Exp $
+# $NetBSD: Makefile,v 1.44 2018/07/18 00:06:16 joerg Exp $
 #
 
 DISTNAME=	CriticalMass-1.0.2
@@ -13,7 +13,7 @@ HOMEPAGE=	http://criticalmass.sourceforge.net/
 COMMENT=	SDL/OpenGL space shoot'em up game
 
 GNU_CONFIGURE=	YES
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 

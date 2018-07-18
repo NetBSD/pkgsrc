@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2018/04/16 14:34:20 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2018/07/18 00:06:13 joerg Exp $
 
 DISTNAME=	libextractor-0.5.20c
 PKGREVISION=	29
@@ -12,7 +12,7 @@ COMMENT=	Metadata extractor for various file data types
 MAKE_JOBS_SAFE=		no
 
 USE_LIBTOOL=		yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes

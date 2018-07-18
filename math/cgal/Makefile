@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2018/04/29 21:31:21 adam Exp $
+# $NetBSD: Makefile,v 1.39 2018/07/18 00:06:21 joerg Exp $
 
 PKGNAME=	cgal-3.9
 DISTNAME=	CGAL-3.9
@@ -12,7 +12,7 @@ COMMENT=	Computational Geometry Algorithms Library
 LICENSE=	gnu-lgpl-v3
 
 USE_CMAKE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 
 pre-install:
 	find ${WRKSRC} -name \*.orig -exec rm {} \;

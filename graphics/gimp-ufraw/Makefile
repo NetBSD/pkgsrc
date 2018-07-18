@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2018/04/16 14:34:36 wiz Exp $
+# $NetBSD: Makefile,v 1.106 2018/07/18 00:06:18 joerg Exp $
 
 # Note that upstream has replaced tarballs without changing the
 # version number (e.g., 0.19.2 had two different tarballs).
@@ -20,7 +20,7 @@ GNU_CONFIGURE=		yes
 
 USE_TOOLS+=		gmake pkg-config msgfmt
 USE_TOOLS+=		perl:run pod2man
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 
 CONFIGURE_ARGS+=	--enable-mime
 

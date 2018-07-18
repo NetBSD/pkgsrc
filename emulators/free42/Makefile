@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/04/16 14:34:25 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2018/07/18 00:06:14 joerg Exp $
 
 DISTNAME=	free42
 PKGNAME=	${DISTNAME}-1.4.78
@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v2
 
 #WRKSRC=		${WRKDIR}/free42/gtk/
 USE_TOOLS+=	gmake pkg-config
-USE_LANGUAGES+=	c++
+USE_LANGUAGES+=	c++03
 BUILD_DIRS=	gtk
 
 .include "options.mk"

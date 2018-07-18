@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2018/01/14 15:26:47 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2018/07/18 00:06:17 joerg Exp $
 
 DISTNAME=	Maelstrom-3.0.6
 PKGNAME=	maelstrom-sdl-3.0.6
@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v2
 CONFLICTS=		maelstrom-x11-[0-9]* maelstrom-[0-9]*
 
 GNU_CONFIGURE=		YES
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_GAMESGROUP=		yes
 
 MAKE_ENV+=		CP=${CP:Q}

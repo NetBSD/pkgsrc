@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/12/30 05:35:54 maya Exp $
+# $NetBSD: Makefile,v 1.17 2018/07/18 00:06:23 joerg Exp $
 
 DISTNAME=		fish-2.7.1
 CATEGORIES=		shells
@@ -14,7 +14,7 @@ EXTRACT_USING=		gtar
 
 WRKSRC=			${WRKDIR}/fish-shell-${PKGVERSION_NOREV}
 
-USE_LANGUAGES+=		c c++
+USE_LANGUAGES+=		c c++03
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}

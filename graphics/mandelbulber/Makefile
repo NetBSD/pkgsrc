@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/04/16 14:34:38 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2018/07/18 00:06:19 joerg Exp $
 #
 
 DISTNAME=	mandelbulber1.13-1
@@ -13,7 +13,7 @@ COMMENT=	3D fractal explorer
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	gmake pax pkg-config
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c++03
 
 BUILD_DIRS=	makefiles
 MAKE_FILE=	makefile

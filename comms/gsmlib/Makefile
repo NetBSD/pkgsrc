@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2017/08/16 20:45:32 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2018/07/18 00:06:12 joerg Exp $
 #
 
 DISTNAME=	gsmlib-1.10
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Library to access GSM mobile phones through GSM modems or IrDA devices
 
 USE_TOOLS+=		gmake msgfmt
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
