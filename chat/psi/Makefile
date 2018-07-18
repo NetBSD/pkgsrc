@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2018/03/12 11:16:11 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2018/07/18 00:06:11 joerg Exp $
 
 DISTNAME=	psi-0.15
 PKGREVISION=	10
@@ -17,7 +17,7 @@ DIST_SUBDIR=	${DISTNAME}
 DISTFILES=	${DEFAULT_DISTFILES}
 
 USE_TOOLS+=	gmake unzip pkg-config
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 USE_LIBTOOL=	yes
 HAS_CONFIGURE=	yes
 

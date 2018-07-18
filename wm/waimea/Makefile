@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2018/03/12 11:17:44 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2018/07/18 00:06:25 joerg Exp $
 #
 
 DISTNAME=	waimea-0.4.0
@@ -11,7 +11,7 @@ HOMEPAGE=	https://sourceforge.net/projects/waimea/
 COMMENT=	Fast and highly customizable virtual window manager
 
 GNU_CONFIGURE=	YES
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 USE_TOOLS+=	gmake perl:run pkg-config
 
 .include "../../mk/bsd.prefs.mk"

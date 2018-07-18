@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2015/04/25 14:23:06 tnn Exp $
+# $NetBSD: Makefile,v 1.29 2018/07/18 00:06:18 joerg Exp $
 
 DISTNAME=		Coin-3.1.3
 PKGREVISION=		3
@@ -11,7 +11,7 @@ COMMENT=		Free, portable, Open Inventor API implementation
 LICENSE=		modified-bsd
 # See https://bitbucket.org/Coin3D/coin/wiki/EndOfLifeLetter
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-3ds-import

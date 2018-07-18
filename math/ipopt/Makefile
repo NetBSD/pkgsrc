@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2013/11/14 15:04:12 asau Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/18 00:06:21 joerg Exp $
 
 DISTNAME=	Ipopt-3.11.5
 CATEGORIES=	math
@@ -9,7 +9,7 @@ MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	https://projects.coin-or.org/Ipopt
 COMMENT=	Interior Point OPTimizer
 
-USE_LANGUAGES=	c c++ fortran
+USE_LANGUAGES=	c c++03 fortran
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config

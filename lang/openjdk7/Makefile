@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2018/07/07 11:48:18 gdt Exp $
+# $NetBSD: Makefile,v 1.126 2018/07/18 00:06:20 joerg Exp $
 
 JDK_MICRO=	141
 DISTNAME=	openjdk-1.7.${JDK_MICRO}-20170813
@@ -50,7 +50,7 @@ MAKE_ENV+=		PKGSRC_UNZIPSFX=${TOOLS_PATH.unzip}sfx
 BUILD_DEPENDS+=		mozilla-rootcerts>=1.0.20140820nb2:../../security/mozilla-rootcerts
 
 NO_CONFIGURE=		yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_TOOLS+=		gmake pax unzip:run zip:run # patch
 UNLIMIT_RESOURCES=	datasize stacksize
 WRKSRC=			${WRKDIR}/openjdk

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/01/01 18:16:38 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2018/07/18 00:06:21 joerg Exp $
 
 DISTNAME=	minisat-2.2.0
 CATEGORIES=	math
@@ -10,7 +10,7 @@ COMMENT=	Minimalistic yet highly efficient SAT solver
 LICENSE=	mit
 
 WRKSRC=		${WRKDIR}/minisat
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c++03
 USE_TOOLS+=	gmake
 #BUILD_DIRS=	core simp
 BUILD_DIRS=	simp

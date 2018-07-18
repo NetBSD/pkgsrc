@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2017/09/06 10:40:33 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2018/07/18 00:06:23 joerg Exp $
 
 DISTNAME=	xnc-5.0.4.src
 PKGNAME=	xnc-5.0.4
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 MAKE_JOBS_SAFE=		no
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 USE_LIBTOOL=	yes
 USE_TOOLS+=	msgfmt
 GNU_CONFIGURE=	yes

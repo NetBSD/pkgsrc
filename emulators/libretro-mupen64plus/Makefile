@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/09/28 16:03:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2018/07/18 00:06:15 joerg Exp $
 
 DISTNAME=	mupen64plus-libretro-20150204
 PKGNAME=	libretro-mupen64plus-20150204
@@ -13,7 +13,7 @@ COMMENT=	Libretro core based on the Mupen64 Plus emulator
 LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}/mupen64plus-libretro-master
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 USE_TOOLS+=	gmake
 
 SUBST_CLASSES+=		vc

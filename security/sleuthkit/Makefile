@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/07/09 06:38:57 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2018/07/18 00:06:23 joerg Exp $
 
 DISTNAME=	sleuthkit-4.1.3
 PKGREVISION=	4
@@ -13,7 +13,7 @@ LICENSE=	cpl-1.0 AND gnu-gpl-v2
 DEPENDS+=	p5-DateTime-TimeZone>=0:../../time/p5-DateTime-TimeZone
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake file perl:run
 

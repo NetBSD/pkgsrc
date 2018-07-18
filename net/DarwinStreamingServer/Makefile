@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2018/07/04 13:40:26 jperkin Exp $
+# $NetBSD: Makefile,v 1.23 2018/07/18 00:06:22 joerg Exp $
 
 DISTNAME=	DarwinStreamingSrvr5.5.5-Source
 PKGNAME=	DarwinStreamingServer-5.5.5
@@ -17,7 +17,7 @@ RESTRICTED=	Under APSL (see http://www.opensource.apple.com/apsl/).
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 
 MAKE_FILE=	Makefile.POSIX
 MAKE_ENV+=	CCOMP=${CC:Q} CPLUS=${CXX:Q}\ -fPIC LINKER=${CXX:Q}

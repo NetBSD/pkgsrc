@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/31 11:17:32 asau Exp $
+# $NetBSD: Makefile,v 1.11 2018/07/18 00:06:13 joerg Exp $
 #
 
 DISTNAME=		nqc-2.3.r1
@@ -12,7 +12,7 @@ COMMENT=		Development system for the Lego Mindstorms RCX embedded computer
 
 MAKE_JOBS_SAFE=		no
 
-USE_LANGUAGES=		c++
+USE_LANGUAGES=		c++03
 USE_TOOLS+=		flex yacc
 
 INSTALL_MAKE_FLAGS+=	BINDIR=${DESTDIR}${PREFIX}/bin \

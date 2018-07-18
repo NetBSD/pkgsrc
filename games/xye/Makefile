@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/04/25 14:23:05 tnn Exp $
+# $NetBSD: Makefile,v 1.15 2018/07/18 00:06:18 joerg Exp $
 #
 
 DISTNAME=	xye-0.12.1
@@ -12,7 +12,7 @@ COMMENT=	Kye clone
 
 GNU_CONFIGURE=		yes
 #CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 
 SUBST_CLASSES+=		crlf
 SUBST_MESSAGE.crlf=	stripping EOL CR

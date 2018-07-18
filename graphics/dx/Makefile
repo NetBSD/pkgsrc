@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2018/04/29 21:31:43 adam Exp $
+# $NetBSD: Makefile,v 1.95 2018/07/18 00:06:18 joerg Exp $
 
 DISTNAME=	dx-4.4.4
 PKGREVISION=	44
@@ -11,7 +11,7 @@ COMMENT=	Open Visualization Data Explorer
 
 MAKE_JOBS_SAFE=		no
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_TOOLS+=		gmake lex yacc sh
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-javadx

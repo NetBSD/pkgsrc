@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/04/29 21:31:27 adam Exp $
+# $NetBSD: Makefile,v 1.20 2018/07/18 00:06:10 joerg Exp $
 #
 
 DISTNAME=		mpdas-0.3.2
@@ -12,7 +12,7 @@ COMMENT=		Mpdas is an AudioScrobbler client for MPD written in C++
 LICENSE=		modified-bsd
 
 USE_TOOLS+=		pkg-config
-USE_LANGUAGES=		c++
+USE_LANGUAGES=		c++03
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${DOCDIR} ${EGDIR}
 RCD_SCRIPTS=		mpdas

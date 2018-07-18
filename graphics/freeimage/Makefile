@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/12/26 11:55:01 he Exp $
+# $NetBSD: Makefile,v 1.7 2018/07/18 00:06:18 joerg Exp $
 
 DISTNAME=	FreeImage3170
 PKGNAME=	freeimage-3.17.0
@@ -12,7 +12,7 @@ HOMEPAGE=	http://freeimage.sf.net/
 COMMENT=	Library for supporting PNG, BMP, JPEG, and TIFF
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3 OR mpl-1.0
 
-USE_LANGUAGES+= c c++
+USE_LANGUAGES+= c c++03
 USE_TOOLS+=	gmake
 
 WRKSRC=		${WRKDIR}/FreeImage

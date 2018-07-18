@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/08/18 07:31:07 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2018/07/18 00:06:14 joerg Exp $
 #
 
 DISTNAME=		aliados-0.2.0
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.arrakis.es/~ninsesabe/aliados/
 COMMENT=		CP/M 80 emulator
 
 GNU_CONFIGURE=		YES
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_NCURSES=		yes # tigetstr tparm setupterm
 
 INSTALLATION_DIRS=	bin share/doc/aliados

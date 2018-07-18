@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2015/07/04 16:18:40 joerg Exp $
+# $NetBSD: Makefile,v 1.74 2018/07/18 00:06:23 joerg Exp $
 
 DISTNAME=	xosview-1.8.3
 PKGREVISION=	2
@@ -9,7 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pogo.org.uk/~mark/xosview/
 COMMENT=	X11 graphical display of OS statistics
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c gnu++03
 
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--prefix=${PREFIX}

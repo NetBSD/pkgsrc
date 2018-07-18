@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2017/09/06 10:40:28 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2018/07/18 00:06:17 joerg Exp $
 
 DISTNAME=	xevilsrc2.02r2
 PKGNAME=	xevil-2.02
@@ -20,7 +20,7 @@ WRKSRC=		${WRKDIR}
 
 MAKE_ENV+=	HOSTTYPE="pkgsrc"
 
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c++03
 
 INSTALLATION_DIRS=	bin
 

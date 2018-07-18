@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/06 11:55:03 asau Exp $
+# $NetBSD: Makefile,v 1.12 2018/07/18 00:06:18 joerg Exp $
 #
 
 DISTNAME=		xsc-1.5
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.panix.com/~mbh/xsc/
 COMMENT=		Star Castle clone
 
 GNU_CONFIGURE=		yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 INSTALLATION_DIRS=	bin
 
 do-install:

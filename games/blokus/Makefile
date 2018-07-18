@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/04/25 14:22:52 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2018/07/18 00:06:16 joerg Exp $
 #
 
 DISTNAME=	blokus-1.1
@@ -17,7 +17,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 # XXX: For some reason, the other libraries are hidden when this is
 # specified.
 #LIBS.SunOS+=	-lGLU

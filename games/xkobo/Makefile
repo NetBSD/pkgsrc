@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2018/01/14 15:26:49 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2018/07/18 00:06:17 joerg Exp $
 
 DISTNAME=	xkobo-1.11
 PKGREVISION=	5
@@ -19,7 +19,7 @@ OWN_DIRS_PERMS+=	${VARBASE}/games/xkobo ${GAMES_USER} ${GAMES_GROUP} \
 MAKE_ENV+=	VARBASE=${VARBASE}
 
 USE_IMAKE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 BUILD_TARGET+=	xkobo all
 
 .include "../../x11/libX11/buildlink3.mk"

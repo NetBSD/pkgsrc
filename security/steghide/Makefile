@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/03/05 22:47:55 tnn Exp $
+# $NetBSD: Makefile,v 1.18 2018/07/18 00:06:23 joerg Exp $
 
 DISTNAME=		steghide-0.5.1
 PKGREVISION=		7
@@ -10,7 +10,7 @@ HOMEPAGE=		http://steghide.sourceforge.net/
 COMMENT=		Hides data (steganography) in audio or graphics files
 
 GNU_CONFIGURE=		yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_TOOLS+=		msgfmt
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes

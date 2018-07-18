@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/04/10 03:16:17 snj Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/18 00:06:15 joerg Exp $
 
 DISTNAME=	2c586b592597751f015ac30e05d2a180a1ffd723
 PKGNAME=	libretro-nestopia-20150319
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/nestopia-${DISTNAME}
 BUILD_DIRS=	libretro
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 USE_TOOLS+=	gmake
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro

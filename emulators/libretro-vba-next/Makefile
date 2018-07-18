@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/02/13 21:21:03 snj Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/18 00:06:15 joerg Exp $
 
 DISTNAME=	a0dd88872fc734cf4cc595df1cd1240fa213ac10
 PKGNAME=	libretro-vba-next-20150105
@@ -12,7 +12,7 @@ COMMENT=	Libretro core based on the VBA Next Game Boy Advance emulator
 
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES+=	c c++
+USE_LANGUAGES+=	c c++03
 USE_TOOLS+=	gmake
 
 WRKSRC=		${WRKDIR}/vba-next-${DISTNAME}

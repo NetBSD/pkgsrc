@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2017/05/09 16:20:08 jperkin Exp $
+# $NetBSD: Makefile,v 1.36 2018/07/18 00:06:11 joerg Exp $
 
 DISTNAME=	estic-1.61
 PKGREVISION=	2
@@ -16,7 +16,7 @@ EXTRACT_ONLY=	estic-1.60-sources${EXTRACT_SUFX}
 
 WRKSRC=		${WRKDIR}
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 USE_TOOLS+=	patch unzip
 
 BUILD_TARGET=	depend all

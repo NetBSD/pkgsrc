@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/01/28 16:24:12 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2018/07/18 00:06:12 joerg Exp $
 
 DISTNAME=		gcc-6.2.0
 PKGNAME=		cross-h8300-elf-${DISTNAME}
@@ -25,7 +25,7 @@ DEPENDS+=	cross-h8300-elf-binutils-[0-9]*:../../cross/h8300-elf-binutils
 GCC_REQD+=		6.2
 .endif
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 
 H8300_PREFIX=		${PREFIX}/cross-h8300-elf
 OBJDIR=			../build

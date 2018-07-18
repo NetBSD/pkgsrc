@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/04/29 21:31:44 adam Exp $
+# $NetBSD: Makefile,v 1.12 2018/07/18 00:06:18 joerg Exp $
 
 DISTNAME=	gpick-gpick-0.2.5
 PKGNAME=	${DISTNAME:S/gpick-//}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/thezbyg/gpick/
 COMMENT=	Advanced color picker
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 
 BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
 USE_TOOLS+=	pkg-config

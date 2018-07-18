@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/08/16 20:45:43 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2018/07/18 00:06:22 joerg Exp $
 #
 
 DISTNAME=	latd-1.21
@@ -13,7 +13,7 @@ NOT_FOR_PLATFORM=	Interix-*-* # no direct ethernet support
 
 GNU_CONFIGURE=	yes
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 
 CPPFLAGS+=	-DPREFIX="\"${PREFIX}\""
 

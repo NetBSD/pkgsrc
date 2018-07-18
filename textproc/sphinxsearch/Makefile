@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2016/10/09 21:42:03 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2018/07/18 00:06:24 joerg Exp $
 #
 
 DISTNAME=	sphinx-2.2.11-release
@@ -13,7 +13,7 @@ COMMENT=	Sphinx Full-Text Search Engine
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 USE_LIBTOOL=	yes
 
 BUILD_DEFS+=	VARBASE

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2018/03/12 11:16:26 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2018/07/18 00:06:14 joerg Exp $
 #
 
 DISTNAME=	gambatte_src-0.4.1
@@ -13,7 +13,7 @@ COMMENT=	Game Boy Color emulator
 
 BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 INSTALLATION_DIRS=	bin share/doc/gambatte
 
 SUBST_CLASSES+=		sdl

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2018/04/14 07:34:28 adam Exp $
+# $NetBSD: Makefile,v 1.25 2018/07/18 00:06:19 joerg Exp $
 
 .include "../../x11/qt5/Makefile.common"
 
@@ -21,7 +21,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake gsed intltool pkg-config xgettext
 BUILDLINK_DEPMETHOD.gtk2=	build
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 
 PKGCONFIG_OVERRIDE+=	uim.pc.in
 

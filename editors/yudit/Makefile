@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/10/03 11:43:48 asau Exp $
+# $NetBSD: Makefile,v 1.28 2018/07/18 00:06:14 joerg Exp $
 
 DISTNAME=	yudit-2.9.2
 CATEGORIES=	editors
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 MAKE_JOBS_SAFE=		no
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_TOOLS+=		gmake msgmerge
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-x
