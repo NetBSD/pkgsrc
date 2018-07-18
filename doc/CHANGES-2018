@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3232 2018/07/18 07:20:53 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.3233 2018/07/18 14:28:00 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4632,3 +4632,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/lua-rocks to 2.4.4 [alnsn 2018-07-17]
 	Added devel/go-sync version 0.0.20180314 [minskim 2018-07-18]
 	Updated textproc/go-md2man to 1.0.8 [minskim 2018-07-18]
+	Updated devel/gradle to 4.9 [fhajny 2018-07-18]
