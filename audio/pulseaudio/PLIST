@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2018/07/06 14:10:15 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.28 2018/07/18 23:35:17 maya Exp $
 bin/esdcompat
 bin/pacat
 bin/pacmd
@@ -366,6 +366,12 @@ ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/native-instruments-traktor
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/native-instruments-traktor-audio6.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/native-instruments-traktorkontrol-s4.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/sb-omni-surround-5.1.conf
+${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/iec958-stereo-input.conf
+${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/steelseries-arctis-input.conf
+${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/steelseries-arctis-output-mono.conf
+${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/steelseries-arctis-output-stereo.conf
+${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/dell-dock-tb16-usb-audio.conf
+${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/steelseries-arctis-usb-audio.conf
 share/vala/vapi/libpulse-mainloop-glib.deps
 share/vala/vapi/libpulse-mainloop-glib.vapi
 share/vala/vapi/libpulse-simple.deps
