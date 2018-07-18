@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2018/01/14 17:34:00 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2018/07/18 00:06:17 joerg Exp $
 
 DISTNAME=		Maelstrom-1.4.3-L2.0.6-src.tar.gz
 PKGNAME=		maelstrom-x11-2.0.6
@@ -22,7 +22,7 @@ CONFLICTS=		maelstrom-[0-9]* maelstrom-sdl-[0-9]*
 EXTRACT_ONLY=		${DISTNAME}
 
 WRKSRC=			${WRKDIR}/Maelstrom
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_TOOLS+=		pax
 LDFLAGS.SunOS+=		-lsocket -lnsl
 LIBS.SunOS+=		-lsocket -lnsl

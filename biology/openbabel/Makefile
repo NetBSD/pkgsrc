@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2018/04/16 14:34:11 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2018/07/18 00:06:11 joerg Exp $
 #
 
 DISTNAME=	openbabel-2.3.2
@@ -11,7 +11,7 @@ HOMEPAGE=	http://openbabel.org/
 COMMENT=	Chemistry file translation program
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 USE_TOOLS+=	pkg-config
 USE_CMAKE=	yes
 

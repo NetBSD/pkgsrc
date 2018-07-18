@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2018/04/17 22:29:43 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2018/07/18 00:06:20 joerg Exp $
 
 DISTNAME=		nullmailer-2.1
 PKGREVISION=		2
@@ -15,7 +15,7 @@ LICENSE=		gnu-gpl-v2
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
 .endif
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}

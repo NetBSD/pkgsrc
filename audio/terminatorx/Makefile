@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2018/07/04 13:40:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.51 2018/07/18 00:06:11 joerg Exp $
 
 DISTNAME=	terminatorX-3.82
 PKGNAME=	${DISTNAME:S/X/x/}
@@ -16,7 +16,7 @@ DEPENDS+=	mpg123-[0-9]*:../../audio/mpg123
 DEPENDS+=	sox-[0-9]*:../../audio/sox
 DEPENDS+=	vorbis-tools-[0-9]*:../../audio/vorbis-tools
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes

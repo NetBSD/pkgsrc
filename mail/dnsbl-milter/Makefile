@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/04/10 01:48:37 mef Exp $
+# $NetBSD: Makefile,v 1.5 2018/07/18 00:06:20 joerg Exp $
 #
 
 VERSION=	6.45
@@ -17,7 +17,7 @@ PKG_SYSCONFSUBDIR?=	dnsbl-milter
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}/${PKG_SYSCONFSUBDIR}
 CONFIGURE_ARGS+=	ac_cv_path_BASH=${SH}
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 
 RCD_SCRIPTS=		dnsbl-milter
 

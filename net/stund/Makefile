@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/12/04 23:59:20 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/18 00:06:23 joerg Exp $
 
 DISTNAME=	stund-0.97
 CATEGORIES=	net
@@ -11,7 +11,7 @@ COMMENT=	STUN Client and Server
 LICENSE=	vovida-license
 
 WRKSRC=		${WRKDIR}/stund
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c++03
 USE_TOOLS+=	gmake
 
 INSTALLATION_DIRS=	bin sbin share/doc/stund
