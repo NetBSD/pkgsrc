@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2018/04/16 14:34:44 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2018/07/18 00:06:19 joerg Exp $
 #
 
 DISTNAME=	ibus-unikey-0.6.1
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v3
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_TOOLS+=		gmake pkg-config intltool msgfmt
 
 CONFIGURE_ARGS+=	--with-gtk-version=3

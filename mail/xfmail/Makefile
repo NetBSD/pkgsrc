@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2018/01/28 20:10:55 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2018/07/18 00:06:20 joerg Exp $
 
 DISTNAME=		xfmail-1.5.5
 PKGREVISION=		8
@@ -13,7 +13,7 @@ COMMENT=		Xforms based mail application for Unix operating systems
 # A few files are.
 #LICENSE+=		mit-license
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		YES
 

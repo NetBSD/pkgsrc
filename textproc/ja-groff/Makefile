@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2016/07/09 06:39:06 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2018/07/18 00:06:24 joerg Exp $
 
 DISTNAME=	groff-1.10
 PKGNAME=	ja-groff-0.99
@@ -18,7 +18,7 @@ COMMENT=	Japanese enhancement of GNU groff
 MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=	gmake perl:run yacc
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 GNU_CONFIGURE=	yes
 CONFIGURE_HAS_MANDIR=	no
 #CONFIGURE_ENV+= CXXFLAGS="-fno-rtti -fno-exceptions -O"
