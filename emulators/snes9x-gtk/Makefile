@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2018/07/06 15:06:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.58 2018/07/18 00:06:15 joerg Exp $
 
 DISTNAME=	snes9x-1.53-src
 PKGNAME=	snes9x-gtk-1.53.81
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/gtk
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 USE_TOOLS+=	intltool msgfmt msgmerge perl pkg-config xgettext
 
 LDFLAGS.SunOS+=	-lsocket -lnsl

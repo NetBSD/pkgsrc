@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2018/01/28 16:24:14 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2018/07/18 00:06:20 joerg Exp $
 
 GCC_PKGNAME=	gcc49
 .include	"version.mk"
@@ -24,7 +24,7 @@ EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 
 NOT_FOR_PLATFORM=	Interix-*-*
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_TOOLS+=		gmake makeinfo sed:run
 USE_TOOLS.NetBSD+=	gsed
 

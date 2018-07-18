@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.69 2016/10/01 20:40:06 mrg Exp $
+# $NetBSD: Makefile.common,v 1.70 2018/07/18 00:06:24 joerg Exp $
 #
 # used by wm/icewm/Makefile
 # used by wm/icewm-imlib/Makefile
@@ -22,7 +22,7 @@ PATCHDIR=		${.CURDIR}/../../wm/icewm/patches
 CONFIGURE_ARGS+=	--enable-gradients
 CONFIGURE_ARGS+=	--enable-antialiasing
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 
 PKG_SYSCONFSUBDIR=	icewm
 

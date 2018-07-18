@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2016/01/23 05:06:29 zafer Exp $
+# $NetBSD: Makefile,v 1.28 2018/07/18 00:06:10 joerg Exp $
 #
 
 DISTNAME=		pbzip2-1.1.13
@@ -14,7 +14,7 @@ COMMENT=		Parallel implementation of the bzip2 block-sorting file compressor
 PTHREAD_AUTO_VARS=	yes
 PTHREAD_OPTS+=		require
 
-USE_LANGUAGES=		c++
+USE_LANGUAGES=		c++03
 
 CPPFLAGS+=		-D_LARGEFILE_SOURCE=1
 CPPFLAGS+=		-D_FILE_OFFSET_BITS=64

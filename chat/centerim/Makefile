@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2018/04/29 21:31:28 adam Exp $
+# $NetBSD: Makefile,v 1.42 2018/07/18 00:06:11 joerg Exp $
 #
 
 DISTNAME=	centerim-4.22.10
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake perl:run
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ssl --with-openssl=${SSLBASE:Q}

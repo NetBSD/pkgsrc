@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/04/30 14:19:42 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2018/07/18 00:06:21 joerg Exp $
 #
 
 DISTNAME=		open-axiom-1.4.1
@@ -14,7 +14,7 @@ COMMENT=		Platform for symbolic, algebraic, and numerical computations
 
 MAKE_JOBS_SAFE=		no
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake makeinfo awk:run
 BUILD_DEPENDS+=		noweb-[0-9]*:../../devel/noweb

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2018/04/29 21:31:44 adam Exp $
+# $NetBSD: Makefile,v 1.61 2018/07/18 00:06:18 joerg Exp $
 
 DISTNAME=	gri-2.12.23
 PKGREVISION=	16
@@ -15,7 +15,7 @@ BUILD_DEPENDS+=		dvipsk-[0-9]*:../../print/dvipsk
 BUILD_DEPENDS+=		tex-tex-[0-9]*:../../print/tex-tex
 BUILD_DEPENDS+=		p5-Perl4-CoreLibs-[0-9]*:../../devel/p5-Perl4-CoreLibs
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_TOOLS+=		aclocal autoconf automake gmake gs:run makeinfo perl
 GNU_CONFIGURE=		yes
 REPLACE_PERL+=		src/gri_merge src/gri_unpage
