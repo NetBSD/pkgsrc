@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/04/25 14:20:46 tnn Exp $
+# $NetBSD: Makefile,v 1.23 2018/07/18 00:06:15 joerg Exp $
 
 DISTNAME=	mednafen-0.8.D.3
 PKGNAME=	mednafen-0.8.13.3
@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v2
 WRKSRC=			${WRKDIR}/mednafen
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		intltool pkg-config
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 INSTALLATION_DIRS=	share/doc/mednafen

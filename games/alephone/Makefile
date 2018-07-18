@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2015/04/25 14:22:51 tnn Exp $
+# $NetBSD: Makefile,v 1.24 2018/07/18 00:06:16 joerg Exp $
 
 DISTNAME=	AlephOne-20120514
 PKGNAME=	${DISTNAME:tl}
@@ -12,7 +12,7 @@ HOMEPAGE=	http://marathon.sourceforge.net/
 COMMENT=	Classic 2.5D FPS game engine, updated to use SDL
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_TOOLS+=		pkg-config gmake
 GNU_CONFIGURE=		yes
 

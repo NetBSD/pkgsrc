@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/07/03 05:03:19 adam Exp $
+# $NetBSD: Makefile,v 1.8 2018/07/18 00:06:17 joerg Exp $
 
 DISTNAME=	teeworlds-0.6.3-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://www.teeworlds.com/
 COMMENT=	Fast-paced retro multiplayer shooter
 LICENSE=	zlib AND 2-clause-bsd AND modified-bsd AND cc-by-sa-v3.0
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 
 BUILD_DEPENDS+=	bam>=0.4.0:../../devel/bam
 

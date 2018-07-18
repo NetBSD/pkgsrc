@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/02/16 15:54:09 wiedi Exp $
+# $NetBSD: Makefile,v 1.7 2018/07/18 00:06:24 joerg Exp $
 
 DISTNAME=	xtide-2.8.3
 PKGREVISION=	5
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.flaterco.com/
 COMMENT=	X11 tide predictor
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 
 PREV_PKGPATH=	misc/xtide
 

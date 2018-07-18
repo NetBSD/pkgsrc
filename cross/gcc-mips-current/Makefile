@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/01/28 16:24:12 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2018/07/18 00:06:12 joerg Exp $
 
 GCC_DIST_VERSION=4.9.2
 GCC_PKGNAME=	gcc-mips-${GCC_DIST_VERSION}
@@ -22,7 +22,7 @@ EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 
 NOT_FOR_PLATFORM=	Interix-*-*
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_TOOLS+=		gmake makeinfo sed:run perl
 GNU_CONFIGURE=		yes
 ## Build outside ${WRKSRC}

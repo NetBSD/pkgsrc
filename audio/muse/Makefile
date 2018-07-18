@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2018/07/04 13:40:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.61 2018/07/18 00:06:10 joerg Exp $
 #
 
 DISTNAME=	MuSE-0.9
@@ -14,7 +14,7 @@ COMMENT=	Multiple Streaming Engine
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_TOOLS+=		gmake pkg-config msgfmt
 USE_PKGLOCALEDIR=	yes
 
