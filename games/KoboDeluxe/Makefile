@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2015/04/25 14:22:51 tnn Exp $
+# $NetBSD: Makefile,v 1.28 2018/07/18 00:06:15 joerg Exp $
 #
 
 DISTNAME=	KoboDeluxe-0.5.1
@@ -13,7 +13,7 @@ COMMENT=	Multi-way scrolling shoot 'em up game for X
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 GNU_CONFIGURE=		YES
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_TOOLS+=		gmake
 BUILD_DEFS+=		VARBASE
 CONFIGURE_ARGS+=	--sharedstatedir=${VARBASE}/games

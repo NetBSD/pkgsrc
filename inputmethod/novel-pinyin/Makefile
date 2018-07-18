@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2018/04/16 14:34:45 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2018/07/18 00:06:19 joerg Exp $
 
 DISTNAME=	novel-pinyin-0.2.5
 PKGREVISION=	30
@@ -11,7 +11,7 @@ COMMENT=	HMM-based sentence pinyin input method for Chinese
 LICENSE=	gnu-gpl-v2
 
 BDB_ACCEPTED=		db4 db5
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_LIBTOOL=		yes
 USE_TOOLS+=		intltool pkg-config msgfmt msgmerge xgettext
 GNU_CONFIGURE=		yes

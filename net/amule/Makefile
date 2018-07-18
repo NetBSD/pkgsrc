@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2018/04/16 14:34:59 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2018/07/18 00:06:22 joerg Exp $
 
 DISTNAME=	aMule-2.3.1
 PKGNAME=	${DISTNAME:tl}
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 CONFLICTS=		xmule-[0-9]*
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config perl:run
 GNU_CONFIGURE=		yes

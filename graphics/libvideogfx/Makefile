@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2017/08/16 20:45:39 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2018/07/18 00:06:19 joerg Exp $
 #
 
 DISTNAME=	libvideogfx-1.0.3
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	C++ library for low-level video processing
 LICENSE=	gnu-lgpl-v2.1
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 

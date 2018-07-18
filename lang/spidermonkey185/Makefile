@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/05/02 12:42:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2018/07/18 00:06:20 joerg Exp $
 #
 
 DISTNAME=	js185-1.0.0
@@ -15,7 +15,7 @@ LICENSE=	mpl-1.1
 WRKSRC=		${WRKDIR}/js-1.8.5/js/src
 
 USE_TOOLS+=	gmake pkg-config perl:build zip:build
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 USE_LIBTOOL=	yes
 
 GNU_CONFIGURE=		yes

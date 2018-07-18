@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2018/03/12 11:17:04 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2018/07/18 00:06:21 joerg Exp $
 
 DISTNAME=	vic-2.8ucl1.4.0beta-4337
 PKGNAME=	vic-devel-2.8.1.4.0beta.4337
@@ -24,7 +24,7 @@ EXTRACT_SUFX=	.tgz
 WRKSRC=		${WRKDIR}/vic-mpeg4
 GNU_CONFIGURE=	yes
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c gnu++03
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
