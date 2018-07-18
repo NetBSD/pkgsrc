@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/04/16 14:34:28 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2018/07/18 00:06:16 joerg Exp $
 
 DISTNAME=	atque-1.1.2
 PKGREVISION=	6
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf automake gmake
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 
 .include "../../devel/boost-headers/buildlink3.mk"
 BUILDLINK_API_DEPENDS.boost-headers+=	boost-headers>=1.31

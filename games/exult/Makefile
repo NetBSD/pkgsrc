@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2018/01/14 17:33:58 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2018/07/18 00:06:16 joerg Exp $
 
 DISTNAME=	exult-1.4.9rc1
 PKGREVISION=	2
@@ -11,7 +11,7 @@ COMMENT=	Open-source Ultima 7 engine
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c gnu++03
 USE_TOOLS+=	yacc flex
 
 CFLAGS+=		-fpermissive

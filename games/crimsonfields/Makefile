@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2015/04/25 14:22:53 tnn Exp $
+# $NetBSD: Makefile,v 1.44 2018/07/18 00:06:16 joerg Exp $
 #
 
 DISTNAME=		crimson-0.5.2
@@ -12,7 +12,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://crimson.seul.org/
 COMMENT=		Tactical war game in the tradition of Battle Isle
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_TOOLS+=		gmake
 # not standard locale files
 #USE_PKGLOCALEDIR=	no

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2018/03/12 11:17:44 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2018/07/18 00:06:25 joerg Exp $
 
 DISTNAME=	pekwm-0.1.17
 PKGREVISION=	1
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2018/04/29 21:31:42 adam Exp $
+# $NetBSD: Makefile,v 1.27 2018/07/18 00:06:17 joerg Exp $
 
 DISTNAME=	warmux-11.01
 PKGREVISION=	22
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Battle game
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config msgfmt
 GNU_CONFIGURE=		yes

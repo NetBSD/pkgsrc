@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2018/04/16 14:33:49 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2018/07/18 00:06:14 joerg Exp $
 #
 
 DISTNAME=	gpsim-20050905
@@ -11,7 +11,7 @@ HOMEPAGE=	http://gpsim.sourceforge.net/
 COMMENT=	PIC emulator with X interface
 
 GNU_CONFIGURE=	YES
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 
 USE_TOOLS+=	bison gmake lex pkg-config
 USE_LIBTOOL=	YES

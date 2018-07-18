@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2018/03/12 11:17:04 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2018/07/18 00:06:21 joerg Exp $
 #
 
 DISTNAME=		vatsrc-4.0b2
@@ -17,7 +17,7 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-tcl=${PREFIX:Q} --with-tk=${PREFIX:Q}
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 
 CPPFLAGS+=		-I${LOCALBASE}/include -I${LOCALBASE}/include/gsm
 

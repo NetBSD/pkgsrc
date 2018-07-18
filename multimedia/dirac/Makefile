@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2016/07/09 06:38:38 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2018/07/18 00:06:22 joerg Exp $
 #
 
 DISTNAME=		dirac-1.0.2
@@ -12,7 +12,7 @@ COMMENT=		Open-source video codec designed at the BBC
 
 USE_TOOLS+=		pkg-config perl:run
 USE_LIBTOOL=		yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	dirac.pc.in

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2018/04/16 14:34:33 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2018/07/18 00:06:18 joerg Exp $
 
 DISTNAME=	cinepaint-0.22-1
 PKGNAME=	cinepaint-0.22.1
@@ -12,7 +12,7 @@ COMMENT=	Motion picture painting and image retouching program
 
 MAKE_JOBS_SAFE=		no
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config msgfmt gmake
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2018/01/07 11:42:47 rillig Exp $
+# $NetBSD: Makefile,v 1.49 2018/07/18 00:06:10 joerg Exp $
 
 DISTNAME=	dap-2.1.5
 PKGREVISION=	4
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 MAKE_JOBS_SAFE=		no
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 INSTALLATION_DIRS+=	bin share/doc/dap
 MAKE_FILE=		Makefile.netbsd
 MAKE_ENV+=		OTHER_INCLUDE_DIR=.

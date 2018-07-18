@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/08/16 20:21:10 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2018/07/18 00:06:19 joerg Exp $
 #
 
 DISTNAME=		LibRaw-0.13.8
@@ -11,7 +11,7 @@ HOMEPAGE=	https://www.libraw.org/
 COMMENT=	Raw decoding/processing library
 LICENSE=	gnu-lgpl-v2.1 OR cddl-1.0
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 GNU_CONFIGURE=	yes
 USE_TOOLS+=		pkg-config gmake
 USE_LIBTOOL=	yes

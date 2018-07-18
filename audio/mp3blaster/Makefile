@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2018/04/18 00:40:47 christos Exp $
+# $NetBSD: Makefile,v 1.39 2018/07/18 00:06:10 joerg Exp $
 
 DISTNAME=	mp3blaster-3.2.6
 #PKGREVISION=	6
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 CONFLICTS=		splay-[0-9]*
 
 PTHREAD_OPTS+=	require
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 USE_TOOLS+=	gmake
 
 GNU_CONFIGURE=	yes

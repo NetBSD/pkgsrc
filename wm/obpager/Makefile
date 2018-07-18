@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/23 10:24:14 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2018/07/18 00:06:25 joerg Exp $
 #
 
 DISTNAME=	obpager-1.8
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://obpager.sourceforge.net/
 COMMENT=	Lightweight pager applet for OpenBox
 
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c++03
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 
