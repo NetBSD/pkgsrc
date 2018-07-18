@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.5 2018/07/16 10:58:50 maya Exp $
+# $NetBSD: Makefile.php,v 1.6 2018/07/18 07:33:12 manu Exp $
 # used by lang/php72/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
@@ -46,6 +46,7 @@ CONFIGURE_ARGS+=	--with-pcre-regex=${BUILDLINK_PREFIX.pcre}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${PHP_PKG_PREFIX}
 PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts readline argon2 sqlite3
+PKG_SUPPORTED_OPTIONS+=	disable-filter-url
 PKG_SUGGESTED_OPTIONS+=	inet6 ssl readline sqlite3
 
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin" || ${OPSYS} == "FreeBSD"
@@ -102,6 +103,10 @@ CONFIGURE_ARGS+=	--with-sqlite3=${BUILDLINK_PREFIX.sqlite3}
 .include "../../databases/sqlite3/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=    --without-sqlite3
+.endif
+
+.if !empty(PKG_OPTIONS:Mdisable-filter-url)
+CFLAGS+=		-DDISABLE_FILTER_URL
 .endif
 
 DL_AUTO_VARS=		yes
