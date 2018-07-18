@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3235 2018/07/18 22:57:47 maya Exp $
+$NetBSD: CHANGES-2018,v 1.3236 2018/07/18 23:24:22 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4638,3 +4638,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/gcc6 to 6.4.0nb3 [maya 2018-07-18]
 	Updated lang/gcc7 to 7.3.0nb3 [maya 2018-07-18]
 	Updated lang/gcc8 to 8.1.0nb1 [maya 2018-07-18]
+	Updated lang/gcc48 to 4.8.5nb6 [maya 2018-07-18]
