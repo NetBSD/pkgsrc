@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2018/04/13 13:55:32 jaapb Exp $
+# $NetBSD: Makefile,v 1.5 2018/07/19 13:01:34 jaapb Exp $
 
-VERSION=	5.0.1
+VERSION=	5.2
 GITHUB_PROJECT=	ppx_tools_versioned
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
-PKGREVISION=	3
 PKGNAME=	ocaml-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=let-def/}
@@ -18,6 +17,7 @@ USE_LANGUAGES=	# none
 USE_TOOLS=	gmake
 
 OCAML_USE_FINDLIB=	yes
+OCAML_USE_JBUILDER=	yes
 
 .include "../../devel/ocaml-migrate-parsetree/buildlink3.mk"
 .include "../../mk/ocaml.mk"
