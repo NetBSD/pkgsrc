@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.32 2018/04/10 11:15:30 jaapb Exp $
+# $NetBSD: Makefile,v 1.33 2018/07/19 14:19:46 jaapb Exp $
 #
 
 GITHUB_PROJECT=	camlp5
-DISTNAME=	${GITHUB_PROJECT}-7.05
+DISTNAME=	${GITHUB_PROJECT}-7.06
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=camlp5/}
-GITHUB_TAG=	rel705
+GITHUB_TAG=	rel706
 
 MAINTAINER=	tonio@NetBSD.org
 HOMEPAGE=	https://camlp5.github.io/
-COMMENT=	Camlp5 is a preprocessor-pretty-printer of ocaml
+COMMENT=	Preprocessor-pretty-printer for ocaml
 LICENSE=	modified-bsd
 
 HAS_CONFIGURE=	yes
