@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/04/09 08:58:47 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/07/19 14:15:23 jaapb Exp $
 ${OCAML_SITELIB}/lwt_ppx/META
 ${OCAML_SITELIB}/lwt_ppx/lwt_ppx.dune
 ${OCAML_SITELIB}/lwt_ppx/opam
@@ -14,4 +14,5 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt_ppx/ppx_lwt.cmxs
 ${OCAML_SITELIB}/lwt_ppx/ppx_lwt.ml
 ${OCAML_SITELIB}/lwt_ppx/ppx_lwt.mli
 share/doc/lwt_ppx/CHANGES
+share/doc/lwt_ppx/LICENSE.md
 share/doc/lwt_ppx/README.md
