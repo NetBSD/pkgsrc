@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.252 2018/02/28 10:10:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.253 2018/07/19 04:06:15 tpaul Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -138,6 +138,7 @@ SUBDIR+=	ski
 SUBDIR+=	sms_sdl
 SUBDIR+=	snes9x
 SUBDIR+=	snes9x-gtk
+SUBDIR+=	softvms
 SUBDIR+=	spim
 SUBDIR+=	stella
 SUBDIR+=	suse100_32_alsa
