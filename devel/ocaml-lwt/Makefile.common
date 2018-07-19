@@ -1,13 +1,13 @@
-# $NetBSD: Makefile.common,v 1.4 2018/04/13 12:52:00 jaapb Exp $
+# $NetBSD: Makefile.common,v 1.5 2018/07/19 14:14:28 jaapb Exp $
 
 # used by devel/ocaml-lwt_glib/Makefile
 # used by devel/ocaml-lwt_ppx/Makefile
 # used by devel/ocaml-lwt_react/Makefile
 
-LWT_VERSION=	4.0.1
+LWT_VERSION=	4.1.0
 DISTNAME=	lwt-${LWT_VERSION}
 
-LICENSE=	gnu-lgpl-v2.1
+LICENSE=	mit
 
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 GITHUB_PROJECT=	lwt
