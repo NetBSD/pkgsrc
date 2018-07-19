@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.36 2018/07/04 13:40:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.37 2018/07/19 15:15:31 jaapb Exp $
 
 .include "../../lang/ocaml/Makefile.common"
 DISTINFO_FILE= ${PKGDIR}/../../lang/ocaml/distinfo
 PATCHDIR= ${PKGDIR}/../../lang/ocaml/patches
 
 PKGNAME=		${DISTNAME:S/ocaml/ocaml-graphics/}
-PKGREVISION=	11
+PKGREVISION=	12
 
 COMMENT+=		(graphics library)
 

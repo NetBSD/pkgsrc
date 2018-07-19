@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2018/04/13 13:55:29 jaapb Exp $
+# $NetBSD: Makefile,v 1.52 2018/07/19 15:15:20 jaapb Exp $
 #
 
 DISTNAME=	geneweb-5.01
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	databases
 EXTRACT_SUFX=	.tgz
 MASTER_SITES=	ftp://ftp.inria.fr/INRIA/Projects/cristal/geneweb/Src/
