@@ -626,7 +626,7 @@ func (cv *VartypeCheck) Message() {
 	}
 }
 
-// A package option from options.mk
+// Option checks whether a single package option from options.mk conforms to the naming conventions.
 func (cv *VartypeCheck) Option() {
 	line, value, valueNovar := cv.Line, cv.Value, cv.ValueNoVar
 
@@ -638,8 +638,12 @@ func (cv *VartypeCheck) Option() {
 	}
 
 	if m, optname := match1(value, `^-?([a-z][-0-9a-z+]*)$`); m {
+		if G.Mk != nil && !G.Mk.FirstTime("option:"+optname) {
+			return
+		}
+
 		if _, found := G.Pkgsrc.PkgOptions[optname]; !found { // There's a difference between empty and absent here.
-			line.Warnf("Unknown option \"%s\".", optname)
+			line.Warnf("Unknown option %q.", optname)
 			Explain(
 				"This option is not documented in the mk/defaults/options.description",
 				"file.  Please think of a brief but precise description and either",
