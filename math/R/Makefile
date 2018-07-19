@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.186 2018/07/04 07:27:13 wen Exp $
+# $NetBSD: Makefile,v 1.187 2018/07/19 01:41:32 maya Exp $
 
 DISTNAME=	R-3.5.1
 CATEGORIES=	math
@@ -8,10 +8,6 @@ MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://www.R-project.org/
 COMMENT=	Statistical language for data analysis and graphics
 LICENSE=	gnu-gpl-v2
-
-#needs FPC code not found in older versions of NetBSD
-NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-alpha NetBSD-1.5-alpha \
-			NetBSD-1.5.*-alpha NetBSD-1.5[A-U]-alpha
 
 USE_GCC_RUNTIME=	yes
 
@@ -144,10 +140,6 @@ SUBST_FILES.fixwrap=	libtool
 SUBST_SED.fixwrap=	-e "s,${WRAPPER_BINDIR}/libtool,${PKG_LIBTOOL},g"
 
 BUILDLINK_API_DEPENDS.bzip2+=	bzip2>=1.0.5
-
-.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M1.[0-6]*)
-CONFIGURE_ARGS+=	--enable-mbcs=no
-.endif
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && autoreconf -fvi
