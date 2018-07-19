@@ -121,6 +121,17 @@ func (src *Pkgsrc) InitVartypes() {
 			return joined
 		}())
 
+	enumFrom := func(fileName, varname, defval string) *BasicType {
+		lines, _ := readLines(src.File(fileName), true)
+		mklines := NewMkLines(lines)
+		for _, mkline := range mklines.mklines {
+			if mkline.IsVarassign() && mkline.Varname() == varname {
+				return enum(mkline.Value())
+			}
+		}
+		return enum(defval)
+	}
+
 	// Last synced with mk/defaults/mk.conf revision 1.269
 	usr("USE_CWRAPPERS", lkNone, enum("yes no auto"))
 	usr("ALLOW_VULNERABLE_PACKAGES", lkNone, BtYes)
@@ -588,7 +599,7 @@ func (src *Pkgsrc) InitVartypes() {
 	sys("EMACS_PKGNAME_PREFIX", lkNone, BtIdentifier) // Or the empty string.
 	sys("EMACS_TYPE", lkNone, enum("emacs xemacs"))
 	acl("EMACS_USE_LEIM", lkNone, BtYes, "")
-	acl("EMACS_VERSIONS_ACCEPTED", lkShell, enum("emacs25 emacs21 emacs21nox emacs20 xemacs215 xemacs215nox xemacs214 xemacs214nox"), "Makefile: set")
+	acl("EMACS_VERSIONS_ACCEPTED", lkShell, enumFrom("editors/emacs/modules.mk", "_EMACS_VERSIONS_ALL", "emacs25 emacs21 emacs21nox emacs20 xemacs215 xemacs215nox xemacs214 xemacs214nox"), "Makefile: set")
 	sys("EMACS_VERSION_MAJOR", lkNone, BtInteger)
 	sys("EMACS_VERSION_MINOR", lkNone, BtInteger)
 	acl("EMACS_VERSION_REQD", lkShell, enum("emacs25 emacs25nox emacs21 emacs21nox emacs20 xemacs215 xemacs214"), "Makefile: set, append")
@@ -785,7 +796,7 @@ func (src *Pkgsrc) InitVartypes() {
 	acl("MESSAGE_SUBST", lkShell, BtShellWord, "Makefile, Makefile.common, options.mk: append")
 	pkg("META_PACKAGE", lkNone, BtYes)
 	sys("MISSING_FEATURES", lkShell, BtIdentifier)
-	acl("MYSQL_VERSIONS_ACCEPTED", lkShell, enum("51 55 56"), "Makefile: set")
+	acl("MYSQL_VERSIONS_ACCEPTED", lkShell, enumFrom("mk/mysql.buildlink3.mk", "MYSQL_VERSIONS_ACCEPTED", "57 56 55 51 MARIADB55"), "Makefile: set")
 	usr("MYSQL_VERSION_DEFAULT", lkNone, BtVersion)
 	sys("NM", lkNone, BtShellCommand)
 	sys("NONBINMODE", lkNone, BtFileMode)
@@ -833,7 +844,7 @@ func (src *Pkgsrc) InitVartypes() {
 	pkg("PERL5_REQD", lkShell, BtVersion)
 	pkg("PERL5_USE_PACKLIST", lkNone, BtYesNo)
 	sys("PGSQL_PREFIX", lkNone, BtPathname)
-	acl("PGSQL_VERSIONS_ACCEPTED", lkShell, enum("10 93 94 95 96"), "")
+	acl("PGSQL_VERSIONS_ACCEPTED", lkShell, enumFrom("mk/pgsql.buildlink3.mk", "PGSQL_VERSIONS_ACCEPTED", "10 96 95 94 93"), "")
 	usr("PGSQL_VERSION_DEFAULT", lkNone, BtVersion)
 	sys("PG_LIB_EXT", lkNone, enum("dylib so"))
 	sys("PGSQL_TYPE", lkNone, enum("postgresql81-client postgresql80-client"))
