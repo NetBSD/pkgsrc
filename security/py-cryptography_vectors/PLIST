@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/03/22 11:49:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/07/19 09:24:37 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -460,6 +460,34 @@ ${PYSITELIB}/cryptography_vectors/hashes/SHA2/SHA512LongMsg.rsp
 ${PYSITELIB}/cryptography_vectors/hashes/SHA2/SHA512Monte.rsp
 ${PYSITELIB}/cryptography_vectors/hashes/SHA2/SHA512Monte.txt
 ${PYSITELIB}/cryptography_vectors/hashes/SHA2/SHA512ShortMsg.rsp
+${PYSITELIB}/cryptography_vectors/hashes/SHA2/SHA512_224LongMsg.rsp
+${PYSITELIB}/cryptography_vectors/hashes/SHA2/SHA512_224Monte.rsp
+${PYSITELIB}/cryptography_vectors/hashes/SHA2/SHA512_224Monte.txt
+${PYSITELIB}/cryptography_vectors/hashes/SHA2/SHA512_224ShortMsg.rsp
+${PYSITELIB}/cryptography_vectors/hashes/SHA2/SHA512_256LongMsg.rsp
+${PYSITELIB}/cryptography_vectors/hashes/SHA2/SHA512_256Monte.rsp
+${PYSITELIB}/cryptography_vectors/hashes/SHA2/SHA512_256Monte.txt
+${PYSITELIB}/cryptography_vectors/hashes/SHA2/SHA512_256ShortMsg.rsp
+${PYSITELIB}/cryptography_vectors/hashes/SHA3/SHA3_224LongMsg.rsp
+${PYSITELIB}/cryptography_vectors/hashes/SHA3/SHA3_224Monte.rsp
+${PYSITELIB}/cryptography_vectors/hashes/SHA3/SHA3_224ShortMsg.rsp
+${PYSITELIB}/cryptography_vectors/hashes/SHA3/SHA3_256LongMsg.rsp
+${PYSITELIB}/cryptography_vectors/hashes/SHA3/SHA3_256Monte.rsp
+${PYSITELIB}/cryptography_vectors/hashes/SHA3/SHA3_256ShortMsg.rsp
+${PYSITELIB}/cryptography_vectors/hashes/SHA3/SHA3_384LongMsg.rsp
+${PYSITELIB}/cryptography_vectors/hashes/SHA3/SHA3_384Monte.rsp
+${PYSITELIB}/cryptography_vectors/hashes/SHA3/SHA3_384ShortMsg.rsp
+${PYSITELIB}/cryptography_vectors/hashes/SHA3/SHA3_512LongMsg.rsp
+${PYSITELIB}/cryptography_vectors/hashes/SHA3/SHA3_512Monte.rsp
+${PYSITELIB}/cryptography_vectors/hashes/SHA3/SHA3_512ShortMsg.rsp
+${PYSITELIB}/cryptography_vectors/hashes/SHAKE/SHAKE128LongMsg.rsp
+${PYSITELIB}/cryptography_vectors/hashes/SHAKE/SHAKE128Monte.rsp
+${PYSITELIB}/cryptography_vectors/hashes/SHAKE/SHAKE128ShortMsg.rsp
+${PYSITELIB}/cryptography_vectors/hashes/SHAKE/SHAKE128VariableOut.rsp
+${PYSITELIB}/cryptography_vectors/hashes/SHAKE/SHAKE256LongMsg.rsp
+${PYSITELIB}/cryptography_vectors/hashes/SHAKE/SHAKE256Monte.rsp
+${PYSITELIB}/cryptography_vectors/hashes/SHAKE/SHAKE256ShortMsg.rsp
+${PYSITELIB}/cryptography_vectors/hashes/SHAKE/SHAKE256VariableOut.rsp
 ${PYSITELIB}/cryptography_vectors/hashes/blake2/blake2b.txt
 ${PYSITELIB}/cryptography_vectors/hashes/blake2/blake2s.txt
 ${PYSITELIB}/cryptography_vectors/hashes/ripemd160/ripevectors.txt
@@ -2054,6 +2082,7 @@ ${PYSITELIB}/cryptography_vectors/x509/PKITS_data/smime/SignedValidpathLenConstr
 ${PYSITELIB}/cryptography_vectors/x509/PKITS_data/smime/SignedValidpre2000UTCnotBeforeDateTest3.eml
 ${PYSITELIB}/cryptography_vectors/x509/PKITS_data/smime/SignedinhibitAnyPolicyTest3.eml
 ${PYSITELIB}/cryptography_vectors/x509/alternate-rsa-sha1-oid.pem
+${PYSITELIB}/cryptography_vectors/x509/badasn1time.pem
 ${PYSITELIB}/cryptography_vectors/x509/badssl-sct.pem
 ${PYSITELIB}/cryptography_vectors/x509/bigoid.pem
 ${PYSITELIB}/cryptography_vectors/x509/cryptography.io.pem
