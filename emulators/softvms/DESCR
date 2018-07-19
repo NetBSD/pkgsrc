@@ -1,0 +1,6 @@
+An emulator capable of running some Sega VMS games.
+
+VMS games run on a Sega Dreamcast memory card called a VMU (or VMS in
+some regions). It has a 48x32 monochrome LCD display, gamepad,
+speaker, directional pad, four action buttons, and the ability to
+connect to other VMUs.
