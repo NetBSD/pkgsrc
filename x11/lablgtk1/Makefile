@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2018/04/13 13:55:29 jaapb Exp $
+# $NetBSD: Makefile,v 1.22 2018/07/19 15:15:31 jaapb Exp $
 
 DISTNAME=	lablgtk-1.2.7
 PKGNAME=	lablgtk1-1.2.7
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	x11
 MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/571/
 
