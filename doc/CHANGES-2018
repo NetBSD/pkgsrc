@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3242 2018/07/19 09:10:49 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3243 2018/07/19 09:25:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4647,3 +4647,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/py-numexpr to 2.6.6 [adam 2018-07-19]
 	Updated textproc/py-sphinx to 1.7.6 [adam 2018-07-19]
 	Updated devel/py-pylint-plugin-utils to 0.4 [adam 2018-07-19]
+	Updated security/py-cryptography_vectors to 2.3 [adam 2018-07-19]
+	Updated security/py-cryptography to 2.3 [adam 2018-07-19]
