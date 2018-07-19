@@ -1,4 +1,4 @@
-# $NetBSD: texmf.mk,v 1.8 2015/11/25 12:53:09 jperkin Exp $
+# $NetBSD: texmf.mk,v 1.9 2018/07/19 12:57:38 leot Exp $
 #
 # This Makefile fragment is intended to be included by packages that
 # install TeX packages.  It rebuilds the ls-R databases at
@@ -12,13 +12,13 @@
 #    TEX_CONFIG_NAMES - A list of config fragments to add to texmf.cnf.
 #
 #    TEX_KANJIMAP_FILES
-#	See ../../print/texlive-tetex/map.mk.
+#	See ../../print/tex-tetex/map.mk.
 #
 #    TEX_MAP_FILES
-#	See ../../print/texlive-tetex/map.mk.
+#	See ../../print/tex-tetex/map.mk.
 #
 #    TEX_MIXEDMAP_FILES
-#	See ../../print/texlive-tetex/map.mk.
+#	See ../../print/tex-tetex/map.mk.
 #
 
 .if !defined(TEX_TEXMF_MK)
