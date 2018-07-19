@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3238 2018/07/19 04:47:13 tpaul Exp $
+$NetBSD: CHANGES-2018,v 1.3239 2018/07/19 06:38:24 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4640,3 +4640,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/gcc8 to 8.1.0nb1 [maya 2018-07-18]
 	Updated lang/gcc48 to 4.8.5nb6 [maya 2018-07-18]
 	Added emulators/softvms version 1.9 [tpaul 2018-07-19]
+	Updated pkgtools/pkglint to 5.5.14 [rillig 2018-07-12]
