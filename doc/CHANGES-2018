@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3241 2018/07/19 08:58:06 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3242 2018/07/19 09:10:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4645,3 +4645,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/ffmpeg4 to 4.0.2 [adam 2018-07-19]
 	Updated www/apache24 to 2.4.34 [adam 2018-07-19]
 	Updated math/py-numexpr to 2.6.6 [adam 2018-07-19]
+	Updated textproc/py-sphinx to 1.7.6 [adam 2018-07-19]
+	Updated devel/py-pylint-plugin-utils to 0.4 [adam 2018-07-19]
