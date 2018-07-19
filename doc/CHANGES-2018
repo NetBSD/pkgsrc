@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3246 2018/07/19 12:51:40 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.3247 2018/07/19 13:01:47 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4652,3 +4652,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/ocaml to 4.07.0 [jaapb 2018-07-19]
 	Added graphics/go-smartcrop version 0.2.0.20180227 [minskim 2018-07-19]
 	Updated lang/camlp4 to 4.07+1nb1 [jaapb 2018-07-19]
+	Updated devel/ocaml-ppx_tools_versioned to 5.2 [jaapb 2018-07-19]
