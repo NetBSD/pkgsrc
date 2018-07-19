@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3244 2018/07/19 12:16:50 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.3245 2018/07/19 12:36:46 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4650,3 +4650,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/py-cryptography_vectors to 2.3 [adam 2018-07-19]
 	Updated security/py-cryptography to 2.3 [adam 2018-07-19]
 	Updated lang/ocaml to 4.07.0 [jaapb 2018-07-19]
+	Added graphics/go-smartcrop version 0.2.0.20180227 [minskim 2018-07-19]
