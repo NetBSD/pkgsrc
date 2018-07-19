@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2018/04/05 12:00:34 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2018/07/19 15:15:30 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml-tyxml
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ocaml-tyxml
 OCAML_TYXML_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-tyxml+=     ocaml-tyxml>=4.0.1
-BUILDLINK_ABI_DEPENDS.ocaml-tyxml+=     ocaml-tyxml>=4.2.0
+BUILDLINK_ABI_DEPENDS.ocaml-tyxml+=     ocaml-tyxml>=4.2.0nb1
 BUILDLINK_PKGSRCDIR.ocaml-tyxml?=       ../../textproc/ocaml-tyxml
 
 .endif  # OCAML_TYXML_BUILDLINK3_MK
