@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2018/06/05 16:02:40 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/19 14:24:10 jaapb Exp $
 
 GITHUB_PROJECT=	ocsigen-i18n
 DISTNAME=	${GITHUB_PROJECT}-3.1.0
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=besport/}
 
@@ -17,6 +18,7 @@ MAKE_ENV=	bindir=${DESTDIR}${PREFIX}/bin
 INSTALLATION_DIRS+=	bin
 
 OCAML_USE_FINDLIB=	yes
+OCAML_FINDLIB_DIRS=	# empty
 
 .include "../../mk/ocaml.mk"
 
