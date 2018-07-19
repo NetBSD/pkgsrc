@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3251 2018/07/19 14:21:47 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.3252 2018/07/19 20:17:48 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4657,3 +4657,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ocaml-base to 0.11.1 [jaapb 2018-07-19]
 	Updated lang/camlp5 to 7.06 [jaapb 2018-07-19]
 	Updated misc/ocaml-opam to 2.0.0_rc3 [jaapb 2018-07-19]
+	Updated math/py-sympy to 1.2 [prlw1 2018-07-19]
