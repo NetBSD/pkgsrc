@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3243 2018/07/19 09:25:11 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3244 2018/07/19 12:16:50 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4649,3 +4649,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-pylint-plugin-utils to 0.4 [adam 2018-07-19]
 	Updated security/py-cryptography_vectors to 2.3 [adam 2018-07-19]
 	Updated security/py-cryptography to 2.3 [adam 2018-07-19]
+	Updated lang/ocaml to 4.07.0 [jaapb 2018-07-19]
