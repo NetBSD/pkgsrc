@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2018/01/10 16:29:44 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2018/07/19 15:15:26 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml-num
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	ocaml-num
 OCAML_NUM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-num+=	ocaml-num>=1.1
+BUILDLINK_ABI_DEPENDS.ocaml-num+=	ocaml-num>=1.1nb2
 BUILDLINK_PKGSRCDIR.ocaml-num?=	../../math/ocaml-num
 .endif	# OCAML_NUM_BUILDLINK3_MK
 
