@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/07/03 14:06:41 maya Exp $
+# $NetBSD: Makefile,v 1.22 2018/07/19 15:15:29 jaapb Exp $
 #
 VERSION=	4.8.3
 VERSION_IPXE=	827dd1bfee67daa683935ce65316f7e0f057fe1c
@@ -19,7 +19,7 @@ PKGNAME=		xentools48-${VERSION}
 CATEGORIES=		sysutils
 MASTER_SITES=		https://downloads.xenproject.org/release/xen/${VERSION}/
 
-PKGREVISION=		3
+PKGREVISION=		4
 
 DISTFILES=		${DISTNAME}.tar.gz
 

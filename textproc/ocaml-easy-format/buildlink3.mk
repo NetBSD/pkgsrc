@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2018/01/07 13:04:34 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2018/07/19 15:15:29 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml-easy-format
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	ocaml-easy-format
 OCAML_EASY_FORMAT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-easy-format+=	ocaml-easy-format>=1.2.0
+BUILDLINK_ABI_DEPENDS.ocaml-easy-format+=	ocaml-easy-format>=1.2.0nb4
 BUILDLINK_PKGSRCDIR.ocaml-easy-format?=		../../textproc/ocaml-easy-format
 .endif	# OCAML_EASY_FORMAT_BUILDLINK3_MK
 

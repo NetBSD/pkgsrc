@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2018/01/10 16:53:11 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2018/07/19 15:15:26 jaapb Exp $
 
 BUILDLINK_TREE+=	ocamlgraph
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ocamlgraph
 OCAMLGRAPH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocamlgraph+=	ocamlgraph>=1.8.7
-BUILDLINK_ABI_DEPENDS.ocamlgraph+=	ocamlgraph>=1.8.8nb3
+BUILDLINK_ABI_DEPENDS.ocamlgraph+=	ocamlgraph>=1.8.8nb10
 BUILDLINK_PKGSRCDIR.ocamlgraph?=	../../devel/ocamlgraph
 .endif	# OCAMLGRAPH_BUILDLINK3_MK
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2018/06/06 10:50:51 jaapb Exp $
+# $NetBSD: Makefile,v 1.4 2018/07/19 15:15:30 jaapb Exp $
 
 GITHUB_PROJECT=	ocsigen-start
 DISTNAME=	${GITHUB_PROJECT}-1.1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2017/07/11 14:19:23 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2018/07/19 15:15:30 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml-calendar
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ocaml-calendar
 OCAML_CALENDAR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-calendar+=	ocaml-calendar>=2.03.2nb4
-BUILDLINK_ABI_DEPENDS.ocaml-calendar+=	ocaml-calendar>=2.04.0nb5
+BUILDLINK_ABI_DEPENDS.ocaml-calendar+=	ocaml-calendar>=2.04.0nb9
 BUILDLINK_PKGSRCDIR.ocaml-calendar?=	../../time/ocaml-calendar
 
 #.include "../../lang/ocaml/buildlink3.mk"
