@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2018/01/01 22:29:39 rillig Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/07/19 14:19:46 jaapb Exp $
 bin/camlp5
 bin/camlp5o
 ${PLIST.ocaml-opt}bin/camlp5o.opt
@@ -8,6 +8,9 @@ bin/camlp5sch
 bin/mkcamlp5
 ${PLIST.ocaml-opt}bin/mkcamlp5.opt
 bin/ocpp5
+lib/ocaml/camlp5/META
+lib/ocaml/camlp5/ast2pt.cmi
+lib/ocaml/camlp5/ast2pt.mli
 ${PLIST.ocaml-opt}lib/ocaml/camlp5/camlp5.a
 lib/ocaml/camlp5/camlp5.cma
 ${PLIST.ocaml-opt}lib/ocaml/camlp5/camlp5.cmxa
