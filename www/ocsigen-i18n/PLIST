@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/06/05 16:02:40 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/07/19 14:24:10 jaapb Exp $
 bin/ocsigen-i18n-checker
 bin/ocsigen-i18n-generator
 bin/ocsigen-i18n-rewriter
-@pkgdir ${OCAML_SITELIB}
