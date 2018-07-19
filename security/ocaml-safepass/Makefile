@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2018/06/05 15:53:14 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/19 15:15:28 jaapb Exp $
 
 GITHUB_PROJECT=	ocaml-safepass
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	${GITHUB_PROJECT}-2.0
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=darioteixeira/}
 

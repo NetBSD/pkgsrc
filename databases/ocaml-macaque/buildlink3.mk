@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2018/06/05 15:37:21 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2018/07/19 15:15:21 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml-macaque
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	ocaml-macaque
 OCAML_MACAQUE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-macaque+=	ocaml-macaque>=0.7.4
+BUILDLINK_ABI_DEPENDS.ocaml-macaque+=	ocaml-macaque>=0.7.4nb1
 BUILDLINK_PKGSRCDIR.ocaml-macaque?=	../../databases/ocaml-macaque
 
 .include "../../databases/pgocaml/buildlink3.mk"

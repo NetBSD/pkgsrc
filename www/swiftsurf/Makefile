@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2018/04/13 13:55:39 jaapb Exp $
+# $NetBSD: Makefile,v 1.34 2018/07/19 15:15:31 jaapb Exp $
 
 DISTNAME=		swiftsurf-1.2.5
-PKGREVISION=		17
+PKGREVISION=		18
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=swiftsurf/}
 

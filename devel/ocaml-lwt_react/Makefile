@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2018/04/13 12:54:03 jaapb Exp $
+# $NetBSD: Makefile,v 1.4 2018/07/19 15:15:23 jaapb Exp $
 
 .include "../../devel/ocaml-lwt/Makefile.common"
 
 PKGNAME=	ocaml-lwt_react-1.1.1
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	jaapb@NetBSD.org

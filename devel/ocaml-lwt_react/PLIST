@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/04/13 12:54:03 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/07/19 15:15:23 jaapb Exp $
 ${OCAML_SITELIB}/lwt_react/META
 ${OCAML_SITELIB}/lwt_react/opam
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt_react/lwt_react.a
@@ -13,4 +13,5 @@ ${OCAML_SITELIB}/lwt_react/lwt_react.dune
 ${OCAML_SITELIB}/lwt_react/lwt_react.ml
 ${OCAML_SITELIB}/lwt_react/lwt_react.mli
 share/doc/lwt_react/CHANGES
+share/doc/lwt_react/LICENSE.md
 share/doc/lwt_react/README.md

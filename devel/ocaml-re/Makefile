@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2018/04/05 10:45:05 jaapb Exp $
+# $NetBSD: Makefile,v 1.15 2018/07/19 15:15:25 jaapb Exp $
 
 VERSION=	1.7.3
 GITHUB_PROJECT=	ocaml-re
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 

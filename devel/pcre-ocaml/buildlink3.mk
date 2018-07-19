@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2018/04/09 10:20:44 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2018/07/19 15:15:26 jaapb Exp $
 
 BUILDLINK_TREE+=	pcre-ocaml
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	pcre-ocaml
 PCRE_OCAML_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pcre-ocaml+=	pcre-ocaml>=5.10.3nb1
-BUILDLINK_ABI_DEPENDS.pcre-ocaml+=	pcre-ocaml>=7.3.4nb2
+BUILDLINK_ABI_DEPENDS.pcre-ocaml+=	pcre-ocaml>=7.3.4nb3
 BUILDLINK_PKGSRCDIR.pcre-ocaml?=	../../devel/pcre-ocaml
 
 .include "../../devel/pcre/buildlink3.mk"
