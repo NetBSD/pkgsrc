@@ -493,3 +493,42 @@ func (s *Suite) Test_MkLines_ExtractDocumentedVariables(c *check.C) {
 		"VARBASE3.* (line 19)"}
 	c.Check(varnames, deepEquals, expected)
 }
+
+func (s *Suite) Test_MkLines__shell_command_indentation(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall")
+	t.SetupVartypes()
+	mklines := t.NewMkLines("Makefile",
+		MkRcsID,
+		"#",
+		"pre-configure:",
+		"\tcd 'indented correctly'",
+		"\t\tcd 'indented needlessly'",
+		"\tcd 'indented correctly' \\",
+		"\t\t&& cd 'with indented continuation'")
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"NOTE: Makefile:5: Shell programs should be indented with a single tab.")
+}
+
+func (s *Suite) Test_MkLines__unknown_options(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall")
+	t.SetupVartypes()
+	t.SetupOption("known", "")
+	mklines := t.NewMkLines("options.mk",
+		MkRcsID,
+		"#",
+		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.pkgbase",
+		"PKG_SUPPORTED_OPTIONS=\tknown unknown",
+		"PKG_SUGGESTED_OPTIONS=\tknown unknown")
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"WARN: options.mk:4: Unknown option \"unknown\".")
+}
