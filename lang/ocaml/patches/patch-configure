@@ -1,11 +1,10 @@
-$NetBSD: patch-configure,v 1.33 2018/04/30 10:38:04 wiz Exp $
+$NetBSD: patch-configure,v 1.34 2018/07/19 12:16:38 jaapb Exp $
 
 All kinds of OS-specific changes to configure
 Honor LDFLAGS.
-
---- configure.orig	2017-11-03 13:52:13.000000000 +0000
+--- configure.orig	2018-04-11 13:22:42.000000000 +0000
 +++ configure
-@@ -791,7 +791,7 @@ sharedcccompopts=''
+@@ -797,7 +797,7 @@ sharedcccompopts=''
  mksharedlib='shared-libs-not-available'
  rpath=''
  mksharedlibrpath=''
@@ -14,7 +13,7 @@ Honor LDFLAGS.
  
  if $with_sharedlibs; then
    case "$target" in
-@@ -820,10 +820,13 @@ if $with_sharedlibs; then
+@@ -826,10 +826,13 @@ if $with_sharedlibs; then
        esac;;
      *-*-solaris2*)
        case "$cc" in
@@ -31,7 +30,7 @@ Honor LDFLAGS.
              rpath="-R"
              mksharedlibrpath="-R"
            else
-@@ -850,7 +853,7 @@ if $with_sharedlibs; then
+@@ -856,7 +859,7 @@ if $with_sharedlibs; then
        rpath="-Wl,-rpath,"
        mksharedlibrpath="-rpath "
        shared_libraries_supported=true;;
@@ -40,7 +39,7 @@ Honor LDFLAGS.
        mksharedlib="$cc -shared -flat_namespace -undefined suppress \
                     -read_only_relocs suppress"
        common_cflags="$dl_defs $common_cflags"
-@@ -899,11 +902,7 @@ if $with_sharedlibs; then
+@@ -905,11 +908,7 @@ if $with_sharedlibs; then
      i[3456]86-*-linux*)           natdynlink=true;;
      i[3456]86-*-gnu*)             natdynlink=true;;
      x86_64-*-linux*)              natdynlink=true;;
@@ -53,7 +52,7 @@ Honor LDFLAGS.
      x86_64-*-darwin*)             natdynlink=true;;
      s390x*-*-linux*)              natdynlink=true;;
      powerpc*-*-linux*)            natdynlink=true;;
-@@ -916,6 +915,9 @@ if $with_sharedlibs; then
+@@ -922,6 +921,9 @@ if $with_sharedlibs; then
      x86_64-*-openbsd*)            natdynlink=true;;
      i[3456]86-*-netbsd*)          natdynlink=true;;
      x86_64-*-netbsd*)             natdynlink=true;;
@@ -63,7 +62,7 @@ Honor LDFLAGS.
      i386-*-gnu0.3)                natdynlink=true;;
      i[3456]86-*-haiku*)           natdynlink=true;;
      arm*-*-linux*)                natdynlink=true;;
-@@ -959,6 +962,7 @@ case "$target" in
+@@ -965,6 +967,7 @@ case "$target" in
    i[3456]86-*-haiku*)           arch=i386; system=beos;;
    i[3456]86-*-beos*)            arch=i386; system=beos;;
    i[3456]86-*-cygwin*)          arch=i386; system=cygwin;;
@@ -71,7 +70,7 @@ Honor LDFLAGS.
    i[3456]86-*-darwin*)          if $arch64; then
                                    arch=amd64; system=macosx
                                  else
-@@ -979,6 +983,8 @@ case "$target" in
+@@ -987,6 +990,8 @@ case "$target" in
    armv6t2*-*-linux-gnueabi)     arch=arm; model=armv6t2; system=linux_eabi;;
    armv6*-*-linux-gnueabi)       arch=arm; model=armv6; system=linux_eabi;;
    armv6*-*-freebsd*)            arch=arm; model=armv6; system=freebsd;;
@@ -80,7 +79,7 @@ Honor LDFLAGS.
    earmv6*-*-netbsd*)            arch=arm; model=armv6; system=netbsd;;
    earmv7*-*-netbsd*)            arch=arm; model=armv7; system=netbsd;;
    armv5te*-*-linux-gnueabi)     arch=arm; model=armv5te; system=linux_eabi;;
-@@ -996,6 +1002,7 @@ case "$target" in
+@@ -1004,6 +1009,7 @@ case "$target" in
    x86_64-*-mingw*)              arch=amd64; system=mingw;;
    aarch64-*-linux*)             arch=arm64; system=linux;;
    x86_64-*-cygwin*)             arch=amd64; system=cygwin;;
@@ -88,7 +87,7 @@ Honor LDFLAGS.
  esac
  
  # Some platforms exist both in 32-bit and 64-bit variants, not distinguished
-@@ -1019,7 +1026,6 @@ nativeccprofopts=''
+@@ -1027,7 +1033,6 @@ nativeccprofopts=''
  case "$arch,$cc,$system,$model" in
    *,*,rhapsody,*)      if $arch64; then partialld="ld -r -arch ppc64"; fi;;
    amd64,gcc*,macosx,*) partialld="ld -r -arch x86_64";;
@@ -96,7 +95,7 @@ Honor LDFLAGS.
    power,gcc*,elf,ppc)   partialld="ld -r -m elf32ppclinux";;
    power,gcc*,elf,ppc64)   partialld="ld -r -m elf64ppc";;
    power,gcc*,elf,ppc64le)   partialld="ld -r -m elf64lppc";;
-@@ -1037,8 +1043,8 @@ case "$arch,$system" in
+@@ -1045,8 +1050,8 @@ case "$arch,$system" in
                      fi;;
    amd64,solaris)  as="${TOOLPREF}as --64"
                    aspp="${TOOLPREF}gcc -m64 -c";;
@@ -107,7 +106,7 @@ Honor LDFLAGS.
    power,elf)      if $arch64; then
                      as="${TOOLPREF}as -a64 -mppc64"
                      aspp="${TOOLPREF}gcc -m64 -c"
-@@ -1086,6 +1092,8 @@ case "$arch,$system" in
+@@ -1094,6 +1099,8 @@ case "$arch,$system" in
    power,elf) profiling='true';;
    power,bsd*) profiling='true';;
    power,netbsd) profiling='true';;
@@ -116,7 +115,7 @@ Honor LDFLAGS.
    *) profiling='false';;
  esac
  
-@@ -1669,6 +1677,8 @@ fi
+@@ -1672,6 +1679,8 @@ fi
  x11_include="not found"
  x11_link="not found"
  
@@ -125,7 +124,7 @@ Honor LDFLAGS.
  if test -z "$x11_include_dir" -a -z "$x11_lib_dir"; then
    if pkg-config --exists x11 2>/dev/null; then
      x11_include=`pkg-config --cflags x11`
-@@ -1715,6 +1725,7 @@ if test "$x11_include" = "not found"; th
+@@ -1718,6 +1727,7 @@ if test "$x11_include" = "not found"; th
      /usr/XFree86/include/X11  \
                                \
      /usr/include              \
@@ -133,7 +132,7 @@ Honor LDFLAGS.
      /usr/local/include        \
      /usr/unsupported/include  \
      /usr/athena/include       \
-@@ -1772,6 +1783,7 @@ if test "$x11_include" = "not found"; th
+@@ -1775,6 +1785,7 @@ if test "$x11_include" = "not found"; th
                            \
      /usr/lib64            \
      /usr/lib              \
@@ -141,11 +140,10 @@ Honor LDFLAGS.
      /usr/local/lib        \
      /usr/unsupported/lib  \
      /usr/athena/lib       \
-@@ -1793,19 +1805,16 @@ if test "$x11_include" = "not found"; th
+@@ -1798,18 +1809,16 @@ if test "$x11_include" = "not found"; th
        if test $dir = /usr/lib; then
          x11_link="-lX11"
        else
--        x11_libs="-L$dir"
 -        case "$target" in
 -          *-*-freebsd*|*-*-dragonfly*) x11_link="-L$dir -lX11";;
 -          *-kfreebsd*-gnu) x11_link="-L$dir -lX11";;
@@ -153,7 +151,7 @@ Honor LDFLAGS.
 -          *) x11_link="-L$dir -lX11";;
 -        esac
 +        x11_libs="-L$dir ${COMPILER_RPATH_FLAG}$dir"
-+        x11_link="-L$dir ${COMPILER_RPATH_FLAG}$dir -lX11"
++	x11_link="-L$dir ${COMPILER_RPATH_FLAG}$dir -lX11"
        fi
        break
      fi
@@ -162,15 +160,15 @@ Honor LDFLAGS.
  
 +fi # end of disable_x11 test
 +
- if test "x11_include" != "not found"; then
+ if test "$x11_include" != "not found"; then
    if test "$x11_include" = "-I/usr/include"; then
      x11_include=""
-@@ -2056,7 +2065,7 @@ config CFLAGS "$common_cflags $internal_
+@@ -2060,7 +2069,7 @@ config CFLAGS "$common_cflags $internal_
  config CPPFLAGS "$common_cppflags $internal_cppflags"
  config OCAMLC_CFLAGS "$common_cflags $sharedcccompopts"
  config OCAMLC_CPPFLAGS "$common_cppflags"
 -config LDFLAGS "$ldflags"
 +config LDFLAGS "$ldflags $LDFLAGS"
- config BYTECCLIBS "$cclibs $dllib $curseslibs $pthread_link \
-                  $instrumented_runtime_libs"
+ config BYTECCLIBS "$cclibs $dllib $pthread_link $instrumented_runtime_libs"
  config RPATH "$rpath"
+ config EXE "$exe"
