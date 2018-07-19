@@ -26,6 +26,19 @@ func (ck MkLineChecker) Check() {
 
 	case mkline.IsShellCommand():
 		shellCommand := mkline.ShellCommand()
+
+		if G.opts.WarnSpace && hasPrefix(mkline.Text, "\t\t") {
+			fix := mkline.Autofix()
+			fix.Notef("Shell programs should be indented with a single tab.")
+			fix.Explain(
+				"The first tab in the line marks the line as a shell command.  Since",
+				"every line of shell commands starts with a completely new shell",
+				"environment, there is no need to indent some of the commands, or to",
+				"use more horizontal space than necessary.")
+			fix.ReplaceRegex(`^\t\t+`, "\t", 1)
+			fix.Apply()
+		}
+
 		ck.checkText(shellCommand)
 		NewShellLine(mkline).CheckShellCommandLine(shellCommand)
 
