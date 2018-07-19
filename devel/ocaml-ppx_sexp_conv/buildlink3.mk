@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2018/05/09 15:01:02 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2018/07/19 15:15:24 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml-ppx_sexp_conv
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ocaml-ppx_sexp_conv
 OCAML_PPX_SEXP_CONV_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-ppx_sexp_conv+=	ocaml-ppx_sexp_conv>=0.9.0
-BUILDLINK_ABI_DEPENDS.ocaml-ppx_sexp_conv+=	ocaml-ppx_sexp_conv>=0.11.2
+BUILDLINK_ABI_DEPENDS.ocaml-ppx_sexp_conv+=	ocaml-ppx_sexp_conv>=0.11.2nb1
 BUILDLINK_PKGSRCDIR.ocaml-ppx_sexp_conv?=	../../devel/ocaml-ppx_sexp_conv
 
 #.include "../../devel/ocaml-ppx_core/buildlink3.mk"
