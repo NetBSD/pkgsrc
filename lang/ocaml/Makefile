@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2018/04/04 09:34:46 jaapb Exp $
+# $NetBSD: Makefile,v 1.120 2018/07/19 12:16:38 jaapb Exp $
 
 .include "Makefile.common"
 
@@ -7,6 +7,8 @@ CONFIGURE_ENV+=		disable_x11=yes
 BUILD_TARGET=		world
 MAKE_JOBS_SAFE=		no
 UNLIMIT_RESOURCES=	stacksize
+
+USE_TOOLS+=		bash
 
 USE_GCC_RUNTIME=	yes
 
@@ -77,6 +79,9 @@ EXTRA_RT_LIBS.NetBSD=	-lcurses
 EXTRA_RT_LIBS.*=
 
 PRINT_PLIST_AWK+=	{ gsub(/lib\/ocaml\/${PKGMANDIR:S|/|\\/|}/, "lib/ocaml/$${PKGMANDIR}"); }
+
+REPLACE_BASH+=		tools/ocaml-instr-graph
+REPLACE_AWK+=		tools/ocaml-instr-report
 
 do-test:
 	cd ${WRKSRC}/testsuite && ${MAKE_PROGRAM} all
