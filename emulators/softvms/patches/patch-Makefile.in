@@ -1,0 +1,26 @@
+$NetBSD: patch-Makefile.in,v 1.1 2018/07/19 04:05:08 tpaul Exp $
+
+Avoid GNU make-isms ($^).
+
+--- Makefile.in.orig	2004-10-03 00:14:51.000000000 +0000
++++ Makefile.in
+@@ -6,15 +6,16 @@ LDFLAGS = @LDFLAGS@ @X_LIBS@
+ LIBS = @X_PRE_LIBS@ -lX11 @X_EXTRA_LIBS@ @LIBS@
+ 
+ VMSOBJS = main.o mainwin.o cpu.o lcdimg.o getopt.o
++NPDCLCDIMGOBJS = nsplugin.o
+ 
+ vms: $(VMSOBJS)
+-	$(CC) -o $@ $^ $(LDFLAGS) $(LIBS)
++	$(CC) -o $@ $(VMSOBJS) $(LDFLAGS) $(LIBS)
+ 
+ nsplugin: NPdreamcast_lcdimg.so
+ 	:
+ 
+-NPdreamcast_lcdimg.so: nsplugin.o
+-	$(LD) -G -o $@ $^
++NPdreamcast_lcdimg.so: $(NPDCLCDIMGOBJS)
++	$(LD) -G -o $@ $(NPDCLCDIMGOBJS)
+ 
+ clean :
+ 	rm -f vms $(VMSOBJS)
