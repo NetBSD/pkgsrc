@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2018/06/05 16:19:16 jaapb Exp $
+# $NetBSD: Makefile,v 1.26 2018/07/19 14:05:57 jaapb Exp $
 #
 
 GITHUB_PROJECT=	js_of_ocaml
-DISTNAME=	${GITHUB_PROJECT}-3.1.0
-PKGREVISION=	1
+DISTNAME=	${GITHUB_PROJECT}-3.2.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
