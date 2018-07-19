@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2018/04/13 13:55:29 jaapb Exp $
+# $NetBSD: Makefile,v 1.23 2018/07/19 15:15:20 jaapb Exp $
 #
 
 VERSION=	1.07
@@ -6,7 +6,7 @@ GITHUB_PROJECT=	camlzip
 GITHUB_TAG=	rel${VERSION:S/.//}
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 PKGNAME=	ocaml-zip-${VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xavierleroy/}
 LICENSE=	gnu-lgpl-v2.1

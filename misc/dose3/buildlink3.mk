@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2018/01/10 16:31:34 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2018/07/19 15:15:27 jaapb Exp $
 
 BUILDLINK_TREE+=	dose3
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	dose3
 DOSE3_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.dose3+=	dose3>=5.0rc2
-BUILDLINK_API_DEPENDS.dose3+=	dose3>=5.0.1nb2
+BUILDLINK_API_DEPENDS.dose3+=	dose3>=5.0.1nb4
 BUILDLINK_PKGSRCDIR.dose3?=	../../misc/dose3
 
 .include "../../devel/ocaml-extlib/buildlink3.mk"
