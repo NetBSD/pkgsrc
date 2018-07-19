@@ -1,20 +1,14 @@
-$NetBSD: patch-byterun_Makefile,v 1.7 2018/01/10 14:30:35 jaapb Exp $
+$NetBSD: patch-byterun_Makefile,v 1.8 2018/07/19 12:16:38 jaapb Exp $
 
 Use BSD_INSTALL_* instead of mkdir and cp
---- byterun/Makefile.orig	2017-10-03 08:35:24.000000000 +0000
+--- byterun/Makefile.orig	2018-04-11 13:22:42.000000000 +0000
 +++ byterun/Makefile
-@@ -104,10 +104,10 @@ ld.conf: ../config/Makefile
- 
- .PHONY: install
- install:
--	cp $(PROGRAMS) "$(INSTALL_BINDIR)"
--	cp $(LIBRARIES) "$(INSTALL_LIBDIR)"
+@@ -121,7 +121,7 @@ install:
+ 	if test -n "$(DYNLIBRARIES)"; then \
+ 	  $(INSTALL_PROG) $(DYNLIBRARIES) "$(INSTALL_LIBDIR)"; \
+ 	fi
 -	mkdir -p "$(INSTALL_INCDIR)"
--	cp caml/*.h "$(INSTALL_INCDIR)"
-+	$(BSD_INSTALL_PROGRAM) $(PROGRAMS) "$(INSTALL_BINDIR)"
-+	$(BSD_INSTALL_LIB) $(LIBRARIES) "$(INSTALL_LIBDIR)"
 +	$(BSD_INSTALL_DATA_DIR) -p "$(INSTALL_INCDIR)"
-+	$(BSD_INSTALL_DATA) caml/*.h "$(INSTALL_INCDIR)"
+ 	$(INSTALL_DATA) caml/*.h "$(INSTALL_INCDIR)"
  
  # If primitives contain duplicated lines (e.g. because the code is defined
- # like

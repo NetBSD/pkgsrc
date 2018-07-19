@@ -1,10 +1,9 @@
-$NetBSD: patch-Makefile,v 1.11 2018/01/10 14:30:35 jaapb Exp $
+$NetBSD: patch-Makefile,v 1.12 2018/07/19 12:16:38 jaapb Exp $
 
-Use BSD_INSTALL_* instead of mkdir and cp
-
---- Makefile.orig	2017-10-03 08:35:24.000000000 +0000
+Use BSD_INSTALL_* instead of mkdir
+--- Makefile.orig	2018-07-10 14:09:26.000000000 +0000
 +++ Makefile
-@@ -608,29 +608,29 @@ endif
+@@ -597,19 +597,19 @@ endif
  # Installation
  .PHONY: install
  install:
@@ -12,119 +11,32 @@ Use BSD_INSTALL_* instead of mkdir and cp
 -	$(MKDIR) "$(INSTALL_LIBDIR)"
 -	$(MKDIR) "$(INSTALL_STUBLIBDIR)"
 -	$(MKDIR) "$(INSTALL_COMPLIBDIR)"
--	cp VERSION "$(INSTALL_LIBDIR)"
 +	$(BSD_INSTALL_PROGRAM_DIR) "$(INSTALL_BINDIR)"
 +	$(BSD_INSTALL_LIB_DIR) "$(INSTALL_LIBDIR)"
 +	$(BSD_INSTALL_LIB_DIR) "$(INSTALL_STUBLIBDIR)"
 +	$(BSD_INSTALL_LIB_DIR) "$(INSTALL_COMPLIBDIR)"
-+	$(BSD_INSTALL_DATA) VERSION "$(INSTALL_LIBDIR)"
+ 	$(INSTALL_DATA) \
+ 	  VERSION \
+ 	  "$(INSTALL_LIBDIR)"
  	$(MAKE) -C byterun install
--	cp ocaml "$(INSTALL_BINDIR)/ocaml$(EXE)"
--	cp ocamlc "$(INSTALL_BINDIR)/ocamlc.byte$(EXE)"
-+	$(BSD_INSTALL_SCRIPT) ocaml "$(INSTALL_BINDIR)/ocaml$(EXE)"
-+	$(BSD_INSTALL_SCRIPT) ocamlc "$(INSTALL_BINDIR)/ocamlc.byte$(EXE)"
+-	$(INSTALL_PROG) ocaml "$(INSTALL_BINDIR)/ocaml$(EXE)"
+-	$(INSTALL_PROG) ocamlc "$(INSTALL_BINDIR)/ocamlc.byte$(EXE)"
++	$(INSTALL_DATA) ocaml "$(INSTALL_BINDIR)/ocaml$(EXE)"
++	$(INSTALL_DATA) ocamlc "$(INSTALL_BINDIR)/ocamlc.byte$(EXE)"
  	$(MAKE) -C stdlib install
--	cp lex/ocamllex "$(INSTALL_BINDIR)/ocamllex.byte$(EXE)"
--	cp yacc/ocamlyacc$(EXE) "$(INSTALL_BINDIR)/ocamlyacc$(EXE)"
--	cp utils/*.cmi utils/*.cmt utils/*.cmti utils/*.mli \
-+	$(BSD_INSTALL_SCRIPT) lex/ocamllex "$(INSTALL_BINDIR)/ocamllex.byte$(EXE)"
-+	$(BSD_INSTALL_SCRIPT) yacc/ocamlyacc$(EXE) "$(INSTALL_BINDIR)/ocamlyacc$(EXE)"
-+	$(BSD_INSTALL_DATA) utils/*.cmi utils/*.cmt utils/*.cmti utils/*.mli \
+-	$(INSTALL_PROG) lex/ocamllex "$(INSTALL_BINDIR)/ocamllex.byte$(EXE)"
+-	$(INSTALL_PROG) yacc/ocamlyacc$(EXE) "$(INSTALL_BINDIR)/ocamlyacc$(EXE)"
++	$(INSTALL_DATA) lex/ocamllex "$(INSTALL_BINDIR)/ocamllex.byte$(EXE)"
++	$(INSTALL_DATA) yacc/ocamlyacc$(EXE) "$(INSTALL_BINDIR)/ocamlyacc$(EXE)"
+ 	$(INSTALL_DATA) \
+ 	   utils/*.cmi utils/*.cmt utils/*.cmti utils/*.mli \
  	   parsing/*.cmi parsing/*.cmt parsing/*.cmti parsing/*.mli \
- 	   typing/*.cmi typing/*.cmt typing/*.cmti typing/*.mli \
- 	   bytecomp/*.cmi bytecomp/*.cmt bytecomp/*.cmti bytecomp/*.mli \
- 	   driver/*.cmi driver/*.cmt driver/*.cmti driver/*.mli \
- 	   toplevel/*.cmi toplevel/*.cmt toplevel/*.cmti toplevel/*.mli \
- 	   "$(INSTALL_COMPLIBDIR)"
--	cp compilerlibs/ocamlcommon.cma compilerlibs/ocamlbytecomp.cma \
-+	$(BSD_INSTALL_DATA) compilerlibs/ocamlcommon.cma compilerlibs/ocamlbytecomp.cma \
- 	   compilerlibs/ocamltoplevel.cma $(BYTESTART) $(TOPLEVELSTART) \
- 	   "$(INSTALL_COMPLIBDIR)"
--	cp expunge "$(INSTALL_LIBDIR)/expunge$(EXE)"
--	cp toplevel/topdirs.cmi toplevel/topdirs.cmt toplevel/topdirs.cmti \
-+	$(BSD_INSTALL_SCRIPT) expunge "$(INSTALL_LIBDIR)/expunge$(EXE)"
-+	$(BSD_INSTALL_DATA) toplevel/topdirs.cmi toplevel/topdirs.cmt toplevel/topdirs.cmti \
-            toplevel/topdirs.mli "$(INSTALL_LIBDIR)"
+@@ -630,7 +630,7 @@ install:
+ 	   "$(INSTALL_LIBDIR)"
  	$(MAKE) -C tools install
  ifeq "$(UNIX_OR_WIN32)" "unix" # Install manual pages only on Unix
-@@ -655,7 +655,7 @@ ifeq "$(UNIX_OR_WIN32)" "win32"
- 	  $(MAKE) install-flexdll; \
- 	fi
+-	$(MKDIR) "$(INSTALL_MANDIR)/man$(PROGRAMS_MAN_SECTION)"
++	$(BSD_INSTALL_MAN_DIR) "$(INSTALL_MANDIR)/man$(PROGRAMS_MAN_SECTION)"
+ 	-$(MAKE) -C man install
  endif
--	cp config/Makefile "$(INSTALL_LIBDIR)/Makefile.config"
-+	$(BSD_INSTALL_DATA) config/Makefile "$(INSTALL_LIBDIR)/Makefile.config"
- 	if test -f ocamlopt; then $(MAKE) installopt; else \
- 	   cd "$(INSTALL_BINDIR)"; \
- 	   $(LN) ocamlc.byte$(EXE) ocamlc$(EXE); \
-@@ -666,17 +666,17 @@ endif
- .PHONY: installopt
- installopt:
- 	$(MAKE) -C asmrun install
--	cp ocamlopt "$(INSTALL_BINDIR)/ocamlopt.byte$(EXE)"
-+	$(BSD_INSTALL_SCRIPT) ocamlopt "$(INSTALL_BINDIR)/ocamlopt.byte$(EXE)"
- 	$(MAKE) -C stdlib installopt
--	cp middle_end/*.cmi middle_end/*.cmt middle_end/*.cmti \
-+	$(BSD_INSTALL_DATA) middle_end/*.cmi middle_end/*.cmt middle_end/*.cmti \
- 	    middle_end/*.mli \
- 		"$(INSTALL_COMPLIBDIR)"
--	cp middle_end/base_types/*.cmi middle_end/base_types/*.cmt \
-+	$(BSD_INSTALL_DATA) middle_end/base_types/*.cmi middle_end/base_types/*.cmt \
- 	    middle_end/base_types/*.cmti middle_end/base_types/*.mli \
- 		"$(INSTALL_COMPLIBDIR)"
--	cp asmcomp/*.cmi asmcomp/*.cmt asmcomp/*.cmti asmcomp/*.mli \
-+	$(BSD_INSTALL_DATA) asmcomp/*.cmi asmcomp/*.cmt asmcomp/*.cmti asmcomp/*.mli \
- 		"$(INSTALL_COMPLIBDIR)"
--	cp compilerlibs/ocamloptcomp.cma $(OPTSTART) "$(INSTALL_COMPLIBDIR)"
-+	$(BSD_INSTALL_DATA) compilerlibs/ocamloptcomp.cma $(OPTSTART) "$(INSTALL_COMPLIBDIR)"
- 	if test -n "$(WITH_OCAMLDOC)"; then \
- 	  $(MAKE) -C ocamldoc installopt; \
- 	fi
-@@ -691,30 +691,30 @@ installopt:
- 	fi
- 	$(MAKE) -C tools installopt
- 	if test -f ocamlopt.opt -a -f flexdll/flexlink.opt ; then \
--	  cp -f flexdll/flexlink.opt "$(INSTALL_BINDIR)/flexlink$(EXE)" ; \
-+	  $(BSD_INSTALL_PROGRAM) flexdll/flexlink.opt "$(INSTALL_BINDIR)/flexlink$(EXE)" ; \
- 	fi
- 
- .PHONY: installoptopt
- installoptopt:
--	cp ocamlc.opt "$(INSTALL_BINDIR)/ocamlc.opt$(EXE)"
--	cp ocamlopt.opt "$(INSTALL_BINDIR)/ocamlopt.opt$(EXE)"
--	cp lex/ocamllex.opt "$(INSTALL_BINDIR)/ocamllex.opt$(EXE)"
-+	$(BSD_INSTALL_PROGRAM) ocamlc.opt "$(INSTALL_BINDIR)/ocamlc.opt$(EXE)"
-+	$(BSD_INSTALL_PROGRAM) ocamlopt.opt "$(INSTALL_BINDIR)/ocamlopt.opt$(EXE)"
-+	$(BSD_INSTALL_PROGRAM) lex/ocamllex.opt "$(INSTALL_BINDIR)/ocamllex.opt$(EXE)"
- 	cd "$(INSTALL_BINDIR)"; \
- 	   $(LN) ocamlc.opt$(EXE) ocamlc$(EXE); \
- 	   $(LN) ocamlopt.opt$(EXE) ocamlopt$(EXE); \
- 	   $(LN) ocamllex.opt$(EXE) ocamllex$(EXE)
--	cp utils/*.cmx parsing/*.cmx typing/*.cmx bytecomp/*.cmx \
-+	$(BSD_INSTALL_DATA) utils/*.cmx parsing/*.cmx typing/*.cmx bytecomp/*.cmx \
- 	   driver/*.cmx asmcomp/*.cmx "$(INSTALL_COMPLIBDIR)"
--	cp compilerlibs/ocamlcommon.cmxa compilerlibs/ocamlcommon.$(A) \
-+	$(BSD_INSTALL_DATA) compilerlibs/ocamlcommon.cmxa compilerlibs/ocamlcommon.$(A) \
- 	   compilerlibs/ocamlbytecomp.cmxa compilerlibs/ocamlbytecomp.$(A) \
- 	   compilerlibs/ocamloptcomp.cmxa compilerlibs/ocamloptcomp.$(A) \
- 	   $(BYTESTART:.cmo=.cmx) $(BYTESTART:.cmo=.$(O)) \
- 	   $(OPTSTART:.cmo=.cmx) $(OPTSTART:.cmo=.$(O)) \
- 	   "$(INSTALL_COMPLIBDIR)"
- 	if test -f ocamlnat$(EXE) ; then \
--	  cp ocamlnat$(EXE) "$(INSTALL_BINDIR)/ocamlnat$(EXE)"; \
--	  cp toplevel/opttopdirs.cmi "$(INSTALL_LIBDIR)"; \
--	  cp compilerlibs/ocamlopttoplevel.cmxa \
-+	  $(BSD_INSTALL_PROGRAM) ocamlnat$(EXE) "$(INSTALL_BINDIR)/ocamlnat$(EXE)"; \
-+	  $(BSD_INSTALL_DATA) toplevel/opttopdirs.cmi "$(INSTALL_LIBDIR)"; \
-+	  $(BSD_INSTALL_DATA) compilerlibs/ocamlopttoplevel.cmxa \
- 	     compilerlibs/ocamlopttoplevel.$(A) \
- 	     $(OPTTOPLEVELSTART:.cmo=.cmx) $(OPTTOPLEVELSTART:.cmo=.$(O)) \
- 	     "$(INSTALL_COMPLIBDIR)"; \
-@@ -725,7 +725,7 @@ installoptopt:
- # Installation of the *.ml sources of compiler-libs
- .PHONY: install-compiler-sources
- install-compiler-sources:
--	cp utils/*.ml parsing/*.ml typing/*.ml bytecomp/*.ml driver/*.ml \
-+	$(BSD_INSTALL_DATA) utils/*.ml parsing/*.ml typing/*.ml bytecomp/*.ml driver/*.ml \
- 	   toplevel/*.ml middle_end/*.ml middle_end/base_types/*.ml \
- 	   asmcomp/*.ml $(INSTALL_COMPLIBDIR)
- 
+ 	for i in $(OTHERLIBRARIES); do \

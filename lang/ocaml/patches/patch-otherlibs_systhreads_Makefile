@@ -1,11 +1,10 @@
-$NetBSD: patch-otherlibs_systhreads_Makefile,v 1.8 2017/09/10 08:56:47 wiz Exp $
+$NetBSD: patch-otherlibs_systhreads_Makefile,v 1.9 2018/07/19 12:16:38 jaapb Exp $
 
 Honor LDFLAGS.
 Use BSD_INSTALL_* instead of mkdir and cp
-
---- otherlibs/systhreads/Makefile.orig	2017-07-13 08:56:44.000000000 +0000
+--- otherlibs/systhreads/Makefile.orig	2018-04-11 13:22:42.000000000 +0000
 +++ otherlibs/systhreads/Makefile
-@@ -27,6 +27,7 @@ export OCAML_FLEXLINK:=$(ROOTDIR)/boot/o
+@@ -28,6 +28,7 @@ export OCAML_FLEXLINK:=$(ROOTDIR)/boot/o
  endif
  
  LIBS = -nostdlib -I $(ROOTDIR)/stdlib -I $(ROOTDIR)/otherlibs/$(UNIXLIB)
@@ -13,7 +12,7 @@ Use BSD_INSTALL_* instead of mkdir and cp
  
  CAMLC=$(CAMLRUN) $(ROOTDIR)/ocamlc $(LIBS)
  CAMLOPT=$(CAMLRUN) $(ROOTDIR)/ocamlopt $(LIBS)
-@@ -62,14 +63,14 @@ all: lib$(LIBNAME).$(A) $(LIBNAME).cma $
+@@ -68,14 +69,14 @@ all: lib$(LIBNAME).$(A) $(LIBNAME).cma $
  allopt: lib$(LIBNAME)nat.$(A) $(LIBNAME).cmxa $(CMIFILES)
  
  lib$(LIBNAME).$(A): $(BYTECODE_C_OBJS)
@@ -30,28 +29,12 @@ Use BSD_INSTALL_* instead of mkdir and cp
  # TODO: Figure out why -cclib -lunix is used here.
  # It may be because of the threadsUnix module which is deprecated.
  # It may hence be good to figure out whether this module shouldn't be
-@@ -124,17 +125,17 @@ INSTALL_STUBLIBDIR=$(DESTDIR)$(STUBLIBDI
- install:
- 	if test -f dllthreads$(EXT_DLL); then \
- 	  cp dllthreads$(EXT_DLL) "$(INSTALL_STUBLIBDIR)/dllthreads$(EXT_DLL)"; fi
--	cp libthreads.$(A) "$(INSTALL_LIBDIR)"
-+	$(BSD_INSTALL_DATA) libthreads.$(A) "$(INSTALL_LIBDIR)"
+@@ -122,7 +123,7 @@ install:
+ 	fi
+ 	$(INSTALL_DATA) libthreads.$(A) "$(INSTALL_LIBDIR)"
  	cd "$(INSTALL_LIBDIR)"; $(RANLIB) libthreads.$(A)
--	mkdir -p "$(THREADS_LIBDIR)"
--	cp $(CMIFILES) $(CMIFILES:.cmi=.cmti) threads.cma "$(THREADS_LIBDIR)"
--	cp $(MLIFILES) "$(INSTALL_LIBDIR)"
--	cp threads.h "$(INSTALL_LIBDIR)/caml"
-+	$(BSD_INSTALL_LIB_DIR) "$(THREADS_LIBDIR)"
-+	$(BSD_INSTALL_DATA) $(CMIFILES) $(CMIFILES:.cmi=.cmti) threads.cma "$(THREADS_LIBDIR)"
-+	$(BSD_INSTALL_DATA) $(MLIFILES) "$(INSTALL_LIBDIR)"
-+	$(BSD_INSTALL_DATA) threads.h "$(INSTALL_LIBDIR)/caml"
- 
- installopt:
--	cp libthreadsnat.$(A) "$(INSTALL_LIBDIR)"
-+	$(BSD_INSTALL_DATA) libthreadsnat.$(A) "$(INSTALL_LIBDIR)"
- 	cd "$(INSTALL_LIBDIR)"; $(RANLIB) libthreadsnat.$(A)
--	cp $(THREADS_NCOBJS) threads.cmxa threads.$(A) "$(THREADS_LIBDIR)"
-+	$(BSD_INSTALL_DATA) $(THREADS_NCOBJS) threads.cmxa threads.$(A) "$(THREADS_LIBDIR)"
- 	cd "$(THREADS_LIBDIR)" && $(RANLIB) threads.$(A)
- 
- .SUFFIXES: .ml .mli .cmo .cmi .cmx
+-	mkdir -p "$(INSTALL_THREADSLIBDIR)"
++	$(BSD_INSTALL_LIB_DIR) "$(INSTALL_THREADSLIBDIR)"
+ 	$(INSTALL_DATA) \
+ 	  $(CMIFILES) $(CMIFILES:.cmi=.cmti) threads.cma \
+ 	  "$(INSTALL_THREADSLIBDIR)"
