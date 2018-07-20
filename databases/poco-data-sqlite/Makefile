@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2018/04/14 07:33:53 adam Exp $
+# $NetBSD: Makefile,v 1.26 2018/07/20 03:33:48 ryoon Exp $
 #
 
 PKGNAME=	poco-data-sqlite-${POCO_VERSION}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	databases
 
 COMMENT=	POCO C++ SQLite RDBMS Accessor libraries
