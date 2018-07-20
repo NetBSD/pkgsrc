@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2017/08/01 14:58:52 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2018/07/20 07:08:32 adam Exp $
 
-DISTNAME=	fdk-aac-0.1.5
+DISTNAME=	fdk-aac-0.1.6
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opencore-amr/}
 
@@ -13,7 +13,6 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
-
 PKGCONFIG_OVERRIDE+=	fdk-aac.pc.in
 
 .include "../../mk/bsd.pkg.mk"
