@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.3 2018/07/20 03:03:57 wen Exp $
+
+You will need to make joomla accessible through your HTTP server.
+If you are running Apache and ap-php, then you can add the following line
+to httpd.conf:
+
+        Include ${PKG_SYSCONFDIR}/joomla.conf
+
+to make joomla accessible through:
+
+	http://www.domain.com/joomla/
+
+===========================================================================
