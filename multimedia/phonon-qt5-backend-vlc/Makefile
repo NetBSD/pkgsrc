@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2018/06/21 00:34:18 markd Exp $
+# $NetBSD: Makefile,v 1.16 2018/07/20 03:34:22 ryoon Exp $
 
 DISTNAME=	phonon-backend-vlc-0.10.1
 PKGNAME=	${DISTNAME:S/-/-qt5-/}
+PKGREVISION=	1
 
 COMMENT=	Multimedia API for KF5 - VLC backend
 

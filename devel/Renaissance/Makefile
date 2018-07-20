@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2018/04/14 07:33:53 adam Exp $
+# $NetBSD: Makefile,v 1.34 2018/07/20 03:33:48 ryoon Exp $
 
 DISTNAME=	Renaissance-0.9.0
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	devel gnustep
 MASTER_SITES=	http://www.gnustep.it/Renaissance/Download/
 

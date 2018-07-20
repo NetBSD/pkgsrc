@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2018/04/14 07:33:55 adam Exp $
+# $NetBSD: Makefile,v 1.37 2018/07/20 03:33:50 ryoon Exp $
 
 DISTNAME=	mono-addins-1.1
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel
 MASTER_SITES=	http://download.mono-project.com/sources/mono-addins/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.126 2018/04/14 07:34:00 adam Exp $
+# $NetBSD: Makefile,v 1.127 2018/07/20 03:33:55 ryoon Exp $
 
 DISTNAME=	heimdal-1.5.3
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	security
 MASTER_SITES=	http://www.h5l.org/dist/src/
 

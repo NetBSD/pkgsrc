@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2018/07/04 13:40:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.53 2018/07/20 03:34:07 ryoon Exp $
 
 DISTNAME=	ProjectCenter-0.6.2
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	devel gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=dev-apps/}
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2018/04/14 07:33:56 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2018/07/20 03:33:51 ryoon Exp $
 
 BUILDLINK_TREE+=	libspatialite
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libspatialite
 LIBSPATIALITE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libspatialite+=	libspatialite>=4.3.0a
-BUILDLINK_ABI_DEPENDS.libspatialite?=	libspatialite>=4.3.0anb7
+BUILDLINK_ABI_DEPENDS.libspatialite?=	libspatialite>=4.3.0anb8
 BUILDLINK_PKGSRCDIR.libspatialite?=	../../geography/libspatialite
 
 .include "../../converters/libiconv/buildlink3.mk"
