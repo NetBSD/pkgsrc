@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3281 2018/07/20 13:34:09 taca Exp $
+$NetBSD: CHANGES-2018,v 1.3282 2018/07/20 13:59:56 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4692,3 +4692,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/php72 to 7.2.8 [taca 2018-07-20]
 	Updated lang/php70 to 7.0.31 [taca 2018-07-20]
 	Updated lang/php56 to 5.6.37 [taca 2018-07-20]
+	Updated lang/nodejs to 10.7.0 [fhajny 2018-07-20]
