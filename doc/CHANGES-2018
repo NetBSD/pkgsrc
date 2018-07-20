@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3259 2018/07/20 07:37:45 wen Exp $
+$NetBSD: CHANGES-2018,v 1.3260 2018/07/20 07:42:09 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4665,3 +4665,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated benchmarks/p5-Benchmark-Timer to 0.7112 [wen 2018-07-20]
 	Updated audio/fdk-aac to 0.1.6 [adam 2018-07-20]
 	Updated devel/p5-Devel-Cover to 1.30 [wen 2018-07-20]
+	Updated devel/p5-Exporter-Tiny to 1.002001 [wen 2018-07-20]
