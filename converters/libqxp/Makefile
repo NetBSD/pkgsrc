@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2018/04/29 21:31:19 adam Exp $
+# $NetBSD: Makefile,v 1.4 2018/07/20 03:34:05 ryoon Exp $
 
 DISTNAME=	libqxp-0.0.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	converters
 MASTER_SITES=	http://dev-www.libreoffice.org/src/
 EXTRACT_SUFX=	.tar.xz

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2018/04/14 07:33:58 adam Exp $
+# $NetBSD: Makefile,v 1.26 2018/07/20 03:33:53 ryoon Exp $
 #
 
 DISTNAME=	grilo-0.2.7
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/grilo/0.2/
 EXTRACT_SUFX=	.tar.xz
