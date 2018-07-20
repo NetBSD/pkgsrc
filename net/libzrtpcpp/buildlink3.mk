@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2018/04/17 22:29:33 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2018/07/20 03:33:54 ryoon Exp $
 
 BUILDLINK_TREE+=	libzrtpcpp
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libzrtpcpp
 LIBZRTPCPP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libzrtpcpp+=	libzrtpcpp>=4.4.0
-BUILDLINK_ABI_DEPENDS.libzrtpcpp?=	libzrtpcpp>=4.4.0nb11
+BUILDLINK_ABI_DEPENDS.libzrtpcpp?=	libzrtpcpp>=4.4.0nb12
 BUILDLINK_PKGSRCDIR.libzrtpcpp?=	../../net/libzrtpcpp
 
 pkgbase := libzrtpcpp
