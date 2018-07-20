@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.53 2018/05/17 13:40:38 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.54 2018/07/20 09:58:26 fhajny Exp $
 lib/${PKGNAME}/COPYING
 lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/${PKGNAME}/ebin/XmppAddr.beam
@@ -94,12 +94,12 @@ lib/${PKGNAME}/ebin/eldap_utils.beam
 lib/${PKGNAME}/ebin/elixir_logger_backend.beam
 lib/${PKGNAME}/ebin/ext_mod.beam
 lib/${PKGNAME}/ebin/extauth.beam
+lib/${PKGNAME}/ebin/extauth_sup.beam
 lib/${PKGNAME}/ebin/gen_iq_handler.beam
 lib/${PKGNAME}/ebin/gen_mod.beam
 lib/${PKGNAME}/ebin/gen_pubsub_node.beam
 lib/${PKGNAME}/ebin/gen_pubsub_nodetree.beam
 lib/${PKGNAME}/ebin/jd2ejd.beam
-lib/${PKGNAME}/ebin/jlib.beam
 lib/${PKGNAME}/ebin/misc.beam
 lib/${PKGNAME}/ebin/mod_adhoc.beam
 lib/${PKGNAME}/ebin/mod_admin_extra.beam
@@ -135,11 +135,6 @@ lib/${PKGNAME}/ebin/mod_http_api.beam
 lib/${PKGNAME}/ebin/mod_http_fileserver.beam
 lib/${PKGNAME}/ebin/mod_http_upload.beam
 lib/${PKGNAME}/ebin/mod_http_upload_quota.beam
-lib/${PKGNAME}/ebin/mod_irc.beam
-lib/${PKGNAME}/ebin/mod_irc_connection.beam
-lib/${PKGNAME}/ebin/mod_irc_mnesia.beam
-lib/${PKGNAME}/ebin/mod_irc_riak.beam
-lib/${PKGNAME}/ebin/mod_irc_sql.beam
 lib/${PKGNAME}/ebin/mod_last.beam
 lib/${PKGNAME}/ebin/mod_last_mnesia.beam
 lib/${PKGNAME}/ebin/mod_last_riak.beam
@@ -255,7 +250,6 @@ lib/${PKGNAME}/include/ELDAPv3.hrl
 lib/${PKGNAME}/include/XmppAddr.hrl
 lib/${PKGNAME}/include/adhoc.hrl
 lib/${PKGNAME}/include/bosh.hrl
-lib/${PKGNAME}/include/ejabberd.hrl
 lib/${PKGNAME}/include/ejabberd_acme.hrl
 lib/${PKGNAME}/include/ejabberd_auth.hrl
 lib/${PKGNAME}/include/ejabberd_commands.hrl
@@ -269,12 +263,10 @@ lib/${PKGNAME}/include/ejabberd_sql_pt.hrl
 lib/${PKGNAME}/include/ejabberd_web_admin.hrl
 lib/${PKGNAME}/include/eldap.hrl
 lib/${PKGNAME}/include/http_bind.hrl
-lib/${PKGNAME}/include/jlib.hrl
 lib/${PKGNAME}/include/logger.hrl
 lib/${PKGNAME}/include/mod_announce.hrl
 lib/${PKGNAME}/include/mod_caps.hrl
 lib/${PKGNAME}/include/mod_carboncopy.hrl
-lib/${PKGNAME}/include/mod_irc.hrl
 lib/${PKGNAME}/include/mod_last.hrl
 lib/${PKGNAME}/include/mod_mam.hrl
 lib/${PKGNAME}/include/mod_muc.hrl
@@ -289,6 +281,7 @@ lib/${PKGNAME}/include/mod_shared_roster.hrl
 lib/${PKGNAME}/include/mod_vcard.hrl
 lib/${PKGNAME}/include/mod_vcard_xupdate.hrl
 lib/${PKGNAME}/include/pubsub.hrl
+lib/${PKGNAME}/include/scram.hrl
 lib/${PKGNAME}/include/translate.hrl
 lib/${PKGNAME}/priv/bin/captcha.sh
 lib/${PKGNAME}/priv/css/admin.css
