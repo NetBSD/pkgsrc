@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3261 2018/07/20 08:41:32 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3262 2018/07/20 08:56:24 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4668,3 +4668,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Exporter-Tiny to 1.002001 [wen 2018-07-20]
 	Updated databases/py-apsw to 3.24.0 [adam 2018-07-20]
 	Updated www/py-flask to 1.0.2 [adam 2018-07-20]
+	Updated misc/erlang-p1_utils to 1.0.12 [fhajny 2018-07-20]
