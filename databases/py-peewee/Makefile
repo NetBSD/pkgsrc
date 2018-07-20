@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2018/07/20 03:34:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.43 2018/07/20 09:38:49 adam Exp $
 
-DISTNAME=	peewee-3.5.2
+DISTNAME=	peewee-3.6.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/peewee/}
 
@@ -12,7 +11,7 @@ COMMENT=	Small, expressive ORM for PostgreSQL, MySQL and SQLite
 LICENSE=	mit
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
-TEST_DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
+#TEST_DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 MAKE_FLAGS+=	SPHINXBUILD=sphinx-build${PYVERSSUFFIX}
 
@@ -31,11 +30,13 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/docs/_build/man/peewee.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/peewee${PYVERSSUFFIX}.1
 
+# tests are not included in 3.6.4
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} runtests.py
+#	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} runtests.py
+	${DO_NADA}
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
