@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3280 2018/07/20 13:08:02 wen Exp $
+$NetBSD: CHANGES-2018,v 1.3281 2018/07/20 13:34:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4688,3 +4688,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated chat/ejabberd to 18.06 [fhajny 2018-07-20]
 	Added devel/c++gsl version 1.0.0 [minskim 2018-07-20]
 	Updated devel/p5-File-Temp to 0.2308 [wen 2018-07-20]
+	Updated lang/php71 to 7.1.20 [taca 2018-07-20]
+	Updated lang/php72 to 7.2.8 [taca 2018-07-20]
+	Updated lang/php70 to 7.0.31 [taca 2018-07-20]
+	Updated lang/php56 to 5.6.37 [taca 2018-07-20]
