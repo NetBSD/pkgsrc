@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q2,v 1.1.2.7 2018/07/20 05:58:30 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q2,v 1.1.2.8 2018/07/20 12:09:40 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q2 branch:
 
@@ -36,4 +36,17 @@ mail/neomutt: security update
 
 Pullup ticket #5793 - requested by tron
 mail/mutt: security update
+
+Pullup ticket #5790 - requested by ryoon
+www/firefox60-l10n: build fix
+
+Pullup ticket #5794 - requested by maya
+x11/qt5-qtlocation: build fix
+
+Pullup ticket #5795 - requested by maya
+lang/gcc48: i386 build fix
+lang/gcc5: i386 build fix
+lang/gcc6: i386 build fix
+lang/gcc7: i386 build fix
+lang/gcc8: i386 build fix
 
