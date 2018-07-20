@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2018/06/21 05:53:02 markd Exp $
+# $NetBSD: Makefile,v 1.15 2018/07/20 03:33:49 ryoon Exp $
 
 DISTNAME=	kpeople-${KF5VER}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/KTp/libkpeople

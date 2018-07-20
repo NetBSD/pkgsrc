@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.93 2018/06/07 07:36:49 adam Exp $
+# $NetBSD: Makefile,v 1.94 2018/07/20 03:34:07 ryoon Exp $
 
+PKGREVISION= 1
 .include "../../databases/sqlite3/Makefile.common"
 
 DISTNAME=	sqlite-autoconf-${SQLITE3_DISTVERSION}
