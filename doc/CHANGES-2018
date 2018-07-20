@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3257 2018/07/20 04:49:32 wen Exp $
+$NetBSD: CHANGES-2018,v 1.3258 2018/07/20 07:09:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4663,3 +4663,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated audio/p5-Audio-Scan to 1.01 [wen 2018-07-20]
 	Updated textproc/icu to 62.1 [ryoon 2018-07-20]
 	Updated benchmarks/p5-Benchmark-Timer to 0.7112 [wen 2018-07-20]
+	Updated audio/fdk-aac to 0.1.6 [adam 2018-07-20]
