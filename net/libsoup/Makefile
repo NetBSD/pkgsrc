@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2018/06/02 22:48:34 youri Exp $
+# $NetBSD: Makefile,v 1.46 2018/07/20 03:33:54 ryoon Exp $
 
 DISTNAME=	libsoup-2.62.2
+PKGREVISION=	1
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsoup/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

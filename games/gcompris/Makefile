@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2018/07/03 05:03:18 adam Exp $
+# $NetBSD: Makefile,v 1.84 2018/07/20 03:34:13 ryoon Exp $
 
 DISTNAME=	gcompris-12.11
-PKGREVISION=	33
+PKGREVISION=	34
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gcompris/}
 EXTRACT_SUFX=	.tar.bz2
