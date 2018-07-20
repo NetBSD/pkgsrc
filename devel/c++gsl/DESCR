@@ -1,0 +1,4 @@
+The Guideline Support Library (GSL) contains functions and types that
+are suggested for use by the C++ Core Guidelines maintained by the
+Standard C++ Foundation. This package contains Microsoft's
+implementation of GSL.
