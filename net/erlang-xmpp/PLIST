@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.8 2018/05/17 13:32:06 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/07/20 09:21:56 fhajny Exp $
 lib/erlang/lib/xmpp
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/flex_offline.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/http_upload.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/jid.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/mam_query.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/muc_register.beam
@@ -73,15 +74,18 @@ lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0357.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0359.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0363.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0369.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0377.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp.app
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_codec.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_codec_external.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_lang.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_sup.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_tr.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_uri.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_util.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/include/flex_offline.hrl
+lib/erlang/lib/xmpp-${PKGVERSION}/include/http_upload.hrl
 lib/erlang/lib/xmpp-${PKGVERSION}/include/jid.hrl
 lib/erlang/lib/xmpp-${PKGVERSION}/include/mam_query.hrl
 lib/erlang/lib/xmpp-${PKGVERSION}/include/muc_register.hrl
@@ -99,4 +103,5 @@ lib/erlang/lib/xmpp-${PKGVERSION}/include/push_summary.hrl
 lib/erlang/lib/xmpp-${PKGVERSION}/include/xmpp.hrl
 lib/erlang/lib/xmpp-${PKGVERSION}/include/xmpp_codec.hrl
 lib/erlang/lib/xmpp-${PKGVERSION}/priv/lib/jid.so
+lib/erlang/lib/xmpp-${PKGVERSION}/priv/lib/xmpp_lang.so
 lib/erlang/lib/xmpp-${PKGVERSION}/priv/lib/xmpp_uri.so
