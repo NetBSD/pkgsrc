@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3279 2018/07/20 11:32:52 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.3280 2018/07/20 13:08:02 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4687,3 +4687,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-dash to 4.6.1 [adam 2018-07-20]
 	Updated chat/ejabberd to 18.06 [fhajny 2018-07-20]
 	Added devel/c++gsl version 1.0.0 [minskim 2018-07-20]
+	Updated devel/p5-File-Temp to 0.2308 [wen 2018-07-20]
