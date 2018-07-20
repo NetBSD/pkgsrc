@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2702 2018/07/18 02:38:18 minskim Exp $
+# $NetBSD: Makefile,v 1.2703 2018/07/20 11:32:35 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -130,6 +130,7 @@ SUBDIR+=	bzr-explorer
 SUBDIR+=	bzr-gtk
 SUBDIR+=	bzr-svn
 SUBDIR+=	bzrtools
+SUBDIR+=	c++gsl
 SUBDIR+=	calltree-perl
 SUBDIR+=	capstone
 SUBDIR+=	catch
