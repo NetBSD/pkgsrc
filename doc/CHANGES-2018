@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3255 2018/07/20 03:32:23 wen Exp $
+$NetBSD: CHANGES-2018,v 1.3256 2018/07/20 03:32:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4661,3 +4661,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added www/joomla version 3.8.10 [wen 2018-07-20]
 	Updated www/p5-libwww to 6.35 [wen 2018-07-20]
 	Updated audio/p5-Audio-Scan to 1.01 [wen 2018-07-20]
+	Updated textproc/icu to 62.1 [ryoon 2018-07-20]
