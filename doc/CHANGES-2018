@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3275 2018/07/20 09:26:28 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.3276 2018/07/20 09:41:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4682,3 +4682,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/erlang-xmpp to 1.2.2 [fhajny 2018-07-20]
 	Updated net/erlang-esip to 1.0.24 [fhajny 2018-07-20]
 	Updated graphics/erlang-eimp to 1.0.6 [fhajny 2018-07-20]
+	Updated x11/xf86-video-r128 to 6.11.0 [wiz 2018-07-20]
