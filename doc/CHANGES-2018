@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3265 2018/07/20 09:02:23 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.3266 2018/07/20 09:04:43 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4672,3 +4672,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/erlang-cache_tab to 1.0.14 [fhajny 2018-07-20]
 	Updated emulators/softvms to 1.10 [tpaul 2018-07-20]
 	Updated security/erlang-fast_tls to 1.0.23 [fhajny 2018-07-20]
+	Updated textproc/erlang-fast_xml to 1.1.32 [fhajny 2018-07-20]
