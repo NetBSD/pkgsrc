@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2018/07/20 16:22:41 jperkin Exp $
+bin/bwm-ng
+man/man1/bwm-ng.1
