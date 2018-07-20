@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3283 2018/07/20 16:23:36 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.3284 2018/07/20 19:08:53 reinoud Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4694,3 +4694,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/php56 to 5.6.37 [taca 2018-07-20]
 	Updated lang/nodejs to 10.7.0 [fhajny 2018-07-20]
 	Added net/bwm-ng version 0.6.1 [jperkin 2018-07-20]
+	Updated misc/udfclient to 0.8.9 [reinoud 2018-07-20]
+
