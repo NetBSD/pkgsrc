@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3285 2018/07/20 19:14:13 leot Exp $
+$NetBSD: CHANGES-2018,v 1.3286 2018/07/20 19:15:11 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4696,4 +4696,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Added net/bwm-ng version 0.6.1 [jperkin 2018-07-20]
 	Updated misc/udfclient to 0.8.9 [reinoud 2018-07-20]
 
+	Updated print/foomatic4-db-engine to 4.0.12nb9 [leot 2018-07-20]
 	Updated print/foomatic4-db-engine to 4.0.12nb9 [leot 2018-07-20]
