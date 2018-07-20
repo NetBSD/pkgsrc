@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3263 2018/07/20 08:59:58 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.3264 2018/07/20 09:00:34 tpaul Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4670,3 +4670,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-flask to 1.0.2 [adam 2018-07-20]
 	Updated misc/erlang-p1_utils to 1.0.12 [fhajny 2018-07-20]
 	Updated devel/erlang-cache_tab to 1.0.14 [fhajny 2018-07-20]
+	Updated emulators/softvms to 1.10 [tpaul 2018-07-20]
