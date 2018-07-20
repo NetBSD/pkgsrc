@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3277 2018/07/20 09:43:50 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3278 2018/07/20 09:58:35 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4685,3 +4685,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/xf86-video-r128 to 6.11.0 [wiz 2018-07-20]
 	Updated databases/py-peewee to 3.6.4 [adam 2018-07-20]
 	Updated devel/py-dash to 4.6.1 [adam 2018-07-20]
+	Updated chat/ejabberd to 18.06 [fhajny 2018-07-20]
