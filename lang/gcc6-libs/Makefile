@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/07/08 21:03:55 maya Exp $
+# $NetBSD: Makefile,v 1.5.10.1 2018/07/20 12:06:09 bsiegert Exp $
 
 GCC_PKGNAME=	gcc6
 .include	"../../lang/${GCC_PKGNAME}/version.mk"
@@ -9,7 +9,7 @@ PKGNAME=	${GCC_PKGNAME}-libs-${GCC6_DIST_VERSION}
 ## The PKGREVISION of this package needs to be at least 1 more than the
 ## PKGREVISION of the lang/gcc6 package so that with the dependence pattern
 ## '{gcc6,gcc6-libs}>=6.1.*' pkg_add will choose gcc6-libs over gcc6.
-PKGREVISION=	2
+PKGREVISION=	4
 
 CATEGORIES=	lang
 MASTER_SITES=	# empty

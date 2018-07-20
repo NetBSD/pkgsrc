@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2018/05/05 04:08:36 maya Exp $
+$NetBSD: distinfo,v 1.1.2.1 2018/07/20 12:06:09 bsiegert Exp $
 
 SHA1 (gcc-8.1.0.tar.xz) = b34031ba9ff3e248b2c62de0825e49a1e0e01998
 RMD160 (gcc-8.1.0.tar.xz) = de00e96f3d70b6a08215930a6884672e56975d05
@@ -18,6 +18,7 @@ SHA1 (patch-gcc_config_x-netbsd) = 6dc3d78e26df62054ea29f98ca51592858e671e3
 SHA1 (patch-gcc_configure) = 15fb7af267b79965f83bc64ce8aad1279b0ea52d
 SHA1 (patch-gcc_ggc-common.c) = a5d2dba635859f5d680c3f80d7c30b42461c752b
 SHA1 (patch-gcc_lto_lto.c) = 7bd85ac8ade76a28c394f6fbe5d495f91824f79f
+SHA1 (patch-gcc_targhooks.c) = b28d8a9696d07bbfb00b7d8c55193ba99447ff1d
 SHA1 (patch-isl_configure) = 36b37778ee13c0b364fb24d5864d6a9e65b29b7d
 SHA1 (patch-libffi_configure) = bcfbfe8abddc378e2de4a39ad0669583b37e0292
 SHA1 (patch-libffi_testsuite_libffi.call_float2.c) = 6321dde308579448c27c2b6e1e30633699dd145f
