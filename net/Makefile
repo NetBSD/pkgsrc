@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1219 2018/07/15 16:10:32 bsiegert Exp $
+# $NetBSD: Makefile,v 1.1220 2018/07/20 16:23:19 jperkin Exp $
 #
 
 COMMENT=	Networking tools
@@ -56,6 +56,7 @@ SUBDIR+=	bsddip
 SUBDIR+=	btget
 SUBDIR+=	btpd
 SUBDIR+=	bug-buddy
+SUBDIR+=	bwm-ng
 SUBDIR+=	bwping
 SUBDIR+=	cacti
 SUBDIR+=	cacti-spine
