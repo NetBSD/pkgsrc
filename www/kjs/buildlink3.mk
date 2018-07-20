@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2018/04/14 07:34:03 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2018/07/20 03:33:57 ryoon Exp $
 
 BUILDLINK_TREE+=	kjs
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kjs
 KJS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kjs+=	kjs>=5.21.0
-BUILDLINK_ABI_DEPENDS.kjs?=	kjs>=5.44.0nb1
+BUILDLINK_ABI_DEPENDS.kjs?=	kjs>=5.47.0nb1
 BUILDLINK_PKGSRCDIR.kjs?=	../../www/kjs
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
