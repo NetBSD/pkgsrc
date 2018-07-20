@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q2,v 1.1.2.6 2018/07/16 14:05:26 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q2,v 1.1.2.7 2018/07/20 05:58:30 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q2 branch:
 
@@ -30,4 +30,10 @@ net/bind99: security update
 
 Pullup ticket #5786 - requested by taca
 www/wordpress: security fix
+
+Pullup ticket #5792 - requested by wiz
+mail/neomutt: security update
+
+Pullup ticket #5793 - requested by tron
+mail/mutt: security update
 
