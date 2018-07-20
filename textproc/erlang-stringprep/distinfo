@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2018/03/24 16:36:18 fhajny Exp $
+$NetBSD: distinfo,v 1.9 2018/07/20 09:14:29 fhajny Exp $
 
-SHA1 (stringprep-1.0.11.tar.gz) = 76118d5e0a6265f3b1f104ad1ff0ac50c3057b6d
-RMD160 (stringprep-1.0.11.tar.gz) = 1ea20dc7eeacb63156612f65f2bdfc38c549b0f3
-SHA512 (stringprep-1.0.11.tar.gz) = 1b7c9ce7454c9f3ace7c36b353f1f002cd54c6ccb09b2c1041a3c0f66199b1c56997b5bd3ac861d4c5a75f19280231b455e020f6f42b8526eaae01c133b7f787
-Size (stringprep-1.0.11.tar.gz) = 95638 bytes
+SHA1 (stringprep-1.0.12.tar.gz) = 94a3f40bc0cf9e1f09d9f0676fc0dc549cb41684
+RMD160 (stringprep-1.0.12.tar.gz) = 048d61f2fd73530bde3dc1010273c659859441c9
+SHA512 (stringprep-1.0.12.tar.gz) = b35feafec5f69c7097624b712ab947ec776d93557f1e1a53c67b95e8fcb9bdb9648c370d17f1ad9948c9abae3f534e11e5797967738e55f73a4b1919f1732d9a
+Size (stringprep-1.0.12.tar.gz) = 95647 bytes
