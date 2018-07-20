@@ -1,19 +1,18 @@
-@comment $NetBSD: PLIST,v 1.17 2018/05/26 21:46:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17.2.1 2018/07/20 05:56:21 spz Exp $
 bin/neomutt
 libexec/neomutt/pgpewrap
-libexec/neomutt/pgpring
 libexec/neomutt/smime_keys
 man/man1/neomutt.1
 man/man1/pgpewrap_neomutt.1
-man/man1/pgpring_neomutt.1
 man/man1/smime_keys_neomutt.1
 man/man5/mbox_neomutt.5
 man/man5/mmdf_neomutt.5
 man/man5/neomuttrc.5
 share/doc/neomutt/CODE_OF_CONDUCT.md
+share/doc/neomutt/COPYRIGHT.md
 share/doc/neomutt/ChangeLog.md
+share/doc/neomutt/INSTALL.md
 share/doc/neomutt/LICENSE.md
-share/doc/neomutt/PGP-Notes.txt
 share/doc/neomutt/README.md
 share/doc/neomutt/advancedusage.html
 share/doc/neomutt/colorschemes/neonwolf-256.neomuttrc
@@ -58,9 +57,6 @@ share/doc/neomutt/samples/Tin.rc
 share/doc/neomutt/samples/colors.default
 share/doc/neomutt/samples/colors.linux
 share/doc/neomutt/samples/gpg.rc
-share/doc/neomutt/samples/pgp2.rc
-share/doc/neomutt/samples/pgp5.rc
-share/doc/neomutt/samples/pgp6.rc
 share/doc/neomutt/samples/sample.mailcap
 share/doc/neomutt/samples/sample.neomuttrc
 share/doc/neomutt/samples/sample.neomuttrc-tlr
