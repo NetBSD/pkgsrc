@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2018/03/24 16:25:56 fhajny Exp $
+# $NetBSD: Makefile,v 1.9 2018/07/20 09:07:47 fhajny Exp $
 
-DISTNAME=	iconv-1.0.7
+DISTNAME=	iconv-1.0.8
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
@@ -11,7 +11,7 @@ LICENSE=	apache-2.0
 
 GITHUB_PROJECT=	iconv
 
-DEPENDS+=	erlang-p1_utils>=1.0.11:../../misc/erlang-p1_utils
+DEPENDS+=	erlang-p1_utils>=1.0.12:../../misc/erlang-p1_utils
 
 GNU_CONFIGURE=	yes
 
