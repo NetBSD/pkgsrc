@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3253 2018/07/20 03:07:17 wen Exp $
+$NetBSD: CHANGES-2018,v 1.3254 2018/07/20 03:27:58 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4659,3 +4659,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/ocaml-opam to 2.0.0_rc3 [jaapb 2018-07-19]
 	Updated math/py-sympy to 1.2 [prlw1 2018-07-19]
 	Added www/joomla version 3.8.10 [wen 2018-07-20]
+	Updated www/p5-libwww to 6.35 [wen 2018-07-20]
