@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3276 2018/07/20 09:41:37 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3277 2018/07/20 09:43:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4683,3 +4683,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/erlang-esip to 1.0.24 [fhajny 2018-07-20]
 	Updated graphics/erlang-eimp to 1.0.6 [fhajny 2018-07-20]
 	Updated x11/xf86-video-r128 to 6.11.0 [wiz 2018-07-20]
+	Updated databases/py-peewee to 3.6.4 [adam 2018-07-20]
+	Updated devel/py-dash to 4.6.1 [adam 2018-07-20]
