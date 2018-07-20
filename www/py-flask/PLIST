@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2016/06/01 21:05:46 kleink Exp $
-bin/flask${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.5 2018/07/20 08:40:42 adam Exp $
+bin/flask-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -34,21 +34,18 @@ ${PYSITELIB}/flask/ctx.pyo
 ${PYSITELIB}/flask/debughelpers.py
 ${PYSITELIB}/flask/debughelpers.pyc
 ${PYSITELIB}/flask/debughelpers.pyo
-${PYSITELIB}/flask/ext/__init__.py
-${PYSITELIB}/flask/ext/__init__.pyc
-${PYSITELIB}/flask/ext/__init__.pyo
-${PYSITELIB}/flask/exthook.py
-${PYSITELIB}/flask/exthook.pyc
-${PYSITELIB}/flask/exthook.pyo
 ${PYSITELIB}/flask/globals.py
 ${PYSITELIB}/flask/globals.pyc
 ${PYSITELIB}/flask/globals.pyo
 ${PYSITELIB}/flask/helpers.py
 ${PYSITELIB}/flask/helpers.pyc
 ${PYSITELIB}/flask/helpers.pyo
-${PYSITELIB}/flask/json.py
-${PYSITELIB}/flask/json.pyc
-${PYSITELIB}/flask/json.pyo
+${PYSITELIB}/flask/json/__init__.py
+${PYSITELIB}/flask/json/__init__.pyc
+${PYSITELIB}/flask/json/__init__.pyo
+${PYSITELIB}/flask/json/tag.py
+${PYSITELIB}/flask/json/tag.pyc
+${PYSITELIB}/flask/json/tag.pyo
 ${PYSITELIB}/flask/logging.py
 ${PYSITELIB}/flask/logging.pyc
 ${PYSITELIB}/flask/logging.pyo

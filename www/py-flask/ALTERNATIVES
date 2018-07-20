@@ -1,1 +1,1 @@
-bin/flask @PREFIX@/bin/flask@PYVERSSUFFIX@
+bin/flask @PREFIX@/bin/flask-@PYVERSSUFFIX@
