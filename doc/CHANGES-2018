@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3270 2018/07/20 09:11:35 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.3271 2018/07/20 09:14:38 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4677,3 +4677,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated converters/erlang-iconv to 1.0.8 [fhajny 2018-07-20]
 	Updated databases/erlang-p1_mysql to 1.0.6 [fhajny 2018-07-20]
 	Updated databases/erlang-p1_pgsql to 1.1.6 [fhajny 2018-07-20]
+	Updated textproc/erlang-stringprep to 1.0.12 [fhajny 2018-07-20]
