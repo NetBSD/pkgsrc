@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.123 2018/06/24 09:13:22 adam Exp $
+$NetBSD: distinfo,v 1.124 2018/07/21 06:52:55 ryoon Exp $
 
-SHA1 (cmake-3.11.4.tar.gz) = 6bcf931844964fefc4ccfd7d025ba4ec2c7c2abb
-RMD160 (cmake-3.11.4.tar.gz) = 6182b0a029c127db27bd88208bbb7f94923ecb2d
-SHA512 (cmake-3.11.4.tar.gz) = c5d03ad66a004292038e49e391c390ebc328fbb089ea699742a9b75f0ada9398c3dc971b868f75d8438bf437ecbeaa62541beb53cae14a699bf244ad101a2290
-Size (cmake-3.11.4.tar.gz) = 7955301 bytes
-SHA1 (patch-CMakeLists.txt) = a0b03f2fad5ea174095c4fe52cea67d94cf46e2d
+SHA1 (cmake-3.12.0.tar.gz) = e140830af031c570b69e141f469bbab1e6cf3d0d
+RMD160 (cmake-3.12.0.tar.gz) = e4165d2e2ff4ce76e9d5c023a9731f826da5be40
+SHA512 (cmake-3.12.0.tar.gz) = e1d5764023d6c8dd4e8d087614e0329a097f1bc587c08c7d22ce7600867bcd7f6750d513458c7c4042570a9526060b89778243e6ea6137efb1727e409ca031ab
+Size (cmake-3.12.0.tar.gz) = 8089372 bytes
+SHA1 (patch-CMakeLists.txt) = 933e640b89293754dc732167fc078a5656e02ec7
 SHA1 (patch-Modules_Compiler_GNU.cmake) = e091c53ac3f3a6cd811119d3231563df32e76bf9
 SHA1 (patch-Modules_FindCurses.cmake) = 09fcd7adfbc2dfc2cd8af4e047d870a5243d77dc
 SHA1 (patch-Modules_FindPythonInterp.cmake) = d1b39bdcd654f2a4fc63463cd20de656cce3cf8f
@@ -13,8 +13,7 @@ SHA1 (patch-Modules_FindX11.cmake) = 124a2d51155cb4455e8b829dc74598cbd50a4e1c
 SHA1 (patch-Modules_Platform_UnixPaths.cmake) = 38720e11b7b62cb702e80da19e044f070298f2db
 SHA1 (patch-Source_CMakeLists.txt) = 533667d43048b8bc2be17a766b5dc32f3101866e
 SHA1 (patch-Source_Checks_cm__cxx17__check.cpp) = 37772f3e7edc2413cb2e294462312aff18e5c989
-SHA1 (patch-Source_Checks_cm_cxx_features.cmake) = 83eb2bedb84972637d02d12f72fec0ccf74563eb
+SHA1 (patch-Source_Checks_cm_cxx_features.cmake) = 3d6e3ac6ad25890d223601c15fb208b8e77ff77c
 SHA1 (patch-Source_CursesDialog_ccmake.cxx) = d7baafe6612b6ac9b0542ed10ffcf90cd8d1df87
-SHA1 (patch-Source_Modules_FindLibUV.cmake) = 54773f03e8122904985c192c14d56c01f8f98e6c
 SHA1 (patch-Utilities_KWIML_CMakeLists.txt) = e4bdf9fc58757e87bf7e3e3e195839eededbc796
 SHA1 (patch-bootstrap) = 9d99cfe9f9ae826250f94bc297f5a22b8de09e84
