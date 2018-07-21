@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.112 2018/06/25 08:42:39 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2018/07/21 06:15:58 wiz Exp $
 
 COMMENT=	Screen saver and locker for the X window system
+PKGREVISION=	1
 
 CONFLICTS+=	xscreensaver-gnome<4.14
 
@@ -21,10 +22,12 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/pam-xscreensaver-NetBSD \
 	    ${DESTDIR}${EGDIR}/pam.d/xscreensaver-NetBSD
 
+.include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXxf86misc/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
