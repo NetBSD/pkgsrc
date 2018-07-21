@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2703 2018/07/20 11:32:35 minskim Exp $
+# $NetBSD: Makefile,v 1.2704 2018/07/21 22:07:46 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -354,6 +354,7 @@ SUBDIR+=	go-golang-lru
 SUBDIR+=	go-goorgeous
 SUBDIR+=	go-gopkgs
 SUBDIR+=	go-goptlib
+SUBDIR+=	go-goreturns
 SUBDIR+=	go-homedir
 SUBDIR+=	go-i18n
 SUBDIR+=	go-immutable-radix
