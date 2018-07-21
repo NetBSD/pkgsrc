@@ -1,0 +1,19 @@
+$NetBSD: patch-configure,v 1.1 2018/07/21 21:26:53 maya Exp $
+
+don't special case sparc sun, it might be GCC which won't have
+-mv8 (PR pkg/37180)
+
+--- configure.orig	2010-03-26 07:07:20.000000000 +0000
++++ configure
+@@ -20409,11 +20409,6 @@ else
+                 CFLAGS="-O2 -Wall -ffast-math -fsigned-char"
+                 PROFILE="-Wall -W -pg -g -O2 -ffast-math -fsigned-char"
+                 ;;
+-        sparc-sun-*)
+-                DEBUG="-g -Wall -fsigned-char -mv8"
+-                CFLAGS="-O20 -ffast-math -fsigned-char -mv8"
+-                PROFILE="-pg -g -O20 -fsigned-char -mv8"
+-                ;;
+         *-*-darwin*)
+                 DEBUG="-fno-common -g -Wall -fsigned-char"
+                 CFLAGS="-fno-common -O4 -Wall -fsigned-char -ffast-math"
