@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/08/17 01:36:26 gavan Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/07/21 22:04:22 minskim Exp $
 gopkg/pkg/${GO_PLATFORM}/github.com/spf13/pflag.a
 gopkg/src/github.com/spf13/pflag/LICENSE
 gopkg/src/github.com/spf13/pflag/README.md
@@ -6,9 +6,13 @@ gopkg/src/github.com/spf13/pflag/bool.go
 gopkg/src/github.com/spf13/pflag/bool_slice.go
 gopkg/src/github.com/spf13/pflag/bool_slice_test.go
 gopkg/src/github.com/spf13/pflag/bool_test.go
+gopkg/src/github.com/spf13/pflag/bytes.go
+gopkg/src/github.com/spf13/pflag/bytes_test.go
 gopkg/src/github.com/spf13/pflag/count.go
 gopkg/src/github.com/spf13/pflag/count_test.go
 gopkg/src/github.com/spf13/pflag/duration.go
+gopkg/src/github.com/spf13/pflag/duration_slice.go
+gopkg/src/github.com/spf13/pflag/duration_slice_test.go
 gopkg/src/github.com/spf13/pflag/example_test.go
 gopkg/src/github.com/spf13/pflag/export_test.go
 gopkg/src/github.com/spf13/pflag/flag.go
@@ -18,6 +22,7 @@ gopkg/src/github.com/spf13/pflag/float64.go
 gopkg/src/github.com/spf13/pflag/golangflag.go
 gopkg/src/github.com/spf13/pflag/golangflag_test.go
 gopkg/src/github.com/spf13/pflag/int.go
+gopkg/src/github.com/spf13/pflag/int16.go
 gopkg/src/github.com/spf13/pflag/int32.go
 gopkg/src/github.com/spf13/pflag/int64.go
 gopkg/src/github.com/spf13/pflag/int8.go
@@ -30,6 +35,7 @@ gopkg/src/github.com/spf13/pflag/ip_test.go
 gopkg/src/github.com/spf13/pflag/ipmask.go
 gopkg/src/github.com/spf13/pflag/ipnet.go
 gopkg/src/github.com/spf13/pflag/ipnet_test.go
+gopkg/src/github.com/spf13/pflag/printusage_test.go
 gopkg/src/github.com/spf13/pflag/string.go
 gopkg/src/github.com/spf13/pflag/string_array.go
 gopkg/src/github.com/spf13/pflag/string_array_test.go
