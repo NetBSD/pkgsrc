@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2018/06/04 07:18:47 dbj Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/21 23:21:17 dbj Exp $
 #
 
 DISTNAME=	predict-2.2.3
 CATEGORIES=	ham
-#MASTER_SITES=	http://www.amsat.org/amsat/ftp/software/Linux/
-MASTER_SITES=	http://www.qsl.net/kd2bd/predict-2.2.3.tar.gz
+MASTER_SITES=	http://www.qsl.net/kd2bd/
 
 MAINTAINER=	dbj@NetBSD.org
 HOMEPAGE=	http://www.qsl.net/kd2bd/predict.html
