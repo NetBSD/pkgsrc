@@ -1,0 +1,5 @@
+A gofmt/goimports-like tool for Go programmers that fills in Go return
+statements with zero values to match the func return types. This tool
+adds zero-value return values to incomplete Go return statements, to
+save you time when writing Go. It is inspired by and based on
+goimports.
