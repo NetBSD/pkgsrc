@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3291 2018/07/21 16:07:38 leot Exp $
+$NetBSD: CHANGES-2018,v 1.3292 2018/07/21 16:39:21 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4700,3 +4700,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/cmake to 3.12.0 [ryoon 2018-07-21]
 	Updated ham/gnuradio-core to 3.7.13.4 [makoto 2018-07-21]
 	Updated print/foomatic4-db-engine to 4.0.13 [leot 2018-07-21]
+	Updated print/foomatic4-db to 20180721 [leot 2018-07-21]
