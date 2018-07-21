@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2015/06/29 11:06:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2018/07/21 21:08:03 maya Exp $
 #
 
 DISTNAME=	extipl-5.04
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_OSDN:=extipl/2166/}
 
