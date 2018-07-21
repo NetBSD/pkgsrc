@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3288 2018/07/21 06:16:08 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3289 2018/07/21 06:54:26 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4697,3 +4697,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/udfclient to 0.8.9 [reinoud 2018-07-20]
 	Updated print/foomatic4-db-engine to 4.0.12nb9 [leot 2018-07-20]
 	Updated x11/xscreensaver to 5.39nb1 [wiz 2018-07-21]
+	Updated devel/cmake to 3.12.0 [ryoon 2018-07-21]
