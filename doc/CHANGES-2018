@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3293 2018/07/21 21:08:26 maya Exp $
+$NetBSD: CHANGES-2018,v 1.3294 2018/07/21 22:08:17 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4702,3 +4702,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/foomatic4-db-engine to 4.0.13 [leot 2018-07-21]
 	Updated print/foomatic4-db to 20180721 [leot 2018-07-21]
 	Updated sysutils/extipl to 5.04nb2 [maya 2018-07-21]
+	Added devel/go-goreturns version 0.0.20180301 [minskim 2018-07-21]
