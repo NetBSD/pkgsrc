@@ -1,0 +1,2 @@
+go-colorable is a colorable writer for Microsoft Windows. It handles
+esacpe sequences for ANSI color.
