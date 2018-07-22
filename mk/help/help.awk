@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.30 2018/03/07 00:14:57 rillig Exp $
+# $NetBSD: help.awk,v 1.31 2018/07/22 06:45:31 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -7,7 +7,7 @@
 #
 
 BEGIN {
-	no = 0; yes = 1; always = 1;
+	no = 0; yes = 1;
 
 	debug = ENVIRON["HELP_DEBUG"] != "";
 	topic = ENVIRON["TOPIC"];
@@ -28,6 +28,7 @@ BEGIN {
 	print_noncomment_lines = yes; # for make targets, this isn't useful
 	print_index = (topic == ":index");
 				# whether to print only the list of keywords
+	delete all_appearances;	# all files where the topic appears as text
 }
 
 # Help topics are separated by either completely empty lines or by the
@@ -56,7 +57,7 @@ function end_of_topic() {
 			print "";
 		found_anything = yes;
 
-		print "===> " last_fname " (keywords:" sorted_keys(keywords) "):";
+		print "===> " last_fname " (keywords:" sorted_keys(keywords, " ") "):";
 
 		for (i = 0; i < nlines; i++) {
 			if (print_noncomment_lines || (lines[i] ~ /^#/))
@@ -66,7 +67,7 @@ function end_of_topic() {
 	cleanup();
 }
 
-function sorted_keys(array,   elem, list, listlen, i, j, tmp, joined) {
+function sorted_keys(array, separator,   elem, list, listlen, i, j, tmp, joined) {
 	listlen = 0;
 	for (elem in array)
 		list[listlen++] = elem;
@@ -83,7 +84,7 @@ function sorted_keys(array,   elem, list, listlen, i, j, tmp, joined) {
 
 	joined = "";
 	for (i = 0; i < listlen; i++) {
-		joined = joined " " list[i];
+		joined = joined separator list[i];
 	}
 	return joined;
 }
@@ -104,7 +105,7 @@ function dprint(msg) {
 	}
 }
 
-always {
+{
 	ignore_this_line = (ignore_next_empty_line && $0 == "#") || $0 == "";
 	ignore_next_empty_line = no;
 }
@@ -206,7 +207,11 @@ $1 == "#" {
 	end_of_topic();
 }
 
-always {
+index(tolower($0), topic) != 0 {
+	all_appearances[FILENAME] = yes;
+}
+
+{
 	last_fname = FILENAME;
 }
 
@@ -215,10 +220,13 @@ END {
 	if (print_index) {
 		print "Available help topics:";
 		print "";
-		for (k in all_keywords) {
-			print k | "LC_ALL=C sort";
-		}
+		print sorted_keys(all_keywords, "\n");
 	} else if (!found_anything) {
-		print "No help found for "topic".";
+		appearances = sorted_keys(all_appearances, "\n");
+		if (appearances != "") {
+			print "No help found for " topic ", but it appears in:\n" appearances;
+		} else {
+			print "No help found for " topic ".";
+		}
 	}
 }
