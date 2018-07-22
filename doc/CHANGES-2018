@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3297 2018/07/22 10:16:23 leot Exp $
+$NetBSD: CHANGES-2018,v 1.3298 2018/07/22 19:22:33 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4706,3 +4706,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/go-pflag to 1.0.1 [minskim 2018-07-21]
 	Updated lang/rust to 1.27.2 [ryoon 2018-07-22]
 	Updated net/youtube-dl to 20180721 [leot 2018-07-22]
+	Updated multimedia/streamlink to 0.14.2 [maya 2018-07-22]
