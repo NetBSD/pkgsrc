@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2017/09/25 22:26:27 joerg Exp $
+$NetBSD: distinfo,v 1.19 2018/07/22 22:36:17 wiz Exp $
 
 SHA1 (podofo-0.9.5.tar.gz) = 25c84a9e4815197e967bdb93fc2de8e1654a2812
 RMD160 (podofo-0.9.5.tar.gz) = a557330766b1795dd010937eb5c08ce7df671122
@@ -12,3 +12,4 @@ SHA1 (patch-src_base_PdfMemoryManagement.cpp) = 9303daf1e471106d9d22e42230db650d
 SHA1 (patch-src_base_PdfVariant.h) = 8e9c206738716fd51a1d56f34e7aa35cc6718d48
 SHA1 (patch-src_doc_PdfImage.cpp) = 844250a772d40ba3ea2322ea623990b87b27c664
 SHA1 (patch-test_CMakeLists.txt) = 846871dac995ff80544ad9096574eddd776e324f
+SHA1 (patch-test_TokenizerTest_CMakeLists.txt) = 588f0f26aa5c8d6a1d1e6119680b9ee7416781d6
