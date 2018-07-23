@@ -1,8 +1,8 @@
-$NetBSD: patch-src_makefile,v 1.1 2018/05/03 13:13:51 schmonz Exp $
+$NetBSD: patch-src_makefile,v 1.2 2018/07/23 05:16:43 schmonz Exp $
 
 Use pkgsrc-specified compiler and flags.
 
---- src/makefile.orig	2018-04-30 12:17:04.000000000 +0000
+--- src/makefile.orig	2018-07-19 17:57:22.000000000 +0000
 +++ src/makefile
 @@ -13,19 +13,20 @@
  # See src/gui-qt/highlight.pro for the Qt GUI compilation options
@@ -21,7 +21,7 @@ Use pkgsrc-specified compiler and flags.
  
  CFLAGS_DILU=-fno-strict-aliasing
  
- SO_VERSION=3.43
+ SO_VERSION=3.44
  
 +LSO_VERSION=$(shell echo ${SO_VERSION} | awk -F. '{ printf "%d:%d:0\n", $$1 - 1, $$2 }')
  
