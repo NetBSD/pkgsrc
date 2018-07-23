@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3306 2018/07/23 05:35:13 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.3307 2018/07/23 22:57:38 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4715,3 +4715,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/libhighlight to 3.44 [schmonz 2018-07-23]
 	Updated textproc/highlight to 3.44 [schmonz 2018-07-23]
 	Updated textproc/p5-highlight to 3.44 [schmonz 2018-07-23]
+	Updated chat/weechat to 2.1nb3 [maya 2018-07-23]
