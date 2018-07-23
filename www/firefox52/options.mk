@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2017/04/27 01:55:57 ryoon Exp $
+# $NetBSD: options.mk,v 1.2 2018/07/23 04:56:12 maya Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
@@ -12,9 +12,9 @@ PKG_SUPPORTED_OPTIONS+=	alsa oss pulseaudio dbus
 PLIST_VARS+=		gnome jemalloc debug
 
 .if ${OPSYS} == "Linux"
-PKG_SUGGESTED_OPTIONS+=	alsa mozilla-jemalloc dbus
+PKG_SUGGESTED_OPTIONS+=	pulseaudio mozilla-jemalloc dbus
 .elif ${OPSYS} == "NetBSD"
-PKG_SUGGESTED_OPTIONS+=	alsa dbus
+PKG_SUGGESTED_OPTIONS+=	oss dbus
 .elif ${OPSYS} == "FreeBSD"
 PKG_SUGGESTED_OPTIONS+=	oss dbus
 .elif ${OPSYS} == "DragonFly"
