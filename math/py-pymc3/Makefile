@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/07/06 03:46:43 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/23 01:37:54 minskim Exp $
 
-DISTNAME=	pymc3-3.4.1
+DISTNAME=	pymc3-3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pymc3/}
