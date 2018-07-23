@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/07/06 03:46:43 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/07/23 01:37:54 minskim Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -94,9 +94,6 @@ ${PYSITELIB}/pymc3/examples/arma_example.pyo
 ${PYSITELIB}/pymc3/examples/baseball.py
 ${PYSITELIB}/pymc3/examples/baseball.pyc
 ${PYSITELIB}/pymc3/examples/baseball.pyo
-${PYSITELIB}/pymc3/examples/censored_data.py
-${PYSITELIB}/pymc3/examples/censored_data.pyc
-${PYSITELIB}/pymc3/examples/censored_data.pyo
 ${PYSITELIB}/pymc3/examples/custom_dists.py
 ${PYSITELIB}/pymc3/examples/custom_dists.pyc
 ${PYSITELIB}/pymc3/examples/custom_dists.pyo
@@ -148,6 +145,9 @@ ${PYSITELIB}/pymc3/examples/lasso_missing.pyo
 ${PYSITELIB}/pymc3/examples/lightspeed_example.py
 ${PYSITELIB}/pymc3/examples/lightspeed_example.pyc
 ${PYSITELIB}/pymc3/examples/lightspeed_example.pyo
+${PYSITELIB}/pymc3/examples/rankdata_ordered.py
+${PYSITELIB}/pymc3/examples/rankdata_ordered.pyc
+${PYSITELIB}/pymc3/examples/rankdata_ordered.pyo
 ${PYSITELIB}/pymc3/examples/samplers_mvnormal.py
 ${PYSITELIB}/pymc3/examples/samplers_mvnormal.pyc
 ${PYSITELIB}/pymc3/examples/samplers_mvnormal.pyo
@@ -196,6 +196,12 @@ ${PYSITELIB}/pymc3/memoize.pyo
 ${PYSITELIB}/pymc3/model.py
 ${PYSITELIB}/pymc3/model.pyc
 ${PYSITELIB}/pymc3/model.pyo
+${PYSITELIB}/pymc3/model_graph.py
+${PYSITELIB}/pymc3/model_graph.pyc
+${PYSITELIB}/pymc3/model_graph.pyo
+${PYSITELIB}/pymc3/parallel_sampling.py
+${PYSITELIB}/pymc3/parallel_sampling.pyc
+${PYSITELIB}/pymc3/parallel_sampling.pyo
 ${PYSITELIB}/pymc3/plots/__init__.py
 ${PYSITELIB}/pymc3/plots/__init__.pyc
 ${PYSITELIB}/pymc3/plots/__init__.pyo
@@ -364,6 +370,9 @@ ${PYSITELIB}/pymc3/tests/test_model.pyo
 ${PYSITELIB}/pymc3/tests/test_model_func.py
 ${PYSITELIB}/pymc3/tests/test_model_func.pyc
 ${PYSITELIB}/pymc3/tests/test_model_func.pyo
+${PYSITELIB}/pymc3/tests/test_model_graph.py
+${PYSITELIB}/pymc3/tests/test_model_graph.pyc
+${PYSITELIB}/pymc3/tests/test_model_graph.pyo
 ${PYSITELIB}/pymc3/tests/test_model_helpers.py
 ${PYSITELIB}/pymc3/tests/test_model_helpers.pyc
 ${PYSITELIB}/pymc3/tests/test_model_helpers.pyo
@@ -379,6 +388,9 @@ ${PYSITELIB}/pymc3/tests/test_models_utils.pyo
 ${PYSITELIB}/pymc3/tests/test_ndarray_backend.py
 ${PYSITELIB}/pymc3/tests/test_ndarray_backend.pyc
 ${PYSITELIB}/pymc3/tests/test_ndarray_backend.pyo
+${PYSITELIB}/pymc3/tests/test_parallel_sampling.py
+${PYSITELIB}/pymc3/tests/test_parallel_sampling.pyc
+${PYSITELIB}/pymc3/tests/test_parallel_sampling.pyo
 ${PYSITELIB}/pymc3/tests/test_pickling.py
 ${PYSITELIB}/pymc3/tests/test_pickling.pyc
 ${PYSITELIB}/pymc3/tests/test_pickling.pyo
