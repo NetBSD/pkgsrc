@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/07/06 03:46:43 minskim Exp $
+$NetBSD: distinfo,v 1.2 2018/07/23 01:37:54 minskim Exp $
 
-SHA1 (pymc3-3.4.1.tar.gz) = 859916e93bf653a15bf0637e63067714d17834ce
-RMD160 (pymc3-3.4.1.tar.gz) = 9fed35a862543f2dcaa064efae0b57f7e334427f
-SHA512 (pymc3-3.4.1.tar.gz) = 122fdfff3e20489c8fb343d6f42c1ac9c1a45ecb9f416266b514ebb3ed84ca9d070a534e1ceaf9156ffa29ab5ca9bdd949adf5fb81e197acc88383ff0bc5d064
-Size (pymc3-3.4.1.tar.gz) = 47538716 bytes
+SHA1 (pymc3-3.5.tar.gz) = d5a699bafd327e455e96fc813915807c1cc86325
+RMD160 (pymc3-3.5.tar.gz) = 8fd3b10bf359a4462e1c7397e69b507e706f94b3
+SHA512 (pymc3-3.5.tar.gz) = 3f0dc51f0088d5262dbd8397a8a328f975718da6c45d4aca29b1e035f583dc0beb1dde7abbea5d459d428699bcb854acaec0680549fd8ba5bb168ca3050e94f6
+Size (pymc3-3.5.tar.gz) = 31996796 bytes
