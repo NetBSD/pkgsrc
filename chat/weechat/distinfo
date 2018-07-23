@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.49 2018/07/22 21:32:34 maya Exp $
+$NetBSD: distinfo,v 1.50 2018/07/23 22:57:22 maya Exp $
 
 SHA1 (weechat-2.1.tar.bz2) = a537358336beef9391d668a6149bea1953c7b1d0
 RMD160 (weechat-2.1.tar.bz2) = 63c4e9f7ffb772ea81076454f0d653126750e987
 SHA512 (weechat-2.1.tar.bz2) = f49eb7d7a05edc8ada71a48e6dc190227daaec971d2386bee86fdd6151216a9e035bd2c682666f3a57582f8d63614bb92e69f3db5410c01cc5ff508483e6df1d
 Size (weechat-2.1.tar.bz2) = 2865960 bytes
 SHA1 (patch-CMakeLists.txt) = 493e49c0c698ff7b2685ba489d693fc1d388318d
-SHA1 (patch-cmake_FindNcurses.cmake) = 18cc0f7582b1dfc0d79ec4824d924abf6eabef64
+SHA1 (patch-cmake_FindNcurses.cmake) = bcc15b2c968a5850f1161608a83f38a03296b2a8
 SHA1 (patch-po_CMakeLists.txt) = 9b97a4a4da4175e31ea53352fd0b95e1c985ba1e
 SHA1 (patch-src_plugins_charset_charset.c) = f0b6e5268908caab5efa8048c8a55b0083ec0ca4
