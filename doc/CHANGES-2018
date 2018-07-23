@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3302 2018/07/23 01:38:42 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.3303 2018/07/23 04:56:33 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4711,3 +4711,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/go-colorable version 0.0.9 [minskim 2018-07-22]
 	Updated editors/Sigil to 0.9.9nb7 [wiz 2018-07-22]
 	Updated math/py-pymc3 to 3.5 [minskim 2018-07-23]
+	Updated www/firefox52 to 52.9.0nb3 [maya 2018-07-23]
