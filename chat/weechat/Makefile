@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.87 2018/07/22 21:32:34 maya Exp $
+# $NetBSD: Makefile,v 1.88 2018/07/23 22:57:22 maya Exp $
 
 DISTNAME=	weechat-2.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	chat
 MASTER_SITES=	https://www.weechat.org/files/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -18,6 +18,7 @@ USE_TOOLS+=		msgfmt pkg-config
 USE_LANGUAGES=		c99
 USE_LIBTOOL=		yes
 USE_CMAKE=		yes
+FAKE_NCURSES=		yes
 
 CMAKE_ARGS+=		-DENABLE_ASPELL:BOOL=OFF
 CMAKE_ARGS+=		-DENABLE_GUILE:BOOL=OFF
