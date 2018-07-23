@@ -1,4 +1,4 @@
-# $NetBSD: luaversion.mk,v 1.9 2015/02/16 10:52:34 jperkin Exp $
+# $NetBSD: luaversion.mk,v 1.10 2018/07/23 22:22:42 rillig Exp $
 
 # This file determins which Lua version is used as a dependency for
 # a package.
@@ -145,7 +145,7 @@ LUA_PKGPREFIX=		lua51
 LUA_BASEDEPENDS=	lua51>=5.1<5.2:${LUA_PKGSRCDIR}
 
 .else
-PKG_FAIL_REASION+=	"No valid Lua version found"
+PKG_FAIL_REASON+=	"No valid Lua version found"
 
 .endif
 
