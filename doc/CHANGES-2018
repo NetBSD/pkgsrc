@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3305 2018/07/23 05:18:08 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.3306 2018/07/23 05:35:13 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4714,3 +4714,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/firefox52 to 52.9.0nb3 [maya 2018-07-23]
 	Updated textproc/libhighlight to 3.44 [schmonz 2018-07-23]
 	Updated textproc/highlight to 3.44 [schmonz 2018-07-23]
+	Updated textproc/p5-highlight to 3.44 [schmonz 2018-07-23]
