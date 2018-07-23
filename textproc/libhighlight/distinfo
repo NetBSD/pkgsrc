@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.2 2018/05/27 11:50:26 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2018/07/23 05:16:43 schmonz Exp $
 
-SHA1 (highlight-3.43.tar.bz2) = 471976f309339f9b6a17ee9501b9d3b0a47872da
-RMD160 (highlight-3.43.tar.bz2) = 73d53b819e16a9796af44fe346f464d7743c3ee9
-SHA512 (highlight-3.43.tar.bz2) = 77ad159963de64ef3c4732ad70c63ceafe7002c43d8b045e61361f52e56467933790c70e88570e0c866503a621496de2c80934c7f8141721545ff43c807968d1
-Size (highlight-3.43.tar.bz2) = 1311318 bytes
+SHA1 (highlight-3.44.tar.bz2) = c01ea650bc9462df833afa59e566be32cd47e3f0
+RMD160 (highlight-3.44.tar.bz2) = d7997c545d98c21c2fd09f68989e3cb8cf3713da
+SHA512 (highlight-3.44.tar.bz2) = a0b9a147cadec72b80b97d92e6fac9312f134ef71a4a67121cab3646668424379c14a9189b5bdd0d892790cc99edc955090967caf6816239151d0e8a19bcfbd7
+Size (highlight-3.44.tar.bz2) = 1335764 bytes
 SHA1 (patch-extras_swig_makefile) = 2bb62f7519cd5baed60b1af5f606ce22444c346f
-SHA1 (patch-makefile) = 693fe29c416e4e5ee63e279f4abb27799ce0d6e0
+SHA1 (patch-makefile) = c3ba1882befaf0293ad4ff69b2b6067d42bb3e57
 SHA1 (patch-src_core_platform__fs.cpp) = 65b7f4b665b820eec4b835474bd308e49080526e
-SHA1 (patch-src_makefile) = 040bbcddb6e83e4d2c4f9039f55d543c8f7a2ea4
+SHA1 (patch-src_makefile) = 6d9343af73f1d9cc1cd62958c654089865f1a2bc

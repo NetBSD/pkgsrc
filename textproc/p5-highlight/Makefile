@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2018/05/27 11:50:26 schmonz Exp $
+# $NetBSD: Makefile,v 1.10 2018/07/23 05:16:43 schmonz Exp $
 
 .include "../../textproc/libhighlight/Makefile.common"
-PKGREVISION=		1
 
 PKGNAME=		p5-highlight-${VERSION}
 COMMENT+=		 (Perl bindings)

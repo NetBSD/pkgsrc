@@ -1,8 +1,8 @@
-$NetBSD: patch-makefile,v 1.1 2018/05/03 13:13:51 schmonz Exp $
+$NetBSD: patch-makefile,v 1.2 2018/07/23 05:16:43 schmonz Exp $
 
 Use pkgsrc-provided paths and tools.
 
---- makefile.orig	2018-01-20 20:42:17.000000000 +0000
+--- makefile.orig	2018-07-19 17:57:22.000000000 +0000
 +++ makefile
 @@ -7,7 +7,7 @@
  DESTDIR =
@@ -22,17 +22,17 @@ Use pkgsrc-provided paths and tools.
  
  # Location of the highlight documentation:
  doc_dir = ${PREFIX}/share/doc/highlight/
-@@ -25,7 +25,8 @@ doc_dir = ${PREFIX}/share/doc/highlight/
+@@ -25,18 +25,18 @@ doc_dir = ${PREFIX}/share/doc/highlight/
  examples_dir = ${doc_dir}extras/
  
  # Location of the highlight config files:
 -conf_dir = /etc/highlight/
+-#conf_dir = ${PREFIX}/etc/highlight/
 +#conf_dir = /etc/highlight/
 +conf_dir = ${PREFIX}/share/examples/highlight/
- #conf_dir = ${PREFIX}/etc/highlight/
  
  # Location of additional gui files
-@@ -33,10 +34,10 @@ desktop_apps = ${PREFIX}/share/applicati
+ desktop_apps = ${PREFIX}/share/applications/
  desktop_pixmaps = ${PREFIX}/share/pixmaps/
  
  # Commands:
@@ -47,8 +47,8 @@ Use pkgsrc-provided paths and tools.
  
  all cli:
  	${MAKE} -C ./src -f ./makefile HL_DATA_DIR=${data_dir} HL_CONFIG_DIR=${conf_dir}
-@@ -81,14 +82,11 @@ install:
- 		${DESTDIR}${data_dir}themes \
+@@ -85,15 +85,12 @@ install:
+ 		${DESTDIR}${data_dir}themes/base16 \
  		${DESTDIR}${data_dir}langDefs \
  		${DESTDIR}${data_dir}plugins
 -	${MKDIR} ${DESTDIR}${man_dir}
@@ -57,13 +57,14 @@ Use pkgsrc-provided paths and tools.
  	${INSTALL_DATA} ./langDefs/*.lang ${DESTDIR}${data_dir}langDefs/
  	${INSTALL_DATA} ./*.conf ${DESTDIR}${conf_dir}
  	${INSTALL_DATA} ./themes/*.theme ${DESTDIR}${data_dir}themes/
+ 	${INSTALL_DATA} ./themes/base16/*.theme ${DESTDIR}${data_dir}themes/base16/
  	${INSTALL_DATA} ./plugins/*.lua ${DESTDIR}${data_dir}plugins/
 -	${INSTALL_DATA} ./man/highlight.1.gz ${DESTDIR}${man_dir}
  	${INSTALL_DATA} ./AUTHORS ${DESTDIR}${doc_dir}
  	${INSTALL_DATA} ./README ${DESTDIR}${doc_dir}
  	${INSTALL_DATA} ./README_DE ${DESTDIR}${doc_dir}
-@@ -110,15 +108,25 @@ install:
- 
+@@ -116,15 +113,25 @@ install:
+ 	${INSTALL_DATA} ./extras/themes-resources/css-themes/* ${DESTDIR}${examples_dir}themes-resources/css-themes
  	${INSTALL_DATA} ./extras/highlight_pipe.* ${DESTDIR}${examples_dir}
  	${INSTALL_DATA} ./extras/*.py ${DESTDIR}${examples_dir}
 -	${INSTALL_PROGRAM} ./src/highlight ${DESTDIR}${bin_dir}
@@ -90,7 +91,7 @@ Use pkgsrc-provided paths and tools.
  install-gui:
  	@echo "Installing files for the GUI..."
  	${MKDIR} ${DESTDIR}${data_dir} \
-@@ -140,7 +148,7 @@ uninstall:
+@@ -146,7 +153,7 @@ uninstall:
  	${RMDIR} ${DESTDIR}${doc_dir}
  	${RMDIR} ${DESTDIR}${conf_dir}
  	${RMDIR} ${DESTDIR}${examples_dir}
