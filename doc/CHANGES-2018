@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3301 2018/07/22 22:51:33 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3302 2018/07/23 01:38:42 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4710,3 +4710,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated chat/weechat to 2.1nb2 [maya 2018-07-22]
 	Added devel/go-colorable version 0.0.9 [minskim 2018-07-22]
 	Updated editors/Sigil to 0.9.9nb7 [wiz 2018-07-22]
+	Updated math/py-pymc3 to 3.5 [minskim 2018-07-23]
