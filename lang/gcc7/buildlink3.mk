@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2017/05/03 00:54:59 maya Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2018/07/23 01:07:08 maya Exp $
 
 BUILDLINK_TREE+=	gcc7
 
@@ -9,6 +9,8 @@ BUILDLINK_API_DEPENDS.gcc7+=	gcc7>=${_GCC_REQD}
 BUILDLINK_ABI_DEPENDS.gcc7+=	gcc7>=7.0
 BUILDLINK_PKGSRCDIR.gcc7=	../../lang/gcc7
 BUILDLINK_DEPMETHOD.gcc7?=	build
+
+BUILDLINK_PASSTHRU_DIRS+=	${BUILDLINK_PREFIX.gcc7}/gcc7
 
 BUILDLINK_FILES.gcc7=		#empty
 BUILDLINK_AUTO_VARS.gcc7=	no
