@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3325 2018/07/24 16:27:32 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.3326 2018/07/24 17:44:00 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4743,3 +4743,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/py-twisted to 18.7.0 [adam 2018-07-24]
 	Added devel/apache-ant19 version 1.9.13 [jperkin 2018-07-24]
 	Updated devel/apache-ivy to 2.4.0nb1 [jperkin 2018-07-24]
+	Updated sysutils/daemontools-run to 20180724 [schmonz 2018-07-24]
