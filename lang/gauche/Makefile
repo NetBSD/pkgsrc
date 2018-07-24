@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.71 2018/01/28 20:10:53 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2018/07/24 14:52:18 ryoon Exp $
 #
 
-DISTNAME=	Gauche-0.9.5
-#PKGREVISION=	1
-PKGREVISION=	1
+DISTNAME=	Gauche-0.9.6
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gauche/}
 EXTRACT_SUFX=	.tgz
@@ -37,7 +35,7 @@ ALL_ENV+=		\
 
 USE_LANGUAGES=	c c99
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gzip makeinfo
+USE_TOOLS+=	gmake gzip makeinfo
 TEST_TARGET=	check
 INFO_FILES=	yes
 
