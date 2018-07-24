@@ -1,8 +1,8 @@
-$NetBSD: patch-imap_src_mtest_mtest.c,v 1.2 2016/05/14 16:13:10 bsiegert Exp $
+$NetBSD: patch-imap_src_mtest_mtest.c,v 1.3 2018/07/24 12:39:36 bsiegert Exp $
 
 - patch up buffer handling (required to build on openbsd)
 
---- imap/src/mtest/mtest.c.orig	2015-01-12 05:12:25.000000000 +0000
+--- imap/src/mtest/mtest.c.orig	2017-02-06 00:06:22.499218141 +0000
 +++ imap/src/mtest/mtest.c
 @@ -151,6 +151,7 @@ void mm (MAILSTREAM *stream,long debug)
    void *sdb = NIL;
@@ -16,7 +16,7 @@ $NetBSD: patch-imap_src_mtest_mtest.c,v 1.2 2016/05/14 16:13:10 bsiegert Exp $
    while (stream) {
      prompt ("MTest> ",cmd, sizeof(cmd)); /* prompt user, get command */
  				/* get argument */
--    if (arg = strchr (cmd,' ')) *arg++ = '\0';
+-    if ((arg = strchr (cmd,' ')) != NULL) *arg++ = '\0';
 +    if (arg)
 +      argmax = sizeof(cmd) - (arg - cmd);
 +
@@ -37,8 +37,8 @@ $NetBSD: patch-imap_src_mtest_mtest.c,v 1.2 2016/05/14 16:13:10 bsiegert Exp $
      case 'F':			/* Find command */
        if (!arg) {
  	arg = "%";
-+	argmax = 0;
- 	if (s = sm_read (tmp,&sdb)) {
++        argmax = 0;
+ 	if ((s = sm_read (tmp,&sdb)) != NULL) {
  	  puts ("Local network subscribed mailboxes:");
  	  do if (*s == '{') (mm_lsub (NIL,NIL,s,NIL));
 @@ -251,7 +256,7 @@ void mm (MAILSTREAM *stream,long debug)
@@ -69,21 +69,21 @@ $NetBSD: patch-imap_src_mtest_mtest.c,v 1.2 2016/05/14 16:13:10 bsiegert Exp $
      mail_date (tmp+11,&selt);
      tmp[17] = ' ';
      tmp[18] = '\0';
-@@ -394,19 +400,20 @@ void overview_header (MAILSTREAM *stream
+@@ -394,11 +400,12 @@ void overview_header (MAILSTREAM *stream
      for (adr = ov->from; adr && !adr->host; adr = adr->next);
      if (adr) {			/* if a personal name exists use it */
        if (!(t = adr->personal))
 -	sprintf (t = tmp+400,"%s@%s",adr->mailbox,adr->host);
-+	snprintf (t = tmp+400, sizeof(tmp)-400, "%s@%s",adr->mailbox,adr->host);
++        snprintf (t = tmp+400, sizeof(tmp)-400, "%s@%s",adr->mailbox,adr->host);
        memcpy (tmp+18,t,(size_t) min (20,(long) strlen (t)));
      }
      strcat (tmp," ");
-     if (i = elt->user_flags) {
-       strcat (tmp,"{");
+     if ((i = elt->user_flags) != 0L) {
 +      /* XXX bounds? */
+       strcat (tmp,"{");
        while (i) {
  	strcat (tmp,stream->user_flags[find_rightmost_bit (&i)]);
- 	if (i) strcat (tmp," ");
+@@ -406,7 +413,7 @@ void overview_header (MAILSTREAM *stream
        }
        strcat (tmp,"} ");
      }
@@ -140,7 +140,7 @@ $NetBSD: patch-imap_src_mtest_mtest.c,v 1.2 2016/05/14 16:13:10 bsiegert Exp $
 -    sprintf (s," %s%ld %s",pfx,++i,body_types[body->type]);
 -    if (body->subtype) sprintf (s += strlen (s),"/%s",body->subtype);
 -    if (body->description) sprintf (s += strlen (s)," (%s)",body->description);
--    if (par = body->parameter) do
+-    if ((par = body->parameter) != NULL) do
 -      sprintf (s += strlen (s),";%s=%s",par->attribute,par->value);
 +    snprintf (s, smax, " %s%ld %s",pfx,++i,body_types[body->type]);
 +    if (body->subtype) {
@@ -161,7 +161,7 @@ $NetBSD: patch-imap_src_mtest_mtest.c,v 1.2 2016/05/14 16:13:10 bsiegert Exp $
 +       smax -= len;
 +       snprintf (s, smax, ";%s=%s",par->attribute,par->value);
 +    }
-     while (par = par->next);
+     while ((par = par->next) != NULL);
 -    if (body->id) sprintf (s += strlen (s),", id = %s",body->id);
 +    if (body->id) {
 +       len = strlen(s);
