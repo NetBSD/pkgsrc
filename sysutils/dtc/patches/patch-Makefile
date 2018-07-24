@@ -1,8 +1,10 @@
-$NetBSD: patch-Makefile,v 1.1 2017/12/05 09:54:18 adam Exp $
+$NetBSD: patch-Makefile,v 1.2 2018/07/24 06:06:08 adam Exp $
 
 Use custom CFLAGS; do not fail on warnings.
+Fix install_name on Darwin.
+Link against shared library.
 
---- Makefile.orig	2017-12-05 09:03:49.000000000 +0000
+--- Makefile.orig	2018-07-23 03:00:50.000000000 +0000
 +++ Makefile
 @@ -18,7 +18,7 @@ CONFIG_LOCALVERSION =
  CPPFLAGS = -I libfdt -I .
@@ -13,3 +15,27 @@ Use custom CFLAGS; do not fail on warnings.
  
  BISON = bison
  LEX = flex
+@@ -42,7 +42,7 @@ HOSTOS := $(shell uname -s | tr '[:upper
+ ifeq ($(HOSTOS),darwin)
+ SHAREDLIB_EXT     = dylib
+ SHAREDLIB_CFLAGS  = -fPIC
+-SHAREDLIB_LDFLAGS = -fPIC -dynamiclib -Wl,-install_name -Wl,
++SHAREDLIB_LDFLAGS = -fPIC -dynamiclib -Wl,-install_name -Wl,$(LIBDIR)/
+ else ifeq ($(HOSTOS),$(filter $(HOSTOS),msys cygwin))
+ SHAREDLIB_EXT     = so
+ SHAREDLIB_CFLAGS  =
+@@ -237,11 +237,11 @@ convert-dtsv0: $(CONVERT_OBJS)
+ 
+ fdtdump:	$(FDTDUMP_OBJS)
+ 
+-fdtget:	$(FDTGET_OBJS) $(LIBFDT_archive)
++fdtget:	$(FDTGET_OBJS) $(LIBFDT_lib)
+ 
+-fdtput:	$(FDTPUT_OBJS) $(LIBFDT_archive)
++fdtput:	$(FDTPUT_OBJS) $(LIBFDT_lib)
+ 
+-fdtoverlay: $(FDTOVERLAY_OBJS) $(LIBFDT_archive)
++fdtoverlay: $(FDTOVERLAY_OBJS) $(LIBFDT_lib)
+ 
+ dist:
+ 	git archive --format=tar --prefix=dtc-$(dtc_version)/ HEAD \
