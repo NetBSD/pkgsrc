@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.54 2017/01/25 20:10:46 leot Exp $ -->
+<!-- $NetBSD: components.xml,v 1.55 2018/07/24 23:46:15 maya Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -449,17 +449,6 @@ monitor_file(...)
 	  </tbody>
 	</tgroup>
       </table>
-
-      <para>For more information, please read the <emphasis>Making
-      packager-friendly software</emphasis> article (<ulink
-      url="http://www.onlamp.com/pub/a/onlamp/2005/03/31/packaging.html">part
-      1</ulink>, <ulink
-      url="http://www.oreillynet.com/pub/a/onlamp/2005/04/28/packaging2.html">part
-      2</ulink>).  It summarizes multiple details on how to make
-      software easier to package; all the suggestions in it were
-      collected from our experience in pkgsrc work, so they are possibly
-      helpful when creating patches too.</para>
-
     </sect2>
 
     <sect2 id="components.patches.feedback">
