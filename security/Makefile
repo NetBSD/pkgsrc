@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.684 2018/06/05 15:54:20 jaapb Exp $
+# $NetBSD: Makefile,v 1.685 2018/07/24 09:17:08 triaxx Exp $
 #
 
 COMMENT=	Security tools
@@ -400,6 +400,7 @@ SUBDIR+=	py-asyncssh
 SUBDIR+=	py-backports.ssl_match_hostname
 SUBDIR+=	py-bcrypt
 SUBDIR+=	py-certbot
+SUBDIR+=	py-certbot-dns-rfc2136
 SUBDIR+=	py-certifi
 SUBDIR+=	py-crack
 SUBDIR+=	py-crcmod
