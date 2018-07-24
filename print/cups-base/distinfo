@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2018/07/09 13:53:34 youri Exp $
+$NetBSD: distinfo,v 1.9 2018/07/24 12:19:21 bouyer Exp $
 
 SHA1 (cups-2.2.8-source.tar.gz) = f8c572d5b2405091e3be6836523a6abdda645f60
 RMD160 (cups-2.2.8-source.tar.gz) = 79bc052e3f70408a698bfbe2556b53d2f0140b2c
@@ -7,6 +7,10 @@ Size (cups-2.2.8-source.tar.gz) = 10374921 bytes
 SHA1 (patch-ae) = f34ec899f4816bdcf96ff315e001e3ac5a960200
 SHA1 (patch-af) = 6ae6ae6006387db69bf7c15f7c8500708c9e8f56
 SHA1 (patch-ai) = 2c1ca67ea6f6c1dedb4c8ff97736f328a2b9a7c6
+SHA1 (patch-airprint-conf_mime.convs.in) = 413a5ef448ab42858db804cfbfc1b8ff5b6bbf77
+SHA1 (patch-airprint-scheduler_conf.c) = f54ba16cc32dc09cd5bd8e864e1510ed2a84d6ed
+SHA1 (patch-airprint-scheduler_dirsvc.c) = bef4ea8e898dffc67c4866baa701e12570eb6fca
+SHA1 (patch-airprint-scheduler_printers.c) = 7fc0157f990a6e4dfa04c0b2c5684422229af725
 SHA1 (patch-at) = ef6303936daf0826dc4725f5369bfb1add832b1f
 SHA1 (patch-conf-cups-files.conf.in) = 327cc8b62e606389542870aa6619ade10377b044
 SHA1 (patch-conf_Makefile) = bb8313e493c02959edfe1e53f50b9f16ce6f42e0
