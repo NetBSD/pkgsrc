@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3323 2018/07/24 15:10:58 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3324 2018/07/24 16:25:03 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4741,3 +4741,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/gauche to 0.9.6 [ryoon 2018-07-24]
 	Added devel/py-hamcrest version 1.9.0 [adam 2018-07-24]
 	Updated net/py-twisted to 18.7.0 [adam 2018-07-24]
+	Added devel/apache-ant19 version 1.9.13 [jperkin 2018-07-24]
