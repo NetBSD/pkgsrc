@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2017/10/09 08:06:20 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2018/07/24 12:39:36 bsiegert Exp $
 
-DISTNAME=	alpine-2.20
+DISTNAME=	alpine-2.21
 CATEGORIES=	mail
-#MASTER_SITES=	http://patches.freeiz.com/alpine/release/src/
+MASTER_SITES=	http://alpine.x10host.com/alpine/release/src/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -42,7 +42,7 @@ SUBST_SED.panic+=	-e 's,panic(,Panic(,g'
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/alpine/alpine ${DESTDIR}${PREFIX}/bin/alpine
-	${INSTALL_MAN} ${WRKSRC}/doc/alpine.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/alpine.1
+	${INSTALL_MAN} ${WRKSRC}/doc/man1/alpine.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/alpine.1
 
 .include "../../mk/terminfo.buildlink3.mk"
 .include "../../mk/pam.buildlink3.mk"
