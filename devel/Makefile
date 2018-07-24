@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2705 2018/07/22 22:42:53 minskim Exp $
+# $NetBSD: Makefile,v 1.2706 2018/07/24 15:08:19 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2017,6 +2017,7 @@ SUBDIR+=	py-google-apputils
 SUBDIR+=	py-grako
 SUBDIR+=	py-greenlet
 SUBDIR+=	py-h5py
+SUBDIR+=	py-hamcrest
 SUBDIR+=	py-hash
 SUBDIR+=	py-hg-evolve
 SUBDIR+=	py-hg-fastimport
