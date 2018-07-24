@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2018/07/06 11:17:42 adam Exp $
+$NetBSD: distinfo,v 1.4 2018/07/24 06:32:48 adam Exp $
 
-SHA1 (django-cors-headers-2.3.0.tar.gz) = ceea68979aaafbb0e486f883f4bc3f4bf4b27ab5
-RMD160 (django-cors-headers-2.3.0.tar.gz) = 49e47d90be8da26f937b31bd4b013b6f1ce679bd
-SHA512 (django-cors-headers-2.3.0.tar.gz) = 315c27c0a7849a1c1d8f2bfe7c0192a31c966006eb0f1b3f9f9c60ceb5a1e69a1c5d0adf790518ba41499cae5bc5a4604d8a5050b4dce816f8999f537aa7d1e9
-Size (django-cors-headers-2.3.0.tar.gz) = 16506 bytes
+SHA1 (django-cors-headers-2.4.0.tar.gz) = a319cbe69970aff4af7980ac6c75b7f2dd7817a1
+RMD160 (django-cors-headers-2.4.0.tar.gz) = 3f6b4bbf5e2a55aff60bd0937c332d3884b21dac
+SHA512 (django-cors-headers-2.4.0.tar.gz) = c180cd76d1282de704f5e009491c0a2339ea12263fc90136115e1790e2b7b423e54300fa2123e10a86469dcb8d099acdb5eb3848216a7c69dc9b845acb074005
+Size (django-cors-headers-2.4.0.tar.gz) = 16691 bytes
