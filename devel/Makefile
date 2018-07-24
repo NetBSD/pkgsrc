@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2706 2018/07/24 15:08:19 adam Exp $
+# $NetBSD: Makefile,v 1.2707 2018/07/24 16:25:56 jperkin Exp $
 #
 
 COMMENT=	Development utilities
@@ -66,6 +66,7 @@ SUBDIR+=	anjuta
 SUBDIR+=	ant-contrib
 SUBDIR+=	apache-ant
 SUBDIR+=	apache-ant15
+SUBDIR+=	apache-ant19
 SUBDIR+=	apache-ivy
 SUBDIR+=	apache-maven
 SUBDIR+=	apel
