@@ -3202,11 +3202,6 @@ Table 11.1. Patching examples
 +-------------------------------------------------------------------------------------------+
 
 
-For more information, please read the Making packager-friendly software article
-(part 1, part 2). It summarizes multiple details on how to make software easier
-to package; all the suggestions in it were collected from our experience in
-pkgsrc work, so they are possibly helpful when creating patches too.
-
 11.3.5. Feedback to the author
 
 Always, always, always feed back any portability fixes or improvements you do
