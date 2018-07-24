@@ -1,0 +1,59 @@
+$NetBSD: patch-zz-JBeulich,v 1.1 2018/07/24 13:40:11 bouyer Exp $
+
+x86: further avoid setting TLB flush time stamp
+
+NetBSD's use of linear page tables in 32-bit mode exposes an issue with
+us still storing TLB flush time stamps too early, corrupting the
+linear_pt_count field living in the same union. Since we go that path
+(for page tables) only when neither PGT_validated nor PGT_partial are
+set on a page, we don't really require a flush to happen (see also the
+code comment), yet we're also no concerned if one happens which isn't
+needed (which might occur when we never write the time stamp).
+
+Reported-by: Manuel Bouyer <bouyer@antioche.eu.org>
+Signed-off-by: Jan Beulich <jbeulich@suse.com>
+
+--- ./xen/arch/x86/mm.c.orig	2018-07-09 15:47:19.000000000 +0200
++++ ./xen/arch/x86/mm.c	2018-07-16 12:38:47.000000000 +0200
+@@ -2538,8 +2538,17 @@
+         switch ( nx & (PGT_locked | PGT_count_mask) )
+         {
+         case 0:
+-            if ( unlikely((nx & PGT_type_mask) <= PGT_l4_page_table) &&
+-                 likely(nx & (PGT_validated|PGT_partial)) )
++            /*
++             * set_tlbflush_timestamp() accesses the same union linear_pt_count
++             * lives in. Pages (including page table ones), however, don't need
++             * their flush time stamp set except when the last reference is
++             * dropped. For PT pages this happens in _put_final_page_type(). PT
++             * pages which don't have PGT_validated set do not require flushing,
++             * as they would never have been installed into a PT hierarchy.
++             */
++            if ( likely((nx & PGT_type_mask) > PGT_l4_page_table) )
++                set_tlbflush_timestamp(page);
++            else if ( likely(nx & (PGT_validated|PGT_partial)) )
+             {
+                 int rc;
+ 
+@@ -2560,19 +2569,8 @@
+                 return rc;
+             }
+ 
+-            if ( !ptpg || !PGT_type_equal(x, ptpg->u.inuse.type_info) )
+-            {
+-                /*
+-                 * set_tlbflush_timestamp() accesses the same union
+-                 * linear_pt_count lives in. Pages (including page table ones),
+-                 * however, don't need their flush time stamp set except when
+-                 * the last reference is being dropped. For page table pages
+-                 * this happens in _put_final_page_type().
+-                 */
+-                set_tlbflush_timestamp(page);
+-            }
+-            else
+-                BUG_ON(!IS_ENABLED(CONFIG_PV_LINEAR_PT));
++            BUG_ON(!IS_ENABLED(CONFIG_PV_LINEAR_PT) && ptpg &&
++		PGT_type_equal(x, ptpg->u.inuse.type_info));
+ 
+             /* fall through */
+         default:
