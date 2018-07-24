@@ -1,0 +1,6 @@
+Ant is a Java based build tool. In theory it is kind of like
+"make" without make's wrinkles and with the full portability
+of pure java code.
+
+Ant uses XML to specify build actions to be taken, and new
+build actions are implemented in Java.
