@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3318 2018/07/24 12:22:24 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.3319 2018/07/24 12:40:09 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4734,3 +4734,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-requests-mock to 1.5.2 [adam 2018-07-24]
 	Updated print/cups-base to 2.2.8nb2 [bouyer 2018-07-24]
 	Updated lang/racket to 6.12 [jaapb 2018-07-24]
+	Updated mail/alpine to 2.21 [bsiegert 2018-07-24]
