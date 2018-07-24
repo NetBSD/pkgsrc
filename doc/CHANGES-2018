@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3320 2018/07/24 13:01:05 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.3321 2018/07/24 13:42:14 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4736,3 +4736,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/racket to 6.12 [jaapb 2018-07-24]
 	Updated mail/alpine to 2.21 [bsiegert 2018-07-24]
 	Updated cad/klayout to 0.25.3 [ryoon 2018-07-24]
+	Added sysutils/xenkernel411 version 4.11.0 [bouyer 2018-07-24]
+	Added sysutils/xentools411 version 4.11.0 [bouyer 2018-07-24]
