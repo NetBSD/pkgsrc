@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2018/01/20 02:21:16 sevan Exp $
+@comment $NetBSD: PLIST,v 1.19 2018/07/24 12:22:07 jaapb Exp $
 bin/drracket
 bin/gracket
 bin/gracket-text
@@ -524,9 +524,10 @@ share/doc/racket/foreign/Numeric_Types.html
 share/doc/racket/foreign/Objective-C_FFI.html
 share/doc/racket/foreign/Other_Atomic_Types.html
 share/doc/racket/foreign/Pointer_Types.html
-share/doc/racket/foreign/Process-Wide_Registration.html
+share/doc/racket/foreign/Ports.html
 share/doc/racket/foreign/Speculatively_Atomic_Execution.html
 share/doc/racket/foreign/String_Types.html
+share/doc/racket/foreign/Thread_Scheduling.html
 share/doc/racket/foreign/active-x.html
 share/doc/racket/foreign/blueboxes.rktd
 share/doc/racket/foreign/com-auto.html
@@ -551,6 +552,7 @@ share/doc/racket/foreign/out1.sxref
 share/doc/racket/foreign/serialize-struct.html
 share/doc/racket/foreign/stamp.sxref
 share/doc/racket/foreign/types.html
+share/doc/racket/foreign/unsafe-global.html
 share/doc/racket/foreign/winapi.html
 share/doc/racket/framework/Application.html
 share/doc/racket/framework/Autosave.html
@@ -2755,6 +2757,12 @@ share/doc/racket/release/out1.sxref
 share/doc/racket/release/stamp.sxref
 share/doc/racket/root-info.css
 share/doc/racket/root-info.js
+share/doc/racket/sasl/blueboxes.rktd
+share/doc/racket/sasl/in.sxref
+share/doc/racket/sasl/index.html
+share/doc/racket/sasl/out0.sxref
+share/doc/racket/sasl/out1.sxref
+share/doc/racket/sasl/stamp.sxref
 share/doc/racket/scheme/blueboxes.rktd
 share/doc/racket/scheme/compat-exe.html
 share/doc/racket/scheme/in.sxref
@@ -2910,6 +2918,7 @@ share/doc/racket/scribble/xref.html
 share/doc/racket/scriblib/autobib.html
 share/doc/racket/scriblib/bibtex.html
 share/doc/racket/scriblib/blueboxes.rktd
+share/doc/racket/scriblib/book-index.html
 share/doc/racket/scriblib/figure.html
 share/doc/racket/scriblib/footnotes.html
 share/doc/racket/scriblib/gui-eval.html
@@ -3180,6 +3189,7 @@ share/doc/racket/syntax/out0.sxref
 share/doc/racket/syntax/out1.sxref
 share/doc/racket/syntax/reader-helpers.html
 share/doc/racket/syntax/stamp.sxref
+share/doc/racket/syntax/state.html
 share/doc/racket/syntax/stxparse-examples.html
 share/doc/racket/syntax/stxparse-intro.html
 share/doc/racket/syntax/stxparse-patterns.html
@@ -3201,6 +3211,7 @@ share/doc/racket/teachpack/2htdpimage-guide.html
 share/doc/racket/teachpack/2htdpimage.html
 share/doc/racket/teachpack/2htdpitunes.html
 share/doc/racket/teachpack/2htdpuniverse.html
+share/doc/racket/teachpack/2htdpweb-io.html
 share/doc/racket/teachpack/arrow-gui.html
 share/doc/racket/teachpack/arrow.html
 share/doc/racket/teachpack/balls.png
@@ -3859,6 +3870,10 @@ share/racket/collects/ffi/unsafe/compiled/nsstring_rkt.dep
 share/racket/collects/ffi/unsafe/compiled/nsstring_rkt.zo
 share/racket/collects/ffi/unsafe/compiled/objc_rkt.dep
 share/racket/collects/ffi/unsafe/compiled/objc_rkt.zo
+share/racket/collects/ffi/unsafe/compiled/port_rkt.dep
+share/racket/collects/ffi/unsafe/compiled/port_rkt.zo
+share/racket/collects/ffi/unsafe/compiled/schedule_rkt.dep
+share/racket/collects/ffi/unsafe/compiled/schedule_rkt.zo
 share/racket/collects/ffi/unsafe/compiled/try-atomic_rkt.dep
 share/racket/collects/ffi/unsafe/compiled/try-atomic_rkt.zo
 share/racket/collects/ffi/unsafe/custodian.rkt
@@ -3871,9 +3886,11 @@ share/racket/collects/ffi/unsafe/global.rkt
 share/racket/collects/ffi/unsafe/nsalloc.rkt
 share/racket/collects/ffi/unsafe/nsstring.rkt
 share/racket/collects/ffi/unsafe/objc.rkt
+share/racket/collects/ffi/unsafe/port.rkt
 share/racket/collects/ffi/unsafe/private/compiled/win32_rkt.dep
 share/racket/collects/ffi/unsafe/private/compiled/win32_rkt.zo
 share/racket/collects/ffi/unsafe/private/win32.rkt
+share/racket/collects/ffi/unsafe/schedule.rkt
 share/racket/collects/ffi/unsafe/try-atomic.rkt
 share/racket/collects/ffi/vector.rkt
 share/racket/collects/ffi/winapi.rkt
@@ -5287,8 +5304,6 @@ share/racket/collects/syntax/parse/private/compiled/minimatch_rkt.dep
 share/racket/collects/syntax/parse/private/compiled/minimatch_rkt.zo
 share/racket/collects/syntax/parse/private/compiled/opt_rkt.dep
 share/racket/collects/syntax/parse/private/compiled/opt_rkt.zo
-share/racket/collects/syntax/parse/private/compiled/parse-aux_rkt.dep
-share/racket/collects/syntax/parse/private/compiled/parse-aux_rkt.zo
 share/racket/collects/syntax/parse/private/compiled/parse_rkt.dep
 share/racket/collects/syntax/parse/private/compiled/parse_rkt.zo
 share/racket/collects/syntax/parse/private/compiled/rep-attrs_rkt.dep
@@ -5322,7 +5337,6 @@ share/racket/collects/syntax/parse/private/litconv.rkt
 share/racket/collects/syntax/parse/private/make.rkt
 share/racket/collects/syntax/parse/private/minimatch.rkt
 share/racket/collects/syntax/parse/private/opt.rkt
-share/racket/collects/syntax/parse/private/parse-aux.rkt
 share/racket/collects/syntax/parse/private/parse.rkt
 share/racket/collects/syntax/parse/private/rep-attrs.rkt
 share/racket/collects/syntax/parse/private/rep-data.rkt
@@ -6351,6 +6365,8 @@ share/racket/pkgs/datalog/tests/examples/bidipath.rkt
 share/racket/pkgs/datalog/tests/examples/bidipath.txt
 share/racket/pkgs/datalog/tests/examples/empty.rkt
 share/racket/pkgs/datalog/tests/examples/empty.txt
+share/racket/pkgs/datalog/tests/examples/hello.rkt
+share/racket/pkgs/datalog/tests/examples/hello.txt
 share/racket/pkgs/datalog/tests/examples/laps.rkt
 share/racket/pkgs/datalog/tests/examples/laps.txt
 share/racket/pkgs/datalog/tests/examples/long.rkt
@@ -6403,6 +6419,7 @@ share/racket/pkgs/datalog/tests/paren-examples/tutorial.txt
 share/racket/pkgs/datalog/tests/parse.rkt
 share/racket/pkgs/datalog/tests/pr/1.rkt
 share/racket/pkgs/datalog/tests/pr/5.rkt
+share/racket/pkgs/datalog/tests/pr/6.rkt
 share/racket/pkgs/datalog/tests/pretty.rkt
 share/racket/pkgs/datalog/tests/private/env.rkt
 share/racket/pkgs/datalog/tests/private/lex.rkt
@@ -11471,6 +11488,8 @@ share/racket/pkgs/htdp-doc/teachpack/2htdp/scribblings/compiled/shared_rkt.dep
 share/racket/pkgs/htdp-doc/teachpack/2htdp/scribblings/compiled/shared_rkt.zo
 share/racket/pkgs/htdp-doc/teachpack/2htdp/scribblings/compiled/universe_scrbl.dep
 share/racket/pkgs/htdp-doc/teachpack/2htdp/scribblings/compiled/universe_scrbl.zo
+share/racket/pkgs/htdp-doc/teachpack/2htdp/scribblings/compiled/web-io_scrbl.dep
+share/racket/pkgs/htdp-doc/teachpack/2htdp/scribblings/compiled/web-io_scrbl.zo
 share/racket/pkgs/htdp-doc/teachpack/2htdp/scribblings/data-plain.xml
 share/racket/pkgs/htdp-doc/teachpack/2htdp/scribblings/data.csv
 share/racket/pkgs/htdp-doc/teachpack/2htdp/scribblings/data.txt
@@ -11488,6 +11507,7 @@ share/racket/pkgs/htdp-doc/teachpack/2htdp/scribblings/port.rkt
 share/racket/pkgs/htdp-doc/teachpack/2htdp/scribblings/port.scrbl
 share/racket/pkgs/htdp-doc/teachpack/2htdp/scribblings/shared.rkt
 share/racket/pkgs/htdp-doc/teachpack/2htdp/scribblings/universe.scrbl
+share/racket/pkgs/htdp-doc/teachpack/2htdp/scribblings/web-io.scrbl
 share/racket/pkgs/htdp-doc/teachpack/balls.png
 share/racket/pkgs/htdp-doc/teachpack/compiled/info_rkt.dep
 share/racket/pkgs/htdp-doc/teachpack/compiled/info_rkt.zo
@@ -11577,7 +11597,6 @@ share/racket/pkgs/htdp-doc/test-engine/compiled/test-engine_scrbl.dep
 share/racket/pkgs/htdp-doc/test-engine/compiled/test-engine_scrbl.zo
 share/racket/pkgs/htdp-doc/test-engine/info.rkt
 share/racket/pkgs/htdp-doc/test-engine/test-engine.scrbl
-share/racket/pkgs/htdp-lib/2htdp/TESTME.txt
 share/racket/pkgs/htdp-lib/2htdp/abstraction.rkt
 share/racket/pkgs/htdp-lib/2htdp/batch-io.rkt
 share/racket/pkgs/htdp-lib/2htdp/compiled/abstraction_rkt.dep
@@ -11596,6 +11615,8 @@ share/racket/pkgs/htdp-lib/2htdp/compiled/universe-syntax-parse_rkt.dep
 share/racket/pkgs/htdp-lib/2htdp/compiled/universe-syntax-parse_rkt.zo
 share/racket/pkgs/htdp-lib/2htdp/compiled/universe_rkt.dep
 share/racket/pkgs/htdp-lib/2htdp/compiled/universe_rkt.zo
+share/racket/pkgs/htdp-lib/2htdp/compiled/web-io_rkt.dep
+share/racket/pkgs/htdp-lib/2htdp/compiled/web-io_rkt.zo
 share/racket/pkgs/htdp-lib/2htdp/image.rkt
 share/racket/pkgs/htdp-lib/2htdp/info.rkt
 share/racket/pkgs/htdp-lib/2htdp/itunes.rkt
@@ -11900,6 +11921,7 @@ share/racket/pkgs/htdp-lib/2htdp/uchat/xrun
 share/racket/pkgs/htdp-lib/2htdp/universe-request.txt
 share/racket/pkgs/htdp-lib/2htdp/universe-syntax-parse.rkt
 share/racket/pkgs/htdp-lib/2htdp/universe.rkt
+share/racket/pkgs/htdp-lib/2htdp/web-io.rkt
 share/racket/pkgs/htdp-lib/LICENSE.txt
 share/racket/pkgs/htdp-lib/graphics/compiled/graphics-posn-less-unit_rkt.dep
 share/racket/pkgs/htdp-lib/graphics/compiled/graphics-posn-less-unit_rkt.zo
@@ -12321,6 +12343,8 @@ share/racket/pkgs/htdp-lib/teachpack/2htdp/compiled/itunes_rkt.dep
 share/racket/pkgs/htdp-lib/teachpack/2htdp/compiled/itunes_rkt.zo
 share/racket/pkgs/htdp-lib/teachpack/2htdp/compiled/universe_rkt.dep
 share/racket/pkgs/htdp-lib/teachpack/2htdp/compiled/universe_rkt.zo
+share/racket/pkgs/htdp-lib/teachpack/2htdp/compiled/web-io_rkt.dep
+share/racket/pkgs/htdp-lib/teachpack/2htdp/compiled/web-io_rkt.zo
 share/racket/pkgs/htdp-lib/teachpack/2htdp/image.rkt
 share/racket/pkgs/htdp-lib/teachpack/2htdp/info.rkt
 share/racket/pkgs/htdp-lib/teachpack/2htdp/itunes.rkt
@@ -12328,6 +12352,7 @@ share/racket/pkgs/htdp-lib/teachpack/2htdp/scribblings/compiled/img-eval_rkt.dep
 share/racket/pkgs/htdp-lib/teachpack/2htdp/scribblings/compiled/img-eval_rkt.zo
 share/racket/pkgs/htdp-lib/teachpack/2htdp/scribblings/img-eval.rkt
 share/racket/pkgs/htdp-lib/teachpack/2htdp/universe.rkt
+share/racket/pkgs/htdp-lib/teachpack/2htdp/web-io.rkt
 share/racket/pkgs/htdp-lib/teachpack/HISTORY.txt
 share/racket/pkgs/htdp-lib/teachpack/balls.gif
 share/racket/pkgs/htdp-lib/teachpack/balls.ss
@@ -15906,6 +15931,10 @@ share/racket/pkgs/racket-doc/scribblings/foreign/compiled/objc_scrbl.dep
 share/racket/pkgs/racket-doc/scribblings/foreign/compiled/objc_scrbl.zo
 share/racket/pkgs/racket-doc/scribblings/foreign/compiled/pointers_scrbl.dep
 share/racket/pkgs/racket-doc/scribblings/foreign/compiled/pointers_scrbl.zo
+share/racket/pkgs/racket-doc/scribblings/foreign/compiled/port_scrbl.dep
+share/racket/pkgs/racket-doc/scribblings/foreign/compiled/port_scrbl.zo
+share/racket/pkgs/racket-doc/scribblings/foreign/compiled/schedule_scrbl.dep
+share/racket/pkgs/racket-doc/scribblings/foreign/compiled/schedule_scrbl.zo
 share/racket/pkgs/racket-doc/scribblings/foreign/compiled/serialize-cstruct_scrbl.dep
 share/racket/pkgs/racket-doc/scribblings/foreign/compiled/serialize-cstruct_scrbl.zo
 share/racket/pkgs/racket-doc/scribblings/foreign/compiled/try-atomic_scrbl.dep
@@ -15935,6 +15964,8 @@ share/racket/pkgs/racket-doc/scribblings/foreign/misc.scrbl
 share/racket/pkgs/racket-doc/scribblings/foreign/ns.scrbl
 share/racket/pkgs/racket-doc/scribblings/foreign/objc.scrbl
 share/racket/pkgs/racket-doc/scribblings/foreign/pointers.scrbl
+share/racket/pkgs/racket-doc/scribblings/foreign/port.scrbl
+share/racket/pkgs/racket-doc/scribblings/foreign/schedule.scrbl
 share/racket/pkgs/racket-doc/scribblings/foreign/serialize-cstruct.scrbl
 share/racket/pkgs/racket-doc/scribblings/foreign/try-atomic.scrbl
 share/racket/pkgs/racket-doc/scribblings/foreign/types.scrbl
@@ -17145,6 +17176,8 @@ share/racket/pkgs/racket-doc/syntax/scribblings/parse/compiled/parsing_scrbl.dep
 share/racket/pkgs/racket-doc/syntax/scribblings/parse/compiled/parsing_scrbl.zo
 share/racket/pkgs/racket-doc/syntax/scribblings/parse/compiled/patterns_scrbl.dep
 share/racket/pkgs/racket-doc/syntax/scribblings/parse/compiled/patterns_scrbl.zo
+share/racket/pkgs/racket-doc/syntax/scribblings/parse/compiled/state_scrbl.dep
+share/racket/pkgs/racket-doc/syntax/scribblings/parse/compiled/state_scrbl.zo
 share/racket/pkgs/racket-doc/syntax/scribblings/parse/compiled/stxclasses_scrbl.dep
 share/racket/pkgs/racket-doc/syntax/scribblings/parse/compiled/stxclasses_scrbl.zo
 share/racket/pkgs/racket-doc/syntax/scribblings/parse/debug.scrbl
@@ -17165,6 +17198,7 @@ share/racket/pkgs/racket-doc/syntax/scribblings/parse/parse-common.rkt
 share/racket/pkgs/racket-doc/syntax/scribblings/parse/parse-dummy-bindings.rkt
 share/racket/pkgs/racket-doc/syntax/scribblings/parse/parsing.scrbl
 share/racket/pkgs/racket-doc/syntax/scribblings/parse/patterns.scrbl
+share/racket/pkgs/racket-doc/syntax/scribblings/parse/state.scrbl
 share/racket/pkgs/racket-doc/syntax/scribblings/parse/stxclasses.scrbl
 share/racket/pkgs/racket-doc/syntax/scribblings/path-spec.scrbl
 share/racket/pkgs/racket-doc/syntax/scribblings/quote.scrbl
@@ -18584,6 +18618,54 @@ share/racket/pkgs/sandbox-lib/racket/sandbox.rkt
 share/racket/pkgs/sandbox-lib/scheme/compiled/sandbox_rkt.dep
 share/racket/pkgs/sandbox-lib/scheme/compiled/sandbox_rkt.zo
 share/racket/pkgs/sandbox-lib/scheme/sandbox.rkt
+share/racket/pkgs/sasl-doc/compiled/info_rkt.dep
+share/racket/pkgs/sasl-doc/compiled/info_rkt.zo
+share/racket/pkgs/sasl-doc/compiled/sasl_scrbl.dep
+share/racket/pkgs/sasl-doc/compiled/sasl_scrbl.zo
+share/racket/pkgs/sasl-doc/info.rkt
+share/racket/pkgs/sasl-doc/sasl.scrbl
+share/racket/pkgs/sasl-lib/compiled/cram-md5_rkt.dep
+share/racket/pkgs/sasl-lib/compiled/cram-md5_rkt.zo
+share/racket/pkgs/sasl-lib/compiled/info_rkt.dep
+share/racket/pkgs/sasl-lib/compiled/info_rkt.zo
+share/racket/pkgs/sasl-lib/compiled/main_rkt.dep
+share/racket/pkgs/sasl-lib/compiled/main_rkt.zo
+share/racket/pkgs/sasl-lib/compiled/plain_rkt.dep
+share/racket/pkgs/sasl-lib/compiled/plain_rkt.zo
+share/racket/pkgs/sasl-lib/compiled/saslprep_rkt.dep
+share/racket/pkgs/sasl-lib/compiled/saslprep_rkt.zo
+share/racket/pkgs/sasl-lib/compiled/scram_rkt.dep
+share/racket/pkgs/sasl-lib/compiled/scram_rkt.zo
+share/racket/pkgs/sasl-lib/cram-md5.rkt
+share/racket/pkgs/sasl-lib/info.rkt
+share/racket/pkgs/sasl-lib/main.rkt
+share/racket/pkgs/sasl-lib/plain.rkt
+share/racket/pkgs/sasl-lib/private/base.rkt
+share/racket/pkgs/sasl-lib/private/compiled/base_rkt.dep
+share/racket/pkgs/sasl-lib/private/compiled/base_rkt.zo
+share/racket/pkgs/sasl-lib/private/compiled/cram-md5_rkt.dep
+share/racket/pkgs/sasl-lib/private/compiled/cram-md5_rkt.zo
+share/racket/pkgs/sasl-lib/private/compiled/crypto_rkt.dep
+share/racket/pkgs/sasl-lib/private/compiled/crypto_rkt.zo
+share/racket/pkgs/sasl-lib/private/compiled/intset_rkt.dep
+share/racket/pkgs/sasl-lib/private/compiled/intset_rkt.zo
+share/racket/pkgs/sasl-lib/private/compiled/saslprep_rkt.dep
+share/racket/pkgs/sasl-lib/private/compiled/saslprep_rkt.zo
+share/racket/pkgs/sasl-lib/private/compiled/scram_rkt.dep
+share/racket/pkgs/sasl-lib/private/compiled/scram_rkt.zo
+share/racket/pkgs/sasl-lib/private/compiled/stringprep_rkt.dep
+share/racket/pkgs/sasl-lib/private/compiled/stringprep_rkt.zo
+share/racket/pkgs/sasl-lib/private/cram-md5.rkt
+share/racket/pkgs/sasl-lib/private/crypto.rkt
+share/racket/pkgs/sasl-lib/private/intset.rkt
+share/racket/pkgs/sasl-lib/private/saslprep.rkt
+share/racket/pkgs/sasl-lib/private/scram.rkt
+share/racket/pkgs/sasl-lib/private/stringprep.rkt
+share/racket/pkgs/sasl-lib/saslprep.rkt
+share/racket/pkgs/sasl-lib/scram.rkt
+share/racket/pkgs/sasl/compiled/info_rkt.dep
+share/racket/pkgs/sasl/compiled/info_rkt.zo
+share/racket/pkgs/sasl/info.rkt
 share/racket/pkgs/scheme-lib/LICENSE.txt
 share/racket/pkgs/scheme-lib/info.rkt
 share/racket/pkgs/scheme-lib/scheme/async-channel.rkt
@@ -19000,10 +19082,13 @@ share/racket/pkgs/scribble-doc/scribblings/scribble/utils.rkt
 share/racket/pkgs/scribble-doc/scribblings/scribble/xref.scrbl
 share/racket/pkgs/scribble-doc/scriblib/scribblings/autobib.scrbl
 share/racket/pkgs/scribble-doc/scriblib/scribblings/bibtex.scrbl
+share/racket/pkgs/scribble-doc/scriblib/scribblings/book-index.scrbl
 share/racket/pkgs/scribble-doc/scriblib/scribblings/compiled/autobib_scrbl.dep
 share/racket/pkgs/scribble-doc/scriblib/scribblings/compiled/autobib_scrbl.zo
 share/racket/pkgs/scribble-doc/scriblib/scribblings/compiled/bibtex_scrbl.dep
 share/racket/pkgs/scribble-doc/scriblib/scribblings/compiled/bibtex_scrbl.zo
+share/racket/pkgs/scribble-doc/scriblib/scribblings/compiled/book-index_scrbl.dep
+share/racket/pkgs/scribble-doc/scriblib/scribblings/compiled/book-index_scrbl.zo
 share/racket/pkgs/scribble-doc/scriblib/scribblings/compiled/figure_scrbl.dep
 share/racket/pkgs/scribble-doc/scriblib/scribblings/compiled/figure_scrbl.zo
 share/racket/pkgs/scribble-doc/scriblib/scribblings/compiled/footnote_scrbl.dep
@@ -19273,6 +19358,8 @@ share/racket/pkgs/scribble-lib/scribble/private/compiled/defaults_rkt.dep
 share/racket/pkgs/scribble-lib/scribble/private/compiled/defaults_rkt.zo
 share/racket/pkgs/scribble-lib/scribble/private/compiled/indirect-renderer_rkt.dep
 share/racket/pkgs/scribble-lib/scribble/private/compiled/indirect-renderer_rkt.zo
+share/racket/pkgs/scribble-lib/scribble/private/compiled/latex-index_rkt.dep
+share/racket/pkgs/scribble-lib/scribble/private/compiled/latex-index_rkt.zo
 share/racket/pkgs/scribble-lib/scribble/private/compiled/literal-anchor_rkt.dep
 share/racket/pkgs/scribble-lib/scribble/private/compiled/literal-anchor_rkt.zo
 share/racket/pkgs/scribble-lib/scribble/private/compiled/lp_rkt.dep
@@ -19331,6 +19418,7 @@ share/racket/pkgs/scribble-lib/scribble/private/compiled/tag_rkt.dep
 share/racket/pkgs/scribble-lib/scribble/private/compiled/tag_rkt.zo
 share/racket/pkgs/scribble-lib/scribble/private/defaults.rkt
 share/racket/pkgs/scribble-lib/scribble/private/indirect-renderer.rkt
+share/racket/pkgs/scribble-lib/scribble/private/latex-index.rkt
 share/racket/pkgs/scribble-lib/scribble/private/literal-anchor.rkt
 share/racket/pkgs/scribble-lib/scribble/private/lp.rkt
 share/racket/pkgs/scribble-lib/scribble/private/manual-bib.rkt
@@ -19406,10 +19494,14 @@ share/racket/pkgs/scribble-lib/scriblib/autobib.css
 share/racket/pkgs/scribble-lib/scriblib/autobib.rkt
 share/racket/pkgs/scribble-lib/scriblib/autobib.tex
 share/racket/pkgs/scribble-lib/scriblib/bibtex.rkt
+share/racket/pkgs/scribble-lib/scriblib/book-index.rkt
+share/racket/pkgs/scribble-lib/scriblib/book-index.tex
 share/racket/pkgs/scribble-lib/scriblib/compiled/autobib_rkt.dep
 share/racket/pkgs/scribble-lib/scriblib/compiled/autobib_rkt.zo
 share/racket/pkgs/scribble-lib/scriblib/compiled/bibtex_rkt.dep
 share/racket/pkgs/scribble-lib/scriblib/compiled/bibtex_rkt.zo
+share/racket/pkgs/scribble-lib/scriblib/compiled/book-index_rkt.dep
+share/racket/pkgs/scribble-lib/scriblib/compiled/book-index_rkt.zo
 share/racket/pkgs/scribble-lib/scriblib/compiled/figure_rkt.dep
 share/racket/pkgs/scribble-lib/scriblib/compiled/figure_rkt.zo
 share/racket/pkgs/scribble-lib/scriblib/compiled/footnote_rkt.dep
