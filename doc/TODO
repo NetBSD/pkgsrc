@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18450 2018/07/22 09:05:28 wiz Exp $
+$NetBSD: TODO,v 1.18451 2018/07/24 12:22:24 jaapb Exp $
 
 Suggested new packages
 ======================
@@ -1261,7 +1261,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o qnetwalk-1.4
 	o qt4-creator-3.4.0
 	o quodlibet2-3.5.3
-	o racket-6.10
 	o radiance-4R1
 	o rails-5.0.1
 	o rainbowcrack-1.5
