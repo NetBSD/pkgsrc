@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2018/07/17 10:08:42 adam Exp $
+# $NetBSD: Makefile,v 1.28 2018/07/24 06:15:31 adam Exp $
 
-DISTNAME=	pylint-2.0.0
+DISTNAME=	pylint-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylint/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://www.pylint.org/
 COMMENT=	Python source code analyzer
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-astroid>=2.0.0:../../devel/py-astroid
+DEPENDS+=	${PYPKGPREFIX}-astroid>=2.0.1:../../devel/py-astroid
 DEPENDS+=	${PYPKGPREFIX}-isort>=4.2.5:../../devel/py-isort
 DEPENDS+=	${PYPKGPREFIX}-mccabe-[0-9]*:../../devel/py-mccabe
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
