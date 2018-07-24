@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3321 2018/07/24 13:42:14 bouyer Exp $
+$NetBSD: CHANGES-2018,v 1.3322 2018/07/24 14:52:59 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4738,3 +4738,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated cad/klayout to 0.25.3 [ryoon 2018-07-24]
 	Added sysutils/xenkernel411 version 4.11.0 [bouyer 2018-07-24]
 	Added sysutils/xentools411 version 4.11.0 [bouyer 2018-07-24]
+	Updated lang/gauche to 0.9.6 [ryoon 2018-07-24]
