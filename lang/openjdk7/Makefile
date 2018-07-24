@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2018/07/18 00:06:20 joerg Exp $
+# $NetBSD: Makefile,v 1.127 2018/07/24 16:07:24 jperkin Exp $
 
 JDK_MICRO=	141
 DISTNAME=	openjdk-1.7.${JDK_MICRO}-20170813
@@ -136,6 +136,11 @@ SUBST_SED.mapfix2=	-e '/environ/d'
 
 CFLAGS+=	-D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
 CXXFLAGS+=	-D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
+
+.if !empty(CC_VERSION:Mgcc-[67].*)
+CFLAGS+=	-fno-lifetime-dse
+CFLAGS+=	-fno-delete-null-pointer-checks
+.endif
 
 .if !empty(PKGSRC_COMPILER:Mclang)
 _WRAP_EXTRA_ARGS.CXX+=	-Wno-parentheses -Wno-sign-conversion \

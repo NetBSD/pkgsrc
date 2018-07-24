@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.90 2017/09/04 16:00:19 joerg Exp $
+$NetBSD: distinfo,v 1.91 2018/07/24 16:07:24 jperkin Exp $
 
 SHA1 (openjdk7/apache-ant-1.9.4-bin.tar.bz2) = 99bff3c702dd79076f4e705e3541f7e35bbb4306
 RMD160 (openjdk7/apache-ant-1.9.4-bin.tar.bz2) = 7f4263d617bbf40a15eab401369d18a755f8d260
@@ -142,7 +142,7 @@ SHA1 (patch-jdk_make_java_npt_Makefile) = 91903de199e8546bb17c8dc30ae616eeb7c8b9
 SHA1 (patch-jdk_make_sun_awt_Makefile) = 981082d4dfda204f09a66b9fc452bea218d3ce6a
 SHA1 (patch-jdk_make_sun_awt_mawt.gmk) = 5379efff76c3cbb1bf56554aaa7890f169b6fc7d
 SHA1 (patch-jdk_make_sun_rmi_rmi_Makefile) = ef42db5c61e940b66dfead0e9fcf328d125b3460
-SHA1 (patch-jdk_make_sun_security_ec_Makefile) = 30e35128a763b8d70e02e302f2e3ae5b7a24a99b
+SHA1 (patch-jdk_make_sun_security_ec_Makefile) = 84e99a4e28e505e0cc76210d13d98f602c809b95
 SHA1 (patch-jdk_make_sun_splashscreen_Makefile) = 81d6fb29a2063667ac153f723330663c0e71f2c2
 SHA1 (patch-jdk_make_sun_xawt_Makefile) = 735cf251798c2b6a638fc57dc90fe0750433f26d
 SHA1 (patch-jdk_src_share_classes_com_sun_script_javascript_ExternalScriptable.java) = 9e9c0254740742cd103c0cb33d3aa564ad7de01f
@@ -156,13 +156,15 @@ SHA1 (patch-jdk_src_share_classes_com_sun_script_javascript_RhinoTopLevel.java) 
 SHA1 (patch-jdk_src_share_classes_com_sun_script_javascript_RhinoWrapFactory.java) = b34d66405825fb4173eb5b517e004ae724686155
 SHA1 (patch-jdk_src_share_native_sun_awt_image_jpeg_imageioJPEG.c) = 8502fc7da308daafc135db38e4513347a39368ba
 SHA1 (patch-jdk_src_share_native_sun_awt_image_jpeg_jpegdecoder.c) = ca10ce2d79f11925b7ec52fc1b5dfad9b25ddddb
-SHA1 (patch-jdk_src_share_native_sun_security_ec_impl_ecc__impl.h) = 13aae05b649af0d1f908b0a9b6f60c55d8baa7d4
+SHA1 (patch-jdk_src_share_native_sun_awt_libpng_pngpriv.h) = 3b5333206892e8ff31220ef434549cea25d1d53f
+SHA1 (patch-jdk_src_share_native_sun_security_ec_impl_ecc__impl.h) = 667b1d15778a701e8f60fc0a8452cb49596e2e6c
 SHA1 (patch-jdk_src_solaris_bin_ergo__i586.c) = 7b1d1c7f84e752ef7c53d5419dc3ab5213fec716
 SHA1 (patch-jdk_src_solaris_classes_java_lang_UNIXProcess.java.bsd) = dfa4eae8f6e0296fcba8f1519f11b4de8ac95f36
 SHA1 (patch-jdk_src_solaris_classes_sun_net_PortConfig.java) = 5ac6eaf6b32ad8bef50830364ea1fd455bdbbb3f
 SHA1 (patch-jdk_src_solaris_classes_sun_nio_ch_DefaultAsynchronousChannelProvider.java) = 2bb10608969e9ef747d1cc0a6b8796fe4b38a4e7
 SHA1 (patch-jdk_src_solaris_classes_sun_nio_fs_BsdFileSystemProvider.java) = b57411309b8d46de6a9ab3606d72690908989d50
 SHA1 (patch-jdk_src_solaris_native_com_sun_media_sound_PLATFORM__API__BsdOS__ALSA__PCM.c) = 1a7a73c41a35b1719d8a68e9cea2aa47d5e828fc
+SHA1 (patch-jdk_src_solaris_native_com_sun_security_auth_module_Unix.c) = e3e61fd8f81fecfc5a65e070cabff02cbb74a27f
 SHA1 (patch-jdk_src_solaris_native_java_lang_java__props__md.c) = 3bc9e099a6c3152645882e4fba128ae8e709efbb
 SHA1 (patch-jdk_src_solaris_native_java_net_NetworkInterface.c) = 63af9eee1f5bbc695a14cab51fa7089eb2a0a04b
 SHA1 (patch-jdk_src_solaris_native_java_net_net__util__md.c) = 883fb8cf76f9a6d47e1c96badb07be162add80f7
