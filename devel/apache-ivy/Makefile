@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2018/06/14 11:32:37 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2018/07/24 16:27:22 jperkin Exp $
 #
 
 DISTNAME=	apache-ivy-2.4.0-bin
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/-bin//}
 CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_APACHE:=ant/ivy/${PKGNAME:S/apache-ivy-//}/}
@@ -11,8 +12,15 @@ HOMEPAGE=	http://ant.apache.org/ivy/
 COMMENT=	"Apache Project's Java-Based agile dependency manager"
 LICENSE=	apache-2.0
 
+.include "../../mk/java-vm.mk"
+
+.if ${PKG_JVM} == "openjdk7" || ${PKG_JVM} == "sun-jdk7"
+DEPENDS+=	apache-ant>=1.9<1.10:../../devel/apache-ant19
+.else
+DEPENDS+=	apache-ant>=1.10:../../devel/apache-ant
+.endif
+
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-DEPENDS+=	apache-ant>=1.6:../../devel/apache-ant
 
 USE_JAVA=	run
 USE_JAVA2=	yes
@@ -27,5 +35,4 @@ do-install:
 	cd ${WRKSRC}/doc && pax -rw -pmp * ${DESTDIR}${PREFIX}/share/doc/java/ivy
 	cd ${WRKSRC}/src/example && pax -rw -pmp * ${DESTDIR}${PREFIX}/share/examples/ivy
 
-.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
