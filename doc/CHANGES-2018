@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3311 2018/07/24 07:22:33 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3312 2018/07/24 08:02:10 roy Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4724,3 +4724,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-django-extensions to 2.1.0 [adam 2018-07-24]
 	Updated databases/py-sqlalchemy to 1.2.10 [adam 2018-07-24]
 	Updated databases/py-alembic to 1.0.0 [adam 2018-07-24]
+	Updated net/dhcpcd to 7.0.7 [roy 2018-07-24]
