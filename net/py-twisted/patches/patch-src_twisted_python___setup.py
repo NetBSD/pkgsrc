@@ -1,4 +1,5 @@
-$NetBSD: patch-src_twisted_python___setup.py,v 1.1 2017/12/24 13:44:56 wiedi Exp $
+$NetBSD: patch-src_twisted_python___setup.py,v 1.2 2018/07/24 15:10:04 adam Exp $
+
 Allow building with a c99 compiler on SunOS
 
 --- src/twisted/python/_setup.py.orig	2017-09-23 05:51:46.000000000 +0000
