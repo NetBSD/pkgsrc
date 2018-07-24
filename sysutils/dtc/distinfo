@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2018/01/06 08:55:46 adam Exp $
+$NetBSD: distinfo,v 1.5 2018/07/24 06:06:08 adam Exp $
 
-SHA1 (dtc-1.4.6.tar.xz) = 1dcf865f51de9714647fb25e18b8af229fa2b6bc
-RMD160 (dtc-1.4.6.tar.xz) = 135c6083908380d676db5bd3d00801a5d5502eea
-SHA512 (dtc-1.4.6.tar.xz) = b52862159cbf9e6e8e1ecb5844e16c81a0b9c4df255366f8a48b15cb7e080754c142da7432de2542485fce70bb2a4fa76df6d1f93cbf0118e8dbe677153b9da8
-Size (dtc-1.4.6.tar.xz) = 137868 bytes
-SHA1 (patch-Makefile) = 8ee930fd378cd1874ec8078ed2a0a7b9631f9696
+SHA1 (dtc-1.4.7.tar.xz) = f9724c51caae4fef4da0c8a5d52e9d4d9fc7e8af
+RMD160 (dtc-1.4.7.tar.xz) = 93e3d3c18dd10ad8a61168f4135601ea50d18e40
+SHA512 (dtc-1.4.7.tar.xz) = 01e0c88aee154d8ce8a5b84a299c98d12df9698e5eff572409e5e912236028532309fd21ca6a146dffef859c665d476bbbe13c371c621c1dee4abe546e5e6ebf
+Size (dtc-1.4.7.tar.xz) = 148940 bytes
+SHA1 (patch-Makefile) = b8f69c696c751148b8ca4552e104c47e9df98a53
 SHA1 (patch-libfdt_Makefile.libfdt) = 10dec8b55b54641c26d4947cc9b7219b5a61efb7
