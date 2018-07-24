@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3313 2018/07/24 08:23:25 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.3314 2018/07/24 08:26:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4726,3 +4726,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-alembic to 1.0.0 [adam 2018-07-24]
 	Updated net/dhcpcd to 7.0.7 [roy 2018-07-24]
 	Updated mail/queue-repair to 0.9.0nb7 [schmonz 2018-07-24]
+	Updated devel/py-test-testmon to 0.9.13 [adam 2018-07-24]
+	Updated devel/py-test-timeout to 1.3.1 [adam 2018-07-24]
+	Updated devel/py-test-xdist to 1.22.3 [adam 2018-07-24]
