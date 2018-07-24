@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.8 2017/04/08 13:48:52 mef Exp $
+$NetBSD: distinfo,v 1.9 2018/07/24 13:00:10 ryoon Exp $
 
-SHA1 (klayout-0.24.10.tar.gz) = d3c98eaf32301994bc00ebd430e7fb1806671bf8
-RMD160 (klayout-0.24.10.tar.gz) = 6e2c67b1386030344f10bf81d732043639a5d3a0
-SHA512 (klayout-0.24.10.tar.gz) = 0043b91e2dae9321299c217697c93af27bc7d795209bdf95248eee3690b97728854f9f82cc95f77f05a2cfbcae6a716ae594fe2485e04ed0a3f5d950abc0a31b
-Size (klayout-0.24.10.tar.gz) = 11262007 bytes
-SHA1 (patch-build.sh) = 3a1e61100de101cbe82b0c4abfa10a0ab2f7ead7
-SHA1 (patch-config_Makefile_conf_freebsd-32-gcc-release) = 8ee1a6f42465ef650fbd26ec6dcdea4db249d018
-SHA1 (patch-config_Makefile_conf_netbsd-32-gcc-release) = 1fd264f8a25d4410cd48fcfbbbfbf149e65e3b22
-SHA1 (patch-src_Makefile.rules) = ca98445d7e3823cc0b9c2114f0d4c6214ad59e5c
-SHA1 (patch-src_layApplication.cc) = 7d0d3ec81e924ad1aec8a22c6a594148ac58107a
-SHA1 (patch-src_tlStream.cc) = a3c44130e1deaf84c3f966ca25be2af619d49849
+SHA1 (klayout-0.25.3.tar.gz) = 6c5cfb03d494b8e5433a810237db4728708a7ad0
+RMD160 (klayout-0.25.3.tar.gz) = e9eefce0ac672d112de3406e34b1af23ab0eae5f
+SHA512 (klayout-0.25.3.tar.gz) = 4105d312c4051bc0f0ad1e9acd8f3fa990b760c8ecbc58d99c788843e5936ba8f236c0c6e1f34cd4bcb684bf8b7ccefd8271ba9371e1b338baf60e05d89001ac
+Size (klayout-0.25.3.tar.gz) = 18811067 bytes
+SHA1 (patch-config_Makefile.conf.freebsd-32-gcc-release) = fd5b506f8da1c314091523e48e33a949d0fadb94
+SHA1 (patch-config_Makefile.conf.netbsd-32-gcc-release) = 72ab38fd4bb1a1c9bbae61ad7f7cbdafa5706775
+SHA1 (patch-src_layApplication.cc) = fa42542213519e8c04820ab08ce5c1385bf8b860
+SHA1 (patch-src_lay_lay_laySignalHandler.cc) = 4ff62eba653ab187aa90552278ecd464818ca64e
+SHA1 (patch-src_tlStream.cc) = aa3b781acad05e4ec45075b6d08750213ece3820
