@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2018/07/19 15:15:29 jaapb Exp $
+# $NetBSD: Makefile,v 1.34 2018/07/24 17:29:09 maya Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 .include		"version.mk"
@@ -63,7 +63,7 @@ MAKE_ENV+=		NO_WERROR=1
 #MAKE_ENV+=		INSTALL_DATA=${BSD_INSTALL_DATA}
 #MAKE_ENV+=		INSTALL_PROG=${BSD_INSTALL_PROGRAM}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37
+PYTHON_VERSIONS_ACCEPTED=	27
 
 PY_PATCHPLIST=		yes
 REPLACE_PYTHON+=	misc/xen-bugtool misc/xen-ringwatch misc/xencons
