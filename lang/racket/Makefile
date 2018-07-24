@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.69 2018/07/20 03:34:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.70 2018/07/24 12:22:07 jaapb Exp $
 
-PKGNAME=		racket-6.11
-PKGREVISION=		4
+PKGNAME=		racket-6.12
 DISTNAME=		${PKGNAME_NOREV}-src
 CATEGORIES=		lang
 MASTER_SITES_PLT=	https://download.racket-lang.org/installers/${PKGVERSION_NOREV}/
@@ -29,9 +28,9 @@ GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		src
 CONFIGURE_ARGS=		--enable-pthread
 USE_LANGUAGES=		c c++
-USE_TOOLS=		pkg-config
-MAKE_JOBS_SAFE=		no
+USE_TOOLS=		pkg-config gmake
 UNLIMIT_RESOURCES=	datasize
+MAKE_ENV+=	"PAXCTL=${TOOLS_PLATFORM.paxctl}"
 
 LDFLAGS.DragonFly+=	-rdynamic
 
@@ -43,6 +42,8 @@ CHECK_INTERPRETER_SKIP=	lib/racket/collects/meta/build/sitemap/setup.py \
 			lib/racket/collects/meta/build/sitemap/test_sitemap_gen.py
 
 CHECK_INTERPRETER_SKIP+=	lib/racket/collects/tests/jpr/mon-script.ss
+
+CHECK_RELRO_SKIP=	bin/mred bin/mzscheme
 
 .for f in use-c-printf.rkt use-crypt.rkt use-esd.rkt use-magick.rkt use-sndfile.rkt use-tcl.rkt use-xmmsctrl.rkt use-xosd.rkt
 REPLACE_RACKET+=	share/pkgs/racket-doc/ffi/examples/${f}
