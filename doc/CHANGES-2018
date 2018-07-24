@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3308 2018/07/24 06:10:02 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3309 2018/07/24 06:15:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4718,3 +4718,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated chat/weechat to 2.1nb3 [maya 2018-07-23]
 	Updated sysutils/dtc to 1.4.7 [adam 2018-07-24]
 	Updated security/py-asyncssh to 1.13.3 [adam 2018-07-24]
+	Updated devel/py-astroid to 2.0.1 [adam 2018-07-24]
+	Updated devel/py-pylint to 2.0.1 [adam 2018-07-24]
