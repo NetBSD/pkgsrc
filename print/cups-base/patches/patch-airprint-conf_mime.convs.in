@@ -1,0 +1,37 @@
+$NetBSD: patch-airprint-conf_mime.convs.in,v 1.1 2018/07/24 12:19:21 bouyer Exp $
+
+From bbc3507a260d29db3fc5601826f33c10f9dccd1e Mon Sep 17 00:00:00 2001
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Date: Tue, 9 Aug 2016 18:11:29 +0200
+Subject: Patch to support Apple AirPrint (printing from iPhone, iPad, iPod
+ Touch to a CUPS server)
+
+Bug-Ubuntu: https://bugs.launchpad.net/bugs/711779
+Bug-Ubuntu: https://bugs.launchpad.net/bugs/1054495
+Bug-Debian: http://bugs.debian.org/700961
+Bug: https://cups.org/str.php?L4341
+Last-Update: 2015-02-10
+
+Patch-Name: airprint-support.patch
+---
+ conf/mime.convs.in   | 3 +++
+ conf/mime.types      | 3 +++
+ scheduler/conf.c     | 2 +-
+ scheduler/dirsvc.c   | 6 ++++++
+ scheduler/printers.c | 4 +++-
+ 5 files changed, 16 insertions(+), 2 deletions(-)
+
+diff --git a/conf/mime.convs.in b/conf/mime.convs.in
+index bffd04f84..33ce812e3 100644
+--- conf/mime.convs.in.orig
++++ conf/mime.convs.in
+@@ -47,6 +47,9 @@ application/postscript		application/vnd.cups-postscript	66	pstops
+ application/vnd.cups-raster	image/pwg-raster		100	rastertopwg
+ application/vnd.cups-raster	image/urf			100	rastertopwg
+ 
++# Needed for printing from iOS (AirPrint) clients
++image/urf    	      	       application/pdf			100	-
++
+ ########################################################################
+ #
+ # Raw filter...
