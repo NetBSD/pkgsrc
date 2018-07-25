@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3331 2018/07/25 13:36:51 joerg Exp $
+$NetBSD: CHANGES-2018,v 1.3332 2018/07/25 14:06:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4750,3 +4750,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated audio/pulseaudio to 12.2 [adam 2018-07-25]
 	Updated print/cups-filters to 1.20.4 [adam 2018-07-25]
 	Updated print/py-reportlab to 3.5.2 [joerg 2018-07-25]
+	Updated emulators/mame to 0.200 [wiz 2018-07-25]
