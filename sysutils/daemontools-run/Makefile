@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2018/07/24 17:40:06 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2018/07/25 16:32:34 schmonz Exp $
 #
 
-DISTNAME=		daemontools-run-20180724
+DISTNAME=		daemontools-run-20180725
 CATEGORIES=		sysutils
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -12,7 +12,7 @@ LICENSE=		2-clause-bsd
 
 DEPENDS_DAEMONTOOLS=	daemontools-[0-9]*:../../sysutils/daemontools
 DEPENDS+=		${DEPENDS_DAEMONTOOLS}
-DEPENDS+=		ucspi-tcp-[0-9]*:../../net/ucspi-tcp
+DEPENDS+=		ucspi-tcp6-[0-9]*:../../net/ucspi-tcp6
 
 WRKSRC=			${WRKDIR}
 NO_BUILD=		yes
