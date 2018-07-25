@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2018/07/18 23:35:17 maya Exp $
+@comment $NetBSD: PLIST,v 1.29 2018/07/25 12:15:59 adam Exp $
 bin/esdcompat
 bin/pacat
 bin/pacmd
@@ -75,14 +75,14 @@ lib/pulse-${PULSELIBVER}/modules/libraop.a
 lib/pulse-${PULSELIBVER}/modules/libraop.so
 lib/pulse-${PULSELIBVER}/modules/librtp.a
 lib/pulse-${PULSELIBVER}/modules/librtp.so
+lib/pulse-${PULSELIBVER}/modules/module-allow-passthrough.a
+lib/pulse-${PULSELIBVER}/modules/module-allow-passthrough.so
 ${PLIST.alsa}lib/pulse-${PULSELIBVER}/modules/module-alsa-card.a
 ${PLIST.alsa}lib/pulse-${PULSELIBVER}/modules/module-alsa-card.so
 ${PLIST.alsa}lib/pulse-${PULSELIBVER}/modules/module-alsa-sink.a
 ${PLIST.alsa}lib/pulse-${PULSELIBVER}/modules/module-alsa-sink.so
 ${PLIST.alsa}lib/pulse-${PULSELIBVER}/modules/module-alsa-source.a
 ${PLIST.alsa}lib/pulse-${PULSELIBVER}/modules/module-alsa-source.so
-lib/pulse-${PULSELIBVER}/modules/module-allow-passthrough.a
-lib/pulse-${PULSELIBVER}/modules/module-allow-passthrough.so
 lib/pulse-${PULSELIBVER}/modules/module-always-sink.a
 lib/pulse-${PULSELIBVER}/modules/module-always-sink.so
 lib/pulse-${PULSELIBVER}/modules/module-always-source.a
@@ -352,8 +352,13 @@ ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/hdmi-output-4.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/hdmi-output-5.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/hdmi-output-6.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/hdmi-output-7.conf
+${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/iec958-stereo-input.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/iec958-stereo-output.conf
+${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/steelseries-arctis-input.conf
+${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/steelseries-arctis-output-mono.conf
+${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/steelseries-arctis-output-stereo.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/default.conf
+${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/dell-dock-tb16-usb-audio.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/force-speaker-and-int-mic.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/force-speaker.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/kinect-audio.conf
@@ -366,11 +371,6 @@ ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/native-instruments-traktor
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/native-instruments-traktor-audio6.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/native-instruments-traktorkontrol-s4.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/sb-omni-surround-5.1.conf
-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/iec958-stereo-input.conf
-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/steelseries-arctis-input.conf
-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/steelseries-arctis-output-mono.conf
-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/steelseries-arctis-output-stereo.conf
-${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/dell-dock-tb16-usb-audio.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/steelseries-arctis-usb-audio.conf
 share/vala/vapi/libpulse-mainloop-glib.deps
 share/vala/vapi/libpulse-mainloop-glib.vapi
