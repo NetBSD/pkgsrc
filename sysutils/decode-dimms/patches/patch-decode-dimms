@@ -1,10 +1,10 @@
-$NetBSD: patch-decode-dimms,v 1.5 2018/07/25 02:36:08 pgoyette Exp $
+$NetBSD: patch-decode-dimms,v 1.6 2018/07/25 02:37:11 pgoyette Exp $
 
 Add NetBSD-specific ability to use spdmem(4)'s sysctl values as
 input.
 
---- decode-dimms.after-patch	2018-07-25 10:33:01.055537617 +0800
-+++ decode-dimms.master	2018-05-31 13:53:29.771907986 +0800
+--- eeprom/decode-dimms.orig	2018-07-25 10:33:01.055537617 +0800
++++ eeprom/decode-dimms	2018-05-31 13:53:29.771907986 +0800
 @@ -1,4 +1,4 @@
 -#!/usr/pkg/bin/perl -w
 +#!/usr/bin/perl -w
