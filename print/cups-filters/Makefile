@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.100 2018/07/15 23:39:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.101 2018/07/25 12:38:37 adam Exp $
 
-DISTNAME=	cups-filters-1.20.3
-PKGREVISION=	3
+DISTNAME=	cups-filters-1.20.4
 CATEGORIES=	print
 MASTER_SITES=	http://openprinting.org/download/cups-filters/
 EXTRACT_SUFX=	.tar.xz
@@ -11,14 +10,25 @@ HOMEPAGE=	http://www.linuxfoundation.org/collaborate/workgroups/openprinting/cup
 COMMENT=	Backends, filters, and other software for cups
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND mit
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	bash:run pkg-config gmake
-USE_LANGUAGES=	c c++11
-
 TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 DEPENDS+=	poppler-utils-[0-9]*:../../print/poppler-utils
 
+USE_LANGUAGES=		c c++11
+USE_LIBTOOL=		yes
+USE_TOOLS+=		bash:run pkg-config gmake
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-braille
+CONFIGURE_ARGS+=	--disable-ldap
+CONFIGURE_ARGS+=	--disable-mutool
+CONFIGURE_ARGS+=	--enable-ijs
+CONFIGURE_ARGS+=	--enable-opvp
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--with-apple-raster-filter=rastertopdf
+CONFIGURE_ARGS+=	--with-gs-path=${PREFIX}/bin/gs
+CONFIGURE_ARGS+=	--with-pdftops-path=${PREFIX}/bin/pdftops
+CONFIGURE_ARGS+=	--with-shell=${TOOLS_PATH.bash}
+
+INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/cups-filters
 PKGCONFIG_OVERRIDE+=	libcupsfilters.pc.in
 PKGCONFIG_OVERRIDE+=	libfontembed.pc.in
 
@@ -40,22 +50,8 @@ CFLAGS+=	-framework IOKit
 CPPFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
 
 BUILD_DEFS+=		VARBASE
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
 RCD_SCRIPTS=		cups-browsed
-
-CONFIGURE_ARGS+=	--disable-braille
-CONFIGURE_ARGS+=	--disable-ldap
-CONFIGURE_ARGS+=	--disable-mutool
-CONFIGURE_ARGS+=	--with-apple-raster-filter=rastertopdf
-CONFIGURE_ARGS+=	--with-shell=${TOOLS_PATH.bash}
-CONFIGURE_ARGS+=	--with-pdftops-path=${PREFIX}/bin/pdftops
-CONFIGURE_ARGS+=	--with-gs-path=${PREFIX}/bin/gs
-CONFIGURE_ARGS+=	--enable-ijs
-CONFIGURE_ARGS+=	--enable-opvp
-
-INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/cups-filters
-
 CONF_FILES=		${PREFIX}/share/examples/cups-filters/fonts/conf.d/99pdftoopvp.conf ${PKG_SYSCONFDIR}/fontconfig/conf.d/99pdftoopvp.conf
 CONF_FILES+=		${PREFIX}/share/examples/cups-filters/cups-browsed.conf ${PKG_SYSCONFDIR}/cups/cups-browsed.conf
 
@@ -70,7 +66,8 @@ SUBST_SED.daemonize=		-e 's|@PREFIX@|${PREFIX}|g'
 SUBST_SED.daemonize+=		-e 's|@VARBASE@|${VARBASE}|g'
 
 post-install:
-	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/cups/cups-browsed.conf ${DESTDIR}${PREFIX}/share/examples/cups-filters/cups-browsed.conf
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/cups/cups-browsed.conf \
+		${DESTDIR}${PREFIX}/share/examples/cups-filters/cups-browsed.conf
 	# backends that need root access should not have world read and execute permissions
 	${CHMOD} go-rwx ${DESTDIR}${PREFIX}/libexec/cups/backend/parallel
 	${CHMOD} go-rwx ${DESTDIR}${PREFIX}/libexec/cups/backend/serial
