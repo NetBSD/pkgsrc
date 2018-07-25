@@ -1,14 +1,12 @@
-# $NetBSD: options.mk,v 1.8 2018/07/06 14:10:15 ryoon Exp $
+# $NetBSD: options.mk,v 1.9 2018/07/25 12:15:59 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pulseaudio
 PKG_SUPPORTED_OPTIONS=	avahi fftw gsettings x11
 PKG_SUGGESTED_OPTIONS=	avahi x11
 PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
+
 .include "../../mk/bsd.options.mk"
 
-###
-### avahi
-###
 .if !empty(PKG_OPTIONS:Mavahi)
 .include "../../net/avahi/buildlink3.mk"
 PLIST.avahi=		yes
@@ -16,9 +14,6 @@ PLIST.avahi=		yes
 CONFIGURE_ARGS+=	--disable-avahi
 .endif
 
-###
-### gsettings
-###
 .if !empty(PKG_OPTIONS:Mgsettings)
 PLIST.gsettings=	yes
 CONFIGURE_ARGS+=	--enable-gsettings
@@ -26,9 +21,6 @@ CONFIGURE_ARGS+=	--enable-gsettings
 CONFIGURE_ARGS+=	--disable-gsettings
 .endif
 
-###
-### fftw
-###
 .if !empty(PKG_OPTIONS:Mfftw)
 CONFIGURE_ARGS+=	--with-fftw
 PLIST.fftw=		yes
@@ -48,9 +40,6 @@ REPLACE_FILES.pulse_py=	src/utils/qpaeq
 CONFIGURE_ARGS+=	--without-fftw
 .endif
 
-###
-### X11
-###
 .if !empty(PKG_OPTIONS:Mx11)
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
