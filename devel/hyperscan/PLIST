@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2018/06/02 19:13:45 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/07/25 00:26:30 minskim Exp $
 include/hs/hs.h
 include/hs/hs_common.h
 include/hs/hs_compile.h
 include/hs/hs_runtime.h
 lib/libhs.so
-lib/libhs.so.4
+lib/libhs.so.5
 lib/libhs.so.${PKGVERSION}
 lib/libhs_runtime.so
-lib/libhs_runtime.so.4
+lib/libhs_runtime.so.5
 lib/libhs_runtime.so.${PKGVERSION}
 lib/pkgconfig/libhs.pc

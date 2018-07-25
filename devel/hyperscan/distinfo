@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.2 2018/06/02 19:13:45 joerg Exp $
+$NetBSD: distinfo,v 1.3 2018/07/25 00:26:30 minskim Exp $
 
-SHA1 (hyperscan-4.7.0.tar.gz) = 459ee499e712061c2b8417080ee4029f38daccc2
-RMD160 (hyperscan-4.7.0.tar.gz) = bbfd448896d6d1953a65ab1182ee75bf8b47ed76
-SHA512 (hyperscan-4.7.0.tar.gz) = ec32cecc98165ab590cefe37c31aa9cbad813aedd6bec72760574a8ece2a8aefecc229b1d76a2e90c54a51302d1db70620278dbb96d47091ebf846e9f8c4ff08
-Size (hyperscan-4.7.0.tar.gz) = 1738159 bytes
-SHA1 (patch-CMakeLists.txt) = 2d274946ab6bb2b7c9ce56b9519404fbbe02b30e
+SHA1 (hyperscan-5.0.0.tar.gz) = 5cb3fc5726950c4025854da8ec05a15f929279db
+RMD160 (hyperscan-5.0.0.tar.gz) = e172831d368ad5565355ba5da93837c65183c7aa
+SHA512 (hyperscan-5.0.0.tar.gz) = 2a942832ab6908ea4b17342428188d635d1db0a57ac6452abbbcdadcf972be0174edeec67d03d925ce92d969c767e9933fdc636c4e3df0067aade659337692a5
+Size (hyperscan-5.0.0.tar.gz) = 1801219 bytes
+SHA1 (patch-CMakeLists.txt) = 1a51aee0bb7a807a293f5a16357b3536343915fa
 SHA1 (patch-src_util_popcount.h) = 3d30d412318c474c9d7a5b7fc45ea3148e6ed4b4
 SHA1 (patch-tools_hsbench_CMakeLists.txt) = 3b4cdd8a7ed17fedb1a090c3dc76fa307084b7a2
-SHA1 (patch-tools_hscollider_CMakeLists.txt) = 261e6d0164927db90155376536add51d0d327d58
+SHA1 (patch-tools_hscollider_CMakeLists.txt) = ee22d83890ca7bf010dd751469d90dcb4930dd08
