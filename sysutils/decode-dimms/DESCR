@@ -1,0 +1,7 @@
+decode-dimms is a small utility that displays the contents of DIMM memory
+SPD ROMs in human-readable form.  (It is part of a larger collection of
+https://git.kernel.org/pub/scm/utils/i2c-tools - most of which is very
+Linux-specific.)
+
+This version of decode-dimms can even directly read the SPD ROM data from
+the sysctl variables created by NetBSD's spdmem(4) device driver.
