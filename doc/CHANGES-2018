@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3338 2018/07/25 21:37:17 abs Exp $
+$NetBSD: CHANGES-2018,v 1.3339 2018/07/25 22:09:07 zafer Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4763,3 +4763,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/ucspi-ssl to 0.99enb1 [schmonz 2018-07-25]
 	Updated sysutils/daemontools-run to 20180725 [schmonz 2018-07-25]
 	Updated net/syncthing to 0.14.49 [abs 2018-07-25]
+	Updated www/apache-tomcat7 to 7.0.90 [zafer 2018-07-25]
+	Updated www/apache-tomcat8 to 8.0.53 [zafer 2018-07-25]
+	Updated www/apache-tomcat85 to 8.5.32 [zafer 2018-07-25]
