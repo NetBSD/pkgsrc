@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3334 2018/07/25 15:16:29 bacon Exp $
+$NetBSD: CHANGES-2018,v 1.3335 2018/07/25 16:23:49 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4753,3 +4753,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated emulators/mame to 0.200 [wiz 2018-07-25]
 	Updated multimedia/mpv to 0.29.0 [leot 2018-07-25]
 	Added biology/trimmomatic version 0.38 [bacon 2018-07-25]
+	Added net/ucspi-tcp6 version 1.06 [schmonz 2018-07-25]
