@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2018/05/07 18:40:10 bacon Exp $
+# $NetBSD: Makefile,v 1.46 2018/07/25 15:15:50 bacon Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -43,6 +43,7 @@ SUBDIR+=	rasmol
 SUBDIR+=	samtools
 SUBDIR+=	sewer
 SUBDIR+=	stride
+SUBDIR+=	trimmomatic
 SUBDIR+=	xylem
 
 .include "../mk/misc/category.mk"
