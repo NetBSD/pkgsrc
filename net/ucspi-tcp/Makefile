@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2018/06/18 10:50:19 schmonz Exp $
+# $NetBSD: Makefile,v 1.43 2018/07/25 16:19:16 schmonz Exp $
 
 DISTNAME=		ucspi-tcp-0.88
 PKGREVISION=		5
@@ -13,6 +13,8 @@ LICENSE=		public-domain
 
 MANPAGES=		${DISTNAME}-man-20020317.tar.gz
 SITES.${MANPAGES}=	http://smarden.org/pape/djb/manpages/
+
+CONFLICTS+=		ucspi-tcp6-[0-9]*
 
 DJB_RESTRICTED=		no
 
