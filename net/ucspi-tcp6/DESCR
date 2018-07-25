@@ -1,0 +1,7 @@
+ucspi-tcp6 is a fork of Dan Bernstein's ucspi-tcp 0.88, including:
+
+- rblsmtpd Greetdelay add-on and removal of the compiled-in default-RBL
+- Felix von Leitner's's IPv6 patch ucspi-tcp-0.88-ipv6.diff19.bz2
+- Jens Wehrenbrecht's IPv4 CIDR extension
+- Li Minh Bui's IPv6 support for compactified IPv6 addresses and CIDR
+  notation support
