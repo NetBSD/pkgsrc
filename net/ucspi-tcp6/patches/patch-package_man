@@ -1,0 +1,35 @@
+$NetBSD: patch-package_man,v 1.1 2018/07/25 16:22:55 schmonz Exp $
+
+Support DESTDIR.
+
+--- package/man.orig	2016-08-02 15:14:30.000000000 +0000
++++ package/man
+@@ -6,6 +6,8 @@ safe() { "$@" || barf "cannot $@"; }
+ safe umask 022
+ [ -d man ] || barf "no man directory"
+ 
++destdir=`head -1 conf-destdir`
++
+ mandir=""
+ if [ -f conf-man ]
+ then
+@@ -23,16 +25,16 @@ do
+   all="$all $i"
+ done
+ 
+-shout "Installing ucspi-tcp6 compressed man-files in ${mandir}."
++shout "Installing ucspi-tcp6 man-files in ${destdir}/${mandir}."
+ 
+ if [ $# -eq 0 ]
+ then
+   for manfile in $all
+   do
+     dir="man`echo $manfile | awk -F. '{print $NF}'`"
+-    safe mkdir -p $mandir/$dir
++    safe mkdir -p $destdir/$mandir/$dir
+     safe gzip $manfile && \
+-         install -m 644 "$manfile.gz" $mandir/$dir/"${manfile#*/}.gz"
++         install -m 644 "$manfile.gz" $destdir/$mandir/$dir/"${manfile#*/}.gz"
+   done
+ fi
+ 
