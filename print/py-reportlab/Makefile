@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2018/07/13 07:10:46 adam Exp $
+# $NetBSD: Makefile,v 1.62 2018/07/25 13:36:40 joerg Exp $
 
-DISTNAME=	reportlab-3.5.0
+DISTNAME=	reportlab-3.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/reportlab/}
@@ -10,8 +10,9 @@ HOMEPAGE=	http://www.reportlab.com/
 COMMENT=	Powerful PDF-generating toolkit for Python
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=4.4.0:../../graphics/py-Pillow
+DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+DEPENDS+=	${PYPKGPREFIX}-pyphen-[0-9]*:../../textproc/py-pyphen
 
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"

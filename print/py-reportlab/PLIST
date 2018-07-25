@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2018/07/13 07:10:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2018/07/25 13:36:40 joerg Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -8,6 +8,7 @@ ${PYSITELIB}/reportlab/__init__.py
 ${PYSITELIB}/reportlab/__init__.pyc
 ${PYSITELIB}/reportlab/__init__.pyo
 ${PYSITELIB}/reportlab/fonts/00readme.txt
+${PYSITELIB}/reportlab/fonts/DarkGarden-changelog.txt
 ${PYSITELIB}/reportlab/fonts/DarkGarden-copying-gpl.txt
 ${PYSITELIB}/reportlab/fonts/DarkGarden-copying.txt
 ${PYSITELIB}/reportlab/fonts/DarkGarden-readme.txt
@@ -40,6 +41,7 @@ ${PYSITELIB}/reportlab/fonts/zy______.pfb
 ${PYSITELIB}/reportlab/graphics/__init__.py
 ${PYSITELIB}/reportlab/graphics/__init__.pyc
 ${PYSITELIB}/reportlab/graphics/__init__.pyo
+${PYSITELIB}/reportlab/graphics/_renderPM.so
 ${PYSITELIB}/reportlab/graphics/barcode/__init__.py
 ${PYSITELIB}/reportlab/graphics/barcode/__init__.pyc
 ${PYSITELIB}/reportlab/graphics/barcode/__init__.pyo
@@ -238,6 +240,7 @@ ${PYSITELIB}/reportlab/lib/PyFontify.pyo
 ${PYSITELIB}/reportlab/lib/__init__.py
 ${PYSITELIB}/reportlab/lib/__init__.pyc
 ${PYSITELIB}/reportlab/lib/__init__.pyo
+${PYSITELIB}/reportlab/lib/_rl_accel.so
 ${PYSITELIB}/reportlab/lib/abag.py
 ${PYSITELIB}/reportlab/lib/abag.pyc
 ${PYSITELIB}/reportlab/lib/abag.pyo
@@ -277,6 +280,7 @@ ${PYSITELIB}/reportlab/lib/formatters.pyo
 ${PYSITELIB}/reportlab/lib/geomutils.py
 ${PYSITELIB}/reportlab/lib/geomutils.pyc
 ${PYSITELIB}/reportlab/lib/geomutils.pyo
+${PYSITELIB}/reportlab/lib/hyphen.mashed
 ${PYSITELIB}/reportlab/lib/logger.py
 ${PYSITELIB}/reportlab/lib/logger.pyc
 ${PYSITELIB}/reportlab/lib/logger.pyo
