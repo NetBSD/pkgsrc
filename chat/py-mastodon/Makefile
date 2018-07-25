@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/07/25 17:00:57 nia Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/25 18:20:42 nia Exp $
 
 VERSION=	1.2.2
 DISTNAME=	Mastodon.py-${VERSION}
@@ -14,7 +14,6 @@ LICENSE=	mit
 EXTRACT_USING=	bsdtar
 USE_LANGUAGES=	# none
 
-DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
