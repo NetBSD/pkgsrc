@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3335 2018/07/25 16:23:49 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.3336 2018/07/25 16:32:52 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4754,3 +4754,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/mpv to 0.29.0 [leot 2018-07-25]
 	Added biology/trimmomatic version 0.38 [bacon 2018-07-25]
 	Added net/ucspi-tcp6 version 1.06 [schmonz 2018-07-25]
+	Added chat/py-Mastodon.py version 1.2.2 [nia 2018-07-25]
