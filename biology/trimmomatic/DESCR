@@ -1,0 +1,5 @@
+Trimmomatic performs a variety of useful trimming tasks for illumina
+paired-end and single ended data. The selection of trimming steps and their
+associated parameters are supplied on the command line. It works with FASTQ
+(using phred + 33 or phred + 64 quality scores, depending on the Illumina
+pipeline used), either uncompressed or gzipp'ed FASTQ.
