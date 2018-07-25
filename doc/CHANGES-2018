@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3327 2018/07/25 00:27:51 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.3328 2018/07/25 02:11:40 pgoyette Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4745,3 +4745,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/apache-ivy to 2.4.0nb1 [jperkin 2018-07-24]
 	Updated sysutils/daemontools-run to 20180724 [schmonz 2018-07-24]
 	Updated devel/hyperscan to 5.0.0 [minskim 2018-07-25]
+	Added sysutils/decode-dimms version 0.0.20171205 [pgoyette 2018-07-25]
