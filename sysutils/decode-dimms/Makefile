@@ -1,14 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2018/07/25 04:53:44 pgoyette Exp $
+# $NetBSD: Makefile,v 1.8 2018/07/25 05:40:15 wiz Exp $
 
 # no Release yet
 GIT_COMMIT=	84da8192c7c409f37c1906b60ef166c58aafc847
 DISTNAME=	i2c-tools-${GIT_COMMIT}
 PKGNAME=	decode-dimms-0.0.20181205
 CATEGORIES=	sysutils
-
 MASTER_SITES=	https://git.kernel.org/pub/scm/utils/i2c-tools/i2c-tools.git/snapshot/
-
-EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://git.kernel.org/pub/scm/utils/i2c-tools/
@@ -39,5 +36,3 @@ do-install:
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
-
-
