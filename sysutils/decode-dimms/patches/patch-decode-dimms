@@ -1,16 +1,10 @@
-$NetBSD: patch-decode-dimms,v 1.7 2018/07/25 02:40:44 pgoyette Exp $
+$NetBSD: patch-decode-dimms,v 1.8 2018/07/25 04:33:31 pgoyette Exp $
 
 Add NetBSD-specific ability to use spdmem(4)'s sysctl values as
 input.
 
 --- eeprom/decode-dimms.orig	2018-05-31 13:53:29.771907986 +0800
 +++ eeprom/decode-dimms	2018-07-25 10:33:01.055537617 +0800
-@@ -1,4 +1,4 @@
--#!/usr/bin/perl -w
-+#!/usr/pkg/bin/perl -w
- #
- # EEPROM data decoder for SDRAM DIMM modules
- #
 @@ -42,8 +42,9 @@
  use Fcntl qw(:DEFAULT :seek);
  use File::Basename;
