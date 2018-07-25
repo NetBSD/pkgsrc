@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3330 2018/07/25 12:39:09 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3331 2018/07/25 13:36:51 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4749,3 +4749,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added converters/py-emoji version 0.5.0 [nia 2018-07-25]
 	Updated audio/pulseaudio to 12.2 [adam 2018-07-25]
 	Updated print/cups-filters to 1.20.4 [adam 2018-07-25]
+	Updated print/py-reportlab to 3.5.2 [joerg 2018-07-25]
