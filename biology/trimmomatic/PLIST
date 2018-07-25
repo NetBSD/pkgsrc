@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2018/07/25 15:14:32 bacon Exp $
+lib/java/trimmomatic.jar
+share/trimmomatic/adapters/NexteraPE-PE.fa
+share/trimmomatic/adapters/TruSeq2-PE.fa
+share/trimmomatic/adapters/TruSeq2-SE.fa
+share/trimmomatic/adapters/TruSeq3-PE-2.fa
+share/trimmomatic/adapters/TruSeq3-PE.fa
+share/trimmomatic/adapters/TruSeq3-SE.fa
