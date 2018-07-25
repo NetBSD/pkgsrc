@@ -1,20 +1,20 @@
-$NetBSD: patch-Makefile,v 1.4 2018/04/05 09:18:39 jperkin Exp $
+$NetBSD: patch-Makefile,v 1.5 2018/07/25 13:51:18 jperkin Exp $
 
 Do not hardcode _XOPEN_SOURCE.
 Skip installing unnecessary documentation.
 
---- Makefile.orig	2017-12-30 17:13:19.000000000 +0000
+--- Makefile.orig	2018-06-27 14:27:32.000000000 +0000
 +++ Makefile
-@@ -309,7 +309,7 @@ ifeq ($(TARGET),solaris)
+@@ -310,7 +310,7 @@ ifeq ($(TARGET),solaris)
    # This is for Solaris 8
    # We also enable getaddrinfo() which works since solaris 8.
    USE_POLL       = implicit
 -  TARGET_CFLAGS  = -fomit-frame-pointer -DFD_SETSIZE=65536 -D_REENTRANT -D_XOPEN_SOURCE=500 -D__EXTENSIONS__
-+  TARGET_CFLAGS  = -DFD_SETSIZE=65536 -D_REENTRANT -D__EXTENSIONS__ -D_XOPEN_SOURCE_EXTENDED=1
++  TARGET_CFLAGS  = -DFD_SETSIZE=65536 -D_REENTRANT -D__EXTENSIONS__
    TARGET_LDFLAGS = -lnsl -lsocket
    USE_TPROXY     = implicit
    USE_LIBCRYPT    = implicit
-@@ -931,9 +931,6 @@ DOCUMENTATION = $(filter-out $(EXCLUDE_D
+@@ -933,9 +933,6 @@ DOCUMENTATION = $(filter-out $(EXCLUDE_D
  
  install-doc:
  	install -d "$(DESTDIR)$(DOCDIR)"
