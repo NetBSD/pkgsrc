@@ -1,10 +1,14 @@
-# $NetBSD: options.mk,v 1.6 2018/07/04 13:40:31 jperkin Exp $
+# $NetBSD: options.mk,v 1.7 2018/07/25 16:19:16 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ucspi-tcp
 PKG_SUPPORTED_OPTIONS+=	inet6 ucspi-tcp-nodefaultrbl
 PKG_SUGGESTED_OPTIONS+=	inet6 ucspi-tcp-nodefaultrbl
 
 .include "../../mk/bsd.options.mk"
+
+DESTDIR_PATCH=			ucspi-tcp-0.88-destdir-20180725.patch
+PATCHFILES+=			${DESTDIR_PATCH}
+SITES.${DESTDIR_PATCH}=		https://schmonz.com/qmail/ucspitcpdestdir/
 
 PLIST_VARS+=			inet6
 .if !empty(PKG_OPTIONS:Minet6)
