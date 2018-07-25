@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/07/25 04:33:31 pgoyette Exp $
+# $NetBSD: Makefile,v 1.6 2018/07/25 04:48:22 pgoyette Exp $
 
 # no Release yet
 GIT_COMMIT=	84da8192c7c409f37c1906b60ef166c58aafc847
@@ -18,9 +18,9 @@ LICENSE=	gnu-gpl-v2
 REPLACE_PERL=	eeprom/decode-dimms
 
 SUBST_CLASSES+=		rev
-SUBST_STAGE.rev=        post-patch
+SUBST_STAGE.rev=	pre-patch
 SUBST_FILES.rev=        eeprom/decode-dimms
-SUBST_SED.rev=          -e 's/^$$revision = .*;/$$revision = "20171205";'/
+SUBST_SED.rev=          -e 's/^$$revision = .*;/$$revision = "20171205";/'
 SUBST_SED.rev+=		-e '/^$$revision =~/d'
 
 NO_BUILD=	yes
@@ -30,6 +30,7 @@ USE_LANGUAGES=	# empty
 ONLY_FOR_PLATFORM= NetBSD-*-*
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/eeprom/decode-dimms \
 		${DESTDIR}${PREFIX}/bin/decode-dimms
