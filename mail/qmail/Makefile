@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2018/07/25 16:32:34 schmonz Exp $
+# $NetBSD: Makefile,v 1.95 2018/07/25 16:42:36 schmonz Exp $
 #
 
 DISTNAME=		netqmail-1.06
@@ -12,6 +12,7 @@ HOMEPAGE=		http://qmail.org/netqmail/
 COMMENT=		Secure, reliable, efficient, simple, and fast MTA
 LICENSE=		public-domain
 
+DEPENDS+=		checkpassword-pam-[0-9]*:../../sysutils/checkpassword-pam
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
 DEPENDS+=		ucspi-tcp6-[0-9]*:../../net/ucspi-tcp6
 
