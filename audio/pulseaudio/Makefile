@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.129 2018/07/06 14:10:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.130 2018/07/25 12:15:59 adam Exp $
 
-DISTNAME=	pulseaudio-12.0
+DISTNAME=	pulseaudio-12.2
 CATEGORIES=	audio
 MASTER_SITES=	https://freedesktop.org/software/pulseaudio/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -15,10 +15,18 @@ NOT_FOR_PLATFORM=	DragonFly-*-*
 LIBTOOL_REQD=	2.4
 GCC_REQD+=	4.8
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	aclocal autoheader autoconf automake gmake gm4 intltool msgfmt pkg-config
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		aclocal autoheader autoconf automake gmake gm4 intltool msgfmt pkg-config
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-tcpwrap
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
+CONFIGURE_ENV+=		DATADIRNAME=${PKGLOCALEDIR}
+PKGCONFIG_OVERRIDE+=	libpulse-mainloop-glib.pc.in
+PKGCONFIG_OVERRIDE+=	libpulse-simple.pc.in
+PKGCONFIG_OVERRIDE+=	libpulse.pc.in
 
 REPLACE_BASH=	shell-completion/bash/pulseaudio git-version-gen
 
@@ -33,9 +41,6 @@ CONFIGURE_ARGS.NetBSD+=	--disable-default-build-tests
 CONFIGURE_ENV+=		ac_cv_tls=none
 .endif
 
-CONFIGURE_ENV+=		DATADIRNAME=${PKGLOCALEDIR}
-USE_PKGLOCALEDIR=	yes
-
 # Wrong sys/capability.h assumptions, incompatible implementation:
 CONFIGURE_ARGS.FreeBSD+=	--without-caps
 
@@ -43,10 +48,6 @@ CONFIGURE_ENV+=		EGDIR=${EGDIR}
 MAKE_ENV+=		EGDIR=${EGDIR}
 
 MAKE_FLAGS+=		bashcompletiondir=${PREFIX}/share/bash-completion/completions
-
-CONFIGURE_ARGS+=	--disable-tcpwrap
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
 
 # Disable NEON on NetBSD/aarch64 (does not build with pulseaudio 11.1)
 # use of q0 register in aarch64 is considered not valid
@@ -60,21 +61,30 @@ CONFIGURE_ARGS+=	--disable-neon-opt
 .include "../../devel/libatomic_ops/buildlink3.mk"
 .endif
 
-# Build module-mmkbd-evdev.so under Linux
-.if ${OPSYS} == "Linux" && exists(/usr/include/linux/input.h)
-PLIST.evdev=		yes
-.endif
+PLIST_SUBST+=		PULSELIBVER=12.0
+PLIST_VARS+=		alsa bonjour coreaudio evdev oss sun
 
+# Build module-mmkbd-evdev.so under Linux
 .if ${OPSYS} == "Linux"
+.  if exists(/usr/include/linux/input.h)
+PLIST.evdev=		yes
+.  endif
 PLIST.alsa=		yes
 .include "../../audio/alsa-lib/buildlink3.mk"
+.elif ${OPSYS} == "SunOS"
+USE_LANGUAGES+=		c99
+PLIST.sun=		yes
+.  if ${OS_VERSION} == "5.11"
+PLIST.oss=		yes
+.  endif
+.elif ${OPSYS} == "Darwin"
+PLIST.bonjour=		yes
+PLIST.coreaudio=	yes
+.else
+PLIST.oss=		yes
 .endif
 
 .include "options.mk"
-
-PKGCONFIG_OVERRIDE+=	libpulse-mainloop-glib.pc.in
-PKGCONFIG_OVERRIDE+=	libpulse-simple.pc.in
-PKGCONFIG_OVERRIDE+=	libpulse.pc.in
 
 LIBS.NetBSD+=		${LIBOSSAUDIO}
 
@@ -95,23 +105,6 @@ CONF_FILES+=	${EGDIR}/default.pa ${PKG_SYSCONFDIR}/default.pa
 CONF_FILES+=	${EGDIR}/system.pa ${PKG_SYSCONFDIR}/system.pa
 CONF_FILES+=	${EGDIR}/pulseaudio-system.conf \
 		${PKG_SYSCONFBASE}/dbus-1/system.d/pulseaudio-system.conf
-
-PLIST_SUBST+=	PULSELIBVER=12.0
-
-PLIST_VARS+=		alsa bonjour coreaudio evdev oss sun
-
-.if ${OPSYS} == "SunOS"
-USE_LANGUAGES+=		c99
-PLIST.sun=		yes
-.  if ${OS_VERSION} == "5.11"
-PLIST.oss=		yes
-.  endif
-.elif ${OPSYS} == "Darwin"
-PLIST.bonjour=	yes
-PLIST.coreaudio=	yes
-.else
-PLIST.oss=		yes
-.endif
 
 PKG_GROUPS=		${PULSE_GROUP}
 PKG_GROUPS+=		${PULSE_GROUP_REALTIME}
