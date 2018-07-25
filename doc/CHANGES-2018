@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3333 2018/07/25 14:19:25 leot Exp $
+$NetBSD: CHANGES-2018,v 1.3334 2018/07/25 15:16:29 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4752,3 +4752,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/py-reportlab to 3.5.2 [joerg 2018-07-25]
 	Updated emulators/mame to 0.200 [wiz 2018-07-25]
 	Updated multimedia/mpv to 0.29.0 [leot 2018-07-25]
+	Added biology/trimmomatic version 0.38 [bacon 2018-07-25]
