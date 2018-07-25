@@ -1,0 +1,39 @@
+$NetBSD: patch-decode-dimms.1,v 1.1 2018/07/25 02:05:26 pgoyette Exp $
+
+Document the -s option (use spdmem(4)'s sysctl for input)
+
+--- eeprom/decode-dimms.1.orig	2018-07-25 07:26:21.321627123 +0800
++++ eeprom/decode-dimms.1	2018-07-25 07:26:56.967194551 +0800
+@@ -22,7 +22,7 @@
+ decode-dimms \- decode the information found in memory module SPD EEPROMs
+ .SH SYNOPSIS
+ .B decode-dimms
+-[-c] [-f [-b]] [-x|-X file [files..]]
++[-c] [-f [-b]] [-x|-X|-s file [files..]]
+ .br
+ .B decode-dimms
+ -h
+@@ -32,8 +32,7 @@
+ .B decode-dimms
+ tool is to decode the information found in memory module SPD EEPROMs.
+ The SPD data is read either from the running system or dump files.
+-In the former case, the tool requires a kernel module to be loaded:
+-eeprom, at24 or ee1004 (for DDR4 SDRAM.)
++In the former case, the tool requires the spdmem kernel module to be loaded.
+ .SH PARAMETERS
+ .TP
+ .B \-f, --format
+@@ -60,9 +59,11 @@
+ .B \-X
+ Same as -x except treat multibyte hex data as little endian
+ .TP
++.B \-s
++Read the SPD data from the sysctl (9) node hw.<file>.spd_data instead of
++from a file.
++.TP
+ .B \-h, --help
+ Display the usage summary
+-.SH SEE ALSO
+-.BR decode-vaio (1)
+ .SH AUTHORS
+ Philip Edelbrock, Christian Zuckschwerdt, Burkart Lingner, Jean Delvare

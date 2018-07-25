@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.3 2018/07/25 02:05:26 pgoyette Exp $
+bin/decode-dimms
+man/man1/decode-dimms.1
