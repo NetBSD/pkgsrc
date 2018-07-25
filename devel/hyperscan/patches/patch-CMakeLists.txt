@@ -1,11 +1,11 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2018/06/02 19:13:45 joerg Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2018/07/25 00:26:30 minskim Exp $
 
 Avoid conflicts with pkgsrc's CMAKE_MODULE_PATH override.
 Disable examples as they require Linux specific headers.
 
---- CMakeLists.txt.orig	2018-01-24 06:58:01.000000000 +0000
+--- CMakeLists.txt.orig	2018-07-09 16:45:44.000000000 +0000
 +++ CMakeLists.txt
-@@ -6,7 +6,6 @@ set (HS_MINOR_VERSION 7)
+@@ -6,7 +6,6 @@ set (HS_MINOR_VERSION 0)
  set (HS_PATCH_VERSION 0)
  set (HS_VERSION ${HS_MAJOR_VERSION}.${HS_MINOR_VERSION}.${HS_PATCH_VERSION})
  
@@ -60,7 +60,16 @@ Disable examples as they require Linux specific headers.
  
  # testing a builtin takes a little more work
  CHECK_C_SOURCE_COMPILES("void *aa_test(void *x) { return __builtin_assume_aligned(x, 16);}\nint main(void) { return 0; }" HAVE_CC_BUILTIN_ASSUME_ALIGNED)
-@@ -453,7 +452,7 @@ if (EXISTS ${CMAKE_SOURCE_DIR}/tools/CMa
+@@ -454,7 +453,7 @@ if (NOT WIN32)
+ set(PCRE_REQUIRED_MAJOR_VERSION 8)
+ set(PCRE_REQUIRED_MINOR_VERSION 41)
+ set(PCRE_REQUIRED_VERSION ${PCRE_REQUIRED_MAJOR_VERSION}.${PCRE_REQUIRED_MINOR_VERSION})
+-include (${CMAKE_MODULE_PATH}/pcre.cmake)
++include (${PROJECT_SOURCE_DIR}/cmake/pcre.cmake)
+ if (NOT CORRECT_PCRE_VERSION)
+     message(STATUS "PCRE ${PCRE_REQUIRED_VERSION} not found")
+ endif()
+@@ -474,7 +473,7 @@ endif()
  endif()
  
  # do substitutions
@@ -69,7 +78,16 @@ Disable examples as they require Linux specific headers.
  configure_file(src/hs_version.h.in ${PROJECT_BINARY_DIR}/hs_version.h)
  
  if (NOT WIN32)
-@@ -1147,28 +1146,28 @@ else (FAT_RUNTIME)
+@@ -506,7 +505,7 @@ if (WIN32)
+ set(PCRE_REQUIRED_MAJOR_VERSION 8)
+ set(PCRE_REQUIRED_MINOR_VERSION 41)
+ set(PCRE_REQUIRED_VERSION ${PCRE_REQUIRED_MAJOR_VERSION}.${PCRE_REQUIRED_MINOR_VERSION})
+-include (${CMAKE_MODULE_PATH}/pcre.cmake)
++include (${PROJECT_SOURCE_DIR}/cmake/pcre.cmake)
+ if (NOT CORRECT_PCRE_VERSION)
+     message(STATUS "PCRE ${PCRE_REQUIRED_VERSION} not found")
+ endif()
+@@ -1195,28 +1194,28 @@ else (FAT_RUNTIME)
         list(APPEND RUNTIME_LIBS $<TARGET_OBJECTS:hs_exec_core2>)
         set_target_properties(hs_exec_core2 PROPERTIES
             COMPILE_FLAGS "-march=core2"
@@ -102,7 +120,7 @@ Disable examples as they require Linux specific headers.
                 )
         endif (BUILD_AVX512)
  
-@@ -1203,21 +1202,21 @@ else (FAT_RUNTIME)
+@@ -1251,21 +1250,21 @@ else (FAT_RUNTIME)
          set_target_properties(hs_exec_shared_core2 PROPERTIES
              COMPILE_FLAGS "-march=core2"
              POSITION_INDEPENDENT_CODE TRUE
@@ -127,7 +145,7 @@ Disable examples as they require Linux specific headers.
              )
  
          if (BUILD_AVX512)
-@@ -1226,7 +1225,7 @@ else (FAT_RUNTIME)
+@@ -1274,7 +1273,7 @@ else (FAT_RUNTIME)
              set_target_properties(hs_exec_shared_avx512 PROPERTIES
                  COMPILE_FLAGS "${SKYLAKE_FLAG}"
                  POSITION_INDEPENDENT_CODE TRUE
@@ -136,7 +154,7 @@ Disable examples as they require Linux specific headers.
                  )
          endif (BUILD_AVX512)
          add_library(hs_exec_common_shared OBJECT
-@@ -1319,8 +1318,3 @@ if (NOT BUILD_STATIC_LIBS)
+@@ -1367,8 +1366,3 @@ if (NOT BUILD_STATIC_LIBS)
      # use shared lib without having to change all the targets
      add_library(hs ALIAS hs_shared)
  endif ()
