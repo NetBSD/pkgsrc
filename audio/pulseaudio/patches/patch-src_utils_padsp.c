@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.20 2018/07/06 14:10:15 ryoon Exp $
+$NetBSD: patch-src_utils_padsp.c,v 1.1 2018/07/25 12:15:59 adam Exp $
 
 ioctl() takes u_long argument on NetBSD.
 On NetBSD<6 and 6.99.0-6.99.7, use third parameter in ioctl instead of varargs.
