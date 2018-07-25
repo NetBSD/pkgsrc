@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3336 2018/07/25 16:32:52 nia Exp $
+$NetBSD: CHANGES-2018,v 1.3337 2018/07/25 16:38:14 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4755,3 +4755,10 @@ Changes to the packages collection and infrastructure in 2018:
 	Added biology/trimmomatic version 0.38 [bacon 2018-07-25]
 	Added net/ucspi-tcp6 version 1.06 [schmonz 2018-07-25]
 	Added chat/py-Mastodon.py version 1.2.2 [nia 2018-07-25]
+	Updated mail/qmail to 1.03nb34 [schmonz 2018-07-25]
+	Updated mail/qmail-conf to 0.60nb4 [schmonz 2018-07-25]
+	Updated net/djbdns-run to 20180725 [schmonz 2018-07-25]
+	Updated net/publicfile to 0.52nb1 [schmonz 2018-07-25]
+	Updated net/publicfile-run to 20180725 [schmonz 2018-07-25]
+	Updated net/ucspi-ssl to 0.99enb1 [schmonz 2018-07-25]
+	Updated sysutils/daemontools-run to 20180725 [schmonz 2018-07-25]
