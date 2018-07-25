@@ -1,0 +1,3 @@
+Mastodon.py is a Python wrapper for the Mastodon social networking API.
+
+It is feature complete for the public API as of Mastodon version 2.1.0.
