@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2018/07/25 11:56:18 nia Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/emoji/__init__.py
+${PYSITELIB}/emoji/__init__.pyc
+${PYSITELIB}/emoji/__init__.pyo
+${PYSITELIB}/emoji/core.py
+${PYSITELIB}/emoji/core.pyc
+${PYSITELIB}/emoji/core.pyo
+${PYSITELIB}/emoji/unicode_codes.py
+${PYSITELIB}/emoji/unicode_codes.pyc
+${PYSITELIB}/emoji/unicode_codes.pyo
