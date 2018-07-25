@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2018/07/25 02:37:41 pgoyette Exp $
+$NetBSD: distinfo,v 1.8 2018/07/25 02:40:44 pgoyette Exp $
 
 SHA1 (i2c-tools-84da8192c7c409f37c1906b60ef166c58aafc847.tar.gz) = 0765225f1f7ee63d0ebb3a3881ad819fa9d48d9e
 RMD160 (i2c-tools-84da8192c7c409f37c1906b60ef166c58aafc847.tar.gz) = 0e1f9c86e5005bf8534789e4dea532bc8dda522a
 SHA512 (i2c-tools-84da8192c7c409f37c1906b60ef166c58aafc847.tar.gz) = 4cd57f6cc4424888fe4e7bede28b7a5e15e7f658b57fa4df528cc3636cd5124036a69492de9636d81478e58b660275df2dee239999bd5ea0bec13313b240b352
 Size (i2c-tools-84da8192c7c409f37c1906b60ef166c58aafc847.tar.gz) = 95860 bytes
-SHA1 (patch-decode-dimms) = 0d4fe79075394a346c2b7d90ec8b20675ef356d9
+SHA1 (patch-decode-dimms) = 1f2ff213708d127b1afc27a6df2d91b856d543fc
 SHA1 (patch-decode-dimms.1) = c1c1444a73fa848eda0223e2c176819d4ded6641
