@@ -1,0 +1,41 @@
+$NetBSD: patch-common_crypto-compat,v 1.1 2018/07/25 01:16:04 manu Exp $
+
+Build with OpenSSL < 1.1.0 that was patched to include EVP_CIPHER_CTX_iv
+
+--- common/crypto-compat.h.orig	2018-07-25 01:04:30.167508411 +0000
++++ common/crypto-compat.h	2018-07-25 01:05:02.861593517 +0000
+@@ -39,10 +39,12 @@
+ void DH_get0_key(const DH *dh, const BIGNUM **pub_key, const BIGNUM **priv_key);
+ int DH_set0_key(DH *dh, BIGNUM *pub_key, BIGNUM *priv_key);
+ int DH_set_length(DH *dh, long length);
+ 
++#ifndef EVP_CIPHER_CTX_iv
+ const unsigned char *EVP_CIPHER_CTX_iv(const EVP_CIPHER_CTX *ctx);
+ unsigned char *EVP_CIPHER_CTX_iv_noconst(EVP_CIPHER_CTX *ctx);
++#endif /* EVP_CIPHER_CTX_iv */
+ EVP_MD_CTX *EVP_MD_CTX_new(void);
+ void EVP_MD_CTX_free(EVP_MD_CTX *ctx);
+ EVP_ENCODE_CTX *EVP_ENCODE_CTX_new(void);
+ void EVP_ENCODE_CTX_free(EVP_ENCODE_CTX *ctx);
+--- common/crypto-compat.c.orig	2018-07-25 01:04:22.770573257 +0000
++++ common/crypto-compat.c	2018-07-25 01:04:51.178733049 +0000
+@@ -306,8 +306,9 @@
+     dh->length = length;
+     return 1;
+ }
+ 
++#ifndef EVP_CIPHER_CTX_iv
+ const unsigned char *EVP_CIPHER_CTX_iv(const EVP_CIPHER_CTX *ctx)
+ {
+     return ctx->iv;
+ }
+@@ -315,8 +316,9 @@
+ unsigned char *EVP_CIPHER_CTX_iv_noconst(EVP_CIPHER_CTX *ctx)
+ {
+     return ctx->iv;
+ }
++#endif /* EVP_CIPHER_CTX_iv */
+ 
+ EVP_MD_CTX *EVP_MD_CTX_new(void)
+ {
+     return OPENSSL_zalloc(sizeof(EVP_MD_CTX));
