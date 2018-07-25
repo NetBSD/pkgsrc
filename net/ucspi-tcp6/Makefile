@@ -1,0 +1,44 @@
+# $NetBSD: Makefile,v 1.1 2018/07/25 16:22:55 schmonz Exp $
+
+DISTNAME=		ucspi-tcp6-1.06
+CATEGORIES=		net
+MASTER_SITES=		https://www.fehcom.de/ipnet/ucspi-tcp6/
+EXTRACT_SUFX=		.tgz
+
+MAINTAINER=		schmonz@NetBSD.org
+HOMEPAGE=		https://www.fehcom.de/ipnet/ucspi-tcp6.html
+COMMENT=		Command-line tools for building TCP client-server applications
+LICENSE=		public-domain
+
+CONFLICTS+=		ucspi-tcp-[0-9]*
+
+WRKSRC=			${WRKDIR}/host/${PKGNAME_NOREV}
+DJB_SLASHPACKAGE=	yes
+DJB_RESTRICTED=		no
+DJB_CONFIG_DIR=		${WRKSRC}
+
+INSTALLATION_DIRS=	bin
+
+.include "../../mk/bsd.prefs.mk"
+
+SUBST_CLASSES+=		manz
+SUBST_STAGE.manz=	do-configure
+SUBST_FILES.manz=	package/man
+.if !defined(MANZ)
+SUBST_SED.manz=		-e 's|safe gzip |safe true |g'
+SUBST_SED.manz+=	-e 's|\.gz||g'
+.endif
+
+post-configure:
+	${RUN}cd ${DJB_CONFIG_DIR};	\
+	${ECHO} ${PKGMANDIR} > conf-man
+
+do-install:
+	cd ${WRKSRC};							\
+	for i in command/*; do						\
+	  ${INSTALL_PROGRAM} $${i} ${DESTDIR}${PREFIX}/bin;		\
+	done;								\
+	./package/man
+
+.include "../../mk/djbware.mk"
+.include "../../mk/bsd.pkg.mk"
