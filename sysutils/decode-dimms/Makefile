@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/07/25 04:48:22 pgoyette Exp $
+# $NetBSD: Makefile,v 1.7 2018/07/25 04:53:44 pgoyette Exp $
 
 # no Release yet
 GIT_COMMIT=	84da8192c7c409f37c1906b60ef166c58aafc847
@@ -20,7 +20,7 @@ REPLACE_PERL=	eeprom/decode-dimms
 SUBST_CLASSES+=		rev
 SUBST_STAGE.rev=	pre-patch
 SUBST_FILES.rev=        eeprom/decode-dimms
-SUBST_SED.rev=          -e 's/^$$revision = .*;/$$revision = "20171205";/'
+SUBST_SED.rev=          -e 's/^$$revision = .*;/$$revision = "20171205-${GIT_COMMIT}";/'
 SUBST_SED.rev+=		-e '/^$$revision =~/d'
 
 NO_BUILD=	yes
