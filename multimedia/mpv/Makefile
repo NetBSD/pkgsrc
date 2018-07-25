@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.70 2018/07/06 15:06:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.71 2018/07/25 14:19:16 leot Exp $
 
-DISTNAME=	mpv-0.28.2
-PKGREVISION=	1
+DISTNAME=	mpv-0.29.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mpv-player/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -18,7 +17,7 @@ NOT_PAX_MPROTECT_SAFE+=	bin/mpv
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 # ${WRKSRC}/bootstrap.py mentions needed version
-BUILD_DEPENDS+=	waf>=1.8.12:../../devel/waf
+BUILD_DEPENDS+=	waf>=2.0.9:../../devel/waf
 
 WAF_CONFIGURE_ARGS+=	--bindir=${PREFIX}/bin
 WAF_CONFIGURE_ARGS+=	--enable-dvdnav
