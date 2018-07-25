@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2018/03/23 13:19:13 ryoon Exp $
+$NetBSD: distinfo,v 1.7 2018/07/25 21:29:25 zafer Exp $
 
-SHA1 (apache-tomcat-8.5.29.tar.gz) = fdc2ac85282af82a494e352c35e33dcfe1dbab6b
-RMD160 (apache-tomcat-8.5.29.tar.gz) = bee9cabd08028014b684a62262d20831b2caa6de
-SHA512 (apache-tomcat-8.5.29.tar.gz) = a7c771524052325a801b96d9553b18406019d1cea5b874e6c0fcbad46856922d97d634af29c53ec540675d43925e6e5b89685fbba4a7051514e7198f25a99297
-Size (apache-tomcat-8.5.29.tar.gz) = 9532698 bytes
+SHA1 (apache-tomcat-8.5.32.tar.gz) = 04bdc935981580ec0b3b08302f5b22f8df508944
+RMD160 (apache-tomcat-8.5.32.tar.gz) = ec1c9d1545f76a2e0c07a5c200408a483de850a8
+SHA512 (apache-tomcat-8.5.32.tar.gz) = fc010f4643cb9996cad3812594190564d0a30be717f659110211414faf8063c61fad1f18134154084ad3ddfbbbdb352fa6686a28fbb6402d3207d4e0a88fa9ce
+Size (apache-tomcat-8.5.32.tar.gz) = 9584807 bytes
