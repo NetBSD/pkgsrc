@@ -1,10 +1,9 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2018/06/24 16:02:50 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2018/07/26 10:19:56 adam Exp $
 
 Do not look for X11 on macOS.
-Remove -O3.
 Do not bother with uninstaller.
 
---- CMakeLists.txt.orig	2018-06-10 00:02:23.000000000 +0000
+--- CMakeLists.txt.orig	2018-07-22 11:40:33.000000000 +0000
 +++ CMakeLists.txt
 @@ -68,7 +68,9 @@ find_package(Boost 1.50 REQUIRED COMPONE
  # no, gettext executables are not required when NLS is deactivated
@@ -16,20 +15,7 @@ Do not bother with uninstaller.
  
  # needed to get some SDL2 defines in... (as of rev31694 -D_GNU_SOURCE=1 is required!)
  set(SDL2_CONFIG "sdl2-config" CACHE STRING "Path to sdl2-config script")
-@@ -258,9 +260,9 @@ RemoveFlag(CMAKE_SHARED_LIBRARY_LINK_C_F
- # #
- 
- # reset the base Release build option
--MESSAGE("Replacing default flags used for Release build with -O3 ${EXTRA_FLAGS_CONFIG} ${EXTRA_FLAGS_RELEASE}")
--set(CMAKE_CXX_FLAGS_RELEASE "-O3 ${EXTRA_FLAGS_CONFIG} ${EXTRA_FLAGS_RELEASE}" CACHE STRING "Release build flags" FORCE)
--set(CMAKE_C_FLAGS_RELEASE "-O3 ${EXTRA_FLAGS_CONFIG} ${EXTRA_FLAGS_RELEASE}" CACHE STRING "Release build flags" FORCE)
-+MESSAGE("Replacing default flags used for Release build with ${EXTRA_FLAGS_CONFIG} ${EXTRA_FLAGS_RELEASE}")
-+set(CMAKE_CXX_FLAGS_RELEASE "${EXTRA_FLAGS_CONFIG} ${EXTRA_FLAGS_RELEASE}" CACHE STRING "Release build flags" FORCE)
-+set(CMAKE_C_FLAGS_RELEASE "${EXTRA_FLAGS_CONFIG} ${EXTRA_FLAGS_RELEASE}" CACHE STRING "Release build flags" FORCE)
- set(CMAKE_EXE_LINKER_FLAGS_RELEASE "" CACHE STRING "" FORCE)
- # set the arch to use for Release build if provided
- if(ARCH)
-@@ -557,11 +559,6 @@ endif(ENABLE_GAME)
+@@ -601,11 +576,6 @@ endif(ENABLE_GAME)
  # uninstall
  #
  
