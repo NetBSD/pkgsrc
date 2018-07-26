@@ -1,17 +1,24 @@
-@comment $NetBSD: PLIST,v 1.7 2017/02/27 14:38:47 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.1 2018/07/26 09:34:27 schmonz Exp $
 bin/mr
 bin/webcheckout
 man/man1/mr.1
 man/man1/webcheckout.1
+share/doc/myrepos/examples/mrconfig
+share/doc/myrepos/examples/mrconfig.complex
 share/examples/mr/mrconfig
 share/examples/mr/mrconfig.complex
+share/mr.sh/cache-mr-status.sh
 share/mr/dgit
 share/mr/git-annex
+share/mr/git-cvs
 share/mr/git-fake-bare
 share/mr/git-subtree
 share/mr/git-svn
+share/mr/graph
+share/mr/remote
 share/mr/repo
 share/mr/stow
 share/mr/unison
+share/mr/upgrade
 share/mr/vcsh
 share/mr/vis
