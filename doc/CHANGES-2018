@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3353 2018/07/26 16:35:20 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.3354 2018/07/26 20:25:24 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4782,3 +4782,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added textproc/asciidir version 0.6 [manu 2018-07-26]
 	Added textproc/py-pybtex-docutils version 0.2.1 [jaapb 2018-07-26]
 	Added textproc/py-antlr4 version 4.7.1 [jaapb 2018-07-26]
+	Added chat/tootstream version 0.3.4 [nia 2018-07-26]
