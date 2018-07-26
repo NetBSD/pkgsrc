@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.23 2017/03/05 12:25:28 schmonz Exp $
+# $NetBSD: Makefile,v 1.1 2018/07/26 09:34:27 schmonz Exp $
 #
 
-DISTNAME=		myrepos_1.20170129
+DISTNAME=		myrepos_1.20180726
 PKGNAME=		${DISTNAME:S/_/-/}
 CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_LOCAL}
+MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/m/myrepos/}
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://myrepos.branchable.com/
