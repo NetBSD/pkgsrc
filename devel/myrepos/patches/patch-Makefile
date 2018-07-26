@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2018/07/26 09:34:27 schmonz Exp $
+
+Use pkgsrc paths.
+
+--- Makefile.orig	2018-07-24 09:43:33.000000000 +0000
++++ Makefile
+@@ -1,6 +1,6 @@
+-PREFIX:=/usr
++# PREFIX:=/usr
+ BINDIR:=${PREFIX}/bin
+-MANDIR:=${PREFIX}/share/man
++MANDIR:=${PREFIX}/${PKGMANDIR}
+ LIBDIR:=${PREFIX}/share/mr
+ LIBSHDIR:=${PREFIX}/share/mr.sh
+ EGDIR:=${PREFIX}/share/doc/myrepos/examples
