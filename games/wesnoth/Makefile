@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.134 2018/06/24 16:02:50 adam Exp $
+# $NetBSD: Makefile,v 1.135 2018/07/26 10:19:56 adam Exp $
 
-DISTNAME=	wesnoth-1.14.3
+DISTNAME=	wesnoth-1.14.4
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wesnoth/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,6 +18,8 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		bash msgfmt perl:run pkg-config
 # detects history.h, but does not link against libhistory
 CMAKE_ARGS+=		-DENABLE_HISTORY=OFF
+# if OPT is set, -O3 will not be added
+CMAKE_ARGS+=		-DOPT="${DBG}"
 
 UNLIMIT_RESOURCES+=	datasize
 UNLIMIT_RESOURCES+=	stacksize
@@ -34,6 +36,7 @@ REPLACE_PYTHON+=	data/tools/extractbindings
 REPLACE_PYTHON+=	data/tools/imgcheck
 REPLACE_PYTHON+=	data/tools/journeylifter
 REPLACE_PYTHON+=	data/tools/rmtrans/rmtrans.py
+REPLACE_PYTHON+=	data/tools/steam-changelog
 REPLACE_PYTHON+=	data/tools/trackplacer
 REPLACE_PYTHON+=	data/tools/unit_tree/helpers.py
 REPLACE_PYTHON+=	data/tools/unit_tree/TeamColorizer
