@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.995 2018/07/26 10:39:16 jaapb Exp $
+# $NetBSD: Makefile,v 1.996 2018/07/26 13:56:08 jaapb Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -800,6 +800,7 @@ SUBDIR+=	py-phonenumbers
 SUBDIR+=	py-poyo
 SUBDIR+=	py-prettytable
 SUBDIR+=	py-pyaml
+SUBDIR+=	py-pybtex
 SUBDIR+=	py-pygments
 SUBDIR+=	py-pyphen
 SUBDIR+=	py-pyquery
