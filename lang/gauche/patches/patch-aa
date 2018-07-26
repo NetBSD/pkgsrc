@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.15 2016/10/13 00:30:13 enami Exp $
+$NetBSD: patch-aa,v 1.16 2018/07/26 16:55:29 jperkin Exp $
 
 * Use correct CFLAGS on SunOS.
 * XXX something about arm
 * XXX something about rint()
 
---- configure.orig	2016-10-08 10:31:17.000000000 +0000
+--- configure.orig	2018-07-03 11:43:06.000000000 +0000
 +++ configure
-@@ -3374,8 +3376,8 @@ GAUCHE_CONFIGURE_ARGS=`echo "$ac_configu
+@@ -4650,8 +4650,8 @@ GAUCHE_CONFIGURE_ARGS=`echo "$ac_configu
  
  
  case $host in
@@ -17,7 +17,7 @@ $NetBSD: patch-aa,v 1.15 2016/10/13 00:30:13 enami Exp $
  esac
  
  ac_ext=c
-@@ -5510,6 +5512,9 @@ $as_echo "#define SCM_TARGET_X86_64 1" >
+@@ -6253,6 +6253,9 @@ $as_echo "#define SCM_TARGET_X86_64 1" >
    alpha*) :
  
      CFLAGS="$CFLAGS -mieee" ;; #(
@@ -27,7 +27,7 @@ $NetBSD: patch-aa,v 1.15 2016/10/13 00:30:13 enami Exp $
    arm*) :
  
  
-@@ -6719,7 +6724,7 @@ _ACEOF
+@@ -7462,7 +7465,7 @@ _ACEOF
  
  fi
  
@@ -36,3 +36,21 @@ $NetBSD: patch-aa,v 1.15 2016/10/13 00:30:13 enami Exp $
  do :
    as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
  ac_fn_c_check_func "$LINENO" "$ac_func" "$as_ac_var"
+@@ -8278,7 +8281,7 @@ if test "${with_iconv+set}" = set; then
+      ;; #(
+   *) :
+     ICONV_CPPFLAGS="-I$with_iconv/include"
+-	    ICONV_LDFLAGS="-L$with_iconv/lib" ;;
++	    ICONV_LDFLAGS="${COMPILER_RPATH_FLAG}$with_iconv/lib -L$with_iconv/lib" ;;
+ esac
+ 
+ fi
+@@ -10157,7 +10160,7 @@ if test "${with_zlib+set}" = set; then :
+      ;; #(
+   *) :
+     ZLIB_CPPFLAGS="-I$with_zlib/include"
+-	    ZLIB_LDFLAGS="-L$with_zlib/lib" ;;
++	    ZLIB_LDFLAGS="${COMPILER_RPATH_FLAG}$with_zlib/lib -L$with_zlib/lib" ;;
+ esac
+ 
+ fi
