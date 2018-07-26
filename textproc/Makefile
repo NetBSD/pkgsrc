@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.997 2018/07/26 14:27:23 manu Exp $
+# $NetBSD: Makefile,v 1.998 2018/07/26 16:35:51 jaapb Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -727,6 +727,7 @@ SUBDIR+=	py-X
 SUBDIR+=	py-X2
 SUBDIR+=	py-acora
 SUBDIR+=	py-alabaster
+SUBDIR+=	py-antlr4
 SUBDIR+=	py-anyjson
 SUBDIR+=	py-babelfish
 SUBDIR+=	py-biplist
@@ -802,6 +803,7 @@ SUBDIR+=	py-poyo
 SUBDIR+=	py-prettytable
 SUBDIR+=	py-pyaml
 SUBDIR+=	py-pybtex
+SUBDIR+=	py-pybtex-docutils
 SUBDIR+=	py-pygments
 SUBDIR+=	py-pyphen
 SUBDIR+=	py-pyquery
