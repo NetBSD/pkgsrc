@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2018/06/24 16:02:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.46 2018/07/26 10:19:56 adam Exp $
 bin/wesnoth
 bin/wesnothd
 man/cs/man6/wesnothd.6
@@ -2178,6 +2178,7 @@ share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/attacks/leader.png
 share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/attacks/sand-storm.png
 share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/attacks/twister.png
 share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/campaign_image.png
+share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/items/burial2.png
 share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/items/kaleh-dead.png
 share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/items/magiccircle-n.png
 share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/items/magiccircle-ne.png
@@ -2186,7 +2187,9 @@ share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/items/magiccircle-s.p
 share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/items/magiccircle-se.png
 share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/items/magiccircle-sw.png
 share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/items/orcish-flag2.png
+share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/items/orcish-flag3.png
 share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/items/parchment.png
+share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/items/rock-cairn3.png
 share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/items/rune-lightblue-small.png
 share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/items/rune-violet2.png
 share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/items/rune2-burning.png
@@ -2239,6 +2242,9 @@ share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/projectiles/sand-stor
 share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/projectiles/sand-storm-6.png
 share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/projectiles/sand-storm-7.png
 share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/projectiles/sand-storm-8.png
+share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/terrain/citadel_zocthanol.png
+share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/terrain/citadel_zocthanol_clouds.png
+share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/terrain/citadel_zocthanol_sub.png
 share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/terrain/dark-keep-throne.png
 share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/terrain/darkcastle.png
 share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/terrain/great-tree-smashed.png
@@ -11331,7 +11337,11 @@ share/wesnoth/data/core/images/units/human-outlaws/trapper-die-7.png
 share/wesnoth/data/core/images/units/human-outlaws/trapper-die-8.png
 share/wesnoth/data/core/images/units/human-outlaws/trapper.png
 share/wesnoth/data/core/images/units/human-peasants/peasant-attack.png
+share/wesnoth/data/core/images/units/human-peasants/peasant-attack1.png
 share/wesnoth/data/core/images/units/human-peasants/peasant-attack2.png
+share/wesnoth/data/core/images/units/human-peasants/peasant-attack3.png
+share/wesnoth/data/core/images/units/human-peasants/peasant-attack4.png
+share/wesnoth/data/core/images/units/human-peasants/peasant-attack5.png
 share/wesnoth/data/core/images/units/human-peasants/peasant-defend.png
 share/wesnoth/data/core/images/units/human-peasants/peasant-idle-1.png
 share/wesnoth/data/core/images/units/human-peasants/peasant-idle-2.png
@@ -11341,6 +11351,8 @@ share/wesnoth/data/core/images/units/human-peasants/peasant-idle-5.png
 share/wesnoth/data/core/images/units/human-peasants/peasant-idle-6.png
 share/wesnoth/data/core/images/units/human-peasants/peasant-idle-7.png
 share/wesnoth/data/core/images/units/human-peasants/peasant-ranged.png
+share/wesnoth/data/core/images/units/human-peasants/peasant-ranged1.png
+share/wesnoth/data/core/images/units/human-peasants/peasant-ranged2.png
 share/wesnoth/data/core/images/units/human-peasants/peasant.png
 share/wesnoth/data/core/images/units/human-peasants/ruffian-attack-1.png
 share/wesnoth/data/core/images/units/human-peasants/ruffian-attack-2.png
@@ -14446,6 +14458,7 @@ share/wesnoth/data/tools/journeylifter
 share/wesnoth/data/tools/rmtrans/README.md
 share/wesnoth/data/tools/rmtrans/rmtrans.py
 share/wesnoth/data/tools/scoutDefault.py
+share/wesnoth/data/tools/steam-changelog
 share/wesnoth/data/tools/terrain2wiki.py
 share/wesnoth/data/tools/trackplacer
 share/wesnoth/data/tools/unit_tree/TeamColorizer
