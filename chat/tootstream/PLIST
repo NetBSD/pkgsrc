@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2018/07/26 20:24:48 nia Exp $
+bin/tootstream
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/tootstream/__init__.py
+${PYSITELIB}/tootstream/__init__.pyc
+${PYSITELIB}/tootstream/__init__.pyo
+${PYSITELIB}/tootstream/toot.py
+${PYSITELIB}/tootstream/toot.pyc
+${PYSITELIB}/tootstream/toot.pyo
+${PYSITELIB}/tootstream/toot_parser.py
+${PYSITELIB}/tootstream/toot_parser.pyc
+${PYSITELIB}/tootstream/toot_parser.pyo
