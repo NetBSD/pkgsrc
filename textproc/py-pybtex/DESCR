@@ -1,0 +1,12 @@
+Pybtex aims to be 100% compatible with BibTeX. It accepts the same command line
+options, fully supports BibTeX's .bst styles and produces byte-identical output.
+
+Additionally,
+
+* Pybtex is Unicode-aware.
+* Pybtex supports bibliography formats other than BibTeX.
+* It is possible to write formatting styles in Python.
+* As a bonus, Pythonic styles can produce HTML, Markdown and other markup
+  besides the usual LaTeX.
+
+Pybtex also includes a Python API for managing bibliographies from Python.
