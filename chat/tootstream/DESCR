@@ -1,0 +1,7 @@
+Tootstream is a command line interface for interacting with instances
+on the distributed social network known as 'the Fediverse' using the
+Mastodon.social API.
+
+It is inspired by the Twitter client "Rainbowstream".
+
+OAuth and two-factor authentication are supported.
