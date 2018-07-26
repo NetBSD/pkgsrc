@@ -1,4 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2016/10/09 03:11:25 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/07/26 08:37:40 wiz Exp $
+bin/cabrip
+bin/chmextract
+bin/msexpand
+bin/oabextract
 include/mspack.h
 lib/libmspack.la
 lib/pkgconfig/libmspack.pc
