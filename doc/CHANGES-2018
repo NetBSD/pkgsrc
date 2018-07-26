@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3350 2018/07/26 13:55:40 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.3351 2018/07/26 14:27:23 manu Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4779,3 +4779,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added print/py-latexcodec version 1.0.5 [jaapb 2018-07-26]
 	Updated www/php-nextcloud to 13.0.5 [ryoon 2018-07-26]
 	Added textproc/py-pybtex version 0.21 [jaapb 2018-07-26]
+	Added textproc/asciidir version 0.6 [manu 2018-07-26]
