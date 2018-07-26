@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2018/07/26 12:22:10 jaapb Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/latexcodec/__init__.py
+${PYSITELIB}/latexcodec/__init__.pyc
+${PYSITELIB}/latexcodec/__init__.pyo
+${PYSITELIB}/latexcodec/codec.py
+${PYSITELIB}/latexcodec/codec.pyc
+${PYSITELIB}/latexcodec/codec.pyo
+${PYSITELIB}/latexcodec/lexer.py
+${PYSITELIB}/latexcodec/lexer.pyc
+${PYSITELIB}/latexcodec/lexer.pyo
