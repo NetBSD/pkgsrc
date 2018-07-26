@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3345 2018/07/26 10:38:18 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.3346 2018/07/26 10:48:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4773,3 +4773,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated games/wesnoth to 1.14.4 [adam 2018-07-26]
 	Updated lang/racket-textual to 6.12 [jaapb 2018-07-26]
 	Added textproc/py-sphinxcontrib-bibtex version 0.4.0 [jaapb 2018-07-26]
+	Updated www/py-WebOb to 1.8.2 [adam 2018-07-26]
+	Updated www/py-WebTest to 2.0.30 [adam 2018-07-26]
