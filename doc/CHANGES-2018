@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3346 2018/07/26 10:48:32 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3347 2018/07/26 11:46:28 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4775,3 +4775,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added textproc/py-sphinxcontrib-bibtex version 0.4.0 [jaapb 2018-07-26]
 	Updated www/py-WebOb to 1.8.2 [adam 2018-07-26]
 	Updated www/py-WebTest to 2.0.30 [adam 2018-07-26]
+	Added devel/py-oset version 0.1.3 [jaapb 2018-07-26]
