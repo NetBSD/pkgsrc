@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3341 2018/07/26 08:37:48 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3342 2018/07/26 09:37:19 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4768,3 +4768,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/apache-tomcat85 to 8.5.32 [zafer 2018-07-25]
 	Updated archivers/cabextract to 1.7 [wiz 2018-07-26]
 	Updated archivers/libmspack to 0.7alpha [wiz 2018-07-26]
+	Moved devel/mr to devel/myrepos [schmonz 2018-07-26]
+	Updated devel/myrepos to 1.20180726 [schmonz 2018-07-26]
