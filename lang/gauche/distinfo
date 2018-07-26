@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.38 2018/07/24 14:52:18 ryoon Exp $
+$NetBSD: distinfo,v 1.39 2018/07/26 16:55:29 jperkin Exp $
 
 SHA1 (Gauche-0.9.6.tgz) = 20f2a0a4b37c40ce0175e627d5767b32d8f4eb5d
 RMD160 (Gauche-0.9.6.tgz) = 36d77c87881978c408daf7958bc41048aa4b2edd
 SHA512 (Gauche-0.9.6.tgz) = 1d8a7f56fd9ca183d6dce1dedadfaec7c7150c29540e5158f2a61977f7406d7d7a8ab753ef1912865a7d7e9a9e2fa845d86b2eb4c5e07a176f1c60276bc1908f
 Size (Gauche-0.9.6.tgz) = 6927530 bytes
-SHA1 (patch-aa) = 0cc7f563f1750bff4c9630bc4a2d8ce95d3b323d
+SHA1 (patch-aa) = 41f2160ffdb8ad66e77d9d30950e820dd07b18a8
 SHA1 (patch-af) = 0962445f5eab8d788283455f60386aa1cfd70230
 SHA1 (patch-ag) = 524048e151225dc73d00c31623be25e84206920a
+SHA1 (patch-ext_tls_axTLS_ssl_os__port.h) = 347babc3449082d01e6905a3f6a6016ba3b55652
+SHA1 (patch-ext_zlib_Makefile.in) = 29fab7f300a880d1509fa144ec15612289445a96
