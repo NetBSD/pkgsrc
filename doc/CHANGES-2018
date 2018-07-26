@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3344 2018/07/26 10:35:06 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.3345 2018/07/26 10:38:18 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4772,3 +4772,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/myrepos to 1.20180726 [schmonz 2018-07-26]
 	Updated games/wesnoth to 1.14.4 [adam 2018-07-26]
 	Updated lang/racket-textual to 6.12 [jaapb 2018-07-26]
+	Added textproc/py-sphinxcontrib-bibtex version 0.4.0 [jaapb 2018-07-26]
