@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/07/26 10:05:01 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2018/07/26 13:16:57 schmonz Exp $
 
 DISTNAME=		ucspi-tcp6-1.06
 CATEGORIES=		net
@@ -21,10 +21,10 @@ INSTALLATION_DIRS=	bin
 
 .include "../../mk/bsd.prefs.mk"
 
+.if !defined(MANZ)
 SUBST_CLASSES+=		manz
 SUBST_STAGE.manz=	do-configure
 SUBST_FILES.manz=	package/man
-.if !defined(MANZ)
 SUBST_SED.manz=		-e 's|safe gzip |safe true |g'
 SUBST_SED.manz+=	-e 's|\.gz||g'
 .endif
