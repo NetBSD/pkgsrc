@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/07/20 03:34:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2018/07/26 12:45:25 jperkin Exp $
 
 DISTNAME=	libqxp-0.0.1
 PKGREVISION=	3
@@ -25,5 +25,6 @@ PKGCONFIG_OVERRIDE+=	libqxp-0.0.pc
 
 .include "../../converters/librevenge/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
