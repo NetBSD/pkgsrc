@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.3 2018/07/26 11:54:34 jaapb Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
+${PYSITELIB}/sphinxcontrib/bibtex/__init__.py
+${PYSITELIB}/sphinxcontrib/bibtex/__init__.pyc
+${PYSITELIB}/sphinxcontrib/bibtex/__init__.pyo
+${PYSITELIB}/sphinxcontrib/bibtex/cache.py
+${PYSITELIB}/sphinxcontrib/bibtex/cache.pyc
+${PYSITELIB}/sphinxcontrib/bibtex/cache.pyo
+${PYSITELIB}/sphinxcontrib/bibtex/directives.py
+${PYSITELIB}/sphinxcontrib/bibtex/directives.pyc
+${PYSITELIB}/sphinxcontrib/bibtex/directives.pyo
+${PYSITELIB}/sphinxcontrib/bibtex/nodes.py
+${PYSITELIB}/sphinxcontrib/bibtex/nodes.pyc
+${PYSITELIB}/sphinxcontrib/bibtex/nodes.pyo
+${PYSITELIB}/sphinxcontrib/bibtex/roles.py
+${PYSITELIB}/sphinxcontrib/bibtex/roles.pyc
+${PYSITELIB}/sphinxcontrib/bibtex/roles.pyo
+${PYSITELIB}/sphinxcontrib/bibtex/transforms.py
+${PYSITELIB}/sphinxcontrib/bibtex/transforms.pyc
+${PYSITELIB}/sphinxcontrib/bibtex/transforms.pyo
