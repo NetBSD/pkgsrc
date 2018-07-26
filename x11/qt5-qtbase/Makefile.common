@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2018/06/19 07:21:23 adam Exp $
+# $NetBSD: Makefile.common,v 1.27 2018/07/26 02:16:05 minskim Exp $
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
 # used by x11/qt5-psql/Makefile
@@ -61,4 +61,16 @@ SCRIPTS_ENV+=		HOME=${WRKDIR}
 	&& empty(PKGPATH:Mx11/qt5-psql)
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${QTPREFIX}/bin/qmake -o Makefile
+.endif
+
+.if ${OPSYS} == "Darwin"
+.PHONY: fix-darwin-install-name
+post-install: fix-darwin-install-name
+fix-darwin-install-name:
+	${FIND} ${DESTDIR}${PREFIX} -name "*.dylib" |                   \
+		while read lib; do                                      \
+		libname=`basename $${lib}`;                             \
+		libdir=`dirname $${lib} | sed -e 's,${DESTDIR},,'`;     \
+		install_name_tool -id $${libdir}/$${libname} $${lib};   \
+	done
 .endif
