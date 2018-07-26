@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3340 2018/07/26 08:35:55 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3341 2018/07/26 08:37:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4767,3 +4767,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/apache-tomcat8 to 8.0.53 [zafer 2018-07-25]
 	Updated www/apache-tomcat85 to 8.5.32 [zafer 2018-07-25]
 	Updated archivers/cabextract to 1.7 [wiz 2018-07-26]
+	Updated archivers/libmspack to 0.7alpha [wiz 2018-07-26]
