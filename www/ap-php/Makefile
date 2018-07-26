@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2018/07/20 13:33:02 taca Exp $
+# $NetBSD: Makefile,v 1.42 2018/07/26 12:39:19 manu Exp $
 
 PKGNAME=		${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-${PHP_VERSION}
 COMMENT=		Apache (${PKG_APACHE}) module for ${PKG_PHP}
@@ -6,6 +6,8 @@ COMMENT=		Apache (${PKG_APACHE}) module for ${PKG_PHP}
 CONFLICTS=		ap-php-[0-9]*
 
 USE_TOOLS+=		lex pkg-config
+
+GCC_REQD+=		6.2
 
 APACHE_MODULE=		YES
 
