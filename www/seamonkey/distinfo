@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.152 2018/06/26 23:29:24 maya Exp $
+$NetBSD: distinfo,v 1.153 2018/07/26 07:34:47 wiz Exp $
 
 SHA1 (seamonkey-2.49.3.source.tar.xz) = 9a6d681f96d87c12081c75cd7c018b93c68ea9ae
 RMD160 (seamonkey-2.49.3.source.tar.xz) = 75e4058b46d001253b34ba7039af30ce52092854
 SHA512 (seamonkey-2.49.3.source.tar.xz) = f38add67c7528809adda55d2ee165d953c34080b6b75aaebed6f904e82c6f6a1ec243d53b6f4f4b875123fd2c7831758909e1baccdf3d9e58ed4747625d8f59f
 Size (seamonkey-2.49.3.source.tar.xz) = 231547028 bytes
+SHA1 (patch-CVE-2018-5147) = 1c44a5e2f0a81b58ebc8343028019e4681ee246c
 SHA1 (patch-ao) = e466058ed1899a64a9ab5b57290ff2baad1ea03c
 SHA1 (patch-ldap_c-sdk_include_portable.h) = ce0b643fa031b74bf7d74eedc4f3729807aef799
 SHA1 (patch-mail_app_Makefile.in) = da6ac87ffdcff733f11218cb11f8ef316bb1bc18
