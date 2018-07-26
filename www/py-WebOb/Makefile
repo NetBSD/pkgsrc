@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2018/05/16 07:57:06 adam Exp $
+# $NetBSD: Makefile,v 1.6 2018/07/26 10:38:12 adam Exp $
 
-DISTNAME=	WebOb-1.8.1
+DISTNAME=	WebOb-1.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=W/WebOb/}
