@@ -1,0 +1,5 @@
+asccidir recursively remove non-ASCII characters from file name.
+
+By default, western languages accents are turned into plain ASCII
+characters, and evertything else non ASCII is removed, but a
+transliteration map can be provided for more complex translations.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.996 2018/07/26 13:56:08 jaapb Exp $
+# $NetBSD: Makefile,v 1.997 2018/07/26 14:27:23 manu Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -27,6 +27,7 @@ SUBDIR+=	aiksaurus
 SUBDIR+=	ansifilter
 SUBDIR+=	antiword
 SUBDIR+=	artha
+SUBDIR+=	asciidir
 SUBDIR+=	asciidoc
 SUBDIR+=	aspell
 SUBDIR+=	aspell-af
