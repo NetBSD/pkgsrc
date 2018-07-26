@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.77 2018/07/20 03:32:09 ryoon Exp $
+$NetBSD: distinfo,v 1.78 2018/07/26 22:37:48 abs Exp $
 
 SHA1 (icu4c-62_1-src.tgz) = 1884f26568cd773b984580b4fca422a3e2afe35d
 RMD160 (icu4c-62_1-src.tgz) = 12a6a975d211dfc2e5a13220b07b2cf3ec7a6923
@@ -10,7 +10,7 @@ SHA1 (patch-common_putil.cpp) = 6aa70b8698d663d3c798bafd9010a824c9609c20
 SHA1 (patch-common_putilimp.h) = a68faa97c2bffeecaca1586e26f5bbe48e71b262
 SHA1 (patch-common_umutex.h) = 096d3e15ef7b84533456af4570ed70747a4ef70c
 SHA1 (patch-common_unicode_platform.h) = 8b7b8bcf6f5185225a1ca516ac212a495f7b47e8
-SHA1 (patch-common_uposixdefs.h) = a2d7f686d7574a91e04fb771ab26ce5715ade984
+SHA1 (patch-common_uposixdefs.h) = 4739ca7d4662335adcb322cd0943770651d548ce
 SHA1 (patch-config_Makefile.inc.in) = e7cee161315321d2580074054d87714b55319886
 SHA1 (patch-config_icu-config-bottom) = 168b89ee9180d4ae545125866ee91eb004010501
 SHA1 (patch-config_mh-darwin) = 32f0e4c241535e37e4cad9b871ed3d36b4184199
