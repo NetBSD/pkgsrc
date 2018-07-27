@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/07/27 06:49:25 minskim Exp $
+
+SHA1 (stan-math-2.17.1.tar.gz) = d63388b0f80a18b75d9b570311e214132a580b66
+RMD160 (stan-math-2.17.1.tar.gz) = 930b16174d0625b9cf5042f7082847276b9c5d36
+SHA512 (stan-math-2.17.1.tar.gz) = fd6ca38e2c28db7effeaf15bb93381a9b78c85529a751fca25d1271b2dd72a8843f7b02132305f2b36c7f566832c2b3723c565a2400509dc10c5b88733981bfb
+Size (stan-math-2.17.1.tar.gz) = 13828407 bytes
