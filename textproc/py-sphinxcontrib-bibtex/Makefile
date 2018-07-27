@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/07/26 14:21:48 jaapb Exp $
+# $NetBSD: Makefile,v 1.4 2018/07/27 07:28:14 jperkin Exp $
 
 DISTNAME=	sphinxcontrib-bibtex-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=		# none
 
-DEPENDS+=		${PYPGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 DEPENDS+=		${PYPKGPREFIX}-oset-[0-9]*:../../devel/py-oset
 
 .include "../../lang/python/egg.mk"
