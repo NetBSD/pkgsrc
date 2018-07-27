@@ -1,9 +1,10 @@
-# $NetBSD: options.mk,v 1.4 2016/02/25 12:12:47 jperkin Exp $
+# $NetBSD: options.mk,v 1.5 2018/07/27 10:23:12 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.boehm-gc
 PKG_SUPPORTED_OPTIONS=	threads
 
 PKG_SUGGESTED_OPTIONS.Darwin+=	threads
+PKG_SUGGESTED_OPTIONS.SunOS+=	threads
 
 .include "../../mk/bsd.options.mk"
 
