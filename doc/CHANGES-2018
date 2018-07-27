@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3358 2018/07/27 08:47:08 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.3359 2018/07/27 10:23:21 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4787,3 +4787,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-colored to 1.3.93 [nia 2018-07-27]
 	Added math/stan-math version 2.17.1 [minskim 2018-07-27]
 	Updated www/py-autobahn to 18.6.1 [jperkin 2018-07-27]
+	Updated devel/boehm-gc to 7.6.4nb3 [jperkin 2018-07-27]
