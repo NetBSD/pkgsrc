@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.394 2018/07/07 04:15:24 minskim Exp $
+# $NetBSD: Makefile,v 1.395 2018/07/27 06:49:35 minskim Exp $
 
 COMMENT=	Mathematics
 
@@ -335,6 +335,7 @@ SUBDIR+=	scilab
 SUBDIR+=	slatec
 SUBDIR+=	snns
 SUBDIR+=	speedcrunch
+SUBDIR+=	stan-math
 SUBDIR+=	statist
 SUBDIR+=	sundials
 SUBDIR+=	superlu
