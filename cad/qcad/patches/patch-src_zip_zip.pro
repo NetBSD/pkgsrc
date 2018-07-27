@@ -1,11 +1,11 @@
-$NetBSD: patch-src_zip_zip.pro,v 1.1 2016/08/30 10:56:04 plunky Exp $
+$NetBSD: patch-src_zip_zip.pro,v 1.2 2018/07/27 14:12:41 plunky Exp $
 
 fix build for pkgsrc, by allowing qmake to link binaries in situ
 and create an install target
 
---- src/zip/zip.pro.orig	2016-07-01 07:13:14.000000000 +0000
+--- src/zip/zip.pro.orig	2017-12-19 14:26:30.000000000 +0000
 +++ src/zip/zip.pro
-@@ -23,8 +23,8 @@ else {
+@@ -23,7 +23,9 @@ else {
      CONFIG += plugin
  }
  TARGET = $${RLIBNAME}zip
@@ -15,5 +15,4 @@ and create an install target
 +	-L../3rdparty/quazip -lquazip
  OTHER_FILES += zip.dox
  DEFINES += QCADZIP_LIBRARY
--
--#POST_TARGETDEPS += ../../$$ROUTDIR/$${RLIBPRE}zip$${RLIBPOSTDLL}
+ RC_FILE = zip.rc
