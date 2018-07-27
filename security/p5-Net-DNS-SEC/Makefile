@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2018/06/06 11:06:53 wen Exp $
+# $NetBSD: Makefile,v 1.41 2018/07/27 20:37:05 jperkin Exp $
 
 DISTNAME=		Net-DNS-SEC-1.09
 PKGNAME=		p5-${DISTNAME}
@@ -38,4 +38,5 @@ post-install:
 .endfor
 
 .include "../../lang/perl5/module.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
