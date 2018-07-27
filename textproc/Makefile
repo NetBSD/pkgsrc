@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.998 2018/07/26 16:35:51 jaapb Exp $
+# $NetBSD: Makefile,v 1.999 2018/07/27 02:30:08 nia Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -736,6 +736,7 @@ SUBDIR+=	py-cabocha
 SUBDIR+=	py-cjson
 SUBDIR+=	py-cmTemplate
 SUBDIR+=	py-color
+SUBDIR+=	py-colored
 SUBDIR+=	py-colour
 SUBDIR+=	py-creole
 SUBDIR+=	py-cssselect
