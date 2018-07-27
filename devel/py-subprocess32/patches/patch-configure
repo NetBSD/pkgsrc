@@ -1,10 +1,19 @@
-$NetBSD: patch-configure,v 1.1 2018/06/14 14:53:38 jperkin Exp $
+$NetBSD: patch-configure,v 1.2 2018/07/27 07:51:30 jperkin Exp $
 
 dirfd is a function not a declaration.
 
---- configure.orig	2018-05-21 18:46:45.000000000 +0000
+--- configure.orig	2018-06-08 01:06:39.000000000 +0000
 +++ configure
-@@ -3662,10 +3662,10 @@ _ACEOF
+@@ -2182,6 +2182,8 @@ $as_echo "#define _DARWIN_C_SOURCE 1" >>
+ 
+ define_xopen_source=yes
+ 
++ac_sys_system=`uname -s`
++ac_sys_release=`uname -r`
+ # Some systems cannot stand _XOPEN_SOURCE being defined at all; they
+ # disable features if it is defined, without any means to access these
+ # features as extensions. For these systems, we skip the definition of
+@@ -3662,10 +3664,10 @@ _ACEOF
  fi
  done
  
