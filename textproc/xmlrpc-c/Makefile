@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2018/04/29 21:31:24 adam Exp $
+# $NetBSD: Makefile,v 1.46 2018/07/27 21:08:10 jperkin Exp $
 
 DISTNAME=	xmlrpc-c-1.25.26
 # the "super stable" branch
@@ -58,6 +58,7 @@ SUBST_SED.xopen=	-e '/^\#define _XOPEN_SOURCE/d'
 LDFLAGS.OpenBSD+=	${PTHREAD_LINKFLAGS}
 LDFLAGS.MirBSD+=	${PTHREAD_LINKFLAGS}
 
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../www/libwww/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
