@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/07/27 02:30:08 nia Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/27 02:36:04 nia Exp $
 
-DISTNAME=	colored-1.3.5
+DISTNAME=	colored-1.3.93
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/colored/}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=c/colored/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gitlab.com/dslackw/colored
 COMMENT=	Python library for coloring terminal text
-LICENSE=	gnu-gpl-v3
+LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
