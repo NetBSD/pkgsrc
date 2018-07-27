@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2018/07/27 02:30:08 nia Exp $
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/colored/__init__.py
+${PYSITELIB}/colored/__init__.pyc
+${PYSITELIB}/colored/__init__.pyo
+${PYSITELIB}/colored/back.py
+${PYSITELIB}/colored/back.pyc
+${PYSITELIB}/colored/back.pyo
+${PYSITELIB}/colored/colored.py
+${PYSITELIB}/colored/colored.pyc
+${PYSITELIB}/colored/colored.pyo
+${PYSITELIB}/colored/colors.py
+${PYSITELIB}/colored/colors.pyc
+${PYSITELIB}/colored/colors.pyo
+${PYSITELIB}/colored/fore.py
+${PYSITELIB}/colored/fore.pyc
+${PYSITELIB}/colored/fore.pyo
+${PYSITELIB}/colored/hex.py
+${PYSITELIB}/colored/hex.pyc
+${PYSITELIB}/colored/hex.pyo
+${PYSITELIB}/colored/style.py
+${PYSITELIB}/colored/style.pyc
+${PYSITELIB}/colored/style.pyo
