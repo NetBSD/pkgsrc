@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/07/27 02:30:08 nia Exp $
+$NetBSD: distinfo,v 1.2 2018/07/27 02:36:04 nia Exp $
 
-SHA1 (colored-1.3.5.tar.gz) = 4142ed21f68ef29fd501fcf1c63ebb3eb088bceb
-RMD160 (colored-1.3.5.tar.gz) = dc1c0a58362c3cb711647a588b5d1ef937dfe4cb
-SHA512 (colored-1.3.5.tar.gz) = 3a813fadc5258f8ad9974b4173dbb9875e49bee7e01d9e37037a95a7fd9e4622857a960d1fa4a7016c74621911ad3612c9ec6b43fb5421b91f2ff2a2d90c2553
-Size (colored-1.3.5.tar.gz) = 36971 bytes
+SHA1 (colored-1.3.93.tar.gz) = 144fb821cafb2e36c995b902695b0e7ec1327595
+RMD160 (colored-1.3.93.tar.gz) = 0804e98722d002f6b12ef2112028db361931d353
+SHA512 (colored-1.3.93.tar.gz) = ff4fcecc316a54f6657b5fc349271088243e64f15bc75a9b19fa28d6e84bf77da7e96f913a52f248bcbb483fe105e037ae4ffefc4f890520baf9f19c55581de9
+Size (colored-1.3.93.tar.gz) = 24384 bytes
