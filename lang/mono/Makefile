@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.178 2018/07/20 03:33:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.179 2018/07/27 20:02:40 jperkin Exp $
 
 DISTNAME=	mono-4.0.4.1
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	lang
 MASTER_SITES=	http://download.mono-project.com/sources/mono/
 EXTRACT_SUFX=	.tar.bz2
@@ -24,7 +24,7 @@ EXTRACT_USING=	gtar
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q} --with-icu=yes
 CONFIGURE_ARGS+=	--with-preview=yes --with-libgdiplus=installed
-CONFIGURE_ARGS+=	--disable-dtrace --with-gc=none
+CONFIGURE_ARGS+=	--disable-dtrace
 
 .include "options.mk"
 
@@ -134,7 +134,7 @@ SUBST_MESSAGE.fix-libx11=	Fixing libX11 search path configuration
 SUBST_FILES.fix-libx11=		configure
 SUBST_SED.fix-libx11=		-e 's,@X11BASE@,${X11BASE},g'
 
-PLIST_VARS=	monodoc
+PLIST_VARS=	libgc monodoc
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -145,6 +145,16 @@ SUBST_FILES.fix-domlib=		mcs/class/System/System.Net.NetworkInformation/IPGlobal
 SUBST_SED.fix-domlib=		-e 's,@DOMAINLIB@,libnsl,g'
 .else
 SUBST_SED.fix-domlib=		-e 's,@DOMAINLIB@,libc,g'
+.endif
+
+# The builtin boehm-gc fails on SunOS with newer GCC, just use the pkgsrc
+# version in any case as it is optimised.
+.if ${OPSYS} == "SunOS"
+.include "../../devel/boehm-gc/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-gc=boehm
+.else
+CONFIGURE_ARGS+=	--with-gc=included
+PLIST.libgc=		yes
 .endif
 
 .if ${OPSYS} == "SunOS"
