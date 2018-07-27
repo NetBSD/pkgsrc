@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2018/04/13 12:52:00 jaapb Exp $
+# $NetBSD: Makefile,v 1.37 2018/07/27 08:01:30 jperkin Exp $
 #
 
 .include "Makefile.common"
@@ -17,6 +17,8 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	-use-libev false
 
 OCAML_USE_JBUILDER=	yes
+
+CFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
 
 do-configure:
 	cd ${WRKSRC} && ocaml src/util/configure.ml ${CONFIGURE_ARGS}
