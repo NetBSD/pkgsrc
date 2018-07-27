@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2018/03/17 20:54:06 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2018/07/27 15:50:45 schmonz Exp $
 #
 
 DISTNAME=	discount-2.2.3a
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.tar.bz2

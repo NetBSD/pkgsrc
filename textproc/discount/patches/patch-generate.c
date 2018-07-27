@@ -1,9 +1,18 @@
-$NetBSD: patch-generate.c,v 1.1 2018/03/17 20:54:06 schmonz Exp $
+$NetBSD: patch-generate.c,v 1.2 2018/07/27 15:50:45 schmonz Exp $
 
 Fix self-tests on NetBSD.
 
 --- generate.c.orig	2018-03-02 22:52:05.000000000 +0000
 +++ generate.c
+@@ -747,7 +747,7 @@ linkylinky(int image, MMIOT *f)
+ 	else {
+ 	    int goodlink, implicit_mark = mmiottell(f);
+ 
+-	    if ( isspace(peek(f,1)) )
++	    if ( isspace((unsigned char)peek(f,1)) )
+ 		pull(f);
+ 	    
+ 	    if ( peek(f,1) == '[' ) {
 @@ -1151,7 +1151,7 @@ islike(MMIOT *f, char *s)
      }
  
