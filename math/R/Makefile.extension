@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.extension,v 1.22 2018/04/12 15:40:18 minskim Exp $
+# $NetBSD: Makefile.extension,v 1.23 2018/07/28 14:53:46 brook Exp $
 #
 # This Makefile fragment is included by packages for R library packages.
 #
@@ -15,7 +15,8 @@ R_PKGVER?=	${DISTNAME:C/.*_//}
 DISTNAME?=		${R_PKGNAME}_${R_PKGVER}
 .endif
 PKGNAME?=		R-${R_PKGNAME}-${R_PKGVER:S/-/./}
-MASTER_SITES?=		${MASTER_SITE_R_CRAN:=contrib/}
+MASTER_SITES?=		${MASTER_SITE_R_CRAN:=contrib/} \
+			${MASTER_SITE_R_CRAN:=contrib/Archive/${R_PKGNAME}/}
 DIST_SUBDIR?=		R
 CATEGORIES+=		math
 HOMEPAGE?=		https://CRAN.R-project.org/package=${R_PKGNAME}
