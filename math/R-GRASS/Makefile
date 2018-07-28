@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2014/09/29 15:11:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2018/07/28 14:40:45 brook Exp $
 
 CATEGORIES=	databases math
-MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	mchittur@cs.nmsu.edu
 HOMEPAGE=	${R_HOMEPAGE_BASE}/GRASS/
