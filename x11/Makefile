@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.823 2018/06/12 00:19:17 youri Exp $
+# $NetBSD: Makefile,v 1.824 2018/07/28 15:19:59 nia Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -416,6 +416,7 @@ SUBDIR+=	sessreg
 SUBDIR+=	setxkbmap
 SUBDIR+=	slim
 SUBDIR+=	slock
+SUBDIR+=	slop
 SUBDIR+=	space_dapp
 SUBDIR+=	speyes
 SUBDIR+=	ssystem
