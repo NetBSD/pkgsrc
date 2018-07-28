@@ -18,7 +18,7 @@ type MkLines struct {
 	tools          map[string]bool // Set of tools that are declared to be used.
 	toolRegistry   ToolRegistry    // Tools defined in file scope.
 	SeenBsdPrefsMk bool
-	indentation    Indentation // Indentation depth of preprocessing directives
+	indentation    *Indentation // Indentation depth of preprocessing directives; only available during MkLines.ForEach.
 	Once
 	// XXX: Why both tools and toolRegistry?
 }
@@ -46,7 +46,7 @@ func NewMkLines(lines []Line) *MkLines {
 		tools,
 		NewToolRegistry(),
 		false,
-		Indentation{},
+		nil,
 		Once{}}
 }
 
@@ -92,9 +92,9 @@ func (mklines *MkLines) Check() {
 
 	substcontext := NewSubstContext()
 	var varalign VaralignBlock
-	indentation := &mklines.indentation
-	indentation.Push(0)
-	for _, mkline := range mklines.mklines {
+	lastMkline := mklines.mklines[len(mklines.mklines)-1]
+
+	lineAction := func(mkline MkLine) bool {
 		ck := MkLineChecker{mkline}
 		ck.Check()
 		varalign.Check(mkline)
@@ -115,11 +115,11 @@ func (mklines *MkLines) Check() {
 				mklines.setSeenBsdPrefsMk()
 			}
 			if G.Pkg != nil {
-				G.Pkg.CheckInclude(mkline, indentation)
+				G.Pkg.CheckInclude(mkline, mklines.indentation)
 			}
 
 		case mkline.IsCond():
-			ck.checkCond(mklines.forVars, indentation)
+			ck.checkCond(mklines.forVars, mklines.indentation)
 			substcontext.Conditional(mkline)
 
 		case mkline.IsDependency():
@@ -129,18 +129,42 @@ func (mklines *MkLines) Check() {
 		case mkline.IsShellCommand():
 			mkline.Tokenize(mkline.ShellCommand())
 		}
+
+		return true
 	}
-	lastMkline := mklines.mklines[len(mklines.mklines)-1]
+
+	atEnd := func(mkline MkLine) {
+		ind := mklines.indentation
+		if ind.Len() != 1 && ind.Depth("") != 0 {
+			mkline.Errorf("Directive indentation is not 0, but %d.", ind.Depth(""))
+		}
+	}
+
+	mklines.ForEach(lineAction, atEnd)
+
 	substcontext.Finish(lastMkline)
 	varalign.Finish()
 
 	ChecklinesTrailingEmptyLines(mklines.lines)
 
-	if indentation.Len() != 1 && indentation.Depth("") != 0 {
-		lastMkline.Errorf("Directive indentation is not 0, but %d.", indentation.Depth(""))
+	SaveAutofixChanges(mklines.lines)
+}
+
+// ForEach calls the action for each line, until the action returns false.
+// It keeps track of the indentation and all conditionals.
+func (mklines *MkLines) ForEach(action func(mkline MkLine) bool, atEnd func(mkline MkLine)) {
+	mklines.indentation = NewIndentation()
+
+	for _, mkline := range mklines.mklines {
+		mklines.indentation.TrackBefore(mkline)
+		if !action(mkline) {
+			break
+		}
+		mklines.indentation.TrackAfter(mkline)
 	}
 
-	SaveAutofixChanges(mklines.lines)
+	atEnd(mklines.mklines[len(mklines.mklines)-1])
+	mklines.indentation = nil
 }
 
 func (mklines *MkLines) DetermineDefinedVariables() {
@@ -274,6 +298,41 @@ func (mklines *MkLines) setSeenBsdPrefsMk() {
 			trace.Stepf("Mk.setSeenBsdPrefsMk")
 		}
 	}
+}
+
+func (mklines *MkLines) CheckRedundantVariables() {
+	scope := NewRedundantScope()
+	isRelevant := func(old, new MkLine) bool {
+		if path.Base(old.Filename) != "Makefile" && path.Base(new.Filename) == "Makefile" {
+			return false
+		}
+		if new.Op() == opAssignEval {
+			return false
+		}
+		return true
+	}
+	scope.OnIgnore = func(old, new MkLine) {
+		if isRelevant(old, new) {
+			old.Notef("Definition of %s is redundant because of %s.", new.Varname(), new.ReferenceFrom(old.Line))
+		}
+	}
+	scope.OnOverwrite = func(old, new MkLine) {
+		if isRelevant(old, new) {
+			old.Warnf("Variable %s is overwritten in %s.", new.Varname(), new.ReferenceFrom(old.Line))
+			Explain(
+				"The variable definition in this line does not have an effect since",
+				"it is overwritten elsewhere.  This typically happens because of a",
+				"typo (writing = instead of +=) or because the line that overwrites",
+				"is in another file that is used by several packages.")
+		}
+	}
+
+	mklines.ForEach(
+		func(mkline MkLine) bool {
+			scope.Handle(mkline)
+			return true
+		},
+		func(mkline MkLine) {})
 }
 
 // VaralignBlock checks that all variable assignments from a paragraph
