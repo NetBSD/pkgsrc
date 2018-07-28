@@ -1,0 +1,21 @@
+A "public suffix" is a domain name under which Internet users can
+directly register own names.
+
+Browsers and other web clients can use it to
+
+* avoid privacy-leaking "supercookies" avoid privacy-leaking
+* "super domain" certificates (see post from Jeffry Walton) domain
+* highlighting parts of the domain in a user interface sorting
+* domain lists by site
+
+Libpsl...
+
+* has built-in PSL data for fast access
+* allows to load PSL data from files
+* checks if a given domain is a "public suffix"
+* provides immediate cookie domain verification
+* finds the longest public part of a given domain
+* finds the shortest private part of a given domain works with
+  international domains (UTF-8 and IDNA2008 Punycode)
+* is thread-safe
+* handles IDNA2008 UTS#46
