@@ -802,6 +802,35 @@ func (s *Suite) Test_MkLine_ConditionVars(c *check.C) {
 	c.Check(mkline.ConditionVars(), equals, "OPSYS")
 }
 
+func (s *Suite) Test_MkLine_ValueSplit(c *check.C) {
+	t := s.Init(c)
+
+	checkSplit := func(value string, expected ...string) {
+		mkline := t.NewMkLine("Makefile", 1, "PATH=\t"+value)
+		split := mkline.ValueSplit(value, ":")
+		c.Check(split, deepEquals, expected)
+	}
+
+	checkSplit("#empty",
+		[]string(nil)...)
+
+	checkSplit("/bin",
+		"/bin")
+
+	checkSplit("/bin:/sbin",
+		"/bin",
+		"/sbin")
+
+	checkSplit("${DESTDIR}/bin:/bin/${SUBDIR}",
+		"${DESTDIR}/bin",
+		"/bin/${SUBDIR}")
+
+	checkSplit("/bin:${DESTDIR}${PREFIX}:${DESTDIR:S,/,\\:,:S,:,:,}/sbin",
+		"/bin",
+		"${DESTDIR}${PREFIX}",
+		"${DESTDIR:S,/,\\:,:S,:,:,}/sbin")
+}
+
 func (s *Suite) Test_MatchVarassign(c *check.C) {
 	s.Init(c)
 
