@@ -1,10 +1,10 @@
-$NetBSD: patch-package_man,v 1.1 2018/07/25 16:22:55 schmonz Exp $
+$NetBSD: patch-package_man,v 1.2 2018/07/28 07:48:02 schmonz Exp $
 
 Support DESTDIR.
 
 --- package/man.orig	2016-08-02 15:14:30.000000000 +0000
 +++ package/man
-@@ -6,6 +6,8 @@ safe() { "$@" || barf "cannot $@"; }
+@@ -6,33 +6,35 @@ safe() { "$@" || barf "cannot $@"; }
  safe umask 022
  [ -d man ] || barf "no man directory"
  
@@ -13,7 +13,22 @@ Support DESTDIR.
  mandir=""
  if [ -f conf-man ]
  then
-@@ -23,16 +25,16 @@ do
+   mandir=`head -1 conf-man`
+ fi
+ 
+-if [ ! -d "$mandir" ]
+-then
+-  mandir=`manpath | awk -F: '{print $1}'`
+-fi
+-shout "Setting man-dir: $mandir."
++#if [ ! -d "$mandir" ]
++#then
++#  mandir=`manpath | awk -F: '{print $1}'`
++#fi
++#shout "Setting man-dir: $mandir."
+ 
+ for i in `find man -name "*[1-8]"`
+ do
    all="$all $i"
  done
  
