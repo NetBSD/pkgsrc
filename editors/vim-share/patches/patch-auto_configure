@@ -1,10 +1,10 @@
-$NetBSD: patch-auto_configure,v 1.6 2017/12/08 20:12:43 bsiegert Exp $
+$NetBSD: patch-auto_configure,v 1.7 2018/07/28 08:27:35 morr Exp $
 
 Buildlink takes care of include files.
 
---- src/auto/configure.orig	2017-08-12 20:55:58.000000000 +0000
+--- src/auto/configure.orig	2018-07-27 21:16:51.000000000 +0000
 +++ src/auto/configure
-@@ -9535,7 +9535,7 @@ fi
+@@ -10091,7 +10091,7 @@ fi
  
  
  if test -z "$SKIP_MOTIF"; then

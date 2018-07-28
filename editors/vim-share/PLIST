@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2018/06/04 09:05:00 morr Exp $
+@comment $NetBSD: PLIST,v 1.41 2018/07/28 08:27:35 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -1358,6 +1358,8 @@ share/vim/${VIM_SUBDIR}/tutor/tutor.ca.utf-8
 share/vim/${VIM_SUBDIR}/tutor/tutor.cs
 share/vim/${VIM_SUBDIR}/tutor/tutor.cs.cp1250
 share/vim/${VIM_SUBDIR}/tutor/tutor.cs.utf-8
+share/vim/${VIM_SUBDIR}/tutor/tutor.da
+share/vim/${VIM_SUBDIR}/tutor/tutor.da.utf-8
 share/vim/${VIM_SUBDIR}/tutor/tutor.de
 share/vim/${VIM_SUBDIR}/tutor/tutor.de.utf-8
 share/vim/${VIM_SUBDIR}/tutor/tutor.el
@@ -1382,7 +1384,7 @@ share/vim/${VIM_SUBDIR}/tutor/tutor.ja.sjis
 share/vim/${VIM_SUBDIR}/tutor/tutor.ja.utf-8
 share/vim/${VIM_SUBDIR}/tutor/tutor.ko.euc
 share/vim/${VIM_SUBDIR}/tutor/tutor.ko.utf-8
-share/vim/${VIM_SUBDIR}/tutor/tutor.lv
+share/vim/${VIM_SUBDIR}/tutor/tutor.lv.utf-8
 share/vim/${VIM_SUBDIR}/tutor/tutor.nb
 share/vim/${VIM_SUBDIR}/tutor/tutor.nb.utf-8
 share/vim/${VIM_SUBDIR}/tutor/tutor.nl
