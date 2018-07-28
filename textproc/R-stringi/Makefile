@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2018/07/20 03:34:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2018/07/28 14:40:52 brook Exp $
 
 PKGREVISION=	2
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/stringi/

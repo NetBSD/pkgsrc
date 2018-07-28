@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2018/03/09 20:27:07 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2018/07/28 14:40:46 brook Exp $
 
 CATEGORIES=	math
-MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/RcppEigen/
