@@ -201,6 +201,8 @@ func (p *MkParser) VarUseModifiers(varname, closing string) []string {
 	return modifiers
 }
 
+// MkCond parses a condition like ${OPSYS} == "NetBSD".
+// See devel/bmake/files/cond.c.
 func (p *MkParser) MkCond() *Tree {
 	return p.mkCondOr()
 }
