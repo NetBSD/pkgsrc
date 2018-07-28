@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/07/28 15:23:24 nia Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/28 22:33:15 nia Exp $
 
 DISTNAME=	maim-5.5.2
 CATEGORIES=	x11
@@ -14,6 +14,8 @@ EXTRACT_USING=	bsdtar
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+
+CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 
 .include "../../graphics/glm/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
