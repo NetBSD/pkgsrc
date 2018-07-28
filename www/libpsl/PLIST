@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2018/07/28 12:25:20 bsiegert Exp $
+bin/psl
+include/libpsl.h
+lib/libpsl.la
+lib/pkgconfig/libpsl.pc
+man/man1/psl-make-dafsa.1
+man/man1/psl.1
