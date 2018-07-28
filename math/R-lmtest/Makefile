@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/03/21 15:26:08 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/28 14:40:49 brook Exp $
 
 CATEGORIES=	math
-MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/lmtest/
