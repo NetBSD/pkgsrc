@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3365 2018/07/28 14:01:45 tsutsui Exp $
+$NetBSD: CHANGES-2018,v 1.3366 2018/07/28 14:39:11 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4795,3 +4795,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated editors/vim-lang to 8.1.0216 [morr 2018-07-28]
 	Added www/libpsl version 0.20.2 [bsiegert 2018-07-28]
 	Updated graphics/libsixel to 1.8.2 [tsutsui 2018-07-28]
+	Updated net/mikutter to 3.7.4 [tsutsui 2018-07-28]
