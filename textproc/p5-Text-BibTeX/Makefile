@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2017/09/04 12:37:13 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2018/07/28 12:53:53 minskim Exp $
 
 DISTNAME=	Text-BibTeX-0.85
 PKGNAME=	p5-${DISTNAME}
@@ -24,6 +24,14 @@ ALL_ENV+=	TMPDIR=${WRKDIR}/tmp
 
 pre-configure:
 	${MKDIR} ${WRKDIR}/tmp
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Darwin"
+post-build:
+.for f in bin/biblex bin/bibparse bin/dumpnames usrlib/libbtparse.dylib
+	${CHMOD} u+w ${WRKSRC}/blib/${f}
+.endfor
+.endif
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
