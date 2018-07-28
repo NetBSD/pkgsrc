@@ -208,7 +208,7 @@ func (src *Pkgsrc) loadTools() {
 					}
 				}
 
-			} else if m, _, cond, _ := matchMkCond(text); m {
+			} else if m, _, cond, _, _ := matchMkCond(text); m {
 				switch cond {
 				case "if", "ifdef", "ifndef", "for":
 					condDepth++
