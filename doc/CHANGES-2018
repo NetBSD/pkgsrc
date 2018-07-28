@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3368 2018/07/28 18:29:38 nia Exp $
+$NetBSD: CHANGES-2018,v 1.3369 2018/07/28 18:31:33 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4798,3 +4798,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/mikutter to 3.7.4 [tsutsui 2018-07-28]
 	Added x11/slop version 7.4 [nia 2018-07-28]
 	Added x11/maim version 5.5.2 [nia 2018-07-28]
+	Updated pkgtools/pkglint to 5.5.15 [rillig 2018-07-13]
