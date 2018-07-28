@@ -409,13 +409,48 @@ func (s *Suite) Test_MkLines_Check_indentation(c *check.C) {
 		"NOTE: options.mk:9: This directive should be indented by 2 spaces.",
 		"NOTE: options.mk:10: This directive should be indented by 2 spaces.",
 		"NOTE: options.mk:11: This directive should be indented by 2 spaces.",
-		"ERROR: options.mk:11: \".else\" does not take arguments.",
-		"NOTE: options.mk:11: If you meant \"else if\", use \".elif\".",
+		"ERROR: options.mk:11: \".else\" does not take arguments. If you meant \"else if\", use \".elif\".",
 		"NOTE: options.mk:12: This directive should be indented by 2 spaces.",
 		"NOTE: options.mk:13: This directive should be indented by 0 spaces.",
 		"NOTE: options.mk:14: This directive should be indented by 0 spaces.",
 		"NOTE: options.mk:15: This directive should be indented by 0 spaces.",
 		"ERROR: options.mk:15: Unmatched .endif.")
+}
+
+func (s *Suite) Test_MkLines_Check__endif_comment(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall")
+	mklines := t.NewMkLines("opsys.mk",
+		MkRcsID,
+		"",
+		".for i in 1 2 3 4 5",
+		".  if ${OPSYS} == NetBSD",
+		".    if ${ARCH} == x86_64",
+		".      if ${OS_VERSION:M8.*}",
+		".      endif # ARCH",     // Wrong, should be OS_VERSION.
+		".    endif # OS_VERSION", // Wrong, should be ARCH.
+		".  endif # OPSYS",        // Correct.
+		".endfor # j",             // Wrong, should be i.
+		"",
+		".if ${PKG_OPTIONS:Moption}",
+		".endif # option",
+		"",
+		".if ${PKG_OPTIONS:Moption}",
+		".endif # opti", // This typo gets unnoticed since "opti" is a substring of the condition.
+		"",
+		".if ${OPSYS} == NetBSD",
+		".elif ${OPSYS} == FreeBSD",
+		".endif # NetBSD") // Wrong, should be FreeBSD from the .elif.
+
+	// See MkLineChecker.checkCond
+	mklines.Check()
+
+	t.CheckOutputLines(""+
+		"WARN: opsys.mk:7: Comment \"ARCH\" does not match condition \"${OS_VERSION:M8.*}\".",
+		"WARN: opsys.mk:8: Comment \"OS_VERSION\" does not match condition \"${ARCH} == x86_64\".",
+		"WARN: opsys.mk:10: Comment \"j\" does not match loop \"i in 1 2 3 4 5\".",
+		"WARN: opsys.mk:20: Comment \"NetBSD\" does not match condition \"${OPSYS} == FreeBSD\".")
 }
 
 // Demonstrates how to define your own make(1) targets.
@@ -531,4 +566,36 @@ func (s *Suite) Test_MkLines__unknown_options(c *check.C) {
 
 	t.CheckOutputLines(
 		"WARN: options.mk:4: Unknown option \"unknown\".")
+}
+
+func (s *Suite) Test_MkLines_CheckRedundantVariables(c *check.C) {
+	t := s.Init(c)
+	included := t.NewMkLines("module.mk",
+		"VAR=\tvalue ${OTHER}",
+		"VAR?=\tvalue ${OTHER}",
+		"VAR=\tnew value")
+	makefile := t.NewMkLines("Makefile",
+		"VAR=\tthe package may overwrite variables from other files")
+	allLines := append(append([]Line(nil), included.lines...), makefile.lines...)
+	mklines := NewMkLines(allLines)
+
+	// XXX: The warnings from here are not in the same order as the other warnings.
+	// XXX: There may be some warnings for the same file separated by warnings for other files.
+	mklines.CheckRedundantVariables()
+
+	t.CheckOutputLines(
+		"NOTE: module.mk:1: Definition of VAR is redundant because of line 2.",
+		"WARN: module.mk:1: Variable VAR is overwritten in line 3.")
+}
+
+func (s *Suite) Test_MkLines_CheckRedundantVariables__procedure_call(c *check.C) {
+	t := s.Init(c)
+	mklines := t.NewMkLines("mk/pthread.buildlink3.mk",
+		"CHECK_BUILTIN.pthread:=\tyes",
+		".include \"../../mk/pthread.builtin.mk\"",
+		"CHECK_BUILTIN.pthread:=\tno")
+
+	mklines.CheckRedundantVariables()
+
+	t.CheckOutputEmpty()
 }

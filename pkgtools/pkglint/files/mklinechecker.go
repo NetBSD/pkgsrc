@@ -110,31 +110,43 @@ func (ck MkLineChecker) checkCond(forVars map[string]bool, indentation *Indentat
 
 	directive := mkline.Directive()
 	args := mkline.Args()
+	comment := mkline.CondComment()
 
 	expectedDepth := indentation.Depth(directive)
 	ck.checkDirectiveIndentation(expectedDepth)
 
-	if directive == "if" && matches(args, `^!defined\([\w]+_MK\)$`) {
-		indentation.Push(indentation.Depth(directive))
-	} else if matches(directive, `^(?:if|ifdef|ifndef|for)$`) {
-		indentation.Push(indentation.Depth(directive) + 2)
-	} else if directive == "endfor" || directive == "endif" {
-		if indentation.Len() > 1 {
-			indentation.Pop()
-		} else {
+	if directive == "endfor" || directive == "endif" {
+		if directive == "endif" && comment != "" {
+			if condition := indentation.Condition(); !contains(condition, comment) {
+				mkline.Warnf("Comment %q does not match condition %q.", comment, condition)
+			}
+		}
+
+		if directive == "endfor" && comment != "" {
+			if condition := indentation.Condition(); !contains(condition, comment) {
+				mkline.Warnf("Comment %q does not match loop %q.", comment, condition)
+			}
+		}
+
+		if indentation.Len() <= 1 {
 			mkline.Errorf("Unmatched .%s.", directive)
 		}
 	}
 
-	needsArgument := matches(directive, `^(?:if|ifdef|ifndef|elif|for|undef)$`)
-	if needsArgument != (args != "") {
-		if needsArgument {
-			mkline.Errorf("\".%s\" requires arguments.", directive)
+	needsArgument := false
+	switch directive {
+	case "if", "ifdef", "ifndef", "elif", "for", "undef":
+		needsArgument = true
+	}
+
+	if needsArgument && args == "" {
+		mkline.Errorf("\".%s\" requires arguments.", directive)
+
+	} else if !needsArgument && args != "" {
+		if directive == "else" {
+			mkline.Errorf("\".%s\" does not take arguments. If you meant \"else if\", use \".elif\".", directive)
 		} else {
 			mkline.Errorf("\".%s\" does not take arguments.", directive)
-			if directive == "else" {
-				mkline.Notef("If you meant \"else if\", use \".elif\".")
-			}
 		}
 
 	} else if directive == "if" || directive == "elif" {
@@ -147,6 +159,7 @@ func (ck MkLineChecker) checkCond(forVars map[string]bool, indentation *Indentat
 	} else if directive == "for" {
 		if m, vars, values := match2(args, `^(\S+(?:\s*\S+)*?)\s+in\s+(.*)$`); m {
 			for _, forvar := range splitOnSpace(vars) {
+				indentation.AddVar(forvar)
 				if !G.Infrastructure && hasPrefix(forvar, "_") {
 					mkline.Warnf("Variable names starting with an underscore (%s) are reserved for internal pkgsrc use.", forvar)
 				}
@@ -847,6 +860,10 @@ func (ck MkLineChecker) checkVarassignBsdPrefs() {
 	if G.opts.WarnExtra && mkline.Op() == opAssignDefault && G.Pkg != nil && !G.Pkg.SeenBsdPrefsMk {
 		switch mkline.Varcanon() {
 		case "BUILDLINK_PKGSRCDIR.*", "BUILDLINK_DEPMETHOD.*", "BUILDLINK_ABI_DEPENDS.*":
+			return
+		}
+
+		if G.Mk != nil && !G.Mk.FirstTime("include-bsd.prefs.mk") {
 			return
 		}
 

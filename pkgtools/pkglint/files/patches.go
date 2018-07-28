@@ -143,7 +143,7 @@ func (ck *PatchChecker) checkUnifiedDiff(patchedFile string) {
 				linesToAdd--
 				ck.checklineAdded(text[1:], patchedFileType)
 			case hasPrefix(text, "\\"):
-				// \ No newline at end of file
+				// \ No newline at end of file (or a translation of that message)
 			default:
 				line.Errorf("Invalid line in unified patch hunk")
 				return
@@ -168,9 +168,10 @@ func (ck *PatchChecker) checkUnifiedDiff(patchedFile string) {
 		if !ck.isEmptyLine(line.Text) && !matches(line.Text, rePatchUniFileDel) {
 			line.Warnf("Empty line or end of file expected.")
 			Explain(
-				"This empty line makes the end of the patch clearly visible.",
-				"Otherwise the reader would have to count lines to see where",
-				"the patch ends.")
+				"This line is not part of the patch anymore, although it may",
+				"look so.  To make this situation clear, there should be an",
+				"empty line before this line.  If the line doesn't contain",
+				"useful information, it should be removed.")
 		}
 	}
 }
@@ -185,7 +186,13 @@ func (ck *PatchChecker) checkBeginDiff(line Line, patchedFiles int) {
 		Explain(
 			"Pkgsrc tries to have as few patches as possible.  Therefore, each",
 			"patch must document why it is necessary.  Typical reasons are",
-			"portability or security.",
+			"portability or security.  A typical documented patch looks like",
+			"this:",
+			"",
+			"\t$"+"NetBSD$",
+			"",
+			"\tPortability fixes for GCC 4.8 on Linux.",
+			"\tSee https://github.com/org/repo/issues/7",
 			"",
 			"Patches that are related to a security issue should mention the",
 			"corresponding CVE identifier.",

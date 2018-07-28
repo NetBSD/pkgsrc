@@ -210,6 +210,8 @@ func (s *Suite) Test_MkParser_MkCond(c *check.C) {
 		NewTree("compareVarNum", varuse("OS_VERSION"), "==", "5.3"))
 	check("!empty(${OS_VARIANT:MIllumos})", // Probably not intended
 		NewTree("not", NewTree("empty", varuse("${OS_VARIANT:MIllumos}"))))
+	check("defined (VARNAME)", // There may be whitespace before the parenthesis; see devel/bmake/files/cond.c:^compare_function.
+		NewTree("defined", "VARNAME"))
 
 	// Errors
 	checkRest("!empty(PKG_OPTIONS:Msndfile) || defined(PKG_OPTIONS:Msamplerate)",
