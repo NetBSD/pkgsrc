@@ -669,19 +669,22 @@ func (cv *VartypeCheck) Option() {
 	line.Errorf("Invalid option name %q. Option names must start with a lowercase letter and be all-lowercase.", value)
 }
 
-// The PATH environment variable
+// Pathlist checks variables like the PATH environment variable.
 func (cv *VartypeCheck) Pathlist() {
+	// Sometimes, variables called PATH contain a single pathname,
+	// especially those with auto-guessed type from MkLineImpl.VariableType.
 	if !contains(cv.Value, ":") && cv.Guessed {
 		MkLineChecker{cv.MkLine}.CheckVartypePrimitive(cv.Varname, BtPathname, cv.Op, cv.Value, cv.MkComment, cv.Guessed)
 		return
 	}
 
-	for _, path := range strings.Split(cv.Value, ":") {
-		if contains(path, "${") {
+	for _, path := range cv.MkLine.ValueSplit(cv.Value, ":") {
+		if hasPrefix(path, "${") {
 			continue
 		}
 
-		if !matches(path, `^[-0-9A-Za-z._~+%/]*$`) {
+		pathNoVar := cv.MkLine.WithoutMakeVariables(path)
+		if !matches(pathNoVar, `^[-0-9A-Za-z._~+%/]*$`) {
 			cv.Line.Warnf("%q is not a valid pathname.", path)
 		}
 
