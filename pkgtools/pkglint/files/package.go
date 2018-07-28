@@ -249,6 +249,7 @@ func (pkg *Package) loadPackageMakefile(fname string) *MkLines {
 	}
 
 	allLines.DetermineUsedVariables()
+	allLines.CheckRedundantVariables()
 
 	pkg.Pkgdir = pkg.expandVariableWithDefault("PKGDIR", ".")
 	pkg.DistinfoFile = pkg.expandVariableWithDefault("DISTINFO_FILE", "distinfo")
@@ -287,36 +288,14 @@ func (pkg *Package) readMakefile(fname string, mainLines *MkLines, allLines *MkL
 
 	isMainMakefile := len(mainLines.mklines) == 0
 
-	for _, mkline := range fileMklines.mklines {
-
+	result := true
+	lineAction := func(mkline MkLine) bool {
 		if isMainMakefile {
 			mainLines.mklines = append(mainLines.mklines, mkline)
 			mainLines.lines = append(mainLines.lines, mkline.Line)
 		}
 		allLines.mklines = append(allLines.mklines, mkline)
 		allLines.lines = append(allLines.lines, mkline.Line)
-
-		if mkline.IsCond() {
-			ind := &fileMklines.indentation
-			switch mkline.Directive() {
-			case "if", "ifdef", "ifndef", "for":
-				ind.Push(0) // Dummy indentation, only the checkedFiles are interesting
-			case "endfor", "endif":
-				if ind.Len() > 1 {
-					ind.Pop()
-				}
-			}
-
-			if mkline.Directive() == "if" {
-				args := mkline.Args()
-				if contains(args, "exists") {
-					cond := NewMkParser(mkline.Line, args, false).MkCond()
-					cond.Visit("exists", func(node *Tree) {
-						ind.AddCheckedFile(node.args[0].(string))
-					})
-				}
-			}
-		}
 
 		var includeFile, incDir, incBase string
 		if mkline.IsInclude() {
@@ -368,12 +347,13 @@ func (pkg *Package) readMakefile(fname string, mainLines *MkLines, allLines *MkL
 				if !fileExists(dirname + "/" + includeFile) {
 
 					if fileMklines.indentation.IsCheckedFile(includeFile) {
-						continue // See https://github.com/rillig/pkglint/issues/1
+						return true // See https://github.com/rillig/pkglint/issues/1
 
 					} else if dirname != G.CurrentDir { // Prevent unnecessary syscalls
 						dirname = G.CurrentDir
 						if !fileExists(dirname + "/" + includeFile) {
 							mkline.Errorf("Cannot read %q.", dirname+"/"+includeFile)
+							result = false
 							return false
 						}
 					}
@@ -385,6 +365,7 @@ func (pkg *Package) readMakefile(fname string, mainLines *MkLines, allLines *MkL
 				absIncluding := ifelseStr(incBase == "Makefile.common" && incDir != "", fname, "")
 				absIncluded := dirname + "/" + includeFile
 				if !pkg.readMakefile(absIncluded, mainLines, allLines, absIncluding) {
+					result = false
 					return false
 				}
 			}
@@ -400,13 +381,16 @@ func (pkg *Package) readMakefile(fname string, mainLines *MkLines, allLines *MkL
 				G.Pkg.vars.Define(varname, mkline)
 			}
 		}
+		return true
 	}
+	atEnd := func(mkline MkLine) {}
+	fileMklines.ForEach(lineAction, atEnd)
 
 	if includingFnameForUsedCheck != "" {
 		fileMklines.checkForUsedComment(G.Pkgsrc.ToRel(includingFnameForUsedCheck))
 	}
 
-	return true
+	return result
 }
 
 func (pkg *Package) checkfilePackageMakefile(fname string, mklines *MkLines) {
