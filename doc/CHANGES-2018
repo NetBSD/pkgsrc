@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3362 2018/07/27 20:02:50 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.3363 2018/07/28 08:29:55 morr Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4791,3 +4791,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated cad/qcad to 3.21.2.3 [plunky 2018-07-27]
 	Updated textproc/discount to 2.2.3anb4 [schmonz 2018-07-27]
 	Updated lang/mono to 4.0.4.1nb12 [jperkin 2018-07-27]
+	Updated editors/vim-share to 8.1.0216 [morr 2018-07-28]
+	Updated editors/vim-lang to 8.1.0216 [morr 2018-07-28]
