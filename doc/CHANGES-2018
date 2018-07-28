@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3363 2018/07/28 08:29:55 morr Exp $
+$NetBSD: CHANGES-2018,v 1.3364 2018/07/28 12:29:53 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4793,3 +4793,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/mono to 4.0.4.1nb12 [jperkin 2018-07-27]
 	Updated editors/vim-share to 8.1.0216 [morr 2018-07-28]
 	Updated editors/vim-lang to 8.1.0216 [morr 2018-07-28]
+	Added www/libpsl version 0.20.2 [bsiegert 2018-07-28]
