@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/07/28 15:19:59 nia Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/28 22:22:47 nia Exp $
 
 DISTNAME=	slop-7.4
 CATEGORIES=	x11
@@ -17,6 +17,7 @@ USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 
 .include "../../graphics/glew/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/glm/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
