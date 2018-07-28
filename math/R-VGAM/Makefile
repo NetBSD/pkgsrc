@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/06/01 07:10:54 wen Exp $
+# $NetBSD: Makefile,v 1.3 2018/07/28 14:40:46 brook Exp $
 
 CATEGORIES=	math
-MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	mishka@NetBSD.org
 HOMEPAGE=	http://www.stat.auckland.ac.nz/~yee/VGAM/
