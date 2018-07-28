@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2016/09/29 12:10:50 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2018/07/28 14:40:49 brook Exp $
 
 CATEGORIES=	math
-MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/maps/
