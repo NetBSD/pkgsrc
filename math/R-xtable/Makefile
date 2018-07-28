@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/04/09 15:29:58 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/28 14:40:51 brook Exp $
 
 CATEGORIES=	math
-MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://xtable.r-forge.r-project.org/

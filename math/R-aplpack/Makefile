@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/01/17 19:09:15 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/28 14:40:47 brook Exp $
 
 CATEGORIES=	math
-MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://cran.r-project.org/web/packages/aplpack/

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2015/07/26 13:30:21 mef Exp $
+# $NetBSD: Makefile,v 1.3 2018/07/28 14:40:44 brook Exp $
 
 CATEGORIES=	geography
-MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/countrycode/

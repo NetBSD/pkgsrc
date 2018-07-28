@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/02/01 16:57:35 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/28 14:40:45 brook Exp $
 
 CATEGORIES=	math
-MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://cran.r-project.org/web/packages/ISLR/

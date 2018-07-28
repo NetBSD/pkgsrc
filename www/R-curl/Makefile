@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2018/04/29 21:32:06 adam Exp $
+# $NetBSD: Makefile,v 1.5 2018/07/28 14:40:53 brook Exp $
 
 PKGREVISION=	1
 CATEGORIES=	www R
-MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/curl/

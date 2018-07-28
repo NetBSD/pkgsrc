@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2018/02/28 18:12:31 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2018/07/28 14:40:52 brook Exp $
 
 CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dirk.eddelbuettel.com/code/digest.html

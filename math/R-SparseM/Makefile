@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2018/01/22 07:21:29 wen Exp $
+# $NetBSD: Makefile,v 1.3 2018/07/28 14:40:46 brook Exp $
 #
 
 CATEGORIES=	math
-MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/SparseM/

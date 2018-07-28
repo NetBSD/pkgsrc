@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2013/08/30 12:56:30 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2018/07/28 14:40:47 brook Exp $
 
 CATEGORIES=	math
-MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/combinat/

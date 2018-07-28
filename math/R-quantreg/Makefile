@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2018/01/22 07:35:38 wen Exp $
+# $NetBSD: Makefile,v 1.5 2018/07/28 14:40:50 brook Exp $
 #
 
 CATEGORIES=	math
-MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/quantreg/
