@@ -18,5 +18,5 @@ for stuff such as accessing SQL databases (SQLite, Postgres, MySQL), XML (incl.
 XPATH and XSLT), Terminal and File IO, Web Application development (the CGI, WSF
 and W2T (Web 2.0 Toolkit) modules), SDL, Qt and much more.
 
-SPL currently supports Linux,BSD Systems, other POSIX environments, MacOS-X
+SPL currently supports Linux, BSD Systems, other POSIX environments, MacOS-X
 (Darwin), SGI IRIX, Cygwin and native Win32 (using MinGW).
