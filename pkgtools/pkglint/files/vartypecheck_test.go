@@ -394,10 +394,11 @@ func (s *Suite) Test_VartypeCheck_Pathlist(c *check.C) {
 	t := s.Init(c)
 
 	runVartypeChecks(t, "PATH", opAssign, (*VartypeCheck).Pathlist,
-		"/usr/bin:/usr/sbin:.:${LOCALBASE}/bin")
+		"/usr/bin:/usr/sbin:.::${LOCALBASE}/bin:${HOMEPAGE:S,https://,,}")
 
 	t.CheckOutputLines(
-		"WARN: fname:1: All components of PATH (in this case \".\") should be absolute paths.")
+		"WARN: fname:1: All components of PATH (in this case \".\") should be absolute paths.",
+		"WARN: fname:1: All components of PATH (in this case \"\") should be absolute paths.")
 }
 
 func (s *Suite) Test_VartypeCheck_Perms(c *check.C) {
