@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/03/02 19:04:13 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/28 14:53:46 brook Exp $
 
 CATEGORIES=	math
-MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/Archive/prob/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://prob.r-forge.r-project.org/
