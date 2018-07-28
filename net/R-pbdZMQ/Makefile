@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/02/12 19:33:43 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/28 14:40:51 brook Exp $
 
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://r-pbd.org/

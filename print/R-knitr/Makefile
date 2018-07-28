@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2017/03/11 12:42:19 wen Exp $
+# $NetBSD: Makefile,v 1.6 2018/07/28 14:40:52 brook Exp $
 
 CATEGORIES=	print
-MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/knitr/

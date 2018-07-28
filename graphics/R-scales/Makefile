@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/03/12 15:47:48 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/28 14:40:45 brook Exp $
 
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://github.com/hadley/scales

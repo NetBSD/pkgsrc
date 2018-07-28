@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/03/25 00:32:45 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2018/07/28 14:40:46 brook Exp $
 
 CATEGORIES=	math
-MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://dirk.eddelbuettel.com/code/rcpp.armadillo.html

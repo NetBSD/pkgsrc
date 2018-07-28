@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2018/01/25 00:19:52 minskim Exp $
+# $NetBSD: Makefile,v 1.14 2018/07/28 14:40:49 brook Exp $
 
 CATEGORIES=	math
-MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mvtnorm.r-forge.r-project.org/
