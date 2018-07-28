@@ -276,10 +276,33 @@ func (mkline *MkLineImpl) Tokenize(s string) []*MkToken {
 	return tokens
 }
 
+// ValueSplit splits the variable value of an assignment line,
+// taking care of variable references. For example, when the value
+// "/bin:${PATH:S,::,::,}" is split at ":", it results in
+// {"/bin", "${PATH:S,::,::,}"}.
+func (mkline *MkLineImpl) ValueSplit(value string, separator string) []string {
+	tokens := mkline.Tokenize(value)
+	var split []string
+	for _, token := range tokens {
+		if split == nil {
+			split = []string{""}
+		}
+		if token.Varuse == nil && contains(token.Text, separator) {
+			subs := strings.Split(token.Text, separator)
+			split[len(split)-1] += subs[0]
+			split = append(split, subs[1:]...)
+		} else {
+			split[len(split)-1] += token.Text
+		}
+	}
+	return split
+}
+
 func (mkline *MkLineImpl) WithoutMakeVariables(value string) string {
 	valueNovar := value
 	for {
 		var m []string
+		// TODO: properly parse nested variables
 		m, valueNovar = regex.ReplaceFirst(valueNovar, `\$\{[^{}]*\}`, "")
 		if m == nil {
 			return valueNovar
