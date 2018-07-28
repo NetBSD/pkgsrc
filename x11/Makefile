@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.824 2018/07/28 15:19:59 nia Exp $
+# $NetBSD: Makefile,v 1.825 2018/07/28 15:23:24 nia Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -280,6 +280,7 @@ SUBDIR+=	lxlauncher
 SUBDIR+=	lxrandr
 SUBDIR+=	lxsession
 SUBDIR+=	lxterminal
+SUBDIR+=	maim
 SUBDIR+=	matchbox-common
 SUBDIR+=	matchbox-desktop
 SUBDIR+=	matchbox-nest
