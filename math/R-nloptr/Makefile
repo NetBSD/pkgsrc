@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2018/07/04 13:40:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2018/07/28 14:40:49 brook Exp $
 #
 
 CATEGORIES=	math
-MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/nloptr/

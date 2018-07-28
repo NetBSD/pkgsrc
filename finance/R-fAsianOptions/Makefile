@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/03/02 18:49:00 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/28 14:40:43 brook Exp $
 
 CATEGORIES=	finance
-MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://www.rmetrics.org/

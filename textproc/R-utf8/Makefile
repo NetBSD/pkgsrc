@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/03/15 18:37:18 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/28 14:40:52 brook Exp $
 
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://github.com/patperry/r-utf8
