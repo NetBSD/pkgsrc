@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/07/28 22:22:47 nia Exp $
+# $NetBSD: Makefile,v 1.3 2018/07/28 22:32:29 nia Exp $
 
 DISTNAME=	slop-7.4
 CATEGORIES=	x11
@@ -15,6 +15,8 @@ EXTRACT_USING=	bsdtar
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
+
+CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
