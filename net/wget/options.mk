@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.10 2017/11/14 09:51:13 leot Exp $
+# $NetBSD: options.mk,v 1.11 2018/07/28 12:29:20 bsiegert Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wget
-PKG_SUPPORTED_OPTIONS=	idn inet6
+PKG_SUPPORTED_OPTIONS=	idn inet6 psl
 PKG_OPTIONS_REQUIRED_GROUPS=	ssl
 PKG_OPTIONS_GROUP.ssl=	gnutls openssl
 PKG_SUGGESTED_OPTIONS=	idn inet6 openssl
@@ -37,4 +37,14 @@ CONFIGURE_ARGS+=--with-ssl=gnutls
 .else
 .  include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=--with-ssl=openssl
+.endif
+
+###
+### Support Public Suffix List
+###
+.if !empty(PKG_OPTIONS:Mpsl)
+.  include "../../www/libpsl/buildlink3.mk"
+CONFIGURE_ARGS+=--with-libpsl
+.else
+CONFIGURE_ARGS+=--without-libpsl
 .endif
