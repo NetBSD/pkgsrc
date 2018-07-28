@@ -588,6 +588,17 @@ func (s *Suite) Test_MkLines_CheckRedundantVariables(c *check.C) {
 		"WARN: module.mk:1: Variable VAR is overwritten in line 3.")
 }
 
+func (s *Suite) Test_MkLines_CheckRedundantVariables__different_value(c *check.C) {
+	t := s.Init(c)
+	mklines := t.NewMkLines("module.mk",
+		"VAR=\tvalue ${OTHER}",
+		"VAR?=\tdifferent value")
+
+	mklines.CheckRedundantVariables()
+
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_MkLines_CheckRedundantVariables__procedure_call(c *check.C) {
 	t := s.Init(c)
 	mklines := t.NewMkLines("mk/pthread.buildlink3.mk",
