@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2018/07/28 15:19:59 nia Exp $
+bin/slop
+include/slop.hpp
+lib/libslopy.so
+lib/libslopy.so.${PKGVERSION}
+man/man1/slop.1
