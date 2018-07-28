@@ -561,3 +561,83 @@ func naturalLess(str1, str2 string) bool {
 	// it sorts last.
 	return len1 < len2
 }
+
+// RedundantScope checks for redundant variable definitions and accidentally
+// overwriting variables. It tries to be as correct as possible by not flagging
+// anything that is defined conditionally. There may be some edge cases though
+// like defining PKGNAME, then evaluating it using :=, then defining it again.
+// This pattern is so error-prone that it should not appear in pkgsrc at all,
+// thus pkglint doesn't even expect it. (Well, except for the PKGNAME case,
+// but that's deep in the infrastructure and only affects the "nb13" extension.
+type RedundantScope struct {
+	vars        map[string]*redundantScopeVarinfo
+	condLevel   int
+	OnIgnore    func(old, new MkLine)
+	OnOverwrite func(old, new MkLine)
+}
+type redundantScopeVarinfo struct {
+	mkline MkLine
+	value  string
+}
+
+func NewRedundantScope() *RedundantScope {
+	return &RedundantScope{vars: make(map[string]*redundantScopeVarinfo)}
+}
+
+func (s *RedundantScope) Handle(mkline MkLine) {
+	switch {
+	case mkline.IsVarassign():
+		varname := mkline.Varname()
+		if s.condLevel != 0 {
+			s.vars[varname] = nil
+			break
+		}
+
+		op := mkline.Op()
+		value := mkline.Value()
+		valueNovar := mkline.WithoutMakeVariables(value)
+		if op == opAssignEval && value == valueNovar {
+			op = opAssign // They are effectively the same in this case.
+		}
+		existing, found := s.vars[varname]
+		if !found {
+			if op == opAssignShell || op == opAssignEval {
+				s.vars[varname] = nil
+			} else {
+				if op == opAssignAppend {
+					value = " " + value
+				}
+				s.vars[varname] = &redundantScopeVarinfo{mkline, value}
+			}
+		} else if existing != nil {
+			switch op {
+			case opAssign:
+				if s.OnOverwrite != nil {
+					s.OnOverwrite(existing.mkline, mkline)
+				}
+				existing.value = value
+			case opAssignAppend:
+				existing.value += " " + value
+			case opAssignDefault:
+				if s.OnIgnore != nil {
+					s.OnIgnore(existing.mkline, mkline)
+				}
+			case opAssignShell:
+			case opAssignEval:
+				s.vars[varname] = nil
+			}
+		}
+
+	case mkline.IsCond():
+		switch mkline.Directive() {
+		case "for", "if", "ifdef", "ifndef":
+			s.condLevel++
+		case "endfor", "endif":
+			s.condLevel--
+		}
+	}
+}
+
+func (s *RedundantScope) IsConditional(varname string) bool {
+	return s.vars[varname] != nil
+}

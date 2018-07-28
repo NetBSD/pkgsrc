@@ -419,7 +419,11 @@ func (s *Suite) Test_Package_loadPackageMakefile(c *check.C) {
 
 	// Including a package Makefile directly is an error (in the last line),
 	// but that is checked later.
-	t.CheckOutputEmpty()
+	// A file including itself does not lead to an endless loop while parsing
+	// but may still produce unexpected warnings, such as redundant definitions.
+	t.CheckOutputLines(
+		"WARN: ~/category/package/Makefile:3: Variable PKGNAME is overwritten in Makefile:3.",
+		"WARN: ~/category/package/Makefile:4: Variable DISTNAME is overwritten in Makefile:4.")
 }
 
 func (s *Suite) Test_Package_conditionalAndUnconditionalInclude(c *check.C) {
@@ -537,4 +541,43 @@ func (s *Suite) Test_Package_includeOtherAfterExists(c *check.C) {
 
 	t.CheckOutputLines(
 		"ERROR: ~/category/package/another.mk: Cannot be read.")
+}
+
+// See https://mail-index.netbsd.org/tech-pkg/2018/07/22/msg020092.html
+func (s *Suite) Test_Package__redundant_master_sites(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupVartypes()
+	t.SetupMasterSite("MASTER_SITE_R_CRAN", "http://cran.r-project.org/src/")
+	t.CreateFileLines("mk/bsd.pkg.mk")
+	t.CreateFileLines("licenses/gnu-gpl-v2",
+		"The licenses for most software are designed to take away ...")
+	t.CreateFileLines("math/R/Makefile.extension",
+		MkRcsID,
+		"",
+		"PKGNAME?=\tR-${R_PKGNAME}-${R_PKGVER}",
+		"MASTER_SITES?=\t${MASTER_SITE_R_CRAN:=contrib/}",
+		"GENERATE_PLIST+=\techo \"bin/r-package\";",
+		"NO_CHECKSUM=\tyes",
+		"LICENSE?=\tgnu-gpl-v2")
+	t.CreateFileLines("math/R-date/Makefile",
+		MkRcsID,
+		"",
+		"R_PKGNAME=\tdate",
+		"R_PKGVER=\t1.2.3",
+		"COMMENT=\tR package for handling date arithmetic",
+		"MASTER_SITES=\t${MASTER_SITE_R_CRAN:=contrib/}", // Redundant; see math/R/Makefile.extension.
+		"",
+		".include \"../../math/R/Makefile.extension\"",
+		".include \"../../mk/bsd.pkg.mk\"")
+
+	G.CurrentDir = t.TempFilename("math/R-date")
+	G.CurPkgsrcdir = "../.."
+
+	// See Package.checkfilePackageMakefile
+	// See Scope.uncond
+	G.checkdirPackage(G.CurrentDir)
+
+	t.CheckOutputLines(
+		"NOTE: ~/math/R-date/Makefile:6: Definition of MASTER_SITES is redundant because of ../R/Makefile.extension:4.")
 }
