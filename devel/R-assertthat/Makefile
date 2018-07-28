@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/02/26 17:31:26 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/28 14:40:42 brook Exp $
 
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/assertthat/

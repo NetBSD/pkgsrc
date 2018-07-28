@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/04/11 15:23:52 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2018/07/28 14:40:42 brook Exp $
 
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Boost C++ Header Files

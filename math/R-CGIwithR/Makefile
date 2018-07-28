@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2018/07/04 13:40:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.22 2018/07/28 14:40:45 brook Exp $
 #
 
 PKGREVISION=		15
 CATEGORIES=		math
-MASTER_SITES=		${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=		mchittur@cs.nmsu.edu
 HOMEPAGE=		${R_HOMEPAGE_BASE}/CGIwithR/
