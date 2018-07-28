@@ -312,7 +312,7 @@ func (mklines *MkLines) CheckRedundantVariables() {
 		return true
 	}
 	scope.OnIgnore = func(old, new MkLine) {
-		if isRelevant(old, new) {
+		if isRelevant(old, new) && old.Value() == new.Value() {
 			old.Notef("Definition of %s is redundant because of %s.", new.Varname(), new.ReferenceFrom(old.Line))
 		}
 	}
