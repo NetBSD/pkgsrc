@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2018/03/01 07:59:54 adam Exp $
+# $NetBSD: Makefile,v 1.34 2018/07/29 10:48:14 leot Exp $
 
 DISTNAME=	cffi-1.11.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cffi/}
 
@@ -15,6 +16,15 @@ USE_TOOLS+=	pkg-config
 
 DEPENDS+=	${PYPKGPREFIX}-cparser-[0-9]*:../../devel/py-cparser
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+#
+# XXX: Kludge to avoid __thread that at the moment is still not properly
+# XXX: supported on NetBSD/evbarm aarch64.
+#
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "aarch64"
+BUILDLINK_TRANSFORM+=	rm:-DUSE__THREAD
+.endif
 
 DISTUTILS_BUILDDIR_IN_TEST_ENV=	yes
 
