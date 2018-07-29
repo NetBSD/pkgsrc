@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.95 2018/07/25 16:42:36 schmonz Exp $
+# $NetBSD: Makefile,v 1.96 2018/07/29 23:26:44 schmonz Exp $
 #
 
 DISTNAME=		netqmail-1.06
 PKGNAME=		qmail-1.03
-PKGREVISION=		34
+PKGREVISION=		35
 CATEGORIES=		mail
 MASTER_SITES=		http://qmail.org/
 
@@ -12,9 +12,7 @@ HOMEPAGE=		http://qmail.org/netqmail/
 COMMENT=		Secure, reliable, efficient, simple, and fast MTA
 LICENSE=		public-domain
 
-DEPENDS+=		checkpassword-pam-[0-9]*:../../sysutils/checkpassword-pam
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
-DEPENDS+=		ucspi-tcp6-[0-9]*:../../net/ucspi-tcp6
 
 CONFLICTS+=		courier-maildirmake-[0-9]*
 CONFLICTS+=		courier-mta-[0-9]*
