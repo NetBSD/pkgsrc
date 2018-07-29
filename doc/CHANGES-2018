@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3370 2018/07/29 03:00:17 wen Exp $
+$NetBSD: CHANGES-2018,v 1.3371 2018/07/29 06:35:48 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4800,3 +4800,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added x11/maim version 5.5.2 [nia 2018-07-28]
 	Updated pkgtools/pkglint to 5.5.15 [rillig 2018-07-13]
 	Updated devel/p5-Type-Tiny to 1.004001 [wen 2018-07-29]
+	Updated devel/p5-Net-Netmask to 1.9104 [wen 2018-07-29]
