@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3380 2018/07/29 23:29:34 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.3381 2018/07/29 23:46:35 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4810,3 +4810,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/ucspi-ssl to 0.99enb2 [schmonz 2018-07-29]
 	Updated mail/qmail to 1.03nb35 [schmonz 2018-07-29]
 	Updated mail/qmail-run to 20180730 [schmonz 2018-07-29]
+	Updated net/publicfile to 0.52nb2 [schmonz 2018-07-29]
