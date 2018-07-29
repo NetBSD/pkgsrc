@@ -1,0 +1,112 @@
+$NetBSD: patch-configure,v 1.1 2018/07/29 08:41:18 schmonz Exp $
+
+Remove anonymous inner functions to build with clang.
+
+--- configure.orig	2018-07-08 21:13:24.635573514 +0000
++++ configure
+@@ -4389,105 +4389,6 @@ fi
+ 
+ fi
+ 
+-
+-# Checks for the flag to compile anonymous inner functions.
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether anonymous inner functions are supported by default" >&5
+-$as_echo_n "checking whether anonymous inner functions are supported by default... " >&6; }
+-cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+-/* end confdefs.h.  */
+-
+-int
+-main ()
+-{
+- int (*bar)(int) = ({ int tmp_action(int foo) { foo++; return(0); } &tmp_action; }); (*bar)(0);
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
+-   { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+-$as_echo "yes" >&6; }
+-else
+-   { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+-$as_echo "no" >&6; }
+-                 OLD_CFLAGS=$CFLAGS
+-                 CFLAGS="$OLD_CFLAGS -fnested-functions"
+-                 { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether anonymous inner functions are supported with -fnested-functions" >&5
+-$as_echo_n "checking whether anonymous inner functions are supported with -fnested-functions... " >&6; }
+-                 cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+-/* end confdefs.h.  */
+-
+-int
+-main ()
+-{
+- int (*bar)(int) = ({ int tmp_action(int foo) { foo++; return(0); } &tmp_action; }); (*bar)(0);
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
+-   { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+-$as_echo "yes" >&6; }
+-else
+-   { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+-$as_echo "no" >&6; }
+-                                  CFLAGS="$OLD_CFLAGS -ftrampolines"
+-                                  { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether anonymous inner functions are supported with -ftrampolines" >&5
+-$as_echo_n "checking whether anonymous inner functions are supported with -ftrampolines... " >&6; }
+-                                  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+-/* end confdefs.h.  */
+-
+-int
+-main ()
+-{
+- int (*bar)(int) = ({ int tmp_action(int foo) { foo++; return(0); } &tmp_action; }); (*bar)(0);
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
+-   { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+-$as_echo "yes" >&6; }
+-else
+-   { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+-$as_echo "no" >&6; }
+-                                                   CFLAGS="$OLD_CFLAGS -Wp,-Wno-trampolines"
+-                                                   { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether anonymous inner functions are supported with -Wp,-Wno-trampolines" >&5
+-$as_echo_n "checking whether anonymous inner functions are supported with -Wp,-Wno-trampolines... " >&6; }
+-                                                   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+-/* end confdefs.h.  */
+-
+-int
+-main ()
+-{
+- int (*bar)(int) = ({ int tmp_action(int foo) { foo++; return(0); } &tmp_action; }); (*bar)(0);
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
+-   { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+-$as_echo "yes" >&6; }
+-else
+-   { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+-$as_echo "no" >&6; }
+-                                                                    { { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
+-$as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
+-as_fn_error $? "Unable to compile without anonymous inner function support.
+-See \`config.log' for more details" "$LINENO" 5; }
+-
+-fi
+-rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+-
+-fi
+-rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+-
+-fi
+-rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+-
+-fi
+-rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+-
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether struct option is defined in getopt.h" >&5
+ $as_echo_n "checking whether struct option is defined in getopt.h... " >&6; }
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
