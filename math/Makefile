@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.395 2018/07/27 06:49:35 minskim Exp $
+# $NetBSD: Makefile,v 1.396 2018/07/29 07:39:03 wiz Exp $
 
 COMMENT=	Mathematics
 
@@ -115,6 +115,7 @@ SUBDIR+=	dcdflib.f
 SUBDIR+=	dfftpack
 SUBDIR+=	dieharder
 SUBDIR+=	djbfft
+SUBDIR+=	djbsort
 SUBDIR+=	eigen2
 SUBDIR+=	eigen3
 SUBDIR+=	eispack
