@@ -1,0 +1,44 @@
+$NetBSD: patch-configure.ac,v 1.1 2018/07/29 08:41:18 schmonz Exp $
+
+Remove anonymous inner functions to build with clang.
+
+--- configure.ac.orig	2018-07-08 21:13:05.924307278 +0000
++++ configure.ac
+@@ -188,37 +188,6 @@ AC_SEARCH_LIBS([getopt_long],
+                                 [ AC_MSG_FAILURE([unable to compile without getopt_long(), you may need to install the libgnugetopt package/port]) ])
+                ])
+ 
+-# Checks for the flag to compile anonymous inner functions.
+-AC_MSG_CHECKING([whether anonymous inner functions are supported by default])
+-AC_TRY_COMPILE([],
+-               [ int (*bar)(int) = ({ int tmp_action(int foo) { foo++; return(0); } &tmp_action; }); (*bar)(0); ],
+-               [ AC_MSG_RESULT([yes]) ],
+-               [ AC_MSG_RESULT([no])
+-                 OLD_CFLAGS=$CFLAGS
+-                 CFLAGS="$OLD_CFLAGS -fnested-functions"
+-                 AC_MSG_CHECKING([whether anonymous inner functions are supported with -fnested-functions])
+-                 AC_TRY_COMPILE([],
+-                                [ int (*bar)(int) = ({ int tmp_action(int foo) { foo++; return(0); } &tmp_action; }); (*bar)(0); ],
+-                                [ AC_MSG_RESULT([yes]) ],
+-                                [ AC_MSG_RESULT([no])
+-                                  CFLAGS="$OLD_CFLAGS -ftrampolines"
+-                                  AC_MSG_CHECKING([whether anonymous inner functions are supported with -ftrampolines])
+-                                  AC_TRY_COMPILE([],
+-                                                 [ int (*bar)(int) = ({ int tmp_action(int foo) { foo++; return(0); } &tmp_action; }); (*bar)(0); ],
+-                                                 [ AC_MSG_RESULT([yes]) ],
+-                                                 [ AC_MSG_RESULT([no])
+-                                                   CFLAGS="$OLD_CFLAGS -Wp,-Wno-trampolines"
+-                                                   AC_MSG_CHECKING([whether anonymous inner functions are supported with -Wp,-Wno-trampolines])
+-                                                   AC_TRY_COMPILE([],
+-                                                                  [ int (*bar)(int) = ({ int tmp_action(int foo) { foo++; return(0); } &tmp_action; }); (*bar)(0); ],
+-                                                                  [ AC_MSG_RESULT([yes]) ],
+-                                                                  [ AC_MSG_RESULT([no])
+-                                                                    AC_MSG_FAILURE([Unable to compile without anonymous inner function support.])
+-                                                                  ])
+-                                                 ])
+-                                ])
+-               ])
+-
+ AC_MSG_CHECKING([whether struct option is defined in getopt.h])
+ AC_TRY_COMPILE([ #define _GNU_SOURCE
+                  #include <stdio.h>
