@@ -1,0 +1,11 @@
+djbsort is a software library for sorting arrays of integers. It
+provides the following features:
+
+- Speed: djbsort holds new speed records for in-memory sorting.
+
+- Security: djbsort is designed to be safe for cryptographic contexts.
+
+- Verification: djbsort includes tools to automatically verify correctness.
+
+These features are not separate options: there is a single sorting
+function that is simultaneously fast, secure, and verified.
