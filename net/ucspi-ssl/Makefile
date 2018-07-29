@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2018/07/25 16:32:34 schmonz Exp $
+# $NetBSD: Makefile,v 1.22 2018/07/29 23:23:09 schmonz Exp $
 #
 
 DISTNAME=		ucspi-ssl-0.99e
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		https://www.fehcom.de/ipnet/ucspi-ssl/
 EXTRACT_SUFX=		.tgz
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://www.fehcom.de/ipnet/ucspi-ssl.html
 COMMENT=		Command-line tools for SSL client-server applications
-
-DEPENDS+=		ucspi-tcp6-[0-9]*:../../net/ucspi-tcp6
 
 WRKSRC=			${WRKDIR}/host/superscript.com/net/${PKGNAME_NOREV}
 DJB_SLASHPACKAGE=	YES
