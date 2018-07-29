@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3376 2018/07/29 10:48:30 leot Exp $
+$NetBSD: CHANGES-2018,v 1.3377 2018/07/29 23:20:47 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4806,3 +4806,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added math/djbsort version 20180717 [wiz 2018-07-29]
 	Updated mail/spamdyke to 5.0.1nb2 [schmonz 2018-07-29]
 	Updated devel/py-cffi to 1.11.5nb1 [leot 2018-07-29]
+	Updated mail/qmail-conf to 0.60nb5 [schmonz 2018-07-29]
