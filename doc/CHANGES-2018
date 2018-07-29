@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3378 2018/07/29 23:23:27 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.3379 2018/07/29 23:27:05 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4808,3 +4808,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-cffi to 1.11.5nb1 [leot 2018-07-29]
 	Updated mail/qmail-conf to 0.60nb5 [schmonz 2018-07-29]
 	Updated net/ucspi-ssl to 0.99enb2 [schmonz 2018-07-29]
+	Updated mail/qmail to 1.03nb35 [schmonz 2018-07-29]
