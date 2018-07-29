@@ -1,9 +1,15 @@
-# $NetBSD: options.mk,v 1.5 2018/06/18 11:00:21 schmonz Exp $
+# $NetBSD: options.mk,v 1.6 2018/07/29 23:23:09 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ucspi-ssl
-PKG_SUPPORTED_OPTIONS+=	perl
+PKG_SUPPORTED_OPTIONS+=	inet6 perl
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Minet6)
+DEPENDS+=		ucspi-tcp6-[0-9]*:../../net/ucspi-tcp6
+.else
+DEPENDS+=		ucspi-tcp-[0-9]*:../../net/ucspi-tcp
+.endif
 
 PLIST_VARS+=		perl
 .if !empty(PKG_OPTIONS:Mperl)
