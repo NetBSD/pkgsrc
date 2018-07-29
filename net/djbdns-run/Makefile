@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2018/07/25 16:32:34 schmonz Exp $
+# $NetBSD: Makefile,v 1.30 2018/07/29 23:59:26 schmonz Exp $
 #
 
-DISTNAME=		djbdns-run-20180725
+DISTNAME=		djbdns-run-20180730
 CATEGORIES=		net
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -13,7 +13,6 @@ LICENSE=		2-clause-bsd
 DEPENDS_DJBDNS=		djbdns>=1.05nb5:../../net/djbdns
 DEPENDS+=		${DEPENDS_DJBDNS}
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
-DEPENDS+=		ucspi-tcp6-[0-9]*:../../net/ucspi-tcp6
 
 WRKSRC=			${WRKDIR}
 NO_BUILD=		yes
@@ -57,6 +56,8 @@ PKG_SYSCONFDIR.djbdns-run!=						\
 MAKEVARS+=	PKG_SYSCONFDIR.djbdns-run
 .  endif
 .endif
+
+.include "options.mk"
 
 do-install:
 	${INSTALL_DATA} ${FILESDIR}/README.pkgsrc ${DESTDIR}${PREFIX}/share/doc/djbdns-run
