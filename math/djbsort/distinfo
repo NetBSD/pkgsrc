@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/07/29 07:38:48 wiz Exp $
+
+SHA1 (djbsort-20180717.tar.gz) = 8f6efd8f66aa23707d54c083b9fb28371a409c55
+RMD160 (djbsort-20180717.tar.gz) = 64d92cccf13d8a997ea25ee77491f54b6a6b3ce1
+SHA512 (djbsort-20180717.tar.gz) = c26a871c46006580343b2876203264c8de0db613ee90ba5dd050f46a71a346d9340ecd06220dc1c0a46a6c1cd910af4bd2cb3fcd39588a62cc2a4a996fc9113e
+Size (djbsort-20180717.tar.gz) = 25055 bytes
