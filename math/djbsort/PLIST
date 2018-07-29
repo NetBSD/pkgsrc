@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2018/07/29 07:38:48 wiz Exp $
+include/djbsort_cpucycles.h
+include/int32_sort.h
+include/uint32_sort.h
+lib/libdjbsort.a
