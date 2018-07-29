@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/07/27 02:36:04 nia Exp $
+# $NetBSD: Makefile,v 1.3 2018/07/29 13:45:22 nia Exp $
 
 DISTNAME=	colored-1.3.93
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,5 +12,5 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
