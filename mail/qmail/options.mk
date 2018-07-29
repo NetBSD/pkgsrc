@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.49 2018/07/04 13:40:24 jperkin Exp $
+# $NetBSD: options.mk,v 1.50 2018/07/29 23:26:44 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmail
-PKG_SUPPORTED_OPTIONS+=		eai sasl syncdir tls
+PKG_SUPPORTED_OPTIONS+=		eai inet6 pam sasl syncdir tls
 PKG_SUPPORTED_OPTIONS+=		qmail-customerror qmail-rejectutils qmail-srs
 PKG_SUGGESTED_OPTIONS+=		eai sasl syncdir tls
 PKG_SUGGESTED_OPTIONS+=		qmail-customerror qmail-rejectutils qmail-srs
@@ -63,6 +63,12 @@ SITES.${EAI_PATCH}=		http://arnt.gulbrandsen.priv.no/qmail/
 PATCH_DIST_CAT.${EAI_PATCH}=	${SED} \
 	-e 's|\(if (!stralloc_append(&firstpart,&ch)) temp_nomem();\)|if (ch == '"'\\\n'"' \&\& \!stralloc_append(\&firstpart,"\\r")) temp_nomem(); \1|' < ${EAI_PATCH}
 PATCH_DIST_STRIP.${EAI_PATCH}=	-p1
+.endif
+
+.if !empty(PKG_OPTIONS:Mpam)
+DEPENDS+=			checkpassword-pam-[0-9]*:../../sysutils/checkpassword-pam
+.else
+DEPENDS+=			checkpassword-[0-9]*:../../sysutils/checkpassword
 .endif
 
 .if !empty(PKG_OPTIONS:Mqmail-customerror)
@@ -143,8 +149,15 @@ MESSAGE_SUBST+=			SERVERCERT=${PKG_SYSCONFDIR:Q}/control/servercert.pem
 MESSAGE_SUBST+=			CLIENTCERT=${PKG_SYSCONFDIR:Q}/control/clientcert.pem
 MESSAGE_SUBST+=			QMAIL_DAEMON_USER=${QMAIL_DAEMON_USER:Q}
 MESSAGE_SUBST+=			QMAIL_QMAIL_GROUP=${QMAIL_QMAIL_GROUP:Q}
+DEPENDS+=			ucspi-ssl-[0-9]*:../../net/ucspi-ssl
 .  endif
 .else
 BUILDLINK_TRANSFORM+=		rm:-lssl
 BUILDLINK_TRANSFORM+=		rm:-lcrypto
+.if !empty(PKG_OPTIONS:Minet6)
+DEPENDS+=			ucspi-tcp6-[0-9]*:../../net/ucspi-tcp6
+.else
+DEPENDS+=			ucspi-tcp-[0-9]*:../../net/ucspi-tcp
+.endif
+
 .endif
