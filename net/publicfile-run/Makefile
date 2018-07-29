@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2018/07/25 16:32:34 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2018/07/29 23:51:02 schmonz Exp $
 
-DISTNAME=		publicfile-run-20180725
+DISTNAME=		publicfile-run-20180730
 CATEGORIES=		net
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -10,8 +10,6 @@ COMMENT=		Configures publicfile to serve public files
 LICENSE=		2-clause-bsd
 
 DEPENDS+=		publicfile>=0.52:../../net/publicfile
-DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
-DEPENDS+=		ucspi-tcp6-[0-9]*:../../net/ucspi-tcp6
 
 WRKSRC=			${WRKDIR}
 NO_BUILD=		yes
