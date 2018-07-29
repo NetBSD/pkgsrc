@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2018/06/02 00:13:58 schmonz Exp $
+# $NetBSD: options.mk,v 1.4 2018/07/29 07:40:06 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mailfront
 PKG_SUPPORTED_OPTIONS+=	lua gnutls
@@ -18,6 +18,7 @@ PLIST.lua=		yes
 BUILDLINK_API_DEPENDS.gnutls+=  gnutls>=3.5.0
 .  include "../../security/gnutls/buildlink3.mk"
 DJB_CONFIG_CMDS+=	${ECHO} gnutls > conf-tls;
+USE_TOOLS+=		pkg-config
 .else
 DJB_CONFIG_CMDS+=	${ECHO} none > conf-tls;
 .endif
