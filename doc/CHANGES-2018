@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3382 2018/07/29 23:51:21 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.3383 2018/07/29 23:59:44 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4812,3 +4812,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/qmail-run to 20180730 [schmonz 2018-07-29]
 	Updated net/publicfile to 0.52nb2 [schmonz 2018-07-29]
 	Updated net/publicfile-run to 20180730 [schmonz 2018-07-29]
+	Updated net/djbdns-run to 20180730 [schmonz 2018-07-29]
