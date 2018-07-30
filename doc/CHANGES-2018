@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3384 2018/07/30 00:02:57 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.3385 2018/07/30 05:30:54 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4814,3 +4814,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/publicfile-run to 20180730 [schmonz 2018-07-29]
 	Updated net/djbdns-run to 20180730 [schmonz 2018-07-29]
 	Updated sysutils/daemontools-run to 20180730 [schmonz 2018-07-30]
+	Updated devel/go-viper to 1.0.2 [minskim 2018-07-30]
