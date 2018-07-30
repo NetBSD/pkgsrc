@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3386 2018/07/30 18:59:06 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.3387 2018/07/30 19:38:42 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4816,3 +4816,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/daemontools-run to 20180730 [schmonz 2018-07-30]
 	Updated devel/go-viper to 1.0.2 [minskim 2018-07-30]
 	Added chat/toxcore version 0.2.4 [jperkin 2018-07-30]
+	Updated cross/arm-none-eabi-binutils to 2.31.1 [ryoon 2018-07-30]
