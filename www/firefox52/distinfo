@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2018/06/26 21:49:32 maya Exp $
+$NetBSD: distinfo,v 1.17 2018/07/30 12:23:11 jmcneill Exp $
 
 SHA1 (firefox-52.9.0esr.source.tar.xz) = df3d47518b380fe934e32a288515c25435fd82a7
 RMD160 (firefox-52.9.0esr.source.tar.xz) = 8940269f0a515c0066b6ab2eea1da8963d27617b
@@ -6,7 +6,7 @@ SHA512 (firefox-52.9.0esr.source.tar.xz) = bfca42668ca78a12a9fb56368f4aae5334b1f
 Size (firefox-52.9.0esr.source.tar.xz) = 214087304 bytes
 SHA1 (patch-aa) = c1084caa275e57b716c3499301f7fc3f99ef5026
 SHA1 (patch-ao) = 8b7125ef3b193fca4d03386142887b2f8d5015c5
-SHA1 (patch-as) = 632ebd35287f8f97d18721d39a0514d4cdbb12cc
+SHA1 (patch-as) = b596132c7b6902c4f7ddb901e28e1437b99bb428
 SHA1 (patch-build_gyp.mozbuild) = 481270e6703e556fb87a3440cb3cfb3d4fcc4c86
 SHA1 (patch-build_moz.configure_init.configure) = f2df0c6b92aa825a61f6a4ee1f70f5443c61858e
 SHA1 (patch-build_moz.configure_keyfiles.configure) = dd46c7c29464f374eed3f0762f4653d42032c261
