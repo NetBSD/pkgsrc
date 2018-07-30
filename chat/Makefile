@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.200 2018/07/26 20:24:48 nia Exp $
+# $NetBSD: Makefile,v 1.201 2018/07/30 18:59:50 jperkin Exp $
 #
 
 COMMENT=	Communication programs
@@ -137,6 +137,7 @@ SUBDIR+=	tkicb
 SUBDIR+=	tkirc
 SUBDIR+=	tkirc2
 SUBDIR+=	tootstream
+SUBDIR+=	toxcore
 SUBDIR+=	unrealircd
 SUBDIR+=	vicq
 SUBDIR+=	weechat
