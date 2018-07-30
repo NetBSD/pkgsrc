@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2018/07/30 18:58:43 jperkin Exp $
+bin/tox-bootstrapd
+include/tox/tox.h
+include/tox/toxav.h
+include/tox/toxencryptsave.h
+lib/libtoxcore.a
+lib/libtoxcore.so
+lib/libtoxcore.so.2
+lib/libtoxcore.so.2.4.0
+lib/pkgconfig/toxcore.pc

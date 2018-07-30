@@ -1,0 +1,5 @@
+Toxcore is a p2p network level library that provides encrypted
+communication and data transfer between peers who can find each
+other anonymously through a DHT.  The peers are identified with
+a 256 bit public key to be used for message encryption.  The
+protocol specification can be found at https://toktok.ltd/spec.
