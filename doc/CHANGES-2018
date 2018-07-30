@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3388 2018/07/30 19:41:42 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.3389 2018/07/30 19:45:25 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4818,3 +4818,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added chat/toxcore version 0.2.4 [jperkin 2018-07-30]
 	Updated cross/arm-none-eabi-binutils to 2.31.1 [ryoon 2018-07-30]
 	Updated cross/arm-none-eabi-gcc to 8.2.0 [ryoon 2018-07-30]
+	Updated cross/pdp11-aout-binutils to 2.31.1 [ryoon 2018-07-30]
