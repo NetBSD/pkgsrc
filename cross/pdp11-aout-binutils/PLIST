@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/06/19 22:45:36 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/07/30 19:45:00 ryoon Exp $
 cross-pdp11-aout/bin/pdp11-aout-addr2line
 cross-pdp11-aout/bin/pdp11-aout-ar
 cross-pdp11-aout/bin/pdp11-aout-as
@@ -28,7 +28,6 @@ cross-pdp11-aout/man/man1/pdp11-aout-dlltool.1
 cross-pdp11-aout/man/man1/pdp11-aout-elfedit.1
 cross-pdp11-aout/man/man1/pdp11-aout-gprof.1
 cross-pdp11-aout/man/man1/pdp11-aout-ld.1
-cross-pdp11-aout/man/man1/pdp11-aout-nlmconv.1
 cross-pdp11-aout/man/man1/pdp11-aout-nm.1
 cross-pdp11-aout/man/man1/pdp11-aout-objcopy.1
 cross-pdp11-aout/man/man1/pdp11-aout-objdump.1
