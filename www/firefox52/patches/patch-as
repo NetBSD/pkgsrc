@@ -1,9 +1,10 @@
-$NetBSD: patch-as,v 1.1 2017/04/27 01:55:57 ryoon Exp $
+$NetBSD: patch-as,v 1.2 2018/07/30 12:23:11 jmcneill Exp $
 
 * Treat DragonFly like FreeBSD.
 * Add system ICU support
+* Enable ARM64 JIT
 
---- js/src/old-configure.in.orig	2017-01-16 16:16:52.000000000 +0000
+--- js/src/old-configure.in.orig	2017-04-11 02:13:16.000000000 +0000
 +++ js/src/old-configure.in
 @@ -140,6 +140,9 @@ fi
  
@@ -15,7 +16,17 @@ $NetBSD: patch-as,v 1.1 2017/04/27 01:55:57 ryoon Exp $
  dnl Special win32 checks
  dnl ========================================================
  
-@@ -1053,7 +1056,7 @@ dnl Checks for header files.
+@@ -957,6 +960,9 @@ arm*-*)
+     ENABLE_ION=1
+     AC_DEFINE(JS_CPU_ARM)
+     ;;
++aarch64*-*)
++    ENABLE_ION=1
++    ;;
+ sparc-*)
+ dnl ENABLE_ION=0
+     AC_DEFINE(JS_CPU_SPARC)
+@@ -1024,7 +1030,7 @@ dnl Checks for header files.
  dnl ========================================================
  AC_HEADER_DIRENT
  case "$target_os" in
@@ -24,7 +35,7 @@ $NetBSD: patch-as,v 1.1 2017/04/27 01:55:57 ryoon Exp $
  # for stuff like -lXshm
      CPPFLAGS="${CPPFLAGS} ${X_CFLAGS}"
      ;;
-@@ -1184,7 +1187,7 @@ then
+@@ -1155,7 +1161,7 @@ then
      fi
  
  	case "$target" in
@@ -33,3 +44,13 @@ $NetBSD: patch-as,v 1.1 2017/04/27 01:55:57 ryoon Exp $
  			AC_DEFINE(_REENTRANT)
  			AC_DEFINE(_THREAD_SAFE)
  			dnl -pthread links in -lpthread, so don't specify it explicitly.
+@@ -1755,6 +1761,9 @@ elif test "$CPU_ARCH" = "arm"; then
+ 
+     dnl ARM platforms may trap on unaligned accesses; catch the signal and
+     dnl recover.
++elif test "$CPU_ARCH" = "aarch64"; then
++    AC_DEFINE(JS_CODEGEN_ARM64)
++    JS_CODEGEN_ARM64=1
+ elif test "$CPU_ARCH" = "mips32"; then
+     AC_DEFINE(JS_CODEGEN_MIPS32)
+     JS_CODEGEN_MIPS32=1
