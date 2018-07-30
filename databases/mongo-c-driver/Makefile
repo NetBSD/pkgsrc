@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2018/05/17 14:10:11 fhajny Exp $
+# $NetBSD: Makefile,v 1.36 2018/07/30 12:48:48 jperkin Exp $
 
 DISTNAME=	mongo-c-driver-1.9.5
 CATEGORIES=	databases
@@ -39,6 +39,8 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man3
 #TEST_TARGET=		check
 
 PYTHON_FOR_BUILD_ONLY=	yes
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-D_XOPEN_SOURCE=1
 
 .include "../../lang/python/application.mk"
 
