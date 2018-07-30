@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2018/06/12 17:50:23 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6 2018/07/30 03:17:50 minskim Exp $
 
-DISTNAME=	viper-0.0.20170723
+DISTNAME=	viper-1.0.2
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	3
-MASTER_SITES=	${MASTER_SITE_GITHUB:=spf13/}
 CATEGORIES=	devel
-GITHUB_TAG=	25b30aa063fc18e48662b86996252eabdcf2f0c7
+MASTER_SITES=	${MASTER_SITE_GITHUB:=spf13/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 GITHUB_PROJECT= ${PKGBASE:S/^go-//}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,7 +12,7 @@ HOMEPAGE=	https://github.com/spf13/viper
 COMMENT=	Go configuration with fangs
 LICENSE=	mit
 
-GO_DIST_BASE=	${GITHUB_PROJECT}-${GITHUB_TAG}
+GO_DIST_BASE=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 GO_SRCPATH=	github.com/spf13/viper
 
 .include "../../www/go-toml-pelletier/buildlink3.mk"
