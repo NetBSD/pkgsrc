@@ -1,7 +1,13 @@
-# $NetBSD: Makefile.php,v 1.6 2018/07/18 07:33:12 manu Exp $
+# $NetBSD: Makefile.php,v 1.7 2018/07/30 07:17:16 manu Exp $
 # used by lang/php72/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
+
+# With --disable-gcc-global-regs, works around 
+# https://bugs.php.net/bug.php?id=74527
+.if ${MACHINE_ARCH} == "i386"
+GCC_REQD+=		6.4
+.endif
 
 # the binary actually needs full dep on PCRE
 BUILDLINK_DEPMETHOD.pcre=	full
