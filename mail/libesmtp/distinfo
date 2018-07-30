@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2015/11/03 23:27:08 agc Exp $
+$NetBSD: distinfo,v 1.14 2018/07/30 13:38:08 jperkin Exp $
 
 SHA1 (libesmtp-1.0.6.tar.bz2) = cf538cfc6cb15d9d99bdeb20a3b3b6b320d97df3
 RMD160 (libesmtp-1.0.6.tar.bz2) = 7489ef298b56085f8788a3af4d17aed4ef0f1077
@@ -6,3 +6,4 @@ SHA512 (libesmtp-1.0.6.tar.bz2) = c122fc5995b76771cce2db58c9e59597cc3a76d273feb6
 Size (libesmtp-1.0.6.tar.bz2) = 365506 bytes
 SHA1 (patch-ab) = cc027b93ae55b84c1b569ddcdd2644d4f63a33a5
 SHA1 (patch-ae) = b4ef8a1c015483824d1897c5ef72b8ed2a158860
+SHA1 (patch-ntlm_client-ntlm.c) = a04522eb54bb6a8869e59ed5c4963ef194c4e446
