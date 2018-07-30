@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/03/03 22:35:51 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/07/30 19:37:51 ryoon Exp $
 cross-arm-none-eabi/arm-none-eabi/bin/ar
 cross-arm-none-eabi/arm-none-eabi/bin/as
 cross-arm-none-eabi/arm-none-eabi/bin/ld
@@ -60,7 +60,6 @@ cross-arm-none-eabi/man/man1/arm-none-eabi-dlltool.1
 cross-arm-none-eabi/man/man1/arm-none-eabi-elfedit.1
 cross-arm-none-eabi/man/man1/arm-none-eabi-gprof.1
 cross-arm-none-eabi/man/man1/arm-none-eabi-ld.1
-cross-arm-none-eabi/man/man1/arm-none-eabi-nlmconv.1
 cross-arm-none-eabi/man/man1/arm-none-eabi-nm.1
 cross-arm-none-eabi/man/man1/arm-none-eabi-objcopy.1
 cross-arm-none-eabi/man/man1/arm-none-eabi-objdump.1
