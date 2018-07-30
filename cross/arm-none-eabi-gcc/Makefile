@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2018/05/26 00:59:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2018/07/30 19:41:02 ryoon Exp $
 
-DISTNAME=		gcc-8.1.0
+DISTNAME=		gcc-8.2.0
 PKGNAME=		cross-arm-none-eabi-${DISTNAME}
 CATEGORIES=		cross
 NEWLIBVER=		3.0.0
