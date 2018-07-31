@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1336 2018/07/31 10:20:38 wen Exp $
+# $NetBSD: Makefile,v 1.1337 2018/07/31 16:44:21 nia Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -704,6 +704,7 @@ SUBDIR+=	py-grappelli_safe
 SUBDIR+=	py-gunicorn
 SUBDIR+=	py-h11
 SUBDIR+=	py-h2
+SUBDIR+=	py-http_ece
 SUBDIR+=	py-http-parser
 SUBDIR+=	py-httpbin
 SUBDIR+=	py-httpie
