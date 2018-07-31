@@ -1,0 +1,14 @@
+$NetBSD: patch-test,v 1.1 2018/07/31 05:38:56 schmonz Exp $
+
+Don't bake build host into binary packages.
+
+--- test.orig	2018-07-17 14:55:25.000000000 +0000
++++ test
+@@ -36,6 +36,7 @@ version = readfile('version').strip()
+ shorthostname = platform.node().split('.')[0].lower()
+ okcharacters = string.ascii_letters + string.digits
+ shorthostname = ''.join(c for c in shorthostname if c in okcharacters)
++shorthostname = 'pkgsrchostname'
+ 
+ startdir = os.getcwd()
+ 
