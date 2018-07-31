@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.2 2018/07/31 05:38:56 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2018/07/31 06:34:11 schmonz Exp $
 
-SHA1 (djbsort-20180717.tar.gz) = 8f6efd8f66aa23707d54c083b9fb28371a409c55
-RMD160 (djbsort-20180717.tar.gz) = 64d92cccf13d8a997ea25ee77491f54b6a6b3ce1
-SHA512 (djbsort-20180717.tar.gz) = c26a871c46006580343b2876203264c8de0db613ee90ba5dd050f46a71a346d9340ecd06220dc1c0a46a6c1cd910af4bd2cb3fcd39588a62cc2a4a996fc9113e
-Size (djbsort-20180717.tar.gz) = 25055 bytes
+SHA1 (djbsort-20180729.tar.gz) = 7b64b9c5b3c6428cb6bc16638876f57ffff3c58b
+RMD160 (djbsort-20180729.tar.gz) = 65455661524b5d2cdd21c1c329a9065cfc9b3b0d
+SHA512 (djbsort-20180729.tar.gz) = b46c36514ce0c2c1716421d4da216d2e7ddb80e8e9a1b97b274ab0b3fe7271ea946a65485e81d4dc76c080658b41ef1e2fa64a225594532f1be98dc29535b2a6
+Size (djbsort-20180729.tar.gz) = 29347 bytes
 SHA1 (patch-build) = 0f1ae219495cc63fc301aa1f9ae1c1655da3aaa3
 SHA1 (patch-test) = b5ba29b15d7baa896bf9e47a1522e88e73df4c9e
 SHA1 (patch-upgrade) = 2bec25c36e1ed28c67e4967ac929780d28bb2e68
