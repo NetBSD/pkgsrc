@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2018/05/16 08:23:29 leot Exp $
+# $NetBSD: Makefile,v 1.31 2018/07/31 13:13:46 jperkin Exp $
 #
 
 DISTNAME=	gammu-1.39.0
@@ -35,6 +35,8 @@ CMAKE_ARGS+=	-DINSTALL_DOC=ON
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash:run msgfmt
 REPLACE_BASH=	utils/gammu-config utils/jadmaker
+
+CFLAGS.SunOS+=	-Du_int8_t=uint8_t -Du_int32_t=uint32_t
 
 # needed because of https://bugs.cihar.com/view.php?id=908
 BUILDLINK_TRANSFORM+=	rm:-Werror
