@@ -1,0 +1,13 @@
+# $NetBSD: DEINSTALL,v 1.1 2018/07/31 05:38:56 schmonz Exp $
+
+SHAREDIR="@SHAREDIR@"
+
+case "${STAGE}" in
+
+DEINSTALL)
+	cd ${PREFIX}/${SHAREDIR}
+	for i in $(${CAT} pseudo-PLIST); do
+		${RM} -f ${PREFIX}/${i}
+	done
+	;;
+esac
