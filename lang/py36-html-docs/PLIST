@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/05/07 08:36:10 leot Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/07/31 10:12:26 leot Exp $
 share/doc/python3.6/.buildinfo
 share/doc/python3.6/_images/hashlib-blake2-tree.png
 share/doc/python3.6/_images/logging_flow.png
@@ -88,6 +88,7 @@ share/doc/python3.6/_sources/extending/embedding.rst.txt
 share/doc/python3.6/_sources/extending/extending.rst.txt
 share/doc/python3.6/_sources/extending/index.rst.txt
 share/doc/python3.6/_sources/extending/newtypes.rst.txt
+share/doc/python3.6/_sources/extending/newtypes_tutorial.rst.txt
 share/doc/python3.6/_sources/extending/windows.rst.txt
 share/doc/python3.6/_sources/faq/design.rst.txt
 share/doc/python3.6/_sources/faq/extending.rst.txt
@@ -583,6 +584,7 @@ share/doc/python3.6/extending/embedding.html
 share/doc/python3.6/extending/extending.html
 share/doc/python3.6/extending/index.html
 share/doc/python3.6/extending/newtypes.html
+share/doc/python3.6/extending/newtypes_tutorial.html
 share/doc/python3.6/extending/windows.html
 share/doc/python3.6/faq/design.html
 share/doc/python3.6/faq/extending.html
