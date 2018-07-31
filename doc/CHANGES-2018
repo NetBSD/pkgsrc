@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3405 2018/07/31 12:27:14 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.3406 2018/07/31 12:35:03 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4835,3 +4835,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Test-Simple to 1.302128 [wen 2018-07-31]
 	Updated devel/p5-Test-POE-Client-TCP to 1.22 [wen 2018-07-31]
 	Updated mail/rspamd to 1.7.8 [fhajny 2018-07-31]
+	Updated sysutils/consul to 1.2.2 [fhajny 2018-07-31]
