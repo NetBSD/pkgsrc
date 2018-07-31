@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1335 2018/07/28 12:25:36 bsiegert Exp $
+# $NetBSD: Makefile,v 1.1336 2018/07/31 10:20:38 wen Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -149,7 +149,6 @@ SUBDIR+=	ikiwiki
 SUBDIR+=	jalbum
 SUBDIR+=	jetty7
 SUBDIR+=	jetty9
-SUBDIR+=	joomla
 SUBDIR+=	kahua
 SUBDIR+=	kannel
 SUBDIR+=	kdewebdev4
