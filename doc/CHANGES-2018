@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3404 2018/07/31 11:29:37 wen Exp $
+$NetBSD: CHANGES-2018,v 1.3405 2018/07/31 12:27:14 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4834,3 +4834,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added graphics/py-imageio version 2.3.0 [prlw1 2018-07-31]
 	Updated devel/p5-Test-Simple to 1.302128 [wen 2018-07-31]
 	Updated devel/p5-Test-POE-Client-TCP to 1.22 [wen 2018-07-31]
+	Updated mail/rspamd to 1.7.8 [fhajny 2018-07-31]
