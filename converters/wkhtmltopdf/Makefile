@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/09/10 19:58:36 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2018/07/31 12:32:04 manu Exp $
 
 DISTNAME=       wkhtmltox-0.12.4
 PKGNAME=	wkhtmltopdf-0.12.4
@@ -14,9 +14,11 @@ HOMEPAGE=	https://wkhtmltopdf.org/
 COMMENT=	Command line tools to render HTML into PDF
 LICENSE=	gnu-lgpl-v3
 
-USE_LANGUAGES+=	c c++ gnu++11
+USE_LANGUAGES+=	c c++ gnu++98
 USE_TOOLS+=	perl
 #USE_LIBTOOL=	yes
+
+BUILDLINK_TRANSFORM+=   opt:-std=gnu++11:-std=gnu++98 
 
 SUBST_CLASSES+=		x11
 SUBST_MESSAGE.x11=	Fixing x11 options.
