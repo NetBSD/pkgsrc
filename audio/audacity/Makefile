@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2018/04/29 05:46:36 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2018/07/31 21:10:29 jperkin Exp $
 
 DISTNAME=		audacity-minsrc-2.1.2
 PKGNAME=		${DISTNAME:S/-minsrc//1}
@@ -44,8 +44,11 @@ CONFIG_GUESS_OVERRIDE=		\
 CONFIG_SUB_OVERRIDE=		\
 	config.sub */config.sub */*/config.sub */*/*/config.sub
 
+CFLAGS.SunOS+=	-fPIC
+
 PTHREAD_AUTO_VARS=	yes
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
+BUILDLINK_TRANSFORM+=	rm:-Wl,--version-script=./build/vamp-plugin.map
 
 # regen Makefile.in to avoid being built as shared libraries
 pre-configure:

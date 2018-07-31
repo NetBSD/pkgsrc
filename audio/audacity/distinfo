@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.35 2018/03/31 20:08:11 joerg Exp $
+$NetBSD: distinfo,v 1.36 2018/07/31 21:10:29 jperkin Exp $
 
 SHA1 (audacity-minsrc-2.1.2.tar.xz) = d0b8924b846f833182e674d621b28eb666cc97d6
 RMD160 (audacity-minsrc-2.1.2.tar.xz) = 47fccf8b96b6db95a677045bf122084d233bd80c
@@ -12,11 +12,13 @@ SHA1 (patch-lib-src_FileDialog_Makefile.in) = fe4569e6f7d4fbd54e0aa2dd84e7474adb
 SHA1 (patch-lib-src_lib-widget-extra_Makefile.am) = 03d080c141259fbf02a9c5a70ce06625fcebf75e
 SHA1 (patch-lib-src_libnyquist_nyquist_nyqsrc_sndread.c) = dbc0b5b88043c7b2895742e78e6a5990f65012ef
 SHA1 (patch-lib-src_libnyquist_nyquist_sys_unix_switches.h) = d313f137f11d3e0fafa383ddeccbc89021e9ddee
-SHA1 (patch-lib-src_libnyquist_nyquist_xlisp_xlisp.h) = a0d194f7f7f278cfba1f54269e0323990abb73f3
+SHA1 (patch-lib-src_libnyquist_nyquist_xlisp_xlisp.h) = 2d4558f059d86633a1fcdda22ef0c914758b35a0
 SHA1 (patch-lib-src_portaudio-v19_Makefile.in) = 9e86fbd93d322322b8416ef6b43ba5c98141c986
 SHA1 (patch-lib-src_portmixer_src-extra_Makefile.am) = 9a0d5be37753683a2cade42673edb3d08e01ab4d
 SHA1 (patch-lib-src_sbsms_src-extra_Makefile.am) = 2beca18a286de1b26f4f96976fb58e1665d0531c
 SHA1 (patch-src_FFmpeg.h) = 664efb8a668a9dd5f76704e5a46c495a8c2c3a4d
+SHA1 (patch-src_effects_Effect.cpp) = ceca279b2d9e0044141a2ad5151390983ae41c23
+SHA1 (patch-src_effects_EffectManager.cpp) = 78e2d1290170e61b0363e5fa453bb11a5b28d411
 SHA1 (patch-src_effects_NoiseRemoval.cpp) = 6d72545cde66ac90d4eb3821a3a3f384ccbf46f2
 SHA1 (patch-src_effects_VST_VSTEffect.cpp) = 76a55afd7977505801dd129e139c9782bfd8dfcb
 SHA1 (patch-src_effects_lv2_LV2Effect.cpp) = b001b79df1e924ef0635436f5b8d02db5fa00dd6
