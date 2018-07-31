@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3397 2018/07/31 10:18:52 leot Exp $
+$NetBSD: CHANGES-2018,v 1.3398 2018/07/31 10:23:07 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4827,3 +4827,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/curl to 7.61.0nb1 [wiz 2018-07-31]
 	Updated lang/py36-html-docs to 3.6.6 [leot 2018-07-31]
 	Added lang/py37-html-docs version 3.7.0 [leot 2018-07-31]
+	Removed www/joomla [wen 2018-07-31]
