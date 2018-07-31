@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/07/31 05:38:56 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2018/07/31 06:24:57 schmonz Exp $
 
 DISTNAME=		djbsort-20180717
 PKGREVISION=		1
@@ -11,6 +11,8 @@ COMMENT=		Library for sorting arrays of integers
 LICENSE=		public-domain
 
 DEPENDS+=		python27-[0-9]*:../../lang/python27
+
+USE_TOOLS+=		pax
 
 REPLACE_INTERPRETER+=	python27
 REPLACE.python27.old=	.*python2\{0,1\}[^ ]*
@@ -31,7 +33,9 @@ FILES_SUBST+=		INSTALL_DATA=${INSTALL_DATA:Q}
 FILES_SUBST+=		PSEUDO_PLIST=${PSEUDO_PLIST:Q}
 FILES_SUBST+=		SHAREDIR=${SHAREDIR:Q}
 
-INSTALLATION_DIRS=	include lib share
+INSTALLATION_DIRS=	include lib ${SHAREDIR}
+
+PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 pre-configure:
 	cd ${WRKSRC} && rm -f *.orig
@@ -39,9 +43,12 @@ pre-configure:
 do-build:
 	cd ${WRKSRC} && ./build
 
+pre-install:
+	${CP} pseudo-PLIST ${WRKSRC}
+	cd ${WRKSRC} && ${FIND} . -type f | ${SORT} | ${SED} -e 's|^\.|${SHAREDIR}|g' > ${WRKDIR}/PLIST_DYNAMIC
+
 do-install:
-	cp pseudo-PLIST ${WRKSRC}
-	cp -Rp ${WRKSRC} ${DESTDIR}${PREFIX}/${SHAREDIR}
+	cd ${WRKSRC} && pax -rw -pe -v . ${DESTDIR}${PREFIX}/${SHAREDIR}
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
