@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2018/07/20 03:34:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.27 2018/07/31 14:27:35 jperkin Exp $
 #
 
 DISTNAME=	grilo-plugins-0.2.9
@@ -15,6 +15,8 @@ LICENSE=	gnu-lgpl-v2
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config intltool xgettext
+
+CONFIGURE_ARGS+=	--disable-bliptv
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../net/grilo/buildlink3.mk"
