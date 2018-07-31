@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3400 2018/07/31 10:35:07 wen Exp $
+$NetBSD: CHANGES-2018,v 1.3401 2018/07/31 10:56:56 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4830,3 +4830,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Removed www/joomla [wen 2018-07-31]
 	Updated devel/p5-Type-Tiny to 1.004002 [wen 2018-07-31]
 	Updated devel/p5-Test2-Suite to 0.000115 [wen 2018-07-31]
+	Updated devel/p5-Test-TempDir-Tiny to 0.018 [wen 2018-07-31]
