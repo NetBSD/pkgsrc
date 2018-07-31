@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3395 2018/07/31 09:34:59 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3396 2018/07/31 10:12:43 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4825,3 +4825,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/djbsort to 20180717nb1 [schmonz 2018-07-30]
 	Updated math/djbsort to 20180729 [schmonz 2018-07-31]
 	Updated www/curl to 7.61.0nb1 [wiz 2018-07-31]
+	Updated lang/py36-html-docs to 3.6.6 [leot 2018-07-31]
