@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/04/16 14:34:07 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2018/07/31 15:35:38 jperkin Exp $
 
 DISTNAME=	lilv-0.20.0
 PKGREVISION=	7
@@ -26,7 +26,7 @@ INSTALLATION_DIRS=	${EGDIR}
 .include "../../mk/bsd.prefs.mk"
 
 PLIST_VARS+= lv2bench
-.if ${OPSYS} != "Darwin"
+.if ${OPSYS} != "Darwin" && ${OPSYS} != "SunOS"
 # Darwin doesn't have CLOCK_GETTIME so it doesn't compile this
 PLIST.lv2bench=	yes
 .endif
