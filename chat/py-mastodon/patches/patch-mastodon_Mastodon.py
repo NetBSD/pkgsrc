@@ -1,4 +1,4 @@
-$NetBSD: patch-mastodon_Mastodon.py,v 1.1 2018/07/31 16:14:29 nia Exp $
+$NetBSD: patch-mastodon_Mastodon.py,v 1.2 2018/07/31 21:14:33 nia Exp $
 
 'async' is a reserved keyword in Python 3.7.
 
@@ -65,7 +65,7 @@ $NetBSD: patch-mastodon_Mastodon.py,v 1.1 2018/07/31 16:14:29 nia Exp $
          return response
  
 -    def __stream(self, endpoint, listener, params={}, async=False):
-+    def __stream(self, endpoint, listener, params={}, usync=False):
++    def __stream(self, endpoint, listener, params={}, run_async=False):
          """
          Internal streaming API helper.
  
