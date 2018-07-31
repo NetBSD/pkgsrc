@@ -1,10 +1,10 @@
-$NetBSD: patch-configure,v 1.1 2016/02/20 11:28:26 jperkin Exp $
+$NetBSD: patch-configure,v 1.2 2018/07/31 13:46:31 jperkin Exp $
 
 Fix install_name on Darwin.
 
 --- configure.orig	2014-10-17 00:00:43.000000000 +0000
 +++ configure
-@@ -5217,14 +5217,14 @@ $as_echo_n "checking for shared library 
+@@ -5217,18 +5217,18 @@ $as_echo_n "checking for shared library
  			{ $as_echo "$as_me:${as_lineno-$LINENO}: result: Darwin" >&5
  $as_echo "Darwin" >&6; }
  			LIB_CFLAGS='-fPIC -DPIC'
@@ -21,3 +21,8 @@ Fix install_name on Darwin.
  			UNINSTALL_LIB='&& rm -f ${DESTDIR}${libdir}/$$i ${DESTDIR}${libdir}/$${i%.dylib}.${LIB_MAJOR}.dylib ${DESTDIR}${libdir}/$${i%.dylib}.${LIB_MAJOR}.${LIB_MINOR}.dylib'
  			CLEAN_LIB=''
  			;;
+-		solaris*)
++		notsolaris*)
+ 			{ $as_echo "$as_me:${as_lineno-$LINENO}: result: Solaris" >&5
+ $as_echo "Solaris" >&6; }
+ 			LIB_CFLAGS='-fPIC -DPIC'
