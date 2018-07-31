@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2018/07/19 06:47:43 adam Exp $
+# $NetBSD: Makefile.common,v 1.31 2018/07/31 19:13:10 rjs Exp $
 # used by multimedia/ffmpeg3/Makefile
 # used by multimedia/ffplay3/Makefile
 
@@ -69,7 +69,9 @@ SUBST_SED.sunwspro+=	-e "s/-std=c99/-xc99=all/"
 SUBST_SED.sunwspro+=	-e "s/-Wl,-rpath-link,/-L /g"
 .endif
 
+.if ${MACHINE_ARCH} == x86_64 || ${MACHINE_ARCH} == i386
 BUILD_DEPENDS+=	nasm>=2.13:../../devel/nasm
+.endif
 
 REPLACE_PERL+=	doc/texi2pod.pl
 REPLACE_SH+=	configure ffbuild/version.sh
