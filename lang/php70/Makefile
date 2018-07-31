@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/07/20 13:27:28 taca Exp $
+# $NetBSD: Makefile,v 1.13 2018/07/31 01:17:56 maya Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
@@ -46,12 +46,6 @@ INSTALLATION_DIRS+=	${CGIDIR} ${PHP_EXTENSION_DIR} ${EGDIR} share/php
 # https://bugs.php.net/bug.php?id=73880
 .if ${MACHINE_ARCH} != "x86_64"
 CONFIGURE_ARGS+=	--without-pcre-jit
-.endif
-
-.if ${MACHINE_ARCH} == "i386"
-# segfaults when buidling with many compilers
-# https://bugs.php.net/bug.php?id=74527
-CONFIGURE_ARGS+=	--disable-gcc-global-regs
 .endif
 
 # Make sure modules can link correctly
