@@ -1,0 +1,4 @@
+include/djbsort_cpucycles.h
+include/int32_sort.h
+include/uint32_sort.h
+lib/libdjbsort.a
