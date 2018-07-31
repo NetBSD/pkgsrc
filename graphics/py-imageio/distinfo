@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/07/31 11:03:57 prlw1 Exp $
+
+SHA1 (imageio-2.3.0.tar.gz) = c21fb174f717a989fe74ad176747a4bdc0186c59
+RMD160 (imageio-2.3.0.tar.gz) = bbbdd62ea54aaab3202938c20f0f211b96a93c8e
+SHA512 (imageio-2.3.0.tar.gz) = 2cea1ead0dd541d013bbf0317f4e22fef99db8c3c8c6dc6deb5c5a1ace17fb750807e455c14eb2b3bacd6fc955c58912b2d7f2ba9bc016ab1fda7b70d0c58f41
+Size (imageio-2.3.0.tar.gz) = 284032 bytes
