@@ -1,12 +1,13 @@
-# $NetBSD: Makefile.php,v 1.10 2018/07/30 07:17:15 manu Exp $
+# $NetBSD: Makefile.php,v 1.11 2018/07/31 01:17:56 maya Exp $
 # used by lang/php70/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
 
-# With --disable-gcc-global-regs, works around
+# segfaults when buidling with many compilers
 # https://bugs.php.net/bug.php?id=74527
+# https://gcc.gnu.org/bugzilla/show_bug.cgi?id=86236
 .if ${MACHINE_ARCH} == "i386"
-GCC_REQD+=		6.4
+CONFIGURE_ARGS+=	--disable-gcc-global-regs
 .endif
 
 .include "../../lang/php70/Makefile.common"
