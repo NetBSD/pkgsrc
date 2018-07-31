@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/06/13 15:49:40 youri Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/07/31 09:49:46 jperkin Exp $
 bin/cd-create-profile
 bin/cd-fix-profile
 bin/cd-iccdump
@@ -34,6 +34,7 @@ include/colord-1/colord/cd-spectrum.h
 include/colord-1/colord/cd-transform.h
 include/colord-1/colord/cd-version.h
 lib/colord-sensors/libcolord_sensor_dummy.la
+lib/girepository-1.0/Colord-1.0.typelib
 lib/libcolord.la
 lib/libcolordprivate.la
 lib/pkgconfig/colord.pc
@@ -120,6 +121,7 @@ share/dbus-1/interfaces/org.freedesktop.ColorManager.xml
 share/dbus-1/services/org.freedesktop.ColorHelper.service
 share/dbus-1/system-services/org.freedesktop.ColorManager.service
 share/examples/colord/org.freedesktop.ColorManager.conf
+share/gir-1.0/Colord-1.0.gir
 share/glib-2.0/schemas/org.freedesktop.ColorHelper.gschema.xml
 share/locale/as/LC_MESSAGES/colord.mo
 share/locale/bn_IN/LC_MESSAGES/colord.mo
