@@ -1,4 +1,4 @@
-# $NetBSD: DEINSTALL,v 1.1 2018/07/31 05:38:56 schmonz Exp $
+# $NetBSD: DEINSTALL,v 1.2 2018/07/31 06:24:57 schmonz Exp $
 
 SHAREDIR="@SHAREDIR@"
 
@@ -9,5 +9,9 @@ DEINSTALL)
 	for i in $(${CAT} pseudo-PLIST); do
 		${RM} -f ${PREFIX}/${i}
 	done
+	;;
+
+POST-DEINSTALL)
+	${RM} -rf ${PREFIX}/${SHAREDIR}
 	;;
 esac
