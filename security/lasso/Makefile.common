@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2016/03/14 09:43:42 manu Exp $
+# $NetBSD: Makefile.common,v 1.13 2018/07/31 12:39:34 jperkin Exp $
 #
 # used by security/lasso/Makefile
 # used by security/py-lasso/Makefile
@@ -20,6 +20,8 @@ CONFIGURE_ARGS+=	--with-sasl2=${PREFIX}
 CONFIGURE_ARGS+=	--with-zlib=${PREFIX}
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config perl
+
+CFLAGS.NetBSD+=	-D_POSIX_C_SOURCE=199506
 
 PKGCONFIG_OVERRIDE+=	lasso.pc.in
 
