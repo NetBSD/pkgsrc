@@ -1,9 +1,6 @@
-$NetBSD: patch-configure,v 1.3 2017/12/18 15:33:59 jperkin Exp $
+$NetBSD: patch-configure,v 1.4 2018/07/31 12:39:34 jperkin Exp $
 
-Make sure _POSIX_C_SOURCE=199506 so that strtok() is defined by <string.h>
-Otherwise, compiler assumes it returns an int, which badly breaks on LP64
-
-Also use = instead of == for test(1) portability sake.
+Use = instead of == for test(1) portability sake.
 
 --- configure.orig	2016-02-18 23:11:38.249290059 +0000
 +++ configure
@@ -26,11 +23,3 @@ Also use = instead of == for test(1) portability sake.
      JNI_EXTRA_LDFLAGS="-shrext .jnilib"
  fi
  
-@@ -15650,6 +15647,7 @@ fi
- 
- 
- LASSO_PUB_CFLAGS="$LASSO_DEFINES"
-+LASSO_CFLAGS="$LASSO_CFLAGS -D_POSIX_C_SOURCE=199506"
- LASSO_CORE_CFLAGS="$LASSO_CFLAGS $LASSO_DEFINES $Z_CFLAGS -DLASSO_INTERNALS"
- if test $MINGW -eq 1; then
-   LASSO_CORE_LIBS="-llasso-0"
