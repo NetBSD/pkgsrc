@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.487 2018/07/15 21:22:56 minskim Exp $
+# $NetBSD: Makefile,v 1.488 2018/07/31 10:18:35 leot Exp $
 #
 
 COMMENT=	Programming languages
@@ -201,6 +201,7 @@ SUBDIR+=	py27-html-docs
 SUBDIR+=	py34-html-docs
 SUBDIR+=	py35-html-docs
 SUBDIR+=	py36-html-docs
+SUBDIR+=	py37-html-docs
 #SUBDIR+=	python		# only contains Makefile fragments
 SUBDIR+=	python27
 SUBDIR+=	python34
