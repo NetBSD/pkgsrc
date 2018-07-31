@@ -1,0 +1,2 @@
+py-http_ece is a simple implementation of the HTTP encrypted
+content-encoding (RFC 8188).
