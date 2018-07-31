@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2018/05/16 16:49:44 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.13 2018/07/31 12:27:02 fhajny Exp $
 bin/rspamadm
 bin/rspamadm-${PKGVERSION}
 bin/rspamc
@@ -12,6 +12,7 @@ man/man1/rspamc.1
 man/man8/rspamd.8
 share/examples/rspamd/2tld.inc
 share/examples/rspamd/actions.conf
+share/examples/rspamd/cgp.inc
 share/examples/rspamd/common.conf
 share/examples/rspamd/composites.conf
 share/examples/rspamd/dmarc_whitelist.inc
@@ -150,6 +151,8 @@ share/rspamd/languages/ur.json
 share/rspamd/languages/vi.json
 share/rspamd/languages/yi.json
 share/rspamd/languages/zh-CN.json
+share/rspamd/lib/ansicolors.lua
+share/rspamd/lib/argparse.lua
 share/rspamd/lib/fun.lua
 share/rspamd/lib/global_functions.lua
 share/rspamd/lib/lua_auth_results.lua
@@ -162,17 +165,17 @@ share/rspamd/lib/lua_redis.lua
 share/rspamd/lib/lua_squeeze_rules.lua
 share/rspamd/lib/lua_stat.lua
 share/rspamd/lib/lua_util.lua
-share/rspamd/lib/rspamadm/ansicolors.lua
+share/rspamd/lib/plugins_stats.lua
+share/rspamd/lib/rescore_utility.lua
 share/rspamd/lib/rspamadm/confighelp.lua
 share/rspamd/lib/rspamadm/configwizard.lua
 share/rspamd/lib/rspamadm/corpus_test.lua
 share/rspamd/lib/rspamadm/fuzzy_convert.lua
 share/rspamd/lib/rspamadm/fuzzy_stat.lua
-share/rspamd/lib/rspamadm/getopt.lua
 share/rspamd/lib/rspamadm/grep.lua
-share/rspamd/lib/rspamadm/plugins_stats.lua
+share/rspamd/lib/rspamadm/keypair.lua
+share/rspamd/lib/rspamadm/mime.lua
 share/rspamd/lib/rspamadm/rescore.lua
-share/rspamd/lib/rspamadm/rescore_utility.lua
 share/rspamd/lib/rspamadm/stat_convert.lua
 share/rspamd/lua/antivirus.lua
 share/rspamd/lua/arc.lua
@@ -258,9 +261,9 @@ share/rspamd/www/js/lib/domReady.js
 share/rspamd/www/js/lib/footable.min.js
 share/rspamd/www/js/lib/humanize.min.js
 share/rspamd/www/js/lib/jquery-3.3.1.min.js
+share/rspamd/www/js/lib/require.min.js
 share/rspamd/www/js/lib/visibility.min.js
 share/rspamd/www/js/main.js
-share/rspamd/www/js/require.js
 share/rspamd/www/plugins.txt
 share/rspamd/www/react-index.html
 @pkgdir etc/rspamd
