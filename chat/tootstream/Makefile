@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/07/31 15:55:16 nia Exp $
+# $NetBSD: Makefile,v 1.3 2018/07/31 16:15:33 nia Exp $
 
 DISTNAME=	tootstream-0.3.4
 CATEGORIES=	chat www
@@ -13,7 +13,6 @@ EXTRACT_USING=	bsdtar
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE+=	27
-PYTHON_VERSIONS_INCOMPATIBLE+=	37 # mastodon.py
 
 DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-colored-[0-9]*:../../textproc/py-colored
