@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/07/20 13:29:50 taca Exp $
+# $NetBSD: Makefile,v 1.13 2018/07/31 01:17:56 maya Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
@@ -39,12 +39,6 @@ SUBST_SED.path=		-e 's,@CGIDIR@,${CGIDIR},g'
 SUBST_SED.path+=	-e 's,@PREFIX@,${PREFIX},g'
 
 INSTALLATION_DIRS+=	${CGIDIR} ${PHP_EXTENSION_DIR} ${EGDIR} share/php
-
-# segfaults when buidling with many compilers
-# https://bugs.php.net/bug.php?id=74527
-.if ${MACHINE_ARCH} == "i386"
-CONFIGURE_ARGS+=	--disable-gcc-global-regs
-.endif
 
 # Make sure modules can link correctly
 .if ${OPSYS} == "Darwin"
