@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/07/31 15:54:26 nia Exp $
+# $NetBSD: Makefile,v 1.5 2018/07/31 16:14:29 nia Exp $
 
 VERSION=	1.2.2
 DISTNAME=	Mastodon.py-${VERSION}
@@ -13,9 +13,6 @@ LICENSE=	mit
 
 EXTRACT_USING=	bsdtar
 USE_LANGUAGES=	# none
-
-# collision with the async keyword, issues/120
-PYTHON_VERSIONS_INCOMPATIBLE+=	37
 
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
