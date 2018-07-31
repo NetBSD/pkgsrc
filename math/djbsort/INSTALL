@@ -1,0 +1,59 @@
+# $NetBSD: INSTALL,v 1.1 2018/07/31 05:38:56 schmonz Exp $
+
+DIFF="@DIFF@"
+INSTALL_DATA="@INSTALL_DATA@"
+PSEUDO_PLIST="@PSEUDO_PLIST@"
+SHAREDIR="@SHAREDIR@"
+
+case "${STAGE}" in
+
+POST-INSTALL)
+	cd ${PREFIX}/${SHAREDIR}
+
+	./test
+	TEST_EXITCODE=$?
+	if [ ${TEST_EXITCODE} -ne 0 ]; then
+		${CAT} <<EOF
+===========================================================================
+
+ERROR: tests exited nonzero (${TEST_EXITCODE}).
+
+The installation may not be correct or performant.
+
+===========================================================================
+EOF
+		exit 1
+	fi
+
+	./upgrade
+
+	cd link-install/newest
+	_INSTALLED_FILES=''
+	for i in include/*.h; do
+		${INSTALL_DATA} ${i} ${PREFIX}/include
+		_INSTALLED_FILES="${_INSTALLED_FILES}"'
+'"include/$(${BASENAME} ${i})"
+	done
+	for i in lib/*/*.a; do
+		${INSTALL_DATA} ${i} ${PREFIX}/lib
+		_INSTALLED_FILES="${_INSTALLED_FILES}"'
+'"lib/$(${BASENAME} ${i})"
+	done
+	_INSTALLED_FILES=$(${ECHO} "${_INSTALLED_FILES}" | ${GREP} -v '^$' | ${SORT} -u)
+
+	cd ${PREFIX}/${SHAREDIR}
+	echo "${_INSTALLED_FILES}" | ${DIFF} -u pseudo-PLIST -
+	DIFF_EXITCODE=$?
+	if [ ${DIFF_EXITCODE} -ne 0 ]; then
+		${CAT} <<EOF
+===========================================================================
+
+ERROR: installed files do not match pseudo-PLIST.
+
+===========================================================================
+EOF
+		exit 1
+	fi
+
+	;;
+esac
