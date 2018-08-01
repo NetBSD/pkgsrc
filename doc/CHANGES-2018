@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3410 2018/08/01 06:53:51 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.3411 2018/08/01 07:07:16 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4840,3 +4840,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/putty to 0.69nb4 [maya 2018-08-01]
 	Updated sysutils/checkpassword to 0.90nb1 [schmonz 2018-08-01]
 	Updated sysutils/checkpassword-pam to 0.99nb1 [schmonz 2018-08-01]
+	Updated textproc/p5-Text-Quoted to 2.10 [wen 2018-08-01]
