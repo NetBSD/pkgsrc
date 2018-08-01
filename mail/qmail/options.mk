@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.50 2018/07/29 23:26:44 schmonz Exp $
+# $NetBSD: options.mk,v 1.51 2018/08/01 07:10:27 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=		eai inet6 pam sasl syncdir tls
-PKG_SUPPORTED_OPTIONS+=		qmail-customerror qmail-rejectutils qmail-srs
+PKG_SUPPORTED_OPTIONS+=		qmail-customerror qmail-srs
 PKG_SUGGESTED_OPTIONS+=		eai sasl syncdir tls
-PKG_SUGGESTED_OPTIONS+=		qmail-customerror qmail-rejectutils qmail-srs
+PKG_SUGGESTED_OPTIONS+=		qmail-customerror qmail-srs
 
 # Formerly optional patches, now unconditionally applied:
 QMAILPATCHES=			netqmail:${DEFAULT_DISTFILES}
@@ -66,9 +66,9 @@ PATCH_DIST_STRIP.${EAI_PATCH}=	-p1
 .endif
 
 .if !empty(PKG_OPTIONS:Mpam)
-DEPENDS+=			checkpassword-pam-[0-9]*:../../sysutils/checkpassword-pam
+DEPENDS+=			checkpassword-pam>=0.99nb1:../../sysutils/checkpassword-pam
 .else
-DEPENDS+=			checkpassword-[0-9]*:../../sysutils/checkpassword
+DEPENDS+=			checkpassword>=0.90nb1:../../sysutils/checkpassword
 .endif
 
 .if !empty(PKG_OPTIONS:Mqmail-customerror)
@@ -77,10 +77,6 @@ CUSTOMERROR_PATCH=		qmail-queue-custom-error-v2.netqmail-1.05.patch
 PATCHFILES+=			${CUSTOMERROR_PATCH}
 SITES.${CUSTOMERROR_PATCH}=	https://notes.sagredo.eu/files/qmail/patches/
 PATCH_DIST_STRIP.${CUSTOMERROR_PATCH}=-p1
-.endif
-
-.if !empty(PKG_OPTIONS:Mqmail-rejectutils)
-DEPENDS+=			qmail-rejectutils-[0-9]*:../../mail/qmail-rejectutils
 .endif
 
 PLIST_VARS+=			srs
