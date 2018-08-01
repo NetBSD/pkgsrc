@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2018/03/04 16:01:53 wiz Exp $
+$NetBSD: distinfo,v 1.9 2018/08/01 07:40:14 wen Exp $
 
-SHA1 (CGI-Simple-1.15.tar.gz) = c721e73cb244a50ee7ce9ce5d347b48b5b1f7523
-RMD160 (CGI-Simple-1.15.tar.gz) = 043320783dbadec214227c3d809d5fab2341de4c
-SHA512 (CGI-Simple-1.15.tar.gz) = 5246293e1819bc10d97dfb7f269f27105065969aea8daaf893f173ca0f60eefc7c10620930d2515aca1c769151e60d24874a0bac13d40549ae282dafb7ba355c
-Size (CGI-Simple-1.15.tar.gz) = 86318 bytes
+SHA1 (CGI-Simple-1.16.tar.gz) = 39eba7225cd2abfd629b102f414a1bf64b237f14
+RMD160 (CGI-Simple-1.16.tar.gz) = b10fffe0e1f673729cc08aadc91d24f70df86e7a
+SHA512 (CGI-Simple-1.16.tar.gz) = 5026bcf36c2329f40a24632758a8bd72073b7d0f8203d88e1806c82dd353e205a769ac854aca788dd88fe21c28e2c2e788aaeab5c5346393978c2cff625dfcbd
+Size (CGI-Simple-1.16.tar.gz) = 86384 bytes
