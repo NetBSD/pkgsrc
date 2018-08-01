@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2018/07/29 23:29:17 schmonz Exp $
+# $NetBSD: Makefile,v 1.47 2018/08/01 07:15:21 schmonz Exp $
 #
 
-DISTNAME=		qmail-run-20180730
+DISTNAME=		qmail-run-20180801
 CATEGORIES=		mail
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -11,15 +11,16 @@ COMMENT=		Configures qmail to receive and deliver mail
 LICENSE=		2-clause-bsd
 
 DEPENDS+=		mess822-[0-9]*:../../mail/mess822
-DEPENDS_QMAIL=		qmail>=1.03nb29:../../mail/qmail
+DEPENDS+=		pkg_alternatives-[0-9]*:../../pkgtools/pkg_alternatives
+DEPENDS_QMAIL=		qmail>=1.03nb36:../../mail/qmail
 DEPENDS+=		${DEPENDS_QMAIL}
 DEPENDS+=		qmail-qfilter>1.5nb1:../../mail/qmail-qfilter
+DEPENDS+=		qmail-rejectutils-[0-9]*:../../mail/qmail-rejectutils
 
 WRKSRC=			${WRKDIR}
 NO_BUILD=		yes
 NO_CHECKSUM=		yes
 
-FILES_SUBST+=		CHECKPASSWORD_RELPATH=${CHECKPASSWORD_RELPATH:Q}
 FILES_SUBST+=		QMAIL_DAEMON_USER=${QMAIL_DAEMON_USER:Q}
 FILES_SUBST+=		QMAIL_LOG_USER=${QMAIL_LOG_USER:Q}
 FILES_SUBST+=		QMAIL_SEND_USER=${QMAIL_SEND_USER:Q}
@@ -47,28 +48,11 @@ MAKEVARS+=	PKG_SYSCONFDIR.qmail-run
 .  endif
 .endif
 
-# Detect the checkpassword program of the installed qmail, so we can
-# refer to it from config files and rc.d scripts.
-#
-CHECKPASSWORD_DEP!=							\
-	${PKG_INFO} -qn ${DEPENDS_QMAIL:C/:.*$//:Q} | grep checkpassword
-CHECKPASSWORD_ABSPATH!=							\
-	${PKG_INFO} -qL ${CHECKPASSWORD_DEP} | grep bin
-CHECKPASSWORD_ABSDIR!=							\
-	dirname ${CHECKPASSWORD_ABSPATH}
-CHECKPASSWORD_RELDIR!=							\
-	basename ${CHECKPASSWORD_ABSDIR}
-CHECKPASSWORD_RELBIN!=							\
-	basename ${CHECKPASSWORD_ABSPATH}
-CHECKPASSWORD_RELPATH=${CHECKPASSWORD_RELDIR}/${CHECKPASSWORD_RELBIN}
-MAKEVARS+=	CHECKPASSWORD_RELPATH
-
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	mailer.conf qmail-procmail
 SUBST_FILES.paths+=	qmail-qread-client spamdyke-ofmipd.conf
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
-SUBST_SED.paths+=	-e 's,@CHECKPASSWORD_RELPATH@,${CHECKPASSWORD_RELPATH},g'
 SUBST_SED.paths+=	-e 's,@ECHO@,${ECHO},g'
 SUBST_SED.paths+=	-e 's,@SORT@,${SORT},g'
 SUBST_SED.paths+=	-e 's,@CAT@,${CAT},g'
