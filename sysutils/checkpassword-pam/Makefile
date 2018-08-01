@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2018/07/25 16:42:05 schmonz Exp $
+# $NetBSD: Makefile,v 1.11 2018/08/01 06:53:34 schmonz Exp $
 #
 
 DISTNAME=		checkpassword-pam-0.99
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=checkpasswd-pam/}
 
