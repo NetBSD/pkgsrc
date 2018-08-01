@@ -1,8 +1,9 @@
-$NetBSD: patch-unix_gtkwin.c,v 1.4 2017/03/17 00:11:48 maya Exp $
+$NetBSD: patch-unix_gtkwin.c,v 1.5 2018/08/01 05:34:18 maya Exp $
 
 Make the home/end keys work on BSD servers as well as Linux ones
+gdk_beep deprecated, use gdk_display_beep.
 
---- unix/gtkwin.c.orig	2017-02-18 17:10:15.000000000 +0000
+--- unix/gtkwin.c.orig	2017-04-24 13:52:45.000000000 +0000
 +++ unix/gtkwin.c
 @@ -1586,13 +1586,21 @@ gint key_event(GtkWidget *widget, GdkEve
  		use_ucsoutput = FALSE;
@@ -30,3 +31,12 @@ Make the home/end keys work on BSD servers as well as Linux ones
  		goto done;
  	    }
  	    if (code) {
+@@ -2921,7 +2929,7 @@ void sys_cursor(void *frontend, int x, i
+ void do_beep(void *frontend, int mode)
+ {
+     if (mode == BELL_DEFAULT)
+-	gdk_beep();
++	gdk_display_beep(gdk_display_get_default());
+ }
+ 
+ int char_width(Context ctx, int uc)
