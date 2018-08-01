@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3416 2018/08/01 14:30:48 maya Exp $
+$NetBSD: CHANGES-2018,v 1.3417 2018/08/01 15:01:24 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4846,3 +4846,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/p5-App-Nopaste to 1.012 [wen 2018-08-01]
 	Updated www/p5-CGI-Simple to 1.16 [wen 2018-08-01]
 	Updated www/otter-browser to 0.9.99.1 [maya 2018-08-01]
+	Updated x11/qt5-qtwebkit to 5.212.0.alpha2nb8 [maya 2018-08-01]
