@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3407 2018/07/31 16:44:37 nia Exp $
+$NetBSD: CHANGES-2018,v 1.3408 2018/08/01 05:34:39 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4837,3 +4837,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/rspamd to 1.7.8 [fhajny 2018-07-31]
 	Updated sysutils/consul to 1.2.2 [fhajny 2018-07-31]
 	Added www/py-http_ece version 1.0.5 [nia 2018-07-31]
+	Updated security/putty to 0.69nb4 [maya 2018-08-01]
