@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2018/07/04 13:40:37 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2018/08/01 15:50:16 tpaul Exp $
 
 DISTNAME=	dc-tools-1.6
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://mc.pp.se/dc/files/
 MASTER_SITES+=	https://github.com/abs0/dc-burn-netbsd/archive/
@@ -47,8 +48,8 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
 do-build:
-	cd ${WRKSRC} && ${CC} ${CFLAGS} -o dc-makeip makeip.c
-	cd ${WRKSRC} && ${CC} ${CFLAGS} -o dc-scramble scramble.c
+	cd ${WRKSRC} && ${CC} ${CFLAGS} ${LDFLAGS} -o dc-makeip makeip.c
+	cd ${WRKSRC} && ${CC} ${CFLAGS} ${LDFLAGS} -o dc-scramble scramble.c
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dc-makeip ${DESTDIR}${PREFIX}/bin
