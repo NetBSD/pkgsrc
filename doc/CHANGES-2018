@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3412 2018/08/01 07:10:46 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.3413 2018/08/01 07:15:37 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4842,3 +4842,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/checkpassword-pam to 0.99nb1 [schmonz 2018-08-01]
 	Updated textproc/p5-Text-Quoted to 2.10 [wen 2018-08-01]
 	Updated mail/qmail to 1.03nb36 [schmonz 2018-08-01]
+	Updated mail/qmail-run to 20180801 [schmonz 2018-08-01]
