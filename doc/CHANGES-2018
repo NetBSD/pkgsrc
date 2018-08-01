@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3409 2018/08/01 06:52:47 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.3410 2018/08/01 06:53:51 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4839,3 +4839,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added www/py-http_ece version 1.0.5 [nia 2018-07-31]
 	Updated security/putty to 0.69nb4 [maya 2018-08-01]
 	Updated sysutils/checkpassword to 0.90nb1 [schmonz 2018-08-01]
+	Updated sysutils/checkpassword-pam to 0.99nb1 [schmonz 2018-08-01]
