@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2018/06/14 12:22:21 youri Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2018/08/01 21:00:09 youri Exp $
 
 BUILDLINK_TREE+=	colord
 
@@ -10,4 +10,5 @@ BUILDLINK_PKGSRCDIR.colord?=	../../graphics/colord
 
 .endif	# COLORD_BUILDLINK3_MK
 
+.include "../../graphics/lcms2/buildlink3.mk"
 BUILDLINK_TREE+=	-colord
