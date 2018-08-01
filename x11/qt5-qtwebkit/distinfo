@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2018/01/17 19:37:33 markd Exp $
+$NetBSD: distinfo,v 1.12 2018/08/01 15:01:08 maya Exp $
 
 SHA1 (qtwebkit-5.212.0-alpha2.tar.xz) = 6a361cc3f3b7ab1d35955bafe20fbbae61bc80c8
 RMD160 (qtwebkit-5.212.0-alpha2.tar.xz) = 33c3f7c68090fa16f72950ef85c20978432cc058
@@ -9,12 +9,13 @@ SHA1 (patch-Source_JavaScriptCore_assembler_ARMAssembler.h) = 7bbb0a59a0c087abaa
 SHA1 (patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp) = 79b54cb1d03d976a0629fbd8ee9ac1881951ba10
 SHA1 (patch-Source_JavaScriptCore_dfg_DFGNode.h) = a3eba122c7226a80dacf1b762747fe0a7408b849
 SHA1 (patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp) = a5815dd5794d9ffbd49e5793198a06535ad89d3c
+SHA1 (patch-Source_JavaScriptCore_jit_ThunkGenerators.cpp) = f0ca56e4b4060c0a8d756289d7c25d1ead6b07be
 SHA1 (patch-Source_JavaScriptCore_tools_CodeProfiling.cpp) = 94c139413eecb875bba98c7749bba24cfcc16632
 SHA1 (patch-Source_ThirdParty_gtest_include_gtest_internal_gtest-port.h) = 1e4b8cffbd7ec0a6130a0ec2112023bed5c0b78e
 SHA1 (patch-Source_WTF_wtf_Assertions.cpp) = 15b8ac40e49cfec78d46de634fd6a1edde2d2a96
 SHA1 (patch-Source_WTF_wtf_InlineASM.h) = 64ea54605fbe787be57f7423e33802def66d6432
 SHA1 (patch-Source_WTF_wtf_MathExtras.h) = 7dac41bf3e50944e49c3e3c29d482d2c3300665d
-SHA1 (patch-Source_WTF_wtf_Platform.h) = cfffb219f1d58d937ae46440aa5395aa066669e4
+SHA1 (patch-Source_WTF_wtf_Platform.h) = 73e8b07e8d7e718abe986a12b9f0b903dfcc4765
 SHA1 (patch-Source_WTF_wtf_ThreadIdentifierDataPthreads.cpp) = bfa570aa20e3508c77bbaebed051821a33f36209
 SHA1 (patch-Source_WebCore_page_NavigatorBase.cpp) = e8972f4b703a9ff45ce313609d2540f89064b4ff
 SHA1 (patch-Source_WebCore_platform_graphics_cpu_arm_filters_FELightingNEON.cpp) = dd409929936955ad31b8ec0902067e2f23c054a2
