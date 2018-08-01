@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:24 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2018/08/01 13:40:41 gdt Exp $
 
 DISTNAME=	configobj-5.0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/configobj/}
 
@@ -11,6 +12,8 @@ COMMENT=	Simple but powerful config file reader and write
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
+
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
