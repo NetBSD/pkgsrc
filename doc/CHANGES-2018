@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3427 2018/08/02 15:40:04 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3428 2018/08/02 16:19:07 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4864,3 +4864,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-beautifulsoup4 to 4.6.1 [adam 2018-08-02]
 	Updated devel/py-test-flake8 to 1.0.2 [adam 2018-08-02]
 	Updated www/py-MechanicalSoup to 0.10.0 [adam 2018-08-02]
+	Updated www/drupal7 to 7.59nb1 [prlw1 2018-08-02]
