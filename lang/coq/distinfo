@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.30 2018/04/09 11:29:23 jaapb Exp $
+$NetBSD: distinfo,v 1.31 2018/08/02 12:57:03 jaapb Exp $
 
-SHA1 (coq-8.7.2.tar.gz) = 0175cc658aa2c93167572a33e9e39fc63f591258
-RMD160 (coq-8.7.2.tar.gz) = 2fd5c59e0143061e4253d68e8839ae3822d7a614
-SHA512 (coq-8.7.2.tar.gz) = 6117ef243c62805996a21952016acaaf21db6d1b539fc813c19c897e100f45cde2bee7c9fb045b269a241b79306c656969ca8051e3212ea2090f6d7c1afad5a8
-Size (coq-8.7.2.tar.gz) = 5754360 bytes
+SHA1 (coq-8.8.1.tar.gz) = 7dd5e31f9dd3f80d6dabfb019d1f495244f61999
+RMD160 (coq-8.8.1.tar.gz) = 72b75b1d3a78c1a34b8bac86a0180b8bb677db14
+SHA512 (coq-8.8.1.tar.gz) = 706fdc196ca4b8f27dae834426d926cd7d2c8b215af8cbb2653a0bda088068ed9f492cf8f11d123a1f2166b26f86e91a84765e53beb20172dc530f6dd796d8d4
+Size (coq-8.8.1.tar.gz) = 5934404 bytes
 SHA1 (patch-Makefile.common) = d84cb2a94227e163855f35abebe71f4ec51839fc
