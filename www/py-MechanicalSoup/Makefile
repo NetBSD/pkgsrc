@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/10/06 06:31:44 adam Exp $
+# $NetBSD: Makefile,v 1.4 2018/08/02 15:39:31 adam Exp $
 
-DISTNAME=	MechanicalSoup-0.8.0
+DISTNAME=	MechanicalSoup-0.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=M/MechanicalSoup/}
@@ -11,12 +11,15 @@ COMMENT=	Library for automating interaction with websites
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
+DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-six>=1.4:../../lang/py-six
-BUILD_DEPENDS+=	${PYPKGPREFIX}-requests-mock-[0-9]*:../../devel/py-requests-mock
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TEST_DEPENDS+=	${PYPKGPREFIX}-requests-mock-[0-9]*:../../devel/py-requests-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
 
 USE_LANGUAGES=	# none
 
