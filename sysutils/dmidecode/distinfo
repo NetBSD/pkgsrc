@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2018/05/16 05:10:30 msaitoh Exp $
+$NetBSD: distinfo,v 1.19 2018/08/02 02:45:50 msaitoh Exp $
 
 SHA1 (dmidecode-patches/174387405e98cd94c627832ae23abcb9be7e5623) = bca7409dc3830bff71093a9df9bb1f1bd6aaa311
 RMD160 (dmidecode-patches/174387405e98cd94c627832ae23abcb9be7e5623) = e5842b33e44b5db421a56d1d5db3b5b01681c223
@@ -8,6 +8,14 @@ SHA1 (dmidecode-patches/2ba4fab210e23cc97db57217af9a6f3b35a9b666) = e151efeac910
 RMD160 (dmidecode-patches/2ba4fab210e23cc97db57217af9a6f3b35a9b666) = 291928b997bce81d2ed9343b0b4e800cfd87c7e2
 SHA512 (dmidecode-patches/2ba4fab210e23cc97db57217af9a6f3b35a9b666) = 734e388cc27e89fbaf3a3f5a875c78e04e0dabd92706a9336b504a8be6d3ede72372cc13b860cd32a66d17c8e1cb6a1d881f8fce97d01a28ea299075d0952609
 Size (dmidecode-patches/2ba4fab210e23cc97db57217af9a6f3b35a9b666) = 1062 bytes
+SHA1 (dmidecode-patches/4cbba9a8e76ffc640eaf7dd25acbd3c1c6504669) = bbe3238c41c81c68fb37681f245b2898d3562118
+RMD160 (dmidecode-patches/4cbba9a8e76ffc640eaf7dd25acbd3c1c6504669) = 449af8ac69970cbd9bdf376843ab2dfe5d8672fc
+SHA512 (dmidecode-patches/4cbba9a8e76ffc640eaf7dd25acbd3c1c6504669) = 89fcf20e883ce92245eeb0136e9c6e04f4f038e582f6a46dc1d4621625137efe558ef2bfc5625b1e1576a5276f81ee4ab45a82209b0e65a0259f937bacee174a
+Size (dmidecode-patches/4cbba9a8e76ffc640eaf7dd25acbd3c1c6504669) = 2959 bytes
+SHA1 (dmidecode-patches/8ff32018e8dd53c26d1f0daef118037fdae58c68) = 98410d8577ed7552c8c1d8683e45830df2a1a41b
+RMD160 (dmidecode-patches/8ff32018e8dd53c26d1f0daef118037fdae58c68) = 9b4f9fc546276526132b579d1ae8d51651d14ceb
+SHA512 (dmidecode-patches/8ff32018e8dd53c26d1f0daef118037fdae58c68) = d377a7ccd809f019568cfce7eaae35cd3eed076c7347779fbc4b2a949ec81abfdd5142dc74ffd740a1b973c3bb49117537dea1e9f590290ee555dd00abc57fc9
+Size (dmidecode-patches/8ff32018e8dd53c26d1f0daef118037fdae58c68) = 1462 bytes
 SHA1 (dmidecode-patches/dmidecode-3.1.tar.gz) = 3d61096a25fe55798faa882bff32f3bf6eb6366e
 RMD160 (dmidecode-patches/dmidecode-3.1.tar.gz) = 6ce7c5e16176dcdde0d51040040199ba86b4eb00
 SHA512 (dmidecode-patches/dmidecode-3.1.tar.gz) = 64aa744396acfa7e9c02beb57f763b8ef79a946c7434bceaf5f6faf2b6b4fa666790871d5bdcdb8a74d47d9a471f39d25fc48afe8c848850ba857ff1a5b4cae3
