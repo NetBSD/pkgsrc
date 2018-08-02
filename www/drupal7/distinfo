@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.37 2018/04/25 16:43:35 taca Exp $
+$NetBSD: distinfo,v 1.38 2018/08/02 16:18:47 prlw1 Exp $
 
 SHA1 (drupal-7.59.tar.gz) = aa4c5ee88c37b82fc90765189919bbe22c231486
 RMD160 (drupal-7.59.tar.gz) = f7cd3f36611a7004910e4c53cc639aa4285f177a
 SHA512 (drupal-7.59.tar.gz) = 68f02b39d1a4658adc0f0046c22cc1059b68f952f9cd753f5a3e379cf93705be308b4727519e90d77a42437442daebaa78d76745954be4d40e1a5105c319069c
 Size (drupal-7.59.tar.gz) = 3282260 bytes
+SHA1 (patch-modules_system_system.tar.inc) = f5bbca9c1b0f5dbb52b744fd5627f83fb8e71cc6
