@@ -1,20 +1,21 @@
-# $NetBSD: Makefile,v 1.9 2018/07/10 15:57:00 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2018/08/02 12:28:35 fhajny Exp $
 
-DISTNAME=	npm-6.1.0
-PKGREVISION=	1
+DISTNAME=	cli-6.3.0
+PKGNAME=	${DISTNAME:S/cli/npm/}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=npm/}
+GITHUB_PROJECT=	cli
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	filip@joyent.com
-HOMEPAGE=	https://github.com/npm/npm/
+HOMEPAGE=	https://github.com/npm/cli/
 COMMENT=	Package manager for JavaScript
 LICENSE=	artistic-2.0
 
 # Pre-fetch marked so that man pages can be built offline
-MARKED=		marked-0.3.19
-DISTFILES+=	${DISTNAME}${EXTRACT_SUFX} ${MARKED}.tar.gz
-SITES.${MARKED}.tar.gz=	-https://github.com/markedjs/marked/archive/v${MARKED:S/marked-//}.tar.gz
+MARKED=			marked-0.4.0
+DISTFILES+=		${DISTNAME}${EXTRACT_SUFX} ${MARKED}.tar.gz
+SITES.${MARKED}.tar.gz=	-https://github.com/markedjs/marked/archive/${MARKED:S/marked-//}.tar.gz
 
 DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
 
@@ -46,7 +47,7 @@ do-install:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ${PREFIX}/bin/node \
 		bin/npm-cli.js pack
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ${PREFIX}/bin/node \
-		bin/npm-cli.js install -g -f ${DISTNAME}.tgz
+		bin/npm-cli.js install -g -f ${PKGNAME}.tgz
 .if ${PKGMANDIR} != "share/man"
 	${RM} -f -r ${DESTDIR}${PREFIX}/${PKGMANDIR}
 	${MV} ${DESTDIR}${PREFIX}/share/man ${DESTDIR}${PREFIX}/${PKGMANDIR}
