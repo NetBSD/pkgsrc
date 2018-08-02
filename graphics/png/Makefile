@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.195 2017/10/02 09:24:30 wiz Exp $
+# $NetBSD: Makefile,v 1.196 2018/08/02 15:01:12 adam Exp $
 
-DISTNAME=	libpng-1.6.34
+DISTNAME=	libpng-1.6.35
 PKGNAME=	${DISTNAME:S/lib//}
 CATEGORIES=	graphics
 MASTER_SITES=	https://ftp-osl.osuosl.org/pub/libpng/src/archive/xz/libpng16/
@@ -13,16 +13,16 @@ HOMEPAGE=	http://www.libpng.org/pub/png/libpng.html
 COMMENT=	Library for manipulating PNG images
 LICENSE=	zlib
 
-GNU_CONFIGURE=	yes
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 # do not create libpng.la
 CONFIGURE_ARGS+=	--disable-unversioned-links
 # but do install png.h outside include/libpng$VERSION for now
 # until pkgsrc is fixed to use libpng-config or the pc file everywhere
-INSTALL_TARGET=	install install-header-links
+INSTALL_TARGET=		install install-header-links
 
 PKGCONFIG_OVERRIDE=	scripts/libpng.pc.in libpng.pc.in
-TEST_TARGET=	check
-USE_LIBTOOL=	yes
+TEST_TARGET=		check
 
 CPPFLAGS+=	-DPNG_USER_CHUNK_CACHE_MAX=128 -DPNG_USER_CHUNK_MALLOC_MAX=8000000
 
