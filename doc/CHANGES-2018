@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3423 2018/08/02 12:28:53 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.3424 2018/08/02 12:57:17 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4852,3 +4852,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/libdrm to 2.4.93 [wiz 2018-08-02]
 	Updated lang/nodejs to 10.8.0 [fhajny 2018-08-02]
 	Updated lang/npm to 6.3.0 [fhajny 2018-08-02]
+	Updated lang/coq to 8.8.1 [jaapb 2018-08-02]
