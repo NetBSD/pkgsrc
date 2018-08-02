@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2018/07/15 23:35:35 maya Exp $
+# $NetBSD: Makefile,v 1.39 2018/08/02 14:47:34 adam Exp $
 
-DISTNAME=	redis-4.0.9
+DISTNAME=	redis-4.0.10
 CATEGORIES=	databases
 MASTER_SITES=	http://download.redis.io/releases/
 
@@ -37,7 +37,7 @@ OWN_DIRS_PERMS+=	${REDIS_LOGDIR} ${REDIS_USER} ${REDIS_GROUP} 0770
 
 PKG_GROUPS+=		${REDIS_GROUP}
 PKG_USERS+=		${REDIS_USER}:${REDIS_GROUP}
-PKG_GECOS.${REDIS_USER}= Redis daemon user
+PKG_GECOS.${REDIS_USER}=Redis daemon user
 PKG_HOME.${REDIS_USER}=	${REDIS_DBDIR}
 
 FILES_SUBST+=		REDIS_USER=${REDIS_USER}
@@ -46,7 +46,7 @@ FILES_SUBST+=		REDIS_DATADIR=${REDIS_DATADIR}
 
 SUBST_CLASSES+=		fix-paths
 SUBST_STAGE.fix-paths=	pre-configure
-SUBST_MESSAGE.fix-paths= Fixing paths.
+SUBST_MESSAGE.fix-paths=Fixing paths.
 SUBST_FILES.fix-paths=	redis.conf
 SUBST_VARS.fix-paths=	REDIS_DATADIR REDIS_LOGDIR REDIS_PIDDIR
 
