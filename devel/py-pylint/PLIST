@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2018/07/17 10:08:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2018/08/02 15:19:23 adam Exp $
 bin/epylint${PYVERSSUFFIX}
 bin/pylint${PYVERSSUFFIX}
 bin/pyreverse${PYVERSSUFFIX}
@@ -493,6 +493,9 @@ ${PYSITELIB}/pylint/test/functional/iterable_context_py2.txt
 ${PYSITELIB}/pylint/test/functional/iterable_context_py3.py
 ${PYSITELIB}/pylint/test/functional/iterable_context_py3.rc
 ${PYSITELIB}/pylint/test/functional/iterable_context_py3.txt
+${PYSITELIB}/pylint/test/functional/iterable_context_py36.py
+${PYSITELIB}/pylint/test/functional/iterable_context_py36.rc
+${PYSITELIB}/pylint/test/functional/iterable_context_py36.txt
 ${PYSITELIB}/pylint/test/functional/keyword_arg_before_vararg.py
 ${PYSITELIB}/pylint/test/functional/keyword_arg_before_vararg.txt
 ${PYSITELIB}/pylint/test/functional/len_checks.py
@@ -545,6 +548,9 @@ ${PYSITELIB}/pylint/test/functional/member_checks_no_hints.txt
 ${PYSITELIB}/pylint/test/functional/member_checks_opaque.py
 ${PYSITELIB}/pylint/test/functional/member_checks_opaque.rc
 ${PYSITELIB}/pylint/test/functional/member_checks_opaque.txt
+${PYSITELIB}/pylint/test/functional/member_checks_py37.py
+${PYSITELIB}/pylint/test/functional/member_checks_py37.rc
+${PYSITELIB}/pylint/test/functional/member_checks_py37.txt
 ${PYSITELIB}/pylint/test/functional/membership_protocol.py
 ${PYSITELIB}/pylint/test/functional/membership_protocol.txt
 ${PYSITELIB}/pylint/test/functional/membership_protocol_py2.py
@@ -561,6 +567,8 @@ ${PYSITELIB}/pylint/test/functional/misplaced_bare_raise.py
 ${PYSITELIB}/pylint/test/functional/misplaced_bare_raise.txt
 ${PYSITELIB}/pylint/test/functional/misplaced_comparison_constant.py
 ${PYSITELIB}/pylint/test/functional/misplaced_comparison_constant.txt
+${PYSITELIB}/pylint/test/functional/misplaced_format_function.py
+${PYSITELIB}/pylint/test/functional/misplaced_format_function.txt
 ${PYSITELIB}/pylint/test/functional/misplaced_future.py
 ${PYSITELIB}/pylint/test/functional/misplaced_future.txt
 ${PYSITELIB}/pylint/test/functional/missing_docstring.py
