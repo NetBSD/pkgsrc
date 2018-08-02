@@ -1,6 +1,7 @@
-$NetBSD: patch-ac,v 1.6 2016/06/19 21:28:58 fhajny Exp $
+$NetBSD: patch-ac,v 1.7 2018/08/02 14:47:34 adam Exp $
 
 Sane defaults for the config file.
+
 --- redis.conf.orig	2016-06-17 13:15:21.000000000 +0000
 +++ redis.conf
 @@ -125,7 +125,7 @@ tcp-keepalive 300
