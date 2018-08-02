@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/04/26 13:25:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/08/02 15:26:03 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -311,6 +311,9 @@ ${PYSITELIB}/braintree/resource_collection.pyo
 ${PYSITELIB}/braintree/risk_data.py
 ${PYSITELIB}/braintree/risk_data.pyc
 ${PYSITELIB}/braintree/risk_data.pyo
+${PYSITELIB}/braintree/samsung_pay_card.py
+${PYSITELIB}/braintree/samsung_pay_card.pyc
+${PYSITELIB}/braintree/samsung_pay_card.pyo
 ${PYSITELIB}/braintree/search.py
 ${PYSITELIB}/braintree/search.pyc
 ${PYSITELIB}/braintree/search.pyo
