@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.111 2018/07/20 03:34:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.112 2018/08/02 12:57:03 jaapb Exp $
 #
 
-DISTNAME=	coq-8.7.2
-PKGREVISION=	4
+DISTNAME=	coq-8.8.1
 CATEGORIES=	lang math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coq/}
 GITHUB_TAG=	V${PKGVERSION_NOREV}
@@ -55,11 +54,14 @@ PLIST.natdynlink=	yes
 .include "../../lang/python/pyversion.mk"
 
 REPLACE_SH=	configure install.sh
-REPLACE_INTERPRETER+=	python
+REPLACE_INTERPRETER+=	python2 python
 REPLACE.python.old=	python
 REPLACE.python.new=	${PYTHONBIN}
-REPLACE_FILES.python=	tools/TimeFileMaker.py \
-	tools/make-both-single-timing-files.py \
+REPLACE_FILES.python=	tools/TimeFileMaker.py
+
+REPLACE.python2.old=	python2
+REPLACE.python2.new=	${PYTHONBIN}
+REPLACE_FILES.python2=	tools/make-both-single-timing-files.py \
 	tools/make-both-time-files.py \
 	tools/make-one-time-file.py
 
