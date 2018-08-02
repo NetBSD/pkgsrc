@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.7 2018/06/28 11:28:01 fhajny Exp $
+$NetBSD: distinfo,v 1.8 2018/08/02 12:28:35 fhajny Exp $
 
-SHA1 (marked-0.3.19.tar.gz) = d30691ac399f05d156f40a0a893ce7a2a7f6c5be
-RMD160 (marked-0.3.19.tar.gz) = e78a28dfaf5fc1039e48f63228f892fa24a13e6f
-SHA512 (marked-0.3.19.tar.gz) = ea518863a27a07034568b0f7a3b2cd2c1ecb8d208472af0fbfa883f59662b7212d73828d67b7d0ccde7be4f706679f88190d26545ecc72965a112ee35518a55a
-Size (marked-0.3.19.tar.gz) = 100673 bytes
-SHA1 (npm-6.1.0.tar.gz) = 231e68aac9f69eacac41b74521de55edaeae247b
-RMD160 (npm-6.1.0.tar.gz) = 406ca2a8f0a4d77fbd16c57c1e90ff50c5a8dee4
-SHA512 (npm-6.1.0.tar.gz) = 8c44e462965ea1ca93f76a34b98726eb20123c127fda8a19643cb2345d612381e94e2741fcdbe814ccf3c73069ecdc89412d8963d2b4f0fb67a8c45bb6f1d85c
-Size (npm-6.1.0.tar.gz) = 8579329 bytes
+SHA1 (cli-6.3.0.tar.gz) = cfac27e568e3bf51fc2dff8ffc5fae54ee703174
+RMD160 (cli-6.3.0.tar.gz) = 18963c32b31d64bb78b8997d17346ba5df205f07
+SHA512 (cli-6.3.0.tar.gz) = abb515c161b740d7bf8a69b139591df5d92091b30fc1183c1e2288eb0e98caf9b61a83e7d4cc2bfacbd9fed9ac355ec90c4548e2626e976355f9eb58c4b28db5
+Size (cli-6.3.0.tar.gz) = 5833427 bytes
+SHA1 (marked-0.4.0.tar.gz) = 30683c632ac803a64892cd0693945ceb13ce82fe
+RMD160 (marked-0.4.0.tar.gz) = 86384c2af08de6345b72c352ac17d3bcd2c2badd
+SHA512 (marked-0.4.0.tar.gz) = ceaa920bae6090431b7011e295a2bf1a923c5a1c17b3d5dab72ba52df845d59b830a017e6e3535cad937a5f2c5a7ebace2b5fb73f4ed65e12865a87ad158cb3f
+Size (marked-0.4.0.tar.gz) = 137307 bytes
 SHA1 (patch-Makefile) = 29b3e9515ee2a45f3b12c116075c00faca73d270
 SHA1 (patch-lib_config_defaults.js) = 5a00cbef781c9ab4efcec41ad781987f3f540886
 SHA1 (patch-node__modules_node-gyp_gyp_pylib_gyp_generator_make.py) = 291e079fb48caea7501ab864c19ef26672b76bc5
