@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3420 2018/08/02 02:47:06 msaitoh Exp $
+$NetBSD: CHANGES-2018,v 1.3421 2018/08/02 11:44:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4849,3 +4849,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/qt5-qtwebkit to 5.212.0.alpha2nb8 [maya 2018-08-01]
 	Updated sysutils/dc-tools to 1.6nb1 [tpaul 2018-08-01]
 	Updated sysutils/dmidecode to 3.1nb3 [msaitoh 2018-08-02]
+	Updated x11/libdrm to 2.4.93 [wiz 2018-08-02]
