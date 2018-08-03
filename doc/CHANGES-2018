@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3429 2018/08/02 17:00:28 gdt Exp $
+$NetBSD: CHANGES-2018,v 1.3430 2018/08/03 16:19:30 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4866,3 +4866,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-MechanicalSoup to 0.10.0 [adam 2018-08-02]
 	Updated www/drupal7 to 7.59nb1 [prlw1 2018-08-02]
 	Updated geography/osm2pgsql to 0.96.0 [gdt 2018-08-02]
+	Updated net/gallery-dl to 1.5.0 [leot 2018-08-03]
