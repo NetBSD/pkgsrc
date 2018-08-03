@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.31 2018/07/19 15:15:30 jaapb Exp $
+# $NetBSD: Makefile,v 1.32 2018/08/03 08:51:48 jaapb Exp $
 #
 
 VERSION=	2.9
 GITHUB_PROJECT=	ocsigenserver
 PKGNAME=	ocsigen-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
@@ -65,6 +65,10 @@ BUILDLINK_API_DEPENDS.ocaml+=   ocaml>=3.12.0
 .else
 CONFIGURE_ARGS+=		--disable-natdynlink
 .endif
+
+post-extract:
+	${RUN} ${CP} ${FILESDIR}/ocsigen_getcommandline.mli ${WRKSRC}/src/baselib/commandline
+	${RUN} ${CP} ${FILESDIR}/ocsigen_getcommandline.mli ${WRKSRC}/src/baselib/nocommandline
 
 .include "options.mk"
 .include "../../mk/pthread.buildlink3.mk"
