@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2018/07/19 14:05:57 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.19 2018/08/03 09:19:56 jaapb Exp $
 bin/js_of_ocaml
 bin/jsoo_link
 bin/jsoo_minify
@@ -9,10 +9,21 @@ ${PLIST.camlp4}${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-camlp4/pa_js.a
 ${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/pa_js.cma
 ${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/pa_js.cmi
 ${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/pa_js.cmt
+${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/pa_js.ml
 ${PLIST.camlp4}${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-camlp4/pa_js.cmx
 ${PLIST.camlp4}${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-camlp4/pa_js.cmxa
 ${PLIST.camlp4}${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-camlp4/pa_js.cmxs
-${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/pa_js.ml
+${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/deriving/js_of_ocaml-camlp4.deriving.dune
+${PLIST.camlp4}${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-camlp4/deriving/pa_deriving_Json.a
+${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/deriving/pa_deriving_Json.cma
+${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/deriving/pa_deriving_Json.cmi
+${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/deriving/pa_deriving_Json.cmt
+${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/deriving/pa_deriving_Json.cmti
+${PLIST.camlp4}${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-camlp4/deriving/pa_deriving_Json.cmx
+${PLIST.camlp4}${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-camlp4/deriving/pa_deriving_Json.cmxa
+${PLIST.camlp4}${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-camlp4/deriving/pa_deriving_Json.cmxs
+${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/deriving/pa_deriving_Json.ml
+${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/deriving/pa_deriving_Json.mli
 ${OCAML_SITELIB}/js_of_ocaml-compiler/META
 ${OCAML_SITELIB}/js_of_ocaml-compiler/annot_lexer.ml
 ${OCAML_SITELIB}/js_of_ocaml-compiler/annot_lexer.mli
