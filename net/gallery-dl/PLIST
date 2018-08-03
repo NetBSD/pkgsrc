@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2018/06/23 08:53:31 leot Exp $
+@comment $NetBSD: PLIST,v 1.14 2018/08/03 16:19:11 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -72,6 +72,9 @@ ${PYSITELIB}/gallery_dl/extractor/artstation.pyo
 ${PYSITELIB}/gallery_dl/extractor/b4k.py
 ${PYSITELIB}/gallery_dl/extractor/b4k.pyc
 ${PYSITELIB}/gallery_dl/extractor/b4k.pyo
+${PYSITELIB}/gallery_dl/extractor/behance.py
+${PYSITELIB}/gallery_dl/extractor/behance.pyc
+${PYSITELIB}/gallery_dl/extractor/behance.pyo
 ${PYSITELIB}/gallery_dl/extractor/booru.py
 ${PYSITELIB}/gallery_dl/extractor/booru.pyc
 ${PYSITELIB}/gallery_dl/extractor/booru.pyo
@@ -204,6 +207,9 @@ ${PYSITELIB}/gallery_dl/extractor/mangastream.pyo
 ${PYSITELIB}/gallery_dl/extractor/message.py
 ${PYSITELIB}/gallery_dl/extractor/message.pyc
 ${PYSITELIB}/gallery_dl/extractor/message.pyo
+${PYSITELIB}/gallery_dl/extractor/myportfolio.py
+${PYSITELIB}/gallery_dl/extractor/myportfolio.pyc
+${PYSITELIB}/gallery_dl/extractor/myportfolio.pyo
 ${PYSITELIB}/gallery_dl/extractor/nhentai.py
 ${PYSITELIB}/gallery_dl/extractor/nhentai.pyc
 ${PYSITELIB}/gallery_dl/extractor/nhentai.pyo
@@ -291,9 +297,6 @@ ${PYSITELIB}/gallery_dl/extractor/twitter.pyo
 ${PYSITELIB}/gallery_dl/extractor/warosu.py
 ${PYSITELIB}/gallery_dl/extractor/warosu.pyc
 ${PYSITELIB}/gallery_dl/extractor/warosu.pyo
-${PYSITELIB}/gallery_dl/extractor/whatisthisimnotgoodwithcomputers.py
-${PYSITELIB}/gallery_dl/extractor/whatisthisimnotgoodwithcomputers.pyc
-${PYSITELIB}/gallery_dl/extractor/whatisthisimnotgoodwithcomputers.pyo
 ${PYSITELIB}/gallery_dl/extractor/worldthree.py
 ${PYSITELIB}/gallery_dl/extractor/worldthree.pyc
 ${PYSITELIB}/gallery_dl/extractor/worldthree.pyo
