@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18456 2018/08/02 15:03:03 adam Exp $
+$NetBSD: TODO,v 1.18457 2018/08/04 01:27:17 nia Exp $
 
 Suggested new packages
 ======================
@@ -1134,7 +1134,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o opera-26
 	o oroborus-2.0.18
 	o ortp-0.25.0
-	o osg-3.4.1
 	o oto-0.5
 	o oxygen-icons-5.48.0
 	o p0f-3.08b
