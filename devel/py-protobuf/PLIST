@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/01/01 22:29:25 rillig Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/08/04 21:32:53 minskim Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -132,6 +132,9 @@ ${PYSITELIB}/google/protobuf/internal/more_extensions_pb2.pyo
 ${PYSITELIB}/google/protobuf/internal/more_messages_pb2.py
 ${PYSITELIB}/google/protobuf/internal/more_messages_pb2.pyc
 ${PYSITELIB}/google/protobuf/internal/more_messages_pb2.pyo
+${PYSITELIB}/google/protobuf/internal/no_package_pb2.py
+${PYSITELIB}/google/protobuf/internal/no_package_pb2.pyc
+${PYSITELIB}/google/protobuf/internal/no_package_pb2.pyo
 ${PYSITELIB}/google/protobuf/internal/packed_field_test_pb2.py
 ${PYSITELIB}/google/protobuf/internal/packed_field_test_pb2.pyc
 ${PYSITELIB}/google/protobuf/internal/packed_field_test_pb2.pyo
