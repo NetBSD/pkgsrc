@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2018/01/17 12:10:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2018/08/04 21:38:59 minskim Exp $
 
 DISTNAME=	mosh-1.3.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	http://mosh.mit.edu/
 
@@ -14,7 +14,7 @@ DEPENDS+=       p5-IO-tty>=1.08:../../devel/p5-IO-Tty
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES+=	c c++
+USE_LANGUAGES+=	c c++11
 
 REPLACE_PERL+=	scripts/mosh.pl
 
