@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.15 2018/01/17 12:10:37 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2018/08/04 21:19:39 minskim Exp $
 
-PKGREVISION= 1
 .include "Makefile.common"
 
 DISTNAME=	protobuf-cpp-${PROTOBUFVER}
@@ -11,7 +10,7 @@ COMMENT=	Google protocol buffers
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_LANGUAGES=	c++ c
+USE_LANGUAGES=	c++11 c
 USE_TOOLS+=	autoreconf automake autoconf gmake
 
 SET_LIBDIR=	yes
