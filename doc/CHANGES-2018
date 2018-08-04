@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3433 2018/08/04 09:54:05 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3434 2018/08/04 10:44:15 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4871,3 +4871,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated games/simgear to 2018.2.2 [nia 2018-08-04]
 	Updated devel/py-ipython5 to 5.8.0 [adam 2018-08-04]
 	Updated textproc/json-c to 0.13.1 [adam 2018-08-04]
+	Updated mail/pymsgauth to 2.1.0nb9 [schmonz 2018-08-04]
