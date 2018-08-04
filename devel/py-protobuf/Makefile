@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.13 2018/01/17 12:10:37 jperkin Exp $
+# $NetBSD: Makefile,v 1.14 2018/08/04 21:32:53 minskim Exp $
 
-PKGREVISION= 1
 .include "../../devel/protobuf/Makefile.common"
 
 DISTNAME=	protobuf-python-${PROTOBUFVER}
