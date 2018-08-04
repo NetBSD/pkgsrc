@@ -1,19 +1,42 @@
-$NetBSD: patch-setup.py,v 1.1 2018/04/28 01:16:29 minskim Exp $
+$NetBSD: patch-setup.py,v 1.2 2018/08/04 21:56:47 minskim Exp $
 
 Use dependencies in pkgsrc.
 
---- setup.py.orig	2018-04-13 19:56:08.000000000 +0000
+--- setup.py.orig	2018-06-28 00:44:17.000000000 +0000
 +++ setup.py
-@@ -152,7 +152,7 @@ EXTENSION_INCLUDE_DIRECTORIES = (
-     (PYTHON_STEM,) + CORE_INCLUDE + BORINGSSL_INCLUDE + ZLIB_INCLUDE +
+@@ -184,18 +184,19 @@ EXTENSION_INCLUDE_DIRECTORIES = (
      CARES_INCLUDE + ADDRESS_SORTING_INCLUDE)
  
--EXTENSION_LIBRARIES = ()
-+EXTENSION_LIBRARIES = ('cares', 'crypto', 'gpr', 'grpc', 'ssl')
- if "linux" in sys.platform:
-   EXTENSION_LIBRARIES += ('rt',)
- if not "win32" in sys.platform:
-@@ -205,7 +205,7 @@ def cython_extensions_and_necessity():
+ EXTENSION_LIBRARIES = ()
+-if "linux" in sys.platform:
+-  EXTENSION_LIBRARIES += ('rt',)
+-if not "win32" in sys.platform:
+-  EXTENSION_LIBRARIES += ('m',)
+-if "win32" in sys.platform:
+-  EXTENSION_LIBRARIES += ('advapi32', 'ws2_32',)
+-if BUILD_WITH_SYSTEM_OPENSSL:
+-  EXTENSION_LIBRARIES += ('ssl', 'crypto',)
+-if BUILD_WITH_SYSTEM_ZLIB:
+-  EXTENSION_LIBRARIES += ('z',)
+-if BUILD_WITH_SYSTEM_CARES:
+-  EXTENSION_LIBRARIES += ('cares',)
++#if "linux" in sys.platform:
++#  EXTENSION_LIBRARIES += ('rt',)
++#if not "win32" in sys.platform:
++#  EXTENSION_LIBRARIES += ('m',)
++#if "win32" in sys.platform:
++#  EXTENSION_LIBRARIES += ('advapi32', 'ws2_32',)
++#if BUILD_WITH_SYSTEM_OPENSSL:
++#  EXTENSION_LIBRARIES += ('ssl', 'crypto',)
++#if BUILD_WITH_SYSTEM_ZLIB:
++#  EXTENSION_LIBRARIES += ('z',)
++#if BUILD_WITH_SYSTEM_CARES:
++#  EXTENSION_LIBRARIES += ('cares',)
++EXTENSION_LIBRARIES += ('grpc',)
+ 
+ DEFINE_MACROS = (
+     ('OPENSSL_NO_ASM', 1), ('_WIN32_WINNT', 0x600),
+@@ -242,7 +243,7 @@ def cython_extensions_and_necessity():
                    for name in CYTHON_EXTENSION_MODULE_NAMES]
    config = os.environ.get('CONFIG', 'opt')
    prefix = 'libs/' + config + '/'
@@ -22,7 +45,7 @@ Use dependencies in pkgsrc.
      extra_objects = [prefix + 'libares.a',
                       prefix + 'libboringssl.a',
                       prefix + 'libgpr.a',
-@@ -217,7 +217,7 @@ def cython_extensions_and_necessity():
+@@ -254,7 +255,7 @@ def cython_extensions_and_necessity():
    extensions = [
        _extension.Extension(
            name=module_name,
