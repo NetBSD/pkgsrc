@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3436 2018/08/04 21:20:26 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.3437 2018/08/04 21:26:09 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4874,3 +4874,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/pymsgauth to 2.1.0nb9 [schmonz 2018-08-04]
 	Updated security/stunnel to 5.48 [schmonz 2018-08-04]
 	Updated devel/protobuf to 3.6.0 [minskim 2018-08-04]
+	Updated net/grpc to 1.13.1 [minskim 2018-08-04]
