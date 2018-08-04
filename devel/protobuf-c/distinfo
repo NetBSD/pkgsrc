@@ -1,7 +1,14 @@
-$NetBSD: distinfo,v 1.4 2017/08/30 11:05:05 wiedi Exp $
+$NetBSD: distinfo,v 1.5 2018/08/04 21:36:16 minskim Exp $
 
 SHA1 (protobuf-c-1.3.0.tar.gz) = b1df242c1445e2cc22708ca1889f5ce63bcbfc6c
 RMD160 (protobuf-c-1.3.0.tar.gz) = 528c1ae07297990f1e3405db2e3129eef9823698
 SHA512 (protobuf-c-1.3.0.tar.gz) = 52a8564c4570ce45de41f664d2c8edaa0712a5c076d6c9b48a4a1022df83ba5f2e1950823a0e91c2754d9ea9922e11d0cc86f82c23ba77e0f0c5659ed43126aa
 Size (protobuf-c-1.3.0.tar.gz) = 123153 bytes
-SHA1 (patch-Makefile.am) = 7e037f255e8415cf3584adb0f652aabc71b4ecfe
+SHA1 (patch-protoc-c_c__field.cc) = 79f649fcc6deeda7f86e4ba83f7e279b3aef2070
+SHA1 (patch-protoc-c_c__field.h) = 9b6a71cb880b774a676c14783cc60bff21ebb6c3
+SHA1 (patch-protoc-c_c__file.cc) = 27a9e34d34cae5f726ecef3f4d96ad6bdc9ddd9f
+SHA1 (patch-protoc-c_c__file.h) = 7e7e42a56939d3cf6b23f5e53a9dd7a89e04db1b
+SHA1 (patch-protoc-c_c__generator.cc) = fc5795bec0c6536713ee7043777edd10b07db9b4
+SHA1 (patch-protoc-c_c__helpers.cc) = 236b1ead1a5f452cf8532507326bd6316e6c6c17
+SHA1 (patch-protoc-c_c__message.cc) = f36502a761f46cb555708ef14d26e4aec5725001
+SHA1 (patch-protoc-c_c__message.h) = b5f2761ab1f1f735fd0a795342b3479e6b253832
