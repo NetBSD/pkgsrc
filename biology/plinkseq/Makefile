@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2018/02/11 15:50:59 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2018/08/04 21:42:28 minskim Exp $
 
 DISTNAME=	plinkseq-0.08
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	biology
 MASTER_SITES=	https://atgu.mgh.harvard.edu/plinkseq/dist/version-0.08/
 
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2	# Assuming same as plink.  No info on web.
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 USE_TOOLS=	bash:run
 REPLACE_BASH=	browser/pbrowse.in index/index.in
 
