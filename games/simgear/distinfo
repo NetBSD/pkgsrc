@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 20:57:04 agc Exp $
+$NetBSD: distinfo,v 1.7 2018/08/04 04:04:28 nia Exp $
 
-SHA1 (simgear-2.8.0.tar.bz2) = 63f030e4969a014326eb9835d33e3da6b26d2900
-RMD160 (simgear-2.8.0.tar.bz2) = 1d3f832d88abc85e2e253ba99fc1946e1a5ff746
-SHA512 (simgear-2.8.0.tar.bz2) = ead06fd394b10a7ae3c98422cc469b3c97450162f6994c40c7cb4818f88e0d25cf0b5dc9c39a10e2b9c0fd849dd322451df93e4febcbacf2fc23fe1860917064
-Size (simgear-2.8.0.tar.bz2) = 766340 bytes
-SHA1 (patch-simgear_scene_sky_cloud_cxx) = 670c1b2470c449545382040ccba75365d642f72a
-SHA1 (patch-simgear_sound_sample__group_cxx) = ef4dd3534aa902ed1d3945f5879bfe3ef20d31ca
-SHA1 (patch-simgear_timing_timestamp_cxx) = 20101dd1802c9d18a6680c9b4868efd5c937f973
+SHA1 (simgear-2018.2.2.tar.bz2) = ba24275236aa461c4b0fee3e37e4fb6877734a1c
+RMD160 (simgear-2018.2.2.tar.bz2) = ecb7005d1fcae8b76cb1d18df7924fe89a594152
+SHA512 (simgear-2018.2.2.tar.bz2) = 2052c8e42bda751bc7c9429525b7acb733d5c0dd32dd4adea078718f89296c635abc956b464887fe67202dcc07a81fbade443a84fe8206648e473fd0f64d9365
+Size (simgear-2018.2.2.tar.bz2) = 1313890 bytes
+SHA1 (patch-simgear_canvas_ShivaVG_src_shConfig.h) = f38988911197efc56cb6eb170274a04961aa198d
+SHA1 (patch-simgear_canvas_ShivaVG_src_shDefs.h) = 0da1544fecec002fb874fcb7df1155ad2889ba4d
+SHA1 (patch-simgear_misc_strutils.cxx) = a72f601803ca285c778ccf12bfe25ff886a182cb
