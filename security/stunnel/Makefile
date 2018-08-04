@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.109 2018/06/07 18:54:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.110 2018/08/04 17:12:28 schmonz Exp $
 
-DISTNAME=		stunnel-5.46
+DISTNAME=		stunnel-5.48
 CATEGORIES=		security
 MASTER_SITES=		http://www.stunnel.org/downloads/
 
