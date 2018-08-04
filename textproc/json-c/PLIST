@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/04/20 00:09:04 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/08/04 09:53:05 adam Exp $
 include/json-c/arraylist.h
 include/json-c/bits.h
 include/json-c/debug.h
@@ -8,11 +8,11 @@ include/json-c/json_config.h
 include/json-c/json_inttypes.h
 include/json-c/json_object.h
 include/json-c/json_object_iterator.h
-include/json-c/json_object_private.h
+include/json-c/json_pointer.h
 include/json-c/json_tokener.h
 include/json-c/json_util.h
+include/json-c/json_visit.h
 include/json-c/linkhash.h
 include/json-c/printbuf.h
-include/json-c/random_seed.h
 lib/libjson-c.la
 lib/pkgconfig/json-c.pc
