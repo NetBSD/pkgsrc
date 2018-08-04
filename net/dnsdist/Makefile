@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2018/02/27 11:06:35 fhajny Exp $
+# $NetBSD: Makefile,v 1.7 2018/08/04 21:40:53 minskim Exp $
 
-DISTNAME=	dnsdist-1.2.1
+DISTNAME=	dnsdist-1.3.2
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.powerdns.com/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,7 +11,7 @@ COMMENT=	Highly DNS-, DoS- and abuse-aware loadbalancer
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 USE_TOOLS+=	gmake pkg-config
 
 .include "../../mk/bsd.prefs.mk"
