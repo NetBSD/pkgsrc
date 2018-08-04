@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2018/08/04 04:04:28 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2018/08/04 11:35:23 nia Exp $
 
 BUILDLINK_TREE+=	simgear
 
@@ -13,6 +13,8 @@ BUILDLINK_PKGSRCDIR.simgear?=	../../games/simgear
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/osg/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .endif	# SIMGEAR_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-simgear
