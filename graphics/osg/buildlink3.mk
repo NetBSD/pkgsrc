@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.57 2018/08/04 01:05:10 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.58 2018/08/04 01:07:34 nia Exp $
 
 BUILDLINK_TREE+=	osg
 
@@ -28,7 +28,7 @@ pkgbase := osg
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.osg:Mffmpeg)
-.include "../../multimedia/ffmpeg2/buildlink3.mk"
+.include "../../multimedia/ffmpeg4/buildlink3.mk"
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.osg:Mfreetype)
