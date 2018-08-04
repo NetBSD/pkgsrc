@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2018/05/14 10:08:00 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2018/08/04 09:53:05 adam Exp $
 
-DISTNAME=	json-c-0.12.1
+DISTNAME=	json-c-0.13.1
 CATEGORIES=	textproc
 MASTER_SITES=	https://s3.amazonaws.com/json-c_releases/releases/
 
@@ -9,20 +9,13 @@ HOMEPAGE=	https://github.com/json-c/json-c/wiki
 COMMENT=	JSON library in C
 LICENSE=	mit
 
-MAKE_JOBS_SAFE=	no
-
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
-
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
+GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	json-c.pc.in
-
-CONFIGURE_ARGS+=	--disable-oldname-compat
+TEST_TARGET=		check
 
 .include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-CFLAGS+=	-Wno-tautological-compare -Wno-unused-value
-.endif
 
 # gcc < 4.2 does not have -Wno-error= option.
 .if !empty(CC_VERSION:Mgcc-3*) || !empty(CC_VERSION:Mgcc-4.[01]*)
