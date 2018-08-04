@@ -1,9 +1,9 @@
-$NetBSD: patch-gmock_configure.ac,v 1.1 2016/08/06 11:40:14 kamil Exp $
+$NetBSD: patch-third__party_googletest_googlemock_configure.ac,v 1.1 2018/08/04 21:19:39 minskim Exp $
 
 Fix shell portability issues.
 
---- gmock/configure.ac.orig	2016-04-28 21:34:11.000000000 +0000
-+++ gmock/configure.ac
+--- third_party/googletest/googlemock/configure.ac.orig	2018-05-17 17:42:54.000000000 +0000
++++ third_party/googletest/googlemock/configure.ac
 @@ -52,7 +52,7 @@ AS_IF([test "x$with_pthreads" != "xno"],
                 [AC_MSG_FAILURE(
                   [--with-pthreads was specified, but unable to be used])])])
