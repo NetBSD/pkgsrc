@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2018/08/05 15:00:46 schmonz Exp $
+bin/checkpasswd
+bin/checkqpasswd
+bin/multicheckpw
+bin/qpasswd
+man/man5/qpasswd.5
+man/man8/checkpasswd.8
+man/man8/checkqpasswd.8
+man/man8/multicheckpw.8
