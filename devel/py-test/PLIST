@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2018/06/21 06:41:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2018/08/05 10:17:47 adam Exp $
 bin/py.test-${PYVERSSUFFIX}
 bin/pytest-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -71,6 +71,9 @@ ${PYSITELIB}/_pytest/deprecated.pyo
 ${PYSITELIB}/_pytest/doctest.py
 ${PYSITELIB}/_pytest/doctest.pyc
 ${PYSITELIB}/_pytest/doctest.pyo
+${PYSITELIB}/_pytest/experiments.py
+${PYSITELIB}/_pytest/experiments.pyc
+${PYSITELIB}/_pytest/experiments.pyo
 ${PYSITELIB}/_pytest/fixtures.py
 ${PYSITELIB}/_pytest/fixtures.pyc
 ${PYSITELIB}/_pytest/fixtures.pyo
@@ -119,6 +122,9 @@ ${PYSITELIB}/_pytest/outcomes.pyo
 ${PYSITELIB}/_pytest/pastebin.py
 ${PYSITELIB}/_pytest/pastebin.pyc
 ${PYSITELIB}/_pytest/pastebin.pyo
+${PYSITELIB}/_pytest/paths.py
+${PYSITELIB}/_pytest/paths.pyc
+${PYSITELIB}/_pytest/paths.pyo
 ${PYSITELIB}/_pytest/pytester.py
 ${PYSITELIB}/_pytest/pytester.pyc
 ${PYSITELIB}/_pytest/pytester.pyo
@@ -131,6 +137,9 @@ ${PYSITELIB}/_pytest/python_api.pyo
 ${PYSITELIB}/_pytest/recwarn.py
 ${PYSITELIB}/_pytest/recwarn.pyc
 ${PYSITELIB}/_pytest/recwarn.pyo
+${PYSITELIB}/_pytest/reports.py
+${PYSITELIB}/_pytest/reports.pyc
+${PYSITELIB}/_pytest/reports.pyo
 ${PYSITELIB}/_pytest/resultlog.py
 ${PYSITELIB}/_pytest/resultlog.pyc
 ${PYSITELIB}/_pytest/resultlog.pyo
