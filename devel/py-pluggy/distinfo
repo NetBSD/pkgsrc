@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2017/11/28 08:41:34 adam Exp $
+$NetBSD: distinfo,v 1.6 2018/08/05 10:25:23 adam Exp $
 
-SHA1 (pluggy-0.6.0.tar.gz) = 2be8673e61fae24bbab0aa96f88e24f82eddae41
-RMD160 (pluggy-0.6.0.tar.gz) = 14de9c7cde01f72acc0ea4689fb6dfd368f58314
-SHA512 (pluggy-0.6.0.tar.gz) = dd58dabe2e65eee64d62c8748c2bbd99457288e99b819eb12312f2acdb0740ac46fd08f83522bc992297b9f14eec14c216c2c9688580f68393bf6fc609e65812
-Size (pluggy-0.6.0.tar.gz) = 19678 bytes
+SHA1 (pluggy-0.7.1.tar.gz) = a07fa8187288cc4099b91dd59b0df18ba3dc19b1
+RMD160 (pluggy-0.7.1.tar.gz) = 75c196d15a34fe64fa0c86846645256a0d5de1db
+SHA512 (pluggy-0.7.1.tar.gz) = e19f6c1b3f2e711df1c8b075a2b802751afd218f1b692f08b2434c01d71c402331ff8c937550fbdfece2098f6d6856422d485f193e188916b365ded2e4087697
+Size (pluggy-0.7.1.tar.gz) = 47784 bytes
