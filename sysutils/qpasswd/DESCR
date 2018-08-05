@@ -1,0 +1,10 @@
+The qpasswd tools are meant for use with checkpassword-compatible
+authentication programs like qmail-popup and qmail-smtpd. Currently, the
+following auth mechanisms are supported: plain, login, apop, cram-md5,
+cram-sha1, cram-ripemd, and digest-md5. The tools:
+
+- multicheckpw (runs multiple checkpassword programs)
+
+- checkqpasswd (for virtual users)
+
+- checkpasswd (for system users in /etc/passwd)
