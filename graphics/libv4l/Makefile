@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2018/05/15 16:28:59 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2018/08/05 10:54:58 rjs Exp $
 
 DISTNAME=	libv4l-0.4.3
 PKGREVISION=	3
 CATEGORIES=	graphics
 #MASTER_SITES=	http://people.atrpms.net/~hdegoede/
 
-MAINTAINER=	tech-multimedia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://people.atrpms.net/~hdegoede/
 COMMENT=	Video4Linux userspace library
 LICENSE=	gnu-gpl-v2
