@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.8 2016/04/01 15:49:02 jperkin Exp $
+$NetBSD: patch-Makefile.in,v 1.1 2018/08/05 21:27:04 adam Exp $
 
 Use pkgsrc layout/flags.
 
---- Makefile.in.orig	2012-03-18 15:31:09.000000000 +0000
+--- Makefile.in.orig	2018-04-21 17:02:14.000000000 +0000
 +++ Makefile.in
-@@ -20,15 +20,15 @@ else
- 	endif
+@@ -22,15 +22,15 @@ else
  endif
  
+ #ASFLAGS = @ASFLAGS@
 -CFLAGS = @CFLAGS@ @CPPFLAGS@
 -LDFLAGS = @LDFLAGS@
 +CFLAGS = @CFLAGS@ @CPPFLAGS@ -DPREFIX=\"${PREFIX}\" -DDEVOSSAUDIO=\"${DEVOSSAUDIO}\"
