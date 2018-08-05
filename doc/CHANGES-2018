@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3443 2018/08/05 15:02:36 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.3444 2018/08/05 19:57:22 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4887,3 +4887,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/py-blockdiag to 1.5.4 [adam 2018-08-05]
 	Updated devel/py-dash to 4.7.1 [adam 2018-08-05]
 	Added sysutils/qpasswd version 0.5 [schmonz 2018-08-05]
+	Updated net/dnscrypt-proxy2 to 2.0.16 [nia 2018-08-05]
