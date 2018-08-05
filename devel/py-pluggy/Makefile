@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2017/11/28 08:41:34 adam Exp $
+# $NetBSD: Makefile,v 1.6 2018/08/05 10:25:23 adam Exp $
 
-DISTNAME=	pluggy-0.6.0
+DISTNAME=	pluggy-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pluggy/}
