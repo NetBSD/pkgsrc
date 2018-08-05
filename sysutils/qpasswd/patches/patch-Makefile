@@ -1,0 +1,71 @@
+$NetBSD: patch-Makefile,v 1.1 2018/08/05 15:00:46 schmonz Exp $
+
+Use pkgsrc paths, flags, users, etc.
+
+--- Makefile.orig	2004-04-08 12:59:11.000000000 +0000
++++ Makefile
+@@ -3,20 +3,20 @@
+ # - change it to fit your needs
+ # - see also params.h
+ 
+-MANDIR	= /usr/share/man
+-DEST	= /command
+-GROUP	= nofiles
++MANDIR	= ${DESTDIR}${PREFIX}/${PKGMANDIR}
++DEST	= ${DESTDIR}${PREFIX}/bin
++#GROUP	= nofiles
+ 
+ ARCH	= $(shell uname -m | sed -e 's/i[4-9]86/i386/' -e 's/armv[3-6][lb]/arm/')
+ DIET	= $(shell basename `which diet 2>/dev/null` 2>/dev/null)
+ 
+ # compiler
+ CC	= $(DIET) gcc
+-CFLAGS	= -Os -Wall -pipe -fomit-frame-pointer
+-LDFLAGS	= -s -lcrypt
++CFLAGS	+= -Os -Wall -pipe -fomit-frame-pointer
++#LDFLAGS	= -s -lcrypt
+ 
+ # extraflags
+-CFLAGS += -mpreferred-stack-boundary=2 -march=$(ARCH) -mcpu=$(ARCH)
++#CFLAGS += -mpreferred-stack-boundary=2 -march=$(ARCH) -mcpu=$(ARCH)
+ #CFLAGS += -W -Wchar-subscripts -Wmissing-prototypes -Wmissing-declarations -Wswitch -Wredundant-decls -Wunused
+ #CFLAGS += -Werror
+ #CFLAGS += -funroll-loops
+@@ -46,17 +46,15 @@ again:	clean setup
+ 
+ multicheckpw: $(OBJS)
+ 	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(OBJS)
+-	$(STRIP) $@
+ 	for i in checkpasswd checkqpasswd qpasswd; do \
+ 	 ( test -f $$i || ln -s multicheckpw $$i ) \
+ 	done
+ 
+ test-cases: $(OBJS2)
+ 	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(OBJS2)
+-	$(STRIP) $@
+ 
+ check:	test-cases
+-	test-cases > test-cases.computed
++	./test-cases > test-cases.computed
+ 	@echo If the following test fails, send a mail to crypto@mcmilk.de!
+ 	diff test-cases.wanted test-cases.computed
+ 	@echo The test was OKAY!
+@@ -66,15 +64,14 @@ clean:
+ 
+ .c.o:
+ 	$(CC) $(CFLAGS) -c $< -o $@
+-	$(STRIPx) $@
+ 
+-install: uninstall
++install:
+ 	test -d $(MANDIR)/man5 || mkdir -p $(MANDIR)/man5
+ 	test -d $(MANDIR)/man8 || mkdir -p $(MANDIR)/man8
+ 	man/install-pages.sh $(MANDIR)
+ 	cp -f multicheckpw $(DEST)/multicheckpw
+-	chown root.$(GROUP) $(DEST)/multicheckpw
+-	chmod 4510 $(DEST)/multicheckpw
++	#chown root.$(GROUP) $(DEST)/multicheckpw
++	#chmod 4510 $(DEST)/multicheckpw
+ 	ln -s multicheckpw $(DEST)/checkpasswd
+ 	ln -s multicheckpw $(DEST)/checkqpasswd
+ 	ln -s multicheckpw $(DEST)/qpasswd
