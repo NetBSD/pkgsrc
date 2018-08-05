@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3441 2018/08/05 10:30:47 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3442 2018/08/05 12:51:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4884,3 +4884,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-test-asyncio to 0.9.0 [adam 2018-08-05]
 	Updated devel/py-pluggy to 0.7.1 [adam 2018-08-05]
 	Updated devel/py-test-relaxed to 1.1.4 [adam 2018-08-05]
+	Updated graphics/py-blockdiag to 1.5.4 [adam 2018-08-05]
+	Updated devel/py-dash to 4.7.1 [adam 2018-08-05]
