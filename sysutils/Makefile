@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.772 2018/07/26 02:51:57 jnemeth Exp $
+# $NetBSD: Makefile,v 1.773 2018/08/05 15:02:01 schmonz Exp $
 #
 
 COMMENT=	System utilities
@@ -487,6 +487,7 @@ SUBDIR+=	py-watchdog
 SUBDIR+=	py-xattr
 SUBDIR+=	qdirstat
 SUBDIR+=	qlogtools
+SUBDIR+=	qpasswd
 SUBDIR+=	radeontool
 SUBDIR+=	radmind
 SUBDIR+=	rcm
