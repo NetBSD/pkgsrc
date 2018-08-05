@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.16 2016/08/15 19:20:25 ryoon Exp $
-bin/blockdiag
+@comment $NetBSD: PLIST,v 1.17 2018/08/05 12:40:53 adam Exp $
+bin/blockdiag-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -386,4 +386,4 @@ ${PYSITELIB}/blockdiag/utils/uuid.pyo
 ${PYSITELIB}/blockdiag_sphinxhelper.py
 ${PYSITELIB}/blockdiag_sphinxhelper.pyc
 ${PYSITELIB}/blockdiag_sphinxhelper.pyo
-man/man1/blockdiag.1
+man/man1/blockdiag-${PYVERSSUFFIX}.1
