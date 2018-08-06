@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3447 2018/08/06 05:03:07 tpaul Exp $
+$NetBSD: CHANGES-2018,v 1.3448 2018/08/06 09:38:42 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4892,3 +4892,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/lftp to 4.8.4 [adam 2018-08-05]
 	Updated sysutils/salt to 2018.3.2 [tpaul 2018-08-06]
 	Updated sysutils/salt-docs to 2018.3.2 [tpaul 2018-08-06]
+	Updated mail/pymsgauth to 2.1.0nb10 [schmonz 2018-08-06]
