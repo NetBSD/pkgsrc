@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2018/08/04 01:05:10 nia Exp $
+$NetBSD: distinfo,v 1.12 2018/08/06 11:12:27 jperkin Exp $
 
 SHA1 (osg-3.4.1.tar.gz) = 6fc56846f5790d85dd8139aecb958701f4f4e630
 RMD160 (osg-3.4.1.tar.gz) = 299ab7131433e7f36f0da10eb102014bce26ec83
@@ -8,7 +8,8 @@ SHA1 (patch-CMakeModules_FindFFmpeg.cmake) = cb533fdfa7cc569b6e226e1ab422ef36d5d
 SHA1 (patch-ab) = 0bb683599daae3b2718693f9df8077b0333a410b
 SHA1 (patch-ad) = 909075cabe15541b182794b4fdf5baa038f07ed3
 SHA1 (patch-ae) = ca2f8a6cd509a914f9b643429e8384faf476f2c8
-SHA1 (patch-applications_present3D_Cluster.cpp) = 1b05be4da6632356200192d8f5aa5f08270f68d8
+SHA1 (patch-applications_present3D_Cluster.cpp) = 017b1d9b42760cad8deb77d7330b04f75aa0e814
 SHA1 (patch-src_osgPlugins_osc_ip_posix_NetworkingUtils.cpp) = 5748636ed17d23a0a595d38b2b392e773840a102
-SHA1 (patch-src_osgPlugins_osc_osc_OscHostEndianness.h) = d8e9efa88898e240775ead76c5c9df4c86cd562c
+SHA1 (patch-src_osgPlugins_osc_osc_OscHostEndianness.h) = 4202df06c8ab49fa5f3787cc1c59e9f247d1a21b
+SHA1 (patch-src_osgPlugins_osc_osc_OscOutboundPacketStream.cpp) = b9bc38773bfdc78056a4575f772abd7a1fbf09f3
 SHA1 (patch-src_osg_GLExtensions.cpp) = 5fc04fa162c5cf8aa34ddfb0152092b02e8eec08
