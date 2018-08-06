@@ -1,10 +1,13 @@
-$NetBSD: patch-salt_modules_pkgin.py,v 1.1 2018/06/20 11:50:56 tpaul Exp $
+$NetBSD: patch-salt_modules_pkgin.py,v 1.2 2018/08/06 05:01:26 tpaul Exp $
 
 Fixes 2 bugs in the pkgin module:
 - pkg.latest_version doesn't return a version for an uninstalled package.
 - pkg.file_dict crashes.
 https://github.com/saltstack/salt/pull/47814
 PR: pkg/53344
+
+This patch should no longer be needed in 2018.3.3
+https://github.com/saltstack/salt/pull/47866
 
 --- salt/modules/pkgin.py.orig	2018-04-02 16:35:12.000000000 +0000
 +++ salt/modules/pkgin.py
