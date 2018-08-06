@@ -1,3 +1,7 @@
+$NetBSD: patch-libglusterfs_src_common-utils.c,v 1.2 2018/08/06 02:22:31 manu Exp $
+
+Make NetBSD memory size reading routine 64-bit aware
+
 --- libglusterfs/src/common-utils.c.orig	2018-08-05 19:00:57.102350607 +0200
 +++ libglusterfs/src/common-utils.c	2018-08-05 19:21:38.677872008 +0200
 @@ -2970,15 +2970,25 @@
