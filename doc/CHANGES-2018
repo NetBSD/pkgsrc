@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3452 2018/08/06 19:30:44 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3453 2018/08/06 19:52:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4898,3 +4898,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/py-scikit-learn to 0.19.2 [minskim 2018-08-06]
 	Updated security/py-asn1 to 0.4.4 [adam 2018-08-06]
 	Updated security/py-asn1-modules to 0.2.2 [adam 2018-08-06]
+	Updated textproc/py-lxml to 4.2.4 [adam 2018-08-06]
+	Updated devel/py-uvloop to 0.11.1 [adam 2018-08-06]
+	Updated devel/waf to 2.0.10 [adam 2018-08-06]
+	Updated www/py-selenium to 3.14.0 [adam 2018-08-06]
