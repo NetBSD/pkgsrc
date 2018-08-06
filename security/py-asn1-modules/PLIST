@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/04/18 09:43:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/08/06 19:30:15 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -47,6 +47,9 @@ ${PYSITELIB}/pyasn1_modules/rfc2511.pyo
 ${PYSITELIB}/pyasn1_modules/rfc2560.py
 ${PYSITELIB}/pyasn1_modules/rfc2560.pyc
 ${PYSITELIB}/pyasn1_modules/rfc2560.pyo
+${PYSITELIB}/pyasn1_modules/rfc2986.py
+${PYSITELIB}/pyasn1_modules/rfc2986.pyc
+${PYSITELIB}/pyasn1_modules/rfc2986.pyo
 ${PYSITELIB}/pyasn1_modules/rfc3279.py
 ${PYSITELIB}/pyasn1_modules/rfc3279.pyc
 ${PYSITELIB}/pyasn1_modules/rfc3279.pyo
