@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3453 2018/08/06 19:52:30 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3454 2018/08/06 19:59:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4902,3 +4902,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-uvloop to 0.11.1 [adam 2018-08-06]
 	Updated devel/waf to 2.0.10 [adam 2018-08-06]
 	Updated www/py-selenium to 3.14.0 [adam 2018-08-06]
+	Updated devel/py-async_generator to 1.10 [adam 2018-08-06]
+	Updated devel/py-pylint to 2.1.1 [adam 2018-08-06]
