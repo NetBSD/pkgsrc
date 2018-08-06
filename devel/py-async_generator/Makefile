@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/07/03 05:03:10 adam Exp $
+# $NetBSD: Makefile,v 1.3 2018/08/06 19:55:28 adam Exp $
 
-DISTNAME=	async_generator-1.9
+DISTNAME=	async_generator-1.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/async_generator/}
