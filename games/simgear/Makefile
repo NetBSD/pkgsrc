@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2018/08/04 04:04:28 nia Exp $
+# $NetBSD: Makefile,v 1.72 2018/08/06 11:03:18 jperkin Exp $
 
 DISTNAME=	simgear-2018.2.2
 CATEGORIES=	games devel
@@ -20,6 +20,7 @@ LDFLAGS.SunOS+=		-lsocket -lnsl
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/osg/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
