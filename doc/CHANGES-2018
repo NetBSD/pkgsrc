@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3448 2018/08/06 09:38:42 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.3449 2018/08/06 12:55:55 snj Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4893,3 +4893,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/salt to 2018.3.2 [tpaul 2018-08-06]
 	Updated sysutils/salt-docs to 2018.3.2 [tpaul 2018-08-06]
 	Updated mail/pymsgauth to 2.1.0nb10 [schmonz 2018-08-06]
+	Updated archivers/zziplib to 0.13.69 [snj 2018-08-06]
