@@ -1,4 +1,4 @@
-$NetBSD: patch-applications_present3D_Cluster.cpp,v 1.3 2018/08/04 01:05:10 nia Exp $
+$NetBSD: patch-applications_present3D_Cluster.cpp,v 1.4 2018/08/06 11:12:27 jperkin Exp $
 
 Support more platforms.
 
@@ -20,7 +20,7 @@ Support more platforms.
  #if defined(__linux) || defined(__FreeBSD__) || defined( __APPLE__ ) || \
 -    defined(__DragonFly__) || defined(__FreeBSD_kernel__) || defined(__GNU__)
 +    defined(__DragonFly__) || defined(__FreeBSD_kernel__) || defined(__GNU__) || \
-+    defined(__NetBSD__) || defined(__OpenBSD__)
++    defined(__NetBSD__) || defined(__OpenBSD__) || defined(__sun)
      socklen_t
  #else
      int
