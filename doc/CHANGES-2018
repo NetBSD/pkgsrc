@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3445 2018/08/05 21:28:45 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3446 2018/08/06 05:01:49 tpaul Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4890,3 +4890,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/dnscrypt-proxy2 to 2.0.16 [nia 2018-08-05]
 	Updated emulators/atari800 to 4.0.0 [adam 2018-08-05]
 	Updated net/lftp to 4.8.4 [adam 2018-08-05]
+	Updated sysutils/salt to 2018.3.2 [tpaul 2018-08-06]
