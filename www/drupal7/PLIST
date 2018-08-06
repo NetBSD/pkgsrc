@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2018/03/30 01:15:42 maya Exp $
+@comment $NetBSD: PLIST,v 1.18 2018/08/06 14:42:53 prlw1 Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/COPYRIGHT.txt
 share/doc/drupal/INSTALL.mysql.txt
@@ -860,6 +860,7 @@ share/drupal/modules/system/system.messages.css
 share/drupal/modules/system/system.module
 share/drupal/modules/system/system.queue.inc
 share/drupal/modules/system/system.tar.inc
+share/drupal/modules/system/system.tar.inc.orig
 share/drupal/modules/system/system.test
 share/drupal/modules/system/system.theme-rtl.css
 share/drupal/modules/system/system.theme.css
