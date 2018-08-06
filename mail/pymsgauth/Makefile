@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2018/08/04 10:43:58 schmonz Exp $
+# $NetBSD: Makefile,v 1.18 2018/08/06 09:38:21 schmonz Exp $
 #
 
 DISTNAME=		pymsgauth-2.1.0
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 
@@ -11,7 +11,7 @@ HOMEPAGE=		http://pyropus.ca/software/pymsgauth/
 COMMENT=		Automatically process qsecretary confirmation requests
 LICENSE=		gnu-gpl-v2
 
-FILTER3_PATCH+=		pymsgauth-2.1.0-filter3-20180804.patch
+FILTER3_PATCH+=		pymsgauth-2.1.0-filter3-20180806.patch
 PATCHFILES+=		${FILTER3_PATCH}
 SITES.${FILTER3_PATCH}=	https://schmonz.com/qmail/pymsgauthfilter/
 
