@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2018/07/19 09:07:52 adam Exp $
+# $NetBSD: Makefile,v 1.53 2018/08/06 20:13:47 adam Exp $
 
 DISTNAME=	Sphinx-1.7.6
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Sphinx/}
@@ -20,7 +21,6 @@ DEPENDS+=	${PYPKGPREFIX}-pygments>=2.0:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.0.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-snowballstemmer>=1.1:../../textproc/py-snowballstemmer
-DEPENDS+=	${PYPKGPREFIX}-sphinx-rtd-theme-[0-9]*:../../textproc/py-sphinx-rtd-theme
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-websupport-[0-9]*:../../textproc/py-sphinxcontrib-websupport
 DEPENDS+=	${PYPKGPREFIX}-six>=1.5:../../lang/py-six
 
