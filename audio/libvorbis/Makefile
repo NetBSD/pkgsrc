@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2018/03/16 20:37:10 maya Exp $
+# $NetBSD: Makefile,v 1.62 2018/08/06 13:25:38 snj Exp $
 
 DISTNAME=	libvorbis-1.3.6
+PKGREVISION=	1
 CATEGORIES=	devel audio
 MASTER_SITES=	http://downloads.xiph.org/releases/vorbis/
 EXTRACT_SUFX=	.tar.xz
