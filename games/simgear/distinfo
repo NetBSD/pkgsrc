@@ -1,9 +1,13 @@
-$NetBSD: distinfo,v 1.7 2018/08/04 04:04:28 nia Exp $
+$NetBSD: distinfo,v 1.8 2018/08/06 11:03:18 jperkin Exp $
 
 SHA1 (simgear-2018.2.2.tar.bz2) = ba24275236aa461c4b0fee3e37e4fb6877734a1c
 RMD160 (simgear-2018.2.2.tar.bz2) = ecb7005d1fcae8b76cb1d18df7924fe89a594152
 SHA512 (simgear-2018.2.2.tar.bz2) = 2052c8e42bda751bc7c9429525b7acb733d5c0dd32dd4adea078718f89296c635abc956b464887fe67202dcc07a81fbade443a84fe8206648e473fd0f64d9365
 Size (simgear-2018.2.2.tar.bz2) = 1313890 bytes
-SHA1 (patch-simgear_canvas_ShivaVG_src_shConfig.h) = f38988911197efc56cb6eb170274a04961aa198d
+SHA1 (patch-simgear_canvas_ShivaVG_src_shConfig.h) = d9e8befec2e7ecb8c79a1edddf74bea4e759d656
 SHA1 (patch-simgear_canvas_ShivaVG_src_shDefs.h) = 0da1544fecec002fb874fcb7df1155ad2889ba4d
+SHA1 (patch-simgear_io_test__repository.cxx) = 4369ea0b3eab47bed5b2b08ba8a56f86f83f77a0
+SHA1 (patch-simgear_io_test__untar.cxx) = b3625254f9410411b30a8c3e30845c3d1509a993
+SHA1 (patch-simgear_io_untar.cxx) = 2cc21468bd0319aae012fb7c16e9e279888e34e3
 SHA1 (patch-simgear_misc_strutils.cxx) = a72f601803ca285c778ccf12bfe25ff886a182cb
+SHA1 (patch-simgear_package_md5.h) = 91dc8741ed547c26a6de8ab8bd25ee441e0e5e92
