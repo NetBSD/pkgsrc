@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3455 2018/08/06 20:17:32 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3456 2018/08/06 23:05:05 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4907,3 +4907,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-sphinx-rtd-theme to 0.4.1 [adam 2018-08-06]
 	Updated textproc/py-sphinx to 1.7.6nb1 [adam 2018-08-06]
 	Updated textproc/py-openpyxl to 2.5.5 [adam 2018-08-06]
+	Updated www/thttpd to 2.29 [nia 2018-08-06]
