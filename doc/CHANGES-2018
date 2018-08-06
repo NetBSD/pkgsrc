@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3454 2018/08/06 19:59:05 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3455 2018/08/06 20:17:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4904,3 +4904,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-selenium to 3.14.0 [adam 2018-08-06]
 	Updated devel/py-async_generator to 1.10 [adam 2018-08-06]
 	Updated devel/py-pylint to 2.1.1 [adam 2018-08-06]
+	Updated textproc/py-sphinx-rtd-theme to 0.4.1 [adam 2018-08-06]
+	Updated textproc/py-sphinx to 1.7.6nb1 [adam 2018-08-06]
+	Updated textproc/py-openpyxl to 2.5.5 [adam 2018-08-06]
