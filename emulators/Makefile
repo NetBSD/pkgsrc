@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.253 2018/07/19 04:06:15 tpaul Exp $
+# $NetBSD: Makefile,v 1.254 2018/08/07 15:35:37 nia Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -131,6 +131,7 @@ SUBDIR+=	qemu
 SUBDIR+=	raine
 SUBDIR+=	realboy
 SUBDIR+=	retroarch
+SUBDIR+=	retroarch-assets
 SUBDIR+=	shoebill
 SUBDIR+=	simh
 SUBDIR+=	simulavr
