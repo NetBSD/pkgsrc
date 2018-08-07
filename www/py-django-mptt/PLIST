@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/12/14 13:54:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/08/07 06:31:28 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -10,6 +10,9 @@ ${PYSITELIB}/mptt/__init__.pyo
 ${PYSITELIB}/mptt/admin.py
 ${PYSITELIB}/mptt/admin.pyc
 ${PYSITELIB}/mptt/admin.pyo
+${PYSITELIB}/mptt/apps.py
+${PYSITELIB}/mptt/apps.pyc
+${PYSITELIB}/mptt/apps.pyo
 ${PYSITELIB}/mptt/compat.py
 ${PYSITELIB}/mptt/compat.pyc
 ${PYSITELIB}/mptt/compat.pyo
@@ -36,6 +39,8 @@ ${PYSITELIB}/mptt/locale/fr/LC_MESSAGES/django.mo
 ${PYSITELIB}/mptt/locale/fr/LC_MESSAGES/django.po
 ${PYSITELIB}/mptt/locale/hu/LC_MESSAGES/django.mo
 ${PYSITELIB}/mptt/locale/hu/LC_MESSAGES/django.po
+${PYSITELIB}/mptt/locale/it/LC_MESSAGES/django.mo
+${PYSITELIB}/mptt/locale/it/LC_MESSAGES/django.po
 ${PYSITELIB}/mptt/locale/mn/LC_MESSAGES/django.mo
 ${PYSITELIB}/mptt/locale/mn/LC_MESSAGES/django.po
 ${PYSITELIB}/mptt/locale/nb/LC_MESSAGES/django.mo
