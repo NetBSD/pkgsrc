@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2017/02/25 02:15:19 maya Exp $
+# $NetBSD: Makefile,v 1.2 2018/08/07 08:36:58 adam Exp $
 
-DISTNAME=	iso3166-0.8
+DISTNAME=	iso3166-0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/iso3166/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.python.org/pypi/iso3166
+HOMEPAGE=	http://github.com/deactivated/python-iso3166
 COMMENT=	Self-contained ISO 3166-1 country definitions
 LICENSE=	mit
 
