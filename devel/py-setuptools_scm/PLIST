@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/05/14 06:41:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/08/07 10:06:47 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -11,6 +11,9 @@ ${PYSITELIB}/setuptools_scm/__init__.pyo
 ${PYSITELIB}/setuptools_scm/__main__.py
 ${PYSITELIB}/setuptools_scm/__main__.pyc
 ${PYSITELIB}/setuptools_scm/__main__.pyo
+${PYSITELIB}/setuptools_scm/config.py
+${PYSITELIB}/setuptools_scm/config.pyc
+${PYSITELIB}/setuptools_scm/config.pyo
 ${PYSITELIB}/setuptools_scm/discover.py
 ${PYSITELIB}/setuptools_scm/discover.pyc
 ${PYSITELIB}/setuptools_scm/discover.pyo
