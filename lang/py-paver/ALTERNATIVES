@@ -1,0 +1,1 @@
+bin/paver @PREFIX@/bin/paver-@PYVERSSUFFIX@
