@@ -1,15 +1,8 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 20:31:01 agc Exp $
+$NetBSD: distinfo,v 1.5 2018/08/07 16:44:26 nia Exp $
 
-SHA1 (retroarch-20150203.zip) = 46f9493f3ab09fd185345e6bab797c4e882c5262
-RMD160 (retroarch-20150203.zip) = 76c4ae4f7edb5c866f606cb23e5550a5b7c285b4
-SHA512 (retroarch-20150203.zip) = 6b7bc44a3956fe706a53ba56d06338823fe9438182b3e16d9a7d3e7f17197cb1d49ca163b947e980849c3d54912a816dd77b17613fffd4dc305486498bca7951
-Size (retroarch-20150203.zip) = 10043939 bytes
-SHA1 (patch-Makefile) = 41a8de7bc2d992cae1799935c5d3a61774c6be88
-SHA1 (patch-Makefile.common) = 3a2157e04dfacadc48f421106760b0194586677e
-SHA1 (patch-audio_audio__utils.c) = a489e8862d10e8dde77a7d22becafb690fb61f89
-SHA1 (patch-audio_audio__utils.h) = e6cb0d7897eee6908d62bb46a98d7a28398d9e14
-SHA1 (patch-audio_drivers__resampler_cc__resampler.c) = 2ec89750a7bad2eb4b799d389d0e995b316ccd82
-SHA1 (patch-audio_drivers__resampler_sinc.c) = 5747731b8aec14b6a5e1359e80698f121fe9f337
-SHA1 (patch-performance.c) = 1881d32968babc58686c88bfdeb021d18a222fe8
-SHA1 (patch-qb_config.libs.sh) = 4eccb74e9f31d0f8ff3eeb6c6ded03ac148b2808
-SHA1 (patch-qb_qb.libs.sh) = 00689ff9d4b6afc9313938e2921e90f01640420f
+SHA1 (retroarch-1.7.3.tar.gz) = e1d104df59faac60e4666bf78291d7f39793cdee
+RMD160 (retroarch-1.7.3.tar.gz) = c3203c559cda925a9e76ab7df7ed491ea0f89a85
+SHA512 (retroarch-1.7.3.tar.gz) = f6e3f82465d301450e7f9a947e3e50a0b972c2ae4ad52d41640c0933185988e910892ab04dd93d1f6bed485a406356233ea81f8468041f3425cd286670fb97b1
+Size (retroarch-1.7.3.tar.gz) = 19382106 bytes
+SHA1 (patch-Makefile) = e40570eaf260e527442264c2ba424f2d7f499885
+SHA1 (patch-frontend_drivers_platform__unix.c) = 090b82414411067409167c2b144f3d1ecac4d21c
