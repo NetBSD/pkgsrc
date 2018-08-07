@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/01/31 13:42:32 adam Exp $
+# $NetBSD: Makefile,v 1.5 2018/08/07 16:45:10 minskim Exp $
 
 DISTNAME=	line_profiler-2.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,6 +23,15 @@ PYTHON_VERSIONED_DEPENDENCIES=	ipython
 PLIST_VARS+=	py35
 .if "${PYPKGPREFIX}" != "py27" && "${PYPKGPREFIX}" != "py34"
 PLIST.py35=	yes
+.endif
+
+.if "${PYPKGPREFIX}" == "py37"
+# Regenerate _line_profiler.c with recent cython
+BUILDLINK_DEPMETHOD.py-cython=	build
+.include "../../devel/py-cython/buildlink3.mk"
+
+pre-configure:
+	${RM} -f ${WRKSRC}/_line_profiler.c
 .endif
 
 .include "../../lang/python/egg.mk"
