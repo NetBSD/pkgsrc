@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.4 2018/03/31 20:09:10 joerg Exp $
+$NetBSD: distinfo,v 1.5 2018/08/07 11:14:20 adam Exp $
 
-SHA1 (creduce-2.7.0.tar.gz) = 45f473364f5e98b612e4244be648ce2cc45dd178
-RMD160 (creduce-2.7.0.tar.gz) = 8c4cf6231983bf22790bab0a0cf5443924673ca3
-SHA512 (creduce-2.7.0.tar.gz) = 0ded47fdb4303d84619d63fbedd7bc12141b4857679dda8438683199dbdc98b985f848e797b9dc25a31dda591ee54bcb94580285890b23495fcf151aa3636226
-Size (creduce-2.7.0.tar.gz) = 768832 bytes
+SHA1 (creduce-2.8.0.tar.gz) = 4f9ed5c7766f247884ce5c17fa10710372d48d39
+RMD160 (creduce-2.8.0.tar.gz) = fd9ed41cbb8464ee95bc94ec9ccc50b22303bd9a
+SHA512 (creduce-2.8.0.tar.gz) = 9d616dc421d0e932656ab0220ebfe1a4f20a08d46bf4ee004ef96a693ff37caeadf96c769262574a9789ac52c2bb4586e2b8602f7d44b627229b8eb45f5af0ea
+Size (creduce-2.8.0.tar.gz) = 774668 bytes
 SHA1 (patch-clang__delta_Makefile.am) = 6eac9443bb954c9fb54a922d6da909cf0a45d25d
 SHA1 (patch-clang__delta_Makefile.in) = c650aab0534268a67615d9360934534ea1d36b90
-SHA1 (patch-clang__delta_TransformationManager.cpp) = e1fd91a3d473300c10f23d8974fc1a0828cc9e18
