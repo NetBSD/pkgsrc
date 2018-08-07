@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2018/04/14 08:52:47 adam Exp $
+# $NetBSD: Makefile,v 1.9 2018/08/07 06:28:03 adam Exp $
 
-DISTNAME=	txaio-2.10.0
+DISTNAME=	txaio-18.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/txaio/}
