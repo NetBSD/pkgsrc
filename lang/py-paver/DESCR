@@ -1,0 +1,5 @@
+Paver is a Python-based build/distribution/deployment scripting tool along the
+lines of Make or Rake. What makes Paver unique is its integration with commonly
+used Python libraries. Common tasks that were easy before remain easy. More
+importantly, dealing with your applications specific needs and requirements is
+also easy.
