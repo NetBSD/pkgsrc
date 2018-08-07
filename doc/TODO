@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18464 2018/08/07 10:47:48 adam Exp $
+$NetBSD: TODO,v 1.18465 2018/08/07 11:15:41 adam Exp $
 
 Suggested new packages
 ======================
@@ -506,7 +506,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cpmtools-2.20
 	o crack-attack-1.1.15
 	o crafty-25.0.1
-	o creduce-2.8.0
 	o crimsonfields-0.5.3
 	o cross-h8300-hms-binutils-2.17
 	o crossfire-1.71.0
