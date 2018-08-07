@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/08/07 10:44:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/08/07 23:39:30 kamil Exp $
 bin/FileCheck
 bin/bugpoint
 bin/count
@@ -1273,11 +1273,11 @@ ${PLIST.ARM}lib/libLLVMARMCodeGen.a
 ${PLIST.ARM}lib/libLLVMARMDesc.a
 ${PLIST.ARM}lib/libLLVMARMDisassembler.a
 ${PLIST.ARM}lib/libLLVMARMInfo.a
-lib/libLLVMARMUtils.a
+${PLIST.ARM}lib/libLLVMARMUtils.a
 lib/libLLVMAnalysis.a
 lib/libLLVMAsmParser.a
 lib/libLLVMAsmPrinter.a
-lib/libLLVMBPFAsmParser.a
+${PLIST.BPF}lib/libLLVMBPFAsmParser.a
 ${PLIST.BPF}lib/libLLVMBPFAsmPrinter.a
 ${PLIST.BPF}lib/libLLVMBPFCodeGen.a
 ${PLIST.BPF}lib/libLLVMBPFDesc.a
