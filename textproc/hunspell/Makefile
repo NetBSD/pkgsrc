@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2018/05/23 22:06:49 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2018/08/07 08:29:43 jperkin Exp $
 
 DISTNAME=	hunspell-1.3.3
 PKGREVISION=	6
@@ -15,7 +15,7 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config perl:run
 USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 
 CONFIGURE_ARGS+=	--with-ui
 
