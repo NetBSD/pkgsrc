@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2018/05/22 12:39:23 adam Exp $
+# $NetBSD: Makefile,v 1.32 2018/08/07 10:44:50 adam Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -16,7 +16,7 @@
 # Always update all */buildlink3.mk to require the latest stable release
 # version in BUILDLINK_API_DEPENDS, as there is no backwards compatibility
 
-DISTNAME=	llvm-5.0.2.src
+DISTNAME=	llvm-6.0.1.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
@@ -103,4 +103,5 @@ post-extract:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
