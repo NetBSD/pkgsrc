@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3466 2018/08/07 10:15:45 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3467 2018/08/07 10:47:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4936,3 +4936,11 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-test-django to 3.3.3 [adam 2018-08-07]
 	Updated www/py-cheroot to 6.4.0 [adam 2018-08-07]
 	Updated www/py-cherrypy to 17.0.0 [adam 2018-08-07]
+	Updated lang/llvm to 6.0.1 [adam 2018-08-07]
+	Updated lang/clang to 6.0.1 [adam 2018-08-07]
+	Updated lang/clang-static-analyzer to 6.0.1 [adam 2018-08-07]
+	Updated lang/libunwind to 6.0.1 [adam 2018-08-07]
+	Updated devel/lldb to 6.0.1 [adam 2018-08-07]
+	Updated devel/polly to 6.0.1 [adam 2018-08-07]
+	Updated devel/include-what-you-use to 0.10 [adam 2018-08-07]
+	Updated devel/py-llvmlite to 0.24.0 [adam 2018-08-07]
