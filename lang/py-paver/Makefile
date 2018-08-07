@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/08/07 09:24:36 adam Exp $
+# $NetBSD: Makefile,v 1.2 2018/08/07 09:44:13 adam Exp $
 
 DISTNAME=	Paver-1.3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -17,6 +17,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv-[0-9]*:../../devel/py-virtualenv
 
 USE_LANGUAGES=	# none
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} paver paver-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
