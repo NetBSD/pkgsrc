@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.8 2018/07/06 07:51:21 adam Exp $
+$NetBSD: distinfo,v 1.9 2018/08/07 08:41:26 adam Exp $
 
-SHA1 (celery-4.2.0.tar.gz) = 75a7f526efcdb93d3c8ce5028b129d9683cff6a5
-RMD160 (celery-4.2.0.tar.gz) = c5b575e8f3e20ea6eea9ce2a36b85fc8285f1cf1
-SHA512 (celery-4.2.0.tar.gz) = ad7d18c318b6383e2a44a03f55f44d30f4d2fb6f3d05529376f0b05cbc28a8acbf3961a8d24a039e46917f439c1679d1f55a5957e4bc9587a6643a5c766ca487
-Size (celery-4.2.0.tar.gz) = 1351778 bytes
+SHA1 (celery-4.2.1.tar.gz) = 1d1c125b8621b0ab4c90b4f094995581aaf9044f
+RMD160 (celery-4.2.1.tar.gz) = 36d9697dbc2c312ed0ae65b43e121db1c4980afd
+SHA512 (celery-4.2.1.tar.gz) = 474733200e0f6aadbfab5deeb43ee563618687792d43219ebc81a53084ad491cafa410d6bb56153c3d14c76d358ce119f0055ee9b6c31e6becfe8ddf2d2178ad
+Size (celery-4.2.1.tar.gz) = 1364075 bytes
 SHA1 (patch-celery_backends_redis.py) = bf2c356adf6cb79a7a0cfb4483a83352a472acbf
 SHA1 (patch-celery_backends_rpc.py) = efb7a2acda99b4f998aa1c34dec8a2ab631e2347
 SHA1 (patch-requirements_test.txt) = d2aa5524643e9804e72235cc1af0aa17123cf2b7
