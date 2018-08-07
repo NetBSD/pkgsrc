@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/12/01 19:22:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/08/07 10:44:50 adam Exp $
 include/polly/Canonicalization.h
 include/polly/CodeGen/BlockGenerators.h
 include/polly/CodeGen/CodeGeneration.h
@@ -12,11 +12,14 @@ include/polly/CodeGen/PPCGCodeGeneration.h
 include/polly/CodeGen/PerfMonitor.h
 include/polly/CodeGen/RuntimeDebugBuilder.h
 include/polly/CodeGen/Utils.h
+include/polly/CodePreparation.h
 include/polly/Config/config.h
 include/polly/DeLICM.h
 include/polly/DependenceInfo.h
 include/polly/FlattenAlgo.h
 include/polly/FlattenSchedule.h
+include/polly/ForwardOpTree.h
+include/polly/JSONExporter.h
 include/polly/LinkAllPasses.h
 include/polly/Options.h
 include/polly/PolyhedralInfo.h
@@ -39,7 +42,7 @@ include/polly/Support/SCEVValidator.h
 include/polly/Support/ScopHelper.h
 include/polly/Support/ScopLocation.h
 include/polly/Support/VirtualInstruction.h
-include/polly/isl-noexceptions.h
+include/polly/ZoneAlgo.h
 include/polly/isl/aff.h
 include/polly/isl/aff_type.h
 include/polly/isl/arg.h
@@ -70,6 +73,7 @@ include/polly/isl/id_to_ast_expr.h
 include/polly/isl/id_to_id.h
 include/polly/isl/id_to_pw_aff.h
 include/polly/isl/ilp.h
+include/polly/isl/isl-noexceptions.h
 include/polly/isl/list.h
 include/polly/isl/local_space.h
 include/polly/isl/lp.h
