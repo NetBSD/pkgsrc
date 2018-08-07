@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3469 2018/08/07 15:57:44 nia Exp $
+$NetBSD: CHANGES-2018,v 1.3470 2018/08/07 15:59:28 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4946,3 +4946,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-llvmlite to 0.24.0 [adam 2018-08-07]
 	Updated devel/creduce to 2.8.0 [adam 2018-08-07]
 	Added emulators/retroarch-assets version 1.7.3 [nia 2018-08-07]
+	Added emulators/libretro-core-info version 1.7.3 [nia 2018-08-07]
