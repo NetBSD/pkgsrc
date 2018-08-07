@@ -1,4 +1,4 @@
-# $NetBSD: inplace.mk,v 1.13 2015/12/03 14:37:30 jperkin Exp $
+# $NetBSD: inplace.mk,v 1.14 2018/08/07 12:04:36 jperkin Exp $
 #
 # This file should not be included directly. Use USE_FEATURES instead.
 #
@@ -42,6 +42,11 @@ libnbcompat-extract:
 NBCOMPAT_CONFIGURE_ARGS+=	--build=${NATIVE_MACHINE_GNU_PLATFORM:Q}
 .endif
 NBCOMPAT_CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM:Q}
+
+# The illumos fts(3) implementation is not (as of August 2018) largefile aware
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ENV+=	ac_cv_func_fts_open=no
+.endif
 
 pre-configure: libnbcompat-build
 .PHONY: libnbcompat-build
