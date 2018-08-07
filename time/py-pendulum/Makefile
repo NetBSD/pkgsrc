@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2018/06/16 13:06:54 adam Exp $
+# $NetBSD: Makefile,v 1.10 2018/08/07 10:09:43 adam Exp $
 
-DISTNAME=	pendulum-2.0.2
+DISTNAME=	pendulum-2.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pendulum/}
