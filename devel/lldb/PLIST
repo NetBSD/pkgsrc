@@ -1,14 +1,16 @@
-@comment $NetBSD: PLIST,v 1.7 2017/12/01 19:22:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/08/07 10:44:50 adam Exp $
 bin/lldb
 bin/lldb-argdumper
 bin/lldb-mi
 bin/lldb-server
+bin/lldb-test
 include/lldb/API/LLDB.h
 include/lldb/API/SBAddress.h
 include/lldb/API/SBAttachInfo.h
 include/lldb/API/SBBlock.h
 include/lldb/API/SBBreakpoint.h
 include/lldb/API/SBBreakpointLocation.h
+include/lldb/API/SBBreakpointName.h
 include/lldb/API/SBBroadcaster.h
 include/lldb/API/SBCommandInterpreter.h
 include/lldb/API/SBCommandReturnObject.h
@@ -39,6 +41,7 @@ include/lldb/API/SBModule.h
 include/lldb/API/SBModuleSpec.h
 include/lldb/API/SBPlatform.h
 include/lldb/API/SBProcess.h
+include/lldb/API/SBProcessInfo.h
 include/lldb/API/SBQueue.h
 include/lldb/API/SBQueueItem.h
 include/lldb/API/SBSection.h
@@ -76,6 +79,7 @@ include/lldb/Breakpoint/BreakpointList.h
 include/lldb/Breakpoint/BreakpointLocation.h
 include/lldb/Breakpoint/BreakpointLocationCollection.h
 include/lldb/Breakpoint/BreakpointLocationList.h
+include/lldb/Breakpoint/BreakpointName.h
 include/lldb/Breakpoint/BreakpointOptions.h
 include/lldb/Breakpoint/BreakpointResolver.h
 include/lldb/Breakpoint/BreakpointResolverAddress.h
@@ -95,7 +99,7 @@ include/lldb/Core/AddressRange.h
 include/lldb/Core/AddressResolver.h
 include/lldb/Core/AddressResolverFileLine.h
 include/lldb/Core/AddressResolverName.h
-include/lldb/Core/ArchSpec.h
+include/lldb/Core/Architecture.h
 include/lldb/Core/Broadcaster.h
 include/lldb/Core/ClangForward.h
 include/lldb/Core/Communication.h
@@ -225,6 +229,7 @@ include/lldb/Host/Socket.h
 include/lldb/Host/SocketAddress.h
 include/lldb/Host/StringConvert.h
 include/lldb/Host/Symbols.h
+include/lldb/Host/TaskPool.h
 include/lldb/Host/Terminal.h
 include/lldb/Host/ThreadLauncher.h
 include/lldb/Host/Time.h
@@ -426,6 +431,7 @@ include/lldb/Target/UnixSignals.h
 include/lldb/Target/Unwind.h
 include/lldb/Target/UnwindAssembly.h
 include/lldb/Utility/AnsiTerminal.h
+include/lldb/Utility/ArchSpec.h
 include/lldb/Utility/Baton.h
 include/lldb/Utility/CleanUp.h
 include/lldb/Utility/Connection.h
@@ -464,7 +470,6 @@ include/lldb/Utility/StringExtractor.h
 include/lldb/Utility/StringLexer.h
 include/lldb/Utility/StringList.h
 include/lldb/Utility/StructuredData.h
-include/lldb/Utility/TaskPool.h
 include/lldb/Utility/TildeExpressionResolver.h
 include/lldb/Utility/Timeout.h
 include/lldb/Utility/Timer.h
@@ -488,7 +493,7 @@ include/lldb/lldb-types.h
 include/lldb/lldb-versioning.h
 lib/liblldb.so
 lib/liblldb.so.${PKGVERSION}
-${PLIST.posix}lib/liblldb.so.5
+${PLIST.posix}lib/liblldb.so.6
 lib/liblldbBase.a
 lib/liblldbBreakpoint.a
 lib/liblldbCommands.a
@@ -512,6 +517,7 @@ lib/liblldbPluginABISysV_ppc64.a
 lib/liblldbPluginABISysV_s390x.a
 lib/liblldbPluginABISysV_x86_64.a
 lib/liblldbPluginAppleObjCRuntime.a
+lib/liblldbPluginArchitectureArm.a
 lib/liblldbPluginCPlusPlusLanguage.a
 lib/liblldbPluginCXXItaniumABI.a
 lib/liblldbPluginDisassemblerLLVM.a
@@ -577,7 +583,6 @@ lib/liblldbPluginUnwindAssemblyX86.a
 lib/liblldbSymbol.a
 lib/liblldbTarget.a
 lib/liblldbUtility.a
-lib/liblldbUtilityHelpers.a
 ${PYSITELIB}/lldb/__init__.py
 ${PYSITELIB}/lldb/_lldb.so
 ${PYSITELIB}/lldb/embedded_interpreter.py
