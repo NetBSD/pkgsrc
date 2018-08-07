@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2018/07/08 09:38:47 adam Exp $
+# $NetBSD: Makefile,v 1.26 2018/08/07 06:09:09 adam Exp $
 
-DISTNAME=	vobject-0.9.6
+DISTNAME=	vobject-0.9.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/vobject/}
@@ -10,8 +10,7 @@ HOMEPAGE=	https://eventable.github.io/vobject/
 COMMENT=	Python iCalendar (ics) and vCard library
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.4.0:../../time/py-dateutil
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
