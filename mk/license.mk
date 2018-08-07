@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.86 2018/02/19 12:58:51 rillig Exp $
+# $NetBSD: license.mk,v 1.87 2018/08/07 15:43:41 nia Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -107,6 +107,9 @@ DEFAULT_ACCEPTABLE_LICENSES= \
 	artistic artistic-2.0 \
 	boost-license \
 	cc-by-sa-v3.0 \
+	cc-by-sa-v4.0 \
+	cc-by-sa-v4.0 \
+	cc-by-v4.0 \
 	cc0-1.0-universal \
 	cddl-1.0 \
 	cecill-2.1 \
