@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3465 2018/08/07 09:58:05 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3466 2018/08/07 10:15:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4930,3 +4930,9 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-setuptools to 40.0.0 [adam 2018-08-07]
 	Updated devel/py-pip to 18.0 [adam 2018-08-07]
 	Updated devel/py-pbr to 4.2.0 [adam 2018-08-07]
+	Updated www/py-pylint-django to 2.0 [adam 2018-08-07]
+	Updated devel/py-setuptools_scm to 3.0.6 [adam 2018-08-07]
+	Updated time/py-pendulum to 2.0.3 [adam 2018-08-07]
+	Updated www/py-test-django to 3.3.3 [adam 2018-08-07]
+	Updated www/py-cheroot to 6.4.0 [adam 2018-08-07]
+	Updated www/py-cherrypy to 17.0.0 [adam 2018-08-07]
