@@ -1,0 +1,2 @@
+Cog is a file generation tool. It lets you use pieces of Python code as
+generators in your source files to generate whatever text you need.
