@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/04 22:56:43 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/08/07 16:44:26 nia Exp $
 bin/retroarch
-bin/retroarch-cg2glsl
-bin/retroarch-joyconfig
-man/man1/retroarch-cg2glsl.1
-man/man1/retroarch-joyconfig.1
-man/man1/retroarch.1
+man/man6/retroarch.6
+share/applications/retroarch.desktop
+share/doc/retroarch/COPYING
+share/doc/retroarch/README.md
 share/examples/retroarch/retroarch.cfg
-share/pixmaps/retroarch.png
 share/pixmaps/retroarch.svg
