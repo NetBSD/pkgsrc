@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.152 2018/05/27 12:27:05 wiz Exp $
+# $NetBSD: Makefile,v 1.153 2018/08/07 09:55:29 adam Exp $
 
-DISTNAME=	setuptools-39.2.0
+DISTNAME=	setuptools-40.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools/}
@@ -18,10 +18,16 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-virtualenv-[0-9]*:../../devel/py-test-virtualenv
 TEST_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
+.include "../../lang/python/distutils.mk"
+.if ${_PYTHON_VERSION:M3[6-9]}
+TEST_DEPENDS+=	${PYPKGPREFIX}-paver-[0-9]*:../../lang/py-paver
+.else
+TEST_DEPENDS+=	${PYPKGPREFIX}-pathlib2-[0-9]*:../../devel/py-pathlib2
+.endif
+
 REPLACE_PYTHON+=	setuptools/command/easy_install.py
 
 PYSETUPTESTTARGET=	pytest
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
