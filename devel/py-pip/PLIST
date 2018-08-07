@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.18 2018/04/17 08:42:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2018/08/07 09:56:53 adam Exp $
 bin/pip${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pip/__init__.py
 ${PYSITELIB}/pip/__init__.pyc
@@ -124,6 +123,9 @@ ${PYSITELIB}/pip/_internal/req/req_install.pyo
 ${PYSITELIB}/pip/_internal/req/req_set.py
 ${PYSITELIB}/pip/_internal/req/req_set.pyc
 ${PYSITELIB}/pip/_internal/req/req_set.pyo
+${PYSITELIB}/pip/_internal/req/req_tracker.py
+${PYSITELIB}/pip/_internal/req/req_tracker.pyc
+${PYSITELIB}/pip/_internal/req/req_tracker.pyo
 ${PYSITELIB}/pip/_internal/req/req_uninstall.py
 ${PYSITELIB}/pip/_internal/req/req_uninstall.pyc
 ${PYSITELIB}/pip/_internal/req/req_uninstall.pyo
@@ -820,6 +822,9 @@ ${PYSITELIB}/pip/_vendor/urllib3/util/__init__.pyo
 ${PYSITELIB}/pip/_vendor/urllib3/util/connection.py
 ${PYSITELIB}/pip/_vendor/urllib3/util/connection.pyc
 ${PYSITELIB}/pip/_vendor/urllib3/util/connection.pyo
+${PYSITELIB}/pip/_vendor/urllib3/util/queue.py
+${PYSITELIB}/pip/_vendor/urllib3/util/queue.pyc
+${PYSITELIB}/pip/_vendor/urllib3/util/queue.pyo
 ${PYSITELIB}/pip/_vendor/urllib3/util/request.py
 ${PYSITELIB}/pip/_vendor/urllib3/util/request.pyc
 ${PYSITELIB}/pip/_vendor/urllib3/util/request.pyo
@@ -829,9 +834,6 @@ ${PYSITELIB}/pip/_vendor/urllib3/util/response.pyo
 ${PYSITELIB}/pip/_vendor/urllib3/util/retry.py
 ${PYSITELIB}/pip/_vendor/urllib3/util/retry.pyc
 ${PYSITELIB}/pip/_vendor/urllib3/util/retry.pyo
-${PYSITELIB}/pip/_vendor/urllib3/util/selectors.py
-${PYSITELIB}/pip/_vendor/urllib3/util/selectors.pyc
-${PYSITELIB}/pip/_vendor/urllib3/util/selectors.pyo
 ${PYSITELIB}/pip/_vendor/urllib3/util/ssl_.py
 ${PYSITELIB}/pip/_vendor/urllib3/util/ssl_.pyc
 ${PYSITELIB}/pip/_vendor/urllib3/util/ssl_.pyo
