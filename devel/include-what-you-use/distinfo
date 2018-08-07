@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2018/02/06 10:01:36 adam Exp $
+$NetBSD: distinfo,v 1.8 2018/08/07 10:45:47 adam Exp $
 
-SHA1 (include-what-you-use-0.9.src.tar.gz) = 76f0da08db27d1387095a997b451bd1a63443dc5
-RMD160 (include-what-you-use-0.9.src.tar.gz) = 9c01bfcea047c2c6e466eaa7864aaa45ba9de6cd
-SHA512 (include-what-you-use-0.9.src.tar.gz) = 9d4a9717a3a3f6752f8bdd1392b6d7a5e8b8dc277ef46a50f24185a089360380e1da92a61fd150598843f5c24cff03e74bc674e57579960d977acde755e34c52
-Size (include-what-you-use-0.9.src.tar.gz) = 439081 bytes
+SHA1 (include-what-you-use-0.10.src.tar.gz) = 51ecee3b252b628ec9d5f04bb7b14e74ce67a2a3
+RMD160 (include-what-you-use-0.10.src.tar.gz) = 3f56875c989b09b51e146b291d5c570854f91d8e
+SHA512 (include-what-you-use-0.10.src.tar.gz) = 2bf2593dba252d870074125f976a237e901e969323969f2c8fb030e8376bb230f1d5c2baecc8cd8fad7099e83589c7666c44cd178d2094f6e883cace1e53ad90
+Size (include-what-you-use-0.10.src.tar.gz) = 440406 bytes
 SHA1 (patch-iwyu__output.cc) = 55a8c7ad35613206ad01dd312afdabb5649e63c2
