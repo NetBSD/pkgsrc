@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.254 2018/08/07 15:35:37 nia Exp $
+# $NetBSD: Makefile,v 1.255 2018/08/07 15:58:36 nia Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -89,6 +89,7 @@ SUBDIR+=	keystone
 SUBDIR+=	klh10
 SUBDIR+=	libdsk
 SUBDIR+=	libretro-catsfc
+SUBDIR+=	libretro-core-info
 SUBDIR+=	libretro-fceumm
 SUBDIR+=	libretro-gambatte
 SUBDIR+=	libretro-mednafen-pce-fast
