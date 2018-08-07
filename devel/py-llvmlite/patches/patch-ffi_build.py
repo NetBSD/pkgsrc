@@ -1,12 +1,12 @@
-$NetBSD: patch-ffi_build.py,v 1.1 2018/05/17 15:47:46 minskim Exp $
+$NetBSD: patch-ffi_build.py,v 1.2 2018/08/07 10:46:42 adam Exp $
 
 Add NetBSD support
 
---- ffi/build.py.orig	2016-08-24 14:49:54.000000000 +0000
+--- ffi/build.py.orig	2018-07-10 14:46:02.000000000 +0000
 +++ ffi/build.py
-@@ -142,6 +142,8 @@ def main():
+@@ -143,6 +143,8 @@ def main():
          main_posix('linux', '.so')
-     elif sys.platform.startswith('freebsd'):
+     elif sys.platform.startswith(('freebsd','openbsd')):
          main_posix('freebsd', '.so')
 +    elif sys.platform.startswith('netbsd'):
 +        main_posix('netbsd', '.so')
