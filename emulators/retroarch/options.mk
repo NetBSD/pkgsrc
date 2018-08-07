@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2018/08/07 16:44:26 nia Exp $
+# $NetBSD: options.mk,v 1.3 2018/08/07 16:48:24 nia Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -25,12 +25,6 @@ PKG_SUPPORTED_OPTIONS+=		simd
 .  if !empty(MACHINE_ARCH:M*armv7*)
 PKG_SUGGESTED_OPTIONS+=		simd
 .  endif
-.endif
-
-.if !empty(MACHINE_PLATFORM:MLinux-*-*armv7*)
-PKG_OPTIONS_GROUP.gl+=		sunxi-mali-fb
-PKG_SUPPORTED_OPTIONS+=		sunxi-g2d
-PKG_SUGGESTED_OPTIONS+=		sunxi-g2d
 .endif
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-arm*)
@@ -96,10 +90,6 @@ USE_RETROARCH_GL=	no
 .if ${USE_RETROARCH_GL} == "yes"
 DEPENDS+=	retroarch-assets>=${PKGVERSION_NOREV}:../../emulators/retroarch-assets
 DEPENDS+=	libretro-glsl-shaders>0:../../emulators/libretro-glsl-shaders
-.endif
-
-.if !empty(PKG_OPTIONS:Msunxi-g2d)
-CONFIGURE_ARGS+=	--enable-sunxi
 .endif
 
 .if !empty(PKG_OPTIONS:Mudev)
