@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/08/04 21:40:53 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2018/08/08 15:39:55 fhajny Exp $
 
 DISTNAME=	dnsdist-1.3.2
 CATEGORIES=	net
@@ -30,8 +30,9 @@ CONF_FILES+=	share/examples/dnsdist/dnsdist.conf \
 
 CONFIGURE_ARGS+=	--enable-dnscrypt
 CONFIGURE_ARGS+=	--enable-libsodium
-CONFIGURE_ARGS+=	--enable-protobuf
 CONFIGURE_ARGS+=	--enable-re2
+CONFIGURE_ARGS+=	--with-protobuf
+CONFIGURE_ARGS+=	--without-net-snmp
 CONFIGURE_ENV+=		LIBEDIT_CFLAGS="-I${BUILDLINK_PREFIX.libedit}/include"
 CONFIGURE_ENV+=		LIBEDIT_LIBS="-L${BUILDLINK_PREFIX.libedit}/lib -ledit"
 

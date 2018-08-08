@@ -1,8 +1,6 @@
-$NetBSD: patch-iputils.hh,v 1.2 2017/08/22 17:00:35 fhajny Exp $
+$NetBSD: patch-iputils.hh,v 1.3 2018/08/08 15:39:55 fhajny Exp $
 
-- Do not use IP_PKTINFO on NetBSD, the structure is not as expected.
-- Backport fix for SunOS segfault problem, see:
-  https://github.com/PowerDNS/pdns/pull/4877
+Do not use IP_PKTINFO on NetBSD, the structure is not as expected.
 
 --- iputils.hh.orig	2017-01-17 08:43:49.000000000 +0000
 +++ iputils.hh
