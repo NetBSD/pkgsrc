@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:30:59 agc Exp $
+$NetBSD: distinfo,v 1.3 2018/08/08 22:14:20 nia Exp $
 
-SHA1 (picodrive-libretro-20150203.zip) = 4be392f3b5a0f3c8b8fbd3fbdb31301bc0c4ee4e
-RMD160 (picodrive-libretro-20150203.zip) = 98401b5992a38dceaa5f6e90f168969bdb0d8baf
-SHA512 (picodrive-libretro-20150203.zip) = 56c1184c30ebad04deaad9a4bc72276adaa50fac7b80e1a63fd91c1a9c06352bfa28db43cba8f92b84feffc487b6f43af7287970c0eaecdab3a1b0fe4cbdc942
-Size (picodrive-libretro-20150203.zip) = 1681676 bytes
+SHA1 (libretro-picodrive-20180722-2db90628f5f29f1d4030172ce4f57ab757fa9d93.tar.gz) = 61b5269de3b1f36f22f13f4d2626bf5bd25b2690
+RMD160 (libretro-picodrive-20180722-2db90628f5f29f1d4030172ce4f57ab757fa9d93.tar.gz) = 40a1b55c0e3f96cdf84aca88b03e4e2492915dea
+SHA512 (libretro-picodrive-20180722-2db90628f5f29f1d4030172ce4f57ab757fa9d93.tar.gz) = 3241fd627a2a506f2e01241a2cef0635dc2efb1598a8c538809f7c104b3de20629b76342a2223bcff958def5cf71b1da5cc0f136879374339a1067170439035c
+Size (libretro-picodrive-20180722-2db90628f5f29f1d4030172ce4f57ab757fa9d93.tar.gz) = 1411113 bytes
+SHA1 (patch-Makefile.libretro) = 883b434e5c549d3ae855162ed8f5b3ff0bed9c7e
