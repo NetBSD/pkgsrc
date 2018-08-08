@@ -1,19 +1,21 @@
-# $NetBSD: Makefile,v 1.1 2015/02/05 22:38:59 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2018/08/08 22:31:13 nia Exp $
 
-DISTNAME=	stella-libretro-20150205
-PKGNAME=	libretro-stella-20150205
+DISTNAME=	libretro-stella-20180411
 CATEGORIES=	emulators
-MASTER_SITES=	http://ftp.NetBSD.org/pub/NetBSD/misc/jmcneill/retroarch/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+GITHUB_PROJECT=	stella-libretro
+GITHUB_TAG=	b0d525b724fa0a9a313e2ea33a590aba98deaabf
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/libretro/stella-libretro
+HOMEPAGE=	https://docs.libretro.com/library/stella/
 COMMENT=	Libretro core based on the Stella Atari 2600 (VCS) emulator
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/stella-libretro-master
+EXTRACT_USING=	bsdtar
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
+
+MAKE_FLAGS+=	GIT_VERSION="-${PKGVERSION_NOREV}-pkgsrc"
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
