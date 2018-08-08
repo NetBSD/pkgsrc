@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3473 2018/08/07 16:45:40 nia Exp $
+$NetBSD: CHANGES-2018,v 1.3474 2018/08/08 06:41:05 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4950,3 +4950,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added emulators/libretro-glsl-shaders version 1.7.3 [nia 2018-08-07]
 	Added emulators/libretro-database version 1.7.3 [nia 2018-08-07]
 	Updated emulators/retroarch to 1.7.3 [nia 2018-08-07]
+	Updated sysutils/intel-microcode-netbsd to 20180807 [msaitoh 2018-08-07]
