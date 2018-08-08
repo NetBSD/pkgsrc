@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/08/08 20:52:33 nia Exp $
+# $NetBSD: Makefile,v 1.3 2018/08/08 20:56:20 nia Exp $
 
 DISTNAME=	libretro-fceumm-20180621
 CATEGORIES=	emulators
@@ -7,7 +7,7 @@ GITHUB_TAG=	67c072617b700560acbfea54f2779cb290dbf827
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://docs.libretro.com/library/fceumm/
-COMMENT=	Libretro core based on the FCEUmm emulator
+COMMENT=	Libretro core based on the FCEUmm Famicom/NES emulator
 LICENSE=	gnu-gpl-v2
 
 EXTRACT_USING=	bsdtar
