@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/04/08 18:36:51 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2018/08/08 08:10:24 schmonz Exp $
 
 DISTNAME=	nacl-20110221
 CATEGORIES=	security
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://nacl.cr.yp.to
 COMMENT=	Secure, usable, fast networking and cryptography library
-LICENSE=	djb-nonlicense
+LICENSE=	public-domain
 
 USE_LANGUAGES=	c c++
 
