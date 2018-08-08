@@ -1,4 +1,9 @@
-$NetBSD: patch-src_cpus_cpu_mips_instr.cc,v 1.2 2018/03/21 17:39:42 kamil Exp $
+$NetBSD: patch-src_cpus_cpu_mips_instr.cc,v 1.3 2018/08/08 13:53:48 gson Exp $
+
+When emulating the MIPS DIV and DDIV instructions, check for divide
+overflow instead of performing the overflowing divide on the host and
+crashing the emulator.  This is needed to run recent versions of the
+NetBSD test suite on an emulated MIPS system.
 
 implement trap with immediate instructions present in MIPS32.
 
@@ -6,7 +11,25 @@ Fix C++11 literals.
 
 --- src/cpus/cpu_mips_instr.cc.orig	2014-08-17 08:45:15.000000000 +0000
 +++ src/cpus/cpu_mips_instr.cc
-@@ -1461,6 +1461,92 @@ X(tne)
+@@ -1262,6 +1262,8 @@ X(div)
+ 	int32_t res, rem;
+ 	if (b == 0)
+ 		res = 0, rem = a;
++	else if (a == (int32_t)0x80000000U && b == -1)
++		res = 0, rem = 0;
+ 	else
+ 		res = a / b, rem = a - b*res;
+ 	cpu->cd.mips.lo = (int32_t)res;
+@@ -1284,6 +1286,8 @@ X(ddiv)
+ 	int64_t res, rem;
+ 	if (b == 0)
+ 		res = 0;
++	else if (a == (int64_t)0x8000000000000000ULL && b == -1)
++		res = 0;
+ 	else
+ 		res = a / b;
+ 	rem = a - b*res;
+@@ -1461,6 +1465,92 @@ X(tne)
  	}
  }
  
@@ -99,7 +122,7 @@ Fix C++11 literals.
  
  /*
   *  3-register arithmetic instructions:
-@@ -3983,7 +4069,7 @@ X(to_be_translated)
+@@ -3983,7 +4073,7 @@ X(to_be_translated)
  		if (cpu->delay_slot) {
  			if (!cpu->translation_readahead)
  				fatal("TODO: branch in delay slot (=%i)? (3);"
@@ -108,7 +131,7 @@ Fix C++11 literals.
  				    cpu->delay_slot, (uint64_t)addr, iword);
  			goto bad;
  		}
-@@ -4446,6 +4532,37 @@ X(to_be_translated)
+@@ -4446,6 +4536,37 @@ X(to_be_translated)
  			}
  			break;
  
@@ -146,7 +169,7 @@ Fix C++11 literals.
  		default:if (!cpu->translation_readahead)
  				fatal("UNIMPLEMENTED regimm rt=%i\n", rt);
  			goto bad;
-@@ -4753,7 +4870,7 @@ X(to_be_translated)
+@@ -4753,7 +4874,7 @@ X(to_be_translated)
  		if (!has_warned && !cpu->translation_readahead) {
  			fatal("[ WARNING/NOTE: attempt to execute a 64-bit"
  			    " instruction on an emulated 32-bit processor; "
@@ -155,7 +178,7 @@ Fix C++11 literals.
  			has_warned = 1;
  		}
  		if (cpu->translation_readahead)
-@@ -4770,4 +4887,3 @@ X(to_be_translated)
+@@ -4770,4 +4891,3 @@ X(to_be_translated)
  #include "cpu_dyntrans.cc" 
  #undef	DYNTRANS_TO_BE_TRANSLATED_TAIL
  }
