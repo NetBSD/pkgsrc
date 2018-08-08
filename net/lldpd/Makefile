@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2018/02/02 13:55:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2018/08/08 14:10:16 prlw1 Exp $
 
-DISTNAME=		lldpd-0.7.15
-PKGREVISION=		4
+DISTNAME=		lldpd-1.0.1
 CATEGORIES=		net
 MASTER_SITES=		http://media.luffy.cx/files/lldpd/
 
@@ -27,10 +26,8 @@ CONFIGURE_ARGS+=	--disable-hardening
 CONFIGURE_ARGS+=       --localstatedir=${VARBASE}
 BUILD_DEFS+=		VARBASE
 
-CONF_FILES=		${EXAMPLE_DIR}/README.conf etc/lldpd.d/README.conf
-CONF_FILES+=		${EXAMPLE_DIR}/lldpcli.bash-completion \
-	         etc/bash_completion.d/lldpcli.bash-completion
-EXAMPLE_DIR=		${PREFIX}/share/${PKGBASE}/conf
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+CONF_FILES=		${EGDIR}/README.conf ${PKG_SYSCONFDIR}/lldpd.d/README.conf
 
 #  CCLD     lldpd
 #  ld: cannot find -lperl
@@ -46,14 +43,12 @@ AUTO_MKDIRS=		yes
 TEST_TARGET=		check
 
 INSTALLATION_DIRS+=	sbin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
-INSTALLATION_DIRS+=	share/${PKGBASE}/conf
+INSTALLATION_DIRS+=	${EGDIR}
 
 .include "options.mk"
 
 post-install:
-.for i in etc/lldpd.d/README.conf etc/bash_completion.d/lldpcli.bash-completion
-	 ${MV} ${DESTDIR}${PREFIX}/${i} ${DESTDIR}${EXAMPLE_DIR}
-.endfor
+	${MV} ${DESTDIR}${PREFIX}/etc/lldpd.d/README.conf ${DESTDIR}${EGDIR}
 
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0.5
 .include "../../devel/libevent/buildlink3.mk"
