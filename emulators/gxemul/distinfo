@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.53 2018/08/08 13:53:48 gson Exp $
+$NetBSD: distinfo,v 1.54 2018/08/08 14:09:21 gson Exp $
 
 SHA1 (gxemul-0.6.0.1.tar.gz) = 8a9b7a6c08628c2a59a6e7e9c7c449c3826b4744
 RMD160 (gxemul-0.6.0.1.tar.gz) = 6943173d4149bfe40218715b8ed2c82b5b361e50
@@ -24,7 +24,7 @@ SHA1 (patch-src_cpus_cpu__ppc.cc) = 013a6a6ea28acc1ba1751813b5dfa3d11d251427
 SHA1 (patch-src_cpus_cpu__ppc__instr.cc) = cdc664f35cdb289380bb959f1b07c95151b60eed
 SHA1 (patch-src_cpus_cpu__sh.cc) = b72eb6b670fad93198c9ee7d1bb57c0a69027a3a
 SHA1 (patch-src_cpus_cpu_mips.cc) = 0fdeed0a52b4b8a2e256e0f1084cf5a2131a6dce
-SHA1 (patch-src_cpus_cpu_mips_instr.cc) = d11566336c179841b206d4777b0fdc4c482de03c
+SHA1 (patch-src_cpus_cpu_mips_instr.cc) = 48035575ce5b075bb56c291e272dea4e8b1bebfe
 SHA1 (patch-src_cpus_memory__alpha.cc) = 9bea508cc59aa6856928f0d6f5964f5f24ac648e
 SHA1 (patch-src_cpus_memory__mips__v2p.cc) = 2b859ffa219ded4e7c4a6a0ad3047e4c444d472d
 SHA1 (patch-src_cpus_memory__ppc.cc) = e321cc7acaa4a61fda91f46b05f10863d407ae9f
