@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2018/08/08 22:14:20 nia Exp $
+# $NetBSD: Makefile,v 1.4 2018/08/08 23:47:49 nia Exp $
 
 DISTNAME=	libretro-picodrive-20180722
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	picodrive
