@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.2 2018/07/18 00:06:14 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2018/08/08 20:41:06 nia Exp $
 
-DISTNAME=	gambatte-libretro-20150204
-PKGNAME=	libretro-gambatte-20150204
+DISTNAME=	libretro-gambatte-20180709
 CATEGORIES=	emulators
-MASTER_SITES=	http://ftp.NetBSD.org/pub/NetBSD/misc/jmcneill/retroarch/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+GITHUB_PROJECT=	gambatte-libretro
+GITHUB_TAG=	7722012ce85e56c324cb2080645347689ca379ae
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/libretro/gambatte-libretro
+MAINTAINER=	nia@NetBSD.org
+HOMEPAGE=	https://docs.libretro.com/library/gambatte/
 COMMENT=	Libretro core based on the Gambatte Game Boy Color emulator
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/gambatte-libretro-master/libgambatte
+EXTRACT_USING=	bsdtar
 USE_LANGUAGES=	c c++03
 MAKE_FILE=	Makefile.libretro
 USE_TOOLS+=	gmake
