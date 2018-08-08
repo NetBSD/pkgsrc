@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2018/06/09 03:36:08 tsutsui Exp $
+$NetBSD: distinfo,v 1.16 2018/08/08 12:16:00 tsutsui Exp $
 
-SHA1 (pango-3.2.7.gem) = 3b2178541ed803a9bf909eafe09c42f98fdbf21f
-RMD160 (pango-3.2.7.gem) = 18af82c96a54068406e5976a7838d45f695a34a3
-SHA512 (pango-3.2.7.gem) = 74c50d72adc46983606758bcb0b53a50fcfaf08398d74ff19d915cb36f2811a81c43f7716632e83ce0ca0cea5fadc8e1d2eb5b2fd495c4fd488fff0ffae11df1
-Size (pango-3.2.7.gem) = 27648 bytes
+SHA1 (pango-3.2.9.gem) = b564c3fa71396a9b70b15a2c3712ca908cc42778
+RMD160 (pango-3.2.9.gem) = 20f0e4e5be78e99c4f77786b775b474513df57fa
+SHA512 (pango-3.2.9.gem) = 68479fe35acf7d68eecf7ee7ced32f7fce05ec815f9d64d7f68d2fac3874aa7c4236eb4d5b56a5c6bd1d5cd505ea475ae8c881c72c017c755fb7fee97a97048d
+Size (pango-3.2.9.gem) = 28160 bytes
