@@ -1,25 +1,54 @@
-# $NetBSD: Makefile,v 1.2 2015/02/05 16:57:53 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2018/08/08 22:14:20 nia Exp $
 
-DISTNAME=	picodrive-libretro-20150203
-PKGNAME=	libretro-picodrive-20150203
+DISTNAME=	libretro-picodrive-20180722
 CATEGORIES=	emulators
-MASTER_SITES=	http://ftp.NetBSD.org/pub/NetBSD/misc/jmcneill/retroarch/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+GITHUB_PROJECT=	picodrive
+GITHUB_TAG=	2db90628f5f29f1d4030172ce4f57ab757fa9d93
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/libretro/picodrive
+HOMEPAGE=	https://docs.libretro.com/library/picodrive/
 COMMENT=	Fast MegaDrive/MegaCD/32X emulator
 LICENSE=	picodrive-license
 
-WRKSRC=		${WRKDIR}/picodrive
+EXTRACT_USING=	bsdtar
 MAKE_FILE=	Makefile.libretro
 USE_TOOLS+=	gmake
 
-.if !empty(MACHINE_ARCH:M*armv6*)
-MAKE_ENV+=	HAVE_ARMV6=1
-.endif
+MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
+
+.include "../../mk/bsd.prefs.mk"
+
+NOT_FOR_PLATFORM=	${BIGENDIANPLATFORMS}
+
 .if !empty(MACHINE_ARCH:M*armv7*)
-MAKE_ENV+=	HAVE_ARMV7=1
+# Avoid mixing in Thumb code with Picodrive's ARM asm.
+CFLAGS+=		-marm
+BUILD_MAKE_FLAGS+=	ARCH=arm
+BUILD_MAKE_FLAGS+=	ARM_ASM=1
+BUILD_MAKE_FLAGS+=	use_cyclone=0
+BUILD_MAKE_FLAGS+=	use_fame=1
+BUILD_MAKE_FLAGS+=	use_drz80=0
+BUILD_MAKE_FLAGS+=	use_cz80=1
+BUILD_MAKE_FLAGS+=	use_sh2drc=1
+BUILD_MAKE_FLAGS+=	use_svpdrc=1
+.elif !empty(MACHINE_ARCH:M*armv6*)
+CFLAGS+=		-marm
+BUILD_MAKE_FLAGS+=	ARCH=arm
+BUILD_MAKE_FLAGS+=	ARM_ASM=1
+BUILD_MAKE_FLAGS+=	asm_memory=1
+BUILD_MAKE_FLAGS+=	asm_render=1
+BUILD_MAKE_FLAGS+=	asm_ym2612=1
+BUILD_MAKE_FLAGS+=	asm_misc=1
+BUILD_MAKE_FLAGS+=	asm_cdpico=1
+BUILD_MAKE_FLAGS+=	asm_cdmemory=1
+BUILD_MAKE_FLAGS+=	asm_mix=1
+BUILD_MAKE_FLAGS+=	use_cyclone=0
+BUILD_MAKE_FLAGS+=	use_fame=0
+BUILD_MAKE_FLAGS+=	use_drz80=1
+BUILD_MAKE_FLAGS+=	use_cz80=0
+BUILD_MAKE_FLAGS+=	use_sh2drc=1
+BUILD_MAKE_FLAGS+=	use_svpdrc=1
 .endif
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
