@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/08/09 11:13:28 jperkin Exp $
+
+SHA1 (Parse-PMFile-0.41.tar.gz) = 6650643f65b669435cddd3c5d74804a31cef98af
+RMD160 (Parse-PMFile-0.41.tar.gz) = 9ee7f298d3f4b857983a405de0328a65f3b08dfc
+SHA512 (Parse-PMFile-0.41.tar.gz) = 4f473ea0606956e56d329087ec8e640ae6932b9e24a18996f64baece975dacd565f288caef1ad20993bb871bb9eebfa54a4eb790ffb7c0fea3503c5033ef2310
+Size (Parse-PMFile-0.41.tar.gz) = 15545 bytes
