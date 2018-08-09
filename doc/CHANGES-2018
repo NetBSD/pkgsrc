@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3488 2018/08/09 11:10:23 leot Exp $
+$NetBSD: CHANGES-2018,v 1.3489 2018/08/09 11:13:43 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4986,3 +4986,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/the_silver_searcher to 2.2.0 [leot 2018-08-09]
 	Added www/p5-HTTP-Tinyish version 0.14 [jperkin 2018-08-09]
 	Updated net/youtube-dl to 20180804 [leot 2018-08-09]
+	Added devel/p5-Parse-PMFile version 0.41 [jperkin 2018-08-09]
