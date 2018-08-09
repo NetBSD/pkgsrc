@@ -1,0 +1,11 @@
+libc++ is a new implementation of the C++ standard library, targeting
+C++11.
+
+Features and Goals
+ * Correctness as defined by the C++11 standard.
+ * Fast execution.
+ * Minimal memory use.
+ * Fast compile times.
+ * ABI compatibility with gcc's libstdc++ for some low-level features
+   such as exception objects, rtti and memory allocation.
+ * Extensive unit tests.
