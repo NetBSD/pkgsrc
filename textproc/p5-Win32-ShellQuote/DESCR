@@ -1,0 +1,14 @@
+Quotes argument lists to be used in Win32 in several different
+situations.
+
+Windows passes its arguments as a single string instead of an array as
+other platforms do. In almost all cases, the standard Win32
+CommandLineToArgvW function is used to parse this string. cmd.exe has
+different rules for handling quoting, so extra work has to be done if it
+is involved. It isn't possible to consistantly create a single string
+that will be handled the same by cmd.exe and the stardard parsing rules.
+
+Perl will try to detect if you need the shell by detecting shell
+metacharacters. The routine that checks that uses different quoting
+rules from both cmd.exe and the native Win32 parsing. Extra work must
+therefore be done to protect against this autodetection.
