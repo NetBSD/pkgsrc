@@ -679,13 +679,12 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__only_remove_known(c *check.C) 
 	t.SetupCommandLine("-Wall", "--autofix")
 	t.SetupVartypes()
 
-	lines := t.SetupFileLinesContinuation("Makefile",
+	mklines := t.SetupFileMkLines("Makefile",
 		MkRcsID,
 		"",
 		"demo: .PHONY",
 		"\t${ECHO} ${WRKSRC:Q}",
 		"\t${ECHO} ${FOODIR:Q}")
-	mklines := NewMkLines(lines)
 
 	mklines.Check()
 

@@ -599,6 +599,18 @@ func (s *Suite) Test_MkLines_CheckRedundantVariables__different_value(c *check.C
 	t.CheckOutputEmpty()
 }
 
+func (s *Suite) Test_MkLines_CheckRedundantVariables__overwrite_same_value(c *check.C) {
+	t := s.Init(c)
+	mklines := t.NewMkLines("module.mk",
+		"VAR=\tvalue ${OTHER}",
+		"VAR=\tvalue ${OTHER}")
+
+	mklines.CheckRedundantVariables()
+
+	t.CheckOutputLines(
+		"NOTE: module.mk:1: Definition of VAR is redundant because of line 2.")
+}
+
 func (s *Suite) Test_MkLines_CheckRedundantVariables__procedure_call(c *check.C) {
 	t := s.Init(c)
 	mklines := t.NewMkLines("mk/pthread.buildlink3.mk",
