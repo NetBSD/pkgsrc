@@ -1,3 +1,0 @@
-This subclass of Tie::Handle::Offset automatically hides an email-style
-message header. After opening the file, it reads up to a blank or
-white-space-only line and sets the offset to the next byte.
