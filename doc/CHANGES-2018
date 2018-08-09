@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3492 2018/08/09 11:36:47 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.3493 2018/08/09 11:46:03 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4990,3 +4990,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated parallel/hwloc to 1.11.10 [prlw1 2018-08-09]
 	Added textproc/p5-Win32-ShellQuote version 0.003001 [jperkin 2018-08-09]
 	Added devel/p5-Menlo version 1.9019 [jperkin 2018-08-09]
+	Added devel/p5-Menlo-Legacy version 1.9022 [jperkin 2018-08-09]
