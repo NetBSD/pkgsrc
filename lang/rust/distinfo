@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2018/08/09 17:04:03 jperkin Exp $
+$NetBSD: distinfo,v 1.33 2018/08/09 19:10:06 ryoon Exp $
 
 SHA1 (rust-1.27.2-i686-apple-darwin.tar.gz) = cf471217c9666c18a666e2b0faabd5a30d44010c
 RMD160 (rust-1.27.2-i686-apple-darwin.tar.gz) = 3910f9fac8babb80c5c84e3de8567ed530ab808f
@@ -28,10 +28,10 @@ SHA1 (rust-1.27.2-x86_64-unknown-linux-gnu.tar.gz) = e6c4b93cb8ded56b6a9e703dec2
 RMD160 (rust-1.27.2-x86_64-unknown-linux-gnu.tar.gz) = 90d1a3887865a72eea67e0c25bb3e9b5f531a2f7
 SHA512 (rust-1.27.2-x86_64-unknown-linux-gnu.tar.gz) = 964c3fc6490e0cac38225a29992a6d27133f0dd3f4f61ffe8a6f6c5c69b217a37d3efedfc2aade96b36aeddfa3dca53e460cbe42a22e256167cdd0e55c2df434
 Size (rust-1.27.2-x86_64-unknown-linux-gnu.tar.gz) = 231365190 bytes
-SHA1 (rust-1.27.2-x86_64-unknown-netbsd.tar.gz) = 1734a0b687dd71a6ed214626ac4b3bbbf593bc26
-RMD160 (rust-1.27.2-x86_64-unknown-netbsd.tar.gz) = 2f23c5962d287dd116695b8c82bf980f6f107973
-SHA512 (rust-1.27.2-x86_64-unknown-netbsd.tar.gz) = 27538675e1b97bd64860d75121870fe5017cb5a899026c93a6b5277085be51caac2a265a0a4a23f51a6870c15f31340a68f0999dcfb6078ef07ef49dfb3dcb9f
-Size (rust-1.27.2-x86_64-unknown-netbsd.tar.gz) = 151858875 bytes
+SHA1 (rust-1.28.0-x86_64-unknown-netbsd.tar.gz) = adf649042d6d8fa4e3e3884764983334a05fcc1d
+RMD160 (rust-1.28.0-x86_64-unknown-netbsd.tar.gz) = 7528a7c33006cbf3babd919f07c6b45aa40c933e
+SHA512 (rust-1.28.0-x86_64-unknown-netbsd.tar.gz) = 240b8de758469259aae3e7e8168a4dce1d62da864cae4ea0386fb6f808a19098bfb757526f22759355c62eb82c5eb31a0141b04ac32e669fb4b072232ea76f41
+Size (rust-1.28.0-x86_64-unknown-netbsd.tar.gz) = 156843116 bytes
 SHA1 (rust-std-1.27.2-i686-apple-darwin.tar.gz) = 3bf62ff668cf36613d0a4053c414475cbc59c64f
 RMD160 (rust-std-1.27.2-i686-apple-darwin.tar.gz) = 5b9995ee10e44e07216e4116fe0f9f6a8bbc153f
 SHA512 (rust-std-1.27.2-i686-apple-darwin.tar.gz) = fc96a42d29d924ef4623313bbe5444dc73e7ae6f4f2ccc9ee8afca5f2f8a9a9098a9bb1f28c5270dc60ee0e977b2f8564d728ca3d15974b2fed965686918aaa7
@@ -56,10 +56,10 @@ SHA1 (rust-std-1.27.2-x86_64-unknown-linux-gnu.tar.gz) = ccf68df5d7379e7c02877cb
 RMD160 (rust-std-1.27.2-x86_64-unknown-linux-gnu.tar.gz) = 9ac4cceac33d4b4e20314a838c00449ee47ea27c
 SHA512 (rust-std-1.27.2-x86_64-unknown-linux-gnu.tar.gz) = d7481690f73e9bc2b0ee8ba9bf21e81c803514cba63018a5999761497c0d50ebb0d809aec450e868467c7620dbaa8c3215e1cddc0eeb7863ffb96e96260b6a87
 Size (rust-std-1.27.2-x86_64-unknown-linux-gnu.tar.gz) = 81226682 bytes
-SHA1 (rust-std-1.27.2-x86_64-unknown-netbsd.tar.gz) = 9479081b6fd0e2ce9dcf351624e6acca2bf86d87
-RMD160 (rust-std-1.27.2-x86_64-unknown-netbsd.tar.gz) = a87f788c72c1577092b3aad6dd3e1a52651901bf
-SHA512 (rust-std-1.27.2-x86_64-unknown-netbsd.tar.gz) = 96d5a7dcb65b2fa53f1eda6231825cf40f95ccf3e16b26ea49528f939d4f93b34c3f724bdccc503b9771fcdc1b0c4766e6bfbff695d4c44cc5ab571022d14533
-Size (rust-std-1.27.2-x86_64-unknown-netbsd.tar.gz) = 67018374 bytes
+SHA1 (rust-std-1.28.0-x86_64-unknown-netbsd.tar.gz) = a0b835fe0ad2b5a6d94bd99323dd3174a939949d
+RMD160 (rust-std-1.28.0-x86_64-unknown-netbsd.tar.gz) = d06cabb8232d66d2a5cf3a1ee0f0f676c698e6c0
+SHA512 (rust-std-1.28.0-x86_64-unknown-netbsd.tar.gz) = 726c5ef43db24b3d0548a2b0534934d6fcb04b0b9228b80cace18f59e21ad6facfbc2af3220867988a35414ba95fb90e38cc47d826dd73cb588622132ea6e9da
+Size (rust-std-1.28.0-x86_64-unknown-netbsd.tar.gz) = 69236192 bytes
 SHA1 (rustc-1.28.0-src.tar.gz) = 2256655a8e20e4ce29dcc2219079d9e418058690
 RMD160 (rustc-1.28.0-src.tar.gz) = 97497baad42d04cb4157e02dc6a2d1b065117065
 SHA512 (rustc-1.28.0-src.tar.gz) = 4e4f121ee5a8a9f8e1ddb6ca5a0c43ba15c1349ecea9478fbcd0b242bf438b498f76bee97d33b9e078a47395e44cdea4c5aa0941e7dd21167abdf94314ef10ce
