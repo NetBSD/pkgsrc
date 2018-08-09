@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3489 2018/08/09 11:13:43 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.3490 2018/08/09 11:15:56 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4987,3 +4987,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added www/p5-HTTP-Tinyish version 0.14 [jperkin 2018-08-09]
 	Updated net/youtube-dl to 20180804 [leot 2018-08-09]
 	Added devel/p5-Parse-PMFile version 0.41 [jperkin 2018-08-09]
+	Updated parallel/hwloc to 1.11.10 [prlw1 2018-08-09]
