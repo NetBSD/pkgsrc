@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2018/08/07 10:44:50 adam Exp $
+# $NetBSD: Makefile,v 1.33 2018/08/09 13:52:49 jperkin Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -6,6 +6,7 @@
 # devel/polly
 # lang/clang
 # lang/clang-static-analyzer
+# lang/compiler-rt
 # lang/libunwind
 #
 # Do not update:
