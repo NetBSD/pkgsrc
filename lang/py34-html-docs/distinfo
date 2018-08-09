@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2018/02/06 10:12:05 leot Exp $
+$NetBSD: distinfo,v 1.8 2018/08/09 12:17:31 leot Exp $
 
-SHA1 (python/python-3.4.8-docs-html.tar.bz2) = 115cbd3b038c610054ae0574360d85e025036e69
-RMD160 (python/python-3.4.8-docs-html.tar.bz2) = dd6bdec0ca44b4d00728043b5122548843b16cfb
-SHA512 (python/python-3.4.8-docs-html.tar.bz2) = 48c4d4cfa6794208ce84c9bcf88e2305e841b990bffef13e2c493966fe37bd01cf2ea79478baf8f3cb6183809ee396983714b5fb9e2e9abe98d8df125e19c535
-Size (python/python-3.4.8-docs-html.tar.bz2) = 5495911 bytes
+SHA1 (python/python-3.4.9-docs-html.tar.bz2) = 08c8cc82f648c5eaa02a0a987a94e6429fb3252a
+RMD160 (python/python-3.4.9-docs-html.tar.bz2) = 081327d4ab557167d3c169abf2cfba080c4acdc1
+SHA512 (python/python-3.4.9-docs-html.tar.bz2) = e6c2d72bc103a2d28a7e3802771309ccba81b16964ae7b194227f0d104dadbf88a16deb546a21080e98ae0dca5154536317bf4b8422cdbd28c36559da08b53c1
+Size (python/python-3.4.9-docs-html.tar.bz2) = 5550227 bytes
