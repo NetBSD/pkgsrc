@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/08/09 13:40:34 jperkin Exp $
+# $NetBSD: Makefile,v 1.2 2018/08/09 13:52:14 jperkin Exp $
 
 DISTNAME=	compiler-rt-6.0.1.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -14,6 +14,7 @@ LICENSE=	modified-bsd OR mit
 USE_LANGUAGES=	c99 c++11
 USE_CMAKE=	yes
 GCC_REQD+=	4.8
+SSP_SUPPORTED=	no
 
 CONFIGURE_DIRS=	${WRKDIR}/build
 CMAKE_ARG_PATH=	${WRKSRC}
