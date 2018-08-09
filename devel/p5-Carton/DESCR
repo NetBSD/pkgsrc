@@ -1,0 +1,6 @@
+carton is a command line tool to track the Perl module dependencies for
+your Perl application. Dependencies are declared using cpanfile format,
+and the managed dependencies are tracked in a cpanfile.snapshot file,
+which is meant to be version controlled, and the snapshot file allows
+other developers of your application will have the exact same versions
+of the modules.
