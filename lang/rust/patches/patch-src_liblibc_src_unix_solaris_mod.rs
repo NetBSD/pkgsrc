@@ -1,10 +1,9 @@
-$NetBSD: patch-src_vendor_libc_src_unix_solaris_mod.rs,v 1.2 2018/08/09 17:04:03 jperkin Exp $
+$NetBSD: patch-src_liblibc_src_unix_solaris_mod.rs,v 1.3 2018/08/09 17:04:03 jperkin Exp $
 
-Work around build issue in xattr.
-https://github.com/Stebalien/xattr/issues/18
+Add temporary upstream fixes for SunOS.
 
---- src/vendor/libc/src/unix/solaris/mod.rs.orig	2018-07-30 23:30:25.000000000 +0000
-+++ src/vendor/libc/src/unix/solaris/mod.rs
+--- src/liblibc/src/unix/solaris/mod.rs.orig	2018-07-30 22:16:16.000000000 +0000
++++ src/liblibc/src/unix/solaris/mod.rs
 @@ -692,6 +692,8 @@ pub const EOWNERDEAD: ::c_int = 58;
  pub const ENOTRECOVERABLE: ::c_int = 59;
  pub const ENOSTR: ::c_int = 60;
