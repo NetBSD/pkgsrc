@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2018/08/07 10:44:50 adam Exp $
+# $NetBSD: Makefile.common,v 1.28 2018/08/09 14:56:41 jperkin Exp $
 # used by lang/clang/Makefile
 # used by lang/clang-static-analyzer/Makefile
 
@@ -87,6 +87,16 @@ SUBST_FILES.libcxx+=		lib/Driver/Tools.cpp
 SUBST_SED.libcxx=		-e 's,(Major >= 7 || Major == 0),(false),'
 
 CMAKE_ARGS+=			-DCLANG_DEFAULT_CXX_STDLIB:STRING="libstdc++"
+.endif
+
+# Enable full LLVM suite on SunOS
+.if ${OPSYS} == "SunOS"
+.include "../../lang/compiler-rt/buildlink3.mk"
+.include "../../lang/libcxx/buildlink3.mk"
+.include "../../lang/libcxxabi/buildlink3.mk"
+.include "../../lang/libunwind/buildlink3.mk"
+CMAKE_ARGS+=    -DCLANG_DEFAULT_RTLIB:STRING="compiler-rt"
+CMAKE_ARGS+=    -DCLANG_DEFAULT_CXX_STDLIB:STRING="libc++"
 .endif
 
 # 3.8.0 -> 3.8
