@@ -1,0 +1,16 @@
+# $NetBSD: Makefile,v 1.1 2018/08/09 09:47:44 jperkin Exp $
+
+DISTNAME=	Tie-Handle-Offset-0.004
+PKGNAME=	p5-${DISTNAME}
+CATEGORIES=	mail perl5
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Tie/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://search.cpan.org/dist/Tie-Handle-Offset/
+COMMENT=	Tied handle that hides an RFC822-style header
+LICENSE=	apache-2.0
+
+PERL5_PACKLIST=	auto/Tie/Handle/Offset/.packlist
+
+.include "../../lang/perl5/module.mk"
+.include "../../mk/bsd.pkg.mk"
