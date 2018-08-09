@@ -301,10 +301,34 @@ func (src *Pkgsrc) loadDocChangesFromFile(fname string) []*Change {
 		return nil
 	}
 
+	year := ""
+	if m, yyyy := match1(fname, `-(\d+)$`); m && yyyy >= "2018" {
+		year = yyyy
+	}
+
 	var changes []*Change
 	for _, line := range lines {
 		if change := parseChange(line); change != nil {
 			changes = append(changes, change)
+			if year != "" && change.Date[0:4] != year {
+				line.Warnf("Year %s for %s does not match the file name %s.", change.Date[0:4], change.Pkgpath, fname)
+			}
+			if len(changes) >= 2 && year != "" {
+				if prev := changes[len(changes)-2]; change.Date < prev.Date {
+					line.Warnf("Date %s for %s is earlier than %s for %s.", change.Date, change.Pkgpath, prev.Date, prev.Pkgpath)
+					Explain(
+						"The entries in doc/CHANGES should be in chronological order, and",
+						"all dates are assumed to be in the UTC timezone, to prevent time",
+						"warps.",
+						"",
+						"To fix this, determine which of the involved dates are correct",
+						"and which aren't.",
+						"",
+						"To prevent this kind of mistakes in the future, make sure that",
+						"your system time is correct and use \""+confMake+" cce\" to commit",
+						"the changes entry.")
+				}
+			}
 		} else if text := line.Text; len(text) >= 2 && text[0] == '\t' && 'A' <= text[1] && text[1] <= 'Z' {
 			line.Warnf("Unknown doc/CHANGES line: %q", text)
 			Explain("See mk/misc/developer.mk for the rules.")
