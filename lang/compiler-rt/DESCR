@@ -1,0 +1,23 @@
+The compiler-rt project consists of:
+
+ - builtins - a simple library that provides an implementation of the low-level
+   target-specific hooks required by code generation and other runtime
+   components. For example, when compiling for a 32-bit target, converting a
+   double to a 64-bit unsigned integer is compiling into a runtime call to the
+   "__fixunsdfdi" function. The builtins library provides optimized
+   implementations of this and other low-level routines, either in
+   target-independent C form, or as a heavily-optimized assembly.
+
+ - sanitizer runtimes - runtime libraries that are required to run the code
+   with sanitizer instrumentation. This includes runtimes for:
+   *     AddressSanitizer
+   *     ThreadSanitizer
+   *     UndefinedBehaviorSanitizer
+   *     MemorySanitizer
+   *     LeakSanitizer
+   *     DataFlowSanitizer
+
+ - profile - library which is used to collect coverage information.
+
+ - BlocksRuntime - a target-independent implementation of Apple "Blocks"
+   runtime interfaces.
