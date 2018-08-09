@@ -65,6 +65,7 @@ type CmdOpts struct {
 	CheckMakefile,
 	CheckMessage,
 	CheckMk,
+	CheckOptions,
 	CheckPatches,
 	CheckPlist bool
 
@@ -220,6 +221,7 @@ func (pkglint *Pkglint) ParseCommandLine(args []string) *int {
 	check.AddFlagVar("Makefile", &gopts.CheckMakefile, true, "check Makefiles")
 	check.AddFlagVar("MESSAGE", &gopts.CheckMessage, true, "check MESSAGE file")
 	check.AddFlagVar("mk", &gopts.CheckMk, true, "check other .mk files")
+	check.AddFlagVar("options", &gopts.CheckOptions, true, "check options.mk files")
 	check.AddFlagVar("patches", &gopts.CheckPatches, true, "check patches")
 	check.AddFlagVar("PLIST", &gopts.CheckPlist, true, "check PLIST files")
 
@@ -540,6 +542,13 @@ func (pkglint *Pkglint) Checkfile(fname string) {
 		if pkglint.opts.CheckMessage {
 			if lines := LoadNonemptyLines(fname, false); lines != nil {
 				ChecklinesMessage(lines)
+			}
+		}
+
+	case basename == "options.mk":
+		if pkglint.opts.CheckOptions {
+			if lines := LoadNonemptyLines(fname, true); lines != nil {
+				ChecklinesOptionsMk(NewMkLines(lines))
 			}
 		}
 
