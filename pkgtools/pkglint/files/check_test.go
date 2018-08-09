@@ -154,9 +154,10 @@ func (t *Tester) SetupFileLines(relativeFilename string, lines ...string) []Line
 
 // SetupFileLines creates a temporary file and writes the given lines to it.
 // The file is then read in, handling line continuations for Makefiles.
-func (t *Tester) SetupFileLinesContinuation(relativeFilename string, lines ...string) []Line {
+func (t *Tester) SetupFileMkLines(relativeFilename string, lines ...string) *MkLines {
 	filename := t.CreateFileLines(relativeFilename, lines...)
-	return LoadExistingLines(filename, true)
+	plainLines := LoadExistingLines(filename, true)
+	return NewMkLines(plainLines)
 }
 
 func (t *Tester) CreateFileLines(relativeFilename string, lines ...string) (filename string) {
