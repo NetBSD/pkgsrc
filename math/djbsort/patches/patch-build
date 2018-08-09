@@ -1,8 +1,9 @@
-$NetBSD: patch-build,v 1.1 2018/07/31 05:38:56 schmonz Exp $
+$NetBSD: patch-build,v 1.2 2018/08/09 09:14:16 schmonz Exp $
 
 Don't bake build host into binary packages.
+Don't build for multiple architectures.
 
---- build.orig	2018-07-17 14:55:25.000000000 +0000
+--- build.orig	2018-07-29 18:33:39.000000000 +0000
 +++ build
 @@ -35,6 +35,7 @@ version = readfile('version').strip()
  shorthostname = platform.node().split('.')[0].lower()
@@ -12,3 +13,18 @@ Don't bake build host into binary packages.
  
  startdir = os.getcwd()
  
+@@ -98,11 +99,11 @@ def guessarchitectures(c):
+     if p.returncode:
+       lognow('dumpmachine exited %s' % (p.returncode))
+     out = out.decode()
+-    if out.startswith('x86_64'): return ['x86','amd64']
++    if out.startswith('x86_64'): return ['amd64']
+     if out.startswith('i686'): return ['x86']
+     if out.startswith('i386'): return ['x86']
+-    if out.startswith('aarch64'): return ['arm','armeabi','aarch64']
+-    if out.startswith('arm'): return ['arm','armeabi']
++    if out.startswith('aarch64'): return ['aarch64']
++    if out.startswith('arm'): return ['armeabi']
+     return
+   except Exception as e:
+     lognow('dumpmachine failed %s' % e)
