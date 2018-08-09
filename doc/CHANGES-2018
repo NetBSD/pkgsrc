@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3490 2018/08/09 11:15:56 prlw1 Exp $
+$NetBSD: CHANGES-2018,v 1.3491 2018/08/09 11:21:06 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4988,3 +4988,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/youtube-dl to 20180804 [leot 2018-08-09]
 	Added devel/p5-Parse-PMFile version 0.41 [jperkin 2018-08-09]
 	Updated parallel/hwloc to 1.11.10 [prlw1 2018-08-09]
+	Added textproc/p5-Win32-ShellQuote version 0.003001 [jperkin 2018-08-09]
