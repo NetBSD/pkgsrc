@@ -1,0 +1,8 @@
+This modules provides a file handle that hides the beginning of a file.
+After opening, the file is positioned at the offset location. seek() and
+tell() calls are modified to preserve the offset.
+
+The Tie::Handle::SkipHeader subclass of Tie::Handle::Offset
+automatically hides an email-style message header.  After opening the
+file, it reads up to a blank or white-space-only line and sets the
+offset to the next byte.
