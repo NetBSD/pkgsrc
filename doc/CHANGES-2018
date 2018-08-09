@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3495 2018/08/09 11:51:58 leot Exp $
+$NetBSD: CHANGES-2018,v 1.3496 2018/08/09 12:52:19 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4993,3 +4993,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/p5-Menlo-Legacy version 1.9022 [jperkin 2018-08-09]
 	Added devel/p5-Carton version 1.0.34 [jperkin 2018-08-09]
 	Updated net/mitmproxy to 4.0.4 [leot 2018-08-09]
+	Updated lang/py34-html-docs to 3.4.9 [leot 2018-08-09]
