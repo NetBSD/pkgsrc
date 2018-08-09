@@ -1,0 +1,8 @@
+Menlo::Legacy is a package to install Menlo::CLI::Compat which is a
+compatibility library that implements the classic version of cpanminus
+internals and behavios. This is so that existing users of cpanm and API
+clients such as Carton, Carmel and App::cpm) can rely on the stable
+features and specific behaviors of cpanm.
+
+This way Menlo can evolve and be refactored without the fear of breaking
+any downstream clients, including cpanm itself.
