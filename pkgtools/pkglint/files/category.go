@@ -18,7 +18,7 @@ func CheckdirCategory() {
 	mklines := NewMkLines(lines)
 	mklines.Check()
 
-	exp := NewExpecter(lines)
+	exp := NewMkExpecter(mklines)
 	for exp.AdvanceIfPrefix("#") {
 	}
 	exp.ExpectEmptyLine(G.opts.WarnSpace)
