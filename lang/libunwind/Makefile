@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/08/07 10:44:50 adam Exp $
+# $NetBSD: Makefile,v 1.14 2018/08/09 13:51:42 jperkin Exp $
 
 DISTNAME=	libunwind-6.0.1.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -17,6 +17,7 @@ USE_CMAKE=		yes
 USE_LANGUAGES=		c c++11
 USE_TOOLS+=		pax
 GCC_REQD+=		4.8
+SSP_SUPPORTED=		no
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
