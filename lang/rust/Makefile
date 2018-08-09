@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2018/07/22 08:02:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.45 2018/08/09 17:04:03 jperkin Exp $
 
-DISTNAME=	rustc-1.27.2-src
+DISTNAME=	rustc-1.28.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
 CATEGORIES=	lang
 MASTER_SITES=	http://static.rust-lang.org/dist/
@@ -67,7 +67,7 @@ BUILDLINK_TRANSFORM.NetBSD+=	rm:-Wl,--enable-new-dtags
 # own bootstrap.  See the stage0-bootstrap below for more details.
 #
 DISTFILES:=		${DEFAULT_DISTFILES}
-RUST_STAGE0_VER=	1.26.2
+RUST_STAGE0_VER=	1.27.2
 #
 .if !empty(MACHINE_PLATFORM:MDarwin-*-i386) || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH:=		i686-apple-darwin
@@ -119,7 +119,7 @@ RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 # Do not trust ryoon@.
 SITES.${RUST_STAGE0}=	https://deuterium.ryoon.net/pub/rust/
 SITES.${RUST_STD_STAGE0}=	https://deuterium.ryoon.net/pub/rust/
-DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
+#DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 # Setting this changes it for every distfile, which doesn't match what is
 # currently in distinfo.
 #DIST_SUBDIR=		${PKGNAME}
@@ -166,7 +166,7 @@ post-extract:
 	fi
 # patch(1) in NetBSD does not handle .cargo-checksum.json like long width file.
 	cat ${WRKSRC}/src/vendor/libc/.cargo-checksum.json | \
-		${SED} -e 's/2613f2912a9e8f3485debba424437608433b4e1c8b9050176ef975efdf4a412e/f48ef2dac3c28161f30a797a2fbe7fbcb9161ea23390789fe52c497f229b6c5a/' > \
+		${SED} -e 's/2613f2912a9e8f3485debba424437608433b4e1c8b9050176ef975efdf4a412e/52431d3cc74033804febaa303d028811504c07e2b9b83ec7287d9ee159bf35fe/' > \
 		${WRKSRC}/src/vendor/libc/.cargo-checksum.json.patched
 	${CP} -f ${WRKSRC}/src/vendor/libc/.cargo-checksum.json.patched \
 		${WRKSRC}/src/vendor/libc/.cargo-checksum.json
