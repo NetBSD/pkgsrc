@@ -82,6 +82,16 @@ func (exp *Expecter) AdvanceIfEquals(text string) bool {
 	return !exp.EOF() && exp.lines[exp.index].Text == text && exp.Advance()
 }
 
+func (exp *Expecter) AdvanceWhile(pred func(line Line) bool) {
+	if trace.Tracing {
+		defer trace.Call(exp.CurrentLine().Text)()
+	}
+
+	for !exp.EOF() && !pred(exp.CurrentLine()) {
+		exp.Advance()
+	}
+}
+
 func (exp *Expecter) ExpectEmptyLine(warnSpace bool) bool {
 	if exp.AdvanceIfEquals("") {
 		return true
@@ -109,4 +119,32 @@ func (exp *Expecter) ExpectText(text string) bool {
 
 func (exp *Expecter) SkipToFooter() {
 	exp.index = len(exp.lines) - 2
+}
+
+// MkExpecter records the state when checking a list of Makefile lines from top to bottom.
+type MkExpecter struct {
+	mklines *MkLines
+	Expecter
+}
+
+func NewMkExpecter(mklines *MkLines) *MkExpecter {
+	return &MkExpecter{mklines, *NewExpecter(mklines.lines)}
+}
+
+func (exp *MkExpecter) CurrentMkLine() MkLine {
+	return exp.mklines.mklines[exp.index]
+}
+
+func (exp *MkExpecter) PreviousMkLine() MkLine {
+	return exp.mklines.mklines[exp.index-1]
+}
+
+func (exp *MkExpecter) AdvanceWhile(pred func(mkline MkLine) bool) {
+	if trace.Tracing {
+		defer trace.Call(exp.CurrentMkLine().Text)()
+	}
+
+	for !exp.EOF() && pred(exp.CurrentMkLine()) {
+		exp.Advance()
+	}
 }

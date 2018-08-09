@@ -52,8 +52,7 @@ func (vt *VaralignTester) runDefault() {
 	}
 	vt.tester.SetupCommandLine(cmdline...)
 
-	lines := vt.tester.SetupFileLinesContinuation("Makefile", vt.input...)
-	mklines := NewMkLines(lines)
+	mklines := vt.tester.SetupFileMkLines("Makefile", vt.input...)
 
 	varalign := VaralignBlock{}
 	for _, mkline := range mklines.mklines {
@@ -71,9 +70,7 @@ func (vt *VaralignTester) runAutofix() {
 	}
 	vt.tester.SetupCommandLine(cmdline...)
 
-	lines := vt.tester.SetupFileLinesContinuation("Makefile", vt.input...)
-
-	mklines := NewMkLines(lines)
+	mklines := vt.tester.SetupFileMkLines("Makefile", vt.input...)
 
 	var varalign VaralignBlock
 	for _, mkline := range mklines.mklines {
