@@ -515,7 +515,7 @@ func (s *Suite) Test_Package_includeAfterExists(c *check.C) {
 
 	t.CheckOutputLines(
 		"WARN: ~/category/package/Makefile: Neither PLIST nor PLIST.common exist, and PLIST_SRC is unset.",
-		"WARN: ~/category/package/distinfo: File not found. Please run \"@BMAKE@ makesum\" or define NO_CHECKSUM=yes in the package Makefile.",
+		"WARN: ~/category/package/distinfo: File not found. Please run \""+confMake+" makesum\" or define NO_CHECKSUM=yes in the package Makefile.",
 		"ERROR: ~/category/package/Makefile: Each package must define its LICENSE.",
 		"WARN: ~/category/package/Makefile: No COMMENT given.",
 		"ERROR: ~/category/package/Makefile:4: \"options.mk\" does not exist.",
