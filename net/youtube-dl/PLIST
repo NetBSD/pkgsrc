@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.66 2018/07/14 11:27:05 leot Exp $
+@comment $NetBSD: PLIST,v 1.67 2018/08/09 11:10:10 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -1481,6 +1481,9 @@ ${PYSITELIB}/youtube_dl/extractor/promptfile.pyo
 ${PYSITELIB}/youtube_dl/extractor/prosiebensat1.py
 ${PYSITELIB}/youtube_dl/extractor/prosiebensat1.pyc
 ${PYSITELIB}/youtube_dl/extractor/prosiebensat1.pyo
+${PYSITELIB}/youtube_dl/extractor/puhutv.py
+${PYSITELIB}/youtube_dl/extractor/puhutv.pyc
+${PYSITELIB}/youtube_dl/extractor/puhutv.pyo
 ${PYSITELIB}/youtube_dl/extractor/puls4.py
 ${PYSITELIB}/youtube_dl/extractor/puls4.pyc
 ${PYSITELIB}/youtube_dl/extractor/puls4.pyo
@@ -2162,6 +2165,9 @@ ${PYSITELIB}/youtube_dl/extractor/vimple.pyo
 ${PYSITELIB}/youtube_dl/extractor/vine.py
 ${PYSITELIB}/youtube_dl/extractor/vine.pyc
 ${PYSITELIB}/youtube_dl/extractor/vine.pyo
+${PYSITELIB}/youtube_dl/extractor/viqeo.py
+${PYSITELIB}/youtube_dl/extractor/viqeo.pyc
+${PYSITELIB}/youtube_dl/extractor/viqeo.pyo
 ${PYSITELIB}/youtube_dl/extractor/viu.py
 ${PYSITELIB}/youtube_dl/extractor/viu.pyc
 ${PYSITELIB}/youtube_dl/extractor/viu.pyo
