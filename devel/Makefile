@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2711 2018/08/09 10:05:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.2712 2018/08/09 11:13:27 jperkin Exp $
 #
 
 COMMENT=	Development utilities
@@ -1481,6 +1481,7 @@ SUBDIR+=	p5-Parse-CPAN-Packages
 SUBDIR+=	p5-Parse-ErrorString-Perl
 SUBDIR+=	p5-Parse-ExuberantCTags
 SUBDIR+=	p5-Parse-Method-Signatures
+SUBDIR+=	p5-Parse-PMFile
 SUBDIR+=	p5-Parse-RecDescent
 SUBDIR+=	p5-Parse-Yapp
 SUBDIR+=	p5-PatchReader
