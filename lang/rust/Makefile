@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2018/08/09 17:04:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.46 2018/08/09 19:10:06 ryoon Exp $
 
 DISTNAME=	rustc-1.28.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -114,6 +114,7 @@ DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH=		i686-unknown-netbsd
+RUST_STAGE0_VER=	1.28.0
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 # Do not trust ryoon@.
@@ -130,6 +131,7 @@ pre-build:
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH=		x86_64-unknown-netbsd
+RUST_STAGE0_VER=	1.28.0
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
