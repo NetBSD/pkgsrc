@@ -92,6 +92,7 @@ func (s *Suite) Test_Pkglint_Main__unknown_option(c *check.C) {
 		"    Makefile       check Makefiles (enabled)",
 		"    MESSAGE        check MESSAGE file (enabled)",
 		"    mk             check other .mk files (enabled)",
+		"    options        check options.mk files (enabled)",
 		"    patches        check patches (enabled)",
 		"    PLIST          check PLIST files (enabled)",
 		"",

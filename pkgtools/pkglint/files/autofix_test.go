@@ -257,12 +257,12 @@ func (s *Suite) Test_Autofix_show_source_code(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("--show-autofix", "--source")
-	lines := t.SetupFileLinesContinuation("Makefile",
+	mklines := t.SetupFileMkLines("Makefile",
 		MkRcsID,
 		"before \\",
 		"The old song \\",
 		"after")
-	line := lines[1]
+	line := mklines.lines[1]
 
 	{
 		fix := line.Autofix()
