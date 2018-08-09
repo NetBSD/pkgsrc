@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.509 2018/08/09 09:47:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.510 2018/08/09 10:00:43 jperkin Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -249,7 +249,6 @@ SUBDIR+=	p5-Parse-MIME
 SUBDIR+=	p5-Sendmail-AccessDB
 SUBDIR+=	p5-Sendmail-PMilter
 SUBDIR+=	p5-Test-Email
-SUBDIR+=	p5-Tie-Handle-SkipHeader
 SUBDIR+=	p5-URI-imap
 SUBDIR+=	p5-User-Identity
 SUBDIR+=	p5-razor-agents
