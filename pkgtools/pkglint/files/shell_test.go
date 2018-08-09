@@ -636,13 +636,13 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__install_option_d(c *check.
 func (s *Suite) Test_ShellLine__shell_comment_with_line_continuation(c *check.C) {
 	t := s.Init(c)
 
-	lines := t.SetupFileLinesContinuation("Makefile",
+	mklines := t.SetupFileMkLines("Makefile",
 		MkRcsID,
 		"pre-install:",
 		"\t"+"# comment\\",
 		"\t"+"echo \"hello\"")
 
-	NewMkLines(lines).Check()
+	mklines.Check()
 
 	t.CheckOutputLines(
 		"WARN: ~/Makefile:3--4: A shell comment does not stop at the end of line.")

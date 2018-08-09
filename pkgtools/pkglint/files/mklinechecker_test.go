@@ -330,14 +330,13 @@ func (s *Suite) Test_MkLineChecker_checkDirectiveIndentation_autofix(c *check.C)
 
 	t.SetupCommandLine("-Wall", "--autofix")
 	t.SetupVartypes()
-	lines := t.SetupFileLinesContinuation("options.mk",
+	mklines := t.SetupFileMkLines("options.mk",
 		MkRcsID,
 		".if ${PKGNAME} == pkgname",
 		".if \\",
 		"   ${PLATFORM:MNetBSD-4.*}",
 		".endif",
 		".endif")
-	mklines := NewMkLines(lines)
 
 	mklines.Check()
 
@@ -359,12 +358,11 @@ func (s *Suite) Test_MkLineChecker_CheckVaruseShellword(c *check.C) {
 
 	t.SetupCommandLine("-Wall")
 	t.SetupVartypes()
-	lines := t.SetupFileLinesContinuation("options.mk",
+	mklines := t.SetupFileMkLines("options.mk",
 		MkRcsID,
 		"GOPATH=\t${WRKDIR}",
 		"do-build:",
 		"\tcd ${WRKSRC} && GOPATH=${GOPATH} PATH=${PATH} :")
-	mklines := NewMkLines(lines)
 
 	mklines.Check()
 
@@ -387,11 +385,10 @@ func (s *Suite) Test_MkLineChecker_CheckVaruse_eq_nonlist(c *check.C) {
 	t.SetupCommandLine("-Wall")
 	t.SetupVartypes()
 	t.SetupMasterSite("MASTER_SITE_GITHUB", "https://github.com/")
-	lines := t.SetupFileLinesContinuation("options.mk",
+	mklines := t.SetupFileMkLines("options.mk",
 		MkRcsID,
 		"WRKSRC=\t\t${WRKDIR:=/subdir}",
 		"MASTER_SITES=\t${MASTER_SITE_GITHUB:=organization/}")
-	mklines := NewMkLines(lines)
 
 	mklines.Check()
 

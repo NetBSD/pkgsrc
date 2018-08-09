@@ -34,7 +34,7 @@ func (s *Suite) Test_convertToLogicalLines_continuation(c *check.C) {
 func (s *Suite) Test_convertToLogicalLines__comments(c *check.C) {
 	t := s.Init(c)
 
-	lines := t.SetupFileLinesContinuation("comment.mk",
+	mklines := t.SetupFileMkLines("comment.mk",
 		"# This is a comment",
 		"",
 		"#\\",
@@ -60,7 +60,7 @@ func (s *Suite) Test_convertToLogicalLines__comments(c *check.C) {
 		"This is no comment")
 
 	var texts []string
-	for _, line := range lines {
+	for _, line := range mklines.lines {
 		texts = append(texts, line.Text)
 	}
 
@@ -83,7 +83,7 @@ func (s *Suite) Test_convertToLogicalLines__comments(c *check.C) {
 		"This is no comment"})
 
 	var rawTexts []string
-	for _, line := range lines {
+	for _, line := range mklines.lines {
 		for _, rawLine := range line.raw {
 			rawTexts = append(rawTexts, rawLine.textnl)
 		}
@@ -113,6 +113,12 @@ func (s *Suite) Test_convertToLogicalLines__comments(c *check.C) {
 		"This is a comment\n",
 		"#\\\\\\\\\\\\\n",
 		"This is no comment\n"})
+
+	// This is just a side-effect and not relevant for this particular test.
+	t.CheckOutputLines(
+		"ERROR: ~/comment.mk:15: Unknown Makefile line format.",
+		"ERROR: ~/comment.mk:19: Unknown Makefile line format.",
+		"ERROR: ~/comment.mk:23: Unknown Makefile line format.")
 }
 
 func (s *Suite) Test_convertToLogicalLines_continuationInLastLine(c *check.C) {
