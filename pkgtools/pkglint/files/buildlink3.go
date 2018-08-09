@@ -13,7 +13,7 @@ func ChecklinesBuildlink3Mk(mklines *MkLines) {
 
 	mklines.Check()
 
-	exp := NewExpecter(mklines.lines)
+	exp := NewMkExpecter(mklines)
 
 	for exp.AdvanceIfPrefix("#") {
 		line := exp.PreviousLine()
