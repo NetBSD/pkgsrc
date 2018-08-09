@@ -1,0 +1,3 @@
+Menlo is a backend for cpanm 2.0, developed with the goal to replace
+cpanm internals with a set of modules that are more flexible, extensible
+and easier to use.
