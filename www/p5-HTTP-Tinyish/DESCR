@@ -1,0 +1,7 @@
+HTTP::Tinyish is a wrapper module for HTTP client modules LWP,
+HTTP::Tiny and HTTP client software curl and wget.
+
+It provides an API compatible to HTTP::Tiny, and the implementation has
+been extracted out of App::cpanminus.  This module can be useful in a
+restrictive environment where you need to be able to download CPAN
+modules without an HTTPS support in built-in HTTP library.
