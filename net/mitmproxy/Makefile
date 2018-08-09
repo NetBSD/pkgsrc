@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2018/05/17 13:06:13 leot Exp $
+# $NetBSD: Makefile,v 1.22 2018/08/09 11:51:41 leot Exp $
 
-DISTNAME=	mitmproxy-4.0.1
+DISTNAME=	mitmproxy-4.0.4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mitmproxy/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -29,6 +29,12 @@ DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=1.5.4:../../devel/py-sortedcontainers
 DEPENDS+=	${PYPKGPREFIX}-tornado>=4.3.0:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-urwid>=2.0.1:../../devel/py-urwid
 DEPENDS+=	${PYPKGPREFIX}-wsproto>=0.11.0:../../www/py-wsproto
+
+SUBST_CLASSES+=			setuppyversions
+SUBST_STAGE.setuppyversions=	pre-configure
+SUBST_MESSAGE.setuppyversions=	Avoid too strict version requirements
+SUBST_FILES.setuppyversions=	setup.py
+SUBST_SED.setuppyversions=	-E -e '/>=/ s/, *<[^"]+//g'
 
 REPLACE_SH+=	mitmproxy/contrib/kaitaistruct/make.sh
 
