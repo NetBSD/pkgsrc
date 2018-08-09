@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.491 2018/08/09 14:13:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.492 2018/08/09 14:16:08 jperkin Exp $
 #
 
 COMMENT=	Programming languages
@@ -122,6 +122,7 @@ SUBDIR+=	ksi
 SUBDIR+=	libBlocksRuntime
 SUBDIR+=	libLLVM
 SUBDIR+=	libLLVM34
+SUBDIR+=	libcxx
 SUBDIR+=	libcxxabi
 SUBDIR+=	libduktape
 SUBDIR+=	librep
