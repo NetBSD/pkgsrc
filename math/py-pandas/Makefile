@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2018/07/09 08:22:45 adam Exp $
+# $NetBSD: Makefile,v 1.27 2018/08/10 09:00:36 adam Exp $
 
-DISTNAME=	pandas-0.23.3
+DISTNAME=	pandas-0.23.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pandas/}
@@ -23,7 +23,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 # https://github.com/pydata/pandas/issues/12337
 # https://github.com/pydata/pandas/issues/14043
 
-PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
 USE_LANGUAGES=	c c++
 
 .include "../../lang/python/egg.mk"
