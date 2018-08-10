@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2018/08/10 20:14:29 nia Exp $
+lib/libretro/snes9x2005_libretro.so
