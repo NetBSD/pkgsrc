@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3509 2018/08/10 10:41:40 leot Exp $
+$NetBSD: CHANGES-2018,v 1.3510 2018/08/10 11:34:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5016,3 +5016,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/py-numpy to 1.15.0 [adam 2018-08-10]
 	Updated math/py-pandas to 0.23.4 [adam 2018-08-10]
 	Updated net/Geomyidae to 0.32.2 [leot 2018-08-10]
+	Updated archivers/libmspack to 0.7.1alpha [wiz 2018-08-10]
