@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 00:34:51 agc Exp $
+$NetBSD: distinfo,v 1.6 2018/08/10 10:41:20 leot Exp $
 
-SHA1 (geomyidae-0.26.3.tar.gz) = 7eb018bb7436f9f2ae4e3123bb8d11f69085bb01
-RMD160 (geomyidae-0.26.3.tar.gz) = d5d843ee0f498972eb72f9f663eb550a2b3e7a31
-SHA512 (geomyidae-0.26.3.tar.gz) = fcee0133547881f6df173a24eac0fd3007436365375f11c572c50cf2e77c2033d441209f7f20dab1d291b0e9305de245da409351a02df4ca92d7b158768424b3
-Size (geomyidae-0.26.3.tar.gz) = 15556 bytes
+SHA1 (geomyidae-v0.32.2.tgz) = cf7e947cdbcc3aa050e474595e728c773733e23e
+RMD160 (geomyidae-v0.32.2.tgz) = 48c80bf1f1b2c4126c461a84674d58030ca0aba7
+SHA512 (geomyidae-v0.32.2.tgz) = 3b0927a16082df862b9efacc2f29fd1b1ca76f7d465426e179d5995a416bc27b518daba422512091304ed5479ff133e3d40f7bf66aedfbd8d99d13710809d519
+Size (geomyidae-v0.32.2.tgz) = 20897 bytes
