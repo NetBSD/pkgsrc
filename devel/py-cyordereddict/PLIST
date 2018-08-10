@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2017/04/14 00:40:29 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/08/10 15:36:16 minskim Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/cyordereddict/__init__.py
 ${PYSITELIB}/cyordereddict/__init__.pyc
@@ -22,9 +22,9 @@ ${PYSITELIB}/cyordereddict/test/__init__.pyo
 ${PYSITELIB}/cyordereddict/test/_mapping_tests.py
 ${PYSITELIB}/cyordereddict/test/_mapping_tests.pyc
 ${PYSITELIB}/cyordereddict/test/_mapping_tests.pyo
-${PLIST.python2}${PYSITELIB}/cyordereddict/test/_test_support.py
-${PLIST.python2}${PYSITELIB}/cyordereddict/test/_test_support.pyc
-${PLIST.python2}${PYSITELIB}/cyordereddict/test/_test_support.pyo
+${PLIST.py2x}${PYSITELIB}/cyordereddict/test/_test_support.py
+${PLIST.py2x}${PYSITELIB}/cyordereddict/test/_test_support.pyc
+${PLIST.py2x}${PYSITELIB}/cyordereddict/test/_test_support.pyo
 ${PYSITELIB}/cyordereddict/test/test_cyordereddict.py
 ${PYSITELIB}/cyordereddict/test/test_cyordereddict.pyc
 ${PYSITELIB}/cyordereddict/test/test_cyordereddict.pyo
