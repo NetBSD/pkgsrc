@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/06/02 13:13:23 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/08/10 11:56:10 adam Exp $
 bin/clusterdb
 bin/createdb
 bin/createuser
@@ -39,6 +39,7 @@ include/pg_config.h
 include/pg_config_ext.h
 include/pg_config_manual.h
 include/pg_config_os.h
+include/pgtypes.h
 include/pgtypes_date.h
 include/pgtypes_error.h
 include/pgtypes_interval.h
@@ -750,11 +751,20 @@ share/locale/cs/LC_MESSAGES/ecpg-10.mo
 share/locale/cs/LC_MESSAGES/ecpglib6-10.mo
 share/locale/cs/LC_MESSAGES/initdb-10.mo
 share/locale/cs/LC_MESSAGES/libpq5-10.mo
+share/locale/cs/LC_MESSAGES/pg_archivecleanup-10.mo
+share/locale/cs/LC_MESSAGES/pg_basebackup-10.mo
 share/locale/cs/LC_MESSAGES/pg_config-10.mo
 share/locale/cs/LC_MESSAGES/pg_controldata-10.mo
 share/locale/cs/LC_MESSAGES/pg_ctl-10.mo
 share/locale/cs/LC_MESSAGES/pg_dump-10.mo
+share/locale/cs/LC_MESSAGES/pg_resetwal-10.mo
+share/locale/cs/LC_MESSAGES/pg_rewind-10.mo
+share/locale/cs/LC_MESSAGES/pg_test_fsync-10.mo
+share/locale/cs/LC_MESSAGES/pg_test_timing-10.mo
+share/locale/cs/LC_MESSAGES/pg_upgrade-10.mo
+share/locale/cs/LC_MESSAGES/pg_waldump-10.mo
 share/locale/cs/LC_MESSAGES/pgscripts-10.mo
+share/locale/cs/LC_MESSAGES/psql-10.mo
 share/locale/de/LC_MESSAGES/ecpg-10.mo
 share/locale/de/LC_MESSAGES/ecpglib6-10.mo
 share/locale/de/LC_MESSAGES/initdb-10.mo
