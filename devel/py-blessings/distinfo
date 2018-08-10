@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/01/14 11:19:04 adam Exp $
+$NetBSD: distinfo,v 1.3 2018/08/10 12:19:30 adam Exp $
 
-SHA1 (blessings-1.6.1.tar.gz) = 16a304e1efab428e651877d8b07bce74dce3274a
-RMD160 (blessings-1.6.1.tar.gz) = 56381887db40a66014ea3ce6ae2d9490c0669be4
-SHA512 (blessings-1.6.1.tar.gz) = 7a4b051e448cddde7e8ce24106ce0d5d893eb442b19fff04f9ddf28381dfa1b4bdd4be79b87782162b2ead13597a346f533edb944130f2e5bc39aa936ca48db2
-Size (blessings-1.6.1.tar.gz) = 20122 bytes
+SHA1 (blessings-1.7.tar.gz) = 4cb02f9ac678b5f2df71e6752e5b099e392372dc
+RMD160 (blessings-1.7.tar.gz) = 684c638f95ece792dac0e7b5d65d9c139cdb88f4
+SHA512 (blessings-1.7.tar.gz) = 66a8e7af6a8807c8be68f4d71db25ca6c26f46ddfa9a7e4792a2f73033df81d8392633ff75e6fa131039d9136030844ed93b11316b9f7e2e6ea77675f2f3e528
+Size (blessings-1.7.tar.gz) = 28194 bytes
