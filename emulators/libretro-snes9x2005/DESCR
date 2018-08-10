@@ -1,0 +1,12 @@
+Libretro is a simple but powerful development interface that allows for the
+easy creation of emulators, games and multimedia applications that can plug
+straight into any libretro-compatible frontend. This development interface is
+open to others so that they can run these pluggable emulator and game cores
+also in their own programs or devices.
+
+Snes9x is a Super Nintendo Entertainment System / Super Famicom emulator.
+
+This is a port of SNES9x 1.43 for libretro (it was previously called CAT SFC).
+It is an ideal alternative to emulators with a more uncompromising approach to
+accuracy, since it runs at full speed on low end devices, for example, low
+power ARM SoCs.
