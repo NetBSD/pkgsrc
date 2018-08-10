@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/11 00:16:25 jmcneill Exp $
-lib/libretro/mednafen_pce_fast_libretro.so
