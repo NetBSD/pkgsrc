@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2018/08/02 15:13:34 adam Exp $
+$NetBSD: distinfo,v 1.15 2018/08/10 12:16:23 adam Exp $
 
-SHA1 (astroid-2.0.2.tar.gz) = 3e9052b54beda04862f6bf2a367f2297fa57e6e2
-RMD160 (astroid-2.0.2.tar.gz) = 1d925c00b5f3e49b42c06c1a77eacdd90fe2b640
-SHA512 (astroid-2.0.2.tar.gz) = 428330eb8e5d215424784b3bc5239b0539fb331eead6ec44f67c70fa3c556e87ad87317a625581e058c41d953b7e1eed1461e76866e9f464e725c9a7057f94c1
-Size (astroid-2.0.2.tar.gz) = 273737 bytes
+SHA1 (astroid-2.0.4.tar.gz) = d06c88f278df392176968df5594c324f7e8ed9b9
+RMD160 (astroid-2.0.4.tar.gz) = 4f525192794b7c408c719e4d9731801c2a697b96
+SHA512 (astroid-2.0.4.tar.gz) = 20e9f0230ce520e60d74e7ddf24906e7a4ab7b04c0d3199674cd09f9d6406bbc73225d1a49f07c7f947deeee8c71924df227d4d6c7e34633643f81bdde677894
+Size (astroid-2.0.4.tar.gz) = 273871 bytes
