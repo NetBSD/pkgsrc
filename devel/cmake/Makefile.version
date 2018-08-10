@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.version,v 1.28 2018/07/21 06:52:55 ryoon Exp $
+# $NetBSD: Makefile.version,v 1.29 2018/08/10 06:59:04 adam Exp $
 #
 # used by devel/cmake/Makefile
 # used by devel/cmake-fedora/Makefile
-CMAKE_VERSION=	3.12.0
+CMAKE_VERSION=	3.12.1
 CMAKE_API=	${CMAKE_VERSION:R}
