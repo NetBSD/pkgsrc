@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.51 2018/07/22 05:15:53 minskim Exp $
+@comment $NetBSD: PLIST,v 1.52 2018/08/10 06:59:04 adam Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -151,6 +151,7 @@ share/cmake-${CMAKE_API}/Help/envvar/FC.rst
 share/cmake-${CMAKE_API}/Help/envvar/FFLAGS.rst
 share/cmake-${CMAKE_API}/Help/envvar/LDFLAGS.rst
 share/cmake-${CMAKE_API}/Help/envvar/MACOSX_DEPLOYMENT_TARGET.rst
+share/cmake-${CMAKE_API}/Help/envvar/PackageName_ROOT.rst
 share/cmake-${CMAKE_API}/Help/envvar/RC.rst
 share/cmake-${CMAKE_API}/Help/envvar/RCFLAGS.rst
 share/cmake-${CMAKE_API}/Help/generator/Borland Makefiles.rst
@@ -928,7 +929,7 @@ share/cmake-${CMAKE_API}/Help/release/3.0.rst
 share/cmake-${CMAKE_API}/Help/release/3.1.rst
 share/cmake-${CMAKE_API}/Help/release/3.10.rst
 share/cmake-${CMAKE_API}/Help/release/3.11.rst
-share/cmake-${CMAKE_API}/Help/release/${CMAKE_API}.rst
+share/cmake-${CMAKE_API}/Help/release/3.12.rst
 share/cmake-${CMAKE_API}/Help/release/3.2.rst
 share/cmake-${CMAKE_API}/Help/release/3.3.rst
 share/cmake-${CMAKE_API}/Help/release/3.4.rst
@@ -1444,6 +1445,7 @@ share/cmake-${CMAKE_API}/Help/variable/PROJECT_VERSION_MAJOR.rst
 share/cmake-${CMAKE_API}/Help/variable/PROJECT_VERSION_MINOR.rst
 share/cmake-${CMAKE_API}/Help/variable/PROJECT_VERSION_PATCH.rst
 share/cmake-${CMAKE_API}/Help/variable/PROJECT_VERSION_TWEAK.rst
+share/cmake-${CMAKE_API}/Help/variable/PackageName_ROOT.rst
 share/cmake-${CMAKE_API}/Help/variable/UNIX.rst
 share/cmake-${CMAKE_API}/Help/variable/WIN32.rst
 share/cmake-${CMAKE_API}/Help/variable/WINCE.rst
