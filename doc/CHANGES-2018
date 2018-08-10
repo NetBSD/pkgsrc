@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3511 2018/08/10 11:57:32 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3512 2018/08/10 12:19:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5022,3 +5022,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/postgresql94 to 9.4.19 [adam 2018-08-10]
 	Updated databases/postgresql95 to 9.5.14 [adam 2018-08-10]
 	Updated databases/postgresql96 to 9.6.10 [adam 2018-08-10]
+	Updated devel/py-astroid to 2.0.4 [adam 2018-08-10]
+	Updated devel/py-blessings to 1.7 [adam 2018-08-10]
