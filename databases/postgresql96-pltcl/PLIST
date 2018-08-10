@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/10/29 19:41:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/08/10 11:56:09 adam Exp $
 bin/pltcl_delmod
 bin/pltcl_listmod
 bin/pltcl_loadmod
@@ -14,6 +14,7 @@ share/locale/pl/LC_MESSAGES/pltcl-9.6.mo
 share/locale/pt_BR/LC_MESSAGES/pltcl-9.6.mo
 share/locale/ro/LC_MESSAGES/pltcl-9.6.mo
 share/locale/ru/LC_MESSAGES/pltcl-9.6.mo
+share/locale/sv/LC_MESSAGES/pltcl-9.6.mo
 share/locale/tr/LC_MESSAGES/pltcl-9.6.mo
 share/locale/zh_CN/LC_MESSAGES/pltcl-9.6.mo
 share/locale/zh_TW/LC_MESSAGES/pltcl-9.6.mo
