@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3510 2018/08/10 11:34:04 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3511 2018/08/10 11:57:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5017,3 +5017,8 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/py-pandas to 0.23.4 [adam 2018-08-10]
 	Updated net/Geomyidae to 0.32.2 [leot 2018-08-10]
 	Updated archivers/libmspack to 0.7.1alpha [wiz 2018-08-10]
+	Updated databases/postgresql10 to 10.5 [adam 2018-08-10]
+	Updated databases/postgresql93 to 9.3.24 [adam 2018-08-10]
+	Updated databases/postgresql94 to 9.4.19 [adam 2018-08-10]
+	Updated databases/postgresql95 to 9.5.14 [adam 2018-08-10]
+	Updated databases/postgresql96 to 9.6.10 [adam 2018-08-10]
