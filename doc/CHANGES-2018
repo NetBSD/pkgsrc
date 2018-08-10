@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3514 2018/08/10 21:04:38 nia Exp $
+$NetBSD: CHANGES-2018,v 1.3515 2018/08/10 23:16:54 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5026,3 +5026,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-blessings to 1.7 [adam 2018-08-10]
 	Renamed emulators/libretro-catsfc to emulators/libretro-snes9x2005 [nia 2018-08-10]
 	Renamed emulators/libretro-snes9x-next to emulators/libretro-snes9x2010 [nia 2018-08-10]
+	Renamed emulators/libretro-mednafen-pce-fast to emulators/libretro-beetle-pce-fast [nia 2018-08-10]
