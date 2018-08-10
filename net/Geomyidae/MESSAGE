@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2015/04/19 19:21:15 wiz Exp $
-
-For documentation, license, rc.d scripts and configuration examples see:
-
-  geomyidae(8)
-  ${PREFIX}/share/doc/geomyidae
-  ${PREFIX}/share/examples/geomyidae
-===========================================================================
