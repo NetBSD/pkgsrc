@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3505 2018/08/09 20:12:15 rillig Exp $
+$NetBSD: CHANGES-2018,v 1.3506 2018/08/10 06:59:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5007,3 +5007,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/rust to 1.28.0 [jperkin 2018-08-09]
 	Updated textproc/libxml2 to 2.9.8nb2 [snj 2018-08-09]
 	Updated pkgtools/pkglint to 5.5.16 [rillig 2018-08-09]
+	Updated devel/py-uvloop to 0.11.2 [adam 2018-08-10]
+	Updated devel/py-setuptools_scm to 3.1.0 [adam 2018-08-10]
+	Updated devel/cmake to 3.12.1 [adam 2018-08-10]
