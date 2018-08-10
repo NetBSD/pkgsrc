@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/08/09 13:52:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2018/08/10 15:57:54 jperkin Exp $
 
 DISTNAME=	compiler-rt-6.0.1.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -35,6 +35,8 @@ PLIST_SUBST+=	COMPILER_RT_OS_DIR=${OS_DIR}
 
 TEST_TARGET=	check-compiler-rt
 
+PYTHON_FOR_BUILD_ONLY=	yes
+
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
 
@@ -47,4 +49,5 @@ TOOLS_PATH.grep=	${PREFIX}/bin/ggrep
 
 .include "../../devel/googletest/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
