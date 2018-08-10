@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/01/14 11:19:04 adam Exp $
+# $NetBSD: Makefile,v 1.3 2018/08/10 12:19:30 adam Exp $
 
-DISTNAME=	blessings-1.6.1
+DISTNAME=	blessings-1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/blessings/}
@@ -11,8 +11,8 @@ COMMENT=	Thin, practical wrapper around terminal
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
-# TEST_DEPENDS
-BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_LANGUAGES=	# none
 
