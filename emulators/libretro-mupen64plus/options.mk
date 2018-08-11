@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2018/08/11 13:53:25 nia Exp $
+# $NetBSD: options.mk,v 1.6 2018/08/11 21:03:17 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libretro-mupen64plus
 PKG_OPTIONS_REQUIRED_GROUPS=	graphics
@@ -36,4 +36,6 @@ MAKE_ENV+=	platform=rpi
 
 .if !empty(PKG_OPTIONS:Mdynarec)
 MAKE_ENV+=	WITH_DYNAREC=${MUPEN64_DYNAREC_ARCH}
+.else
+MAKE_ENV+=	WITH_DYNAREC=
 .endif
