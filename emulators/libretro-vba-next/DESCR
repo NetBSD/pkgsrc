@@ -4,5 +4,5 @@ straight into any libretro-compatible frontend. This development interface is
 open to others so that they can run these pluggable emulator and game cores
 also in their own programs or devices.
 
-VBA Next is an optimized port of the VBA-M Nintendo Game Boy Advance video
-game system emulator.
+VBA Next is a Game Boy Advance emulator based on VBA-M 2011 with backported
+patches for performance and compatibility improvements.
