@@ -1,0 +1,17 @@
+$NetBSD: patch-desmume_src_frontend_libretro_Makefile.libretro,v 1.1 2018/08/11 12:57:24 nia Exp $
+
+Don't pass -O3 unconditionally.
+
+--- desmume/src/frontend/libretro/Makefile.libretro.orig	2018-08-07 06:05:43.000000000 +0000
++++ desmume/src/frontend/libretro/Makefile.libretro
+@@ -451,8 +451,8 @@ else
+         CFLAGS += -O2 -DNDEBUG
+         CXXFLAGS += -O2 -DNDEBUG
+     else
+-        CFLAGS += -O3 -DNDEBUG
+-        CXXFLAGS += -O3 -DNDEBUG
++        CFLAGS += -DNDEBUG
++        CXXFLAGS += -DNDEBUG
+     endif
+ endif
+ 
