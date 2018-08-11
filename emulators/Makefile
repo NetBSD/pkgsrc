@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.265 2018/08/11 15:12:20 nia Exp $
+# $NetBSD: Makefile,v 1.266 2018/08/11 15:42:08 nia Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -95,6 +95,7 @@ SUBDIR+=	libretro-core-info
 SUBDIR+=	libretro-database
 SUBDIR+=	libretro-desmume
 SUBDIR+=	libretro-fceumm
+SUBDIR+=	libretro-fuse
 SUBDIR+=	libretro-gambatte
 SUBDIR+=	libretro-genesis-plus-gx
 SUBDIR+=	libretro-glsl-shaders
