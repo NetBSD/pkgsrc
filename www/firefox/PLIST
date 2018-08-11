@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.129 2018/06/28 13:52:37 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.130 2018/08/11 18:45:16 ryoon Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -2974,10 +2974,6 @@ lib/firefox/browser/features/firefox@getpocket.com/chrome/skin/shared/pocket.css
 lib/firefox/browser/features/firefox@getpocket.com/chrome/skin/shared/pocket.svg
 lib/firefox/browser/features/firefox@getpocket.com/en-US/locale/en-US/pocket.properties
 lib/firefox/browser/features/firefox@getpocket.com/install.rdf
-lib/firefox/browser/features/followonsearch@mozilla.com/bootstrap.js
-lib/firefox/browser/features/followonsearch@mozilla.com/chrome.manifest
-lib/firefox/browser/features/followonsearch@mozilla.com/chrome/content/followonsearch-fs.js
-lib/firefox/browser/features/followonsearch@mozilla.com/install.rdf
 lib/firefox/browser/features/formautofill@mozilla.org/bootstrap.js
 lib/firefox/browser/features/formautofill@mozilla.org/chrome.manifest
 lib/firefox/browser/features/formautofill@mozilla.org/chrome/content/FormAutofillFrameScript.js
