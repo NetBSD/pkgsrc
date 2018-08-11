@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3525 2018/08/11 16:10:07 nia Exp $
+$NetBSD: CHANGES-2018,v 1.3526 2018/08/11 17:50:13 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5035,3 +5035,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added emulators/libretro-fuse version 20180419 [nia 2018-08-11]
 	Added emulators/libretro-genesis-plus-gx version 20180607 [nia 2018-08-11]
 	Added emulators/libretro-vecx version 20180412 [nia 2018-08-11]
+	Updated security/password-store to 1.7.3 [leot 2018-08-11]
