@@ -1,0 +1,16 @@
+Libretro is a simple but powerful development interface that allows for the
+easy creation of emulators, games and multimedia applications that can plug
+straight into any libretro-compatible frontend. This development interface is
+open to others so that they can run these pluggable emulator and game cores
+also in their own programs or devices.
+
+Genesis Plus GX is a Sega 8/16-bit game console emulator focused on accuracy
+and portability.
+
+This emulator has 100% compatibility with Genesis / Mega Drive, Sega/Mega CD,
+Master System, Game Gear & SG-1000 released software (including all unlicensed
+software and known pirate dumps), also emulating backwards compatibility modes
+when available. It also has Pico emulation.
+
+It may be somewhat slower than PicoDrive on some platforms, but has improved
+accuracy. On the other hand, only PicoDrive supports 32X emulation.
