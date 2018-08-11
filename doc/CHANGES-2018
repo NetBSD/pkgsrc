@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3524 2018/08/11 15:47:04 nia Exp $
+$NetBSD: CHANGES-2018,v 1.3525 2018/08/11 16:10:07 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5034,3 +5034,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added emulators/libretro-desmume version 20180807 [nia 2018-08-11]
 	Added emulators/libretro-fuse version 20180419 [nia 2018-08-11]
 	Added emulators/libretro-genesis-plus-gx version 20180607 [nia 2018-08-11]
+	Added emulators/libretro-vecx version 20180412 [nia 2018-08-11]
