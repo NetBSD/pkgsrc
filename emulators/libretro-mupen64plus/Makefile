@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.10 2018/07/18 00:06:15 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2018/08/11 13:59:39 nia Exp $
 
-DISTNAME=	mupen64plus-libretro-20150204
-PKGNAME=	libretro-mupen64plus-20150204
-PKGREVISION=	1
+DISTNAME=	libretro-mupen64plus-20180628
 CATEGORIES=	emulators
-MASTER_SITES=	http://ftp.NetBSD.org/pub/NetBSD/misc/jmcneill/retroarch/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+GITHUB_PROJECT=	mupen64plus-libretro
+GITHUB_TAG=	4ca2fa8633666e26e2f163dcd3c226b598cb2aa4
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/libretro/mupen64plus-libretro
-COMMENT=	Libretro core based on the Mupen64 Plus emulator
+HOMEPAGE=	https://docs.libretro.com/library/mupen64plus/
+COMMENT=	Libretro core based on the Mupen64Plus emulator
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/mupen64plus-libretro-master
+EXTRACT_USING=	bsdtar
 USE_LANGUAGES=	c c++03
 USE_TOOLS+=	gmake
 
@@ -22,14 +21,11 @@ SUBST_MESSAGE.vc=	Fixing path to VideoCore libraries.
 SUBST_FILES.vc=		Makefile
 SUBST_SED.vc+=		-e 's;/opt/vc;${PREFIX};g'
 
-SUBST_CLASSES+=		d2u
-SUBST_STAGE.d2u=	post-extract
-SUBST_FILES.d2u=	mupen64plus-video-angrylion/n64video.c
-SUBST_FILTER_CMD.d2u=	${TR} -d '\r'
+MAKE_FLAGS+=		GIT_VERSION="-pkgsrc"
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
-CFLAGS.NetBSD+=	-DHAVE_POSIX_MEMALIGN=1
+CFLAGS.NetBSD+=		-DHAVE_POSIX_MEMALIGN=1
 
 .include "options.mk"
 
@@ -37,4 +33,7 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/mupen64plus_libretro.so \
 	    ${DESTDIR}${PREFIX}/lib/libretro/mupen64plus_libretro.so
 
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
