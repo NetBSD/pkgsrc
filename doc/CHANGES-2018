@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3518 2018/08/11 00:51:36 nia Exp $
+$NetBSD: CHANGES-2018,v 1.3519 2018/08/11 01:22:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5030,3 +5030,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added emulators/libretro-beetle-psx version 20180808 [nia 2018-08-11]
 	Added emulators/libretro-beetle-ngp version 20180720 [nia 2018-08-11]
 	Added games/libretro-craft version 20180803 [nia 2018-08-11]
+	Updated www/squid3 to 3.5.28 [taca 2018-08-11]
