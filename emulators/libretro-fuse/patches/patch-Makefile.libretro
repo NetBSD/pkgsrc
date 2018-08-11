@@ -1,0 +1,25 @@
+$NetBSD: patch-Makefile.libretro,v 1.1 2018/08/11 15:42:09 nia Exp $
+
+Don't force -O3 by default, or invoke git.
+
+--- Makefile.libretro.orig	2018-04-19 16:34:08.000000000 +0000
++++ Makefile.libretro
+@@ -378,8 +378,7 @@ else ifeq ($(platform), emscripten)
+ 	CFLAGS += -O2
+ 	CXXFLAGS += -O2 -fno-exceptions -fno-rtti -DHAVE_STDINT_H
+ else
+-	CFLAGS += -O3
+-	CXXFLAGS += -O3 -fno-exceptions -fno-rtti -DHAVE_STDINT_H
++	CXXFLAGS += -fno-exceptions -fno-rtti -DHAVE_STDINT_H
+ endif
+ 
+ ifeq ($(LOG_PERFORMANCE), 1)
+@@ -442,7 +441,7 @@ $(CORE_DIR)/libspectrum/config.h:
+ 	cp $(CORE_DIR)/src/config_libspectrum.h $(CORE_DIR)/libspectrum/config.h
+ 
+ $(CORE_DIR)/src/version.c: FORCE
+-	cat $(CORE_DIR)/etc/version.c.templ | sed s/HASH/`git rev-parse HEAD | tr -d "\n"`/g > $@
++	cat $(CORE_DIR)/etc/version.c.templ | sed s/HASH/pkgsrc/g > $@
+ 
+ clean-objs:
+ 	rm -f $(OBJS)
