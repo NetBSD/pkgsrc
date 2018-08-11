@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/08/08 23:47:49 nia Exp $
+# $NetBSD: Makefile,v 1.5 2018/08/11 14:38:15 nia Exp $
 
 DISTNAME=	libretro-picodrive-20180722
 PKGREVISION=	1
@@ -10,7 +10,7 @@ GITHUB_TAG=	2db90628f5f29f1d4030172ce4f57ab757fa9d93
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://docs.libretro.com/library/picodrive/
 COMMENT=	Fast MegaDrive/MegaCD/32X emulator
-LICENSE=	picodrive-license
+LICENSE=	old-mame-license
 
 EXTRACT_USING=	bsdtar
 MAKE_FILE=	Makefile.libretro
