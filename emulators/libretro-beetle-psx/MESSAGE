@@ -1,0 +1,18 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2018/08/11 00:19:58 nia Exp $
+
+Beetle PSX requires the following BIOS files in order to work:
+
+* scph5500.bin - SHA256 sum:
+	9c0421858e217805f4abe18698afea8d5aa36ff0727eb8484944e00eb5e7eadb
+* scph5501.bin - SHA256 sum:
+	11052b6499e466bbf0a709b1f9cb6834a9418e66680387912451e971cf8a1fef
+* scph5502.bin - SHA256 sum:
+	1faaa18fa820a0225e488d9f086296b8e6c46df739666093987ff7d8fd352c09
+
+In retroarch, you'll need to place them in the System Directory.
+
+Alternatively, you can place them in your Content Directory next to the
+software you are going to run.
+
+===========================================================================
