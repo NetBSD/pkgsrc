@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3517 2018/08/11 00:32:42 nia Exp $
+$NetBSD: CHANGES-2018,v 1.3518 2018/08/11 00:51:36 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5029,3 +5029,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Renamed emulators/libretro-mednafen-pce-fast to emulators/libretro-beetle-pce-fast [nia 2018-08-10]
 	Added emulators/libretro-beetle-psx version 20180808 [nia 2018-08-11]
 	Added emulators/libretro-beetle-ngp version 20180720 [nia 2018-08-11]
+	Added games/libretro-craft version 20180803 [nia 2018-08-11]
