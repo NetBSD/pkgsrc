@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3528 2018/08/11 18:47:35 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.3529 2018/08/11 20:26:23 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5038,3 +5038,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/password-store to 1.7.3 [leot 2018-08-11]
 	Updated www/firefox to 61.0.2 [ryoon 2018-08-11]
 	Updated www/firefox-l10n to 61.0.2 [ryoon 2018-08-11]
+	Updated emulators/libretro-nestopia to 1.49 [nia 2018-08-11]
