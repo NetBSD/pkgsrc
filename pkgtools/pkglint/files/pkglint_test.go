@@ -124,15 +124,11 @@ func (s *Suite) Test_Pkglint_Main__unknown_option(c *check.C) {
 func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 	t := s.Init(c)
 
-	// This file is needed to locate the pkgsrc root directory.
-	// See findPkgsrcTopdir.
-	t.CreateFileLines("mk/bsd.pkg.mk",
-		"# dummy")
+	t.SetupPkgsrc()
 
-	// See Pkgsrc.loadDocChanges.
 	// FIXME: pkglint should warn that the latest version in this file
 	// (1.10) doesn't match the current version in the package (1.11).
-	t.CreateFileLines("doc/CHANGES-2018",
+	t.SetupFileLines("doc/CHANGES-2018",
 		RcsID,
 		"",
 		"Changes to the packages collection and infrastructure in 2018:",
@@ -140,7 +136,7 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 		"\tUpdated sysutils/checkperms to 1.10 [rillig 2018-01-05]")
 
 	// See Pkgsrc.loadSuggestedUpdates.
-	t.CreateFileLines("doc/TODO",
+	t.SetupFileLines("doc/TODO",
 		RcsID,
 		"",
 		"Suggested package updates",
@@ -148,47 +144,27 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 		"\to checkperms-1.13 [supports more file formats]")
 
 	// The LICENSE in the package Makefile is searched here.
-	t.CreateFileLines("licenses/bsd-2",
+	t.SetupFileLines("licenses/bsd-2",
 		"# dummy")
 
 	// The MASTER_SITES in the package Makefile are searched here.
 	// See Pkgsrc.loadMasterSites.
-	t.CreateFileLines("mk/fetch/sites.mk",
+	t.SetupFileMkLines("mk/fetch/sites.mk",
 		MkRcsID,
 		"",
 		"MASTER_SITE_GITHUB+=\thttps://github.com/")
 
-	// The options for the PKG_OPTIONS framework must be readable.
-	// See Pkgsrc.loadPkgOptions.
-	t.CreateFileLines("mk/defaults/options.description",
-		"option Description")
-
-	// The user-defined variables are read in to check for missing
-	// BUILD_DEFS declarations in the package Makefile.
-	t.CreateFileLines("mk/defaults/mk.conf",
-		"# dummy")
-
-	// The tool definitions are read in to check for missing
-	// USE_TOOLS declarations in the package Makefile.
-	// They spread over several files from the pkgsrc infrastructure.
-	t.CreateFileLines("mk/tools/bsd.tools.mk",
-		".include \"defaults.mk\"")
-	t.CreateFileLines("mk/tools/defaults.mk",
-		"# dummy")
-	t.CreateFileLines("mk/bsd.prefs.mk",
-		"# dummy")
-
 	// The existence of this file makes the category "sysutils" valid.
 	// The category "tools" on the other hand is not valid.
-	t.CreateFileLines("sysutils/Makefile",
-		"# dummy")
+	t.SetupFileMkLines("sysutils/Makefile",
+		MkRcsID)
 
 	// The package Makefile is quite simple, containing just the
 	// standard variable definitions. The data for checking the variable
 	// values is partly defined in the pkgsrc infrastructure files
 	// (as defined in the previous lines), and partly in the pkglint
 	// code directly. Many details can be found in vartypecheck.go.
-	t.CreateFileLines("sysutils/checkperms/Makefile",
+	t.SetupFileMkLines("sysutils/checkperms/Makefile",
 		MkRcsID,
 		"",
 		"DISTNAME=\tcheckperms-1.11",
@@ -202,7 +178,7 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 		"",
 		".include \"../../mk/bsd.pkg.mk\"")
 
-	t.CreateFileLines("sysutils/checkperms/MESSAGE",
+	t.SetupFileLines("sysutils/checkperms/MESSAGE",
 		"===========================================================================",
 		RcsID,
 		"",
@@ -210,18 +186,18 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 		"",
 		"===========================================================================")
 
-	t.CreateFileLines("sysutils/checkperms/PLIST",
+	t.SetupFileLines("sysutils/checkperms/PLIST",
 		PlistRcsID,
 		"bin/checkperms",
 		"man/man1/checkperms.1")
 
-	t.CreateFileLines("sysutils/checkperms/README",
+	t.SetupFileLines("sysutils/checkperms/README",
 		"When updating this package, test the pkgsrc bootstrap.")
 
-	t.CreateFileLines("sysutils/checkperms/TODO",
+	t.SetupFileLines("sysutils/checkperms/TODO",
 		"Make the package work on MS-DOS")
 
-	t.CreateFileLines("sysutils/checkperms/patches/patch-checkperms.c",
+	t.SetupFileLines("sysutils/checkperms/patches/patch-checkperms.c",
 		RcsID,
 		"",
 		"A simple patch demonstrating that pkglint checks for missing",
@@ -234,7 +210,7 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 		"+// Header 1",
 		"+// Header 2",
 		"+// Header 3")
-	t.CreateFileLines("sysutils/checkperms/distinfo",
+	t.SetupFileLines("sysutils/checkperms/distinfo",
 		RcsID,
 		"",
 		"SHA1 (checkperms-1.12.tar.gz) = 34c084b4d06bcd7a8bba922ff57677e651eeced5",
@@ -243,7 +219,7 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 		"Size (checkperms-1.12.tar.gz) = 6621 bytes",
 		"SHA1 (patch-checkperms.c) = asdfasdf") // Invalid SHA-1 checksum
 
-	G.Main("pkglint", "-Wall", "-Call", t.TempFilename("sysutils/checkperms"))
+	G.Main("pkglint", "-Wall", "-Call", t.File("sysutils/checkperms"))
 
 	t.CheckOutputLines(
 		"WARN: ~/sysutils/checkperms/Makefile:3: This package should be updated to 1.13 ([supports more file formats]).",
@@ -276,7 +252,7 @@ func (s *Suite) Test_Pkglint_CheckDirent__outside(c *check.C) {
 
 	t.SetupFileLines("empty")
 
-	G.CheckDirent(t.TmpDir())
+	G.CheckDirent(t.File("."))
 
 	t.CheckOutputLines(
 		"ERROR: ~: Cannot determine the pkgsrc root directory for \"~\".")
@@ -290,22 +266,22 @@ func (s *Suite) Test_Pkglint_CheckDirent(c *check.C) {
 	t.SetupFileLines("category/Makefile")
 	t.SetupFileLines("Makefile")
 
-	G.CheckDirent(t.TmpDir())
+	G.CheckDirent(t.File("."))
 
 	t.CheckOutputLines(
 		"ERROR: ~/Makefile: Must not be empty.")
 
-	G.CheckDirent(t.TempFilename("category"))
+	G.CheckDirent(t.File("category"))
 
 	t.CheckOutputLines(
 		"ERROR: ~/category/Makefile: Must not be empty.")
 
-	G.CheckDirent(t.TempFilename("category/package"))
+	G.CheckDirent(t.File("category/package"))
 
 	t.CheckOutputLines(
 		"ERROR: ~/category/package/Makefile: Must not be empty.")
 
-	G.CheckDirent(t.TempFilename("category/package/nonexistent"))
+	G.CheckDirent(t.File("category/package/nonexistent"))
 
 	t.CheckOutputLines(
 		"ERROR: ~/category/package/nonexistent: No such file or directory.")
@@ -437,9 +413,9 @@ func (s *Suite) Test_ChecklinesMessage__autofix(c *check.C) {
 func (s *Suite) Test_Pkgsrc_Latest_no_basedir(c *check.C) {
 	t := s.Init(c)
 
-	latest1 := G.Pkgsrc.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
+	latest := G.Pkgsrc.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
 
-	c.Check(latest1, equals, "")
+	c.Check(latest, equals, "")
 	t.CheckOutputLines(
 		"ERROR: Cannot find latest version of \"^python[0-9]+$\" in \"~/lang\".")
 }
@@ -449,9 +425,9 @@ func (s *Suite) Test_Pkgsrc_Latest_no_subdirs(c *check.C) {
 
 	t.SetupFileLines("lang/Makefile")
 
-	latest2 := G.Pkgsrc.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
+	latest := G.Pkgsrc.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
 
-	c.Check(latest2, equals, "")
+	c.Check(latest, equals, "")
 	t.CheckOutputLines(
 		"ERROR: Cannot find latest version of \"^python[0-9]+$\" in \"~/lang\".")
 }
@@ -462,9 +438,9 @@ func (s *Suite) Test_Pkgsrc_Latest_single(c *check.C) {
 	t.SetupFileLines("lang/Makefile")
 	t.SetupFileLines("lang/python27/Makefile")
 
-	latest3 := G.Pkgsrc.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
+	latest := G.Pkgsrc.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
 
-	c.Check(latest3, equals, "../../lang/python27")
+	c.Check(latest, equals, "../../lang/python27")
 }
 
 func (s *Suite) Test_Pkgsrc_Latest_multi(c *check.C) {
@@ -474,9 +450,9 @@ func (s *Suite) Test_Pkgsrc_Latest_multi(c *check.C) {
 	t.SetupFileLines("lang/python27/Makefile")
 	t.SetupFileLines("lang/python35/Makefile")
 
-	latest4 := G.Pkgsrc.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
+	latest := G.Pkgsrc.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
 
-	c.Check(latest4, equals, "../../lang/python35")
+	c.Check(latest, equals, "../../lang/python35")
 }
 
 func (s *Suite) Test_Pkgsrc_Latest_numeric(c *check.C) {
@@ -490,4 +466,21 @@ func (s *Suite) Test_Pkgsrc_Latest_numeric(c *check.C) {
 	latest := G.Pkgsrc.Latest("databases", `^postgresql[0-9]+$`, "$0")
 
 	c.Check(latest, equals, "postgresql104")
+}
+
+// Demonstrates that an ALTERNATIVES file can be tested individually,
+// without any dependencies on a whole package or a PLIST file.
+func (s *Suite) Test_Pkglint_Checkfile__alternatives(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupPkgsrc()
+	lines := t.SetupFileLines("category/package/ALTERNATIVES",
+		"bin/tar @PREFIX@/bin/gnu-tar")
+
+	G.Main("pkglint", lines[0].Filename)
+
+	t.CheckOutputLines(
+		"NOTE: ~/category/package/ALTERNATIVES:1: @PREFIX@/ can be omitted from the file name.",
+		"Looks fine.",
+		"(Run \"pkglint -e\" to show explanations.)")
 }

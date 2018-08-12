@@ -21,8 +21,7 @@ func (s *Suite) Test_CheckdirToplevel(c *check.C) {
 	t.SetupFileLines("x11/Makefile")
 	t.SetupVartypes()
 
-	G.CurrentDir = t.TmpDir()
-	CheckdirToplevel()
+	CheckdirToplevel(t.File("."))
 
 	t.CheckOutputLines(
 		"WARN: ~/Makefile:3: Indentation should be a single tab character.",
