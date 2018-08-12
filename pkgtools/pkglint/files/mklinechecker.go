@@ -257,7 +257,7 @@ func (ck MkLineChecker) checkDependencyRule(allowedTargets map[string]bool) {
 }
 
 func (ck MkLineChecker) checkVarassignDefPermissions() {
-	if !G.opts.WarnPerm {
+	if !G.opts.WarnPerm || G.Infrastructure {
 		return
 	}
 	if trace.Tracing {
@@ -941,6 +941,18 @@ func (ck MkLineChecker) CheckVartype(varname string, op MkOperator, value, comme
 	case vartype.kindOfList == lkNone:
 		ck.CheckVartypePrimitive(varname, vartype.basicType, op, value, comment, vartype.guessed)
 
+		if op == opUseMatch && matches(value, `^[\w-/]+$`) && !vartype.IsConsideredList() {
+			mkline.Notef("%s should be compared using == instead of the :M or :N modifier without wildcards.", varname)
+			Explain(
+				"This variable has a single value, not a list of values.  Therefore",
+				"it feels strange to apply list operators like :M and :N onto it.",
+				"A more direct approach is to use the == and != operators.",
+				"",
+				"An entirely different case is when the pattern contains wildcards",
+				"like ^, *, $.  In such a case, using the :M or :N modifiers is",
+				"useful and preferred.")
+		}
+
 	case value == "":
 		break
 
@@ -1031,8 +1043,7 @@ func (ck MkLineChecker) CheckCond() {
 		return
 	}
 
-	cond.Visit("empty", func(node *Tree) {
-		varuse := node.args[0].(MkVarUse)
+	checkEmpty := func(varuse *MkVarUse) {
 		varname := varuse.varname
 		if matches(varname, `^\$.*:[MN]`) {
 			mkline.Warnf("The empty() function takes a variable name as parameter, not a variable expression.")
@@ -1054,19 +1065,21 @@ func (ck MkLineChecker) CheckCond() {
 				ck.CheckVartype(varname, opUseMatch, modifier[1:], "")
 			}
 		}
-	})
+	}
 
-	cond.Visit("compareVarStr", func(node *Tree) {
-		varuse := node.args[0].(MkVarUse)
+	checkCompareVarStr := func(varuse *MkVarUse, op string, value string) {
 		varname := varuse.varname
 		varmods := varuse.modifiers
-		value := node.args[2].(string)
 		if len(varmods) == 0 {
-			ck.checkCompareVarStr(varname, node.args[1].(string), value)
+			ck.checkCompareVarStr(varname, op, value)
 		} else if len(varmods) == 1 && matches(varmods[0], `^[MN]`) && value != "" {
 			ck.CheckVartype(varname, opUseMatch, value, "")
 		}
-	})
+	}
+
+	NewMkCondWalker().Walk(cond, &MkCondCallback{
+		Empty:         checkEmpty,
+		CompareVarStr: checkCompareVarStr})
 
 	if G.Mk != nil {
 		G.Mk.indentation.RememberUsedVariables(cond)
@@ -1120,24 +1133,24 @@ func (ck MkLineChecker) CheckRelativePkgdir(pkgdir string) {
 	}
 }
 
-func (ck MkLineChecker) CheckRelativePath(path string, mustExist bool) {
+func (ck MkLineChecker) CheckRelativePath(relativePath string, mustExist bool) {
 	if trace.Tracing {
-		defer trace.Call(path, mustExist)()
+		defer trace.Call(relativePath, mustExist)()
 	}
 
 	mkline := ck.MkLine
-	if !G.Wip && contains(path, "/wip/") {
+	if !G.Wip && contains(relativePath, "/wip/") {
 		mkline.Errorf("A main pkgsrc package must not depend on a pkgsrc-wip package.")
 	}
 
-	resolvedPath := mkline.ResolveVarsInRelativePath(path, true)
+	resolvedPath := mkline.ResolveVarsInRelativePath(relativePath, true)
 	if containsVarRef(resolvedPath) {
 		return
 	}
 
 	abs := resolvedPath
 	if !hasPrefix(abs, "/") {
-		abs = G.CurrentDir + "/" + abs
+		abs = path.Dir(mkline.Filename) + "/" + abs
 	}
 	if _, err := os.Stat(abs); err != nil {
 		if mustExist {
@@ -1146,10 +1159,15 @@ func (ck MkLineChecker) CheckRelativePath(path string, mustExist bool) {
 		return
 	}
 
-	if hasPrefix(path, "../") &&
-		!matches(path, `^\.\./\.\./[^/]+/[^/]`) &&
-		!(G.CurPkgsrcdir == ".." && hasPrefix(path, "../mk/")) && // For category Makefiles.
-		!hasPrefix(path, "../../mk/") {
-		mkline.Warnf("Invalid relative path %q.", path)
+	switch {
+	case !hasPrefix(relativePath, "../"):
+	case matches(relativePath, `^\.\./\.\./[^/]+/[^/]`):
+		// From a package to another package.
+	case hasPrefix(relativePath, "../../mk/"):
+		// From a package to the infrastructure.
+	case hasPrefix(relativePath, "../mk/") && relpath(path.Dir(mkline.Filename), G.Pkgsrc.File(".")) == "..":
+		// For category Makefiles.
+	default:
+		mkline.Warnf("Invalid relative path %q.", relativePath)
 	}
 }

@@ -5,17 +5,18 @@ import (
 )
 
 type Toplevel struct {
+	dir            string
 	previousSubdir string
 	subdirs        []string
 }
 
-func CheckdirToplevel() {
+func CheckdirToplevel(dir string) {
 	if trace.Tracing {
-		defer trace.Call1(G.CurrentDir)()
+		defer trace.Call1(dir)()
 	}
 
-	ctx := new(Toplevel)
-	fname := G.CurrentDir + "/Makefile"
+	ctx := &Toplevel{dir, "", nil}
+	fname := dir + "/Makefile"
 
 	lines := LoadNonemptyLines(fname, true)
 	if lines == nil {
@@ -48,7 +49,7 @@ func (ctx *Toplevel) checkSubdir(line Line, commentedOut bool, indentation, subd
 		line.Warnf("Indentation should be a single tab character.")
 	}
 
-	if contains(subdir, "$") || !fileExists(G.CurrentDir+"/"+subdir+"/Makefile") {
+	if contains(subdir, "$") || !fileExists(ctx.dir+"/"+subdir+"/Makefile") {
 		return
 	}
 
@@ -66,6 +67,6 @@ func (ctx *Toplevel) checkSubdir(line Line, commentedOut bool, indentation, subd
 	ctx.previousSubdir = subdir
 
 	if !commentedOut {
-		ctx.subdirs = append(ctx.subdirs, G.CurrentDir+"/"+subdir)
+		ctx.subdirs = append(ctx.subdirs, ctx.dir+"/"+subdir)
 	}
 }

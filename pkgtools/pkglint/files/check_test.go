@@ -51,7 +51,7 @@ func (s *Suite) SetUpTest(c *check.C) {
 	G.logOut = NewSeparatorWriter(&t.stdout)
 	G.logErr = NewSeparatorWriter(&t.stderr)
 	trace.Out = &t.stdout
-	G.Pkgsrc = NewPkgsrc(t.TmpDir())
+	G.Pkgsrc = NewPkgsrc(t.File("."))
 
 	t.checkC = c
 	t.SetupCommandLine( /* no arguments */ )
@@ -160,13 +160,57 @@ func (t *Tester) SetupFileMkLines(relativeFilename string, lines ...string) *MkL
 	return NewMkLines(plainLines)
 }
 
+// SetupPkgsrc sets up a minimal but complete pkgsrc installation in the
+// temporary folder, so that pkglint runs without any errors.
+// Individual files may be overwritten by calling other Setup* methods.
+// This setup is especially interesting for testing Pkglint.Main.
+func (t *Tester) SetupPkgsrc() {
+
+	// This file is needed to locate the pkgsrc root directory.
+	// See findPkgsrcTopdir.
+	t.CreateFileLines("mk/bsd.pkg.mk",
+		MkRcsID)
+
+	// See Pkgsrc.loadDocChanges.
+	t.CreateFileLines("doc/CHANGES-2018",
+		RcsID)
+
+	// See Pkgsrc.loadSuggestedUpdates.
+	t.CreateFileLines("doc/TODO",
+		RcsID)
+
+	// The MASTER_SITES in the package Makefile are searched here.
+	// See Pkgsrc.loadMasterSites.
+	t.CreateFileLines("mk/fetch/sites.mk",
+		MkRcsID)
+
+	// The options for the PKG_OPTIONS framework must be readable.
+	// See Pkgsrc.loadPkgOptions.
+	t.CreateFileLines("mk/defaults/options.description")
+
+	// The user-defined variables are read in to check for missing
+	// BUILD_DEFS declarations in the package Makefile.
+	t.CreateFileLines("mk/defaults/mk.conf",
+		MkRcsID)
+
+	// The tool definitions are read in to check for missing
+	// USE_TOOLS declarations in the package Makefile.
+	// They spread over several files from the pkgsrc infrastructure.
+	t.CreateFileLines("mk/tools/bsd.tools.mk",
+		".include \"defaults.mk\"")
+	t.CreateFileLines("mk/tools/defaults.mk",
+		MkRcsID)
+	t.CreateFileLines("mk/bsd.prefs.mk", // Some tools are defined here.
+		MkRcsID)
+}
+
 func (t *Tester) CreateFileLines(relativeFilename string, lines ...string) (filename string) {
 	content := ""
 	for _, line := range lines {
 		content += line + "\n"
 	}
 
-	filename = t.TempFilename(relativeFilename)
+	filename = t.File(relativeFilename)
 	err := os.MkdirAll(path.Dir(filename), 0777)
 	t.c().Assert(err, check.IsNil)
 
@@ -176,31 +220,23 @@ func (t *Tester) CreateFileLines(relativeFilename string, lines ...string) (file
 	return filename
 }
 
-func (t *Tester) LoadTmpFile(relFname string) (absFname string) {
-	bytes, err := ioutil.ReadFile(t.TmpDir() + "/" + relFname)
-	t.c().Assert(err, check.IsNil)
-	return string(bytes)
-}
-
-func (t *Tester) TmpDir() string {
+// File returns the absolute path to the given file in the
+// temporary directory. It doesn't check whether that file exists.
+func (t *Tester) File(relativeFilename string) string {
 	if t.tmpdir == "" {
 		t.tmpdir = filepath.ToSlash(t.c().MkDir())
 	}
-	return t.tmpdir
+	return t.tmpdir + "/" + relativeFilename
 }
 
-// TempFilename returns the absolute path to the given file in the
-// temporary directory. It doesn't check whether that file exists.
-func (t *Tester) TempFilename(relativeFilename string) string {
-	return t.TmpDir() + "/" + relativeFilename
-}
-
+// ExpectFatalError, when run in a defer statement, runs the action
+// if the current function panics with a pkglintFatal
+// (typically from line.Fatalf).
 func (t *Tester) ExpectFatalError(action func()) {
-	if r := recover(); r != nil {
-		if _, ok := r.(pkglintFatal); ok {
-			action()
-			return
-		}
+	r := recover()
+	if _, ok := r.(pkglintFatal); ok {
+		action()
+	} else {
 		panic(r)
 	}
 }
@@ -319,7 +355,9 @@ func (t *Tester) DisableTracing() {
 // CheckFileLines loads the lines from the temporary file and checks that
 // they equal the given lines.
 func (t *Tester) CheckFileLines(relativeFileName string, lines ...string) {
-	text := t.LoadTmpFile(relativeFileName)
+	content, err := ioutil.ReadFile(t.File(relativeFileName))
+	t.c().Assert(err, check.IsNil)
+	text := string(content)
 	actualLines := strings.Split(text, "\n")
 	actualLines = actualLines[:len(actualLines)-1]
 	t.c().Check(emptyToNil(actualLines), deepEquals, emptyToNil(lines))
@@ -330,7 +368,7 @@ func (t *Tester) CheckFileLines(relativeFileName string, lines ...string) {
 // for indentation, while the lines in the code use spaces exclusively,
 // in order to make the depth of the indentation clearly visible.
 func (t *Tester) CheckFileLinesDetab(relativeFileName string, lines ...string) {
-	actualLines, err := readLines(t.TempFilename(relativeFileName), false)
+	actualLines, err := readLines(t.File(relativeFileName), false)
 	if !t.c().Check(err, check.IsNil) {
 		return
 	}
