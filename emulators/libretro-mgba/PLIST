@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2018/08/12 14:25:09 nia Exp $
+include/mgba/flags.h
+lib/libretro/mgba_libretro.so
+share/doc/mGBA/CHANGES
+share/doc/mGBA/README.md
