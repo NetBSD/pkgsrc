@@ -1,0 +1,17 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2018/08/12 13:22:43 nia Exp $
+
+Beetle Saturn requires the following MESS BIOS files in order to work:
+
+* mpr-17933.bin
+SHA256: 96e106f740ab448cf89f0dd49dfbac7fe5391cb6bd6e14ad5e3061c13330266f
+
+* sega_100a.bin
+SHA256: 87293093fad802fcff31fcab427a16caff1acbc5184899b8383b360fd58efb73
+
+In retroarch, you'll need to place them in the System Directory.
+
+Alternatively, you can place them in your Content Directory next to the
+software you are going to run.
+
+===========================================================================
