@@ -32,9 +32,7 @@ type Pkglint struct {
 	Mk     *MkLines // The Makefile (or fragment) that is currently checked.
 
 	Todo            []string // The files or directories that still need to be checked.
-	CurrentDir      string   // The currently checked directory, relative to the cwd
-	CurPkgsrcdir    string   // The pkgsrc directory, relative to currentDir
-	Wip             bool     // Is the currently checked directory from pkgsrc-wip?
+	Wip             bool     // Is the currently checked item from pkgsrc-wip?
 	Infrastructure  bool     // Is the currently checked item from the pkgsrc infrastructure?
 	Testing         bool     // Is pkglint in self-testing mode (only during development)?
 	CurrentUsername string   // For checking against OWNER and MAINTAINER
@@ -52,6 +50,7 @@ type Pkglint struct {
 	logErr                *SeparatorWriter
 
 	loghisto *histogram.Histogram
+	loaded   *histogram.Histogram
 }
 
 type CmdOpts struct {
@@ -143,10 +142,12 @@ func (pkglint *Pkglint) Main(argv ...string) (exitcode int) {
 
 		regex.Profiling = true
 		pkglint.loghisto = histogram.New()
+		pkglint.loaded = histogram.New()
 		defer func() {
 			pkglint.logOut.Write("")
-			pkglint.loghisto.PrintStats("loghisto", pkglint.logOut.out, 0)
+			pkglint.loghisto.PrintStats("loghisto", pkglint.logOut.out, -1)
 			regex.PrintStats()
+			pkglint.loaded.PrintStats("loaded", pkglint.logOut.out, 50)
 		}()
 	}
 
@@ -296,13 +297,12 @@ func (pkglint *Pkglint) CheckDirent(fname string) {
 	isReg := st.Mode().IsRegular()
 
 	currentDir := ifelseStr(isReg, path.Dir(fname), fname)
-	pkglint.CurrentDir = currentDir
 	absCurrentDir := abspath(currentDir)
 	pkglint.Wip = !pkglint.opts.Import && matches(absCurrentDir, `/wip/|/wip$`)
 	pkglint.Infrastructure = matches(absCurrentDir, `/mk/|/mk$`)
-	pkglint.CurPkgsrcdir = findPkgsrcTopdir(currentDir)
-	if pkglint.CurPkgsrcdir == "" {
-		NewLineWhole(fname).Errorf("Cannot determine the pkgsrc root directory for %q.", currentDir)
+	pkgsrcdir := findPkgsrcTopdir(currentDir)
+	if pkgsrcdir == "" {
+		NewLineWhole(fname).Errorf("Cannot determine the pkgsrc root directory for %q.", cleanpath(currentDir))
 		return
 	}
 
@@ -314,13 +314,13 @@ func (pkglint *Pkglint) CheckDirent(fname string) {
 		return
 	}
 
-	switch pkglint.CurPkgsrcdir {
+	switch pkgsrcdir {
 	case "../..":
 		pkglint.checkdirPackage(pkglint.Pkgsrc.ToRel(currentDir))
 	case "..":
-		CheckdirCategory()
+		CheckdirCategory(currentDir)
 	case ".":
-		CheckdirToplevel()
+		CheckdirToplevel(currentDir)
 	default:
 		NewLineWhole(fname).Errorf("Cannot check directories outside a pkgsrc tree.")
 	}
@@ -509,7 +509,7 @@ func (pkglint *Pkglint) Checkfile(fname string) {
 
 	case basename == "ALTERNATIVES":
 		if pkglint.opts.CheckAlternatives {
-			CheckfileExtra(fname)
+			CheckfileAlternatives(fname, nil)
 		}
 
 	case basename == "buildlink3.mk":

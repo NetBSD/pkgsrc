@@ -12,8 +12,7 @@ func (s *Suite) Test_ToolRegistry_ParseToolLine(c *check.C) {
 		"",
 		"USE_TOOLS.NetBSD+=\ttool1")
 
-	G.CurrentDir = t.TmpDir()
-	CheckdirToplevel()
+	CheckdirToplevel(t.File("."))
 
 	// No error about "Unknown tool \"NetBSD\"."
 	t.CheckOutputEmpty()
