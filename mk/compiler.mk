@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.88 2018/01/26 13:14:35 jperkin Exp $
+# $NetBSD: compiler.mk,v 1.89 2018/08/12 19:36:40 rillig Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -92,8 +92,8 @@ USE_LANGUAGES+=		c++
 
 COMPILER_USE_SYMLINKS?=	yes
 
-_COMPILERS=		ccc gcc icc ido mipspro mipspro-ucode \
-			sunpro xlc hp pcc clang
+_COMPILERS=		ccc clang gcc hp icc ido \
+			mipspro mipspro-ucode pcc sunpro xlc
 _PSEUDO_COMPILERS=	ccache distcc f2c g95
 
 .if defined(NOT_FOR_COMPILER) && !empty(NOT_FOR_COMPILER)
