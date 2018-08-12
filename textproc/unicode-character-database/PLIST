@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/04/28 01:07:59 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/08/12 11:43:44 tsutsui Exp $
 share/unicode/ucd/ArabicShaping.txt
 share/unicode/ucd/BidiBrackets.txt
 share/unicode/ucd/BidiCharacterTest.txt
@@ -13,6 +13,7 @@ share/unicode/ucd/DerivedCoreProperties.txt
 share/unicode/ucd/DerivedNormalizationProps.txt
 share/unicode/ucd/EastAsianWidth.txt
 share/unicode/ucd/EmojiSources.txt
+share/unicode/ucd/EquivalentUnifiedIdeograph.txt
 share/unicode/ucd/HangulSyllableType.txt
 share/unicode/ucd/Index.txt
 share/unicode/ucd/IndicPositionalCategory.txt
