@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/04/28 01:00:52 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/08/12 10:39:06 tsutsui Exp $
 share/pkgconfig/cldr-emoji-annotation.pc
 share/unicode/cldr/common/annotations/af.xml
 share/unicode/cldr/common/annotations/am.xml
@@ -85,6 +85,8 @@ share/unicode/cldr/common/annotations/sk.xml
 share/unicode/cldr/common/annotations/sl.xml
 share/unicode/cldr/common/annotations/sq.xml
 share/unicode/cldr/common/annotations/sr.xml
+share/unicode/cldr/common/annotations/sr_Cyrl.xml
+share/unicode/cldr/common/annotations/sr_Cyrl_BA.xml
 share/unicode/cldr/common/annotations/sr_Latn.xml
 share/unicode/cldr/common/annotations/sv.xml
 share/unicode/cldr/common/annotations/sw.xml
@@ -189,6 +191,8 @@ share/unicode/cldr/common/annotationsDerived/sk.xml
 share/unicode/cldr/common/annotationsDerived/sl.xml
 share/unicode/cldr/common/annotationsDerived/sq.xml
 share/unicode/cldr/common/annotationsDerived/sr.xml
+share/unicode/cldr/common/annotationsDerived/sr_Cyrl.xml
+share/unicode/cldr/common/annotationsDerived/sr_Cyrl_BA.xml
 share/unicode/cldr/common/annotationsDerived/sr_Latn.xml
 share/unicode/cldr/common/annotationsDerived/sv.xml
 share/unicode/cldr/common/annotationsDerived/sw.xml
