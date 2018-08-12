@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/11/05 03:47:10 tsutsui Exp $
+# $NetBSD: Makefile,v 1.2 2018/08/12 11:42:16 tsutsui Exp $
 
 DISTNAME=	unicode-emoji-${EMOJI_VERSION}
 CATEGORIES=	textproc
@@ -19,7 +19,7 @@ NO_CONFIGURE=	YES
 WRKSRC=		${WRKDIR}
 EMOJIDIR=	${PREFIX}/share/unicode/emoji
 
-EMOJI_VERSION=	5.0
+EMOJI_VERSION=	11.0
 EMOJI_FILES=	ReadMe.txt
 EMOJI_FILES+=	emoji-data.txt
 EMOJI_FILES+=	emoji-sequences.txt
