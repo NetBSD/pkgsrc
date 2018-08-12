@@ -103,14 +103,15 @@ func (s *Suite) Test_MkLineChecker_Check__conditions(c *check.C) {
 	MkLineChecker{t.NewMkLine("fname", 1, ".if ${EMUL_PLATFORM:Mlinux-x386}")}.CheckCond()
 
 	t.CheckOutputLines(
-		"WARN: fname:1: " +
-			"The pattern \"x386\" cannot match any of { aarch64 aarch64eb alpha amd64 arc arm arm26 " +
-			"arm32 cobalt coldfire convex dreamcast earm earmeb earmhf earmhfeb earmv4 earmv4eb " +
-			"earmv5 earmv5eb earmv6 earmv6eb earmv6hf earmv6hfeb earmv7 earmv7eb earmv7hf " +
-			"earmv7hfeb evbarm hpcmips hpcsh hppa hppa64 i386 i586 i686 ia64 m68000 m68k m88k " +
-			"mips mips64 mips64eb mips64el mipseb mipsel mipsn32 mlrisc ns32k pc532 pmax powerpc powerpc64 " +
-			"rs6000 s390 sh3eb sh3el sparc sparc64 vax x86_64 } " +
-			"for the hardware architecture part of EMUL_PLATFORM.")
+		"WARN: fname:1: "+
+			"The pattern \"x386\" cannot match any of { aarch64 aarch64eb alpha amd64 arc arm arm26 "+
+			"arm32 cobalt coldfire convex dreamcast earm earmeb earmhf earmhfeb earmv4 earmv4eb "+
+			"earmv5 earmv5eb earmv6 earmv6eb earmv6hf earmv6hfeb earmv7 earmv7eb earmv7hf "+
+			"earmv7hfeb evbarm hpcmips hpcsh hppa hppa64 i386 i586 i686 ia64 m68000 m68k m88k "+
+			"mips mips64 mips64eb mips64el mipseb mipsel mipsn32 mlrisc ns32k pc532 pmax powerpc powerpc64 "+
+			"rs6000 s390 sh3eb sh3el sparc sparc64 vax x86_64 } "+
+			"for the hardware architecture part of EMUL_PLATFORM.",
+		"NOTE: fname:1: EMUL_PLATFORM should be compared using == instead of the :M or :N modifier without wildcards.")
 
 	MkLineChecker{t.NewMkLine("fname", 98, ".if ${MACHINE_PLATFORM:MUnknownOS-*-*} || ${MACHINE_ARCH:Mx86}")}.CheckCond()
 
@@ -127,7 +128,8 @@ func (s *Suite) Test_MkLineChecker_Check__conditions(c *check.C) {
 			"earmv7 earmv7eb earmv7hf earmv7hfeb evbarm hpcmips hpcsh hppa hppa64 i386 i586 i686 ia64 "+
 			"m68000 m68k m88k mips mips64 mips64eb mips64el mipseb mipsel mipsn32 mlrisc ns32k pc532 pmax "+
 			"powerpc powerpc64 rs6000 s390 sh3eb sh3el sparc sparc64 vax x86_64 "+
-			"} for MACHINE_ARCH.")
+			"} for MACHINE_ARCH.",
+		"NOTE: fname:98: MACHINE_ARCH should be compared using == instead of the :M or :N modifier without wildcards.")
 }
 
 func (s *Suite) Test_MkLineChecker_checkVarassign(c *check.C) {
@@ -156,6 +158,23 @@ func (s *Suite) Test_MkLineChecker_checkVarassignDefPermissions(c *check.C) {
 
 	t.CheckOutputLines(
 		"WARN: options.mk:2: The variable PKG_DEVELOPER may not be given a default value by any package.")
+}
+
+// Don't check the permissions for infrastructure files since they have their own rules.
+func (s *Suite) Test_MkLineChecker_checkVarassignDefPermissions__infrastructure(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall")
+	t.SetupVartypes()
+	t.SetupFileMkLines("mk/infra.mk",
+		MkRcsID,
+		"",
+		"PKG_DEVELOPER?=\tyes")
+	t.SetupFileMkLines("mk/bsd.pkg.mk")
+
+	G.CheckDirent(t.File("mk/infra.mk"))
+
+	t.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_MkLineChecker_CheckVarusePermissions(c *check.C) {

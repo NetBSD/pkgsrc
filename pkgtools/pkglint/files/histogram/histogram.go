@@ -40,7 +40,7 @@ func (h *Histogram) PrintStats(caption string, out io.Writer, limit int) {
 
 	for i, entry := range entries {
 		fmt.Fprintf(out, "%s %6d %s\n", caption, entry.count, entry.s)
-		if limit > 0 && i >= limit {
+		if limit >= 0 && i >= limit {
 			break
 		}
 	}

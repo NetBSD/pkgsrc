@@ -7,6 +7,12 @@ import (
 	"testing"
 )
 
+func (s *Suite) Test_YesNoUnknown_String(c *check.C) {
+	c.Check(yes.String(), equals, "yes")
+	c.Check(no.String(), equals, "no")
+	c.Check(unknown.String(), equals, "unknown")
+}
+
 func (s *Suite) Test_MkopSubst__middle(c *check.C) {
 	c.Check(mkopSubst("pkgname", false, "kgna", false, "ri", ""), equals, "prime")
 	c.Check(mkopSubst("pkgname", false, "pkgname", false, "replacement", ""), equals, "replacement")
@@ -68,20 +74,22 @@ func (s *Suite) Test_isEmptyDir_and_getSubdirs(c *check.C) {
 	t.SetupFileLines("CVS/Entries",
 		"dummy")
 
-	c.Check(isEmptyDir(t.TmpDir()), equals, true)
-	c.Check(getSubdirs(t.TmpDir()), check.DeepEquals, []string(nil))
+	if dir := t.File("."); true {
+		c.Check(isEmptyDir(dir), equals, true)
+		c.Check(getSubdirs(dir), check.DeepEquals, []string(nil))
 
-	t.SetupFileLines("somedir/file")
+		t.SetupFileLines("somedir/file")
 
-	c.Check(isEmptyDir(t.TmpDir()), equals, false)
-	c.Check(getSubdirs(t.TmpDir()), check.DeepEquals, []string{"somedir"})
+		c.Check(isEmptyDir(dir), equals, false)
+		c.Check(getSubdirs(dir), check.DeepEquals, []string{"somedir"})
+	}
 
-	if nodir := t.TmpDir() + "/nonexistent"; true {
-		c.Check(isEmptyDir(nodir), equals, true) // Counts as empty.
+	if absent := t.File("nonexistent"); true {
+		c.Check(isEmptyDir(absent), equals, true) // Counts as empty.
 		defer t.ExpectFatalError(func() {
 			c.Check(t.Output(), check.Matches, `FATAL: (.+): Cannot be read: open (.+): (.+)\n`)
 		})
-		c.Check(getSubdirs(nodir), check.DeepEquals, []string(nil))
+		getSubdirs(absent) // Panics with a pkglintFatal.
 		c.FailNow()
 	}
 }

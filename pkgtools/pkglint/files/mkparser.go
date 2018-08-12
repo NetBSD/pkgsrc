@@ -203,17 +203,13 @@ func (p *MkParser) VarUseModifiers(varname, closing string) []string {
 
 // MkCond parses a condition like ${OPSYS} == "NetBSD".
 // See devel/bmake/files/cond.c.
-func (p *MkParser) MkCond() *Tree {
-	return p.mkCondOr()
-}
-
-func (p *MkParser) mkCondOr() *Tree {
+func (p *MkParser) MkCond() MkCond {
 	and := p.mkCondAnd()
 	if and == nil {
 		return nil
 	}
 
-	ands := append([]interface{}(nil), and)
+	ands := []MkCond{and}
 	for {
 		mark := p.repl.Mark()
 		if !p.repl.AdvanceRegexp(`^\s*\|\|\s*`) {
@@ -229,16 +225,16 @@ func (p *MkParser) mkCondOr() *Tree {
 	if len(ands) == 1 {
 		return and
 	}
-	return NewTree("or", ands...)
+	return &mkCond{Or: ands}
 }
 
-func (p *MkParser) mkCondAnd() *Tree {
+func (p *MkParser) mkCondAnd() MkCond {
 	atom := p.mkCondAtom()
 	if atom == nil {
 		return nil
 	}
 
-	atoms := append([]interface{}(nil), atom)
+	atoms := []MkCond{atom}
 	for {
 		mark := p.repl.Mark()
 		if !p.repl.AdvanceRegexp(`^\s*&&\s*`) {
@@ -254,10 +250,10 @@ func (p *MkParser) mkCondAnd() *Tree {
 	if len(atoms) == 1 {
 		return atom
 	}
-	return NewTree("and", atoms...)
+	return &mkCond{And: atoms}
 }
 
-func (p *MkParser) mkCondAtom() *Tree {
+func (p *MkParser) mkCondAtom() MkCond {
 	if trace.Tracing {
 		defer trace.Call1(p.Rest())()
 	}
@@ -269,7 +265,7 @@ func (p *MkParser) mkCondAtom() *Tree {
 	case repl.AdvanceStr("!"):
 		cond := p.mkCondAtom()
 		if cond != nil {
-			return NewTree("not", cond)
+			return &mkCond{Not: cond}
 		}
 	case repl.AdvanceStr("("):
 		cond := p.MkCond()
@@ -282,14 +278,14 @@ func (p *MkParser) mkCondAtom() *Tree {
 	case repl.AdvanceRegexp(`^defined\s*\(`):
 		if varname := p.Varname(); varname != "" {
 			if repl.AdvanceStr(")") {
-				return NewTree("defined", varname)
+				return &mkCond{Defined: varname}
 			}
 		}
 	case repl.AdvanceRegexp(`^empty\s*\(`):
 		if varname := p.Varname(); varname != "" {
 			modifiers := p.VarUseModifiers(varname, ")")
 			if repl.AdvanceStr(")") {
-				return NewTree("empty", MkVarUse{varname, modifiers})
+				return &mkCond{Empty: &MkVarUse{varname, modifiers}}
 			}
 		}
 	case repl.AdvanceRegexp(`^(commands|exists|make|target)\s*\(`):
@@ -299,7 +295,7 @@ func (p *MkParser) mkCondAtom() *Tree {
 		}
 		arg := repl.Since(argMark)
 		if repl.AdvanceStr(")") {
-			return NewTree(funcname, arg)
+			return &mkCond{Call: &MkCondCall{funcname, arg}}
 		}
 	default:
 		lhs := p.VarUse()
@@ -313,33 +309,33 @@ func (p *MkParser) mkCondAtom() *Tree {
 		}
 		if lhs != nil {
 			if repl.AdvanceRegexp(`^\s*(<|<=|==|!=|>=|>)\s*(\d+(?:\.\d+)?)`) {
-				return NewTree("compareVarNum", *lhs, repl.Group(1), repl.Group(2))
+				return &mkCond{CompareVarNum: &MkCondCompareVarNum{lhs, repl.Group(1), repl.Group(2)}}
 			}
 			if repl.AdvanceRegexp(`^\s*(<|<=|==|!=|>=|>)\s*`) {
 				op := repl.Group(1)
 				if (op == "!=" || op == "==") && repl.AdvanceRegexp(`^"([^"\$\\]*)"`) {
-					return NewTree("compareVarStr", *lhs, op, repl.Group(1))
+					return &mkCond{CompareVarStr: &MkCondCompareVarStr{lhs, op, repl.Group(1)}}
 				} else if repl.AdvanceRegexp(`^\w+`) {
-					return NewTree("compareVarStr", *lhs, op, repl.Group(0))
+					return &mkCond{CompareVarStr: &MkCondCompareVarStr{lhs, op, repl.Group(0)}}
 				} else if rhs := p.VarUse(); rhs != nil {
-					return NewTree("compareVarVar", *lhs, op, *rhs)
+					return &mkCond{CompareVarVar: &MkCondCompareVarVar{lhs, op, rhs}}
 				} else if repl.PeekByte() == '"' {
 					mark := repl.Mark()
 					if repl.AdvanceStr("\"") {
 						if quotedRHS := p.VarUse(); quotedRHS != nil {
 							if repl.AdvanceStr("\"") {
-								return NewTree("compareVarVar", *lhs, op, *quotedRHS)
+								return &mkCond{CompareVarVar: &MkCondCompareVarVar{lhs, op, quotedRHS}}
 							}
 						}
 					}
 					repl.Reset(mark)
 				}
 			} else {
-				return NewTree("not", NewTree("empty", *lhs)) // See devel/bmake/files/cond.c:/\* For \.if \$/
+				return &mkCond{Not: &mkCond{Empty: lhs}} // See devel/bmake/files/cond.c:/\* For \.if \$/
 			}
 		}
 		if repl.AdvanceRegexp(`^\d+(?:\.\d+)?`) {
-			return NewTree("literalNum", repl.Group(0))
+			return &mkCond{Num: repl.Group(0)}
 		}
 	}
 	repl.Reset(mark)
@@ -357,4 +353,96 @@ func (p *MkParser) Varname() string {
 	for p.VarUse() != nil || repl.AdvanceBytesFunc(isVarnameChar) {
 	}
 	return repl.Since(mark)
+}
+
+type MkCond = *mkCond
+
+type mkCond struct {
+	Or  []*mkCond
+	And []*mkCond
+	Not *mkCond
+
+	Defined       string
+	Empty         *MkVarUse
+	CompareVarNum *MkCondCompareVarNum
+	CompareVarStr *MkCondCompareVarStr
+	CompareVarVar *MkCondCompareVarVar
+	Call          *MkCondCall
+	Num           string
+}
+type MkCondCompareVarNum struct {
+	Var *MkVarUse
+	Op  string // One of <, <=, ==, !=, >=, >.
+	Num string
+}
+type MkCondCompareVarStr struct {
+	Var *MkVarUse
+	Op  string // One of ==, !=.
+	Str string
+}
+type MkCondCompareVarVar struct {
+	Left  *MkVarUse
+	Op    string // One of <, <=, ==, !=, >=, >.
+	Right *MkVarUse
+}
+type MkCondCall struct {
+	Name string
+	Arg  string
+}
+
+type MkCondCallback struct {
+	Defined       func(varname string)
+	Empty         func(empty *MkVarUse)
+	CompareVarNum func(varuse *MkVarUse, op string, num string)
+	CompareVarStr func(varuse *MkVarUse, op string, str string)
+	CompareVarVar func(left *MkVarUse, op string, right *MkVarUse)
+	Call          func(name string, arg string)
+}
+
+type MkCondWalker struct{}
+
+func NewMkCondWalker() *MkCondWalker { return &MkCondWalker{} }
+
+func (w *MkCondWalker) Walk(cond MkCond, callback *MkCondCallback) {
+	switch {
+	case cond.Or != nil:
+		for _, or := range cond.Or {
+			w.Walk(or, callback)
+		}
+	case cond.And != nil:
+		for _, and := range cond.And {
+			w.Walk(and, callback)
+		}
+	case cond.Not != nil:
+		w.Walk(cond.Not, callback)
+
+	case cond.Defined != "":
+		if callback.Defined != nil {
+			callback.Defined(cond.Defined)
+		}
+	case cond.Empty != nil:
+		if callback.Empty != nil {
+			callback.Empty(cond.Empty)
+		}
+	case cond.CompareVarVar != nil:
+		if callback.CompareVarVar != nil {
+			cvv := cond.CompareVarVar
+			callback.CompareVarVar(cvv.Left, cvv.Op, cvv.Right)
+		}
+	case cond.CompareVarStr != nil:
+		if callback.CompareVarStr != nil {
+			cvs := cond.CompareVarStr
+			callback.CompareVarStr(cvs.Var, cvs.Op, cvs.Str)
+		}
+	case cond.CompareVarNum != nil:
+		if callback.CompareVarNum != nil {
+			cvn := cond.CompareVarNum
+			callback.CompareVarNum(cvn.Var, cvn.Op, cvn.Num)
+		}
+	case cond.Call != nil:
+		if callback.Call != nil {
+			call := cond.Call
+			callback.Call(call.Name, call.Arg)
+		}
+	}
 }

@@ -159,9 +159,8 @@ func (s *Suite) Test_Package_varorder_license(c *check.C) {
 		".include \"../../mk/bsd.pkg.mk\"")
 
 	t.SetupVartypes()
-	G.CurrentDir = t.TmpDir()
 
-	G.CheckDirent(t.TmpDir() + "/x11/9term")
+	G.CheckDirent(t.File("x11/9term"))
 
 	// Since the error is grave enough, the warning about the correct position is suppressed.
 	t.CheckOutputLines(
@@ -281,7 +280,6 @@ func (s *Suite) Test_Package_checkPossibleDowngrade(c *check.C) {
 	t := s.Init(c)
 
 	G.Pkg = NewPackage("category/pkgbase")
-	G.CurPkgsrcdir = "../.."
 	G.Pkg.EffectivePkgname = "package-1.0nb15"
 	G.Pkg.EffectivePkgnameLine = t.NewMkLine("category/pkgbase/Makefile", 5, "PKGNAME=dummy")
 	G.Pkgsrc.LastChange = map[string]*Change{
@@ -307,61 +305,44 @@ func (s *Suite) Test_Package_checkPossibleDowngrade(c *check.C) {
 func (s *Suite) Test_checkdirPackage(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupFileLines("Makefile",
+	t.SetupFileLines("category/package/Makefile",
 		MkRcsID)
-	G.CurrentDir = t.TmpDir()
 
-	G.checkdirPackage(t.TmpDir())
+	G.checkdirPackage("category/package")
 
 	t.CheckOutputLines(
-		"WARN: ~/Makefile: Neither PLIST nor PLIST.common exist, and PLIST_SRC is unset.",
-		"WARN: ~/distinfo: File not found. Please run \""+confMake+" makesum\" or define NO_CHECKSUM=yes in the package Makefile.",
-		"ERROR: ~/Makefile: Each package must define its LICENSE.",
-		"WARN: ~/Makefile: No COMMENT given.")
+		"WARN: ~/category/package/Makefile: Neither PLIST nor PLIST.common exist, and PLIST_SRC is unset.",
+		"WARN: ~/category/package/distinfo: File not found. Please run \""+confMake+" makesum\" or define NO_CHECKSUM=yes in the package Makefile.",
+		"ERROR: ~/category/package/Makefile: Each package must define its LICENSE.",
+		"WARN: ~/category/package/Makefile: No COMMENT given.")
 }
 
-func (s *Suite) Test_checkdirPackage__meta_package_without_license(c *check.C) {
+func (s *Suite) Test_Pkglint_checkdirPackage__meta_package_without_license(c *check.C) {
 	t := s.Init(c)
 
-	t.CreateFileLines("Makefile",
+	t.CreateFileLines("category/package/Makefile",
 		MkRcsID,
 		"",
 		"META_PACKAGE=\tyes")
-	G.CurrentDir = t.TmpDir()
 	t.SetupVartypes()
 
-	G.checkdirPackage(t.TmpDir())
+	G.checkdirPackage("category/package")
 
 	t.CheckOutputLines(
-		"WARN: ~/Makefile: No COMMENT given.") // No error about missing LICENSE.
+		"WARN: ~/category/package/Makefile: No COMMENT given.") // No error about missing LICENSE.
 }
 
 func (s *Suite) Test_Package__varuse_at_load_time(c *check.C) {
 	t := s.Init(c)
 
-	t.CreateFileLines("doc/CHANGES-2016",
-		"# dummy")
-	t.CreateFileLines("doc/TODO",
-		"# dummy")
+	t.SetupPkgsrc()
 	t.CreateFileLines("licenses/bsd-2",
 		"# dummy")
-	t.CreateFileLines("mk/fetch/sites.mk",
-		"# dummy")
-	t.CreateFileLines("mk/bsd.pkg.mk",
-		"# dummy")
-	t.CreateFileLines("mk/defaults/options.description",
-		"option Description")
-	t.CreateFileLines("mk/defaults/mk.conf",
-		"# dummy")
-	t.CreateFileLines("mk/tools/bsd.tools.mk",
-		".include \"defaults.mk\"")
 	t.CreateFileLines("mk/tools/defaults.mk",
 		"TOOLS_CREATE+=false",
 		"TOOLS_CREATE+=nice",
 		"TOOLS_CREATE+=true",
 		"_TOOLS_VARNAME.nice=NICE")
-	t.CreateFileLines("mk/bsd.prefs.mk",
-		"# dummy")
 
 	t.CreateFileLines("category/pkgbase/Makefile",
 		MkRcsID,
@@ -391,7 +372,7 @@ func (s *Suite) Test_Package__varuse_at_load_time(c *check.C) {
 	t.CreateFileLines("category/pkgbase/distinfo",
 		RcsID)
 
-	G.Main("pkglint", "-q", "-Wperm", t.TmpDir()+"/category/pkgbase")
+	G.Main("pkglint", "-q", "-Wperm", t.File("category/pkgbase"))
 
 	t.CheckOutputLines(
 		"WARN: ~/category/pkgbase/Makefile:8: To use the tool \"FALSE\" at load time, bsd.prefs.mk has to be included before.",
@@ -411,11 +392,9 @@ func (s *Suite) Test_Package_loadPackageMakefile(c *check.C) {
 		"DISTNAME=distfile_1_67",
 		".include \"../../category/package/Makefile\"")
 	pkg := NewPackage("category/package")
-	G.CurrentDir = t.TempFilename("category/package")
-	G.CurPkgsrcdir = "../.."
 	G.Pkg = pkg
 
-	pkg.loadPackageMakefile(t.TempFilename("category/package/Makefile"))
+	pkg.loadPackageMakefile()
 
 	// Including a package Makefile directly is an error (in the last line),
 	// but that is checked later.
@@ -459,8 +438,6 @@ func (s *Suite) Test_Package_conditionalAndUnconditionalInclude(c *check.C) {
 	t.CreateFileLines("sysutils/coreutils/buildlink3.mk", "")
 
 	pkg := NewPackage("category/package")
-	G.CurrentDir = t.TmpDir() + "/category/package"
-	G.CurPkgsrcdir = "../.."
 	G.Pkg = pkg
 
 	G.checkdirPackage("category/package")
@@ -488,8 +465,7 @@ func (s *Suite) Test_Package_includeWithoutExists(c *check.C) {
 		"",
 		".include \"../../mk/bsd.pkg.mk\"")
 
-	G.CurrentDir = t.TempFilename("category/package")
-	G.checkdirPackage(G.CurrentDir)
+	G.checkdirPackage("category/package")
 
 	t.CheckOutputLines(
 		"ERROR: ~/category/package/options.mk: Cannot be read.")
@@ -510,16 +486,14 @@ func (s *Suite) Test_Package_includeAfterExists(c *check.C) {
 		"",
 		".include \"../../mk/bsd.pkg.mk\"")
 
-	G.CurrentDir = t.TempFilename("category/package")
-	G.checkdirPackage(G.CurrentDir)
+	G.checkdirPackage("category/package")
 
 	t.CheckOutputLines(
 		"WARN: ~/category/package/Makefile: Neither PLIST nor PLIST.common exist, and PLIST_SRC is unset.",
 		"WARN: ~/category/package/distinfo: File not found. Please run \""+confMake+" makesum\" or define NO_CHECKSUM=yes in the package Makefile.",
 		"ERROR: ~/category/package/Makefile: Each package must define its LICENSE.",
 		"WARN: ~/category/package/Makefile: No COMMENT given.",
-		"ERROR: ~/category/package/Makefile:4: \"options.mk\" does not exist.",
-		"ERROR: ~/category/package/Makefile:7: \"/mk/bsd.pkg.mk\" does not exist.")
+		"ERROR: ~/category/package/Makefile:4: \"options.mk\" does not exist.")
 }
 
 // See https://github.com/rillig/pkglint/issues/1
@@ -537,8 +511,7 @@ func (s *Suite) Test_Package_includeOtherAfterExists(c *check.C) {
 		"",
 		".include \"../../mk/bsd.pkg.mk\"")
 
-	G.CurrentDir = t.TempFilename("category/package")
-	G.checkdirPackage(G.CurrentDir)
+	G.checkdirPackage("category/package")
 
 	t.CheckOutputLines(
 		"ERROR: ~/category/package/another.mk: Cannot be read.")
@@ -572,12 +545,9 @@ func (s *Suite) Test_Package__redundant_master_sites(c *check.C) {
 		".include \"../../math/R/Makefile.extension\"",
 		".include \"../../mk/bsd.pkg.mk\"")
 
-	G.CurrentDir = t.TempFilename("math/R-date")
-	G.CurPkgsrcdir = "../.."
-
 	// See Package.checkfilePackageMakefile
 	// See Scope.uncond
-	G.checkdirPackage(G.CurrentDir)
+	G.checkdirPackage("math/R-date")
 
 	t.CheckOutputLines(
 		"NOTE: ~/math/R-date/Makefile:6: Definition of MASTER_SITES is redundant because of ../R/Makefile.extension:4.")
