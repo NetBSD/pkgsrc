@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2018/08/12 13:22:43 nia Exp $
+lib/libretro/mednafen_saturn_libretro.so
