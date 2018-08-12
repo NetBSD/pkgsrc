@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/04/28 01:00:52 tsutsui Exp $
+$NetBSD: distinfo,v 1.5 2018/08/12 10:39:06 tsutsui Exp $
 
-SHA1 (cldr-emoji-annotation-33.0.0_1.tar.gz) = f6de25d8ade60ef9358628df6b13d8551d8d62cd
-RMD160 (cldr-emoji-annotation-33.0.0_1.tar.gz) = d1af6e3cd625b46a52d484c731792fb0524a72ce
-SHA512 (cldr-emoji-annotation-33.0.0_1.tar.gz) = 2f52acee98ee3eac10e8fadfe6e18e6d7f39b6b9651e53e0183d17a47462506e83fb0bd13cce1bbbed4c898f43d3d25001f343ed5c4090c75281fe867939c04c
-Size (cldr-emoji-annotation-33.0.0_1.tar.gz) = 4779496 bytes
+SHA1 (cldr-emoji-annotation-33.1.0_0.tar.gz) = e19fb20b7bb354d60b59761aad915854f03ed8c0
+RMD160 (cldr-emoji-annotation-33.1.0_0.tar.gz) = a36d285232b2eb33117ce8a3c761291ba3cc6785
+SHA512 (cldr-emoji-annotation-33.1.0_0.tar.gz) = e73cbbd51ac5a3503d1d742565f5e0d3ea79404d64b3fc5fa4db419df2e09224e5d4f79cb189abe3742d93bc72696319210003ced7c549fcbeb8048d05932882
+Size (cldr-emoji-annotation-33.1.0_0.tar.gz) = 5162751 bytes
