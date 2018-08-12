@@ -1,0 +1,14 @@
+Libretro is a simple but powerful development interface that allows for
+the easy creation of emulators, games and multimedia applications that
+can plug straight into any libretro-compatible frontend. This development
+interface is open to others so that they can run these pluggable emulator
+and game cores also in their own programs or devices.
+
+Snes9x is an emulator for the Super Nintendo Entertainment System / Super
+Famicom.  This package is derived from the master repository of Snes9x. It
+has greater accuracy and worse performance than Snes9x 2005/2010. It has
+a less strict approach to accuracy than bsnes and therefore doesn't run
+problematic games like bsnes, but has much better performance.
+
+This is the most up-to-date libretro snes9x core available, and is
+recommended for netplay.
