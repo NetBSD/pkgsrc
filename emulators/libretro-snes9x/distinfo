@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/08/12 15:32:10 nia Exp $
+
+SHA1 (libretro-snes9x-1.56.2.tar.gz) = 761af9b038d8856af67aa6683f9f25865ab57283
+RMD160 (libretro-snes9x-1.56.2.tar.gz) = 9caa5ddcc65e263be2fa147cd817fe13913d53d5
+SHA512 (libretro-snes9x-1.56.2.tar.gz) = d9c53eb2a1200af26fdb39578f0b8b7cf42473110c2eb53799acd69f15055732d0487982e7cebacc4aa18a9e88bd9939a0b11f3ddf685af02becace1fd85105c
+Size (libretro-snes9x-1.56.2.tar.gz) = 2880898 bytes
