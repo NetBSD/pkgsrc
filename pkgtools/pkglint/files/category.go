@@ -5,12 +5,12 @@ import (
 	"sort"
 )
 
-func CheckdirCategory() {
+func CheckdirCategory(dir string) {
 	if trace.Tracing {
-		defer trace.Call1(G.CurrentDir)()
+		defer trace.Call1(dir)()
 	}
 
-	lines := LoadNonemptyLines(G.CurrentDir+"/Makefile", true)
+	lines := LoadNonemptyLines(dir+"/Makefile", true)
 	if lines == nil {
 		return
 	}
@@ -40,7 +40,7 @@ func CheckdirCategory() {
 	// the (hopefully) sorted list of SUBDIRs. The first step is to
 	// collect the SUBDIRs in the Makefile and in the file system.
 
-	fSubdirs := getSubdirs(G.CurrentDir)
+	fSubdirs := getSubdirs(dir)
 	sort.Strings(fSubdirs)
 	var mSubdirs []subdir
 
@@ -147,7 +147,7 @@ func CheckdirCategory() {
 			fNeednext = true
 			mNeednext = true
 			if mActive {
-				subdirs = append(subdirs, G.CurrentDir+"/"+mCurrent)
+				subdirs = append(subdirs, dir+"/"+mCurrent)
 			}
 		}
 	}

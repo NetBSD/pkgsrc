@@ -48,7 +48,7 @@ func (lc *LicenseChecker) checkLicenseName(license string) {
 	var licenseFile string
 	if G.Pkg != nil {
 		if licenseFileValue, ok := G.Pkg.varValue("LICENSE_FILE"); ok {
-			licenseFile = G.CurrentDir + "/" + lc.MkLine.ResolveVarsInRelativePath(licenseFileValue, false)
+			licenseFile = G.Pkg.File(lc.MkLine.ResolveVarsInRelativePath(licenseFileValue, false))
 		}
 	}
 	if licenseFile == "" {

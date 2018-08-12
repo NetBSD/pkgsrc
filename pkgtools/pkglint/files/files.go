@@ -2,6 +2,7 @@ package main
 
 import (
 	"io/ioutil"
+	"path"
 	"strings"
 )
 
@@ -111,6 +112,9 @@ func readLines(fname string, joinBackslashLines bool) ([]Line, error) {
 		return nil, err
 	}
 
+	if G.opts.Profiling {
+		G.loaded.Add(path.Clean(fname), 1)
+	}
 	return convertToLogicalLines(fname, string(rawText), joinBackslashLines), nil
 }
 

@@ -10,7 +10,6 @@ func (s *Suite) Test_checklineLicense(c *check.C) {
 	t.SetupFileLines("licenses/gnu-gpl-v2",
 		"Most software \u2026")
 	mkline := t.NewMkLine("Makefile", 7, "LICENSE=dummy")
-	G.CurrentDir = t.TmpDir()
 
 	licenseChecker := &LicenseChecker{mkline}
 	licenseChecker.Check("gpl-v2", opAssign)
@@ -85,7 +84,7 @@ func (s *Suite) Test_checkToplevelUnusedLicenses(c *check.C) {
 		PlistRcsID,
 		"bin/program")
 
-	G.Main("pkglint", "-r", "-Cglobal", t.TmpDir())
+	G.Main("pkglint", "-r", "-Cglobal", t.File("."))
 
 	t.CheckOutputLines(
 		"WARN: ~/licenses/gnu-gpl-v3: This license seems to be unused.",
