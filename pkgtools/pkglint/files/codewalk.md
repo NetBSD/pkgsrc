@@ -222,3 +222,66 @@ file   shell.go
 start  ^type ShellLine struct
 end    ^\}
 ```
+
+## Testing pkglint
+
+### Standard shape of a test
+
+```go
+func (s *Suite) Test_Type_Method__description(c *check.C) {
+	t := s.Init(c)       // Every test needs this.
+
+	t.Setup…(…)          // Set up the testing environment.
+
+	lines := t.New…(…)   // Set up the test data.
+
+	CodeToBeTested()     // The code to be tested.
+
+	t.Check…(…)          // Check the result (typically diagnostics).
+}
+```
+
+The `t` variable is the center of most tests.
+It is of type `Tester` and provides a high-level interface
+for setting up tests and checking the results.
+
+```codewalk
+file   check_test.go
+start  /^type Tester/ upwhile /^\/\//
+end    ^\}
+```
+
+The `s` variable is not used in tests.
+The only purpose of its type `Suite` is to group the tests so they are all run together.
+
+The `c` variable comes from [gocheck](https://godoc.org/gopkg.in/check.v1),
+which is the underlying testing framework.
+Most pkglint tests don't need this variable.
+Low-level tests call `c.Check` to compare their results to the expected values.
+
+```codewalk
+file   util_test.go
+start  ^func .* Test_tabLength
+end    ^\}
+```
+
+### Logging detailed information during tests
+
+When testing complicated code, it sometimes helps to have a detailed trace
+of the code that is run. This is done via these two methods:
+
+```go
+t.EnableTracing()
+t.DisableTracing()
+```
+
+### Setting up a realistic pkgsrc environment
+
+To see how to setup complicated tests, have a look at the following test,
+which sets up a realistic environment to run the tests in.
+
+```codewalk
+file   pkglint_test.go
+start  ^func .* Test_Pkglint_Main__complete_package
+end    ^\}
+```

@@ -13,10 +13,12 @@ type MkLines struct {
 	forVars        map[string]bool // The variables currently used in .for loops
 	target         string          // Current make(1) target
 	vars           Scope
-	buildDefs      map[string]bool // Variables that are registered in BUILD_DEFS, to ensure that all user-defined variables are added to it.
-	plistVars      map[string]bool // Variables that are registered in PLIST_VARS, to ensure that all user-defined variables are added to it.
-	tools          map[string]bool // Set of tools that are declared to be used.
-	toolRegistry   ToolRegistry    // Tools defined in file scope.
+	buildDefs      map[string]bool   // Variables that are registered in BUILD_DEFS, to ensure that all user-defined variables are added to it.
+	plistVarAdded  map[string]MkLine // Identifiers that are added to PLIST_VARS.
+	plistVarSet    map[string]MkLine // Identifiers for which PLIST.${id} is defined.
+	plistVarSkip   bool              // True if any of the PLIST_VARS identifiers refers to a variable.
+	tools          map[string]bool   // Set of tools that are declared to be used.
+	toolRegistry   ToolRegistry      // Tools defined in file scope.
 	SeenBsdPrefsMk bool
 	indentation    *Indentation // Indentation depth of preprocessing directives; only available during MkLines.ForEach.
 	Once
@@ -42,7 +44,9 @@ func NewMkLines(lines []Line) *MkLines {
 		"",
 		NewScope(),
 		make(map[string]bool),
-		make(map[string]bool),
+		make(map[string]MkLine),
+		make(map[string]MkLine),
+		false,
 		tools,
 		NewToolRegistry(),
 		false,
@@ -85,6 +89,8 @@ func (mklines *MkLines) Check() {
 	// are collected to make the order of the definitions irrelevant.
 	mklines.DetermineUsedVariables()
 	mklines.DetermineDefinedVariables()
+	mklines.collectPlistVars()
+	mklines.collectElse()
 
 	// In the second pass, the actual checks are done.
 
@@ -105,8 +111,24 @@ func (mklines *MkLines) Check() {
 
 		case mkline.IsVarassign():
 			mklines.target = ""
-			mkline.Tokenize(mkline.Value())
+			mkline.Tokenize(mkline.Value()) // Just for the side-effect of the warning.
 			substcontext.Varassign(mkline)
+
+			switch mkline.Varcanon() {
+			case "PLIST_VARS":
+				value := mkline.ValueSplit(resolveVariableRefs(mkline.Value()), "")
+				for _, id := range value {
+					if !mklines.plistVarSkip && mklines.plistVarSet[id] == nil {
+						mkline.Warnf("%q is added to PLIST_VARS, but PLIST.%s is not defined in this file.", id, id)
+					}
+				}
+
+			case "PLIST.*":
+				id := mkline.Varparam()
+				if !mklines.plistVarSkip && mklines.plistVarAdded[id] == nil {
+					mkline.Warnf("PLIST.%s is defined, but %q is not added to PLIST_VARS in this file.", id, id)
+				}
+			}
 
 		case mkline.IsInclude():
 			mklines.target = ""
@@ -177,6 +199,8 @@ func (mklines *MkLines) DetermineDefinedVariables() {
 			continue
 		}
 
+		defineVar(mkline, mkline.Varname())
+
 		varcanon := mkline.Varcanon()
 		switch varcanon {
 		case "BUILD_DEFS", "PKG_GROUPS_VARS", "PKG_USERS_VARS":
@@ -188,12 +212,17 @@ func (mklines *MkLines) DetermineDefinedVariables() {
 			}
 
 		case "PLIST_VARS":
-			for _, id := range splitOnSpace(mkline.Value()) {
-				mklines.plistVars["PLIST."+id] = true
+			value := mkline.ValueSplit(resolveVariableRefs(mkline.Value()), "")
+			for _, id := range value {
 				if trace.Tracing {
 					trace.Step1("PLIST.%s is added to PLIST_VARS.", id)
 				}
-				mklines.UseVar(mkline, "PLIST."+id)
+				if containsVarRef(id) {
+					mklines.UseVar(mkline, "PLIST.*")
+					mklines.plistVarSkip = true
+				} else {
+					mklines.UseVar(mkline, "PLIST."+id)
+				}
 			}
 
 		case "USE_TOOLS":
@@ -229,6 +258,38 @@ func (mklines *MkLines) DetermineDefinedVariables() {
 
 		mklines.toolRegistry.ParseToolLine(mkline.Line)
 	}
+}
+
+func (mklines *MkLines) collectPlistVars() {
+	for _, mkline := range mklines.mklines {
+		if mkline.IsVarassign() {
+			switch mkline.Varcanon() {
+			case "PLIST_VARS":
+				value := mkline.ValueSplit(resolveVariableRefs(mkline.Value()), "")
+				for _, id := range value {
+					if containsVarRef(id) {
+						mklines.plistVarSkip = true
+					} else {
+						mklines.plistVarAdded[id] = mkline
+					}
+				}
+			case "PLIST.*":
+				id := mkline.Varparam()
+				if containsVarRef(id) {
+					mklines.plistVarSkip = true
+				} else {
+					mklines.plistVarSet[id] = mkline
+				}
+			}
+		}
+	}
+}
+
+func (mklines *MkLines) collectElse() {
+	// Make a dry-run over the lines, which sets data.elseLine (in mkline.go) as a side-effect.
+	mklines.ForEach(
+		func(mkline MkLine) bool { return true },
+		func(mkline MkLine) {})
 }
 
 func (mklines *MkLines) DetermineUsedVariables() {

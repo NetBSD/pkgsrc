@@ -16,7 +16,7 @@ func (s *Suite) Test_Alternatives_PLIST(c *check.C) {
 	G.Pkg.PlistFiles["bin/vim"] = true
 	G.Pkg.PlistFiles["sbin/sendmail.exim${EXIMVER}"] = true
 
-	CheckfileAlternatives(t.TempFilename("ALTERNATIVES"), G.Pkg.PlistFiles)
+	CheckfileAlternatives(t.File("ALTERNATIVES"), G.Pkg.PlistFiles)
 
 	t.CheckOutputLines(
 		"ERROR: ~/ALTERNATIVES:1: Alternative implementation \"@PREFIX@/sbin/sendmail.postfix@POSTFIXVER@\" must appear in the PLIST as \"sbin/sendmail.postfix${POSTFIXVER}\".",

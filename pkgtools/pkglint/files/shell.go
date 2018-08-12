@@ -338,27 +338,25 @@ func (shline *ShellLine) CheckShellCommand(shellcmd string, pSetE *bool) {
 	spc := &ShellProgramChecker{shline}
 	spc.checkConditionalCd(program)
 
-	(*MkShWalker).Walk(nil, program, func(node interface{}) {
-		if cmd, ok := node.(*MkShSimpleCommand); ok {
-			scc := NewSimpleCommandChecker(shline, cmd)
-			scc.Check()
-			if scc.strcmd.Name == "set" && scc.strcmd.AnyArgMatches(`^-.*e`) {
-				*pSetE = true
-			}
+	callback := NewMkShWalkCallback()
+	callback.SimpleCommand = func(command *MkShSimpleCommand) {
+		scc := NewSimpleCommandChecker(shline, command)
+		scc.Check()
+		if scc.strcmd.Name == "set" && scc.strcmd.AnyArgMatches(`^-.*e`) {
+			*pSetE = true
 		}
+	}
+	callback.List = func(list *MkShList) {
+		spc.checkSetE(list, pSetE)
+	}
+	callback.Pipeline = func(pipeline *MkShPipeline) {
+		spc.checkPipeExitcode(line, pipeline)
+	}
+	callback.Word = func(word *ShToken) {
+		spc.checkWord(word, false)
+	}
 
-		if cmd, ok := node.(*MkShList); ok {
-			spc.checkSetE(cmd, pSetE)
-		}
-
-		if cmd, ok := node.(*MkShPipeline); ok {
-			spc.checkPipeExitcode(line, cmd)
-		}
-
-		if word, ok := node.(*ShToken); ok {
-			spc.checkWord(word, false)
-		}
-	})
+	NewMkShWalker().Walk(program, callback)
 }
 
 func (shline *ShellLine) CheckShellCommands(shellcmds string) {
@@ -743,20 +741,29 @@ func (spc *ShellProgramChecker) checkConditionalCd(list *MkShList) {
 		}
 	}
 
-	(*MkShWalker).Walk(nil, list, func(node interface{}) {
-		if cmd, ok := node.(*MkShIfClause); ok {
-			for _, cond := range cmd.Conds {
-				if simple := getSimple(cond); simple != nil {
-					checkConditionalCd(simple)
-				}
-			}
-		}
-		if cmd, ok := node.(*MkShLoopClause); ok {
-			if simple := getSimple(cmd.Cond); simple != nil {
+	callback := NewMkShWalkCallback()
+	callback.If = func(ifClause *MkShIfClause) {
+		for _, cond := range ifClause.Conds {
+			if simple := getSimple(cond); simple != nil {
 				checkConditionalCd(simple)
 			}
 		}
-	})
+	}
+	callback.Loop = func(loop *MkShLoopClause) {
+		if simple := getSimple(loop.Cond); simple != nil {
+			checkConditionalCd(simple)
+		}
+	}
+	callback.Pipeline = func(pipeline *MkShPipeline) {
+		if pipeline.Negated {
+			spc.shline.mkline.Warnf("The Solaris /bin/sh does not support negation of shell commands.")
+			Explain(
+				"The GNU Autoconf manual has many more details of what shell",
+				"features to avoid for portable programs.  It can be read at:",
+				"https://www.gnu.org/software/autoconf/manual/autoconf.html#Limitations-of-Builtins")
+		}
+	}
+	NewMkShWalker().Walk(list, callback)
 }
 
 func (spc *ShellProgramChecker) checkWords(words []*ShToken, checkQuoting bool) {

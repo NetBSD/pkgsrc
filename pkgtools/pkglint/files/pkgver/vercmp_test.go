@@ -17,6 +17,7 @@ func (s *Suite) Test_newVersion(c *check.C) {
 	c.Check(newVersion("5.0nb5"), check.DeepEquals, &version{[]int{5, 0, 0}, 5})
 	c.Check(newVersion("0.0.1-SNAPSHOT"), check.DeepEquals, &version{[]int{0, 0, 0, 0, 1, 19, 14, 1, 16, 19, 8, 15, 20}, 0})
 	c.Check(newVersion("1.0alpha3"), check.DeepEquals, &version{[]int{1, 0, 0, -3, 3}, 0})
+	c.Check(newVersion("1_0alpha3"), check.DeepEquals, &version{[]int{1, 0, 0, -3, 3}, 0})
 	c.Check(newVersion("2.5beta"), check.DeepEquals, &version{[]int{2, 0, 5, -2}, 0})
 	c.Check(newVersion("20151110"), check.DeepEquals, &version{[]int{20151110}, 0})
 	c.Check(newVersion("0"), check.DeepEquals, &version{[]int{0}, 0})
@@ -37,7 +38,7 @@ func (s *Suite) Test_Compare(c *check.C) {
 		{"1.0alpha3"},
 		{"1", "1.0", "1.0.0"},
 		{"1.0nb1"},
-		{"1.0nb2"},
+		{"1.0nb2", "1_0nb2"},
 		{"1.0.1a", "1.0.a1", "1.0.aa"},
 		{"1.0.1z"},
 		{"1.0.11", "1.0.k"},
@@ -52,23 +53,25 @@ func (s *Suite) Test_Compare(c *check.C) {
 		{"20151110"},
 	}
 
+	checkVersion := func(i int, iversion string, j int, jversion string) {
+		actual := Compare(iversion, jversion)
+		switch {
+		case i < j && !(actual < 0):
+			c.Check([]interface{}{i, iversion, j, jversion, actual}, check.DeepEquals, []interface{}{i, iversion, j, jversion, "<0"})
+		case i == j && !(actual == 0):
+			c.Check([]interface{}{i, iversion, j, jversion, actual}, check.DeepEquals, []interface{}{i, iversion, j, jversion, "==0"})
+		case i > j && !(actual > 0):
+			c.Check([]interface{}{i, iversion, j, jversion, actual}, check.DeepEquals, []interface{}{i, iversion, j, jversion, ">0"})
+		}
+	}
+
 	for i, iversions := range versions {
-		for _, iversion := range iversions {
-			for j, jversions := range versions {
+		for j, jversions := range versions {
+			for _, iversion := range iversions {
 				for _, jversion := range jversions {
-					actual := Compare(iversion, jversion)
-					if i < j && !(actual < 0) {
-						c.Check([]interface{}{i, iversion, j, jversion, "<0"}, check.DeepEquals, []interface{}{i, iversion, j, jversion, actual})
-					}
-					if i == j && !(actual == 0) {
-						c.Check([]interface{}{i, iversion, j, jversion, "==0"}, check.DeepEquals, []interface{}{i, iversion, j, jversion, actual})
-					}
-					if i > j && !(actual > 0) {
-						c.Check([]interface{}{i, iversion, j, jversion, ">0"}, check.DeepEquals, []interface{}{i, iversion, j, jversion, actual})
-					}
+					checkVersion(i, iversion, j, jversion)
 				}
 			}
-
 		}
 	}
 }

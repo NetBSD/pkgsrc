@@ -3,153 +3,209 @@ package main
 type MkShWalker struct {
 }
 
-// Walk calls the given callback for each node of the parsed shell program.
-// See the types in mkshtypes.go for possible node types.
-func (w *MkShWalker) Walk(list *MkShList, callback func(node interface{})) {
-	for element := range w.iterate(list) {
-		callback(element)
+func NewMkShWalker() *MkShWalker {
+	return &MkShWalker{}
+}
+
+// Walk calls the given callback for each node of the parsed shell program,
+// in visiting order from large to small.
+func (w *MkShWalker) Walk(list *MkShList, callback *MkShWalkCallback) {
+	w.walkList(list, callback)
+}
+
+func (w *MkShWalker) walkList(list *MkShList, callback *MkShWalkCallback) {
+	if callback.List != nil {
+		callback.List(list)
 	}
-}
-
-func (w *MkShWalker) iterate(list *MkShList) <-chan interface{} {
-	elements := make(chan interface{})
-
-	go func() {
-		w.walkList(list, elements)
-		close(elements)
-	}()
-
-	return elements
-}
-
-func (w *MkShWalker) walkList(list *MkShList, collector chan<- interface{}) {
-	collector <- list
 
 	for _, andor := range list.AndOrs {
-		w.walkAndOr(andor, collector)
+		w.walkAndOr(andor, callback)
 	}
 }
 
-func (w *MkShWalker) walkAndOr(andor *MkShAndOr, collector chan<- interface{}) {
-	collector <- andor
+func (w *MkShWalker) walkAndOr(andor *MkShAndOr, callback *MkShWalkCallback) {
+	if callback.AndOr != nil {
+		callback.AndOr(andor)
+	}
 
 	for _, pipeline := range andor.Pipes {
-		w.walkPipeline(pipeline, collector)
+		w.walkPipeline(pipeline, callback)
 	}
 }
 
-func (w *MkShWalker) walkPipeline(pipeline *MkShPipeline, collector chan<- interface{}) {
-	collector <- pipeline
+func (w *MkShWalker) walkPipeline(pipeline *MkShPipeline, callback *MkShWalkCallback) {
+	if callback.Pipeline != nil {
+		callback.Pipeline(pipeline)
+	}
 
 	for _, command := range pipeline.Cmds {
-		w.walkCommand(command, collector)
+		w.walkCommand(command, callback)
 	}
 }
 
-func (w *MkShWalker) walkCommand(command *MkShCommand, collector chan<- interface{}) {
-	collector <- command
+func (w *MkShWalker) walkCommand(command *MkShCommand, callback *MkShWalkCallback) {
+	if callback.Command != nil {
+		callback.Command(command)
+	}
 
 	switch {
 	case command.Simple != nil:
-		w.walkSimpleCommand(command.Simple, collector)
+		w.walkSimpleCommand(command.Simple, callback)
 	case command.Compound != nil:
-		w.walkCompoundCommand(command.Compound, collector)
-		w.walkRedirects(command.Redirects, collector)
+		w.walkCompoundCommand(command.Compound, callback)
+		w.walkRedirects(command.Redirects, callback)
 	case command.FuncDef != nil:
-		w.walkFunctionDefinition(command.FuncDef, collector)
-		w.walkRedirects(command.Redirects, collector)
+		w.walkFunctionDefinition(command.FuncDef, callback)
+		w.walkRedirects(command.Redirects, callback)
 	}
 }
 
-func (w *MkShWalker) walkSimpleCommand(command *MkShSimpleCommand, collector chan<- interface{}) {
-	collector <- command
+func (w *MkShWalker) walkSimpleCommand(command *MkShSimpleCommand, callback *MkShWalkCallback) {
+	if callback.SimpleCommand != nil {
+		callback.SimpleCommand(command)
+	}
 
-	w.walkWords(command.Assignments, collector)
+	w.walkWords(command.Assignments, callback)
 	if command.Name != nil {
-		w.walkWord(command.Name, collector)
+		w.walkWord(command.Name, callback)
 	}
-	w.walkWords(command.Args, collector)
-	w.walkRedirects(command.Redirections, collector)
+	w.walkWords(command.Args, callback)
+	w.walkRedirects(command.Redirections, callback)
 }
 
-func (w *MkShWalker) walkCompoundCommand(command *MkShCompoundCommand, collector chan<- interface{}) {
-	collector <- command
+func (w *MkShWalker) walkCompoundCommand(command *MkShCompoundCommand, callback *MkShWalkCallback) {
+	if callback.CompoundCommand != nil {
+		callback.CompoundCommand(command)
+	}
 
 	switch {
 	case command.Brace != nil:
-		w.walkList(command.Brace, collector)
+		w.walkList(command.Brace, callback)
 	case command.Case != nil:
-		w.walkCase(command.Case, collector)
+		w.walkCase(command.Case, callback)
 	case command.For != nil:
-		w.walkFor(command.For, collector)
+		w.walkFor(command.For, callback)
 	case command.If != nil:
-		w.walkIf(command.If, collector)
+		w.walkIf(command.If, callback)
 	case command.Loop != nil:
-		w.walkLoop(command.Loop, collector)
+		w.walkLoop(command.Loop, callback)
 	case command.Subshell != nil:
-		w.walkList(command.Subshell, collector)
+		w.walkList(command.Subshell, callback)
 	}
 }
 
-func (w *MkShWalker) walkCase(caseClause *MkShCaseClause, collector chan<- interface{}) {
-	collector <- caseClause
+func (w *MkShWalker) walkCase(caseClause *MkShCaseClause, callback *MkShWalkCallback) {
+	if callback.Case != nil {
+		callback.Case(caseClause)
+	}
 
-	w.walkWord(caseClause.Word, collector)
+	w.walkWord(caseClause.Word, callback)
 	for _, caseItem := range caseClause.Cases {
-		collector <- caseItem
-		w.walkWords(caseItem.Patterns, collector)
-		w.walkList(caseItem.Action, collector)
+		if callback.CaseItem != nil {
+			callback.CaseItem(caseItem)
+		}
+		w.walkWords(caseItem.Patterns, callback)
+		w.walkList(caseItem.Action, callback)
 	}
 }
 
-func (w *MkShWalker) walkFunctionDefinition(funcdef *MkShFunctionDefinition, collector chan<- interface{}) {
-	collector <- funcdef
+func (w *MkShWalker) walkFunctionDefinition(funcdef *MkShFunctionDefinition, callback *MkShWalkCallback) {
+	if callback.FunctionDefinition != nil {
+		callback.FunctionDefinition(funcdef)
+	}
 
-	w.walkCompoundCommand(funcdef.Body, collector)
+	w.walkCompoundCommand(funcdef.Body, callback)
 }
 
-func (w *MkShWalker) walkIf(ifClause *MkShIfClause, collector chan<- interface{}) {
-	collector <- ifClause
+func (w *MkShWalker) walkIf(ifClause *MkShIfClause, callback *MkShWalkCallback) {
+	if callback.If != nil {
+		callback.If(ifClause)
+	}
+
 	for i, cond := range ifClause.Conds {
-		w.walkList(cond, collector)
-		w.walkList(ifClause.Actions[i], collector)
+		w.walkList(cond, callback)
+		w.walkList(ifClause.Actions[i], callback)
 	}
 	if ifClause.Else != nil {
-		w.walkList(ifClause.Else, collector)
+		w.walkList(ifClause.Else, callback)
 	}
 }
 
-func (w *MkShWalker) walkLoop(loop *MkShLoopClause, collector chan<- interface{}) {
-	collector <- loop
-	w.walkList(loop.Cond, collector)
-	w.walkList(loop.Action, collector)
+func (w *MkShWalker) walkLoop(loop *MkShLoopClause, callback *MkShWalkCallback) {
+	if callback.Loop != nil {
+		callback.Loop(loop)
+	}
+
+	w.walkList(loop.Cond, callback)
+	w.walkList(loop.Action, callback)
 }
 
-func (w *MkShWalker) walkWords(words []*ShToken, collector chan<- interface{}) {
-	collector <- words
+func (w *MkShWalker) walkWords(words []*ShToken, callback *MkShWalkCallback) {
+	if len(words) != 0 {
+		if callback.Words != nil {
+			callback.Words(words)
+		}
 
-	for _, word := range words {
-		w.walkWord(word, collector)
+		for _, word := range words {
+			w.walkWord(word, callback)
+		}
 	}
 }
 
-func (w *MkShWalker) walkWord(word *ShToken, collector chan<- interface{}) {
-	collector <- word
-}
-
-func (w *MkShWalker) walkRedirects(redirects []*MkShRedirection, collector chan<- interface{}) {
-	collector <- redirects
-
-	for _, redirect := range redirects {
-		collector <- redirect
-		w.walkWord(redirect.Target, collector)
+func (w *MkShWalker) walkWord(word *ShToken, callback *MkShWalkCallback) {
+	if callback.Word != nil {
+		callback.Word(word)
 	}
 }
 
-func (w *MkShWalker) walkFor(forClause *MkShForClause, collector chan<- interface{}) {
-	collector <- forClause
+func (w *MkShWalker) walkRedirects(redirects []*MkShRedirection, callback *MkShWalkCallback) {
+	if len(redirects) != 0 {
+		if callback.Redirects != nil {
+			callback.Redirects(redirects)
+		}
 
-	collector <- forClause.Varname
-	w.walkWords(forClause.Values, collector)
-	w.walkList(forClause.Body, collector)
+		for _, redirect := range redirects {
+			if callback.Redirect != nil {
+				callback.Redirect(redirect)
+			}
+
+			w.walkWord(redirect.Target, callback)
+		}
+	}
+}
+
+func (w *MkShWalker) walkFor(forClause *MkShForClause, callback *MkShWalkCallback) {
+	if callback.For != nil {
+		callback.For(forClause)
+	}
+	if callback.Varname != nil {
+		callback.Varname(forClause.Varname)
+	}
+
+	w.walkWords(forClause.Values, callback)
+	w.walkList(forClause.Body, callback)
+}
+
+type MkShWalkCallback struct {
+	List               func(list *MkShList)
+	AndOr              func(andor *MkShAndOr)
+	Pipeline           func(pipeline *MkShPipeline)
+	Command            func(command *MkShCommand)
+	SimpleCommand      func(command *MkShSimpleCommand)
+	CompoundCommand    func(command *MkShCompoundCommand)
+	Case               func(caseClause *MkShCaseClause)
+	CaseItem           func(caseItem *MkShCaseItem)
+	FunctionDefinition func(funcdef *MkShFunctionDefinition)
+	If                 func(ifClause *MkShIfClause)
+	Loop               func(loop *MkShLoopClause)
+	Words              func(words []*ShToken)
+	Word               func(word *ShToken)
+	Redirects          func(redirects []*MkShRedirection)
+	Redirect           func(redirect *MkShRedirection)
+	For                func(forClause *MkShForClause)
+	Varname            func(varname string)
+}
+
+func NewMkShWalkCallback() *MkShWalkCallback {
+	return &MkShWalkCallback{}
 }

@@ -46,8 +46,6 @@ func (s *Suite) Test_VartypeCheck_Category(c *check.C) {
 		"# empty")
 	t.SetupFileLines("wip/Makefile",
 		"# empty")
-	G.CurrentDir = t.TmpDir()
-	G.CurPkgsrcdir = "."
 
 	runVartypeChecks(t, "CATEGORIES", opAssign, (*VartypeCheck).Category,
 		"chinese",
@@ -168,14 +166,23 @@ func (s *Suite) Test_VartypeCheck_Dependency(c *check.C) {
 func (s *Suite) Test_VartypeCheck_DependencyWithPath(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupFileLines("x11/alacarte/Makefile",
-		"# empty")
-	t.SetupFileLines("category/package/Makefile",
-		"# empty")
-	G.CurrentDir = t.TmpDir() + "/category/package"
-	G.CurPkgsrcdir = "../.."
+	t.CreateFileLines("x11/alacarte/Makefile")
+	t.CreateFileLines("category/package/Makefile")
+	G.Pkg = NewPackage("category/package")
 
-	runVartypeChecks(t, "DEPENDS", opAssignAppend, (*VartypeCheck).DependencyWithPath,
+	// Since this test involves relative paths, the filename of the line must be realistic.
+	// Therefore this custom implementation of runVartypeChecks.
+	runChecks := func(values ...string) {
+		for i, value := range values {
+			mkline := t.NewMkLine(t.File("category/package/fname.mk"), i+1, "DEPENDS+=\t"+value)
+			mkline.Tokenize(mkline.Value())
+			valueNovar := mkline.WithoutMakeVariables(mkline.Value())
+			vc := &VartypeCheck{mkline, mkline.Line, mkline.Varname(), mkline.Op(), mkline.Value(), valueNovar, "", false}
+			(*VartypeCheck).DependencyWithPath(vc)
+		}
+	}
+
+	runChecks(
 		"Perl",
 		"perl5>=5.22:../perl5",
 		"perl5>=5.24:../../lang/perl5",
@@ -190,19 +197,19 @@ func (s *Suite) Test_VartypeCheck_DependencyWithPath(c *check.C) {
 		"gtk2+>=2.16:../../x11/alacarte")
 
 	t.CheckOutputLines(
-		"WARN: fname:1: Unknown dependency pattern with path \"Perl\".",
-		"WARN: fname:2: Dependencies should have the form \"../../category/package\".",
-		"ERROR: fname:3: \"../../lang/perl5\" does not exist.",
-		"ERROR: fname:3: There is no package in \"lang/perl5\".",
-		"WARN: fname:3: Please use USE_TOOLS+=perl:run instead of this dependency.",
-		"WARN: fname:4: Unknown dependency pattern \"broken0.12.1\".",
-		"WARN: fname:5: Unknown dependency pattern \"broken[0-9]*\".",
-		"WARN: fname:6: Unknown dependency pattern with path \"broken[0-9]*../../x11/alacarte\".",
-		"WARN: fname:7: Unknown dependency pattern \"broken>=\".",
-		"WARN: fname:8: Unknown dependency pattern \"broken=0\".",
-		"WARN: fname:9: Unknown dependency pattern \"broken=\".",
-		"WARN: fname:10: Unknown dependency pattern \"broken-\".",
-		"WARN: fname:11: Unknown dependency pattern \"broken>\".")
+		"WARN: ~/category/package/fname.mk:1: Unknown dependency pattern with path \"Perl\".",
+		"WARN: ~/category/package/fname.mk:2: Dependencies should have the form \"../../category/package\".",
+		"ERROR: ~/category/package/fname.mk:3: \"../../lang/perl5\" does not exist.",
+		"ERROR: ~/category/package/fname.mk:3: There is no package in \"lang/perl5\".",
+		"WARN: ~/category/package/fname.mk:3: Please use USE_TOOLS+=perl:run instead of this dependency.",
+		"WARN: ~/category/package/fname.mk:4: Unknown dependency pattern \"broken0.12.1\".",
+		"WARN: ~/category/package/fname.mk:5: Unknown dependency pattern \"broken[0-9]*\".",
+		"WARN: ~/category/package/fname.mk:6: Unknown dependency pattern with path \"broken[0-9]*../../x11/alacarte\".",
+		"WARN: ~/category/package/fname.mk:7: Unknown dependency pattern \"broken>=\".",
+		"WARN: ~/category/package/fname.mk:8: Unknown dependency pattern \"broken=0\".",
+		"WARN: ~/category/package/fname.mk:9: Unknown dependency pattern \"broken=\".",
+		"WARN: ~/category/package/fname.mk:10: Unknown dependency pattern \"broken-\".",
+		"WARN: ~/category/package/fname.mk:11: Unknown dependency pattern \"broken>\".")
 }
 
 func (s *Suite) Test_VartypeCheck_DistSuffix(c *check.C) {
@@ -252,6 +259,26 @@ func (s *Suite) Test_VartypeCheck_Enum(c *check.C) {
 
 	t.CheckOutputLines(
 		"WARN: fname:3: The pattern \"sun-jdk*\" cannot match any of { jdk1 jdk2 jdk4 } for JDK.")
+}
+
+func (s *Suite) Test_VartypeCheck_Enum__use_match(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupVartypes()
+
+	mklines := t.NewMkLines("module.mk",
+		MkRcsID,
+		"",
+		".if !empty(MACHINE_ARCH:Mi386) || ${MACHINE_ARCH} == i386",
+		".endif",
+		".if !empty(PKGSRC_COMPILER:Mclang) || ${PKGSRC_COMPILER} == clang",
+		".endif")
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"NOTE: module.mk:3: MACHINE_ARCH should be compared using == instead of the :M or :N modifier without wildcards.",
+		"WARN: module.mk:5: Use ${PKGSRC_COMPILER:Mclang} instead of the == operator.")
 }
 
 func (s *Suite) Test_VartypeCheck_FetchURL(c *check.C) {

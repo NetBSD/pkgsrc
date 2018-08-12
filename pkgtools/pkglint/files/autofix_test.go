@@ -113,13 +113,13 @@ func (s *Suite) Test_autofix_MkLines(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("--autofix")
-	t.SetupFileLines("Makefile",
+	t.SetupFileLines("category/basename/Makefile",
 		"line1 := value1",
 		"line2 := value2",
 		"line3 := value3")
 	pkg := NewPackage("category/basename")
 	G.Pkg = pkg
-	mklines := pkg.loadPackageMakefile(t.TempFilename("Makefile"))
+	mklines := pkg.loadPackageMakefile()
 	G.Pkg = nil
 
 	fix := mklines.mklines[1].Autofix()
@@ -135,19 +135,19 @@ func (s *Suite) Test_autofix_MkLines(c *check.C) {
 	SaveAutofixChanges(mklines.lines)
 
 	t.CheckOutputLines(
-		"AUTOFIX: ~/Makefile:2: Replacing \"lin\" with \"XXX\".",
-		"AUTOFIX: ~/Makefile:2: Replacing \"e2 \" with \"XXX\".",
-		"AUTOFIX: ~/Makefile:2: Replacing \":= \" with \"XXX\".",
-		"AUTOFIX: ~/Makefile:2: Replacing \"val\" with \"XXX\".",
-		"AUTOFIX: ~/Makefile:2: Replacing \"ue2\" with \"XXX\".",
-		"AUTOFIX: ~/Makefile:3: Replacing \"lin\" with \"XXX\".")
-	t.CheckFileLines("Makefile",
+		"AUTOFIX: ~/category/basename/Makefile:2: Replacing \"lin\" with \"XXX\".",
+		"AUTOFIX: ~/category/basename/Makefile:2: Replacing \"e2 \" with \"XXX\".",
+		"AUTOFIX: ~/category/basename/Makefile:2: Replacing \":= \" with \"XXX\".",
+		"AUTOFIX: ~/category/basename/Makefile:2: Replacing \"val\" with \"XXX\".",
+		"AUTOFIX: ~/category/basename/Makefile:2: Replacing \"ue2\" with \"XXX\".",
+		"AUTOFIX: ~/category/basename/Makefile:3: Replacing \"lin\" with \"XXX\".")
+	t.CheckFileLines("category/basename/Makefile",
 		"line1 := value1",
 		"XXXXXXXXXXXXXXX",
 		"XXXe3 := value3")
 }
 
-func (s *Suite) Test_Autofix_multiple_modifications(c *check.C) {
+func (s *Suite) Test_Autofix__multiple_modifications(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("--show-autofix", "--explain")
@@ -448,4 +448,33 @@ func (s *Suite) Test_Autofix_Explain(c *check.C) {
 	t.CheckOutputLines(
 		"WARN: Makefile:74: Please write row instead of line.")
 	c.Check(G.explanationsAvailable, equals, true)
+}
+
+// Since the diagnostic doesn't contain the string "few", nothing happens.
+func (s *Suite) Test_Autofix__skip(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("--only", "few", "--autofix")
+
+	lines := t.SetupFileLines("fname",
+		"111 222 333 444 555")
+
+	fix := lines[0].Autofix()
+	fix.Warnf("Many.")
+	fix.Explain(
+		"Explanation.")
+	fix.Replace("111", "___")
+	fix.ReplaceAfter(" ", "222", "___")
+	fix.ReplaceRegex(`\d+`, "___", 1)
+	fix.InsertBefore("before")
+	fix.InsertAfter("after")
+	fix.Delete()
+	fix.Apply()
+
+	SaveAutofixChanges(lines)
+
+	t.CheckOutputEmpty()
+	t.CheckFileLines("fname",
+		"111 222 333 444 555")
+	c.Check(lines[0].raw[0].textnl, equals, "111 222 333 444 555\n")
 }

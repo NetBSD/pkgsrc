@@ -6,7 +6,7 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupVartypes()
-	mklines := t.NewMkLines("buildlink3.mk",
+	mklines := t.SetupFileMkLines("buildlink3.mk",
 		MkRcsID,
 		"# XXX This file was created automatically using createbuildlink-@PKGVERSION@",
 		"",
@@ -28,10 +28,10 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk(c *check.C) {
 	ChecklinesBuildlink3Mk(mklines)
 
 	t.CheckOutputLines(
-		"ERROR: buildlink3.mk:12: \"/x11/Xbae\" does not exist.",
-		"ERROR: buildlink3.mk:12: There is no package in \"x11/Xbae\".",
-		"ERROR: buildlink3.mk:14: \"/mk/motif.buildlink3.mk\" does not exist.",
-		"ERROR: buildlink3.mk:2: This comment indicates unfinished work (url2pkg).")
+		"ERROR: ~/buildlink3.mk:12: \"x11/Xbae\" does not exist.",
+		"ERROR: ~/buildlink3.mk:12: There is no package in \"x11/Xbae\".",
+		"ERROR: ~/buildlink3.mk:14: \"mk/motif.buildlink3.mk\" does not exist.",
+		"ERROR: ~/buildlink3.mk:2: This comment indicates unfinished work (url2pkg).")
 }
 
 // Before version 5.3, pkglint wrongly warned here.
@@ -315,7 +315,7 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk_indentation(c *check.C) {
 
 	t.SetupCommandLine("-Wall")
 	t.SetupVartypes()
-	mklines := t.NewMkLines("buildlink3.mk",
+	mklines := t.SetupFileMkLines("buildlink3.mk",
 		MkRcsID,
 		"",
 		".if ${VAAPI_AVAILABLE} == \"yes\"",
@@ -340,8 +340,8 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk_indentation(c *check.C) {
 
 	// No warning about the indentation of the .include lines.
 	t.CheckOutputLines(
-		"ERROR: buildlink3.mk:11: \"/multimedia/libva\" does not exist.",
-		"ERROR: buildlink3.mk:11: There is no package in \"multimedia/libva\".",
-		"ERROR: buildlink3.mk:13: \"/x11/libX11/buildlink3.mk\" does not exist.",
-		"WARN: buildlink3.mk:3: Expected a BUILDLINK_TREE line.")
+		"ERROR: ~/buildlink3.mk:11: \"multimedia/libva\" does not exist.",
+		"ERROR: ~/buildlink3.mk:11: There is no package in \"multimedia/libva\".",
+		"ERROR: ~/buildlink3.mk:13: \"x11/libX11/buildlink3.mk\" does not exist.",
+		"WARN: ~/buildlink3.mk:3: Expected a BUILDLINK_TREE line.")
 }

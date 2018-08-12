@@ -135,87 +135,92 @@ func (s *Suite) Test_MkParser_MkTokens(c *check.C) {
 }
 
 func (s *Suite) Test_MkParser_MkCond(c *check.C) {
-	checkRest := func(input string, expectedTree *Tree, expectedRest string) {
+	checkRest := func(input string, expectedTree MkCond, expectedRest string) {
 		p := NewMkParser(dummyLine, input, false)
 		actualTree := p.MkCond()
 		c.Check(actualTree, deepEquals, expectedTree)
 		c.Check(p.Rest(), equals, expectedRest)
 	}
-	check := func(input string, expectedTree *Tree) {
+	check := func(input string, expectedTree MkCond) {
 		checkRest(input, expectedTree, "")
 	}
-	varuse := func(varname string, modifiers ...string) MkVarUse {
-		return MkVarUse{varname: varname, modifiers: modifiers}
+	varuse := func(varname string, modifiers ...string) *MkVarUse {
+		return &MkVarUse{varname: varname, modifiers: modifiers}
 	}
 
 	check("${OPSYS:MNetBSD}",
-		NewTree("not", NewTree("empty", varuse("OPSYS", "MNetBSD"))))
+		&mkCond{Not: &mkCond{Empty: varuse("OPSYS", "MNetBSD")}})
 	check("defined(VARNAME)",
-		NewTree("defined", "VARNAME"))
+		&mkCond{Defined: "VARNAME"})
 	check("empty(VARNAME)",
-		NewTree("empty", varuse("VARNAME")))
+		&mkCond{Empty: varuse("VARNAME")})
 	check("!empty(VARNAME)",
-		NewTree("not", NewTree("empty", varuse("VARNAME"))))
+		&mkCond{Not: &mkCond{Empty: varuse("VARNAME")}})
 	check("!empty(VARNAME:M[yY][eE][sS])",
-		NewTree("not", NewTree("empty", varuse("VARNAME", "M[yY][eE][sS]"))))
+		&mkCond{Not: &mkCond{Empty: varuse("VARNAME", "M[yY][eE][sS]")}})
 	check("${VARNAME} != \"Value\"",
-		NewTree("compareVarStr", varuse("VARNAME"), "!=", "Value"))
+		&mkCond{CompareVarStr: &MkCondCompareVarStr{varuse("VARNAME"), "!=", "Value"}})
 	check("${VARNAME:Mi386} != \"Value\"",
-		NewTree("compareVarStr", varuse("VARNAME", "Mi386"), "!=", "Value"))
+		&mkCond{CompareVarStr: &MkCondCompareVarStr{varuse("VARNAME", "Mi386"), "!=", "Value"}})
 	check("${VARNAME} != Value",
-		NewTree("compareVarStr", varuse("VARNAME"), "!=", "Value"))
+		&mkCond{CompareVarStr: &MkCondCompareVarStr{varuse("VARNAME"), "!=", "Value"}})
 	check("\"${VARNAME}\" != Value",
-		NewTree("compareVarStr", varuse("VARNAME"), "!=", "Value"))
+		&mkCond{CompareVarStr: &MkCondCompareVarStr{varuse("VARNAME"), "!=", "Value"}})
 	check("${pkg} == \"${name}\"",
-		NewTree("compareVarVar", varuse("pkg"), "==", varuse("name")))
+		&mkCond{CompareVarVar: &MkCondCompareVarVar{varuse("pkg"), "==", varuse("name")}})
 	check("\"${pkg}\" == \"${name}\"",
-		NewTree("compareVarVar", varuse("pkg"), "==", varuse("name")))
+		&mkCond{CompareVarVar: &MkCondCompareVarVar{varuse("pkg"), "==", varuse("name")}})
 	check("(defined(VARNAME))",
-		NewTree("defined", "VARNAME"))
+		&mkCond{Defined: "VARNAME"})
 	check("exists(/etc/hosts)",
-		NewTree("exists", "/etc/hosts"))
+		&mkCond{Call: &MkCondCall{"exists", "/etc/hosts"}})
 	check("exists(${PREFIX}/var)",
-		NewTree("exists", "${PREFIX}/var"))
+		&mkCond{Call: &MkCondCall{"exists", "${PREFIX}/var"}})
 	check("${OPSYS} == \"NetBSD\" || ${OPSYS} == \"OpenBSD\"",
-		NewTree("or",
-			NewTree("compareVarStr", varuse("OPSYS"), "==", "NetBSD"),
-			NewTree("compareVarStr", varuse("OPSYS"), "==", "OpenBSD")))
+		&mkCond{Or: []*mkCond{
+			{CompareVarStr: &MkCondCompareVarStr{varuse("OPSYS"), "==", "NetBSD"}},
+			{CompareVarStr: &MkCondCompareVarStr{varuse("OPSYS"), "==", "OpenBSD"}}}})
 	check("${OPSYS} == \"NetBSD\" && ${MACHINE_ARCH} == \"i386\"",
-		NewTree("and",
-			NewTree("compareVarStr", varuse("OPSYS"), "==", "NetBSD"),
-			NewTree("compareVarStr", varuse("MACHINE_ARCH"), "==", "i386")))
+		&mkCond{And: []*mkCond{
+			{CompareVarStr: &MkCondCompareVarStr{varuse("OPSYS"), "==", "NetBSD"}},
+			{CompareVarStr: &MkCondCompareVarStr{varuse("MACHINE_ARCH"), "==", "i386"}}}})
 	check("defined(A) && defined(B) || defined(C) && defined(D)",
-		NewTree("or",
-			NewTree("and",
-				NewTree("defined", "A"),
-				NewTree("defined", "B")),
-			NewTree("and",
-				NewTree("defined", "C"),
-				NewTree("defined", "D"))))
+		&mkCond{Or: []*mkCond{
+			{And: []*mkCond{
+				{Defined: "A"},
+				{Defined: "B"}}},
+			{And: []*mkCond{
+				{Defined: "C"},
+				{Defined: "D"}}}}})
 	check("${MACHINE_ARCH:Mi386} || ${MACHINE_OPSYS:MNetBSD}",
-		NewTree("or",
-			NewTree("not", NewTree("empty", varuse("MACHINE_ARCH", "Mi386"))),
-			NewTree("not", NewTree("empty", varuse("MACHINE_OPSYS", "MNetBSD")))))
+		&mkCond{Or: []*mkCond{
+			{Not: &mkCond{Empty: varuse("MACHINE_ARCH", "Mi386")}},
+			{Not: &mkCond{Empty: varuse("MACHINE_OPSYS", "MNetBSD")}}}})
 
 	// Exotic cases
 	check("0",
-		NewTree("literalNum", "0"))
+		&mkCond{Num: "0"})
 	check("! ( defined(A)  && empty(VARNAME) )",
-		NewTree("not", NewTree("and", NewTree("defined", "A"), NewTree("empty", varuse("VARNAME")))))
+		&mkCond{Not: &mkCond{
+			And: []*mkCond{
+				{Defined: "A"},
+				{Empty: varuse("VARNAME")}}}})
 	check("${REQD_MAJOR} > ${MAJOR}",
-		NewTree("compareVarVar", varuse("REQD_MAJOR"), ">", varuse("MAJOR")))
+		&mkCond{CompareVarVar: &MkCondCompareVarVar{varuse("REQD_MAJOR"), ">", varuse("MAJOR")}})
 	check("${OS_VERSION} >= 6.5",
-		NewTree("compareVarNum", varuse("OS_VERSION"), ">=", "6.5"))
+		&mkCond{CompareVarNum: &MkCondCompareVarNum{varuse("OS_VERSION"), ">=", "6.5"}})
 	check("${OS_VERSION} == 5.3",
-		NewTree("compareVarNum", varuse("OS_VERSION"), "==", "5.3"))
+		&mkCond{CompareVarNum: &MkCondCompareVarNum{varuse("OS_VERSION"), "==", "5.3"}})
 	check("!empty(${OS_VARIANT:MIllumos})", // Probably not intended
-		NewTree("not", NewTree("empty", varuse("${OS_VARIANT:MIllumos}"))))
+		&mkCond{Not: &mkCond{Empty: varuse("${OS_VARIANT:MIllumos}")}})
 	check("defined (VARNAME)", // There may be whitespace before the parenthesis; see devel/bmake/files/cond.c:^compare_function.
-		NewTree("defined", "VARNAME"))
+		&mkCond{Defined: "VARNAME"})
+	check("${\"${PKG_OPTIONS:Moption}\":?--enable-option:--disable-option}",
+		&mkCond{Not: &mkCond{Empty: varuse("\"${PKG_OPTIONS:Moption}\"", "?--enable-option:--disable-option")}})
 
 	// Errors
 	checkRest("!empty(PKG_OPTIONS:Msndfile) || defined(PKG_OPTIONS:Msamplerate)",
-		NewTree("not", NewTree("empty", varuse("PKG_OPTIONS", "Msndfile"))),
+		&mkCond{Not: &mkCond{Empty: varuse("PKG_OPTIONS", "Msndfile")}},
 		" || defined(PKG_OPTIONS:Msamplerate)")
 }
 
