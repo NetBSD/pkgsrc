@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3537 2018/08/12 14:00:23 leot Exp $
+$NetBSD: CHANGES-2018,v 1.3538 2018/08/12 14:25:25 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5047,3 +5047,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added emulators/libretro-beetle-wswan version 20180620 [nia 2018-08-12]
 	Added emulators/libretro-beetle-saturn version 20180620 [nia 2018-08-12]
 	Updated textproc/translate-shell to 0.9.6.8 [leot 2018-08-12]
+	Added emulators/libretro-mgba version 0.6.3 [nia 2018-08-12]
