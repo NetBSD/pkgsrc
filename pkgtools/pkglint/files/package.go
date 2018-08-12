@@ -37,11 +37,15 @@ type Package struct {
 	conditionalIncludes   map[string]MkLine
 	unconditionalIncludes map[string]MkLine
 	once                  Once
+	IgnoreMissingPatches  bool // In distinfo, don't warn about patches that cannot be found.
 }
 
 func NewPackage(pkgpath string) *Package {
 	pkg := &Package{
 		Pkgpath:               pkgpath,
+		Pkgdir:                ".",
+		Filesdir:              "files",
+		Patchdir:              "patches",
 		PlistDirs:             make(map[string]bool),
 		PlistFiles:            make(map[string]bool),
 		vars:                  NewScope(),
@@ -56,6 +60,12 @@ func NewPackage(pkgpath string) *Package {
 		pkg.vars.Define(varname, line)
 	}
 	return pkg
+}
+
+// File returns the (possibly absolute) path to relativeFilename,
+// as resolved from the package's directory.
+func (pkg *Package) File(relativeFilename string) string {
+	return G.Pkgsrc.File(pkg.Pkgpath + "/" + relativeFilename)
 }
 
 func (pkg *Package) varValue(varname string) (string, bool) {
@@ -151,26 +161,30 @@ func (pkglint *Pkglint) checkdirPackage(pkgpath string) {
 		defer trace.Call1(pkgpath)()
 	}
 
+	if strings.Count(pkgpath, "/") != 1 {
+		dummyLine.Fatalf("Internal pkglint error: Wrong pkgpath %q.", pkgpath)
+	}
+
 	G.Pkg = NewPackage(pkgpath)
 	defer func() { G.Pkg = nil }()
 	pkg := G.Pkg
 
 	// we need to handle the Makefile first to get some variables
-	lines := pkg.loadPackageMakefile(G.CurrentDir + "/Makefile")
+	lines := pkg.loadPackageMakefile()
 	if lines == nil {
 		return
 	}
 
-	files := dirglob(G.CurrentDir)
+	files := dirglob(pkg.File("."))
 	if pkg.Pkgdir != "." {
-		files = append(files, dirglob(G.CurrentDir+"/"+pkg.Pkgdir)...)
+		files = append(files, dirglob(pkg.File(pkg.Pkgdir))...)
 	}
 	if G.opts.CheckExtra {
-		files = append(files, dirglob(G.CurrentDir+"/"+pkg.Filesdir)...)
+		files = append(files, dirglob(pkg.File(pkg.Filesdir))...)
 	}
-	files = append(files, dirglob(G.CurrentDir+"/"+pkg.Patchdir)...)
+	files = append(files, dirglob(pkg.File(pkg.Patchdir))...)
 	if pkg.DistinfoFile != "distinfo" && pkg.DistinfoFile != "./distinfo" {
-		files = append(files, G.CurrentDir+"/"+pkg.DistinfoFile)
+		files = append(files, pkg.File(pkg.DistinfoFile))
 	}
 	haveDistinfo := false
 	havePatches := false
@@ -194,7 +208,7 @@ func (pkglint *Pkglint) checkdirPackage(pkgpath string) {
 		if containsVarRef(fname) {
 			continue
 		}
-		if fname == G.CurrentDir+"/Makefile" {
+		if fname == pkg.File("Makefile") {
 			if st, err := os.Lstat(fname); err == nil {
 				pkglint.checkExecutable(st, fname)
 			}
@@ -214,7 +228,7 @@ func (pkglint *Pkglint) checkdirPackage(pkgpath string) {
 
 	if G.opts.CheckDistinfo && G.opts.CheckPatches {
 		if havePatches && !haveDistinfo {
-			NewLineWhole(G.CurrentDir+"/"+pkg.DistinfoFile).Warnf("File not found. Please run \"%s makepatchsum\".", confMake)
+			NewLineWhole(pkg.File(pkg.DistinfoFile)).Warnf("File not found. Please run \"%s makepatchsum\".", confMake)
 		}
 	}
 
@@ -226,12 +240,13 @@ func (pkglint *Pkglint) checkdirPackage(pkgpath string) {
 		}
 	}
 
-	if !isEmptyDir(G.CurrentDir + "/scripts") {
-		NewLineWhole(G.CurrentDir + "/scripts").Warnf("This directory and its contents are deprecated! Please call the script(s) explicitly from the corresponding target(s) in the pkg's Makefile.")
+	if !isEmptyDir(pkg.File("scripts")) {
+		NewLineWhole(pkg.File("scripts")).Warnf("This directory and its contents are deprecated! Please call the script(s) explicitly from the corresponding target(s) in the pkg's Makefile.")
 	}
 }
 
-func (pkg *Package) loadPackageMakefile(fname string) *MkLines {
+func (pkg *Package) loadPackageMakefile() *MkLines {
+	fname := pkg.File("Makefile")
 	if trace.Tracing {
 		defer trace.Call1(fname)()
 	}
@@ -256,13 +271,19 @@ func (pkg *Package) loadPackageMakefile(fname string) *MkLines {
 	pkg.Filesdir = pkg.expandVariableWithDefault("FILESDIR", "files")
 	pkg.Patchdir = pkg.expandVariableWithDefault("PATCHDIR", "patches")
 
+	// See lang/php/ext.mk
 	if varIsDefined("PHPEXT_MK") {
 		if !varIsDefined("USE_PHP_EXT_PATCHES") {
 			pkg.Patchdir = "patches"
 		}
 		if varIsDefined("PECL_VERSION") {
 			pkg.DistinfoFile = "distinfo"
+		} else {
+			pkg.IgnoreMissingPatches = true
 		}
+
+		// For PHP modules that are not PECL, this combination means that
+		// the patches in the distinfo cannot be found in PATCHDIR.
 	}
 
 	if trace.Tracing {
@@ -349,8 +370,8 @@ func (pkg *Package) readMakefile(fname string, mainLines *MkLines, allLines *MkL
 					if fileMklines.indentation.IsCheckedFile(includeFile) {
 						return true // See https://github.com/rillig/pkglint/issues/1
 
-					} else if dirname != G.CurrentDir { // Prevent unnecessary syscalls
-						dirname = G.CurrentDir
+					} else if dirname != pkg.File(".") { // Prevent unnecessary syscalls
+						dirname = pkg.File(".")
 						if !fileExists(dirname + "/" + includeFile) {
 							mkline.Errorf("Cannot read %q.", dirname+"/"+includeFile)
 							result = false
@@ -402,17 +423,17 @@ func (pkg *Package) checkfilePackageMakefile(fname string, mklines *MkLines) {
 	if !vars.Defined("PLIST_SRC") &&
 		!vars.Defined("GENERATE_PLIST") &&
 		!vars.Defined("META_PACKAGE") &&
-		!fileExists(G.CurrentDir+"/"+pkg.Pkgdir+"/PLIST") &&
-		!fileExists(G.CurrentDir+"/"+pkg.Pkgdir+"/PLIST.common") {
+		!fileExists(pkg.File(pkg.Pkgdir+"/PLIST")) &&
+		!fileExists(pkg.File(pkg.Pkgdir+"/PLIST.common")) {
 		NewLineWhole(fname).Warnf("Neither PLIST nor PLIST.common exist, and PLIST_SRC is unset.")
 	}
 
-	if (vars.Defined("NO_CHECKSUM") || vars.Defined("META_PACKAGE")) && isEmptyDir(G.CurrentDir+"/"+pkg.Patchdir) {
-		if distinfoFile := G.CurrentDir + "/" + pkg.DistinfoFile; fileExists(distinfoFile) {
+	if (vars.Defined("NO_CHECKSUM") || vars.Defined("META_PACKAGE")) && isEmptyDir(pkg.File(pkg.Patchdir)) {
+		if distinfoFile := pkg.File(pkg.DistinfoFile); fileExists(distinfoFile) {
 			NewLineWhole(distinfoFile).Warnf("This file should not exist if NO_CHECKSUM or META_PACKAGE is set.")
 		}
 	} else {
-		if distinfoFile := G.CurrentDir + "/" + pkg.DistinfoFile; !containsVarRef(distinfoFile) && !fileExists(distinfoFile) {
+		if distinfoFile := pkg.File(pkg.DistinfoFile); !containsVarRef(distinfoFile) && !fileExists(distinfoFile) {
 			NewLineWhole(distinfoFile).Warnf("File not found. Please run \"%s makesum\" or define NO_CHECKSUM=yes in the package Makefile.", confMake)
 		}
 	}
@@ -901,7 +922,7 @@ func (pkg *Package) CheckInclude(mkline MkLine, indentation *Indentation) {
 		mkline.SetConditionVars(conditionVars)
 	}
 
-	if path.Dir(abspath(mkline.Filename)) == abspath(G.CurrentDir) {
+	if path.Dir(abspath(mkline.Filename)) == abspath(pkg.File(".")) {
 		includefile := mkline.IncludeFile()
 
 		if indentation.IsConditional() {

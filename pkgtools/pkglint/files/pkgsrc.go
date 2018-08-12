@@ -552,7 +552,7 @@ func (src *Pkgsrc) LoadExistingLines(fileName string, joinBackslashLines bool) [
 // Example:
 //  NewPkgsrc("/usr/pkgsrc").File("distfiles") => "/usr/pkgsrc/distfiles"
 func (src *Pkgsrc) File(relativeName string) string {
-	return src.topdir + "/" + relativeName
+	return cleanpath(src.topdir + "/" + relativeName)
 }
 
 // ToRel returns the path of `fileName`, relative to the pkgsrc top directory.
