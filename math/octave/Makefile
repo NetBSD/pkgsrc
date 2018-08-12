@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.173 2018/07/20 03:34:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.174 2018/08/12 08:33:55 maya Exp $
 
-DISTNAME=	octave-4.2.0
-PKGREVISION=	27
+DISTNAME=	octave-4.4.1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GNU:=octave/}
 
@@ -52,9 +51,6 @@ CONFIGURE_ARGS.Darwin+=	--without-OSMesa
 
 # We use this to install .oct files so it doesn't strip them.
 CONFIGURE_ENV+=		INSTALL_LIB=${INSTALL_LIB:Q}
-
-# XXX Shared object "libgfortran.so.3" not found
-CONFIGURE_ENV+=		octave_cv_sizeof_fortran_integer=yes
 
 .include "options.mk"
 
@@ -122,7 +118,6 @@ post-install:
 .include "../../x11/libX11/buildlink3.mk"
 .endif
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-BUILDLINK_DEPMETHOD.qt5-qttools?=build
 .include "../../x11/qt5-qttools/buildlink3.mk"
 BUILDLINK_DEPMETHOD.gperf?=build
 .include "../../devel/gperf/buildlink3.mk"
