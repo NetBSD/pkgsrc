@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2018/04/29 21:02:48 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.12 2018/08/12 10:45:03 tsutsui Exp $
 bin/ibus
 bin/ibus-daemon
 bin/ibus-setup
@@ -58,6 +58,8 @@ libexec/ibus-x11
 man/man1/ibus-daemon.1
 man/man1/ibus-setup.1
 man/man1/ibus.1
+man/man5/00-upstream-settings.5
+man/man5/ibus.5
 man/man7/ibus-emoji.7
 share/GConf/gsettings/ibus.convert
 share/applications/ibus-setup.desktop
@@ -213,6 +215,7 @@ share/ibus/dicts/emoji-sk.dict
 share/ibus/dicts/emoji-sl.dict
 share/ibus/dicts/emoji-sq.dict
 share/ibus/dicts/emoji-sr.dict
+share/ibus/dicts/emoji-sr_Cyrl_BA.dict
 share/ibus/dicts/emoji-sr_Latn.dict
 share/ibus/dicts/emoji-sv.dict
 share/ibus/dicts/emoji-sw.dict

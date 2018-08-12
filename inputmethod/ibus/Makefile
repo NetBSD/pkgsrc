@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.56 2018/05/25 16:41:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.57 2018/08/12 10:45:03 tsutsui Exp $
 
 .include "Makefile.common"
 
 COMMENT=	Intelligent Input Bus
 
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
-BUILD_DEPENDS+=	cldr-emoji-annotation>=33.0.0.1:../../textproc/cldr-emoji-annotation
+BUILD_DEPENDS+=	cldr-emoji-annotation>=33.1.0.0:../../textproc/cldr-emoji-annotation
 BUILD_DEPENDS+=	unicode-character-database-[0-9]*:../../textproc/unicode-character-database
 BUILD_DEPENDS+=	unicode-emoji-[0-9]*:../../textproc/unicode-emoji
 
