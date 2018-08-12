@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/04/28 01:07:59 tsutsui Exp $
+# $NetBSD: Makefile,v 1.2 2018/08/12 11:43:44 tsutsui Exp $
 
-UCD_VERSION=	10.0.0
+UCD_VERSION=	11.0.0
 DISTNAME=	unicode-character-database-${UCD_VERSION}
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.unicode.org/Public/zipped/${UCD_VERSION}/
