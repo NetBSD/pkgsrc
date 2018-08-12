@@ -27,24 +27,27 @@ func ChecklinesOptionsMk(mklines *MkLines) {
 	handledOptions := make(map[string]MkLine)
 	var optionsInDeclarationOrder []string
 
-	// The conditionals are typically for OPSYS and MACHINE_ARCH.
 loop:
 	for ; !exp.EOF(); exp.Advance() {
 		mkline := exp.CurrentMkLine()
 		switch {
 		case mkline.IsComment():
 		case mkline.IsEmpty():
+
 		case mkline.IsVarassign():
-			varname := mkline.Varname()
-			if varname == "PKG_SUPPORTED_OPTIONS" || hasPrefix(varname, "PKG_OPTIONS_GROUP.") {
+			switch mkline.Varcanon() {
+			case "PKG_SUPPORTED_OPTIONS", "PKG_OPTIONS_GROUP.*", "PKG_OPTIONS_SET.*":
 				for _, option := range splitOnSpace(mkline.Value()) {
-					if option == mkline.WithoutMakeVariables(option) {
+					if !containsVarRef(option) {
 						declaredOptions[option] = mkline
 						optionsInDeclarationOrder = append(optionsInDeclarationOrder, option)
 					}
 				}
 			}
+
 		case mkline.IsCond():
+			// The conditionals are typically for OPSYS and MACHINE_ARCH.
+
 		case mkline.IsInclude():
 			includedFile := mkline.IncludeFile()
 			switch {
@@ -57,6 +60,7 @@ loop:
 				exp.Advance()
 				break loop
 			}
+
 		default:
 			exp.CurrentLine().Warnf("Expected inclusion of \"../../mk/bsd.options.mk\".")
 			Explain(
@@ -70,17 +74,30 @@ loop:
 
 	for ; !exp.EOF(); exp.Advance() {
 		mkline := exp.CurrentMkLine()
-		if mkline.IsCond() && mkline.Directive() == "if" {
+		if mkline.IsCond() && (mkline.Directive() == "if" || mkline.Directive() == "elif") {
 			cond := NewMkParser(mkline.Line, mkline.Args(), false).MkCond()
-			if cond != nil {
-				cond.Visit("empty", func(t *Tree) {
-					varuse := t.args[0].(MkVarUse)
+			if cond == nil {
+				continue
+			}
+
+			NewMkCondWalker().Walk(cond, &MkCondCallback{
+				Empty: func(varuse *MkVarUse) {
 					if varuse.varname == "PKG_OPTIONS" && len(varuse.modifiers) == 1 && hasPrefix(varuse.modifiers[0], "M") {
 						option := varuse.modifiers[0][1:]
-						handledOptions[option] = mkline
-						optionsInDeclarationOrder = append(optionsInDeclarationOrder, option)
+						if !containsVarRef(option) {
+							handledOptions[option] = mkline
+							optionsInDeclarationOrder = append(optionsInDeclarationOrder, option)
+						}
 					}
-				})
+				}})
+
+			if cond.Empty != nil && mkline.HasElseBranch() {
+				mkline.Notef("The positive branch of the .if/.else should be the one where the option is set.")
+				Explain(
+					"For consistency among packages, the upper branch of this",
+					".if/.else statement should always handle the case where the",
+					"option is activated.  A missing exclamation mark at this",
+					"point can easily be overlooked.")
 			}
 		}
 	}
@@ -95,7 +112,7 @@ loop:
 				"typo, or the option does not have any effect.")
 		}
 		if declared == nil && handled != nil {
-			handled.Warnf("Option %q is handled but not declared above.", option)
+			handled.Warnf("Option %q is handled but not added to PKG_SUPPORTED_OPTIONS.", option)
 			Explain(
 				"This block of code will never be run since PKG_OPTIONS cannot",
 				"contain this value.  This is most probably a typo.")

@@ -33,7 +33,7 @@ func (s *Suite) Test_Pkgsrc_loadMasterSites(c *check.C) {
 func (s *Suite) Test_Pkgsrc_InitVartypes(c *check.C) {
 	t := s.Init(c)
 
-	src := NewPkgsrc(t.TmpDir())
+	src := NewPkgsrc(t.File("."))
 	src.InitVartypes()
 
 	c.Check(src.vartypes["BSD_MAKE_ENV"].basicType.name, equals, "ShellWord")
@@ -96,8 +96,6 @@ func (s *Suite) Test_Pkgsrc_loadTools(c *check.C) {
 		"USE_TOOLS+=\tm4:pkgsrc")
 	t.SetupFileLines("mk/bsd.pkg.mk",
 		"USE_TOOLS+=\tmv")
-	G.CurrentDir = t.TmpDir()
-	G.CurPkgsrcdir = "."
 
 	G.Pkgsrc.loadTools()
 
@@ -135,7 +133,7 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile(c *check.C) {
 		"\tRemoved category/package successor category/package2 [author6 2018-01-06]",
 		"\tDowngraded category/package to 1.2 [author7 2018-01-07]")
 
-	changes := G.Pkgsrc.loadDocChangesFromFile(t.TmpDir() + "/doc/CHANGES-2018")
+	changes := G.Pkgsrc.loadDocChangesFromFile(t.File("doc/CHANGES-2018"))
 
 	c.Assert(len(changes), equals, 7)
 	c.Check(*changes[0], equals, Change{changes[0].Line, "Added", "category/package", "1.0", "author1", "2015-01-01"})
