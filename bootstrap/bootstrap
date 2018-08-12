@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.248 2018/03/07 07:34:07 rillig Exp $
+# $NetBSD: bootstrap,v 1.249 2018/08/12 08:46:41 bsiegert Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -713,10 +713,11 @@ Linux)
 		need_awk=yes
 	elif grep -sq '^CHROMEOS_RELEASE_NAME' /etc/lsb-release; then
 		need_awk=yes
+		need_sed=yes
 	else
 		need_awk=no
+		need_sed=no
 	fi
-	need_sed=no
 	set_opsys=no
 	machine_arch=`uname -m`
 	# Override machine_arch where required.
