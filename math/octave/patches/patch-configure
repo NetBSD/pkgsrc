@@ -1,4 +1,6 @@
-$NetBSD: patch-configure,v 1.6 2017/08/01 11:06:18 maya Exp $
+$NetBSD: patch-configure,v 1.7 2018/08/12 08:33:55 maya Exp $
+
+Regen.
 
 install .oct loadable modules with INSTALL_LIB to avoid stripping them
 
@@ -11,51 +13,100 @@ https://mail-index.netbsd.org/pkgsrc-users/2014/03/26/msg019464.html
 Allow overriding MKOCTFILE_F77 so we can provide the full path to gfortran
 (for building octave-forge packages like control)
 
---- configure.orig	2016-11-13 15:22:50.000000000 +0000
+Additional changes are due to autoconf changes.
+
+--- configure.orig	2018-08-09 18:20:32.000000000 +0000
 +++ configure
-@@ -1971,6 +1971,7 @@ DEFAULT_PAGER
+@@ -1733,6 +1733,7 @@ INCLUDE_NEXT_AS_FIRST_DIRECTIVE
+ INCLUDE_NEXT
+ LIB_CRYPTO
+ pkglibexecdir
++runstatedir
+ lispdir
+ REPLACE_FDOPENDIR
+ REPLACE_DIRFD
+@@ -2092,6 +2093,7 @@ PYTHON
+ DEFAULT_PAGER
  GNUPLOT
  GHOSTSCRIPT
- DESKTOP_FILE_INSTALL
 +INSTALL_LIB
  LN_S
+ REPRODUCIBLE_TAR_FLAGS
  TEXI2PDF
- TEXI2DVI
-@@ -5938,7 +5939,7 @@ case $host_os in *\ *) host_os=`echo "$h
-     { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: configuring Octave for unknown system type" >&5
- $as_echo "$as_me: WARNING: configuring Octave for unknown system type" >&2;}
-   fi
--  canonical_host_type=$host
-+  canonical_host_type=$host_alias
+@@ -2221,7 +2223,6 @@ infodir
+ docdir
+ oldincludedir
+ includedir
+-runstatedir
+ localstatedir
+ sharedstatedir
+ sysconfdir
+@@ -2446,7 +2447,6 @@ datadir='${datarootdir}'
+ sysconfdir='${prefix}/etc'
+ sharedstatedir='${prefix}/com'
+ localstatedir='${prefix}/var'
+-runstatedir='${localstatedir}/run'
+ includedir='${prefix}/include'
+ oldincludedir='/usr/include'
+ docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+@@ -2699,15 +2699,6 @@ do
+   | -silent | --silent | --silen | --sile | --sil)
+     silent=yes ;;
  
-   if test -z "$host_cpu"; then
-     host_cpu=unknown
-@@ -9211,8 +9212,9 @@ fi
+-  -runstatedir | --runstatedir | --runstatedi | --runstated \
+-  | --runstate | --runstat | --runsta | --runst | --runs \
+-  | --run | --ru | --r)
+-    ac_prev=runstatedir ;;
+-  -runstatedir=* | --runstatedir=* | --runstatedi=* | --runstated=* \
+-  | --runstate=* | --runstat=* | --runsta=* | --runst=* | --runs=* \
+-  | --run=* | --ru=* | --r=*)
+-    runstatedir=$ac_optarg ;;
+-
+   -sbindir | --sbindir | --sbindi | --sbind | --sbin | --sbi | --sb)
+     ac_prev=sbindir ;;
+   -sbindir=* | --sbindir=* | --sbindi=* | --sbind=* | --sbin=* \
+@@ -2845,7 +2836,7 @@ fi
+ for ac_var in	exec_prefix prefix bindir sbindir libexecdir datarootdir \
+ 		datadir sysconfdir sharedstatedir localstatedir includedir \
+ 		oldincludedir docdir infodir htmldir dvidir pdfdir psdir \
+-		libdir localedir mandir runstatedir
++		libdir localedir mandir
+ do
+   eval ac_val=\$$ac_var
+   # Remove trailing slashes.
+@@ -2998,7 +2989,6 @@ Fine tuning of the installation director
+   --sysconfdir=DIR        read-only single-machine data [PREFIX/etc]
+   --sharedstatedir=DIR    modifiable architecture-independent data [PREFIX/com]
+   --localstatedir=DIR     modifiable single-machine data [PREFIX/var]
+-  --runstatedir=DIR       modifiable per-process data [LOCALSTATEDIR/run]
+   --libdir=DIR            object code libraries [EPREFIX/lib]
+   --includedir=DIR        C header files [PREFIX/include]
+   --oldincludedir=DIR     C header files for non-gcc [/usr/include]
+@@ -9414,7 +9404,10 @@ fi
  
  
- 
-+test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL}'
  
 -INSTALL_SCRIPT="${INSTALL}"
++test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL}'
++
 +test -z "$INSTALL_LIB" && INSTALL_LIB='${INSTALL_SCRIPT}'
++
  
  
- 
-@@ -28323,7 +28325,12 @@ else
- fi
+ ## Programs used when running Octave.
+@@ -12974,6 +12967,11 @@ fi
  	  done
  	  ;;
--	-[lLR]*)
-+	-R*)
-+	  ac_arg="-Wl,$ac_arg"
-+	  shift
-+	  set X $ac_arg "$@"
-+	  ;;
-+	-[lLR]*|-Wl*)
+ 	-[lLR]*)
++	    case $ac_arg in
++	    -R*)
++	        ac_arg="-Wl,$ac_arg"
++	        ;;
++	    esac
  	    ac_exists=false
    for ac_i in $ac_cv_f77_libs; do
      if test x"$ac_arg" = x"$ac_i"; then
-@@ -29516,13 +29523,13 @@ if test "$cross_compiling" = yes && test
+@@ -34971,13 +34969,13 @@ if test "$cross_compiling" = yes && test
    MKOCTFILE_LD_CXX=`echo "$LD_CXX" | $SED "s,$CROSS_TOOL_PREFIX,,"`
    MKOCTFILE_RANLIB=`echo "$RANLIB" | $SED "s,$CROSS_TOOL_PREFIX,,"`
  else
@@ -76,3 +127,12 @@ Allow overriding MKOCTFILE_F77 so we can provide the full path to gfortran
  fi
  { $as_echo "$as_me:${as_lineno-$LINENO}: defining CROSS_TOOL_PREFIX to be $CROSS_TOOL_PREFIX" >&5
  $as_echo "$as_me: defining CROSS_TOOL_PREFIX to be $CROSS_TOOL_PREFIX" >&6;}
+@@ -36091,6 +36089,8 @@ else
+ # ifdef _MSC_VER
+ #  include <malloc.h>
+ #  define alloca _alloca
++# elif defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__) || defined(__OpenBSD__)
++#   include <stdlib.h>
+ # else
+ #  ifdef HAVE_ALLOCA_H
+ #   include <alloca.h>
