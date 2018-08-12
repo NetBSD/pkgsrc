@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3535 2018/08/12 12:53:06 nia Exp $
+$NetBSD: CHANGES-2018,v 1.3536 2018/08/12 13:22:59 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5045,3 +5045,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/unicode-emoji to 11.0 [tsutsui 2018-08-12]
 	Updated textproc/unicode-character-database to 11.0.0 [tsutsui 2018-08-12]
 	Added emulators/libretro-beetle-wswan version 20180620 [nia 2018-08-12]
+	Added emulators/libretro-beetle-saturn version 20180620 [nia 2018-08-12]
