@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3540 2018/08/12 15:02:41 maya Exp $
+$NetBSD: CHANGES-2018,v 1.3541 2018/08/12 15:32:28 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5051,3 +5051,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added emulators/libretro-beetle-vb version 20180620 [nia 2018-08-12]
 	Updated math/lapack to 3.7.1nb1 [maya 2018-08-12]
 	Updated math/blas to 3.7.1nb1 [maya 2018-08-12]
+	Added emulators/libretro-snes9x version 1.56.2 [nia 2018-08-12]
