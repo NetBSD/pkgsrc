@@ -1,0 +1,10 @@
+Libretro is a simple but powerful development interface that allows for the
+easy creation of emulators, games and multimedia applications that can plug
+straight into any libretro-compatible frontend. This development interface is
+open to others so that they can run these pluggable emulator and game cores
+also in their own programs or devices.
+
+mGBA is an emulator for running Game Boy Advance games. It aims to be faster
+and more accurate than many existing Game Boy Advance emulators, as well as
+adding features that other emulators lack. It also supports Game Boy and
+Game Boy Color games.
