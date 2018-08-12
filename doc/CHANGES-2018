@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3531 2018/08/12 10:39:31 tsutsui Exp $
+$NetBSD: CHANGES-2018,v 1.3532 2018/08/12 10:45:33 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5041,3 +5041,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated emulators/libretro-nestopia to 1.49 [nia 2018-08-11]
 	Updated math/octave to 4.4.1 [maya 2018-08-12]
 	Updated textproc/cldr-emoji-annotation to 33.1.0.0 [tsutsui 2018-08-12]
+	Updated inputmethod/ibus to 1.5.19 [tsutsui 2018-08-12]
