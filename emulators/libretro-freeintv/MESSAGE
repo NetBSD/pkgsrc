@@ -1,0 +1,17 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2018/08/12 16:14:27 nia Exp $
+
+FreeIntv requires the following BIOS image files for operation:
+
+* exec.bin (Executive ROM)
+SHA256 - 1aeb614856beba95463166daf09304b414d5617d3f37d221724b3337fc4b2722
+
+* grom.bin (Graphics ROM)
+SHA256 - a80b6841182547d08635ad30a6af71441c4c9eed9391b3dd22feb30d8e50cc85
+
+In retroarch, you'll need to place them in the System Directory.
+
+Alternatively, you can place them in your Content Directory next to the
+software you are going to run.
+
+===========================================================================
