@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.167 2018/07/25 11:56:18 nia Exp $
+# $NetBSD: Makefile,v 1.168 2018/08/13 15:53:49 nia Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -20,6 +20,7 @@ SUBDIR+=	convmv
 SUBDIR+=	doc2html
 SUBDIR+=	docx2txt
 SUBDIR+=	dos2unix
+SUBDIR+=	dsk2rom
 SUBDIR+=	dvi2tty
 SUBDIR+=	enriched2html
 SUBDIR+=	erlang-iconv
