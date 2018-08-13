@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3544 2018/08/13 00:54:42 nia Exp $
+$NetBSD: CHANGES-2018,v 1.3545 2018/08/13 05:32:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5055,3 +5055,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added emulators/libretro-freeintv version 20180729 [nia 2018-08-12]
 	Updated pkgtools/pkglint to 5.6.0 [rillig 2018-08-12]
 	Added emulators/libretro-beetle-sgx version 20180512 [nia 2018-08-13]
+	Updated sysutils/di to 4.47 [wiz 2018-08-13]
