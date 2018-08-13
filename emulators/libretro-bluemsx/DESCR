@@ -1,0 +1,9 @@
+Libretro is a simple but powerful development interface that allows for
+the easy creation of emulators, games and multimedia applications that
+can plug straight into any libretro-compatible frontend. This development
+interface is open to others so that they can run these pluggable emulator
+and game cores also in their own programs or devices.
+
+blueMSX is a cycle accurate emulator for MSX, MSX2, MSX2+, and MSX
+TurboR-based home computers as well as the ColecoVision and Sega SG-1000
+video game systems.
