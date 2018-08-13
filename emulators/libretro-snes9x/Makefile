@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/08/12 15:32:10 nia Exp $
+# $NetBSD: Makefile,v 1.2 2018/08/13 17:04:42 nia Exp $
 
 DISTNAME=	libretro-snes9x-1.56.2
 CATEGORIES=	emulators
@@ -16,7 +16,7 @@ WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 BUILD_DIRS=	libretro
 
 USE_TOOLS+=	gmake
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 
