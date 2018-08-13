@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.33 2018/08/09 19:10:06 ryoon Exp $
+$NetBSD: distinfo,v 1.34 2018/08/13 13:09:38 jperkin Exp $
 
 SHA1 (rust-1.27.2-i686-apple-darwin.tar.gz) = cf471217c9666c18a666e2b0faabd5a30d44010c
 RMD160 (rust-1.27.2-i686-apple-darwin.tar.gz) = 3910f9fac8babb80c5c84e3de8567ed530ab808f
@@ -16,10 +16,10 @@ SHA1 (rust-1.27.2-x86_64-apple-darwin.tar.gz) = 763b2af0d2c62765f564170fe37a957e
 RMD160 (rust-1.27.2-x86_64-apple-darwin.tar.gz) = 2738579049fa2cf1156efc79dc2dfb83082c5e70
 SHA512 (rust-1.27.2-x86_64-apple-darwin.tar.gz) = 53817892ef020fa2388ebf9dc9d7d6cfa36553ed163967cc0319a76b73db6e3fce825fd51d3cdcf202614fd2015546ee8ca5a2b61c517730a7dfd1a950b51d1b
 Size (rust-1.27.2-x86_64-apple-darwin.tar.gz) = 180680593 bytes
-SHA1 (rust-1.27.2-x86_64-sun-solaris.tar.gz) = 1344637f3283b16869197e1980de8f45f78ddab7
-RMD160 (rust-1.27.2-x86_64-sun-solaris.tar.gz) = 087b48129afc03c68207f5f558ed2377326b8ff3
-SHA512 (rust-1.27.2-x86_64-sun-solaris.tar.gz) = 578466111d43d665dfcac72e9ffda18e724a7b0fc34bb238d8fdf8aadacf79b18b365c5cb61c55e53794d899efd10de5daaafabb92cc46c71e118ef9c7cd3477
-Size (rust-1.27.2-x86_64-sun-solaris.tar.gz) = 196557353 bytes
+SHA1 (rust-1.28.0-x86_64-sun-solaris.tar.gz) = c363feb0f9134ff1be95ecbf3b5a5483ecc18d33
+RMD160 (rust-1.28.0-x86_64-sun-solaris.tar.gz) = a5c54fe02747d657a14f671e93dc2e6146bdbe19
+SHA512 (rust-1.28.0-x86_64-sun-solaris.tar.gz) = 6d4cb7051b29603f9d3b61afc93b50d8e5ff6b8d608dd8f1a9c8210441a2d6059b5c61b4e0d21b9eca99f7c979b406b02b0e50cc60c621dcb5a0d528e89156b2
+Size (rust-1.28.0-x86_64-sun-solaris.tar.gz) = 186978879 bytes
 SHA1 (rust-1.27.2-x86_64-unknown-freebsd.tar.gz) = 0e4614dcdd4492b0babf30ee66a75a59577f1733
 RMD160 (rust-1.27.2-x86_64-unknown-freebsd.tar.gz) = 662f4bfdaf3adedf0326873f6f410bf1f0492034
 SHA512 (rust-1.27.2-x86_64-unknown-freebsd.tar.gz) = 94a8994de9a4a96446ff3d57e98f6b45ba7f5e5e2171a1e500f12595584eadfa884dc1b12f856257a9d7a21657b9f9f90e4046363e889d4ef9d9f81ecc627c09
