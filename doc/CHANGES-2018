@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3548 2018/08/13 12:57:56 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.3549 2018/08/13 13:37:56 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5060,3 +5060,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-nose2 to 0.8.0 [adam 2018-08-13]
 	Updated net/py-zmq to 17.1.2 [adam 2018-08-13]
 	Updated devel/js_of_ocaml to 3.2.1 [jaapb 2018-08-13]
+	Updated net/bind910 to 9.10.8pl1nb1 [maya 2018-08-13]
+	Updated net/bind99 to 9.9.13pl1nb1 [maya 2018-08-13]
