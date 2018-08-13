@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.35 2018/08/09 14:49:09 taca Exp $
+$NetBSD: distinfo,v 1.36 2018/08/13 13:41:49 maya Exp $
 
 SHA1 (bind-9.10.8-P1.tar.gz) = 70505825897b78868eb5f38ebf1a7b9fd3a7b588
 RMD160 (bind-9.10.8-P1.tar.gz) = 6cea25616dc1e0a280db3ea9784afe109f68db5c
@@ -11,5 +11,6 @@ SHA1 (patch-config.threads.in) = 227b83efe9cb3e301aaac9b97cf42f1fb8ad06b2
 SHA1 (patch-configure) = ac796249d34884e87d51602762df1f29cd1fe0bd
 SHA1 (patch-contrib_dlz_config.dlz.in) = f18bec63fbfce7cb2cd72929058ce3770fce458f
 SHA1 (patch-lib_dns_rbt.c) = 7e37f411d084e5363c6a5023e1915d224321c3e3
+SHA1 (patch-lib_isc_unix_socket.c) = b2ab2d914c6be15639ca4fc63255f928d318704c
 SHA1 (patch-lib_lwres_getaddrinfo.c) = 69e9c8049fedcb93bd219c6053163f21ce3b2535
 SHA1 (patch-lib_lwres_getnameinfo.c) = 418ad349cf52925c9e8051b5c71d9d51ea8d2fb1
