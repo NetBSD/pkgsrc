@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3551 2018/08/13 18:10:27 nia Exp $
+$NetBSD: CHANGES-2018,v 1.3552 2018/08/13 18:11:12 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5064,3 +5064,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/bind99 to 9.9.13pl1nb1 [maya 2018-08-13]
 	Added emulators/libretro-bsnes-mercury version 20180803 [nia 2018-08-13]
 	Added emulators/libretro-prosystem version 20180812 [nia 2018-08-13]
+	Added emulators/libretro-bluemsx version 20180811 [nia 2018-08-13]
