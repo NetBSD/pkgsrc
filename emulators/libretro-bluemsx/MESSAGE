@@ -1,0 +1,17 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2018/08/13 16:34:07 nia Exp $
+
+libretro-bluemsx requires files from the full version of standalone
+blueMSX - the Machines/ and Databases/ directories.
+
+The zip can be downloaded here: http://bluemsx.msxblue.com/download.html
+
+In retroarch, you'll need to place them in the System Directory.
+
+Alternatively, you can place them in your Content Directory next to the
+software you are going to run.
+
+The dsk2rom utility (available in pkgsrc) can be used to convert disk
+images (.dsk files) to make them easier to run in libretro-bluemsx.
+
+===========================================================================
