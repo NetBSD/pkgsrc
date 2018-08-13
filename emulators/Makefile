@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.277 2018/08/13 18:04:15 nia Exp $
+# $NetBSD: Makefile,v 1.278 2018/08/13 18:35:14 nia Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -111,6 +111,7 @@ SUBDIR+=	libretro-glsl-shaders
 SUBDIR+=	libretro-mgba
 SUBDIR+=	libretro-mupen64plus
 SUBDIR+=	libretro-nestopia
+SUBDIR+=	libretro-o2em
 SUBDIR+=	libretro-pcsx-rearmed
 SUBDIR+=	libretro-picodrive
 SUBDIR+=	libretro-prosystem

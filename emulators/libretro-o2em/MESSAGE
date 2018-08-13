@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2018/08/13 18:35:14 nia Exp $
+
+O2EM requires an Odyssey 2 BIOS file in order to work.
+
+In retroarch, you'll need to place it as o2rom.bin in the System Directory.
+
+Alternatively, you can place it into your Content Directory next to the
+software you are going to run.
+
+===========================================================================

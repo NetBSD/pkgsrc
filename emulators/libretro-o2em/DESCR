@@ -1,0 +1,9 @@
+Libretro is a simple but powerful development interface that allows for
+the easy creation of emulators, games and multimedia applications that
+can plug straight into any libretro-compatible frontend. This development
+interface is open to others so that they can run these pluggable emulator
+and game cores also in their own programs or devices.
+
+O2EM is an open source multi-platform Magnavox Odyssey2 / Videopac+
+emulator. The Odyssey2 (Videopac/Jopac in Europe) was a video game
+console created in the late 70s.
