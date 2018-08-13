@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3547 2018/08/13 08:21:07 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3548 2018/08/13 12:57:56 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5059,3 +5059,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/py-cryptodome to 3.6.5 [adam 2018-08-13]
 	Updated devel/py-nose2 to 0.8.0 [adam 2018-08-13]
 	Updated net/py-zmq to 17.1.2 [adam 2018-08-13]
+	Updated devel/js_of_ocaml to 3.2.1 [jaapb 2018-08-13]
