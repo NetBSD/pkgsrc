@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/08/13 00:54:25 nia Exp $
+
+SHA1 (libretro-beetle-sgx-20180512-0d4d96428073f8734e80a2ebc157daa228babe51.tar.gz) = c0426ecdbeddda70b49e2a5dabe52b5931d60b0c
+RMD160 (libretro-beetle-sgx-20180512-0d4d96428073f8734e80a2ebc157daa228babe51.tar.gz) = f1fa8282647e97d692a419d866ed483cba007031
+SHA512 (libretro-beetle-sgx-20180512-0d4d96428073f8734e80a2ebc157daa228babe51.tar.gz) = 6c8860b102c678b70f4eb41dc177b10a0db2e0ff59ef4168f35ab7c5b2c42258ef588925f89cdd970a2b1498731f9baa7790c0bf3368fb93db9a8d66deb9e757
+Size (libretro-beetle-sgx-20180512-0d4d96428073f8734e80a2ebc157daa228babe51.tar.gz) = 1140484 bytes
