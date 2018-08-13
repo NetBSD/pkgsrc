@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2018/02/22 10:33:31 adam Exp $
+# $NetBSD: Makefile,v 1.5 2018/08/13 07:28:39 adam Exp $
 
-DISTNAME=	nose2-0.7.4
+DISTNAME=	nose2-0.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nose2/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/nose-devs/nose2/
+HOMEPAGE=	https://github.com/nose-devs/nose2
 COMMENT=	Next generation of nicer testing for Python
 LICENSE=	2-clause-bsd
 
