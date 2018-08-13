@@ -1,0 +1,22 @@
+Libretro is a simple but powerful development interface that allows for
+the easy creation of emulators, games and multimedia applications that
+can plug straight into any libretro-compatible frontend. This development
+interface is open to others so that they can run these pluggable emulator
+and game cores also in their own programs or devices.
+
+bsnes/higan is a Super Nintendo Entertainment System / Super Famicom
+video game system emulator that aims to document SNES/SFC hardware with
+an extremely high degree of accuracy without compromise or optimisation.
+
+bsnes-mercury is a fork of bsnes/higan aiming to restore some useful
+features that have been removed, as well as improving performance
+slightly. Maximum accuracy is still uncompromisable; anything that
+affects accuracy is optional and off by default.
+
+As such, it has quite high system requirements. For a SNES/SFC libretro
+core that balances performance and accuracy to an acceptable level for
+99% of games, consider using a snes9x core.
+
+Three profiles are available: Performance, Balanced, and Accuracy.
+Balanced is recommended for modern PCs. Use Accuracy for extreme cases
+of hardware spec abuse (e.g. the game A.S.P. Air Strike Patrol).
