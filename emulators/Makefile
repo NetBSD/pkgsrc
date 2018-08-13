@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.274 2018/08/13 00:54:25 nia Exp $
+# $NetBSD: Makefile,v 1.275 2018/08/13 14:37:25 nia Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -95,6 +95,9 @@ SUBDIR+=	libretro-beetle-saturn
 SUBDIR+=	libretro-beetle-sgx
 SUBDIR+=	libretro-beetle-vb
 SUBDIR+=	libretro-beetle-wswan
+SUBDIR+=	libretro-bsnes-mercury
+SUBDIR+=	libretro-bsnes-mercury-accuracy
+SUBDIR+=	libretro-bsnes-mercury-performance
 SUBDIR+=	libretro-core-info
 SUBDIR+=	libretro-database
 SUBDIR+=	libretro-desmume
