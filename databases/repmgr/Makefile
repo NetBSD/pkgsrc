@@ -1,30 +1,27 @@
-# $NetBSD: Makefile,v 1.1 2017/12/08 15:27:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.2 2018/08/14 13:41:39 adam Exp $
 
-DISTNAME=	repmgr-4.0.1
+DISTNAME=	repmgr-4.1.0
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
 CATEGORIES=	databases
-MASTER_SITES=	${MASTER_SITE_GITHUB:=2ndQuadrant/}
-GITHUB_PROJECT=	repmgr
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+MASTER_SITES=	https://repmgr.org/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/2ndQuadrant/repmgr/
-COMMENT=	The Most Popular Replication Manager for PostgreSQL (Postgres)
+HOMEPAGE=	https://repmgr.org/
+COMMENT=	Replication Manager for PostgreSQL clusters
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	postgresql${PGSQL_VERSION}-server>=0:../../databases/postgresql${PGSQL_VERSION}-server
 
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake
-
-SMF_NAME=	postgresql-repmgr
+USE_TOOLS+=		gmake
+GNU_CONFIGURE=		yes
+PKG_SYSCONFSUBDIR=	postgresql
 
 BUILD_DEFS+=	PGUSER PGGROUP PGHOME
 FILES_SUBST+=	PGUSER=${PGUSER} PGGROUP=${PGGROUP} PGHOME=${PGHOME}
 
 DOCDIR=		share/doc/repmgr
 EGDIR=		share/examples/repmgr
-PKG_SYSCONFSUBDIR=	postgresql
+SMF_NAME=	postgresql-repmgr
 
 INSTALLATION_DIRS+=	${DOCDIR} ${EGDIR}
 
