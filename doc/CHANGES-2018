@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3557 2018/08/14 07:33:58 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3558 2018/08/14 09:22:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5074,3 +5074,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-faker to 0.9.0 [adam 2018-08-14]
 	Updated devel/py-dash to 4.7.3 [adam 2018-08-14]
 	Updated math/py-simpleeval to 0.9.6 [adam 2018-08-14]
+	Updated textproc/mandoc to 1.14.4 [wiz 2018-08-14]
