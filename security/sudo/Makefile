@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.160 2018/05/02 21:21:10 wiz Exp $
+# $NetBSD: Makefile,v 1.161 2018/08/14 13:18:37 adam Exp $
 
-DISTNAME=	sudo-1.8.22
-PKGREVISION=	1
+DISTNAME=	sudo-1.8.23
 CATEGORIES=	security
 MASTER_SITES=	https://www.sudo.ws/dist/
 MASTER_SITES+=	ftp://ftp.sudo.ws/pub/sudo/
@@ -29,9 +28,11 @@ CONFIGURE_ARGS+=	--with-logpath=${VARBASE}/log/sudo.log
 CONFIGURE_ENV+=		NROFFPROG=${CAT:Q}
 CONFIGURE_ENV+=		mansectsu=8
 CONFIGURE_ENV+=		mansectform=5
+TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
 
+PLIST_VARS+=		noexec
 .if ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--with-noexec=no
 CONFIGURE_ENV+=		ax_cv_check_cflags___static_libgcc=no
@@ -46,13 +47,10 @@ CFLAGS+=	-D_OPENBSD_SOURCE=1
 CFLAGS+=	-D_INCOMPLETE_XOPEN_C063=1
 .endif
 
-TEST_TARGET=		check
-
 .include "options.mk"
 
 OWN_DIRS+=		${VARBASE}/run
 BUILD_DEFS+=		VARBASE
-PLIST_VARS+=		ldap nls noexec
 
 DOCDIR=			share/doc/${PKGBASE}
 EGDIR=			share/examples/${PKGBASE}
