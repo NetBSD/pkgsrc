@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3565 2018/08/14 13:43:44 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3566 2018/08/14 14:02:48 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5085,3 +5085,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/sudo to 1.8.23 [adam 2018-08-14]
 	Updated databases/repmgr to 4.1.0 [adam 2018-08-14]
 	Updated math/py-numexpr to 2.6.7 [adam 2018-08-14]
+	Updated databases/pgbouncer to 1.9.0 [fhajny 2018-08-14]
