@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/01/04 21:31:41 adam Exp $
+$NetBSD: distinfo,v 1.5 2018/08/14 06:56:39 adam Exp $
 
-SHA1 (Scrapy-1.5.0.tar.gz) = 466a6e502585507f0bdd711043a5474ba0f3899d
-RMD160 (Scrapy-1.5.0.tar.gz) = 083f584cbe11a9382eef6314829f891f3b2a3b9d
-SHA512 (Scrapy-1.5.0.tar.gz) = b2fb3bc58ab2fe64b8527c9b33478e9bb5239a15c793147d7e1af2827daf2de219c506e07596cdd5ff1ed51a2f489028b29f9ffa8b729125098892dea35d8b50
-Size (Scrapy-1.5.0.tar.gz) = 905439 bytes
+SHA1 (Scrapy-1.5.1.tar.gz) = 3fe1d9ce050bcbd315e764d564b9384029a200fc
+RMD160 (Scrapy-1.5.1.tar.gz) = 19234b618ae8dd5850126e56c93013d6e102524d
+SHA512 (Scrapy-1.5.1.tar.gz) = 6c82a53dce48d47d92dc87d7d37d1ce1e106a3a51f6a55c9bd9e6665cda4f27666a0488e8462eaba3a66f826e5a14676d8da2ffa6843f25112734c83a1777552
+Size (Scrapy-1.5.1.tar.gz) = 908961 bytes
