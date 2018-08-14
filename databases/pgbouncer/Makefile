@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2017/12/20 20:45:58 fhajny Exp $
+# $NetBSD: Makefile,v 1.13 2018/08/14 14:02:36 fhajny Exp $
 #
 
-DISTNAME=	pgbouncer-1.8.1
+DISTNAME=	pgbouncer-1.9.0
 CATEGORIES=	databases
 MASTER_SITES=	http://pgbouncer.github.io/downloads/files/${PKGVERSION_NOREV}/
 
