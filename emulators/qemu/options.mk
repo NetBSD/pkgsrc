@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.4 2017/08/30 21:00:46 kamil Exp $
+# $NetBSD: options.mk,v 1.5 2018/08/14 06:57:26 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qemu
 PKG_SUPPORTED_OPTIONS=	gtk3 sdl
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if empty(OPSYS:MDarwin)
+.if ${OPSYS} != "Darwin"
 PKG_SUGGESTED_OPTIONS+=	sdl
 .endif
 
