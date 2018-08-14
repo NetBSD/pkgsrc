@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2018/08/11 21:03:17 nia Exp $
+# $NetBSD: options.mk,v 1.7 2018/08/14 13:08:57 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libretro-mupen64plus
 PKG_OPTIONS_REQUIRED_GROUPS=	graphics
@@ -11,11 +11,11 @@ PKG_OPTIONS_GROUP.graphics+=	rpi
 PKG_SUPPORTED_OPTIONS+=		dynarec
 PKG_SUGGESTED_OPTIONS+=		rpi dynarec
 MUPEN64_DYNAREC_ARCH=		arm
-.elif !empty(MACHINE_ARCH:Mi386)
+.elif ${MACHINE_ARCH} == "i386"
 PKG_SUPPORTED_OPTIONS+=		dynarec
 PKG_SUGGESTED_OPTIONS+=		dynarec opengl
 MUPEN64_DYNAREC_ARCH=		x86
-.elif !empty(MACHINE_ARCH:Mx86_64)
+.elif ${MACHINE_ARCH} == "x86_64"
 PKG_SUPPORTED_OPTIONS+=		dynarec
 PKG_SUGGESTED_OPTIONS+=		dynarec opengl
 MUPEN64_DYNAREC_ARCH=		x86_64
