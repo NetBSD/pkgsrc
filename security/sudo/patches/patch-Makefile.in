@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.32 2016/01/09 11:22:12 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.1 2018/08/14 13:18:38 adam Exp $
 
-* Don't setuid here.
+Don't setuid here.
 
 --- Makefile.in.orig	2015-10-31 23:35:07.000000000 +0000
 +++ Makefile.in
