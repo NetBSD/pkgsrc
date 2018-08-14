@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/03/04 16:55:45 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/08/14 14:47:55 adam Exp $
 bin/barman
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -26,9 +26,15 @@ ${PYSITELIB}/barman/compression.pyo
 ${PYSITELIB}/barman/config.py
 ${PYSITELIB}/barman/config.pyc
 ${PYSITELIB}/barman/config.pyo
+${PYSITELIB}/barman/copy_controller.py
+${PYSITELIB}/barman/copy_controller.pyc
+${PYSITELIB}/barman/copy_controller.pyo
 ${PYSITELIB}/barman/diagnose.py
 ${PYSITELIB}/barman/diagnose.pyc
 ${PYSITELIB}/barman/diagnose.pyo
+${PYSITELIB}/barman/exceptions.py
+${PYSITELIB}/barman/exceptions.pyc
+${PYSITELIB}/barman/exceptions.pyo
 ${PYSITELIB}/barman/fs.py
 ${PYSITELIB}/barman/fs.pyc
 ${PYSITELIB}/barman/fs.pyo

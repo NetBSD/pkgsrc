@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2017/02/20 17:00:35 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2018/08/14 14:47:55 adam Exp $
 
-DISTNAME=	barman-1.6.1
+DISTNAME=	barman-2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pgbarman/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=b/barman/}
 
 MAINTAINER=	filip@joyent.com
 HOMEPAGE=	http://www.pgbarman.org/
@@ -12,11 +12,13 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-argcomplete-[0-9]*:../../devel/py-argcomplete
 DEPENDS+=	${PYPKGPREFIX}-argh>=0.21.2:../../devel/py-argh
-DEPENDS+=	${PYPKGPREFIX}-psycopg2-[0-9]*:../../databases/py-psycopg2
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
+DEPENDS+=	${PYPKGPREFIX}-psycopg2>=2.4.2:../../databases/py-psycopg2
 DEPENDS+=	rsync-[0-9]*:../../net/rsync
 
 USE_LANGUAGES=	# none
+
+PYTHON_SELF_CONFLICT=	yes
 
 CONF_FILES+=		share/examples/barman/barman.conf \
 			${PKG_SYSCONFDIR}/barman.conf
