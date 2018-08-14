@@ -1,0 +1,9 @@
+Libretro is a simple but powerful development interface that allows for
+the easy creation of emulators, games and multimedia applications that
+can plug straight into any libretro-compatible frontend. This development
+interface is open to others so that they can run these pluggable emulator
+and game cores also in their own programs or devices.
+
+Neko Project II is a PC-9801 emulator. The PC-9800 series, commonly
+shortened to PC-98, is a line of Japanese 16-bit and 32-bit personal
+computers manufactured by NEC from 1982 through 2000.
