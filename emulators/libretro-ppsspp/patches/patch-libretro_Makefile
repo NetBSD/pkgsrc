@@ -1,0 +1,25 @@
+$NetBSD: patch-libretro_Makefile,v 1.1 2018/08/14 12:55:41 nia Exp $
+
+Use ffmpeg from pkgsrc.
+
+--- libretro/Makefile.orig	2018-06-05 17:58:41.000000000 +0000
++++ libretro/Makefile
+@@ -40,7 +40,6 @@ endif
+ 
+ # Dirs
+ CORE_DIR			= ..
+-FFMPEGDIR		= $(CORE_DIR)/ffmpeg
+ LIBRETRODIR		= $(CORE_DIR)/libretro
+ COREDIR			= $(CORE_DIR)/Core
+ COMMONDIR		= $(CORE_DIR)/Common
+@@ -60,9 +59,7 @@ ifneq (,$(findstring unix,$(platform)))
+ 	TARGET := $(TARGET_NAME)_libretro.so
+ 	LDFLAGS += -shared -Wl,--version-script=link.T -Wl,--no-undefined
+ 
+-	FFMPEGINCFLAGS += -I$(FFMPEGDIR)/linux/$(TARGET_ARCH)/include
+-	FFMPEGLIBDIR := $(FFMPEGDIR)/linux/$(TARGET_ARCH)/lib
+-	FFMPEGLDFLAGS += -L$(FFMPEGLIBDIR) -lavformat -lavcodec -lavutil -lswresample -lswscale
++	FFMPEGLDFLAGS += -lavformat -lavcodec -lavutil -lswresample -lswscale
+ 	fpic = -fPIC
+ 	ifneq (,$(findstring gles,$(platform)))
+ 		GLES = 1

@@ -1,0 +1,20 @@
+$NetBSD: distinfo,v 1.1 2018/08/14 12:55:41 nia Exp $
+
+SHA1 (ppsspp-1.6.3/ppsspp-armips.tar.gz) = 51e8fcf70e64e64c9c3d04aa3c795dfe6f7f5f26
+RMD160 (ppsspp-1.6.3/ppsspp-armips.tar.gz) = d8c321256c9e58fbfcbf1529f61930274ecc6d15
+SHA512 (ppsspp-1.6.3/ppsspp-armips.tar.gz) = 9ab376b928fadcbff7256ff10d6581e4960e00e48a93f47f7e90b1998022a8d03cadef20880aa020fe6b62e4fa43cf28fc68dc5b10e93b1212fd6788ae493dba
+Size (ppsspp-1.6.3/ppsspp-armips.tar.gz) = 191245 bytes
+SHA1 (ppsspp-1.6.3/ppsspp-glslang.tar.gz) = bc70bf9850f187ecff189adf8d46a39930380928
+RMD160 (ppsspp-1.6.3/ppsspp-glslang.tar.gz) = d1c248f9f01f10b2f3d3bbbf6a5e6a431413702a
+SHA512 (ppsspp-1.6.3/ppsspp-glslang.tar.gz) = 333a93707e067ac1d98c69533c2d206675d75aa54195326accf33e8401ac2fb412d2e2525b0ee1313f141872aa6ea430ae5424e8712483c59f77dc3adbcb4f59
+Size (ppsspp-1.6.3/ppsspp-glslang.tar.gz) = 1944927 bytes
+SHA1 (ppsspp-1.6.3/ppsspp-spriv.tar.gz) = 729bff5fa8a51af90519fb51b64a5781acce03e2
+RMD160 (ppsspp-1.6.3/ppsspp-spriv.tar.gz) = 32346af6c24f9f30ae435381f7c30e6f427c0e39
+SHA512 (ppsspp-1.6.3/ppsspp-spriv.tar.gz) = 5fe2f772b571da0627fb9d9c424bea2b4ea1c0563e36ff455ddaf1b92ea3d5ee636e039a0619e0971478ce10e163b45258e9b03d2610c573f74d1cfd08549bb8
+Size (ppsspp-1.6.3/ppsspp-spriv.tar.gz) = 228943 bytes
+SHA1 (ppsspp-1.6.3/ppsspp.tar.gz) = 5a4ec3f99dcb50840d26a2c738ff1ce4a37e7433
+RMD160 (ppsspp-1.6.3/ppsspp.tar.gz) = 0b0ea6c86aad60a7d9d176332ea62a88d23411fa
+SHA512 (ppsspp-1.6.3/ppsspp.tar.gz) = fe592c81a3b22ba0fff3dbd403ad2f6b9639c39d036db31132147a91a25793acb8698174a1c139b7dced01a9101777b5c53a1e5db6b5da0b7727f480ef597b8e
+Size (ppsspp-1.6.3/ppsspp.tar.gz) = 19477643 bytes
+SHA1 (patch-libretro_Makefile) = ff14d98bb21d87b5a27f40b180d73beef7ab2f74
+SHA1 (patch-libretro_Makefile.common) = 5bce7657a4b6703903b71e7d33317dcb284e2759

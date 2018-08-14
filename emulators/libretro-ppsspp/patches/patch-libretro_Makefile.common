@@ -1,0 +1,16 @@
+$NetBSD: patch-libretro_Makefile.common,v 1.1 2018/08/14 12:55:41 nia Exp $
+
+Fix "Build error: undefined references".
+
+https://github.com/libretro/ppsspp/commit/68634705b9d6b5bc8db2232bc92b6ae06f0b31d8
+
+--- libretro/Makefile.common.orig	2018-05-30 17:47:20.000000000 +0000
++++ libretro/Makefile.common
+@@ -452,6 +452,7 @@ SOURCES_CXX += $(NATIVEDIR)/math/datacon
+ 	       $(COREDIR)/MemMap.cpp \
+ 	       $(COREDIR)/MemMapFunctions.cpp \
+ 	       $(COREDIR)/PSPLoaders.cpp \
++	       $(COREDIR)/Replay.cpp \
+ 	       $(COREDIR)/Reporting.cpp \
+ 	       $(COREDIR)/SaveState.cpp \
+ 	       $(COREDIR)/Screenshot.cpp \
