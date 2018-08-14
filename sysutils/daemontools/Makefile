@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2018/08/14 15:52:17 schmonz Exp $
+# $NetBSD: Makefile,v 1.40 2018/08/14 16:07:10 schmonz Exp $
 
 DISTNAME=		daemontools-0.76
 PKGREVISION=		3
@@ -31,6 +31,7 @@ SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	do-configure
 SUBST_FILES.paths=	src/svscanboot.sh
 SUBST_SED.paths=	-e 's|/usr/local/sbin:/bin|/usr/local/sbin:${PREFIX}/bin:${PREFIX}/sbin:/bin|g'
+SUBST_SED.paths+=	-e 's|/command/svc |${PREFIX}/bin/svc |g'
 
 MAKE_ENV+=		PKGSRC_SHELL=${TOOLS_PLATFORM.sh}
 
