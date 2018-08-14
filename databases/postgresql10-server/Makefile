@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/10/23 20:33:50 adam Exp $
+# $NetBSD: Makefile,v 1.2 2018/08/14 16:52:04 adam Exp $
 
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:C/-/10-server-/}
 COMMENT=	PostgreSQL database server programs
 
@@ -12,6 +13,7 @@ CONFIGURE_ARGS+=	--with-openssl
 
 INSTALL_DIRS=	src/backend
 INSTALL_DIRS+=	src/backend/replication/libpqwalreceiver
+INSTALL_DIRS+=	src/backend/replication/pgoutput
 INSTALL_DIRS+=	src/backend/utils/mb/conversion_procs
 INSTALL_DIRS+=	src/backend/snowball
 INSTALL_DIRS+=	src/timezone
