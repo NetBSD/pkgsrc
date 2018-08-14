@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/08/11 12:57:23 nia Exp $
+# $NetBSD: Makefile,v 1.2 2018/08/14 13:08:57 nia Exp $
 
 DISTNAME=	libretro-desmume-20180807
 CATEGORIES=	emulators
@@ -25,7 +25,7 @@ CXXFLAGS+=		-DUSE_POSIX_MEMALIGN -D__RETRO_ARM__
 CXXFLAGS+=		-DARM
 MAKE_FLAGS+=		DESMUME_JIT=0
 MAKE_FLAGS+=		DESMUME_JIT_ARM=1
-.elif !empty(MACHINE_ARCH:M*x86_64*) || !empty(MACHINE_ARCH:M*i386*)
+.elif ${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "i386"
 MAKE_FLAGS+=		DESMUME_JIT=1
 .else
 MAKE_FLAGS+=		DESMUME_JIT=0
