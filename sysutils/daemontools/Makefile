@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2017/10/03 00:21:44 schmonz Exp $
+# $NetBSD: Makefile,v 1.39 2018/08/14 15:52:17 schmonz Exp $
 
 DISTNAME=		daemontools-0.76
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		sysutils
 MASTER_SITES=		http://cr.yp.to/daemontools/ ftp://cr.yp.to/daemontools/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${MANPAGES}
@@ -26,6 +26,11 @@ USE_TOOLS+=		file
 INSTALLATION_DIRS=	bin man ${PKGMANDIR}/man8
 
 SUBST_FILES.djbware+=	src/error.h
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	do-configure
+SUBST_FILES.paths=	src/svscanboot.sh
+SUBST_SED.paths=	-e 's|/usr/local/sbin:/bin|/usr/local/sbin:${PREFIX}/bin:${PREFIX}/sbin:/bin|g'
 
 MAKE_ENV+=		PKGSRC_SHELL=${TOOLS_PLATFORM.sh}
 
