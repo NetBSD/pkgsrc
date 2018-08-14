@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3556 2018/08/14 06:57:53 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3557 2018/08/14 07:33:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5070,3 +5070,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/lighttpd to 1.4.50 [wiz 2018-08-14]
 	Updated emulators/qemu to 2.12.1 [adam 2018-08-14]
 	Updated www/py-scrapy to 1.5.1 [adam 2018-08-14]
+	Updated www/py-beautifulsoup4 to 4.6.3 [adam 2018-08-14]
+	Updated devel/py-faker to 0.9.0 [adam 2018-08-14]
+	Updated devel/py-dash to 4.7.3 [adam 2018-08-14]
+	Updated math/py-simpleeval to 0.9.6 [adam 2018-08-14]
