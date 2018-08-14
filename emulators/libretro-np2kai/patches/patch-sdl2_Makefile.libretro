@@ -1,0 +1,15 @@
+$NetBSD: patch-sdl2_Makefile.libretro,v 1.1 2018/08/14 16:44:08 nia Exp $
+
+Don't force -O3.
+
+--- sdl2/Makefile.libretro.orig	2018-07-12 22:06:17.000000000 +0000
++++ sdl2/Makefile.libretro
+@@ -235,7 +235,7 @@ endif
+ ifeq ($(DEBUG), 1)
+ COMMONFLAGS += -O0 -g
+ else
+-COMMONFLAGS += -O3 -DNDEBUG -DGIT_VERSION=\"$(GIT_VERSION)\"
++COMMONFLAGS += -DNDEBUG -DGIT_VERSION=\"$(GIT_VERSION)\"
+ endif
+ 
+ ifeq ($(HAVE_RUST),1)
