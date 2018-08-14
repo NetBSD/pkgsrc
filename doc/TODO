@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18471 2018/08/14 09:22:02 wiz Exp $
+$NetBSD: TODO,v 1.18472 2018/08/14 09:35:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1069,7 +1069,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o minivmac-3.2.3
 	o miredo-1.2.4
 	o mit-scheme-bin-9.2
-	o modular-xorg-server-1.20.1
 	o modular-xorg-xquartz-1.18.0
 	o molden-4.8 [after which PR 40252 can be closed]
 	o molden-5.5
