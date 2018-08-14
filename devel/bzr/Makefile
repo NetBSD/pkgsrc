@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2018/01/09 22:18:57 tez Exp $
+# $NetBSD: Makefile,v 1.71 2018/08/14 15:53:10 prlw1 Exp $
 
 DISTNAME=	bzr-2.6.0
 PKGREVISION=	1
@@ -18,7 +18,7 @@ USE_TOOLS+=		gmake msgfmt
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-pyrex
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-pyrex
 
 REPLACE_PYTHON=		bzr bzrlib/weave.py
 REPLACE_PYTHON+=		bzrlib/patiencediff.py bzrlib/_patiencediff_py.py
