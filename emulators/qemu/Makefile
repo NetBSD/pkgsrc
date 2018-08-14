@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.186 2018/07/03 05:03:16 adam Exp $
+# $NetBSD: Makefile,v 1.187 2018/08/14 06:57:26 adam Exp $
 
-DISTNAME=	qemu-2.12.0
-PKGREVISION=	1
+DISTNAME=	qemu-2.12.1
 CATEGORIES=	emulators
 MASTER_SITES=	http://download.qemu-project.org/
 EXTRACT_SUFX=	.tar.xz
@@ -91,14 +90,14 @@ UE_ARCHS+=		sparc64 x86_64 microblazeel s390x unicore32
 .if ${OPSYS} == "NetBSD"
 USER_EMUL=		i386 x86_64 sparc sparc64
 PLIST.nbd=		YES
-.elif !empty(OPSYS:M*BSD) || !empty(OPSYS:MDragonFly)
+.elif !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly"
 USER_EMUL=		i386 x86_64 sparc sparc64
 PLIST.nbd=		YES
-.elif !empty(OPSYS:MDarwin)
+.elif ${OPSYS} == "Darwin"
 USER_EMUL=
 CONFIGURE_ARGS+=	--disable-bsd-user
 PLIST.nbd=		YES
-.elif !empty(OPSYS:MLinux)
+.elif ${OPSYS} == "Linux"
 USER_EMUL=		${UE_ARCHS}
 PLIST.nbd=		YES
 PLIST.ivshmem=		YES
@@ -119,7 +118,7 @@ post-install:
 		${DESTDIR}${PREFIX}/share/doc/qemu/
 
 # On Darwin, qemu uses Cocoa and CoreAudio
-.if empty(OPSYS:MDarwin)
+.if ${OPSYS} != "Darwin"
 .include "../../mk/oss.buildlink3.mk"
 .endif
 .include "../../archivers/lzo/buildlink3.mk"
