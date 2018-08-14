@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/07/06 03:13:36 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2018/08/14 17:39:32 adam Exp $
 
-DISTNAME=	joblib-0.12.0
+DISTNAME=	joblib-0.12.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/joblib/}
@@ -15,7 +15,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 USE_LANGUAGES=	# none
 
 do-test:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/pytest-${PYVERSSUFFIX}
+	cd ${WRKSRC}/joblib && pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
