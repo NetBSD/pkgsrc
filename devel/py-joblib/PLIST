@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/07/06 03:13:36 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/08/14 17:39:32 adam Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/joblib/__init__.py
 ${PYSITELIB}/joblib/__init__.pyc
@@ -6,6 +6,9 @@ ${PYSITELIB}/joblib/__init__.pyo
 ${PYSITELIB}/joblib/_compat.py
 ${PYSITELIB}/joblib/_compat.pyc
 ${PYSITELIB}/joblib/_compat.pyo
+${PYSITELIB}/joblib/_dask.py
+${PYSITELIB}/joblib/_dask.pyc
+${PYSITELIB}/joblib/_dask.pyo
 ${PYSITELIB}/joblib/_memmapping_reducer.py
 ${PYSITELIB}/joblib/_memmapping_reducer.pyc
 ${PYSITELIB}/joblib/_memmapping_reducer.pyo
@@ -233,6 +236,9 @@ ${PYSITELIB}/joblib/test/data/joblib_0.9.4.dev0_compressed_cache_size_pickle_py3
 ${PYSITELIB}/joblib/test/test_backports.py
 ${PYSITELIB}/joblib/test/test_backports.pyc
 ${PYSITELIB}/joblib/test/test_backports.pyo
+${PYSITELIB}/joblib/test/test_dask.py
+${PYSITELIB}/joblib/test/test_dask.pyc
+${PYSITELIB}/joblib/test/test_dask.pyo
 ${PYSITELIB}/joblib/test/test_disk.py
 ${PYSITELIB}/joblib/test/test_disk.pyc
 ${PYSITELIB}/joblib/test/test_disk.pyo
