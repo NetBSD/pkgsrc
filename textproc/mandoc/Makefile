@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2018/04/05 09:20:52 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2018/08/14 09:21:52 wiz Exp $
 
-DISTNAME=	mandoc-1.14.3
-PKGREVISION=	1
+DISTNAME=	mandoc-1.14.4
 CATEGORIES=	textproc devel
 MASTER_SITES=	http://mdocml.bsd.lv/snapshots/
 
@@ -11,8 +10,6 @@ COMMENT=	Convert man pages from mdoc, man, and tbl to txt, html, ps, or pdf
 LICENSE=	2-clause-bsd # not exactly, but near enough
 
 HAS_CONFIGURE=	yes
-
-WRKSRC=		${WRKDIR}/${DISTNAME:C/rc[0-9]*//}
 
 SUBST_CLASSES+=		roff
 SUBST_STAGE.roff=	pre-build
