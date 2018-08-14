@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3568 2018/08/14 16:41:30 nia Exp $
+$NetBSD: CHANGES-2018,v 1.3569 2018/08/14 16:55:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5088,3 +5088,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/pgbouncer to 1.9.0 [fhajny 2018-08-14]
 	Updated sysutils/daemontools to 0.76nb3 [schmonz 2018-08-14]
 	Added emulators/libretro-np2kai version 0.86.17 [nia 2018-08-14]
+	Updated databases/py-barman to 2.4 [adam 2018-08-14]
+	Updated devel/py-ruamel-yaml to 0.15.54 [adam 2018-08-14]
