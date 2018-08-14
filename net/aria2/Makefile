@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.75 2018/07/20 03:34:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.76 2018/08/14 17:18:37 jperkin Exp $
 
 DISTNAME=	aria2-1.32.0
 #PKGREVISION=	1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aria2/}
 EXTRACT_SUFX=	.tar.xz
@@ -29,6 +29,7 @@ CONFIGURE_ARGS+=	--with-included-gettext=no
 CONFIGURE_ARGS+=	--with-libexpat
 CONFIGURE_ARGS+=	--without-libxml2
 CONFIGURE_ARGS.SunOS+=	--disable-epoll
+CONFIGURE_ENV.SunOS+=	ac_cv_func_getaddrinfo=yes
 
 TEST_TARGET=		check
 USE_FEATURES=		getopt_long snprintf
