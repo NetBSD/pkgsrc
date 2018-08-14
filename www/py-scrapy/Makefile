@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2018/01/04 21:31:41 adam Exp $
+# $NetBSD: Makefile,v 1.6 2018/08/14 06:56:39 adam Exp $
 
-DISTNAME=	Scrapy-1.5.0
+DISTNAME=	Scrapy-1.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Scrapy/}
@@ -21,9 +21,10 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.5.2:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-twisted>=13.1.0:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-w3lib>=1.17.0:../../www/py-w3lib
 
+USE_LANGUAGES=	# none
+
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/scrapy \
-		${DESTDIR}${PREFIX}/bin/scrapy${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} scrapy scrapy${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
