@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2018/08/14 12:55:41 nia Exp $
+lib/libretro/ppsspp_libretro.so
