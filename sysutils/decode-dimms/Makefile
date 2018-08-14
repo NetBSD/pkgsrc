@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/07/25 05:40:15 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2018/08/14 12:34:45 pgoyette Exp $
 
 # no Release yet
 GIT_COMMIT=	84da8192c7c409f37c1906b60ef166c58aafc847
@@ -7,7 +7,7 @@ PKGNAME=	decode-dimms-0.0.20181205
 CATEGORIES=	sysutils
 MASTER_SITES=	https://git.kernel.org/pub/scm/utils/i2c-tools/i2c-tools.git/snapshot/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pgoyette@NetBSD.org
 HOMEPAGE=	https://git.kernel.org/pub/scm/utils/i2c-tools/
 COMMENT=	Decode memory DIMM SPD ROM info
 LICENSE=	gnu-gpl-v2
@@ -34,5 +34,4 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/eeprom/decode-dimms.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/decode-dimms.1
 
-.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
