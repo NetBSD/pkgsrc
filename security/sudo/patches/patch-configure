@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.26 2017/05/31 02:33:12 maya Exp $
+$NetBSD: patch-configure,v 1.1 2018/08/14 13:18:38 adam Exp $
 
 * Add "--with-nbsdops" option, NetBSD standard options.
 * Link with util(3) in the case of DragonFly, too.
