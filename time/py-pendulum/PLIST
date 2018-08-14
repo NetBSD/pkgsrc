@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/06/16 13:06:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/08/14 15:23:51 leot Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/pendulum/__init__.py
 ${PYSITELIB}/pendulum/__init__.pyc
@@ -10,7 +10,7 @@ ${PYSITELIB}/pendulum/_extensions/__init__.py
 ${PYSITELIB}/pendulum/_extensions/__init__.pyc
 ${PYSITELIB}/pendulum/_extensions/__init__.pyo
 ${PYSITELIB}/pendulum/_extensions/_helpers.c
-${PYSITELIB}/pendulum/_extensions/_helpers.so
+${PLIST.py3x}${PYSITELIB}/pendulum/_extensions/_helpers.so
 ${PYSITELIB}/pendulum/_extensions/helpers.py
 ${PYSITELIB}/pendulum/_extensions/helpers.pyc
 ${PYSITELIB}/pendulum/_extensions/helpers.pyo
@@ -159,7 +159,7 @@ ${PYSITELIB}/pendulum/parsing/__init__.py
 ${PYSITELIB}/pendulum/parsing/__init__.pyc
 ${PYSITELIB}/pendulum/parsing/__init__.pyo
 ${PYSITELIB}/pendulum/parsing/_iso8601.c
-${PYSITELIB}/pendulum/parsing/_iso8601.so
+${PLIST.py3x}${PYSITELIB}/pendulum/parsing/_iso8601.so
 ${PYSITELIB}/pendulum/parsing/exceptions/__init__.py
 ${PYSITELIB}/pendulum/parsing/exceptions/__init__.pyc
 ${PYSITELIB}/pendulum/parsing/exceptions/__init__.pyo
