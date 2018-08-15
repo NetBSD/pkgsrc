@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3582 2018/08/15 10:54:45 wen Exp $
+$NetBSD: CHANGES-2018,v 1.3583 2018/08/15 11:23:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5103,4 +5103,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/adobe-flash-player to 30.0.0.154 [tsutsui 2018-08-15]
 	Updated security/py-cryptography_vectors to 2.3.1 [adam 2018-08-15]
 	Updated security/py-cryptography to 2.3.1 [adam 2018-08-15]
-	Updated www/drupal8 to 8.5.6 [wen 2018-06-15]
+	Updated www/drupal8 to 8.5.6 [wen 2018-08-15]
+	Updated net/py-scp to 0.11.0 [adam 2018-08-15]
+	Updated devel/py-editorconfig-core to 0.12.2 [adam 2018-08-15]
