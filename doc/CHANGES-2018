@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3584 2018/08/15 13:08:35 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.3585 2018/08/15 13:52:13 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5107,3 +5107,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/py-scp to 0.11.0 [adam 2018-08-15]
 	Updated devel/py-editorconfig-core to 0.12.2 [adam 2018-08-15]
 	Updated sysutils/syslog-ng to 3.17.2 [fhajny 2018-08-15]
+	Updated www/eliom to 6.3.0nb3 [jaapb 2018-08-15]
