@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2018/06/25 17:14:19 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.17 2018/08/15 13:08:21 fhajny Exp $
 bin/dqtool
 bin/loggen
 bin/pdbtool
@@ -8,6 +8,7 @@ include/syslog-ng/ack_tracker.h
 include/syslog-ng/afinter.h
 include/syslog-ng/alarms.h
 include/syslog-ng/apphook.h
+include/syslog-ng/atomic-gssize.h
 include/syslog-ng/atomic.h
 include/syslog-ng/block-ref-parser.h
 include/syslog-ng/bookmark.h
@@ -214,6 +215,7 @@ include/syslog-ng/value-pairs/evttag.h
 include/syslog-ng/value-pairs/transforms.h
 include/syslog-ng/value-pairs/value-pairs.h
 include/syslog-ng/versioning.h
+include/syslog-ng/window-size-counter.h
 lib/libevtlog.la
 lib/libloggen_helper.la
 lib/libloggen_plugin.la
