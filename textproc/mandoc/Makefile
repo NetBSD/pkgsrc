@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/08/14 09:21:52 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2018/08/15 04:09:18 wiz Exp $
 
 DISTNAME=	mandoc-1.14.4
 CATEGORIES=	textproc devel
@@ -25,10 +25,8 @@ TEST_TARGET=	regress
 
 post-extract:
 	${ECHO} PREFIX=${PREFIX} > ${WRKSRC}/configure.local
-	${ECHO} MANDIR=${PREFIX}/${PKGMANDIR} >> ${WRKSRC}/configure.local
 	${ECHO} CFLAGS=\"${CFLAGS:Q}\" >> ${WRKSRC}/configure.local
 	${ECHO} LDFLAGS=\"${LDFLAGS:Q}\" >> ${WRKSRC}/configure.local
-	${ECHO} LD_SQLITE3=\"${LDFLAGS} -lsqlite3\" >> ${WRKSRC}/configure.local
 	${ECHO} INSTALL=\"${INSTALL:Q}\" >> ${WRKSRC}/configure.local
 	${ECHO} INSTALL_PROGRAM=\"${INSTALL_PROGRAM:Q}\" >> ${WRKSRC}/configure.local
 	${ECHO} INSTALL_LIB=\"${INSTALL_DATA:Q}\" >> ${WRKSRC}/configure.local
