@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3589 2018/08/15 15:32:25 nia Exp $
+$NetBSD: CHANGES-2018,v 1.3590 2018/08/15 16:26:32 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5112,3 +5112,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-mercurial to 4.7 [joerg 2018-08-15]
 	Added devel/rgbds version 0.3.7 [nia 2018-08-15]
 	Added emulators/libretro-sameboy version 0.11.1 [nia 2018-08-15]
+	Updated emulators/PC6001VX to 3.0.0 [tsutsui 2018-08-15]
