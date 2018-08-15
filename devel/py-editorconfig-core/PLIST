@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/04/14 12:18:31 leot Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/08/15 11:23:08 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -24,9 +24,6 @@ ${PYSITELIB}/editorconfig/ini.pyo
 ${PYSITELIB}/editorconfig/main.py
 ${PYSITELIB}/editorconfig/main.pyc
 ${PYSITELIB}/editorconfig/main.pyo
-${PYSITELIB}/editorconfig/odict.py
-${PYSITELIB}/editorconfig/odict.pyc
-${PYSITELIB}/editorconfig/odict.pyo
 ${PYSITELIB}/editorconfig/versiontools.py
 ${PYSITELIB}/editorconfig/versiontools.pyc
 ${PYSITELIB}/editorconfig/versiontools.pyo
