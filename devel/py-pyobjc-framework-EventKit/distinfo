@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/04/14 08:29:26 adam Exp $
+$NetBSD: distinfo,v 1.5 2018/08/15 19:00:51 adam Exp $
 
-SHA1 (pyobjc-framework-EventKit-4.2.1.tar.gz) = 2723f613ed0014c274144805f5105b60f600cd1b
-RMD160 (pyobjc-framework-EventKit-4.2.1.tar.gz) = e8cc369fdb2f2238c20e3bba52798bad55a57dd0
-SHA512 (pyobjc-framework-EventKit-4.2.1.tar.gz) = 9658df6452579dc532e235db2803c3be522e83075faa4010acd07c06ec88aa5eeb2bc6aecb6310ea2d8ce49867b9e247d705859d7333ae2e4e0f9e0d026d00cf
-Size (pyobjc-framework-EventKit-4.2.1.tar.gz) = 20431 bytes
+SHA1 (pyobjc-framework-EventKit-4.2.2.tar.gz) = 005f5f4a4ad9e9e22cdf5c5b75d9e62e3b7fd770
+RMD160 (pyobjc-framework-EventKit-4.2.2.tar.gz) = 8166298d205030f777fa1ff2c7f30615cbb8c529
+SHA512 (pyobjc-framework-EventKit-4.2.2.tar.gz) = 2d35b09506f2fba38df9890023d4b1a03707c5236e22ec976df0affe457940388c995b3ebdbced5652f97a6cc215469262bff25c9ac3a218fba7807a1247c6f2
+Size (pyobjc-framework-EventKit-4.2.2.tar.gz) = 20432 bytes
