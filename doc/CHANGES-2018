@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3573 2018/08/15 00:57:51 wen Exp $
+$NetBSD: CHANGES-2018,v 1.3574 2018/08/15 01:20:39 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5094,3 +5094,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-joblib to 0.12.2 [adam 2018-08-14]
 	Updated devel/p5-Devel-FindRef to 1.46 [wen 2018-08-15]
 	Updated devel/p5-ExtUtils-ModuleMaker to 0.63 [wen 2018-08-15]
+	Updated devel/p5-File-MimeInfo to 0.29 [wen 2018-08-15]
