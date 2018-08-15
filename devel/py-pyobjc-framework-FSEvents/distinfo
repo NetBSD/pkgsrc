@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/04/14 08:29:26 adam Exp $
+$NetBSD: distinfo,v 1.5 2018/08/15 19:00:51 adam Exp $
 
-SHA1 (pyobjc-framework-FSEvents-4.2.1.tar.gz) = 3339225f3d56130c48015be3f11729e54c0aa887
-RMD160 (pyobjc-framework-FSEvents-4.2.1.tar.gz) = aeb7c22fbd6c8258327b1b3b839bfc032acbdcd0
-SHA512 (pyobjc-framework-FSEvents-4.2.1.tar.gz) = dd3c5ecb481f9e4c9c4ecb101619639508e187e3fb98a4a5b893cecf12bd2b142e8bdf917bad428668ea268e8dfda294e63bf5ebed947c554c3923cbaf266d06
-Size (pyobjc-framework-FSEvents-4.2.1.tar.gz) = 24731 bytes
+SHA1 (pyobjc-framework-FSEvents-4.2.2.tar.gz) = 0d87040927cc464d41ca124119ee1cbff5d78366
+RMD160 (pyobjc-framework-FSEvents-4.2.2.tar.gz) = b711c22c0e2e410d1269f61da2c133cd3039b172
+SHA512 (pyobjc-framework-FSEvents-4.2.2.tar.gz) = 5824fbfe817ab196482446d2108da03ca828c12dfe3884034cee88be31acf1937a7cabdd930a170ae34ed096b1e4dce56be11ca72da663fae58297a416bcf562
+Size (pyobjc-framework-FSEvents-4.2.2.tar.gz) = 24737 bytes
