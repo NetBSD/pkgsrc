@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2018/05/20 10:23:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2018/08/15 14:04:42 joerg Exp $
 bin/hg
 ${PYSITELIB}/hgdemandimport/__init__.py
 ${PYSITELIB}/hgdemandimport/__init__.pyc
@@ -21,6 +21,9 @@ ${PYSITELIB}/hgext/amend.pyo
 ${PYSITELIB}/hgext/automv.py
 ${PYSITELIB}/hgext/automv.pyc
 ${PYSITELIB}/hgext/automv.pyo
+${PYSITELIB}/hgext/beautifygraph.py
+${PYSITELIB}/hgext/beautifygraph.pyc
+${PYSITELIB}/hgext/beautifygraph.pyo
 ${PYSITELIB}/hgext/blackbox.py
 ${PYSITELIB}/hgext/blackbox.pyc
 ${PYSITELIB}/hgext/blackbox.pyo
@@ -253,9 +256,6 @@ ${PYSITELIB}/hgext/narrow/narrowcopies.pyo
 ${PYSITELIB}/hgext/narrow/narrowdirstate.py
 ${PYSITELIB}/hgext/narrow/narrowdirstate.pyc
 ${PYSITELIB}/hgext/narrow/narrowdirstate.pyo
-${PYSITELIB}/hgext/narrow/narrowmerge.py
-${PYSITELIB}/hgext/narrow/narrowmerge.pyc
-${PYSITELIB}/hgext/narrow/narrowmerge.pyo
 ${PYSITELIB}/hgext/narrow/narrowpatch.py
 ${PYSITELIB}/hgext/narrow/narrowpatch.pyc
 ${PYSITELIB}/hgext/narrow/narrowpatch.pyo
@@ -455,6 +455,9 @@ ${PYSITELIB}/mercurial/destutil.pyo
 ${PYSITELIB}/mercurial/diffhelper.py
 ${PYSITELIB}/mercurial/diffhelper.pyc
 ${PYSITELIB}/mercurial/diffhelper.pyo
+${PYSITELIB}/mercurial/diffutil.py
+${PYSITELIB}/mercurial/diffutil.pyc
+${PYSITELIB}/mercurial/diffutil.pyo
 ${PYSITELIB}/mercurial/dirstate.py
 ${PYSITELIB}/mercurial/dirstate.pyc
 ${PYSITELIB}/mercurial/dirstate.pyo
@@ -509,6 +512,7 @@ ${PYSITELIB}/mercurial/help/color.txt
 ${PYSITELIB}/mercurial/help/common.txt
 ${PYSITELIB}/mercurial/help/config.txt
 ${PYSITELIB}/mercurial/help/dates.txt
+${PYSITELIB}/mercurial/help/deprecated.txt
 ${PYSITELIB}/mercurial/help/diffs.txt
 ${PYSITELIB}/mercurial/help/environment.txt
 ${PYSITELIB}/mercurial/help/extensions.txt
@@ -772,6 +776,9 @@ ${PYSITELIB}/mercurial/sslutil.pyo
 ${PYSITELIB}/mercurial/stack.py
 ${PYSITELIB}/mercurial/stack.pyc
 ${PYSITELIB}/mercurial/stack.pyo
+${PYSITELIB}/mercurial/state.py
+${PYSITELIB}/mercurial/state.pyc
+${PYSITELIB}/mercurial/state.pyo
 ${PYSITELIB}/mercurial/statichttprepo.py
 ${PYSITELIB}/mercurial/statichttprepo.pyc
 ${PYSITELIB}/mercurial/statichttprepo.pyo
