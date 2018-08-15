@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/04/14 08:29:24 adam Exp $
+$NetBSD: distinfo,v 1.3 2018/08/15 19:00:49 adam Exp $
 
-SHA1 (pyobjc-framework-ApplicationServices-4.2.1.tar.gz) = db75209d02de198aaee36b2651c4c61f8839c66f
-RMD160 (pyobjc-framework-ApplicationServices-4.2.1.tar.gz) = c02dd98c3d288f12696d8df31f7ff3f49ae25fee
-SHA512 (pyobjc-framework-ApplicationServices-4.2.1.tar.gz) = 2a9f542a36bdb93e71d7031b020045c62b5cb7a73429f85786c7fb8a9a6e13b1d2948ad4120480a87f3ac1b71b376263f2ed3d75791083b4ebf2204efc7c54e0
-Size (pyobjc-framework-ApplicationServices-4.2.1.tar.gz) = 50514 bytes
+SHA1 (pyobjc-framework-ApplicationServices-4.2.2.tar.gz) = c3d7c308a0978a7491ca4d1c5ea10a04b9bfa8b0
+RMD160 (pyobjc-framework-ApplicationServices-4.2.2.tar.gz) = 51b282720600de7108c40033bddc44436cd6ca5a
+SHA512 (pyobjc-framework-ApplicationServices-4.2.2.tar.gz) = 213459a0ffafe97975b0bc744f4b9c9b0980f23016cdfe73c20e433cef426594fa08c457f6e35ce75e50f2a071e69ede0d3fd4ca8bc9f34b632100c473be4f92
+Size (pyobjc-framework-ApplicationServices-4.2.2.tar.gz) = 50520 bytes
