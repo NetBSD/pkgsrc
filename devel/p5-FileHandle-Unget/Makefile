@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2017/06/12 12:34:32 maya Exp $
+# $NetBSD: Makefile,v 1.26 2018/08/15 01:31:40 wen Exp $
 
-DISTNAME=	FileHandle-Unget-0.1628
+DISTNAME=	FileHandle-Unget-0.1634
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=FileHandle/}
 
@@ -11,7 +10,7 @@ HOMEPAGE=	http://search.cpan.org/dist/FileHandle-Unget/
 COMMENT=	Perl5 module providing an improved filehandle
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
+DEPENDS+=	p5-File-Slurper-[0-9]*:../../devel/p5-File-Slurper
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 
 MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
