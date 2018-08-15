@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2018/05/20 11:08:06 wen Exp $
+$NetBSD: distinfo,v 1.10 2018/08/15 00:56:55 wen Exp $
 
-SHA1 (ExtUtils-ModuleMaker-0.62.tar.gz) = 8571edc11a998d17e3237d88987c525131ca4832
-RMD160 (ExtUtils-ModuleMaker-0.62.tar.gz) = 0868ffdd9fee4a837c7c7eb8850b27b59993516b
-SHA512 (ExtUtils-ModuleMaker-0.62.tar.gz) = 55eb7d38ba97d77505f4b0ccc1f81fc2be606a5cc868e243cb849bd2b36b08dfec9c2c7090dff6ae355cea48cac06bdf1b192eff6bc6e823e570c263e62581d2
-Size (ExtUtils-ModuleMaker-0.62.tar.gz) = 136234 bytes
+SHA1 (ExtUtils-ModuleMaker-0.63.tar.gz) = eea20447d31becb24b047deac8b66977163df9fe
+RMD160 (ExtUtils-ModuleMaker-0.63.tar.gz) = a7680cbae03b03da99424e41b8416463842397e6
+SHA512 (ExtUtils-ModuleMaker-0.63.tar.gz) = fc3d7fef201f1e8b05a6fde75fe6e63943a20edc5f42ae37c9f65ef88753c131ad7601bf7a33148462323384687dcd94f208ce37ba09a3f2b36b8014ee8628b3
+Size (ExtUtils-ModuleMaker-0.63.tar.gz) = 136420 bytes
