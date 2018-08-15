@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2018/04/14 08:29:23 adam Exp $
+# $NetBSD: Makefile.common,v 1.4 2018/08/15 19:00:48 adam Exp $
 # used by devel/py-pyobjc-core/Makefile
 # used by devel/py-pyobjc-framework-SceneKit/Makefile
 # used by devel/py-pyobjc-framework-GameCenter/Makefile
@@ -78,7 +78,7 @@
 # used by devel/py-pyobjc-framework-SystemConfiguration/Makefile
 # used by devel/py-pyobjc-framework-WebKit/Makefile
 
-PYOBJC_VERS=	4.2.1
+PYOBJC_VERS=	4.2.2
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pythonhosted.org/pyobjc/

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/04/14 08:29:27 adam Exp $
+$NetBSD: distinfo,v 1.3 2018/08/15 19:00:53 adam Exp $
 
-SHA1 (pyobjc-framework-MediaPlayer-4.2.1.tar.gz) = 3768dd081c74b9d9f15c9f3a08b7bb5432edf185
-RMD160 (pyobjc-framework-MediaPlayer-4.2.1.tar.gz) = 8452a249e05871f5e59da3d47cde2444cca0da81
-SHA512 (pyobjc-framework-MediaPlayer-4.2.1.tar.gz) = 4d6c452eb60f7ce909f9bfab5c81920d1c41b6b3ce61869c99cb981b3ef248127bf9eeecdc59cd290193e6d7e1aacd9783b85b521e301112c2411392dd1a4d5d
-Size (pyobjc-framework-MediaPlayer-4.2.1.tar.gz) = 12557 bytes
+SHA1 (pyobjc-framework-MediaPlayer-4.2.2.tar.gz) = f218c08442fb4a3c26fb76c8cf7792ee5bdc33bb
+RMD160 (pyobjc-framework-MediaPlayer-4.2.2.tar.gz) = ad639def508af0d536bfcecdca58aa6acaf56531
+SHA512 (pyobjc-framework-MediaPlayer-4.2.2.tar.gz) = 2ca43b93c9b2b7c0a2dd97243de3c118255f0fa5b551a3122eecc928823ec3ba7b2f6b0303c2f4d5241cac519657f31dce635f61769ff3921c96be8eeb2a5bf3
+Size (pyobjc-framework-MediaPlayer-4.2.2.tar.gz) = 12565 bytes
