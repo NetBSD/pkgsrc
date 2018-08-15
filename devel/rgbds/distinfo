@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2018/08/15 15:25:10 nia Exp $
+
+SHA1 (rgbds-0.3.7.tar.gz) = ea2b154cca70116a9350f1964eefd915ac95c8b8
+RMD160 (rgbds-0.3.7.tar.gz) = 4353996f8c9d8b5d3e9971f0978c30417edd010d
+SHA512 (rgbds-0.3.7.tar.gz) = bec4283b6ce4770b74303a732881bf06280a95a9d9b9b576c6e07e1ecdfcf6266abe4254739bfd7068d10002681d44a4764101c36c844d54157c8b6e6e5505d9
+Size (rgbds-0.3.7.tar.gz) = 135143 bytes
+SHA1 (patch-Makefile) = 50aa361a3cffb1c0d28bb6b6252e1748ce001f04

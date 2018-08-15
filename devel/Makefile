@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2715 2018/08/09 11:50:17 jperkin Exp $
+# $NetBSD: Makefile,v 1.2716 2018/08/15 15:25:10 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -2348,6 +2348,7 @@ SUBDIR+=	readline
 SUBDIR+=	rebar
 SUBDIR+=	refinecvs
 SUBDIR+=	reposurgeon
+SUBDIR+=	rgbds
 SUBDIR+=	ropper
 SUBDIR+=	roundup
 SUBDIR+=	rox-lib
