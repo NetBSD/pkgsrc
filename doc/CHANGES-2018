@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3587 2018/08/15 14:04:57 joerg Exp $
+$NetBSD: CHANGES-2018,v 1.3588 2018/08/15 15:25:30 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5110,3 +5110,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/eliom to 6.3.0nb3 [jaapb 2018-08-15]
 	Updated devel/confuse to 3.2.1 [ryoon 2018-08-15]
 	Updated devel/py-mercurial to 4.7 [joerg 2018-08-15]
+	Added devel/rgbds version 0.3.7 [nia 2018-08-15]
