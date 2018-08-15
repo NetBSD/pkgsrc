@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3574 2018/08/15 01:20:39 wen Exp $
+$NetBSD: CHANGES-2018,v 1.3575 2018/08/15 01:32:36 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5095,3 +5095,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Devel-FindRef to 1.46 [wen 2018-08-15]
 	Updated devel/p5-ExtUtils-ModuleMaker to 0.63 [wen 2018-08-15]
 	Updated devel/p5-File-MimeInfo to 0.29 [wen 2018-08-15]
+	Updated devel/p5-FileHandle-Unget to 0.1634 [wen 2018-08-15]
