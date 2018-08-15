@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3590 2018/08/15 16:26:32 tsutsui Exp $
+$NetBSD: CHANGES-2018,v 1.3591 2018/08/15 17:49:38 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5113,3 +5113,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/rgbds version 0.3.7 [nia 2018-08-15]
 	Added emulators/libretro-sameboy version 0.11.1 [nia 2018-08-15]
 	Updated emulators/PC6001VX to 3.0.0 [tsutsui 2018-08-15]
+	Updated net/ucspi-tcp6 to 1.06nb1 [schmonz 2018-08-15]
