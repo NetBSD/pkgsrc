@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2018/07/26 13:16:57 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2018/08/15 17:49:22 schmonz Exp $
 
 DISTNAME=		ucspi-tcp6-1.06
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		https://www.fehcom.de/ipnet/ucspi-tcp6/
 EXTRACT_SUFX=		.tgz
@@ -30,8 +31,10 @@ SUBST_SED.manz+=	-e 's|\.gz||g'
 .endif
 
 post-configure:
-	${RUN}cd ${DJB_CONFIG_DIR};	\
-	${ECHO} ${PKGMANDIR} > conf-man
+	${RUN}cd ${DJB_CONFIG_DIR};		\
+	${ECHO} ${PKGMANDIR} > conf-man;	\
+	${MKDIR} compile;			\
+	${ECHO} ${DJB_CONFIG_PREFIX}/bin > compile/home
 
 do-install:
 	cd ${WRKSRC};							\
