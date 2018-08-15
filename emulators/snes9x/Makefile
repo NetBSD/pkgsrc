@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2018/02/27 23:56:09 khorben Exp $
+# $NetBSD: Makefile,v 1.57 2018/08/15 07:21:07 nia Exp $
 
 SNESVER=		1.43
 DISTNAME=		snes9x-${SNESVER}-src
@@ -11,6 +11,7 @@ MASTER_SITES+=		http://files.ipherswipsite.com/snes9x/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.snes9x.com/
 COMMENT=		Super Nintendo Entertainment System (SNES) emulator
+LICENSE=		snes9x-license
 
 BROKEN_ON_PLATFORM=	${LP64PLATFORMS}
 MAKE_JOBS_SAFE=		no
