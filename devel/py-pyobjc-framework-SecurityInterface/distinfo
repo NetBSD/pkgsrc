@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/04/14 08:29:29 adam Exp $
+$NetBSD: distinfo,v 1.3 2018/08/15 19:00:55 adam Exp $
 
-SHA1 (pyobjc-framework-SecurityInterface-4.2.1.tar.gz) = 54e2b949e8c3b9f49d552bc9954b5a415c9685fd
-RMD160 (pyobjc-framework-SecurityInterface-4.2.1.tar.gz) = dec36550668aa99041001ae70dae0efeb3df607d
-SHA512 (pyobjc-framework-SecurityInterface-4.2.1.tar.gz) = 2aa4d0d4965784e6ef57ba25ef396ba18e7d33088795044eeeb0bbecf3ddfd4fa39e216ac7a8489cc7c9fad05c1e975afede40f0c74c4f7209eba7857e928f85
-Size (pyobjc-framework-SecurityInterface-4.2.1.tar.gz) = 22997 bytes
+SHA1 (pyobjc-framework-SecurityInterface-4.2.2.tar.gz) = 2af129f6e4c0d7d2f875134d5374a36f41f0d797
+RMD160 (pyobjc-framework-SecurityInterface-4.2.2.tar.gz) = 301858d30156f548ca4cb42c2a765b040969ac5f
+SHA512 (pyobjc-framework-SecurityInterface-4.2.2.tar.gz) = c1b05de9a75958dc4c8c510c11d3d8de3754286548fad788e37dc256c4ab4c685687bc7bf334c9bc815513d5a73b8ea28460fc7570725d222ded39fd1122b6a7
+Size (pyobjc-framework-SecurityInterface-4.2.2.tar.gz) = 23001 bytes
