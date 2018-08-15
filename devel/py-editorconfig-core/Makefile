@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/04/14 12:18:31 leot Exp $
+# $NetBSD: Makefile,v 1.2 2018/08/15 11:23:08 adam Exp $
 
-VERSION=	0.12.1
-DISTNAME=	EditorConfig-${VERSION}
-PKGNAME=	${PYPKGPREFIX}-editorconfig-core-${VERSION}
-CATEGORIES=	devel
+DISTNAME=	EditorConfig-0.12.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/EditorConfig/editorconfig-core/}
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=E/EditorConfig/}
 
 MAINTAINER=	nros@users.sourceforge.net
