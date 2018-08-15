@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/04/14 08:29:24 adam Exp $
+$NetBSD: distinfo,v 1.5 2018/08/15 19:00:49 adam Exp $
 
-SHA1 (pyobjc-framework-CFNetwork-4.2.1.tar.gz) = 5c985705fae6cc00206419a6d5e41cd28a6e220f
-RMD160 (pyobjc-framework-CFNetwork-4.2.1.tar.gz) = 7899edb18364aaad60ac9c56b90ea90e06c844ba
-SHA512 (pyobjc-framework-CFNetwork-4.2.1.tar.gz) = 3c2338fe1f27a030562f5137455eaa00eb9867ded9cb337a72c3969f9544310908e383cead7121bbae128c6e53cc4a2fa2d2789f97f7b93c6de91c96e3d76b22
-Size (pyobjc-framework-CFNetwork-4.2.1.tar.gz) = 70047 bytes
+SHA1 (pyobjc-framework-CFNetwork-4.2.2.tar.gz) = 4ec0582d60ccafc3e4e83f0ef18b30e93e03be68
+RMD160 (pyobjc-framework-CFNetwork-4.2.2.tar.gz) = 54068f1d0fdfbc33972ee5edd7345742c0d5a874
+SHA512 (pyobjc-framework-CFNetwork-4.2.2.tar.gz) = c9d4ebfc2337b90cc4d00d0db38b0d01326d320c58f8a30221235e7d1cda2b29aa79cf45cbc0c00c697e718fa7c8738a31fe969652745aefed86a2b52f89ac19
+Size (pyobjc-framework-CFNetwork-4.2.2.tar.gz) = 70055 bytes
