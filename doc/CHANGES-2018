@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3577 2018/08/15 02:04:34 wen Exp $
+$NetBSD: CHANGES-2018,v 1.3578 2018/08/15 02:10:05 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5098,3 +5098,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-FileHandle-Unget to 0.1634 [wen 2018-08-15]
 	Updated devel/p5-Getopt-Long-Descriptive to 0.103 [wen 2018-08-15]
 	Updated devel/p5-IO-AIO to 4.54 [wen 2018-08-15]
+	Updated devel/p5-Log-Any to 1.707 [wen 2018-08-15]
