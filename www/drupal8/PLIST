@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/07/16 02:21:49 wen Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/08/15 10:52:45 wen Exp $
 share/drupal/.csslintrc
 share/drupal/.editorconfig
 share/drupal/.eslintignore
@@ -13839,6 +13839,7 @@ share/drupal/vendor/symfony/http-kernel/HttpCache/ResponseCacheStrategyInterface
 share/drupal/vendor/symfony/http-kernel/HttpCache/Ssi.php
 share/drupal/vendor/symfony/http-kernel/HttpCache/Store.php
 share/drupal/vendor/symfony/http-kernel/HttpCache/StoreInterface.php
+share/drupal/vendor/symfony/http-kernel/HttpCache/SubRequestHandler.php
 share/drupal/vendor/symfony/http-kernel/HttpCache/SurrogateInterface.php
 share/drupal/vendor/symfony/http-kernel/HttpKernel.php
 share/drupal/vendor/symfony/http-kernel/HttpKernelInterface.php
