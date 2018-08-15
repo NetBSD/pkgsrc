@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3572 2018/08/15 00:53:25 wen Exp $
+$NetBSD: CHANGES-2018,v 1.3573 2018/08/15 00:57:51 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5093,3 +5093,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/aria2 to 1.32.0nb6 [jperkin 2018-08-14]
 	Updated devel/py-joblib to 0.12.2 [adam 2018-08-14]
 	Updated devel/p5-Devel-FindRef to 1.46 [wen 2018-08-15]
+	Updated devel/p5-ExtUtils-ModuleMaker to 0.63 [wen 2018-08-15]
