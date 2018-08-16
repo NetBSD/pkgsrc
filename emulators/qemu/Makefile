@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.187 2018/08/14 06:57:26 adam Exp $
+# $NetBSD: Makefile,v 1.188 2018/08/16 10:15:09 adam Exp $
 
-DISTNAME=	qemu-2.12.1
+DISTNAME=	qemu-3.0.0
 CATEGORIES=	emulators
 MASTER_SITES=	http://download.qemu-project.org/
 EXTRACT_SUFX=	.tar.xz
@@ -107,8 +107,8 @@ CONFIGURE_ARGS+=	--disable-coroutine-pool
 .endif
 
 PLIST_VARS+=		${UE_ARCHS} nbd ivshmem
-.for _var_ in ${USER_EMUL}
-PLIST.${_var_}=		YES
+.for pvar in ${USER_EMUL}
+PLIST.${pvar}=		YES
 .endfor
 
 TEST_TARGET=		check
