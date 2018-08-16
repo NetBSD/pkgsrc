@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3595 2018/08/16 08:37:25 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3596 2018/08/16 08:39:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5118,3 +5118,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/ImageMagick to 7.0.8.10 [wiz 2018-08-16]
 	Updated net/libfilezilla to 0.13.0 [wiz 2018-08-16]
 	Updated audio/abcde to 2.9.2 [wiz 2018-08-16]
+	Updated devel/apache-ant to 1.10.5 [wiz 2018-08-16]
