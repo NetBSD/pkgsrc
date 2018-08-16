@@ -1,6 +1,7 @@
-$NetBSD: patch-Makefile.in,v 1.3 2018/05/02 11:33:44 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.4 2018/08/16 11:38:53 wiz Exp $
 
 Install wx-config as a script, not program.
+https://trac.wxwidgets.org/ticket/18197
 
 --- Makefile.in.orig	2018-05-02 11:03:21.000000000 +0000
 +++ Makefile.in
