@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.114 2018/05/07 11:28:37 wiz Exp $
+# $NetBSD: Makefile,v 1.115 2018/08/16 08:57:09 wiz Exp $
 
-DISTNAME=	dbus-1.12.8
+DISTNAME=	dbus-1.12.10
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
@@ -68,7 +68,7 @@ PLIST.linux=		yes
 CONFIGURE_ARGS+=	--disable-selinux
 .endif
 
-PLIST_VARS+=    	linux launchd
+PLIST_VARS+=    	linux
 
 DBUS_CONF_DIR=		${PKG_SYSCONFBASE}/dbus-1
 OWN_DIRS+=		${DBUS_CONF_DIR}/services
