@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3616 2018/08/16 12:16:26 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3617 2018/08/16 12:20:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5144,3 +5144,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/latexmk to 459 [wiz 2018-08-16]
 	Updated devel/libgsf to 1.14.44 [wiz 2018-08-16]
 	Updated net/libsoup to 2.62.3 [wiz 2018-08-16]
+	Updated devel/npth to 1.6 [wiz 2018-08-16]
