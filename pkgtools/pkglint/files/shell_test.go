@@ -184,7 +184,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 
 	t.CheckOutputEmpty()
 
-	checkShellCommandLine("${RUN} echo $${variable+set}")
+	checkShellCommandLine("${RUN} set +x; echo $${variable+set}")
 
 	t.CheckOutputEmpty()
 
@@ -234,7 +234,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 		"WARN: fname:1: The shell command \"cp\" should not be hidden.",
 		"WARN: fname:1: Unknown shell command \"cp\".")
 
-	G.Pkg = NewPackage("category/pkgbase")
+	G.Pkg = NewPackage(t.File("category/pkgbase"))
 	G.Pkg.PlistDirs["share/pkgbase"] = true
 
 	// A directory that is found in the PLIST.

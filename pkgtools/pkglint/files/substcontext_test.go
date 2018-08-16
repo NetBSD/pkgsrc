@@ -90,7 +90,7 @@ func (s *Suite) Test_SubstContext__no_class(c *check.C) {
 		"WARN: Makefile:13: Incomplete SUBST block: SUBST_STAGE.repl missing.")
 }
 
-func (s *Suite) Test_SubstContext__conditionals(c *check.C) {
+func (s *Suite) Test_SubstContext__directives(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wextra")
@@ -119,7 +119,7 @@ func (s *Suite) Test_SubstContext__conditionals(c *check.C) {
 		"WARN: Makefile:18: All but the first \"SUBST_SED.os\" lines should use the \"+=\" operator.")
 }
 
-func (s *Suite) Test_SubstContext__one_conditional_missing_transformation(c *check.C) {
+func (s *Suite) Test_SubstContext__missing_transformation_in_one_branch(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wextra")
@@ -254,7 +254,7 @@ func simulateSubstLines(t *Tester, texts ...string) {
 		case text == "":
 			ctx.Finish(line)
 		case hasPrefix(text, "."):
-			ctx.Conditional(line)
+			ctx.Directive(line)
 		default:
 			ctx.Varassign(line)
 		}
