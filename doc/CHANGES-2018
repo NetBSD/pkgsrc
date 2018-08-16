@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3593 2018/08/16 08:23:25 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3594 2018/08/16 08:29:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5116,3 +5116,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/ucspi-tcp6 to 1.06nb1 [schmonz 2018-08-15]
 	Updated devel/py-pyobjc to 4.2.2 [adam 2018-08-15]
 	Updated graphics/ImageMagick to 7.0.8.10 [wiz 2018-08-16]
+	Updated net/libfilezilla to 0.13.0 [wiz 2018-08-16]
