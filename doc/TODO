@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18500 2018/08/16 12:48:19 wiz Exp $
+$NetBSD: TODO,v 1.18501 2018/08/16 12:55:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1431,7 +1431,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o userppp-030706
 	o userspace-rcu-0.9.1
 	o utilisp-1.14
-	o vala-0.40.8
 	o valgrind-3.13
 	o varnish-6.0
 	o varnish-5.1.3
