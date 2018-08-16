@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/08/11 13:59:39 nia Exp $
+# $NetBSD: Makefile,v 1.12 2018/08/16 13:25:27 nia Exp $
 
 DISTNAME=	libretro-mupen64plus-20180628
 CATEGORIES=	emulators
@@ -22,6 +22,16 @@ SUBST_FILES.vc=		Makefile
 SUBST_SED.vc+=		-e 's;/opt/vc;${PREFIX};g'
 
 MAKE_FLAGS+=		GIT_VERSION="-pkgsrc"
+
+.if !empty(MACHINE_ARCH:M*arm*)
+MAKE_FLAGS+=	WITH_DYNAREC=arm
+.elif ${MACHINE_ARCH} == "i386"
+MAKE_FLAGS+=	WITH_DYNAREC=x86
+.elif ${MACHINE_ARCH} == "x86_64"
+MAKE_FLAGS+=	WITH_DYNAREC=x86_64
+.else
+MAKE_FLAGS+=	WITH_DYNAREC=
+.endif
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
