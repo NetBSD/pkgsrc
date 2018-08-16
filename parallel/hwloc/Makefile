@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2018/08/09 11:15:31 prlw1 Exp $
+# $NetBSD: Makefile,v 1.23 2018/08/16 12:56:27 adam Exp $
 
 DISTNAME=	hwloc-1.11.10
 CATEGORIES=	parallel
@@ -17,9 +17,14 @@ CONFIGURE_ARGS+=	--enable-picky
 
 TEST_TARGET=	check
 
+.include "../../mk/bsd.prefs.mk"
+
 # libpci??
 #.include "../../graphics/cairo/buildlink3.mk" # optional
+.if ${OPSYS} != "Darwin"
+# libpciaccess is marked as broken on Darwin
 .include "../../sysutils/libpciaccess/buildlink3.mk"
+.endif
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
