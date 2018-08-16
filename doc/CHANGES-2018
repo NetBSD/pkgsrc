@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3614 2018/08/16 12:02:18 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3615 2018/08/16 12:04:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5142,3 +5142,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/webkit24-gtk to 2.4.11nb16 [he 2018-08-16]
 	Updated fonts/harfbuzz to 1.8.7 [wiz 2018-08-16]
 	Updated print/latexmk to 459 [wiz 2018-08-16]
+	Updated devel/libgsf to 1.14.44 [wiz 2018-08-16]
