@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2017/11/23 16:13:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2018/08/16 09:13:43 wiz Exp $
 bin/filezilla
 bin/fzputtygen
 bin/fzsftp
@@ -10,10 +10,6 @@ share/appdata/filezilla.appdata.xml
 share/applications/filezilla.desktop
 share/filezilla/docs/fzdefaults.xml.example
 share/filezilla/resources/16x16/filezilla.png
-share/filezilla/resources/16x16/sort_down_dark.png
-share/filezilla/resources/16x16/sort_down_light.png
-share/filezilla/resources/16x16/sort_up_dark.png
-share/filezilla/resources/16x16/sort_up_light.png
 share/filezilla/resources/16x16/throbber.gif
 share/filezilla/resources/16x16/unknown.png
 share/filezilla/resources/20x20/unknown.png
@@ -189,6 +185,7 @@ share/filezilla/resources/default/480x480/compare.png
 share/filezilla/resources/default/480x480/disconnect.png
 share/filezilla/resources/default/480x480/download.png
 share/filezilla/resources/default/480x480/downloadadd.png
+share/filezilla/resources/default/480x480/dropdown.png
 share/filezilla/resources/default/480x480/file.png
 share/filezilla/resources/default/480x480/filter.png
 share/filezilla/resources/default/480x480/find.png
@@ -197,6 +194,7 @@ share/filezilla/resources/default/480x480/folderback.png
 share/filezilla/resources/default/480x480/folderclosed.png
 share/filezilla/resources/default/480x480/folderup.png
 share/filezilla/resources/default/480x480/help.png
+share/filezilla/resources/default/480x480/leds.png
 share/filezilla/resources/default/480x480/localtreeview.png
 share/filezilla/resources/default/480x480/lock.png
 share/filezilla/resources/default/480x480/logview.png
@@ -208,6 +206,10 @@ share/filezilla/resources/default/480x480/remotetreeview.png
 share/filezilla/resources/default/480x480/server.png
 share/filezilla/resources/default/480x480/showhidden.png
 share/filezilla/resources/default/480x480/sitemanager.png
+share/filezilla/resources/default/480x480/sort_down_dark.png
+share/filezilla/resources/default/480x480/sort_down_light.png
+share/filezilla/resources/default/480x480/sort_up_dark.png
+share/filezilla/resources/default/480x480/sort_up_light.png
 share/filezilla/resources/default/480x480/speedlimits.png
 share/filezilla/resources/default/480x480/symlink.png
 share/filezilla/resources/default/480x480/synchronize.png
@@ -216,7 +218,6 @@ share/filezilla/resources/default/480x480/upload.png
 share/filezilla/resources/default/480x480/uploadadd.png
 share/filezilla/resources/default/theme.xml
 share/filezilla/resources/defaultfilters.xml
-share/filezilla/resources/dropdown.png
 share/filezilla/resources/finished.wav
 share/filezilla/resources/flatzilla/16x16/ascii.png
 share/filezilla/resources/flatzilla/16x16/auto.png
@@ -339,7 +340,6 @@ share/filezilla/resources/flatzilla/48x48/synchronize.png
 share/filezilla/resources/flatzilla/48x48/upload.png
 share/filezilla/resources/flatzilla/48x48/uploadadd.png
 share/filezilla/resources/flatzilla/theme.xml
-share/filezilla/resources/leds.png
 share/filezilla/resources/lone/16x16/ascii.png
 share/filezilla/resources/lone/16x16/auto.png
 share/filezilla/resources/lone/16x16/binary.png
@@ -684,7 +684,6 @@ share/filezilla/resources/tango/theme.xml
 share/filezilla/resources/xrc/certificate.xrc
 share/filezilla/resources/xrc/dialogs.xrc
 share/filezilla/resources/xrc/inputdialog.xrc
-share/filezilla/resources/xrc/menus.xrc
 share/filezilla/resources/xrc/netconfwizard.xrc
 share/filezilla/resources/xrc/settings.xrc
 share/filezilla/resources/xrc/sitemanager.xrc
