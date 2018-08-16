@@ -45,7 +45,7 @@ loop:
 				}
 			}
 
-		case mkline.IsCond():
+		case mkline.IsDirective():
 			// The conditionals are typically for OPSYS and MACHINE_ARCH.
 
 		case mkline.IsInclude():
@@ -74,7 +74,7 @@ loop:
 
 	for ; !exp.EOF(); exp.Advance() {
 		mkline := exp.CurrentMkLine()
-		if mkline.IsCond() && (mkline.Directive() == "if" || mkline.Directive() == "elif") {
+		if mkline.IsDirective() && (mkline.Directive() == "if" || mkline.Directive() == "elif") {
 			cond := NewMkParser(mkline.Line, mkline.Args(), false).MkCond()
 			if cond == nil {
 				continue

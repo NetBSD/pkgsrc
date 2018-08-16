@@ -138,7 +138,10 @@ func (pkglint *Pkglint) Main(argv ...string) (exitcode int) {
 			dummyLine.Fatalf("Cannot create profiling file: %s", err)
 		}
 		pprof.StartCPUProfile(f)
-		defer pprof.StopCPUProfile()
+		defer func() {
+			pprof.StopCPUProfile()
+			f.Close()
+		}()
 
 		regex.Profiling = true
 		pkglint.loghisto = histogram.New()
@@ -146,7 +149,7 @@ func (pkglint *Pkglint) Main(argv ...string) (exitcode int) {
 		defer func() {
 			pkglint.logOut.Write("")
 			pkglint.loghisto.PrintStats("loghisto", pkglint.logOut.out, -1)
-			regex.PrintStats()
+			regex.PrintStats(pkglint.logOut.out)
 			pkglint.loaded.PrintStats("loaded", pkglint.logOut.out, 50)
 		}()
 	}
@@ -168,7 +171,7 @@ func (pkglint *Pkglint) Main(argv ...string) (exitcode int) {
 	}
 
 	pkglint.Pkgsrc = NewPkgsrc(firstArg + "/" + relTopdir)
-	pkglint.Pkgsrc.Load()
+	pkglint.Pkgsrc.LoadInfrastructure()
 
 	currentUser, err := user.Current()
 	if err == nil {
@@ -296,13 +299,13 @@ func (pkglint *Pkglint) CheckDirent(fname string) {
 	isDir := st.Mode().IsDir()
 	isReg := st.Mode().IsRegular()
 
-	currentDir := ifelseStr(isReg, path.Dir(fname), fname)
-	absCurrentDir := abspath(currentDir)
+	dir := ifelseStr(isReg, path.Dir(fname), fname)
+	absCurrentDir := abspath(dir)
 	pkglint.Wip = !pkglint.opts.Import && matches(absCurrentDir, `/wip/|/wip$`)
 	pkglint.Infrastructure = matches(absCurrentDir, `/mk/|/mk$`)
-	pkgsrcdir := findPkgsrcTopdir(currentDir)
+	pkgsrcdir := findPkgsrcTopdir(dir)
 	if pkgsrcdir == "" {
-		NewLineWhole(fname).Errorf("Cannot determine the pkgsrc root directory for %q.", cleanpath(currentDir))
+		NewLineWhole(fname).Errorf("Cannot determine the pkgsrc root directory for %q.", cleanpath(dir))
 		return
 	}
 
@@ -316,11 +319,11 @@ func (pkglint *Pkglint) CheckDirent(fname string) {
 
 	switch pkgsrcdir {
 	case "../..":
-		pkglint.checkdirPackage(pkglint.Pkgsrc.ToRel(currentDir))
+		pkglint.checkdirPackage(dir)
 	case "..":
-		CheckdirCategory(currentDir)
+		CheckdirCategory(dir)
 	case ".":
-		CheckdirToplevel(currentDir)
+		CheckdirToplevel(dir)
 	default:
 		NewLineWhole(fname).Errorf("Cannot check directories outside a pkgsrc tree.")
 	}
@@ -374,7 +377,7 @@ func CheckfileExtra(fname string) {
 		defer trace.Call1(fname)()
 	}
 
-	if lines := LoadNonemptyLines(fname, false); lines != nil {
+	if lines := Load(fname, NotEmpty|LogErrors); lines != nil {
 		ChecklinesTrailingEmptyLines(lines)
 	}
 }
@@ -458,13 +461,13 @@ func CheckfileMk(fname string) {
 		defer trace.Call1(fname)()
 	}
 
-	lines := LoadNonemptyLines(fname, true)
-	if lines == nil {
+	mklines := LoadMk(fname, NotEmpty|LogErrors)
+	if mklines == nil {
 		return
 	}
 
-	NewMkLines(lines).Check()
-	SaveAutofixChanges(lines)
+	mklines.Check()
+	mklines.SaveAutofixChanges()
 }
 
 func (pkglint *Pkglint) Checkfile(fname string) {
@@ -514,21 +517,21 @@ func (pkglint *Pkglint) Checkfile(fname string) {
 
 	case basename == "buildlink3.mk":
 		if pkglint.opts.CheckBuildlink3 {
-			if lines := LoadNonemptyLines(fname, true); lines != nil {
-				ChecklinesBuildlink3Mk(NewMkLines(lines))
+			if mklines := LoadMk(fname, NotEmpty|LogErrors); mklines != nil {
+				ChecklinesBuildlink3Mk(mklines)
 			}
 		}
 
 	case hasPrefix(basename, "DESCR"):
 		if pkglint.opts.CheckDescr {
-			if lines := LoadNonemptyLines(fname, false); lines != nil {
+			if lines := Load(fname, NotEmpty|LogErrors); lines != nil {
 				ChecklinesDescr(lines)
 			}
 		}
 
 	case basename == "distinfo":
 		if pkglint.opts.CheckDistinfo {
-			if lines := LoadNonemptyLines(fname, false); lines != nil {
+			if lines := Load(fname, NotEmpty|LogErrors); lines != nil {
 				ChecklinesDistinfo(lines)
 			}
 		}
@@ -540,21 +543,21 @@ func (pkglint *Pkglint) Checkfile(fname string) {
 
 	case hasPrefix(basename, "MESSAGE"):
 		if pkglint.opts.CheckMessage {
-			if lines := LoadNonemptyLines(fname, false); lines != nil {
+			if lines := Load(fname, NotEmpty|LogErrors); lines != nil {
 				ChecklinesMessage(lines)
 			}
 		}
 
 	case basename == "options.mk":
 		if pkglint.opts.CheckOptions {
-			if lines := LoadNonemptyLines(fname, true); lines != nil {
-				ChecklinesOptionsMk(NewMkLines(lines))
+			if mklines := LoadMk(fname, NotEmpty|LogErrors); mklines != nil {
+				ChecklinesOptionsMk(mklines)
 			}
 		}
 
 	case matches(basename, `^patch-[-A-Za-z0-9_.~+]*[A-Za-z0-9_]$`):
 		if pkglint.opts.CheckPatches {
-			if lines := LoadNonemptyLines(fname, false); lines != nil {
+			if lines := Load(fname, NotEmpty|LogErrors); lines != nil {
 				ChecklinesPatch(lines)
 			}
 		}
@@ -574,7 +577,7 @@ func (pkglint *Pkglint) Checkfile(fname string) {
 
 	case hasPrefix(basename, "PLIST"):
 		if pkglint.opts.CheckPlist {
-			if lines := LoadNonemptyLines(fname, false); lines != nil {
+			if lines := Load(fname, NotEmpty|LogErrors); lines != nil {
 				ChecklinesPlist(lines)
 			}
 		}

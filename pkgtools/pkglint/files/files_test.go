@@ -150,3 +150,23 @@ func (s *Suite) Test_splitRawLine(c *check.C) {
 	c.Check(trailingWhitespace, equals, "   ")
 	c.Check(continuation, equals, "\\")
 }
+
+func (s *Suite) Test_Load(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("empty")
+
+	func() {
+		defer t.ExpectFatalError()
+		Load(t.File("does-not-exist"), MustSucceed)
+	}()
+
+	func() {
+		defer t.ExpectFatalError()
+		Load(t.File("empty"), MustSucceed|NotEmpty)
+	}()
+
+	t.CheckOutputLines(
+		"FATAL: ~/does-not-exist: Cannot be read.",
+		"FATAL: ~/empty: Must not be empty.")
+}

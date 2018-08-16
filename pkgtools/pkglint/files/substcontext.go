@@ -134,13 +134,13 @@ func (ctx *SubstContext) Varassign(mkline MkLine) {
 	}
 }
 
-func (ctx *SubstContext) Conditional(mkline MkLine) {
+func (ctx *SubstContext) Directive(mkline MkLine) {
 	if ctx.id == "" || !G.opts.WarnExtra {
 		return
 	}
 
 	if trace.Tracing {
-		trace.Stepf("+ SubstContext.Conditional %#v %v#", ctx.curr, ctx.inAllBranches)
+		trace.Stepf("+ SubstContext.Directive %#v %v#", ctx.curr, ctx.inAllBranches)
 	}
 	dir := mkline.Directive()
 	if dir == "if" {
@@ -159,7 +159,7 @@ func (ctx *SubstContext) Conditional(mkline MkLine) {
 		ctx.curr.Or(ctx.inAllBranches)
 	}
 	if trace.Tracing {
-		trace.Stepf("- SubstContext.Conditional %#v %v#", ctx.curr, ctx.inAllBranches)
+		trace.Stepf("- SubstContext.Directive %#v %v#", ctx.curr, ctx.inAllBranches)
 	}
 }
 
