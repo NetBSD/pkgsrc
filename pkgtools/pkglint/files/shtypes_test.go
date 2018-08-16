@@ -32,3 +32,10 @@ func (s *Suite) Test_ShAtom_String(c *check.C) {
 func (s *Suite) Test_ShQuoting_String(c *check.C) {
 	c.Check(shqDquotBacktSquot.String(), equals, "dbs")
 }
+
+func (s *Suite) Test_ShToken_String(c *check.C) {
+	tokenizer := NewShTokenizer(dummyLine, "${ECHO} \"hello, world\"", false)
+
+	c.Check(tokenizer.ShToken().String(), equals, "ShToken([varuse(\"ECHO\")])")
+	c.Check(tokenizer.ShToken().String(), equals, "ShToken([ShAtom(word, \"\\\"\", d) ShAtom(word, \"hello, world\", d) \"\\\"\"])")
+}

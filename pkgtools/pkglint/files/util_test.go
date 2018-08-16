@@ -86,11 +86,13 @@ func (s *Suite) Test_isEmptyDir_and_getSubdirs(c *check.C) {
 
 	if absent := t.File("nonexistent"); true {
 		c.Check(isEmptyDir(absent), equals, true) // Counts as empty.
-		defer t.ExpectFatalError(func() {
-			c.Check(t.Output(), check.Matches, `FATAL: (.+): Cannot be read: open (.+): (.+)\n`)
-		})
-		getSubdirs(absent) // Panics with a pkglintFatal.
-		c.FailNow()
+
+		func() {
+			defer t.ExpectFatalError()
+			getSubdirs(absent) // Panics with a pkglintFatal.
+		}()
+		// The last group from the error message is localized, therefore the matching.
+		c.Check(t.Output(), check.Matches, `FATAL: ~/nonexistent: Cannot be read: open ~/nonexistent: (.+)\n`)
 	}
 }
 
