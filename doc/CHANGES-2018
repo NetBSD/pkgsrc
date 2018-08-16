@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3618 2018/08/16 12:21:53 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3619 2018/08/16 12:23:20 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5146,3 +5146,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/libsoup to 2.62.3 [wiz 2018-08-16]
 	Updated devel/npth to 1.6 [wiz 2018-08-16]
 	Updated x11/libxkbcommon to 0.8.2 [wiz 2018-08-16]
+	Updated lang/nodejs to 10.9.0 [fhajny 2018-08-16]
