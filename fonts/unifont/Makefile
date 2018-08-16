@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2017/01/01 15:38:11 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2018/08/16 12:48:11 wiz Exp $
 
-DISTNAME=	unifont-9.0.06
+DISTNAME=	unifont-11.0.02
 CATEGORIES=	fonts
-MASTER_SITES=	http://unifoundry.com/pub/${DISTNAME}/
+MASTER_SITES=	http://unifoundry.com/pub/unifont/${DISTNAME}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://unifoundry.com/unifont.html
+HOMEPAGE=	http://unifoundry.com/unifont/index.html
 COMMENT=	GNU Unifont - glyphs for all printable code points in Unicode 9.0 BMP
 LICENSE=	gnu-gpl-v2 # or later
 
