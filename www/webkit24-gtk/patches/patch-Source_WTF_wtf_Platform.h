@@ -1,6 +1,7 @@
-$NetBSD: patch-Source_WTF_wtf_Platform.h,v 1.3 2017/04/24 15:40:12 wiz Exp $
+$NetBSD: patch-Source_WTF_wtf_Platform.h,v 1.4 2018/08/16 11:49:13 he Exp $
 
-Add support for sparc and sparc64, disable ASSEMBLER and YARR_JIT for now
+Add support for sparc and sparc64, disable ASSEMBLER for now.
+Turn off YARR_JIT if JIT is turned off.
 
 --- Source/WTF/wtf/Platform.h.orig	2016-04-10 06:48:36.000000000 +0000
 +++ Source/WTF/wtf/Platform.h
@@ -31,25 +32,23 @@ Add support for sparc and sparc64, disable ASSEMBLER and YARR_JIT for now
      || CPU(MIPS64) \
      || CPU(PPC64) \
      || CPU(PPC64LE)
-@@ -824,7 +837,7 @@
- #define ENABLE_REGEXP_TRACING 0
- 
- /* Yet Another Regex Runtime - turned on by default for JIT enabled ports. */
--#if !defined(ENABLE_YARR_JIT) && (ENABLE(JIT) || ENABLE(LLINT_C_LOOP))
-+#if !defined(ENABLE_YARR_JIT) && (ENABLE(JIT) || ENABLE(LLINT_C_LOOP)) && !CPU(SPARC64) && !CPU(SPARC)
- #define ENABLE_YARR_JIT 1
- 
- /* Setting this flag compares JIT results with interpreter results. */
-@@ -837,10 +850,12 @@
- #if defined(ENABLE_ASSEMBLER) && !ENABLE_ASSEMBLER
- #error "Cannot enable the JIT or RegExp JIT without enabling the Assembler"
- #else
-+#if !CPU(SPARC) && !CPU(SPARC64)
- #undef ENABLE_ASSEMBLER
- #define ENABLE_ASSEMBLER 1
+@@ -668,6 +681,7 @@
+ /* Disable the JITs if we're forcing the cloop to be enabled */
+ #if defined(ENABLE_LLINT_C_LOOP) && ENABLE_LLINT_C_LOOP
+ #define ENABLE_JIT 0
++#define ENABLE_YARR_JIT 0
+ #define ENABLE_DFG_JIT 0
+ #define ENABLE_FTL_JIT 0
  #endif
+@@ -757,9 +771,11 @@
+ /* If the jit is not available, enable the LLInt C Loop: */
+ #if !ENABLE(JIT)
+ #undef ENABLE_LLINT        /* Undef so that we can redefine it. */
++#undef ENABLE_YARR_JIT     /* Undef so that we can redefine it. */
+ #undef ENABLE_LLINT_C_LOOP /* Undef so that we can redefine it. */
+ #undef ENABLE_DFG_JIT      /* Undef so that we can redefine it. */
+ #define ENABLE_LLINT 1
++#define ENABLE_YARR_JIT 0
+ #define ENABLE_LLINT_C_LOOP 1
+ #define ENABLE_DFG_JIT 0
  #endif
-+#endif
- 
- /* If the Disassembler is enabled, then the Assembler must be enabled as well: */
- #if ENABLE(DISASSEMBLER)
