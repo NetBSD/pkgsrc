@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2018/07/20 03:34:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2018/08/16 18:54:38 adam Exp $
 
 DISTNAME=	libzmf-0.0.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	converters
 MASTER_SITES=	http://dev-www.libreoffice.org/src/libzmf/
 EXTRACT_SUFX=	.tar.xz

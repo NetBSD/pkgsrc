@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.53 2018/07/04 13:40:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.54 2018/08/16 18:54:37 adam Exp $
 
 DISTNAME=	Unreal3.2.10.5
 PKGNAME=	${DISTNAME:tl:S/l/lircd-/1}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	chat
 MASTER_SITES=	http://unrealircd.org/downloads/
 

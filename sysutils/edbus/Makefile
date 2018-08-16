@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2018/04/29 21:31:23 adam Exp $
+# $NetBSD: Makefile,v 1.20 2018/08/16 18:54:31 adam Exp $
 #
 
 DISTNAME=	e_dbus-1.7.7
 PKGNAME=	edbus-1.7.7
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	sysutils
 MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2

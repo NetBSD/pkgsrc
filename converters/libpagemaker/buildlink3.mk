@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2018/04/29 21:31:18 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2018/08/16 18:54:27 adam Exp $
 
 BUILDLINK_TREE+=	libpagemaker
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libpagemaker
 LIBPAGEMAKER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libpagemaker+=	libpagemaker>=0.0.2
-BUILDLINK_ABI_DEPENDS.libpagemaker?=	libpagemaker>=0.0.4nb1
+BUILDLINK_ABI_DEPENDS.libpagemaker?=	libpagemaker>=0.0.4nb2
 BUILDLINK_PKGSRCDIR.libpagemaker?=	../../converters/libpagemaker
 
 .include "../../converters/librevenge/buildlink3.mk"
