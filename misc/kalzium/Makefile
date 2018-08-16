@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2018/04/29 21:31:53 adam Exp $
+# $NetBSD: Makefile,v 1.40 2018/08/16 18:55:01 adam Exp $
 
 DISTNAME=	kalzium-16.08.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	misc
 COMMENT=	Periodic table of elements
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/16.08.0/src/}

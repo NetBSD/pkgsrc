@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2018/04/29 21:31:59 adam Exp $
+# $NetBSD: Makefile,v 1.25 2018/08/16 18:55:07 adam Exp $
 
 DISTNAME=	krdc-15.12.0
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	net
 COMMENT=	KDE remote desktop client
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.12.0/src/}

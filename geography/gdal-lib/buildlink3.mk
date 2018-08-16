@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.49 2018/04/29 21:31:20 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.50 2018/08/16 18:54:29 adam Exp $
 
 BUILDLINK_TREE+=	gdal-lib
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gdal-lib
 GDAL_LIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gdal-lib+=	gdal-lib>=1.6.1
-BUILDLINK_ABI_DEPENDS.gdal-lib+=	gdal-lib>=2.2.4nb2
+BUILDLINK_ABI_DEPENDS.gdal-lib+=	gdal-lib>=2.2.4nb4
 BUILDLINK_PKGSRCDIR.gdal-lib?=		../../geography/gdal-lib
 
 pkgbase := gdal-lib

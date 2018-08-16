@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2018/07/18 00:06:13 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2018/08/16 18:54:42 adam Exp $
 
 DISTNAME=		xsd-3.2.0+dep
 EXTRACT_SUFX=		.tar.bz2
 PKGNAME=		xsd-3.2.0
-PKGREVISION=		18
+PKGREVISION=		19
 CATEGORIES=		devel textproc
 MASTER_SITES=		https://www.codesynthesis.com/download/xsd/3.2/
 
