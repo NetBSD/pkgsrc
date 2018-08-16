@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3607 2018/08/16 11:05:57 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3608 2018/08/16 11:26:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5132,3 +5132,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/libatomic_ops to 7.6.6 [adam 2018-08-16]
 	Updated emulators/qemu to 3.0.0 [adam 2018-08-16]
 	Updated security/gnutls to 3.6.3 [wiz 2018-08-16]
+	Updated lang/guile22 to 2.2.4 [wiz 2018-08-16]
