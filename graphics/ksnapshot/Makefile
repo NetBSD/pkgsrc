@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2018/04/29 21:31:45 adam Exp $
+# $NetBSD: Makefile,v 1.39 2018/08/16 18:54:53 adam Exp $
 
 DISTNAME=	ksnapshot-15.08.3
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	graphics
 COMMENT=	KDE screen capture program
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.08.3/src/}
