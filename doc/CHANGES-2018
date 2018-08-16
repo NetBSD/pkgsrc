@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3636 2018/08/16 20:41:56 rillig Exp $
+$NetBSD: CHANGES-2018,v 1.3637 2018/08/16 21:47:28 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5172,3 +5172,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/powerdns to 4.1.3 [adam 2018-08-16]
 	Updated misc/stellarium to 0.18.2 [adam 2018-08-16]
 	Updated pkgtools/pkglint to 5.6.1 [rillig 2018-08-16]
+	Updated audio/grip to 3.9.0 [triaxx 2018-08-16]
