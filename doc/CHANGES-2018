@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3598 2018/08/16 08:54:12 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3599 2018/08/16 08:57:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5121,3 +5121,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/apache-ant to 1.10.5 [wiz 2018-08-16]
 	Updated archivers/brotli to 1.0.5 [wiz 2018-08-16]
 	Updated misc/calibre to 3.29.0 [wiz 2018-08-16]
+	Updated sysutils/dbus to 1.12.10 [wiz 2018-08-16]
