@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2018/04/29 21:31:22 adam Exp $
+# $NetBSD: Makefile,v 1.27 2018/08/16 18:54:31 adam Exp $
 
 DISTNAME=	Botan-2.1.0
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	security
 MASTER_SITES=	https://botan.randombit.net/releases/
 EXTRACT_SUFX=	.tgz
