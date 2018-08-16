@@ -5,7 +5,7 @@ import "gopkg.in/check.v1"
 func (s *Suite) Test_Package_pkgnameFromDistname(c *check.C) {
 	t := s.Init(c)
 
-	pkg := NewPackage("dummy")
+	pkg := NewPackage(t.File("category/package"))
 	pkg.vars.Define("PKGNAME", t.NewMkLine("Makefile", 5, "PKGNAME=dummy"))
 
 	c.Check(pkg.pkgnameFromDistname("pkgname-1.0", "whatever"), equals, "pkgname-1.0")
@@ -25,7 +25,7 @@ func (s *Suite) Test_Package_CheckVarorder(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Worder")
-	pkg := NewPackage("x11/9term")
+	pkg := NewPackage(t.File("x11/9term"))
 
 	pkg.CheckVarorder(t.NewMkLines("Makefile",
 		MkRcsID,
@@ -56,7 +56,7 @@ func (s *Suite) Test_Package_CheckVarorder__comments_do_not_crash(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Worder")
-	pkg := NewPackage("x11/9term")
+	pkg := NewPackage(t.File("x11/9term"))
 
 	pkg.CheckVarorder(t.NewMkLines("Makefile",
 		MkRcsID,
@@ -79,7 +79,7 @@ func (s *Suite) Test_Package_CheckVarorder__comments_are_ignored(c *check.C) {
 
 	t.SetupCommandLine("-Worder")
 
-	pkg := NewPackage("x11/9term")
+	pkg := NewPackage(t.File("x11/9term"))
 
 	pkg.CheckVarorder(t.NewMkLines("Makefile",
 		MkRcsID,
@@ -95,12 +95,12 @@ func (s *Suite) Test_Package_CheckVarorder__comments_are_ignored(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_Package_CheckVarorder__conditionals_skip(c *check.C) {
+func (s *Suite) Test_Package_CheckVarorder__skip_if_there_are_directives(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Worder")
 
-	pkg := NewPackage("x11/9term")
+	pkg := NewPackage(t.File("category/package"))
 
 	pkg.CheckVarorder(t.NewMkLines("Makefile",
 		MkRcsID,
@@ -113,8 +113,8 @@ func (s *Suite) Test_Package_CheckVarorder__conditionals_skip(c *check.C) {
 		".endif",
 		"LICENSE=\tgnu-gpl-v2"))
 
-	// No warning about the missing COMMENT since the conditional
-	// skips the whole check.
+	// No warning about the missing COMMENT since the directive
+	// causes the whole check to be skipped.
 	t.CheckOutputEmpty()
 }
 
@@ -122,7 +122,7 @@ func (s *Suite) Test_Package_CheckVarorder_GitHub(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Worder")
-	pkg := NewPackage("x11/9term")
+	pkg := NewPackage(t.File("x11/9term"))
 
 	pkg.CheckVarorder(t.NewMkLines("Makefile",
 		MkRcsID,
@@ -172,7 +172,7 @@ func (s *Suite) Test_Package_CheckVarorder__MASTER_SITES(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Worder")
-	pkg := NewPackage("category/package")
+	pkg := NewPackage(t.File("category/package"))
 
 	pkg.CheckVarorder(t.NewMkLines("Makefile",
 		MkRcsID,
@@ -196,7 +196,7 @@ func (s *Suite) Test_Package_CheckVarorder__diagnostics(c *check.C) {
 
 	t.SetupCommandLine("-Worder")
 	t.SetupVartypes()
-	pkg := NewPackage("category/package")
+	pkg := NewPackage(t.File("category/package"))
 
 	pkg.CheckVarorder(t.NewMkLines("Makefile",
 		MkRcsID,
@@ -246,7 +246,7 @@ func (s *Suite) Test_Package_CheckVarorder__diagnostics(c *check.C) {
 func (s *Suite) Test_Package_getNbpart(c *check.C) {
 	t := s.Init(c)
 
-	pkg := NewPackage("category/pkgbase")
+	pkg := NewPackage(t.File("category/pkgbase"))
 	pkg.vars.Define("PKGREVISION", t.NewMkLine("Makefile", 1, "PKGREVISION=14"))
 
 	c.Check(pkg.getNbpart(), equals, "nb14")
@@ -260,7 +260,7 @@ func (s *Suite) Test_Package_getNbpart(c *check.C) {
 func (s *Suite) Test_Package_determineEffectivePkgVars__precedence(c *check.C) {
 	t := s.Init(c)
 
-	pkg := NewPackage("category/pkgbase")
+	pkg := NewPackage(t.File("category/pkgbase"))
 	pkgnameLine := t.NewMkLine("Makefile", 3, "PKGNAME=pkgname-1.0")
 	distnameLine := t.NewMkLine("Makefile", 4, "DISTNAME=distname-1.0")
 	pkgrevisionLine := t.NewMkLine("Makefile", 5, "PKGREVISION=13")
@@ -279,21 +279,19 @@ func (s *Suite) Test_Package_determineEffectivePkgVars__precedence(c *check.C) {
 func (s *Suite) Test_Package_checkPossibleDowngrade(c *check.C) {
 	t := s.Init(c)
 
-	G.Pkg = NewPackage("category/pkgbase")
+	t.CreateFileLines("doc/CHANGES-2018",
+		"\tUpdated category/pkgbase to 1.8 [committer 2018-01-05]")
+	G.Pkgsrc.loadDocChanges()
+
+	t.Chdir("category/pkgbase")
+	G.Pkg = NewPackage(".")
 	G.Pkg.EffectivePkgname = "package-1.0nb15"
-	G.Pkg.EffectivePkgnameLine = t.NewMkLine("category/pkgbase/Makefile", 5, "PKGNAME=dummy")
-	G.Pkgsrc.LastChange = map[string]*Change{
-		"category/pkgbase": {
-			Action:  "Updated",
-			Version: "1.8",
-			Line:    t.NewLine("doc/CHANGES", 116, "dummy"),
-		},
-	}
+	G.Pkg.EffectivePkgnameLine = t.NewMkLine("Makefile", 5, "PKGNAME=dummy")
 
 	G.Pkg.checkPossibleDowngrade()
 
 	t.CheckOutputLines(
-		"WARN: category/pkgbase/Makefile:5: The package is being downgraded from 1.8 (see ../../doc/CHANGES:116) to 1.0nb15.")
+		"WARN: Makefile:5: The package is being downgraded from 1.8 (see ../../doc/CHANGES-2018:1) to 1.0nb15.")
 
 	G.Pkgsrc.LastChange["category/pkgbase"].Version = "1.0nb22"
 
@@ -305,31 +303,33 @@ func (s *Suite) Test_Package_checkPossibleDowngrade(c *check.C) {
 func (s *Suite) Test_checkdirPackage(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupFileLines("category/package/Makefile",
+	t.Chdir("category/package")
+	t.SetupFileLines("Makefile",
 		MkRcsID)
 
-	G.checkdirPackage("category/package")
+	G.checkdirPackage(".")
 
 	t.CheckOutputLines(
-		"WARN: ~/category/package/Makefile: Neither PLIST nor PLIST.common exist, and PLIST_SRC is unset.",
-		"WARN: ~/category/package/distinfo: File not found. Please run \""+confMake+" makesum\" or define NO_CHECKSUM=yes in the package Makefile.",
-		"ERROR: ~/category/package/Makefile: Each package must define its LICENSE.",
-		"WARN: ~/category/package/Makefile: No COMMENT given.")
+		"WARN: Makefile: Neither PLIST nor PLIST.common exist, and PLIST_SRC is unset.",
+		"WARN: distinfo: File not found. Please run \""+confMake+" makesum\" or define NO_CHECKSUM=yes in the package Makefile.",
+		"ERROR: Makefile: Each package must define its LICENSE.",
+		"WARN: Makefile: No COMMENT given.")
 }
 
 func (s *Suite) Test_Pkglint_checkdirPackage__meta_package_without_license(c *check.C) {
 	t := s.Init(c)
 
-	t.CreateFileLines("category/package/Makefile",
+	t.Chdir("category/package")
+	t.CreateFileLines("Makefile",
 		MkRcsID,
 		"",
 		"META_PACKAGE=\tyes")
 	t.SetupVartypes()
 
-	G.checkdirPackage("category/package")
+	G.checkdirPackage(".")
 
 	t.CheckOutputLines(
-		"WARN: ~/category/package/Makefile: No COMMENT given.") // No error about missing LICENSE.
+		"WARN: Makefile: No COMMENT given.") // No error about missing LICENSE.
 }
 
 func (s *Suite) Test_Package__varuse_at_load_time(c *check.C) {
@@ -391,10 +391,9 @@ func (s *Suite) Test_Package_loadPackageMakefile(c *check.C) {
 		"PKGNAME=pkgname-1.67",
 		"DISTNAME=distfile_1_67",
 		".include \"../../category/package/Makefile\"")
-	pkg := NewPackage("category/package")
-	G.Pkg = pkg
+	G.Pkg = NewPackage(t.File("category/package"))
 
-	pkg.loadPackageMakefile()
+	G.Pkg.loadPackageMakefile()
 
 	// Including a package Makefile directly is an error (in the last line),
 	// but that is checked later.
@@ -409,7 +408,13 @@ func (s *Suite) Test_Package_conditionalAndUnconditionalInclude(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupVartypes()
-	t.CreateFileLines("category/package/Makefile",
+	t.CreateFileLines("devel/zlib/buildlink3.mk", "")
+	t.CreateFileLines("licenses/gnu-gpl-v2", "")
+	t.CreateFileLines("mk/bsd.pkg.mk", "")
+	t.CreateFileLines("sysutils/coreutils/buildlink3.mk", "")
+
+	t.Chdir("category/package")
+	t.CreateFileLines("Makefile",
 		MkRcsID,
 		"",
 		"COMMENT\t=Description",
@@ -419,37 +424,29 @@ func (s *Suite) Test_Package_conditionalAndUnconditionalInclude(c *check.C) {
 		".include \"../../sysutils/coreutils/buildlink3.mk\"",
 		".endif",
 		".include \"../../mk/bsd.pkg.mk\"")
-	t.CreateFileLines("category/package/options.mk",
+	t.CreateFileLines("options.mk",
 		MkRcsID,
 		"",
 		".if !empty(PKG_OPTIONS:Mzlib)",
 		".  include \"../../devel/zlib/buildlink3.mk\"",
 		".endif",
 		".include \"../../sysutils/coreutils/buildlink3.mk\"")
-	t.CreateFileLines("category/package/PLIST",
+	t.CreateFileLines("PLIST",
 		PlistRcsID,
 		"bin/program")
-	t.CreateFileLines("category/package/distinfo",
+	t.CreateFileLines("distinfo",
 		RcsID)
 
-	t.CreateFileLines("devel/zlib/buildlink3.mk", "")
-	t.CreateFileLines("licenses/gnu-gpl-v2", "")
-	t.CreateFileLines("mk/bsd.pkg.mk", "")
-	t.CreateFileLines("sysutils/coreutils/buildlink3.mk", "")
-
-	pkg := NewPackage("category/package")
-	G.Pkg = pkg
-
-	G.checkdirPackage("category/package")
+	G.checkdirPackage(".")
 
 	t.CheckOutputLines(
-		"WARN: ~/category/package/Makefile:3: The canonical order of the variables is CATEGORIES, empty line, COMMENT, LICENSE.",
-		"WARN: ~/category/package/options.mk:3: Unknown option \"zlib\".",
-		"WARN: ~/category/package/options.mk:4: \"../../devel/zlib/buildlink3.mk\" is "+
+		"WARN: Makefile:3: The canonical order of the variables is CATEGORIES, empty line, COMMENT, LICENSE.",
+		"WARN: options.mk:3: Unknown option \"zlib\".",
+		"WARN: options.mk:4: \"../../devel/zlib/buildlink3.mk\" is "+
 			"included conditionally here (depending on PKG_OPTIONS) and unconditionally in Makefile:5.",
-		"WARN: ~/category/package/options.mk:6: \"../../sysutils/coreutils/buildlink3.mk\" is "+
+		"WARN: options.mk:6: \"../../sysutils/coreutils/buildlink3.mk\" is "+
 			"included unconditionally here and conditionally in Makefile:7 (depending on OPSYS).",
-		"WARN: ~/category/package/options.mk:3: Expected definition of PKG_OPTIONS_VAR.")
+		"WARN: options.mk:3: Expected definition of PKG_OPTIONS_VAR.")
 }
 
 // See https://github.com/rillig/pkglint/issues/1
@@ -465,7 +462,7 @@ func (s *Suite) Test_Package_includeWithoutExists(c *check.C) {
 		"",
 		".include \"../../mk/bsd.pkg.mk\"")
 
-	G.checkdirPackage("category/package")
+	G.checkdirPackage(t.File("category/package"))
 
 	t.CheckOutputLines(
 		"ERROR: ~/category/package/options.mk: Cannot be read.")
@@ -477,7 +474,8 @@ func (s *Suite) Test_Package_includeAfterExists(c *check.C) {
 
 	t.SetupVartypes()
 	t.CreateFileLines("mk/bsd.pkg.mk")
-	t.CreateFileLines("category/package/Makefile",
+	t.Chdir("category/package")
+	t.CreateFileLines("Makefile",
 		MkRcsID,
 		"",
 		".if exists(options.mk)",
@@ -486,14 +484,14 @@ func (s *Suite) Test_Package_includeAfterExists(c *check.C) {
 		"",
 		".include \"../../mk/bsd.pkg.mk\"")
 
-	G.checkdirPackage("category/package")
+	G.checkdirPackage(".")
 
 	t.CheckOutputLines(
-		"WARN: ~/category/package/Makefile: Neither PLIST nor PLIST.common exist, and PLIST_SRC is unset.",
-		"WARN: ~/category/package/distinfo: File not found. Please run \""+confMake+" makesum\" or define NO_CHECKSUM=yes in the package Makefile.",
-		"ERROR: ~/category/package/Makefile: Each package must define its LICENSE.",
-		"WARN: ~/category/package/Makefile: No COMMENT given.",
-		"ERROR: ~/category/package/Makefile:4: \"options.mk\" does not exist.")
+		"WARN: Makefile: Neither PLIST nor PLIST.common exist, and PLIST_SRC is unset.",
+		"WARN: distinfo: File not found. Please run \""+confMake+" makesum\" or define NO_CHECKSUM=yes in the package Makefile.",
+		"ERROR: Makefile: Each package must define its LICENSE.",
+		"WARN: Makefile: No COMMENT given.",
+		"ERROR: Makefile:4: \"options.mk\" does not exist.")
 }
 
 // See https://github.com/rillig/pkglint/issues/1
@@ -511,7 +509,7 @@ func (s *Suite) Test_Package_includeOtherAfterExists(c *check.C) {
 		"",
 		".include \"../../mk/bsd.pkg.mk\"")
 
-	G.checkdirPackage("category/package")
+	G.checkdirPackage(t.File("category/package"))
 
 	t.CheckOutputLines(
 		"ERROR: ~/category/package/another.mk: Cannot be read.")
@@ -547,7 +545,7 @@ func (s *Suite) Test_Package__redundant_master_sites(c *check.C) {
 
 	// See Package.checkfilePackageMakefile
 	// See Scope.uncond
-	G.checkdirPackage("math/R-date")
+	G.checkdirPackage(t.File("math/R-date"))
 
 	t.CheckOutputLines(
 		"NOTE: ~/math/R-date/Makefile:6: Definition of MASTER_SITES is redundant because of ../R/Makefile.extension:4.")

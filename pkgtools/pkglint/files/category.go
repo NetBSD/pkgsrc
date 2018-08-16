@@ -10,12 +10,11 @@ func CheckdirCategory(dir string) {
 		defer trace.Call1(dir)()
 	}
 
-	lines := LoadNonemptyLines(dir+"/Makefile", true)
-	if lines == nil {
+	mklines := LoadMk(dir+"/Makefile", NotEmpty|LogErrors)
+	if mklines == nil {
 		return
 	}
 
-	mklines := NewMkLines(lines)
 	mklines.Check()
 
 	exp := NewMkExpecter(mklines)
@@ -164,7 +163,7 @@ func CheckdirCategory(dir string) {
 		exp.CurrentLine().Errorf("The file should end here.")
 	}
 
-	SaveAutofixChanges(lines)
+	mklines.SaveAutofixChanges()
 
 	if G.opts.Recursive {
 		G.Todo = append(append([]string(nil), subdirs...), G.Todo...)

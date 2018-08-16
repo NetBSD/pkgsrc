@@ -140,9 +140,9 @@ func (mklines *MkLines) Check() {
 				G.Pkg.CheckInclude(mkline, mklines.indentation)
 			}
 
-		case mkline.IsCond():
-			ck.checkCond(mklines.forVars, mklines.indentation)
-			substcontext.Conditional(mkline)
+		case mkline.IsDirective():
+			ck.checkDirective(mklines.forVars, mklines.indentation)
+			substcontext.Directive(mkline)
 
 		case mkline.IsDependency():
 			ck.checkDependencyRule(allowedTargets)
@@ -173,7 +173,7 @@ func (mklines *MkLines) Check() {
 }
 
 // ForEach calls the action for each line, until the action returns false.
-// It keeps track of the indentation and all conditionals.
+// It keeps track of the indentation and all conditional variables.
 func (mklines *MkLines) ForEach(action func(mkline MkLine) bool, atEnd func(mkline MkLine)) {
 	mklines.indentation = NewIndentation()
 
@@ -256,7 +256,7 @@ func (mklines *MkLines) DetermineDefinedVariables() {
 			}
 		}
 
-		mklines.toolRegistry.ParseToolLine(mkline.Line)
+		mklines.toolRegistry.ParseToolLine(mkline)
 	}
 }
 
@@ -396,6 +396,10 @@ func (mklines *MkLines) CheckRedundantVariables() {
 		func(mkline MkLine) {})
 }
 
+func (mklines *MkLines) SaveAutofixChanges() {
+	SaveAutofixChanges(mklines.lines)
+}
+
 // VaralignBlock checks that all variable assignments from a paragraph
 // use the same indentation depth for their values.
 // It also checks that the indentation uses tabs instead of spaces.
@@ -433,7 +437,7 @@ func (va *VaralignBlock) Check(mkline MkLine) {
 	case mkline.IsComment():
 		return
 
-	case mkline.IsCond():
+	case mkline.IsDirective():
 		return
 
 	case !mkline.IsVarassign():
@@ -613,7 +617,7 @@ func (va *VaralignBlock) realign(mkline MkLine, varnameOp, oldSpace string, cont
 			"alignment at all.",
 			"",
 			"When the block contains something else than variable definitions",
-			"and conditionals, it is not checked at all.")
+			"and directives like .if or .for, it is not checked at all.")
 	}
 	fix.ReplaceAfter(varnameOp, oldSpace, newSpace)
 	fix.Apply()

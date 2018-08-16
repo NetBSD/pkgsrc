@@ -122,16 +122,21 @@ func (vt *Vartype) MayBeAppendedTo() bool {
 }
 
 func (vt *Vartype) String() string {
+	listPrefix := ""
 	switch vt.kindOfList {
 	case lkNone:
-		return vt.basicType.name
+		listPrefix = ""
 	case lkSpace:
-		return "SpaceList of " + vt.basicType.name
+		listPrefix = "SpaceList of "
 	case lkShell:
-		return "ShellList of " + vt.basicType.name
+		listPrefix = "ShellList of "
 	default:
 		panic("Unknown list type")
 	}
+
+	guessedSuffix := ifelseStr(vt.guessed, " (guessed)", "")
+
+	return listPrefix + vt.basicType.name + guessedSuffix
 }
 
 func (vt *Vartype) IsShell() bool {

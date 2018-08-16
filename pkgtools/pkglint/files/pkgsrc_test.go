@@ -1,9 +1,6 @@
 package main
 
-import (
-	"gopkg.in/check.v1"
-	"netbsd.org/pkglint/trace"
-)
+import "gopkg.in/check.v1"
 
 // Ensures that pkglint can handle MASTER_SITES definitions with and
 // without line continuations.
@@ -99,25 +96,26 @@ func (s *Suite) Test_Pkgsrc_loadTools(c *check.C) {
 
 	G.Pkgsrc.loadTools()
 
-	trace.Tracing = true
+	t.EnableTracingToLog()
 	G.Pkgsrc.Tools.Trace()
+	t.DisableTracing()
 
 	t.CheckOutputLines(
 		"TRACE: + (*ToolRegistry).Trace()",
-		"TRACE: 1   tool &{Name:bzcat Varname: MustUseVarForm:false Predefined:false UsableAtLoadtime:false}",
-		"TRACE: 1   tool &{Name:bzip2 Varname: MustUseVarForm:false Predefined:false UsableAtLoadtime:false}",
-		"TRACE: 1   tool &{Name:chown Varname:CHOWN MustUseVarForm:false Predefined:false UsableAtLoadtime:false}",
-		"TRACE: 1   tool &{Name:echo Varname:ECHO MustUseVarForm:true Predefined:true UsableAtLoadtime:true}",
-		"TRACE: 1   tool &{Name:echo -n Varname:ECHO_N MustUseVarForm:true Predefined:true UsableAtLoadtime:true}",
-		"TRACE: 1   tool &{Name:false Varname:FALSE MustUseVarForm:true Predefined:true UsableAtLoadtime:false}",
-		"TRACE: 1   tool &{Name:gawk Varname:AWK MustUseVarForm:false Predefined:false UsableAtLoadtime:false}",
-		"TRACE: 1   tool &{Name:m4 Varname: MustUseVarForm:false Predefined:true UsableAtLoadtime:true}",
-		"TRACE: 1   tool &{Name:msgfmt Varname: MustUseVarForm:false Predefined:false UsableAtLoadtime:false}",
-		"TRACE: 1   tool &{Name:mv Varname:MV MustUseVarForm:false Predefined:true UsableAtLoadtime:false}",
-		"TRACE: 1   tool &{Name:pwd Varname:PWD MustUseVarForm:false Predefined:true UsableAtLoadtime:true}",
-		"TRACE: 1   tool &{Name:strip Varname: MustUseVarForm:false Predefined:false UsableAtLoadtime:false}",
-		"TRACE: 1   tool &{Name:test Varname:TEST MustUseVarForm:true Predefined:true UsableAtLoadtime:true}",
-		"TRACE: 1   tool &{Name:true Varname:TRUE MustUseVarForm:true Predefined:true UsableAtLoadtime:true}",
+		"TRACE: 1   tool &{Name:bzcat Varname: MustUseVarForm:false Predefined:false UsableAtLoadTime:false}",
+		"TRACE: 1   tool &{Name:bzip2 Varname: MustUseVarForm:false Predefined:false UsableAtLoadTime:false}",
+		"TRACE: 1   tool &{Name:chown Varname:CHOWN MustUseVarForm:false Predefined:false UsableAtLoadTime:false}",
+		"TRACE: 1   tool &{Name:echo Varname:ECHO MustUseVarForm:true Predefined:true UsableAtLoadTime:true}",
+		"TRACE: 1   tool &{Name:echo -n Varname:ECHO_N MustUseVarForm:true Predefined:true UsableAtLoadTime:true}",
+		"TRACE: 1   tool &{Name:false Varname:FALSE MustUseVarForm:true Predefined:true UsableAtLoadTime:false}",
+		"TRACE: 1   tool &{Name:gawk Varname:AWK MustUseVarForm:false Predefined:false UsableAtLoadTime:false}",
+		"TRACE: 1   tool &{Name:m4 Varname: MustUseVarForm:false Predefined:true UsableAtLoadTime:true}",
+		"TRACE: 1   tool &{Name:msgfmt Varname: MustUseVarForm:false Predefined:false UsableAtLoadTime:false}",
+		"TRACE: 1   tool &{Name:mv Varname:MV MustUseVarForm:false Predefined:true UsableAtLoadTime:false}",
+		"TRACE: 1   tool &{Name:pwd Varname:PWD MustUseVarForm:false Predefined:true UsableAtLoadTime:true}",
+		"TRACE: 1   tool &{Name:strip Varname: MustUseVarForm:false Predefined:false UsableAtLoadTime:false}",
+		"TRACE: 1   tool &{Name:test Varname:TEST MustUseVarForm:true Predefined:true UsableAtLoadTime:true}",
+		"TRACE: 1   tool &{Name:true Varname:TRUE MustUseVarForm:true Predefined:true UsableAtLoadTime:true}",
 		"TRACE: - (*ToolRegistry).Trace()")
 }
 

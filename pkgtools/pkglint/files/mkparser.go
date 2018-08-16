@@ -108,6 +108,7 @@ func (p *MkParser) VarUseModifiers(varname, closing string) []string {
 
 	var modifiers []string
 	mayOmitColon := false
+loop:
 	for repl.AdvanceStr(":") || mayOmitColon {
 		mayOmitColon = false
 		modifierMark := repl.Mark()
@@ -125,7 +126,7 @@ func (p *MkParser) VarUseModifiers(varname, closing string) []string {
 				} else if len(rest) >= 1 && (rest[0] == closing[0] || rest[0] == ':') {
 				} else if repl.AdvanceRegexp(`^\\\d+`) {
 				} else {
-					break
+					break loop
 				}
 				modifiers = append(modifiers, repl.Since(modifierMark))
 				continue

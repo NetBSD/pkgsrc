@@ -31,6 +31,14 @@ func (s *Suite) Test_Parser_Dependency(c *check.C) {
 		}
 	}
 
+	checkNil := func(pattern string) {
+		parser := NewParser(dummyLine, pattern, false)
+		dp := parser.Dependency()
+		if c.Check(dp, check.IsNil) {
+			c.Check(parser.Rest(), equals, pattern)
+		}
+	}
+
 	check := func(pattern string, expected DependencyPattern) {
 		checkRest(pattern, expected, "")
 	}
@@ -50,5 +58,7 @@ func (s *Suite) Test_Parser_Dependency(c *check.C) {
 	check("ncurses-${NC_VERS}{,nb*}", DependencyPattern{"ncurses", "", "", "", "", "${NC_VERS}{,nb*}"})
 	check("xulrunner10>=${MOZ_BRANCH}${MOZ_BRANCH_MINOR}", DependencyPattern{"xulrunner10", ">=", "${MOZ_BRANCH}${MOZ_BRANCH_MINOR}", "", "", ""})
 	checkRest("gnome-control-center>=2.20.1{,nb*}", DependencyPattern{"gnome-control-center", ">=", "2.20.1", "", "", ""}, "{,nb*}")
+	checkNil(">=2.20.1{,nb*}")
+	checkNil("pkgbase<=")
 	// "{ssh{,6}-[0-9]*,openssh-[0-9]*}" is not representable using the current data structure
 }

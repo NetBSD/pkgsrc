@@ -45,9 +45,9 @@ type PlistChecker struct {
 }
 
 type PlistLine struct {
-	line        Line
-	conditional string // e.g. PLIST.docs
-	text        string // Like line.text, without the conditional
+	line      Line
+	condition string // e.g. PLIST.docs
+	text      string // Like line.text, without the condition
 }
 
 func (ck *PlistChecker) Check(plainLines []Line) {
@@ -55,8 +55,8 @@ func (ck *PlistChecker) Check(plainLines []Line) {
 	ck.collectFilesAndDirs(plines)
 
 	if fname := plines[0].line.Filename; path.Base(fname) == "PLIST.common_end" {
-		commonLines, err := readLines(strings.TrimSuffix(fname, "_end"), false)
-		if err == nil {
+		commonLines := Load(strings.TrimSuffix(fname, "_end"), NotEmpty)
+		if commonLines != nil {
 			ck.collectFilesAndDirs(ck.NewLines(commonLines))
 		}
 	}
@@ -81,13 +81,13 @@ func (ck *PlistChecker) Check(plainLines []Line) {
 func (ck *PlistChecker) NewLines(lines []Line) []*PlistLine {
 	plines := make([]*PlistLine, len(lines))
 	for i, line := range lines {
-		conditional, text := "", line.Text
+		condition, text := "", line.Text
 		if hasPrefix(text, "${PLIST.") {
 			if m, cond, rest := match2(text, `^(?:\$\{(PLIST\.[\w-.]+)\})+(.*)`); m {
-				conditional, text = cond, rest
+				condition, text = cond, rest
 			}
 		}
-		plines[i] = &PlistLine{line, conditional, text}
+		plines[i] = &PlistLine{line, condition, text}
 	}
 	return plines
 }
@@ -101,7 +101,7 @@ func (ck *PlistChecker) collectFilesAndDirs(plines []*PlistLine) {
 				first == '$',
 				'A' <= first && first <= 'Z',
 				'0' <= first && first <= '9':
-				if prev := ck.allFiles[text]; prev == nil || pline.conditional < prev.conditional {
+				if prev := ck.allFiles[text]; prev == nil || pline.condition < prev.condition {
 					ck.allFiles[text] = pline
 				}
 				for dir := path.Dir(text); dir != "."; dir = path.Dir(dir) {
@@ -224,7 +224,7 @@ func (ck *PlistChecker) checkDuplicate(pline *PlistLine) {
 	}
 
 	prev := ck.allFiles[text]
-	if prev == pline || prev.conditional != "" {
+	if prev == pline || prev.condition != "" {
 		return
 	}
 
@@ -518,7 +518,7 @@ func (s *plistLineSorter) Sort() {
 		mi := s.middle[i]
 		mj := s.middle[j]
 		less := mi.text < mj.text || (mi.text == mj.text &&
-			mi.conditional < mj.conditional)
+			mi.condition < mj.condition)
 		if (i < j) != less {
 			s.changed = true
 		}

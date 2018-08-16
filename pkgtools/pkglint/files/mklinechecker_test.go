@@ -42,7 +42,7 @@ func (s *Suite) Test_MkLineChecker_CheckVartype(c *check.C) {
 func (s *Suite) Test_MkLineChecker_checkVarassign__URL_with_shell_special_characters(c *check.C) {
 	t := s.Init(c)
 
-	G.Pkg = NewPackage("graphics/gimp-fix-ca")
+	G.Pkg = NewPackage(t.File("graphics/gimp-fix-ca"))
 	t.SetupVartypes()
 	mkline := t.NewMkLine("fname", 10, "MASTER_SITES=http://registry.gimp.org/file/fix-ca.c?action=download&id=9884&file=")
 
@@ -57,37 +57,37 @@ func (s *Suite) Test_MkLineChecker_Check__conditions(c *check.C) {
 	t.SetupCommandLine("-Wtypes")
 	t.SetupVartypes()
 
-	MkLineChecker{t.NewMkLine("fname", 1, ".if !empty(PKGSRC_COMPILER:Mmycc)")}.CheckCond()
+	MkLineChecker{t.NewMkLine("fname", 1, ".if !empty(PKGSRC_COMPILER:Mmycc)")}.checkDirectiveCond()
 
 	t.CheckOutputLines(
 		"WARN: fname:1: The pattern \"mycc\" cannot match any of " +
 			"{ ccache ccc clang distcc f2c gcc hp icc ido " +
 			"mipspro mipspro-ucode pcc sunpro xlc } for PKGSRC_COMPILER.")
 
-	MkLineChecker{t.NewMkLine("fname", 1, ".elif ${A} != ${B}")}.CheckCond()
+	MkLineChecker{t.NewMkLine("fname", 1, ".elif ${A} != ${B}")}.checkDirectiveCond()
 
 	t.CheckOutputEmpty()
 
-	MkLineChecker{t.NewMkLine("fname", 1, ".if ${HOMEPAGE} == \"mailto:someone@example.org\"")}.CheckCond()
+	MkLineChecker{t.NewMkLine("fname", 1, ".if ${HOMEPAGE} == \"mailto:someone@example.org\"")}.checkDirectiveCond()
 
 	t.CheckOutputLines(
 		"WARN: fname:1: \"mailto:someone@example.org\" is not a valid URL.")
 
-	MkLineChecker{t.NewMkLine("fname", 1, ".if !empty(PKGSRC_RUN_TEST:M[Y][eE][sS])")}.CheckCond()
+	MkLineChecker{t.NewMkLine("fname", 1, ".if !empty(PKGSRC_RUN_TEST:M[Y][eE][sS])")}.checkDirectiveCond()
 
 	t.CheckOutputLines(
 		"WARN: fname:1: PKGSRC_RUN_TEST should be matched against \"[yY][eE][sS]\" or \"[nN][oO]\", not \"[Y][eE][sS]\".")
 
-	MkLineChecker{t.NewMkLine("fname", 1, ".if !empty(IS_BUILTIN.Xfixes:M[yY][eE][sS])")}.CheckCond()
+	MkLineChecker{t.NewMkLine("fname", 1, ".if !empty(IS_BUILTIN.Xfixes:M[yY][eE][sS])")}.checkDirectiveCond()
 
 	t.CheckOutputEmpty()
 
-	MkLineChecker{t.NewMkLine("fname", 1, ".if !empty(${IS_BUILTIN.Xfixes:M[yY][eE][sS]})")}.CheckCond()
+	MkLineChecker{t.NewMkLine("fname", 1, ".if !empty(${IS_BUILTIN.Xfixes:M[yY][eE][sS]})")}.checkDirectiveCond()
 
 	t.CheckOutputLines(
 		"WARN: fname:1: The empty() function takes a variable name as parameter, not a variable expression.")
 
-	MkLineChecker{t.NewMkLine("fname", 1, ".if ${EMUL_PLATFORM} == \"linux-x386\"")}.CheckCond()
+	MkLineChecker{t.NewMkLine("fname", 1, ".if ${EMUL_PLATFORM} == \"linux-x386\"")}.checkDirectiveCond()
 
 	t.CheckOutputLines(
 		"WARN: fname:1: " +
@@ -100,7 +100,7 @@ func (s *Suite) Test_MkLineChecker_Check__conditions(c *check.C) {
 			"mlrisc ns32k pc532 pmax powerpc powerpc64 rs6000 s390 sh3eb sh3el sparc sparc64 vax x86_64 " +
 			"} instead.")
 
-	MkLineChecker{t.NewMkLine("fname", 1, ".if ${EMUL_PLATFORM:Mlinux-x386}")}.CheckCond()
+	MkLineChecker{t.NewMkLine("fname", 1, ".if ${EMUL_PLATFORM:Mlinux-x386}")}.checkDirectiveCond()
 
 	t.CheckOutputLines(
 		"WARN: fname:1: "+
@@ -113,7 +113,7 @@ func (s *Suite) Test_MkLineChecker_Check__conditions(c *check.C) {
 			"for the hardware architecture part of EMUL_PLATFORM.",
 		"NOTE: fname:1: EMUL_PLATFORM should be compared using == instead of the :M or :N modifier without wildcards.")
 
-	MkLineChecker{t.NewMkLine("fname", 98, ".if ${MACHINE_PLATFORM:MUnknownOS-*-*} || ${MACHINE_ARCH:Mx86}")}.CheckCond()
+	MkLineChecker{t.NewMkLine("fname", 98, ".if ${MACHINE_PLATFORM:MUnknownOS-*-*} || ${MACHINE_ARCH:Mx86}")}.checkDirectiveCond()
 
 	t.CheckOutputLines(
 		"WARN: fname:98: "+

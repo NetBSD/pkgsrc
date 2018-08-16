@@ -47,16 +47,7 @@ func (s *Suite) Test_checklineLicense(c *check.C) {
 func (s *Suite) Test_checkToplevelUnusedLicenses(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupFileLines("mk/bsd.pkg.mk", "# dummy")
-	t.SetupFileLines("mk/fetch/sites.mk", "# dummy")
-	t.SetupFileLines("mk/defaults/options.description", "option\tdescription")
-	t.SetupFileLines("doc/TODO")
-	t.SetupFileLines("mk/defaults/mk.conf")
-	t.SetupFileLines("mk/tools/bsd.tools.mk",
-		".include \"actual-tools.mk\"")
-	t.SetupFileLines("mk/tools/actual-tools.mk")
-	t.SetupFileLines("mk/tools/defaults.mk")
-	t.SetupFileLines("mk/bsd.prefs.mk")
+	t.SetupPkgsrc()
 	t.SetupFileLines("mk/misc/category.mk")
 	t.SetupFileLines("licenses/2-clause-bsd")
 	t.SetupFileLines("licenses/gnu-gpl-v3")
@@ -89,4 +80,37 @@ func (s *Suite) Test_checkToplevelUnusedLicenses(c *check.C) {
 	t.CheckOutputLines(
 		"WARN: ~/licenses/gnu-gpl-v3: This license seems to be unused.",
 		"0 errors and 1 warning found.")
+}
+
+func (s *Suite) Test_LicenseChecker_checkLicenseName__LICENSE_FILE(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupPkgsrc()
+	t.SetupCommandLine("-Wno-space")
+	t.SetupFileLines("category/package/DESCR",
+		"Package description")
+	t.SetupFileMkLines("category/package/Makefile",
+		MkRcsID,
+		"",
+		"CATEGORIES=     chinese",
+		"",
+		"COMMENT=        Useful tools",
+		"LICENSE=        my-license",
+		"",
+		"LICENSE_FILE=   my-license",
+		"NO_CHECKSUM=    yes",
+		"",
+		".include \"../../mk/bsd.pkg.mk\"")
+	t.SetupFileLines("category/package/PLIST",
+		PlistRcsID,
+		"bin/program")
+	t.SetupFileLines("category/package/my-license",
+		"An individual license file.")
+
+	G.Main("pkglint", t.File("category/package"))
+
+	// FIXME: It should be allowed to place a license file directly into
+	// the package directory.
+	t.CheckOutputLines(
+		"WARN: ~/category/package/my-license: Unexpected file found.", "0 errors and 1 warning found.")
 }

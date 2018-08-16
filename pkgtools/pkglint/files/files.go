@@ -6,29 +6,51 @@ import (
 	"strings"
 )
 
-// LoadNonemptyLines loads the given file.
-// If the file doesn't exist or is empty, an error is logged.
-//
-// See [LoadExistingLines].
-func LoadNonemptyLines(fname string, joinBackslashLines bool) []Line {
-	lines, err := readLines(fname, joinBackslashLines)
+type LoadOptions uint8
+
+const (
+	MustSucceed LoadOptions = 1 << iota // It's a fatal error if loading fails.
+	NotEmpty                            // It is an error if the file is empty.
+	Makefile                            // Lines ending in a backslash are continued in the next line.
+	LogErrors                           //
+)
+
+func Load(fileName string, options LoadOptions) []Line {
+	rawBytes, err := ioutil.ReadFile(fileName)
 	if err != nil {
-		NewLineWhole(fname).Errorf("Cannot be read.")
+		switch {
+		case options&MustSucceed != 0:
+			NewLineWhole(fileName).Fatalf("Cannot be read.")
+		case options&LogErrors != 0:
+			NewLineWhole(fileName).Errorf("Cannot be read.")
+		}
 		return nil
 	}
-	if len(lines) == 0 {
-		NewLineWhole(fname).Errorf("Must not be empty.")
+
+	rawText := string(rawBytes)
+	if rawText == "" && options&NotEmpty != 0 {
+		switch {
+		case options&MustSucceed != 0:
+			NewLineWhole(fileName).Fatalf("Must not be empty.")
+		case options&LogErrors != 0:
+			NewLineWhole(fileName).Errorf("Must not be empty.")
+		}
 		return nil
 	}
-	return lines
+
+	if G.opts.Profiling {
+		G.loaded.Add(path.Clean(fileName), 1)
+	}
+
+	return convertToLogicalLines(fileName, rawText, options&Makefile != 0)
 }
 
-func LoadExistingLines(fname string, joinBackslashLines bool) []Line {
-	lines, err := readLines(fname, joinBackslashLines)
-	if err != nil {
-		NewLineWhole(fname).Fatalf("Cannot be read.")
+func LoadMk(fileName string, options LoadOptions) *MkLines {
+	lines := Load(fileName, options|Makefile)
+	if lines == nil {
+		return nil
 	}
-	return lines
+	return NewMkLines(lines)
 }
 
 func nextLogicalLine(fname string, rawLines []*RawLine, pindex *int) Line {
@@ -104,18 +126,6 @@ func splitRawLine(textnl string) (leadingWhitespace, text, trailingWhitespace, c
 
 	text = textnl[leadingEnd:trailingStart]
 	return
-}
-
-func readLines(fname string, joinBackslashLines bool) ([]Line, error) {
-	rawText, err := ioutil.ReadFile(fname)
-	if err != nil {
-		return nil, err
-	}
-
-	if G.opts.Profiling {
-		G.loaded.Add(path.Clean(fname), 1)
-	}
-	return convertToLogicalLines(fname, string(rawText), joinBackslashLines), nil
 }
 
 func convertToLogicalLines(fname string, rawText string, joinBackslashLines bool) []Line {

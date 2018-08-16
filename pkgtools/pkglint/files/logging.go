@@ -21,6 +21,7 @@ var (
 )
 
 var dummyLine = NewLine("", 0, "", nil)
+var dummyMkLine = NewMkLine(dummyLine)
 
 func shallBeLogged(msg string) bool {
 	if len(G.opts.LogOnly) > 0 {
@@ -57,7 +58,7 @@ func logs(level *LogLevel, fname, lineno, format, msg string) bool {
 		fname = cleanpath(fname)
 	}
 	if G.Testing && format != "Magic-Autofix-Format" && !hasSuffix(format, ".") && !hasSuffix(format, ": %s") && !hasSuffix(format, ". %s") {
-		panic(fmt.Sprintf("Format %q must end in a period.", format))
+		panic(fmt.Sprintf("Diagnostic format %q must end in a period.", format))
 	}
 
 	if !G.opts.LogVerbose && loggedAlready(fname, lineno, msg) {

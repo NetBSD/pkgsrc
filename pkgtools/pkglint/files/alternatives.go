@@ -6,8 +6,8 @@ import (
 )
 
 func CheckfileAlternatives(filename string, plistFiles map[string]bool) {
-	lines, err := readLines(filename, false)
-	if err != nil {
+	lines := Load(filename, NotEmpty|LogErrors)
+	if lines == nil {
 		return
 	}
 
