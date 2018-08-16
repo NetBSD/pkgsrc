@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3624 2018/08/16 12:43:52 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3625 2018/08/16 12:45:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5152,3 +5152,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/py-cairo to 1.17.1 [wiz 2018-08-16]
 	Updated www/py-google-api-python-client to 1.7.4 [wiz 2018-08-16]
 	Updated time/py-vdirsyncer to 0.16.7 [wiz 2018-08-16]
+	Updated databases/shared-mime-info to 1.10 [wiz 2018-08-16]
