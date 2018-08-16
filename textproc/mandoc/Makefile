@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/08/15 04:09:18 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2018/08/16 13:55:35 wiz Exp $
 
 DISTNAME=	mandoc-1.14.4
 CATEGORIES=	textproc devel
@@ -6,7 +6,7 @@ MASTER_SITES=	http://mdocml.bsd.lv/snapshots/
 
 MAINTAINER=	schwarze@usta.de
 HOMEPAGE=	http://mdocml.bsd.lv/
-COMMENT=	Convert man pages from mdoc, man, and tbl to txt, html, ps, or pdf
+COMMENT=	Convert man pages from mdoc, man, eqn and tbl to txt, html, ps, or pdf
 LICENSE=	2-clause-bsd # not exactly, but near enough
 
 HAS_CONFIGURE=	yes
@@ -34,14 +34,6 @@ post-extract:
 	${ECHO} INSTALL_DATA=\"${INSTALL_DATA:Q}\" >> ${WRKSRC}/configure.local
 	${ECHO} MANM_ROFF="mandoc-roff" >> ${WRKSRC}/configure.local
 	${ECHO} BINM_SOELIM="msoelim" >> ${WRKSRC}/configure.local
-# Need -lrt for nanosleep(2) on Solaris.
-.if ${OPSYS} == "SunOS"
-	${ECHO} LDADD=\"-lrt\" >> ${WRKSRC}/configure.local
-.endif
-# Mac OS X and Solaris 10 and newer do not support static binaries.
-.if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS"
-	${ECHO} STATIC= >> ${WRKSRC}/configure.local
-.endif
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
