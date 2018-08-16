@@ -1,4 +1,7 @@
-$NetBSD: patch-src_unix_fswatcher__kqueue.cpp,v 1.1 2014/08/13 22:32:43 joerg Exp $
+$NetBSD: patch-src_unix_fswatcher__kqueue.cpp,v 1.2 2018/08/16 11:46:25 wiz Exp $
+
+Fix compilation error on NetBSD
+https://trac.wxwidgets.org/ticket/18199
 
 --- src/unix/fswatcher_kqueue.cpp.orig	2014-08-13 21:20:42.000000000 +0000
 +++ src/unix/fswatcher_kqueue.cpp
