@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3612 2018/08/16 11:50:47 he Exp $
+$NetBSD: CHANGES-2018,v 1.3613 2018/08/16 11:59:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5140,3 +5140,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-m2r to 0.2.0 [adam 2018-08-16]
 	Updated www/webkit24-gtk3 to 2.4.11nb16 [he 2018-08-16]
 	Updated www/webkit24-gtk to 2.4.11nb16 [he 2018-08-16]
+	Updated fonts/harfbuzz to 1.8.7 [wiz 2018-08-16]
