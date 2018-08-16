@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2018/04/29 21:31:55 adam Exp $
+# $NetBSD: Makefile,v 1.20 2018/08/16 18:55:02 adam Exp $
 
 DISTNAME=	kteatime-${_KDE_VERSION}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	misc
 COMMENT=	KDE Tea Cooker
 
