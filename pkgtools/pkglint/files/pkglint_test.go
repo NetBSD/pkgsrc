@@ -291,7 +291,7 @@ func (s *Suite) Test_resolveVariableRefs__circular_reference(c *check.C) {
 	t := s.Init(c)
 
 	mkline := t.NewMkLine("fname", 1, "GCC_VERSION=${GCC_VERSION}")
-	G.Pkg = NewPackage(".")
+	G.Pkg = NewPackage(t.File("category/pkgbase"))
 	G.Pkg.vars.Define("GCC_VERSION", mkline)
 
 	resolved := resolveVariableRefs("gcc-${GCC_VERSION}")
@@ -305,7 +305,7 @@ func (s *Suite) Test_resolveVariableRefs__multilevel(c *check.C) {
 	mkline1 := t.NewMkLine("fname", 10, "_=${SECOND}")
 	mkline2 := t.NewMkLine("fname", 11, "_=${THIRD}")
 	mkline3 := t.NewMkLine("fname", 12, "_=got it")
-	G.Pkg = NewPackage(".")
+	G.Pkg = NewPackage(t.File("category/pkgbase"))
 	defineVar(mkline1, "FIRST")
 	defineVar(mkline2, "SECOND")
 	defineVar(mkline3, "THIRD")
@@ -322,7 +322,7 @@ func (s *Suite) Test_resolveVariableRefs__special_chars(c *check.C) {
 	t := s.Init(c)
 
 	mkline := t.NewMkLine("fname", 10, "_=x11")
-	G.Pkg = NewPackage("category/pkg")
+	G.Pkg = NewPackage(t.File("category/pkg"))
 	G.Pkg.vars.Define("GST_PLUGINS0.10_TYPE", mkline)
 
 	resolved := resolveVariableRefs("gst-plugins0.10-${GST_PLUGINS0.10_TYPE}/distinfo")
@@ -483,4 +483,53 @@ func (s *Suite) Test_Pkglint_Checkfile__alternatives(c *check.C) {
 		"NOTE: ~/category/package/ALTERNATIVES:1: @PREFIX@/ can be omitted from the file name.",
 		"Looks fine.",
 		"(Run \"pkglint -e\" to show explanations.)")
+}
+
+func (s *Suite) Test_Pkglint__profiling(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupPkgsrc()
+	G.Main("pkglint", "--profiling", t.File("."))
+
+	// Pkglint always writes the profiling data into the current directory.
+	// Luckily, this directory is usually writable.
+	c.Check(fileExists("pkglint.pprof"), equals, true)
+
+	err := os.Remove("pkglint.pprof")
+	c.Check(err, check.IsNil)
+
+	// Everything but the first few lines of output is not easily testable
+	// or not interesting enough, since that info includes the exact timing
+	// that the top time-consuming regular expressions took.
+	firstOutput := strings.Split(t.Output(), "\n")[0]
+	c.Check(firstOutput, equals, "ERROR: ~/Makefile: Cannot be read.")
+}
+
+func (s *Suite) Test_Pkglint_Checkfile__in_current_working_directory(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupPkgsrc()
+	t.SetupVartypes()
+	t.CreateFileLines("licenses/mit")
+	t.Chdir("category/package")
+	t.CreateFileLines("log")
+	t.CreateFileLines("Makefile",
+		MkRcsID,
+		"",
+		"NO_CHECKSUM=    yes",
+		"COMMENT=        Useful utilities",
+		"LICENSE=        mit",
+		"",
+		".include \"../../mk/bsd.pkg.mk\"")
+	t.CreateFileLines("PLIST",
+		PlistRcsID,
+		"bin/program")
+	t.CreateFileLines("DESCR",
+		"Package description")
+
+	G.Main("pkglint")
+
+	t.CheckOutputLines(
+		"WARN: log: Unexpected file found.",
+		"0 errors and 1 warning found.")
 }
