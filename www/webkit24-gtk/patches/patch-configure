@@ -1,8 +1,13 @@
-$NetBSD: patch-configure,v 1.1 2015/07/12 00:37:47 wiz Exp $
+$NetBSD: patch-configure,v 1.2 2018/08/16 11:49:13 he Exp $
+
+Adapt to 64-bit off_t.
+Workaround HP/UX 9 which writes to sscanf strings...
+Skip test for shm_open on OpenBSD and NetBSD.
+Don't have -latomic on NetBSD.
 
 --- configure.orig	2015-05-20 09:29:21.000000000 +0000
 +++ configure
-@@ -4709,7 +4709,7 @@ else
+@@ -4729,7 +4729,7 @@ else
      We can't simply define LARGE_OFF_T to be 9223372036854775807,
      since some C++ compilers masquerading as C compilers
      incorrectly reject 9223372036854775807.  */
@@ -11,7 +16,7 @@ $NetBSD: patch-configure,v 1.1 2015/07/12 00:37:47 wiz Exp $
    int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
  		       && LARGE_OFF_T % 2147483647 == 1)
  		      ? 1 : -1];
-@@ -4755,7 +4755,7 @@ else
+@@ -4775,7 +4775,7 @@ else
      We can't simply define LARGE_OFF_T to be 9223372036854775807,
      since some C++ compilers masquerading as C compilers
      incorrectly reject 9223372036854775807.  */
@@ -20,7 +25,7 @@ $NetBSD: patch-configure,v 1.1 2015/07/12 00:37:47 wiz Exp $
    int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
  		       && LARGE_OFF_T % 2147483647 == 1)
  		      ? 1 : -1];
-@@ -4779,7 +4779,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -4799,7 +4799,7 @@ rm -f core conftest.err conftest.$ac_obj
      We can't simply define LARGE_OFF_T to be 9223372036854775807,
      since some C++ compilers masquerading as C compilers
      incorrectly reject 9223372036854775807.  */
@@ -29,7 +34,7 @@ $NetBSD: patch-configure,v 1.1 2015/07/12 00:37:47 wiz Exp $
    int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
  		       && LARGE_OFF_T % 2147483647 == 1)
  		      ? 1 : -1];
-@@ -4824,7 +4824,7 @@ else
+@@ -4844,7 +4844,7 @@ else
      We can't simply define LARGE_OFF_T to be 9223372036854775807,
      since some C++ compilers masquerading as C compilers
      incorrectly reject 9223372036854775807.  */
@@ -38,7 +43,7 @@ $NetBSD: patch-configure,v 1.1 2015/07/12 00:37:47 wiz Exp $
    int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
  		       && LARGE_OFF_T % 2147483647 == 1)
  		      ? 1 : -1];
-@@ -4848,7 +4848,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -4868,7 +4868,7 @@ rm -f core conftest.err conftest.$ac_obj
      We can't simply define LARGE_OFF_T to be 9223372036854775807,
      since some C++ compilers masquerading as C compilers
      incorrectly reject 9223372036854775807.  */
@@ -47,7 +52,7 @@ $NetBSD: patch-configure,v 1.1 2015/07/12 00:37:47 wiz Exp $
    int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
  		       && LARGE_OFF_T % 2147483647 == 1)
  		      ? 1 : -1];
-@@ -17318,10 +17318,13 @@ int
+@@ -17991,10 +17991,13 @@ int
  main ()
  {
    unsigned int major, minor, micro;
@@ -62,7 +67,7 @@ $NetBSD: patch-configure,v 1.1 2015/07/12 00:37:47 wiz Exp $
       printf("%s, bad version string\n", "$min_glib_version");
       exit(1);
     }
-@@ -21217,7 +21220,7 @@ fi
+@@ -21890,7 +21893,7 @@ fi
  
  
      # On some Linux/Unix platforms, shm_* may only be available if linking against librt
@@ -71,3 +76,16 @@ $NetBSD: patch-configure,v 1.1 2015/07/12 00:37:47 wiz Exp $
          { $as_echo "$as_me:${as_lineno-$LINENO}: checking for library containing shm_open" >&5
  $as_echo_n "checking for library containing shm_open... " >&6; }
  if ${ac_cv_search_shm_open+:} false; then :
+@@ -22685,9 +22688,12 @@ ac_compile='$CC -c $CFLAGS $CPPFLAGS con
+ ac_link='$CC -o conftest$ac_exeext $CFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS >&5'
+ ac_compiler_gnu=$ac_cv_c_compiler_gnu
+ 
++if test "`uname -s`" != "NetBSD"; then
++# no -latomic on NetBSD
+ if test "$has_atomic" = "no"; then
+    LIBS="$LIBS -latomic"
+ fi
++fi
+ 
+ # Configuration flags that are used throughout WebKitGTK+.
+ 
