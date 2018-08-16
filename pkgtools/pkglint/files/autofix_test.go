@@ -117,7 +117,7 @@ func (s *Suite) Test_autofix_MkLines(c *check.C) {
 		"line1 := value1",
 		"line2 := value2",
 		"line3 := value3")
-	pkg := NewPackage("category/basename")
+	pkg := NewPackage(t.File("category/basename"))
 	G.Pkg = pkg
 	mklines := pkg.loadPackageMakefile()
 	G.Pkg = nil
@@ -259,7 +259,7 @@ func (s *Suite) Test_Autofix_show_source_code(c *check.C) {
 	t.SetupCommandLine("--show-autofix", "--source")
 	mklines := t.SetupFileMkLines("Makefile",
 		MkRcsID,
-		"before \\",
+		"# before \\",
 		"The old song \\",
 		"after")
 	line := mklines.lines[1]
@@ -274,7 +274,7 @@ func (s *Suite) Test_Autofix_show_source_code(c *check.C) {
 	t.CheckOutputLines(
 		"WARN: ~/Makefile:2--4: Using \"old\" is deprecated.",
 		"AUTOFIX: ~/Makefile:3: Replacing \"old\" with \"new\".",
-		">\tbefore \\",
+		">\t# before \\",
 		"-\tThe old song \\",
 		"+\tThe new song \\",
 		">\tafter")

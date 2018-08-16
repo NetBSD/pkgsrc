@@ -169,8 +169,8 @@ func loadCvsEntries(fname string) []Line {
 		return G.CvsEntriesLines
 	}
 
-	lines, err := readLines(dir+"/CVS/Entries", false)
-	if err != nil {
+	lines := Load(dir+"/CVS/Entries", 0)
+	if lines == nil {
 		return nil
 	}
 	G.CvsEntriesDir = dir
@@ -301,7 +301,7 @@ func dirglob(dirname string) []string {
 	var fnames []string
 	for _, fi := range fis {
 		if !(isIgnoredFilename(fi.Name())) {
-			fnames = append(fnames, dirname+"/"+fi.Name())
+			fnames = append(fnames, cleanpath(dirname+"/"+fi.Name()))
 		}
 	}
 	return fnames
@@ -585,7 +585,7 @@ func naturalLess(str1, str2 string) bool {
 // but that's deep in the infrastructure and only affects the "nb13" extension.)
 type RedundantScope struct {
 	vars        map[string]*redundantScopeVarinfo
-	condLevel   int
+	dirLevel    int
 	OnIgnore    func(old, new MkLine)
 	OnOverwrite func(old, new MkLine)
 }
@@ -602,7 +602,7 @@ func (s *RedundantScope) Handle(mkline MkLine) {
 	switch {
 	case mkline.IsVarassign():
 		varname := mkline.Varname()
-		if s.condLevel != 0 {
+		if s.dirLevel != 0 {
 			s.vars[varname] = nil
 			break
 		}
@@ -645,12 +645,12 @@ func (s *RedundantScope) Handle(mkline MkLine) {
 			}
 		}
 
-	case mkline.IsCond():
+	case mkline.IsDirective():
 		switch mkline.Directive() {
 		case "for", "if", "ifdef", "ifndef":
-			s.condLevel++
+			s.dirLevel++
 		case "endfor", "endif":
-			s.condLevel--
+			s.dirLevel--
 		}
 	}
 }

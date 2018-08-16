@@ -110,6 +110,10 @@ func (s *Suite) Test_MkParser_MkTokens(c *check.C) {
 	check("${VAR:ts\\000012}", varuse("VAR", "ts\\000012")) // The separator character can be a long octal number.
 	check("${VAR:ts\\124}", varuse("VAR", "ts\\124"))       // Or even decimal.
 
+	checkRest("${VAR:ts---}", nil, "${VAR:ts---}") // The :ts modifier only takes single-character separators.
+
+	check("$<", varuseText("$<", "<")) // Same as ${.IMPSRC}
+
 	check("$(GNUSTEP_USER_ROOT)", varuseText("$(GNUSTEP_USER_ROOT)", "GNUSTEP_USER_ROOT"))
 	t.CheckOutputLines(
 		"WARN: Test_MkParser_MkTokens.mk:1: Please use curly braces {} instead of round parentheses () for GNUSTEP_USER_ROOT.")
@@ -222,6 +226,15 @@ func (s *Suite) Test_MkParser_MkCond(c *check.C) {
 	checkRest("!empty(PKG_OPTIONS:Msndfile) || defined(PKG_OPTIONS:Msamplerate)",
 		&mkCond{Not: &mkCond{Empty: varuse("PKG_OPTIONS", "Msndfile")}},
 		" || defined(PKG_OPTIONS:Msamplerate)")
+	checkRest("${LEFT} &&",
+		&mkCond{Not: &mkCond{Empty: varuse("LEFT")}},
+		" &&")
+	checkRest("\"unfinished string literal",
+		nil,
+		"\"unfinished string literal")
+	checkRest("${VAR} == \"unfinished string literal",
+		nil, // Not even the ${VAR} gets through here, although that can be expected.
+		"${VAR} == \"unfinished string literal")
 }
 
 func (s *Suite) Test_MkParser__varuse_parentheses_autofix(c *check.C) {

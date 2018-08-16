@@ -39,7 +39,7 @@ const (
 	opAssignEval                      // :=
 	opAssignAppend                    // +=
 	opAssignDefault                   // ?=
-	opUseCompare                      // A variable is compared to a value, e.g. in a conditional.
+	opUseCompare                      // A variable is compared to a value, e.g. in a condition.
 	opUseMatch                        // A variable is matched using the :M or :N modifier.
 )
 
@@ -1085,7 +1085,7 @@ func (cv *VartypeCheck) WrksrcSubdirectory() {
 func (cv *VartypeCheck) Yes() {
 	switch cv.Op {
 	case opUseMatch:
-		cv.Line.Warnf("%s should only be used in a \".if defined(...)\" conditional.", cv.Varname)
+		cv.Line.Warnf("%s should only be used in a \".if defined(...)\" condition.", cv.Varname)
 		Explain(
 			"This variable can have only two values: defined or undefined.",
 			"When it is defined, it means \"yes\", even when its value is",

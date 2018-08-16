@@ -31,6 +31,7 @@ func (s *Suite) Test_ChecklinesPatch__with_comment(c *check.C) {
 func (s *Suite) Test_ChecklinesPatch__without_empty_line__autofix(c *check.C) {
 	t := s.Init(c)
 
+	t.Chdir("category/package")
 	patchLines := t.SetupFileLines("patch-WithoutEmptyLines",
 		RcsID,
 		"Text",
@@ -48,14 +49,14 @@ func (s *Suite) Test_ChecklinesPatch__without_empty_line__autofix(c *check.C) {
 		"SHA1 (some patch) = 49abd735b7e706ea9ed6671628bb54e91f7f5ffb")
 
 	t.SetupCommandLine("-Wall", "--autofix")
-	G.Pkg = &Package{DistinfoFile: "distinfo"}
+	G.Pkg = NewPackage(".")
 
 	ChecklinesPatch(patchLines)
 
 	t.CheckOutputLines(
-		"AUTOFIX: ~/patch-WithoutEmptyLines:2: Inserting a line \"\" before this line.",
-		"AUTOFIX: ~/patch-WithoutEmptyLines:3: Inserting a line \"\" before this line.",
-		"AUTOFIX: ~/distinfo:3: Replacing \"49abd735b7e706ea9ed6671628bb54e91f7f5ffb\" "+
+		"AUTOFIX: patch-WithoutEmptyLines:2: Inserting a line \"\" before this line.",
+		"AUTOFIX: patch-WithoutEmptyLines:3: Inserting a line \"\" before this line.",
+		"AUTOFIX: distinfo:3: Replacing \"49abd735b7e706ea9ed6671628bb54e91f7f5ffb\" "+
 			"with \"4938fc8c0b483dc2e33e741b0da883d199e78164\".")
 
 	t.CheckFileLines("patch-WithoutEmptyLines",

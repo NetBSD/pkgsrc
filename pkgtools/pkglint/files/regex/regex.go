@@ -6,8 +6,8 @@ package regex
 
 import (
 	"fmt"
+	"io"
 	"netbsd.org/pkglint/histogram"
-	"os"
 	"regexp"
 	"time"
 )
@@ -19,16 +19,13 @@ var (
 )
 
 var (
-	res       map[Pattern]*regexp.Regexp
-	rematch   *histogram.Histogram
-	renomatch *histogram.Histogram
-	retime    *histogram.Histogram
+	res       = make(map[Pattern]*regexp.Regexp)
+	rematch   = histogram.New()
+	renomatch = histogram.New()
+	retime    = histogram.New()
 )
 
 func Compile(re Pattern) *regexp.Regexp {
-	if res == nil {
-		res = make(map[Pattern]*regexp.Regexp)
-	}
 	cre := res[re]
 	if cre == nil {
 		cre = regexp.MustCompile(string(re))
@@ -49,12 +46,6 @@ func Match(s string, re Pattern) []string {
 
 	delay := immediatelyBefore.UnixNano() - before.UnixNano()
 	timeTaken := after.UnixNano() - immediatelyBefore.UnixNano() - delay
-
-	if retime == nil {
-		retime = histogram.New()
-		rematch = histogram.New()
-		renomatch = histogram.New()
-	}
 
 	retime.Add(string(re), int(timeTaken))
 	if m != nil {
@@ -124,11 +115,11 @@ func ReplaceFirst(s string, re Pattern, replacement string) ([]string, string) {
 	return nil, s
 }
 
-func PrintStats() {
+func PrintStats(out io.Writer) {
 	if Profiling {
-		rematch.PrintStats("rematch", os.Stdout, 10)
-		renomatch.PrintStats("renomatch", os.Stdout, 10)
-		retime.PrintStats("retime", os.Stdout, 10)
+		rematch.PrintStats("rematch", out, 10)
+		renomatch.PrintStats("renomatch", out, 10)
+		retime.PrintStats("retime", out, 10)
 	}
 }
 

@@ -58,11 +58,22 @@ func (s *Suite) SetUpTest(c *check.C) {
 	t.checkC = nil
 
 	G.opts.LogVerbose = true // To detect duplicate work being done
+	t.EnableSilentTracing()
+
+	prevdir, err := os.Getwd()
+	if err != nil {
+		c.Fatalf("Cannot get current working directory: %s", err)
+	}
+	t.prevdir = prevdir
 }
 
 func (s *Suite) TearDownTest(c *check.C) {
 	t := s.Tester
 	t.checkC = nil // No longer usable; see https://github.com/go-check/check/issues/22
+
+	if err := os.Chdir(t.prevdir); err != nil {
+		fmt.Fprintf(os.Stderr, "Cannot chdir back to previous dir: %s", err)
+	}
 
 	G = Pkglint{} // unusable because of missing logOut and logErr
 	textproc.Testing = false
@@ -71,6 +82,7 @@ func (s *Suite) TearDownTest(c *check.C) {
 			c.TestName(), strings.Split(out, "\n"))
 	}
 	t.tmpdir = ""
+	t.DisableTracing()
 }
 
 var _ = check.Suite(new(Suite))
@@ -82,10 +94,12 @@ func Test(t *testing.T) { check.TestingT(t) }
 // all the test methods, which makes it difficult to find
 // a method by auto-completion.
 type Tester struct {
-	stdout bytes.Buffer
-	stderr bytes.Buffer
-	tmpdir string
-	checkC *check.C
+	stdout  bytes.Buffer
+	stderr  bytes.Buffer
+	tmpdir  string
+	checkC  *check.C // Only usable during the test method itself
+	prevdir string   // The current working directory before the test started
+	relcwd  string
 }
 
 func (t *Tester) c() *check.C {
@@ -98,6 +112,11 @@ func (t *Tester) c() *check.C {
 // SetupCommandLine simulates a command line for the remainder of the test.
 // See Pkglint.ParseCommandLine.
 func (t *Tester) SetupCommandLine(args ...string) {
+
+	// Prevent tracing from being disabled; see EnableSilentTracing.
+	prevTracing := trace.Tracing
+	defer func() { trace.Tracing = prevTracing }()
+
 	exitcode := G.ParseCommandLine(append([]string{"pkglint"}, args...))
 	if exitcode != nil && *exitcode != 0 {
 		t.CheckOutputEmpty()
@@ -149,15 +168,14 @@ func (t *Tester) SetupTool(tool *Tool) {
 // The file is then read in, without considering line continuations.
 func (t *Tester) SetupFileLines(relativeFilename string, lines ...string) []Line {
 	filename := t.CreateFileLines(relativeFilename, lines...)
-	return LoadExistingLines(filename, false)
+	return Load(filename, MustSucceed)
 }
 
 // SetupFileLines creates a temporary file and writes the given lines to it.
 // The file is then read in, handling line continuations for Makefiles.
 func (t *Tester) SetupFileMkLines(relativeFilename string, lines ...string) *MkLines {
 	filename := t.CreateFileLines(relativeFilename, lines...)
-	plainLines := LoadExistingLines(filename, true)
-	return NewMkLines(plainLines)
+	return LoadMk(filename, MustSucceed)
 }
 
 // SetupPkgsrc sets up a minimal but complete pkgsrc installation in the
@@ -222,21 +240,62 @@ func (t *Tester) CreateFileLines(relativeFilename string, lines ...string) (file
 
 // File returns the absolute path to the given file in the
 // temporary directory. It doesn't check whether that file exists.
+// Calls to Tester.Chdir change the base directory for the relative file name.
 func (t *Tester) File(relativeFilename string) string {
 	if t.tmpdir == "" {
 		t.tmpdir = filepath.ToSlash(t.c().MkDir())
 	}
-	return t.tmpdir + "/" + relativeFilename
+	if t.relcwd != "" {
+		return cleanpath(relativeFilename)
+	}
+	return cleanpath(t.tmpdir + "/" + relativeFilename)
 }
 
-// ExpectFatalError, when run in a defer statement, runs the action
-// if the current function panics with a pkglintFatal
-// (typically from line.Fatalf).
-func (t *Tester) ExpectFatalError(action func()) {
+// Chdir changes the current working directory to the given subdirectory
+// of the temporary directory, creating it if necessary.
+//
+// After this call, all files loaded from the temporary directory via
+// SetupFileLines or CreateFileLines or similar methods will use path names
+// relative to this directory.
+//
+// After the test, the previous working directory is restored, so that
+// the other tests are unaffected.
+//
+// As long as this method is not called in a test, the current working
+// directory is indeterminate.
+func (t *Tester) Chdir(relativeFilename string) {
+	if t.relcwd != "" {
+		// When multiple calls of Chdir are mixed with calls to CreateFileLines,
+		// the resulting []Line and MkLines variables will use relative file names,
+		// and these will point to different areas in the file system. This is
+		// usually not indented and therefore prevented.
+		t.checkC.Fatalf("Chdir must only be called once per test; already in %q.", t.relcwd)
+	}
+
+	_ = os.MkdirAll(t.File(relativeFilename), 0700)
+	if err := os.Chdir(t.File(relativeFilename)); err != nil {
+		t.checkC.Fatalf("Cannot chdir: %s", err)
+	}
+	t.relcwd = relativeFilename
+}
+
+// ExpectFatalError promises that in the remainder of the current function
+// call, a panic with a pkglintFatal will occur (typically from Line.Fatalf).
+//
+// Usage:
+// 	func() {
+//      defer t.ExpectFatalError()
+//
+//      // The code that causes the fatal error.
+//      Load(t.File("nonexistent"), MustSucceed)
+//  }()
+//  t.CheckOutputLines(
+//      "FATAL: ~/nonexistent: Does not exist.")
+func (t *Tester) ExpectFatalError() {
 	r := recover()
-	if _, ok := r.(pkglintFatal); ok {
-		action()
-	} else {
+	if r == nil {
+		panic("Expected a pkglint fatal error, but didn't get one.")
+	} else if _, ok := r.(pkglintFatal); !ok {
 		panic(r)
 	}
 }
@@ -344,12 +403,28 @@ func (t *Tester) EnableTracing() {
 	trace.Tracing = true
 }
 
+// EnableTracingToLog enables the tracing and writes the tracing output
+// to the test log that can be examined with Tester.Output.
+func (t *Tester) EnableTracingToLog() {
+	G.logOut = NewSeparatorWriter(io.MultiWriter(os.Stdout, &t.stdout))
+	trace.Out = &t.stdout
+	trace.Tracing = true
+}
+
+// EnableSilentTracing enables tracing mode, but discards any tracing output.
+// This can be used to improve code coverage without any side-effects,
+// since tracing output is quite large.
+func (t *Tester) EnableSilentTracing() {
+	trace.Out = ioutil.Discard
+	trace.Tracing = true
+}
+
 // DisableTracing logs the output to the buffers again, ready to be
 // checked with CheckOutputLines.
 func (t *Tester) DisableTracing() {
 	G.logOut = NewSeparatorWriter(&t.stdout)
-	trace.Out = &t.stdout
 	trace.Tracing = false
+	trace.Out = nil
 }
 
 // CheckFileLines loads the lines from the temporary file and checks that
@@ -368,10 +443,7 @@ func (t *Tester) CheckFileLines(relativeFileName string, lines ...string) {
 // for indentation, while the lines in the code use spaces exclusively,
 // in order to make the depth of the indentation clearly visible.
 func (t *Tester) CheckFileLinesDetab(relativeFileName string, lines ...string) {
-	actualLines, err := readLines(t.File(relativeFileName), false)
-	if !t.c().Check(err, check.IsNil) {
-		return
-	}
+	actualLines := Load(t.File(relativeFileName), MustSucceed)
 
 	var detabbed []string
 	for _, line := range actualLines {
