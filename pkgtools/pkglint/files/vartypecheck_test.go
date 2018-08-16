@@ -78,7 +78,7 @@ func (s *Suite) Test_VartypeCheck_CFlag(c *check.C) {
 func (s *Suite) Test_VartypeCheck_Comment(c *check.C) {
 	t := s.Init(c)
 
-	G.Pkg = NewPackage("category/converter")
+	G.Pkg = NewPackage(t.File("category/converter"))
 	G.Pkg.EffectivePkgbase = "converter"
 
 	runVartypeChecks(t, "COMMENT", opAssign, (*VartypeCheck).Comment,
@@ -168,13 +168,13 @@ func (s *Suite) Test_VartypeCheck_DependencyWithPath(c *check.C) {
 
 	t.CreateFileLines("x11/alacarte/Makefile")
 	t.CreateFileLines("category/package/Makefile")
-	G.Pkg = NewPackage("category/package")
+	G.Pkg = NewPackage(t.File("category/package"))
 
 	// Since this test involves relative paths, the filename of the line must be realistic.
 	// Therefore this custom implementation of runVartypeChecks.
 	runChecks := func(values ...string) {
 		for i, value := range values {
-			mkline := t.NewMkLine(t.File("category/package/fname.mk"), i+1, "DEPENDS+=\t"+value)
+			mkline := t.NewMkLine(G.Pkg.File("fname.mk"), i+1, "DEPENDS+=\t"+value)
 			mkline.Tokenize(mkline.Value())
 			valueNovar := mkline.WithoutMakeVariables(mkline.Value())
 			vc := &VartypeCheck{mkline, mkline.Line, mkline.Varname(), mkline.Op(), mkline.Value(), valueNovar, "", false}
@@ -272,6 +272,8 @@ func (s *Suite) Test_VartypeCheck_Enum__use_match(c *check.C) {
 		".if !empty(MACHINE_ARCH:Mi386) || ${MACHINE_ARCH} == i386",
 		".endif",
 		".if !empty(PKGSRC_COMPILER:Mclang) || ${PKGSRC_COMPILER} == clang",
+		".endif",
+		".if ${MACHINE_ARCH:Ni386:Nx86_64:Nsparc64}",
 		".endif")
 
 	mklines.Check()
@@ -661,9 +663,9 @@ func (s *Suite) Test_VartypeCheck_Yes(c *check.C) {
 		"${YESVAR}")
 
 	t.CheckOutputLines(
-		"WARN: fname:1: PKG_DEVELOPER should only be used in a \".if defined(...)\" conditional.",
-		"WARN: fname:2: PKG_DEVELOPER should only be used in a \".if defined(...)\" conditional.",
-		"WARN: fname:3: PKG_DEVELOPER should only be used in a \".if defined(...)\" conditional.")
+		"WARN: fname:1: PKG_DEVELOPER should only be used in a \".if defined(...)\" condition.",
+		"WARN: fname:2: PKG_DEVELOPER should only be used in a \".if defined(...)\" condition.",
+		"WARN: fname:3: PKG_DEVELOPER should only be used in a \".if defined(...)\" condition.")
 }
 
 func (s *Suite) Test_VartypeCheck_YesNo(c *check.C) {
