@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3602 2018/08/16 09:22:59 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3603 2018/08/16 09:24:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5126,3 +5126,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/goffice0.10 to 0.10.42 [wiz 2018-08-16]
 	Removed math/gnumeric successor math/gnumeric112 [wiz 2018-08-16]
 	Removed math/gnumeric110 successor math/gnumeric112 [wiz 2018-08-16]
+	Removed finance/gnucash2 successor finance/gnucash [wiz 2018-08-16]
