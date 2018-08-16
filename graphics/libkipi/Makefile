@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2018/04/29 21:31:21 adam Exp $
+# $NetBSD: Makefile,v 1.76 2018/08/16 18:54:29 adam Exp $
 
 DISTNAME=	libkipi-15.08.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 COMMENT=	KDE image plugin interface
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.08.3/src/}
