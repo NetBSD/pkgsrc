@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.74 2018/07/02 20:32:09 adam Exp $
+# $NetBSD: Makefile.common,v 1.75 2018/08/16 15:58:32 adam Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -10,7 +10,7 @@
 
 BOOST_PACKAGE?=		undefined
 BOOST_COMMENT?=		undefined
-BOOST_VERSION=		1.67.0
+BOOST_VERSION=		1.68.0
 BOOST_SHORT_VERSION=	${BOOST_VERSION:S/./_/:C/\..*$//}
 
 # Update mysql57-client/patches/patch-cmake_boost.cmake when updating version
