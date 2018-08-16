@@ -79,14 +79,14 @@ func NewPkgsrc(dir string) *Pkgsrc {
 	return src
 }
 
-// Load reads the pkgsrc infrastructure files to
+// LoadInfrastructure reads the pkgsrc infrastructure files to
 // extract information like the tools, packages to update,
 // user-defined variables.
 //
 // This work is not done in the constructor to keep the tests
 // simple, since setting up a realistic pkgsrc environment requires
 // a lot of files.
-func (src *Pkgsrc) Load() {
+func (src *Pkgsrc) LoadInfrastructure() {
 	src.InitVartypes()
 	src.loadMasterSites()
 	src.loadPkgOptions()
@@ -148,9 +148,10 @@ func (src *Pkgsrc) loadTools() {
 	toolFiles := []string{"defaults.mk"}
 	{
 		toc := G.Pkgsrc.File("mk/tools/bsd.tools.mk")
-		lines := LoadExistingLines(toc, true)
-		for _, line := range lines {
-			if m, _, _, includefile := MatchMkInclude(line.Text); m {
+		mklines := LoadMk(toc, MustSucceed|NotEmpty)
+		for _, mkline := range mklines.mklines {
+			if mkline.IsInclude() {
+				includefile := mkline.IncludeFile()
 				if !contains(includefile, "/") {
 					toolFiles = append(toolFiles, includefile)
 				}
@@ -162,41 +163,38 @@ func (src *Pkgsrc) loadTools() {
 	}
 
 	reg := src.Tools
-	reg.RegisterTool(&Tool{"echo", "ECHO", true, true, true}, dummyLine)
-	reg.RegisterTool(&Tool{"echo -n", "ECHO_N", true, true, true}, dummyLine)
-	reg.RegisterTool(&Tool{"false", "FALSE", true /*why?*/, true, false}, dummyLine)
-	reg.RegisterTool(&Tool{"test", "TEST", true, true, true}, dummyLine)
-	reg.RegisterTool(&Tool{"true", "TRUE", true /*why?*/, true, true}, dummyLine)
+	reg.RegisterTool(&Tool{"echo", "ECHO", true, true, true}, dummyMkLine)
+	reg.RegisterTool(&Tool{"echo -n", "ECHO_N", true, true, true}, dummyMkLine)
+	reg.RegisterTool(&Tool{"false", "FALSE", true /*why?*/, true, false}, dummyMkLine)
+	reg.RegisterTool(&Tool{"test", "TEST", true, true, true}, dummyMkLine)
+	reg.RegisterTool(&Tool{"true", "TRUE", true /*why?*/, true, true}, dummyMkLine)
 
 	for _, basename := range toolFiles {
-		lines := G.Pkgsrc.LoadExistingLines("mk/tools/"+basename, true)
-		for _, line := range lines {
-			reg.ParseToolLine(line)
+		mklines := G.Pkgsrc.LoadMk("mk/tools/"+basename, MustSucceed|NotEmpty)
+		for _, mkline := range mklines.mklines {
+			reg.ParseToolLine(mkline)
 		}
 	}
 
 	for _, relativeName := range [...]string{"mk/bsd.prefs.mk", "mk/bsd.pkg.mk"} {
-		condDepth := 0
+		dirDepth := 0
 
-		lines := G.Pkgsrc.LoadExistingLines(relativeName, true)
-		for _, line := range lines {
-			text := line.Text
-			if hasPrefix(text, "#") {
-				continue
-			}
-
-			if m, _, varname, _, _, _, value, _, _ := MatchVarassign(text); m {
+		mklines := G.Pkgsrc.LoadMk(relativeName, MustSucceed|NotEmpty)
+		for _, mkline := range mklines.mklines {
+			if mkline.IsVarassign() {
+				varname := mkline.Varname()
+				value := mkline.Value()
 				if varname == "USE_TOOLS" {
 					if trace.Tracing {
-						trace.Stepf("[condDepth=%d] %s", condDepth, value)
+						trace.Stepf("[dirDepth=%d] %s", dirDepth, value)
 					}
-					if condDepth == 0 || condDepth == 1 && relativeName == "mk/bsd.prefs.mk" {
+					if dirDepth == 0 || dirDepth == 1 && relativeName == "mk/bsd.prefs.mk" {
 						for _, toolname := range splitOnSpace(value) {
 							if !containsVarRef(toolname) {
-								tool := reg.Register(toolname, line)
+								tool := reg.Register(toolname, mkline)
 								tool.Predefined = true
 								if relativeName == "mk/bsd.prefs.mk" {
-									tool.UsableAtLoadtime = true
+									tool.UsableAtLoadTime = true
 								}
 							}
 						}
@@ -208,12 +206,12 @@ func (src *Pkgsrc) loadTools() {
 					}
 				}
 
-			} else if m, _, cond, _, _ := matchMkCond(text); m {
-				switch cond {
+			} else if mkline.IsDirective() {
+				switch mkline.Directive() {
 				case "if", "ifdef", "ifndef", "for":
-					condDepth++
+					dirDepth++
 				case "endif", "endfor":
-					condDepth--
+					dirDepth--
 				}
 			}
 		}
@@ -222,11 +220,6 @@ func (src *Pkgsrc) loadTools() {
 	if trace.Tracing {
 		reg.Trace()
 	}
-}
-
-func (src *Pkgsrc) loadSuggestedUpdatesFile(fname string) []SuggestedUpdate {
-	lines := LoadExistingLines(fname, false)
-	return src.parseSuggestedUpdates(lines)
 }
 
 func (src *Pkgsrc) parseSuggestedUpdates(lines []Line) []SuggestedUpdate {
@@ -261,14 +254,11 @@ func (src *Pkgsrc) parseSuggestedUpdates(lines []Line) []SuggestedUpdate {
 }
 
 func (src *Pkgsrc) loadSuggestedUpdates() {
-	src.suggestedUpdates = src.loadSuggestedUpdatesFile(G.Pkgsrc.File("doc/TODO"))
-	if wipFilename := G.Pkgsrc.File("wip/TODO"); fileExists(wipFilename) {
-		src.suggestedWipUpdates = src.loadSuggestedUpdatesFile(wipFilename)
-	}
+	src.suggestedUpdates = src.parseSuggestedUpdates(Load(G.Pkgsrc.File("doc/TODO"), MustSucceed))
+	src.suggestedWipUpdates = src.parseSuggestedUpdates(Load(G.Pkgsrc.File("wip/TODO"), NotEmpty))
 }
 
 func (src *Pkgsrc) loadDocChangesFromFile(fname string) []*Change {
-	lines := LoadExistingLines(fname, false)
 
 	parseChange := func(line Line) *Change {
 		text := line.Text
@@ -306,6 +296,7 @@ func (src *Pkgsrc) loadDocChangesFromFile(fname string) []*Change {
 		year = yyyy
 	}
 
+	lines := Load(fname, MustSucceed|NotEmpty)
 	var changes []*Change
 	for _, line := range lines {
 		if change := parseChange(line); change != nil {
@@ -371,8 +362,7 @@ func (src *Pkgsrc) loadDocChanges() {
 }
 
 func (src *Pkgsrc) loadUserDefinedVars() {
-	lines := G.Pkgsrc.LoadExistingLines("mk/defaults/mk.conf", true)
-	mklines := NewMkLines(lines)
+	mklines := G.Pkgsrc.LoadMk("mk/defaults/mk.conf", MustSucceed|NotEmpty)
 
 	for _, mkline := range mklines.mklines {
 		if mkline.IsVarassign() {
@@ -542,9 +532,14 @@ func (src *Pkgsrc) initDeprecatedVars() {
 	}
 }
 
-// LoadExistingLines loads the file relative to the pkgsrc top directory.
-func (src *Pkgsrc) LoadExistingLines(fileName string, joinBackslashLines bool) []Line {
-	return LoadExistingLines(src.File(fileName), joinBackslashLines)
+// Load loads the file relative to the pkgsrc top directory.
+func (src *Pkgsrc) Load(fileName string, options LoadOptions) []Line {
+	return Load(src.File(fileName), options)
+}
+
+// LoadMk loads the Makefile relative to the pkgsrc top directory.
+func (src *Pkgsrc) LoadMk(fileName string, options LoadOptions) *MkLines {
+	return LoadMk(src.File(fileName), options)
 }
 
 // File resolves a file name relative to the pkgsrc top directory.
@@ -572,14 +567,15 @@ func (src *Pkgsrc) IsBuildDef(varname string) bool {
 }
 
 func (src *Pkgsrc) loadMasterSites() {
-	lines := src.LoadExistingLines("mk/fetch/sites.mk", true)
+	mklines := src.LoadMk("mk/fetch/sites.mk", MustSucceed|NotEmpty)
 
 	nameToUrl := src.MasterSiteVarToURL
 	urlToName := src.MasterSiteURLToVar
-	for _, line := range lines {
-		if m, commented, varname, _, _, _, urls, _, _ := MatchVarassign(line.Text); m {
-			if !commented && hasPrefix(varname, "MASTER_SITE_") && varname != "MASTER_SITE_BACKUP" {
-				for _, url := range splitOnSpace(urls) {
+	for _, mkline := range mklines.mklines {
+		if mkline.IsVarassign() {
+			varname := mkline.Varname()
+			if hasPrefix(varname, "MASTER_SITE_") && varname != "MASTER_SITE_BACKUP" {
+				for _, url := range splitOnSpace(mkline.Value()) {
 					if matches(url, `^(?:http://|https://|ftp://)`) {
 						if nameToUrl[varname] == "" {
 							nameToUrl[varname] = url
@@ -600,7 +596,7 @@ func (src *Pkgsrc) loadMasterSites() {
 }
 
 func (src *Pkgsrc) loadPkgOptions() {
-	lines := src.LoadExistingLines("mk/defaults/options.description", false)
+	lines := src.Load("mk/defaults/options.description", MustSucceed)
 
 	for _, line := range lines {
 		if m, optname, optdescr := match2(line.Text, `^([-0-9a-z_+]+)(?:\s+(.*))?$`); m {
