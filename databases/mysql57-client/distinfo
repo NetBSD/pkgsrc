@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.21 2018/07/08 14:43:22 taca Exp $
+$NetBSD: distinfo,v 1.22 2018/08/16 16:06:09 adam Exp $
 
-SHA1 (mysql-5.7.22.tar.gz) = 734b98efa9f9691b056b9d788c7d936bc52bbde3
-RMD160 (mysql-5.7.22.tar.gz) = a0e7bcb650543c8b54579399f641430e338c76e2
-SHA512 (mysql-5.7.22.tar.gz) = 91df104493edac6a7b7e76ab1c8d465a6a5cba7552d2d0e2e0f58e3943a5ccdbcad9964f30c81d5d734d0dc988ef07f90215e91639014e51c8fba773855123d7
-Size (mysql-5.7.22.tar.gz) = 51868499 bytes
+SHA1 (mysql-5.7.23.tar.gz) = 0c07dd1670f3749c482180227717738c031bb5b4
+RMD160 (mysql-5.7.23.tar.gz) = 20021aa73537f4630b72931925bec78c251b06e6
+SHA512 (mysql-5.7.23.tar.gz) = 4c303ef03cd808f96a6548ef3ff5107d2fa41dc3776b42513d482cec539ffac33a5a412749de5d9c60b2a8f3e4f592bfef5a4a79d741013de13621c2ce5122a0
+Size (mysql-5.7.23.tar.gz) = 51907462 bytes
 SHA1 (patch-CMakeLists.txt) = b47592cf8801538375da3df2990fde4d292fc365
 SHA1 (patch-client_CMakeLists.txt) = 990d6df52380981f11a4ac5aafe48f34a3b2097f
 SHA1 (patch-client_completion_hash.cc) = b86ec80beac624b2aa21c7587e351ff126400ecb
 SHA1 (patch-client_mysqladmin.cc) = e1650ef3695675bcc01375bacdebcb7318218b93
-SHA1 (patch-cmake_boost.cmake) = 5a6ad341e956178cc63195966529e0fceab31a6d
+SHA1 (patch-cmake_boost.cmake) = e7f54245959154386634bf2412c890647fc1405e
 SHA1 (patch-cmake_os_SunOS.cmake) = 06e290820a75d68931fce6dfd70a0b5edd548320
 SHA1 (patch-cmake_plugin.cmake) = 92267182d4ec559a312a5a38826b9047c99b122f
 SHA1 (patch-cmake_readline.cmake) = fb79ed969240ae2984098f72c2d3fb501154902c
@@ -20,13 +20,11 @@ SHA1 (patch-include_my__thread__os__id.h) = a51861b791086a0eeb9cb4d64892c5033da8
 SHA1 (patch-libmysql_CMakeLists.txt) = 306c73384226e07bf2a45af5d92b6f05d6044cbe
 SHA1 (patch-mysql-test_CMakeLists.txt) = 8a8e846792077101a01731c4577c37161f70264d
 SHA1 (patch-mysys__ssl_CMakeLists.txt) = 4750125b2e98d11c9efb653beda2d4d5166adc02
-SHA1 (patch-mysys__ssl_my__aes__openssl.cc) = 98881ab664bf674e6813ffc31f458a3e93c3fb3e
 SHA1 (patch-mysys_kqueue__timers.c) = 836803e9c7353b813bc22a5b69cc263dea384c9b
 SHA1 (patch-mysys_my__symlink.c) = 23b57cd5922357d0bc72f5c15100a9fe1f89cfb2
 SHA1 (patch-mysys_stacktrace.c) = 3e0794f544f0e35f44a694330885478247657842
 SHA1 (patch-rapid_plugin_group__replication_libmysqlgcs_src_bindings_xcom_xcom_sock__probe__ix.c) = 1a389fca13ada1be74d96276e11baee16bbc2363
 SHA1 (patch-rapid_plugin_group__replication_libmysqlgcs_src_bindings_xcom_xcom_xcom__memory.c) = 7077900830f904c74c79439b856d9d176fc27f15
-SHA1 (patch-rapid_plugin_group__replication_libmysqlgcs_src_bindings_xcom_xcom_xcom__ssl__transport.c) = da85cb9b6ca434ec4faa29b1bcb0b04ffd419319
 SHA1 (patch-rapid_plugin_group__replication_libmysqlgcs_src_bindings_xcom_xcom_xcom__transport.c) = d7f87bff5a41ff6a130fcf74dc520b38cedf5924
 SHA1 (patch-rapid_plugin_group__replication_rpcgen.cmake) = 5c14be97bd1fd04b2b845f1a2422452445733474
 SHA1 (patch-rapid_plugin_x_CMakeLists.txt) = aedf7d93889d4e7b4e04d182fe1a6775134f97e8
@@ -37,7 +35,6 @@ SHA1 (patch-sql_CMakeLists.txt) = d66fe5fc8ac3a6230f1a3aa1395cf72e1a2b682e
 SHA1 (patch-sql_conn__handler_socket__connection.cc) = 12cf83e061edbe59eb073037b1036903b7ba4b00
 SHA1 (patch-sql_item__geofunc__internal.cc) = 752862c3a30231e694e508ced1a215a610649fc6
 SHA1 (patch-sql_log_event.h) = 311dc7fb04ea832df229dc2a28bcfbf263670ebf
-SHA1 (patch-sql_mysqld.cc) = a1e2470d027ad39d6f2b177d39cb637a8c0dcd98
 SHA1 (patch-storage_archive_CMakeLists.txt) = 4cf5ed97a226a3844e184c46958b5202eefb9dd5
 SHA1 (patch-storage_blackhole_CMakeLists.txt) = 1d066d686172657ce9f812a505c7323a76111a63
 SHA1 (patch-storage_csv_CMakeLists.txt) = 6208989a32805f8b107cd9de96e3ff0490ec9000
@@ -48,4 +45,3 @@ SHA1 (patch-storage_myisam_CMakeLists.txt) = debeb74ec2d4a7d2e8a1166595a1deb384b
 SHA1 (patch-storage_myisammrg_CMakeLists.txt) = e4755536adfb6e837f997061690244da9aa7a6d3
 SHA1 (patch-storage_ndb_mcc_frontend_dojo_dojox_mobile_build_build.sh) = e6939ef781054b4bff006038905e28f7c5cd8d7e
 SHA1 (patch-strings_decimal.c) = 069c9d930c735f74510702baa9bef38aec425903
-SHA1 (patch-vio_viosslfactories.c) = 35cebb7701bbbd3eb431e73c128fa425ba356ac1
