@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.4 2018/03/22 13:29:11 triaxx Exp $
+$NetBSD: distinfo,v 1.5 2018/08/16 21:44:43 triaxx Exp $
 
-SHA1 (grip-3.7.0.tar.gz) = 8274adb5b680f1bd8ed3f3ae9ba656af71461532
-RMD160 (grip-3.7.0.tar.gz) = a8a7dcae40d229d2898f032ba9912a53c44e5c0d
-SHA512 (grip-3.7.0.tar.gz) = bc2cbfbc1602a3639944009326e485195dbbab83a3ee15ab7291050ccc8b62dc52e052dca50a040335cfb20ff8d244c5315a15e8d940f6a9d89b2808d7876ca1
-Size (grip-3.7.0.tar.gz) = 961006 bytes
+SHA1 (grip-3.9.0.tar.gz) = 3570cab3e02dbdc94e09ee0aa22b74774700a17d
+RMD160 (grip-3.9.0.tar.gz) = 5c6846dd1895af1a2e3a450cad88e41611c7de7e
+SHA512 (grip-3.9.0.tar.gz) = 748821f59c90d7239bb711a4a7e1df4e9f2b67ff7bd5c635a2c49389efc7836cca6672cdd93e727f8b97c4e2221f895cc7b4110aa0d3419a5fbe56530ca1b1d0
+Size (grip-3.9.0.tar.gz) = 968706 bytes
 SHA1 (patch-configure) = aefe8f4fdfaba93b95cca656d0ea6c8ec7b3348f
 SHA1 (patch-src_cdplay.c) = ae6dd708d4a5bc61ad49477e79b2005959290634
 SHA1 (patch-src_grip.c) = 6df01ec5a7e30b96a94f5db7dc9b6f6bd7890c06
