@@ -87,7 +87,7 @@ func (s *Suite) Test_ChecklinesOptionsMk__unexpected_line(c *check.C) {
 		"WARN: ~/category/package/options.mk:7: Expected inclusion of \"../../mk/bsd.options.mk\".")
 }
 
-func (s *Suite) Test_ChecklinesOptionsMk__malformed_conditional(c *check.C) {
+func (s *Suite) Test_ChecklinesOptionsMk__malformed_condition(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wno-space")
@@ -115,5 +115,5 @@ func (s *Suite) Test_ChecklinesOptionsMk__malformed_conditional(c *check.C) {
 	ChecklinesOptionsMk(mklines)
 
 	t.CheckOutputLines(
-		"WARN: ~/category/package/options.mk:9: Invalid conditional \"${OPSYS} == 'Darwin'\".")
+		"WARN: ~/category/package/options.mk:9: Invalid condition, unrecognized part: \"${OPSYS} == 'Darwin'\".")
 }

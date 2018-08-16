@@ -15,6 +15,7 @@ const rePkgname = `^([\w\-.+]+)-(\d[.0-9A-Z_a-z]*)$`
 
 // Package contains data for the pkgsrc package that is currently checked.
 type Package struct {
+	dir                  string          // The directory of the package, for resolving files
 	Pkgpath              string          // e.g. "category/pkgdir"
 	Pkgdir               string          // PKGDIR from the package Makefile
 	Filesdir             string          // FILESDIR from the package Makefile
@@ -30,7 +31,7 @@ type Package struct {
 
 	vars                  Scope
 	bl3                   map[string]Line // buildlink3.mk name => line; contains only buildlink3.mk files that are directly included.
-	plistSubstCond        map[string]bool // varname => true; list of all variables that are used as conditionals (@comment or nothing) in PLISTs.
+	plistSubstCond        map[string]bool // varname => true; all variables that are used as conditions (@comment or nothing) in PLISTs.
 	included              map[string]Line // fname => line
 	seenMakefileCommon    bool            // Does the package have any .includes?
 	loadTimeTools         map[string]bool // true=ok, false=not ok, absent=not mentioned in USE_TOOLS.
@@ -40,12 +41,19 @@ type Package struct {
 	IgnoreMissingPatches  bool // In distinfo, don't warn about patches that cannot be found.
 }
 
-func NewPackage(pkgpath string) *Package {
+func NewPackage(dir string) *Package {
+	pkgpath := G.Pkgsrc.ToRel(dir)
+	if strings.Count(pkgpath, "/") != 1 {
+		NewLineWhole(dir).Errorf("Package directory %q must be two subdirectories below the pkgsrc root %q.", dir, G.Pkgsrc.File("."))
+	}
+
 	pkg := &Package{
+		dir:                   dir,
 		Pkgpath:               pkgpath,
 		Pkgdir:                ".",
 		Filesdir:              "files",
 		Patchdir:              "patches",
+		DistinfoFile:          "distinfo",
 		PlistDirs:             make(map[string]bool),
 		PlistFiles:            make(map[string]bool),
 		vars:                  NewScope(),
@@ -65,7 +73,7 @@ func NewPackage(pkgpath string) *Package {
 // File returns the (possibly absolute) path to relativeFilename,
 // as resolved from the package's directory.
 func (pkg *Package) File(relativeFilename string) string {
-	return G.Pkgsrc.File(pkg.Pkgpath + "/" + relativeFilename)
+	return cleanpath(pkg.dir + "/" + relativeFilename)
 }
 
 func (pkg *Package) varValue(varname string) (string, bool) {
@@ -151,21 +159,14 @@ func (pkg *Package) checklinesBuildlink3Inclusion(mklines *MkLines) {
 	}
 }
 
-// Given the package path relative to the pkgsrc top directory,
-// checks a complete pkgsrc package.
-//
-// Example:
-//  checkdirPackage("category/pkgbase")
-func (pkglint *Pkglint) checkdirPackage(pkgpath string) {
+// checkdirPackage checks a complete pkgsrc package, including each
+// of the files individually, and also when seen in combination.
+func (pkglint *Pkglint) checkdirPackage(dir string) {
 	if trace.Tracing {
-		defer trace.Call1(pkgpath)()
+		defer trace.Call1(dir)()
 	}
 
-	if strings.Count(pkgpath, "/") != 1 {
-		dummyLine.Fatalf("Internal pkglint error: Wrong pkgpath %q.", pkgpath)
-	}
-
-	G.Pkg = NewPackage(pkgpath)
+	G.Pkg = NewPackage(dir)
 	defer func() { G.Pkg = nil }()
 	pkg := G.Pkg
 
@@ -195,8 +196,8 @@ func (pkglint *Pkglint) checkdirPackage(pkgpath string) {
 			!matches(fname, `patch-`) &&
 			!contains(fname, pkg.Pkgdir+"/") &&
 			!contains(fname, pkg.Filesdir+"/") {
-			if lines, err := readLines(fname, true); err == nil && lines != nil {
-				NewMkLines(lines).DetermineUsedVariables()
+			if mklines := LoadMk(fname, MustSucceed); mklines != nil {
+				mklines.DetermineUsedVariables()
 			}
 		}
 		if hasPrefix(path.Base(fname), "PLIST") {
@@ -301,11 +302,10 @@ func (pkg *Package) readMakefile(fname string, mainLines *MkLines, allLines *MkL
 		defer trace.Call1(fname)()
 	}
 
-	fileLines := LoadNonemptyLines(fname, true)
-	if fileLines == nil {
+	fileMklines := LoadMk(fname, NotEmpty|LogErrors)
+	if fileMklines == nil {
 		return false
 	}
-	fileMklines := NewMkLines(fileLines)
 
 	isMainMakefile := len(mainLines.mklines) == 0
 
@@ -916,10 +916,10 @@ func (pkg *Package) checkLocallyModified(fname string) {
 }
 
 func (pkg *Package) CheckInclude(mkline MkLine, indentation *Indentation) {
-	conditionVars := mkline.ConditionVars()
-	if conditionVars == "" {
-		conditionVars = indentation.Varnames()
-		mkline.SetConditionVars(conditionVars)
+	conditionalVars := mkline.ConditionalVars()
+	if conditionalVars == "" {
+		conditionalVars = indentation.Varnames()
+		mkline.SetConditionalVars(conditionalVars)
 	}
 
 	if path.Dir(abspath(mkline.Filename)) == abspath(pkg.File(".")) {
@@ -929,27 +929,23 @@ func (pkg *Package) CheckInclude(mkline MkLine, indentation *Indentation) {
 			pkg.conditionalIncludes[includefile] = mkline
 			if other := pkg.unconditionalIncludes[includefile]; other != nil {
 				mkline.Warnf("%q is included conditionally here (depending on %s) and unconditionally in %s.",
-					cleanpath(includefile), mkline.ConditionVars(), other.ReferenceFrom(mkline.Line))
+					cleanpath(includefile), mkline.ConditionalVars(), other.ReferenceFrom(mkline.Line))
 			}
 		} else {
 			pkg.unconditionalIncludes[includefile] = mkline
 			if other := pkg.conditionalIncludes[includefile]; other != nil {
 				mkline.Warnf("%q is included unconditionally here and conditionally in %s (depending on %s).",
-					cleanpath(includefile), other.ReferenceFrom(mkline.Line), other.ConditionVars())
+					cleanpath(includefile), other.ReferenceFrom(mkline.Line), other.ConditionalVars())
 			}
 		}
 	}
 }
 
 func (pkg *Package) loadPlistDirs(plistFilename string) {
-	lines, err := readLines(plistFilename, false)
-	if err != nil {
-		return
-	}
-
+	lines := Load(plistFilename, MustSucceed)
 	for _, line := range lines {
 		text := line.Text
-		pkg.PlistFiles[text] = true // XXX: ignores PLIST conditionals for now
+		pkg.PlistFiles[text] = true // XXX: ignores PLIST conditions for now
 		// Keep in sync with PlistChecker.collectFilesAndDirs
 		if !contains(text, "$") && !contains(text, "@") {
 			for dir := path.Dir(text); dir != "."; dir = path.Dir(dir) {
