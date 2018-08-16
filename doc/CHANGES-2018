@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3621 2018/08/16 12:31:44 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3622 2018/08/16 12:33:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5149,3 +5149,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/nodejs to 10.9.0 [fhajny 2018-08-16]
 	Updated devel/pango to 1.42.3 [wiz 2018-08-16]
 	Updated security/polkit to 0.115 [wiz 2018-08-16]
+	Updated graphics/py-cairo to 1.17.1 [wiz 2018-08-16]
