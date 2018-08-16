@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/03/07 21:14:32 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2018/08/16 13:25:28 nia Exp $
 
 DISTNAME=	libretro-pcsx-rearmed-0.22
 CATEGORIES=	emulators
@@ -28,12 +28,6 @@ PCSX_REARMED_PLATFORM=	unix
 .endif
 
 MAKE_ENV+=	platform="${PCSX_REARMED_PLATFORM}"
-
-.if !empty(MACHINE_ARCH:M*arm*)
-# only ARM-specific options for now, and options framework
-#insists on having at least one option, so only pull it in for ARM
-.include "options.mk"
-.endif
 
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/pcsx_rearmed_libretro.so \
