@@ -1,6 +1,7 @@
-$NetBSD: patch-build_aclocal_bakefile.m4,v 1.2 2018/05/02 11:33:44 adam Exp $
+$NetBSD: patch-build_aclocal_bakefile.m4,v 1.3 2018/08/16 11:38:53 wiz Exp $
 
 Fix shell script portability
+https://trac.wxwidgets.org/ticket/18198
 
 --- build/aclocal/bakefile.m4.orig	2014-06-14 21:48:48.000000000 +0000
 +++ build/aclocal/bakefile.m4
