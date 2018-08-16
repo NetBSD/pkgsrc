@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2017/06/14 15:54:08 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2018/08/16 12:19:54 wiz Exp $
 
-DISTNAME=	npth-1.5
+DISTNAME=	npth-1.6
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/npth/
 EXTRACT_SUFX=	.tar.bz2
