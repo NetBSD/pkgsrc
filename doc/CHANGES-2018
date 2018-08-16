@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3611 2018/08/16 11:39:54 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3612 2018/08/16 11:50:47 he Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5138,3 +5138,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/gupnp to 1.0.3 [wiz 2018-08-16]
 	Updated finance/py-ofxparse to 0.19 [adam 2018-08-16]
 	Updated textproc/py-m2r to 0.2.0 [adam 2018-08-16]
+	Updated www/webkit24-gtk3 to 2.4.11nb16 [he 2018-08-16]
+	Updated www/webkit24-gtk to 2.4.11nb16 [he 2018-08-16]
