@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3627 2018/08/16 12:51:58 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.3628 2018/08/16 12:55:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5155,3 +5155,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/shared-mime-info to 1.10 [wiz 2018-08-16]
 	Updated fonts/unifont to 11.0.02 [wiz 2018-08-16]
 	Updated lang/nodejs8 to 8.11.4 [fhajny 2018-08-16]
+	Updated lang/vala to 0.40.8 [wiz 2018-08-16]
