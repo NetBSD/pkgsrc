@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2018/08/12 08:33:55 maya Exp $
+@comment $NetBSD: PLIST,v 1.32 2018/08/16 13:11:48 maya Exp $
 bin/mkoctfile
 bin/mkoctfile-${PKGVERSION}
 bin/octave
@@ -771,33 +771,33 @@ lib/octave/${PKGVERSION}/gzip.a
 lib/octave/${PKGVERSION}/liboctave.la
 lib/octave/${PKGVERSION}/liboctgui.la
 lib/octave/${PKGVERSION}/liboctinterp.la
-lib/octave/${PKGVERSION}/oct/x86_64--netbsd/PKG_ADD
-lib/octave/${PKGVERSION}/oct/x86_64--netbsd/__delaunayn__.oct
-lib/octave/${PKGVERSION}/oct/x86_64--netbsd/__eigs__.oct
-lib/octave/${PKGVERSION}/oct/x86_64--netbsd/__fltk_uigetfile__.oct
-lib/octave/${PKGVERSION}/oct/x86_64--netbsd/__glpk__.oct
-lib/octave/${PKGVERSION}/oct/x86_64--netbsd/__init_fltk__.oct
-lib/octave/${PKGVERSION}/oct/x86_64--netbsd/__init_gnuplot__.oct
-lib/octave/${PKGVERSION}/oct/x86_64--netbsd/__ode15__.oct
-lib/octave/${PKGVERSION}/oct/x86_64--netbsd/__osmesa_print__.oct
-lib/octave/${PKGVERSION}/oct/x86_64--netbsd/__voronoi__.oct
-lib/octave/${PKGVERSION}/oct/x86_64--netbsd/amd.oct
-lib/octave/${PKGVERSION}/oct/x86_64--netbsd/audiodevinfo.oct
-lib/octave/${PKGVERSION}/oct/x86_64--netbsd/audioread.oct
-lib/octave/${PKGVERSION}/oct/x86_64--netbsd/ccolamd.oct
-lib/octave/${PKGVERSION}/oct/x86_64--netbsd/chol.oct
-lib/octave/${PKGVERSION}/oct/x86_64--netbsd/colamd.oct
-lib/octave/${PKGVERSION}/oct/x86_64--netbsd/convhulln.oct
-lib/octave/${PKGVERSION}/oct/x86_64--netbsd/dmperm.oct
-lib/octave/${PKGVERSION}/oct/x86_64--netbsd/fftw.oct
-lib/octave/${PKGVERSION}/oct/x86_64--netbsd/gzip.oct
-lib/octave/${PKGVERSION}/oct/x86_64--netbsd/qr.oct
-lib/octave/${PKGVERSION}/oct/x86_64--netbsd/symbfact.oct
-lib/octave/${PKGVERSION}/oct/x86_64--netbsd/symrcm.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/PKG_ADD
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__delaunayn__.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__eigs__.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__fltk_uigetfile__.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__glpk__.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__init_fltk__.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__init_gnuplot__.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__ode15__.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__osmesa_print__.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__voronoi__.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/amd.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/audiodevinfo.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/audioread.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/ccolamd.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/chol.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/colamd.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/convhulln.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/dmperm.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/fftw.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/gzip.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/qr.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/symbfact.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/symrcm.oct
 lib/octave/${PKGVERSION}/qr.a
 lib/octave/${PKGVERSION}/symbfact.a
 lib/octave/${PKGVERSION}/symrcm.a
-libexec/octave/${PKGVERSION}/exec/x86_64--netbsd/octave-gui
+libexec/octave/${PKGVERSION}/exec/${MACHINE_GNU_PLATFORM}/octave-gui
 share/applications/org.octave.Octave.desktop
 share/icons/hicolor/128x128/apps/octave.png
 share/icons/hicolor/16x16/apps/octave.png
@@ -2207,9 +2207,9 @@ share/octave/${PKGVERSION}/m/time/weekday.m
 share/octave/site/m/startup/octaverc
 @pkgdir share/octave/site/api-v52/m
 @pkgdir share/octave/${PKGVERSION}/site/m
-@pkgdir libexec/octave/site/exec/x86_64--netbsd
-@pkgdir libexec/octave/api-v52/site/exec/x86_64--netbsd
-@pkgdir libexec/octave/${PKGVERSION}/site/exec/x86_64--netbsd
-@pkgdir lib/octave/site/oct/x86_64--netbsd
-@pkgdir lib/octave/site/oct/api-v52/x86_64--netbsd
-@pkgdir lib/octave/${PKGVERSION}/site/oct/x86_64--netbsd
+@pkgdir libexec/octave/site/exec/${MACHINE_GNU_PLATFORM}
+@pkgdir libexec/octave/api-v52/site/exec/${MACHINE_GNU_PLATFORM}
+@pkgdir libexec/octave/${PKGVERSION}/site/exec/${MACHINE_GNU_PLATFORM}
+@pkgdir lib/octave/site/oct/${MACHINE_GNU_PLATFORM}
+@pkgdir lib/octave/site/oct/api-v52/${MACHINE_GNU_PLATFORM}
+@pkgdir lib/octave/${PKGVERSION}/site/oct/${MACHINE_GNU_PLATFORM}
