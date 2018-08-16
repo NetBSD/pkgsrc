@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/04/29 21:44:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/08/16 16:06:09 adam Exp $
 @pkgdir lib/mysql/plugin/debug
 bin/innochecksum
 bin/lz4_decompress
@@ -242,6 +242,7 @@ share/mysql/test/extra/rpl_tests/rpl_conflicts.test
 share/mysql/test/extra/rpl_tests/rpl_crash_safe.inc
 share/mysql/test/extra/rpl_tests/rpl_crash_safe.test
 share/mysql/test/extra/rpl_tests/rpl_create_msr_channels.inc
+share/mysql/test/extra/rpl_tests/rpl_db_stmts_ignored.inc
 share/mysql/test/extra/rpl_tests/rpl_ddl.test
 share/mysql/test/extra/rpl_tests/rpl_deadlock.test
 share/mysql/test/extra/rpl_tests/rpl_delete_no_where.test
@@ -397,6 +398,7 @@ share/mysql/test/include/check_key_req.inc
 share/mysql/test/include/check_keys_after_migration.inc
 share/mysql/test/include/check_no_concurrent_insert.inc
 share/mysql/test/include/check_no_row_lock.inc
+share/mysql/test/include/check_openssl_version.inc
 share/mysql/test/include/check_plugin_dir.inc
 share/mysql/test/include/check_qep.inc
 share/mysql/test/include/check_shared_row_lock.inc
@@ -599,6 +601,7 @@ share/mysql/test/include/have_null_audit_plugin.inc
 share/mysql/test/include/have_numa.inc
 share/mysql/test/include/have_openssl.inc
 share/mysql/test/include/have_openssl_binary.inc
+share/mysql/test/include/have_openssl_support.inc
 share/mysql/test/include/have_optimizer_trace.inc
 share/mysql/test/include/have_outfile.inc
 share/mysql/test/include/have_partition.inc
@@ -1374,6 +1377,7 @@ share/mysql/test/r/host_cache_size_functionality.result
 share/mysql/test/r/ignore_strict.result
 share/mysql/test/r/implicit_char_to_num_conversion.result
 share/mysql/test/r/implicit_commit.result
+share/mysql/test/r/import_schema_mismatch.result
 share/mysql/test/r/index_merge_delete.result
 share/mysql/test/r/index_merge_innodb.result
 share/mysql/test/r/index_merge_insert-and-replace.result
@@ -1572,6 +1576,7 @@ share/mysql/test/r/mysqld--help-notwin.result
 share/mysql/test/r/mysqld--help-win.result
 share/mysql/test/r/mysqld_daemon.result
 share/mysql/test/r/mysqld_safe.result
+share/mysql/test/r/mysqldump-binary.result
 share/mysql/test/r/mysqldump-compat.result
 share/mysql/test/r/mysqldump-max.result
 share/mysql/test/r/mysqldump-no-binlog.result
@@ -1604,6 +1609,7 @@ share/mysql/test/r/no_binlog_gtid_next_partially_failed_stmts_anonymous.result
 share/mysql/test/r/no_binlog_gtid_next_partially_failed_stmts_error.result
 share/mysql/test/r/no_binlog_gtid_next_single_stmt_trx_rollback.result
 share/mysql/test/r/no_binlog_gtid_next_temporary_table.result
+share/mysql/test/r/no_engine_substitution.result
 share/mysql/test/r/not_asan.require
 share/mysql/test/r/not_embedded.require
 share/mysql/test/r/not_embedded_server.result
@@ -1865,6 +1871,7 @@ share/mysql/test/r/ssl_crl_clients-valid.result
 share/mysql/test/r/ssl_crl_clients.result
 share/mysql/test/r/ssl_crl_clients_valid.result
 share/mysql/test/r/ssl_crl_crlpath.result
+share/mysql/test/r/ssl_verify_identity.result
 share/mysql/test/r/status.result
 share/mysql/test/r/status2.result
 share/mysql/test/r/status_bug17954.result
@@ -2098,12 +2105,15 @@ share/mysql/test/std_data/bug48633.frm
 share/mysql/test/std_data/bug49823.CSM
 share/mysql/test/std_data/bug49823.CSV
 share/mysql/test/std_data/bug49823.frm
+share/mysql/test/std_data/ca-cert-verify-san.pem
 share/mysql/test/std_data/ca-cert-verify.pem
 share/mysql/test/std_data/ca-sha512.pem
 share/mysql/test/std_data/cacert.pem
 share/mysql/test/std_data/cat_file.txt
 share/mysql/test/std_data/charset_utf8.txt
+share/mysql/test/std_data/client-cert-verify-san.pem
 share/mysql/test/std_data/client-cert.pem
+share/mysql/test/std_data/client-key-verify-san.pem
 share/mysql/test/std_data/client-key.pem
 share/mysql/test/std_data/cluster_7022_table.MYD
 share/mysql/test/std_data/cluster_7022_table.MYI
@@ -2203,10 +2213,12 @@ share/mysql/test/std_data/rsa_public_key.pem
 share/mysql/test/std_data/server-cert-sha512.pem
 share/mysql/test/std_data/server-cert-verify-fail.pem
 share/mysql/test/std_data/server-cert-verify-pass.pem
+share/mysql/test/std_data/server-cert-verify-san.pem
 share/mysql/test/std_data/server-cert.pem
 share/mysql/test/std_data/server-key-sha512.pem
 share/mysql/test/std_data/server-key-verify-fail.pem
 share/mysql/test/std_data/server-key-verify-pass.pem
+share/mysql/test/std_data/server-key-verify-san.pem
 share/mysql/test/std_data/server-key.pem
 share/mysql/test/std_data/server8k-cert.pem
 share/mysql/test/std_data/server8k-key.pem
@@ -2388,6 +2400,7 @@ share/mysql/test/suite/binlog/r/binlog_anonymous_ownership.result
 share/mysql/test/suite/binlog/r/binlog_base64_flag.result
 share/mysql/test/suite/binlog/r/binlog_bug23533.result
 share/mysql/test/suite/binlog/r/binlog_bug36391.result
+share/mysql/test/suite/binlog/r/binlog_cache_write_failure.result
 share/mysql/test/suite/binlog/r/binlog_check_flush_log_assertion.result
 share/mysql/test/suite/binlog/r/binlog_checksum.result
 share/mysql/test/suite/binlog/r/binlog_crash_safe_master_checksum.result
@@ -2571,6 +2584,8 @@ share/mysql/test/suite/binlog/t/binlog_base64_flag.test
 share/mysql/test/suite/binlog/t/binlog_bug23533.test
 share/mysql/test/suite/binlog/t/binlog_bug36391-master.opt
 share/mysql/test/suite/binlog/t/binlog_bug36391.test
+share/mysql/test/suite/binlog/t/binlog_cache_write_failure-master.opt
+share/mysql/test/suite/binlog/t/binlog_cache_write_failure.test
 share/mysql/test/suite/binlog/t/binlog_check_flush_log_assertion.test
 share/mysql/test/suite/binlog/t/binlog_checksum.test
 share/mysql/test/suite/binlog/t/binlog_crash_safe_master_checksum-master.opt
@@ -4175,6 +4190,7 @@ share/mysql/test/suite/group_replication/r/gr_addmember_during_dml.result
 share/mysql/test/suite/group_replication/r/gr_addmember_insert_on_donor.result
 share/mysql/test/suite/group_replication/r/gr_addmember_insert_on_nondonor.result
 share/mysql/test/suite/group_replication/r/gr_applier_early_failure.result
+share/mysql/test/suite/group_replication/r/gr_applier_error.result
 share/mysql/test/suite/group_replication/r/gr_applier_initialization.result
 share/mysql/test/suite/group_replication/r/gr_applier_received_set.result
 share/mysql/test/suite/group_replication/r/gr_applier_slave_commands.result
@@ -4190,6 +4206,7 @@ share/mysql/test/suite/group_replication/r/gr_binlog_replay_to_group.result
 share/mysql/test/suite/group_replication/r/gr_blob.result
 share/mysql/test/suite/group_replication/r/gr_capture.result
 share/mysql/test/suite/group_replication/r/gr_certifier_garbage_collection.result
+share/mysql/test/suite/group_replication/r/gr_certifier_garbage_collection2.result
 share/mysql/test/suite/group_replication/r/gr_certifier_message_same_member.result
 share/mysql/test/suite/group_replication/r/gr_change_master_hidden.result
 share/mysql/test/suite/group_replication/r/gr_change_master_hidden_ps_protocol.result
@@ -4418,6 +4435,7 @@ share/mysql/test/suite/group_replication/r/gr_skip_gtid_single_gtid.result
 share/mysql/test/suite/group_replication/r/gr_skip_gtid_view_change_event.result
 share/mysql/test/suite/group_replication/r/gr_skip_gtid_view_change_full_shutdown.result
 share/mysql/test/suite/group_replication/r/gr_skip_performance_schema_dml.result
+share/mysql/test/suite/group_replication/r/gr_skip_send_lower_case_table_names.result
 share/mysql/test/suite/group_replication/r/gr_skip_view_change_event.result
 share/mysql/test/suite/group_replication/r/gr_skip_wait_for_view_modification.result
 share/mysql/test/suite/group_replication/r/gr_slave_max_allowed_packet_dependency.result
@@ -4495,6 +4513,7 @@ share/mysql/test/suite/group_replication/t/gr_addmember_insert_on_donor.test
 share/mysql/test/suite/group_replication/t/gr_addmember_insert_on_nondonor.cnf
 share/mysql/test/suite/group_replication/t/gr_addmember_insert_on_nondonor.test
 share/mysql/test/suite/group_replication/t/gr_applier_early_failure.test
+share/mysql/test/suite/group_replication/t/gr_applier_error.test
 share/mysql/test/suite/group_replication/t/gr_applier_initialization.test
 share/mysql/test/suite/group_replication/t/gr_applier_received_set.test
 share/mysql/test/suite/group_replication/t/gr_applier_slave_commands.test
@@ -4516,6 +4535,7 @@ share/mysql/test/suite/group_replication/t/gr_binlog_replay_to_group.test
 share/mysql/test/suite/group_replication/t/gr_blob.test
 share/mysql/test/suite/group_replication/t/gr_capture.test
 share/mysql/test/suite/group_replication/t/gr_certifier_garbage_collection.test
+share/mysql/test/suite/group_replication/t/gr_certifier_garbage_collection2.test
 share/mysql/test/suite/group_replication/t/gr_certifier_message_same_member-master.opt
 share/mysql/test/suite/group_replication/t/gr_certifier_message_same_member.test
 share/mysql/test/suite/group_replication/t/gr_change_master_hidden-master.opt
@@ -4865,6 +4885,7 @@ share/mysql/test/suite/group_replication/t/gr_skip_gtid_single_gtid.test
 share/mysql/test/suite/group_replication/t/gr_skip_gtid_view_change_event.test
 share/mysql/test/suite/group_replication/t/gr_skip_gtid_view_change_full_shutdown.test
 share/mysql/test/suite/group_replication/t/gr_skip_performance_schema_dml.test
+share/mysql/test/suite/group_replication/t/gr_skip_send_lower_case_table_names.test
 share/mysql/test/suite/group_replication/t/gr_skip_view_change_event.cnf
 share/mysql/test/suite/group_replication/t/gr_skip_view_change_event.test
 share/mysql/test/suite/group_replication/t/gr_skip_wait_for_view_modification.test
@@ -5051,6 +5072,7 @@ share/mysql/test/suite/innodb/r/file_format_defaults.result
 share/mysql/test/suite/innodb/r/file_format_upgrade_16k.result
 share/mysql/test/suite/innodb/r/flush-hang.result
 share/mysql/test/suite/innodb/r/foreign_key.result
+share/mysql/test/suite/innodb/r/fts_exec_interrupt.result
 share/mysql/test/suite/innodb/r/help_verbose.result
 share/mysql/test/suite/innodb/r/high_prio_trx_1.result
 share/mysql/test/suite/innodb/r/high_prio_trx_2.result
@@ -5410,6 +5432,7 @@ share/mysql/test/suite/innodb/t/file_format_defaults.test
 share/mysql/test/suite/innodb/t/file_format_upgrade_16k.test
 share/mysql/test/suite/innodb/t/flush-hang.test
 share/mysql/test/suite/innodb/t/foreign_key.test
+share/mysql/test/suite/innodb/t/fts_exec_interrupt.test
 share/mysql/test/suite/innodb/t/help_verbose.test
 share/mysql/test/suite/innodb/t/high_prio_trx_1.test
 share/mysql/test/suite/innodb/t/high_prio_trx_2.test
@@ -5820,6 +5843,7 @@ share/mysql/test/suite/innodb_fts/r/stopword_charset.result
 share/mysql/test/suite/innodb_fts/r/subexpr.result
 share/mysql/test/suite/innodb_fts/r/sync.result
 share/mysql/test/suite/innodb_fts/r/sync_block.result
+share/mysql/test/suite/innodb_fts/r/sync_ddl.result
 share/mysql/test/suite/innodb_fts/r/tablespace_location.result
 share/mysql/test/suite/innodb_fts/r/tablespace_location_error.result
 share/mysql/test/suite/innodb_fts/r/transaction.result
@@ -5881,6 +5905,7 @@ share/mysql/test/suite/innodb_fts/t/stopword.test
 share/mysql/test/suite/innodb_fts/t/subexpr.test
 share/mysql/test/suite/innodb_fts/t/sync.test
 share/mysql/test/suite/innodb_fts/t/sync_block.test
+share/mysql/test/suite/innodb_fts/t/sync_ddl.test
 share/mysql/test/suite/innodb_fts/t/tablespace_location.test
 share/mysql/test/suite/innodb_fts/t/tablespace_location_error.test
 share/mysql/test/suite/innodb_fts/t/transaction.test
@@ -6618,6 +6643,7 @@ share/mysql/test/suite/memcached/r/memc284_misc.result
 share/mysql/test/suite/memcached/r/memc285_FTWRL.result
 share/mysql/test/suite/memcached/r/memc290_read_committed.result
 share/mysql/test/suite/memcached/r/memc_297_crash.result
+share/mysql/test/suite/memcached/r/memc_api_disable_rowlock.result
 share/mysql/test/suite/memcached/r/memcached_alter_column.result
 share/mysql/test/suite/memcached/r/memcached_virtual_block.result
 share/mysql/test/suite/memcached/r/rpl_memc270_1.result
@@ -6744,6 +6770,8 @@ share/mysql/test/suite/memcached/t/memc290_read_committed-master.opt
 share/mysql/test/suite/memcached/t/memc290_read_committed.test
 share/mysql/test/suite/memcached/t/memc_297_crash-master.opt
 share/mysql/test/suite/memcached/t/memc_297_crash.test
+share/mysql/test/suite/memcached/t/memc_api_disable_rowlock-master.opt
+share/mysql/test/suite/memcached/t/memc_api_disable_rowlock.test
 share/mysql/test/suite/memcached/t/memcached_alter_column-master.opt
 share/mysql/test/suite/memcached/t/memcached_alter_column.test
 share/mysql/test/suite/memcached/t/memcached_virtual_block-master.opt
@@ -8061,6 +8089,7 @@ share/mysql/test/suite/parts/r/partition_mgm_lc2_archive.result
 share/mysql/test/suite/parts/r/partition_mgm_lc2_innodb.result
 share/mysql/test/suite/parts/r/partition_mgm_lc2_memory.result
 share/mysql/test/suite/parts/r/partition_mgm_lc2_myisam.result
+share/mysql/test/suite/parts/r/partition_names.result
 share/mysql/test/suite/parts/r/partition_recover_myisam.result
 share/mysql/test/suite/parts/r/partition_reorganize_innodb.result
 share/mysql/test/suite/parts/r/partition_reorganize_myisam.result
@@ -8208,6 +8237,7 @@ share/mysql/test/suite/parts/t/partition_mgm_lc2_memory-master.opt
 share/mysql/test/suite/parts/t/partition_mgm_lc2_memory.test
 share/mysql/test/suite/parts/t/partition_mgm_lc2_myisam-master.opt
 share/mysql/test/suite/parts/t/partition_mgm_lc2_myisam.test
+share/mysql/test/suite/parts/t/partition_names.test
 share/mysql/test/suite/parts/t/partition_recover_myisam-master.opt
 share/mysql/test/suite/parts/t/partition_recover_myisam.test
 share/mysql/test/suite/parts/t/partition_reorganize_innodb.test
@@ -9508,10 +9538,12 @@ share/mysql/test/suite/rpl/r/rpl_critical_errors.result
 share/mysql/test/suite/rpl/r/rpl_critical_errors.result.txt
 share/mysql/test/suite/rpl/r/rpl_cross_version.result
 share/mysql/test/suite/rpl/r/rpl_current_user.result
+share/mysql/test/suite/rpl/r/rpl_db_stmts_ignored.result
 share/mysql/test/suite/rpl/r/rpl_ddl.result
 share/mysql/test/suite/rpl/r/rpl_deadlock_innodb.result
 share/mysql/test/suite/rpl/r/rpl_delayed_slave.result
 share/mysql/test/suite/rpl/r/rpl_delete_no_where.result
+share/mysql/test/suite/rpl/r/rpl_different_index_master_slave.result
 share/mysql/test/suite/rpl/r/rpl_do_db_filter.result
 share/mysql/test/suite/rpl/r/rpl_do_grant.result
 share/mysql/test/suite/rpl/r/rpl_do_table_filter_insensitive.result
@@ -9699,8 +9731,10 @@ share/mysql/test/suite/rpl/r/rpl_mts_slave_hang_with_partial_trx.result
 share/mysql/test/suite/rpl/r/rpl_mts_slave_preserve_commit_order.result
 share/mysql/test/suite/rpl/r/rpl_mts_slave_preserve_commit_order_config_error.result
 share/mysql/test/suite/rpl/r/rpl_mts_slave_preserve_commit_order_deadlock.result
+share/mysql/test/suite/rpl/r/rpl_mts_slave_preserve_commit_order_deadlock_error.result
 share/mysql/test/suite/rpl/r/rpl_mts_slave_preserve_commit_order_error.result
 share/mysql/test/suite/rpl/r/rpl_mts_stop_slave.result
+share/mysql/test/suite/rpl/r/rpl_mts_stop_slave_report_pos.result
 share/mysql/test/suite/rpl/r/rpl_mts_submode_switch.result
 share/mysql/test/suite/rpl/r/rpl_mts_submode_switch_without_reset_slave.result
 share/mysql/test/suite/rpl/r/rpl_multi_delete.result
@@ -10062,6 +10096,7 @@ share/mysql/test/suite/rpl/r/rpl_xa_survive_disconnect_lsu_off.result
 share/mysql/test/suite/rpl/r/rpl_xa_survive_disconnect_mixed_engines.result
 share/mysql/test/suite/rpl/r/rpl_xa_survive_disconnect_table.result
 share/mysql/test/suite/rpl/r/rpl_xa_unsafe_for_sbr.result
+share/mysql/test/suite/rpl/r/rpl_xa_with_filters_error_msg.result
 share/mysql/test/suite/rpl/r/rpl_zombie_dump_threads.result
 share/mysql/test/suite/rpl/r/transactional_ddl_locking.result
 share/mysql/test/suite/rpl/rpl_1slave_base.cnf
@@ -10179,11 +10214,13 @@ share/mysql/test/suite/rpl/t/rpl_cross_version.test
 share/mysql/test/suite/rpl/t/rpl_current_user-master.opt
 share/mysql/test/suite/rpl/t/rpl_current_user.cnf
 share/mysql/test/suite/rpl/t/rpl_current_user.test
+share/mysql/test/suite/rpl/t/rpl_db_stmts_ignored.test
 share/mysql/test/suite/rpl/t/rpl_ddl.test
 share/mysql/test/suite/rpl/t/rpl_deadlock_innodb-slave.opt
 share/mysql/test/suite/rpl/t/rpl_deadlock_innodb.test
 share/mysql/test/suite/rpl/t/rpl_delayed_slave.test
 share/mysql/test/suite/rpl/t/rpl_delete_no_where.test
+share/mysql/test/suite/rpl/t/rpl_different_index_master_slave.test
 share/mysql/test/suite/rpl/t/rpl_do_db_filter-slave.opt
 share/mysql/test/suite/rpl/t/rpl_do_db_filter.test
 share/mysql/test/suite/rpl/t/rpl_do_grant.test
@@ -10481,10 +10518,13 @@ share/mysql/test/suite/rpl/t/rpl_mts_slave_preserve_commit_order.test
 share/mysql/test/suite/rpl/t/rpl_mts_slave_preserve_commit_order_config_error-slave.opt
 share/mysql/test/suite/rpl/t/rpl_mts_slave_preserve_commit_order_config_error.test
 share/mysql/test/suite/rpl/t/rpl_mts_slave_preserve_commit_order_deadlock.test
+share/mysql/test/suite/rpl/t/rpl_mts_slave_preserve_commit_order_deadlock_error.test
 share/mysql/test/suite/rpl/t/rpl_mts_slave_preserve_commit_order_error-slave.opt
 share/mysql/test/suite/rpl/t/rpl_mts_slave_preserve_commit_order_error.test
 share/mysql/test/suite/rpl/t/rpl_mts_stop_slave-slave.opt
 share/mysql/test/suite/rpl/t/rpl_mts_stop_slave.test
+share/mysql/test/suite/rpl/t/rpl_mts_stop_slave_report_pos-slave.opt
+share/mysql/test/suite/rpl/t/rpl_mts_stop_slave_report_pos.test
 share/mysql/test/suite/rpl/t/rpl_mts_submode_switch-slave.opt
 share/mysql/test/suite/rpl/t/rpl_mts_submode_switch.test
 share/mysql/test/suite/rpl/t/rpl_mts_submode_switch_without_reset_slave.test
@@ -11048,6 +11088,7 @@ share/mysql/test/suite/rpl/t/rpl_xa_survive_disconnect_mixed_engines.test
 share/mysql/test/suite/rpl/t/rpl_xa_survive_disconnect_table-slave.opt
 share/mysql/test/suite/rpl/t/rpl_xa_survive_disconnect_table.test
 share/mysql/test/suite/rpl/t/rpl_xa_unsafe_for_sbr.test
+share/mysql/test/suite/rpl/t/rpl_xa_with_filters_error_msg.test
 share/mysql/test/suite/rpl/t/rpl_zombie_dump_threads.test
 share/mysql/test/suite/rpl/t/transactional_ddl_locking.test
 share/mysql/test/suite/rpl_ndb/my.cnf
@@ -13621,6 +13662,7 @@ share/mysql/test/t/ignore_strict.test
 share/mysql/test/t/implicit_char_to_num_conversion.test
 share/mysql/test/t/implicit_commit-master.opt
 share/mysql/test/t/implicit_commit.test
+share/mysql/test/t/import_schema_mismatch.test
 share/mysql/test/t/index_merge_delete.test
 share/mysql/test/t/index_merge_innodb.test
 share/mysql/test/t/index_merge_insert-and-replace.test
@@ -13882,6 +13924,7 @@ share/mysql/test/t/mysqld--help-win.test
 share/mysql/test/t/mysqld_daemon.test
 share/mysql/test/t/mysqld_safe.sh
 share/mysql/test/t/mysqld_safe.test
+share/mysql/test/t/mysqldump-binary.test
 share/mysql/test/t/mysqldump-compat.opt
 share/mysql/test/t/mysqldump-compat.test
 share/mysql/test/t/mysqldump-max-master.opt
@@ -13925,6 +13968,8 @@ share/mysql/test/t/no_binlog_gtid_next_partially_failed_stmts_error-master.opt
 share/mysql/test/t/no_binlog_gtid_next_partially_failed_stmts_error.test
 share/mysql/test/t/no_binlog_gtid_next_single_stmt_trx_rollback.test
 share/mysql/test/t/no_binlog_gtid_next_temporary_table.test
+share/mysql/test/t/no_engine_substitution-master.opt
+share/mysql/test/t/no_engine_substitution.test
 share/mysql/test/t/not_embedded_server-master.opt
 share/mysql/test/t/not_embedded_server.test
 share/mysql/test/t/not_partition-master.opt
@@ -14233,6 +14278,8 @@ share/mysql/test/t/ssl_crl_clients_valid-master.opt
 share/mysql/test/t/ssl_crl_clients_valid.test
 share/mysql/test/t/ssl_crl_crlpath-master.opt
 share/mysql/test/t/ssl_crl_crlpath.test
+share/mysql/test/t/ssl_verify_identity-master.opt
+share/mysql/test/t/ssl_verify_identity.test
 share/mysql/test/t/status-master.opt
 share/mysql/test/t/status.test
 share/mysql/test/t/status2.test
