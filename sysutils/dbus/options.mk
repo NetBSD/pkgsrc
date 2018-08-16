@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2017/03/14 15:34:56 wiz Exp $
+# $NetBSD: options.mk,v 1.12 2018/08/16 08:57:09 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dbus
 PKG_SUPPORTED_OPTIONS+=	debug x11
@@ -13,6 +13,7 @@ PKG_SUPPORTED_OPTIONS+=	kqueue
 PKG_SUGGESTED_OPTIONS+=	kqueue
 .endif
 
+PLIST_VARS+=    	launchd
 # We may want to make it SUGGESTED once we have a framework for
 # launchd support. See PR/49591.
 PKG_SUPPORTED_OPTIONS.Darwin+=	launchd
