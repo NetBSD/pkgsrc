@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.3 2018/07/25 00:26:30 minskim Exp $
+$NetBSD: distinfo,v 1.4 2018/08/17 16:03:20 minskim Exp $
 
 SHA1 (hyperscan-5.0.0.tar.gz) = 5cb3fc5726950c4025854da8ec05a15f929279db
 RMD160 (hyperscan-5.0.0.tar.gz) = e172831d368ad5565355ba5da93837c65183c7aa
 SHA512 (hyperscan-5.0.0.tar.gz) = 2a942832ab6908ea4b17342428188d635d1db0a57ac6452abbbcdadcf972be0174edeec67d03d925ce92d969c767e9933fdc636c4e3df0067aade659337692a5
 Size (hyperscan-5.0.0.tar.gz) = 1801219 bytes
 SHA1 (patch-CMakeLists.txt) = 1a51aee0bb7a807a293f5a16357b3536343915fa
+SHA1 (patch-src_nfa_limex__compile.cpp) = 7301935120e523e8e9490c3ccc1f37e9c9e5f317
 SHA1 (patch-src_util_popcount.h) = 3d30d412318c474c9d7a5b7fc45ea3148e6ed4b4
 SHA1 (patch-tools_hsbench_CMakeLists.txt) = 3b4cdd8a7ed17fedb1a090c3dc76fa307084b7a2
 SHA1 (patch-tools_hscollider_CMakeLists.txt) = ee22d83890ca7bf010dd751469d90dcb4930dd08
