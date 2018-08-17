@@ -1,11 +1,17 @@
-The mandoc manual page parser and formatter contains:
- * complete validating parsers for the mdoc and man languages
- * a slightly incomplete parser handling most of the tbl language
- * a very incomplete parser handling a part of the eqn language
- * support for a few selected roff requests that often occur in manuals
- * complete ASCII, UTF8, HTML and XHTML text output formatters
+The mandoc manual page parser and formatter package contains:
+ * the man(1) program to display manual pages
+ * the apropos(1) program to search for manual pages
+ * semantic search, regular expressions, and logical operators
+ * the makewhatis(8) program to build manual page databases
+ * the catman(8) program for bulk formatting of many pages
+ * the man.cgi(8) program to serve manual pages on the web
+ * complete validating parsers for the mdoc(7) and man(7) languages
+ * slightly incomplete parsers for the tbl(7) and eqn(7) languages
+ * support for some selected roff(7) requests that occur in manuals
+ * complete ASCII, UTF-8, and HTML text output formatters
  * simple PostScript and PDF output formatters
- * output formatters producing indented mdoc and man parse trees
+ * translators from the mdoc(7) to the man(7) and markdown languages
+ * output formatters producing indented mdoc(7) and man(7) parse trees
 
 To format manuals for console display, it can be used as a smaller
 and faster drop-in replacement for nroff -mandoc.  Some rare manuals
