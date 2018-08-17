@@ -1,12 +1,7 @@
-# $NetBSD: Makefile.php,v 1.4 2018/02/05 08:51:25 jdolecek Exp $
+# $NetBSD: Makefile.php,v 1.4.4.1 2018/08/17 16:08:38 bsiegert Exp $
 # used by lang/php72/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
-
-# PHP bug #74526 - segfaults on build with GCC 4.8.5 i386
-.if ${MACHINE_ARCH} == "i386"
-GCC_REQD+=              4.9
-.endif
 
 # the binary actually needs full dep on PCRE
 BUILDLINK_DEPMETHOD.pcre=	full
@@ -51,6 +46,7 @@ CONFIGURE_ARGS+=	--with-pcre-regex=${BUILDLINK_PREFIX.pcre}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${PHP_PKG_PREFIX}
 PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts readline argon2 sqlite3
+PKG_SUPPORTED_OPTIONS+=	disable-filter-url
 PKG_SUGGESTED_OPTIONS+=	inet6 ssl readline sqlite3
 
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin" || ${OPSYS} == "FreeBSD"
@@ -107,6 +103,10 @@ CONFIGURE_ARGS+=	--with-sqlite3=${BUILDLINK_PREFIX.sqlite3}
 .include "../../databases/sqlite3/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=    --without-sqlite3
+.endif
+
+.if !empty(PKG_OPTIONS:Mdisable-filter-url)
+CFLAGS+=		-DDISABLE_FILTER_URL
 .endif
 
 DL_AUTO_VARS=		yes
