@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2018/04/26 15:44:15 taca Exp $
+# $NetBSD: Makefile,v 1.8.2.1 2018/08/17 16:08:38 bsiegert Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
 #
 PKGNAME=		php-${PHP_VERSION:S/RC/rc/}
-CATEGORIES=		lang
 
 HOMEPAGE=		http://www.php.net/
 COMMENT=		PHP Hypertext Preprocessor version 7.2
@@ -40,6 +39,12 @@ SUBST_SED.path=		-e 's,@CGIDIR@,${CGIDIR},g'
 SUBST_SED.path+=	-e 's,@PREFIX@,${PREFIX},g'
 
 INSTALLATION_DIRS+=	${CGIDIR} ${PHP_EXTENSION_DIR} ${EGDIR} share/php
+
+# segfaults when buidling with many compilers
+# https://bugs.php.net/bug.php?id=74527
+.if ${MACHINE_ARCH} == "i386"
+CONFIGURE_ARGS+=	--disable-gcc-global-regs
+.endif
 
 # Make sure modules can link correctly
 .if ${OPSYS} == "Darwin"
