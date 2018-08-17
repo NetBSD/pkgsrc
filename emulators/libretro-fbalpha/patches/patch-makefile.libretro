@@ -1,0 +1,17 @@
+$NetBSD: patch-makefile.libretro,v 1.1 2018/08/17 12:54:48 nia Exp $
+
+Don't force -O3.
+
+--- makefile.libretro.orig	2018-04-08 06:33:58.000000000 +0000
++++ makefile.libretro
+@@ -427,8 +427,8 @@ ifeq ($(DEBUG), 1)
+    CXXFLAGS += -O0 -g -DFBA_DEBUG
+ else
+    ifeq (,$(findstring msvc,$(platform)))
+-      CFLAGS += -O3 -DNDEBUG
+-      CXXFLAGS += -O3 -DNDEBUG
++      CFLAGS += -DNDEBUG
++      CXXFLAGS += -DNDEBUG
+    else
+       CFLAGS += -O2 -DNDEBUG
+       CXXFLAGS += -O2 -DNDEBUG
