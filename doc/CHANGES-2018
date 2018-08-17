@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3639 2018/08/17 07:17:06 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3640 2018/08/17 10:39:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5176,3 +5176,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/pciutils to 3.6.2 [msaitoh 2018-08-17]
 	Updated devel/py-hypothesis to 3.68.0 [adam 2018-08-17]
 	Updated devel/py-tox to 3.2.1 [adam 2018-08-17]
+	Updated www/webkit-gtk to 2.20.4 [wiz 2018-08-17]
