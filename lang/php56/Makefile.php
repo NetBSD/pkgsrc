@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.4 2017/07/12 09:11:35 manu Exp $
+# $NetBSD: Makefile.php,v 1.4.10.1 2018/08/17 17:39:36 bsiegert Exp $
 # used by lang/php56/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
@@ -42,7 +42,7 @@ CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX}
 .include "../../textproc/libxml2/buildlink3.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${PHP_PKG_PREFIX}
-PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts readline
+PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts readline disable-filter-url
 PKG_SUGGESTED_OPTIONS+=	inet6 ssl
 
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin" || ${OPSYS} == "FreeBSD"
@@ -87,6 +87,10 @@ CONFIGURE_ARGS+=	--enable-dtrace
 
 # See https://bugs.php.net/bug.php?id=61268
 INSTALL_MAKE_FLAGS+=	-r
+.endif
+
+.if !empty(PKG_OPTIONS:Mdisable-filter-url)
+CFLAGS+=		-DDISABLE_FILTER_URL
 .endif
 
 DL_AUTO_VARS=		yes

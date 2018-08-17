@@ -1,0 +1,34 @@
+$NetBSD: patch-disable-filter-url,v 1.1.2.2 2018/08/17 17:39:36 bsiegert Exp $
+
+Add build-time disable option for dangerous php://filter URL
+
+php://filter URL is a feature documented here:
+http://php.net/manual/en/wrappers.php.php
+
+Unfortunately, it allows remote control of include() behavior
+beyond what many developpers expected, enabling easy dump of 
+PHP source files. The administrator may want to disable the
+feature for security sake, and this patch makes that possible.
+
+--- ./ext/standard/php_fopen_wrapper.c.orig
++++ ./ext/standard/php_fopen_wrapper.c
+@@ -333,8 +333,9 @@
+ 				"Error duping file descriptor %ld; possibly it doesn't exist: "
+ 				"[%d]: %s", fildes_ori, errno, strerror(errno));
+ 			return NULL;
+ 		}
++#ifndef DISABLE_FILTER_URL
+ 	} else if (!strncasecmp(path, "filter/", 7)) {
+ 		/* Save time/memory when chain isn't specified */
+ 		if (strchr(mode, 'r') || strchr(mode, '+')) {
+ 			mode_rw |= PHP_STREAM_FILTER_READ;
+@@ -369,8 +370,9 @@
+ 		}
+ 		efree(pathdup);
+ 
+ 		return stream;
++#endif /* !DISABLE_FILTER_URL */
+ 	} else {
+ 		/* invalid php://thingy */
+ 		php_error_docref(NULL TSRMLS_CC, E_WARNING, "Invalid php:// URL specified");
+ 		return NULL;
