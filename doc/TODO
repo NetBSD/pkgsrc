@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18505 2018/08/17 10:39:49 wiz Exp $
+$NetBSD: TODO,v 1.18506 2018/08/17 10:55:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -355,7 +355,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o R-maps-3.1.0
 	o R-ncdf-1.6.8
 	o SOPE-3.0.2
-	o Sigil-0.9.10
 	o TiffIO-140a
 	o YoSucker-81
 	o abcmidi-20170416
