@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.1 2018/07/30 18:58:43 jperkin Exp $
 
-SHA1 (toxcore-0.2.4.tar.gz) = 2fbc29180f774d35e387447d3c25c74f86578a24
-RMD160 (toxcore-0.2.4.tar.gz) = fd4404fdd9f5484cccfff022faaa9b218f64836f
-SHA512 (toxcore-0.2.4.tar.gz) = 322a5970087cd149f5c037ad4463eb34edfcc074dd76f7d63b117af93ee813922855380afbe0cda4cf39fd16f177eedee18a8e453ed14915321f9cec8ae7679d
-Size (toxcore-0.2.4.tar.gz) = 479618 bytes
+SHA1 (toxcore-0.2.6.tar.gz) = 6d507a4d6186378730874a708bc37ae807880747
+RMD160 (toxcore-0.2.6.tar.gz) = aa3b2a437d094d5201bbbec1130289fbda95fd42
+SHA512 (toxcore-0.2.6.tar.gz) = 7f82528d4e65e77fd054435b5bd749d90d6f397e5a36c2abd618002d9589ec76e7b728f7af6ae958384efde45ed37da96ba70bd77206a20a2e87b7473a2b03bf
+Size (toxcore-0.2.6.tar.gz) = 484051 bytes

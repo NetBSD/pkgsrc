@@ -6,5 +6,5 @@ include/tox/toxencryptsave.h
 lib/libtoxcore.a
 lib/libtoxcore.so
 lib/libtoxcore.so.2
-lib/libtoxcore.so.2.4.0
+lib/libtoxcore.so.2.6.0
 lib/pkgconfig/toxcore.pc
