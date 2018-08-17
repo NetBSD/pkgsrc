@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3648 2018/08/17 14:51:21 leot Exp $
+$NetBSD: CHANGES-2018,v 1.3649 2018/08/17 15:23:04 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5185,3 +5185,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/py-gstreamer1 to 1.14.2 [wiz 2018-08-17]
 	Added emulators/libretro-fbalpha version 0.2.97.42.20180408 [nia 2018-08-17]
 	Updated net/gallery-dl to 1.5.1 [leot 2018-08-17]
+	Updated converters/utf8proc to 2.2.0 [minskim 2018-08-17]
