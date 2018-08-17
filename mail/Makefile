@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.510 2018/08/09 10:00:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.511 2018/08/17 11:04:59 leot Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -153,6 +153,7 @@ SUBDIR+=	mailwrapper
 SUBDIR+=	mairix
 SUBDIR+=	majordomo
 SUBDIR+=	mb2md
+SUBDIR+=	mblaze
 SUBDIR+=	mdfrm
 SUBDIR+=	mess822
 SUBDIR+=	metamail
