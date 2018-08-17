@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3644 2018/08/17 11:55:32 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3645 2018/08/17 12:36:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5181,3 +5181,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added mail/mblaze version 0.4 [leot 2018-08-17]
 	Updated multimedia/gstreamer1 to 1.14.2 [wiz 2018-08-17]
 	Updated multimedia/gst123 to 0.3.5 [wiz 2018-08-17]
+	Updated net/tigervnc to 1.9.0 [wiz 2018-08-17]
