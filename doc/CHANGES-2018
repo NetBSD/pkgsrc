@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3645 2018/08/17 12:36:15 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3646 2018/08/17 12:38:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5182,3 +5182,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/gstreamer1 to 1.14.2 [wiz 2018-08-17]
 	Updated multimedia/gst123 to 0.3.5 [wiz 2018-08-17]
 	Updated net/tigervnc to 1.9.0 [wiz 2018-08-17]
+	Updated multimedia/py-gstreamer1 to 1.14.2 [wiz 2018-08-17]
