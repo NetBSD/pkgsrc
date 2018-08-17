@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2018/04/16 14:34:56 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2018/08/17 11:55:23 wiz Exp $
 
-DISTNAME=	gst123-0.3.4
-PKGREVISION=	2
+DISTNAME=	gst123-0.3.5
 CATEGORIES=	multimedia
 MASTER_SITES=	http://space.twc.de/~stefan/gst123/
 EXTRACT_SUFX=	.tar.bz2
@@ -22,8 +21,8 @@ CONFIGURE_ARGS+=	NCURSES_LIBS="-L${BUILDLINK_PREFIX.ncurses}/lib ${COMPILER_RPAT
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
-.include "../../multimedia/gstreamer0.10/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
+.include "../../multimedia/gstreamer1/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
