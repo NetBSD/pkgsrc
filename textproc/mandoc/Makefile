@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/08/16 13:55:35 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2018/08/17 10:16:55 jperkin Exp $
 
 DISTNAME=	mandoc-1.14.4
 CATEGORIES=	textproc devel
@@ -32,6 +32,7 @@ post-extract:
 	${ECHO} INSTALL_LIB=\"${INSTALL_DATA:Q}\" >> ${WRKSRC}/configure.local
 	${ECHO} INSTALL_MAN=\"${INSTALL_MAN:Q}\" >> ${WRKSRC}/configure.local
 	${ECHO} INSTALL_DATA=\"${INSTALL_DATA:Q}\" >> ${WRKSRC}/configure.local
+	${ECHO} MANDIR="${PREFIX}/${PKGMANDIR}" >> ${WRKSRC}/configure.local
 	${ECHO} MANM_ROFF="mandoc-roff" >> ${WRKSRC}/configure.local
 	${ECHO} BINM_SOELIM="msoelim" >> ${WRKSRC}/configure.local
 
