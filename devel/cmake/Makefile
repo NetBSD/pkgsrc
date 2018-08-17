@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.149 2018/08/16 18:54:40 adam Exp $
+# $NetBSD: Makefile,v 1.150 2018/08/17 19:06:35 abs Exp $
 
 PKGREVISION= 1
 .include "Makefile.version"
@@ -60,7 +60,7 @@ pre-configure:
 	    ${WRKSRC}/Modules/Platform/SunOS-Clang-${lang}.cmake
 .endfor
 
-INCOMPAT_CURSES=	NetBSD-[0-6].*-*
+INCOMPAT_CURSES=	NetBSD-[0-8].*-*
 
 BUILDLINK_API_DEPENDS.libarchive+=	libarchive>=3.0.0
 .include "../../archivers/libarchive/buildlink3.mk"
