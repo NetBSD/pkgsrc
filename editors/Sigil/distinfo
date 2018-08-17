@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.40 2018/07/22 22:51:24 wiz Exp $
+$NetBSD: distinfo,v 1.41 2018/08/17 10:55:42 wiz Exp $
 
-SHA1 (Sigil-0.9.9.tar.gz) = c38d39f47dd9b7dc761c79af835f8219e08ad147
-RMD160 (Sigil-0.9.9.tar.gz) = 5b4ab12baecbfecd30837a276b80cbff866622aa
-SHA512 (Sigil-0.9.9.tar.gz) = a860dcdf3abcd3adbff9d00a3d7f9eb547ebb20fa4aed77824501e5a75416c0f02a451a383efd94c06408f8f30525e00e57a43f232f03ebf114beae8a4eff8a5
-Size (Sigil-0.9.9.tar.gz) = 18675046 bytes
+SHA1 (Sigil-0.9.10.tar.gz) = b6cd6dbde9ecd07f4f77bf8c442cd10401bfe155
+RMD160 (Sigil-0.9.10.tar.gz) = 180ae47ca062b92dd4333578ba3a4ce81932d18a
+SHA512 (Sigil-0.9.10.tar.gz) = e01dbca49757cbe7747d37f96c11a4f9cc01a3f24bf4526fac52e9a24970d5e50f386b3dd019e815f6106467ad601d2b153928346e0c302fe6897e443b345d46
+Size (Sigil-0.9.10.tar.gz) = 19100153 bytes
 SHA1 (patch-3rdparty_minizip_ioapi.c) = a68dead89687529b7022cda3bc8a079e5f5c1459
 SHA1 (patch-CMakeLists.txt) = c051261285dbbc3d2e2ab8b57ab678b4e4a45400
