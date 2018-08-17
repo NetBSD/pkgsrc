@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.22 2018/07/14 07:34:58 msaitoh Exp $
+$NetBSD: patch-aa,v 1.23 2018/08/17 04:03:28 msaitoh Exp $
 
---- Makefile.orig	2018-07-12 21:02:58.000000000 +0900
-+++ Makefile	2018-07-14 16:30:10.720321258 +0900
+--- Makefile.orig	2018-08-12 19:59:03.000000000 +0900
++++ Makefile	2018-08-17 12:29:53.033605064 +0900
 @@ -1,8 +1,7 @@
  # Makefile for The PCI Utilities
  # (c) 1998--2018 Martin Mares <mj@ucw.cz>
@@ -10,8 +10,8 @@ $NetBSD: patch-aa,v 1.22 2018/07/14 07:34:58 msaitoh Exp $
 -CFLAGS=$(OPT) -Wall -W -Wno-parentheses -Wstrict-prototypes -Wmissing-prototypes
 +CFLAGS=-Wall -W -Wno-parentheses -Wstrict-prototypes -Wmissing-prototypes
  
- VERSION=3.6.1
- DATE=2018-07-12
+ VERSION=3.6.2
+ DATE=2018-08-12
 @@ -13,7 +12,7 @@ RELEASE=
  CROSS_COMPILE=
  
