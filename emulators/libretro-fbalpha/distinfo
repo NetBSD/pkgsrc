@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1 2018/08/17 12:54:48 nia Exp $
+
+SHA1 (libretro-fbalpha-0.2.97.42.20180408-08cf5c6abbda2512d5ef73ef8483b849a34a7603.tar.gz) = 9b7eff020b1bddf8b0888f1b6d1ab1adfe14db8b
+RMD160 (libretro-fbalpha-0.2.97.42.20180408-08cf5c6abbda2512d5ef73ef8483b849a34a7603.tar.gz) = e52b45173079a5449d036eefd539ec0f2ec7cba7
+SHA512 (libretro-fbalpha-0.2.97.42.20180408-08cf5c6abbda2512d5ef73ef8483b849a34a7603.tar.gz) = 6bdbbc1a082878d14c86d5c5ddb5cc86f6342f2f408bedadc7510c612cf781bb4d0e836bd0c99997900f552d74075d34c812775e1a71760612a038667aa06e1d
+Size (libretro-fbalpha-0.2.97.42.20180408-08cf5c6abbda2512d5ef73ef8483b849a34a7603.tar.gz) = 9243803 bytes
+SHA1 (patch-makefile.libretro) = 53580ffc41c22c745d70aa9949c5df2affc783d4
+SHA1 (patch-src_burn_drv_galaxian_d__galaxian.cpp) = e63fbc12dd7d0db2b9f98862bf6c1ecc94c4c4f3
+SHA1 (patch-src_burn_drv_pst90s_d__raiden2.cpp) = a74ab0ce1c3c2ff5ef579d4051aba4795d274898
+SHA1 (patch-src_burn_snd_msm6295.cpp) = 81c446a7cbd25a73c3df24a2ec06499702c36992
+SHA1 (patch-src_burner_libretro_libretro.cpp) = b6fd783526f99a6fc296ccbf27e661af9ee14246
+SHA1 (patch-src_cpu_nec__intf.cpp) = 631d76b945ee7e214e47718b45666f27ac2ea7b2
