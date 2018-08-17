@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/09/13 08:33:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/08/17 12:36:05 wiz Exp $
 bin/Xvnc
 bin/vncconfig
 bin/vncpasswd
@@ -14,7 +14,7 @@ man/man1/vncviewer.1
 man/man1/x0vncserver.1
 share/applications/vncviewer.desktop
 share/doc/${PKGNAME}/LICENCE.TXT
-share/doc/${PKGNAME}/README.txt
+share/doc/${PKGNAME}/README.rst
 share/icons/hicolor/16x16/apps/tigervnc.png
 share/icons/hicolor/22x22/apps/tigervnc.png
 share/icons/hicolor/24x24/apps/tigervnc.png
@@ -22,6 +22,7 @@ share/icons/hicolor/32x32/apps/tigervnc.png
 share/icons/hicolor/48x48/apps/tigervnc.png
 share/icons/hicolor/scalable/apps/tigervnc.svg
 share/locale/bg/LC_MESSAGES/tigervnc.mo
+share/locale/cs/LC_MESSAGES/tigervnc.mo
 share/locale/da/LC_MESSAGES/tigervnc.mo
 share/locale/de/LC_MESSAGES/tigervnc.mo
 share/locale/el/LC_MESSAGES/tigervnc.mo
@@ -31,6 +32,7 @@ share/locale/fi/LC_MESSAGES/tigervnc.mo
 share/locale/fr/LC_MESSAGES/tigervnc.mo
 share/locale/fur/LC_MESSAGES/tigervnc.mo
 share/locale/hu/LC_MESSAGES/tigervnc.mo
+share/locale/id/LC_MESSAGES/tigervnc.mo
 share/locale/it/LC_MESSAGES/tigervnc.mo
 share/locale/nl/LC_MESSAGES/tigervnc.mo
 share/locale/pl/LC_MESSAGES/tigervnc.mo
