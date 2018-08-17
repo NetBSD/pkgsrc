@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q2,v 1.1.2.8 2018/07/20 12:09:40 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q2,v 1.1.2.9 2018/08/17 19:46:12 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q2 branch:
 
@@ -49,4 +49,26 @@ lang/gcc5: i386 build fix
 lang/gcc6: i386 build fix
 lang/gcc7: i386 build fix
 lang/gcc8: i386 build fix
+
+Pullup ticket #5797 - requested by taca
+lang/php71: security fix
+
+Pullup ticket #5798 - requested by taca
+lang/php72: security fix
+
+Pullup ticket #5799 - requested by taca
+lang/php70: security fix
+
+Pullup ticket #5800 - requested by taca
+lang/php56: security fix
+
+Pullup ticket #5801 - requested by taca
+archivers/php-zip: reset revision
+databases/php-mssql: reset revision
+databases/php-pdo_dblib: reset revision
+databases/php-pdo_sqlite: reset revision
+textproc/php-intl: reset revision
+www/ap-php: reset revision
+www/php-curl: reset revision
+www/php-fpm: reset revision
 
