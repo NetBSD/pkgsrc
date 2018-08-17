@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.12 2017/09/13 08:33:03 wiz Exp $
+$NetBSD: distinfo,v 1.13 2018/08/17 12:36:05 wiz Exp $
 
-SHA1 (tigervnc-1.8.0.tar.gz) = dbb280afb066073d7b44e99bd75d7f9bdb5a81e0
-RMD160 (tigervnc-1.8.0.tar.gz) = b88896fc27269c82601f30a05ba6e185f91755fb
-SHA512 (tigervnc-1.8.0.tar.gz) = c066e9781622e342667bf03fd6bbb94ed17b412b07c46764b7b73b2eb308c285e865cf1e901f7d218db05a0486fb3f8877e75da3c939ef0d020247713779327a
-Size (tigervnc-1.8.0.tar.gz) = 1433830 bytes
+SHA1 (tigervnc-1.9.0.tar.gz) = c56656c596fb863bb2c4b67fb62b4165011d181f
+RMD160 (tigervnc-1.9.0.tar.gz) = 990e872addf459432584c176b3565504e994899e
+SHA512 (tigervnc-1.9.0.tar.gz) = 333910f567e6b5e4a5a22d898b2d4c3f4b834cb4cc8fc13ff55d31401894c0d5122a127692ec5eb51e412c945ff3ea5b8146f9ab22cbe1e47541e09239ec8c9d
+Size (tigervnc-1.9.0.tar.gz) = 1506520 bytes
 SHA1 (xorg-server-1.17.2.tar.bz2) = 56ac29a82b99bcf4c7ba2fca41a44cfa18748262
 RMD160 (xorg-server-1.17.2.tar.bz2) = bf575a269f1e7b729992a20989be84e09fcc88a2
 SHA512 (xorg-server-1.17.2.tar.bz2) = 7e7b7620890cc8db696695758fa22fa879f9d3c33946663611ec0b37f02116e9c6f08779f9eece59907b430d3df93f0c0548939683ea156b3c4cbe02571b7551
@@ -12,6 +12,5 @@ SHA1 (patch-CMakeLists.txt) = 42a364f898784a9c4da46bea8ef6bc37838815b9
 SHA1 (patch-media_CMakeLists.txt) = cd50f9b7a9405aa523412ef823a32437a3c19ffa
 SHA1 (patch-unix_vncserver) = 9c71ad02c6657f537bcb2abaa116a831b555d7c0
 SHA1 (patch-unix_xserver117.patch) = 5e5d2a98f0b765ae0d6bb5f200808126b03dcc51
-SHA1 (patch-unix_xserver_hw_vnc_InputXKB.cc) = 58dfddf27233b534bbb0e05edd4db3392a8a38df
-SHA1 (patch-unix_xserver_hw_vnc_Makefile.am) = 28d8eb1a5b12e64c8a13c643e9492c3845aa1c3a
-SHA1 (patch-unix_xserver_hw_vnc_vncModule.c) = 6f6868032bc9d0b45231f73e719464a0de118fb7
+SHA1 (patch-unix_xserver_hw_vnc_Makefile.am) = 29b33e6d94a070bb0a55a264cd1c4e120c9b1b3c
+SHA1 (patch-unix_xserver_hw_vnc_vncModule.c) = 77aff6c2bb19e6936302c783b72d581e7d6388f5
