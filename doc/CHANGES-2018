@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3637 2018/08/16 21:47:28 triaxx Exp $
+$NetBSD: CHANGES-2018,v 1.3638 2018/08/17 04:04:51 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5173,3 +5173,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/stellarium to 0.18.2 [adam 2018-08-16]
 	Updated pkgtools/pkglint to 5.6.1 [rillig 2018-08-16]
 	Updated audio/grip to 3.9.0 [triaxx 2018-08-16]
+	Updated sysutils/pciutils to 3.6.2 [msaitoh 2018-08-17]
