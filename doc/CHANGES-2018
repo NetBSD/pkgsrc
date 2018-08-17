@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3638 2018/08/17 04:04:51 msaitoh Exp $
+$NetBSD: CHANGES-2018,v 1.3639 2018/08/17 07:17:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5174,3 +5174,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated pkgtools/pkglint to 5.6.1 [rillig 2018-08-16]
 	Updated audio/grip to 3.9.0 [triaxx 2018-08-16]
 	Updated sysutils/pciutils to 3.6.2 [msaitoh 2018-08-17]
+	Updated devel/py-hypothesis to 3.68.0 [adam 2018-08-17]
+	Updated devel/py-tox to 3.2.1 [adam 2018-08-17]
