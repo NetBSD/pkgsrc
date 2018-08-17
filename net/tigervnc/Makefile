@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2018/04/17 22:29:47 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2018/08/17 12:36:05 wiz Exp $
 
-DISTNAME=	tigervnc-1.8.0
-PKGREVISION=	3
+DISTNAME=	tigervnc-1.9.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TigerVNC/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -23,7 +22,7 @@ DEPENDS+=	mcookie-[0-9]*:../../x11/mcookie
 USE_CMAKE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	msgmerge patch perl:run autoconf automake autoreconf pkg-config gmake bash
+USE_TOOLS+=	intltool msgfmt msgmerge patch perl:run autoconf automake autoreconf pkg-config gmake bash
 BUILD_DIRS=	. unix/xserver
 INSTALL_DIRS=	. unix/xserver/hw/vnc
 
@@ -92,5 +91,6 @@ BUILDLINK_API_DEPENDS.fltk+=	fltk>=1.3.3
 .include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/xtrans/buildlink3.mk"
 .include "../../x11/libXfont/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
