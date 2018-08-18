@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/05/18 20:02:32 adam Exp $
+# $NetBSD: Makefile,v 1.2 2018/08/18 21:18:28 adam Exp $
 
-DISTNAME=	sphinxcontrib-websupport-1.0.1
+DISTNAME=	sphinxcontrib-websupport-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinxcontrib-websupport/}
@@ -10,10 +10,10 @@ HOMEPAGE=	http://sphinx-doc.org/
 COMMENT=	Sphinx API for Web Apps
 LICENSE=	2-clause-bsd
 
-USE_LANGUAGES=		# none
+TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
