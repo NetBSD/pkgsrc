@@ -1,8 +1,16 @@
-$NetBSD: patch-plugins_wmm_pi_src_MagneticPlotMap.cpp,v 1.1 2018/04/09 18:44:50 bouyer Exp $
+$NetBSD: patch-plugins_wmm_pi_src_MagneticPlotMap.cpp,v 1.1.2.1 2018/08/18 10:31:59 bsiegert Exp $
 
---- plugins/wmm_pi/src/MagneticPlotMap.cpp.orig	2018-04-09 18:01:32.900360435 +0200
-+++ plugins/wmm_pi/src/MagneticPlotMap.cpp	2018-04-09 18:02:29.319040318 +0200
-@@ -230,7 +230,7 @@
+--- plugins/wmm_pi/src/MagneticPlotMap.cpp.orig	2018-02-07 12:08:26.000000000 +0100
++++ plugins/wmm_pi/src/MagneticPlotMap.cpp	2018-07-02 12:16:38.589797991 +0200
+@@ -32,6 +32,7 @@
+ #endif //precompiled headers
+ 
+ #include <wx/progdlg.h>
++#include <cmath>
+ 
+ #include "ocpn_plugin.h"
+ 
+@@ -230,7 +231,7 @@
          else
              p = CalcParameter(lonval, rx);
  
@@ -11,7 +19,7 @@ $NetBSD: patch-plugins_wmm_pi_src_MagneticPlotMap.cpp,v 1.1 2018/04/09 18:44:50 
              return true;
  
          if(m_type == DECLINATION && p-ry*m_Spacing < -180) /* way off, try other way around */
-@@ -290,7 +290,7 @@
+@@ -290,7 +291,7 @@
      double p3 = CachedCalcParameter(lat2, lon1);
      double p4 = CachedCalcParameter(lat2, lon2);
  
@@ -20,7 +28,7 @@ $NetBSD: patch-plugins_wmm_pi_src_MagneticPlotMap.cpp,v 1.1 2018/04/09 18:44:50 
          return;
  
      double ry1, ry2, ry3, ry4 = 0.0;
-@@ -318,7 +318,7 @@
+@@ -318,7 +319,7 @@
      ry1*=m_Spacing, ry2*=m_Spacing, ry3*=m_Spacing, ry4*=m_Spacing;
  
      /* determine which interpolations need line segments */
