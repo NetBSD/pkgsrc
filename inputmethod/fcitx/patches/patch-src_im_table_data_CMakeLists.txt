@@ -1,0 +1,13 @@
+$NetBSD: patch-src_im_table_data_CMakeLists.txt,v 1.1 2018/08/18 01:11:16 ryoon Exp $
+
+--- src/im/table/data/CMakeLists.txt.orig	2017-12-22 18:02:24.000000000 +0000
++++ src/im/table/data/CMakeLists.txt
+@@ -35,7 +35,7 @@ fcitx_extract(table-data-extract "${TABL
+ foreach(tblname ${TABLE_NAME})
+   add_custom_command(OUTPUT ${tblname}.mb
+     DEPENDS ${tblname}.txt "${TXT2MB_BIN}" table-data-extract
+-    COMMAND "${TXT2MB_BIN}" ${tblname}.txt ${tblname}.mb)
++    COMMAND "${CMAKE_COMMAND}" -E env "LD_LIBRARY_PATH=${PROJECT_BINARY_DIR}/src/lib/fcitx-config:${PROJECT_BINARY_DIR}/src/lib/fcitx-utils" "${TXT2MB_BIN}" ${tblname}.txt ${tblname}.mb)
+ endforeach()
+ 
+ install(FILES ${TABLE_DATA} DESTINATION ${pkgdatadir}/table )
