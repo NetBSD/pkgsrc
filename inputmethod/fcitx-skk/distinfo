@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/08/18 01:21:38 ryoon Exp $
+
+SHA1 (fcitx-skk-0.1.4.tar.xz) = 7c9252a9951076455db5dc001e033ee48b6ef23c
+RMD160 (fcitx-skk-0.1.4.tar.xz) = fc8683b3a824fe45dbc834634eb0e134b227cd24
+SHA512 (fcitx-skk-0.1.4.tar.xz) = 029d05bbd8d325a1ed7824be007191f2148f1443190b7a781983ddddcc42461327912b5ee2f8171402b6eeea68f95511536273711ee09a3f5ec1eaf901aaac90
+Size (fcitx-skk-0.1.4.tar.xz) = 34708 bytes
