@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.68 2018/04/29 21:32:07 adam Exp $
+# $NetBSD: Makefile,v 1.68.2.1 2018/08/18 09:10:59 bsiegert Exp $
 #
 # When updating this package, make sure that no strings like
 # "PR 12345" are in the commit message. Upstream likes
 # to reference their own PRs this way, but this ends up
 # in NetBSD GNATS.
 
-DISTNAME=	httpd-2.4.33
+DISTNAME=	httpd-2.4.34
 PKGNAME=	${DISTNAME:S/httpd/apache/}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_APACHE:=httpd/}
 MASTER_SITES+=	http://archive.apache.org/dist/httpd/
@@ -109,7 +108,7 @@ FIX_MAN_PERMS+=		man8/apachectl.8 man1/ab.1 man1/httxt2dbm.1
 
 # Fix paths in the apache manpages.
 SUBST_CLASSES+=		man
-SUBST_STAGE.man=	post-patch
+SUBST_STAGE.man=	pre-configure
 SUBST_MESSAGE.man=	Fixing paths in man pages.
 SUBST_FILES.man=	docs/man/*.1 docs/man/*.8
 SUBST_SED.man=		-e 's,/usr/local/etc/apache,${PKG_SYSCONFDIR},'
@@ -156,7 +155,7 @@ SUBST_SED.abs_srcdir=		-e 's|^\(abs_srcdir =\) .*|\1 ${PREFIX}/share/httpd|'
 
 REPLACE_PERL=		docs/cgi-examples/printenv
 
-.  include "../../devel/zlib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-z=${BUILDLINK_PREFIX.zlib}
 
