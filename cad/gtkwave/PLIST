@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2018/03/08 13:31:31 mef Exp $
+@comment $NetBSD: PLIST,v 1.12 2018/08/18 12:03:28 mef Exp $
 bin/evcd2vcd
 bin/fst2vcd
 bin/fstminer
@@ -16,6 +16,7 @@ bin/vcd2vzt
 bin/vermin
 bin/vzt2vcd
 bin/vztminer
+bin/xml2stems
 man/man1/evcd2vcd.1
 man/man1/fst2vcd.1
 man/man1/fstminer.1
@@ -33,6 +34,7 @@ man/man1/vcd2vzt.1
 man/man1/vermin.1
 man/man1/vzt2vcd.1
 man/man1/vztminer.1
+man/man1/xml2stems.1
 man/man5/gtkwaverc.5
 share/applications/gtkwave.desktop
 share/gtkwave/examples/des.fst
