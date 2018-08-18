@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3658 2018/08/18 21:07:10 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3659 2018/08/18 21:19:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5196,3 +5196,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/subversion to 1.10.2 [adam 2018-08-18]
 	Updated security/py-cryptodome to 3.6.6 [adam 2018-08-18]
 	Updated devel/py-dogpile-cache to 0.6.7 [adam 2018-08-18]
+	Updated www/py-test-django to 3.4.1 [adam 2018-08-18]
+	Updated textproc/py-sphinxcontrib-websupport to 1.1.0 [adam 2018-08-18]
