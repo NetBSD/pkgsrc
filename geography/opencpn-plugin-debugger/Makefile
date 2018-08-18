@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2018/04/29 05:46:37 wiz Exp $
+# $NetBSD: Makefile,v 1.10.2.1 2018/08/18 10:31:58 bsiegert Exp $
 #
 
 VERSION=	20170414
-PKGREVISION=	5
+PKGREVISION=	6
 DISTNAME=	ocpndebugger_pi-${VERSION}
 PKGNAME=	opencpn-plugin-debugger-${VERSION}
 CATEGORIES=	geography
@@ -26,9 +26,6 @@ CMAKE_MODULE_PATH_OVERRIDE = \
 		cmake/PluginPackage.cmake
 
 .include "../../devel/cmake/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/wxGTK30/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../graphics/glu/buildlink3.mk"
 .include "../../textproc/tinyxml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

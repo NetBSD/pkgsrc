@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.9 2018/04/19 09:59:28 bouyer Exp $
+$NetBSD: distinfo,v 1.9.2.1 2018/08/18 10:31:58 bsiegert Exp $
 
 SHA1 (watchdog_pi-20180405-4e79fdba96ccd1a17b81166e6956571bf734597d.tar.gz) = e96b4390349488a41d8ca74203a3316512be84cb
 RMD160 (watchdog_pi-20180405-4e79fdba96ccd1a17b81166e6956571bf734597d.tar.gz) = 033f0c65129a811b01ce24655c9bc4ec4435f3d8
 SHA512 (watchdog_pi-20180405-4e79fdba96ccd1a17b81166e6956571bf734597d.tar.gz) = 9398cc2663d5acee13022105a98a76eb1b2dc3cf67e7d49bb0554161488125276b181e9e5392654dea23413e167b95b0acfd4600d1f4ed1c72b678e622873c89
 Size (watchdog_pi-20180405-4e79fdba96ccd1a17b81166e6956571bf734597d.tar.gz) = 485682 bytes
 SHA1 (patch-cmake_PluginConfigure.cmake) = bc2d6409f95cffee145173280c33f9e7fe439864
-SHA1 (patch-src_Alarm.cpp) = 5cbe32ca31ad1ec8407683358e0a5c44ea062e06
-SHA1 (patch-src_watchdog_pi.cpp) = bcae586e09820f80ea34d5c497476b0883742b5b
+SHA1 (patch-src_Alarm.cpp) = 3eab8a83a2304c9378b1e21bfc367e41833b3973
+SHA1 (patch-src_watchdog_pi.cpp) = 8d8077490aa7a121fae82931ae0c8de89f82fbaf
 SHA1 (patch-src_wddc.cpp) = 3c43974da65dfe9a18a77f4b84595a4ab602cfd9

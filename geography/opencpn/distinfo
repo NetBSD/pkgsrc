@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.18 2018/04/13 18:57:29 bouyer Exp $
+$NetBSD: distinfo,v 1.18.2.1 2018/08/18 10:31:58 bsiegert Exp $
 
 SHA1 (OpenCPN-4.8.2.zip) = 9547a99c0de739fb0f4953d37bb738ed651f5c62
 RMD160 (OpenCPN-4.8.2.zip) = f217d07cc639292e657b0f89f96daa12cab2a355
 SHA512 (OpenCPN-4.8.2.zip) = 53635bcb77d96171afecdbf6bb987256016dce9019eca6c644500e14b820ed0843be6cdc3c0567b537eb1a65dbee4cfcaa73fa13361d6deb1ed0aa585d0e6cba
 Size (OpenCPN-4.8.2.zip) = 61827184 bytes
-SHA1 (patch-CMakeLists.txt) = c20b25c64790f5a595a5ef2940f430e588ffdf14
+SHA1 (patch-CMakeLists.txt) = 6d11df2c83e445050c91e23ec6657798726b4338
 SHA1 (patch-FindPortaudio.cmake) = e1bebe2203c6f3dc76f92ee5bdcb01eca66b6b9a
 SHA1 (patch-plugins_chartdldr_pi_CMakeLists.txt) = 52962f6feac45a766fc2dff08d2802e946ccfc85
 SHA1 (patch-plugins_chartdldr_pi_cmake_PluginConfigure.cmake) = 29fbfaee37e2a932b923df6ff7541dad37e14d65
@@ -12,7 +12,7 @@ SHA1 (patch-plugins_dashboard_pi_CMakeLists.txt) = 76a6198e58f81c129f15fa6671da1
 SHA1 (patch-plugins_grib_pi_CMakeLists.txt) = 49f997c27aa4710721d36945a681854579112a49
 SHA1 (patch-plugins_wmm_pi_CMakeLists.txt) = 88339a61dd4b78b823bbd34bd1b02863d150f046
 SHA1 (patch-plugins_wmm_pi_cmake_PluginConfigure.cmake) = f1c91cfa744ed76d938bfb5bdb4116df9f45604a
-SHA1 (patch-plugins_wmm_pi_src_MagneticPlotMap.cpp) = eb2f4c09913e849becf1e270b0219ffdf46bb922
+SHA1 (patch-plugins_wmm_pi_src_MagneticPlotMap.cpp) = 885f940777b38c8e59cc5d2e4fdbd1bf9a91578d
 SHA1 (patch-src_chart1.cpp) = ae7c1d8a59c9a275914a613205de71e2dca89dc6
 SHA1 (patch-src_crashprint.cpp) = a96e8aa980eb3b19c3dce3343582511d608e6625
 SHA1 (patch-src_glu_CMakeLists.txt) = d63494a41071097252ac9e2cb95db75041f30b62
