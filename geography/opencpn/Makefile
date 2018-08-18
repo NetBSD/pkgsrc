@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2018/04/29 21:31:42 adam Exp $
+# $NetBSD: Makefile,v 1.23.2.1 2018/08/18 10:31:58 bsiegert Exp $
 
 DISTNAME=	OpenCPN-4.8.2
-PKGREVISION=	4
+PKGREVISION=	5
 PKGNAME=	${DISTNAME:S/OpenCPN/opencpn/}
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenCPN/}
@@ -14,9 +14,9 @@ HOMEPAGE=	http://www.opencpn.org/
 COMMENT=	Concise ChartPlotter/Navigator
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=		c c++
-USE_TOOLS=		gettext
-USE_CMAKE=		yes
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	gettext pkg-config
+USE_CMAKE=	yes
 
 CMAKE_ARGS+=	-DPREFIX:PATH=${PREFIX} -DPREFIX_PLUGINS:PATH=${PREFIX}/lib/opencpn
 CMAKE_ARGS+=	-DBUNDLE_DOCS=ON -DBUNDLE_GSHHS=CRUDE -DBUNDLE_TCDATA=ON
@@ -41,10 +41,7 @@ SUBST_SED.prefix=	-e s,"/usr/local,"${PREFIX},g
 LDFLAGS+=	${EXPORT_SYMBOLS_LDFLAGS}
 
 .include "../../devel/cmake/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/wxGTK30/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../audio/portaudio-devel/buildlink3.mk"

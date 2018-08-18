@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2018/04/29 05:46:37 wiz Exp $
+# $NetBSD: Makefile,v 1.7.2.1 2018/08/18 10:31:58 bsiegert Exp $
 
 VERSION=	20180405
-PKGREVISION= 	3
+PKGREVISION= 	4
 DISTNAME=	statusbar_pi-${VERSION}
 PKGNAME=	opencpn-plugin-statusbar-${VERSION}
 CATEGORIES=	geography
@@ -25,9 +25,6 @@ CMAKE_MODULE_PATH_OVERRIDE = \
 		cmake/PluginPackage.cmake
 
 .include "../../devel/cmake/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/wxGTK30/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../graphics/glu/buildlink3.mk"
 .include "../../textproc/tinyxml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

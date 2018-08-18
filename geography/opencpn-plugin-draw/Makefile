@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2018/04/29 05:46:37 wiz Exp $
+# $NetBSD: Makefile,v 1.16.2.1 2018/08/18 10:31:58 bsiegert Exp $
 #
 
 VERSION=	1.5_20180405
 DISTNAME=	ocpn_draw_pi-${VERSION}
 PKGNAME=	opencpn-plugin-draw-${VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jongough/}
 GITHUB_PROJECT=	ocpn_draw_pi
@@ -26,9 +26,6 @@ CMAKE_MODULE_PATH_OVERRIDE = \
 		cmake/PluginPackage.cmake
 
 .include "../../devel/cmake/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/wxGTK30/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../graphics/glu/buildlink3.mk"
 .include "../../textproc/tinyxml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
