@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q2,v 1.1.2.9 2018/08/17 19:46:12 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q2,v 1.1.2.10 2018/08/18 13:18:25 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q2 branch:
 
@@ -71,4 +71,23 @@ textproc/php-intl: reset revision
 www/ap-php: reset revision
 www/php-curl: reset revision
 www/php-fpm: reset revision
+
+Pullup ticket #5802 - requested by taca
+www/apache24: security fix
+
+Pullup ticket #5803 - requested by bouyer
+misc/libreoffice: build fix
+
+Pullup ticket #5804 - requested by bouyer
+geography/opencpn: build fix
+
+Pullup ticket #5808 - requested by sevan
+sysutils/smartmontools: NetBSD build fix
+
+Pullup ticket #5809 - requested by youri
+pkgtools/pkgin: bugfix
+
+Pullup ticket #5810 - requested by maya
+net/bind99: security fix, NetBSD build fix
+net/bind910: security fix, NetBSD build fix
 
