@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.22 2015/08/13 20:47:42 adam Exp $
+$NetBSD: patch-subversion_bindings_swig_perl_native_Makefile.PL.in,v 1.1 2018/08/18 15:55:13 adam Exp $
 
-* tell location of libraries from subversion base package.
+Tell location of libraries from subversion base package.
 
 --- subversion/bindings/swig/perl/native/Makefile.PL.in.orig	2014-01-17 04:54:43.000000000 +0000
 +++ subversion/bindings/swig/perl/native/Makefile.PL.in

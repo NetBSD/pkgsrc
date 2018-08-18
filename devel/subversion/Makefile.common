@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.41 2015/08/13 20:47:42 adam Exp $
+# $NetBSD: Makefile.common,v 1.42 2018/08/18 15:55:13 adam Exp $
 # used by devel/java-subversion/Makefile
 # used by devel/p5-subversion/Makefile
 # used by devel/py-subversion/Makefile
@@ -49,4 +49,7 @@ CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
 
 BUILDLINK_API_DEPENDS.subversion-base+=	subversion-base>=${SVNVER}
 
+.include "../../archivers/lz4/buildlink3.mk"
+.include "../../converters/utf8proc/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
