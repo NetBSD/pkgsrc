@@ -192,6 +192,7 @@ farsight		Enable farsight2 support.
 farstream		Enable farstream support.
 fastcgi			Use FastCGI as the CGI manager.
 fax			Enable fax support
+fcitx			Enable Fcitx inputmethod support
 fd-small		Build smaller misc/fd package.
 ffmpeg			Enable ffmpeg support.
 fftw			Use the fftw library for Discrete Fourier Transforms.
