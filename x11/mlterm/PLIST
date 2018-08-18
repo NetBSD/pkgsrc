@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2017/02/04 16:20:12 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.40 2018/08/18 01:32:23 ryoon Exp $
 bin/mlcc
 bin/mlclient
 bin/mlclientx
@@ -17,6 +17,8 @@ ${PLIST.bidi}lib/mlterm/libctl_bidi.la
 ${PLIST.ind}lib/mlterm/libctl_iscii.la
 ${PLIST.canna}lib/mlterm/libim-canna.la
 ${PLIST.fb}${PLIST.canna}lib/mlterm/libim-canna-fb.la
+${PLIST.fb}${PLIST.fcitx}lib/mlterm/libim-fcitx-fb.la
+${PLIST.fcitx}lib/mlterm/libim-fcitx.la
 ${PLIST.ibus}lib/mlterm/libim-ibus.la
 ${PLIST.fb}${PLIST.ibus}lib/mlterm/libim-ibus-fb.la
 lib/mlterm/libim-kbd.la
