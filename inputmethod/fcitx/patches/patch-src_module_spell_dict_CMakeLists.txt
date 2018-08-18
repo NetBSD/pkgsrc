@@ -1,0 +1,13 @@
+$NetBSD: patch-src_module_spell_dict_CMakeLists.txt,v 1.1 2018/08/18 01:11:16 ryoon Exp $
+
+--- src/module/spell/dict/CMakeLists.txt.orig	2017-12-22 18:02:24.000000000 +0000
++++ src/module/spell/dict/CMakeLists.txt
+@@ -24,7 +24,7 @@ set(COMP_SPELL_DICT
+ add_custom_command(
+   OUTPUT "${SPELL_EN_DICT}"
+   DEPENDS "${SPELL_EN_DICT_SRC}" "${COMP_SPELL_DICT}" spell-en-extract
+-  COMMAND "${COMP_SPELL_DICT}" --comp-dict
++  COMMAND "${CMAKE_COMMAND}" -E env "LD_LIBRARY_PATH=${PROJECT_BINARY_DIR}/src/lib/fcitx-utils" "${COMP_SPELL_DICT}" --comp-dict
+   "${SPELL_EN_DICT_SRC}" "${SPELL_EN_DICT}")
+ add_custom_target(spell_en_dict ALL DEPENDS "${SPELL_EN_DICT}")
+ install(FILES "${SPELL_EN_DICT}" DESTINATION "${pkgdatadir}/spell")

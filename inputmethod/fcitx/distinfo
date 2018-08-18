@@ -1,8 +1,31 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 22:13:34 agc Exp $
+$NetBSD: distinfo,v 1.3 2018/08/18 01:11:16 ryoon Exp $
 
-SHA1 (fcitx-3.1.1.tar.bz2) = 3d23a0786edd6ff6e69d353692849d9041442038
-RMD160 (fcitx-3.1.1.tar.bz2) = 229155ec71deb189ffc52851ee9a242ba9192a5b
-SHA512 (fcitx-3.1.1.tar.bz2) = 4c97c5a6c5513d695266d3648f33ae8fe00bd92d81734ccc267560e255f893cef78282897eb738b5d5e295aa3710074ab17b2542c0f874b2d4bf1f5f159568cb
-Size (fcitx-3.1.1.tar.bz2) = 2920856 bytes
-SHA1 (patch-aa) = 53bc014f925d326ed76dfd79721b5d49b2fa5222
-SHA1 (patch-ab) = 50cacd5cb281638d3b0e2468a339a21475d536f2
+SHA1 (en_dict-20121020.tar.gz) = 3d6b85cbede261b3703b916e6a1a3303f6cba9a6
+RMD160 (en_dict-20121020.tar.gz) = ae6a1fcf214b9ba1b9d300edeec4d61ad62caf18
+SHA512 (en_dict-20121020.tar.gz) = 8418bd02492bfd786c0fab93be4400ef027ec8e9fac02220cc1f653f5eb67f54573a6a84a15baba19bb34ab892745c87df16499d6304ea75009131e2ab3b97f2
+Size (en_dict-20121020.tar.gz) = 630491 bytes
+SHA1 (fcitx-4.2.9.6.tar.xz) = 8b0eb76356405784290a9b15d20b5882ec9af370
+RMD160 (fcitx-4.2.9.6.tar.xz) = f778d10dc6fd0932d7b433d7735d3b3cc8978b6e
+SHA512 (fcitx-4.2.9.6.tar.xz) = b6c2f0cc54eb8dce0ed7b2d3def499aadc863e12a7fa6cf1e79338dac8dfd48c805dbd293ef749eecbecd5453ea6ec3bc66d945ef16330562b39bf99e6fc9470
+Size (fcitx-4.2.9.6.tar.xz) = 1706336 bytes
+SHA1 (pinyin.tar.gz) = af6f6fceed89a2b533b39a73e277675361298745
+RMD160 (pinyin.tar.gz) = 7d3be5535cb111cc5d8a64ce50150c9767608ec3
+SHA512 (pinyin.tar.gz) = 1ee19eed3ee58be6cd6562ec363fe3bf630fff5e8820b3bfdd6d4618fceb082695e888dec5366a3685d58706f720e19319d891c223227237aed12674ea982131
+Size (pinyin.tar.gz) = 1608886 bytes
+SHA1 (py_stroke-20121124.tar.gz) = 80a52eba30f0ab269e6d26cb2813af9da2e84017
+RMD160 (py_stroke-20121124.tar.gz) = ce7cd591a92b0b0440ff5cfe18b1df325e8b9746
+SHA512 (py_stroke-20121124.tar.gz) = d80ff9a3549e07c7a6935e686785f9a076c58f1a782a832ae28ee65e2a213d67f089f450ce09bed87ec2a141c32b9c1fcb83c221ddcab436858fa9009f161fb3
+Size (py_stroke-20121124.tar.gz) = 445601 bytes
+SHA1 (py_table-20121124.tar.gz) = e43d2760a607461ae8a4f52e4caf21cf673f6acc
+RMD160 (py_table-20121124.tar.gz) = 58e54cc66f4384e6caa4ac6828ad0786da618b05
+SHA512 (py_table-20121124.tar.gz) = 0fa72ce6820a316e9729bc0d7a08af5ca3468134de9ff1bf0c559a398846a7bcf7313a3609d943e6bab637d930cf45ad9acfe25a8d3df078a774b071a7296486
+Size (py_table-20121124.tar.gz) = 186822 bytes
+SHA1 (table.tar.gz) = b7e89f95ce2da991821acd270a1220a4cd4cb65a
+RMD160 (table.tar.gz) = b678c943b232b8aba2c462c7b81b2f99f27ecd07
+SHA512 (table.tar.gz) = 99e1d69c679355fcf3e117a1ef39b131cbd3af841387d2335757247d840b90ff6b7323e16fca98cf7a043033faf250d2e9c6d47b96845d18c278a0cf6f30fec9
+Size (table.tar.gz) = 4144686 bytes
+SHA1 (patch-cmake_FcitxMacro.cmake) = e3dcba315711fc6b96f5620de1e03e096635bab2
+SHA1 (patch-src_im_pinyin_data_CMakeLists.txt) = dd17df37a5b6781a645a4190cb8111811f804189
+SHA1 (patch-src_im_table_data_CMakeLists.txt) = 3ef3d05ee036f9bb845b69c97c50ac76cc11478e
+SHA1 (patch-src_lib_fcitx-utils_utils.c) = d89eccbcc8c1ee330efbcddea152db6d2725959b
+SHA1 (patch-src_module_spell_dict_CMakeLists.txt) = 98372bb2c160e9bb8917ea523465924edab2c1e3
