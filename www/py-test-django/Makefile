@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2018/08/07 10:11:22 adam Exp $
+# $NetBSD: Makefile,v 1.6 2018/08/18 21:14:49 adam Exp $
 
-DISTNAME=	pytest-django-3.3.3
+DISTNAME=	pytest-django-3.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-django/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://pytest-django.readthedocs.io/
 COMMENT=	Django plugin for pytest
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-test>=2.9:../../devel/py-test
+DEPENDS+=	${PYPKGPREFIX}-test>=3.6:../../devel/py-test
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=1.11.1:../../devel/py-setuptools_scm
 
 USE_LANGUAGES=	# none
