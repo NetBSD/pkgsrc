@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18510 2018/08/18 01:11:51 ryoon Exp $
+$NetBSD: TODO,v 1.18511 2018/08/18 15:09:35 sevan Exp $
 
 Suggested new packages
 ======================
@@ -485,7 +485,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cjk-lyx-1.4.4
 	o classpath-0.99
 	o classpath-gui-0.99
-	o claws-mail-3.16.0
+	o claws-mail-3.17.0
 	o clawsker-0.7.13
 	o clojure-1.8.0
 	o clusterssh-4.05
