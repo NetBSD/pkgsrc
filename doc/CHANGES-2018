@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3649 2018/08/17 15:23:04 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.3650 2018/08/18 00:12:08 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5186,3 +5186,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added emulators/libretro-fbalpha version 0.2.97.42.20180408 [nia 2018-08-17]
 	Updated net/gallery-dl to 1.5.1 [leot 2018-08-17]
 	Updated converters/utf8proc to 2.2.0 [minskim 2018-08-17]
+	Updated misc/libreoffice to 6.1.0.3 [ryoon 2018-08-18]
