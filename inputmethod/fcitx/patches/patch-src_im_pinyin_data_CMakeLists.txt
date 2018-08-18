@@ -1,0 +1,13 @@
+$NetBSD: patch-src_im_pinyin_data_CMakeLists.txt,v 1.1 2018/08/18 01:11:16 ryoon Exp $
+
+--- src/im/pinyin/data/CMakeLists.txt.orig	2017-12-22 18:02:24.000000000 +0000
++++ src/im/pinyin/data/CMakeLists.txt
+@@ -18,7 +18,7 @@ fcitx_extract(py-data-extract "${PY_TAR}
+ set(CREATE_PYMB_BIN "${PROJECT_BINARY_DIR}/tools/cli/createPYMB")
+ add_custom_command(OUTPUT ${PY_DATA}
+   DEPENDS ${PY_ORGDATA} "${CREATE_PYMB_BIN}" py-data-extract
+-  COMMAND "${CREATE_PYMB_BIN}" "${CMAKE_CURRENT_SOURCE_DIR}/gbkpy.org"
++  COMMAND "${CMAKE_COMMAND}" -E env "LD_LIBRARY_PATH=${PROJECT_BINARY_DIR}/src/lib/fcitx-config:${PROJECT_BINARY_DIR}/src/lib/fcitx-utils" "${CREATE_PYMB_BIN}" "${CMAKE_CURRENT_SOURCE_DIR}/gbkpy.org"
+   "${CMAKE_CURRENT_BINARY_DIR}/${PY_ORGDATA}")
+ 
+ install(FILES ${FCITX_PY_FILES} "${CMAKE_CURRENT_BINARY_DIR}/pybase.mb"
