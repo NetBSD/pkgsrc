@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3650 2018/08/18 00:12:08 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.3651 2018/08/18 01:11:51 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5187,3 +5187,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/gallery-dl to 1.5.1 [leot 2018-08-17]
 	Updated converters/utf8proc to 2.2.0 [minskim 2018-08-17]
 	Updated misc/libreoffice to 6.1.0.3 [ryoon 2018-08-18]
+	Updated inputmethod/fcitx to 4.2.9.6 [ryoon 2018-08-18]

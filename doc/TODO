@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18509 2018/08/17 12:36:15 wiz Exp $
+$NetBSD: TODO,v 1.18510 2018/08/18 01:11:51 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -610,7 +610,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o faces-1.7.7
 	o facter-2.4.5
 	o fakeroot-1.6.5
-	o fcitx-3.6.2
 	o felt-3.07 [wip]
 	o fengoffice-3.4.0.17
 	o festival-2.4
