@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2018/08/18 01:15:53 ryoon Exp $
+bin/fcitx-config-gtk3
+share/locale/de/LC_MESSAGES/fcitx-configtool.mo
+share/locale/ja/LC_MESSAGES/fcitx-configtool.mo
+share/locale/zh_CN/LC_MESSAGES/fcitx-configtool.mo
+share/locale/zh_TW/LC_MESSAGES/fcitx-configtool.mo
