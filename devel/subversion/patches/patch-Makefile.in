@@ -1,10 +1,10 @@
-$NetBSD: patch-ad,v 1.19 2015/10/07 05:48:10 richard Exp $
+$NetBSD: patch-Makefile.in,v 1.1 2018/08/18 15:55:13 adam Exp $
 
-apply https://bugs.gentoo.org/show_bug.cgi?id=388607 for MAKE_JOBS_SAFE=yes
+Apply https://bugs.gentoo.org/show_bug.cgi?id=388607 for MAKE_JOBS_SAFE=yes
 
---- Makefile.in.orig	2015-09-18 12:56:29.000000000 +0000
+--- Makefile.in.orig	2018-02-16 04:00:12.000000000 +0000
 +++ Makefile.in
-@@ -89,7 +89,7 @@ swig_rbdir = $(SWIG_RB_SITE_ARCH_DIR)/sv
+@@ -91,7 +91,7 @@ swig_rbdir = $(SWIG_RB_SITE_ARCH_DIR)/sv
  toolsdir = @bindir@/svn-tools
  
  # where to install pkg-config files
@@ -13,7 +13,7 @@ apply https://bugs.gentoo.org/show_bug.cgi?id=388607 for MAKE_JOBS_SAFE=yes
  
  javahl_javadir = @libdir@/svn-javahl
  javahl_javahdir = @libdir@/svn-javahl/include
-@@ -832,11 +832,11 @@ clean-swig-headers:
+@@ -860,11 +860,11 @@ clean-swig-headers:
  extraclean-swig-headers: clean-swig-headers
  	$(EXTRACLEAN_SWIG_HEADERS)
  
@@ -21,7 +21,7 @@ apply https://bugs.gentoo.org/show_bug.cgi?id=388607 for MAKE_JOBS_SAFE=yes
 +$(SWIG_PL_DIR)/native/Makefile.PL: $(SWIG_SRC_DIR)/perl/native/Makefile.PL.in libsvn_swig_perl
  	./config.status subversion/bindings/swig/perl/native/Makefile.PL
  
- $(SWIG_PL_DIR)/native/Makefile: $(SWIG_PL_DIR)/native/Makefile.PL
+ $(SWIG_PL_DIR)/native/Makefile: libsvn_swig_perl $(SWIG_PL_DIR)/native/Makefile.PL
 -	cd $(SWIG_PL_DIR)/native; $(PERL) Makefile.PL PREFIX=$(prefix)
 +	cd $(SWIG_PL_DIR)/native; $(PERL) Makefile.PL PREFIX=$(prefix) INSTALLDIRS=vendor
  
