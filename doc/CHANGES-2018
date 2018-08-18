@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3655 2018/08/18 06:35:40 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3656 2018/08/18 12:03:38 mef Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5192,3 +5192,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added inputmethod/fcitx-qt5 version 1.2.3 [ryoon 2018-08-18]
 	Added inputmethod/fcitx-skk version 0.1.4 [ryoon 2018-08-18]
 	Updated x11/xscreensaver to 5.39nb2 [wiz 2018-08-18]
+	Updated cad/gtkwave to 3.3.93 [mef 2018-08-18]
