@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3653 2018/08/18 01:18:01 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.3654 2018/08/18 01:22:03 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5190,3 +5190,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated inputmethod/fcitx to 4.2.9.6 [ryoon 2018-08-18]
 	Added inputmethod/fcitx-configtool version 0.4.9 [ryoon 2018-08-18]
 	Added inputmethod/fcitx-qt5 version 1.2.3 [ryoon 2018-08-18]
+	Added inputmethod/fcitx-skk version 0.1.4 [ryoon 2018-08-18]
