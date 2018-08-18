@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2017/12/09 03:31:06 taca Exp $
+# $NetBSD: Makefile,v 1.74 2018/08/18 01:16:52 ryoon Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -14,6 +14,7 @@ SUBDIR+=	canna-lib
 SUBDIR+=	canna-server
 SUBDIR+=	dbskkd-cdb
 SUBDIR+=	fcitx
+SUBDIR+=	fcitx-configtool
 SUBDIR+=	gcin
 SUBDIR+=	gtk-im-libthai
 SUBDIR+=	ibus
