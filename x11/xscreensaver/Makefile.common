@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.126 2018/07/21 06:15:58 wiz Exp $
+# $NetBSD: Makefile.common,v 1.127 2018/08/18 06:31:04 wiz Exp $
 #
 # used by x11/xscreensaver/Makefile
 # used by x11/xscreensaver-demo/Makefile
@@ -47,11 +47,7 @@ PERL_VERSION_cmd=	if ${TEST} -x ${PERL5}; then			\
 			fi
 
 .if (${OPSYS} == "NetBSD")
-.  if defined(KERBEROS)
-CFLAGS+=		-I/usr/include/kerberosIV
-.  else
 CONFIGURE_ARGS+=	--without-kerberos
-.  endif
 .endif
 
 .if ${OPSYS} == "Darwin"
