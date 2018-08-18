@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.162 2018/08/16 18:55:03 adam Exp $
+# $NetBSD: Makefile,v 1.163 2018/08/18 00:11:32 ryoon Exp $
 
-VERREL=		6.0.5
-VERRC=		2
+VERREL=		6.1.0
+VERRC=		3
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -98,17 +97,19 @@ MORE_DISTFILES= \
 	ttf-kacst_2.01+mry.tar.gz \
 	libre-hebrew-1.0.tar.gz \
 	noto-fonts-20171024.tar.gz \
-	ReemKufi-0.6.tar.gz \
-	Scheherazade-2.100.zip
+	Scheherazade-2.100.zip \
+	lxml-4.1.1.tgz \
+	Amiri-0.111.zip \
+	ReemKufi-0.7.zip
 
-MORE_DISTFILES+=		harfbuzz-1.8.1.tar.bz2
+MORE_DISTFILES+=		harfbuzz-1.8.7.tar.bz2
 
 .for md in ${MORE_DISTFILES}
 DISTFILES+=		${md}
-SITES.${md}=		http://dev-www.libreoffice.org/src/
+SITES.${md}=		https://dev-www.libreoffice.org/src/
 .endfor
 
-SITES.harfbuzz-1.8.1.tar.bz2=	http://www.freedesktop.org/software/harfbuzz/release/
+SITES.harfbuzz-1.8.7.tar.bz2=	http://www.freedesktop.org/software/harfbuzz/release/
 
 .include "options.mk"
 
@@ -134,7 +135,8 @@ USE_LIBTOOL=		yes
 # Use GNU find from findutils.
 TOOLS_PLATFORM.find=	# empty
 # GUN tar is really needed. Some Makefiles depends on GNUTAR.
-USE_TOOLS+=		automake bash bison gmake gtar perl pkg-config unzip zip
+USE_TOOLS+=		automake bash bison gmake gtar
+USE_TOOLS+=		msgfmt perl pkg-config unzip zip
 PTHREAD_OPTS+=		require
 
 HAS_CONFIGURE=		yes
@@ -161,7 +163,6 @@ CONFIGURE_ARGS+=	--disable-epm
 CONFIGURE_ARGS+=	--disable-fetch-external
 CONFIGURE_ARGS+=	--disable-firebird-sdbc
 CONFIGURE_ARGS+=	--disable-odk
-CONFIGURE_ARGS+=	--disable-systray
 # Enabling GIO causes error. losessioninstall.component not found.
 CONFIGURE_ARGS+=	--disable-gio
 CONFIGURE_ARGS+=	--disable-pdfium
@@ -331,6 +332,7 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.2
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
 .include "../../math/coinmp/buildlink3.mk"
+.include "../../math/libnumbertext/buildlink3.mk"
 .include "../../math/lp_solve/buildlink3.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"

@@ -1,6 +1,6 @@
-$NetBSD: patch-desktop_unx_source_pagein.c,v 1.1 2017/08/01 11:57:37 ryoon Exp $
+$NetBSD: patch-desktop_unx_source_pagein.c,v 1.2 2018/08/18 00:11:32 ryoon Exp $
 
---- desktop/unx/source/pagein.c.orig	2017-07-25 20:26:39.000000000 +0000
+--- desktop/unx/source/pagein.c.orig	2018-08-02 19:54:54.000000000 +0000
 +++ desktop/unx/source/pagein.c
 @@ -25,7 +25,9 @@
  #include <stdio.h>
