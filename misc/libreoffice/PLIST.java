@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.java,v 1.7 2018/06/25 13:34:48 ryoon Exp $
+@comment $NetBSD: PLIST.java,v 1.8 2018/08/18 00:11:32 ryoon Exp $
 ${PKGNAME}/lib/libreoffice/program/JREProperties.class
 ${PKGNAME}/lib/libreoffice/program/classes/ScriptFramework.jar
 ${PKGNAME}/lib/libreoffice/program/classes/ScriptProviderForBeanShell.jar
@@ -134,6 +134,7 @@ ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/description-is.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/description-it.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/description-ja.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/description-ka.txt
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/description-kab.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/description-kk.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/description-km.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/description-kmr-Latn.txt
@@ -681,6 +682,16 @@ ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/ka/help.idxl/segments
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/ka/help.jar
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/ka/help.key_
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/ka/help.tree
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/kab-xhp.done
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/kab.done
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/kab/help.db_
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/kab/help.ht_
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/kab/help.idxl/_0.cfs
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/kab/help.idxl/segments.gen
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/kab/help.idxl/segments_3
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/kab/help.jar
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/kab/help.key_
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/kab/help.tree
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/kk-xhp.done
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/kk.done
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/kk/help.db_
@@ -1390,6 +1401,7 @@ ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_is.
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_it.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_ja.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_ka.properties
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_kab.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_kk.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_km.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_kmr_Latn.properties
@@ -1505,6 +1517,7 @@ ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDial
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_it.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_ja.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_ka.properties
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_kab.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_kk.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_km.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_kmr_Latn.properties
@@ -1637,6 +1650,7 @@ ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/description-is.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/description-it.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/description-ja.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/description-ka.txt
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/description-kab.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/description-kk.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/description-km.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/description-kmr-Latn.txt
@@ -2192,6 +2206,16 @@ ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/ka/help.idxl/seg
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/ka/help.jar
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/ka/help.key_
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/ka/help.tree
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/kab-xhp.done
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/kab.done
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/kab/help.db_
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/kab/help.ht_
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/kab/help.idxl/_0.cfs
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/kab/help.idxl/segments.gen
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/kab/help.idxl/segments_3
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/kab/help.jar
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/kab/help.key_
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/kab/help.tree
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/kk-xhp.done
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/kk.done
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/kk/help.db_
