@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.58 2018/06/25 21:51:37 wiz Exp $
+$NetBSD: distinfo,v 1.58.2.1 2018/08/18 10:21:45 bsiegert Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -216,6 +216,7 @@ SHA1 (patch-download.lst) = cc6e6ad0599751b9f3c2c1331f62cbf1ed6e39b8
 SHA1 (patch-external_harfbuzz_UnpackedTarball__harfbuzz.mk) = 60e2ef2081b59b23bd5cc7a7262880513ac03eee
 SHA1 (patch-external_mariadb-connector-c_UnpackedTarball__mariadb-connector-c.mk) = ed0c6861fd9a61eeac05e235dd505b6bed166a3a
 SHA1 (patch-external_mariadb-connector-c_netbsd.patch) = e20e0cc58153b865551a8dd2819fb141f20fcb8d
+SHA1 (patch-external_mysql-connector-cpp_config.h) = 3c577315fdd6fc3774f7c193696a4d2335d3d038
 SHA1 (patch-external_postgresql_ExternalProject__postgresql.mk) = 7c94155221025fe3c89217341d81e279943078ce
 SHA1 (patch-external_postgresql_UnpackedTarball__postgresql.mk) = d0b94e20d9e1aa89adac0f4a91c7b684850c78bc
 SHA1 (patch-external_postgresql_postgresql-9.2.1-openssl-1.1.patch) = de2b5d8e657e9721867f9c72a402cc30fd093218
