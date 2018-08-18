@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.14 2017/05/06 13:48:39 tsutsui Exp $
+# $NetBSD: options.mk,v 1.15 2018/08/18 01:32:23 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mlterm
-PKG_SUPPORTED_OPTIONS=	cairo canna fribidi gdk_pixbuf2 ibus libind m17nlib mlterm-fb otl scim skk uim wnn4 xft2
+PKG_SUPPORTED_OPTIONS=	cairo canna fcitx fribidi gdk_pixbuf2 ibus libind m17nlib mlterm-fb otl scim skk uim wnn4 xft2
 PKG_SUGGESTED_OPTIONS=	cairo fribidi gdk_pixbuf2 m17nlib otl xft2
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux"
 PKG_SUGGESTED_OPTIONS+=	mlterm-fb
@@ -9,7 +9,7 @@ PKG_SUGGESTED_OPTIONS+=	mlterm-fb
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		bidi cairo canna fb ibus ind m17nlib otl scim skk uim wnn xft2
+PLIST_VARS+=		bidi cairo canna fb fcitx ibus ind m17nlib otl scim skk uim wnn xft2
 
 .if !empty(PKG_OPTIONS:Mmlterm-fb)
 CONFIGURE_ARGS+=	--with-gui=xlib,fb
@@ -43,6 +43,14 @@ CONFIGURE_ARGS+=	--disable-fribidi
 .if !empty(PKG_OPTIONS:Mgdk_pixbuf2)
 CONFIGURE_ARGS+=	--with-imagelib=gdk-pixbuf
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mfcitx)
+.include "../../inputmethod/fcitx/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-fcitx
+PLIST.fcitx=		yes
+.else
+CONFIGURE_ARGS+=	--disable-fcitx
 .endif
 
 .if !empty(PKG_OPTIONS:Mibus)
