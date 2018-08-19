@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3677 2018/08/19 18:12:30 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3678 2018/08/19 18:13:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5226,3 +5226,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/jq to 1.5nb5 [leot 2018-08-19]
 	Updated net/filezilla to 3.35.2 [wiz 2018-08-19]
 	Updated devel/libuv to 1.23.0 [wiz 2018-08-19]
+	Updated security/py-certifi to 2018.8.13 [wiz 2018-08-19]
