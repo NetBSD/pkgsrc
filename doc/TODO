@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18519 2018/08/19 18:13:58 wiz Exp $
+$NetBSD: TODO,v 1.18520 2018/08/19 18:32:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -658,7 +658,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gcloud-golang-metadata-0.12.0
 	o gcombust-0.1.55
 	o gcompris-15.02
-	o gdbus-codegen-2.56.2
 	o gdeskcal-1.01
 	o gdl-3.16.0
 	o gdm-2.32.2 [GNOME 2.32]
@@ -682,8 +681,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glade3-3.18.3
 	o glade3-3.8.5 [GNOME 2.34]
 	o gle-4.2.5 [wip]
-	o glib2-2.56.2
-	o glib2-tools-2.56.2
 	o gliv-1.9.7
 	o glom-1.14.2 [GNOME 2.26]
 	o glx-utils-8.3.0
