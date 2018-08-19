@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3669 2018/08/19 11:24:21 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3670 2018/08/19 13:56:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5218,3 +5218,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-channels to 2.1.3 [adam 2018-08-19]
 	Updated devel/py-aiofiles to 0.4.0 [adam 2018-08-19]
 	Updated graphics/py-seqdiag to 0.9.6 [adam 2018-08-19]
+	Updated lang/php71 to 7.1.21 [taca 2018-08-19]
