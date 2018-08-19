@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18518 2018/08/19 18:12:30 wiz Exp $
+$NetBSD: TODO,v 1.18519 2018/08/19 18:13:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1215,7 +1215,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-Scientific-doc-2.5.5
 	o py-augeas-1.0.3
 	o py-cassa-1.11.0
-	o py-certifi-2018.8.13
 	o py-cssselect2-0.2.1
 	o py-django2-2.0.8
 	o py-doctor-15.1.0
