@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3673 2018/08/19 17:31:51 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3674 2018/08/19 18:03:55 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5222,3 +5222,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/php72 to 7.2.9 [taca 2018-08-19]
 	Updated fonts/harfbuzz to 1.8.8 [wiz 2018-08-19]
 	Updated audio/musicpd to 0.20.21 [wiz 2018-08-19]
+	Updated textproc/latex2html to 2016nb1 [dholland 2018-08-19]
