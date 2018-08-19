@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2018/06/18 10:54:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2018/08/19 08:51:45 adam Exp $
 bin/cherryd-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -97,9 +97,6 @@ ${PYSITELIB}/cherrypy/lib/httputil.pyo
 ${PYSITELIB}/cherrypy/lib/jsontools.py
 ${PYSITELIB}/cherrypy/lib/jsontools.pyc
 ${PYSITELIB}/cherrypy/lib/jsontools.pyo
-${PYSITELIB}/cherrypy/lib/lockfile.py
-${PYSITELIB}/cherrypy/lib/lockfile.pyc
-${PYSITELIB}/cherrypy/lib/lockfile.pyo
 ${PYSITELIB}/cherrypy/lib/locking.py
 ${PYSITELIB}/cherrypy/lib/locking.pyc
 ${PYSITELIB}/cherrypy/lib/locking.pyo
