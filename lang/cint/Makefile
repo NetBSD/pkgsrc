@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.33 2016/12/19 13:34:53 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2018/08/19 20:16:40 wiz Exp $
 
 DISTNAME=		cint-5.16.19-source
 PKGNAME=		${DISTNAME:S/-source//}
 CATEGORIES=		lang
 MASTER_SITES=		https://root.cern.ch/download/
 
-MAINTAINER=		drochner@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.hanno.jp/gotom/Cint.html
 COMMENT=		C/C++ interpreter
 LICENSE=		mit

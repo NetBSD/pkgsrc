@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.202 2018/07/20 03:33:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.203 2018/08/19 20:16:42 wiz Exp $
 
 DISTNAME=		gnome-panel-2.32.1
 PKGREVISION=		62
@@ -6,7 +6,7 @@ CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-panel/2.32/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		drochner@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.gnome.org/
 COMMENT=		GNOME2 panel application
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.41 2018/02/19 17:59:23 mrg Exp $
+# $NetBSD: Makefile,v 1.42 2018/08/19 20:16:39 wiz Exp $
 
 DISTNAME=	libusb-0.1.12
 PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libusb/}
 
-MAINTAINER=	drochner@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libusb.sourceforge.net/
 COMMENT=	USB access library (version 0)
 LICENSE=	gnu-lgpl-v2.1

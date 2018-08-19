@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2017/07/30 22:47:52 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2018/08/19 20:16:40 wiz Exp $
 
 DISTNAME=	gnome-devtools-2.26.1.99
 CATEGORIES=	meta-pkgs devel gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	drochner@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Meta-package for utilities used for developing GNOME applications
 
