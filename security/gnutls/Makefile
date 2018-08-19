@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.185 2018/08/19 06:28:39 wiz Exp $
+# $NetBSD: Makefile,v 1.186 2018/08/19 09:16:01 wiz Exp $
 
 DISTNAME=	gnutls-3.6.3
 CATEGORIES=	security devel
@@ -20,7 +20,6 @@ CONFIGURE_ARGS+=		--disable-openssl-compatibility
 CONFIGURE_ARGS+=		--disable-guile
 CONFIGURE_ARGS+=		--disable-libdane
 CONFIGURE_ARGS+=		--without-tpm
-CONFIGURE_ARGS+=		--disable-destructive-tests
 CONFIGURE_ARGS+=		--disable-valgrind-tests
 CONFIGURE_ARGS+=		--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
 CONFIGURE_ARGS+=		--enable-local-libopts
