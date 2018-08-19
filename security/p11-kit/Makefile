@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2018/07/13 11:21:29 prlw1 Exp $
+# $NetBSD: Makefile,v 1.10 2018/08/19 05:00:41 wiz Exp $
 
-DISTNAME=	p11-kit-0.23.12
-PKGREVISION=	1
+DISTNAME=	p11-kit-0.23.13
 CATEGORIES=	security
 #MASTER_SITES=	http://p11-glue.freedesktop.org/releases/
 MASTER_SITES+=	${MASTER_SITE_GITHUB:=p11-glue/}
@@ -20,6 +19,8 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c99
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
+
+TEST_TARGET=	check
 
 # dirfd(3)
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
