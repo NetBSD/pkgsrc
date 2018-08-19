@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.8 2015/01/20 10:52:50 obache Exp $
-bin/seqdiag
+@comment $NetBSD: PLIST,v 1.9 2018/08/19 11:23:51 adam Exp $
+bin/seqdiag-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -46,9 +46,6 @@ ${PYSITELIB}/seqdiag/tests/diagrams/separators_in_subedge.diag
 ${PYSITELIB}/seqdiag/tests/test_generate_diagram.py
 ${PYSITELIB}/seqdiag/tests/test_generate_diagram.pyc
 ${PYSITELIB}/seqdiag/tests/test_generate_diagram.pyo
-${PYSITELIB}/seqdiag/tests/test_pep8.py
-${PYSITELIB}/seqdiag/tests/test_pep8.pyc
-${PYSITELIB}/seqdiag/tests/test_pep8.pyo
 ${PYSITELIB}/seqdiag/tests/test_rst_directives.py
 ${PYSITELIB}/seqdiag/tests/test_rst_directives.pyc
 ${PYSITELIB}/seqdiag/tests/test_rst_directives.pyo
@@ -67,4 +64,4 @@ ${PYSITELIB}/seqdiag/utils/rst/nodes.pyo
 ${PYSITELIB}/seqdiag_sphinxhelper.py
 ${PYSITELIB}/seqdiag_sphinxhelper.pyc
 ${PYSITELIB}/seqdiag_sphinxhelper.pyo
-man/man1/seqdiag.1
+man/man1/seqdiag-${PYVERSSUFFIX}.1
