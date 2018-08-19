@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18516 2018/08/19 18:04:30 dholland Exp $
+$NetBSD: TODO,v 1.18517 2018/08/19 18:09:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -617,7 +617,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fetchyahoo-2.14.0
 	o file-5.33
 	o filerunner-14.06.18.10
-	o filezilla-3.35.2
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o flashplayer-0.4.13
@@ -1168,7 +1167,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o php-tiki6-6.14
 	o php-tt-rss-1.15.3
 	o php-tt-rss-fever-plugin-1.4.7
-	o php72-7.2.9
 	o phpmyadmin-4.8
 	o phraseanet-3.8.6
 	o phraseanet-indexer-3.8.6
