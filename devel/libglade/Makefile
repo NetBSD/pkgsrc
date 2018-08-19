@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2018/04/16 14:33:47 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.99 2018/08/19 20:16:39 wiz Exp $
 
 DISTNAME=		libglade-2.6.4
 PKGREVISION=		27
@@ -7,7 +6,7 @@ CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libglade/2.6/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		drochner@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.jamesh.id.au/software/libglade/
 COMMENT=		Runtime interpreter for GLADE GUI files
 LICENSE=		gnu-lgpl-v2
