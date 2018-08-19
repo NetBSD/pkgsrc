@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.282 2018/01/24 13:30:04 leot Exp $
+# $NetBSD: replace.mk,v 1.283 2018/08/19 09:37:12 adam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1276,7 +1276,7 @@ TOOLS_PATH.makedepend=	${X11BASE}/bin/makedepend
 #####
 .    if defined(_TOOLS_DEPMETHOD.${_t_}) && defined(TOOLS_DEPENDS.${_t_})
 .      for _dep_ in ${TOOLS_DEPENDS.${_t_}}
-_dep_test := ${_dep_:C/\:.*$//}
+_dep_test:= ${_dep_:C/\:.*$//}
 .        if empty(${_TOOLS_DEPMETHOD.${_t_}}:C/\:.*$//:M${_dep_test})
 ${_TOOLS_DEPMETHOD.${_t_}}+=	${_dep_}
 .        endif
