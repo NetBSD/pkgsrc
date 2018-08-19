@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2018/02/27 23:56:09 khorben Exp $
-#
+# $NetBSD: Makefile,v 1.20 2018/08/19 20:16:40 wiz Exp $
 
 DISTNAME=	s10sh-0.2.0
 PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.kyuzz.org/antirez/s10sh-src/
 
-MAINTAINER=	drochner@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://www.kyuzz.org/antirez/s10sh/
 COMMENT=	USB/serial userspace driver for Canon PowerShot cameras
 
