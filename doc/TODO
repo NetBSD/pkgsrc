@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18515 2018/08/19 17:31:51 wiz Exp $
+$NetBSD: TODO,v 1.18516 2018/08/19 18:04:30 dholland Exp $
 
 Suggested new packages
 ======================
@@ -936,7 +936,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kwindowsystem-5.45.0
 	o kxmlgui-5.45.0
 	o labelnation-1.218
-	o latex2html-2015
 	o lbdb-0.40
 	o lcc-4.2
 	o ldapsdk-6.0.7
