@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2018/06/25 08:22:01 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2018/08/19 20:16:41 wiz Exp $
 
 DISTNAME=	pam-pwauth_suid-1.2
 PKGREVISION=	1
 CATEGORIES=	security
 DISTFILES=	# empty
 
-MAINTAINER=	drochner@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	PAM authentication module for unprivileged users
 
 WRKSRC=		${WRKDIR}

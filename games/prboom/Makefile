@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.37 2018/07/04 13:40:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.38 2018/08/19 20:16:39 wiz Exp $
 
 DISTNAME=	prboom-2.5.0
 PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=prboom/}
 
-MAINTAINER=	drochner@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://prboom.sourceforge.net/
 COMMENT=	Multiplayer-capable and modified version of DOOM
 
