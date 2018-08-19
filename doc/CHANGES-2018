@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3663 2018/08/19 08:21:24 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3664 2018/08/19 08:47:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5205,3 +5205,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-test to 3.7.2 [adam 2018-08-19]
 	Updated devel/py-more-itertools to 4.3.0 [adam 2018-08-19]
 	Updated math/py-roman to 3.0 [adam 2018-08-19]
+	Updated databases/redis to 4.0.11 [adam 2018-08-19]
+	Updated security/sudo to 1.8.24 [adam 2018-08-19]
