@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2018/07/25 12:15:59 adam Exp $
+# $NetBSD: Makefile,v 1.131 2018/08/19 14:37:17 nia Exp $
 
 DISTNAME=	pulseaudio-12.2
 CATEGORIES=	audio
@@ -68,6 +68,9 @@ PLIST_VARS+=		alsa bonjour coreaudio evdev oss sun
 .if ${OPSYS} == "Linux"
 .  if exists(/usr/include/linux/input.h)
 PLIST.evdev=		yes
+.  endif
+.  if exists(/usr/include/linux/soundcard.h)
+PLIST.oss=		yes
 .  endif
 PLIST.alsa=		yes
 .include "../../audio/alsa-lib/buildlink3.mk"
