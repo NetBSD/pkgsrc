@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3659 2018/08/18 21:19:09 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3660 2018/08/19 05:00:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5198,3 +5198,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-dogpile-cache to 0.6.7 [adam 2018-08-18]
 	Updated www/py-test-django to 3.4.1 [adam 2018-08-18]
 	Updated textproc/py-sphinxcontrib-websupport to 1.1.0 [adam 2018-08-18]
+	Updated security/p11-kit to 0.23.13 [wiz 2018-08-19]
