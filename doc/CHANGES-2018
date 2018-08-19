@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3671 2018/08/19 13:57:25 taca Exp $
+$NetBSD: CHANGES-2018,v 1.3672 2018/08/19 17:25:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5220,3 +5220,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/py-seqdiag to 0.9.6 [adam 2018-08-19]
 	Updated lang/php71 to 7.1.21 [taca 2018-08-19]
 	Updated lang/php72 to 7.2.9 [taca 2018-08-19]
+	Updated fonts/harfbuzz to 1.8.8 [wiz 2018-08-19]
