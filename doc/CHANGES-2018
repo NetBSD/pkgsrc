@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3674 2018/08/19 18:03:55 dholland Exp $
+$NetBSD: CHANGES-2018,v 1.3675 2018/08/19 18:08:39 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5223,3 +5223,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated fonts/harfbuzz to 1.8.8 [wiz 2018-08-19]
 	Updated audio/musicpd to 0.20.21 [wiz 2018-08-19]
 	Updated textproc/latex2html to 2016nb1 [dholland 2018-08-19]
+	Updated devel/jq to 1.5nb5 [leot 2018-08-19]
