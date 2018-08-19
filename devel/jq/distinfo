@@ -1,9 +1,14 @@
-$NetBSD: distinfo,v 1.9 2018/05/30 16:03:48 ginsbach Exp $
+$NetBSD: distinfo,v 1.10 2018/08/19 18:08:05 leot Exp $
 
 SHA1 (jq-1.5.tar.gz) = 664638b560d9e734178e8cafb21d98817af5b5f3
 RMD160 (jq-1.5.tar.gz) = 33ac77ac93e0539f6d66d29cd717013cdab8cf61
 SHA512 (jq-1.5.tar.gz) = 3f9049321e8430b04dbccf81d7f2ab691b89383e91526eaf585bbeeb67698dea73a36b3aa179f6a95ef97cd73a8a9b6dc53cb1a5b0398b6422c11289b705de7b
 Size (jq-1.5.tar.gz) = 1118086 bytes
 SHA1 (patch-Makefile.in) = 446be0fa3517fb6fc1e2f5761d1f8fb28339c79c
+SHA1 (patch-builtin.c) = ab8572304d39680b19337aec525beaa88e6506da
+SHA1 (patch-compile.c) = a9d2f8eadaddcd6bd3e467740f6826073b40720e
+SHA1 (patch-configure.ac) = 5ac2b2c744f554a716189239446a5c5a13c58bea
+SHA1 (patch-inject__errors.c) = 863086a96be3b81011a141bdf293d3ef5693ef10
 SHA1 (patch-src_jv__parse.c) = efca86e70daf27291a01bf538487b745b7bd600c
 SHA1 (patch-src_jv__print.c) = 4d53dc1a1f0bb1cc827dd1adb62ecef2b7393970
+SHA1 (patch-util.c) = c6b9062312206267b0e83bc7284646f64e133f58
