@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2018/07/06 10:33:16 adam Exp $
+# $NetBSD: Makefile,v 1.23 2018/08/19 09:11:32 adam Exp $
 
-DISTNAME=	psutil-5.4.6
+DISTNAME=	psutil-5.4.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/psutil/}
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 .include "../../lang/python/pyversion.mk"
 
-.if "${PYPKGPREFIX}" == "py27"
+.if "${_PYTHON_VERSION}" == "27"
 TEST_DEPENDS+=	${PYPKGPREFIX}-enum34-[0-9]*:../../devel/py-enum34
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipaddress-[0-9]*:../../net/py-ipaddress
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
