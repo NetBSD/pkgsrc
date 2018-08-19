@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/07/09 07:51:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/08/19 09:44:28 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -122,8 +122,8 @@ ${PYSITELIB}/gevent/_util.py
 ${PYSITELIB}/gevent/_util.pyc
 ${PYSITELIB}/gevent/_util.pyo
 ${PYSITELIB}/gevent/_util_py2.py
-${PLIST.py2x}${PYSITELIB}/gevent/_util_py2.pyc
-${PLIST.py2x}${PYSITELIB}/gevent/_util_py2.pyo
+${PYSITELIB}/gevent/_util_py2.pyc
+${PYSITELIB}/gevent/_util_py2.pyo
 ${PYSITELIB}/gevent/_waiter.c
 ${PYSITELIB}/gevent/_waiter.py
 ${PYSITELIB}/gevent/_waiter.pyc
