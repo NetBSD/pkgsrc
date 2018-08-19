@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18512 2018/08/18 15:56:59 adam Exp $
+$NetBSD: TODO,v 1.18513 2018/08/19 09:21:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -341,7 +341,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaDemos-8.3.0
-	o MesaLib-18.1.5
+	o MesaLib-18.1.6
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o PAM-0.99.7.1
@@ -606,7 +606,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ex-20050325
 	o exaile-3.4.4
 	o exmh-2.8.0
-	o extra-cmake-modules-5.48.0
+	o extra-cmake-modules-5.49.0
 	o faces-1.7.7
 	o facter-2.4.5
 	o fakeroot-1.6.5
@@ -617,6 +617,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fetchyahoo-2.14.0
 	o file-5.33
 	o filerunner-14.06.18.10
+	o filezilla-3.35.2
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o flashplayer-0.4.13
@@ -653,10 +654,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gated-3.6
 	o gbrainy-2.27
 	o gcal-4
+	o gcc8-8.2
 	o gcin-1.5.5
 	o gcloud-golang-metadata-0.12.0
 	o gcombust-0.1.55
 	o gcompris-15.02
+	o gdbus-codegen-2.56.2
 	o gdeskcal-1.01
 	o gdl-3.16.0
 	o gdm-2.32.2 [GNOME 2.32]
@@ -680,6 +683,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glade3-3.18.3
 	o glade3-3.8.5 [GNOME 2.34]
 	o gle-4.2.5 [wip]
+	o glib2-2.56.2
+	o glib2-tools-2.56.2
 	o gliv-1.9.7
 	o glom-1.14.2 [GNOME 2.26]
 	o glx-utils-8.3.0
@@ -768,6 +773,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o handbrake-1.1.0
 	o hanzim-3.5
+	o harfbuzz-1.8.8
 	o harminv-1.4
 	o haskell-mode-13.20
 	o hdevtools-0.1.3.0
@@ -975,11 +981,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libprelude-3.1.0
 	o libpreludedb-3.1.0
 	o libquantum-1.1.0 [pkg/43728, development release]
-	o librsvg-2.42.5 [needs rust+cargo]
+	o librsvg-2.42.6 [needs rust+cargo]
 	o libstree-0.4.2
 	o libtcl-nothread-8.5.1
 	o libtecla-1.6.3
 	o libtrace-3.0.22
+	o libuv-1.23.0
 	o libv4l-0.8.5
 	o libvirt-2.3
 	o libxdg-basedir-1.2.0
@@ -1071,6 +1078,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o munin-node-1.4.6
 	o munin-server-1.4.6
 	o muse-0.9.2
+	o musicpd-0.20.21
 	o myodbc-5.3.4
 	o mysql-server-8.0
 	o mysql-workbench-6.3
@@ -1119,7 +1127,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o oroborus-2.0.18
 	o ortp-0.25.0
 	o oto-0.5
-	o oxygen-icons-5.48.0
+	o oxygen-icons-5.49.0
 	o p0f-3.08b
 	o p5-Apache-Gallery-1.0.2
 	o p5-DBD-DB2-1.85
@@ -1163,6 +1171,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o php-tiki6-6.14
 	o php-tt-rss-1.15.3
 	o php-tt-rss-fever-plugin-1.4.7
+	o php72-7.2.9
 	o phpmyadmin-4.8
 	o phraseanet-3.8.6
 	o phraseanet-indexer-3.8.6
@@ -1212,6 +1221,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-Scientific-doc-2.5.5
 	o py-augeas-1.0.3
 	o py-cassa-1.11.0
+	o py-certifi-2018.8.13
 	o py-cssselect2-0.2.1
 	o py-django2-2.0.8
 	o py-doctor-15.1.0
@@ -1225,6 +1235,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-newt-0.52.20
 	o py-omniORBpy-3.7
 	o py-pendrell-0.3.7
+	o py-postgresql-5.0.6
 	o py-ptt-1.10.2
 	o py-pycountry-1.20
 	o py-simpletal-5.1
@@ -1451,6 +1462,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o warzone2100-2.3.8
 	o wcalc-2.4
 	o webalizer-2.23.05
+	o webkit-gtk-2.20.5
 	o websvn-2.3.3
 	o weewm-0.01
 	o wgetpaste-2.26
