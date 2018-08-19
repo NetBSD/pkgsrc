@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.184 2018/08/16 11:05:47 wiz Exp $
+# $NetBSD: Makefile,v 1.185 2018/08/19 06:28:39 wiz Exp $
 
 DISTNAME=	gnutls-3.6.3
 CATEGORIES=	security devel
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2.1
 USE_LANGUAGES=			c c++
 USE_LIBTOOL=			yes
 USE_PKGLOCALEDIR=		yes
-USE_TOOLS+=			gmake gsed perl pkg-config
+USE_TOOLS+=			gmake gsed perl pkg-config bash:build
 GNU_CONFIGURE=			yes
 # this library duplicates (and conflicts with) openssl
 CONFIGURE_ARGS+=		--disable-openssl-compatibility
@@ -38,16 +38,18 @@ TEST_TARGET=		check
 
 INFO_FILES=		yes
 
+REPLACE_BASH+=		tests/cert-tests/certtool
 REPLACE_BASH+=		tests/danetool.sh
+REPLACE_BASH+=		tests/fastopen.sh
 REPLACE_BASH+=		tests/gnutls-cli-debug.sh
 REPLACE_BASH+=		tests/ocsp-tests/ocsp-must-staple-connection
 REPLACE_BASH+=		tests/ocsp-tests/ocsp-tls-connection
-REPLACE_BASH+=		tests/suite/testcompat-main-polarssl
-REPLACE_BASH+=		tests/suite/testcompat-main-openssl
-REPLACE_BASH+=		tests/fastopen.sh
 REPLACE_BASH+=		tests/starttls.sh
+REPLACE_BASH+=		tests/suite/cbc-record-check.sh
+REPLACE_BASH+=		tests/suite/testcompat-main-openssl
+REPLACE_BASH+=		tests/suite/testcompat-main-polarssl
 
-REPLACE_PERL+=	doc/scripts/gdoc doc/scripts/sort2.pl
+REPLACE_PERL+=		doc/scripts/gdoc doc/scripts/sort2.pl
 
 PKGCONFIG_OVERRIDE=	lib/gnutls.pc.in
 PKGCONFIG_OVERRIDE+=	libdane/gnutls-dane.pc.in
