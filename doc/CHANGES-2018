@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3664 2018/08/19 08:47:08 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3665 2018/08/19 08:55:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5207,3 +5207,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/py-roman to 3.0 [adam 2018-08-19]
 	Updated databases/redis to 4.0.11 [adam 2018-08-19]
 	Updated security/sudo to 1.8.24 [adam 2018-08-19]
+	Updated www/py-cherrypy to 17.3.0 [adam 2018-08-19]
+	Updated print/py-reportlab to 3.5.5 [adam 2018-08-19]
