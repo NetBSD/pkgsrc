@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/08/19 09:40:37 adam Exp $
+
+SHA1 (objgraph-3.4.0.tar.gz) = 95e59db14328de14ca9cce82e1f634dcbd7df0ad
+RMD160 (objgraph-3.4.0.tar.gz) = 559165868cfc494bc904518a9cefcb177d526c18
+SHA512 (objgraph-3.4.0.tar.gz) = f1e2b9f22dfdce56988bd40aaa865572c42688e73800bb7c188b903c67ef3726c03ba058ed30d40792133a2e2fe74d5ecda91be3de8cf7b80188ac0b9f6ac393
+Size (objgraph-3.4.0.tar.gz) = 634554 bytes
