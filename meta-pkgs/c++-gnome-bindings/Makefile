@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2017/07/30 22:47:52 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2018/08/19 20:16:40 wiz Exp $
 
 DISTNAME=	c++-gnome-bindings-2.26.2
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
-MAINTAINER=	drochner@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Meta-package for C++ bindings for the GNOME desktop
 

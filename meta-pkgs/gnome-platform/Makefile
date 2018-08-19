@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2017/07/30 22:47:52 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2018/08/19 20:16:40 wiz Exp $
 
 DISTNAME=	gnome-platform-2.32.1
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
-MAINTAINER=	drochner@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Meta-package for core platform libraries of the GNOME desktop
 

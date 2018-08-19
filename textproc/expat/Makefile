@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2018/02/18 05:09:21 rillig Exp $
+# $NetBSD: Makefile,v 1.37 2018/08/19 20:16:42 wiz Exp $
 
 DISTNAME=	expat-2.2.4
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=expat/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	drochner@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://expat.sourceforge.net/
 COMMENT=	XML parser library written in C
 LICENSE=	mit

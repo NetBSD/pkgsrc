@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2017/07/30 22:47:52 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2018/08/19 20:16:40 wiz Exp $
 
 DISTNAME=	p5-gnome-bindings-2.30.2
 PKGREVISION=	6
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
-MAINTAINER=	drochner@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Meta-package for Perl bindings for the GNOME desktop
 
