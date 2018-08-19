@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q2,v 1.1.2.10 2018/08/18 13:18:25 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q2,v 1.1.2.11 2018/08/19 20:13:03 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q2 branch:
 
@@ -90,4 +90,7 @@ pkgtools/pkgin: bugfix
 Pullup ticket #5810 - requested by maya
 net/bind99: security fix, NetBSD build fix
 net/bind910: security fix, NetBSD build fix
+
+Pullup ticket #5812 - requested by maya
+chat/line-purple: mark as broken
 
