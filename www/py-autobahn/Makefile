@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2018/07/27 08:46:57 jperkin Exp $
+# $NetBSD: Makefile,v 1.14 2018/08/19 10:48:35 adam Exp $
 
-DISTNAME=	autobahn-18.6.1
+DISTNAME=	autobahn-18.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/autobahn/}
@@ -11,10 +11,11 @@ COMMENT=	WebSocket client and server library, WAMP real-time framework
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
-DEPENDS+=	${PYPKGPREFIX}-txaio>=2.7.0:../../devel/py-txaio
-TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-unittest2-[0-9]*:../../devel/py-unittest2
+DEPENDS+=	${PYPKGPREFIX}-txaio>=18.7.1:../../devel/py-txaio
+TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=1.3.0:../../devel/py-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=2.8.6:../../devel/py-test
+
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
