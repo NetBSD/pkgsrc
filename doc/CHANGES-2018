@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3661 2018/08/19 07:58:39 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3662 2018/08/19 08:12:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5201,3 +5201,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/p11-kit to 0.23.13 [wiz 2018-08-19]
 	Updated devel/py-modulegraph to 0.17 [adam 2018-08-19]
 	Updated textproc/py-validators to 0.12.2 [adam 2018-08-19]
+	Updated devel/py-setuptools to 40.1.0 [adam 2018-08-19]
+	Updated devel/py-test to 3.7.2 [adam 2018-08-19]
