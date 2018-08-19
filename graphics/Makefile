@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.801 2018/07/31 11:03:57 prlw1 Exp $
+# $NetBSD: Makefile,v 1.802 2018/08/19 09:40:37 adam Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -465,6 +465,7 @@ SUBDIR+=	py-matplotlib-gtk2
 SUBDIR+=	py-matplotlib-tk
 SUBDIR+=	py-mcomix
 SUBDIR+=	py-nwdiag
+SUBDIR+=	py-objgraph
 SUBDIR+=	py-openexr
 SUBDIR+=	py-piddle
 SUBDIR+=	py-piexif
