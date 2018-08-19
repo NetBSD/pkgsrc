@@ -1,11 +1,11 @@
-$NetBSD: patch-cl,v 1.14 2018/05/21 08:39:38 jperkin Exp $
+$NetBSD: patch-cl,v 1.15 2018/08/19 18:32:27 wiz Exp $
 
 - Leave gdbus-2.0/codegen sudirectory to devel/gdbus-codegen package.
 - Don't compile tests as they include gdbus-codegen tests.
 - Don't install completion data.
 - Re-enable gdesktopappinfo on Darwin.
 
---- gio/Makefile.am.orig	2018-03-12 16:23:37.000000000 +0000
+--- gio/Makefile.am.orig	2018-08-17 00:03:20.000000000 +0000
 +++ gio/Makefile.am
 @@ -1,6 +1,6 @@
  include $(top_srcdir)/glib.mk
@@ -52,11 +52,11 @@ $NetBSD: patch-cl,v 1.14 2018/05/21 08:39:38 jperkin Exp $
  	gnextstepsettingsbackend.c \
 -	gosxcontenttype.c \
 -	gosxappinfo.c \
--	gosxappinfo.h \
+-	gosxappinfo.h
+ if MAC_OS_X_9
+ libgio_objc_2_0_la_SOURCES += \
  	gcocoanotificationbackend.c
- 
- noinst_LTLIBRARIES += libgio-objc-2.0.la
-@@ -890,7 +883,6 @@ gdbus_LDADD = libgio-2.0.la 				\
+@@ -893,7 +886,6 @@ gdbus_LDADD = libgio-2.0.la 				\
  	$(NULL)
  
  if OS_UNIX
@@ -64,7 +64,7 @@ $NetBSD: patch-cl,v 1.14 2018/05/21 08:39:38 jperkin Exp $
  # ------------------------------------------------------------------------
  # gapplication(1) tool
  bin_PROGRAMS += gapplication
-@@ -901,7 +893,6 @@ gapplication_LDADD = libgio-2.0.la 			\
+@@ -904,7 +896,6 @@ gapplication_LDADD = libgio-2.0.la 			\
  	$(top_builddir)/glib/libglib-2.0.la		\
  	$(NULL)
  endif

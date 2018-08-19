@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.234 2018/08/01 17:43:25 jperkin Exp $
+$NetBSD: distinfo,v 1.235 2018/08/19 18:32:27 wiz Exp $
 
-SHA1 (glib-2.56.1.tar.xz) = 4db098c15b9d57c37bb504a6f58ebe717994e6f2
-RMD160 (glib-2.56.1.tar.xz) = da4e45bf52d28b610a71bed8b4331bfb0b5c8d56
-SHA512 (glib-2.56.1.tar.xz) = 7e96cc23f3fa42a41b1974ae8fa2a7b123449643f265763d464620afcb011668e2de013ed2a6e5f13b6bd1bf3ab8eab43c05bf4a8ee0d99b7808767ab4fa69f4
-Size (glib-2.56.1.tar.xz) = 8028716 bytes
+SHA1 (glib-2.56.2.tar.xz) = 8b18a92f81a8d033abfb43a628bae3bbaf71800c
+RMD160 (glib-2.56.2.tar.xz) = 8fe9fd51a84ebe0f61b5cb2ab97325baa51c4eb3
+SHA512 (glib-2.56.2.tar.xz) = 8201ea82d3613d2e879284abe01520b766da30957c5a1a22f3e6019b0cce6bf95d25beae78867b6a133401c4165153c0c92974dd459ab12f9e0e9dd0c95df5d4
+Size (glib-2.56.2.tar.xz) = 8041756 bytes
 SHA1 (patch-Makefile.in) = 4d587eb9ff27ff2b3489c59388319142e2fb6ced
 SHA1 (patch-aa) = 5aac049588b3f2cb63d86259cf9ebeed61081c52
 SHA1 (patch-ab) = 04bde955a2a588011a8c77ada4923d5464a0d544
@@ -15,13 +15,12 @@ SHA1 (patch-aha) = ade66edd87a5e76a1256bd8bcdc9bc3dd614885c
 SHA1 (patch-ak) = a7dd9b100b05424a76476754c2ee9896b5ae6d26
 SHA1 (patch-al) = af8428eeb6ce5e4dd70ddf972693df18d6c26d50
 SHA1 (patch-am) = 99f54927d76580dfeda2a6b1909e1bea5dbdc293
-SHA1 (patch-an) = e8bd585b4865ebac574de895c05531c8ec1773c1
+SHA1 (patch-an) = 47986cfa2374ad4a89887bee5896d477a31f651f
 SHA1 (patch-cb) = 56e2a9b2de04c8e528faf7ce778503fa55dcc3ac
 SHA1 (patch-cd) = a8a90eca84a687400a92b0e26fafe4b9b6014ec3
-SHA1 (patch-cl) = abe77225b2013b40d48a419b58ef4970165d0398
+SHA1 (patch-cl) = 58e5b4a3e8cf0750ceadba30e379954d800f77f7
 SHA1 (patch-cm) = 534af37ae8f2bd667f630142058d4de5ea91be93
 SHA1 (patch-gio_gdbus-2.0_codegen_gdbus-codegen.in) = ccbb10335fb477e347993444d68d5e88d9e93050
-SHA1 (patch-gio_gfile.c) = 70ab8e438358c917958ef81c18f9f1d0c0ce37ff
 SHA1 (patch-gio_giomodule.c) = 08181ad8d46dde1a028faa246a4852e474610eaa
 SHA1 (patch-gio_glocalfileinfo.c) = 8e0b7e9543ce3c702c468f56e7ecf418d70b049f
 SHA1 (patch-gio_gresource-tool.c) = 4eb7c9df25e9ac3e977edf3be8fb977a6fb39182

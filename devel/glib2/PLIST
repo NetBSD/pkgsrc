@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.100 2018/05/21 08:39:38 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.101 2018/08/19 18:32:27 wiz Exp $
 bin/gapplication
 bin/gdbus
 bin/gio
@@ -294,8 +294,8 @@ share/bash-completion/completions/gapplication
 share/bash-completion/completions/gdbus
 share/bash-completion/completions/gresource
 share/bash-completion/completions/gsettings
-share/gdb/auto-load${LOCALBASE}/lib/libglib-2.0.so.0.5600.1-gdb.py
-share/gdb/auto-load${LOCALBASE}/lib/libgobject-2.0.so.0.5600.1-gdb.py
+share/gdb/auto-load${LOCALBASE}/lib/libglib-2.0.so.0.5600.2-gdb.py
+share/gdb/auto-load${LOCALBASE}/lib/libgobject-2.0.so.0.5600.2-gdb.py
 share/gettext/its/gschema.its
 share/gettext/its/gschema.loc
 share/glib-2.0/gdb/glib_gdb.py
