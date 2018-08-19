@@ -1,11 +1,11 @@
-$NetBSD: patch-an,v 1.18 2018/05/21 08:39:38 jperkin Exp $
+$NetBSD: patch-an,v 1.19 2018/08/19 18:32:27 wiz Exp $
 
 - Leave gdbus-2.0/codegen sudirectory to devel/gdbus-codegen package.
 - Don't compile tests as they include gdbus-codegen tests.
 - Don't install completion data.
 - Re-enable gdesktopappinfo on Darwin.
 
---- gio/Makefile.in.orig	2018-04-07 02:37:14.000000000 +0000
+--- gio/Makefile.in.orig	2018-08-17 00:27:41.000000000 +0000
 +++ gio/Makefile.in
 @@ -175,7 +175,7 @@ TESTS = $(am__EXEEXT_2)
  @HAVE_FAM_TRUE@am__append_27 = fam
@@ -24,19 +24,28 @@ $NetBSD: patch-an,v 1.18 2018/05/21 08:39:38 jperkin Exp $
 -@OS_COCOA_FALSE@@OS_UNIX_TRUE@am__append_36 = gdesktopappinfo.c
 +@OS_UNIX_TRUE@am__append_35 = gcontenttype.c
 +@OS_UNIX_TRUE@am__append_36 = gdesktopappinfo.c
- @OS_COCOA_TRUE@am__append_37 = libgio-objc-2.0.la
- @OS_COCOA_TRUE@am__append_38 = libgio-objc-2.0.la
- @HAVE_LIBMOUNT_TRUE@am__append_39 = $(LIBMOUNT_CFLAGS)
-@@ -202,7 +202,7 @@ bin_PROGRAMS = gio-querymodules$(EXEEXT)
+ @MAC_OS_X_9_TRUE@@OS_COCOA_TRUE@am__append_37 = \
+ @MAC_OS_X_9_TRUE@@OS_COCOA_TRUE@	gcocoanotificationbackend.c
+ 
+@@ -205,7 +205,7 @@ bin_PROGRAMS = gio-querymodules$(EXEEXT)
  
  # ------------------------------------------------------------------------
  # gapplication(1) tool
--@OS_COCOA_FALSE@@OS_UNIX_TRUE@am__append_45 = gapplication
-+@OS_UNIX_TRUE@am__append_45 = gapplication
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@am__append_46 = gapplication
++@OS_UNIX_TRUE@am__append_46 = gapplication
  subdir = gio
  ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
  am__aclocal_m4_deps = $(top_srcdir)/m4macros/attributes.m4 \
-@@ -526,11 +526,10 @@ am__objects_5 = libgio_2_0_la-gappinfo.l
+@@ -231,7 +231,7 @@ mkinstalldirs = $(install_sh) -d
+ CONFIG_HEADER = $(top_builddir)/config.h
+ CONFIG_CLEAN_FILES = gnetworking.h gio.rc
+ CONFIG_CLEAN_VPATH_FILES =
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@am__EXEEXT_1 = gapplication$(EXEEXT)
++@OS_UNIX_TRUE@am__EXEEXT_1 = gapplication$(EXEEXT)
+ am__installdirs = "$(DESTDIR)$(bindir)" \
+ 	"$(DESTDIR)$(installed_testdir)" \
+ 	"$(DESTDIR)$(installed_testdir)" "$(DESTDIR)$(libdir)" \
+@@ -535,11 +535,10 @@ am__objects_5 = libgio_2_0_la-gappinfo.l
  	libgio_2_0_la-gliststore.lo $(am__objects_2) $(am__objects_3) \
  	$(am__objects_4) $(am__objects_1)
  @OS_WIN32_TRUE@am__objects_6 = libgio_2_0_la-gwin32appinfo.lo
@@ -50,34 +59,28 @@ $NetBSD: patch-an,v 1.18 2018/05/21 08:39:38 jperkin Exp $
  am__objects_11 = $(am__objects_9) $(am__objects_10)
  am__objects_12 = libgio_2_0_la-xdp-dbus.lo
  am__objects_13 = libgio_2_0_la-gnetworkmonitorportal.lo \
-@@ -594,12 +593,9 @@ libgio_2_0_la_LINK = $(LIBTOOL) $(AM_V_l
+@@ -603,13 +602,10 @@ libgio_2_0_la_LINK = $(LIBTOOL) $(AM_V_l
  	$(CFLAGS) $(libgio_2_0_la_LDFLAGS) $(LDFLAGS) -o $@
  libgio_objc_2_0_la_LIBADD =
  am__libgio_objc_2_0_la_SOURCES_DIST = gnextstepsettingsbackend.c \
 -	gosxcontenttype.c gosxappinfo.c gosxappinfo.h \
  	gcocoanotificationbackend.c
+ @MAC_OS_X_9_TRUE@@OS_COCOA_TRUE@am__objects_23 = libgio_objc_2_0_la-gcocoanotificationbackend.lo
  @OS_COCOA_TRUE@am_libgio_objc_2_0_la_OBJECTS =  \
  @OS_COCOA_TRUE@	libgio_objc_2_0_la-gnextstepsettingsbackend.lo \
 -@OS_COCOA_TRUE@	libgio_objc_2_0_la-gosxcontenttype.lo \
 -@OS_COCOA_TRUE@	libgio_objc_2_0_la-gosxappinfo.lo \
- @OS_COCOA_TRUE@	libgio_objc_2_0_la-gcocoanotificationbackend.lo
+ @OS_COCOA_TRUE@	$(am__objects_23)
  libgio_objc_2_0_la_OBJECTS = $(am_libgio_objc_2_0_la_OBJECTS)
  libgio_objc_2_0_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
-@@ -607,22 +603,20 @@ libgio_objc_2_0_la_LINK = $(LIBTOOL) $(A
- 	$(libgio_objc_2_0_la_CFLAGS) $(CFLAGS) \
+@@ -618,15 +614,15 @@ libgio_objc_2_0_la_LINK = $(LIBTOOL) $(A
  	$(libgio_objc_2_0_la_LDFLAGS) $(LDFLAGS) -o $@
  @OS_COCOA_TRUE@am_libgio_objc_2_0_la_rpath =
--@OS_COCOA_FALSE@@OS_UNIX_TRUE@am__EXEEXT_1 = gapplication$(EXEEXT)
-+@OS_UNIX_TRUE@am__EXEEXT_1 = gapplication$(EXEEXT)
- am__EXEEXT_2 =
- @ENABLE_ALWAYS_BUILD_TESTS_FALSE@am__EXEEXT_3 = $(am__EXEEXT_2)
- @ENABLE_ALWAYS_BUILD_TESTS_TRUE@am__EXEEXT_4 = $(am__EXEEXT_2)
- PROGRAMS = $(bin_PROGRAMS) $(installed_test_PROGRAMS) \
- 	$(noinst_PROGRAMS)
  am__gapplication_SOURCES_DIST = gapplication-tool.c
 -@OS_COCOA_FALSE@@OS_UNIX_TRUE@am_gapplication_OBJECTS =  \
 -@OS_COCOA_FALSE@@OS_UNIX_TRUE@	gapplication-tool.$(OBJEXT)
-+@OS_UNIX_TRUE@am_gapplication_OBJECTS = gapplication-tool.$(OBJEXT)
++@OS_UNIX_TRUE@am_gapplication_OBJECTS =  \
++@OS_UNIX_TRUE@	gapplication-tool.$(OBJEXT)
  gapplication_OBJECTS = $(am_gapplication_OBJECTS)
 -@OS_COCOA_FALSE@@OS_UNIX_TRUE@gapplication_DEPENDENCIES =  \
 -@OS_COCOA_FALSE@@OS_UNIX_TRUE@	libgio-2.0.la \
@@ -85,7 +88,8 @@ $NetBSD: patch-an,v 1.18 2018/05/21 08:39:38 jperkin Exp $
 -@OS_COCOA_FALSE@@OS_UNIX_TRUE@	$(top_builddir)/gmodule/libgmodule-2.0.la \
 -@OS_COCOA_FALSE@@OS_UNIX_TRUE@	$(top_builddir)/glib/libglib-2.0.la \
 -@OS_COCOA_FALSE@@OS_UNIX_TRUE@	$(am__DEPENDENCIES_1)
-+@OS_UNIX_TRUE@gapplication_DEPENDENCIES = libgio-2.0.la \
++@OS_UNIX_TRUE@gapplication_DEPENDENCIES =  \
++@OS_UNIX_TRUE@	libgio-2.0.la \
 +@OS_UNIX_TRUE@	$(top_builddir)/gobject/libgobject-2.0.la \
 +@OS_UNIX_TRUE@	$(top_builddir)/gmodule/libgmodule-2.0.la \
 +@OS_UNIX_TRUE@	$(top_builddir)/glib/libglib-2.0.la \
@@ -93,7 +97,7 @@ $NetBSD: patch-an,v 1.18 2018/05/21 08:39:38 jperkin Exp $
  am_gdbus_OBJECTS = gdbus-tool.$(OBJEXT)
  gdbus_OBJECTS = $(am_gdbus_OBJECTS)
  gdbus_DEPENDENCIES = libgio-2.0.la \
-@@ -945,8 +939,7 @@ am__set_b = \
+@@ -1189,8 +1185,7 @@ am__set_b = \
      *) \
        b='$*';; \
    esac
@@ -103,7 +107,7 @@ $NetBSD: patch-an,v 1.18 2018/05/21 08:39:38 jperkin Exp $
  am__DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/gio.rc.in \
  	$(srcdir)/gnetworking.h.in $(top_srcdir)/depcomp \
  	$(top_srcdir)/glib.mk $(top_srcdir)/test-driver \
-@@ -1050,6 +1043,7 @@ GTKDOC_DEPS_LIBS = @GTKDOC_DEPS_LIBS@
+@@ -1294,6 +1289,7 @@ GTKDOC_DEPS_LIBS = @GTKDOC_DEPS_LIBS@
  GTKDOC_MKPDF = @GTKDOC_MKPDF@
  GTKDOC_REBASE = @GTKDOC_REBASE@
  G_LIBS_EXTRA = @G_LIBS_EXTRA@
@@ -111,7 +115,7 @@ $NetBSD: patch-an,v 1.18 2018/05/21 08:39:38 jperkin Exp $
  G_MODULE_BROKEN_RTLD_GLOBAL = @G_MODULE_BROKEN_RTLD_GLOBAL@
  G_MODULE_HAVE_DLERROR = @G_MODULE_HAVE_DLERROR@
  G_MODULE_IMPL = @G_MODULE_IMPL@
-@@ -1327,8 +1321,8 @@ all_test_ltlibs = $(test_ltlibraries) $(
+@@ -1571,8 +1567,8 @@ all_test_ltlibs = $(test_ltlibraries) $(
  @ENABLE_INSTALLED_TESTS_TRUE@                      $(dist_test_scripts) $(dist_installed_test_scripts)
  
  @ENABLE_INSTALLED_TESTS_TRUE@installed_test_meta_DATA = $(installed_testcases:=.test)
@@ -122,17 +126,18 @@ $NetBSD: patch-an,v 1.18 2018/05/21 08:39:38 jperkin Exp $
  @MS_LIB_AVAILABLE_TRUE@@OS_WIN32_AND_DLL_COMPILATION_TRUE@install_ms_lib_cmd = $(INSTALL) gio-2.0.lib $(DESTDIR)$(libdir)
  @MS_LIB_AVAILABLE_TRUE@@OS_WIN32_AND_DLL_COMPILATION_TRUE@uninstall_ms_lib_cmd = -rm $(DESTDIR)$(libdir)/gio-2.0.lib
  AM_CPPFLAGS = \
-@@ -1793,9 +1787,6 @@ libgio_2_0_la_LDFLAGS = $(GLIB_LINK_FLAG
+@@ -2036,8 +2032,8 @@ libgio_2_0_la_LDFLAGS = $(GLIB_LINK_FLAG
+ @OS_COCOA_TRUE@libgio_objc_2_0_la_CPPFLAGS = $(libgio_2_0_la_CPPFLAGS)
  @OS_COCOA_TRUE@libgio_objc_2_0_la_LDFLAGS = $(libgio_2_0_la_LDFLAGS) -Wl,-framework,Foundation -Wl,-framework,AppKit
- @OS_COCOA_TRUE@libgio_objc_2_0_la_SOURCES = \
- @OS_COCOA_TRUE@	gnextstepsettingsbackend.c \
--@OS_COCOA_TRUE@	gosxcontenttype.c \
--@OS_COCOA_TRUE@	gosxappinfo.c \
--@OS_COCOA_TRUE@	gosxappinfo.h \
- @OS_COCOA_TRUE@	gcocoanotificationbackend.c
- 
+ @OS_COCOA_TRUE@libgio_objc_2_0_la_SOURCES =  \
+-@OS_COCOA_TRUE@	gnextstepsettingsbackend.c gosxcontenttype.c \
+-@OS_COCOA_TRUE@	gosxappinfo.c gosxappinfo.h $(am__append_37)
++@OS_COCOA_TRUE@	gnextstepsettingsbackend.c \
++@OS_COCOA_TRUE@	$(am__append_37)
  EXTRA_libgio_2_0_la_DEPENDENCIES = $(gio_win32_res) $(gio_def) $(platform_deps)
-@@ -1966,12 +1957,12 @@ gdbus_LDADD = libgio-2.0.la 				\
+ gio_headers = \
+ 	gappinfo.h 		\
+@@ -2206,12 +2202,12 @@ gdbus_LDADD = libgio-2.0.la 				\
  	$(top_builddir)/glib/libglib-2.0.la		\
  	$(NULL)
  
@@ -151,16 +156,16 @@ $NetBSD: patch-an,v 1.18 2018/05/21 08:39:38 jperkin Exp $
  
  completiondir = $(datadir)/bash-completion/completions
  completion_DATA = \
-@@ -2637,8 +2628,6 @@ distclean-compile:
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgio_2_0_la-xdp-dbus.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgio_objc_2_0_la-gcocoanotificationbackend.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgio_objc_2_0_la-gnextstepsettingsbackend.Plo@am__quote@
--@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgio_objc_2_0_la-gosxappinfo.Plo@am__quote@
--@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgio_objc_2_0_la-gosxcontenttype.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@gvdb/$(DEPDIR)/gvdb-builder.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@gvdb/$(DEPDIR)/libgio_2_0_la-gvdb-reader.Plo@am__quote@
+@@ -2877,8 +2873,6 @@ distclean-compile:
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgio_2_0_la-xdp-dbus.Plo@am__quote@ # am--include-marker
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgio_objc_2_0_la-gcocoanotificationbackend.Plo@am__quote@ # am--include-marker
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgio_objc_2_0_la-gnextstepsettingsbackend.Plo@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgio_objc_2_0_la-gosxappinfo.Plo@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgio_objc_2_0_la-gosxcontenttype.Plo@am__quote@ # am--include-marker
+ @AMDEP_TRUE@@am__include@ @am__quote@gvdb/$(DEPDIR)/gvdb-builder.Po@am__quote@ # am--include-marker
+ @AMDEP_TRUE@@am__include@ @am__quote@gvdb/$(DEPDIR)/libgio_2_0_la-gvdb-reader.Plo@am__quote@ # am--include-marker
  
-@@ -4213,20 +4202,6 @@ libgio_objc_2_0_la-gnextstepsettingsback
+@@ -4459,20 +4453,6 @@ libgio_objc_2_0_la-gnextstepsettingsback
  @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
  @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgio_objc_2_0_la_CPPFLAGS) $(CPPFLAGS) $(libgio_objc_2_0_la_CFLAGS) $(CFLAGS) -c -o libgio_objc_2_0_la-gnextstepsettingsbackend.lo `test -f 'gnextstepsettingsbackend.c' || echo '$(srcdir)/'`gnextstepsettingsbackend.c
  
