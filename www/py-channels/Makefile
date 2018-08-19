@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2018/06/14 07:57:32 adam Exp $
+# $NetBSD: Makefile,v 1.11 2018/08/19 10:54:36 adam Exp $
 
-DISTNAME=	channels-2.1.2
+DISTNAME=	channels-2.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/channels/}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://github.com/django/channels
 COMMENT=	Brings event-driven capabilities to Django with a channel system
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-asgiref>=2.1:../../www/py-asgiref
-DEPENDS+=	${PYPKGPREFIX}-daphne>=2.0:../../www/py-daphne
+DEPENDS+=	${PYPKGPREFIX}-asgiref>=2.3:../../www/py-asgiref
+DEPENDS+=	${PYPKGPREFIX}-daphne>=2.2:../../www/py-daphne
 DEPENDS+=	${PYPKGPREFIX}-django>=1.11:../../www/py-django
 
 USE_LANGUAGES=	# none
