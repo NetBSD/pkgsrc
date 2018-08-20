@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3685 2018/08/20 02:33:04 wen Exp $
+$NetBSD: CHANGES-2018,v 1.3686 2018/08/20 03:06:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5234,3 +5234,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated fonts/p5-Font-FreeType to 0.12 [wen 2018-08-20]
 	Updated mail/p5-Parse-MIME to 1.004 [wen 2018-08-20]
 	Updated math/p5-Math-Utils to 1.12 [wen 2018-08-20]
+	Added time/p5-MooseX-Types-DateTime-MoreCoercions version 0.15 [wen 2018-08-20]
