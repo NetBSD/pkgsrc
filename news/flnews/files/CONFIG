@@ -1,0 +1,156 @@
+#
+# Config file for pkgsrc
+# ======================
+#
+# This file is intended to customize the program. Any changes made to this file
+# don't create a modified version of the program in terms of the license.
+#
+# This file will be parsed by a POSIX shell. Therefore all lines starting with
+# the character '#' are comments and ignored.
+
+
+# User configuration
+# ==============================================================================
+# Installation prefix (must be an absolute path without trailing slash)
+# The environment variable 'PREFIX' will override this entry if present!
+# The environment variable 'DESTDIR' will be prepended to this entry if present!
+CFG_PREFIX="@PREFIX@"
+
+# Disable IPv6
+# Set this to 1 to disable the usage of IPv6 and POSIX.1g API even if system
+# report IPv6 option (IP6) as available
+CFG_IP6_DISABLE=@IP6@
+
+# Disable compression
+# Set this to 1 if NNTP COMPRESS extension should never be used, even if the
+# required libraries (currently libz) are installed and usable.
+# Otherwise the compression negotiation can be enabled and disabled in the GUI
+# (disabled by default)
+CFG_CMPR_DISABLE=0
+
+# Disable X11 double buffering
+# DB is slow. On fast machines this can be set to 0 to reduce flicker in the GUI
+CFG_DB_DISABLE=@XDBE@
+
+# Disable National Language Support (NLS)
+# Set this to 1 to disable NLS even if system report it as available.
+CFG_NLS_DISABLE=@NLS@
+
+# The TLS module can do some simple checks and generate warnings if it thinks
+# that underlaying libraries contain known security vulnerabilities
+# Set this to 1 if you don't want to get such warnings
+CFG_TLS_WARNING_DISABLE=1
+# ==============================================================================
+
+
+# Force usage of REQUIRED facilities that system reports as not available
+# ==============================================================================
+# Force usage of POSIX.1b realtime extension, timers (TMR) option even if system
+# reports TMR option as not available
+# Set this to 1 if your system report no sufficient TMR option, but you want to
+# try anyway
+CFG_FORCE_TMR=1
+
+# Force usage of POSIX.1c thread (THR) extension even if system reports THR
+# extension as not available
+# Set this to 1 if your system report no sufficient THR extension, but you want
+# to try anyway
+CFG_FORCE_THR=1
+
+# Force usage of POSIX.2a user portability (UP) utilities even if system reports
+# UP extension as not available
+# Set this to 1 if your system report no sufficient UP extension, but you want
+# to try anyway
+CFG_FORCE_UP=1
+# ==============================================================================
+
+
+# Force usage of OPTIONAL facilities that system reports as not available
+# ==============================================================================
+# Force usage of X/Open System Interface (XSI) even if system reports XSI
+# extension as not available or too old (at least SUSv2 is required)
+# Set this to 1 if your system report no sufficient XSI extension, but you want
+# to try anyway
+CFG_FORCE_XSI=@XSI@
+# ==============================================================================
+
+
+# Dependency creation (try the defaults if in doubt)
+# ==============================================================================
+# Commands to create dependencies
+# If the compilers preprocessor don't support '-M' use makedepend like this:
+@DEP_MD@CFG_CC_DEP_COMMAND='makedepend -f- -- $(CFLAGS) -- $$file'
+@DEP_MD@CFG_CXX_DEP_COMMAND='makedepend -f- -- $(CXXFLAGS) $(FLTK_CXXFLAGS) -- $$file'
+@DEP_COMP@CFG_CC_DEP_COMMAND='$(CC) $(CFLAGS) -M $$file'
+@DEP_COMP@CFG_CXX_DEP_COMMAND='$(CXX) $(CXXFLAGS) $(FLTK_CXXFLAGS) -M $$file'
+# ==============================================================================
+
+
+# Utilities (modify only if the versions of your system are too old or broken)
+# ==============================================================================
+# POSIX.2 compliant standard utilities
+UTIL_AWK="awk"
+UTIL_CAT="cat"
+UTIL_CHMOD="chmod"
+UTIL_DATE="date"
+UTIL_GREP="grep"
+UTIL_HEAD="head"
+UTIL_MKDIR="mkdir"
+UTIL_PWD="pwd"
+UTIL_RM="rm"
+UTIL_SED="sed"
+UTIL_SH="sh"
+UTIL_SLEEP="sleep"
+UTIL_TOUCH="touch"
+UTIL_STRIP="strip"
+UTIL_TR="tr"
+UTIL_UNAME="uname"
+# ==============================================================================
+# List of all tools in this section
+CFG_UTILS="$UTIL_AWK $UTIL_CAT $UTIL_CHMOD $UTIL_DATE $UTIL_GREP $UTIL_HEAD \
+           $UTIL_MKDIR $UTIL_PWD $UTIL_RM $UTIL_SED $UTIL_SH $UTIL_SLEEP \
+           $UTIL_TOUCH $UTIL_STRIP $UTIL_TR $UTIL_UNAME"
+
+
+# This is for the package maintainer (do not change as user)
+CFG_PREFIX=${PREFIX:-$CFG_PREFIX}
+# ==============================================================================
+# Program name (printable characters from POSIX portable character set only)
+CFG_NAME="flnews"
+
+# Version (printable characters from POSIX portable character set only)
+# Must start with major number followed by '.'
+CFG_VERSION="0.15"
+
+# If a modified version should be redistributed, set this to '1' if you want to
+# keep the original program name. This will automatically insert the prominent
+# modification notice that is required by the license.
+# Alternatively you can set this to '0' and change the program name with the
+# variable "CFG_NAME" above.
+CFG_MODIFIED=0
+
+# Contact information of package maintainer
+# If a modified version should be redistributed, the following maintainer
+# contact information must be replaced. Read "src/LICENSE" file for details.
+CFG_MAINTAINER="mailto:@MAINT@"
+
+# Installation path for man page
+# (must be an absolute path without trailing slash)
+# The FHS defines "/usr[/local]/share/man". The location "/usr/local/man" is
+# explicitly marked deprecated.
+CFG_MAN_PATH="@MAN_PATH@/man1"
+
+# Installation path for license file
+# (must be an absolute path without trailing slash)
+CFG_LICENSE_PATH="$CFG_PREFIX/share/$CFG_NAME"
+
+# Installation path for National Language Support (NLS) catalogs
+# (must be an absolute path without trailing slash)
+# The FHS defines "/usr[/local]/share/nls" for NLS catalogs but the whole
+# hierarchy below "share" is dedicated to files that are portable between
+# architectures - what our catalogs are not!
+CFG_NLS_PATH="$CFG_PREFIX/lib/$CFG_NAME/nls"
+# ==============================================================================
+
+
+# EOF
