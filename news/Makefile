@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.39 2017/08/01 17:13:47 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2018/08/20 12:57:57 wiz Exp $
 #
 
 COMMENT=	Network news
 
 SUBDIR+=	cleanscore
+SUBDIR+=	flnews
 SUBDIR+=	heirloom-news
 SUBDIR+=	hellanzb
 SUBDIR+=	inn
