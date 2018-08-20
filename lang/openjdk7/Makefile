@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2018/07/24 16:07:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.128 2018/08/20 16:59:34 tnn Exp $
 
 JDK_MICRO=	141
 DISTNAME=	openjdk-1.7.${JDK_MICRO}-20170813
@@ -300,9 +300,8 @@ MAKE_ENV+=	STRIP=${PREFIX}/bin/gstrip
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-# \todo Explain why cups needs to be included, because having the
-# package installed is unexpected for those who have not chosen to use
-# cups.
+# Headers from CUPS are required to build the native implementation of
+# sun.print.* which is used by java.awt.print.
 BUILDLINK_DEPMETHOD.cups-base?=	build
 .include "../../print/cups-base/buildlink3.mk"
 .include "../../mk/java-env.mk"
