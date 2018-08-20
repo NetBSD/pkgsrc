@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3695 2018/08/20 13:18:31 wen Exp $
+$NetBSD: CHANGES-2018,v 1.3696 2018/08/20 16:27:22 roy Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5246,3 +5246,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/py-zc.lockfile version 1.3.0 [adam 2018-08-20]
 	Updated mail/p5-Parse-MIME to 1.005 [wen 2018-08-20]
 	Updated textproc/p5-Text-CSV to 1.97 [wen 2018-08-20]
+	Updated net/dhcpcd to 7.0.8 [roy 2018-08-20]
