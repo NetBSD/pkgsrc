@@ -833,6 +833,8 @@ xaw3d			Enable Xaw3D support.
 xblast-mini		Use a 480x392 window instead a 960x784 window in xblast.
 xcb			Enable XCB (libxcb) support.
 xcursor			Enable Xcursor support.
+xdbe			Use X11 Double Buffer Extension.
+xdg-utils		Enable xdg-utils support.
 xen			Use xen.
 xft2			Enable Xft support.
 xim			Enable X Input Method support.
