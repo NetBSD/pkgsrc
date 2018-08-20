@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2018/07/19 12:16:38 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.47 2018/08/20 20:23:29 dholland Exp $
 bin/ocaml
 bin/ocaml-instr-graph
 bin/ocaml-instr-report
@@ -1309,7 +1309,7 @@ ${PLIST.ocaml-opt}lib/ocaml/libcamlrun_shared.so
 ${PLIST.ocaml-opt}lib/ocaml/libcamlrund.a
 ${PLIST.ocaml-opt}lib/ocaml/libcamlruni.a
 ${PLIST.ocaml-opt}lib/ocaml/libcamlstr.a
-${PLIST.ocaml-opt}lib/ocaml/libraw_spacetime_lib.a
+${PLIST.ocaml-spacetime}${PLIST.ocaml-opt}lib/ocaml/libraw_spacetime_lib.a
 ${PLIST.ocaml-opt}lib/ocaml/libthreads.a
 ${PLIST.ocaml-opt}lib/ocaml/libthreadsnat.a
 ${PLIST.ocaml-opt}lib/ocaml/libunix.a
@@ -1692,14 +1692,14 @@ lib/ocaml/queue.ml
 lib/ocaml/queue.mli
 lib/ocaml/random.ml
 lib/ocaml/random.mli
-${PLIST.ocaml-opt}lib/ocaml/raw_spacetime_lib.a
-lib/ocaml/raw_spacetime_lib.cma
-lib/ocaml/raw_spacetime_lib.cmi
-lib/ocaml/raw_spacetime_lib.cmti
-${PLIST.ocaml-opt}lib/ocaml/raw_spacetime_lib.cmx
-${PLIST.ocaml-opt}lib/ocaml/raw_spacetime_lib.cmxa
-${PLIST.ocaml-opt}lib/ocaml/raw_spacetime_lib.cmxs
-lib/ocaml/raw_spacetime_lib.mli
+${PLIST.ocaml-spacetime}${PLIST.ocaml-opt}lib/ocaml/raw_spacetime_lib.a
+${PLIST.ocaml-spacetime}lib/ocaml/raw_spacetime_lib.cma
+${PLIST.ocaml-spacetime}lib/ocaml/raw_spacetime_lib.cmi
+${PLIST.ocaml-spacetime}lib/ocaml/raw_spacetime_lib.cmti
+${PLIST.ocaml-spacetime}${PLIST.ocaml-opt}lib/ocaml/raw_spacetime_lib.cmx
+${PLIST.ocaml-spacetime}${PLIST.ocaml-opt}lib/ocaml/raw_spacetime_lib.cmxa
+${PLIST.ocaml-spacetime}${PLIST.ocaml-opt}lib/ocaml/raw_spacetime_lib.cmxs
+${PLIST.ocaml-spacetime}lib/ocaml/raw_spacetime_lib.mli
 lib/ocaml/scanf.ml
 lib/ocaml/scanf.mli
 lib/ocaml/seq.ml
@@ -2040,7 +2040,7 @@ lib/ocaml/stringLabels.ml
 lib/ocaml/stringLabels.mli
 lib/ocaml/stublibs/dllbigarray.so
 lib/ocaml/stublibs/dllcamlstr.so
-lib/ocaml/stublibs/dllraw_spacetime_lib.so
+${PLIST.ocaml-spacetime}lib/ocaml/stublibs/dllraw_spacetime_lib.so
 lib/ocaml/stublibs/dllthreads.so
 lib/ocaml/stublibs/dllunix.so
 lib/ocaml/stublibs/dllvmthreads.so
