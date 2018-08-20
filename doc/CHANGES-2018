@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3680 2018/08/19 19:59:24 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3681 2018/08/20 00:43:49 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5229,3 +5229,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/py-certifi to 2018.8.13 [wiz 2018-08-19]
 	Updated devel/glib2 to 2.56.2 [wiz 2018-08-19]
 	Updated www/webkit-gtk to 2.20.5 [wiz 2018-08-19]
+	Updated misc/xdg-utils to 1.1.3nb1 [leot 2018-08-20]
