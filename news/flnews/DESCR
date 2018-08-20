@@ -1,0 +1,17 @@
+flnews is a client with graphical user interface to read USENET newsgroups.
+It is intended for POSIX compliant operating systems running the X window
+system.
+
+The main development goals are (in order of importance):
+- No bloat
+- Support for old workstations
+- Standard compliance
+- Be conservative in what you do, be liberal in what you accept from others
+- Compatibility with other newsreaders
+- Usable X display redirection via network (or ssh tunnel)
+- Warn users about things that are not forbidden but considered "bad practice"
+
+Features that are currently not implemented (or not usable yet):
+- UUCP
+- Multiple servers
+- Offline mode (for network connection via dialup line)
