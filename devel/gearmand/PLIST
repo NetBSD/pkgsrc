@@ -5,6 +5,7 @@ include/libgearman-1.0/actions.h
 include/libgearman-1.0/aggregator.h
 include/libgearman-1.0/allocator.h
 include/libgearman-1.0/argument.h
+include/libgearman-1.0/cancel.h
 include/libgearman-1.0/client.h
 include/libgearman-1.0/client_callbacks.h
 include/libgearman-1.0/configure.h
@@ -14,14 +15,16 @@ include/libgearman-1.0/core.h
 include/libgearman-1.0/execute.h
 include/libgearman-1.0/function.h
 include/libgearman-1.0/gearman.h
+include/libgearman-1.0/interface/client.h
+include/libgearman-1.0/interface/job.h
 include/libgearman-1.0/interface/status.h
 include/libgearman-1.0/interface/task.h
+include/libgearman-1.0/interface/worker.h
 include/libgearman-1.0/job.h
 include/libgearman-1.0/job_handle.h
 include/libgearman-1.0/kill.h
 include/libgearman-1.0/limits.h
 include/libgearman-1.0/ostream.hpp
-include/libgearman-1.0/packet.h
 include/libgearman-1.0/parse.h
 include/libgearman-1.0/priority.h
 include/libgearman-1.0/protocol.h
@@ -33,7 +36,6 @@ include/libgearman-1.0/strerror.h
 include/libgearman-1.0/string.h
 include/libgearman-1.0/task.h
 include/libgearman-1.0/task_attr.h
-include/libgearman-1.0/universal.h
 include/libgearman-1.0/util.h
 include/libgearman-1.0/version.h
 include/libgearman-1.0/visibility.h
@@ -119,6 +121,7 @@ man/man3/gearman_job_send_warning.3
 man/man3/gearman_job_st.3
 man/man3/gearman_job_take_workload.3
 man/man3/gearman_job_unique.3
+man/man3/gearman_job_use_client.3
 man/man3/gearman_job_workload.3
 man/man3/gearman_job_workload_size.3
 man/man3/gearman_log_fn.3

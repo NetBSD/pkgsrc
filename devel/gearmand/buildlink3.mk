@@ -13,6 +13,7 @@ BUILDLINK_PKGSRCDIR.gearmand?=		../../devel/gearmand
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
+.include "../../devel/libuuid/buildlink3.mk"
 .include "../../security/libssh2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .endif	# GEARMAND_BUILDLINK3_MK
