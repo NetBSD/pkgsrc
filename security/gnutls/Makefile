@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.186 2018/08/19 09:16:01 wiz Exp $
+# $NetBSD: Makefile,v 1.187 2018/08/20 06:01:25 wiz Exp $
 
 DISTNAME=	gnutls-3.6.3
+PKGREVISION=	1
 CATEGORIES=	security devel
 MASTER_SITES=	ftp://ftp.gnutls.org/gcrypt/gnutls/v3.6/
 EXTRACT_SUFX=	.tar.xz
@@ -13,7 +14,7 @@ LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2.1
 USE_LANGUAGES=			c c++
 USE_LIBTOOL=			yes
 USE_PKGLOCALEDIR=		yes
-USE_TOOLS+=			gmake gsed perl pkg-config bash:build
+USE_TOOLS+=			gmake gsed perl pkg-config bash
 GNU_CONFIGURE=			yes
 # this library duplicates (and conflicts with) openssl
 CONFIGURE_ARGS+=		--disable-openssl-compatibility
@@ -55,6 +56,12 @@ PKGCONFIG_OVERRIDE+=	libdane/gnutls-dane.pc.in
 
 MAKE_ENV+=		RM=${RM:Q}
 MAKE_ENV+=		TZ=UTC
+
+SUBST_CLASSES+=		shell
+SUBST_SED.shell+=	-e 's,define POSIX_SHELL .*,define POSIX_SHELL "'${TOOLS_PATH.bash}'",'
+SUBST_STAGE.shell=	post-configure
+SUBST_FILES.shell+=	config.h
+SUBST_MESSAGE.shell=	Fixing path to bash.
 
 EGDIR=		${PREFIX}/share/examples/gnutls
 
