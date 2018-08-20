@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.87 2018/06/25 08:02:36 wiz Exp $
+$NetBSD: distinfo,v 1.88 2018/08/20 11:43:41 wiz Exp $
 
 SHA1 (gnucash-3.2.tar.bz2) = 91a2dbed3e08026e6d2765851361d698e377e4d3
 RMD160 (gnucash-3.2.tar.bz2) = 9cd51ace65afb30a65aabd28ffd32b0703161a46
 SHA512 (gnucash-3.2.tar.bz2) = 2283f7cc3426b012297f654376a369021cce0f2de2354350d05cbd6a8610f512d418e4fedab15c811e11841d01bd47c5a1458c05dd14eaad3bfc0bafd7ed7cb0
 Size (gnucash-3.2.tar.bz2) = 13384008 bytes
+SHA1 (patch-CMakeLists.txt) = 299b1daa2599a873385d2c8b1432e03c6fdba590
