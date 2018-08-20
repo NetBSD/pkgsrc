@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2018/02/23 16:41:34 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2018/08/20 05:23:08 wiz Exp $
 
-DISTNAME=	uriparser-0.8.5
+DISTNAME=	uriparser-0.8.6
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=uriparser/}
 GITHUB_RELEASE=	${DISTNAME}
