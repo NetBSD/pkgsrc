@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.57 2018/07/24 12:58:45 jperkin Exp $
+$NetBSD: distinfo,v 1.58 2018/08/20 17:24:00 tnn Exp $
 
 SHA1 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 7408f52d3bbe35c2b14bbd3215cbf60f1335d334
 RMD160 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 24f1577b5fc86d137f070aedb4610c8c89e45815
@@ -103,8 +103,15 @@ SHA1 (patch-hotspot_src_share_vm_oops_klass.hpp) = 2a728aa8fb04976195ebf58549a54
 SHA1 (patch-hotspot_src_share_vm_opto_library__call.cpp) = 4654248e3fdf9a1be8ef5563e50b12dcd59aa1aa
 SHA1 (patch-hotspot_src_share_vm_opto_node.cpp) = aacb4e03f62f1a6f9b38de39a966c318b70b1293
 SHA1 (patch-hotspot_src_share_vm_runtime_arguments.cpp) = 80265396c62de95b0937d770c1dba0e8a53daa80
+SHA1 (patch-hotspot_src_share_vm_services_mallocSiteTable.hpp) = d0d8b8023d89c5cf6216d578478f5ed76a00740e
+SHA1 (patch-hotspot_src_share_vm_services_memTracker.cpp) = 8bd31a59a2514b99db2bb25b26bce54bd94a012e
+SHA1 (patch-hotspot_src_share_vm_services_memTracker.hpp) = 40239944a15cf5ef40a00bb5dd7078f412daca8e
+SHA1 (patch-hotspot_src_share_vm_services_virtualMemoryTracker.cpp) = 3bccafe6fb16029a065d74ea0b75a1541ee049d6
+SHA1 (patch-hotspot_src_share_vm_services_virtualMemoryTracker.hpp) = 8451d864668d7d78e148f684b4da46763f59a2b9
 SHA1 (patch-hotspot_src_share_vm_utilities_globalDefinitions__gcc.hpp) = a8e8fef04d7acb4772f57961e7df3681bd53d0b9
 SHA1 (patch-hotspot_src_share_vm_utilities_hashtable.cpp) = 83b90d951ce3aa9e913a36d792ac7376fb3d8bc7
+SHA1 (patch-hotspot_src_share_vm_utilities_nativeCallStack.cpp) = bfda35cac1f44eeededa2e26747f1439fea34e8e
+SHA1 (patch-hotspot_src_share_vm_utilities_nativeCallStack.hpp) = e3d2aa1a98d7fc6e6a797cde3efbcf61fea03a27
 SHA1 (patch-jdk_make_CompileDemos.gmk) = 4d5e2e9b0e35e373e6246408c775c25094b6f1c7
 SHA1 (patch-jdk_make_CompileLaunchers.gmk) = 1a8807595c5774fc6ecfc7caa3b53b806cc9537b
 SHA1 (patch-jdk_make_CreateJars.gmk) = 0f49c8ec33121d7878ea4b6bd06d2e4e4af9a1d5
