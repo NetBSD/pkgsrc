@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3691 2018/08/20 06:01:34 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3692 2018/08/20 12:58:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5241,3 +5241,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/uriparser to 0.8.6 [wiz 2018-08-20]
 	Updated textproc/expat to 2.2.6 [wiz 2018-08-20]
 	Updated security/gnutls to 3.6.3nb1 [wiz 2018-08-20]
+	Added news/flnews version 0.15 [wiz 2018-08-20]
