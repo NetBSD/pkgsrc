@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2018/07/05 04:31:05 minskim Exp $
+# $NetBSD: Makefile,v 1.35 2018/08/20 22:36:21 szptvlfn Exp $
 
 DISTNAME=	scipy-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -97,8 +97,7 @@ fix-darwin-install-name:
 	done
 .endif
 
-# TEST_DEPENDS
-BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 # support files for tests missing in 0.18.0 on pypi
 # https://github.com/scipy/scipy/issues/6498
