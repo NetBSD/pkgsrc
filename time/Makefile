@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.177 2018/06/21 08:17:11 markd Exp $
+# $NetBSD: Makefile,v 1.178 2018/08/20 03:05:14 wen Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -91,6 +91,7 @@ SUBDIR+=	p5-DateTime-TimeZone-HPUX
 SUBDIR+=	p5-DateTimeX-Easy
 SUBDIR+=	p5-MooseX-Types-DateTime
 SUBDIR+=	p5-MooseX-Types-DateTime-ButMaintained
+SUBDIR+=	p5-MooseX-Types-DateTime-MoreCoercions
 SUBDIR+=	p5-MooseX-Types-DateTimeX
 SUBDIR+=	p5-Olson-Abbreviations
 SUBDIR+=	p5-POSIX-strftime-Compiler
