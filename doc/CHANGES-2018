@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3689 2018/08/20 05:23:18 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3690 2018/08/20 05:24:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5239,3 +5239,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Removed chat/inspircd12 [wiz 2018-08-20]
 	Removed chat/inspircd [wiz 2018-08-20]
 	Updated textproc/uriparser to 0.8.6 [wiz 2018-08-20]
+	Updated textproc/expat to 2.2.6 [wiz 2018-08-20]
