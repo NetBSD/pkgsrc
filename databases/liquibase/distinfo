@@ -1,7 +1,7 @@
 $NetBSD: distinfo,v 1.1 2017/07/31 14:23:05 maya Exp $
 
-SHA1 (liquibase-3.5.3-bin.tar.gz) = 39b17b80a63de68e1283ebdc96296ead6c671bbb
-RMD160 (liquibase-3.5.3-bin.tar.gz) = f59f2e883dd4b3b7c9dad46d674c516f45e69a14
-SHA512 (liquibase-3.5.3-bin.tar.gz) = c2da11f7b9f16a2047a0604ae7829dccfe9a486a69ab793a8f562663e5b3bb91a287439d9e91b3c17f0c98928174954b15e18637b5982d3eebd2b2af8948fcdb
-Size (liquibase-3.5.3-bin.tar.gz) = 4370165 bytes
+SHA1 (liquibase-3.5.5-bin.tar.gz) = 81efcf8f9706d1ef0bcc10b1948a999316211e97
+RMD160 (liquibase-3.5.5-bin.tar.gz) = ba39791480b5f6f3418889c3f8628199c64bda76
+SHA512 (liquibase-3.5.5-bin.tar.gz) = a56b7bd5aa1f7ea4a1d4b0a6fb74d71ab1caaf59bcbf11bb13a218f9b26436543588e7c3ecd769504c95e3ccd4877f9e245f6bc9354c0f00340ea8394ee4c0fb
+Size (liquibase-3.5.5-bin.tar.gz) = 4293144 bytes
 SHA1 (patch-liquibase) = 1da7e7e3615b6caa8b1e7de3abd922bd3cfb64db
