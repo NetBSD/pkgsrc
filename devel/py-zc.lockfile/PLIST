@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2018/08/20 12:58:06 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/zc.lockfile-1.3.0-py3.7-nspkg.pth
+${PYSITELIB}/zc/lockfile/README.txt
+${PYSITELIB}/zc/lockfile/__init__.py
+${PYSITELIB}/zc/lockfile/__init__.pyc
+${PYSITELIB}/zc/lockfile/__init__.pyo
+${PYSITELIB}/zc/lockfile/tests.py
+${PYSITELIB}/zc/lockfile/tests.pyc
+${PYSITELIB}/zc/lockfile/tests.pyo
