@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3681 2018/08/20 00:43:49 leot Exp $
+$NetBSD: CHANGES-2018,v 1.3682 2018/08/20 02:15:05 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5230,3 +5230,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/glib2 to 2.56.2 [wiz 2018-08-19]
 	Updated www/webkit-gtk to 2.20.5 [wiz 2018-08-19]
 	Updated misc/xdg-utils to 1.1.3nb1 [leot 2018-08-20]
+	Updated filesystems/p5-Path-Tiny to 0.108 [wen 2018-08-20]
