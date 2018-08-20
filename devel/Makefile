@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2716 2018/08/15 15:25:10 nia Exp $
+# $NetBSD: Makefile,v 1.2717 2018/08/20 12:58:06 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2323,7 +2323,9 @@ SUBDIR+=	py-wrapt
 SUBDIR+=	py-xdg
 SUBDIR+=	py-xopen
 SUBDIR+=	py-zanata-python-client
+SUBDIR+=	py-zc.lockfile
 SUBDIR+=	py-zconfig
+SUBDIR+=	py-zope.testing
 SUBDIR+=	python-mode
 SUBDIR+=	pythontidy
 SUBDIR+=	qbzr
