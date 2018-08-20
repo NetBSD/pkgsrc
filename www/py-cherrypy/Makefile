@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2018/08/19 08:51:45 adam Exp $
+# $NetBSD: Makefile,v 1.33 2018/08/20 12:59:07 adam Exp $
 
 DISTNAME=	CherryPy-17.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-cheroot>=6.2.4:../../www/py-cheroot
 DEPENDS+=	${PYPKGPREFIX}-portend>=2.1.1:../../net/py-portend
 DEPENDS+=	${PYPKGPREFIX}-simplejson-[0-9]*:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-six>=1.11.0:../../lang/py-six
-DEPENDS+=	${PYPKGPREFIX}-tempora-[0-9]*:../../time/py-tempora
+DEPENDS+=	${PYPKGPREFIX}-zc.lockfile-[0-9]*:../../devel/py-zc.lockfile
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-path.py-[0-9]*:../../devel/py-path.py
