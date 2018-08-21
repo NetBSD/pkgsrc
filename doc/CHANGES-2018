@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3699 2018/08/21 07:02:36 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3700 2018/08/21 08:36:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5252,3 +5252,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/tcpflow to 1.5.0 [adam 2018-08-21]
 	Updated devel/py-archinfo to 7.8.8.1 [adam 2018-08-21]
 	Updated textproc/py-sphinx to 1.7.7 [adam 2018-08-21]
+	Updated databases/py-sqlalchemy to 1.2.11 [adam 2018-08-21]
+	Updated databases/py-sqlalchemy-utils to 0.33.3 [adam 2018-08-21]
