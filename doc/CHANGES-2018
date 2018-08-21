@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3748 2018/08/21 17:34:58 nia Exp $
+$NetBSD: CHANGES-2018,v 1.3749 2018/08/21 19:29:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5305,3 +5305,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated ham/hamlib to 3.3 [gdt 2018-08-21]
 	Updated chat/py-mastodon to 1.3.0 [nia 2018-08-21]
 	Updated chat/tootstream to 0.3.5 [nia 2018-08-21]
+	Updated x11/libX11 to 1.6.6 [wiz 2018-08-21]
