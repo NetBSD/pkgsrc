@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/08/21 09:22:00 wiz Exp $
+
+SHA1 (Test-LectroTest-0.5001.tar.gz) = 667dea15d70f26c3e350bd1253e482f3828425e4
+RMD160 (Test-LectroTest-0.5001.tar.gz) = a15fe6488f0ff3ac88d284b3298545af8bf32809
+SHA512 (Test-LectroTest-0.5001.tar.gz) = 2c26baa0b4314bcd4effe3f405eac57aa62b0aeb46240100e8df277e5480f9d0967ed185d6a54be83481f69d98314f093b31c0a09888f17c479ffbddcb12479b
+Size (Test-LectroTest-0.5001.tar.gz) = 65937 bytes
