@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/08/21 09:35:31 wiz Exp $
+
+SHA1 (Dumbbench-0.111.tar.gz) = f4f75c6e2fce0e0339b95a3b89de497baee70197
+RMD160 (Dumbbench-0.111.tar.gz) = b629c66282168fe8964f2d5d684960344dccfd9e
+SHA512 (Dumbbench-0.111.tar.gz) = 32d99c2336f3fa8af830f6505edbce367cfca7833d7a7cae131fc5fbccce1943476800899d21add8f566ab2f07b7532769c449ad062fdf39b4b917437b331b28
+Size (Dumbbench-0.111.tar.gz) = 35481 bytes
