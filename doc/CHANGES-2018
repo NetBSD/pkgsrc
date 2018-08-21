@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3742 2018/08/21 13:51:38 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3743 2018/08/21 14:43:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5296,3 +5296,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/p5-Mojolicious to 7.93 [wiz 2018-08-21]
 	Updated www/p5-URI-db to 0.19 [wiz 2018-08-21]
 	Updated www/p5-WWW-Mechanize-GZip to 0.14 [wiz 2018-08-21]
+	Updated net/py-boto to 2.49.0 [adam 2018-08-21]
+	Updated net/py-botocore to 1.10.81 [adam 2018-08-21]
+	Updated net/py-boto3 to 1.7.81 [adam 2018-08-21]
+	Updated net/py-awscli to 1.15.82 [adam 2018-08-21]
