@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.398 2018/08/16 09:22:58 wiz Exp $
+# $NetBSD: Makefile,v 1.399 2018/08/21 09:24:59 wiz Exp $
 
 COMMENT=	Mathematics
 
@@ -247,6 +247,7 @@ SUBDIR+=	p5-Number-Compare
 SUBDIR+=	p5-Number-Latin
 SUBDIR+=	p5-Number-Range
 SUBDIR+=	p5-Number-Tolerant
+SUBDIR+=	p5-Number-WithError
 SUBDIR+=	p5-Roman
 SUBDIR+=	p5-Set-Crontab
 SUBDIR+=	p5-Set-Infinite
