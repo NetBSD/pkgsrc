@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/08/21 09:29:56 wiz Exp $
+
+SHA1 (Statistics-CaseResampling-0.15.tar.gz) = 3a1f670b3eb1ef328a1def22abca4bbc29998539
+RMD160 (Statistics-CaseResampling-0.15.tar.gz) = b24a1720263c5a26bb8090d367bd833e88cd5ab0
+SHA512 (Statistics-CaseResampling-0.15.tar.gz) = 2e7baec4d87c74648963e3af8e88210182b9a6f22ce42c4a8652a2f802568c13736415d3d25f917843a6021921bbbe26d6b69742108569f649a41efe9e4168bf
+Size (Statistics-CaseResampling-0.15.tar.gz) = 58153 bytes
