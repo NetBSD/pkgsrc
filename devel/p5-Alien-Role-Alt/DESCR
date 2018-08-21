@@ -1,3 +1,0 @@
-Some packages come with multiple libraries, and multiple .pc files
-to use with them. This Role::Tiny role can be used with Alien::Base
-to access different configurations.

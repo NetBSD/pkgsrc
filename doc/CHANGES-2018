@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3723 2018/08/21 11:56:48 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3724 2018/08/21 12:00:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5277,3 +5277,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-SVN-Notify to 2.87 [wiz 2018-08-21]
 	Updated devel/p5-Test-Simple to 1.302140 [wiz 2018-08-21]
 	Updated math/p5-Alien-GMP to 1.14 [wiz 2018-08-21]
+	Removed devel/p5-Alien-Role-Alt successor devel/p5-Alien-Build [wiz 2018-08-21]
