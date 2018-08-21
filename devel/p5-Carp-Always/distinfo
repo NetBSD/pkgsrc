@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 03:28:00 agc Exp $
+$NetBSD: distinfo,v 1.4 2018/08/21 10:55:22 wiz Exp $
 
-SHA1 (Carp-Always-0.13.tar.gz) = 6fa10e23835f438585fd529847d197ebf51b9492
-RMD160 (Carp-Always-0.13.tar.gz) = 493d2f78fd1181187002a0471c3601105cd9782d
-SHA512 (Carp-Always-0.13.tar.gz) = 0ef666c45ed85f4dad5f955d13116a4c3cccb3395db80547629bf0d87f9494653fe5a85405252b650d4d92a4008c0d541a995ccae1139c7374b057317324d361
-Size (Carp-Always-0.13.tar.gz) = 5462 bytes
+SHA1 (Carp-Always-0.16.tar.gz) = 76145b8f3c3c20cc80ff38a66b58505704db33fc
+RMD160 (Carp-Always-0.16.tar.gz) = dd5a577595679c9a39a6045cfc7fda7ae8771e7c
+SHA512 (Carp-Always-0.16.tar.gz) = 208e8d8435aebcc8c8345a453d17daaf35976c40e2b91cf528b92e9f6afba81cff9b31b656d71a6736838631e4b110cd12e49cfc48810872d39109b137fa074b
+Size (Carp-Always-0.16.tar.gz) = 13386 bytes
