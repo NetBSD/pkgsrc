@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/07/24 10:00:08 adam Exp $
+# $NetBSD: Makefile,v 1.3 2018/08/21 06:59:08 adam Exp $
 
-DISTNAME=	archinfo-7.8.7.1
+DISTNAME=	archinfo-7.8.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/archinfo/}
