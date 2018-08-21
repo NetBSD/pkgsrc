@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2018/06/14 08:23:19 adam Exp $
+# $NetBSD: Makefile,v 1.24 2018/08/21 14:26:58 adam Exp $
 
-DISTNAME=	botocore-1.10.38
+DISTNAME=	botocore-1.10.81
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/botocore/}
@@ -15,9 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-jmespath>=0.7.1<1:../../textproc/py-jmespath
 
 USE_LANGUAGES=	# none
-
-post-extract:
-	${CHMOD} -R g-w,o-w ${WRKSRC}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
