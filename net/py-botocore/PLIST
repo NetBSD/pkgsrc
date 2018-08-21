@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2018/06/14 08:23:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2018/08/21 14:26:58 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -37,6 +37,7 @@ ${PYSITELIB}/botocore/data/acm-pca/2017-08-22/service-2.json
 ${PYSITELIB}/botocore/data/acm/2015-12-08/examples-1.json
 ${PYSITELIB}/botocore/data/acm/2015-12-08/paginators-1.json
 ${PYSITELIB}/botocore/data/acm/2015-12-08/service-2.json
+${PYSITELIB}/botocore/data/acm/2015-12-08/waiters-2.json
 ${PYSITELIB}/botocore/data/alexaforbusiness/2017-11-09/paginators-1.json
 ${PYSITELIB}/botocore/data/alexaforbusiness/2017-11-09/service-2.json
 ${PYSITELIB}/botocore/data/apigateway/2015-07-09/examples-1.json
@@ -70,6 +71,8 @@ ${PYSITELIB}/botocore/data/cloud9/2017-09-23/paginators-1.json
 ${PYSITELIB}/botocore/data/cloud9/2017-09-23/service-2.json
 ${PYSITELIB}/botocore/data/clouddirectory/2016-05-10/paginators-1.json
 ${PYSITELIB}/botocore/data/clouddirectory/2016-05-10/service-2.json
+${PYSITELIB}/botocore/data/clouddirectory/2017-01-11/paginators-1.json
+${PYSITELIB}/botocore/data/clouddirectory/2017-01-11/service-2.json
 ${PYSITELIB}/botocore/data/cloudformation/2010-05-15/examples-1.json
 ${PYSITELIB}/botocore/data/cloudformation/2010-05-15/paginators-1.json
 ${PYSITELIB}/botocore/data/cloudformation/2010-05-15/service-2.json
@@ -122,6 +125,10 @@ ${PYSITELIB}/botocore/data/cloudfront/2017-10-30/examples-1.json
 ${PYSITELIB}/botocore/data/cloudfront/2017-10-30/paginators-1.json
 ${PYSITELIB}/botocore/data/cloudfront/2017-10-30/service-2.json
 ${PYSITELIB}/botocore/data/cloudfront/2017-10-30/waiters-2.json
+${PYSITELIB}/botocore/data/cloudfront/2018-06-18/examples-1.json
+${PYSITELIB}/botocore/data/cloudfront/2018-06-18/paginators-1.json
+${PYSITELIB}/botocore/data/cloudfront/2018-06-18/service-2.json
+${PYSITELIB}/botocore/data/cloudfront/2018-06-18/waiters-2.json
 ${PYSITELIB}/botocore/data/cloudhsm/2014-05-30/examples-1.json
 ${PYSITELIB}/botocore/data/cloudhsm/2014-05-30/paginators-1.json
 ${PYSITELIB}/botocore/data/cloudhsm/2014-05-30/service-2.json
@@ -184,6 +191,8 @@ ${PYSITELIB}/botocore/data/directconnect/2012-10-25/service-2.json
 ${PYSITELIB}/botocore/data/discovery/2015-11-01/examples-1.json
 ${PYSITELIB}/botocore/data/discovery/2015-11-01/paginators-1.json
 ${PYSITELIB}/botocore/data/discovery/2015-11-01/service-2.json
+${PYSITELIB}/botocore/data/dlm/2018-01-12/paginators-1.json
+${PYSITELIB}/botocore/data/dlm/2018-01-12/service-2.json
 ${PYSITELIB}/botocore/data/dms/2016-01-01/examples-1.json
 ${PYSITELIB}/botocore/data/dms/2016-01-01/paginators-1.json
 ${PYSITELIB}/botocore/data/dms/2016-01-01/service-2.json
@@ -342,6 +351,8 @@ ${PYSITELIB}/botocore/data/machinelearning/2014-12-12/examples-1.json
 ${PYSITELIB}/botocore/data/machinelearning/2014-12-12/paginators-1.json
 ${PYSITELIB}/botocore/data/machinelearning/2014-12-12/service-2.json
 ${PYSITELIB}/botocore/data/machinelearning/2014-12-12/waiters-2.json
+${PYSITELIB}/botocore/data/macie/2017-12-19/paginators-1.json
+${PYSITELIB}/botocore/data/macie/2017-12-19/service-2.json
 ${PYSITELIB}/botocore/data/marketplace-entitlement/2017-01-11/paginators-1.json
 ${PYSITELIB}/botocore/data/marketplace-entitlement/2017-01-11/service-2.json
 ${PYSITELIB}/botocore/data/marketplacecommerceanalytics/2015-07-01/examples-1.json
@@ -364,6 +375,7 @@ ${PYSITELIB}/botocore/data/mgh/2017-05-31/paginators-1.json
 ${PYSITELIB}/botocore/data/mgh/2017-05-31/service-2.json
 ${PYSITELIB}/botocore/data/mobile/2017-07-01/paginators-1.json
 ${PYSITELIB}/botocore/data/mobile/2017-07-01/service-2.json
+${PYSITELIB}/botocore/data/mq/2017-11-27/paginators-1.json
 ${PYSITELIB}/botocore/data/mq/2017-11-27/service-2.json
 ${PYSITELIB}/botocore/data/mturk/2017-01-17/paginators-1.json
 ${PYSITELIB}/botocore/data/mturk/2017-01-17/service-2.json
