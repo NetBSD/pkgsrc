@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3735 2018/08/21 12:21:35 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3736 2018/08/21 13:15:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5289,3 +5289,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/p5-YAML-LibYAML to 0.72 [wiz 2018-08-21]
 	Updated time/p5-DateTime to 1.5000 [wiz 2018-08-21]
 	Updated time/p5-Time-Piece to 1.33 [wiz 2018-08-21]
+	Updated www/p5-CGI to 4.40 [wiz 2018-08-21]
