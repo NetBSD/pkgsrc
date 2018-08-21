@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2017/09/29 07:52:46 wen Exp $
-#
+# $NetBSD: Makefile,v 1.20 2018/08/21 12:17:38 wiz Exp $
 
-DISTNAME=	XML-SemanticDiff-1.0006
+DISTNAME=	XML-SemanticDiff-1.0007
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
