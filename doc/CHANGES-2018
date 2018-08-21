@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3726 2018/08/21 12:02:02 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3727 2018/08/21 12:04:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5280,3 +5280,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Removed devel/p5-Alien-Role-Alt successor devel/p5-Alien-Build [wiz 2018-08-21]
 	Updated math/p5-Statistics-Descriptive to 3.0701 [wiz 2018-08-21]
 	Updated misc/p5-Business-ISMN to 1.132 [wiz 2018-08-21]
+	Updated net/p5-Net-DNS to 1.17 [wiz 2018-08-21]
