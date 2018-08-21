@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2016/10/04 21:58:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2018/08/21 19:29:48 wiz Exp $
 include/X11/ImUtil.h
 include/X11/XKBlib.h
 include/X11/Xcms.h
@@ -678,6 +678,7 @@ man/man3/XkbGetKeyboard.3
 man/man3/XkbGetKeyboardByName.3
 man/man3/XkbGetMap.3
 man/man3/XkbGetNameChanges.3
+man/man3/XkbGetNamedDeviceIndicator.3
 man/man3/XkbGetNamedGeometry.3
 man/man3/XkbGetNamedIndicator.3
 man/man3/XkbGetNames.3
@@ -758,6 +759,7 @@ man/man3/XkbSetIgnoreLockMods.3
 man/man3/XkbSetIndicatorMap.3
 man/man3/XkbSetMap.3
 man/man3/XkbSetModActionVMods.3
+man/man3/XkbSetNamedDeviceIndicator.3
 man/man3/XkbSetNamedIndicator.3
 man/man3/XkbSetNames.3
 man/man3/XkbSetPtrActionX.3
