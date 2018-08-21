@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3697 2018/08/20 21:25:56 tnn Exp $
+$NetBSD: CHANGES-2018,v 1.3698 2018/08/21 06:52:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5248,3 +5248,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/p5-Text-CSV to 1.97 [wen 2018-08-20]
 	Updated net/dhcpcd to 7.0.8 [roy 2018-08-20]
 	Updated net/unifi to 5.8.28 [tnn 2018-08-20]
+	Updated databases/slony1 to 2.2.7 [adam 2018-08-21]
+	Updated net/tcpflow to 1.5.0 [adam 2018-08-21]
