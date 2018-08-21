@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3733 2018/08/21 12:19:38 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3734 2018/08/21 12:20:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5287,3 +5287,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/p5-Pod-Markdown to 3.101 [wiz 2018-08-21]
 	Updated textproc/p5-XML-SemanticDiff to 1.0007 [wiz 2018-08-21]
 	Updated textproc/p5-YAML-LibYAML to 0.72 [wiz 2018-08-21]
+	Updated time/p5-DateTime to 1.5000 [wiz 2018-08-21]
