@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3737 2018/08/21 13:19:20 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3738 2018/08/21 13:20:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5291,3 +5291,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/p5-Time-Piece to 1.33 [wiz 2018-08-21]
 	Updated www/p5-CGI to 4.40 [wiz 2018-08-21]
 	Updated www/p5-FCGI-Client to 0.09 [wiz 2018-08-21]
+	Updated www/p5-HTTP-Tiny to 0.076 [wiz 2018-08-21]
