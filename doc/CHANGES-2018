@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3705 2018/08/21 09:41:24 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3706 2018/08/21 09:44:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5259,3 +5259,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added math/p5-Statistics-CaseResampling version 0.15 [wiz 2018-08-21]
 	Added benchmarks/p5-Dumbbench version 0.111 [wiz 2018-08-21]
 	Updated archivers/p5-Archive-Tar-Wrapper to 0.33 [wiz 2018-08-21]
+	Updated archivers/p5-Archive-Zip to 1.61 [wiz 2018-08-21]
