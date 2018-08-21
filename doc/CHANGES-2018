@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3729 2018/08/21 12:08:08 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3730 2018/08/21 12:08:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5283,3 +5283,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/p5-Net-DNS to 1.17 [wiz 2018-08-21]
 	Updated security/p5-IO-Socket-SSL to 2.059 [wiz 2018-08-21]
 	Updated sysutils/p5-Monitoring-Plugin to 0.40 [wiz 2018-08-21]
+	Updated textproc/p5-Filter to 1.59 [wiz 2018-08-21]
