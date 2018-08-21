@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3703 2018/08/21 09:30:22 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3704 2018/08/21 09:36:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5257,3 +5257,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/p5-Test-LectroTest version 0.5001 [wiz 2018-08-21]
 	Added math/p5-Number-WithError version 1.01 [wiz 2018-08-21]
 	Added math/p5-Statistics-CaseResampling version 0.15 [wiz 2018-08-21]
+	Added benchmarks/p5-Dumbbench version 0.111 [wiz 2018-08-21]
