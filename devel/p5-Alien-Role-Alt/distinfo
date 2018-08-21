@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/05/02 12:57:15 wiz Exp $
+$NetBSD: distinfo,v 1.2 2018/08/21 09:55:41 wiz Exp $
 
-SHA1 (Alien-Role-Alt-0.03.tar.gz) = 760e6a90838fc81e5eb1adf9a7ec418453c6eeda
-RMD160 (Alien-Role-Alt-0.03.tar.gz) = 35f3d62d1af12227ed3c12fcc7b055271279d9a9
-SHA512 (Alien-Role-Alt-0.03.tar.gz) = 8d7cd530ac5ee19e08bc677b262689793c624768ddec50d7d6c2228499c0b6eebdc9b90e30f7e81f7384733afc2f9ab880f1a559b7901f3b99fe7fe09fa2c769
-Size (Alien-Role-Alt-0.03.tar.gz) = 15046 bytes
+SHA1 (Alien-Role-Alt-0.04.tar.gz) = 0cf9cce6864584ce0edb5b7693bd271a5b395cdb
+RMD160 (Alien-Role-Alt-0.04.tar.gz) = c531178918e7050c341eb8d0ac57c96c793e62bf
+SHA512 (Alien-Role-Alt-0.04.tar.gz) = 6d891633b6eded7e50fb1e32ad5707970a4a734d1de76e6c4d7f29daf600f7e2640aa325a3847fb09780cf3917eaf50f5cb216c538aa600ef0d5447e95596234
+Size (Alien-Role-Alt-0.04.tar.gz) = 14935 bytes
