@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/07/24 10:00:08 adam Exp $
+$NetBSD: distinfo,v 1.3 2018/08/21 06:59:08 adam Exp $
 
-SHA1 (archinfo-7.8.7.1.tar.gz) = dc83285b1e2ac572a977937d9627b57a9118f09f
-RMD160 (archinfo-7.8.7.1.tar.gz) = ab78bc94b17e674f3e91013e33cef0ec893af1cf
-SHA512 (archinfo-7.8.7.1.tar.gz) = a4cb92a0f7fff90deb0b4ffa37f231fd8fd0bb7df2eb8d8e606c116eaa0afb072209d86f38370e66268cf8f7f798d29e775c0c85376ab8e2b533081c8e0d31e0
-Size (archinfo-7.8.7.1.tar.gz) = 39253 bytes
+SHA1 (archinfo-7.8.8.1.tar.gz) = fa4979dcac229f53cd66db89bc5e617801a562ef
+RMD160 (archinfo-7.8.8.1.tar.gz) = 43786bf64b941713cf58fa30aec323e434b62c3b
+SHA512 (archinfo-7.8.8.1.tar.gz) = f5cdb22e35c12965484b627ca971eb09ac0a350b1fd4e24a3d8194d82bec1fa683903298dd8e4b4fcc360507f3ee1648cce73d430a9a40377a16a9bc7062cc44
+Size (archinfo-7.8.8.1.tar.gz) = 38324 bytes
