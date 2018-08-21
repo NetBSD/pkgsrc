@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3698 2018/08/21 06:52:38 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3699 2018/08/21 07:02:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5250,3 +5250,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/unifi to 5.8.28 [tnn 2018-08-20]
 	Updated databases/slony1 to 2.2.7 [adam 2018-08-21]
 	Updated net/tcpflow to 1.5.0 [adam 2018-08-21]
+	Updated devel/py-archinfo to 7.8.8.1 [adam 2018-08-21]
+	Updated textproc/py-sphinx to 1.7.7 [adam 2018-08-21]
