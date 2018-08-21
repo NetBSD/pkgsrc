@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/07/03 16:29:43 bsiegert Exp $
+$NetBSD: distinfo,v 1.2 2018/08/21 12:08:00 wiz Exp $
 
-SHA1 (Monitoring-Plugin-0.39.tar.gz) = 15dc02949a3a4597f7fc8a504d05f87c08a5514c
-RMD160 (Monitoring-Plugin-0.39.tar.gz) = 9af408d9d33de103ca6d9a3421849a167513820f
-SHA512 (Monitoring-Plugin-0.39.tar.gz) = 7bdba894cffc0839586e52f3667157cf578e94734ddc0ccd05899f631271e5b69e9cbfe4b2fb59f68b45e1d13afc82b095b65e249527f2c448a38b93e510a05c
-Size (Monitoring-Plugin-0.39.tar.gz) = 62733 bytes
+SHA1 (Monitoring-Plugin-0.40.tar.gz) = 5cb20a287a98ed3f2a88579e44b064e4dbef7353
+RMD160 (Monitoring-Plugin-0.40.tar.gz) = b952195c7d40162c4e50dbfd6645d8fd747c6700
+SHA512 (Monitoring-Plugin-0.40.tar.gz) = 3f079f68c7bdc118381fc7fe394fb70123ce2a9105b311b72451bc91519b8d7e57fa41e6804a4ec87353654a1450b7eb919572610e9c5dc4fd4b8fceb9701cf1
+Size (Monitoring-Plugin-0.40.tar.gz) = 63046 bytes
