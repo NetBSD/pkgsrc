@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2018/06/08 01:34:44 wen Exp $
+# $NetBSD: Makefile,v 1.10 2018/08/21 09:54:04 wiz Exp $
 
-DISTNAME=	Alien-Build-1.43
+DISTNAME=	Alien-Build-1.48
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/P/PL/PLICEASE/
