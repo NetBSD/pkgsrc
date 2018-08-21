@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2018/06/04 08:23:11 yyamano Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/08/21 15:22:01 prlw1 Exp $
 bin/mvn
 lib/java/maven/aopalliance-1.0.jar
 lib/java/maven/boot/plexus-classworlds-2.5.2.jar
@@ -7,8 +7,8 @@ lib/java/maven/commons-cli-1.4.jar
 lib/java/maven/commons-io-2.5.jar
 lib/java/maven/commons-lang3-3.5.jar
 lib/java/maven/guava-20.0.jar
-lib/java/maven/guice-4.0-no_aop.jar
-lib/java/maven/jansi-1.17.jar
+lib/java/maven/guice-4.2.0-no_aop.jar
+lib/java/maven/jansi-1.17.1.jar
 lib/java/maven/javax.inject-1.jar
 lib/java/maven/jcl-over-slf4j-1.7.25.jar
 lib/java/maven/jsr250-api-1.0.jar
@@ -40,9 +40,9 @@ lib/java/maven/plexus-interpolation-1.24.jar
 lib/java/maven/plexus-sec-dispatcher-1.4.jar
 lib/java/maven/plexus-utils-3.1.0.jar
 lib/java/maven/slf4j-api-1.7.25.jar
-lib/java/maven/wagon-file-3.0.0.jar
-lib/java/maven/wagon-http-3.0.0-shaded.jar
-lib/java/maven/wagon-provider-api-3.0.0.jar
+lib/java/maven/wagon-file-3.1.0.jar
+lib/java/maven/wagon-http-3.1.0-shaded.jar
+lib/java/maven/wagon-provider-api-3.1.0.jar
 share/doc/java/maven/LICENSE
 share/doc/java/maven/NOTICE
 share/doc/java/maven/README.txt
