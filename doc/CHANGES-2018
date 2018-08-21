@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3710 2018/08/21 09:55:49 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3711 2018/08/21 10:50:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5264,3 +5264,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/p5-DB_File to 1.842 [wiz 2018-08-21]
 	Updated devel/p5-Alien-Build to 1.48 [wiz 2018-08-21]
 	Updated devel/p5-Alien-Role-Alt to 0.04 [wiz 2018-08-21]
+	Updated devel/p5-CPAN-Perl-Releases to 3.72 [wiz 2018-08-21]
