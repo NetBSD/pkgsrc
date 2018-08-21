@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/08/21 09:24:41 wiz Exp $
+
+SHA1 (Number-WithError-1.01.tar.gz) = 743a2a5695499281a2428bda82c3c38c25fae944
+RMD160 (Number-WithError-1.01.tar.gz) = 78c68e8560f0c65e1e25d0a767bdd6b3780b42a7
+SHA512 (Number-WithError-1.01.tar.gz) = 8d573801fa6c82b1e1578035f34d3208abc11cdd300563b21ae5a1f229f651e9f0b3f3c277da632ce3f583b86e99918ac0b5498ad3727a19e4d100b7e00df93b
+Size (Number-WithError-1.01.tar.gz) = 38949 bytes
