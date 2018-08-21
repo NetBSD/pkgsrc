@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3727 2018/08/21 12:04:01 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3728 2018/08/21 12:06:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5281,3 +5281,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/p5-Statistics-Descriptive to 3.0701 [wiz 2018-08-21]
 	Updated misc/p5-Business-ISMN to 1.132 [wiz 2018-08-21]
 	Updated net/p5-Net-DNS to 1.17 [wiz 2018-08-21]
+	Updated security/p5-IO-Socket-SSL to 2.059 [wiz 2018-08-21]
