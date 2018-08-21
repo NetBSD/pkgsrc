@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3746 2018/08/21 16:31:41 gdt Exp $
+$NetBSD: CHANGES-2018,v 1.3747 2018/08/21 17:31:30 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5303,3 +5303,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/apache-maven to 3.5.4 [prlw1 2018-08-21]
 	Added devel/git-lfs version 2.5.1 [tnn 2018-08-21]
 	Updated ham/hamlib to 3.3 [gdt 2018-08-21]
+	Updated chat/py-mastodon to 1.3.0 [nia 2018-08-21]
