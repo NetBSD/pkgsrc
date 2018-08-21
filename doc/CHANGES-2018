@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3719 2018/08/21 11:20:33 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3720 2018/08/21 11:21:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5273,3 +5273,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-PPIx-Regexp to 0.062 [wiz 2018-08-21]
 	Updated devel/p5-Parallel-ForkManager to 1.20 [wiz 2018-08-21]
 	Updated devel/p5-Params-ValidationCompiler to 0.30 [wiz 2018-08-21]
+	Updated devel/p5-Proc-PID-File to 1.29 [wiz 2018-08-21]
