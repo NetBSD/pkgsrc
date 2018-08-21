@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2018/05/20 23:05:53 wen Exp $
+# $NetBSD: Makefile,v 1.73 2018/08/21 12:20:51 wiz Exp $
 
-DISTNAME=	DateTime-1.49
+DISTNAME=	DateTime-1.50
 PKGNAME=	p5-${DISTNAME}00
 CATEGORIES=	time perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DateTime/}
@@ -17,13 +17,11 @@ DEPENDS+=	p5-Specio-[0-9]*:../../devel/p5-Specio
 DEPENDS+=	p5-Params-ValidationCompiler>=0.11:../../devel/p5-Params-ValidationCompiler
 DEPENDS+=	p5-namespace-autoclean>=0.19:../../devel/p5-namespace-autoclean
 
-# TEST_DEPENDS
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
-BUILD_DEPENDS+=	p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
-BUILD_DEPENDS+=	p5-CPAN-Meta-Check>=0.11:../../devel/p5-CPAN-Meta-Check
-BUILD_DEPENDS+=	p5-Exception-Class-[0-9]*:../../devel/p5-Exception-Class
-#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
+TEST_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TEST_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+TEST_DEPENDS+=	p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
+TEST_DEPENDS+=	p5-CPAN-Meta-Check>=0.11:../../devel/p5-CPAN-Meta-Check
+TEST_DEPENDS+=	p5-Exception-Class-[0-9]*:../../devel/p5-Exception-Class
 
 USE_LANGUAGES=	c # installs C module
 PERL5_PACKLIST=	auto/DateTime/.packlist
