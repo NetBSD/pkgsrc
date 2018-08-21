@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2017/09/27 15:34:05 wiz Exp $
+$NetBSD: distinfo,v 1.13 2018/08/21 10:59:18 wiz Exp $
 
-SHA1 (Coro-6.514.tar.gz) = 340da1e2ff0e8921e28c218e96deb897d6405a9e
-RMD160 (Coro-6.514.tar.gz) = c244e6d4590535c3b0a199fd571b4f7c6021c59d
-SHA512 (Coro-6.514.tar.gz) = 340eea9bc2a33c40813f4852d3a12ff947426fd329a4867a36262a9ece936c9e43d36ba5e4355d1f8f91cb40690de3bb1637ab0b0651518c22fb17a34ee90b37
-Size (Coro-6.514.tar.gz) = 195122 bytes
+SHA1 (Coro-6.52.tar.gz) = c1ed90320805da5468b5797388dc1c17c2d6b758
+RMD160 (Coro-6.52.tar.gz) = de0a08b448b3a69f11057df368e4e4e23551bcad
+SHA512 (Coro-6.52.tar.gz) = 5dac8918f69e435977ef3bd07f5f3ebaceb63633d67e5086a89c5f1922c77b3cdaec4663d1ba7b2d60b4cccf6d607e69e5def3f88a18a33dff01d4389a3d5617
+Size (Coro-6.52.tar.gz) = 196383 bytes
