@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3721 2018/08/21 11:27:10 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3722 2018/08/21 11:54:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5275,3 +5275,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Params-ValidationCompiler to 0.30 [wiz 2018-08-21]
 	Updated devel/p5-Proc-PID-File to 1.29 [wiz 2018-08-21]
 	Updated devel/p5-SVN-Notify to 2.87 [wiz 2018-08-21]
+	Updated devel/p5-Test-Simple to 1.302140 [wiz 2018-08-21]
