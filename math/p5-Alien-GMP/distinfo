@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/06/24 07:37:21 wiz Exp $
+$NetBSD: distinfo,v 1.3 2018/08/21 11:56:38 wiz Exp $
 
-SHA1 (Alien-GMP-1.11.tar.gz) = e7dfd786eea43af7fde1882ca115e74d2b933764
-RMD160 (Alien-GMP-1.11.tar.gz) = 13375c93530f004c02db2aa4a8679e8428bfde4c
-SHA512 (Alien-GMP-1.11.tar.gz) = 05fd5b7f2fb983d57009c99b3d2593dbbf17996b5fb06a520e157bb0301e8d7c9d037b825094e0ede850a9b51725e1373d7c0b7d54aed5c20fb9099fbdebce07
-Size (Alien-GMP-1.11.tar.gz) = 24694 bytes
+SHA1 (Alien-GMP-1.14.tar.gz) = ca9e52e18c83322db977aa3562d3fe1df51ba6d9
+RMD160 (Alien-GMP-1.14.tar.gz) = 72ebce7e2b494082e704604a130c9329cf9d13ad
+SHA512 (Alien-GMP-1.14.tar.gz) = dbcbe071502714f0faaf08ede03f7abe1a85ede64ab4073decfdee1569d568efe3825269185af7a9dfed308bb5322f489e9ef6cfc25abaa43253fa43c54a9b5a
+Size (Alien-GMP-1.14.tar.gz) = 24275 bytes

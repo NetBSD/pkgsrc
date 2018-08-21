@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/06/24 07:37:21 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2018/08/21 11:56:38 wiz Exp $
 
-DISTNAME=	Alien-GMP-1.11
+DISTNAME=	Alien-GMP-1.14
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Alien/}
@@ -12,11 +12,8 @@ LICENSE=	gnu-lgpl-v3
 
 DEPENDS+=	p5-Alien-Build-[0-9]*:../../devel/p5-Alien-Build
 BUILD_DEPENDS+=	p5-Devel-CheckLib-[0-9]*:../../devel/p5-Devel-CheckLib
-DEPENDS+=	p5-Alien-Role-Alt-[0-9]*:../../devel/p5-Alien-Role-Alt
 
 USE_LANGUAGES=		c
-
-#PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/Alien/GMP/.packlist
 
 .include "../../devel/gmp/buildlink3.mk"
