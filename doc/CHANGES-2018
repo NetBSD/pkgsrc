@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3744 2018/08/21 15:22:19 prlw1 Exp $
+$NetBSD: CHANGES-2018,v 1.3745 2018/08/21 15:52:33 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5301,3 +5301,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/py-boto3 to 1.7.81 [adam 2018-08-21]
 	Updated net/py-awscli to 1.15.82 [adam 2018-08-21]
 	Updated devel/apache-maven to 3.5.4 [prlw1 2018-08-21]
+	Added devel/git-lfs version 2.5.1 [tnn 2018-08-21]
