@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/08/21 15:49:03 tnn Exp $
+
+SHA1 (git-lfs-2.5.1.tar.gz) = d46dad152ebebb7f2b841f97250721430b5e11b0
+RMD160 (git-lfs-2.5.1.tar.gz) = 7f4263bf860075461d9612959a761e06639cec6f
+SHA512 (git-lfs-2.5.1.tar.gz) = 86b277795ffaba47244f3467e58c1103804f526511c4b0c21566dc05a97eb5d48d0de36f944d906255a8652b9fd698dca4dd50f89d344703b3c6d87117f7fbc1
+Size (git-lfs-2.5.1.tar.gz) = 946596 bytes
