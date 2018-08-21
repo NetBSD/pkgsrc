@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3715 2018/08/21 11:02:41 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3716 2018/08/21 11:11:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5269,3 +5269,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Coro to 6.52 [wiz 2018-08-21]
 	Updated devel/p5-Module-CoreList to 5.20180720 [wiz 2018-08-21]
 	Updated devel/p5-Module-ScanDeps to 1.25 [wiz 2018-08-21]
+	Updated devel/p5-MooseX-Getopt to 0.72 [wiz 2018-08-21]
