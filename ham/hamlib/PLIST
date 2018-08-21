@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2018/06/06 22:45:58 gdt Exp $
+@comment $NetBSD: PLIST,v 1.18 2018/08/21 16:31:34 gdt Exp $
 bin/rigctl
 bin/rigctld
 bin/rigmem
@@ -24,6 +24,9 @@ man/man1/rigsmtr.1
 man/man1/rigswr.1
 man/man1/rotctl.1
 man/man1/rotctld.1
+man/man7/hamlib-primer.7
+man/man7/hamlib-utilities.7
+man/man7/hamlib.7
 share/aclocal/hamlib.m4
 share/doc/hamlib/COPYING
 share/doc/hamlib/COPYING.LIB
