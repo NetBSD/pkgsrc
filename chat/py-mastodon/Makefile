@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2018/07/31 16:14:29 nia Exp $
+# $NetBSD: Makefile,v 1.6 2018/08/21 17:31:21 nia Exp $
 
-VERSION=	1.2.2
+VERSION=	1.3.0
 DISTNAME=	Mastodon.py-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-mastodon-${VERSION}
 CATEGORIES=	chat www python
@@ -16,10 +16,12 @@ USE_LANGUAGES=	# none
 
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
+DEPENDS+=	${PYPKGPREFIX}-http_ece-[0-9]*:../../www/py-http_ece
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-contextlib2-[0-9]*:../../devel/py-contextlib2
