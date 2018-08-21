@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2018/02/25 19:41:27 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2018/08/21 13:26:10 wiz Exp $
 
-DISTNAME=	LWP-ConsoleLogger-0.000037
+DISTNAME=	LWP-ConsoleLogger-0.000039
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=LWP/}
@@ -36,19 +36,20 @@ DEPENDS+=	p5-URI-Query-[0-9]*:../../www/p5-URI-Query
 DEPENDS+=	p5-XML-Simple-[0-9]*:../../textproc/p5-XML-Simple
 
 # not officially requested but needed by tests
-BUILD_DEPENDS+=	p5-Log-Dispatch-Array-[0-9]*:../../devel/p5-Log-Dispatch-Array
-BUILD_DEPENDS+=	p5-Path-Tiny-[0-9]*:../../filesystems/p5-Path-Tiny
-BUILD_DEPENDS+=	p5-Test-LWP-UserAgent-[0-9]*:../../www/p5-Test-LWP-UserAgent
-BUILD_DEPENDS+=	p5-Test-RequiresInternet-[0-9]*:../../net/p5-Test-RequiresInternet
-BUILD_DEPENDS+=	p5-Test-Most-[0-9]*:../../devel/p5-Test-Most
-BUILD_DEPENDS+=	p5-Test-Needs-[0-9]*:../../devel/p5-Test-Needs
-BUILD_DEPENDS+=	p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
-BUILD_DEPENDS+=	p5-WWW-Mechanize-[0-9]*:../../www/p5-WWW-Mechanize
-BUILD_DEPENDS+=	p5-HTML-FormatText-WithLinks-[0-9]*:../../textproc/p5-HTML-FormatText-WithLinks
-BUILD_DEPENDS+=	p5-Plack-[0-9]*:../../www/p5-Plack
-BUILD_DEPENDS+=	p5-Plack-Test-Agent-[0-9]*:../../www/p5-Plack-Test-Agent
-BUILD_DEPENDS+=	p5-HTTP-Server-Simple-PSGI-[0-9]*:../../www/p5-HTTP-Server-Simple-PSGI
-BUILD_DEPENDS+=	p5-Test-FailWarnings-[0-9]*:../../devel/p5-Test-FailWarnings
+TEST_DEPENDS+=	p5-Log-Dispatch-Array-[0-9]*:../../devel/p5-Log-Dispatch-Array
+TEST_DEPENDS+=	p5-Path-Tiny-[0-9]*:../../filesystems/p5-Path-Tiny
+TEST_DEPENDS+=	p5-Test-LWP-UserAgent-[0-9]*:../../www/p5-Test-LWP-UserAgent
+TEST_DEPENDS+=	p5-Test-RequiresInternet-[0-9]*:../../net/p5-Test-RequiresInternet
+TEST_DEPENDS+=	p5-Test-Most-[0-9]*:../../devel/p5-Test-Most
+TEST_DEPENDS+=	p5-Test-Needs-[0-9]*:../../devel/p5-Test-Needs
+TEST_DEPENDS+=	p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
+TEST_DEPENDS+=	p5-WWW-Mechanize-[0-9]*:../../www/p5-WWW-Mechanize
+TEST_DEPENDS+=	p5-HTML-FormatText-WithLinks-[0-9]*:../../textproc/p5-HTML-FormatText-WithLinks
+TEST_DEPENDS+=	p5-Plack-[0-9]*:../../www/p5-Plack
+TEST_DEPENDS+=	p5-Plack-Test-Agent-[0-9]*:../../www/p5-Plack-Test-Agent
+TEST_DEPENDS+=	p5-HTTP-Server-Simple-PSGI-[0-9]*:../../www/p5-HTTP-Server-Simple-PSGI
+TEST_DEPENDS+=	p5-Test-FailWarnings-[0-9]*:../../devel/p5-Test-FailWarnings
+TEST_DEPENDS+=	p5-HTTP-CookieJar-[0-9]*:../../www/p5-HTTP-CookieJar
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
