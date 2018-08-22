@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2017/08/16 20:45:34 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2018/08/22 09:43:28 wiz Exp $
 
 DISTNAME=	cook-2.26
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel
 #MASTER_SITES=	http://miller.emu.id.au/pmiller/software/cook/
 
