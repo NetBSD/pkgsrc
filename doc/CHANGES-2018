@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3751 2018/08/22 10:53:14 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3752 2018/08/22 10:57:29 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5308,3 +5308,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/libX11 to 1.6.6 [wiz 2018-08-21]
 	Updated lang/perl5 to 5.28.0 [wiz 2018-08-22]
 	Updated net/py-gsutil to 4.33 [adam 2018-08-22]
+	Updated net/youtube-dl to 20180822 [leot 2018-08-22]
