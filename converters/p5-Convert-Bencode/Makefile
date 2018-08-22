@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2017/06/05 14:22:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2018/08/22 09:43:06 wiz Exp $
 
 DISTNAME=	Convert-Bencode-1.03
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	converters perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Convert/}
 
