@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2016/07/09 06:37:51 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2018/08/22 09:42:59 wiz Exp $
 #
 
 DISTNAME=	dinotrace-9.4c
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	cad
 MASTER_SITES=	http://www.veripool.org/ftp/
 EXTRACT_SUFX=	.tgz

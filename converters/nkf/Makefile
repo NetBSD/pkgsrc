@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2018/06/19 22:51:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2018/08/22 09:43:06 wiz Exp $
 
+PKGREVISION= 1
 .include "${.CURDIR}/Makefile.common"
 
 PKGNAME=	nkf-2.14

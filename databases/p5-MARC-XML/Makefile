@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2017/09/27 19:41:21 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2018/08/22 09:43:19 wiz Exp $
 
 DISTNAME=	MARC-XML-1.0.4
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	converters perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/G/GM/GMCHARLT/
 

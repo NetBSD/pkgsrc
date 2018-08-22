@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2017/06/05 14:22:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2018/08/22 09:42:52 wiz Exp $
 
 DISTNAME=	B-Hooks-OP-Annotation-0.44
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=B/}
 

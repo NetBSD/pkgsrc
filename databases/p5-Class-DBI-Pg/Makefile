@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2017/09/27 19:11:47 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2018/08/22 09:43:14 wiz Exp $
 
 DISTNAME=	Class-DBI-Pg-0.09
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/D/DM/DMAKI/
 

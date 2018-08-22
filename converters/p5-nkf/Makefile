@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2018/06/19 22:51:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.34 2018/08/22 09:43:09 wiz Exp $
 #
 
+PKGREVISION= 1
 .include "../../converters/nkf/Makefile.common"
 
 PKGNAME=	p5-nkf-2.14

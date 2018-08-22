@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2016/07/09 06:37:52 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2018/08/22 09:43:00 wiz Exp $
 
 DISTNAME=	cgiirc-0.5.11
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	chat
 MASTER_SITES=	http://cgiirc.org/releases/
 

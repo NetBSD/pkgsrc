@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2017/08/16 20:21:08 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2018/08/22 09:43:33 wiz Exp $
 
 DISTNAME=	libwhisker2-2.5
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=whisker/}
 

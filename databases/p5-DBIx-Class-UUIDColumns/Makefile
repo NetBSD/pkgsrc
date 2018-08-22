@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2017/06/12 12:18:56 maya Exp $
+# $NetBSD: Makefile,v 1.14 2018/08/22 09:43:17 wiz Exp $
 
 DISTNAME=	DBIx-Class-UUIDColumns-0.02006
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBIx/}
 

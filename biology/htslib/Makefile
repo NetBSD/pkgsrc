@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2018/07/04 13:40:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2018/08/22 09:42:59 wiz Exp $
 
 DISTNAME=	htslib-1.8
+PKGREVISION=	1
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=samtools/}
 GITHUB_PROJECT=	htslib

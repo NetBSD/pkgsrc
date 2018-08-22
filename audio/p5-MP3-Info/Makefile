@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2017/10/11 07:06:18 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2018/08/22 09:42:56 wiz Exp $
 
 DISTNAME=	MP3-Info-1.26
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	audio perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MP3/}
 

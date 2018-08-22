@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2018/05/11 09:13:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.34 2018/08/22 09:43:08 wiz Exp $
 
 DISTNAME=	Text-Iconv-1.7
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	converters perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 

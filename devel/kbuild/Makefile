@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/05/31 07:46:32 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2018/08/22 09:43:31 wiz Exp $
 
 KBUILDNAME=	kBuild
 KBUILDVERMAJ=	0.1.9998
@@ -8,6 +8,7 @@ KBUILDVERSVN=	3127
 
 DISTNAME=	${KBUILDNAME}-r${KBUILDVERSVN}
 PKGNAME=	kbuild-${KBUILDVERMAJ}.${KBUILDVERMIN}.r${KBUILDVERSVN}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://svn.netlabs.org/repos/kbuild/trunk
 
