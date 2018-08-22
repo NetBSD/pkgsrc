@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2017/06/05 14:22:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2018/08/22 09:43:57 wiz Exp $
 
 # no Release yet
 GIT_COMMIT=	d1d7556
 DISTNAME=	master
 PKGNAME=	p5-Eval-LineNumbers-0.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_GITHUB:=/muir/Eval-LineNumbers/archive/}
 EXTRACT_SUFX=	.zip

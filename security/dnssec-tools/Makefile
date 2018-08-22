@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2017/08/01 14:59:04 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2018/08/22 09:46:17 wiz Exp $
 
 DISTNAME=	dnssec-tools-2.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	https://www.dnssec-tools.org/download/
 
