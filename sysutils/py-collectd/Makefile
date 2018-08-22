@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2016/10/13 15:17:29 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2018/08/22 09:46:40 wiz Exp $
 
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=		1
 COLLECTD_PACKAGE=	python
 
 COMMENT=		Statistics collection daemon - python plugin

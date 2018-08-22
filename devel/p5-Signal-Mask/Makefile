@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2017/06/05 14:23:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2018/08/22 09:44:37 wiz Exp $
 
 DISTNAME=	Signal-Mask-0.008
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	http://cpan.metacpan.org/authors/id/L/LE/LEONT/
 

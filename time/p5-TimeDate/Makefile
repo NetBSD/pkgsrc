@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2017/06/05 14:25:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.34 2018/08/22 09:47:20 wiz Exp $
 #
 
 DISTNAME=	TimeDate-2.30
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Date/}
 

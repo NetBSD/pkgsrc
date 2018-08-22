@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2018/01/27 19:07:47 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2018/08/22 09:46:11 wiz Exp $
 #
 
 DISTNAME=	pkgse-0.3
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://imil.net/NetBSD/
 EXTRACT_SUFX=	.tgz

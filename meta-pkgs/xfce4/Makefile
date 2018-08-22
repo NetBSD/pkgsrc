@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.87 2018/06/04 10:51:56 youri Exp $
+# $NetBSD: Makefile,v 1.88 2018/08/22 09:45:42 wiz Exp $
 
 META_PACKAGE=	yes
 
-PKGREVISION= 13
+PKGREVISION= 14
 .include "Makefile.common"
 
 DISTNAME=	xfce4-${XFCE4_VERSION}

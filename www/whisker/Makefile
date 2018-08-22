@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2017/09/06 10:40:35 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2018/08/22 09:48:00 wiz Exp $
 
 DISTNAME=	whisker-2.1
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	security www
 #MASTER_SITES=	http://www.wiretrip.net/rfp/bins/whisker/
 

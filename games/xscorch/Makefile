@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2017/09/06 10:40:29 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2018/08/22 09:45:09 wiz Exp $
 
 DISTNAME=	xscorch-0.2.0
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	games
 #MASTER_SITES=	http://www.xscorch.org/releases/
 

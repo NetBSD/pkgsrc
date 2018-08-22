@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2018/03/12 11:16:37 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2018/08/22 09:45:09 wiz Exp $
 
 DISTNAME=	zoom-1.1.5
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	http://www.logicalshift.co.uk/unix/zoom/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2017/06/05 14:23:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2018/08/22 09:44:29 wiz Exp $
 
 DISTNAME=	Params-Util-1.07
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Params/}
 

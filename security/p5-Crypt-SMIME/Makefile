@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2018/03/11 11:09:16 maya Exp $
+# $NetBSD: Makefile,v 1.2 2018/08/22 09:46:24 wiz Exp $
 
 DISTNAME=	Crypt-SMIME-0.25
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/M/MI/MIKAGE/
 

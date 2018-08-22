@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2018/07/03 05:03:27 adam Exp $
+# $NetBSD: Makefile,v 1.25 2018/08/22 09:45:52 wiz Exp $
 
 VERSION=	3.4.23
 DISTNAME=	${VERSION}
 PKGNAME=	exabgp-${VERSION}
+PKGREVISION=	1
 EGG_NAME=	exabgp-${VERSION}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Exa-Networks/exabgp/archive/}

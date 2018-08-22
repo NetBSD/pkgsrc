@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2014/02/17 11:21:55 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2018/08/22 09:46:32 wiz Exp $
 
 COLLECTD_PACKAGE=	memcached
 COLLECTD_PLUGINS=	memcachec memcached
 
 COMMENT=		Statistics collection daemon - memcached plugins
+PKGREVISION=		1
 
 .include "../../sysutils/collectd/Makefile.common"
 

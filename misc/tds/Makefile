@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2017/09/04 18:00:57 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2018/08/22 09:45:47 wiz Exp $
 #
 
 DISTNAME=	tds-1.4.2
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	misc www japanese
 #MASTER_SITES=	http://tds.dive-in.to/dist/stable/
 

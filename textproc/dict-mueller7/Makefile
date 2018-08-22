@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2017/01/19 18:52:27 agc Exp $
+# $NetBSD: Makefile,v 1.12 2018/08/22 09:46:45 wiz Exp $
 
 DISTNAME=	Mueller7GPL
 PKGNAME=	dict-mueller7-1.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	textproc
 MASTER_SITES=	http://dict.osdn.org.ua/
 MASTER_SITES+=	http://mova.org/~cheusov/pub/dict-mueller/

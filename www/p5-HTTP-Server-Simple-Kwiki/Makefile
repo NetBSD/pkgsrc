@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2017/06/05 14:25:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2018/08/22 09:47:43 wiz Exp $
 
 DISTNAME=	HTTP-Server-Simple-Kwiki-0.29
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTP/}
 
