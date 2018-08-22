@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3754 2018/08/22 13:38:15 leot Exp $
+$NetBSD: CHANGES-2018,v 1.3755 2018/08/22 13:39:58 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5312,3 +5312,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-pkgconfig to 1.4.0 [adam 2018-08-22]
 	Updated sysutils/py-kazoo to 2.5.0 [adam 2018-08-22]
 	Updated graphics/ImageMagick6 to 6.9.9.38nb4 [leot 2018-08-22]
+	Updated graphics/ImageMagick to 7.0.8.10nb2 [leot 2018-08-22]
