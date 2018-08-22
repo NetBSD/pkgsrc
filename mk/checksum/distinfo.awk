@@ -1,6 +1,6 @@
 #!/usr/bin/awk -f
 #
-# $NetBSD: distinfo.awk,v 1.4 2007/08/16 16:29:27 jlam Exp $
+# $NetBSD: distinfo.awk,v 1.5 2018/08/22 20:48:36 maya Exp $
 #
 # Copyright (c) 2007 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -16,13 +16,6 @@
 # 2. Redistributions in binary form must reproduce the above copyright
 #    notice, this list of conditions and the following disclaimer in the
 #    documentation and/or other materials provided with the distribution.
-# 3. All advertising materials mentioning features or use of this software
-#    must display the following acknowledgement:
-#        This product includes software developed by the NetBSD
-#        Foundation, Inc. and its contributors.
-# 4. Neither the name of The NetBSD Foundation nor the names of its
-#    contributors may be used to endorse or promote products derived
-#    from this software without specific prior written permission.
 #
 # THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
 # ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
@@ -57,7 +50,7 @@
 #
 #	For example:
 #
-#	$NetBSD: distinfo.awk,v 1.4 2007/08/16 16:29:27 jlam Exp $
+#	$NetBSD: distinfo.awk,v 1.5 2018/08/22 20:48:36 maya Exp $
 #
 #	SHA1 (make-3.81.tar.gz) = cd4fa5a3184176492bf0799593a8f250a728210c
 #	RMD160 (make-3.81.tar.gz) = a713a72875cb9a29568677c98022465c6f55cbbf
