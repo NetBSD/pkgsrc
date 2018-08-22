@@ -1,5 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2018/06/16 14:50:25 bsiegert Exp $
-bin/gsutil
+@comment $NetBSD: PLIST,v 1.3 2018/08/22 08:31:30 adam Exp $
+bin/gsutil-${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/gslib/CHECKSUM
 ${PYSITELIB}/gslib/README
 ${PYSITELIB}/gslib/VERSION
@@ -615,13 +622,6 @@ ${PYSITELIB}/gslib/utils/update_util.pyo
 ${PYSITELIB}/gslib/wildcard_iterator.py
 ${PYSITELIB}/gslib/wildcard_iterator.pyc
 ${PYSITELIB}/gslib/wildcard_iterator.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/test/__init__.py
 ${PYSITELIB}/test/__init__.pyc
 ${PYSITELIB}/test/__init__.pyo
