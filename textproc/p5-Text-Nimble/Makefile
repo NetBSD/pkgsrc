@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2017/06/05 14:24:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2018/08/22 09:47:01 wiz Exp $
 
 DISTNAME=		Text-Nimble-0.002001
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Text/}
 

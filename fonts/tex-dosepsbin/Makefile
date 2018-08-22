@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2016/07/09 06:38:17 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2018/08/22 09:45:07 wiz Exp $
 
 DISTNAME=	dosepsbin
 PKGNAME=	tex-${DISTNAME}-1.2
-PKGREVISION=	2
+PKGREVISION=	3
 TEXLIVE_REV=	29752
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

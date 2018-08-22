@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2018/05/02 11:15:20 markd Exp $
+# $NetBSD: Makefile,v 1.13 2018/08/22 09:45:17 wiz Exp $
 
 DISTNAME=	a2ping
 PKGNAME=	tex-${DISTNAME}-2.83p
+PKGREVISION=	1
 TEXLIVE_REV=	46893
 
 MAINTAINER=	minskim@NetBSD.org

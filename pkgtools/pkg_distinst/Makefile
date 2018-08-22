@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2016/07/09 06:38:48 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2018/08/22 09:46:11 wiz Exp $
 
 PKGNAME=	pkg_distinst-0.02
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	pkgtools
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

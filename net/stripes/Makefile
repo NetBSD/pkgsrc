@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2017/09/04 18:00:59 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2018/08/22 09:46:07 wiz Exp $
 
 DISTNAME=		stripes-2.1
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		net
 MASTER_SITES=		# ftp://ftp.gw.com/sw/stripes/
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2018/07/01 15:47:17 christos Exp $
+# $NetBSD: Makefile,v 1.14 2018/08/22 09:46:29 wiz Exp $
 #
 
+PKGREVISION=		1
 CATEGORIES=		security net
 #DISTNAME=		racoon2-20100526a
 #PKGREVISION=		10

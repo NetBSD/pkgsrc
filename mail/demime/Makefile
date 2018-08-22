@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2016/07/09 06:38:28 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2018/08/22 09:45:24 wiz Exp $
 
 DISTNAME=	demime-1.1d
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	mail textproc
 MASTER_SITES=	${MASTER_SITE_FREEBSD}
 DISTFILES=	${DISTNAME:S/-/./} \

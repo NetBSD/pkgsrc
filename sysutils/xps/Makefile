@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2016/07/09 06:39:04 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2018/08/22 09:46:44 wiz Exp $
 
 DISTNAME=	xps-4.2
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=motif-pstree/}
 

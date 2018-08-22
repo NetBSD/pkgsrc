@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2018/03/11 13:04:15 maya Exp $
+# $NetBSD: Makefile,v 1.2 2018/08/22 09:46:52 wiz Exp $
 
 DISTNAME=	Text-MultiMarkdown-1.000035
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/B/BO/BOBTFISH/
 

@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2013/11/29 12:58:03 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2018/08/22 09:45:13 wiz Exp $
 #
 
 HELPLANGUAGE=		zh_CN
 
 DISTNAME=		gimp-help-${GIMPDOCVER}-html-${HELPLANGUAGE}
 PKGNAME=		gimp-docs-${HELPLANGUAGE}-${DISTNAME:S/gimp-help-//:S/-html-${HELPLANGUAGE}//}
+PKGREVISION=		1
 
 MAKE_JOBS_SAFE=		no
 
