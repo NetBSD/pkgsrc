@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2017/08/01 16:47:43 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2018/08/22 09:45:53 wiz Exp $
 
 DISTNAME=	gnapfetch-0.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net
 #MASTER_SITES=	http://entropy.atlantic.net/gnapfetch/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2017/09/17 22:13:30 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2018/08/22 09:46:27 wiz Exp $
 
 DISTNAME=		Net-SSH-Perl-2.14
 PKGNAME=		p5-${DISTNAME:C/-Perl//}
+PKGREVISION=		1
 CATEGORIES=		security net perl5
 MASTER_SITES=		http://search.cpan.org/CPAN/authors/id/S/SC/SCHWIGON/
 

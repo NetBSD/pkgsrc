@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2017/06/14 16:16:34 jperkin Exp $
+# $NetBSD: Makefile,v 1.21 2018/08/22 09:44:54 wiz Exp $
 
 DISTNAME=	TryCatch-1.003002
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/A/AS/ASH/}
 

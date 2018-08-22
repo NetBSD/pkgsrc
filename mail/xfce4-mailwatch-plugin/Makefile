@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2018/04/16 14:34:50 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2018/08/22 09:45:35 wiz Exp $
 
-PKGREVISION= 7
+PKGREVISION= 8
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-mailwatch-plugin-1.2.0

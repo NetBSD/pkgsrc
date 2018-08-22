@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2018/07/04 13:40:31 jperkin Exp $
+# $NetBSD: Makefile,v 1.40 2018/08/22 09:46:07 wiz Exp $
 
 DISTNAME=	smokeping-2.6.7
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	net
 MASTER_SITES=	http://oss.oetiker.ch/smokeping/pub/
 

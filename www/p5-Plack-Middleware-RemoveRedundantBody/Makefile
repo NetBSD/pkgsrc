@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2018/02/28 09:07:38 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2018/08/22 09:47:50 wiz Exp $
 
 DISTNAME=	Plack-Middleware-RemoveRedundantBody-0.07
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Plack/}
 

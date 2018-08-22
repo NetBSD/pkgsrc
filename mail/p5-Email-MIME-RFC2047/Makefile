@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2017/08/17 13:31:18 wen Exp $
+# $NetBSD: Makefile,v 1.5 2018/08/22 09:45:28 wiz Exp $
 
 DISTNAME=	Email-MIME-RFC2047-0.97
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/N/NW/NWELLNHOF/
 

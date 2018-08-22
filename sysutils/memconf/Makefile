@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2016/07/09 06:39:01 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2018/08/22 09:46:36 wiz Exp $
 #
 
 DISTNAME=		memconf
 PKGNAME=		memconf-2.16
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.4schmidts.com/unix/
 DIST_SUBDIR=		${PKGNAME_NOREV}

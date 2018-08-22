@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2016/07/09 06:38:59 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2018/08/22 09:46:33 wiz Exp $
 #
 
 DISTNAME=	dmassage-0.6
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.sentia.org/downloads/
 
