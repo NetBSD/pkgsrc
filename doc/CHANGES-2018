@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3752 2018/08/22 10:57:29 leot Exp $
+$NetBSD: CHANGES-2018,v 1.3753 2018/08/22 13:00:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5309,3 +5309,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/perl5 to 5.28.0 [wiz 2018-08-22]
 	Updated net/py-gsutil to 4.33 [adam 2018-08-22]
 	Updated net/youtube-dl to 20180822 [leot 2018-08-22]
+	Updated devel/py-pkgconfig to 1.4.0 [adam 2018-08-22]
+	Updated sysutils/py-kazoo to 2.5.0 [adam 2018-08-22]
