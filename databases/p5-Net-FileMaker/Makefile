@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2017/06/05 14:22:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2018/08/22 09:43:19 wiz Exp $
 
 DISTNAME=	Net-FileMaker-0.064
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/S/SQ/SQUEEK/
 

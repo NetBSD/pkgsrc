@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2017/06/05 14:22:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2018/08/22 09:43:21 wiz Exp $
 
 DISTNAME=	Search-QueryParser-0.94
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DA/DAMI/}
 
