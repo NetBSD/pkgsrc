@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/09/12 14:55:19 adam Exp $
+$NetBSD: distinfo,v 1.5 2018/08/22 12:59:55 adam Exp $
 
-SHA1 (kazoo-2.4.0.tar.gz) = c6366c20e2fa4208e3d11b563178ea2c6198c371
-RMD160 (kazoo-2.4.0.tar.gz) = 64ce177d380a4a1da25cae735f4ee0b20ffadaca
-SHA512 (kazoo-2.4.0.tar.gz) = 85d0b23b6709ec14ff9156ceb589c52fa8ae48234bc0cfe7a686adc7959e7696d84412cb249839a912bbca1702855c022264a6404b90b0ef8c408c592466a3c1
-Size (kazoo-2.4.0.tar.gz) = 142830 bytes
+SHA1 (kazoo-2.5.0.tar.gz) = c0f29741838a111b7b4dd5e89d14bd2fcf29ecd3
+RMD160 (kazoo-2.5.0.tar.gz) = a9c2eb3e6a5ae0388610c080073d3be6bedc7cc9
+SHA512 (kazoo-2.5.0.tar.gz) = cb85a33f2d0aa71fc5a82e7046e5d331417df865c1a4bc18266cee65ffd6c36e12cd4058ee591214ec83225a9b3ee193587f3d07b5c1436cc715a403364ec1af
+Size (kazoo-2.5.0.tar.gz) = 147189 bytes

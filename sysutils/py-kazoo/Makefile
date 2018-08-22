@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2017/09/16 19:27:08 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2018/08/22 12:59:55 adam Exp $
 
-DISTNAME=	kazoo-2.4.0
+DISTNAME=	kazoo-2.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/kazoo/}
@@ -10,12 +10,11 @@ HOMEPAGE=	https://kazoo.readthedocs.org/
 COMMENT=	Higher level Zookeeper client
 LICENSE=	apache-2.0
 
-DEPENDS+=		${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-BUILD_DEPENDS+=		${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
-BUILD_DEPENDS+=		${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
-BUILD_DEPENDS+=		${PYPKGPREFIX}-gevent-[0-9]*:../../net/py-gevent
-BUILD_DEPENDS+=		${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-BUILD_DEPENDS+=		${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
+TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
+TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_LANGUAGES=	# none
 
