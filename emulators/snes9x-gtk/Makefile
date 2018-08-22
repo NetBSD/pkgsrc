@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2018/07/18 00:06:15 joerg Exp $
+# $NetBSD: Makefile,v 1.59 2018/08/22 09:45:05 wiz Exp $
 
 DISTNAME=	snes9x-1.53-src
 PKGNAME=	snes9x-gtk-1.53.81
-PKGREVISION=	37
+PKGREVISION=	38
 CATEGORIES=	emulators
 MASTER_SITES=	http://snes9x-gtk.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2

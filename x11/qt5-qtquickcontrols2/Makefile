@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2018/07/20 03:34:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2018/08/22 09:48:04 wiz Exp $
 
 DISTNAME=	qtquickcontrols2-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtquickcontrols2-${QTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Next generation user interface controls based on Qt Quick
 
 BUILD_TARGET=		sub-src

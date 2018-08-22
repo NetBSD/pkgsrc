@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2018/07/04 13:40:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.56 2018/08/22 09:46:45 wiz Exp $
 
 DISTNAME=	eb-4.3
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	textproc japanese
 MASTER_SITES=	ftp://ftp.sra.co.jp/pub/misc/eb/appendix/
 MASTER_SITES+=	ftp://ftp.sra.co.jp/pub/misc/eb/
