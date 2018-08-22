@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2017/09/03 08:37:00 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2018/08/22 09:46:35 wiz Exp $
 #
 
 DISTNAME=		magicrescue-1.1.4
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		sysutils
 #MASTER_SITES=		http://jbj.rapanden.dk/magicrescue/release/
 

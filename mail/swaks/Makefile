@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2017/01/08 20:35:55 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2018/08/22 09:45:34 wiz Exp $
 
 DISTNAME=		swaks-20170101.0
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}files/
 
