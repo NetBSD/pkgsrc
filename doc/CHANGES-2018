@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3750 2018/08/22 08:37:56 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3751 2018/08/22 10:53:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5307,3 +5307,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated chat/tootstream to 0.3.5 [nia 2018-08-21]
 	Updated x11/libX11 to 1.6.6 [wiz 2018-08-21]
 	Updated lang/perl5 to 5.28.0 [wiz 2018-08-22]
+	Updated net/py-gsutil to 4.33 [adam 2018-08-22]
