@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.67 2018/08/09 11:10:10 leot Exp $
+@comment $NetBSD: PLIST,v 1.68 2018/08/22 10:57:11 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -233,6 +233,9 @@ ${PYSITELIB}/youtube_dl/extractor/biobiochiletv.pyo
 ${PYSITELIB}/youtube_dl/extractor/biqle.py
 ${PYSITELIB}/youtube_dl/extractor/biqle.pyc
 ${PYSITELIB}/youtube_dl/extractor/biqle.pyo
+${PYSITELIB}/youtube_dl/extractor/bitchute.py
+${PYSITELIB}/youtube_dl/extractor/bitchute.pyc
+${PYSITELIB}/youtube_dl/extractor/bitchute.pyo
 ${PYSITELIB}/youtube_dl/extractor/bleacherreport.py
 ${PYSITELIB}/youtube_dl/extractor/bleacherreport.pyc
 ${PYSITELIB}/youtube_dl/extractor/bleacherreport.pyo
@@ -956,6 +959,9 @@ ${PYSITELIB}/youtube_dl/extractor/khanacademy.pyo
 ${PYSITELIB}/youtube_dl/extractor/kickstarter.py
 ${PYSITELIB}/youtube_dl/extractor/kickstarter.pyc
 ${PYSITELIB}/youtube_dl/extractor/kickstarter.pyo
+${PYSITELIB}/youtube_dl/extractor/kinopoisk.py
+${PYSITELIB}/youtube_dl/extractor/kinopoisk.pyc
+${PYSITELIB}/youtube_dl/extractor/kinopoisk.pyo
 ${PYSITELIB}/youtube_dl/extractor/konserthusetplay.py
 ${PYSITELIB}/youtube_dl/extractor/konserthusetplay.pyc
 ${PYSITELIB}/youtube_dl/extractor/konserthusetplay.pyo
@@ -2342,6 +2348,9 @@ ${PYSITELIB}/youtube_dl/extractor/younow.pyo
 ${PYSITELIB}/youtube_dl/extractor/youporn.py
 ${PYSITELIB}/youtube_dl/extractor/youporn.pyc
 ${PYSITELIB}/youtube_dl/extractor/youporn.pyo
+${PYSITELIB}/youtube_dl/extractor/yourporn.py
+${PYSITELIB}/youtube_dl/extractor/yourporn.pyc
+${PYSITELIB}/youtube_dl/extractor/yourporn.pyo
 ${PYSITELIB}/youtube_dl/extractor/yourupload.py
 ${PYSITELIB}/youtube_dl/extractor/yourupload.pyc
 ${PYSITELIB}/youtube_dl/extractor/yourupload.pyo
