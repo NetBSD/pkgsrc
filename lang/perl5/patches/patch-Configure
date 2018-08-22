@@ -1,4 +1,4 @@
-$NetBSD: patch-Configure,v 1.5 2018/01/12 11:32:21 jperkin Exp $
+$NetBSD: patch-Configure,v 1.6 2018/08/22 08:37:46 wiz Exp $
 
 * Use "uname -r" to get OS version for *BSD.
 * Move $loclibpth to the end of $dlist, instead of the beginning.
@@ -6,9 +6,9 @@ $NetBSD: patch-Configure,v 1.5 2018/01/12 11:32:21 jperkin Exp $
 * Honor more ldflags in shared objects.
 * Several other changes.
 
---- Configure.orig	2017-09-22 14:27:02.000000000 +0000
+--- Configure.orig	2018-05-21 12:29:23.000000000 +0000
 +++ Configure
-@@ -3485,13 +3485,14 @@ EOM
+@@ -3471,13 +3471,14 @@ EOM
  			osvers="$3"
  			;;
  		dragonfly) osname=dragonfly
@@ -25,7 +25,7 @@ $NetBSD: patch-Configure,v 1.5 2018/01/12 11:32:21 jperkin Exp $
  		genix)	osname=genix ;;
  		gnu)	osname=gnu
  			osvers="$3" ;;
-@@ -3514,7 +3515,7 @@ EOM
+@@ -3500,7 +3501,7 @@ EOM
  		MiNT)	osname=mint
  			;;
  		netbsd*) osname=netbsd
@@ -34,16 +34,16 @@ $NetBSD: patch-Configure,v 1.5 2018/01/12 11:32:21 jperkin Exp $
  			;;
  		news-os) osvers="$3"
  			case "$3" in
-@@ -3524,7 +3525,7 @@ EOM
+@@ -3510,7 +3511,7 @@ EOM
  			;;
  		nonstop-ux) osname=nonstopux ;;
  		openbsd) osname=openbsd
--                	osvers="$3"
-+                	osvers=`$uname -r | UU/tr '[A-Z]' '[a-z]'`
-                 	;;
+-			osvers="$3"
++			osvers=`$uname -r | UU/tr '[A-Z]' '[a-z]'`
+ 			;;
  		os2)	osname=os2
  			osvers="$4"
-@@ -3539,6 +3540,9 @@ EOM
+@@ -3525,6 +3526,9 @@ EOM
  		qnx) osname=qnx
  			osvers="$4"
  			;;
@@ -53,7 +53,7 @@ $NetBSD: patch-Configure,v 1.5 2018/01/12 11:32:21 jperkin Exp $
  		solaris) osname=solaris
  			case "$3" in
  			5*) osvers=`echo $3 | $sed 's/^5/2/g'` ;;
-@@ -4977,7 +4981,7 @@ esac
+@@ -4963,7 +4967,7 @@ esac
  # If using gcc or clang, we can get better values for libpth, incpth
  # and usrinc directly from the compiler.
  # Note that ccname for clang is also gcc.
@@ -62,7 +62,7 @@ $NetBSD: patch-Configure,v 1.5 2018/01/12 11:32:21 jperkin Exp $
      gcc)
  	$echo 'extern int foo;' > try.c
  	set X `$cppstdin -v try.c 2>&1 | $awk '/^#include </,/^End of search /'|$cppfilter $grep '/include'`
-@@ -5053,14 +5057,14 @@ case "$plibpth" in
+@@ -5039,14 +5043,14 @@ case "$plibpth" in
  esac
  case "$libpth" in
  ' ') dlist='';;
@@ -79,7 +79,7 @@ $NetBSD: patch-Configure,v 1.5 2018/01/12 11:32:21 jperkin Exp $
  		case " $libpth " in
  		*" $xxx "*) ;;
  		*) libpth="$libpth $xxx";;
-@@ -5176,7 +5180,7 @@ lib_ext=$_a
+@@ -5162,7 +5166,7 @@ lib_ext=$_a
  obj_ext=$_o
  path_sep=$p_
  
@@ -88,7 +88,7 @@ $NetBSD: patch-Configure,v 1.5 2018/01/12 11:32:21 jperkin Exp $
  
  : Which makefile gets called first.  This is used by make depend.
  case "$firstmakefile" in
-@@ -5507,7 +5511,7 @@ default|recommended)
+@@ -5493,7 +5497,7 @@ default|recommended)
  	# thing. (NWC)
  	case "$osname" in
  	amigaos) ;; # -fstack-protector builds but doesn't work
@@ -97,7 +97,7 @@ $NetBSD: patch-Configure,v 1.5 2018/01/12 11:32:21 jperkin Exp $
  		?*)	set stack-protector-strong -fstack-protector-strong
  			eval $checkccflag
  			case "$dflt" in
-@@ -6492,6 +6496,15 @@ case "$nm_so_opt" in
+@@ -6477,6 +6481,15 @@ case "$nm_so_opt" in
  	;;
  esac
  
@@ -113,7 +113,7 @@ $NetBSD: patch-Configure,v 1.5 2018/01/12 11:32:21 jperkin Exp $
  : Figure out where the libc is located
  case "$runnm" in
  true)
-@@ -7626,7 +7639,9 @@ rp='Pathname for the site-specific libra
+@@ -7604,7 +7617,9 @@ rp='Pathname for the site-specific libra
  . ./getfile
  prefixvar=sitelib
  . ./setprefixvar
@@ -124,7 +124,7 @@ $NetBSD: patch-Configure,v 1.5 2018/01/12 11:32:21 jperkin Exp $
  
  : Determine list of previous versions to include in @INC
  $cat > getverlist <<EOPL
-@@ -8038,7 +8053,9 @@ case "$vendorprefix" in
+@@ -8015,7 +8030,9 @@ case "$vendorprefix" in
  	vendorlibexp="$ansexp"
  	;;
  esac
@@ -135,7 +135,7 @@ $NetBSD: patch-Configure,v 1.5 2018/01/12 11:32:21 jperkin Exp $
  prefixvar=vendorlib
  . ./installprefix
  
-@@ -8580,6 +8597,7 @@ EOM
+@@ -8511,6 +8528,7 @@ EOM
  			  esac
  			  ;;
  		    *linux*|irix*|gnu*)  dflt="-shared $optimize" ;;
@@ -143,7 +143,7 @@ $NetBSD: patch-Configure,v 1.5 2018/01/12 11:32:21 jperkin Exp $
  		    solaris) # See [perl #66604].
  			    # On Solaris 11, gcc -m64 on amd64
  			    # appears not to understand -G.  gcc versions at
-@@ -8619,7 +8637,7 @@ EOM
+@@ -8550,7 +8568,7 @@ EOM
  	esac
  	for thisflag in $ldflags; do
  	    case "$thisflag" in
@@ -152,7 +152,7 @@ $NetBSD: patch-Configure,v 1.5 2018/01/12 11:32:21 jperkin Exp $
  		    case " $dflt " in
  			*" $thisflag "*) ;;
  			*) dflt="$dflt $thisflag" ;;
-@@ -8878,6 +8896,10 @@ if "$useshrplib"; then
+@@ -8809,6 +8827,10 @@ if "$useshrplib"; then
  	bsdos|linux|irix*|dec_osf|gnu*|haiku)
  		xxx="-Wl,-rpath,$shrpdir"
  		;;
@@ -163,7 +163,7 @@ $NetBSD: patch-Configure,v 1.5 2018/01/12 11:32:21 jperkin Exp $
  	hpux*)
  		# hpux doesn't like the default, either.
  		tmp_shrpenv="env LDOPTS=\"+s +b${shrpdir}\""
-@@ -8885,6 +8907,9 @@ if "$useshrplib"; then
+@@ -8816,6 +8838,9 @@ if "$useshrplib"; then
  	cygwin)
  		# cygwin needs only ldlibpth
  		;;
@@ -173,7 +173,7 @@ $NetBSD: patch-Configure,v 1.5 2018/01/12 11:32:21 jperkin Exp $
  	*)
  		tmp_shrpenv="env LD_RUN_PATH=$shrpdir"
  		;;
-@@ -9966,6 +9991,13 @@ esac
+@@ -9896,6 +9921,13 @@ esac
  : Check if we want perlio
  useperlio="$define"
  
@@ -187,7 +187,7 @@ $NetBSD: patch-Configure,v 1.5 2018/01/12 11:32:21 jperkin Exp $
  : Set the vendorbin variables
  case "$vendorprefix" in
  '')	d_vendorbin="$undef"
-@@ -20424,7 +20456,15 @@ RCAT(Rei,ser)
+@@ -19825,7 +19857,15 @@ RCAT(Rei,ser)
  ACAT(Cir,cus)
  EOCP
  $cppstdin $cppflags $cppminus <cpp_stuff.c >cpp_stuff.out 2>&1
@@ -204,7 +204,7 @@ $NetBSD: patch-Configure,v 1.5 2018/01/12 11:32:21 jperkin Exp $
  	echo "Oh!  Smells like ANSI's been here." >&4
  	echo "We can catify or stringify, separately or together!"
  	cpp_stuff=42
-@@ -23296,6 +23336,21 @@ eval $inhdr
+@@ -22641,6 +22681,21 @@ eval $inhdr
  set fenv.h i_fenv
  eval $inhdr
  
@@ -226,7 +226,7 @@ $NetBSD: patch-Configure,v 1.5 2018/01/12 11:32:21 jperkin Exp $
  : see if this is a fp.h system
  set fp.h i_fp
  eval $inhdr
-@@ -25665,4 +25720,3 @@ $rm -f kit*isdone ark*isdone
+@@ -25015,4 +25070,3 @@ $rm -f kit*isdone ark*isdone
  $rm -rf UU
  
  : End of Configure
