@@ -1,0 +1,22 @@
+$NetBSD: patch-config_policy.xml,v 1.1 2018/08/22 13:38:00 leot Exp $
+
+Disable ghostscript coders by default to workaround VU#332928:
+<https://www.kb.cert.org/vuls/id/332928>
+
+--- config/policy.xml.orig	2018-08-13 11:05:28.000000000 +0000
++++ config/policy.xml
+@@ -74,4 +74,14 @@
+   <!-- <policy domain="cache" name="memory-map" value="anonymous"/> -->
+   <!-- <policy domain="cache" name="synchronize" value="True"/> -->
+   <!-- <policy domain="cache" name="shared-secret" value="passphrase" stealth="true"/> -->
++
++  <!-- 
++    -- Disable ghostscript coders as suggested by VU#332928
++    --  <https://www.kb.cert.org/vuls/id/332928>
++    -->
++  <policy domain="coder" rights="none" pattern="PS" />
++  <policy domain="coder" rights="none" pattern="EPS" />
++  <policy domain="coder" rights="none" pattern="PDF" />
++  <policy domain="coder" rights="none" pattern="XPS" />
++
+ </policymap>
