@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2017/09/03 08:53:07 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2018/08/22 09:43:57 wiz Exp $
 
 DISTNAME=	Event-ExecFlow-0.64
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	devel
 MASTER_SITES=	http://www.exit1.org/packages/Event-ExecFlow/dist/
 

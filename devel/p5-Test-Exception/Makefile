@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2017/06/05 14:23:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2018/08/22 09:44:45 wiz Exp $
 
 DISTNAME=		Test-Exception-0.43
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Test/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2017/06/12 07:40:28 maya Exp $
+# $NetBSD: Makefile,v 1.24 2018/08/22 09:46:25 wiz Exp $
 
 DISTNAME=	Digest-BubbleBabble-0.02
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	security perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Digest/}
 

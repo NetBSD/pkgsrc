@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2017/06/05 14:24:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.43 2018/08/22 09:46:21 wiz Exp $
 
 DISTNAME=		Crypt-CBC-2.33
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2017/06/05 14:24:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2018/08/22 09:46:39 wiz Exp $
 #
 
 DISTNAME=		Sys-Hostname-Long-1.5
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		sysutils perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Sys/}
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2017/06/05 14:24:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2018/08/22 09:46:28 wiz Exp $
 #
 
 DISTNAME=		OpenSSL-0.09
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		12
+PKGREVISION=		13
 CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/O/OE/OESI/}
 

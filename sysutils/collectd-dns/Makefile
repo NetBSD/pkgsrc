@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2015/04/07 13:18:25 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2018/08/22 09:46:32 wiz Exp $
 
 COLLECTD_PACKAGE=	dns
 
 COMMENT=		Statistics collection daemon - dns plugin
+PKGREVISION=		1
 
 .include "../../sysutils/collectd/Makefile.common"
 

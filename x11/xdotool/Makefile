@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/08/28 11:30:53 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2018/08/22 09:48:05 wiz Exp $
 #
 
 DISTNAME=	xdotool-2.20110530.1
+PKGREVISION=     1
 CATEGORIES=     x11
 MASTER_SITES=	https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/semicomplete/
 

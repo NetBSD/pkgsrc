@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.36 2016/07/09 06:39:02 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2018/08/22 09:46:36 wiz Exp $
 #
 
 DISTNAME=	munin_${VER}
 VER=		1.3.2
 PKGNAME=	munin-node-${VER}
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=munin/}
 

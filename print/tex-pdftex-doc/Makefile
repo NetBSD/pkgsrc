@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2016/07/09 06:38:52 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2018/08/22 09:46:15 wiz Exp $
 
 DISTNAME=	pdftex.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2016
-PKGREVISION=	1
+PKGREVISION=	2
 TEXLIVE_REV=	41149
 
 MAINTAINER=	minskim@NetBSD.org

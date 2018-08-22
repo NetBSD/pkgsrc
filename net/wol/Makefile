@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2016/07/09 06:38:47 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2018/08/22 09:46:09 wiz Exp $
 
 DISTNAME=	wol-0.7.1
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ahh/}
 

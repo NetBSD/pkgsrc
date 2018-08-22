@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2016/07/09 06:38:45 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2018/08/22 09:46:07 wiz Exp $
 #
 
 DISTNAME=		snmptt_1.3
 EXTRACT_SUFX=		.tgz
 PKGNAME=		snmptt-1.3
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=snmptt/}
 

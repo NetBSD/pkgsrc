@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2017/06/05 14:25:11 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2018/08/22 09:47:30 wiz Exp $
 
 DISTNAME=	CGI-Session-Driver-memcached-0.04
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CGI/}
 

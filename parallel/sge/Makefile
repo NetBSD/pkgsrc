@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2018/07/04 13:40:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.67 2018/08/22 09:46:10 wiz Exp $
 
 DISTNAME=		sge-8.1.6
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		parallel sysutils
 MASTER_SITES=		http://arc.liv.ac.uk/downloads/SGE/releases/8.1.6/
 

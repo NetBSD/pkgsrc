@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.85 2016/07/09 06:38:50 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2018/08/22 09:46:13 wiz Exp $
 
 DISTNAME=	gv-3.7.4
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GNU:=gv/}
 

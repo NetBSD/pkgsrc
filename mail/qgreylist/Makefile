@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2017/12/24 10:14:21 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2018/08/22 09:45:33 wiz Exp $
 
 DISTNAME=		qgreylist-0.3
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		mail
 #MASTER_SITES=		${HOMEPAGE}
 

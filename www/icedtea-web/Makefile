@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2018/04/16 14:35:18 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2018/08/22 09:47:25 wiz Exp $
 
 # Keep icedtea-web distfile in sync with lang/openjdk7/icedtea-extras.mk
 DISTNAME=	icedtea-web-1.5.2
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	www
 MASTER_SITES=	http://icedtea.wildebeest.org/download/source/
 

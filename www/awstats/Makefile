@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2017/02/12 10:27:41 adam Exp $
+# $NetBSD: Makefile,v 1.61 2018/08/22 09:47:23 wiz Exp $
 
 DISTNAME=	awstats-7.6
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.awstats.org/files/
 

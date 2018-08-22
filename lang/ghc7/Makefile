@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2018/03/03 19:43:20 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2018/08/22 09:45:20 wiz Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
 DISTNAME=	ghc-7.6.3-src
 PKGNAME=	${DISTNAME:S/-src$//}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	lang
 MASTER_SITES=	https://www.haskell.org/ghc/dist/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2

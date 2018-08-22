@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2018/02/18 03:37:15 rillig Exp $
+# $NetBSD: Makefile,v 1.51 2018/08/22 09:47:23 wiz Exp $
 
 DISTNAME=	bins-1.1.29
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	www graphics
 MASTER_SITES=	http://zubro.chez.tiscali.fr/BINS/
 EXTRACT_SUFX=	.tar.bz2

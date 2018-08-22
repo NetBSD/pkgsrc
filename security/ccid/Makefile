@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2017/05/29 12:26:40 gdt Exp $
+# $NetBSD: Makefile,v 1.26 2018/08/22 09:46:17 wiz Exp $
 #
 
 DISTNAME=	ccid-1.4.26
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 # Note that the MASTER_SITES URL is not stable with version changes,
 # and one can end up with an old version if DISTNAME is changed but

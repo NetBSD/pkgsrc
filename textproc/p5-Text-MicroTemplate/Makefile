@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2017/06/12 07:44:24 maya Exp $
+# $NetBSD: Makefile,v 1.18 2018/08/22 09:47:01 wiz Exp $
 
 DISTNAME=	Text-MicroTemplate-0.24
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 

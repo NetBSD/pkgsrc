@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.34 2018/07/24 17:29:09 maya Exp $
+# $NetBSD: Makefile,v 1.35 2018/08/22 09:46:42 wiz Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 .include		"version.mk"
 
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools46-${VERSION}
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		sysutils
 MASTER_SITES=		https://downloads.xenproject.org/release/xen/${VERSION}/
 

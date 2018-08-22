@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2017/06/05 14:23:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2018/08/22 09:44:46 wiz Exp $
 #
 
 DISTNAME=		Test-HexString-0.03
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Test/}
 

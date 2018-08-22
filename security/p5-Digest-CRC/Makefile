@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2017/09/27 20:43:52 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2018/08/22 09:46:25 wiz Exp $
 
 DISTNAME=	Digest-CRC-0.22.2
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/O/OL/OLIMAUL/
 

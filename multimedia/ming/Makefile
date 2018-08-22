@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2016/07/09 06:38:39 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2018/08/22 09:45:49 wiz Exp $
 #
 
 .include "Makefile.common"
 
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	multimedia
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

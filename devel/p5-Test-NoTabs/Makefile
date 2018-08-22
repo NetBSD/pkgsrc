@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2018/05/02 12:10:31 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2018/08/22 09:44:48 wiz Exp $
 
 DISTNAME=	Test-NoTabs-2.02
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2016/07/09 06:38:13 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2018/08/22 09:45:00 wiz Exp $
 
 DISTNAME=	stfl-0.24
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://www.clifford.at/stfl/
 

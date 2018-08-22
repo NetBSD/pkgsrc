@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2017/06/18 04:04:00 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2018/08/22 09:45:16 wiz Exp $
 
 DISTNAME=	Image-JpegTran-AutoRotate-0.04
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/A/AU/AUDREYT/}
 

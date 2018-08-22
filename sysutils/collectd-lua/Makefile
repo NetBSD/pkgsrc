@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2017/07/25 06:48:51 alnsn Exp $
+# $NetBSD: Makefile,v 1.2 2018/08/22 09:46:32 wiz Exp $
 
 COLLECTD_PACKAGE=	lua
 COLLECTD_PLUGINS=	lua
 
 COMMENT=		Statistics collection daemon - lua plugin
+PKGREVISION=		1
 
 .include "../../sysutils/collectd/Makefile.common"
 

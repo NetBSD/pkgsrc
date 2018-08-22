@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2017/08/15 13:22:20 jperkin Exp $
+# $NetBSD: Makefile,v 1.24 2018/08/22 09:46:06 wiz Exp $
 #
 
 DISTNAME=		rancid-3.6.2
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.shrubbery.net/pub/rancid/
 

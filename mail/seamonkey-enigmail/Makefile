@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2016/05/05 12:06:38 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2018/08/22 09:45:34 wiz Exp $
 
+PKGREVISION= 1
 .include "../../mail/thunderbird-enigmail/Makefile.common"
 
 PKGNAME=	seamonkey-${DISTNAME}

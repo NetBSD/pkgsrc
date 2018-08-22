@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2017/09/04 18:55:10 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2018/08/22 09:46:40 wiz Exp $
 
 DISTNAME=	rconfig-0.47
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	sysutils
 MASTER_SITES=	http://rconfig.googlecode.com/files/
 EXTRACT_SUFX=	.tbz

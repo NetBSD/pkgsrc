@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/09/17 09:29:55 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2018/08/22 09:43:55 wiz Exp $
 
 DISTNAME=	Devel-OverrideGlobalRequire-0.001
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5 net
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/D/DA/DAGOLDEN/
 
