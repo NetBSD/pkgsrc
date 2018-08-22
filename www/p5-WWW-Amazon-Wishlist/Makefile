@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2018/05/02 20:21:05 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2018/08/22 09:47:55 wiz Exp $
 
 DISTNAME=	WWW-Amazon-Wishlist-2.019
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=WWW/}
 

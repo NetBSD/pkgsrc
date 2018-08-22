@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2017/06/05 14:24:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2018/08/22 09:46:27 wiz Exp $
 
 DISTNAME=	p5-Netpgp-Verify-20160814
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security perl5
 MASTER_SITES=	https://agc.ac/src/
 

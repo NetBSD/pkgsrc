@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2017/06/12 12:24:29 maya Exp $
+# $NetBSD: Makefile,v 1.15 2018/08/22 09:43:42 wiz Exp $
 
 DISTNAME=	Class-Accessor-Named-0.009
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
 

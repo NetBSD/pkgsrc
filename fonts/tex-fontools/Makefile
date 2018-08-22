@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2018/05/06 03:04:36 markd Exp $
+# $NetBSD: Makefile,v 1.9 2018/08/22 09:45:07 wiz Exp $
 
 DISTNAME=	fontools
 PKGNAME=	tex-${DISTNAME}-2018
+PKGREVISION=	1
 TEXLIVE_REV=	47134
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

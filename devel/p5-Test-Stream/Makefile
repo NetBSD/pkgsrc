@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2017/06/05 14:23:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2018/08/22 09:44:50 wiz Exp $
 
 DISTNAME=	Test-Stream-1.302027
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/E/EX/EXODIST/
 

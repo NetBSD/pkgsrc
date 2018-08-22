@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/08/17 10:03:42 nros Exp $
+# $NetBSD: Makefile,v 1.2 2018/08/22 09:45:35 wiz Exp $
 
+PKGREVISION= 1
 .include "../../mail/libytnef/Makefile.common"
 
 USE_TOOLS+=		perl:run

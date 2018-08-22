@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2017/09/03 08:37:01 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2018/08/22 09:47:12 wiz Exp $
 #
 
 DISTNAME=	postgresql_autodoc-1.30
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	textproc databases
 #MASTER_SITES=	http://www.rbt.ca/autodoc/binaries/
 

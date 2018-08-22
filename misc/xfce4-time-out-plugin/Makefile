@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2018/04/16 14:34:55 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2018/08/22 09:45:47 wiz Exp $
 
-PKGREVISION= 7
+PKGREVISION= 8
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-time-out-plugin-1.0.2

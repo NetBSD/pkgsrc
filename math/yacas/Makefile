@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2016/07/09 06:38:34 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2018/08/22 09:45:42 wiz Exp $
 #
 
 DISTNAME=	yacas-1.2.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	math
 MASTER_SITES=	http://yacas.sourceforge.net/backups/
 

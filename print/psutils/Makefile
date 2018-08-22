@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2016/09/02 14:16:35 mef Exp $
+# $NetBSD: Makefile,v 1.47 2018/08/22 09:46:15 wiz Exp $
 
 DISTNAME=	psutils-p17
 PKGNAME=	psutils-1.17
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.knackered.org/pub/psutils/
 

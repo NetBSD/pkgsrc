@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2017/08/01 14:59:02 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2018/08/22 09:45:48 wiz Exp $
 #
 
 PKGNAME=	dvb-apps-20110713
-PKGREVISION=	6
+PKGREVISION=	7
 DISTNAME=	148ede2a6809
 DIST_SUBDIR=	dvb-apps
 CATEGORIES=	multimedia

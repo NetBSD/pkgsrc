@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2017/11/08 20:35:48 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2018/08/22 09:44:35 wiz Exp $
 
 DISTNAME=	Role-Tiny-2.000006
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/H/HA/HAARG/}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2018/08/19 20:16:40 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2018/08/22 09:45:42 wiz Exp $
 
 DISTNAME=	p5-gnome-bindings-2.30.2
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 

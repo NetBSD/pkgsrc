@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2016/07/09 06:38:30 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2018/08/22 09:45:26 wiz Exp $
 #
 
 DISTNAME=	mdfrm.pl
 PKGNAME=	mdfrm-1.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	mail
 MASTER_SITES=	http://www.goof.com/~mmead/
 EXTRACT_SUFX=	#

@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2016/07/21 13:00:40 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2018/08/22 09:45:35 wiz Exp $
 
+PKGREVISION= 1
 .include "Makefile.common"
 
 PKGNAME=	thunderbird-${DISTNAME}

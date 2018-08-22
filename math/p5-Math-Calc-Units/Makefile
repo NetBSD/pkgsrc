@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/07/03 16:22:42 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2018/08/22 09:45:37 wiz Exp $
 
 DISTNAME=	Math-Calc-Units-1.07
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/S/SF/SFINK/
 

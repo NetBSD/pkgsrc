@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2016/09/08 03:52:26 markd Exp $
+# $NetBSD: Makefile,v 1.19 2018/08/22 09:46:12 wiz Exp $
 
 DISTNAME=	BibTool-2.65
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=biblio/bibtex/utils/bibtool/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2017/06/12 12:42:04 maya Exp $
+# $NetBSD: Makefile,v 1.17 2018/08/22 09:44:25 wiz Exp $
 
 DISTNAME=	MouseX-Types-0.06
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/G/GF/GFUJI/}
 
