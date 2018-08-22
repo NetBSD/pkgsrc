@@ -1,28 +1,17 @@
-$NetBSD: distinfo,v 1.150 2018/04/27 09:44:27 adam Exp $
+$NetBSD: distinfo,v 1.151 2018/08/22 08:37:46 wiz Exp $
 
-SHA1 (perl-5.26.2.tar.xz) = bfa5c7921ed7bf5e035dbf2f7ff81367b81e372c
-RMD160 (perl-5.26.2.tar.xz) = 45a0bc31f57b786ebe1273b7e5070e6e1bf59c7b
-SHA512 (perl-5.26.2.tar.xz) = fd54c90da250144c81b94587c01c49fa367f84c54406f1d360ddab4a41589a7b19efc1707f95c95d6357fae66fc3f6f00bf69dd7741db114c7034a14f52be65f
-Size (perl-5.26.2.tar.xz) = 11931624 bytes
-SHA1 (patch-Configure) = 6f3aa5c8d971e2c58dbd3e348f9edd59e298c181
-SHA1 (patch-MANIFEST) = b27b0e1754fe2c4484931219fa17c562db88d41a
+SHA1 (perl-5.28.0.tar.xz) = c0e9e7a0dea97ec9816687d865fd461a99ef185c
+RMD160 (perl-5.28.0.tar.xz) = 34c9ad0560a2eed134e09282696bfae307cbeb6a
+SHA512 (perl-5.28.0.tar.xz) = de701e37371b81cecf06098bb2c09017bde9cebaf9537d58838d0adf605ac2ecf739897b0a73576a7adb74d4cf65591ec4d2ed1f94b7191e695f88cb7e214a39
+Size (perl-5.28.0.tar.xz) = 12410536 bytes
+SHA1 (patch-Configure) = e4ae2c84bece8823ec1bf98415706b4d2491a5e9
 SHA1 (patch-Makefile.SH) = e9353181a286f52303d09cb4ce0b2c04ec104217
 SHA1 (patch-aa) = 3a2b39c9eb903e68ef7d03ae448c51c147c19aa1
 SHA1 (patch-ab) = 0ad5988b7cadfb13d9646a59a57f6cf884a6238a
 SHA1 (patch-ac) = 4baa8f80695687abb53d4f4e1830cf86db5b2bf7
-SHA1 (patch-aq) = 4bf5a76f0277b0939b2ca7720f4bb045a788b5cc
 SHA1 (patch-caretx.c) = 9f53a9133f8dd2f962b448d7288b5b20454c86fb
-SHA1 (patch-cflags.SH) = 2ac2cf326d332976f676b0f56d3cf4a68a186922
-SHA1 (patch-ch) = 5b6a89c82e158bab0a5f06add48c28e600678099
-SHA1 (patch-ck) = 483e93a782e5627d3c7334d930ee11010fe7f7d8
-SHA1 (patch-cn) = d1877383e213a414562b5bb4c1e8aa785926fab7
-SHA1 (patch-cpan_File-Path_lib_File_Path.pm) = e8a08e7e7fdbebabbeef7eaa651147353eedbfd7
-SHA1 (patch-ext_Errno_Errno__pm.PL) = 4f135e267da17de38f8f1e7e03d5209bfd09a323
-SHA1 (patch-ext_File-Glob_bsd_glob.c) = e43252b55f04bb1cd69d48e8155aa110532c9fbe
-SHA1 (patch-ext_File-Glob_t_rt131211.t) = 9aeddad078cdc920e64ed2e73f952be341745d7e
+SHA1 (patch-cflags.SH) = 7ad64e5a17b876bff4bbe238abc4a57354acf4fe
 SHA1 (patch-hints_cygwin.sh) = 1b21d927d6b7379754c4cd64a2b05d3632c35470
 SHA1 (patch-hints_netbsd.sh) = 0d549a48800372d75fe34b783529a78cba90f646
-SHA1 (patch-hints_sco.sh) = 8d43cdc0632799e1cdb5dc6fdb968052a9ae4216
 SHA1 (patch-hints_solaris__2.sh) = 0e54889648a6f0f2a0232c5e01bef89d245c213d
 SHA1 (patch-ta) = a9d13eeec22733e4087942f217a0d47a19498a6f
-SHA1 (patch-ze) = d6fb718a1417e37a7d6bee1ae89fe2beec51c81b
