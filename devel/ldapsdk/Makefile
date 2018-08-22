@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2017/08/16 20:45:35 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2018/08/22 09:43:32 wiz Exp $
 
 DISTNAME=	ldapsdk_12311998
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel databases
 MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=directory/c-sdk/ancient/}
 

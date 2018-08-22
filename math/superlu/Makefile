@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2016/07/09 06:38:34 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2018/08/22 09:42:52 wiz Exp $
 
 DISTNAME=		superlu_3.0
 PKGNAME=		superlu-3.0.1
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		math
 MASTER_SITES=		http://crd.lbl.gov/~xiaoye/SuperLU/
 

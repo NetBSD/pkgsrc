@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/08/14 16:52:04 adam Exp $
+# $NetBSD: Makefile,v 1.3 2018/08/22 09:43:23 wiz Exp $
 
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	${DISTNAME:C/-/10-server-/}
 COMMENT=	PostgreSQL database server programs
 
