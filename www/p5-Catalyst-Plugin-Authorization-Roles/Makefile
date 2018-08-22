@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2017/06/28 13:24:28 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2018/08/22 09:47:33 wiz Exp $
 
 DISTNAME=	Catalyst-Plugin-Authorization-Roles-0.09
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 

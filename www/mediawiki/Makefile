@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.71 2018/07/04 13:40:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.72 2018/08/22 09:47:26 wiz Exp $
 
 DISTNAME=	mediawiki-${VER}.${PVER}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://releases.wikimedia.org/mediawiki/${VER}/
 

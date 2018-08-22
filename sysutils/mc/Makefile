@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.110 2018/06/17 08:21:58 wiz Exp $
+# $NetBSD: Makefile,v 1.111 2018/08/22 09:46:35 wiz Exp $
 
 DISTNAME=	mc-4.8.21
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.midnight-commander.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
