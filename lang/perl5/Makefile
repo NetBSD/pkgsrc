@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.246 2018/07/04 13:40:22 jperkin Exp $
+# $NetBSD: Makefile,v 1.247 2018/08/22 08:37:46 wiz Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -237,7 +237,7 @@ SUBST_VARS.policysh+=	SYSLIBPATH
 .include "../../mk/dlopen.buildlink3.mk"
 .include "options.mk"
 
-.if !empty(MACHINE_PLATFORM:MMirBSD*)
+.if !empty(MACHINE_PLATFORM:MMirBSD)
 SUBST_CLASSES+=			mirbsd-paths
 SUBST_STAGE.mirbsd-paths=	pre-configure
 SUBST_FILES.mirbsd-paths=	hints/mirbsd.sh
