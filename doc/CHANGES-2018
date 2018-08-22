@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3753 2018/08/22 13:00:41 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3754 2018/08/22 13:38:15 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5311,3 +5311,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/youtube-dl to 20180822 [leot 2018-08-22]
 	Updated devel/py-pkgconfig to 1.4.0 [adam 2018-08-22]
 	Updated sysutils/py-kazoo to 2.5.0 [adam 2018-08-22]
+	Updated graphics/ImageMagick6 to 6.9.9.38nb4 [leot 2018-08-22]
