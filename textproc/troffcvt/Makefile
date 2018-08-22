@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2016/07/09 06:39:08 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2018/08/22 09:47:13 wiz Exp $
 #
 
 DISTNAME=		troffcvt-1.04
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		textproc
 MASTER_SITES=		http://www.snake.net/software/troffcvt/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2017/11/08 20:50:16 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2018/08/22 09:44:56 wiz Exp $
 
 DISTNAME=	autovivification-0.18
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/V/VP/VPIT/
 

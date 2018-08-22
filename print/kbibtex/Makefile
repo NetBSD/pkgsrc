@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.91 2018/08/16 18:55:09 adam Exp $
+# $NetBSD: Makefile,v 1.92 2018/08/22 09:46:13 wiz Exp $
 
 DISTNAME=		kbibtex-0.5.1
-PKGREVISION=		24
+PKGREVISION=		25
 CATEGORIES=		print kde
 #MASTER_SITES=		http://download.gna.org/kbibtex/0.5/
 EXTRACT_SUFX=		.tar.xz

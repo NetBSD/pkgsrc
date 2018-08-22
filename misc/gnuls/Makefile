@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2016/09/08 14:28:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.28 2018/08/22 09:45:43 wiz Exp $
 #
 
+PKGREVISION= 1
 .include "../../sysutils/coreutils/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/coreutils/gnuls/}
