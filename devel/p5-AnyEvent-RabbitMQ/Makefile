@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2017/09/17 09:08:32 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2018/08/22 09:43:35 wiz Exp $
 
 DISTNAME=	AnyEvent-RabbitMQ-1.19
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/D/DL/DLAMBLEY/
 
