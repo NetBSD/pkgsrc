@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2016/07/09 06:37:51 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2018/08/22 09:43:00 wiz Exp $
 #
 
 DISTNAME=	freehdl-0.0.7
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	cad
 MASTER_SITES=	http://seul.org/~enaroska/
 

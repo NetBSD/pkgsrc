@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2017/12/24 10:02:34 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2018/08/22 09:42:55 wiz Exp $
 
 DISTNAME=	mserv-0.35
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	audio
 #MASTER_SITES=	http://www.mserv.org/download/
 

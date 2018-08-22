@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2018/07/17 10:56:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.45 2018/08/22 09:43:05 wiz Exp $
 
 DISTNAME=	help2man-1.47.6
+PKGREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GNU:=help2man/}
 EXTRACT_SUFX=	.tar.xz
