@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2018/04/23 06:09:50 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2018/08/22 09:43:28 wiz Exp $
 
 DISTNAME=	Calltree-perl_pl
 PKGNAME=	calltree-perl-0.1
+PKGREVISION=	1
 CATEGORIES=	devel
 #MASTER_SITES=	http://gw55.quarry.iu.teragrid.org/mediawiki/images/3/39/
 DIST_SUBDIR=	${PKGNAME_NOREV}

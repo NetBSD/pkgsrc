@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2018/02/25 16:41:56 adam Exp $
+# $NetBSD: Makefile,v 1.58 2018/08/22 09:43:33 wiz Exp $
 
 DISTNAME=	nasm-2.13.03
+PKGREVISION=	1
 CATEGORIES=	devel lang
 MASTER_SITES=	http://www.nasm.us/pub/nasm/releasebuilds/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz

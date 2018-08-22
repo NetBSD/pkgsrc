@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2018/02/25 16:39:23 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2018/08/22 09:43:19 wiz Exp $
 
 DISTNAME=	Fsdb-2.65
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://www.isi.edu/~johnh/SOFTWARE/FSDB/
 
