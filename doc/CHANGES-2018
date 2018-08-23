@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3756 2018/08/23 07:48:12 he Exp $
+$NetBSD: CHANGES-2018,v 1.3757 2018/08/23 07:51:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5314,3 +5314,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/ImageMagick6 to 6.9.9.38nb4 [leot 2018-08-22]
 	Updated graphics/ImageMagick to 7.0.8.10nb2 [leot 2018-08-22]
 	Updated security/sleuthkit to 4.1.3nb6 [he 2018-08-23]
+	Updated devel/py-test-pythonpath to 0.7.3 [adam 2018-08-23]
+	Updated devel/py-unittest-mixins to 1.6 [adam 2018-08-23]
