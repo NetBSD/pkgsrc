@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3758 2018/08/23 08:21:12 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.3759 2018/08/23 08:37:14 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5317,3 +5317,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-test-pythonpath to 0.7.3 [adam 2018-08-23]
 	Updated devel/py-unittest-mixins to 1.6 [adam 2018-08-23]
 	Updated devel/gearmand to 1.1.18 [fhajny 2018-08-23]
+	Updated devel/php-gearman to 2.0.5 [fhajny 2018-08-23]
