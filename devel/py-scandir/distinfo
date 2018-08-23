@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2018/02/25 20:00:00 wiz Exp $
+$NetBSD: distinfo,v 1.4 2018/08/23 11:31:51 adam Exp $
 
-SHA1 (scandir-1.7.tar.gz) = 1d7e8e19fe754310bbc3c392b079c9d9133e1e95
-RMD160 (scandir-1.7.tar.gz) = 7107748f76422f948eefea4a3239e2df0bee9d61
-SHA512 (scandir-1.7.tar.gz) = 47c6d9642938f374eb03228cdb6c8d77aa2af01a84b7efc518d223851562a615b616e92100bbeb38c4fa7455ef5f7ae4af8d406f5148d1a26a403708b4a27023
-Size (scandir-1.7.tar.gz) = 32812 bytes
+SHA1 (scandir-1.9.0.tar.gz) = 64c550daec4ef70aa913e1e046b265ff9914c3e8
+RMD160 (scandir-1.9.0.tar.gz) = d385710210e591105d516d180a6c8c04b1498bad
+SHA512 (scandir-1.9.0.tar.gz) = 41dacf42734ac9a53bb5bd5d783023236d68bb4883c853fb2ee34224206c577a4a277d4a8cf8f9be6fd5a8b59d9b4fe4568a0c815a62ec84ce99ded933961ec3
+Size (scandir-1.9.0.tar.gz) = 33315 bytes
