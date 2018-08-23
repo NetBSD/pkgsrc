@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2720 2018/08/21 15:51:57 tnn Exp $
+# $NetBSD: Makefile,v 1.2721 2018/08/23 22:40:52 kamil Exp $
 #
 
 COMMENT=	Development utilities
@@ -421,6 +421,7 @@ SUBDIR+=	heirloom-getopt
 SUBDIR+=	heirloom-libcommon
 SUBDIR+=	heirloom-what
 SUBDIR+=	hoe
+SUBDIR+=	honggfuzz
 SUBDIR+=	hptools
 SUBDIR+=	hs-MonadRandom
 SUBDIR+=	hs-QuickCheck
