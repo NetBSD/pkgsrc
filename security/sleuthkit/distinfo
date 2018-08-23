@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 01:18:09 agc Exp $
+$NetBSD: distinfo,v 1.6 2018/08/23 07:47:34 he Exp $
 
 SHA1 (sleuthkit-4.1.3.tar.gz) = 9350bb59bb5fbe41d6e29a8d0494460b937749ef
 RMD160 (sleuthkit-4.1.3.tar.gz) = 223c6ffe22259ca057b6d9634813536e7ccd9dba
@@ -6,4 +6,5 @@ SHA512 (sleuthkit-4.1.3.tar.gz) = 66f6ac32da5a21b3505390557ed6cf7bbcfcca69f231e2
 Size (sleuthkit-4.1.3.tar.gz) = 7952733 bytes
 SHA1 (patch-configure) = aa08d433f3bdc2fa96bcfe6e39897006b9ac3b3f
 SHA1 (patch-tools_autotools_tsk__recover.cpp) = c82f8c366ae2675ee6c0c948c466b40f27bc1163
+SHA1 (patch-tsk_fs_iso9660__dent.c) = d60cb41962c750a3f9d8941b52191fd1bb06cda9
 SHA1 (patch-tsk_img__tsk_img.h) = e466387bb40fdb14473ee835e168c0b28f43ab20
