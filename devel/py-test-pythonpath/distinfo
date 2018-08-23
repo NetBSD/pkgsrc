@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/11/26 17:11:15 adam Exp $
+$NetBSD: distinfo,v 1.2 2018/08/23 07:48:43 adam Exp $
 
-SHA1 (pytest-pythonpath-0.7.1.tar.gz) = 27bd541cf351f9e03dbd81c4edd267a350e3fc28
-RMD160 (pytest-pythonpath-0.7.1.tar.gz) = 0925bd897b06a8f3b1642d4df0ee572d1ee97124
-SHA512 (pytest-pythonpath-0.7.1.tar.gz) = 313020c7b38b91079694759ca436e1f7129750372f3a0a567dc2934b093d178c4c64894c2283719b86877a5e359128e83bd6e3b17ded283631ad6747541b2902
-Size (pytest-pythonpath-0.7.1.tar.gz) = 1726 bytes
+SHA1 (pytest-pythonpath-0.7.3.tar.gz) = 736cfd3f5ef49ec1b2bb563cbd5cdf009e2d638a
+RMD160 (pytest-pythonpath-0.7.3.tar.gz) = 77ec0eec87f2d586e7cfdece0b08bebfdc1da137
+SHA512 (pytest-pythonpath-0.7.3.tar.gz) = 45f5185d1ec015e4e11fe5a14aa3ed49f333bae25a779ede43a3128e1c92a3f151836a72dc3ac8244de05c3943876e525ec7cd464c341b44e37195c443eb6391
+Size (pytest-pythonpath-0.7.3.tar.gz) = 4498 bytes
