@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3762 2018/08/23 15:01:19 leot Exp $
+$NetBSD: CHANGES-2018,v 1.3763 2018/08/23 22:33:11 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5322,3 +5322,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-scandir to 1.9.0 [adam 2018-08-23]
 	Updated graphics/ImageMagick to 7.0.8.10nb3 [leot 2018-08-23]
 	Updated graphics/ImageMagick6 to 6.9.9.38nb5 [leot 2018-08-23]
+	Added devel/honggfuzz version 1.7 [kamil 2018-08-23]
