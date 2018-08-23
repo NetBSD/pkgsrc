@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.79 2018/08/22 09:46:13 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2018/08/23 14:26:21 triaxx Exp $
 
 VERSION=	5.2.13
 DISTNAME=	gutenprint-${VERSION}
 PKGNAME=	gutenprint-lib-${VERSION}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gimp-print/}
 EXTRACT_SUFX=	.tar.bz2
@@ -95,6 +95,7 @@ TEST_TARGET=		check
 # gutenprint-gimp: gimp plugin
 .include "../../graphics/gimp/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../graphics/gexiv2/buildlink3.mk"
 
 # gutenprint-cups: cups support
 .include "../../print/cups-base/buildlink3.mk"
