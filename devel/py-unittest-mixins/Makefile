@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/02/05 16:12:04 adam Exp $
+# $NetBSD: Makefile,v 1.2 2018/08/23 07:51:00 adam Exp $
 
-DISTNAME=	unittest-mixins-1.4
+DISTNAME=	unittest-mixins-1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/unittest-mixins/}

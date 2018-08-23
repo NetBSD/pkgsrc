@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/02/05 16:12:04 adam Exp $
+$NetBSD: distinfo,v 1.2 2018/08/23 07:51:00 adam Exp $
 
-SHA1 (unittest-mixins-1.4.tar.gz) = d561ed35aabbacd584ce52dec232e06988ee3126
-RMD160 (unittest-mixins-1.4.tar.gz) = f7cb0852f62137c90d718c840c6f5317791707e6
-SHA512 (unittest-mixins-1.4.tar.gz) = 88848cd32349abd23463d8ab0da7c93b0416c884c4b9893e33de1e294aea67e6bb06178612beb3286f4aa77017acac14fd58e2e9ce41b3fe912baf07c7029aa3
-Size (unittest-mixins-1.4.tar.gz) = 6056 bytes
+SHA1 (unittest-mixins-1.6.tar.gz) = b5b476fd63cfab3138ac83421c30cfed54edc32c
+RMD160 (unittest-mixins-1.6.tar.gz) = 23be10567ef8127ff8160cdb348700cff97b5231
+SHA512 (unittest-mixins-1.6.tar.gz) = 6f78be17c53ec22a680b49a7541e2159c8f504dbc0b39c3c11e7676e20d3c6201be6cc722929017781658f0f690d1c258e0b148fa5dabb5af25e63b28dac5ffa
+Size (unittest-mixins-1.6.tar.gz) = 14901 bytes
