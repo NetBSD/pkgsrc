@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/09/29 14:16:20 joerg Exp $
+$NetBSD: distinfo,v 1.2 2018/08/23 11:28:36 adam Exp $
 
-SHA1 (treq-17.8.0.tar.gz) = 2eb3336e1a5706218a3ed9adbd1d9aec23c7087b
-RMD160 (treq-17.8.0.tar.gz) = 19bc6a2ebc284d1ce34f952966a011c7607d85f6
-SHA512 (treq-17.8.0.tar.gz) = 62933a512fcc8b0e77333eb9268846ad17f4b44cf6ea317ada2565054100be3caf03bda0a1becd775ec85528fc2f5ddec33d23d3579cf484a3c6ba7c71c50a7f
-Size (treq-17.8.0.tar.gz) = 56439 bytes
-SHA1 (patch-requests_____init____.py) = 733037737da7f012030e89091d1b3ca28c3d7657
-SHA1 (patch-setup.py) = 855002a41e0eee403e1938b714145cb0598b30c1
+SHA1 (treq-18.6.0.tar.gz) = f3c95030d373a9dc8e92d56c167e3ae8e5ed1b73
+RMD160 (treq-18.6.0.tar.gz) = 0960e004dc9769df3228915bba439acc41162294
+SHA512 (treq-18.6.0.tar.gz) = 336887790ad94643f5904030349a39481a91e4bd90f8de840130b709ed9edb4c5af7b591d1438fa7c69ed60d7c2316f5c705716d0b2ecd4de71d0a823e6d7bb8
+Size (treq-18.6.0.tar.gz) = 59156 bytes
