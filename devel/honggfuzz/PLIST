@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2018/08/23 22:08:07 kamil Exp $
+bin/hfuzz-cc
+bin/hfuzz-clang
+bin/hfuzz-clang++
+bin/hfuzz-g++
+bin/hfuzz-gcc
+bin/honggfuzz
