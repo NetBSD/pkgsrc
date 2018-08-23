@@ -1,17 +1,15 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 03:27:27 agc Exp $
+$NetBSD: distinfo,v 1.4 2018/08/23 08:21:02 fhajny Exp $
 
-SHA1 (gearmand-1.0.6.tar.gz) = 872d5e13c20a29a20e45df3afa8f3981dc52d363
-RMD160 (gearmand-1.0.6.tar.gz) = 44f1caead6fbd7e6a440be3275098bd798a807d0
-SHA512 (gearmand-1.0.6.tar.gz) = 90e79935760ac1279b8fc82dff619e9c54b0f2d30e80f5ea0fe668a23e0e0e7651dfe032e255af209f7ee6bacf6ed492d20154a8763fda469d99f6dc953066d6
-Size (gearmand-1.0.6.tar.gz) = 935050 bytes
-SHA1 (patch-Makefile.in) = ec857867640d5282dc9a06ab8258c82b8cb1ba55
+SHA1 (gearmand-1.1.18.tar.gz) = eb7f1d806635cba309c40460c3ca5f2ff76d6519
+RMD160 (gearmand-1.1.18.tar.gz) = 2bbe1042932dd763fcc68f4c8e6227d6a53be7e0
+SHA512 (gearmand-1.1.18.tar.gz) = fd2c978775bde19a8f1ffaf720b4c8adfda9859e5f554b247e7edca15fcc684168fb279af6c63e29c0524c8c863a9f3d07ea802e67eec42be793c0487b9beb9a
+Size (gearmand-1.1.18.tar.gz) = 1044664 bytes
 SHA1 (patch-benchmark_blobslap__worker.cc) = 12f805d65b36a2f25e5751b8c36a95ac28ec757a
 SHA1 (patch-configure) = d5eb9dc8bf6aec65580de30734e3e4b6505cd0ae
 SHA1 (patch-examples_reverse__client.cc) = 3e8a27626c8a922919adfddcd9b3b4bfec06390d
 SHA1 (patch-examples_reverse__client__bg.cc) = 63db59b98a8128565cecaa682334be85edf37584
 SHA1 (patch-examples_reverse__client__cb.cc) = 33f9710ca20101ce11cda04407eff1e05b14d29a
 SHA1 (patch-examples_reverse__client__epoch.cc) = e4ea3dc00f9fc403a5500d95591255c0990da6d3
-SHA1 (patch-libgearman-1.0_gearman.h) = d97a3078ababae57922bee92e6bdcd28a4fb1aae
 SHA1 (patch-libgearman-server__log.cc) = ecad056d7704451bce88e889fc0f9ce528281223
 SHA1 (patch-libgearman_backtrace.cc) = f8b643a91fb7d3656c10616fcd37a9dc0749904e
 SHA1 (patch-libtest__exception.hpp) = 193ee0e3711272f99ee3594f8629e27d572ca116
