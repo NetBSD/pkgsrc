@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3765 2018/08/24 06:11:50 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3766 2018/08/24 06:12:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5325,3 +5325,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/honggfuzz version 1.7 [kamil 2018-08-23]
 	Updated archivers/p5-Archive-Zip to 1.62 [wiz 2018-08-24]
 	Updated converters/p5-Cpanel-JSON-XS to 4.05 [wiz 2018-08-24]
+	Updated devel/p5-CPAN-Perl-Releases to 3.74 [wiz 2018-08-24]
