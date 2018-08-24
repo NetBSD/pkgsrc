@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3772 2018/08/24 09:36:00 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3773 2018/08/24 09:37:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5332,3 +5332,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Term-Size to 0.209 [wiz 2018-08-24]
 	Updated textproc/p5-Lingua-EN-Sentence to 0.31 [wiz 2018-08-24]
 	Updated textproc/p5-Text-Diff-HTML to 0.08 [wiz 2018-08-24]
+	Updated textproc/p5-XML-Parser-Lite to 0.722 [wiz 2018-08-24]
