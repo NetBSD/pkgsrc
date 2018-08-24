@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 01:59:51 agc Exp $
+$NetBSD: distinfo,v 1.6 2018/08/24 09:35:51 wiz Exp $
 
-SHA1 (Text-Diff-HTML-0.07.tar.gz) = ef4ab0769d9e2ca7912e2137f3e0d4d9d18c2f3f
-RMD160 (Text-Diff-HTML-0.07.tar.gz) = 94a6d6979fde5e9cac8748733e06356cb653ad86
-SHA512 (Text-Diff-HTML-0.07.tar.gz) = 52697f7c27e9d9db6ea1663f3b8dc8ffd41323c7f0a95df861168cbbbecb1143ae824b1fb38a13dadfb43b0b4936ce2d23c69e2196501723b0ce75bc9f5ab900
-Size (Text-Diff-HTML-0.07.tar.gz) = 6510 bytes
+SHA1 (Text-Diff-HTML-0.08.tar.gz) = c74341de779bfefd31f01ff311cd32a066e977d4
+RMD160 (Text-Diff-HTML-0.08.tar.gz) = 0339eda6b889d4d43b097197a58c458972583968
+SHA512 (Text-Diff-HTML-0.08.tar.gz) = e5a7fe71ec74a71916f74b5ccbd83d67e4a260a5744a39101c8bb47057fd2dfa34b1068e1499ffcf543bff672519c22b8caf9a325ec772d9ec5b1c5ce5a11c78
+Size (Text-Diff-HTML-0.08.tar.gz) = 19182 bytes
