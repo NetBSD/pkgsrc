@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/08/07 10:04:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/08/24 18:31:06 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -112,6 +112,9 @@ ${PYSITELIB}/pylint_django/tests/input/func_noerror_import_q.pyo
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_issue_46.py
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_issue_46.pyc
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_issue_46.pyo
+${PYSITELIB}/pylint_django/tests/input/func_noerror_managers_return_querysets.py
+${PYSITELIB}/pylint_django/tests/input/func_noerror_managers_return_querysets.pyc
+${PYSITELIB}/pylint_django/tests/input/func_noerror_managers_return_querysets.pyo
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_manytomanyfield.py
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_manytomanyfield.pyc
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_manytomanyfield.pyo
