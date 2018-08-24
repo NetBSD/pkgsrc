@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3775 2018/08/24 11:30:05 leot Exp $
+$NetBSD: CHANGES-2018,v 1.3776 2018/08/24 11:32:02 manu Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5335,3 +5335,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/p5-XML-Parser-Lite to 0.722 [wiz 2018-08-24]
 	Updated devel/msgpack to 3.1.0 [adam 2018-08-24]
 	Updated net/hub to 2.5.1 [leot 2018-08-24]
+	Updated www/ap2-jk to 1.2.43 [manu 2018-08-24]
