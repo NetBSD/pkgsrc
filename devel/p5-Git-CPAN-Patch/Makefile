@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2018/08/22 09:44:05 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2018/08/24 09:26:20 wiz Exp $
 
-DISTNAME=	Git-CPAN-Patch-2.3.2
+DISTNAME=	Git-CPAN-Patch-2.3.3
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Git/}
 
@@ -33,19 +32,19 @@ DEPENDS+=	p5-MooseX-SemiAffordanceAccessor-[0-9]*:../../devel/p5-MooseX-SemiAffo
 DEPENDS+=	p5-MooseX-Role-Tempdir-[0-9]*:../../devel/p5-MooseX-Role-Tempdir
 DEPENDS+=	p5-Test-MockObject-[0-9]*:../../devel/p5-Test-MockObject
 #DEPENDS+=	{perl>=5.10.1,p5-autodie-[0-9]*}:../../devel/p5-autodie
+DEPENDS+=	p5-Path-Tiny-[0-9]*:../../filesystems/p5-Path-Tiny
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww # LWP::UserAgent
+DEPENDS+=	p5-MetaCPAN-Client-[0-9]*:../../devel/p5-MetaCPAN-Client
+DEPENDS+=	p5-Data-Printer-[0-9]*:../../devel/p5-Data-Printer
 
-# for make test
-BUILD_DEPENDS+=	p5-Path-Tiny-[0-9]*:../../filesystems/p5-Path-Tiny
-BUILD_DEPENDS+=	p5-Pod-Elemental-[0-9]*:../../textproc/p5-Pod-Elemental
-BUILD_DEPENDS+=	p5-Type-Tiny-[0-9]*:../../devel/p5-Type-Tiny
-BUILD_DEPENDS+=	p5-MetaCPAN-Client-[0-9]*:../../devel/p5-MetaCPAN-Client
-BUILD_DEPENDS+=	p5-Data-Printer-[0-9]*:../../devel/p5-Data-Printer
-BUILD_DEPENDS+=	p5-Devel-CheckOS-[0-9]*:../../devel/p5-Devel-CheckOS
-BUILD_DEPENDS+=	p5-Package-Constants-[0-9]*:../../devel/p5-Package-Constants
-BUILD_DEPENDS+=	p5-Parallel-ForkManager-[0-9]*:../../devel/p5-Parallel-ForkManager
-BUILD_DEPENDS+=	p5-Search-Elasticsearch-[0-9]*:../../devel/p5-Search-Elasticsearch
-BUILD_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+TEST_DEPENDS+=	p5-Pod-Elemental-[0-9]*:../../textproc/p5-Pod-Elemental
+TEST_DEPENDS+=	p5-Type-Tiny-[0-9]*:../../devel/p5-Type-Tiny
+TEST_DEPENDS+=	p5-Data-Printer-[0-9]*:../../devel/p5-Data-Printer
+TEST_DEPENDS+=	p5-Devel-CheckOS-[0-9]*:../../devel/p5-Devel-CheckOS
+TEST_DEPENDS+=	p5-Package-Constants-[0-9]*:../../devel/p5-Package-Constants
+TEST_DEPENDS+=	p5-Parallel-ForkManager-[0-9]*:../../devel/p5-Parallel-ForkManager
+TEST_DEPENDS+=	p5-Search-Elasticsearch-[0-9]*:../../devel/p5-Search-Elasticsearch
+TEST_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Git/CPAN/Patch/.packlist
