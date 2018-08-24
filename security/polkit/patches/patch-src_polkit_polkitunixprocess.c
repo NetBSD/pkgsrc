@@ -1,9 +1,9 @@
-$NetBSD: patch-src_polkit_polkitunixprocess.c,v 1.5 2018/05/15 09:09:22 jperkin Exp $
+$NetBSD: patch-src_polkit_polkitunixprocess.c,v 1.5.2.1 2018/08/24 19:18:27 bsiegert Exp $
 
 Fix SunOS includes.
 Fix pid_t type.
 
---- src/polkit/polkitunixprocess.c.orig	2018-03-23 15:09:30.000000000 +0000
+--- src/polkit/polkitunixprocess.c.orig	2018-06-25 13:55:45.000000000 +0000
 +++ src/polkit/polkitunixprocess.c
 @@ -24,6 +24,11 @@
  #endif
@@ -17,7 +17,7 @@ Fix pid_t type.
  #ifdef HAVE_FREEBSD
  #include <sys/param.h>
  #include <sys/sysctl.h>
-@@ -87,7 +92,7 @@ enum
+@@ -95,7 +100,7 @@ enum
  
  static void subject_iface_init (PolkitSubjectIface *subject_iface);
  
@@ -25,4 +25,4 @@ Fix pid_t type.
 +static guint64 get_start_time_for_pid (pid_t pid,
                                         GError **error);
  
- static gint _polkit_unix_process_get_owner (PolkitUnixProcess  *process,
+ #if defined(HAVE_FREEBSD) || defined(HAVE_NETBSD) || defined(HAVE_OPENBSD)
