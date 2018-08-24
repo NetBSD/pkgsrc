@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.45 2018/05/16 07:45:58 adam Exp $
+# $NetBSD: options.mk,v 1.46 2018/08/24 18:27:07 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=		dav flv gtools inet6 luajit mail-proxy memcache naxsi \
@@ -20,7 +20,7 @@ PLIST.naxsi=		yes
 CONFIGURE_ARGS+=	--add-module=../${NAXSI_DISTNAME}/naxsi_src
 .endif
 .if !empty(PKG_OPTIONS:Mnaxsi) || make(makesum)
-NAXSI_VERSION=		0.55.3
+NAXSI_VERSION=		0.56
 NAXSI_DISTNAME=		naxsi-${NAXSI_VERSION}
 NAXSI_DISTFILE=		${NAXSI_DISTNAME}.tar.gz
 SITES.${NAXSI_DISTFILE}=-https://github.com/nbs-system/naxsi/archive/${NAXSI_VERSION}.tar.gz
@@ -188,7 +188,7 @@ CONFIGURE_ARGS+=	--without-http_uwsgi_module
 CONFIGURE_ARGS+=	--add-module=../nchan-${PUSH_VERSION}
 .endif
 .if !empty(PKG_OPTIONS:Mpush) || make(makesum)
-PUSH_VERSION=		1.1.13 # 1.1.15 needs memrchr(): https://github.com/slact/nchan/issues/441
+PUSH_VERSION=		1.2.1
 PUSH_DISTNAME=		nginx_http_push_module-${PUSH_VERSION}
 PUSH_DISTFILE=		${PUSH_DISTNAME}.tar.gz
 SITES.${PUSH_DISTFILE}=	-https://github.com/slact/nchan/archive/v${PUSH_VERSION}.tar.gz
