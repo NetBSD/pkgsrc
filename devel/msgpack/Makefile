@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2018/06/01 07:55:43 adam Exp $
+# $NetBSD: Makefile,v 1.15 2018/08/24 09:51:22 adam Exp $
 
-DISTNAME=	msgpack-3.0.1
+DISTNAME=	msgpack-3.1.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=msgpack/}
 GITHUB_RELEASE=	cpp-${PKGVERSION_NOREV}
