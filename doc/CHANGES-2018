@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3771 2018/08/24 09:34:38 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3772 2018/08/24 09:36:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5331,3 +5331,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Module-CoreList to 5.20180820 [wiz 2018-08-24]
 	Updated devel/p5-Term-Size to 0.209 [wiz 2018-08-24]
 	Updated textproc/p5-Lingua-EN-Sentence to 0.31 [wiz 2018-08-24]
+	Updated textproc/p5-Text-Diff-HTML to 0.08 [wiz 2018-08-24]
