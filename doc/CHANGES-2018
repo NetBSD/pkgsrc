@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3769 2018/08/24 09:30:32 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3770 2018/08/24 09:31:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5329,3 +5329,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Git-CPAN-Patch to 2.3.3 [wiz 2018-08-24]
 	Updated devel/p5-Log-Dispatch to 2.68 [wiz 2018-08-24]
 	Updated devel/p5-Module-CoreList to 5.20180820 [wiz 2018-08-24]
+	Updated devel/p5-Term-Size to 0.209 [wiz 2018-08-24]
