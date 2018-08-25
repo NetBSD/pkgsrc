@@ -1,17 +1,11 @@
-# $NetBSD: Makefile,v 1.81 2018/04/30 08:57:49 taca Exp $
+# $NetBSD: Makefile,v 1.81.2.1 2018/08/25 16:19:00 bsiegert Exp $
 
-DISTNAME=	squid-3.5.27
-PKGREVISION=	3
+DISTNAME=	squid-3.5.28
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v3/${PKGVERSION_NOREV:R}/
 MASTER_SITES+=	ftp://ftp.squid-cache.org/pub/squid/
 MASTER_SITES+=	http://ftp.nluug.nl/internet/squid/
 EXTRACT_SUFX=	.tar.xz
-
-PATCH_SITES=		http://www.squid-cache.org/Versions/v3/3.5/changesets/
-PATCHFILES=		SQUID-2018_1.patch SQUID-2018_2.patch \
-			SQUID-2018_3.patch
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.squid-cache.org/
