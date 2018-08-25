@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3777 2018/08/24 18:31:52 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3778 2018/08/25 12:03:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5338,3 +5338,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/ap2-jk to 1.2.43 [manu 2018-08-24]
 	Updated www/nginx-devel to 1.15.2 [adam 2018-08-24]
 	Updated www/py-pylint-django to 2.0.1 [adam 2018-08-24]
+	Added textproc/gtkspell3 version 3.0.9 [wiz 2018-08-25]
