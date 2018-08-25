@@ -8,3 +8,5 @@ a menu of suggested replacements.
     * Kevin Atkinson's pspell library.
 
 GtkSpell is a library and is mostly of interest to GTK programmers.
+
+This is the legacy major version 2 of the library for use with GTK+2.
