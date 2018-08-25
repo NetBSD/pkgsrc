@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/06/22 12:59:08 wen Exp $
+@comment $NetBSD: PLIST,v 1.6.2.1 2018/08/25 19:10:45 bsiegert Exp $
 share/drupal/.csslintrc
 share/drupal/.editorconfig
 share/drupal/.eslintignore
@@ -3986,6 +3986,7 @@ share/drupal/core/modules/content_translation/content_translation.permissions.ym
 share/drupal/core/modules/content_translation/content_translation.services.yml
 share/drupal/core/modules/content_translation/css/content_translation.admin.css
 share/drupal/core/modules/content_translation/migrations/d6_taxonomy_term_translation.yml
+share/drupal/core/modules/content_translation/migrations/d7_entity_translation_settings.yml
 share/drupal/core/modules/content_translation/src/Access/ContentTranslationDeleteAccess.php
 share/drupal/core/modules/content_translation/src/Access/ContentTranslationManageAccessCheck.php
 share/drupal/core/modules/content_translation/src/Access/ContentTranslationOverviewAccess.php
@@ -4006,6 +4007,7 @@ share/drupal/core/modules/content_translation/src/Plugin/Derivative/ContentTrans
 share/drupal/core/modules/content_translation/src/Plugin/Derivative/ContentTranslationLocalTasks.php
 share/drupal/core/modules/content_translation/src/Plugin/Validation/Constraint/ContentTranslationSynchronizedFieldsConstraint.php
 share/drupal/core/modules/content_translation/src/Plugin/Validation/Constraint/ContentTranslationSynchronizedFieldsConstraintValidator.php
+share/drupal/core/modules/content_translation/src/Plugin/migrate/source/d7/EntityTranslationSettings.php
 share/drupal/core/modules/content_translation/src/Plugin/views/field/TranslationLink.php
 share/drupal/core/modules/content_translation/src/Routing/ContentTranslationRouteSubscriber.php
 share/drupal/core/modules/content_translation/src/Tests/ContentTranslationTestBase.php
@@ -4046,6 +4048,8 @@ share/drupal/core/modules/content_translation/tests/src/Kernel/ContentTranslatio
 share/drupal/core/modules/content_translation/tests/src/Kernel/ContentTranslationSettingsApiTest.php
 share/drupal/core/modules/content_translation/tests/src/Kernel/ContentTranslationSyncUnitTest.php
 share/drupal/core/modules/content_translation/tests/src/Kernel/Migrate/d6/MigrateTaxonomyTermTranslationTest.php
+share/drupal/core/modules/content_translation/tests/src/Kernel/Migrate/d7/MigrateEntityTranslationSettingsTest.php
+share/drupal/core/modules/content_translation/tests/src/Kernel/Plugin/migrate/source/d7/EntityTranslationSettingsTest.php
 share/drupal/core/modules/content_translation/tests/src/Unit/Access/ContentTranslationManageAccessCheckTest.php
 share/drupal/core/modules/content_translation/tests/src/Unit/Menu/ContentTranslationLocalTasksTest.php
 share/drupal/core/modules/contextual/config/schema/contextual.views.schema.yml
@@ -6075,6 +6079,7 @@ share/drupal/core/modules/migrate/tests/src/Kernel/MigrateTestBase.php
 share/drupal/core/modules/migrate/tests/src/Kernel/MigrationTest.php
 share/drupal/core/modules/migrate/tests/src/Kernel/NodeCommentCombinationTrait.php
 share/drupal/core/modules/migrate/tests/src/Kernel/Plugin/EntityExistsTest.php
+share/drupal/core/modules/migrate/tests/src/Kernel/Plugin/EntityRevisionTest.php
 share/drupal/core/modules/migrate/tests/src/Kernel/Plugin/LogTest.php
 share/drupal/core/modules/migrate/tests/src/Kernel/Plugin/MigrationDirectoryTest.php
 share/drupal/core/modules/migrate/tests/src/Kernel/Plugin/MigrationPluginConfigurationTest.php
@@ -6103,6 +6108,7 @@ share/drupal/core/modules/migrate/tests/src/Unit/MigrateTestCase.php
 share/drupal/core/modules/migrate/tests/src/Unit/MigrationPluginManagerTest.php
 share/drupal/core/modules/migrate/tests/src/Unit/MigrationTest.php
 share/drupal/core/modules/migrate/tests/src/Unit/Plugin/migrate/destination/EntityContentBaseTest.php
+share/drupal/core/modules/migrate/tests/src/Unit/Plugin/migrate/destination/EntityRevisionTest.php
 share/drupal/core/modules/migrate/tests/src/Unit/RowTest.php
 share/drupal/core/modules/migrate/tests/src/Unit/SqlBaseTest.php
 share/drupal/core/modules/migrate/tests/src/Unit/TestMigrateExecutable.php
@@ -8078,6 +8084,7 @@ share/drupal/core/modules/system/tests/modules/entity_test/src/EntityTestViewBui
 share/drupal/core/modules/system/tests/modules/entity_test/src/EntityTestViewsData.php
 share/drupal/core/modules/system/tests/modules/entity_test/src/FieldStorageDefinition.php
 share/drupal/core/modules/system/tests/modules/entity_test/src/Plugin/Derivative/EntityTestLocalTasks.php
+share/drupal/core/modules/system/tests/modules/entity_test/src/Plugin/Field/ComputedReferenceTestFieldItemList.php
 share/drupal/core/modules/system/tests/modules/entity_test/src/Plugin/Field/ComputedTestFieldItemList.php
 share/drupal/core/modules/system/tests/modules/entity_test/src/Plugin/Field/FieldFormatter/EntityTestReferenceCustomCacheTagFormatter.php
 share/drupal/core/modules/system/tests/modules/entity_test/src/Plugin/Field/FieldType/AutoIncrementingTestItem.php
@@ -12019,6 +12026,7 @@ share/drupal/core/tests/fixtures/BrowserMissingDependentModuleMethodTest.php
 share/drupal/core/tests/fixtures/BrowserMissingDependentModuleTest.php
 share/drupal/core/tests/fixtures/KernelMissingDependentModuleMethodTest.php
 share/drupal/core/tests/fixtures/KernelMissingDependentModuleTest.php
+share/drupal/core/themes/bartik/README.txt
 share/drupal/core/themes/bartik/bartik.breakpoints.yml
 share/drupal/core/themes/bartik/bartik.info.yml
 share/drupal/core/themes/bartik/bartik.libraries.yml
@@ -13831,6 +13839,7 @@ share/drupal/vendor/symfony/http-kernel/HttpCache/ResponseCacheStrategyInterface
 share/drupal/vendor/symfony/http-kernel/HttpCache/Ssi.php
 share/drupal/vendor/symfony/http-kernel/HttpCache/Store.php
 share/drupal/vendor/symfony/http-kernel/HttpCache/StoreInterface.php
+share/drupal/vendor/symfony/http-kernel/HttpCache/SubRequestHandler.php
 share/drupal/vendor/symfony/http-kernel/HttpCache/SurrogateInterface.php
 share/drupal/vendor/symfony/http-kernel/HttpKernel.php
 share/drupal/vendor/symfony/http-kernel/HttpKernelInterface.php
