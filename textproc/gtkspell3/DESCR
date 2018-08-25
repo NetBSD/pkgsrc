@@ -1,0 +1,8 @@
+GtkSpell provides word-processor-style highlighting and replacement
+of misspelled words in a GtkTextView widget. Right-clicking a
+misspelled word pops up a menu of suggested replacements.
+
+GtkSpell is a library and is mostly of interest to GTK programmers.
+
+This is major version 3 of the library, which is API incompatible
+to version 2.
