@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/08/25 12:03:21 wiz Exp $
+
+SHA1 (gtkspell3-3.0.9.tar.xz) = c14e7099dbbad98513d6ba00e40481f991453b46
+RMD160 (gtkspell3-3.0.9.tar.xz) = 44345ff911f8d6e8af29b89b82caa3805a131057
+SHA512 (gtkspell3-3.0.9.tar.xz) = de6cc24ca092067a101996142bf2b3cfb6a5af2170ea4b0185a997e5c88adead7ba53c5a297c3110b3a66dc87d37e429720f972895bb2931f9a033fc006e2eab
+Size (gtkspell3-3.0.9.tar.xz) = 298988 bytes
