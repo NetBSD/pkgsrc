@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/08/22 09:45:21 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2018/08/25 20:46:28 adam Exp $
 
 DISTNAME=	cli-6.3.0
 PKGNAME=	${DISTNAME:S/cli/npm/}
@@ -48,7 +48,7 @@ do-install:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ${PREFIX}/bin/node \
 		bin/npm-cli.js pack
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ${PREFIX}/bin/node \
-		bin/npm-cli.js install -g -f ${PKGNAME}.tgz
+		bin/npm-cli.js install -g -f ${PKGNAME_NOREV}.tgz
 .if ${PKGMANDIR} != "share/man"
 	${RM} -f -r ${DESTDIR}${PREFIX}/${PKGMANDIR}
 	${MV} ${DESTDIR}${PREFIX}/share/man ${DESTDIR}${PREFIX}/${PKGMANDIR}
