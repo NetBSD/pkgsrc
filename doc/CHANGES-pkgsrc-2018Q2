@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q2,v 1.1.2.12 2018/08/24 20:16:04 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q2,v 1.1.2.13 2018/08/25 19:30:22 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q2 branch:
 
@@ -99,4 +99,19 @@ security/polkit: security fix
 
 Pullup ticket #5815 - requested by wiz
 www/webkit-gtk: security fix
+
+Pullup ticket #5816 - requested by taca
+mail/roundcube: security fix, build fix
+
+Pullup ticket #5817 - requested by taca
+www/squid3: security fix
+
+Pullup ticket #5818 - requested by taca
+www/drupal8: security fix
+
+Pullup ticket #5819 - requested by leot
+graphics/ImageMagick6: security fix
+
+Pullup ticket #5820 - requested by leot
+graphics/ImageMagick: security fix
 
