@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/08/25 12:03:21 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2018/08/25 13:20:58 wiz Exp $
 
 DISTNAME=	gtkspell3-3.0.9
 CATEGORIES=	textproc devel
@@ -16,7 +16,6 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	gtkspell-3.0.pc.in
 CONFIGURE_ARGS+=	--disable-gtk-doc
 
-#.include "../../devel/pango/buildlink3.mk"
 .include "../../textproc/enchant/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
