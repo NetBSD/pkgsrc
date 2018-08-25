@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2018/01/01 10:23:07 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2018/08/25 01:57:43 manu Exp $
 
 DISTNAME=	tomcat-connectors-${JK_VERSION}-src
 PKGNAME=	${APACHE_PKG_PREFIX}-jk-${JK_VERSION}
-JK_VERSION=	1.2.37
+JK_VERSION=	1.2.43
 CATEGORIES=	www java
 MASTER_SITES=	${MASTER_SITE_APACHE:=tomcat/tomcat-connectors/jk/}
 
@@ -36,8 +36,14 @@ OVERRIDE_DIRDEPTH=	3
 SUBST_CLASSES+=		jk-lt
 SUBST_STAGE.jk-lt=	post-configure
 SUBST_FILES.jk-lt=	Makefile common/Makefile apache-2.0/Makefile
-SUBST_SED.jk-lt=	-e "s|^\\(LIBTOOL =\\) [^ ]*\$$|\\1 \$$(SHELL) \$$(top_builddir)/libtool|g"
+SUBST_SED.jk-lt=	-e "s|^\\(LIBTOOL *=\\).*\$$|\\1 \$$(SHELL) \$$(top_builddir)/libtool|g"
 SUBST_MESSAGE.jk-lt=	Fixing libtool references.
+
+SUBST_CLASSES+=		jk-shlt
+SUBST_STAGE.jk-shlt=	post-configure
+SUBST_FILES.jk-shlt=	scripts/build/instdso.s
+SUBST_SED.jk-shlt=	-e "s|^\\(SH_LIBTOOL *=\\).*\$$|\\1 \$$(SHELL) \$$(top_builddir)/libtool|g"
+SUBST_MESSAGE.jk-shlt=	Fixing libtool references in install script.
 
 # XXX The standard --with-apxs2 when using apache2 doesn't work
 CONFIGURE_ARGS+=	--with-apxs=${APXS:Q}

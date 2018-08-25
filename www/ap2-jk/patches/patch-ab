@@ -1,15 +1,18 @@
-$NetBSD: patch-ab,v 1.1 2014/06/12 13:34:15 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2018/08/25 01:57:43 manu Exp $
 
 Fixup the Makefile so it uses the right libtool.
 
---- apache-2.0/Makefile.in.orig	2012-05-09 08:08:26.000000000 -0500
-+++ apache-2.0/Makefile.in	2012-10-21 15:25:01.000000000 -0500
-@@ -34,6 +34,8 @@
- # Apache2 settings, values guessed by Apache config and used to build it
+--- apache-2.0/Makefile.in.orig
++++ apache-2.0/Makefile.in
+@@ -36,8 +36,11 @@
+ # Apache settings, values guessed by Apache config and used to build it
  # Will define libexecdir, LIBTOOL, etc
  include @APACHE_CONFIG_VARS@
-+top_builddir = ..
-+LIBTOOL = 
  
++top_builddir = ..
++LIBTOOL =
++
  # Local settings ( overriding/appending to Apache's )
- COMMON=../common
+ COMMON=common
+ JK_INCL=-DUSE_APACHE_MD5 -I${top_builddir}/${COMMON} -I ${top_srcdir}/${COMMON}
+ CFLAGS=@apache_include@ @CFLAGS@ ${JK_INCL} ${APXSCPPFLAGS} ${APXSCFLAGS} ${EXTRA_CFLAGS} ${EXTRA_CPPFLAGS}
