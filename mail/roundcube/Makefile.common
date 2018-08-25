@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2018/05/16 08:14:40 triaxx Exp $
+# $NetBSD: Makefile.common,v 1.10.2.1 2018/08/25 16:15:21 bsiegert Exp $
 #
 # used by mail/roundcube/Makefile
 # used by mail/roundcube/plugins.mk
@@ -11,7 +11,7 @@ HOMEPAGE=	http://roundcube.net/
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
 DIST_SUBDIR=	roundcube
 
-RC_VERS=	1.3.6
+RC_VERS=	1.3.7
 
 USE_LANGUAGES=		# none
 USE_TOOLS+=		pax
