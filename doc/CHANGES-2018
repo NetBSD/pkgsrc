@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3779 2018/08/25 12:05:58 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3780 2018/08/25 17:23:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5340,3 +5340,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-pylint-django to 2.0.1 [adam 2018-08-24]
 	Added textproc/gtkspell3 version 3.0.9 [wiz 2018-08-25]
 	Updated editors/poedit to 2.0.3nb11 [wiz 2018-08-25]
+	Updated multimedia/x264-devel to 20180624 [adam 2018-08-25]
+	Updated devel/py-setuptools to 40.2.0 [adam 2018-08-25]
