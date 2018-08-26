@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2018/06/22 16:16:53 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2018/08/26 19:35:42 schmonz Exp $
 
-SHA1 (skalibs-2.6.0.0.tar.gz) = a89169758ad040bb966672ac88fd32c5f0bbf47a
-RMD160 (skalibs-2.6.0.0.tar.gz) = d8e90e773ed72e050b9e018223b04e155f1b0060
-SHA512 (skalibs-2.6.0.0.tar.gz) = dffc50c71a43fc152fcd38267bd136f937bd573012743eb74659b0a42bf2812ba4ce1fd28a43bf1b7fc7f9f1f68fd80f7a1df66f33a379ce6e253658c81ce778
-Size (skalibs-2.6.0.0.tar.gz) = 209377 bytes
-SHA1 (patch-configure) = db5c1b89ecaadd8404bbc7807adaa8df56768809
+SHA1 (skalibs-2.7.0.0.tar.gz) = ce21eccc29bd50f13f6248417de2a69a389eeb46
+RMD160 (skalibs-2.7.0.0.tar.gz) = 3d1329752937a5e40a4dbad6453c11d8fe97cce5
+SHA512 (skalibs-2.7.0.0.tar.gz) = 33624b606a0846478e6fde10057633b43e76bda299d067cff269582c252f05108ebf28c539865c7f24b67e99575328fc7789326dfbb2e81bf209aa51445f04a1
+Size (skalibs-2.7.0.0.tar.gz) = 226543 bytes
+SHA1 (patch-configure) = af618b209224dd5d459e1be7104cb4a142375f05
