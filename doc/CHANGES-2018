@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3785 2018/08/26 06:26:54 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3786 2018/08/26 06:27:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5347,3 +5347,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-B-Keywords to 1.19 [wiz 2018-08-26]
 	Updated devel/p5-Git-CPAN-Patch to 2.3.4 [wiz 2018-08-26]
 	Updated devel/p5-IO-AIO to 4.6 [wiz 2018-08-26]
+	Updated time/p5-Time-Warp to 0.53 [wiz 2018-08-26]
