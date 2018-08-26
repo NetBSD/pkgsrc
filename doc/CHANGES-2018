@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3781 2018/08/26 06:11:39 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3782 2018/08/26 06:13:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5343,3 +5343,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/x264-devel to 20180624 [adam 2018-08-25]
 	Updated devel/py-setuptools to 40.2.0 [adam 2018-08-25]
 	Updated archivers/p5-Archive-Zip to 1.63 [wiz 2018-08-26]
+	Updated converters/p5-Cpanel-JSON-XS to 4.06 [wiz 2018-08-26]
