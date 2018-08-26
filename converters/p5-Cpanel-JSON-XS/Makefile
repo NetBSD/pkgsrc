@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2018/08/24 06:11:41 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2018/08/26 06:13:37 wiz Exp $
 
-DISTNAME=	Cpanel-JSON-XS-4.05
+DISTNAME=	Cpanel-JSON-XS-4.06
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/R/RU/RURBAN/}
