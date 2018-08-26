@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/10/03 00:31:39 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/08/26 19:35:42 schmonz Exp $
 include/skalibs/alarm.h
 include/skalibs/alloc.h
 include/skalibs/allreadwrite.h
@@ -29,6 +29,7 @@ include/skalibs/fmtscan.h
 include/skalibs/functypes.h
 include/skalibs/gccattributes.h
 include/skalibs/genalloc.h
+include/skalibs/genqdyn.h
 include/skalibs/genset.h
 include/skalibs/gensetdyn.h
 include/skalibs/genwrite.h
@@ -39,10 +40,10 @@ include/skalibs/ip46.h
 include/skalibs/kolbak.h
 include/skalibs/lolstdio.h
 include/skalibs/md5.h
-include/skalibs/mininetstring.h
 include/skalibs/netstring.h
 include/skalibs/nonposix.h
 include/skalibs/nsig.h
+include/skalibs/posixplz.h
 include/skalibs/random.h
 include/skalibs/rc4.h
 include/skalibs/segfault.h
@@ -66,6 +67,8 @@ include/skalibs/strerr2.h
 include/skalibs/surf.h
 include/skalibs/sysdeps.h
 include/skalibs/tai.h
+include/skalibs/textclient.h
+include/skalibs/textmessage.h
 include/skalibs/types.h
 include/skalibs/uint16.h
 include/skalibs/uint32.h
@@ -78,8 +81,8 @@ include/skalibs/unixonacid.h
 include/skalibs/webipc.h
 ${PLIST.include-shared-objects}lib/libskarnet.so
 ${PLIST.include-shared-objects}lib/libskarnet.so.${PKGVERSION}
-${PLIST.include-shared-objects}lib/libskarnet.so.2.6
-${PLIST.include-shared-objects}lib/libskarnet.so.2.6.0
+${PLIST.include-shared-objects}lib/libskarnet.so.2.7
+${PLIST.include-shared-objects}lib/libskarnet.so.2.7.0
 lib/skalibs/libskarnet.a
 lib/skalibs/sysdeps/socket.lib
 lib/skalibs/sysdeps/spawn.lib
