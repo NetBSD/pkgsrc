@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3788 2018/08/26 13:26:21 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.3789 2018/08/26 19:34:29 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5350,3 +5350,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/p5-Time-Warp to 0.53 [wiz 2018-08-26]
 	Updated textproc/xapian to 1.4.7 [schmonz 2018-08-26]
 	Updated textproc/xapian-omega to 1.4.7 [schmonz 2018-08-26]
+	Updated sysutils/agedu to 20180522.5b12791 [schmonz 2018-08-26]
