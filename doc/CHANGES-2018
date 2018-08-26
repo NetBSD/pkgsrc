@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3784 2018/08/26 06:24:26 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3785 2018/08/26 06:26:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5346,3 +5346,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated converters/p5-Cpanel-JSON-XS to 4.06 [wiz 2018-08-26]
 	Updated devel/p5-B-Keywords to 1.19 [wiz 2018-08-26]
 	Updated devel/p5-Git-CPAN-Patch to 2.3.4 [wiz 2018-08-26]
+	Updated devel/p5-IO-AIO to 4.6 [wiz 2018-08-26]
