@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/01/15 10:53:57 wen Exp $
+$NetBSD: distinfo,v 1.5 2018/08/26 06:27:41 wiz Exp $
 
-SHA1 (Time-Warp-0.52.tar.gz) = 7aee0e0694a91c966b8b4399932f67f170dbe5b0
-RMD160 (Time-Warp-0.52.tar.gz) = 3adc06745c96083193cfb4f1b6320000933f3211
-SHA512 (Time-Warp-0.52.tar.gz) = c3e6f5eed3bf9dcdf500d975e6abf0580a2bf297c0924f10ada60a75f37f3ef25af829ed025a58ad5c021076a8d1c85e4da72b35b4c467a3b805769586fe3c0c
-Size (Time-Warp-0.52.tar.gz) = 4432 bytes
+SHA1 (Time-Warp-0.53.tar.gz) = e2daeed07945602651cb39e8c61fd7c183b296b4
+RMD160 (Time-Warp-0.53.tar.gz) = 98cae38335f99526a682b24953b3cdb1347fd623
+SHA512 (Time-Warp-0.53.tar.gz) = a3090665afc2672eca371f0ef06bfbe5a36c3411db6b78633e28614543feb1cab661908d771b7bd786ea5e8dc80be129a655fe592bbaefb94644a507277cb907
+Size (Time-Warp-0.53.tar.gz) = 4534 bytes
