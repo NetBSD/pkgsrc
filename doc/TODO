@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18523 2018/08/22 10:53:01 wiz Exp $
+$NetBSD: TODO,v 1.18524 2018/08/26 09:52:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -672,6 +672,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ghc-8.2
 	o ghc7-7.10.1
 	o ghdl-0.33
+	o gimp-2.10.6
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-server-2.3.5
@@ -723,6 +724,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnu-crypto-2.1.0
 	o gnu-pw-mgr-2.0
 	o gnucap-20130423
+	o gnumeric112-1.12.43
 	o gnustep-back-0.24.1
 	o gnustep-base-1.24.8
 	o gnustep-examples-1.4.0
@@ -732,6 +734,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o go-grpc-1.5.2
 	o gob-2.0.19
 	o gobby-0.5.0
+	o goffice0.10-0.10.43
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
 	o goocanvas-2.0.2
@@ -945,6 +948,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
 	o libcarddav-14.0.4
 	o libconfuse-3.1
+	o libdrm-2.4.94
 	o libextractor-1.2 [requires shm_open()]
 	o libflash-0.4.13
 	o libfolks-0.10.1 [wip]
@@ -975,7 +979,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libprelude-3.1.0
 	o libpreludedb-3.1.0
 	o libquantum-1.1.0 [pkg/43728, development release]
-	o librsvg-2.42.6 [needs rust+cargo]
+	o librsvg-2.44.0 [needs rust+cargo]
 	o libstree-0.4.2
 	o libtcl-nothread-8.5.1
 	o libtecla-1.6.3
@@ -1130,6 +1134,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pam-passwdqc-1.3.0
 	o pam-saml-1.5
 	o pam-yubico-2.21
+	o pango-1.42.4
 	o paragui-1.1.8
 	o pari-2.11.0
 	o parrot-7.11.0
@@ -1185,6 +1190,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o policyd-weight-0.1.15.2
 	o polsms-2.1.0
 	o poppass-4.0.14
+	o poppler-0.68.0
 	o posh-0.12.6
 	o postal-0.72
 	o pound-2.8a
@@ -1211,6 +1217,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-Scientific-doc-2.5.5
 	o py-augeas-1.0.3
 	o py-cassa-1.11.0
+	o py-certifi-2018.8.24
 	o py-cssselect2-0.2.1
 	o py-django2-2.0.8
 	o py-doctor-15.1.0
@@ -1230,6 +1237,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-simpletal-5.1
 	o py-spf-2.0.12t
 	o py-sybase-0.37
+	o py-test-xdist-1.23.0
 	o py-wxWidgets-4.0.0
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
@@ -1328,6 +1336,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o spcaview-20060501
 	o spectrwm-2.7.2
 	o spl-1.0pre6
+	o sqlite3-3.25.0
 	o squeak-5.0
 	o squeak-vm-4.10.2.2765
 	o squidview-0.81
@@ -1387,6 +1396,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o texmaker-5.0.2
 	o tfmxplay-1.1.6
 	o thaixfonts-1.2.7
+	o thunderbird-60.0
 	o thunderbird-enigmail-2.0.8
 	o tig-2.2
 	o tightvnc-2.7.10
