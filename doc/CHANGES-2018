@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3801 2018/08/27 15:14:40 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3802 2018/08/27 16:20:15 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5369,3 +5369,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/go to 1.10.4 [bsiegert 2018-08-27]
 	Added news/canlock-hp version 0.0.3 [wiz 2018-08-27]
 	Added news/libcanlock version 3.0.2 [wiz 2018-08-27]
+	Updated geography/opencpn to 4.8.6 [bouyer 2018-08-27]
+	Updated geography/opencpn-plugin-draw to 1.5_20180827 [bouyer 2018-08-27]
+	Updated geography/opencpn-plugin-watchdog to 20180827 [bouyer 2018-08-27]
+	Updated geography/opencpn-plugin-weather_routing to 20180827 [bouyer 2018-08-27]
