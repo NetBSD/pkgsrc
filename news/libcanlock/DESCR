@@ -1,0 +1,8 @@
+libcanlock is a library for creating and verifying RFC 8315 Netnews
+Cancel-Locks. This implementation uses the recommended algorithm from
+Section 4 with HMAC based on the same hash function as <scheme>.
+
+A command line utility "canlock" is built together with the library.
+
+Additional header parsers (for the receiving side) are available in the
+package canlock-hp.
