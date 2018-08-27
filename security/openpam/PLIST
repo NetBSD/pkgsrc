@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2018/05/15 07:57:32 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/08/27 08:59:52 triaxx Exp $
 include/security/openpam.h
 include/security/openpam_attr.h
 include/security/openpam_version.h
@@ -62,3 +62,5 @@ man/man3/pam_verror.3
 man/man3/pam_vinfo.3
 man/man3/pam_vprompt.3
 man/man5/pam.conf.5
+share/examples/openpam/pam.d/other
+share/examples/openpam/pam.d/sudo
