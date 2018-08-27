@@ -1,0 +1,11 @@
+$NetBSD: patch-VERSION.cmake,v 1.1 2018/08/27 15:48:15 bouyer Exp $
+Fix missing version update in upstream
+
+--- VERSION.cmake.orig	2018-08-27 17:34:05.453248871 +0200
++++ VERSION.cmake	2018-08-27 17:34:13.247608834 +0200
+@@ -1,4 +1,4 @@
+ SET(VERSION_MAJOR "4")
+ SET(VERSION_MINOR "8")
+-SET(VERSION_PATCH "5")
++SET(VERSION_PATCH "6")
+ SET(VERSION_DATE "2018-08-02")
