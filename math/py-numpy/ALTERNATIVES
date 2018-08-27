@@ -1,3 +1,1 @@
-bin/conv-template @PREFIX@/bin/conv-template${PYVERSSUFFIX}
 bin/f2py @PREFIX@/bin/f2py@PYVERSSUFFIX@
-bin/from-template @PREFIX@/bin/from-template${PYVERSSUFFIX}

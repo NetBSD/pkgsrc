@@ -1,11 +1,8 @@
-@comment $NetBSD: PLIST,v 1.22 2018/08/10 08:59:08 adam Exp $
-bin/conv-template${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.23 2018/08/27 06:04:35 adam Exp $
 bin/f2py${PYVERSSUFFIX}
-bin/from-template${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/numpy/LICENSE.txt

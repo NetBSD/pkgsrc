@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2018/08/10 08:59:08 adam Exp $
+# $NetBSD: Makefile,v 1.53 2018/08/27 06:04:35 adam Exp $
 
-DISTNAME=	numpy-1.15.0
+DISTNAME=	numpy-1.15.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numpy/}
@@ -42,9 +42,7 @@ LDFLAGS+=		${_COMPILER_ABI_FLAG.${ABI}}
 MAKE_ENV.DragonFly+=	LDVER=ld.bfd
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${RM} f2py && \
-		${MV} conv-template conv-template${PYVERSSUFFIX} && \
-		${MV} from-template from-template${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && ${RM} f2py || ${TRUE}
 
 do-test:
 	${RUN} PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB} ${PYTHONBIN} -c "import numpy; numpy.test()"
