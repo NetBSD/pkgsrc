@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2018/08/22 09:46:19 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2018/08/27 08:59:52 triaxx Exp $
 
 DISTNAME=	openpam-20170430
 PKGREVISION=	1
@@ -20,13 +20,27 @@ CONFIGURE_ARGS+=	--with-modules-dir=${PREFIX}/lib/security
 
 CPPFLAGS+=		-DSYSCONFDIR=\"${PKG_SYSCONFDIR}\"
 
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+CONF_FILES+=		${EGDIR}/pam.d/other ${PKG_SYSCONFDIR}/pam.d/other
+CONF_FILES+=		${EGDIR}/pam.d/sudo ${PKG_SYSCONFDIR}/pam.d/sudo
+
 OWN_DIRS=		${PKG_SYSCONFDIR}/pam.d
+INSTALLATION_DIRS+=	${EGDIR}/pam.d
 
 SUBST_CLASSES+=		man
 SUBST_MESSAGE.man=	Fixing hardcoded paths in manpages.
 SUBST_STAGE.man=	post-build
 SUBST_FILES.man=	doc/man/pam.conf.5
 SUBST_VARS.man=		PKG_SYSCONFDIR PREFIX
+
+post-extract:
+	${MKDIR} -p ${WRKSRC}/doc/pam.d
+	${CP} ${FILESDIR}/other ${WRKSRC}/doc/pam.d/other
+	${CP} ${FILESDIR}/sudo ${WRKSRC}/doc/pam.d/sudo
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/doc/pam.d/other ${DESTDIR}${EGDIR}/pam.d/other
+	${INSTALL_DATA} ${WRKSRC}/doc/pam.d/sudo ${DESTDIR}${EGDIR}/pam.d/sudo
 
 .include "../../mk/dlopen.buildlink3.mk"
 
