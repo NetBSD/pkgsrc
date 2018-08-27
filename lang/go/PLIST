@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2018/07/08 09:27:31 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.44 2018/08/27 15:01:09 bsiegert Exp $
 go/AUTHORS
 go/CONTRIBUTING.md
 go/CONTRIBUTORS
@@ -283,7 +283,21 @@ go/misc/cgo/test/issue21809.go
 go/misc/cgo/test/issue21897.go
 go/misc/cgo/test/issue21897b.go
 go/misc/cgo/test/issue22958.go
+go/misc/cgo/test/issue24161_darwin_test.go
+go/misc/cgo/test/issue24161arg/def.go
+go/misc/cgo/test/issue24161arg/use.go
+go/misc/cgo/test/issue24161e0/main.go
+go/misc/cgo/test/issue24161e1/main.go
+go/misc/cgo/test/issue24161e2/main.go
+go/misc/cgo/test/issue24161res/restype.go
 go/misc/cgo/test/issue2462.go
+go/misc/cgo/test/issue26430.go
+go/misc/cgo/test/issue26430/a.go
+go/misc/cgo/test/issue26430/b.go
+go/misc/cgo/test/issue26517.go
+go/misc/cgo/test/issue26743.go
+go/misc/cgo/test/issue26743/a.go
+go/misc/cgo/test/issue26743/b.go
 go/misc/cgo/test/issue3250.go
 go/misc/cgo/test/issue3250w.go
 go/misc/cgo/test/issue3261.go
@@ -404,6 +418,7 @@ go/misc/cgo/testcshared/src/libgo4/libgo4.go
 go/misc/cgo/testcshared/src/libgo5/libgo5.go
 go/misc/cgo/testcshared/src/p/p.go
 go/misc/cgo/testgodefs/anonunion.go
+go/misc/cgo/testgodefs/fieldtypedef.go
 go/misc/cgo/testgodefs/issue8478.go
 go/misc/cgo/testgodefs/main.go
 go/misc/cgo/testgodefs/test.bash
@@ -7361,12 +7376,15 @@ go/test/fixedbugs/issue23179.dir/a.go
 go/test/fixedbugs/issue23179.dir/b.go
 go/test/fixedbugs/issue23179.go
 go/test/fixedbugs/issue23305.go
+go/test/fixedbugs/issue23504.go
 go/test/fixedbugs/issue23522.go
 go/test/fixedbugs/issue23545.go
 go/test/fixedbugs/issue23719.go
 go/test/fixedbugs/issue23812.go
 go/test/fixedbugs/issue24449.go
 go/test/fixedbugs/issue24817.go
+go/test/fixedbugs/issue25322.go
+go/test/fixedbugs/issue25322.out
 go/test/fixedbugs/issue2615.go
 go/test/fixedbugs/issue3552.dir/one.go
 go/test/fixedbugs/issue3552.dir/two.go
@@ -7979,3 +7997,4 @@ go/test/varerr.go
 go/test/varinit.go
 go/test/writebarrier.go
 go/test/zerodivide.go
+@pkgdir bin
