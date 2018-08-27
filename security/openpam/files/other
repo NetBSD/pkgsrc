@@ -1,0 +1,16 @@
+# $NetBSD: other,v 1.1 2018/08/27 08:59:52 triaxx Exp $
+#
+# PAM configuration for the "other" service
+#
+
+# auth
+auth		required	pam_unix.so		no_warn try_first_pass nullok
+
+# account
+account		required	pam_unix.so
+
+# session
+session		required	pam_permit.so
+
+# password
+password	required	pam_permit.so
