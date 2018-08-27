@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3795 2018/08/27 07:15:57 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3796 2018/08/27 08:03:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5361,3 +5361,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/cups-filters to 1.21.1 [adam 2018-08-27]
 	Updated lang/tcl-expect to 5.45.0nb4 [wiz 2018-08-27]
 	Updated emulators/vmips to 1.5.1 [wiz 2018-08-27]
+	Updated devel/py-atomicwrites to 1.2.0 [adam 2018-08-27]
+	Updated textproc/py-xlsxwriter to 1.0.8 [adam 2018-08-27]
