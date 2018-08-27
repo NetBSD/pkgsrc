@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/08/27 15:13:27 wiz Exp $
+
+SHA1 (canlock-hp-0.0.3.tar.bz2) = 569c7c78595574a51fe5f87e1e2da72f38eda466
+RMD160 (canlock-hp-0.0.3.tar.bz2) = 426fb265f22c2e3a5a4364e5fb0fc8dbc74373f6
+SHA512 (canlock-hp-0.0.3.tar.bz2) = 0c61ee215d12d4d4d8563cfcd3496cebc256821ea64f333c7e060f3f0083c3a38f708322c6050175b5d7b7fbe533d7c62b4e7780c068a962dc33ee3ddf5d6e4b
+Size (canlock-hp-0.0.3.tar.bz2) = 178622 bytes
