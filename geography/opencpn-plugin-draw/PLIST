@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/04/05 15:56:25 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/08/27 15:54:09 bouyer Exp $
 lib/opencpn/libocpn_draw_pi.so
 share/locale/ar_SA/LC_MESSAGES/opencpn-ocpn_draw_pi.mo
 share/locale/ca_ES/LC_MESSAGES/opencpn-ocpn_draw_pi.mo
@@ -9,18 +9,24 @@ share/locale/el_GR/LC_MESSAGES/opencpn-ocpn_draw_pi.mo
 share/locale/es_ES/LC_MESSAGES/opencpn-ocpn_draw_pi.mo
 share/locale/et_EE/LC_MESSAGES/opencpn-ocpn_draw_pi.mo
 share/locale/fi_FI/LC_MESSAGES/opencpn-ocpn_draw_pi.mo
+share/locale/fil_PH/LC_MESSAGES/opencpn-ocpn_draw_pi.mo
 share/locale/fr_FR/LC_MESSAGES/opencpn-ocpn_draw_pi.mo
 share/locale/gl_ES/LC_MESSAGES/opencpn-ocpn_draw_pi.mo
+share/locale/hi_IN/LC_MESSAGES/opencpn-ocpn_draw_pi.mo
 share/locale/hu_HU/LC_MESSAGES/opencpn-ocpn_draw_pi.mo
+share/locale/id_ID/LC_MESSAGES/opencpn-ocpn_draw_pi.mo
 share/locale/it_IT/LC_MESSAGES/opencpn-ocpn_draw_pi.mo
 share/locale/ja_JP/LC_MESSAGES/opencpn-ocpn_draw_pi.mo
+share/locale/mr_IN/LC_MESSAGES/opencpn-ocpn_draw_pi.mo
 share/locale/nb_NO/LC_MESSAGES/opencpn-ocpn_draw_pi.mo
 share/locale/nl_NL/LC_MESSAGES/opencpn-ocpn_draw_pi.mo
 share/locale/pl_PL/LC_MESSAGES/opencpn-ocpn_draw_pi.mo
 share/locale/pt_BR/LC_MESSAGES/opencpn-ocpn_draw_pi.mo
 share/locale/pt_PT/LC_MESSAGES/opencpn-ocpn_draw_pi.mo
+share/locale/ro_RO/LC_MESSAGES/opencpn-ocpn_draw_pi.mo
 share/locale/ru_RU/LC_MESSAGES/opencpn-ocpn_draw_pi.mo
 share/locale/sv_SE/LC_MESSAGES/opencpn-ocpn_draw_pi.mo
+share/locale/th_TH/LC_MESSAGES/opencpn-ocpn_draw_pi.mo
 share/locale/tr_TR/LC_MESSAGES/opencpn-ocpn_draw_pi.mo
 share/locale/vi_VN/LC_MESSAGES/opencpn-ocpn_draw_pi.mo
 share/locale/zh_TW/LC_MESSAGES/opencpn-ocpn_draw_pi.mo
