@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3791 2018/08/26 22:36:48 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.3792 2018/08/27 06:18:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5353,3 +5353,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/agedu to 20180522.5b12791 [schmonz 2018-08-26]
 	Updated devel/skalibs to 2.7.0.0 [schmonz 2018-08-26]
 	Updated www/pound to 2.8 [schmonz 2018-08-26]
+	Updated math/py-numpy to 1.15.1 [adam 2018-08-27]
+	Updated devel/py-test to 3.7.3 [adam 2018-08-27]
+	Updated devel/py-typing to 3.6.6 [adam 2018-08-27]
+	Updated devel/py-hypothesis to 3.69.3 [adam 2018-08-27]
