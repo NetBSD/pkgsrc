@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.17 2018/07/19 17:58:58 bouyer Exp $
+# $NetBSD: Makefile,v 1.18 2018/08/27 15:54:09 bouyer Exp $
 #
 
-VERSION=	1.5_20180405
+VERSION=	1.5_20180827
 DISTNAME=	ocpn_draw_pi-${VERSION}
 PKGNAME=	opencpn-plugin-draw-${VERSION}
-PKGREVISION=	3
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jongough/}
 GITHUB_PROJECT=	ocpn_draw_pi
-GITHUB_TAG=	e7d675a889ee5d0c2745d5716669cf82775c1eac
+GITHUB_TAG=	6c79970ce4aa83f089bcc6c67d559f2731fbac10
 
 MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	https://opencpn.org/OpenCPN/plugins/draw.html
