@@ -1,0 +1,10 @@
+The canlock-hp package contains standalone header parsers that can be used to
+implement RFC 8315 Netnews Cancel-Locks on the receiving (server) side.
+They are intended as preprocessors for canlock, the command line frontend of
+libcanlock, but are independent programs.
+
+canlock-mhp (Message Header Parser) is intended to process RFC 5536 Netnews
+articles and can be used to extract and unfold a single header field.
+
+canlock-hfp (Header Field Parser) is intended to process RFC 8315 header fields
+("Cancel-Lock" and "Cancel-Key").
