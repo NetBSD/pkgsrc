@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2014/11/24 14:47:27 mef Exp $
-#
+# $NetBSD: Makefile,v 1.12 2018/08/27 07:15:47 wiz Exp $
 
-DISTNAME=		vmips-1.5
+DISTNAME=		vmips-1.5.1
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vmips/}
 
@@ -21,11 +20,9 @@ CONF_FILES=		${EGDIR}/vmipsrc ${PKG_SYSCONFDIR}/vmipsrc
 
 USE_LANGUAGES=		c c++
 
-do-test:
-	if ${PKG_INFO} -qe dejagnu; then		\
-		(cd ${WRKSRC}/test_code && ${MAKE} check);	\
-	else						\
-		${ECHO} "dejagnu is required for the test target";	\
-	fi
+TEST_DEPENDS+=		dejagnu-[0-9]*:../../devel/dejagnu
+TEST_DIRS=		test_code
+# needs mipsel-ecoff-gcc
+#TEST_TARGET=		check
 
 .include "../../mk/bsd.pkg.mk"
