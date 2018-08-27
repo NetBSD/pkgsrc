@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/04/05 15:34:33 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/08/27 15:48:15 bouyer Exp $
 bin/opencpn
 lib/opencpn/libchartdldr_pi.so
 lib/opencpn/libdashboard_pi.so
@@ -13,6 +13,7 @@ share/locale/ar_SA/LC_MESSAGES/opencpn-chartdldr_pi.mo
 share/locale/ar_SA/LC_MESSAGES/opencpn-dashboard_pi.mo
 share/locale/ar_SA/LC_MESSAGES/opencpn-grib_pi.mo
 share/locale/ar_SA/LC_MESSAGES/opencpn-wmm_pi.mo
+share/locale/ar_SA/LC_MESSAGES/opencpn.mo
 share/locale/ca_ES/LC_MESSAGES/opencpn-chartdldr_pi.mo
 share/locale/ca_ES/LC_MESSAGES/opencpn-dashboard_pi.mo
 share/locale/ca_ES/LC_MESSAGES/opencpn-grib_pi.mo
@@ -53,6 +54,10 @@ share/locale/fi_FI/LC_MESSAGES/opencpn-dashboard_pi.mo
 share/locale/fi_FI/LC_MESSAGES/opencpn-grib_pi.mo
 share/locale/fi_FI/LC_MESSAGES/opencpn-wmm_pi.mo
 share/locale/fi_FI/LC_MESSAGES/opencpn.mo
+share/locale/fil_PH/LC_MESSAGES/opencpn-chartdldr_pi.mo
+share/locale/fil_PH/LC_MESSAGES/opencpn-dashboard_pi.mo
+share/locale/fil_PH/LC_MESSAGES/opencpn-grib_pi.mo
+share/locale/fil_PH/LC_MESSAGES/opencpn-wmm_pi.mo
 share/locale/fr/LC_MESSAGES/opencpn.mo
 share/locale/fr_FR/LC_MESSAGES/opencpn-chartdldr_pi.mo
 share/locale/fr_FR/LC_MESSAGES/opencpn-dashboard_pi.mo
@@ -63,11 +68,19 @@ share/locale/gl_ES/LC_MESSAGES/opencpn-dashboard_pi.mo
 share/locale/gl_ES/LC_MESSAGES/opencpn-grib_pi.mo
 share/locale/gl_ES/LC_MESSAGES/opencpn-wmm_pi.mo
 share/locale/gl_ES/LC_MESSAGES/opencpn.mo
+share/locale/hi_IN/LC_MESSAGES/opencpn-chartdldr_pi.mo
+share/locale/hi_IN/LC_MESSAGES/opencpn-dashboard_pi.mo
+share/locale/hi_IN/LC_MESSAGES/opencpn-grib_pi.mo
+share/locale/hi_IN/LC_MESSAGES/opencpn-wmm_pi.mo
 share/locale/hu_HU/LC_MESSAGES/opencpn-chartdldr_pi.mo
 share/locale/hu_HU/LC_MESSAGES/opencpn-dashboard_pi.mo
 share/locale/hu_HU/LC_MESSAGES/opencpn-grib_pi.mo
 share/locale/hu_HU/LC_MESSAGES/opencpn-wmm_pi.mo
 share/locale/hu_HU/LC_MESSAGES/opencpn.mo
+share/locale/id_ID/LC_MESSAGES/opencpn-chartdldr_pi.mo
+share/locale/id_ID/LC_MESSAGES/opencpn-dashboard_pi.mo
+share/locale/id_ID/LC_MESSAGES/opencpn-grib_pi.mo
+share/locale/id_ID/LC_MESSAGES/opencpn-wmm_pi.mo
 share/locale/it/LC_MESSAGES/opencpn.mo
 share/locale/it_IT/LC_MESSAGES/opencpn-chartdldr_pi.mo
 share/locale/it_IT/LC_MESSAGES/opencpn-dashboard_pi.mo
@@ -77,6 +90,15 @@ share/locale/ja_JP/LC_MESSAGES/opencpn-chartdldr_pi.mo
 share/locale/ja_JP/LC_MESSAGES/opencpn-dashboard_pi.mo
 share/locale/ja_JP/LC_MESSAGES/opencpn-grib_pi.mo
 share/locale/ja_JP/LC_MESSAGES/opencpn-wmm_pi.mo
+share/locale/ja_JP/LC_MESSAGES/opencpn.mo
+share/locale/ko_KR/LC_MESSAGES/opencpn-chartdldr_pi.mo
+share/locale/ko_KR/LC_MESSAGES/opencpn-dashboard_pi.mo
+share/locale/ko_KR/LC_MESSAGES/opencpn-grib_pi.mo
+share/locale/ko_KR/LC_MESSAGES/opencpn-wmm_pi.mo
+share/locale/mr_IN/LC_MESSAGES/opencpn-chartdldr_pi.mo
+share/locale/mr_IN/LC_MESSAGES/opencpn-dashboard_pi.mo
+share/locale/mr_IN/LC_MESSAGES/opencpn-grib_pi.mo
+share/locale/mr_IN/LC_MESSAGES/opencpn-wmm_pi.mo
 share/locale/nb_NO/LC_MESSAGES/opencpn-chartdldr_pi.mo
 share/locale/nb_NO/LC_MESSAGES/opencpn-dashboard_pi.mo
 share/locale/nb_NO/LC_MESSAGES/opencpn-grib_pi.mo
@@ -102,6 +124,10 @@ share/locale/pt_PT/LC_MESSAGES/opencpn-dashboard_pi.mo
 share/locale/pt_PT/LC_MESSAGES/opencpn-grib_pi.mo
 share/locale/pt_PT/LC_MESSAGES/opencpn-wmm_pi.mo
 share/locale/pt_PT/LC_MESSAGES/opencpn.mo
+share/locale/ro_RO/LC_MESSAGES/opencpn-chartdldr_pi.mo
+share/locale/ro_RO/LC_MESSAGES/opencpn-dashboard_pi.mo
+share/locale/ro_RO/LC_MESSAGES/opencpn-grib_pi.mo
+share/locale/ro_RO/LC_MESSAGES/opencpn-wmm_pi.mo
 share/locale/ru/LC_MESSAGES/opencpn.mo
 share/locale/ru_RU/LC_MESSAGES/opencpn-chartdldr_pi.mo
 share/locale/ru_RU/LC_MESSAGES/opencpn-dashboard_pi.mo
@@ -112,6 +138,10 @@ share/locale/sv_SE/LC_MESSAGES/opencpn-chartdldr_pi.mo
 share/locale/sv_SE/LC_MESSAGES/opencpn-dashboard_pi.mo
 share/locale/sv_SE/LC_MESSAGES/opencpn-grib_pi.mo
 share/locale/sv_SE/LC_MESSAGES/opencpn-wmm_pi.mo
+share/locale/th_TH/LC_MESSAGES/opencpn-chartdldr_pi.mo
+share/locale/th_TH/LC_MESSAGES/opencpn-dashboard_pi.mo
+share/locale/th_TH/LC_MESSAGES/opencpn-grib_pi.mo
+share/locale/th_TH/LC_MESSAGES/opencpn-wmm_pi.mo
 share/locale/tr_TR/LC_MESSAGES/opencpn-chartdldr_pi.mo
 share/locale/tr_TR/LC_MESSAGES/opencpn-dashboard_pi.mo
 share/locale/tr_TR/LC_MESSAGES/opencpn-grib_pi.mo
@@ -121,6 +151,7 @@ share/locale/vi_VN/LC_MESSAGES/opencpn-chartdldr_pi.mo
 share/locale/vi_VN/LC_MESSAGES/opencpn-dashboard_pi.mo
 share/locale/vi_VN/LC_MESSAGES/opencpn-grib_pi.mo
 share/locale/vi_VN/LC_MESSAGES/opencpn-wmm_pi.mo
+share/locale/vi_VN/LC_MESSAGES/opencpn.mo
 share/locale/zh_TW/LC_MESSAGES/opencpn-chartdldr_pi.mo
 share/locale/zh_TW/LC_MESSAGES/opencpn-dashboard_pi.mo
 share/locale/zh_TW/LC_MESSAGES/opencpn-grib_pi.mo
