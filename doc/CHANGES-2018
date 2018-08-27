@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3796 2018/08/27 08:03:48 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3797 2018/08/27 11:18:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5363,3 +5363,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated emulators/vmips to 1.5.1 [wiz 2018-08-27]
 	Updated devel/py-atomicwrites to 1.2.0 [adam 2018-08-27]
 	Updated textproc/py-xlsxwriter to 1.0.8 [adam 2018-08-27]
+	Updated www/py-aiohttp to 3.4.0 [adam 2018-08-27]
+	Updated www/py-pylint-django to 2.0.2 [adam 2018-08-27]
