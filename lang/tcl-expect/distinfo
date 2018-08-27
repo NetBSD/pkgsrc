@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.19 2015/11/03 22:50:45 agc Exp $
+$NetBSD: distinfo,v 1.20 2018/08/27 07:12:08 wiz Exp $
 
 SHA1 (expect5.45.tar.gz) = e634992cab35b7c6931e1f21fbb8f74d464bd496
 RMD160 (expect5.45.tar.gz) = edffe881ee45abe6e9aa150ea5958a04d0ffeab0
 SHA512 (expect5.45.tar.gz) = be991c68241e607b3a689eae7e7966056dbfb577e857331d54a4911bd178c1816425217603b43918ad1b6d2e966271a0f01e79d7028a22e223562d59d10c8c51
 Size (expect5.45.tar.gz) = 628808 bytes
-SHA1 (patch-Makefile.in) = 6f38c1d356ab206c0d00a8b465434994bc787bcf
+SHA1 (patch-Makefile.in) = 24efcbdb0a21985cb8a0fb7812c5f45f67de7c30
 SHA1 (patch-configure) = a16c833e61d23f63abff1413522b99cd2251bc34
