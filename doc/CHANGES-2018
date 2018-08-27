@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3800 2018/08/27 15:14:31 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3801 2018/08/27 15:14:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5368,3 +5368,4 @@ Changes to the packages collection and infrastructure in 2018:
         Removed net/gated [bsiegert 2018-08-27]
 	Updated lang/go to 1.10.4 [bsiegert 2018-08-27]
 	Added news/canlock-hp version 0.0.3 [wiz 2018-08-27]
+	Added news/libcanlock version 3.0.2 [wiz 2018-08-27]
