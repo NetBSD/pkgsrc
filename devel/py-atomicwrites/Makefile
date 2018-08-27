@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2018/05/24 06:42:47 adam Exp $
+# $NetBSD: Makefile,v 1.10 2018/08/27 08:00:45 adam Exp $
 
-DISTNAME=	atomicwrites-1.1.5
+DISTNAME=	atomicwrites-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/atomicwrites/}
