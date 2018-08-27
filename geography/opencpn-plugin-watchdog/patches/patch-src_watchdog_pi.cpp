@@ -1,16 +1,16 @@
-$NetBSD: patch-src_watchdog_pi.cpp,v 1.2 2018/07/03 15:14:16 bouyer Exp $
+$NetBSD: patch-src_watchdog_pi.cpp,v 1.3 2018/08/27 15:59:07 bouyer Exp $
 
---- src/watchdog_pi.cpp.orig	2018-03-04 15:24:36.000000000 +0100
-+++ src/watchdog_pi.cpp	2018-07-02 12:05:36.112240381 +0200
+--- src/watchdog_pi.cpp.orig	2018-08-25 23:08:44.000000000 +0200
++++ src/watchdog_pi.cpp	2018-08-27 15:58:48.263716962 +0200
 @@ -26,6 +26,7 @@
  
  #include <wx/wx.h>
  #include <wx/stdpaths.h>
 +#include <cmath>
  
- #include "wxJSON/jsonreader.h"
- #include "wxJSON/jsonwriter.h"
-@@ -345,14 +346,14 @@
+ #include "json/json.h"
+ 
+@@ -343,14 +344,14 @@
  {
      /* calculate course and speed over ground from gps */
      double dt = m_lastfix.FixTime - m_lasttimerfix.FixTime;
@@ -26,4 +26,4 @@ $NetBSD: patch-src_watchdog_pi.cpp,v 1.2 2018/07/03 15:14:16 bouyer Exp $
 +        if(std::isnan(m_cog))
              m_cog = cog, m_sog = sog;
          else {
-             m_cog = .25*cog + .75*m_cog;
+             cog = heading_resolve(cog, m_cog);
