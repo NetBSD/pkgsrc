@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2018/07/20 03:34:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.47 2018/08/27 19:26:08 schmonz Exp $
 #
 
 DISTNAME=		ezmlm-idx-${IDXVERSION}
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		mail
 IDXVERSION=		7.2.2
 MASTER_SITES=		http://untroubled.org/ezmlm/archive/${IDXVERSION}/
@@ -27,7 +27,9 @@ DJB_CONFIG_CMDS+=	${ECHO} ${DESTDIR:Q} > conf-destdir;		\
 			${ECHO} ${PREFIX:Q}/lib/ezmlm > conf-lib;
 
 LDFLAGS.Darwin+=	-Wl,-U,_FATAL -Wl,-U,_USAGE
+LDFLAGS.Linux+=		-Wl,--export-dynamic
 LDFLAGS.SunOS+=		-lsocket -lnsl
+LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
 INSTALL_TARGET=		install
 
@@ -52,6 +54,9 @@ INSTALLATION_DIRS+=	share/doc/${PKGBASE} share/examples/${PKGBASE}
 
 post-extract:
 	${GREP} -v '^#' < cf-files.mk | ${CUT} -f2 | ${SED} -e 's|^|share/examples/ezmlm-idx/|g' > ${WRKDIR}/PLIST.idxcf
+
+do-test:
+	cd ${WRKSRC} && ./ezmlm-test
 
 pre-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PKG_SYSCONFDIR}
