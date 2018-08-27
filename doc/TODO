@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18524 2018/08/26 09:52:33 wiz Exp $
+$NetBSD: TODO,v 1.18525 2018/08/27 13:46:53 bsiegert Exp $
 
 Suggested new packages
 ======================
@@ -650,7 +650,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gallery3-3.0.2
 	o ganglia-3.7.1
 	o gap-4r4p9
-	o gated-3.6
 	o gbrainy-2.27
 	o gcal-4
 	o gcc8-8.2
