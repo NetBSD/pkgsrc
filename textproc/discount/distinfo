@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8 2018/07/27 15:50:45 schmonz Exp $
+$NetBSD: distinfo,v 1.9 2018/08/27 20:46:18 schmonz Exp $
 
-SHA1 (discount-2.2.3a.tar.bz2) = 9ff2985b89e7bc7ca6a18f82aade2b25db2c97f8
-RMD160 (discount-2.2.3a.tar.bz2) = 66a13d6848251ab8a73a59ba4ec95befe9bbdc2d
-SHA512 (discount-2.2.3a.tar.bz2) = cf995a46879f269f3e02f7d480303d229676bb36f71fe045d3a8eab7306fca9cce98496611b9fb9e0a14a9cf46ee66bd239dd9c946dff54ae09277fd66459c1f
-Size (discount-2.2.3a.tar.bz2) = 98325 bytes
+SHA1 (discount-2.2.4.tar.bz2) = 038e754afe234d92e5f327353fab5772c3f97f63
+RMD160 (discount-2.2.4.tar.bz2) = 5270054635d152d81acb81a8d87f29a98750a1a0
+SHA512 (discount-2.2.4.tar.bz2) = 0650e0ce3f6948e3a30fdaa1a810e895f64621c55df46c7a5ed8755e65c1b718b7a1d1a1bfe0a87a3a59fbb13fca8907718f1aa095125a4b6e152602b8e490cf
+Size (discount-2.2.4.tar.bz2) = 99482 bytes
 SHA1 (patch-Makefile.in) = 66270dca27485373279bd9ce8c445cc5a931e29a
 SHA1 (patch-generate.c) = 40ba6619c592531724ed78df5ffc99998e55498e
