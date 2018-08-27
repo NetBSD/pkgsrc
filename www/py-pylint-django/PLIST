@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/08/24 18:31:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/08/27 11:18:35 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -82,6 +82,9 @@ ${PYSITELIB}/pylint_django/tests/input/func_noerror_classviews.pyo
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_duplicate_except_doesnotexist.py
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_duplicate_except_doesnotexist.pyc
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_duplicate_except_doesnotexist.pyo
+${PYSITELIB}/pylint_django/tests/input/func_noerror_factory_post_generation.py
+${PYSITELIB}/pylint_django/tests/input/func_noerror_factory_post_generation.pyc
+${PYSITELIB}/pylint_django/tests/input/func_noerror_factory_post_generation.pyo
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_foreign_key_attributes.py
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_foreign_key_attributes.pyc
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_foreign_key_attributes.pyo
