@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.18 2018/07/19 17:58:58 bouyer Exp $
+# $NetBSD: Makefile,v 1.19 2018/08/27 16:19:21 bouyer Exp $
 #
 
-VERSION=	20180405
+VERSION=	20180827
 DISTNAME=	weather_routing_pi-${VERSION}
 PKGNAME=	opencpn-plugin-weather_routing-${VERSION}
-PKGREVISION=	3
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=seandepagnier/}
 GITHUB_PROJECT=	weather_routing_pi
-GITHUB_TAG=	c4dc8231ef0da6c7da52be22f2cded1c2880dfa4
+GITHUB_TAG=	44695011d39c390784220589b9bd25932b73af3e
 
 MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	https://opencpn.org/OpenCPN/plugins/weatherroute.html
@@ -25,6 +24,20 @@ CMAKE_MODULE_PATH_OVERRIDE = \
 		cmake/PluginInstall.cmake \
 		cmake/PluginLocalization.cmake \
 		cmake/PluginPackage.cmake
+
+SUBST_CLASSES+=	isnan
+SUBST_STAGE.isnan=	pre-configure
+SUBST_MESSAGE.isnan=	replace wxIsNaN with std::isnan
+SUBST_FILES.isnan=	src/BoatDialog.cpp \
+			src/ReportDialog.cpp \
+			src/EditPolarDialog.cpp \
+			src/Polar.cpp \
+			src/RouteMap.cpp \
+			src/RouteMapOverlay.cpp \
+			src/SailboatTransform.cpp \
+			src/WeatherRouting.cpp
+SUBST_SED.isnan=	-e s,wxIsNaN,std::isnan,g
+
 
 .include "../../devel/cmake/buildlink3.mk"
 .include "../../x11/wxGTK30/buildlink3.mk"
