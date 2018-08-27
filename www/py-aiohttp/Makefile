@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2018/06/12 15:28:53 adam Exp $
+# $NetBSD: Makefile,v 1.28 2018/08/27 11:16:01 adam Exp $
 
-DISTNAME=	aiohttp-3.3.2
+DISTNAME=	aiohttp-3.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiohttp/}
@@ -10,16 +10,20 @@ HOMEPAGE=	https://github.com/aio-libs/aiohttp
 COMMENT=	Async http client/server framework
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-async-timeout>=1.2.0:../../devel/py-async-timeout
+DEPENDS+=	${PYPKGPREFIX}-async-timeout>=3.0:../../devel/py-async-timeout
 DEPENDS+=	${PYPKGPREFIX}-attrs>=17.4.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-chardet>=2.0:../../converters/py-chardet
-DEPENDS+=	${PYPKGPREFIX}-idna-ssl>=1.0:../../www/py-idna_ssl
 DEPENDS+=	${PYPKGPREFIX}-multidict>=4.0:../../databases/py-multidict
 DEPENDS+=	${PYPKGPREFIX}-yarl>=1.0:../../www/py-yarl
 TEST_DEPENDS+=	${PYPKGPREFIX}-async_generator-[0-9]*:../../devel/py-async_generator
 TEST_DEPENDS+=	${PYPKGPREFIX}-gunicorn-[0-9]*:../../www/py-gunicorn
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
+
+.include "../../lang/python/pyversion.mk"
+.if ${_PYTHON_VERSION} < 37
+DEPENDS+=	${PYPKGPREFIX}-idna-ssl>=1.0:../../www/py-idna_ssl
+.endif
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 34
 
