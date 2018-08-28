@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/04/03 20:58:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/08/28 07:26:19 adam Exp $
 bin/buildbot${PYVERSSUFFIX}
 bin/buildbot_windows_service${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -762,6 +762,9 @@ ${PYSITELIB}/buildbot/steps/source/git.pyo
 ${PYSITELIB}/buildbot/steps/source/github.py
 ${PYSITELIB}/buildbot/steps/source/github.pyc
 ${PYSITELIB}/buildbot/steps/source/github.pyo
+${PYSITELIB}/buildbot/steps/source/gitlab.py
+${PYSITELIB}/buildbot/steps/source/gitlab.pyc
+${PYSITELIB}/buildbot/steps/source/gitlab.pyo
 ${PYSITELIB}/buildbot/steps/source/mercurial.py
 ${PYSITELIB}/buildbot/steps/source/mercurial.pyc
 ${PYSITELIB}/buildbot/steps/source/mercurial.pyo
@@ -1548,6 +1551,9 @@ ${PYSITELIB}/buildbot/test/unit/test_steps_source_git.pyo
 ${PYSITELIB}/buildbot/test/unit/test_steps_source_github.py
 ${PYSITELIB}/buildbot/test/unit/test_steps_source_github.pyc
 ${PYSITELIB}/buildbot/test/unit/test_steps_source_github.pyo
+${PYSITELIB}/buildbot/test/unit/test_steps_source_gitlab.py
+${PYSITELIB}/buildbot/test/unit/test_steps_source_gitlab.pyc
+${PYSITELIB}/buildbot/test/unit/test_steps_source_gitlab.pyo
 ${PYSITELIB}/buildbot/test/unit/test_steps_source_mercurial.py
 ${PYSITELIB}/buildbot/test/unit/test_steps_source_mercurial.pyc
 ${PYSITELIB}/buildbot/test/unit/test_steps_source_mercurial.pyo
@@ -1607,6 +1613,9 @@ ${PYSITELIB}/buildbot/test/unit/test_util_debounce.pyo
 ${PYSITELIB}/buildbot/test/unit/test_util_eventual.py
 ${PYSITELIB}/buildbot/test/unit/test_util_eventual.pyc
 ${PYSITELIB}/buildbot/test/unit/test_util_eventual.pyo
+${PYSITELIB}/buildbot/test/unit/test_util_git.py
+${PYSITELIB}/buildbot/test/unit/test_util_git.pyc
+${PYSITELIB}/buildbot/test/unit/test_util_git.pyo
 ${PYSITELIB}/buildbot/test/unit/test_util_giturlparse.py
 ${PYSITELIB}/buildbot/test/unit/test_util_giturlparse.pyc
 ${PYSITELIB}/buildbot/test/unit/test_util_giturlparse.pyo
@@ -1643,6 +1652,9 @@ ${PYSITELIB}/buildbot/test/unit/test_util_pathmatch.pyo
 ${PYSITELIB}/buildbot/test/unit/test_util_poll.py
 ${PYSITELIB}/buildbot/test/unit/test_util_poll.pyc
 ${PYSITELIB}/buildbot/test/unit/test_util_poll.pyo
+${PYSITELIB}/buildbot/test/unit/test_util_private_tempdir.py
+${PYSITELIB}/buildbot/test/unit/test_util_private_tempdir.pyc
+${PYSITELIB}/buildbot/test/unit/test_util_private_tempdir.pyo
 ${PYSITELIB}/buildbot/test/unit/test_util_raml.py
 ${PYSITELIB}/buildbot/test/unit/test_util_raml.pyc
 ${PYSITELIB}/buildbot/test/unit/test_util_raml.pyo
@@ -1883,6 +1895,9 @@ ${PYSITELIB}/buildbot/util/debounce.pyo
 ${PYSITELIB}/buildbot/util/eventual.py
 ${PYSITELIB}/buildbot/util/eventual.pyc
 ${PYSITELIB}/buildbot/util/eventual.pyo
+${PYSITELIB}/buildbot/util/git.py
+${PYSITELIB}/buildbot/util/git.pyc
+${PYSITELIB}/buildbot/util/git.pyo
 ${PYSITELIB}/buildbot/util/giturlparse.py
 ${PYSITELIB}/buildbot/util/giturlparse.pyc
 ${PYSITELIB}/buildbot/util/giturlparse.pyo
@@ -1916,6 +1931,9 @@ ${PYSITELIB}/buildbot/util/pathmatch.pyo
 ${PYSITELIB}/buildbot/util/poll.py
 ${PYSITELIB}/buildbot/util/poll.pyc
 ${PYSITELIB}/buildbot/util/poll.pyo
+${PYSITELIB}/buildbot/util/private_tempdir.py
+${PYSITELIB}/buildbot/util/private_tempdir.pyc
+${PYSITELIB}/buildbot/util/private_tempdir.pyo
 ${PYSITELIB}/buildbot/util/raml.py
 ${PYSITELIB}/buildbot/util/raml.pyc
 ${PYSITELIB}/buildbot/util/raml.pyo
