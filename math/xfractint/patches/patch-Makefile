@@ -1,0 +1,66 @@
+$NetBSD: patch-Makefile,v 1.1 2018/08/28 11:54:54 schmonz Exp $
+
+--- Makefile.orig	2014-05-03 13:12:33.000000000 +0000
++++ Makefile
+@@ -159,19 +159,21 @@ CC = /usr/bin/gcc
+ # LIBS = -L/usr/X11R6/lib -lX11 -lm -lncurses
+ # LIBS = -lX11 -lm -lcurses
+ 
+-ifeq ($(ARCH),athlon64)
+-LIBS = -L/usr/X11R6/lib64 -lX11 -lm
+-else
+-LIBS = -L/usr/X11R6/lib -lX11 -lm
+-endif
++#ifeq ($(ARCH),athlon64)
++#LIBS = -L/usr/X11R6/lib64 -lX11 -lm
++#else
++#LIBS = -L/usr/X11R6/lib -lX11 -lm
++#endif
++#
++#ifeq ($(NCURSES),-DNCURSES)
++#LIBS += -lncurses
++#endif
++#
++#ifeq ($(WITHXFT),-DWITH_XFT)
++#LIBS += -lXft -lfontconfig
++#endif
+ 
+-ifeq ($(NCURSES),-DNCURSES)
+-LIBS += -lncurses
+-endif
+-
+-ifeq ($(WITHXFT),-DWITH_XFT)
+-LIBS += -lXft -lfontconfig
+-endif
++LIBS = ${X11_LDFLAGS} ${LDFLAGS} -lX11 -lXft -lm -lcurses -ltermcap
+ 
+ # HPUX fixes thanks to David Allport, Bill Broadley, and R. Lloyd.
+ # AIX fixes thanks to David Sanderson & Elliot Jaffe.
+@@ -343,18 +345,15 @@ clean:
+ 	cd $(UDIR) ; ${MAKE} clean
+ 
+ install: xfractint fractint.hlp
+-	$(STRIP) xfractint
+-	$(INSTALL) -d $(BINDIR) $(MANDIR) $(SRCDIR)/$(PDIR) $(SRCDIR)/$(FDIR) \
+-		$(SRCDIR)/$(IDIR) $(SRCDIR)/$(LDIR) $(SRCDIR)/$(MDIR) $(SRCDIR)/$(XDIR)
+-	$(INSTALL) xfractint -T $(BINDIR)/xfractint;
+-	$(INSTALL) -m 644 -T $(UDIR)/xfractint.man $(MANDIR)/xfractint.1;
+-	$(INSTALL) -m 644 -t $(SRCDIR) fractint.hlp sstools.ini $(DOCS)
+-	$(INSTALL) -m 644 -t $(SRCDIR)/$(PDIR) $(PARFILES)
+-	$(INSTALL) -m 644 -t $(SRCDIR)/$(FDIR) $(FRMFILES)
+-	$(INSTALL) -m 644 -t $(SRCDIR)/$(IDIR) $(IFSFILES)
+-	$(INSTALL) -m 644 -t $(SRCDIR)/$(LDIR) $(LFILES)
+-	$(INSTALL) -m 644 -t $(SRCDIR)/$(MDIR) $(MAPFILES)
+-	$(INSTALL) -m 644 -t $(SRCDIR)/$(XDIR) $(XTRAFILES)
++	$(BSD_INSTALL_PROGRAM) xfractint $(DESTDIR)$(BINDIR)/xfractint;
++	$(BSD_INSTALL_MAN) $(UDIR)/xfractint.man $(DESTDIR)$(MANDIR)/xfractint.1;
++	$(BSD_INSTALL_DATA) fractint.hlp sstools.ini $(DOCS) $(DESTDIR)$(SRCDIR)
++	$(BSD_INSTALL_DATA) $(PARFILES) $(DESTDIR)$(SRCDIR)/$(PDIR)
++	$(BSD_INSTALL_DATA) $(FRMFILES) $(DESTDIR)$(SRCDIR)/$(FDIR)
++	$(BSD_INSTALL_DATA) $(IFSFILES) $(DESTDIR)$(SRCDIR)/$(IDIR)
++	$(BSD_INSTALL_DATA) $(LFILES) $(DESTDIR)$(SRCDIR)/$(LDIR)
++	$(BSD_INSTALL_DATA) $(MAPFILES) $(DESTDIR)$(SRCDIR)/$(MDIR)
++	$(BSD_INSTALL_DATA) $(XTRAFILES) $(DESTDIR)$(SRCDIR)/$(XDIR)
+ 
+ uninstall:
+ 	cd $(SRCDIR); rm -f $(PARFILES)
