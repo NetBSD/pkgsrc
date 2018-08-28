@@ -1,15 +1,18 @@
-# $NetBSD: Makefile.common,v 1.1 2018/06/07 19:12:19 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.2 2018/08/28 13:22:20 ryoon Exp $
 #
 # used by cross/mingw-w64-x86_64-binutils/Makefile
 # used by cross/mingw-w64-i686-binutils/Makefile
 
-DISTNAME=	binutils-2.30
+DISTNAME=	binutils-2.31.1
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://mingw-w64.org/
+
+PATCHDIR=	${.CURDIR}/../../cross/mingw-w64-x86_64-binutils/patches
+DISTINFO_FILE=	${.CURDIR}/../../cross/mingw-w64-x86_64-binutils/distinfo
 
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PREFIX=	${PREFIX}/cross/${MINGW_TARGET}
