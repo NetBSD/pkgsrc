@@ -1,13 +1,15 @@
-$NetBSD: patch-ad,v 1.1 2007/07/28 01:42:50 joerg Exp $
+$NetBSD: patch-common_fractals.c,v 1.1 2018/08/28 11:54:54 schmonz Exp $
 
---- fractals.c.orig	2007-07-28 01:15:51.000000000 +0000
-+++ fractals.c
-@@ -39,11 +39,7 @@ an appropriate setup, per_image, per_pix
+--- common/fractals.c.orig	2015-01-19 18:35:16.000000000 +0000
++++ common/fractals.c
+@@ -39,13 +39,7 @@ an appropriate setup, per_image, per_pix
  
  #include <limits.h>
  #include <string.h>
 -#ifdef __TURBOC__
 -#include <alloc.h>
+-#elif defined(__APPLE__)
+-#include <malloc/malloc.h>
 -#elif !defined(__386BSD__)
 -#include <malloc.h>
 -#endif
