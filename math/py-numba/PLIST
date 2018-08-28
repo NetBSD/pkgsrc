@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/05/18 16:08:49 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/08/28 12:06:42 adam Exp $
 bin/numba
 bin/pycc
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -89,6 +89,9 @@ ${PYSITELIB}/numba/cuda/__init__.pyo
 ${PYSITELIB}/numba/cuda/api.py
 ${PYSITELIB}/numba/cuda/api.pyc
 ${PYSITELIB}/numba/cuda/api.pyo
+${PYSITELIB}/numba/cuda/args.py
+${PYSITELIB}/numba/cuda/args.pyc
+${PYSITELIB}/numba/cuda/args.pyo
 ${PYSITELIB}/numba/cuda/codegen.py
 ${PYSITELIB}/numba/cuda/codegen.pyc
 ${PYSITELIB}/numba/cuda/codegen.pyo
@@ -156,6 +159,9 @@ ${PYSITELIB}/numba/cuda/errors.pyo
 ${PYSITELIB}/numba/cuda/initialize.py
 ${PYSITELIB}/numba/cuda/initialize.pyc
 ${PYSITELIB}/numba/cuda/initialize.pyo
+${PYSITELIB}/numba/cuda/intrinsic_wrapper.py
+${PYSITELIB}/numba/cuda/intrinsic_wrapper.pyc
+${PYSITELIB}/numba/cuda/intrinsic_wrapper.pyo
 ${PYSITELIB}/numba/cuda/kernels/__init__.py
 ${PYSITELIB}/numba/cuda/kernels/__init__.pyc
 ${PYSITELIB}/numba/cuda/kernels/__init__.pyo
@@ -183,9 +189,6 @@ ${PYSITELIB}/numba/cuda/simulator/__init__.pyo
 ${PYSITELIB}/numba/cuda/simulator/api.py
 ${PYSITELIB}/numba/cuda/simulator/api.pyc
 ${PYSITELIB}/numba/cuda/simulator/api.pyo
-${PYSITELIB}/numba/cuda/simulator/array.py
-${PYSITELIB}/numba/cuda/simulator/array.pyc
-${PYSITELIB}/numba/cuda/simulator/array.pyo
 ${PYSITELIB}/numba/cuda/simulator/compiler.py
 ${PYSITELIB}/numba/cuda/simulator/compiler.pyc
 ${PYSITELIB}/numba/cuda/simulator/compiler.pyo
@@ -340,6 +343,9 @@ ${PYSITELIB}/numba/cuda/tests/cudapy/test_const_string.pyo
 ${PYSITELIB}/numba/cuda/tests/cudapy/test_constmem.py
 ${PYSITELIB}/numba/cuda/tests/cudapy/test_constmem.pyc
 ${PYSITELIB}/numba/cuda/tests/cudapy/test_constmem.pyo
+${PYSITELIB}/numba/cuda/tests/cudapy/test_cuda_array_interface.py
+${PYSITELIB}/numba/cuda/tests/cudapy/test_cuda_array_interface.pyc
+${PYSITELIB}/numba/cuda/tests/cudapy/test_cuda_array_interface.pyo
 ${PYSITELIB}/numba/cuda/tests/cudapy/test_cuda_autojit.py
 ${PYSITELIB}/numba/cuda/tests/cudapy/test_cuda_autojit.pyc
 ${PYSITELIB}/numba/cuda/tests/cudapy/test_cuda_autojit.pyo
@@ -448,6 +454,9 @@ ${PYSITELIB}/numba/cuda/tests/cudapy/test_record_dtype.pyo
 ${PYSITELIB}/numba/cuda/tests/cudapy/test_reduction.py
 ${PYSITELIB}/numba/cuda/tests/cudapy/test_reduction.pyc
 ${PYSITELIB}/numba/cuda/tests/cudapy/test_reduction.pyo
+${PYSITELIB}/numba/cuda/tests/cudapy/test_retrieve_autoconverted_arrays.py
+${PYSITELIB}/numba/cuda/tests/cudapy/test_retrieve_autoconverted_arrays.pyc
+${PYSITELIB}/numba/cuda/tests/cudapy/test_retrieve_autoconverted_arrays.pyo
 ${PYSITELIB}/numba/cuda/tests/cudapy/test_serialize.py
 ${PYSITELIB}/numba/cuda/tests/cudapy/test_serialize.pyc
 ${PYSITELIB}/numba/cuda/tests/cudapy/test_serialize.pyo
@@ -484,6 +493,9 @@ ${PYSITELIB}/numba/cuda/tests/cudapy/test_vectorize_device.pyo
 ${PYSITELIB}/numba/cuda/tests/cudapy/test_vectorize_scalar_arg.py
 ${PYSITELIB}/numba/cuda/tests/cudapy/test_vectorize_scalar_arg.pyc
 ${PYSITELIB}/numba/cuda/tests/cudapy/test_vectorize_scalar_arg.pyo
+${PYSITELIB}/numba/cuda/tests/cudapy/test_warp_ops.py
+${PYSITELIB}/numba/cuda/tests/cudapy/test_warp_ops.pyc
+${PYSITELIB}/numba/cuda/tests/cudapy/test_warp_ops.pyo
 ${PYSITELIB}/numba/cuda/tests/cudasim/__init__.py
 ${PYSITELIB}/numba/cuda/tests/cudasim/__init__.pyc
 ${PYSITELIB}/numba/cuda/tests/cudasim/__init__.pyo
@@ -779,6 +791,9 @@ ${PYSITELIB}/numba/parfor.pyo
 ${PYSITELIB}/numba/postproc.py
 ${PYSITELIB}/numba/postproc.pyc
 ${PYSITELIB}/numba/postproc.pyo
+${PYSITELIB}/numba/pretty_annotate.py
+${PYSITELIB}/numba/pretty_annotate.pyc
+${PYSITELIB}/numba/pretty_annotate.pyo
 ${PYSITELIB}/numba/pycc/__init__.py
 ${PYSITELIB}/numba/pycc/__init__.pyc
 ${PYSITELIB}/numba/pycc/__init__.pyo
@@ -944,6 +959,9 @@ ${PYSITELIB}/numba/targets/listobj.pyo
 ${PYSITELIB}/numba/targets/mathimpl.py
 ${PYSITELIB}/numba/targets/mathimpl.pyc
 ${PYSITELIB}/numba/targets/mathimpl.pyo
+${PYSITELIB}/numba/targets/mergesort.py
+${PYSITELIB}/numba/targets/mergesort.pyc
+${PYSITELIB}/numba/targets/mergesort.pyo
 ${PYSITELIB}/numba/targets/npdatetime.py
 ${PYSITELIB}/numba/targets/npdatetime.pyc
 ${PYSITELIB}/numba/targets/npdatetime.pyo
@@ -1187,6 +1205,9 @@ ${PYSITELIB}/numba/tests/test_complex.pyo
 ${PYSITELIB}/numba/tests/test_comprehension.py
 ${PYSITELIB}/numba/tests/test_comprehension.pyc
 ${PYSITELIB}/numba/tests/test_comprehension.pyo
+${PYSITELIB}/numba/tests/test_config.py
+${PYSITELIB}/numba/tests/test_config.pyc
+${PYSITELIB}/numba/tests/test_config.pyo
 ${PYSITELIB}/numba/tests/test_conversion.py
 ${PYSITELIB}/numba/tests/test_conversion.pyc
 ${PYSITELIB}/numba/tests/test_conversion.pyo
@@ -1385,6 +1406,9 @@ ${PYSITELIB}/numba/tests/test_overlap.pyo
 ${PYSITELIB}/numba/tests/test_parfors.py
 ${PYSITELIB}/numba/tests/test_parfors.pyc
 ${PYSITELIB}/numba/tests/test_parfors.pyo
+${PYSITELIB}/numba/tests/test_pipeline.py
+${PYSITELIB}/numba/tests/test_pipeline.pyc
+${PYSITELIB}/numba/tests/test_pipeline.pyo
 ${PYSITELIB}/numba/tests/test_polynomial.py
 ${PYSITELIB}/numba/tests/test_polynomial.pyc
 ${PYSITELIB}/numba/tests/test_polynomial.pyo
@@ -1448,6 +1472,9 @@ ${PYSITELIB}/numba/tests/test_storeslice.pyo
 ${PYSITELIB}/numba/tests/test_support.py
 ${PYSITELIB}/numba/tests/test_support.pyc
 ${PYSITELIB}/numba/tests/test_support.pyo
+${PYSITELIB}/numba/tests/test_svml.py
+${PYSITELIB}/numba/tests/test_svml.pyc
+${PYSITELIB}/numba/tests/test_svml.pyo
 ${PYSITELIB}/numba/tests/test_target_overloadselector.py
 ${PYSITELIB}/numba/tests/test_target_overloadselector.pyc
 ${PYSITELIB}/numba/tests/test_target_overloadselector.pyo
