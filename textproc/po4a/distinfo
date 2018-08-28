@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.12 2017/09/17 10:55:42 adam Exp $
+$NetBSD: distinfo,v 1.13 2018/08/28 10:06:34 schmonz Exp $
 
-SHA1 (po4a-0.52.tar.gz) = e429afc326002ee6b5e7dd197566597a3bab5763
-RMD160 (po4a-0.52.tar.gz) = 3d8189eedb234c1cfcb76e652aa883e0092ec467
-SHA512 (po4a-0.52.tar.gz) = 81f25405eabdfa83ac2e71fb5412fadbef8771b5a706d0421c0995f38dbbe685beb5f5a0f95ccc6362ede6375eecea7bd7501f431aeea1528ad2df28ee33b4be
-Size (po4a-0.52.tar.gz) = 2530727 bytes
+SHA1 (po4a-0.54.tar.gz) = 922e160eb18e1d25ef3bbf63a4e1eff3b43dc68b
+RMD160 (po4a-0.54.tar.gz) = f82979c9140d01fcebb044d10ac201dcc47e2ed5
+SHA512 (po4a-0.54.tar.gz) = 5d97a169c73bcb872247599af477ecca9112b9ff576dfb93a2aa06b9891464a1837d799304f1a3ea8344ad46a4529ec19568584b7914761deccc09a9099e3130
+Size (po4a-0.54.tar.gz) = 2686485 bytes
 SHA1 (patch-Po4aBuilder.pm) = 642d3155c5ebd1d85d70dc3359651c602b17fb56
