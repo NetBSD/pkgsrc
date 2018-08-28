@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18526 2018/08/28 10:20:48 schmonz Exp $
+$NetBSD: TODO,v 1.18527 2018/08/28 10:21:47 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -359,7 +359,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o YoSucker-81
 	o abcmidi-20170416
 	o abook-0.6.1
-	o ack-2.14
 	o admesh-0.98.2
 	o adms-2.3.5
 	o adocman-0.13
