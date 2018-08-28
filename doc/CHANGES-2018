@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3808 2018/08/28 07:28:10 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3809 2018/08/28 10:02:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5388,3 +5388,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-buildbot-pkg to 1.3.0 [adam 2018-08-28]
 	Updated devel/py-buildbot-waterfall-view to 1.3.0 [adam 2018-08-28]
 	Updated devel/py-buildbot-www to 1.3.0 [adam 2018-08-28]
+	Added textproc/py-parse version 1.8.4 [adam 2018-08-28]
+	Added textproc/py-parse_type version 0.4.2 [adam 2018-08-28]
+	Added devel/py-behave version 1.2.6 [adam 2018-08-28]
+	Updated textproc/py-docx to 0.8.7 [adam 2018-08-28]
