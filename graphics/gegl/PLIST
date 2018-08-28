@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2018/07/16 01:10:30 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.20 2018/08/28 13:32:45 ryoon Exp $
 bin/gegl
 bin/gegl-gcut
 bin/gegl-imgcmp
@@ -124,6 +124,7 @@ share/locale/is/LC_MESSAGES/gegl-0.4.mo
 share/locale/it/LC_MESSAGES/gegl-0.4.mo
 share/locale/ko/LC_MESSAGES/gegl-0.4.mo
 share/locale/lv/LC_MESSAGES/gegl-0.4.mo
+share/locale/mr/LC_MESSAGES/gegl-0.4.mo
 share/locale/nb/LC_MESSAGES/gegl-0.4.mo
 share/locale/oc/LC_MESSAGES/gegl-0.4.mo
 share/locale/pl/LC_MESSAGES/gegl-0.4.mo
