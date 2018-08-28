@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3811 2018/08/28 10:20:48 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.3812 2018/08/28 11:06:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5394,3 +5394,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-docx to 0.8.7 [adam 2018-08-28]
 	Updated textproc/po4a to 0.54 [schmonz 2018-08-28]
 	Updated devel/cvsgraph to 1.7.0 [schmonz 2018-08-28]
+	Updated www/py-test-django to 3.4.2 [adam 2018-08-28]
+	Updated devel/py-test-xdist to 1.23.0 [adam 2018-08-28]
