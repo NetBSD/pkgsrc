@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3814 2018/08/28 11:55:08 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.3815 2018/08/28 12:09:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5398,3 +5398,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-test-xdist to 1.23.0 [adam 2018-08-28]
 	Removed security/py-py-bcrypt successor security/py-bcrypt [adam 2018-08-28]
 	Updated math/xfractint to 20.4.14 [schmonz 2018-08-28]
+	Updated math/py-numba to 0.39.0 [adam 2018-08-28]
