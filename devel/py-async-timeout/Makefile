@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/05/08 04:48:49 adam Exp $
+# $NetBSD: Makefile,v 1.7 2018/08/28 13:44:00 sevan Exp $
 
 DISTNAME=	async-timeout-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,8 @@ COMMENT=	Timeout context manager for asyncio programs
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=	# none
+
+.include "../../lang/python/pyversion.mk"
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 34
 
