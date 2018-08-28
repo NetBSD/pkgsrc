@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3804 2018/08/27 20:46:40 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.3805 2018/08/28 03:43:39 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5375,3 +5375,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated geography/opencpn-plugin-weather_routing to 20180827 [bouyer 2018-08-27]
 	Updated mail/ezmlm-idx to 7.2.2nb6 [schmonz 2018-08-27]
 	Updated textproc/discount to 2.2.4 [schmonz 2018-08-27]
+	Updated misc/libreoffice to 6.1.0.3nb2 [ryoon 2018-08-28]
