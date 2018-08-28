@@ -1,12 +1,15 @@
-$NetBSD: patch-ar,v 1.1 2007/07/28 01:42:50 joerg Exp $
+$NetBSD: patch-common_fractalb.c,v 1.1 2018/08/28 11:54:54 schmonz Exp $
 
---- frasetup.c.orig	2007-07-28 01:16:46.000000000 +0000
-+++ frasetup.c
-@@ -1,10 +1,6 @@
+--- common/fractalb.c.orig	2014-05-03 13:12:35.000000000 +0000
++++ common/fractalb.c
+@@ -8,13 +8,7 @@ fractal routines.
+ 
  #include <limits.h>
  #include <string.h>
 -#ifdef __TURBOC__
 -#include <alloc.h>
+-#elif defined(__APPLE__)
+-#include <malloc/malloc.h>
 -#elif !defined(__386BSD__)
 -#include <malloc.h>
 -#endif
