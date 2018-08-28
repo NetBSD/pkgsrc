@@ -1,38 +1,31 @@
-# $NetBSD: Makefile,v 1.14 2018/01/01 18:16:38 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2018/08/28 11:54:54 schmonz Exp $
 
-DISTNAME=		xfrac310
-PKGNAME=		xfractint-3.10
-PKGREVISION=		2
+DISTNAME=		xfractint-20.04p14
+PKGNAME=		${DISTNAME:S/04p/4./}
 CATEGORIES=		math
 MASTER_SITES=		https://fractint.org/ftp/current/linux/
-EXTRACT_SUFX=		.zip
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://fractint.org/
 COMMENT=		Fractint for X11
 
-WRKSRC=			${WRKDIR}
 USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake
 
 MAKE_FLAGS+=		BINDIR=${PREFIX}/bin
 MAKE_FLAGS+=		MANDIR=${PREFIX}/${PKGMANDIR}/man1
 MAKE_FLAGS+=		SRCDIR=${PREFIX}/share/xfractint
 BUILD_TARGET=		xfractint
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/xfractint
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/xfractint/pars
+INSTALLATION_DIRS+=	share/xfractint/formulas share/xfractint/ifs
+INSTALLATION_DIRS+=	share/xfractint/lsystem share/xfractint/maps
+INSTALLATION_DIRS+=	share/xfractint/extra
 
 MAKE_ENV+=	X11_LDFLAGS=${X11_LDFLAGS:Q}
-
-# xfractint sources assume <malloc.h> exists.
-# Create a fake one for platforms that don't have it.
-#
-post-wrapper:
-	if ${TEST} ! -f /usr/include/malloc.h; then			\
-		${ECHO} "#include <stdlib.h>"				\
-			> ${BUILDLINK_DIR}/include/malloc.h;		\
-	fi
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

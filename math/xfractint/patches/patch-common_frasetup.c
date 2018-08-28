@@ -1,13 +1,14 @@
-$NetBSD: patch-ac,v 1.1 2007/07/28 01:42:50 joerg Exp $
+$NetBSD: patch-common_frasetup.c,v 1.1 2018/08/28 11:54:54 schmonz Exp $
 
---- fractalb.c.orig	2007-07-28 01:15:21.000000000 +0000
-+++ fractalb.c
-@@ -8,11 +8,7 @@ fractal routines.
- 
+--- common/frasetup.c.orig	2014-05-03 13:12:35.000000000 +0000
++++ common/frasetup.c
+@@ -1,12 +1,6 @@
  #include <limits.h>
  #include <string.h>
 -#ifdef __TURBOC__
 -#include <alloc.h>
+-#elif defined(__APPLE__)
+-#include <malloc/malloc.h>
 -#elif !defined(__386BSD__)
 -#include <malloc.h>
 -#endif
