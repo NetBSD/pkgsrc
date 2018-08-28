@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3817 2018/08/28 13:32:21 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.3818 2018/08/28 13:33:11 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5406,3 +5406,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated cross/mingw-w64-x86_64-gcc to 8.2.0nb1 [ryoon 2018-08-28]
 	Updated cross/mingw-w64-x86_64-gcc-bootstrap to 8.2.0 [ryoon 2018-08-28]
 	Updated graphics/babl to 0.1.56 [ryoon 2018-08-28]
+	Updated graphics/gegl to 0.4.8 [ryoon 2018-08-28]
