@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3809 2018/08/28 10:02:21 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3810 2018/08/28 10:06:47 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5392,3 +5392,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added textproc/py-parse_type version 0.4.2 [adam 2018-08-28]
 	Added devel/py-behave version 1.2.6 [adam 2018-08-28]
 	Updated textproc/py-docx to 0.8.7 [adam 2018-08-28]
+	Updated textproc/po4a to 0.54 [schmonz 2018-08-28]
