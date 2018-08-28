@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.19 2018/07/16 01:10:30 ryoon Exp $
+$NetBSD: distinfo,v 1.20 2018/08/28 13:32:45 ryoon Exp $
 
-SHA1 (gegl-0.4.4.tar.bz2) = b709b5051228014371ff07c065b156923baa817a
-RMD160 (gegl-0.4.4.tar.bz2) = b494f02977dc0bd26e6570509635f1933cf68aa7
-SHA512 (gegl-0.4.4.tar.bz2) = 6953bf7df225914ce9c8166f5a0490615664c69d5a66cf8ca805f75cfbe272186c7745d273fcde29c685e22a66d4483dbdf45064ec9c0007fd6d0b8aa3ebb164
-Size (gegl-0.4.4.tar.bz2) = 6817195 bytes
+SHA1 (gegl-0.4.8.tar.bz2) = 52d7b2f362ddab5641d1487b2b7f192c58722fb9
+RMD160 (gegl-0.4.8.tar.bz2) = 1e774d1f55a27f6c98bbbb05d0716a96a8916f61
+SHA512 (gegl-0.4.8.tar.bz2) = 20d2700cc74bce02e3e1b477f5e4dbd6546bb74625de235baaaa31e24f506930927af53de3d0880c0b16f93a10cec993c58a12adba59dec7dda0e389261799aa
+Size (gegl-0.4.8.tar.bz2) = 7017022 bytes
 SHA1 (patch-aa) = 0f46061f7b0c213abfe422124839eec29780d039
