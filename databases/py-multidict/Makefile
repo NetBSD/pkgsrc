@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/05/08 04:20:31 adam Exp $
+# $NetBSD: Makefile,v 1.9 2018/08/28 13:44:00 sevan Exp $
 
 DISTNAME=	multidict-4.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,8 @@ LICENSE=	apache-2.0
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+.include "../../lang/python/pyversion.mk"
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
