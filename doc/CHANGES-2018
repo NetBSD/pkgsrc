@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3815 2018/08/28 12:09:14 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3816 2018/08/28 13:23:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5399,3 +5399,9 @@ Changes to the packages collection and infrastructure in 2018:
 	Removed security/py-py-bcrypt successor security/py-bcrypt [adam 2018-08-28]
 	Updated math/xfractint to 20.4.14 [schmonz 2018-08-28]
 	Updated math/py-numba to 0.39.0 [adam 2018-08-28]
+	Updated cross/mingw-w64-i686-binutils to 2.31.1 [ryoon 2018-08-28]
+	Updated cross/mingw-w64-i686-gcc to 8.2.0nb1 [ryoon 2018-08-28]
+	Updated cross/mingw-w64-i686-gcc-bootstrap to 8.2.0 [ryoon 2018-08-28]
+	Updated cross/mingw-w64-x86_64-binutils to 2.31.1 [ryoon 2018-08-28]
+	Updated cross/mingw-w64-x86_64-gcc to 8.2.0nb1 [ryoon 2018-08-28]
+	Updated cross/mingw-w64-x86_64-gcc-bootstrap to 8.2.0 [ryoon 2018-08-28]
