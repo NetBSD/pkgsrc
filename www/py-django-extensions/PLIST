@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/04/17 07:16:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/08/28 06:35:08 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -153,9 +153,6 @@ ${PYSITELIB}/django_extensions/management/commands/clear_cache.pyo
 ${PYSITELIB}/django_extensions/management/commands/compile_pyc.py
 ${PYSITELIB}/django_extensions/management/commands/compile_pyc.pyc
 ${PYSITELIB}/django_extensions/management/commands/compile_pyc.pyo
-${PYSITELIB}/django_extensions/management/commands/create_app.py
-${PYSITELIB}/django_extensions/management/commands/create_app.pyc
-${PYSITELIB}/django_extensions/management/commands/create_app.pyo
 ${PYSITELIB}/django_extensions/management/commands/create_command.py
 ${PYSITELIB}/django_extensions/management/commands/create_command.pyc
 ${PYSITELIB}/django_extensions/management/commands/create_command.pyo
