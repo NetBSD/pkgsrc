@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/07/24 08:23:20 adam Exp $
+$NetBSD: distinfo,v 1.5 2018/08/28 06:31:47 adam Exp $
 
-SHA1 (pytest-timeout-1.3.1.tar.gz) = c14d8f0f5e5e4696ddd6da39bbf28183d3b670de
-RMD160 (pytest-timeout-1.3.1.tar.gz) = c6dec097060666970fdd3c503dd2fc0f2c0d7308
-SHA512 (pytest-timeout-1.3.1.tar.gz) = ea487595702c723b78a7ae458c0c50f2e2ee572b2beab81f334b64a7e84bd6e559678d3cf65af28797958f3a97677791d78339dde4af78d4d3e43864fc0a02a0
-Size (pytest-timeout-1.3.1.tar.gz) = 11412 bytes
+SHA1 (pytest-timeout-1.3.2.tar.gz) = dd488871ddb409ae384b5d7f2004c297feac3993
+RMD160 (pytest-timeout-1.3.2.tar.gz) = 929fb1a10cb2a458a653cb4cbaf275b5f88030a5
+SHA512 (pytest-timeout-1.3.2.tar.gz) = 9196ad76002cb2f8cbceee28fe9a76acfc7441c69408e715df1994b0e826ec1a4bac9886710e01c4cf14861ae3754309d41fa77c2d5ddd175ad0505f86a04224
+Size (pytest-timeout-1.3.2.tar.gz) = 11494 bytes
