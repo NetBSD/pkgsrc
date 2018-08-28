@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.685 2018/07/24 09:17:08 triaxx Exp $
+# $NetBSD: Makefile,v 1.686 2018/08/28 11:47:52 adam Exp $
 #
 
 COMMENT=	Security tools
@@ -442,7 +442,6 @@ SUBDIR+=	py-paramiko
 SUBDIR+=	py-passlib
 SUBDIR+=	py-pbkdf2
 SUBDIR+=	py-prewikka
-SUBDIR+=	py-py-bcrypt
 SUBDIR+=	py-pydeep
 SUBDIR+=	py-requests-kerberos
 SUBDIR+=	py-requests-ntlm

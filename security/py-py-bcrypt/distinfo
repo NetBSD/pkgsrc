@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:18:05 agc Exp $
-
-SHA1 (py-bcrypt-0.4.tar.gz) = 5a8201b7b1a2e787dab50f1bf6a34b42c4e80ce3
-RMD160 (py-bcrypt-0.4.tar.gz) = 555a1def749a57b9cd67446c4bff66681296504e
-SHA512 (py-bcrypt-0.4.tar.gz) = 0e43212c9928dc842f93b18a19805d7e0a12dad1032ee6949efba4afee95922bb4046d052c817c09c09fcdc6bcc3b92512fad8d6571bb8983a4ae94e287bb49e
-Size (py-bcrypt-0.4.tar.gz) = 27399 bytes
