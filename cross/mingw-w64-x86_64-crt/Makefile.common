@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.1 2018/06/07 19:19:46 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.2 2018/08/28 13:22:20 ryoon Exp $
 #
+# used by cross/mingw-w64-i686-crt/Makefile
 # used by cross/mingw-w64-x86_64-crt/Makefile
 
 DISTNAME=		mingw-w64-v5.0.4
