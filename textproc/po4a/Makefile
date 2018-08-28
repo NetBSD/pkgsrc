@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.32 2018/08/22 09:47:12 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2018/08/28 10:06:34 schmonz Exp $
 
-DISTNAME=	po4a-0.52
-PKGREVISION=	1
+DISTNAME=	po4a-0.54
 CATEGORIES=	textproc
-MASTER_SITES=	https://alioth.debian.org/frs/download.php/file/4229/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=mquinson/}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://po4a.alioth.debian.org/
+HOMEPAGE=	https://po4a.org/
 COMMENT=	Tool for using gettext where it was not intended to be used
 LICENSE=	gnu-gpl-v2
 
@@ -17,6 +17,8 @@ DEPENDS+=	p5-Term-ReadKey-[0-9]*:../../devel/p5-Term-ReadKey
 DEPENDS+=	p5-Text-WrapI18N-[0-9]*:../../textproc/p5-Text-WrapI18N
 DEPENDS+=	p5-CPAN-Meta>=2.141170:../../devel/p5-CPAN-Meta
 DEPENDS+=	p5-PerlIO-utf8_strict-[0-9]*:../../devel/p5-PerlIO-utf8_strict
+DEPENDS+=	p5-Unicode-LineBreak-[0-9]*:../../textproc/p5-Unicode-LineBreak
+DEPENDS+=	p5-YAML-Tiny-[0-9]*:../../textproc/p5-YAML-Tiny
 
 USE_TOOLS+=		pkg-config perl:run msgmerge:run msgfmt:run
 
