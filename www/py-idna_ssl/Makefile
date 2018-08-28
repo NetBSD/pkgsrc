@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/07/14 18:59:31 adam Exp $
+# $NetBSD: Makefile,v 1.4 2018/08/28 13:44:00 sevan Exp $
 
 DISTNAME=	idna-ssl-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,8 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.0:../../www/py-idna
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+
+.include "../../lang/python/pyversion.mk"
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
