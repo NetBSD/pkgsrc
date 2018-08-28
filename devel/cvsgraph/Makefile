@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.49 2018/03/12 11:16:15 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2018/08/28 10:20:36 schmonz Exp $
 #
 
-DISTNAME=	cvsgraph-1.6.1
-PKGREVISION=	15
+DISTNAME=	cvsgraph-1.7.0
 CATEGORIES=	devel scm
-MASTER_SITES=	http://www.akhphd.au.dk/~bertho/cvsgraph/release/
+MASTER_SITES=	${HOMEPAGE}release/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.akhphd.au.dk/~bertho/cvsgraph/
 COMMENT=	Graphically represents CVS/RCS branches and file revisions
+LICENSE=	gnu-gpl-v2
 
 MAKE_JOBS_SAFE=	no
 
@@ -40,7 +40,7 @@ do-install:
 
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${DOCDIR}
 
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/cvsgraph.conf ${DESTDIR}${EGDIR}
