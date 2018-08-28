@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3812 2018/08/28 11:06:18 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3813 2018/08/28 11:50:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5396,3 +5396,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/cvsgraph to 1.7.0 [schmonz 2018-08-28]
 	Updated www/py-test-django to 3.4.2 [adam 2018-08-28]
 	Updated devel/py-test-xdist to 1.23.0 [adam 2018-08-28]
+	Removed security/py-py-bcrypt successor security/py-bcrypt [adam 2018-08-28]
