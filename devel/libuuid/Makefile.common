@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.3 2017/12/29 06:59:54 maya Exp $
+# $NetBSD: Makefile.common,v 1.4 2018/08/29 12:25:52 adam Exp $
 # used by devel/libblkid/Makefile
 # used by devel/libuuid/Makefile
 # used by x11/mcookie/Makefile
 
-DISTNAME=	util-linux-2.31
-MASTER_SITES=	https://www.kernel.org/pub/linux/utils/util-linux/v${PKGVERSION_NOREV}/
+DISTNAME=	util-linux-2.32.1
+MASTER_SITES=	https://www.kernel.org/pub/linux/utils/util-linux/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
 EXTRACT_USING=	bsdtar
 
