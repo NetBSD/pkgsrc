@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.7 2017/12/08 08:03:35 adam Exp $
+$NetBSD: patch-configure,v 1.8 2018/08/29 12:25:52 adam Exp $
 
 Add --disable-uuidgen and --disable-mcookie.
 Shell portability.
@@ -37,24 +37,6 @@ Shell portability.
    --disable-switch_root   do not build switch_root
    --disable-pivot_root    do not build pivot_root
    --disable-lsmem         do not build lsmem
-@@ -22393,7 +22397,7 @@ else
- fi
- 
- 
--if test "x$enable_libmount_support_mtab" == xyes; then :
-+if test "x$enable_libmount_support_mtab" = xyes; then :
- 
- 
- $as_echo "#define USE_LIBMOUNT_SUPPORT_MTAB 1" >>confdefs.h
-@@ -23293,7 +23297,7 @@ $as_echo "$as_me: WARNING: sys/signalfd.
-     esac
-   fi
- 
--if test "x$build_uuidd" = xyes || test "x$enable_libuuid_force_uuidd" == xyes ; then :
-+if test "x$build_uuidd" = xyes || test "x$enable_libuuid_force_uuidd" = xyes ; then :
- 
- 
- $as_echo "#define HAVE_UUIDD 1" >>confdefs.h
 @@ -23311,17 +23315,22 @@ fi
  
  
@@ -112,12 +94,3 @@ Shell portability.
  fi
  
   if test "x$build_mcookie" = xyes; then
-@@ -31063,7 +31078,7 @@ else
- fi
- 
- 
--if test "x$enable_usrdir_path" == xyes; then :
-+if test "x$enable_usrdir_path" = xyes; then :
- 
- 
- $as_echo "#define USE_USRDIR_PATHS_ONLY 1" >>confdefs.h
