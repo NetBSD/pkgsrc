@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.35 2018/08/24 18:27:08 adam Exp $
+$NetBSD: distinfo,v 1.36 2018/08/29 07:35:53 adam Exp $
 
 SHA1 (array-var-nginx-module-0.05.tar.gz) = c69fac77814947009ab783a471783b3c95a63a26
 RMD160 (array-var-nginx-module-0.05.tar.gz) = 89bd4efc04864e3e90781588a337338951ec8733
@@ -24,14 +24,10 @@ SHA1 (lua-nginx-module-0.10.13.tar.gz) = 88f16ee8f1d168d1f6c1f2a1b48d31a5f442911
 RMD160 (lua-nginx-module-0.10.13.tar.gz) = ec6278fb7936abfdead2df5e20a90092a1024098
 SHA512 (lua-nginx-module-0.10.13.tar.gz) = 8c316b9d12dc35779fcddc6bb90942c096f19fd8c2e090b8397e1e1ca6f0ebd7a4edddc03fddb31310147ba4e9db9fc4b3749cfd2323046d88045b3b3333f07d
 Size (lua-nginx-module-0.10.13.tar.gz) = 624102 bytes
-SHA1 (naxsi-0.56.tar.gz) = 42ce137bd3e52a612793bcea43f3ffbb8376910a
-RMD160 (naxsi-0.56.tar.gz) = a5c97194ef3db415a4bab07c44f9e9f2860b9e1a
-SHA512 (naxsi-0.56.tar.gz) = 4660751849bce303af6010b7257532404710106a94817e78d4bc4b566f8019620f24f30207f1d4366b88132a5124e34b164dc67ed80b6710f4bad66115564cbd
-Size (naxsi-0.56.tar.gz) = 192120 bytes
-SHA1 (nginx-1.15.2.tar.gz) = 87444d52ff03fe1da2d7862c9e22d98b1cebd7f5
-RMD160 (nginx-1.15.2.tar.gz) = 60536f677d8c64d91bdb298d2e422d2b5c5e4929
-SHA512 (nginx-1.15.2.tar.gz) = ef8171138246b851f3713ea027d6b96de414b15e24de244fa4fcb428da3a68f4df0c54152e5c0993e36c9c97d4dabcd55a019d6709840b4393c86995604668ff
-Size (nginx-1.15.2.tar.gz) = 1025746 bytes
+SHA1 (nginx-1.15.3.tar.gz) = 584a585096cffa240a6224f718b4c0c83a7a5e36
+RMD160 (nginx-1.15.3.tar.gz) = 60a5791c6f4df7823743f5099d0d03622a52710f
+SHA512 (nginx-1.15.3.tar.gz) = 112fafd0841b79a165cee6a94da6d0c6c828b29ef1e3af00f4a12809c5d3bc8fd2a94f6d0cb05f6b487be81a414be42ea64f88e63a4d62fe9bebc9cf946aa94a
+Size (nginx-1.15.3.tar.gz) = 1022881 bytes
 SHA1 (nginx-rtmp-module-1.2.1.tar.gz) = 7c6ae1afc117e3bf946b0d81f99d41fe538a7245
 RMD160 (nginx-rtmp-module-1.2.1.tar.gz) = 5fc0b4ac0b2c0a6d70957a5256754db8a9e934cf
 SHA512 (nginx-rtmp-module-1.2.1.tar.gz) = 4a0af5e9afa4deb0b53de8de7ddb2cfa6430d372e1ef9e421f01b509548bd134d427345442ac1ce667338cc2a1484dc2ab732e316e878ac7d3537dc527d5f922
