@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2012/10/08 09:25:50 asau Exp $
+# $NetBSD: Makefile,v 1.8 2018/08/29 00:50:12 manu Exp $
 #
 
-DISTNAME=	mdd-20050318
+DISTNAME=	mdd-20180824
 CATEGORIES=	mbone
 MASTER_SITES=	http://ftp.espci.fr/pub/mdd/
 EXTRACT_SUFX=	.tgz
