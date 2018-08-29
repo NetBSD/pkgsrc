@@ -1,0 +1,2 @@
+Test::LoadAllModules is a perl module that runs use_ok() on all
+modules in the search path.
