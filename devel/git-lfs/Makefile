@@ -1,22 +1,19 @@
-# $NetBSD: Makefile,v 1.1 2018/08/21 15:49:03 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2018/08/29 11:20:11 tnn Exp $
 
 DISTNAME=	git-lfs-2.5.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=git-lfs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-user@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://git-lfs.github.com/
 COMMENT=	Git extension for versioning large files
 LICENSE=	mit
-
-BUILD_DEPENDS+=	go-${GO_VERSION}*:../../lang/go
 
 NO_CONFIGURE=	yes
 USE_LANGUAGES=	c
 GO_SRCPATH=	github.com/git-lfs/git-lfs
 GO_DIST_BASE=	${PKGNAME_NOREV}
-MAKE_ENV+=	GOCACHE=${WRKDIR}/.gocache
 
 INSTALLATION_DIRS=	bin
 
