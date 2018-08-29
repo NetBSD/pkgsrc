@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3821 2018/08/29 00:50:12 manu Exp $
+$NetBSD: CHANGES-2018,v 1.3822 2018/08/29 01:03:14 manu Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5410,3 +5410,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/gimp to 2.10.6 [ryoon 2018-08-28]
 	Updated x11/sakura to 3.6.0 [ryoon 2018-08-28]
 	Updated mbone/mdd to 20180824 [manu 2018-08-29]
+	Added databases/postgresql96-fuzzystrmatch 9.6.9 [manu 2018-08-29]
