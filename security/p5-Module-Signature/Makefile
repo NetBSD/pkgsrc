@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2018/08/22 09:46:27 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2018/08/29 06:27:47 wiz Exp $
 
-DISTNAME=	Module-Signature-0.81
+DISTNAME=	Module-Signature-0.82
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Module/}
 
@@ -48,6 +47,8 @@ INSTALLATION_DIRS+=	share/Module-Signature
 
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 MAKE_ENV+=		TEST_SIGNATURE=1
+# two self test failures in 0.82:
+# https://github.com/audreyt/module-signature/issues/23
 
 # this package has patch files so the signature check test fails
 #post-extract:
