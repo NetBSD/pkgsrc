@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2018/08/29 14:07:30 tnn Exp $
+$NetBSD: distinfo,v 1.23 2018/08/29 14:10:47 tnn Exp $
 
 SHA1 (mongodb-src-r3.4.4.tar.gz) = 6f9f2d8a3c1c2f4089fd03f8be0b86ff0431d955
 RMD160 (mongodb-src-r3.4.4.tar.gz) = 2a65f380204a92762ceea2be35dbe2c671e106f6
@@ -12,7 +12,7 @@ SHA1 (patch-src_mongo_db_fts_unicode_string.cpp) = 98c5b1b39c07190f08ec9f22ec300
 SHA1 (patch-src_mongo_db_matcher_expression__leaf.cpp) = 52064034fabb5de63eccf87ddd140303c54f0312
 SHA1 (patch-src_mongo_db_repl_isself.c) = 82321c918b91ce1a68ce79c14589126aca6baf96
 SHA1 (patch-src_mongo_db_repl_master__slave.cpp) = 2f37f0819a2b2743df01f6b6ab0b3013b3b7d726
-SHA1 (patch-src_mongo_db_repl_oplog__fetcher.cpp) = da6d8280c0579fe49e5f4aecd7cb979c8fd3489e
+SHA1 (patch-src_mongo_db_repl_oplog__fetcher.cpp) = e12dbfbd4e70ee210cdd4eb0582661666e8eb06a
 SHA1 (patch-src_mongo_installer_msi_SConscript) = 78424fa10f90470dd941b900ef8fd131d28f6e65
 SHA1 (patch-src_mongo_platform_random.cpp) = 59c31e55fc2dc5a2b82b8f16dacf8736d8354cdb
 SHA1 (patch-src_mongo_platform_stack__locator__dragonfly.cpp) = fb885c491e4de1cfbc2875620d854af726e5b45f
