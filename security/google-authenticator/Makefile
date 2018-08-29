@@ -1,30 +1,23 @@
-# $NetBSD: Makefile,v 1.4 2017/08/01 17:08:24 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2018/08/29 11:12:36 tnn Exp $
 
-DISTNAME=	libpam-google-authenticator-1.0-source
-PKGNAME=	${DISTNAME:S/libpam-//:S/-source//}
+DISTNAME=	google-authenticator-libpam-1.05
+PKGNAME=	${DISTNAME:S/libpam-//}
 CATEGORIES=	security
-MASTER_SITES=	http://google-authenticator.googlecode.com/files/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
+GITHUB_PROJECT=	google-authenticator-libpam
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	jmmv@NetBSD.org
-HOMEPAGE=	https://github.com/google/google-authenticator
+HOMEPAGE=	https://github.com/google/google-authenticator-libpam
 COMMENT=	One-time password generator and PAM module from Google
 LICENSE=	apache-2.0
 
-USE_TOOLS=		gmake
+USE_TOOLS=	gmake autoconf automake autoreconf
+USE_LIBTOOL=	yes
+GNU_CONFIGURE=	yes
 
-CFLAGS+=	-DNO_STATIC_MODULES
-WRKSRC=		${WRKDIR}/${DISTNAME:S/-source//}
-
-INSTALLATION_DIRS=	bin lib/security share/doc/google-authenticator
-
-do-install:
-	cd ${WRKSRC} && ${INSTALL_PROGRAM} google-authenticator \
-	    ${DESTDIR}${PREFIX}/bin
-	cd ${WRKSRC} && ${INSTALL_LIB} pam_google_authenticator.so \
-	    ${DESTDIR}${PREFIX}/lib/security
-	cd ${WRKSRC} && ${INSTALL_DATA} README \
-	    ${DESTDIR}${PREFIX}/share/doc/google-authenticator
+pre-configure:
+	cd ${WRKSRC} && autoreconf -vif
 
 .include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
