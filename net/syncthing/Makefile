@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2018/07/28 09:03:25 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2018/08/29 13:27:40 tnn Exp $
 
 # Upstream regularly breaks protocol compatibility.  While users of
 # pkgsrc syncthing on multiple systems can update synchronously, an
@@ -16,6 +16,7 @@
 DISTNAME=	syncthing-0.14.49
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 # Minor version updates may be committed without asking.  Major
 # updates not following the above policy will be reverted.
@@ -24,42 +25,15 @@ HOMEPAGE=	https://syncthing.net/
 MAINTAINER=	gdt@NetBSD.org
 LICENSE=	mpl-2.0
 
-# System pax fails on NetBSD 6.  Just use gtar until this is understood.
-EXTRACT_USING=		gtar
-
-GITHUB_TAG=	v${PKGVERSION_NOREV}
-
-.include "../../lang/go/version.mk"
-
-BUILD_DEPENDS+=		go-${GO_VERSION}*:../../lang/go
+# System pax fails on NetBSD 6.  Just use bsdtar until this is understood.
+EXTRACT_USING=		bsdtar
 
 # The 'zillode' dependency calls the compiler on certain archs.
 USE_LANGUAGES=		c
 NO_CONFIGURE=		yes
-
+GO_SRCPATH=		github.com/syncthing/syncthing
+GO_DIST_BASE=		${PKGNAME_NOREV}
 INSTALLATION_DIRS=	bin
-
-# Go has very strong notions of how building is supposed to work, and
-# paths.  Until 0.14, syncthing had symlink workarounds to have
-# sources be found via a gopath directory.  Then, building failed
-# because the sources are not a subdirectory of a component of GOPATH..
-# See the following discussion for some hints.
-# http://stackoverflow.com/questions/18149601/go-install-always-fails-no-install-directory-outside-gopath#18164310
-
-# Upstream's build instructions say to place tarball contents under a
-# particular named subdirectory of gopath:
-# https://docs.syncthing.net/dev/building.html
-# We attempt to follow their instructions as closely as possible.
-
-# We set up a gopath directory, and a directory where we will place
-# the tarball contents.  We use the non-standard variable name
-# WRKPLACE so that we can let WRKSRC refer to where pkgsrc naturally
-# unpacked the tarball.
-GOPATH=			${WRKDIR}/gopath
-WRKPLACEP=		${GOPATH}/src/github.com/syncthing
-WRKPLACE=		${WRKPLACEP}/syncthing
-
-MAKE_ENV+=		GOPATH=${GOPATH} GOCACHE=${WRKDIR}/.cache
 
 CHECK_RELRO_SKIP+=	bin/syncthing
 
@@ -71,21 +45,11 @@ SUBST_SED.version=	-e 's|runError("git", "describe", "--always", "--dirty")|runE
 SUBST_SED.version+=	-e 's|runError("git", "show", "-s", "--format=%ct")|runError("false")|'
 SUBST_SED.version+=	-e 's|"go"|"${GO}"|'
 
-SUBST_CLASSES+=		go                              
-SUBST_STAGE.go=		pre-build                                      
-SUBST_MESSAGE.go=	Fixing go executable reference             
-SUBST_FILES.go=		lib/auto/doc.go cmd/strelaypoolsrv/auto/doc.go        
-SUBST_SED.go+=		-e 's|go run|"${GO}" run|'                      
-
-# Create WRKPLACE's parent, but not WRKPLACE.  Move the contents of
-# the distribution tarball to the directory name desired by upstream's
-# build instructions.  Make a symlink so that the rest of the pkgsrc
-# machinery that expects ${WRKSRC} to contain the tarball contents
-# works.
-post-extract:
-	${MKDIR} ${GOPATH}/src/github.com/syncthing/
-	${MV} ${WRKSRC} ${WRKPLACE}
-	${LN} -s ${WRKPLACE} ${WRKSRC}
+SUBST_CLASSES+=		go
+SUBST_STAGE.go=		pre-build
+SUBST_MESSAGE.go=	Fixing go executable reference
+SUBST_FILES.go=		lib/auto/doc.go cmd/strelaypoolsrv/auto/doc.go
+SUBST_SED.go+=		-e 's|go run|"${GO}" run|'
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GO} run build.go build syncthing
@@ -94,4 +58,5 @@ do-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/syncthing ${DESTDIR}/${PREFIX}/bin
 
+.include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
