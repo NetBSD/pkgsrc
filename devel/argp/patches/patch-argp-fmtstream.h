@@ -1,4 +1,4 @@
-$NetBSD: patch-argp-fmtstream.h,v 1.1 2012/07/03 18:13:47 joerg Exp $
+$NetBSD: patch-argp-fmtstream.h,v 1.2 2018/08/29 18:08:08 kamil Exp $
 
 --- argp-fmtstream.h.orig	2003-12-11 08:37:05.000000000 +0000
 +++ argp-fmtstream.h
@@ -38,10 +38,10 @@ $NetBSD: patch-argp-fmtstream.h,v 1.1 2012/07/03 18:13:47 joerg Exp $
  #endif
  
  #ifndef ARGP_FS_EI
-+#if defined(__GNUC__) && !defined(__GNUC_STDC_INLINE__)
++#if defined(__GNUC__) && !defined(__GNUC_STDC_INLINE__) && 0
  #define ARGP_FS_EI extern inline
 +#else
-+#define ARGP_FS_EI inline
++#define ARGP_FS_EI static inline
 +#endif
  #endif
  

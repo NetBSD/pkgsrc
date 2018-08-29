@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2017/07/12 11:05:59 wiz Exp $
+$NetBSD: distinfo,v 1.6 2018/08/29 18:08:07 kamil Exp $
 
 SHA1 (argp-standalone-1.3.tar.gz) = 815c560680ebdc11694b88de2f8ec15133e0bfa0
 RMD160 (argp-standalone-1.3.tar.gz) = 1c5cd0b1c382d93774be636a1ea2758d530cfef4
@@ -7,4 +7,4 @@ Size (argp-standalone-1.3.tar.gz) = 130255 bytes
 SHA1 (patch-aa) = 57560cba79069b6809de78a7edbad64e2f717c61
 SHA1 (patch-ab) = 7ed54ce579b922416aceb0c4e3959307557e8af6
 SHA1 (patch-argp-fmtstream.c) = c7e763bb317702e5072570783629d8e973e5f077
-SHA1 (patch-argp-fmtstream.h) = 7fd13de60b376001ee5eee72a065385b4abf9923
+SHA1 (patch-argp-fmtstream.h) = c0b740fc31d51d0295d6bd01a9ed1a84ff2b5205
