@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3829 2018/08/29 06:29:19 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3830 2018/08/29 07:01:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5418,3 +5418,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/p5-Net-Amazon-S3 to 0.85 [wiz 2018-08-29]
 	Updated security/p5-Module-Signature to 0.82 [wiz 2018-08-29]
 	Updated textproc/p5-Lingua-EN-Tagger to 0.30 [wiz 2018-08-29]
+	Updated textproc/py-sphinx to 1.7.8 [adam 2018-08-29]
+	Updated www/py-aiohttp to 3.4.1 [adam 2018-08-29]
