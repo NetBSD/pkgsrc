@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.19 2018/01/02 10:24:06 jperkin Exp $
+$NetBSD: distinfo,v 1.20 2018/08/29 12:25:52 adam Exp $
 
-SHA1 (util-linux-2.31.tar.xz) = 4ebb8a2c1da21a6da08b553abd0f4dd3dbc55b4e
-RMD160 (util-linux-2.31.tar.xz) = 451569f0c2dcc16cd34f5753c1028db8966ab296
-SHA512 (util-linux-2.31.tar.xz) = 48b668526e96a132736b882090d0e33c20b4b3a0e1760502d83118ed98ccc9423d310848a2bb73f82f85e9c19f6191075ae2c5269b007e76be1fbd7b6b88fbf5
-Size (util-linux-2.31.tar.xz) = 4503892 bytes
-SHA1 (patch-Makefile.in) = fc6e29fb5843c1d125299a9dc6d8d3d19eecf4f7
-SHA1 (patch-configure) = bb32feced09b9131f7baa547f6f732d849d58a35
+SHA1 (util-linux-2.32.1.tar.xz) = de9271fb93fb651d21c027e2efb0cf0ac80f2e9a
+RMD160 (util-linux-2.32.1.tar.xz) = bf61cb460eabcfdb90909dbcfd8e64bb9097ce65
+SHA512 (util-linux-2.32.1.tar.xz) = 267fedae24a874ee4dc558081f6b8d07b33b955b0635f3348f021c111c17f2e95c01b2cbf909fe13c6ca448cbcf23c658c75f72f25749aa65e99f68fabb94698
+Size (util-linux-2.32.1.tar.xz) = 4561088 bytes
+SHA1 (patch-Makefile.in) = ace0b141c2fbda821c0f14c385fed698bb5f5423
+SHA1 (patch-configure) = 400904ae2e58b717e990ba26c111b90bc8f240d1
 SHA1 (patch-include_c.h) = 4596369e4b742329be513952c66d1fa3705de017
 SHA1 (patch-include_ttyutils.h) = fa2b253d568e5aface99727c397d3c4c892b2c93
 SHA1 (patch-lib_ismounted.c) = 11f5148020dba2a22e1fbe4882fe423dfb11ad73
