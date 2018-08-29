@@ -1,4 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/07 00:01:48 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/08/29 11:12:36 tnn Exp $
 bin/google-authenticator
-lib/security/pam_google_authenticator.so
-share/doc/google-authenticator/README
+lib/security/pam_google_authenticator.la
+man/man1/google-authenticator.1
+man/man8/pam_google_authenticator.8
+share/doc/google-authenticator/FILEFORMAT
+share/doc/google-authenticator/README.md
+share/doc/google-authenticator/totp.html
