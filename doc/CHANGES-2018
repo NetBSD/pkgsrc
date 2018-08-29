@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3831 2018/08/29 07:42:16 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3832 2018/08/29 08:03:50 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5421,3 +5421,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-sphinx to 1.7.8 [adam 2018-08-29]
 	Updated www/py-aiohttp to 3.4.1 [adam 2018-08-29]
 	Updated www/nginx-devel to 1.15.3 [adam 2018-08-29]
+	Updated www/ikiwiki to 3.20180311nb3 [schmonz 2018-08-29]
