@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3828 2018/08/29 06:27:55 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3829 2018/08/29 06:29:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5417,3 +5417,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/p5-Test-LoadAllModules version 0.022 [wiz 2018-08-29]
 	Updated net/p5-Net-Amazon-S3 to 0.85 [wiz 2018-08-29]
 	Updated security/p5-Module-Signature to 0.82 [wiz 2018-08-29]
+	Updated textproc/p5-Lingua-EN-Tagger to 0.30 [wiz 2018-08-29]
