@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3824 2018/08/29 05:53:07 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3825 2018/08/29 06:06:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5413,3 +5413,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added databases/postgresql96-fuzzystrmatch version 9.6.9 [manu 2018-08-29]
 	Updated devel/p5-Scope-Upper to 0.31 [wiz 2018-08-29]
 	Updated graphics/p5-GD to 2.69 [wiz 2018-08-29]
+	Updated time/p5-DateTime-Format-Natural to 1.05nb3 [wiz 2018-08-29]
