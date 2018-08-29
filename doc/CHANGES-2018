@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3833 2018/08/29 11:07:52 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3834 2018/08/29 11:14:25 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5424,3 +5424,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/ikiwiki to 3.20180311nb3 [schmonz 2018-08-29]
 	Updated textproc/py-numpydoc to 0.8.0 [adam 2018-08-29]
 	Updated devel/py-ddt to 1.2.0 [adam 2018-08-29]
+	Updated security/google-authenticator to 1.05 [tnn 2018-08-29]
