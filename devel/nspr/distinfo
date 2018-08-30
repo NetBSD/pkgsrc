@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.50 2018/05/12 09:01:08 jmcneill Exp $
+$NetBSD: distinfo,v 1.51 2018/08/30 12:21:44 ryoon Exp $
 
-SHA1 (nspr-4.19.tar.gz) = 907221d51a1f8cca0c3a9e1af93c53e02f5e203b
-RMD160 (nspr-4.19.tar.gz) = b29350e8e4a551e5c680562c3c98219f19567738
-SHA512 (nspr-4.19.tar.gz) = 45a48111d0f89db0649a5e1356719868ff81881f9cf48c22c1d13b0831978b103f19e9840d6a5359fcdc90d763c0a60f0a29f7840d756a5efbd53ce1afd36844
-Size (nspr-4.19.tar.gz) = 1139967 bytes
+SHA1 (nspr-4.20.tar.gz) = ef1e2ca3205fd1658a69ada2e0436266ca3065b5
+RMD160 (nspr-4.20.tar.gz) = 50bef643b8acb0899f8c6b331205a887d484b17f
+SHA512 (nspr-4.20.tar.gz) = 22fdf7627f450b0594ebccaee170098e1a8cd0f429fd44816f1322756002ced3d69cf686c3f69f7cb30b8132d3605a9fce5457ab99d0002e6af11a3408a5c949
+Size (nspr-4.20.tar.gz) = 1140892 bytes
 SHA1 (patch-ab) = a24f80c2bab73c12b02d0aad7649da0ce4ca8d4f
 SHA1 (patch-ac) = a3d2cef788393b84e833d9e33bdf40b10d8efbd0
 SHA1 (patch-ae) = c6cf30927792140d867bb4dc3adf19786f6cdbe0
@@ -16,4 +16,4 @@ SHA1 (patch-nsprpub_pr_include_md__dragonfly.cfg) = 54d3fbd4c515290395b66f6b9e73
 SHA1 (patch-nsprpub_pr_include_md_prosdep.h) = dd90cda6251aeeb10f02ef594c02484237195155
 SHA1 (patch-nsprpub_pr_src_md_unix_uxrng.c) = 1d0f4ef5560ccdd7bf7097e987a06a34fc49621c
 SHA1 (patch-nsprpub_pr_src_pthreads_ptio.c) = f83cc645a7114bf122adf62fd69808ad00bb989a
-SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = 78c4b1063d6998b9cc135a99b425f9008753922d
+SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = 9ce6cf8a182d797e5ff229b14b38be9dfb9682d0
