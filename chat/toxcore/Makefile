@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2018/07/30 18:58:43 jperkin Exp $
 
-DISTNAME=	toxcore-0.2.6
+DISTNAME=	toxcore-0.2.7
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TokTok/}
 GITHUB_PROJECT=	c-toxcore
@@ -15,8 +15,6 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c99 c++
 USE_TOOLS=	pkg-config
 TEST_TARGET=	test
-
-CFLAGS+=	-D_POSIX_C_SOURCE=200112L
 
 .include "../../audio/libopus/buildlink3.mk"
 .include "../../devel/libconfig/buildlink3.mk"
