@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/07/28 14:40:47 brook Exp $
+# $NetBSD: Makefile,v 1.13 2018/08/30 12:56:34 wen Exp $
 
 CATEGORIES=	math
 
@@ -8,9 +8,11 @@ COMMENT=	Circular Statistics, from "Topics in circular Statistics"
 LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	circular
-R_PKGVER=	0.4-7
+R_PKGVER=	0.4-93
 
 USE_LANGUAGES=	fortran c
+
+DEPENDS+=	R-mvtnorm>=0:../../math/R-mvtnorm
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../math/R/Makefile.extension"
