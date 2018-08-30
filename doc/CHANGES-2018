@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3839 2018/08/30 11:14:24 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3840 2018/08/30 12:21:04 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5434,3 +5434,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated finance/py-braintree to 3.48.0 [adam 2018-08-30]
 	Updated math/py-numexpr to 2.6.8 [adam 2018-08-30]
 	Updated math/py-powerlaw to 1.4.4 [adam 2018-08-30]
+	Updated math/R-zoo to 1.8.3 [wen 2018-08-30]
