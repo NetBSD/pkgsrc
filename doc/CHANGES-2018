@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3837 2018/08/30 08:39:40 he Exp $
+$NetBSD: CHANGES-2018,v 1.3838 2018/08/30 10:06:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5430,3 +5430,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/mcookie to 2.32.1 [adam 2018-08-29]
 	Updated devel/p5-PathTools to 3.75 [wen 2018-08-30]
 	Updated sysutils/zabbix to 3.4.13 [he 2018-08-30]
+	Updated devel/py-test to 3.7.4 [adam 2018-08-30]
+	Updated finance/py-braintree to 3.48.0 [adam 2018-08-30]
