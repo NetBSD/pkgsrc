@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3835 2018/08/29 12:26:46 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3836 2018/08/30 04:16:21 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5428,3 +5428,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/libblkid to 2.32.1 [adam 2018-08-29]
 	Updated devel/libuuid to 2.32.1 [adam 2018-08-29]
 	Updated x11/mcookie to 2.32.1 [adam 2018-08-29]
+	Updated devel/p5-PathTools to 3.75 [wen 2018-08-30]
