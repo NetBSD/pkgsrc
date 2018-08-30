@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/07/28 14:40:51 brook Exp $
+# $NetBSD: Makefile,v 1.3 2018/08/30 12:36:31 wen Exp $
 
 CATEGORIES=	math
 
@@ -8,7 +8,7 @@ COMMENT=	Export Tables to LaTeX or HTML
 LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	xtable
-R_PKGVER=	1.8-2
+R_PKGVER=	1.8-3
 
 USE_LANGUAGES=	# none
 
