@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.564 2018/07/04 05:18:15 minskim Exp $
+# $NetBSD: Makefile,v 1.565 2018/08/30 03:15:18 jnemeth Exp $
 
 COMMENT=	Databases
 
@@ -319,6 +319,7 @@ SUBDIR+=	postgresql96
 SUBDIR+=	postgresql96-client
 SUBDIR+=	postgresql96-contrib
 SUBDIR+=	postgresql96-docs
+SUBDIR+=	postgresql96-fuzzystrmatch
 SUBDIR+=	postgresql96-plperl
 SUBDIR+=	postgresql96-plpython
 SUBDIR+=	postgresql96-pltcl
