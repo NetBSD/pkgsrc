@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3843 2018/08/30 12:37:22 wen Exp $
+$NetBSD: CHANGES-2018,v 1.3844 2018/08/30 12:53:19 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5438,3 +5438,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/nspr to 4.20 [ryoon 2018-08-30]
 	Updated math/R-xts to 0.11.0 [wen 2018-08-30]
 	Updated math/R-xtable to 1.8.3 [wen 2018-08-30]
+	Updated math/R-mvtnorm to 1.0.8 [wen 2018-08-30]
