@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2018/01/25 00:19:52 minskim Exp $
+$NetBSD: distinfo,v 1.9 2018/08/30 12:52:22 wen Exp $
 
-SHA1 (R/mvtnorm_1.0-6.tar.gz) = fec1d9f61d839e59884f710ad5c117522a2ef909
-RMD160 (R/mvtnorm_1.0-6.tar.gz) = ebf956729279cc1e4cf9897d428b9e2985cf2361
-SHA512 (R/mvtnorm_1.0-6.tar.gz) = 80490afc7eed35be20bc57e83acadf25c10add2a6eda130628a10b9dcb654d993f262e192072e2f4a083f26b17a5e455062889e72f3649d7dbe9cc234e28213c
-Size (R/mvtnorm_1.0-6.tar.gz) = 159232 bytes
+SHA1 (R/mvtnorm_1.0-8.tar.gz) = 00d27da6161b77e83aad7eb37a408bb00688a548
+RMD160 (R/mvtnorm_1.0-8.tar.gz) = c05e6c097ea1fc8e5a58e0f89f20ae8e1ae3fa88
+SHA512 (R/mvtnorm_1.0-8.tar.gz) = 6a3683267092c238d6470fe8b4814dd7d1eb20282aab1aad7b8bd8777e5425999f11e89f92ca02a798ea0eb5f0dd92e87d80e4c031fab44077b6c66ab15b0209
+Size (R/mvtnorm_1.0-8.tar.gz) = 159539 bytes
