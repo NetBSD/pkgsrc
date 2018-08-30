@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2018/07/25 14:05:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.28 2018/08/30 22:56:46 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -528,6 +528,7 @@ share/mame/hash/vector06_cart.xml
 share/mame/hash/vector06_flop.xml
 share/mame/hash/vectrex.xml
 share/mame/hash/vg5k.xml
+share/mame/hash/vgmplay.xml
 share/mame/hash/vic10.xml
 share/mame/hash/vic1001_cart.xml
 share/mame/hash/vic1001_cass.xml
