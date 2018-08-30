@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/07/28 14:40:51 brook Exp $
+# $NetBSD: Makefile,v 1.10 2018/08/30 12:27:57 wen Exp $
 
 CATEGORIES=	math
 
@@ -8,7 +8,7 @@ COMMENT=	R's eXtensible Time Series
 LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	xts
-R_PKGVER=	0.10-1
+R_PKGVER=	0.11-0
 
 USE_LANGUAGES+=	c fortran
 
