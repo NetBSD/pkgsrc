@@ -1,0 +1,10 @@
+The HP-15C Simulator is intended to be a useful RPN calculator for
+your PC desktop. It therefore makes use of the features of the
+underlying operating system and its GUI: Programs can be saved in
+files, so that you need to key them in only once. Pop-up menus provide
+easy and fast access to many HP-15C functions and features. However,
+no new function, which is not supported by the real HP-15C, is added.
+
+The Simulator supports almost all functions and features of the real
+HP-15C. Differences between the real HP-15C and the Simulator are
+rather small.
