@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3847 2018/08/31 07:29:29 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3848 2018/08/31 08:26:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5443,3 +5443,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated emulators/mame to 0.201 [wiz 2018-08-30]
 	Updated devel/py-atomicwrites to 1.2.1 [adam 2018-08-31]
 	Updated textproc/py-openpyxl to 2.5.6 [adam 2018-08-31]
+	Updated graphics/MesaLib to 11.2.2nb7 [wiz 2018-08-31]
