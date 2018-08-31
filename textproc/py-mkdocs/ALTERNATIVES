@@ -1,0 +1,1 @@
+bin/mkdocs @PREFIX@/bin/mkdocs-@PYVERSSUFFIX@
