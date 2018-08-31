@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/01/21 20:26:50 jperkin Exp $
+$NetBSD: distinfo,v 1.2 2018/08/31 09:20:31 adam Exp $
 
-SHA1 (livereload-2.4.1.tar.gz) = 0119fc9b02e6d047ffc3089656ea8effdde0e01e
-RMD160 (livereload-2.4.1.tar.gz) = 3006215aca522f3dafa183f144671952baedd817
-SHA512 (livereload-2.4.1.tar.gz) = 9106fe1894092ab336270f539be41d4db2d277560a41898e45014e34783ab0b601c993a5a5831c951d313db98ea835aecc8eb31468ba186e243a28df75bfe9bb
-Size (livereload-2.4.1.tar.gz) = 25593 bytes
+SHA1 (livereload-2.5.2.tar.gz) = a940d6912951e530ef65a76243f207096898d545
+RMD160 (livereload-2.5.2.tar.gz) = b4a8aa55858eea892dd5ad481e8d4b35759b485f
+SHA512 (livereload-2.5.2.tar.gz) = 5bcfe44b11a9341b702c2ddd95bcde17ff57de7dbec084eb039a7e2cbf839409f144c4f2c7d057cf6ec39f3196cfd6978ee3532eb245060624b3403e09bbf8c1
+Size (livereload-2.5.2.tar.gz) = 22280 bytes
