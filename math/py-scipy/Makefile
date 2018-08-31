@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2018/08/20 22:36:21 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.36 2018/08/31 08:09:19 wiz Exp $
 
 DISTNAME=	scipy-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -98,11 +98,11 @@ fix-darwin-install-name:
 .endif
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
-# support files for tests missing in 0.18.0 on pypi
-# https://github.com/scipy/scipy/issues/6498
-# self test failures reported at
-# https://github.com/scipy/scipy/issues/6499
+# self test failures for 1.1.0 reported at
+# https://github.com/scipy/scipy/issues/9196
+# needs 'make install' first!
 do-test:
 	${PYTHONBIN} -c "import scipy; scipy.test('full')"
 
