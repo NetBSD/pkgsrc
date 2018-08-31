@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3849 2018/08/31 09:25:36 hauke Exp $
+$NetBSD: CHANGES-2018,v 1.3850 2018/08/31 10:11:24 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5445,3 +5445,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-openpyxl to 2.5.6 [adam 2018-08-31]
 	Updated graphics/MesaLib to 11.2.2nb7 [wiz 2018-08-31]
 	Added emulators/tcl-hp-15c version 4.0.00.5811 [hauke 2018-08-31]
+	Added sysutils/rkdeveloptool version 1.3 [tnn 2018-08-31]
