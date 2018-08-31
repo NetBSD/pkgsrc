@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/08/06 20:15:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/08/31 07:29:11 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -457,9 +457,18 @@ ${PYSITELIB}/openpyxl/worksheet/__init__.pyo
 ${PYSITELIB}/openpyxl/worksheet/cell_range.py
 ${PYSITELIB}/openpyxl/worksheet/cell_range.pyc
 ${PYSITELIB}/openpyxl/worksheet/cell_range.pyo
+${PYSITELIB}/openpyxl/worksheet/cell_watch.py
+${PYSITELIB}/openpyxl/worksheet/cell_watch.pyc
+${PYSITELIB}/openpyxl/worksheet/cell_watch.pyo
+${PYSITELIB}/openpyxl/worksheet/controls.py
+${PYSITELIB}/openpyxl/worksheet/controls.pyc
+${PYSITELIB}/openpyxl/worksheet/controls.pyo
 ${PYSITELIB}/openpyxl/worksheet/copier.py
 ${PYSITELIB}/openpyxl/worksheet/copier.pyc
 ${PYSITELIB}/openpyxl/worksheet/copier.pyo
+${PYSITELIB}/openpyxl/worksheet/custom.py
+${PYSITELIB}/openpyxl/worksheet/custom.pyc
+${PYSITELIB}/openpyxl/worksheet/custom.pyo
 ${PYSITELIB}/openpyxl/worksheet/datavalidation.py
 ${PYSITELIB}/openpyxl/worksheet/datavalidation.pyc
 ${PYSITELIB}/openpyxl/worksheet/datavalidation.pyo
@@ -469,6 +478,9 @@ ${PYSITELIB}/openpyxl/worksheet/dimensions.pyo
 ${PYSITELIB}/openpyxl/worksheet/drawing.py
 ${PYSITELIB}/openpyxl/worksheet/drawing.pyc
 ${PYSITELIB}/openpyxl/worksheet/drawing.pyo
+${PYSITELIB}/openpyxl/worksheet/errors.py
+${PYSITELIB}/openpyxl/worksheet/errors.pyc
+${PYSITELIB}/openpyxl/worksheet/errors.pyo
 ${PYSITELIB}/openpyxl/worksheet/filters.py
 ${PYSITELIB}/openpyxl/worksheet/filters.pyc
 ${PYSITELIB}/openpyxl/worksheet/filters.pyo
@@ -481,12 +493,18 @@ ${PYSITELIB}/openpyxl/worksheet/hyperlink.pyo
 ${PYSITELIB}/openpyxl/worksheet/merge.py
 ${PYSITELIB}/openpyxl/worksheet/merge.pyc
 ${PYSITELIB}/openpyxl/worksheet/merge.pyo
+${PYSITELIB}/openpyxl/worksheet/ole.py
+${PYSITELIB}/openpyxl/worksheet/ole.pyc
+${PYSITELIB}/openpyxl/worksheet/ole.pyo
 ${PYSITELIB}/openpyxl/worksheet/page.py
 ${PYSITELIB}/openpyxl/worksheet/page.pyc
 ${PYSITELIB}/openpyxl/worksheet/page.pyo
 ${PYSITELIB}/openpyxl/worksheet/pagebreak.py
 ${PYSITELIB}/openpyxl/worksheet/pagebreak.pyc
 ${PYSITELIB}/openpyxl/worksheet/pagebreak.pyo
+${PYSITELIB}/openpyxl/worksheet/picture.py
+${PYSITELIB}/openpyxl/worksheet/picture.pyc
+${PYSITELIB}/openpyxl/worksheet/picture.pyo
 ${PYSITELIB}/openpyxl/worksheet/properties.py
 ${PYSITELIB}/openpyxl/worksheet/properties.pyc
 ${PYSITELIB}/openpyxl/worksheet/properties.pyo
@@ -499,6 +517,9 @@ ${PYSITELIB}/openpyxl/worksheet/read_only.pyo
 ${PYSITELIB}/openpyxl/worksheet/related.py
 ${PYSITELIB}/openpyxl/worksheet/related.pyc
 ${PYSITELIB}/openpyxl/worksheet/related.pyo
+${PYSITELIB}/openpyxl/worksheet/smart_tag.py
+${PYSITELIB}/openpyxl/worksheet/smart_tag.pyc
+${PYSITELIB}/openpyxl/worksheet/smart_tag.pyo
 ${PYSITELIB}/openpyxl/worksheet/table.py
 ${PYSITELIB}/openpyxl/worksheet/table.pyc
 ${PYSITELIB}/openpyxl/worksheet/table.pyo
