@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2018/08/22 09:45:43 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2018/08/31 13:58:44 adam Exp $
 
-DISTNAME=	dpkg_1.18.24
+DISTNAME=	dpkg_1.18.25
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/d/dpkg/}
 EXTRACT_SUFX=	.tar.xz
@@ -12,10 +11,9 @@ HOMEPAGE=	https://wiki.debian.org/Teams/Dpkg
 COMMENT=	Package maintenance system for Debian
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=		patch-[0-9]*:../../devel/patch
-BUILD_DEPENDS+=		po4a-[0-9]*:../../textproc/po4a
-# TEST_DEPENDS
-BUILD_DEPENDS+=		p5-IO-String-[0-9]*:../../devel/p5-IO-String
+DEPENDS+=	patch-[0-9]*:../../devel/patch
+BUILD_DEPENDS+=	po4a-[0-9]*:../../textproc/po4a
+TEST_DEPENDS+=	p5-IO-String-[0-9]*:../../devel/p5-IO-String
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 BUILD_DEFS+=	VARBASE
