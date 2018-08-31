@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2018/08/31 10:09:51 tnn Exp $
+
+SHA1 (rkdeveloptool-1.3-081d237ad5bf8f03170c9d60bd94ceefa0352aaf.tar.gz) = 20b22d5c172c5f651e2a49a4985708bd6d0cbcd6
+RMD160 (rkdeveloptool-1.3-081d237ad5bf8f03170c9d60bd94ceefa0352aaf.tar.gz) = ce1f05a7d4cd38ae0b63e3a67826b604d925efea
+SHA512 (rkdeveloptool-1.3-081d237ad5bf8f03170c9d60bd94ceefa0352aaf.tar.gz) = cba3f9540b4fecbe3288a10c37294ddddcdb6572bed8085e4cf98328c0a4c651062399595cf92a3422268504d36835d52cac56f5e24a4eeb0639423372020ae4
+Size (rkdeveloptool-1.3-081d237ad5bf8f03170c9d60bd94ceefa0352aaf.tar.gz) = 57003 bytes
+SHA1 (patch-main.cpp) = c1115d44570cbf21084d3326f1fad32db101054f
