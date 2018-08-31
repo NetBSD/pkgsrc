@@ -1,0 +1,3 @@
+rkdeveloptool is a libusb-based utility for working with RockUSB devices.
+RockUSB is a vendor specific USB class from Rockchip, used for firmware
+download for Rockchip SoCs.
