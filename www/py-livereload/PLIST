@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/01/21 20:26:50 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/08/31 09:20:31 adam Exp $
 bin/livereload
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -15,6 +15,12 @@ ${PYSITELIB}/livereload/cli.pyo
 ${PYSITELIB}/livereload/handlers.py
 ${PYSITELIB}/livereload/handlers.pyc
 ${PYSITELIB}/livereload/handlers.pyo
+${PYSITELIB}/livereload/management/commands/__init__.py
+${PYSITELIB}/livereload/management/commands/__init__.pyc
+${PYSITELIB}/livereload/management/commands/__init__.pyo
+${PYSITELIB}/livereload/management/commands/livereload.py
+${PYSITELIB}/livereload/management/commands/livereload.pyc
+${PYSITELIB}/livereload/management/commands/livereload.pyo
 ${PYSITELIB}/livereload/server.py
 ${PYSITELIB}/livereload/server.pyc
 ${PYSITELIB}/livereload/server.pyo
