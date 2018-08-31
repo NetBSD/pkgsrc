@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3852 2018/08/31 13:59:18 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3853 2018/08/31 19:19:28 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5450,3 +5450,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-tornado to 5.1 [adam 2018-08-31]
 	Updated textproc/py-mkdocs to 1.0.3 [adam 2018-08-31]
 	Updated misc/dpkg to 1.18.25 [adam 2018-08-31]
+	Updated net/gallery-dl to 1.5.2 [leot 2018-08-31]
