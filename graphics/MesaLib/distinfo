@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.121 2018/01/16 15:49:47 jperkin Exp $
+$NetBSD: distinfo,v 1.122 2018/08/31 08:26:42 wiz Exp $
 
 SHA1 (mesa-11.2.2.tar.xz) = c3805020be6fef77d3b96a5ddf4ddc256dee16ff
 RMD160 (mesa-11.2.2.tar.xz) = 14bca7cc76015e53db2fafcebb8540f451be5aab
@@ -7,7 +7,6 @@ Size (mesa-11.2.2.tar.xz) = 7860932 bytes
 SHA1 (patch-configure) = 87f0f2e60f342c91b3aecab02d3a4d8940eadf0a
 SHA1 (patch-include_GL_glxext.h) = 830902f2d38a8395cda682c059fc5223e1b0e89e
 SHA1 (patch-src_compiler_glsl_builtin__functions.cpp) = 1be4e67eda2105f375942c2991cf432e5d74e597
-SHA1 (patch-src_compiler_glsl_glsl__parser__extras.cpp) = c5046ce848d0b1ea428e29611b6822d4f4ab970d
 SHA1 (patch-src_egl_drivers_dri2_platform__drm.c) = 99b6dd6739c29551ae2c885eabd7babd159fc3e5
 SHA1 (patch-src_egl_drivers_dri2_platform__x11.c) = 04b6ef8e755f226fbe3e6f2bea6c9e2a56a783ca
 SHA1 (patch-src_egl_main_eglglobals.c) = 2d81ae27f09162d23bc684456cc5fef48c042652
