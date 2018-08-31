@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/08/31 09:20:31 adam Exp $
+# $NetBSD: Makefile,v 1.4 2018/08/31 10:02:00 adam Exp $
 
 DISTNAME=	livereload-2.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,6 +14,10 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
 
 USE_LANGUAGES=	# none
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+		${MV} livereload livereload-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
