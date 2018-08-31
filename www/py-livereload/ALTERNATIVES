@@ -1,0 +1,1 @@
+bin/livereload @PREFIX@/bin/livereload-@PYVERSSUFFIX@
