@@ -1,26 +1,27 @@
-# $NetBSD: Makefile,v 1.2 2017/07/30 22:32:23 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2018/08/31 12:30:47 adam Exp $
 
-DISTNAME=	mkdocs-0.15.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl:S/py//}
-CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_GITHUB:=mkdocs/}
+DISTNAME=	mkdocs-1.0.3
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	textproc python
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/mkdocs/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/mkdocs/mkdocs/
+HOMEPAGE=	https://github.com/mkdocs/mkdocs
 COMMENT=	Fast and simple static site generator for documentation
 LICENSE=	2-clause-bsd
 
-GITHUB_PROJECT=	mkdocs
-GITHUB_TAG=	${PKGVERSION_NOREV}
+DEPENDS+=	${PYPKGPREFIX}-click>=3.3:../../devel/py-click
+DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.7.1:../../textproc/py-jinja2
+DEPENDS+=	${PYPKGPREFIX}-livereload>=2.5.1:../../www/py-livereload
+DEPENDS+=	${PYPKGPREFIX}-markdown>=2.3.1:../../textproc/py-markdown
+DEPENDS+=	${PYPKGPREFIX}-tornado>=5.0:../../www/py-tornado
+DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
 
-DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-markdown-[0-9]*:../../textproc/py-markdown
-DEPENDS+=	${PYPKGPREFIX}-mkdocs-bootswatch-[0-9]*:../../textproc/py-mkdocs-bootswatch
-DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
-DEPENDS+=	${PYPKGPREFIX}-livereload-[0-9]*:../../www/py-livereload
-DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
+USE_LANGUAGES=	# none
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+		${MV} mkdocs mkdocs-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
