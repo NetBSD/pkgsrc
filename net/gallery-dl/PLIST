@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2018/08/17 14:50:52 leot Exp $
+@comment $NetBSD: PLIST,v 1.16 2018/08/31 19:18:59 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -210,6 +210,9 @@ ${PYSITELIB}/gallery_dl/extractor/message.pyo
 ${PYSITELIB}/gallery_dl/extractor/myportfolio.py
 ${PYSITELIB}/gallery_dl/extractor/myportfolio.pyc
 ${PYSITELIB}/gallery_dl/extractor/myportfolio.pyo
+${PYSITELIB}/gallery_dl/extractor/ngomik.py
+${PYSITELIB}/gallery_dl/extractor/ngomik.pyc
+${PYSITELIB}/gallery_dl/extractor/ngomik.pyo
 ${PYSITELIB}/gallery_dl/extractor/nhentai.py
 ${PYSITELIB}/gallery_dl/extractor/nhentai.pyc
 ${PYSITELIB}/gallery_dl/extractor/nhentai.pyo
@@ -282,9 +285,6 @@ ${PYSITELIB}/gallery_dl/extractor/slideshare.pyo
 ${PYSITELIB}/gallery_dl/extractor/smugmug.py
 ${PYSITELIB}/gallery_dl/extractor/smugmug.pyc
 ${PYSITELIB}/gallery_dl/extractor/smugmug.pyo
-${PYSITELIB}/gallery_dl/extractor/subapics.py
-${PYSITELIB}/gallery_dl/extractor/subapics.pyc
-${PYSITELIB}/gallery_dl/extractor/subapics.pyo
 ${PYSITELIB}/gallery_dl/extractor/test.py
 ${PYSITELIB}/gallery_dl/extractor/test.pyc
 ${PYSITELIB}/gallery_dl/extractor/test.pyo
