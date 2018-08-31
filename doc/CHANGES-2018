@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3848 2018/08/31 08:26:52 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3849 2018/08/31 09:25:36 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5444,3 +5444,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-atomicwrites to 1.2.1 [adam 2018-08-31]
 	Updated textproc/py-openpyxl to 2.5.6 [adam 2018-08-31]
 	Updated graphics/MesaLib to 11.2.2nb7 [wiz 2018-08-31]
+	Added emulators/tcl-hp-15c version 4.0.00.5811 [hauke 2018-08-31]
