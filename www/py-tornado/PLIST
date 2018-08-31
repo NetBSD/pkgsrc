@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2017/05/04 09:50:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2018/08/31 09:51:06 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -134,6 +134,9 @@ ${PYSITELIB}/tornado/test/asyncio_test.pyo
 ${PYSITELIB}/tornado/test/auth_test.py
 ${PYSITELIB}/tornado/test/auth_test.pyc
 ${PYSITELIB}/tornado/test/auth_test.pyo
+${PYSITELIB}/tornado/test/autoreload_test.py
+${PYSITELIB}/tornado/test/autoreload_test.pyc
+${PYSITELIB}/tornado/test/autoreload_test.pyo
 ${PYSITELIB}/tornado/test/concurrent_test.py
 ${PYSITELIB}/tornado/test/concurrent_test.pyc
 ${PYSITELIB}/tornado/test/concurrent_test.pyo
@@ -186,6 +189,8 @@ ${PYSITELIB}/tornado/test/options_test.cfg
 ${PYSITELIB}/tornado/test/options_test.py
 ${PYSITELIB}/tornado/test/options_test.pyc
 ${PYSITELIB}/tornado/test/options_test.pyo
+${PYSITELIB}/tornado/test/options_test_types.cfg
+${PYSITELIB}/tornado/test/options_test_types_str.cfg
 ${PYSITELIB}/tornado/test/process_test.py
 ${PYSITELIB}/tornado/test/process_test.pyc
 ${PYSITELIB}/tornado/test/process_test.pyo
