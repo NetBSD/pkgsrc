@@ -1,16 +1,17 @@
-$NetBSD: distinfo,v 1.151 2018/08/22 08:37:46 wiz Exp $
+$NetBSD: distinfo,v 1.152 2018/09/01 08:03:02 schmonz Exp $
 
 SHA1 (perl-5.28.0.tar.xz) = c0e9e7a0dea97ec9816687d865fd461a99ef185c
 RMD160 (perl-5.28.0.tar.xz) = 34c9ad0560a2eed134e09282696bfae307cbeb6a
 SHA512 (perl-5.28.0.tar.xz) = de701e37371b81cecf06098bb2c09017bde9cebaf9537d58838d0adf605ac2ecf739897b0a73576a7adb74d4cf65591ec4d2ed1f94b7191e695f88cb7e214a39
 Size (perl-5.28.0.tar.xz) = 12410536 bytes
 SHA1 (patch-Configure) = e4ae2c84bece8823ec1bf98415706b4d2491a5e9
-SHA1 (patch-Makefile.SH) = e9353181a286f52303d09cb4ce0b2c04ec104217
+SHA1 (patch-Makefile.SH) = febb87d876a44091a761d3ef99c649f3e4bdd394
 SHA1 (patch-aa) = 3a2b39c9eb903e68ef7d03ae448c51c147c19aa1
 SHA1 (patch-ab) = 0ad5988b7cadfb13d9646a59a57f6cf884a6238a
 SHA1 (patch-ac) = 4baa8f80695687abb53d4f4e1830cf86db5b2bf7
 SHA1 (patch-caretx.c) = 9f53a9133f8dd2f962b448d7288b5b20454c86fb
 SHA1 (patch-cflags.SH) = 7ad64e5a17b876bff4bbe238abc4a57354acf4fe
+SHA1 (patch-dist_Storable_Makefile.PL) = fd8964cf3c94ba811caaf71be21650b29e4c8e50
 SHA1 (patch-hints_cygwin.sh) = 1b21d927d6b7379754c4cd64a2b05d3632c35470
 SHA1 (patch-hints_netbsd.sh) = 0d549a48800372d75fe34b783529a78cba90f646
 SHA1 (patch-hints_solaris__2.sh) = 0e54889648a6f0f2a0232c5e01bef89d245c213d
