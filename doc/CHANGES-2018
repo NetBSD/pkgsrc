@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3858 2018/09/01 19:03:25 leot Exp $
+$NetBSD: CHANGES-2018,v 1.3859 2018/09/01 19:10:10 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5456,3 +5456,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/liquibase to 3.5.5 [tnn 2018-09-01]
 	Updated www/netsurf to 3.8 [leot 2018-09-01]
 	Updated games/prboom-plus to 2.5.1.4 [leot 2018-09-01]
+	Updated ham/rtl-sdr to 0.5.4 [gdt 2018-09-01]
