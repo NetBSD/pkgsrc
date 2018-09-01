@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18530 2018/08/30 12:23:15 ryoon Exp $
+$NetBSD: TODO,v 1.18531 2018/09/01 19:03:25 leot Exp $
 
 Suggested new packages
 ======================
@@ -1195,7 +1195,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ppl-1.2
 	o ppmd-9.2
 	o pppd-2.4.7
-	o prboom-plus-2.5.1.4
 	o prelude-correlator-3.1.0
 	o prelude-lml-3.1.0
 	o prelude-manager-3.1.0
