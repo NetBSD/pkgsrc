@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/07/31 14:23:05 maya Exp $
+# $NetBSD: Makefile,v 1.2 2018/09/01 17:57:17 tnn Exp $
 
-VERSION=	3.5.3
+VERSION=	3.5.5
 PKGNAME=	liquibase-${VERSION}
 DISTNAME=	${PKGNAME}-bin
 CATEGORIES=	databases
