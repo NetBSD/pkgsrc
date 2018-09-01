@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2018/01/07 13:04:12 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2018/09/01 20:46:07 bsiegert Exp $
 
 BUILDLINK_TREE+=	MesaLib7
 
@@ -26,10 +26,6 @@ PKG_BUILD_OPTIONS.MesaLib7+=	dri
 
 .if !empty(PKG_BUILD_OPTIONS.MesaLib7:Mdri)
 .  include "../../graphics/MesaLib/dri.mk"
-.endif
-
-.if !empty(MACHINE_PLATFORM:MNetBSD-[12].*)
-.include "../../devel/pthread-stublib/buildlink3.mk"
 .endif
 
 .include "../../x11/libXext/buildlink3.mk"
