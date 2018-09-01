@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2018/09/01 10:38:19 tnn Exp $
+share/u-boot/rockpro64/sdloader.img
+share/u-boot/rockpro64/u-boot.itb
