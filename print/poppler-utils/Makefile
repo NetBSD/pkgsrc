@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2018/04/17 05:20:34 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2018/09/01 20:52:24 bsiegert Exp $
 
 .include "../../print/poppler/Makefile.common"
 
@@ -32,13 +32,7 @@ INSTALL_DIRS=		utils
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-[12].*)
-.include "../../devel/pthread-stublib/buildlink3.mk"
-PTHREAD_STUBLIB=	"-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lpthstub"
-.else
-PTHREAD_STUBLIB=	# provided by libc
-.endif
-MAKE_ENV+=		PTHREAD_STUBLIB=${PTHREAD_STUBLIB}
+MAKE_ENV+=		PTHREAD_STUBLIB=
 
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
