@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.own.mk.in,v 1.5 2015/02/14 04:46:50 riastradh Exp $
+#	$NetBSD: bsd.own.mk.in,v 1.6 2018/09/01 21:56:04 tnn Exp $
 
 .if !defined(_BSD_OWN_MK_)
 _BSD_OWN_MK_=1
@@ -117,6 +117,7 @@ NOPIC?=1
     ${MACHINE_ARCH} == "x86_64" || \
     ${MACHINE_ARCH} == "i386" || \
     ${MACHINE_ARCH} == "m68000" || \
+    ${MACHINE_ARCH} == "aarch64" || \
     ${MACHINE_ARCH} == "arm" || \
     !empty(MACHINE_ARCH:Mearm*) || \
     ${MACHINE} == "next68k" || \
@@ -139,6 +140,7 @@ SHLIB_VERSION_FILE?= ${.CURDIR}/shlib_version
 # This table maps an architecture name to its GNU counterpart.
 # Use as so:  ${GNU_ARCH.${TARGET_ARCH}} or ${MACHINE_GNU_ARCH}
 .ifndef MACHINE_GNU_ARCH
+GNU_ARCH.aarch64=aarch64
 GNU_ARCH.alpha=alpha
 GNU_ARCH.arm26=arm
 GNU_ARCH.arm32=arm

@@ -1,4 +1,4 @@
-#	$NetBSD: Minix.bsd.own.mk.in,v 1.1 2011/11/06 21:01:30 tcort Exp $
+#	$NetBSD: Minix.bsd.own.mk.in,v 1.2 2018/09/01 21:56:04 tnn Exp $
 
 .if !defined(_BSD_OWN_MK_)
 _BSD_OWN_MK_=1
@@ -126,6 +126,7 @@ SHLIB_VERSION_FILE?= ${.CURDIR}/shlib_version
 # This table maps an architecture name to its GNU counterpart.
 # Use as so:  ${GNU_ARCH.${TARGET_ARCH}} or ${MACHINE_GNU_ARCH}
 .ifndef MACHINE_GNU_ARCH
+GNU_ARCH.aarch64=aarch64
 GNU_ARCH.alpha=alpha
 GNU_ARCH.arm26=arm
 GNU_ARCH.arm32=arm
