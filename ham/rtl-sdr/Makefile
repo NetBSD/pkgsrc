@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2018/06/28 19:00:14 gdt Exp $
+# $NetBSD: Makefile,v 1.12 2018/09/01 19:09:57 gdt Exp $
 
-DISTNAME=		rtl-sdr-0.5.3
-PKGREVISION=		3
+DISTNAME=		rtl-sdr-0.5.4
 CATEGORIES=		ham
 MASTER_SITES=		${MASTER_SITE_GITHUB:=steve-m/}
 GITHUB_PROJECT=		librtlsdr
