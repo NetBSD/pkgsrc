@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3860 2018/09/01 20:58:32 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.3861 2018/09/01 21:57:07 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5458,3 +5458,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated games/prboom-plus to 2.5.1.4 [leot 2018-09-01]
 	Updated ham/rtl-sdr to 0.5.4 [gdt 2018-09-01]
 	Removed devel/pthread-stublib [bsiegert 2018-09-01]
+	Updated pkgtools/bootstrap-mk-files to 20180901 [tnn 2018-09-01]
