@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2018/09/01 10:38:19 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2018/09/01 12:04:56 tnn Exp $
 
 UBOOT_TARGET=		rockpro64
 UBOOT_CONFIG=		rockpro64-rk3399_defconfig
-UBOOT_BIN=		sdloader.img u-boot.itb
+UBOOT_BIN=		idbloader.img rksd_loader.img u-boot.itb
 
-# Switch to EL1 before booting kernel (required for 32-bit support)
-PKG_DEFAULT_OPTIONS+=	el1
-
+PKGREVISION=	1
 UBOOT_VERSION=	${GITHUB_TAG:C/-.*$//}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ayufan-rock64/}
 GITHUB_PROJECT=	linux-u-boot
@@ -41,8 +39,11 @@ post-build:
 # build stage 3 package
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} u-boot.itb
 # build stage 1 loader
-	cd ${WRKSRC} && tools/mkimage -n rk3399 -T rksd -d ${WRKDIR}/${DDR_BIN} sdloader.img
+	${WRKSRC}/tools/mkimage -n rk3399 -T rksd -d ${WRKDIR}/${DDR_BIN} ${WRKSRC}/idbloader.img
 # append stage2 loader
-	cd ${WRKSRC} && cat spl/u-boot-spl.bin >> sdloader.img
+	cat ${WRKSRC}/spl/u-boot-spl.bin >> ${WRKSRC}/idbloader.img
+# wrap everything up into a single file that can be written to an SD card
+	cp ${WRKSRC}/idbloader.img ${WRKSRC}/rksd_loader.img
+	dd if=${WRKSRC}/u-boot.itb seek=448 conv=notrunc of=${WRKSRC}/rksd_loader.img
 
 .include "../../sysutils/u-boot/u-boot-arm64.mk"
