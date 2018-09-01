@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/07/03 05:03:19 adam Exp $
+# $NetBSD: Makefile,v 1.13 2018/09/01 20:46:07 bsiegert Exp $
 
 DISTNAME?=	${MESA_DISTNAME}
 PKGNAME=	MesaLib7-${MESA_PKGVERSION}
@@ -80,13 +80,7 @@ MAKE_FLAGS+=		APP_CXX=${NATIVE_CXX:Q}
 
 .include "options.mk"
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-[12].*)
-##
-## NetBSD 2.x and earlier require pthread stubs
-##
-.  include "../../devel/pthread-stublib/buildlink3.mk"
-PTHREAD_STUBLIB= -L${PREFIX}/lib -Wl,-R${PREFIX}/lib -lpthstub
-.elif !empty(MACHINE_PLATFORM:MNetBSD-*)
+.if !empty(MACHINE_PLATFORM:MNetBSD-*)
 ##
 ## NetBSD 3.x and later have pthread stubs in libc
 ##
