@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3856 2018/09/01 18:01:25 tnn Exp $
+$NetBSD: CHANGES-2018,v 1.3857 2018/09/01 18:01:48 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5454,3 +5454,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added sysutils/u-boot-rockpro64 version 2017.09 [tnn 2018-09-01]
 	Updated net/youtube-dl to 20180901 [leot 2018-09-01]
 	Updated databases/liquibase to 3.5.5 [tnn 2018-09-01]
+	Updated www/netsurf to 3.8 [leot 2018-09-01]
