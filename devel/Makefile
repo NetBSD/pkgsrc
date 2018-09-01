@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2723 2018/08/29 06:16:40 wiz Exp $
+# $NetBSD: Makefile,v 1.2724 2018/09/01 20:58:11 bsiegert Exp $
 #
 
 COMMENT=	Development utilities
@@ -1872,7 +1872,6 @@ SUBDIR+=	pstreams
 SUBDIR+=	psvn
 SUBDIR+=	pth
 SUBDIR+=	pthread-sem
-SUBDIR+=	pthread-stublib
 SUBDIR+=	ptlib
 SUBDIR+=	pvs
 SUBDIR+=	pwlib
