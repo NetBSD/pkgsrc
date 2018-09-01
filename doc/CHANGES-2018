@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3859 2018/09/01 19:10:10 gdt Exp $
+$NetBSD: CHANGES-2018,v 1.3860 2018/09/01 20:58:32 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5457,3 +5457,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/netsurf to 3.8 [leot 2018-09-01]
 	Updated games/prboom-plus to 2.5.1.4 [leot 2018-09-01]
 	Updated ham/rtl-sdr to 0.5.4 [gdt 2018-09-01]
+	Removed devel/pthread-stublib [bsiegert 2018-09-01]
