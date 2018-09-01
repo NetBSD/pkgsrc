@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3854 2018/09/01 11:19:25 tnn Exp $
+$NetBSD: CHANGES-2018,v 1.3855 2018/09/01 16:49:59 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5452,3 +5452,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/dpkg to 1.18.25 [adam 2018-08-31]
 	Updated net/gallery-dl to 1.5.2 [leot 2018-08-31]
 	Added sysutils/u-boot-rockpro64 version 2017.09 [tnn 2018-09-01]
+	Updated net/youtube-dl to 20180901 [leot 2018-09-01]
