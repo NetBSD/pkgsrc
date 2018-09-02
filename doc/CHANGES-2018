@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3878 2018/09/02 08:32:07 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3879 2018/09/02 08:34:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5476,3 +5476,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/p5-Mojolicious to 7.94 [wiz 2018-09-02]
 	Updated misc/goffice0.10 to 0.10.43 [wiz 2018-09-02]
 	Updated math/gnumeric112 to 1.12.43 [wiz 2018-09-02]
+	Updated x11/libdrm to 2.4.94 [wiz 2018-09-02]
