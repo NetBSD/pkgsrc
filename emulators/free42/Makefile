@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.12 2018/07/18 00:06:14 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2018/09/02 15:31:05 gdt Exp $
 
 DISTNAME=	free42
 PKGNAME=	${DISTNAME}-1.4.78
 PKGREVISION=	7
 DIST_SUBDIR=	${PKGNAME_NOREV}
 CATEGORIES=	emulators
-MASTER_SITES=	http://thomasokken.com/free42/download/
+#MASTER_SITES=	http://thomasokken.com/free42/download/
+MASTER_SITES=	${MASTER_SITE_BACKUP}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
