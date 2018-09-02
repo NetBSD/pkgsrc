@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2018/09/02 20:27:40 spz Exp $
+bin/postforward

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/09/02 20:27:40 spz Exp $
+
+SHA1 (postforward-1.1.0.tar.gz) = 5db2bfd005ddac75793aa6192c1619b536d49060
+RMD160 (postforward-1.1.0.tar.gz) = 3b171e5d0907de46a0221c6bc61083f0c0faac36
+SHA512 (postforward-1.1.0.tar.gz) = 39d7a33c454b1529a691b24fd69b311ba368caf59168d39146654cfe319ebc3cf73835e66e6c95a43747f389a6b954ac8da0d7e934e562c16cb85dc20c0f4804
+Size (postforward-1.1.0.tar.gz) = 5707 bytes
