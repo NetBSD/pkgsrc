@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3863 2018/09/02 07:11:16 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3864 2018/09/02 07:14:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5461,3 +5461,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated pkgtools/bootstrap-mk-files to 20180901 [tnn 2018-09-01]
 	Updated devel/p5-Alien-Base-ModuleBuild to 1.05 [wiz 2018-09-02]
 	Updated devel/p5-Date-Manip to 6.73 [wiz 2018-09-02]
+	Updated devel/p5-File-Path to 2.16 [wiz 2018-09-02]
