@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2014/08/24 07:39:42 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2018/09/02 13:00:55 wiz Exp $
 
-DISTNAME=	tuxpaint-stamps-2014.08.23
+DISTNAME=	tuxpaint-stamps-2018.09.01
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tuxpaint/}
 
