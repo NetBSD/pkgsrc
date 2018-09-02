@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.19 2018/06/21 12:22:10 adam Exp $
+# $NetBSD: options.mk,v 1.20 2018/09/02 21:49:05 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.wireshark
 PKG_SUPPORTED_OPTIONS=		gtk3 lua
@@ -33,9 +33,7 @@ CONFIGURE_ENV+=		UIC=${QTDIR}/bin/uic
 PLIST.qt=		yes
 .endif
 
-.if empty(PKG_OPTIONS:Mgtk3)
-CONFIGURE_ARGS+=	--without-gtk
-.else
+.if !empty(PKG_OPTIONS:Mgtk3)
 CONFIGURE_ARGS+=	--with-gtk=3
 PLIST.gtk3=		yes
 POST_INSTALL_TARGETS+=	install-gtk-desktop
@@ -47,6 +45,8 @@ install-gtk-desktop:
 	${INSTALL_DATA} ${WRKSRC}/wireshark.desktop \
 		${DESTDIR}${PREFIX}/share/applications/
 
+.else
+CONFIGURE_ARGS+=	--without-gtk
 .endif
 
 # We might install the qt front end one day as well,
@@ -86,12 +86,12 @@ install-icons:
 .  endif
 .endif
 
-.if empty(PKG_OPTIONS:Mlua)
-CONFIGURE_ARGS+=	--with-lua=no
-.else
+.if !empty(PKG_OPTIONS:Mlua)
 LUA_VERSIONS_INCOMPATIBLE=	53
 .include "../../lang/lua/buildlink3.mk"
 
 CONFIGURE_ARGS+=	--with-lua=yes
 PLIST.lua=		yes
+.else
+CONFIGURE_ARGS+=	--with-lua=no
 .endif
