@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.116 2018/08/16 12:24:09 wiz Exp $
+$NetBSD: distinfo,v 1.117 2018/09/02 08:44:36 wiz Exp $
 
-SHA1 (pango-1.42.3.tar.xz) = 616f39508fc02c7898933cb69d82c229432d2608
-RMD160 (pango-1.42.3.tar.xz) = fd3d66bc688db47e7f056793b939589fb7c3a7c5
-SHA512 (pango-1.42.3.tar.xz) = 339069d299f5fb2dd9652da0c7126e498aeba58351906038ac0e9d225082feddfd5e477d3f205d89106b2ce696ec480c727faca0e49ca7a5d1c38e7dcb4f0e91
-Size (pango-1.42.3.tar.xz) = 833264 bytes
+SHA1 (pango-1.42.4.tar.xz) = 240942b1307eaa3819e6e534596271c57cd75457
+RMD160 (pango-1.42.4.tar.xz) = e91880e0e9a459bbc2c280ac747ab31f80352000
+SHA512 (pango-1.42.4.tar.xz) = 993e97f647eba0c5ed90bcfcb8228bf67fa3f20b1f4331e4e40a30788d7c3ac55eee1209471bf21df125cb8fc6121acc8062a9da2f8a7d6cbe8e9ad13a9320dc
+Size (pango-1.42.4.tar.xz) = 833876 bytes
 SHA1 (patch-pango_pangocoretext.h) = d6817eb02f0020c102ab95d63202f9508a70e647
 SHA1 (patch-pangocairo-coretext.h) = 2f7c8efad48b58398070f48e71c16d99d3d59f57
