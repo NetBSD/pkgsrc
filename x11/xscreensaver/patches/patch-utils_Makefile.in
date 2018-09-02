@@ -1,0 +1,15 @@
+$NetBSD: patch-utils_Makefile.in,v 1.1 2018/09/02 20:27:20 wiz Exp $
+
+Fix a GNU make'ism.
+
+--- utils/Makefile.in.orig	2018-08-12 23:36:32.000000000 +0000
++++ utils/Makefile.in
+@@ -196,7 +196,7 @@ CCUTILS = $(INCLUDES) $(DEFS) $(CPPFLAGS
+ 
+ # Two versions of this: driver/ does not link with Xft, but hacks/ does.
+ font-retry-xft.o: font-retry.c
+-	$(CC) -c $(CCUTILS) -DUSE_XFT $< -o $@
++	$(CC) -c $(CCUTILS) -DUSE_XFT font-retry.c -o $@
+ 
+ 
+ # Rules for generating the VMS makefiles on Unix, so that it doesn't have to
