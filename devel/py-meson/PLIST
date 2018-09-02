@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2017/12/12 08:36:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/09/02 15:20:02 wiz Exp $
 bin/meson
 bin/mesonconf
 bin/mesonintrospect
@@ -86,6 +86,9 @@ ${PYSITELIB}/mesonbuild/dependencies/__init__.pyo
 ${PYSITELIB}/mesonbuild/dependencies/base.py
 ${PYSITELIB}/mesonbuild/dependencies/base.pyc
 ${PYSITELIB}/mesonbuild/dependencies/base.pyo
+${PYSITELIB}/mesonbuild/dependencies/boost.py
+${PYSITELIB}/mesonbuild/dependencies/boost.pyc
+${PYSITELIB}/mesonbuild/dependencies/boost.pyo
 ${PYSITELIB}/mesonbuild/dependencies/dev.py
 ${PYSITELIB}/mesonbuild/dependencies/dev.pyc
 ${PYSITELIB}/mesonbuild/dependencies/dev.pyo
@@ -119,6 +122,12 @@ ${PYSITELIB}/mesonbuild/mesonlib.pyo
 ${PYSITELIB}/mesonbuild/mesonmain.py
 ${PYSITELIB}/mesonbuild/mesonmain.pyc
 ${PYSITELIB}/mesonbuild/mesonmain.pyo
+${PYSITELIB}/mesonbuild/minit.py
+${PYSITELIB}/mesonbuild/minit.pyc
+${PYSITELIB}/mesonbuild/minit.pyo
+${PYSITELIB}/mesonbuild/minstall.py
+${PYSITELIB}/mesonbuild/minstall.pyc
+${PYSITELIB}/mesonbuild/minstall.pyo
 ${PYSITELIB}/mesonbuild/mintro.py
 ${PYSITELIB}/mesonbuild/mintro.pyc
 ${PYSITELIB}/mesonbuild/mintro.pyo
@@ -140,6 +149,9 @@ ${PYSITELIB}/mesonbuild/modules/modtest.pyo
 ${PYSITELIB}/mesonbuild/modules/pkgconfig.py
 ${PYSITELIB}/mesonbuild/modules/pkgconfig.pyc
 ${PYSITELIB}/mesonbuild/modules/pkgconfig.pyo
+${PYSITELIB}/mesonbuild/modules/python.py
+${PYSITELIB}/mesonbuild/modules/python.pyc
+${PYSITELIB}/mesonbuild/modules/python.pyo
 ${PYSITELIB}/mesonbuild/modules/python3.py
 ${PYSITELIB}/mesonbuild/modules/python3.pyc
 ${PYSITELIB}/mesonbuild/modules/python3.pyo
@@ -155,6 +167,9 @@ ${PYSITELIB}/mesonbuild/modules/qt5.pyo
 ${PYSITELIB}/mesonbuild/modules/rpm.py
 ${PYSITELIB}/mesonbuild/modules/rpm.pyc
 ${PYSITELIB}/mesonbuild/modules/rpm.pyo
+${PYSITELIB}/mesonbuild/modules/unstable_icestorm.py
+${PYSITELIB}/mesonbuild/modules/unstable_icestorm.pyc
+${PYSITELIB}/mesonbuild/modules/unstable_icestorm.pyo
 ${PYSITELIB}/mesonbuild/modules/unstable_simd.py
 ${PYSITELIB}/mesonbuild/modules/unstable_simd.pyc
 ${PYSITELIB}/mesonbuild/modules/unstable_simd.pyo
@@ -206,9 +221,6 @@ ${PYSITELIB}/mesonbuild/scripts/gtkdochelper.pyo
 ${PYSITELIB}/mesonbuild/scripts/meson_exe.py
 ${PYSITELIB}/mesonbuild/scripts/meson_exe.pyc
 ${PYSITELIB}/mesonbuild/scripts/meson_exe.pyo
-${PYSITELIB}/mesonbuild/scripts/meson_install.py
-${PYSITELIB}/mesonbuild/scripts/meson_install.pyc
-${PYSITELIB}/mesonbuild/scripts/meson_install.pyo
 ${PYSITELIB}/mesonbuild/scripts/msgfmthelper.py
 ${PYSITELIB}/mesonbuild/scripts/msgfmthelper.pyc
 ${PYSITELIB}/mesonbuild/scripts/msgfmthelper.pyo
@@ -244,3 +256,4 @@ man/man1/mesonconf.1
 man/man1/mesonintrospect.1
 man/man1/mesontest.1
 man/man1/wraptool.1
+share/polkit-1/actions/com.mesonbuild.install.policy
