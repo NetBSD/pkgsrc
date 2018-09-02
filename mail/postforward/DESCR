@@ -1,0 +1,16 @@
+Postforward is a mail forwarding utility which aims to complement
+the Postfix Sender Rewriting Scheme daemon (PostSRSd).
+
+The downside of using PostSRSd from postfix config is that all mail
+is naively rewritten, even when no forwarding is actually performed.
+Such rewritten Return-Path addresses may confuse sieve scripts and
+other mail filtering software.
+
+This is where Postforward comes in. Instead of rewriting all incoming
+mail regardless of final destination, mail systems may be configured
+to pipe mail into Postforward only when forwarding needs to happen,
+e.g. in a users' .forward when the forwarded-to mailserver requires
+it, leaving non-forwarded mail unaltered by PostSRSd.
+Postforward will rewrite envelope addresses for piped mail using
+PostSRSd itself and re-inject these messages back into the queue,
+destined for the forwarding recipient(s).
