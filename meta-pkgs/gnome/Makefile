@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.141 2018/08/19 20:16:40 wiz Exp $
+# $NetBSD: Makefile,v 1.142 2018/09/02 14:14:12 bsiegert Exp $
 
 DISTNAME=	gnome-2.26.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -104,7 +104,7 @@ DEPENDS+=	gucharmap>=2.26.2:../../fonts/gucharmap
 DEPENDS+=	gvfs>=1.2.3:../../sysutils/gvfs
 DEPENDS+=	hamster-applet>=2.26.2:../../time/hamster-applet
 DEPENDS+=	libgail-gnome>=1.20.1:../../devel/libgail-gnome
-DEPENDS+=	libgnomekbd>=2.26.0:../../x11/libgnomekbd
+DEPENDS+=	libgnomekbd2>=2.26.0:../../x11/libgnomekbd2
 DEPENDS+=	libgnomeprint>=2.18.6:../../print/libgnomeprint
 DEPENDS+=	libgnomeprintui>=2.18.4:../../print/libgnomeprintui
 DEPENDS+=	libgtop>=2.26.1:../../sysutils/libgtop
