@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3876 2018/09/02 07:55:39 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3877 2018/09/02 08:09:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5474,3 +5474,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/p5-YAML-LibYAML to 0.74 [wiz 2018-09-02]
 	Updated www/p5-AnyEvent-HTTP to 2.24 [wiz 2018-09-02]
 	Updated www/p5-Mojolicious to 7.94 [wiz 2018-09-02]
+	Updated misc/goffice0.10 to 0.10.43 [wiz 2018-09-02]
