@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2018/03/24 15:44:54 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.31 2018/09/02 20:30:43 wiz Exp $
 bin/fc-cache
 bin/fc-cat
 bin/fc-conflist
@@ -93,6 +93,7 @@ man/man3/FcConfigUptoDate.3
 man/man3/FcDefaultSubstitute.3
 man/man3/FcDirCacheClean.3
 man/man3/FcDirCacheCreateUUID.3
+man/man3/FcDirCacheDeleteUUID.3
 man/man3/FcDirCacheLoad.3
 man/man3/FcDirCacheLoadFile.3
 man/man3/FcDirCacheRead.3
@@ -179,11 +180,20 @@ man/man3/FcPatternDuplicate.3
 man/man3/FcPatternEqual.3
 man/man3/FcPatternEqualSubset.3
 man/man3/FcPatternFilter.3
+man/man3/FcPatternFindIter.3
 man/man3/FcPatternFormat.3
 man/man3/FcPatternGet-Type.3
 man/man3/FcPatternGet.3
 man/man3/FcPatternGetWithBinding.3
 man/man3/FcPatternHash.3
+man/man3/FcPatternIterEqual.3
+man/man3/FcPatternIterGetObject.3
+man/man3/FcPatternIterGetValue.3
+man/man3/FcPatternIterIsValid.3
+man/man3/FcPatternIterNext.3
+man/man3/FcPatternIterStart.3
+man/man3/FcPatternIterValueCount.3
+man/man3/FcPatternObjectCount.3
 man/man3/FcPatternPrint.3
 man/man3/FcPatternReference.3
 man/man3/FcPatternRemove.3
@@ -302,6 +312,7 @@ share/doc/fontconfig/fontconfig-devel/fcconfiguptodate.html
 share/doc/fontconfig/fontconfig-devel/fcdefaultsubstitute.html
 share/doc/fontconfig/fontconfig-devel/fcdircacheclean.html
 share/doc/fontconfig/fontconfig-devel/fcdircachecreateuuid.html
+share/doc/fontconfig/fontconfig-devel/fcdircachedeleteuuid.html
 share/doc/fontconfig/fontconfig-devel/fcdircacheload.html
 share/doc/fontconfig/fontconfig-devel/fcdircacheloadfile.html
 share/doc/fontconfig/fontconfig-devel/fcdircacheread.html
@@ -388,11 +399,20 @@ share/doc/fontconfig/fontconfig-devel/fcpatternduplicate.html
 share/doc/fontconfig/fontconfig-devel/fcpatternequal.html
 share/doc/fontconfig/fontconfig-devel/fcpatternequalsubset.html
 share/doc/fontconfig/fontconfig-devel/fcpatternfilter.html
+share/doc/fontconfig/fontconfig-devel/fcpatternfinditer.html
 share/doc/fontconfig/fontconfig-devel/fcpatternformat.html
 share/doc/fontconfig/fontconfig-devel/fcpatternget-type.html
 share/doc/fontconfig/fontconfig-devel/fcpatternget.html
 share/doc/fontconfig/fontconfig-devel/fcpatterngetwithbinding.html
 share/doc/fontconfig/fontconfig-devel/fcpatternhash.html
+share/doc/fontconfig/fontconfig-devel/fcpatterniterequal.html
+share/doc/fontconfig/fontconfig-devel/fcpatternitergetobject.html
+share/doc/fontconfig/fontconfig-devel/fcpatternitergetvalue.html
+share/doc/fontconfig/fontconfig-devel/fcpatterniterisvalid.html
+share/doc/fontconfig/fontconfig-devel/fcpatterniternext.html
+share/doc/fontconfig/fontconfig-devel/fcpatterniterstart.html
+share/doc/fontconfig/fontconfig-devel/fcpatternitervaluecount.html
+share/doc/fontconfig/fontconfig-devel/fcpatternobjectcount.html
 share/doc/fontconfig/fontconfig-devel/fcpatternprint.html
 share/doc/fontconfig/fontconfig-devel/fcpatternreference.html
 share/doc/fontconfig/fontconfig-devel/fcpatternremove.html
