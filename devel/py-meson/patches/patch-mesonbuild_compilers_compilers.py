@@ -1,13 +1,13 @@
-$NetBSD: patch-mesonbuild_compilers_compilers.py,v 1.1 2018/05/15 09:04:37 jperkin Exp $
+$NetBSD: patch-mesonbuild_compilers_compilers.py,v 1.2 2018/09/02 15:20:02 wiz Exp $
 
 Support SunOS-specific GCC behaviour.
 Limit GNU ld options correctly.
 
---- mesonbuild/compilers/compilers.py.orig	2018-02-20 21:48:57.000000000 +0000
+--- mesonbuild/compilers/compilers.py.orig	2018-06-22 11:50:56.000000000 +0000
 +++ mesonbuild/compilers/compilers.py
-@@ -134,6 +134,14 @@ gnulike_buildtype_linker_args = {'plain'
-                                  'minsize': [],
-                                  }
+@@ -172,6 +172,14 @@ arm_buildtype_linker_args = {'plain': []
+                              'minsize': [],
+                              }
  
 +sunos_buildtype_linker_args = {'plain': [],
 +                                 'debug': [],
@@ -20,16 +20,16 @@ Limit GNU ld options correctly.
  msvc_buildtype_linker_args = {'plain': [],
                                'debug': [],
                                'debugoptimized': [],
-@@ -853,7 +861,7 @@ class Compiler:
-             else:
-                 paths = paths + ':' + padding
-         args = ['-Wl,-rpath,' + paths]
+@@ -1034,7 +1042,7 @@ class Compiler:
+             # linked against local libraries will fail to resolve them.
+             args.append('-Wl,-z,origin')
+         args.append('-Wl,-rpath,' + paths)
 -        if get_compiler_is_linuxlike(self):
 +        if get_compiler_uses_gnuld(self):
              # Rpaths to use while linking must be absolute. These are not
              # written to the binary. Needed only with GNU ld:
              # https://sourceware.org/bugzilla/show_bug.cgi?id=16936
-@@ -876,6 +884,7 @@ GCC_STANDARD = 0
+@@ -1066,6 +1074,7 @@ GCC_STANDARD = 0
  GCC_OSX = 1
  GCC_MINGW = 2
  GCC_CYGWIN = 3
@@ -37,16 +37,16 @@ Limit GNU ld options correctly.
  
  CLANG_STANDARD = 0
  CLANG_OSX = 1
-@@ -891,7 +900,7 @@ def get_gcc_soname_args(gcc_type, prefix
+@@ -1095,7 +1104,7 @@ def get_gcc_soname_args(gcc_type, prefix
          sostr = ''
      else:
          sostr = '.' + soversion
--    if gcc_type in (GCC_STANDARD, GCC_MINGW, GCC_CYGWIN):
-+    if gcc_type in (GCC_STANDARD, GCC_MINGW, GCC_CYGWIN, GCC_SUNOS):
-         # Might not be correct for mingw but seems to work.
+-    if gcc_type == GCC_STANDARD:
++    if gcc_type in (GCC_STANDARD, GCC_SUNOS):
          return ['-Wl,-soname,%s%s.%s%s' % (prefix, shlib_name, suffix, sostr)]
-     elif gcc_type == GCC_OSX:
-@@ -1023,6 +1032,8 @@ class GnuCompiler:
+     elif gcc_type in (GCC_MINGW, GCC_CYGWIN):
+         # For PE/COFF the soname argument has no effect with GNU LD
+@@ -1236,6 +1245,8 @@ class GnuCompiler:
      def get_buildtype_linker_args(self, buildtype):
          if self.gcc_type == GCC_OSX:
              return apple_buildtype_linker_args[buildtype]
