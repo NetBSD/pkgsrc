@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.127 2018/08/18 06:31:04 wiz Exp $
+# $NetBSD: Makefile.common,v 1.128 2018/09/02 20:12:03 wiz Exp $
 #
 # used by x11/xscreensaver/Makefile
 # used by x11/xscreensaver-demo/Makefile
 
-DISTNAME=		xscreensaver-5.39
+DISTNAME=		xscreensaver-5.40
 CATEGORIES=		x11
 MASTER_SITES=		https://www.jwz.org/xscreensaver/
 DIST_SUBDIR=		xscreensaver
@@ -11,11 +11,8 @@ DIST_SUBDIR=		xscreensaver
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.jwz.org/xscreensaver/
 
-BUILDLINK_API_DEPENDS.Xrandr+=	Xrandr>=1.0.2
-
 USE_PKGLOCALEDIR=	yes
-USE_X11=		yes
-USE_TOOLS+=		msgfmt perl pkg-config
+USE_TOOLS+=		gmake msgfmt perl pkg-config
 
 CHECK_PORTABILITY_SKIP+=	OSX/fuzztest.sh
 
@@ -23,7 +20,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-hackdir=${PREFIX}/libexec/xscreensaver
 CONFIGURE_ARGS+=	--with-jpeg=${JPEGBASE}
 #CONFIGURE_ARGS+=	--with-zippy=/usr/games/fortune
-
 CONFIGURE_ARGS+=	--without-motif
 CONFIGURE_ARGS+=	--with-pthread
 
@@ -59,10 +55,6 @@ PLIST_SRC+=	PLIST.Darwin
 CFLAGS+=		-fno-strict-aliasing
 .endif
 
-.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-GCC_REQD+=		2.95.3
-.endif
-
 .if !exists(/usr/bin/bc)
 BUILD_DEPENDS+=		bc-[0-9]*:../../math/bc
 .endif
@@ -73,5 +65,6 @@ INSTALL_MAKE_FLAGS=	install_prefix=${DESTDIR}
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+BUILDLINK_API_DEPENDS.Xrandr+=	Xrandr>=1.0.2
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
