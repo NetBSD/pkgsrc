@@ -1,0 +1,36 @@
+<?xml version='1.0'?>
+<!DOCTYPE service_bundle SYSTEM '/usr/share/lib/xml/dtd/service_bundle.dtd.1'>
+<service_bundle type='manifest' name='export'>
+  <service name='@SMF_PREFIX@/@SMF_NAME@' type='service' version='0'>
+    <dependency name='net-physical' grouping='require_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/network/physical'/>
+    </dependency>
+    <dependency name='filesystem' grouping='require_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/system/filesystem/local'/>
+    </dependency>
+    <exec_method name='start' type='method' exec='@PREFIX@/bin/taskd server --data %{config/taskdata}' timeout_seconds='0'/>
+    <exec_method name='stop' type='method' exec=':kill' timeout_seconds='10'/>
+    <exec_method name='refresh' type='method' exec=':kill -HUP' timeout_seconds='60'/>
+    <property_group name='startd' type='framework'>
+      <propval name='duration' type='astring' value='child'/>
+      <propval name='ignore_error' type='astring' value='core,signal'/>
+    </property_group>
+    <instance name='default' enabled='false'>
+      <method_context working_directory='@TASKD_DATA@'>
+        <method_credential user="@TASKD_USER@" group="@TASKD_GROUP@" />
+        <method_environment>
+          <envvar name='PATH' value='@PREFIX@/bin:/opt/local/sbin:/usr/bin:/usr/sbin:/bin'/>
+        </method_environment>
+      </method_context>
+      <property_group name='config' type='application'>
+        <propval name='taskdata' type='astring' value='@TASKD_DATA@'/>
+      </property_group>
+    </instance>
+    <stability value='Evolving'/>
+    <template>
+      <common_name>
+        <loctext xml:lang='C'>The Taskserver is a server to access task data</loctext>
+      </common_name>
+    </template>
+  </service>
+</service_bundle>
