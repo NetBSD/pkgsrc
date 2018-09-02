@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2018/08/22 09:45:36 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2018/09/02 08:31:57 wiz Exp $
 
-DISTNAME=	gnumeric-1.12.42
-PKGREVISION=	1
+DISTNAME=	gnumeric-1.12.43
 CATEGORIES=	math gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnumeric/1.12/}
 EXTRACT_SUFX=	.tar.xz
@@ -21,6 +20,9 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	libspreadsheet.pc.in
 
 REPLACE_PERL+=		plugins/perl-func/perl_func.pl
+REPLACE_PERL+=		test/*.pl
+
+TEST_TARGET=		check
 
 .include "options.mk"
 
