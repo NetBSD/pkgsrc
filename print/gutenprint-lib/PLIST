@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2017/09/01 11:27:18 gdt Exp $
+@comment $NetBSD: PLIST,v 1.19 2018/09/02 16:34:58 gdt Exp $
 bin/cups-calibrate
 bin/escputil
 bin/testpattern
@@ -197,6 +197,8 @@ share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_127.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_128.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_129.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_13.xml
+share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_130.xml
+share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_131.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_14.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_15.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_16.xml
