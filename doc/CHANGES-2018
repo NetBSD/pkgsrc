@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3893 2018/09/02 20:55:36 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.3894 2018/09/02 21:21:40 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5490,3 +5490,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated fonts/fontconfig to 2.13.1 [wiz 2018-09-02]
 	Updated net/filezilla to 3.36.0 [wiz 2018-09-02]
 	Updated devel/go-cobra to 0.0.3 [minskim 2018-09-02]
+	Updated devel/go-homedir to 1.0.0 [minskim 2018-09-02]
