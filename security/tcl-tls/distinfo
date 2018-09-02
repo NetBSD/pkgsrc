@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/11/04 01:18:11 agc Exp $
+$NetBSD: distinfo,v 1.8 2018/09/02 18:37:26 bsiegert Exp $
 
-SHA1 (tls1.5.0-src.tar.gz) = 66611f384f4b1c5e126ac8fc1cd03040bbe8ac16
-RMD160 (tls1.5.0-src.tar.gz) = fa37bc819ffc63f93991c876ffd318405e6bad85
-SHA512 (tls1.5.0-src.tar.gz) = d77d09d3c9113d6888d2a53b04f81b553719d62fc027c241c88250477472101942b31e552d3ab08f2f0dabf5a792c25e0d65f1d643e1c1010057da5ef8bb5584
-Size (tls1.5.0-src.tar.gz) = 113600 bytes
-SHA1 (patch-aa) = 0d2637038ce203dabdc4c4e9ea36d09a99978d15
-SHA1 (patch-ab) = 19b2a615f710f5b9524dc58cb89f96089f6573d8
-SHA1 (patch-ac) = 350f1b3fc999c27522b2e17e6ba65072095e9b45
-SHA1 (patch-ad) = 59a302a2bd17ae5d5fa55788949de02744cd1d04
+SHA1 (tcltls-1.7.16.tar.gz) = 24f6022bc36bb8a0fe8215d82838d3599200f048
+RMD160 (tcltls-1.7.16.tar.gz) = 136e6c78c565eb3208a6fe2e45973c4b232765ce
+SHA512 (tcltls-1.7.16.tar.gz) = f63b885dbfaec5d9ae811c126bd0ff253787effd7b053282b9ee566e9fae54df940bc058a6c3dd22e31fcb9ec6ae1b286aa40efd69c3f01f5a3014aada730ab1
+Size (tcltls-1.7.16.tar.gz) = 166439 bytes
