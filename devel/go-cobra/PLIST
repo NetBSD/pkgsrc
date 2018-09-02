@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/08/17 01:20:57 gavan Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/09/02 20:55:15 minskim Exp $
 bin/cobra
 gopkg/pkg/${GO_PLATFORM}/github.com/spf13/cobra.a
 gopkg/pkg/${GO_PLATFORM}/github.com/spf13/cobra/cobra/cmd.a
@@ -6,10 +6,12 @@ gopkg/pkg/${GO_PLATFORM}/github.com/spf13/cobra/doc.a
 gopkg/src/github.com/spf13/cobra/LICENSE.txt
 gopkg/src/github.com/spf13/cobra/README.md
 gopkg/src/github.com/spf13/cobra/args.go
+gopkg/src/github.com/spf13/cobra/args_test.go
 gopkg/src/github.com/spf13/cobra/bash_completions.go
 gopkg/src/github.com/spf13/cobra/bash_completions.md
 gopkg/src/github.com/spf13/cobra/bash_completions_test.go
 gopkg/src/github.com/spf13/cobra/cobra.go
+gopkg/src/github.com/spf13/cobra/cobra/README.md
 gopkg/src/github.com/spf13/cobra/cobra/cmd/add.go
 gopkg/src/github.com/spf13/cobra/cobra/cmd/add_test.go
 gopkg/src/github.com/spf13/cobra/cobra/cmd/golden_test.go
@@ -46,6 +48,9 @@ gopkg/src/github.com/spf13/cobra/doc/man_examples_test.go
 gopkg/src/github.com/spf13/cobra/doc/md_docs.go
 gopkg/src/github.com/spf13/cobra/doc/md_docs.md
 gopkg/src/github.com/spf13/cobra/doc/md_docs_test.go
+gopkg/src/github.com/spf13/cobra/doc/rest_docs.go
+gopkg/src/github.com/spf13/cobra/doc/rest_docs.md
+gopkg/src/github.com/spf13/cobra/doc/rest_docs_test.go
 gopkg/src/github.com/spf13/cobra/doc/util.go
 gopkg/src/github.com/spf13/cobra/doc/yaml_docs.go
 gopkg/src/github.com/spf13/cobra/doc/yaml_docs.md
