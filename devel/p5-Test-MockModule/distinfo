@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2018/05/09 06:39:54 wiz Exp $
+$NetBSD: distinfo,v 1.10 2018/09/02 07:25:37 wiz Exp $
 
-SHA1 (Test-MockModule-0.15.tar.gz) = 9dc915dbb08148c634fbafbce033af376e33978c
-RMD160 (Test-MockModule-0.15.tar.gz) = fcf2467d783a2d40fe7cc35c352cd445e81ed5c4
-SHA512 (Test-MockModule-0.15.tar.gz) = 20f64f9984010ee0b3c26532a8835156b7cc8837e436c0785a2d3b7959cb01f07584b816d754da9f9205e457fe5d4a8316d984bf215d242000704fe0c52284a7
-Size (Test-MockModule-0.15.tar.gz) = 18472 bytes
+SHA1 (Test-MockModule-v0.170.0.tar.gz) = c25ec29e98ac88ff93554f02e6c1f67cb4876ace
+RMD160 (Test-MockModule-v0.170.0.tar.gz) = c8fdc27ba2ac12ec7c65f1bf085b93fd1fa1d35d
+SHA512 (Test-MockModule-v0.170.0.tar.gz) = e62f79eb5c737838a0276bb1de5301e3f2eceef4f9b80fde0678e16490419f2d02afd24ab292e938b923a7d214e3aa60e73baf0d17da7047ca37064111c3ff79
+Size (Test-MockModule-v0.170.0.tar.gz) = 24765 bytes
