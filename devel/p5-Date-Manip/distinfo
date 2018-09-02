@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.38 2018/06/09 01:50:42 wen Exp $
+$NetBSD: distinfo,v 1.39 2018/09/02 07:11:06 wiz Exp $
 
-SHA1 (Date-Manip-6.72.tar.gz) = 20b0b9176d07a682ef6cac7d3697a83f0019e5aa
-RMD160 (Date-Manip-6.72.tar.gz) = 1018a563d2b9e8ff5af2566b482adcc11052784d
-SHA512 (Date-Manip-6.72.tar.gz) = 6b686d6f57b5d40c5a15da7af2efbb7888ae6c96d81cd99320a7bb00e27d3ed7a53d778b6098dac0f83dd38c9004da51068a92e2ef6ef393fbe724d0f4c68d34
-Size (Date-Manip-6.72.tar.gz) = 1853750 bytes
+SHA1 (Date-Manip-6.73.tar.gz) = 1b092941424c1e8137cdf0a3e936c4d3abcb9107
+RMD160 (Date-Manip-6.73.tar.gz) = ec7c9ad0fb398bbbf30c171d14b4eb894094b9d9
+SHA512 (Date-Manip-6.73.tar.gz) = 2bae6dcfcc9465023f29050817465dad683e22f49c278774aaf3e13fe46a46922e4b093bfa968aea62d755b3669c88d1a41ac3e549757be354d4cb61ad1c54b8
+Size (Date-Manip-6.73.tar.gz) = 1853891 bytes
