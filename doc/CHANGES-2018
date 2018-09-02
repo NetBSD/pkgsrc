@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3869 2018/09/02 07:29:41 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3870 2018/09/02 07:31:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5467,3 +5467,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Pegex to 0.66 [wiz 2018-09-02]
 	Updated devel/p5-Test-MockModule to 0.170.0 [wiz 2018-09-02]
 	Updated math/p5-Math-Prime-Util to 0.71 [wiz 2018-09-02]
+	Updated math/p5-Spreadsheet-Read to 0.79 [wiz 2018-09-02]
