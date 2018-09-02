@@ -1,24 +1,11 @@
-# $NetBSD: options.mk,v 1.8 2018/02/16 22:06:58 jdolecek Exp $
+# $NetBSD: options.mk,v 1.9 2018/09/02 00:52:50 maya Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.imap-uw
 PKG_SUPPORTED_OPTIONS+=	imapuw-cleartextpwd imapuw-whoson inet6 ssl
 PKG_SUGGESTED_OPTIONS+=	imapuw-cleartextpwd inet6 ssl
-
-# On NetBSD 1.x, using the native Kerberos 5 implementation causes
-# interoperability problems with OpenSSL 0.9.7 and above.
-#
-.if !empty(MACHINE_PLATFORM:MNetBSD-1.*)
-CHECK_BUILTIN.heimdal:=	yes
-.  include "../../security/heimdal/builtin.mk"
-CHECK_BUILTIN.heimdal:=	no
-.  if !empty(USE_BUILTIN.heimdal:M[nN][oO])
 PKG_SUPPORTED_OPTIONS+=	kerberos
-.  endif
-.else
-PKG_SUPPORTED_OPTIONS+=	kerberos
-.endif
 
 .include "../../mk/bsd.options.mk"
 
