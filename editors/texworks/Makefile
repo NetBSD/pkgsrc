@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2018/08/16 13:56:25 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2018/09/02 21:32:42 wiz Exp $
 
 DISTNAME=	texworks-0.6.2
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TeXworks/}
 GITHUB_PROJECT=	texworks
