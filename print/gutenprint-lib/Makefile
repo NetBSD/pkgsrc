@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.80 2018/08/23 14:26:21 triaxx Exp $
+# $NetBSD: Makefile,v 1.81 2018/09/02 16:34:58 gdt Exp $
 
-VERSION=	5.2.13
+VERSION=	5.2.14
 DISTNAME=	gutenprint-${VERSION}
 PKGNAME=	gutenprint-lib-${VERSION}
-PKGREVISION=	8
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gimp-print/}
 EXTRACT_SUFX=	.tar.bz2
@@ -87,6 +86,8 @@ CONFIGURE_ARGS+=	--without-readline
 
 # XXX Make command.types be a CONF_FILE
 
+# XXX Replace patch-aa with SUBST_SED to use PREFIX rather than hard-coded /usr/pkg.
+
 TEST_TARGET=		check
 
 # A libintl is optional in gutenprint.
@@ -95,6 +96,7 @@ TEST_TARGET=		check
 # gutenprint-gimp: gimp plugin
 .include "../../graphics/gimp/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+# gutenprint does not actually depend on gexiv2; it is wrongly inserted by libtool
 .include "../../graphics/gexiv2/buildlink3.mk"
 
 # gutenprint-cups: cups support
