@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2018/06/06 11:06:53 wen Exp $
+$NetBSD: distinfo,v 1.17 2018/09/02 07:36:05 wiz Exp $
 
-SHA1 (Net-DNS-SEC-1.09.tar.gz) = e0d72d4deb64cefc2fb5d9ee31e7c57df759beef
-RMD160 (Net-DNS-SEC-1.09.tar.gz) = 0731ed30a69060cc99df9e8afef44fb3810bd148
-SHA512 (Net-DNS-SEC-1.09.tar.gz) = b0c55918f6e0649fdebd3c20be1a7e59a111b8b0ae9fec85d170c706a9adf30a7402b851ae5926d11130dfa00d9f11e0fbc6d6d122425f903a10fe4fff613168
-Size (Net-DNS-SEC-1.09.tar.gz) = 44713 bytes
+SHA1 (Net-DNS-SEC-1.10.tar.gz) = 9af33cb8da4ddfe8db192b34ae79bb8006dab89a
+RMD160 (Net-DNS-SEC-1.10.tar.gz) = fbfb6f385594e5a2226579121e689cd96fd2de04
+SHA512 (Net-DNS-SEC-1.10.tar.gz) = 08b36a6e294c979caf72b2abe691475936827c894d61096becca152de4973b2c43798d1c01a0cbd2e8062a9e2134d45d48b3d5ddf9e6d1ee49a4bfa51d3f7a90
+Size (Net-DNS-SEC-1.10.tar.gz) = 44690 bytes
