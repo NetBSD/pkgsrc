@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3867 2018/09/02 07:24:06 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3868 2018/09/02 07:25:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5465,3 +5465,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Modern-Perl to 1.20180901 [wiz 2018-09-02]
 	Updated devel/p5-MooseX-Getopt to 0.73 [wiz 2018-09-02]
 	Updated devel/p5-Pegex to 0.66 [wiz 2018-09-02]
+	Updated devel/p5-Test-MockModule to 0.170.0 [wiz 2018-09-02]
