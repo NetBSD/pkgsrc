@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3888 2018/09/02 18:38:04 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.3889 2018/09/02 20:12:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5485,3 +5485,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated meta-pkgs/gnome to 2.26.2nb6 [bsiegert 2018-09-02]
 	Updated devel/py-meson to 0.47.0 [wiz 2018-09-02]
 	Updated security/tcl-tls to 1.7.16 [bsiegert 2018-09-02]
+	Updated x11/xscreensaver to 5.40 [wiz 2018-09-02]
