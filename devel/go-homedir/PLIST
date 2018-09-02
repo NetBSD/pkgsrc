@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2017/08/17 01:28:52 gavan Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/09/02 21:21:25 minskim Exp $
 gopkg/pkg/${GO_PLATFORM}/github.com/mitchellh/go-homedir.a
 gopkg/src/github.com/mitchellh/go-homedir/LICENSE
 gopkg/src/github.com/mitchellh/go-homedir/README.md
+gopkg/src/github.com/mitchellh/go-homedir/go.mod
 gopkg/src/github.com/mitchellh/go-homedir/homedir.go
 gopkg/src/github.com/mitchellh/go-homedir/homedir_test.go
 @pkgdir bin
