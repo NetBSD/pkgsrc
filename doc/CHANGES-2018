@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3865 2018/09/02 07:17:10 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3866 2018/09/02 07:21:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5463,3 +5463,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Date-Manip to 6.73 [wiz 2018-09-02]
 	Updated devel/p5-File-Path to 2.16 [wiz 2018-09-02]
 	Updated devel/p5-Modern-Perl to 1.20180901 [wiz 2018-09-02]
+	Updated devel/p5-MooseX-Getopt to 0.73 [wiz 2018-09-02]
