@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.213 2018/08/16 12:24:09 wiz Exp $
+# $NetBSD: Makefile,v 1.214 2018/09/02 08:44:36 wiz Exp $
 
-DISTNAME=	pango-1.42.3
+DISTNAME=	pango-1.42.4
 CATEGORIES=	devel fonts
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pango/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -12,6 +12,7 @@ LICENSE=	gnu-lgpl-v2
 
 BUILD_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
 
+# 1.42.4: one test failure, test-layout
 TEST_TARGET=		check
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
