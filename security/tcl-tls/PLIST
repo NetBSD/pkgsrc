@@ -1,5 +1,3 @@
-@comment $NetBSD: PLIST,v 1.3 2012/08/21 21:56:13 marino Exp $
-include/tls.h
-lib/libtls${TCL_SONUM}.so
-lib/tls1.50/pkgIndex.tcl
-lib/tls1.50/tls.tcl
+@comment $NetBSD: PLIST,v 1.4 2018/09/02 18:37:26 bsiegert Exp $
+lib/tcltls${PKGVERSION}/pkgIndex.tcl
+lib/tcltls${PKGVERSION}/tcltls.so
