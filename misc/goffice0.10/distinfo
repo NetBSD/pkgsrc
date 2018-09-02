@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.21 2018/08/16 09:18:00 wiz Exp $
+$NetBSD: distinfo,v 1.22 2018/09/02 08:09:17 wiz Exp $
 
-SHA1 (goffice-0.10.42.tar.xz) = 29106895e3666066f078adbd10267cb82ecaa2a8
-RMD160 (goffice-0.10.42.tar.xz) = a2c8ffe9c43c5a1b2aa24d38c8e8b3ea99ca50a4
-SHA512 (goffice-0.10.42.tar.xz) = 2216a3bd6c2b4094752892fc5c05b8f0be43a506cb6ec2bc01c1ba6800fdfaa555d44f4e73fabdd4eb496e52548401c807eb3962ff922d96879bb9336e4c473e
-Size (goffice-0.10.42.tar.xz) = 2381712 bytes
+SHA1 (goffice-0.10.43.tar.xz) = e423627e2b69fd008b4d82a10ac5e9c5849912a0
+RMD160 (goffice-0.10.43.tar.xz) = 8c7f8dfa4246a69506926a0b87deaadfbf89588d
+SHA512 (goffice-0.10.43.tar.xz) = 979ccf67fe08d09a2cf0413b4674a44208aa5f4802ab086a463ea2b449fc8c9d1c96dea7234c8e715064cf1726a47d2a5428728a2ff0d00759d5fe7017dc709f
+Size (goffice-0.10.43.tar.xz) = 2381804 bytes
 SHA1 (patch-gofffice_app_io-context.h) = b8aceae57a06af6873cbf0219b255ce9b9627d84
 SHA1 (patch-goffice_app_error-info.h) = 6273b5d9a95bb5d45aaa9369271f7476d74f6b0a
 SHA1 (patch-goffice_math_go-complex.c) = 813c0047372c268d1f8855d264a9e366d1cd979e
