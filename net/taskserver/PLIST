@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2018/09/02 09:53:14 triaxx Exp $
+bin/taskd
+bin/taskdctl
+man/man1/taskd.1
+man/man1/taskdctl.1
+man/man5/taskdrc.5
+share/doc/taskd/AUTHORS
+share/doc/taskd/COPYING
+share/doc/taskd/ChangeLog
+share/doc/taskd/INSTALL
+share/doc/taskd/NEWS
+share/examples/taskd/pki/README
+share/examples/taskd/pki/generate
+share/examples/taskd/pki/generate.ca
+share/examples/taskd/pki/generate.client
+share/examples/taskd/pki/generate.crl
+share/examples/taskd/pki/generate.server
+share/examples/taskd/pki/vars
