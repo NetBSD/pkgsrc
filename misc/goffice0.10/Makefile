@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2018/08/16 09:18:00 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2018/09/02 08:09:17 wiz Exp $
 
-DISTNAME=		goffice-0.10.42
+DISTNAME=		goffice-0.10.43
 PKGNAME=		${DISTNAME:S/goffice/goffice0.10/}
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/goffice/0.10/}
@@ -16,6 +16,8 @@ USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libgoffice.pc.in
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
+
+TEST_TARGET=		check
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
