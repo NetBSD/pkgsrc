@@ -1,12 +1,12 @@
-$NetBSD: patch-configure,v 1.4 2018/03/24 17:08:31 joerg Exp $
+$NetBSD: patch-configure,v 1.5 2018/09/02 20:30:43 wiz Exp $
 
 Do not look for libuuid on Darwin, it is built-in.
 
 Patch "GNU" gettext support to not depend unnecessary on "GNU" gettext.
 
---- configure.orig	2018-03-06 03:31:59.000000000 +0000
+--- configure.orig	2018-08-30 08:24:28.000000000 +0000
 +++ configure
-@@ -13295,8 +13295,12 @@ case "$host" in
+@@ -13304,8 +13304,12 @@ case "$host" in
    *-*-mingw*)
      os_win32=yes
      ;;
@@ -19,7 +19,7 @@ Patch "GNU" gettext support to not depend unnecessary on "GNU" gettext.
  esac
   if test "$os_win32" = "yes"; then
    OS_WIN32_TRUE=
-@@ -15227,8 +15231,7 @@ extern
+@@ -15236,8 +15240,7 @@ extern
  #ifdef __cplusplus
  "C"
  #endif
@@ -29,7 +29,7 @@ Patch "GNU" gettext support to not depend unnecessary on "GNU" gettext.
  #else
  #define __GNU_GETTEXT_SYMBOL_EXPRESSION 0
  #endif
-@@ -15264,8 +15267,7 @@ extern
+@@ -15273,8 +15276,7 @@ extern
  #ifdef __cplusplus
  "C"
  #endif
@@ -39,7 +39,7 @@ Patch "GNU" gettext support to not depend unnecessary on "GNU" gettext.
  #else
  #define __GNU_GETTEXT_SYMBOL_EXPRESSION 0
  #endif
-@@ -15891,6 +15893,10 @@ if ac_fn_c_try_compile "$LINENO"; then :
+@@ -15900,6 +15902,10 @@ if ac_fn_c_try_compile "$LINENO"; then :
  $as_echo "$as_me: WARNING: your GCC compiler has a defunct stdint.h for its default-mode" >&2;}
  fi
  rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
@@ -50,7 +50,7 @@ Patch "GNU" gettext support to not depend unnecessary on "GNU" gettext.
  fi
  CXXFLAGS="$old_CXXFLAGS"
  CPPFLAGS="$old_CPPFLAGS"
-@@ -15919,6 +15925,9 @@ if test "_$ac_cv_header_stdint_t" = "_" 
+@@ -15928,6 +15934,9 @@ if test "_$ac_cv_header_stdint_t" = "_" 
  
  inttype_headers=`echo  | sed -e 's/,/ /g'`
  
@@ -60,12 +60,12 @@ Patch "GNU" gettext support to not depend unnecessary on "GNU" gettext.
  ac_cv_stdint_result="(no helpful system typedefs seen)"
  
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for stdint uintptr_t" >&5
-@@ -17187,7 +17196,7 @@ CFLAGS="$fontconfig_save_cflags"
+@@ -17196,7 +17205,7 @@ CFLAGS="$fontconfig_save_cflags"
  #
  # Check for uuid
  #
 -if test "$os_win32" != "yes"; then
 +if test "$os_win32" != "yes" -a "$os_darwin" != "yes"; then
- 
- pkg_failed=no
- { $as_echo "$as_me:${as_lineno-$LINENO}: checking for UUID" >&5
+ 	use_pkgconfig_for_uuid=yes
+ 	if test -n "${UUID_LIBS}"; then
+ 		save_UUID_LIBS=$UUID_LIBS
