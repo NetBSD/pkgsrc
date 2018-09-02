@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.76 2018/09/01 21:21:46 leot Exp $
+# $NetBSD: Makefile.common,v 1.77 2018/09/02 12:53:36 leot Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -88,12 +88,8 @@ post-wrapper:
 
 # We can't do this at post-extract because the extract cookie will get a future
 # timestamp than the sources.  If this happens, print-PLIST does not work.
-#
-# XXX: As pointed out by PR pkg/53543 using `+' in ${FIND} can lead to
-# XXX: `Argument list too long' errors when building devel/boost-libs.
-# XXX: As a workaround use `\;' instead.
 pre-configure:
-	${FIND} ${WRKSRC} -type f -exec ${TOUCH} {} \;
+	${FIND} ${WRKSRC} -type f | ${XARGS} ${TOUCH}
 
 # Generate a new user.hpp or use the installed one, depending on the package
 # we are building.
