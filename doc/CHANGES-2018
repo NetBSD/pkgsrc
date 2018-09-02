@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3890 2018/09/02 20:13:08 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3891 2018/09/02 20:30:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5487,3 +5487,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/tcl-tls to 1.7.16 [bsiegert 2018-09-02]
 	Updated x11/xscreensaver to 5.40 [wiz 2018-09-02]
 	Updated x11/xscreensaver-demo to 5.40 [wiz 2018-09-02]
+	Updated fonts/fontconfig to 2.13.1 [wiz 2018-09-02]
