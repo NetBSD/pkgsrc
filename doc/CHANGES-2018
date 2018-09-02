@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3875 2018/09/02 07:52:41 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3876 2018/09/02 07:55:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5473,3 +5473,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/p5-Net-DNS-SEC to 1.10 [wiz 2018-09-02]
 	Updated textproc/p5-YAML-LibYAML to 0.74 [wiz 2018-09-02]
 	Updated www/p5-AnyEvent-HTTP to 2.24 [wiz 2018-09-02]
+	Updated www/p5-Mojolicious to 7.94 [wiz 2018-09-02]
