@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2018/06/24 05:51:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.47 2018/09/02 20:12:03 wiz Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-getimage
@@ -61,6 +61,7 @@ libexec/xscreensaver/config/eruption.xml
 libexec/xscreensaver/config/euler2d.xml
 libexec/xscreensaver/config/fadeplot.xml
 libexec/xscreensaver/config/fiberlamp.xml
+libexec/xscreensaver/config/filmleader.xml
 libexec/xscreensaver/config/fireworkx.xml
 libexec/xscreensaver/config/flame.xml
 libexec/xscreensaver/config/flow.xml
@@ -68,6 +69,7 @@ libexec/xscreensaver/config/fluidballs.xml
 libexec/xscreensaver/config/fontglide.xml
 libexec/xscreensaver/config/fuzzyflakes.xml
 libexec/xscreensaver/config/galaxy.xml
+libexec/xscreensaver/config/glitchpeg.xml
 libexec/xscreensaver/config/goop.xml
 libexec/xscreensaver/config/grav.xml
 libexec/xscreensaver/config/greynetic.xml
@@ -130,6 +132,7 @@ libexec/xscreensaver/config/triangle.xml
 libexec/xscreensaver/config/truchet.xml
 libexec/xscreensaver/config/twang.xml
 libexec/xscreensaver/config/vermiculate.xml
+libexec/xscreensaver/config/vfeedback.xml
 libexec/xscreensaver/config/vidwhacker.xml
 libexec/xscreensaver/config/wander.xml
 libexec/xscreensaver/config/whirlwindwarp.xml
@@ -158,6 +161,7 @@ libexec/xscreensaver/eruption
 libexec/xscreensaver/euler2d
 libexec/xscreensaver/fadeplot
 libexec/xscreensaver/fiberlamp
+libexec/xscreensaver/filmleader
 libexec/xscreensaver/fireworkx
 libexec/xscreensaver/flame
 libexec/xscreensaver/flow
@@ -165,6 +169,7 @@ libexec/xscreensaver/fluidballs
 libexec/xscreensaver/fontglide
 libexec/xscreensaver/fuzzyflakes
 libexec/xscreensaver/galaxy
+libexec/xscreensaver/glitchpeg
 libexec/xscreensaver/goop
 libexec/xscreensaver/grav
 libexec/xscreensaver/greynetic
@@ -228,6 +233,7 @@ libexec/xscreensaver/triangle
 libexec/xscreensaver/truchet
 libexec/xscreensaver/twang
 libexec/xscreensaver/vermiculate
+libexec/xscreensaver/vfeedback
 libexec/xscreensaver/vidwhacker
 libexec/xscreensaver/wander
 libexec/xscreensaver/whirlwindwarp
@@ -281,6 +287,7 @@ man/man6/eruption.6
 man/man6/euler2d.6
 man/man6/fadeplot.6
 man/man6/fiberlamp.6
+man/man6/filmleader.6
 man/man6/fireworkx.6
 man/man6/flame.6
 man/man6/flow.6
@@ -288,6 +295,7 @@ man/man6/fluidballs.6
 man/man6/fontglide.6
 man/man6/fuzzyflakes.6
 man/man6/galaxy.6
+man/man6/glitchpeg.6
 man/man6/goop.6
 man/man6/grav.6
 man/man6/greynetic.6
@@ -349,6 +357,7 @@ man/man6/triangle.6
 man/man6/truchet.6
 man/man6/twang.6
 man/man6/vermiculate.6
+man/man6/vfeedback.6
 man/man6/vidwhacker.6
 man/man6/wander.6
 man/man6/whirlwindwarp.6
