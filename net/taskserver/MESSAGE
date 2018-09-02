@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2018/09/02 09:53:14 triaxx Exp $
+
+Be sure you initialize the ${PKGNAME} server in the TASKDDATA directory:
+
+  export TASKDDATA=${TASKD_DATA}
+  taskd init
+
+Follow additional steps to configure the SSL certificates and keys on the
+official website:
+
+https://taskwarrior.org/docs/taskserver/configure.html
+
+===========================================================================
