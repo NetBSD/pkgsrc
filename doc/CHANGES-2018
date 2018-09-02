@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3891 2018/09/02 20:30:53 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3892 2018/09/02 20:37:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5488,3 +5488,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/xscreensaver to 5.40 [wiz 2018-09-02]
 	Updated x11/xscreensaver-demo to 5.40 [wiz 2018-09-02]
 	Updated fonts/fontconfig to 2.13.1 [wiz 2018-09-02]
+	Updated net/filezilla to 3.36.0 [wiz 2018-09-02]
