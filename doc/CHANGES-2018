@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3872 2018/09/02 07:33:45 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3873 2018/09/02 07:36:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5470,3 +5470,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/p5-Spreadsheet-Read to 0.79 [wiz 2018-09-02]
 	Updated misc/p5-Locale-Codes to 3.58 [wiz 2018-09-02]
 	Updated security/p5-Module-Signature to 0.83 [wiz 2018-09-02]
+	Updated security/p5-Net-DNS-SEC to 1.10 [wiz 2018-09-02]
