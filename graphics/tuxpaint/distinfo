@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.27 2015/11/03 21:34:33 agc Exp $
+$NetBSD: distinfo,v 1.28 2018/09/02 12:52:02 wiz Exp $
 
-SHA1 (tuxpaint-0.9.22.tar.gz) = 62ab3069f5a8e81edb83912fe3d9906c1e9b138f
-RMD160 (tuxpaint-0.9.22.tar.gz) = 4a122b87f01babb988c250f51d006a5dd59bf1de
-SHA512 (tuxpaint-0.9.22.tar.gz) = 6f92dec27dc7ecfeb9dbc039d74d7b530436785fb99ead2e5e3eba8f8d01ed1792ef058b4c508d231ce80b7cac8b08395e4e3edd62031dbfa3046cd1d4e9c6d9
-Size (tuxpaint-0.9.22.tar.gz) = 13301628 bytes
-SHA1 (patch-src_tuxpaint.c) = 893092f9978feacb868c0897aa2e9be513350109
+SHA1 (tuxpaint-0.9.23.tar.gz) = 7483cd793bc49e1183e870df708d40e697c604b5
+RMD160 (tuxpaint-0.9.23.tar.gz) = 34ef65255fba1418b7c52b21bda0e199867821d5
+SHA512 (tuxpaint-0.9.23.tar.gz) = 540590c401256a2a37d18c77dbc4130d83b015572ac8e9ef03a8c09ea11d2bfbcc8cfcf7e3b221846f6f67d1eaab9b777da15bb0c97561f5cb421e70a8e4615f
+Size (tuxpaint-0.9.23.tar.gz) = 15500449 bytes
+SHA1 (patch-Makefile) = dacc11e6fe2c50aa4d522f50a03b97a006c97790
