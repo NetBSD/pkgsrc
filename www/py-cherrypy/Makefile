@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2018/08/20 12:59:07 adam Exp $
+# $NetBSD: Makefile,v 1.34 2018/09/03 12:22:30 adam Exp $
 
-DISTNAME=	CherryPy-17.3.0
+DISTNAME=	CherryPy-18.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/CherryPy/}
@@ -11,6 +11,8 @@ COMMENT=	Pythonic, object-oriented HTTP framework
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-cheroot>=6.2.4:../../www/py-cheroot
+DEPENDS+=	${PYPKGPREFIX}-contextlib2-[0-9]*:../../devel/py-contextlib2
+DEPENDS+=	${PYPKGPREFIX}-more-itertools-[0-9]*:../../devel/py-more-itertools
 DEPENDS+=	${PYPKGPREFIX}-portend>=2.1.1:../../net/py-portend
 DEPENDS+=	${PYPKGPREFIX}-simplejson-[0-9]*:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-six>=1.11.0:../../lang/py-six
@@ -24,6 +26,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-sugar-[0-9]*:../../devel/py-test-sugar
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 34
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} cherryd cherryd-${PYVERSSUFFIX} || ${TRUE}
