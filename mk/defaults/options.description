@@ -71,6 +71,7 @@ caca			Enable libcaca support.
 cairo			Enable cairo support.
 camlp4	Enable camlp4 support.
 camlzip			Enable camlzip support (for zip/gz/jar).
+canlock			Enable Cancel-Lock support.
 canna			Use Canna as Japanese conversion program.
 cares			Use the c-ares library for asynchronous name resolution.
 catalog-mysql		Store Bacula catalog in MySQL database.
