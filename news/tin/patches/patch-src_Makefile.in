@@ -1,0 +1,24 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2018/09/03 09:39:27 wiz Exp $
+
+Do not link internal static libcanlock.
+Do not install mbox manpage.
+
+--- src/Makefile.in.orig	2017-12-08 07:55:34.000000000 +0000
++++ src/Makefile.in
+@@ -209,7 +209,7 @@ EXTRAOBJS = @EXTRAOBJS@
+ EXTRA_INTLLIBS = @INTLDIR_MAKE@ @INTLLIBS@
+ EXTRA_PCREHDRS = @PCREDIR_MAKE@ ../pcre/pcre.h
+ EXTRA_PCRELIBS = @PCREDIR_MAKE@ ../pcre/$(PRELIB)pcre.a
+-EXTRA_CANLIBS = @CANDIR_MAKE@ ../libcanlock/$(PRELIB)canlock.a
++#EXTRA_CANLIBS = @CANDIR_MAKE@ ../libcanlock/$(PRELIB)canlock.a
+ EXTRALIBS = $(EXTRA_INTLLIBS) $(EXTRA_PCRELIBS) $(EXTRA_CANLIBS)
+ 
+ OFILES	= @ALLOCA@ $(EXTRAOBJS) \
+@@ -341,7 +341,6 @@ install_manpage : $(DESTDIR)$(INS_MANUAL
+ 	@-$(RM) -f $(DESTDIR)$(INS_MANUAL_DIR)5/r$(PROJECT).5
+ 	@$(ECHO) ".so $(INS_MANUAL_DIR)5/$(PROJECT).5" > $(DESTDIR)$(INS_MANUAL_DIR)5/r$(PROJECT).5
+ 	@$(CHMOD) 444 $(DESTDIR)$(INS_MANUAL_DIR)5/r$(PROJECT).5
+-	@-if test ! -f $(DESTDIR)$(INS_MANUAL_DIR)5/mbox.5 ; then $(INSTALL) -m 444 $(DOCDIR)/mbox.5 $(DESTDIR)$(INS_MANUAL_DIR)5/mbox.5 ; else $(ECHO) "  ... skipping $(DESTDIR)$(INS_MANUAL_DIR)5/mbox.5 - file already exists" ; fi
+ 	@-if test ! -f $(DESTDIR)$(INS_MANUAL_DIR)5/mmdf.5 ; then $(INSTALL) -m 444 $(DOCDIR)/mmdf.5 $(DESTDIR)$(INS_MANUAL_DIR)5/mmdf.5 ; else $(ECHO) "  ... skipping $(DESTDIR)$(INS_MANUAL_DIR)5/mmdf.5 - file already exists" ; fi
+ 
+ uninstall_manpage :
