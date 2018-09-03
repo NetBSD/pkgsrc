@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.68 2018/08/22 09:47:57 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2018/09/03 18:34:18 hauke Exp $
 #
 
 DISTNAME=	owncloud-10.0.8
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://download.owncloud.org/community/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,6 +15,7 @@ LICENSE=	gnu-agpl-v3
 
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.4.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=5.4.0:../../converters/php-iconv
+DEPENDS+=	${PHP_PKG_PREFIX}-intl>=5.4.0:../../textproc/php-intl
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.4.0:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.4.0:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.4.0:../../archivers/php-zip
