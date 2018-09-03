@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3910 2018/09/03 18:59:16 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.3911 2018/09/03 19:09:46 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5511,3 +5511,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-xlsxwriter to 1.1.0 [fhajny 2018-09-03]
 	Updated sysutils/findutils to 4.6.0nb2 [ryoon 2018-09-03]
 	Updated security/vault to 0.11.0 [fhajny 2018-09-03]
+	Updated www/php-owncloud to 10.0.9 [hauke 2018-09-03]
