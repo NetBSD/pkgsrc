@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2016/05/02 05:18:47 richard Exp $
+# $NetBSD: Makefile,v 1.38 2018/09/03 17:10:54 ryoon Exp $
 
 DISTNAME=	findutils-4.6.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNU:=findutils/}
 
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3 # or later
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake bison	# we patch a .y file, so needs bison
+USE_TOOLS+=		gmake
 
 LDFLAGS.IRIX+=		-lgen
 
