@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2018/08/27 06:17:33 adam Exp $
+# $NetBSD: Makefile,v 1.60 2018/09/03 07:39:34 adam Exp $
 
-DISTNAME=	hypothesis-3.69.3
+DISTNAME=	hypothesis-3.70.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hypothesis/}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-coverage>=4.0:../../devel/py-coverage
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 .include "../../lang/python/pyversion.mk"
-.if "${_PYTHON_VERSION}" == "27"
+.if ${_PYTHON_VERSION} == 27
 DEPENDS+=	${PYPKGPREFIX}-enum34-[0-9]*:../../devel/py-enum34
 .endif
 
