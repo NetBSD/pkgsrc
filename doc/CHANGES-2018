@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3900 2018/09/03 09:30:36 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3901 2018/09/03 09:39:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5500,3 +5500,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/py-setuptools_scm_git_archive version 1.0 [adam 2018-09-03]
 	Updated www/py-cheroot to 6.5.1 [adam 2018-09-03]
 	Updated devel/py-meson to 0.47.0nb1 [wiz 2018-09-03]
+	Updated news/tin to 2.4.2 [wiz 2018-09-03]
