@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3903 2018/09/03 10:37:47 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3904 2018/09/03 10:46:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5503,3 +5503,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated news/tin to 2.4.2 [wiz 2018-09-03]
 	Updated graphics/ImageMagick to 7.0.8.11 [wiz 2018-09-03]
 	Updated graphics/p5-PerlMagick to 7.0.8.11 [wiz 2018-09-03]
+	Updated lang/vala to 0.42.0 [wiz 2018-09-03]
