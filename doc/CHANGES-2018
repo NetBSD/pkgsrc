@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3896 2018/09/02 21:49:15 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3897 2018/09/03 05:38:41 manu Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5493,3 +5493,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/go-homedir to 1.0.0 [minskim 2018-09-02]
 	Updated print/poppler to 0.68.0 [wiz 2018-09-02]
 	Updated net/wireshark to 2.6.3 [wiz 2018-09-02]
+	Removed databases/postgresql96-fuzzystrmatch [manu 2018-09-03]
