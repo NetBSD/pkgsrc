@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2018/08/28 03:48:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.27 2018/09/03 11:00:36 leot Exp $
 
 DISTNAME=	microcode-20180807a
 PKGNAME=	intel-microcode-netbsd-20180807a
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://downloadcenter.intel.com/download/28087/Linux-Processor-Microcode-Data-File
 COMMENT=	Firmware updates for Intel x86 processors
-LICENSE=	modified-bsd
+LICENSE=	intel-microcode-license
 
 ONLY_FOR_PLATFORM+=	NetBSD-6.99.*-i386 \
 			NetBSD-6.99.*-x86_64 \
