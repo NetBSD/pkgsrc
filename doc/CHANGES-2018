@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3908 2018/09/03 16:59:12 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.3909 2018/09/03 17:11:23 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5509,3 +5509,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-django2 to 2.1.1 [adam 2018-09-03]
 	Updated www/nghttp2 to 1.33.0 [fhajny 2018-09-03]
 	Updated textproc/py-xlsxwriter to 1.1.0 [fhajny 2018-09-03]
+	Updated sysutils/findutils to 4.6.0nb2 [ryoon 2018-09-03]
