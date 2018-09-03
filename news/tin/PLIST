@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2017/03/05 12:05:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2018/09/03 09:39:27 wiz Exp $
 bin/metamutt
 bin/opt-case.pl
 bin/rtin
@@ -12,15 +12,17 @@ man/man1/tin.1
 man/man1/tinews.pl.1
 man/man1/url_handler.pl.1
 man/man1/w2r.pl.1
+man/man5/rtin.5
 man/man5/tin-mmdf.5
 man/man5/tin.5
 share/doc/tin/WHATSNEW
-share/locale/da/LC_MESSAGES/tin.mo
-share/locale/de/LC_MESSAGES/tin.mo
-share/locale/en_GB/LC_MESSAGES/tin.mo
-share/locale/et/LC_MESSAGES/tin.mo
-share/locale/fr/LC_MESSAGES/tin.mo
-share/locale/ru/LC_MESSAGES/tin.mo
-share/locale/sv/LC_MESSAGES/tin.mo
-share/locale/tr/LC_MESSAGES/tin.mo
-share/locale/zh_TW/LC_MESSAGES/tin.mo
+${PLIST.nls}share/locale/da/LC_MESSAGES/tin.mo
+${PLIST.nls}share/locale/de/LC_MESSAGES/tin.mo
+${PLIST.nls}share/locale/en_GB/LC_MESSAGES/tin.mo
+${PLIST.nls}share/locale/et/LC_MESSAGES/tin.mo
+${PLIST.nls}share/locale/fr/LC_MESSAGES/tin.mo
+${PLIST.nls}share/locale/ru/LC_MESSAGES/tin.mo
+${PLIST.nls}share/locale/sv/LC_MESSAGES/tin.mo
+${PLIST.nls}share/locale/tr/LC_MESSAGES/tin.mo
+${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/tin.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/tin.mo

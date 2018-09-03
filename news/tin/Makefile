@@ -1,26 +1,23 @@
-# $NetBSD: Makefile,v 1.80 2018/08/22 09:46:09 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2018/09/03 09:39:27 wiz Exp $
 
-DISTNAME=	tin-2.2.1
-PKGREVISION=	18
+DISTNAME=	tin-2.4.2
 CATEGORIES=	news
 MASTER_SITES=	ftp://ftp.tin.org/pub/news/clients/tin/stable/
 MASTER_SITES+=	ftp://ftp.funet.fi/pub/unix/news/tin-unoff/
 MASTER_SITES+=	ftp://ftp.lip6.fr/pub/unix/news/readers/tin-unoff/
-MASTER_SITES+=	ftp://ftp.akk.uni-karlsruhe.de/pub/news/clients/tin/stable/
-MASTER_SITES+=	ftp://ftp.cs.tu-berlin.de/pub/net/news/tin/stable/
 MASTER_SITES+=	ftp://ftp.cuhk.edu.hk/pub/packages/news/tin/stable/
 MASTER_SITES+=	ftp://sunsite.icm.edu.pl/pub/unix/news/tin/stable/
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tin.org/
-COMMENT=	TIN newsreader (termcap based)
+COMMENT=	USENET newsreader (termcap based)
 # See src/nntplib.c, vms/vms.c
 LICENSE=	tin-license
 
 RESTRICTED=		Profit from use, sale, trade, or reproduction disallowed
-NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
 
 GNU_CONFIGURE=	yes
 USE_PKGLOCALEDIR=yes
@@ -62,7 +59,6 @@ post-install:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../converters/uulib/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
