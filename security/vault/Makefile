@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2018/07/08 13:54:39 bsiegert Exp $
+# $NetBSD: Makefile,v 1.31 2018/09/03 18:59:08 fhajny Exp $
 
-DISTNAME=	vault-0.10.1
-PKGREVISION=	1
+DISTNAME=	vault-0.11.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 
@@ -18,6 +17,10 @@ GO_SRCPATH=	github.com/hashicorp/vault
 USE_TOOLS+=		bash gmake
 
 INSTALLATION_DIRS+=	bin
+
+# Clumsy workaround for https://github.com/golang/go/issues/22409
+pre-build:
+	${RM} -rf ${WRKSRC}/vault/external_tests
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/bin/vault ${DESTDIR}${PREFIX}/bin
