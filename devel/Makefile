@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2724 2018/09/01 20:58:11 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2725 2018/09/03 07:51:20 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2248,6 +2248,7 @@ SUBDIR+=	py-scandir
 SUBDIR+=	py-serpent
 SUBDIR+=	py-setuptools
 SUBDIR+=	py-setuptools_scm
+SUBDIR+=	py-setuptools_scm_git_archive
 SUBDIR+=	py-setuptools_trial
 SUBDIR+=	py-simplegeneric
 SUBDIR+=	py-singledispatch
