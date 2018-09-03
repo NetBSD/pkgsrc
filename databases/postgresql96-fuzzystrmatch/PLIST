@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2018/08/29 01:03:14 manu Exp $
-lib/postgresql/fuzzystrmatch.so
-share/postgresql/extension/fuzzystrmatch--1.0--1.1.sql
-share/postgresql/extension/fuzzystrmatch--1.1.sql
-share/postgresql/extension/fuzzystrmatch--unpackaged--1.0.sql
-share/postgresql/extension/fuzzystrmatch.control
