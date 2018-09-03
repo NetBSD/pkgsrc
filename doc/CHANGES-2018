@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3898 2018/09/03 07:40:45 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3899 2018/09/03 07:59:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5497,3 +5497,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-aiohttp to 3.4.2 [adam 2018-09-03]
 	Updated devel/py-hypothesis to 3.70.0 [adam 2018-09-03]
 	Updated devel/py-attrs to 18.2.0 [adam 2018-09-03]
+	Added devel/py-setuptools_scm_git_archive version 1.0 [adam 2018-09-03]
+	Updated www/py-cheroot to 6.5.1 [adam 2018-09-03]
