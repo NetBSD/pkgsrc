@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2018/08/22 09:45:22 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2018/09/03 16:56:24 ryoon Exp $
 
 DISTNAME=	rustc-1.28.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -104,6 +104,7 @@ RUST_BOOTSTRAP_PATH?=	${WRKDIR}/rust-${RUST_STAGE0_VER}-${RUST_ARCH}
 .endif
 .if !empty(MACHINE_PLATFORM:MFreeBSD-*-i386) || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH:=		i686-unknown-freebsd
+RUST_STAGE0_VER=	1.27.2
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
@@ -122,7 +123,7 @@ RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 # Do not trust ryoon@.
 SITES.${RUST_STAGE0}=	https://deuterium.ryoon.net/pub/rust/
 SITES.${RUST_STD_STAGE0}=	https://deuterium.ryoon.net/pub/rust/
-#DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
+DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 # Setting this changes it for every distfile, which doesn't match what is
 # currently in distinfo.
 #DIST_SUBDIR=		${PKGNAME}
