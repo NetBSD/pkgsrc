@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2018/08/22 09:45:51 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2018/09/03 12:37:45 gdt Exp $
 
 DISTNAME=	ddclient-3.8.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ddclient/}
 EXTRACT_SUFX=	.tar.bz2
@@ -33,7 +33,7 @@ INSTALLATION_DIRS=	sbin share/doc/ddclient share/examples/ddclient
 SUBST_CLASSES+=		config
 SUBST_MESSAGE.config=	Adjust variables: PKG_SYSCONFDIR VARBASE PERL5 (in patch-aa)
 SUBST_FILES.config+=	ddclient
-SUBST_STAGE.config=	pre-configure
+SUBST_STAGE.config=	post-patch
 SUBST_VARS.config=	PKG_SYSCONFDIR VARBASE PERL5
 
 NO_CONFIGURE=		yes
