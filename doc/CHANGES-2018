@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3905 2018/09/03 10:51:47 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3906 2018/09/03 12:25:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5505,3 +5505,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/p5-PerlMagick to 7.0.8.11 [wiz 2018-09-03]
 	Updated lang/vala to 0.42.0 [wiz 2018-09-03]
 	Updated security/py-certifi to 2018.8.24 [wiz 2018-09-03]
+	Updated www/py-cherrypy to 18.0.0 [adam 2018-09-03]
+	Updated www/py-django2 to 2.1.1 [adam 2018-09-03]
