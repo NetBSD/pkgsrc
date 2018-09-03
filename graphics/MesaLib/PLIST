@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2018/01/01 22:29:36 rillig Exp $
+@comment $NetBSD: PLIST,v 1.37 2018/09/03 11:22:18 wiz Exp $
 ${PLIST.dri}include/EGL/egl.h
 ${PLIST.dri}include/EGL/eglext.h
 ${PLIST.dri}include/EGL/eglextchromium.h
@@ -31,7 +31,6 @@ ${PLIST.xatracker}include/xa_composite.h
 ${PLIST.xatracker}include/xa_context.h
 ${PLIST.xatracker}include/xa_tracker.h
 ${PLIST.vaapi}lib/dri/gallium_drv_video.la
-${PLIST.vaapi}lib/dri/gallium_drv_video.so
 ${PLIST.i915_dri}lib/dri/i915_dri.so
 ${PLIST.i965_dri}lib/dri/i965_dri.so
 ${PLIST.ilo}lib/dri/ilo_dri.so
