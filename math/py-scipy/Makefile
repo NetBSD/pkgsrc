@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2018/08/31 08:09:19 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2018/09/03 08:36:44 wiz Exp $
 
 DISTNAME=	scipy-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -78,7 +78,6 @@ REPLACE_PYTHON+=	scipy/sparse/linalg/tests/test_matfuncs.py
 REPLACE_PYTHON+=	scipy/sparse/setup.py
 REPLACE_PYTHON+=	scipy/spatial/setup.py
 REPLACE_PYTHON+=	scipy/spatial/tests/test_distance.py
-REPLACE_PYTHON+=	scipy/special/generate_ufuncs.py
 REPLACE_PYTHON+=	scipy/special/setup.py
 REPLACE_PYTHON+=	scipy/special/spfun_stats.py
 REPLACE_PYTHON+=	scipy/stats/setup.py
