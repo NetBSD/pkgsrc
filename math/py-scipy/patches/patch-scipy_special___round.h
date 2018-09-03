@@ -1,8 +1,13 @@
-$NetBSD: patch-scipy_special___round.h,v 1.2 2018/06/14 14:29:16 jperkin Exp $
+$NetBSD: patch-scipy_special___round.h,v 1.3 2018/09/03 09:04:24 wiz Exp $
 
+Chunk 1: SunOS fix
+https://github.com/scipy/scipy/issues/9214
+
+Chunk 2:
 This conditional is just wrong, when built with c++, __STDC_VERSION__
 is not defined.  Make a cheezy fix which insists on <fenv.h> when
 built with C++.
+https://github.com/scipy/scipy/issues/9213
 
 --- scipy/special/_round.h.orig	2018-05-05 17:10:11.000000000 +0000
 +++ scipy/special/_round.h
