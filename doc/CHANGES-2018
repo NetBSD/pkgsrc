@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3915 2018/09/04 06:13:15 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3916 2018/09/04 10:16:40 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5516,3 +5516,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/go-afero to 1.1.1 [minskim 2018-09-04]
 	Removed devel/bugs-everywhere [wiz 2018-09-04]
 	Removed multimedia/sickbeard [wiz 2018-09-04]
+	Updated net/powerdns to 4.1.4 [fhajny 2018-09-04]
