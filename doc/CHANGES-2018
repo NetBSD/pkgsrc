@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3912 2018/09/03 23:48:12 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.3913 2018/09/04 03:08:01 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5513,3 +5513,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/vault to 0.11.0 [fhajny 2018-09-03]
 	Updated www/php-owncloud to 10.0.9 [hauke 2018-09-03]
 	Updated math/py-numba to 0.39.0nb1 [minskim 2018-09-03]
+	Updated devel/go-afero to 1.1.1 [minskim 2018-09-04]
