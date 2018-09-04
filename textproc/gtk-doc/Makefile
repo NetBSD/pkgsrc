@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2018/08/16 18:55:13 adam Exp $
+# $NetBSD: Makefile,v 1.73 2018/09/04 13:02:07 wiz Exp $
 
-DISTNAME=	gtk-doc-1.28
-PKGREVISION=	2
+DISTNAME=	gtk-doc-1.29
 CATEGORIES=	textproc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-doc/${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.xz
@@ -13,19 +12,17 @@ LICENSE=	gnu-gpl-v3 AND gnu-fdl-v1.1
 
 DEPENDS+=	docbook-xml>=4.4nb1:../../textproc/docbook-xml
 DEPENDS+=	docbook-xsl>=1.68.1:../../textproc/docbook-xsl
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-anytree-[0-9]*:../../devel/py-anytree
+DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
+DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
-BUILD_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 
 GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	gtk-doc.pc.in
 CONFIGURE_ARGS+=	--with-highlight=source-highlight
 CONFIGURE_ARGS+=	--with-xml-catalog=${XML_DEFAULT_CATALOG:Q}
 USE_TOOLS+=		gmake pkg-config:run msgfmt
-
-# one test failure that's not there with python-2.x as of 1.26
-# https://bugzilla.gnome.org/show_bug.cgi?id=786174
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37
 
 SUBST_CLASSES+=		fix-pc
 SUBST_STAGE.fix-pc=	pre-configure
@@ -34,13 +31,9 @@ SUBST_FILES.fix-pc+=	gtkdoc-depscan.in
 SUBST_FILES.fix-pc+=	gtkdoc/config.py.in
 SUBST_SED.fix-pc=	-e 's,@PKG_CONFIG@,pkg-config,g'
 
-MAKE_JOBS_SAFE=		no
-
+# 5 tests fail in 1.29 because of missing file 'sanity.sh'
+# https://gitlab.gnome.org/GNOME/gtk-doc/issues/55
 TEST_TARGET=	check
-
-REPLACE_PYTHON=		tests/check.py
-REPLACE_PYTHON+=	tests/common.py
-REPLACE_PYTHON+=	tests/mk_to_db.py
 
 .include "../../lang/python/application.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
