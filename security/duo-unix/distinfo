@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2018/02/16 07:20:56 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2018/09/04 14:43:09 fhajny Exp $
 
-SHA1 (duo_unix-1.10.1.tar.gz) = 66d08f2286c7f7877ec4bb6770b939e01f7dfb96
-RMD160 (duo_unix-1.10.1.tar.gz) = d22f3ffa6ac2578e5ebcc50945270d5f903c8cde
-SHA512 (duo_unix-1.10.1.tar.gz) = 45e246e7665e8d9c70ce43eed632371b079e9aec20f6c5d771a7d1de80a0f75d987fb88002de719358511d92d05b27824e539af53836af75a0939e59aae37359
-Size (duo_unix-1.10.1.tar.gz) = 472431 bytes
+SHA1 (duo_unix-1.10.4.tar.gz) = b10e777fed8ee4f9f89ab55867ebba4b623ec4f6
+RMD160 (duo_unix-1.10.4.tar.gz) = c2f0cc23ea35769b1e89d1a15481b76fb8a51d07
+SHA512 (duo_unix-1.10.4.tar.gz) = a91aeefaac39fed49fa636ad7effc49d7809f6b77b2488db1e112694d0101c7981062b196db6cc0c47c56123a79d0e06eefb434700e710eebfc7c3b57da04180
+Size (duo_unix-1.10.4.tar.gz) = 467528 bytes
 SHA1 (patch-login__duo_Makefile.in) = 8b9079d8ea6a9a1f2a23c5c9146a045789517378
