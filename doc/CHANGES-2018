@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3918 2018/09/04 11:00:57 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3919 2018/09/04 11:25:04 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5519,3 +5519,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/powerdns to 4.1.4 [fhajny 2018-09-04]
 	Updated net/powerdns-recursor to 4.1.4 [fhajny 2018-09-04]
 	Updated news/leafnode to 1.11.11 [wiz 2018-09-04]
+	Updated net/nsd to 4.1.24 [prlw1 2018-09-04]
