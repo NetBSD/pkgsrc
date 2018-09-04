@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.63 2018/06/10 04:27:03 ryoon Exp $
+$NetBSD: distinfo,v 1.64 2018/09/04 11:24:34 prlw1 Exp $
 
-SHA1 (nsd-4.1.21.tar.gz) = 5f766ce1dd7d6875a4dd61bf7934f73271b9580d
-RMD160 (nsd-4.1.21.tar.gz) = faae427ae23268ff94c1cb3537cf2ee82bc51ea5
-SHA512 (nsd-4.1.21.tar.gz) = 1e37f433ff5cd4869145a575a89d6eaca6b17c0e029302e233277b400c5f0f0b76ea018d48178d6b8a75b72328f0ded9e885be836c0bb32367d6861ff11c7150
-Size (nsd-4.1.21.tar.gz) = 1099021 bytes
+SHA1 (nsd-4.1.24.tar.gz) = e3413cd3e657f366764b90343ce33c9415347008
+RMD160 (nsd-4.1.24.tar.gz) = 8c37949e1eb0ecd7963a68371c8a4cbbdd1fa118
+SHA512 (nsd-4.1.24.tar.gz) = 68f7f62c740e5a73d1b9da4b6d593ff1b728bc398ad126a75febaa523a2117c80315bf90ca6a60aabf38539181e00524cedb106a32b4883aa8ed021462d47762
+Size (nsd-4.1.24.tar.gz) = 1107574 bytes
 SHA1 (patch-aa) = d9a423d5faa8da9a213b21fd2712225ac9645091
