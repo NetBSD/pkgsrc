@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2014/09/12 21:58:44 shattered Exp $
+# $NetBSD: Makefile,v 1.49 2018/09/04 11:00:48 wiz Exp $
 
-DISTNAME=		leafnode-1.11.10
+DISTNAME=		leafnode-1.11.11
 CATEGORIES=		news
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=leafnode/}
 EXTRACT_SUFX=		.tar.bz2
@@ -14,13 +14,16 @@ CONFLICTS+=		cyrus-imapd<2.2.10nb2
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
+INSTALLATION_DIRS+=	share/examples/leafnode
+INSTALLATION_DIRS+=	share/doc/leafnode
+
 LEAFNODE_SPOOL?=	/var/spool/leafnode
 LEAFNODE_LOCKDIR?=	/var/spool/lock/leafnode
 LEAFNODE_CONFDIR?=	${PKG_SYSCONFDIR}/leafnode
 
 # Default data dir, login and group are the same as used by inn
 #
-BUILD_DEFS+=		LEAFNODE_DATA_DIR
+BUILD_DEFS+=		LEAFNODE_DATA_DIR INN_DATA_DIR
 PKG_GROUPS=		${LEAFNODE_GROUP}
 PKG_USERS=		${LEAFNODE_USER}:${LEAFNODE_GROUP}
 LEAFNODE_HOME?=		${INN_DATA_DIR}
@@ -63,11 +66,8 @@ CONFIGURE_ARGS+=	--without-ipv6
 TEST_TARGET=		check
 
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/leafnode
 	${INSTALL_DATA} ${WRKSRC}/config.example 			\
 				${DESTDIR}${PREFIX}/share/examples/leafnode
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/leafnode
-
 	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/README-FQDN 		\
 			${WRKSRC}/README-MAINTAINER			\
 			${WRKSRC}/README-daemontools			\
