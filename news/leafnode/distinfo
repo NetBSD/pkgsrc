@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.19 2015/11/02 23:49:47 agc Exp $
+$NetBSD: distinfo,v 1.20 2018/09/04 11:00:48 wiz Exp $
 
-SHA1 (leafnode-1.11.10.tar.bz2) = c25a6cc36d9080a882836c2cc6516543a85d7fd7
-RMD160 (leafnode-1.11.10.tar.bz2) = bedded3f3d3c46e3fc274290036faaad75bb91b4
-SHA512 (leafnode-1.11.10.tar.bz2) = efffbe9a3fe10da64ebfaff31738b66e9783923ea119e2f792bc0e7e1811d570e85c5ddec17af6787333958deeee3af9bec87d1312c37eb19e355147dfa721ae
-Size (leafnode-1.11.10.tar.bz2) = 493480 bytes
-SHA1 (patch-aa) = ba9b942ca1802d98948d9e98838a0b332212fc18
+SHA1 (leafnode-1.11.11.tar.bz2) = 8e84358748a26ff147ea28120e8b42f5f6deb936
+RMD160 (leafnode-1.11.11.tar.bz2) = 78078216a49356250ff843044431a66a0b722ab7
+SHA512 (leafnode-1.11.11.tar.bz2) = 3a476a32f2e59ed0812379efc2ad1964347094417e7fc01d93f84d0cfaed78a66b2f2f40d1ac36f8a0f8844523ab57b9a605d4bd73ea309248c0562e7c26248a
+Size (leafnode-1.11.11.tar.bz2) = 500482 bytes
+SHA1 (patch-Makefile.in) = 5ca379bc986a971c27c3287559c7294f7a4e92de
+SHA1 (patch-checkpeerlocal.c) = a2754f43c6153ce2f781880ed5bac3b90e72954c
+SHA1 (patch-xoverutil.c) = eb7c181aa033a587f53d66cd4d05791c60f49a7c
