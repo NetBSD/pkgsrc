@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3916 2018/09/04 10:16:40 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.3917 2018/09/04 10:22:46 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5517,3 +5517,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Removed devel/bugs-everywhere [wiz 2018-09-04]
 	Removed multimedia/sickbeard [wiz 2018-09-04]
 	Updated net/powerdns to 4.1.4 [fhajny 2018-09-04]
+	Updated net/powerdns-recursor to 4.1.4 [fhajny 2018-09-04]
