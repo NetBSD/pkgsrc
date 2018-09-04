@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.6 2018/06/12 17:50:23 bsiegert Exp $
+# $NetBSD: Makefile,v 1.7 2018/09/04 03:07:47 minskim Exp $
 
-DISTNAME=	afero-0.0.20160605
+DISTNAME=	afero-1.1.1
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	3
-MASTER_SITES=	${MASTER_SITE_GITHUB:=spf13/}
 CATEGORIES=	devel
-GITHUB_TAG=	1a8ecf8b9da1fb5306e149e83128fc447957d2a8
+MASTER_SITES=	${MASTER_SITE_GITHUB:=spf13/}
 GITHUB_PROJECT= ${PKGBASE:S/^go-//}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/spf13/afero
 COMMENT=	FileSystem Abstraction System for Go
 LICENSE=	apache-2.0
 
-GO_DIST_BASE=	${GITHUB_PROJECT}-${GITHUB_TAG}
+GO_DIST_BASE=	${DISTNAME}
 GO_SRCPATH=	github.com/spf13/afero
 
 .include "../../textproc/go-text/buildlink3.mk"
