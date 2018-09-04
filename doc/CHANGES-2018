@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3920 2018/09/04 12:45:07 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3921 2018/09/04 13:02:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5521,3 +5521,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated news/leafnode to 1.11.11 [wiz 2018-09-04]
 	Updated net/nsd to 4.1.24 [prlw1 2018-09-04]
 	Added devel/py-anytree version 2.4.3 [wiz 2018-09-04]
+	Updated textproc/gtk-doc to 1.29 [wiz 2018-09-04]
