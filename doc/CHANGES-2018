@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3924 2018/09/04 13:57:37 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.3925 2018/09/04 14:43:17 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5525,3 +5525,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-cassandra-driver to 3.15.0 [fhajny 2018-09-04]
 	Updated lang/elixir to 1.7.3 [fhajny 2018-09-04]
 	Updated devel/gradle to 4.10 [fhajny 2018-09-04]
+	Updated security/duo-unix to 1.10.4 [fhajny 2018-09-04]
