@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/09/04 12:44:41 wiz Exp $
+
+SHA1 (anytree-2.4.3.tar.gz) = 4238c100d89dd84d4e81864cafd5825edc4a4535
+RMD160 (anytree-2.4.3.tar.gz) = 518d9d2967b68eb4ca198db10ece6d136e91dd37
+SHA512 (anytree-2.4.3.tar.gz) = 04f58f17f12f49cf8ba98f94d794f3882812d2b46044252c798d974e0750bb852c7b6a0b6698938139b9e455771d2ed7097eeab298079c678ba7bc82cbd26659
+Size (anytree-2.4.3.tar.gz) = 18181 bytes
