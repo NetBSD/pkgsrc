@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2018/08/16 18:54:31 adam Exp $
+# $NetBSD: Makefile,v 1.28 2018/09/04 00:02:03 minskim Exp $
 
 DISTNAME=	Botan-2.1.0
 PKGNAME=	${DISTNAME:tl}
@@ -20,6 +20,7 @@ PYTHON_FOR_BUILD_ONLY=	yes
 CONFIG_SHELL=		${PYTHONBIN}
 CONFIGURE_SCRIPT=	./configure.py
 CONFIGURE_ARGS+=	--prefix=${PREFIX} --with-zlib --with-boost --destdir=${DESTDIR}${PREFIX}
+CONFIGURE_ARGS+=	--docdir=share/doc
 
 REPLACE_PYTHON+=	*.py src/scripts/*.py
 
