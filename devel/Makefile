@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2726 2018/09/04 06:10:40 wiz Exp $
+# $NetBSD: Makefile,v 1.2727 2018/09/04 12:44:58 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1889,6 +1889,7 @@ SUBDIR+=	py-ZopeSchema
 SUBDIR+=	py-absl-py
 SUBDIR+=	py-aiofiles
 SUBDIR+=	py-angr
+SUBDIR+=	py-anytree
 SUBDIR+=	py-apipkg
 SUBDIR+=	py-appdirs
 SUBDIR+=	py-archinfo
