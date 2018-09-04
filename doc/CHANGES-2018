@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3925 2018/09/04 14:43:17 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.3926 2018/09/04 14:47:14 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5526,3 +5526,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/elixir to 1.7.3 [fhajny 2018-09-04]
 	Updated devel/gradle to 4.10 [fhajny 2018-09-04]
 	Updated security/duo-unix to 1.10.4 [fhajny 2018-09-04]
+	Updated devel/py-meson to 0.47.2 [prlw1 2018-09-04]
