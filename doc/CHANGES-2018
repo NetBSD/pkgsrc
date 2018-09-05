@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3929 2018/09/05 06:49:38 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3930 2018/09/05 08:34:32 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5530,3 +5530,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Pegex to 0.67 [wiz 2018-09-05]
 	Updated mail/p5-Mail-Message to 3.007 [wiz 2018-09-05]
 	Updated www/curl to 7.61.1 [wiz 2018-09-05]
+	Updated security/p11-kit to 0.23.14 [prlw1 2018-09-05]
