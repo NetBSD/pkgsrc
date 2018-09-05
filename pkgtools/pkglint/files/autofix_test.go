@@ -2,6 +2,8 @@ package main
 
 import (
 	"gopkg.in/check.v1"
+	"os"
+	"runtime"
 	"strings"
 )
 
@@ -469,6 +471,8 @@ func (s *Suite) Test_Autofix__skip(c *check.C) {
 	fix.InsertBefore("before")
 	fix.InsertAfter("after")
 	fix.Delete()
+	fix.Custom(func(printAutofix, autofix bool) {})
+	fix.Realign(dummyMkLine, 32)
 	fix.Apply()
 
 	SaveAutofixChanges(lines)
@@ -477,4 +481,102 @@ func (s *Suite) Test_Autofix__skip(c *check.C) {
 	t.CheckFileLines("fname",
 		"111 222 333 444 555")
 	c.Check(lines[0].raw[0].textnl, equals, "111 222 333 444 555\n")
+}
+
+func (s *Suite) Test_Autofix_Apply__panic(c *check.C) {
+	t := s.Init(c)
+
+	line := t.NewLine("filename", 123, "text")
+
+	c.Assert(func() {
+		fix := line.Autofix()
+		fix.Apply()
+	}, check.Panics, "Each autofix must have a diagnostic.")
+
+	c.Assert(func() {
+		fix := line.Autofix()
+		fix.Replace("from", "to")
+		fix.Apply()
+	}, check.Panics, "Autofix: The diagnostic must be given before the action.")
+
+	c.Assert(func() {
+		fix := line.Autofix()
+		fix.Warnf("Warning without period")
+		fix.Apply()
+	}, check.Panics, "Autofix: format \"Warning without period\" must end with a period.")
+}
+
+func (s *Suite) Test_Autofix_Apply__file_removed(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("--autofix")
+	lines := t.SetupFileLines("subdir/file.txt",
+		"line 1")
+	os.RemoveAll(t.File("subdir"))
+
+	fix := lines[0].Autofix()
+	fix.Warnf("Should start with an uppercase letter.")
+	fix.Replace("line", "Line")
+	fix.Apply()
+
+	SaveAutofixChanges(lines)
+
+	c.Check(t.Output(), check.Matches, ""+
+		"AUTOFIX: ~/subdir/file.txt:1: Replacing \"line\" with \"Line\".\n"+
+		"ERROR: ~/subdir/file.txt.pkglint.tmp: Cannot write: .*\n")
+}
+
+func (s *Suite) Test_Autofix_Apply__file_busy_Windows(c *check.C) {
+	t := s.Init(c)
+
+	if runtime.GOOS != "windows" {
+		return
+	}
+
+	t.SetupCommandLine("--autofix")
+	lines := t.SetupFileLines("subdir/file.txt",
+		"line 1")
+
+	// As long as the file is kept open, it cannot be overwritten or deleted.
+	openFile, err := os.OpenFile(t.File("subdir/file.txt"), 0, 0666)
+	defer openFile.Close()
+	c.Check(err, check.IsNil)
+
+	fix := lines[0].Autofix()
+	fix.Warnf("Should start with an uppercase letter.")
+	fix.Replace("line", "Line")
+	fix.Apply()
+
+	SaveAutofixChanges(lines)
+
+	c.Check(t.Output(), check.Matches, ""+
+		"AUTOFIX: ~/subdir/file.txt:1: Replacing \"line\" with \"Line\".\n"+
+		"ERROR: ~/subdir/file.txt.pkglint.tmp: Cannot overwrite with auto-fixed content: .*\n")
+}
+
+// This test tests the highly unlikely situation in which a file is loaded
+// by pkglint, and just before writing the autofixed content back, another
+// process takes the file and replaces it with a directory of the same name.
+//
+// 100% code coverage sometimes requires creativity. :)
+func (s *Suite) Test_Autofix_Apply__file_converted_to_directory(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("--autofix")
+	lines := t.SetupFileLines("file.txt",
+		"line 1")
+
+	c.Check(os.RemoveAll(t.File("file.txt")), check.IsNil)
+	c.Check(os.MkdirAll(t.File("file.txt"), 0777), check.IsNil)
+
+	fix := lines[0].Autofix()
+	fix.Warnf("Should start with an uppercase letter.")
+	fix.Replace("line", "Line")
+	fix.Apply()
+
+	SaveAutofixChanges(lines)
+
+	c.Check(t.Output(), check.Matches, ""+
+		"AUTOFIX: ~/file.txt:1: Replacing \"line\" with \"Line\".\n"+
+		"ERROR: ~/file.txt.pkglint.tmp: Cannot overwrite with auto-fixed content: .*\n")
 }
