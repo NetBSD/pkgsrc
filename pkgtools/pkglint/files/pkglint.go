@@ -117,6 +117,10 @@ func main() {
 
 // Main runs the main program with the given arguments.
 // argv[0] is the program name.
+//
+// Note: during tests, calling this method disables tracing
+// because the command line option --debug sets trace.Tracing
+// back to false.
 func (pkglint *Pkglint) Main(argv ...string) (exitcode int) {
 	defer func() {
 		if r := recover(); r != nil {
@@ -137,11 +141,10 @@ func (pkglint *Pkglint) Main(argv ...string) (exitcode int) {
 		if err != nil {
 			dummyLine.Fatalf("Cannot create profiling file: %s", err)
 		}
+		defer f.Close()
+
 		pprof.StartCPUProfile(f)
-		defer func() {
-			pprof.StopCPUProfile()
-			f.Close()
-		}()
+		defer pprof.StopCPUProfile()
 
 		regex.Profiling = true
 		pkglint.loghisto = histogram.New()
@@ -150,7 +153,7 @@ func (pkglint *Pkglint) Main(argv ...string) (exitcode int) {
 			pkglint.logOut.Write("")
 			pkglint.loghisto.PrintStats("loghisto", pkglint.logOut.out, -1)
 			regex.PrintStats(pkglint.logOut.out)
-			pkglint.loaded.PrintStats("loaded", pkglint.logOut.out, 50)
+			pkglint.loaded.PrintStats("loaded", pkglint.logOut.out, 10)
 		}()
 	}
 
@@ -300,9 +303,9 @@ func (pkglint *Pkglint) CheckDirent(fname string) {
 	isReg := st.Mode().IsRegular()
 
 	dir := ifelseStr(isReg, path.Dir(fname), fname)
-	absCurrentDir := abspath(dir)
-	pkglint.Wip = !pkglint.opts.Import && matches(absCurrentDir, `/wip/|/wip$`)
-	pkglint.Infrastructure = matches(absCurrentDir, `/mk/|/mk$`)
+	pkgsrcRel := G.Pkgsrc.ToRel(dir)
+	pkglint.Wip = matches(pkgsrcRel, `^wip(/|$)`)
+	pkglint.Infrastructure = matches(pkgsrcRel, `^mk(/|$)`)
 	pkgsrcdir := findPkgsrcTopdir(dir)
 	if pkgsrcdir == "" {
 		NewLineWhole(fname).Errorf("Cannot determine the pkgsrc root directory for %q.", cleanpath(dir))
@@ -346,25 +349,33 @@ func resolveVariableRefs(text string) string {
 
 	visited := make(map[string]bool) // To prevent endless loops
 
-	str := text
-	for {
-		replaced := regex.Compile(`\$\{([\w.]+)\}`).ReplaceAllStringFunc(str, func(m string) string {
-			varname := m[2 : len(m)-1]
-			if !visited[varname] {
-				visited[varname] = true
-				if G.Pkg != nil {
-					if value, ok := G.Pkg.varValue(varname); ok {
-						return value
-					}
+	replacer := func(m string) string {
+		varname := m[2 : len(m)-1]
+		if !visited[varname] {
+			visited[varname] = true
+			if G.Pkg != nil {
+				switch varname {
+				case "KRB5_TYPE":
+					return "heimdal"
+				case "PGSQL_VERSION":
+					return "95"
 				}
-				if G.Mk != nil {
-					if value, ok := G.Mk.VarValue(varname); ok {
-						return value
-					}
+				if mkline := G.Pkg.vars.FirstDefinition(varname); mkline != nil {
+					return mkline.Value()
 				}
 			}
-			return "${" + varname + "}"
-		})
+			if G.Mk != nil {
+				if value, ok := G.Mk.vars.Value(varname); ok {
+					return value
+				}
+			}
+		}
+		return "${" + varname + "}"
+	}
+
+	str := text
+	for {
+		replaced := regex.Compile(`\$\{([\w.]+)\}`).ReplaceAllStringFunc(str, replacer)
 		if replaced == str {
 			return replaced
 		}
@@ -476,7 +487,23 @@ func (pkglint *Pkglint) Checkfile(fname string) {
 	}
 
 	basename := path.Base(fname)
-	if hasPrefix(basename, "work") || hasSuffix(basename, "~") || hasSuffix(basename, ".orig") || hasSuffix(basename, ".rej") {
+	pkgsrcRel := G.Pkgsrc.ToRel(fname)
+	depth := strings.Count(pkgsrcRel, "/")
+
+	if depth == 2 && !G.Wip {
+		if contains(basename, "README") || contains(basename, "TODO") {
+			NewLineWhole(fname).Errorf("Packages in main pkgsrc must not have a %s file.", basename)
+			return
+		}
+	}
+
+	switch {
+	case hasPrefix(basename, "work"),
+		hasSuffix(basename, "~"),
+		hasSuffix(basename, ".orig"),
+		hasSuffix(basename, ".rej"),
+		contains(basename, "README") && depth == 2,
+		contains(basename, "TODO") && depth == 2:
 		if pkglint.opts.Import {
 			NewLineWhole(fname).Errorf("Must be cleaned up before committing the package.")
 		}
@@ -485,7 +512,7 @@ func (pkglint *Pkglint) Checkfile(fname string) {
 
 	st, err := os.Lstat(fname)
 	if err != nil {
-		NewLineWhole(fname).Errorf("%s", err)
+		NewLineWhole(fname).Errorf("Cannot determine file type: %s", err)
 		return
 	}
 
@@ -634,4 +661,81 @@ func ChecklinesTrailingEmptyLines(lines []Line) {
 	if last != max {
 		lines[last].Notef("Trailing empty lines.")
 	}
+}
+
+// Tool returns the tool definition from the closest scope (file, global), or nil.
+// The command can be "sed" or "gsed" or "${SED}".
+// If a tool is returned, usable tells whether that tool has been added
+// to USE_TOOLS in the current scope.
+func (pkglint *Pkglint) Tool(command string, time ToolTime) (tool *Tool, usable bool) {
+	varname := ""
+	if m, toolVarname := match1(command, `^\$\{(\w+)\}$`); m {
+		varname = toolVarname
+	}
+
+	if G.Mk != nil {
+		tools := G.Mk.Tools
+		if t := tools.ByName(command); t != nil {
+			if tools.Usable(t, time) {
+				return t, true
+			}
+			tool = t
+		}
+
+		if t := tools.ByVarname(varname); t != nil {
+			if tools.Usable(t, time) {
+				return t, true
+			}
+			if tool == nil {
+				tool = t
+			}
+		}
+	}
+
+	tools := G.Pkgsrc.Tools
+	if t := tools.ByName(command); t != nil {
+		if tools.Usable(t, time) {
+			return t, true
+		}
+		if tool == nil {
+			tool = t
+		}
+	}
+
+	if t := tools.ByVarname(varname); t != nil {
+		if tools.Usable(t, time) {
+			return t, true
+		}
+		if tool == nil {
+			tool = t
+		}
+	}
+
+	return
+}
+
+func (pkglint *Pkglint) ToolByVarname(varname string, time ToolTime) *Tool {
+
+	var tool *Tool
+	if G.Mk != nil {
+		tools := G.Mk.Tools
+		if t := tools.ByVarname(varname); t != nil {
+			if tools.Usable(t, time) {
+				return t
+			}
+			tool = t
+		}
+	}
+
+	tools := G.Pkgsrc.Tools
+	if t := tools.ByVarname(varname); t != nil {
+		if tools.Usable(t, time) {
+			return t
+		}
+		if tool == nil {
+			tool = t
+		}
+	}
+
+	return tool
 }
