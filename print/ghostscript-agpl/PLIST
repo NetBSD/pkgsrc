@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2018/03/21 17:41:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2018/09/05 13:19:40 adam Exp $
 bin/dvipdf
 bin/eps2eps
 bin/gs
@@ -69,40 +69,23 @@ man/man1/ps2pdf14.1
 man/man1/ps2pdfwr.1
 man/man1/ps2ps.1
 share/doc/ghostscript/${PKGVERSION}/API.htm
-share/doc/ghostscript/${PKGVERSION}/AUTHORS
 share/doc/ghostscript/${PKGVERSION}/C-style.htm
 share/doc/ghostscript/${PKGVERSION}/COPYING
-share/doc/ghostscript/${PKGVERSION}/Changes.htm
 share/doc/ghostscript/${PKGVERSION}/Commprod.htm
 share/doc/ghostscript/${PKGVERSION}/DLL.htm
 share/doc/ghostscript/${PKGVERSION}/Deprecated.htm
-share/doc/ghostscript/${PKGVERSION}/Details.htm
-share/doc/ghostscript/${PKGVERSION}/Details8.htm
-share/doc/ghostscript/${PKGVERSION}/Details9.htm
 share/doc/ghostscript/${PKGVERSION}/Develop.htm
 share/doc/ghostscript/${PKGVERSION}/Devices.htm
 share/doc/ghostscript/${PKGVERSION}/Drivers.htm
 share/doc/ghostscript/${PKGVERSION}/Fonts.htm
 share/doc/ghostscript/${PKGVERSION}/GS9_Color_Management.pdf
 share/doc/ghostscript/${PKGVERSION}/GS9_Color_Management.tex
-share/doc/ghostscript/${PKGVERSION}/Helpers.htm
-share/doc/ghostscript/${PKGVERSION}/Hershey.htm
-share/doc/ghostscript/${PKGVERSION}/History1.htm
-share/doc/ghostscript/${PKGVERSION}/History2.htm
-share/doc/ghostscript/${PKGVERSION}/History3.htm
-share/doc/ghostscript/${PKGVERSION}/History4.htm
-share/doc/ghostscript/${PKGVERSION}/History5.htm
-share/doc/ghostscript/${PKGVERSION}/History6.htm
-share/doc/ghostscript/${PKGVERSION}/History7.htm
-share/doc/ghostscript/${PKGVERSION}/History8.htm
 share/doc/ghostscript/${PKGVERSION}/History9.htm
 share/doc/ghostscript/${PKGVERSION}/Install.htm
-share/doc/ghostscript/${PKGVERSION}/Issues.htm
 share/doc/ghostscript/${PKGVERSION}/Language.htm
 share/doc/ghostscript/${PKGVERSION}/Lib.htm
 share/doc/ghostscript/${PKGVERSION}/Make.htm
 share/doc/ghostscript/${PKGVERSION}/News.htm
-share/doc/ghostscript/${PKGVERSION}/Projects.htm
 share/doc/ghostscript/${PKGVERSION}/Ps-style.htm
 share/doc/ghostscript/${PKGVERSION}/Ps2epsi.htm
 share/doc/ghostscript/${PKGVERSION}/Psfiles.htm
@@ -114,8 +97,8 @@ share/doc/ghostscript/${PKGVERSION}/Unix-lpr.htm
 share/doc/ghostscript/${PKGVERSION}/Use.htm
 share/doc/ghostscript/${PKGVERSION}/VectorDevices.htm
 share/doc/ghostscript/${PKGVERSION}/WhatIsGS.htm
+share/doc/ghostscript/${PKGVERSION}/gdevds32.c
 share/doc/ghostscript/${PKGVERSION}/gs-vms.hlp
-share/doc/ghostscript/${PKGVERSION}/gs.css
 share/doc/ghostscript/${PKGVERSION}/gsdoc.el
 share/doc/ghostscript/${PKGVERSION}/index.html
 share/doc/ghostscript/${PKGVERSION}/pscet_status.txt
@@ -415,7 +398,6 @@ ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/SubstCID/CNS1-WMode
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/SubstCID/GB1-WMode
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/SubstCID/Japan1-WMode
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/SubstCID/Korea1-WMode
-share/ghostscript/${PKGVERSION}/doc
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/iccprofiles/default_cmyk.icc
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/iccprofiles/default_gray.icc
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/iccprofiles/default_rgb.icc
