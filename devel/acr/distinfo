@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2016/08/18 04:38:13 mef Exp $
+$NetBSD: distinfo,v 1.9 2018/09/05 11:21:16 khorben Exp $
 
-SHA1 (acr-0.10.5.zip) = 65edae0ac18dd6d339874e8a991f44a956cd932f
-RMD160 (acr-0.10.5.zip) = 46f408101dfdec3e708c17021af39664c175b12e
-SHA512 (acr-0.10.5.zip) = 14576279817a5e390fa6af41d1aa693d204dbdc1cdd1cd37ae49c82613c1c657bb59e0a75237be37be219a5c217dc09a5bc9e5b4a519c380b9fbfc1d58d62e67
-Size (acr-0.10.5.zip) = 94356 bytes
+SHA1 (acr-1.6.2.zip) = ded03755d3cfa9c6466ca3a12218b078fc7d3c3e
+RMD160 (acr-1.6.2.zip) = 4e38be272114a6e7869a8b61f855589c487c2bd4
+SHA512 (acr-1.6.2.zip) = 83f7f2c6a6d7a768a3c6853cd67a59803ec87dbf516655d6ac5d33c0e7e878f0a60bd6950ef8d99c50c0e242011bdbd15d0b50825dea9e2d84001137292815c0
+Size (acr-1.6.2.zip) = 94490 bytes
