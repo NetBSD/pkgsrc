@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3932 2018/09/05 09:22:42 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3933 2018/09/05 11:22:21 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5536,3 +5536,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Removed www/py-flup3 successor www/py-flup [adam 2018-09-05]
 	Removed security/py-oauth [adam 2018-09-05]
 	Removed security/py-oauth2 [adam 2018-09-05]
+	Updated devel/acr to 1.6.2 [khorben 2018-09-05]
