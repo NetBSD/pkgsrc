@@ -116,9 +116,9 @@ func (s *Suite) Test_convertToLogicalLines__comments(c *check.C) {
 
 	// This is just a side-effect and not relevant for this particular test.
 	t.CheckOutputLines(
-		"ERROR: ~/comment.mk:15: Unknown Makefile line format.",
-		"ERROR: ~/comment.mk:19: Unknown Makefile line format.",
-		"ERROR: ~/comment.mk:23: Unknown Makefile line format.")
+		"ERROR: ~/comment.mk:15: Unknown Makefile line format: \"This is no comment\".",
+		"ERROR: ~/comment.mk:19: Unknown Makefile line format: \"This is no comment\".",
+		"ERROR: ~/comment.mk:23: Unknown Makefile line format: \"This is no comment\".")
 }
 
 func (s *Suite) Test_convertToLogicalLines_continuationInLastLine(c *check.C) {
@@ -156,17 +156,11 @@ func (s *Suite) Test_Load(c *check.C) {
 
 	t.CreateFileLines("empty")
 
-	func() {
-		defer t.ExpectFatalError()
-		Load(t.File("does-not-exist"), MustSucceed)
-	}()
+	t.ExpectFatal(
+		func() { Load(t.File("does-not-exist"), MustSucceed) },
+		"FATAL: ~/does-not-exist: Cannot be read.")
 
-	func() {
-		defer t.ExpectFatalError()
-		Load(t.File("empty"), MustSucceed|NotEmpty)
-	}()
-
-	t.CheckOutputLines(
-		"FATAL: ~/does-not-exist: Cannot be read.",
+	t.ExpectFatal(
+		func() { Load(t.File("empty"), MustSucceed|NotEmpty) },
 		"FATAL: ~/empty: Must not be empty.")
 }

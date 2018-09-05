@@ -1,7 +1,7 @@
 package getopt
 
 import (
-	check "gopkg.in/check.v1"
+	"gopkg.in/check.v1"
 	"testing"
 )
 

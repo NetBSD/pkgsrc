@@ -1,7 +1,7 @@
 package main
 
 import (
-	check "gopkg.in/check.v1"
+	"gopkg.in/check.v1"
 )
 
 func NewMkVarUse(varname string, modifiers ...string) *MkVarUse {

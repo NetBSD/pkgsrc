@@ -20,7 +20,7 @@ type Pkgsrc struct {
 	// within the bsd.pkg.mk file.
 	buildDefs map[string]bool
 
-	Tools ToolRegistry
+	Tools Tools
 
 	MasterSiteURLToVar map[string]string // "https://github.com/" => "MASTER_SITE_GITHUB"
 	MasterSiteVarToURL map[string]string // "MASTER_SITE_GITHUB" => "https://github.com/"
@@ -32,7 +32,7 @@ type Pkgsrc struct {
 	LastChange          map[string]*Change //
 	latest              map[string]string  // "lang/php[0-9]*" => "lang/php70"
 
-	UserDefinedVars map[string]MkLine   // varname => line; used for checking BUILD_DEFS
+	UserDefinedVars Scope               // Used for checking BUILD_DEFS
 	Deprecated      map[string]string   //
 	vartypes        map[string]*Vartype // varcanon => type
 
@@ -44,7 +44,7 @@ func NewPkgsrc(dir string) *Pkgsrc {
 	src := &Pkgsrc{
 		dir,
 		make(map[string]bool),
-		NewToolRegistry(),
+		NewTools("Pkgsrc"),
 		make(map[string]string),
 		make(map[string]string),
 		make(map[string]string),
@@ -52,7 +52,7 @@ func NewPkgsrc(dir string) *Pkgsrc {
 		nil,
 		make(map[string]*Change),
 		make(map[string]string),
-		make(map[string]MkLine),
+		NewScope(),
 		make(map[string]string),
 		make(map[string]*Vartype),
 		nil, // Only initialized when pkglint is run for a whole pkgsrc installation
@@ -61,20 +61,53 @@ func NewPkgsrc(dir string) *Pkgsrc {
 	// Some user-defined variables do not influence the binary
 	// package at all and therefore do not have to be added to
 	// BUILD_DEFS; therefore they are marked as "already added".
-	src.AddBuildDef("DISTDIR")
-	src.AddBuildDef("FETCH_CMD")
-	src.AddBuildDef("FETCH_OUTPUT_ARGS")
+	src.AddBuildDefs("DISTDIR", "FETCH_CMD", "FETCH_OUTPUT_ARGS")
 
-	// The following variables are not expected to be modified
-	// by the pkgsrc user. They are added here to prevent unnecessary
-	// warnings by pkglint.
-	src.AddBuildDef("GAMES_USER")
-	src.AddBuildDef("GAMES_GROUP")
-	src.AddBuildDef("GAMEDATAMODE")
-	src.AddBuildDef("GAMEDIRMODE")
-	src.AddBuildDef("GAMEMODE")
-	src.AddBuildDef("GAMEOWN")
-	src.AddBuildDef("GAMEGRP")
+	// The following variables are added to _BUILD_DEFS by the pkgsrc
+	// infrastructure and thus don't need to be added by the package again.
+	// To regenerate the below list:
+	//  grep -hr '^_BUILD_DEFS+=' mk/ | tr ' \t' '\n\n' | sed -e 's,.*=,,' -e '/^_/d' -e '/^$/d' -e 's,.*,"&"\,,' | sort -u
+	src.AddBuildDefs("PKG_HACKS")
+	src.AddBuildDefs(
+		"ABI",
+		"BUILTIN_PKGS",
+		"CFLAGS",
+		"CMAKE_ARGS",
+		"CONFIGURE_ARGS",
+		"CONFIGURE_ENV",
+		"CPPFLAGS",
+		"FFLAGS",
+		"GAMEDATAMODE",
+		"GAMEDIRMODE",
+		"GAMEMODE",
+		"GAMES_GROUP",
+		"GAMES_USER",
+		"GLIBC_VERSION",
+		"INIT_SYSTEM",
+		"LDFLAGS",
+		"LICENSE",
+		"LOCALBASE",
+		"MACHINE_ARCH",
+		"MACHINE_GNU_ARCH",
+		"MULTI",
+		"NO_BIN_ON_CDROM",
+		"NO_BIN_ON_FTP",
+		"NO_SRC_ON_CDROM",
+		"NO_SRC_ON_FTP",
+		"OBJECT_FMT",
+		"OPSYS",
+		"OS_VERSION",
+		"OSVERSION_SPECIFIC",
+		"PKG_HACKS",
+		"PKG_OPTIONS",
+		"PKG_SYSCONFBASEDIR",
+		"PKG_SYSCONFDIR",
+		"PKGGNUDIR",
+		"PKGINFODIR",
+		"PKGMANDIR",
+		"PKGPATH",
+		"RESTRICTED",
+		"USE_ABI_DEPENDS")
 
 	return src
 }
@@ -110,10 +143,6 @@ func (src *Pkgsrc) Latest(category string, re regex.Pattern, repl string) string
 		return latest
 	}
 
-	if src.latest == nil {
-		src.latest = make(map[string]string)
-	}
-
 	categoryDir := src.File(category)
 	error := func() string {
 		dummyLine.Errorf("Cannot find latest version of %q in %q.", re, categoryDir)
@@ -145,6 +174,8 @@ func (src *Pkgsrc) Latest(category string, re regex.Pattern, repl string) string
 
 // loadTools loads the tool definitions from `mk/tools/*`.
 func (src *Pkgsrc) loadTools() {
+	tools := src.Tools
+
 	toolFiles := []string{"defaults.mk"}
 	{
 		toc := G.Pkgsrc.File("mk/tools/bsd.tools.mk")
@@ -162,63 +193,57 @@ func (src *Pkgsrc) loadTools() {
 		}
 	}
 
-	reg := src.Tools
-	reg.RegisterTool(&Tool{"echo", "ECHO", true, true, true}, dummyMkLine)
-	reg.RegisterTool(&Tool{"echo -n", "ECHO_N", true, true, true}, dummyMkLine)
-	reg.RegisterTool(&Tool{"false", "FALSE", true /*why?*/, true, false}, dummyMkLine)
-	reg.RegisterTool(&Tool{"test", "TEST", true, true, true}, dummyMkLine)
-	reg.RegisterTool(&Tool{"true", "TRUE", true /*why?*/, true, true}, dummyMkLine)
+	// TODO: parse bsd.prefs.mk instead of hardcoding this.
+	toolDefs := []struct {
+		Name    string
+		Varname string
+	}{
+		{"echo", "ECHO"},
+		{"echo -n", "ECHO_N"},
+		{"false", "FALSE"},
+		{"test", "TEST"},
+		{"true", "TRUE"}}
+
+	for _, toolDef := range toolDefs {
+		tool := tools.Define(toolDef.Name, toolDef.Varname, dummyMkLine)
+		tool.MustUseVarForm = true
+		if toolDef.Name != "false" {
+			tool.SetValidity(AfterPrefsMk, tools.TraceName)
+		}
+	}
 
 	for _, basename := range toolFiles {
 		mklines := G.Pkgsrc.LoadMk("mk/tools/"+basename, MustSucceed|NotEmpty)
 		for _, mkline := range mklines.mklines {
-			reg.ParseToolLine(mkline)
+			tools.ParseToolLineCreate(mkline, true)
 		}
 	}
 
 	for _, relativeName := range [...]string{"mk/bsd.prefs.mk", "mk/bsd.pkg.mk"} {
-		dirDepth := 0
 
 		mklines := G.Pkgsrc.LoadMk(relativeName, MustSucceed|NotEmpty)
 		for _, mkline := range mklines.mklines {
 			if mkline.IsVarassign() {
-				varname := mkline.Varname()
-				value := mkline.Value()
-				if varname == "USE_TOOLS" {
-					if trace.Tracing {
-						trace.Stepf("[dirDepth=%d] %s", dirDepth, value)
-					}
-					if dirDepth == 0 || dirDepth == 1 && relativeName == "mk/bsd.prefs.mk" {
-						for _, toolname := range splitOnSpace(value) {
-							if !containsVarRef(toolname) {
-								tool := reg.Register(toolname, mkline)
-								tool.Predefined = true
-								if relativeName == "mk/bsd.prefs.mk" {
-									tool.UsableAtLoadTime = true
-								}
-							}
-						}
-					}
+				switch mkline.Varname() {
+				case "USE_TOOLS":
+					// Since this line is in the pkgsrc infrastructure, each tool mentioned
+					// in USE_TOOLS is trusted to be also defined somewhere in the actual
+					// list of available tools.
+					//
+					// This assumption does not work for processing USE_TOOLS in packages, though.
+					tools.ParseToolLineCreate(mkline, true)
 
-				} else if varname == "_BUILD_DEFS" {
-					for _, bdvar := range splitOnSpace(value) {
-						src.AddBuildDef(bdvar)
+				case "_BUILD_DEFS":
+					for _, bdvar := range mkline.ValueSplit(mkline.Value(), "") {
+						src.AddBuildDefs(bdvar)
 					}
-				}
-
-			} else if mkline.IsDirective() {
-				switch mkline.Directive() {
-				case "if", "ifdef", "ifndef", "for":
-					dirDepth++
-				case "endif", "endfor":
-					dirDepth--
 				}
 			}
 		}
 	}
 
 	if trace.Tracing {
-		reg.Trace()
+		tools.Trace()
 	}
 }
 
@@ -243,10 +268,10 @@ func (src *Pkgsrc) parseSuggestedUpdates(lines []Line) []SuggestedUpdate {
 				if m, pkgbase, pkgversion := match2(pkgname, rePkgname); m {
 					updates = append(updates, SuggestedUpdate{line, pkgbase, pkgversion, comment})
 				} else {
-					line.Warnf("Invalid package name %q", pkgname)
+					line.Warnf("Invalid package name %q.", pkgname)
 				}
 			} else {
-				line.Warnf("Invalid line format %q", text)
+				line.Warnf("Invalid line format %q.", text)
 			}
 		}
 	}
@@ -366,7 +391,7 @@ func (src *Pkgsrc) loadUserDefinedVars() {
 
 	for _, mkline := range mklines.mklines {
 		if mkline.IsVarassign() {
-			src.UserDefinedVars[mkline.Varname()] = mkline
+			src.UserDefinedVars.Define(mkline.Varname(), mkline)
 		}
 	}
 }
@@ -503,7 +528,7 @@ func (src *Pkgsrc) initDeprecatedVars() {
 		"LICENCE":     "Use LICENSE instead.",
 
 		// November 2007
-		//USE_NCURSES		Include "../../devel/ncurses/buildlink3.mk" instead.
+		//USE_NCURSES: Include "../../devel/ncurses/buildlink3.mk" instead.
 
 		// December 2007
 		"INSTALLATION_DIRS_FROM_PLIST": "Use AUTO_MKDIRS instead.",
@@ -558,8 +583,10 @@ func (src *Pkgsrc) ToRel(fileName string) string {
 	return relpath(src.topdir, fileName)
 }
 
-func (src *Pkgsrc) AddBuildDef(varname string) {
-	src.buildDefs[varname] = true
+func (src *Pkgsrc) AddBuildDefs(varnames ...string) {
+	for _, varname := range varnames {
+		src.buildDefs[varname] = true
+	}
 }
 
 func (src *Pkgsrc) IsBuildDef(varname string) bool {
@@ -605,6 +632,85 @@ func (src *Pkgsrc) loadPkgOptions() {
 			line.Fatalf("Unknown line format.")
 		}
 	}
+}
+
+// VariableType returns the type of the variable
+// (possibly guessed based on the variable name),
+// or nil if the type cannot even be guessed.
+func (src *Pkgsrc) VariableType(varname string) (vartype *Vartype) {
+	if trace.Tracing {
+		defer trace.Call(varname, trace.Result(&vartype))()
+	}
+
+	if vartype := src.vartypes[varname]; vartype != nil {
+		return vartype
+	}
+	if vartype := src.vartypes[varnameCanon(varname)]; vartype != nil {
+		return vartype
+	}
+
+	if tool := G.ToolByVarname(varname, RunTime); tool != nil {
+		if trace.Tracing {
+			trace.Stepf("Use of tool %+v", tool)
+		}
+		perms := aclpUse
+		if tool.Validity == AfterPrefsMk && G.Mk.Tools.SeenPrefs {
+			perms |= aclpUseLoadtime
+		}
+		return &Vartype{lkNone, BtShellCommand, []ACLEntry{{"*", perms}}, false}
+	}
+
+	if m, toolVarname := match1(varname, `^TOOLS_(.*)`); m {
+		if tool := G.ToolByVarname(toolVarname, RunTime); tool != nil {
+			return &Vartype{lkNone, BtPathname, []ACLEntry{{"*", aclpUse}}, false}
+		}
+	}
+
+	allowAll := []ACLEntry{{"*", aclpAll}}
+	allowRuntime := []ACLEntry{{"*", aclpAllRuntime}}
+
+	// Guess the data type of the variable based on naming conventions.
+	varbase := varnameBase(varname)
+	var gtype *Vartype
+	switch {
+	case hasSuffix(varbase, "DIRS"):
+		gtype = &Vartype{lkShell, BtPathmask, allowRuntime, true}
+	case hasSuffix(varbase, "DIR") && !hasSuffix(varbase, "DESTDIR"), hasSuffix(varname, "_HOME"):
+		gtype = &Vartype{lkNone, BtPathname, allowRuntime, true}
+	case hasSuffix(varbase, "FILES"):
+		gtype = &Vartype{lkShell, BtPathmask, allowRuntime, true}
+	case hasSuffix(varbase, "FILE"):
+		gtype = &Vartype{lkNone, BtPathname, allowRuntime, true}
+	case hasSuffix(varbase, "PATH"):
+		gtype = &Vartype{lkNone, BtPathlist, allowRuntime, true}
+	case hasSuffix(varbase, "PATHS"):
+		gtype = &Vartype{lkShell, BtPathname, allowRuntime, true}
+	case hasSuffix(varbase, "_USER"):
+		gtype = &Vartype{lkNone, BtUserGroupName, allowAll, true}
+	case hasSuffix(varbase, "_GROUP"):
+		gtype = &Vartype{lkNone, BtUserGroupName, allowAll, true}
+	case hasSuffix(varbase, "_ENV"):
+		gtype = &Vartype{lkShell, BtShellWord, allowRuntime, true}
+	case hasSuffix(varbase, "_CMD"):
+		gtype = &Vartype{lkNone, BtShellCommand, allowRuntime, true}
+	case hasSuffix(varbase, "_ARGS"):
+		gtype = &Vartype{lkShell, BtShellWord, allowRuntime, true}
+	case hasSuffix(varbase, "_CFLAGS"), hasSuffix(varname, "_CPPFLAGS"), hasSuffix(varname, "_CXXFLAGS"):
+		gtype = &Vartype{lkShell, BtCFlag, allowRuntime, true}
+	case hasSuffix(varname, "_LDFLAGS"):
+		gtype = &Vartype{lkShell, BtLdFlag, allowRuntime, true}
+	case hasSuffix(varbase, "_MK"):
+		gtype = &Vartype{lkNone, BtUnknown, allowAll, true}
+	}
+
+	if trace.Tracing {
+		if gtype != nil {
+			trace.Step2("The guessed type of %q is %q.", varname, gtype.String())
+		} else {
+			trace.Step1("No type definition found for %q.", varname)
+		}
+	}
+	return gtype
 }
 
 // Change is a change entry from the `doc/CHANGES-*` files.

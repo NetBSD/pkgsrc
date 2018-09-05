@@ -1,7 +1,7 @@
 package main
 
 import (
-	check "gopkg.in/check.v1"
+	"gopkg.in/check.v1"
 )
 
 func (s *Suite) Test_Vartype_EffectivePermissions(c *check.C) {
@@ -43,4 +43,15 @@ func (s *Suite) Test_AclPermissions_String(c *check.C) {
 	c.Check(ACLPermissions(0).String(), equals, "none")
 	c.Check(aclpAll.String(), equals, "set, set-default, append, use-loadtime, use")
 	c.Check(aclpUnknown.String(), equals, "unknown")
+}
+
+func (s *Suite) Test_Vartype_IsConsideredList(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupVartypes()
+
+	c.Check(G.Pkgsrc.VariableType("COMMENT").IsConsideredList(), equals, false)
+	c.Check(G.Pkgsrc.VariableType("DEPENDS").IsConsideredList(), equals, false)
+	c.Check(G.Pkgsrc.VariableType("PKG_FAIL_REASON").IsConsideredList(), equals, true)
+	c.Check(G.Pkgsrc.VariableType("CONF_FILES").IsConsideredList(), equals, true)
 }

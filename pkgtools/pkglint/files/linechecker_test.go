@@ -11,6 +11,12 @@ func (s *Suite) Test_LineChecker_CheckAbsolutePathname(c *check.C) {
 
 	CheckLineAbsolutePathname(line, "bindir=/bin")
 	CheckLineAbsolutePathname(line, "bindir=/../lib")
+	CheckLineAbsolutePathname(line, "cat /dev/null")   // FIXME: Not classified as absolute path.
+	CheckLineAbsolutePathname(line, "cat /dev//tty")   // FIXME: Not classified as absolute patFIXMEh.
+	CheckLineAbsolutePathname(line, "cat /dev/zero")   // FIXME: Not classified as absolute path.
+	CheckLineAbsolutePathname(line, "cat /dev/stdin")  // FIXME: Not classified as absolute path.
+	CheckLineAbsolutePathname(line, "cat /dev/stdout") // FIXME: Not classified as absolute path.
+	CheckLineAbsolutePathname(line, "cat /dev/stderr") // FIXME: Not classified as absolute path.
 
 	t.CheckOutputLines(
 		"WARN: Makefile:1: Found absolute pathname: /bin")

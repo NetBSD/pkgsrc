@@ -16,16 +16,6 @@ var (
 
 var traceDepth int
 
-func Ref(rv interface{}) ref {
-	return ref{rv}
-}
-
-func (r ref) String() string {
-	ptr := reflect.ValueOf(r.intf)
-	ref := reflect.Indirect(ptr)
-	return fmt.Sprintf("%v", ref)
-}
-
 func Stepf(format string, args ...interface{}) {
 	if Tracing {
 		msg := fmt.Sprintf(format, args...)
@@ -53,12 +43,15 @@ func Call2(arg1, arg2 string) func() {
 	return traceCall(arg1, arg2)
 }
 
+// Call records a function call in the tracing log, both when entering and
+// when leaving the function.
+//
+// Usage:
+//  if trace.Tracing {
+//      defer trace.Call(arg1, arg2, trace.Result(result1), trace.Result(result2))()
+// }
 func Call(args ...interface{}) func() {
 	return traceCall(args...)
-}
-
-type ref struct {
-	intf interface{}
 }
 
 // http://stackoverflow.com/questions/13476349/check-for-nil-and-nil-interface-in-go
@@ -69,19 +62,19 @@ func isNil(a interface{}) bool {
 	return a == nil || reflect.ValueOf(a).IsNil()
 }
 
-func argsStr(args ...interface{}) string {
-	argsStr := ""
-	for i, arg := range args {
-		if i != 0 {
-			argsStr += ", "
+func argsStr(args []interface{}) string {
+	rv := ""
+	for _, arg := range args {
+		if rv != "" {
+			rv += ", "
 		}
 		if str, ok := arg.(fmt.Stringer); ok && !isNil(str) {
-			argsStr += str.String()
+			rv += str.String()
 		} else {
-			argsStr += fmt.Sprintf("%#v", arg)
+			rv += fmt.Sprintf("%#v", arg)
 		}
 	}
-	return argsStr
+	return rv
 }
 
 func traceIndent() string {
@@ -104,11 +97,49 @@ func traceCall(args ...interface{}) func() {
 		}
 	}
 	indent := traceIndent()
-	io.WriteString(Out, fmt.Sprintf("TRACE: %s+ %s(%s)\n", indent, funcname, argsStr(args...)))
+	io.WriteString(Out, fmt.Sprintf("TRACE: %s+ %s(%s)\n", indent, funcname, argsStr(withoutResults(args))))
 	traceDepth++
 
 	return func() {
 		traceDepth--
-		io.WriteString(Out, fmt.Sprintf("TRACE: %s- %s(%s)\n", indent, funcname, argsStr(args...)))
+		io.WriteString(Out, fmt.Sprintf("TRACE: %s- %s(%s)\n", indent, funcname, argsStr(withResults(args))))
 	}
+}
+
+type result struct {
+	pointer interface{}
+}
+
+// Result marks an argument as a result and is only logged when the function returns.
+func Result(rv interface{}) result {
+	if reflect.ValueOf(rv).Kind() != reflect.Ptr {
+		panic(fmt.Sprintf("Result must be called with a pointer to the result, not %#v.", rv))
+	}
+	return result{rv}
+}
+
+func withoutResults(args []interface{}) []interface{} {
+	for i, arg := range args {
+		if _, ok := arg.(result); ok {
+			return args[0:i]
+		}
+	}
+	return args
+}
+
+func withResults(args []interface{}) []interface{} {
+	for i, arg := range args {
+		if _, ok := arg.(result); ok {
+			var awr []interface{}
+			awr = append(awr, args[0:i]...)
+			awr = append(awr, "=>")
+			for _, res := range args[i:] {
+				pointer := reflect.ValueOf(res.(result).pointer)
+				actual := reflect.Indirect(pointer).Interface()
+				awr = append(awr, actual)
+			}
+			return awr
+		}
+	}
+	return args
 }

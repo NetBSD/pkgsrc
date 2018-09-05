@@ -45,10 +45,10 @@ func (lc *LicenseChecker) Check(value string, op MkOperator) {
 }
 
 func (lc *LicenseChecker) checkLicenseName(license string) {
-	var licenseFile string
+	licenseFile := ""
 	if G.Pkg != nil {
-		if licenseFileValue, ok := G.Pkg.varValue("LICENSE_FILE"); ok {
-			licenseFile = G.Pkg.File(lc.MkLine.ResolveVarsInRelativePath(licenseFileValue, false))
+		if mkline := G.Pkg.vars.FirstDefinition("LICENSE_FILE"); mkline != nil {
+			licenseFile = G.Pkg.File(mkline.ResolveVarsInRelativePath(mkline.Value(), false))
 		}
 	}
 	if licenseFile == "" {
