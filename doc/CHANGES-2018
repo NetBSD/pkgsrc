@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3928 2018/09/05 05:54:51 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3929 2018/09/05 06:49:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5529,3 +5529,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-meson to 0.47.2 [prlw1 2018-09-04]
 	Updated devel/p5-Pegex to 0.67 [wiz 2018-09-05]
 	Updated mail/p5-Mail-Message to 3.007 [wiz 2018-09-05]
+	Updated www/curl to 7.61.1 [wiz 2018-09-05]
