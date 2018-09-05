@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.32 2018/04/05 12:32:53 adam Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.33 2018/09/05 08:22:46 adam Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -9,7 +9,7 @@
 # PYTHON_VERSIONED_DEPENDENCIES
 #       The Python package which should be added as a dependency.
 #
-#       Possible values: Pmw X dialog flup ipython jsonlib python-digest
+#       Possible values: Pmw X cherrypy dialog ipython jsonlib python-digest
 #       Default: (nothing)
 #
 
@@ -18,8 +18,8 @@
 _SUPPORTED_PACKAGES=	# empty
 _SUPPORTED_PACKAGES+=	Pmw x11/py-Pmw x11/py-Pmw2
 _SUPPORTED_PACKAGES+=	X textproc/py-X2 textproc/py-X
+_SUPPORTED_PACKAGES+=	cherrypy www/py-cherrypy17 www/py-cherrypy
 _SUPPORTED_PACKAGES+=	dialog devel/py-dialog2 devel/py-dialog
-_SUPPORTED_PACKAGES+=	flup www/py-flup www/py-flup3
 _SUPPORTED_PACKAGES+=	ipython devel/py-ipython5 devel/py-ipython
 _SUPPORTED_PACKAGES+=	jsonlib textproc/py-jsonlib textproc/py-jsonlib3
 _SUPPORTED_PACKAGES+=	python-digest www/py-python-digest www/py-python3-digest
