@@ -10,7 +10,8 @@ func (s *Suite) Test_Alternatives_PLIST(c *check.C) {
 		"sbin/sendmail @PREFIX@/sbin/sendmail.postfix@POSTFIXVER@",
 		"sbin/sendmail @PREFIX@/sbin/sendmail.exim@EXIMVER@",
 		"bin/echo bin/gnu-echo",
-		"bin/editor bin/vim -e")
+		"bin/editor bin/vim -e",
+		"invalid")
 
 	G.Pkg = NewPackage(".")
 	G.Pkg.PlistFiles["bin/echo"] = true
@@ -24,5 +25,20 @@ func (s *Suite) Test_Alternatives_PLIST(c *check.C) {
 		"NOTE: ALTERNATIVES:1: @PREFIX@/ can be omitted from the file name.",
 		"NOTE: ALTERNATIVES:2: @PREFIX@/ can be omitted from the file name.",
 		"ERROR: ALTERNATIVES:3: Alternative wrapper \"bin/echo\" must not appear in the PLIST.",
-		"ERROR: ALTERNATIVES:3: Alternative implementation \"bin/gnu-echo\" must appear in the PLIST.")
+		"ERROR: ALTERNATIVES:3: Alternative implementation \"bin/gnu-echo\" must appear in the PLIST.",
+		"ERROR: ALTERNATIVES:5: Invalid ALTERNATIVES line \"invalid\".")
+}
+
+func (s *Suite) Test_CheckfileAlternatives__empty(c *check.C) {
+	t := s.Init(c)
+
+	t.Chdir("category/package")
+	t.SetupFileLines("ALTERNATIVES")
+
+	G.Pkg = NewPackage(".")
+
+	CheckfileAlternatives("ALTERNATIVES", G.Pkg.PlistFiles)
+
+	t.CheckOutputLines(
+		"ERROR: ALTERNATIVES: Must not be empty.")
 }
