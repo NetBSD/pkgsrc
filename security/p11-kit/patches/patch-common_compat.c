@@ -1,7 +1,8 @@
-$NetBSD: patch-common_compat.c,v 1.2 2018/09/02 07:49:51 tnn Exp $
+$NetBSD: patch-common_compat.c,v 1.3 2018/09/05 08:34:10 prlw1 Exp $
 
 - Hide getauxval() symbol because the implementation is incomplete
   and breaks for example openssl on NetBSD/evbarm
+  https://github.com/p11-glue/p11-kit/issues/192
 - Avoid /proc section on Darwin.
 
 --- common/compat.c.orig	2018-08-10 09:54:46.000000000 +0000
