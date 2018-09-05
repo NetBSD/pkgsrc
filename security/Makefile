@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.686 2018/08/28 11:47:52 adam Exp $
+# $NetBSD: Makefile,v 1.687 2018/09/05 09:21:51 adam Exp $
 #
 
 COMMENT=	Security tools
@@ -433,8 +433,6 @@ SUBDIR+=	py-nacl
 SUBDIR+=	py-ndg_httpsclient
 SUBDIR+=	py-ntlm-auth
 SUBDIR+=	py-oath
-SUBDIR+=	py-oauth
-SUBDIR+=	py-oauth2
 SUBDIR+=	py-oauth2client
 SUBDIR+=	py-oauthlib
 SUBDIR+=	py-openid
