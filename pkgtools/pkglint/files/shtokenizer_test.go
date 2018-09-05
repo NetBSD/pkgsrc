@@ -222,10 +222,24 @@ func (s *Suite) Test_ShTokenizer_ShAtom(c *check.C) {
 		dquot("s,\\$$sysconfdir/jabberd,\\$$sysconfdir,g"),
 		word("\""))
 
-	check("echo $$,$$/",
+	check("echo $$, $$- $$/ $$; $$| $$,$$/$$;$$-",
 		word("echo"),
 		space,
-		word("$$,$$/"))
+		word("$$,"),
+		space,
+		word("$$-"),
+		space,
+		word("$$/"),
+		space,
+		word("$$"),
+		semicolon,
+		space,
+		word("$$"),
+		pipe,
+		space,
+		word("$$,$$/$$"),
+		semicolon,
+		word("$$-"))
 
 	rest = checkRest("COMMENT=\t\\Make $$$$ fast\"",
 		word("COMMENT="),

@@ -139,25 +139,27 @@ func isCommitted(fname string) bool {
 
 func isLocallyModified(fname string) bool {
 	lines := loadCvsEntries(fname)
-	needle := "/" + path.Base(fname) + "/"
+	if len(lines) == 0 {
+		return false
+	}
+
+	baseName := path.Base(fname)
 	for _, line := range lines {
-		if hasPrefix(line.Text, needle) {
-			cvsModTime, err := time.Parse(time.ANSIC, strings.Split(line.Text, "/")[3])
-			if err != nil {
-				return false
-			}
+		fields := strings.Split(line.Text, "/")
+		if 3 < len(fields) && fields[1] == baseName {
 			st, err := os.Stat(fname)
 			if err != nil {
-				return false
+				return true
 			}
 
-			// https://msdn.microsoft.com/en-us/library/windows/desktop/ms724290(v=vs.85).aspx
-			// (System Services > Windows System Information > Time > About Time > File Times)
-			delta := cvsModTime.Unix() - st.ModTime().Unix()
+			// According to http://cvsman.com/cvs-1.12.12/cvs_19.php, format both timestamps.
+			cvsModTime := fields[3]
+			fsModTime := st.ModTime().Format(time.ANSIC)
 			if trace.Tracing {
-				trace.Stepf("cvs.time=%v fs.time=%v delta=%v", cvsModTime, st.ModTime(), delta)
+				trace.Stepf("cvs.time=%q fs.time=%q", cvsModTime, st.ModTime())
 			}
-			return !(-2 <= delta && delta <= 2)
+
+			return cvsModTime != fsModTime
 		}
 	}
 	return false
@@ -419,18 +421,18 @@ func NewScope() Scope {
 }
 
 // Define marks the variable and its canonicalized form as defined.
-func (s *Scope) Define(varname string, line MkLine) {
+func (s *Scope) Define(varname string, mkline MkLine) {
 	if s.defined[varname] == nil {
-		s.defined[varname] = line
+		s.defined[varname] = mkline
 		if trace.Tracing {
-			trace.Step2("Defining %q in line %s", varname, line.Linenos())
+			trace.Step2("Defining %q in line %s", varname, mkline.Linenos())
 		}
 	}
 	varcanon := varnameCanon(varname)
 	if varcanon != varname && s.defined[varcanon] == nil {
-		s.defined[varcanon] = line
+		s.defined[varcanon] = mkline
 		if trace.Tracing {
-			trace.Step2("Defining %q in line %s", varcanon, line.Linenos())
+			trace.Step2("Defining %q in line %s", varcanon, mkline.Linenos())
 		}
 	}
 }
@@ -454,6 +456,9 @@ func (s *Scope) Use(varname string, line MkLine) {
 
 // Defined tests whether the variable is defined.
 // It does NOT test the canonicalized variable name.
+//
+// Even if Defined returns true, FirstDefinition doesn't necessarily return true
+// since the latter ignores the default definitions from vardefs.go, keyword dummyVardefMkline.
 func (s *Scope) Defined(varname string) bool {
 	return s.defined[varname] != nil
 }
@@ -490,12 +495,32 @@ func (s *Scope) UsedSimilar(varname string) bool {
 	return s.used[varnameCanon(varname)] != nil
 }
 
+// FirstDefinition returns the line in which the variable has been defined first.
+// Having multiple definitions is typical in the branches of "if" statements.
 func (s *Scope) FirstDefinition(varname string) MkLine {
-	return s.defined[varname]
+	mkline := s.defined[varname]
+	if mkline != nil && mkline.IsVarassign() {
+		return mkline
+	}
+	return nil // See NewPackage and G.Pkgsrc.UserDefinedVars
 }
 
 func (s *Scope) FirstUse(varname string) MkLine {
 	return s.used[varname]
+}
+
+func (s *Scope) Value(varname string) (value string, found bool) {
+	mkline := s.FirstDefinition(varname)
+	if mkline != nil {
+		return mkline.Value(), true
+	}
+	return "", false
+}
+
+func (s *Scope) DefineAll(other Scope) {
+	for varname, mkline := range other.defined {
+		s.Define(varname, mkline)
+	}
 }
 
 // The MIT License (MIT)
@@ -611,12 +636,12 @@ func (s *RedundantScope) Handle(mkline MkLine) {
 		value := mkline.Value()
 		valueNovar := mkline.WithoutMakeVariables(value)
 		if op == opAssignEval && value == valueNovar {
-			op = opAssign // They are effectively the same in this case.
+			op = opAssign // The two operators are effectively the same in this case.
 		}
 		existing, found := s.vars[varname]
 		if !found {
 			if op == opAssignShell || op == opAssignEval {
-				s.vars[varname] = nil
+				s.vars[varname] = nil // Won't be checked further.
 			} else {
 				if op == opAssignAppend {
 					value = " " + value
@@ -639,9 +664,8 @@ func (s *RedundantScope) Handle(mkline MkLine) {
 				if s.OnIgnore != nil {
 					s.OnIgnore(existing.mkline, mkline)
 				}
-			case opAssignShell:
-			case opAssignEval:
-				s.vars[varname] = nil
+			case opAssignShell, opAssignEval:
+				s.vars[varname] = nil // Won't be checked further.
 			}
 		}
 
@@ -655,6 +679,14 @@ func (s *RedundantScope) Handle(mkline MkLine) {
 	}
 }
 
-func (s *RedundantScope) IsConditional(varname string) bool {
-	return s.vars[varname] != nil
+func IsPrefs(fileName string) bool {
+	switch path.Base(fileName) {
+	case "bsd.prefs.mk",
+		"bsd.fast.prefs.mk",
+		"bsd.builtin.mk", // mk/buildlink3/bsd.builtin.mk
+		"pkgconfig-builtin.mk",
+		"bsd.options.mk":
+		return true
+	}
+	return false
 }
