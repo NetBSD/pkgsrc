@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3939 2018/09/05 17:56:33 rillig Exp $
+$NetBSD: CHANGES-2018,v 1.3940 2018/09/05 19:34:19 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5544,3 +5544,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/firefox to 62.0 [ryoon 2018-09-05]
 	Updated www/firefox-l10n to 62.0 [ryoon 2018-09-05]
 	Updated pkgtools/pkglint to 5.6.2 [rillig 2018-09-05]
+	Updated security/sqlmap to 1.2.9 [leot 2018-09-05]
