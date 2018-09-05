@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1339 2018/08/09 11:03:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.1340 2018/09/05 08:21:22 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -612,6 +612,7 @@ SUBDIR+=	py-cfscrape
 SUBDIR+=	py-channels
 SUBDIR+=	py-cheroot
 SUBDIR+=	py-cherrypy
+SUBDIR+=	py-cherrypy17
 SUBDIR+=	py-clearsilver
 SUBDIR+=	py-cloudfiles
 SUBDIR+=	py-cookies
@@ -694,7 +695,6 @@ SUBDIR+=	py-flask-user
 SUBDIR+=	py-flask-webpack
 SUBDIR+=	py-flask-wtf
 SUBDIR+=	py-flup
-SUBDIR+=	py-flup3
 SUBDIR+=	py-furl
 SUBDIR+=	py-gdata
 SUBDIR+=	py-genshi
