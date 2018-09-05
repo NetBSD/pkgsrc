@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3930 2018/09/05 08:34:32 prlw1 Exp $
+$NetBSD: CHANGES-2018,v 1.3931 2018/09/05 08:56:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5531,3 +5531,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/p5-Mail-Message to 3.007 [wiz 2018-09-05]
 	Updated www/curl to 7.61.1 [wiz 2018-09-05]
 	Updated security/p11-kit to 0.23.14 [prlw1 2018-09-05]
+	Added www/py-cherrypy17 version 17.3.0 [adam 2018-09-05]
+	Updated www/py-flup to 1.0.3 [adam 2018-09-05]
+	Removed www/py-flup3 successor www/py-flup [adam 2018-09-05]
