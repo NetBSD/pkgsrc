@@ -5,7 +5,7 @@ import "gopkg.in/check.v1"
 func (s *Suite) Test_ChecklinesOptionsMk(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("-Wno-space")
+	t.SetupCommandLine("-Wall,no-space")
 	t.SetupVartypes()
 	t.SetupOption("mc-charset", "")
 	t.SetupOption("mysql", "")
@@ -31,6 +31,8 @@ func (s *Suite) Test_ChecklinesOptionsMk(c *check.C) {
 		"",
 		".include \"../../mk/bsd.options.mk\"",
 		"",
+		"PKGNAME?=  default-pkgname-1.",
+		"",
 		".if !empty(PKG_OPTIONS:Mx11)",
 		".endif",
 		"",
@@ -52,10 +54,10 @@ func (s *Suite) Test_ChecklinesOptionsMk(c *check.C) {
 	ChecklinesOptionsMk(mklines)
 
 	t.CheckOutputLines(
-		"WARN: ~/category/package/options.mk:16: Unknown option \"undeclared\".",
-		"NOTE: ~/category/package/options.mk:19: The positive branch of the .if/.else should be the one where the option is set.",
+		"WARN: ~/category/package/options.mk:18: Unknown option \"undeclared\".",
+		"NOTE: ~/category/package/options.mk:21: The positive branch of the .if/.else should be the one where the option is set.",
 		"WARN: ~/category/package/options.mk:6: Option \"mc-charset\" should be handled below in an .if block.",
-		"WARN: ~/category/package/options.mk:16: Option \"undeclared\" is handled but not added to PKG_SUPPORTED_OPTIONS.")
+		"WARN: ~/category/package/options.mk:18: Option \"undeclared\" is handled but not added to PKG_SUPPORTED_OPTIONS.")
 }
 
 func (s *Suite) Test_ChecklinesOptionsMk__unexpected_line(c *check.C) {

@@ -20,20 +20,20 @@ import (
 // can be used in Makefiles without triggering warnings about typos.
 func (src *Pkgsrc) InitVartypes() {
 
-	acl := func(varname string, kindOfList KindOfList, checker *BasicType, aclentries string) {
-		m := mustMatch(varname, `^([A-Z_.][A-Z0-9_]*)(|\*|\.\*)$`)
+	acl := func(varname string, kindOfList KindOfList, checker *BasicType, aclEntries string) {
+		m := mustMatch(varname, `^([A-Z_.][A-Z0-9_]*|@)(|\*|\.\*)$`)
 		varbase, varparam := m[1], m[2]
 
-		vtype := &Vartype{kindOfList, checker, parseACLEntries(varname, aclentries), false}
+		vartype := &Vartype{kindOfList, checker, parseACLEntries(varname, aclEntries), false}
 
 		if src.vartypes == nil {
 			src.vartypes = make(map[string]*Vartype)
 		}
 		if varparam == "" || varparam == "*" {
-			src.vartypes[varbase] = vtype
+			src.vartypes[varbase] = vartype
 		}
 		if varparam == "*" || varparam == ".*" {
-			src.vartypes[varbase+".*"] = vtype
+			src.vartypes[varbase+".*"] = vartype
 		}
 	}
 
@@ -247,11 +247,16 @@ func (src *Pkgsrc) InitVartypes() {
 	usr("BIN_INSTALL_FLAGS", lkShell, BtShellWord)
 	usr("LOCALPATCHES", lkNone, BtPathname)
 
-	// The remaining variables from mk/defaults/mk.conf follow the
-	// naming conventions from MkLine.VariableType, furthermore
-	// they may be redefined by packages. Therefore they cannot be
-	// defined as user-defined.
 	if false {
+		// The remaining variables from mk/defaults/mk.conf may be overridden by packages.
+		// Therefore they need a separate definition of "user-settable".
+		usr := func(varname string, kindOfList KindOfList, checker *BasicType) {
+			acl(varname, kindOfList, checker, ""+
+				"Makefile: set, use; "+
+				"buildlink3.mk, builtin.mk:; "+
+				"Makefile.*, *.mk: default, set, use; "+
+				"*: use-loadtime, use")
+		}
 		usr("ACROREAD_FONTPATH", lkNone, BtPathlist)
 		usr("AMANDA_USER", lkNone, BtUserGroupName)
 		usr("AMANDA_TMP", lkNone, BtPathname)
@@ -444,6 +449,7 @@ func (src *Pkgsrc) InitVartypes() {
 
 	acl(".CURDIR", lkNone, BtPathname, "buildlink3.mk:; *: use, use-loadtime")
 	acl(".TARGET", lkNone, BtPathname, "buildlink3.mk:; *: use, use-loadtime")
+	acl("@", lkNone, BtPathname, "buildlink3.mk:; *: use, use-loadtime")
 	acl("ALL_ENV", lkShell, BtShellWord, "")
 	acl("ALTERNATIVES_FILE", lkNone, BtFilename, "")
 	acl("ALTERNATIVES_SRC", lkShell, BtPathname, "")
@@ -947,7 +953,7 @@ func (src *Pkgsrc) InitVartypes() {
 	pkglist("PKG_SYSCONFDIR_PERMS", lkShell, BtPerms)
 	sys("PKG_SYSCONFBASEDIR", lkNone, BtPathname)
 	pkg("PKG_SYSCONFSUBDIR", lkNone, BtPathname)
-	acl("PKG_SYSCONFVAR", lkNone, BtIdentifier, "") // FIXME: name/type mismatch.
+	acl("PKG_SYSCONFVAR", lkNone, BtIdentifier, "")
 	acl("PKG_UID", lkNone, BtInteger, "Makefile: set")
 	acl("PKG_USERS", lkShell, BtShellWord, "Makefile: set, append")
 	pkg("PKG_USERS_VARS", lkShell, BtVariableName)
@@ -1107,42 +1113,25 @@ func (src *Pkgsrc) InitVartypes() {
 }
 
 func enum(values string) *BasicType {
-	vmap := make(map[string]bool)
+	valueMap := make(map[string]bool)
 	for _, value := range splitOnSpace(values) {
-		vmap[value] = true
+		valueMap[value] = true
 	}
 	name := "enum: " + values + " " // See IsEnum
-	return &BasicType{name, func(cv *VartypeCheck) {
-		if cv.Op == opUseMatch {
-			if !vmap[cv.Value] && cv.Value == cv.ValueNoVar {
-				canMatch := false
-				for value := range vmap {
-					if ok, err := path.Match(cv.Value, value); err != nil {
-						cv.Line.Warnf("Invalid match pattern %q.", cv.Value)
-					} else if ok {
-						canMatch = true
-					}
-				}
-				if !canMatch {
-					cv.Line.Warnf("The pattern %q cannot match any of { %s } for %s.", cv.Value, values, cv.Varname)
-				}
-			}
-			return
-		}
-
-		if cv.Value == cv.ValueNoVar && !vmap[cv.Value] {
-			cv.Line.Warnf("%q is not valid for %s. Use one of { %s } instead.", cv.Value, cv.Varname, values)
-		}
-	}}
+	basicType := &BasicType{name, nil}
+	basicType.checker = func(check *VartypeCheck) {
+		check.Enum(valueMap, basicType)
+	}
+	return basicType
 }
 
-func parseACLEntries(varname string, aclentries string) []ACLEntry {
-	if aclentries == "" {
+func parseACLEntries(varname string, aclEntries string) []ACLEntry {
+	if aclEntries == "" {
 		return nil
 	}
 	var result []ACLEntry
 	prevperms := "(first)"
-	for _, arg := range strings.Split(aclentries, "; ") {
+	for _, arg := range strings.Split(aclEntries, "; ") {
 		var globs, perms string
 		if fields := strings.SplitN(arg, ": ", 2); len(fields) == 2 {
 			globs, perms = fields[0], fields[1]
