@@ -42,13 +42,15 @@ func (s *Suite) Test_ChecklinesDistinfo_global_hash_mismatch(c *check.C) {
 	lines := t.NewLines("distinfo",
 		RcsID,
 		"",
-		"SHA512 (pkgname-1.0.tar.gz) = 12341234")
+		"SHA512 (pkgname-1.0.tar.gz) = 12341234",
+		"SHA512 (pkgname-1.1.tar.gz) = 12341234")
 
 	ChecklinesDistinfo(lines)
 
 	t.CheckOutputLines(
 		"ERROR: distinfo:3: The hash SHA512 for pkgname-1.0.tar.gz is 12341234, which differs from Some-512-bit-hash in other/distinfo:7.",
-		"ERROR: distinfo:EOF: Expected SHA1, RMD160, SHA512, Size checksums for \"pkgname-1.0.tar.gz\", got SHA512.")
+		"ERROR: distinfo:4: Expected SHA1, RMD160, SHA512, Size checksums for \"pkgname-1.0.tar.gz\", got SHA512.",
+		"ERROR: distinfo:EOF: Expected SHA1, RMD160, SHA512, Size checksums for \"pkgname-1.1.tar.gz\", got SHA512.")
 }
 
 func (s *Suite) Test_ChecklinesDistinfo_uncommitted_patch(c *check.C) {
@@ -183,4 +185,16 @@ func (s *Suite) Test_ChecklinesDistinfo__missing_php_patches(c *check.C) {
 	G.CheckDirent(t.File("archivers/php-zlib"))
 
 	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_distinfoLinesChecker_checkPatchSha1(c *check.C) {
+	t := s.Init(c)
+
+	G.Pkg = NewPackage(t.File("category/package"))
+
+	checker := &distinfoLinesChecker{}
+	checker.checkPatchSha1(dummyLine, "patch-nonexistent", "distinfo-sha1")
+
+	t.CheckOutputLines(
+		"ERROR: patch-nonexistent does not exist.")
 }

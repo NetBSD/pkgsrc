@@ -28,14 +28,11 @@ func (s *Suite) Test_InitVartypes__enumFrom(c *check.C) {
 		"USE_LANGUAGES+=		c++",
 		".  endif",
 		".endfor")
-	mklines := t.SetupFileMkLines("Makefile",
-		MkRcsID,
-		"")
 
 	t.SetupVartypes()
 
 	checkEnumValues := func(varname, values string) {
-		vartype := mklines.mklines[1].VariableType(varname).String()
+		vartype := G.Pkgsrc.VariableType(varname).String()
 		c.Check(vartype, equals, values)
 	}
 

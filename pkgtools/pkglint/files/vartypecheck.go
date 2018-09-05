@@ -9,8 +9,10 @@ import (
 )
 
 type VartypeCheck struct {
-	MkLine     MkLine
-	Line       Line
+	MkLine MkLine
+	Line   Line
+
+	// The name of the variable being checked. In some cases it may also be the "description" of the variable.
 	Varname    string
 	Op         MkOperator
 	Value      string
@@ -29,38 +31,6 @@ func NewVartypeCheckValue(vc *VartypeCheck, value string) *VartypeCheck {
 	copy.Value = value
 	copy.ValueNoVar = valueNoVar
 	return &copy
-}
-
-type MkOperator uint8
-
-const (
-	opAssign        MkOperator = iota // =
-	opAssignShell                     // !=
-	opAssignEval                      // :=
-	opAssignAppend                    // +=
-	opAssignDefault                   // ?=
-	opUseCompare                      // A variable is compared to a value, e.g. in a condition.
-	opUseMatch                        // A variable is matched using the :M or :N modifier.
-)
-
-func NewMkOperator(op string) MkOperator {
-	switch op {
-	case "=":
-		return opAssign
-	case "!=":
-		return opAssignShell
-	case ":=":
-		return opAssignEval
-	case "+=":
-		return opAssignAppend
-	case "?=":
-		return opAssignDefault
-	}
-	return opAssign
-}
-
-func (op MkOperator) String() string {
-	return [...]string{"=", "!=", ":=", "+=", "?=", "use", "use-loadtime", "use-match"}[op]
 }
 
 const (
@@ -329,7 +299,7 @@ func (cv *VartypeCheck) DependencyWithPath() {
 		MkLineChecker{cv.MkLine}.CheckRelativePkgdir(relpath)
 
 		switch pkg {
-		case "msgfmt", "gettext":
+		case "gettext":
 			line.Warnf("Please use USE_TOOLS+=msgfmt instead of this dependency.")
 		case "perl5":
 			line.Warnf("Please use USE_TOOLS+=perl:run instead of this dependency.")
@@ -401,6 +371,30 @@ func (cv *VartypeCheck) EmulPlatform() {
 	}
 }
 
+func (cv *VartypeCheck) Enum(vmap map[string]bool, basicType *BasicType) {
+	if cv.Op == opUseMatch {
+		if !vmap[cv.Value] && cv.Value == cv.ValueNoVar {
+			canMatch := false
+			for value := range vmap {
+				if ok, err := path.Match(cv.Value, value); err != nil {
+					cv.Line.Warnf("Invalid match pattern %q.", cv.Value)
+					break
+				} else if ok {
+					canMatch = true
+				}
+			}
+			if !canMatch {
+				cv.Line.Warnf("The pattern %q cannot match any of { %s } for %s.", cv.Value, basicType.AllowedEnums(), cv.Varname)
+			}
+		}
+		return
+	}
+
+	if cv.Value == cv.ValueNoVar && !vmap[cv.Value] {
+		cv.Line.Warnf("%q is not valid for %s. Use one of { %s } instead.", cv.Value, cv.Varname, basicType.AllowedEnums())
+	}
+}
+
 func (cv *VartypeCheck) FetchURL() {
 	MkLineChecker{cv.MkLine}.CheckVartypePrimitive(cv.Varname, BtURL, cv.Op, cv.Value, cv.MkComment, cv.Guessed)
 
@@ -428,7 +422,8 @@ func (cv *VartypeCheck) FetchURL() {
 	}
 }
 
-// See Pathname
+// See Pathname.
+//
 // See http://www.opengroup.org/onlinepubs/009695399/basedefs/xbd_chap03.html#tag_03_169
 func (cv *VartypeCheck) Filename() {
 	switch {
@@ -442,10 +437,12 @@ func (cv *VartypeCheck) Filename() {
 }
 
 func (cv *VartypeCheck) Filemask() {
-	if cv.Op == opUseMatch {
-		return
-	}
-	if !matches(cv.ValueNoVar, `^[-0-9A-Za-z._~+%*?]*$`) {
+	switch {
+	case cv.Op == opUseMatch:
+		break
+	case contains(cv.ValueNoVar, "/"):
+		cv.Line.Warnf("A filename mask should not contain a slash.")
+	case !matches(cv.ValueNoVar, `^[#%*+\-./0-9?@A-Z\[\]_a-z~]*$`):
 		cv.Line.Warnf("%q is not a valid filename mask.", cv.Value)
 	}
 }
@@ -454,7 +451,7 @@ func (cv *VartypeCheck) FileMode() {
 	switch {
 	case cv.Value != "" && cv.ValueNoVar == "":
 		// Fine.
-	case matches(cv.Value, `^[0-7]{3,4}`):
+	case matches(cv.Value, `^[0-7]{3,4}$`):
 		// Fine.
 	default:
 		cv.Line.Warnf("Invalid file mode %q.", cv.Value)
@@ -467,9 +464,10 @@ func (cv *VartypeCheck) Homepage() {
 	if m, wrong, sitename, subdir := match3(cv.Value, `^(\$\{(MASTER_SITE\w+)(?::=([\w\-/]+))?\})`); m {
 		baseURL := G.Pkgsrc.MasterSiteVarToURL[sitename]
 		if sitename == "MASTER_SITES" && G.Pkg != nil {
-			masterSites, _ := G.Pkg.varValue("MASTER_SITES")
-			if !containsVarRef(masterSites) {
-				baseURL = masterSites
+			if mkline := G.Pkg.vars.FirstDefinition("MASTER_SITES"); mkline != nil {
+				if masterSites := mkline.Value(); !containsVarRef(masterSites) {
+					baseURL = masterSites
+				}
 			}
 		}
 		fixedURL := baseURL + subdir
@@ -540,7 +538,7 @@ func (cv *VartypeCheck) LdFlag() {
 	case hasPrefix(ldflag, "-"):
 		cv.Line.Warnf("Unknown linker flag %q.", cv.Value)
 	default:
-		cv.Line.Warnf("Linker flag %q should start with a hypen.", cv.Value)
+		cv.Line.Warnf("Linker flag %q should start with a hyphen.", cv.Value)
 	}
 }
 
@@ -700,7 +698,7 @@ func (cv *VartypeCheck) Pathmask() {
 	if cv.Op == opUseMatch {
 		return
 	}
-	if !matches(cv.ValueNoVar, `^[#\-0-9A-Za-z._~+%*?/\[\]]*`) {
+	if !matches(cv.ValueNoVar, `^[#%*+\-./0-9?@A-Z\[\]_a-z~]*$`) {
 		cv.Line.Warnf("%q is not a valid pathname mask.", cv.Value)
 	}
 	CheckLineAbsolutePathname(cv.Line, cv.Value)
@@ -938,16 +936,16 @@ func (cv *VartypeCheck) ShellCommand() {
 		return
 	}
 	setE := true
-	NewShellLine(cv.MkLine).CheckShellCommand(cv.Value, &setE)
+	NewShellLine(cv.MkLine).CheckShellCommand(cv.Value, &setE, RunTime)
 }
 
 // Zero or more shell commands, each terminated with a semicolon.
 func (cv *VartypeCheck) ShellCommands() {
-	NewShellLine(cv.MkLine).CheckShellCommands(cv.Value)
+	NewShellLine(cv.MkLine).CheckShellCommands(cv.Value, RunTime)
 }
 
 func (cv *VartypeCheck) ShellWord() {
-	NewShellLine(cv.MkLine).CheckWord(cv.Value, true)
+	NewShellLine(cv.MkLine).CheckWord(cv.Value, true, RunTime)
 }
 
 func (cv *VartypeCheck) Stage() {
@@ -962,9 +960,10 @@ func (cv *VartypeCheck) Tool() {
 		// no warning for package-defined tool definitions
 
 	} else if m, toolname, tooldep := match2(cv.Value, `^([-\w]+|\[)(?::(\w+))?$`); m {
-		if G.Pkgsrc.Tools.ByName(toolname) == nil && (G.Mk == nil || G.Mk.toolRegistry.ByName(toolname) == nil) {
+		if tool, _ := G.Tool(toolname, RunTime); tool == nil {
 			cv.Line.Errorf("Unknown tool %q.", toolname)
 		}
+
 		switch tooldep {
 		case "", "bootstrap", "build", "pkgsrc", "run", "test":
 		default:
@@ -992,7 +991,10 @@ func (cv *VartypeCheck) URL() {
 
 	} else if m, _, host, _, _ := match4(value, `^(https?|ftp|gopher)://([-0-9A-Za-z.]+)(?::(\d+))?/([-%&+,./0-9:;=?@A-Z_a-z~]|#)*$`); m {
 		if matches(host, `(?i)\.NetBSD\.org$`) && !matches(host, `\.NetBSD\.org$`) {
-			line.Warnf("Please write NetBSD.org instead of %s.", host)
+			fix := line.Autofix()
+			fix.Warnf("Please write NetBSD.org instead of %s.", host)
+			fix.ReplaceRegex(`(?i)NetBSD\.org`, "NetBSD.org", 1)
+			fix.Apply()
 		}
 
 	} else if m, scheme, _, absPath := match3(value, `^([0-9A-Za-z]+)://([^/]+)(.*)$`); m {

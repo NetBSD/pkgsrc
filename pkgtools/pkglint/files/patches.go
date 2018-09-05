@@ -117,6 +117,7 @@ func (ck *PatchChecker) checkUnifiedDiff(patchedFile string) {
 
 	hasHunks := false
 	for ck.exp.AdvanceIfMatches(rePatchUniHunk) {
+		text := ck.exp.m[0]
 		hasHunks = true
 		linesToDel := toInt(ck.exp.Group(2), 1)
 		linesToAdd := toInt(ck.exp.Group(4), 1)
@@ -124,6 +125,7 @@ func (ck *PatchChecker) checkUnifiedDiff(patchedFile string) {
 			trace.Stepf("hunk -%d +%d", linesToDel, linesToAdd)
 		}
 		ck.checktextUniHunkCr()
+		ck.checktextRcsid(text)
 
 		for !ck.exp.EOF() && (linesToDel > 0 || linesToAdd > 0 || hasPrefix(ck.exp.CurrentLine().Text, "\\")) {
 			line := ck.exp.CurrentLine()
@@ -145,7 +147,7 @@ func (ck *PatchChecker) checkUnifiedDiff(patchedFile string) {
 			case hasPrefix(text, "\\"):
 				// \ No newline at end of file (or a translation of that message)
 			default:
-				line.Errorf("Invalid line in unified patch hunk")
+				line.Errorf("Invalid line in unified patch hunk: %s", text)
 				return
 			}
 		}
@@ -234,9 +236,9 @@ func (ck *PatchChecker) checklineAdded(addedText string, patchedFileType FileTyp
 	case ftShell, ftIgnore:
 		break
 	case ftMakefile:
-		checklineOtherAbsolutePathname(line, addedText)
+		ck.checklineOtherAbsolutePathname(line, addedText)
 	case ftSource:
-		checklineSourceAbsolutePathname(line, addedText)
+		ck.checklineSourceAbsolutePathname(line, addedText)
 	case ftConfigure:
 		if hasSuffix(addedText, ": Avoid regenerating within pkgsrc") {
 			line.Errorf("This code must not be included in patches.")
@@ -247,7 +249,7 @@ func (ck *PatchChecker) checklineAdded(addedText string, patchedFileType FileTyp
 				"mk/configure/gnu-configure.mk.")
 		}
 	default:
-		checklineOtherAbsolutePathname(line, addedText)
+		ck.checklineOtherAbsolutePathname(line, addedText)
 	}
 }
 
@@ -315,7 +317,7 @@ func (ft FileType) String() string {
 // This is used to select the proper subroutine for detecting absolute pathnames.
 func guessFileType(fname string) (fileType FileType) {
 	if trace.Tracing {
-		defer trace.Call(fname, "=>", &fileType)()
+		defer trace.Call(fname, trace.Result(&fileType))()
 	}
 
 	basename := path.Base(fname)
@@ -347,7 +349,7 @@ func guessFileType(fname string) (fileType FileType) {
 }
 
 // Looks for strings like "/dev/cd0" appearing in source code
-func checklineSourceAbsolutePathname(line Line, text string) {
+func (ck *PatchChecker) checklineSourceAbsolutePathname(line Line, text string) {
 	if !strings.ContainsAny(text, "\"'") {
 		return
 	}
@@ -369,7 +371,7 @@ func checklineSourceAbsolutePathname(line Line, text string) {
 	}
 }
 
-func checklineOtherAbsolutePathname(line Line, text string) {
+func (ck *PatchChecker) checklineOtherAbsolutePathname(line Line, text string) {
 	if trace.Tracing {
 		defer trace.Call1(text)()
 	}
@@ -379,12 +381,18 @@ func checklineOtherAbsolutePathname(line Line, text string) {
 
 	} else if m, before, path, _ := match3(text, `^(.*?)((?:/[\w.]+)*/(?:bin|dev|etc|home|lib|mnt|opt|proc|sbin|tmp|usr|var)\b[\w./\-]*)(.*)$`); m {
 		switch {
-		case hasSuffix(before, "@"): // Example: @PREFIX@/bin
-		case matches(before, `[)}]$`) && !matches(before, `DESTDIR[)}]$`): // Example: ${prefix}/bin
-		case matches(before, `\+\s*["']$`): // Example: prefix + '/lib'
-		case matches(before, `\$\w$`): // Example: libdir=$prefix/lib
-		case hasSuffix(before, "."): // Example: ../dir
-		// XXX new: case matches(before, `s.$`): // Example: sed -e s,/usr,@PREFIX@,
+		case matches(before, `[\w).@}]$`) && !matches(before, `DESTDIR.$`):
+			// Example: $prefix/bin
+			// Example: $(prefix)/bin
+			// Example: ../bin
+			// Example: @prefix@/bin
+			// Example: ${prefix}/bin
+
+		case matches(before, `\+\s*["']$`):
+			// Example: prefix + '/lib'
+
+		// XXX new: case matches(before, `\bs.$`): // Example: sed -e s,/usr,@PREFIX@,
+
 		default:
 			if trace.Tracing {
 				trace.Step1("before=%q", before)

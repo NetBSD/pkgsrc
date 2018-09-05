@@ -2,7 +2,7 @@ package main
 
 import "gopkg.in/check.v1"
 
-func (s *Suite) Test_CheckdirCategory_totally_broken(c *check.C) {
+func (s *Suite) Test_CheckdirCategory__totally_broken(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupVartypes()
@@ -32,7 +32,7 @@ func (s *Suite) Test_CheckdirCategory_totally_broken(c *check.C) {
 		"ERROR: ~/archivers/Makefile:4: The file should end here.")
 }
 
-func (s *Suite) Test_CheckdirCategory_invalid_comment(c *check.C) {
+func (s *Suite) Test_CheckdirCategory__invalid_comment(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupVartypes()
@@ -52,4 +52,34 @@ func (s *Suite) Test_CheckdirCategory_invalid_comment(c *check.C) {
 
 	t.CheckOutputLines(
 		"WARN: ~/archivers/Makefile:2: COMMENT contains invalid characters (U+005C U+0024 U+0024 U+0024 U+0024 U+0022).")
+}
+
+func (s *Suite) Test_CheckdirCategory__wip(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupPkgsrc()
+	t.SetupVartypes()
+	t.SetupFileLines("mk/misc/category.mk")
+	t.SetupFileLines("wip/package/Makefile")
+	t.SetupFileLines("wip/fs-only/Makefile")
+	t.SetupFileLines("wip/Makefile",
+		MkRcsID,
+		"COMMENT=\tCategory comment",
+		"",
+		"SUBDIR+=\tmk-only",
+		"#SUBDIR+=\tpackage",
+		"SUBDIR+=\tpackage",
+		"",
+		"wip-specific-target: .PHONY",
+		"\t${RUN}wip-specific-command",
+		"",
+		".include \"../mk/misc/category.mk\"")
+
+	G.CheckDirent(t.File("wip"))
+
+	t.CheckOutputLines(
+		"WARN: ~/wip/Makefile:5: \"package\" commented out without giving a reason.",
+		"ERROR: ~/wip/Makefile:6: \"package\" must only appear once.",
+		"ERROR: ~/wip/Makefile:4: \"fs-only\" exists in the file system, but not in the Makefile.",
+		"ERROR: ~/wip/Makefile:4: \"mk-only\" exists in the Makefile, but not in the file system.")
 }

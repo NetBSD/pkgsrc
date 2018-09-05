@@ -78,17 +78,9 @@ func (ck MkLineChecker) checkInclude() {
 			"that, both this one and the other package should include the",
 			"Makefile.common.")
 
-	case includefile == "../../mk/bsd.prefs.mk":
-		if path.Base(mkline.Filename) == "buildlink3.mk" {
+	case IsPrefs(includefile):
+		if path.Base(mkline.Filename) == "buildlink3.mk" && includefile == "../../mk/bsd.prefs.mk" {
 			mkline.Notef("For efficiency reasons, please include bsd.fast.prefs.mk instead of bsd.prefs.mk.")
-		}
-		if G.Pkg != nil {
-			G.Pkg.setSeenBsdPrefsMk()
-		}
-
-	case includefile == "../../mk/bsd.fast.prefs.mk", includefile == "../../mk/buildlink3/bsd.builtin.mk":
-		if G.Pkg != nil {
-			G.Pkg.setSeenBsdPrefsMk()
 		}
 
 	case hasSuffix(includefile, "/x11-links/buildlink3.mk"):
@@ -199,7 +191,7 @@ func (ck MkLineChecker) checkDirectiveFor(forVars map[string]bool, indentation *
 		guessed := true
 		for _, value := range splitOnSpace(values) {
 			if m, vname := match1(value, `^\$\{(.*)\}`); m {
-				vartype := mkline.VariableType(vname)
+				vartype := G.Pkgsrc.VariableType(vname)
 				if vartype != nil && !vartype.guessed {
 					guessed = false
 				}
@@ -268,7 +260,11 @@ func (ck MkLineChecker) checkDependencyRule(allowedTargets map[string]bool) {
 	}
 }
 
-func (ck MkLineChecker) checkVarassignDefPermissions() {
+// checkVarassignPermissions checks the permissions for the left-hand side
+// of a variable assignment line.
+//
+// See checkVarusePermissions.
+func (ck MkLineChecker) checkVarassignPermissions() {
 	if !G.opts.WarnPerm || G.Infrastructure {
 		return
 	}
@@ -279,7 +275,7 @@ func (ck MkLineChecker) checkVarassignDefPermissions() {
 	mkline := ck.MkLine
 	varname := mkline.Varname()
 	op := mkline.Op()
-	vartype := mkline.VariableType(varname)
+	vartype := G.Pkgsrc.VariableType(varname)
 	if vartype == nil {
 		if trace.Tracing {
 			trace.Step1("No type definition found for %q.", varname)
@@ -288,6 +284,15 @@ func (ck MkLineChecker) checkVarassignDefPermissions() {
 	}
 
 	perms := vartype.EffectivePermissions(mkline.Filename)
+
+	// E.g. USE_TOOLS:= ${USE_TOOLS:Nunwanted-tool}
+	if op == opAssignEval && perms&aclpAppend != 0 {
+		tokens := mkline.ValueTokens()
+		if len(tokens) == 1 && tokens[0].Varuse != nil && tokens[0].Varuse.varname == varname {
+			return
+		}
+	}
+
 	var needed ACLPermissions
 	switch op {
 	case opAssign, opAssignShell, opAssignEval:
@@ -341,13 +346,12 @@ func (ck MkLineChecker) CheckVaruse(varuse *MkVarUse, vuc *VarUseContext) {
 	}
 
 	varname := varuse.varname
-	vartype := mkline.VariableType(varname)
+	vartype := G.Pkgsrc.VariableType(varname)
 	switch {
 	case !G.opts.WarnExtra:
 	case vartype != nil && !vartype.guessed:
 		// Well-known variables are probably defined by the infrastructure.
 	case varIsUsed(varname):
-	case G.Mk != nil && G.Mk.forVars[varname]:
 	case containsVarRef(varname):
 	default:
 		mkline.Warnf("%s is used but not defined.", varname)
@@ -365,7 +369,14 @@ func (ck MkLineChecker) CheckVaruse(varuse *MkVarUse, vuc *VarUseContext) {
 			"This is a much clearer expression of the same thought.")
 	}
 
-	ck.CheckVarusePermissions(varname, vartype, vuc)
+	if varuse.varname == "@" {
+		ck.MkLine.Warnf("Please use %q instead of %q.", "${.TARGET}", "$@")
+		Explain(
+			"It is more readable and prevents confusion with the shell variable",
+			"of the same name.")
+	}
+
+	ck.checkVarusePermissions(varname, vartype, vuc)
 
 	if varname == "LOCALBASE" && !G.Infrastructure {
 		ck.WarnVaruseLocalbase()
@@ -381,7 +392,7 @@ func (ck MkLineChecker) CheckVaruse(varuse *MkVarUse, vuc *VarUseContext) {
 		ck.CheckVaruseShellword(varname, vartype, vuc, varuse.Mod(), needsQuoting)
 	}
 
-	if G.Pkgsrc.UserDefinedVars[varname] != nil && !G.Pkgsrc.IsBuildDef(varname) && !G.Mk.buildDefs[varname] {
+	if G.Pkgsrc.UserDefinedVars.Defined(varname) && !G.Pkgsrc.IsBuildDef(varname) && !G.Mk.buildDefs[varname] {
 		mkline.Warnf("The user-defined variable %s is used but not added to BUILD_DEFS.", varname)
 		Explain(
 			"When a pkgsrc package is built, many things can be configured by the",
@@ -392,7 +403,11 @@ func (ck MkLineChecker) CheckVaruse(varuse *MkVarUse, vuc *VarUseContext) {
 	}
 }
 
-func (ck MkLineChecker) CheckVarusePermissions(varname string, vartype *Vartype, vuc *VarUseContext) {
+// checkVarusePermissions checks the permissions for the right-hand side
+// of a variable assignment line.
+//
+// See checkVarassignPermissions.
+func (ck MkLineChecker) checkVarusePermissions(varname string, vartype *Vartype, vuc *VarUseContext) {
 	if !G.opts.WarnPerm {
 		return
 	}
@@ -432,52 +447,12 @@ func (ck MkLineChecker) CheckVarusePermissions(varname string, vartype *Vartype,
 		isIndirect = true
 	}
 
-	done := false
-	tool := G.Pkgsrc.Tools.ByVarname(varname)
-
-	if isLoadTime && tool != nil {
-		done = tool.Predefined && (G.Mk == nil || G.Mk.SeenBsdPrefsMk || G.Pkg == nil || G.Pkg.SeenBsdPrefsMk)
-
-		if !done && G.Pkg != nil && !G.Pkg.SeenBsdPrefsMk && G.Mk != nil && !G.Mk.SeenBsdPrefsMk {
-			mkline.Warnf("To use the tool %q at load time, bsd.prefs.mk has to be included before.", varname)
-			done = true
+	if isLoadTime {
+		if tool := G.ToolByVarname(varname, LoadTime); tool != nil {
+			ck.checkVaruseToolLoadTime(varname, tool)
+		} else {
+			ck.checkVaruseLoadTime(varname, isIndirect)
 		}
-
-		if !done && G.Pkg != nil {
-			usable, defined := G.Pkg.loadTimeTools[tool.Name]
-			if usable {
-				done = true
-			}
-			if defined && !usable {
-				mkline.Warnf("To use the tool %q at load time, it has to be added to USE_TOOLS before including bsd.prefs.mk.", varname)
-				done = true
-			}
-		}
-	}
-
-	if !done && isLoadTime && !isIndirect {
-		mkline.Warnf("%s should not be evaluated at load time.", varname)
-		Explain(
-			"Many variables, especially lists of something, get their values",
-			"incrementally.  Therefore it is generally unsafe to rely on their",
-			"value until it is clear that it will never change again.  This",
-			"point is reached when the whole package Makefile is loaded and",
-			"execution of the shell commands starts; in some cases earlier.",
-			"",
-			"Additionally, when using the \":=\" operator, each $$ is replaced",
-			"with a single $, so variables that have references to shell",
-			"variables or regular expressions are modified in a subtle way.")
-		done = true
-	}
-
-	if !done && isLoadTime && isIndirect {
-		mkline.Warnf("%s should not be evaluated indirectly at load time.", varname)
-		Explain(
-			"The variable on the left-hand side may be evaluated at load time,",
-			"but the variable on the right-hand side may not.  Because of the",
-			"assignment in this line, the variable might be used indirectly",
-			"at load time, before it is guaranteed to be properly initialized.")
-		done = true
 	}
 
 	if !perms.Contains(aclpUseLoadtime) && !perms.Contains(aclpUse) {
@@ -497,6 +472,69 @@ func (ck MkLineChecker) CheckVarusePermissions(varname string, vartype *Vartype,
 			"name in which the variable is used or defined.  The exact rules are",
 			"hard-coded into pkglint.  If they seem to be incorrect, please ask",
 			"on the tech-pkg@NetBSD.org mailing list.")
+	}
+}
+
+// checkVaruseToolLoadTime checks whether the tool ${varname} may be used at load time.
+func (ck MkLineChecker) checkVaruseToolLoadTime(varname string, tool *Tool) {
+	if tool.UsableAtLoadTime(G.Mk.Tools.SeenPrefs) {
+		return
+	}
+
+	if tool.Validity == AfterPrefsMk {
+		ck.MkLine.Warnf("To use the tool ${%s} at load time, bsd.prefs.mk has to be included before.", varname)
+		return
+	}
+
+	if path.Base(ck.MkLine.Filename) == "Makefile" {
+		pkgsrcTool := G.Pkgsrc.Tools.ByName(tool.Name)
+		if pkgsrcTool != nil && pkgsrcTool.Validity == Nowhere {
+			// The tool must have been added too late to USE_TOOLS,
+			// i.e. after bsd.prefs.mk has been included.
+			ck.MkLine.Warnf("To use the tool ${%s} at load time, it has to be added to USE_TOOLS before including bsd.prefs.mk.", varname)
+			return
+		}
+	}
+
+	ck.MkLine.Warnf("The tool ${%s} cannot be used at load time.", varname)
+	Explain(
+		"To use a tool at load time, it must be declared in the package",
+		"Makefile by adding it to USE_TOOLS.  After that, bsd.prefs.mk must",
+		"be included.  Adding the tool to USE_TOOLS at any later time has",
+		"no effect, which means that the tool can only be used at run time.",
+		"That's the rule for the package Makefiles.",
+		"",
+		"Since any other .mk file can be included from anywhere else, there",
+		"is no guarantee that the tool is properly defined for using it at",
+		"load time (see above for the tricky rules).  Therefore the tools can",
+		"only be used at run time, except in the package Makefile itself.")
+}
+
+func (ck MkLineChecker) checkVaruseLoadTime(varname string, isIndirect bool) {
+	mkline := ck.MkLine
+
+	if !isIndirect {
+		mkline.Warnf("%s should not be evaluated at load time.", varname)
+		Explain(
+			"Many variables, especially lists of something, get their values",
+			"incrementally.  Therefore it is generally unsafe to rely on their",
+			"value until it is clear that it will never change again.  This",
+			"point is reached when the whole package Makefile is loaded and",
+			"execution of the shell commands starts; in some cases earlier.",
+			"",
+			"Additionally, when using the \":=\" operator, each $$ is replaced",
+			"with a single $, so variables that have references to shell",
+			"variables or regular expressions are modified in a subtle way.")
+		return
+	}
+
+	if isIndirect {
+		mkline.Warnf("%s should not be evaluated indirectly at load time.", varname)
+		Explain(
+			"The variable on the left-hand side may be evaluated at load time,",
+			"but the variable on the right-hand side may not.  Because of the",
+			"assignment in this line, the variable might be used indirectly",
+			"at load time, before it is guaranteed to be properly initialized.")
 	}
 }
 
@@ -697,7 +735,7 @@ func (ck MkLineChecker) checkVarassign() {
 	}
 
 	defineVar(mkline, varname)
-	ck.checkVarassignDefPermissions()
+	ck.checkVarassignPermissions()
 	ck.checkVarassignBsdPrefs()
 
 	ck.checkText(value)
@@ -731,25 +769,6 @@ func (ck MkLineChecker) checkVarassign() {
 		}
 	}
 
-	if varname == "USE_TOOLS" {
-		for _, fullToolname := range splitOnSpace(value) {
-			toolname := strings.Split(fullToolname, ":")[0]
-			if G.Pkg != nil {
-				if !G.Pkg.SeenBsdPrefsMk {
-					G.Pkg.loadTimeTools[toolname] = true
-					if trace.Tracing {
-						trace.Step1("loadTimeTool %q", toolname)
-					}
-				} else if !G.Pkg.loadTimeTools[toolname] {
-					G.Pkg.loadTimeTools[toolname] = false
-					if trace.Tracing {
-						trace.Step1("too late for loadTimeTool %q", toolname)
-					}
-				}
-			}
-		}
-	}
-
 	if fix := G.Pkgsrc.Deprecated[varname]; fix != "" {
 		mkline.Warnf("Definition of %s is deprecated. %s", varname, fix)
 	} else if fix := G.Pkgsrc.Deprecated[varcanon]; fix != "" {
@@ -773,7 +792,7 @@ func (ck MkLineChecker) checkVarassignVaruse() {
 		time = vucTimeParse
 	}
 
-	vartype := mkline.VariableType(mkline.Varname())
+	vartype := G.Pkgsrc.VariableType(mkline.Varname())
 	if op == opAssignShell {
 		vartype = shellcommandsContextType
 	}
@@ -872,28 +891,35 @@ func (ck MkLineChecker) checkVarassignSpecific() {
 
 func (ck MkLineChecker) checkVarassignBsdPrefs() {
 	mkline := ck.MkLine
-	if G.opts.WarnExtra && mkline.Op() == opAssignDefault && G.Pkg != nil && !G.Pkg.SeenBsdPrefsMk {
-		switch mkline.Varcanon() {
-		case "BUILDLINK_PKGSRCDIR.*", "BUILDLINK_DEPMETHOD.*", "BUILDLINK_ABI_DEPENDS.*":
-			return
-		}
 
-		if G.Mk != nil && !G.Mk.FirstTime("include-bsd.prefs.mk") {
-			return
-		}
-
-		mkline.Warnf("Please include \"../../mk/bsd.prefs.mk\" before using \"?=\".")
-		Explain(
-			"The ?= operator is used to provide a default value to a variable.",
-			"In pkgsrc, many variables can be set by the pkgsrc user in the",
-			"mk.conf file.  This file must be included explicitly.  If a ?=",
-			"operator appears before mk.conf has been included, it will not care",
-			"about the user's preferences, which can result in unexpected",
-			"behavior.",
-			"",
-			"The easiest way to include the mk.conf file is by including the",
-			"bsd.prefs.mk file, which will take care of everything.")
+	switch mkline.Varcanon() {
+	case "BUILDLINK_PKGSRCDIR.*",
+		"BUILDLINK_DEPMETHOD.*",
+		"BUILDLINK_ABI_DEPENDS.*",
+		"BUILDLINK_INCDIRS.*",
+		"BUILDLINK_LIBDIRS.*":
+		return
 	}
+
+	if !G.opts.WarnExtra ||
+		G.Infrastructure ||
+		mkline.Op() != opAssignDefault ||
+		G.Mk.Tools.SeenPrefs ||
+		!G.Mk.FirstTime("include bsd.prefs.mk before using ?=") {
+		return
+	}
+
+	mkline.Warnf("Please include \"../../mk/bsd.prefs.mk\" before using \"?=\".")
+	Explain(
+		"The ?= operator is used to provide a default value to a variable.",
+		"In pkgsrc, many variables can be set by the pkgsrc user in the",
+		"mk.conf file.  This file must be included explicitly.  If a ?=",
+		"operator appears before mk.conf has been included, it will not care",
+		"about the user's preferences, which can result in unexpected",
+		"behavior.",
+		"",
+		"The easiest way to include the mk.conf file is by including the",
+		"bsd.prefs.mk file, which will take care of everything.")
 }
 
 func (ck MkLineChecker) checkVarassignPlistComment(varname, value string) {
@@ -934,7 +960,7 @@ func (ck MkLineChecker) CheckVartype(varname string, op MkOperator, value, comme
 	}
 
 	mkline := ck.MkLine
-	vartype := mkline.VariableType(varname)
+	vartype := G.Pkgsrc.VariableType(varname)
 
 	if op == opAssignAppend {
 		if vartype != nil && !vartype.MayBeAppendedTo() {
@@ -1008,7 +1034,7 @@ func (ck MkLineChecker) checkText(text string) {
 	}
 
 	// Note: A simple -R is not detected, as the rate of false positives is too high.
-	if m, flag := match1(text, `\b(-Wl,--rpath,|-Wl,-rpath-link,|-Wl,-rpath,|-Wl,-R)\b`); m {
+	if m, flag := match1(text, `(-Wl,--rpath,|-Wl,-rpath-link,|-Wl,-rpath,|-Wl,-R\b)`); m {
 		mkline.Warnf("Please use ${COMPILER_RPATH_FLAG} instead of %q.", flag)
 	}
 
@@ -1070,7 +1096,7 @@ func (ck MkLineChecker) checkDirectiveCond() {
 				ck.CheckVartype(varname, opUseMatch, modifier[1:], "")
 
 				value := modifier[1:]
-				vartype := mkline.VariableType(varname)
+				vartype := G.Pkgsrc.VariableType(varname)
 				if matches(value, `^[\w-/]+$`) && vartype != nil && !vartype.IsConsideredList() {
 					mkline.Notef("%s should be compared using == instead of the :M or :N modifier without wildcards.", varname)
 					Explain(
@@ -1180,10 +1206,10 @@ func (ck MkLineChecker) CheckRelativePath(relativePath string, mustExist bool) {
 
 	switch {
 	case !hasPrefix(relativePath, "../"):
-	case matches(relativePath, `^\.\./\.\./[^/]+/[^/]`):
-		// From a package to another package.
 	case hasPrefix(relativePath, "../../mk/"):
 		// From a package to the infrastructure.
+	case matches(relativePath, `^\.\./\.\./[^/]+/[^/]`):
+		// From a package to another package.
 	case hasPrefix(relativePath, "../mk/") && relpath(path.Dir(mkline.Filename), G.Pkgsrc.File(".")) == "..":
 		// For category Makefiles.
 	default:

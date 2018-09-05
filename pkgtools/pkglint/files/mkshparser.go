@@ -28,7 +28,7 @@ type ParseError struct {
 }
 
 func (e *ParseError) Error() string {
-	return fmt.Sprintf("parse error at %v", e.RemainingTokens)
+	return fmt.Sprintf("parse error at %#v", e.RemainingTokens)
 }
 
 type ShellLexer struct {

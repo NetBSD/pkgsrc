@@ -38,6 +38,7 @@ func (s *Suite) Test_ChecklinesPlist(c *check.C) {
 		"ERROR: PLIST:6: \"info/dir\" must not be listed. Use install-info to add/remove an entry.",
 		"WARN: PLIST:8: Redundant library found. The libtool library is in line 9.",
 		"WARN: PLIST:9: \"lib/libc.la\" should be sorted before \"lib/libc.so.6\".",
+		"WARN: PLIST:9: Packages that install libtool libraries should define USE_LIBTOOL.",
 		"WARN: PLIST:10: Preformatted manual page without unformatted one.",
 		"WARN: PLIST:10: Preformatted manual pages should end in \".0\".",
 		"WARN: PLIST:11: IMAKE_MANNEWSUFFIX is not meant to appear in PLISTs.",
@@ -335,4 +336,241 @@ func (s *Suite) Test_PlistChecker__autofix_with_only(c *check.C) {
 		PlistRcsID,
 		"sbin/program",
 		"bin/program")
+}
+
+func (s *Suite) Test_PlistChecker__exec_MKDIR(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall")
+
+	lines := t.SetupFileLines("PLIST",
+		PlistRcsID,
+		"bin/program",
+		"@exec ${MKDIR} %D/share/mk/subdir")
+
+	ChecklinesPlist(lines)
+
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_PlistChecker__empty_line(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall")
+
+	lines := t.SetupFileLines("PLIST",
+		PlistRcsID,
+		"",
+		"bin/program")
+
+	ChecklinesPlist(lines)
+
+	t.CheckOutputLines(
+		"WARN: ~/PLIST:2: PLISTs should not contain empty lines.")
+
+	t.SetupCommandLine("-Wall", "--autofix")
+
+	ChecklinesPlist(lines)
+
+	t.CheckOutputLines(
+		"AUTOFIX: ~/PLIST:2: Deleting this line.")
+	t.CheckFileLines("PLIST",
+		PlistRcsID,
+		"bin/program")
+}
+
+func (s *Suite) Test_PlistChecker__unknown_line_type(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.SetupFileLines("PLIST",
+		PlistRcsID,
+		"---unknown",
+		"+++unknown")
+
+	ChecklinesPlist(lines)
+
+	t.CheckOutputLines(
+		"WARN: ~/PLIST:2: Unknown line type: ---unknown",
+		"WARN: ~/PLIST:3: Unknown line type: +++unknown")
+}
+
+func (s *Suite) Test_PlistChecker__doc(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.SetupFileLines("PLIST",
+		PlistRcsID,
+		"doc/html/index.html")
+
+	ChecklinesPlist(lines)
+
+	t.CheckOutputLines(
+		"ERROR: ~/PLIST:2: Documentation must be installed under share/doc, not doc.")
+}
+
+func (s *Suite) Test_PlistChecker__PKGLOCALEDIR(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.SetupFileLines("PLIST",
+		PlistRcsID,
+		"${PKGLOCALEDIR}/file")
+	G.Pkg = NewPackage(t.File("category/package"))
+
+	ChecklinesPlist(lines)
+
+	t.CheckOutputLines(
+		"WARN: ~/PLIST:2: PLIST contains ${PKGLOCALEDIR}, but USE_PKGLOCALEDIR was not found.")
+}
+
+func (s *Suite) Test_PlistChecker__unwanted_entries(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.SetupFileLines("PLIST",
+		PlistRcsID,
+		"share/pkgbase/CVS/Entries",
+		"share/pkgbase/Makefile.orig",
+		"share/perllocal.pod")
+	G.Pkg = NewPackage(t.File("category/package"))
+
+	ChecklinesPlist(lines)
+
+	t.CheckOutputLines(
+		"WARN: ~/PLIST:2: CVS files should not be in the PLIST.",
+		"WARN: ~/PLIST:3: .orig files should not be in the PLIST.",
+		"WARN: ~/PLIST:4: perllocal.pod files should not be in the PLIST.")
+}
+
+func (s *Suite) Test_PlistChecker_checkpathInfo(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.SetupFileLines("PLIST",
+		PlistRcsID,
+		"info/gmake.1.info")
+	G.Pkg = NewPackage(t.File("category/package"))
+
+	ChecklinesPlist(lines)
+
+	t.CheckOutputLines(
+		"WARN: ~/PLIST:2: Packages that install info files should set INFO_FILES in the Makefile.")
+}
+
+func (s *Suite) Test_PlistChecker_checkpathLib(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.SetupFileLines("PLIST",
+		PlistRcsID,
+		"lib/package/liberty-1.0.so",
+		"lib/charset.alias",
+		"lib/locale/de_DE/liberty.mo",
+		"lib/liberty-1.0.la")
+	G.Pkg = NewPackage(t.File("category/package"))
+	G.Pkg.EffectivePkgbase = "package"
+
+	ChecklinesPlist(lines)
+
+	t.CheckOutputLines(
+		"ERROR: ~/PLIST:3: Only the libiconv package may install lib/charset.alias.",
+		"ERROR: ~/PLIST:4: \"lib/locale\" must not be listed. Use ${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.",
+		"WARN: ~/PLIST:5: Packages that install libtool libraries should define USE_LIBTOOL.")
+}
+
+func (s *Suite) Test_PlistChecker_checkpathMan(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.SetupFileLines("PLIST",
+		PlistRcsID,
+		"man/manx/program.x",
+		"man/man1/program.8")
+
+	ChecklinesPlist(lines)
+
+	t.CheckOutputLines(
+		"WARN: ~/PLIST:2: Unknown section \"x\" for manual page.",
+		"WARN: ~/PLIST:3: Mismatch between the section (1) and extension (8) of the manual page.")
+}
+
+func (s *Suite) Test_PlistChecker_checkpathShare(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall")
+	lines := t.SetupFileLines("PLIST",
+		PlistRcsID,
+		"share/doc/html/package/index.html",
+		"share/doc/package/index.html",
+		"share/icons/hicolor/icon-theme.cache",
+		"share/info/program.1.info",
+		"share/man/man1/program.1")
+	G.Pkg = NewPackage(t.File("category/package"))
+	G.Pkg.EffectivePkgbase = "package"
+
+	ChecklinesPlist(lines)
+
+	t.CheckOutputLines(
+		"WARN: ~/PLIST:2: Use of \"share/doc/html\" is deprecated. Use \"share/doc/${PKGBASE}\" instead.",
+		"ERROR: ~/PLIST:4: Packages that install hicolor icons must include \"../../graphics/hicolor-icon-theme/buildlink3.mk\" in the Makefile.",
+		"ERROR: ~/PLIST:4: The file icon-theme.cache must not appear in any PLIST file.",
+		"WARN: ~/PLIST:4: Packages that install icon theme files should set ICON_THEMES.",
+		"WARN: ~/PLIST:5: Info pages should be installed into info/, not share/info/.",
+		"WARN: ~/PLIST:6: Man pages should be installed into man/, not share/man/.")
+}
+
+func (s *Suite) Test_PlistLine_CheckTrailingWhitespace(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall")
+	lines := t.SetupFileLines("PLIST",
+		PlistRcsID,
+		"bin/program \t")
+
+	ChecklinesPlist(lines)
+
+	t.CheckOutputLines(
+		"ERROR: ~/PLIST:2: pkgsrc does not support filenames ending in white-space.")
+}
+
+func (s *Suite) Test_PlistLine_CheckDirective(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall")
+	lines := t.SetupFileLines("PLIST",
+		PlistRcsID,
+		"@unexec rmdir %D/bin",
+		"@exec ldconfig",
+		"@comment This is a comment",
+		"@dirrm %D/bin",
+		"@imake-man 1 2 3 4",
+		"@imake-man 1 2 ${IMAKE_MANNEWSUFFIX}",
+		"@unknown")
+
+	ChecklinesPlist(lines)
+
+	t.CheckOutputLines(
+		"WARN: ~/PLIST:2: Please remove this line. It is no longer necessary.",
+		"ERROR: ~/PLIST:3: ldconfig must be used with \"||/usr/bin/true\".",
+		"WARN: ~/PLIST:5: @dirrm is obsolete. Please remove this line.",
+		"WARN: ~/PLIST:6: Invalid number of arguments for imake-man.",
+		"WARN: ~/PLIST:7: IMAKE_MANNEWSUFFIX is not meant to appear in PLISTs.",
+		"WARN: ~/PLIST:8: Unknown PLIST directive \"@unknown\".")
+}
+
+func (s *Suite) Test_plistLineSorter__unsortable(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall", "--show-autofix")
+	lines := t.SetupFileLines("PLIST",
+		PlistRcsID,
+		"bin/program${OPSYS}",
+		"@exec true",
+		"bin/program1")
+
+	t.EnableTracingToLog()
+	ChecklinesPlist(lines)
+
+	t.CheckOutputLines(
+		"TRACE: + ChecklinesPlist(\"~/PLIST\")",
+		"TRACE: 1 + CheckLineRcsid(\"@comment \", \"@comment \")",
+		"TRACE: 1 - CheckLineRcsid(\"@comment \", \"@comment \")",
+		"TRACE: 1   ~/PLIST:2: bin/program${OPSYS}: This line prevents pkglint from sorting the PLIST automatically.",
+		"TRACE: 1 + SaveAutofixChanges()",
+		"TRACE: 1 - SaveAutofixChanges()",
+		"TRACE: - ChecklinesPlist(\"~/PLIST\")")
 }

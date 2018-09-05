@@ -336,8 +336,10 @@ func (s *Suite) Test_Package__varuse_at_load_time(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupPkgsrc()
-	t.CreateFileLines("licenses/bsd-2",
+	t.SetupToolUsable("printf", "")
+	t.CreateFileLines("licenses/2-clause-bsd",
 		"# dummy")
+	t.CreateFileLines("misc/Makefile")
 	t.CreateFileLines("mk/tools/defaults.mk",
 		"TOOLS_CREATE+=false",
 		"TOOLS_CREATE+=nice",
@@ -347,39 +349,66 @@ func (s *Suite) Test_Package__varuse_at_load_time(c *check.C) {
 	t.CreateFileLines("category/pkgbase/Makefile",
 		MkRcsID,
 		"",
-		"COMMENT= Unit test",
-		"LICENSE= bsd-2",
-		"PLIST_SRC=#none",
+		"PKGNAME=        loadtime-vartest-1.0",
+		"CATEGORIES=     misc",
 		"",
-		"USE_TOOLS+= echo false",
-		"FALSE_BEFORE!= echo false=${FALSE}",
-		"NICE_BEFORE!= echo nice=${NICE}",
-		"TRUE_BEFORE!= echo true=${TRUE}",
+		"COMMENT=        Demonstrate variable values during parsing",
+		"LICENSE=        2-clause-bsd",
+		"",
+		"PLIST_SRC=      # none",
+		"NO_CHECKSUM=    yes",
+		"NO_CONFIGURE=   yes",
+		"",
+		"USE_TOOLS+=     echo false",
+		"FALSE_BEFORE!=  echo false=${FALSE:Q}", // false=
+		"NICE_BEFORE!=   echo nice=${NICE:Q}",   // nice=
+		"TRUE_BEFORE!=   echo true=${TRUE:Q}",   // true=
+		//
+		// All three variables above are empty since the tool
+		// variables are initialized by bsd.prefs.mk. The variables
+		// from share/mk/sys.mk are available, though.
+		//
 		"",
 		".include \"../../mk/bsd.prefs.mk\"",
+		//
+		// Now all tools from USE_TOOLS are defined with their variables.
+		// ${FALSE} works, but a plain "false" might call the wrong tool.
+		// That's because the tool wrappers are not set up yet. This
+		// happens between the post-depends and pre-fetch stages. Even
+		// then, the plain tool names may only be used in the
+		// {pre,do,post}-* targets, since a recursive make(1) needs to be
+		// run to set up the correct PATH.
+		//
 		"",
-		"USE_TOOLS+= nice",
-		"FALSE_AFTER!= echo false=${FALSE}",
-		"NICE_AFTER!= echo nice=${NICE}",
-		"TRUE_AFTER!= echo true=${TRUE}",
+		"USE_TOOLS+=     nice",
+		//
+		// The "nice" tool will only be available as ${NICE} after bsd.pkg.mk
+		// has been included. Even including bsd.prefs.mk another time does
+		// not have any effect since it is guarded against multiple inclusion.
+		//
+		"",
+		".include \"../../mk/bsd.prefs.mk\"", // Has no effect.
+		"",
+		"FALSE_AFTER!=   echo false=${FALSE:Q}", // false=false
+		"NICE_AFTER!=    echo nice=${NICE:Q}",   // nice=
+		"TRUE_AFTER!=    echo true=${TRUE:Q}",   // true=true
 		"",
 		"do-build:",
-		"\t${ECHO} before: ${FALSE_BEFORE} ${NICE_BEFORE} ${TRUE_BEFORE}",
-		"\t${ECHO} after: ${FALSE_AFTER} ${NICE_AFTER} ${TRUE_AFTER}",
-		"\t${ECHO}; ${FALSE}; ${NICE}; ${TRUE}",
+		"\t${RUN} printf 'before:  %-20s  %-20s  %-20s\\n' ${FALSE_BEFORE} ${NICE_BEFORE} ${TRUE_BEFORE}",
+		"\t${RUN} printf 'after:   %-20s  %-20s  %-20s\\n' ${FALSE_AFTER} ${NICE_AFTER} ${TRUE_AFTER}",
+		"\t${RUN} printf 'runtime: %-20s  %-20s  %-20s\\n' false=${FALSE:Q} nice=${NICE:Q} true=${TRUE:Q}",
 		"",
 		".include \"../../mk/bsd.pkg.mk\"")
-	t.CreateFileLines("category/pkgbase/distinfo",
-		RcsID)
 
-	G.Main("pkglint", "-q", "-Wperm", t.File("category/pkgbase"))
+	t.SetupCommandLine("-q", "-Wall,no-space")
+	G.Pkgsrc.LoadInfrastructure()
+	G.CheckDirent(t.File("category/pkgbase"))
 
 	t.CheckOutputLines(
-		"WARN: ~/category/pkgbase/Makefile:8: To use the tool \"FALSE\" at load time, bsd.prefs.mk has to be included before.",
-		"WARN: ~/category/pkgbase/Makefile:9: To use the tool \"NICE\" at load time, bsd.prefs.mk has to be included before.",
-		"WARN: ~/category/pkgbase/Makefile:10: To use the tool \"TRUE\" at load time, bsd.prefs.mk has to be included before.",
-		"WARN: ~/category/pkgbase/Makefile:16: To use the tool \"NICE\" at load time, it has to be added to USE_TOOLS before including bsd.prefs.mk.",
-		"WARN: ~/category/pkgbase/Makefile:3: The canonical order of the variables is CATEGORIES, empty line, COMMENT, LICENSE.")
+		"WARN: ~/category/pkgbase/Makefile:14: To use the tool ${FALSE} at load time, bsd.prefs.mk has to be included before.",
+		"WARN: ~/category/pkgbase/Makefile:15: To use the tool ${NICE} at load time, it has to be added to USE_TOOLS before including bsd.prefs.mk.",
+		"WARN: ~/category/pkgbase/Makefile:16: To use the tool ${TRUE} at load time, bsd.prefs.mk has to be included before.",
+		"WARN: ~/category/pkgbase/Makefile:25: To use the tool ${NICE} at load time, it has to be added to USE_TOOLS before including bsd.prefs.mk.")
 }
 
 func (s *Suite) Test_Package_loadPackageMakefile(c *check.C) {
@@ -549,4 +578,75 @@ func (s *Suite) Test_Package__redundant_master_sites(c *check.C) {
 
 	t.CheckOutputLines(
 		"NOTE: ~/math/R-date/Makefile:6: Definition of MASTER_SITES is redundant because of ../R/Makefile.extension:4.")
+}
+
+func (s *Suite) Test_Package_checkUpdate(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupPkgsrc()
+	t.CreateFileLines("doc/TODO",
+		"Suggested package updates",
+		"",
+		"",
+		"\t"+"O wrong bullet",
+		"\t"+"o package-without-version",
+		"\t"+"o package1-1.0",
+		"\t"+"o package2-2.0 [nice new features]",
+		"\t"+"o package3-3.0 [security update]")
+	t.CreateFileLines("licenses/gnu-gpl-v2",
+		"The licenses for most software are designed to take away ...")
+
+	t.CreateFileLines("category/pkg1/Makefile",
+		MkRcsID,
+		"",
+		"PKGNAME=                package1-1.0",
+		"GENERATE_PLIST+=        echo \"bin/program\";",
+		"NO_CHECKSUM=            yes",
+		"LICENSE=                gnu-gpl-v2")
+	t.CreateFileLines("category/pkg2/Makefile",
+		MkRcsID,
+		"",
+		"PKGNAME=                package2-1.0",
+		"GENERATE_PLIST+=        echo \"bin/program\";",
+		"NO_CHECKSUM=            yes",
+		"LICENSE=                gnu-gpl-v2")
+	t.CreateFileLines("category/pkg3/Makefile",
+		MkRcsID,
+		"",
+		"PKGNAME=                package3-5.0",
+		"GENERATE_PLIST+=        echo \"bin/program\";",
+		"NO_CHECKSUM=            yes",
+		"LICENSE=                gnu-gpl-v2")
+
+	t.Chdir(".")
+	G.Main("pkglint", "-Wall,no-space,no-order", "category/pkg1", "category/pkg2", "category/pkg3")
+
+	t.CheckOutputLines(
+		"WARN: category/pkg1/../../doc/TODO:3: Invalid line format \"\".",
+		"WARN: category/pkg1/../../doc/TODO:4: Invalid line format \"\\tO wrong bullet\".",
+		"WARN: category/pkg1/../../doc/TODO:5: Invalid package name \"package-without-version\".",
+		"WARN: category/pkg1/Makefile: No COMMENT given.",
+		"NOTE: category/pkg1/Makefile:3: The update request to 1.0 from doc/TODO has been done.",
+		"WARN: category/pkg1/Makefile:4: Please use \"${ECHO}\" instead of \"echo\".",
+		"WARN: category/pkg2/Makefile: No COMMENT given.",
+		"WARN: category/pkg2/Makefile:3: This package should be updated to 2.0 ([nice new features]).",
+		"WARN: category/pkg2/Makefile:4: Please use \"${ECHO}\" instead of \"echo\".",
+		"WARN: category/pkg3/Makefile: No COMMENT given.",
+		"NOTE: category/pkg3/Makefile:3: This package is newer than the update request to 3.0 ([security update]).",
+		"WARN: category/pkg3/Makefile:4: Please use \"${ECHO}\" instead of \"echo\".",
+		"0 errors and 10 warnings found.",
+		"(Run \"pkglint -e\" to show explanations.)")
+}
+
+func (s *Suite) Test_NewPackage(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupPkgsrc()
+	t.CreateFileLines("category/Makefile",
+		MkRcsID)
+
+	c.Check(
+		func() { NewPackage("category") },
+		check.PanicMatches,
+		`Package directory "category" must be two subdirectories below the pkgsrc root ".*".`)
 }

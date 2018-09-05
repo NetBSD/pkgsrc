@@ -179,3 +179,63 @@ func (s *Suite) Test_explain_with_only(c *check.C) {
 		"\tThis explanation is logged.",
 		"")
 }
+
+func (s *Suite) Test_logs__duplicate_messages(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("--explain")
+	G.opts.LogVerbose = false
+	line := t.NewLine("README.txt", 123, "text")
+
+	// In rare cases, the explanations for the same warning may differ
+	// when they appear in different contexts. In such a case, if the
+	// warning is suppressed, the explanation must not appear on its own.
+	line.Warnf("The warning.") // Is logged
+	Explain("Explanation 1")
+	line.Warnf("The warning.") // Is suppressed
+	Explain("Explanation 2")
+
+	t.CheckOutputLines(
+		"WARN: README.txt:123: The warning.",
+		"",
+		"\tExplanation 1",
+		"")
+}
+
+func (s *Suite) Test_logs__duplicate_explanations(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("--explain")
+	line := t.NewLine("README.txt", 123, "text")
+
+	// In rare cases, different diagnostics may have the same explanation.
+	line.Warnf("Warning 1.")
+	Explain("Explanation")
+	line.Warnf("Warning 2.")
+	Explain("Explanation") // Is suppressed.
+
+	t.CheckOutputLines(
+		"WARN: README.txt:123: Warning 1.",
+		"",
+		"\tExplanation",
+		"",
+		"WARN: README.txt:123: Warning 2.")
+}
+
+func (s *Suite) Test_logs__panic(c *check.C) {
+	c.Check(func() {
+		logs(llError, "filename", "13", "No period", "No period")
+	}, check.Panics, "Diagnostic format \"No period\" must end in a period.")
+}
+
+func (s *Suite) Test_Explain__long_lines(c *check.C) {
+	t := s.Init(c)
+
+	Explain(
+		"123456789 12345678. abcdefghi. 123456789 123456789 123456789 123456789 123456789 ")
+
+	t.CheckOutputLines(
+		"Long explanation line: 123456789 12345678. abcdefghi. 123456789 123456789 123456789 123456789 123456789 ",
+		"Break after: 123456789 12345678. abcdefghi. 123456789 123456789 123456789",
+		"Short space after period: 123456789 12345678. abcdefghi. 123456789 123456789 123456789 123456789 123456789 ")
+}

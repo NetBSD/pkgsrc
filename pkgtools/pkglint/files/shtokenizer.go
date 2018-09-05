@@ -1,9 +1,5 @@
 package main
 
-import (
-	"netbsd.org/pkglint/textproc"
-)
-
 type ShTokenizer struct {
 	parser *Parser
 	mkp    *MkParser
@@ -15,6 +11,9 @@ func NewShTokenizer(line Line, text string, emitWarnings bool) *ShTokenizer {
 	return &ShTokenizer{p, mkp}
 }
 
+// ShAtom parses a basic building block of a shell program.
+// Examples for such atoms are: variable reference, operator, text, quote, space.
+//
 // See ShQuote.Feed
 func (p *ShTokenizer) ShAtom(quoting ShQuoting) *ShAtom {
 	if p.parser.EOF() {
@@ -84,10 +83,9 @@ func (p *ShTokenizer) shAtomPlain() *ShAtom {
 		return &ShAtom{shtComment, repl.Group(0), q, nil}
 	case repl.AdvanceStr("$$("):
 		return &ShAtom{shtSubshell, repl.Str(), q, nil}
-	case repl.AdvanceRegexp(`^(?:[!#%*+,\-./0-9:=?@A-Z\[\]^_a-z{}~]+|\\[^$]|` + reShDollar + `)+`):
-		return &ShAtom{shtWord, repl.Group(0), q, nil}
 	}
-	return nil
+
+	return p.shAtomInternal(q, false, false)
 }
 
 func (p *ShTokenizer) shAtomDquot() *ShAtom {
@@ -97,10 +95,8 @@ func (p *ShTokenizer) shAtomDquot() *ShAtom {
 		return &ShAtom{shtWord, repl.Str(), shqPlain, nil}
 	case repl.AdvanceStr("`"):
 		return &ShAtom{shtWord, repl.Str(), shqDquotBackt, nil}
-	case repl.AdvanceRegexp(`^(?:[\t !#%&'()*+,\-./0-9:;<=>?@A-Z\[\]^_a-z{|}~]+|\\[^$]|` + reShDollar + `)+`):
-		return &ShAtom{shtWord, repl.Group(0), shqDquot, nil} // XXX: unescape?
 	}
-	return nil
+	return p.shAtomInternal(shqDquot, true, false)
 }
 
 func (p *ShTokenizer) shAtomSquot() *ShAtom {
@@ -108,10 +104,8 @@ func (p *ShTokenizer) shAtomSquot() *ShAtom {
 	switch {
 	case repl.AdvanceStr("'"):
 		return &ShAtom{shtWord, repl.Str(), shqPlain, nil}
-	case repl.AdvanceRegexp(`^([\t !"#%&()*+,\-./0-9:;<=>?@A-Z\[\\\]^_` + "`" + `a-z{|}~]+|\$\$)+`):
-		return &ShAtom{shtWord, repl.Group(0), shqSquot, nil}
 	}
-	return nil
+	return p.shAtomInternal(shqSquot, false, true)
 }
 
 func (p *ShTokenizer) shAtomBackt() *ShAtom {
@@ -131,10 +125,8 @@ func (p *ShTokenizer) shAtomBackt() *ShAtom {
 		return &ShAtom{shtSpace, repl.Str(), q, nil}
 	case repl.AdvanceRegexp("^#[^`]*"):
 		return &ShAtom{shtComment, repl.Str(), q, nil}
-	case repl.AdvanceRegexp(`^(?:[!#%*+,\-./0-9:=?@A-Z\[\]_a-z~]+|\\[^$]|` + reShDollar + `)+`):
-		return &ShAtom{shtWord, repl.Str(), q, nil}
 	}
-	return nil
+	return p.shAtomInternal(q, false, false)
 }
 
 // In pkgsrc, the $(...) subshell syntax is not used to preserve
@@ -249,6 +241,47 @@ func (p *ShTokenizer) shAtomDquotBacktSquot() *ShAtom {
 	return nil
 }
 
+// shAtomInternal advances the parser over the next "word",
+// which is everything that does not change the quoting and is not a Make(1) variable.
+// Shell variables may appear as part of a word.
+//
+// Examples:
+//  while$var
+//  $$,
+//  $$!$$$$
+//  echo
+//  text${var:=default}text
+func (p *ShTokenizer) shAtomInternal(q ShQuoting, dquot, squot bool) *ShAtom {
+	repl := p.parser.repl
+
+	mark := repl.Mark()
+loop:
+	for {
+		_ = `^[\t "$&'();<>\\|]+` // These are not allowed in shqPlain.
+
+		switch {
+		case repl.AdvanceRegexp(`^[!#%*+,\-./0-9:=?@A-Z\[\]^_a-z{}~]+`):
+		case dquot && repl.AdvanceRegexp(`^[\t &'();<>|]+`):
+		case squot && repl.AdvanceByte('`'):
+		case squot && repl.AdvanceRegexp(`^[\t "&();<>\\|]+`):
+		case squot && repl.AdvanceStr("$$"):
+		case squot:
+			break loop
+		case repl.AdvanceRegexp(`^\\[^$]`):
+		case repl.HasPrefixRegexp(`^\$\$[^!#(*\-0-9?@A-Z_a-z{]`):
+			repl.AdvanceStr("$$")
+		case repl.AdvanceRegexp(`^(?:` + reShDollar + `)`):
+		default:
+			break loop
+		}
+	}
+
+	if token := repl.Since(mark); token != "" {
+		return &ShAtom{shtWord, token, q, nil}
+	}
+	return nil
+}
+
 func (p *ShTokenizer) shOperator(q ShQuoting) *ShAtom {
 	repl := p.parser.repl
 	switch {
@@ -298,12 +331,12 @@ func (p *ShTokenizer) ShToken() *ShToken {
 	}
 
 	repl := p.parser.repl
-	inimark := repl.Mark()
+	initialMark := repl.Mark()
 	var atoms []*ShAtom
 
 	for peek() != nil && peek().Type == shtSpace {
 		skip()
-		inimark = repl.Mark()
+		initialMark = repl.Mark()
 	}
 
 	if peek() == nil {
@@ -313,28 +346,20 @@ func (p *ShTokenizer) ShToken() *ShToken {
 		return NewShToken(atom.MkText, atom)
 	}
 
-nextatom:
+nextAtom:
 	mark := repl.Mark()
 	atom := peek()
 	if atom != nil && (atom.Type.IsWord() || atom.Quoting != shqPlain) {
 		skip()
 		atoms = append(atoms, atom)
-		goto nextatom
+		goto nextAtom
 	}
 	repl.Reset(mark)
 
 	if len(atoms) == 0 {
 		return nil
 	}
-	return NewShToken(repl.Since(inimark), atoms...)
-}
-
-func (p *ShTokenizer) Mark() textproc.PrefixReplacerMark {
-	return p.parser.repl.Mark()
-}
-
-func (p *ShTokenizer) Reset(mark textproc.PrefixReplacerMark) {
-	p.parser.repl.Reset(mark)
+	return NewShToken(repl.Since(initialMark), atoms...)
 }
 
 func (p *ShTokenizer) Rest() string {

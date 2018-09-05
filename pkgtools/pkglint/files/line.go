@@ -33,6 +33,7 @@ func (rline *RawLine) String() string {
 
 type LineImpl struct {
 	Filename  string
+	Basename  string
 	firstLine int32 // Zero means not applicable, -1 means EOF
 	lastLine  int32 // Usually the same as firstLine, may differ in Makefiles
 	Text      string
@@ -46,7 +47,7 @@ func NewLine(fname string, lineno int, text string, rawLines []*RawLine) Line {
 
 // NewLineMulti is for logical Makefile lines that end with backslash.
 func NewLineMulti(fname string, firstLine, lastLine int, text string, rawLines []*RawLine) Line {
-	return &LineImpl{fname, int32(firstLine), int32(lastLine), text, rawLines, nil}
+	return &LineImpl{fname, path.Base(fname), int32(firstLine), int32(lastLine), text, rawLines, nil}
 }
 
 // NewLineEOF creates a dummy line for logging, with the "line number" EOF.

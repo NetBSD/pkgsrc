@@ -79,9 +79,9 @@ func (vt *Vartype) EffectivePermissions(fname string) ACLPermissions {
 	return aclpUnknown
 }
 
-// Returns the union of all possible permissions. This can be used to
-// check whether a variable may be defined or used at all, or if it is
-// read-only.
+// Union returns the union of all possible permissions.
+// This can be used to check whether a variable may be defined or used
+// at all, or if it is read-only.
 func (vt *Vartype) Union() ACLPermissions {
 	var permissions ACLPermissions
 	for _, aclEntry := range vt.aclEntries {
@@ -100,7 +100,7 @@ func (vt *Vartype) AllowedFiles(perms ACLPermissions) string {
 	return strings.Join(files, ", ")
 }
 
-// Returns whether the type is considered a shell list.
+// IsConsideredList returns whether the type is considered a shell list.
 // This distinction between "real lists" and "considered a list" makes
 // the implementation of checklineMkVartype easier.
 func (vt *Vartype) IsConsideredList() bool {
@@ -122,20 +122,8 @@ func (vt *Vartype) MayBeAppendedTo() bool {
 }
 
 func (vt *Vartype) String() string {
-	listPrefix := ""
-	switch vt.kindOfList {
-	case lkNone:
-		listPrefix = ""
-	case lkSpace:
-		listPrefix = "SpaceList of "
-	case lkShell:
-		listPrefix = "ShellList of "
-	default:
-		panic("Unknown list type")
-	}
-
+	listPrefix := [...]string{"", "SpaceList of ", "ShellList of "}[vt.kindOfList]
 	guessedSuffix := ifelseStr(vt.guessed, " (guessed)", "")
-
 	return listPrefix + vt.basicType.name + guessedSuffix
 }
 

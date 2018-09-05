@@ -138,7 +138,7 @@ func NewMkLine(line Line) *MkLineImpl {
 		return &MkLineImpl{line, nil}
 	}
 
-	line.Errorf("Unknown Makefile line format.")
+	line.Errorf("Unknown Makefile line format: %q.", text)
 	return &MkLineImpl{line, nil}
 }
 
@@ -278,14 +278,14 @@ func (mkline *MkLineImpl) SetConditionalVars(varnames string) {
 // Example:
 //  input:  ${PREFIX}/bin abc
 //  output: [MkToken("${PREFIX}", MkVarUse("PREFIX")), MkToken("/bin abc")]
-func (mkline *MkLineImpl) Tokenize(s string) []*MkToken {
+func (mkline *MkLineImpl) Tokenize(s string, warn bool) []*MkToken {
 	if trace.Tracing {
 		defer trace.Call(mkline, s)()
 	}
 
 	p := NewMkParser(mkline.Line, s, true)
 	tokens := p.MkTokens()
-	if p.Rest() != "" {
+	if warn && p.Rest() != "" {
 		mkline.Warnf("Pkglint parse error in MkLine.Tokenize at %q.", p.Rest())
 	}
 	return tokens
@@ -298,7 +298,7 @@ func (mkline *MkLineImpl) Tokenize(s string) []*MkToken {
 //
 // If the separator is empty, splitting is done on whitespace.
 func (mkline *MkLineImpl) ValueSplit(value string, separator string) []string {
-	tokens := mkline.Tokenize(value)
+	tokens := mkline.Tokenize(value, false)
 	var split []string
 	for _, token := range tokens {
 		if split == nil {
@@ -318,6 +318,10 @@ func (mkline *MkLineImpl) ValueSplit(value string, separator string) []string {
 		}
 	}
 	return split
+}
+
+func (mkline *MkLineImpl) ValueTokens() []*MkToken {
+	return mkline.Tokenize(mkline.Value(), false)
 }
 
 func (mkline *MkLineImpl) WithoutMakeVariables(value string) string {
@@ -477,7 +481,7 @@ func (nq NeedsQuoting) String() string {
 
 func (mkline *MkLineImpl) VariableNeedsQuoting(varname string, vartype *Vartype, vuc *VarUseContext) (needsQuoting NeedsQuoting) {
 	if trace.Tracing {
-		defer trace.Call(varname, vartype, vuc, "=>", &needsQuoting)()
+		defer trace.Call(varname, vartype, vuc, trace.Result(&needsQuoting))()
 	}
 
 	if vartype == nil || vuc.vartype == nil {
@@ -528,7 +532,7 @@ func (mkline *MkLineImpl) VariableNeedsQuoting(varname string, vartype *Vartype,
 
 	// Pkglint assumes that the tool definitions don't include very
 	// special characters, so they can safely be used inside any quotes.
-	if G.Pkgsrc.Tools.ByVarname(varname) != nil {
+	if tool := G.ToolByVarname(varname, vuc.time.ToToolTime()); tool != nil {
 		switch vuc.quoting {
 		case vucQuotPlain:
 			if !vuc.IsWordPart {
@@ -576,85 +580,6 @@ func (mkline *MkLineImpl) VariableNeedsQuoting(varname string, vartype *Vartype,
 		trace.Step1("Don't know whether :Q is needed for %q", varname)
 	}
 	return nqDontKnow
-}
-
-// Returns the type of the variable (possibly guessed based on the variable name),
-// or nil if the type cannot even be guessed.
-func (mkline *MkLineImpl) VariableType(varname string) *Vartype {
-	if trace.Tracing {
-		defer trace.Call1(varname)()
-	}
-
-	if vartype := G.Pkgsrc.vartypes[varname]; vartype != nil {
-		return vartype
-	}
-	if vartype := G.Pkgsrc.vartypes[varnameCanon(varname)]; vartype != nil {
-		return vartype
-	}
-
-	if tool := G.Pkgsrc.Tools.ByVarname(varname); tool != nil {
-		perms := aclpUse
-		if trace.Tracing {
-			trace.Stepf("Use of tool %+v", tool)
-		}
-		if tool.UsableAtLoadTime {
-			if G.Pkg == nil || G.Pkg.SeenBsdPrefsMk || G.Pkg.loadTimeTools[tool.Name] {
-				perms |= aclpUseLoadtime
-			}
-		}
-		return &Vartype{lkNone, BtShellCommand, []ACLEntry{{"*", perms}}, false}
-	}
-
-	m, toolvarname := match1(varname, `^TOOLS_(.*)`)
-	if m && G.Pkgsrc.Tools.ByVarname(toolvarname) != nil {
-		return &Vartype{lkNone, BtPathname, []ACLEntry{{"*", aclpUse}}, false}
-	}
-
-	allowAll := []ACLEntry{{"*", aclpAll}}
-	allowRuntime := []ACLEntry{{"*", aclpAllRuntime}}
-
-	// Guess the data type of the variable based on naming conventions.
-	varbase := varnameBase(varname)
-	var gtype *Vartype
-	switch {
-	case hasSuffix(varbase, "DIRS"):
-		gtype = &Vartype{lkShell, BtPathmask, allowRuntime, true}
-	case hasSuffix(varbase, "DIR") && !hasSuffix(varbase, "DESTDIR"), hasSuffix(varname, "_HOME"):
-		gtype = &Vartype{lkNone, BtPathname, allowRuntime, true}
-	case hasSuffix(varbase, "FILES"):
-		gtype = &Vartype{lkShell, BtPathmask, allowRuntime, true}
-	case hasSuffix(varbase, "FILE"):
-		gtype = &Vartype{lkNone, BtPathname, allowRuntime, true}
-	case hasSuffix(varbase, "PATH"):
-		gtype = &Vartype{lkNone, BtPathlist, allowRuntime, true}
-	case hasSuffix(varbase, "PATHS"):
-		gtype = &Vartype{lkShell, BtPathname, allowRuntime, true}
-	case hasSuffix(varbase, "_USER"):
-		gtype = &Vartype{lkNone, BtUserGroupName, allowAll, true}
-	case hasSuffix(varbase, "_GROUP"):
-		gtype = &Vartype{lkNone, BtUserGroupName, allowAll, true}
-	case hasSuffix(varbase, "_ENV"):
-		gtype = &Vartype{lkShell, BtShellWord, allowRuntime, true}
-	case hasSuffix(varbase, "_CMD"):
-		gtype = &Vartype{lkNone, BtShellCommand, allowRuntime, true}
-	case hasSuffix(varbase, "_ARGS"):
-		gtype = &Vartype{lkShell, BtShellWord, allowRuntime, true}
-	case hasSuffix(varbase, "_CFLAGS"), hasSuffix(varname, "_CPPFLAGS"), hasSuffix(varname, "_CXXFLAGS"):
-		gtype = &Vartype{lkShell, BtCFlag, allowRuntime, true}
-	case hasSuffix(varname, "_LDFLAGS"):
-		gtype = &Vartype{lkShell, BtLdFlag, allowRuntime, true}
-	case hasSuffix(varbase, "_MK"):
-		gtype = &Vartype{lkNone, BtUnknown, allowAll, true}
-	}
-
-	if trace.Tracing {
-		if gtype != nil {
-			trace.Step2("The guessed type of %q is %q.", varname, gtype.String())
-		} else {
-			trace.Step1("No type definition found for %q.", varname)
-		}
-	}
-	return gtype
 }
 
 // TODO: merge with determineUsedVariables
@@ -720,6 +645,38 @@ func (mkline *MkLineImpl) DetermineUsedVariables() (varnames []string) {
 	}
 }
 
+type MkOperator uint8
+
+const (
+	opAssign        MkOperator = iota // =
+	opAssignShell                     // !=
+	opAssignEval                      // :=
+	opAssignAppend                    // +=
+	opAssignDefault                   // ?=
+	opUseCompare                      // A variable is compared to a value, e.g. in a condition.
+	opUseMatch                        // A variable is matched using the :M or :N modifier.
+)
+
+func NewMkOperator(op string) MkOperator {
+	switch op {
+	case "=":
+		return opAssign
+	case "!=":
+		return opAssignShell
+	case ":=":
+		return opAssignEval
+	case "+=":
+		return opAssignAppend
+	case "?=":
+		return opAssignDefault
+	}
+	panic("Invalid operator: " + op)
+}
+
+func (op MkOperator) String() string {
+	return [...]string{"=", "!=", ":=", "+=", "?=", "use", "use-loadtime", "use-match"}[op]
+}
+
 // VarUseContext defines the context in which a variable is defined
 // or used. Whether that is allowed depends on:
 //
@@ -758,6 +715,13 @@ const (
 )
 
 func (t vucTime) String() string { return [...]string{"unknown", "parse", "run"}[t] }
+
+func (t vucTime) ToToolTime() ToolTime {
+	if t == vucTimeParse {
+		return LoadTime
+	}
+	return RunTime
+}
 
 // The quoting context in which the variable is used.
 // Depending on this context, the modifiers :Q or :M can be allowed or not.

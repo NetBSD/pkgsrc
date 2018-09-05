@@ -82,16 +82,6 @@ func (exp *Expecter) AdvanceIfEquals(text string) bool {
 	return !exp.EOF() && exp.lines[exp.index].Text == text && exp.Advance()
 }
 
-func (exp *Expecter) AdvanceWhile(pred func(line Line) bool) {
-	if trace.Tracing {
-		defer trace.Call(exp.CurrentLine().Text)()
-	}
-
-	for !exp.EOF() && !pred(exp.CurrentLine()) {
-		exp.Advance()
-	}
-}
-
 func (exp *Expecter) ExpectEmptyLine(warnSpace bool) bool {
 	if exp.AdvanceIfEquals("") {
 		return true
@@ -133,10 +123,6 @@ func NewMkExpecter(mklines *MkLines) *MkExpecter {
 
 func (exp *MkExpecter) CurrentMkLine() MkLine {
 	return exp.mklines.mklines[exp.index]
-}
-
-func (exp *MkExpecter) PreviousMkLine() MkLine {
-	return exp.mklines.mklines[exp.index-1]
 }
 
 func (exp *MkExpecter) AdvanceWhile(pred func(mkline MkLine) bool) {

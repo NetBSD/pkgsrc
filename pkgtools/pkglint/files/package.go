@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"netbsd.org/pkglint/pkgver"
 	"netbsd.org/pkglint/regex"
 	"netbsd.org/pkglint/trace"
@@ -25,7 +26,6 @@ type Package struct {
 	EffectivePkgbase     string          // The effective PKGNAME without the version
 	EffectivePkgversion  string          // The version part of the effective PKGNAME, excluding nb13
 	EffectivePkgnameLine MkLine          // The origin of the three effective_* values
-	SeenBsdPrefsMk       bool            // Has bsd.prefs.mk already been included?
 	PlistDirs            map[string]bool // Directories mentioned in the PLIST files
 	PlistFiles           map[string]bool // Regular files mentioned in the PLIST files
 
@@ -34,7 +34,6 @@ type Package struct {
 	plistSubstCond        map[string]bool // varname => true; all variables that are used as conditions (@comment or nothing) in PLISTs.
 	included              map[string]Line // fname => line
 	seenMakefileCommon    bool            // Does the package have any .includes?
-	loadTimeTools         map[string]bool // true=ok, false=not ok, absent=not mentioned in USE_TOOLS.
 	conditionalIncludes   map[string]MkLine
 	unconditionalIncludes map[string]MkLine
 	once                  Once
@@ -44,7 +43,7 @@ type Package struct {
 func NewPackage(dir string) *Package {
 	pkgpath := G.Pkgsrc.ToRel(dir)
 	if strings.Count(pkgpath, "/") != 1 {
-		NewLineWhole(dir).Errorf("Package directory %q must be two subdirectories below the pkgsrc root %q.", dir, G.Pkgsrc.File("."))
+		panic(fmt.Sprintf("Package directory %q must be two subdirectories below the pkgsrc root %q.", dir, G.Pkgsrc.File(".")))
 	}
 
 	pkg := &Package{
@@ -60,13 +59,10 @@ func NewPackage(dir string) *Package {
 		bl3:                   make(map[string]Line),
 		plistSubstCond:        make(map[string]bool),
 		included:              make(map[string]Line),
-		loadTimeTools:         make(map[string]bool),
 		conditionalIncludes:   make(map[string]MkLine),
 		unconditionalIncludes: make(map[string]MkLine),
 	}
-	for varname, line := range G.Pkgsrc.UserDefinedVars {
-		pkg.vars.Define(varname, line)
-	}
+	pkg.vars.DefineAll(G.Pkgsrc.UserDefinedVars)
 	return pkg
 }
 
@@ -74,28 +70,6 @@ func NewPackage(dir string) *Package {
 // as resolved from the package's directory.
 func (pkg *Package) File(relativeFilename string) string {
 	return cleanpath(pkg.dir + "/" + relativeFilename)
-}
-
-func (pkg *Package) varValue(varname string) (string, bool) {
-	switch varname {
-	case "KRB5_TYPE":
-		return "heimdal", true
-	case "PGSQL_VERSION":
-		return "95", true
-	}
-	if mkline := pkg.vars.FirstDefinition(varname); mkline != nil {
-		return mkline.Value(), true
-	}
-	return "", false
-}
-
-func (pkg *Package) setSeenBsdPrefsMk() {
-	if !pkg.SeenBsdPrefsMk {
-		pkg.SeenBsdPrefsMk = true
-		if trace.Tracing {
-			trace.Stepf("Pkg.setSeenBsdPrefsMk")
-		}
-	}
 }
 
 func (pkg *Package) checkPossibleDowngrade() {
@@ -357,7 +331,7 @@ func (pkg *Package) readMakefile(fname string, mainLines *MkLines, allLines *MkL
 				G.Pkg.seenMakefileCommon = true
 			}
 
-			skip := contains(fname, "/mk/") || hasSuffix(includeFile, "/bsd.pkg.mk") || hasSuffix(includeFile, "/bsd.prefs.mk")
+			skip := contains(fname, "/mk/") || hasSuffix(includeFile, "/bsd.pkg.mk") || IsPrefs(includeFile)
 			if !skip {
 				dirname, _ := path.Split(fname)
 				dirname = cleanpath(dirname)
@@ -405,7 +379,7 @@ func (pkg *Package) readMakefile(fname string, mainLines *MkLines, allLines *MkL
 		return true
 	}
 	atEnd := func(mkline MkLine) {}
-	fileMklines.ForEach(lineAction, atEnd)
+	fileMklines.ForEachEnd(lineAction, atEnd)
 
 	if includingFnameForUsedCheck != "" {
 		fileMklines.checkForUsedComment(G.Pkgsrc.ToRel(includingFnameForUsedCheck))
@@ -481,11 +455,7 @@ func (pkg *Package) checkfilePackageMakefile(fname string, mklines *MkLines) {
 }
 
 func (pkg *Package) getNbpart() string {
-	line := pkg.vars.FirstDefinition("PKGREVISION")
-	if line == nil {
-		return ""
-	}
-	pkgrevision := line.Value()
+	pkgrevision, _ := pkg.vars.Value("PKGREVISION")
 	if rev, err := strconv.Atoi(pkgrevision); err == nil {
 		return "nb" + strconv.Itoa(rev)
 	}
@@ -546,7 +516,7 @@ func (pkg *Package) pkgnameFromDistname(pkgname, distname string) string {
 
 	subst := func(str, smod string) (result string) {
 		if trace.Tracing {
-			defer trace.Call(str, smod, trace.Ref(result))()
+			defer trace.Call(str, smod, trace.Result(&result))()
 		}
 		qsep := regexp.QuoteMeta(smod[1:2])
 		if m, left, from, right, to, flags := regex.Match5(smod, regex.Pattern(`^S`+qsep+`(\^?)([^:]*?)(\$?)`+qsep+`([^:]*)`+qsep+`([1g]*)$`)); m {
@@ -876,15 +846,13 @@ func (pkg *Package) checkLocallyModified(fname string) {
 		defer trace.Call(fname)()
 	}
 
-	ownerLine := pkg.vars.FirstDefinition("OWNER")
-	maintainerLine := pkg.vars.FirstDefinition("MAINTAINER")
-	owner := ""
-	maintainer := ""
-	if ownerLine != nil && !containsVarRef(ownerLine.Value()) {
-		owner = ownerLine.Value()
+	owner, _ := pkg.vars.Value("OWNER")
+	maintainer, _ := pkg.vars.Value("MAINTAINER")
+	if containsVarRef(owner) {
+		owner = ""
 	}
-	if maintainerLine != nil && !containsVarRef(maintainerLine.Value()) && maintainerLine.Value() != "pkgsrc-users@NetBSD.org" {
-		maintainer = maintainerLine.Value()
+	if containsVarRef(maintainer) || maintainer == "pkgsrc-users@NetBSD.org" {
+		maintainer = ""
 	}
 	if owner == "" && maintainer == "" {
 		return
