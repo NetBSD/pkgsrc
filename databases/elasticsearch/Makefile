@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2018/05/21 12:53:29 fhajny Exp $
+# $NetBSD: Makefile,v 1.47 2018/09/05 13:29:30 fhajny Exp $
 
-DISTNAME=	elasticsearch-6.2.4
-PKGREVISION=	1
+DISTNAME=	elasticsearch-6.4.0
 CATEGORIES=	textproc
 MASTER_SITES=	https://artifacts.elastic.co/downloads/elasticsearch/
 
@@ -92,6 +91,14 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/elasticsearch-plugin ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/elasticsearch-translog ${DESTDIR}${ES_BASEDIR}/bin
 	cd ${WRKSRC} && ${PAX} -rw -pp lib modules ${DESTDIR}${ES_BASEDIR}
+# Remove irrelevant precompiled binaries and libs
+	${RM} -rf ${DESTDIR}${ES_BASEDIR}/modules/x-pack-ml/platform/windows-x86_64
+.if empty(MACHINE_PLATFORM:MDarwin-*-x86_64)
+	${RM} -rf ${DESTDIR}${ES_BASEDIR}/modules/x-pack-ml/platform/darwin-x86_64
+.endif
+.if empty(MACHINE_PLATFORM:MLinux-*-x86_64)
+	${RM} -rf ${DESTDIR}${ES_BASEDIR}/modules/x-pack-ml/platform/linux-x86_64
+.endif
 
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../mk/java-vm.mk"
