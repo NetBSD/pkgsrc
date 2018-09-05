@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3926 2018/09/04 14:47:14 prlw1 Exp $
+$NetBSD: CHANGES-2018,v 1.3927 2018/09/05 05:52:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5527,3 +5527,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/gradle to 4.10 [fhajny 2018-09-04]
 	Updated security/duo-unix to 1.10.4 [fhajny 2018-09-04]
 	Updated devel/py-meson to 0.47.2 [prlw1 2018-09-04]
+	Updated devel/p5-Pegex to 0.67 [wiz 2018-09-05]
