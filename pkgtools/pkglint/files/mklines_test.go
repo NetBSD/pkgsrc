@@ -86,9 +86,9 @@ func (s *Suite) Test_MkLines__for_loop_multiple_variables(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	t.SetupTool(&Tool{Name: "echo", Varname: "ECHO", Predefined: true})
-	t.SetupTool(&Tool{Name: "find", Varname: "FIND", Predefined: true})
-	t.SetupTool(&Tool{Name: "pax", Varname: "PAX", Predefined: true})
+	t.SetupToolUsable("echo", "ECHO")
+	t.SetupToolUsable("find", "FIND")
+	t.SetupToolUsable("pax", "PAX")
 	mklines := t.NewMkLines("Makefile", // From audio/squeezeboxserver
 		MkRcsID,
 		"",
@@ -214,7 +214,7 @@ func (s *Suite) Test_MkLines__indirect_variables(c *check.C) {
 		"",
 		"post-configure:",
 		".for var in MAIL_PROGRAM CMDPATH",
-		"\t"+`${RUN} ${ECHO} "#define ${var} \""${UUCP_${var}}"\"`,
+		"\t"+`${RUN} ${ECHO} "#define ${var} \""${UUCP_${var}}"\""`,
 		".endfor")
 
 	mklines.Check()
@@ -313,6 +313,49 @@ func (s *Suite) Test_MkLines_checkForUsedComment(c *check.C) {
 	c.Check(G.autofixAvailable, equals, true)
 }
 
+func (s *Suite) Test_MkLines_DetermineDefinedVariables(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall,no-space")
+	t.SetupPkgsrc()
+	t.CreateFileLines("mk/tools/defaults.mk",
+		"USE_TOOLS+=     autoconf autoconf213")
+	G.Pkgsrc.LoadInfrastructure()
+	mklines := t.NewMkLines("determine-defined-variables.mk",
+		MkRcsID,
+		"",
+		"USE_TOOLS+=             autoconf213 autoconf",
+		"USE_TOOLS:=             ${USE_TOOLS:Ntbl}",
+		"",
+		"OPSYSVARS+=             OSV",
+		"OSV.NetBSD=             NetBSD-specific value",
+		"",
+		"SUBST_CLASSES+=         subst",
+		"SUBST_STAGE.subst=      pre-configure",
+		"SUBST_FILES.subst=      file",
+		"SUBST_VARS.subst=       SUV",
+		"SUV=                    value for substitution",
+		"",
+		"pre-configure:",
+		"\t${RUN} autoreconf; autoheader-2.13; unknown-command",
+		"\t${ECHO} ${OSV:Q}")
+
+	mklines.Check()
+
+	// The tools autoreconf and autoheader213 are known at this point because of the USE_TOOLS line.
+	// The SUV variable is used implicitly by the SUBST framework, therefore no warning.
+	// The OSV.NetBSD variable is used implicitly via the OSV variable, therefore no warning.
+	t.CheckOutputLines(
+		// FIXME: For most lists, using the := operator to exclude an item is ok.
+		"WARN: determine-defined-variables.mk:4: USE_TOOLS should not be evaluated at load time.",
+		"WARN: determine-defined-variables.mk:4: USE_TOOLS may not be used in any file; it is a write-only variable.",
+		// FIXME: the below warning is wrong; it's ok to have SUBST blocks in all files, maybe except buildlink3.mk.
+		"WARN: determine-defined-variables.mk:12: The variable SUBST_VARS.subst may not be set (only given a default value, appended to) in this file; it would be ok in Makefile, Makefile.common, options.mk.",
+		// FIXME: the below warning is wrong; variables mentioned in SUBST_VARS should be allowed in that block.
+		"WARN: determine-defined-variables.mk:13: Foreign variable \"SUV\" in SUBST block.",
+		"WARN: determine-defined-variables.mk:16: Unknown shell command \"unknown-command\".")
+}
+
 func (s *Suite) Test_MkLines_DetermineUsedVariables__simple(c *check.C) {
 	t := s.Init(c)
 
@@ -372,7 +415,9 @@ func (s *Suite) Test_MkLines_PrivateTool_Defined(c *check.C) {
 
 	mklines.Check()
 
-	t.CheckOutputEmpty()
+	// TODO: Is it necessary to add the tool to USE_TOOLS? If not, why not?
+	t.CheckOutputLines(
+		"WARN: fname:4: The \"md5sum\" tool is used but not added to USE_TOOLS.")
 }
 
 func (s *Suite) Test_MkLines_Check_indentation(c *check.C) {
@@ -398,7 +443,7 @@ func (s *Suite) Test_MkLines_Check_indentation(c *check.C) {
 
 	mklines.Check()
 
-	t.CheckOutputLines(""+
+	t.CheckOutputLines(
 		"NOTE: options.mk:2: This directive should be indented by 0 spaces.",
 		"NOTE: options.mk:3: This directive should be indented by 0 spaces.",
 		"NOTE: options.mk:4: This directive should be indented by 2 spaces.",
@@ -446,11 +491,29 @@ func (s *Suite) Test_MkLines_Check__endif_comment(c *check.C) {
 	// See MkLineChecker.checkDirective
 	mklines.Check()
 
-	t.CheckOutputLines(""+
+	t.CheckOutputLines(
 		"WARN: opsys.mk:7: Comment \"ARCH\" does not match condition \"${OS_VERSION:M8.*}\".",
 		"WARN: opsys.mk:8: Comment \"OS_VERSION\" does not match condition \"${ARCH} == x86_64\".",
 		"WARN: opsys.mk:10: Comment \"j\" does not match loop \"i in 1 2 3 4 5\".",
 		"WARN: opsys.mk:20: Comment \"NetBSD\" does not match condition \"${OPSYS} == FreeBSD\".")
+}
+
+func (s *Suite) Test_MkLines_Check__unbalanced_directives(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall")
+	mklines := t.NewMkLines("opsys.mk",
+		MkRcsID,
+		"",
+		".for i in 1 2 3 4 5",
+		".  if ${OPSYS} == NetBSD",
+		".    if ${ARCH} == x86_64",
+		".      if ${OS_VERSION:M8.*}")
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"ERROR: opsys.mk:6: Directive indentation is not 0, but 8.")
 }
 
 // Demonstrates how to define your own make(1) targets for creating
@@ -461,7 +524,7 @@ func (s *Suite) Test_MkLines_wip_category_Makefile(c *check.C) {
 
 	t.SetupCommandLine("-Wall", "--explain")
 	t.SetupVartypes()
-	t.SetupTool(&Tool{Name: "rm", Varname: "RM", Predefined: true})
+	t.SetupToolUsable("rm", "RM")
 	t.CreateFileLines("mk/misc/category.mk")
 	mklines := t.SetupFileMkLines("wip/Makefile",
 		MkRcsID,
@@ -498,15 +561,19 @@ func (s *Suite) Test_MkLines_wip_category_Makefile(c *check.C) {
 		"")
 }
 
-func (s *Suite) Test_MkLines_ExtractDocumentedVariables(c *check.C) {
+func (s *Suite) Test_MkLines_determineDocumentedVariables(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
 	t.SetupVartypes()
-	t.SetupTool(&Tool{Name: "rm", Varname: "RM", Predefined: true})
+	t.SetupToolUsable("rm", "RM")
 	mklines := t.NewMkLines("Makefile",
 		MkRcsID,
 		"#",
+		"# Copyright 2000-2018",
+		"#",
+		"# This whole comment is ignored, until the next empty line.",
+		"",
 		"# User-settable variables:",
 		"#",
 		"# PKG_DEBUG_LEVEL",
@@ -536,12 +603,12 @@ func (s *Suite) Test_MkLines_ExtractDocumentedVariables(c *check.C) {
 	sort.Strings(varnames)
 
 	expected := []string{
-		"PKG_DEBUG_LEVEL (line 5)",
-		"PKG_VERBOSE (line 10)",
-		"VARBASE1.* (line 17)",
-		"VARBASE2.* (line 18)",
-		"VARBASE3.${id} (line 19)",
-		"VARBASE3.* (line 19)"}
+		"PKG_DEBUG_LEVEL (line 9)",
+		"PKG_VERBOSE (line 14)",
+		"VARBASE1.* (line 21)",
+		"VARBASE2.* (line 22)",
+		"VARBASE3.${id} (line 23)",
+		"VARBASE3.* (line 23)"}
 	c.Check(varnames, deepEquals, expected)
 }
 
@@ -636,6 +703,34 @@ func (s *Suite) Test_MkLines_CheckRedundantVariables__procedure_call(c *check.C)
 
 	mklines.CheckRedundantVariables()
 
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_MkLines_CheckRedundantVariables__shell_and_eval(c *check.C) {
+	t := s.Init(c)
+	mklines := t.NewMkLines("module.mk",
+		"VAR:=\tvalue ${OTHER}",
+		"VAR!=\tvalue ${OTHER}")
+
+	mklines.CheckRedundantVariables()
+
+	// Combining := and != is too complicated to be analyzed by pkglint,
+	// therefore no warning.
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_MkLines_CheckRedundantVariables__shell_and_eval_literal(c *check.C) {
+	t := s.Init(c)
+	mklines := t.NewMkLines("module.mk",
+		"VAR:=\tvalue",
+		"VAR!=\tvalue")
+
+	mklines.CheckRedundantVariables()
+
+	// Even when := is used with a literal value (which is usually
+	// only done for procedure calls), the shell evaluation can have
+	// so many different side effects that pkglint cannot reliably
+	// help in this situation.
 	t.CheckOutputEmpty()
 }
 
@@ -783,5 +878,21 @@ func (s *Suite) Test_MkLines_Check__indirect_PLIST_VARS(c *check.C) {
 	// If the PLIST_VARS contain complex expressions that involve other variables,
 	// it becomes too difficult for pkglint to decide whether the IDs can still match.
 	// Therefore, in such a case, no diagnostics are logged at all.
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_MkLines_Check__hacks_mk(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall,no-space")
+	t.SetupVartypes()
+	mklines := t.NewMkLines("hacks.mk",
+		MkRcsID,
+		"",
+		"PKGNAME?=       pkgbase-1.0")
+
+	mklines.Check()
+
+	// No warning about including bsd.prefs.mk before using the ?= operator.
 	t.CheckOutputEmpty()
 }

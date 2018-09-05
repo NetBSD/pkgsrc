@@ -139,7 +139,7 @@ func (fix *Autofix) Realign(mkline MkLine, newWidth int) {
 		if (oldWidth == 0 || width < oldWidth) && width >= 8 && rawLine.textnl != "\n" {
 			oldWidth = width
 		}
-		if !regex.Matches(space, `^\t* {0,7}`) {
+		if !regex.Matches(space, `^\t* {0,7}$`) {
 			normalized = false
 		}
 	}
@@ -346,12 +346,14 @@ func SaveAutofixChanges(lines []Line) (autofixed bool) {
 		}
 		err := ioutil.WriteFile(tmpname, []byte(text), 0666)
 		if err != nil {
-			NewLineWhole(tmpname).Errorf("Cannot write.")
+			logs(llError, tmpname, "", "Cannot write: %s", "Cannot write: "+err.Error())
 			continue
 		}
 		err = os.Rename(tmpname, fname)
 		if err != nil {
-			NewLineWhole(fname).Errorf("Cannot overwrite with auto-fixed content.")
+			logs(llError, tmpname, "",
+				"Cannot overwrite with auto-fixed content: %s",
+				"Cannot overwrite with auto-fixed content: "+err.Error())
 			continue
 		}
 		autofixed = true

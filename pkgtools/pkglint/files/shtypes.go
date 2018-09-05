@@ -39,7 +39,7 @@ func (t ShAtomType) IsWord() bool {
 type ShAtom struct {
 	Type    ShAtomType
 	MkText  string
-	Quoting ShQuoting
+	Quoting ShQuoting // The quoting state at the end of the token
 	Data    interface{}
 }
 

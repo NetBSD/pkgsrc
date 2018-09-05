@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io"
 	"io/ioutil"
+	"netbsd.org/pkglint/regex"
 	"os"
 	"path"
 	"path/filepath"
@@ -27,13 +28,23 @@ type Suite struct {
 	Tester *Tester
 }
 
-// Init initializes the suite with the check.C instance for the actual
-// test run.
-// The returned tester can be used to easily setup the test environment
-// and check the results using a high-level API.
+// Init creates and returns a test helper that allows to:
 //
-// See https://github.com/go-check/check/issues/22
+// * create files for the test
+//
+// * load these files into Line and MkLine objects (for tests spanning multiple files)
+//
+// * create new in-memory Line and MkLine objects (for simple tests)
+//
+// * check the files that have been changed by the --autofix feature
+//
+// * check the pkglint diagnostics
 func (s *Suite) Init(c *check.C) *Tester {
+
+	// Note: the check.C object from SetUpTest cannot be used here,
+	// and the parameter given here cannot be used in TearDownTest;
+	// see https://github.com/go-check/check/issues/22.
+
 	t := s.Tester // Has been initialized by SetUpTest
 	if t.checkC != nil {
 		panic("Suite.Init must only be called once.")
@@ -149,19 +160,17 @@ func (t *Tester) SetupOption(name, description string) {
 	G.Pkgsrc.PkgOptions[name] = description
 }
 
-func (t *Tester) SetupTool(tool *Tool) {
-	reg := G.Pkgsrc.Tools
+func (t *Tester) SetupTool(name, varname string) *Tool {
+	tools := G.Pkgsrc.Tools
+	return tools.Define(name, varname, dummyMkLine)
+}
 
-	if len(reg.byName) == 0 && len(reg.byVarname) == 0 {
-		reg = NewToolRegistry()
-		G.Pkgsrc.Tools = reg
-	}
-	if tool.Name != "" {
-		reg.byName[tool.Name] = tool
-	}
-	if tool.Varname != "" {
-		reg.byVarname[tool.Varname] = tool
-	}
+// SetupToolUsable registers a tool and immediately makes it usable,
+// as if the tool were predefined globally in pkgsrc.
+func (t *Tester) SetupToolUsable(name, varname string) *Tool {
+	tool := t.SetupTool(name, varname)
+	tool.SetValidity(AtRunTime, G.Pkgsrc.Tools.TraceName)
+	return tool
 }
 
 // SetupFileLines creates a temporary file and writes the given lines to it.
@@ -196,6 +205,13 @@ func (t *Tester) SetupPkgsrc() {
 	// See Pkgsrc.loadSuggestedUpdates.
 	t.CreateFileLines("doc/TODO",
 		RcsID)
+
+	// Some example licenses so that the tests for whole packages
+	// don't need to define them on their own.
+	t.CreateFileLines("licenses/2-clause-bsd",
+		"Redistribution and use in source and binary forms ...")
+	t.CreateFileLines("licenses/gnu-gpl-v2",
+		"The licenses for most software ...")
 
 	// The MASTER_SITES in the package Makefile are searched here.
 	// See Pkgsrc.loadMasterSites.
@@ -279,25 +295,49 @@ func (t *Tester) Chdir(relativeFilename string) {
 	t.relcwd = relativeFilename
 }
 
-// ExpectFatalError promises that in the remainder of the current function
-// call, a panic with a pkglintFatal will occur (typically from Line.Fatalf).
+// ExpectFatal runs the given action and expects that this action calls
+// Line.Fatalf or uses some other way to panic with a pkglintFatal.
 //
 // Usage:
-// 	func() {
-//      defer t.ExpectFatalError()
+//  t.ExpectFatal(
+//      func() { /* do something that panics */ },
+//      "FATAL: ~/Makefile:1: Must not be empty")
+func (t *Tester) ExpectFatal(action func(), expectedLines ...string) {
+	defer func() {
+		r := recover()
+		if r == nil {
+			panic("Expected a pkglint fatal error, but didn't get one.")
+		} else if _, ok := r.(pkglintFatal); ok {
+			t.CheckOutputLines(expectedLines...)
+		} else {
+			panic(r)
+		}
+	}()
+
+	action()
+}
+
+// ExpectFatalMatches runs the given action and expects that this action
+// calls Line.Fatalf or uses some other way to panic with a pkglintFatal.
+// It then matches the output against a regular expression.
 //
-//      // The code that causes the fatal error.
-//      Load(t.File("nonexistent"), MustSucceed)
-//  }()
-//  t.CheckOutputLines(
-//      "FATAL: ~/nonexistent: Does not exist.")
-func (t *Tester) ExpectFatalError() {
-	r := recover()
-	if r == nil {
-		panic("Expected a pkglint fatal error, but didn't get one.")
-	} else if _, ok := r.(pkglintFatal); !ok {
-		panic(r)
-	}
+// Usage:
+//  t.ExpectFatalMatches(
+//      func() { /* do something that panics */ },
+//      `FATAL: ~/Makefile:1: .*\n`)
+func (t *Tester) ExpectFatalMatches(action func(), expected regex.Pattern) {
+	defer func() {
+		r := recover()
+		if r == nil {
+			panic("Expected a pkglint fatal error, but didn't get one.")
+		} else if _, ok := r.(pkglintFatal); ok {
+			t.c().Check(t.Output(), check.Matches, string(expected))
+		} else {
+			panic(r)
+		}
+	}()
+
+	action()
 }
 
 // Arguments are either (lineno, orignl) or (lineno, orignl, textnl).
@@ -397,6 +437,9 @@ func (t *Tester) CheckOutputLines(expectedLines ...string) {
 // in an in-memory buffer) additionally to stdout.
 // This is useful when stepping through the code, especially
 // in combination with SetupCommandLine("--debug").
+//
+// In JetBrains GoLand, the tracing output is suppressed after the first
+// failed check, see https://youtrack.jetbrains.com/issue/GO-6154.
 func (t *Tester) EnableTracing() {
 	G.logOut = NewSeparatorWriter(io.MultiWriter(os.Stdout, &t.stdout))
 	trace.Out = os.Stdout
