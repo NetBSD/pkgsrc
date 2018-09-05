@@ -90,6 +90,49 @@ func (s *Suite) Test_SubstContext__no_class(c *check.C) {
 		"WARN: Makefile:13: Incomplete SUBST block: SUBST_STAGE.repl missing.")
 }
 
+func (s *Suite) Test_SubstContext__multiple_classes_in_one_line(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wextra")
+
+	simulateSubstLines(t,
+		"10: SUBST_CLASSES+=         one two",
+		"11: SUBST_STAGE.one=        post-configure",
+		"12: SUBST_FILES.one=        one.txt",
+		"13: SUBST_SED.one=          s,one,1,g",
+		"14: SUBST_STAGE.two=        post-configure",
+		"15: SUBST_FILES.two=        two.txt",
+		"17: ")
+
+	t.CheckOutputLines(
+		"WARN: Makefile:10: Please add only one class at a time to SUBST_CLASSES.",
+		"WARN: Makefile:17: Incomplete SUBST block: SUBST_SED.two, SUBST_VARS.two or SUBST_FILTER_CMD.two missing.")
+}
+
+func (s *Suite) Test_SubstContext__multiple_classes_in_one_block(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wextra")
+
+	simulateSubstLines(t,
+		"10: SUBST_CLASSES+=         one",
+		"11: SUBST_STAGE.one=        post-configure",
+		"12: SUBST_STAGE.one=        post-configure",
+		"13: SUBST_FILES.one=        one.txt",
+		"14: SUBST_CLASSES+=         two", // The block "one" is not finished yet.
+		"15: SUBST_SED.one=          s,one,1,g",
+		"16: SUBST_STAGE.two=        post-configure",
+		"17: SUBST_FILES.two=        two.txt",
+		"18: SUBST_SED.two=          s,two,2,g",
+		"19: ")
+
+	t.CheckOutputLines(
+		"WARN: Makefile:12: Duplicate definition of \"SUBST_STAGE.one\".",
+		"WARN: Makefile:14: Incomplete SUBST block: SUBST_SED.one, SUBST_VARS.one or SUBST_FILTER_CMD.one missing.",
+		"WARN: Makefile:14: Subst block \"one\" should be finished before adding the next class to SUBST_CLASSES.",
+		"WARN: Makefile:15: Variable \"SUBST_SED.one\" does not match SUBST class \"two\".")
+}
+
 func (s *Suite) Test_SubstContext__directives(c *check.C) {
 	t := s.Init(c)
 
@@ -192,6 +235,43 @@ func (s *Suite) Test_SubstContext__post_patch(c *check.C) {
 	t.CheckOutputLines(
 		"WARN: os.mk:4: Substitutions should not happen in the patch phase.",
 		"AUTOFIX: os.mk:4: Replacing \"post-patch\" with \"pre-configure\".")
+}
+
+func (s *Suite) Test_SubstContext__pre_configure_with_NO_CONFIGURE(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall,no-space")
+	t.SetupPkgsrc()
+	G.Pkgsrc.LoadInfrastructure()
+	t.CreateFileLines("category/Makefile")
+	t.CreateFileLines("licenses/2-clause-bsd")
+
+	t.Chdir("category/package")
+	t.CreateFileLines("PLIST",
+		PlistRcsID,
+		"bin/program")
+	t.CreateFileLines("Makefile",
+		MkRcsID,
+		"",
+		"CATEGORIES=             category",
+		"",
+		"COMMENT=                Comment",
+		"LICENSE=                2-clause-bsd",
+		"",
+		"SUBST_CLASSES+=         os",
+		"SUBST_STAGE.os=         pre-configure",
+		"SUBST_FILES.os=         guess-os.h",
+		"SUBST_SED.os=           -e s,@OPSYS@,Darwin,",
+		"",
+		"NO_CHECKSUM=            yes",
+		"NO_CONFIGURE=           yes",
+		"",
+		".include \"../../mk/bsd.pkg.mk\"")
+
+	G.checkdirPackage(".")
+
+	t.CheckOutputLines(
+		"WARN: Makefile:9: SUBST_STAGE pre-configure has no effect when NO_CONFIGURE is set (in line 14).")
 }
 
 func (s *Suite) Test_SubstContext__adjacent(c *check.C) {

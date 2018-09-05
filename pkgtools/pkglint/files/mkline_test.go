@@ -222,15 +222,14 @@ func (s *Suite) Test_NewMkLine__autofix_space_after_varname(c *check.C) {
 func (s *Suite) Test_MkLine_VariableType_varparam(c *check.C) {
 	t := s.Init(c)
 
-	mkline := t.NewMkLine("fname", 1, "# dummy")
 	t.SetupVartypes()
 
-	t1 := mkline.VariableType("FONT_DIRS")
+	t1 := G.Pkgsrc.VariableType("FONT_DIRS")
 
 	c.Assert(t1, check.NotNil)
 	c.Check(t1.String(), equals, "ShellList of Pathmask (guessed)")
 
-	t2 := mkline.VariableType("FONT_DIRS.ttf")
+	t2 := G.Pkgsrc.VariableType("FONT_DIRS.ttf")
 
 	c.Assert(t2, check.NotNil)
 	c.Check(t2.String(), equals, "ShellList of Pathmask (guessed)")
@@ -240,8 +239,7 @@ func (s *Suite) Test_VarUseContext_String(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupVartypes()
-	mkline := t.NewMkLine("fname", 1, "# dummy")
-	vartype := mkline.VariableType("PKGNAME")
+	vartype := G.Pkgsrc.VariableType("PKGNAME")
 	vuc := &VarUseContext{vartype, vucTimeUnknown, vucQuotBackt, false}
 
 	c.Check(vuc.String(), equals, "(PkgName time:unknown quoting:backt wordpart:false)")
@@ -389,8 +387,8 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__command_in_command(c *check.C)
 
 	t.SetupCommandLine("-Wall")
 	t.SetupVartypes()
-	t.SetupTool(&Tool{Name: "find", Varname: "FIND", Predefined: true})
-	t.SetupTool(&Tool{Name: "sort", Varname: "SORT", Predefined: true})
+	t.SetupToolUsable("find", "FIND")
+	t.SetupToolUsable("sort", "SORT")
 	G.Pkg = NewPackage(t.File("category/pkgbase"))
 	G.Mk = t.NewMkLines("Makefile",
 		MkRcsID,
@@ -427,16 +425,15 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__command_as_command_argument(c 
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	t.SetupTool(&Tool{Name: "perl", Varname: "PERL5", Predefined: true})
-	t.SetupTool(&Tool{Name: "bash", Varname: "BASH", Predefined: true})
+	t.SetupToolUsable("perl", "PERL5")
+	t.SetupToolUsable("bash", "BASH")
 	t.SetupVartypes()
-	G.Mk = t.NewMkLines("Makefile",
+	mklines := t.NewMkLines("Makefile",
 		MkRcsID,
 		"\t${RUN} cd ${WRKSRC} && ( ${ECHO} ${PERL5:Q} ; ${ECHO} ) | ${BASH} ./install",
 		"\t${RUN} cd ${WRKSRC} && ( ${ECHO} ${PERL5} ; ${ECHO} ) | ${BASH} ./install")
 
-	MkLineChecker{G.Mk.mklines[1]}.Check()
-	MkLineChecker{G.Mk.mklines[2]}.Check()
+	mklines.Check()
 
 	t.CheckOutputLines(
 		"WARN: Makefile:2: The exitcode of the command at the left of the | operator is ignored.",
@@ -468,8 +465,8 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__command_in_subshell(c *check.C
 
 	t.SetupCommandLine("-Wall")
 	t.SetupVartypes()
-	t.SetupTool(&Tool{Name: "awk", Varname: "AWK", Predefined: true})
-	t.SetupTool(&Tool{Name: "echo", Varname: "ECHO", Predefined: true})
+	t.SetupToolUsable("awk", "AWK")
+	t.SetupToolUsable("echo", "ECHO")
 	G.Mk = t.NewMkLines("xpi.mk",
 		MkRcsID,
 		"\t id=$$(${AWK} '{print}' < ${WRKSRC}/idfile) && echo \"$$id\"",
@@ -549,8 +546,8 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__tool_in_quotes_in_subshell_in_
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	t.SetupTool(&Tool{Name: "echo", Varname: "ECHO", Predefined: true})
-	t.SetupTool(&Tool{Name: "sh", Varname: "SH", Predefined: true})
+	t.SetupToolUsable("echo", "ECHO")
+	t.SetupToolUsable("sh", "SH")
 	t.SetupVartypes()
 	G.Mk = t.NewMkLines("x11/labltk/Makefile",
 		MkRcsID,
@@ -598,7 +595,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__guessed_list_variable_in_quote
 	t.SetupVartypes()
 	G.Mk = t.NewMkLines("audio/jack-rack/Makefile",
 		MkRcsID,
-		"LADSPA_PLUGIN_PATH?=\t${PREFIX}/lib/ladspa",
+		"LADSPA_PLUGIN_PATH=\t${PREFIX}/lib/ladspa",
 		"CPPFLAGS+=\t\t-DLADSPA_PATH=\"\\\"${LADSPA_PLUGIN_PATH}\\\"\"")
 
 	G.Mk.Check()
@@ -641,7 +638,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__tool_in_CONFIGURE_ENV(c *check
 
 	t.SetupCommandLine("-Wall")
 	t.SetupVartypes()
-	G.Pkgsrc.Tools.RegisterVarname("tar", "TAR", dummyMkLine)
+	t.SetupToolUsable("tar", "TAR")
 	mklines := t.NewMkLines("Makefile",
 		MkRcsID,
 		"",
@@ -662,7 +659,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__backticks(c *check.C) {
 
 	t.SetupCommandLine("-Wall")
 	t.SetupVartypes()
-	G.Pkgsrc.Tools.RegisterVarname("cat", "CAT", dummyMkLine)
+	t.SetupToolUsable("cat", "CAT")
 	mklines := t.NewMkLines("Makefile",
 		MkRcsID,
 		"",
@@ -737,7 +734,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__tool_in_shell_command(c *check
 
 	t.SetupCommandLine("-Wall,no-space")
 	t.SetupVartypes()
-	t.SetupTool(&Tool{Varname: "BASH"})
+	t.SetupToolUsable("bash", "BASH")
 
 	mklines := t.SetupFileMkLines("Makefile",
 		MkRcsID,
@@ -847,7 +844,7 @@ func (s *Suite) Test_MkLine_VariableType(c *check.C) {
 	t.SetupVartypes()
 
 	checkType := func(varname string, vartype string) {
-		actualType := dummyMkLine.VariableType(varname)
+		actualType := G.Pkgsrc.VariableType(varname)
 		if vartype == "" {
 			c.Check(actualType, check.IsNil)
 		} else {
@@ -861,8 +858,8 @@ func (s *Suite) Test_MkLine_VariableType(c *check.C) {
 	checkType("SOME_DIR", "Pathname (guessed)")
 	checkType("SOMEDIR", "Pathname (guessed)")
 	checkType("SEARCHPATHS", "ShellList of Pathname (guessed)")
-	checkType("APACHE_USER", "UserGroupName (guessed)")
-	checkType("APACHE_GROUP", "UserGroupName (guessed)")
+	checkType("MYPACKAGE_USER", "UserGroupName (guessed)")
+	checkType("MYPACKAGE_GROUP", "UserGroupName (guessed)")
 	checkType("MY_CMD_ENV", "ShellList of ShellWord (guessed)")
 	checkType("MY_CMD_ARGS", "ShellList of ShellWord (guessed)")
 	checkType("MY_CMD_CFLAGS", "ShellList of CFlag (guessed)")
@@ -995,6 +992,13 @@ func (s *Suite) Test_MatchVarassign(c *check.C) {
 	// A single space is typically used for writing documentation,
 	// not for commenting out code.
 	checkNotVarassign("# VAR=value")
+}
+
+func (s *Suite) Test_NewMkOperator(c *check.C) {
+	c.Check(NewMkOperator(":="), equals, opAssignEval)
+	c.Check(NewMkOperator("="), equals, opAssign)
+
+	c.Check(func() { NewMkOperator("???") }, check.Panics, "Invalid operator: ???")
 }
 
 func (s *Suite) Test_Indentation(c *check.C) {

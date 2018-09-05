@@ -1,6 +1,7 @@
 package main
 
 import (
+	"io/ioutil"
 	"strings"
 
 	"gopkg.in/check.v1"
@@ -224,12 +225,14 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 	t.CheckOutputLines(
 		"WARN: ~/sysutils/checkperms/Makefile:3: This package should be updated to 1.13 ([supports more file formats]).",
 		"ERROR: ~/sysutils/checkperms/Makefile:4: Invalid category \"tools\".",
+		"ERROR: ~/sysutils/checkperms/README: Packages in main pkgsrc must not have a README file.",
+		"ERROR: ~/sysutils/checkperms/TODO: Packages in main pkgsrc must not have a TODO file.",
 		"ERROR: ~/sysutils/checkperms/distinfo:7: SHA1 hash of patches/patch-checkperms.c differs "+
 			"(distinfo has asdfasdf, patch file has e775969de639ec703866c0336c4c8e0fdd96309c). "+
 			"Run \""+confMake+" makepatchsum\".",
 		"WARN: ~/sysutils/checkperms/patches/patch-checkperms.c:12: Premature end of patch hunk "+
 			"(expected 1 lines to be deleted and 0 lines to be added).",
-		"2 errors and 2 warnings found.",
+		"4 errors and 2 warnings found.",
 		"(Run \"pkglint -e\" to show explanations.)",
 		"(Run \"pkglint -fs\" to show what can be fixed automatically.)",
 		"(Run \"pkglint -F\" to automatically fix some issues.)")
@@ -410,64 +413,6 @@ func (s *Suite) Test_ChecklinesMessage__autofix(c *check.C) {
 		"===========================================================================")
 }
 
-func (s *Suite) Test_Pkgsrc_Latest_no_basedir(c *check.C) {
-	t := s.Init(c)
-
-	latest := G.Pkgsrc.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
-
-	c.Check(latest, equals, "")
-	t.CheckOutputLines(
-		"ERROR: Cannot find latest version of \"^python[0-9]+$\" in \"~/lang\".")
-}
-
-func (s *Suite) Test_Pkgsrc_Latest_no_subdirs(c *check.C) {
-	t := s.Init(c)
-
-	t.SetupFileLines("lang/Makefile")
-
-	latest := G.Pkgsrc.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
-
-	c.Check(latest, equals, "")
-	t.CheckOutputLines(
-		"ERROR: Cannot find latest version of \"^python[0-9]+$\" in \"~/lang\".")
-}
-
-func (s *Suite) Test_Pkgsrc_Latest_single(c *check.C) {
-	t := s.Init(c)
-
-	t.SetupFileLines("lang/Makefile")
-	t.SetupFileLines("lang/python27/Makefile")
-
-	latest := G.Pkgsrc.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
-
-	c.Check(latest, equals, "../../lang/python27")
-}
-
-func (s *Suite) Test_Pkgsrc_Latest_multi(c *check.C) {
-	t := s.Init(c)
-
-	t.SetupFileLines("lang/Makefile")
-	t.SetupFileLines("lang/python27/Makefile")
-	t.SetupFileLines("lang/python35/Makefile")
-
-	latest := G.Pkgsrc.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
-
-	c.Check(latest, equals, "../../lang/python35")
-}
-
-func (s *Suite) Test_Pkgsrc_Latest_numeric(c *check.C) {
-	t := s.Init(c)
-
-	t.SetupFileLines("databases/postgresql95/Makefile")
-	t.SetupFileLines("databases/postgresql97/Makefile")
-	t.SetupFileLines("databases/postgresql100/Makefile")
-	t.SetupFileLines("databases/postgresql104/Makefile")
-
-	latest := G.Pkgsrc.Latest("databases", `^postgresql[0-9]+$`, "$0")
-
-	c.Check(latest, equals, "postgresql104")
-}
-
 // Demonstrates that an ALTERNATIVES file can be tested individually,
 // without any dependencies on a whole package or a PLIST file.
 func (s *Suite) Test_Pkglint_Checkfile__alternatives(c *check.C) {
@@ -532,4 +477,301 @@ func (s *Suite) Test_Pkglint_Checkfile__in_current_working_directory(c *check.C)
 	t.CheckOutputLines(
 		"WARN: log: Unexpected file found.",
 		"0 errors and 1 warning found.")
+}
+
+func (s *Suite) Test_Pkglint_Tool__prefer_mk_over_pkgsrc(c *check.C) {
+	t := s.Init(c)
+
+	G.Mk = t.NewMkLines("Makefile", MkRcsID)
+	global := G.Pkgsrc.Tools.Define("tool", "TOOL", dummyMkLine)
+	local := G.Mk.Tools.Define("tool", "TOOL", dummyMkLine)
+
+	global.Validity = Nowhere
+	local.Validity = AtRunTime
+
+	loadTimeTool, loadTimeUsable := G.Tool("tool", LoadTime)
+	runTimeTool, runTimeUsable := G.Tool("tool", RunTime)
+
+	c.Check(loadTimeTool, equals, local)
+	c.Check(loadTimeUsable, equals, false)
+	c.Check(runTimeTool, equals, local)
+	c.Check(runTimeUsable, equals, true)
+}
+
+func (s *Suite) Test_Pkglint_Tool__lookup_by_name_fallback(c *check.C) {
+	t := s.Init(c)
+
+	G.Mk = t.NewMkLines("Makefile", MkRcsID)
+	global := G.Pkgsrc.Tools.Define("tool", "TOOL", dummyMkLine)
+
+	global.Validity = Nowhere
+
+	loadTimeTool, loadTimeUsable := G.Tool("tool", LoadTime)
+	runTimeTool, runTimeUsable := G.Tool("tool", RunTime)
+
+	c.Check(loadTimeTool, equals, global)
+	c.Check(loadTimeUsable, equals, false)
+	c.Check(runTimeTool, equals, global)
+	c.Check(runTimeUsable, equals, false)
+}
+
+func (s *Suite) Test_Pkglint_Tool__lookup_by_varname(c *check.C) {
+	t := s.Init(c)
+
+	G.Mk = t.NewMkLines("Makefile", MkRcsID)
+	global := G.Pkgsrc.Tools.Define("tool", "TOOL", dummyMkLine)
+	local := G.Mk.Tools.Define("tool", "TOOL", dummyMkLine)
+
+	global.Validity = Nowhere
+	local.Validity = AtRunTime
+
+	loadTimeTool, loadTimeUsable := G.Tool("${TOOL}", LoadTime)
+	runTimeTool, runTimeUsable := G.Tool("${TOOL}", RunTime)
+
+	c.Check(loadTimeTool, equals, local)
+	c.Check(loadTimeUsable, equals, false)
+	c.Check(runTimeTool, equals, local)
+	c.Check(runTimeUsable, equals, true)
+}
+
+func (s *Suite) Test_Pkglint_Tool__lookup_by_varname_fallback(c *check.C) {
+	t := s.Init(c)
+
+	G.Mk = t.NewMkLines("Makefile", MkRcsID)
+	global := G.Pkgsrc.Tools.Define("tool", "TOOL", dummyMkLine)
+
+	global.Validity = Nowhere
+
+	loadTimeTool, loadTimeUsable := G.Tool("${TOOL}", LoadTime)
+	runTimeTool, runTimeUsable := G.Tool("${TOOL}", RunTime)
+
+	c.Check(loadTimeTool, equals, global)
+	c.Check(loadTimeUsable, equals, false)
+	c.Check(runTimeTool, equals, global)
+	c.Check(runTimeUsable, equals, false)
+}
+
+func (s *Suite) Test_Pkglint_Tool__lookup_by_varname_fallback_runtime(c *check.C) {
+	t := s.Init(c)
+
+	G.Mk = t.NewMkLines("Makefile", MkRcsID)
+	global := G.Pkgsrc.Tools.Define("tool", "TOOL", dummyMkLine)
+
+	global.Validity = AtRunTime
+
+	loadTimeTool, loadTimeUsable := G.Tool("${TOOL}", LoadTime)
+	runTimeTool, runTimeUsable := G.Tool("${TOOL}", RunTime)
+
+	c.Check(loadTimeTool, equals, global)
+	c.Check(loadTimeUsable, equals, false)
+	c.Check(runTimeTool, equals, global)
+	c.Check(runTimeUsable, equals, true)
+}
+
+func (s *Suite) Test_Pkglint_ToolByVarname__prefer_mk_over_pkgsrc(c *check.C) {
+	t := s.Init(c)
+
+	G.Mk = t.NewMkLines("Makefile", MkRcsID)
+	global := G.Pkgsrc.Tools.Define("tool", "TOOL", dummyMkLine)
+	local := G.Mk.Tools.Define("tool", "TOOL", dummyMkLine)
+
+	global.Validity = Nowhere
+	local.Validity = AtRunTime
+
+	c.Check(G.ToolByVarname("TOOL", LoadTime), equals, local)
+	c.Check(G.ToolByVarname("TOOL", RunTime), equals, local)
+}
+
+func (s *Suite) Test_Pkglint_ToolByVarname__fallback(c *check.C) {
+	t := s.Init(c)
+
+	G.Mk = t.NewMkLines("Makefile", MkRcsID)
+	global := G.Pkgsrc.Tools.Define("tool", "TOOL", dummyMkLine)
+
+	global.Validity = AtRunTime
+
+	c.Check(G.ToolByVarname("TOOL", LoadTime), equals, global)
+	c.Check(G.ToolByVarname("TOOL", RunTime), equals, global)
+}
+
+func (s *Suite) Test_Pkglint_Checkfile__CheckExtra(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Call", "-Wall,no-space")
+	t.SetupPkgsrc()
+	G.Pkgsrc.LoadInfrastructure()
+	t.CreateFileLines("licenses/gnu-gpl-2.0")
+	t.CreateFileLines("category/Makefile")
+	t.CreateFileLines("category/package/Makefile",
+		MkRcsID,
+		"",
+		"DISTNAME=       pkgname-1.0",
+		"CATEGORIES=     category",
+		"",
+		"COMMENT=        Comment",
+		"LICENSE=        gnu-gpl-2.0",
+		"",
+		"NO_CHECKSUM=    yes",
+		"",
+		".include \"../../mk/bsd.pkg.mk\"")
+	t.CreateFileLines("category/package/PLIST",
+		PlistRcsID,
+		"bin/program")
+	t.CreateFileLines("category/package/INSTALL",
+		"#! /bin/sh")
+	t.CreateFileLines("category/package/DEINSTALL",
+		"#! /bin/sh")
+
+	G.CheckDirent(t.File("category/package"))
+
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Pkglint_Checkfile__before_import(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Call", "-Wall,no-space", "--import")
+	t.SetupPkgsrc()
+	G.Pkgsrc.LoadInfrastructure()
+	t.CreateFileLines("licenses/gnu-gpl-2.0")
+	t.CreateFileLines("category/Makefile")
+	t.CreateFileLines("category/package/Makefile",
+		MkRcsID,
+		"",
+		"DISTNAME=       pkgname-1.0",
+		"CATEGORIES=     category",
+		"",
+		"COMMENT=        Comment",
+		"LICENSE=        gnu-gpl-2.0",
+		"",
+		"NO_CHECKSUM=    yes",
+		"",
+		".include \"../../mk/bsd.pkg.mk\"")
+	t.CreateFileLines("category/package/PLIST",
+		PlistRcsID,
+		"bin/program")
+	t.CreateFileLines("category/package/work/log")
+	t.CreateFileLines("category/package/Makefile~")
+	t.CreateFileLines("category/package/Makefile.orig")
+	t.CreateFileLines("category/package/Makefile.rej")
+
+	G.CheckDirent(t.File("category/package"))
+
+	t.CheckOutputLines(
+		"ERROR: ~/category/package/Makefile.orig: Must be cleaned up before committing the package.",
+		"ERROR: ~/category/package/Makefile.rej: Must be cleaned up before committing the package.",
+		"ERROR: ~/category/package/Makefile~: Must be cleaned up before committing the package.",
+		"ERROR: ~/category/package/work: Must be cleaned up before committing the package.")
+}
+
+func (s *Suite) Test_Pkglint_Checkfile__errors(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Call", "-Wall,no-space")
+	t.SetupPkgsrc()
+	t.CreateFileLines("category/package/files/subdir/file")
+	t.CreateFileLines("category/package/files/subdir/subsub/file")
+	G.Pkgsrc.LoadInfrastructure()
+
+	G.Checkfile(t.File("category/package/options.mk"))
+	G.Checkfile(t.File("category/package/files/subdir"))
+	G.Checkfile(t.File("category/package/files/subdir/subsub"))
+	G.Checkfile(t.File("category/package/files"))
+
+	c.Check(t.Output(), check.Matches, `^`+
+		`ERROR: ~/category/package/options.mk: Cannot determine file type: .*\n`+
+		`WARN: ~/category/package/files/subdir/subsub: Unknown directory name\.\n`+
+		`$`)
+}
+
+func (s *Suite) Test_Pkglint_Checkfile__file_selection(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Call", "-Wall,no-space")
+	t.SetupPkgsrc()
+	t.CreateFileLines("doc/CHANGES-2018",
+		RcsID)
+	t.CreateFileLines("category/package/buildlink3.mk",
+		MkRcsID)
+	t.CreateFileLines("category/package/unexpected.txt",
+		RcsID)
+	G.Pkgsrc.LoadInfrastructure()
+
+	G.Checkfile(t.File("doc/CHANGES-2018"))
+	G.Checkfile(t.File("category/package/buildlink3.mk"))
+	G.Checkfile(t.File("category/package/unexpected.txt"))
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/buildlink3.mk:EOF: Expected a BUILDLINK_TREE line.",
+		"WARN: ~/category/package/unexpected.txt: Unexpected file found.")
+}
+
+func (s *Suite) Test_Pkglint_Checkfile__readme_and_todo(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("category/Makefile",
+		MkRcsID)
+
+	t.CreateFileLines("category/package/files/README",
+		"Extra file that is installed later.")
+	t.CreateFileLines("category/package/patches/patch-README",
+		RcsID,
+		"",
+		"Documentation",
+		"",
+		"--- old",
+		"+++ new",
+		"@@ -1,1 +1,1 @@",
+		"-old",
+		"+new")
+	t.CreateFileLines("category/package/Makefile",
+		MkRcsID,
+		"CATEGORIES=category",
+		"",
+		"COMMENT=Comment",
+		"LICENSE=2-clause-bsd")
+	t.CreateFileLines("category/package/PLIST",
+		PlistRcsID,
+		"bin/program")
+	t.CreateFileLines("category/package/README",
+		"This package ...")
+	t.CreateFileLines("category/package/TODO",
+		"Make this package work.")
+	t.CreateFileLines("category/package/distinfo",
+		RcsID,
+		"",
+		"SHA1 (patch-README) = b9101ebf0bca8ce243ed6433b65555fa6a5ecd52")
+
+	// Copy category/package to wip/package.
+	for _, basename := range []string{"files/README", "patches/patch-README", "Makefile", "PLIST", "README", "TODO", "distinfo"} {
+		src := "category/package/" + basename
+		dst := "wip/package/" + basename
+		text, err := ioutil.ReadFile(t.File(src))
+		c.Check(err, check.IsNil)
+		t.CreateFileLines(dst, strings.TrimSpace(string(text)))
+	}
+
+	t.SetupPkgsrc()
+	G.Pkgsrc.LoadInfrastructure()
+	t.Chdir(".")
+
+	G.Main("pkglint", "category/package", "wip/package")
+
+	t.CheckOutputLines(
+		"ERROR: category/package/README: Packages in main pkgsrc must not have a README file.",
+		"ERROR: category/package/TODO: Packages in main pkgsrc must not have a TODO file.",
+		"2 errors and 0 warnings found.")
+
+	// FIXME: Do this resetting properly
+	G.errors = 0
+	G.warnings = 0
+	G.logged = make(map[string]bool)
+	G.Main("pkglint", "--import", "category/package", "wip/package")
+
+	t.CheckOutputLines(
+		"ERROR: category/package/README: Packages in main pkgsrc must not have a README file.",
+		"ERROR: category/package/TODO: Packages in main pkgsrc must not have a TODO file.",
+		"ERROR: wip/package/README: Must be cleaned up before committing the package.",
+		"ERROR: wip/package/TODO: Must be cleaned up before committing the package.",
+		"4 errors and 0 warnings found.")
 }

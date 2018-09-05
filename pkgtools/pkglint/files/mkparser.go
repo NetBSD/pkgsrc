@@ -134,9 +134,10 @@ loop:
 
 		case '=', 'D', 'M', 'N', 'U':
 			if repl.AdvanceRegexp(`^[=DMNU]`) {
-				for p.VarUse() != nil || repl.AdvanceRegexp(regex.Pattern(`^([^$:`+closing+`]|\$\$)+`)) {
+				for p.VarUse() != nil || repl.AdvanceRegexp(regex.Pattern(`^([^$:\\`+closing+`]|\$\$|\\.)+`)) {
 				}
-				modifiers = append(modifiers, repl.Since(modifierMark))
+				arg := repl.Since(modifierMark)
+				modifiers = append(modifiers, strings.Replace(arg, "\\:", ":", -1))
 				continue
 			}
 
