@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2017/12/25 09:20:27 adam Exp $
+# $NetBSD: Makefile,v 1.19 2018/09/05 08:22:17 adam Exp $
 
 DISTNAME=	Django-1.4.22
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -10,14 +10,15 @@ HOMEPAGE=	https://www.djangoproject.com/
 COMMENT=	Django, a high-level Python Web framework (LTS version)
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=		# empty
+DEPENDS+=	${PYPKGPREFIX}-flup-[0-9]*:../../www/py-flup
+
+USE_LANGUAGES=		# none
 REPLACE_PYTHON=		django/bin/*.py
 REPLACE_PYTHON+=	django/bin/profiling/*.py
 REPLACE_PYTHON+=	django/contrib/admin/bin/*.py
 REPLACE_PYTHON+=	django/contrib/admin/static/admin/js/*.py
 REPLACE_PYTHON+=	django/conf/project_template/*.py
 
-PYTHON_VERSIONED_DEPENDENCIES=	flup
 PYTHON_VERSIONS_ACCEPTED=	27 # use py-django if you want python-3.x support
 
 .include "options.mk"
@@ -46,5 +47,4 @@ PRINT_PLIST_AWK+=	{ gsub("^${BACKEND_PATH}/sqlite3/", "$${PLIST.sqlite}${BACKEND
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
