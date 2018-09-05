@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/01/21 21:46:34 leot Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/09/05 19:34:03 leot Exp $
 bin/sqlmap
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -27,6 +27,7 @@ ${PYSITELIB}/sqlmap/doc/translations/README-it-IT.md
 ${PYSITELIB}/sqlmap/doc/translations/README-ja-JP.md
 ${PYSITELIB}/sqlmap/doc/translations/README-pl-PL.md
 ${PYSITELIB}/sqlmap/doc/translations/README-pt-BR.md
+${PYSITELIB}/sqlmap/doc/translations/README-ru-RUS.md
 ${PYSITELIB}/sqlmap/doc/translations/README-tr-TR.md
 ${PYSITELIB}/sqlmap/doc/translations/README-zh-CN.md
 ${PYSITELIB}/sqlmap/extra/__init__.py
@@ -90,9 +91,12 @@ ${PYSITELIB}/sqlmap/extra/shutils/blanks.sh
 ${PYSITELIB}/sqlmap/extra/shutils/duplicates.py
 ${PYSITELIB}/sqlmap/extra/shutils/duplicates.pyc
 ${PYSITELIB}/sqlmap/extra/shutils/duplicates.pyo
-${PYSITELIB}/sqlmap/extra/shutils/pep8.sh
+${PYSITELIB}/sqlmap/extra/shutils/newlines.py
+${PYSITELIB}/sqlmap/extra/shutils/newlines.pyc
+${PYSITELIB}/sqlmap/extra/shutils/newlines.pyo
 ${PYSITELIB}/sqlmap/extra/shutils/postcommit-hook.sh
 ${PYSITELIB}/sqlmap/extra/shutils/precommit-hook.sh
+${PYSITELIB}/sqlmap/extra/shutils/pycodestyle.sh
 ${PYSITELIB}/sqlmap/extra/shutils/pydiatra.sh
 ${PYSITELIB}/sqlmap/extra/shutils/pyflakes.sh
 ${PYSITELIB}/sqlmap/extra/shutils/pylint.py
@@ -109,6 +113,12 @@ ${PYSITELIB}/sqlmap/extra/sqlharvest/__init__.pyo
 ${PYSITELIB}/sqlmap/extra/sqlharvest/sqlharvest.py
 ${PYSITELIB}/sqlmap/extra/sqlharvest/sqlharvest.pyc
 ${PYSITELIB}/sqlmap/extra/sqlharvest/sqlharvest.pyo
+${PYSITELIB}/sqlmap/extra/wafdetectify/__init__.py
+${PYSITELIB}/sqlmap/extra/wafdetectify/__init__.pyc
+${PYSITELIB}/sqlmap/extra/wafdetectify/__init__.pyo
+${PYSITELIB}/sqlmap/extra/wafdetectify/wafdetectify.py
+${PYSITELIB}/sqlmap/extra/wafdetectify/wafdetectify.pyc
+${PYSITELIB}/sqlmap/extra/wafdetectify/wafdetectify.pyo
 ${PYSITELIB}/sqlmap/lib/__init__.py
 ${PYSITELIB}/sqlmap/lib/__init__.pyc
 ${PYSITELIB}/sqlmap/lib/__init__.pyo
@@ -175,6 +185,9 @@ ${PYSITELIB}/sqlmap/lib/core/option.pyo
 ${PYSITELIB}/sqlmap/lib/core/optiondict.py
 ${PYSITELIB}/sqlmap/lib/core/optiondict.pyc
 ${PYSITELIB}/sqlmap/lib/core/optiondict.pyo
+${PYSITELIB}/sqlmap/lib/core/patch.py
+${PYSITELIB}/sqlmap/lib/core/patch.pyc
+${PYSITELIB}/sqlmap/lib/core/patch.pyo
 ${PYSITELIB}/sqlmap/lib/core/profiling.py
 ${PYSITELIB}/sqlmap/lib/core/profiling.pyc
 ${PYSITELIB}/sqlmap/lib/core/profiling.pyo
@@ -723,6 +736,9 @@ ${PYSITELIB}/sqlmap/sqlmap.pyo
 ${PYSITELIB}/sqlmap/sqlmapapi.py
 ${PYSITELIB}/sqlmap/sqlmapapi.pyc
 ${PYSITELIB}/sqlmap/sqlmapapi.pyo
+${PYSITELIB}/sqlmap/tamper/0x2char.py
+${PYSITELIB}/sqlmap/tamper/0x2char.pyc
+${PYSITELIB}/sqlmap/tamper/0x2char.pyo
 ${PYSITELIB}/sqlmap/tamper/__init__.py
 ${PYSITELIB}/sqlmap/tamper/__init__.pyc
 ${PYSITELIB}/sqlmap/tamper/__init__.pyo
@@ -813,6 +829,9 @@ ${PYSITELIB}/sqlmap/tamper/nonrecursivereplacement.pyo
 ${PYSITELIB}/sqlmap/tamper/overlongutf8.py
 ${PYSITELIB}/sqlmap/tamper/overlongutf8.pyc
 ${PYSITELIB}/sqlmap/tamper/overlongutf8.pyo
+${PYSITELIB}/sqlmap/tamper/overlongutf8more.py
+${PYSITELIB}/sqlmap/tamper/overlongutf8more.pyc
+${PYSITELIB}/sqlmap/tamper/overlongutf8more.pyo
 ${PYSITELIB}/sqlmap/tamper/percentage.py
 ${PYSITELIB}/sqlmap/tamper/percentage.pyc
 ${PYSITELIB}/sqlmap/tamper/percentage.pyo
@@ -1205,6 +1224,9 @@ ${PYSITELIB}/sqlmap/waf/blockdos.pyo
 ${PYSITELIB}/sqlmap/waf/ciscoacexml.py
 ${PYSITELIB}/sqlmap/waf/ciscoacexml.pyc
 ${PYSITELIB}/sqlmap/waf/ciscoacexml.pyo
+${PYSITELIB}/sqlmap/waf/cloudbric.py
+${PYSITELIB}/sqlmap/waf/cloudbric.pyc
+${PYSITELIB}/sqlmap/waf/cloudbric.pyo
 ${PYSITELIB}/sqlmap/waf/cloudflare.py
 ${PYSITELIB}/sqlmap/waf/cloudflare.pyc
 ${PYSITELIB}/sqlmap/waf/cloudflare.pyo
@@ -1220,6 +1242,9 @@ ${PYSITELIB}/sqlmap/waf/datapower.pyo
 ${PYSITELIB}/sqlmap/waf/denyall.py
 ${PYSITELIB}/sqlmap/waf/denyall.pyc
 ${PYSITELIB}/sqlmap/waf/denyall.pyo
+${PYSITELIB}/sqlmap/waf/distil.py
+${PYSITELIB}/sqlmap/waf/distil.pyc
+${PYSITELIB}/sqlmap/waf/distil.pyo
 ${PYSITELIB}/sqlmap/waf/dosarrest.py
 ${PYSITELIB}/sqlmap/waf/dosarrest.pyc
 ${PYSITELIB}/sqlmap/waf/dosarrest.pyo
@@ -1286,6 +1311,9 @@ ${PYSITELIB}/sqlmap/waf/proventia.pyo
 ${PYSITELIB}/sqlmap/waf/radware.py
 ${PYSITELIB}/sqlmap/waf/radware.pyc
 ${PYSITELIB}/sqlmap/waf/radware.pyo
+${PYSITELIB}/sqlmap/waf/reblaze.py
+${PYSITELIB}/sqlmap/waf/reblaze.pyc
+${PYSITELIB}/sqlmap/waf/reblaze.pyo
 ${PYSITELIB}/sqlmap/waf/requestvalidationmode.py
 ${PYSITELIB}/sqlmap/waf/requestvalidationmode.pyc
 ${PYSITELIB}/sqlmap/waf/requestvalidationmode.pyo
