@@ -1,9 +1,9 @@
-$NetBSD: patch-base_unix-dll.mak,v 1.3 2017/07/12 08:55:36 wiz Exp $
+$NetBSD: patch-base_unix-dll.mak,v 1.4 2018/09/05 13:19:40 adam Exp $
 
 Use correct shared library naming on Darwin.
 Add some rpaths.
 
---- base/unix-dll.mak.orig	2017-03-16 10:12:02.000000000 +0000
+--- base/unix-dll.mak.orig	2018-09-03 08:50:27.000000000 +0000
 +++ base/unix-dll.mak
 @@ -91,10 +91,10 @@ GPDL_SONAME_MAJOR_MINOR=$(GPDL_SONAME_BA
  
@@ -22,15 +22,15 @@ Add some rpaths.
  #LDFLAGS_SO=-dynamiclib -install_name $(FRAMEWORK_NAME)
 @@ -171,11 +171,11 @@ gpdl-so-links-subtarget: $(GPDL_SO) $(UN
  # Build the small Ghostscript loaders, with Gtk+ and without
- $(GSSOC_XE): gs-so-links-subtarget $(PSSRC)$(SOC_LOADER) $(UNIX_DLL_MAK) $(MAKEDIRS)
- 	$(GLCC) -g -o $(GSSOC_XE) $(PSSRC)dxmainc.c \
--	-L$(BINDIR) -l$(GS_SO_BASE)
-+	-L$(BINDIR) -L$(PREFIX)/lib -Wl,-R$(PREFIX)/lib -l$(GS_SO_BASE) $(LDFLAGS)
+ $(GSSOC_XE): gs-so-links-subtarget $(PSSRC)dxmainc.c $(UNIX_DLL_MAK) $(MAKEDIRS)
+ 	$(GLCC) $(GLO_)dxmainc.$(OBJ) $(C_) $(PSSRC)dxmainc.c
+-	$(GLCC) -L$(BINDIR) $(LDFLAGS) $(O_) $(GSSOC_XE) $(GLOBJ)dxmainc.$(OBJ) -l$(GS_SO_BASE)
++	$(GLCC) -L$(BINDIR) -L$(PREFIX)/lib -Wl,-R$(PREFIX)/lib $(LDFLAGS) $(O_) $(GSSOC_XE) $(GLOBJ)dxmainc.$(OBJ) -l$(GS_SO_BASE)
  
- $(GSSOX_XE): gs-so-links-subtarget $(PSSRC)$(SOC_LOADER) $(UNIX_DLL_MAK) $(MAKEDIRS)
- 	$(GLCC) -g $(SOC_CFLAGS) -o $(GSSOX_XE) $(PSSRC)$(SOC_LOADER) \
--	-L$(BINDIR) -l$(GS_SO_BASE) $(SOC_LIBS)
-+	-L$(BINDIR) -L$(PREFIX)/lib -Wl,-R$(PREFIX)/lib -l$(GS_SO_BASE) $(SOC_LIBS) $(LDFLAGS)
+ $(GSSOX_XE): gs-so-links-subtarget $(PSSRC)$(SOC_LOADER).c $(UNIX_DLL_MAK) $(MAKEDIRS)
+ 	$(GLCC) $(SOC_CFLAGS) $(GLO_)$(SOC_LOADER).$(OBJ) $(C_) $(PSSRC)$(SOC_LOADER).c
+-	$(GLCC) -L$(BINDIR) $(LDFLAGS) $(O_) $(GSSOX_XE) $(GLOBJ)$(SOC_LOADER).$(OBJ) -l$(GS_SO_BASE) $(SOC_LIBS)
++	$(GLCC) -L$(BINDIR) -L$(PREFIX)/lib -Wl,-R$(PREFIX)/lib $(LDFLAGS) $(O_) $(GSSOX_XE) $(GLOBJ)$(SOC_LOADER).$(OBJ) -l$(GS_SO_BASE) $(SOC_LIBS)
  
- $(PCLSOC_XE): gpcl6-so-links-subtarget $(PLSRC)$(REALMAIN_SRC).c $(UNIX_DLL_MAK) $(MAKEDIRS)
- 	$(GLCC) -g -o $(PCLSOC_XE) $(PLSRC)$(REALMAIN_SRC).c -L$(BINDIR) -l$(PCL_SO_BASE)
+ $(PCLSOC_XE): gpcl6-so-links-subtarget $(UNIX_DLL_MAK) $(PLOBJ)$(REALMAIN_SRC).$(OBJ) $(MAKEDIRS)
+ 	$(GLCC) -L$(BINDIR) $(LDFLAGS) $(O_) $(PCLSOC_XE) $(PLOBJ)$(REALMAIN_SRC).$(OBJ) -l$(PCL_SO_BASE)
