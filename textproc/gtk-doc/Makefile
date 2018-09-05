@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2018/09/04 13:02:07 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2018/09/05 13:22:31 jperkin Exp $
 
 DISTNAME=	gtk-doc-1.29
 CATEGORIES=	textproc gnome
@@ -30,6 +30,8 @@ SUBST_MESSAGE.fix-pc=	Unwrapping pkg-config path in installed helper tools.
 SUBST_FILES.fix-pc+=	gtkdoc-depscan.in
 SUBST_FILES.fix-pc+=	gtkdoc/config.py.in
 SUBST_SED.fix-pc=	-e 's,@PKG_CONFIG@,pkg-config,g'
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # 5 tests fail in 1.29 because of missing file 'sanity.sh'
 # https://gitlab.gnome.org/GNOME/gtk-doc/issues/55
