@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/08/07 15:35:37 nia Exp $
+# $NetBSD: Makefile,v 1.2 2018/09/06 07:50:20 nia Exp $
 
-DISTNAME=		retroarch-assets-1.7.3
+DISTNAME=		retroarch-assets-${RETROARCH_VERSION}
 CATEGORIES=		emulators
 MASTER_SITES=		-https://buildbot.libretro.com/stable/${PKGVERSION_NOREV}/windows-msvc2010/x86_64/RetroArch.7z
 EXTRACT_SUFX=		.7z
@@ -52,4 +52,5 @@ do-install:
 .  endfor
 .endfor
 
+.include "../../emulators/retroarch/version.mk"
 .include "../../mk/bsd.pkg.mk"

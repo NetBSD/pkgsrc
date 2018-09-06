@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/08/07 16:34:52 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/09/06 07:50:20 nia Exp $
 share/libretro/database/cursors/list_all_ps1_games_from_publisher_eidos.dbc
 share/libretro/database/cursors/list_all_ps1_games_with_an_edge_rating_of_9_out_of_10.dbc
 share/libretro/database/cursors/list_all_ps1_games_with_uk_origin.dbc
@@ -13,6 +13,7 @@ share/libretro/database/rdb/Atari - Lynx.rdb
 share/libretro/database/rdb/Atari - ST.rdb
 share/libretro/database/rdb/Bandai - WonderSwan Color.rdb
 share/libretro/database/rdb/Bandai - WonderSwan.rdb
+share/libretro/database/rdb/Cannonball.rdb
 share/libretro/database/rdb/Casio - Loopy.rdb
 share/libretro/database/rdb/Casio - PV-1000.rdb
 share/libretro/database/rdb/Cave Story.rdb
@@ -27,6 +28,7 @@ share/libretro/database/rdb/Entex - Adventure Vision.rdb
 share/libretro/database/rdb/Epoch - Super Cassette Vision.rdb
 share/libretro/database/rdb/FB Alpha - Arcade Games.rdb
 share/libretro/database/rdb/Fairchild - Channel F.rdb
+share/libretro/database/rdb/Flashback.rdb
 share/libretro/database/rdb/Funtech - Super Acan.rdb
 share/libretro/database/rdb/GCE - Vectrex.rdb
 share/libretro/database/rdb/GamePark - GP32.rdb
@@ -49,7 +51,6 @@ share/libretro/database/rdb/NEC - PC Engine - TurboGrafx 16.rdb
 share/libretro/database/rdb/NEC - PC Engine CD - TurboGrafx-CD.rdb
 share/libretro/database/rdb/NEC - PC Engine SuperGrafx.rdb
 share/libretro/database/rdb/NEC - PC-FX.rdb
-share/libretro/database/rdb/Nintendo - Famicom Disk System.rdb
 share/libretro/database/rdb/Nintendo - Family Computer Disk System.rdb
 share/libretro/database/rdb/Nintendo - Game Boy Advance.rdb
 share/libretro/database/rdb/Nintendo - Game Boy Color.rdb
