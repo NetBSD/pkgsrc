@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/06/16 12:10:40 adam Exp $
+# $NetBSD: Makefile,v 1.9 2018/09/06 13:43:18 adam Exp $
 
 DISTNAME=	urllib3-1.23
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,9 @@ DEPENDS+=	${PYPKGPREFIX}-Socks>=1.6.0:../../net/py-Socks
 DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=1.3.4:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.0.0:../../www/py-idna
-.if "${PYPKGPREFIX}" == "py27"
+
+.include "../../lang/python/pyversion.mk"
+.if ${_PYTHON_VERSION} == 27
 DEPENDS+=	${PYPKGPREFIX}-ipaddress-[0-9]*:../../net/py-ipaddress
 .endif
 
