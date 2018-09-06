@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2018/04/17 20:57:19 leot Exp $
+# $NetBSD: Makefile,v 1.27 2018/09/06 19:07:12 leot Exp $
 
 PKGREVISION= 2
 .include "Makefile.common"
@@ -17,8 +17,8 @@ USE_TOOLS+=		gmake bash:run
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${MACHINE_ARCH} == alpha || ${MACHINE_ARCH} == sparc64 || \
-	${MACHINE_ARCH} == x86_64
+.if !empty(LP64PLATFORMS:@.PLAT.@${MACHINE_PLATFORM:M${.PLAT.}}@) || \
+    (defined(ABI) && ${ABI} == "64")
 PLIST_SUBST+=		BITS=64
 .else
 PLIST_SUBST+=		BITS=32
