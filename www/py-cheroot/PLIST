@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2018/09/03 07:58:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/09/06 13:41:33 adam Exp $
 bin/cheroot-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -72,6 +72,9 @@ ${PYSITELIB}/cheroot/test/test_https.pyo
 ${PYSITELIB}/cheroot/test/test_server.py
 ${PYSITELIB}/cheroot/test/test_server.pyc
 ${PYSITELIB}/cheroot/test/test_server.pyo
+${PYSITELIB}/cheroot/test/test_ssl.py
+${PYSITELIB}/cheroot/test/test_ssl.pyc
+${PYSITELIB}/cheroot/test/test_ssl.pyo
 ${PYSITELIB}/cheroot/test/webtest.py
 ${PYSITELIB}/cheroot/test/webtest.pyc
 ${PYSITELIB}/cheroot/test/webtest.pyo
