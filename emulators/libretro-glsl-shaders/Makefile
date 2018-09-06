@@ -1,20 +1,19 @@
-# $NetBSD: Makefile,v 1.2 2018/08/07 16:46:08 nia Exp $
+# $NetBSD: Makefile,v 1.3 2018/09/06 09:33:38 nia Exp $
 
-DISTNAME=	retroarch-assets-${RETROARCH_VERSION}
-PKGNAME=	libretro-glsl-shaders-${RETROARCH_VERSION}
+DISTNAME=	libretro-glsl-shaders-20180828
 CATEGORIES=	emulators
-MASTER_SITES=	-http://buildbot.libretro.com/stable/${PKGVERSION_NOREV}/windows-msvc2010/x86_64/RetroArch.7z
-EXTRACT_SUFX=	.7z
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+GITHUB_PROJECT=	glsl-shaders
+GITHUB_TAG=	a52c8b6798c7a10fd72971ef8e8b135e0f7a9ca0
 
-HOMEPAGE=	https://www.libretro.com/
 MAINTAINER=	nia@NetBSD.org
+HOMEPAGE=	https://www.libretro.com/
 COMMENT=	Libretro GLSL shaders
 LICENSE=	gnu-gpl-v3
 
+EXTRACT_USING=	bsdtar
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
-
-WRKSRC=		${WRKDIR}/shaders/shaders_glsl
 
 do-install:
 	cd ${WRKSRC} && ${FIND} * -type d -exec ${INSTALL_DATA_DIR} \
@@ -22,5 +21,4 @@ do-install:
 	cd ${WRKSRC} && ${FIND} * -type f -exec ${INSTALL_DATA} {} \
 	    ${DESTDIR}${PREFIX}/share/libretro/shaders/{} \;
 
-.include "../../emulators/retroarch/version.mk"
 .include "../../mk/bsd.pkg.mk"

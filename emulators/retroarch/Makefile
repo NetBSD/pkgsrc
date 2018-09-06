@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2018/09/06 08:23:08 nia Exp $
+# $NetBSD: Makefile,v 1.10 2018/09/06 09:33:38 nia Exp $
 
-DISTNAME=	retroarch-${RETROARCH_VERSION}
-PKGREVISION=	1
+PKGNAME=	retroarch-${RETROARCH_VERSION}
+DISTNAME=	RetroArch-${RETROARCH_VERSION}
+PKGREVISION=	2
 CATEGORIES=	emulators
-MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
-GITHUB_PROJECT=	RetroArch
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/RetroArch/releases/download/v${RETROARCH_VERSION}/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://www.retroarch.com/
@@ -28,8 +28,9 @@ CONFIGURE_ENV+=	MAN_DIR=${PREFIX}/${PKGMANDIR}
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 
-DEPENDS+=	libretro-database>=${PKGVERSION_NOREV}:../../emulators/libretro-database
-DEPENDS+=	libretro-core-info>=${PKGVERSION_NOREV}:../../emulators/libretro-core-info
+DEPENDS+=	libretro-core-info>=${RETROARCH_VERSION}:../../emulators/libretro-core-info
+DEPENDS+=	libretro-database>=0:../../emulators/libretro-database
+DEPENDS+=	libretro-glsl-shaders>=0:../../emulators/libretro-glsl-shaders
 
 CPPFLAGS+=	-DPREFIX=\"${PREFIX}\"
 
