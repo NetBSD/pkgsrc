@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2018/09/06 07:50:20 nia Exp $
+# $NetBSD: options.mk,v 1.5 2018/09/06 09:33:38 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.retroarch
 
@@ -63,7 +63,6 @@ CONFIGURE_ARGS+=	--disable-x11
 .if !empty(PKG_OPTIONS:Mopengl)
 .include "../../graphics/MesaLib/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-opengl
-USE_RETROARCH_GL=	yes
 
 # Enable use of the Raspberry Pi GPU driver
 .elif !empty(PKG_OPTIONS:Mrpi)
@@ -75,7 +74,6 @@ SUBST_FILES.vc=		qb/config.libs.sh
 SUBST_SED.vc+=		-e 's;/opt/vc;${PREFIX};g'
 
 CONFIGURE_ARGS+=	--enable-opengles
-USE_RETROARCH_GL=	yes
 
 # Disable any graphics acceleration library
 .else
@@ -84,12 +82,6 @@ CONFIGURE_ARGS+=	--disable-opengl
 CONFIGURE_ARGS+=	--disable-vulkan
 CONFIGURE_ARGS+=	--disable-vulkan_display
 CONFIGURE_ARGS+=	--disable-wayland
-USE_RETROARCH_GL=	no
-.endif
-
-.if ${USE_RETROARCH_GL} == "yes"
-DEPENDS+=	retroarch-assets>=${PKGVERSION_NOREV}:../../emulators/retroarch-assets
-DEPENDS+=	libretro-glsl-shaders>0:../../emulators/libretro-glsl-shaders
 .endif
 
 .if !empty(PKG_OPTIONS:Mudev)
