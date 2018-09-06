@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.3 2018/09/06 07:50:20 nia Exp $
+# $NetBSD: Makefile,v 1.4 2018/09/06 09:33:38 nia Exp $
 
-PKGNAME=	libretro-database-${RETROARCH_VERSION}
-DISTNAME=	retroarch-assets-${RETROARCH_VERSION}
+DISTNAME=	libretro-database-20180904
 CATEGORIES=	emulators
-MASTER_SITES=	-http://buildbot.libretro.com/stable/${PKGVERSION_NOREV}/windows-msvc2010/x86_64/RetroArch.7z
-EXTRACT_SUFX=	.7z
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+GITHUB_PROJECT=	libretro-database
+GITHUB_TAG=	aa0f09390e45da02c84732812103abb9cd63ee65
 
-HOMEPAGE=	https://www.libretro.com/
 MAINTAINER=	nia@NetBSD.org
+HOMEPAGE=	https://www.libretro.com/
 COMMENT=	ROM scanning data provided by the libretro project
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}
+EXTRACT_USING=	bsdtar
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
 
@@ -19,10 +19,9 @@ INSTALLATION_DIRS+=	share/libretro/database/rdb
 INSTALLATION_DIRS+=	share/libretro/database/cursors
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/database/rdb/*.rdb \
+	${INSTALL_DATA} ${WRKSRC}/rdb/*.rdb \
 	    ${DESTDIR}${PREFIX}/share/libretro/database/rdb
-	${INSTALL_DATA} ${WRKSRC}/database/cursors/*.dbc \
+	${INSTALL_DATA} ${WRKSRC}/cursors/*.dbc \
 	    ${DESTDIR}${PREFIX}/share/libretro/database/cursors
 
-.include "../../emulators/retroarch/version.mk"
 .include "../../mk/bsd.pkg.mk"
