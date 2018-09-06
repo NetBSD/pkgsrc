@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3944 2018/09/06 09:30:07 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.3945 2018/09/06 09:33:56 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5550,3 +5550,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-sphinx to 1.7.9 [adam 2018-09-06]
 	Updated textproc/py-xlsxwriter to 1.1.0 [adam 2018-09-06]
 	Updated devel/rcs to 5.9.4nb1 [jperkin 2018-09-06]
+	Updated emulators/libretro-glsl-shaders to 20180828 [nia 2018-09-06]
