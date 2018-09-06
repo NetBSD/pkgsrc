@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3952 2018/09/06 13:42:18 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3953 2018/09/06 13:53:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5560,3 +5560,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/libusb-compat to 0.1.7 [jperkin 2018-09-06]
 	Added security/py-trustme version 0.4.0 [adam 2018-09-06]
 	Updated www/py-cheroot to 6.5.2 [adam 2018-09-06]
+	Updated www/py-raven to 6.9.0 [adam 2018-09-06]
+	Updated www/py-aiohttp to 3.4.4 [adam 2018-09-06]
