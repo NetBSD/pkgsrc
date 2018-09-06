@@ -1,0 +1,4 @@
+trustme is a tiny Python package that does one thing: it gives you a fake
+certificate authority (CA) that you can use to generate fake TLS certs to use
+in your tests. Well, technically they're real certs, they're just signed by
+your CA, which nobody trusts. But you can trust it. Trust me.
