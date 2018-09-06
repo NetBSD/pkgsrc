@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/08/07 15:35:37 nia Exp $
+$NetBSD: distinfo,v 1.2 2018/09/06 07:50:20 nia Exp $
 
-SHA1 (retroarch-assets-1.7.3.7z) = 5a4993c047c6a34037acc937aa9d71ca12adfddb
-RMD160 (retroarch-assets-1.7.3.7z) = ff63d6f2959823783320092cb76164509a319515
-SHA512 (retroarch-assets-1.7.3.7z) = 5b355e3652c804a6641edb314ad44049db3d03581faa4d05bec3cbc1bedf5d6631ab6a8526c8b9303f0e4b6dc96d31851afef540637e90b7a4f0213cbf180cef
-Size (retroarch-assets-1.7.3.7z) = 154934601 bytes
+SHA1 (retroarch-assets-1.7.4.7z) = f1ed75c1d46d4f886a13872b578db7efdcb48865
+RMD160 (retroarch-assets-1.7.4.7z) = 4f1e5d875971dbda0aaf191302f780b18ecb1233
+SHA512 (retroarch-assets-1.7.4.7z) = 41a3fd36f3b0ef9f2d2fc9733dd7c87912e61e2150cec70e6ce2da10f549f77e73ab6d4c2a95d311a1ad532a3c16424f5e80051043b6562b1920a3bc9159fea3
+Size (retroarch-assets-1.7.4.7z) = 186956996 bytes

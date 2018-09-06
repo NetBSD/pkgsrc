@@ -1,6 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2018/08/07 16:48:24 nia Exp $
-
-.include "../../mk/bsd.fast.prefs.mk"
+# $NetBSD: options.mk,v 1.4 2018/09/06 07:50:20 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.retroarch
 
@@ -17,6 +15,8 @@ PKG_SUGGESTED_OPTIONS.Linux+=	alsa pulseaudio udev
 
 PKG_OPTIONS_OPTIONAL_GROUPS+=	gl
 PKG_OPTIONS_GROUP.gl+=		opengl
+
+.include "../../mk/bsd.fast.prefs.mk"
 
 .if !empty(MACHINE_ARCH:M*arm*)
 CONFIGURE_ARGS+=		--enable-floathard
