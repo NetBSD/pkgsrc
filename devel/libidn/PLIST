@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2015/03/05 21:05:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2018/09/06 22:05:00 wiz Exp $
 bin/idn
 include/idn-free.h
 include/idn-int.h
@@ -77,6 +77,7 @@ share/locale/pl/LC_MESSAGES/libidn.mo
 share/locale/pt_BR/LC_MESSAGES/libidn.mo
 share/locale/ro/LC_MESSAGES/libidn.mo
 share/locale/sr/LC_MESSAGES/libidn.mo
+share/locale/sv/LC_MESSAGES/libidn.mo
 share/locale/uk/LC_MESSAGES/libidn.mo
 share/locale/vi/LC_MESSAGES/libidn.mo
 share/locale/zh_CN/LC_MESSAGES/libidn.mo
