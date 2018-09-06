@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3955 2018/09/06 20:42:02 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.3956 2018/09/06 22:05:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5566,3 +5566,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-multipledispatch to 0.6.0 [adam 2018-09-06]
 	Updated devel/py-test-cov to 2.6.0 [adam 2018-09-06]
 	Updated security/vault to 0.11.1 [fhajny 2018-09-06]
+	Updated devel/libidn to 1.34 [wiz 2018-09-06]
