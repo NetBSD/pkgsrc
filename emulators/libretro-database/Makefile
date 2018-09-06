@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2018/08/07 16:41:48 nia Exp $
+# $NetBSD: Makefile,v 1.3 2018/09/06 07:50:20 nia Exp $
 
-VERSION=	1.7.3
-PKGNAME=	libretro-database-${VERSION}
-DISTNAME=	retroarch-assets-${VERSION}
+PKGNAME=	libretro-database-${RETROARCH_VERSION}
+DISTNAME=	retroarch-assets-${RETROARCH_VERSION}
 CATEGORIES=	emulators
 MASTER_SITES=	-http://buildbot.libretro.com/stable/${PKGVERSION_NOREV}/windows-msvc2010/x86_64/RetroArch.7z
 EXTRACT_SUFX=	.7z
@@ -25,4 +24,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/database/cursors/*.dbc \
 	    ${DESTDIR}${PREFIX}/share/libretro/database/cursors
 
+.include "../../emulators/retroarch/version.mk"
 .include "../../mk/bsd.pkg.mk"
