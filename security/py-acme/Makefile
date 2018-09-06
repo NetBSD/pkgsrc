@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2018/06/28 15:33:52 taca Exp $
+# $NetBSD: Makefile,v 1.12 2018/09/06 12:25:26 fhajny Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/certbot/acme/}
-PKGREVISION=	1
 CATEGORIES=	security
 
 COMMENT=	ACME protocol implementation in Python
