@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/03/02 15:02:50 adam Exp $
+$NetBSD: distinfo,v 1.3 2018/09/06 14:07:00 adam Exp $
 
-SHA1 (multipledispatch-0.5.0.tar.gz) = 654505364ab67e43c247aea538e6dccf4672269a
-RMD160 (multipledispatch-0.5.0.tar.gz) = c5f421b601ffee6ef21121216e0e37ee6190effd
-SHA512 (multipledispatch-0.5.0.tar.gz) = 220f30524a5efc4e4855e5ea3da12f208f3790335f5de7560352ee92b1c8895e6727f1de436e5b6a5041e3f6dfa145519aa9e426cdd982c8e1bb52b1d1451b8d
-Size (multipledispatch-0.5.0.tar.gz) = 8946 bytes
+SHA1 (multipledispatch-0.6.0.tar.gz) = 486a00e22b26820d33c5d702d5da689e33dbccb8
+RMD160 (multipledispatch-0.6.0.tar.gz) = 6c2fdb13708c4e9ead65a7c0c8a8ccb66616d5ce
+SHA512 (multipledispatch-0.6.0.tar.gz) = a9b5fcd4ea9f22f96423f20000dd33c9ac361fa1f27d23be1832135ef65c42ae39f4684d0d827dede71f526c2f5dad3c4c465c36c11025cc719583a7fd3b9a4c
+Size (multipledispatch-0.6.0.tar.gz) = 10294 bytes
