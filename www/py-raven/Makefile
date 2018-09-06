@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2018/05/23 21:07:36 adam Exp $
+# $NetBSD: Makefile,v 1.7 2018/09/06 13:48:37 adam Exp $
 
-DISTNAME=	raven-6.8.0
+DISTNAME=	raven-6.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/raven/}
@@ -35,6 +35,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-sugar>=0.8:../../devel/py-test-sugar
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=1.2.1:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.18.2:../../devel/py-test-xdist
 TEST_DEPENDS+=	${PYPKGPREFIX}-tornado>=4.1:../../www/py-tornado
+TEST_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
 TEST_DEPENDS+=	${PYPKGPREFIX}-unittest2-[0-9]*:../../devel/py-unittest2
 TEST_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-zconfig-[0-9]*:../../devel/py-zconfig
