@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2018/08/07 16:44:26 nia Exp $
+# $NetBSD: Makefile,v 1.9 2018/09/06 08:23:08 nia Exp $
 
 DISTNAME=	retroarch-${RETROARCH_VERSION}
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	RetroArch
@@ -20,6 +21,7 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--disable-builtinminiupnpc
 CONFIGURE_ARGS+=	--disable-builtinzlib
 CONFIGURE_ARGS+=	--disable-builtinflac
+CONFIGURE_ARGS+=	--disable-discord
 
 CONFIGURE_ENV+=	BIN_DIR=${PREFIX}/bin
 CONFIGURE_ENV+=	MAN_DIR=${PREFIX}/${PKGMANDIR}
