@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2018/05/23 21:07:36 adam Exp $
+$NetBSD: distinfo,v 1.7 2018/09/06 13:48:37 adam Exp $
 
-SHA1 (raven-6.8.0.tar.gz) = 72a6cbcad0ddd5971ed1ed03c46de74f1f376705
-RMD160 (raven-6.8.0.tar.gz) = 4f91008fed91df70ed543a143711d9fadf29a927
-SHA512 (raven-6.8.0.tar.gz) = 867fd9dd8c0a6dca24e7c49fb18882f26cb19fddb557db78645c9492c0c38c77e57d9558d249d4dd8543b2159d42fc014421cb9f1923da14f1e30ce5ea42071e
-Size (raven-6.8.0.tar.gz) = 400018 bytes
+SHA1 (raven-6.9.0.tar.gz) = b70d0ffe87a1c3c0ed5db5959a13a3a5f968cb6f
+RMD160 (raven-6.9.0.tar.gz) = b45adbf9cf30a4d770128a6a1f308b7bfd9cec3c
+SHA512 (raven-6.9.0.tar.gz) = 37b83067b3aa2c2c8d419090ae86859aa2925600b4cfeb71c4a6a815cbc2d1b2ca7b80c31e9db0fef9824ac204747d07e6f4dcf624cdf7ded5914fbaee0d2707
+Size (raven-6.9.0.tar.gz) = 291860 bytes
 SHA1 (patch-setup.py) = 50da85fcaa001d2d050ec8caf4f9b9792d9da89d
