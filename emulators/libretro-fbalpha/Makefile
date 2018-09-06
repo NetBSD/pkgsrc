@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2018/08/17 12:54:48 nia Exp $
+# $NetBSD: Makefile,v 1.2 2018/09/06 08:13:54 nia Exp $
 
-DISTNAME=	libretro-fbalpha-0.2.97.42.20180408
+DISTNAME=	libretro-fbalpha-0.2.97.43.20180721
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	fbalpha
-GITHUB_TAG=	08cf5c6abbda2512d5ef73ef8483b849a34a7603
+GITHUB_TAG=	6f85b5d19085f91c8f3df5c53dd235c037782fee
 
 MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://github.com/libretro/fbalpha
