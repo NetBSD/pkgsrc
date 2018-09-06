@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/07/24 09:15:07 triaxx Exp $
+# $NetBSD: Makefile,v 1.2 2018/09/06 12:26:43 fhajny Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/certbot/certbot-dns-rfc2136/}
 CATEGORIES=	security
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
 
-EGG_NAME=	${DISTNAME:S/certbot/certbot-dns-rfc2136/}
+EGG_NAME=	${DISTNAME:S/certbot/certbot_dns_rfc2136/}
 
 PYSETUPSUBDIR=	certbot-dns-rfc2136
 
