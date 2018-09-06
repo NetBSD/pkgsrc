@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.131 2018/09/05 15:29:58 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.132 2018/09/06 03:30:51 ryoon Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
 lib/firefox/browser/chrome.manifest
-lib/firefox/browser/chrome/browser/content/branding/about-background.png
+${PLIST.nobranding}lib/firefox/browser/chrome/browser/content/branding/about-background.png
 lib/firefox/browser/chrome/browser/content/branding/about-logo.png
+${PLIST.branding}lib/firefox/browser/chrome/browser/content/branding/about-logo@2x.png
 lib/firefox/browser/chrome/browser/content/branding/about-wordmark.svg
 lib/firefox/browser/chrome/browser/content/branding/about.png
 lib/firefox/browser/chrome/browser/content/branding/aboutDialog.css
@@ -4561,6 +4562,7 @@ lib/firefox/components/NetworkGeolocationProvider.js
 lib/firefox/components/NotificationStorage.js
 lib/firefox/components/PageIconProtocolHandler.js
 lib/firefox/components/PageThumbsStorageService.js
+${PLIST.webrtc}lib/firefox/components/PeerConnection.js
 lib/firefox/components/PlacesCategoriesStarter.js
 lib/firefox/components/PresentationControlService.js
 lib/firefox/components/PresentationDataChannelSessionTransport.js
@@ -4678,8 +4680,8 @@ lib/firefox/hyphenation/hyph_sv.dic
 lib/firefox/hyphenation/hyph_tr.dic
 lib/firefox/hyphenation/hyph_uk.dic
 lib/firefox/liblgpllibs.so
-lib/firefox/libmozavcodec.so
-lib/firefox/libmozavutil.so
+${PLIST.avx86}lib/firefox/libmozavcodec.so
+${PLIST.avx86}lib/firefox/libmozavutil.so
 lib/firefox/libmozgtk.so
 lib/firefox/libmozsqlite3.so
 lib/firefox/libxul.so
