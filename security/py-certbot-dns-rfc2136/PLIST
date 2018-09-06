@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2018/07/24 09:15:07 triaxx Exp $
-${PYSITELIB}/certbot_dns_rfc2136-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/certbot_dns_rfc2136-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/certbot_dns_rfc2136-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/certbot_dns_rfc2136-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/entry_points.txt
-${PYSITELIB}/certbot_dns_rfc2136-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/requires.txt
-${PYSITELIB}/certbot_dns_rfc2136-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2018/09/06 12:26:43 fhajny Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/certbot_dns_rfc2136/__init__.py
 ${PYSITELIB}/certbot_dns_rfc2136/__init__.pyc
 ${PYSITELIB}/certbot_dns_rfc2136/__init__.pyo
