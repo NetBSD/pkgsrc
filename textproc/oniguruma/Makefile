@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2018/04/18 07:04:22 adam Exp $
+# $NetBSD: Makefile,v 1.11 2018/09/06 09:44:23 adam Exp $
 
-DISTNAME=	onig-6.8.2
+DISTNAME=	onig-6.9.0
 PKGNAME=	${DISTNAME:S/onig/oniguruma/}
-CATEGORIES=	devel
+CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kkos/}
 GITHUB_PROJECT=	oniguruma
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -15,5 +15,6 @@ LICENSE=	2-clause-bsd
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	oniguruma.pc.in
+TEST_TARGET=		check
 
 .include "../../mk/bsd.pkg.mk"
