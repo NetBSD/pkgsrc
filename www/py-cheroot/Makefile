@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2018/09/03 07:58:51 adam Exp $
+# $NetBSD: Makefile,v 1.21 2018/09/06 13:41:33 adam Exp $
 
-DISTNAME=	cheroot-6.5.1
+DISTNAME=	cheroot-6.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/Cheroot/}
@@ -20,6 +20,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test>=2.8:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-sugar-[0-9]*:../../devel/py-test-sugar
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-testmon>=0.9.7:../../devel/py-test-testmon
+TEST_DEPENDS+=	${PYPKGPREFIX}-trustme>=0.4.0:../../security/py-trustme
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} == 27
