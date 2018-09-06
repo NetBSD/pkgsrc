@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3947 2018/09/06 09:36:45 nia Exp $
+$NetBSD: CHANGES-2018,v 1.3948 2018/09/06 09:47:12 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5553,3 +5553,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated emulators/libretro-glsl-shaders to 20180828 [nia 2018-09-06]
 	Updated emulators/libretro-database to 20180904 [nia 2018-09-06]
 	Removed emulators/retroarch-assets [nia 2018-09-06]
+	Updated sysutils/ipmitool to 1.8.18nb1 [jperkin 2018-09-06]
