@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3942 2018/09/06 08:14:06 nia Exp $
+$NetBSD: CHANGES-2018,v 1.3943 2018/09/06 09:28:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5547,3 +5547,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/sqlmap to 1.2.9 [leot 2018-09-05]
 	Updated emulators/retroarch to 1.7.4 [nia 2018-09-06]
 	Updated emulators/libretro-fbalpha to 0.2.97.43.20180721 [nia 2018-09-06]
+	Updated textproc/py-sphinx to 1.7.9 [adam 2018-09-06]
+	Updated textproc/py-xlsxwriter to 1.1.0 [adam 2018-09-06]
