@@ -1,0 +1,17 @@
+$NetBSD: patch-src_taskdctl,v 1.1 2018/09/06 10:55:42 triaxx Exp $
+
+No assumption should be made that PREFIX is in PATH of taskd user.
+
+--- src/taskdctl.orig	2015-05-10 21:35:22.000000000 +0000
++++ src/taskdctl
+@@ -31,8 +31,8 @@ if [ -z $TASKDDATA ] ; then
+   exit
+ fi
+ 
+-PIDFILE=$(taskd config --data $TASKDDATA | grep pid.file | awk '{print $2}')
+-DAEMON="taskd server --data $TASKDDATA --daemon"
++PIDFILE=$(@PREFIX@/bin/taskd config --data $TASKDDATA | grep pid.file | awk '{print $2}')
++DAEMON="@PREFIX@/bin/taskd server --data $TASKDDATA --daemon"
+ 
+ ERROR=0
+ ARGV="$@"
