@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3941 2018/09/06 07:50:36 nia Exp $
+$NetBSD: CHANGES-2018,v 1.3942 2018/09/06 08:14:06 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5546,3 +5546,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated pkgtools/pkglint to 5.6.2 [rillig 2018-09-05]
 	Updated security/sqlmap to 1.2.9 [leot 2018-09-05]
 	Updated emulators/retroarch to 1.7.4 [nia 2018-09-06]
+	Updated emulators/libretro-fbalpha to 0.2.97.43.20180721 [nia 2018-09-06]
