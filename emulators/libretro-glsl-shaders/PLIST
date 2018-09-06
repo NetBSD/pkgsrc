@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/08/07 16:13:49 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/09/06 07:50:20 nia Exp $
 share/libretro/shaders/3dfx/3dfx_4x1.glslp
 share/libretro/shaders/3dfx/shaders/3dfx_pass_0.glsl
 share/libretro/shaders/3dfx/shaders/3dfx_pass_1.glsl
@@ -9,6 +9,7 @@ share/libretro/shaders/anti-aliasing/aa-shader-4.0.glslp
 share/libretro/shaders/anti-aliasing/advanced-aa.glslp
 share/libretro/shaders/anti-aliasing/fxaa.glslp
 share/libretro/shaders/anti-aliasing/reverse-aa.glslp
+share/libretro/shaders/anti-aliasing/shaders/aa-shader-4.0-level2/aa-shader-4.0-level2-pass1-noblend.glsl
 share/libretro/shaders/anti-aliasing/shaders/aa-shader-4.0-level2/aa-shader-4.0-level2-pass1.glsl
 share/libretro/shaders/anti-aliasing/shaders/aa-shader-4.0-level2/aa-shader-4.0-level2-pass2.glsl
 share/libretro/shaders/anti-aliasing/shaders/aa-shader-4.0.glsl
@@ -28,6 +29,20 @@ share/libretro/shaders/blurs/blur5fast-horizontal.glsl
 share/libretro/shaders/blurs/blur5fast-vertical.glsl
 share/libretro/shaders/blurs/blur9fast-horizontal.glsl
 share/libretro/shaders/blurs/blur9fast-vertical.glsl
+share/libretro/shaders/blurs/kawase/delinearize.glsl
+share/libretro/shaders/blurs/kawase/kawase0.glsl
+share/libretro/shaders/blurs/kawase/kawase1.glsl
+share/libretro/shaders/blurs/kawase/kawase2.glsl
+share/libretro/shaders/blurs/kawase/kawase3.glsl
+share/libretro/shaders/blurs/kawase/kawase4.glsl
+share/libretro/shaders/blurs/kawase/kawase5.glsl
+share/libretro/shaders/blurs/kawase/kawase6.glsl
+share/libretro/shaders/blurs/kawase/kawase7.glsl
+share/libretro/shaders/blurs/kawase/linearize.glsl
+share/libretro/shaders/blurs/kawase/screen_combine.glsl
+share/libretro/shaders/blurs/kawase_blur_5pass.glslp
+share/libretro/shaders/blurs/kawase_blur_9pass.glslp
+share/libretro/shaders/blurs/kawase_glow.glslp
 share/libretro/shaders/blurs/sharpsmoother.glsl
 share/libretro/shaders/blurs/smart-blur.glsl
 share/libretro/shaders/borders/bigblur.glslp
@@ -139,6 +154,7 @@ share/libretro/shaders/crt/crt-cgwg-fast.glslp
 share/libretro/shaders/crt/crt-easymode-halation.glslp
 share/libretro/shaders/crt/crt-easymode.glslp
 share/libretro/shaders/crt/crt-geom.glslp
+share/libretro/shaders/crt/crt-hyllian-3d.glslp
 share/libretro/shaders/crt/crt-hyllian-glow.glslp
 share/libretro/shaders/crt/crt-hyllian-multipass.glslp
 share/libretro/shaders/crt/crt-hyllian.glslp
@@ -178,6 +194,7 @@ share/libretro/shaders/crt/shaders/crt-easymode-halation/linearize.glsl
 share/libretro/shaders/crt/shaders/crt-easymode-halation/threshold.glsl
 share/libretro/shaders/crt/shaders/crt-easymode.glsl
 share/libretro/shaders/crt/shaders/crt-geom.glsl
+share/libretro/shaders/crt/shaders/crt-hyllian-3d.glsl
 share/libretro/shaders/crt/shaders/crt-hyllian-glow/crt-hyllian.glsl
 share/libretro/shaders/crt/shaders/crt-hyllian-glow/resolve2.glsl
 share/libretro/shaders/crt/shaders/crt-hyllian-multipass/crt-hyllian-pass0.glsl
@@ -277,7 +294,11 @@ share/libretro/shaders/crt/shaders/phosphorlut/phosphorlut-pass1.glsl
 share/libretro/shaders/crt/shaders/phosphorlut/scanlines-interlace-linearize.glsl
 share/libretro/shaders/crt/shaders/snes-hires-blend.glsl
 share/libretro/shaders/crt/shaders/tvout-tweaks.glsl
+share/libretro/shaders/crt/shaders/yee64.glsl
+share/libretro/shaders/crt/shaders/yeetron.glsl
 share/libretro/shaders/crt/shaders/zfast_crt.glsl
+share/libretro/shaders/crt/yee64.glslp
+share/libretro/shaders/crt/yeetron.glslp
 share/libretro/shaders/crt/zfast-crt.glslp
 share/libretro/shaders/cubic/cubic-gamma-correct.glslp
 share/libretro/shaders/cubic/cubic.glslp
@@ -555,6 +576,8 @@ share/libretro/shaders/hqx/single-pass/shader-files/hq2x.glsl
 share/libretro/shaders/hqx/single-pass/shader-files/hq3x.glsl
 share/libretro/shaders/hqx/single-pass/shader-files/hq4x.glsl
 share/libretro/shaders/misc/anaglyph-to-side-by-side.glsl
+share/libretro/shaders/misc/bob-and-ghost-deinterlacing.glsl
+share/libretro/shaders/misc/bob-deinterlacing.glsl
 share/libretro/shaders/misc/cardboard-vr.glslp
 share/libretro/shaders/misc/cmyk-halftone-dot.glsl
 share/libretro/shaders/misc/cocktail-cab-portrait.glsl
@@ -566,6 +589,7 @@ share/libretro/shaders/misc/deposterize-pass0.glsl
 share/libretro/shaders/misc/deposterize-pass1.glsl
 share/libretro/shaders/misc/edge-detect.glsl
 share/libretro/shaders/misc/flicker.glsl
+share/libretro/shaders/misc/flip-horizontal.glsl
 share/libretro/shaders/misc/image-adjustment.glsl
 share/libretro/shaders/misc/interlacing.glsl
 share/libretro/shaders/misc/natural-vision.glsl
@@ -702,6 +726,8 @@ share/libretro/shaders/presets/tvout/tvout+ntsc-nes.glslp
 share/libretro/shaders/presets/tvout/tvout-jinc-sharpen.glslp
 share/libretro/shaders/presets/tvout/tvout-pixelsharp.glslp
 share/libretro/shaders/presets/tvout/tvout.glslp
+share/libretro/shaders/presets/vector-glow.glslp
+share/libretro/shaders/presets/xsoft+scalefx-hybrid+level2aa.glslp
 share/libretro/shaders/presets/xsoft+scalefx-level2aa+sharpsmoother.glslp
 share/libretro/shaders/presets/xsoft+scalefx-level2aa.glslp
 share/libretro/shaders/procedural/2vs-pbr-test.glsl
