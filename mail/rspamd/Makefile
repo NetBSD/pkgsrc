@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2018/08/22 09:45:34 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2018/09/07 11:19:07 fhajny Exp $
 
-DISTNAME=	rspamd-1.7.8
-PKGREVISION=	1
+DISTNAME=	rspamd-1.7.9
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vstakhov/}
 
@@ -20,6 +19,7 @@ USE_TOOLS+=	perl pkg-config
 USE_LANGUAGES=	c99
 BUILD_DEFS+=	VARBASE
 
+# Not really true, but difficult to avoid picking up 5.3
 LUA_VERSIONS_ACCEPTED=	53
 
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__
@@ -60,54 +60,34 @@ CMAKE_ARGS+=	-DENABLE_SQLITE=ON
 # Torch requires LuaJIT2, but LuaJIT2 only supports Lua 5.1
 CMAKE_ARGS+=	-DENABLE_LUAJIT=OFF
 CMAKE_ARGS+=	-DENABLE_TORCH=OFF
+CMAKE_ARGS+=	-DLUA_VERSION_MAJOR=5
+CMAKE_ARGS+=	-DLUA_VERSION_MINOR=2
 
 REPLACE_PERL+=	utils/rspamd_stats.pl
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/modules.d
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/scores.d
 
 OWN_DIRS_PERMS+=	${DBDIR} ${RSPAMD_USER} ${RSPAMD_GROUP} 0700
 OWN_DIRS_PERMS+=	${LOGDIR} ${RSPAMD_USER} ${RSPAMD_GROUP} 0750
 OWN_DIRS_PERMS+=	${RUNDIR} ${RSPAMD_USER} ${RSPAMD_GROUP} 0755
 
-CFGFILES=	2tld.inc actions.conf common.conf composites.conf \
-		dmarc_whitelist.inc groups.conf logging.inc \
-		maillist.inc metrics.conf mid.inc mime_types.inc \
-		modules.conf modules.d/antivirus.conf modules.d/arc.conf \
-		modules.d/asn.conf modules.d/clickhouse.conf \
-		modules.d/dcc.conf modules.d/dkim_signing.conf \
-		modules.d/dkim.conf modules.d/dmarc.conf \
-		modules.d/elastic.conf modules.d/emails.conf \
-		modules.d/force_actions.conf \
-		modules.d/forged_recipients.conf \
-		modules.d/fuzzy_check.conf modules.d/greylist.conf \
-		modules.d/hfilter.conf modules.d/history_redis.conf \
-		modules.d/chartable.conf modules.d/ip_score.conf \
-		modules.d/maillist.conf modules.d/metadata_exporter.conf \
-		modules.d/metric_exporter.conf modules.d/mid.conf \
-		modules.d/milter_headers.conf modules.d/mime_types.conf \
-		modules.d/multimap.conf modules.d/mx_check.conf \
-		modules.d/neural.conf modules.d/once_received.conf \
-		modules.d/phishing.conf modules.d/ratelimit.conf \
-		modules.d/rbl.conf modules.d/redis.conf \
-		modules.d/regexp.conf modules.d/replies.conf \
-		modules.d/rspamd_update.conf modules.d/spamassassin.conf \
-		modules.d/spamtrap.conf modules.d/spf.conf \
-		modules.d/surbl.conf modules.d/trie.conf \
-		modules.d/url_redirector.conf modules.d/url_reputation.conf \
-		modules.d/url_tags.conf modules.d/whitelist.conf \
-		options.inc redirectors.inc rspamd.conf \
-		scores.d/fuzzy_group.conf scores.d/headers_group.conf \
-		scores.d/hfilter_group.conf scores.d/mime_types_group.conf \
-		scores.d/mua_group.conf scores.d/phishing_group.conf \
-		scores.d/policies_group.conf scores.d/rbl_group.conf \
-		scores.d/statistics_group.conf scores.d/subject_group.conf \
-		scores.d/surbl_group.conf spf_dkim_whitelist.inc \
-		statistic.conf surbl-whitelist.inc worker-controller.inc \
-		worker-fuzzy.inc worker-normal.inc worker-proxy.inc
+.include "cfgfiles.mk"
 
 .for file in ${CFGFILES}
-CONF_FILES=	${EGDIR}/${file} ${PKG_SYSCONFDIR}/${file}
+CONF_FILES+=	${EGDIR}/${file} ${PKG_SYSCONFDIR}/${file}
 .endfor
+
+###
+### Generate list of config files
+###
+.PHONY: cfgfiles
+cfgfiles: do-extract
+	@${ECHO} "# \$$NetBSD\$$" > ${.CURDIR}/cfgfiles.mk
+	@${ECHO} "# Do not edit, regenerate using 'make cfgfiles'" >> ${.CURDIR}/cfgfiles.mk
+	@${ECHO} "CFGFILES= \\" >> ${.CURDIR}/cfgfiles.mk
+	cd ${WRKSRC}/conf && ${FIND} * -type f | ${SORT} | ${TR} '\n' ' ' >> ${.CURDIR}/cfgfiles.mk
+	@${ECHO} >> ${.CURDIR}/cfgfiles.mk
 
 post-extract:
 	${FIND} ${WRKSRC}/conf -type d -exec ${CHMOD} ${PKGDIRMODE} {} \;
