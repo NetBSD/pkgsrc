@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2018/07/20 09:38:49 adam Exp $
+# $NetBSD: Makefile,v 1.44 2018/09/07 09:01:09 adam Exp $
 
-DISTNAME=	peewee-3.6.4
+DISTNAME=	peewee-3.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/peewee/}
@@ -30,10 +30,9 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/docs/_build/man/peewee.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/peewee${PYVERSSUFFIX}.1
 
-# tests are not included in 3.6.4
+# tests are not included in 3.7.0
 do-test:
-#	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} runtests.py
-	${DO_NADA}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} runtests.py
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/py-cython/buildlink3.mk"
