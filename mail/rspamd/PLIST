@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2018/07/31 12:27:02 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.14 2018/09/07 11:19:07 fhajny Exp $
 bin/rspamadm
 bin/rspamadm-${PKGVERSION}
 bin/rspamc
@@ -57,6 +57,7 @@ share/examples/rspamd/modules.d/rbl.conf
 share/examples/rspamd/modules.d/redis.conf
 share/examples/rspamd/modules.d/regexp.conf
 share/examples/rspamd/modules.d/replies.conf
+share/examples/rspamd/modules.d/reputation.conf
 share/examples/rspamd/modules.d/rspamd_update.conf
 share/examples/rspamd/modules.d/spamassassin.conf
 share/examples/rspamd/modules.d/spamtrap.conf
