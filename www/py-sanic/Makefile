@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2018/07/03 05:03:40 adam Exp $
+# $NetBSD: Makefile,v 1.6 2018/09/07 11:30:47 adam Exp $
 
-DISTNAME=	sanic-0.7.0
+DISTNAME=	sanic-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sanic/}
@@ -12,11 +12,12 @@ LICENSE=	mit AND apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-aiofiles>=0.3.0:../../devel/py-aiofiles
 DEPENDS+=	${PYPKGPREFIX}-httptools>=0.0.9:../../www/py-httptools
+DEPENDS+=	${PYPKGPREFIX}-multidict>=4.0:../../databases/py-multidict
 DEPENDS+=	${PYPKGPREFIX}-ujson>=1.35:../../textproc/py-ujson
 DEPENDS+=	${PYPKGPREFIX}-uvloop>=0.5.3:../../devel/py-uvloop
-DEPENDS+=	${PYPKGPREFIX}-websockets>=3.2:../../www/py-websockets
+DEPENDS+=	${PYPKGPREFIX}-websockets>=5.0:../../www/py-websockets
 
-PYTHON_VERSIONS_ACCEPTED=	37 36 35
+PYTHON_VERSIONS_INCOMPATIBLE=	27 34
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

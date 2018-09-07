@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/08/03 07:48:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/09/07 11:30:47 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -31,9 +31,15 @@ ${PYSITELIB}/sanic/exceptions.pyo
 ${PYSITELIB}/sanic/handlers.py
 ${PYSITELIB}/sanic/handlers.pyc
 ${PYSITELIB}/sanic/handlers.pyo
+${PYSITELIB}/sanic/http.py
+${PYSITELIB}/sanic/http.pyc
+${PYSITELIB}/sanic/http.pyo
 ${PYSITELIB}/sanic/log.py
 ${PYSITELIB}/sanic/log.pyc
 ${PYSITELIB}/sanic/log.pyo
+${PYSITELIB}/sanic/reloader_helpers.py
+${PYSITELIB}/sanic/reloader_helpers.pyc
+${PYSITELIB}/sanic/reloader_helpers.pyo
 ${PYSITELIB}/sanic/request.py
 ${PYSITELIB}/sanic/request.pyc
 ${PYSITELIB}/sanic/request.pyo
