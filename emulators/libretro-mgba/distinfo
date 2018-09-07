@@ -1,9 +1,14 @@
-$NetBSD: distinfo,v 1.1 2018/08/12 14:25:09 nia Exp $
+$NetBSD: distinfo,v 1.2 2018/09/07 18:54:02 nia Exp $
 
 SHA1 (libretro-mgba-0.6.3.tar.gz) = b90d59af4ef43d0faf98f48f66514a51aa677296
 RMD160 (libretro-mgba-0.6.3.tar.gz) = a9d5cbc4f77a6ca1883707bef92313d77cf2a824
 SHA512 (libretro-mgba-0.6.3.tar.gz) = d646af7869dbcf8df671a75ecfd8c270950c013b826b23b94bacae43a77243786f198725e1b9bf17827d1ffcf6a8eef70091d53ea878bfb2450472485f42f233
 Size (libretro-mgba-0.6.3.tar.gz) = 7442154 bytes
 SHA1 (patch-CMakeLists.txt) = ec56af8fed90cd6486d797fd18fd69ac6eb00d3d
+SHA1 (patch-include_mgba-util_common.h) = 4d1ff026d759ede6341c1195b60903ce566145d5
 SHA1 (patch-include_mgba-util_math.h) = 448ca1bb3bbe2812e7d9482917c488ddcf3b48f0
+SHA1 (patch-include_mgba-util_vfs.h) = 5e02a5d53623dfa5f1531d2d3269cc4e88e4530c
+SHA1 (patch-src_util_vfs_vfs-fd.c) = f544787d17d95fb234f9844f0c3eef17805a798d
+SHA1 (patch-src_util_vfs_vfs-fifo.c) = 94240338a440e3da9b41e37e8c934113aacd5904
+SHA1 (patch-src_util_vfs_vfs-mem.c) = 7b55448fa616b078eac62e80867ef6894d3be8ed
 SHA1 (patch-version.cmake) = 973e3b397b807be1c228e96d559f98a4d1091bae
