@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2018/08/16 16:06:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/09/07 20:40:45 wiz Exp $
 bin/mysql
 bin/mysql_client_test
 bin/mysql_config
@@ -134,7 +134,6 @@ man/man1/myisamlog.1
 man/man1/myisampack.1
 man/man1/mysql.1
 man/man1/mysql.server.1
-man/man1/mysql_client_test_embedded.1
 man/man1/mysql_config.1
 man/man1/mysql_config_editor.1
 man/man1/mysql_install_db.1
@@ -155,7 +154,6 @@ man/man1/mysqlman.1
 man/man1/mysqlpump.1
 man/man1/mysqlshow.1
 man/man1/mysqlslap.1
-man/man1/mysqltest_embedded.1
 man/man1/perror.1
 man/man1/replace.1
 man/man1/resolve_stack_dump.1
