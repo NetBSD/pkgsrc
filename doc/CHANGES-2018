@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3958 2018/09/07 09:32:07 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3959 2018/09/07 11:19:16 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5571,3 +5571,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-test to 3.8.0 [adam 2018-09-07]
 	Updated devel/py-path.py to 11.1.0 [adam 2018-09-07]
 	Updated devel/py-txaio to 18.8.1 [adam 2018-09-07]
+	Updated mail/rspamd to 1.7.9 [fhajny 2018-09-07]
