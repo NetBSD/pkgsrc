@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2018/08/12 13:22:43 nia Exp $
+$NetBSD: distinfo,v 1.2 2018/09/07 00:49:04 nia Exp $
 
 SHA1 (libretro-beetle-saturn-20180620-1983713f665e86459900a08873fac09e70c31bfa.tar.gz) = 443c3a9567b4bfb47eccfcf01cf3db80bfb07f75
 RMD160 (libretro-beetle-saturn-20180620-1983713f665e86459900a08873fac09e70c31bfa.tar.gz) = 89574f1ac0987ec18ad2cd6d76fa0d728583a431
 SHA512 (libretro-beetle-saturn-20180620-1983713f665e86459900a08873fac09e70c31bfa.tar.gz) = 7ca419b0ac495284796d3acc0b52a66b7f821733c77c2c9f23c478bf356ad52cff3c1b8236de7de04118dd7c96a332eeba17f207887d995b8aff10c58a4d5992
 Size (libretro-beetle-saturn-20180620-1983713f665e86459900a08873fac09e70c31bfa.tar.gz) = 1420451 bytes
+SHA1 (patch-libretro-common_rthreads_rthreads.c) = d774aa27221362400cdd0dc842fedc07519945ca

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2018/09/07 00:12:45 nia Exp $
+# $NetBSD: Makefile,v 1.3 2018/09/07 00:49:04 nia Exp $
 
 DISTNAME=	libretro-beetle-saturn-20180620
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	beetle-saturn-libretro
@@ -22,8 +23,6 @@ MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 ONLY_FOR_PLATFORM=	*-*-x86_64
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
-
-CFLAGS+=	-D_POSIX_C_SOURCE=200112L
 
 .include "../../mk/endian.mk"
 
