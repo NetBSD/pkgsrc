@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/08/11 00:19:58 nia Exp $
+# $NetBSD: Makefile,v 1.2 2018/09/07 00:12:45 nia Exp $
 
 DISTNAME=	libretro-beetle-psx-20180808
 CATEGORIES=	emulators
@@ -17,6 +17,8 @@ USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
+
+CFLAGS+=	-D_POSIX_C_SOURCE=200112L
 
 .include "../../mk/endian.mk"
 
