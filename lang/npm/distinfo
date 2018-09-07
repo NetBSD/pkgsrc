@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.8 2018/08/02 12:28:35 fhajny Exp $
+$NetBSD: distinfo,v 1.9 2018/09/07 11:51:10 fhajny Exp $
 
-SHA1 (cli-6.3.0.tar.gz) = cfac27e568e3bf51fc2dff8ffc5fae54ee703174
-RMD160 (cli-6.3.0.tar.gz) = 18963c32b31d64bb78b8997d17346ba5df205f07
-SHA512 (cli-6.3.0.tar.gz) = abb515c161b740d7bf8a69b139591df5d92091b30fc1183c1e2288eb0e98caf9b61a83e7d4cc2bfacbd9fed9ac355ec90c4548e2626e976355f9eb58c4b28db5
-Size (cli-6.3.0.tar.gz) = 5833427 bytes
+SHA1 (cli-6.4.1.tar.gz) = e35a0e60c8640dc118b00b0289970d8b5f68441f
+RMD160 (cli-6.4.1.tar.gz) = 52a17e43d65c0695fe1fb6f132f744e2f19c061c
+SHA512 (cli-6.4.1.tar.gz) = a43e1ce34bd1107fffb2bf3d08448ea30c1c1342caa3f0f181d28f057b3a1069a4e2decf23f0c6f740c20a2e0a5abe15f2c1eec019c9b59f13a7fe457bb64abb
+Size (cli-6.4.1.tar.gz) = 5273568 bytes
 SHA1 (marked-0.4.0.tar.gz) = 30683c632ac803a64892cd0693945ceb13ce82fe
 RMD160 (marked-0.4.0.tar.gz) = 86384c2af08de6345b72c352ac17d3bcd2c2badd
 SHA512 (marked-0.4.0.tar.gz) = ceaa920bae6090431b7011e295a2bf1a923c5a1c17b3d5dab72ba52df845d59b830a017e6e3535cad937a5f2c5a7ebace2b5fb73f4ed65e12865a87ad158cb3f
