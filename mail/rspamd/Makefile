@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2018/09/07 11:19:07 fhajny Exp $
+# $NetBSD: Makefile,v 1.47 2018/09/07 11:54:16 fhajny Exp $
 
 DISTNAME=	rspamd-1.7.9
 CATEGORIES=	mail
@@ -60,8 +60,6 @@ CMAKE_ARGS+=	-DENABLE_SQLITE=ON
 # Torch requires LuaJIT2, but LuaJIT2 only supports Lua 5.1
 CMAKE_ARGS+=	-DENABLE_LUAJIT=OFF
 CMAKE_ARGS+=	-DENABLE_TORCH=OFF
-CMAKE_ARGS+=	-DLUA_VERSION_MAJOR=5
-CMAKE_ARGS+=	-DLUA_VERSION_MINOR=2
 
 REPLACE_PERL+=	utils/rspamd_stats.pl
 
