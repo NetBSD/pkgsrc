@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3962 2018/09/07 11:51:17 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.3963 2018/09/07 13:54:53 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5576,3 +5576,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-sanic to 0.8.1 [adam 2018-09-07]
 	Updated lang/nodejs to 10.10.0 [fhajny 2018-09-07]
 	Updated lang/npm to 6.4.1 [fhajny 2018-09-07]
+	Updated security/hitch to 1.4.8 [fhajny 2018-09-07]
