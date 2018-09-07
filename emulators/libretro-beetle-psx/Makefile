@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2018/09/07 00:45:23 nia Exp $
+# $NetBSD: Makefile,v 1.4 2018/09/07 09:44:49 nia Exp $
 
 DISTNAME=	libretro-beetle-psx-20180808
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	beetle-psx-libretro
@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v2
 EXTRACT_USING=	bsdtar
 
 USE_TOOLS+=	gmake
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 
@@ -31,4 +31,5 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/mednafen_psx_libretro.so \
 	    ${DESTDIR}${PREFIX}/lib/libretro/mednafen_psx_libretro.so
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
