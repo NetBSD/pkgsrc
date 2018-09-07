@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2017/06/14 13:28:57 fhajny Exp $
+# $NetBSD: Makefile,v 1.7 2018/09/07 13:54:45 fhajny Exp $
 
-DISTNAME=	hitch-1.4.6
+DISTNAME=	hitch-1.4.8
 CATEGORIES=	security
 MASTER_SITES=	https://hitch-tls.org/source/
 
