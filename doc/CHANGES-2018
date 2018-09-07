@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3957 2018/09/07 09:01:35 adam Exp $
+$NetBSD: CHANGES-2018,v 1.3958 2018/09/07 09:32:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5569,3 +5569,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/libidn to 1.34 [wiz 2018-09-06]
 	Updated databases/py-peewee to 3.7.0 [adam 2018-09-07]
 	Updated devel/py-test to 3.8.0 [adam 2018-09-07]
+	Updated devel/py-path.py to 11.1.0 [adam 2018-09-07]
+	Updated devel/py-txaio to 18.8.1 [adam 2018-09-07]
