@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3967 2018/09/08 15:17:56 khorben Exp $
+$NetBSD: CHANGES-2018,v 1.3968 2018/09/08 15:52:58 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5581,3 +5581,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/cmake to 3.12.2 [adam 2018-09-08]
 	Added news/sfeed version 0.9.6 [leot 2018-09-08]
 	Updated devel/radare2 to 2.4.0 [khorben 2018-09-08]
+	Updated net/mikutter to 3.8.0 [tsutsui 2018-09-08]
