@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2018/08/27 15:14:21 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2018/09/08 13:24:26 leot Exp $
 #
 
 COMMENT=	Network news
@@ -21,6 +21,7 @@ SUBDIR+=	nn
 SUBDIR+=	nntpcache
 SUBDIR+=	nntpclnt
 SUBDIR+=	pan
+SUBDIR+=	sfeed
 SUBDIR+=	slrn
 SUBDIR+=	suck
 SUBDIR+=	tin
