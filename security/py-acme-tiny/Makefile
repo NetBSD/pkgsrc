@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2018/03/10 17:18:42 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2018/09/08 18:52:18 schmonz Exp $
 
-DISTNAME=	acme-tiny-0.0.20170214
+DISTNAME=	acme-tiny-4.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=diafygi/}
 
@@ -12,7 +11,7 @@ COMMENT=	Tiny script to issue and renew TLS certs from Let's Encrypt
 LICENSE=	mit
 
 GITHUB_PROJECT=	acme-tiny
-GITHUB_TAG=	daba51d37efd7c1f205f9da383b9b09968e30d29
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 NO_BUILD=	yes
 INSTALLATION_DIRS=bin share/doc/${PYPKGPREFIX}-acme-tiny
