@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2018/05/06 02:09:24 taca Exp $
+$NetBSD: distinfo,v 1.9 2018/09/08 15:56:25 tsutsui Exp $
 
-SHA1 (cairo-1.15.13.gem) = e86c48a0419a373f1f1c7dc57179ef22340876d4
-RMD160 (cairo-1.15.13.gem) = cefa3fe48b6c801bf69e7df6a1975d23e3fada1c
-SHA512 (cairo-1.15.13.gem) = accab295acbb5b82e456c96b29681c37befdb6d1d4c93f8dd3d6cdd772374a3c6fad914f1ed097ee0575dd1e184eb22794f315bc8d02d0558f89f88b63870b86
-Size (cairo-1.15.13.gem) = 103424 bytes
+SHA1 (cairo-1.15.14.gem) = ab108533b82986f41b99006cbcbe9534939adedf
+RMD160 (cairo-1.15.14.gem) = c5281f49f5decd5c2583043af2597cfea24841a7
+SHA512 (cairo-1.15.14.gem) = ca05638e93f426a32d8483acf47ee839a0137ca1305cb0dc1c71131237e49e6c395f6a51c7ebc9957a3553c8fd59737652c57d96beb8c24bffa16d40c14a51f9
+Size (cairo-1.15.14.gem) = 103936 bytes
