@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3969 2018/09/08 15:57:55 tsutsui Exp $
+$NetBSD: CHANGES-2018,v 1.3970 2018/09/08 16:24:48 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5583,3 +5583,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/radare2 to 2.4.0 [khorben 2018-09-08]
 	Updated net/mikutter to 3.8.0 [tsutsui 2018-09-08]
 	Updated graphics/ruby-cairo to 1.15.14 [tsutsui 2018-09-08]
+	Updated net/youtube-dl to 20180908 [leot 2018-09-08]
