@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.7 2018/02/18 17:36:58 kamil Exp $
+$NetBSD: distinfo,v 1.8 2018/09/08 15:14:56 khorben Exp $
 
-SHA1 (radare2-2.3.0.tar.gz) = 81d400138869144421b0f8c11b63a01837c046ab
-RMD160 (radare2-2.3.0.tar.gz) = 2aec3cd75a85c744581a823f11d25014f4637808
-SHA512 (radare2-2.3.0.tar.gz) = 4b52ae3678c5bbba1d173f95715807469e88603067faf4f1058606a4235050ec07aebdb6408e24c0c031b9554b4ca095bf77fc2791a9efa498dfff49200b3b1d
-Size (radare2-2.3.0.tar.gz) = 6175929 bytes
+SHA1 (radare2-2.4.0.tar.gz) = 46d83ada8ac895a398a5f6932a3dd6b667a482b2
+RMD160 (radare2-2.4.0.tar.gz) = 91b5d59e68d97c62dfeb9c4fb5346100789b2d10
+SHA512 (radare2-2.4.0.tar.gz) = fca5f78c7e1dab4af0aa4bf367953bc7a49bbd9da3ab7b32e8be79cc3c4f6a1be0db4c466d5f6e68c87c569d0096dd2841ea52f4ad75234046f1a96d8b4d4fc3
+Size (radare2-2.4.0.tar.gz) = 6301920 bytes
 SHA1 (patch-libr_Makefile) = b2841a0752070206d0ffcce769d361bd229e0728
 SHA1 (patch-libr_debug_Makefile) = c0be77267c70d428582ac99764e23b5e8fa7cb79
-SHA1 (patch-libr_socket_run.c) = 6b927e84683cf1dd2cb7834fd1613e3405ccfab5
+SHA1 (patch-libr_socket_run.c) = 1d0a871d4ab62040e48cf9a7fe8dcb6a892ac7e4
 SHA1 (patch-sys_ios-sdk.sh) = cc36a8270f1de0f199e89d4095ed4e99a8447804
