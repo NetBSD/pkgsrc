@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3970 2018/09/08 16:24:48 leot Exp $
+$NetBSD: CHANGES-2018,v 1.3971 2018/09/08 17:00:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5584,3 +5584,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/mikutter to 3.8.0 [tsutsui 2018-09-08]
 	Updated graphics/ruby-cairo to 1.15.14 [tsutsui 2018-09-08]
 	Updated net/youtube-dl to 20180908 [leot 2018-09-08]
+	Updated misc/ruby-sprockets22 to 2.2.3nb3 [taca 2018-09-08]
