@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.164 2018/07/28 14:38:53 tsutsui Exp $
+# $NetBSD: Makefile,v 1.165 2018/09/08 15:52:36 tsutsui Exp $
 #
 
-DISTNAME=	mikutter.3.7.4
+DISTNAME=	mikutter.3.8.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/./-/}
 CATEGORIES=	net
 MASTER_SITES=	https://mikutter.hachune.net/bin/
@@ -35,14 +35,12 @@ WRKSRC=		${WRKDIR}/mikutter
 USE_LANGUAGES=	# none
 USE_TOOLS+=	pax
 
-REPLACE_RUBY=	mikutter.rb devel/makechi.rb
+REPLACE_RUBY=	mikutter.rb
 REPLACE_RUBY_DIRS=	core
 
 INSTALLATION_DIRS+=	bin share/doc/mikutter share/applications share/mikutter
 
 do-build:
-	cd ${WRKSRC}/devel && \
-		${RM} -rf debian
 	${RM} -rf ${WRKSRC}/vendor
 	${SED} -e 's,@PREFIX@,${PREFIX},g' < ${FILESDIR}/desktop.in > ${WRKDIR}/desktop
 	${SED} -e 's,@PREFIX@,${PREFIX},g' < ${FILESDIR}/mikutter.sh.in > ${WRKDIR}/mikutter.sh
@@ -50,7 +48,7 @@ do-build:
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/mikutter.rb ${DESTDIR}${PREFIX}/share/mikutter
 	${INSTALL_DATA} ${WRKSRC}/Gemfile ${DESTDIR}${PREFIX}/share/mikutter
-	cd ${WRKSRC} && pax -rwpp -s '/.*\.orig//' core devel plugin ${DESTDIR}${PREFIX}/share/mikutter
+	cd ${WRKSRC} && pax -rwpp -s '/.*\.orig//' core plugin ${DESTDIR}${PREFIX}/share/mikutter
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/mikutter
 	${INSTALL_SCRIPT} ${WRKDIR}/mikutter.sh ${DESTDIR}${PREFIX}/bin/mikutter
 	${INSTALL_DATA} ${WRKDIR}/desktop ${DESTDIR}${PREFIX}/share/applications/mikutter.desktop
