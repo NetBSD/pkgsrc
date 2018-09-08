@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2018/07/08 06:08:09 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.43 2018/09/08 15:52:36 tsutsui Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -714,8 +714,6 @@ share/mikutter/core/plugin/spell/error.rb
 share/mikutter/core/plugin/spell/spell.rb
 share/mikutter/core/plugin/spell/struct.rb
 share/mikutter/core/plugin/streaming/.mikutter.yml
-share/mikutter/core/plugin/streaming/filter.rb
-share/mikutter/core/plugin/streaming/perma_streamer.rb
 share/mikutter/core/plugin/streaming/po/ar/streaming.po
 share/mikutter/core/plugin/streaming/po/de/streaming.po
 share/mikutter/core/plugin/streaming/po/el/streaming.po
@@ -728,8 +726,6 @@ share/mikutter/core/plugin/streaming/po/vi/streaming.po
 share/mikutter/core/plugin/streaming/po/zh/streaming.po
 share/mikutter/core/plugin/streaming/po/zh_CN/streaming.po
 share/mikutter/core/plugin/streaming/po/zh_TW/streaming.po
-share/mikutter/core/plugin/streaming/streamer.rb
-share/mikutter/core/plugin/streaming/streamer_error.rb
 share/mikutter/core/plugin/streaming/streaming.rb
 share/mikutter/core/plugin/streaming_connection_status/.mikutter.yml
 share/mikutter/core/plugin/streaming_connection_status/streaming_connection_status.rb
@@ -881,22 +877,5 @@ share/mikutter/core/system/system.rb
 share/mikutter/core/system/user.rb
 share/mikutter/core/userconfig.rb
 share/mikutter/core/utils.rb
-share/mikutter/devel/ABOUTCHI
-share/mikutter/devel/chiskel/core/config.rb
-share/mikutter/devel/chiskel/core/lib/graph.rb
-share/mikutter/devel/chiskel/core/lib/sensor.rb
-share/mikutter/devel/chiskel/core/plugin/ChangeLog
-share/mikutter/devel/chiskel/core/plugin/auth.rb
-share/mikutter/devel/chiskel/core/plugin/diskobserver.rb
-share/mikutter/devel/chiskel/core/plugin/kiriban.rb
-share/mikutter/devel/chiskel/core/plugin/loadaverage.rb
-share/mikutter/devel/chiskel/core/plugin/ping.rb
-share/mikutter/devel/chiskel/core/plugin/plugin.rb
-share/mikutter/devel/chiskel/core/plugin/plugin_class.rb
-share/mikutter/devel/chiskel/core/plugin/streaming.rb
-share/mikutter/devel/chiskel/core/plugin/temperature.rb
-share/mikutter/devel/chiskel/core/plugin/template
-share/mikutter/devel/chiskel/core/plugin/uptime.rb
-share/mikutter/devel/makechi.rb
 share/mikutter/mikutter.rb
 share/mikutter/plugin/WHATSTHIS
