@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3972 2018/09/08 18:53:03 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.3973 2018/09/08 18:57:25 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5586,3 +5586,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/youtube-dl to 20180908 [leot 2018-09-08]
 	Updated misc/ruby-sprockets22 to 2.2.3nb3 [taca 2018-09-08]
 	Updated security/py-acme-tiny to 4.0.4 [schmonz 2018-09-08]
+	Updated devel/libidn2 to 2.0.5 [schmonz 2018-09-08]
