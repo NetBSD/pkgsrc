@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3964 2018/09/07 20:40:54 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3965 2018/09/08 06:56:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5578,3 +5578,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/npm to 6.4.1 [fhajny 2018-09-07]
 	Updated security/hitch to 1.4.8 [fhajny 2018-09-07]
 	Updated databases/mysql57-client to 5.7.23nb2 [wiz 2018-09-07]
+	Updated devel/cmake to 3.12.2 [adam 2018-09-08]
