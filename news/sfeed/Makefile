@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/09/08 13:23:38 leot Exp $
+# $NetBSD: Makefile,v 1.2 2018/09/08 14:10:52 leot Exp $
 
 DISTNAME=	sfeed-0.9.6
 CATEGORIES=	news
@@ -22,5 +22,7 @@ SUBST_SED.makefile+=	-e 's/cc/${CC:Q}/'
 SUBST_SED.makefile+=	-e 's,^CFLAGS *= ,CFLAGS += ,'
 SUBST_SED.makefile+=	-e 's,^CPPFLAGS *= ,CPPFLAGS += ,'
 SUBST_SED.makefile+=	-e 's,^LDFLAGS *= ,LDFLAGS += ,'
+
+REPLACE_SH+=		sfeed_opml_export sfeed_update
 
 .include "../../mk/bsd.pkg.mk"
