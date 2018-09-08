@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2017/09/02 14:58:36 taca Exp $
+# $NetBSD: Makefile,v 1.7 2018/09/08 16:59:45 taca Exp $
 
 DISTNAME=	sprockets-2.2.3
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/sprockets/sprockets22/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/sstephenson/sprockets
+HOMEPAGE=	https://github.com/rails/sprockets
 COMMENT=	Rack-based asset packaging system
 LICENSE=	mit
 
