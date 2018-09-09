@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2017/06/04 14:46:29 taca Exp $
+# $NetBSD: Makefile,v 1.16 2018/09/09 12:27:38 taca Exp $
 
-DISTNAME=	sprockets-3.7.1
-PKGREVISION=1
+DISTNAME=	sprockets-3.7.2
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/sstephenson/sprockets
+HOMEPAGE=	https://github.com/rails/sprockets
 COMMENT=	Rack-based asset packaging system
 LICENSE=	mit
 
