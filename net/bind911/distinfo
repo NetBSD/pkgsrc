@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.1 2018/09/09 13:11:38 taca Exp $
+
+SHA1 (bind-9.11.4-P1.tar.gz) = 555d031a4e1f70f703e63c75e46c4299174f0b9c
+RMD160 (bind-9.11.4-P1.tar.gz) = b394f2367d77417836c18261de067fa64b4b36e0
+SHA512 (bind-9.11.4-P1.tar.gz) = 7d7f3f6b557a49d1a808c0ad7d1f42f99f2e1e510c834078bd1fa88697cbc447634a461e8de1260a9668967f51797de8b40761dddfc6fc24055b2d5b494eec0d
+Size (bind-9.11.4-P1.tar.gz) = 9623403 bytes
+SHA1 (patch-bin_dig_dighost.c) = c87f145a0e78df5d1b834bfec90ab3b4523ee915
+SHA1 (patch-bin_tests_system_metadata_tests.sh) = d01a492d0b7738760bdbff714248e279a78fef28
+SHA1 (patch-config.threads.in) = 8341bdb11888d3efdde5f115de91b1f46aa40bd0
+SHA1 (patch-configure) = 9e488b315253dd9cf84e6658468e26399798b0e6
+SHA1 (patch-contrib_dlz_config.dlz.in) = 6c53d61aaaf1a952a867e4c4da0194db94f511d7
+SHA1 (patch-lib_dns_rbt.c) = 8af91b6d40b591d28d15f7f98c9b7a82df234381
+SHA1 (patch-lib_isc_unix_socket.c) = 73cbf20f8a1e4714450d291332ee928b1eb2898a
+SHA1 (patch-lib_lwres_getaddrinfo.c) = 656109a2c1583b38ed8a8e0cda6a95f71e4771a0
+SHA1 (patch-lib_lwres_getnameinfo.c) = 366100a25064f43bd938e9acf31188c917b45cbe
