@@ -1,0 +1,30 @@
+BIND, the Berkeley Internet Name Daemon, version 9 is a major rewrite
+of nearly all aspects of the underlying BIND architecture.  Some
+of the important features of BIND-9 are:
+
+	- DNS Security
+	- IP version 6
+	- DNS Protocol Enhancements
+	- Views
+	- Multiprocessor Support
+	- Improved Portability Architecture
+	- Full NSEC3 support
+	- Automatic zone re-signing
+	- New update-policy methods tcp-self and 6to4-self
+
+This package contains the BIND 9.12 release.
+
+	- named and related libraries have been substantially refactored for
+	  improved query performance.
+	- Code implementing the name server query processing logic has been
+	  moved into a new libns library.
+	- The DNS Response Policy Service API (DNSRPS) is now supported.
+	- Log file timestamps can now also be formatted in ISO 8601 (local)
+	  or ISO 8601 (UTC) formats.
+	- Added support for the EDNS Padding and Keepalive options.
+	- 'new-zones-directory' option sets the location where the
+	  configuration data for zones added by rndc addzone is stored.
+	- The default key algorithm in rndc-confgen is now hmac-sha256.
+	- filter-aaaa-on-v4 and filter-aaaa-on-v6 options are now available
+	  by default without a configure option.
+	- The obsolete isc-hmac-fixup command has been removed.
