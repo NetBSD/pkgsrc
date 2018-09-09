@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3979 2018/09/09 06:58:22 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3980 2018/09/09 12:28:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5593,3 +5593,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Carp to 1.50 [wiz 2018-09-09]
 	Updated devel/p5-GitLab-API-v3 to 1.04 [wiz 2018-09-09]
 	Updated devel/p5-Proc-Pidfile to 1.07 [wiz 2018-09-09]
+	Updated misc/ruby-sprockets to 3.7.2 [taca 2018-09-09]
