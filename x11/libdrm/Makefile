@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.83 2018/09/02 08:34:34 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2018/09/09 04:04:56 maya Exp $
 
 DISTNAME=		libdrm-2.4.94
 CATEGORIES=		x11 graphics
+PKGREVISION=		1
 MASTER_SITES=		http://dri.freedesktop.org/libdrm/
 EXTRACT_SUFX=		.tar.bz2
 
@@ -38,6 +39,8 @@ CONFIGURE_ARGS+=	PTHREADSTUBS_CFLAGS=-I${PREFIX}/include \
 			PTHREADSTUBS_LIBS=-L${PREFIX}/lib
 CONFIGURE_ARGS+=	--disable-manpages
 CONFIGURE_ARGS+=	--disable-valgrind
+
+LDFLAGS.NetBSD+=	-lpci
 
 PLIST_VARS+=	intel arm
 .if !empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Mx86_64)
