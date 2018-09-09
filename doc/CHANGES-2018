@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3976 2018/09/09 06:52:41 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3977 2018/09/09 06:53:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5590,3 +5590,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated shells/zsh to 5.6 [wen 2018-09-09]
 	Updated x11/libdrm to 2.4.94nb1 [maya 2018-09-09]
 	Updated databases/p5-DBD-mysql to 4.047 [wiz 2018-09-09]
+	Updated devel/p5-Carp to 1.50 [wiz 2018-09-09]
