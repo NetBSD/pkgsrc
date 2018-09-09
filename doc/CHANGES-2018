@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3982 2018/09/09 13:16:57 taca Exp $
+$NetBSD: CHANGES-2018,v 1.3983 2018/09/09 17:48:08 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5596,3 +5596,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/ruby-sprockets to 3.7.2 [taca 2018-09-09]
 	Added net/bind911 version 9.11.4pl1 [taca 2018-09-09]
 	Added net/bind912 version 9.12.2pl1 [taca 2018-09-09]
+	Updated editors/nano to 3.0 [wiedi 2018-09-09]
