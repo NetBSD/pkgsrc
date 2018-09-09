@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3973 2018/09/08 18:57:25 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.3974 2018/09/09 00:47:40 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5587,3 +5587,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/ruby-sprockets22 to 2.2.3nb3 [taca 2018-09-08]
 	Updated security/py-acme-tiny to 4.0.4 [schmonz 2018-09-08]
 	Updated devel/libidn2 to 2.0.5 [schmonz 2018-09-08]
+	Updated shells/zsh to 5.6 [wen 2018-09-09]
