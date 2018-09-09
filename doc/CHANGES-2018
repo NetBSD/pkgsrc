@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3978 2018/09/09 06:57:35 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3979 2018/09/09 06:58:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5592,3 +5592,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/p5-DBD-mysql to 4.047 [wiz 2018-09-09]
 	Updated devel/p5-Carp to 1.50 [wiz 2018-09-09]
 	Updated devel/p5-GitLab-API-v3 to 1.04 [wiz 2018-09-09]
+	Updated devel/p5-Proc-Pidfile to 1.07 [wiz 2018-09-09]
