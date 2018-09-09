@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.249 2018/08/12 08:46:41 bsiegert Exp $
+# $NetBSD: bootstrap,v 1.250 2018/09/09 10:01:26 schmonz Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -778,6 +778,8 @@ OpenBSD)
 	need_sed=no
 	set_opsys=no
 	machine_arch=`arch -s`
+	CC=${CC:-cc}; export CC
+	check_compiler=yes
 	;;
 OSF1)
 	root_group=system
