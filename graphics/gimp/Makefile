@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.295 2018/09/04 08:26:18 wiz Exp $
+# $NetBSD: Makefile,v 1.296 2018/09/09 21:51:57 wiz Exp $
 
 DISTNAME=	gimp-2.10.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.gimp.org/pub/gimp/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.bz2
@@ -69,8 +69,7 @@ BUILDLINK_API_DEPENDS.gegl+=		gegl>=0.4.2
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/gexiv2/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
-BUILDLINK_API_DEPENDS.lcms+=		lcms>=1.12
-.include "../../graphics/lcms/buildlink3.mk"
+.include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/libmypaint/buildlink3.mk"
