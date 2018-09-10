@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3994 2018/09/10 22:44:08 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.3995 2018/09/10 23:49:04 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5609,3 +5609,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated fonts/fntsample to 5.2 [fhajny 2018-09-10]
 	Added geography/libmaxminddb version 1.3.2 [fhajny 2018-09-10]
 	Added devel/go-appengine version 1.1.0 [minskim 2018-09-10]
+	Added devel/go-colortext version 1.0.0 [minskim 2018-09-10]
