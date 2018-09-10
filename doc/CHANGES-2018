@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3989 2018/09/10 13:47:44 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.3990 2018/09/10 14:32:40 he Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5604,3 +5604,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/py-lexicon to 2.7.2 [fhajny 2018-09-10]
 	Updated databases/py-cassandra-driver to 3.15.1 [fhajny 2018-09-10]
 	Added devel/xxhash version 0.6.5 [fhajny 2018-09-10]
+	Updated net/unbound to 1.8.0 [he 2018-09-10]
