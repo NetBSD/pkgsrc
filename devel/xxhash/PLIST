@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2018/09/10 13:47:31 fhajny Exp $
+bin/xxhsum
+include/xxhash.h
+man/man1/xxhsum.1
