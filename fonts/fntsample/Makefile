@@ -1,23 +1,27 @@
-# $NetBSD: Makefile,v 1.29 2018/08/22 09:45:06 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2018/09/10 20:43:24 fhajny Exp $
 #
 
-DISTNAME=	fntsample-4.1
-PKGREVISION=	5
+DISTNAME=	fntsample-5.2
 CATEGORIES=	fonts
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fntsample/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=eugmes/}
+GITHUB_TAG=	release/${PKGVERSION_NOREV}
 
 DISTFILES=	${DEFAULT_DISTFILES} Blocks.txt
 SITES.Blocks.txt=	http://unicode.org/Public/UNIDATA/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://fntsample.sourceforge.net/
+HOMEPAGE=	https://github.com/eugmes/fntsample/
 COMMENT=	Make font samples, similar to Unicode charts, showing Unicode coverage
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config gmake perl:run msgfmt
+USE_CMAKE=	yes
+
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-/-release-/}
+
 REPLACE_PERL=	pdfoutline.pl
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=	--with-unicode-blocks=${WRKDIR}/Blocks.txt
+
+CMAKE_ARGS+=	-DUNICODE_BLOCKS=${WRKDIR}/Blocks.txt
 
 .include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
