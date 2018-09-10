@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/08/26 13:25:33 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2018/09/10 10:30:06 schmonz Exp $
 
 PKGNAME=		p5-${PKGNAME_MODULE:S/^x/X/}
 COMMENT=		Perl bindings for Xapian search engine
@@ -11,6 +11,15 @@ CONFIGURE_ENV+=		PERL_ARCH=${PERL5_INSTALLVENDORARCH:Q}
 CONFIGURE_ENV+=		PERL_LIB=${PERL5_INSTALLVENDORLIB:Q}
 
 REPLACE_PERL=		perl/docs/examples/*.pl
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+PERL_DLEXT=		bundle
+.else
+PERL_DLEXT=		so
+.endif
+PLIST_SUBST+=		PERL_DLEXT=${PERL_DLEXT}
 
 post-install:
 	${CHMOD} +x ${DESTDIR}${PREFIX}/share/doc/xapian-bindings/perl/examples/*.pl
