@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.5 2017/05/11 13:49:06 jperkin Exp $
+$NetBSD: patch-configure.ac,v 1.5.12.1 2018/09/10 20:18:45 spz Exp $
 
 Use a compile test, not a run test, for whether various rlimit values
 are equivalent.  A compile test is sufficient because zsh uses these
@@ -7,9 +7,9 @@ preprocessor-time, constants.
 
 Fix SunOS flags.
 
---- configure.ac.orig	2016-12-12 21:35:28.000000000 +0000
+--- configure.ac.orig	2018-09-09 00:27:38.000000000 +0000
 +++ configure.ac
-@@ -1920,85 +1920,9 @@ zsh_LIMIT_PRESENT(RLIMIT_NPTS)
+@@ -1881,77 +1881,9 @@ zsh_LIMIT_PRESENT(RLIMIT_NPTS)
  zsh_LIMIT_PRESENT(RLIMIT_SWAP)
  zsh_LIMIT_PRESENT(RLIMIT_KQUEUES)
  
@@ -17,7 +17,7 @@ Fix SunOS flags.
 -[Define to 1 if RLIMIT_VMEM and RLIMIT_RSS both exist and are equal.])
 -AC_CACHE_CHECK(if RLIMIT_VMEM and RLIMIT_RSS are the same,
 -zsh_cv_rlimit_vmem_is_rss,
--[AC_TRY_RUN([
+-[AC_RUN_IFELSE([AC_LANG_SOURCE([[
 -#include <sys/types.h>
 -#ifdef HAVE_SYS_TIME_H
 -#include <sys/time.h>
@@ -30,10 +30,7 @@ Fix SunOS flags.
 -if (RLIMIT_RSS == RLIMIT_VMEM) ret = 0;
 -#endif
 -return ret;
--}],
--  zsh_cv_rlimit_vmem_is_rss=yes,
--  zsh_cv_rlimit_vmem_is_rss=no,
--  zsh_cv_rlimit_vmem_is_rss=no)])
+-}]])],[zsh_cv_rlimit_vmem_is_rss=yes],[zsh_cv_rlimit_vmem_is_rss=no],[zsh_cv_rlimit_vmem_is_rss=no])])
 -
 -if test x$zsh_cv_rlimit_vmem_is_rss = xyes; then
 -  AC_DEFINE(RLIMIT_VMEM_IS_RSS)
@@ -44,7 +41,7 @@ Fix SunOS flags.
 -[Define to 1 if RLIMIT_VMEM and RLIMIT_AS both exist and are equal.])
 -AC_CACHE_CHECK(if RLIMIT_VMEM and RLIMIT_AS are the same,
 -zsh_cv_rlimit_vmem_is_as,
--[AC_TRY_RUN([
+-[AC_RUN_IFELSE([AC_LANG_SOURCE([[
 -#include <sys/types.h>
 -#ifdef HAVE_SYS_TIME_H
 -#include <sys/time.h>
@@ -57,10 +54,7 @@ Fix SunOS flags.
 -if (RLIMIT_AS == RLIMIT_VMEM) ret = 0;
 -#endif
 -return ret;
--}],
--  zsh_cv_rlimit_vmem_is_as=yes,
--  zsh_cv_rlimit_vmem_is_as=no,
--  zsh_cv_rlimit_vmem_is_as=no)])
+-}]])],[zsh_cv_rlimit_vmem_is_as=yes],[zsh_cv_rlimit_vmem_is_as=no],[zsh_cv_rlimit_vmem_is_as=no])])
 -
 -if test x$zsh_cv_rlimit_vmem_is_as = xyes; then
 -  AC_DEFINE(RLIMIT_VMEM_IS_AS)
@@ -71,7 +65,7 @@ Fix SunOS flags.
 -[Define to 1 if RLIMIT_RSS and RLIMIT_AS both exist and are equal.])
 -AC_CACHE_CHECK(if RLIMIT_RSS and RLIMIT_AS are the same,
 -zsh_cv_rlimit_rss_is_as,
--[AC_TRY_RUN([
+-[AC_RUN_IFELSE([AC_LANG_SOURCE([[
 -#include <sys/types.h>
 -#ifdef HAVE_SYS_TIME_H
 -#include <sys/time.h>
@@ -84,26 +78,15 @@ Fix SunOS flags.
 -if (RLIMIT_AS == RLIMIT_RSS) ret = 0;
 -#endif
 -return ret;
--}],
--  zsh_cv_rlimit_rss_is_as=yes,
--  zsh_cv_rlimit_rss_is_as=no,
--  zsh_cv_rlimit_rss_is_as=no)])
+-}]])],[zsh_cv_rlimit_rss_is_as=yes],[zsh_cv_rlimit_rss_is_as=no],[zsh_cv_rlimit_rss_is_as=no])])
 -
 -if test x$zsh_cv_rlimit_rss_is_as = xyes; then
 -  AC_DEFINE(RLIMIT_RSS_IS_AS)
 -fi
+-
 +zsh_LIMITS_EQUAL(VMEM, vmem, RSS, rss)
 +zsh_LIMITS_EQUAL(VMEM, vmem, AS, as)
 +zsh_LIMITS_EQUAL(RSS, rss, AS, as)
  
- 
  dnl --------------------------------------------
-@@ -2900,7 +2824,7 @@ char *argv[];
-     sunos*)       DLLDFLAGS="${DLLDFLAGS=-assert nodefinitions}" ;;
-     sysv4*|esix*) DLLDFLAGS="${DLLDFLAGS=-G $ldflags}" ;;
-     aix*)         DLLDFLAGS="${DLLDFLAGS=-G -bexpall -lc}" ;;
--    solaris*|sysv4*|esix*) DLLDFLAGS="${DLLDFLAGS=-G}" ;;
-+    solaris*|sysv4*|esix*) DLLDFLAGS="${DLLDFLAGS=-shared}" ;;
-     darwin*)      DLLDFLAGS="${DLLDFLAGS=-bundle -flat_namespace -undefined suppress}" ;;
-     beos*|haiku*) DLLDFLAGS="${DLLDFLAGS=-nostart}" ;;
-     openbsd*)
+ dnl Check for members of struct rusage

@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.62 2018/04/29 20:41:04 ryoon Exp $
+$NetBSD: distinfo,v 1.62.2.1 2018/09/10 20:18:45 spz Exp $
 
-SHA1 (zsh-5.5.1.tar.xz) = 98ea952bba9b8752635c75f54bcecef072d3036e
-RMD160 (zsh-5.5.1.tar.xz) = 6e0bfecca1b6a29e8f56805997379278fba37578
-SHA512 (zsh-5.5.1.tar.xz) = 37156ff682f8ec337526c8f93a0a2031000bb0b4b2a59e04158aae3f0fb667f4d9898d6f2bae8abe3dd2839f760f2e335484e016564a4a59097273a1f64da0c2
-Size (zsh-5.5.1.tar.xz) = 3052832 bytes
+SHA1 (zsh-5.6.tar.xz) = 61387d0ac7d505668978c2124a312a785a33e4ec
+RMD160 (zsh-5.6.tar.xz) = 18bc8f953adb052b4ebd21942fd4bbd0bdb4e75e
+SHA512 (zsh-5.6.tar.xz) = 791cbeff45a5ef86608341147724f8b301a50eae1500f94eaaef1074c14c516c32d3f5628b8b16dbe42b7ad812c1a221240c1d4c5cd240144a00976c196f0735
+Size (zsh-5.6.tar.xz) = 3080856 bytes
 SHA1 (patch-aczsh.m4) = 36c270d8d7cf727f48787ef889b2bd89cbf065e2
-SHA1 (patch-configure.ac) = 87ae3604e09948cd7b360f08031ef9c3f91f0aae
+SHA1 (patch-configure.ac) = 3f59bed777db389aaae72ad7564b16e99e17fee6
