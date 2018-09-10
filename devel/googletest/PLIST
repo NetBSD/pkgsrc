@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/10/31 16:43:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/09/10 10:23:33 adam Exp $
 include/gmock/gmock-actions.h
 include/gmock/gmock-cardinalities.h
 include/gmock/gmock-generated-actions.h
@@ -14,6 +14,7 @@ include/gmock/gmock-more-actions.h
 include/gmock/gmock-more-matchers.h
 include/gmock/gmock-spec-builders.h
 include/gmock/gmock.h
+include/gmock/internal/custom/README.md
 include/gmock/internal/custom/gmock-generated-actions.h
 include/gmock/internal/custom/gmock-generated-actions.h.pump
 include/gmock/internal/custom/gmock-matchers.h
@@ -33,6 +34,7 @@ include/gtest/gtest-typed-test.h
 include/gtest/gtest.h
 include/gtest/gtest_pred_impl.h
 include/gtest/gtest_prod.h
+include/gtest/internal/custom/README.md
 include/gtest/internal/custom/gtest-port.h
 include/gtest/internal/custom/gtest-printers.h
 include/gtest/internal/custom/gtest.h
@@ -50,7 +52,15 @@ include/gtest/internal/gtest-tuple.h
 include/gtest/internal/gtest-tuple.h.pump
 include/gtest/internal/gtest-type-util.h
 include/gtest/internal/gtest-type-util.h.pump
+lib/cmake/GTest/GTestConfig.cmake
+lib/cmake/GTest/GTestConfigVersion.cmake
+lib/cmake/GTest/GTestTargets-noconfig.cmake
+lib/cmake/GTest/GTestTargets.cmake
 lib/libgmock.a
 lib/libgmock_main.a
 lib/libgtest.a
 lib/libgtest_main.a
+lib/pkgconfig/gmock.pc
+lib/pkgconfig/gmock_main.pc
+lib/pkgconfig/gtest.pc
+lib/pkgconfig/gtest_main.pc
