@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.59 2018/06/06 04:44:51 taca Exp $
+@comment $NetBSD: PLIST,v 1.60 2018/09/10 15:22:27 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -79,6 +79,9 @@ ${GEM_LIBDIR}/doc/release_notes/4.8.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.9.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.0.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.1.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.10.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.11.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.12.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.2.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.3.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.4.0.txt
@@ -181,6 +184,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/_pretty_table.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/arbitrary_servers.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/auto_literal_strings.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/blank.rb
+${GEM_LIBDIR}/lib/sequel/extensions/caller_logging.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/columns_introspection.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/connection_expiration.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/connection_validator.rb
@@ -286,6 +290,7 @@ ${GEM_LIBDIR}/lib/sequel/plugins/defaults_setter.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/delay_add_association.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/dirty.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/eager_each.rb
+${GEM_LIBDIR}/lib/sequel/plugins/eager_graph_eager.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/error_splitter.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/finder.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/force_encoding.rb
@@ -380,6 +385,7 @@ ${GEM_LIBDIR}/spec/extensions/blank_spec.rb
 ${GEM_LIBDIR}/spec/extensions/boolean_readers_spec.rb
 ${GEM_LIBDIR}/spec/extensions/boolean_subsets_spec.rb
 ${GEM_LIBDIR}/spec/extensions/caching_spec.rb
+${GEM_LIBDIR}/spec/extensions/caller_logging_spec.rb
 ${GEM_LIBDIR}/spec/extensions/class_table_inheritance_spec.rb
 ${GEM_LIBDIR}/spec/extensions/column_conflicts_spec.rb
 ${GEM_LIBDIR}/spec/extensions/column_select_spec.rb
@@ -403,6 +409,7 @@ ${GEM_LIBDIR}/spec/extensions/delay_add_association_spec.rb
 ${GEM_LIBDIR}/spec/extensions/dirty_spec.rb
 ${GEM_LIBDIR}/spec/extensions/duplicate_columns_handler_spec.rb
 ${GEM_LIBDIR}/spec/extensions/eager_each_spec.rb
+${GEM_LIBDIR}/spec/extensions/eager_graph_eager_spec.rb
 ${GEM_LIBDIR}/spec/extensions/empty_array_consider_nulls_spec.rb
 ${GEM_LIBDIR}/spec/extensions/error_splitter_spec.rb
 ${GEM_LIBDIR}/spec/extensions/error_sql_spec.rb
