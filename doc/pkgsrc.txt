@@ -5932,22 +5932,29 @@ Your package may conflict with other packages a user might already have
 installed on his system, e.g. if your package installs the same set of files as
 another package in the pkgsrc tree or has the same PKGNAME.
 
-These cases are handled automatically by the packaging tools at package
-installation time and do not need to be handled manually.
+For example, x11/libXaw3d and x11/Xaw-Xpm install the same shared library, thus
+you set in pkgsrc/x11/libXaw3d/Makefile:
 
-In case the conflicts can not be recognized automatically (e.g., packages using
-the same config file location but no other shared files), you can set CONFLICTS
-to a space-separated list of packages (including version string) your package
-conflicts with.
+CONFLICTS=      Xaw-Xpm-[0-9]*
 
-For example, if both foo/bar and foo/baz use the same config file, you would
-set in foo/bar/Makefile:
 
-CONFLICTS=      baz-[0-9]*
+and in pkgsrc/x11/Xaw-Xpm/Makefile:
 
-and in pkgsrc/foo/baz/Makefile:
+CONFLICTS=      libXaw3d-[0-9]*
 
-CONFLICTS=      bar-[0-9]*
+
+pkg_add(1) is able to detect attempts to install packages that conflict with
+existing packages and abort. However, in many situations this is too late in
+the process. Binary package managers will not know about the conflict until
+they attempt to install the package after already downloading it and all its
+dependencies. Users may also waste time building a package and its dependencies
+only to find out at the end that it conflicts with another package they have
+installed.
+
+To avoid these issues CONFLICTS entries should be added in all cases where it
+is known that packages conflict with each other. These CONFLICTS entries are
+exported in pkg_summary(5) files and consumed by binary package managers to
+inform users that packages cannot be installed onto the target system.
 
 19.1.7. Packages that cannot or should not be built
 
