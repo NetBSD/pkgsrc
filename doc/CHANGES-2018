@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3990 2018/09/10 14:32:40 he Exp $
+$NetBSD: CHANGES-2018,v 1.3991 2018/09/10 15:22:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5605,3 +5605,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-cassandra-driver to 3.15.1 [fhajny 2018-09-10]
 	Added devel/xxhash version 0.6.5 [fhajny 2018-09-10]
 	Updated net/unbound to 1.8.0 [he 2018-09-10]
+	Updated databases/ruby-sequel to 5.12.0 [taca 2018-09-10]
