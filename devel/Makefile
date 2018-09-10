@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2729 2018/09/10 22:44:02 minskim Exp $
+# $NetBSD: Makefile,v 1.2730 2018/09/10 23:48:58 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -338,6 +338,7 @@ SUBDIR+=	go-check
 SUBDIR+=	go-cli
 SUBDIR+=	go-cobra
 SUBDIR+=	go-colorable
+SUBDIR+=	go-colortext
 SUBDIR+=	go-consul-api
 SUBDIR+=	go-debounce
 SUBDIR+=	go-ed25519
