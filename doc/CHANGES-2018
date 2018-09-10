@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3985 2018/09/10 09:08:07 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.3986 2018/09/10 10:24:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5599,3 +5599,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated editors/nano to 3.0 [wiedi 2018-09-09]
 	Updated graphics/gimp to 2.10.6nb2 [wiz 2018-09-09]
 	Updated mail/qmail-run to 20180910 [schmonz 2018-09-10]
+	Updated devel/googletest to 1.8.1 [adam 2018-09-10]
+	Updated devel/msgpack to 3.1.1 [adam 2018-09-10]
