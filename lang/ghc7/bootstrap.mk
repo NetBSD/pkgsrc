@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.23 2015/02/17 21:12:13 joerg Exp $
+# $NetBSD: bootstrap.mk,v 1.24 2018/09/10 01:04:41 rillig Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis.
 #
@@ -198,7 +198,7 @@ pre-bootstrap: wrapper
 .if empty(BOOT_GHC_LIBDIR)
 	@if ${BOOT_GHC_LIBDIR_CMD} 2>/dev/null 1>&2; then \
 		${ERROR_MSG} "Running \"${BOOT_GHC_LIBDIR_CMD}\" has failed during wrapper phase."; \
-		${FAIL_MSG}  "Plase run \"${MAKE} clean\" and try again."; \
+		${FAIL_MSG}  "Please run \"${MAKE} clean\" and try again."; \
 	else \
 		${ERROR_MSG} "Failed to run \"${BOOT_GHC_LIBDIR_CMD}\":"; \
 		${BOOT_GHC_LIBDIR_CMD}; \
