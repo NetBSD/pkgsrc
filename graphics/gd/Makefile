@@ -1,11 +1,15 @@
-# $NetBSD: Makefile,v 1.120 2018/08/22 09:45:12 wiz Exp $
+# $NetBSD: Makefile,v 1.121 2018/09/10 13:34:16 kim Exp $
 
 DISTNAME=	libgd-2.2.5
 PKGNAME=	${DISTNAME:S/libgd/gd/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libgd/}
 EXTRACT_SUFX=	.tar.xz
+
+PATCH_SITES=	${MASTER_SITE_GITHUB:=libgd/libgd/commit/}
+PATCHFILES=	4b1e18a00ce7c4b7e6919c3b3109a034393b805a.patch
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	https://libgd.github.io/
@@ -25,7 +29,6 @@ CONFIGURE_ARGS+=	--with-freetype=${BUILDLINK_PREFIX.freetype2}
 CONFIGURE_ARGS+=	--with-jpeg=${BUILDLINK_PREFIX.jpeg}
 CONFIGURE_ARGS+=	--with-liq=${BUILDLINK_PREFIX.libimagequant}
 CONFIGURE_ARGS+=	--with-png=${BUILDLINK_PREFIX.png}
-CONFIGURE_ARGS+=	--with-tiff=${BUILDLINK_PREFIX.tiff}
 CONFIGURE_ARGS+=	--with-webp=${BUILDLINK_PREFIX.libwebp}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 REPLACE_PERL+=		src/bdftogd
@@ -38,7 +41,6 @@ PTHREAD_AUTO_VARS=	yes
 .include "../../graphics/libimagequant/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
