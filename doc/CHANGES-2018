@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3984 2018/09/09 21:52:07 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.3985 2018/09/10 09:08:07 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5598,3 +5598,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added net/bind912 version 9.12.2pl1 [taca 2018-09-09]
 	Updated editors/nano to 3.0 [wiedi 2018-09-09]
 	Updated graphics/gimp to 2.10.6nb2 [wiz 2018-09-09]
+	Updated mail/qmail-run to 20180910 [schmonz 2018-09-10]
