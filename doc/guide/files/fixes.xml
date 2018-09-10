@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.145 2017/09/06 16:49:22 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.146 2018/09/10 12:10:53 leot Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -427,31 +427,36 @@ DEPENDS+=       ImageMagick>=6.0:../../graphics/ImageMagick
     installs the same set of files as another package in the pkgsrc
     tree or has the same <varname>PKGNAME</varname>.</para>
 
-    <para>These cases are handled automatically by the packaging tools
-    at package installation time and do not need to be handled
-    manually.</para>
-   
-    <para>In case the conflicts can not be recognized automatically
-    (e.g., packages using the same config file location but no other
-    shared files), you can set <varname>CONFLICTS</varname> to a
-    space-separated list of packages (including version string) your
-    package conflicts with.</para>
+    <para>For example, <filename role="pkg">x11/libXaw3d</filename>
+    and <filename role="pkg">x11/Xaw-Xpm</filename>
+    install the same shared library, thus you set in
+    <filename>pkgsrc/x11/libXaw3d/Makefile</filename>:</para>
 
-    <para>For example, if both <filename role="pkg">foo/bar</filename>
-    and <filename role="pkg">foo/baz</filename>
-    use the same config file, you would set in
-    <filename>foo/bar/Makefile</filename>:</para>
+    <programlisting>
+CONFLICTS=      Xaw-Xpm-[0-9]*
+    </programlisting>
 
-<programlisting>
-CONFLICTS=      baz-[0-9]*
-</programlisting>
+    <para>and in <filename>pkgsrc/x11/Xaw-Xpm/Makefile</filename>:</para>
 
-    <para>and in <filename>pkgsrc/foo/baz/Makefile</filename>:</para>
+    <programlisting>
+CONFLICTS=      libXaw3d-[0-9]*
+    </programlisting>
 
-<programlisting>
-CONFLICTS=      bar-[0-9]*
-</programlisting>
-
+    <para>&man.pkg.add.1 is able to detect attempts to install packages
+    that conflict with existing packages and abort. However, in many
+    situations this is too late in the process. Binary package managers
+    will not know about the conflict until they attempt to install the
+    package after already downloading it and all its dependencies.
+    Users may also waste time building a package and its dependencies
+    only to find out at the end that it conflicts with another package
+    they have installed.</para>
+ 
+    <para>To avoid these issues <varname>CONFLICTS</varname> entries
+    should be added in all cases where it is known that packages conflict
+    with each other.  These <varname>CONFLICTS</varname> entries are
+    exported in &man.pkg.summary.5 files and consumed by binary package
+    managers to inform users that packages cannot be installed onto
+    the target system.</para>
   </sect2>
 
 
