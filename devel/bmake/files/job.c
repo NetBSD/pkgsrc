@@ -1,4 +1,4 @@
-/*	$NetBSD: job.c,v 1.16 2015/05/19 22:01:19 joerg Exp $	*/
+/*	$NetBSD: job.c,v 1.17 2018/09/10 10:16:58 schmonz Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -70,14 +70,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: job.c,v 1.16 2015/05/19 22:01:19 joerg Exp $";
+static char rcsid[] = "$NetBSD: job.c,v 1.17 2018/09/10 10:16:58 schmonz Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)job.c	8.2 (Berkeley) 3/19/94";
 #else
-__RCSID("$NetBSD: job.c,v 1.16 2015/05/19 22:01:19 joerg Exp $");
+__RCSID("$NetBSD: job.c,v 1.17 2018/09/10 10:16:58 schmonz Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -374,7 +374,9 @@ static void JobSigLock(sigset_t *);
 static void JobSigUnlock(sigset_t *);
 static void JobSigReset(void);
 
+#if defined(__NetBSD__)
 const char *malloc_options="A";
+#endif
 
 static void
 job_table_dump(const char *where)
