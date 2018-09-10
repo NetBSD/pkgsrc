@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2018/08/01 07:15:21 schmonz Exp $
+# $NetBSD: Makefile,v 1.48 2018/09/10 09:07:49 schmonz Exp $
 #
 
-DISTNAME=		qmail-run-20180801
+DISTNAME=		qmail-run-20180910
 CATEGORIES=		mail
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -49,18 +49,11 @@ MAKEVARS+=	PKG_SYSCONFDIR.qmail-run
 .endif
 
 SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	mailer.conf qmail-procmail
-SUBST_FILES.paths+=	qmail-qread-client spamdyke-ofmipd.conf
-SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
-SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
-SUBST_SED.paths+=	-e 's,@ECHO@,${ECHO},g'
-SUBST_SED.paths+=	-e 's,@SORT@,${SORT},g'
-SUBST_SED.paths+=	-e 's,@CAT@,${CAT},g'
-SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
-SUBST_SED.paths+=	-e 's,@SED@,${SED},g'
-SUBST_SED.paths+=	-e 's,@PKGNAME@,${PKGNAME},g'
-SUBST_SED.paths+=	-e 's,@TRUE@,${TRUE},g'
 SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	mailer.conf qmail-isspam-* qmail-procmail
+SUBST_FILES.paths+=	qmail-qread-client spamdyke-ofmipd.conf
+SUBST_VARS.paths=	PKGNAME PKG_SYSCONFDIR PREFIX
+SUBST_VARS.paths+=	CAT ECHO GREP SED SH SORT TRUE
 
 .include "options.mk"
 
@@ -68,12 +61,14 @@ post-extract:
 	for f in README.pkgsrc mailer.conf spamdyke-ofmipd.conf stunnel.conf; do \
 	    ${CP} ${FILESDIR}/$$f ${WRKDIR}/$$f;			\
 	done
-	for f in qmail-procmail qmail-qread-client; do \
+	for f in qmail-isspam-rspamd qmail-isspam-spamassassin \
+		qmail-procmail qmail-qread-client; do \
 	    ${CP} ${FILESDIR}/$$f.sh ${WRKDIR}/$$f;			\
 	done
 
 do-install:
-	for f in qmail-procmail qmail-qread-client; do \
+	for f in qmail-isspam-rspamd qmail-isspam-spamassassin \
+		qmail-procmail qmail-qread-client; do \
 	    ${INSTALL_SCRIPT} ${WRKDIR}/$$f ${DESTDIR}${PREFIX}/bin;	\
 	done
 	${INSTALL_DATA} ${WRKDIR}/README.pkgsrc \
