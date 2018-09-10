@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2018/02/19 12:10:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.68 2018/09/10 20:55:20 fhajny Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -30,6 +30,7 @@ SUBDIR+=	libchamplain06
 SUBDIR+=	libchamplain08
 SUBDIR+=	libdrg
 SUBDIR+=	libgeotiff
+SUBDIR+=	libmaxminddb
 SUBDIR+=	libmemphis02
 SUBDIR+=	libnova
 SUBDIR+=	libspatialite
