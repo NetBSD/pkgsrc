@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4009 2018/09/11 19:58:30 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.4010 2018/09/11 20:04:12 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5625,3 +5625,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/go-protobuf to 1.2.0 [minskim 2018-09-11]
 	Updated misc/go-genproto to 20180901 [minskim 2018-09-11]
 	Added misc/go-genproto-googleapis-rpc version 20180901 [minskim 2018-09-11]
+	Updated net/go-grpc to 1.15.0 [minskim 2018-09-11]
