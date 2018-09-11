@@ -1,25 +1,26 @@
-# $NetBSD: Makefile,v 1.10 2018/06/12 17:50:25 bsiegert Exp $
+# $NetBSD: Makefile,v 1.11 2018/09/11 18:27:08 minskim Exp $
 
-DISTNAME=		go-protobuf-20160829
-PKGREVISION=		7
+DISTNAME=		go-protobuf-1.2.0
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=golang/}
 GITHUB_PROJECT=		protobuf
-GITHUB_TAG=		1f49d83
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 HOMEPAGE=		http://godoc.org/${GO_SRCPATH}
 COMMENT=		Go support for Google protocol buffers
 LICENSE=		modified-bsd
 
+GO_DIST_BASE=		${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 GO_SRCPATH=		github.com/golang/protobuf
-GO_DIST_BASE=		${GITHUB_PROJECT}-${GITHUB_TAG}*
 
-REPLACE_SH+=		ptypes/regen.sh
+.for godir in descriptor jsonpb proto protoc-gen-go ptypes
+GO_BUILD_PATTERN+=	${GO_SRCPATH}/${godir}/...
+.endfor
+
+REPLACE_SH+=		conformance/conformance.sh conformance/test.sh \
+			regenerate.sh
 
 CHECK_RELRO_SKIP+=	bin/protoc-gen-go
-
-pre-install:
-	${RM} -f ${WRKSRC}/pkg/${GO_PLATFORM}/github.com/golang/protobuf/proto/testdata.a
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
