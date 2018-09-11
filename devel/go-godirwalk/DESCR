@@ -1,0 +1,3 @@
+godirwalk is a library for traversing a directory tree on a file
+system. It is faster, easier to use, and more flexible than
+filepath.Walk.
