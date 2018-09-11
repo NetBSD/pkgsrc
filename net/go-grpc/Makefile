@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2018/06/12 17:50:26 bsiegert Exp $
+# $NetBSD: Makefile,v 1.10 2018/09/11 20:03:27 minskim Exp $
 
-DISTNAME=		go-grpc-1.0.1
-PKGREVISION=		8
+DISTNAME=		go-grpc-1.15.0
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=grpc/}
 GITHUB_PROJECT=		grpc-go
-GITHUB_TAG=		v1.0.1-GA
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 HOMEPAGE=		http://${GO_SRCPATH}
 COMMENT=		Go language implementation of gRPC, HTTP/2 based RPC
@@ -13,30 +12,25 @@ LICENSE=		modified-bsd
 
 GO_SRCPATH=		google.golang.org/grpc
 GO_DIST_BASE=		${GITHUB_PROJECT}-${GITHUB_TAG:S/v//}
+
 GO_BUILD_PATTERN=	${GO_SRCPATH}
-GO_BUILD_PATTERN+=	${GO_SRCPATH}/codes/...
-GO_BUILD_PATTERN+=	${GO_SRCPATH}/credentials/...
-GO_BUILD_PATTERN+=	${GO_SRCPATH}/grpclog/...
-GO_BUILD_PATTERN+=	${GO_SRCPATH}/health/...
-GO_BUILD_PATTERN+=	${GO_SRCPATH}/metadata/...
-GO_BUILD_PATTERN+=	${GO_SRCPATH}/naming/...
-GO_BUILD_PATTERN+=	${GO_SRCPATH}/peer/...
-GO_BUILD_PATTERN+=	${GO_SRCPATH}/reflection/...
-GO_BUILD_PATTERN+=	${GO_SRCPATH}/transport/...
+.for godir in channelz codes connectivity credentials encoding \
+	go_vet grpclog health internal interop keepalive metadata \
+	naming peer reflection resolver stats status stress tap
+GO_BUILD_PATTERN+=	${GO_SRCPATH}/${godir}/...
+.endfor
 
-REPLACE_SH+=		codegen.sh
-REPLACE_SH+=		coverage.sh
-
-#pre-patch:
-#	${RM} -rf ${WRKSRC}/test
-
-# due to patch
-post-install:
-	${RM} -f ${DESTDIR}${PREFIX}/gopkg/src/google.golang.org/grpc/coverage.sh.orig
-	${RM} -f ${DESTDIR}${PREFIX}/gopkg/pkg/${GO_PLATFORM}/google.golang.org/grpc/internal.a
+REPLACE_SH+=	balancer/grpclb/regenerate.sh
+REPLACE_SH+=	channelz/service/regenerate.sh
+REPLACE_SH+=	codegen.sh
+REPLACE_SH+=	balancer/grpclb/regenerate.sh
+REPLACE_SH+=	health/regenereate.sh
+REPLACE_SH+=	install_gae.sh
+REPLACE_SH+=	vet.sh
 
 .include "../../devel/go-glog/buildlink3.mk"
 .include "../../devel/go-protobuf/buildlink3.mk"
+.include "../../misc/go-genproto-googleapis-rpc/buildlink3.mk"
 .include "../../net/go-net/buildlink3.mk"
 .include "../../security/go-oauth2/buildlink3.mk"
 .include "../../lang/go/go-package.mk"
