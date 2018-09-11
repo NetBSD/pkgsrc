@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3997 2018/09/11 00:30:52 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.3998 2018/09/11 07:16:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5612,3 +5612,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/go-colortext version 1.0.0 [minskim 2018-09-10]
 	Added devel/go-godotenv version 1.2.0 [minskim 2018-09-10]
 	Added sysutils/goreman version 0.1.1 [minskim 2018-09-11]
+	Updated textproc/py-lxml to 4.2.5 [adam 2018-09-11]
+	Updated devel/py-dulwich to 0.19.6 [adam 2018-09-11]
