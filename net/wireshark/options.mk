@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.20 2018/09/02 21:49:05 wiz Exp $
+# $NetBSD: options.mk,v 1.21 2018/09/11 11:43:33 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.wireshark
 PKG_SUPPORTED_OPTIONS=		gtk3 lua
@@ -49,28 +49,25 @@ install-gtk-desktop:
 CONFIGURE_ARGS+=	--without-gtk
 .endif
 
-# We might install the qt front end one day as well,
-# so have a generic icon target
 .if empty(PKG_OPTIONS:Mgtk3) && empty(PKG_OPTIONS:Mqt4) && empty(PKG_OPTIONS:Mqt5)
 CONFIGURE_ARGS+=	--disable-wireshark
 .else
 CONFIGURE_ARGS+=	--enable-wireshark
 PLIST.mans=		yes
 INSTALLATION_DIRS+=	share/applications
-.  if ${OPSYS} != "Darwin"
 PLIST.icons=		yes
 POST_INSTALL_TARGETS+=	install-icons
 INSTALLATION_DIRS+=	share/icons/hicolor/scalable/apps
 ICON_SIZES=		16 32 48
 MIMEICON_SIZES=		16 24 32 48 64 128 256
 
-.    for d in ${ICON_SIZES}
+.  for d in ${ICON_SIZES}
 INSTALLATION_DIRS+=	share/icons/hicolor/${d}x${d}/apps
-.    endfor
+.  endfor
 
-.    for d in ${MIMEICON_SIZES}
+.  for d in ${MIMEICON_SIZES}
 INSTALLATION_DIRS+=	share/icons/hicolor/${d}x${d}/mimetypes
-.    endfor
+.  endfor
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
@@ -79,11 +76,10 @@ INSTALLATION_DIRS+=	share/icons/hicolor/${d}x${d}/mimetypes
 install-icons:
 	${INSTALL_DATA} ${WRKSRC}/image/wsicon.svg \
 		${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/wireshark.svg
-.    for d in ${MIMEICON_SIZES}
+.  for d in ${MIMEICON_SIZES}
 	${INSTALL_DATA} ${WRKSRC}/image/WiresharkDoc-${d}.png \
 		${DESTDIR}${PREFIX}/share/icons/hicolor/${d}x${d}/mimetypes/application-vnd.tcpdump.pcap.png
-.    endfor
-.  endif
+.  endfor
 .endif
 
 .if !empty(PKG_OPTIONS:Mlua)
