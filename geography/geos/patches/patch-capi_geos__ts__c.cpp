@@ -1,4 +1,9 @@
-$NetBSD: patch-capi_geos__ts__c.cpp,v 1.1 2015/09/08 18:48:04 joerg Exp $
+$NetBSD: patch-capi_geos__ts__c.cpp,v 1.2 2018/09/11 16:13:29 gdt Exp $
+
+\todo Document this patch.   It appears to be that passing non-POD types
+to variadic functions is UB.
+
+\todo File a bug upstream, if appropriate.
 
 --- capi/geos_ts_c.cpp.orig	2015-09-08 16:31:02.000000000 +0000
 +++ capi/geos_ts_c.cpp

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2017/09/28 00:24:41 gdt Exp $
+# $NetBSD: Makefile,v 1.31 2018/09/11 16:13:29 gdt Exp $
 
-DISTNAME=	geos-3.6.2
+DISTNAME=	geos-3.7.0
 CATEGORIES=	geography
 MASTER_SITES=	http://download.osgeo.org/geos/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,25 +11,26 @@ EXTRACT_SUFX=	.tar.bz2
 
 # According to the geos project (as documented in README), the C++
 # interface should not be directly used and other packages should not
-# link against it.  Therefore, pkgsrc will perform a recursive revbump
-# when the geos_c shlib version changes, and will generally ignore
-# geos shlib name changes.  However, people on the geos list dispute
-# this characterization.
-
-# The following packages either incorrectly (from the geos README
-# viewpoint) or suboptimally (from some comments on the list) link
-# directly against -lgeos and should be revbumped on every update (and
-# perhaps fixed not to use -lgeos):
+# link against it.  Therefore, in theory pkgsrc would perform a
+# recursive revbump when the libgeos_c.so version changes, and would
+# generally ignore libgeos.so shlib name changes.
+#
+# However, libtool explicitly adds dependency_libs, so packages that
+# intend to only depend on the C library end up being linked directly
+# to the C++ library also.  Thus, they need revbumping because of
+# libtools {bug or feature}.
+#
+# Packages that need revbumping because of libtool's baehvior:
 #   geography/gdal-lib
-#   geoggraph/osm2pgsql
-#     https://github.com/openstreetmap/osm2pgsql/issues/634
+# Packages that need revbumping because of direct use of the C++ lib:
+#   (none known)
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://trac.osgeo.org/geos
 COMMENT=	C++ port of the Java Topology Suite (JTS)
 LICENSE=	gnu-lgpl-v2.1
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
