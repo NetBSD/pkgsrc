@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4000 2018/09/11 09:44:04 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.4001 2018/09/11 09:57:58 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -4039,7 +4039,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Added textproc/aspic version 1.05 [prlw1 2018-06-15]
 	Updated security/mit-krb5 to 1.16.1 [tez 2018-06-15]
 	Updated security/gnupg to 1.4.23 [tez 2018-06-15]
-	Updated www/lynx to lynx-2.8.8.2nb9 [tez 2018-06-15]
+	Updated www/lynx to 2.8.8.2nb9 [tez 2018-06-15]
 	Added fonts/tex-mathalfa version 1.09 [markd 2018-06-16]
 	Added fonts/tex-mathalfa-doc version 1.09 [markd 2018-06-16]
 	Updated multimedia/ffmpeg4 to 4.0.1 [adam 2018-06-16]
