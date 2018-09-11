@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2732 2018/09/11 15:55:28 minskim Exp $
+# $NetBSD: Makefile,v 1.2733 2018/09/11 17:45:10 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -367,6 +367,7 @@ SUBDIR+=	go-immutable-radix
 SUBDIR+=	go-ini
 SUBDIR+=	go-isatty
 SUBDIR+=	go-jwalterweatherman
+SUBDIR+=	go-logrus
 SUBDIR+=	go-mapstructure
 SUBDIR+=	go-mow-cli
 SUBDIR+=	go-nbreader
