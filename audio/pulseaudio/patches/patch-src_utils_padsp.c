@@ -1,4 +1,4 @@
-$NetBSD: patch-src_utils_padsp.c,v 1.1 2018/07/25 12:15:59 adam Exp $
+$NetBSD: patch-src_utils_padsp.c,v 1.2 2018/09/11 16:39:42 jperkin Exp $
 
 ioctl() takes u_long argument on NetBSD.
 On NetBSD<6 and 6.99.0-6.99.7, use third parameter in ioctl instead of varargs.
@@ -6,7 +6,7 @@ stat() system call has been versioned, use latest version when dlopen()ing.
 Try more typical device names.
 SOUND_PCM_* is not available on SunOS.
 
---- src/utils/padsp.c.orig	2018-05-11 11:43:31.000000000 +0000
+--- src/utils/padsp.c.orig	2018-07-13 19:06:13.000000000 +0000
 +++ src/utils/padsp.c
 @@ -48,6 +48,10 @@
  #include <linux/sockios.h>
@@ -140,3 +140,12 @@ SOUND_PCM_* is not available on SunOS.
  
      if (!function_enter()) {
          LOAD_IOCTL_FUNC();
+@@ -2536,7 +2576,7 @@ int stat(const char *pathname, struct st
+ }
+ #ifdef HAVE_OPEN64
+ #undef stat64
+-#ifdef __GLIBC__
++#if defined(__GLIBC__) || defined(__sun)
+ int stat64(const char *pathname, struct stat64 *buf) {
+ #else
+ int stat64(const char *pathname, struct stat *buf) {
