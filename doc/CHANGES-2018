@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4007 2018/09/11 18:27:25 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.4008 2018/09/11 19:58:12 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5623,3 +5623,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated geography/geos to 3.7.0 [gdt 2018-09-11]
 	Added devel/go-logrus version 1.0.6 [minskim 2018-09-11]
 	Updated devel/go-protobuf to 1.2.0 [minskim 2018-09-11]
+	Updated misc/go-genproto to 20180901 [minskim 2018-09-11]
