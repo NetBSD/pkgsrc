@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.775 2018/09/01 11:19:25 tnn Exp $
+# $NetBSD: Makefile,v 1.776 2018/09/11 00:30:46 minskim Exp $
 #
 
 COMMENT=	System utilities
@@ -211,6 +211,7 @@ SUBDIR+=	gnome-vfsmm
 SUBDIR+=	gnome-volume-manager
 SUBDIR+=	gnometoaster
 SUBDIR+=	gnuit
+SUBDIR+=	goreman
 SUBDIR+=	gpart
 SUBDIR+=	grub
 SUBDIR+=	grub2
