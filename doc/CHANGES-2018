@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4005 2018/09/11 16:13:37 gdt Exp $
+$NetBSD: CHANGES-2018,v 1.4006 2018/09/11 17:45:17 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5621,3 +5621,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/adobe-flash-player to 31.0.0.108 [tsutsui 2018-09-11]
 	Added devel/go-godirwalk version 1.7.3 [minskim 2018-09-11]
 	Updated geography/geos to 3.7.0 [gdt 2018-09-11]
+	Added devel/go-logrus version 1.0.6 [minskim 2018-09-11]
