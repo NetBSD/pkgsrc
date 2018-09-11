@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.111 2018/08/22 09:46:29 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2018/09/11 09:43:41 schmonz Exp $
 
-DISTNAME=		stunnel-5.48
-PKGREVISION=		1
+DISTNAME=		stunnel-5.49
 CATEGORIES=		security
 MASTER_SITES=		http://www.stunnel.org/downloads/
 
@@ -46,6 +45,8 @@ SUBST_MESSAGE.stunnel=	Fix user and group
 SUBST_STAGE.stunnel=	pre-configure
 SUBST_FILES.stunnel=	tools/stunnel.conf-sample.in
 SUBST_VARS.stunnel=	STUNNEL_USER STUNNEL_GROUP
+
+TEST_TARGET=		check
 
 .include "options.mk"
 
