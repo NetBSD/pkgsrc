@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.3996 2018/09/10 23:54:41 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.3997 2018/09/11 00:30:52 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5611,3 +5611,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/go-appengine version 1.1.0 [minskim 2018-09-10]
 	Added devel/go-colortext version 1.0.0 [minskim 2018-09-10]
 	Added devel/go-godotenv version 1.2.0 [minskim 2018-09-10]
+	Added sysutils/goreman version 0.1.1 [minskim 2018-09-11]
