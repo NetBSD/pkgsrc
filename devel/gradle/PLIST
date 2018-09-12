@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2018/09/04 13:57:30 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.13 2018/09/12 21:35:26 fhajny Exp $
 bin/gradle
 lib/java/gradle/lib/annotations-13.0.jar
 lib/java/gradle/lib/ant-1.9.11.jar
@@ -23,10 +23,10 @@ lib/java/gradle/lib/gradle-core-api-${PKGVERSION}.jar
 lib/java/gradle/lib/gradle-docs-${PKGVERSION}.jar
 lib/java/gradle/lib/gradle-installation-beacon-${PKGVERSION}.jar
 lib/java/gradle/lib/gradle-jvm-services-${PKGVERSION}.jar
-lib/java/gradle/lib/gradle-kotlin-dsl-1.0-rc-3.jar
-lib/java/gradle/lib/gradle-kotlin-dsl-provider-plugins-1.0-rc-3.jar
-lib/java/gradle/lib/gradle-kotlin-dsl-tooling-builders-1.0-rc-3.jar
-lib/java/gradle/lib/gradle-kotlin-dsl-tooling-models-1.0-rc-3.jar
+lib/java/gradle/lib/gradle-kotlin-dsl-1.0-rc-6.jar
+lib/java/gradle/lib/gradle-kotlin-dsl-provider-plugins-1.0-rc-6.jar
+lib/java/gradle/lib/gradle-kotlin-dsl-tooling-builders-1.0-rc-6.jar
+lib/java/gradle/lib/gradle-kotlin-dsl-tooling-models-1.0-rc-6.jar
 lib/java/gradle/lib/gradle-launcher-${PKGVERSION}.jar
 lib/java/gradle/lib/gradle-logging-${PKGVERSION}.jar
 lib/java/gradle/lib/gradle-messaging-${PKGVERSION}.jar
@@ -47,14 +47,14 @@ lib/java/gradle/lib/jcip-annotations-1.0.jar
 lib/java/gradle/lib/jcl-over-slf4j-1.7.16.jar
 lib/java/gradle/lib/jsr305-2.0.1.jar
 lib/java/gradle/lib/jul-to-slf4j-1.7.16.jar
-lib/java/gradle/lib/kotlin-compiler-embeddable-1.2.60.jar
-lib/java/gradle/lib/kotlin-reflect-1.2.60.jar
-lib/java/gradle/lib/kotlin-sam-with-receiver-compiler-plugin-1.2.60.jar
-lib/java/gradle/lib/kotlin-script-runtime-1.2.60.jar
-lib/java/gradle/lib/kotlin-stdlib-1.2.60.jar
-lib/java/gradle/lib/kotlin-stdlib-common-1.2.60.jar
-lib/java/gradle/lib/kotlin-stdlib-jdk7-1.2.60.jar
-lib/java/gradle/lib/kotlin-stdlib-jdk8-1.2.60.jar
+lib/java/gradle/lib/kotlin-compiler-embeddable-1.2.61.jar
+lib/java/gradle/lib/kotlin-reflect-1.2.61.jar
+lib/java/gradle/lib/kotlin-sam-with-receiver-compiler-plugin-1.2.61.jar
+lib/java/gradle/lib/kotlin-script-runtime-1.2.61.jar
+lib/java/gradle/lib/kotlin-stdlib-1.2.61.jar
+lib/java/gradle/lib/kotlin-stdlib-common-1.2.61.jar
+lib/java/gradle/lib/kotlin-stdlib-jdk7-1.2.61.jar
+lib/java/gradle/lib/kotlin-stdlib-jdk8-1.2.61.jar
 lib/java/gradle/lib/kryo-2.20.jar
 lib/java/gradle/lib/log4j-over-slf4j-1.7.16.jar
 lib/java/gradle/lib/minlog-1.2.jar
