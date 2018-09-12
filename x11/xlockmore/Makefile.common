@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.78 2018/03/07 11:57:47 wiz Exp $
+# $NetBSD: Makefile.common,v 1.78.4.1 2018/09/12 17:42:09 bsiegert Exp $
 #
 # used by x11/xlockmore/Makefile
 # used by x11/xlockmore-lite/Makefile
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sillycycle.com/xlockmore.html
-
-CONFLICTS+=	xlockmore-[0-9]* xlockmore-lite-[0-9]*
 
 DISTINFO_FILE?=		${.CURDIR}/../xlockmore/distinfo
 PATCHDIR?=		${.CURDIR}/../xlockmore/patches
