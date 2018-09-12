@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.82 2018/09/10 15:41:33 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2018/09/12 15:03:20 gdt Exp $
 
 VERSION=	5.2.14
 DISTNAME=	gutenprint-${VERSION}
 PKGNAME=	gutenprint-lib-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gimp-print/}
 EXTRACT_SUFX=	.tar.bz2
@@ -97,8 +97,6 @@ TEST_TARGET=		check
 # gutenprint-gimp: gimp plugin
 .include "../../graphics/gimp/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-# gutenprint does not actually depend on gexiv2; it is wrongly inserted by libtool
-.include "../../graphics/gexiv2/buildlink3.mk"
 
 # gutenprint-cups: cups support
 .include "../../print/cups-base/buildlink3.mk"
