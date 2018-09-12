@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4012 2018/09/12 12:44:26 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.4013 2018/09/12 20:01:31 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5629,3 +5629,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-jsbeautifier to 1.8.6 [adam 2018-09-12]
 	Updated sysutils/py-watchdog to 0.9.0 [adam 2018-09-12]
 	Updated security/openssl to 1.0.2p [fhajny 2018-09-12]
+	Updated lang/erlang to 21.0.9 [schmonz 2018-09-12]
