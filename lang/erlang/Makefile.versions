@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.versions,v 1.32 2018/07/03 11:01:21 fhajny Exp $
+# $NetBSD: Makefile.versions,v 1.33 2018/09/12 20:01:12 schmonz Exp $
 
 DIST_VERSION_MAJOR=		21
 DIST_VERSION_MINOR=		0
 # Only set when sources for patch level releases are published on erlang.org
-DIST_VERSION_PATCH=		#
+DIST_VERSION_PATCH=		9
 
 .include "versions.mk"
 
