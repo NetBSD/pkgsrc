@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.87 2018/08/22 09:45:19 wiz Exp $
+# $NetBSD: Makefile,v 1.88 2018/09/12 20:01:12 schmonz Exp $
 
-DISTNAME=		otp_src_${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}${!empty(DIST_VERSION_PATCH):?.:}${DIST_VERSION_PATCH}
-PKGNAME=		${DISTNAME:S/otp_src_/erlang-/}
-PKGREVISION=		1
+DISTNAME=		OTP-${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}${!empty(DIST_VERSION_PATCH):?.:}${DIST_VERSION_PATCH}
+PKGNAME=		${DISTNAME:S/OTP-/erlang-/}
 CATEGORIES=		lang
-MASTER_SITES=		http://www.erlang.org/download/
+MASTER_SITES=		https://github.com/erlang/otp/archive/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.erlang.org/
@@ -13,10 +12,12 @@ LICENSE=		apache-2.0
 
 DIST_SUBDIR=		erlang
 
+WRKSRC=			${WRKDIR}/otp-${DISTNAME}
+
 GNU_CONFIGURE=		yes
 USE_GNU_CONFIGURE_HOST=	${USE_CROSS_COMPILE}
 OVERRIDE_DIRDEPTH=	4
-USE_TOOLS+=		awk gmake perl:run flex
+USE_TOOLS+=		autoconf awk gmake perl:run flex
 
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 
@@ -42,6 +43,8 @@ CONFIGURE_ARGS+=	--disable-native-ethr-impls\
 .endif
 
 MAKE_ENV+=		DESTDIR=${DESTDIR}
+
+do-configure-post-hook: replace-interpreter
 
 REPLACE_INTERPRETER+=	escript
 REPLACE.escript.old=	.*escript
@@ -80,6 +83,9 @@ CHECK_RELRO_SKIP+=	lib/erlang/lib/megaco-${VERSION.megaco}/priv/lib/megaco_flex_
 CHECK_RELRO_SKIP+=	lib/erlang/lib/megaco-${VERSION.megaco}/priv/lib/megaco_flex_scanner_drv_mt.so
 
 .include "options.mk"
+
+pre-configure:
+	cd ${WRKSRC} && ./otp_build autoconf
 
 ###
 ### Ensure this gets rebuilt.
