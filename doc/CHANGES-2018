@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4010 2018/09/11 20:04:12 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.4011 2018/09/12 10:44:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5626,3 +5626,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/go-genproto to 20180901 [minskim 2018-09-11]
 	Added misc/go-genproto-googleapis-rpc version 20180901 [minskim 2018-09-11]
 	Updated net/go-grpc to 1.15.0 [minskim 2018-09-11]
+	Updated textproc/py-jsbeautifier to 1.8.6 [adam 2018-09-12]
+	Updated sysutils/py-watchdog to 0.9.0 [adam 2018-09-12]
