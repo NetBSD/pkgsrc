@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q2,v 1.1.2.14 2018/09/11 06:17:09 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q2,v 1.1.2.15 2018/09/12 05:16:43 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q2 branch:
 
@@ -129,4 +129,7 @@ www/curl: security update
 
 Pullup ticket #5826 - requested by taca
 shells/zsh: security update
+
+Pullup ticket #5822 - requested by bsiegert
+security/sleuthkit: security fix
 
