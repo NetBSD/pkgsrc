@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q2,v 1.1.2.15 2018/09/12 05:16:43 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q2,v 1.1.2.16 2018/09/12 17:50:44 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q2 branch:
 
@@ -132,4 +132,10 @@ shells/zsh: security update
 
 Pullup ticket #5822 - requested by bsiegert
 security/sleuthkit: security fix
+
+Pullup ticket #5827 - requested by maya
+x11/xlockmore, x11/xlockmore-lite: build fix
+
+Pullup ticket #5828 - requested by leot
+net/youtube-dl: bugfix
 
