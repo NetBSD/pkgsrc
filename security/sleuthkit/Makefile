@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2016/07/09 06:38:57 wiz Exp $
+# $NetBSD: Makefile,v 1.8.18.1 2018/09/12 05:06:56 spz Exp $
 
 DISTNAME=	sleuthkit-4.1.3
-PKGREVISION=	4
+PKGREVISION=	6
 CATEGORIES=	security sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sleuthkit/}
 
