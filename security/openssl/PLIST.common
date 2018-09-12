@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.32 2017/12/14 09:18:47 jperkin Exp $
+@comment $NetBSD: PLIST.common,v 1.33 2018/09/12 12:44:17 fhajny Exp $
 bin/c_rehash
 bin/openssl
 include/openssl/aes.h
@@ -1429,6 +1429,7 @@ man/man3/SSL_get_secure_renegotiation_support.3
 man/man3/SSL_get_servername.3
 man/man3/SSL_get_servername_type.3
 man/man3/SSL_get_session.3
+man/man3/SSL_get_shared_ciphers.3
 man/man3/SSL_get_shared_curve.3
 man/man3/SSL_get_shutdown.3
 man/man3/SSL_get_ssl_method.3
