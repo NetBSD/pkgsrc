@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2018/09/13 14:56:43 fhajny Exp $
+bin/rebar3
+man/man1/rebar3.1
+share/examples/rebar3/rebar.config.sample
