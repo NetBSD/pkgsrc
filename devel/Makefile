@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2733 2018/09/11 17:45:10 minskim Exp $
+# $NetBSD: Makefile,v 1.2734 2018/09/13 14:56:43 fhajny Exp $
 #
 
 COMMENT=	Development utilities
@@ -2357,6 +2357,7 @@ SUBDIR+=	re2
 SUBDIR+=	re2c
 SUBDIR+=	readline
 SUBDIR+=	rebar
+SUBDIR+=	rebar3
 SUBDIR+=	refinecvs
 SUBDIR+=	reposurgeon
 SUBDIR+=	rgbds
