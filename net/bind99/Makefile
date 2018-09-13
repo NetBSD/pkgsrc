@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2018/08/22 09:45:51 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2018/09/13 02:57:43 jklos Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
@@ -35,7 +35,9 @@ CONFIGURE_ARGS+=	--disable-openssl-version-check
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
 CONFIGURE_ARGS+=	--with-gssapi=${KRB5BASE:Q}
 CONFIGURE_ARGS+=	--with-python=no
-.if ${MACHINE_PLATFORM:MNetBSD-*-mipsel} != ""
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-m68k) || \
+    !empty(MACHINE_PLATFORM:MNetBSD-*-mipsel) || \
+    !empty(MACHINE_PLATFORM:MNetBSD-*-vax)
 CONFIGURE_ARGS+=        --disable-atomic
 .endif
 .if ${MACHINE_PLATFORM:MNetBSD-*-powerpc} != ""
