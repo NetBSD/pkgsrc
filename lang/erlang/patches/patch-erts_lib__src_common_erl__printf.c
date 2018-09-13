@@ -1,4 +1,4 @@
-$NetBSD: patch-erts_lib__src_common_erl__printf.c,v 1.2 2018/07/26 16:01:45 jperkin Exp $
+$NetBSD: patch-erts_lib__src_common_erl__printf.c,v 1.3 2018/09/13 09:17:40 fhajny Exp $
 
 Set _XOPEN_SOURCE correctly on SunOS.
 
@@ -9,7 +9,7 @@ Set _XOPEN_SOURCE correctly on SunOS.
  #endif
  
 +#ifdef __sun
-+#if __STDC_VERSION__-0 < 199901L
++#if !defined(__STDC_VERSION__) || __STDC_VERSION__-0 < 199901L
 +#define _XOPEN_SOURCE 500
 +#else
 +#define _XOPEN_SOURCE 600
