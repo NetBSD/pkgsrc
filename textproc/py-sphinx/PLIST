@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2018/04/25 08:08:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2018/09/13 07:36:52 adam Exp $
 bin/sphinx-apidoc${PYVERSSUFFIX}
 bin/sphinx-autogen${PYVERSSUFFIX}
 bin/sphinx-build${PYVERSSUFFIX}
@@ -58,6 +58,9 @@ ${PYSITELIB}/sphinx/builders/htmlhelp.pyo
 ${PYSITELIB}/sphinx/builders/latex/__init__.py
 ${PYSITELIB}/sphinx/builders/latex/__init__.pyc
 ${PYSITELIB}/sphinx/builders/latex/__init__.pyo
+${PYSITELIB}/sphinx/builders/latex/nodes.py
+${PYSITELIB}/sphinx/builders/latex/nodes.pyc
+${PYSITELIB}/sphinx/builders/latex/nodes.pyo
 ${PYSITELIB}/sphinx/builders/latex/transforms.py
 ${PYSITELIB}/sphinx/builders/latex/transforms.pyc
 ${PYSITELIB}/sphinx/builders/latex/transforms.pyo
@@ -88,6 +91,9 @@ ${PYSITELIB}/sphinx/cmd/__init__.pyo
 ${PYSITELIB}/sphinx/cmd/build.py
 ${PYSITELIB}/sphinx/cmd/build.pyc
 ${PYSITELIB}/sphinx/cmd/build.pyo
+${PYSITELIB}/sphinx/cmd/make_mode.py
+${PYSITELIB}/sphinx/cmd/make_mode.pyc
+${PYSITELIB}/sphinx/cmd/make_mode.pyo
 ${PYSITELIB}/sphinx/cmd/quickstart.py
 ${PYSITELIB}/sphinx/cmd/quickstart.pyc
 ${PYSITELIB}/sphinx/cmd/quickstart.pyo
@@ -118,12 +124,18 @@ ${PYSITELIB}/sphinx/domains/__init__.pyo
 ${PYSITELIB}/sphinx/domains/c.py
 ${PYSITELIB}/sphinx/domains/c.pyc
 ${PYSITELIB}/sphinx/domains/c.pyo
+${PYSITELIB}/sphinx/domains/changeset.py
+${PYSITELIB}/sphinx/domains/changeset.pyc
+${PYSITELIB}/sphinx/domains/changeset.pyo
 ${PYSITELIB}/sphinx/domains/cpp.py
 ${PYSITELIB}/sphinx/domains/cpp.pyc
 ${PYSITELIB}/sphinx/domains/cpp.pyo
 ${PYSITELIB}/sphinx/domains/javascript.py
 ${PYSITELIB}/sphinx/domains/javascript.pyc
 ${PYSITELIB}/sphinx/domains/javascript.pyo
+${PYSITELIB}/sphinx/domains/math.py
+${PYSITELIB}/sphinx/domains/math.pyc
+${PYSITELIB}/sphinx/domains/math.pyo
 ${PYSITELIB}/sphinx/domains/python.py
 ${PYSITELIB}/sphinx/domains/python.pyc
 ${PYSITELIB}/sphinx/domains/python.pyo
@@ -256,9 +268,6 @@ ${PYSITELIB}/sphinx/ext/napoleon/docstring.pyo
 ${PYSITELIB}/sphinx/ext/napoleon/iterators.py
 ${PYSITELIB}/sphinx/ext/napoleon/iterators.pyc
 ${PYSITELIB}/sphinx/ext/napoleon/iterators.pyo
-${PYSITELIB}/sphinx/ext/pngmath.py
-${PYSITELIB}/sphinx/ext/pngmath.pyc
-${PYSITELIB}/sphinx/ext/pngmath.pyo
 ${PYSITELIB}/sphinx/ext/todo.py
 ${PYSITELIB}/sphinx/ext/todo.pyc
 ${PYSITELIB}/sphinx/ext/todo.pyo
@@ -280,6 +289,9 @@ ${PYSITELIB}/sphinx/jinja2glue.pyo
 ${PYSITELIB}/sphinx/locale/__init__.py
 ${PYSITELIB}/sphinx/locale/__init__.pyc
 ${PYSITELIB}/sphinx/locale/__init__.pyo
+${PYSITELIB}/sphinx/locale/ar/LC_MESSAGES/sphinx.js
+${PYSITELIB}/sphinx/locale/ar/LC_MESSAGES/sphinx.mo
+${PYSITELIB}/sphinx/locale/ar/LC_MESSAGES/sphinx.po
 ${PYSITELIB}/sphinx/locale/bn/LC_MESSAGES/sphinx.js
 ${PYSITELIB}/sphinx/locale/bn/LC_MESSAGES/sphinx.mo
 ${PYSITELIB}/sphinx/locale/bn/LC_MESSAGES/sphinx.po
@@ -370,6 +382,9 @@ ${PYSITELIB}/sphinx/locale/nl/LC_MESSAGES/sphinx.po
 ${PYSITELIB}/sphinx/locale/pl/LC_MESSAGES/sphinx.js
 ${PYSITELIB}/sphinx/locale/pl/LC_MESSAGES/sphinx.mo
 ${PYSITELIB}/sphinx/locale/pl/LC_MESSAGES/sphinx.po
+${PYSITELIB}/sphinx/locale/pt/LC_MESSAGES/sphinx.js
+${PYSITELIB}/sphinx/locale/pt/LC_MESSAGES/sphinx.mo
+${PYSITELIB}/sphinx/locale/pt/LC_MESSAGES/sphinx.po
 ${PYSITELIB}/sphinx/locale/pt_BR/LC_MESSAGES/sphinx.js
 ${PYSITELIB}/sphinx/locale/pt_BR/LC_MESSAGES/sphinx.mo
 ${PYSITELIB}/sphinx/locale/pt_BR/LC_MESSAGES/sphinx.po
@@ -523,6 +538,7 @@ ${PYSITELIB}/sphinx/templates/epub3/content.opf_t
 ${PYSITELIB}/sphinx/templates/epub3/mimetype
 ${PYSITELIB}/sphinx/templates/epub3/nav.xhtml_t
 ${PYSITELIB}/sphinx/templates/epub3/toc.ncx_t
+${PYSITELIB}/sphinx/templates/graphviz/graphviz.css
 ${PYSITELIB}/sphinx/templates/latex/latex.tex_t
 ${PYSITELIB}/sphinx/templates/latex/longtable.tex_t
 ${PYSITELIB}/sphinx/templates/latex/tabular.tex_t
@@ -547,12 +563,17 @@ ${PYSITELIB}/sphinx/testing/path.pyo
 ${PYSITELIB}/sphinx/testing/util.py
 ${PYSITELIB}/sphinx/testing/util.pyc
 ${PYSITELIB}/sphinx/testing/util.pyo
+${PYSITELIB}/sphinx/texinputs/LICRcyr2utf8.xdy
+${PYSITELIB}/sphinx/texinputs/LICRlatin2utf8.xdy
+${PYSITELIB}/sphinx/texinputs/LatinRules.xdy
 ${PYSITELIB}/sphinx/texinputs/Makefile_t
 ${PYSITELIB}/sphinx/texinputs/footnotehyper-sphinx.sty
 ${PYSITELIB}/sphinx/texinputs/latexmkjarc
 ${PYSITELIB}/sphinx/texinputs/latexmkrc_t
+${PYSITELIB}/sphinx/texinputs/make.bat_t
 ${PYSITELIB}/sphinx/texinputs/python.ist
 ${PYSITELIB}/sphinx/texinputs/sphinx.sty
+${PYSITELIB}/sphinx/texinputs/sphinx.xdy
 ${PYSITELIB}/sphinx/texinputs/sphinxhowto.cls
 ${PYSITELIB}/sphinx/texinputs/sphinxmanual.cls
 ${PYSITELIB}/sphinx/texinputs/sphinxmulticell.sty
@@ -585,7 +606,7 @@ ${PYSITELIB}/sphinx/themes/basic/static/basic.css_t
 ${PYSITELIB}/sphinx/themes/basic/static/comment-bright.png
 ${PYSITELIB}/sphinx/themes/basic/static/comment-close.png
 ${PYSITELIB}/sphinx/themes/basic/static/comment.png
-${PYSITELIB}/sphinx/themes/basic/static/doctools.js_t
+${PYSITELIB}/sphinx/themes/basic/static/doctools.js
 ${PYSITELIB}/sphinx/themes/basic/static/documentation_options.js_t
 ${PYSITELIB}/sphinx/themes/basic/static/down-pressed.png
 ${PYSITELIB}/sphinx/themes/basic/static/down.png
@@ -594,7 +615,7 @@ ${PYSITELIB}/sphinx/themes/basic/static/jquery-3.2.1.js
 ${PYSITELIB}/sphinx/themes/basic/static/jquery.js
 ${PYSITELIB}/sphinx/themes/basic/static/minus.png
 ${PYSITELIB}/sphinx/themes/basic/static/plus.png
-${PYSITELIB}/sphinx/themes/basic/static/searchtools.js_t
+${PYSITELIB}/sphinx/themes/basic/static/searchtools.js
 ${PYSITELIB}/sphinx/themes/basic/static/underscore-1.3.1.js
 ${PYSITELIB}/sphinx/themes/basic/static/underscore.js
 ${PYSITELIB}/sphinx/themes/basic/static/up-pressed.png
@@ -679,6 +700,12 @@ ${PYSITELIB}/sphinx/transforms/i18n.pyo
 ${PYSITELIB}/sphinx/transforms/post_transforms/__init__.py
 ${PYSITELIB}/sphinx/transforms/post_transforms/__init__.pyc
 ${PYSITELIB}/sphinx/transforms/post_transforms/__init__.pyo
+${PYSITELIB}/sphinx/transforms/post_transforms/code.py
+${PYSITELIB}/sphinx/transforms/post_transforms/code.pyc
+${PYSITELIB}/sphinx/transforms/post_transforms/code.pyo
+${PYSITELIB}/sphinx/transforms/post_transforms/compat.py
+${PYSITELIB}/sphinx/transforms/post_transforms/compat.pyc
+${PYSITELIB}/sphinx/transforms/post_transforms/compat.pyo
 ${PYSITELIB}/sphinx/transforms/post_transforms/images.py
 ${PYSITELIB}/sphinx/transforms/post_transforms/images.pyc
 ${PYSITELIB}/sphinx/transforms/post_transforms/images.pyo
@@ -688,6 +715,9 @@ ${PYSITELIB}/sphinx/transforms/references.pyo
 ${PYSITELIB}/sphinx/util/__init__.py
 ${PYSITELIB}/sphinx/util/__init__.pyc
 ${PYSITELIB}/sphinx/util/__init__.pyo
+${PYSITELIB}/sphinx/util/build_phase.py
+${PYSITELIB}/sphinx/util/build_phase.pyc
+${PYSITELIB}/sphinx/util/build_phase.pyo
 ${PYSITELIB}/sphinx/util/compat.py
 ${PYSITELIB}/sphinx/util/compat.pyc
 ${PYSITELIB}/sphinx/util/compat.pyo
@@ -730,6 +760,9 @@ ${PYSITELIB}/sphinx/util/logging.pyo
 ${PYSITELIB}/sphinx/util/matching.py
 ${PYSITELIB}/sphinx/util/matching.pyc
 ${PYSITELIB}/sphinx/util/matching.pyo
+${PYSITELIB}/sphinx/util/math.py
+${PYSITELIB}/sphinx/util/math.pyc
+${PYSITELIB}/sphinx/util/math.pyo
 ${PYSITELIB}/sphinx/util/nodes.py
 ${PYSITELIB}/sphinx/util/nodes.pyc
 ${PYSITELIB}/sphinx/util/nodes.pyo
