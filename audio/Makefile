@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.551 2018/07/09 08:16:50 adam Exp $
+# $NetBSD: Makefile,v 1.552 2018/09/13 02:45:52 jnemeth Exp $
 #
 
 COMMENT=	Audio tools
@@ -115,6 +115,7 @@ SUBDIR+=	festvox-tll
 SUBDIR+=	festvox-us1
 SUBDIR+=	festvox-us2
 SUBDIR+=	festvox-us3
+SUBDIR+=	filter_audio
 SUBDIR+=	flac
 SUBDIR+=	flac123
 SUBDIR+=	flac2mp3
