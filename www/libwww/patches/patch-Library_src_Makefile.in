@@ -1,0 +1,15 @@
+$NetBSD: patch-Library_src_Makefile.in,v 1.1 2018/09/13 12:33:29 maya Exp $
+
+Fix build failure with GNU coreutils: it doesn't allow install of the same file
+twice in the same command.
+
+--- Library/src/Makefile.in.orig	2017-06-24 06:11:28.000000000 +0000
++++ Library/src/Makefile.in
+@@ -914,7 +914,6 @@ BUILT_SOURCES = \
+ 	HTBInit.h \
+ 	HTBTree.h \
+ 	HTBind.h \
+-	HTBind.h \
+ 	HTBound.h \
+ 	HTBufWrt.h \
+ 	HTCache.h \
