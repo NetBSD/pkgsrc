@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.52 2015/11/03 03:27:50 agc Exp $
+$NetBSD: distinfo,v 1.53 2018/09/13 21:14:45 gavan Exp $
 
 SHA1 (monotone-1.1.tar.bz2) = 2b97559b252decaee3a374b81bf714cf33441ba3
 RMD160 (monotone-1.1.tar.bz2) = c5e0f45028b806eb166b4aaecababa8e8e81b686
 SHA512 (monotone-1.1.tar.bz2) = 0599e7fc004552f6a15095b62627eb60d80bfd32904608b6fef15f6c6f83db8059375833cb8ddc54fed569223a95f8ea0ba3c7008ad2969a5776faa27e5e5f3b
 Size (monotone-1.1.tar.bz2) = 3428699 bytes
 SHA1 (patch-src_hash__map.hh) = 3f8e83b651452aa87eb5409d6e852a49e3747db4
+SHA1 (patch-src_pcrewrap.cc) = c40693610033a899b3d14867e3228d86d2a732d4
+SHA1 (patch-src_pcrewrap.hh) = 60fae878445e2eedece85660741062b80090b043
