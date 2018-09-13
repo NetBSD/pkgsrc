@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2018/08/19 08:51:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2018/09/13 10:57:47 adam Exp $
 bin/cherryd-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -60,6 +60,9 @@ ${PYSITELIB}/cherrypy/_cpwsgi_server.pyo
 ${PYSITELIB}/cherrypy/_helper.py
 ${PYSITELIB}/cherrypy/_helper.pyc
 ${PYSITELIB}/cherrypy/_helper.pyo
+${PYSITELIB}/cherrypy/_json.py
+${PYSITELIB}/cherrypy/_json.pyc
+${PYSITELIB}/cherrypy/_json.pyo
 ${PYSITELIB}/cherrypy/daemon.py
 ${PYSITELIB}/cherrypy/daemon.pyc
 ${PYSITELIB}/cherrypy/daemon.pyo
@@ -192,9 +195,6 @@ ${PYSITELIB}/cherrypy/test/test_bus.pyo
 ${PYSITELIB}/cherrypy/test/test_caching.py
 ${PYSITELIB}/cherrypy/test/test_caching.pyc
 ${PYSITELIB}/cherrypy/test/test_caching.pyo
-${PYSITELIB}/cherrypy/test/test_compat.py
-${PYSITELIB}/cherrypy/test/test_compat.pyc
-${PYSITELIB}/cherrypy/test/test_compat.pyo
 ${PYSITELIB}/cherrypy/test/test_config.py
 ${PYSITELIB}/cherrypy/test/test_config.pyc
 ${PYSITELIB}/cherrypy/test/test_config.pyo
