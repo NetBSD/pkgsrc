@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.29 2018/06/28 15:45:46 jperkin Exp $
+$NetBSD: distinfo,v 1.30 2018/09/13 12:33:28 maya Exp $
 
 SHA1 (w3c-libwww-5.4.2.tgz) = 6bc3c0de4cd2e0d51b17789c9a86b5296ce44b2f
 RMD160 (w3c-libwww-5.4.2.tgz) = 7b6ecfbd84ca8b2ce3b19d3b60e9f6a75ea914f5
@@ -7,6 +7,8 @@ Size (w3c-libwww-5.4.2.tgz) = 2630357 bytes
 SHA1 (patch-Library_Makefile.in) = f0ea0413c13501cfa7d038ebfe602d6bdbf02de4
 SHA1 (patch-Library_src_HTMIMImp.c) = 2f14df9867758c69f9e6110b16f75d017e032a8e
 SHA1 (patch-Library_src_HTStyle.c) = 2c42a00ce5ed0ff0f34e779582684805e47edce2
+SHA1 (patch-Library_src_Makefile.am) = 14bf3beef9e2e57e2574ccb806132b13d2b60af7
+SHA1 (patch-Library_src_Makefile.in) = cd685a468b93066c0da9e1171051da93cfd28bb4
 SHA1 (patch-Library_src_SSL_HTSSL.c) = ddb87040f0669e1c3ab9f098a957193b436f588a
 SHA1 (patch-Library_src_wwwsys.h) = 25f39cf5afb6e4a2879a0f38129d8a450a863e72
 SHA1 (patch-configure) = 70a7d08b59361bb64069bb27cabfbc6dc2c47ec4
