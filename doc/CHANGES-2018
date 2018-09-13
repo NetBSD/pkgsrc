@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4017 2018/09/13 12:10:15 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.4018 2018/09/13 14:57:01 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5636,3 +5636,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/git to 2.19.0 [adam 2018-09-13]
 	Updated www/py-cherrypy to 18.0.1 [adam 2018-09-13]
 	Updated net/ortp to 0.16.1nb7 [jperkin 2018-09-13]
+	Added devel/rebar3 version 3.6.1 [fhajny 2018-09-13]
