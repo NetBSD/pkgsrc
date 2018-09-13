@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/08/11 16:37:04 nros Exp $
+# $NetBSD: Makefile,v 1.11 2018/09/13 14:26:07 jperkin Exp $
 
 DISTNAME=	watchman-4.7.0
 CATEGORIES=	sysutils
@@ -14,10 +14,6 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 USE_TOOLS+=	autoconf automake autoreconf gmake
 GNU_CONFIGURE=	yes
-
-# As of 4.7.0, SunOS port is broken and unmaintained
-# https://github.com/facebook/watchman/issues/322
-BROKEN_ON_PLATFORM=	SunOS-*-*
 
 CHECK_PORTABILITY_SKIP+=	travis/run.sh
 
