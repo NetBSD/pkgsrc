@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4018 2018/09/13 14:57:01 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.4019 2018/09/13 15:49:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5637,3 +5637,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-cherrypy to 18.0.1 [adam 2018-09-13]
 	Updated net/ortp to 0.16.1nb7 [jperkin 2018-09-13]
 	Added devel/rebar3 version 3.6.1 [fhajny 2018-09-13]
+	Updated lang/php71 to 7.1.22 [taca 2018-09-13]
+	Updated lang/php72 to 7.2.10 [taca 2018-09-13]
+	Updated lang/php70 to 7.0.32 [taca 2018-09-13]
+	Updated lang/php56 to 5.6.38 [taca 2018-09-13]
