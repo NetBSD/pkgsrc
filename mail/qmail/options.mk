@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.52 2018/09/14 09:01:53 schmonz Exp $
+# $NetBSD: options.mk,v 1.53 2018/09/14 16:44:09 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=		eai inet6 pam sasl syncdir tls
@@ -139,7 +139,9 @@ SUBST_FILES.tmprsadh=		update_tmprsadh.sh
 SUBST_SED.tmprsadh=		-e 's|^export PATH=.*||'
 SUBST_SED.tmprsadh+=		-e 's|^openssl |${OPENSSL} |'
 SUBST_SED.tmprsadh+=		-e 's|rsa512|rsa2048|g'
+SUBST_SED.tmprsadh+=		-e 's|rsa2048\.new 512|rsa2048.new 2048|g'
 SUBST_SED.tmprsadh+=		-e 's|dh1024|dh2048|g'
+SUBST_SED.tmprsadh+=		-e 's|dh2048\.new 1024|dh2048.new 2048|g'
 SUBST_CLASSES+=			keys
 SUBST_STAGE.keys=		do-configure
 SUBST_FILES.keys=		qmail-smtpd.c
