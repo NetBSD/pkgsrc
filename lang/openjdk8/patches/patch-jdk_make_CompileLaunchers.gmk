@@ -1,6 +1,6 @@
-$NetBSD: patch-jdk_make_CompileLaunchers.gmk,v 1.5 2017/11/28 05:07:25 ryoon Exp $
+$NetBSD: patch-jdk_make_CompileLaunchers.gmk,v 1.6 2018/09/14 15:53:46 tnn Exp $
 
---- jdk/make/CompileLaunchers.gmk.orig	2017-11-28 00:13:34.000000000 +0000
+--- jdk/make/CompileLaunchers.gmk.orig	2018-05-26 23:58:30.000000000 +0000
 +++ jdk/make/CompileLaunchers.gmk
 @@ -121,7 +121,7 @@ define SetupLauncher
    endif
@@ -30,3 +30,13 @@ $NetBSD: patch-jdk_make_CompileLaunchers.gmk,v 1.5 2017/11/28 05:07:25 ryoon Exp
  endif
  
  ifneq ($(findstring $(OPENJDK_TARGET_OS), linux bsd), )
+@@ -643,7 +641,9 @@ ifeq ($(OPENJDK_TARGET_OS), macosx)
+ endif
+ 
+ ifeq ($(OPENJDK_TARGET_CPU_BITS), 64)
++ ifeq ($(COMPILER_SUPPORTS_TARGET_BITS_FLAG), true)
+   LINK_JSPAWNHELPER_FLAGS += $(COMPILER_TARGET_BITS_FLAG)64
++ endif
+ endif
+ 
+ ifeq ($(BUILD_JSPAWNHELPER), 1)
