@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.51 2018/08/01 07:10:27 schmonz Exp $
+# $NetBSD: options.mk,v 1.52 2018/09/14 09:01:53 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=		eai inet6 pam sasl syncdir tls
@@ -131,13 +131,29 @@ PKG_OPTIONS+=			sasl
 .  endif
 .  include "../../security/openssl/buildlink3.mk"
 .  if !empty(PKG_OPTIONS:Mtls)
-CFLAGS+=			-DTLS=20070408	# NOTE: match what's _in_ the patch
+CFLAGS+=			-DTLS=20070408nb1	# NOTE: match what's _in_ the patch
 USE_TOOLS+=			openssl
 SUBST_CLASSES+=			tmprsadh
 SUBST_STAGE.tmprsadh=		do-configure
 SUBST_FILES.tmprsadh=		update_tmprsadh.sh
 SUBST_SED.tmprsadh=		-e 's|^export PATH=.*||'
 SUBST_SED.tmprsadh+=		-e 's|^openssl |${OPENSSL} |'
+SUBST_SED.tmprsadh+=		-e 's|rsa512|rsa2048|g'
+SUBST_SED.tmprsadh+=		-e 's|dh1024|dh2048|g'
+SUBST_CLASSES+=			keys
+SUBST_STAGE.keys=		do-configure
+SUBST_FILES.keys=		qmail-smtpd.c
+SUBST_SED.keys=			-e 's|\(keylen.* \)512|\12048|g'
+SUBST_SED.keys+=		-e 's|512\.pem|2048.pem|g'
+SUBST_SED.keys+=		-e 's|keylen = 1024|keylen = 2048|g'
+SUBST_SED.keys+=		-e 's|\(keylen == 1024\)|0 \&\& \1|g'
+SUBST_CLASSES+=			mankeys
+SUBST_STAGE.mankeys=		do-configure
+SUBST_FILES.mankeys=		qmail-smtpd.8 qmail-control.9
+SUBST_SED.mankeys=		-e 's|dh1024\.pem|dh2048.pem|g'
+SUBST_SED.mankeys+=		-e 's|1024 bit|2048 bit|g'
+SUBST_SED.mankeys+=		-e 's|rsa512\.pem|rsa2048.pem|g'
+SUBST_SED.mankeys+=		-e 's|512 bit RSA|2048 bit RSA|g'
 PLIST.tls=			yes
 MESSAGE_SRC+=			${PKGDIR}/MESSAGE.tls
 MESSAGE_SUBST+=			OPENSSL=${OPENSSL:Q}
