@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2018/08/31 19:18:59 leot Exp $
+@comment $NetBSD: PLIST,v 1.17 2018/09/14 17:55:07 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -75,6 +75,9 @@ ${PYSITELIB}/gallery_dl/extractor/b4k.pyo
 ${PYSITELIB}/gallery_dl/extractor/behance.py
 ${PYSITELIB}/gallery_dl/extractor/behance.pyc
 ${PYSITELIB}/gallery_dl/extractor/behance.pyo
+${PYSITELIB}/gallery_dl/extractor/bobx.py
+${PYSITELIB}/gallery_dl/extractor/bobx.pyc
+${PYSITELIB}/gallery_dl/extractor/bobx.pyo
 ${PYSITELIB}/gallery_dl/extractor/booru.py
 ${PYSITELIB}/gallery_dl/extractor/booru.pyc
 ${PYSITELIB}/gallery_dl/extractor/booru.pyo
@@ -132,6 +135,9 @@ ${PYSITELIB}/gallery_dl/extractor/hbrowse.pyo
 ${PYSITELIB}/gallery_dl/extractor/hentai2read.py
 ${PYSITELIB}/gallery_dl/extractor/hentai2read.pyc
 ${PYSITELIB}/gallery_dl/extractor/hentai2read.pyo
+${PYSITELIB}/gallery_dl/extractor/hentaicafe.py
+${PYSITELIB}/gallery_dl/extractor/hentaicafe.pyc
+${PYSITELIB}/gallery_dl/extractor/hentaicafe.pyo
 ${PYSITELIB}/gallery_dl/extractor/hentaifoundry.py
 ${PYSITELIB}/gallery_dl/extractor/hentaifoundry.pyc
 ${PYSITELIB}/gallery_dl/extractor/hentaifoundry.pyo
