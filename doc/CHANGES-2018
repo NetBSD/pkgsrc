@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4025 2018/09/14 09:53:33 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.4026 2018/09/14 10:04:54 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5648,3 +5648,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/qmail to 1.03nb37 [schmonz 2018-09-14]
 	Updated archivers/lz4 to 1.8.3 [fhajny 2018-09-14]
 	Updated sysutils/consul to 1.2.3 [fhajny 2018-09-14]
+	Updated lang/rust to 1.29.0 [jperkin 2018-09-14]
