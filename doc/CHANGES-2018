@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4028 2018/09/14 17:55:21 leot Exp $
+$NetBSD: CHANGES-2018,v 1.4029 2018/09/14 21:07:01 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5651,3 +5651,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/rust to 1.29.0 [jperkin 2018-09-14]
 	Updated sysutils/ansible2 to 2.6.4 [jperkin 2018-09-14]
 	Updated net/gallery-dl to 1.5.3 [leot 2018-09-14]
+	Updated net/rtorrent to 0.9.7nb2 [maya 2018-09-14]
