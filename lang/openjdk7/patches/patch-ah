@@ -1,10 +1,10 @@
-$NetBSD: patch-ah,v 1.6 2015/02/21 20:21:56 tnn Exp $
+$NetBSD: patch-ah,v 1.7 2018/09/14 15:53:46 tnn Exp $
 
 DragonFly support.
 Disable SunOS multiarch.
 Add ARM support.
 
---- jdk/make/common/shared/Platform.gmk.orig	2015-01-26 15:20:57.000000000 +0000
+--- jdk/make/common/shared/Platform.gmk.orig	2017-08-13 05:55:12.000000000 +0000
 +++ jdk/make/common/shared/Platform.gmk
 @@ -119,7 +119,7 @@ ifeq ($(SYSTEM_UNAME), SunOS)
      ARCH := $(shell isainfo -n)
@@ -15,7 +15,7 @@ Add ARM support.
    endif
    # Need to maintain the jre/lib/i386 location for 32-bit Intel
    ifeq ($(ARCH), i586)
-@@ -224,6 +224,13 @@ ifeq ($(SYSTEM_UNAME), Linux)
+@@ -241,6 +241,13 @@ ifeq ($(SYSTEM_UNAME), Linux)
    MB_OF_MEMORY := $(shell free -m | fgrep Mem: | awk '{print $$2;}' )
  endif
  
@@ -29,17 +29,29 @@ Add ARM support.
  ifeq ($(SYSTEM_UNAME), Darwin)
    PLATFORM = macosx
    OS_NAME = darwin
-@@ -340,6 +347,9 @@ ifeq ($(PLATFORM), bsd)
+@@ -340,7 +347,7 @@ endif
+ ifeq ($(PLATFORM), bsd)
+   OS_VERSION := $(shell uname -r)
+   # Arch and OS name/version
+-  mach := $(shell uname -m)
++  mach := $(shell uname -p)
+   archExpr = case "$(mach)" in \
+                 i[3-9]86) \
+                     echo i586 \
+@@ -357,6 +364,12 @@ ifeq ($(PLATFORM), bsd)
                  "Power Macintosh") \
                      echo ppc \
                      ;; \
 +                *arm*) \
 +                    echo arm \
 +                    ;; \
++                aarch64) \
++                    echo aarch64 \
++                    ;; \
                  *) \
                      echo $(mach) \
                      ;; \
-@@ -348,7 +358,7 @@ ifeq ($(PLATFORM), bsd)
+@@ -365,7 +378,7 @@ ifeq ($(PLATFORM), bsd)
    ARCH_FAMILY := $(ARCH)
  
    # i586, sparc, and ppc are 32 bit, amd64 and sparc64 are 64
@@ -48,7 +60,7 @@ Add ARM support.
      ARCH_DATA_MODEL=32
    else
      ARCH_DATA_MODEL=64
-@@ -371,9 +381,9 @@ ifeq ($(PLATFORM), bsd)
+@@ -388,9 +401,9 @@ ifeq ($(PLATFORM), bsd)
    REQUIRED_FREE_SPACE=1500000
    # How much RAM does this machine have:
    ifeq ($(OS_VENDOR), OpenBSD)

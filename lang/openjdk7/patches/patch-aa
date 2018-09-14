@@ -1,24 +1,33 @@
-$NetBSD: patch-aa,v 1.14 2015/02/21 20:20:03 tnn Exp $
+$NetBSD: patch-aa,v 1.15 2018/09/14 15:53:46 tnn Exp $
 
 DragonFly support.
 Add workaround for missing  sem_timedwait() in NetBSD < 6.99.4
+Workaround incomplete libc/no alloca(3) on NetBSD/aarch64
 
---- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2015-01-26 15:21:44.000000000 +0000
+--- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2017-08-13 05:55:27.000000000 +0000
 +++ hotspot/src/os/bsd/vm/os_bsd.cpp
-@@ -126,8 +126,11 @@
+@@ -22,6 +22,11 @@
+  *
+  */
+ 
++#if defined(__NetBSD__) && defined(__aarch64__)
++// there is no alloca(3) yet on this port
++#define alloca(size) __builtin_alloca(size)
++#endif
++
+ // no precompiled headers
+ #include "classfile/classLoader.hpp"
+ #include "classfile/systemDictionary.hpp"
+@@ -126,7 +131,7 @@
  # include <inttypes.h>
  # include <sys/ioctl.h>
  
 -#if defined(__FreeBSD__) || defined(__NetBSD__)
 +#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
  # include <elf.h>
-+#if !defined(EM_ALPHA)
-+#define EM_ALPHA 0x9026
-+#endif
  #endif
  
- #ifdef __APPLE__
-@@ -340,6 +343,7 @@ void os::Bsd::initialize_system_info() {
+@@ -327,6 +332,7 @@ void os::Bsd::initialize_system_info() {
    size_t len;
    int cpu_val;
    julong mem_val;
@@ -26,7 +35,7 @@ Add workaround for missing  sem_timedwait() in NetBSD < 6.99.4
  
    /* get processors count via hw.ncpus sysctl */
    mib[0] = CTL_HW;
-@@ -372,14 +376,11 @@ void os::Bsd::initialize_system_info() {
+@@ -359,14 +365,11 @@ void os::Bsd::initialize_system_info() {
         _physical_memory = 256*1024*1024;       // fallback (XXXBSD?)
    }
  
@@ -46,7 +55,7 @@ Add workaround for missing  sem_timedwait() in NetBSD < 6.99.4
  #endif
  }
  #else
-@@ -458,7 +459,7 @@ void os::init_system_properties_values()
+@@ -445,7 +448,7 @@ void os::init_system_properties_values()
   *        7: The default directories, normally /lib and /usr/lib.
   */
  #ifndef DEFAULT_LIBPATH
@@ -55,17 +64,33 @@ Add workaround for missing  sem_timedwait() in NetBSD < 6.99.4
  #endif
  
  #define EXTENSIONS_DIR  "/lib/ext"
-@@ -2232,7 +2233,9 @@ void * os::dll_load(const char *filename
+@@ -2227,9 +2230,16 @@ void * os::dll_load(const char *filename
+     {EM_SPARCV9,     EM_SPARCV9, ELFCLASS64, ELFDATA2MSB, (char*)"Sparc v9 64"},
      {EM_PPC,         EM_PPC,     ELFCLASS32, ELFDATA2MSB, (char*)"Power PC 32"},
      {EM_PPC64,       EM_PPC64,   ELFCLASS64, ELFDATA2MSB, (char*)"Power PC 64"},
++#if defined(EM_AARCH64)
++    {EM_AARCH64,     EM_AARCH64, ELFCLASS64, ELFDATA2LSB, (char*)"Aarch64"},
++#endif
      {EM_ARM,         EM_ARM,     ELFCLASS32,   ELFDATA2LSB, (char*)"ARM"},
-+#if 0
++#if defined(EM_S390)
      {EM_S390,        EM_S390,    ELFCLASSNONE, ELFDATA2MSB, (char*)"IBM System/390"},
 +#endif
++#if defined(EM_ALPHA)
      {EM_ALPHA,       EM_ALPHA,   ELFCLASS64, ELFDATA2LSB, (char*)"Alpha"},
++#endif
      {EM_MIPS_RS3_LE, EM_MIPS_RS3_LE, ELFCLASS32, ELFDATA2LSB, (char*)"MIPSel"},
      {EM_MIPS,        EM_MIPS,    ELFCLASS32, ELFDATA2MSB, (char*)"MIPS"},
-@@ -2829,6 +2832,33 @@ bool Semaphore::timedwait(unsigned int s
+     {EM_PARISC,      EM_PARISC,  ELFCLASS32, ELFDATA2MSB, (char*)"PARISC"},
+@@ -2252,6 +2262,8 @@ void * os::dll_load(const char *filename
+     static  Elf32_Half running_arch_code=EM_PPC;
+   #elif  (defined ARM)
+     static  Elf32_Half running_arch_code=EM_ARM;
++  #elif  (defined AARCH64)
++    static  Elf32_Half running_arch_code=EM_AARCH64;
+   #elif  (defined S390)
+     static  Elf32_Half running_arch_code=EM_S390;
+   #elif  (defined ALPHA)
+@@ -2825,6 +2837,33 @@ bool Semaphore::timedwait(unsigned int s
  
  #else
  
@@ -99,7 +124,7 @@ Add workaround for missing  sem_timedwait() in NetBSD < 6.99.4
  bool Semaphore::trywait() {
    return sem_trywait(&_semaphore) == 0;
  }
-@@ -2979,7 +3009,7 @@ static void warn_fail_commit_memory(char
+@@ -2975,7 +3014,7 @@ static void warn_fail_commit_memory(char
  //       problem.
  bool os::pd_commit_memory(char* addr, size_t size, bool exec) {
    int prot = exec ? PROT_READ|PROT_WRITE|PROT_EXEC : PROT_READ|PROT_WRITE;
@@ -108,7 +133,7 @@ Add workaround for missing  sem_timedwait() in NetBSD < 6.99.4
    // XXX: Work-around mmap/MAP_FIXED bug temporarily on OpenBSD
    if (::mprotect(addr, size, prot) == 0) {
      return true;
-@@ -3893,7 +3923,7 @@ OSReturn os::set_native_priority(Thread*
+@@ -3901,7 +3940,7 @@ OSReturn os::set_native_priority(Thread*
  #ifdef __OpenBSD__
    // OpenBSD pthread_setprio starves low priority threads
    return OS_OK;
@@ -117,7 +142,7 @@ Add workaround for missing  sem_timedwait() in NetBSD < 6.99.4
    int ret = pthread_setprio(thread->osthread()->pthread_id(), newpri);
    return (ret == 0) ? OS_OK : OS_ERR;
  #elif defined(__APPLE__) || defined(__NetBSD__)
-@@ -3922,7 +3952,7 @@ OSReturn os::get_native_priority(const T
+@@ -3930,7 +3969,7 @@ OSReturn os::get_native_priority(const T
    }
  
    errno = 0;
