@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18553 2018/09/11 20:04:13 minskim Exp $
+$NetBSD: TODO,v 1.18554 2018/09/14 05:12:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -459,6 +459,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cal3d-0.11.0
 	o calc-2.11.10.1
 	o calcoo-2.1.0
+	o calibre-3.31.0
 	o calligra-3.0.1 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-1.1
@@ -535,6 +536,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dnssec-tools-2.2
 	o doclifter-2.16
 	o dolphin-5.0
+	o dosbox-0.74.2
 	o drivel-3.0.5
 	o dtach-0.9
 	o dvdstyler-3.0.4
@@ -1086,10 +1088,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mysql-server-8.0
 	o mysql-workbench-6.3
 	o nagios-base-4.3.1
+	o nano-3.0
 	o nant-0.92
 	o nap-1.5.3
 	o nas-auscope-1.9.4
 	o nautilus-actions-2.30.3 [GNOME 2.30]
+	o ncdu-1.13
 	o ncview-2.1.6
 	o nessus-4.4.1
 	o nestopia-1.46.2 [http://0ldsk00l.ca/nestopia/]
@@ -1376,6 +1380,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o swi-prolog-packages-7.1.37
 	o swt-4.5
 	o sympa-6.2.14
+	o syncthing-0.14.50
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1 [needs polkit|GNOME 2.30]
 	o systrace-1.6e
