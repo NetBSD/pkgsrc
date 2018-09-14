@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2018/08/16 18:54:38 adam Exp $
+# $NetBSD: Makefile,v 1.30 2018/09/14 11:04:20 gavan Exp $
 
 DISTNAME=	mongodb-src-r3.4.4
 PKGNAME=	${DISTNAME:S/src-r//:S/-rc/rc/}
@@ -10,6 +10,9 @@ MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	http://mongodb.org/
 COMMENT=	NoSQL distributed document-oriented database
 LICENSE=	gnu-agpl-v3 # Client and tools licensed under apache-2.0
+
+# MongoDB 3.4 onwards explicitly does not support 32-bit x86 platforms
+NOT_FOR_PLATFORM+=	*-*-i386
 
 EXTRACT_USING=	bsdtar
 
