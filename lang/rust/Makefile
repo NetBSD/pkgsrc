@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2018/09/03 16:56:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.51 2018/09/14 10:04:43 jperkin Exp $
 
-DISTNAME=	rustc-1.28.0-src
+DISTNAME=	rustc-1.29.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
-PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	http://static.rust-lang.org/dist/
 
@@ -51,6 +50,8 @@ TEST_TARGET=	check
 CHECK_RELRO_SUPPORTED=	no
 CHECK_SSP_SUPPORTED=	no
 
+CHECK_PORTABILITY_SKIP+=	src/vendor/openssl-src/openssl/.travis-create-release.sh
+
 # Required for LLVM (-std=c++11)
 GCC_REQD+=	4.8
 
@@ -68,7 +69,7 @@ BUILDLINK_TRANSFORM.NetBSD+=	rm:-Wl,--enable-new-dtags
 # own bootstrap.  See the stage0-bootstrap below for more details.
 #
 DISTFILES:=		${DEFAULT_DISTFILES}
-RUST_STAGE0_VER=	1.27.2
+RUST_STAGE0_VER=	1.28.0
 #
 .if !empty(MACHINE_PLATFORM:MDarwin-*-i386) || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH:=		i686-apple-darwin
@@ -96,7 +97,6 @@ DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 .endif
 .if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH:=		x86_64-sun-solaris
-RUST_STAGE0_VER=	1.28.0
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 SITES.${RUST_STAGE0}=	https://us-east.manta.joyent.com/pkgsrc/public/pkg-bootstraps/
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0}
@@ -104,7 +104,6 @@ RUST_BOOTSTRAP_PATH?=	${WRKDIR}/rust-${RUST_STAGE0_VER}-${RUST_ARCH}
 .endif
 .if !empty(MACHINE_PLATFORM:MFreeBSD-*-i386) || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH:=		i686-unknown-freebsd
-RUST_STAGE0_VER=	1.27.2
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
@@ -117,7 +116,6 @@ DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH=		i686-unknown-netbsd
-RUST_STAGE0_VER=	1.28.0
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 # Do not trust ryoon@.
@@ -134,7 +132,6 @@ pre-build:
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH=		x86_64-unknown-netbsd
-RUST_STAGE0_VER=	1.28.0
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
@@ -162,7 +159,7 @@ SUBST_VARS.rpath=	PREFIX
 
 post-extract:
 	set -e;									\
-	if test -e ${WRKDIR}/rust-${RUST_STAGE0_VER}-${RUST_ARCH}/install.sh	\
+	if ${TEST} -e ${WRKDIR}/rust-${RUST_STAGE0_VER}-${RUST_ARCH}/install.sh	\
 	  -a ! -e ${RUST_BOOTSTRAP_PATH}/bin/rustc; then \
 		cd ${WRKDIR}/rust-${RUST_STAGE0_VER}-${RUST_ARCH};		\
 		${TOOLS_BASH} ./install.sh --prefix=${RUST_BOOTSTRAP_PATH};	\
@@ -171,7 +168,7 @@ post-extract:
 	fi
 # patch(1) in NetBSD does not handle .cargo-checksum.json like long width file.
 	cat ${WRKSRC}/src/vendor/libc/.cargo-checksum.json | \
-		${SED} -e 's/2613f2912a9e8f3485debba424437608433b4e1c8b9050176ef975efdf4a412e/52431d3cc74033804febaa303d028811504c07e2b9b83ec7287d9ee159bf35fe/' > \
+		${SED} -e 's/9c6af198a2f80da827054784faf70bc404673d9568fb45664b4f73c46245fdbd/c3851969a854d6ccaa8a94369f1288025149d1ebdc74b36f224423f35b18f7a7/' > \
 		${WRKSRC}/src/vendor/libc/.cargo-checksum.json.patched
 	${CP} -f ${WRKSRC}/src/vendor/libc/.cargo-checksum.json.patched \
 		${WRKSRC}/src/vendor/libc/.cargo-checksum.json
@@ -184,6 +181,11 @@ PKGSRC_MAKE_ENV+=	LD_LIBRARY_PATH=${LD_LIBRARY_PATH:Q}
 .if ${OPSYS} == "FreeBSD"
 MAKE_ENV+=		OPENSSL_DIR=${SSLBASE}
 .endif
+
+pre-build:
+	# Requires libssh2 defines only available in master.
+	${CP} -f ${WRKSRC}/src/vendor/libssh2-sys/libssh2/include/libssh2.h \
+		${BUILDLINK_DIR}/include/
 
 do-build:
 	cd ${WRKSRC} \

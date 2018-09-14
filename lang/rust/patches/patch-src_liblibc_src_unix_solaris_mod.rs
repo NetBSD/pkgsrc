@@ -1,8 +1,8 @@
-$NetBSD: patch-src_liblibc_src_unix_solaris_mod.rs,v 1.3 2018/08/09 17:04:03 jperkin Exp $
+$NetBSD: patch-src_liblibc_src_unix_solaris_mod.rs,v 1.4 2018/09/14 10:04:43 jperkin Exp $
 
 Add temporary upstream fixes for SunOS.
 
---- src/liblibc/src/unix/solaris/mod.rs.orig	2018-07-30 22:16:16.000000000 +0000
+--- src/liblibc/src/unix/solaris/mod.rs.orig	2018-09-11 03:38:01.000000000 +0000
 +++ src/liblibc/src/unix/solaris/mod.rs
 @@ -692,6 +692,8 @@ pub const EOWNERDEAD: ::c_int = 58;
  pub const ENOTRECOVERABLE: ::c_int = 59;
@@ -13,12 +13,3 @@ Add temporary upstream fixes for SunOS.
  pub const ETIME: ::c_int = 62;
  pub const ENOSR: ::c_int = 63;
  pub const ENONET: ::c_int = 64;
-@@ -1208,7 +1210,7 @@ pub const EPOLLET: ::c_int = 0x80000000;
- pub const EPOLLRDHUP: ::c_int = 0x2000;
- pub const EPOLLEXCLUSIVE: ::c_int = 0x10000000;
- pub const EPOLLONESHOT: ::c_int = 0x40000000;
--pub const EPOLL_CLOEXEC: ::c_int = 0x02000000;
-+pub const EPOLL_CLOEXEC: ::c_int = 0x80000;
- pub const EPOLL_CTL_ADD: ::c_int = 1;
- pub const EPOLL_CTL_MOD: ::c_int = 3;
- pub const EPOLL_CTL_DEL: ::c_int = 2;
