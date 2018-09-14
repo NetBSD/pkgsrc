@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/05/22 11:31:34 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2018/09/14 15:43:23 jperkin Exp $
 
-DISTNAME=	ansible-2.3.0.0
+DISTNAME=	ansible-2.6.4
 CATEGORIES=	python sysutils
 MASTER_SITES=	http://releases.ansible.com/ansible/
 
