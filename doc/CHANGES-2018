@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4023 2018/09/14 09:02:12 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.4024 2018/09/14 09:49:05 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5646,3 +5646,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-faker to 0.9.1 [adam 2018-09-14]
 	Updated www/py-sanic to 0.8.3 [adam 2018-09-14]
 	Updated mail/qmail to 1.03nb37 [schmonz 2018-09-14]
+	Updated archivers/lz4 to 1.8.3 [fhajny 2018-09-14]
