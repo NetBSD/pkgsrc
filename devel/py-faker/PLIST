@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2018/07/13 13:54:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2018/09/14 07:28:54 adam Exp $
 bin/faker${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -65,6 +65,9 @@ ${PYSITELIB}/faker/providers/address/en_CA/__init__.pyo
 ${PYSITELIB}/faker/providers/address/en_GB/__init__.py
 ${PYSITELIB}/faker/providers/address/en_GB/__init__.pyc
 ${PYSITELIB}/faker/providers/address/en_GB/__init__.pyo
+${PYSITELIB}/faker/providers/address/en_NZ/__init__.py
+${PYSITELIB}/faker/providers/address/en_NZ/__init__.pyc
+${PYSITELIB}/faker/providers/address/en_NZ/__init__.pyo
 ${PYSITELIB}/faker/providers/address/en_US/__init__.py
 ${PYSITELIB}/faker/providers/address/en_US/__init__.pyc
 ${PYSITELIB}/faker/providers/address/en_US/__init__.pyo
@@ -179,6 +182,9 @@ ${PYSITELIB}/faker/providers/automotive/en_CA/__init__.pyo
 ${PYSITELIB}/faker/providers/automotive/en_GB/__init__.py
 ${PYSITELIB}/faker/providers/automotive/en_GB/__init__.pyc
 ${PYSITELIB}/faker/providers/automotive/en_GB/__init__.pyo
+${PYSITELIB}/faker/providers/automotive/en_NZ/__init__.py
+${PYSITELIB}/faker/providers/automotive/en_NZ/__init__.pyc
+${PYSITELIB}/faker/providers/automotive/en_NZ/__init__.pyo
 ${PYSITELIB}/faker/providers/automotive/en_US/__init__.py
 ${PYSITELIB}/faker/providers/automotive/en_US/__init__.pyc
 ${PYSITELIB}/faker/providers/automotive/en_US/__init__.pyo
@@ -407,6 +413,9 @@ ${PYSITELIB}/faker/providers/internet/el_GR/__init__.pyo
 ${PYSITELIB}/faker/providers/internet/en_AU/__init__.py
 ${PYSITELIB}/faker/providers/internet/en_AU/__init__.pyc
 ${PYSITELIB}/faker/providers/internet/en_AU/__init__.pyo
+${PYSITELIB}/faker/providers/internet/en_NZ/__init__.py
+${PYSITELIB}/faker/providers/internet/en_NZ/__init__.pyc
+${PYSITELIB}/faker/providers/internet/en_NZ/__init__.pyo
 ${PYSITELIB}/faker/providers/internet/en_US/__init__.py
 ${PYSITELIB}/faker/providers/internet/en_US/__init__.pyc
 ${PYSITELIB}/faker/providers/internet/en_US/__init__.pyo
@@ -608,6 +617,9 @@ ${PYSITELIB}/faker/providers/person/en/__init__.pyo
 ${PYSITELIB}/faker/providers/person/en_GB/__init__.py
 ${PYSITELIB}/faker/providers/person/en_GB/__init__.pyc
 ${PYSITELIB}/faker/providers/person/en_GB/__init__.pyo
+${PYSITELIB}/faker/providers/person/en_NZ/__init__.py
+${PYSITELIB}/faker/providers/person/en_NZ/__init__.pyc
+${PYSITELIB}/faker/providers/person/en_NZ/__init__.pyo
 ${PYSITELIB}/faker/providers/person/en_TH/__init__.py
 ${PYSITELIB}/faker/providers/person/en_TH/__init__.pyc
 ${PYSITELIB}/faker/providers/person/en_TH/__init__.pyo
@@ -752,6 +764,9 @@ ${PYSITELIB}/faker/providers/phone_number/en_CA/__init__.pyo
 ${PYSITELIB}/faker/providers/phone_number/en_GB/__init__.py
 ${PYSITELIB}/faker/providers/phone_number/en_GB/__init__.pyc
 ${PYSITELIB}/faker/providers/phone_number/en_GB/__init__.pyo
+${PYSITELIB}/faker/providers/phone_number/en_NZ/__init__.py
+${PYSITELIB}/faker/providers/phone_number/en_NZ/__init__.pyc
+${PYSITELIB}/faker/providers/phone_number/en_NZ/__init__.pyo
 ${PYSITELIB}/faker/providers/phone_number/en_US/__init__.py
 ${PYSITELIB}/faker/providers/phone_number/en_US/__init__.pyc
 ${PYSITELIB}/faker/providers/phone_number/en_US/__init__.pyo
