@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2008/05/27 11:51:32 tnn Exp $
-
-If you are updating from an stunnel version earlier than 4.24, you should
-be aware that the binaries have moved from ${PREFIX}/sbin
-to ${PREFIX}/bin .
-===========================================================================
