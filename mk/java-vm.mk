@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.112 2018/04/30 10:41:35 wiz Exp $
+# $NetBSD: java-vm.mk,v 1.113 2018/09/14 16:01:05 tnn Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -98,6 +98,7 @@ _PKG_JVM_DEFAULT=	${PKG_JVM_DEFAULT}
         !empty(MACHINE_PLATFORM:MNetBSD-[56789].*-x86_64)
 _PKG_JVM_DEFAULT?=	openjdk8
 .  elif !empty(MACHINE_PLATFORM:MNetBSD-[789].*-sparc64) || \
+	!empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || \
 	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-earmv[67]hf)
 _PKG_JVM_DEFAULT?=	openjdk8
 .  elif !empty(MACHINE_PLATFORM:MNetBSD-[1234].*-i386)
@@ -143,6 +144,7 @@ _ONLY_FOR_PLATFORMS.openjdk7= \
 	DragonFly-*-* \
 	Linux-*-i[3-6]86 \
 	Linux-*-x86_64 \
+	NetBSD-*-aarch64 \
 	NetBSD-[5-9]*-i386 \
 	NetBSD-[5-9]*-x86_64 \
 	NetBSD-[7-9]*-sparc64 \
@@ -153,6 +155,7 @@ _ONLY_FOR_PLATFORMS.openjdk8= \
 	DragonFly-*-* \
 	Linux-*-i[3-6]86 \
 	Linux-*-x86_64 \
+	NetBSD-*-aarch64 \
 	NetBSD-[5-9]*-i386 \
 	NetBSD-[5-9]*-x86_64 \
 	NetBSD-[7-9]*-sparc64 \
