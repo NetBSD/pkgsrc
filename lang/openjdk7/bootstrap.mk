@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.20 2017/08/14 00:02:16 ryoon Exp $
+# $NetBSD: bootstrap.mk,v 1.21 2018/09/14 15:53:46 tnn Exp $
 #
 # This file contains a map of available binary bootstrap toolchains
 # and which kit to use for each supported platform.
@@ -25,6 +25,7 @@
 
 ONLY_FOR_PLATFORM=	NetBSD-[5678].*-i386 NetBSD-[5678].*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-[78].*-sparc64 NetBSD-[78].*-earmv[67]hf
+ONLY_FOR_PLATFORM+=	NetBSD-*-aarch64
 ONLY_FOR_PLATFORM+=	DragonFly-[34].*-* SunOS-*-* FreeBSD-10.*-x86_64
 
 BOOT.nb5-i386=		bootstrap-jdk-1.7.76-netbsd-5-i386-20150301.tar.xz
@@ -35,6 +36,7 @@ BOOT.nb7-i386=		bootstrap-jdk-1.7.76-netbsd-7-i386-20150301.tar.xz
 BOOT.nb7-amd64=		bootstrap-jdk-1.7.76-netbsd-7-amd64-20150301.tar.xz
 BOOT.nb7-sparc64=	bootstrap-jdk-1.7.76-netbsd-7-sparc64-20150301.tar.xz
 BOOT.nb7-earmv6hf=	bootstrap-jdk-1.7.76-netbsd-7-earmv6hf-20150306.tar.xz
+BOOT.nb8-aarch64=	bootstrap-jdk-1.7.141-netbsd-8-aarch64-20180914.tar.xz
 BOOT.fbsd10-amd64=	bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz
 
 #XXX should be regenerated
@@ -79,6 +81,11 @@ EXTRACT_ONLY+=		${BOOT.nb7-sparc64}
 .if !empty(MACHINE_PLATFORM:MNetBSD-[78].*-earmv[67]hf) || make(distinfo)
 DISTFILES+=		${BOOT.nb7-earmv6hf}
 EXTRACT_ONLY+=		${BOOT.nb7-earmv6hf}
+.endif
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || make(distinfo)
+DISTFILES+=		${BOOT.nb8-aarch64}
+EXTRACT_ONLY+=		${BOOT.nb8-aarch64}
 .endif
 
 .if !empty(MACHINE_PLATFORM:MDragonFly-3.6*-x86_64) || make(distinfo)

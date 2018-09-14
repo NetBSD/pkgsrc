@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.4 2016/03/08 20:03:52 tnn Exp $
+# $NetBSD: hacks.mk,v 1.5 2018/09/14 15:53:46 tnn Exp $
 
 .if !defined(OPENJDK7_HACKS_MK)
 OPENJDK7_HACKS_MK=	# empty
@@ -19,7 +19,8 @@ post-wrapper:
 # openjdk itself on such hardware may still cause unexpected behaviour.
 #
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-*arm*)
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-*arm*)	|| \
+	!empty(MACHINE_PLATFORM:MNetBSD-*-aarch64)
 PKG_HACKS+=		broken-ieee-floats
 SUBST_CLASSES+=		fpu
 SUBST_STAGE.fpu=	pre-build
