@@ -1,8 +1,8 @@
-$NetBSD: patch-lib_Makefile,v 1.8 2018/05/10 13:16:27 adam Exp $
+$NetBSD: patch-lib_Makefile,v 1.9 2018/09/14 09:48:56 fhajny Exp $
 
 Make portable. Unlock install target. Use pkgsrc install scripts.
 
---- lib/Makefile.orig	2018-05-07 21:38:45.000000000 +0000
+--- lib/Makefile.orig	2018-09-11 19:52:06.000000000 +0000
 +++ lib/Makefile
 @@ -33,9 +33,9 @@
  # ################################################################
@@ -17,19 +17,19 @@ Make portable. Unlock install target. Use pkgsrc install scripts.
  LIBVER_SCRIPT:= $(LIBVER_MAJOR_SCRIPT).$(LIBVER_MINOR_SCRIPT).$(LIBVER_PATCH_SCRIPT)
  LIBVER_MAJOR := $(shell echo $(LIBVER_MAJOR_SCRIPT))
  LIBVER_MINOR := $(shell echo $(LIBVER_MINOR_SCRIPT))
-@@ -123,7 +123,6 @@ clean:
+@@ -124,7 +124,6 @@ clean:
  #-----------------------------------------------------------------------------
  # make install is validated only for Linux, OSX, BSD, Hurd and Solaris targets
  #-----------------------------------------------------------------------------
--ifneq (,$(filter $(shell uname),Linux Darwin GNU/kFreeBSD GNU OpenBSD FreeBSD NetBSD DragonFly SunOS))
+-ifneq (,$(filter $(shell uname),Linux Darwin GNU/kFreeBSD GNU OpenBSD FreeBSD NetBSD DragonFly SunOS Haiku MidnightBSD))
  
  .PHONY: listL120
  listL120:  # extract lines >= 120 characters in *.{c,h}, by Takayuki Matsuoka (note : $$, for Makefile compatibility)
-@@ -142,12 +141,7 @@ libdir      ?= $(LIBDIR)
+@@ -143,12 +142,7 @@ libdir      ?= $(LIBDIR)
  INCLUDEDIR  ?= $(prefix)/include
  includedir  ?= $(INCLUDEDIR)
  
--ifneq (,$(filter $(shell uname),OpenBSD FreeBSD NetBSD DragonFly))
+-ifneq (,$(filter $(OS),OpenBSD FreeBSD NetBSD DragonFly))
 -PKGCONFIGDIR ?= $(prefix)/libdata/pkgconfig
 -else
 -PKGCONFIGDIR ?= $(libdir)/pkgconfig
@@ -37,9 +37,9 @@ Make portable. Unlock install target. Use pkgsrc install scripts.
 -pkgconfigdir ?= $(PKGCONFIGDIR)
 +pkgconfigdir ?= $(prefix)/lib/pkgconfig
  
- ifneq (,$(filter $(shell uname),SunOS))
+ ifneq (,$(filter $(OS),SunOS))
  INSTALL ?= ginstall
-@@ -160,29 +154,29 @@ INSTALL_DATA    ?= $(INSTALL) -m 644
+@@ -161,29 +155,29 @@ INSTALL_DATA    ?= $(INSTALL) -m 644
  
  liblz4.pc: liblz4.pc.in Makefile
  	@echo creating pkgconfig
@@ -81,7 +81,7 @@ Make portable. Unlock install target. Use pkgsrc install scripts.
  	@echo lz4 libraries installed
  
  uninstall:
-@@ -197,4 +191,3 @@ uninstall:
+@@ -198,4 +192,3 @@ uninstall:
  	$(Q)$(RM) $(DESTDIR)$(includedir)/lz4frame_static.h
  	@echo lz4 libraries successfully uninstalled
  
