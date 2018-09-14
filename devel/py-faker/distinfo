@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.21 2018/08/14 07:30:56 adam Exp $
+$NetBSD: distinfo,v 1.22 2018/09/14 07:28:54 adam Exp $
 
-SHA1 (Faker-0.9.0.tar.gz) = c22e94a3bc0d1f0c93cbd393c464e23a7370735e
-RMD160 (Faker-0.9.0.tar.gz) = 4e222eaae4a0743aaab7b39e287bae6e16980f9c
-SHA512 (Faker-0.9.0.tar.gz) = 39aca43baf30435a759d649cd6c62ac9389565d82cdfe3ebfd4d9451bee98d23d5e170d5888eca5ded325c9990556ecb499fc6c1b1eea02b9b996cd094425a92
-Size (Faker-0.9.0.tar.gz) = 751181 bytes
+SHA1 (Faker-0.9.1.tar.gz) = f77878648eef65c54b5282cc91ea73a9e3e4dc49
+RMD160 (Faker-0.9.1.tar.gz) = 41f6c28a3e3f3e58189bc10f49a049615da297c1
+SHA512 (Faker-0.9.1.tar.gz) = ee228d286f2055faa373b514072b8b7d7041d932397c695463ae05bde06ce259e4b651187760a79a97c86bef86e3760d20209097b506c9464ead12d2afc5f044
+Size (Faker-0.9.1.tar.gz) = 766252 bytes
