@@ -1,10 +1,22 @@
-$NetBSD: patch-hotspot_src_os__cpu_bsd__zero_vm_os__bsd__zero.cpp,v 1.2 2015/03/31 15:45:40 joerg Exp $
+$NetBSD: patch-hotspot_src_os__cpu_bsd__zero_vm_os__bsd__zero.cpp,v 1.3 2018/09/14 15:53:46 tnn Exp $
 
 SpinPause() needs to return a proper value, or we can apparently crash.
 Already fixed in upstream openjdk8, but not in openjdk7.
+Fix for JDK-8087120 stack frame pointer issue.
 
---- hotspot/src/os_cpu/bsd_zero/vm/os_bsd_zero.cpp.orig	2015-03-25 16:27:54.000000000 +0000
+--- hotspot/src/os_cpu/bsd_zero/vm/os_bsd_zero.cpp.orig	2017-08-13 05:55:27.000000000 +0000
 +++ hotspot/src/os_cpu/bsd_zero/vm/os_bsd_zero.cpp
+@@ -60,8 +60,8 @@
+ #include "utilities/vmError.hpp"
+ 
+ address os::current_stack_pointer() {
+-  address dummy = (address) &dummy;
+-  return dummy;
++  // return the address of the current function
++  return (address)__builtin_frame_address(0);
+ }
+ 
+ frame os::get_sender_for_C_frame(frame* fr) {
 @@ -464,6 +464,7 @@ void os::print_register_info(outputStrea
  
  extern "C" {
@@ -13,7 +25,7 @@ Already fixed in upstream openjdk8, but not in openjdk7.
    }
  
    int SafeFetch32(int *adr, int errValue) {
-@@ -543,21 +544,6 @@ extern "C" {
+@@ -542,21 +543,6 @@ extern "C" {
    }
  };
  
