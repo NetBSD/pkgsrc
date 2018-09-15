@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1225 2018/09/09 13:16:36 taca Exp $
+# $NetBSD: Makefile,v 1.1226 2018/09/15 10:53:59 leot Exp $
 #
 
 COMMENT=	Networking tools
@@ -686,6 +686,7 @@ SUBDIR+=	py-pydns
 SUBDIR+=	py-pylint-celery
 SUBDIR+=	py-requestbuilder
 SUBDIR+=	py-responses
+SUBDIR+=	py-rt
 SUBDIR+=	py-s3cmd
 SUBDIR+=	py-s3transfer
 SUBDIR+=	py-scp
