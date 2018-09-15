@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2018/06/24 16:59:52 adam Exp $
+# $NetBSD: options.mk,v 1.2.2.1 2018/09/15 12:25:47 bsiegert Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rtorrent
 PKG_SUPPORTED_OPTIONS=	xmlrpc
-PKG_SUGGESTED_OPTIONS=	xmlrpc
+PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
 
