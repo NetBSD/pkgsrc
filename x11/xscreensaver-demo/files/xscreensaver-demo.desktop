@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Screensaver
+Exec=xscreensaver-demo
+Icon=xscreensaver
+Terminal=false
+Categories=Settings;
