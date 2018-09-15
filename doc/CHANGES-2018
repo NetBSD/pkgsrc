@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4033 2018/09/15 03:09:24 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.4034 2018/09/15 03:23:35 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5656,3 +5656,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/openjdk8 to 1.8.181 [ryoon 2018-09-15]
 	Updated lang/gcc8 to 8.2.0 [ryoon 2018-09-15]
 	Added lang/gcc8-libs version 8.2.0nb1 [ryoon 2018-09-15]
+	Updated misc/libreoffice to 6.1.1.2 [ryoon 2018-09-15]
