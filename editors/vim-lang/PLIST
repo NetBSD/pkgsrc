@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2018/07/28 08:29:02 morr Exp $
-man/da.ISO8859-1/man1/evim.1
+@comment $NetBSD: PLIST,v 1.24 2018/09/15 12:36:41 bsiegert Exp $
 man/da.ISO8859-1/man1/ex.1
 man/da.ISO8859-1/man1/rview.1
 man/da.ISO8859-1/man1/rvim.1
@@ -7,7 +6,6 @@ man/da.ISO8859-1/man1/view.1
 man/da.ISO8859-1/man1/vim.1
 man/da.ISO8859-1/man1/vimdiff.1
 man/da.ISO8859-1/man1/vimtutor.1
-man/da.UTF-8/man1/evim.1
 man/da.UTF-8/man1/ex.1
 man/da.UTF-8/man1/rview.1
 man/da.UTF-8/man1/rvim.1
@@ -15,7 +13,6 @@ man/da.UTF-8/man1/view.1
 man/da.UTF-8/man1/vim.1
 man/da.UTF-8/man1/vimdiff.1
 man/da.UTF-8/man1/vimtutor.1
-man/da/man1/evim.1
 man/da/man1/ex.1
 man/da/man1/rview.1
 man/da/man1/rvim.1
@@ -23,27 +20,21 @@ man/da/man1/view.1
 man/da/man1/vim.1
 man/da/man1/vimdiff.1
 man/da/man1/vimtutor.1
-man/de.ISO8859-1/man1/evim.1
 man/de.ISO8859-1/man1/ex.1
 man/de.ISO8859-1/man1/rview.1
 man/de.ISO8859-1/man1/rvim.1
 man/de.ISO8859-1/man1/view.1
 man/de.ISO8859-1/man1/vim.1
-man/de.ISO8859-1/man1/vimtutor.1
-man/de.UTF-8/man1/evim.1
 man/de.UTF-8/man1/ex.1
 man/de.UTF-8/man1/rview.1
 man/de.UTF-8/man1/rvim.1
 man/de.UTF-8/man1/view.1
 man/de.UTF-8/man1/vim.1
-man/de.UTF-8/man1/vimtutor.1
-man/de/man1/evim.1
 man/de/man1/ex.1
 man/de/man1/rview.1
 man/de/man1/rvim.1
 man/de/man1/view.1
 man/de/man1/vim.1
-man/de/man1/vimtutor.1
 man/fr.ISO8859-1/man1/evim.1
 man/fr.ISO8859-1/man1/ex.1
 man/fr.ISO8859-1/man1/rview.1
