@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4038 2018/09/15 10:54:18 leot Exp $
+$NetBSD: CHANGES-2018,v 1.4039 2018/09/15 12:38:25 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5661,3 +5661,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/firefox60-l10n to 60.2.0 [ryoon 2018-09-15]
 	Updated devel/ncurses to 6.1nb1 [maya 2018-09-15]
 	Added net/py-rt version 1.0.11 [leot 2018-09-15]
+	Updated editors/vim to 8.1.0390 [bsiegert 2018-09-15]
