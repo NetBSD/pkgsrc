@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2018/07/28 08:27:35 morr Exp $
+@comment $NetBSD: PLIST,v 1.42 2018/09/15 12:36:41 bsiegert Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -6,6 +6,7 @@ man/man1/vimdiff.1
 man/man1/vimtutor.1
 man/man1/xxd.1
 share/vim/${VIM_SUBDIR}/autoload/README.txt
+share/vim/${VIM_SUBDIR}/autoload/RstFold.vim
 share/vim/${VIM_SUBDIR}/autoload/ada.vim
 share/vim/${VIM_SUBDIR}/autoload/adacomplete.vim
 share/vim/${VIM_SUBDIR}/autoload/ccomplete.vim
@@ -18,6 +19,7 @@ share/vim/${VIM_SUBDIR}/autoload/dist/ft.vim
 share/vim/${VIM_SUBDIR}/autoload/getscript.vim
 share/vim/${VIM_SUBDIR}/autoload/gnat.vim
 share/vim/${VIM_SUBDIR}/autoload/gzip.vim
+share/vim/${VIM_SUBDIR}/autoload/haskellcomplete.vim
 share/vim/${VIM_SUBDIR}/autoload/htmlcomplete.vim
 share/vim/${VIM_SUBDIR}/autoload/javascriptcomplete.vim
 share/vim/${VIM_SUBDIR}/autoload/netrw.vim
@@ -133,6 +135,7 @@ share/vim/${VIM_SUBDIR}/compiler/rustc.vim
 share/vim/${VIM_SUBDIR}/compiler/sass.vim
 share/vim/${VIM_SUBDIR}/compiler/se.vim
 share/vim/${VIM_SUBDIR}/compiler/splint.vim
+share/vim/${VIM_SUBDIR}/compiler/stack.vim
 share/vim/${VIM_SUBDIR}/compiler/tcl.vim
 share/vim/${VIM_SUBDIR}/compiler/tex.vim
 share/vim/${VIM_SUBDIR}/compiler/tidy.vim
@@ -484,6 +487,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/verilog.vim
 share/vim/${VIM_SUBDIR}/ftplugin/vhdl.vim
 share/vim/${VIM_SUBDIR}/ftplugin/vim.vim
 share/vim/${VIM_SUBDIR}/ftplugin/vroom.vim
+share/vim/${VIM_SUBDIR}/ftplugin/wast.vim
 share/vim/${VIM_SUBDIR}/ftplugin/xdefaults.vim
 share/vim/${VIM_SUBDIR}/ftplugin/xf86conf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/xhtml.vim
@@ -527,6 +531,7 @@ share/vim/${VIM_SUBDIR}/indent/d.vim
 share/vim/${VIM_SUBDIR}/indent/dictconf.vim
 share/vim/${VIM_SUBDIR}/indent/dictdconf.vim
 share/vim/${VIM_SUBDIR}/indent/docbk.vim
+share/vim/${VIM_SUBDIR}/indent/dosbatch.vim
 share/vim/${VIM_SUBDIR}/indent/dtd.vim
 share/vim/${VIM_SUBDIR}/indent/dtrace.vim
 share/vim/${VIM_SUBDIR}/indent/dylan.vim
@@ -612,6 +617,7 @@ share/vim/${VIM_SUBDIR}/indent/verilog.vim
 share/vim/${VIM_SUBDIR}/indent/vhdl.vim
 share/vim/${VIM_SUBDIR}/indent/vim.vim
 share/vim/${VIM_SUBDIR}/indent/vroom.vim
+share/vim/${VIM_SUBDIR}/indent/wast.vim
 share/vim/${VIM_SUBDIR}/indent/xf86conf.vim
 share/vim/${VIM_SUBDIR}/indent/xhtml.vim
 share/vim/${VIM_SUBDIR}/indent/xinetd.vim
@@ -637,7 +643,6 @@ share/vim/${VIM_SUBDIR}/macros/life/life.vim
 share/vim/${VIM_SUBDIR}/macros/matchit.vim
 share/vim/${VIM_SUBDIR}/macros/maze/Makefile
 share/vim/${VIM_SUBDIR}/macros/maze/README.txt
-share/vim/${VIM_SUBDIR}/macros/maze/main.aap
 share/vim/${VIM_SUBDIR}/macros/maze/maze.c
 share/vim/${VIM_SUBDIR}/macros/maze/maze_5.78
 share/vim/${VIM_SUBDIR}/macros/maze/maze_mac
@@ -653,6 +658,7 @@ share/vim/${VIM_SUBDIR}/macros/urm/urm.vim
 share/vim/${VIM_SUBDIR}/menu.vim
 share/vim/${VIM_SUBDIR}/mswin.vim
 share/vim/${VIM_SUBDIR}/optwin.vim
+share/vim/${VIM_SUBDIR}/pack/dist/opt/cfilter/plugin/cfilter.vim
 share/vim/${VIM_SUBDIR}/pack/dist/opt/dvorak/dvorak/disable.vim
 share/vim/${VIM_SUBDIR}/pack/dist/opt/dvorak/dvorak/enable.vim
 share/vim/${VIM_SUBDIR}/pack/dist/opt/dvorak/plugin/dvorak.vim
@@ -1293,6 +1299,7 @@ share/vim/${VIM_SUBDIR}/syntax/voscm.vim
 share/vim/${VIM_SUBDIR}/syntax/vrml.vim
 share/vim/${VIM_SUBDIR}/syntax/vroom.vim
 share/vim/${VIM_SUBDIR}/syntax/vsejcl.vim
+share/vim/${VIM_SUBDIR}/syntax/wast.vim
 share/vim/${VIM_SUBDIR}/syntax/wdiff.vim
 share/vim/${VIM_SUBDIR}/syntax/web.vim
 share/vim/${VIM_SUBDIR}/syntax/webmacro.vim
