@@ -1,4 +1,4 @@
-# $NetBSD: go-package.mk,v 1.15 2018/08/29 10:11:57 leot Exp $
+# $NetBSD: go-package.mk,v 1.16 2018/09/15 00:31:11 minskim Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 #
@@ -69,6 +69,8 @@ GOTOOLDIR=		${PREFIX}/go/pkg/tool/${GO_PLATFORM}
 PRINT_PLIST_AWK+=	/${GO_PLATFORM}/ { gsub(/${GO_PLATFORM}/, \
 			"$${GO_PLATFORM}"); \
 			print; next; }
+PRINT_PLIST_AWK+=	/^@pkgdir bin$$/ { next; }
+PRINT_PLIST_AWK+=	/^@pkgdir gopkg$$/ { next; }
 
 MAKE_ENV+=	GOPATH=${WRKDIR}:${BUILDLINK_DIR}/gopkg 
 MAKE_ENV+=	GOCACHE=${WRKDIR}/.cache/go-build
