@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.59 2018/09/14 15:53:46 tnn Exp $
+$NetBSD: distinfo,v 1.60 2018/09/15 02:51:02 ryoon Exp $
 
 SHA1 (openjdk7/bootstrap-jdk-1.7.141-netbsd-8-aarch64-20180914.tar.xz) = df24cbd6fb2ae529c80ab9d80b30680c24f43f44
 RMD160 (openjdk7/bootstrap-jdk-1.7.141-netbsd-8-aarch64-20180914.tar.xz) = e755550ef882116ea9d8e1d272d07e7b297deec8
@@ -65,10 +65,10 @@ SHA1 (patch-bn) = a50dbe17236a90d60d4bbb852ae447e51a279892
 SHA1 (patch-common_autoconf_boot-jdk.m4) = 530da90ea4062f9d8c208557ff634579b0b19f55
 SHA1 (patch-common_autoconf_generated-configure.sh) = 71ceb540d46c9acd43b54c7d73c93e5b0a03f939
 SHA1 (patch-common_autoconf_spec.gmk.in) = e98bc4c8a09f49c6a26447e6f78abf4709ee694b
-SHA1 (patch-hotspot_agent_src_os_bsd_Makefile) = a686ca478011561df93cce6311b5a344d79c3a24
+SHA1 (patch-hotspot_agent_src_os_bsd_Makefile) = 6e4c41b080577ed7cd418ee3b84f7f5a73dd11e6
 SHA1 (patch-hotspot_agent_src_share_classes_sun_jvm_hotspot_utilities_PlatformInfo.java) = 893f3b7ad0839a75be49ddd0f5eefcff2dbd2928
 SHA1 (patch-hotspot_make_bsd_makefiles_defs.make) = 2c0d286c87f8239e8d5aa7fcc21e09b4b1c5a46e
-SHA1 (patch-hotspot_make_bsd_makefiles_jsig.make) = 36ba2dc2db7d802aa558ea984afa42ae2d61deb7
+SHA1 (patch-hotspot_make_bsd_makefiles_jsig.make) = 3ed5ea8c4bb595cd72837c986fdd131102a9e083
 SHA1 (patch-hotspot_make_bsd_makefiles_saproc.make) = 76a0cc758ee1d62136e8e698df7e46fe20aa9e19
 SHA1 (patch-hotspot_make_solaris_makefiles_adlc.make) = 1d1be862ed0d8fc3da4710da169ad5a965d9df14
 SHA1 (patch-hotspot_make_solaris_makefiles_build__vm__def.sh) = 54d197a94d27406f2957b5c2a7a7982866f99239
@@ -85,7 +85,7 @@ SHA1 (patch-hotspot_make_solaris_makefiles_product.make) = c41b360302bffd9fbfaa3
 SHA1 (patch-hotspot_make_solaris_makefiles_saproc.make) = 0ca85ba72d154643b934815a0a2deb1e77371ff9
 SHA1 (patch-hotspot_make_solaris_makefiles_vm.make) = 787e0c68cf976fc0df3e19fb2a22b1b7e3662c07
 SHA1 (patch-hotspot_src_cpu_zero_vm_methodHandles__zero.cpp) = 9f7acf1eff3baba430880be9fd0f6148056dd088
-SHA1 (patch-hotspot_src_cpu_zero_vm_nativeInst__zero.cpp) = dcd83b65a7d74e153a3e1c44f8c7980827ec20c7
+SHA1 (patch-hotspot_src_cpu_zero_vm_nativeInst__zero.cpp) = 446b96a91a2e4fa76f43ac653d1608f037c64af9
 SHA1 (patch-hotspot_src_os__cpu_bsd__zero_vm_atomic__bsd__zero.inline.hpp) = e87224f8b67dc78fa411d30beff82ce5ccbb4cc5
 SHA1 (patch-hotspot_src_os__cpu_bsd__zero_vm_orderAccess__bsd__zero.inline.hpp) = 6311d68db9064afc470f1d9fd37e63011899659a
 SHA1 (patch-hotspot_src_os__cpu_bsd__zero_vm_os__bsd__zero.cpp) = cea10db5bf4ee4b939543b66340bfd59474ca5e0
@@ -107,15 +107,8 @@ SHA1 (patch-hotspot_src_share_vm_oops_klass.hpp) = 2a728aa8fb04976195ebf58549a54
 SHA1 (patch-hotspot_src_share_vm_opto_library__call.cpp) = 4654248e3fdf9a1be8ef5563e50b12dcd59aa1aa
 SHA1 (patch-hotspot_src_share_vm_opto_node.cpp) = aacb4e03f62f1a6f9b38de39a966c318b70b1293
 SHA1 (patch-hotspot_src_share_vm_runtime_arguments.cpp) = 80265396c62de95b0937d770c1dba0e8a53daa80
-SHA1 (patch-hotspot_src_share_vm_services_mallocSiteTable.hpp) = d0d8b8023d89c5cf6216d578478f5ed76a00740e
-SHA1 (patch-hotspot_src_share_vm_services_memTracker.cpp) = 8bd31a59a2514b99db2bb25b26bce54bd94a012e
-SHA1 (patch-hotspot_src_share_vm_services_memTracker.hpp) = 40239944a15cf5ef40a00bb5dd7078f412daca8e
-SHA1 (patch-hotspot_src_share_vm_services_virtualMemoryTracker.cpp) = 3bccafe6fb16029a065d74ea0b75a1541ee049d6
-SHA1 (patch-hotspot_src_share_vm_services_virtualMemoryTracker.hpp) = 8451d864668d7d78e148f684b4da46763f59a2b9
 SHA1 (patch-hotspot_src_share_vm_utilities_globalDefinitions__gcc.hpp) = a8e8fef04d7acb4772f57961e7df3681bd53d0b9
 SHA1 (patch-hotspot_src_share_vm_utilities_hashtable.cpp) = 83b90d951ce3aa9e913a36d792ac7376fb3d8bc7
-SHA1 (patch-hotspot_src_share_vm_utilities_nativeCallStack.cpp) = bfda35cac1f44eeededa2e26747f1439fea34e8e
-SHA1 (patch-hotspot_src_share_vm_utilities_nativeCallStack.hpp) = e3d2aa1a98d7fc6e6a797cde3efbcf61fea03a27
 SHA1 (patch-jdk_make_CompileDemos.gmk) = 4d5e2e9b0e35e373e6246408c775c25094b6f1c7
 SHA1 (patch-jdk_make_CompileLaunchers.gmk) = d496999f10fc56b1d68283ab4636787058f51090
 SHA1 (patch-jdk_make_CreateJars.gmk) = 0f49c8ec33121d7878ea4b6bd06d2e4e4af9a1d5
