@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4043 2018/09/15 19:41:00 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.4044 2018/09/15 22:47:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5666,3 +5666,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated shells/zsh to 5.6.2 [wen 2018-09-15]
 	Added time/memo version 0.6 [khorben 2018-09-15]
 	Updated wm/evilwm to 1.1.1nb1 [jperkin 2018-09-15]
+	Updated devel/ncurses to 6.1nb2 [wiz 2018-09-15]
