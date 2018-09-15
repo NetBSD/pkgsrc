@@ -1,2 +1,2 @@
-# $NetBSD: version.mk,v 1.1 2018/05/05 04:08:36 maya Exp $
-GCC8_DIST_VERSION:=	8.1.0
+# $NetBSD: version.mk,v 1.2 2018/09/15 03:06:15 ryoon Exp $
+GCC8_DIST_VERSION:=	8.2.0
