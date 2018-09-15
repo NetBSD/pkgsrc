@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/09/13 14:56:43 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2018/09/15 13:56:15 tnn Exp $
 
 DISTNAME=	rebar3-3.6.1
 CATEGORIES=	devel
@@ -32,7 +32,7 @@ EXTRACT_DIR.${dep}.tar=	${WRKSRC}/_build/default/lib/${dep:C/-.*//}
 .endfor
 
 DISTFILES+=				${DISTNAME:S/-/-cache-/}.tar.gz
-SITES.${DISTNAME:S/-/-cache-/}.tar.gz=	ftp://ftp.netbsd.org:/pub/NetBSD/misc/fhajny/
+SITES.${DISTNAME:S/-/-cache-/}.tar.gz=	https://ftp.netbsd.org/pub/NetBSD/misc/fhajny/
 
 SUBST_CLASSES+=		escript
 SUBST_STAGE.escript=	pre-configure
