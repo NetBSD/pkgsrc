@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2018/04/02 16:26:03 spz Exp $
+@comment $NetBSD: PLIST,v 1.25 2018/09/15 10:21:53 maya Exp $
 bin/captoinfo
 bin/clear
 bin/infocmp
@@ -925,6 +925,11 @@ man/man5/terminfo.5
 man/man5/user_caps.5
 man/man7/term.7
 share/examples/ncurses++demo.cc
+share/pkgconfig/form.pc
+share/pkgconfig/menu.pc
+share/pkgconfig/ncurses++.pc
+share/pkgconfig/ncurses.pc
+share/pkgconfig/panel.pc
 share/tabset/std
 share/tabset/stdcrt
 share/tabset/vt100
