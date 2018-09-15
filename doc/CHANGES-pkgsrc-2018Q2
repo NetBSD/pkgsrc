@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q2,v 1.1.2.16 2018/09/12 17:50:44 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q2,v 1.1.2.17 2018/09/15 12:26:23 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q2 branch:
 
@@ -138,4 +138,7 @@ x11/xlockmore, x11/xlockmore-lite: build fix
 
 Pullup ticket #5828 - requested by leot
 net/youtube-dl: bugfix
+
+Pullup ticket #5830 - requested by maya
+net/rtorrent: security fix (remote code execution)
 
