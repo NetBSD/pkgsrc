@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2018/09/15 10:21:53 maya Exp $
+# $NetBSD: Makefile.common,v 1.37 2018/09/15 22:47:41 wiz Exp $
 #
 # used by devel/ncurses/Makefile
 # used by devel/ncursesw/Makefile
@@ -16,13 +16,14 @@ LICENSE=	mit
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake tbl
+USE_TOOLS+=		gmake pkg-config tbl
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libtool
 CONFIGURE_ARGS+=	--enable-bsdpad
 CONFIGURE_ARGS+=	--enable-overwrite
 CONFIGURE_ARGS+=	--with-cxx-binding
 CONFIGURE_ARGS+=	--enable-pc-files
+CONFIGURE_ARGS+=	--with-pkg-config-libdir=${PREFIX}/lib/pkgconfig
 CONFIGURE_ARGS+=	--without-ada
 CONFIGURE_ARGS+=	--without-gpm
 CONFIGURE_ARGS+=	--with-manpage-format=normal
