@@ -1,18 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2018/09/15 16:17:10 khorben Exp $
+# $NetBSD: Makefile,v 1.4 2018/09/15 16:25:22 khorben Exp $
 
-GITHUB_PROJECT=	memo
-DISTNAME=	0.6
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
+DISTNAME=	memo-0.6
 PKGREVISION=	1
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mrVanDalo/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://github.com/mrVanDalo/memo/
 COMMENT=	A simple memo tool written in bash
 LICENSE=	gnu-gpl-v3
-WRKSRC=		${WRKDIR}/memo-${DISTNAME}
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	bash:run
