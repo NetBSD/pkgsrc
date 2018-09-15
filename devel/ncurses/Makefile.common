@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.35 2018/04/02 16:26:03 spz Exp $
+# $NetBSD: Makefile.common,v 1.36 2018/09/15 10:21:53 maya Exp $
 #
 # used by devel/ncurses/Makefile
 # used by devel/ncursesw/Makefile
@@ -22,6 +22,7 @@ CONFIGURE_ARGS+=	--with-libtool
 CONFIGURE_ARGS+=	--enable-bsdpad
 CONFIGURE_ARGS+=	--enable-overwrite
 CONFIGURE_ARGS+=	--with-cxx-binding
+CONFIGURE_ARGS+=	--enable-pc-files
 CONFIGURE_ARGS+=	--without-ada
 CONFIGURE_ARGS+=	--without-gpm
 CONFIGURE_ARGS+=	--with-manpage-format=normal
