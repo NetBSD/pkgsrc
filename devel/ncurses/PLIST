@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2018/09/15 10:21:53 maya Exp $
+@comment $NetBSD: PLIST,v 1.26 2018/09/15 22:47:41 wiz Exp $
 bin/captoinfo
 bin/clear
 bin/infocmp
@@ -35,6 +35,11 @@ lib/libgnumenu.la
 lib/libgnupanel.la
 lib/libncurses++.la
 lib/libncurses.la
+lib/pkgconfig/form.pc
+lib/pkgconfig/menu.pc
+lib/pkgconfig/ncurses++.pc
+lib/pkgconfig/ncurses.pc
+lib/pkgconfig/panel.pc
 man/man1/captoinfo.1
 man/man1/clear.1
 man/man1/infocmp.1
@@ -925,11 +930,6 @@ man/man5/terminfo.5
 man/man5/user_caps.5
 man/man7/term.7
 share/examples/ncurses++demo.cc
-share/pkgconfig/form.pc
-share/pkgconfig/menu.pc
-share/pkgconfig/ncurses++.pc
-share/pkgconfig/ncurses.pc
-share/pkgconfig/panel.pc
 share/tabset/std
 share/tabset/stdcrt
 share/tabset/vt100
