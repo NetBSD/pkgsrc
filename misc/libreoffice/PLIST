@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2018/08/18 00:11:32 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.30 2018/09/15 03:22:50 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -6876,6 +6876,17 @@ ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/pythonpath/lightproof_impl_h
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/pythonpath/lightproof_opts_hu_HU.py
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/th_hu_HU_v2.dat
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/th_hu_HU_v2.idx
+${PKGNAME}/lib/libreoffice/share/extensions/dict-id/LICENSE-dict
+${PKGNAME}/lib/libreoffice/share/extensions/dict-id/LICENSE-thes
+${PKGNAME}/lib/libreoffice/share/extensions/dict-id/META-INF/manifest.xml
+${PKGNAME}/lib/libreoffice/share/extensions/dict-id/README-dict.md
+${PKGNAME}/lib/libreoffice/share/extensions/dict-id/README-thes
+${PKGNAME}/lib/libreoffice/share/extensions/dict-id/description.xml
+${PKGNAME}/lib/libreoffice/share/extensions/dict-id/dictionaries.xcu
+${PKGNAME}/lib/libreoffice/share/extensions/dict-id/id_ID.aff
+${PKGNAME}/lib/libreoffice/share/extensions/dict-id/id_ID.dic
+${PKGNAME}/lib/libreoffice/share/extensions/dict-id/th_id_ID_v2.dat
+${PKGNAME}/lib/libreoffice/share/extensions/dict-id/th_id_ID_v2.idx
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-is/META-INF/manifest.xml
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-is/description.xml
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-is/dictionaries.xcu
