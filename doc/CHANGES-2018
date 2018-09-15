@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4041 2018/09/15 13:41:28 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4042 2018/09/15 15:15:41 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5664,3 +5664,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated editors/vim to 8.1.0390 [bsiegert 2018-09-15]
 	Updated www/moodle to 3.5.2 [wen 2018-09-15]
 	Updated shells/zsh to 5.6.2 [wen 2018-09-15]
+	Added time/memo version 0.6 [khorben 2018-09-15]
