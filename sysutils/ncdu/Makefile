@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2017/09/03 08:53:15 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2018/09/15 00:11:57 maya Exp $
 
-DISTNAME=	ncdu-1.12
-PKGREVISION=	1
+DISTNAME=	ncdu-1.13
 CATEGORIES=	filesystems
 MASTER_SITES=	https://dev.yorhel.nl/download/
 
