@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/05/23 07:56:53 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/09/16 13:18:54 triaxx Exp $
 bin/grub-editenv
 bin/grub-file
 bin/grub-fstest
@@ -13,6 +13,7 @@ bin/grub-mkpasswd-pbkdf2
 bin/grub-mkrelpath
 bin/grub-mkrescue
 bin/grub-mkstandalone
+${PLIST.fuse}bin/grub-mount
 bin/grub-render-label
 bin/grub-script-check
 bin/grub-syslinux2cfg
@@ -587,6 +588,7 @@ man/man1/grub-mkpasswd-pbkdf2.1
 man/man1/grub-mkrelpath.1
 man/man1/grub-mkrescue.1
 man/man1/grub-mkstandalone.1
+${PLIST.fuse}man/man1/grub-mount.1
 man/man1/grub-render-label.1
 man/man1/grub-script-check.1
 man/man1/grub-syslinux2cfg.1
