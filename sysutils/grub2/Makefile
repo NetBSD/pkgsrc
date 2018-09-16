@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/09/16 14:37:08 triaxx Exp $
+# $NetBSD: Makefile,v 1.16 2018/09/16 15:07:54 triaxx Exp $
 
 DISTNAME=		grub-2.02
 PKGNAME=		${DISTNAME:S/grub/grub2/}
@@ -65,7 +65,7 @@ PLIST_SUBST+=		GRUB_PLATFORM=${GRUB_PLATFORM}
 # Unset ABI to prevent pkgsrc's gcc wrapper from messing with -m flags.
 #
 .if defined(ABI) && !empty(ABI)
-ABI=
+.undef ABI
 .endif
 
 #
@@ -113,7 +113,7 @@ SUBST_SED.fix-os-conf=		-e 's,^@COND_HOST_[A-Z]*_TRUE@,,g'
 SUBST_CLASSES+=			fix-paths-1
 SUBST_STAGE.fix-paths-1=	pre-configure
 SUBST_MESSAGE.fix-paths-1=	Fixing configuration paths in scripts.
-SUBST_FILES.fix-paths-1=	util/grub-install.in util/grub-mkconfig.in
+SUBST_FILES.fix-paths-1=	util/grub-mkconfig.in
 SUBST_SED.fix-paths-1=		-e 's,\(\$${sysconfdir}"\{0\,1\}\)/grub.d,\1,g'
 SUBST_SED.fix-paths-1+=		-e 's,\(\$${sysconfdir}"\{0\,1\}\)/default/grub,\1/default.conf,g'
 
