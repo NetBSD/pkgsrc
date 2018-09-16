@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18556 2018/09/15 03:07:21 ryoon Exp $
+$NetBSD: TODO,v 1.18557 2018/09/16 16:34:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -401,6 +401,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ap22-limitipconn-0.24
 	o ap22-vhost-ldap-2.4.0
 	o apollo-1.7
+	o apr-1.6.5
 	o apr0-2.4.1
 	o ardour-5.11
 	o argtable-2.9
@@ -776,6 +777,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o handbrake-1.1.0
 	o hanzim-3.5
+	o harfbuzz-1.9.0
 	o harminv-1.4
 	o haskell-mode-13.20
 	o hdevtools-0.1.3.0
@@ -953,6 +955,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libcarddav-14.0.4
 	o libconfuse-3.1
 	o libextractor-1.2 [requires shm_open()]
+	o libfilezilla-0.13.1
 	o libflash-0.4.13
 	o libfolks-0.10.1 [wip]
 	o libgdiplus-4.2
@@ -1150,6 +1153,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pcal-4.8
 	o pcc-1.1.0
 	o pcc-current-20160305
+	o pcre2-10.32
 	o pdmenu-1.2.87
 	o pen-0.32.0
 	o pessulus-2.30.3 [GNOME 2.28]
@@ -1229,11 +1233,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-doctor-15.1.0
 	o py-ephem3-3.7.6.0
 	o py-gnome-menus-3.8.0
-	o py-gobject3-3.30.0
+	o py-gobject3-3.30.1
 	o py-hgview-1.9.0
 	o py-hsm-1.1.1
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
+	o py-mechanize-0.3.7
 	o py-mercurial-4.7.1
 	o py-musicbrainz-0.7.4
 	o py-newt-0.52.20
@@ -1343,6 +1348,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sope-4.6
 	o sord-0.14.0
 	o sound-juicer-3.16.1
+	o spamassassin-3.4.2
 	o sparse-0.5.0
 	o spcaview-20060501
 	o spectrwm-2.7.2
@@ -1494,6 +1500,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xcoral-3.14
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
+	o xf86-video-amdgpu-18.1.0
+	o xf86-video-ati-18.1.0
 	o xf86-video-geode-2.11.9 [wip]
 	o xf86-video-glide-1.2.2
 	o xf86-video-sisusb-0.9.4
