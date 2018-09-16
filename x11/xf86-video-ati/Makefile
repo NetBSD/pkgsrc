@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2018/03/15 23:45:25 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2018/09/16 20:28:51 triaxx Exp $
 
-DISTNAME=	xf86-video-ati-18.0.1
+DISTNAME=	xf86-video-ati-18.1.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular Xorg ATI Radeon video driver
+LICENSE=	mit AND x11
 
 CONFIGURE_ARGS+=	--enable-dri
 
