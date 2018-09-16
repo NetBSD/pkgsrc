@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/07/04 13:40:37 jperkin Exp $
+# $NetBSD: Makefile,v 1.15 2018/09/16 14:37:08 triaxx Exp $
 
 DISTNAME=		grub-2.02
 PKGNAME=		${DISTNAME:S/grub/grub2/}
@@ -134,13 +134,6 @@ SUBST_STAGE.fix-sed-tabs=	pre-configure
 SUBST_MESSAGE.fix-sed-tabs=	Fixing tabulations for sed in scripts.
 SUBST_FILES.fix-sed-tabs=	util/grub.d/*.in
 SUBST_SED.fix-sed-tabs=		-e 's,\\t,	,g'
-
-#
-# Remove executable bit from non-executable files.
-#
-post-install:
-	${CHMOD} a-x ${DESTDIR}${PREFIX}/lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gdb_grub
-	${CHMOD} a-x ${DESTDIR}${PREFIX}/lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gmodule.pl
 
 #
 # Includes.
