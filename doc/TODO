@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18558 2018/09/16 20:29:42 triaxx Exp $
+$NetBSD: TODO,v 1.18559 2018/09/16 20:35:08 triaxx Exp $
 
 Suggested new packages
 ======================
@@ -1500,7 +1500,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xcoral-3.14
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
-	o xf86-video-amdgpu-18.1.0
 	o xf86-video-geode-2.11.9 [wip]
 	o xf86-video-glide-1.2.2
 	o xf86-video-sisusb-0.9.4

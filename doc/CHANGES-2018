@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4045 2018/09/16 20:29:42 triaxx Exp $
+$NetBSD: CHANGES-2018,v 1.4046 2018/09/16 20:35:08 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5668,3 +5668,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated wm/evilwm to 1.1.1nb1 [jperkin 2018-09-15]
 	Updated devel/ncurses to 6.1nb2 [wiz 2018-09-15]
 	Updated x11/xf86-video-ati to 18.1.0 [triaxx 2018-09-16]
+	Updated x11/xf86-video-amdgpu to 18.1.0 [triaxx 2018-09-16]
