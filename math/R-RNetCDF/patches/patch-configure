@@ -1,0 +1,33 @@
+$NetBSD: patch-configure,v 1.1 2018/09/17 13:24:18 maya Exp $
+
+Fix the use of == in shell scripts.
+
+--- configure.orig	2016-11-06 16:18:40.084776697 +0000
++++ configure
+@@ -3275,7 +3275,7 @@ fi
+ done
+ 
+ 
+-if test "x$have_nc_config" == xyes; then :
++if test "x$have_nc_config" = xyes; then :
+ 
+     # Find libraries and cflags used to build netcdf:
+     { $as_echo "$as_me:${as_lineno-$LINENO}: checking netcdf linker flags" >&5
+@@ -3589,7 +3589,7 @@ fi
+ # Define variables UDUNITS_LIB, UDUNITS_DBFILE and UDUNITS_DBVAR,
+ # based on the version of udunits detected above.
+ # Also define preprocessor macro HAVE_LIBUDUNITS or HAVE_LIBUDUNITS2.
+-if test $udunits == 2; then :
++if test $udunits = 2; then :
+ 
+     UDUNITS_LIB=udunits2
+     UDUNITS_DBFILE=udunits2.xml
+@@ -3597,7 +3597,7 @@ if test $udunits == 2; then :
+     $as_echo "#define HAVE_LIBUDUNITS2 1" >>confdefs.h
+ 
+ 
+-elif test $udunits == 1; then :
++elif test $udunits = 1; then :
+ 
+     UDUNITS_LIB=udunits
+     UDUNITS_DBFILE=udunits.dat
