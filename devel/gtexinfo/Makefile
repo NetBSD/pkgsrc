@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2018/08/30 11:27:48 tnn Exp $
+# $NetBSD: Makefile,v 1.101 2018/09/17 13:37:26 maya Exp $
 
 DISTNAME=		texinfo-6.5
 PKGNAME=		g${DISTNAME}
@@ -27,6 +27,9 @@ INFO_FILES=		yes
 TEST_TARGET=		check
 PLIST_SRC=		${PKGDIR}/PLIST
 USE_TOOLS+=		perl:run
+
+# Replace deeply nested config.sub files (in vendored perl libraries)
+OVERRIDE_DIRDEPTH=	4
 
 PKGSRC_INFOPATH=	${PREFIX}/${PKGINFODIR}:${X11BASE}/${PKGINFODIR}:${LOCALBASE}/${PKGINFODIR}
 MAKE_ENV+=		PKGSRC_INFOPATH=${PKGSRC_INFOPATH:Q}
