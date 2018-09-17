@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/07/04 13:40:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2018/09/17 16:14:07 adam Exp $
 
 .include "../../databases/sqlite3/Makefile.common"
 
@@ -20,6 +20,7 @@ MAINTAINER=	airhead@users.sf.net
 HOMEPAGE=	http://www.hwaci.com/sw/lemon/
 COMMENT=	Simple LALR(1) parser generator
 
+CHECK_PORTABILITY_SKIP=	configure
 INSTALLATION_DIRS=	bin share/lemon share/doc/lemon
 
 SUBST_CLASSES+=		paths
