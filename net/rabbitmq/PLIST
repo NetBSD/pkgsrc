@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2018/05/14 11:26:15 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.32 2018/09/17 18:07:37 fhajny Exp $
 lib/erlang/autocomplete/bash_autocomplete.sh
 lib/erlang/autocomplete/zsh_autocomplete.sh
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/INSTALL
@@ -176,7 +176,7 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/cowboy-2.2.2.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/cowlib-2.1.0.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/goldrush-0.1.9.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/jsx-2.8.2.ez
-lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/lager-3.5.1.ez
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/lager-3.6.3.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbit_common-${PKGVERSION}.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_amqp1_0-${PKGVERSION}.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_auth_backend_cache-${PKGVERSION}.ez
@@ -214,6 +214,7 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_web_stomp_examples
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/ranch-1.5.0.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/ranch_proxy_protocol-1.5.0.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/recon-2.3.2.ez
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/syslog-3.4.2.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/priv/schema/rabbit.schema
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/sbin/cuttlefish
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/sbin/rabbitmq-defaults
