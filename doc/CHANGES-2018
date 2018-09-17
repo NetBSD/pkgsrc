@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4048 2018/09/17 11:15:01 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.4049 2018/09/17 13:24:45 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5672,3 +5672,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-tornado to 5.1.1 [adam 2018-09-17]
 	Updated textproc/py-openpyxl to 2.5.7 [adam 2018-09-17]
 	Updated net/py-lexicon to 2.7.3 [fhajny 2018-09-17]
+	Added math/R-RNetCDF version 1.9.1 [maya 2018-09-17]
