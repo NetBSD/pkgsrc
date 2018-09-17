@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q2,v 1.1.2.17 2018/09/15 12:26:23 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q2,v 1.1.2.18 2018/09/17 19:42:10 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q2 branch:
 
@@ -142,3 +142,5 @@ net/youtube-dl: bugfix
 Pullup ticket #5830 - requested by maya
 net/rtorrent: security fix (remote code execution)
 
+Pullup ticket #5831 - requested by wen
+www/moodle: security update
