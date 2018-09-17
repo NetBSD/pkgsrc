@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.11 2018/09/14 15:53:46 tnn Exp $
+# $NetBSD: bootstrap.mk,v 1.12 2018/09/17 10:50:26 tnn Exp $
 #
 # This file contains a map of available binary bootstrap toolchains
 # and which kit to use for each supported platform.
@@ -36,7 +36,7 @@ BOOT.nb7-i386=		bootstrap-jdk-1.7.76-netbsd-7-i386-20150301.tar.xz
 BOOT.nb7-amd64=		bootstrap-jdk-1.7.76-netbsd-7-amd64-20150301.tar.xz
 BOOT.nb7-sparc64=	bootstrap-jdk-1.7.76-netbsd-7-sparc64-20150301.tar.xz
 BOOT.nb7-earmv6hf=	bootstrap-jdk-1.7.76-netbsd-7-earmv6hf-20150306.tar.xz
-BOOT.nb8-aarch64=	bootstrap-jdk-1.7.141-netbsd-8-aarch64-20180914.tar.xz
+BOOT.nb8-aarch64=	bootstrap-jdk-1.8.181-netbsd-8-aarch64-20180917.tar.xz
 BOOT.fbsd10-amd64=	bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz
 
 #XXX should be regenerated

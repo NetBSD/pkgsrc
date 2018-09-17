@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.61 2018/09/15 11:38:45 ryoon Exp $
+$NetBSD: distinfo,v 1.62 2018/09/17 10:50:26 tnn Exp $
 
-SHA1 (openjdk7/bootstrap-jdk-1.7.141-netbsd-8-aarch64-20180914.tar.xz) = df24cbd6fb2ae529c80ab9d80b30680c24f43f44
-RMD160 (openjdk7/bootstrap-jdk-1.7.141-netbsd-8-aarch64-20180914.tar.xz) = e755550ef882116ea9d8e1d272d07e7b297deec8
-SHA512 (openjdk7/bootstrap-jdk-1.7.141-netbsd-8-aarch64-20180914.tar.xz) = a1f9dcb60e384f6e08bc65547dbe40ac0cd7709f340241f9fd6a9cf252c9fe07be86b84fee3cf75c5183c7fee8ee95c08679db15c2998734df0b2f4bb46793e5
-Size (openjdk7/bootstrap-jdk-1.7.141-netbsd-8-aarch64-20180914.tar.xz) = 23413672 bytes
 SHA1 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 7408f52d3bbe35c2b14bbd3215cbf60f1335d334
 RMD160 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 24f1577b5fc86d137f070aedb4610c8c89e45815
 SHA512 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 6ed928cc68503c27edd6f3a90f94e1e762192d41997b12903e37071f4fcd34f5579fa970e59c240928eaae60729300fbfdb02a5ec1136bc757ee24f1ee554af4
@@ -40,6 +36,10 @@ SHA1 (openjdk7/bootstrap-jdk-1.7.76-netbsd-7-sparc64-20150301.tar.xz) = 69375362
 RMD160 (openjdk7/bootstrap-jdk-1.7.76-netbsd-7-sparc64-20150301.tar.xz) = 06b40db72e7154daff49093f3b6e8aa39cae27b3
 SHA512 (openjdk7/bootstrap-jdk-1.7.76-netbsd-7-sparc64-20150301.tar.xz) = 5391de2d35934b79462b603cd19c65b21712891d59afe9d6e5319ea479fe2bc528e4f423648cd6fc9bcaec97ed57b9e01d1c46d04bc4edb9ed5ae7131b7cd5d7
 Size (openjdk7/bootstrap-jdk-1.7.76-netbsd-7-sparc64-20150301.tar.xz) = 23041084 bytes
+SHA1 (openjdk7/bootstrap-jdk-1.8.181-netbsd-8-aarch64-20180917.tar.xz) = 642f43387915d4a83b39c1d5d697c3d4cc9f3626
+RMD160 (openjdk7/bootstrap-jdk-1.8.181-netbsd-8-aarch64-20180917.tar.xz) = d6188b31e970c210c01d866f6242c85ed8ecf82f
+SHA512 (openjdk7/bootstrap-jdk-1.8.181-netbsd-8-aarch64-20180917.tar.xz) = b1f302d33f8a8630c46fc20177a8a56dd521a51aec383e1111734130ea522d4da700554be9d82901930b497e9b73d1f714e3fb0232e4711aaaff9513a5c985cf
+Size (openjdk7/bootstrap-jdk-1.8.181-netbsd-8-aarch64-20180917.tar.xz) = 29542212 bytes
 SHA1 (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.6-amd64-20140719.tar.bz2) = 98fdb66b429148ae3922a2f9b2db736a1708e337
 RMD160 (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.6-amd64-20140719.tar.bz2) = 4835c6361f66138d73f583c40df0e04a31257157
 SHA512 (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.6-amd64-20140719.tar.bz2) = 15ee0583de67df94c980eec197e5279344eaf94d4830e2030f8c8cbc795bce1e0abdf435be4be4c5da271a41d5441e9ebf4bd4f088b17698b5a1e4cc685ebf3a
