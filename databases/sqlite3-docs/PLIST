@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.77 2018/06/07 07:36:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.78 2018/09/17 16:14:07 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -264,6 +264,7 @@ share/doc/sqlite3/formatchng.html
 share/doc/sqlite3/fts3.html
 share/doc/sqlite3/fts5.html
 share/doc/sqlite3/fullsql.html
+share/doc/sqlite3/geopoly.html
 share/doc/sqlite3/getthecode.html
 share/doc/sqlite3/hirely.html
 share/doc/sqlite3/howtocompile.html
@@ -478,7 +479,10 @@ share/doc/sqlite3/images/syntax/drop-trigger-stmt.gif
 share/doc/sqlite3/images/syntax/drop-view-stmt.gif
 share/doc/sqlite3/images/syntax/expr.gif
 share/doc/sqlite3/images/syntax/factored-select-stmt.gif
+share/doc/sqlite3/images/syntax/filter.gif
 share/doc/sqlite3/images/syntax/foreign-key-clause.gif
+share/doc/sqlite3/images/syntax/frame-spec.gif
+share/doc/sqlite3/images/syntax/function-invocation.gif
 share/doc/sqlite3/images/syntax/indexed-column.gif
 share/doc/sqlite3/images/syntax/insert-stmt.gif
 share/doc/sqlite3/images/syntax/join-clause.gif
@@ -510,6 +514,9 @@ share/doc/sqlite3/images/syntax/update-stmt-limited.gif
 share/doc/sqlite3/images/syntax/update-stmt.gif
 share/doc/sqlite3/images/syntax/upsert-clause.gif
 share/doc/sqlite3/images/syntax/vacuum-stmt.gif
+share/doc/sqlite3/images/syntax/window-definition.gif
+share/doc/sqlite3/images/syntax/window-defn.gif
+share/doc/sqlite3/images/syntax/window-function-invocation.gif
 share/doc/sqlite3/images/syntax/with-clause.gif
 share/doc/sqlite3/images/table-ex1b2.gif
 share/doc/sqlite3/images/vfs1.gif
@@ -636,6 +643,7 @@ share/doc/sqlite3/releaselog/3_22_0.html
 share/doc/sqlite3/releaselog/3_23_0.html
 share/doc/sqlite3/releaselog/3_23_1.html
 share/doc/sqlite3/releaselog/3_24_0.html
+share/doc/sqlite3/releaselog/3_25_0.html
 share/doc/sqlite3/releaselog/3_2_0.html
 share/doc/sqlite3/releaselog/3_2_1.html
 share/doc/sqlite3/releaselog/3_2_2.html
@@ -867,7 +875,10 @@ share/doc/sqlite3/syntax/drop-trigger-stmt.html
 share/doc/sqlite3/syntax/drop-view-stmt.html
 share/doc/sqlite3/syntax/expr.html
 share/doc/sqlite3/syntax/factored-select-stmt.html
+share/doc/sqlite3/syntax/filter.html
 share/doc/sqlite3/syntax/foreign-key-clause.html
+share/doc/sqlite3/syntax/frame-spec.html
+share/doc/sqlite3/syntax/function-invocation.html
 share/doc/sqlite3/syntax/indexed-column.html
 share/doc/sqlite3/syntax/insert-stmt.html
 share/doc/sqlite3/syntax/join-clause.html
@@ -899,6 +910,8 @@ share/doc/sqlite3/syntax/update-stmt-limited.html
 share/doc/sqlite3/syntax/update-stmt.html
 share/doc/sqlite3/syntax/upsert-clause.html
 share/doc/sqlite3/syntax/vacuum-stmt.html
+share/doc/sqlite3/syntax/window-defn.html
+share/doc/sqlite3/syntax/window-function-invocation.html
 share/doc/sqlite3/syntax/with-clause.html
 share/doc/sqlite3/syntaxdiagrams.html
 share/doc/sqlite3/tclsqlite.html
@@ -923,6 +936,7 @@ share/doc/sqlite3/walformat.html
 share/doc/sqlite3/whentouse.html
 share/doc/sqlite3/whyc.html
 share/doc/sqlite3/whynotgit.html
+share/doc/sqlite3/windowfunctions.html
 share/doc/sqlite3/withoutrowid.html
 share/doc/sqlite3/zeroconf.html
 share/doc/sqlite3/zipfile.html
