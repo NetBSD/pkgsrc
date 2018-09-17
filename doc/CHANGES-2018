@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4049 2018/09/17 13:24:45 maya Exp $
+$NetBSD: CHANGES-2018,v 1.4050 2018/09/17 14:17:28 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5673,3 +5673,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-openpyxl to 2.5.7 [adam 2018-09-17]
 	Updated net/py-lexicon to 2.7.3 [fhajny 2018-09-17]
 	Added math/R-RNetCDF version 1.9.1 [maya 2018-09-17]
+	Updated databases/percona-toolkit to 3.0.12 [fhajny 2018-09-17]
