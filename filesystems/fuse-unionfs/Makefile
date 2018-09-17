@@ -1,30 +1,23 @@
-# $NetBSD: Makefile,v 1.7 2018/09/17 14:03:08 maya Exp $
-#
+# $NetBSD: Makefile,v 1.8 2018/09/17 14:33:35 leot Exp $
 
-DISTNAME=	v2.0
-DIST_SUBDIR=	${PKGBASE}
-PKGNAME=	fuse-unionfs-${DISTNAME:S/v//}
+DISTNAME=	unionfs-fuse-2.0
+PKGNAME=	${DISTNAME:S/unionfs-fuse/fuse-unionfs/}
 CATEGORIES=	filesystems
-MASTER_SITES=	${MASTER_SITE_GITHUB:=rpodgorny/unionfs-fuse/archive/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=rpodgorny/}
+GITHUB_PROJECT=	unionfs-fuse
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/rpodgorny/unionfs-fuse
 COMMENT=	FUSE-based union filesystem
+LICENSE=	modified-bsd
 
 BUILD_TARGET=	build
-USE_TOOLS=	gmake pkg-config bash:run
-WRKSRC=		${WRKDIR}/unionfs-fuse-${DISTNAME:S/v//}
+USE_TOOLS+=	gmake pkg-config bash:run
 
 REPLACE_BASH+=	mount.unionfs
 
 MAKE_ENV+=		MANDIR=${PKGMANDIR}
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 
 .include "../../mk/fuse.buildlink3.mk"
-
-pre-install:
-	mkdir -p ${DESTDIR}${PREFIX}/bin
-	mkdir -p ${DESTDIR}${PREFIX}/sbin
-	mkdir -p ${DESTDIR}${PREFIX}${PKGMANDIR}/man8
-
 .include "../../mk/bsd.pkg.mk"
