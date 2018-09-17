@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/04/16 14:33:45 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2018/09/17 07:27:40 maya Exp $
 
 DISTNAME=	suil-0.8.2
 PKGREVISION=	5
@@ -21,6 +21,8 @@ USE_LANGUAGES=	c c++
 PKGCONFIG_OVERRIDE+=	suil.pc.in
 
 # Use older waf
+PYTHON_VERSIONS_ACCEPTED=	27
+
 WAF_ENV+=	CC=${CC:Q}
 WAF_ENV+=	CFLAGS=${CFLAGS:Q}
 WAF_ENV+=	CXX=${CXX:Q}
