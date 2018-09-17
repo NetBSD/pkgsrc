@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.400 2018/08/21 09:30:13 wiz Exp $
+# $NetBSD: Makefile,v 1.401 2018/09/17 13:24:17 maya Exp $
 
 COMMENT=	Mathematics
 
@@ -15,6 +15,7 @@ SUBDIR+=	R-PHYLOGR
 SUBDIR+=	R-R2HTML
 SUBDIR+=	R-RArcInfo
 SUBDIR+=	R-RColorBrewer
+SUBDIR+=	R-RNetCDF
 SUBDIR+=	R-RPostgreSQL
 SUBDIR+=	R-RandomFields
 SUBDIR+=	R-Rcmdr
