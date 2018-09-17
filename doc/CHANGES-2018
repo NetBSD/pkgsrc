@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4046 2018/09/16 20:35:08 triaxx Exp $
+$NetBSD: CHANGES-2018,v 1.4047 2018/09/17 10:17:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5669,3 +5669,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ncurses to 6.1nb2 [wiz 2018-09-15]
 	Updated x11/xf86-video-ati to 18.1.0 [triaxx 2018-09-16]
 	Updated x11/xf86-video-amdgpu to 18.1.0 [triaxx 2018-09-16]
+	Updated www/py-tornado to 5.1.1 [adam 2018-09-17]
+	Updated textproc/py-openpyxl to 2.5.7 [adam 2018-09-17]
