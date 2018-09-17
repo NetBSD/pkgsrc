@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2016/11/27 00:12:57 prlw1 Exp $
+# $NetBSD: Makefile,v 1.4 2018/09/17 15:15:21 prlw1 Exp $
 
-DISTNAME=	pmw-4.29
+DISTNAME=	pmw-4.30
 CATEGORIES=	print
 MASTER_SITES=	http://people.ds.cam.ac.uk/ph10/
 
