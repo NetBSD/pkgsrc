@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2018/09/17 13:24:18 maya Exp $
+
+SHA1 (R/RNetCDF_1.9-1.tar.gz) = 720b4146271bd8a5156f9d3810d2c9bd1eee76ef
+RMD160 (R/RNetCDF_1.9-1.tar.gz) = b473a5eb57df4d48b96eea8b4b347bda2f2ded52
+SHA512 (R/RNetCDF_1.9-1.tar.gz) = 3a1cd3b9b7996ffc40b14f4ac6bee78c5ea68cad8e4f68e0ba64ecfd6bb26e9e349cfacac8dac910dd5c57d6f4e8dbad6f47e48632b57a7a2d962381e6ff75f7
+Size (R/RNetCDF_1.9-1.tar.gz) = 98628 bytes
+SHA1 (patch-configure) = 62e98e78ae4338ce7bad04dbcb69fdb60cef5b8f
