@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.5 2018/03/05 12:46:02 ryoon Exp $
+$NetBSD: distinfo,v 1.6 2018/09/18 03:37:03 maya Exp $
 
 SHA1 (luaposix-34.0.4.tar.gz) = 848b18807f7906386354e0be74079c0ccc56aab9
 RMD160 (luaposix-34.0.4.tar.gz) = 6aa8c5a57b1df85c00ffa3f24c5e6cecf28169c0
 SHA512 (luaposix-34.0.4.tar.gz) = c6399d87d490ab5bc3e220183dc181121fe3ac0d802b6f6400dbe71c491d810b4e705ab098242ac195a0b179b9b22c098072c05b7f8e534a6a60a12931ee1585
 Size (luaposix-34.0.4.tar.gz) = 175194 bytes
 SHA1 (patch-ext_posix_stdlib.c) = 1ab4263d3578288ef54649ec6c91115019e664ce
+SHA1 (patch-ext_posix_sys_socket.c) = 665f96727cee1aa4a4841b83be5b7ff270a0b505
 SHA1 (patch-lukefile) = 41773ee71524080a35c924bd623a250c44791a2b
