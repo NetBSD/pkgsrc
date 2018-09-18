@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4054 2018/09/18 04:13:00 maya Exp $
+$NetBSD: CHANGES-2018,v 1.4055 2018/09/18 08:41:43 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5678,3 +5678,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/sqlite3 to 3.25.0 [adam 2018-09-17]
 	Updated net/rabbitmq to 3.7.7 [fhajny 2018-09-17]
 	Updated lang/erlang to 21.0.9nb1 [maya 2018-09-18]
+	Updated databases/mariadb-connector-c to 3.0.6 [fhajny 2018-09-18]
