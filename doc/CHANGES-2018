@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4056 2018/09/18 09:49:38 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.4057 2018/09/18 15:11:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5680,3 +5680,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/erlang to 21.0.9nb1 [maya 2018-09-18]
 	Updated databases/mariadb-connector-c to 3.0.6 [fhajny 2018-09-18]
 	Updated misc/mbuffer to 20180625 [fhajny 2018-09-18]
+	Updated www/contao35 to 3.5.36 [taca 2018-09-18]
