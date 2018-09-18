@@ -1,4 +1,4 @@
-$NetBSD: patch-siputils.py,v 1.3 2018/01/26 15:47:18 jperkin Exp $
+$NetBSD: patch-siputils.py,v 1.4 2018/09/18 03:33:21 maya Exp $
 
 Fix build on Darwin with pkgsrc python.
 Fix SunOS/clang.
@@ -15,6 +15,15 @@ Fix SunOS/clang.
          # Make sure the destination directory is an absolute path.
          if dir:
              self.dir = os.path.abspath(dir)
+@@ -880,7 +883,7 @@
+                     qt5_rename = True
+                 else:
+                     lib = lib + "4"
+-        elif sys.platform.startswith("linux") and qt_version >= 0x050000:
++        elif qt_version >= 0x050000:
+             qt5_rename = True
+ 
+         if qt5_rename:
 @@ -1596,10 +1599,10 @@ class ModuleMakefile(Makefile):
                      if sys.platform[:5] == 'linux':
                          self.LFLAGS.extend(['-Wl,--version-script=%s.exp' % self._target])
