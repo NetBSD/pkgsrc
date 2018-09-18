@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.88 2018/09/12 20:01:12 schmonz Exp $
+# $NetBSD: Makefile,v 1.89 2018/09/18 04:12:38 maya Exp $
 
 DISTNAME=		OTP-${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}${!empty(DIST_VERSION_PATCH):?.:}${DIST_VERSION_PATCH}
 PKGNAME=		${DISTNAME:S/OTP-/erlang-/}
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		https://github.com/erlang/otp/archive/
 
