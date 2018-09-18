@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/08/22 09:45:46 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2018/09/18 14:17:26 leot Exp $
 #
 
 DISTNAME=	rlwrap-0.43
@@ -14,6 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake perl:run
+USE_TOOLS+=		autoreconf autoconf automake
 
 REPLACE_PERL+=	filters/censor_passwords
 REPLACE_PERL+=	filters/count_in_prompt
@@ -36,6 +37,9 @@ REPLACE_PYTHON+=	filters/*.py
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 TEST_TARGET=		check
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fi
 
 .include "options.mk"
 
