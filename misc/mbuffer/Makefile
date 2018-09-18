@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/11/26 00:27:23 wiedi Exp $
+# $NetBSD: Makefile,v 1.5 2018/09/18 09:49:29 fhajny Exp $
 
-DISTNAME=	mbuffer-20151002
+DISTNAME=	mbuffer-20180625
 CATEGORIES=	misc
 MASTER_SITES=	http://www.maier-komor.de/software/mbuffer/
 EXTRACT_SUFX=	.tgz
@@ -14,4 +14,18 @@ BROKEN_ON_PLATFORM=	NetBSD-*-*	# Needs sysctl bits
 
 GNU_CONFIGURE=	yes
 
+USE_LANGUAGES=	c c99
+
+SUBST_CLASSES+=		etc
+SUBST_STAGE.etc=	pre-configure
+SUBST_FILES.etc=	mbuffer.rc
+SUBST_MESSAGE.etc=	Fix default sysconfdir
+SUBST_VARS.etc+=	PKG_SYSCONFDIR
+
+INSTALL_MAKE_FLAGS+=	etcdir=${PREFIX}/share/examples/mbuffer
+INSTALLATION_DIRS+=	share/examples/mbuffer
+CONF_FILES+=		share/examples/mbuffer/mbuffer.rc \
+			${PKG_SYSCONFDIR}/mbuffer.rc
+
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

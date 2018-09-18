@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.4 2015/11/26 00:27:23 wiedi Exp $
+$NetBSD: distinfo,v 1.5 2018/09/18 09:49:29 fhajny Exp $
 
-SHA1 (mbuffer-20151002.tgz) = 1ea592c395ba2e83dd3747c7d6f334fadc87065c
-RMD160 (mbuffer-20151002.tgz) = a3391f15759c1743b3b9b64c3f872d614c1c0102
-SHA512 (mbuffer-20151002.tgz) = 513b3b53c135338447ab7bd4f390ebfa6c49f8e9580a48288306a8a8dc92e1442f63bb1be9774378ccf30e30c7c2b911f3a7c1838e0c5f61429da279328765bd
-Size (mbuffer-20151002.tgz) = 123022 bytes
-SHA1 (patch-Makefile.in) = 81118c470367b0136f868f8ccb0f35e3c389150c
+SHA1 (mbuffer-20180625.tgz) = d3beb0aa92de4095bdbb819a6f0a977507155c96
+RMD160 (mbuffer-20180625.tgz) = d3fb1e03c40719e72af852692cfcce5db0992b0c
+SHA512 (mbuffer-20180625.tgz) = 01d712f51ac0b206d6ee91fbbd4cea4873784aaca02daa9b3d72cfcc0a63696b20c15ca4b6e834924f02f2878ac90192110df584c55fb1a65620ae8b0f7ec87e
+Size (mbuffer-20180625.tgz) = 140946 bytes
+SHA1 (patch-Makefile.in) = 5b1285fd94aad7c9eaf803527a514cd7385cc448
 SHA1 (patch-configure) = e3f9fe62c308369f89511dc31f781a92fd7b4405
-SHA1 (patch-network.c) = 6d5b5a937ce71482b1b2f13cf0a3d8b2d8b45e4f
+SHA1 (patch-mbuffer.c) = ca1b0fee1a11529f787b2a2b0d6ee03ed9fcfd14
+SHA1 (patch-mbuffer.rc) = f6639110e0a30f62a8a61e725a5403c88703d671
+SHA1 (patch-network.c) = 496fa35d88a9cdec4f7a6121c8b31a64f0ee8f57
