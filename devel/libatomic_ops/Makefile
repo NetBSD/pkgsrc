@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/08/16 10:13:30 adam Exp $
+# $NetBSD: Makefile,v 1.18 2018/09/18 03:42:07 maya Exp $
 
 DISTNAME=	libatomic_ops-7.6.6
 CATEGORIES=	devel
@@ -18,5 +18,9 @@ PKGCONFIG_OVERRIDE=	pkgconfig/atomic_ops.pc.in
 TEST_TARGET=		check
 
 INSTALL_MAKE_FLAGS=	pkgdatadir=${PREFIX}/share/doc/libatomic_ops
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc)
+CPPFLAGS+=	-DAO_NO_SPARC_V9=1
+.endif
 
 .include "../../mk/bsd.pkg.mk"
