@@ -1,8 +1,6 @@
-# $NetBSD: Makefile.common,v 1.109 2018/01/16 13:11:16 taca Exp $
+# $NetBSD: Makefile.common,v 1.110 2018/09/18 16:14:35 taca Exp $
 #
 # used by www/contao35/Makefile
-# used by www/contao44/Makefile
-# used by www/contao45/Makefile
 
 CT_VER=		${CT_VERSION:C/([0-9]+)\.([0-9]+)\..*/\1\2/}
 CT_VERBASE=	${CT_VERSION:C/([0-9]+)\.([0-9]+)\..*/\1.\2/}
