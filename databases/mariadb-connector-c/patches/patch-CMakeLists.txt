@@ -1,19 +1,19 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2018/04/13 08:04:14 fhajny Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2018/09/18 08:41:34 fhajny Exp $
 
 Make sure Kerberos/GSS support can be turned off.
 
---- CMakeLists.txt.orig	2018-01-17 11:43:58.000000000 +0000
+--- CMakeLists.txt.orig	2018-07-31 07:44:20.000000000 +0000
 +++ CMakeLists.txt
-@@ -25,7 +25,7 @@ get_directory_property(IS_SUBPROJECT PAR
+@@ -24,7 +24,7 @@ get_directory_property(IS_SUBPROJECT PAR
  # do not inherit include directories from the parent project
  SET_PROPERTY(DIRECTORY PROPERTY INCLUDE_DIRECTORIES)
- FOREACH(V WITH_MYSQLCOMPAT WITH_MSI WITH_SIGNCODE WITH_RTC WITH_UNITTEST
+ FOREACH(V WITH_MYSQLCOMPAT WITH_MSI WITH_SIGNCODE WITH_RTC WITH_UNIT_TESTS
 -    WITH_DYNCOL WITH_EXTERNAL_ZLIB WITH_CURL WITH_SQLITE WITH_SSL
 +    WITH_DYNCOL WITH_EXTERNAL_ZLIB WITH_CURL WITH_GSS WITH_SQLITE WITH_SSL
      INSTALL_LAYOUT WITH_TEST_SRCPKG)
    SET(${V} ${${OPT}${V}})
  ENDFOREACH()
-@@ -63,6 +63,7 @@ ADD_OPTION(WITH_UNITTEST "build test sui
+@@ -62,6 +62,7 @@ ADD_OPTION(WITH_UNIT_TESTS "build test s
  ADD_OPTION(WITH_DYNCOL "Enables support of dynamic coluumns" ON)
  ADD_OPTION(WITH_EXTERNAL_ZLIB "Enables use of external zlib" OFF)
  ADD_OPTION(WITH_CURL "Enables use of curl" ON)
@@ -21,7 +21,7 @@ Make sure Kerberos/GSS support can be turned off.
  ADD_OPTION(WITH_SSL "Enables use of TLS/SSL library" ON)
  ###############
  
-@@ -88,7 +89,7 @@ IF(WITH_RTC)
+@@ -82,7 +83,7 @@ IF(WITH_RTC)
    SET(RTC_OPTIONS "/RTC1 /RTCc")
  ENDIF()
  
@@ -30,7 +30,7 @@ Make sure Kerberos/GSS support can be turned off.
    INCLUDE(${CC_SOURCE_DIR}/cmake/FindGSSAPI.cmake)
    IF(GSSAPI_FOUND)
      INCLUDE_DIRECTORIES(${GSSAPI_INCS})
-@@ -374,7 +375,7 @@ IF(NOT REMOTEIO_PLUGIN_TYPE MATCHES "OFF
+@@ -361,7 +362,7 @@ IF(NOT REMOTEIO_PLUGIN_TYPE MATCHES "OFF
      ADD_DEFINITIONS("-DHAVE_REMOTEIO=1")
    ENDIF()
  ENDIF()
