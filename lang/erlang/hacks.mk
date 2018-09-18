@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.3 2018/09/03 17:40:32 maya Exp $
+# $NetBSD: hacks.mk,v 1.4 2018/09/18 03:48:40 maya Exp $
 
 .if !defined(ERLANG_HACKS_MK)
 ERLANG_HACKS_MK=	# empty
@@ -23,7 +23,7 @@ CFLAGS+=	-DMMAP_MAP_FIXED
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
 # gcov miscompiled PR 53567
-.if (${OPSYS} == "NetBSD")
+.if !empty(MACHINE_PLATFORM:MNetBSD-8.0.*)
 CONFIGURE_ARGS+=	--disable-pgo
 .endif
 
