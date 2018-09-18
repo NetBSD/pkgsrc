@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.53 2018/04/14 20:07:11 adam Exp $
+# $NetBSD: Makefile,v 1.54 2018/09/18 03:33:20 maya Exp $
 
 DISTNAME=	sip-4.19.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	x11 devel python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyqt/}
 
