@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.52 2017/01/07 04:30:45 sevan Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.53 2018/09/18 03:17:27 maya Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -113,15 +113,6 @@ spelling mistakes) takes place.</para>
 	    <filename>/dev/null</filename> to avoid picking up
 	    settings used by builds in <filename>/usr/src</filename>.</para>
 	</listitem>
-	<listitem><para><varname>DEPENDS_TARGET</varname>:
-	    By default, dependencies are only installed, and no binary
-	    package is created for them. You can set this variable to
-	    <literal>package-install</literal> to automatically create binary
-	    packages after installing dependencies. Please note that the
-	    <varname>PKGSRC_KEEP_BIN_PKGS</varname> can be set to
-	    <literal>yes</literal> to preserve binary packages when
-	    using the <literal>install</literal> as well.</para>
-	</listitem>
 
 	<!--	DISTDIR -->
 	<!--	FAILOVER_FETCH -->
@@ -130,6 +121,14 @@ spelling mistakes) takes place.</para>
 
   <sect1 id="variables-affecting-installation">
     <title>Variables affecting the installation process</title>
+
+    <itemizedlist>
+	    <listitem><para><varname>PKGSRC_KEEP_BIN_PKGSRC</varname>:
+                By default, binary packages of built packages are
+                preserved in <varname>PACKAGES</varname>/All. Setting
+		this variable to "no" prevents this.</para>
+            </listitem>
+    </itemizedlist>
 
     <para>Packages have to support installation into a
     subdirectory of <varname>WRKDIR</varname>. This allows a package
