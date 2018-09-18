@@ -1,10 +1,14 @@
-$NetBSD: patch-configure.ac,v 1.1 2018/09/18 14:17:26 leot Exp $
+$NetBSD: patch-configure.ac,v 1.2 2018/09/18 14:30:17 leot Exp $
 
 Really check for <util.h> needed by openpty(3) at least on NetBSD.
 
 Please note that src/rlwrap.h already checked for HAVE_UTIL_H in
 src/rlwrap.h but actually HAVE_UTIL_H was never defined because
 util.h was not added to the AC_CHECK_HEADERS().
+
+Also reported upstream via:
+
+ <https://github.com/hanslub42/rlwrap/pull/85>
 
 --- configure.ac.orig	2017-03-03 09:41:58.000000000 +0000
 +++ configure.ac
