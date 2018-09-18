@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q2,v 1.1.2.18 2018/09/17 19:42:10 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q2,v 1.1.2.19 2018/09/18 19:13:09 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q2 branch:
 
@@ -144,3 +144,18 @@ net/rtorrent: security fix (remote code execution)
 
 Pullup ticket #5831 - requested by wen
 www/moodle: security update
+Pullup ticket #5832 - requested by taca
+lang/php71: security fix
+
+Pullup ticket #5833 - requested by taca
+lang/php72: security fix
+
+Pullup ticket #5834 - requested by taca
+lang/php70: security fix
+
+Pullup ticket #5835 - requested by taca
+lang/php56: security fix
+
+Pullup ticket #5836 - requested by taca
+www/contao35: security fix
+
