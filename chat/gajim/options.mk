@@ -1,34 +1,17 @@
-# $NetBSD: options.mk,v 1.10 2018/07/03 05:03:04 adam Exp $
+# $NetBSD: options.mk,v 1.11 2018/09/19 16:18:32 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gajim
-PKG_SUPPORTED_OPTIONS=	avahi dbus gnome gnome-keyring ssl
-PKG_SUGGESTED_OPTIONS=	dbus ssl
+PKG_SUPPORTED_OPTIONS=	avahi dbus
+PKG_SUGGESTED_OPTIONS=	dbus
 
 .include "../../mk/bsd.options.mk"
-
-# ssl
-.if !empty(PKG_OPTIONS:Mssl)
-DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.9:../../security/py-OpenSSL
-DEPENDS+=	${PYPKGPREFIX}-crypto-[0-9]*:../../security/py-crypto
-.endif
 
 # avahi
 .if !empty(PKG_OPTIONS:Mavahi)
 DEPENDS+=	avahi-[0-9]*:../../net/avahi
 .endif
 
-# gnome
-.if !empty(PKG_OPTIONS:Mgnome)
-DEPENDS+=	${PYPKGPREFIX}-gnome2-[0-9]*:../../x11/py-gnome2
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-ORBit via py-gnome2
-.endif
-
-# gnome-keyring
-.if !empty(PKG_OPTIONS:Mgnome-keyring)
-DEPENDS+=	${PYPKGPREFIX}-gnome2-desktop-[0-9]*:../../x11/py-gnome2-desktop
-.endif
-
 # dbus
 .if !empty(PKG_OPTIONS:Mdbus)
-DEPENDS=	${PYPKGPREFIX}-dbus>=0.81:../../sysutils/py-dbus
+DEPENDS+=	${PYPKGPREFIX}-dbus>=0.81:../../sysutils/py-dbus
 .endif
