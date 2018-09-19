@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/09/19 09:33:52 leot Exp $
+# $NetBSD: Makefile,v 1.4 2018/09/19 09:36:32 leot Exp $
 
 DISTNAME=	xdotool-3.20160805.1
 CATEGORIES=	x11
@@ -18,11 +18,11 @@ USE_TOOLS+=	gmake pod2man pkg-config
 
 USE_LANGUAGES=	c99
 
-SUBST_CLASSES+=           fix-getopt
-SUBST_STAGE.fix-getopt=   pre-build
-SUBST_MESSAGE.fix-getopt= Fixing getopt
-SUBST_FILES.fix-getopt=   *.c
-SUBST_SED.fix-getopt+=    -e 's,getopt_long_only,getopt_long,g'
+SUBST_CLASSES+=			fix-getopt
+SUBST_STAGE.fix-getopt=		pre-build
+SUBST_MESSAGE.fix-getopt=	Fixing getopt
+SUBST_FILES.fix-getopt=		*.c
+SUBST_SED.fix-getopt+=		-e 's,getopt_long_only,getopt_long,g'
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
