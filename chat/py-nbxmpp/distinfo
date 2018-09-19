@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/09/19 16:13:00 nia Exp $
+
+SHA1 (nbxmpp-0.6.7.tar.gz) = 384a34592f89d6e80cbe27e9048fed3cb4e79429
+RMD160 (nbxmpp-0.6.7.tar.gz) = 57c8c49104e3f0be8046955db9d3edf993bdad7c
+SHA512 (nbxmpp-0.6.7.tar.gz) = 95617cf3e947472515814c8acaaa7adf198732aada82e637467d1b92efb2a5d3d03335ba848c269ae73336c22f02ba3f8bc32b9afc726b0526b7028c13736981
+Size (nbxmpp-0.6.7.tar.gz) = 1516391 bytes
