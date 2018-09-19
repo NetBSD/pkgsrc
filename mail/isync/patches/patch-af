@@ -1,11 +1,11 @@
-$NetBSD: patch-af,v 1.6 2016/12/15 14:15:01 schmonz Exp $
+$NetBSD: patch-af,v 1.7 2018/09/19 13:08:14 schmonz Exp $
 
 time_t may be 64-bit.
 
---- src/drv_maildir.c.orig	2015-09-27 09:47:19.000000000 +0000
+--- src/drv_maildir.c.orig	2017-10-01 08:41:29.000000000 +0000
 +++ src/drv_maildir.c
-@@ -1336,7 +1336,7 @@ maildir_store_msg( store_t *gctx, msg_da
- 	int ret, fd, bl, uid;
+@@ -1569,7 +1569,7 @@ maildir_store_msg( store_t *gctx, msg_da
+ 	uint uid;
  	char buf[_POSIX_PATH_MAX], nbuf[_POSIX_PATH_MAX], fbuf[NUM_FLAGS + 3], base[128];
  
 -	bl = nfsnprintf( base, sizeof(base), "%ld.%d_%d.%s", (long)time( 0 ), Pid, ++MaildirCount, Hostname );
@@ -13,9 +13,9 @@ time_t may be 64-bit.
  	if (!to_trash) {
  #ifdef USE_DB
  		if (ctx->usedb) {
-@@ -1518,8 +1518,8 @@ maildir_trash_msg( store_t *gctx, messag
+@@ -1750,8 +1750,8 @@ maildir_trash_msg( store_t *gctx, messag
  	for (;;) {
- 		nfsnprintf( buf, sizeof(buf), "%s/%s/%s", gctx->path, subdirs[gmsg->status & M_RECENT], msg->base );
+ 		nfsnprintf( buf, sizeof(buf), "%s/%s/%s", ctx->path, subdirs[gmsg->status & M_RECENT], msg->base );
  		s = strstr( msg->base, ((maildir_store_conf_t *)gctx->conf)->info_prefix );
 -		nfsnprintf( nbuf, sizeof(nbuf), "%s/%s/%ld.%d_%d.%s%s", ctx->trash,
 -		            subdirs[gmsg->status & M_RECENT], (long)time( 0 ), Pid, ++MaildirCount, Hostname, s ? s : "" );
