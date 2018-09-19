@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.203 2018/09/19 16:13:00 nia Exp $
+# $NetBSD: Makefile,v 1.204 2018/09/19 20:39:52 nia Exp $
 #
 
 COMMENT=	Communication programs
@@ -102,6 +102,8 @@ SUBDIR+=	pircbot
 SUBDIR+=	prosody
 SUBDIR+=	psi
 SUBDIR+=	psybnc
+SUBDIR+=	py-axolotl
+SUBDIR+=	py-axolotl-curve25519
 SUBDIR+=	py-hangups
 SUBDIR+=	py-mastodon
 SUBDIR+=	py-nbxmpp
