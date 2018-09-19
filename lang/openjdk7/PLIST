@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2017/08/14 00:02:16 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.27 2018/09/19 18:18:56 abs Exp $
 bin/openjdk7-jar
 bin/openjdk7-java
 bin/openjdk7-javac
@@ -6,6 +6,7 @@ bin/openjdk7-javadoc
 bin/openjdk7-javah
 bin/openjdk7-javap
 bin/openjdk7-jcmd
+bin/openjdk7-jhat
 bin/openjdk7-jps
 bin/openjdk7-jstack
 bin/openjdk7-keytool
