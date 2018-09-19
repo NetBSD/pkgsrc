@@ -1,12 +1,12 @@
-# $NetBSD: options.mk,v 1.15 2016/06/07 07:08:30 leot Exp $
+# $NetBSD: options.mk,v 1.16 2018/09/19 09:26:45 leot Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.msmtp
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
 PKG_OPTIONS_GROUP.ssl=		gnutls ssl
 
-PKG_SUPPORTED_OPTIONS=	gsasl idn inet6 scripts secret
-PKG_SUGGESTED_OPTIONS=	inet6 ssl
+PKG_SUPPORTED_OPTIONS=	gsasl idn scripts secret
+PKG_SUGGESTED_OPTIONS=	ssl
 
 .include "../../mk/bsd.options.mk"
 
@@ -15,14 +15,12 @@ PKG_SUGGESTED_OPTIONS=	inet6 ssl
 ###
 .if !empty(PKG_OPTIONS:Mssl)
 .  include "../../security/openssl/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-ssl=openssl
-CONFIGURE_ARGS+=	--with-libssl-prefix=${BUILDLINK_PREFIX.openssl}
+CONFIGURE_ARGS+=	--with-tls=openssl
 .elif !empty(PKG_OPTIONS:Mgnutls)
 .  include "../../security/gnutls/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-ssl=gnutls
-CONFIGURE_ARGS+=	--with-libgnutls-prefix=${BUILDLINK_PREFIX.gnutls}
+CONFIGURE_ARGS+=	--with-tls=gnutls
 .else
-CONFIGURE_ARGS+=	--disable-ssl
+CONFIGURE_ARGS+=	--with-tls=no
 .endif
 
 ###
@@ -31,7 +29,6 @@ CONFIGURE_ARGS+=	--disable-ssl
 .if !empty(PKG_OPTIONS:Mgsasl)
 .  include "../../security/gsasl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-libgsasl
-CONFIGURE_ARGS+=	--with-libgsasl-prefix=${BUILDLINK_PREFIX.gsasl}
 .else
 CONFIGURE_ARGS+=	--without-libgsasl
 .endif
@@ -40,9 +37,8 @@ CONFIGURE_ARGS+=	--without-libgsasl
 ### Internationalized Domain Names (IDN) support
 ###
 .if !empty(PKG_OPTIONS:Midn)
-.  include "../../devel/libidn/buildlink3.mk"
+.  include "../../devel/libidn2/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-libidn
-CONFIGURE_ARGS+=	--with-libidn-prefix=${BUILDLINK_PREFIX.libidn}
 .else
 CONFIGURE_ARGS+=	--without-libidn
 .endif
@@ -53,7 +49,6 @@ CONFIGURE_ARGS+=	--without-libidn
 .if !empty(PKG_OPTIONS:Msecret)
 .  include "../../security/libsecret/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-libsecret
-USE_TOOLS+=		pkg-config
 .else
 CONFIGURE_ARGS+=	--without-libsecret
 .endif
