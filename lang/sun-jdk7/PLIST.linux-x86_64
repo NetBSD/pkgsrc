@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-x86_64,v 1.9 2016/08/10 22:26:46 abs Exp $
+@comment $NetBSD: PLIST.linux-x86_64,v 1.10 2018/09/19 18:19:09 abs Exp $
 bin/sun7-appletviewer
 bin/sun7-apt
 bin/sun7-extcheck
@@ -11,6 +11,7 @@ bin/sun7-javah
 bin/sun7-javap
 bin/sun7-jcmd
 bin/sun7-jdb
+bin/sun7-jhat
 bin/sun7-jps
 bin/sun7-rmic
 bin/sun7-serialver
