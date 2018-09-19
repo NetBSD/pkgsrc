@@ -1,0 +1,12 @@
+# $NetBSD: buildlink3.mk,v 1.1 2018/09/19 20:39:52 nia Exp $
+
+BUILDLINK_TREE+=	py-axolotl-curve25519
+
+.if !defined(PY_AXOLOTL_CURVE25519_BUILDLINK3_MK)
+PY_AXOLOTL_CURVE25519_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.py-axolotl-curve25519+=	${PYPKGPREFIX}-axolotl-curve25519>=0.4.1
+BUILDLINK_PKGSRCDIR.py-axolotl-curve25519?=	../../chat/py-axolotl-curve25519
+.endif	# PY_AXOLOTL_CURVE25519_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-py-axolotl-curve25519
