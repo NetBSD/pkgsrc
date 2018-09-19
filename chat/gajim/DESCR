@@ -1,17 +1,17 @@
-Gajim is a Jabber client written in PyGTK. The goal of Gajim's developers
-is to provide a full featured and easy to use xmpp client for the GTK+
-users. Gajim does not require GNOME to run, eventhough it exists with it
-nicely. Gajim is released under the GNU General Public License
+Gajim is a graphical XMPP/Jabber client written in Python. The goal
+of Gajim's developers is to provide a full featured and easy to use
+XMPP client.
 
 FEATURES:
-* Tabbed chat windows
-* Group chat support (with MUC protocol)
-* Emoticons, Avatars, File transfer, URL grabber, Bookmarks
-* Systray icon, Speller
-* TLS and GPG support (with SSL legacy support)
-* Transport Registration support
-* Service Discovery including Nodes
-* Wikipedia, dictionary and search engine lookup
+* Tabbed chat window and single window modes
+* Group chat support (with Multi-User Chat protocol), invitation, chat
+to group chat transformation, minimize group chat to roster
+* Emoticons, avatars, PEP (user activity, mood and tune)
+* File transfer, room bookmarks
+* Metacontacts support
+* Tray icon, speller, extended chat history functionalities
+* Transport registration support
+* Service discovery including nodes, user search
 * Multiple accounts support
-* DBus Capabilities
-* XML Console
+* DBus capabilities
+* XML console

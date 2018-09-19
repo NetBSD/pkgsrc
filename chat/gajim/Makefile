@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.38 2018/09/19 16:18:32 nia Exp $
+# $NetBSD: Makefile,v 1.39 2018/09/19 21:01:29 nia Exp $
 
 DISTNAME=	gajim-1.0.3
+PKGREVISION=	1
 CATEGORIES=	chat python
 MASTER_SITES=	https://www.gajim.org/downloads/1.0/
 
 MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	http://www.gajim.org/
-COMMENT=	Jabber client written in PyGTK
+COMMENT=	XMPP/Jabber chat client written in Python/GTK3
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	gettext
