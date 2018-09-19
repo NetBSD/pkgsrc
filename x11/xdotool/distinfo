@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1 2017/08/28 11:30:53 bouyer Exp $
+$NetBSD: distinfo,v 1.2 2018/09/19 09:33:52 leot Exp $
 
-SHA1 (xdotool-2.20110530.1.tar.gz) = bf8372b2e76e8ee3884763cee6e8b3f66bf29aa6
-RMD160 (xdotool-2.20110530.1.tar.gz) = 1aebcd835a4741a9e77aa489a3bdce195c582204
-Size (xdotool-2.20110530.1.tar.gz) = 107204 bytes
+SHA1 (xdotool-3.20160805.1.tar.gz) = 1d98f4905f30a6e52922417e54e62bb3b80f92aa
+RMD160 (xdotool-3.20160805.1.tar.gz) = b534e475adb220d0d9b3fe0d64e77bd0befa602f
+SHA512 (xdotool-3.20160805.1.tar.gz) = cf0b1c31e63a43759ff3f081f3b005dd9fe9cabd2f606d7d1238c7ea9c0526681f6ad7883c69ab9194d19a9584c3707f10306be1e826e5953da30838007dd471
+Size (xdotool-3.20160805.1.tar.gz) = 106026 bytes
+SHA1 (patch-Makefile) = fa116f5bd21ed36995acf957983b3f3e5d6bddb0
