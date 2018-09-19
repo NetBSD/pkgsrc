@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2018/09/19 20:44:36 nia Exp $
+${PYSITELIB}/gajim/data/plugins/omemo/CHANGELOG
+${PYSITELIB}/gajim/data/plugins/omemo/COPYING
+${PYSITELIB}/gajim/data/plugins/omemo/__init__.py
+${PYSITELIB}/gajim/data/plugins/omemo/config_dialog.ui
+${PYSITELIB}/gajim/data/plugins/omemo/download_progress_dialog.ui
+${PYSITELIB}/gajim/data/plugins/omemo/file_crypto.py
+${PYSITELIB}/gajim/data/plugins/omemo/fpr_dialog.ui
+${PYSITELIB}/gajim/data/plugins/omemo/manifest.ini
+${PYSITELIB}/gajim/data/plugins/omemo/omemo.png
+${PYSITELIB}/gajim/data/plugins/omemo/omemo/__init__.py
+${PYSITELIB}/gajim/data/plugins/omemo/omemo/aes_gcm.py
+${PYSITELIB}/gajim/data/plugins/omemo/omemo/aes_gcm_native.py
+${PYSITELIB}/gajim/data/plugins/omemo/omemo/db_helpers.py
+${PYSITELIB}/gajim/data/plugins/omemo/omemo/encryption.py
+${PYSITELIB}/gajim/data/plugins/omemo/omemo/liteaxolotlstore.py
+${PYSITELIB}/gajim/data/plugins/omemo/omemo/liteidentitykeystore.py
+${PYSITELIB}/gajim/data/plugins/omemo/omemo/liteprekeystore.py
+${PYSITELIB}/gajim/data/plugins/omemo/omemo/litesessionstore.py
+${PYSITELIB}/gajim/data/plugins/omemo/omemo/litesignedprekeystore.py
+${PYSITELIB}/gajim/data/plugins/omemo/omemo/sql.py
+${PYSITELIB}/gajim/data/plugins/omemo/omemo/state.py
+${PYSITELIB}/gajim/data/plugins/omemo/omemo16x16.png
+${PYSITELIB}/gajim/data/plugins/omemo/omemo_connection.py
+${PYSITELIB}/gajim/data/plugins/omemo/omemoplugin.py
+${PYSITELIB}/gajim/data/plugins/omemo/ui.py
+${PYSITELIB}/gajim/data/plugins/omemo/xmpp.py
