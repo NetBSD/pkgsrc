@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4062 2018/09/19 09:34:23 leot Exp $
+$NetBSD: CHANGES-2018,v 1.4063 2018/09/19 09:38:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5687,3 +5687,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added lang/go110 version 1.10.4nb2 [bsiegert 2018-09-18]
 	Updated mail/msmtp to 1.8.0 [leot 2018-09-19]
 	Updated x11/xdotool to 3.20160805.1 [leot 2018-09-19]
+	Updated databases/sqlite3 to 3.25.1 [adam 2018-09-19]
