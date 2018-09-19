@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2017/08/28 11:30:53 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/09/19 09:33:52 leot Exp $
 bin/xdotool
 include/xdo.h
 lib/libxdo.so
-lib/libxdo.so.2
+lib/libxdo.so.3
 man/man1/xdotool.1
