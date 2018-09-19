@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.69 2018/04/17 22:29:43 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2018/09/19 09:26:45 leot Exp $
 
-DISTNAME=	msmtp-1.6.6
+DISTNAME=	msmtp-1.8.0
 CATEGORIES=	mail
-PKGREVISION=	2
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=msmtp/}
+MASTER_SITES=	https://marlam.de/msmtp/releases/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	bcv@hub3.net
-HOMEPAGE=	http://msmtp.sourceforge.net/
+HOMEPAGE=	https://marlam.de/msmtp/
 COMMENT=	SMTP plugin for MUAs
 LICENSE=	gnu-gpl-v3
 
