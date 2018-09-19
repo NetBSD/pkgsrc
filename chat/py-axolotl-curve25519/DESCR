@@ -1,0 +1,3 @@
+This is python wrapper for curve25519 with ed25519 signatures.
+
+This wrapper is meant for use by py-axolotl.
