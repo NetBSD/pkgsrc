@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4060 2018/09/18 20:52:49 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.4061 2018/09/19 09:27:00 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5685,3 +5685,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Removed www/contao45 [taca 2018-09-18]
 	Added lang/go111 version 1.11 [bsiegert 2018-09-18]
 	Added lang/go110 version 1.10.4nb2 [bsiegert 2018-09-18]
+	Updated mail/msmtp to 1.8.0 [leot 2018-09-19]
