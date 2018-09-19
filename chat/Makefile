@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.204 2018/09/19 20:39:52 nia Exp $
+# $NetBSD: Makefile,v 1.205 2018/09/19 20:44:36 nia Exp $
 #
 
 COMMENT=	Communication programs
@@ -28,6 +28,7 @@ SUBDIR+=	farstream
 SUBDIR+=	finch
 SUBDIR+=	fisg
 SUBDIR+=	gajim
+SUBDIR+=	gajim-plugin-omemo
 SUBDIR+=	gale
 SUBDIR+=	gg2
 SUBDIR+=	gloox
