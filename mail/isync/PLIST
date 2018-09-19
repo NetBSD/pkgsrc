@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:04:35 joerg Exp $
-bin/get-cert
+@comment $NetBSD: PLIST,v 1.6 2018/09/19 13:08:14 schmonz Exp $
 bin/isync
 bin/mbsync
+bin/mbsync-get-cert
 bin/mdconvert
 man/man1/isync.1
 man/man1/mbsync.1
