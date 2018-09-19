@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4069 2018/09/19 20:40:58 nia Exp $
+$NetBSD: CHANGES-2018,v 1.4070 2018/09/19 20:44:50 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5695,3 +5695,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added chat/py-nbxmpp version 0.6.7 [nia 2018-09-19]
 	Updated chat/gajim to 1.0.3 [nia 2018-09-19]
 	Added chat/py-axolotl version 0.1.42 [nia 2018-09-19]
+	Added chat/gajim-plugin-omemo version 2.6.1 [nia 2018-09-19]
