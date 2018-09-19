@@ -1,29 +1,29 @@
-# $NetBSD: Makefile,v 1.37 2018/07/03 05:03:04 adam Exp $
+# $NetBSD: Makefile,v 1.38 2018/09/19 16:18:32 nia Exp $
 
-DISTNAME=	gajim-0.15
-PKGREVISION=	18
+DISTNAME=	gajim-1.0.3
 CATEGORIES=	chat python
-MASTER_SITES=	http://www.gajim.org/downloads/0.15/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	https://www.gajim.org/downloads/1.0/
 
-MAINTAINER=	vsevolod@highsecure.ru
+MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	http://www.gajim.org/
 COMMENT=	Jabber client written in PyGTK
 LICENSE=	gnu-gpl-v3
 
-DEPENDS=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-DEPENDS=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
+USE_TOOLS+=	gettext
+# needs --desktop
+_TOOLS_USE_PKGSRC.msgfmt=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+DEPENDS+=	${PYPKGPREFIX}-asn1-[0-9]*:../../security/py-asn1
+DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
+DEPENDS+=	${PYPKGPREFIX}-keyring-[0-9]*:../../security/py-keyring
+DEPENDS+=	${PYPKGPREFIX}-nbxmpp-[0-9]*:../../chat/py-nbxmpp
+DEPENDS+=	${PYPKGPREFIX}-OpenSSL-[0-9]*:../../security/py-OpenSSL
+DEPENDS+=	${PYPKGPREFIX}-idna-[0-9]*:../../www/py-idna
 
 .include "options.mk"
-
-USE_TOOLS+=	gmake intltool pkg-config msgfmt
-GNU_CONFIGURE=	yes
-
-.include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/libXScrnSaver/buildlink3.mk"
-.include "../../x11/py-gtk2/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
