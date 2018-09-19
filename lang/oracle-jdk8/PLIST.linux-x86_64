@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-x86_64,v 1.5 2018/05/26 22:24:01 ryoon Exp $
+@comment $NetBSD: PLIST.linux-x86_64,v 1.6 2018/09/19 18:19:24 abs Exp $
 bin/oracle8-appletviewer
 bin/oracle8-apt
 bin/oracle8-extcheck
@@ -11,6 +11,7 @@ bin/oracle8-javah
 bin/oracle8-javap
 bin/oracle8-jcmd
 bin/oracle8-jdb
+bin/oracle8-jhat
 bin/oracle8-jps
 bin/oracle8-rmic
 bin/oracle8-serialver
