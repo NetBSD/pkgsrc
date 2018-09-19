@@ -1,0 +1,5 @@
+py-nbxmpp is a Python library that provides a way for Python applications
+to use Jabber/XMPP networks in a non-blocking way.
+
+This library was originally a fork of xmpppy, but using non-blocking
+sockets.
