@@ -1,0 +1,1 @@
+bin/spark-parser-coverage @PREFIX@/bin/spark-parser-coverage-@PYVERSSUFFIX@
