@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4078 2018/09/20 14:05:33 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.4079 2018/09/20 21:42:08 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5707,3 +5707,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added lang/py-spark-parser version 1.8.7 [adam 2018-09-20]
 	Added lang/py-uncompyle6 version 3.2.3 [adam 2018-09-20]
 	Updated lang/nodejs to 10.11.0 [fhajny 2018-09-20]
+	Updated sysutils/open-vm-tools to 10.3.0 [ryoon 2018-09-20]
