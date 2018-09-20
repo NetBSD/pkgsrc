@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.10 2018/08/30 08:39:06 he Exp $
+$NetBSD: distinfo,v 1.11 2018/09/20 13:44:47 he Exp $
 
-SHA1 (zabbix-3.4.13.tar.gz) = 4f95ebe362b8376b1b1d0fb009c40475bc27459b
-RMD160 (zabbix-3.4.13.tar.gz) = bb250db84163a34093328147447c9dc75c95d04b
-SHA512 (zabbix-3.4.13.tar.gz) = 4edcf6d9df0f100c639efa6bc18e67ed59819e719a2226593fd81212d4c2e46a19cb50501cca005246b4c01c4082a18e21c9049a99ac9df263180a3c24fa52f0
-Size (zabbix-3.4.13.tar.gz) = 17507365 bytes
+SHA1 (zabbix-3.4.14.tar.gz) = 569552c552cb893993904fa499fd2ef8d02415bc
+RMD160 (zabbix-3.4.14.tar.gz) = 1e2afd7a4ca348354d8c05466b9f4035af177125
+SHA512 (zabbix-3.4.14.tar.gz) = 597ae107c16578ec2b1a364f2b61a7a7423a1cf39d3b04289e2f91dc0f931e796b566cbd451b14e026c35302120b647d6d574952a453189b066fb06081f9bb83
+Size (zabbix-3.4.14.tar.gz) = 17476022 bytes
 SHA1 (patch-frontends_php_locale_add__new__language.sh) = c187e2b4ae8dd9e409f5c32469cb7b0f02647d8b
 SHA1 (patch-frontends_php_locale_make__mo.sh) = 2f0aaa63e80fcd5d4fa8c507fd764f80070b7864
 SHA1 (patch-src_zabbix__agent_Makefile.in) = a591c3e831eb34dc10cb5b1078891b5cad53b756
