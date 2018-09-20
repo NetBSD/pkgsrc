@@ -1,0 +1,5 @@
+lib/libnss_winbind.so.2
+lib/libnss_wins.so
+lib/libnss_wins.so.2
+lib/samba/vfs/btrfs.so
+lib/samba/vfs/fileid.so
