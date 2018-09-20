@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4072 2018/09/20 10:14:05 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.4073 2018/09/20 11:21:00 abs Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5699,3 +5699,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/bind911 to 9.11.4pl2 [taca 2018-09-20]
 	Updated net/bind912 to 9.12.2pl2 [taca 2018-09-20]
 	Updated pkgtools/pkgin to 0.11.5 [jperkin 2018-09-20]
+	Updated devel/visualvm to 1.4.1 [abs 2018-09-20]
