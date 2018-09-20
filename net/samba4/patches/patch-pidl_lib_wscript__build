@@ -1,0 +1,18 @@
+$NetBSD: patch-pidl_lib_wscript__build,v 1.1 2018/09/20 18:24:08 tnn Exp $
+
+Fix PLIST error if building while pkg is already installed.
+Samba's configure will detect it's own file in $PREFIX and
+then elect to no install it because it thinks it is "system provided".
+
+--- pidl/lib/wscript_build.orig	2017-01-11 07:55:14.000000000 +0000
++++ pidl/lib/wscript_build
+@@ -31,7 +31,7 @@ bld.INSTALL_FILES(bld.env.PERL_LIB_INSTA
+                   ''',
+                   flat=False)
+ 
+-if not bld.CONFIG_SET('USING_SYSTEM_PARSE_YAPP_DRIVER'):
+-    bld.INSTALL_FILES(bld.env.PERL_LIB_INSTALL_DIR,
++#if not bld.CONFIG_SET('USING_SYSTEM_PARSE_YAPP_DRIVER'):
++bld.INSTALL_FILES(bld.env.PERL_LIB_INSTALL_DIR,
+                       'Parse/Yapp/Driver.pm',
+                       flat=False)
