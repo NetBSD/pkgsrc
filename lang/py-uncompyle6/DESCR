@@ -1,0 +1,7 @@
+A native Python cross-version decompiler and fragment decompiler. The successor
+to decompyle, uncompyle, and uncompyle2.
+
+uncompyle6 translates Python bytecode back into equivalent Python source code.
+It accepts bytecodes from Python version 1.3 to version 3.7, spanning over 22
+years of Python releases. We include Dropbox's Python 2.5 bytecode and some
+PyPy bytecode.
