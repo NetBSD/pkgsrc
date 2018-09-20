@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.28 2018/04/30 05:32:22 ryoon Exp $
+$NetBSD: distinfo,v 1.29 2018/09/20 21:41:16 ryoon Exp $
 
-SHA1 (open-vm-tools-10.2.5-8068406.tar.gz) = 6199d6d3227540192f2fcdf53684f7bfbbd82655
-RMD160 (open-vm-tools-10.2.5-8068406.tar.gz) = 4081012fc6f24e79cc16e53e29aa5f202e93a8f4
-SHA512 (open-vm-tools-10.2.5-8068406.tar.gz) = da2f26b4b22e195af111cc16d5819aeb963f0dfa18b5d2677d897549836ec8679808315646f7f86ae36862df9e623bbcb5d553dae97a68b3ef928a5c07ea2e68
-Size (open-vm-tools-10.2.5-8068406.tar.gz) = 4818035 bytes
-SHA1 (patch-ag) = 67ce2bcba5cfcbd48f4d2345d5529329424952b3
+SHA1 (open-vm-tools-10.3.0-8931395.tar.gz) = 236d8159882ab2663043232a59f84eba144d0345
+RMD160 (open-vm-tools-10.3.0-8931395.tar.gz) = 5287327b105bfb2356b510f8a6e11b2153d50f17
+SHA512 (open-vm-tools-10.3.0-8931395.tar.gz) = 627056db94b79aa7782324ed1a71e7f0c2420f0a0d76d3e65b84035b1350e29757a1412cbf195ef3d79fae37ddd6f17c6892ea2c64dbfa331854ded016965604
+Size (open-vm-tools-10.3.0-8931395.tar.gz) = 4638881 bytes
+SHA1 (patch-ag) = a54f2a76e7b08c8c005a576d4e43ede3f0e0c9da
 SHA1 (patch-ah) = 2f59c9d650d378a84118991f75c59281a4836aaa
 SHA1 (patch-ai) = 3e8c67a33f6072319f1741bda960377fc2663b06
 SHA1 (patch-aj) = e0bba963e3eed96cf7ae5b0e439a16524194e4df
-SHA1 (patch-ak) = c74a8185508d34cb35fbf14b638fab59661e191f
+SHA1 (patch-ak) = 07f926ccc90f07301075e1fb63769f8c1e926f75
 SHA1 (patch-aq) = 512a662530ef96c905eb61f6f9e459d6cd1c4b8e
 SHA1 (patch-ar) = b06873f37ac826912e647f2349dc88053bf2cb67
 SHA1 (patch-as) = b029c646cb49ee15a92827f100470489106a2f2f
@@ -23,9 +23,9 @@ SHA1 (patch-be) = 4e4f88df81daf40769b38d1ddd49fbf5e8d8d1eb
 SHA1 (patch-bf) = b5fffbfada52e1ebfa3652756ef26bde3343b1cd
 SHA1 (patch-bh) = 813a390478247b12c0ec0dd9e84302f1700b99ad
 SHA1 (patch-bm) = c868260b8eea95166c727c9542747c0503c65892
-SHA1 (patch-bt) = f0b696a582d69d325c44f6200f2e367ada6d7674
+SHA1 (patch-bt) = 98afde7ca576c17324d96e115ba4f64b901931ba
 SHA1 (patch-bu) = 33da24db6d7e3dd75ee6f4f1249772de506ab64d
-SHA1 (patch-configure.ac) = 8a3d6c8548eceead8dc5cdb8baf051861cacb7ae
+SHA1 (patch-configure.ac) = 292f4144bb635127b2b2e011af684034a0d423ce
 SHA1 (patch-libDeployPkg_linuxDeployment.c) = f50c7ff2fa07ab15716128654cc814a81cb924af
 SHA1 (patch-libDeployPkg_processPosix.c) = 4b7688d44f1ca8dcd40076391dc0fb9a627bfebe
 SHA1 (patch-lib_dynxdr_xdrutil.c) = 2a644aeb47bcef7f4db953250b116ec700940531
@@ -34,7 +34,6 @@ SHA1 (patch-lib_guestApp_guestApp.c) = ed916ad0726b8d992319828f8f3a4115d7aba753
 SHA1 (patch-lib_hgfsHelper_hgfsHelperPosix.c) = 9299f0a781d11689b04223a1dfd1c4725912f863
 SHA1 (patch-lib_hgfsUri_hgfsUriPosix.c) = f98eab5cb5885a9c2e258bf072b24d8806b20fd4
 SHA1 (patch-lib_include_sigPosixRegs.h) = a2d7a4c72ea4a7ba4c191fac06ebf1085ec31fa9
-SHA1 (patch-lib_include_vm__basic__types.h) = 35816f81ef480d884f8a538df92af57cd3403b4c
 SHA1 (patch-lib_include_vmblock__user.h) = fedbed79f997ce1e2c5a9d834374734ed56be51a
 SHA1 (patch-lib_include_vmci__sockets.h) = fba82038daf87a08f04ddd541281122f0047e968
 SHA1 (patch-lib_lock_ulSema.c) = 6908d4b453cbdb74100c9419da95a07db532c624

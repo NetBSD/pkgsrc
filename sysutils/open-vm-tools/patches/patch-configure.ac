@@ -1,6 +1,6 @@
-$NetBSD: patch-configure.ac,v 1.4 2018/01/01 06:56:01 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.5 2018/09/20 21:41:16 ryoon Exp $
 
---- configure.ac.orig	2017-12-15 19:09:51.000000000 +0000
+--- configure.ac.orig	2018-06-23 10:03:29.000000000 +0000
 +++ configure.ac
 @@ -126,6 +126,9 @@ case "$host_os" in
     [solaris*])
@@ -12,7 +12,7 @@ $NetBSD: patch-configure.ac,v 1.4 2018/01/01 06:56:01 ryoon Exp $
     [*])
        AC_MSG_WARN([This is an untested and unsupported Operating System. Proceed at your own peril.])
        ;;
-@@ -470,7 +473,7 @@ AC_VMW_CHECK_LIB([fuse],
+@@ -477,7 +480,7 @@ AC_VMW_CHECK_LIB([fuse],
                   [],
                   [],
                   [fuse.h],
@@ -21,7 +21,16 @@ $NetBSD: patch-configure.ac,v 1.4 2018/01/01 06:56:01 ryoon Exp $
                   [have_fuse=yes],
                   [have_fuse=no;
                    AC_MSG_WARN([Fuse is missing, vmblock-fuse/vmhgfs-fuse will be disabled.])])
-@@ -1263,6 +1266,15 @@ if test "$os" = "linux"; then
+@@ -1136,7 +1139,7 @@ AC_PATH_PROG(
+    [RPCGEN],
+    [rpcgen],
+    [not_found])
+-if test "$RPCGEN" == "not_found"; then
++if test "$RPCGEN" = "not_found"; then
+    AC_MSG_ERROR([rpcgen not found.])
+ fi
+ 
+@@ -1363,6 +1366,15 @@ if test "$os" = "linux"; then
     fi
  fi
  
@@ -37,7 +46,7 @@ $NetBSD: patch-configure.ac,v 1.4 2018/01/01 06:56:01 ryoon Exp $
  if test "$os" = "freebsd" || test "$os" = "kfreebsd-gnu"; then
     LIBVMTOOLS_LIBADD="$LIBVMTOOLS_LIBADD -lkvm"
     MODULES_DIR="/boot/modules"
-@@ -1360,6 +1372,7 @@ fi
+@@ -1460,6 +1472,7 @@ fi
  AM_CONDITIONAL(BUILD_HGFSMOUNTER, test "$buildHgfsmounter" = "yes")
  AM_CONDITIONAL(LINUX, test "$os" = "linux")
  AM_CONDITIONAL(SOLARIS, test "$os" = "solaris")
