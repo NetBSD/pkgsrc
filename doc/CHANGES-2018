@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4070 2018/09/19 20:44:50 nia Exp $
+$NetBSD: CHANGES-2018,v 1.4071 2018/09/20 10:04:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5696,3 +5696,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated chat/gajim to 1.0.3 [nia 2018-09-19]
 	Added chat/py-axolotl version 0.1.42 [nia 2018-09-19]
 	Added chat/gajim-plugin-omemo version 2.6.1 [nia 2018-09-19]
+	Updated net/bind911 to 9.11.4pl2 [taca 2018-09-20]
+	Updated net/bind912 to 9.12.2pl2 [taca 2018-09-20]
