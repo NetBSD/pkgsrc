@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/09/19 20:44:36 nia Exp $
-${PYSITELIB}/gajim/data/plugins/omemo/CHANGELOG
-${PYSITELIB}/gajim/data/plugins/omemo/COPYING
+@comment $NetBSD: PLIST,v 1.2 2018/09/20 00:23:12 nia Exp $
 ${PYSITELIB}/gajim/data/plugins/omemo/__init__.py
 ${PYSITELIB}/gajim/data/plugins/omemo/config_dialog.ui
 ${PYSITELIB}/gajim/data/plugins/omemo/download_progress_dialog.ui
