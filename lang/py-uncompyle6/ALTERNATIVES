@@ -1,0 +1,2 @@
+bin/pydisassemble @PREFIX@/bin/pydisassemble-@PYVERSSUFFIX@
+bin/uncompyle6 @PREFIX@/bin/uncompyle6-@PYVERSSUFFIX@
