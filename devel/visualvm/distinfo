@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/03/23 17:06:49 joerg Exp $
+$NetBSD: distinfo,v 1.3 2018/09/20 11:20:29 abs Exp $
 
-SHA1 (visualvm_138.zip) = 99f42a4a85082f42c7df9669602febf0b4c47a75
-RMD160 (visualvm_138.zip) = 455baa7227898d0b77993c5a77a504651a2a39d9
-SHA512 (visualvm_138.zip) = 39b297aa0d9d1c4aac9c1bd6eb8dde488ec99478107f152f9d88016c74d7e6b3a803ec3e86fd02af8a713190acb3c260bb89f60e393f994bb7d694b31bf4821c
-Size (visualvm_138.zip) = 13612007 bytes
+SHA1 (visualvm_141.zip) = 55822344a5f2c53a12fb33a89edb07af03e2350d
+RMD160 (visualvm_141.zip) = b3dfc9b35edb66f4a98bd995b342dcd8dbcdd086
+SHA512 (visualvm_141.zip) = b6e1fbd51482c9f2aebda97651d497d0198177a2506cb81ae198f1584abf4129420affca76220de2b630621420470143bc9b94de5febb2717f96903bbde1238c
+Size (visualvm_141.zip) = 15601279 bytes
