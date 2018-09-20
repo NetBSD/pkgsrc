@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2018/08/16 18:55:12 adam Exp $
+# $NetBSD: Makefile,v 1.8 2018/09/20 13:30:12 fhajny Exp $
 #
 
 RSYSLOG_MOD=	rabbitmq
 PKGNAME=	${DISTNAME:S/rsyslog/rsyslog-${RSYSLOG_MOD}/}
-PKGREVISION=	1
 
 DEPENDS+=	rsyslog>=${PKGVERSION_NOREV}:../../sysutils/rsyslog
 
