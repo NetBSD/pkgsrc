@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.3 2016/10/09 03:41:56 ryoon Exp $
+$NetBSD: patch-ag,v 1.4 2018/09/20 21:41:16 ryoon Exp $
 
---- lib/dynxdr/dynxdr.c.orig	2016-02-16 20:06:45.000000000 +0000
+--- lib/dynxdr/dynxdr.c.orig	2018-06-23 10:04:02.000000000 +0000
 +++ lib/dynxdr/dynxdr.c
-@@ -54,7 +54,7 @@ typedef struct DynXdrData {
+@@ -55,7 +55,7 @@ typedef struct DynXdrData {
   * Mac OS X, FreeBSD and Solaris don't take a const parameter to the
   * "x_getpostn" function.
   */
--#if defined(__APPLE__) || defined(__FreeBSD__) || defined(sun)
-+#if defined(__APPLE__) || defined(__FreeBSD__) || defined(sun) || defined(__NetBSD__)
+-#if defined(__APPLE__) || defined(__FreeBSD__) || defined(sun) || defined(USE_TIRPC)
++#if defined(__APPLE__) || defined(__FreeBSD__) || defined(sun) || defined(USE_TIRPC) || defined(__NetBSD__)
  #  define DYNXDR_GETPOS_CONST
  #else
  #  define DYNXDR_GETPOS_CONST const

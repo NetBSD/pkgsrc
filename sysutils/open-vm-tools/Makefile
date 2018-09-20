@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.86 2018/07/20 03:34:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.87 2018/09/20 21:41:16 ryoon Exp $
 
-OVTVER=		10.2.5
-DISTNAME=	open-vm-tools-${OVTVER}-8068406
+OVTVER=		10.3.0
+DISTNAME=	open-vm-tools-${OVTVER}-8931395
 PKGNAME=	open-vm-tools-${OVTVER}
-PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vmware/}
 
@@ -15,6 +14,8 @@ LICENSE=	gnu-lgpl-v2.1
 GITHUB_PROJECT=	open-vm-tools
 GITHUB_RELEASE=	stable-${OVTVER}
 #WRKSRC=	${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}/${GITHUB_PROJECT}
+
+EXTRACT_USING=	bsdtar
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64
 
