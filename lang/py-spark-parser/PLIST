@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2018/09/20 13:46:52 adam Exp $
+bin/spark-parser-coverage-${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/spark_parser/__init__.py
+${PYSITELIB}/spark_parser/__init__.pyc
+${PYSITELIB}/spark_parser/__init__.pyo
+${PYSITELIB}/spark_parser/ast.py
+${PYSITELIB}/spark_parser/ast.pyc
+${PYSITELIB}/spark_parser/ast.pyo
+${PYSITELIB}/spark_parser/scanner.py
+${PYSITELIB}/spark_parser/scanner.pyc
+${PYSITELIB}/spark_parser/scanner.pyo
+${PYSITELIB}/spark_parser/spark.py
+${PYSITELIB}/spark_parser/spark.pyc
+${PYSITELIB}/spark_parser/spark.pyo
+${PYSITELIB}/spark_parser/version.py
+${PYSITELIB}/spark_parser/version.pyc
+${PYSITELIB}/spark_parser/version.pyo
