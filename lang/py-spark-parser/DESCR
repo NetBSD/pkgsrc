@@ -1,0 +1,7 @@
+This package uses Jay Earley's algorithm for parsing context free grammars, and
+comes with some generic Abstract Syntax Tree routines. There is also a
+prototype scanner which does its job by combining Python regular expressions.
+
+(SPARK stands for Scanning, Parsing, and Rewriting Kit. It is a poor name since
+it conflicts with a more popular package of the same name. In the future we
+will rename this.)
