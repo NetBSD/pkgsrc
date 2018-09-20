@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.36 2018/07/10 13:49:10 fhajny Exp $
+$NetBSD: distinfo,v 1.37 2018/09/20 13:30:11 fhajny Exp $
 
-SHA1 (rsyslog-8.36.0.tar.gz) = b559657c799e618dabd0d3be2cd9f423a58eb1a4
-RMD160 (rsyslog-8.36.0.tar.gz) = 4ddfac72eb225eca87bf84a6097de98a900b6ba6
-SHA512 (rsyslog-8.36.0.tar.gz) = b0c8689374b5b0fb5ad9675ad8983ce67bd04d34ad07d39cf8f91498fd2fd21a173f1077e5fa1b66a89a9d93ab011fc6345ac1a3be9961f4794fc9e152c32a50
-Size (rsyslog-8.36.0.tar.gz) = 2639477 bytes
-SHA1 (patch-configure) = a48227ea73449528e6a9692cb850052bd44949ce
+SHA1 (rsyslog-8.38.0.tar.gz) = 87aaaca873c3cfa6e450ba371ab88fad20fd6b17
+RMD160 (rsyslog-8.38.0.tar.gz) = 44ac2abefb603ff0f7f18615317ea5f59d619cc0
+SHA512 (rsyslog-8.38.0.tar.gz) = 9dc3bdc4ef01c2af433478e182704694cb50849d811d476a03e4ce03b3c5aecfb506e7f1c1e51fadcd63da60b067d8011b92b8c9354a688fe66f7b6ffd8f9254
+Size (rsyslog-8.38.0.tar.gz) = 2721798 bytes
+SHA1 (patch-configure) = c7b6ab1f7da4b78034ac5defe75f965b2b6a6e6b
 SHA1 (patch-platform_redhat_rsyslog.conf) = b2fc1dbeb2b679b82d6c1a86ec1e4e72ef460433
 SHA1 (patch-tools_iminternal.c) = 76e140343456b120cd9f0743e6f10e78f9baaa5d
 SHA1 (patch-tools_rsyslogd.8) = a3c79f551111b7bf5933ca5e0930b1f52875f341
