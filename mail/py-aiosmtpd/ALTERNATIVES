@@ -1,1 +1,1 @@
-bin/aiosmtpd @PREFIX@/bin/aiosmtpd@PYVERSSUFFIX@
+bin/aiosmtpd @PREFIX@/bin/aiosmtpd-@PYVERSSUFFIX@
