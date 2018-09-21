@@ -1,0 +1,22 @@
+# $NetBSD: Makefile,v 1.1 2018/09/21 13:24:34 maya Exp $
+
+DISTNAME=	alure-1.2
+CATEGORIES=	audio
+MASTER_SITES=	http://kcat.strangesoft.net/alure-releases/
+
+MAINTAINER=	bastiangermann@fishpost.de
+HOMEPAGE=	http://kcat.strangesoft.net/alure
+COMMENT=	Helps manage common tasks with OpenAL applications
+LICENSE=	mit
+
+USE_CMAKE=	yes
+USE_TOOLS+=	pkg-config
+USE_LANGUAGES=	c c++
+CMAKE_ARGS+=	-DBUILD_EXAMPLES=OFF -DDUMB=OFF -DDYNLOAD=OFF
+
+PKGCONFIG_OVERRIDE+=	alure-static.pc.in
+PKGCONFIG_OVERRIDE+=	alure.pc.in
+
+.include "options.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
