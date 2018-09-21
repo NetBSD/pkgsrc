@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.115 2018/09/16 09:11:54 maya Exp $
+# $NetBSD: mozilla-common.mk,v 1.116 2018/09/21 10:11:19 jperkin Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -48,7 +48,7 @@ test:
 TOOLS_PLATFORM.tar=	${TOOLS_PATH.bsdtar}
 USE_TOOLS+=		bsdtar
 .endif
-GCC_REQD=		6.1
+GCC_REQD+=		6.1
 .if !empty(MACHINE_PLATFORM:MNetBSD-[0-7]**-*) || \
 	!empty(MACHINE_PLATFORM:MNetBSD-8.[0-8]*-*)
 USE_PKGSRC_GCC_RUNTIME=	yes
