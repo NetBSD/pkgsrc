@@ -1,4 +1,4 @@
-# $NetBSD: cargo.mk,v 1.2 2018/05/06 01:59:36 maya Exp $
+# $NetBSD: cargo.mk,v 1.3 2018/09/21 21:26:33 minskim Exp $
 #
 # Common logic that can be used by packages that depend on cargo crates
 # from crates.io. This lets existing pkgsrc infrastructure fetch and verify
@@ -19,6 +19,8 @@
 # a list of CARGO_CRATE_DEPENDS can be generated via "make show-cargo-depends".
 #
 # See also www/geckodriver for a full example.
+
+BUILD_DEPENDS+=	rust-[0-9]*:../../lang/rust
 
 USE_TOOLS+=		bsdtar digest
 CARGO_VENDOR_DIR=	${WRKDIR}/vendor

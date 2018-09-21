@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/05/08 07:48:39 maya Exp $
+# $NetBSD: Makefile,v 1.2 2018/09/21 21:26:33 minskim Exp $
 
 GITHUB_PROJECT=	ripgrep
 DISTNAME=	0.8.1
@@ -14,8 +14,6 @@ LICENSE=	unlicense
 
 WRKSRC=		${WRKDIR}/ripgrep-0.8.1
 USE_LANGUAGES=	c
-
-BUILD_DEPENDS+=	rust-[0-9]*:../../lang/rust
 
 CARGO_CRATE_DEPENDS+=		\
 	atty-0.2.6		\
