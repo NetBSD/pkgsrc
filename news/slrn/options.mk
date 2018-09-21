@@ -1,10 +1,20 @@
-# $NetBSD: options.mk,v 1.2 2014/08/23 09:34:48 obache Exp $
+# $NetBSD: options.mk,v 1.3 2018/09/21 14:27:37 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.slrn
-PKG_SUPPORTED_OPTIONS=		ssl uulib
-PKG_SUGGESTED_OPTIONS=		ssl
+PKG_SUPPORTED_OPTIONS=		canlock ssl uulib
+PKG_SUGGESTED_OPTIONS=		canlock ssl uulib
 
 .include "../../mk/bsd.options.mk"
+
+###
+### canlock support
+###
+.if !empty(PKG_OPTIONS:Mcanlock)
+.  include "../../news/libcanlock/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-canlock=${BUILDLINK_PREFIX.libcanlock}
+.else
+CONFIGURE_ARGS+=	--without-canlock
+.endif
 
 ###
 ### SSL support
