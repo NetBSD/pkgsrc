@@ -1,0 +1,32 @@
+$NetBSD: patch-doc_manual.txt,v 1.1 2018/09/21 14:27:37 wiz Exp $
+
+Added documentation for new config option "canlock_algo".
+
+--- doc/manual.txt.orig	2016-10-23 22:34:16.000000000 +0000
++++ doc/manual.txt
+@@ -63,6 +63,7 @@
+      6.5 beep
+      6.6 broken_xref
+      6.7 cansecret_file
++     6.7.1 canlock_algo
+      6.8 cc_followup
+      6.9 cc_post_string
+      6.10 charset
+@@ -1652,6 +1653,17 @@
+   canlock) and that cancel locks only have an effect if the server
+   supports them.
+ 
++  6.7.1.  canlock_algo
++
++  Type: string
++  Default: "SHA256"
++
++  If slrn is configured to put cancel-locks into the articles you post,
++  then this variable is used to select the hash algorithm for <scheme>
++  and HMAC (used as recommended in Section 4 of RFC 8315).
++
++  The default value is the mandatory hash algorithm defined by RFC 8315.
++
+   6.8.  cc_followup
+ 
+   Type: integer

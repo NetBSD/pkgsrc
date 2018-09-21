@@ -1,10 +1,10 @@
-$NetBSD: patch-af,v 1.2 2014/08/23 09:34:48 obache Exp $
+$NetBSD: patch-po_Makefile.in.in,v 1.1 2018/09/21 14:27:37 wiz Exp $
 
 Directly use INSTALL_DATA as ${mkdir_p}.
 
 --- po/Makefile.in.in.orig	2008-02-11 19:04:23.000000000 +0100
 +++ po/Makefile.in.in
-@@ -46,7 +46,7 @@ INSTALL_DATA = @INSTALL_DATA@
+@@ -47,7 +47,7 @@ INSTALL_DATA = @INSTALL_DATA@
  # versions, $(mkinstalldirs) and $(install_sh) are unused.
  #mkinstalldirs = $(SHELL) @install_sh@ -d
  #install_sh = $(SHELL) @install_sh@

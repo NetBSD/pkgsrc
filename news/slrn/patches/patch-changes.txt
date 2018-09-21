@@ -1,0 +1,29 @@
+$NetBSD: patch-changes.txt,v 1.1 2018/09/21 14:27:37 wiz Exp $
+
+Changelog updated.
+
+--- changes.txt.orig	2016-10-23 22:34:16.000000000 +0000
++++ changes.txt
+@@ -1,4 +1,12 @@
+ -*- mode: text; mode: fold -*-
++
++Changes since 1.0.3
++1. Cancel-Locks now using API version 3 of the canlock library (--with-canlock).
++   The hash algorithm can be configured with the new variable "canlock_algo".
++   (Michael Baeuerle)
++
++{{{ Previous Versions
++
+ Changes since 1.0.2
+ 1. src/parse2822.c: A quoted-string in the display portion of an
+    address was not being marked as allowing mime-encoded text.
+@@ -30,9 +38,6 @@ Changes since 1.0.2
+ 15. Updates for mingw and cygwin 32 and 64 bit systems.
+ 16. src/mime.c: rfc1522_encode_word: max_nbytes was not being properly
+     limit checked.
+-
+-{{{ Previous Versions
+-
+ Changes since 1.0.1
+ 1. src/misc.c: slrn_verror needed va_copy when writing to the log file.
+ 2. src/post.c: Move the cursor to the end of the line when querying
