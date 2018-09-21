@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2018/09/21 13:24:34 maya Exp $
+include/AL/alure.h
+lib/libalure-static.a
+lib/libalure.so
+lib/libalure.so.1
+lib/libalure.so.${PKGVERSION}.0
+lib/pkgconfig/alure-static.pc
+lib/pkgconfig/alure.pc
+share/doc/alure/html/files/alure-cpp.html
+share/doc/alure/html/files/buffer-cpp.html
+share/doc/alure/html/files/istream-cpp.html
+share/doc/alure/html/files/stream-cpp.html
+share/doc/alure/html/files/streamplay-cpp.html
+share/doc/alure/html/index.html
+share/doc/alure/html/index/Functions.html
+share/doc/alure/html/index/General.html
+share/doc/alure/html/javascript/main.js
+share/doc/alure/html/javascript/searchdata.js
+share/doc/alure/html/search/FunctionsA.html
+share/doc/alure/html/search/GeneralA.html
+share/doc/alure/html/search/GeneralF.html
+share/doc/alure/html/search/GeneralM.html
+share/doc/alure/html/search/GeneralS.html
+share/doc/alure/html/search/NoResults.html
+share/doc/alure/html/styles/1.css
+share/doc/alure/html/styles/2.css
+share/doc/alure/html/styles/main.css
