@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.32 2018/04/01 20:29:28 joerg Exp $
+$NetBSD: distinfo,v 1.33 2018/09/21 00:59:53 jym Exp $
 
-SHA1 (nut-2.6.5.tar.gz) = 320debe11df91f04e32824694d0c89a020677f71
-RMD160 (nut-2.6.5.tar.gz) = d6e6acd4696e3c3f8c0ecd998f8676a8625decb9
-SHA512 (nut-2.6.5.tar.gz) = f1c76e6280057dc558d53451e7de2bdc7f37a0f175b1c52c27e7dcb83deeb78f6885007ad188a7a3a19e411eba87e03eb2246310bd7a5a5bb6fa3ad2bebd49d8
-Size (nut-2.6.5.tar.gz) = 2038832 bytes
-SHA1 (patch-aa) = 48110f378518edb43a653753eb4ef6ea28344c62
-SHA1 (patch-ab) = 44988118570714ab2c3fffdd75909c2255b94fa6
-SHA1 (patch-clients_upsclient.c) = dbd2cacf598ff3dc2d3d673dae8563348fc84c8b
+SHA1 (nut-2.7.4.tar.gz) = a450382dbfaff2e1bdeefeda8d3c682a36a7fc72
+RMD160 (nut-2.7.4.tar.gz) = f39a49128a3ba20b1bf122ce569c5a867815c3a1
+SHA512 (nut-2.7.4.tar.gz) = 320c4aff85d8a370c5eff77d33924fdfc3caf6a250620693cdd5bf3336b3a80d8a207488eee841bcf8b72fbad68fda4c074e63b99c56e7886716fc934122d11a
+Size (nut-2.7.4.tar.gz) = 2509831 bytes
+SHA1 (patch-aa) = 5f39487b0ebb39e27dcc76b762ce06090085c24b
+SHA1 (patch-clients_upsclient.c) = 9c521684a5ccf108bd464767f9b31aa2694afae1
 SHA1 (patch-drivers_hidparser.c) = c71d84bbf3140db1f82ef155fdf5afec79cbd38d
 SHA1 (patch-drivers_libusb.c) = 4e75bc13123a37aa2a2b5497d51605f88b0c5464
+SHA1 (patch-snmp-error-msg.c) = f01db1f935cc168c9e831f5b672cd9e16ddf6f2c
