@@ -1,0 +1,28 @@
+$NetBSD: patch-doc_slrn.rc,v 1.1 2018/09/21 14:27:37 wiz Exp $
+
+Example rc file extended with Cancel-Lock related options.
+
+--- doc/slrn.rc.orig	2016-10-23 22:34:16.000000000 +0000
++++ doc/slrn.rc
+@@ -540,3 +540,21 @@ setkey readline trim		 "<Esc>/"	% Trim w
+ setkey readline quoted_insert	 "^Q"		% Quoted insert
+ setkey readline complete	 "<Tab>"	% Complete filename
+ setkey readline cycle		 " "		% Cycle among filenames
++
++%
++%% Cancel-Lock related
++%
++
++% The Message-ID is required to calculate Cancel-Locks. One option is to enable
++% "generate_message_id" option above. "posting_host" can be set if your machine
++% has no FQDN.
++%posting_host "domain.example"			% Domain under your control
++
++% File containing the secret. This file can be shared with other newsreaders
++% that use the recommended algorithm from Section 4 of RFC 8315.
++%set cansecret_file "/home/user/.cancelsecret"
++
++% Hash algorithm to use for <scheme> and HMAC according to RFC 8315.
++% Supported values: "SHA1", "SHA256", "SHA512".
++% If this option is not specified, "SHA256" is used as default.
++%set canlock_algo "SHA256"
