@@ -1,4 +1,4 @@
-# $NetBSD: go-package.mk,v 1.16 2018/09/15 00:31:11 minskim Exp $
+# $NetBSD: go-package.mk,v 1.17 2018/09/21 20:35:56 bsiegert Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 #
@@ -57,7 +57,18 @@ GO_BUILD_PATTERN?=	${GO_SRCPATH}/...
 
 WRKSRC=			${WRKDIR}/src/${GO_SRCPATH}
 
-BUILD_DEPENDS+=		go-${GO_VERSION}*:../../lang/go
+.if ${OPSYS} == "NetBSD" && ${OS_VERSION:M6.*}
+# 1.9 is the last Go version to support NetBSD 6
+GO_VERSION_DEFAULT?=	19
+.else
+GO_VERSION_DEFAULT?=	111
+.endif
+
+.if !empty(GO_VERSION_DEFAULT)
+GOVERSSUFFIX=		${GO_VERSION_DEFAULT}
+.endif
+
+BUILD_DEPENDS+=		go${GOVERSSUFFIX}-${GO${GOVERSSUFFIX}_VERSION}*:../../lang/go${GOVERSSUFFIX}
 
 MAKE_JOBS_SAFE=		no
 INSTALLATION_DIRS+=	bin gopkg
