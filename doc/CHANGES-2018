@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4080 2018/09/21 01:03:30 jym Exp $
+$NetBSD: CHANGES-2018,v 1.4081 2018/09/21 07:52:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5709,3 +5709,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/nodejs to 10.11.0 [fhajny 2018-09-20]
 	Updated sysutils/open-vm-tools to 10.3.0 [ryoon 2018-09-20]
 	Updated sysutils/ups-nut to 2.7.4 [jym 2018-09-21]
+	Updated databases/py-sqlalchemy to 1.2.12 [adam 2018-09-21]
+	Updated databases/py-sqlalchemy-utils to 0.33.5 [adam 2018-09-21]
