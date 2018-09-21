@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2018/09/06 13:28:00 adam Exp $
+# $NetBSD: Makefile,v 1.34 2018/09/21 11:04:16 adam Exp $
 
-DISTNAME=	paramiko-2.4.1
+DISTNAME=	paramiko-2.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/paramiko/}
