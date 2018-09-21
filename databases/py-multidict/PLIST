@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/09/06 14:04:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/09/21 10:36:14 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -14,7 +14,6 @@ ${PYSITELIB}/multidict/_compat.py
 ${PYSITELIB}/multidict/_compat.pyc
 ${PYSITELIB}/multidict/_compat.pyo
 ${PYSITELIB}/multidict/_istr.c
-${PYSITELIB}/multidict/_istr.pyd
 ${PYSITELIB}/multidict/_istr.so
 ${PYSITELIB}/multidict/_multidict.c
 ${PYSITELIB}/multidict/_multidict.pyx
