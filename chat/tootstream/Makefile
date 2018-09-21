@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2018/08/21 17:34:48 nia Exp $
+# $NetBSD: Makefile,v 1.5 2018/09/21 21:44:12 nia Exp $
 
 DISTNAME=	tootstream-0.3.5
+PKGREVISION=	1
 CATEGORIES=	chat www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=magicalraccoon/}
 
@@ -12,7 +13,10 @@ LICENSE=	mit
 EXTRACT_USING=	bsdtar
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE+=	27
+# incompatible with python 2.
+# strange locale errors on earlier versions of python 3, related
+# to py-click.
+PYTHON_VERSIONS_INCOMPATIBLE+=	27 34 35 36
 
 DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-colored-[0-9]*:../../textproc/py-colored
