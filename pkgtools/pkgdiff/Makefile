@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.92 2018/08/22 09:46:11 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2018/09/21 12:40:26 jperkin Exp $
 
 PKGNAME=	pkgdiff-1.8
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	pkgtools devel
 
 MAINTAINER=	wiz@NetBSD.org
@@ -26,9 +26,6 @@ DEPENDS+=	diffutils-[0-9]*:../../devel/diffutils
 DIFF?=		${PREFIX}/bin/gdiff
 .else
 DIFF?=		diff
-.endif
-.if ${OPSYS} == "SunOS"
-MANINSTALL=	catinstall
 .endif
 
 INSTALLATION_DIRS=	bin
