@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2018/08/10 10:41:20 leot Exp $
+$NetBSD: distinfo,v 1.7 2018/09/21 17:10:57 leot Exp $
 
 SHA1 (geomyidae-v0.32.2.tgz) = cf7e947cdbcc3aa050e474595e728c773733e23e
 RMD160 (geomyidae-v0.32.2.tgz) = 48c80bf1f1b2c4126c461a84674d58030ca0aba7
 SHA512 (geomyidae-v0.32.2.tgz) = 3b0927a16082df862b9efacc2f29fd1b1ca76f7d465426e179d5995a416bc27b518daba422512091304ed5479ff133e3d40f7bf66aedfbd8d99d13710809d519
 Size (geomyidae-v0.32.2.tgz) = 20897 bytes
+SHA1 (patch-main.c) = 2a1efaff4b894da05f609a638a9ad38af8ba59fe
