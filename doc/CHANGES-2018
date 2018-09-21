@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4079 2018/09/20 21:42:08 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.4080 2018/09/21 01:03:30 jym Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5708,3 +5708,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added lang/py-uncompyle6 version 3.2.3 [adam 2018-09-20]
 	Updated lang/nodejs to 10.11.0 [fhajny 2018-09-20]
 	Updated sysutils/open-vm-tools to 10.3.0 [ryoon 2018-09-20]
+	Updated sysutils/ups-nut to 2.7.4 [jym 2018-09-21]
