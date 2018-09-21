@@ -1,8 +1,17 @@
-$NetBSD: distinfo,v 1.17 2015/11/02 23:49:47 agc Exp $
+$NetBSD: distinfo,v 1.18 2018/09/21 14:27:37 wiz Exp $
 
-SHA1 (slrn-1.0.1.tar.gz) = 9ad41ec3894d2b6b1ae8f158e994a8f138540baa
-RMD160 (slrn-1.0.1.tar.gz) = 4a1aa5b3a209e8aac50df0e5557eabfe22b13622
-SHA512 (slrn-1.0.1.tar.gz) = fd2eecb7a82c078b401a8cf8c0e54166d508418f4064c3b074a33dcf2aa1c7a38ce324fee108c5d14e63a385fb6e45b82477f24f9a359870160d12ecb39440b5
-Size (slrn-1.0.1.tar.gz) = 1529545 bytes
-SHA1 (patch-af) = 7b9507c68cefa913ebeb0e44c4ca0ad70956a3bd
+SHA1 (slrn-1.0.3a.tar.bz2) = 898d09685f5fe159f23829cd21e15308f5dce822
+RMD160 (slrn-1.0.3a.tar.bz2) = dd5f5df5d508b8e0c5b136093f24121af31d3432
+SHA512 (slrn-1.0.3a.tar.bz2) = 11cef2dfe41f441af15acc22fb675cf607e932f0dd6d4a998e51ecda05c9a50d7abf10a3e693ffc857ad77e09634f460404e4d5b289169e7bbffdaf5d6d565a3
+Size (slrn-1.0.3a.tar.bz2) = 997138 bytes
+SHA1 (patch-changes.txt) = 185a9b2f918f15b1b66f492412883d77e57bab40
+SHA1 (patch-doc_manual.txt) = 216f8696b44b59c56a83655a868116932fe76e1d
+SHA1 (patch-doc_slrn.rc) = b2a3cf7c21f291c9b75f27596ae31e268a8275e8
+SHA1 (patch-po_Makefile.in.in) = 2b91ae3934b3b2b52a264129af08078ac622ce6a
+SHA1 (patch-src_art.c) = 70e4408827d3c67010ccb5b515c8d037f3f3b6b8
+SHA1 (patch-src_misc.c) = db64dad237e7eb348e32b772e1546e8b5440593c
+SHA1 (patch-src_misc.h) = a65145ecf87e7a9380940963aaeb81c35b9cb3b5
+SHA1 (patch-src_post.c) = e2f16323b2b0119e8d76779619f774dc0df663af
 SHA1 (patch-src_slrnfeat.hin) = a115a2f7de61acd5c296fb3696a3cb97226ea121
+SHA1 (patch-src_startup.c) = bab29e395d2710acb7f9db4911873b5c8073aff8
+SHA1 (patch-src_version.c) = d622ec61fbd1c8db2a124bae63f68251a7885327
