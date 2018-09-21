@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4087 2018/09/21 12:40:35 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.4088 2018/09/21 13:25:28 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5722,3 +5722,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/ghostscript-agpl to 9.25 [adam 2018-09-21]
 	Updated net/fping to 4.1 [adam 2018-09-21]
 	Updated pkgtools/pkgdiff to 1.8nb3 [jperkin 2018-09-21]
+	Added audio/alure version 1.2 [maya 2018-09-21]
