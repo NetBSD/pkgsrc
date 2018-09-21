@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.54 2013/07/12 10:45:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.55 2018/09/21 00:59:53 jym Exp $
 
 .include "Makefile.common"
 
 PKGNAME=		ups-${DISTNAME}
-PKGREVISION=		1
 COMMENT=		Network UPS Tools
 
 CONFIGURE_ARGS+=	--with-drvpath=${NUT_DRVDIR:Q}
