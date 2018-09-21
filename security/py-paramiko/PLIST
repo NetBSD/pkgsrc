@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2018/03/13 18:35:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2018/09/21 11:04:16 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -19,9 +19,6 @@ ${PYSITELIB}/paramiko/agent.pyo
 ${PYSITELIB}/paramiko/auth_handler.py
 ${PYSITELIB}/paramiko/auth_handler.pyc
 ${PYSITELIB}/paramiko/auth_handler.pyo
-${PYSITELIB}/paramiko/authenticator.py
-${PYSITELIB}/paramiko/authenticator.pyc
-${PYSITELIB}/paramiko/authenticator.pyo
 ${PYSITELIB}/paramiko/ber.py
 ${PYSITELIB}/paramiko/ber.pyc
 ${PYSITELIB}/paramiko/ber.pyo
