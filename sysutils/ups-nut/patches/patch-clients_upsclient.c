@@ -1,4 +1,6 @@
-$NetBSD: patch-clients_upsclient.c,v 1.1 2018/04/01 20:29:28 joerg Exp $
+$NetBSD: patch-clients_upsclient.c,v 1.2 2018/09/21 00:59:53 jym Exp $
+
+Add missing header for timeval(3) functions.
 
 --- clients/upsclient.c.orig	2018-04-01 17:13:02.200981408 +0000
 +++ clients/upsclient.c
