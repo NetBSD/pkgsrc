@@ -1,14 +1,13 @@
-# $NetBSD: Makefile.common,v 1.6 2018/09/21 00:59:53 jym Exp $
+# $NetBSD: Makefile.common,v 1.7 2018/09/21 08:13:26 jperkin Exp $
 # used by sysutils/ups-nut/Makefile
 # used by sysutils/ups-nut-cgi/Makefile
 # used by sysutils/ups-nut-snmp/Makefile
 # used by sysutils/ups-nut-usb/Makefile
 # used by sysutils/p5-UPS-Nut/Makefile
 
-BRANCH=			2.7
-DISTNAME=		nut-${BRANCH}.4
+DISTNAME=		nut-2.7.4
 CATEGORIES=		sysutils
-MASTER_SITES=		http://www.networkupstools.org/source/${BRANCH}/
+MASTER_SITES=		http://www.networkupstools.org/source/${PKGVERSION_NOREV:R}/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.networkupstools.org/
