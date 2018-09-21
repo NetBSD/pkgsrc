@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/05/09 23:41:39 maya Exp $
+# $NetBSD: Makefile,v 1.5 2018/09/21 21:26:33 minskim Exp $
 
 DISTNAME=	geckodriver-0.20.1
 CATEGORIES=	www
@@ -10,8 +10,6 @@ MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	https://github.com/mozilla/geckodriver/
 COMMENT=	W3C WebDriver-compatible proxy for Gecko-based browsers
 LICENSE=	mpl-1.1
-
-BUILD_DEPENDS+=	rust-[0-9]*:../../lang/rust
 
 CARGO_CRATE_DEPENDS+=		\
 	adler32-1.0.2		\
