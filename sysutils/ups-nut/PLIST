@@ -1,12 +1,15 @@
-@comment $NetBSD: PLIST,v 1.26 2014/03/11 14:05:16 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.27 2018/09/21 00:59:53 jym Exp $
 bin/upsc
 bin/upscmd
 bin/upslog
 bin/upsrw
 bin/upssched-cmd
+lib/libnutclient.la
 lib/libupsclient.la
+libexec/nut/al175
 libexec/nut/apcsmart
 libexec/nut/apcsmart-old
+libexec/nut/apcupsd-ups
 libexec/nut/bcmxcp
 libexec/nut/belkin
 libexec/nut/belkinunv
@@ -31,19 +34,20 @@ libexec/nut/metasys
 libexec/nut/mge-shut
 libexec/nut/mge-utalk
 libexec/nut/microdowell
+libexec/nut/nutdrv_qx
 libexec/nut/oldmge-shut
 libexec/nut/oneac
 libexec/nut/optiups
 libexec/nut/powercom
 libexec/nut/powerpanel
 libexec/nut/rhino
+libexec/nut/riello_ser
 libexec/nut/safenet
 libexec/nut/skel
 libexec/nut/solis
 libexec/nut/tripplite
 libexec/nut/tripplitesu
 libexec/nut/upscode2
-libexec/nut/upsdrvctl
 libexec/nut/victronups
 man/man5/nut.conf.5
 man/man5/ups.conf.5
@@ -51,8 +55,10 @@ man/man5/upsd.conf.5
 man/man5/upsd.users.5
 man/man5/upsmon.conf.5
 man/man5/upssched.conf.5
+man/man8/al175.8
 man/man8/apcsmart-old.8
 man/man8/apcsmart.8
+man/man8/apcupsd-ups.8
 man/man8/bcmxcp.8
 man/man8/belkin.8
 man/man8/belkinunv.8
@@ -60,7 +66,7 @@ man/man8/bestfcom.8
 man/man8/bestfortress.8
 man/man8/bestuferrups.8
 man/man8/bestups.8
-man/man8/blazer.8
+man/man8/blazer_ser.8
 man/man8/clone.8
 man/man8/dummy-ups.8
 man/man8/etapro.8
@@ -78,12 +84,14 @@ man/man8/mge-utalk.8
 man/man8/microdowell.8
 man/man8/nut-recorder.8
 man/man8/nut-scanner.8
+man/man8/nutdrv_qx.8
 man/man8/nutupsdrv.8
 man/man8/oneac.8
 man/man8/optiups.8
 man/man8/powercom.8
 man/man8/powerpanel.8
 man/man8/rhino.8
+man/man8/riello_ser.8
 man/man8/safenet.8
 man/man8/solis.8
 man/man8/tripplite.8
@@ -99,6 +107,7 @@ man/man8/upsrw.8
 man/man8/upssched.8
 man/man8/victronups.8
 sbin/upsd
+sbin/upsdrvctl
 sbin/upsmon
 sbin/upssched
 share/doc/nut/COPYING
@@ -133,16 +142,16 @@ share/doc/nut/macros.txt
 share/doc/nut/net-protocol.txt
 share/doc/nut/new-clients.txt
 share/doc/nut/new-drivers.txt
-share/doc/nut/nut-hal.txt
 share/doc/nut/nut-names.txt
 share/doc/nut/nut-qa.txt
+share/doc/nut/nutdrv_qx-subdrivers.txt
 share/doc/nut/outlets.txt
 share/doc/nut/packager-guide.txt
 share/doc/nut/scheduling.txt
 share/doc/nut/security.txt
+share/doc/nut/snmp-subdrivers.txt
 share/doc/nut/snmp.txt
 share/doc/nut/sock-protocol.txt
-share/doc/nut/stable-hcl.txt
 share/doc/nut/support.txt
 share/doc/nut/user-manual.txt
 share/examples/nut/nut.conf.sample
@@ -153,7 +162,5 @@ share/examples/nut/upsmon.conf.sample
 share/examples/nut/upssched.conf.sample
 share/nut/cmdvartab
 share/nut/driver.list
-@pkgdir share/nut/html
 @pkgdir share/doc/nut/drivers
 @pkgdir etc/nut
-@pkgdir cgi-bin
