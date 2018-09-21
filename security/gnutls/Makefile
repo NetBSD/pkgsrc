@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.188 2018/08/22 09:46:18 wiz Exp $
+# $NetBSD: Makefile,v 1.189 2018/09/21 14:20:11 wiz Exp $
 
 DISTNAME=	gnutls-3.6.3
 PKGREVISION=	2
@@ -48,6 +48,7 @@ REPLACE_BASH+=		tests/starttls.sh
 REPLACE_BASH+=		tests/suite/cbc-record-check.sh
 REPLACE_BASH+=		tests/suite/testcompat-main-openssl
 REPLACE_BASH+=		tests/suite/testcompat-main-polarssl
+REPLACE_BASH+=		tests/cert-tests/pkcs12-utf8
 
 REPLACE_PERL+=		doc/scripts/gdoc doc/scripts/sort2.pl
 
