@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4086 2018/09/21 12:10:39 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4087 2018/09/21 12:40:35 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5721,3 +5721,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/py-paramiko to 2.4.2 [adam 2018-09-21]
 	Updated print/ghostscript-agpl to 9.25 [adam 2018-09-21]
 	Updated net/fping to 4.1 [adam 2018-09-21]
+	Updated pkgtools/pkgdiff to 1.8nb3 [jperkin 2018-09-21]
