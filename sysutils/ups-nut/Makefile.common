@@ -1,18 +1,19 @@
-# $NetBSD: Makefile.common,v 1.5 2013/02/16 17:34:58 jdf Exp $
+# $NetBSD: Makefile.common,v 1.6 2018/09/21 00:59:53 jym Exp $
 # used by sysutils/ups-nut/Makefile
 # used by sysutils/ups-nut-cgi/Makefile
 # used by sysutils/ups-nut-snmp/Makefile
 # used by sysutils/ups-nut-usb/Makefile
 # used by sysutils/p5-UPS-Nut/Makefile
 
-DISTNAME=		nut-2.6.5
+BRANCH=			2.7
+DISTNAME=		nut-${BRANCH}.4
 CATEGORIES=		sysutils
-MASTER_SITES=		http://www.networkupstools.org/source/2.6/
+MASTER_SITES=		http://www.networkupstools.org/source/${BRANCH}/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.networkupstools.org/
 
-LICENSE=		gnu-gpl-v2
+LICENSE=		gnu-gpl-v2 OR gnu-gpl-v3
 
 NUT_USER?=		nut
 NUT_GROUP?=		nut
@@ -21,6 +22,7 @@ DISTINFO_FILE=		${.CURDIR}/../../sysutils/ups-nut/distinfo
 PATCHDIR=		${.CURDIR}/../../sysutils/ups-nut/patches
 
 USE_LIBTOOL=		yes
+USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${NUT_CONFDIR:Q}
 CONFIGURE_ARGS+=	--datadir=${NUT_DATADIR:Q}

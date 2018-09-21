@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.65 2018/03/12 11:17:37 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2018/09/21 00:59:53 jym Exp $
 
 .include "../../sysutils/ups-nut/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/nut/ups-nut-cgi/}
-PKGREVISION=		11
 COMMENT=		Network UPS Tools CGI scripts
 
 DEPENDS+=		ups-nut-2.*:../../sysutils/ups-nut
@@ -49,4 +48,5 @@ do-install:
 
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
