@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4088 2018/09/21 13:25:28 maya Exp $
+$NetBSD: CHANGES-2018,v 1.4089 2018/09/21 14:27:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5723,3 +5723,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/fping to 4.1 [adam 2018-09-21]
 	Updated pkgtools/pkgdiff to 1.8nb3 [jperkin 2018-09-21]
 	Added audio/alure version 1.2 [maya 2018-09-21]
+	Updated news/slrn to 1.0.3a [wiz 2018-09-21]
