@@ -1,4 +1,4 @@
-# $NetBSD: go-package.mk,v 1.17 2018/09/21 20:35:56 bsiegert Exp $
+# $NetBSD: go-package.mk,v 1.18 2018/09/22 19:44:21 bsiegert Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 #
@@ -41,12 +41,11 @@
 # 2. Install binaries into bin/.
 # 3. Install source code and packages into a separate gopkg tree.
 #
-# In the future, we may implement buildlink by creating a separate tree during
-# the build and linking only the packages explicitly mentioned in dependencies
-# there.
+# We implement buildlink by creating a separate tree during the build and
+# linking only the packages explicitly mentioned in dependencies there.
 #
-# All packages build-depend on the "master" Go release. Go packages
-# need to be revbumped when lang/go is updated.
+# All packages build-depend on the default Go release. Go packages should be
+# revbumped when that package is updated.
 #
 
 .include "../../lang/go/version.mk"
@@ -57,22 +56,11 @@ GO_BUILD_PATTERN?=	${GO_SRCPATH}/...
 
 WRKSRC=			${WRKDIR}/src/${GO_SRCPATH}
 
-.if ${OPSYS} == "NetBSD" && ${OS_VERSION:M6.*}
-# 1.9 is the last Go version to support NetBSD 6
-GO_VERSION_DEFAULT?=	19
-.else
-GO_VERSION_DEFAULT?=	111
-.endif
-
-.if !empty(GO_VERSION_DEFAULT)
-GOVERSSUFFIX=		${GO_VERSION_DEFAULT}
-.endif
-
-BUILD_DEPENDS+=		go${GOVERSSUFFIX}-${GO${GOVERSSUFFIX}_VERSION}*:../../lang/go${GOVERSSUFFIX}
-
 MAKE_JOBS_SAFE=		no
 INSTALLATION_DIRS+=	bin gopkg
 USE_TOOLS+=		pax
+
+BUILD_DEPENDS+=		${GO_PACKAGE_DEP}
 
 GO_PLATFORM=		${LOWER_OPSYS}_${GOARCH}
 GOTOOLDIR=		${PREFIX}/go/pkg/tool/${GO_PLATFORM}
