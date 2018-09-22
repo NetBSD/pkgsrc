@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2018/09/19 17:59:35 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/09/22 12:15:28 minskim Exp $
+bin/go${GOVERSSUFFIX}
+bin/gofmt${GOVERSSUFFIX}
 go111/AUTHORS
 go111/CONTRIBUTING.md
 go111/CONTRIBUTORS

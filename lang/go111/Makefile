@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2018/09/18 16:22:14 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2018/09/22 12:15:28 minskim Exp $
 
 .include "../../lang/go/version.mk"
 
 DISTNAME=	go${GO111_VERSION}.src
 PKGNAME=	go111-${GO111_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://storage.googleapis.com/golang/
 EXTRACT_USING=	bsdtar
@@ -87,6 +88,8 @@ CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/run.rc
 BUILD_DEPENDS+=		go14-1.4*:../../lang/go14
 GOROOT_BOOTSTRAP=	${PREFIX}/go14
 
+PLIST_SUBST+=	GOVERSSUFFIX=${GOVERSSUFFIX}
+
 .include "../../mk/bsd.prefs.mk"
 
 PLIST_VARS+=	pty route
@@ -108,6 +111,9 @@ do-install:
 	cd ${WRKSRC} && rm -rf .hgignore .hgtags pkg/obj
 	cd ${WRKSRC} && pax -rw . ${DESTDIR}${PREFIX}/go${GOVERSSUFFIX}
 	find ${DESTDIR}${PREFIX}/go${GOVERSSUFFIX} -name \*.orig -exec rm {} \;
+.for cmd in go gofmt
+	${LN} -s ${PREFIX}/go111/bin/${cmd} ${DESTDIR}${PREFIX}/bin/${cmd}${GOVERSSUFFIX}
+.endfor
 
 do-test:
 	cd ${WRKSRC}/src && GOROOT=${WRKSRC} PATH=${WRKSRC}/bin:${PATH} ${GOOPT} ${BASH} run.bash --no-rebuild --banner ""
