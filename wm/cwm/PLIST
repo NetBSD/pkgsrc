@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/09/04 04:56:04 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/09/22 06:32:11 maya Exp $
 bin/cwm
 man/man1/cwm.1
+man/man5/cwmrc.5

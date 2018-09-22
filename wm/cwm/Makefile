@@ -1,23 +1,23 @@
-# $NetBSD: Makefile,v 1.19 2018/03/12 11:17:42 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.20 2018/09/22 06:32:11 maya Exp $
 
-DISTNAME=	cwm-3
-PKGREVISION=	7
+DISTNAME=	cwm-6.3
 CATEGORIES=	wm
-MASTER_SITES=	https://monkey.org/~marius/cwm/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=chneukirchen/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://monkey.org/~marius/cwm/
-COMMENT=	Window manager for X11 initially inspired by evilwm
+MAINTAINER=	cfkoch@edgebsd.org
+HOMEPAGE=	https://github.com/chneukirchen/cwm
+COMMENT=	Portable version of the window manager from OpenBSD
+LICENSE=	isc
 
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config
+EXTRACT_USING=	gtar
+USE_TOOLS+=	pkg-config yacc
 
-LDFLAGS.Darwin+=	-lfontconfig
-LDFLAGS.DragonFly+=	-lfontconfig
-LDFLAGS.SunOS+=		-lfontconfig
+NO_CONFIGURE=	yes
+INSTALL_ENV+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
 
-.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
