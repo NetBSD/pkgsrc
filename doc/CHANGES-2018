@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4089 2018/09/21 14:27:47 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.4090 2018/09/22 07:24:27 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5724,3 +5724,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated pkgtools/pkgdiff to 1.8nb3 [jperkin 2018-09-21]
 	Added audio/alure version 1.2 [maya 2018-09-21]
 	Updated news/slrn to 1.0.3a [wiz 2018-09-21]
+	Added textproc/json-yaml version 1.1.1 [maya 2018-09-22]
