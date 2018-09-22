@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/07/08 13:54:39 bsiegert Exp $
+# $NetBSD: Makefile,v 1.15 2018/09/22 20:41:38 bsiegert Exp $
 
 DISTNAME=	mongo-tools-3.4.4
 PKGREVISION=	1
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 GITHUB_TAG=	r${PKGVERSION_NOREV}
 
-BUILD_DEPENDS+=	go-${GO_VERSION}*:../../lang/go
+BUILD_DEPENDS+=	${GO_PACKAGE_DEP}
 
 EXTRACT_USING=	bsdtar
 USE_TOOLS+=	pkg-config
