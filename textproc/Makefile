@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1003 2018/08/28 09:56:44 adam Exp $
+# $NetBSD: Makefile,v 1.1004 2018/09/22 07:24:10 maya Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -349,6 +349,7 @@ SUBDIR+=	jo
 SUBDIR+=	jrep
 SUBDIR+=	json-c
 SUBDIR+=	json-glib
+SUBDIR+=	json-yaml
 SUBDIR+=	jsoncpp
 SUBDIR+=	kakasi
 SUBDIR+=	kapidox
