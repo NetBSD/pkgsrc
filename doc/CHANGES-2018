@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4092 2018/09/22 12:16:13 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.4093 2018/09/22 14:45:05 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5727,3 +5727,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added textproc/json-yaml version 1.1.1 [maya 2018-09-22]
 	Updated wm/cwm to 6.3 [maya 2018-09-22]
 	Updated lang/go111 to 1.11nb1 [minskim 2018-09-22]
+	Updated sysutils/u-boot-pinebook to 2018.07rc1 [jmcneill 2018-09-22]
