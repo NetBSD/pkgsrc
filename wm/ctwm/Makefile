@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2018/07/14 15:03:42 maya Exp $
+# $NetBSD: Makefile,v 1.36 2018/09/22 07:00:38 maya Exp $
 #
 
-DISTNAME=	ctwm-4.0.1
+DISTNAME=	ctwm-4.0.2
 CATEGORIES=	x11 wm
 MASTER_SITES=	http://ctwm.org/dist/
 EXTRACT_SUFX=	.tar.xz
