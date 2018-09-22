@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/02 23:42:51 agc Exp $
+$NetBSD: distinfo,v 1.3 2018/09/22 06:32:11 maya Exp $
 
-SHA1 (cwm-3.tar.gz) = 04490462ba74de2f388bbb4cb04c0f1d7c2b2921
-RMD160 (cwm-3.tar.gz) = c533065d7d8a5044f03418aea38c295450c54af1
-SHA512 (cwm-3.tar.gz) = fe984d695b16769f92a4b981495bd7bb55200a342e972dce9b320701fed59307021dab9fa8b937347bb7cfb76aa0eb0288deb0b35eadbb7f13595df455471892
-Size (cwm-3.tar.gz) = 137437 bytes
+SHA1 (cwm-6.3.tar.gz) = 343ea5b587c77535fb28c701971a50b78e1034be
+RMD160 (cwm-6.3.tar.gz) = cd2b8bf50d47446bf82f5da3a5ec931b9fe8298e
+SHA512 (cwm-6.3.tar.gz) = 12f5c28ce2fa8e5310c49dd6d4fb58140a514943a93b8cab1c0c604bb50535a5e6b00b10f21c8d4500440f7ae7b14d2cb23c65eb201578fc01ab09f2bbc1e91f
+Size (cwm-6.3.tar.gz) = 52419 bytes
