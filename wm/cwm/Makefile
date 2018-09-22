@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/09/22 06:32:11 maya Exp $
+# $NetBSD: Makefile,v 1.21 2018/09/22 11:30:23 leot Exp $
 
 DISTNAME=	cwm-6.3
 CATEGORIES=	wm
@@ -13,7 +13,6 @@ LICENSE=	isc
 EXTRACT_USING=	gtar
 USE_TOOLS+=	pkg-config yacc
 
-NO_CONFIGURE=	yes
 INSTALL_ENV+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
 
 .include "../../x11/libX11/buildlink3.mk"
