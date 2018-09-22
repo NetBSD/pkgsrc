@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/06/12 17:50:28 bsiegert Exp $
+# $NetBSD: Makefile,v 1.10 2018/09/22 20:52:17 bsiegert Exp $
 
 GITHUB_PROJECT=	grafana
 DISTNAME=	grafana-4.6.2
@@ -27,7 +27,9 @@ DISTFILES+=			${FE_DISTNAME}
 EXTRACT_ONLY+=			${FE_DISTNAME}
 EXTRACT_DIR.${FE_DISTNAME}=	${WRKDIR}/frontend_assets
 
-BUILD_DEPENDS+=			go-[0-9]*:../../lang/go
+.include "../../lang/go/version.mk"
+
+BUILD_DEPENDS+=			${GO_PACKAGE_DEP}
 
 CHECK_PORTABILITY_SKIP=		packaging/rpm/control/postinst
 
@@ -80,7 +82,7 @@ post-extract:
 do-build:
 .for b in grafana-server grafana-cli
 	cd ${WRKSRC} && ${SETENV} ${PKGSRC_MAKE_ENV}		\
-	  ${PREFIX}/bin/go build -ldflags "-w -X main.version=${PKGVERSION_NOREV} -X main.commit=${GITHUB_TAG} -X main.buildstamp=pkgsrc"	\
+	  ${GO} build -ldflags "-w -X main.version=${PKGVERSION_NOREV} -X main.commit=${GITHUB_TAG} -X main.buildstamp=pkgsrc"	\
 	  -o ./bin/${b} ./pkg/cmd/${b}
 .endfor
 
