@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/09/22 07:24:10 maya Exp $
+
+SHA1 (json-yaml/1.1.1.tar.gz) = 860f60937f7c472c4b5774bd4f1356b8d0998b2a
+RMD160 (json-yaml/1.1.1.tar.gz) = 108eefdbdeafea11c87d40570fbf3b2cba94d2d0
+SHA512 (json-yaml/1.1.1.tar.gz) = c27aca7495580782b72ff8d132ccfbd982a8f1512e8fc0333373ac4f9a5eaac39d178388308c741fb00d153d3cb74c3a6b394322fe6b685070b4fa56ab6806f9
+Size (json-yaml/1.1.1.tar.gz) = 4366 bytes
