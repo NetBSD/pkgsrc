@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.44 2018/09/18 20:52:11 bsiegert Exp $
+# $NetBSD: version.mk,v 1.45 2018/09/22 19:44:21 bsiegert Exp $
 
 SSP_SUPPORTED=	no
 
@@ -10,9 +10,22 @@ GO19_VERSION=	1.9.7
 GO14_VERSION=	1.4.3
 GO_VERSION=	${GO110_VERSION}
 
+.if ${OPSYS} == "NetBSD" && ${OS_VERSION:M6.*}
+# 1.9 is the last Go version to support NetBSD 6
+GO_VERSION_DEFAULT?=	19
+.else
+GO_VERSION_DEFAULT?=	111
+.endif
+
+.if !empty(GO_VERSION_DEFAULT)
+GOVERSSUFFIX=		${GO_VERSION_DEFAULT}
+.endif
+
 # How to find the Go tool
-GOVERSSUFFIX?=
 GO=			${PREFIX}/go${GOVERSSUFFIX}/bin/go
+
+# Build dependency for Go
+GO_PACKAGE_DEP=		go${GOVERSSUFFIX}-${GO${GOVERSSUFFIX}_VERSION}*:../../lang/go${GOVERSSUFFIX}
 
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64 *-*-earmv[67]hf
 NOT_FOR_PLATFORM=	SunOS-*-i386
