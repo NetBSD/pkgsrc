@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4098 2018/09/23 04:55:31 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4099 2018/09/23 06:00:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5733,3 +5733,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated editors/nano to 3.1 [wen 2018-09-23]
 	Updated security/sudo to 1.8.25p1 [taca 2018-09-23]
 	Updated devel/p5-Devel-Cover to 1.31 [wen 2018-09-23]
+	Removed misc/ruby-hashie2 [taca 2018-09-23]
