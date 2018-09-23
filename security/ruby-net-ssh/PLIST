@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2017/06/12 16:03:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2018/09/23 16:08:58 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rubocop.yml
@@ -6,8 +6,8 @@ ${GEM_LIBDIR}/.rubocop_todo.yml
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGES.txt
 ${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/Gemfile.norbnacl
-${GEM_LIBDIR}/Gemfile.norbnacl.lock
+${GEM_LIBDIR}/Gemfile.noed25519
+${GEM_LIBDIR}/Gemfile.noed25519.lock
 ${GEM_LIBDIR}/ISSUE_TEMPLATE.md
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/Manifest
@@ -29,6 +29,7 @@ ${GEM_LIBDIR}/lib/net/ssh/authentication/methods/none.rb
 ${GEM_LIBDIR}/lib/net/ssh/authentication/methods/password.rb
 ${GEM_LIBDIR}/lib/net/ssh/authentication/methods/publickey.rb
 ${GEM_LIBDIR}/lib/net/ssh/authentication/pageant.rb
+${GEM_LIBDIR}/lib/net/ssh/authentication/pub_key_fingerprint.rb
 ${GEM_LIBDIR}/lib/net/ssh/authentication/session.rb
 ${GEM_LIBDIR}/lib/net/ssh/buffer.rb
 ${GEM_LIBDIR}/lib/net/ssh/buffered_io.rb
@@ -94,10 +95,10 @@ ${GEM_LIBDIR}/lib/net/ssh/transport/packet_stream.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/server_version.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/session.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/state.rb
-${GEM_LIBDIR}/lib/net/ssh/verifiers/lenient.rb
-${GEM_LIBDIR}/lib/net/ssh/verifiers/null.rb
-${GEM_LIBDIR}/lib/net/ssh/verifiers/secure.rb
-${GEM_LIBDIR}/lib/net/ssh/verifiers/strict.rb
+${GEM_LIBDIR}/lib/net/ssh/verifiers/accept_new.rb
+${GEM_LIBDIR}/lib/net/ssh/verifiers/accept_new_or_local_tunnel.rb
+${GEM_LIBDIR}/lib/net/ssh/verifiers/always.rb
+${GEM_LIBDIR}/lib/net/ssh/verifiers/never.rb
 ${GEM_LIBDIR}/lib/net/ssh/version.rb
 ${GEM_LIBDIR}/net-ssh-public_cert.pem
 ${GEM_LIBDIR}/net-ssh.gemspec
