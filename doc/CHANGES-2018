@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4134 2018/09/23 15:41:09 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4135 2018/09/23 15:42:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5769,3 +5769,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/ruby-mini-magick to 4.9.2 [taca 2018-09-23]
 	Updated lang/ruby-gherkin to 5.1.0 [taca 2018-09-23]
 	Updated mail/ruby-mime-types-data to 3.2018.0812 [taca 2018-09-23]
+	Updated mail/ruby-mime-types to 3.2.2 [taca 2018-09-23]
