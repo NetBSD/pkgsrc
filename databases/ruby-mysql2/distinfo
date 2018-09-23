@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2018/05/05 14:15:48 taca Exp $
+$NetBSD: distinfo,v 1.19 2018/09/23 13:53:18 taca Exp $
 
-SHA1 (mysql2-0.5.1.gem) = a155c3182ac181d928000ed1c50cc8080889932b
-RMD160 (mysql2-0.5.1.gem) = 5aedeada20ec49942eb17d5a41c1b5d9e6d8a212
-SHA512 (mysql2-0.5.1.gem) = dd1934e4f8aa8a97b70dbe0f1436496892a155fa188930321e776d57ec72ec34f95f2665ad5db671fdba99304e279aa8a045dbc6126ab50d8cc2d84838bc145b
-Size (mysql2-0.5.1.gem) = 99328 bytes
+SHA1 (mysql2-0.5.2.gem) = d6967bc3a34d2dfc683047aee33f8c050ca10722
+RMD160 (mysql2-0.5.2.gem) = 9e031781f7f65c4eaadd2f8ae4dbe06f8a446334
+SHA512 (mysql2-0.5.2.gem) = 6013b0c862f24f0c20b22c50a17390a7a22390e661d0f1afb613177febfbf854f63aea9bc9aa8defc9521896144fbc035a8e16b135abb47384453a23dfd99566
+Size (mysql2-0.5.2.gem) = 99328 bytes
