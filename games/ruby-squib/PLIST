@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/03/14 14:33:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/09/23 15:22:57 taca Exp $
 bin/squib${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
@@ -85,8 +85,10 @@ ${GEM_LIBDIR}/lib/squib/builtin/sprues/a4_euro_card.yml
 ${GEM_LIBDIR}/lib/squib/builtin/sprues/a4_poker_card_8up.yml
 ${GEM_LIBDIR}/lib/squib/builtin/sprues/a4_poker_card_9up.yml
 ${GEM_LIBDIR}/lib/squib/builtin/sprues/a4_usa_card.yml
+${GEM_LIBDIR}/lib/squib/builtin/sprues/drivethrucards_1up.yml
 ${GEM_LIBDIR}/lib/squib/builtin/sprues/letter_poker_card_9up.yml
 ${GEM_LIBDIR}/lib/squib/builtin/sprues/letter_poker_foldable_8up.yml
+${GEM_LIBDIR}/lib/squib/builtin/sprues/printplaygames_18up.yml
 ${GEM_LIBDIR}/lib/squib/card.rb
 ${GEM_LIBDIR}/lib/squib/commands/cli.rb
 ${GEM_LIBDIR}/lib/squib/commands/data/template_option.rb
