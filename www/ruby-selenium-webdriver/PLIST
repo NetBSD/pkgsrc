@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/03/21 12:23:32 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/09/23 17:00:06 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/Gemfile
@@ -20,10 +20,13 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/common/action_builder.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/alert.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/bridge_helper.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/downloads_files.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_addons.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_debugger.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_location.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_network_conditions.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_network_connection.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_permissions.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_remote_status.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_session_id.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_touch_screen.rb
@@ -109,6 +112,7 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/remote/w3c/bridge.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote/w3c/capabilities.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote/w3c/commands.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/safari.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/safari/bridge.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/safari/driver.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/safari/service.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/support.rb
@@ -118,5 +122,6 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/support/color.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/support/escaper.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/support/event_firing_bridge.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/support/select.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/version.rb
 ${GEM_LIBDIR}/selenium-webdriver.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
