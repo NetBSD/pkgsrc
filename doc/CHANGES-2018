@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4096 2018/09/23 03:47:21 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4097 2018/09/23 03:48:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5731,3 +5731,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated cad/klayout to 0.25.4 [mef 2018-09-22]
 	Updated www/mediawiki to 1.31.1 [wen 2018-09-23]
 	Updated editors/nano to 3.1 [wen 2018-09-23]
+	Updated security/sudo to 1.8.25p1 [taca 2018-09-23]
