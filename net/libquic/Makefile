@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/08/22 09:45:53 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2018/09/23 19:55:04 bsiegert Exp $
 
 DISTNAME=	libquic-0.0.3
 PKGREVISION=	3
@@ -10,13 +10,17 @@ MAINTAINER=	agc@NetBSD.org
 COMMENT=	Multiplexed stream transport over UDP
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=		go-[0-9]*:../../lang/go
+.include "../../lang/go/version.mk"
+BUILD_DEPENDS+=		${GO_PACKAGE_DEP}
 
-SUBST_CLASSES+=		path
+SUBST_CLASSES+=		path go
 SUBST_STAGE.link=	pre-configure
 SUBST_MESSAGE.link=	Fix paths
 SUBST_FILES.link=	src/base/base_paths_posix.cc
 SUBST_SED.link=		-e 's|@PREFIX@|'${PREFIX}'|'
+SUBST_STAGE.go=		pre-configure
+SUBST_FILES.go=		boringssl/CMakeLists.txt
+SUBST_SED.go=		-e '/find_program.GO_EXECUTABLE/s,go,${GO},'
 
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	cmake gmake perl
