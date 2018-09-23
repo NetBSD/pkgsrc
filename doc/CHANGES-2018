@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4116 2018/09/23 14:43:04 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4117 2018/09/23 14:50:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5751,3 +5751,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Removed net/bind99 [taca 2018-09-23]
 	Updated devel/ruby-filesize to 0.2.0 [taca 2018-09-23]
 	Updated devel/ruby-i18n to 1.1.0 [taca 2018-09-23]
+	Updated devel/ruby-mixlib-config to 2.2.13 [taca 2018-09-23]
