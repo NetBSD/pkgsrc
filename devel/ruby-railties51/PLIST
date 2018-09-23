@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/03/21 10:05:08 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/09/23 18:36:51 taca Exp $
 bin/rails51${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
@@ -6,8 +6,10 @@ ${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/RDOC_MAIN.rdoc
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/exe/rails51
+${GEM_LIBDIR}/lib/.DS_Store
 ${GEM_LIBDIR}/lib/minitest/rails_plugin.rb
 ${GEM_LIBDIR}/lib/rails.rb
+${GEM_LIBDIR}/lib/rails/.DS_Store
 ${GEM_LIBDIR}/lib/rails/all.rb
 ${GEM_LIBDIR}/lib/rails/api/generator.rb
 ${GEM_LIBDIR}/lib/rails/api/task.rb
@@ -57,6 +59,7 @@ ${GEM_LIBDIR}/lib/rails/engine/railties.rb
 ${GEM_LIBDIR}/lib/rails/engine/updater.rb
 ${GEM_LIBDIR}/lib/rails/gem_version.rb
 ${GEM_LIBDIR}/lib/rails/generators.rb
+${GEM_LIBDIR}/lib/rails/generators/.DS_Store
 ${GEM_LIBDIR}/lib/rails/generators/actions.rb
 ${GEM_LIBDIR}/lib/rails/generators/actions/create_migration.rb
 ${GEM_LIBDIR}/lib/rails/generators/active_model.rb
@@ -85,6 +88,8 @@ ${GEM_LIBDIR}/lib/rails/generators/js/assets/templates/javascript.js
 ${GEM_LIBDIR}/lib/rails/generators/migration.rb
 ${GEM_LIBDIR}/lib/rails/generators/model_helpers.rb
 ${GEM_LIBDIR}/lib/rails/generators/named_base.rb
+${GEM_LIBDIR}/lib/rails/generators/rails/.DS_Store
+${GEM_LIBDIR}/lib/rails/generators/rails/app/.DS_Store
 ${GEM_LIBDIR}/lib/rails/generators/rails/app/USAGE
 ${GEM_LIBDIR}/lib/rails/generators/rails/app/app_generator.rb
 ${GEM_LIBDIR}/lib/rails/generators/rails/app/templates/Gemfile
