@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2018/03/23 13:52:20 taca Exp $
+# $NetBSD: Makefile,v 1.6 2018/09/23 14:50:04 taca Exp $
 
-DISTNAME=	mixlib-config-2.2.6
+DISTNAME=	mixlib-config-2.2.13
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
