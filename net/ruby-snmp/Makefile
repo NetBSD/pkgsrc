@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2017/09/04 18:00:58 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2018/09/23 16:00:49 taca Exp $
 
-DISTNAME=	snmp-1.2.0
+DISTNAME=	snmp-1.3.1
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
