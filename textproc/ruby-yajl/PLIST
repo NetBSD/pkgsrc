@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/03/20 16:24:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/09/23 16:43:10 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/yajl/yajl.${RUBY_DLEXT}
@@ -150,6 +150,8 @@ ${GEM_LIBDIR}/spec/parsing/fixtures/pass3.json
 ${GEM_LIBDIR}/spec/parsing/fixtures_spec.rb
 ${GEM_LIBDIR}/spec/parsing/large_number_spec.rb
 ${GEM_LIBDIR}/spec/parsing/one_off_spec.rb
+${GEM_LIBDIR}/spec/projection/project_file.rb
+${GEM_LIBDIR}/spec/projection/projection.rb
 ${GEM_LIBDIR}/spec/rcov.opts
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/tasks/compile.rake
