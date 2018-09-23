@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4175 2018/09/23 17:00:32 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4176 2018/09/23 17:01:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5811,3 +5811,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/ruby-puma to 3.12.0 [taca 2018-09-23]
 	Updated www/ruby-rouge to 3.2.1 [taca 2018-09-23]
 	Updated www/ruby-selenium-webdriver to 3.14.0 [taca 2018-09-23]
+	Updated www/ruby-unicorn to 5.4.1 [taca 2018-09-23]
