@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/09/23 19:50:09 wiedi Exp $
+# $NetBSD: Makefile,v 1.3 2018/09/23 15:55:35 taca Exp $
 
-DISTNAME=	pcaprub-0.12.4
+DISTNAME=	pcaprub-0.13.0
 CATEGORIES=	net
 
 MAINTAINER=	minskim@NetBSD.org
