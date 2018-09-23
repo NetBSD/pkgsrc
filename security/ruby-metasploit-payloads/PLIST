@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/09/29 15:45:15 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/09/23 17:55:58 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/CONTRIBUTING.md
@@ -44,6 +44,8 @@ ${GEM_LIBDIR}/data/meterpreter/ext_server_lanattacks.x64.dll
 ${GEM_LIBDIR}/data/meterpreter/ext_server_lanattacks.x86.dll
 ${GEM_LIBDIR}/data/meterpreter/ext_server_mimikatz.x64.dll
 ${GEM_LIBDIR}/data/meterpreter/ext_server_mimikatz.x86.dll
+${GEM_LIBDIR}/data/meterpreter/ext_server_peinjector.x64.dll
+${GEM_LIBDIR}/data/meterpreter/ext_server_peinjector.x86.dll
 ${GEM_LIBDIR}/data/meterpreter/ext_server_powershell.x64.dll
 ${GEM_LIBDIR}/data/meterpreter/ext_server_powershell.x86.dll
 ${GEM_LIBDIR}/data/meterpreter/ext_server_priv.x64.dll
