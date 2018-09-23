@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4144 2018/09/23 15:53:44 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4145 2018/09/23 15:54:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5779,3 +5779,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/ruby-connection_pool to 2.2.2 [taca 2018-09-23]
 	Updated net/ruby-dnsruby to 1.61.2 [taca 2018-09-23]
 	Updated net/ruby-domain_name to 0.5.20180417 [taca 2018-09-23]
+	Updated net/ruby-net-ping to 2.0.5 [taca 2018-09-23]
