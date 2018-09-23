@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/06/05 14:49:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/09/23 15:51:05 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.coveralls.yml
 ${GEM_LIBDIR}/.gitignore
@@ -53,6 +53,8 @@ ${GEM_LIBDIR}/lib/dnsruby/resource/AAAA.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/AFSDB.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/APL.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/CAA.rb
+${GEM_LIBDIR}/lib/dnsruby/resource/CDNSKEY.rb
+${GEM_LIBDIR}/lib/dnsruby/resource/CDS.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/CERT.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/DHCID.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/DLV.rb
@@ -89,6 +91,7 @@ ${GEM_LIBDIR}/lib/dnsruby/resource/TKEY.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/TLSA.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/TSIG.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/TXT.rb
+${GEM_LIBDIR}/lib/dnsruby/resource/URI.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/X25.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/domain_name.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/generic.rb
