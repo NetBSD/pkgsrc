@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/03/13 17:30:17 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/09/23 16:57:00 taca Exp $
 bin/rougify${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -25,6 +25,7 @@ ${GEM_LIBDIR}/lib/rouge/demos/conf
 ${GEM_LIBDIR}/lib/rouge/demos/console
 ${GEM_LIBDIR}/lib/rouge/demos/coq
 ${GEM_LIBDIR}/lib/rouge/demos/cpp
+${GEM_LIBDIR}/lib/rouge/demos/crystal
 ${GEM_LIBDIR}/lib/rouge/demos/csharp
 ${GEM_LIBDIR}/lib/rouge/demos/css
 ${GEM_LIBDIR}/lib/rouge/demos/d
@@ -51,6 +52,7 @@ ${GEM_LIBDIR}/lib/rouge/demos/hack
 ${GEM_LIBDIR}/lib/rouge/demos/haml
 ${GEM_LIBDIR}/lib/rouge/demos/handlebars
 ${GEM_LIBDIR}/lib/rouge/demos/haskell
+${GEM_LIBDIR}/lib/rouge/demos/hcl
 ${GEM_LIBDIR}/lib/rouge/demos/html
 ${GEM_LIBDIR}/lib/rouge/demos/http
 ${GEM_LIBDIR}/lib/rouge/demos/hylang
@@ -122,6 +124,7 @@ ${GEM_LIBDIR}/lib/rouge/demos/sql
 ${GEM_LIBDIR}/lib/rouge/demos/swift
 ${GEM_LIBDIR}/lib/rouge/demos/tap
 ${GEM_LIBDIR}/lib/rouge/demos/tcl
+${GEM_LIBDIR}/lib/rouge/demos/terraform
 ${GEM_LIBDIR}/lib/rouge/demos/tex
 ${GEM_LIBDIR}/lib/rouge/demos/toml
 ${GEM_LIBDIR}/lib/rouge/demos/tsx
@@ -176,6 +179,7 @@ ${GEM_LIBDIR}/lib/rouge/lexers/conf.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/console.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/coq.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/cpp.rb
+${GEM_LIBDIR}/lib/rouge/lexers/crystal.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/csharp.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/css.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/d.rb
@@ -203,6 +207,7 @@ ${GEM_LIBDIR}/lib/rouge/lexers/hack.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/haml.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/handlebars.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/haskell.rb
+${GEM_LIBDIR}/lib/rouge/lexers/hcl.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/html.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/http.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/hylang.rb
@@ -278,6 +283,7 @@ ${GEM_LIBDIR}/lib/rouge/lexers/sql.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/swift.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/tap.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/tcl.rb
+${GEM_LIBDIR}/lib/rouge/lexers/terraform.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/tex.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/toml.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/tsx.rb
