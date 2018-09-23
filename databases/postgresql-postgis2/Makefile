@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2018/09/11 17:26:13 gdt Exp $
+# $NetBSD: Makefile,v 1.49 2018/09/23 15:38:00 gdt Exp $
 
 MAJOR=		2.4
 DISTNAME=	postgis-${MAJOR}.4
@@ -29,7 +29,6 @@ CONFLICTS=		postgis-[0-9]*
 # gmake complains about adding + to parent rule
 MAKE_JOBS_SAFE=		no
 
-PGSQL_VERSIONS_ACCEPTED=	96 95 94 93
 
 USE_GCC_RUNTIME=	yes
 USE_LANGUAGES=		c c++ c99
