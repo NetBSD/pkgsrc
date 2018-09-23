@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2018/03/13 17:49:48 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2018/09/23 17:15:17 taca Exp $
 bin/jekyll${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.rubocop.yml
@@ -45,6 +45,7 @@ ${GEM_LIBDIR}/lib/jekyll/errors.rb
 ${GEM_LIBDIR}/lib/jekyll/excerpt.rb
 ${GEM_LIBDIR}/lib/jekyll/external.rb
 ${GEM_LIBDIR}/lib/jekyll/filters.rb
+${GEM_LIBDIR}/lib/jekyll/filters/date_filters.rb
 ${GEM_LIBDIR}/lib/jekyll/filters/grouping_filters.rb
 ${GEM_LIBDIR}/lib/jekyll/filters/url_filters.rb
 ${GEM_LIBDIR}/lib/jekyll/frontmatter_defaults.rb
