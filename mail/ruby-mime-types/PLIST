@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.13 2016/10/15 14:00:41 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2018/09/23 15:41:37 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/Code-of-Conduct.rdoc
-${GEM_LIBDIR}/Contributing.rdoc
-${GEM_LIBDIR}/History.rdoc
-${GEM_LIBDIR}/Licence.rdoc
+${GEM_LIBDIR}/Code-of-Conduct.md
+${GEM_LIBDIR}/Contributing.md
+${GEM_LIBDIR}/History.md
+${GEM_LIBDIR}/Licence.md
 ${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
