@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4156 2018/09/23 16:27:39 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4157 2018/09/23 16:28:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5791,3 +5791,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/ruby-sshkit to 1.17.0 [taca 2018-09-23]
 	Updated sysutils/capistrano to 3.11.0 [taca 2018-09-23]
 	Updated devel/ruby-mixlib-authentication to 2.1.1 [taca 2018-09-23]
+	Updated devel/ruby-mixlib-log to 2.0.4 [taca 2018-09-23]
