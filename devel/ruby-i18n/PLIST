@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2018/03/13 17:02:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2018/09/23 14:42:41 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.md
@@ -91,6 +91,7 @@ ${GEM_LIBDIR}/test/locale/tag/simple_test.rb
 ${GEM_LIBDIR}/test/run_all.rb
 ${GEM_LIBDIR}/test/test_data/locales/de.po
 ${GEM_LIBDIR}/test/test_data/locales/en.rb
+${GEM_LIBDIR}/test/test_data/locales/en.yaml
 ${GEM_LIBDIR}/test/test_data/locales/en.yml
 ${GEM_LIBDIR}/test/test_data/locales/invalid/empty.yml
 ${GEM_LIBDIR}/test/test_data/locales/invalid/syntax.yml
