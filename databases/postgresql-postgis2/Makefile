@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2018/09/23 15:38:00 gdt Exp $
+# $NetBSD: Makefile,v 1.50 2018/09/23 23:11:49 gdt Exp $
 
-MAJOR=		2.4
-DISTNAME=	postgis-${MAJOR}.4
+MAJOR=		2.5
+DISTNAME=	postgis-${MAJOR}.0
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	databases geography
 MASTER_SITES=	https://download.osgeo.org/postgis/source/
 
@@ -19,12 +18,12 @@ BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 CONFLICTS=		postgis-[0-9]*
 
 # TODO section
-# 1. Update to upstream with fixes for:
-#      http://trac.osgeo.org/postgis/ticket/2909
-# 2. Fix installation use of "install -o root" from pgxs.mk, when postgresql
+# 1. Fix installation use of "install -o root" from pgxs.mk, when postgresql
 #    was built as root and postgis is built/installed as a non-root user.
 #    https://lists.osgeo.org/pipermail/postgis-devel/2015-July/025045.html
-# 3. Recheck and fix or file upstream about MAKE_JOBS_SAFE.
+# 2. Recheck and fix or file upstream about MAKE_JOBS_SAFE.
+# 3. Check 2nd make, and file bug about anything that happens.  Check xsltproc
+#    in particular.
 
 # gmake complains about adding + to parent rule
 MAKE_JOBS_SAFE=		no
