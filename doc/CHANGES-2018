@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4180 2018/09/23 17:09:30 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4181 2018/09/23 17:17:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5817,3 +5817,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/ruby-rack-protection to 2.0.4 [taca 2018-09-23]
 	Updated www/ruby-sinatra to 2.0.4 [taca 2018-09-23]
 	Updated www/ruby-sinatra-contrib to 2.0.4 [taca 2018-09-23]
+	Updated www/ruby-jekyll-feed to 0.11.0 [taca 2018-09-23]
+	Updated www/ruby-jekyll-seo-tag to 2.5.0 [taca 2018-09-23]
+	Updated www/ruby-jekyll to 3.8.4 [taca 2018-09-23]
+	Updated www/ruby-jekyll-minima to 2.5.0 [taca 2018-09-23]
