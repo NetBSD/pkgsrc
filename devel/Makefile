@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2735 2018/09/20 13:45:11 adam Exp $
+# $NetBSD: Makefile,v 1.2736 2018/09/23 18:17:04 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2225,6 +2225,7 @@ SUBDIR+=	py-pysha3
 SUBDIR+=	py-pysvn
 SUBDIR+=	py-pytemplate
 SUBDIR+=	py-python-dotenv
+SUBDIR+=	py-python-slugify
 SUBDIR+=	py-pyutil
 SUBDIR+=	py-pyvex
 SUBDIR+=	py-queuelib
