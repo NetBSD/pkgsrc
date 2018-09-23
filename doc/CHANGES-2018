@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4159 2018/09/23 16:30:20 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4160 2018/09/23 16:33:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5794,3 +5794,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ruby-mixlib-log to 2.0.4 [taca 2018-09-23]
 	Updated sysutils/ruby-chef-zero to 14.0.6 [taca 2018-09-23]
 	Updated misc/ruby-ohai to 14.5.4 [taca 2018-09-23]
+	Updated sysutils/ruby-chef-config to 14.5.27 [taca 2018-09-23]
+	Updated sysutils/ruby-chef to 14.5.27 [taca 2018-09-23]
