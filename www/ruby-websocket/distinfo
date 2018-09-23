@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2018/03/17 16:09:03 taca Exp $
+$NetBSD: distinfo,v 1.8 2018/09/23 17:02:04 taca Exp $
 
-SHA1 (websocket-1.2.5.gem) = fed72db20d94a8dabbba2189225b1d8d250a1805
-RMD160 (websocket-1.2.5.gem) = 90ef5c8ee5cef9eca6e0a9d2649ebdb37e9e9958
-SHA512 (websocket-1.2.5.gem) = 0cf0c2a049416faa66241cfeb40ff8771c6cc12f2653139b0dd8541450e4b705e747e025ec1aab0e3ff57e777b31ff99a2bec1f3a11a2afbfa69ad48d45b77e3
-Size (websocket-1.2.5.gem) = 27648 bytes
+SHA1 (websocket-1.2.8.gem) = ce97cbe0abedf61e08d77020d179c3f110fee5ee
+RMD160 (websocket-1.2.8.gem) = c7a65be4b6553f3658de2281b05b40322b2049e8
+SHA512 (websocket-1.2.8.gem) = 42630e9d577a0fcbfa9f28ba487d12e4d96c59c615dddf91f810abc151a716aa9eaac3788999cb8eb2e729eff92fe8d262639b4b460029690994c710e78c138c
+Size (websocket-1.2.8.gem) = 28160 bytes
