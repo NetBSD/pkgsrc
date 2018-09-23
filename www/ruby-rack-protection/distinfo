@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2018/03/17 15:52:27 taca Exp $
+$NetBSD: distinfo,v 1.11 2018/09/23 17:06:28 taca Exp $
 
-SHA1 (rack-protection-2.0.1.gem) = 01c1522ab6db071ec1a1ce1fddd328fa5a00d7c7
-RMD160 (rack-protection-2.0.1.gem) = 4c70dd6b49b978ed70b146992bcf079e4e55859c
-SHA512 (rack-protection-2.0.1.gem) = 6dd525384a0027a1943741881168433c63dc2d18093833dffb3417f3f6ccc46d597435a880d297d07751db1c449f3e37942ae03e33d378dbc74caec38c5cf1df
-Size (rack-protection-2.0.1.gem) = 15872 bytes
+SHA1 (rack-protection-2.0.4.gem) = c1376e5678322b401d988d261762a78bf2cf3361
+RMD160 (rack-protection-2.0.4.gem) = 7af3cafe42849bb87efb3aceef6340787dc8e01a
+SHA512 (rack-protection-2.0.4.gem) = e934873e7e8e45c1fa0450b568f33e28db29b9c4bacb0a747218ca929e73706518c09ce131f749e89dc7af894dcfbd6fcabdf12324edbfbcfa532eb227f977a4
+Size (rack-protection-2.0.4.gem) = 16896 bytes
