@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2017/09/18 04:18:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2018/09/23 16:30:00 taca Exp $
 bin/ohai${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -6,14 +6,12 @@ ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/ohai
-${GEM_LIBDIR}/docs/man/man1/ohai.1
 ${GEM_LIBDIR}/lib/ohai.rb
 ${GEM_LIBDIR}/lib/ohai/application.rb
 ${GEM_LIBDIR}/lib/ohai/common/dmi.rb
 ${GEM_LIBDIR}/lib/ohai/config.rb
 ${GEM_LIBDIR}/lib/ohai/dsl.rb
 ${GEM_LIBDIR}/lib/ohai/dsl/plugin.rb
-${GEM_LIBDIR}/lib/ohai/dsl/plugin/versionvi.rb
 ${GEM_LIBDIR}/lib/ohai/dsl/plugin/versionvii.rb
 ${GEM_LIBDIR}/lib/ohai/exception.rb
 ${GEM_LIBDIR}/lib/ohai/hints.rb
@@ -30,6 +28,7 @@ ${GEM_LIBDIR}/lib/ohai/mixin/gce_metadata.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/http_helper.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/network_constants.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/os.rb
+${GEM_LIBDIR}/lib/ohai/mixin/scaleway_metadata.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/seconds_to_human.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/softlayer_metadata.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/string.rb
@@ -44,14 +43,12 @@ ${GEM_LIBDIR}/lib/ohai/plugins/aix/platform.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/aix/uptime.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/aix/virtualization.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/azure.rb
-${GEM_LIBDIR}/lib/ohai/plugins/bsd/filesystem.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/bsd/virtualization.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/c.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/chef.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/cloud.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/command.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/darwin/cpu.rb
-${GEM_LIBDIR}/lib/ohai/plugins/darwin/filesystem.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/darwin/hardware.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/darwin/memory.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/darwin/network.rb
@@ -60,6 +57,7 @@ ${GEM_LIBDIR}/lib/ohai/plugins/darwin/system_profiler.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/darwin/virtualization.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/digital_ocean.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/dmi.rb
+${GEM_LIBDIR}/lib/ohai/plugins/docker.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/dragonflybsd/cpu.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/dragonflybsd/memory.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/dragonflybsd/network.rb
@@ -69,6 +67,7 @@ ${GEM_LIBDIR}/lib/ohai/plugins/ec2.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/elixir.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/erlang.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/eucalyptus.rb
+${GEM_LIBDIR}/lib/ohai/plugins/filesystem.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/freebsd/cpu.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/freebsd/memory.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/freebsd/network.rb
@@ -80,19 +79,19 @@ ${GEM_LIBDIR}/lib/ohai/plugins/groovy.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/haskell.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/hostname.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/init_package.rb
-${GEM_LIBDIR}/lib/ohai/plugins/ip_scopes.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/java.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/joyent.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/kernel.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/keys.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/languages.rb
+${GEM_LIBDIR}/lib/ohai/plugins/libvirt.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linode.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/block_device.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/cpu.rb
-${GEM_LIBDIR}/lib/ohai/plugins/linux/filesystem.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/fips.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/hostnamectl.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/lsb.rb
+${GEM_LIBDIR}/lib/ohai/plugins/linux/lspci.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/machineid.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/mdadm.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/memory.rb
@@ -130,6 +129,8 @@ ${GEM_LIBDIR}/lib/ohai/plugins/root_group.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/ruby.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/rust.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/scala.rb
+${GEM_LIBDIR}/lib/ohai/plugins/scaleway.rb
+${GEM_LIBDIR}/lib/ohai/plugins/scsi.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/shard.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/shells.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/softlayer.rb
@@ -145,7 +146,6 @@ ${GEM_LIBDIR}/lib/ohai/plugins/sysconf.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/timezone.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/uptime.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/virtualbox.rb
-${GEM_LIBDIR}/lib/ohai/plugins/virtualization.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/vmware.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/windows/cpu.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/windows/drivers.rb
@@ -154,6 +154,7 @@ ${GEM_LIBDIR}/lib/ohai/plugins/windows/fips.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/windows/memory.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/windows/network.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/windows/platform.rb
+${GEM_LIBDIR}/lib/ohai/plugins/windows/system_enclosure.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/windows/virtualization.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/zpools.rb
 ${GEM_LIBDIR}/lib/ohai/provides_map.rb
@@ -178,7 +179,6 @@ ${GEM_LIBDIR}/spec/data/plugins/groovy.output
 ${GEM_LIBDIR}/spec/data/plugins/java.output
 ${GEM_LIBDIR}/spec/data/plugins/lslpp.output
 ${GEM_LIBDIR}/spec/data/plugins/lua.output
-${GEM_LIBDIR}/spec/data/plugins/messages.rb
 ${GEM_LIBDIR}/spec/data/plugins/node.output
 ${GEM_LIBDIR}/spec/data/plugins/pacman.output
 ${GEM_LIBDIR}/spec/data/plugins/perl.output
@@ -189,7 +189,6 @@ ${GEM_LIBDIR}/spec/data/plugins/pkglist.output
 ${GEM_LIBDIR}/spec/data/plugins/python.output
 ${GEM_LIBDIR}/spec/data/plugins/rpmquery.output
 ${GEM_LIBDIR}/spec/data/plugins/uname.output
-${GEM_LIBDIR}/spec/data/plugins/v6message.rb
 ${GEM_LIBDIR}/spec/data/plugins/v7message.rb
 ${GEM_LIBDIR}/spec/data/plugins/what.output
 ${GEM_LIBDIR}/spec/data/plugins/xlc.output
@@ -245,6 +244,7 @@ ${GEM_LIBDIR}/spec/unit/plugins/darwin/system_profiler_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/darwin/virtualization_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/digital_ocean_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/dmi_spec.rb
+${GEM_LIBDIR}/spec/unit/plugins/docker_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/ec2_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/elixir_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/erlang_spec.rb
@@ -261,7 +261,6 @@ ${GEM_LIBDIR}/spec/unit/plugins/groovy_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/haskell_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/hostname_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/init_package_spec.rb
-${GEM_LIBDIR}/spec/unit/plugins/ip_scopes_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/java_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/joyent_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/kernel_spec.rb
@@ -274,6 +273,7 @@ ${GEM_LIBDIR}/spec/unit/plugins/linux/hostname_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/linux/hostnamectl_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/linux/kernel_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/linux/lsb_spec.rb
+${GEM_LIBDIR}/spec/unit/plugins/linux/lspci_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/linux/machineid_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/linux/mdadm_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/linux/memory_spec.rb
@@ -309,6 +309,8 @@ ${GEM_LIBDIR}/spec/unit/plugins/root_group_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/ruby_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/rust_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/scala_spec.rb
+${GEM_LIBDIR}/spec/unit/plugins/scaleway_spec.rb
+${GEM_LIBDIR}/spec/unit/plugins/scsi_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/shard_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/shells_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/softlayer_spec.rb
@@ -327,8 +329,12 @@ ${GEM_LIBDIR}/spec/unit/plugins/timezone_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/virtualbox_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/vmware_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/windows/cpu_spec.rb
+${GEM_LIBDIR}/spec/unit/plugins/windows/filesystem_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/windows/fips_spec.rb
+${GEM_LIBDIR}/spec/unit/plugins/windows/kernel_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/windows/memory_spec.rb
+${GEM_LIBDIR}/spec/unit/plugins/windows/network_spec.rb
+${GEM_LIBDIR}/spec/unit/plugins/windows/system_enclosure_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/windows/uptime_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/windows/virtualization_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/zpools_spec.rb
