@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/09/16 21:45:00 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/09/23 15:57:32 taca Exp $
 bin/recog_export${RUBY_SUFFIX}
 bin/recog_match${RUBY_SUFFIX}
 bin/recog_verify${RUBY_SUFFIX}
@@ -16,6 +16,7 @@ ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/recog_export
 ${GEM_LIBDIR}/bin/recog_match
 ${GEM_LIBDIR}/bin/recog_verify
+${GEM_LIBDIR}/cpe-remap.yaml
 ${GEM_LIBDIR}/features/data/failing_banners_fingerprints.xml
 ${GEM_LIBDIR}/features/data/matching_banners_fingerprints.xml
 ${GEM_LIBDIR}/features/data/multiple_banners_fingerprints.xml
@@ -60,6 +61,8 @@ ${GEM_LIBDIR}/spec/lib/recog/match_reporter_spec.rb
 ${GEM_LIBDIR}/spec/lib/recog/nizer_spec.rb
 ${GEM_LIBDIR}/spec/lib/recog/verify_reporter_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/update_cpes.py
+${GEM_LIBDIR}/xml/apache_modules.xml
 ${GEM_LIBDIR}/xml/apache_os.xml
 ${GEM_LIBDIR}/xml/architecture.xml
 ${GEM_LIBDIR}/xml/dns_versionbind.xml
@@ -100,6 +103,7 @@ ${GEM_LIBDIR}/xml/smtp_vrfy.xml
 ${GEM_LIBDIR}/xml/snmp_sysdescr.xml
 ${GEM_LIBDIR}/xml/snmp_sysobjid.xml
 ${GEM_LIBDIR}/xml/ssh_banners.xml
+${GEM_LIBDIR}/xml/telnet_banners.xml
 ${GEM_LIBDIR}/xml/upnp_banners.xml
 ${GEM_LIBDIR}/xml/x11_banners.xml
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
