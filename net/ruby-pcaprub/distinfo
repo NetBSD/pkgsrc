@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/09/05 18:30:56 minskim Exp $
+$NetBSD: distinfo,v 1.2 2018/09/23 15:55:35 taca Exp $
 
-SHA1 (pcaprub-0.12.4.gem) = c00a2e5534309ad811a0fa77060bb51e2c891313
-RMD160 (pcaprub-0.12.4.gem) = 6559a0abeef94cf08383af7d31a2363f9ea18feb
-SHA512 (pcaprub-0.12.4.gem) = 707221429dcdf95eba24076589054dd022ba8a479148c3ec8ce9667016225ee64bed13d3fdf8ebd46027244feec8e77a484c67f040d0439bfa44d9212997645b
-Size (pcaprub-0.12.4.gem) = 36864 bytes
+SHA1 (pcaprub-0.13.0.gem) = 6b4e0fe92d4dbff1376fe7d7d96baa59948a804b
+RMD160 (pcaprub-0.13.0.gem) = b682e7cdab2ed24937f3eaad2584b3d07486095d
+SHA512 (pcaprub-0.13.0.gem) = 6099996cca317194582a50ac89769d11ba802a9658c67f707e342b3c345bcaab26fba5ca2dc245a39eeb01f9ff6fdde1ae64a3a1ee4dd0e5243bae2ebed37e5f
+Size (pcaprub-0.13.0.gem) = 36864 bytes
