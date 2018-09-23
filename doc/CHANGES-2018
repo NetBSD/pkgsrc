@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4136 2018/09/23 15:43:02 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4137 2018/09/23 15:43:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5771,3 +5771,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/ruby-mime-types-data to 3.2018.0812 [taca 2018-09-23]
 	Updated mail/ruby-mime-types to 3.2.2 [taca 2018-09-23]
 	Updated mail/ruby-mini_mime to 1.0.1 [taca 2018-09-23]
+	Updated math/ruby-spreadsheet to 1.1.8 [taca 2018-09-23]
