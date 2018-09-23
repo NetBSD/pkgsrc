@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4101 2018/09/23 13:43:18 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4102 2018/09/23 13:44:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5736,3 +5736,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Removed misc/ruby-hashie2 [taca 2018-09-23]
 	Updated databases/p5-DBD-mysql to 4.048 [wen 2018-09-23]
 	Updated archivers/ruby-mixlib-archive to 0.4.16 [taca 2018-09-23]
+	Updated archivers/ruby-xz to 1.0.0 [taca 2018-09-23]
