@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4127 2018/09/23 15:15:37 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4128 2018/09/23 15:19:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5762,3 +5762,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/libgit2 to 0.27.4 [taca 2018-09-23]
 	Updated devel/ruby-rugged to 0.27.4 [taca 2018-09-23]
 	Updated devel/ruby-shoulda-matchers to 3.1.2 [taca 2018-09-23]
+	Updated meta-pkgs/ruby-shoulda to 3.6.0 [taca 2018-09-23]
