@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2018/07/04 13:40:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.37 2018/09/23 18:27:03 taca Exp $
 
-DISTNAME=		puppet-5.5.0
+DISTNAME=		puppet-5.5.2
 CATEGORIES=		sysutils
 #MASTER_SITES=		http://puppetlabs.com/downloads/puppet/
 
@@ -12,6 +12,7 @@ LICENSE=		apache-2.0
 DEPENDS+=	${RUBY_PKGPREFIX}-facter>=1.7.0<4:../../sysutils/ruby-facter
 DEPENDS+=	${RUBY_PKGPREFIX}-hiera>=1.0.0<4:../../databases/ruby-hiera
 DEPENDS+=	${RUBY_PKGPREFIX}-fast_gettext>=1.1.2:../../devel/ruby-fast_gettext
+DEPENDS+=	${RUBY_PKGPREFIX}-locale>=2.1<3:../../devel/ruby-locale
 DEPENDS+=	${RUBY_PKGPREFIX}-multi_json>=1.10<2:../../textproc/ruby-multi_json
 
 RUBYGEM_OPTIONS+=	--format-executable
@@ -33,7 +34,6 @@ SUBST_FILES.prefix+=	ext/solaris/smf/puppetd.xml
 SUBST_FILES.prefix+=	ext/solaris/smf/puppetmasterd.xml
 SUBST_FILES.prefix+=	man/man5/puppet.conf.5
 SUBST_FILES.prefix+=	man/man8/puppet-apply.8
-SUBST_FILES.prefix+=	man/man8/puppet-device.8
 SUBST_FILES.prefix+=	man/man8/puppet-module.8
 SUBST_FILES.prefix+=	man/man8/puppet-parser.8
 SUBST_FILES.prefix+=	spec/unit/util/run_mode_spec.rb
