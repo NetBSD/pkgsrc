@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/03/13 14:28:50 taca Exp $
+# $NetBSD: Makefile,v 1.2 2018/09/23 15:21:31 taca Exp $
 
-DISTNAME=	tomlrb-1.2.6
+DISTNAME=	tomlrb-1.2.7
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
