@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 02:00:10 agc Exp $
+$NetBSD: distinfo,v 1.6 2018/09/23 16:39:23 taca Exp $
 
-SHA1 (simple-rss-1.3.1.gem) = 0681d2d5ff8ded36d80fc7eba5d67cd4b9e2acca
-RMD160 (simple-rss-1.3.1.gem) = 7c025ed3e331d7623f9a1ae0990d1e93e5cd8b1a
-SHA512 (simple-rss-1.3.1.gem) = a24eca178f0777ba1747e420a883fae7650767cb212fd3dbb89ea35d81d1d0766ab6ac891d19abcc88ed7a2209890a4fbf3827eab6ffb0c11ffe69e4abaa6f4a
-Size (simple-rss-1.3.1.gem) = 35840 bytes
+SHA1 (simple-rss-1.3.3.gem) = a0877b7bc62ef165e54a9756ac24e6481f6e1463
+RMD160 (simple-rss-1.3.3.gem) = 79546c208d6d3ce0d0c3a67792f16cbb5bacf7c9
+SHA512 (simple-rss-1.3.3.gem) = 7ce7c121889ede58344cf686ac17ab97d75eea6ba5346aedf06294e969f239999a4e19ae416db93f3933f6dae24d7dce22c408d71efb3bbea91cc8091bf43920
+Size (simple-rss-1.3.3.gem) = 33280 bytes
