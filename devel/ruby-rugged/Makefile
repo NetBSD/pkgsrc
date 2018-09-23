@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2018/06/06 04:46:05 taca Exp $
+# $NetBSD: Makefile,v 1.14 2018/09/23 15:13:53 taca Exp $
 
-DISTNAME=	rugged-0.27.1
+DISTNAME=	rugged-0.27.4
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,8 +12,8 @@ USE_TOOLS+=	cmake pkg-config
 
 CONFIGURE_ARGS+=	--use-system-libraries
 
-# require libgit2 0.27.0 or later.
-BUILDLINK_API_DEPENDS.libgit2+=	libgit2>=0.27.0
+# require libgit2 0.27.4 or later.
+BUILDLINK_API_DEPENDS.libgit2+=	libgit2>=0.27.4
 
 .include "../../devel/libgit2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
