@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.29 2018/03/13 17:49:48 taca Exp $
+# $NetBSD: Makefile,v 1.30 2018/09/23 17:15:17 taca Exp $
 
-DISTNAME=	jekyll-3.7.3
+DISTNAME=	jekyll-3.8.4
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/mojombo/jekyll
+HOMEPAGE=	https://github.com/jekyll/jekyll
 COMMENT=	Blog-aware, static site generator in Ruby
 LICENSE=	mit
 
