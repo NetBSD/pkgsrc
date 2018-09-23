@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4094 2018/09/22 15:29:39 mef Exp $
+$NetBSD: CHANGES-2018,v 1.4095 2018/09/23 03:34:31 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5729,3 +5729,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/go111 to 1.11nb1 [minskim 2018-09-22]
 	Updated sysutils/u-boot-pinebook to 2018.07rc1 [jmcneill 2018-09-22]
 	Updated cad/klayout to 0.25.4 [mef 2018-09-22]
+	Updated www/mediawiki to 1.31.1 [wen 2018-09-23]
