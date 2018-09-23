@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2018/03/21 12:50:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/09/23 16:10:09 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/stale.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.gitmodules
 ${GEM_LIBDIR}/.travis.yml
@@ -58,6 +59,7 @@ ${GEM_LIBDIR}/lib/specinfra/command/alpine/base/service.rb
 ${GEM_LIBDIR}/lib/specinfra/command/amazon.rb
 ${GEM_LIBDIR}/lib/specinfra/command/amazon/base.rb
 ${GEM_LIBDIR}/lib/specinfra/command/amazon/v2.rb
+${GEM_LIBDIR}/lib/specinfra/command/amazon/v2/port.rb
 ${GEM_LIBDIR}/lib/specinfra/command/amazon/v2/service.rb
 ${GEM_LIBDIR}/lib/specinfra/command/arch.rb
 ${GEM_LIBDIR}/lib/specinfra/command/arch/base.rb
@@ -287,10 +289,13 @@ ${GEM_LIBDIR}/lib/specinfra/command/suse/base/package.rb
 ${GEM_LIBDIR}/lib/specinfra/command/suse/base/service.rb
 ${GEM_LIBDIR}/lib/specinfra/command/ubuntu.rb
 ${GEM_LIBDIR}/lib/specinfra/command/ubuntu/base.rb
+${GEM_LIBDIR}/lib/specinfra/command/ubuntu/base/port.rb
 ${GEM_LIBDIR}/lib/specinfra/command/ubuntu/base/ppa.rb
 ${GEM_LIBDIR}/lib/specinfra/command/ubuntu/base/service.rb
 ${GEM_LIBDIR}/lib/specinfra/command/ubuntu/v15.rb
 ${GEM_LIBDIR}/lib/specinfra/command/ubuntu/v15/service.rb
+${GEM_LIBDIR}/lib/specinfra/command/ubuntu/v18.rb
+${GEM_LIBDIR}/lib/specinfra/command/ubuntu/v18/port.rb
 ${GEM_LIBDIR}/lib/specinfra/command/windows.rb
 ${GEM_LIBDIR}/lib/specinfra/command/windows/base.rb
 ${GEM_LIBDIR}/lib/specinfra/command/windows/base/feature.rb
@@ -332,6 +337,7 @@ ${GEM_LIBDIR}/lib/specinfra/helper/detect_os/freebsd.rb
 ${GEM_LIBDIR}/lib/specinfra/helper/detect_os/gentoo.rb
 ${GEM_LIBDIR}/lib/specinfra/helper/detect_os/nixos.rb
 ${GEM_LIBDIR}/lib/specinfra/helper/detect_os/openbsd.rb
+${GEM_LIBDIR}/lib/specinfra/helper/detect_os/photon.rb
 ${GEM_LIBDIR}/lib/specinfra/helper/detect_os/plamo.rb
 ${GEM_LIBDIR}/lib/specinfra/helper/detect_os/poky.rb
 ${GEM_LIBDIR}/lib/specinfra/helper/detect_os/redhat.rb
@@ -376,6 +382,7 @@ ${GEM_LIBDIR}/spec/command/alpine/service_spec.rb
 ${GEM_LIBDIR}/spec/command/amazon/interface_spec.rb
 ${GEM_LIBDIR}/spec/command/amazon/package_spec.rb
 ${GEM_LIBDIR}/spec/command/amazon/service_spec.rb
+${GEM_LIBDIR}/spec/command/amazon2/port_spec.rb
 ${GEM_LIBDIR}/spec/command/amazon2/service_spec.rb
 ${GEM_LIBDIR}/spec/command/base/file_spec.rb
 ${GEM_LIBDIR}/spec/command/base/group_spec.rb
