@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2017/03/20 14:28:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/09/23 15:45:47 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGELOG.md
@@ -75,6 +75,7 @@ ${GEM_LIBDIR}/spec/hashie/trash_spec.rb
 ${GEM_LIBDIR}/spec/hashie/utils_spec.rb
 ${GEM_LIBDIR}/spec/hashie/version_spec.rb
 ${GEM_LIBDIR}/spec/hashie_spec.rb
+${GEM_LIBDIR}/spec/integration/elasticsearch/integration_spec.rb
 ${GEM_LIBDIR}/spec/integration/omniauth-oauth2/app.rb
 ${GEM_LIBDIR}/spec/integration/omniauth-oauth2/integration_spec.rb
 ${GEM_LIBDIR}/spec/integration/omniauth-oauth2/some_site.rb
