@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2018/03/14 14:49:22 taca Exp $
+@comment $NetBSD: PLIST,v 1.24 2018/09/23 15:44:56 taca Exp $
 bin/bundle${RUBY_SUFFIX}
 bin/bundler${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -239,6 +239,9 @@ ${GEM_LIBDIR}/man/bundle-clean.ronn
 ${GEM_LIBDIR}/man/bundle-config.1
 ${GEM_LIBDIR}/man/bundle-config.1.txt
 ${GEM_LIBDIR}/man/bundle-config.ronn
+${GEM_LIBDIR}/man/bundle-doctor.1
+${GEM_LIBDIR}/man/bundle-doctor.1.txt
+${GEM_LIBDIR}/man/bundle-doctor.ronn
 ${GEM_LIBDIR}/man/bundle-exec.1
 ${GEM_LIBDIR}/man/bundle-exec.1.txt
 ${GEM_LIBDIR}/man/bundle-exec.ronn
