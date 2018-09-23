@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4130 2018/09/23 15:21:54 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4131 2018/09/23 15:23:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5765,3 +5765,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated meta-pkgs/ruby-shoulda to 3.6.0 [taca 2018-09-23]
 	Updated devel/ruby-test-unit to 3.2.8 [taca 2018-09-23]
 	Updated devel/ruby-tomlrb to 1.2.7 [taca 2018-09-23]
+	Updated games/ruby-squib to 0.14.2 [taca 2018-09-23]
