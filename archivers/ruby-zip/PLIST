@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2016/03/08 13:50:17 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2018/09/23 13:49:00 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
@@ -61,10 +61,25 @@ ${GEM_LIBDIR}/test/data/globTest.zip
 ${GEM_LIBDIR}/test/data/globTest/foo.txt
 ${GEM_LIBDIR}/test/data/globTest/foo/bar/baz/foo.txt
 ${GEM_LIBDIR}/test/data/globTest/food.txt
+${GEM_LIBDIR}/test/data/gpbit3stored.zip
 ${GEM_LIBDIR}/test/data/mimetype
 ${GEM_LIBDIR}/test/data/notzippedruby.rb
 ${GEM_LIBDIR}/test/data/ntfs.zip
 ${GEM_LIBDIR}/test/data/oddExtraField.zip
+${GEM_LIBDIR}/test/data/path_traversal/Makefile
+${GEM_LIBDIR}/test/data/path_traversal/jwilk/README.md
+${GEM_LIBDIR}/test/data/path_traversal/jwilk/absolute1.zip
+${GEM_LIBDIR}/test/data/path_traversal/jwilk/absolute2.zip
+${GEM_LIBDIR}/test/data/path_traversal/jwilk/dirsymlink.zip
+${GEM_LIBDIR}/test/data/path_traversal/jwilk/dirsymlink2a.zip
+${GEM_LIBDIR}/test/data/path_traversal/jwilk/dirsymlink2b.zip
+${GEM_LIBDIR}/test/data/path_traversal/jwilk/relative0.zip
+${GEM_LIBDIR}/test/data/path_traversal/jwilk/relative2.zip
+${GEM_LIBDIR}/test/data/path_traversal/jwilk/symlink.zip
+${GEM_LIBDIR}/test/data/path_traversal/relative1.zip
+${GEM_LIBDIR}/test/data/path_traversal/tuzovakaoff/README.md
+${GEM_LIBDIR}/test/data/path_traversal/tuzovakaoff/absolutepath.zip
+${GEM_LIBDIR}/test/data/path_traversal/tuzovakaoff/symlink.zip
 ${GEM_LIBDIR}/test/data/rubycode.zip
 ${GEM_LIBDIR}/test/data/rubycode2.zip
 ${GEM_LIBDIR}/test/data/test.xls
@@ -98,6 +113,7 @@ ${GEM_LIBDIR}/test/local_entry_test.rb
 ${GEM_LIBDIR}/test/output_stream_test.rb
 ${GEM_LIBDIR}/test/pass_thru_compressor_test.rb
 ${GEM_LIBDIR}/test/pass_thru_decompressor_test.rb
+${GEM_LIBDIR}/test/path_traversal_test.rb
 ${GEM_LIBDIR}/test/samples/example_recursive_test.rb
 ${GEM_LIBDIR}/test/settings_test.rb
 ${GEM_LIBDIR}/test/test_helper.rb
