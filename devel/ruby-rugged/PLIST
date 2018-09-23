@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2018/06/06 04:46:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2018/09/23 15:13:53 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -70,6 +70,7 @@ ${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindCoreFoundation.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindGSSAPI.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindHTTP_Parser.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindIconv.cmake
+${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindPkgLibraries.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindSecurity.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindStatNsec.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/IdeSplitSources.cmake
