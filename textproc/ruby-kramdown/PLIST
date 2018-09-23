@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2018/03/13 17:21:13 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2018/09/23 16:35:23 taca Exp $
 bin/kramdown${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/AUTHORS
@@ -45,6 +45,7 @@ ${GEM_LIBDIR}/lib/kramdown/converter/kramdown.rb
 ${GEM_LIBDIR}/lib/kramdown/converter/latex.rb
 ${GEM_LIBDIR}/lib/kramdown/converter/man.rb
 ${GEM_LIBDIR}/lib/kramdown/converter/math_engine/itex2mml.rb
+${GEM_LIBDIR}/lib/kramdown/converter/math_engine/katex.rb
 ${GEM_LIBDIR}/lib/kramdown/converter/math_engine/mathjax.rb
 ${GEM_LIBDIR}/lib/kramdown/converter/math_engine/mathjaxnode.rb
 ${GEM_LIBDIR}/lib/kramdown/converter/math_engine/ritex.rb
@@ -375,6 +376,9 @@ ${GEM_LIBDIR}/test/testcases/block/13_definition_list/too_much_space.html
 ${GEM_LIBDIR}/test/testcases/block/13_definition_list/too_much_space.text
 ${GEM_LIBDIR}/test/testcases/block/13_definition_list/with_blocks.html
 ${GEM_LIBDIR}/test/testcases/block/13_definition_list/with_blocks.text
+${GEM_LIBDIR}/test/testcases/block/14_table/empty_tag_in_cell.html
+${GEM_LIBDIR}/test/testcases/block/14_table/empty_tag_in_cell.options
+${GEM_LIBDIR}/test/testcases/block/14_table/empty_tag_in_cell.text
 ${GEM_LIBDIR}/test/testcases/block/14_table/errors.html
 ${GEM_LIBDIR}/test/testcases/block/14_table/errors.text
 ${GEM_LIBDIR}/test/testcases/block/14_table/escaping.html
@@ -395,6 +399,9 @@ ${GEM_LIBDIR}/test/testcases/block/15_math/gh_128.text
 ${GEM_LIBDIR}/test/testcases/block/15_math/itex2mml.html
 ${GEM_LIBDIR}/test/testcases/block/15_math/itex2mml.options
 ${GEM_LIBDIR}/test/testcases/block/15_math/itex2mml.text
+${GEM_LIBDIR}/test/testcases/block/15_math/katex.html.19
+${GEM_LIBDIR}/test/testcases/block/15_math/katex.options
+${GEM_LIBDIR}/test/testcases/block/15_math/katex.text
 ${GEM_LIBDIR}/test/testcases/block/15_math/mathjax_preview.html
 ${GEM_LIBDIR}/test/testcases/block/15_math/mathjax_preview.options
 ${GEM_LIBDIR}/test/testcases/block/15_math/mathjax_preview.text
@@ -577,6 +584,9 @@ ${GEM_LIBDIR}/test/testcases/span/line_breaks/normal.text
 ${GEM_LIBDIR}/test/testcases/span/math/itex2mml.html
 ${GEM_LIBDIR}/test/testcases/span/math/itex2mml.options
 ${GEM_LIBDIR}/test/testcases/span/math/itex2mml.text
+${GEM_LIBDIR}/test/testcases/span/math/katex.html.19
+${GEM_LIBDIR}/test/testcases/span/math/katex.options
+${GEM_LIBDIR}/test/testcases/span/math/katex.text
 ${GEM_LIBDIR}/test/testcases/span/math/mathjaxnode.html.19
 ${GEM_LIBDIR}/test/testcases/span/math/mathjaxnode.options
 ${GEM_LIBDIR}/test/testcases/span/math/mathjaxnode.text
