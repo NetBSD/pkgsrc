@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/08/22 09:46:17 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2018/09/23 18:39:22 bsiegert Exp $
 
 DISTNAME=	boringssl-20151230
 PKGREVISION=	8
@@ -12,12 +12,19 @@ LICENSE=	openssl
 
 WRKSRC=		${WRKDIR}/boringssl
 
-BUILD_DEPENDS+=	go>=1.4:../../lang/go
+.include "../../lang/go/version.mk"
+
+BUILD_DEPENDS+=	${GO_PACKAGE_DEP}
 
 USE_TOOLS+=	cmake perl
 USE_LANGUAGES+=	c c++
 
 AUTO_MKDIRS=	yes
+
+SUBST_CLASSES+=		go
+SUBST_STAGE.go=		post-patch
+SUBST_FILES.go=		CMakeLists.txt
+SUBST_SED.go=		-e '/find_program.GO_EXECUTABLE/s,go,${GO},'
 
 do-build:
 	mkdir -p ${WRKSRC}/build
