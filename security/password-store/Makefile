@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2018/09/19 09:45:18 leot Exp $
+# $NetBSD: Makefile,v 1.11 2018/09/23 12:39:19 leot Exp $
 
 DISTNAME=	password-store-1.7.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://git.zx2c4.com/password-store/snapshot/
 EXTRACT_SUFX=	.tar.xz
@@ -32,6 +32,7 @@ SUBST_MESSAGE.fixsh=	Fixing shell script
 SUBST_FILES.fixsh=	src/password-store.sh
 SUBST_SED.fixsh+=	-e 's,GETOPT="getopt",GETOPT="${PREFIX}/bin/getopt",'
 SUBST_SED.fixsh+=	-e "s,SHRED=\"shred -f -z\",SHRED=\"${RM} -f -P\","
+SUBST_SED.fixsh+=	-e 's,BASE64="base64",BASE64="${PREFIX}/bin/base64",'
 
 TEST_TARGET=		test
 
