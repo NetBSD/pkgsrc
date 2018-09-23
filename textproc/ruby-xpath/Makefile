@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2018/03/17 16:28:45 taca Exp $
+# $NetBSD: Makefile,v 1.10 2018/09/23 16:41:14 taca Exp $
 
-DISTNAME=	xpath-3.0.0
+DISTNAME=	xpath-3.1.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	ruby textproc
 
