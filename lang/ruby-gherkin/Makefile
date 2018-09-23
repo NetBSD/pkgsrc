@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2018/03/21 11:33:20 taca Exp $
+# $NetBSD: Makefile,v 1.4 2018/09/23 15:31:22 taca Exp $
 
-DISTNAME=	gherkin-5.0.0
+DISTNAME=	gherkin-5.1.0
 CATEGORIES=	lang
 
 MAINTAINER=	minskim@NetBSD.org
