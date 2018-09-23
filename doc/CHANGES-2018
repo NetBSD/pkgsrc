@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4114 2018/09/23 14:31:25 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4115 2018/09/23 14:40:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5749,3 +5749,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ruby-fast_gettext to 1.7.0 [taca 2018-09-23]
 	Updated net/bind910 to 9.10.8pl1nb3 [taca 2018-09-23]
 	Removed net/bind99 [taca 2018-09-23]
+	Updated devel/ruby-filesize to 0.2.0 [taca 2018-09-23]
