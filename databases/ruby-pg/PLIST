@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2018/02/25 14:19:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2018/09/23 13:56:53 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -34,6 +34,7 @@ ${GEM_LIBDIR}/ext/pg_errors.c
 ${GEM_LIBDIR}/ext/pg_result.c
 ${GEM_LIBDIR}/ext/pg_text_decoder.c
 ${GEM_LIBDIR}/ext/pg_text_encoder.c
+${GEM_LIBDIR}/ext/pg_tuple.c
 ${GEM_LIBDIR}/ext/pg_type_map.c
 ${GEM_LIBDIR}/ext/pg_type_map_all_strings.c
 ${GEM_LIBDIR}/ext/pg_type_map_by_class.c
@@ -48,6 +49,7 @@ ${GEM_LIBDIR}/ext/vc/pg_18/pg.vcproj
 ${GEM_LIBDIR}/ext/vc/pg_19/pg_19.vcproj
 ${GEM_LIBDIR}/lib/pg.rb
 ${GEM_LIBDIR}/lib/pg/basic_type_mapping.rb
+${GEM_LIBDIR}/lib/pg/binary_decoder.rb
 ${GEM_LIBDIR}/lib/pg/coder.rb
 ${GEM_LIBDIR}/lib/pg/connection.rb
 ${GEM_LIBDIR}/lib/pg/constants.rb
@@ -55,6 +57,7 @@ ${GEM_LIBDIR}/lib/pg/exceptions.rb
 ${GEM_LIBDIR}/lib/pg/result.rb
 ${GEM_LIBDIR}/lib/pg/text_decoder.rb
 ${GEM_LIBDIR}/lib/pg/text_encoder.rb
+${GEM_LIBDIR}/lib/pg/tuple.rb
 ${GEM_LIBDIR}/lib/pg/type_map_by_column.rb
 ${GEM_LIBDIR}/lib/pg_ext.${RUBY_DLEXT}
 ${GEM_LIBDIR}/spec/data/expected_trace.out
@@ -62,7 +65,9 @@ ${GEM_LIBDIR}/spec/data/random_binary_data
 ${GEM_LIBDIR}/spec/helpers.rb
 ${GEM_LIBDIR}/spec/pg/basic_type_mapping_spec.rb
 ${GEM_LIBDIR}/spec/pg/connection_spec.rb
+${GEM_LIBDIR}/spec/pg/connection_sync_spec.rb
 ${GEM_LIBDIR}/spec/pg/result_spec.rb
+${GEM_LIBDIR}/spec/pg/tuple_spec.rb
 ${GEM_LIBDIR}/spec/pg/type_map_by_class_spec.rb
 ${GEM_LIBDIR}/spec/pg/type_map_by_column_spec.rb
 ${GEM_LIBDIR}/spec/pg/type_map_by_mri_type_spec.rb
