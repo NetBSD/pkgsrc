@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4187 2018/09/23 18:02:29 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4188 2018/09/23 18:17:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5827,3 +5827,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/ruby-rex-text to 0.2.21 [taca 2018-09-23]
 	Updated security/ruby-rex-exploitation to 0.1.19 [taca 2018-09-23]
 	Updated security/ruby-rex-powershell to 0.1.79 [taca 2018-09-23]
+	Added devel/py-python-slugify version 1.2.5 [taca 2018-09-23]
