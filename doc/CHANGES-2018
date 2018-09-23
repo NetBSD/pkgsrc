@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4122 2018/09/23 14:58:07 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4123 2018/09/23 15:00:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5757,3 +5757,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ruby-octokit to 4.12.0 [taca 2018-09-23]
 	Updated lang/pear to 1.10.6 [taca 2018-09-23]
 	Updated net/pear-Net_Sieve to 1.4.4 [taca 2018-09-23]
+	Updated devel/ruby-cucumber-core to 3.2.0 [taca 2018-09-23]
