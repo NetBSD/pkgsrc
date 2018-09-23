@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4163 2018/09/23 16:42:07 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4164 2018/09/23 16:43:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5799,3 +5799,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/ruby-kramdown to 1.17.0 [taca 2018-09-23]
 	Updated textproc/ruby-simple-rss to 1.3.3 [taca 2018-09-23]
 	Updated textproc/ruby-xpath to 3.1.0 [taca 2018-09-23]
+	Updated textproc/ruby-yajl to 1.4.1 [taca 2018-09-23]
