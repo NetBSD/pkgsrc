@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2016/01/03 05:31:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/09/23 13:44:11 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/AUTHORS
-${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/HISTORY.rdoc
+${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/lib/xz.rb
+${GEM_LIBDIR}/lib/xz/fiddle_helper.rb
 ${GEM_LIBDIR}/lib/xz/lib_lzma.rb
 ${GEM_LIBDIR}/lib/xz/stream.rb
 ${GEM_LIBDIR}/lib/xz/stream_reader.rb
