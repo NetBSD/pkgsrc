@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2017/06/05 14:50:32 taca Exp $
+$NetBSD: distinfo,v 1.17 2018/09/23 15:53:14 taca Exp $
 
-SHA1 (domain_name-0.5.20170404.gem) = 06d075680cf47eb2bc109462d39e7efa6476bac2
-RMD160 (domain_name-0.5.20170404.gem) = d1bed08166889070b15f1e9d6a32fa40d8648d93
-SHA512 (domain_name-0.5.20170404.gem) = 3314d87ac3b04337dff047c423ded2f4b99a4b9300528c34388cbc30fbcc7e84ae884969624e046e0dcc1d856e0bb8246b1556ac2dc755a1b4917ccf975fece3
-Size (domain_name-0.5.20170404.gem) = 120320 bytes
+SHA1 (domain_name-0.5.20180417.gem) = c89786f646cce63c5dfdfc6bef2c9dcdb17b4fed
+RMD160 (domain_name-0.5.20180417.gem) = a2c8a942be8577660a1b23eea53c450d4094e597
+SHA512 (domain_name-0.5.20180417.gem) = e960aa4445e19ff3e71825d94f85519ec9b1600dab64d139bf21208aec6fe1dc279e9fda6c64fd518ab22783464ba9a4d43f20ceb7699daede981cbf7d5e1876
+Size (domain_name-0.5.20180417.gem) = 124928 bytes
