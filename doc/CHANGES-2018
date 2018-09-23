@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4147 2018/09/23 15:57:57 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4148 2018/09/23 16:00:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5782,3 +5782,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/ruby-net-ping to 2.0.5 [taca 2018-09-23]
 	Updated net/ruby-pcaprub to 0.13.0 [taca 2018-09-23]
 	Updated net/ruby-recog to 2.1.23 [taca 2018-09-23]
+	Updated net/ruby-ruby_smb to 1.0.4 [taca 2018-09-23]
