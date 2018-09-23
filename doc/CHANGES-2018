@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4129 2018/09/23 15:20:50 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4130 2018/09/23 15:21:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5764,3 +5764,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ruby-shoulda-matchers to 3.1.2 [taca 2018-09-23]
 	Updated meta-pkgs/ruby-shoulda to 3.6.0 [taca 2018-09-23]
 	Updated devel/ruby-test-unit to 3.2.8 [taca 2018-09-23]
+	Updated devel/ruby-tomlrb to 1.2.7 [taca 2018-09-23]
