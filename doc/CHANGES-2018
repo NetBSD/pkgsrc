@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4190 2018/09/23 18:27:41 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4191 2018/09/23 18:39:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5830,3 +5830,13 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/py-python-slugify version 1.2.5 [taca 2018-09-23]
 	Updated devel/transifex-client to 0.13.4 [taca 2018-09-23]
 	Updated sysutils/puppet to 5.5.2 [taca 2018-09-23]
+	Updated devel/ruby-activesupport51 to 5.1.6 [taca 2018-09-23]
+	Updated devel/ruby-activemodel51 to 5.1.6 [taca 2018-09-23]
+	Updated devel/ruby-activejob51 to 5.1.6 [taca 2018-09-23]
+	Updated www/ruby-actionview51 to 5.1.6 [taca 2018-09-23]
+	Updated www/ruby-actionpack51 to 5.1.6 [taca 2018-09-23]
+	Updated www/ruby-actioncable51 to 5.1.6 [taca 2018-09-23]
+	Updated databases/ruby-activerecord51 to 5.1.6 [taca 2018-09-23]
+	Updated mail/ruby-actionmailer51 to 5.1.6 [taca 2018-09-23]
+	Updated devel/ruby-railties51 to 5.1.6 [taca 2018-09-23]
+	Updated www/ruby-rails51 to 5.1.6 [taca 2018-09-23]
