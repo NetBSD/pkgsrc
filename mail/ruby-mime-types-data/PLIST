@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/07/29 21:38:36 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/09/23 15:40:47 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Code-of-Conduct.md
 ${GEM_LIBDIR}/Contributing.md
@@ -18,4 +18,17 @@ ${GEM_LIBDIR}/data/mime.use_instead.column
 ${GEM_LIBDIR}/data/mime.xrefs.column
 ${GEM_LIBDIR}/lib/mime-types-data.rb
 ${GEM_LIBDIR}/lib/mime/types/data.rb
+${GEM_LIBDIR}/types/application.yaml
+${GEM_LIBDIR}/types/audio.yaml
+${GEM_LIBDIR}/types/chemical.yaml
+${GEM_LIBDIR}/types/conference.yaml
+${GEM_LIBDIR}/types/drawing.yaml
+${GEM_LIBDIR}/types/font.yaml
+${GEM_LIBDIR}/types/image.yaml
+${GEM_LIBDIR}/types/message.yaml
+${GEM_LIBDIR}/types/model.yaml
+${GEM_LIBDIR}/types/multipart.yaml
+${GEM_LIBDIR}/types/text.yaml
+${GEM_LIBDIR}/types/video.yaml
+${GEM_LIBDIR}/types/world.yaml
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
