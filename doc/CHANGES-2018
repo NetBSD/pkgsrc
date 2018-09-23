@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4171 2018/09/23 16:54:18 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4172 2018/09/23 16:55:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5807,3 +5807,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/ruby-faraday to 0.15.3 [taca 2018-09-23]
 	Updated www/ruby-http-form_data to 2.1.1 [taca 2018-09-23]
 	Updated www/ruby-mechanize to 2.7.6 [taca 2018-09-23]
+	Updated www/ruby-mustermann to 1.0.3 [taca 2018-09-23]
