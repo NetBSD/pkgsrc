@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2018/03/14 14:32:05 taca Exp $
+# $NetBSD: Makefile,v 1.19 2018/09/23 15:47:54 taca Exp $
 
-DISTNAME=	ruby-progressbar-1.9.0
+DISTNAME=	ruby-progressbar-1.10.0
 PKGNAME=	${DISTNAME:S/ruby-/${RUBY_PKGPREFIX}-/}
 CATEGORIES=	misc ruby
 
