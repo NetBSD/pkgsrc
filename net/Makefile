@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1226 2018/09/15 10:53:59 leot Exp $
+# $NetBSD: Makefile,v 1.1227 2018/09/23 14:30:13 taca Exp $
 #
 
 COMMENT=	Networking tools
@@ -43,7 +43,6 @@ SUBDIR+=	bftpd
 SUBDIR+=	bind910
 SUBDIR+=	bind911
 SUBDIR+=	bind912
-SUBDIR+=	bind99
 SUBDIR+=	bing
 SUBDIR+=	bird
 SUBDIR+=	bird6
