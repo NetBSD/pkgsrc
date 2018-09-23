@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4143 2018/09/23 15:51:28 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4144 2018/09/23 15:53:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5778,3 +5778,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/ruby-progressbar to 1.10.0 [taca 2018-09-23]
 	Updated net/ruby-connection_pool to 2.2.2 [taca 2018-09-23]
 	Updated net/ruby-dnsruby to 1.61.2 [taca 2018-09-23]
+	Updated net/ruby-domain_name to 0.5.20180417 [taca 2018-09-23]
