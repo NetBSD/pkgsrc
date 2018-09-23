@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4192 2018/09/23 18:42:05 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4193 2018/09/23 20:07:04 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5841,3 +5841,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ruby-railties51 to 5.1.6 [taca 2018-09-23]
 	Updated www/ruby-rails51 to 5.1.6 [taca 2018-09-23]
 	Updated devel/php-xdebug to 2.6.1 [taca 2018-09-23]
+	Renamed lang/go to lang/go110 [bsiegert 2018-09-23]
