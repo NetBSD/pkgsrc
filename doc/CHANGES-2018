@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4198 2018/09/24 04:00:05 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.4199 2018/09/24 07:44:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5847,3 +5847,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/heel to 3.2.0nb1 [taca 2018-09-24]
 	Updated meta-pkgs/bulk-medium to 20180924 [taca 2018-09-24]
 	Updated math/py-pandas-datareader to 0.7.0 [minskim 2018-09-24]
+	Updated www/apache24 to 2.4.35 [adam 2018-09-24]
+	Updated converters/help2man to 1.47.7 [adam 2018-09-24]
