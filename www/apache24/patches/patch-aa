@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2018/07/19 08:53:58 adam Exp $
+$NetBSD: patch-aa,v 1.3 2018/09/24 07:37:47 adam Exp $
 
---- Makefile.in.orig	2018-05-30 19:09:00.000000000 +0000
+--- Makefile.in.orig	2018-08-08 11:48:15.000000000 +0000
 +++ Makefile.in
 @@ -4,7 +4,7 @@ CLEAN_SUBDIRS = test
  
@@ -142,5 +142,5 @@ $NetBSD: patch-aa,v 1.2 2018/07/19 08:53:58 adam Exp $
 +	cd $(top_srcdir)/docs/manual && \
 +	@PAX@ -rwppm . $(DESTDIR)$(manualdir)
  
- install-suexec: install-suexec-binary install-suexec-$(INSTALL_SUEXEC)
+ install-suexec: install-suexec-$(INSTALL_SUEXEC)
  
