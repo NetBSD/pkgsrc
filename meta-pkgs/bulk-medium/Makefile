@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2018/08/22 09:45:42 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2018/09/24 01:26:50 taca Exp $
 
-DISTNAME=	bulk-medium-20171028
-PKGREVISION=	1
+DISTNAME=	bulk-medium-20180924
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -100,8 +99,9 @@ BUILD_DEPENDS+=	mhonarc-[0-9]*:../../mail/mhonarc
 BUILD_DEPENDS+=	mutt-[0-9]*:../../mail/mutt
 BUILD_DEPENDS+=	re-alpine-[0-9]*:../../mail/re-alpine
 BUILD_DEPENDS+=	spamassassin-[0-9]*:../../mail/spamassassin
-BUILD_DEPENDS+=	bind>=9.9<9.10:../../net/bind99
 BUILD_DEPENDS+=	bind>=9.10<9.11:../../net/bind910
+BUILD_DEPENDS+=	bind>=9.11<9.12:../../net/bind911
+BUILD_DEPENDS+=	bind>=9.12<9.13:../../net/bind912
 BUILD_DEPENDS+=	clive-[0-9]*:../../net/clive
 BUILD_DEPENDS+=	nmap-[0-9]*:../../net/nmap
 BUILD_DEPENDS+=	samba>=4.2:../../net/samba4
