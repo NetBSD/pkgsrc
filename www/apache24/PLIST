@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2018/03/26 09:30:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2018/09/24 07:37:47 adam Exp $
 bin/ab
 bin/apxs
 bin/dbmmanage
@@ -656,8 +656,10 @@ share/httpd/manual/howto/public_html.html.ko.euc-kr
 share/httpd/manual/howto/public_html.html.tr.utf8
 share/httpd/manual/howto/reverse_proxy.html
 share/httpd/manual/howto/reverse_proxy.html.en
+share/httpd/manual/howto/reverse_proxy.html.fr
 share/httpd/manual/howto/ssi.html
 share/httpd/manual/howto/ssi.html.en
+share/httpd/manual/howto/ssi.html.es
 share/httpd/manual/howto/ssi.html.fr
 share/httpd/manual/howto/ssi.html.ja.utf8
 share/httpd/manual/howto/ssi.html.ko.euc-kr
@@ -743,6 +745,7 @@ share/httpd/manual/logs.html.ko.euc-kr
 share/httpd/manual/logs.html.tr.utf8
 share/httpd/manual/misc/index.html
 share/httpd/manual/misc/index.html.en
+share/httpd/manual/misc/index.html.es
 share/httpd/manual/misc/index.html.fr
 share/httpd/manual/misc/index.html.ko.euc-kr
 share/httpd/manual/misc/index.html.tr.utf8
@@ -861,6 +864,7 @@ share/httpd/manual/mod/mod_authn_socache.html.en
 share/httpd/manual/mod/mod_authn_socache.html.fr
 share/httpd/manual/mod/mod_authnz_fcgi.html
 share/httpd/manual/mod/mod_authnz_fcgi.html.en
+share/httpd/manual/mod/mod_authnz_fcgi.html.fr
 share/httpd/manual/mod/mod_authnz_ldap.html
 share/httpd/manual/mod/mod_authnz_ldap.html.en
 share/httpd/manual/mod/mod_authnz_ldap.html.fr
@@ -900,6 +904,7 @@ share/httpd/manual/mod/mod_autoindex.html.ko.euc-kr
 share/httpd/manual/mod/mod_autoindex.html.tr.utf8
 share/httpd/manual/mod/mod_brotli.html
 share/httpd/manual/mod/mod_brotli.html.en
+share/httpd/manual/mod/mod_brotli.html.fr
 share/httpd/manual/mod/mod_buffer.html
 share/httpd/manual/mod/mod_buffer.html.en
 share/httpd/manual/mod/mod_buffer.html.fr
@@ -1017,6 +1022,7 @@ share/httpd/manual/mod/mod_heartmonitor.html.en
 share/httpd/manual/mod/mod_heartmonitor.html.fr
 share/httpd/manual/mod/mod_http2.html
 share/httpd/manual/mod/mod_http2.html.en
+share/httpd/manual/mod/mod_http2.html.fr
 share/httpd/manual/mod/mod_ident.html
 share/httpd/manual/mod/mod_ident.html.en
 share/httpd/manual/mod/mod_ident.html.fr
@@ -1129,6 +1135,7 @@ share/httpd/manual/mod/mod_proxy_ftp.html.en
 share/httpd/manual/mod/mod_proxy_ftp.html.fr
 share/httpd/manual/mod/mod_proxy_hcheck.html
 share/httpd/manual/mod/mod_proxy_hcheck.html.en
+share/httpd/manual/mod/mod_proxy_hcheck.html.fr
 share/httpd/manual/mod/mod_proxy_html.html
 share/httpd/manual/mod/mod_proxy_html.html.en
 share/httpd/manual/mod/mod_proxy_html.html.fr
@@ -1137,6 +1144,7 @@ share/httpd/manual/mod/mod_proxy_http.html.en
 share/httpd/manual/mod/mod_proxy_http.html.fr
 share/httpd/manual/mod/mod_proxy_http2.html
 share/httpd/manual/mod/mod_proxy_http2.html.en
+share/httpd/manual/mod/mod_proxy_http2.html.fr
 share/httpd/manual/mod/mod_proxy_scgi.html
 share/httpd/manual/mod/mod_proxy_scgi.html.en
 share/httpd/manual/mod/mod_proxy_scgi.html.fr
@@ -1144,6 +1152,7 @@ share/httpd/manual/mod/mod_proxy_uwsgi.html
 share/httpd/manual/mod/mod_proxy_uwsgi.html.en
 share/httpd/manual/mod/mod_proxy_wstunnel.html
 share/httpd/manual/mod/mod_proxy_wstunnel.html.en
+share/httpd/manual/mod/mod_proxy_wstunnel.html.fr
 share/httpd/manual/mod/mod_ratelimit.html
 share/httpd/manual/mod/mod_ratelimit.html.en
 share/httpd/manual/mod/mod_ratelimit.html.fr
@@ -1251,6 +1260,7 @@ share/httpd/manual/mod/mod_usertrack.html.en
 share/httpd/manual/mod/mod_usertrack.html.fr
 share/httpd/manual/mod/mod_version.html
 share/httpd/manual/mod/mod_version.html.en
+share/httpd/manual/mod/mod_version.html.fr
 share/httpd/manual/mod/mod_version.html.ja.utf8
 share/httpd/manual/mod/mod_version.html.ko.euc-kr
 share/httpd/manual/mod/mod_vhost_alias.html
@@ -1259,6 +1269,7 @@ share/httpd/manual/mod/mod_vhost_alias.html.fr
 share/httpd/manual/mod/mod_vhost_alias.html.tr.utf8
 share/httpd/manual/mod/mod_watchdog.html
 share/httpd/manual/mod/mod_watchdog.html.en
+share/httpd/manual/mod/mod_watchdog.html.fr
 share/httpd/manual/mod/mod_xml2enc.html
 share/httpd/manual/mod/mod_xml2enc.html.en
 share/httpd/manual/mod/mod_xml2enc.html.fr
@@ -1354,6 +1365,7 @@ share/httpd/manual/platform/perf-hp.html.fr
 share/httpd/manual/platform/perf-hp.html.ko.euc-kr
 share/httpd/manual/platform/rpm.html
 share/httpd/manual/platform/rpm.html.en
+share/httpd/manual/platform/rpm.html.fr
 share/httpd/manual/platform/win_compiling.html
 share/httpd/manual/platform/win_compiling.html.en
 share/httpd/manual/platform/win_compiling.html.fr
@@ -1428,6 +1440,7 @@ share/httpd/manual/programs/index.html.tr.utf8
 share/httpd/manual/programs/index.html.zh-cn.utf8
 share/httpd/manual/programs/log_server_status.html
 share/httpd/manual/programs/log_server_status.html.en
+share/httpd/manual/programs/log_server_status.html.fr
 share/httpd/manual/programs/logresolve.html
 share/httpd/manual/programs/logresolve.html.en
 share/httpd/manual/programs/logresolve.html.fr
@@ -1445,8 +1458,10 @@ share/httpd/manual/programs/rotatelogs.html.ko.euc-kr
 share/httpd/manual/programs/rotatelogs.html.tr.utf8
 share/httpd/manual/programs/split-logfile.html
 share/httpd/manual/programs/split-logfile.html.en
+share/httpd/manual/programs/split-logfile.html.fr
 share/httpd/manual/programs/suexec.html
 share/httpd/manual/programs/suexec.html.en
+share/httpd/manual/programs/suexec.html.fr
 share/httpd/manual/programs/suexec.html.ko.euc-kr
 share/httpd/manual/programs/suexec.html.tr.utf8
 share/httpd/manual/rewrite/access.html
