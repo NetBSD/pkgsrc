@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2017/07/03 20:57:47 adam Exp $
+# $NetBSD: Makefile,v 1.9 2018/09/24 09:52:24 adam Exp $
 
-DISTNAME=	oauth2client-4.1.2
+DISTNAME=	oauth2client-4.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/oauth2client/}
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-asn1-modules-[0-9]*:../../security/py-asn1-modules
 DEPENDS+=	${PYPKGPREFIX}-httplib2-[0-9]*:../../www/py-httplib2
 DEPENDS+=	${PYPKGPREFIX}-rsa-[0-9]*:../../security/py-rsa
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
