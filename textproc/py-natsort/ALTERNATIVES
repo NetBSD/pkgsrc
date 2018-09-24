@@ -1,1 +1,1 @@
-bin/natsort @PREFIX@/bin/natsort@PYVERSSUFFIX@
+bin/natsort @PREFIX@/bin/natsort-@PYVERSSUFFIX@
