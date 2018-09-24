@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4203 2018/09/24 09:39:05 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4204 2018/09/24 09:47:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5857,3 +5857,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/py-numpy to 1.15.2 [adam 2018-09-24]
 	Updated www/py-selenium to 3.14.1 [adam 2018-09-24]
 	Updated fonts/py-fonttools to 3.30.0 [adam 2018-09-24]
+	Updated textproc/py-natsort to 5.4.1 [adam 2018-09-24]
+	Updated devel/py-pathspec to 0.5.9 [adam 2018-09-24]
