@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4208 2018/09/24 11:20:55 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4209 2018/09/24 14:00:23 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5866,3 +5866,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/youtube-dl to 20180918 [leot 2018-09-24]
 	Updated textproc/py-pytoml to 0.1.19 [adam 2018-09-24]
 	Updated devel/py-cparser to 2.19 [adam 2018-09-24]
+	Updated misc/fzy to 1.0 [leot 2018-09-24]
