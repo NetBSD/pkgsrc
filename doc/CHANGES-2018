@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4206 2018/09/24 10:11:01 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4207 2018/09/24 11:07:41 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5863,3 +5863,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-olefile to 0.46 [adam 2018-09-24]
 	Updated devel/py-greenlet to 0.4.15 [adam 2018-09-24]
 	Updated www/py-furl to 1.2.1 [adam 2018-09-24]
+	Updated net/youtube-dl to 20180918 [leot 2018-09-24]
