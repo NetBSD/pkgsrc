@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/08/16 18:54:56 adam Exp $
+# $NetBSD: Makefile,v 1.13 2018/09/24 12:04:39 gdt Exp $
 
 DISTNAME=		gr-osmosdr-0.1.4
 PKGREVISION=		9
@@ -28,6 +28,8 @@ REPLACE_PYTHON+=	apps/osmocom_siggen_base.py
 .include	"../../devel/boost-libs/buildlink3.mk"
 .include	"../../devel/libusb1/buildlink3.mk"
 .include	"../../devel/orc/buildlink3.mk"
+
+# \todo Clearly threre is some ordering scheme.  Explain it.
 
 .include	"../../ham/uhd/buildlink3.mk"
 .include	"../../lang/python/application.mk"
