@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4201 2018/09/24 08:23:16 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4202 2018/09/24 09:02:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5853,3 +5853,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-test to 3.8.1 [adam 2018-09-24]
 	Updated textproc/py-sphinx to 1.8.1 [adam 2018-09-24]
 	Updated textproc/py-xlsxwriter to 1.1.1 [adam 2018-09-24]
+	Updated devel/py-ordered-set to 3.0.2 [adam 2018-09-24]
+	Updated math/py-numpy to 1.15.2 [adam 2018-09-24]
