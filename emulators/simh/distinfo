@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.29 2017/12/31 08:50:00 tsutsui Exp $
+$NetBSD: distinfo,v 1.30 2018/09/24 14:12:28 gson Exp $
 
-SHA1 (simh-4.0.0-2ddb7162f3b7602afac290505c5d3352007cf26d.tar.gz) = a6b17f1b16bd2a21d7ae797c0bd8282267b30c1a
-RMD160 (simh-4.0.0-2ddb7162f3b7602afac290505c5d3352007cf26d.tar.gz) = 4f172b66a8efcd3b0870fa5d8e4a8dc76b9c7f87
-SHA512 (simh-4.0.0-2ddb7162f3b7602afac290505c5d3352007cf26d.tar.gz) = 56656dcc57460aa3f4a42ed5fbc3f9bc8c567498f394450f631f26475dc20f2b1282569cabc053049a4d07d3d0aee3fd8bb41b67aab9bef9c722e28ffb971cdf
-Size (simh-4.0.0-2ddb7162f3b7602afac290505c5d3352007cf26d.tar.gz) = 10046376 bytes
-SHA1 (patch-makefile) = bdc247baec8751b4ac7d4ac03182c44e10a674a4
+SHA1 (simh-4.0.0-0fe4bf3281a4d1f9fd10bba07cf0f7e40da92fc3.tar.gz) = 58d77b58be3850d5f1cd9a7cdcb24d1e110bd71e
+RMD160 (simh-4.0.0-0fe4bf3281a4d1f9fd10bba07cf0f7e40da92fc3.tar.gz) = 0b2ad6107006f89b0ca66ddc556c2f00df56937c
+SHA512 (simh-4.0.0-0fe4bf3281a4d1f9fd10bba07cf0f7e40da92fc3.tar.gz) = 1c17430e74022cb5a9aebc784dc1a223fbbe323799ab528a9c788db8e3dbad01b7635da3c3dc158fcd28103c5fc462ce0fc3e9cdd90c298ff6ecdeb3dfd5f0a8
+Size (simh-4.0.0-0fe4bf3281a4d1f9fd10bba07cf0f7e40da92fc3.tar.gz) = 12077046 bytes
+SHA1 (patch-makefile) = ed0f4fdcb63d09e7f0374abafc3f8d03f0f86e91
 SHA1 (patch-sim__ether.c) = 5a67f2cdde8917a32c7655853e5e79d4294d0790
