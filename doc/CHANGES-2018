@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4200 2018/09/24 08:06:48 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4201 2018/09/24 08:23:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5851,3 +5851,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated converters/help2man to 1.47.7 [adam 2018-09-24]
 	Updated devel/py-setuptools to 40.4.3 [adam 2018-09-24]
 	Updated devel/py-test to 3.8.1 [adam 2018-09-24]
+	Updated textproc/py-sphinx to 1.8.1 [adam 2018-09-24]
+	Updated textproc/py-xlsxwriter to 1.1.1 [adam 2018-09-24]
