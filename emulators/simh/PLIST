@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.17 2018/02/09 17:35:05 gson Exp $
+@comment $NetBSD: PLIST,v 1.18 2018/09/24 14:12:28 gson Exp $
+bin/simh-3b2
 bin/simh-altair
 bin/simh-altairz80
 bin/simh-b5500
@@ -11,6 +12,12 @@ bin/simh-hp2100
 bin/simh-hp3000
 bin/simh-i1401
 bin/simh-i1620
+bin/simh-i701
+bin/simh-i7010
+bin/simh-i704
+bin/simh-i7070
+bin/simh-i7080
+bin/simh-i7090
 bin/simh-i7094
 bin/simh-ibm1130
 bin/simh-id16
@@ -35,11 +42,14 @@ bin/simh-pdp8
 bin/simh-pdp9
 bin/simh-rtvax1000
 bin/simh-s3
+bin/simh-scelbi
 bin/simh-sds
+bin/simh-sigma
 bin/simh-ssem
 bin/simh-swtp6800mp-a
 bin/simh-swtp6800mp-a2
 bin/simh-tx-0
+bin/simh-uc15
 bin/simh-vax
 bin/simh-vax730
 bin/simh-vax750
@@ -49,6 +59,7 @@ share/doc/simh/0ReadMe_Projects.txt
 share/doc/simh/0readmeAsynchIO.txt
 share/doc/simh/0readme_39.txt
 share/doc/simh/0readme_ethernet.txt
+share/doc/simh/CDC1700-Customization.txt
 share/doc/simh/CDC1700-Diagnostics.txt
 share/doc/simh/CDC1700-MSOS.txt
 share/doc/simh/CDC1700.txt
@@ -60,6 +71,7 @@ share/doc/simh/hp2100_diag.txt
 share/doc/simh/hp2100_release.txt
 share/doc/simh/hp3000_diag.txt
 share/doc/simh/hp3000_release.txt
+share/doc/simh/i1620_error_matrix.txt
 share/doc/simh/i7094_bug_history.txt
 share/doc/simh/id_diag.txt
 share/doc/simh/input.txt
