@@ -1,6 +1,7 @@
-$NetBSD: patch-src_llvm_cmake_modules_AddLLVM.cmake,v 1.2 2018/09/14 10:04:43 jperkin Exp $
+$NetBSD: patch-src_llvm_cmake_modules_AddLLVM.cmake,v 1.3 2018/09/24 03:42:42 minskim Exp $
 
 "-z discard-unused" is only supported by Oracle Solaris ld.
+On Darwin, use correct install-name for shared libraries.
 
 --- src/llvm/cmake/modules/AddLLVM.cmake.orig	2018-08-01 16:32:37.000000000 +0000
 +++ src/llvm/cmake/modules/AddLLVM.cmake
@@ -13,3 +14,12 @@ $NetBSD: patch-src_llvm_cmake_modules_AddLLVM.cmake,v 1.2 2018/09/14 10:04:43 jp
        elseif(NOT WIN32 AND NOT LLVM_LINKER_IS_GOLD AND NOT ${CMAKE_SYSTEM_NAME} MATCHES "OpenBSD")
          # Object files are compiled with -ffunction-data-sections.
          # Versions of bfd ld < 2.23.1 have a bug in --gc-sections that breaks
+@@ -1602,7 +1600,7 @@ function(llvm_setup_rpath name)
+   endif()
+ 
+   if (APPLE)
+-    set(_install_name_dir INSTALL_NAME_DIR "@rpath")
++    set(_install_name_dir INSTALL_NAME_DIR "${CMAKE_INSTALL_PREFIX}/lib")
+     set(_install_rpath "@loader_path/../lib" ${extra_libdir})
+   elseif(UNIX)
+     set(_install_rpath "\$ORIGIN/../lib${LLVM_LIBDIR_SUFFIX}" ${extra_libdir})
