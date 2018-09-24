@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4210 2018/09/24 14:13:57 gson Exp $
+$NetBSD: CHANGES-2018,v 1.4211 2018/09/24 16:04:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5868,3 +5868,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-cparser to 2.19 [adam 2018-09-24]
 	Updated misc/fzy to 1.0 [leot 2018-09-24]
 	Updated emulators/simh to 4.0.0.20180919 [gson 2018-09-24]
+	Updated www/ruby-capybara to 3.8.1 [taca 2018-09-24]
