@@ -1,14 +1,14 @@
-$NetBSD: patch-makefile,v 1.1 2017/12/31 08:50:00 tsutsui Exp $
+$NetBSD: patch-makefile,v 1.2 2018/09/24 14:12:28 gson Exp $
 
 Exclude -flto for gcc 4.1.3 (used in NetBSD/vax 6)
 Exclude -flto for gcc 4.4.7 (Used in DragonFly 2.13 - 3.1)
 Make -O2 conditional so can be overridden by environment
 Fix SDL2 detection
 
---- makefile.orig	2017-04-05 19:51:28.000000000 +0000
+--- makefile.orig	2018-09-20 05:36:48.000000000 +0000
 +++ makefile
-@@ -190,7 +190,7 @@ ifeq ($(WIN32),)  #*nix Environments (&&
-       endif
+@@ -217,7 +217,7 @@ ifeq ($(WIN32),)  #*nix Environments (&&
+       $(shell git log -1 --pretty="SIM_GIT_COMMIT_ID %H%nSIM_GIT_COMMIT_TIME $(isodate)" >.git-commit-id)
      endif
    endif
 -  LTO_EXCLUDE_VERSIONS = 
@@ -16,7 +16,7 @@ Fix SDL2 detection
    PCAPLIB = pcap
    ifeq (agcc,$(findstring agcc,$(GCC))) # Android target build?
      OS_CCDEFS = -D_GNU_SOURCE
-@@ -912,11 +912,11 @@ ifneq (,$(UNSUPPORTED_BUILD))
+@@ -1039,11 +1039,11 @@ ifneq (,$(UNSUPPORTED_BUILD))
  endif
  ifneq ($(DEBUG),)
    CFLAGS_G = -g -ggdb -g3
@@ -24,13 +24,13 @@ Fix SDL2 detection
 +  CFLAGS_O ?= -O0
    BUILD_FEATURES = - debugging support
  else
-   ifneq (clang,$(findstring clang,$(COMPILER_NAME)))
--    CFLAGS_O = -O2
-+    CFLAGS_O ?= -O2
+   ifneq (,$(findstring clang,$(COMPILER_NAME))$(findstring LLVM,$(COMPILER_NAME)))
+-    CFLAGS_O = -O0
++    CFLAGS_O ?= -O0
      ifeq (Darwin,$(OSTYPE))
        NO_LTO = 1
      endif
-@@ -925,7 +925,7 @@ else
+@@ -1052,7 +1052,7 @@ else
      ifeq (Darwin,$(OSTYPE))
        CFLAGS_O += -O4 -fno-strict-overflow -flto -fwhole-program
      else
@@ -39,12 +39,3 @@ Fix SDL2 detection
      endif
    endif
    LDFLAGS_O = 
-@@ -1473,7 +1473,7 @@ ifneq (,$(BESM6_BUILD))
-       $(info *** No SDL ttf support available.  BESM-6 video panel disabled.)
-       $(info ***)
-       BESM6_OPT = -I ${BESM6D} -DUSE_INT64 
--  else ifneq (,$(and $(findstring SDL2,${VIDEO_LDFLAGS}),$(call find_include,SDL2/SDL_ttf),$(call find_lib,SDL2_ttf)))
-+  else ifneq (,$(and $(findstring sdl2,${VIDEO_LDFLAGS}),$(call find_include,SDL2/SDL_ttf),$(call find_lib,SDL2_ttf)))
-       $(info using libSDL2_ttf: $(call find_lib,SDL2_ttf) $(call find_include,SDL2/SDL_ttf))
-       $(info ***)
-       BESM6_OPT = -I ${BESM6D} -DFONTFILE=${FONTFILE} -DUSE_INT64 ${VIDEO_CCDEFS} ${VIDEO_LDFLAGS} -lSDL2_ttf
