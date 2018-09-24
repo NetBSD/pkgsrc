@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2018/07/08 09:40:00 adam Exp $
+# $NetBSD: Makefile,v 1.11 2018/09/24 09:43:26 adam Exp $
 
-DISTNAME=	natsort-5.3.3
+DISTNAME=	natsort-5.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/natsort/}
@@ -13,7 +13,8 @@ LICENSE=	mit
 USE_LANGUAGES=	# none
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} natsort natsort${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && \
+		${MV} natsort natsort-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
