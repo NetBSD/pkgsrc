@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.68 2018/08/22 10:57:11 leot Exp $
+@comment $NetBSD: PLIST,v 1.69 2018/09/24 11:07:09 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -1838,6 +1838,9 @@ ${PYSITELIB}/youtube_dl/extractor/ted.pyo
 ${PYSITELIB}/youtube_dl/extractor/tele13.py
 ${PYSITELIB}/youtube_dl/extractor/tele13.pyc
 ${PYSITELIB}/youtube_dl/extractor/tele13.pyo
+${PYSITELIB}/youtube_dl/extractor/tele5.py
+${PYSITELIB}/youtube_dl/extractor/tele5.pyc
+${PYSITELIB}/youtube_dl/extractor/tele5.pyo
 ${PYSITELIB}/youtube_dl/extractor/telebruxelles.py
 ${PYSITELIB}/youtube_dl/extractor/telebruxelles.pyc
 ${PYSITELIB}/youtube_dl/extractor/telebruxelles.pyo
