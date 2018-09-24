@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4195 2018/09/23 23:14:45 gdt Exp $
+$NetBSD: CHANGES-2018,v 1.4196 2018/09/24 01:22:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5844,3 +5844,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Renamed lang/go to lang/go110 [bsiegert 2018-09-23]
 	Updated net/rtmpdump to 2.4.0.0.fa8646daeb19dfd12c181f7d19de708d623704c0 [wiz 2018-09-23]
 	Updated databases/postgresql-postgis2 to 2.5.0 [gdt 2018-09-23]
+	Updated www/heel to 3.2.0nb1 [taca 2018-09-24]
