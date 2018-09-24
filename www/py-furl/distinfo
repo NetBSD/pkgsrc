@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2018/07/06 08:11:16 adam Exp $
+$NetBSD: distinfo,v 1.10 2018/09/24 10:10:31 adam Exp $
 
-SHA1 (furl-1.2.tar.gz) = c17c78d6be242d1600df68077fa7330bf35d93ed
-RMD160 (furl-1.2.tar.gz) = 052b0012c5930e5d4400095e3bdce504e22cf64f
-SHA512 (furl-1.2.tar.gz) = dc14048dda61e7f33466f9547b3185bc482a27ad3ff4701a97364ca5e845e8ea7cca7747588d50478d37acf3b8ef641427957f3a63775bed24ace2de55a1fb65
-Size (furl-1.2.tar.gz) = 41968 bytes
+SHA1 (furl-1.2.1.tar.gz) = 857b365fc4c2715920516de4546e6ec8eec95b78
+RMD160 (furl-1.2.1.tar.gz) = ebe98f3c1533a84fafba1f6f2f36024b3aa6a31b
+SHA512 (furl-1.2.1.tar.gz) = 85f2e7f691190f0bdf36d004a7f3f73a138f877cb7432699891b55b2afca7b8b72ecf274d8ebc71264c2b77601616f0ff1d02f62b38872cfd09c8ca6f9fb7f40
+Size (furl-1.2.1.tar.gz) = 24755 bytes
