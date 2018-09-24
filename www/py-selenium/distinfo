@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2018/08/06 19:52:01 adam Exp $
+$NetBSD: distinfo,v 1.11 2018/09/24 09:32:30 adam Exp $
 
-SHA1 (selenium-3.14.0.tar.gz) = 7a12bc06b44648980bfc317a4db6513ec92f8317
-RMD160 (selenium-3.14.0.tar.gz) = a921de170edfae132422bf74b1fa7d3d35547646
-SHA512 (selenium-3.14.0.tar.gz) = 58259e257ed2e71591539705c2fc3e73fb2dba1c6837a4144bc045dc58dcf509a5cf147e8bc7a09b7451d9986c92e772fab6ee48b9394094f053332d5bb2c913
-Size (selenium-3.14.0.tar.gz) = 848711 bytes
+SHA1 (selenium-3.14.1.tar.gz) = 2899aefaf411ea8b60bffa1c10d9c8a5295d6cab
+RMD160 (selenium-3.14.1.tar.gz) = 6b7c5e79d534e761572fdd266e2a892cdfdc93a4
+SHA512 (selenium-3.14.1.tar.gz) = 96b71fe00951ef9f01a9201435f94343adaa0636d1ee03d12e36cd5b96dd2f8fec5fc27104573066db3142ad4ad03b21b19f3753c51163d673bf291bfa45b3e9
+Size (selenium-3.14.1.tar.gz) = 855411 bytes
