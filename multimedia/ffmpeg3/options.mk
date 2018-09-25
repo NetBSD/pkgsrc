@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2018/04/30 09:00:45 adam Exp $
+# $NetBSD: options.mk,v 1.13 2018/09/25 09:46:09 wiz Exp $
 
 # Global and legacy options
 
@@ -109,6 +109,7 @@ CONFIGURE_ARGS+=	--disable-openssl
 
 # RTMP support via librtmp
 .if !empty(PKG_OPTIONS:Mrtmp)
+USE_TOOLS+=		pkg-config
 CONFIGURE_ARGS+=	--enable-librtmp
 .include "../../net/rtmpdump/buildlink3.mk"
 .endif
