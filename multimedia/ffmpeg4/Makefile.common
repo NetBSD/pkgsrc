@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2018/07/31 19:13:10 rjs Exp $
+# $NetBSD: Makefile.common,v 1.5 2018/09/25 09:39:56 wiz Exp $
 # used by multimedia/ffmpeg4/Makefile
 # used by multimedia/ffplay4/Makefile
 
@@ -7,7 +7,7 @@ CATEGORIES=	multimedia
 MASTER_SITES=	http://www.ffmpeg.org/releases/
 EXTRACT_SUFX=	.tar.xz
 
-LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
+LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2 ${ADDITIONAL_LICENSE}
 
 PATCHDIR=	${.CURDIR}/../../multimedia/ffmpeg4/patches
 
