@@ -1,4 +1,4 @@
-$NetBSD: patch-src_lib_udpfromto.c,v 1.2 2018/03/31 20:10:49 joerg Exp $
+$NetBSD: patch-src_lib_udpfromto.c,v 1.3 2018/09/25 12:16:36 jperkin Exp $
 
 Only use IP_PKTINFO if the configure checks for the necessary members
 passed. Use either IP_PKTINFO or IP_SENDSRCADDR, but not both.
@@ -18,15 +18,4 @@ passed. Use either IP_PKTINFO or IP_SENDSRCADDR, but not both.
 +#  ifdef HAVE_IP_PKTINFO
  		struct cmsghdr *cmsg;
  		struct in_pktinfo *pkt;
- 
-@@ -405,9 +405,7 @@ int sendfromto(int s, void *buf, size_t 
- 		pkt = (struct in_pktinfo *) CMSG_DATA(cmsg);
- 		memset(pkt, 0, sizeof(*pkt));
- 		pkt->ipi_spec_dst = s4->sin_addr;
--#  endif
--
--#  ifdef IP_SENDSRCADDR
-+#  elif defined(IP_SENDSRCADDR)
- 		struct cmsghdr *cmsg;
- 		struct in_addr *in;
  
