@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/08/22 09:45:52 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2018/09/25 12:16:36 jperkin Exp $
 
 PKGREVISION= 1
 .include "../../net/freeradius/Makefile.module"
@@ -8,6 +8,7 @@ COMMENT=		Free RADIUS rlm_perl module
 CATEGORIES=		net
 
 CONFIGURE_ARGS+=    --with-rlm_perl
+CONFIGURE_ARGS+=    --without-rlm_ldap
 
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/build/lib/.libs/rlm_perl.so ${DESTDIR}${PREFIX}/lib

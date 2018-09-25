@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2018/08/22 09:45:52 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2018/09/25 12:16:36 jperkin Exp $
 
 PKGREVISION= 1
 .include "Makefile.common"
@@ -48,6 +48,7 @@ OPSYSVARS+=		SOEXT
 SOEXT.Darwin=		dylib
 SOEXT.*=		so
 PLIST_SUBST+=		SOEXT=${SOEXT}
+PRINT_PLIST_AWK+=	{gsub(/\.${SOEXT}$$/, ".$${SOEXT}");}
 
 FILES_SUBST+=		RADIUS_USER=${RADIUS_USER} RADIUS_GROUP=${RADIUS_GROUP}
 MESSAGE_SUBST+=		BOOTSTRAP=${PKG_SYSCONFDIR:Q}/certs/bootstrap
