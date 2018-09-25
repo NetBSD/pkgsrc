@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/09/22 12:15:28 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/09/25 09:06:09 jperkin Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go111/AUTHORS
@@ -1450,7 +1450,7 @@ go111/pkg/${GO_PLATFORM}/net/url.a
 go111/pkg/${GO_PLATFORM}/os.a
 go111/pkg/${GO_PLATFORM}/os/exec.a
 go111/pkg/${GO_PLATFORM}/os/signal.a
-go111/pkg/${GO_PLATFORM}/os/signal/internal/pty.a
+${PLIST.pty}go111/pkg/${GO_PLATFORM}/os/signal/internal/pty.a
 go111/pkg/${GO_PLATFORM}/os/user.a
 go111/pkg/${GO_PLATFORM}/path.a
 go111/pkg/${GO_PLATFORM}/path/filepath.a
@@ -1498,7 +1498,7 @@ go111/pkg/${GO_PLATFORM}/vendor/golang_org/x/net/http2/hpack.a
 go111/pkg/${GO_PLATFORM}/vendor/golang_org/x/net/idna.a
 go111/pkg/${GO_PLATFORM}/vendor/golang_org/x/net/internal/nettest.a
 go111/pkg/${GO_PLATFORM}/vendor/golang_org/x/net/nettest.a
-go111/pkg/${GO_PLATFORM}/vendor/golang_org/x/net/route.a
+${PLIST.route}go111/pkg/${GO_PLATFORM}/vendor/golang_org/x/net/route.a
 go111/pkg/${GO_PLATFORM}/vendor/golang_org/x/text/secure.a
 go111/pkg/${GO_PLATFORM}/vendor/golang_org/x/text/secure/bidirule.a
 go111/pkg/${GO_PLATFORM}/vendor/golang_org/x/text/transform.a
