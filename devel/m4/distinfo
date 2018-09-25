@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.43 2018/03/13 20:26:42 jmcneill Exp $
+$NetBSD: distinfo,v 1.44 2018/09/25 20:21:51 joerg Exp $
 
 SHA1 (m4-1.4.18.tar.gz) = 2f76f8105a45b05c8cfede97b3193cd88b31c657
 RMD160 (m4-1.4.18.tar.gz) = 16396a6ffbb2105cdd0a36c773b44d16854ed740
@@ -8,3 +8,4 @@ SHA1 (patch-isnan.c) = a960f35e5168bed47c5924e36bfb254dc1a44621
 SHA1 (patch-lib_getprogname.c) = 3a8e7c028342ef3a9f86839f1a5ae36571a65f12
 SHA1 (patch-lib_stdio.in.h) = 21557ea9d86dbeb36062df4e62cb71735b06480b
 SHA1 (patch-lib_vasnprintf.c) = 2bced6c121efc9bc5894174c7745ba89e8f53033
+SHA1 (patch-lib_xalloc-oversized.h) = 9e74adec2f43770d419f60d5c3e7bdea2424daa6
