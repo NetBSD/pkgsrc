@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.6 2018/09/09 00:46:52 wen Exp $
+$NetBSD: patch-configure.ac,v 1.7 2018/09/25 13:24:39 jperkin Exp $
 
 Use a compile test, not a run test, for whether various rlimit values
 are equivalent.  A compile test is sufficient because zsh uses these
@@ -7,7 +7,7 @@ preprocessor-time, constants.
 
 Fix SunOS flags.
 
---- configure.ac.orig	2018-09-09 00:27:38.000000000 +0000
+--- configure.ac.orig	2018-09-14 12:56:33.000000000 +0000
 +++ configure.ac
 @@ -1881,77 +1881,9 @@ zsh_LIMIT_PRESENT(RLIMIT_NPTS)
  zsh_LIMIT_PRESENT(RLIMIT_SWAP)
@@ -90,3 +90,12 @@ Fix SunOS flags.
  
  dnl --------------------------------------------
  dnl Check for members of struct rusage
+@@ -2813,7 +2745,7 @@ char *argv[];
+     sunos*)       DLLDFLAGS="${DLLDFLAGS=-assert nodefinitions}" ;;
+     sysv4*|esix*) DLLDFLAGS="${DLLDFLAGS=-G $ldflags}" ;;
+     aix*)         DLLDFLAGS="${DLLDFLAGS=-G -bexpall -lc}" ;;
+-    solaris*|sysv4*|esix*) DLLDFLAGS="${DLLDFLAGS=-G}" ;;
++    solaris*|sysv4*|esix*) DLLDFLAGS="${DLLDFLAGS=-shared}" ;;
+     darwin*)      DLLDFLAGS="${DLLDFLAGS=-bundle -flat_namespace -undefined suppress}" ;;
+     beos*|haiku*) DLLDFLAGS="${DLLDFLAGS=-nostart}" ;;
+     openbsd*)
