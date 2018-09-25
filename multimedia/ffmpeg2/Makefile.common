@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.56 2018/07/04 13:40:26 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.57 2018/09/25 10:03:49 wiz Exp $
 # used by multimedia/ffmpeg2/Makefile
 # used by multimedia/ffplay2/Makefile
 
@@ -13,7 +13,7 @@ PATCHDIR=	${.CURDIR}/../../multimedia/ffmpeg2/patches
 
 USE_LANGUAGES=		c99
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake perl pod2man
+USE_TOOLS+=		gmake perl pod2man pkg-config
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--cc=${CC:Q}
 CONFIGURE_ARGS+=	--disable-debug
