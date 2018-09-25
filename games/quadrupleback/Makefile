@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/09/04 18:00:55 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2018/09/25 20:22:34 joerg Exp $
 
 DISTNAME=	quadrupleback-0.1.0
 CATEGORIES=	games
@@ -11,7 +11,7 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 USE_TOOLS+=	pkg-config
 
 .include "../../devel/SDL_gfx/buildlink3.mk"
