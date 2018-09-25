@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18565 2018/09/25 10:09:03 wiz Exp $
+$NetBSD: TODO,v 1.18566 2018/09/25 11:27:50 adam Exp $
 
 Suggested new packages
 ======================
@@ -400,7 +400,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ap22-authnz-external-3.3.2
 	o ap22-limitipconn-0.24
 	o ap22-vhost-ldap-2.4.0
-	o apache24-2.4.35
 	o apollo-1.7
 	o apr-1.6.5
 	o apr0-2.4.1
@@ -1235,7 +1234,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-Scientific-doc-2.5.5
 	o py-augeas-1.0.3
 	o py-cassa-1.11.0
-	o py-cparser-2.19
 	o py-cssselect2-0.2.1
 	o py-django2-2.0.8
 	o py-doctor-15.1.0
@@ -1256,7 +1254,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-ptt-1.10.2
 	o py-pycountry-1.20
 	o py-pygit2-0.27.2
-	o py-setuptools-40.4.2
 	o py-simplejson-3.16.1
 	o py-simpletal-5.1
 	o py-spf-2.0.12t
