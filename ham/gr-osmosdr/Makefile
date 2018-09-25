@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2018/09/24 12:04:39 gdt Exp $
+# $NetBSD: Makefile,v 1.14 2018/09/25 01:14:38 gdt Exp $
 
 DISTNAME=		gr-osmosdr-0.1.4
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		ham
 MASTER_SITES+=		http://git.osmocom.org/gr-osmosdr/snapshot/
 
@@ -38,7 +38,9 @@ REPLACE_PYTHON+=	apps/osmocom_siggen_base.py
 .include	"../../ham/rtl-sdr/buildlink3.mk"
 .include	"../../ham/libmirisdr/buildlink3.mk"
 .include	"../../ham/osmo-sdr/buildlink3.mk"
-.include	"../../ham/gr-fcdproplus/buildlink3.mk"
+# \todo Re-enable gr-fcdproplus when it works, or optionize it.
+# gr-fcdproplus does not build at the moment
+#.include	"../../ham/gr-fcdproplus/buildlink3.mk"
 .include	"../../ham/hackrf/buildlink3.mk"
 
 .include	"../../ham/gnuradio-core/buildlink3.mk"
