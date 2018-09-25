@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2017/10/08 12:09:43 jmcneill Exp $
+# $NetBSD: Makefile,v 1.4 2018/09/25 21:49:20 jmcneill Exp $
 
 UBOOT_TARGET=		jetson-tx1
 UBOOT_CONFIG=		p2371-2180_defconfig
 UBOOT_BIN=		u-boot u-boot-dtb.bin
+
+PKGREVISION=		1
 
 # Switch to EL1 before booting kernel (required for 32-bit support)
 PKG_DEFAULT_OPTIONS+=	el1

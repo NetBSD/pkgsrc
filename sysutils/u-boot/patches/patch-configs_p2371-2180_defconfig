@@ -1,0 +1,9 @@
+$NetBSD: patch-configs_p2371-2180_defconfig,v 1.1 2018/09/25 21:49:20 jmcneill Exp $
+
+--- configs/p2371-2180_defconfig.orig	2018-05-07 15:32:36.000000000 +0000
++++ configs/p2371-2180_defconfig
+@@ -47,3 +47,4 @@ CONFIG_CI_UDC=y
+ CONFIG_USB_GADGET_DOWNLOAD=y
+ CONFIG_USB_HOST_ETHER=y
+ CONFIG_USB_ETHER_ASIX=y
++CONFIG_BOOTCOMMAND="pci enum; run distro_bootcmd"
