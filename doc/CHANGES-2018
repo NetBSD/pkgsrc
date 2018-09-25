@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4211 2018/09/24 16:04:30 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4212 2018/09/25 08:43:34 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5869,3 +5869,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/fzy to 1.0 [leot 2018-09-24]
 	Updated emulators/simh to 4.0.0.20180919 [gson 2018-09-24]
 	Updated www/ruby-capybara to 3.8.1 [taca 2018-09-24]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2018Q3 branch [jperkin 2018-09-25]
