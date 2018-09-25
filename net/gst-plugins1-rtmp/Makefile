@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2016/04/15 14:20:00 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2018/09/25 09:26:13 wiz Exp $
 
 GST_PLUGINS1_NAME=	rtmp
 GST_PLUGINS1_DIRS=	ext/rtmp
+
+PKGREVISION=		1
 
 .include "../../multimedia/gst-plugins1-bad/Makefile.common"
 
