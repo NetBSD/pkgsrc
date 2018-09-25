@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2018/08/20 20:23:29 dholland Exp $
+@comment $NetBSD: PLIST,v 1.48 2018/09/25 11:39:12 jperkin Exp $
 bin/ocaml
 bin/ocaml-instr-graph
 bin/ocaml-instr-report
@@ -30,11 +30,11 @@ ${PLIST.ocaml-opt}bin/ocamlobjinfo.opt
 ${PLIST.ocaml-opt}bin/ocamlopt
 ${PLIST.ocaml-opt}bin/ocamlopt.byte
 ${PLIST.ocaml-opt}bin/ocamlopt.opt
-${PLIST.ocaml-prof}${PLIST.ocaml-opt}bin/ocamloptp
-${PLIST.ocaml-prof}${PLIST.ocaml-opt}bin/ocamloptp.byte
-${PLIST.ocaml-prof}${PLIST.ocaml-opt}bin/ocamloptp.opt
-${PLIST.ocaml-prof}bin/ocamlprof
-${PLIST.ocaml-prof}bin/ocamlprof.byte
+${PLIST.ocaml-opt}bin/ocamloptp
+${PLIST.ocaml-opt}bin/ocamloptp.byte
+${PLIST.ocaml-opt}bin/ocamloptp.opt
+bin/ocamlprof
+bin/ocamlprof.byte
 ${PLIST.ocaml-opt}bin/ocamlprof.opt
 bin/ocamlrun
 bin/ocamlrund
@@ -1301,7 +1301,7 @@ ${PLIST.ocaml-opt}lib/ocaml/libasmrun_pic.a
 ${PLIST.ocaml-opt}lib/ocaml/libasmrun_shared.so
 ${PLIST.ocaml-opt}lib/ocaml/libasmrund.a
 ${PLIST.ocaml-opt}lib/ocaml/libasmruni.a
-${PLIST.ocaml-opt}lib/ocaml/libasmrunp.a
+${PLIST.ocaml-prof}${PLIST.ocaml-opt}lib/ocaml/libasmrunp.a
 ${PLIST.ocaml-opt}lib/ocaml/libbigarray.a
 ${PLIST.ocaml-opt}lib/ocaml/libcamlrun.a
 ${PLIST.ocaml-opt}lib/ocaml/libcamlrun_pic.a
