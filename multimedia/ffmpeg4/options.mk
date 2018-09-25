@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2018/04/30 09:00:46 adam Exp $
+# $NetBSD: options.mk,v 1.3 2018/09/25 09:39:56 wiz Exp $
 
 # Global and legacy options
 
@@ -91,7 +91,7 @@ CONFIGURE_ARGS+=	--enable-libopencore-amrwb
 # OpenCORE libraries with FFmpeg, the license version needs to be
 # upgraded by passing --enable-version3 to configure."
 CONFIGURE_ARGS+=	--enable-version3
-# TODO: LICENSE
+ADDITIONAL_LICENSE+=		AND gnu-lgpl-v3
 .include "../../audio/opencore-amr/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-libopencore-amrnb
@@ -110,6 +110,7 @@ CONFIGURE_ARGS+=	--disable-openssl
 # RTMP support via librtmp
 .if !empty(PKG_OPTIONS:Mrtmp)
 CONFIGURE_ARGS+=	--enable-librtmp
+USE_TOOLS+=		pkg-config
 .include "../../net/rtmpdump/buildlink3.mk"
 .endif
 
