@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/07/25 00:26:30 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2018/09/25 20:22:14 joerg Exp $
 
 DISTNAME=	hyperscan-0.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,8 @@ LICENSE=	mit
 
 USE_LANGUAGES=	c
 USE_TOOLS+=	pkg-config
+
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=1.11.1:../../devel/py-setuptools_scm
 
 .include "../../devel/hyperscan/buildlink3.mk"
 .include "../../lang/python/egg.mk"
