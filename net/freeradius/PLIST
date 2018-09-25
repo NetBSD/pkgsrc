@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2018/04/12 01:21:07 nonaka Exp $
+@comment $NetBSD: PLIST,v 1.30 2018/09/25 12:16:36 jperkin Exp $
 bin/dhcpclient
 bin/map_unit
 bin/rad_counter
@@ -78,10 +78,10 @@ include/freeradius/tls.h
 include/freeradius/token.h
 include/freeradius/udpfromto.h
 include/freeradius/vqp.h
-lib/libfreeradius-dhcp.so
-lib/libfreeradius-eap.so
-lib/libfreeradius-radius.so
-lib/libfreeradius-server.so
+lib/libfreeradius-dhcp.${SOEXT}
+lib/libfreeradius-eap.${SOEXT}
+lib/libfreeradius-radius.${SOEXT}
+lib/libfreeradius-server.${SOEXT}
 lib/proto_dhcp.${SOEXT}
 lib/proto_vmps.${SOEXT}
 lib/rlm_always.${SOEXT}
@@ -653,6 +653,7 @@ share/freeradius/dictionary.meru
 share/freeradius/dictionary.microsemi
 share/freeradius/dictionary.microsoft
 share/freeradius/dictionary.mikrotik
+share/freeradius/dictionary.mimosa
 share/freeradius/dictionary.motorola
 share/freeradius/dictionary.motorola.illegal
 share/freeradius/dictionary.motorola.wimax
@@ -721,6 +722,7 @@ share/freeradius/dictionary.shiva
 share/freeradius/dictionary.siemens
 share/freeradius/dictionary.slipstream
 share/freeradius/dictionary.sofaware
+share/freeradius/dictionary.softbank
 share/freeradius/dictionary.sonicwall
 share/freeradius/dictionary.springtide
 share/freeradius/dictionary.starent
