@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2015/11/04 01:17:41 agc Exp $
+$NetBSD: distinfo,v 1.9 2018/09/26 05:04:09 ryoon Exp $
 
 SHA1 (apg-2.3.0b.tar.gz) = d729c939adb659c05fd0ea3d9c03842c6fe86fed
 RMD160 (apg-2.3.0b.tar.gz) = 18f9955d6fdb721bec26613860b312d7fea6fba7
 SHA512 (apg-2.3.0b.tar.gz) = 3112d2267f2311f960a52fa268b55a5faf0250a4a8c5e7444f0c1326afa2844a476a54befcf79e5b8532d74c53f6f58ffc420591c8c36798dd82b43c14869e1a
 Size (apg-2.3.0b.tar.gz) = 109995 bytes
 SHA1 (patch-aa) = 59d5537da45c7fb05480d12d1e73b04d19eed63f
+SHA1 (patch-apg.c) = 212c6b8b61127243428ffa2bfbab8424bde0a7da
