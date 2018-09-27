@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2018/08/22 09:46:11 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2018/09/27 23:00:48 tnn Exp $
 
 PKGNAME=	pkg_notify-0.4.6
 PKGREVISION=	1
@@ -23,7 +23,7 @@ CONF_FILES=		${EGDIR}/${PKGBASE}.list \
 .include "../../mk/bsd.prefs.mk"
 
 SUBST_CLASSES+=			pkg_notify
-SUBST_STAGE.pkg_notify=		pre-configure
+SUBST_STAGE.pkg_notify=		pre-install
 SUBST_FILES.pkg_notify=		pkg_notify
 SUBST_FILES.pkg_notify+=	pkg_notify.1
 SUBST_SED.pkg_notify=		-e 's|@PKGSRCDIR@|${PKGSRCDIR}|'
