@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2018/03/23 13:00:17 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.20 2018/09/27 22:35:14 tnn Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -10,6 +10,9 @@ share/examples/tomcat/logging.properties
 share/examples/tomcat/server.xml
 share/examples/tomcat/tomcat-users.xml
 share/examples/tomcat/web.xml
+share/tomcat/BUILDING.txt
+share/tomcat/CONTRIBUTING.md
+share/tomcat/README.md
 share/tomcat/bin/bootstrap.jar
 share/tomcat/bin/catalina-tasks.xml
 share/tomcat/bin/catalina.sh
