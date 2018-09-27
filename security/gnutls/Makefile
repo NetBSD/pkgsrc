@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.189 2018/09/21 14:20:11 wiz Exp $
+# $NetBSD: Makefile,v 1.190 2018/09/27 18:32:35 tnn Exp $
 
 DISTNAME=	gnutls-3.6.3
 PKGREVISION=	2
@@ -20,6 +20,7 @@ GNU_CONFIGURE=			yes
 CONFIGURE_ARGS+=		--disable-openssl-compatibility
 CONFIGURE_ARGS+=		--disable-guile
 CONFIGURE_ARGS+=		--disable-libdane
+CONFIGURE_ARGS+=		--without-idn
 CONFIGURE_ARGS+=		--without-tpm
 CONFIGURE_ARGS+=		--disable-valgrind-tests
 CONFIGURE_ARGS+=		--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
