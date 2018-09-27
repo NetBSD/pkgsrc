@@ -1,4 +1,6 @@
-$NetBSD: patch-cn,v 1.1 2006/09/03 17:13:30 ben Exp $
+$NetBSD: patch-cn,v 1.2 2018/09/27 15:29:06 triaxx Exp $
+
+Interface for MacOS.
 
 --- /dev/null	2006-09-03 09:28:05.000000000 -0700
 +++ interface/osx_interface.c	2006-09-03 09:35:39.000000000 -0700
