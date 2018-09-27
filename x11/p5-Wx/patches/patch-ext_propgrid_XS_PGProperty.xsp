@@ -1,0 +1,15 @@
+$NetBSD: patch-ext_propgrid_XS_PGProperty.xsp,v 1.1 2018/09/27 22:32:28 tnn Exp $
+
+PropertyGrid.c:27130:49: error: call of overloaded 'wxVariant(wxColour&)' is ambiguous
+
+--- ext/propgrid/XS/PGProperty.xsp.orig	2014-03-08 13:01:20.000000000 +0000
++++ ext/propgrid/XS/PGProperty.xsp
+@@ -1148,7 +1148,7 @@ public:
+     bool SetPlValue( wxColour* col, int flags = wxPG_SETVAL_REFRESH_EDITOR )
+       %code{%
+             if( col->IsOk() ) {
+-                wxVariant value = wxVariant(*col);
++                wxVariant value = wxVariant((const wxAny&)*col);
+                 THIS->SetValue(value, NULL, flags );
+                 RETVAL = true;
+             } else {
