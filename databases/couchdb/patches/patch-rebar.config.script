@@ -1,0 +1,15 @@
+$NetBSD: patch-rebar.config.script,v 1.1 2018/09/27 20:12:02 tnn Exp $
+
+accept OTP 21
+
+--- rebar.config.script.orig	2017-11-01 02:52:10.000000000 +0000
++++ rebar.config.script
+@@ -85,7 +85,7 @@ MakeDep = fun
+ end,
+ 
+ AddConfig = [
+-    {require_otp_vsn, "R16B03|R16B03-1|17|18|19|20"},
++    {require_otp_vsn, "R16B03|R16B03-1|17|18|19|20|21"},
+     {deps_dir, "src"},
+     {deps, lists:map(MakeDep, DepDescs)},
+     {sub_dirs, SubDirs},
