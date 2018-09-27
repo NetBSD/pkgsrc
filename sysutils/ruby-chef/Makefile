@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/09/23 16:31:58 taca Exp $
+# $NetBSD: Makefile,v 1.10 2018/09/27 23:16:39 tnn Exp $
 
 DISTNAME=	chef-14.5.27
 CATEGORIES=	sysutils
@@ -40,7 +40,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-proxifier>=1.0<2:../../net/ruby-proxifier
 DEPENDS+=	${RUBY_PKGPREFIX}-bundler>=1.10:../../misc/ruby-bundler
 
 RUBYGEM_OPTIONS+=	--format-executable
-RUBY_VERSIONS_ACCEPTED=	23 24 25	# misc/ruby-ohai
+RUBY_VERSIONS_ACCEPTED=	24 25	# misc/ruby-ohai
 
 pre-configure:
 	cd ${WRKSRC}/bin && ${FIND} . -type f -exec ${CHMOD} ${BINMODE} {} \;
