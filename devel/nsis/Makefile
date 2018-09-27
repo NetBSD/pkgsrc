@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2018/07/04 13:40:15 jperkin Exp $
+# $NetBSD: Makefile,v 1.19 2018/09/27 20:01:07 tnn Exp $
 #
 
 DISTNAME=	nsis-${NSIS_VER}
@@ -30,7 +30,7 @@ MAKENSIS_BIN=	${PREFIX}/share/nsis/makensis
 INSTALLATION_DIRS=	bin share/nsis
 
 SUBST_CLASSES+=		makensis
-SUBST_STAGE.makensis=	pre-configure
+SUBST_STAGE.makensis=	pre-build
 SUBST_FILES.makensis=	makensis.sh
 SUBST_SED.makensis=	-e s,@@SH@@,${SH:Q},
 SUBST_SED.makensis+=	-e s,@@MAKENSIS@@,${MAKENSIS_BIN:Q},
