@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.23 2015/08/14 20:08:43 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2018/09/27 17:15:25 jklos Exp $
 
 DISTNAME=		fribidi-0.19.7
 CATEGORIES=		converters
-MASTER_SITES=		http://fribidi.org/download/
+MASTER_SITES=		${MASTER_SITE_GNU:=fribidi/}
 LICENSE=		gnu-gpl-v2
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://fribidi.org/
+HOMEPAGE=		https://github.com/fribidi/fribidi
 COMMENT=		Free Implementation of the Unicode Bidirectional Algorithm
 
 REPLACE_INTERPRETER+=	bash
