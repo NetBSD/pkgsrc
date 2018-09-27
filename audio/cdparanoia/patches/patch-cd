@@ -1,4 +1,6 @@
-$NetBSD: patch-cd,v 1.6 2013/12/12 16:41:32 jperkin Exp $
+$NetBSD: patch-cd,v 1.7 2018/09/27 15:29:06 triaxx Exp $
+
+Support for Sun and several BSD.
 
 --- interface/common_interface.c.orig	2008-08-21 16:08:54.000000000 +0000
 +++ interface/common_interface.c

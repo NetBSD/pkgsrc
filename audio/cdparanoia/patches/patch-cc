@@ -1,4 +1,6 @@
-$NetBSD: patch-cc,v 1.8 2010/03/26 16:38:32 jdc Exp $
+$NetBSD: patch-cc,v 1.9 2018/09/27 15:29:06 triaxx Exp $
+
+Support for NetBSD.
 
 --- interface/utils.h.orig	2008-08-14 13:56:20.000000000 +0000
 +++ interface/utils.h	2010-03-24 10:55:09.000000000 +0000

@@ -1,8 +1,10 @@
-$NetBSD: patch-ch,v 1.8 2013/12/12 16:41:32 jperkin Exp $
+$NetBSD: patch-ch,v 1.9 2018/09/27 15:29:06 triaxx Exp $
+
+Support for MacOS.
 
 --- interface/cdda_interface.h.orig	2008-09-11 10:43:52.000000000 +0000
 +++ interface/cdda_interface.h
-@@ -18,9 +18,24 @@
+@@ -18,9 +18,25 @@
  #endif
  #define CD_FRAMESAMPLES (CD_FRAMESIZE_RAW / 4)
  
@@ -20,14 +22,15 @@ $NetBSD: patch-ch,v 1.8 2013/12/12 16:41:32 jperkin Exp $
 +#include <camlib.h>
 +#endif
 +
-+#if defined(__NetBSD__) || (defined(__APPLE__) && defined(__MACH__)) || defined(__sun)
++#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__sun) || \
++   (defined(__APPLE__) && defined(__MACH__))
 +#define ENOMEDIUM 12345
 +#endif
 +
  #define MAXTRK 100
  
  typedef struct TOC {	/* structure of table of contents */
-@@ -35,6 +50,7 @@ typedef struct TOC {	/* structure of tab
+@@ -35,6 +51,7 @@ typedef struct TOC {	/* structure of tab
  #define TEST_INTERFACE	 2
  #define SGIO_SCSI	 3
  #define SGIO_SCSI_BUGGY1 4
@@ -35,7 +38,7 @@ $NetBSD: patch-ch,v 1.8 2013/12/12 16:41:32 jperkin Exp $
  
  #define CDDA_MESSAGE_FORGETIT 0
  #define CDDA_MESSAGE_PRINTIT 1
-@@ -49,13 +65,27 @@ typedef struct cdrom_drive{
+@@ -49,13 +66,27 @@ typedef struct cdrom_drive{
    int opened; /* This struct may just represent a candidate for opening */
  
    char *cdda_device_name;
@@ -65,7 +68,7 @@ $NetBSD: patch-ch,v 1.8 2013/12/12 16:41:32 jperkin Exp $
    int interface;
    int bigendianp;
    int nsectors;
-@@ -84,7 +114,7 @@ typedef struct cdrom_drive{
+@@ -84,7 +115,7 @@ typedef struct cdrom_drive{
    int is_atapi;
    int is_mmc;
  

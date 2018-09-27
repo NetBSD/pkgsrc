@@ -1,4 +1,6 @@
-$NetBSD: patch-ce,v 1.7 2009/08/14 15:51:06 drochner Exp $
+$NetBSD: patch-ce,v 1.8 2018/09/27 15:29:06 triaxx Exp $
+
+Support for several BSD.
 
 --- interface/cooked_interface.c.orig	2008-08-26 11:55:22.000000000 +0200
 +++ interface/cooked_interface.c
