@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/04/13 16:12:13 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/09/27 21:16:40 tnn Exp $
 bin/yaws
 lib/pkgconfig/yaws.pc
 lib/yaws/ebin/haxe.beam
@@ -70,6 +70,7 @@ lib/yaws/include/yaws_dav.hrl
 lib/yaws/include/yaws_lock.hrl
 lib/yaws/include/yaws_soap.hrl
 lib/yaws/priv/envelope.xsd
+lib/yaws/priv/epam
 lib/yaws/priv/lib/setuid_drv.la
 lib/yaws/priv/mime.types
 lib/yaws/priv/soap-envelope.xsd
