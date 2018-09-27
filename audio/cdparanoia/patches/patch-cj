@@ -1,4 +1,6 @@
-$NetBSD: patch-cj,v 1.1 2006/09/03 17:13:30 ben Exp $
+$NetBSD: patch-cj,v 1.2 2018/09/27 15:29:06 triaxx Exp $
+
+Support for MacOS.
 
 --- interface/common_interface.h.orig	1999-08-15 14:52:42.000000000 -0700
 +++ interface/common_interface.h
