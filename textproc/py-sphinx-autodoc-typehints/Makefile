@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/05/27 01:59:35 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2018/09/27 22:38:59 tnn Exp $
 
 DISTNAME=	sphinx-autodoc-typehints-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/agronholm/sphinx-autodoc-typehints
 COMMENT=	Type hints support for the Sphinx autodoc extension
 LICENSE=	mit
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.4:../../textproc/py-sphinx
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.1.0:../../devel/py-test
 
