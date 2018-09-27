@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.7 2017/07/12 10:53:23 wiz Exp $
+$NetBSD: patch-ad,v 1.8 2018/09/27 15:29:06 triaxx Exp $
+
+Support for NetBSD and MacOS.
 
 --- utils.h.orig	2008-08-22 09:39:06.000000000 +0000
 +++ utils.h

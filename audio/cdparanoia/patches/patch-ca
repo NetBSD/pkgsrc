@@ -1,4 +1,6 @@
-$NetBSD: patch-ca,v 1.9 2009/08/14 15:51:06 drochner Exp $
+$NetBSD: patch-ca,v 1.10 2018/09/27 15:29:06 triaxx Exp $
+
+Fix Makefile.in.
 
 --- interface/Makefile.in.orig	2008-08-21 18:08:54.000000000 +0200
 +++ interface/Makefile.in

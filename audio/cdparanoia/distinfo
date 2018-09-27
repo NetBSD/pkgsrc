@@ -1,24 +1,25 @@
-$NetBSD: distinfo,v 1.35 2017/07/12 10:53:23 wiz Exp $
+$NetBSD: distinfo,v 1.36 2018/09/27 15:29:06 triaxx Exp $
 
 SHA1 (cdparanoia-III-10.2.src.tgz) = 1901e20d3a370ca6afa4c76a9ef30d3f03044320
 RMD160 (cdparanoia-III-10.2.src.tgz) = d6c4ea9cc4aa4d5bcca4985e668ea6142d53cc55
 SHA512 (cdparanoia-III-10.2.src.tgz) = 4ab0a0f5ef44d56c1af72d1fc1035566a1a89c4eeddb9e8baea675fe51c06138d913342afc8bed167d9fa55672fa25a2763ce21f7e24c1232e4739aff20733a7
 Size (cdparanoia-III-10.2.src.tgz) = 183236 bytes
-SHA1 (patch-aa) = b67a318d4e5c0ca87639645096a41eaeb3fb2d1e
-SHA1 (patch-ab) = af07649ac4e0d4a5c2798e4cfc903e6959adea44
-SHA1 (patch-ac) = 87718f65b1994f6e266c7b8221fb8b585b9094b8
-SHA1 (patch-ad) = 861237917c229a4640b9311d371913aae78b746c
-SHA1 (patch-ae) = f12c5aca0b78803e1ab1be8518b032748a45ee0e
-SHA1 (patch-ba) = c846425d26372bada1bc086a7dc26120163feb13
-SHA1 (patch-ca) = 9860c2227f9d359e808c0ee0989020a9a3163a48
-SHA1 (patch-cb) = 880d667b26891beb2c64ebe1937c4a2931dd42d5
-SHA1 (patch-cc) = e692c8f4a9811123baa6cb25c09dea0004cc9b68
-SHA1 (patch-cd) = c37da19fc99b5aa5682b08cd6ad162687e9b1337
-SHA1 (patch-ce) = b343191fa2e337e2c3c091c585451c726c1f745b
+SHA1 (patch-aa) = 3b1557fd2d8cf2e746397ec92e46ad3723e78c6e
+SHA1 (patch-ab) = 29765396395c311b7904337f2a741eadde0806b7
+SHA1 (patch-ac) = b826430a6b51d76fefe6b51d4fc97addbca8eeac
+SHA1 (patch-ad) = 0e0a2d88dd20ac76f1c74fb3a101df5d98d14a22
+SHA1 (patch-ae) = cf411e6c85c0079c0300237d66fd194c6285fd8e
+SHA1 (patch-ba) = ad900b66052364fce32e9bb41ac318d42304860a
+SHA1 (patch-ca) = 259a9ad675875dcbeffe4a294df0b15eadaa9622
+SHA1 (patch-cb) = a8827d1e0f8857a8f12cf6db9c9a80d9c6f85300
+SHA1 (patch-cc) = 93f9a2ca1a0987baf8857bd38602d3abeeb4e7ef
+SHA1 (patch-cd) = cb6dd2f65de11536d3264eb7b2a7807df1a51a1d
+SHA1 (patch-ce) = 5580f294ebbd0a5cacdb54ef149aa8ef71fec075
 SHA1 (patch-cf) = 4208e82efd5bba15677dcc0ae5883bd9353624c6
-SHA1 (patch-cg) = a492f6d2459f75420930d8a6f264bde82119d23e
-SHA1 (patch-ch) = 80672901f4ddbc4f7228cfa1f57ee477c1e1ac28
-SHA1 (patch-ci) = bc0645bf6d2e3841817adb639bfa3ac68cb7f606
-SHA1 (patch-cj) = e2420e2ccadd2d6ea30d6bf48af9c141dc395afc
-SHA1 (patch-ck) = 0232f8f42d98b49043f55cd6aaf1f50ab38fadfb
-SHA1 (patch-cn) = b79db0b24a042a5801b47e6db5e20cbf07a53475
+SHA1 (patch-cg) = 76ceca718c46f57ebb9bec63078c1f9f7e1bf778
+SHA1 (patch-ch) = 607f57828094ada2799b84723cc01ae333887d2f
+SHA1 (patch-ci) = 783a8cdf88aa9a0f7be3bb2c865b6609237291fc
+SHA1 (patch-cj) = 99bdcf970d9b74154ee205e9465e67dbfed773b0
+SHA1 (patch-ck) = 968a7191d10f16e298853175543c8f533659acc2
+SHA1 (patch-cn) = 62a2e329b8bec1c74e53e72a478576c484e67b56
+SHA1 (patch-paranoia_overlap.c) = 3c46bbf406214d30b09e88cd10a3bc3946c77396
