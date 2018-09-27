@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.36 2018/09/27 15:29:06 triaxx Exp $
+$NetBSD: distinfo,v 1.37 2018/09/27 19:23:09 ryoon Exp $
 
 SHA1 (cdparanoia-III-10.2.src.tgz) = 1901e20d3a370ca6afa4c76a9ef30d3f03044320
 RMD160 (cdparanoia-III-10.2.src.tgz) = d6c4ea9cc4aa4d5bcca4985e668ea6142d53cc55
@@ -16,10 +16,9 @@ SHA1 (patch-cc) = 93f9a2ca1a0987baf8857bd38602d3abeeb4e7ef
 SHA1 (patch-cd) = cb6dd2f65de11536d3264eb7b2a7807df1a51a1d
 SHA1 (patch-ce) = 5580f294ebbd0a5cacdb54ef149aa8ef71fec075
 SHA1 (patch-cf) = 4208e82efd5bba15677dcc0ae5883bd9353624c6
-SHA1 (patch-cg) = 76ceca718c46f57ebb9bec63078c1f9f7e1bf778
+SHA1 (patch-cg) = 7445d7c9d32ea6fd955666c93a68498b299bd921
 SHA1 (patch-ch) = 607f57828094ada2799b84723cc01ae333887d2f
 SHA1 (patch-ci) = 783a8cdf88aa9a0f7be3bb2c865b6609237291fc
 SHA1 (patch-cj) = 99bdcf970d9b74154ee205e9465e67dbfed773b0
 SHA1 (patch-ck) = 968a7191d10f16e298853175543c8f533659acc2
 SHA1 (patch-cn) = 62a2e329b8bec1c74e53e72a478576c484e67b56
-SHA1 (patch-paranoia_overlap.c) = 3c46bbf406214d30b09e88cd10a3bc3946c77396
