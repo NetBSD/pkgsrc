@@ -1,4 +1,4 @@
-$NetBSD: patch-cg,v 1.14 2018/09/27 15:29:06 triaxx Exp $
+$NetBSD: patch-cg,v 1.15 2018/09/27 19:23:09 ryoon Exp $
 
 - fix ripping on NetBSD/amd64
 - build fix on DragonFly
@@ -442,7 +442,7 @@ $NetBSD: patch-cg,v 1.14 2018/09/27 15:29:06 triaxx Exp $
    }
  }
  
-+#if defined(__linux__)
++#if !defined(__FreeBSD__) && !defined(__DragonFly__)
  /* request vendor brand and model */
  unsigned char *scsi_inquiry(cdrom_drive *d){
    unsigned char sense[SG_MAX_SENSE];
