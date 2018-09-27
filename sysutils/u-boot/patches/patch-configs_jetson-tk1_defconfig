@@ -1,0 +1,8 @@
+$NetBSD: patch-configs_jetson-tk1_defconfig,v 1.1 2018/09/27 14:29:36 skrll Exp $
+--- configs/jetson-tk1_defconfig.orig	2018-09-27 14:26:37.000000000 +0100
++++ configs/jetson-tk1_defconfig	2018-09-27 14:27:09.000000000 +0100
+@@ -54,3 +54,4 @@
+ CONFIG_USB_GADGET_DOWNLOAD=y
+ CONFIG_USB_HOST_ETHER=y
+ CONFIG_USB_ETHER_ASIX=y
++CONFIG_BOOTCOMMAND="pci enum; run distro_bootcmd"
