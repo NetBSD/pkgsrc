@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.153 2018/09/27 19:47:09 tnn Exp $
+# $NetBSD: Makefile,v 1.154 2018/09/27 19:54:20 tnn Exp $
 
 DISTNAME=	rhythmbox-3.4.2
 PKGREVISION=	2
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=	--without-gudev
 CONFIGURE_ARGS+=	--enable-vala
 CONFIGURE_ARGS+=	--with-brasero
 
-DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
+BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 DEPENDS+=	gst-plugins1-libav-[0-9]*:../../multimedia/gst-plugins1-libav
 DEPENDS+=	gst-plugins1-good-[0-9]*:../../multimedia/gst-plugins1-libav
 DEPENDS+=	gst-plugins1-oss-[0-9]*:../../audio/gst-plugins1-oss
