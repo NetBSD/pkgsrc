@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/08/14 12:34:45 pgoyette Exp $
+# $NetBSD: Makefile,v 1.10 2018/09/27 19:38:46 tnn Exp $
 
 # no Release yet
 GIT_COMMIT=	84da8192c7c409f37c1906b60ef166c58aafc847
@@ -12,6 +12,7 @@ HOMEPAGE=	https://git.kernel.org/pub/scm/utils/i2c-tools/
 COMMENT=	Decode memory DIMM SPD ROM info
 LICENSE=	gnu-gpl-v2
 
+USE_TOOLS+=	perl:run
 REPLACE_PERL=	eeprom/decode-dimms
 
 SUBST_CLASSES+=		rev
