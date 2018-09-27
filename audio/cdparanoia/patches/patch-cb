@@ -1,4 +1,6 @@
-$NetBSD: patch-cb,v 1.9 2013/12/12 16:41:32 jperkin Exp $
+$NetBSD: patch-cb,v 1.10 2018/09/27 15:29:06 triaxx Exp $
+
+Support for Common Access Method.
 
 --- interface/low_interface.h.orig	2008-09-11 10:43:52.000000000 +0000
 +++ interface/low_interface.h
