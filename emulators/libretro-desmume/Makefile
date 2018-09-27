@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/08/14 13:08:57 nia Exp $
+# $NetBSD: Makefile,v 1.3 2018/09/27 20:22:26 tnn Exp $
 
 DISTNAME=	libretro-desmume-20180807
 CATEGORIES=	emulators
@@ -19,6 +19,7 @@ USE_LANGUAGES=	c c++
 
 .include "../../mk/bsd.prefs.mk"
 
+CXXFLAGS+=	-D__STDC_FORMAT_MACROS
 .if !empty(MACHINE_ARCH:M*arm*)
 CXXFLAGS+=		-marm
 CXXFLAGS+=		-DUSE_POSIX_MEMALIGN -D__RETRO_ARM__
