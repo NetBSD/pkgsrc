@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/07/06 03:36:58 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2018/09/27 23:50:54 tnn Exp $
 
 DISTNAME=	Theano-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,6 +20,11 @@ USE_TOOLS+=	bash
 USE_LANGUAGES=	c c++
 
 PY_PATCHPLIST=	yes
+
+REPLACE_INTERPRETER+=	bash
+REPLACE.bash.old=	.*/bin/bash
+REPLACE.bash.new=	${SH}
+REPLACE_FILES.bash=	theano/misc/check_blas_many.sh
 
 do-test:
 	${RUN} cd {WRKSRC}/theano/tests && \
