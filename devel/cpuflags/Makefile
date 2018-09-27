@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.154 2018/07/04 13:40:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.155 2018/09/27 19:14:44 tnn Exp $
 
 DISTNAME=	cpuflags-1.43
 CATEGORIES=	devel sysutils
@@ -24,7 +24,7 @@ MAKE_FLAGS+=	INSTALL_DATA_DIR=${INSTALL_DATA_DIR:Q}
 MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}/man1
 
 SUBST_CLASSES+=		cpuflags
-SUBST_STAGE.cpuflags=	pre-configure
+SUBST_STAGE.cpuflags=	do-build
 SUBST_FILES.cpuflags=	cpuflags.sh
 SUBST_SED.cpuflags=	-e s,@@SH@@,${SH:Q},
 
