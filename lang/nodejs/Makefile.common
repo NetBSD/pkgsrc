@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2018/09/27 19:15:59 tnn Exp $
+# $NetBSD: Makefile.common,v 1.23 2018/09/27 19:27:57 tnn Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs6/Makefile
 # used by lang/nodejs8/Makefile
@@ -50,7 +50,12 @@ TEST_TARGET=		check
 .if defined(TOOLS_PLATFORM.paxctl)
 SUBST_CLASSES+=			mksnapshot
 SUBST_STAGE.mksnapshot=		post-configure
-SUBST_FILES.mksnapshot=		out/deps/v8/gypfiles/mksnapshot.target.mk
+# nodejs6
+SUBST_FILES.mksnapshot=		out/deps/v8/tools/gyp/mksnapshot.target.mk
+# nodejs8
+SUBST_FILES.mksnapshot+=	out/deps/v8/src/mksnapshot.target.mk
+# nodejs10+
+SUBST_FILES.mksnapshot+=	out/deps/v8/gypfiles/mksnapshot.target.mk
 SUBST_SED.mksnapshot+=		-e 's|call do_cmd,link)|call do_cmd,link)\${.newline}	${TOOLS_PLATFORM.paxctl} +m $$@|'
 .endif
 
