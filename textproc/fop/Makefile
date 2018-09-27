@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2018/07/04 13:40:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.37 2018/09/27 22:44:31 tnn Exp $
 #
 # Note: we currently use the pre-built (-bin) distribution of FOP,
 #
@@ -25,7 +25,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 PLIST_SRC=	${PKGDIR}/PLIST
 
 SUBST_CLASSES+=			java_home
-SUBST_STAGE.java_home=		pre-configure
+SUBST_STAGE.java_home=		pre-install
 SUBST_MESSAGE.java_home=	Setting JAVA_HOME to a sane value.
 SUBST_FILES.java_home=		fop
 SUBST_FILES.java_home+=		fop-ttfreader.sh
