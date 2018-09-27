@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2016/01/31 06:45:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/09/27 20:35:20 tnn Exp $
+include/dbusmenu-qt5/dbusmenu-qt5_autogen/moc_predefs.h
 include/dbusmenu-qt5/dbusmenu_config.h
 include/dbusmenu-qt5/dbusmenu_export.h
 include/dbusmenu-qt5/dbusmenu_version.h
