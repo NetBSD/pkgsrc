@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.152 2018/09/03 10:50:17 wiz Exp $
+# $NetBSD: Makefile,v 1.153 2018/09/27 19:47:09 tnn Exp $
 
 DISTNAME=	rhythmbox-3.4.2
 PKGREVISION=	2
@@ -18,6 +18,8 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 CONFIGURE_ARGS+=	--disable-browser-plugin
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--disable-fm-radio
@@ -25,6 +27,7 @@ CONFIGURE_ARGS+=	--without-gudev
 CONFIGURE_ARGS+=	--enable-vala
 CONFIGURE_ARGS+=	--with-brasero
 
+DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 DEPENDS+=	gst-plugins1-libav-[0-9]*:../../multimedia/gst-plugins1-libav
 DEPENDS+=	gst-plugins1-good-[0-9]*:../../multimedia/gst-plugins1-libav
 DEPENDS+=	gst-plugins1-oss-[0-9]*:../../audio/gst-plugins1-oss
