@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/08/18 07:31:17 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.11 2018/09/27 04:23:12 wiz Exp $
 
 DISTNAME=	zkt-1.1.2
 PKGREVISION=	1
@@ -31,7 +30,7 @@ CONFIGURE_ARGS+=	--enable-bind_util_path=/usr/sbin
 
 .if ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	--enable-bind_util_path=${BUILDLINK_PREFIX.bind}/sbin
-.include "../../net/bind99/buildlink3.mk"
+.include "../../net/bind912/buildlink3.mk"
 .endif
 
 do-install:
