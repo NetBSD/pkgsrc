@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.14 2018/06/21 04:33:54 schmonz Exp $
+$NetBSD: distinfo,v 1.15 2018/09/28 22:45:39 schmonz Exp $
 
-SHA1 (mailfront-2.21.tar.gz) = f69af3e7906c147c9aa779bde365d9a3bb92f03a
-RMD160 (mailfront-2.21.tar.gz) = 4459e8f675a529fa8b6835253bf3a554a8d9c75a
-SHA512 (mailfront-2.21.tar.gz) = 1276c86ee0ab9c0d40127acb392cf3b1c3ef6dee383d83932f21166066c283418d3d76f091a6b45c141d5130a3622df256bc9334430abbe18e21a092866e9e4a
-Size (mailfront-2.21.tar.gz) = 128077 bytes
+SHA1 (mailfront-2.22.tar.gz) = b7d8aee93a177610577960d3cdd785e00f708637
+RMD160 (mailfront-2.22.tar.gz) = 8e4cb0a5bbfbcd06db5ca7c49acc9abd3bffc543
+SHA512 (mailfront-2.22.tar.gz) = 30e1c561f8836bbaf893897b1e864539c44600c4b605d4c8c51c1156c9227967a4ac9e2e9eb0b48bb1827001aff2c6a94e9f44c59bf10e16b5d98595c6a9f2f6
+Size (mailfront-2.22.tar.gz) = 128355 bytes
 SHA1 (patch-INSTHIER) = 84e52ccc8e86c329f27b97c22e95669962f3595f
 SHA1 (patch-Makefile) = 13cea3730258f9dd6c7fde4cd61aefd4cd428eb3
 SHA1 (patch-queuedir.c) = 09a63fd72f389d013b46185d8c82a7193e125d86
