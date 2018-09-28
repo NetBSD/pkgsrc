@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Darwin,v 1.2 2013/05/19 20:37:14 adam Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.3 2018/09/28 11:01:37 adam Exp $
 lib/python${PY_VER_SUFFIX}/lib-dynload/ColorPicker.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/MacOS.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/Nav.so
@@ -27,7 +27,7 @@ lib/python${PY_VER_SUFFIX}/lib-dynload/_Mlte.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_OSA.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_Qd.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_Qdoffs.so
-lib/python${PY_VER_SUFFIX}/lib-dynload/_Qt.so
+${PLIST.qt}lib/python${PY_VER_SUFFIX}/lib-dynload/_Qt.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_Res.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_scproxy.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_Scrap.so
