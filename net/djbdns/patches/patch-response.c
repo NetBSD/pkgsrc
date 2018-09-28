@@ -1,6 +1,7 @@
-$NetBSD: patch-response.c,v 1.1 2017/05/26 15:16:45 schmonz Exp $
+$NetBSD: patch-response.c,v 1.2 2018/09/28 20:36:24 schmonz Exp $
 
 Fix the security hole found by Matthew Dempsky.
+From DJB in <https://marc.info/?l=djbdns&m=123613000920446&w=2>
 
 --- response.c.orig	2001-02-11 16:11:45.000000000 -0500
 +++ response.c
