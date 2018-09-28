@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2018/06/17 19:21:21 adam Exp $
+# $NetBSD: Makefile,v 1.75 2018/09/28 11:01:37 adam Exp $
 
 .include "dist.mk"
 
@@ -81,25 +81,29 @@ IS_64BIT_PLATFORM?=	yes
 IS_64BIT_PLATFORM?=	no
 .endif
 
+PLIST_VARS+=	dl dll extra-so nis no-nis qt
+
 # the dl module isn't built for 64 bit archs
-PLIST_VARS+=	dl
 .if empty(IS_64BIT_PLATFORM:M[yY][eE][sS])
 PLIST.dl=	yes
 .endif
 
 # setup.py causes some modules to be built if the platform is *not* 64bit.
-PLIST_VARS+=	extra-so
 .if !empty(IS_64BIT_PLATFORM:M[nN][oO])
 PLIST.extra-so=	yes
 .endif
 
 # For Xcode 5 we need to search the SDK path for headers, otherwise certain
 # modules will not be built.
-.if ${OPSYS} == "Darwin" && exists(${OSX_SDK_PATH}/usr/include)
-CFLAGS+=		-I${OSX_SDK_PATH:Q}/usr/include
+.if ${OPSYS} == "Darwin"
+.  if exists(${OSX_SDK_PATH}/usr/include)
+CFLAGS+=	-I${OSX_SDK_PATH:Q}/usr/include
+.  endif
+.  if exists(${OSX_SDK_PATH}/System/Library/Frameworks/QuickTime.framework)
+PLIST.qt=	yes
+.  endif
 .endif
 
-PLIST_VARS+=	dll nis no-nis
 .if ${OPSYS} == "IRIX"
 .  if ${ABI} == "64"
 PLIST.no-nis=	yes
