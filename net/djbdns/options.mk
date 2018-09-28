@@ -1,12 +1,14 @@
-# $NetBSD: options.mk,v 1.19 2018/06/18 10:44:38 schmonz Exp $
+# $NetBSD: options.mk,v 1.20 2018/09/28 20:36:24 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.djbdns
 PKG_SUPPORTED_OPTIONS+=		# inet6
 PKG_SUPPORTED_OPTIONS+=		djbdns-cachestats djbdns-ignoreip2
-PKG_SUPPORTED_OPTIONS+=		djbdns-tinydns64
-PKG_OPTIONS_OPTIONAL_GROUPS=	qmerge
-PKG_OPTIONS_GROUP.qmerge=	djbdns-qmerge1 djbdns-qmerge2
-PKG_SUGGESTED_OPTIONS+=		djbdns-qmerge2 djbdns-tinydns64
+PKG_SUPPORTED_OPTIONS+=		djbdns-mergequeries djbdns-tinydns64
+PKG_SUGGESTED_OPTIONS+=		djbdns-mergequeries djbdns-tinydns64
+
+# For users migrating from 2018Q2; remove compatibility after 2018Q3 is branched
+PKG_OPTIONS_LEGACY_OPTS+=	djbdns-qmerge1:djbdns-mergequeries
+PKG_OPTIONS_LEGACY_OPTS+=	djbdns-qmerge2:djbdns-mergequeries
 
 .include "../../mk/bsd.options.mk"
 
@@ -35,22 +37,13 @@ PATCHFILES+=			${IGNOREIP2_PATCH}
 SITES.${IGNOREIP2_PATCH}=	http://www.tinydns.org/
 .endif
 
-.if !empty(PKG_OPTIONS:Mdjbdns-qmerge1)
-DNSCACHE_MERGE_PATCH=	0001-dnscache-merge-similar-outgoing-queries.patch
-DNSCACHE_SOA_PATCH=	0002-dnscache-cache-soa-records.patch
-PATCHFILES+=		${DNSCACHE_MERGE_PATCH} ${DNSCACHE_SOA_PATCH}
-PATCH_DIST_STRIP.${DNSCACHE_MERGE_PATCH}=	-p1
-PATCH_DIST_STRIP.${DNSCACHE_SOA_PATCH}=		-p1
-SITES.${DNSCACHE_MERGE_PATCH}=	http://www.your.org/dnscache/
-SITES.${DNSCACHE_SOA_PATCH}=	http://www.your.org/dnscache/
-.endif
-
-.if !empty(PKG_OPTIONS:Mdjbdns-qmerge2)
+.if !empty(PKG_OPTIONS:Mdjbdns-mergequeries)
 USE_TOOLS+=			patch
-post-patch: patch-qmerge2
-.PHONY: patch-qmerge2
-patch-qmerge2:
-	cd ${WRKSRC} && ${PATCH} ${PATCH_ARGS} < ${FILESDIR}/patch-qmerge2
+post-patch: patch-mergequeries
+.PHONY: patch-mergequeries
+patch-mergequeries:
+	cd ${WRKSRC} && ${PATCH} ${PATCH_ARGS} < ${FILESDIR}/patch-mergequeries
+	cd ${WRKSRC} && ${PATCH} ${PATCH_ARGS} < ${FILESDIR}/patch-mergequeries-boundscheck
 .endif
 
 .if !empty(PKG_OPTIONS:Mdjbdns-tinydns64)

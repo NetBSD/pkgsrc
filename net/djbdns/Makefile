@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2018/06/18 10:44:38 schmonz Exp $
+# $NetBSD: Makefile,v 1.67 2018/09/28 20:36:24 schmonz Exp $
 
 DISTNAME=		djbdns-1.05
-PKGREVISION=		13
+PKGREVISION=		14
 CATEGORIES=		net
 MASTER_SITES=		http://cr.yp.to/djbdns/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${MANPAGES}
