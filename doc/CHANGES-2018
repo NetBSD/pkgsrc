@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4218 2018/09/27 15:29:46 triaxx Exp $
+$NetBSD: CHANGES-2018,v 1.4219 2018/09/28 20:36:28 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5875,3 +5875,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/p5-Search-Xapian to 1.2.25.2 [schmonz 2018-09-26]
 	Updated devel/cvs-fast-export to 1.44 [schmonz 2018-09-26]
 	Updated audio/cdparanoia to 3.0.10.2nb4 [triaxx 2018-09-27]
+	Updated net/djbdns to 1.05nb14 [schmonz 2018-09-28]
