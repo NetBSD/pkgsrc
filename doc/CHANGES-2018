@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4219 2018/09/28 20:36:28 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.4220 2018/09/28 22:45:44 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5876,3 +5876,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/cvs-fast-export to 1.44 [schmonz 2018-09-26]
 	Updated audio/cdparanoia to 3.0.10.2nb4 [triaxx 2018-09-27]
 	Updated net/djbdns to 1.05nb14 [schmonz 2018-09-28]
+	Updated mail/mailfront to 2.22 [schmonz 2018-09-28]
