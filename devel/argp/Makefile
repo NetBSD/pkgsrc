@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/31 11:16:37 asau Exp $
+# $NetBSD: Makefile,v 1.5 2018/09/28 20:07:50 wiedi Exp $
 
 DISTNAME=	argp-standalone-1.3
 PKGNAME=	argp-1.3
@@ -12,6 +12,7 @@ COMMENT=	Argument parsing function from glibc
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+USE_LANGUAGES=	c99
 
 INSTALLATION_DIRS=	include lib
 
