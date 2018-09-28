@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/06/18 11:17:54 adam Exp $
+# $NetBSD: Makefile,v 1.18 2018/09/28 15:45:15 tnn Exp $
 
 DISTNAME=	flake8-3.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,10 +18,8 @@ DEPENDS+=	${PYPKGPREFIX}-codestyle>=2.4.0:../../devel/py-codestyle
 .if "${PYPKGPREFIX}" == "py27"
 DEPENDS+=	${PYPKGPREFIX}-configparser-[0-9]*:../../devel/py-configparser
 DEPENDS+=	${PYPKGPREFIX}-enum34-[0-9]*:../../devel/py-enum34
-.else
-# Enforced by setuptools
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 .endif
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
