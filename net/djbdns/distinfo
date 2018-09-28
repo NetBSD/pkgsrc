@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2018/06/18 10:44:38 schmonz Exp $
+$NetBSD: distinfo,v 1.27 2018/09/28 20:36:24 schmonz Exp $
 
 SHA1 (djbdns-1.05.tar.gz) = 2efdb3a039d0c548f40936aa9cb30829e0ce8c3d
 RMD160 (djbdns-1.05.tar.gz) = a832cbfd93e4ccec6a565492a4ee0b3c1b4b68ed
@@ -20,16 +20,8 @@ SHA1 (djbdns-cachestats.patch) = ab0b2835140768d89159d5564534d39520d7f403
 RMD160 (djbdns-cachestats.patch) = e09994d84573e781ce18b59f909f8bd013de5d8e
 SHA512 (djbdns-cachestats.patch) = e78b6a8fc43f94e5bc5971d85f952ef9cac4fa827b00036994fa51dcebb9c9755c36488ac24a9ec7b92097a38938191147faf8cce84a9e636072684db28a2e62
 Size (djbdns-cachestats.patch) = 2341 bytes
-SHA1 (0001-dnscache-merge-similar-outgoing-queries.patch) = 8dd3ce7758d3a97cafbe6a60ea83f48e916f496d
-RMD160 (0001-dnscache-merge-similar-outgoing-queries.patch) = c416dd6575819cfd40ef0d306ccb14d34a5afc90
-SHA512 (0001-dnscache-merge-similar-outgoing-queries.patch) = cbec128b021a341c68906289ca02d3a7fe088c8b3835f2ae3dbb581ad6520712eb344d66e11bb82368dbca2e93e46facd4e10d121fc091099b3a7bfd5e6d081e
-Size (0001-dnscache-merge-similar-outgoing-queries.patch) = 9914 bytes
-SHA1 (0002-dnscache-cache-soa-records.patch) = ac9b6a62c62588205cc4dc71da4e0ad6630f9635
-RMD160 (0002-dnscache-cache-soa-records.patch) = 0b58e57bc11b36113c5fef73a64c869895f83889
-SHA512 (0002-dnscache-cache-soa-records.patch) = f65ca7dfc8e85f469f22d72a1c79126c35243dc077abf4b688eb7d057f19456dc8a3665f558a8a3c1908f96fa1838792aa1bc317d2e89f4953020828c05926e6
-Size (0002-dnscache-cache-soa-records.patch) = 2944 bytes
 SHA1 (patch-Makefile) = 0dffb59090ccb4977c65885f062eb37255ccd0d9
 SHA1 (patch-dnscache-conf.c) = 873897ad6b97baff363874a6a79c8da44383c283
 SHA1 (patch-dnsroots.global) = 183964d516e08c46773847fe542f5a502ec2edcf
 SHA1 (patch-hier.c) = 874af27489ad4597e213cfe05a7f2f919081db20
-SHA1 (patch-response.c) = 4f089b63664b7e4685b77fc55b287860c8c68229
+SHA1 (patch-response.c) = 24c8f3bc4b629dd04a0b83285eff4579750d92ff
