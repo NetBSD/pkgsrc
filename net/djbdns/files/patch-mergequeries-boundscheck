@@ -1,0 +1,27 @@
+$NetBSD: patch-mergequeries-boundscheck,v 1.1 2018/09/28 20:36:24 schmonz Exp $
+
+Add a missing bounds check to the MERGEQUERIES patch's try_merge().
+From Tim Stewart in <https://marc.info/?l=djbdns&m=153020962703821>
+
+--- dns_transmit.c.orig	2018-09-28 20:25:42.000000000 +0000
++++ dns_transmit.c
+@@ -35,6 +35,7 @@ static int try_merge(struct dns_transmit
+   for (i = 0; i < MAXUDP; i++) {
+     if (!inprogress[i]) continue;
+     if (!merge_equal(d, inprogress[i])) continue;
++    if (inprogress[i]->nslaves == MAXUDP) continue;
+     d->master = inprogress[i];
+     inprogress[i]->slaves[inprogress[i]->nslaves++] = d;
+     return 1;
+@@ -127,8 +128,10 @@ static void mergefree(struct dns_transmi
+   }
+   /* and unregister all of our slaves from us */
+   for (i = 0; i < d->nslaves; i++) {
+-    if (d->slaves[i])
++    if (d->slaves[i]) {
+       d->slaves[i]->master = NULL;
++      d->slaves[i] = 0;
++    }
+   }
+   d->nslaves = 0;
+ }
