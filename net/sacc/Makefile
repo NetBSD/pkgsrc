@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/02/28 16:32:56 leot Exp $
+# $NetBSD: Makefile,v 1.3 2018/09/29 20:06:09 wiedi Exp $
 
 DISTNAME=	sacc-v1.00
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -10,6 +10,8 @@ MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	gopher://bitreich.org/1/scm/sacc
 COMMENT=	Console gopher client
 LICENSE=	isc
+USE_LANGUAGES=	c99
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 MAKE_FLAGS+=	PREFIX="${PREFIX}"
 MAKE_FLAGS+=	MANDIR="${PREFIX}/${PKGMANDIR}/man1"
