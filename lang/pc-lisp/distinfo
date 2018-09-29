@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2018/02/03 20:26:31 kamil Exp $
+$NetBSD: distinfo,v 1.2 2018/09/29 21:19:13 kamil Exp $
 
 SHA1 (PC-LISP/master-2b50414e258a3916bf19d1b354f4c4e647eb7bb8.zip) = b5cda3214fbf41673d26f25defc0db3095d9e538
 RMD160 (PC-LISP/master-2b50414e258a3916bf19d1b354f4c4e647eb7bb8.zip) = 9da45864097aa2d5de2f18630a267584bfba826a
@@ -6,6 +6,6 @@ SHA512 (PC-LISP/master-2b50414e258a3916bf19d1b354f4c4e647eb7bb8.zip) = 4aec599bc
 Size (PC-LISP/master-2b50414e258a3916bf19d1b354f4c4e647eb7bb8.zip) = 1011041 bytes
 SHA1 (patch-src_Makefile) = 3f388dbff31fad82c9813fb7b3bb5888d118d480
 SHA1 (patch-src_buselect.c) = eeae7661fd5a8d3b4f0a68f38dc50471902ae444
-SHA1 (patch-src_busopen.c) = bf44bf31a9653c86b8616b6d6901dbbbe7c71298
+SHA1 (patch-src_busopen.c) = 35894a8485ce34b5bb7d603d1575d364d0ea7162
 SHA1 (patch-src_bustrfnd.c) = f2dc238e8d52d9731d685caa88b1218d1ec49706
 SHA1 (patch-src_lisp.h) = 623ab2b3897aaa8f6a99843ff14574a6ede19297
