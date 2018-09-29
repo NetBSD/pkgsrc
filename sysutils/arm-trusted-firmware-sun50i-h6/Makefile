@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/05/26 17:51:33 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2018/09/29 16:26:53 tnn Exp $
 
 VERSION=	20180207
 GITHUB_PROJECT=	arm-trusted-firmware
@@ -25,6 +25,12 @@ BUILD_TARGET=	bl31
 
 BUILD_DEPENDS+=	cross-aarch64-none-elf-gcc-[0-9]*:../../cross/aarch64-none-elf-gcc
 
+.include "../../mk/bsd.prefs.mk"
+# XXX kludge. pkgsrc passes down run path flags in LDFLAGS but the
+# cross ld(1) doesn't understand -R. If we pass down -L instead it
+# will be safely ignored.
+COMPILER_RPATH_FLAG=-L
+	
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/arm-trusted-firmware/sun50i-h6
 	${INSTALL_DATA} ${WRKSRC}/build/sun50i_h6/debug/bl31.bin \
