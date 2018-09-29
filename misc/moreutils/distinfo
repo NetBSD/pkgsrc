@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2018/04/21 17:27:51 leot Exp $
+$NetBSD: distinfo,v 1.4 2018/09/29 21:33:47 wiedi Exp $
 
 SHA1 (moreutils_0.62.orig.tar.xz) = e1167351127aad1d661b987245e619f737a2fc0c
 RMD160 (moreutils_0.62.orig.tar.xz) = 93a42c239443e572c7e1cc7e370882a702272671
@@ -8,3 +8,4 @@ SHA1 (patch-Makefile) = 80fb38e584db12f344ed66da76c8bee0127d17cc
 SHA1 (patch-ifdata.c) = 5c0d9737657354ad1877f2efc6ff08e76ca7bc62
 SHA1 (patch-is__utf8_Makefile) = 8feacdc8a0a0939aefd7f647be8196bdfdbda66c
 SHA1 (patch-pee.c) = 0c2cf167e7038fadd818ea3262686a1b4ed5aa7e
+SHA1 (patch-sponge.c) = 3ba941bcc1d6595c8fb6aa59b1636e86dadfdf32
