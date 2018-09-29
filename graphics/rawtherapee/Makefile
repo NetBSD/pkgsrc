@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/04/16 14:34:40 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2018/09/29 18:38:32 tnn Exp $
 
 DISTNAME=	RawTherapee-5.3
 PKGNAME=	${DISTNAME:tl}
@@ -18,6 +18,10 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
 CMAKE_ARGS+=	-DPKGMANDIR=${PKGMANDIR}
+
+# ReleaseInfo.cmake must exist or it will try to use git(1) to regen it.
+pre-configure:
+	touch ${WRKSRC}/ReleaseInfo.cmake
 
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
