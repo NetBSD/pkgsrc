@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 03:29:08 agc Exp $
+$NetBSD: distinfo,v 1.7 2018/09/29 12:59:24 tnn Exp $
 
 SHA1 (xless-1.7.tar.gz) = 2fb2c468aa6c0237be1d2bc256fcaf754c98b20e
 RMD160 (xless-1.7.tar.gz) = 87047418d9928df97635b1f2b2908559fe5d2461
 SHA512 (xless-1.7.tar.gz) = 34656719bdf4bf5234348384f5e432e3d74011aa0722ef95bffb425eed23a47db082ba2a24ed1a7d25916bc325585fb38f0f85b66246c3152846314278eb939e
 Size (xless-1.7.tar.gz) = 45559 bytes
 SHA1 (patch-aa) = d76edac759341d472a44eae25b08f8f89271fc5d
+SHA1 (patch-regexp_regsub.c) = 16e703426ab179c187ca3bfa4d16d3abee9c827f
