@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2016/03/05 11:29:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.34 2018/09/29 13:39:31 tnn Exp $
 #
 
 DISTNAME=		xorp-1.6
@@ -32,6 +32,9 @@ pre-build:
 # This used to be set for clang only, but it's needed for gcc as well
 # these days. See PR 36974; also there are other warnings with gcc48.
 BUILDLINK_TRANSFORM+=	rm:-Werror
+
+# configure sets the template depth limit to 25 but it is too small
+BUILDLINK_TRANSFORM+=	opt:-ftemplate-depth-25:-ftemplate-depth=50
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
