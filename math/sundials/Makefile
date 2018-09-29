@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2018/07/07 04:15:18 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2018/09/29 12:37:20 tnn Exp $
 
 DISTNAME=	sundials-3.1.1
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	https://computation.llnl.gov/projects/sundials/download/
 
@@ -9,6 +10,7 @@ HOMEPAGE=	https://computation.llnl.gov/projects/sundials
 COMMENT=	Suite of nonlinear and differential/algrbraic equation solvers
 LICENSE=	modified-bsd
 
+PYTHON_FOR_BUILD_ONLY=	yes
 USE_CMAKE=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}/build
 
@@ -26,4 +28,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/../README.md ${WRKSRC}/../doc/*/* \
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
