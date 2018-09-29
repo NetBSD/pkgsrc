@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.12 2018/04/21 19:40:50 sevan Exp $
+# $NetBSD: mksandbox,v 1.13 2018/09/29 18:59:29 sevan Exp $
 
 # Copyright (c) 2002,2012 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -99,6 +99,7 @@ DragonFly)
 	mountprog=/sbin/mount
 	paxprog=/bin/pax
 	sedprog=/usr/bin/sed
+	sandboxEmptyDirs="$sandboxEmptyDirs /var/spool/dma"
 	;;
 FreeBSD)
 	bmakeprog=bmake
