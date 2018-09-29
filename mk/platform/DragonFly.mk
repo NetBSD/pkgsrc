@@ -1,4 +1,4 @@
-# $NetBSD: DragonFly.mk,v 1.51 2016/12/04 15:37:41 bsiegert Exp $
+# $NetBSD: DragonFly.mk,v 1.52 2018/09/29 11:47:33 sevan Exp $
 #
 # Variable definitions for the DragonFly operating system.
 
@@ -27,7 +27,7 @@ ULIMIT_CMD_cputime?=	ulimit -t `ulimit -H -t`
 
 _OPSYS_EMULDIR.linux=	# empty
 
-_OPSYS_SYSTEM_RPATH?=		/lib:/usr/lib:/usr/lib/gcc47:/usr/lib/gcc50
+_OPSYS_SYSTEM_RPATH?=		/lib:/usr/lib:/usr/lib/gcc47:/usr/lib/gcc50:/usr/lib/gcc80
 _OPSYS_LIB_DIRS?=		/lib /usr/lib
 _OPSYS_INCLUDE_DIRS?=		/usr/include
 
