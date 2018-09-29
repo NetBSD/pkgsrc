@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2018/08/12 10:45:03 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.13 2018/09/29 12:08:46 tnn Exp $
 bin/ibus
 bin/ibus-daemon
 bin/ibus-setup
@@ -329,4 +329,6 @@ share/locale/vi/LC_MESSAGES/ibus10.mo
 share/locale/zh_CN/LC_MESSAGES/ibus10.mo
 share/locale/zh_HK/LC_MESSAGES/ibus10.mo
 share/locale/zh_TW/LC_MESSAGES/ibus10.mo
+share/vala/vapi/ibus-1.0.deps
+share/vala/vapi/ibus-1.0.vapi
 @pkgdir share/ibus/engine
