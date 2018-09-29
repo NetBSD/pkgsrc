@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2018/09/21 13:24:34 maya Exp $
+$NetBSD: distinfo,v 1.2 2018/09/29 18:23:06 maya Exp $
 
 SHA1 (alure-1.2.tar.gz) = 82c40fe01c22c4869130b29d26139720401a5313
 RMD160 (alure-1.2.tar.gz) = 900120da54efa87aca9bae460f9f4d7d7b23aa3f
 SHA512 (alure-1.2.tar.gz) = 77c3064deeb0ae9a04c13895648d4c57dd6af803868c4db7489366dd698dbca2d162be84ec581df76417e99eb4b96c38032d690eb33f9fe1b7b352b4aa1c84c1
 Size (alure-1.2.tar.gz) = 85331 bytes
-SHA1 (patch-CMakeLists.txt) = 06f86259498a723ce8c159774aa2afbb7418a2ae
+SHA1 (patch-CMakeLists.txt) = 766ae666155c1ac5c9fe3e3aa9e0a4dc912bb0f3
 SHA1 (patch-src_codec__fluidsynth.cpp) = 7042da99b93d722c3241094d7bb941250cb135f6
