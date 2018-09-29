@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/09/23 17:14:53 taca Exp $
+# $NetBSD: Makefile,v 1.4 2018/09/29 10:33:46 tnn Exp $
 
 DISTNAME=	minima-2.5.0
 PKGNAME=	${RUBY_PKGPREFIX}-jekyll-${DISTNAME}
@@ -14,6 +14,8 @@ LICENSE=	mit
 #DEPENDS+=	${RUBY_PKGPREFIX}-jekyll>=3.5<4:../../www/ruby-jekyll
 DEPENDS+=	${RUBY_PKGPREFIX}-jekyll-feed>=0.9<1:../../www/ruby-jekyll-feed
 DEPENDS+=	${RUBY_PKGPREFIX}-jekyll-seo-tag>=2.1<3:../../www/ruby-jekyll-seo-tag
+
+RUBY_VERSIONS_ACCEPTED=	23 24 25
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
