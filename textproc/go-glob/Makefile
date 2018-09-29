@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/09/27 21:06:06 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2018/09/29 15:27:07 tnn Exp $
 
 DISTNAME=	glob-0.2.3
 PKGNAME=	go-${DISTNAME}
@@ -15,10 +15,7 @@ LICENSE=	mit
 GO_DIST_BASE=	${DISTNAME}
 GO_SRCPATH=	${HOMEPAGE:S,https://,,}
 
-REPLACE_INTERPRETER+=	bash
-REPLACE.bash.old=	.*/bin/bash
-REPLACE.bash.new=	${SH}
-REPLACE_FILES.bash=	bench.sh
+REPLACE_SH+=	bench.sh
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
