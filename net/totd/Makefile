@@ -1,21 +1,19 @@
-# $NetBSD: Makefile,v 1.33 2017/09/06 10:40:31 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2018/09/29 10:52:55 maya Exp $
 #
 
-DISTNAME=	totd-1.5.1
+DISTNAME=	totd-1.5.3
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.pasta.cs.uit.no/pub/totd/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=fwdillema/}
+GITHUB_PROJECT=	totd
 
-MAINTAINER=	feico@pasta.cs.uit.no
-#HOMEPAGE=	http://www.vermicelli.pasta.cs.uit.no/software/totd.html
+MAINTAINER=	feico@dillema.net
+HOMEPAGE=	https://github.com/fwdillema/totd
 COMMENT=	DNS proxy that supports IPv6 <==> IPv4 record translation
 
 GNU_CONFIGURE=	yes
 USE_FEATURES+=	inet6
 
-CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR:Q}
-
-BUILDLINK_TRANSFORM+=		rm:-Werror
-
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8 share/examples/totd
 
 do-install:
