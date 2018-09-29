@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/09/10 22:43:58 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2018/09/29 15:26:58 tnn Exp $
 
 DISTNAME=	appengine-1.1.0
 PKGNAME=	go-${DISTNAME}
@@ -14,6 +14,8 @@ LICENSE=	apache-2.0
 
 GO_DIST_BASE=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 GO_SRCPATH=	google.golang.org/appengine
+
+REPLACE_SH+=	internal/regen.sh
 
 .include "../../devel/go-protobuf/buildlink3.mk"
 .include "../../net/go-net/buildlink3.mk"
