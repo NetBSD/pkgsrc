@@ -1,4 +1,4 @@
-$NetBSD: patch-src_busopen.c,v 1.1 2018/02/03 20:26:31 kamil Exp $
+$NetBSD: patch-src_busopen.c,v 1.2 2018/09/29 21:19:13 kamil Exp $
 
 Port to NetBSD.
 
@@ -89,7 +89,16 @@ Port to NetBSD.
  
        /*
         | Must reset errno to see if I/O routines triggered an error.
-@@ -311,9 +314,9 @@ int    busopenP(op)
+@@ -279,7 +282,7 @@ int    busopenP(op)
+            fd_port = op;
+            if (fd_listen) { fclose(fd_listen); fd_listen = NULL; }
+            if (fd_talk)   { fclose(fd_talk); fd_talk = NULL; }
+-           fd_listen = sopen(fd_addr, fd_port, -2, NULL);             /* open but don't wait for accept, set SIGIO tell us */
++           fd_listen = sopen(fd_addr.s_addr, fd_port, -2, NULL);             /* open but don't wait for accept, set SIGIO tell us */
+            Dprintf(("\n\n*** busopenP reopen fd_listen = %x errno = %d ***\n", fd_listen, errno));
+            return(fd_listen == NULL);                                 /* return 0 for success -1 for failure */
+        }
+@@ -311,13 +314,13 @@ int    busopenP(op)
                 Dprintf(("\tbusopenP accepting fd_listen & opening fd_talk\n"));
                 if (fdwait(fdl, 0, 10) == 1) {                                 /* if activity on socket try to accept */
                    struct sockaddr_in client;
@@ -101,6 +110,20 @@ Port to NetBSD.
                        Dprintf(("\tbusopenP connection accepted\n"));
                        fclose(fd_listen);                                      /* got accept don't need listner socket now so close it down */
                        fd_listen = NULL;                                       /* and clear FILE * so we do not enter this code on next liio(-1) */
+-                      if (addrok(client.sin_addr.s_addr, fd_addr)) {          /* if client address matches mask */
++                      if (addrok(client.sin_addr.s_addr, fd_addr.s_addr)) {          /* if client address matches mask */
+                           fdasync(fdt);                                       /* set up so that on I/O event send signal SIGIO */
+                           fd_talk = fdopen(fdt, "r+");                        /* and open a FILE * equivalent to this talk file fd */
+                       } else
+@@ -423,7 +426,7 @@ int    busopenP(op)
+            if ((fd_talk == NULL) && (fd_listen == NULL)) {
+                int i;
+                for(i = 0; i < 30; i++) {
+-                   fd_listen = sopen(fd_addr, fd_port, -2, NULL);                                          /* open but don't wait for accept, let SIGIO tell us */
++                   fd_listen = sopen(fd_addr.s_addr, fd_port, -2, NULL);                                          /* open but don't wait for accept, let SIGIO tell us */
+                    Dprintf(("\n\n*** busopenP reopen fd_listen = %x errno = %d ***\n", fd_listen, errno));
+                    if (fd_listen != NULL) break;                                                           /* if opened ok the break out of retry loop */
+                    sleep(1);                                                                               /* sleep for one second then retry */
 @@ -446,7 +449,7 @@ struct conscell *buREPsopen(form)
         struct conscell *form;
  {
