@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/11/04 00:35:41 agc Exp $
+$NetBSD: distinfo,v 1.9 2018/09/29 10:52:55 maya Exp $
 
-SHA1 (totd-1.5.1.tar.gz) = cf9d48b386b2f218032b8997e28b46e64921d59e
-RMD160 (totd-1.5.1.tar.gz) = 3b80931837eed1bd9e5cdfa8a3ed708d6ed40429
-SHA512 (totd-1.5.1.tar.gz) = 47087fd0478bc2952b25a0952ffb7273e4fdebda019f61fd0bad3c0305ab8f6e32b8f8dd042364f9ae6e6bd31c223e8fd3b17e3b4d44219fd6509f530f56025a
-Size (totd-1.5.1.tar.gz) = 235809 bytes
-SHA1 (patch-aa) = b39db5c3a38c34b603038aa053e8a8711694e1ed
+SHA1 (totd-1.5.3.tar.gz) = a1ccdbc1a05b463619cb207988bd5a0c452a7d16
+RMD160 (totd-1.5.3.tar.gz) = b5b28a992e06f00d7983fab96c651b997ed5c47e
+SHA512 (totd-1.5.3.tar.gz) = eb6fe6f2d1eda7d0bae8fa5b966b59813982264849fe835343c6a85e9262554bc2f89764c2ff760cd722786da391bcf8fdba5d544327a202316b35bd837b8c13
+Size (totd-1.5.3.tar.gz) = 243807 bytes
