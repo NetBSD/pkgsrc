@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2018/08/22 09:46:07 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2018/09/29 14:37:30 wiedi Exp $
 
 DISTNAME=	samba-${VERSION}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	net
 MASTER_SITES=	http://download.samba.org/pub/samba/stable/
 
@@ -162,6 +162,8 @@ SUBST_SED.logpath+=	-e 's,/usr/local/samba/var/log.%m,${SMB_LOGFILEBASE}/log.%m,
 .if ${INIT_SYSTEM} == "rc.d"
 MESSAGE_SRC=		${PKGDIR}/MESSAGE.rcd
 .endif
+
+SMF_INSTANCES=	smbd nmbd
 
 post-extract:
 	${CP} ${FILESDIR}/adduser.sh ${FILESDIR}/deluser.sh ${WRKDIR}
