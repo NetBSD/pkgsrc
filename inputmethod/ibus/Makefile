@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.57 2018/08/12 10:45:03 tsutsui Exp $
+# $NetBSD: Makefile,v 1.58 2018/09/29 12:08:46 tnn Exp $
 
 .include "Makefile.common"
+
+PKGREVISION=	1
 
 COMMENT=	Intelligent Input Bus
 
@@ -66,6 +68,8 @@ BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.26.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+BUILDLINK_DEPMETHOD.vala+=	build
+.include "../../lang/vala/buildlink3.mk"
 PY_PATCHPLIST=	yes
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
