@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18566 2018/09/25 11:27:50 adam Exp $
+$NetBSD: TODO,v 1.18567 2018/09/29 12:34:35 tnn Exp $
 
 Suggested new packages
 ======================
@@ -1209,7 +1209,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o polsms-2.1.0
 	o poppass-4.0.14
 	o poppler-0.69.0
-	o posh-0.12.6
 	o postal-0.72
 	o pound-2.8a
 	o povray-3.7.0.0
