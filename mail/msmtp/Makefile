@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2018/09/19 09:26:45 leot Exp $
+# $NetBSD: Makefile,v 1.71 2018/09/29 21:42:13 wiedi Exp $
 
 DISTNAME=	msmtp-1.8.0
 CATEGORIES=	mail
@@ -25,6 +25,7 @@ INFO_FILES=	yes
 PLIST_VARS+=	scripts
 
 CPPFLAGS.Interix+=	-D__WINSOCK
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .include "options.mk"
 
