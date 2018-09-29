@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4221 2018/09/29 10:56:52 maya Exp $
+$NetBSD: CHANGES-2018,v 1.4222 2018/09/29 12:34:35 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5878,3 +5878,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/djbdns to 1.05nb14 [schmonz 2018-09-28]
 	Updated mail/mailfront to 2.22 [schmonz 2018-09-28]
 	Updated net/totd to 1.5.3 [maya 2018-09-29]
+	Updated shells/posh to 0.12.6 [tnn 2018-09-29]
