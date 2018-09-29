@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/07/19 15:15:25 jaapb Exp $
+# $NetBSD: Makefile,v 1.4 2018/09/29 11:47:11 tnn Exp $
 
 GITHUB_PROJECT=	ppxlib
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -14,6 +14,7 @@ COMMENT=	Base library and tools for ppx rewriters
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=	# none
+USE_TOOLS+=	bash
 OCAML_USE_JBUILDER=	yes
 
 SUPERSEDES=	ocaml-ppx_ast-[0-9]* \
