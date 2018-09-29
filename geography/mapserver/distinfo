@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 00:08:43 agc Exp $
+$NetBSD: distinfo,v 1.10 2018/09/29 15:05:03 tnn Exp $
 
 SHA1 (mapserver-5.6.8.tar.gz) = 44b813f888c8c950f5e2ba20ae4d7ef08d002bc4
 RMD160 (mapserver-5.6.8.tar.gz) = dd00c7e6ed57b3522f47a7fede8299bd8ef12566
 SHA512 (mapserver-5.6.8.tar.gz) = 33eb64be8420b04eb6017d0a96da11aa401c6aab670fa9dad59879d5da45b512205896cd1ce42fba5a0b0c7bc68a9cf774a0ce5b639177c8e29b43c66bb03a41
 Size (mapserver-5.6.8.tar.gz) = 2332277 bytes
 SHA1 (patch-aa) = d842afeab3455304236bebbf4ea576c974cafbdd
-SHA1 (patch-ab) = f1521546905034304bc5f1556625d6171421d93d
+SHA1 (patch-ab) = 2fb63f73526fa2a3cdd7728a09cb89c9984a1741
 SHA1 (patch-mapserver.h) = 82e9f4f90495959190962286f9fae0e4be649d20
 SHA1 (patch-maputil.c) = 4d50919a24af34a74d0e14684e3fab4269582639
 SHA1 (patch-renderers_agg_include_agg__renderer__outline__aa.h) = 84145a73bed1b016c6c13b5c2656b8957da9c71d
