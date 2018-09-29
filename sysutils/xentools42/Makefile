@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2018/08/22 09:46:41 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2018/09/29 16:52:35 tnn Exp $
 
 VERSION=	4.2.5
 VERSION_IPXE=	1.0.0
@@ -257,6 +257,8 @@ EXTRA_CFLAGS+=	-Wno-error=ignored-attributes -no-integrated-as \
 BUILDLINK_TRANSFORM+=	rm:-falign-jumps=1 rm:-falign-loops=1 \
 			rm:-mpreferred-stack-boundary=2
 .endif
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 MAKE_ENV+=	EXTRA_HOSTCFLAGS=${EXTRA_HOSTCFLAGS:Q} EXTRA_CFLAGS=${EXTRA_CFLAGS:M*:Q}
 
