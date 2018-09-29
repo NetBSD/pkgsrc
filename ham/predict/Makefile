@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/07/21 23:21:17 dbj Exp $
+# $NetBSD: Makefile,v 1.3 2018/09/29 14:01:58 tnn Exp $
 #
 
 DISTNAME=	predict-2.2.3
@@ -11,6 +11,7 @@ COMMENT= 	PREDICT - curses satellite tracking/orbital prediction program
 
 LICENSE=	gnu-gpl-v2
 
+FAKE_NCURSES=	yes
 USE_LANGUAGES=	c
 
 do-configure:
