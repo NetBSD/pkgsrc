@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/08/16 18:55:13 adam Exp $
+# $NetBSD: Makefile,v 1.15 2018/09/29 19:34:29 wiedi Exp $
 
 # PKGREVISION= 1
 PKGREVISION= 1
@@ -18,6 +18,8 @@ CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--with-jabber
 CONFIGURE_ARGS+=	--with-ldap=${BUILDLINK_PREFIX.openldap-client}
 CONFIGURE_ARGS+=	--with-libcurl
+CONFIGURE_ARGS+=	--with-libevent=${BUILDLINK_PREFIX.libevent}
+CONFIGURE_ARGS+=	--with-libpcre=${BUILDLINK_PREFIX.pcre}
 CONFIGURE_ARGS+=	--with-libxml2
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 
@@ -53,6 +55,7 @@ post-install:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/openldap-client/buildlink3.mk"
+.include "../../devel/libevent/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/iksemel/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
