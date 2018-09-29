@@ -1,8 +1,10 @@
-$NetBSD: patch-ab,v 1.1 2010/01/26 09:01:24 adam Exp $
+$NetBSD: patch-ab,v 1.2 2018/09/29 15:05:03 tnn Exp $
 
---- configure.orig	2009-11-27 21:16:01.000000000 +0000
+use correct --lib args to geos-config
+
+--- configure.orig	2011-10-04 15:01:41.000000000 +0000
 +++ configure
-@@ -9186,7 +9186,7 @@ else
+@@ -9288,7 +9288,7 @@ else
  echo "${ECHO_T}no" >&6
  fi
  
@@ -11,7 +13,16 @@ $NetBSD: patch-ab,v 1.1 2010/01/26 09:01:24 adam Exp $
        { { echo "$as_me:$LINENO: error: the freetype-config executable could not be found and is required for agg support
          to fix this, you should either:
          * install the freetype development headers
-@@ -12159,7 +12159,7 @@ if test "$FRIBIDI_CONFIG" = "no" ; then
+@@ -11029,7 +11029,7 @@ echo "${ECHO_T}GEOS >= 3.0.0 found. Addi
+ 
+   GEOS_INCDIR=`$GEOS_CONFIG --includes`
+   GEOS_INC="-I$GEOS_INCDIR"
+-  GEOS_LIB="`$GEOS_CONFIG --libs`_c"
++  GEOS_LIB="`$GEOS_CONFIG --clibs`"
+ 
+   GEOS_ENABLED=$GEOS_ENABLED
+ 
+@@ -12334,7 +12334,7 @@ if test "$FRIBIDI_CONFIG" = "no" ; then
    FRIBIDI_INC=
    FRIBIDI_LIB=
  else
