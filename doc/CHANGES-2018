@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4223 2018/09/29 19:03:13 tnn Exp $
+$NetBSD: CHANGES-2018,v 1.4224 2018/09/30 15:55:34 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5880,3 +5880,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/totd to 1.5.3 [maya 2018-09-29]
 	Updated shells/posh to 0.12.6 [tnn 2018-09-29]
 	Updated print/pdf2djvu to 0.9.10 [tnn 2018-09-29]
+	Updated net/tinc to 1.0.32nb1 [jperkin 2018-09-30]
