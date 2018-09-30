@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2018/07/24 12:22:07 jaapb Exp $
+# $NetBSD: Makefile,v 1.71 2018/09/30 06:58:33 wiedi Exp $
 
 PKGNAME=		racket-6.12
 DISTNAME=		${PKGNAME_NOREV}-src
@@ -32,6 +32,7 @@ USE_TOOLS=		pkg-config gmake
 UNLIMIT_RESOURCES=	datasize
 MAKE_ENV+=	"PAXCTL=${TOOLS_PLATFORM.paxctl}"
 
+CPPFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
 LDFLAGS.DragonFly+=	-rdynamic
 
 CHECK_INTERPRETER_SKIP=	collects/meta/build/sitemap/setup.py \
