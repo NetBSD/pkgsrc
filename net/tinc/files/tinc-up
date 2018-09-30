@@ -1,0 +1,7 @@
+#!/bin/sh
+
+ifconfig $INTERFACE plumb
+ifconfig $INTERFACE 192.168.100.1 netmask 255.255.255.0 up
+
+# Add the routes needed
+# route add -net 192.168.4.0/24 172.16.12.10 -interface
