@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4226 2018/09/30 18:43:46 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.4227 2018/09/30 19:12:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5883,3 +5883,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/tinc to 1.0.32nb1 [jperkin 2018-09-30]
 	Updated lang/rust to 1.29.1 [minskim 2018-09-30]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2018Q3 branch [jperkin 2018-09-30]
+	Updated net/syncthing to 0.14.50 [wiz 2018-09-30]
