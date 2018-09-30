@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2018/09/30 19:27:19 maya Exp $
+bin/mrrescue
+share/games/mrrescue${PKGVERSION}.love
