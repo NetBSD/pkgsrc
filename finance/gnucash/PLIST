@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.68 2018/06/25 08:02:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.69 2018/09/30 23:47:32 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -240,6 +240,7 @@ lib/gnucash/libgncmod-html.so
 lib/gnucash/libgncmod-ledger-core.so
 lib/gnucash/libgncmod-locale-reports-us.so
 lib/gnucash/libgncmod-log-replay.so
+lib/gnucash/libgncmod-python.so
 lib/gnucash/libgncmod-qif-import.so
 lib/gnucash/libgncmod-register-core.so
 lib/gnucash/libgncmod-register-gnome.so
@@ -284,11 +285,9 @@ lib/gnucash/scm/ccache/2.2/gnucash/report/aging.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/balsheet-eg.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/business-reports.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/customer-summary.go
-lib/gnucash/scm/ccache/2.2/gnucash/report/easy-invoice.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/eguile-gnc.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/eguile-html-utilities.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/eguile-utilities.go
-lib/gnucash/scm/ccache/2.2/gnucash/report/fancy-invoice.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/hello-world.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/invoice.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/job-report.go
@@ -305,7 +304,6 @@ lib/gnucash/scm/ccache/2.2/gnucash/report/report-system/report-collectors.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/report-system/test/test-collectors.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/report-system/test/test-extras.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/report-system/test/test-load-report-system-module.go
-lib/gnucash/scm/ccache/2.2/gnucash/report/report-system/test/test-report-utilities.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/report-system/test/test-test-extras.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/standard-reports.go
 lib/gnucash/scm/ccache/2.2/gnucash/report/standard-reports/account-piecharts.go
@@ -1045,11 +1043,9 @@ share/gnucash/scm/gnucash/report/balsheet-eg.eguile.scm
 share/gnucash/scm/gnucash/report/balsheet-eg.scm
 share/gnucash/scm/gnucash/report/business-reports.scm
 share/gnucash/scm/gnucash/report/customer-summary.scm
-share/gnucash/scm/gnucash/report/easy-invoice.scm
 share/gnucash/scm/gnucash/report/eguile-gnc.scm
 share/gnucash/scm/gnucash/report/eguile-html-utilities.scm
 share/gnucash/scm/gnucash/report/eguile-utilities.scm
-share/gnucash/scm/gnucash/report/fancy-invoice.scm
 share/gnucash/scm/gnucash/report/hello-world.scm
 share/gnucash/scm/gnucash/report/invoice.scm
 share/gnucash/scm/gnucash/report/job-report.scm
@@ -1068,7 +1064,6 @@ share/gnucash/scm/gnucash/report/report-system/report-collectors.scm
 share/gnucash/scm/gnucash/report/report-system/test/test-collectors.scm
 share/gnucash/scm/gnucash/report/report-system/test/test-extras.scm
 share/gnucash/scm/gnucash/report/report-system/test/test-load-report-system-module.scm
-share/gnucash/scm/gnucash/report/report-system/test/test-report-utilities.scm
 share/gnucash/scm/gnucash/report/report-system/test/test-test-extras.scm
 share/gnucash/scm/gnucash/report/standard-reports.scm
 share/gnucash/scm/gnucash/report/standard-reports/account-piecharts.scm
