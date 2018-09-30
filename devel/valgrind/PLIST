@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2018/01/29 22:35:06 alnsn Exp $
+@comment $NetBSD: PLIST,v 1.11 2018/09/30 11:57:58 wiedi Exp $
 bin/callgrind_annotate
 bin/callgrind_control
 bin/cg_annotate
@@ -71,6 +71,8 @@ include/valgrind/pub_tool_vkiscnums_asm.h
 include/valgrind/pub_tool_vkiscnums.h
 include/valgrind/pub_tool_wordfm.h
 include/valgrind/pub_tool_xarray.h
+include/valgrind/pub_tool_xtmemory.h
+include/valgrind/pub_tool_xtree.h
 include/valgrind/valgrind.h
 include/valgrind/vki/vki-amd64-linux.h
 include/valgrind/vki/vki-arm64-linux.h
@@ -278,6 +280,7 @@ share/doc/valgrind/html/faq.html
 share/doc/valgrind/html/FAQ.html
 share/doc/valgrind/html/hg-manual.html
 share/doc/valgrind/html/images/home.png
+share/doc/valgrind/html/images/kcachegrind_xtree.png
 share/doc/valgrind/html/images/next.png
 share/doc/valgrind/html/images/prev.png
 share/doc/valgrind/html/images/up.png
