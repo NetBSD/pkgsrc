@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4227 2018/09/30 19:12:25 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.4228 2018/09/30 19:36:20 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5884,3 +5884,14 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/rust to 1.29.1 [minskim 2018-09-30]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2018Q3 branch [jperkin 2018-09-30]
 	Updated net/syncthing to 0.14.50 [wiz 2018-09-30]
+	Added games/not_pacman version 1.4 [maya 2018-09-30]
+	Added games/not_tetris version 2.0 [maya 2018-09-30]
+	Added games/mari0 version 1.6 [maya 2018-09-30]
+	Added games/mrrescue version 1.02e [maya 2018-09-30]
+	Added games/sienna version 1.0c [maya 2018-09-30]
+	Added games/love07 version 0.7.2 [maya 2018-09-30]
+	Added games/love08 version 0.8.0 [maya 2018-09-30]
+	Added games/love09 version 0.9.0 [maya 2018-09-30]
+	Added games/love010 version 0.10.2 [maya 2018-09-30]
+	Added multimedia/libaom version 1.0.0 [maya 2018-09-30]
+	Updated multimedia/ffmpeg4 to 4.0.2nb2 [maya 2018-09-30]
