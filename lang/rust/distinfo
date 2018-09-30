@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.38 2018/09/30 16:19:54 minskim Exp $
+$NetBSD: distinfo,v 1.39 2018/09/30 17:46:24 minskim Exp $
 
-SHA1 (rust-1.28.0-i686-apple-darwin.tar.gz) = c0b196ed17a5d816252282488646354f783d65c8
-RMD160 (rust-1.28.0-i686-apple-darwin.tar.gz) = d6813d0ec825ac9871d0ea1d8248757ddd07efd1
-SHA512 (rust-1.28.0-i686-apple-darwin.tar.gz) = 4f173fb039275aa59df6b0510fcd38c6a70e488044baa5a71f9785b79c508283cdbd08069e695ad371ac862a7d2896f93fc4df92410c2fc282aa5e5bdd0ac60e
-Size (rust-1.28.0-i686-apple-darwin.tar.gz) = 30301215 bytes
+SHA1 (rust-1.28.0-i686-apple-darwin.tar.gz) = 85d947b4d260361f63f77e1f4921ac89bd849d78
+RMD160 (rust-1.28.0-i686-apple-darwin.tar.gz) = 963abf1b0b5e2673c8e2d6c1b4d5a2d8ed9d8d2f
+SHA512 (rust-1.28.0-i686-apple-darwin.tar.gz) = cd38065e1b3c8f466ed5b7f73ee8e0880bff6c11cdff95d232ad7d829eafccd3b76c75fc217a4d39238f1ca3ac010b3bb54b15ebfbaabcc7a01366aae8bc16dd
+Size (rust-1.28.0-i686-apple-darwin.tar.gz) = 182649730 bytes
 SHA1 (rust-1.28.0-i686-unknown-freebsd.tar.gz) = 458f684bb2f9f09f79d2af3fd4b1c58f27be894c
 RMD160 (rust-1.28.0-i686-unknown-freebsd.tar.gz) = 8865570a7facbeaf988e46d5f80dcb05cabee8ec
 SHA512 (rust-1.28.0-i686-unknown-freebsd.tar.gz) = 493c1dddcdd4393d07d5e132b3ef672fec8d3bfa1818709b7da3b50bef0b1f7d7cf4ceee240c99ef98278fa164bd03b170d00d6dd8a2f5b431985ddd4b642777
