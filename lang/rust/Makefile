@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2018/09/14 10:04:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.52 2018/09/30 16:19:54 minskim Exp $
 
-DISTNAME=	rustc-1.29.0-src
+DISTNAME=	rustc-1.29.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
 CATEGORIES=	lang
 MASTER_SITES=	http://static.rust-lang.org/dist/
@@ -209,7 +209,7 @@ GENERATE_PLIST+= find ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
 .PHONY: fix-darwin-install-name
 post-install: fix-darwin-install-name
 fix-darwin-install-name:
-.  for bin in rustc rustdoc
+.  for bin in clippy-driver rls rustc rustdoc
 	otool -XL ${DESTDIR}${PREFIX}/bin/${bin}			\
 	    | ${GREP} '@rpath' | while read rpath rest; do		\
 		install_name_tool -change $$rpath			\
@@ -217,13 +217,13 @@ fix-darwin-install-name:
 		    ${DESTDIR}${PREFIX}/bin/${bin};			\
 	done
 .  endfor
-.  for libdir in lib lib/rustlib/${RUST_ARCH}/lib
+.  for libdir in lib lib/rustlib/${RUST_ARCH}/lib lib/rustlib/${RUST_ARCH}/codegen-backends
 	for f in ${DESTDIR}${PREFIX}/${libdir}/lib*.dylib; do		\
 		[ ! -f $$f ] && continue;				\
 		install_name_tool -id `${ECHO} $$f | ${SED} -e 's,${DESTDIR},,g'` $$f; \
 		otool -XL $$f | grep '@rpath' | while read rpath rest; do \
 			install_name_tool -change $$rpath \
-			    `${ECHO} $$rpath | ${SED} -e 's,@rpath,${PREFIX}/${libdir},g'` \
+			    `${ECHO} $$rpath | ${SED} -e 's,@rpath,${PREFIX}/lib,g'` \
 			    $$f;					\
 		done;							\
 	done
