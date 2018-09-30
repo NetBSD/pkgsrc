@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 01:12:37 agc Exp $
+$NetBSD: distinfo,v 1.10 2018/09/30 22:29:07 schmonz Exp $
 
-SHA1 (libmp3splt-0.8.2.tar.gz) = 5c8539391e26d047c30360b1dde2c08e6a02061f
-RMD160 (libmp3splt-0.8.2.tar.gz) = e2f1930248e3b8d4cd80739a1e2c661ba025f2a6
-SHA512 (libmp3splt-0.8.2.tar.gz) = 94c11a9d2e08673cc33aa54bbefc36e3881d6f5efad913d36d2af4c759570abbd3dec8bb8b35371c98d8096e15ddae245933fad3dafb8fafe0a5ab87a71f8002
-Size (libmp3splt-0.8.2.tar.gz) = 671071 bytes
+SHA1 (libmp3splt-0.9.2.tar.gz) = d4e84e1f466e7fdabe30d0a12acb751903bb9203
+RMD160 (libmp3splt-0.9.2.tar.gz) = f069b924e3513b630f4551496ebe925bef422023
+SHA512 (libmp3splt-0.9.2.tar.gz) = e5c98e8b173bc86302ccee4ca5eb0c8a8d93f225357eb7b14dea8d0700ed62ed6316506c182f6b295130f7924ff0b38e865d5e49fa9cd7882c648360d68872ed
+Size (libmp3splt-0.9.2.tar.gz) = 707598 bytes
 SHA1 (patch-aa) = 972a873d88848ec70eff330201398cc50775239b
-SHA1 (patch-src_socket__manager.c) = 308133cef80255606ed5fc971e10373c9f85dbd8
