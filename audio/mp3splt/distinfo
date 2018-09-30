@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2015/11/03 01:12:42 agc Exp $
+$NetBSD: distinfo,v 1.15 2018/09/30 22:30:05 schmonz Exp $
 
-SHA1 (mp3splt-2.5.2.tar.gz) = f9290951533ac9e01f1adb17ebf93a81e215396f
-RMD160 (mp3splt-2.5.2.tar.gz) = 4652282f3dba55de4589251acc5a280ad0f68b3b
-SHA512 (mp3splt-2.5.2.tar.gz) = 4fcaa5bc093aee54dae295f0322d6c4f033e985bdc990553bc94493091f919c55c0f40966c9f99feaa08ff96eceb15f64d3db4b677ba81c45b49d2098275c721
-Size (mp3splt-2.5.2.tar.gz) = 250066 bytes
+SHA1 (mp3splt-2.6.2.tar.gz) = f61094a1348cffb704ef021e59c1d26c4dc652ab
+RMD160 (mp3splt-2.6.2.tar.gz) = 2ead469bfa7989a77459684dd4098a1fdce9eb7f
+SHA512 (mp3splt-2.6.2.tar.gz) = c1cbdc905d4f19e8e20afeadf02a2967049d86e69613312c8855e03afc5b190a569ac63f970171384853961cbe6bf248fae47e5116c4fe9deb7a0787f299918b
+Size (mp3splt-2.6.2.tar.gz) = 260901 bytes
