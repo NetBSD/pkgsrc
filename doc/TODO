@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18568 2018/09/30 12:03:07 wiedi Exp $
+$NetBSD: TODO,v 1.18569 2018/09/30 19:12:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1389,7 +1389,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o swi-prolog-packages-7.1.37
 	o swt-4.5
 	o sympa-6.2.14
-	o syncthing-0.14.50
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1 [needs polkit|GNOME 2.30]
 	o systrace-1.6e
