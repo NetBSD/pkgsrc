@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2010/05/01 16:56:40 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/09/30 15:55:25 jperkin Exp $
 info/tinc.info
 man/man5/tinc.conf.5
 man/man8/tincd.8
 sbin/tincd
+share/examples/tinc/tinc-down
+share/examples/tinc/tinc-up
+share/examples/tinc/tinc.conf

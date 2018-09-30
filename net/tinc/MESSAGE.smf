@@ -1,0 +1,27 @@
+===========================================================================
+$NetBSD: MESSAGE.smf,v 1.1 2018/09/30 15:55:25 jperkin Exp $
+
+ This package supports multiple SMF instances.
+
+ By default a 'default' instance is created and a example tinc.conf
+ config file is put in place in the 'default' network directory.
+ No keys will be generated automatically, the user is expected to do so.
+
+ Configure using the SMF properties: user, chroot, memlock
+
+ 'user' is the user to setuid to after initialization.
+ 'chroot' will chroot the server process to the directory where the
+ network config is located.
+ 'memlock' locks tinc into the main memory.
+
+ For more information about these options check tincd(8) manpage.
+
+ Add a example service instance:
+
+  svccfg -s tinc add mynetwork
+  svccfg -s tinc:mynetwork addpg tinc application
+  svccfg -s tinc:mynetwork setprop tinc/user = astring: tincuser
+  svccfg -s tinc:mynetwork setprop tinc/chroot = boolean: true
+  svccfg -s tinc:mynetwork setprop tinc/memlock = boolean: true
+
+===========================================================================
