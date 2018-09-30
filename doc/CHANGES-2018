@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4230 2018/09/30 22:30:11 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.4231 2018/09/30 22:30:43 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5897,3 +5897,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/ffmpeg4 to 4.0.2nb2 [maya 2018-09-30]
 	Updated audio/libmp3splt to 0.9.2 [schmonz 2018-09-30]
 	Updated audio/mp3splt to 2.6.2 [schmonz 2018-09-30]
+	Updated audio/mp3splt-gtk to 0.9.2 [schmonz 2018-09-30]
