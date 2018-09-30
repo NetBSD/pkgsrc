@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.264 2018/09/04 06:13:15 wiz Exp $
+# $NetBSD: Makefile,v 1.265 2018/09/30 19:05:43 maya Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -104,6 +104,7 @@ SUBDIR+=	kmplayer
 SUBDIR+=	kodi
 SUBDIR+=	kscd
 SUBDIR+=	libaacs
+SUBDIR+=	libaom
 SUBDIR+=	libass
 SUBDIR+=	libassetml
 SUBDIR+=	libbdplus
