@@ -49,6 +49,7 @@ auth-mysql		Use MySQL for the jabberd2 authorization database.
 auth-pam		Use PAM for jabberd2 authorization.
 auth-pgsql		Use PostgreSQL for the jabberd2 authorization database.
 auth-sqlite		Use SQLite for the jabberd2 authorization database.
+av1			AOmedia Video 1 video codec support
 avahi			Enable DNS service discovery and multicast DNS support.
 avahi-howl		Enable howl compatibility in avahi.
 bacula-static		Enable building of statically linked versions of the Bacula daemons.
