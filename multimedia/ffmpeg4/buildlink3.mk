@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2018/04/26 07:56:57 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2018/09/30 19:00:31 maya Exp $
 
 BUILDLINK_TREE+=	ffmpeg4
 
@@ -13,6 +13,10 @@ pkgbase := ffmpeg4
 .include "../../mk/pkg-build-options.mk"
 
 .include "../../mk/bsd.fast.prefs.mk"
+
+.if !empty(PKG_BUILD_OPTIONS.ffmpeg4:Mav1)
+.  include "../../multimedia/libaom/buildlink3.mk"
+.endif
 
 .if !empty(PKG_BUILD_OPTIONS.ffmpeg4:Mfreetype)
 .  include "../../graphics/freetype2/buildlink3.mk"
