@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/09/30 19:21:18 maya Exp $
+
+SHA1 (love-0.10.2-linux-src.tar.gz) = 32120e20795807494946f364209167d646c94ac1
+RMD160 (love-0.10.2-linux-src.tar.gz) = 5530aa7f41e1e6a0ae3678b3eb3cdaa5c7d70dd3
+SHA512 (love-0.10.2-linux-src.tar.gz) = 81c0bb5a454ed9abc692784f155933288a2bd5ba5ffb919c7709584e7e8d68fca10b5ea1e3a386def46b18f071b217ffbc2914a8ea08424226f0580020fce076
+Size (love-0.10.2-linux-src.tar.gz) = 1698376 bytes
