@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2018/07/26 10:34:55 jaapb Exp $
+# $NetBSD: Makefile,v 1.34 2018/09/30 22:31:59 wiedi Exp $
 
 PKGNAME=		racket-minimal-6.12
 DISTNAME=		${PKGNAME_NOREV}-src
@@ -34,6 +34,7 @@ UNLIMIT_RESOURCES=	datasize
 OVERRIDE_DIRDEPTH=	3
 MAKE_ENV+=	"PAXCTL=${TOOLS_PLATFORM.paxctl}"
 
+CPPFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
 LDFLAGS.DragonFly+=	-rdynamic
 
 CHECK_INTERPRETER_SKIP=	lib/racket/collects/meta/build/sitemap/setup.py \
