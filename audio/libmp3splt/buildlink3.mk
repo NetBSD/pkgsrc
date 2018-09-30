@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.6 2013/07/05 16:12:30 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2018/09/30 22:29:07 schmonz Exp $
 
 BUILDLINK_TREE+=	libmp3splt
 
 .if !defined(LIBMP3SPLT_BUILDLINK3_MK)
 LIBMP3SPLT_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libmp3splt+=	libmp3splt>=0.8.2
-BUILDLINK_ABI_DEPENDS.libmp3splt+=	libmp3splt>=0.8.2
+BUILDLINK_API_DEPENDS.libmp3splt+=	libmp3splt>=0.9.2
+BUILDLINK_ABI_DEPENDS.libmp3splt+=	libmp3splt>=0.9.2
 BUILDLINK_PKGSRCDIR.libmp3splt?=	../../audio/libmp3splt
 ###
 ### XXX libmad and libvorbis are needed only for headers.
