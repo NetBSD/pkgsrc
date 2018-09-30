@@ -1,13 +1,13 @@
-# $NetBSD: options.mk,v 1.4 2018/09/29 14:25:39 tnn Exp $
+# $NetBSD: options.mk,v 1.5 2018/09/30 19:00:31 maya Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg4
-PKG_SUPPORTED_OPTIONS=	ass bluray doc fdk-aac fontconfig freetype gnutls \
-			lame libvpx opencore-amr openssl opus rpi rtmp \
-			tesseract theora vorbis x11 x264 x265 xcb xvid
-PKG_SUGGESTED_OPTIONS=	lame ass bluray freetype fontconfig libvpx openssl \
-			theora vorbis x11 x264 xvid
+PKG_SUPPORTED_OPTIONS=	ass av1 bluray doc fdk-aac fontconfig freetype \
+			gnutls lame libvpx opencore-amr openssl opus rpi \
+			rtmp tesseract theora vorbis x11 x264 x265 xcb xvid
+PKG_SUGGESTED_OPTIONS=	lame ass av1 bluray freetype fontconfig libvpx \
+			openssl theora vorbis x11 x264 xvid
 
 PLIST_VARS+=		doc
 
@@ -49,6 +49,14 @@ CONFIGURE_ARGS+=	--enable-libass
 .include "../../multimedia/libass/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-libass
+.endif
+
+# ass option
+.if !empty(PKG_OPTIONS:Mav1)
+CONFIGURE_ARGS+=	--enable-libaom
+.include "../../multimedia/libaom/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-libaom
 .endif
 
 # doc option
