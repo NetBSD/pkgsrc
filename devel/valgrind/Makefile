@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2018/08/22 09:45:01 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2018/09/30 11:57:58 wiedi Exp $
 #
 
 DISTNAME=		valgrind-3.13.0
@@ -25,6 +25,7 @@ ONLY_FOR_PLATFORM=	Darwin-*-i386 Darwin-*-x86_64 \
 USE_TOOLS+=		gmake perl
 USE_LANGUAGES=		c c++
 TEST_TARGET=		regtest
+SSP_SUPPORTED=		no
 
 .include "../../mk/bsd.prefs.mk"
 
