@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2018/09/30 19:28:03 maya Exp $
+bin/sienna
+share/games/${PKGNAME}.love
