@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2018/09/30 18:58:16 maya Exp $
+bin/aomdec
+bin/aomenc
+include/aom/aom.h
+include/aom/aom_codec.h
+include/aom/aom_decoder.h
+include/aom/aom_encoder.h
+include/aom/aom_frame_buffer.h
+include/aom/aom_image.h
+include/aom/aom_integer.h
+include/aom/aomcx.h
+include/aom/aomdx.h
+lib/libaom.so
+lib/libaom.so.0
+lib/pkgconfig/aom.pc
