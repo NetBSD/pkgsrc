@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.776 2018/09/11 00:30:46 minskim Exp $
+# $NetBSD: Makefile,v 1.777 2018/09/30 22:33:37 schmonz Exp $
 #
 
 COMMENT=	System utilities
@@ -655,6 +655,7 @@ SUBDIR+=	vip
 SUBDIR+=	virt-manager
 SUBDIR+=	virtinst
 SUBDIR+=	vobcopy
+SUBDIR+=	vultr
 SUBDIR+=	vxargs
 SUBDIR+=	watchman
 SUBDIR+=	wbm-apache
