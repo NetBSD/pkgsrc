@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4225 2018/09/30 16:20:17 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.4226 2018/09/30 18:43:46 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5882,3 +5882,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/pdf2djvu to 0.9.10 [tnn 2018-09-29]
 	Updated net/tinc to 1.0.32nb1 [jperkin 2018-09-30]
 	Updated lang/rust to 1.29.1 [minskim 2018-09-30]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2018Q3 branch [jperkin 2018-09-30]
