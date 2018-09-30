@@ -1,0 +1,19 @@
+$NetBSD: distinfo,v 1.1 2018/09/30 19:10:10 maya Exp $
+
+SHA1 (love-0.7.2-linux-src.tar.gz) = 876f527fc6908a6dd462080aa599ffa1ad47afa5
+RMD160 (love-0.7.2-linux-src.tar.gz) = e976925fd67e5c7714438c5135b516fb9c9bdc9a
+SHA512 (love-0.7.2-linux-src.tar.gz) = cbca1d7e3425d1ecbdae019212dfa2814d8ac3bad1faedd4b052cf3e89b5bf2fac6e422283628e4c125858c9db050dee2129476d1a73ec44ffe8a4704f170f61
+Size (love-0.7.2-linux-src.tar.gz) = 900209 bytes
+SHA1 (patch-src_common_runtime.cpp) = 2afed2f1a553263fd99331d1a50ac94806501113
+SHA1 (patch-src_love.cpp) = 21d180811e7e9dddfb136a1fd6f449d568ca016a
+SHA1 (patch-src_modules_audio_openal_Audio.h) = 5af2420188c5245767ab8425113386a4fe25a312
+SHA1 (patch-src_modules_audio_openal_Pool.h) = 89c0cce11a2ca9ac88e6e9388fe02f0229cfe887
+SHA1 (patch-src_modules_event_sdl_Event.h) = b3609e5490c401b45a46c0b054c9155f7b02e3d7
+SHA1 (patch-src_modules_graphics_opengl_Graphics.h) = 040566b7bb98f877f3f8134ab875b0c9115c256e
+SHA1 (patch-src_modules_graphics_opengl_ParticleSystem.cpp) = 6b640ce319d3bd26ff1238522d772bf70a1f17b2
+SHA1 (patch-src_modules_joystick_sdl_Joystick.h) = e49e7721986638f51f38891dfb5e707c67ab64cc
+SHA1 (patch-src_modules_keyboard_sdl_Keyboard.h) = 229d0fdb7de9e124962e272ea3893bef65bfa724
+SHA1 (patch-src_modules_keyboard_sdl_wrap__Keyboard.h) = eca2ceadd5040154235da97abc7ecb2e09f8e840
+SHA1 (patch-src_modules_mouse_sdl_Mouse.cpp) = 45bc1ec64f9f6d697c9a5075a08729a724c3f15e
+SHA1 (patch-src_modules_thread_sdl_Thread.h) = c8043e5eca3c7e5535014741b24269cd0f7f3ac2
+SHA1 (patch-src_modules_timer_sdl_Timer.h) = b93293ef0685fc162a7ecad7dddbccaabb7b73e3
