@@ -1,0 +1,33 @@
+$NetBSD: patch-configure,v 1.1 2018/09/30 19:12:48 maya Exp $
+
+Unportable test(1)
+
+--- configure.orig	2012-04-06 18:17:02.000000000 +0000
++++ configure
+@@ -15876,7 +15876,7 @@ if test "${with_llvm_lua+set}" = set; th
+ fi
+ 
+ 
+-if test "$lua" == "lua"; then :
++if test "$lua" = "lua"; then :
+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for library containing lua_pcall" >&5
+ $as_echo_n "checking for library containing lua_pcall... " >&6; }
+ if ${ac_cv_search_lua_pcall+:} false; then :
+@@ -15941,7 +15941,7 @@ fi
+ 
+ 
+ fi
+-if test "$lua" == "luajit"; then :
++if test "$lua" = "luajit"; then :
+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for library containing lua_pcall" >&5
+ $as_echo_n "checking for library containing lua_pcall... " >&6; }
+ if ${ac_cv_search_lua_pcall+:} false; then :
+@@ -16004,7 +16004,7 @@ fi
+ 
+ 
+ fi
+-if test "$lua" == "llvm-lua"; then :
++if test "$lua" = "llvm-lua"; then :
+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for library containing lua_pcall" >&5
+ $as_echo_n "checking for library containing lua_pcall... " >&6; }
+ if ${ac_cv_search_lua_pcall+:} false; then :
