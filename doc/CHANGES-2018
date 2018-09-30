@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4228 2018/09/30 19:36:20 maya Exp $
+$NetBSD: CHANGES-2018,v 1.4229 2018/09/30 22:29:13 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5895,3 +5895,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added games/love010 version 0.10.2 [maya 2018-09-30]
 	Added multimedia/libaom version 1.0.0 [maya 2018-09-30]
 	Updated multimedia/ffmpeg4 to 4.0.2nb2 [maya 2018-09-30]
+	Updated audio/libmp3splt to 0.9.2 [schmonz 2018-09-30]
