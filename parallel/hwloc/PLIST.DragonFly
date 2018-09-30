@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.DragonFly,v 1.1 2018/09/30 21:37:29 sevan Exp $
+include/hwloc/glibc-sched.h
