@@ -1,6 +1,6 @@
-$NetBSD: patch-vendor_github.com_aead_poly1305_poly1305__amd64.s,v 1.1 2018/09/30 19:56:47 nia Exp $
+$NetBSD: patch-vendor_github.com_aead_poly1305_poly1305__amd64.s,v 1.2 2018/09/30 20:22:20 maya Exp $
 
-"poly1305.supportsAVX2: relocation target runtime.support_avx2 not defined"
+Newer Go has deprecated runtime.support_avx2, assume no avx2 support instead
 
 --- vendor/github.com/aead/poly1305/poly1305_amd64.s.orig	2018-07-09 16:19:45.000000000 +0000
 +++ vendor/github.com/aead/poly1305/poly1305_amd64.s
