@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2018/09/30 19:25:06 maya Exp $
+# $NetBSD: Makefile,v 1.2 2018/09/30 19:29:18 maya Exp $
 
-PKGNAME=	not_pacman-1.4
 DISTNAME=	notpacman-source
+PKGNAME=	not_pacman-1.4
 CATEGORIES=	games
 MASTER_SITES=	http://stabyourself.net/dl.php?file=notpacman-1004/
 DIST_SUBDIR=	${PKGNAME_NOREV}
