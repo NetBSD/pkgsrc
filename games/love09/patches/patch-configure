@@ -1,0 +1,576 @@
+$NetBSD: patch-configure,v 1.1 2018/09/30 19:17:24 maya Exp $
+
+Use portable test(1) comparison operator.
+https://bitbucket.org/rude/love/issue/866/unportable-test-1-comparison-operator-in
+
+--- configure.orig	2013-12-13 22:37:10.000000000 +0000
++++ configure
+@@ -18583,7 +18583,7 @@ else
+   LOVE_BUILD_EXE_FALSE=
+ fi
+ 
+- if test "x$enable_mpg123" == xno; then
++ if test "x$enable_mpg123" = xno; then
+   LOVE_NOMPG123_TRUE=
+   LOVE_NOMPG123_FALSE='#'
+ else
+@@ -18612,11 +18612,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_audio" == xtrue; then
++if test x"$enable_audio" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_AUDIO /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_audio == xtrue; then
++ if test x$enable_audio = xtrue; then
+   LOVE_MODULE_AUDIO_TRUE=
+   LOVE_MODULE_AUDIO_FALSE='#'
+ else
+@@ -18633,11 +18633,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_audio_null" == xtrue; then
++if test x"$enable_audio_null" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_AUDIO_NULL /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_audio_null == xtrue; then
++ if test x$enable_audio_null = xtrue; then
+   LOVE_IMPLEMENTATION_AUDIO_NULL_TRUE=
+   LOVE_IMPLEMENTATION_AUDIO_NULL_FALSE='#'
+ else
+@@ -18654,11 +18654,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_audio_openal" == xtrue; then
++if test x"$enable_audio_openal" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_AUDIO_OPENAL /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_audio_openal == xtrue; then
++ if test x$enable_audio_openal = xtrue; then
+   LOVE_IMPLEMENTATION_AUDIO_OPENAL_TRUE=
+   LOVE_IMPLEMENTATION_AUDIO_OPENAL_FALSE='#'
+ else
+@@ -18675,11 +18675,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_event" == xtrue; then
++if test x"$enable_event" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_EVENT /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_event == xtrue; then
++ if test x$enable_event = xtrue; then
+   LOVE_MODULE_EVENT_TRUE=
+   LOVE_MODULE_EVENT_FALSE='#'
+ else
+@@ -18696,11 +18696,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_event_sdl" == xtrue; then
++if test x"$enable_event_sdl" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_EVENT_SDL /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_event_sdl == xtrue; then
++ if test x$enable_event_sdl = xtrue; then
+   LOVE_IMPLEMENTATION_EVENT_SDL_TRUE=
+   LOVE_IMPLEMENTATION_EVENT_SDL_FALSE='#'
+ else
+@@ -18717,11 +18717,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_filesystem" == xtrue; then
++if test x"$enable_filesystem" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_FILESYSTEM /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_filesystem == xtrue; then
++ if test x$enable_filesystem = xtrue; then
+   LOVE_MODULE_FILESYSTEM_TRUE=
+   LOVE_MODULE_FILESYSTEM_FALSE='#'
+ else
+@@ -18738,11 +18738,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_filesystem_physfs" == xtrue; then
++if test x"$enable_filesystem_physfs" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_FILESYSTEM_PHYSFS /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_filesystem_physfs == xtrue; then
++ if test x$enable_filesystem_physfs = xtrue; then
+   LOVE_IMPLEMENTATION_FILESYSTEM_PHYSFS_TRUE=
+   LOVE_IMPLEMENTATION_FILESYSTEM_PHYSFS_FALSE='#'
+ else
+@@ -18759,11 +18759,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_font" == xtrue; then
++if test x"$enable_font" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_FONT /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_font == xtrue; then
++ if test x$enable_font = xtrue; then
+   LOVE_MODULE_FONT_TRUE=
+   LOVE_MODULE_FONT_FALSE='#'
+ else
+@@ -18780,11 +18780,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_font_freetype" == xtrue; then
++if test x"$enable_font_freetype" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_FONT_FREETYPE /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_font_freetype == xtrue; then
++ if test x$enable_font_freetype = xtrue; then
+   LOVE_IMPLEMENTATION_FONT_FREETYPE_TRUE=
+   LOVE_IMPLEMENTATION_FONT_FREETYPE_FALSE='#'
+ else
+@@ -18801,11 +18801,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_graphics" == xtrue; then
++if test x"$enable_graphics" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_GRAPHICS /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_graphics == xtrue; then
++ if test x$enable_graphics = xtrue; then
+   LOVE_MODULE_GRAPHICS_TRUE=
+   LOVE_MODULE_GRAPHICS_FALSE='#'
+ else
+@@ -18822,11 +18822,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_graphics_opengl" == xtrue; then
++if test x"$enable_graphics_opengl" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_GRAPHICS_OPENGL /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_graphics_opengl == xtrue; then
++ if test x$enable_graphics_opengl = xtrue; then
+   LOVE_IMPLEMENTATION_GRAPHICS_OPENGL_TRUE=
+   LOVE_IMPLEMENTATION_GRAPHICS_OPENGL_FALSE='#'
+ else
+@@ -18843,11 +18843,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_image" == xtrue; then
++if test x"$enable_image" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_IMAGE /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_image == xtrue; then
++ if test x$enable_image = xtrue; then
+   LOVE_MODULE_IMAGE_TRUE=
+   LOVE_MODULE_IMAGE_FALSE='#'
+ else
+@@ -18864,11 +18864,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_image_magpie" == xtrue; then
++if test x"$enable_image_magpie" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_IMAGE_MAGPIE /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_image_magpie == xtrue; then
++ if test x$enable_image_magpie = xtrue; then
+   LOVE_IMPLEMENTATION_IMAGE_MAGPIE_TRUE=
+   LOVE_IMPLEMENTATION_IMAGE_MAGPIE_FALSE='#'
+ else
+@@ -18885,11 +18885,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_joystick" == xtrue; then
++if test x"$enable_joystick" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_JOYSTICK /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_joystick == xtrue; then
++ if test x$enable_joystick = xtrue; then
+   LOVE_MODULE_JOYSTICK_TRUE=
+   LOVE_MODULE_JOYSTICK_FALSE='#'
+ else
+@@ -18906,11 +18906,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_joystick_sdl" == xtrue; then
++if test x"$enable_joystick_sdl" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_JOYSTICK_SDL /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_joystick_sdl == xtrue; then
++ if test x$enable_joystick_sdl = xtrue; then
+   LOVE_IMPLEMENTATION_JOYSTICK_SDL_TRUE=
+   LOVE_IMPLEMENTATION_JOYSTICK_SDL_FALSE='#'
+ else
+@@ -18927,11 +18927,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_keyboard" == xtrue; then
++if test x"$enable_keyboard" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_KEYBOARD /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_keyboard == xtrue; then
++ if test x$enable_keyboard = xtrue; then
+   LOVE_MODULE_KEYBOARD_TRUE=
+   LOVE_MODULE_KEYBOARD_FALSE='#'
+ else
+@@ -18948,11 +18948,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_keyboard_sdl" == xtrue; then
++if test x"$enable_keyboard_sdl" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_KEYBOARD_SDL /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_keyboard_sdl == xtrue; then
++ if test x$enable_keyboard_sdl = xtrue; then
+   LOVE_IMPLEMENTATION_KEYBOARD_SDL_TRUE=
+   LOVE_IMPLEMENTATION_KEYBOARD_SDL_FALSE='#'
+ else
+@@ -18969,11 +18969,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_love" == xtrue; then
++if test x"$enable_love" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_LOVE /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_love == xtrue; then
++ if test x$enable_love = xtrue; then
+   LOVE_MODULE_LOVE_TRUE=
+   LOVE_MODULE_LOVE_FALSE='#'
+ else
+@@ -18990,11 +18990,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_math" == xtrue; then
++if test x"$enable_math" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_MATH /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_math == xtrue; then
++ if test x$enable_math = xtrue; then
+   LOVE_MODULE_MATH_TRUE=
+   LOVE_MODULE_MATH_FALSE='#'
+ else
+@@ -19011,11 +19011,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_mouse" == xtrue; then
++if test x"$enable_mouse" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_MOUSE /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_mouse == xtrue; then
++ if test x$enable_mouse = xtrue; then
+   LOVE_MODULE_MOUSE_TRUE=
+   LOVE_MODULE_MOUSE_FALSE='#'
+ else
+@@ -19032,11 +19032,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_mouse_sdl" == xtrue; then
++if test x"$enable_mouse_sdl" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_MOUSE_SDL /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_mouse_sdl == xtrue; then
++ if test x$enable_mouse_sdl = xtrue; then
+   LOVE_IMPLEMENTATION_MOUSE_SDL_TRUE=
+   LOVE_IMPLEMENTATION_MOUSE_SDL_FALSE='#'
+ else
+@@ -19053,11 +19053,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_physics" == xtrue; then
++if test x"$enable_physics" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_PHYSICS /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_physics == xtrue; then
++ if test x$enable_physics = xtrue; then
+   LOVE_MODULE_PHYSICS_TRUE=
+   LOVE_MODULE_PHYSICS_FALSE='#'
+ else
+@@ -19074,11 +19074,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_physics_box2d" == xtrue; then
++if test x"$enable_physics_box2d" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_PHYSICS_BOX2D /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_physics_box2d == xtrue; then
++ if test x$enable_physics_box2d = xtrue; then
+   LOVE_IMPLEMENTATION_PHYSICS_BOX2D_TRUE=
+   LOVE_IMPLEMENTATION_PHYSICS_BOX2D_FALSE='#'
+ else
+@@ -19095,11 +19095,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_sound" == xtrue; then
++if test x"$enable_sound" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_SOUND /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_sound == xtrue; then
++ if test x$enable_sound = xtrue; then
+   LOVE_MODULE_SOUND_TRUE=
+   LOVE_MODULE_SOUND_FALSE='#'
+ else
+@@ -19116,11 +19116,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_sound_lullaby" == xtrue; then
++if test x"$enable_sound_lullaby" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_SOUND_LULLABY /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_sound_lullaby == xtrue; then
++ if test x$enable_sound_lullaby = xtrue; then
+   LOVE_IMPLEMENTATION_SOUND_LULLABY_TRUE=
+   LOVE_IMPLEMENTATION_SOUND_LULLABY_FALSE='#'
+ else
+@@ -19137,11 +19137,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_system" == xtrue; then
++if test x"$enable_system" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_SYSTEM /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_system == xtrue; then
++ if test x$enable_system = xtrue; then
+   LOVE_MODULE_SYSTEM_TRUE=
+   LOVE_MODULE_SYSTEM_FALSE='#'
+ else
+@@ -19158,11 +19158,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_system_sdl" == xtrue; then
++if test x"$enable_system_sdl" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_SYSTEM_SDL /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_system_sdl == xtrue; then
++ if test x$enable_system_sdl = xtrue; then
+   LOVE_IMPLEMENTATION_SYSTEM_SDL_TRUE=
+   LOVE_IMPLEMENTATION_SYSTEM_SDL_FALSE='#'
+ else
+@@ -19179,11 +19179,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_thread" == xtrue; then
++if test x"$enable_thread" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_THREAD /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_thread == xtrue; then
++ if test x$enable_thread = xtrue; then
+   LOVE_MODULE_THREAD_TRUE=
+   LOVE_MODULE_THREAD_FALSE='#'
+ else
+@@ -19200,11 +19200,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_thread_sdl" == xtrue; then
++if test x"$enable_thread_sdl" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_THREAD_SDL /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_thread_sdl == xtrue; then
++ if test x$enable_thread_sdl = xtrue; then
+   LOVE_IMPLEMENTATION_THREAD_SDL_TRUE=
+   LOVE_IMPLEMENTATION_THREAD_SDL_FALSE='#'
+ else
+@@ -19221,11 +19221,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_timer" == xtrue; then
++if test x"$enable_timer" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_TIMER /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_timer == xtrue; then
++ if test x$enable_timer = xtrue; then
+   LOVE_MODULE_TIMER_TRUE=
+   LOVE_MODULE_TIMER_FALSE='#'
+ else
+@@ -19242,11 +19242,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_timer_sdl" == xtrue; then
++if test x"$enable_timer_sdl" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_TIMER_SDL /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_timer_sdl == xtrue; then
++ if test x$enable_timer_sdl = xtrue; then
+   LOVE_IMPLEMENTATION_TIMER_SDL_TRUE=
+   LOVE_IMPLEMENTATION_TIMER_SDL_FALSE='#'
+ else
+@@ -19263,11 +19263,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_window" == xtrue; then
++if test x"$enable_window" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_WINDOW /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_window == xtrue; then
++ if test x$enable_window = xtrue; then
+   LOVE_MODULE_WINDOW_TRUE=
+   LOVE_MODULE_WINDOW_FALSE='#'
+ else
+@@ -19284,11 +19284,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_window_sdl" == xtrue; then
++if test x"$enable_window_sdl" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_WINDOW_SDL /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_window_sdl == xtrue; then
++ if test x$enable_window_sdl = xtrue; then
+   LOVE_IMPLEMENTATION_WINDOW_SDL_TRUE=
+   LOVE_IMPLEMENTATION_WINDOW_SDL_FALSE='#'
+ else
+@@ -19305,11 +19305,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_Box2D" == xtrue; then
++if test x"$enable_Box2D" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_BOX2D /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_Box2D == xtrue; then
++ if test x$enable_Box2D = xtrue; then
+   LOVE_LIBRARY_BOX2D_TRUE=
+   LOVE_LIBRARY_BOX2D_FALSE='#'
+ else
+@@ -19326,11 +19326,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_Wuff" == xtrue; then
++if test x"$enable_Wuff" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_WUFF /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_Wuff == xtrue; then
++ if test x$enable_Wuff = xtrue; then
+   LOVE_LIBRARY_WUFF_TRUE=
+   LOVE_LIBRARY_WUFF_FALSE='#'
+ else
+@@ -19347,11 +19347,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_ddsparse" == xtrue; then
++if test x"$enable_ddsparse" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_DDSPARSE /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_ddsparse == xtrue; then
++ if test x$enable_ddsparse = xtrue; then
+   LOVE_LIBRARY_DDSPARSE_TRUE=
+   LOVE_LIBRARY_DDSPARSE_FALSE='#'
+ else
+@@ -19368,11 +19368,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_enet" == xtrue; then
++if test x"$enable_enet" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_ENET /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_enet == xtrue; then
++ if test x$enable_enet = xtrue; then
+   LOVE_LIBRARY_ENET_TRUE=
+   LOVE_LIBRARY_ENET_FALSE='#'
+ else
+@@ -19389,11 +19389,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_luasocket" == xtrue; then
++if test x"$enable_luasocket" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_LUASOCKET /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_luasocket == xtrue; then
++ if test x$enable_luasocket = xtrue; then
+   LOVE_LIBRARY_LUASOCKET_TRUE=
+   LOVE_LIBRARY_LUASOCKET_FALSE='#'
+ else
+@@ -19410,11 +19410,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_noise1234" == xtrue; then
++if test x"$enable_noise1234" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_NOISE1234 /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_noise1234 == xtrue; then
++ if test x$enable_noise1234 = xtrue; then
+   LOVE_LIBRARY_NOISE1234_TRUE=
+   LOVE_LIBRARY_NOISE1234_FALSE='#'
+ else
+@@ -19431,11 +19431,11 @@ else
+ fi
+ 
+ 
+-if test x"$enable_utf8" == xtrue; then
++if test x"$enable_utf8" = xtrue; then
+     $as_echo "#define LOVE_ENABLE_UTF8 /**/" >>confdefs.h
+ 
+ fi
+- if test x$enable_utf8 == xtrue; then
++ if test x$enable_utf8 = xtrue; then
+   LOVE_LIBRARY_UTF8_TRUE=
+   LOVE_LIBRARY_UTF8_FALSE='#'
+ else
