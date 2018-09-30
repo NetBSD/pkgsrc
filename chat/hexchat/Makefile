@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2018/08/22 09:43:01 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2018/09/30 13:58:10 wiedi Exp $
 
 DISTNAME=	hexchat-2.14.1
 PKGREVISION=	2
@@ -38,6 +38,8 @@ OPSYSVARS+=		SOEXT
 SOEXT.Darwin=		dylib
 SOEXT.*=		so
 PLIST_SUBST+=		SOEXT=${SOEXT}
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .include "../../devel/py-meson/build.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
