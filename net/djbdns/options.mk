@@ -1,14 +1,10 @@
-# $NetBSD: options.mk,v 1.20 2018/09/28 20:36:24 schmonz Exp $
+# $NetBSD: options.mk,v 1.21 2018/09/30 22:10:51 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.djbdns
 PKG_SUPPORTED_OPTIONS+=		# inet6
 PKG_SUPPORTED_OPTIONS+=		djbdns-cachestats djbdns-ignoreip2
 PKG_SUPPORTED_OPTIONS+=		djbdns-mergequeries djbdns-tinydns64
 PKG_SUGGESTED_OPTIONS+=		djbdns-mergequeries djbdns-tinydns64
-
-# For users migrating from 2018Q2; remove compatibility after 2018Q3 is branched
-PKG_OPTIONS_LEGACY_OPTS+=	djbdns-qmerge1:djbdns-mergequeries
-PKG_OPTIONS_LEGACY_OPTS+=	djbdns-qmerge2:djbdns-mergequeries
 
 .include "../../mk/bsd.options.mk"
 
