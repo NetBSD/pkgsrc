@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2017/05/31 22:14:43 agc Exp $
+# $NetBSD: Makefile,v 1.14 2018/10/01 12:36:35 ryoon Exp $
 
-DISTNAME=	elftoolchain-0.5.1
-PKGREVISION=	1
+DISTNAME=	elftoolchain-0.7.1
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=elftoolchain/${DISTNAME}/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=elftoolchain/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	agc@NetBSD.org
@@ -21,13 +20,15 @@ USE_BSD_MAKEFILE=	yes
 USE_TOOLS+=		m4 lex
 MAKE_ENV+=		${BSD_MAKE_ENV}
 MAKE_FLAGS+=		MKPROFILE=yes
+MAKE_FLAGS+=		INCSDIR=${PREFIX}/include
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mgcc)
 CWARNFLAGS+=		-Wno-error=sign-conversion \
 			-Wno-error=conversion \
 			-Wno-error=unused-but-set-variable \
-			-Wno-error=old-style-definition
+			-Wno-error=old-style-definition \
+			-Wno-error=shift-negative-value
 .elif !empty(PKGSRC_COMPILER:Mclang)
 CWARNFLAGS+=		-Wno-error=missing-noreturn \
 			-Wno-error=constant-logical-operand \
@@ -35,7 +36,7 @@ CWARNFLAGS+=		-Wno-error=missing-noreturn \
 .endif
 MAKE_FLAGS+=		CWARNFLAGS=${CWARNFLAGS:Q}
 
-INSTALLATION_DIRS=	bin lib
+INSTALLATION_DIRS=	bin include lib
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/cat1 ${PKGMANDIR}/html1
 INSTALLATION_DIRS+=	${PKGMANDIR}/man3 ${PKGMANDIR}/cat3 ${PKGMANDIR}/html3
 INSTALLATION_DIRS+=	${PKGMANDIR}/man5 ${PKGMANDIR}/cat5 ${PKGMANDIR}/html5

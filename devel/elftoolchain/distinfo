@@ -1,27 +1,11 @@
-$NetBSD: distinfo,v 1.6 2017/05/31 22:14:43 agc Exp $
+$NetBSD: distinfo,v 1.7 2018/10/01 12:36:35 ryoon Exp $
 
-SHA1 (elftoolchain-0.5.1.tar.bz2) = 333cfce857ca220177d0a5d111d40afca1eea0c7
-RMD160 (elftoolchain-0.5.1.tar.bz2) = 4be0adf8349c764474810e23cfb022c655002d77
-SHA512 (elftoolchain-0.5.1.tar.bz2) = 4f682ee183c5b475fd50856254f547530c922a7fcdd150233f39628a712dd8b84e5c94663a51f1f5ce85c828c2758a35fd92bbf29332b2462a1618e43961aadf
-Size (elftoolchain-0.5.1.tar.bz2) = 5008332 bytes
-SHA1 (patch-aa) = e3588a6580ece7159b109e01730f144703aeda1d
-SHA1 (patch-ab) = 7ed42bdf24917a01e42580958d29078c7143168c
-SHA1 (patch-ac) = c681369aa0dd87a1b2fa5ede647f267a4c132e87
-SHA1 (patch-ad) = 22a254add215d7fa18b32e17e30c92d451c2cecd
-SHA1 (patch-ae) = 19f04351c82e4ab421582a2d5b2761308aeff53d
-SHA1 (patch-af) = 8de41e29969295b668deee22d6bbb761a586059a
-SHA1 (patch-ag) = adbf0b3ba6121bc9b3351cf2f79863a8bafc13d8
-SHA1 (patch-ah) = 1c1d31443566994f48d3b7e9ab2385bd4c07d55e
-SHA1 (patch-ai) = 37e8a01421c926b995f7a5cd32c77df7b18bd28f
-SHA1 (patch-aj) = 1656ff3c1a9dd9fe27af122d9cbe605092a40925
-SHA1 (patch-ak) = 699aeca92ce35f57988b6135c6b7f3a8f533825f
-SHA1 (patch-al) = 1ca5bb02b4bf8b4d0820747c3398d1f5f317c66c
-SHA1 (patch-am) = 286bd77aef36812b60fb29218368573b74ac892e
-SHA1 (patch-an) = 6de919bb0cf3f406c9b5addcf868c57d5d71403e
-SHA1 (patch-ar_acpyacc_y) = 462e9463ff66defe76759d4eb58d3b5d98c846b9
-SHA1 (patch-ar_ar.h) = bf6dc1ff7c50291b111c976f0ca6c87c71b4891a
-SHA1 (patch-ar_util.c) = 7a70d796516f0b0369dfa44b373dfff5e67dfb9e
+SHA1 (elftoolchain-0.7.1.tar.bz2) = fdab1804543e47887bd73f1177b723af21ab47ae
+RMD160 (elftoolchain-0.7.1.tar.bz2) = 9e341f86573d80dd2b390d79cf82f239ecd279ff
+SHA512 (elftoolchain-0.7.1.tar.bz2) = 8226c468b393f0d567167a9dd6b16d2a226227e4d05dab8f44550038da44dcbfb92749f8e1a4b130b893675337a6771e24a81f350f3f864b1b8b17402ed23b26
+Size (elftoolchain-0.7.1.tar.bz2) = 5361427 bytes
+SHA1 (patch-am) = 67678cb5e9ff5df7ebaa22e7bb1dc9538e1b3063
 SHA1 (patch-libdwarf_Makefile) = bea37cf65de237146dc51a71aed04581bc6c1d95
 SHA1 (patch-libelf_Makefile) = 29fdcead0e1d01ba2cf1d9e16e9d50bc041c9eec
-SHA1 (patch-libelftc_Makefile) = a91f55e598482123a04dd5e50e5d992a8d866036
-SHA1 (patch-libelftc___libelftc.h) = d2ee73ee21d56a241aec04c43073e3e0dd164d6d
+SHA1 (patch-libelftc_Makefile) = 64990e254ca3c55615cc3746fa948d7e0ca1fcb4
+SHA1 (patch-libelftc___libelftc.h) = db63ca28c25ccf92b9b15ffcaf016bf2bd3d291d
