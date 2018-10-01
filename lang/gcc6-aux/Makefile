@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/04/02 09:30:06 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2018/10/01 12:32:15 ryoon Exp $
 
 PKGNAME=	gcc6-aux-${SNAPSHOT}
 PKGREVISION=	${MAIN_PR}
@@ -22,15 +22,15 @@ APPLY_DIFFS=	core ada cxx
 
 # Requires bootstrap compiler, which is only available for on selected systems
 
+# Tasking is broken on NetBSD.  The reason for this is unknown
+# Until pthread support is fixed, remove NetBSD from PLATFORM list
 ONLY_FOR_PLATFORM=	DragonFly-*-x86_64   \
 			FreeBSD-*-i386       \
 			FreeBSD-*-x86_64     \
 			SunOS-5.1[1-9]*-i386 \
-			SunOS-5.1[1-9]*-x86_64
-# Tasking is broken on NetBSD.  The reason for this is unknown
-# Until pthread support is fixed, remove NetBSD from PLATFORM list
-#			NetBSD-[5-9]*-i386   \
-#			NetBSD-[5-9]*-x86_64
+			SunOS-5.1[1-9]*-x86_64 \
+			NetBSD-[5-9]*-i386   \
+			NetBSD-[5-9]*-x86_64
 
 GARCH=			${MACHINE_ARCH:S/amd64/x86_64/}
 BLD_TARGET=		${GARCH}-aux-${LOWER_OPSYS}${OS_VERSION}
