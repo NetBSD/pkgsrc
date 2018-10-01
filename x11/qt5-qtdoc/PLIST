@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/06/22 06:29:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/10/01 17:44:47 adam Exp $
 qt5/doc/qtdoc.qch
 qt5/doc/qtdoc/accelerators.html
 qt5/doc/qtdoc/accessibility.html
@@ -142,24 +142,25 @@ qt5/doc/qtdoc/images/thread-examples.png
 qt5/doc/qtdoc/images/threadsandobjects.png
 qt5/doc/qtdoc/images/threadvisual-example.png
 qt5/doc/qtdoc/images/tool-examples.png
-qt5/doc/qtdoc/images/used-in-examples/Americano.png
-qt5/doc/qtdoc/images/used-in-examples/Espresso.png
-qt5/doc/qtdoc/images/used-in-examples/Latte.png
-qt5/doc/qtdoc/images/used-in-examples/Macchiato.png
-qt5/doc/qtdoc/images/used-in-examples/cappucino.png
-qt5/doc/qtdoc/images/used-in-examples/coffee.png
-qt5/doc/qtdoc/images/used-in-examples/coffee_cup_back.png
-qt5/doc/qtdoc/images/used-in-examples/coffee_cup_coverplate.png
-qt5/doc/qtdoc/images/used-in-examples/coffee_cup_front.png
-qt5/doc/qtdoc/images/used-in-examples/coffee_cup_large.png
-qt5/doc/qtdoc/images/used-in-examples/coffee_cup_outline.png
-qt5/doc/qtdoc/images/used-in-examples/line.png
-qt5/doc/qtdoc/images/used-in-examples/liquid_coffee.png
-qt5/doc/qtdoc/images/used-in-examples/liquid_foam.png
-qt5/doc/qtdoc/images/used-in-examples/liquid_milk.png
-qt5/doc/qtdoc/images/used-in-examples/milk.png
-qt5/doc/qtdoc/images/used-in-examples/sugar.png
-qt5/doc/qtdoc/images/used-in-examples/white.png
+qt5/doc/qtdoc/images/used-in-examples/coffee/images/cup structure/coffee_cup_large.png
+qt5/doc/qtdoc/images/used-in-examples/coffee/images/cup structure/coffee_cup_outline.png
+qt5/doc/qtdoc/images/used-in-examples/coffee/images/cup structure/cup elements/coffee_cup_back.png
+qt5/doc/qtdoc/images/used-in-examples/coffee/images/cup structure/cup elements/coffee_cup_coverplate.png
+qt5/doc/qtdoc/images/used-in-examples/coffee/images/cup structure/cup elements/coffee_cup_front.png
+qt5/doc/qtdoc/images/used-in-examples/coffee/images/cup structure/liquids/liquid_coffee.png
+qt5/doc/qtdoc/images/used-in-examples/coffee/images/cup structure/liquids/liquid_foam.png
+qt5/doc/qtdoc/images/used-in-examples/coffee/images/cup structure/liquids/liquid_milk.png
+qt5/doc/qtdoc/images/used-in-examples/coffee/images/icons/coffees/Americano.png
+qt5/doc/qtdoc/images/used-in-examples/coffee/images/icons/coffees/Espresso.png
+qt5/doc/qtdoc/images/used-in-examples/coffee/images/icons/coffees/Latte.png
+qt5/doc/qtdoc/images/used-in-examples/coffee/images/icons/coffees/Macchiato.png
+qt5/doc/qtdoc/images/used-in-examples/coffee/images/icons/coffees/cappucino.png
+qt5/doc/qtdoc/images/used-in-examples/coffee/images/icons/contents/coffee.png
+qt5/doc/qtdoc/images/used-in-examples/coffee/images/icons/contents/milk.png
+qt5/doc/qtdoc/images/used-in-examples/coffee/images/icons/contents/sugar.png
+qt5/doc/qtdoc/images/used-in-examples/coffee/images/ui controls/buttons/back/white.png
+qt5/doc/qtdoc/images/used-in-examples/coffee/images/ui controls/buttons/go/white.png
+qt5/doc/qtdoc/images/used-in-examples/coffee/images/ui controls/line.png
 qt5/doc/qtdoc/images/xml-examples.png
 qt5/doc/qtdoc/index.html
 qt5/doc/qtdoc/integrity-building-monolith.html
