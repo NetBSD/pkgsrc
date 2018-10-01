@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4233 2018/09/30 23:47:44 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.4234 2018/10/01 08:03:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5900,3 +5900,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated audio/mp3splt-gtk to 0.9.2 [schmonz 2018-09-30]
 	Added sysutils/vultr version 1.15.0 [schmonz 2018-09-30]
 	Updated finance/gnucash to 3.3 [wiz 2018-09-30]
+	Updated databases/sqlite3 to 3.25.2 [adam 2018-10-01]
