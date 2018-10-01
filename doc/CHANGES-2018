@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4236 2018/10/01 12:51:06 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.4237 2018/10/01 15:54:09 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5903,3 +5903,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/sqlite3 to 3.25.2 [adam 2018-10-01]
 	Updated devel/elftoolchain to 0.7.1 [ryoon 2018-10-01]
 	Updated lang/nim to 0.19.0 [ryoon 2018-10-01]
+	Updated net/chrony to 3.4 [nia 2018-10-01]
