@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2018/01/26 14:47:47 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.14 2018/10/01 20:55:36 triaxx Exp $
 # used by www/nginx/Makefile
 # used by www/nginx-devel/Makefile
 
@@ -48,6 +48,7 @@ CONFIGURE_ARGS+=	--http-log-path=${NGINX_LOGDIR}/access.log
 CONFIGURE_ARGS+=	--http-client-body-temp-path=${NGINX_DATADIR}/client_body_temp
 CONFIGURE_ARGS+=	--http-proxy-temp-path=${NGINX_DATADIR}/proxy_temp
 CONFIGURE_ARGS+=	--http-fastcgi-temp-path=${NGINX_DATADIR}/fstcgi_temp
+CONFIGURE_ARGS+=	--http-scgi-temp-path=${NGINX_DATADIR}/scgi_temp
 
 PKG_SYSCONFSUBDIR=	nginx
 
