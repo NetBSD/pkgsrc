@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8 2018/07/17 20:22:54 maya Exp $
+$NetBSD: distinfo,v 1.9 2018/10/01 17:44:47 adam Exp $
 
-SHA1 (qtlocation-everywhere-src-5.11.1.tar.xz) = 77b06f3baf6f5d582fe5455d7657e181ad2f55b1
-RMD160 (qtlocation-everywhere-src-5.11.1.tar.xz) = aef55997be298042c248d45b824c25f69771f303
-SHA512 (qtlocation-everywhere-src-5.11.1.tar.xz) = 8b89aae5bb7caa0999c20c86da1a356e5ba21e1e12ac892a695d180f21527846aa45f926828934b83147b851145477028ff1212802c1c21f8f6bb4e616b8b1fd
-Size (qtlocation-everywhere-src-5.11.1.tar.xz) = 5593144 bytes
+SHA1 (qtlocation-everywhere-src-5.11.2.tar.xz) = 4919b44e77c18e73f8ea3ced4b96243cd6881441
+RMD160 (qtlocation-everywhere-src-5.11.2.tar.xz) = 130106e7493f074cea5bf5618a22579c56cac542
+SHA512 (qtlocation-everywhere-src-5.11.2.tar.xz) = 84a52aedac59f1bc4372538dc0810c742f87f04b2ee599e7ed3f8f0cfe0e13d652e80d3cf7de95395bbe1285a60cc15791760e17f0975cf8399527cdadbd7c1b
+Size (qtlocation-everywhere-src-5.11.2.tar.xz) = 5584420 bytes
 SHA1 (patch-src_location_configure.json) = 5000b63fd76a8bade6a36c777f9b5b7b1b471ab7
 SHA1 (patch-src_location_declarativemaps_qdeclarativegeomap.cpp) = c89cfdf06c2f3354ff717e390511e4059e3b5601
