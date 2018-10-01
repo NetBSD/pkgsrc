@@ -1,4 +1,4 @@
-$NetBSD: patch-libelftc_Makefile,v 1.1 2011/11/26 15:50:27 dholland Exp $
+$NetBSD: patch-libelftc_Makefile,v 1.2 2018/10/01 12:36:35 ryoon Exp $
 
 Add a minor version to libelftc.so; otherwise a bootstrapped build does
 "ln -sf libelftc.so.1 libelftc.so.1" and then install fails with ELOOP.
@@ -6,10 +6,10 @@ Add a minor version to libelftc.so; otherwise a bootstrapped build does
 This is a bug in bootstrap-mk-files but I'm going to fix it in both
 places to avoid demanding rebootstrapping.
 
---- libelftc/Makefile~	2011-11-26 15:18:44.000000000 +0000
+--- libelftc/Makefile.orig	2018-09-26 00:03:01.469445303 +0000
 +++ libelftc/Makefile
-@@ -17,6 +17,7 @@ INCS=	libelftc.h
- BRANCH=	0.5.1		# Change this on release branches.
+@@ -23,6 +23,7 @@ INCSDIR=	/usr/include
+ RELEASE=	0.7.1		# Change this on release branches.
  
  SHLIB_MAJOR=	1
 +SHLIB_MINOR=	0
