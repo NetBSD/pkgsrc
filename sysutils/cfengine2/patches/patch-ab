@@ -1,8 +1,10 @@
-$NetBSD: patch-ab,v 1.7 2010/05/09 22:09:30 pettai Exp $
+$NetBSD: patch-ab,v 1.8 2018/10/01 10:05:24 jperkin Exp $
 
---- configure.orig	2010-03-22 15:25:59.000000000 +0100
-+++ configure	2010-03-22 15:27:57.000000000 +0100
-@@ -16104,7 +16104,7 @@
+Remove bogus _POSIX_C_SOURCE setting.
+
+--- configure.orig	2009-04-11 19:59:34.000000000 +0000
++++ configure
+@@ -16104,7 +16104,7 @@ $as_echo "$BERKELEY_DB_DIR" >&6; }
      elif test -d "$BERKELEY_DB_DIR"; then
  
          BERKELEY_DB_CFLAGS="-I$BERKELEY_DB_DIR/include"
@@ -11,7 +13,7 @@ $NetBSD: patch-ab,v 1.7 2010/05/09 22:09:30 pettai Exp $
              if test -f "$BERKELEY_DB_DIR/include/$v/db.h"; then
                  BERKELEY_DB_CFLAGS="-I$BERKELEY_DB_DIR/include/$v"
  		break
-@@ -16112,7 +16112,7 @@
+@@ -16112,7 +16112,7 @@ $as_echo "$BERKELEY_DB_DIR" >&6; }
          done
  
          BERKELEY_DB_LIB="-ldb"
@@ -20,3 +22,13 @@ $NetBSD: patch-ab,v 1.7 2010/05/09 22:09:30 pettai Exp $
              if test -f "$BERKELEY_DB_DIR/lib/lib$v.so"; then
                  BERKELEY_DB_LIB="-l$v"
  		break
+@@ -22778,9 +22778,6 @@ else
+   $as_echo "$as_me: failed program was:" >&5
+ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+-  cat >>confdefs.h <<\_ACEOF
+-#define _POSIX_C_SOURCE 200112loL
+-_ACEOF
+ 
+ fi
+ 
