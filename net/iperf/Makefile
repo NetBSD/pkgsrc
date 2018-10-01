@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.21 2014/11/28 10:30:52 bsiegert Exp $
+# $NetBSD: Makefile,v 1.22 2018/10/01 09:47:06 jperkin Exp $
 
 DISTNAME=	iperf-2.0.5
 PKGREVISION=	1
 CATEGORIES=	net benchmarks
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=iperf/}
 
+PATCH_SITES=	http://sourceforge.net/p/iperf/patches/28/attachment/
+PATCHFILES=	nomaxcpu.patch
+PATCH_DIST_STRIP=-p1
+
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://iperf.sourceforge.net/
 COMMENT=	TCP and UDP bandwidth performance measurement tool
 LICENSE=	modified-bsd
-
-PATCHFILES=	nomaxcpu.patch
-PATCH_SITES=	http://sourceforge.net/p/iperf/patches/28/attachment/
-PATCH_DIST_STRIP=-p1
 
 .include "../../mk/bsd.prefs.mk"
 
