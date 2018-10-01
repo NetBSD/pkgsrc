@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.46 2018/08/24 18:27:07 adam Exp $
+# $NetBSD: options.mk,v 1.47 2018/10/01 20:55:36 triaxx Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=		dav flv gtools inet6 luajit mail-proxy memcache naxsi \
@@ -76,10 +76,6 @@ CONFIGURE_ARGS+=	--without-http_memcached_module
 
 .if !empty(PKG_OPTIONS:Mrealip)
 CONFIGURE_ARGS+=	--with-http_realip_module
-.endif
-
-.if !empty(PKG_OPTIONS:Minet6)
-CONFIGURE_ARGS+=	--with-ipv6
 .endif
 
 # NDK must be added once and before 3rd party modules needing it
@@ -180,6 +176,7 @@ DISTFILES+=		${HEADMORE_DISTFILE}
 .if !empty(PKG_OPTIONS:Muwsgi)
 EGFILES+=		uwsgi_params
 PLIST.uwsgi=		yes
+CONFIGURE_ARGS+=	--http-uwsgi-temp-path=${NGINX_DATADIR}/uwsgi_temp
 .else
 CONFIGURE_ARGS+=	--without-http_uwsgi_module
 .endif
