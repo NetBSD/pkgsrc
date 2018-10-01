@@ -1,0 +1,65 @@
+$NetBSD: patch-examples_chrony.conf.example3,v 1.1 2018/10/01 15:53:58 nia Exp $
+
+Prepare for SUBST, not processed by configure.
+
+--- examples/chrony.conf.example3.orig	2018-09-19 14:38:15.000000000 +0000
++++ examples/chrony.conf.example3
+@@ -1,7 +1,7 @@
+ #######################################################################
+ #
+ # This is an example chrony configuration file.  You should copy it to
+-# /etc/chrony.conf after uncommenting and editing the options that you
++# @PKG_SYSCONFDIR@/chrony.conf after uncommenting and editing the options that you
+ # want to enable.  The more obscure options are not included.  Refer
+ # to the documentation for these.
+ #
+@@ -65,12 +65,12 @@
+ # immediately so that it doesn't gain or lose any more time.  You
+ # generally want this, so it is uncommented.
+ 
+-driftfile /var/lib/chrony/drift
++driftfile @VARBASE@/lib/chrony/drift
+ 
+ # If you want to enable NTP authentication with symmetric keys, you will need
+ # to uncomment the following line and edit the file to set up the keys.
+ 
+-! keyfile /etc/chrony.keys
++! keyfile @PKG_SYSCONFDIR@/chrony.keys
+ 
+ # chronyd can save the measurement history for the servers to files when
+ # it it exits.  This is useful in 2 situations:
+@@ -88,14 +88,14 @@ driftfile /var/lib/chrony/drift
+ # Enable these two options to use this.
+ 
+ ! dumponexit
+-! dumpdir /var/lib/chrony
++! dumpdir @VARBASE@/lib/chrony
+ 
+ # chronyd writes its process ID to a file.  If you try to start a second
+ # copy of chronyd, it will detect that the process named in the file is
+ # still running and bail out.  If you want to change the path to the PID
+ # file, uncomment this line and edit it.  The default path is shown.
+ 
+-! pidfile /var/run/chrony/chronyd.pid
++! pidfile @VARBASE@/run/chrony/chronyd.pid
+ 
+ # If the system timezone database is kept up to date and includes the
+ # right/UTC timezone, chronyd can use it to determine the current
+@@ -124,7 +124,7 @@ driftfile /var/lib/chrony/drift
+ # produce some graphs of your system's timekeeping performance, or you
+ # need help in debugging a problem.
+ 
+-! logdir /var/log/chrony
++! logdir @VARBASE@/log/chrony
+ ! log measurements statistics tracking
+ 
+ # If you have real time clock support enabled (see below), you might want
+@@ -259,7 +259,7 @@ driftfile /var/lib/chrony/drift
+ # You need to have 'enhanced RTC support' compiled into your Linux
+ # kernel.  (Note, these options apply only to Linux.)
+ 
+-! rtcfile /var/lib/chrony/rtc
++! rtcfile @VARBASE@/lib/chrony/rtc
+ 
+ # Your RTC can be set to keep Universal Coordinated Time (UTC) or local
+ # time.  (Local time means UTC +/- the effect of your timezone.)  If you

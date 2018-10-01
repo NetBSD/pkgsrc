@@ -1,0 +1,25 @@
+$NetBSD: patch-doc_Makefile.in,v 1.1 2018/10/01 15:53:58 nia Exp $
+
+Adapt install target for pkgsrc.
+
+--- doc/Makefile.in.orig	2018-09-19 14:38:15.000000000 +0000
++++ doc/Makefile.in
+@@ -50,15 +50,9 @@ docs: man html
+ 	$(HTML_TO_TXT) < $< > $@
+ 
+ install: $(MAN_FILES)
+-	[ -d $(DESTDIR)$(MANDIR)/man1 ] || mkdir -p $(DESTDIR)$(MANDIR)/man1
+-	[ -d $(DESTDIR)$(MANDIR)/man5 ] || mkdir -p $(DESTDIR)$(MANDIR)/man5
+-	[ -d $(DESTDIR)$(MANDIR)/man8 ] || mkdir -p $(DESTDIR)$(MANDIR)/man8
+-	cp chronyc.man $(DESTDIR)$(MANDIR)/man1/chronyc.1
+-	chmod 644 $(DESTDIR)$(MANDIR)/man1/chronyc.1
+-	cp chronyd.man $(DESTDIR)$(MANDIR)/man8/chronyd.8
+-	chmod 644 $(DESTDIR)$(MANDIR)/man8/chronyd.8
+-	cp chrony.conf.man $(DESTDIR)$(MANDIR)/man5/chrony.conf.5
+-	chmod 644 $(DESTDIR)$(MANDIR)/man5/chrony.conf.5
++	$(BSD_INSTALL_MAN) chronyc.man $(DESTDIR)$(MANDIR)/man1/chronyc.1
++	$(BSD_INSTALL_MAN) chronyd.man $(DESTDIR)$(MANDIR)/man8/chronyd.8
++	$(BSD_INSTALL_MAN) chrony.conf.man $(DESTDIR)$(MANDIR)/man5/chrony.conf.5
+ 
+ install-docs: $(HTML_FILES)
+ 	[ -d $(DESTDIR)$(DOCDIR) ] || mkdir -p $(DESTDIR)$(DOCDIR)
