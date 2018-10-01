@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2018/08/05 12:28:06 nia Exp $
+# $NetBSD: Makefile,v 1.3 2018/10/01 15:05:48 nia Exp $
 
 PKGNAME=	dnscrypt-proxy2-2.0.16
 DISTNAME=	dnscrypt-proxy-${PKGVERSION_NOREV}
+PKGREVISION=	1
 CATEGORIES=	net security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jedisct1/}
 GITHUB_PROJECT=	dnscrypt-proxy
@@ -18,8 +19,16 @@ USE_TOOLS+=	pax
 GO_SRCPATH=	github.com/jedisct1/dnscrypt-proxy/
 GO_DIST_BASE=	${DISTNAME}
 
+EGDIR=		${PREFIX}/share/examples/dnscrypt-proxy
+
+RCD_SCRIPTS=	dnscrypt_proxy
+CONF_FILES=	${EGDIR}/dnscrypt_proxy.toml ${PKG_SYSCONFDIR}/dnscrypt_proxy.toml
+
+INSTALLATION_DIRS+=	${EGDIR}
+
 do-install:
 	${RUN} cd ${WRKDIR}; [ ! -d bin ] || ${PAX} -rw bin ${DESTDIR}${PREFIX}
+	${INSTALL_DATA} ${FILESDIR}/dnscrypt_proxy.toml ${DESTDIR}${EGDIR}/dnscrypt_proxy.toml
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
