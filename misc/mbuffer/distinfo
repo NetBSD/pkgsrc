@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.5 2018/09/18 09:49:29 fhajny Exp $
+$NetBSD: distinfo,v 1.6 2018/10/01 09:29:00 jperkin Exp $
 
 SHA1 (mbuffer-20180625.tgz) = d3beb0aa92de4095bdbb819a6f0a977507155c96
 RMD160 (mbuffer-20180625.tgz) = d3fb1e03c40719e72af852692cfcce5db0992b0c
 SHA512 (mbuffer-20180625.tgz) = 01d712f51ac0b206d6ee91fbbd4cea4873784aaca02daa9b3d72cfcc0a63696b20c15ca4b6e834924f02f2878ac90192110df584c55fb1a65620ae8b0f7ec87e
 Size (mbuffer-20180625.tgz) = 140946 bytes
-SHA1 (patch-Makefile.in) = 5b1285fd94aad7c9eaf803527a514cd7385cc448
+SHA1 (patch-Makefile.in) = 0aea9d6e1bc836f671846bf29d006c56f14d3514
 SHA1 (patch-configure) = e3f9fe62c308369f89511dc31f781a92fd7b4405
 SHA1 (patch-mbuffer.c) = ca1b0fee1a11529f787b2a2b0d6ee03ed9fcfd14
 SHA1 (patch-mbuffer.rc) = f6639110e0a30f62a8a61e725a5403c88703d671
