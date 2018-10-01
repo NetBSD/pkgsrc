@@ -1,21 +1,16 @@
-$NetBSD: patch-Makefile.in,v 1.1 2015/04/13 10:03:21 hannken Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2018/10/01 15:53:58 nia Exp $
 
 Adapt install target for pkgsrc.
 
---- Makefile.in.orig	2015-04-07 14:35:16.000000000 +0000
+--- Makefile.in.orig	2018-09-19 14:38:15.000000000 +0000
 +++ Makefile.in
-@@ -96,35 +96,15 @@ getdate :
+@@ -86,16 +86,8 @@ getdate :
  # seem to vary between systems.
  
- install: chronyd chronyc chrony.txt
+ install: chronyd chronyc
 -	[ -d $(DESTDIR)$(SYSCONFDIR) ] || mkdir -p $(DESTDIR)$(SYSCONFDIR)
 -	[ -d $(DESTDIR)$(SBINDIR) ] || mkdir -p $(DESTDIR)$(SBINDIR)
 -	[ -d $(DESTDIR)$(BINDIR) ] || mkdir -p $(DESTDIR)$(BINDIR)
--	[ -d $(DESTDIR)$(DOCDIR) ] || mkdir -p $(DESTDIR)$(DOCDIR)
--	[ -d $(DESTDIR)$(MANDIR)/man1 ] || mkdir -p $(DESTDIR)$(MANDIR)/man1
--	[ -d $(DESTDIR)$(MANDIR)/man5 ] || mkdir -p $(DESTDIR)$(MANDIR)/man5
--	[ -d $(DESTDIR)$(MANDIR)/man8 ] || mkdir -p $(DESTDIR)$(MANDIR)/man8
--	[ -d $(DESTDIR)$(DOCDIR) ] || mkdir -p $(DESTDIR)$(DOCDIR)
 -	[ -d $(DESTDIR)$(CHRONYVARDIR) ] || mkdir -p $(DESTDIR)$(CHRONYVARDIR)
 -	if [ -f $(DESTDIR)$(SBINDIR)/chronyd ]; then rm -f $(DESTDIR)$(SBINDIR)/chronyd ; fi
 -	if [ -f $(DESTDIR)$(BINDIR)/chronyc ]; then rm -f $(DESTDIR)$(BINDIR)/chronyc ; fi
@@ -23,29 +18,8 @@ Adapt install target for pkgsrc.
 -	chmod 755 $(DESTDIR)$(SBINDIR)/chronyd
 -	cp chronyc $(DESTDIR)$(BINDIR)/chronyc
 -	chmod 755 $(DESTDIR)$(BINDIR)/chronyc
--	cp chrony.txt $(DESTDIR)$(DOCDIR)/chrony.txt
--	chmod 644 $(DESTDIR)$(DOCDIR)/chrony.txt
--	cp COPYING $(DESTDIR)$(DOCDIR)/COPYING
--	chmod 644 $(DESTDIR)$(DOCDIR)/COPYING
--	cp README $(DESTDIR)$(DOCDIR)/README
--	chmod 644 $(DESTDIR)$(DOCDIR)/README
--	cp chrony.1 $(DESTDIR)$(MANDIR)/man1
--	chmod 644 $(DESTDIR)$(MANDIR)/man1/chrony.1
--	cp chronyc.1 $(DESTDIR)$(MANDIR)/man1
--	chmod 644 $(DESTDIR)$(MANDIR)/man1/chronyc.1
--	cp chronyd.8 $(DESTDIR)$(MANDIR)/man8
--	chmod 644 $(DESTDIR)$(MANDIR)/man8/chronyd.8
--	cp chrony.conf.5 $(DESTDIR)$(MANDIR)/man5
--	chmod 644 $(DESTDIR)$(MANDIR)/man5/chrony.conf.5
-+	$(BSD_INSTALL_PROGRAM) chronyd $(DESTDIR)$(SBINDIR)
-+	$(BSD_INSTALL_PROGRAM) chronyc $(DESTDIR)$(BINDIR)
-+	$(BSD_INSTALL_DATA) chrony.txt $(DESTDIR)$(DOCDIR)
-+	$(BSD_INSTALL_DATA) COPYING $(DESTDIR)$(DOCDIR)
-+	$(BSD_INSTALL_DATA) README $(DESTDIR)$(DOCDIR)
-+	$(BSD_INSTALL_MAN) chrony.1 $(DESTDIR)$(MANDIR)/man1
-+	$(BSD_INSTALL_MAN) chronyc.1 $(DESTDIR)$(MANDIR)/man1
-+	$(BSD_INSTALL_MAN) chronyd.8 $(DESTDIR)$(MANDIR)/man8/chronyd.8
-+	$(BSD_INSTALL_MAN) chrony.conf.5 $(DESTDIR)$(MANDIR)/man5/chrony.conf.5
++	$(BSD_INSTALL_PROGRAM) chronyd $(DESTDIR)$(SBINDIR)/chronyd
++	$(BSD_INSTALL_PROGRAM) chronyc $(DESTDIR)$(BINDIR)/chronyc
+ 	$(MAKE) -C doc install
  
- %.o : %.c
- 	$(CC) $(CFLAGS) $(CPPFLAGS) -c $<
+ docs :
