@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4242 2018/10/01 21:08:51 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.4243 2018/10/01 23:21:04 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5911,3 +5911,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-openpyxl to 2.5.8 [adam 2018-10-01]
 	Updated multimedia/mkvtoolnix to 27.0.0 [adam 2018-10-01]
 	Updated net/py-lexicon to 2.7.9 [fhajny 2018-10-01]
+	Updated games/love09 to 0.9.2 [maya 2018-10-01]
