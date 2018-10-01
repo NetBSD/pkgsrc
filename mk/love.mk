@@ -1,4 +1,4 @@
-# $NetBSD: love.mk,v 1.1 2018/09/30 19:22:18 maya Exp $
+# $NetBSD: love.mk,v 1.2 2018/10/01 18:25:17 maya Exp $
 #
 # Wrapper for LOVE2D games.
 # Creates launchers for the required version.
@@ -20,4 +20,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${LOVE_DATA} ${DESTDIR}${PREFIX}/share/games/${LOVE_DATA}
 	${INSTALL_SCRIPT} ${WRKSRC}/${LOVE_GAME} ${DESTDIR}${PREFIX}/bin/${LOVE_GAME}
 
-DEPENDS+=	love${LOVE_VERSION_NODOT}-[0-9]*:../../wip/love${LOVE_VERSION_NODOT}
+DEPENDS+=	love${LOVE_VERSION_NODOT}-[0-9]*:../../games/love${LOVE_VERSION_NODOT}
