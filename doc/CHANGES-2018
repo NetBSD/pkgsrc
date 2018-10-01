@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4241 2018/10/01 17:59:08 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4242 2018/10/01 21:08:51 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5910,3 +5910,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/qt5 to 5.11.2 [adam 2018-10-01]
 	Updated textproc/py-openpyxl to 2.5.8 [adam 2018-10-01]
 	Updated multimedia/mkvtoolnix to 27.0.0 [adam 2018-10-01]
+	Updated net/py-lexicon to 2.7.9 [fhajny 2018-10-01]
