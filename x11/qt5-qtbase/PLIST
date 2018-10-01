@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2018/06/22 06:29:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2018/10/01 17:44:47 adam Exp $
 lib/pkgconfig/Qt5Concurrent.pc
 lib/pkgconfig/Qt5Core.pc
 lib/pkgconfig/Qt5DBus.pc
@@ -1826,11 +1826,11 @@ qt5/include/QtPrintSupport/qprintpreviewwidget.h
 qt5/include/QtPrintSupport/qtprintsupport-config.h
 qt5/include/QtPrintSupport/qtprintsupportglobal.h
 qt5/include/QtPrintSupport/qtprintsupportversion.h
-${PLIST.unix}qt5/include/QtServiceSupport/${PKGVERSION}/QtServiceSupport/private/qgenericunixservices_p.h
-${PLIST.unix}qt5/include/QtServiceSupport/QtServiceSupport
-${PLIST.unix}qt5/include/QtServiceSupport/QtServiceSupportDepends
-${PLIST.unix}qt5/include/QtServiceSupport/QtServiceSupportVersion
-${PLIST.unix}qt5/include/QtServiceSupport/qtservicesupportversion.h
+qt5/include/QtServiceSupport/${PKGVERSION}/QtServiceSupport/private/qgenericunixservices_p.h
+qt5/include/QtServiceSupport/QtServiceSupport
+qt5/include/QtServiceSupport/QtServiceSupportDepends
+qt5/include/QtServiceSupport/QtServiceSupportVersion
+qt5/include/QtServiceSupport/qtservicesupportversion.h
 qt5/include/QtSql/${PKGVERSION}/QtSql/private/qsqlcachedresult_p.h
 qt5/include/QtSql/${PKGVERSION}/QtSql/private/qsqldriver_p.h
 qt5/include/QtSql/${PKGVERSION}/QtSql/private/qsqlnulldriver_p.h
@@ -2613,8 +2613,8 @@ qt5/lib/libQt5PrintSupport.so
 qt5/lib/libQt5PrintSupport.so.${PKGVERSION}
 qt5/lib/libQt5PrintSupport.so.5
 qt5/lib/libQt5PrintSupport.so.5.11
-${PLIST.unix}qt5/lib/libQt5ServiceSupport.a
-${PLIST.unix}qt5/lib/libQt5ServiceSupport.prl
+qt5/lib/libQt5ServiceSupport.a
+qt5/lib/libQt5ServiceSupport.prl
 qt5/lib/libQt5Sql.prl
 qt5/lib/libQt5Sql.so
 qt5/lib/libQt5Sql.so.${PKGVERSION}
@@ -2862,6 +2862,7 @@ qt5/mkspecs/features/mac/asset_catalogs.prf
 qt5/mkspecs/features/mac/mac.prf
 qt5/mkspecs/features/mac/objective_c.prf
 qt5/mkspecs/features/mac/rez.prf
+qt5/mkspecs/features/mac/sdk.mk
 qt5/mkspecs/features/mac/sdk.prf
 qt5/mkspecs/features/mac/toolchain.prf
 qt5/mkspecs/features/mac/unsupported/objc_namespace.prf
@@ -3079,7 +3080,7 @@ qt5/mkspecs/modules/qt_lib_openglextensions_private.pri
 qt5/mkspecs/modules/qt_lib_platformcompositor_support_private.pri
 qt5/mkspecs/modules/qt_lib_printsupport.pri
 qt5/mkspecs/modules/qt_lib_printsupport_private.pri
-${PLIST.unix}qt5/mkspecs/modules/qt_lib_service_support_private.pri
+qt5/mkspecs/modules/qt_lib_service_support_private.pri
 qt5/mkspecs/modules/qt_lib_sql.pri
 qt5/mkspecs/modules/qt_lib_sql_private.pri
 qt5/mkspecs/modules/qt_lib_testlib.pri
