@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18571 2018/09/30 22:30:43 schmonz Exp $
+$NetBSD: TODO,v 1.18572 2018/10/01 09:40:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -338,6 +338,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
+	o ImageMagick-7.0.8.12
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaDemos-8.3.0
@@ -462,7 +463,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cal3d-0.11.0
 	o calc-2.11.10.1
 	o calcoo-2.1.0
-	o calibre-3.31.0
+	o calibre-3.32.0
 	o calligra-3.0.1 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-1.1
@@ -692,7 +693,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glx-utils-8.3.0
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-3.30
+	o gnome-3.30.1
 	o gnome-applets-3.14.0
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-chemistry-utils-0.14.11
@@ -790,6 +791,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hevea-2.28
 	o heyu-2.9.0
 	o hiawatha-10.8.1
+	o hiredis-0.14.0
 	o honeyd-1.5c
 	o horde-5.2.9
 	o howm-1.4.3 [pkg/51101]
@@ -990,8 +992,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libprelude-3.1.0
 	o libpreludedb-3.1.0
 	o libquantum-1.1.0 [pkg/43728, development release]
-	o librsvg-2.44.3 [needs rust+cargo]
-	o libsoup-2.64.0
+	o librsvg-2.44.6 [needs rust+cargo]
+	o libsoup-2.64.1
 	o libstree-0.4.2
 	o libtcl-nothread-8.5.1
 	o libtecla-1.6.3
@@ -999,6 +1001,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libuv-1.23.1
 	o libv4l-0.8.5
 	o libvirt-2.3
+	o libxcb-1.13.1
 	o libxdg-basedir-1.2.0
 	o libykneomgr-0.1.8
 	o libyubikey-1.13
@@ -1009,6 +1012,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o linpsk-1.2 [ld: cannot find -lqt-mt with qt4]
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
+	o llvm-7.0.0
 	o lmbench-3
 	o lohit-fonts-2.4.2
 	o lottanzb-0.6
@@ -1246,6 +1250,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-musicbrainz-0.7.4
 	o py-newt-0.52.20
 	o py-omniORBpy-3.7
+	o py-packaging-18.0
 	o py-pendrell-0.3.7
 	o py-postgresql-5.0.6
 	o py-ptt-1.10.2
@@ -1255,6 +1260,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-simpletal-5.1
 	o py-spf-2.0.12t
 	o py-sybase-0.37
+	o py-test-xdist-1.23.2
 	o py-wxWidgets-4.0.0
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
@@ -1262,6 +1268,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o qlandkartegt-1.8.1 [pkg/53376]
 	o qnetwalk-1.4
 	o qt4-creator-3.4.0
+	o qt5-5.11.2
 	o quodlibet2-3.5.3
 	o radare2-2.8.0
 	o radiance-4R1
@@ -1426,6 +1433,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tkpasman-2.2b
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
+	o todoman-3.4.1
 	o tomboy-1.10.2
 	o top-3.8beta1
 	o topgit-0.8
@@ -1452,7 +1460,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o userppp-030706
 	o userspace-rcu-0.9.1
 	o utilisp-1.14
-	o vala-0.42.1
+	o vala-0.42.2
 	o varnish-6.0
 	o varnish-5.1.3
 	o vbetool-1.1
@@ -1487,7 +1495,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o whohas-0.29.1
 	o whowatch-1.8.5
 	o windowlab-1.40
-	o wine-3.0.2
+	o wine-3.0.3
 	o wine-devel-3.7
 	o wkhtmltopdf-0.12.5
 	o wmi-11
