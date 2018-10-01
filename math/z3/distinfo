@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2018/06/15 15:11:34 jperkin Exp $
+$NetBSD: distinfo,v 1.7 2018/10/01 11:21:03 jperkin Exp $
 
 SHA1 (z3-4.5.0.tar.gz) = 6f4e94e025fcc2fa2896524d8fbb9de0b3033854
 RMD160 (z3-4.5.0.tar.gz) = 81121307ac83f42989da49efda31964a94f7f5d5
@@ -6,5 +6,6 @@ SHA512 (z3-4.5.0.tar.gz) = 1ebc2c908d90b6b879f1e819c864ff894613276af47a440f27cf9
 Size (z3-4.5.0.tar.gz) = 3573695 bytes
 SHA1 (patch-configure) = 8d5fe787f15fe781c3c23cee27058f898de8c95e
 SHA1 (patch-scripts_mk__util.py) = f3c6f13daeffb31e01f0ad50ca2c0dab2cdb87a2
+SHA1 (patch-src_interp_iz3interp.cpp) = d646a78e8469ea83829ad2f4b8bb2c4a9155e6f1
 SHA1 (patch-src_util_scoped__timer.cpp) = 68e0bdee94d54c93f3d493bf71abebcdccd921ba
 SHA1 (patch-src_util_stopwatch.h) = dbeab175ed4f507d5378f1966f8ed173c4c9a9a7
