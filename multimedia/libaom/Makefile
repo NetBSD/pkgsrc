@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2018/09/30 18:58:16 maya Exp $
+# $NetBSD: Makefile,v 1.2 2018/10/01 03:25:46 ryoon Exp $
 
 PKGNAME=	libaom-1.0.0
-DISTNAME=	d14c5bb4f336ef1842046089849dee4a301fbbf0
+DISTNAME=	aom-d14c5bb4f336ef1842046089849dee4a301fbbf0
 CATEGORIES=	multimedia
-MASTER_SITES=	https://aomedia.googlesource.com/aom/+archive/
+#MASTER_SITES=	-https://aomedia.googlesource.com/aom/+archive/d14c5bb4f336ef1842046089849dee4a301fbbf0.tar.gz
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://aomedia.googlesource.com/aom/+archive/
