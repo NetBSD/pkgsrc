@@ -1,0 +1,22 @@
+$NetBSD: patch-configure,v 1.1 2018/10/01 09:47:06 jperkin Exp $
+
+Remove bool redefine which breaks C++ headers.
+
+--- configure.orig	2010-04-10 19:23:05.000000000 +0000
++++ configure
+@@ -6961,15 +6961,8 @@ $as_echo "$ac_cv_sizeof_bool" >&6; }
+ 
+ 
+ 
+-cat >>confdefs.h <<_ACEOF
+-#define SIZEOF_BOOL $ac_cv_sizeof_bool
+-_ACEOF
+ 
+ 
+-if test "$ac_cv_sizeof_bool" = 0 ; then
+-  $as_echo "#define bool int" >>confdefs.h
+-
+-fi
+ 
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking if true is defined" >&5
+ $as_echo_n "checking if true is defined... " >&6; }

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2015/11/04 00:35:05 agc Exp $
+$NetBSD: distinfo,v 1.11 2018/10/01 09:47:06 jperkin Exp $
 
 SHA1 (iperf-2.0.5.tar.gz) = 7302792dcb1bd7aeba032fef6d3dcc310e4d113f
 RMD160 (iperf-2.0.5.tar.gz) = 975d971974437136ae72bb17c0f776ea92eaf878
@@ -10,3 +10,4 @@ SHA512 (nomaxcpu.patch) = 91accee7fe57e93ed99e91ec18a09f449f5310952748ed8fb2d4f0
 Size (nomaxcpu.patch) = 3354 bytes
 SHA1 (patch-ab) = e10e9119c5e830c186630aca72536ed1431fdbdc
 SHA1 (patch-ac) = 83479534caf61cf034453e1953e9ed5618f3f74c
+SHA1 (patch-configure) = 1295b2022beb24ac809b62f9f919c70368545f01
