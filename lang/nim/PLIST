@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/04/03 03:24:56 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/10/01 12:50:42 ryoon Exp $
 bin/nim
 nim/bin/nim
 nim/compiler.nimble
@@ -6,9 +6,11 @@ nim/compiler/aliases.nim
 nim/compiler/ast.nim
 nim/compiler/astalgo.nim
 nim/compiler/bitsets.nim
+nim/compiler/btrees.nim
 nim/compiler/canonicalizer.nim
 nim/compiler/ccgcalls.nim
 nim/compiler/ccgexprs.nim
+nim/compiler/ccgliterals.nim
 nim/compiler/ccgmerge.nim
 nim/compiler/ccgstmts.nim
 nim/compiler/ccgthreadvars.nim
@@ -18,8 +20,11 @@ nim/compiler/ccgutils.nim
 nim/compiler/cgen.nim
 nim/compiler/cgendata.nim
 nim/compiler/cgmeth.nim
+nim/compiler/closureiters.nim
+nim/compiler/cmdlinehelper.nim
 nim/compiler/commands.nim
 nim/compiler/condsyms.nim
+nim/compiler/configuration.nim
 nim/compiler/debuginfo.nim
 nim/compiler/depends.nim
 nim/compiler/destroyer.nim
@@ -38,16 +43,21 @@ nim/compiler/hlo.nim
 nim/compiler/idents.nim
 nim/compiler/idgen.nim
 nim/compiler/importer.nim
+nim/compiler/incremental.nim
 nim/compiler/installer.ini
 nim/compiler/jsgen.nim
 nim/compiler/jstypes.nim
 nim/compiler/lambdalifting.nim
+nim/compiler/layouter.nim
 nim/compiler/lexer.nim
 nim/compiler/liftlocals.nim
+nim/compiler/lineinfos.nim
+nim/compiler/linter.nim
 nim/compiler/lists.nim
 nim/compiler/llstream.nim
 nim/compiler/lookups.nim
 nim/compiler/lowerings.nim
+nim/compiler/macrocacheimpl.nim
 nim/compiler/magicsys.nim
 nim/compiler/main.nim
 nim/compiler/mapping.txt
@@ -63,7 +73,6 @@ nim/compiler/nimconf.nim
 nim/compiler/nimeval.nim
 nim/compiler/nimfix/nimfix.nim
 nim/compiler/nimfix/nimfix.nim.cfg
-nim/compiler/nimfix/pretty.nim
 nim/compiler/nimfix/prettybase.nim
 nim/compiler/nimlexbase.nim
 nim/compiler/nimsets.nim
@@ -75,12 +84,12 @@ nim/compiler/parampatterns.nim
 nim/compiler/parser.nim
 nim/compiler/passaux.nim
 nim/compiler/passes.nim
+nim/compiler/pathutils.nim
 nim/compiler/patterns.nim
-nim/compiler/pbraces.nim
 nim/compiler/platform.nim
 nim/compiler/plugins/active.nim
 nim/compiler/plugins/itersgen.nim
-nim/compiler/plugins/locals/locals.nim
+nim/compiler/plugins/locals.nim
 nim/compiler/pluginsupport.nim
 nim/compiler/pragmas.nim
 nim/compiler/prefixmatches.nim
@@ -90,9 +99,7 @@ nim/compiler/renderer.nim
 nim/compiler/reorder.nim
 nim/compiler/rod.nim
 nim/compiler/rodimpl.nim
-nim/compiler/rodread.nim
 nim/compiler/rodutils.nim
-nim/compiler/rodwrite.nim
 nim/compiler/ropes.nim
 nim/compiler/saturate.nim
 nim/compiler/scriptconfig.nim
@@ -114,7 +121,6 @@ nim/compiler/semstmts.nim
 nim/compiler/semtempl.nim
 nim/compiler/semtypes.nim
 nim/compiler/semtypinst.nim
-nim/compiler/service.nim
 nim/compiler/sighashes.nim
 nim/compiler/sigmatch.nim
 nim/compiler/suggest.nim
@@ -139,11 +145,11 @@ nim/config/nimdoc.cfg
 nim/config/nimdoc.tex.cfg
 nim/doc/advopt.txt
 nim/doc/basicopt.txt
-nim/doc/html/overview.html
 nim/lib/arch/x86/amd64.S
 nim/lib/arch/x86/i386.S
 nim/lib/core/allocators.nim
 nim/lib/core/locks.nim
+nim/lib/core/macrocache.nim
 nim/lib/core/macros.nim
 nim/lib/core/refs.nim
 nim/lib/core/rlocks.nim
@@ -160,6 +166,8 @@ nim/lib/deprecated/pure/ftpclient.nim
 nim/lib/deprecated/pure/parseurl.nim
 nim/lib/deprecated/pure/rawsockets.nim
 nim/lib/deprecated/pure/sockets.nim
+nim/lib/genode/alloc.nim
+nim/lib/genode/env.nim
 nim/lib/genode_cpp/syslocks.h
 nim/lib/genode_cpp/threads.h
 nim/lib/impure/db_mysql.nim
@@ -176,11 +184,13 @@ nim/lib/impure/ssl.nim
 nim/lib/js/asyncjs.nim
 nim/lib/js/dom.nim
 nim/lib/js/jsconsole.nim
+nim/lib/js/jscore.nim
 nim/lib/js/jsffi.nim
 nim/lib/nimbase.h
 nim/lib/nimrtl.nim
 nim/lib/nimrtl.nim.cfg
-nim/lib/packages/docutils/docutils.babel
+nim/lib/nintendoswitch/switch_memory.nim
+nim/lib/packages/docutils/docutils.nimble
 nim/lib/packages/docutils/highlite.nim
 nim/lib/packages/docutils/rst.nim
 nim/lib/packages/docutils/rstast.nim
@@ -193,6 +203,8 @@ nim/lib/posix/linux.nim
 nim/lib/posix/posix.nim
 nim/lib/posix/posix_linux_amd64.nim
 nim/lib/posix/posix_linux_amd64_consts.nim
+nim/lib/posix/posix_nintendoswitch.nim
+nim/lib/posix/posix_nintendoswitch_consts.nim
 nim/lib/posix/posix_other.nim
 nim/lib/posix/posix_other_consts.nim
 nim/lib/posix/termios.nim
@@ -283,6 +295,7 @@ nim/lib/pure/osproc.nim
 nim/lib/pure/oswalkdir.nim
 nim/lib/pure/parsecfg.nim
 nim/lib/pure/parsecsv.nim
+nim/lib/pure/parsejson.nim
 nim/lib/pure/parseopt.nim
 nim/lib/pure/parseopt2.nim
 nim/lib/pure/parsesql.nim
@@ -307,6 +320,7 @@ nim/lib/pure/strscans.nim
 nim/lib/pure/strtabs.nim
 nim/lib/pure/strutils.nim
 nim/lib/pure/subexes.nim
+nim/lib/pure/sugar.nim
 nim/lib/pure/terminal.nim
 nim/lib/pure/times.nim
 nim/lib/pure/typetraits.nim
@@ -322,6 +336,7 @@ nim/lib/pure/xmldomparser.nim
 nim/lib/pure/xmlparser.nim
 nim/lib/pure/xmltree.nim
 nim/lib/std/sha1.nim
+nim/lib/std/varints.nim
 nim/lib/stdlib.nimble
 nim/lib/system.nim
 nim/lib/system/alloc.nim
@@ -345,10 +360,11 @@ nim/lib/system/gc2.nim
 nim/lib/system/gc_common.nim
 nim/lib/system/gc_ms.nim
 nim/lib/system/gc_regions.nim
-nim/lib/system/genodealloc.nim
+nim/lib/system/helpers.nim
 nim/lib/system/hti.nim
 nim/lib/system/inclrtl.nim
 nim/lib/system/jssys.nim
+nim/lib/system/memory.nim
 nim/lib/system/memtracker.nim
 nim/lib/system/mmdisp.nim
 nim/lib/system/nimscript.nim
@@ -358,6 +374,7 @@ nim/lib/system/profiler.nim
 nim/lib/system/repr.nim
 nim/lib/system/reprjs.nim
 nim/lib/system/sets.nim
+nim/lib/system/strmantle.nim
 nim/lib/system/sysio.nim
 nim/lib/system/syslocks.nim
 nim/lib/system/sysspawn.nim
