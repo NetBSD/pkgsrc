@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2018/09/30 19:17:24 maya Exp $
+$NetBSD: distinfo,v 1.2 2018/10/01 23:20:41 maya Exp $
 
-SHA1 (love-0.9.0-linux-src.tar.gz) = d4ed3bd6a5f9c2359fbc86e43f87eda7f0b2111e
-RMD160 (love-0.9.0-linux-src.tar.gz) = 497563e79ea00b8390d43c2f0966076e4e23ce66
-Size (love-0.9.0-linux-src.tar.gz) = 1389352 bytes
-SHA1 (patch-configure) = 3514e45780d24aa28250349231f718fd3b787d48
+SHA1 (love-0.9.2-linux-src.tar.gz) = ed4479cc44f7f38d733c6e2ba1d54d0c5f80abde
+RMD160 (love-0.9.2-linux-src.tar.gz) = c6aa9b2d1d5c01670c331e59668c8ea92992b326
+SHA512 (love-0.9.2-linux-src.tar.gz) = a6948eb77334b1a73a3595268eca8bd7a04a723e9e027ef4b1b8133b4365c06b0a0c4d4e09040ab74bd1f8564d70ec8d07c61aa67d75d86ecba41b2baca629ab
+Size (love-0.9.2-linux-src.tar.gz) = 1451535 bytes
 SHA1 (patch-src_common_config.h) = 93ce979d98590ca74e0437f5a265eec093073f80
