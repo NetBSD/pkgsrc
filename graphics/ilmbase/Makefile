@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2018/01/10 10:10:10 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2018/10/02 12:05:35 adam Exp $
 
-DISTNAME=	ilmbase-2.2.1
+DISTNAME=	ilmbase-2.3.0
 CATEGORIES=	graphics
-MASTER_SITES=	http://download.savannah.nongnu.org/releases/openexr/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=openexr/}
+GITHUB_PROJECT=	openexr
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.openexr.com/
