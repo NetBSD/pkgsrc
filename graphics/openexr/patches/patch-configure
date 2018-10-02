@@ -1,0 +1,119 @@
+$NetBSD: patch-configure,v 1.1 2018/10/02 12:05:35 adam Exp $
+
+Portability fixes.
+
+--- configure.orig	2018-08-10 01:37:40.000000000 +0000
++++ configure
+@@ -15910,7 +15910,7 @@ else
+ fi
+ 
+ 
+-if test "${cxxstd}" == 17 ; then
++if test "${cxxstd}" = 17 ; then
+       ax_cxx_compile_alternatives="17 1z"    ax_cxx_compile_cxx17_required=true
+   ac_ext=cpp
+ ac_cpp='$CXXCPP $CPPFLAGS'
+@@ -17623,7 +17623,7 @@ $as_echo "$as_me: WARNING: C++17 is not 
+ 
+ 	CXXFLAGS="$CXXFLAGS -std=c++17"
+ else
+-  if test "${cxxstd}" == 14 ; then
++  if test "${cxxstd}" = 14 ; then
+         ax_cxx_compile_alternatives="14 1y"    ax_cxx_compile_cxx14_required=true
+   ac_ext=cpp
+ ac_cpp='$CXXCPP $CPPFLAGS'
+@@ -18531,7 +18531,7 @@ $as_echo "#define HAVE_CXX14 1" >>confde
+ 
+   	CXXFLAGS="$CXXFLAGS -std=c++14"
+   else
+-    if test "${cxxstd}" == 11 ; then
++    if test "${cxxstd}" = 11 ; then
+         ax_cxx_compile_alternatives="11 0x"    ax_cxx_compile_cxx11_required=true
+   ac_ext=cpp
+ ac_cpp='$CXXCPP $CPPFLAGS'
+@@ -19199,7 +19199,7 @@ $as_echo "#define HAVE_CXX11 1" >>confde
+ 
+       CXXFLAGS="$CXXFLAGS -std=c++11"
+     else
+-      if test "${cxxstd}" == 03 ; then
++      if test "${cxxstd}" = 03 ; then
+         CXXFLAGS="$CXXFLAGS -std=c++03"
+       else
+                   ax_cxx_compile_alternatives="11 0x"    ax_cxx_compile_cxx11_required=false
+@@ -22482,11 +22482,11 @@ $as_echo "#define HAVE_CXX17 1" >>confde
+   { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: C++17 is not yet standardized, so the checks may change in incompatible ways anytime" >&5
+ $as_echo "$as_me: WARNING: C++17 is not yet standardized, so the checks may change in incompatible ways anytime" >&2;}
+ 
+-        if test "$HAVE_CXX14" == 1 ; then
++        if test "$HAVE_CXX14" = 1 ; then
+   	      CXXFLAGS="$CXXFLAGS -std=c++14"
+           cxxstd = 14
+         else
+-          if test "$HAVE_CXX11" == 1 ; then
++          if test "$HAVE_CXX11" = 1 ; then
+   	        CXXFLAGS="$CXXFLAGS -std=c++11"
+             cxxstd = 11
+           fi
+@@ -23399,7 +23399,7 @@ fi
+ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $sysconf_nproc" >&5
+ $as_echo "$sysconf_nproc" >&6; }
+-if test "x${sysconf_nproc}" == xyes ; then
++if test "x${sysconf_nproc}" = xyes ; then
+ 
+ $as_echo "#define OPENEXR_IMF_HAVE_SYSCONF_NPROCESSORS_ONLN 1" >>confdefs.h
+ 
+@@ -23511,7 +23511,7 @@ LIB_SUFFIX=""
+ lib_suffix_valid="no"
+ 
+ lib_namespace="Imf"
+-if test "x${library_namespace_versioning}" == xyes ; then
++if test "x${library_namespace_versioning}" = xyes ; then
+ 
+ cat >>confdefs.h <<_ACEOF
+ #define OPENEXR_IMF_INTERNAL_NAMESPACE Imf_${OPENEXR_VERSION_API}
+@@ -23524,7 +23524,7 @@ $as_echo "#define OPENEXR_IMF_INTERNAL_N
+     lib_namespace="Imf_${OPENEXR_VERSION_API}"
+     LIB_SUFFIX="${OPENEXR_VERSION_API}"
+     lib_suffix_valid="yes"
+-elif test "x${library_namespace_versioning}" == xno ; then
++elif test "x${library_namespace_versioning}" = xno ; then
+ 
+ cat >>confdefs.h <<_ACEOF
+ #define OPENEXR_IMF_INTERNAL_NAMESPACE Imf
+@@ -23548,7 +23548,7 @@ $as_echo "#define OPENEXR_IMF_INTERNAL_N
+ fi
+ 
+ 
+-if test "x${lib_suffix_valid}" == xyes ; then
++if test "x${lib_suffix_valid}" = xyes ; then
+ LIB_SUFFIX_DASH="-${LIB_SUFFIX}"
+ 
+  if true; then
+@@ -23583,7 +23583,7 @@ else
+ fi
+ 
+ 
+-if test "x${custom_usr_namespace}" == xyes ; then
++if test "x${custom_usr_namespace}" = xyes ; then
+     { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Enabling 'custom user namespace' requires an additional argument, reverting to 'Imf'" >&5
+ $as_echo "$as_me: WARNING: Enabling 'custom user namespace' requires an additional argument, reverting to 'Imf'" >&2;}
+ 
+@@ -23592,7 +23592,7 @@ cat >>confdefs.h <<_ACEOF
+ _ACEOF
+ 
+     usr_namespace="Imf"
+-elif test "x${custom_usr_namespace}" == xno ; then
++elif test "x${custom_usr_namespace}" = xno ; then
+ 
+ cat >>confdefs.h <<_ACEOF
+ #define OPENEXR_IMF_NAMESPACE Imf
+@@ -26309,7 +26311,7 @@ enable large stack optimizations        
+ internal library namespace                      $lib_namespace
+ user-client namespace                           $usr_namespace" >&6; }
+ 
+-if test "x$build_osxuniversal" == xyes; then
++if test "x$build_osxuniversal" = xyes; then
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result:
+ build OS X universal binaries                   $build_osxuniversal" >&5
+ $as_echo "
