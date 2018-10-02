@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/08/07 09:53:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/10/02 08:09:27 adam Exp $
 bin/django-admin${PYVERSSUFFIX}
 bin/django-admin${PYVERSSUFFIX}.py
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -3038,6 +3038,8 @@ ${PYSITELIB}/django/contrib/postgres/indexes.pyo
 ${PYSITELIB}/django/contrib/postgres/jinja2/postgres/widgets/split_array.html
 ${PYSITELIB}/django/contrib/postgres/locale/ar/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/postgres/locale/ar/LC_MESSAGES/django.po
+${PYSITELIB}/django/contrib/postgres/locale/az/LC_MESSAGES/django.mo
+${PYSITELIB}/django/contrib/postgres/locale/az/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/postgres/locale/be/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/postgres/locale/be/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/postgres/locale/bg/LC_MESSAGES/django.mo
@@ -4234,6 +4236,9 @@ ${PYSITELIB}/django/db/backends/oracle/base.pyo
 ${PYSITELIB}/django/db/backends/oracle/client.py
 ${PYSITELIB}/django/db/backends/oracle/client.pyc
 ${PYSITELIB}/django/db/backends/oracle/client.pyo
+${PYSITELIB}/django/db/backends/oracle/compiler.py
+${PYSITELIB}/django/db/backends/oracle/compiler.pyc
+${PYSITELIB}/django/db/backends/oracle/compiler.pyo
 ${PYSITELIB}/django/db/backends/oracle/creation.py
 ${PYSITELIB}/django/db/backends/oracle/creation.pyc
 ${PYSITELIB}/django/db/backends/oracle/creation.pyo
