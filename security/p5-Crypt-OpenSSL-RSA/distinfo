@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2018/05/02 13:22:44 wiz Exp $
+$NetBSD: distinfo,v 1.13 2018/10/02 12:26:12 wen Exp $
 
-SHA1 (Crypt-OpenSSL-RSA-0.30.tar.gz) = 77d7248274bd7a747cac202f0dc31ac9444f56ae
-RMD160 (Crypt-OpenSSL-RSA-0.30.tar.gz) = d698359ec2920f267f68136adedec2fdb92533b3
-SHA512 (Crypt-OpenSSL-RSA-0.30.tar.gz) = 7a6fb6dd3a454f97666f1ccdefae57641b8f79513b8ac3850b5508c27f3ad3195649b2979693e38350ea94d2f405390a77ca893431b2e349d4aa4eb06c0ba11b
-Size (Crypt-OpenSSL-RSA-0.30.tar.gz) = 24664 bytes
+SHA1 (Crypt-OpenSSL-RSA-0.31.tar.gz) = 5028d060a546a4e1334b60d2fefd21cdd116afb1
+RMD160 (Crypt-OpenSSL-RSA-0.31.tar.gz) = 2f5f2e42715cc790bce107ae742da7af70635d3d
+SHA512 (Crypt-OpenSSL-RSA-0.31.tar.gz) = e00d25fc1d39253ea2d7d6ee478403d2b38bd9125602baf5815672fb9e81674ff58bbb47539e425526db1988ebc1a40837372cf42ffd466cb532efa2e450ccab
+Size (Crypt-OpenSSL-RSA-0.31.tar.gz) = 25856 bytes
