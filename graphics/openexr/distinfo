@@ -1,12 +1,10 @@
-$NetBSD: distinfo,v 1.30 2018/01/28 19:58:17 wiz Exp $
+$NetBSD: distinfo,v 1.31 2018/10/02 12:05:35 adam Exp $
 
-SHA1 (openexr-2.2.1.tar.gz) = 585cf77cdc3dc0d9d71531dfa747c4a11c5ec9e8
-RMD160 (openexr-2.2.1.tar.gz) = eb2fbbefe1399d87a4a60807cb7386ed3b300eaa
-SHA512 (openexr-2.2.1.tar.gz) = 192100c6ac47534f3a93c55327d2ab90b07a8265156855086b326184328c257dcde12991b3f3f1831e2df4226fe884adcfe481c2f02a157c715aee665e89a480
-Size (openexr-2.2.1.tar.gz) = 18176639 bytes
-SHA1 (patch-IlmImf_ImfFastHuf.cpp) = bf583b5e0efb1af6e00d671b07d4cc154e13ac44
+SHA1 (openexr-2.3.0.tar.gz) = 67c4f9c2b4ab7c5922671536f93827ecb966969f
+RMD160 (openexr-2.3.0.tar.gz) = 3444fe1aa647be9ab2e6ea1638e27ea97c3f6688
+SHA512 (openexr-2.3.0.tar.gz) = 003f5bb3bd010be1ad9ff1798643ef711c683c8191625fe9b59070c9cb0c649c277cd506d890c6b239d9cbab80e83e16f1c1d1d74117c916ee3a80e061953123
+Size (openexr-2.3.0.tar.gz) = 18412067 bytes
 SHA1 (patch-IlmImf_ImfSystemSpecific.cpp) = 79bf644181650fa7dc13c04dfeb68142bde6a2b6
-SHA1 (patch-IlmImf_ImfSystemSpecific.h) = f36d049085e42beabcf5f7af5354009391a1f9f2
-SHA1 (patch-IlmImf_dwaLookups.cpp) = 7bcc32f3de10cea5467d054f1b1aa0fd12d49d46
-SHA1 (patch-aa) = a969c6df4af16d84630e4b36cd1c718cd9d8db76
-SHA1 (patch-ab) = 0efe7155350e1976d1d7bad9da8b1a037fd84572
+SHA1 (patch-IlmImf_ImfSystemSpecific.h) = 25671307ed19503039fe6fc5ef7cc45ce7d523f1
+SHA1 (patch-bootstrap) = 9e8718727c571f48df9f213a016fe24ea3141c21
+SHA1 (patch-configure) = f46aeb70c0dc85b07be5608ffc923c7bda9f1a66
