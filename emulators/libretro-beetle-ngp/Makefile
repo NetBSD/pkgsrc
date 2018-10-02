@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/08/11 00:32:25 nia Exp $
+# $NetBSD: Makefile,v 1.2 2018/10/02 21:09:28 nia Exp $
 
 DISTNAME=	libretro-beetle-ngp-20180720
 CATEGORIES=	emulators
@@ -22,6 +22,10 @@ CFLAGS+=	-DMSB_FIRST
 .endif
 
 BUILD_MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=link.T
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-undefined
+
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
 do-install:
