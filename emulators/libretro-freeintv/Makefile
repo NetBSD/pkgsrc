@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/08/13 00:58:12 nia Exp $
+# $NetBSD: Makefile,v 1.3 2018/10/02 21:09:29 nia Exp $
 
 DISTNAME=	libretro-freeintv-20180729
 CATEGORIES=	emulators
@@ -20,6 +20,9 @@ USE_LANGUAGES=	c c++
 .if ${MACHINE_ENDIAN} == "big"
 CFLAGS+=	-DWORDS_BIGENDIAN -DMSB_FIRST
 .endif
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=./link.T
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-undefined
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 

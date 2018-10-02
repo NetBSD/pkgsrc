@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/08/08 22:31:13 nia Exp $
+# $NetBSD: Makefile,v 1.3 2018/10/02 21:09:30 nia Exp $
 
 DISTNAME=	libretro-stella-20180411
 CATEGORIES=	emulators
@@ -16,6 +16,9 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
 MAKE_FLAGS+=	GIT_VERSION="-${PKGVERSION_NOREV}-pkgsrc"
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-undefined
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=link.T
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 

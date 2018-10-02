@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/09/27 20:22:26 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2018/10/02 21:09:29 nia Exp $
 
 DISTNAME=	libretro-desmume-20180807
 CATEGORIES=	emulators
@@ -33,6 +33,10 @@ MAKE_FLAGS+=		DESMUME_JIT=0
 .endif
 
 MAKE_FLAGS+=		GIT_VERSION="-pkgsrc"
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-undefined
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=../../frontend/libretro/link.T
+
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
 do-install:

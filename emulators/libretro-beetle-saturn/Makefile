@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/09/07 00:49:04 nia Exp $
+# $NetBSD: Makefile,v 1.4 2018/10/02 21:09:29 nia Exp $
 
 DISTNAME=	libretro-beetle-saturn-20180620
 PKGREVISION=	1
@@ -21,6 +21,9 @@ MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 # "experimental, x86_64 only" - https://mednafen.github.io/
 # Not built by upstream's buildbot for i386, ARM, or PowerPC.
 ONLY_FOR_PLATFORM=	*-*-x86_64
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=link.T
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-undefined
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 

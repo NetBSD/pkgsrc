@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/08/12 17:11:40 nia Exp $
+# $NetBSD: Makefile,v 1.3 2018/10/02 21:09:29 nia Exp $
 
 DISTNAME=	libretro-genesis-plus-gx-20180607
 CATEGORIES=	emulators
@@ -24,6 +24,9 @@ MAKE_FLAGS+=	SHARED_LIBVORBIS=1
 .if ${MACHINE_ENDIAN} == "big"
 MAKE_FLAGS+=	ENDIANNESS_DEFINES="-DBYTE_ORDER=BIG_ENDIAN -DCPU_IS_BIG_ENDIAN=1 -DWORDS_BIGENDIAN=1"
 .endif
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=./libretro/link.T
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-undefined
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 

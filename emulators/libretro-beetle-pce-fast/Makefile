@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/08/10 23:16:12 nia Exp $
+# $NetBSD: Makefile,v 1.2 2018/10/02 21:09:28 nia Exp $
 
 DISTNAME=	libretro-beetle-pce-fast-20180720
 CATEGORIES=	emulators
@@ -16,6 +16,9 @@ USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=link.T
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-undefined
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
