@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.15 2018/01/10 10:10:10 wiz Exp $
+$NetBSD: distinfo,v 1.16 2018/10/02 12:05:35 adam Exp $
 
-SHA1 (ilmbase-2.2.1.tar.gz) = 87df9e235eff0d10e171f15ad0e63cba05e16bce
-RMD160 (ilmbase-2.2.1.tar.gz) = 0abe57b5c8a82e20be500a490d335816f654625c
-SHA512 (ilmbase-2.2.1.tar.gz) = a08ddd9069b34a93612445a445a2ddf80c0e22349bcf221a3cc6e9f5575180b08a8b597009dacabf072360e7162e15964988bc79e8ec82cf3da6507148a75320
-Size (ilmbase-2.2.1.tar.gz) = 573073 bytes
+SHA1 (ilmbase-2.3.0.tar.gz) = 1cddb28b14b60025b1e1604d5616540ed038cb16
+RMD160 (ilmbase-2.3.0.tar.gz) = bd60ebfdc114e186db87f8c8b92c4f031b17e0d9
+SHA512 (ilmbase-2.3.0.tar.gz) = db0804a7c37c2a97f9dbf81b20f40f7fdea73242baa2759d9dc3728e6849e7ecae0e178fa1c710add980d050499151650675e4b2cda6cbbaa61aca406a1f929a
+Size (ilmbase-2.3.0.tar.gz) = 595490 bytes
 SHA1 (patch-Iex_IexBaseExc.cpp) = 5bf551e1eacffa8dc3ec1c5643e5bfd5f8fc5701
 SHA1 (patch-Iex_IexThrowErrnoExc.cpp) = 1a4206619320a2a95378b7c2db14fde20b0ffd71
 SHA1 (patch-Imath_ImathFun.h) = 79ab60ada8cecd52e5b16fadbded82492d79a1df
-SHA1 (patch-aa) = 97e7c7347cc6b4f3e11e7d0692c78b7322e06a7f
-SHA1 (patch-ab) = 75ee78ef689728ad748fd873c7ef1882f95a4639
+SHA1 (patch-bootstrap) = 16e655c408fdb0d275d8da8f77b83cebca132637
+SHA1 (patch-configure) = 5f20c43310a099b3ce888db7f39cdc33127b4d24
