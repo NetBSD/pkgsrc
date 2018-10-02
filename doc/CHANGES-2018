@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4246 2018/10/02 01:05:00 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4247 2018/10/02 02:58:16 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5915,3 +5915,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/p5-Text-CSV_XS to 1.37 [wen 2018-10-02]
 	Updated textproc/p5-Net-IDN-Encode to 2.401 [wen 2018-10-02]
 	Updated security/p5-IO-Socket-SSL to 2.060 [wen 2018-10-02]
+	Updated www/drupal8 to 8.6.1 [wen 2018-10-02]
