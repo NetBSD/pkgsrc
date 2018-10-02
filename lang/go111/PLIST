@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/09/25 09:06:09 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/10/02 18:19:56 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go111/AUTHORS
@@ -12,7 +12,7 @@ go111/api/README
 go111/api/except.txt
 go111/api/go1.1.txt
 go111/api/go1.10.txt
-go111/api/go${PKGVERSION}.txt
+go111/api/go1.11.txt
 go111/api/go1.2.txt
 go111/api/go1.3.txt
 go111/api/go1.4.txt
@@ -81,7 +81,7 @@ go111/doc/go-logo-blue.png
 go111/doc/go-logo-white.png
 go111/doc/go1.1.html
 go111/doc/go1.10.html
-go111/doc/go${PKGVERSION}.html
+go111/doc/go1.11.html
 go111/doc/go1.2.html
 go111/doc/go1.3.html
 go111/doc/go1.4.html
@@ -4400,10 +4400,10 @@ go111/src/go/internal/gcimporter/testdata/issue25301.go
 go111/src/go/internal/gcimporter/testdata/issue25596.go
 go111/src/go/internal/gcimporter/testdata/p.go
 go111/src/go/internal/gcimporter/testdata/versions/test.go
-go111/src/go/internal/gcimporter/testdata/versions/test_go${PKGVERSION}_0i.a
-go111/src/go/internal/gcimporter/testdata/versions/test_go${PKGVERSION}_6b.a
-go111/src/go/internal/gcimporter/testdata/versions/test_go${PKGVERSION}_999b.a
-go111/src/go/internal/gcimporter/testdata/versions/test_go${PKGVERSION}_999i.a
+go111/src/go/internal/gcimporter/testdata/versions/test_go1.11_0i.a
+go111/src/go/internal/gcimporter/testdata/versions/test_go1.11_6b.a
+go111/src/go/internal/gcimporter/testdata/versions/test_go1.11_999b.a
+go111/src/go/internal/gcimporter/testdata/versions/test_go1.11_999i.a
 go111/src/go/internal/gcimporter/testdata/versions/test_go1.7_0.a
 go111/src/go/internal/gcimporter/testdata/versions/test_go1.7_1.a
 go111/src/go/internal/gcimporter/testdata/versions/test_go1.8_4.a
