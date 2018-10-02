@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4253 2018/10/02 12:11:59 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4254 2018/10/02 12:28:24 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5928,3 +5928,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/ilmbase to 2.3.0 [adam 2018-10-02]
 	Updated graphics/openexr to 2.3.0 [adam 2018-10-02]
 	Updated math/gsl to 2.5 [adam 2018-10-02]
+	Updated security/p5-Crypt-OpenSSL-RSA to 0.31 [wen 2018-10-02]
