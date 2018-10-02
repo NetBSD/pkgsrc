@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4249 2018/10/02 08:47:12 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4250 2018/10/02 09:11:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5920,3 +5920,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-django2 to 2.1.2 [adam 2018-10-02]
 	Updated devel/py-test-xdist to 1.23.2 [adam 2018-10-02]
 	Updated www/py-test-django to 3.4.3 [adam 2018-10-02]
+	Updated www/py-bleach to 2.1.4 [adam 2018-10-02]
+	Updated graphics/py-Pillow to 5.3.0 [adam 2018-10-02]
