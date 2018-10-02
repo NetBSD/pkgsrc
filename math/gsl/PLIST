@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2017/07/04 09:36:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2018/10/02 12:10:29 adam Exp $
 bin/gsl-config
 bin/gsl-histogram
 bin/gsl-randist
@@ -47,6 +47,7 @@ include/gsl/gsl_fft_halfcomplex.h
 include/gsl/gsl_fft_halfcomplex_float.h
 include/gsl/gsl_fft_real.h
 include/gsl/gsl_fft_real_float.h
+include/gsl/gsl_filter.h
 include/gsl/gsl_fit.h
 include/gsl/gsl_heapsort.h
 include/gsl/gsl_histogram.h
@@ -82,6 +83,7 @@ include/gsl/gsl_monte.h
 include/gsl/gsl_monte_miser.h
 include/gsl/gsl_monte_plain.h
 include/gsl/gsl_monte_vegas.h
+include/gsl/gsl_movstat.h
 include/gsl/gsl_multifit.h
 include/gsl/gsl_multifit_nlin.h
 include/gsl/gsl_multifit_nlinear.h
@@ -176,6 +178,7 @@ include/gsl/gsl_sf_mathieu.h
 include/gsl/gsl_sf_pow_int.h
 include/gsl/gsl_sf_psi.h
 include/gsl/gsl_sf_result.h
+include/gsl/gsl_sf_sincos_pi.h
 include/gsl/gsl_sf_synchrotron.h
 include/gsl/gsl_sf_transport.h
 include/gsl/gsl_sf_trig.h
