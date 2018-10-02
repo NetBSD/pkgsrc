@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/09/06 08:13:54 nia Exp $
+# $NetBSD: Makefile,v 1.3 2018/10/02 21:09:29 nia Exp $
 
 DISTNAME=	libretro-fbalpha-0.2.97.43.20180721
 CATEGORIES=	emulators
@@ -23,6 +23,9 @@ MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 .if ${MACHINE_ENDIAN} == "big"
 MAKE_FLAGS+=	ENDIANNESS_DEFINES=-DWORDS_BIGENDIAN
 .endif
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-no-undefined
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=src/burner/libretro/link.T
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
