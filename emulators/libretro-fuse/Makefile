@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/08/11 15:42:09 nia Exp $
+# $NetBSD: Makefile,v 1.2 2018/10/02 21:09:29 nia Exp $
 
 DISTNAME=	libretro-fuse-20180419
 CATEGORIES=	emulators
@@ -20,6 +20,9 @@ MAKE_FILE=	Makefile.libretro
 .if ${MACHINE_ENDIAN} == "big"
 CFLAGS+=	-DWORDS_BIGENDIAN -DMSB_FIRST
 .endif
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-version-script=build/link.T
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-no-undefined
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
