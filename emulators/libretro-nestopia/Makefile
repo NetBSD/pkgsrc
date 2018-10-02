@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/08/11 20:26:12 nia Exp $
+# $NetBSD: Makefile,v 1.4 2018/10/02 21:09:30 nia Exp $
 
 DISTNAME=	libretro-nestopia-1.49
 CATEGORIES=	emulators
@@ -16,11 +16,14 @@ BUILD_DIRS=	libretro
 USE_LANGUAGES=	c c++03
 USE_TOOLS+=	gmake
 
-INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
-INSTALLATION_DIRS+=	share/libretro-nestopia
-
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 CFLAGS+=	-DPREFIX=\"${PREFIX}\"
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-version-script=link.T
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-no-undefined
+
+INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
+INSTALLATION_DIRS+=	share/libretro-nestopia
 
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/libretro/nestopia_libretro.so \

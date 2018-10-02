@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/08/10 20:55:13 nia Exp $
+# $NetBSD: Makefile,v 1.2 2018/10/02 21:09:30 nia Exp $
 
 DISTNAME=	libretro-snes9x2010-20180626
 CATEGORIES=	emulators
@@ -21,6 +21,8 @@ MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 .if ${MACHINE_ENDIAN} == "big"
 CFLAGS+=	-DMSB_FIRST
 .endif
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=libretro/link.T
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
