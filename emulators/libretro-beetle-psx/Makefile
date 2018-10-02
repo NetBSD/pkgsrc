@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/09/07 09:44:49 nia Exp $
+# $NetBSD: Makefile,v 1.5 2018/10/02 21:09:28 nia Exp $
 
 DISTNAME=	libretro-beetle-psx-20180808
 PKGREVISION=	2
@@ -24,6 +24,9 @@ MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 .if ${MACHINE_ENDIAN} == "big"
 CFLAGS+=	-DMSB_FIRST
 .endif
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=link.T
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-undefined
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 

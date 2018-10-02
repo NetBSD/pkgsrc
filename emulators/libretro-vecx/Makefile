@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/08/11 16:09:55 nia Exp $
+# $NetBSD: Makefile,v 1.2 2018/10/02 21:09:30 nia Exp $
 
 DISTNAME=	libretro-vecx-20180412
 CATEGORIES=	emulators
@@ -15,6 +15,8 @@ MAKE_FILE=	Makefile.libretro
 USE_TOOLS+=	gmake
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=./link.T
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 

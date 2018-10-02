@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/08/11 13:22:52 nia Exp $
+# $NetBSD: Makefile,v 1.4 2018/10/02 21:09:30 nia Exp $
 
 DISTNAME=	libretro-vba-next-20180603
 CATEGORIES=	emulators games
@@ -18,6 +18,9 @@ USE_TOOLS+=	gmake
 MAKE_FILE=	Makefile.libretro
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-version-script=./libretro/link.T
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-no-undefined
 
 INSTALLATION_DIRS=	lib/libretro
 
