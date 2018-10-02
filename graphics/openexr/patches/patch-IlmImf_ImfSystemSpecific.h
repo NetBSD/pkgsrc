@@ -1,20 +1,15 @@
-$NetBSD: patch-IlmImf_ImfSystemSpecific.h,v 1.1 2013/07/04 06:25:23 dholland Exp $
+$NetBSD: patch-IlmImf_ImfSystemSpecific.h,v 1.2 2018/10/02 12:05:35 adam Exp $
 
 Work around lack of posix_memalign() on (some?) Solaris, from PR 47867.
 
---- IlmImf/ImfSystemSpecific.h~	2013-04-09 17:08:02.000000000 +0000
+--- IlmImf/ImfSystemSpecific.h.orig	2018-08-10 01:34:58.000000000 +0000
 +++ IlmImf/ImfSystemSpecific.h
-@@ -60,9 +60,13 @@ static bool GLOBAL_SYSTEM_LITTLE_ENDIAN 
- 
- static void* EXRAllocAligned(size_t size, size_t alignment)
- {
-+#ifdef __sun
+@@ -65,6 +65,8 @@ static void* EXRAllocAligned(size_t size
+     // GNUC is used for things like mingw to (cross-)compile for windows
+ #ifdef _WIN32
+     return _aligned_malloc(size, alignment);
++#elif defined(_sun)
 +    return memalign(alignment, size);
-+#else
+ #else
      void* ptr = 0;
      posix_memalign(&ptr, alignment, size);
-     return ptr;
-+#endif
- }
- 
- 
