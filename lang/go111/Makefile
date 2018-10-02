@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2018/09/22 12:15:28 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2018/10/02 18:19:56 bsiegert Exp $
 
 .include "../../lang/go/version.mk"
 
 DISTNAME=	go${GO111_VERSION}.src
 PKGNAME=	go111-${GO111_VERSION}
-PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://storage.googleapis.com/golang/
 EXTRACT_USING=	bsdtar
@@ -112,7 +111,7 @@ do-install:
 	cd ${WRKSRC} && pax -rw . ${DESTDIR}${PREFIX}/go${GOVERSSUFFIX}
 	find ${DESTDIR}${PREFIX}/go${GOVERSSUFFIX} -name \*.orig -exec rm {} \;
 .for cmd in go gofmt
-	${LN} -s ${PREFIX}/go111/bin/${cmd} ${DESTDIR}${PREFIX}/bin/${cmd}${GOVERSSUFFIX}
+	${LN} -sf ${PREFIX}/go111/bin/${cmd} ${DESTDIR}${PREFIX}/bin/${cmd}${GOVERSSUFFIX}
 .endfor
 
 do-test:
