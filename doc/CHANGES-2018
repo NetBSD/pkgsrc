@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4244 2018/10/02 00:40:10 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4245 2018/10/02 00:48:20 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5913,3 +5913,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/py-lexicon to 2.7.9 [fhajny 2018-10-01]
 	Updated games/love09 to 0.9.2 [maya 2018-10-01]
 	Updated textproc/p5-Text-CSV_XS to 1.37 [wen 2018-10-02]
+	Updated textproc/p5-Net-IDN-Encode to 2.401 [wen 2018-10-02]
