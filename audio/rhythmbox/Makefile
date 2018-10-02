@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.154 2018/09/27 19:54:20 tnn Exp $
+# $NetBSD: Makefile,v 1.155 2018/10/02 15:54:46 snj Exp $
 
 DISTNAME=	rhythmbox-3.4.2
 PKGREVISION=	2
@@ -55,7 +55,6 @@ DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/brasero/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
-.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../textproc/libplist/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
