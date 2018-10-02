@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2018/04/09 12:14:19 adam Exp $
+# $NetBSD: Makefile,v 1.10 2018/10/02 09:02:09 adam Exp $
 
-DISTNAME=	bleach-2.1.3
+DISTNAME=	bleach-2.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bleach/}
