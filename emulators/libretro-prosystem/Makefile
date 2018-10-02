@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/08/13 18:04:15 nia Exp $
+# $NetBSD: Makefile,v 1.2 2018/10/02 21:09:30 nia Exp $
 
 DISTNAME=	libretro-prosystem-20180812
 CATEGORIES=	emulators
@@ -20,6 +20,9 @@ MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 .if ${MACHINE_ENDIAN} == "big"
 CFLAGS+=	-DMSB_FIRST
 .endif
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-undefined
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=link.T
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
