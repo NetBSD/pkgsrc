@@ -1,7 +1,6 @@
 package main
 
 import (
-	"netbsd.org/pkglint/regex"
 	"netbsd.org/pkglint/trace"
 	"path"
 	"sort"
@@ -277,7 +276,8 @@ func (cv *VartypeCheck) Dependency() {
 			"foo-* matches foo-1.2, but also foo-client-1.2 and foo-server-1.2.")
 	}
 
-	if nocclasses := regex.Compile(`\[[\d-]+\]`).ReplaceAllString(wildcard, ""); contains(nocclasses, "-") {
+	withoutCharClasses := replaceAll(wildcard, `\[[\d-]+\]`, "")
+	if contains(withoutCharClasses, "-") {
 		line.Warnf("The version pattern %q should not contain a hyphen.", wildcard)
 		Explain(
 			"Pkgsrc interprets package names with version numbers like this:",
@@ -730,7 +730,7 @@ func (cv *VartypeCheck) Perms() {
 	}
 }
 
-func (cv *VartypeCheck) PkgName() {
+func (cv *VartypeCheck) Pkgname() {
 	if cv.Op != opUseMatch && cv.Value == cv.ValueNoVar && !matches(cv.Value, rePkgname) {
 		cv.Line.Warnf("%q is not a valid package name. A valid package name has the form packagename-version, where version consists only of digits, letters and dots.", cv.Value)
 	}
@@ -792,25 +792,34 @@ func (cv *VartypeCheck) MachinePlatformPattern() {
 		pattern += "-*"
 	}
 
-	if m, opsysPattern, _, archPattern := match3(pattern, reTriple); m {
+	if m, opsysPattern, versionPattern, archPattern := match3(pattern, reTriple); m {
 		opsysCv := &VartypeCheck{
 			cv.MkLine,
 			cv.Line,
 			"the operating system part of " + cv.Varname,
-			opUseMatch, // Always allow patterns, since this is a PlatformPattern.
+			opUseMatch, // Always allow patterns, since this is a platform pattern.
 			opsysPattern,
 			opsysPattern,
 			cv.MkComment,
 			cv.Guessed}
 		enumMachineOpsys.checker(opsysCv)
 
-		// no check for os_version
+		versionCv := &VartypeCheck{
+			cv.MkLine,
+			cv.Line,
+			"the version part of " + cv.Varname,
+			opUseMatch, // Always allow patterns, since this is a platform pattern.
+			versionPattern,
+			versionPattern,
+			cv.MkComment,
+			cv.Guessed}
+		versionCv.Version()
 
 		archCv := &VartypeCheck{
 			cv.MkLine,
 			cv.Line,
 			"the hardware architecture part of " + cv.Varname,
-			opUseMatch, // Always allow patterns, since this is a PlatformPattern.
+			opUseMatch, // Always allow patterns, since this is a platform pattern.
 			archPattern,
 			archPattern,
 			cv.MkComment,
@@ -976,6 +985,7 @@ func (cv *VartypeCheck) Tool() {
 	}
 }
 
+// Unknown doesn't check for anything.
 func (cv *VartypeCheck) Unknown() {
 	// Do nothing.
 }
@@ -1035,12 +1045,30 @@ func (cv *VartypeCheck) VariableName() {
 }
 
 func (cv *VartypeCheck) Version() {
+	line := cv.Line
+	value := cv.Value
+
 	if cv.Op == opUseMatch {
-		if !matches(cv.Value, `^[\d?\[][\w\-.*?\[\]]+$`) {
-			cv.Line.Warnf("Invalid version number pattern %q.", cv.Value)
+		if value != "*" && !matches(value, `^[\d?\[][\w\-.*?\[\]]+$`) {
+			line.Warnf("Invalid version number pattern %q.", value)
+			return
 		}
-	} else if cv.Value == cv.ValueNoVar && !matches(cv.Value, `^\d[\w.]*$`) {
-		cv.Line.Warnf("Invalid version number %q.", cv.Value)
+
+		const digit = `(?:\d|\[[\d-]+\])`
+		const alnum = `(?:\w|\[[\d-]+\])`
+		if m, ver, suffix := match2(value, `^(`+digit+alnum+`*(?:\.`+alnum+`+)*)(\.\*|\*|)$`); m {
+			if suffix == "*" && ver != "[0-9]" {
+				line.Warnf("Please use %q instead of %q as the version pattern.", ver+".*", ver+"*")
+				Explain(
+					"For example, the version \"1*\" also matches \"10.0.0\", which is",
+					"probably not intended.")
+			}
+		}
+		return
+	}
+
+	if value == cv.ValueNoVar && !matches(value, `^\d[\w.]*$`) {
+		line.Warnf("Invalid version number %q.", value)
 	}
 }
 

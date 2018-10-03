@@ -57,7 +57,7 @@ func (exp *Expecter) AdvanceIfMatches(re regex.Pattern) bool {
 	}
 
 	if !exp.EOF() {
-		if m := regex.Match(exp.lines[exp.index].Text, re); m != nil {
+		if m := G.res.Match(exp.lines[exp.index].Text, re); m != nil {
 			exp.index++
 			exp.m = m
 			return true
