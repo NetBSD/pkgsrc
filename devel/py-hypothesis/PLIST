@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2018/08/17 07:15:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2018/10/03 09:56:52 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -45,6 +45,9 @@ ${PYSITELIB}/hypothesis/extra/django/__init__.pyo
 ${PYSITELIB}/hypothesis/extra/django/models.py
 ${PYSITELIB}/hypothesis/extra/django/models.pyc
 ${PYSITELIB}/hypothesis/extra/django/models.pyo
+${PYSITELIB}/hypothesis/extra/dpcontracts.py
+${PYSITELIB}/hypothesis/extra/dpcontracts.pyc
+${PYSITELIB}/hypothesis/extra/dpcontracts.pyo
 ${PYSITELIB}/hypothesis/extra/fakefactory.py
 ${PYSITELIB}/hypothesis/extra/fakefactory.pyc
 ${PYSITELIB}/hypothesis/extra/fakefactory.pyo
