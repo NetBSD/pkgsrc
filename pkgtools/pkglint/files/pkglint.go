@@ -5,6 +5,7 @@ import (
 	"netbsd.org/pkglint/getopt"
 	"netbsd.org/pkglint/histogram"
 	"netbsd.org/pkglint/regex"
+	"netbsd.org/pkglint/textproc"
 	"netbsd.org/pkglint/trace"
 	"os"
 	"os/user"
@@ -49,8 +50,16 @@ type Pkglint struct {
 	logOut                *SeparatorWriter
 	logErr                *SeparatorWriter
 
-	loghisto *histogram.Histogram
-	loaded   *histogram.Histogram
+	loghisto  *histogram.Histogram
+	loaded    *histogram.Histogram
+	res       regex.Registry
+	fileCache *FileCache
+}
+
+func NewPkglint() Pkglint {
+	return Pkglint{
+		res:       regex.NewRegistry(),
+		fileCache: NewFileCache(100)}
 }
 
 type CmdOpts struct {
@@ -106,13 +115,15 @@ type Hash struct {
 
 // G is the abbreviation for "global state";
 // it is the only global variable in this Go package
-var G Pkglint
+var G = NewPkglint()
+
+var exit = os.Exit // Indirect access, to allow main() to be tested.
 
 func main() {
 	G.logOut = NewSeparatorWriter(os.Stdout)
 	G.logErr = NewSeparatorWriter(os.Stderr)
 	trace.Out = os.Stdout
-	os.Exit(G.Main(os.Args...))
+	exit(G.Main(os.Args...))
 }
 
 // Main runs the main program with the given arguments.
@@ -139,21 +150,22 @@ func (pkglint *Pkglint) Main(argv ...string) (exitcode int) {
 	if pkglint.opts.Profiling {
 		f, err := os.Create("pkglint.pprof")
 		if err != nil {
-			dummyLine.Fatalf("Cannot create profiling file: %s", err)
+			G.Panicf("Cannot create profiling file: %s", err)
 		}
 		defer f.Close()
 
 		pprof.StartCPUProfile(f)
 		defer pprof.StopCPUProfile()
 
-		regex.Profiling = true
+		pkglint.res.Profiling()
 		pkglint.loghisto = histogram.New()
 		pkglint.loaded = histogram.New()
 		defer func() {
 			pkglint.logOut.Write("")
 			pkglint.loghisto.PrintStats("loghisto", pkglint.logOut.out, -1)
-			regex.PrintStats(pkglint.logOut.out)
+			G.res.PrintStats(pkglint.logOut.out)
 			pkglint.loaded.PrintStats("loaded", pkglint.logOut.out, 10)
+			pkglint.logOut.WriteLine(fmt.Sprintf("fileCache: %d hits, %d misses", pkglint.fileCache.hits, pkglint.fileCache.misses))
 		}()
 	}
 
@@ -170,7 +182,7 @@ func (pkglint *Pkglint) Main(argv ...string) (exitcode int) {
 	}
 	relTopdir := findPkgsrcTopdir(firstArg)
 	if relTopdir == "" {
-		dummyLine.Fatalf("%q is not inside a pkgsrc tree.", firstArg)
+		G.Panicf("%q is not inside a pkgsrc tree.", firstArg)
 	}
 
 	pkglint.Pkgsrc = NewPkgsrc(firstArg + "/" + relTopdir)
@@ -179,7 +191,7 @@ func (pkglint *Pkglint) Main(argv ...string) (exitcode int) {
 	currentUser, err := user.Current()
 	if err == nil {
 		// On Windows, this is `Computername\Username`.
-		pkglint.CurrentUsername = regex.Compile(`^.*\\`).ReplaceAllString(currentUser.Username, "")
+		pkglint.CurrentUsername = replaceAll(currentUser.Username, `^.*\\`, "")
 	}
 
 	for len(pkglint.Todo) != 0 {
@@ -332,6 +344,27 @@ func (pkglint *Pkglint) CheckDirent(fname string) {
 	}
 }
 
+func (pkglint *Pkglint) Panicf(format string, args ...interface{}) {
+	prefix := ifelseStr(G.opts.GccOutput, llFatal.GccName, llFatal.TraditionalName)
+	pkglint.logErr.Write(prefix + ": " + fmt.Sprintf(format, args...) + "\n")
+	panic(pkglintFatal{})
+}
+
+// Assertf checks that the condition is true. Otherwise it terminates the
+// process with a fatal error message, prefixed with "Pkglint internal error".
+//
+// This method must only be used for programming errors.
+// For runtime errors, use Panicf.
+func (pkglint *Pkglint) Assertf(cond bool, format string, args ...interface{}) {
+	if !cond {
+		pkglint.Panicf("Pkglint internal error: "+format, args...)
+	}
+}
+
+func (pkglint *Pkglint) NewPrefixReplacer(s string) *textproc.PrefixReplacer {
+	return textproc.NewPrefixReplacer(s, &pkglint.res)
+}
+
 // Returns the pkgsrc top-level directory, relative to the given file or directory.
 func findPkgsrcTopdir(fname string) string {
 	for _, dir := range [...]string{".", "..", "../..", "../../.."} {
@@ -342,9 +375,9 @@ func findPkgsrcTopdir(fname string) string {
 	return ""
 }
 
-func resolveVariableRefs(text string) string {
-	if trace.Tracing {
-		defer trace.Call1(text)()
+func resolveVariableRefs(text string) (resolved string) {
+	if !contains(text, "${") {
+		return text
 	}
 
 	visited := make(map[string]bool) // To prevent endless loops
@@ -354,14 +387,8 @@ func resolveVariableRefs(text string) string {
 		if !visited[varname] {
 			visited[varname] = true
 			if G.Pkg != nil {
-				switch varname {
-				case "KRB5_TYPE":
-					return "heimdal"
-				case "PGSQL_VERSION":
-					return "95"
-				}
-				if mkline := G.Pkg.vars.FirstDefinition(varname); mkline != nil {
-					return mkline.Value()
+				if value, ok := G.Pkg.vars.Value(varname); ok {
+					return value
 				}
 			}
 			if G.Mk != nil {
@@ -375,8 +402,11 @@ func resolveVariableRefs(text string) string {
 
 	str := text
 	for {
-		replaced := regex.Compile(`\$\{([\w.]+)\}`).ReplaceAllStringFunc(str, replacer)
+		replaced := replaceAllFunc(str, `\$\{([\w.]+)\}`, replacer)
 		if replaced == str {
+			if trace.Tracing && str != text {
+				trace.Stepf("resolveVariableRefs %q => %q", text, replaced)
+			}
 			return replaced
 		}
 		str = replaced
@@ -401,7 +431,7 @@ func ChecklinesDescr(lines []Line) {
 	for _, line := range lines {
 		CheckLineLength(line, 80)
 		CheckLineTrailingWhitespace(line)
-		CheckLineValidCharacters(line, `[\t -~]`)
+		CheckLineValidCharacters(line)
 		if contains(line.Text, "${") {
 			line.Notef("Variables are not expanded in the DESCR file.")
 		}
@@ -453,7 +483,7 @@ func ChecklinesMessage(lines []Line) {
 	for _, line := range lines {
 		CheckLineLength(line, 80)
 		CheckLineTrailingWhitespace(line)
-		CheckLineValidCharacters(line, `[\t -~]`)
+		CheckLineValidCharacters(line)
 	}
 	if lastLine := lines[len(lines)-1]; lastLine.Text != hline {
 		fix := lastLine.Autofix()
@@ -516,10 +546,16 @@ func (pkglint *Pkglint) Checkfile(fname string) {
 		return
 	}
 
-	pkglint.checkExecutable(st, fname)
+	pkglint.checkExecutable(st)
+	pkglint.checkMode(fname, st.Mode())
+}
 
+// checkMode checks a directory entry based on its file name and its mode
+// (regular file, directory, symlink).
+func (pkglint *Pkglint) checkMode(fname string, mode os.FileMode) {
+	basename := path.Base(fname)
 	switch {
-	case st.Mode().IsDir():
+	case mode.IsDir():
 		switch {
 		case basename == "files" || basename == "patches" || isIgnoredFilename(basename):
 			// Ok
@@ -529,12 +565,12 @@ func (pkglint *Pkglint) Checkfile(fname string) {
 			NewLineWhole(fname).Warnf("Unknown directory name.")
 		}
 
-	case st.Mode()&os.ModeSymlink != 0:
+	case mode&os.ModeSymlink != 0:
 		if !hasPrefix(basename, "work") {
 			NewLineWhole(fname).Warnf("Unknown symlink name.")
 		}
 
-	case !st.Mode().IsRegular():
+	case !mode.IsRegular():
 		NewLineWhole(fname).Errorf("Only files and directories are allowed in pkgsrc.")
 
 	case basename == "ALTERNATIVES":
@@ -609,9 +645,6 @@ func (pkglint *Pkglint) Checkfile(fname string) {
 			}
 		}
 
-	case basename == "TODO" || basename == "README":
-		// Ok
-
 	case hasPrefix(basename, "CHANGES-"):
 		// This only checks the file, but doesn't register the changes globally.
 		_ = pkglint.Pkgsrc.loadDocChangesFromFile(fname)
@@ -620,7 +653,9 @@ func (pkglint *Pkglint) Checkfile(fname string) {
 		// Skip
 
 	case basename == "spec":
-		// Ok in regression tests
+		if !hasPrefix(G.Pkgsrc.ToRel(fname), "regress/") {
+			NewLineWhole(fname).Warnf("Only packages in regress/ may have spec files.")
+		}
 
 	default:
 		NewLineWhole(fname).Warnf("Unexpected file found.")
@@ -630,7 +665,8 @@ func (pkglint *Pkglint) Checkfile(fname string) {
 	}
 }
 
-func (pkglint *Pkglint) checkExecutable(st os.FileInfo, fname string) {
+func (pkglint *Pkglint) checkExecutable(st os.FileInfo) {
+	fname := st.Name()
 	if st.Mode().IsRegular() && st.Mode().Perm()&0111 != 0 && !isCommitted(fname) {
 		line := NewLine(fname, 0, "", nil)
 		fix := line.Autofix()
@@ -643,7 +679,7 @@ func (pkglint *Pkglint) checkExecutable(st os.FileInfo, fname string) {
 		fix.Custom(func(printAutofix, autofix bool) {
 			fix.Describef(0, "Clearing executable bits")
 			if autofix {
-				if err := os.Chmod(line.Filename, st.Mode()&^0111); err != nil {
+				if err := os.Chmod(fname, st.Mode()&^0111); err != nil {
 					line.Errorf("Cannot clear executable bits: %s", err)
 				}
 			}
@@ -714,6 +750,11 @@ func (pkglint *Pkglint) Tool(command string, time ToolTime) (tool *Tool, usable 
 	return
 }
 
+// ToolByVarname looks up the tool by its variable name, e.g. "SED".
+//
+// The returned tool may come either from the current Makefile or the
+// current package. It is not guaranteed to be usable; that must be
+// checked by the calling code.
 func (pkglint *Pkglint) ToolByVarname(varname string, time ToolTime) *Tool {
 
 	var tool *Tool
