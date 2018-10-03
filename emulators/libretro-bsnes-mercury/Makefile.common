@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2018/10/02 21:09:29 nia Exp $
+# $NetBSD: Makefile.common,v 1.3 2018/10/03 09:33:41 nia Exp $
 #
 # used by emulators/libretro-bsnes-mercury/Makefile
 # used by emulators/libretro-bsnes-mercury-accuracy/Makefile
@@ -23,8 +23,8 @@ MAKE_FLAGS+=	profile=${BSNES_PROFILE}
 MAKE_FLAGS+=	compiler=${CXX:Q}
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 
-BUILDLINK_TRANSFORM.SunOS+=	-Wl,--no-undefined
-BUILDLINK_TRANSFORM.SunOS+=	-Wl,--version-script=target-libretro/link.T
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-undefined
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=target-libretro/link.T
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
