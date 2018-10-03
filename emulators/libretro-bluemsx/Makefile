@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/10/02 21:09:29 nia Exp $
+# $NetBSD: Makefile,v 1.3 2018/10/03 12:48:44 nia Exp $
 
 DISTNAME=	libretro-bluemsx-20180811
 CATEGORIES=	emulators
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 EXTRACT_USING=	bsdtar
 MAKE_FILE=	Makefile.libretro
 USE_TOOLS+=	gmake
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 
