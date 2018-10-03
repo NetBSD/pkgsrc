@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2018/09/05 19:34:03 leot Exp $
+# $NetBSD: Makefile,v 1.9 2018/10/03 08:18:54 leot Exp $
 
-DISTNAME=	sqlmap-1.2.9
+DISTNAME=	sqlmap-1.2.10
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sqlmap/}
 
@@ -30,7 +30,7 @@ REPLACE_PYTHON+=	sqlmap/extra/shutils/regressiontest.py
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 1.2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 1.2.10
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
