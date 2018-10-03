@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/04/23 03:38:51 markd Exp $
+# $NetBSD: Makefile,v 1.2 2018/10/03 11:10:13 adam Exp $
 
-DISTNAME=	pickleshare-0.7.4
+DISTNAME=	pickleshare-0.7.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pickleshare/}
@@ -10,7 +10,10 @@ HOMEPAGE=	https://github.com/pickleshare/pickleshare
 COMMENT=	Tiny shelve-like database with concurrency support
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+.include "../../lang/python/pyversion.mk"
+.if ${_PYTHON_VERSION} == 27
+DEPENDS+=       ${PYPKGPREFIX}-pathlib2-[0-9]*:../../devel/py-pathlib2
+.endif
 
 USE_LANGUAGES=	# none
 
