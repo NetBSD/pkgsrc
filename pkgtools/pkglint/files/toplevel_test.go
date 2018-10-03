@@ -5,7 +5,7 @@ import "gopkg.in/check.v1"
 func (s *Suite) Test_CheckdirToplevel(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupFileLines("Makefile",
+	t.CreateFileLines("Makefile",
 		MkRcsID,
 		"",
 		"SUBDIR+= x11",
@@ -15,10 +15,10 @@ func (s *Suite) Test_CheckdirToplevel(c *check.C) {
 		"#SUBDIR+=\tignoreme",
 		"SUBDIR+=\tnonexisting", // This doesn't happen in practice, therefore no warning.
 		"SUBDIR+=\tbbb")
-	t.SetupFileLines("archivers/Makefile")
-	t.SetupFileLines("bbb/Makefile")
-	t.SetupFileLines("ccc/Makefile")
-	t.SetupFileLines("x11/Makefile")
+	t.CreateFileLines("archivers/Makefile")
+	t.CreateFileLines("bbb/Makefile")
+	t.CreateFileLines("ccc/Makefile")
+	t.CreateFileLines("x11/Makefile")
 	t.SetupVartypes()
 
 	CheckdirToplevel(t.File("."))

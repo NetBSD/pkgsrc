@@ -57,7 +57,8 @@ func (s *Suite) SetUpTest(c *check.C) {
 	t := &Tester{checkC: c}
 	s.Tester = t
 
-	G = Pkglint{Testing: true}
+	G = NewPkglint()
+	G.Testing = true
 	textproc.Testing = true
 	G.logOut = NewSeparatorWriter(&t.stdout)
 	G.logErr = NewSeparatorWriter(&t.stderr)
@@ -89,7 +90,7 @@ func (s *Suite) TearDownTest(c *check.C) {
 	G = Pkglint{} // unusable because of missing logOut and logErr
 	textproc.Testing = false
 	if out := t.Output(); out != "" {
-		fmt.Fprintf(os.Stderr, "Unchecked output in %q; check with: t.CheckOutputLines(%v)",
+		fmt.Fprintf(os.Stderr, "Unchecked output in %q; check with: t.CheckOutputLines(%#v)",
 			c.TestName(), strings.Split(out, "\n"))
 	}
 	t.tmpdir = ""
@@ -238,20 +239,112 @@ func (t *Tester) SetupPkgsrc() {
 		MkRcsID)
 }
 
-func (t *Tester) CreateFileLines(relativeFilename string, lines ...string) (filename string) {
+// SetupCategory makes the given category valid by creating a dummy Makefile.
+func (t *Tester) SetupCategory(name string) {
+	if _, err := os.Stat(name + "/Makefile"); os.IsNotExist(err) {
+		t.CreateFileLines(name+"/Makefile",
+			MkRcsID)
+	}
+}
+
+// SetupPackage sets up all files for a package so that it does not produce
+// any warnings.
+//
+// The given makefileLines start in line 20. Except if they are variable
+// definitions for already existing variables, then they replace that line.
+//
+// Returns the path to the package, ready to be used with Pkglint.CheckDirent.
+func (t *Tester) SetupPackage(pkgpath string, makefileLines ...string) string {
+	category := path.Dir(pkgpath)
+
+	t.SetupPkgsrc()
+	t.SetupVartypes()
+	t.SetupCategory(category)
+
+	t.CreateFileLines(pkgpath+"/DESCR",
+		"Package description")
+	t.CreateFileLines(pkgpath+"/PLIST",
+		PlistRcsID,
+		"bin/program")
+	t.CreateFileLines(pkgpath+"/distinfo",
+		RcsID,
+		"",
+		"SHA1 (distfile-1.0.tar.gz) = 12341234...",
+		"RMD160 (distfile-1.0.tar.gz) = 12341234...",
+		"SHA512 (distfile-1.0.tar.gz) = 12341234...",
+		"Size (distfile-1.0.tar.gz) = 12341234")
+
+	var mlines []string
+	mlines = append(mlines,
+		MkRcsID,
+		"",
+		"DISTNAME=\tdistname-1.0",
+		"CATEGORIES=\t"+category,
+		"MASTER_SITES=\t# none",
+		"",
+		"MAINTAINER=\tpkgsrc-users@NetBSD.org",
+		"HOMEPAGE=\t# none",
+		"COMMENT=\tDummy package",
+		"LICENSE=\t2-clause-bsd",
+		"")
+	for len(mlines) < 19 {
+		mlines = append(mlines, "# empty")
+	}
+
+line:
+	for _, line := range makefileLines {
+		if m, prefix := match1(line, `^(\w+=)`); m {
+			for i, existingLine := range mlines {
+				if hasPrefix(existingLine, prefix) {
+					mlines[i] = line
+					continue line
+				}
+			}
+		}
+		mlines = append(mlines, line)
+	}
+
+	mlines = append(mlines,
+		"",
+		".include \"../../mk/bsd.pkg.mk\"")
+
+	t.CreateFileLines(pkgpath+"/Makefile",
+		mlines...)
+
+	return t.File(pkgpath)
+}
+
+func (t *Tester) CreateFileLines(relativeFilename string, lines ...string) (fileName string) {
 	content := ""
 	for _, line := range lines {
 		content += line + "\n"
 	}
 
-	filename = t.File(relativeFilename)
-	err := os.MkdirAll(path.Dir(filename), 0777)
+	fileName = t.File(relativeFilename)
+	err := os.MkdirAll(path.Dir(fileName), 0777)
 	t.c().Assert(err, check.IsNil)
 
-	err = ioutil.WriteFile(filename, []byte(content), 0666)
+	err = ioutil.WriteFile(fileName, []byte(content), 0666)
 	t.c().Check(err, check.IsNil)
 
-	return filename
+	G.fileCache.Evict(fileName)
+
+	return fileName
+}
+
+// CreateFileDummyPatch creates a patch file with the given name in the
+// temporary directory.
+func (t *Tester) CreateFileDummyPatch(relativeFileName string) {
+	t.CreateFileLines(relativeFileName,
+		RcsID,
+		"",
+		"Documentation",
+		"",
+		"--- oldfile",
+		"+++ newfile",
+		"@@ -1 +1 @@",
+		"-old",
+		"+new")
 }
 
 // File returns the absolute path to the given file in the
@@ -293,6 +386,14 @@ func (t *Tester) Chdir(relativeFilename string) {
 		t.checkC.Fatalf("Cannot chdir: %s", err)
 	}
 	t.relcwd = relativeFilename
+}
+
+// Remove removes the file from the temporary directory. The file must exist.
+func (t *Tester) Remove(relativeFilename string) {
+	fileName := t.File(relativeFilename)
+	err := os.Remove(fileName)
+	t.c().Check(err, check.IsNil)
+	G.fileCache.Evict(fileName)
 }
 
 // ExpectFatal runs the given action and expects that this action calls

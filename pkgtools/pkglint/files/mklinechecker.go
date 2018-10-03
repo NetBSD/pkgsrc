@@ -18,7 +18,7 @@ func (ck MkLineChecker) Check() {
 	mkline := ck.MkLine
 
 	CheckLineTrailingWhitespace(mkline.Line)
-	CheckLineValidCharacters(mkline.Line, `[\t -~]`)
+	CheckLineValidCharacters(mkline.Line)
 
 	switch {
 	case mkline.IsVarassign():
@@ -379,14 +379,10 @@ func (ck MkLineChecker) CheckVaruse(varuse *MkVarUse, vuc *VarUseContext) {
 	ck.checkVarusePermissions(varname, vartype, vuc)
 
 	if varname == "LOCALBASE" && !G.Infrastructure {
-		ck.WarnVaruseLocalbase()
+		ck.MkLine.Warnf("Please use PREFIX instead of LOCALBASE.")
 	}
 
 	needsQuoting := mkline.VariableNeedsQuoting(varname, vartype, vuc)
-
-	if vuc.quoting == vucQuotFor {
-		ck.checkVaruseFor(varname, vartype, needsQuoting)
-	}
 
 	if G.opts.WarnQuoting && vuc.quoting != vucQuotUnknown && needsQuoting != nqDontKnow {
 		ck.CheckVaruseShellword(varname, vartype, vuc, varuse.Mod(), needsQuoting)
@@ -538,57 +534,6 @@ func (ck MkLineChecker) checkVaruseLoadTime(varname string, isIndirect bool) {
 	}
 }
 
-func (ck MkLineChecker) WarnVaruseLocalbase() {
-	ck.MkLine.Warnf("Please use PREFIX instead of LOCALBASE.")
-	Explain(
-		// from jlam via private mail.
-		"Currently, LOCALBASE is typically used in these cases:",
-		"",
-		"(1) To locate a file or directory from another package.",
-		"(2) To refer to own files after installation.",
-		"",
-		"Example for (1):",
-		"",
-		"	STRLIST=        ${LOCALBASE}/bin/strlist",
-		"",
-		"	do-build:",
-		"		cd ${WRKSRC} && ${STRLIST} *.str",
-		"",
-		"This should better be:",
-		"",
-		"	EVAL_PREFIX=    STRLIST_PREFIX=strlist",
-		"	STRLIST=        ${STRLIST_PREFIX}/bin/strlist",
-		"",
-		"	do-build:",
-		"		cd ${WRKSRC} && ${STRLIST} *.str",
-		"",
-		"Example for (2):",
-		"",
-		"	CONFIGURE_ENV+= --with-datafiles=${LOCALBASE}/share/pkgbase",
-		"",
-		"This should better be:",
-		"",
-		"	CONFIGURE_ENV+= --with-datafiles=${PREFIX}/share/pkgbase")
-}
-
-func (ck MkLineChecker) checkVaruseFor(varname string, vartype *Vartype, needsQuoting NeedsQuoting) {
-	if trace.Tracing {
-		defer trace.Call(varname, vartype, needsQuoting)()
-	}
-
-	if false && // Too many false positives
-		vartype != nil &&
-		vartype.kindOfList != lkSpace &&
-		needsQuoting != nqDoesntMatter {
-		ck.MkLine.Warnf("The variable %s should not be used in .for loops.", varname)
-		Explain(
-			"The .for loop splits its argument at sequences of white-space, as",
-			"opposed to all other places in make(1), which act like the shell.",
-			"Therefore only variables that are split at whitespace or don't",
-			"contain any special characters should be used here.")
-	}
-}
-
 // CheckVaruseShellword checks whether a variable use of the form ${VAR}
 // or ${VAR:Modifier} is allowed in a certain context.
 func (ck MkLineChecker) CheckVaruseShellword(varname string, vartype *Vartype, vuc *VarUseContext, mod string, needsQuoting NeedsQuoting) {
@@ -601,7 +546,7 @@ func (ck MkLineChecker) CheckVaruseShellword(varname string, vartype *Vartype, v
 	// configure scripts.
 	//
 	// When doing checks outside a package, the :M* operator is needed for safety.
-	needMstar := matches(varname, `^(?:.*_)?(?:CFLAGS||CPPFLAGS|CXXFLAGS|FFLAGS|LDFLAGS|LIBS)$`) &&
+	needMstar := matches(varname, `^(?:.*_)?(?:CFLAGS|CPPFLAGS|CXXFLAGS|FFLAGS|LDFLAGS|LIBS)$`) &&
 		(G.Pkg == nil || G.Pkg.vars.Defined("GNU_CONFIGURE"))
 
 	strippedMod := mod
@@ -759,23 +704,12 @@ func (ck MkLineChecker) checkVarassign() {
 
 	ck.checkVarassignSpecific()
 
-	if varname == "EVAL_PREFIX" {
-		if m, evalVarname := match1(value, `^([\w_]+)=`); m {
-
-			// The variables mentioned in EVAL_PREFIX will later be
-			// defined by find-prefix.mk. Therefore, they are marked
-			// as known in the current file.
-			G.Mk.vars.Define(evalVarname, mkline)
-		}
-	}
-
 	if fix := G.Pkgsrc.Deprecated[varname]; fix != "" {
 		mkline.Warnf("Definition of %s is deprecated. %s", varname, fix)
-	} else if fix := G.Pkgsrc.Deprecated[varcanon]; fix != "" {
+	} else if fix = G.Pkgsrc.Deprecated[varcanon]; fix != "" {
 		mkline.Warnf("Definition of %s is deprecated. %s", varname, fix)
 	}
 
-	ck.checkVarassignPlistComment(varname, value)
 	ck.checkVarassignVaruse()
 }
 
@@ -839,10 +773,10 @@ func (ck MkLineChecker) checkVarassignVaruseShell(vartype *Vartype, time vucTime
 	mkline := ck.MkLine
 	atoms := NewShTokenizer(mkline.Line, mkline.Value(), false).ShAtoms()
 	for i, atom := range atoms {
-		if atom.Type == shtVaruse {
+		if varuse := atom.VarUse(); varuse != nil {
 			isWordPart := isWordPart(atoms, i)
 			vuc := &VarUseContext{vartype, time, atom.Quoting.ToVarUseContext(), isWordPart}
-			ck.CheckVaruse(atom.Data.(*MkVarUse), vuc)
+			ck.CheckVaruse(varuse, vuc)
 		}
 	}
 }
@@ -920,34 +854,6 @@ func (ck MkLineChecker) checkVarassignBsdPrefs() {
 		"",
 		"The easiest way to include the mk.conf file is by including the",
 		"bsd.prefs.mk file, which will take care of everything.")
-}
-
-func (ck MkLineChecker) checkVarassignPlistComment(varname, value string) {
-	if false && // This is currently neither correct nor helpful
-		contains(value, "@comment") && !matches(value, `="@comment "`) {
-		ck.MkLine.Warnf("Please don't use @comment in %s.", varname)
-		Explain(
-			"If you are defining a PLIST condition here, use one of the",
-			"following patterns instead:",
-			"",
-			"1. The direct way, without intermediate variable",
-			"",
-			"\tPLIST_SUBST+=\tMY_VAR=\"@comment \"",
-			"",
-			"2. The indirect way, with a separate variable",
-			"",
-			"\tPLIST_VARS+=\tMY_VAR",
-			"\t.if ...",
-			"\tMY_VAR?=\tyes",
-			"\t.endif")
-	}
-
-	// Mark the variable as PLIST condition. This is later used in checkfile_PLIST.
-	if G.Pkg != nil {
-		if m, plistVarname := match1(value, `(.+)=.*@comment.*`); m {
-			G.Pkg.plistSubstCond[plistVarname] = true
-		}
-	}
 }
 
 func (ck MkLineChecker) CheckVartype(varname string, op MkOperator, value, comment string) {
@@ -1040,7 +946,7 @@ func (ck MkLineChecker) checkText(text string) {
 
 	rest := text
 	for {
-		m, r := regex.ReplaceFirst(rest, `(?:^|[^$])\$\{([-A-Z0-9a-z_]+)(\.[\-0-9A-Z_a-z]+)?(?::[^\}]+)?\}`, "")
+		m, r := G.res.ReplaceFirst(rest, `(?:^|[^$])\$\{([-A-Z0-9a-z_]+)(\.[\-0-9A-Z_a-z]+)?(?::[^\}]+)?\}`, "")
 		if m == nil {
 			break
 		}
@@ -1145,7 +1051,7 @@ func (ck MkLineChecker) checkCompareVarStr(varname, op, value string) {
 
 func (ck MkLineChecker) CheckValidCharactersInValue(reValid regex.Pattern) {
 	mkline := ck.MkLine
-	rest := regex.Compile(reValid).ReplaceAllString(mkline.Value(), "")
+	rest := replaceAll(mkline.Value(), reValid, "")
 	if rest != "" {
 		uni := ""
 		for _, c := range rest {

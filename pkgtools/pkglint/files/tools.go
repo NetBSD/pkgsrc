@@ -279,11 +279,30 @@ func (tr *Tools) Usable(tool *Tool, time ToolTime) bool {
 }
 
 func (tr *Tools) AddAll(other Tools) {
-	if trace.Tracing {
-		defer trace.Call(other.TraceName, "to", tr.TraceName)()
+	if trace.Tracing && len(other.byName) != 0 {
+		defer trace.Call(other.TraceName+" to "+tr.TraceName, len(other.byName))()
 	}
 
-	for _, otherTool := range other.byName {
+	// Same as the code below, just a little faster.
+	if !trace.Tracing {
+		for _, otherTool := range other.byName {
+			tool := tr.def(otherTool.Name, otherTool.Varname, nil)
+			tool.MustUseVarForm = tool.MustUseVarForm || otherTool.MustUseVarForm
+			if otherTool.Validity > tool.Validity {
+				tool.SetValidity(otherTool.Validity, tr.TraceName)
+			}
+		}
+		return
+	}
+
+	var names []string
+	for name := range other.byName {
+		names = append(names, name)
+	}
+	sort.Strings(names)
+
+	for _, name := range names {
+		otherTool := other.byName[name]
 		if trace.Tracing {
 			trace.Stepf("Tools.AddAll %+v", *otherTool)
 		}

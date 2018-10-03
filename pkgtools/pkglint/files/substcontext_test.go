@@ -241,37 +241,18 @@ func (s *Suite) Test_SubstContext__pre_configure_with_NO_CONFIGURE(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall,no-space")
-	t.SetupPkgsrc()
-	G.Pkgsrc.LoadInfrastructure()
-	t.CreateFileLines("category/Makefile")
-	t.CreateFileLines("licenses/2-clause-bsd")
-
-	t.Chdir("category/package")
-	t.CreateFileLines("PLIST",
-		PlistRcsID,
-		"bin/program")
-	t.CreateFileLines("Makefile",
-		MkRcsID,
-		"",
-		"CATEGORIES=             category",
-		"",
-		"COMMENT=                Comment",
-		"LICENSE=                2-clause-bsd",
-		"",
+	pkg := t.SetupPackage("category/package",
 		"SUBST_CLASSES+=         os",
 		"SUBST_STAGE.os=         pre-configure",
 		"SUBST_FILES.os=         guess-os.h",
 		"SUBST_SED.os=           -e s,@OPSYS@,Darwin,",
 		"",
-		"NO_CHECKSUM=            yes",
-		"NO_CONFIGURE=           yes",
-		"",
-		".include \"../../mk/bsd.pkg.mk\"")
+		"NO_CONFIGURE=           yes")
 
-	G.checkdirPackage(".")
+	G.CheckDirent(pkg)
 
 	t.CheckOutputLines(
-		"WARN: Makefile:9: SUBST_STAGE pre-configure has no effect when NO_CONFIGURE is set (in line 14).")
+		"WARN: ~/category/package/Makefile:21: SUBST_STAGE pre-configure has no effect when NO_CONFIGURE is set (in line 25).")
 }
 
 func (s *Suite) Test_SubstContext__adjacent(c *check.C) {

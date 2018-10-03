@@ -6,7 +6,7 @@ func (s *Suite) Test_CheckdirCategory__totally_broken(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupVartypes()
-	t.SetupFileLines("archivers/Makefile",
+	t.CreateFileLines("archivers/Makefile",
 		"# $",
 		"SUBDIR+=pkg1",
 		"SUBDIR+=\u0020aaaaa",
@@ -36,16 +36,16 @@ func (s *Suite) Test_CheckdirCategory__invalid_comment(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupVartypes()
-	t.SetupFileLines("archivers/Makefile",
+	t.CreateFileLines("archivers/Makefile",
 		MkRcsID,
 		"COMMENT=\t\\Make $$$$ fast\"",
 		"",
 		"SUBDIR+=\tpackage",
 		"",
 		".include \"../mk/misc/category.mk\"")
-	t.SetupFileLines("archivers/package/Makefile",
+	t.CreateFileLines("archivers/package/Makefile",
 		"# dummy")
-	t.SetupFileLines("mk/misc/category.mk",
+	t.CreateFileLines("mk/misc/category.mk",
 		"# dummy")
 
 	CheckdirCategory(t.File("archivers"))
@@ -59,10 +59,10 @@ func (s *Suite) Test_CheckdirCategory__wip(c *check.C) {
 
 	t.SetupPkgsrc()
 	t.SetupVartypes()
-	t.SetupFileLines("mk/misc/category.mk")
-	t.SetupFileLines("wip/package/Makefile")
-	t.SetupFileLines("wip/fs-only/Makefile")
-	t.SetupFileLines("wip/Makefile",
+	t.CreateFileLines("mk/misc/category.mk")
+	t.CreateFileLines("wip/package/Makefile")
+	t.CreateFileLines("wip/fs-only/Makefile")
+	t.CreateFileLines("wip/Makefile",
 		MkRcsID,
 		"COMMENT=\tCategory comment",
 		"",

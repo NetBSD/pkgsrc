@@ -104,7 +104,9 @@ func (s *Suite) Test_MkParser_MkTokens(c *check.C) {
 	check("${${${PKG_INFO} -E ${d} || echo:L:sh}:L:C/[^[0-9]]*/ /g:[1..3]:ts.}",
 		varuse("${${PKG_INFO} -E ${d} || echo:L:sh}", "L", "C/[^[0-9]]*/ /g", "[1..3]", "ts."))
 
-	check("${VAR:S/-//S/.//}", varuseText("${VAR:S/-//S/.//}", "VAR", "S/-//", "S/.//")) // For :S and :C, the colon can be left out.
+	// For :S and :C, the colon can be left out.
+	check("${VAR:S/-//S/.//}",
+		varuseText("${VAR:S/-//S/.//}", "VAR", "S/-//", "S/.//"))
 
 	check("${VAR:ts}", varuse("VAR", "ts"))                 // The separator character can be left out.
 	check("${VAR:ts\\000012}", varuse("VAR", "ts\\000012")) // The separator character can be a long octal number.
@@ -130,12 +132,21 @@ func (s *Suite) Test_MkParser_MkTokens(c *check.C) {
 	checkRest("hello, ${W:L:tl}orld", []*MkToken{
 		literal("hello, "),
 		varuse("W", "L", "tl"),
-		literal("orld")}, "")
+		literal("orld")},
+		"")
 	checkRest("ftp://${PKGNAME}/ ${MASTER_SITES:=subdir/}", []*MkToken{
 		literal("ftp://"),
 		varuse("PKGNAME"),
 		literal("/ "),
-		varuse("MASTER_SITES", "=subdir/")}, "")
+		varuse("MASTER_SITES", "=subdir/")},
+		"")
+
+	// FIXME: Text must match modifiers.
+	checkRest("${VAR:S,a,b,c,d,e,f}",
+		[]*MkToken{{
+			Text:   "${VAR:S,a,b,c,d,e,f}",
+			Varuse: &MkVarUse{varname: "VAR", modifiers: []string{"S,a,b,"}}}},
+		"")
 }
 
 func (s *Suite) Test_MkParser_MkCond(c *check.C) {

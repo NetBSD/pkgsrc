@@ -2,8 +2,6 @@ package main
 
 import (
 	"gopkg.in/check.v1"
-	"netbsd.org/pkglint/regex"
-	"netbsd.org/pkglint/textproc"
 	"os"
 	"runtime"
 	"testing"
@@ -16,36 +14,36 @@ func (s *Suite) Test_YesNoUnknown_String(c *check.C) {
 	c.Check(unknown.String(), equals, "unknown")
 }
 
-func (s *Suite) Test_MkopSubst__middle(c *check.C) {
+func (s *Suite) Test_mkopSubst__middle(c *check.C) {
 	c.Check(mkopSubst("pkgname", false, "kgna", false, "ri", ""), equals, "prime")
 	c.Check(mkopSubst("pkgname", false, "pkgname", false, "replacement", ""), equals, "replacement")
 	c.Check(mkopSubst("aaaaaaa", false, "a", false, "b", ""), equals, "baaaaaa")
 }
 
-func (s *Suite) Test_MkopSubst__left(c *check.C) {
+func (s *Suite) Test_mkopSubst__left(c *check.C) {
 	c.Check(mkopSubst("pkgname", true, "kgna", false, "ri", ""), equals, "pkgname")
 	c.Check(mkopSubst("pkgname", true, "pkgname", false, "replacement", ""), equals, "replacement")
 }
 
-func (s *Suite) Test_MkopSubst__right(c *check.C) {
+func (s *Suite) Test_mkopSubst__right(c *check.C) {
 	c.Check(mkopSubst("pkgname", false, "kgna", true, "ri", ""), equals, "pkgname")
 	c.Check(mkopSubst("pkgname", false, "pkgname", true, "replacement", ""), equals, "replacement")
 }
 
-func (s *Suite) Test_MkopSubst__leftRight(c *check.C) {
+func (s *Suite) Test_mkopSubst__left_and_right(c *check.C) {
 	c.Check(mkopSubst("pkgname", true, "kgna", true, "ri", ""), equals, "pkgname")
 	c.Check(mkopSubst("pkgname", false, "pkgname", false, "replacement", ""), equals, "replacement")
 }
 
-func (s *Suite) Test_MkopSubst__gflag(c *check.C) {
+func (s *Suite) Test_mkopSubst__gflag(c *check.C) {
 	c.Check(mkopSubst("aaaaa", false, "a", false, "b", "g"), equals, "bbbbb")
 	c.Check(mkopSubst("aaaaa", true, "a", false, "b", "g"), equals, "baaaa")
 	c.Check(mkopSubst("aaaaa", false, "a", true, "b", "g"), equals, "aaaab")
 	c.Check(mkopSubst("aaaaa", true, "a", true, "b", "g"), equals, "aaaaa")
 }
 
-func (s *Suite) Test_replaceFirst(c *check.C) {
-	m, rest := regex.ReplaceFirst("a+b+c+d", `(\w)(.)(\w)`, "X")
+func (s *Suite) Test__regex_ReplaceFirst(c *check.C) {
+	m, rest := G.res.ReplaceFirst("a+b+c+d", `(\w)(.)(\w)`, "X")
 
 	c.Assert(m, check.NotNil)
 	c.Check(m, check.DeepEquals, []string{"a+b", "a", "+", "b"})
@@ -65,7 +63,7 @@ func (s *Suite) Test_shorten(c *check.C) {
 	c.Check(shorten("aaa", 5), equals, "aaa")
 }
 
-func (s *Suite) Test_tabLength(c *check.C) {
+func (s *Suite) Test_tabWidth(c *check.C) {
 	c.Check(tabWidth("12345"), equals, 5)
 	c.Check(tabWidth("\t"), equals, 8)
 	c.Check(tabWidth("123\t"), equals, 8)
@@ -81,13 +79,18 @@ func (s *Suite) Test_cleanpath(c *check.C) {
 	c.Check(cleanpath("dir/../dir/../dir/../dir/subdir/../../Makefile"), equals, "dir/../dir/../dir/../Makefile")
 	c.Check(cleanpath("dir/multi/././/file"), equals, "dir/multi/file")
 	c.Check(cleanpath("111/222/../../333/444/../../555/666/../../777/888/9"), equals, "111/222/../../777/888/9")
+	c.Check(cleanpath("1/2/3/../../4/5/6/../../7/8/9/../../../../10"), equals, "1/10")
 	c.Check(cleanpath("cat/pkg.v1/../../cat/pkg.v2/Makefile"), equals, "cat/pkg.v1/../../cat/pkg.v2/Makefile")
 	c.Check(cleanpath("dir/"), equals, "dir")
 }
 
 func (s *Suite) Test_relpath(c *check.C) {
+	t := s.Init(c)
+
 	if runtime.GOOS == "windows" {
-		c.Check(func() { relpath("c:/", "d:/") }, check.Panics, "relpath \"c:/\", \"d:/\"")
+		t.ExpectFatal(
+			func() { relpath("c:/", "d:/") },
+			"FATAL: Pkglint internal error: relpath \"c:/\" \"d:/\".")
 	}
 }
 
@@ -97,21 +100,21 @@ func (s *Suite) Test_abspath(c *check.C) {
 	if runtime.GOOS == "windows" {
 		t.ExpectFatal(
 			func() { abspath("file\u0000name") },
-			"FATAL: file\x00name: Cannot determine absolute path.")
+			"FATAL: Pkglint internal error: abspath \"file\\x00name\".")
 	}
 }
 
-func (s *Suite) Test_isEmptyDir_and_getSubdirs(c *check.C) {
+func (s *Suite) Test_isEmptyDir__and_getSubdirs(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupFileLines("CVS/Entries",
+	t.CreateFileLines("CVS/Entries",
 		"dummy")
 
 	if dir := t.File("."); true {
 		c.Check(isEmptyDir(dir), equals, true)
 		c.Check(getSubdirs(dir), check.DeepEquals, []string(nil))
 
-		t.SetupFileLines("somedir/file")
+		t.CreateFileLines("somedir/file")
 
 		c.Check(isEmptyDir(dir), equals, false)
 		c.Check(getSubdirs(dir), check.DeepEquals, []string{"somedir"})
@@ -130,7 +133,7 @@ func (s *Suite) Test_isEmptyDir_and_getSubdirs(c *check.C) {
 func (s *Suite) Test_isEmptyDir__empty_subdir(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupFileLines("CVS/Entries",
+	t.CreateFileLines("CVS/Entries",
 		"dummy")
 	t.CreateFileLines("subdir/CVS/Entries",
 		"dummy")
@@ -138,8 +141,8 @@ func (s *Suite) Test_isEmptyDir__empty_subdir(c *check.C) {
 	c.Check(isEmptyDir(t.File(".")), equals, true)
 }
 
-func (s *Suite) Test_PrefixReplacer_Since(c *check.C) {
-	repl := textproc.NewPrefixReplacer("hello, world")
+func (s *Suite) Test__PrefixReplacer_Since(c *check.C) {
+	repl := G.NewPrefixReplacer("hello, world")
 	mark := repl.Mark()
 	repl.AdvanceRegexp(`^\w+`)
 	c.Check(repl.Since(mark), equals, "hello")
@@ -168,7 +171,7 @@ func Benchmark_match3_bsd_pkg_mk(b *testing.B) {
 	}
 }
 
-func Benchmark_match3_samedir(b *testing.B) {
+func Benchmark_match3_same_dir(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		match3(".include \"options.mk\"", reMkIncludeBenchmark)
 	}
@@ -192,7 +195,7 @@ func Benchmark_match3_bsd_pkg_mk_positive(b *testing.B) {
 	}
 }
 
-func Benchmark_match3_samedir_positive(b *testing.B) {
+func Benchmark_match3_same_dir_positive(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		match3(".include \"options.mk\"", reMkIncludeBenchmarkPositive)
 	}
@@ -305,4 +308,95 @@ func (s *Suite) Test_naturalLess(c *check.C) {
 	c.Check(naturalLess("000", "0000"), equals, true)
 	c.Check(naturalLess("0000", "000"), equals, false)
 	c.Check(naturalLess("000", "000"), equals, false)
+	c.Check(naturalLess("00011", "000111"), equals, true)
+	c.Check(naturalLess("00011", "00012"), equals, true)
+}
+
+func (s *Suite) Test_varnameBase(c *check.C) {
+	c.Check(varnameBase("VAR"), equals, "VAR")
+	c.Check(varnameBase("VAR.param"), equals, "VAR")
+	c.Check(varnameBase(".CURDIR"), equals, ".CURDIR")
+}
+
+func (s *Suite) Test_varnameParam(c *check.C) {
+	c.Check(varnameParam("VAR"), equals, "")
+	c.Check(varnameParam("VAR.param"), equals, "param")
+	c.Check(varnameParam(".CURDIR"), equals, "")
+}
+
+func (s *Suite) Test_varnameCanon(c *check.C) {
+	c.Check(varnameCanon("VAR"), equals, "VAR")
+	c.Check(varnameCanon("VAR.param"), equals, "VAR.*")
+	c.Check(varnameCanon(".CURDIR"), equals, ".CURDIR")
+}
+
+func (s *Suite) Test_isalnum(c *check.C) {
+	c.Check(isalnum(""), equals, true)
+	c.Check(isalnum("/"), equals, false)
+	c.Check(isalnum("0"), equals, true)
+	c.Check(isalnum("9"), equals, true)
+	c.Check(isalnum(":"), equals, false)
+	c.Check(isalnum("@"), equals, false)
+	c.Check(isalnum("A"), equals, true)
+	c.Check(isalnum("Z"), equals, true)
+	c.Check(isalnum("["), equals, false)
+	c.Check(isalnum("_"), equals, true)
+	c.Check(isalnum("`"), equals, false)
+	c.Check(isalnum("a"), equals, true)
+	c.Check(isalnum("z"), equals, true)
+	c.Check(isalnum("{"), equals, false)
+	c.Check(isalnum("Hello_world005"), equals, true)
+	c.Check(isalnum("Hello,world005"), equals, false)
+}
+
+func (s *Suite) Test_FileCache(c *check.C) {
+	t := s.Init(c)
+
+	cache := NewFileCache(3)
+
+	lines := t.NewLines("Makefile",
+		MkRcsID,
+		"# line 2")
+
+	c.Check(cache.Get("Makefile", 0), check.IsNil)
+	c.Check(cache.hits, equals, 0)
+	c.Check(cache.misses, equals, 1)
+
+	cache.Put("Makefile", 0, lines)
+	c.Check(cache.Get("Makefile", MustSucceed|LogErrors), check.IsNil) // Wrong LoadOptions.
+
+	linesFromCache := cache.Get("Makefile", 0)
+	c.Check(linesFromCache, check.HasLen, 2)
+	c.Check(linesFromCache[1].Filename, equals, "Makefile")
+
+	// Cache keys are normalized using path.Clean.
+	linesFromCache2 := cache.Get("./Makefile", 0)
+	c.Check(linesFromCache2, check.HasLen, 2)
+	c.Check(linesFromCache2[1].Filename, equals, "./Makefile")
+
+	cache.Put("file1.mk", 0, lines)
+	cache.Put("file2.mk", 0, lines)
+
+	// Now the cache is full. All three entries can be retrieved.
+	c.Check(cache.Get("Makefile", 0), check.NotNil)
+	c.Check(cache.Get("file1.mk", 0), check.NotNil)
+	c.Check(cache.Get("file2.mk", 0), check.NotNil)
+
+	// Adding another entry removes all entries with minimum count,
+	// which currently are file1.mk and file2.mk.
+	// Makefile is still in the cache because it was accessed once.
+	cache.Put("file3.mk", 0, lines)
+
+	c.Check(cache.Get("Makefile", 0), check.NotNil)
+	c.Check(cache.Get("file1.mk", 0), check.IsNil)
+	c.Check(cache.Get("file2.mk", 0), check.IsNil)
+	c.Check(cache.Get("file3.mk", 0), check.NotNil)
+
+	cache.Evict("Makefile")
+
+	c.Check(cache.Get("Makefile", 0), check.IsNil)
+	c.Check(cache.table, check.HasLen, 1)
+	c.Check(cache.mapping, check.HasLen, 1)
+	c.Check(cache.hits, equals, 7)
+	c.Check(cache.misses, equals, 5)
 }
