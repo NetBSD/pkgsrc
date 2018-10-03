@@ -4,10 +4,10 @@ import (
 	"gopkg.in/check.v1"
 )
 
-func (s *Suite) Test_checklineLicense(c *check.C) {
+func (s *Suite) Test_LicenseChecker_Check(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupFileLines("licenses/gnu-gpl-v2",
+	t.CreateFileLines("licenses/gnu-gpl-v2",
 		"Most software \u2026")
 	mkline := t.NewMkLine("Makefile", 7, "LICENSE=dummy")
 
@@ -48,15 +48,15 @@ func (s *Suite) Test_checkToplevelUnusedLicenses(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupPkgsrc()
-	t.SetupFileLines("mk/misc/category.mk")
-	t.SetupFileLines("licenses/2-clause-bsd")
-	t.SetupFileLines("licenses/gnu-gpl-v3")
+	t.CreateFileLines("mk/misc/category.mk")
+	t.CreateFileLines("licenses/2-clause-bsd")
+	t.CreateFileLines("licenses/gnu-gpl-v3")
 
-	t.SetupFileLines("Makefile",
+	t.CreateFileLines("Makefile",
 		MkRcsID,
 		"SUBDIR+=\tcategory")
 
-	t.SetupFileLines("category/Makefile",
+	t.CreateFileLines("category/Makefile",
 		MkRcsID,
 		"COMMENT=\tExample category",
 		"",
@@ -64,14 +64,14 @@ func (s *Suite) Test_checkToplevelUnusedLicenses(c *check.C) {
 		"",
 		".include \"../mk/misc/category.mk\"")
 
-	t.SetupFileLines("category/package/Makefile",
+	t.CreateFileLines("category/package/Makefile",
 		MkRcsID,
 		"CATEGORIES=\tcategory",
 		"",
 		"COMMENT=Example package",
 		"LICENSE=\t2-clause-bsd",
 		"NO_CHECKSUM=\tyes")
-	t.SetupFileLines("category/package/PLIST",
+	t.CreateFileLines("category/package/PLIST",
 		PlistRcsID,
 		"bin/program")
 
@@ -88,9 +88,9 @@ func (s *Suite) Test_LicenseChecker_checkLicenseName__LICENSE_FILE(c *check.C) {
 
 	t.SetupPkgsrc()
 	t.SetupCommandLine("-Wno-space")
-	t.SetupFileLines("category/package/DESCR",
+	t.CreateFileLines("category/package/DESCR",
 		"Package description")
-	t.SetupFileMkLines("category/package/Makefile",
+	t.CreateFileLines("category/package/Makefile",
 		MkRcsID,
 		"",
 		"CATEGORIES=     chinese",
@@ -102,10 +102,10 @@ func (s *Suite) Test_LicenseChecker_checkLicenseName__LICENSE_FILE(c *check.C) {
 		"NO_CHECKSUM=    yes",
 		"",
 		".include \"../../mk/bsd.pkg.mk\"")
-	t.SetupFileLines("category/package/PLIST",
+	t.CreateFileLines("category/package/PLIST",
 		PlistRcsID,
 		"bin/program")
-	t.SetupFileLines("category/package/my-license",
+	t.CreateFileLines("category/package/my-license",
 		"An individual license file.")
 
 	G.Main("pkglint", t.File("category/package"))
@@ -113,5 +113,6 @@ func (s *Suite) Test_LicenseChecker_checkLicenseName__LICENSE_FILE(c *check.C) {
 	// FIXME: It should be allowed to place a license file directly into
 	// the package directory.
 	t.CheckOutputLines(
-		"WARN: ~/category/package/my-license: Unexpected file found.", "0 errors and 1 warning found.")
+		"WARN: ~/category/package/my-license: Unexpected file found.",
+		"0 errors and 1 warning found.")
 }

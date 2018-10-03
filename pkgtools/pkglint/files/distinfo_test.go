@@ -6,10 +6,10 @@ func (s *Suite) Test_ChecklinesDistinfo(c *check.C) {
 	t := s.Init(c)
 
 	t.Chdir("category/package")
-	t.SetupFileLines("patches/patch-aa",
+	t.CreateFileLines("patches/patch-aa",
 		RcsID+" line is ignored for computing the SHA1 hash",
 		"patch contents")
-	t.SetupFileLines("patches/patch-ab",
+	t.CreateFileLines("patches/patch-ab",
 		"patch contents")
 	lines := t.SetupFileLines("distinfo",
 		"should be the RCS ID",
@@ -34,7 +34,7 @@ func (s *Suite) Test_ChecklinesDistinfo(c *check.C) {
 		"WARN: distinfo:9: Patch file \"patch-nonexistent\" does not exist in directory \"patches\".")
 }
 
-func (s *Suite) Test_ChecklinesDistinfo_global_hash_mismatch(c *check.C) {
+func (s *Suite) Test_ChecklinesDistinfo__global_hash_mismatch(c *check.C) {
 	t := s.Init(c)
 
 	otherLine := t.NewLine("other/distinfo", 7, "dummy")
@@ -53,11 +53,11 @@ func (s *Suite) Test_ChecklinesDistinfo_global_hash_mismatch(c *check.C) {
 		"ERROR: distinfo:EOF: Expected SHA1, RMD160, SHA512, Size checksums for \"pkgname-1.1.tar.gz\", got SHA512.")
 }
 
-func (s *Suite) Test_ChecklinesDistinfo_uncommitted_patch(c *check.C) {
+func (s *Suite) Test_ChecklinesDistinfo__uncommitted_patch(c *check.C) {
 	t := s.Init(c)
 
 	t.Chdir("category/package")
-	t.SetupFileLines("patches/patch-aa",
+	t.CreateFileLines("patches/patch-aa",
 		RcsID,
 		"",
 		"--- oldfile",
@@ -65,7 +65,7 @@ func (s *Suite) Test_ChecklinesDistinfo_uncommitted_patch(c *check.C) {
 		"@@ -1,1 +1,1 @@",
 		"-old",
 		"+new")
-	t.SetupFileLines("CVS/Entries",
+	t.CreateFileLines("CVS/Entries",
 		"/distinfo/...")
 	lines := t.SetupFileLines("distinfo",
 		RcsID,
@@ -79,13 +79,13 @@ func (s *Suite) Test_ChecklinesDistinfo_uncommitted_patch(c *check.C) {
 		"WARN: distinfo:3: patches/patch-aa is registered in distinfo but not added to CVS.")
 }
 
-func (s *Suite) Test_ChecklinesDistinfo_unrecorded_patches(c *check.C) {
+func (s *Suite) Test_ChecklinesDistinfo__unrecorded_patches(c *check.C) {
 	t := s.Init(c)
 
 	t.Chdir("category/package")
-	t.SetupFileLines("patches/CVS/Entries")
-	t.SetupFileLines("patches/patch-aa")
-	t.SetupFileLines("patches/patch-src-Makefile")
+	t.CreateFileLines("patches/CVS/Entries")
+	t.CreateFileLines("patches/patch-aa")
+	t.CreateFileLines("patches/patch-src-Makefile")
 	lines := t.SetupFileLines("distinfo",
 		RcsID,
 		"",
@@ -102,7 +102,7 @@ func (s *Suite) Test_ChecklinesDistinfo_unrecorded_patches(c *check.C) {
 		"ERROR: distinfo: patch \"patches/patch-src-Makefile\" is not recorded. Run \""+confMake+" makepatchsum\".")
 }
 
-func (s *Suite) Test_ChecklinesDistinfo_manual_patches(c *check.C) {
+func (s *Suite) Test_ChecklinesDistinfo__manual_patches(c *check.C) {
 	t := s.Init(c)
 
 	t.Chdir("category/package")
@@ -142,7 +142,7 @@ func (s *Suite) Test_ChecklinesDistinfo__missing_php_patches(c *check.C) {
 		MkRcsID,
 		"",
 		"PHPEXT_MK=      # defined",
-		"PHPPKGSRCDIR=   lang/php72",
+		"PHPPKGSRCDIR=   ../../lang/php72",
 		"LICENSE?=        unknown-license",
 		"COMMENT?=       Some PHP package",
 		"GENERATE_PLIST+=# none",
@@ -163,7 +163,7 @@ func (s *Suite) Test_ChecklinesDistinfo__missing_php_patches(c *check.C) {
 		"@@ -1,1 +1,1 @@",
 		"-old",
 		"+new")
-	t.SetupFileLines("lang/php72/distinfo",
+	t.CreateFileLines("lang/php72/distinfo",
 		RcsID,
 		"",
 		"SHA1 (patch-php72) = c109b2089f5ddbc5372b2ab28115ff558ee4187d")
