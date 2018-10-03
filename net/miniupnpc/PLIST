@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/12/01 22:28:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/10/03 22:35:03 nia Exp $
 bin/external-ip
 bin/upnpc
 include/miniupnpc/igd_desc_parse.h
@@ -13,5 +13,6 @@ include/miniupnpc/upnperrors.h
 include/miniupnpc/upnpreplyparse.h
 lib/libminiupnpc.a
 lib/libminiupnpc.so
-lib/libminiupnpc.so.16
+lib/libminiupnpc.so.17
+lib/pkgconfig/miniupnpc.pc
 man/man3/miniupnpc.3
