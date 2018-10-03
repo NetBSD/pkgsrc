@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2018/08/11 13:59:39 nia Exp $
+$NetBSD: distinfo,v 1.7 2018/10/03 15:01:10 nia Exp $
 
 SHA1 (libretro-mupen64plus-20180628-4ca2fa8633666e26e2f163dcd3c226b598cb2aa4.tar.gz) = 061554fbae2958d01aba3634c7072c4ce114a717
 RMD160 (libretro-mupen64plus-20180628-4ca2fa8633666e26e2f163dcd3c226b598cb2aa4.tar.gz) = 4ed698218aaba15846e96163c874746c5e0e5a28
 SHA512 (libretro-mupen64plus-20180628-4ca2fa8633666e26e2f163dcd3c226b598cb2aa4.tar.gz) = 6f945cd9d6a8a29e10efdc24adb4771e859b75bdffdd57228fa1de3a4ae3f0eb5bc5dc8c27de7c978aae667c5c22b6d26bda870d83fa2c68b1ecf1d8e4743a2b
 Size (libretro-mupen64plus-20180628-4ca2fa8633666e26e2f163dcd3c226b598cb2aa4.tar.gz) = 6193207 bytes
+SHA1 (patch-GLideN64_src_Log.cpp) = 9b16a306b6bd14799b908d085fc8017caa31b36e
