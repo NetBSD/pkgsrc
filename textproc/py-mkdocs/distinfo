@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/08/31 12:30:47 adam Exp $
+$NetBSD: distinfo,v 1.3 2018/10/03 10:33:25 adam Exp $
 
-SHA1 (mkdocs-1.0.3.tar.gz) = 23da4cd8c47db649fd93ff4fc5aa908f59b5841e
-RMD160 (mkdocs-1.0.3.tar.gz) = 9dd67ebc4ca4c3e5d180fee1d974bc09da6c1f12
-SHA512 (mkdocs-1.0.3.tar.gz) = adec4813ad90e091e9585c72a4870ee31a86424030fa6452194c745e441c20e676cca3f6563392b9e7be2e716f2b36b27f72d68c9f2a19c7ebdfb991ea2666f9
-Size (mkdocs-1.0.3.tar.gz) = 1112819 bytes
+SHA1 (mkdocs-1.0.4.tar.gz) = f49595996b72ad3457d97a677e120bae822b20d6
+RMD160 (mkdocs-1.0.4.tar.gz) = 43919d4bd946ae67cad2946129983f8ac47b7b8c
+SHA512 (mkdocs-1.0.4.tar.gz) = 534e3f5479cc6256b6852c8e8aae96638fad879985f191ccdd8174a5704c37c5234bd15a7208772ab061ab12fe5b4690e4d94f48b9f9ab22cf2880190406bb6c
+Size (mkdocs-1.0.4.tar.gz) = 1112874 bytes
