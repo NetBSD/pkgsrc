@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.5 2018/09/06 09:33:38 nia Exp $
+# $NetBSD: options.mk,v 1.6 2018/10/03 23:31:06 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.retroarch
 
 PKG_SUPPORTED_OPTIONS+=		sdl2 ffmpeg freetype qt5 x11 caca
 PKG_SUPPORTED_OPTIONS+=		alsa jack openal pulseaudio libusb-1
 PKG_SUPPORTED_OPTIONS+=		libxml2 # Deprecated
-PKG_SUGGESTED_OPTIONS+=		sdl2 ffmpeg freetype x11 openal
+PKG_SUGGESTED_OPTIONS+=		sdl2 freetype x11
 
 .if ${OPSYS} == "Linux"
 PKG_SUPPORTED_OPTIONS+=		udev
