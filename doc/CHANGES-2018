@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4268 2018/10/03 11:51:04 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4269 2018/10/03 19:01:06 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5951,3 +5951,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated games/wesnoth to 1.14.5 [adam 2018-10-03]
 	Updated www/py-flask-admin to 1.5.2 [adam 2018-10-03]
 	Updated devel/py-pyparsing to 2.2.2 [adam 2018-10-03]
+	Updated lang/spidermonkey52 to 52.7.4nb5 [maya 2018-10-03]
+	Updated www/firefox to 62.0.3 [maya 2018-10-03]
+	Updated www/firefox-l10n to 62.0.3 [maya 2018-10-03]
