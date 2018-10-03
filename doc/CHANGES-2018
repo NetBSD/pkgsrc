@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4266 2018/10/03 11:34:00 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4267 2018/10/03 11:36:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5948,3 +5948,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/drupal7 to 7.59nb2 [prlw1 2018-10-03]
 	Updated databases/py-pickleshare to 0.7.5 [adam 2018-10-03]
 	Updated devel/py-wheel to 0.32.0 [adam 2018-10-03]
+	Updated games/wesnoth to 1.14.5 [adam 2018-10-03]
