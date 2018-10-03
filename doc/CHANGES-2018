@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4257 2018/10/02 18:20:39 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.4258 2018/10/03 08:19:09 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5932,3 +5932,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/p5-DateTime-Format-Flexible to 0.31 [wen 2018-10-02]
 	Updated math/py-scikit-learn to 0.20.0 [minskim 2018-10-02]
 	Updated lang/go111 to 1.11.1 [bsiegert 2018-10-02]
+	Updated security/sqlmap to 1.2.10 [leot 2018-10-03]
