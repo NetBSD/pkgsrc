@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/10/02 21:09:28 nia Exp $
+# $NetBSD: Makefile,v 1.3 2018/10/03 12:21:54 nia Exp $
 
 DISTNAME=	libretro-beetle-ngp-20180720
 CATEGORIES=	emulators
@@ -12,7 +12,7 @@ COMMENT=	Libretro core based on the Mednafen Neo Geo Pocket emulator
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 
 .include "../../mk/endian.mk"
