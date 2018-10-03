@@ -62,10 +62,10 @@ func (s *Suite) Test_ChecklinesPlist__empty(c *check.C) {
 		"WARN: PLIST:1: PLIST files shouldn't be empty.")
 }
 
-func (s *Suite) Test_ChecklinesPlist__commonEnd(c *check.C) {
+func (s *Suite) Test_ChecklinesPlist__common_end(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupFileLines("PLIST.common",
+	t.CreateFileLines("PLIST.common",
 		PlistRcsID,
 		"bin/common")
 	lines := t.SetupFileLines("PLIST.common_end",
@@ -81,7 +81,6 @@ func (s *Suite) Test_ChecklinesPlist__condition(c *check.C) {
 	t := s.Init(c)
 
 	G.Pkg = NewPackage(t.File("category/pkgbase"))
-	G.Pkg.plistSubstCond["PLIST.bincmds"] = true
 	lines := t.NewLines("PLIST",
 		PlistRcsID,
 		"${PLIST.bincmds}bin/subdir/command")
@@ -111,7 +110,7 @@ func (s *Suite) Test_ChecklinesPlist__sorting(c *check.C) {
 		"WARN: PLIST:6: \"bin/cat\" should be sorted before \"bin/otherprogram\".")
 }
 
-func (s *Suite) Test_PlistLineSorter_Sort(c *check.C) {
+func (s *Suite) Test_plistLineSorter_Sort(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("--autofix")
@@ -167,7 +166,7 @@ func (s *Suite) Test_PlistLineSorter_Sort(c *check.C) {
 		"@exec echo \"after lib/after.la\"") // The footer starts here
 }
 
-func (s *Suite) Test_PlistChecker_checkpathMan_gz(c *check.C) {
+func (s *Suite) Test_PlistChecker_checkpathMan__gz(c *check.C) {
 	t := s.Init(c)
 
 	G.Pkg = NewPackage(t.File("category/pkgbase"))
@@ -181,7 +180,7 @@ func (s *Suite) Test_PlistChecker_checkpathMan_gz(c *check.C) {
 		"NOTE: PLIST:2: The .gz extension is unnecessary for manual pages.")
 }
 
-func (s *Suite) TestPlistChecker_checkpath__PKGMANDIR(c *check.C) {
+func (s *Suite) Test_PlistChecker_checkpath__PKGMANDIR(c *check.C) {
 	t := s.Init(c)
 
 	lines := t.NewLines("PLIST",
@@ -194,7 +193,7 @@ func (s *Suite) TestPlistChecker_checkpath__PKGMANDIR(c *check.C) {
 		"NOTE: PLIST:2: PLIST files should mention \"man/\" instead of \"${PKGMANDIR}\".")
 }
 
-func (s *Suite) TestPlistChecker_checkpath__python_egg(c *check.C) {
+func (s *Suite) Test_PlistChecker_checkpath__python_egg(c *check.C) {
 	t := s.Init(c)
 
 	lines := t.NewLines("PLIST",

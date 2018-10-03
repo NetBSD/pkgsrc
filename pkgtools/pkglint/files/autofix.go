@@ -46,8 +46,9 @@ func NewAutofix(line Line) *Autofix {
 // If printAutofix or autofix is true, the fix should be done in
 // memory as far as possible (e.g. changes to the text of the line).
 //
-// If autofix is true, the fix should be done permanently
-// (e.g. direct changes to the file system).
+// If autofix is true, the fix should be done persistently
+// (e.g. direct changes to the file system). Except if the fix only
+// affects the current line, then SaveAutofixChanges will do that.
 func (fix *Autofix) Custom(fixer func(printAutofix, autofix bool)) {
 	if fix.skip() {
 		return
@@ -104,7 +105,7 @@ func (fix *Autofix) ReplaceRegex(from regex.Pattern, toText string, howOften int
 				return toText
 			}
 
-			if replaced := regex.Compile(from).ReplaceAllStringFunc(rawLine.textnl, replace); replaced != rawLine.textnl {
+			if replaced := replaceAllFunc(rawLine.textnl, from, replace); replaced != rawLine.textnl {
 				if G.opts.PrintAutofix || G.opts.Autofix {
 					rawLine.textnl = replaced
 				}
@@ -134,12 +135,12 @@ func (fix *Autofix) Realign(mkline MkLine, newWidth int) {
 	}
 
 	for _, rawLine := range fix.lines[1:] {
-		_, comment, space := regex.Match2(rawLine.textnl, `^(#?)([ \t]*)`)
+		_, comment, space := match2(rawLine.textnl, `^(#?)([ \t]*)`)
 		width := tabWidth(comment + space)
 		if (oldWidth == 0 || width < oldWidth) && width >= 8 && rawLine.textnl != "\n" {
 			oldWidth = width
 		}
-		if !regex.Matches(space, `^\t* {0,7}$`) {
+		if !matches(space, `^\t* {0,7}$`) {
 			normalized = false
 		}
 	}
@@ -156,7 +157,7 @@ func (fix *Autofix) Realign(mkline MkLine, newWidth int) {
 	}
 
 	for _, rawLine := range fix.lines[1:] {
-		_, comment, oldSpace := regex.Match2(rawLine.textnl, `^(#?)([ \t]*)`)
+		_, comment, oldSpace := match2(rawLine.textnl, `^(#?)([ \t]*)`)
 		newWidth := tabWidth(oldSpace) - oldWidth + newWidth
 		newSpace := strings.Repeat("\t", newWidth/8) + strings.Repeat(" ", newWidth%8)
 		replaced := strings.Replace(rawLine.textnl, comment+oldSpace, comment+newSpace, 1)
@@ -311,6 +312,7 @@ func SaveAutofixChanges(lines []Line) (autofixed bool) {
 		for _, line := range lines {
 			if line.autofix != nil && line.autofix.modified {
 				G.autofixAvailable = true
+				G.fileCache.Evict(line.Filename)
 			}
 		}
 		return
@@ -338,6 +340,7 @@ func SaveAutofixChanges(lines []Line) (autofixed bool) {
 	}
 
 	for fname := range changed {
+		G.fileCache.Evict(fname)
 		changedLines := changes[fname]
 		tmpname := fname + ".pkglint.tmp"
 		text := ""

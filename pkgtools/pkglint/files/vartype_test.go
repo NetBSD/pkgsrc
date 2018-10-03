@@ -23,7 +23,7 @@ func (s *Suite) Test_Vartype_EffectivePermissions(c *check.C) {
 	}
 }
 
-func (s *Suite) Test_VarChecker_HasEnum(c *check.C) {
+func (s *Suite) Test_BasicType_HasEnum(c *check.C) {
 	vc := enum("catinstall middle maninstall")
 
 	c.Check(vc.HasEnum("catinstall"), equals, true)
@@ -31,7 +31,7 @@ func (s *Suite) Test_VarChecker_HasEnum(c *check.C) {
 	c.Check(vc.HasEnum("maninstall"), equals, true)
 }
 
-func (s *Suite) Test_AclPermissions_Contains(c *check.C) {
+func (s *Suite) Test_ACLPermissions_Contains(c *check.C) {
 	perms := aclpAllRuntime
 
 	c.Check(perms.Contains(aclpAllRuntime), equals, true)
@@ -39,7 +39,7 @@ func (s *Suite) Test_AclPermissions_Contains(c *check.C) {
 	c.Check(perms.Contains(aclpUseLoadtime), equals, false)
 }
 
-func (s *Suite) Test_AclPermissions_String(c *check.C) {
+func (s *Suite) Test_ACLPermissions_String(c *check.C) {
 	c.Check(ACLPermissions(0).String(), equals, "none")
 	c.Check(aclpAll.String(), equals, "set, set-default, append, use-loadtime, use")
 	c.Check(aclpUnknown.String(), equals, "unknown")

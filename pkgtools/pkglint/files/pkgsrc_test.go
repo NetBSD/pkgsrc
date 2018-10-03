@@ -61,22 +61,22 @@ func (s *Suite) Test_Pkgsrc_parseSuggestedUpdates(c *check.C) {
 func (s *Suite) Test_Pkgsrc_loadTools(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupFileLines("mk/tools/bsd.tools.mk",
+	t.CreateFileLines("mk/tools/bsd.tools.mk",
 		".include \"flex.mk\"",
 		".include \"gettext.mk\"",
 		".include \"strip.mk\"",
 		".include \"replace.mk\"")
-	t.SetupFileLines("mk/tools/defaults.mk",
+	t.CreateFileLines("mk/tools/defaults.mk",
 		"_TOOLS_VARNAME.chown=CHOWN",
 		"_TOOLS_VARNAME.gawk=AWK",
 		"_TOOLS_VARNAME.mv=MV",
 		"_TOOLS_VARNAME.pwd=PWD")
-	t.SetupFileLines("mk/tools/flex.mk",
+	t.CreateFileLines("mk/tools/flex.mk",
 		"# empty")
-	t.SetupFileLines("mk/tools/gettext.mk",
+	t.CreateFileLines("mk/tools/gettext.mk",
 		"USE_TOOLS+=msgfmt",
 		"TOOLS_CREATE+=msgfmt")
-	t.SetupFileLines("mk/tools/strip.mk",
+	t.CreateFileLines("mk/tools/strip.mk",
 		".if defined(_INSTALL_UNSTRIPPED) || !defined(TOOLS_PLATFORM.strip)",
 		"TOOLS_NOOP+=            strip",
 		".else",
@@ -84,14 +84,14 @@ func (s *Suite) Test_Pkgsrc_loadTools(c *check.C) {
 		"TOOLS_PATH.strip=       ${TOOLS_PLATFORM.strip}",
 		".endif",
 		"STRIP?=         strip")
-	t.SetupFileLines("mk/tools/replace.mk",
+	t.CreateFileLines("mk/tools/replace.mk",
 		"_TOOLS.bzip2=\tbzip2 bzcat",
 		"#TOOLS_CREATE+=commented out",
 		"_UNRELATED_VAR=\t# empty")
-	t.SetupFileLines("mk/bsd.prefs.mk",
+	t.CreateFileLines("mk/bsd.prefs.mk",
 		"USE_TOOLS+=\tpwd",
 		"USE_TOOLS+=\tm4:pkgsrc")
-	t.SetupFileLines("mk/bsd.pkg.mk",
+	t.CreateFileLines("mk/bsd.pkg.mk",
 		"USE_TOOLS+=\tmv")
 
 	G.Pkgsrc.loadTools()
@@ -119,17 +119,46 @@ func (s *Suite) Test_Pkgsrc_loadTools(c *check.C) {
 		"TRACE: - (*Tools).Trace(\"Pkgsrc\")")
 }
 
+// As a side-benefit, loadTools also loads the _BUILD_DEFS.
+func (s *Suite) Test_Pkgsrc_loadTools__BUILD_DEFS(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall")
+	t.SetupToolUsable("echo", "ECHO")
+	pkg := t.SetupPackage("category/package",
+		"pre-configure:",
+		"\t@${ECHO} ${PKG_SYSCONFDIR} ${VARBASE}")
+	t.CreateFileLines("mk/bsd.pkg.mk",
+		MkRcsID,
+		"_BUILD_DEFS+=\tPKG_SYSCONFBASEDIR PKG_SYSCONFDIR")
+	G.Pkgsrc.LoadInfrastructure()
+
+	G.CheckDirent(pkg)
+
+	c.Check(G.Pkgsrc.IsBuildDef("PKG_SYSCONFDIR"), equals, true)
+	c.Check(G.Pkgsrc.IsBuildDef("VARBASE"), equals, false)
+
+	// FIXME: There should be a warning for VARBASE, but G.Pkgsrc.UserDefinedVars
+	// does not contain anything at mklinechecker.go:/UserDefinedVars/.
+	t.CheckOutputLines()
+}
+
 func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupFileLines("doc/CHANGES-2018",
+	t.CreateFileLines("doc/CHANGES-2018",
 		"\tAdded category/package version 1.0 [author1 2015-01-01]", // Wrong year
 		"\tUpdated category/package to 1.5 [author2 2018-01-02]",
 		"\tRenamed category/package to category/pkg [author3 2018-01-03]",
 		"\tMoved category/package to other/package [author4 2018-01-04]",
 		"\tRemoved category/package [author5 2018-01-09]", // Too far in the future
 		"\tRemoved category/package successor category/package2 [author6 2018-01-06]",
-		"\tDowngraded category/package to 1.2 [author7 2018-01-07]")
+		"\tDowngraded category/package to 1.2 [author7 2018-01-07]",
+		"",
+		"\ttoo few fields",
+		"\ttoo many many many many many fields",
+		"\tmissing brackets around author",
+		"\tAdded another [new package]")
 
 	changes := G.Pkgsrc.loadDocChangesFromFile(t.File("doc/CHANGES-2018"))
 
@@ -144,22 +173,68 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile(c *check.C) {
 
 	t.CheckOutputLines(
 		"WARN: ~/doc/CHANGES-2018:1: Year 2015 for category/package does not match the file name ~/doc/CHANGES-2018.",
-		"WARN: ~/doc/CHANGES-2018:6: Date 2018-01-06 for category/package is earlier than 2018-01-09 for category/package.")
+		"WARN: ~/doc/CHANGES-2018:6: Date 2018-01-06 for category/package is earlier than 2018-01-09 for category/package.",
+		"WARN: ~/doc/CHANGES-2018:12: Unknown doc/CHANGES line: \tAdded another [new package]")
 }
 
-func (s *Suite) Test_Pkgsrc_deprecated(c *check.C) {
+func (s *Suite) Test_Pkgsrc_loadDocChanges__not_found(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupPkgsrc()
+	t.Remove("doc/CHANGES-2018")
+	t.Remove("doc/TODO")
+	t.Remove("doc")
+
+	t.ExpectFatal(
+		G.Pkgsrc.loadDocChanges,
+		"FATAL: ~/doc: Cannot be read.")
+}
+
+func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__not_found(c *check.C) {
+	t := s.Init(c)
+
+	t.ExpectFatal(
+		func() { G.Pkgsrc.loadDocChangesFromFile(t.File("doc/CHANGES-2018")) },
+		"FATAL: ~/doc/CHANGES-2018: Cannot be read.")
+}
+
+func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__wip(c *check.C) {
+	t := s.Init(c)
+
+	pkg := t.SetupPackage("wip/package",
+		"DISTNAME=\tpackage-1.11",
+		"CATEGORIES=\tlocal")
+	t.CreateFileLines("wip/TODO",
+		RcsID,
+		"",
+		"Suggested package updates",
+		"",
+		"\to package-1.13 [cool new features]")
+	G.Pkgsrc.LoadInfrastructure()
+
+	G.CheckDirent(pkg)
+
+	t.CheckOutputLines(
+		"WARN: ~/wip/package/Makefile:3: This package should be updated to 1.13 ([cool new features]).")
+}
+
+func (s *Suite) Test_Pkgsrc__deprecated(c *check.C) {
 	t := s.Init(c)
 
 	G.Pkgsrc.initDeprecatedVars()
-	mkline := t.NewMkLine("Makefile", 5, "USE_PERL5=\tyes")
+	mklines := t.NewMkLines("Makefile",
+		"USE_PERL5=\tyes",
+		"SUBST_POSTCMD.class=${ECHO}")
 
-	MkLineChecker{mkline}.checkVarassign()
+	MkLineChecker{mklines.mklines[0]}.checkVarassign()
+	MkLineChecker{mklines.mklines[1]}.checkVarassign()
 
 	t.CheckOutputLines(
-		"WARN: Makefile:5: Definition of USE_PERL5 is deprecated. Use USE_TOOLS+=perl or USE_TOOLS+=perl:run instead.")
+		"WARN: Makefile:1: Definition of USE_PERL5 is deprecated. Use USE_TOOLS+=perl or USE_TOOLS+=perl:run instead.",
+		"WARN: Makefile:2: Definition of SUBST_POSTCMD.class is deprecated. Has been removed, as it seemed unused.")
 }
 
-func (s *Suite) Test_Pkgsrc_Latest_no_basedir(c *check.C) {
+func (s *Suite) Test_Pkgsrc_Latest__no_basedir(c *check.C) {
 	t := s.Init(c)
 
 	latest := G.Pkgsrc.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
@@ -169,10 +244,10 @@ func (s *Suite) Test_Pkgsrc_Latest_no_basedir(c *check.C) {
 		"ERROR: Cannot find latest version of \"^python[0-9]+$\" in \"~/lang\".")
 }
 
-func (s *Suite) Test_Pkgsrc_Latest_no_subdirs(c *check.C) {
+func (s *Suite) Test_Pkgsrc_Latest__no_subdirs(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupFileLines("lang/Makefile")
+	t.CreateFileLines("lang/Makefile")
 
 	latest := G.Pkgsrc.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
 
@@ -181,46 +256,88 @@ func (s *Suite) Test_Pkgsrc_Latest_no_subdirs(c *check.C) {
 		"ERROR: Cannot find latest version of \"^python[0-9]+$\" in \"~/lang\".")
 }
 
-func (s *Suite) Test_Pkgsrc_Latest_single(c *check.C) {
+func (s *Suite) Test_Pkgsrc_Latest__single(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupFileLines("lang/Makefile")
-	t.SetupFileLines("lang/python27/Makefile")
+	t.CreateFileLines("lang/Makefile")
+	t.CreateFileLines("lang/python27/Makefile")
 
 	latest := G.Pkgsrc.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
 
 	c.Check(latest, equals, "../../lang/python27")
+
+	cached := G.Pkgsrc.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
+
+	c.Check(cached, equals, "../../lang/python27")
 }
 
-func (s *Suite) Test_Pkgsrc_Latest_multi(c *check.C) {
+func (s *Suite) Test_Pkgsrc_Latest__multi(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupFileLines("lang/Makefile")
-	t.SetupFileLines("lang/python27/Makefile")
-	t.SetupFileLines("lang/python35/Makefile")
+	t.CreateFileLines("lang/Makefile")
+	t.CreateFileLines("lang/python27/Makefile")
+	t.CreateFileLines("lang/python35/Makefile")
 
 	latest := G.Pkgsrc.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
 
 	c.Check(latest, equals, "../../lang/python35")
 }
 
-func (s *Suite) Test_Pkgsrc_Latest_numeric(c *check.C) {
+func (s *Suite) Test_Pkgsrc_Latest__numeric(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupFileLines("databases/postgresql95/Makefile")
-	t.SetupFileLines("databases/postgresql97/Makefile")
-	t.SetupFileLines("databases/postgresql100/Makefile")
-	t.SetupFileLines("databases/postgresql104/Makefile")
+	t.CreateFileLines("databases/postgresql95/Makefile")
+	t.CreateFileLines("databases/postgresql97/Makefile")
+	t.CreateFileLines("databases/postgresql100/Makefile")
+	t.CreateFileLines("databases/postgresql104/Makefile")
 
 	latest := G.Pkgsrc.Latest("databases", `^postgresql[0-9]+$`, "$0")
 
 	c.Check(latest, equals, "postgresql104")
 }
 
+func (s *Suite) Test_Pkgsrc_Latest__numeric_multiple_numbers(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("emulators/suse_131_32_gtk2/Makefile")
+	t.CreateFileLines("emulators/suse_131_32_qt5/Makefile")
+	t.CreateFileLines("emulators/suse_131_gtk2/Makefile")
+	t.CreateFileLines("emulators/suse_131_qt5/Makefile")
+
+	latest := G.Pkgsrc.Latest("emulators", `^suse_(\d+).*$`, "$1")
+
+	c.Check(latest, equals, "131")
+}
+
+// In 2017, PostgreSQL changed their versioning scheme to SemVer,
+// and since the pkgsrc directory contains the major version,
+// without any separating dots, the case of version 10 being
+// later than 95 needs to be handled specially.
+func (s *Suite) Test_Pkgsrc_Latest__postgresql(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("databases/postgresql95/Makefile")
+	t.CreateFileLines("databases/postgresql97/Makefile")
+	t.CreateFileLines("databases/postgresql10/Makefile")
+	t.CreateFileLines("databases/postgresql11/Makefile")
+
+	latest := G.Pkgsrc.Latest("databases", `^postgresql[0-9]+$`, "$0")
+
+	c.Check(latest, equals, "postgresql11")
+}
+
+func (s *Suite) Test_Pkgsrc_Latest__invalid_argument(c *check.C) {
+	t := s.Init(c)
+
+	t.ExpectFatal(
+		func() { G.Pkgsrc.Latest("databases", `postgresql[0-9]+`, "$0") },
+		"FATAL: Pkglint internal error: Regular expression \"postgresql[0-9]+\" must be anchored at both ends.")
+}
+
 func (s *Suite) Test_Pkgsrc_loadPkgOptions(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupFileLines("mk/defaults/options.description",
+	t.CreateFileLines("mk/defaults/options.description",
 		"option-name      Description of the option",
 		"<<<<< Merge conflict",
 		"===== Merge conflict",
@@ -228,7 +345,7 @@ func (s *Suite) Test_Pkgsrc_loadPkgOptions(c *check.C) {
 
 	t.ExpectFatal(
 		G.Pkgsrc.loadPkgOptions,
-		"FATAL: ~/mk/defaults/options.description:2: Unknown line format.")
+		"FATAL: ~/mk/defaults/options.description:2: Unknown line format: <<<<< Merge conflict")
 }
 
 func (s *Suite) Test_Pkgsrc_loadTools__no_tools_found(c *check.C) {

@@ -17,10 +17,11 @@ type PrefixReplacer struct {
 	rest string
 	s    string
 	m    []string
+	res  *regex.Registry
 }
 
-func NewPrefixReplacer(s string) *PrefixReplacer {
-	return &PrefixReplacer{s, "", nil}
+func NewPrefixReplacer(s string, res *regex.Registry) *PrefixReplacer {
+	return &PrefixReplacer{s, "", nil, res}
 }
 
 func (pr *PrefixReplacer) EOF() bool {
@@ -98,10 +99,10 @@ func (pr *PrefixReplacer) AdvanceRegexp(re regex.Pattern) bool {
 	if !strings.HasPrefix(string(re), "^") {
 		panic(fmt.Sprintf("PrefixReplacer.AdvanceRegexp: regular expression %q must have prefix %q.", re, "^"))
 	}
-	if Testing && regex.Matches("", re) {
+	if Testing && pr.res.Matches("", re) {
 		panic(fmt.Sprintf("PrefixReplacer.AdvanceRegexp: the empty string must not match the regular expression %q.", re))
 	}
-	if m := regex.Match(pr.rest, re); m != nil {
+	if m := pr.res.Match(pr.rest, re); m != nil {
 		if trace.Tracing {
 			trace.Stepf("PrefixReplacer.AdvanceRegexp(%q, %q, %q)", pr.rest, re, m[0])
 		}
@@ -153,5 +154,5 @@ func (pr *PrefixReplacer) HasPrefix(str string) bool {
 }
 
 func (pr *PrefixReplacer) HasPrefixRegexp(re regex.Pattern) bool {
-	return regex.Matches(pr.rest, re)
+	return pr.res.Matches(pr.rest, re)
 }
