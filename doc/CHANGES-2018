@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4259 2018/10/03 09:07:49 leot Exp $
+$NetBSD: CHANGES-2018,v 1.4260 2018/10/03 09:58:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5934,3 +5934,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/go111 to 1.11.1 [bsiegert 2018-10-02]
 	Updated security/sqlmap to 1.2.10 [leot 2018-10-03]
 	Updated multimedia/mpv to 0.29.1 [leot 2018-10-03]
+	Updated devel/py-hypothesis to 3.74.0 [adam 2018-10-03]
+	Updated devel/py-test to 3.8.2 [adam 2018-10-03]
