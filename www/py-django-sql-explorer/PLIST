@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/08/21 15:49:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/10/03 10:47:20 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -17,6 +17,12 @@ ${PYSITELIB}/explorer/admin.pyo
 ${PYSITELIB}/explorer/app_settings.py
 ${PYSITELIB}/explorer/app_settings.pyc
 ${PYSITELIB}/explorer/app_settings.pyo
+${PYSITELIB}/explorer/apps.py
+${PYSITELIB}/explorer/apps.pyc
+${PYSITELIB}/explorer/apps.pyo
+${PYSITELIB}/explorer/connections.py
+${PYSITELIB}/explorer/connections.pyc
+${PYSITELIB}/explorer/connections.pyo
 ${PYSITELIB}/explorer/exporters.py
 ${PYSITELIB}/explorer/exporters.pyc
 ${PYSITELIB}/explorer/exporters.pyo
@@ -38,6 +44,12 @@ ${PYSITELIB}/explorer/migrations/0004_querylog_duration.pyo
 ${PYSITELIB}/explorer/migrations/0005_auto_20160105_2052.py
 ${PYSITELIB}/explorer/migrations/0005_auto_20160105_2052.pyc
 ${PYSITELIB}/explorer/migrations/0005_auto_20160105_2052.pyo
+${PYSITELIB}/explorer/migrations/0006_query_connection.py
+${PYSITELIB}/explorer/migrations/0006_query_connection.pyc
+${PYSITELIB}/explorer/migrations/0006_query_connection.pyo
+${PYSITELIB}/explorer/migrations/0007_querylog_connection.py
+${PYSITELIB}/explorer/migrations/0007_querylog_connection.pyc
+${PYSITELIB}/explorer/migrations/0007_querylog_connection.pyo
 ${PYSITELIB}/explorer/migrations/__init__.py
 ${PYSITELIB}/explorer/migrations/__init__.pyc
 ${PYSITELIB}/explorer/migrations/__init__.pyo
@@ -53,7 +65,7 @@ ${PYSITELIB}/explorer/schema.pyo
 ${PYSITELIB}/explorer/static/explorer/bootstrap.min.css
 ${PYSITELIB}/explorer/static/explorer/explorer.css
 ${PYSITELIB}/explorer/static/explorer/explorer.js
-${PYSITELIB}/explorer/static/explorer/jquery-ui.11.4.min.js
+${PYSITELIB}/explorer/static/explorer/jquery-ui.min.js
 ${PYSITELIB}/explorer/static/explorer/query-list.js
 ${PYSITELIB}/explorer/tasks.py
 ${PYSITELIB}/explorer/tasks.pyc
@@ -70,6 +82,7 @@ ${PYSITELIB}/explorer/templates/explorer/query_confirm_delete.html
 ${PYSITELIB}/explorer/templates/explorer/query_list.html
 ${PYSITELIB}/explorer/templates/explorer/querylog_list.html
 ${PYSITELIB}/explorer/templates/explorer/schema.html
+${PYSITELIB}/explorer/templates/explorer/schema_building.html
 ${PYSITELIB}/explorer/templatetags/__init__.py
 ${PYSITELIB}/explorer/templatetags/__init__.pyc
 ${PYSITELIB}/explorer/templatetags/__init__.pyo
@@ -85,6 +98,9 @@ ${PYSITELIB}/explorer/tests/factories.pyo
 ${PYSITELIB}/explorer/tests/test_actions.py
 ${PYSITELIB}/explorer/tests/test_actions.pyc
 ${PYSITELIB}/explorer/tests/test_actions.pyo
+${PYSITELIB}/explorer/tests/test_apps.py
+${PYSITELIB}/explorer/tests/test_apps.pyc
+${PYSITELIB}/explorer/tests/test_apps.pyo
 ${PYSITELIB}/explorer/tests/test_exporters.py
 ${PYSITELIB}/explorer/tests/test_exporters.pyc
 ${PYSITELIB}/explorer/tests/test_exporters.pyo
