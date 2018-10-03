@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/09/05 19:34:03 leot Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/10/03 08:18:54 leot Exp $
 bin/sqlmap
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -65,9 +65,6 @@ ${PYSITELIB}/sqlmap/extra/icmpsh/icmpsh.exe_
 ${PYSITELIB}/sqlmap/extra/icmpsh/icmpsh_m.py
 ${PYSITELIB}/sqlmap/extra/icmpsh/icmpsh_m.pyc
 ${PYSITELIB}/sqlmap/extra/icmpsh/icmpsh_m.pyo
-${PYSITELIB}/sqlmap/extra/mssqlsig/update.py
-${PYSITELIB}/sqlmap/extra/mssqlsig/update.pyc
-${PYSITELIB}/sqlmap/extra/mssqlsig/update.pyo
 ${PYSITELIB}/sqlmap/extra/runcmd/README.txt
 ${PYSITELIB}/sqlmap/extra/runcmd/runcmd.exe_
 ${PYSITELIB}/sqlmap/extra/runcmd/src/README.txt
@@ -1191,6 +1188,9 @@ ${PYSITELIB}/sqlmap/waf/360.pyo
 ${PYSITELIB}/sqlmap/waf/__init__.py
 ${PYSITELIB}/sqlmap/waf/__init__.pyc
 ${PYSITELIB}/sqlmap/waf/__init__.pyo
+${PYSITELIB}/sqlmap/waf/aesecure.py
+${PYSITELIB}/sqlmap/waf/aesecure.pyc
+${PYSITELIB}/sqlmap/waf/aesecure.pyo
 ${PYSITELIB}/sqlmap/waf/airlock.py
 ${PYSITELIB}/sqlmap/waf/airlock.pyc
 ${PYSITELIB}/sqlmap/waf/airlock.pyo
@@ -1236,6 +1236,9 @@ ${PYSITELIB}/sqlmap/waf/cloudfront.pyo
 ${PYSITELIB}/sqlmap/waf/comodo.py
 ${PYSITELIB}/sqlmap/waf/comodo.pyc
 ${PYSITELIB}/sqlmap/waf/comodo.pyo
+${PYSITELIB}/sqlmap/waf/crawlprotect.py
+${PYSITELIB}/sqlmap/waf/crawlprotect.pyc
+${PYSITELIB}/sqlmap/waf/crawlprotect.pyo
 ${PYSITELIB}/sqlmap/waf/datapower.py
 ${PYSITELIB}/sqlmap/waf/datapower.pyc
 ${PYSITELIB}/sqlmap/waf/datapower.pyo
