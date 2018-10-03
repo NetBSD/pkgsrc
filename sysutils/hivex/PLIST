@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2018/10/03 20:09:00 tnn Exp $
+bin/hivexget
+bin/hivexml
+bin/hivexsh
+include/hivex.h
+lib/libhivex.la
+lib/pkgconfig/hivex.pc
+man/man1/hivexget.1
+man/man1/hivexml.1
+man/man1/hivexsh.1
+man/man3/hivex.3
