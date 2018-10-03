@@ -4,7 +4,6 @@ package main
 
 import (
 	"fmt"
-	"netbsd.org/pkglint/regex"
 	"netbsd.org/pkglint/trace"
 	"path"
 	"strings"
@@ -327,12 +326,12 @@ func (mkline *MkLineImpl) ValueTokens() []*MkToken {
 func (mkline *MkLineImpl) WithoutMakeVariables(value string) string {
 	valueNovar := value
 	for {
-		var m []string
 		// TODO: properly parse nested variables
-		m, valueNovar = regex.ReplaceFirst(valueNovar, `\$\{[^{}]*\}`, "")
-		if m == nil {
+		replaced := replaceFirst(valueNovar, `\$\{[^{}]*\}`, "")
+		if replaced == valueNovar {
 			return valueNovar
 		}
+		valueNovar = replaced
 	}
 }
 
@@ -357,7 +356,7 @@ func (mkline *MkLineImpl) ResolveVarsInRelativePath(relativePath string, adjustD
 		tmp = strings.Replace(tmp, "${PHPPKGSRCDIR}", G.Pkgsrc.Latest("lang", `^php[0-9]+$`, "../../lang/$0"), -1)
 	}
 	if contains(tmp, "${SUSE_DIR_PREFIX}") {
-		suseDirPrefix := G.Pkgsrc.Latest("emulators", `^(suse[0-9]+)_base`, "$1")
+		suseDirPrefix := G.Pkgsrc.Latest("emulators", `^(suse[0-9]+)_base$`, "$1")
 		tmp = strings.Replace(tmp, "${SUSE_DIR_PREFIX}", suseDirPrefix, -1)
 	}
 	if contains(tmp, "${PYPKGSRCDIR}") {
@@ -372,14 +371,14 @@ func (mkline *MkLineImpl) ResolveVarsInRelativePath(relativePath string, adjustD
 	}
 
 	if adjustDepth {
-		if m, pkgpath := match1(tmp, `^\.\./\.\./([^.].*)$`); m {
-			tmp = pkgsrcdir + "/" + pkgpath
+		if hasPrefix(tmp, "../../") && !hasPrefix(tmp[6:], ".") {
+			tmp = pkgsrcdir + "/" + tmp[6:]
 		}
 	}
 
 	tmp = cleanpath(tmp)
 
-	if trace.Tracing {
+	if trace.Tracing && relativePath != tmp {
 		trace.Step2("resolveVarsInRelativePath: %q => %q", relativePath, tmp)
 	}
 	return tmp
@@ -584,7 +583,7 @@ func (mkline *MkLineImpl) VariableNeedsQuoting(varname string, vartype *Vartype,
 
 // TODO: merge with determineUsedVariables
 func (mkline *MkLineImpl) ExtractUsedVariables(text string) []string {
-	re := regex.Compile(`^(?:[^\$]+|\$[\$*<>?@]|\$\{([.0-9A-Z_a-z]+)(?::(?:[^\${}]|\$[^{])+)?\})`)
+	re := G.res.Compile(`^(?:[^\$]+|\$[\$*<>?@]|\$\{([.0-9A-Z_a-z]+)(?::(?:[^\${}]|\$[^{])+)?\})`)
 	rest := text
 	var result []string
 	for {
@@ -635,7 +634,7 @@ func (mkline *MkLineImpl) DetermineUsedVariables() (varnames []string) {
 		}
 		rest = rest[min:]
 
-		m := regex.Compile(`(?:\$\{|\$\(|defined\(|empty\()([*+\-.0-9A-Z_a-z]+)[:})]`).FindStringSubmatchIndex(rest)
+		m := G.res.Compile(`(?:\$\{|\$\(|defined\(|empty\()([*+\-.0-9A-Z_a-z]+)[:})]`).FindStringSubmatchIndex(rest)
 		if m == nil {
 			return
 		}
@@ -918,9 +917,17 @@ func (ind *Indentation) TrackAfter(mkline MkLine) {
 	switch directive {
 	case "if":
 		// For multiple-inclusion guards, the indentation stays at the same level.
-		if m, varname := match1(args, `^!defined\(([\w]+_MK)\)$`); m {
-			ind.AddVar(varname)
-		} else {
+		guard := false
+		if hasPrefix(args, "!defined") && hasSuffix(args, "_MK)") {
+			if hasPrefix(args, "!defined(") && hasSuffix(args, ")") {
+				varname := args[9 : len(args)-1]
+				if varname != "" && isalnum(varname) {
+					ind.AddVar(varname)
+					guard = true
+				}
+			}
+		}
+		if !guard {
 			ind.top().depth += 2
 		}
 
@@ -1055,5 +1062,27 @@ func MatchVarassign(text string) (m, commented bool, varname, spaceAfterVarname,
 }
 
 func MatchMkInclude(text string) (m bool, indentation, directive, filename string) {
-	return match3(text, `^\.(\s*)(s?include)\s+\"([^\"]+)\"\s*(?:#.*)?$`)
+	repl := G.NewPrefixReplacer(text)
+	if repl.AdvanceStr(".") {
+		if repl.AdvanceHspace() {
+			indentation = repl.Str()
+		}
+		if repl.AdvanceStr("include") || repl.AdvanceStr("sinclude") {
+			directive = repl.Str()
+			repl.AdvanceHspace()
+			if repl.AdvanceByte('"') {
+				if repl.AdvanceBytesFunc(func(c byte) bool { return c != '"' }) {
+					filename = repl.Str()
+					if repl.AdvanceByte('"') {
+						repl.AdvanceHspace()
+						if repl.EOF() || repl.PeekByte() == '#' {
+							m = true
+							return
+						}
+					}
+				}
+			}
+		}
+	}
+	return false, "", "", ""
 }

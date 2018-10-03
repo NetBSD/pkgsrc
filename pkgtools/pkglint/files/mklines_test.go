@@ -64,7 +64,7 @@ func (s *Suite) Test_MkLineChecker_checkInclude__Makefile(c *check.C) {
 		"ERROR: ~/Makefile:2: Other Makefiles must not be included directly.")
 }
 
-func (s *Suite) Test_MkLines_quoting_LDFLAGS_for_GNU_configure(c *check.C) {
+func (s *Suite) Test_MkLines__quoting_LDFLAGS_for_GNU_configure(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
@@ -386,7 +386,7 @@ func (s *Suite) Test_MkLines_DetermineUsedVariables__nested(c *check.C) {
 	c.Check(mklines.vars.FirstUse("outer.*"), equals, mkline)
 }
 
-func (s *Suite) Test_MkLines_PrivateTool_Undefined(c *check.C) {
+func (s *Suite) Test_MkLines__private_tool_undefined(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
@@ -402,7 +402,7 @@ func (s *Suite) Test_MkLines_PrivateTool_Undefined(c *check.C) {
 		"WARN: fname:3: Unknown shell command \"md5sum\".")
 }
 
-func (s *Suite) Test_MkLines_PrivateTool_Defined(c *check.C) {
+func (s *Suite) Test_MkLines__private_tool_defined(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
@@ -420,7 +420,7 @@ func (s *Suite) Test_MkLines_PrivateTool_Defined(c *check.C) {
 		"WARN: fname:4: The \"md5sum\" tool is used but not added to USE_TOOLS.")
 }
 
-func (s *Suite) Test_MkLines_Check_indentation(c *check.C) {
+func (s *Suite) Test_MkLines_Check__indentation(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
@@ -519,7 +519,7 @@ func (s *Suite) Test_MkLines_Check__unbalanced_directives(c *check.C) {
 // Demonstrates how to define your own make(1) targets for creating
 // files in the current directory. The pkgsrc-wip category Makefile
 // does this, while all other categories don't need any custom code.
-func (s *Suite) Test_MkLines_wip_category_Makefile(c *check.C) {
+func (s *Suite) Test_MkLines__wip_category_Makefile(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall", "--explain")

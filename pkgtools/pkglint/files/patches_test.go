@@ -42,7 +42,7 @@ func (s *Suite) Test_ChecklinesPatch__without_empty_line__autofix(c *check.C) {
 		"-old line",
 		"+new line",
 		" context after")
-	t.SetupFileLines("distinfo",
+	t.CreateFileLines("distinfo",
 		RcsID,
 		"",
 		// The hash is taken from a breakpoint at the beginning of AutofixDistinfo, oldSha1
@@ -691,8 +691,8 @@ func (s *Suite) Test_PatchChecker_checktextRcsid(c *check.C) {
 	ChecklinesPatch(lines)
 
 	t.CheckOutputLines(
-		"WARN: ~/patch-aa:7: Found RCS tag \"$Id: patches_test.go,v 1.20 2018/09/05 17:56:22 rillig Exp $\". Please remove it.",
-		"WARN: ~/patch-aa:8: Found RCS tag \"$Id: patches_test.go,v 1.20 2018/09/05 17:56:22 rillig Exp $\". Please remove it by reducing the number of context lines using pkgdiff or \"diff -U[210]\".",
+		"WARN: ~/patch-aa:7: Found RCS tag \"$Id: patches_test.go,v 1.21 2018/10/03 22:27:53 rillig Exp $\". Please remove it.",
+		"WARN: ~/patch-aa:8: Found RCS tag \"$Id: patches_test.go,v 1.21 2018/10/03 22:27:53 rillig Exp $\". Please remove it by reducing the number of context lines using pkgdiff or \"diff -U[210]\".",
 		"WARN: ~/patch-aa:11: Found RCS tag \"$Author: rillig $\". Please remove it by reducing the number of context lines using pkgdiff or \"diff -U[210]\".")
 }
 
