@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2018/08/28 06:35:08 adam Exp $
+# $NetBSD: Makefile,v 1.5 2018/10/03 10:05:35 adam Exp $
 
-DISTNAME=	django-extensions-2.1.2
+DISTNAME=	django-extensions-2.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-extensions/}
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-django>=1.8:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-six>=1.2:../../lang/py-six
 
 .include "../../lang/python/pyversion.mk"
-.if "${PYPKGPREFIX}" == "py27" || "${PYPKGPREFIX}" == "py34"
+.if "${_PYTHON_VERSION}" == 27 || "${_PYTHON_VERSION}" == 34
 DEPENDS+=	${PYPKGPREFIX}-typing-[0-9]*:../../devel/py-typing
 .endif
 
