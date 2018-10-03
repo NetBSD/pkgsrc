@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/04/23 03:38:51 markd Exp $
+$NetBSD: distinfo,v 1.2 2018/10/03 11:10:13 adam Exp $
 
-SHA1 (pickleshare-0.7.4.tar.gz) = 415d9b95c157819a3b6e646ae8382352f00c8e10
-RMD160 (pickleshare-0.7.4.tar.gz) = 18b2a7c03e3cb094b051a06d92323239b62bb675
-SHA512 (pickleshare-0.7.4.tar.gz) = 6cd4b70f63378c4f668f3428262aeca66a38ec86ef9069e3fbc5e7b0b8d7a06341e99b387f9cf29502decbb47c188b7b2183fe7d249e68914fead7e6628d7154
-Size (pickleshare-0.7.4.tar.gz) = 5981 bytes
+SHA1 (pickleshare-0.7.5.tar.gz) = c583011994ee0733ea4a6330af81c175180dcc3d
+RMD160 (pickleshare-0.7.5.tar.gz) = f60cc2fb1dfdcf43ca3c8f0be923323026a99c1a
+SHA512 (pickleshare-0.7.5.tar.gz) = 6048634b7c08b6997b75be1d8fc53dd3218294e1f04c5e287ef3c6e4d80da6746fd242980f58b9671b4a4cf639a64bd25861b62fd28d435bfd2386fa655a30ff
+Size (pickleshare-0.7.5.tar.gz) = 6161 bytes
