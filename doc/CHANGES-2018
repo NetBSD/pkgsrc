@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4258 2018/10/03 08:19:09 leot Exp $
+$NetBSD: CHANGES-2018,v 1.4259 2018/10/03 09:07:49 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5933,3 +5933,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/py-scikit-learn to 0.20.0 [minskim 2018-10-02]
 	Updated lang/go111 to 1.11.1 [bsiegert 2018-10-02]
 	Updated security/sqlmap to 1.2.10 [leot 2018-10-03]
+	Updated multimedia/mpv to 0.29.1 [leot 2018-10-03]
