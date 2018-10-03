@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/08/17 18:17:59 nia Exp $
+# $NetBSD: Makefile,v 1.3 2018/10/03 13:17:06 nia Exp $
 
 DISTNAME=	rgbds-0.3.7
 CATEGORIES=	devel
@@ -12,6 +12,8 @@ LICENSE=	mit
 
 EXTRACT_USING=	bsdtar
 USE_TOOLS+=	gmake pkg-config lex yacc
+
+MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
