@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2018/08/08 20:41:06 nia Exp $
+# $NetBSD: Makefile,v 1.4 2018/10/03 01:40:32 nia Exp $
 
 DISTNAME=	libretro-gambatte-20180709
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	gambatte-libretro
@@ -15,6 +16,10 @@ EXTRACT_USING=	bsdtar
 USE_LANGUAGES=	c c++03
 MAKE_FILE=	Makefile.libretro
 USE_TOOLS+=	gmake
+
+CFLAGS.SunOS+=	-DBSD_COMP
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-version-script=libgambatte/libretro/link.T
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
