@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-func (s *Suite) Test_Autofix_ReplaceRegex(c *check.C) {
+func (s *Suite) Test_Autofix_ReplaceRegex__show_autofix(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("--show-autofix")
@@ -36,7 +36,7 @@ func (s *Suite) Test_Autofix_ReplaceRegex(c *check.C) {
 		"AUTOFIX: ~/Makefile:2: Replacing \"2\" with \"X\".")
 }
 
-func (s *Suite) Test_Autofix_ReplaceRegex_with_autofix(c *check.C) {
+func (s *Suite) Test_Autofix_ReplaceRegex__autofix(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("--autofix", "--source")
@@ -75,7 +75,7 @@ func (s *Suite) Test_Autofix_ReplaceRegex_with_autofix(c *check.C) {
 		"line3")
 }
 
-func (s *Suite) Test_Autofix_ReplaceRegex_with_show_autofix(c *check.C) {
+func (s *Suite) Test_Autofix_ReplaceRegex__show_autofix_and_source(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("--show-autofix", "--source")
@@ -111,11 +111,11 @@ func (s *Suite) Test_Autofix_ReplaceRegex_with_show_autofix(c *check.C) {
 		"+\tYXXXX")
 }
 
-func (s *Suite) Test_autofix_MkLines(c *check.C) {
+func (s *Suite) Test_SaveAutofixChanges(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("--autofix")
-	t.SetupFileLines("category/basename/Makefile",
+	t.CreateFileLines("category/basename/Makefile",
 		"line1 := value1",
 		"line2 := value2",
 		"line3 := value3")
@@ -147,6 +147,27 @@ func (s *Suite) Test_autofix_MkLines(c *check.C) {
 		"line1 := value1",
 		"XXXXXXXXXXXXXXX",
 		"XXXe3 := value3")
+}
+
+func (s *Suite) Test_SaveAutofixChanges__no_changes_necessary(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("--autofix")
+	lines := t.SetupFileLines("DESCR",
+		"Line 1",
+		"Line 2")
+
+	fix := lines[0].Autofix()
+	fix.Warnf("Dummy warning.")
+	fix.Replace("X", "Y")
+	fix.Apply()
+
+	// Since nothing has been effectively changed,
+	// nothing needs to be saved.
+	SaveAutofixChanges(lines)
+
+	// And therefore, no AUTOFIX action must appear in the log.
+	t.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_Autofix__multiple_modifications(c *check.C) {
@@ -255,7 +276,7 @@ func (s *Suite) Test_Autofix__multiple_modifications(c *check.C) {
 		"AUTOFIX: fname:1: Deleting this line.")
 }
 
-func (s *Suite) Test_Autofix_show_source_code(c *check.C) {
+func (s *Suite) Test_Autofix__show_autofix_and_source(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("--show-autofix", "--source")
@@ -319,7 +340,7 @@ func (s *Suite) Test_Autofix_Delete(c *check.C) {
 
 // Demonstrates that the --show-autofix option only shows those diagnostics
 // that would be fixed.
-func (s *Suite) Test_Autofix_suppress_unfixable_warnings(c *check.C) {
+func (s *Suite) Test_Autofix__suppress_unfixable_warnings(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("--show-autofix", "--source")
@@ -328,14 +349,14 @@ func (s *Suite) Test_Autofix_suppress_unfixable_warnings(c *check.C) {
 		"line2",
 		"line3")
 
-	lines[0].Warnf("This warning is not shown since it is not automatically fixed.")
+	lines[0].Warnf("This warning is not shown since it is not part of a fix.")
 
 	fix := lines[1].Autofix()
 	fix.Warnf("Something's wrong here.")
 	fix.ReplaceRegex(`.`, "X", -1)
 	fix.Apply()
 
-	fix.Warnf("The XXX marks are usually not fixed, use TODO instead.")
+	fix.Warnf("Since XXX marks are usually not fixed, use TODO instead to draw attention.")
 	fix.Replace("XXX", "TODO")
 	fix.Apply()
 
@@ -351,14 +372,14 @@ func (s *Suite) Test_Autofix_suppress_unfixable_warnings(c *check.C) {
 		"-\tline2",
 		"+\tXXXXX",
 		"",
-		"WARN: Makefile:2: The XXX marks are usually not fixed, use TODO instead.",
+		"WARN: Makefile:2: Since XXX marks are usually not fixed, use TODO instead to draw attention.",
 		"AUTOFIX: Makefile:2: Replacing \"XXX\" with \"TODO\".",
 		"-\tline2",
 		"+\tTODOXX")
 }
 
 // If an Autofix doesn't do anything it must not log any diagnostics.
-func (s *Suite) Test_Autofix_failed_replace(c *check.C) {
+func (s *Suite) Test_Autofix__noop_replace(c *check.C) {
 	t := s.Init(c)
 
 	line := t.NewLine("Makefile", 14, "Original text")
@@ -372,28 +393,9 @@ func (s *Suite) Test_Autofix_failed_replace(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_SaveAutofixChanges(c *check.C) {
-	t := s.Init(c)
-
-	t.SetupCommandLine("--autofix")
-	lines := t.SetupFileLines("DESCR",
-		"Line 1",
-		"Line 2")
-
-	fix := lines[0].Autofix()
-	fix.Warnf("Dummy warning.")
-	fix.Replace("X", "Y")
-	fix.Apply()
-
-	// Since nothing has been effectively changed,
-	// nothing needs to be saved.
-	SaveAutofixChanges(lines)
-
-	// And therefore, no AUTOFIX action must appear in the log.
-	t.CheckOutputEmpty()
-}
-
-func (s *Suite) Test_Autofix_CustomFix(c *check.C) {
+// When using Autofix.CustomFix, it is tricky to get all the details right.
+// For best results, see the existing examples and the documentation.
+func (s *Suite) Test_Autofix_Custom(c *check.C) {
 	t := s.Init(c)
 
 	lines := t.NewLines("Makefile",

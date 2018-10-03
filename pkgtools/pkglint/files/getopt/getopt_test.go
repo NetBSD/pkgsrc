@@ -137,3 +137,43 @@ func (s *Suite) Test_Options_Parse_string_list(c *check.C) {
 
 	c.Check(err.Error(), check.Equals, "progname: option requires an argument: --include")
 }
+
+func (s *Suite) Test_Options_Parse__long_flags(c *check.C) {
+	var aflag, bflag, cflag, dflag, eflag, fflag, gflag, hflag, iflag, jflag bool
+
+	opts := NewOptions()
+	opts.AddFlagVar('a', "aflag", &aflag, false, "")
+	opts.AddFlagVar('b', "bflag", &bflag, false, "")
+	opts.AddFlagVar('c', "cflag", &cflag, false, "")
+	opts.AddFlagVar('d', "dflag", &dflag, false, "")
+	opts.AddFlagVar('e', "eflag", &eflag, true, "")
+	opts.AddFlagVar('f', "fflag", &fflag, true, "")
+	opts.AddFlagVar('g', "gflag", &gflag, true, "")
+	opts.AddFlagVar('h', "hflag", &hflag, true, "")
+	opts.AddFlagVar('i', "iflag", &iflag, false, "")
+	opts.AddFlagVar('j', "jflag", &jflag, false, "")
+
+	args, err := opts.Parse([]string{"progname",
+		"--aflag=true",
+		"--bflag=on",
+		"--cflag=enabled",
+		"--dflag=1",
+		"--eflag=false",
+		"--fflag=off",
+		"--gflag=disabled",
+		"--hflag=0",
+		"--iflag",
+		"--jflag=unknown"})
+
+	c.Check(args, check.HasLen, 0)
+	c.Check(aflag, check.Equals, true)
+	c.Check(bflag, check.Equals, true)
+	c.Check(cflag, check.Equals, true)
+	c.Check(dflag, check.Equals, true)
+	c.Check(eflag, check.Equals, false)
+	c.Check(fflag, check.Equals, false)
+	c.Check(gflag, check.Equals, false)
+	c.Check(hflag, check.Equals, false)
+	c.Check(iflag, check.Equals, true)
+	c.Check(err, check.ErrorMatches, `^progname: invalid argument for option --jflag$`)
+}

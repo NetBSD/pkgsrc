@@ -39,6 +39,7 @@ type LineImpl struct {
 	Text      string
 	raw       []*RawLine
 	autofix   *Autofix
+	Once
 }
 
 func NewLine(fname string, lineno int, text string, rawLines []*RawLine) Line {
@@ -47,7 +48,7 @@ func NewLine(fname string, lineno int, text string, rawLines []*RawLine) Line {
 
 // NewLineMulti is for logical Makefile lines that end with backslash.
 func NewLineMulti(fname string, firstLine, lastLine int, text string, rawLines []*RawLine) Line {
-	return &LineImpl{fname, path.Base(fname), int32(firstLine), int32(lastLine), text, rawLines, nil}
+	return &LineImpl{fname, path.Base(fname), int32(firstLine), int32(lastLine), text, rawLines, nil, Once{}}
 }
 
 // NewLineEOF creates a dummy line for logging, with the "line number" EOF.

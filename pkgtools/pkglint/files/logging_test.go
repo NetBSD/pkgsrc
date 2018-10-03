@@ -15,7 +15,7 @@ import "gopkg.in/check.v1"
 // To keep the output layout consistent between all these
 // modes, the source code is written below the diagnostic
 // also in the default (check-only) mode.
-func (s *Suite) Test_show_source_separator(c *check.C) {
+func (s *Suite) Test__show_source_separator(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("--source")
@@ -47,7 +47,7 @@ func (s *Suite) Test_show_source_separator(c *check.C) {
 		">\tThe third line")
 }
 
-func (s *Suite) Test_show_source_separator_show_autofix(c *check.C) {
+func (s *Suite) Test__show_source_separator_show_autofix(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("--source", "--show-autofix")
@@ -80,7 +80,7 @@ func (s *Suite) Test_show_source_separator_show_autofix(c *check.C) {
 		"+\tThe bronze medal line")
 }
 
-func (s *Suite) Test_show_source_separator_autofix(c *check.C) {
+func (s *Suite) Test__show_source_separator_autofix(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("--source", "--autofix")
@@ -114,7 +114,7 @@ func (s *Suite) Test_show_source_separator_autofix(c *check.C) {
 // Demonstrates how to filter log messages.
 // This is useful in combination with the --autofix option,
 // to restrict the fixes to exactly one group or topic.
-func (s *Suite) Test_Line_log_only(c *check.C) {
+func (s *Suite) Test_Line_log__only(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("--autofix", "--source", "--only", "interesting")
@@ -136,7 +136,7 @@ func (s *Suite) Test_Line_log_only(c *check.C) {
 		"+\tThe new2 song")
 }
 
-func (s *Suite) Test_collect_explanations_with_only(c *check.C) {
+func (s *Suite) Test_Pkglint_PrintSummary__explanations_with_only(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("--only", "interesting")
@@ -161,7 +161,7 @@ func (s *Suite) Test_collect_explanations_with_only(c *check.C) {
 		"(Run \"pkglint -e\" to show explanations.)")
 }
 
-func (s *Suite) Test_explain_with_only(c *check.C) {
+func (s *Suite) Test_Explain__only(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("--only", "interesting", "--explain")
@@ -232,10 +232,20 @@ func (s *Suite) Test_Explain__long_lines(c *check.C) {
 	t := s.Init(c)
 
 	Explain(
-		"123456789 12345678. abcdefghi. 123456789 123456789 123456789 123456789 123456789 ")
+		"123456789 12345678. abcdefghi. 123456789 123456789 123456789 123456789 123456789")
 
 	t.CheckOutputLines(
-		"Long explanation line: 123456789 12345678. abcdefghi. 123456789 123456789 123456789 123456789 123456789 ",
+		"Long explanation line: 123456789 12345678. abcdefghi. 123456789 123456789 123456789 123456789 123456789",
 		"Break after: 123456789 12345678. abcdefghi. 123456789 123456789 123456789",
-		"Short space after period: 123456789 12345678. abcdefghi. 123456789 123456789 123456789 123456789 123456789 ")
+		"Short space after period: 123456789 12345678. abcdefghi. 123456789 123456789 123456789 123456789 123456789")
+}
+
+func (s *Suite) Test_Explain__trailing_whitespace(c *check.C) {
+	t := s.Init(c)
+
+	Explain(
+		"This is a space: ")
+
+	t.CheckOutputLines(
+		"Trailing whitespace: \"This is a space: \"")
 }

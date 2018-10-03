@@ -79,8 +79,9 @@ outer:
 
 		case quoting == shqPlain:
 			switch {
-			case repl.AdvanceRegexp(`^[!#\%&\(\)*+,\-.\/0-9:;<=>?@A-Z\[\]^_a-z{|}~]+`),
-				repl.AdvanceRegexp(`^\\(?:[ !"#'\(\)*./;?\\^{|}]|\$\$)`):
+			// FIXME: These regular expressions don't belong here, they are the job of the tokenizer.
+			case repl.AdvanceRegexp(`^[!#%&()*+,\-./0-9:;<=>?@A-Z\[\]^_a-z{|}~]+`),
+				repl.AdvanceRegexp(`^\\(?:[ !"#'()*./;?\\^{|}]|\$\$)`):
 			case repl.AdvanceStr("'"):
 				quoting = shqSquot
 			case repl.AdvanceStr("\""):
@@ -192,10 +193,10 @@ func (shline *ShellLine) checkVaruseToken(parser *MkParser, quoting ShQuoting) b
 	switch {
 	case quoting == shqPlain && varuse.IsQ():
 		// Fine.
-	case quoting == shqBackt:
-		// Don't check anything here, to avoid false positives for tool names.
+
 	case (quoting == shqSquot || quoting == shqDquot) && matches(varname, `^(?:.*DIR|.*FILE|.*PATH|.*_VAR|PREFIX|.*BASE|PKGNAME)$`):
 		// This is ok if we don't allow these variables to have embedded [\$\\\"\'\`].
+
 	case quoting == shqDquot && varuse.IsQ():
 		shline.mkline.Warnf("Please don't use the :Q operator in double quotes.")
 		Explain(
@@ -249,14 +250,12 @@ func (shline *ShellLine) unescapeBackticks(shellword string, repl *textproc.Pref
 				"",
 				"To avoid this uncertainty, escape the double quotes using \\\".")
 
-		case repl.AdvanceRegexp("^([^\\\\`]+)"):
-			unescaped += repl.Group(1)
-
 		default:
-			line.Errorf("Internal pkglint error in ShellLine.unescapeBackticks at %q (rest=%q).", shellword, repl.AdvanceRest())
+			G.Assertf(repl.AdvanceRegexp("^([^\\\\`]+)"), "incomplete switch")
+			unescaped += repl.Group(1)
 		}
 	}
-	line.Errorf("Unfinished backquotes: rest=%q", repl.Rest())
+	line.Errorf("Unfinished backquotes: %s", repl.Rest())
 	return unescaped, quoting
 }
 
@@ -304,7 +303,7 @@ func (shline *ShellLine) CheckShellCommandLine(shelltext string) {
 		line.Notef("You don't need to use \"-\" before %q.", cmd)
 	}
 
-	repl := textproc.NewPrefixReplacer(shelltext)
+	repl := G.NewPrefixReplacer(shelltext)
 	repl.AdvanceRegexp(`^\s+`)
 	if repl.AdvanceRegexp(`^[-@]+`) {
 		shline.checkHiddenAndSuppress(repl.Group(0), repl.Rest())
@@ -338,25 +337,29 @@ func (shline *ShellLine) CheckShellCommand(shellcmd string, pSetE *bool, time To
 	spc := &ShellProgramChecker{shline}
 	spc.checkConditionalCd(program)
 
-	callback := NewMkShWalkCallback()
-	callback.SimpleCommand = func(command *MkShSimpleCommand) {
+	walker := NewMkShWalker()
+	walker.Callback.SimpleCommand = func(command *MkShSimpleCommand) {
 		scc := NewSimpleCommandChecker(shline, command, time)
 		scc.Check()
 		if scc.strcmd.Name == "set" && scc.strcmd.AnyArgMatches(`^-.*e`) {
 			*pSetE = true
 		}
 	}
-	callback.List = func(list *MkShList) {
-		spc.checkSetE(list, pSetE)
+	walker.Callback.AndOr = func(andor *MkShAndOr) {
+		if G.opts.WarnExtra && !*pSetE && walker.Current().Index != 0 {
+			spc.checkSetE(walker.Parent(1).(*MkShList), walker.Current().Index, andor)
+		}
 	}
-	callback.Pipeline = func(pipeline *MkShPipeline) {
+	walker.Callback.Pipeline = func(pipeline *MkShPipeline) {
 		spc.checkPipeExitcode(line, pipeline)
 	}
-	callback.Word = func(word *ShToken) {
+	walker.Callback.Word = func(word *ShToken) {
+		// TODO: Try to replace false with true here; it had been set to false
+		// TODO: in 2016 for no apparent reason.
 		spc.checkWord(word, false, time)
 	}
 
-	NewMkShWalker().Walk(program, callback)
+	walker.Walk(program)
 }
 
 func (shline *ShellLine) CheckShellCommands(shellcmds string, time ToolTime) {
@@ -436,7 +439,7 @@ func (scc *SimpleCommandChecker) Check() {
 	}
 
 	scc.checkCommandStart()
-	scc.checkAbsolutePathnames()
+	scc.checkRegexReplace()
 	scc.checkAutoMkdirs()
 	scc.checkInstallMulti()
 	scc.checkPaxPe()
@@ -587,7 +590,7 @@ func (scc *SimpleCommandChecker) handleComment() bool {
 	return true
 }
 
-func (scc *SimpleCommandChecker) checkAbsolutePathnames() {
+func (scc *SimpleCommandChecker) checkRegexReplace() {
 	if trace.Tracing {
 		defer trace.Call()()
 	}
@@ -598,7 +601,7 @@ func (scc *SimpleCommandChecker) checkAbsolutePathnames() {
 		if !isSubst {
 			CheckLineAbsolutePathname(scc.shline.mkline.Line, arg)
 		}
-		if false && isSubst && !matches(arg, `"^[\"\'].*[\"\']$`) {
+		if G.Testing && isSubst && !matches(arg, `"^[\"\'].*[\"\']$`) {
 			scc.shline.mkline.Warnf("Substitution commands like %q should always be quoted.", arg)
 			Explain(
 				"Usually these substitution commands contain characters like '*' or",
@@ -739,20 +742,20 @@ func (spc *ShellProgramChecker) checkConditionalCd(list *MkShList) {
 		}
 	}
 
-	callback := NewMkShWalkCallback()
-	callback.If = func(ifClause *MkShIfClause) {
+	walker := NewMkShWalker()
+	walker.Callback.If = func(ifClause *MkShIfClause) {
 		for _, cond := range ifClause.Conds {
 			if simple := getSimple(cond); simple != nil {
 				checkConditionalCd(simple)
 			}
 		}
 	}
-	callback.Loop = func(loop *MkShLoopClause) {
+	walker.Callback.Loop = func(loop *MkShLoopClause) {
 		if simple := getSimple(loop.Cond); simple != nil {
 			checkConditionalCd(simple)
 		}
 	}
-	callback.Pipeline = func(pipeline *MkShPipeline) {
+	walker.Callback.Pipeline = func(pipeline *MkShPipeline) {
 		if pipeline.Negated {
 			spc.shline.mkline.Warnf("The Solaris /bin/sh does not support negation of shell commands.")
 			Explain(
@@ -761,17 +764,7 @@ func (spc *ShellProgramChecker) checkConditionalCd(list *MkShList) {
 				"https://www.gnu.org/software/autoconf/manual/autoconf.html#Limitations-of-Builtins")
 		}
 	}
-	NewMkShWalker().Walk(list, callback)
-}
-
-func (spc *ShellProgramChecker) checkWords(words []*ShToken, checkQuoting bool, time ToolTime) {
-	if trace.Tracing {
-		defer trace.Call()()
-	}
-
-	for _, word := range words {
-		spc.checkWord(word, checkQuoting, time)
-	}
+	walker.Walk(list)
 }
 
 func (spc *ShellProgramChecker) checkWord(word *ShToken, checkQuoting bool, time ToolTime) {
@@ -787,40 +780,13 @@ func (spc *ShellProgramChecker) checkPipeExitcode(line Line, pipeline *MkShPipel
 		defer trace.Call()()
 	}
 
-	oneOf := func(s string, others ...string) bool {
-		for _, other := range others {
-			if s == other {
-				return true
-			}
-		}
-		return false
-	}
-
-	// canFail tests whether one of the left-hand side commands of a
-	// shell pipeline can fail.
-	//
-	// Examples:
-	//  echo "hello" | sed 's,$, world,,'   => cannot fail
-	//  find . -print | xargs cat | wc -l   => can fail
 	canFail := func() (bool, string) {
 		for _, cmd := range pipeline.Cmds[:len(pipeline.Cmds)-1] {
-			simple := cmd.Simple
-			if simple == nil {
+			if spc.canFail(cmd) {
+				if cmd.Simple != nil && cmd.Simple.Name != nil {
+					return true, cmd.Simple.Name.MkText
+				}
 				return true, ""
-			}
-			commandName := simple.Name.MkText
-			if len(simple.Redirections) != 0 {
-				return true, commandName
-			}
-			tool, _ := G.Tool(commandName, RunTime)
-			switch {
-			case tool == nil:
-				return true, commandName
-			case oneOf(tool.Name, "echo", "printf"):
-			case oneOf(tool.Name, "sed", "gsed", "grep", "ggrep") && len(simple.Args) == 1:
-				break
-			default:
-				return true, commandName
 			}
 		}
 		return false, ""
@@ -844,29 +810,110 @@ func (spc *ShellProgramChecker) checkPipeExitcode(line Line, pipeline *MkShPipel
 	}
 }
 
-func (spc *ShellProgramChecker) checkSetE(list *MkShList, eflag *bool) {
+// canFail returns true if the given shell command can fail.
+// Most shell commands can fail for various reasons, such as missing
+// files or invalid arguments.
+//
+// Commands that can fail:
+//  echo "hello" > file
+//  sed 's,$, world,,' < input > output
+//  find . -print
+//  wc -l *
+//
+// Commands that cannot fail:
+//  echo "hello"
+//  sed 's,$, world,,'
+//  wc -l
+func (spc *ShellProgramChecker) canFail(cmd *MkShCommand) bool {
+	simple := cmd.Simple
+	if simple == nil {
+		return true
+	}
+
+	if simple.Name == nil {
+		for _, assignment := range simple.Assignments {
+			if contains(assignment.MkText, "`") || contains(assignment.MkText, "$(") {
+				if !contains(assignment.MkText, "|| ${TRUE}") {
+					return true
+				}
+			}
+		}
+		return false
+	}
+
+	for _, redirect := range simple.Redirections {
+		if redirect.Target != nil && !hasSuffix(redirect.Op, "&") {
+			return true
+		}
+	}
+
+	cmdName := simple.Name.MkText
+	switch cmdName {
+	case "${ECHO_MSG}", "${PHASE_MSG}", "${STEP_MSG}",
+		"${INFO_MSG}", "${WARNING_MSG}", "${ERROR_MSG}",
+		"${WARNING_CAT}", "${ERROR_CAT}",
+		"${DO_NADA}":
+		return false
+	case "${FAIL_MSG}":
+		return true
+	case "set":
+	}
+
+	tool, _ := G.Tool(cmdName, RunTime)
+	if tool == nil {
+		return true
+	}
+
+	toolName := tool.Name
+	args := simple.Args
+	argc := len(args)
+	switch toolName {
+	case "echo", "printf", "tr":
+		return false
+	case "sed", "gsed":
+		if argc == 2 && args[0].MkText == "-e" {
+			return false
+		}
+		return argc != 1
+	case "grep", "ggrep":
+		return argc != 1
+	}
+
+	return true
+}
+
+func (spc *ShellProgramChecker) checkSetE(list *MkShList, index int, andor *MkShAndOr) {
 	if trace.Tracing {
 		defer trace.Call()()
 	}
 
-	// Disabled until the shell parser can recognize "command || exit 1" reliably.
-	if false && G.opts.WarnExtra && !*eflag && "the current token" == ";" {
-		*eflag = true
-		spc.shline.mkline.Warnf("Please switch to \"set -e\" mode before using a semicolon (the one after %q) to separate commands.", "previous token")
-		Explain(
-			"Normally, when a shell command fails (returns non-zero), the",
-			"remaining commands are still executed.  For example, the following",
-			"commands would remove all files from the HOME directory:",
-			"",
-			"\tcd \"$HOME\"; cd /nonexistent; rm -rf *",
-			"",
-			"To fix this warning, you can:",
-			"",
-			"* insert ${RUN} at the beginning of the line",
-			"  (which among other things does \"set -e\")",
-			"* insert \"set -e\" explicitly at the beginning of the line",
-			"* use \"&&\" instead of \";\" to separate the commands")
+	command := list.AndOrs[index-1].Pipes[0].Cmds[0]
+	if command.Simple == nil || !spc.canFail(command) {
+		return
 	}
+
+	line := spc.shline.mkline.Line
+	if !line.FirstTime("switch to set -e") {
+		return
+	}
+
+	line.Warnf("Please switch to \"set -e\" mode before using a semicolon (after %q) to separate commands.",
+		NewStrCommand(command.Simple).String())
+	Explain(
+		"Normally, when a shell command fails (returns non-zero), the",
+		"remaining commands are still executed.  For example, the following",
+		"commands would remove all files from the HOME directory:",
+		"",
+		"\tcd \"$HOME\"; cd /nonexistent; rm -rf *",
+		"",
+		"In \"set -e\" mode, the shell stops when a command fails.",
+		"",
+		"To fix this warning, you can:",
+		"",
+		"* insert ${RUN} at the beginning of the line",
+		"  (which among other things does \"set -e\")",
+		"* insert \"set -e\" explicitly at the beginning of the line",
+		"* use \"&&\" instead of \";\" to separate the commands")
 }
 
 // Some shell commands should not be used in the install phase.
@@ -920,6 +967,7 @@ func splitIntoShellTokens(line Line, text string) (tokens []string, rest string)
 	}
 
 	word := ""
+	rest = text
 	p := NewShTokenizer(line, text, false)
 	emit := func() {
 		if word != "" {

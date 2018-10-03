@@ -13,6 +13,7 @@ import (
 	"strconv"
 	"strings"
 	"time"
+	"unicode"
 )
 
 type YesNoUnknown uint8
@@ -38,19 +39,32 @@ func hasSuffix(s, suffix string) bool {
 	return strings.HasSuffix(s, suffix)
 }
 func matches(s string, re regex.Pattern) bool {
-	return regex.Matches(s, re)
+	return G.res.Matches(s, re)
 }
 func match1(s string, re regex.Pattern) (matched bool, m1 string) {
-	return regex.Match1(s, re)
+	return G.res.Match1(s, re)
 }
 func match2(s string, re regex.Pattern) (matched bool, m1, m2 string) {
-	return regex.Match2(s, re)
+	return G.res.Match2(s, re)
 }
 func match3(s string, re regex.Pattern) (matched bool, m1, m2, m3 string) {
-	return regex.Match3(s, re)
+	return G.res.Match3(s, re)
 }
 func match4(s string, re regex.Pattern) (matched bool, m1, m2, m3, m4 string) {
-	return regex.Match4(s, re)
+	return G.res.Match4(s, re)
+}
+func match5(s string, re regex.Pattern) (matched bool, m1, m2, m3, m4, m5 string) {
+	return G.res.Match5(s, re)
+}
+func replaceFirst(s string, re regex.Pattern, repl string) string {
+	m, replaced := G.res.ReplaceFirst(s, re, repl)
+	return ifelseStr(m != nil, replaced, s)
+}
+func replaceAll(s string, re regex.Pattern, repl string) string {
+	return G.res.Compile(re).ReplaceAllString(s, repl)
+}
+func replaceAllFunc(s string, re regex.Pattern, repl func(string) string) string {
+	return G.res.Compile(re).ReplaceAllStringFunc(s, repl)
 }
 
 func ifelseStr(cond bool, a, b string) string {
@@ -77,7 +91,7 @@ func imax(a, b int) int {
 }
 
 func mustMatch(s string, re regex.Pattern) []string {
-	if m := regex.Match(s, re); m != nil {
+	if m := G.res.Match(s, re); m != nil {
 		return m
 	}
 	panic(fmt.Sprintf("mustMatch %q %q", s, re))
@@ -138,12 +152,9 @@ func isCommitted(fname string) bool {
 }
 
 func isLocallyModified(fname string) bool {
-	lines := loadCvsEntries(fname)
-	if len(lines) == 0 {
-		return false
-	}
-
 	baseName := path.Base(fname)
+
+	lines := loadCvsEntries(fname)
 	for _, line := range lines {
 		fields := strings.Split(line.Text, "/")
 		if 3 < len(fields) && fields[1] == baseName {
@@ -156,7 +167,7 @@ func isLocallyModified(fname string) bool {
 			cvsModTime := fields[3]
 			fsModTime := st.ModTime().Format(time.ANSIC)
 			if trace.Tracing {
-				trace.Stepf("cvs.time=%q fs.time=%q", cvsModTime, st.ModTime())
+				trace.Stepf("cvs.time=%q fs.time=%q", cvsModTime, fsModTime)
 			}
 
 			return cvsModTime != fsModTime
@@ -220,21 +231,21 @@ func shorten(s string, maxChars int) string {
 
 func varnameBase(varname string) string {
 	dot := strings.IndexByte(varname, '.')
-	if dot != -1 {
+	if dot > 0 {
 		return varname[:dot]
 	}
 	return varname
 }
 func varnameCanon(varname string) string {
 	dot := strings.IndexByte(varname, '.')
-	if dot != -1 {
+	if dot > 0 {
 		return varname[:dot] + ".*"
 	}
 	return varname
 }
 func varnameParam(varname string) string {
 	dot := strings.IndexByte(varname, '.')
-	if dot != -1 {
+	if dot > 0 {
 		return varname[dot+1:]
 	}
 	return ""
@@ -267,7 +278,28 @@ func varIsUsed(varname string) bool {
 }
 
 func splitOnSpace(s string) []string {
-	return regex.Compile(`\S+`).FindAllString(s, -1)
+	i := 0
+	n := len(s)
+
+	for i < n && unicode.IsSpace(rune(s[i])) {
+		i++
+	}
+
+	var parts []string
+	for i < n {
+		start := i
+		for i < n && !unicode.IsSpace(rune(s[i])) {
+			i++
+		}
+		if start != i {
+			parts = append(parts, s[start:i])
+		}
+		for i < n && unicode.IsSpace(rune(s[i])) {
+			i++
+		}
+	}
+
+	return parts
 }
 
 func fileExists(fname string) bool {
@@ -317,7 +349,7 @@ func mkopSubst(s string, left bool, from string, right bool, to string, flags st
 	re := regex.Pattern(ifelseStr(left, "^", "") + regexp.QuoteMeta(from) + ifelseStr(right, "$", ""))
 	done := false
 	gflag := contains(flags, "g")
-	return regex.Compile(re).ReplaceAllStringFunc(s, func(match string) string {
+	return replaceAllFunc(s, re, func(match string) string {
 		if gflag || !done {
 			done = !gflag
 			return to
@@ -328,13 +360,10 @@ func mkopSubst(s string, left bool, from string, right bool, to string, flags st
 
 // relpath returns the relative path from `from` to `to`.
 func relpath(from, to string) string {
-	absFrom, err1 := filepath.Abs(from)
-	absTo, err2 := filepath.Abs(to)
-	rel, err3 := filepath.Rel(absFrom, absTo)
-	if err1 != nil || err2 != nil || err3 != nil {
-		trace.Stepf("relpath.panic", from, to, err1, err2, err3)
-		panic(fmt.Sprintf("relpath %q, %q", from, to))
-	}
+	absFrom := abspath(from)
+	absTo := abspath(to)
+	rel, err := filepath.Rel(absFrom, absTo)
+	G.Assertf(err == nil, "relpath %q %q.", from, to)
 	result := filepath.ToSlash(rel)
 	if trace.Tracing {
 		trace.Stepf("relpath from %q to %q = %q", from, to, result)
@@ -344,9 +373,7 @@ func relpath(from, to string) string {
 
 func abspath(fname string) string {
 	abs, err := filepath.Abs(fname)
-	if err != nil {
-		NewLineWhole(fname).Fatalf("Cannot determine absolute path.")
-	}
+	G.Assertf(err == nil, "abspath %q.", fname)
 	return filepath.ToSlash(abs)
 }
 
@@ -367,21 +394,30 @@ func cleanpath(fname string) string {
 	for contains(tmp, "//") {
 		tmp = strings.Replace(tmp, "//", "/", -1)
 	}
-	tmp = reReplaceRepeatedly(tmp, `/[^.][^/]*/[^.][^/]*/\.\./\.\./`, "/")
+
+	// Repeatedly replace `/[^.][^/]*/[^.][^/]*/\.\./\.\./` with "/"
+again:
+	slash0 := -1
+	slash1 := -1
+	slash2 := -1
+	for i, ch := range []byte(tmp) {
+		if ch == '/' {
+			slash0 = slash1
+			slash1 = slash2
+			slash2 = i
+			if slash0 != -1 && tmp[slash0+1:slash1] != ".." && tmp[slash1+1:slash2] != ".." && hasPrefix(tmp[i:], "/../../") {
+				tmp = tmp[:slash0] + tmp[i+6:]
+				goto again
+			}
+		}
+	}
+
 	tmp = strings.TrimSuffix(tmp, "/")
 	return tmp
 }
 
 func containsVarRef(s string) bool {
 	return contains(s, "${")
-}
-
-func reReplaceRepeatedly(from string, re regex.Pattern, to string) string {
-	replaced := regex.Compile(re).ReplaceAllString(from, to)
-	if replaced != from {
-		return reReplaceRepeatedly(replaced, re, to)
-	}
-	return replaced
 }
 
 func hasAlnumPrefix(s string) bool {
@@ -412,12 +448,13 @@ func (o *Once) FirstTime(what string) bool {
 // Scope remembers which variables are defined and which are used
 // in a certain scope, such as a package or a file.
 type Scope struct {
-	defined map[string]MkLine
-	used    map[string]MkLine
+	defined  map[string]MkLine
+	fallback map[string]string
+	used     map[string]MkLine
 }
 
 func NewScope() Scope {
-	return Scope{make(map[string]MkLine), make(map[string]MkLine)}
+	return Scope{make(map[string]MkLine), make(map[string]string), make(map[string]MkLine)}
 }
 
 // Define marks the variable and its canonicalized form as defined.
@@ -435,6 +472,10 @@ func (s *Scope) Define(varname string, mkline MkLine) {
 			trace.Step2("Defining %q in line %s", varcanon, mkline.Linenos())
 		}
 	}
+}
+
+func (s *Scope) Fallback(varname string, value string) {
+	s.fallback[varname] = value
 }
 
 // Use marks the variable and its canonicalized form as used.
@@ -514,12 +555,21 @@ func (s *Scope) Value(varname string) (value string, found bool) {
 	if mkline != nil {
 		return mkline.Value(), true
 	}
+	if fallback, ok := s.fallback[varname]; ok {
+		return fallback, true
+	}
 	return "", false
 }
 
 func (s *Scope) DefineAll(other Scope) {
-	for varname, mkline := range other.defined {
-		s.Define(varname, mkline)
+	var varnames []string
+	for varname := range other.defined {
+		varnames = append(varnames, varname)
+	}
+	sort.Strings(varnames)
+
+	for _, varname := range varnames {
+		s.Define(varname, other.defined[varname])
 	}
 }
 
@@ -689,4 +739,103 @@ func IsPrefs(fileName string) bool {
 		return true
 	}
 	return false
+}
+
+func isalnum(s string) bool {
+	for _, ch := range []byte(s) {
+		if !('0' <= ch && ch <= '9' || 'A' <= ch && ch <= 'Z' || ch == '_' || 'a' <= ch && ch <= 'z') {
+			return false
+		}
+	}
+	return true
+}
+
+// FileCache reduces the IO load for commonly loaded files by about 50%,
+// especially for buildlink3.mk and *.buildlink3.mk files.
+type FileCache struct {
+	table   []*fileCacheEntry
+	mapping map[string]*fileCacheEntry // Pointers into FileCache.table
+	hits    int
+	misses  int
+}
+
+type fileCacheEntry struct {
+	count    int
+	fileName string
+	options  LoadOptions
+	lines    []Line
+}
+
+func NewFileCache(size int) *FileCache {
+	return &FileCache{
+		make([]*fileCacheEntry, 0, size),
+		make(map[string]*fileCacheEntry),
+		0,
+		0}
+}
+
+func (c *FileCache) Put(fileName string, options LoadOptions, lines []Line) {
+	key := c.key(fileName)
+
+	entry := c.mapping[key]
+	if entry == nil {
+		if len(c.table) == cap(c.table) {
+			sort.Slice(c.table, func(i, j int) bool { return c.table[j].count < c.table[i].count })
+			minCount := c.table[len(c.table)-1].count
+			newLen := len(c.table)
+			for newLen > 0 && c.table[newLen-1].count == minCount {
+				delete(c.mapping, c.key(c.table[newLen-1].fileName))
+				newLen--
+			}
+			c.table = c.table[0:newLen]
+
+			// To avoid files from getting stuck in the cache.
+			for _, e := range c.table {
+				e.count /= 2
+			}
+		}
+
+		entry = &fileCacheEntry{0, fileName, options, lines}
+		c.table = append(c.table, entry)
+		c.mapping[key] = entry
+	}
+
+	entry.count = 0
+	entry.fileName = fileName
+	entry.options = options
+	entry.lines = lines
+}
+
+func (c *FileCache) Get(fileName string, options LoadOptions) []Line {
+	key := c.key(fileName)
+	entry, found := c.mapping[key]
+	if found && entry.options == options {
+		c.hits++
+		entry.count++
+
+		lines := make([]Line, len(entry.lines))
+		for i, line := range entry.lines {
+			lines[i] = NewLineMulti(fileName, int(line.firstLine), int(line.lastLine), line.Text, line.raw)
+		}
+		return lines
+	}
+	c.misses++
+	return nil
+}
+
+func (c *FileCache) Evict(fileName string) {
+	key := c.key(fileName)
+	entry, found := c.mapping[key]
+	if found {
+		delete(c.mapping, key)
+
+		sort.Slice(c.table, func(i, j int) bool {
+			return c.table[j] == entry && c.table[i] != entry
+		})
+		c.table = c.table[0 : len(c.table)-1]
+	}
+}
+
+func (c *FileCache) key(fileName string) string {
+	return path.Clean(fileName)
 }

@@ -26,12 +26,16 @@ func (s *Suite) Test_MkShWalker_Walk(c *check.C) {
 			commands = append(commands, fmt.Sprintf("%16s %s", kind, detail))
 		}
 
-		callback := NewMkShWalkCallback()
+		walker := NewMkShWalker()
+		callback := &walker.Callback
 		callback.List = func(list *MkShList) { add("List", "with %d andOrs", len(list.AndOrs)) }
 		callback.AndOr = func(andor *MkShAndOr) { add("AndOr", "with %d pipelines", len(andor.Pipes)) }
 		callback.Pipeline = func(pipeline *MkShPipeline) { add("Pipeline", "with %d commands", len(pipeline.Cmds)) }
 		callback.Command = func(command *MkShCommand) { add("Command", "") }
-		callback.SimpleCommand = func(command *MkShSimpleCommand) { add("SimpleCommand", "%s", NewStrCommand(command).String()) }
+		callback.SimpleCommand = func(command *MkShSimpleCommand) {
+			add("SimpleCommand", "%s", NewStrCommand(command).String())
+			add("Path", "%s", walker.Path())
+		}
 		callback.CompoundCommand = func(command *MkShCompoundCommand) { add("CompoundCommand", "") }
 		callback.Case = func(caseClause *MkShCaseClause) { add("Case", "with %d items", len(caseClause.Cases)) }
 		callback.CaseItem = func(caseItem *MkShCaseItem) { add("CaseItem", "with %d patterns", len(caseItem.Patterns)) }
@@ -45,7 +49,7 @@ func (s *Suite) Test_MkShWalker_Walk(c *check.C) {
 		callback.For = func(forClause *MkShForClause) { add("For", "variable %s", forClause.Varname) }
 		callback.Varname = func(varname string) { add("Varname", "%s", varname) }
 
-		NewMkShWalker().Walk(list, callback)
+		walker.Walk(list)
 
 		c.Check(commands, deepEquals, []string{
 			"            List with 5 andOrs",
@@ -58,13 +62,15 @@ func (s *Suite) Test_MkShWalker_Walk(c *check.C) {
 			"           AndOr with 1 pipelines",
 			"        Pipeline with 1 commands",
 			"         Command ",
-			"   SimpleCommand [] condition []",
+			"   SimpleCommand condition",
+			"            Path List.AndOr[0].Pipeline[0].Command[0].CompoundCommand.IfClause.List[0].AndOr[0].Pipeline[0].Command[0].SimpleCommand",
 			"            Word condition",
 			"            List with 1 andOrs",
 			"           AndOr with 1 pipelines",
 			"        Pipeline with 1 commands",
 			"         Command ",
-			"   SimpleCommand [] action []",
+			"   SimpleCommand action",
+			"            Path List.AndOr[0].Pipeline[0].Command[0].CompoundCommand.IfClause.List[1].AndOr[0].Pipeline[0].Command[0].SimpleCommand",
 			"            Word action",
 			"            List with 1 andOrs",
 			"           AndOr with 1 pipelines",
@@ -80,19 +86,22 @@ func (s *Suite) Test_MkShWalker_Walk(c *check.C) {
 			"           AndOr with 1 pipelines",
 			"        Pipeline with 1 commands",
 			"         Command ",
-			"   SimpleCommand [] case-item-action []",
+			"   SimpleCommand case-item-action",
+			"            Path List.AndOr[0].Pipeline[0].Command[0].CompoundCommand.IfClause.List[2].AndOr[0].Pipeline[0].Command[0].CompoundCommand.CaseClause.CaseItem[0].List[1].AndOr[0].Pipeline[0].Command[0].SimpleCommand",
 			"            Word case-item-action",
 			"           AndOr with 1 pipelines",
 			"        Pipeline with 1 commands",
 			"         Command ",
-			"   SimpleCommand [] set [-e]",
+			"   SimpleCommand set -e",
+			"            Path List.AndOr[1].Pipeline[0].Command[0].SimpleCommand",
 			"            Word set",
 			"           Words with 1 words",
 			"            Word -e",
 			"           AndOr with 1 pipelines",
 			"        Pipeline with 1 commands",
 			"         Command ",
-			"   SimpleCommand [] cd [${WRKSRC}/locale]",
+			"   SimpleCommand cd ${WRKSRC}/locale",
+			"            Path List.AndOr[2].Pipeline[0].Command[0].SimpleCommand",
 			"            Word cd",
 			"           Words with 1 words",
 			"            Word ${WRKSRC}/locale",
@@ -108,7 +117,8 @@ func (s *Suite) Test_MkShWalker_Walk(c *check.C) {
 			"           AndOr with 2 pipelines",
 			"        Pipeline with 1 commands",
 			"         Command ",
-			"   SimpleCommand [] [ [\"$${lang}\" = \"wxstd.po\" ]]",
+			"   SimpleCommand [ \"$${lang}\" = \"wxstd.po\" ]",
+			"            Path List.AndOr[3].Pipeline[0].Command[0].CompoundCommand.ForClause.List.AndOr[0].Pipeline[0].Command[0].SimpleCommand",
 			"            Word [",
 			"           Words with 4 words",
 			"            Word \"$${lang}\"",
@@ -117,12 +127,14 @@ func (s *Suite) Test_MkShWalker_Walk(c *check.C) {
 			"            Word ]",
 			"        Pipeline with 1 commands",
 			"         Command ",
-			"   SimpleCommand [] continue []",
+			"   SimpleCommand continue",
+			"            Path List.AndOr[3].Pipeline[0].Command[0].CompoundCommand.ForClause.List.AndOr[0].Pipeline[1].Command[0].SimpleCommand",
 			"            Word continue",
 			"           AndOr with 1 pipelines",
 			"        Pipeline with 1 commands",
 			"         Command ",
-			"   SimpleCommand [] ${TOOLS_PATH.msgfmt} [-c -o \"$${lang%.po}.mo\" \"$${lang}\"]",
+			"   SimpleCommand ${TOOLS_PATH.msgfmt} -c -o \"$${lang%.po}.mo\" \"$${lang}\"",
+			"            Path List.AndOr[3].Pipeline[0].Command[0].CompoundCommand.ForClause.List.AndOr[1].Pipeline[0].Command[0].SimpleCommand",
 			"            Word ${TOOLS_PATH.msgfmt}",
 			"           Words with 4 words",
 			"            Word -c",
@@ -138,7 +150,8 @@ func (s *Suite) Test_MkShWalker_Walk(c *check.C) {
 			"           AndOr with 1 pipelines",
 			"        Pipeline with 1 commands",
 			"         Command ",
-			"   SimpleCommand [] : []",
+			"   SimpleCommand :",
+			"            Path List.AndOr[4].Pipeline[0].Command[0].CompoundCommand.LoopClause.List[0].AndOr[0].Pipeline[0].Command[0].SimpleCommand",
 			"            Word :",
 			"            List with 1 andOrs",
 			"           AndOr with 1 pipelines",
@@ -150,10 +163,15 @@ func (s *Suite) Test_MkShWalker_Walk(c *check.C) {
 			"           AndOr with 1 pipelines",
 			"        Pipeline with 1 commands",
 			"         Command ",
-			"   SimpleCommand [] : []",
+			"   SimpleCommand :",
+			"            Path List.AndOr[4].Pipeline[0].Command[0].CompoundCommand.LoopClause.List[1].AndOr[0].Pipeline[0].Command[0].FunctionDefinition.CompoundCommand.List.AndOr[0].Pipeline[0].Command[0].SimpleCommand",
 			"            Word :",
 			"       Redirects with 1 redirects",
 			"        Redirect >&",
 			"            Word 2"})
+
+		// After parsing, there is not a single level of indentation,
+		// therefore even Parent(0) returns nil.
+		c.Check(walker.Parent(0), equals, nil)
 	}
 }
