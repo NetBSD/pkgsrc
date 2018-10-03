@@ -40,15 +40,15 @@ type ShAtom struct {
 	Type    ShAtomType
 	MkText  string
 	Quoting ShQuoting // The quoting state at the end of the token
-	Data    interface{}
+	data    interface{}
 }
 
 func (atom *ShAtom) String() string {
-	if atom.Type == shtWord && atom.Quoting == shqPlain && atom.Data == nil {
+	if atom.Type == shtWord && atom.Quoting == shqPlain && atom.data == nil {
 		return fmt.Sprintf("%q", atom.MkText)
 	}
 	if atom.Type == shtVaruse {
-		varuse := atom.Data.(*MkVarUse)
+		varuse := atom.VarUse()
 		return fmt.Sprintf("varuse(%q)", varuse.varname+varuse.Mod())
 	}
 	return fmt.Sprintf("ShAtom(%v, %q, %s)", atom.Type, atom.MkText, atom.Quoting)
@@ -57,7 +57,7 @@ func (atom *ShAtom) String() string {
 // VarUse returns a read access to a Makefile variable, or nil for plain shell tokens.
 func (atom *ShAtom) VarUse() *MkVarUse {
 	if atom.Type == shtVaruse {
-		return atom.Data.(*MkVarUse)
+		return atom.data.(*MkVarUse)
 	}
 	return nil
 }
@@ -67,24 +67,25 @@ func (atom *ShAtom) VarUse() *MkVarUse {
 type ShQuoting uint8
 
 const (
-	shqPlain ShQuoting = iota
-	shqDquot
-	shqSquot
-	shqBackt
-	shqSubsh
-	shqDquotBackt
-	shqBacktDquot
-	shqBacktSquot
-	shqSubshSquot
-	shqDquotBacktDquot
-	shqDquotBacktSquot
+	shqPlain           ShQuoting = iota // e.g. word
+	shqDquot                            // e.g. "word"
+	shqSquot                            // e.g. 'word'
+	shqBackt                            // e.g. `word`
+	shqSubsh                            // e.g. $(word)
+	shqDquotBackt                       // e.g. "`word`"
+	shqBacktDquot                       // e.g. `"word"`
+	shqBacktSquot                       // e.g. `'word'`
+	shqSubshDquot                       // e.g. $("word")
+	shqSubshSquot                       // e.g. $('word')
+	shqDquotBacktDquot                  // e.g. "`"word"`"
+	shqDquotBacktSquot                  // e.g. "`'word'`"
 )
 
 func (q ShQuoting) String() string {
 	return [...]string{
 		"plain",
 		"d", "s", "b", "S",
-		"db", "bd", "bs", "Ss",
+		"db", "bd", "bs", "Sd", "Ss",
 		"dbd", "dbs",
 	}[q]
 }
@@ -103,6 +104,13 @@ func (q ShQuoting) ToVarUseContext() vucQuoting {
 	return vucQuotUnknown
 }
 
+// ShToken is an operator or a keyword or some text intermingled with variables.
+//
+// Examples:
+//  ;
+//  then
+//  "The number of pkgsrc packages in ${PREFIX} is $$packages."
+//
 // See http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_10_02
 type ShToken struct {
 	MkText string // The text as it appeared in the Makefile, after replacing `\#` with `#`

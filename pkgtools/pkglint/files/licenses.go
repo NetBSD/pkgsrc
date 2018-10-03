@@ -30,7 +30,7 @@ type LicenseChecker struct {
 
 func (lc *LicenseChecker) Check(value string, op MkOperator) {
 	expanded := resolveVariableRefs(value) // For ${PERL5_LICENSE}
-	licenses := licenses.Parse(ifelseStr(op == opAssignAppend, "append-placeholder ", "") + expanded)
+	licenses := licenses.Parse(ifelseStr(op == opAssignAppend, "append-placeholder ", "")+expanded, &G.res)
 
 	if licenses == nil {
 		if op == opAssign {

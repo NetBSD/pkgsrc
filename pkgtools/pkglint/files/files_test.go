@@ -4,7 +4,7 @@ import (
 	"gopkg.in/check.v1"
 )
 
-func (s *Suite) Test_convertToLogicalLines_no_continuation(c *check.C) {
+func (s *Suite) Test_convertToLogicalLines__no_continuation(c *check.C) {
 	rawText := "" +
 		"first line\n" +
 		"second line\n"
@@ -16,7 +16,7 @@ func (s *Suite) Test_convertToLogicalLines_no_continuation(c *check.C) {
 	c.Check(lines[1].String(), equals, "fname_nocont:2: second line")
 }
 
-func (s *Suite) Test_convertToLogicalLines_continuation(c *check.C) {
+func (s *Suite) Test_convertToLogicalLines__continuation(c *check.C) {
 	rawText := "" +
 		"first line \\\n" +
 		"second line\n" +
@@ -121,7 +121,7 @@ func (s *Suite) Test_convertToLogicalLines__comments(c *check.C) {
 		"ERROR: ~/comment.mk:23: Unknown Makefile line format: \"This is no comment\".")
 }
 
-func (s *Suite) Test_convertToLogicalLines_continuationInLastLine(c *check.C) {
+func (s *Suite) Test_convertToLogicalLines__continuation_in_last_line(c *check.C) {
 	t := s.Init(c)
 
 	rawText := "" +

@@ -3,6 +3,7 @@ package licenses
 import (
 	"encoding/json"
 	"gopkg.in/check.v1"
+	"netbsd.org/pkglint/regex"
 	"strings"
 	"testing"
 )
@@ -10,11 +11,15 @@ import (
 type Suite struct{}
 
 func (s *Suite) Test_Parse(c *check.C) {
+	res := regex.NewRegistry()
 	checkParse := func(cond string, expected string) {
-		c.Check(toJSON(Parse(cond)), check.Equals, expected)
+		c.Check(toJSON(Parse(cond, &res)), check.Equals, expected)
+	}
+	checkParseDeep := func(cond string, expected *Condition) {
+		c.Check(Parse(cond, &res), check.DeepEquals, expected)
 	}
 
-	c.Check(Parse("gnu-gpl-v2"), check.DeepEquals, NewSingleton(NewName("gnu-gpl-v2")))
+	checkParseDeep("gnu-gpl-v2", NewSingleton(NewName("gnu-gpl-v2")))
 
 	checkParse("gnu-gpl-v2", "{Children:[{Name:gnu-gpl-v2}]}")
 	checkParse("a AND b", "{And:true,Children:[{Name:a},{Name:b}]}")
@@ -24,21 +29,18 @@ func (s *Suite) Test_Parse(c *check.C) {
 	checkParse("(a OR b) AND c", "{And:true,Children:[{Paren:{Or:true,Children:[{Name:a},{Name:b}]}},{Name:c}]}")
 
 	checkParse("a AND b AND c AND d", "{And:true,Children:[{Name:a},{Name:b},{Name:c},{Name:d}]}")
-	c.Check(
-		Parse("a AND b AND c AND d"),
-		check.DeepEquals,
+	checkParseDeep(
+		"a AND b AND c AND d",
 		NewAnd(NewName("a"), NewName("b"), NewName("c"), NewName("d")))
 
 	checkParse("a OR b OR c OR d", "{Or:true,Children:[{Name:a},{Name:b},{Name:c},{Name:d}]}")
-	c.Check(
-		Parse("a OR b OR c OR d"),
-		check.DeepEquals,
+	checkParseDeep(
+		"a OR b OR c OR d",
 		NewOr(NewName("a"), NewName("b"), NewName("c"), NewName("d")))
 
 	checkParse("(a OR b) AND (c AND d)", "{And:true,Children:[{Paren:{Or:true,Children:[{Name:a},{Name:b}]}},{Paren:{And:true,Children:[{Name:c},{Name:d}]}}]}")
-	c.Check(
-		(Parse("(a OR b) AND (c AND d)")),
-		check.DeepEquals,
+	checkParseDeep(
+		"(a OR b) AND (c AND d)",
 		NewAnd(
 			NewParen(NewOr(NewName("a"), NewName("b"))),
 			NewParen(NewAnd(NewName("c"), NewName("d")))))
@@ -46,9 +48,9 @@ func (s *Suite) Test_Parse(c *check.C) {
 	checkParse("a AND b OR c AND d", "{And:true,Or:true,Children:[{Name:a},{Name:b},{Name:c},{Name:d}]}")
 	checkParse("((a AND (b AND c)))", "{Children:[{Paren:{Children:[{Paren:{And:true,Children:[{Name:a},{Paren:{And:true,Children:[{Name:b},{Name:c}]}}]}}]}}]}")
 
-	c.Check(Parse("a AND b OR c AND d").String(), check.Equals, "a MIXED b MIXED c MIXED d")
+	c.Check(Parse("a AND b OR c AND d", &res).String(), check.Equals, "a MIXED b MIXED c MIXED d")
 
-	c.Check(Parse("AND artistic"), check.IsNil)
+	c.Check(Parse("AND artistic", &res), check.IsNil)
 }
 
 func (s *Suite) Test_Condition_String(c *check.C) {
