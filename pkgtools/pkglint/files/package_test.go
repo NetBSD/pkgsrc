@@ -2,6 +2,40 @@ package main
 
 import "gopkg.in/check.v1"
 
+func (s *Suite) Test_Package_checklinesBuildlink3Inclusion__file_but_not_package(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("category/dependency/buildlink3.mk")
+	G.Pkg = NewPackage(t.File("category/package"))
+	mklines := t.NewMkLines("category/package/buildlink3.mk",
+		MkRcsID,
+		"",
+		".include \"../../category/dependency/buildlink3.mk\"")
+
+	G.Pkg.checklinesBuildlink3Inclusion(mklines)
+
+	t.CheckOutputLines(
+		"WARN: category/package/buildlink3.mk:3: category/dependency/buildlink3.mk is included by this file but not by the package.")
+}
+
+func (s *Suite) Test_Package_checklinesBuildlink3Inclusion__package_but_not_file(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("category/dependency/buildlink3.mk")
+	G.Pkg = NewPackage(t.File("category/package"))
+	G.Pkg.bl3["../../category/dependency/buildlink3.mk"] = t.NewLine("fname", 1, "")
+	mklines := t.NewMkLines("category/package/buildlink3.mk",
+		MkRcsID)
+
+	t.EnableTracingToLog()
+	G.Pkg.checklinesBuildlink3Inclusion(mklines)
+
+	t.CheckOutputLines(
+		"TRACE: + (*Package).checklinesBuildlink3Inclusion()",
+		"TRACE: 1   ../../category/dependency/buildlink3.mk/buildlink3.mk is included by the package but not by the buildlink3.mk file.",
+		"TRACE: - (*Package).checklinesBuildlink3Inclusion()")
+}
+
 func (s *Suite) Test_Package_pkgnameFromDistname(c *check.C) {
 	t := s.Init(c)
 
@@ -17,6 +51,9 @@ func (s *Suite) Test_Package_pkgnameFromDistname(c *check.C) {
 	c.Check(pkg.pkgnameFromDistname("${DISTNAME:tl:S/-/./g:S/he/-/1}", "SaxonHE9-5-0-1J"), equals, "saxon-9.5.0.1j")
 	c.Check(pkg.pkgnameFromDistname("${DISTNAME:C/beta/.0./}", "fspanel-0.8beta1"), equals, "${DISTNAME:C/beta/.0./}")
 	c.Check(pkg.pkgnameFromDistname("${DISTNAME:S/-0$/.0/1}", "aspell-af-0.50-0"), equals, "aspell-af-0.50.0")
+
+	// FIXME: Should produce a parse error since the :S modifier is malformed; see Test_MkParser_MkTokens.
+	c.Check(pkg.pkgnameFromDistname("${DISTNAME:S,a,b,c,d}", "aspell-af-0.50-0"), equals, "bspell-af-0.50-0")
 
 	t.CheckOutputEmpty()
 }
@@ -87,7 +124,7 @@ func (s *Suite) Test_Package_CheckVarorder__comments_are_ignored(c *check.C) {
 		"DISTNAME=\tdistname-1.0",
 		"CATEGORIES=\tsysutils",
 		"",
-		"MAINTAINER=\tpkgsrc-users@pkgsrc.org",
+		"MAINTAINER=\tpkgsrc-users@NetBSD.org",
 		"# comment",
 		"COMMENT=\tComment",
 		"LICENSE=\tgnu-gpl-v2"))
@@ -109,7 +146,7 @@ func (s *Suite) Test_Package_CheckVarorder__skip_if_there_are_directives(c *chec
 		"CATEGORIES=\tsysutils",
 		"",
 		".if ${DISTNAME:Mdistname-*}",
-		"MAINTAINER=\tpkgsrc-users@pkgsrc.org",
+		"MAINTAINER=\tpkgsrc-users@NetBSD.org",
 		".endif",
 		"LICENSE=\tgnu-gpl-v2"))
 
@@ -118,7 +155,7 @@ func (s *Suite) Test_Package_CheckVarorder__skip_if_there_are_directives(c *chec
 	t.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_Package_CheckVarorder_GitHub(c *check.C) {
+func (s *Suite) Test_Package_CheckVarorder__GitHub(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Worder")
@@ -139,7 +176,7 @@ func (s *Suite) Test_Package_CheckVarorder_GitHub(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_Package_varorder_license(c *check.C) {
+func (s *Suite) Test_Package_CheckVarorder__license(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Worder")
@@ -276,6 +313,35 @@ func (s *Suite) Test_Package_determineEffectivePkgVars__precedence(c *check.C) {
 	c.Check(pkg.EffectivePkgversion, equals, "1.0")
 }
 
+func (s *Suite) Test_Package_determineEffectivePkgVars__same(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall,no-order")
+	pkg := t.SetupPackage("category/package",
+		"DISTNAME=\tdistname-1.0",
+		"PKGNAME=\tdistname-1.0")
+
+	G.CheckDirent(pkg)
+
+	t.CheckOutputLines(
+		"NOTE: ~/category/package/Makefile:20: " +
+			"PKGNAME is ${DISTNAME} by default. You probably don't need to define PKGNAME.")
+}
+
+func (s *Suite) Test_Package_determineEffectivePkgVars__invalid_DISTNAME(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall,no-order")
+	pkg := t.SetupPackage("category/package",
+		"DISTNAME=\tpkgname-version")
+
+	G.CheckDirent(pkg)
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/Makefile:3: " +
+			"As DISTNAME is not a valid package name, please define the PKGNAME explicitly.")
+}
+
 func (s *Suite) Test_Package_checkPossibleDowngrade(c *check.C) {
 	t := s.Init(c)
 
@@ -300,11 +366,48 @@ func (s *Suite) Test_Package_checkPossibleDowngrade(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_checkdirPackage(c *check.C) {
+func (s *Suite) Test_Package_loadPackageMakefile__dump(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("--dumpmakefile")
+	t.SetupVartypes()
+	t.SetupPkgsrc()
+	t.CreateFileLines("category/Makefile")
+	t.CreateFileLines("category/package/PLIST",
+		PlistRcsID,
+		"bin/program")
+	t.CreateFileLines("category/package/distinfo",
+		RcsID,
+		"",
+		"SHA1 (distfile-1.0.tar.gz) = 12341234...",
+		"RMD160 (distfile-1.0.tar.gz) = 12341234...",
+		"SHA512 (distfile-1.0.tar.gz) = 12341234...",
+		"Size (distfile-1.0.tar.gz) = 12341234...")
+	t.CreateFileLines("category/package/Makefile",
+		MkRcsID,
+		"",
+		"CATEGORIES=category",
+		"",
+		"COMMENT=\tComment",
+		"LICENSE=\t2-clause-bsd")
+
+	G.checkdirPackage(t.File("category/package"))
+
+	t.CheckOutputLines(
+		"Whole Makefile (with all included files) follows:",
+		"~/category/package/Makefile:1: # $NetBSD: package_test.go,v 1.30 2018/10/03 22:27:53 rillig Exp $",
+		"~/category/package/Makefile:2: ",
+		"~/category/package/Makefile:3: CATEGORIES=category",
+		"~/category/package/Makefile:4: ",
+		"~/category/package/Makefile:5: COMMENT=\tComment",
+		"~/category/package/Makefile:6: LICENSE=\t2-clause-bsd")
+}
+
+func (s *Suite) Test_Pkglint_checkdirPackage(c *check.C) {
 	t := s.Init(c)
 
 	t.Chdir("category/package")
-	t.SetupFileLines("Makefile",
+	t.CreateFileLines("Makefile",
 		MkRcsID)
 
 	G.checkdirPackage(".")
@@ -314,6 +417,56 @@ func (s *Suite) Test_checkdirPackage(c *check.C) {
 		"WARN: distinfo: File not found. Please run \""+confMake+" makesum\" or define NO_CHECKSUM=yes in the package Makefile.",
 		"ERROR: Makefile: Each package must define its LICENSE.",
 		"WARN: Makefile: No COMMENT given.")
+}
+
+func (s *Suite) Test_Pkglint_checkdirPackage__PKGDIR(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupVartypes()
+	t.SetupPkgsrc()
+	t.CreateFileLines("category/Makefile")
+	t.CreateFileLines("other/package/Makefile",
+		MkRcsID)
+	t.CreateFileLines("other/package/PLIST",
+		PlistRcsID,
+		"bin/program")
+	t.CreateFileLines("other/package/distinfo",
+		RcsID,
+		"",
+		"SHA1 (patch-aa) = da39a3ee5e6b4b0d3255bfef95601890afd80709")
+	t.CreateFileLines("category/package/patches/patch-aa",
+		RcsID)
+	t.Chdir("category/package")
+	t.CreateFileLines("Makefile",
+		MkRcsID,
+		"",
+		"CATEGORIES=category",
+		"",
+		"COMMENT=\tComment",
+		"LICENSE=\t2-clause-bsd",
+		"PKGDIR=\t../../other/package")
+
+	// DISTINFO_FILE is resolved relative to PKGDIR, the other places
+	// are resolved relative to the package base directory.
+	G.checkdirPackage(".")
+
+	t.CheckOutputLines(
+		"ERROR: patches/patch-aa:1: Patch files must not be empty.")
+}
+
+func (s *Suite) Test_Pkglint_checkdirPackage__patch_without_distinfo(c *check.C) {
+	t := s.Init(c)
+
+	pkg := t.SetupPackage("category/package")
+	t.CreateFileDummyPatch("category/package/patches/patch-aa")
+	t.Remove("category/package/distinfo")
+
+	G.CheckDirent(pkg)
+
+	// FIXME: One of the below warnings is redundant.
+	t.CheckOutputLines(
+		"WARN: ~/category/package/distinfo: File not found. Please run \""+confMake+" makesum\" or define NO_CHECKSUM=yes in the package Makefile.",
+		"WARN: ~/category/package/distinfo: File not found. Please run \""+confMake+" makepatchsum\".")
 }
 
 func (s *Suite) Test_Pkglint_checkdirPackage__meta_package_without_license(c *check.C) {
@@ -414,7 +567,7 @@ func (s *Suite) Test_Package__varuse_at_load_time(c *check.C) {
 func (s *Suite) Test_Package_loadPackageMakefile(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupFileLines("category/package/Makefile",
+	t.CreateFileLines("category/package/Makefile",
 		MkRcsID,
 		"",
 		"PKGNAME=pkgname-1.67",
@@ -433,7 +586,34 @@ func (s *Suite) Test_Package_loadPackageMakefile(c *check.C) {
 		"NOTE: ~/category/package/Makefile:4: Definition of DISTNAME is redundant because of Makefile:4.")
 }
 
-func (s *Suite) Test_Package_conditionalAndUnconditionalInclude(c *check.C) {
+func (s *Suite) Test_Package_loadPackageMakefile__PECL_VERSION(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("lang/php/ext.mk",
+		MkRcsID,
+		"",
+		"PHPEXT_MK=      # defined",
+		"PHPPKGSRCDIR=   ../../lang/php72",
+		"LICENSE?=        unknown-license",
+		"COMMENT?=       Some PHP package",
+		"GENERATE_PLIST+=# none",
+		"",
+		".if !defined(PECL_VERSION)",
+		"DISTINFO_FILE=  ${.CURDIR}/${PHPPKGSRCDIR}/distinfo",
+		".endif",
+		".if defined(USE_PHP_EXT_PATCHES)",
+		"PATCHDIR=       ${.CURDIR}/${PHPPKGSRCDIR}/patches",
+		".endif")
+	pkg := t.SetupPackage("category/package",
+		"PECL_VERSION=\t1.1.2",
+		".include \"../../lang/php/ext.mk\"")
+
+	G.CheckDirent(pkg)
+
+	t.CheckOutputLines()
+}
+
+func (s *Suite) Test_Package_CheckInclude__conditional_and_unconditional_include(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupVartypes()
@@ -479,7 +659,7 @@ func (s *Suite) Test_Package_conditionalAndUnconditionalInclude(c *check.C) {
 }
 
 // See https://github.com/rillig/pkglint/issues/1
-func (s *Suite) Test_Package_includeWithoutExists(c *check.C) {
+func (s *Suite) Test_Package__include_without_exists(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupVartypes()
@@ -494,11 +674,11 @@ func (s *Suite) Test_Package_includeWithoutExists(c *check.C) {
 	G.checkdirPackage(t.File("category/package"))
 
 	t.CheckOutputLines(
-		"ERROR: ~/category/package/options.mk: Cannot be read.")
+		"ERROR: ~/category/package/Makefile:3: Cannot read \"options.mk\".")
 }
 
 // See https://github.com/rillig/pkglint/issues/1
-func (s *Suite) Test_Package_includeAfterExists(c *check.C) {
+func (s *Suite) Test_Package__include_after_exists(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupVartypes()
@@ -524,7 +704,7 @@ func (s *Suite) Test_Package_includeAfterExists(c *check.C) {
 }
 
 // See https://github.com/rillig/pkglint/issues/1
-func (s *Suite) Test_Package_includeOtherAfterExists(c *check.C) {
+func (s *Suite) Test_Package_readMakefile__include_other_after_exists(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupVartypes()
@@ -541,7 +721,7 @@ func (s *Suite) Test_Package_includeOtherAfterExists(c *check.C) {
 	G.checkdirPackage(t.File("category/package"))
 
 	t.CheckOutputLines(
-		"ERROR: ~/category/package/another.mk: Cannot be read.")
+		"ERROR: ~/category/package/Makefile:4: Cannot read \"another.mk\".")
 }
 
 // See https://mail-index.netbsd.org/tech-pkg/2018/07/22/msg020092.html
@@ -649,4 +829,233 @@ func (s *Suite) Test_NewPackage(c *check.C) {
 		func() { NewPackage("category") },
 		check.PanicMatches,
 		`Package directory "category" must be two subdirectories below the pkgsrc root ".*".`)
+}
+
+// Before 2018-09-09, the .CURDIR variable did not have a fallback value.
+// When resolving the relative path x11/gst-x11/${.CURDIR}/../../multimedia/gst-base/distinfo,
+// "gst-x11/${.CURDIR}" was interpreted as "category/package", and the whole
+// path was resolved to "x11/multimedia/gst-base/distinfo, which of course
+// could not be found.
+func (s *Suite) Test__distinfo_from_other_package(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall,no-space")
+	t.SetupPkgsrc()
+	t.Chdir(".")
+	t.CreateFileLines("x11/gst-x11/Makefile",
+		MkRcsID,
+		".include \"../../multimedia/gst-base/Makefile.common\"",
+		".include \"../../mk/bsd.pkg.mk\"")
+	t.CreateFileLines("multimedia/gst-base/Makefile.common",
+		MkRcsID,
+		".include \"plugins.mk\"")
+	t.CreateFileLines("multimedia/gst-base/plugins.mk",
+		MkRcsID,
+		"DISTINFO_FILE=\t${.CURDIR}/../../multimedia/gst-base/distinfo")
+	t.CreateFileLines("multimedia/gst-base/distinfo",
+		RcsID,
+		"",
+		"SHA1 (patch-aa) = 1234")
+
+	G.CheckDirent("x11/gst-x11")
+
+	t.CheckOutputLines(
+		"WARN: x11/gst-x11/Makefile: Neither PLIST nor PLIST.common exist, and PLIST_SRC is unset.",
+		"ERROR: x11/gst-x11/Makefile: Each package must define its LICENSE.",
+		"WARN: x11/gst-x11/Makefile: No COMMENT given.",
+		"WARN: x11/gst-x11/../../multimedia/gst-base/distinfo:3: Patch file \"patch-aa\" does not exist in directory \"../../x11/gst-x11/patches\".")
+}
+
+func (s *Suite) Test_Package_checkfilePackageMakefile__GNU_CONFIGURE(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall,no-space")
+	pkg := t.SetupPackage("category/package",
+		"GNU_CONFIGURE=\tyes",
+		"USE_LANGUAGES=\t#")
+
+	G.CheckDirent(pkg)
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/Makefile:20: GNU_CONFIGURE almost always needs a C compiler, but \"c\" is not added to USE_LANGUAGES in line 21.")
+}
+
+func (s *Suite) Test_Package_checkfilePackageMakefile__GNU_CONFIGURE_ok(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall,no-space")
+	pkg := t.SetupPackage("category/package",
+		"GNU_CONFIGURE=\tyes",
+		"USE_LANGUAGES=\t# none, really")
+
+	G.CheckDirent(pkg)
+
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Package_checkfilePackageMakefile__REPLACE_PERL(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall,no-space")
+	pkg := t.SetupPackage("category/package",
+		"REPLACE_PERL=\t*.pl",
+		"NO_CONFIGURE=\tyes")
+
+	G.CheckDirent(pkg)
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/Makefile:20: REPLACE_PERL is ignored when NO_CONFIGURE is set (in line 21).")
+}
+
+func (s *Suite) Test_Package_checkfilePackageMakefile__META_PACKAGE_with_distinfo(c *check.C) {
+	t := s.Init(c)
+
+	pkg := t.SetupPackage("category/package",
+		"META_PACKAGE=\tyes")
+
+	G.CheckDirent(pkg)
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/distinfo: " +
+			"This file should not exist if NO_CHECKSUM or META_PACKAGE is set.")
+}
+
+func (s *Suite) Test_Package_checkfilePackageMakefile__USE_IMAKE_and_USE_X11(c *check.C) {
+	t := s.Init(c)
+
+	pkg := t.SetupPackage("category/package",
+		"USE_X11=\tyes",
+		"USE_IMAKE=\tyes")
+
+	G.CheckDirent(pkg)
+
+	t.CheckOutputLines(
+		"NOTE: ~/category/package/Makefile:21: USE_IMAKE makes USE_X11 in line 20 superfluous.")
+}
+
+func (s *Suite) Test_Package_readMakefile__skipping(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall,no-space")
+	pkg := t.SetupPackage("category/package",
+		".include \"${MYSQL_PKGSRCDIR:S/-client$/-server/}/buildlink3.mk\"")
+
+	G.CheckDirent(pkg)
+
+	t.CheckOutputLines(
+		"NOTE: ~/category/package/Makefile:20: " +
+			"Skipping include file \"${MYSQL_PKGSRCDIR:S/-client$/-server/}/buildlink3.mk\". " +
+			"This may result in false warnings.")
+}
+
+func (s *Suite) Test_Package_readMakefile__not_found(c *check.C) {
+	t := s.Init(c)
+
+	pkg := t.SetupPackage("category/package",
+		".include \"../../devel/zlib/buildlink3.mk\"")
+	t.CreateFileLines("devel/zlib/buildlink3.mk",
+		".include \"../../enoent/enoent/buildlink3.mk\"")
+
+	G.checkdirPackage(pkg)
+
+	t.CheckOutputLines(
+		"ERROR: ~/devel/zlib/buildlink3.mk:1: Cannot read \"../../enoent/enoent/buildlink3.mk\".")
+}
+
+func (s *Suite) Test_Package_readMakefile__relative(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("category/package/extra.mk",
+		MkRcsID)
+	pkg := t.SetupPackage("category/package",
+		".include \"../package/extra.mk\"")
+
+	G.CheckDirent(pkg)
+
+	// FIXME: One of the below warnings is redundant.
+	t.CheckOutputLines(
+		"WARN: ~/category/package/Makefile:20: References to other packages should look like \"../../category/package\", not \"../package\".",
+		"WARN: ~/category/package/Makefile:20: Invalid relative path \"../package/extra.mk\".")
+}
+
+func (s *Suite) Test_Package_checkLocallyModified(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall,no-order")
+	G.CurrentUsername = "example-user"
+	t.CreateFileLines("category/package/CVS/Entries",
+		"/Makefile//modified//")
+
+	// Since MAINTAINER= pkgsrc-users@NetBSD.org, everyone may commit changes.
+
+	pkg := t.SetupPackage("category/package")
+
+	G.CheckDirent(pkg)
+
+	t.CheckOutputEmpty()
+
+	// A package with a MAINTAINER may be edited with care.
+
+	t.CreateFileLines("category/package/Makefile",
+		MkRcsID,
+		"",
+		"DISTNAME=\tdistname-1.0",
+		"CATEGORIES=\tcategory",
+		"MASTER_SITES=\t# none",
+		"",
+		"MAINTAINER=\tmaintainer@example.org", // Different from default value
+		"HOMEPAGE=\t# none",
+		"COMMENT=\tDummy package",
+		"LICENSE=\t2-clause-bsd",
+		"",
+		".include \"../../mk/bsd.pkg.mk\"")
+
+	G.CheckDirent(pkg)
+
+	t.CheckOutputLines(
+		"NOTE: ~/category/package/Makefile: " +
+			"Please only commit changes that maintainer@example.org would approve.")
+
+	// A package with an OWNER may NOT be edited by others.
+
+	pkg = t.SetupPackage("category/package",
+		"OWNER=\towner@example.org")
+
+	G.CheckDirent(pkg)
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/Makefile: " +
+			"Don't commit changes to this file without asking the OWNER, owner@example.org.")
+
+	// ... unless you are the owner, of course.
+
+	G.CurrentUsername = "owner"
+
+	G.CheckDirent(pkg)
+
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Pkglint_checkdirPackage__filename_with_variable(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall,no-order")
+	pkg := t.SetupPackage("category/package",
+		".include \"../../mk/bsd.prefs.mk\"",
+		"",
+		"RUBY_VERSIONS_ACCEPTED=\t22 23 24 25", // As of 2018.
+		".for rv in ${RUBY_VERSIONS_ACCEPTED}",
+		"RUBY_VER?=\t\t${rv}",
+		".endfor",
+		"",
+		"RUBY_PKGDIR=\t../../lang/ruby-${RUBY_VER}-base",
+		"DISTINFO_FILE=\t${RUBY_PKGDIR}/distinfo")
+
+	// Pkglint cannot currently resolve the location of DISTINFO_FILE completely
+	// because the variable \"rv\" comes from a .for loop.
+	//
+	// TODO: resolve variables in simple .for loops like the above.
+	G.CheckDirent(pkg)
+
+	t.CheckOutputEmpty()
 }

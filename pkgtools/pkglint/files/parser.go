@@ -12,7 +12,7 @@ type Parser struct {
 }
 
 func NewParser(line Line, s string, emitWarnings bool) *Parser {
-	return &Parser{line, textproc.NewPrefixReplacer(s), emitWarnings}
+	return &Parser{line, G.NewPrefixReplacer(s), emitWarnings}
 }
 
 func (p *Parser) EOF() bool {
