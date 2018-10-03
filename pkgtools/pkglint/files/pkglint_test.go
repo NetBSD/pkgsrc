@@ -3,13 +3,14 @@ package main
 import (
 	"io/ioutil"
 	"strings"
+	"time"
 
 	"gopkg.in/check.v1"
 	"netbsd.org/pkglint/trace"
 	"os"
 )
 
-func (s *Suite) Test_Pkglint_Main_help(c *check.C) {
+func (s *Suite) Test_Pkglint_Main__help(c *check.C) {
 	t := s.Init(c)
 
 	exitcode := G.Main("pkglint", "-h")
@@ -18,7 +19,7 @@ func (s *Suite) Test_Pkglint_Main_help(c *check.C) {
 	c.Check(t.Output(), check.Matches, `^\Qusage: pkglint [options] dir...\E\n(?s).+`)
 }
 
-func (s *Suite) Test_Pkglint_Main_version(c *check.C) {
+func (s *Suite) Test_Pkglint_Main__version(c *check.C) {
 	t := s.Init(c)
 
 	exitcode := G.Main("pkglint", "--version")
@@ -28,7 +29,7 @@ func (s *Suite) Test_Pkglint_Main_version(c *check.C) {
 		confVersion)
 }
 
-func (s *Suite) Test_Pkglint_Main_no_args(c *check.C) {
+func (s *Suite) Test_Pkglint_Main__no_args(c *check.C) {
 	t := s.Init(c)
 
 	exitcode := G.Main("pkglint")
@@ -115,6 +116,18 @@ func (s *Suite) Test_Pkglint_Main__unknown_option(c *check.C) {
 		"  (Prefix a flag with \"no-\" to disable it.)")
 }
 
+func (s *Suite) Test_Pkglint_Main__panic(c *check.C) {
+	t := s.Init(c)
+
+	pkg := t.SetupPackage("category/package")
+
+	G.logOut = nil // Force an error that cannot happen in practice.
+
+	c.Check(
+		func() { G.Main("pkglint", pkg) },
+		check.PanicMatches, `(?s).*\bnil pointer\b.*`)
+}
+
 // Demonstrates which infrastructure files are necessary to actually run
 // pkglint in a realistic scenario.
 // For most tests, this setup is too much work, therefore they
@@ -129,7 +142,7 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 
 	// FIXME: pkglint should warn that the latest version in this file
 	// (1.10) doesn't match the current version in the package (1.11).
-	t.SetupFileLines("doc/CHANGES-2018",
+	t.CreateFileLines("doc/CHANGES-2018",
 		RcsID,
 		"",
 		"Changes to the packages collection and infrastructure in 2018:",
@@ -137,7 +150,7 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 		"\tUpdated sysutils/checkperms to 1.10 [rillig 2018-01-05]")
 
 	// See Pkgsrc.loadSuggestedUpdates.
-	t.SetupFileLines("doc/TODO",
+	t.CreateFileLines("doc/TODO",
 		RcsID,
 		"",
 		"Suggested package updates",
@@ -145,19 +158,19 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 		"\to checkperms-1.13 [supports more file formats]")
 
 	// The LICENSE in the package Makefile is searched here.
-	t.SetupFileLines("licenses/bsd-2",
+	t.CreateFileLines("licenses/bsd-2",
 		"# dummy")
 
 	// The MASTER_SITES in the package Makefile are searched here.
 	// See Pkgsrc.loadMasterSites.
-	t.SetupFileMkLines("mk/fetch/sites.mk",
+	t.CreateFileLines("mk/fetch/sites.mk",
 		MkRcsID,
 		"",
 		"MASTER_SITE_GITHUB+=\thttps://github.com/")
 
 	// The existence of this file makes the category "sysutils" valid.
 	// The category "tools" on the other hand is not valid.
-	t.SetupFileMkLines("sysutils/Makefile",
+	t.CreateFileLines("sysutils/Makefile",
 		MkRcsID)
 
 	// The package Makefile is quite simple, containing just the
@@ -165,21 +178,21 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 	// values is partly defined in the pkgsrc infrastructure files
 	// (as defined in the previous lines), and partly in the pkglint
 	// code directly. Many details can be found in vartypecheck.go.
-	t.SetupFileMkLines("sysutils/checkperms/Makefile",
+	t.CreateFileLines("sysutils/checkperms/Makefile",
 		MkRcsID,
 		"",
 		"DISTNAME=\tcheckperms-1.11",
 		"CATEGORIES=\tsysutils tools",
 		"MASTER_SITES=\t${MASTER_SITE_GITHUB:=rillig/}",
 		"",
-		"MAINTAINER=\tpkgsrc-users@pkgsrc.org",
+		"MAINTAINER=\tpkgsrc-users@NetBSD.org",
 		"HOMEPAGE=\thttps://github.com/rillig/checkperms/",
 		"COMMENT=\tCheck file permissions",
 		"LICENSE=\tbsd-2",
 		"",
 		".include \"../../mk/bsd.pkg.mk\"")
 
-	t.SetupFileLines("sysutils/checkperms/MESSAGE",
+	t.CreateFileLines("sysutils/checkperms/MESSAGE",
 		"===========================================================================",
 		RcsID,
 		"",
@@ -187,18 +200,18 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 		"",
 		"===========================================================================")
 
-	t.SetupFileLines("sysutils/checkperms/PLIST",
+	t.CreateFileLines("sysutils/checkperms/PLIST",
 		PlistRcsID,
 		"bin/checkperms",
 		"man/man1/checkperms.1")
 
-	t.SetupFileLines("sysutils/checkperms/README",
+	t.CreateFileLines("sysutils/checkperms/README",
 		"When updating this package, test the pkgsrc bootstrap.")
 
-	t.SetupFileLines("sysutils/checkperms/TODO",
+	t.CreateFileLines("sysutils/checkperms/TODO",
 		"Make the package work on MS-DOS")
 
-	t.SetupFileLines("sysutils/checkperms/patches/patch-checkperms.c",
+	t.CreateFileLines("sysutils/checkperms/patches/patch-checkperms.c",
 		RcsID,
 		"",
 		"A simple patch demonstrating that pkglint checks for missing",
@@ -211,7 +224,7 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 		"+// Header 1",
 		"+// Header 2",
 		"+// Header 3")
-	t.SetupFileLines("sysutils/checkperms/distinfo",
+	t.CreateFileLines("sysutils/checkperms/distinfo",
 		RcsID,
 		"",
 		"SHA1 (checkperms-1.12.tar.gz) = 34c084b4d06bcd7a8bba922ff57677e651eeced5",
@@ -242,7 +255,7 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 // pkgsrcdir=...
 // env PKGLINT_TESTCMDLINE="$pkgsrcdir -r" ./pkglint.test -test.coverprofile pkglint.cov
 // go tool cover -html=pkglint.cov -o coverage.html
-func (s *Suite) Test_Pkglint_coverage(c *check.C) {
+func (s *Suite) Test_Pkglint__coverage(c *check.C) {
 	cmdline := os.Getenv("PKGLINT_TESTCMDLINE")
 	if cmdline != "" {
 		G.logOut, G.logErr, trace.Out = NewSeparatorWriter(os.Stdout), NewSeparatorWriter(os.Stderr), os.Stdout
@@ -253,7 +266,7 @@ func (s *Suite) Test_Pkglint_coverage(c *check.C) {
 func (s *Suite) Test_Pkglint_CheckDirent__outside(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupFileLines("empty")
+	t.CreateFileLines("empty")
 
 	G.CheckDirent(t.File("."))
 
@@ -261,13 +274,55 @@ func (s *Suite) Test_Pkglint_CheckDirent__outside(c *check.C) {
 		"ERROR: ~: Cannot determine the pkgsrc root directory for \"~\".")
 }
 
+func (s *Suite) Test_Pkglint_CheckDirent__empty_directory(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupPkgsrc()
+	t.CreateFileLines("category/package/CVS/Entries")
+
+	G.CheckDirent(t.File("category/package"))
+
+	// Empty directories are silently skipped.
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Pkglint_CheckDirent__files_directory(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupPkgsrc()
+	t.CreateFileLines("category/package/files/README.md")
+
+	G.CheckDirent(t.File("category/package/files"))
+
+	// This diagnostic is not really correct, but it's an edge case anyway.
+	t.CheckOutputLines(
+		"ERROR: ~/category/package/files: Cannot check directories outside a pkgsrc tree.")
+}
+
+func (s *Suite) Test_Pkglint_CheckDirent__manual_patch(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupPkgsrc()
+	t.CreateFileLines("category/package/patches/manual-configure")
+	t.CreateFileLines("category/package/Makefile",
+		MkRcsID)
+
+	G.CheckDirent(t.File("category/package"))
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/Makefile: Neither PLIST nor PLIST.common exist, and PLIST_SRC is unset.",
+		"WARN: ~/category/package/distinfo: File not found. Please run \""+confMake+" makesum\" or define NO_CHECKSUM=yes in the package Makefile.",
+		"ERROR: ~/category/package/Makefile: Each package must define its LICENSE.",
+		"WARN: ~/category/package/Makefile: No COMMENT given.")
+}
+
 func (s *Suite) Test_Pkglint_CheckDirent(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupFileLines("mk/bsd.pkg.mk")
-	t.SetupFileLines("category/package/Makefile")
-	t.SetupFileLines("category/Makefile")
-	t.SetupFileLines("Makefile")
+	t.CreateFileLines("mk/bsd.pkg.mk")
+	t.CreateFileLines("category/package/Makefile")
+	t.CreateFileLines("category/Makefile")
+	t.CreateFileLines("Makefile")
 
 	G.CheckDirent(t.File("."))
 
@@ -434,10 +489,11 @@ func (s *Suite) Test_Pkglint__profiling(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupPkgsrc()
-	G.Main("pkglint", "--profiling", t.File("."))
+	t.Chdir(".")
+
+	G.Main("pkglint", "--profiling")
 
 	// Pkglint always writes the profiling data into the current directory.
-	// Luckily, this directory is usually writable.
 	c.Check(fileExists("pkglint.pprof"), equals, true)
 
 	err := os.Remove("pkglint.pprof")
@@ -447,7 +503,20 @@ func (s *Suite) Test_Pkglint__profiling(c *check.C) {
 	// or not interesting enough, since that info includes the exact timing
 	// that the top time-consuming regular expressions took.
 	firstOutput := strings.Split(t.Output(), "\n")[0]
-	c.Check(firstOutput, equals, "ERROR: ~/Makefile: Cannot be read.")
+	c.Check(firstOutput, equals, "ERROR: Makefile: Cannot be read.")
+}
+
+func (s *Suite) Test_Pkglint__profiling_error(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupPkgsrc()
+	t.Chdir(".")
+	t.CreateFileLines("pkglint.pprof/file")
+
+	exitcode := G.Main("pkglint", "--profiling")
+
+	c.Check(exitcode, equals, 1)
+	c.Check(t.Output(), check.Matches, `^FATAL: Cannot create profiling file: open pkglint\.pprof: .*\n$`)
 }
 
 func (s *Suite) Test_Pkglint_Checkfile__in_current_working_directory(c *check.C) {
@@ -594,35 +663,17 @@ func (s *Suite) Test_Pkglint_ToolByVarname__fallback(c *check.C) {
 	c.Check(G.ToolByVarname("TOOL", RunTime), equals, global)
 }
 
-func (s *Suite) Test_Pkglint_Checkfile__CheckExtra(c *check.C) {
+func (s *Suite) Test_CheckfileExtra(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Call", "-Wall,no-space")
-	t.SetupPkgsrc()
-	G.Pkgsrc.LoadInfrastructure()
-	t.CreateFileLines("licenses/gnu-gpl-2.0")
-	t.CreateFileLines("category/Makefile")
-	t.CreateFileLines("category/package/Makefile",
-		MkRcsID,
-		"",
-		"DISTNAME=       pkgname-1.0",
-		"CATEGORIES=     category",
-		"",
-		"COMMENT=        Comment",
-		"LICENSE=        gnu-gpl-2.0",
-		"",
-		"NO_CHECKSUM=    yes",
-		"",
-		".include \"../../mk/bsd.pkg.mk\"")
-	t.CreateFileLines("category/package/PLIST",
-		PlistRcsID,
-		"bin/program")
+	pkg := t.SetupPackage("category/package")
 	t.CreateFileLines("category/package/INSTALL",
 		"#! /bin/sh")
 	t.CreateFileLines("category/package/DEINSTALL",
 		"#! /bin/sh")
 
-	G.CheckDirent(t.File("category/package"))
+	G.CheckDirent(pkg)
 
 	t.CheckOutputEmpty()
 }
@@ -631,31 +682,13 @@ func (s *Suite) Test_Pkglint_Checkfile__before_import(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Call", "-Wall,no-space", "--import")
-	t.SetupPkgsrc()
-	G.Pkgsrc.LoadInfrastructure()
-	t.CreateFileLines("licenses/gnu-gpl-2.0")
-	t.CreateFileLines("category/Makefile")
-	t.CreateFileLines("category/package/Makefile",
-		MkRcsID,
-		"",
-		"DISTNAME=       pkgname-1.0",
-		"CATEGORIES=     category",
-		"",
-		"COMMENT=        Comment",
-		"LICENSE=        gnu-gpl-2.0",
-		"",
-		"NO_CHECKSUM=    yes",
-		"",
-		".include \"../../mk/bsd.pkg.mk\"")
-	t.CreateFileLines("category/package/PLIST",
-		PlistRcsID,
-		"bin/program")
+	pkg := t.SetupPackage("category/package")
 	t.CreateFileLines("category/package/work/log")
 	t.CreateFileLines("category/package/Makefile~")
 	t.CreateFileLines("category/package/Makefile.orig")
 	t.CreateFileLines("category/package/Makefile.rej")
 
-	G.CheckDirent(t.File("category/package"))
+	G.CheckDirent(pkg)
 
 	t.CheckOutputLines(
 		"ERROR: ~/category/package/Makefile.orig: Must be cleaned up before committing the package.",
@@ -775,3 +808,145 @@ func (s *Suite) Test_Pkglint_Checkfile__readme_and_todo(c *check.C) {
 		"ERROR: wip/package/TODO: Must be cleaned up before committing the package.",
 		"4 errors and 0 warnings found.")
 }
+
+func (s *Suite) Test_Pkglint_Checkfile__unknown_file_in_patches(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileDummyPatch("category/Makefile/patches/index")
+
+	G.Checkfile(t.File("category/Makefile/patches/index"))
+
+	t.CheckOutputLines(
+		"WARN: ~/category/Makefile/patches/index: " +
+			"Patch files should be named \"patch-\", followed by letters, '-', '_', '.', and digits only.")
+}
+
+func (s *Suite) Test_Pkglint_Checkfile__file_in_files(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("category/package/files/index")
+
+	G.Checkfile(t.File("category/package/files/index"))
+
+	// These files are ignored since they could contain anything.
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Pkglint_Checkfile__spec(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("category/package/spec")
+	t.CreateFileLines("regress/package/spec")
+
+	G.Checkfile(t.File("category/package/spec"))
+	G.Checkfile(t.File("regress/package/spec"))
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/spec: Only packages in regress/ may have spec files.")
+}
+
+func (s *Suite) Test_Pkglint_checkMode__skipped(c *check.C) {
+	t := s.Init(c)
+
+	G.checkMode("work", os.ModeSymlink)
+	G.checkMode("work.i386", os.ModeSymlink)
+	G.checkMode("work.hostname", os.ModeSymlink)
+	G.checkMode("other", os.ModeSymlink)
+
+	G.checkMode("device", os.ModeDevice)
+
+	t.CheckOutputLines(
+		"WARN: other: Unknown symlink name.",
+		"ERROR: device: Only files and directories are allowed in pkgsrc.")
+}
+
+func (s *Suite) Test_Pkglint_checkdirPackage__ALTERNATIVES(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall,no-space")
+	pkg := t.SetupPackage("category/package")
+	t.CreateFileLines("category/package/ALTERNATIVES",
+		"bin/wrapper bin/wrapper-impl")
+
+	G.CheckDirent(pkg)
+
+	t.CheckOutputLines(
+		"ERROR: ~/category/package/ALTERNATIVES:1: " +
+			"Alternative implementation \"bin/wrapper-impl\" must appear in the PLIST.")
+}
+
+func (s *Suite) Test_CheckfileMk__enoent(c *check.C) {
+	t := s.Init(c)
+
+	CheckfileMk(t.File("fname.mk"))
+
+	t.CheckOutputLines(
+		"ERROR: ~/fname.mk: Cannot be read.")
+}
+
+func (s *Suite) Test_Pkglint_checkExecutable(c *check.C) {
+	t := s.Init(c)
+
+	G.checkExecutable(ExecutableFileInfo{t.File("fname.mk")})
+
+	t.CheckOutputLines(
+		"WARN: ~/fname.mk: Should not be executable.")
+
+	t.SetupCommandLine("--autofix")
+
+	G.checkExecutable(ExecutableFileInfo{t.File("fname.mk")})
+
+	// FIXME: The error message "Cannot clear executable bits" is swallowed.
+	t.CheckOutputLines(
+		"AUTOFIX: ~/fname.mk: Clearing executable bits")
+}
+
+func (s *Suite) Test_main(c *check.C) {
+	t := s.Init(c)
+
+	out, err := os.Create(t.CreateFileLines("out"))
+	c.Check(err, check.IsNil)
+
+	pkg := t.SetupPackage("category/package")
+
+	func() {
+		args := os.Args
+		stdout := os.Stdout
+		stderr := os.Stderr
+		prevExit := exit
+		defer func() {
+			os.Stderr = stderr
+			os.Stdout = stdout
+			os.Args = args
+			exit = prevExit
+		}()
+		os.Args = []string{"pkglint", pkg}
+		os.Stdout = out
+		os.Stderr = out
+		exit = func(code int) {
+			c.Check(code, equals, 0)
+		}
+
+		main()
+	}()
+
+	err = out.Close()
+	c.Check(err, check.IsNil)
+
+	t.CheckOutputEmpty()
+	t.CheckFileLines("out",
+		"Looks fine.")
+}
+
+// ExecutableFileInfo mocks a FileInfo because on Windows,
+// regular files don't have the executable bit.
+type ExecutableFileInfo struct {
+	name string
+}
+
+func (i ExecutableFileInfo) Name() string       { return i.name }
+func (i ExecutableFileInfo) Size() int64        { return 13 }
+func (i ExecutableFileInfo) Mode() os.FileMode  { return 0777 }
+func (i ExecutableFileInfo) ModTime() time.Time { return time.Unix(0, 0) }
+func (i ExecutableFileInfo) IsDir() bool        { return false }
+func (i ExecutableFileInfo) Sys() interface{}   { return nil }

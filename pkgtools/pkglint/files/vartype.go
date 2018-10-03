@@ -232,7 +232,7 @@ var (
 	BtPathname               = &BasicType{"Pathname", (*VartypeCheck).Pathname}
 	BtPerl5Packlist          = &BasicType{"Perl5Packlist", (*VartypeCheck).Perl5Packlist}
 	BtPerms                  = &BasicType{"Perms", (*VartypeCheck).Perms}
-	BtPkgName                = &BasicType{"PkgName", (*VartypeCheck).PkgName}
+	BtPkgName                = &BasicType{"Pkgname", (*VartypeCheck).Pkgname}
 	BtPkgPath                = &BasicType{"PkgPath", (*VartypeCheck).PkgPath}
 	BtPkgOptionsVar          = &BasicType{"PkgOptionsVar", (*VartypeCheck).PkgOptionsVar}
 	BtPkgRevision            = &BasicType{"PkgRevision", (*VartypeCheck).PkgRevision}
