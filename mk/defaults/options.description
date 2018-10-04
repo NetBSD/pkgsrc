@@ -551,6 +551,7 @@ notmuch-emacs		Install emacs support files for notmuch.
 nspluginwrapper		Enable running non native netscape compatible plugins.
 nss			Enable Network Security Services (NSS) support.
 oauth			Enable OAuth support.
+ocaml			Enable OCaml support.
 ocaml-tyxml		Enable OCaml-tyxml support
 ocamlgraph		Enable Ocamlgraph support.
 octave			Enable Octave support.
