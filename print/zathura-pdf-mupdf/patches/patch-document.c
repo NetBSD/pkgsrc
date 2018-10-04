@@ -1,10 +1,10 @@
-$NetBSD: patch-document.c,v 1.4 2017/01/31 10:12:02 leot Exp $
+$NetBSD: patch-document.c,v 1.5 2018/10/04 19:13:28 leot Exp $
 
 Correct the glib-2.0 include header file path.
 
---- document.c.orig	2017-01-11 21:21:14.000000000 +0000
-+++ document.c
-@@ -5,7 +5,7 @@
+--- zathura-pdf-mupdf/document.c.orig	2018-03-17 19:47:01.000000000 +0000
++++ zathura-pdf-mupdf/document.c
+@@ -3,7 +3,7 @@
  #include <mupdf/fitz.h>
  #include <mupdf/pdf.h>
  
