@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2018/10/04 15:46:48 roy Exp $
+
+SHA1 (AitDoB-0.0.20120330-facbecc3cd621efabfcfe5a910cb2da70745fe46.tar.gz) = ad0dd5ad349c43b0a0aef5d62c2957c7820bbee3
+RMD160 (AitDoB-0.0.20120330-facbecc3cd621efabfcfe5a910cb2da70745fe46.tar.gz) = 35390709a2970d98c710cebc1b3c285acfc6c0a8
+SHA512 (AitDoB-0.0.20120330-facbecc3cd621efabfcfe5a910cb2da70745fe46.tar.gz) = 531454d225564a9100c777c80e2800dd7cbd665bdaa9c00c1b6f81dab048ac5e93f77d44782334f215b5e0c3b325c7ab78ed07d21236ecc6450b5f0185ece824
+Size (AitDoB-0.0.20120330-facbecc3cd621efabfcfe5a910cb2da70745fe46.tar.gz) = 9978 bytes
+SHA1 (patch-Makefile) = ebcfbf4b20f6e61bf731cdf4f6dbee2f3f985ddd
+SHA1 (patch-ui.cc) = d7d06589f232e36f138e8ead4b4d9c4b25f6d716
