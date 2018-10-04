@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2018/07/04 13:40:37 jperkin Exp $
+# $NetBSD: Makefile,v 1.28 2018/10/04 12:21:33 tnn Exp $
 
 DISTNAME=	e2fsprogs-1.43.7
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://www.kernel.org/pub/linux/kernel/people/tytso/e2fsprogs/v${PKGVERSION_NOREV}/
 #MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=e2fsprogs/}
@@ -20,15 +21,31 @@ CONFIGURE_ARGS+=	--disable-libblkid
 CONFIGURE_ARGS+=	--disable-libuuid
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 INFO_FILES=		yes
+INSTALL_TARGET=		install install-libs
+
+PKGCONFIG_OVERRIDE+=	lib/blkid/blkid.pc.in
+PKGCONFIG_OVERRIDE+=	lib/e2p/e2p.pc.in
+PKGCONFIG_OVERRIDE+=	lib/et/com_err.pc.in
+PKGCONFIG_OVERRIDE+=	lib/ext2fs/ext2fs.pc.in
+PKGCONFIG_OVERRIDE+=	lib/ss/ss.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"
 BUILDLINK_TRANSFORM+=	rm:-luuid
 .endif
 
+PLIST_VARS+=		shlib
+.if ${OBJECT_FMT} == "ELF"
+PLIST.shlib=		yes
+CONFIGURE_ARGS+=	--enable-elf-shlibs
+.else
+CONFIGURE_ARGS+=	--disable-elf-shlibs
+.endif
+
 # Only build fsck(8) on platforms that need it.
 PLIST_VARS+=		fsck
 .if ${OPSYS} == "Linux"
+CONFIGURE_ARGS+=	--enable-fsck
 PLIST.fsck=		yes
 .else
 CONFIGURE_ARGS+=	--disable-fsck
