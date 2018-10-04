@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 01:59:37 agc Exp $
+$NetBSD: distinfo,v 1.4 2018/10/04 12:53:07 adam Exp $
 
-SHA1 (jansson-2.7.tar.gz) = 7d8686d84fd46c7c28d70bf2d5e8961bc002845e
-RMD160 (jansson-2.7.tar.gz) = b30b0b41b6cfe839559cecf15701d3424248dff3
-SHA512 (jansson-2.7.tar.gz) = 657b715868c2fbf8da1e41befee2691524190e12255214c472652ca3e3793b03e2b384dc3aedb1071b67b0b8cb57fd495103979983fe21a2404f12cd70295a28
-Size (jansson-2.7.tar.gz) = 445179 bytes
+SHA1 (jansson-2.11.tar.bz2) = 02eedcc641c5770da423a0ea05e3a104bafd7ef1
+RMD160 (jansson-2.11.tar.bz2) = 3bcee164d2cfb3432aa129988bac86b19109d8d6
+SHA512 (jansson-2.11.tar.bz2) = 3a9ef8c470d203ef65f214d979d0a8dfc034ff1417b2af7071564c804e33d51f7b30915c7d62ac2156092aef756e4cdc3298a67205b913ffc312dcafeeefc1dc
+Size (jansson-2.11.tar.bz2) = 399179 bytes
