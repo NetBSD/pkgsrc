@@ -1,4 +1,4 @@
-# $NetBSD: curses.builtin.mk,v 1.18 2017/04/24 12:16:38 sborrill Exp $
+# $NetBSD: curses.builtin.mk,v 1.19 2018/10/04 15:34:42 roy Exp $
 
 BUILTIN_PKG:=	curses
 
@@ -11,7 +11,7 @@ BUILTIN_FIND_HEADERS.H_CURSES=			curses.h
 # package can use the builtin curses or not.
 #
 BUILTIN_TEST_CURSES_FUNCS=	chgat getsyx halfdelay putwin
-BUILTIN_TEST_CURSES_FUNCS+=	resize_term resizeterm set_escdelay syncok
+BUILTIN_TEST_CURSES_FUNCS+=	resize_term resizeterm ripoffline set_escdelay syncok
 BUILTIN_TEST_CURSES_FUNCS+=	wgetnstr wsyncup mvwchgat vw_printw
 BUILTIN_TEST_CURSES_DEFINES=	WA_NORMAL
 
