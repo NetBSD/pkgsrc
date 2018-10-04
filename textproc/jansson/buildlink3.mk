@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2018/01/07 13:04:33 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2018/10/04 12:53:07 adam Exp $
 
 BUILDLINK_TREE+=	jansson
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	jansson
 JANSSON_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.jansson+=	jansson>=2.0
-BUILDLINK_ABI_DEPENDS.jansson?=	jansson>=2.4nb1
+BUILDLINK_ABI_DEPENDS.jansson+=	jansson>=2.4nb1
 BUILDLINK_PKGSRCDIR.jansson?=	../../textproc/jansson
 
 .endif # JANSSON_BUILDLINK3_MK
