@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.418 2018/09/30 19:32:00 maya Exp $
+# $NetBSD: Makefile,v 1.419 2018/10/04 15:47:28 roy Exp $
 #
 
 COMMENT=	Games
@@ -6,6 +6,7 @@ COMMENT=	Games
 SUBDIR+=	0verkill
 SUBDIR+=	2048-cli
 SUBDIR+=	4stAttack
+SUBDIR+=	AitDoB
 SUBDIR+=	InterLOGIC
 SUBDIR+=	KoboDeluxe
 SUBDIR+=	LostPixels
