@@ -1,0 +1,15 @@
+$NetBSD: patch-ocaml_Makefile.in,v 1.1 2018/10/04 16:01:40 tnn Exp $
+
+Fix OCaml install directory.
+
+--- ocaml/Makefile.in.orig	2018-02-26 10:53:35.000000000 +0000
++++ ocaml/Makefile.in
+@@ -1853,7 +1853,7 @@ uninstall-am:
+ @HAVE_OCAML_TRUE@install-data-hook:
+ @HAVE_OCAML_TRUE@	mkdir -p $(DESTDIR)$(OCAMLLIB)/stublibs
+ @HAVE_OCAML_TRUE@	$(OCAMLFIND) install \
+-@HAVE_OCAML_TRUE@	  -ldconf ignore -destdir $(DESTDIR)$(OCAMLLIB) \
++@HAVE_OCAML_TRUE@	  -ldconf ignore -destdir $(DESTDIR)$(PREFIX)/$(OCAML_SITELIBDIR) \
+ @HAVE_OCAML_TRUE@	  $(PACKAGE_NAME) \
+ @HAVE_OCAML_TRUE@	  $(install_files)
+ 
