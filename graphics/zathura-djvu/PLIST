@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/02/14 13:59:12 leot Exp $
-lib/zathura/djvu.so
-share/applications/zathura-djvu.desktop
+@comment $NetBSD: PLIST,v 1.2 2018/10/04 19:11:38 leot Exp $
+lib/zathura/libdjvu.so
+share/applications/org.pwmt.zathura-djvu.desktop
+share/metainfo/org.pwmt.zathura-djvu.metainfo.xml
