@@ -1,48 +1,57 @@
-$NetBSD: patch-thirdparty_mujs_Makefile,v 1.4 2018/05/06 13:19:10 leot Exp $
+$NetBSD: patch-thirdparty_mujs_Makefile,v 1.5 2018/10/04 19:02:33 leot Exp $
 
 - Add libtool support to mujs.
 - Avoid to set (unused) VERSION variable.
 
---- thirdparty/mujs/Makefile.orig	2018-01-24 15:55:49.000000000 +0000
+--- thirdparty/mujs/Makefile.orig	2018-09-11 10:47:31.000000000 +0000
 +++ thirdparty/mujs/Makefile
 @@ -7,12 +7,6 @@ bindir ?= $(prefix)/bin
  incdir ?= $(prefix)/include
  libdir ?= $(prefix)/lib
  
 -ifeq "$(wildcard .git)" ".git"
--VERSION := $(shell git describe --tags --always)
+-  VERSION := $(shell git describe --tags --always)
 -else
--VERSION := $(shell basename $$PWD | sed -e s,^mujs-,,)
+-  VERSION := $(shell basename $$PWD | sed -e s,^mujs-,,)
 -endif
 -
  # Compiler flags for various configurations:
  
  CFLAGS := -std=c99 -pedantic -Wall -Wextra -Wno-unused-parameter
-@@ -63,19 +57,19 @@ jsdump.c: astnames.h opnames.h
- $(OUT):
- 	mkdir -p $(OUT)
+@@ -64,15 +58,15 @@ one.c: $(SRCS)
  
--$(OUT)/main.o: main.c $(HDRS)
-+$(OUT)/main.lo: main.c $(HDRS)
+ jsdump.c: astnames.h opnames.h
+ 
+-$(OUT)/%.o: %.c $(HDRS)
++$(OUT)/%.lo: %.c $(HDRS)
+ 	@ mkdir -p $(dir $@)
  	$(CC) $(CFLAGS) -o $@ -c $<
  
 -$(OUT)/libmujs.o: one.c $(HDRS)
 +$(OUT)/libmujs.lo: one.c $(HDRS)
+ 	@ mkdir -p $(dir $@)
  	$(CC) $(CFLAGS) -o $@ -c $<
  
 -$(OUT)/libmujs.a: $(OUT)/libmujs.o
 +$(OUT)/libmujs.la: $(OUT)/libmujs.lo
- 	$(AR) cru $@ $^
+ 	@ mkdir -p $(dir $@)
+ 	$(AR) cr $@ $^
  
- $(OUT)/libmujs.so: one.c $(HDRS)
+@@ -80,11 +74,11 @@ $(OUT)/libmujs.so: one.c $(HDRS)
+ 	@ mkdir -p $(dir $@)
  	$(CC) $(CFLAGS) -fPIC -shared -o $@ $< -lm
  
 -$(OUT)/mujs: $(OUT)/libmujs.o $(OUT)/main.o
 +$(OUT)/mujs: $(OUT)/libmujs.lo $(OUT)/main.lo
+ 	@ mkdir -p $(dir $@)
+ 	$(CC) $(LDFLAGS) -o $@ $^ $(LIBREADLINE) -lm
+ 
+-$(OUT)/mujs-pp: $(OUT)/libmujs.o $(OUT)/pp.o
++$(OUT)/mujs-pp: $(OUT)/libmujs.lo $(OUT)/pp.lo
+ 	@ mkdir -p $(dir $@)
  	$(CC) $(LDFLAGS) -o $@ $^ -lm
  
- $(OUT)/mujs.pc:
-@@ -100,7 +94,7 @@ install-common: release
+@@ -110,7 +104,7 @@ install-common: release
  	install -m 755 build/release/mujs $(DESTDIR)$(bindir)
  
  install-static: install-common
