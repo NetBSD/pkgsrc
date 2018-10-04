@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4273 2018/10/04 11:29:07 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.4274 2018/10/04 13:10:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5958,3 +5958,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/miniupnpc to 2.1 [nia 2018-10-03]
 	Updated pkgtools/pkglint to 5.6.3 [rillig 2018-10-03]
 	Updated net/syncthing to 0.14.51 [wiz 2018-10-04]
+	Updated textproc/jansson to 2.11 [adam 2018-10-04]
+	Updated www/nghttp2 to 1.34.0 [adam 2018-10-04]
+	Updated devel/cmake to 3.12.3 [adam 2018-10-04]
