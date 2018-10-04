@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2018/05/06 13:19:10 leot Exp $
+@comment $NetBSD: PLIST,v 1.17 2018/10/04 19:02:33 leot Exp $
 bin/mjsgen
 bin/mujstest
 bin/mupdf
@@ -64,7 +64,6 @@ include/mupdf/memento.h
 include/mupdf/pdf-tools.h
 include/mupdf/pdf.h
 include/mupdf/pdf/annot.h
-include/mupdf/pdf/appearance.h
 include/mupdf/pdf/clean.h
 include/mupdf/pdf/cmap.h
 include/mupdf/pdf/crypt.h
@@ -83,10 +82,10 @@ include/mupdf/pdf/resource.h
 include/mupdf/pdf/widget.h
 include/mupdf/pdf/xref.h
 include/mupdf/ucdn.h
+lib/libmupdf-pkcs7.la
+lib/libmupdf-third.la
+lib/libmupdf-threads.la
 lib/libmupdf.la
-lib/libmupdfthird.la
-lib/libmupkcs7.la
-lib/libmuthreads.la
 lib/pkgconfig/mupdf.pc
 man/man1/mupdf.1
 man/man1/mutool.1
@@ -99,10 +98,12 @@ share/doc/mupdf/building.html
 share/doc/mupdf/coding-overview.html
 share/doc/mupdf/coding-progressive.html
 share/doc/mupdf/coding-style.html
+share/doc/mupdf/examples/bbox-device.js
 share/doc/mupdf/examples/create-thumbnail.js
 share/doc/mupdf/examples/draw-device.js
 share/doc/mupdf/examples/draw-document.js
 share/doc/mupdf/examples/example.c
+share/doc/mupdf/examples/fix-s22pdf.js
 share/doc/mupdf/examples/jpx-to-pdf.js
 share/doc/mupdf/examples/multi-threaded.c
 share/doc/mupdf/examples/pdf-create-lowlevel.js

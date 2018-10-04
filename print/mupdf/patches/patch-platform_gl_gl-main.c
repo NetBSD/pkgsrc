@@ -1,16 +1,15 @@
-$NetBSD: patch-platform_gl_gl-main.c,v 1.1 2018/05/06 13:19:10 leot Exp $
+$NetBSD: patch-platform_gl_gl-main.c,v 1.2 2018/10/04 19:02:33 leot Exp $
 
-glutSetOption() is available only on freeglut.
+glutLeaveMainLoop() is present only on freeglut, define it otherwise.
 
---- platform/gl/gl-main.c.orig	2018-04-12 13:14:06.000000000 +0000
+--- platform/gl/gl-main.c.orig	2018-10-03 11:29:14.000000000 +0000
 +++ platform/gl/gl-main.c
-@@ -1674,7 +1674,9 @@ int main(int argc, char **argv)
+@@ -16,7 +16,7 @@
+ char *realpath(const char *path, char *resolved_path); /* in gl-file.c */
+ #endif
  
- 	/* Init GLUT */
- 
-+#if defined(FREEGLUT)
- 	glutSetOption(GLUT_ACTION_ON_WINDOW_CLOSE, GLUT_ACTION_GLUTMAINLOOP_RETURNS);
-+#endif
- 
- 	glutInitErrorFunc(on_error);
- 	glutInitWarningFunc(on_warning);
+-#ifdef __APPLE__
++#ifndef FREEGLUT
+ static void cleanup(void);
+ void glutLeaveMainLoop(void)
+ {
