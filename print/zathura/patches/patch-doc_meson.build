@@ -1,0 +1,12 @@
+$NetBSD: patch-doc_meson.build,v 1.1 2018/10/04 19:08:46 leot Exp $
+
+Also search for versioned sphinx-build-s.
+
+--- doc/meson.build.orig	2018-09-20 19:23:16.000000000 +0000
++++ doc/meson.build
+@@ -1,4 +1,4 @@
+-sphinx = find_program('sphinx-build')
++sphinx = find_program('sphinx-build', 'sphinx-build2.7', 'sphinx-build3.7', 'sphinx-build3.6', 'sphinx-build3.4', 'sphinx-build3.5')
+ custom_target('man pages',
+   command: [
+     sphinx,
