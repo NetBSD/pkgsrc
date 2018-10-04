@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2018/08/16 18:54:31 adam Exp $
+# $NetBSD: Makefile,v 1.62 2018/10/04 19:02:33 leot Exp $
 
-DISTNAME=	mupdf-1.13.0-source
+DISTNAME=	mupdf-1.14.0-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	https://mupdf.com/downloads/archive/
 
@@ -23,6 +22,7 @@ MAKE_FLAGS+=		LDFLAGS=${LDFLAGS:Q}
 MAKE_FLAGS+=		XCFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=		build=release
 MAKE_ENV+=		HAVE_LIBCRYPTO=no	# Needs openssl-1.1.0
+MAKE_ENV+=		USE_SYSTEM_LIBS=yes
 
 CFLAGS+=	-DJBIG_NO_MEMENTO
 CFLAGS.SunOS+=	-D_XOPEN_SOURCE=600
