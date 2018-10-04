@@ -1,24 +1,26 @@
-# $NetBSD: Makefile,v 1.20 2018/07/20 03:34:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.21 2018/10/04 19:08:46 leot Exp $
 
-DISTNAME=	zathura-0.3.8
-PKGREVISION=	4
+DISTNAME=	zathura-0.4.1
 CATEGORIES=	print
 MASTER_SITES=	https://pwmt.org/projects/zathura/download/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://pwmt.org/projects/zathura/
 COMMENT=	PDF viewer with vi-like keybindings
 LICENSE=	zlib
 
-USE_TOOLS+=	gmake msgfmt pkg-config
-USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config
 
-MAKE_ENV+=	COLOR=0
-MAKE_ENV+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
+# XXX: msgfmt needs to support `--xml', always use the one from pkgsrc
+TOOL_DEPENDS+=	gettext-tools>=0.15:../../devel/gettext-tools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/py-meson/build.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/girara/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/file/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
