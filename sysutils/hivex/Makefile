@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2018/10/03 21:57:37 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2018/10/04 16:01:40 tnn Exp $
 
 DISTNAME=	hivex-1.3.15
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://download.libguestfs.org/hivex/
 
@@ -18,11 +19,6 @@ USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE+=	hivex.pc.in
 
 CONFIGURE_ARGS+=	--disable-nls
-CONFIGURE_ARGS+=	--disable-ocaml
-CONFIGURE_ARGS+=	--disable-perl
-CONFIGURE_ARGS+=	--disable-python
-CONFIGURE_ARGS+=	--disable-ruby
-CONFIGURE_ARGS+=	--without-readline
 
 REPLACE_SH+=		sh/hivexget
 
@@ -37,6 +33,8 @@ PLIST.tools=yes
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .endif
+
+.include "options.mk"
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

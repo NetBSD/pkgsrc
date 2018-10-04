@@ -1,0 +1,15 @@
+$NetBSD: patch-perl_Makefile.in,v 1.1 2018/10/04 16:01:40 tnn Exp $
+
+Install as vendor module.
+
+--- perl/Makefile.in.orig	2018-02-26 10:53:35.000000000 +0000
++++ perl/Makefile.in
+@@ -1372,7 +1372,7 @@ EXTRA_DIST = \
+ @HAVE_PERL_TRUE@  MAKE=$(MAKE) \
+ @HAVE_PERL_TRUE@  ../run
+ 
+-@HAVE_PERL_TRUE@INSTALLDIRS = site
++@HAVE_PERL_TRUE@INSTALLDIRS = vendor
+ all: all-am
+ 
+ .SUFFIXES:
