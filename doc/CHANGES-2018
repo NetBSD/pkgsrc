@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4277 2018/10/04 19:03:45 leot Exp $
+$NetBSD: CHANGES-2018,v 1.4278 2018/10/04 19:09:13 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5964,3 +5964,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated games/AitDoB to 0.0.20120330 [roy 2018-10-04]
 	Updated print/mupdf to 1.14.0 [leot 2018-10-04]
 	Updated graphics/girara to 0.3.1 [leot 2018-10-04]
+	Updated print/zathura to 0.4.1 [leot 2018-10-04]
