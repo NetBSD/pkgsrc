@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4285 2018/10/05 10:37:44 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.4286 2018/10/05 12:57:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5972,3 +5972,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/zathura-ps to 0.2.6 [leot 2018-10-04]
 	Updated net/youtube-dl to 20181005 [leot 2018-10-05]
 	Updated databases/p5-App-Sqitch to 0.9998 [schmonz 2018-10-05]
+	Updated x11/libdrm to 2.4.95 [wiz 2018-10-05]
