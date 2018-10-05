@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4287 2018/10/05 13:38:08 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.4288 2018/10/05 17:49:21 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5974,3 +5974,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/p5-App-Sqitch to 0.9998 [schmonz 2018-10-05]
 	Updated x11/libdrm to 2.4.95 [wiz 2018-10-05]
 	Updated misc/libreoffice to 6.1.2.1 [ryoon 2018-10-05]
+	Updated devel/git to 2.19.1 [maya 2018-10-05]
