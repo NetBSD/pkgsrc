@@ -1,12 +1,12 @@
-$NetBSD: patch-xf86drmMode.c,v 1.3 2018/05/26 21:44:47 wiz Exp $
+$NetBSD: patch-xf86drmMode.c,v 1.4 2018/10/05 12:57:20 wiz Exp $
 
 Disable checking for hw.dri.%d.modesetting.
 This sysctl is only available if a KMS module is loaded. But the libdrm
 check happens before X got a chance of loading the KMS module.
 
---- xf86drmMode.c.orig	2018-05-09 22:26:03.000000000 +0000
+--- xf86drmMode.c.orig	2018-10-04 14:50:03.000000000 +0000
 +++ xf86drmMode.c
-@@ -793,38 +793,20 @@ int drmCheckModesettingSupported(const c
+@@ -800,38 +800,20 @@ drm_public int drmCheckModesettingSuppor
  	if (found)
  		return 0;
  #elif defined (__FreeBSD__) || defined (__FreeBSD_kernel__)
@@ -58,9 +58,9 @@ check happens before X got a chance of loading the KMS module.
  #elif defined(__DragonFly__)
  	return 0;
  #elif defined(__OpenBSD__)
-@@ -978,7 +960,7 @@ int drmModePageFlipTarget(int fd, uint32
+@@ -987,7 +969,7 @@ drm_public int drmModePageFlipTarget(int
  
- int drmModeSetPlane(int fd, uint32_t plane_id, uint32_t crtc_id,
+ drm_public int drmModeSetPlane(int fd, uint32_t plane_id, uint32_t crtc_id,
  		    uint32_t fb_id, uint32_t flags,
 -		    int32_t crtc_x, int32_t crtc_y,
 +		    uint32_t crtc_x, uint32_t crtc_y,
