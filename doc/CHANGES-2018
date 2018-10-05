@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4283 2018/10/04 19:16:14 leot Exp $
+$NetBSD: CHANGES-2018,v 1.4284 2018/10/05 08:00:47 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5970,3 +5970,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/zathura-pdf-mupdf to 0.3.4 [leot 2018-10-04]
 	Updated print/zathura-pdf-poppler to 0.2.9 [leot 2018-10-04]
 	Updated print/zathura-ps to 0.2.6 [leot 2018-10-04]
+	Updated net/youtube-dl to 20181005 [leot 2018-10-05]
