@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/10/03 23:31:06 nia Exp $
+# $NetBSD: Makefile,v 1.12 2018/10/05 13:30:41 nia Exp $
 
 PKGNAME=	retroarch-${RETROARCH_VERSION}
 DISTNAME=	RetroArch-${RETROARCH_VERSION}
@@ -23,6 +23,9 @@ CONFIGURE_ARGS+=	--disable-builtinzlib
 CONFIGURE_ARGS+=	--disable-builtinflac
 CONFIGURE_ARGS+=	--disable-discord
 
+# necessity for loading cores, might as well fail early without it
+CONFIGURE_ARGS+=	--enable-dylib
+
 CONFIGURE_ENV+=	BIN_DIR=${PREFIX}/bin
 CONFIGURE_ENV+=	MAN_DIR=${PREFIX}/${PKGMANDIR}
 
@@ -33,6 +36,7 @@ DEPENDS+=	libretro-database>=0:../../emulators/libretro-database
 DEPENDS+=	libretro-glsl-shaders>=0:../../emulators/libretro-glsl-shaders
 
 CPPFLAGS+=	-DPREFIX=\"${PREFIX}\"
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -49,5 +53,6 @@ CONFIGURE_ARGS+=	--disable-thread_storage
 .include "../../audio/flac/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/miniupnpc/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
