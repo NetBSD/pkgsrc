@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2018/09/30 19:00:31 maya Exp $
+# $NetBSD: options.mk,v 1.6 2018/10/05 14:23:44 ryoon Exp $
 
 # Global and legacy options
 
@@ -51,7 +51,7 @@ CONFIGURE_ARGS+=	--enable-libass
 CONFIGURE_ARGS+=	--disable-libass
 .endif
 
-# ass option
+# av1 option
 .if !empty(PKG_OPTIONS:Mav1)
 CONFIGURE_ARGS+=	--enable-libaom
 .include "../../multimedia/libaom/buildlink3.mk"
