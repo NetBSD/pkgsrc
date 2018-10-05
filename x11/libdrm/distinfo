@@ -1,15 +1,14 @@
-$NetBSD: distinfo,v 1.84 2018/09/09 04:04:56 maya Exp $
+$NetBSD: distinfo,v 1.85 2018/10/05 12:57:20 wiz Exp $
 
-SHA1 (libdrm-2.4.94.tar.bz2) = f8daee6cc2e7d2c9eb2dd062a2712172fb9f4e18
-RMD160 (libdrm-2.4.94.tar.bz2) = 14d94fa857c53e7d5580d3221c3b1ef310e9ecc2
-SHA512 (libdrm-2.4.94.tar.bz2) = 1a1699d6ea70b8759b37f3863e0802a99430b58f02e62632ad451356e2463eaf6faf4b810323f7dcc85ffdcca28f674b32caa5631ebd65b83e5b86bd59a35937
-Size (libdrm-2.4.94.tar.bz2) = 829060 bytes
-SHA1 (patch-ab) = ebc345d7f1aeb583b3ebb883fb3b27abc5b8133c
+SHA1 (libdrm-2.4.95.tar.bz2) = fd7c1002001ef1aa1b6094eb2b78f1031e233bb3
+RMD160 (libdrm-2.4.95.tar.bz2) = b697aa87205fcae9485899c5057717f9fb7f6eb8
+SHA512 (libdrm-2.4.95.tar.bz2) = 9bf8178a871bb059471f58f236c8362245e08877b732b2c8366d402e8066c9a74707e4ec3bf680fca12303f1319875edc98ae8e31bc9826f172798f47197e631
+Size (libdrm-2.4.95.tar.bz2) = 820722 bytes
 SHA1 (patch-ac) = 67c998df7dfc0dabc86320ea6d015cede3e464ea
 SHA1 (patch-include_drm_drm.h) = 48a912f40bf2b2a1c23edbe4446fa7869212f17b
 SHA1 (patch-libkms_vmwgfx.c) = d2204c0b79098c6c36b7f282b486c58c6354bd1d
 SHA1 (patch-radeon_radeon__bo__gem.c) = 4924fde172b2a2a713d47bf7b60a6b52851d7a8f
 SHA1 (patch-radeon_radeon__cs__gem.c) = 516b5dd6408c10a4f33f2815b3719e34a16d863a
-SHA1 (patch-xf86drm.c) = 8626fb9fad16a75a009f7483d9ba3411856134ad
-SHA1 (patch-xf86drmMode.c) = 09b2a9292825e6b952ee8ad5d6e4cd2bdc90228d
+SHA1 (patch-xf86drm.c) = 9a76f433c3b4688575cd60362396fb74d3294a4b
+SHA1 (patch-xf86drmMode.c) = 7a0d8ea4a0110b295d8cb4fe870ee523d420ea6b
 SHA1 (patch-xf86drmMode.h) = a28b02887389be8670193c119f711901af61a6b2
