@@ -1,20 +1,22 @@
-$NetBSD: patch-xf86drm.c,v 1.1 2018/09/09 04:04:57 maya Exp $
+$NetBSD: patch-xf86drm.c,v 1.2 2018/10/05 12:57:20 wiz Exp $
 
 Implement drmParseSubsystemType, drmParsePciBusInfo for NetBSD
 
---- xf86drm.c.orig	2018-09-09 02:59:41.597386206 +0000
+--- xf86drm.c.orig	2018-10-04 14:50:03.000000000 +0000
 +++ xf86drm.c
-@@ -85,6 +85,9 @@
+@@ -84,7 +84,10 @@
+ #endif
  
  #ifdef __NetBSD__
- #define DRM_MAJOR 180
+-#define DRM_MAJOR 34
++#define DRM_MAJOR 180
 +#include <sys/param.h>
 +#include <dev/pci/pcireg.h>
 +#include <pci.h>
  #endif
  
  #ifdef __OpenBSD__
-@@ -2990,6 +2993,65 @@ static int drmParseSubsystemType(int maj
+@@ -2997,6 +3000,65 @@ static int drmParseSubsystemType(int maj
          return DRM_BUS_VIRTIO;
  
      return -EINVAL;
@@ -80,7 +82,7 @@ Implement drmParseSubsystemType, drmParsePciBusInfo for NetBSD
  #elif defined(__OpenBSD__)
      return DRM_BUS_PCI;
  #else
-@@ -3040,6 +3102,73 @@ static int drmParsePciBusInfo(int maj, i
+@@ -3046,6 +3108,73 @@ static int drmParsePciBusInfo(int maj, i
      info->func = func;
  
      return 0;
@@ -154,7 +156,7 @@ Implement drmParseSubsystemType, drmParsePciBusInfo for NetBSD
  #elif defined(__OpenBSD__)
      struct drm_pciinfo pinfo;
      int fd, type;
-@@ -3209,6 +3338,41 @@ static int drmParsePciDeviceInfo(int maj
+@@ -3213,6 +3342,41 @@ static int drmParsePciDeviceInfo(int maj
          return parse_config_sysfs_file(maj, min, device);
  
      return 0;
