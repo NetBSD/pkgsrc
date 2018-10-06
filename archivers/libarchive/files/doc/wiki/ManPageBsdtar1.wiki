@@ -295,19 +295,18 @@ Sq foo.
 Compress the resulting archive with 
 [[xz(1)|http://www.freebsd.org/cgi/man.cgi?query=xz&sektion=1]]. 
 In extract or list modes, this option is ignored. 
-Note that, unlike other 
+Note that this 
 '''tar''' 
-implementations, this implementation recognizes XZ compression 
-automatically when reading archives. 
+implementation recognizes XZ compression automatically when reading archives. 
 </dd><dt>-j, --bzip, --bzip2, --bunzip2</dt><dd> 
 (c mode only) 
 Compress the resulting archive with 
 [[bzip2(1)|http://www.freebsd.org/cgi/man.cgi?query=bzip2&sektion=1]]. 
 In extract or list modes, this option is ignored. 
-Note that, unlike other 
+Note that this 
 '''tar''' 
-implementations, this implementation recognizes bzip2 compression 
-automatically when reading archives. 
+implementation recognizes bzip2 compression automatically when reading 
+archives. 
 </dd><dt>-k, --keep-old-files</dt><dd> 
 (x mode only) 
 Do not overwrite existing files. 
@@ -330,25 +329,41 @@ Issue a warning message unless all links to each file are archived.
 Compress the resulting archive with 
 [[lrzip(1)|http://www.freebsd.org/cgi/man.cgi?query=lrzip&sektion=1]]. 
 In extract or list modes, this option is ignored. 
+Note that this 
+'''tar''' 
+implementation recognizes lrzip compression automatically when reading 
+archives. 
 </dd><dt>--lz4</dt><dd> 
 (c mode only) 
 Compress the archive with lz4-compatible compression before writing it. 
-In input mode, this option is ignored; lz4 compression is recognized 
-automatically on input. 
+In extract or list modes, this option is ignored. 
+Note that this 
+'''tar''' 
+implementation recognizes lz4 compression automatically when reading archives. 
+</dd><dt>--zstd</dt><dd> 
+(c mode only) 
+Compress the archive with zstd-compatible compression before writing it. 
+In extract or list modes, this option is ignored. 
+Note that this 
+'''tar''' 
+implementation recognizes zstd compression automatically when reading archives. 
 </dd><dt>--lzma</dt><dd> 
 (c mode only) Compress the resulting archive with the original LZMA algorithm. 
+In extract or list modes, this option is ignored. 
 Use of this option is discouraged and new archives should be created with 
 --xz 
 instead. 
-Note that, unlike other 
+Note that this 
 '''tar''' 
-implementations, this implementation recognizes LZMA compression 
-automatically when reading archives. 
+implementation recognizes LZMA compression automatically when reading archives. 
 </dd><dt>--lzop</dt><dd> 
 (c mode only) 
 Compress the resulting archive with 
 [[lzop(1)|http://www.freebsd.org/cgi/man.cgi?query=lzop&sektion=1]]. 
 In extract or list modes, this option is ignored. 
+Note that this 
+'''tar''' 
+implementation recognizes LZO compression automatically when reading archives. 
 </dd><dt>-m, --modification-time</dt><dd> 
 (x mode only) 
 Do not extract modification time. 
@@ -570,6 +585,8 @@ A decimal integer from 4 to 7 specifying the lz4 compression block size
 </dd><dt>'''lz4:block-dependence'''</dt><dd> 
 Use the previous block of the block being compressed for 
 a compression dictionary to improve compression ratio. 
+</dd><dt>'''zstd:compression-level'''</dt><dd> 
+A decimal integer from 1 to 22 specifying the zstd compression level. 
 </dd><dt>'''lzop:compression-level'''</dt><dd> 
 A decimal integer from 1 to 9 specifying the lzop compression level. 
 </dd><dt>'''xz:compression-level'''</dt><dd> 
@@ -819,28 +836,28 @@ is run in x mode as root.
 Compress the resulting archive with 
 [[bzip2(1)|http://www.freebsd.org/cgi/man.cgi?query=bzip2&sektion=1]]. 
 In extract or list modes, this option is ignored. 
-Note that, unlike other 
+Note that this 
 '''tar''' 
-implementations, this implementation recognizes bzip2 compression 
-automatically when reading archives. 
+implementation recognizes bzip2 compression automatically when reading 
+archives. 
 </dd><dt>-Z, --compress, --uncompress</dt><dd> 
 (c mode only) 
 Compress the resulting archive with 
 [[compress(1)|http://www.freebsd.org/cgi/man.cgi?query=compress&sektion=1]]. 
 In extract or list modes, this option is ignored. 
-Note that, unlike other 
+Note that this 
 '''tar''' 
-implementations, this implementation recognizes compress compression 
-automatically when reading archives. 
+implementation recognizes compress compression automatically when reading 
+archives. 
 </dd><dt>-z, --gunzip, --gzip</dt><dd> 
 (c mode only) 
 Compress the resulting archive with 
 [[gzip(1)|http://www.freebsd.org/cgi/man.cgi?query=gzip&sektion=1]]. 
 In extract or list modes, this option is ignored. 
-Note that, unlike other 
+Note that this 
 '''tar''' 
-implementations, this implementation recognizes gzip compression 
-automatically when reading archives. 
+implementation recognizes gzip compression automatically when reading 
+archives. 
 </dd></dl> 
 == ENVIRONMENT == 
 The following environment variables affect the execution of 

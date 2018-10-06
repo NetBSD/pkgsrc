@@ -11,6 +11,7 @@
 \fB\%archive_read_support_filter_rpm\fP,
 \fB\%archive_read_support_filter_uu\fP,
 \fB\%archive_read_support_filter_xz\fP,
+\fB\%archive_read_support_filter_zstd\fP,
 \fB\%archive_read_support_filter_program\fP,
 \fB\%archive_read_support_filter_program_signature\fP
 \- functions for reading streaming archives
@@ -75,6 +76,10 @@ Streaming Archive Library (libarchive, -larchive)
 .br
 \fIint\fP
 .br
+\fB\%archive_read_support_filter_zstd\fP(\fI\%struct\ archive\ *\fP);
+.br
+\fIint\fP
+.br
 \fB\%archive_read_support_filter_program\fP(\fI\%struct\ archive\ *\fP, \fI\%const\ char\ *cmd\fP);
 .br
 \fIint\fP
@@ -95,7 +100,8 @@ Streaming Archive Library (libarchive, -larchive)
 \fB\%archive_read_support_filter_none\fP(),
 \fB\%archive_read_support_filter_rpm\fP(),
 \fB\%archive_read_support_filter_uu\fP(),
-\fB\%archive_read_support_filter_xz\fP()
+\fB\%archive_read_support_filter_xz\fP(),
+\fB\%archive_read_support_filter_zstd\fP(),
 Enables auto-detection code and decompression support for the
 specified compression.
 These functions may fall back on external programs if an appropriate

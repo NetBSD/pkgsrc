@@ -126,10 +126,7 @@ rm -fr %buildroot
 * %{date} PLD Team <feedback@pld-linux.org>
 All persons listed below can be reached at <cvs_login>@pld-linux.org
 
-$Log: libarchive.1aix53.spec,v $
-Revision 1.9  2017/08/01 22:26:22  joerg
-Merge for libarchive-3.3.2.
-
+$Log: libarchive.spec,v $
 Release 1aix53  2006/12/12 rm1023@dcx.com
 - tweak for aix-5.3
 - added libarchive-0123457890.patch for "0123457890" error

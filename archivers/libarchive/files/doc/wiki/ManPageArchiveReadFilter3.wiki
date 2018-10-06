@@ -10,6 +10,7 @@ ARCHIVE_READ_FILTER(3) manual page
 '''archive_read_support_filter_rpm''', 
 '''archive_read_support_filter_uu''', 
 '''archive_read_support_filter_xz''', 
+'''archive_read_support_filter_zstd''', 
 '''archive_read_support_filter_program''', 
 '''archive_read_support_filter_program_signature''' 
 - functions for reading streaming archives 
@@ -72,6 +73,10 @@ Streaming Archive Library (libarchive, -larchive)
 <br> 
 ''int'' 
 <br> 
+'''archive_read_support_filter_zstd'''(''struct archive *''); 
+<br> 
+''int'' 
+<br> 
 '''archive_read_support_filter_program'''(''struct archive *'', ''const char *cmd''); 
 <br> 
 ''int'' 
@@ -91,7 +96,8 @@ Streaming Archive Library (libarchive, -larchive)
 '''archive_read_support_filter_none'''(), 
 '''archive_read_support_filter_rpm'''(), 
 '''archive_read_support_filter_uu'''(), 
-'''archive_read_support_filter_xz'''() 
+'''archive_read_support_filter_xz'''(), 
+'''archive_read_support_filter_zstd'''(), 
 </dt> <dd> 
 Enables auto-detection code and decompression support for the 
 specified compression. 

@@ -22,11 +22,13 @@ IF(ENABLE_TAR AND ENABLE_TEST)
     test_extract_tar_lzma.c
     test_extract_tar_lzo.c
     test_extract_tar_xz.c
+    test_extract_tar_zstd.c
     test_format_newc.c
     test_help.c
     test_leading_slash.c
     test_missing_file.c
     test_option_C_upper.c
+    test_option_C_mtree.c
     test_option_H_upper.c
     test_option_L_upper.c
     test_option_O_upper.c
@@ -61,6 +63,7 @@ IF(ENABLE_TAR AND ENABLE_TEST)
     test_option_xattrs.c
     test_option_xz.c
     test_option_z.c
+    test_option_zstd.c
     test_patterns.c
     test_print_longpath.c
     test_stdio.c

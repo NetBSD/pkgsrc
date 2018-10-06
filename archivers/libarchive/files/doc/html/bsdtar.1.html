@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.22.3 -->
-<!-- CreationDate: Mon Jul 10 02:32:58 2017 -->
+<!-- CreationDate: Mon Sep  3 22:55:11 2018 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -348,18 +348,18 @@ example, the command</p>
 
 <p style="margin-left:17%;">(c mode only) Compress the
 resulting archive with xz(1). In extract or list modes, this
-option is ignored. Note that, unlike other <b>tar</b>
-implementations, this implementation recognizes XZ
-compression automatically when reading archives.</p>
+option is ignored. Note that this <b>tar</b> implementation
+recognizes XZ compression automatically when reading
+archives.</p>
 
 <p style="margin-top: 1em"><b>-j</b>, <b>--bzip</b>,
 <b>--bzip2</b>, <b>--bunzip2</b></p>
 
 <p style="margin-left:17%;">(c mode only) Compress the
 resulting archive with bzip2(1). In extract or list modes,
-this option is ignored. Note that, unlike other <b>tar</b>
-implementations, this implementation recognizes bzip2
-compression automatically when reading archives.</p>
+this option is ignored. Note that this <b>tar</b>
+implementation recognizes bzip2 compression automatically
+when reading archives.</p>
 
 <p style="margin-top: 1em"><b>-k</b>,
 <b>--keep-old-files</b></p>
@@ -394,22 +394,33 @@ archived.</p>
 
 <p style="margin-left:17%;">(c mode only) Compress the
 resulting archive with lrzip(1). In extract or list modes,
-this option is ignored.</p>
+this option is ignored. Note that this <b>tar</b>
+implementation recognizes lrzip compression automatically
+when reading archives.</p>
 
 <p style="margin-top: 1em"><b>--lz4</b></p>
 
 <p style="margin-left:17%; margin-top: 1em">(c mode only)
 Compress the archive with lz4-compatible compression before
-writing it. In input mode, this option is ignored; lz4
-compression is recognized automatically on input.</p>
+writing it. In extract or list modes, this option is
+ignored. Note that this <b>tar</b> implementation recognizes
+lz4 compression automatically when reading archives.</p>
+
+<p style="margin-top: 1em"><b>--zstd</b></p>
+
+<p style="margin-left:17%; margin-top: 1em">(c mode only)
+Compress the archive with zstd-compatible compression before
+writing it. In extract or list modes, this option is
+ignored. Note that this <b>tar</b> implementation recognizes
+zstd compression automatically when reading archives.</p>
 
 <p style="margin-top: 1em"><b>--lzma</b></p>
 
 <p style="margin-left:17%; margin-top: 1em">(c mode only)
 Compress the resulting archive with the original LZMA
-algorithm. Use of this option is discouraged and new
-archives should be created with <b>--xz</b> instead. Note
-that, unlike other <b>tar</b> implementations, this
+algorithm. In extract or list modes, this option is ignored.
+Use of this option is discouraged and new archives should be
+created with <b>--xz</b> instead. Note that this <b>tar</b>
 implementation recognizes LZMA compression automatically
 when reading archives.</p>
 
@@ -417,7 +428,9 @@ when reading archives.</p>
 
 <p style="margin-left:17%; margin-top: 1em">(c mode only)
 Compress the resulting archive with lzop(1). In extract or
-list modes, this option is ignored.</p>
+list modes, this option is ignored. Note that this
+<b>tar</b> implementation recognizes LZO compression
+automatically when reading archives.</p>
 
 <p style="margin-top: 1em"><b>-m</b>,
 <b>--modification-time</b></p>
@@ -701,6 +714,11 @@ default).</p>
 block being compressed for a compression dictionary to
 improve compression ratio.</p>
 
+<p><b>zstd:compression-level</b></p>
+
+<p style="margin-left:27%;">A decimal integer from 1 to 22
+specifying the zstd compression level.</p>
+
 <p><b>lzop:compression-level</b></p>
 
 <p style="margin-left:27%;">A decimal integer from 1 to 9
@@ -964,28 +982,27 @@ modes or if <b>tar</b> is run in x mode as root.</p>
 
 <p style="margin-left:17%; margin-top: 1em">(c mode only)
 Compress the resulting archive with bzip2(1). In extract or
-list modes, this option is ignored. Note that, unlike other
-<b>tar</b> implementations, this implementation recognizes
-bzip2 compression automatically when reading archives.</p>
+list modes, this option is ignored. Note that this
+<b>tar</b> implementation recognizes bzip2 compression
+automatically when reading archives.</p>
 
 <p style="margin-top: 1em"><b>-Z</b>, <b>--compress</b>,
 <b>--uncompress</b></p>
 
 <p style="margin-left:17%;">(c mode only) Compress the
 resulting archive with compress(1). In extract or list
-modes, this option is ignored. Note that, unlike other
-<b>tar</b> implementations, this implementation recognizes
-compress compression automatically when reading
-archives.</p>
+modes, this option is ignored. Note that this <b>tar</b>
+implementation recognizes compress compression automatically
+when reading archives.</p>
 
 <p style="margin-top: 1em"><b>-z</b>, <b>--gunzip</b>,
 <b>--gzip</b></p>
 
 <p style="margin-left:17%;">(c mode only) Compress the
 resulting archive with gzip(1). In extract or list modes,
-this option is ignored. Note that, unlike other <b>tar</b>
-implementations, this implementation recognizes gzip
-compression automatically when reading archives.</p>
+this option is ignored. Note that this <b>tar</b>
+implementation recognizes gzip compression automatically
+when reading archives.</p>
 
 <p style="margin-top: 1em"><b>ENVIRONMENT</b></p>
 
@@ -1333,7 +1350,7 @@ incompatible ways that different archive formats store
 hardlink information.)</p>
 
 <p style="margin-left:6%; margin-top: 1em">BSD
-February&nbsp;25, 2017 BSD</p>
+October&nbsp;1, 2017 BSD</p>
 <hr>
 </body>
 </html>
