@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2018/09/08 15:52:36 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.44 2018/10/06 23:25:35 tsutsui Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -144,7 +144,8 @@ share/mikutter/core/plugin/activity/po/zh_CN/activity.po
 share/mikutter/core/plugin/activity/po/zh_TW/activity.po
 share/mikutter/core/plugin/alsa/.mikutter.yml
 share/mikutter/core/plugin/alsa/alsa.rb
-share/mikutter/core/plugin/api_request_file_cache.rb
+share/mikutter/core/plugin/api_request_file_cache/.mikutter.yml
+share/mikutter/core/plugin/api_request_file_cache/api_request_file_cache.rb
 share/mikutter/core/plugin/aspectframe/.mikutter.yml
 share/mikutter/core/plugin/aspectframe/aspectframe.rb
 share/mikutter/core/plugin/bitly/.mikutter.yml
