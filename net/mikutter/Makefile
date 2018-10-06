@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.165 2018/09/08 15:52:36 tsutsui Exp $
+# $NetBSD: Makefile,v 1.166 2018/10/06 23:25:35 tsutsui Exp $
 #
 
-DISTNAME=	mikutter.3.8.0
+DISTNAME=	mikutter.3.8.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/./-/}
 CATEGORIES=	net
 MASTER_SITES=	https://mikutter.hachune.net/bin/
@@ -17,10 +17,10 @@ RUBY_VERSIONS_ACCEPTED=	23 24
 
 DEPENDS+=	${RUBY_PKGPREFIX}-pluggaloid>=1.1.1:../../net/ruby-pluggaloid
 DEPENDS+=	${RUBY_PKGPREFIX}-diva>=0.3.2:../../devel/ruby-diva
-DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtk>=3.2.7:../../x11/ruby-gnome2-gtk
+DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtk>=3.2.9:../../x11/ruby-gnome2-gtk
 DEPENDS+=	${RUBY_PKGPREFIX}-gettext>=3.0.1:../../devel/ruby-gettext
 DEPENDS+=	${RUBY_PKGPREFIX}-oauth>=0.5.1:../../security/ruby-oauth
-DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=2.3:../../net/ruby-addressable
+DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=2.5.2:../../net/ruby-addressable
 DEPENDS+=	${RUBY_PKGPREFIX}-memoist>=0.16.0:../../devel/ruby-memoist
 DEPENDS+=	${RUBY_PKGPREFIX}-hmac>=0.4:../../security/ruby-hmac
 DEPENDS+=	${RUBY_PKGPREFIX}-typed-array>=0.1:../../misc/ruby-typed-array
