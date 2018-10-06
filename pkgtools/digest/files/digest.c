@@ -1,4 +1,4 @@
-/*	$NetBSD: digest.c,v 1.16 2016/03/03 22:11:07 agc Exp $ */
+/*	$NetBSD: digest.c,v 1.17 2018/10/06 14:32:45 nia Exp $ */
 
 /*-
  * Copyright (c) 2001-2016 Alistair Crooks <agc@NetBSD.org>
@@ -34,6 +34,7 @@
 #ifdef HAVE_LOCALE_H
 #include <locale.h>
 #endif
+#include <blake2b.h>
 #include <md5.h>
 #include <rmd160.h>
 #include <sha1.h>
@@ -79,6 +80,9 @@ typedef struct alg_t {
 
 /* list of supported message digest algorithms */
 static alg_t algorithms[] = {
+	{ "BLAKE2B",	64,
+	  (HASH_init) BLAKE2b_Init,	(HASH_update) BLAKE2b_Update,
+	  (HASH_end) BLAKE2b_End,	(HASH_file) BLAKE2b_File },
 	{ "MD5",	16,
 	  (HASH_init) MD5Init,		(HASH_update) MD5Update,
 	  (HASH_end) MD5End,		(HASH_file) MD5File },
