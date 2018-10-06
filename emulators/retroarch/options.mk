@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2018/10/03 23:31:06 nia Exp $
+# $NetBSD: options.mk,v 1.7 2018/10/06 23:44:28 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.retroarch
 
@@ -22,9 +22,6 @@ PKG_OPTIONS_GROUP.gl+=		opengl
 CONFIGURE_ARGS+=		--enable-floathard
 PKG_OPTIONS_GROUP.gl+=		rpi
 PKG_SUPPORTED_OPTIONS+=		simd
-.  if !empty(MACHINE_ARCH:M*armv7*)
-PKG_SUGGESTED_OPTIONS+=		simd
-.  endif
 .endif
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-arm*)
