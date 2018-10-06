@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4291 2018/10/06 22:42:04 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4292 2018/10/06 23:25:58 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5979,3 +5979,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/x265 to 2.9 [adam 2018-10-06]
 	Added x11/qt5-qtcharts version 5.11.2 [adam 2018-10-06]
 	Added x11/qt5-qtnetworkauth version 5.11.2 [adam 2018-10-06]
+	Updated net/mikutter to 3.8.1 [tsutsui 2018-10-06]
