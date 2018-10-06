@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2018/07/31 19:13:10 rjs Exp $
+# $NetBSD: Makefile,v 1.24 2018/10/06 12:12:48 adam Exp $
 
-DISTNAME=	x265_2.8
+DISTNAME=	x265_2.9
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	multimedia
 MASTER_SITES=	https://bitbucket.org/multicoreware/x265/downloads/
@@ -20,5 +20,7 @@ CMAKE_ARGS+=	-DENABLE_PIC=ON
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
+
+.include "options.mk"
 
 .include "../../mk/bsd.pkg.mk"
