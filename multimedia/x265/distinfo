@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.25 2018/05/26 05:30:19 jklos Exp $
+$NetBSD: distinfo,v 1.26 2018/10/06 12:12:48 adam Exp $
 
-SHA1 (x265_2.8.tar.gz) = e2ef1ad186d9581239463d4e5177a25bc57b9fc0
-RMD160 (x265_2.8.tar.gz) = 547adcf4886f9ae60c115b5da21ff12f6c718b8d
-SHA512 (x265_2.8.tar.gz) = c2a8eaec64aa022badcbcd2a96304a9abd9d08489300b6a9c4c9d76066f3d9848e6948238c84ae16ea91bff0b2fac528a67ee29950d94dcd0ea7c0e9e7baa714
-Size (x265_2.8.tar.gz) = 1379551 bytes
+SHA1 (x265_2.9.tar.gz) = 3c005b4ab409c6f996b36ad88d780ff85fbc9abf
+RMD160 (x265_2.9.tar.gz) = ea6772ec426c141eb1756cdf6bb2def3d6319f47
+SHA512 (x265_2.9.tar.gz) = 270818c7fd84947fde371e32bef225c1880cfb0bcd95378d95b51f50577a134d7cd585fcdfa43b103a24d76c5ad826b09509a07eb9e208e8f2b56f2f77365cf3
+Size (x265_2.9.tar.gz) = 1385848 bytes
 SHA1 (patch-CMakeLists.txt) = fbf4d08133a48b342a060f1b45bab0253455a1b1
-SHA1 (patch-common_param.cpp) = eb0a55babf9cbe68cb2a6b75d109ba58f04e6c05
 SHA1 (patch-encoder_encoder.cpp) = 907db18c8e9afd51684ed886da70c23ac3d3652a
