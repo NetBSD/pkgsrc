@@ -1,4 +1,4 @@
-.\" $NetBSD: digest.1,v 1.8 2016/03/03 22:11:07 agc Exp $
+.\" $NetBSD: digest.1,v 1.9 2018/10/06 14:32:45 nia Exp $
 .\"
 .\" Copyright (c) 2001-2016 Alistair Crooks <agc@NetBSD.org>
 .\" All rights reserved.
@@ -55,6 +55,10 @@ and exits successfully.
 .Pp
 The list of possible algorithms is:
 .Bl -tag -width SHA3_512xxx
+.It blake2b
+the
+blake2b
+algorithm will be used.
 .It md5
 the
 .Xr md5 3
