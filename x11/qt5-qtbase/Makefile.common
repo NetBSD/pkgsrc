@@ -1,8 +1,9 @@
-# $NetBSD: Makefile.common,v 1.27 2018/07/26 02:16:05 minskim Exp $
+# $NetBSD: Makefile.common,v 1.28 2018/10/06 22:41:22 adam Exp $
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
 # used by x11/qt5-psql/Makefile
 # used by x11/qt5-qtbase/Makefile
+# used by x11/qt5-qtcharts/Makefile
 # used by x11/qt5-qtdeclarative/Makefile
 # used by x11/qt5-qtdoc/Makefile
 # used by x11/qt5-qtgraphicaleffects/Makefile
@@ -10,6 +11,7 @@
 # used by x11/qt5-qtlocation/Makefile
 # used by x11/qt5-qtmacextras/Makefile
 # used by x11/qt5-qtmultimedia/Makefile
+# used by x11/qt5-qtnetworkauth/Makefile
 # used by x11/qt5-qtquickcontrols/Makefile
 # used by x11/qt5-qtscript/Makefile
 # used by x11/qt5-qtsensors/Makefile
@@ -67,10 +69,10 @@ do-configure:
 .PHONY: fix-darwin-install-name
 post-install: fix-darwin-install-name
 fix-darwin-install-name:
-	${FIND} ${DESTDIR}${PREFIX} -name "*.dylib" |                   \
-		while read lib; do                                      \
-		libname=`basename $${lib}`;                             \
-		libdir=`dirname $${lib} | sed -e 's,${DESTDIR},,'`;     \
-		install_name_tool -id $${libdir}/$${libname} $${lib};   \
+	${FIND} ${DESTDIR}${PREFIX} -name "*.dylib" |			\
+		while read lib; do					\
+		libname=`basename $${lib}`;				\
+		libdir=`dirname $${lib} | sed -e 's,${DESTDIR},,'`;	\
+		install_name_tool -id $${libdir}/$${libname} $${lib};	\
 	done
 .endif
