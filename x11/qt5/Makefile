@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2018/03/01 20:09:49 adam Exp $
+# $NetBSD: Makefile,v 1.13 2018/10/06 22:41:22 adam Exp $
 
 DISTNAME=	qt5-${QTVERSION}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	# none
 
@@ -11,12 +12,14 @@ META_PACKAGE=	yes
 .include "Makefile.common"
 
 DEPENDS+=	qt5-qtbase-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtbase
+DEPENDS+=	qt5-qtcharts-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtcharts
 DEPENDS+=	qt5-qtdeclarative-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtdeclarative
 DEPENDS+=	qt5-qtdoc-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtdoc
 DEPENDS+=	qt5-qtgraphicaleffects-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtgraphicaleffects
 DEPENDS+=	qt5-qtimageformats-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtimageformats
 DEPENDS+=	qt5-qtlocation-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtlocation
 DEPENDS+=	qt5-qtmultimedia-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtmultimedia
+DEPENDS+=	qt5-qtnetworkauth-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtnetworkauth
 DEPENDS+=	qt5-qtquickcontrols-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtquickcontrols
 DEPENDS+=	qt5-qtquickcontrols2-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtquickcontrols2
 DEPENDS+=	qt5-qtscript-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtscript
