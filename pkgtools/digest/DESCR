@@ -8,5 +8,6 @@ This utility is a wrapper for the
 	+ sha512
 	+ tiger
 	+ whirlpool
+	+ blake2b
 
 message digest routines.
