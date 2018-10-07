@@ -1,4 +1,4 @@
-$NetBSD: patch-setup.py,v 1.1 2018/08/22 08:31:30 adam Exp $
+$NetBSD: patch-setup.py,v 1.2 2018/10/07 11:20:25 adam Exp $
 
 Relax requirements.
 
@@ -12,7 +12,7 @@ Relax requirements.
 +    'boto>=2.48.0',
      'crcmod>=1.7',
      'fasteners>=0.14.1',
-     'gcs-oauth2-boto-plugin>=2.1',
+     'gcs-oauth2-boto-plugin>=2.2',
 @@ -44,16 +44,16 @@ requires = [
      'httplib2>=0.11.3',
      'google-reauth>=0.1.0',
@@ -20,8 +20,8 @@ Relax requirements.
 -    'mock==2.0.0',
 +    'mock>=2.0.0',
      'monotonic>=1.4',
--    'oauth2client==4.1.2',
-+    'oauth2client>=4.1.2',
+-    'oauth2client==4.1.3',
++    'oauth2client>=4.1.3',
      'pyOpenSSL>=0.13',
      'python-gflags>=2.0',
      'retry_decorator>=1.0.0',
