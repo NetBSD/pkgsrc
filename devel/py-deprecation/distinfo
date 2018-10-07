@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2018/07/06 10:35:41 adam Exp $
+$NetBSD: distinfo,v 1.9 2018/10/07 07:16:55 adam Exp $
 
-SHA1 (deprecation-2.0.5.tar.gz) = f3437509318a5f6990bcd92afc73753a07a7f584
-RMD160 (deprecation-2.0.5.tar.gz) = 5270638f7212cec1e9ae4df3024c28a0289a3192
-SHA512 (deprecation-2.0.5.tar.gz) = d42271860c50032023e559f9096156b694c414710e1122b377128885be923753bec51f308fab80d5dceaf324ad98863146e5dab4b3d8e0847234b5b2c235ad4b
-Size (deprecation-2.0.5.tar.gz) = 13211 bytes
+SHA1 (deprecation-2.0.6.tar.gz) = 8c788584538c2dbc2ade5573c61c5c438cdec0b2
+RMD160 (deprecation-2.0.6.tar.gz) = 682ac715c3f791c7227a39c32b63c2387e370166
+SHA512 (deprecation-2.0.6.tar.gz) = 69dcf5e07cfc1c746564e03063088cce65690e2b34cffe327d59edad24f00d23cf9904089ab9ff5e67dce2b6b02ed617e53959be4a907074440ddb778576aa2f
+Size (deprecation-2.0.6.tar.gz) = 13381 bytes
