@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4305 2018/10/07 12:13:51 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.4306 2018/10/07 12:54:39 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6012,3 +6012,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-google-apitools to 0.5.24 [adam 2018-10-07]
 	Updated net/py-gsutil to 4.34 [adam 2018-10-07]
 	Updated devel/libowfat to 0.32 [schmonz 2018-10-07]
+	Added net/fehqlibs version 0.9 [schmonz 2018-10-07]
