@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/09/12 16:32:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/10/07 07:33:42 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -78,9 +78,15 @@ ${PYSITELIB}/pymongo/auth.pyo
 ${PYSITELIB}/pymongo/bulk.py
 ${PYSITELIB}/pymongo/bulk.pyc
 ${PYSITELIB}/pymongo/bulk.pyo
+${PYSITELIB}/pymongo/change_stream.py
+${PYSITELIB}/pymongo/change_stream.pyc
+${PYSITELIB}/pymongo/change_stream.pyo
 ${PYSITELIB}/pymongo/client_options.py
 ${PYSITELIB}/pymongo/client_options.pyc
 ${PYSITELIB}/pymongo/client_options.pyo
+${PYSITELIB}/pymongo/client_session.py
+${PYSITELIB}/pymongo/client_session.pyc
+${PYSITELIB}/pymongo/client_session.pyo
 ${PYSITELIB}/pymongo/collation.py
 ${PYSITELIB}/pymongo/collation.pyc
 ${PYSITELIB}/pymongo/collation.pyo
@@ -93,6 +99,9 @@ ${PYSITELIB}/pymongo/command_cursor.pyo
 ${PYSITELIB}/pymongo/common.py
 ${PYSITELIB}/pymongo/common.pyc
 ${PYSITELIB}/pymongo/common.pyo
+${PYSITELIB}/pymongo/compression_support.py
+${PYSITELIB}/pymongo/compression_support.pyc
+${PYSITELIB}/pymongo/compression_support.pyo
 ${PYSITELIB}/pymongo/cursor.py
 ${PYSITELIB}/pymongo/cursor.pyc
 ${PYSITELIB}/pymongo/cursor.pyo
@@ -102,6 +111,9 @@ ${PYSITELIB}/pymongo/cursor_manager.pyo
 ${PYSITELIB}/pymongo/database.py
 ${PYSITELIB}/pymongo/database.pyc
 ${PYSITELIB}/pymongo/database.pyo
+${PYSITELIB}/pymongo/driver_info.py
+${PYSITELIB}/pymongo/driver_info.pyc
+${PYSITELIB}/pymongo/driver_info.pyo
 ${PYSITELIB}/pymongo/errors.py
 ${PYSITELIB}/pymongo/errors.pyc
 ${PYSITELIB}/pymongo/errors.pyo
@@ -156,6 +168,9 @@ ${PYSITELIB}/pymongo/response.pyo
 ${PYSITELIB}/pymongo/results.py
 ${PYSITELIB}/pymongo/results.pyc
 ${PYSITELIB}/pymongo/results.pyo
+${PYSITELIB}/pymongo/saslprep.py
+${PYSITELIB}/pymongo/saslprep.pyc
+${PYSITELIB}/pymongo/saslprep.pyo
 ${PYSITELIB}/pymongo/server.py
 ${PYSITELIB}/pymongo/server.pyc
 ${PYSITELIB}/pymongo/server.pyo
