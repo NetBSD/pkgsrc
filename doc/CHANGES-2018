@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4304 2018/10/07 11:32:44 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4305 2018/10/07 12:13:51 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6011,3 +6011,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/py-gcs-oauth2-boto-plugin to 2.2 [adam 2018-10-07]
 	Updated www/py-google-apitools to 0.5.24 [adam 2018-10-07]
 	Updated net/py-gsutil to 4.34 [adam 2018-10-07]
+	Updated devel/libowfat to 0.32 [schmonz 2018-10-07]
