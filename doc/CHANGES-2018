@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4297 2018/10/07 08:21:18 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4298 2018/10/07 08:35:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5996,3 +5996,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-rope to 0.11.0 [adam 2018-10-07]
 	Added devel/py-test-randomly version 1.2.3 [adam 2018-10-07]
 	Added textproc/py-toml version 0.10.0 [adam 2018-10-07]
+	Updated devel/py-tox to 3.4.0 [adam 2018-10-07]
+	Updated devel/py-sortedcontainers to 2.0.5 [adam 2018-10-07]
