@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4296 2018/10/07 07:36:20 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4297 2018/10/07 08:21:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5994,3 +5994,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-parse to 1.9.0 [adam 2018-10-07]
 	Updated databases/py-mongo to 3.7.1 [adam 2018-10-07]
 	Updated devel/py-rope to 0.11.0 [adam 2018-10-07]
+	Added devel/py-test-randomly version 1.2.3 [adam 2018-10-07]
+	Added textproc/py-toml version 0.10.0 [adam 2018-10-07]
