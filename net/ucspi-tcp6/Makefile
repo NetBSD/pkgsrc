@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2018/08/15 17:49:22 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2018/10/07 12:55:16 schmonz Exp $
 
-DISTNAME=		ucspi-tcp6-1.06
-PKGREVISION=		1
+DISTNAME=		ucspi-tcp6-1.10
 CATEGORIES=		net
 MASTER_SITES=		https://www.fehcom.de/ipnet/ucspi-tcp6/
 EXTRACT_SUFX=		.tgz
@@ -17,6 +16,9 @@ WRKSRC=			${WRKDIR}/host/${PKGNAME_NOREV}
 DJB_SLASHPACKAGE=	yes
 DJB_RESTRICTED=		no
 DJB_CONFIG_DIR=		${WRKSRC}
+
+CFLAGS+=		-I${PREFIX}/include/qlibs
+LDFLAGS+=		-L${PREFIX}/lib/qlibs
 
 INSTALLATION_DIRS=	bin
 
@@ -47,5 +49,6 @@ do-install:
 	done;								\
 	./package/man
 
+.include "../../net/fehqlibs/buildlink3.mk"
 .include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"
