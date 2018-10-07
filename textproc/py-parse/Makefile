@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/08/28 09:54:26 adam Exp $
+# $NetBSD: Makefile,v 1.2 2018/10/07 07:28:01 adam Exp $
 
-DISTNAME=	parse-1.8.4
+DISTNAME=	parse-1.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/parse/}
