@@ -1,0 +1,14 @@
+$NetBSD: patch-src_intel_Makefile.in,v 1.1 2018/10/07 23:49:31 ryoon Exp $
+
+-lrt for shm_open, a more portable alternative to memfd_create
+
+--- src/intel/Makefile.in.orig	2018-09-08 21:21:54.987534981 +0000
++++ src/intel/Makefile.in
+@@ -2134,6 +2134,7 @@ tools_aubinator_LDADD = \
+ 	$(PTHREAD_LIBS) \
+ 	$(DLOPEN_LIBS) \
+ 	$(ZLIB_LIBS) \
++	-lrt \
+ 	-lm
+ 
+ tools_aubinator_error_decode_SOURCES = \
