@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.9 2018/04/14 20:08:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/10/07 09:01:22 adam Exp $
 bin/pylupdate5
 bin/pyrcc5
 bin/pyuic5
+${PYSITELIB}/PyQt5-${PKGVERSION}.dist-info/INSTALLER
+${PYSITELIB}/PyQt5-${PKGVERSION}.dist-info/METADATA
+${PYSITELIB}/PyQt5-${PKGVERSION}.dist-info/RECORD
 ${PYSITELIB}/PyQt5/Qt.so
 ${PLIST.py3x}${PYSITELIB}/PyQt5/QtCore.pyi
 ${PYSITELIB}/PyQt5/QtCore.so
@@ -21,6 +24,8 @@ ${PLIST.py3x}${PYSITELIB}/PyQt5/QtMultimediaWidgets.pyi
 ${PYSITELIB}/PyQt5/QtMultimediaWidgets.so
 ${PLIST.py3x}${PYSITELIB}/PyQt5/QtNetwork.pyi
 ${PYSITELIB}/PyQt5/QtNetwork.so
+${PLIST.py3x}${PYSITELIB}/PyQt5/QtNetworkAuth.pyi
+${PYSITELIB}/PyQt5/QtNetworkAuth.so
 ${PLIST.py3x}${PYSITELIB}/PyQt5/QtOpenGL.pyi
 ${PYSITELIB}/PyQt5/QtOpenGL.so
 ${PLIST.py3x}${PYSITELIB}/PyQt5/QtPositioning.pyi
@@ -51,6 +56,8 @@ ${PLIST.py3x}${PYSITELIB}/PyQt5/QtWebSockets.pyi
 ${PYSITELIB}/PyQt5/QtWebSockets.so
 ${PLIST.py3x}${PYSITELIB}/PyQt5/QtWidgets.pyi
 ${PYSITELIB}/PyQt5/QtWidgets.so
+${PLIST.x11}${PLIST.py3x}${PYSITELIB}/PyQt5/QtX11Extras.pyi
+${PLIST.x11}${PYSITELIB}/PyQt5/QtX11Extras.so
 ${PLIST.py3x}${PYSITELIB}/PyQt5/QtXml.pyi
 ${PYSITELIB}/PyQt5/QtXml.so
 ${PLIST.py3x}${PYSITELIB}/PyQt5/QtXmlPatterns.pyi
@@ -220,6 +227,7 @@ share/sip/PyQt5/QtCore/qpycore_qlist.sip
 share/sip/PyQt5/QtCore/qpycore_qmap.sip
 share/sip/PyQt5/QtCore/qpycore_qpair.sip
 share/sip/PyQt5/QtCore/qpycore_qset.sip
+share/sip/PyQt5/QtCore/qpycore_qvariantmap.sip
 share/sip/PyQt5/QtCore/qpycore_qvector.sip
 share/sip/PyQt5/QtCore/qpycore_virtual_error_handler.sip
 share/sip/PyQt5/QtCore/qrandom.sip
@@ -686,6 +694,7 @@ share/sip/PyQt5/QtSvg/qsvggenerator.sip
 share/sip/PyQt5/QtSvg/qsvgrenderer.sip
 share/sip/PyQt5/QtSvg/qsvgwidget.sip
 share/sip/PyQt5/QtTest/QtTestmod.sip
+share/sip/PyQt5/QtTest/qabstractitemmodeltester.sip
 share/sip/PyQt5/QtTest/qsignalspy.sip
 share/sip/PyQt5/QtTest/qtestcase.sip
 share/sip/PyQt5/QtTest/qtestkeyboard.sip
@@ -702,6 +711,8 @@ share/sip/PyQt5/QtWebEngine/qtwebengineglobal.sip
 share/sip/PyQt5/QtWebEngineCore/QtWebEngineCoremod.sip
 share/sip/PyQt5/QtWebEngineCore/qwebenginecookiestore.sip
 share/sip/PyQt5/QtWebEngineCore/qwebenginehttprequest.sip
+share/sip/PyQt5/QtWebEngineCore/qwebenginequotarequest.sip
+share/sip/PyQt5/QtWebEngineCore/qwebengineregisterprotocolhandlerrequest.sip
 share/sip/PyQt5/QtWebEngineCore/qwebengineurlrequestinfo.sip
 share/sip/PyQt5/QtWebEngineCore/qwebengineurlrequestinterceptor.sip
 share/sip/PyQt5/QtWebEngineCore/qwebengineurlrequestjob.sip
