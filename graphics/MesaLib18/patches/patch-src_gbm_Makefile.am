@@ -1,0 +1,12 @@
+$NetBSD: patch-src_gbm_Makefile.am,v 1.1 2018/10/07 23:49:31 ryoon Exp $
+
+--- src/gbm/Makefile.am.orig	2017-11-20 14:25:47.000000000 +0000
++++ src/gbm/Makefile.am
+@@ -28,6 +28,7 @@ libgbm_la_LIBADD = \
+ 	$(top_builddir)/src/loader/libloader.la \
+ 	$(top_builddir)/src/util/libmesautil.la \
+ 	$(top_builddir)/src/util/libxmlconfig.la \
++	$(PTHREAD_LIBS) \
+ 	$(DLOPEN_LIBS)
+ 
+ if HAVE_PLATFORM_WAYLAND

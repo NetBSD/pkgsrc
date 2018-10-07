@@ -1,0 +1,14 @@
+$NetBSD: patch-src_intel_Makefile.tools.am,v 1.1 2018/10/07 23:49:31 ryoon Exp $
+
+-lrt for shm_open in aubinator.c, a more portable alternative to memfd_create
+
+--- src/intel/Makefile.tools.am.orig	2018-09-07 21:18:07.000000000 +0000
++++ src/intel/Makefile.tools.am
+@@ -43,6 +43,7 @@ tools_aubinator_LDADD = \
+ 	$(PTHREAD_LIBS) \
+ 	$(DLOPEN_LIBS) \
+ 	$(ZLIB_LIBS) \
++	-lrt \
+ 	-lm
+ 
+ 
