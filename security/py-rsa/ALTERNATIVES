@@ -1,0 +1,6 @@
+bin/pyrsa-decrypt @PREFIX@/bin/pyrsa-decrypt-@PYVERSSUFFIX@
+bin/pyrsa-encrypt @PREFIX@/bin/pyrsa-encrypt-@PYVERSSUFFIX@
+bin/pyrsa-keygen @PREFIX@/bin/pyrsa-keygen-@PYVERSSUFFIX@
+bin/pyrsa-priv2pub @PREFIX@/bin/pyrsa-priv2pub-@PYVERSSUFFIX@
+bin/pyrsa-sign @PREFIX@/bin/pyrsa-sign-@PYVERSSUFFIX@
+bin/pyrsa-verify @PREFIX@/bin/pyrsa-verify-@PYVERSSUFFIX@
