@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4295 2018/10/07 07:23:47 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4296 2018/10/07 07:36:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -5990,3 +5990,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-deprecation to 2.0.6 [adam 2018-10-07]
 	Updated sysutils/py-structlog to 18.2.0 [adam 2018-10-07]
 	Updated devel/py-wheel to 0.32.1 [adam 2018-10-07]
+	Updated textproc/py-sphinx-rtd-theme to 0.4.2 [adam 2018-10-07]
+	Updated textproc/py-parse to 1.9.0 [adam 2018-10-07]
+	Updated databases/py-mongo to 3.7.1 [adam 2018-10-07]
+	Updated devel/py-rope to 0.11.0 [adam 2018-10-07]
