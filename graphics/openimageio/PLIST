@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/12/15 09:29:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/10/07 23:38:45 ryoon Exp $
 bin/iconvert
 bin/idiff
 bin/igrep
@@ -9,13 +9,18 @@ bin/oiiotool
 include/OpenImageIO/SHA1.h
 include/OpenImageIO/argparse.h
 include/OpenImageIO/array_view.h
+include/OpenImageIO/atomic.h
+include/OpenImageIO/benchmark.h
 include/OpenImageIO/color.h
 include/OpenImageIO/dassert.h
+include/OpenImageIO/deepdata.h
 include/OpenImageIO/errorhandler.h
 include/OpenImageIO/export.h
 include/OpenImageIO/filesystem.h
 include/OpenImageIO/filter.h
 include/OpenImageIO/fmath.h
+include/OpenImageIO/fstream_mingw.h
+include/OpenImageIO/function_view.h
 include/OpenImageIO/hash.h
 include/OpenImageIO/image_view.h
 include/OpenImageIO/imagebuf.h
@@ -27,6 +32,7 @@ include/OpenImageIO/missing_math.h
 include/OpenImageIO/oiioversion.h
 include/OpenImageIO/optparser.h
 include/OpenImageIO/osdep.h
+include/OpenImageIO/parallel.h
 include/OpenImageIO/paramlist.h
 include/OpenImageIO/platform.h
 include/OpenImageIO/plugin.h
@@ -35,8 +41,8 @@ include/OpenImageIO/pugixml.cpp
 include/OpenImageIO/pugixml.hpp
 include/OpenImageIO/refcnt.h
 include/OpenImageIO/simd.h
+include/OpenImageIO/span.h
 include/OpenImageIO/strided_ptr.h
-include/OpenImageIO/string_ref.h
 include/OpenImageIO/string_view.h
 include/OpenImageIO/strutil.h
 include/OpenImageIO/sysutil.h
@@ -51,8 +57,15 @@ include/OpenImageIO/ustring.h
 include/OpenImageIO/varyingref.h
 include/OpenImageIO/version.h
 lib/libOpenImageIO.so
-lib/libOpenImageIO.so.1.5
+lib/libOpenImageIO.so.1.8
 lib/libOpenImageIO.so.${PKGVERSION}
 lib/libOpenImageIO_Util.so
-lib/libOpenImageIO_Util.so.1.5
+lib/libOpenImageIO_Util.so.1.8
 lib/libOpenImageIO_Util.so.${PKGVERSION}
+share/fonts/OpenImageIO/DroidSans-Bold.ttf
+share/fonts/OpenImageIO/DroidSans.ttf
+share/fonts/OpenImageIO/DroidSansMono.ttf
+share/fonts/OpenImageIO/DroidSerif-Bold.ttf
+share/fonts/OpenImageIO/DroidSerif-BoldItalic.ttf
+share/fonts/OpenImageIO/DroidSerif-Italic.ttf
+share/fonts/OpenImageIO/DroidSerif.ttf
