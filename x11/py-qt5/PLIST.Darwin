@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2018/10/07 09:01:45 adam Exp $
+${PLIST.py3x}${PYSITELIB}/PyQt5/QtMacExtras.pyi
+${PYSITELIB}/PyQt5/QtMacExtras.so
