@@ -1,0 +1,13 @@
+Pytest plugin to randomly order tests and control random.seed.
+
+* Randomly shuffles the order of test items. This is done first at the level of
+  modules, then at the level of test classes (if you have them), then at the
+  order of functions. This also works with things like doctests.
+* Resets random.seed() at the start of every test case and test to a fixed
+  number - this defaults to time.time() from the start of your test run, but
+  you can pass in --randomly-seed to repeat a randomness-induced failure.
+* If factory boy is installed, its random state is reset at the start of every
+  test. This allows for repeatable use of its random 'fuzzy' features.
+* If faker is installed, its random state is reset at the start of every test.
+  This is also for repeatable fuzzy data in tests - factory boy uses faker for
+  lots of data.
