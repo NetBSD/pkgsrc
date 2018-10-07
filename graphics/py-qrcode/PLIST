@@ -1,12 +1,15 @@
-@comment $NetBSD: PLIST,v 1.5 2018/01/01 18:33:33 rillig Exp $
-bin/qr${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.6 2018/10/07 08:55:13 adam Exp $
+bin/qr-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/pbr.json
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/qrcode/LUT.py
+${PYSITELIB}/qrcode/LUT.pyc
+${PYSITELIB}/qrcode/LUT.pyo
 ${PYSITELIB}/qrcode/__init__.py
 ${PYSITELIB}/qrcode/__init__.pyc
 ${PYSITELIB}/qrcode/__init__.pyo
@@ -40,6 +43,9 @@ ${PYSITELIB}/qrcode/image/svg.pyo
 ${PYSITELIB}/qrcode/main.py
 ${PYSITELIB}/qrcode/main.pyc
 ${PYSITELIB}/qrcode/main.pyo
+${PYSITELIB}/qrcode/release.py
+${PYSITELIB}/qrcode/release.pyc
+${PYSITELIB}/qrcode/release.pyo
 ${PYSITELIB}/qrcode/tests/__init__.py
 ${PYSITELIB}/qrcode/tests/__init__.pyc
 ${PYSITELIB}/qrcode/tests/__init__.pyo
@@ -52,10 +58,13 @@ ${PYSITELIB}/qrcode/tests/test_example.pyo
 ${PYSITELIB}/qrcode/tests/test_qrcode.py
 ${PYSITELIB}/qrcode/tests/test_qrcode.pyc
 ${PYSITELIB}/qrcode/tests/test_qrcode.pyo
+${PYSITELIB}/qrcode/tests/test_release.py
+${PYSITELIB}/qrcode/tests/test_release.pyc
+${PYSITELIB}/qrcode/tests/test_release.pyo
 ${PYSITELIB}/qrcode/tests/test_script.py
 ${PYSITELIB}/qrcode/tests/test_script.pyc
 ${PYSITELIB}/qrcode/tests/test_script.pyo
 ${PYSITELIB}/qrcode/util.py
 ${PYSITELIB}/qrcode/util.pyc
 ${PYSITELIB}/qrcode/util.pyo
-man/man1/qr${PYVERSSUFFIX}.1
+man/man1/qr-${PYVERSSUFFIX}.1

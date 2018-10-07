@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/08/13 07:08:17 wen Exp $
+$NetBSD: distinfo,v 1.6 2018/10/07 08:55:13 adam Exp $
 
-SHA1 (qrcode-5.3.tar.gz) = f7d2f7f7868afbdcbc65bca12f0b79c020b74e08
-RMD160 (qrcode-5.3.tar.gz) = 9eedb3894a185ecbb9800cf8d4f7605a2794f2a3
-SHA512 (qrcode-5.3.tar.gz) = 325ffb3285a4f01f59b1c708a879d6465ad4c8d066b53a15545f381dbc8de7f0b28b3d7b925bac5367de436ababf1c25c75ddbf37066e17b02d68292edd0ef5e
-Size (qrcode-5.3.tar.gz) = 24253 bytes
+SHA1 (qrcode-6.0.tar.gz) = fac9dcc3b1c1ad9c0566875695e3b3b6afdb8dca
+RMD160 (qrcode-6.0.tar.gz) = 122b7727cd404246c86a34124ab0b8475ac99b2b
+SHA512 (qrcode-6.0.tar.gz) = c43f12fe6b12d244d19a994cfd20adbe3776bbda1459c9dbc6164b1c9e7637f05e2acc1c2d29b82243024a4ea9b46c319a56acdf6d05e7b697bcd2c31c02102e
+Size (qrcode-6.0.tar.gz) = 29160 bytes
