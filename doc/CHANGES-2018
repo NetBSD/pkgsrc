@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4312 2018/10/07 23:45:32 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.4313 2018/10/07 23:50:56 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6019,3 +6019,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/link-grammar to 5.5.1 [ryoon 2018-10-07]
 	Updated graphics/openimageio to 1.8.15 [ryoon 2018-10-07]
 	Updated graphics/blender to 2.79b [ryoon 2018-10-07]
+	Added graphics/MesaLib18 version 18.2.0 [ryoon 2018-10-07]
