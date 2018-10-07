@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.140 2018/08/16 18:54:51 adam Exp $
+# $NetBSD: Makefile,v 1.141 2018/10/07 23:44:49 ryoon Exp $
 
-DISTNAME=	blender-2.77a
-PKGREVISION=	11
+DISTNAME=	blender-2.79b
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.blender.org/source/
 
@@ -59,7 +58,7 @@ PLIST_SUBST+=	NETBSDVER=netbsd7
 PLIST_SUBST+=	NETBSDVER=netbsd6
 .endif
 
-PLIST_VARS+=	py34 py35 py36
+PLIST_VARS+=	py34 py35 py36 py37
 
 OBJDIR=		../build
 CONFIGURE_DIRS=	${OBJDIR}
@@ -75,8 +74,10 @@ do-configure:
 		${PREFIX}/bin/cmake ${CMAKE_OPTS} ${CMAKE_ARG_PATH}
 
 post-install:
-	${LN} -sf ${PREFIX}/share/blender/blender \
-		${DESTDIR}${PREFIX}/bin
+	${ECHO} '#! ${SH}' > ${DESTDIR}${PREFIX}/bin/blender
+	${ECHO} '${PREFIX}/share/blender/blender "$$@"' >> \
+		${DESTDIR}${PREFIX}/bin/blender
+	${CHMOD} 755 ${DESTDIR}${PREFIX}/bin/blender
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
@@ -103,6 +104,8 @@ PLIST.py34=	yes
 PLIST.py35=	yes
 .elif ${PYVERSSUFFIX} == "3.6"
 PLIST.py36=	yes
+.elif ${PYVERSSUFFIX} == "3.7"
+PLIST.py37=	yes
 .endif
 
 .include "../../mk/bsd.pkg.mk"
