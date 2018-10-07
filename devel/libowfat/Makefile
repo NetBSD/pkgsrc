@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2017/06/26 04:52:34 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2018/10/07 12:13:46 schmonz Exp $
 #
 
-DISTNAME=	libowfat-0.31
+DISTNAME=	libowfat-0.32
 CATEGORIES=	devel
 MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.tar.xz
