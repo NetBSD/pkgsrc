@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/06/26 04:52:34 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/10/07 12:13:46 schmonz Exp $
 include/libowfat/array.h
 include/libowfat/buffer.h
 include/libowfat/byte.h
@@ -231,6 +231,10 @@ man/man3/iob_prefetch.3
 man/man3/iob_reset.3
 man/man3/iob_send.3
 man/man3/iob_write.3
+man/man3/iom_abort.3
+man/man3/iom_add.3
+man/man3/iom_init.3
+man/man3/iom_wait.3
 man/man3/iopause.3
 man/man3/mmap_private.3
 man/man3/mmap_read.3
@@ -262,8 +266,12 @@ man/man3/scan_8short.3
 man/man3/scan_asn1derlength.3
 man/man3/scan_asn1derlengthvalue.3
 man/man3/scan_asn1dertag.3
+man/man3/scan_base64.3
+man/man3/scan_base64url.3
+man/man3/scan_cescape.3
 man/man3/scan_charsetnskip.3
 man/man3/scan_double.3
+man/man3/scan_hexdump.3
 man/man3/scan_httpdate.3
 man/man3/scan_int.3
 man/man3/scan_ip4.3
@@ -271,6 +279,8 @@ man/man3/scan_ip6.3
 man/man3/scan_ip6_flat.3
 man/man3/scan_ip6if.3
 man/man3/scan_iso8601.3
+man/man3/scan_jsonescape.3
+man/man3/scan_ldapescape.3
 man/man3/scan_long.3
 man/man3/scan_longlong.3
 man/man3/scan_netstring.3
@@ -281,8 +291,12 @@ man/man3/scan_short.3
 man/man3/scan_uint.3
 man/man3/scan_ulong.3
 man/man3/scan_ulonglong.3
+man/man3/scan_urlencoded.3
+man/man3/scan_urlencoded2.3
 man/man3/scan_ushort.3
 man/man3/scan_utf8.3
+man/man3/scan_utf8_sem.3
+man/man3/scan_uuencoded.3
 man/man3/scan_whitenskip.3
 man/man3/scan_xint.3
 man/man3/scan_xlong.3
