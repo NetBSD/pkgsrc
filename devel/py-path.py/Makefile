@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2018/09/21 10:52:34 adam Exp $
+# $NetBSD: Makefile,v 1.6 2018/10/07 06:52:27 adam Exp $
 
-DISTNAME=	path.py-11.3.0
+DISTNAME=	path.py-11.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/path.py/}
@@ -20,7 +20,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-sugar-[0-9]*:../../devel/py-test-sugar
 USE_LANGUAGES=	# none
 
 do-test:
-	cd ${WRKSRC} && ${PYTHONBIN} test_path.py
+	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} test_path.py
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
