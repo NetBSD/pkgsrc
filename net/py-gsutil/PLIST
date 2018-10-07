@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/08/22 08:31:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/10/07 11:20:25 adam Exp $
 bin/gsutil-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -175,6 +175,9 @@ ${PYSITELIB}/gslib/commands/rb.pyo
 ${PYSITELIB}/gslib/commands/requesterpays.py
 ${PYSITELIB}/gslib/commands/requesterpays.pyc
 ${PYSITELIB}/gslib/commands/requesterpays.pyo
+${PYSITELIB}/gslib/commands/retention.py
+${PYSITELIB}/gslib/commands/retention.pyc
+${PYSITELIB}/gslib/commands/retention.pyo
 ${PYSITELIB}/gslib/commands/rewrite.py
 ${PYSITELIB}/gslib/commands/rewrite.pyc
 ${PYSITELIB}/gslib/commands/rewrite.pyo
@@ -439,6 +442,12 @@ ${PYSITELIB}/gslib/tests/test_requester_pays.pyo
 ${PYSITELIB}/gslib/tests/test_resumable_streaming.py
 ${PYSITELIB}/gslib/tests/test_resumable_streaming.pyc
 ${PYSITELIB}/gslib/tests/test_resumable_streaming.pyo
+${PYSITELIB}/gslib/tests/test_retention.py
+${PYSITELIB}/gslib/tests/test_retention.pyc
+${PYSITELIB}/gslib/tests/test_retention.pyo
+${PYSITELIB}/gslib/tests/test_retention_util.py
+${PYSITELIB}/gslib/tests/test_retention_util.pyc
+${PYSITELIB}/gslib/tests/test_retention_util.pyo
 ${PYSITELIB}/gslib/tests/test_rewrite.py
 ${PYSITELIB}/gslib/tests/test_rewrite.pyc
 ${PYSITELIB}/gslib/tests/test_rewrite.pyo
@@ -598,6 +607,9 @@ ${PYSITELIB}/gslib/utils/parallelism_framework_util.pyo
 ${PYSITELIB}/gslib/utils/posix_util.py
 ${PYSITELIB}/gslib/utils/posix_util.pyc
 ${PYSITELIB}/gslib/utils/posix_util.pyo
+${PYSITELIB}/gslib/utils/retention_util.py
+${PYSITELIB}/gslib/utils/retention_util.pyc
+${PYSITELIB}/gslib/utils/retention_util.pyo
 ${PYSITELIB}/gslib/utils/retry_util.py
 ${PYSITELIB}/gslib/utils/retry_util.pyc
 ${PYSITELIB}/gslib/utils/retry_util.pyo
