@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4300 2018/10/07 09:02:04 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4301 2018/10/07 09:27:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6004,3 +6004,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/py-qrcode to 6.0 [adam 2018-10-07]
 	Updated x11/py-sip to 4.19.13 [adam 2018-10-07]
 	Updated x11/py-qt5 to 5.11.3 [adam 2018-10-07]
+	Updated net/miniupnpd to 2.1 [adam 2018-10-07]
