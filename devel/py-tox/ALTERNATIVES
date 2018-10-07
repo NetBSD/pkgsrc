@@ -1,2 +1,2 @@
-bin/tox @PREFIX@/bin/tox@PYVERSSUFFIX@
-bin/tox-quickstart @PREFIX@/bin/tox-quickstart@PYVERSSUFFIX@
+bin/tox @PREFIX@/bin/tox-@PYVERSSUFFIX@
+bin/tox-quickstart @PREFIX@/bin/tox-quickstart-@PYVERSSUFFIX@
