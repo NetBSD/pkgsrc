@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2018/08/22 09:45:22 wiz Exp $
+# $NetBSD: Makefile,v 1.9.2.1 2018/10/07 11:32:05 spz Exp $
 
 DISTNAME=	mozjs-52.7.4
-PKGREVISION=	4
+PKGREVISION=	5
 PKGNAME=	${DISTNAME:S/mozjs/spidermonkey52/}
 CATEGORIES=	lang
 MASTER_SITES=	https://queue.taskcluster.net/v1/task/YqG2fjJJSTGzGX090FjDYg/runs/0/artifacts/public/build/
