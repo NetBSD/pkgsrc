@@ -1,0 +1,13 @@
+$NetBSD: patch-src_gbm_Makefile.in,v 1.1 2018/10/07 23:49:31 ryoon Exp $
+
+--- src/gbm/Makefile.in.orig	2018-02-09 02:18:14.000000000 +0000
++++ src/gbm/Makefile.in
+@@ -756,7 +756,7 @@ libgbm_la_LDFLAGS = \
+ 
+ libgbm_la_LIBADD = $(top_builddir)/src/loader/libloader.la \
+ 	$(top_builddir)/src/util/libmesautil.la \
+-	$(top_builddir)/src/util/libxmlconfig.la $(DLOPEN_LIBS) \
++	$(top_builddir)/src/util/libxmlconfig.la $(DLOPEN_LIBS) $(PTHREAD_LIBS) \
+ 	$(am__append_2) $(am__append_5)
+ TESTS = gbm-symbols-check
+ EXTRA_DIST = gbm-symbols-check meson.build

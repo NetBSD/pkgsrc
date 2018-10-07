@@ -1,0 +1,122 @@
+$NetBSD: patch-configure,v 1.1 2018/10/07 23:49:31 ryoon Exp $
+
+Don't check for pthread stubs on netbsd.
+
+From FreeBSD ports graphics/mesa-dri 18.0.0,
+DragonFly dports graphics/mesa-dri 17.3.1,
+files/patch-configure
+
+* Extend to FreeBSD
+osx: ld does not support --build-ld
+
+* For FreeBSD: Use monotonic clock for timeouts.
+
+* For FreeBSD: Implement futex_wake() and futex_wait() via _umtx_op() 
+
+* dri3: Mon Apr 10 19:14:48 2017 UTC
+DRI3 remains enabled at compile time, but it is now disabled at
+runtime for stock FreeBSD.  Set LIBGL_DRI3_ENABLE in the
+environment to enable DRI3.
+This change was made to work around a problem in libEGL,
+which fails to fall back to using DRI2 when run on a system
+without DRI3 support.
+
+--- configure.orig	2018-09-07 21:18:17.000000000 +0000
++++ configure
+@@ -21746,7 +21746,7 @@ fi
+ 
+ 
+ case "$host_os" in
+-darwin*)
++darwin* | freebsd*)
+     LD_BUILD_ID=""
+     ;;
+ *)
+@@ -22108,12 +22108,13 @@ case "$host_os" in
+ darwin*)
+     ;;
+ *)
+-    for ac_func in clock_gettime
++    for ac_func in clock_gettime clock_nanosleep
+ do :
+-  ac_fn_c_check_func "$LINENO" "clock_gettime" "ac_cv_func_clock_gettime"
+-if test "x$ac_cv_func_clock_gettime" = xyes; then :
++  as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
++ac_fn_c_check_func "$LINENO" "$ac_func" "$as_ac_var"
++if eval test \"x\$"$as_ac_var"\" = x"yes"; then :
+   cat >>confdefs.h <<_ACEOF
+-#define HAVE_CLOCK_GETTIME 1
++#define `$as_echo "HAVE_$ac_func" | $as_tr_cpp` 1
+ _ACEOF
+  CLOCK_LIB=
+ else
+@@ -22670,7 +22671,7 @@ fi
+ PTHREAD_LIBS="$PTHREAD_LIBS -pthread"
+ 
+ case "$host_os" in
+-linux* | cygwin* | darwin* | solaris* | *-gnu* | gnu* | openbsd*)
++linux* | cygwin* | darwin* | solaris* | *-gnu* | gnu* | openbsd* | netbsd*)
+     pthread_stubs_possible="no"
+     ;;
+ * )
+@@ -22772,11 +22773,20 @@ $as_echo "yes" >&6; }
+ fi
+ fi
+ 
+-ac_fn_c_check_header_mongrel "$LINENO" "linux/futex.h" "ac_cv_header_linux_futex_h" "$ac_includes_default"
+-if test "x$ac_cv_header_linux_futex_h" = xyes; then :
+-  DEFINES="$DEFINES -DHAVE_LINUX_FUTEX_H"
++for ac_header in linux/futex.h sys/umtx.h
++do :
++  as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
++ac_fn_c_check_header_compile "$LINENO" "$ac_header" "$as_ac_Header" "#include <errno.h>
++     #include <sys/types.h>
++"
++if eval test \"x\$"$as_ac_Header"\" = x"yes"; then :
++  cat >>confdefs.h <<_ACEOF
++#define `$as_echo "HAVE_$ac_header" | $as_tr_cpp` 1
++_ACEOF
++ DEFINES="$DEFINES -DHAVE_LINUX_FUTEX_H"
+ fi
+ 
++done
+ 
+ 
+ # Check whether --enable-selinux was given.
+@@ -23674,7 +23684,7 @@ fi
+ 
+ 
+ case "$host_os" in
+-linux*)
++linux* | freebsd* | dragonfly*)
+     dri3_default=yes
+     ;;
+ *)
+@@ -25975,7 +25985,7 @@ $as_echo "yes" >&6; }
+ 	have_dri3_modifiers=yes
+ fi
+ 
+-    if test "x$have_dri3_modifiers" == xyes; then
++    if test "x$have_dri3_modifiers" = xyes; then
+         DEFINES="$DEFINES -DHAVE_DRI3_MODIFIERS"
+     fi
+ fi
+@@ -28200,9 +28210,6 @@ rm -f core conftest.err conftest.$ac_obj
+         CLANG_LIBDIR=${LLVM_LIBDIR}
+     fi
+     CLANG_RESOURCE_DIR=$CLANG_LIBDIR/clang/${LLVM_VERSION}
+-    if test ! -f "$CLANG_RESOURCE_DIR/include/stddef.h"; then :
+-  as_fn_error $? "Could not find clang internal header stddef.h in $CLANG_RESOURCE_DIR Use --with-clang-libdir to specify the correct path to the clang libraries." "$LINENO" 5
+-fi
+ fi
+  if test "x$enable_opencl" = xyes; then
+   HAVE_CLOVER_TRUE=
+@@ -29648,7 +29655,7 @@ $as_echo "$as_me: WARNING: Building mesa
+         fi
+     fi
+ 
+-                        if test "x$enable_glx" == xgallium-xlib; then
++                        if test "x$enable_glx" = xgallium-xlib; then
+         GL_PC_LIB_PRIV="$GL_PC_LIB_PRIV $LLVM_LIBS"
+     fi
+     if test "x$enable_gallium_osmesa" = xyes; then

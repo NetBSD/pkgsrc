@@ -1,0 +1,82 @@
+$NetBSD: patch-configure.ac,v 1.1 2018/10/07 23:49:31 ryoon Exp $
+
+Don't check for pthread stubs on netbsd.
+
+From FreeBSD ports graphics/mesa-dri 18.0.0,
+DragonFly dports graphics/mesa-dri 17.3.1,
+files/patch-configure
+
+* Extend to FreeBSD
+osx: ld does not support --build-ld
+
+* For FreeBSD: Use monotonic clock for timeouts.
+
+* For FreeBSD: Implement futex_wake() and futex_wait() via _umtx_op() 
+
+* dri3: Mon Apr 10 19:14:48 2017 UTC
+DRI3 remains enabled at compile time, but it is now disabled at
+runtime for stock FreeBSD.  Set LIBGL_DRI3_ENABLE in the
+environment to enable DRI3.
+This change was made to work around a problem in libEGL,
+which fails to fall back to using DRI2 when run on a system
+without DRI3 support.
+
+--- configure.ac.orig	2018-02-09 02:17:57.000000000 +0000
++++ configure.ac
+@@ -713,7 +713,7 @@ dnl
+ dnl OSX linker does not support build-id
+ dnl
+ case "$host_os" in
+-darwin*)
++darwin* | freebsd*)
+     LD_BUILD_ID=""
+     ;;
+ *)
+@@ -918,7 +918,7 @@ case "$host_os" in
+ darwin*)
+     ;;
+ *)
+-    AC_CHECK_FUNCS([clock_gettime], [CLOCK_LIB=],
++    AC_CHECK_FUNCS([clock_gettime clock_nanosleep], [CLOCK_LIB=],
+                    [AC_CHECK_LIB([rt], [clock_gettime], [CLOCK_LIB=-lrt],
+                                  [AC_MSG_ERROR([Could not find clock_gettime])])])
+     AC_SUBST([CLOCK_LIB])
+@@ -953,7 +953,7 @@ PTHREAD_LIBS="$PTHREAD_LIBS -pthread"
+ dnl pthread-stubs is mandatory on some BSD platforms, due to the nature of the
+ dnl project. Even then there's a notable issue as described in the project README
+ case "$host_os" in
+-linux* | cygwin* | darwin* | solaris* | *-gnu* | gnu* | openbsd*)
++linux* | cygwin* | darwin* | solaris* | *-gnu* | gnu* | openbsd* | netbsd*)
+     pthread_stubs_possible="no"
+     ;;
+ * )
+@@ -966,7 +966,10 @@ if test "x$pthread_stubs_possible" = xye
+ fi
+ 
+ dnl Check for futex for fast inline simple_mtx_t.
+-AC_CHECK_HEADER([linux/futex.h], [DEFINES="$DEFINES -DHAVE_LINUX_FUTEX_H"])
++AC_CHECK_HEADERS([linux/futex.h sys/umtx.h],
++    [DEFINES="$DEFINES -DHAVE_LINUX_FUTEX_H"],,
++    [#include <errno.h>
++     #include <sys/types.h>])
+ 
+ dnl SELinux awareness.
+ AC_ARG_ENABLE([selinux],
+@@ -1249,7 +1252,7 @@ fi
+ AC_SUBST(LIBSENSORS_LIBS)
+ 
+ case "$host_os" in
+-linux*)
++linux* | freebsd* | dragonfly*)
+     dri3_default=yes
+     ;;
+ *)
+@@ -2481,8 +2484,6 @@ if test "x$enable_opencl" = xyes; then
+         CLANG_LIBDIR=${LLVM_LIBDIR}
+     fi
+     CLANG_RESOURCE_DIR=$CLANG_LIBDIR/clang/${LLVM_VERSION}
+-    AS_IF([test ! -f "$CLANG_RESOURCE_DIR/include/stddef.h"],
+-        [AC_MSG_ERROR([Could not find clang internal header stddef.h in $CLANG_RESOURCE_DIR Use --with-clang-libdir to specify the correct path to the clang libraries.])])
+ fi
+ AM_CONDITIONAL(HAVE_CLOVER, test "x$enable_opencl" = xyes)
+ AM_CONDITIONAL(HAVE_CLOVER_ICD, test "x$enable_opencl_icd" = xyes)
