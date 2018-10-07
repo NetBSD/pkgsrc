@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4311 2018/10/07 23:39:22 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.4312 2018/10/07 23:45:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6018,3 +6018,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/vault to 0.11.2 [fhajny 2018-10-07]
 	Updated textproc/link-grammar to 5.5.1 [ryoon 2018-10-07]
 	Updated graphics/openimageio to 1.8.15 [ryoon 2018-10-07]
+	Updated graphics/blender to 2.79b [ryoon 2018-10-07]
