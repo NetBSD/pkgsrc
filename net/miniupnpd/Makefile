@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2018/10/07 09:12:31 adam Exp $
+# $NetBSD: Makefile,v 1.24 2018/10/07 22:26:42 maya Exp $
 
 DISTNAME=	miniupnpd-2.1
 CATEGORIES=	net
@@ -11,6 +11,9 @@ LICENSE=	modified-bsd
 
 EGDIR=		${PREFIX}/share/examples/miniupnpd
 CONF_FILES=	${EGDIR}/miniupnpd.conf ${PKG_SYSCONFDIR}/miniupnpd.conf
+
+# miniupnpd.c:9:20: fatal error: config.h: No such file or directory
+MAKE_JOBS_SAFE=	no
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
