@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2018/09/27 23:07:57 tnn Exp $
+# $NetBSD: Makefile,v 1.14 2018/10/07 10:52:40 schmonz Exp $
 #
 
-DISTNAME=	etckeeper_1.18.5.orig
-PKGNAME=	${DISTNAME:S/_/-/:S/.orig$/.1/}
-PKGREVISION=	5
+DISTNAME=	etckeeper_1.18.8.orig
+PKGNAME=	${DISTNAME:S/_/-/:S/.orig$//}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/e/etckeeper/}
 
@@ -21,11 +20,6 @@ NO_BUILD=	yes
 AUTO_MKDIRS=	yes
 
 BUILD_DEFS+=	VARBASE
-
-ETCKEEPER_PATCH=			etckeeper_1.18.5-1.diff.gz
-PATCHFILES+=				${ETCKEEPER_PATCH}
-SITES.${ETCKEEPER_PATCH}=		${MASTER_SITES}
-PATCH_DIST_STRIP.${ETCKEEPER_PATCH}=	-p1
 
 .include "cf-files.mk"
 
