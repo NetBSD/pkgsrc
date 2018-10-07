@@ -1,0 +1,3 @@
+The fehQlibs provide a basic framework for byte, string, I/O, socket,
+and IPv4/IPv6 handling in addition with the constant database cdb
+together with dnsstub resolver routines for Internet services.
