@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1227 2018/09/23 14:30:13 taca Exp $
+# $NetBSD: Makefile,v 1.1228 2018/10/07 12:54:24 schmonz Exp $
 #
 
 COMMENT=	Networking tools
@@ -137,6 +137,7 @@ SUBDIR+=	ettercap-NG
 SUBDIR+=	exabgp
 SUBDIR+=	ez-ipupdate
 SUBDIR+=	fair-identd
+SUBDIR+=	fehqlibs
 SUBDIR+=	fetch
 SUBDIR+=	filezilla
 SUBDIR+=	firewalk
