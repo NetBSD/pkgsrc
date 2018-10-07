@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4302 2018/10/07 10:42:42 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4303 2018/10/07 10:52:46 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6007,3 +6007,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/miniupnpd to 2.1 [adam 2018-10-07]
 	Updated textproc/py-alabaster to 0.7.12 [adam 2018-10-07]
 	Updated security/py-rsa to 4.0 [adam 2018-10-07]
+	Updated sysutils/etckeeper to 1.18.8 [schmonz 2018-10-07]
