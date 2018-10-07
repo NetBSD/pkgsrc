@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/10/07 08:20:49 adam Exp $
+
+SHA1 (toml-0.10.0.tar.gz) = 53ac05074977ec92c5a3559d91c7cc9de649a440
+RMD160 (toml-0.10.0.tar.gz) = 8f619d6251935a9b17370ec8e0b71050d2937451
+SHA512 (toml-0.10.0.tar.gz) = 26f26c38ce9cd48305218c2c34c5a5407b00aefc25a933f044bb7be22c23cfdfa3b8cf2da952d17760c4b9038df62e405fa039cc7b63dd3e94c9c312f04f9182
+Size (toml-0.10.0.tar.gz) = 16719 bytes
