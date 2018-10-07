@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/08/30 11:14:05 adam Exp $
+# $NetBSD: Makefile,v 1.3 2018/10/07 07:02:39 adam Exp $
 
-DISTNAME=	powerlaw-1.4.4
+DISTNAME=	powerlaw-1.4.5
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/powerlaw/}
@@ -18,5 +18,5 @@ DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
 USE_LANGUAGES=	# none
 
 .include "../../devel/py-cython/buildlink3.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
