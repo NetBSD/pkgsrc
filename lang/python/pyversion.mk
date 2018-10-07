@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.124 2018/07/03 03:55:40 adam Exp $
+# $NetBSD: pyversion.mk,v 1.125 2018/10/07 23:56:23 ryoon Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -39,7 +39,7 @@
 # PYTHON_FOR_BUILD_ONLY
 #	Whether Python is needed only at build time or at run time.
 #
-#	Possible values: yes no tool
+#	Possible values: yes no test tool
 #	Default: no
 #
 # PYTHON_SELF_CONFLICT
@@ -165,6 +165,8 @@ PYTHON_FOR_BUILD_ONLY?=		no
 .if defined(PYPKGSRCDIR)
 .  if !empty(PYTHON_FOR_BUILD_ONLY:M[tT][oO][oO][lL])
 TOOL_DEPENDS+=			${PYDEPENDENCY}
+.  elif !empty(PYTHON_FOR_BUILD_ONLY:M[tT][eE][sS][tT])
+TEST_DEPENDS+=			${PYDEPENDENCY}
 .  else
 .    if !empty(PYTHON_FOR_BUILD_ONLY:M[yY][eE][sS])
 BUILDLINK_DEPMETHOD.python?=	build
