@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4309 2018/10/07 20:19:45 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.4310 2018/10/07 23:22:02 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6016,3 +6016,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/ucspi-tcp6 to 1.10 [schmonz 2018-10-07]
 	Updated mail/rspamd to 1.8.0 [fhajny 2018-10-07]
 	Updated security/vault to 0.11.2 [fhajny 2018-10-07]
+	Updated textproc/link-grammar to 5.5.1 [ryoon 2018-10-07]
