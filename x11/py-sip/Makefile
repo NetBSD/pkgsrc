@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2018/09/18 03:33:20 maya Exp $
+# $NetBSD: Makefile,v 1.55 2018/10/07 09:00:09 adam Exp $
 
-DISTNAME=	sip-4.19.8
+DISTNAME=	sip-4.19.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	x11 devel python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyqt/}
 
@@ -57,9 +56,8 @@ SUBST_FILES.pyversfx=	sipgen/sipgen.sbf
 SUBST_SED.pyversfx=	-e "s|@PYVERSSUFFIX@|${PYVERSSUFFIX}|g"
 
 do-configure:
-	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
-		${PYTHONBIN} configure.py ${CONFIGURE_ARGS})
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
+		${PYTHONBIN} configure.py ${CONFIGURE_ARGS}
 
-.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
