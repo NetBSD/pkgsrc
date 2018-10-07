@@ -1,16 +1,13 @@
-$NetBSD: distinfo,v 1.49 2017/02/09 00:23:29 joerg Exp $
+$NetBSD: distinfo,v 1.50 2018/10/07 23:44:49 ryoon Exp $
 
-SHA1 (blender-2.77a.tar.gz) = 935793b3e9fd4d02c71f275aac3aca27cd58bdfb
-RMD160 (blender-2.77a.tar.gz) = 7d99f064b5a6055aaf549ddb30c49e73f081f002
-SHA512 (blender-2.77a.tar.gz) = 4f8223a3786b80fa613ace27bea9349309b5857bcc1fafdb7d769f6192d5cb455ce4faf60920d7a1c2cb82ef8c40a10b25a760748b305c16c550657cf1e4df93
-Size (blender-2.77a.tar.gz) = 41927082 bytes
-SHA1 (patch-doc_python_api_sphinx_doc_gen.sh) = 734a372369ca7bb89ef62f0e0aae22d7046f49f8
+SHA1 (blender-2.79b.tar.gz) = 4fd307ccfd1d6df5cc1898009712d4b1ae35430f
+RMD160 (blender-2.79b.tar.gz) = 787fc2ee718157aa95ffcced4935355d3086ca0d
+SHA512 (blender-2.79b.tar.gz) = 2db21ace446168dd683cdb5aad9dec001f8888ae4e9603a04ddb44fb78489ded827deb07e83712b0f1118a0e7bf66f2a5d935dc4ebb3a6703d72672ff414367f
+Size (blender-2.79b.tar.gz) = 50204270 bytes
+SHA1 (patch-doc_python__api_sphinx__doc__gen.sh) = 5300936c1f675346dbcd76bbd640dd3266065297
 SHA1 (patch-extern_glog_src_base_mutex.h) = 34a20264581a093a1686f1d13a6fccbd5cd9e674
 SHA1 (patch-extern_glog_src_config.h) = 9666c5d925cfeebeef2f178418c9fc2403831da1
 SHA1 (patch-extern_glog_src_config__netbsd.h) = be4727135b8fe1ddbcb5ad52f8230aec51a1a909
 SHA1 (patch-extern_glog_src_utilities.h) = c78ef191ab6ec7e65837b88468a7e1b8eaf325d3
-SHA1 (patch-extern_rangetree_range__tree.hh) = 976881b9caad67a2cfb24039652e887867fa6cc0
-SHA1 (patch-intern_cycles_util_util__types.h) = 37944c6b0a970468e6791ec4a5beef1ec0ddf190
 SHA1 (patch-intern_guardedalloc_intern_mallocn__intern.h) = c7bc89af1c03b50ae0bd8af5aacc25cd82dfcbfc
-SHA1 (patch-source_blender_blenlib_BLI__alloca.h) = 95ef3250aaf8b3701c56254d9a8ca2752c1bb715
 SHA1 (patch-source_blender_imbuf_intern_dds_DirectDrawSurface.cpp) = b38f61900aa30b02479c7397062d71d295932847

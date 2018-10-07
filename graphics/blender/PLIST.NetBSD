@@ -1,4 +1,2 @@
-@comment $NetBSD: PLIST.NetBSD,v 1.5 2017/02/06 01:29:10 markd Exp $
-${PLIST.py36}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/_sysconfigdata_${NETBSDVER}.py
-${PLIST.py35}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/plat-${NETBSDVER}/IN.py
-${PLIST.py35}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/plat-${NETBSDVER}/regen
+@comment $NetBSD: PLIST.NetBSD,v 1.6 2018/10/07 23:44:49 ryoon Exp $
+share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/_sysconfigdata_${NETBSDVER}.py
