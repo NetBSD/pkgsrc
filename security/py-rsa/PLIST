@@ -1,12 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/24 14:38:03 wiz Exp $
-bin/pyrsa-decrypt
-bin/pyrsa-decrypt-bigfile
-bin/pyrsa-encrypt
-bin/pyrsa-encrypt-bigfile
-bin/pyrsa-keygen
-bin/pyrsa-priv2pub
-bin/pyrsa-sign
-bin/pyrsa-verify
+@comment $NetBSD: PLIST,v 1.2 2018/10/07 10:41:52 adam Exp $
+bin/pyrsa-decrypt-${PYVERSSUFFIX}
+bin/pyrsa-encrypt-${PYVERSSUFFIX}
+bin/pyrsa-keygen-${PYVERSSUFFIX}
+bin/pyrsa-priv2pub-${PYVERSSUFFIX}
+bin/pyrsa-sign-${PYVERSSUFFIX}
+bin/pyrsa-verify-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -19,18 +17,9 @@ ${PYSITELIB}/rsa/__init__.pyo
 ${PYSITELIB}/rsa/_compat.py
 ${PYSITELIB}/rsa/_compat.pyc
 ${PYSITELIB}/rsa/_compat.pyo
-${PYSITELIB}/rsa/_version133.py
-${PYSITELIB}/rsa/_version133.pyc
-${PYSITELIB}/rsa/_version133.pyo
-${PYSITELIB}/rsa/_version200.py
-${PYSITELIB}/rsa/_version200.pyc
-${PYSITELIB}/rsa/_version200.pyo
 ${PYSITELIB}/rsa/asn1.py
 ${PYSITELIB}/rsa/asn1.pyc
 ${PYSITELIB}/rsa/asn1.pyo
-${PYSITELIB}/rsa/bigfile.py
-${PYSITELIB}/rsa/bigfile.pyc
-${PYSITELIB}/rsa/bigfile.pyo
 ${PYSITELIB}/rsa/cli.py
 ${PYSITELIB}/rsa/cli.pyc
 ${PYSITELIB}/rsa/cli.pyo
@@ -43,6 +32,9 @@ ${PYSITELIB}/rsa/core.pyo
 ${PYSITELIB}/rsa/key.py
 ${PYSITELIB}/rsa/key.pyc
 ${PYSITELIB}/rsa/key.pyo
+${PYSITELIB}/rsa/machine_size.py
+${PYSITELIB}/rsa/machine_size.pyc
+${PYSITELIB}/rsa/machine_size.pyo
 ${PYSITELIB}/rsa/parallel.py
 ${PYSITELIB}/rsa/parallel.pyc
 ${PYSITELIB}/rsa/parallel.pyo
@@ -52,6 +44,9 @@ ${PYSITELIB}/rsa/pem.pyo
 ${PYSITELIB}/rsa/pkcs1.py
 ${PYSITELIB}/rsa/pkcs1.pyc
 ${PYSITELIB}/rsa/pkcs1.pyo
+${PYSITELIB}/rsa/pkcs1_v2.py
+${PYSITELIB}/rsa/pkcs1_v2.pyc
+${PYSITELIB}/rsa/pkcs1_v2.pyo
 ${PYSITELIB}/rsa/prime.py
 ${PYSITELIB}/rsa/prime.pyc
 ${PYSITELIB}/rsa/prime.pyo
@@ -64,6 +59,3 @@ ${PYSITELIB}/rsa/transform.pyo
 ${PYSITELIB}/rsa/util.py
 ${PYSITELIB}/rsa/util.pyc
 ${PYSITELIB}/rsa/util.pyo
-${PYSITELIB}/rsa/varblock.py
-${PYSITELIB}/rsa/varblock.pyc
-${PYSITELIB}/rsa/varblock.pyo
