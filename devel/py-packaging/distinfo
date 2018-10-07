@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/04/02 19:52:11 adam Exp $
+$NetBSD: distinfo,v 1.3 2018/10/07 06:44:36 adam Exp $
 
-SHA1 (packaging-17.1.tar.gz) = 8dbd54a645fcc7951fcd6c06e9ac6494a0ada816
-RMD160 (packaging-17.1.tar.gz) = cc3577c2b06262cf5901a67499379e5023647a5b
-SHA512 (packaging-17.1.tar.gz) = 52d2f482ae5cd0f8e7b3ac35c4b270ca736bc4f7ebaa569631d1dcb8ea024ee6f75127ca2aa3c95e686ebbd427de2ef4bc01bcd839591f7b4c1e26f9b8d9acb0
-Size (packaging-17.1.tar.gz) = 49849 bytes
+SHA1 (packaging-18.0.tar.gz) = 8a64f2b9c411b7275ba1c10ceadbd01b6779d21d
+RMD160 (packaging-18.0.tar.gz) = 24b2a77156eb4bb77da56e4d078c48b7aac5fa9a
+SHA512 (packaging-18.0.tar.gz) = 9f7cab9bdd756cc49192379b8381f81d218d3201e071498f2f6fd0307b1c46ad1a8c8b9d4f27e62d5f469eb05603a57be54deb8a5e0dbc2cf542e436a7127b34
+Size (packaging-18.0.tar.gz) = 48018 bytes
