@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4306 2018/10/07 12:54:39 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.4307 2018/10/07 12:55:21 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6013,3 +6013,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/py-gsutil to 4.34 [adam 2018-10-07]
 	Updated devel/libowfat to 0.32 [schmonz 2018-10-07]
 	Added net/fehqlibs version 0.9 [schmonz 2018-10-07]
+	Updated net/ucspi-tcp6 to 1.10 [schmonz 2018-10-07]
