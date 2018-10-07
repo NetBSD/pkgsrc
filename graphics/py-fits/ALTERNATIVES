@@ -1,0 +1,3 @@
+bin/fitscheck @PREFIX@/bin/fitscheck-@PYVERSSUFFIX@
+bin/fitsdiff @PREFIX@/bin/fitsdiff-@PYVERSSUFFIX@
+bin/fitshead @PREFIX@/bin/fitshead-@PYVERSSUFFIX@
