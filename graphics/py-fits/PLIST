@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2017/11/15 23:29:26 markd Exp $
-bin/fitscheck${PYVERSSUFFIX}
-bin/fitsdiff${PYVERSSUFFIX}
-bin/fitshead${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.4 2018/10/07 08:51:42 adam Exp $
+bin/fitscheck-${PYVERSSUFFIX}
+bin/fitsdiff-${PYVERSSUFFIX}
+bin/fitshead-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
