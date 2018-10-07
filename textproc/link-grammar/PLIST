@@ -1,12 +1,17 @@
-@comment $NetBSD: PLIST,v 1.6 2016/09/12 14:06:08 mef Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/10/07 23:21:26 ryoon Exp $
 bin/link-parser
 include/link-grammar/dict-api.h
 include/link-grammar/dict-structures.h
 include/link-grammar/link-features.h
 include/link-grammar/link-includes.h
 lib/liblink-grammar.la
-lib/libminisat.la
 lib/pkgconfig/link-grammar.pc
+man/man1/link-parser.1
+share/link-grammar/ady/4.0.affix
+share/link-grammar/ady/4.0.constituent-knowledge
+share/link-grammar/ady/4.0.dict
+share/link-grammar/ady/4.0.knowledge
+share/link-grammar/ady/4.0.regex
 share/link-grammar/amy/4.0.affix
 share/link-grammar/amy/4.0.constituent-knowledge
 share/link-grammar/amy/4.0.dict
@@ -17,6 +22,8 @@ share/link-grammar/any/4.0.constituent-knowledge
 share/link-grammar/any/4.0.dict
 share/link-grammar/any/4.0.knowledge
 share/link-grammar/any/4.0.regex
+share/link-grammar/any/README.md
+share/link-grammar/any/affix-punc
 share/link-grammar/ar/4.0.affix
 share/link-grammar/ar/4.0.constituent-knowledge
 share/link-grammar/ar/4.0.dict
@@ -51,11 +58,17 @@ share/link-grammar/ar/words/words.noun_prop
 share/link-grammar/ar/words/words.numbers
 share/link-grammar/ar/words/words.prep
 share/link-grammar/ar/words/words.years
+share/link-grammar/command-help-en.txt
 share/link-grammar/de/4.0.affix
 share/link-grammar/de/4.0.constituent-knowledge
 share/link-grammar/de/4.0.dict
 share/link-grammar/de/4.0.knowledge
 share/link-grammar/de/4.0.regex
+share/link-grammar/demo-sql/4.0.affix
+share/link-grammar/demo-sql/4.0.constituent-knowledge
+share/link-grammar/demo-sql/4.0.knowledge
+share/link-grammar/demo-sql/4.0.regex
+share/link-grammar/demo-sql/dict.db
 share/link-grammar/en/4.0.affix
 share/link-grammar/en/4.0.constituent-knowledge
 share/link-grammar/en/4.0.dict
@@ -82,6 +95,7 @@ share/link-grammar/en/words/units.4
 share/link-grammar/en/words/units.4.dot
 share/link-grammar/en/words/units.5
 share/link-grammar/en/words/units.6
+share/link-grammar/en/words/units.a
 share/link-grammar/en/words/words-medical.adv.1
 share/link-grammar/en/words/words-medical.prep.1
 share/link-grammar/en/words/words-medical.v.4.1
@@ -95,8 +109,11 @@ share/link-grammar/en/words/words.adj.2
 share/link-grammar/en/words/words.adj.3
 share/link-grammar/en/words/words.adv.1
 share/link-grammar/en/words/words.adv.2
-share/link-grammar/en/words/words.adv.3
+share/link-grammar/en/words/words.adv.3-const
+share/link-grammar/en/words/words.adv.3-vowel
 share/link-grammar/en/words/words.adv.4
+share/link-grammar/en/words/words.lang.3-const
+share/link-grammar/en/words/words.lang.3-vowel
 share/link-grammar/en/words/words.n.1-const
 share/link-grammar/en/words/words.n.1-vowel
 share/link-grammar/en/words/words.n.1.gerund
@@ -162,6 +179,7 @@ share/link-grammar/fa/words/words.v.sub
 share/link-grammar/he/4.0.affix
 share/link-grammar/he/4.0.constituent-knowledge
 share/link-grammar/he/4.0.dict
+share/link-grammar/he/4.0.dict.m4
 share/link-grammar/he/4.0.knowledge
 share/link-grammar/he/4.0.regex
 share/link-grammar/id/4.0.affix
