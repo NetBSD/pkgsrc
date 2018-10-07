@@ -1,3 +1,19 @@
-$NetBSD: CHANGES-pkgsrc-2018Q3,v 1.1.2.1 2018/09/30 18:42:44 jperkin Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q3,v 1.1.2.2 2018/10/07 11:35:34 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q3 branch:
+
+Pullup ticket #5837 - requested by nia
+net/dnscrypt-proxy2: build fix
+
+Pullup ticket #5838 - requested by nia
+net/chrony: security update
+
+Pullup ticket #5839 - requested by maya
+lang/spidermonkey52: security update
+www/firefox-l10n: security update
+www/firefox: security update
+
+Pullup ticket #5840 - requested by maya
+devel/git-base: security update
+devel/git: security update
+
