@@ -1,50 +1,24 @@
-$NetBSD: patch-configure.py,v 1.1 2018/02/01 21:03:09 adam Exp $
+$NetBSD: patch-configure.py,v 1.2 2018/10/07 09:00:09 adam Exp $
 
---- configure.py.orig	2014-07-03 10:08:46.000000000 +0000
+Add PYVERSSUFFIX.
+
+--- configure.py.orig	2018-10-01 13:22:40.000000000 +0000
 +++ configure.py
-@@ -19,6 +19,7 @@ import sys
- import os
- import glob
- import optparse
-+import imp
- from distutils import sysconfig
- 
- try:
-@@ -220,7 +221,7 @@ def set_platform_directories():
+@@ -250,7 +250,7 @@ def set_platform_directories():
  
          plat_py_lib_dir = lib_dir + "/config"
          plat_bin_dir = sys.exec_prefix + "/bin"
 -        plat_sip_dir = sys.prefix + "/share/sip"
-+        plat_sip_dir = sys.prefix + "/share/sip%s" % sys.version[0:3]
++        plat_sip_dir = sys.prefix + "/share/sip{}".format(sys.version[0:3])
  
  
- def patch_files():
-@@ -273,7 +274,7 @@ def create_config(module, template, macr
+ def create_config(module, template, macros):
+@@ -268,7 +268,7 @@ def create_config(module, template, macr
          "sip_version":      sip_version,
          "sip_version_str":  sip_version_str,
          "platform":         build_platform,
 -        "sip_bin":          os.path.join(sip_bin_dir, "sip"),
-+        "sip_bin":          os.path.join(sip_bin_dir, "sip%s" % sys.version[0:3]),
++        "sip_bin":          os.path.join(sip_bin_dir, "sip{}".format(sys.version[0:3])),
          "sip_inc_dir":      sip_inc_dir,
-         "sip_mod_dir":      sip_module_dir,
-         "default_bin_dir":  plat_bin_dir,
-@@ -310,9 +311,17 @@ def create_makefiles(macros):
-         subdirs = ["siplib"]
-         installs = None
-     else:
-+        pyc_file = "sipconfig.pyc"
-+        pyc_dir = cfg.sip_mod_dir
-+        try:
-+            pyc_file = imp.cache_from_source("sipconfig.py")
-+            pyc_dir = os.path.join(cfg.sip_mod_dir, "__pycache__")
-+        except AttributeError:
-+            pass
-+
-         subdirs = ["sipgen", "siplib"]
--        installs = (["sipconfig.py", os.path.join(src_dir, "sipdistutils.py")],
--                cfg.sip_mod_dir)
-+        installs = [(["sipconfig.py", os.path.join(src_dir, "sipdistutils.py")],
-+                cfg.sip_mod_dir), ([pyc_file], pyc_dir)]
- 
-     if opts.use_qmake:
-         sipconfig.inform("Creating top level .pro file...")
+         "sip_root_dir":     sip_root_dir,
+         "sip_module_dir":   sip_module_dir,
