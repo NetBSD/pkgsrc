@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2018/09/25 12:20:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.99 2018/10/08 15:50:39 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -219,5 +219,4 @@ TEST_MAKE_FLAGS+=	EAPOL_TEST=""
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/lib/*.a ${DESTDIR}${PREFIX}/lib/*.la
 
-.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
