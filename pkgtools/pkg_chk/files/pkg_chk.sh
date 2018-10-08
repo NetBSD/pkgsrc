@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.73 2014/04/23 00:01:01 abs Exp $
+# $Id: pkg_chk.sh,v 1.74 2018/10/08 10:35:15 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Make -g list user-installed packages first, followed by commented
@@ -809,12 +809,12 @@ while getopts BC:D:L:P:U:abcfghiklNnpqrsuv ch; do
 	B ) opt_B=1 ;;
 	b ) opt_b=1 ;;
 	C ) opt_C="$OPTARG" ;;
-	c ) opt_a=1 ; opt_q=1 ; echo "-c is deprecated - use -a -q" ;;
+	c ) opt_a=1 ; opt_q=1 ; echo "** -c deprecated - use -a -q" 1>&2 ;;
 	D ) opt_D="$OPTARG" ;;
 	f ) opt_f=1 ;;
 	g ) opt_g=1 ;;
 	h ) opt_h=1 ;;
-	i ) opt_u=1 ; opt_q=1 ; echo "-i is deprecated - use -u -q" ;;
+	i ) opt_u=1 ; opt_q=1 ; echo "** -i deprecated - use -u -q" 1>&2 ;;
 	k ) opt_k=1 ;;
 	L ) opt_L="$OPTARG" ;;
 	l ) opt_l=1 ;;
