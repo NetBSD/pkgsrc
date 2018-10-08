@@ -1,4 +1,4 @@
-# $NetBSD: darwin-opendarwin.mk,v 1.1 2007/08/01 16:28:08 jlam Exp $
+# $NetBSD: darwin-opendarwin.mk,v 1.2 2018/10/08 20:13:35 rillig Exp $
 #
 # OpenDarwin
 #
@@ -11,7 +11,7 @@
 .  include "${PKGSRCDIR}/emulators/darwin_lib/emulator.mk"
 
 .elif !empty(EMUL_TYPE.darwin:Mopendarwin)
-   # default to highest version of OpenDarwin
+# default to highest version of OpenDarwin
 .  include "${PKGSRCDIR}/emulators/darwin_lib/emulator.mk"
 
 .else
