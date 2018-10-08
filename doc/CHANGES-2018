@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4314 2018/10/08 10:12:40 prlw1 Exp $
+$NetBSD: CHANGES-2018,v 1.4315 2018/10/08 10:36:55 abs Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6021,3 +6021,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/blender to 2.79b [ryoon 2018-10-07]
 	Added graphics/MesaLib18 version 18.2.0 [ryoon 2018-10-07]
 	Updated devel/glib2 to 2.56.2nb2 [prlw1 2018-10-08]
+	Updated pkgtools/pkg_chk to 2.0.10 [abs 2018-10-08]
