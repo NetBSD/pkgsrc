@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4322 2018/10/08 14:49:17 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4323 2018/10/08 16:08:56 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6029,3 +6029,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/p5-highlight to 3.46 [schmonz 2018-10-08]
 	Updated textproc/highlight to 3.46 [schmonz 2018-10-08]
 	Added net/py-flower version 0.9.2 [adam 2018-10-08]
+	Updated misc/libcdio to 0.94 [gdt 2018-10-08]
