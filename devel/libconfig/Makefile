@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2015/05/28 07:21:01 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2018/10/08 20:58:12 triaxx Exp $
 
-DISTNAME=	libconfig-1.5
+DISTNAME=	libconfig-1.7.2
 CATEGORIES=	devel
-MASTER_SITES=	http://www.hyperrealm.com/libconfig/
+MASTER_SITES=	http://hyperrealm.github.io/libconfig/dist/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.hyperrealm.com/libconfig/
+HOMEPAGE=	http://hyperrealm.github.io/libconfig/
 COMMENT=	Simple library for manipulating structured configuration files
 LICENSE=	gnu-lgpl-v2.1
 
@@ -17,5 +17,8 @@ USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	lib/libconfig++.pc.in
 PKGCONFIG_OVERRIDE+=	lib/libconfig.pc.in
+
+# https://github.com/hyperrealm/libconfig/pull/127
+CHECK_PORTABILITY_SKIP=	contrib/ls-config/debian/postinst
 
 .include "../../mk/bsd.pkg.mk"
