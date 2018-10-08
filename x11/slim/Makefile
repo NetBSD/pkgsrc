@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2018/05/18 14:51:17 youri Exp $
+# $NetBSD: Makefile,v 1.2 2018/10/08 17:46:07 abs Exp $
 
 DISTNAME=	slim-1.3.6
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=slim.berlios/}
 
@@ -23,6 +24,7 @@ SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	CMakeLists.txt slim.conf
 SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},'
+SUBST_SED.paths=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},'
 SUBST_SED.paths+=	-e 's,@X11BASE@,${X11BASE},'
 
 CONF_FILES+=	share/examples/slim/slim.conf \

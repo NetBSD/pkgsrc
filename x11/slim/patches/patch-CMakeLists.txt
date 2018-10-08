@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2018/05/18 14:51:17 youri Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2018/10/08 17:46:07 abs Exp $
 
 Fix build.
 
@@ -12,7 +12,7 @@ Fix build.
 +set(CMAKE_INSTALL_PREFIX "@PREFIX@" CACHE PATH "Installation Directory")
  set(PKGDATADIR "${CMAKE_INSTALL_PREFIX}/share/slim")
 -set(SYSCONFDIR "/etc")
-+set(SYSCONFDIR "@PREFIX@/etc")
++set(SYSCONFDIR "@PKG_SYSCONFDIR@")
  set(LIBDIR "/lib")
 -set(MANDIR "${CMAKE_INSTALL_PREFIX}/share/man")
 +set(MANDIR "${CMAKE_INSTALL_PREFIX}/man")
