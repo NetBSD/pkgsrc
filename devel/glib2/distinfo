@@ -1,18 +1,15 @@
-$NetBSD: distinfo,v 1.235 2018/08/19 18:32:27 wiz Exp $
+$NetBSD: distinfo,v 1.236 2018/10/08 10:12:05 prlw1 Exp $
 
 SHA1 (glib-2.56.2.tar.xz) = 8b18a92f81a8d033abfb43a628bae3bbaf71800c
 RMD160 (glib-2.56.2.tar.xz) = 8fe9fd51a84ebe0f61b5cb2ab97325baa51c4eb3
 SHA512 (glib-2.56.2.tar.xz) = 8201ea82d3613d2e879284abe01520b766da30957c5a1a22f3e6019b0cce6bf95d25beae78867b6a133401c4165153c0c92974dd459ab12f9e0e9dd0c95df5d4
 Size (glib-2.56.2.tar.xz) = 8041756 bytes
 SHA1 (patch-Makefile.in) = 4d587eb9ff27ff2b3489c59388319142e2fb6ced
-SHA1 (patch-aa) = 5aac049588b3f2cb63d86259cf9ebeed61081c52
-SHA1 (patch-ab) = 04bde955a2a588011a8c77ada4923d5464a0d544
-SHA1 (patch-ac) = 96e153339675457356f71e35d20375bed669d337
-SHA1 (patch-ae) = 09f16e8e14bdea3ee0e478d335f65cb66939e5f5
+SHA1 (patch-aa) = 01bdbcb6e49e440eefba966471a986215daec2e9
 SHA1 (patch-af) = f21f5c5f799189885a3826fde8ad079f599ae26b
 SHA1 (patch-ah) = d523967c88fc06f46de1d7f2eb04be65db04ada2
 SHA1 (patch-aha) = ade66edd87a5e76a1256bd8bcdc9bc3dd614885c
-SHA1 (patch-ak) = a7dd9b100b05424a76476754c2ee9896b5ae6d26
+SHA1 (patch-ak) = 040c679220988b31bd9d3e5c80a4fc6c2551e067
 SHA1 (patch-al) = af8428eeb6ce5e4dd70ddf972693df18d6c26d50
 SHA1 (patch-am) = 99f54927d76580dfeda2a6b1909e1bea5dbdc293
 SHA1 (patch-an) = 47986cfa2374ad4a89887bee5896d477a31f651f
@@ -28,6 +25,11 @@ SHA1 (patch-gio_inotify_inotify-kernel.c) = 18fc55be06dfa4ebf7128b8d1888aaff3b2b
 SHA1 (patch-glib_gmain.c) = d09ff66e475ee52d37ac0dcb463110f690ce6511
 SHA1 (patch-glib_gthread-posix.c) = ca93c8dc358453eb79b518c884464c90d7628888
 SHA1 (patch-glib_gtimezone.c) = 3f72bc2ed4447d60871e66984a5e3a80ca8c75f4
+SHA1 (patch-gmodule_gmodule-ar.c) = e382a0ada232e083d51cbede7f689a50ebeff4d8
+SHA1 (patch-gmodule_gmodule-dl.c) = b678a04debbc79ebb67d91db7716990658e76da4
+SHA1 (patch-gmodule_gmodule-dyld.c) = 5adf62970d9cff22d451307aaa0b00d975dab138
+SHA1 (patch-gmodule_gmodule-win32.c) = 477a861f8590a62c3dbc0aa4ad728cc86ebb34dd
+SHA1 (patch-gmodule_gmodule.c) = 55c5f9d16e3517f3fdc04d40922f50d9c66b0b9a
 SHA1 (patch-gobject_Makefile.am) = 6eed6b57f5ff0aa0dfb623110b23a3ff78aa4e75
 SHA1 (patch-gobject_Makefile.in) = a4768ff7b0607a8a4dfbb2cff087a987b451fd18
 SHA1 (patch-gobject_glib-genmarshal.in) = f21ca416d4eb4ad5a8ce3ffa053f8bcd2be8953a

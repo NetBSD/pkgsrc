@@ -1,20 +1,10 @@
-$NetBSD: patch-aa,v 1.61 2018/08/01 17:43:25 jperkin Exp $
+$NetBSD: patch-aa,v 1.62 2018/10/08 10:12:06 prlw1 Exp $
 
 - solaris sun studio check and fix
 - use pkgsrc libtool
-- broken dlopen(NULL,0) detection and workaround
-  http://bugzilla.gnome.org/show_bug.cgi?id=140329
 
 --- configure.orig	2018-04-07 02:37:11.000000000 +0000
 +++ configure
-@@ -736,6 +736,7 @@ GIO
- GSPAWN
- GLIB_DEBUG_FLAGS
- G_MODULE_NEED_USCORE
-+G_MODULE_BROKEN_DLOPEN_NULL
- G_MODULE_BROKEN_RTLD_GLOBAL
- G_MODULE_HAVE_DLERROR
- G_MODULE_LDFLAGS
 @@ -5512,6 +5513,9 @@ $as_echo_n "checking for Mac OS X Carbon
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
@@ -105,14 +95,6 @@ $NetBSD: patch-aa,v 1.61 2018/08/01 17:43:25 jperkin Exp $
  esac
  
  if test "$ac_cv_func_statfs" = yes; then :
-@@ -25692,6 +25733,7 @@ else
- fi
- G_MODULE_NEED_USCORE=0
- G_MODULE_BROKEN_RTLD_GLOBAL=0
-+G_MODULE_BROKEN_DLOPEN_NULL=0
- G_MODULE_HAVE_DLERROR=0
- if test -z "$G_MODULE_IMPL"; then
-   case "$host" in
 @@ -25817,9 +25859,9 @@ if  test "$G_MODULE_IMPL" = "G_MODULE_IM
  	LIBS="$G_MODULE_LIBS $LIBS"
  	LDFLAGS="$LDFLAGS $G_MODULE_LDFLAGS"
@@ -125,63 +107,6 @@ $NetBSD: patch-aa,v 1.61 2018/08/01 17:43:25 jperkin Exp $
  		${LDFLAGS} -module -o plugin.la -export-dynamic \
  		-shrext ".o" -avoid-version plugin.lo \
  		-rpath /dont/care >/dev/null 2>&1
-@@ -25957,6 +25999,56 @@ fi
- 	LIBS="$LIBS_orig"
- 
- fi
-+	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for dlopen(NULL, 0) brokenness" >&5
-+$as_echo_n "checking for dlopen(NULL, 0) brokenness... " >&6; }
-+if ${glib_cv_dlopennull_broken+:} false; then :
-+  $as_echo_n "(cached) " >&6
-+else
-+
-+		if test "$cross_compiling" = yes; then :
-+  glib_cv_dlopennull_broken=no
-+else
-+  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-+/* end confdefs.h.  */
-+
-+#include <stdio.h>
-+#include <dlfcn.h>
-+#ifndef RTLD_GLOBAL
-+#  define RTLD_GLOBAL 0
-+#endif
-+#ifndef RTLD_LAZY
-+#  define RTLD_LAZY 0
-+#endif
-+int gettext;
-+int main () {
-+    void *handle;
-+    handle = dlopen ("libm.so", RTLD_GLOBAL | RTLD_LAZY);
-+    if (!handle) return 0;
-+    handle = dlopen (NULL, 0);
-+    if (!handle) return 0;
-+    handle = dlsym (handle, "sin");
-+    return handle == NULL;
-+}
-+
-+_ACEOF
-+if ac_fn_c_try_run "$LINENO"; then :
-+  glib_cv_dlopennull_broken=no
-+else
-+  glib_cv_dlopennull_broken=yes
-+fi
-+rm -f core *.core core.conftest.* gmon.out bb.out conftest$ac_exeext \
-+  conftest.$ac_objext conftest.beam conftest.$ac_ext
-+fi
-+
-+
-+fi
-+{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $glib_cv_dlopennull_broken" >&5
-+$as_echo "$glib_cv_dlopennull_broken" >&6; }
-+	if test "x$glib_cv_dlopennull_broken" = "xyes"; then
-+		G_MODULE_BROKEN_DLOPEN_NULL=1
-+	else
-+		G_MODULE_BROKEN_DLOPEN_NULL=0
-+	fi
- if test -z "$G_MODULE_IMPL"; then
- 	G_MODULE_IMPL=0
-         G_MODULE_SUPPORTED=false
 @@ -25989,6 +26081,7 @@ fi
  
  
