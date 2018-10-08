@@ -1,14 +1,16 @@
-@comment $NetBSD: PLIST,v 1.3 2018/07/23 05:16:43 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/10/08 13:51:28 schmonz Exp $
 lib/libhighlight.la
 share/doc/highlight/AUTHORS
 share/doc/highlight/COPYING
 share/doc/highlight/ChangeLog
 share/doc/highlight/INSTALL
-share/doc/highlight/README
-share/doc/highlight/README_DE
-share/doc/highlight/README_LANGLIST
-share/doc/highlight/README_PLUGINS
-share/doc/highlight/README_REGEX
+share/doc/highlight/README.adoc
+share/doc/highlight/README_DE.adoc
+share/doc/highlight/README_LANGLIST.adoc
+share/doc/highlight/README_PLUGINS.adoc
+share/doc/highlight/README_REGEX.adoc
+share/doc/highlight/README_RELEASE.adoc
+share/doc/highlight/README_TESTCASES.adoc
 share/doc/highlight/extras/highlight_pipe.php
 share/doc/highlight/extras/highlight_pipe.pm
 share/doc/highlight/extras/highlight_pipe.py
@@ -266,6 +268,7 @@ share/highlight/langDefs/tcsh.lang
 share/highlight/langDefs/tex.lang
 share/highlight/langDefs/ts.lang
 share/highlight/langDefs/tsql.lang
+share/highlight/langDefs/tsx.lang
 share/highlight/langDefs/ttcn3.lang
 share/highlight/langDefs/txt.lang
 share/highlight/langDefs/upc.lang
@@ -274,6 +277,7 @@ share/highlight/langDefs/vb.lang
 share/highlight/langDefs/verilog.lang
 share/highlight/langDefs/vhd.lang
 share/highlight/langDefs/vimscript.lang
+share/highlight/langDefs/vue.lang
 share/highlight/langDefs/whiley.lang
 share/highlight/langDefs/xml.lang
 share/highlight/langDefs/xpp.lang
@@ -298,6 +302,7 @@ share/highlight/plugins/java_library.lua
 share/highlight/plugins/keywords_capitalize.lua
 share/highlight/plugins/keywords_lowercase.lua
 share/highlight/plugins/keywords_uppercase.lua
+share/highlight/plugins/latex_single_outfile.lua
 share/highlight/plugins/mark_lines.lua
 share/highlight/plugins/outhtml_add_background_stripes.lua
 share/highlight/plugins/outhtml_add_background_svg.lua
@@ -308,6 +313,7 @@ share/highlight/plugins/outhtml_codefold.lua
 share/highlight/plugins/outhtml_curly_brackets_matcher.lua
 share/highlight/plugins/outhtml_ie7_webctrl.lua
 share/highlight/plugins/outhtml_keyword_matcher.lua
+share/highlight/plugins/outhtml_ligature_fonts.lua
 share/highlight/plugins/outhtml_modern_fonts.lua
 share/highlight/plugins/outhtml_parantheses_matcher.lua
 share/highlight/plugins/outhtml_tooltips.lua
@@ -315,6 +321,7 @@ share/highlight/plugins/perl_ref_perl_org.lua
 share/highlight/plugins/python_ref_python_org.lua
 share/highlight/plugins/reduce_filesize.lua
 share/highlight/plugins/scala_ref_scala_lang_org.lua
+share/highlight/plugins/terminal_add_info.lua
 share/highlight/plugins/theme_invert.lua
 share/highlight/plugins/token_add_state_ids.lua
 share/highlight/themes/acid.theme
