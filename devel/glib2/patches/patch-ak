@@ -1,9 +1,7 @@
-$NetBSD: patch-ak,v 1.20 2017/10/13 15:35:10 prlw1 Exp $
+$NetBSD: patch-ak,v 1.21 2018/10/08 10:12:06 prlw1 Exp $
 
 - solaris sun studio check and fix
 - use pkgsrc libtool
-- broken dlopen(NULL,0) detection and workaround
-  http://bugzilla.gnome.org/show_bug.cgi?id=140329
 
 --- configure.ac.orig	2017-06-22 13:15:19.000000000 +0000
 +++ configure.ac
@@ -43,14 +41,6 @@ $NetBSD: patch-ak,v 1.20 2017/10/13 15:35:10 prlw1 Exp $
  esac
  
  dnl
-@@ -1383,6 +1395,7 @@ fi
- dnl G_MODULE_IMPL= don't reset, so cmd-line can override
- G_MODULE_NEED_USCORE=0
- G_MODULE_BROKEN_RTLD_GLOBAL=0
-+G_MODULE_BROKEN_DLOPEN_NULL=0
- G_MODULE_HAVE_DLERROR=0
- dnl *** force native WIN32 shared lib loader 
- if test -z "$G_MODULE_IMPL"; then
 @@ -1427,9 +1440,9 @@ AS_IF([ test "$G_MODULE_IMPL" = "G_MODUL
  	LDFLAGS="$LDFLAGS $G_MODULE_LDFLAGS"
  dnl *** check for OSF1/5.0 RTLD_GLOBAL brokenness
@@ -63,53 +53,6 @@ $NetBSD: patch-ak,v 1.20 2017/10/13 15:35:10 prlw1 Exp $
  		${LDFLAGS} -module -o plugin.la -export-dynamic \
  		-shrext ".o" -avoid-version plugin.lo \
  		-rpath /dont/care >/dev/null 2>&1
-@@ -1496,6 +1509,38 @@ dnl *** check for having dlerror()
- 		[G_MODULE_HAVE_DLERROR=0])
- 	LIBS="$LIBS_orig"
- ])
-+dnl *** check for dlopen(NULL, 0) brokenness
-+	AC_CACHE_CHECK([for dlopen(NULL, 0) brokenness],
-+		glib_cv_dlopennull_broken,[
-+		AC_TRY_RUN([
-+#include <stdio.h>
-+#include <dlfcn.h>
-+#ifndef RTLD_GLOBAL
-+#  define RTLD_GLOBAL 0
-+#endif
-+#ifndef RTLD_LAZY
-+#  define RTLD_LAZY 0
-+#endif
-+int gettext;
-+int main () {
-+    void *handle;
-+    handle = dlopen ("libm.so", RTLD_GLOBAL | RTLD_LAZY);
-+    if (!handle) return 0;
-+    handle = dlopen (NULL, 0);
-+    if (!handle) return 0;
-+    handle = dlsym (handle, "sin");
-+    return handle == NULL;
-+}
-+		],
-+		[glib_cv_dlopennull_broken=no],
-+		[glib_cv_dlopennull_broken=yes],
-+		[glib_cv_dlopennull_broken=no])
-+	])
-+	if test "x$glib_cv_dlopennull_broken" = "xyes"; then
-+		G_MODULE_BROKEN_DLOPEN_NULL=1
-+	else
-+		G_MODULE_BROKEN_DLOPEN_NULL=0
-+	fi
- dnl *** done, have we got an implementation?
- if test -z "$G_MODULE_IMPL"; then
- 	G_MODULE_IMPL=0
-@@ -1525,6 +1570,7 @@ AC_SUBST(G_MODULE_PLUGIN_LIBS)
- AC_SUBST(G_MODULE_LDFLAGS)
- AC_SUBST(G_MODULE_HAVE_DLERROR)
- AC_SUBST(G_MODULE_BROKEN_RTLD_GLOBAL)
-+AC_SUBST(G_MODULE_BROKEN_DLOPEN_NULL)
- AC_SUBST(G_MODULE_NEED_USCORE)
- AC_SUBST(GLIB_DEBUG_FLAGS)
- 
 @@ -1919,22 +1965,8 @@ AS_IF([ test x"$have_threads" = xposix],
        G_THREAD_LIBS="-lpthread -lthread"
        ;;
