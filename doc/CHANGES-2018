@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4320 2018/10/08 13:52:39 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.4321 2018/10/08 13:53:50 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6027,3 +6027,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/libhighlight to 3.46 [schmonz 2018-10-08]
 	Updated misc/py-anita to 1.45 [gson 2018-10-08]
 	Updated textproc/p5-highlight to 3.46 [schmonz 2018-10-08]
+	Updated textproc/highlight to 3.46 [schmonz 2018-10-08]
