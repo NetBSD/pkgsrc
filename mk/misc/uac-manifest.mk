@@ -1,4 +1,4 @@
-# $NetBSD: uac-manifest.mk,v 1.2 2013/08/31 20:54:07 rillig Exp $
+# $NetBSD: uac-manifest.mk,v 1.3 2018/10/08 20:35:00 rillig Exp $
 #
 # This file generates manifest files for Windows.
 #
@@ -21,7 +21,7 @@ GENERATE_PLIST+=	${UAC_MANIFEST_GENERATE_PLIST}
 UAC_MANIFEST_GENERATE_PLIST= \
 	${ECHO} "@comment The following lines are automatically generated." && \
 	( cd ${DESTDIR}${PREFIX}; \
-	  for file in  ${UAC_REQD_EXECS}; do \
+	  for file in ${UAC_REQD_EXECS}; do \
 	      ${TEST} $${file} -ef $${file}.exe && file=$${file}.exe; \
 	      ${ECHO} $${file}.manifest; \
 	  done)
