@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4316 2018/10/08 12:05:39 sborrill Exp $
+$NetBSD: CHANGES-2018,v 1.4317 2018/10/08 12:26:54 he Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6023,3 +6023,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/glib2 to 2.56.2nb2 [prlw1 2018-10-08]
 	Updated pkgtools/pkg_chk to 2.0.10 [abs 2018-10-08]
 	Updated net/istgt to 20150713 [sborrill 2018-10-08]
+	Updated net/unbound to 1.8.1 [he 2018-10-08]
