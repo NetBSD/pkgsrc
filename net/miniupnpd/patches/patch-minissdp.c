@@ -1,4 +1,4 @@
-$NetBSD: patch-minissdp.c,v 1.1 2018/10/07 09:12:31 adam Exp $
+$NetBSD: patch-minissdp.c,v 1.2 2018/10/08 05:06:07 adam Exp $
 
 Fix building.
 
@@ -10,7 +10,7 @@ Fix building.
  	struct cmsghdr *cmptr;
 -#endif /* IP_PKTINFO */
 -#ifdef IP_RECVIF
-+#elif definded(IP_RECVIF)
++#elif defined(IP_RECVIF)
  	char cmbuf[CMSG_SPACE(sizeof(struct sockaddr_dl))];
  	struct iovec iovec = {
  		.iov_base = bufr,
