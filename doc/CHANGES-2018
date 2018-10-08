@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4326 2018/10/08 16:56:16 maya Exp $
+$NetBSD: CHANGES-2018,v 1.4327 2018/10/08 20:58:56 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6035,3 +6035,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/rakudo to 2018.06 [maya 2018-10-08]
 	Updated lang/nqp to 2018.06nb1 [maya 2018-10-08]
 	Updated devel/MoarVM to 2018.06nb2 [maya 2018-10-08]
+	Updated devel/libconfig to 1.7.2 [triaxx 2018-10-08]
