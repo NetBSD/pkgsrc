@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.193 2018/07/11 11:11:52 jperkin Exp $
+# $NetBSD: gcc.mk,v 1.194 2018/10/08 20:02:17 rillig Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -732,7 +732,7 @@ _GCC_LDFLAGS+=	-L${_dir_} ${COMPILER_RPATH_FLAG}${_dir_}
 _GCC_LDFLAGS+=		${_RELRO_LDFLAGS}
 CWRAPPERS_APPEND.ld+=	${_RELRO_LDFLAGS}
 .endif
- 
+
 LDFLAGS+=	${_GCC_LDFLAGS}
 
 # Point the variables that specify the compiler to the installed
