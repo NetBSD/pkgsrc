@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.27 2018/10/08 16:08:49 gdt Exp $
+$NetBSD: distinfo,v 1.28 2018/10/08 16:12:34 gdt Exp $
 
-SHA1 (libcdio-0.94.tar.gz) = 921f17842ea2bf3cd06ab3616849555aaae903ad
-RMD160 (libcdio-0.94.tar.gz) = 795a72a5fa0b6f23e969051f0f59ec9f1ca588c2
-SHA512 (libcdio-0.94.tar.gz) = e1d3c96c4acc7be923c97109c3f76223adc00b293278daef7d5008b1e5d67f33402f9f224f05120e9e1e8b3a8d1fa1b0bd5069dc6dd309741e3590e2c19e0e66
-Size (libcdio-0.94.tar.gz) = 2355452 bytes
+SHA1 (libcdio-1.1.0.tar.bz2) = e31d09e038749ee3098ff6a771813a9d991f3581
+RMD160 (libcdio-1.1.0.tar.bz2) = 54b13bb4fddfe521506919a1267d7b288185a9e1
+SHA512 (libcdio-1.1.0.tar.bz2) = e0a7ff06bf41e852c9aa7cb357e87e23a4618c9156e0b3fdcaba2c9063a7395a6f9e9ecb193683a0fe62dc45d1c71ecc983f4d7a4eeb19715a225853b898414e
+Size (libcdio-1.1.0.tar.bz2) = 1678707 bytes
 SHA1 (patch-aa) = 8e70ee2840c19da3efc0c47dfa9f7ea400a1ec2e
 SHA1 (patch-ab) = 73bd86ecfa0c728eab231bce36317ab7f616fa4c
-SHA1 (patch-ad) = c9ab4e9be23c7ec6091b3daff33863e803445682
