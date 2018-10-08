@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4325 2018/10/08 16:15:18 gdt Exp $
+$NetBSD: CHANGES-2018,v 1.4326 2018/10/08 16:56:16 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6032,3 +6032,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/libcdio to 0.94 [gdt 2018-10-08]
 	Updated misc/libcdio to 1.1.0 [gdt 2018-10-08]
 	Updated misc/libcdio to 2.0.0 [gdt 2018-10-08]
+	Updated lang/rakudo to 2018.06 [maya 2018-10-08]
+	Updated lang/nqp to 2018.06nb1 [maya 2018-10-08]
+	Updated devel/MoarVM to 2018.06nb2 [maya 2018-10-08]
