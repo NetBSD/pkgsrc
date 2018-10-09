@@ -54,6 +54,7 @@ func (s *Suite) Test_ChecklinesOptionsMk(c *check.C) {
 	ChecklinesOptionsMk(mklines)
 
 	t.CheckOutputLines(
+		"WARN: ~/category/package/options.mk:6: l is used but not defined.",
 		"WARN: ~/category/package/options.mk:18: Unknown option \"undeclared\".",
 		"NOTE: ~/category/package/options.mk:21: The positive branch of the .if/.else should be the one where the option is set.",
 		"WARN: ~/category/package/options.mk:6: Option \"mc-charset\" should be handled below in an .if block.",

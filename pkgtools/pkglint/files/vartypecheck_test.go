@@ -907,9 +907,9 @@ func (s *Suite) Test_VartypeCheck_Tool(c *check.C) {
 	t := s.Init(c)
 	vt := NewVartypeCheckTester(t, (*VartypeCheck).Tool)
 
-	t.SetupToolUsable("tool1", "")
-	t.SetupToolUsable("tool2", "")
-	t.SetupToolUsable("tool3", "")
+	t.SetupTool("tool1", "", AtRunTime)
+	t.SetupTool("tool2", "", AtRunTime)
+	t.SetupTool("tool3", "", AtRunTime)
 
 	vt.Varname("USE_TOOLS")
 	vt.Op(opAssignAppend)
