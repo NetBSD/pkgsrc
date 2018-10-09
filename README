@@ -1,14 +1,14 @@
-$NetBSD: README,v 1.19 2017/03/02 09:51:35 maya Exp $
+$NetBSD: README,v 1.20 2018/10/09 22:55:48 maya Exp $
 
 pkgsrc is a framework for building software on UNIX-like systems.
 
 To use, bootstrap using:
-% cd pkgsrc/bootstrap/
-% ./bootstrap
+    cd pkgsrc/bootstrap/
+    ./bootstrap
 
 build packages, use:
-% cd pkgsrc/category/package-name
-% $PREFIX/bin/bmake install
+    cd pkgsrc/category/package-name
+    $PREFIX/bin/bmake install
 
 Where $PREFIX is where you've chosen to install packages (typically /usr/pkg)
 
@@ -16,7 +16,7 @@ Bugs and patches can be filed in the follow link (use category 'pkg'):
 https://www.netbsd.org/cgi-bin/sendpr.cgi?gndb=netbsd
 
 To fetch the main CVS repository:
-% cvs -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -P pkgsrc
+    cvs -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -P pkgsrc
 
 It's also possible to contribute through pkgsrc wip (work in progress), for
 more information, see http://pkgsrc.org/wip/users/
