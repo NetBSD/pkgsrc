@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.149 2018/08/22 09:45:50 wiz Exp $
+# $NetBSD: Makefile,v 1.150 2018/10/09 15:15:20 abs Exp $
 
-PKGREVISION= 12
+PKGREVISION= 13
 .include "Makefile.common"
 
 COMMENT=		Multimedia player library
@@ -12,8 +12,6 @@ CONFIGURE_ARGS+=	--disable-v4l2
 CONFIGURE_ARGS+=	--disable-real-codecs
 CONFIGURE_ARGS+=	--disable-aalib
 CONFIGURE_ARGS+=	--disable-mlib
-
-BUILDLINK_API_DEPENDS.vcdimager+= vcdimager>=0.7.20nb1
 
 SUBST_CLASSES+=		oss
 SUBST_STAGE.oss=	pre-configure
@@ -79,7 +77,7 @@ CONFIGURE_ARGS+=	--disable-opengl
 CONFIGURE_ARGS+=	--with-external-dvdnav
 .include "../../multimedia/libdvdnav/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
-.include "../../sysutils/vcdimager-devel/buildlink3.mk"
+.include "../../sysutils/vcdimager/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
