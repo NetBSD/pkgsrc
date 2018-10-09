@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2018/10/07 23:12:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.54 2018/10/09 12:40:05 ryoon Exp $
 
 DISTNAME=	rustc-1.29.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -127,8 +127,8 @@ RUST_ARCH=		i686-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 # Do not trust ryoon@.
-SITES.${RUST_STAGE0}=	https://deuterium.ryoon.net/pub/rust/
-SITES.${RUST_STD_STAGE0}=	https://deuterium.ryoon.net/pub/rust/
+SITES.${RUST_STAGE0}=	https://www.ryoon.net/pub/rust/
+SITES.${RUST_STD_STAGE0}=	https://www.ryoon.net/pub/rust/
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 # Setting this changes it for every distfile, which doesn't match what is
 # currently in distinfo.
