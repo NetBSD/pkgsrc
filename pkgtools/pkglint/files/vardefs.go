@@ -719,7 +719,7 @@ func (src *Pkgsrc) InitVartypes() {
 	sys("GAMEDIR_PERMS", lkShell, BtPerms)
 	sys("GAMEMODE", lkNone, BtFileMode)
 	sys("GAMES_USER", lkNone, BtUserGroupName)
-	pkglist("GCC_REQD", lkShell, BtVersion)
+	pkglist("GCC_REQD", lkShell, BtGccReqd)
 	pkglist("GENERATE_PLIST", lkNone, BtShellCommands)
 	pkg("GITHUB_PROJECT", lkNone, BtIdentifier)
 	pkg("GITHUB_TAG", lkNone, BtIdentifier)
