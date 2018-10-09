@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.213 2018/10/09 15:17:44 abs Exp $
+# $NetBSD: Makefile,v 1.214 2018/10/09 16:56:17 abs Exp $
 
+# (Intended to be upgraded to vlc3 when dependencies resolved)
 DISTNAME=		vlc-${VLC_VERSION}
 PKGREVISION=		9
 CATEGORIES=		multimedia
