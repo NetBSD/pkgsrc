@@ -137,10 +137,10 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 
 	t.SetupCommandLine("-Wall")
 	t.SetupVartypes()
-	t.SetupToolUsable("awk", "AWK")
-	t.SetupToolUsable("cp", "CP")
-	t.SetupToolUsable("mkdir", "MKDIR") // This is actually "mkdir -p".
-	t.SetupToolUsable("unzip", "UNZIP_CMD")
+	t.SetupTool("awk", "AWK", AtRunTime)
+	t.SetupTool("cp", "CP", AtRunTime)
+	t.SetupTool("mkdir", "MKDIR", AtRunTime) // This is actually "mkdir -p".
+	t.SetupTool("unzip", "UNZIP_CMD", AtRunTime)
 
 	checkShellCommandLine := func(shellCommand string) {
 		G.Mk = t.NewMkLines("fname",
@@ -164,7 +164,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 		"WARN: fname:1: Unknown shell command \"echo\".",
 		"WARN: fname:1: Unknown shell command \"echo\".")
 
-	t.SetupToolUsable("echo", "")
+	t.SetupTool("echo", "", AtRunTime)
 	t.SetupVartypes()
 
 	checkShellCommandLine("echo ${PKGNAME:Q}") // vucQuotPlain
@@ -323,7 +323,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__nofix(c *check.C) {
 
 	t.SetupCommandLine("-Wall")
 	t.SetupVartypes()
-	t.SetupToolUsable("echo", "")
+	t.SetupTool("echo", "", AtRunTime)
 	G.Mk = t.NewMkLines("Makefile",
 		"\techo ${PKGNAME:Q}")
 	shline := NewShellLine(G.Mk.mklines[0])
@@ -339,7 +339,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__show_autofix(c *check.C) {
 
 	t.SetupCommandLine("-Wall", "--show-autofix")
 	t.SetupVartypes()
-	t.SetupToolUsable("echo", "")
+	t.SetupTool("echo", "", AtRunTime)
 	G.Mk = t.NewMkLines("Makefile",
 		"\techo ${PKGNAME:Q}")
 	shline := NewShellLine(G.Mk.mklines[0])
@@ -356,11 +356,11 @@ func (s *Suite) Test_ShellProgramChecker_checkPipeExitcode(c *check.C) {
 
 	t.SetupCommandLine("-Wall")
 	t.SetupVartypes()
-	t.SetupToolUsable("cat", "")
-	t.SetupToolUsable("echo", "")
-	t.SetupToolUsable("printf", "")
-	t.SetupToolUsable("sed", "")
-	t.SetupToolUsable("right-side", "")
+	t.SetupTool("cat", "", AtRunTime)
+	t.SetupTool("echo", "", AtRunTime)
+	t.SetupTool("printf", "", AtRunTime)
+	t.SetupTool("sed", "", AtRunTime)
+	t.SetupTool("right-side", "", AtRunTime)
 	G.Mk = t.NewMkLines("Makefile",
 		"\t echo | right-side",
 		"\t sed s,s,s, | right-side",
@@ -394,7 +394,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__autofix(c *check.C) {
 
 	t.SetupCommandLine("-Wall", "--autofix")
 	t.SetupVartypes()
-	t.SetupToolUsable("echo", "")
+	t.SetupTool("echo", "", AtRunTime)
 	G.Mk = t.NewMkLines("Makefile",
 		"\techo ${PKGNAME:Q}")
 	shline := NewShellLine(G.Mk.mklines[0])
@@ -438,7 +438,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__dollar_without_variable(c 
 	t := s.Init(c)
 
 	t.SetupVartypes()
-	t.SetupToolUsable("pax", "")
+	t.SetupTool("pax", "", AtRunTime)
 	G.Mk = t.NewMkLines("fname",
 		"# dummy")
 	shline := NewShellLine(G.Mk.mklines[0])
@@ -614,7 +614,7 @@ func (s *Suite) Test_ShellLine_variableNeedsQuoting(c *check.C) {
 
 	t.SetupCommandLine("-Wall")
 	t.SetupVartypes()
-	t.SetupToolUsable("cp", "")
+	t.SetupTool("cp", "", AtRunTime)
 	mklines := t.NewMkLines("fname.mk",
 		MkRcsID,
 		"",
@@ -636,7 +636,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__echo(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	echo := t.SetupToolUsable("echo", "ECHO")
+	echo := t.SetupTool("echo", "ECHO", AtRunTime)
 	echo.MustUseVarForm = true
 	G.Mk = t.NewMkLines("fname",
 		"# dummy")
@@ -679,7 +679,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__shell_variables(c *check.C
 		"WARN: Makefile:3: Please use the RCD_SCRIPTS mechanism to install rc.d scripts automatically to ${RCD_SCRIPTS_EXAMPLEDIR}.")
 }
 
-func (s *Suite) Test_ShellLine_checkCommandUse(c *check.C) {
+func (s *Suite) Test_ShellLine_checkInstallCommand(c *check.C) {
 	t := s.Init(c)
 
 	G.Mk = t.NewMkLines("fname",
@@ -688,12 +688,12 @@ func (s *Suite) Test_ShellLine_checkCommandUse(c *check.C) {
 
 	shline := t.NewShellLine("fname", 1, "\tdummy")
 
-	shline.checkCommandUse("sed")
+	shline.checkInstallCommand("sed")
 
 	t.CheckOutputLines(
 		"WARN: fname:1: The shell command \"sed\" should not be used in the install phase.")
 
-	shline.checkCommandUse("cp")
+	shline.checkInstallCommand("cp")
 
 	t.CheckOutputLines(
 		"WARN: fname:1: ${CP} should not be used to install files.")
@@ -950,8 +950,8 @@ func (s *Suite) Test_SimpleCommandChecker_handleForbiddenCommand(c *check.C) {
 func (s *Suite) Test_SimpleCommandChecker_handleCommandVariable(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupToolUsable("perl", "PERL5")
-	t.SetupTool("perl6", "PERL6")
+	t.SetupTool("perl", "PERL5", AtRunTime)
+	t.SetupTool("perl6", "PERL6", Nowhere)
 	mklines := t.NewMkLines("Makefile",
 		MkRcsID,
 		"",
@@ -960,13 +960,10 @@ func (s *Suite) Test_SimpleCommandChecker_handleCommandVariable(c *check.C) {
 
 	mklines.Check()
 
-	// FIXME: Warn about using _PERL5_VARS because it starts with an underscore.
-	// FIXME: Omit the redundant PERL5_VARS_CMD warning in line 4.
 	// FIXME: In PERL5:Q and PERL6:Q, the :Q is wrong.
 	t.CheckOutputLines(
 		"WARN: Makefile:3: PERL5_VARS_CMD is defined but not used.",
-		"WARN: Makefile:4: The \"perl6\" tool is used but not added to USE_TOOLS.",
-		"WARN: Makefile:4: PERL5_VARS_CMD is defined but not used.")
+		"WARN: Makefile:4: The \"perl6\" tool is used but not added to USE_TOOLS.")
 }
 
 // The package Makefile and other .mk files in a package directory
@@ -1088,9 +1085,9 @@ func (s *Suite) Test_ShellProgramChecker_checkSetE__simple_commands(c *check.C) 
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	t.SetupToolUsable("echo", "")
-	t.SetupToolUsable("rm", "")
-	t.SetupToolUsable("touch", "")
+	t.SetupTool("echo", "", AtRunTime)
+	t.SetupTool("rm", "", AtRunTime)
+	t.SetupTool("touch", "", AtRunTime)
 	mklines := t.NewMkLines("Makefile",
 		MkRcsID,
 		"pre-configure:",
@@ -1108,8 +1105,8 @@ func (s *Suite) Test_ShellProgramChecker_checkSetE__compound_commands(c *check.C
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	t.SetupToolUsable("echo", "")
-	t.SetupToolUsable("touch", "")
+	t.SetupTool("echo", "", AtRunTime)
+	t.SetupTool("touch", "", AtRunTime)
 	mklines := t.NewMkLines("Makefile",
 		MkRcsID,
 		"pre-configure:",
@@ -1127,12 +1124,12 @@ func (s *Suite) Test_ShellProgramChecker_canFail(c *check.C) {
 
 	t.SetupCommandLine("-Wall")
 	t.SetupVartypes()
-	t.SetupToolUsable("echo", "")
-	t.SetupToolUsable("grep", "GREP")
-	t.SetupToolUsable("sed", "")
-	t.SetupToolUsable("touch", "")
-	t.SetupToolUsable("tr", "tr")
-	t.SetupToolUsable("true", "TRUE")
+	t.SetupTool("echo", "", AtRunTime)
+	t.SetupTool("grep", "GREP", AtRunTime)
+	t.SetupTool("sed", "", AtRunTime)
+	t.SetupTool("touch", "", AtRunTime)
+	t.SetupTool("tr", "tr", AtRunTime)
+	t.SetupTool("true", "TRUE", AtRunTime)
 	mklines := t.NewMkLines("Makefile",
 		MkRcsID,
 		"pre-configure:",

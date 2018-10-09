@@ -9,17 +9,16 @@ func (s *Suite) Test_Vartype_EffectivePermissions(c *check.C) {
 
 	t.SetupVartypes()
 
-	if t := G.Pkgsrc.vartypes["PREFIX"]; c.Check(t, check.NotNil) {
-		c.Check(t.basicType.name, equals, "Pathname")
-		c.Check(t.aclEntries, check.DeepEquals, []ACLEntry{{glob: "*", permissions: aclpUse}})
-		c.Check(t.EffectivePermissions("Makefile"), equals, aclpUse)
+	if typ := G.Pkgsrc.vartypes["PREFIX"]; c.Check(typ, check.NotNil) {
+		c.Check(typ.basicType.name, equals, "Pathname")
+		c.Check(typ.aclEntries, check.DeepEquals, []ACLEntry{{glob: "*", permissions: aclpUse}})
+		c.Check(typ.EffectivePermissions("Makefile"), equals, aclpUse)
 	}
 
-	if t := G.Pkgsrc.vartypes["EXTRACT_OPTS"]; c.Check(t, check.NotNil) {
-		c.Check(t.basicType.name, equals, "ShellWord")
-		c.Check(t.EffectivePermissions("Makefile"), equals, aclpAppend|aclpSet)
-		c.Check(t.EffectivePermissions("../Makefile"), equals, aclpAppend|aclpSet)
-		c.Check(t.EffectivePermissions("options.mk"), equals, aclpUnknown)
+	if typ := G.Pkgsrc.vartypes["EXTRACT_OPTS"]; c.Check(typ, check.NotNil) {
+		c.Check(typ.basicType.name, equals, "ShellWord")
+		c.Check(typ.EffectivePermissions("Makefile"), equals, aclpAppend|aclpSet)
+		c.Check(typ.EffectivePermissions("options.mk"), equals, aclpUnknown)
 	}
 }
 

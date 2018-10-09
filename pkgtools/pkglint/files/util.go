@@ -13,7 +13,6 @@ import (
 	"strconv"
 	"strings"
 	"time"
-	"unicode"
 )
 
 type YesNoUnknown uint8
@@ -38,6 +37,9 @@ func hasPrefix(s, prefix string) bool {
 func hasSuffix(s, suffix string) bool {
 	return strings.HasSuffix(s, suffix)
 }
+func fields(s string) []string {
+	return strings.Fields(s)
+}
 func matches(s string, re regex.Pattern) bool {
 	return G.res.Matches(s, re)
 }
@@ -56,15 +58,27 @@ func match4(s string, re regex.Pattern) (matched bool, m1, m2, m3, m4 string) {
 func match5(s string, re regex.Pattern) (matched bool, m1, m2, m3, m4, m5 string) {
 	return G.res.Match5(s, re)
 }
-func replaceFirst(s string, re regex.Pattern, repl string) string {
-	m, replaced := G.res.ReplaceFirst(s, re, repl)
-	return ifelseStr(m != nil, replaced, s)
-}
 func replaceAll(s string, re regex.Pattern, repl string) string {
 	return G.res.Compile(re).ReplaceAllString(s, repl)
 }
 func replaceAllFunc(s string, re regex.Pattern, repl func(string) string) string {
 	return G.res.Compile(re).ReplaceAllStringFunc(s, repl)
+}
+
+// trimHspace returns str, with leading and trailing space (U+0020)
+// and tab (U+0009) removed.
+//
+// It is simpler and faster than strings.TrimSpace.
+func trimHspace(str string) string {
+	start := 0
+	end := len(str)
+	for start < end && (str[start] == ' ' || str[start] == '\t') {
+		start++
+	}
+	for start < end && (str[end-1] == ' ' || str[end-1] == '\t') {
+		end--
+	}
+	return str[start:end]
 }
 
 func ifelseStr(cond bool, a, b string) string {
@@ -261,45 +275,18 @@ func defineVar(mkline MkLine, varname string) {
 	}
 }
 
-// varIsDefined tests whether the variable (or its canonicalized form)
+// varIsDefinedSimilar tests whether the variable (or its canonicalized form)
 // is defined in the current package or in the current file.
-// TODO: rename to similar
-func varIsDefined(varname string) bool {
-	return G.Mk != nil && G.Mk.vars.DefinedSimilar(varname) ||
+func varIsDefinedSimilar(varname string) bool {
+	return G.Mk != nil && (G.Mk.vars.DefinedSimilar(varname) || G.Mk.forVars[varname]) ||
 		G.Pkg != nil && G.Pkg.vars.DefinedSimilar(varname)
 }
 
-// varIsUsed tests whether the variable (or its canonicalized form)
+// varIsUsedSimilar tests whether the variable (or its canonicalized form)
 // is used in the current package or in the current file.
-// TODO: rename to similar
-func varIsUsed(varname string) bool {
+func varIsUsedSimilar(varname string) bool {
 	return G.Mk != nil && G.Mk.vars.UsedSimilar(varname) ||
 		G.Pkg != nil && G.Pkg.vars.UsedSimilar(varname)
-}
-
-func splitOnSpace(s string) []string {
-	i := 0
-	n := len(s)
-
-	for i < n && unicode.IsSpace(rune(s[i])) {
-		i++
-	}
-
-	var parts []string
-	for i < n {
-		start := i
-		for i < n && !unicode.IsSpace(rune(s[i])) {
-			i++
-		}
-		if start != i {
-			parts = append(parts, s[start:i])
-		}
-		for i < n && unicode.IsSpace(rune(s[i])) {
-			i++
-		}
-	}
-
-	return parts
 }
 
 func fileExists(fname string) bool {
@@ -310,14 +297,6 @@ func fileExists(fname string) bool {
 func dirExists(fname string) bool {
 	st, err := os.Stat(fname)
 	return err == nil && st.Mode().IsDir()
-}
-
-// Useful in combination with regex.Find*Index
-func negToZero(i int) int {
-	if i >= 0 {
-		return i
-	}
-	return 0
 }
 
 func toInt(s string, def int) int {
@@ -729,13 +708,16 @@ func (s *RedundantScope) Handle(mkline MkLine) {
 	}
 }
 
+// IsPrefs returns whether the given file, when included, loads the user
+// preferences.
 func IsPrefs(fileName string) bool {
 	switch path.Base(fileName) {
-	case "bsd.prefs.mk",
-		"bsd.fast.prefs.mk",
-		"bsd.builtin.mk", // mk/buildlink3/bsd.builtin.mk
-		"pkgconfig-builtin.mk",
-		"bsd.options.mk":
+	case // See https://github.com/golang/go/issues/28057
+		"bsd.prefs.mk",         // in mk/
+		"bsd.fast.prefs.mk",    // in mk/
+		"bsd.builtin.mk",       // in mk/buildlink3/
+		"pkgconfig-builtin.mk", // in mk/buildlink3/
+		"bsd.options.mk":       // in mk/
 		return true
 	}
 	return false
@@ -760,10 +742,10 @@ type FileCache struct {
 }
 
 type fileCacheEntry struct {
-	count    int
-	fileName string
-	options  LoadOptions
-	lines    []Line
+	count   int
+	key     string
+	options LoadOptions
+	lines   []Line
 }
 
 func NewFileCache(size int) *FileCache {
@@ -780,30 +762,50 @@ func (c *FileCache) Put(fileName string, options LoadOptions, lines []Line) {
 	entry := c.mapping[key]
 	if entry == nil {
 		if len(c.table) == cap(c.table) {
-			sort.Slice(c.table, func(i, j int) bool { return c.table[j].count < c.table[i].count })
-			minCount := c.table[len(c.table)-1].count
-			newLen := len(c.table)
-			for newLen > 0 && c.table[newLen-1].count == minCount {
-				delete(c.mapping, c.key(c.table[newLen-1].fileName))
-				newLen--
-			}
-			c.table = c.table[0:newLen]
-
-			// To avoid files from getting stuck in the cache.
-			for _, e := range c.table {
-				e.count /= 2
-			}
+			c.removeOldEntries()
 		}
 
-		entry = &fileCacheEntry{0, fileName, options, lines}
+		entry = new(fileCacheEntry)
 		c.table = append(c.table, entry)
 		c.mapping[key] = entry
 	}
 
-	entry.count = 0
-	entry.fileName = fileName
+	entry.count = 1
+	entry.key = key
 	entry.options = options
 	entry.lines = lines
+}
+
+func (c *FileCache) removeOldEntries() {
+	printStats := func() bool { return false }()
+
+	sort.Slice(c.table, func(i, j int) bool { return c.table[j].count < c.table[i].count })
+
+	if printStats {
+		for _, e := range c.table {
+			G.logOut.Printf("FileCache %q with count %d.\n", e.key, e.count)
+		}
+	}
+
+	minCount := c.table[len(c.table)-1].count
+	newLen := len(c.table)
+	for newLen > 0 && c.table[newLen-1].count == minCount {
+		e := c.table[newLen-1]
+		if printStats {
+			G.logOut.Printf("FileCache.Evict %q with count %d.\n", e.key, e.count)
+		}
+		delete(c.mapping, e.key)
+		newLen--
+	}
+	c.table = c.table[0:newLen]
+
+	// To avoid files getting stuck in the cache.
+	for _, e := range c.table {
+		if printStats {
+			G.logOut.Printf("FileCache.Halve %q with count %d.\n", e.key, e.count)
+		}
+		e.count /= 2
+	}
 }
 
 func (c *FileCache) Get(fileName string, options LoadOptions) []Line {

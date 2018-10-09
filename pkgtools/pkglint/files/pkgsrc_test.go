@@ -74,7 +74,9 @@ func (s *Suite) Test_Pkgsrc_loadTools(c *check.C) {
 	t.CreateFileLines("mk/tools/flex.mk",
 		"# empty")
 	t.CreateFileLines("mk/tools/gettext.mk",
-		"USE_TOOLS+=msgfmt",
+		".if ${USE_TOOLS:Mgettext}", // This conditional prevents msgfmt from
+		"USE_TOOLS+=msgfmt",         // being added to the default USE_TOOLS.
+		".endif",
 		"TOOLS_CREATE+=msgfmt")
 	t.CreateFileLines("mk/tools/strip.mk",
 		".if defined(_INSTALL_UNSTRIPPED) || !defined(TOOLS_PLATFORM.strip)",
@@ -102,20 +104,20 @@ func (s *Suite) Test_Pkgsrc_loadTools(c *check.C) {
 
 	t.CheckOutputLines(
 		"TRACE: + (*Tools).Trace(\"Pkgsrc\")",
-		"TRACE: 1   tool &{Name:bzcat Varname: MustUseVarForm:false Validity:Nowhere}",
-		"TRACE: 1   tool &{Name:bzip2 Varname: MustUseVarForm:false Validity:Nowhere}",
-		"TRACE: 1   tool &{Name:chown Varname:CHOWN MustUseVarForm:false Validity:Nowhere}",
-		"TRACE: 1   tool &{Name:echo Varname:ECHO MustUseVarForm:true Validity:AfterPrefsMk}",
-		"TRACE: 1   tool &{Name:echo -n Varname:ECHO_N MustUseVarForm:true Validity:AfterPrefsMk}",
-		"TRACE: 1   tool &{Name:false Varname:FALSE MustUseVarForm:true Validity:Nowhere}",
-		"TRACE: 1   tool &{Name:gawk Varname:AWK MustUseVarForm:false Validity:Nowhere}",
-		"TRACE: 1   tool &{Name:m4 Varname: MustUseVarForm:false Validity:AfterPrefsMk}",
-		"TRACE: 1   tool &{Name:msgfmt Varname: MustUseVarForm:false Validity:Nowhere}",
-		"TRACE: 1   tool &{Name:mv Varname:MV MustUseVarForm:false Validity:AtRunTime}",
-		"TRACE: 1   tool &{Name:pwd Varname:PWD MustUseVarForm:false Validity:AfterPrefsMk}",
-		"TRACE: 1   tool &{Name:strip Varname: MustUseVarForm:false Validity:Nowhere}",
-		"TRACE: 1   tool &{Name:test Varname:TEST MustUseVarForm:true Validity:AfterPrefsMk}",
-		"TRACE: 1   tool &{Name:true Varname:TRUE MustUseVarForm:true Validity:AfterPrefsMk}",
+		"TRACE: 1   tool bzcat:::Nowhere",
+		"TRACE: 1   tool bzip2:::Nowhere",
+		"TRACE: 1   tool chown:CHOWN::Nowhere",
+		"TRACE: 1   tool echo:ECHO:var:AfterPrefsMk",
+		"TRACE: 1   tool echo -n:ECHO_N:var:AfterPrefsMk",
+		"TRACE: 1   tool false:FALSE:var:AtRunTime",
+		"TRACE: 1   tool gawk:AWK::Nowhere",
+		"TRACE: 1   tool m4:::AfterPrefsMk",
+		"TRACE: 1   tool msgfmt:::Nowhere",
+		"TRACE: 1   tool mv:MV::AtRunTime",
+		"TRACE: 1   tool pwd:PWD::AfterPrefsMk",
+		"TRACE: 1   tool strip:::Nowhere",
+		"TRACE: 1   tool test:TEST:var:AfterPrefsMk",
+		"TRACE: 1   tool true:TRUE:var:AfterPrefsMk",
 		"TRACE: - (*Tools).Trace(\"Pkgsrc\")")
 }
 
@@ -124,7 +126,7 @@ func (s *Suite) Test_Pkgsrc_loadTools__BUILD_DEFS(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	t.SetupToolUsable("echo", "ECHO")
+	t.SetupTool("echo", "ECHO", AtRunTime)
 	pkg := t.SetupPackage("category/package",
 		"pre-configure:",
 		"\t@${ECHO} ${PKG_SYSCONFDIR} ${VARBASE}")

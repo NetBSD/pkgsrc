@@ -2,6 +2,7 @@ package main
 
 import (
 	"io/ioutil"
+	"path"
 	"strings"
 	"time"
 
@@ -259,7 +260,7 @@ func (s *Suite) Test_Pkglint__coverage(c *check.C) {
 	cmdline := os.Getenv("PKGLINT_TESTCMDLINE")
 	if cmdline != "" {
 		G.logOut, G.logErr, trace.Out = NewSeparatorWriter(os.Stdout), NewSeparatorWriter(os.Stderr), os.Stdout
-		G.Main(append([]string{"pkglint"}, splitOnSpace(cmdline)...)...)
+		G.Main(append([]string{"pkglint"}, fields(cmdline)...)...)
 	}
 }
 
@@ -578,9 +579,9 @@ func (s *Suite) Test_Pkglint_Tool__lookup_by_name_fallback(c *check.C) {
 	loadTimeTool, loadTimeUsable := G.Tool("tool", LoadTime)
 	runTimeTool, runTimeUsable := G.Tool("tool", RunTime)
 
-	c.Check(loadTimeTool, equals, global)
+	c.Check(*loadTimeTool, equals, *global)
 	c.Check(loadTimeUsable, equals, false)
-	c.Check(runTimeTool, equals, global)
+	c.Check(*runTimeTool, equals, *global)
 	c.Check(runTimeUsable, equals, false)
 }
 
@@ -607,16 +608,14 @@ func (s *Suite) Test_Pkglint_Tool__lookup_by_varname_fallback(c *check.C) {
 	t := s.Init(c)
 
 	G.Mk = t.NewMkLines("Makefile", MkRcsID)
-	global := G.Pkgsrc.Tools.Define("tool", "TOOL", dummyMkLine)
-
-	global.Validity = Nowhere
+	G.Pkgsrc.Tools.defTool("tool", "TOOL", false, Nowhere)
 
 	loadTimeTool, loadTimeUsable := G.Tool("${TOOL}", LoadTime)
 	runTimeTool, runTimeUsable := G.Tool("${TOOL}", RunTime)
 
-	c.Check(loadTimeTool, equals, global)
+	c.Check(loadTimeTool.String(), equals, "tool:TOOL::Nowhere")
 	c.Check(loadTimeUsable, equals, false)
-	c.Check(runTimeTool, equals, global)
+	c.Check(runTimeTool.String(), equals, "tool:TOOL::Nowhere")
 	c.Check(runTimeUsable, equals, false)
 }
 
@@ -624,16 +623,14 @@ func (s *Suite) Test_Pkglint_Tool__lookup_by_varname_fallback_runtime(c *check.C
 	t := s.Init(c)
 
 	G.Mk = t.NewMkLines("Makefile", MkRcsID)
-	global := G.Pkgsrc.Tools.Define("tool", "TOOL", dummyMkLine)
-
-	global.Validity = AtRunTime
+	G.Pkgsrc.Tools.defTool("tool", "TOOL", false, AtRunTime)
 
 	loadTimeTool, loadTimeUsable := G.Tool("${TOOL}", LoadTime)
 	runTimeTool, runTimeUsable := G.Tool("${TOOL}", RunTime)
 
-	c.Check(loadTimeTool, equals, global)
+	c.Check(loadTimeTool.String(), equals, "tool:TOOL::AtRunTime")
 	c.Check(loadTimeUsable, equals, false)
-	c.Check(runTimeTool, equals, global)
+	c.Check(runTimeTool.String(), equals, "tool:TOOL::AtRunTime")
 	c.Check(runTimeUsable, equals, true)
 }
 
@@ -651,16 +648,14 @@ func (s *Suite) Test_Pkglint_ToolByVarname__prefer_mk_over_pkgsrc(c *check.C) {
 	c.Check(G.ToolByVarname("TOOL", RunTime), equals, local)
 }
 
-func (s *Suite) Test_Pkglint_ToolByVarname__fallback(c *check.C) {
+func (s *Suite) Test_Pkglint_ToolByVarname(c *check.C) {
 	t := s.Init(c)
 
 	G.Mk = t.NewMkLines("Makefile", MkRcsID)
-	global := G.Pkgsrc.Tools.Define("tool", "TOOL", dummyMkLine)
+	G.Pkgsrc.Tools.defTool("tool", "TOOL", false, AtRunTime)
 
-	global.Validity = AtRunTime
-
-	c.Check(G.ToolByVarname("TOOL", LoadTime), equals, global)
-	c.Check(G.ToolByVarname("TOOL", RunTime), equals, global)
+	c.Check(G.ToolByVarname("TOOL", LoadTime).String(), equals, "tool:TOOL::AtRunTime")
+	c.Check(G.ToolByVarname("TOOL", RunTime).String(), equals, "tool:TOOL::AtRunTime")
 }
 
 func (s *Suite) Test_CheckfileExtra(c *check.C) {
@@ -775,13 +770,13 @@ func (s *Suite) Test_Pkglint_Checkfile__readme_and_todo(c *check.C) {
 		"",
 		"SHA1 (patch-README) = b9101ebf0bca8ce243ed6433b65555fa6a5ecd52")
 
-	// Copy category/package to wip/package.
+	// Copy category/package/** to wip/package.
 	for _, basename := range []string{"files/README", "patches/patch-README", "Makefile", "PLIST", "README", "TODO", "distinfo"} {
 		src := "category/package/" + basename
 		dst := "wip/package/" + basename
 		text, err := ioutil.ReadFile(t.File(src))
 		c.Check(err, check.IsNil)
-		t.CreateFileLines(dst, strings.TrimSpace(string(text)))
+		t.CreateFileLines(dst, strings.TrimSuffix(string(text), "\n"))
 	}
 
 	t.SetupPkgsrc()
@@ -887,18 +882,21 @@ func (s *Suite) Test_CheckfileMk__enoent(c *check.C) {
 func (s *Suite) Test_Pkglint_checkExecutable(c *check.C) {
 	t := s.Init(c)
 
-	G.checkExecutable(ExecutableFileInfo{t.File("fname.mk")})
+	fileName := t.File("file.mk")
+	fileInfo := ExecutableFileInfo{path.Base(fileName)}
+
+	G.checkExecutable(fileName, fileInfo)
 
 	t.CheckOutputLines(
-		"WARN: ~/fname.mk: Should not be executable.")
+		"WARN: ~/file.mk: Should not be executable.")
 
 	t.SetupCommandLine("--autofix")
 
-	G.checkExecutable(ExecutableFileInfo{t.File("fname.mk")})
+	G.checkExecutable(fileName, fileInfo)
 
 	// FIXME: The error message "Cannot clear executable bits" is swallowed.
 	t.CheckOutputLines(
-		"AUTOFIX: ~/fname.mk: Clearing executable bits")
+		"AUTOFIX: ~/file.mk: Clearing executable bits")
 }
 
 func (s *Suite) Test_main(c *check.C) {

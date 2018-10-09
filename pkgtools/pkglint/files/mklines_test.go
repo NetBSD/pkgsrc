@@ -86,9 +86,10 @@ func (s *Suite) Test_MkLines__for_loop_multiple_variables(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	t.SetupToolUsable("echo", "ECHO")
-	t.SetupToolUsable("find", "FIND")
-	t.SetupToolUsable("pax", "PAX")
+	t.SetupVartypes()
+	t.SetupTool("echo", "ECHO", AtRunTime)
+	t.SetupTool("find", "FIND", AtRunTime)
+	t.SetupTool("pax", "PAX", AtRunTime)
 	mklines := t.NewMkLines("Makefile", // From audio/squeezeboxserver
 		MkRcsID,
 		"",
@@ -102,6 +103,7 @@ func (s *Suite) Test_MkLines__for_loop_multiple_variables(c *check.C) {
 	t.CheckOutputLines(
 		"WARN: Makefile:3: Variable names starting with an underscore (_list_) are reserved for internal pkgsrc use.",
 		"WARN: Makefile:3: Variable names starting with an underscore (_dir_) are reserved for internal pkgsrc use.",
+		"WARN: Makefile:3: SBS_COPY is used but not defined.",
 		"WARN: Makefile:4: The exitcode of \"${FIND}\" at the left of the | operator is ignored.")
 }
 
@@ -129,6 +131,7 @@ func (s *Suite) Test_MkLines__varuse_sh_modifier(c *check.C) {
 
 	t.SetupCommandLine("-Wall")
 	t.SetupVartypes()
+	t.SetupTool("sed", "SED", AfterPrefsMk)
 	mklines := t.NewMkLines("lang/qore/module.mk",
 		MkRcsID,
 		"qore-version=\tqore --short-version | ${SED} -e s/-.*//",
@@ -209,6 +212,7 @@ func (s *Suite) Test_MkLines__indirect_variables(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
+	t.SetupTool("echo", "ECHO", AfterPrefsMk)
 	mklines := t.NewMkLines("net/uucp/Makefile",
 		MkRcsID,
 		"",
@@ -220,14 +224,18 @@ func (s *Suite) Test_MkLines__indirect_variables(c *check.C) {
 	mklines.Check()
 
 	// No warning about UUCP_${var} being used but not defined.
-	t.CheckOutputLines(
-		"WARN: net/uucp/Makefile:5: Unknown shell command \"${ECHO}\".")
+	// Normally, parameterized variables use a dot instead of an
+	// underscore as separator. This is one of the other cases,
+	// and pkglint just doesn't warn about dynamic variable names
+	// like UUCP_${var} or SITES_${distfile}.
+	t.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_MkLines_Check__list_variable_as_part_of_word(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
+	t.SetupVartypes()
 	mklines := t.NewMkLines("converters/chef/Makefile",
 		MkRcsID,
 		"\tcd ${WRKSRC} && tr '\\r' '\\n' < ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} > chef.l")
@@ -346,14 +354,36 @@ func (s *Suite) Test_MkLines_DetermineDefinedVariables(c *check.C) {
 	// The SUV variable is used implicitly by the SUBST framework, therefore no warning.
 	// The OSV.NetBSD variable is used implicitly via the OSV variable, therefore no warning.
 	t.CheckOutputLines(
-		// FIXME: For most lists, using the := operator to exclude an item is ok.
-		"WARN: determine-defined-variables.mk:4: USE_TOOLS should not be evaluated at load time.",
-		"WARN: determine-defined-variables.mk:4: USE_TOOLS may not be used in any file; it is a write-only variable.",
 		// FIXME: the below warning is wrong; it's ok to have SUBST blocks in all files, maybe except buildlink3.mk.
 		"WARN: determine-defined-variables.mk:12: The variable SUBST_VARS.subst may not be set (only given a default value, appended to) in this file; it would be ok in Makefile, Makefile.common, options.mk.",
 		// FIXME: the below warning is wrong; variables mentioned in SUBST_VARS should be allowed in that block.
 		"WARN: determine-defined-variables.mk:13: Foreign variable \"SUV\" in SUBST block.",
 		"WARN: determine-defined-variables.mk:16: Unknown shell command \"unknown-command\".")
+}
+
+func (s *Suite) Test_MkLines_DetermineDefinedVariables__BUILTIN_FIND_FILES_VAR(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall,no-space")
+	t.SetupPackage("category/package")
+	t.CreateFileLines("mk/buildlink3/bsd.builtin.mk",
+		MkRcsID)
+	mklines := t.SetupFileMkLines("category/package/builtin.mk",
+		MkRcsID,
+		"",
+		"BUILTIN_FIND_FILES_VAR:=        H_XFT2",
+		"BUILTIN_FIND_FILES.H_XFT2=      ${X11BASE}/include/X11/Xft/Xft.h",
+		"",
+		".include \"../../mk/buildlink3/bsd.builtin.mk\"",
+		"",
+		".if ${H_XFT2:N__nonexistent__} && ${H_UNDEF:N__nonexistent__}",
+		".endif")
+	G.Pkgsrc.LoadInfrastructure()
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/builtin.mk:8: H_UNDEF is used but not defined.")
 }
 
 func (s *Suite) Test_MkLines_DetermineUsedVariables__simple(c *check.C) {
@@ -382,8 +412,8 @@ func (s *Suite) Test_MkLines_DetermineUsedVariables__nested(c *check.C) {
 
 	c.Check(len(mklines.vars.used), equals, 3)
 	c.Check(mklines.vars.FirstUse("inner"), equals, mkline)
-	c.Check(mklines.vars.FirstUse("outer."), equals, mkline) // XXX: why the . at the end?
 	c.Check(mklines.vars.FirstUse("outer.*"), equals, mkline)
+	c.Check(mklines.vars.FirstUse("outer.${inner}"), equals, mkline)
 }
 
 func (s *Suite) Test_MkLines__private_tool_undefined(c *check.C) {
@@ -424,6 +454,7 @@ func (s *Suite) Test_MkLines_Check__indentation(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
+	t.SetupVartypes()
 	mklines := t.NewMkLines("options.mk",
 		MkRcsID,
 		". if !defined(GUARD_MK)",
@@ -445,14 +476,19 @@ func (s *Suite) Test_MkLines_Check__indentation(c *check.C) {
 
 	t.CheckOutputLines(
 		"NOTE: options.mk:2: This directive should be indented by 0 spaces.",
+		"WARN: options.mk:2: GUARD_MK is used but not defined.",
 		"NOTE: options.mk:3: This directive should be indented by 0 spaces.",
 		"NOTE: options.mk:4: This directive should be indented by 2 spaces.",
+		"WARN: options.mk:4: FILES is used but not defined.",
 		"NOTE: options.mk:5: This directive should be indented by 4 spaces.",
+		"WARN: options.mk:5: GUARD2_MK is used but not defined.",
 		"NOTE: options.mk:6: This directive should be indented by 4 spaces.",
 		"NOTE: options.mk:7: This directive should be indented by 4 spaces.",
 		"NOTE: options.mk:8: This directive should be indented by 2 spaces.",
 		"NOTE: options.mk:9: This directive should be indented by 2 spaces.",
+		"WARN: options.mk:9: COND1 is used but not defined.",
 		"NOTE: options.mk:10: This directive should be indented by 2 spaces.",
+		"WARN: options.mk:10: COND2 is used but not defined.",
 		"NOTE: options.mk:11: This directive should be indented by 2 spaces.",
 		"ERROR: options.mk:11: \".else\" does not take arguments. If you meant \"else if\", use \".elif\".",
 		"NOTE: options.mk:12: This directive should be indented by 2 spaces.",
@@ -466,17 +502,18 @@ func (s *Suite) Test_MkLines_Check__endif_comment(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
+	t.SetupVartypes()
 	mklines := t.NewMkLines("opsys.mk",
 		MkRcsID,
 		"",
 		".for i in 1 2 3 4 5",
 		".  if ${OPSYS} == NetBSD",
-		".    if ${ARCH} == x86_64",
+		".    if ${MACHINE_ARCH} == x86_64",
 		".      if ${OS_VERSION:M8.*}",
-		".      endif # ARCH",     // Wrong, should be OS_VERSION.
-		".    endif # OS_VERSION", // Wrong, should be ARCH.
-		".  endif # OPSYS",        // Correct.
-		".endfor # j",             // Wrong, should be i.
+		".      endif # MACHINE_ARCH", // Wrong, should be OS_VERSION.
+		".    endif # OS_VERSION",     // Wrong, should be MACHINE_ARCH.
+		".  endif # OPSYS",            // Correct.
+		".endfor # j",                 // Wrong, should be i.
 		"",
 		".if ${PKG_OPTIONS:Moption}",
 		".endif # option",
@@ -492,9 +529,10 @@ func (s *Suite) Test_MkLines_Check__endif_comment(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"WARN: opsys.mk:7: Comment \"ARCH\" does not match condition \"${OS_VERSION:M8.*}\".",
-		"WARN: opsys.mk:8: Comment \"OS_VERSION\" does not match condition \"${ARCH} == x86_64\".",
+		"WARN: opsys.mk:7: Comment \"MACHINE_ARCH\" does not match condition \"${OS_VERSION:M8.*}\".",
+		"WARN: opsys.mk:8: Comment \"OS_VERSION\" does not match condition \"${MACHINE_ARCH} == x86_64\".",
 		"WARN: opsys.mk:10: Comment \"j\" does not match loop \"i in 1 2 3 4 5\".",
+		"WARN: opsys.mk:12: Unknown option \"option\".",
 		"WARN: opsys.mk:20: Comment \"NetBSD\" does not match condition \"${OPSYS} == FreeBSD\".")
 }
 
@@ -502,18 +540,37 @@ func (s *Suite) Test_MkLines_Check__unbalanced_directives(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
+	t.SetupVartypes()
 	mklines := t.NewMkLines("opsys.mk",
 		MkRcsID,
 		"",
 		".for i in 1 2 3 4 5",
 		".  if ${OPSYS} == NetBSD",
-		".    if ${ARCH} == x86_64",
+		".    if ${MACHINE_ARCH} == x86_64",
 		".      if ${OS_VERSION:M8.*}")
 
 	mklines.Check()
 
 	t.CheckOutputLines(
 		"ERROR: opsys.mk:6: Directive indentation is not 0, but 8.")
+}
+
+func (s *Suite) Test_MkLines_Check__incomplete_subst_at_end(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall")
+	t.SetupVartypes()
+	mklines := t.NewMkLines("subst.mk",
+		MkRcsID,
+		"",
+		"SUBST_CLASSES+=\tclass")
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"WARN: subst.mk:EOF: Incomplete SUBST block: SUBST_STAGE.class missing.",
+		"WARN: subst.mk:EOF: Incomplete SUBST block: SUBST_FILES.class missing.",
+		"WARN: subst.mk:EOF: Incomplete SUBST block: SUBST_SED.class, SUBST_VARS.class or SUBST_FILTER_CMD.class missing.")
 }
 
 // Demonstrates how to define your own make(1) targets for creating
@@ -524,7 +581,7 @@ func (s *Suite) Test_MkLines__wip_category_Makefile(c *check.C) {
 
 	t.SetupCommandLine("-Wall", "--explain")
 	t.SetupVartypes()
-	t.SetupToolUsable("rm", "RM")
+	t.SetupTool("rm", "RM", AtRunTime)
 	t.CreateFileLines("mk/misc/category.mk")
 	mklines := t.SetupFileMkLines("wip/Makefile",
 		MkRcsID,
@@ -566,7 +623,7 @@ func (s *Suite) Test_MkLines_determineDocumentedVariables(c *check.C) {
 
 	t.SetupCommandLine("-Wall")
 	t.SetupVartypes()
-	t.SetupToolUsable("rm", "RM")
+	t.SetupTool("rm", "RM", AtRunTime)
 	mklines := t.NewMkLines("Makefile",
 		MkRcsID,
 		"#",
@@ -895,4 +952,40 @@ func (s *Suite) Test_MkLines_Check__hacks_mk(c *check.C) {
 
 	// No warning about including bsd.prefs.mk before using the ?= operator.
 	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_MkLines_ForEach__conditional_variables(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall,no-space")
+	t.SetupVartypes()
+	mklines := t.NewMkLines("conditional.mk",
+		MkRcsID,
+		"",
+		".if defined(PKG_DEVELOPER)",
+		"DEVELOPER=\tyes",
+		".endif",
+		"",
+		".if ${USE_TOOLS:Mgettext}",
+		"USES_GETTEXT=\tyes",
+		".endif")
+
+	seenDeveloper := false
+	seenUsesGettext := false
+
+	mklines.ForEach(func(mkline MkLine) {
+		if mkline.IsVarassign() {
+			switch mkline.Varname() {
+			case "DEVELOPER":
+				c.Check(mklines.indentation.IsConditional(), equals, true)
+				seenDeveloper = true
+			case "USES_GETTEXT":
+				c.Check(mklines.indentation.IsConditional(), equals, true)
+				seenUsesGettext = true
+			}
+		}
+	})
+
+	c.Check(seenDeveloper, equals, true)
+	c.Check(seenUsesGettext, equals, true)
 }
