@@ -80,11 +80,7 @@ func (pr *PrefixReplacer) AdvanceBytesFunc(fn func(c byte) bool) bool {
 
 // AdvanceHspace advances over as many spaces and tabs as possible.
 func (pr *PrefixReplacer) AdvanceHspace() bool {
-	i := 0
-	rest := pr.rest
-	for i < len(rest) && (rest[i] == ' ' || rest[i] == '\t') {
-		i++
-	}
+	i := initialHspace(pr.rest)
 	if i != 0 {
 		pr.s = pr.rest[:i]
 		pr.rest = pr.rest[i:]
@@ -134,8 +130,8 @@ func (pr *PrefixReplacer) Skip(n int) {
 	pr.rest = pr.rest[n:]
 }
 
-func (pr *PrefixReplacer) SkipSpace() {
-	pr.rest = strings.TrimLeft(pr.rest, " \t")
+func (pr *PrefixReplacer) SkipHspace() {
+	pr.rest = pr.rest[initialHspace(pr.rest):]
 }
 
 // Since returns the substring between the mark and the current position.
@@ -155,4 +151,12 @@ func (pr *PrefixReplacer) HasPrefix(str string) bool {
 
 func (pr *PrefixReplacer) HasPrefixRegexp(re regex.Pattern) bool {
 	return pr.res.Matches(pr.rest, re)
+}
+
+func initialHspace(s string) int {
+	i := 0
+	for i < len(s) && (s[i] == ' ' || s[i] == '\t') {
+		i++
+	}
+	return i
 }
