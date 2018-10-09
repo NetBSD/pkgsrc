@@ -24,12 +24,10 @@ type VartypeCheck struct {
 // fields except the value. This is typically used when checking parts
 // of composite types.
 func NewVartypeCheckValue(vc *VartypeCheck, value string) *VartypeCheck {
-	valueNoVar := vc.MkLine.WithoutMakeVariables(value)
-
-	copy := *vc
-	copy.Value = value
-	copy.ValueNoVar = valueNoVar
-	return &copy
+	newVc := *vc
+	newVc.Value = value
+	newVc.ValueNoVar = vc.MkLine.WithoutMakeVariables(value)
+	return &newVc
 }
 
 const (
@@ -152,7 +150,7 @@ func (cv *VartypeCheck) CFlag() {
 	}
 }
 
-// The single-line description of the package.
+// Comment checks for the single-line description of the package.
 func (cv *VartypeCheck) Comment() {
 	line, value := cv.Line, cv.Value
 
@@ -179,7 +177,7 @@ func (cv *VartypeCheck) Comment() {
 				"provide additional information instead.")
 		}
 	}
-	if matches(value, `^[a-z]`) {
+	if matches(value, `^[a-z]`) && cv.Op == opAssign {
 		line.Warnf("COMMENT should start with a capital letter.")
 	}
 	if hasSuffix(value, ".") {
@@ -763,7 +761,7 @@ func (cv *VartypeCheck) PkgRevision() {
 	if !matches(cv.Value, `^[1-9]\d*$`) {
 		cv.Line.Warnf("%s must be a positive integer number.", cv.Varname)
 	}
-	if path.Base(cv.Line.Filename) != "Makefile" {
+	if cv.Line.Basename != "Makefile" {
 		cv.Line.Errorf("%s only makes sense directly in the package Makefile.", cv.Varname)
 		Explain(
 			"Usually, different packages using the same Makefile.common have",

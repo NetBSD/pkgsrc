@@ -18,6 +18,14 @@ func NewOptions() *Options {
 	return new(Options)
 }
 
+// AddFlagGroup adds an option that takes multiple flag values.
+//
+// Example:
+//  var extra bool
+//
+//  opts := NewOptions()
+//  warnings := opts.AddFlagGroup('W', "warnings", "warning,...", "Enable the given warnings")
+//  warnings.AddFlagVar("extra", &extra, false, "Print extra warnings")
 func (o *Options) AddFlagGroup(shortName rune, longName, argDescription, description string) *FlagGroup {
 	grp := new(FlagGroup)
 	opt := &option{shortName, longName, argDescription, description, grp}
@@ -37,6 +45,8 @@ func (o *Options) AddStrList(shortName rune, longName string, plist *[]string, d
 	o.options = append(o.options, opt)
 }
 
+// Parse extracts the command line options from the given arguments.
+// args[0] is the program name, as in os.Args.
 func (o *Options) Parse(args []string) (remainingArgs []string, err error) {
 	var skip int
 	for i := 1; i < len(args) && err == nil; i++ {
@@ -108,20 +118,24 @@ func (o *Options) handleLongOption(args []string, i int, opt *option, argval *st
 		}
 		return 0, nil
 	case *[]string:
-		if argval != nil {
+		switch {
+		case argval != nil:
 			*data = append(*data, *argval)
 			return 0, nil
-		} else if i+1 < len(args) {
+		case i+1 < len(args):
 			*data = append(*data, args[i+1])
 			return 1, nil
-		} else {
+		default:
 			return 0, optErr("option requires an argument: --" + opt.longName)
 		}
 	case *FlagGroup:
-		if argval == nil {
-			return 1, data.parse("--"+opt.longName+"=", args[i+1])
-		} else {
+		switch {
+		case argval != nil:
 			return 0, data.parse("--"+opt.longName+"=", *argval)
+		case i+1 < len(args):
+			return 1, data.parse("--"+opt.longName+"=", args[i+1])
+		default:
+			return 0, optErr("option requires an argument: --" + opt.longName)
 		}
 	}
 	panic("getopt: unknown option type")
@@ -139,23 +153,25 @@ optchar:
 
 				case *[]string:
 					argarg := optchars[ai+utf8.RuneLen(optchar):]
-					if argarg != "" {
+					switch {
+					case argarg != "":
 						*data = append(*data, argarg)
 						return 0, nil
-					} else if i+1 < len(args) {
+					case i+1 < len(args):
 						*data = append(*data, args[i+1])
 						return 1, nil
-					} else {
+					default:
 						return 0, optErr("option requires an argument: -" + string([]rune{optchar}))
 					}
 
 				case *FlagGroup:
 					argarg := optchars[ai+utf8.RuneLen(optchar):]
-					if argarg != "" {
+					switch {
+					case argarg != "":
 						return 0, data.parse(string([]rune{'-', optchar}), argarg)
-					} else if i+1 < len(args) {
+					case i+1 < len(args):
 						return 1, data.parse(string([]rune{'-', optchar}), args[i+1])
-					} else {
+					default:
 						return 0, optErr("option requires an argument: -" + string([]rune{optchar}))
 					}
 				}

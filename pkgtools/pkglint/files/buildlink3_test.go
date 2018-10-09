@@ -343,6 +343,7 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk__indentation(c *check.C) {
 
 	// No warning about the indentation of the .include lines.
 	t.CheckOutputLines(
+		"WARN: ~/buildlink3.mk:3: VAAPI_AVAILABLE is used but not defined.",
 		"ERROR: ~/buildlink3.mk:11: \"multimedia/libva\" does not exist.",
 		"ERROR: ~/buildlink3.mk:11: There is no package in \"multimedia/libva\".",
 		"ERROR: ~/buildlink3.mk:13: \"x11/libX11/buildlink3.mk\" does not exist.",
