@@ -395,7 +395,7 @@ func (s *Suite) Test_Package_loadPackageMakefile__dump(c *check.C) {
 
 	t.CheckOutputLines(
 		"Whole Makefile (with all included files) follows:",
-		"~/category/package/Makefile:1: # $NetBSD: package_test.go,v 1.30 2018/10/03 22:27:53 rillig Exp $",
+		"~/category/package/Makefile:1: "+MkRcsID,
 		"~/category/package/Makefile:2: ",
 		"~/category/package/Makefile:3: CATEGORIES=category",
 		"~/category/package/Makefile:4: ",
@@ -489,7 +489,7 @@ func (s *Suite) Test_Package__varuse_at_load_time(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupPkgsrc()
-	t.SetupToolUsable("printf", "")
+	t.SetupTool("printf", "", AtRunTime)
 	t.CreateFileLines("licenses/2-clause-bsd",
 		"# dummy")
 	t.CreateFileLines("misc/Makefile")
@@ -1054,7 +1054,7 @@ func (s *Suite) Test_Pkglint_checkdirPackage__filename_with_variable(c *check.C)
 	// Pkglint cannot currently resolve the location of DISTINFO_FILE completely
 	// because the variable \"rv\" comes from a .for loop.
 	//
-	// TODO: resolve variables in simple .for loops like the above.
+	// TODO: iterate over variables in simple .for loops like the above.
 	G.CheckDirent(pkg)
 
 	t.CheckOutputEmpty()

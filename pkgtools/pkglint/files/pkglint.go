@@ -59,7 +59,7 @@ type Pkglint struct {
 func NewPkglint() Pkglint {
 	return Pkglint{
 		res:       regex.NewRegistry(),
-		fileCache: NewFileCache(100)}
+		fileCache: NewFileCache(200)}
 }
 
 type CmdOpts struct {
@@ -546,7 +546,7 @@ func (pkglint *Pkglint) Checkfile(fname string) {
 		return
 	}
 
-	pkglint.checkExecutable(st)
+	pkglint.checkExecutable(fname, st)
 	pkglint.checkMode(fname, st.Mode())
 }
 
@@ -575,7 +575,11 @@ func (pkglint *Pkglint) checkMode(fname string, mode os.FileMode) {
 
 	case basename == "ALTERNATIVES":
 		if pkglint.opts.CheckAlternatives {
-			CheckfileAlternatives(fname, nil)
+			var plistFiles map[string]bool
+			if G.Pkg != nil {
+				plistFiles = G.Pkg.PlistFiles
+			}
+			CheckfileAlternatives(fname, plistFiles)
 		}
 
 	case basename == "buildlink3.mk":
@@ -665,9 +669,20 @@ func (pkglint *Pkglint) checkMode(fname string, mode os.FileMode) {
 	}
 }
 
-func (pkglint *Pkglint) checkExecutable(st os.FileInfo) {
-	fname := st.Name()
-	if st.Mode().IsRegular() && st.Mode().Perm()&0111 != 0 && !isCommitted(fname) {
+func (pkglint *Pkglint) checkExecutable(fname string, st os.FileInfo) {
+	switch {
+	case !st.Mode().IsRegular():
+		// Directories and other entries may be executable.
+
+	case st.Mode().Perm()&0111 == 0:
+		// Good.
+
+	case isCommitted(fname):
+		// Too late to be fixed by the package developer, since
+		// CVS remembers the executable bit in the repo file.
+		// At this point, it can only be reset by the CVS admins.
+
+	default:
 		line := NewLine(fname, 0, "", nil)
 		fix := line.Autofix()
 		fix.Warnf("Should not be executable.")
@@ -709,33 +724,13 @@ func (pkglint *Pkglint) Tool(command string, time ToolTime) (tool *Tool, usable 
 		varname = toolVarname
 	}
 
-	if G.Mk != nil {
-		tools := G.Mk.Tools
-		if t := tools.ByName(command); t != nil {
-			if tools.Usable(t, time) {
-				return t, true
-			}
-			tool = t
-		}
+	tools := pkglint.tools()
 
-		if t := tools.ByVarname(varname); t != nil {
-			if tools.Usable(t, time) {
-				return t, true
-			}
-			if tool == nil {
-				tool = t
-			}
-		}
-	}
-
-	tools := G.Pkgsrc.Tools
 	if t := tools.ByName(command); t != nil {
 		if tools.Usable(t, time) {
 			return t, true
 		}
-		if tool == nil {
-			tool = t
-		}
+		tool = t
 	}
 
 	if t := tools.ByVarname(varname); t != nil {
@@ -746,7 +741,6 @@ func (pkglint *Pkglint) Tool(command string, time ToolTime) (tool *Tool, usable 
 			tool = t
 		}
 	}
-
 	return
 }
 
@@ -756,27 +750,13 @@ func (pkglint *Pkglint) Tool(command string, time ToolTime) (tool *Tool, usable 
 // current package. It is not guaranteed to be usable; that must be
 // checked by the calling code.
 func (pkglint *Pkglint) ToolByVarname(varname string, time ToolTime) *Tool {
+	return pkglint.tools().ByVarname(varname)
+}
 
-	var tool *Tool
+func (pkglint *Pkglint) tools() *Tools {
 	if G.Mk != nil {
-		tools := G.Mk.Tools
-		if t := tools.ByVarname(varname); t != nil {
-			if tools.Usable(t, time) {
-				return t
-			}
-			tool = t
-		}
+		return G.Mk.Tools
+	} else {
+		return G.Pkgsrc.Tools
 	}
-
-	tools := G.Pkgsrc.Tools
-	if t := tools.ByVarname(varname); t != nil {
-		if tools.Usable(t, time) {
-			return t
-		}
-		if tool == nil {
-			tool = t
-		}
-	}
-
-	return tool
 }
