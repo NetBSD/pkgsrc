@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4327 2018/10/08 20:58:56 triaxx Exp $
+$NetBSD: CHANGES-2018,v 1.4328 2018/10/09 12:21:47 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6036,3 +6036,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/nqp to 2018.06nb1 [maya 2018-10-08]
 	Updated devel/MoarVM to 2018.06nb2 [maya 2018-10-08]
 	Updated devel/libconfig to 1.7.2 [triaxx 2018-10-08]
+	Updated net/megatools to 1.10.2 [leot 2018-10-09]
