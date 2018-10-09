@@ -1,0 +1,20 @@
+$NetBSD$
+
+ - Moved from Makefile.
+
+--- config.hin.orig	2018-10-09 04:28:07.759945480 +0000
++++ config.hin
+@@ -2053,3 +2053,13 @@
+ 
+ /* Define as a macro for copying va_list variables. */
+ #undef va_copy
++
++#ifdef HAVE_SYS_PARAM_H
++#include <sys/param.h>
++#endif
++#ifdef HAVE_SYS_STAT_H
++#include <sys/stat.h>
++#endif
++#ifdef HAVE_STRING_H
++#include <string.h>
++#endif
