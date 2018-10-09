@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.121 2018/09/10 15:41:33 wiz Exp $
+# $NetBSD: Makefile,v 1.122 2018/10/09 20:05:43 maya Exp $
 
 DISTNAME=	xsane-0.999
 PKGNAME=	xsane-0.99.9
 PKGREVISION=	8
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.xsane.org/download/
+#MASTER_SITES=	http://www.xsane.org/download/
+MASTER_SITES=	https://ftp.osuosl.org/pub/blfs/conglomeration/xsane/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.xsane.org/
+#HOMEPAGE=	http://www.xsane.org/
 COMMENT=	New improved frontend for SANE
 LICENSE=	gnu-gpl-v2
 
