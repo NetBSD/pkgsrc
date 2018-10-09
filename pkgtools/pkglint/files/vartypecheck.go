@@ -456,6 +456,24 @@ func (cv *VartypeCheck) FileMode() {
 	}
 }
 
+func (cv *VartypeCheck) GccReqd() {
+	cv.Version()
+
+	if m, major := match1(cv.Value, `^([5-9])\.\d+$`); m {
+		fix := cv.Line.Autofix()
+
+		fix.Warnf("GCC version numbers should only contain the major version (%s).", major)
+		fix.Explain(
+			"For GCC up to 4.x, the major version consists of the first and",
+			"second number, such as 4.8.",
+			"",
+			"Starting with GCC >= 5, the major version is only the first number",
+			"such as 5 or 7.")
+		fix.Replace(cv.Value, major)
+		fix.Apply()
+	}
+}
+
 func (cv *VartypeCheck) Homepage() {
 	MkLineChecker{cv.MkLine}.CheckVartypePrimitive(cv.Varname, BtURL, cv.Op, cv.Value, cv.MkComment, cv.Guessed)
 
