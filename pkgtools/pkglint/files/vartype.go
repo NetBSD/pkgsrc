@@ -216,6 +216,7 @@ var (
 	BtFilename               = &BasicType{"Filename", (*VartypeCheck).Filename}
 	BtFilemask               = &BasicType{"Filemask", (*VartypeCheck).Filemask}
 	BtFileMode               = &BasicType{"FileMode", (*VartypeCheck).FileMode}
+	BtGccReqd                = &BasicType{"GccReqd", (*VartypeCheck).GccReqd}
 	BtHomepage               = &BasicType{"Homepage", (*VartypeCheck).Homepage}
 	BtIdentifier             = &BasicType{"Identifier", (*VartypeCheck).Identifier}
 	BtInteger                = &BasicType{"Integer", (*VartypeCheck).Integer}
