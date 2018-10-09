@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/03/22 15:43:11 maya Exp $
+# $NetBSD: Makefile,v 1.3 2018/10/09 17:04:21 taca Exp $
 
 DISTNAME=	railties-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-railties${RUBY_RAILS}-${RAILS_VERSION}
@@ -6,7 +6,7 @@ CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rubyonrails.org/
-COMMENT=	Tools for creating, working with, and running Rails 4.2
+COMMENT=	Tools for creating, working with, and running Rails 5.1
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_ACTIONPACK_DEPENDS}
