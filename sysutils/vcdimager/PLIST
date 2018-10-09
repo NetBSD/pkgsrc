@@ -1,6 +1,28 @@
-@comment $NetBSD: PLIST,v 1.7 2006/04/07 19:54:17 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/10/09 15:12:38 abs Exp $
+bin/cdxa2mpeg
+bin/vcd-info
 bin/vcdimager
-bin/vcdrip
+bin/vcdxbuild
+bin/vcdxgen
+bin/vcdxminfo
+bin/vcdxrip
+include/libvcd/files.h
+include/libvcd/files_private.h
+include/libvcd/inf.h
+include/libvcd/info.h
+include/libvcd/logging.h
+include/libvcd/sector.h
+include/libvcd/types.h
+include/libvcd/version.h
+info/vcd-info.info
 info/vcdimager.info
+info/vcdxrip.info
+lib/libvcdinfo.la
+lib/pkgconfig/libvcdinfo.pc
+man/man1/cdxa2mpeg.1
+man/man1/vcd-info.1
 man/man1/vcdimager.1
-man/man1/vcdrip.1
+man/man1/vcdxbuild.1
+man/man1/vcdxgen.1
+man/man1/vcdxminfo.1
+man/man1/vcdxrip.1
