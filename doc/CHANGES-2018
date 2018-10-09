@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4330 2018/10/09 17:06:31 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4331 2018/10/09 19:12:25 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6040,3 +6040,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/vcdimager to 2.0.1 [abs 2018-10-09]
 	Removed sysutils/vcdimager-devel [abs 2018-10-09]
 	Updated www/ruby-actionpack51 to 5.1.6nb1 [taca 2018-10-09]
+	Updated pkgtools/pkglint to 5.6.4 [rillig 2018-10-09]
