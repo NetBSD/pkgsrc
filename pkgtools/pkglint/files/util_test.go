@@ -84,7 +84,7 @@ func (s *Suite) Test_cleanpath(c *check.C) {
 	c.Check(cleanpath("dir/"), equals, "dir")
 }
 
-func (s *Suite) Test_relpath(c *check.C) {
+func (s *Suite) Test_relpath__failure(c *check.C) {
 	t := s.Init(c)
 
 	if runtime.GOOS == "windows" {
