@@ -413,6 +413,24 @@ func (s *Suite) Test_VartypeCheck_FileMode(c *check.C) {
 		"WARN: fname:11: Invalid file mode \"u+rwx\".")
 }
 
+func (s *Suite) Test_VartypeCheck_GccReqd(c *check.C) {
+	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).GccReqd)
+
+	vt.Varname("GCC_REQD")
+	vt.Op(opAssignAppend)
+	vt.Values(
+		"2.95",
+		"3.1.5",
+		"4.7",
+		"4.8",
+		"5.1",
+		"6",
+		"7.3")
+	vt.Output(
+		"WARN: fname:5: GCC version numbers should only contain the major version (5).",
+		"WARN: fname:7: GCC version numbers should only contain the major version (7).")
+}
+
 func (s *Suite) Test_VartypeCheck_Homepage(c *check.C) {
 	t := s.Init(c)
 	vt := NewVartypeCheckTester(t, (*VartypeCheck).Homepage)

@@ -689,6 +689,24 @@ func (s *Suite) Test_MkLineChecker_CheckVaruse__build_defs(c *check.C) {
 		"WARN: ~/options.mk:2: The user-defined variable VARBASE is used but not added to BUILD_DEFS.")
 }
 
+func (s *Suite) Test_MkLineChecker_CheckVaruse__complicated_range(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("--show-autofix", "--source")
+	t.SetupVartypes()
+	mkline := t.NewMkLine("mk/compiler/gcc.mk", 150,
+		"CC:=\t${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}")
+
+	MkLineChecker{mkline}.Check()
+
+	// FIXME: The check is called two times, even though it only produces a single NOTE.
+	t.CheckOutputLines(
+		"NOTE: mk/compiler/gcc.mk:150: The modifier \":C/^/_asdf_/1:M_asdf_*:S/^_asdf_//\" can be written as \":[1]\".",
+		"AUTOFIX: mk/compiler/gcc.mk:150: Replacing \":C/^/_asdf_/1:M_asdf_*:S/^_asdf_//\" with \":[1]\".",
+		"-\tCC:=\t${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}",
+		"+\tCC:=\t${CC:[1]}")
+}
+
 func (s *Suite) Test_MkLineChecker_checkVarassignSpecific(c *check.C) {
 	t := s.Init(c)
 
