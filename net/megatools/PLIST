@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/11/27 10:28:02 leot Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/10/09 12:21:20 leot Exp $
 bin/megacopy
 bin/megadf
 bin/megadl
@@ -8,24 +8,9 @@ bin/megamkdir
 bin/megaput
 bin/megareg
 bin/megarm
-include/mega/mega-aes-ctr-encryptor.h
-include/mega/mega-aes-key.h
-include/mega/mega-chunked-cbc-mac.h
-include/mega/mega-enum-types.h
-include/mega/mega-http-client.h
-include/mega/mega-http-input-stream.h
-include/mega/mega-http-io-stream.h
-include/mega/mega-http-output-stream.h
-include/mega/mega-rsa-key.h
-include/mega/mega.h
-include/mega/megatypes.h
-include/mega/utils.h
-lib/libmega.la
-lib/pkgconfig/libmega.pc
 man/man1/megacopy.1
 man/man1/megadf.1
 man/man1/megadl.1
-man/man1/megafs.1
 man/man1/megaget.1
 man/man1/megals.1
 man/man1/megamkdir.1
