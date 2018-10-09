@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2018/08/22 09:45:50 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2018/10/09 15:17:51 abs Exp $
 
 DISTNAME=		vlc-${VLC_VERSION}
 PKGNAME=		${DISTNAME:S/vlc/vlc2/}
@@ -31,7 +31,6 @@ PLIST_VARS+=		altivec cdrom oss v4l2 x86simd
 .include "options.mk"
 
 BUILDLINK_API_DEPENDS.zlib+=		zlib>=1.2.0
-BUILDLINK_API_DEPENDS.vcdimager+=	vcdimager>=0.7.20nb1
 
 CONFIGURE_ARGS+=	--enable-dvdread
 CONFIGURE_ARGS+=	--enable-flac
