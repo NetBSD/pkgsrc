@@ -21,11 +21,7 @@ func (s *Suite) Test_CheckfileAlternatives__PLIST(c *check.C) {
 
 	G.CheckDirent(".")
 
-	// TODO: Remove redundant diagnostics.
 	t.CheckOutputLines(
-		"NOTE: ALTERNATIVES:1: @PREFIX@/ can be omitted from the file name.",
-		"NOTE: ALTERNATIVES:2: @PREFIX@/ can be omitted from the file name.",
-		"ERROR: ALTERNATIVES:5: Invalid ALTERNATIVES line \"invalid\".",
 		"ERROR: ALTERNATIVES:1: Alternative implementation \"@PREFIX@/sbin/sendmail.postfix@POSTFIXVER@\" must appear in the PLIST as \"sbin/sendmail.postfix${POSTFIXVER}\".",
 		"NOTE: ALTERNATIVES:1: @PREFIX@/ can be omitted from the file name.",
 		"NOTE: ALTERNATIVES:2: @PREFIX@/ can be omitted from the file name.",

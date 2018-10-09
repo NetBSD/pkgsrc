@@ -48,7 +48,9 @@ func Load(fileName string, options LoadOptions) []Line {
 	}
 
 	result := convertToLogicalLines(fileName, rawText, options&Makefile != 0)
-	G.fileCache.Put(fileName, options, result)
+	if hasSuffix(fileName, ".mk") {
+		G.fileCache.Put(fileName, options, result)
+	}
 	return result
 }
 

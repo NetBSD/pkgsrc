@@ -2,7 +2,6 @@ package main
 
 import (
 	"netbsd.org/pkglint/trace"
-	"path"
 	"strings"
 )
 
@@ -17,7 +16,7 @@ type MkLines struct {
 	plistVarAdded map[string]MkLine // Identifiers that are added to PLIST_VARS.
 	plistVarSet   map[string]MkLine // Identifiers for which PLIST.${id} is defined.
 	plistVarSkip  bool              // True if any of the PLIST_VARS identifiers refers to a variable.
-	Tools         Tools             // Tools defined in file scope.
+	Tools         *Tools            // Tools defined in file scope.
 	indentation   *Indentation      // Indentation depth of preprocessing directives; only available during MkLines.ForEach.
 	Once
 }
@@ -34,7 +33,7 @@ func NewMkLines(lines []Line) *MkLines {
 	}
 
 	tools := NewTools(traceName)
-	tools.AddAll(G.Pkgsrc.Tools)
+	tools.Fallback(G.Pkgsrc.Tools)
 
 	return &MkLines{
 		mklines,
@@ -66,15 +65,6 @@ func (mklines *MkLines) Check() {
 	G.Mk = mklines
 	defer func() { G.Mk = nil }()
 
-	allowedTargets := make(map[string]bool)
-	prefixes := [...]string{"pre", "do", "post"}
-	actions := [...]string{"fetch", "extract", "patch", "tools", "wrapper", "configure", "build", "test", "install", "package", "clean"}
-	for _, prefix := range prefixes {
-		for _, action := range actions {
-			allowedTargets[prefix+"-"+action] = true
-		}
-	}
-
 	// In the first pass, all additions to BUILD_DEFS and USE_TOOLS
 	// are collected to make the order of the definitions irrelevant.
 	mklines.DetermineUsedVariables()
@@ -83,12 +73,28 @@ func (mklines *MkLines) Check() {
 	mklines.collectElse()
 
 	// In the second pass, the actual checks are done.
+	mklines.checkAll()
+
+	SaveAutofixChanges(mklines.lines)
+}
+
+func (mklines *MkLines) checkAll() {
+	allowedTargets := func() map[string]bool {
+		targets := make(map[string]bool)
+		prefixes := [...]string{"pre", "do", "post"}
+		actions := [...]string{"fetch", "extract", "patch", "tools", "wrapper", "configure", "build", "test", "install", "package", "clean"}
+		for _, prefix := range prefixes {
+			for _, action := range actions {
+				targets[prefix+"-"+action] = true
+			}
+		}
+		return targets
+	}()
 
 	CheckLineRcsid(mklines.lines[0], `#\s+`, "# ")
 
-	substcontext := NewSubstContext()
+	substContext := NewSubstContext()
 	var varalign VaralignBlock
-	lastMkline := mklines.mklines[len(mklines.mklines)-1]
 	isHacksMk := mklines.lines[0].Basename == "hacks.mk"
 
 	lineAction := func(mkline MkLine) bool {
@@ -99,16 +105,16 @@ func (mklines *MkLines) Check() {
 		ck := MkLineChecker{mkline}
 		ck.Check()
 		varalign.Check(mkline)
-		mklines.Tools.ParseToolLine(mkline)
+		mklines.Tools.ParseToolLine(mkline, false, false)
 
 		switch {
 		case mkline.IsEmpty():
-			substcontext.Finish(mkline)
+			substContext.Finish(mkline)
 
 		case mkline.IsVarassign():
 			mklines.target = ""
 			mkline.Tokenize(mkline.Value(), true) // Just for the side-effect of the warnings.
-			substcontext.Varassign(mkline)
+			substContext.Varassign(mkline)
 
 			switch mkline.Varcanon() {
 			case "PLIST_VARS":
@@ -134,7 +140,7 @@ func (mklines *MkLines) Check() {
 
 		case mkline.IsDirective():
 			ck.checkDirective(mklines.forVars, mklines.indentation)
-			substcontext.Directive(mkline)
+			substContext.Directive(mkline)
 
 		case mkline.IsDependency():
 			ck.checkDependencyRule(allowedTargets)
@@ -160,16 +166,15 @@ func (mklines *MkLines) Check() {
 	}
 	mklines.ForEachEnd(lineAction, atEnd)
 
-	substcontext.Finish(lastMkline)
+	substContext.Finish(NewMkLine(NewLineEOF(mklines.lines[0].Filename)))
 	varalign.Finish()
 
 	ChecklinesTrailingEmptyLines(mklines.lines)
-
-	SaveAutofixChanges(mklines.lines)
 }
 
 // ForEach calls the action for each line, until the action returns false.
-// It keeps track of the indentation and all conditional variables.
+// It keeps track of the indentation (see MkLines.indentation)
+// and all conditional variables (see Indentation.IsConditional).
 func (mklines *MkLines) ForEach(action func(mkline MkLine)) {
 	mklines.ForEachEnd(
 		func(mkline MkLine) bool { action(mkline); return true },
@@ -201,7 +206,7 @@ func (mklines *MkLines) DetermineDefinedVariables() {
 	}
 
 	for _, mkline := range mklines.mklines {
-		mklines.Tools.ParseToolLine(mkline)
+		mklines.Tools.ParseToolLine(mkline, false, true)
 
 		if !mkline.IsVarassign() {
 			continue
@@ -211,12 +216,22 @@ func (mklines *MkLines) DetermineDefinedVariables() {
 
 		varcanon := mkline.Varcanon()
 		switch varcanon {
-		case "BUILD_DEFS", "PKG_GROUPS_VARS", "PKG_USERS_VARS":
-			for _, varname := range splitOnSpace(mkline.Value()) {
+		case
+			"BUILD_DEFS",
+			"PKG_GROUPS_VARS",
+			"PKG_USERS_VARS":
+			for _, varname := range fields(mkline.Value()) {
 				mklines.buildDefs[varname] = true
 				if trace.Tracing {
 					trace.Step1("%q is added to BUILD_DEFS.", varname)
 				}
+			}
+
+		case
+			"BUILTIN_FIND_FILES_VAR",
+			"BUILTIN_FIND_HEADERS_VAR":
+			for _, varname := range fields(mkline.Value()) {
+				mklines.vars.Define(varname, mkline)
 			}
 
 		case "PLIST_VARS":
@@ -234,7 +249,7 @@ func (mklines *MkLines) DetermineDefinedVariables() {
 			}
 
 		case "SUBST_VARS.*":
-			for _, svar := range splitOnSpace(mkline.Value()) {
+			for _, svar := range fields(mkline.Value()) {
 				mklines.UseVar(mkline, varnameCanon(svar))
 				if trace.Tracing {
 					trace.Step1("varuse %s", svar)
@@ -242,7 +257,7 @@ func (mklines *MkLines) DetermineDefinedVariables() {
 			}
 
 		case "OPSYSVARS":
-			for _, osvar := range splitOnSpace(mkline.Value()) {
+			for _, osvar := range fields(mkline.Value()) {
 				mklines.UseVar(mkline, osvar+".*")
 				defineVar(mkline, osvar)
 			}
@@ -282,11 +297,11 @@ func (mklines *MkLines) collectElse() {
 
 func (mklines *MkLines) DetermineUsedVariables() {
 	for _, mkline := range mklines.mklines {
-		varnames := mkline.DetermineUsedVariables()
-		for _, varname := range varnames {
+		for _, varname := range mkline.DetermineUsedVariables() {
 			mklines.UseVar(mkline, varname)
 		}
 	}
+
 	mklines.determineDocumentedVariables()
 }
 
@@ -312,7 +327,7 @@ func (mklines *MkLines) determineDocumentedVariables() {
 		text := mkline.Text
 		switch {
 		case hasPrefix(text, "#"):
-			words := splitOnSpace(text)
+			words := fields(text)
 			if len(words) <= 1 {
 				break
 			}
@@ -346,7 +361,7 @@ func (mklines *MkLines) determineDocumentedVariables() {
 func (mklines *MkLines) CheckRedundantVariables() {
 	scope := NewRedundantScope()
 	isRelevant := func(old, new MkLine) bool {
-		if path.Base(old.Filename) != "Makefile" && path.Base(new.Filename) == "Makefile" {
+		if old.Basename != "Makefile" && new.Basename == "Makefile" {
 			return false
 		}
 		if new.Op() == opAssignEval {
@@ -447,7 +462,8 @@ func (va *VaralignBlock) Check(mkline MkLine) {
 	if mkline.IsMultiline() {
 		// Interpreting the continuation marker as variable value
 		// is cheating, but works well.
-		m, _, _, _, _, _, value, _, _ := MatchVarassign(mkline.raw[0].orignl)
+		text := strings.TrimSuffix(mkline.raw[0].orignl, "\n")
+		m, _, _, _, _, _, value, _, _ := MatchVarassign(text)
 		continuation = m && value == "\\"
 	}
 
