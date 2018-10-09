@@ -1,7 +1,9 @@
 package main
 
 import (
+	"fmt"
 	"gopkg.in/check.v1"
+	"strings"
 )
 
 func (s *Suite) Test_MkParser_MkTokens(c *check.C) {
@@ -241,7 +243,7 @@ func (s *Suite) Test_MkParser_MkCond(c *check.C) {
 		" || defined(PKG_OPTIONS:Msamplerate)")
 	checkRest("${LEFT} &&",
 		&mkCond{Not: &mkCond{Empty: varuse("LEFT")}},
-		" &&")
+		"&&")
 	checkRest("\"unfinished string literal",
 		nil,
 		"\"unfinished string literal")
@@ -269,4 +271,62 @@ func (s *Suite) Test_MkParser__varuse_parentheses_autofix(c *check.C) {
 	t.CheckFileLines("Makefile",
 		MkRcsID,
 		"COMMENT=${P1} ${P2}) ${P3:Q} ${BRACES}")
+}
+
+func (s *Suite) Test_MkCondWalker_Walk(c *check.C) {
+	t := s.Init(c)
+
+	mkline := t.NewMkLine("Makefile", 4, ""+
+		".if ${VAR:Mmatch} == ${OTHER} || "+
+		"${STR} == Str || "+
+		"${NUM} == 3 && "+
+		"defined(VAR) && "+
+		"!exists(file.mk) && "+
+		"(((${NONEMPTY})))")
+	var events []string
+
+	varuseStr := func(varuse *MkVarUse) string {
+		return strings.Join(append([]string{varuse.varname}, varuse.modifiers...), ":")
+	}
+
+	addEvent := func(name string, args ...string) {
+		events = append(events, fmt.Sprintf("%14s  %s", name, strings.Join(args, ", ")))
+	}
+
+	NewMkCondWalker().Walk(mkline.Cond(), &MkCondCallback{
+		Defined: func(varname string) {
+			addEvent("defined", varname)
+		},
+		Empty: func(varuse *MkVarUse) {
+			addEvent("empty", varuseStr(varuse))
+		},
+		CompareVarNum: func(varuse *MkVarUse, op string, num string) {
+			addEvent("compareVarNum", varuseStr(varuse), num)
+		},
+		CompareVarStr: func(varuse *MkVarUse, op string, str string) {
+			addEvent("compareVarStr", varuseStr(varuse), str)
+		},
+		CompareVarVar: func(left *MkVarUse, op string, right *MkVarUse) {
+			addEvent("compareVarVar", varuseStr(left), varuseStr(right))
+		},
+		Call: func(name string, arg string) {
+			addEvent("call", name, arg)
+		},
+		VarUse: func(varuse *MkVarUse) {
+			addEvent("varUse", varuseStr(varuse))
+		}})
+
+	c.Check(events, deepEquals, []string{
+		" compareVarVar  VAR:Mmatch, OTHER",
+		"        varUse  VAR:Mmatch",
+		"        varUse  OTHER",
+		" compareVarStr  STR, Str",
+		"        varUse  STR",
+		" compareVarNum  NUM, 3",
+		"        varUse  NUM",
+		"       defined  VAR",
+		"        varUse  VAR",
+		"          call  exists, file.mk",
+		"         empty  NONEMPTY",
+		"        varUse  NONEMPTY"})
 }

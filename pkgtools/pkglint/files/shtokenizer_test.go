@@ -507,7 +507,7 @@ func (s *Suite) Test_ShTokenizer__examples_from_fuzzing(c *check.C) {
 		"\t"+"\"`'`y",
 
 		// Covers shAtomDquotBackt: return nil
-		// FIXME: Pkglint must parse unescpaed dollar in the same way, everywhere.
+		// FIXME: Pkglint must parse unescaped dollar in the same way, everywhere.
 		"\t"+"\"`$|",
 
 		// Covers shAtomDquotBacktDquot: return nil

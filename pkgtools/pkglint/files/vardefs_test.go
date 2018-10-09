@@ -61,3 +61,17 @@ func (s *Suite) Test_parseACLEntries(c *check.C) {
 		func() { parseACLEntries("VARNAME", "*.mk: use; buildlink3.mk: append") },
 		"FATAL: Ineffective ACL glob \"buildlink3.mk\" for \"VARNAME\".")
 }
+
+func (s *Suite) Test_Pkgsrc_InitVartypes__LP64PLATFORMS(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall")
+	pkg := t.SetupPackage("category/package",
+		"BROKEN_ON_PLATFORM=\t${LP64PLATFORMS}")
+
+	G.CheckDirent(pkg)
+
+	// No warning about a missing :Q operator.
+	// All PLATFORM variables must be either lkNone or lkSpace.
+	t.CheckOutputEmpty()
+}

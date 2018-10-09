@@ -19,7 +19,8 @@ type MkLineImpl struct {
 	Line
 	data interface{} // One of the following mkLine* types
 }
-type mkLineAssign struct {
+type mkLineAssign = *mkLineAssignImpl
+type mkLineAssignImpl struct {
 	commented  bool       // Whether the whole variable assignment is commented out
 	varname    string     // e.g. "HOMEPAGE", "SUBST_SED.perl"
 	varcanon   string     // e.g. "HOMEPAGE", "SUBST_SED.*"
@@ -34,14 +35,17 @@ type mkLineShell struct {
 }
 type mkLineComment struct{}
 type mkLineEmpty struct{}
-type mkLineDirective struct {
+type mkLineDirective = *mkLineDirectiveImpl
+type mkLineDirectiveImpl struct {
 	indent    string
 	directive string
 	args      string
 	comment   string
 	elseLine  MkLine // (filled in later)
+	cond      MkCond // (filled in later, as needed)
 }
-type mkLineInclude struct {
+type mkLineInclude = *mkLineIncludeImpl
+type mkLineIncludeImpl struct {
 	mustExist       bool
 	sys             bool
 	indent          string
@@ -56,7 +60,7 @@ type mkLineDependency struct {
 func NewMkLine(line Line) *MkLineImpl {
 	text := line.Text
 
-	if hasPrefix(text, " ") {
+	if hasPrefix(text, " ") && line.Basename != "bsd.buildlink3.mk" {
 		line.Warnf("Makefile lines should not start with space characters.")
 		Explain(
 			"If you want this line to contain a shell program, use a tab",
@@ -89,7 +93,7 @@ func NewMkLine(line Line) *MkLineImpl {
 		value = strings.Replace(value, "\\#", "#", -1)
 		varparam := varnameParam(varname)
 
-		return &MkLineImpl{line, mkLineAssign{
+		return &MkLineImpl{line, &mkLineAssignImpl{
 			commented,
 			varname,
 			varnameCanon(varname),
@@ -105,7 +109,7 @@ func NewMkLine(line Line) *MkLineImpl {
 		return &MkLineImpl{line, mkLineShell{shellcmd}}
 	}
 
-	trimmedText := strings.TrimSpace(text)
+	trimmedText := trimHspace(text)
 	if strings.HasPrefix(trimmedText, "#") {
 		return &MkLineImpl{line, mkLineComment{}}
 	}
@@ -115,15 +119,15 @@ func NewMkLine(line Line) *MkLineImpl {
 	}
 
 	if m, indent, directive, args, comment := matchMkDirective(text); m {
-		return &MkLineImpl{line, mkLineDirective{indent, directive, args, comment, nil}}
+		return &MkLineImpl{line, &mkLineDirectiveImpl{indent, directive, args, comment, nil, nil}}
 	}
 
 	if m, indent, directive, includefile := MatchMkInclude(text); m {
-		return &MkLineImpl{line, mkLineInclude{directive == "include", false, indent, includefile, ""}}
+		return &MkLineImpl{line, &mkLineIncludeImpl{directive == "include", false, indent, includefile, ""}}
 	}
 
 	if m, indent, directive, includefile := match3(text, `^\.(\s*)(s?include)\s+<([^>]+)>\s*(?:#.*)?$`); m {
-		return &MkLineImpl{line, mkLineInclude{directive == "include", true, indent, includefile, ""}}
+		return &MkLineImpl{line, &mkLineIncludeImpl{directive == "include", true, indent, includefile, ""}}
 	}
 
 	if m, targets, whitespace, sources := match3(text, `^([^\s:]+(?:\s*[^\s:]+)*)(\s*):\s*([^#]*?)(?:\s*#.*)?$`); m {
@@ -247,6 +251,19 @@ func (mkline *MkLineImpl) Directive() string { return mkline.data.(mkLineDirecti
 // Args returns the arguments from an .if, .ifdef, .ifndef, .elif, .for, .undef.
 func (mkline *MkLineImpl) Args() string { return mkline.data.(mkLineDirective).args }
 
+// Cond applies to an .if or .elif line and returns the parsed condition.
+//
+// If a parse error occurs, it is silently swallowed, returning a
+// best-effort part of the condition, or even nil.
+func (mkline *MkLineImpl) Cond() MkCond {
+	cond := mkline.data.(mkLineDirective).cond
+	if cond == nil {
+		cond = NewMkParser(mkline.Line, mkline.Args(), false).MkCond()
+		mkline.data.(mkLineDirective).cond = cond
+	}
+	return cond
+}
+
 // DirectiveComment is the trailing end-of-line comment, typically at a deeply nested .endif or .endfor.
 func (mkline *MkLineImpl) DirectiveComment() string { return mkline.data.(mkLineDirective).comment }
 func (mkline *MkLineImpl) HasElseBranch() bool      { return mkline.data.(mkLineDirective).elseLine != nil }
@@ -262,9 +279,9 @@ func (mkline *MkLineImpl) IncludeFile() string { return mkline.data.(mkLineInclu
 func (mkline *MkLineImpl) Targets() string { return mkline.data.(mkLineDependency).targets }
 func (mkline *MkLineImpl) Sources() string { return mkline.data.(mkLineDependency).sources }
 
-// ConditionalVars is a space-separated list of those variable names
-// on which the inclusion depends. It is initialized later,
-// step by step, when parsing other lines
+// ConditionalVars applies to .include lines and is a space-separated
+// list of those variable names on which the inclusion depends.
+// It is initialized later, step by step, when parsing other lines.
 func (mkline *MkLineImpl) ConditionalVars() string { return mkline.data.(mkLineInclude).conditionalVars }
 func (mkline *MkLineImpl) SetConditionalVars(varnames string) {
 	include := mkline.data.(mkLineInclude)
@@ -306,7 +323,7 @@ func (mkline *MkLineImpl) ValueSplit(value string, separator string) []string {
 		if token.Varuse == nil && contains(token.Text, separator) {
 			var subs []string
 			if separator == "" {
-				subs = splitOnSpace(token.Text)
+				subs = fields(token.Text)
 			} else {
 				subs = strings.Split(token.Text, separator)
 			}
@@ -324,15 +341,13 @@ func (mkline *MkLineImpl) ValueTokens() []*MkToken {
 }
 
 func (mkline *MkLineImpl) WithoutMakeVariables(value string) string {
-	valueNovar := value
-	for {
-		// TODO: properly parse nested variables
-		replaced := replaceFirst(valueNovar, `\$\{[^{}]*\}`, "")
-		if replaced == valueNovar {
-			return valueNovar
+	valueNovar := ""
+	for _, token := range NewMkParser(nil, value, false).MkTokens() {
+		if token.Varuse == nil {
+			valueNovar += token.Text
 		}
-		valueNovar = replaced
 	}
+	return valueNovar
 }
 
 func (mkline *MkLineImpl) ResolveVarsInRelativePath(relativePath string, adjustDepth bool) string {
@@ -386,21 +401,8 @@ func (mkline *MkLineImpl) ResolveVarsInRelativePath(relativePath string, adjustD
 
 func (ind *Indentation) RememberUsedVariables(cond MkCond) {
 	NewMkCondWalker().Walk(cond, &MkCondCallback{
-		Defined: func(varname string) {
-			ind.AddVar(varname)
-		},
-		Empty: func(varuse *MkVarUse) {
+		VarUse: func(varuse *MkVarUse) {
 			ind.AddVar(varuse.varname)
-		},
-		CompareVarNum: func(varuse *MkVarUse, op string, num string) {
-			ind.AddVar(varuse.varname)
-		},
-		CompareVarStr: func(varuse *MkVarUse, op string, str string) {
-			ind.AddVar(varuse.varname)
-		},
-		CompareVarVar: func(left *MkVarUse, op string, right *MkVarUse) {
-			ind.AddVar(left.varname)
-			ind.AddVar(right.varname)
 		}})
 }
 
@@ -426,15 +428,20 @@ func matchMkDirective(text string) (m bool, indent, directive, args, comment str
 	indentEnd := i
 
 	directiveStart := i
-	for i < n && 'a' <= text[i] && text[i] <= 'z' {
+	for i < n && ('a' <= text[i] && text[i] <= 'z' || text[i] == '-') {
 		i++
 	}
 	directiveEnd := i
 	directive = text[directiveStart:directiveEnd]
 	switch directive {
-	case "if", "ifdef", "ifndef", "else", "elif", "endif", "for", "endfor", "undef":
+	case "if", "else", "elif", "endif",
+		"ifdef", "ifndef",
+		"for", "endfor", "undef",
+		"error", "warning", "info",
+		"export", "export-env", "unexport", "unexport-env":
 		break
 	default:
+		// Intentionally not supported are: ifmake ifnmake elifdef elifndef elifmake elifnmake.
 		return
 	}
 
@@ -483,7 +490,7 @@ func (mkline *MkLineImpl) VariableNeedsQuoting(varname string, vartype *Vartype,
 		defer trace.Call(varname, vartype, vuc, trace.Result(&needsQuoting))()
 	}
 
-	if vartype == nil || vuc.vartype == nil {
+	if vartype == nil || vuc.vartype == nil || vartype.basicType == BtUnknown {
 		return nqDontKnow
 	}
 
@@ -581,67 +588,63 @@ func (mkline *MkLineImpl) VariableNeedsQuoting(varname string, vartype *Vartype,
 	return nqDontKnow
 }
 
-// TODO: merge with determineUsedVariables
-func (mkline *MkLineImpl) ExtractUsedVariables(text string) []string {
-	re := G.res.Compile(`^(?:[^\$]+|\$[\$*<>?@]|\$\{([.0-9A-Z_a-z]+)(?::(?:[^\${}]|\$[^{])+)?\})`)
-	rest := text
-	var result []string
-	for {
-		m := re.FindStringSubmatchIndex(rest)
-		if m == nil {
-			break
-		}
-		varname := rest[negToZero(m[2]):negToZero(m[3])]
-		rest = rest[:m[0]] + rest[m[1]:]
-		if varname != "" {
-			result = append(result, varname)
-		}
-	}
+func (mkline *MkLineImpl) DetermineUsedVariables() []string {
+	var varnames []string
 
-	if trace.Tracing && rest != "" {
-		trace.Step1("extractUsedVariables: rest=%q", rest)
-	}
-	return result
-}
-
-func (mkline *MkLineImpl) DetermineUsedVariables() (varnames []string) {
-	rest := mkline.Text
-
-	if strings.HasPrefix(rest, "#") {
-		return
-	}
-
-	for {
-		p1 := strings.Index(rest, "${")
-		p2 := strings.Index(rest, "$(")
-		p3 := strings.Index(rest, "defined(")
-		p4 := strings.Index(rest, "empty(")
-		if p1 == -1 && p2 == -1 && p3 == -1 && p4 == -1 {
-			return
-		}
-		min := -1
-		if min == -1 || (p1 != -1 && p1 < min) {
-			min = p1
-		}
-		if min == -1 || (p2 != -1 && p2 < min) {
-			min = p2
-		}
-		if min == -1 || (p3 != -1 && p3 < min) {
-			min = p3
-		}
-		if min == -1 || (p4 != -1 && p4 < min) {
-			min = p4
-		}
-		rest = rest[min:]
-
-		m := G.res.Compile(`(?:\$\{|\$\(|defined\(|empty\()([*+\-.0-9A-Z_a-z]+)[:})]`).FindStringSubmatchIndex(rest)
-		if m == nil {
-			return
-		}
-		varname := rest[m[2]:m[3]]
+	add := func(varname string) {
 		varnames = append(varnames, varname)
-		rest = rest[:m[0]] + rest[m[1]:]
 	}
+
+	var searchIn func(text string)
+
+	searchInVarUse := func(varuse *MkVarUse) {
+		varname := varuse.varname
+		if !varuse.IsExpression() {
+			add(varname)
+		}
+		searchIn(varname)
+		for _, mod := range varuse.modifiers {
+			searchIn(mod)
+		}
+	}
+
+	searchIn = func(text string) {
+		if !contains(text, "$") {
+			return
+		}
+
+		for _, token := range NewMkParser(nil, text, false).MkTokens() {
+			if token.Varuse != nil {
+				searchInVarUse(token.Varuse)
+			}
+		}
+	}
+
+	switch {
+
+	case mkline.IsVarassign():
+		searchIn(mkline.Value())
+
+	case mkline.IsDirective() && mkline.Directive() == "for":
+		searchIn(mkline.Args())
+
+	case mkline.IsDirective() && mkline.Cond() != nil:
+		NewMkCondWalker().Walk(
+			mkline.Cond(),
+			&MkCondCallback{VarUse: searchInVarUse})
+
+	case mkline.IsShellCommand():
+		searchIn(mkline.ShellCommand())
+
+	case mkline.IsDependency():
+		searchIn(mkline.Targets())
+		searchIn(mkline.Sources())
+
+	case mkline.IsInclude():
+		searchIn(mkline.IncludeFile())
+	}
+
+	return varnames
 }
 
 type MkOperator uint8
@@ -775,7 +778,7 @@ func (ind *Indentation) String() string {
 			s += " (" + strings.Join(level.conditionalVars, " ") + ")"
 		}
 	}
-	return "[" + strings.TrimSpace(s) + "]"
+	return "[" + trimHspace(s) + "]"
 }
 
 type indentationLevel struct {
@@ -897,12 +900,9 @@ func (ind *Indentation) TrackBefore(mkline MkLine) {
 		trace.Stepf("Indentation before line %s: %s", mkline.Linenos(), ind)
 	}
 
-	directive := mkline.Directive()
-	args := mkline.Args()
-
-	switch directive {
+	switch mkline.Directive() {
 	case "for", "if", "ifdef", "ifndef":
-		ind.Push(mkline, ind.top().depth, args)
+		ind.Push(mkline, ind.top().depth, mkline.Args())
 	}
 }
 
@@ -918,32 +918,26 @@ func (ind *Indentation) TrackAfter(mkline MkLine) {
 	case "if":
 		// For multiple-inclusion guards, the indentation stays at the same level.
 		guard := false
-		if hasPrefix(args, "!defined") && hasSuffix(args, "_MK)") {
-			if hasPrefix(args, "!defined(") && hasSuffix(args, ")") {
-				varname := args[9 : len(args)-1]
-				if varname != "" && isalnum(varname) {
-					ind.AddVar(varname)
-					guard = true
-				}
+		if hasPrefix(args, "!defined(") && hasSuffix(args, "_MK)") {
+			varname := args[9 : len(args)-1]
+			if varname != "" && isalnum(varname) {
+				ind.AddVar(varname)
+				guard = true
 			}
 		}
 		if !guard {
 			ind.top().depth += 2
 		}
 
-		// Note: adding the used variables for arbitrary conditions
-		// happens in MkLineChecker.checkDirectiveCond for performance reasons.
+		if cond := mkline.Cond(); cond != nil {
+			ind.RememberUsedVariables(cond)
 
-		if contains(args, "exists") {
-			cond := NewMkParser(mkline.Line, args, false).MkCond()
-			if cond != nil {
-				NewMkCondWalker().Walk(cond, &MkCondCallback{
-					Call: func(name string, arg string) {
-						if name == "exists" {
-							ind.AddCheckedFile(arg)
-						}
-					}})
-			}
+			NewMkCondWalker().Walk(cond, &MkCondCallback{
+				Call: func(name string, arg string) {
+					if name == "exists" {
+						ind.AddCheckedFile(arg)
+					}
+				}})
 		}
 
 	case "for", "ifdef", "ifndef":
@@ -986,13 +980,26 @@ func MatchVarassign(text string) (m, commented bool, varname, spaceAfterVarname,
 	for ; i < n; i++ {
 		b := text[i]
 		switch {
+
+		// As of go1.11.1 (October 2018), the Go compiler doesn't emit good
+		// code for these kinds of comparisons.
+		// See https://github.com/golang/go/issues/17372.
 		case 'A' <= b && b <= 'Z',
 			'a' <= b && b <= 'z',
 			b == '_',
 			'0' <= b && b <= '9',
-			'$' <= b && b <= '.' && (b == '$' || b == '*' || b == '+' || b == '-' || b == '.'),
-			b == '[',
-			b == '{', b == '}':
+			'*' <= b && b <= '.' && (b == '*' || b == '+' || b == '-' || b == '.'),
+			b == '[': // For the tool of the same name, e.g. "TOOLS_PATH.[".
+			continue
+
+		case b == '$':
+			parser := NewMkParser(nil, text[i:], false)
+			varuse := parser.VarUse()
+			if varuse == nil {
+				return
+			}
+			varuseLen := len(text[i:]) - len(parser.Rest())
+			i += varuseLen - 1
 			continue
 		}
 		break
@@ -1055,7 +1062,7 @@ func MatchVarassign(text string) (m, commented bool, varname, spaceAfterVarname,
 	spaceAfterVarname = text[varnameEnd:opStart]
 	op = text[opStart:opEnd]
 	valueAlign = text[0:valueStart]
-	value = strings.TrimSpace(string(valuebuf[:j]))
+	value = trimHspace(string(valuebuf[:j]))
 	spaceAfterValue = text[valueEnd:commentStart]
 	comment = text[commentStart:commentEnd]
 	return
@@ -1069,12 +1076,12 @@ func MatchMkInclude(text string) (m bool, indentation, directive, filename strin
 		}
 		if repl.AdvanceStr("include") || repl.AdvanceStr("sinclude") {
 			directive = repl.Str()
-			repl.AdvanceHspace()
+			repl.SkipHspace()
 			if repl.AdvanceByte('"') {
 				if repl.AdvanceBytesFunc(func(c byte) bool { return c != '"' }) {
 					filename = repl.Str()
 					if repl.AdvanceByte('"') {
-						repl.AdvanceHspace()
+						repl.SkipHspace()
 						if repl.EOF() || repl.PeekByte() == '#' {
 							m = true
 							return
