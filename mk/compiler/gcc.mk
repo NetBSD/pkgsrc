@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.194 2018/10/08 20:02:17 rillig Exp $
+# $NetBSD: gcc.mk,v 1.195 2018/10/09 15:02:48 abs Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -134,13 +134,13 @@ _GCC48_PATTERNS= 4.[5-8] 4.[5-8].*
 _GCC49_PATTERNS= 4.9 4.9.*
 
 # _GCC5_PATTERNS matches N s.t. 5.0 <= N < 6.
-_GCC5_PATTERNS= 5.*
+_GCC5_PATTERNS= 5 5.*
 
 # _GCC6_PATTERNS matches N s.t. 6.0 <= N < 7.
-_GCC6_PATTERNS= 6.*
+_GCC6_PATTERNS= 6 6.*
 
 # _GCC7_PATTERNS matches N s.t. 7.0 <= N < 8.
-_GCC7_PATTERNS= 7.*
+_GCC7_PATTERNS= 7 7.*
 
 # _GCC_AUX_PATTERNS matches 8-digit date YYYYMMDD*
 _GCC_AUX_PATTERNS= 20[1-2][0-9][0-1][0-9][0-3][0-9]*
@@ -907,15 +907,15 @@ PREPEND_PATH+=	${_GCC_DIR}/bin
 #  Special case packages which are themselves a dependency of gcc runtime.
 .  if empty(PKGPATH:Mdevel/libtool-base) && empty(PKGPATH:Mdevel/binutils) && \
       empty(PKGPATH:Mlang/gcc4?) && empty(PKGPATH:Mlang/gcc[5-9])
-.    if !empty(CC_VERSION:Mgcc-4.8*)
+.    if !empty(_GCC_PKGBASE:Mgcc48)
 .      include "../../lang/gcc48-libs/buildlink3.mk"
-.    elif !empty(CC_VERSION:Mgcc-4.9*)
+.    elif !empty(_GCC_PKGBASE:Mgcc49)
 .      include "../../lang/gcc49-libs/buildlink3.mk"
-.    elif !empty(CC_VERSION:Mgcc-5.*)
+.    elif !empty(_GCC_PKGBASE:Mgcc5)
 .      include "../../lang/gcc5-libs/buildlink3.mk"
-.    elif !empty(CC_VERSION:Mgcc-6.*)
+.    elif !empty(_GCC_PKGBASE:Mgcc6)
 .      include "../../lang/gcc6-libs/buildlink3.mk"
-.    elif !empty(CC_VERSION:Mgcc-7.*)
+.    elif !empty(_GCC_PKGBASE:Mgcc7)
 .      include "../../lang/gcc7-libs/buildlink3.mk"
 .    else
 PKG_FAIL_REASON+=	"No USE_PKGSRC_GCC_RUNTIME support for ${CC_VERSION}"
