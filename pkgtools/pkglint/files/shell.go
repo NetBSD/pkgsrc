@@ -6,7 +6,6 @@ import (
 	"netbsd.org/pkglint/textproc"
 	"netbsd.org/pkglint/trace"
 	"path"
-	"strings"
 )
 
 const (
@@ -165,7 +164,7 @@ outer:
 		}
 	}
 
-	if strings.TrimSpace(parser.Rest()) != "" {
+	if trimHspace(parser.Rest()) != "" {
 		line.Warnf("Pkglint parse error in ShellLine.CheckWord at %q (quoting=%s), rest: %s", token, quoting, parser.Rest())
 	}
 }
@@ -283,7 +282,7 @@ func (shline *ShellLine) CheckShellCommandLine(shelltext string) {
 			"to understand, since all the complexity of using sed and mv is",
 			"hidden behind the scenes.",
 			"",
-			"Run \"bmake help topic=subst\" for more information.")
+			"Run \""+confMake+" help topic=subst\" for more information.")
 		if contains(shelltext, "#") {
 			Explain(
 				"When migrating to the SUBST framework, pay attention to \"#\"",
@@ -304,7 +303,7 @@ func (shline *ShellLine) CheckShellCommandLine(shelltext string) {
 	}
 
 	repl := G.NewPrefixReplacer(shelltext)
-	repl.AdvanceRegexp(`^\s+`)
+	repl.SkipHspace()
 	if repl.AdvanceRegexp(`^[-@]+`) {
 		shline.checkHiddenAndSuppress(repl.Group(0), repl.Rest())
 	}
@@ -452,6 +451,8 @@ func (scc *SimpleCommandChecker) checkCommandStart() {
 	}
 
 	shellword := scc.strcmd.Name
+	scc.shline.checkInstallCommand(shellword)
+
 	switch {
 	case shellword == "${RUN}" || shellword == "":
 	case scc.handleForbiddenCommand():
@@ -487,11 +488,10 @@ func (scc *SimpleCommandChecker) handleTool() bool {
 		scc.shline.mkline.Warnf("The %q tool is used but not added to USE_TOOLS.", command)
 	}
 
-	if tool != nil && !containsVarRef(command) && tool.MustUseVarForm {
+	if tool != nil && tool.MustUseVarForm && !containsVarRef(command) {
 		scc.shline.mkline.Warnf("Please use \"${%s}\" instead of %q.", tool.Varname, command)
 	}
 
-	scc.shline.checkCommandUse(command)
 	return tool != nil
 }
 
@@ -527,12 +527,12 @@ func (scc *SimpleCommandChecker) handleCommandVariable() bool {
 			if tool.Validity == Nowhere {
 				scc.shline.mkline.Warnf("The %q tool is used but not added to USE_TOOLS.", tool.Name)
 			}
-			scc.shline.checkCommandUse(shellword)
+			scc.shline.checkInstallCommand(shellword)
 			return true
 		}
 
 		if vartype := G.Pkgsrc.VariableType(varname); vartype != nil && vartype.basicType.name == "ShellCommand" {
-			scc.shline.checkCommandUse(shellword)
+			scc.shline.checkInstallCommand(shellword)
 			return true
 		}
 
@@ -917,7 +917,7 @@ func (spc *ShellProgramChecker) checkSetE(list *MkShList, index int, andor *MkSh
 }
 
 // Some shell commands should not be used in the install phase.
-func (shline *ShellLine) checkCommandUse(shellcmd string) {
+func (shline *ShellLine) checkInstallCommand(shellcmd string) {
 	if trace.Tracing {
 		defer trace.Call()()
 	}

@@ -54,7 +54,7 @@ func (ctx *SubstContext) Varassign(mkline MkLine) {
 	op := mkline.Op()
 	value := mkline.Value()
 	if varcanon == "SUBST_CLASSES" || varcanon == "SUBST_CLASSES.*" {
-		classes := splitOnSpace(value)
+		classes := fields(value)
 		if len(classes) > 1 {
 			mkline.Warnf("Please add only one class at a time to SUBST_CLASSES.")
 		}

@@ -70,9 +70,9 @@ func (perms ACLPermissions) HumanString() string {
 	return strings.TrimRight(result, ", ")
 }
 
-func (vt *Vartype) EffectivePermissions(fname string) ACLPermissions {
+func (vt *Vartype) EffectivePermissions(basename string) ACLPermissions {
 	for _, aclEntry := range vt.aclEntries {
-		if m, _ := path.Match(aclEntry.glob, path.Base(fname)); m {
+		if m, _ := path.Match(aclEntry.glob, basename); m {
 			return aclEntry.permissions
 		}
 	}
@@ -118,7 +118,7 @@ func (vt *Vartype) IsConsideredList() bool {
 }
 
 func (vt *Vartype) MayBeAppendedTo() bool {
-	return vt.kindOfList != lkNone || vt.IsConsideredList()
+	return vt.kindOfList != lkNone || vt.IsConsideredList() || vt.basicType == BtComment
 }
 
 func (vt *Vartype) String() string {
