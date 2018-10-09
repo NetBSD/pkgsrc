@@ -1,8 +1,8 @@
 package main
 
 import (
+	"fmt"
 	"netbsd.org/pkglint/trace"
-	"path"
 	"sort"
 	"strings"
 )
@@ -12,6 +12,10 @@ import (
 // pkgsrc.
 //
 // See `mk/tools/`.
+//
+// TODO: MustUseVarForm does not really depend on the tool but only depends
+// on where the tool is used (load time, run time). This had already been
+// modeled wrong in pkglint 4, more than 10 years ago.
 type Tool struct {
 	Name           string // e.g. "sed", "gzip"
 	Varname        string // e.g. "SED", "GZIP_CMD"
@@ -19,11 +23,9 @@ type Tool struct {
 	Validity       Validity
 }
 
-func (tool *Tool) SetValidity(validity Validity, traceName string) {
-	if trace.Tracing && validity != tool.Validity {
-		trace.Stepf("%s: Setting validity of %q to %s", traceName, tool.Name, validity)
-	}
-	tool.Validity = validity
+func (tool *Tool) String() string {
+	return fmt.Sprintf("%s:%s:%s:%s",
+		tool.Name, tool.Varname, ifelseStr(tool.MustUseVarForm, "var", ""), tool.Validity)
 }
 
 // UsableAtLoadTime means that the tool may be used by its variable
@@ -82,19 +84,22 @@ type Tools struct {
 	TraceName string           // Only for the trace log
 	byName    map[string]*Tool // "sed" => tool
 	byVarname map[string]*Tool // "GREP_CMD" => tool
-	SeenPrefs bool             // Determines the effect of adding the tool to USE_TOOLS
+	fallback  *Tools
+	SeenPrefs bool // Determines the effect of adding the tool to USE_TOOLS
 }
 
-func NewTools(traceName string) Tools {
-	return Tools{
+func NewTools(traceName string) *Tools {
+	return &Tools{
 		traceName,
 		make(map[string]*Tool),
 		make(map[string]*Tool),
+		nil,
 		false}
 }
 
 // Define registers the tool by its name and the corresponding
-// variable name (if nonempty).
+// variable name (if nonempty). Depending on the given mkline,
+// it may be added to USE_TOOLS automatically.
 //
 // After this tool is added to USE_TOOLS, it may be used by this name
 // (e.g. "awk") or by its variable (e.g. ${AWK}).
@@ -103,33 +108,28 @@ func (tr *Tools) Define(name, varname string, mkline MkLine) *Tool {
 		trace.Stepf("Tools.Define for %s: %q %q in %s", tr.TraceName, name, varname, mkline)
 	}
 
-	tool := tr.def(name, varname, mkline)
-	if varname != "" {
-		tool.Varname = varname
-	}
-	return tool
-}
-
-func (tr *Tools) def(name, varname string, mkline MkLine) *Tool {
-	if mkline != nil && !tr.IsValidToolName(name) {
+	if !tr.IsValidToolName(name) {
 		mkline.Errorf("Invalid tool name %q.", name)
 	}
 
-	validity := Nowhere
-	if mkline != nil {
-		if IsPrefs(mkline.Filename) {
-			validity = AfterPrefsMk
-		} else if path.Base(mkline.Filename) == "bsd.pkg.mk" {
-			validity = AtRunTime
-		}
-	}
-	tool := &Tool{name, varname, false, validity}
+	validity := tr.validity(mkline.Basename, false)
+	return tr.defTool(name, varname, false, validity)
+}
 
-	if name != "" {
-		if existing := tr.byName[name]; existing != nil {
-			tool = existing
-		} else {
-			tr.byName[name] = tool
+func (tr *Tools) defTool(name, varname string, mustUseVarForm bool, validity Validity) *Tool {
+	fresh := &Tool{name, varname, mustUseVarForm, validity}
+
+	tool := tr.byName[name]
+	if tool == nil {
+		tool = fresh
+		tr.byName[name] = tool
+	} else {
+		tr.merge(tool, fresh)
+	}
+
+	if tr.fallback != nil {
+		if fallback := tr.fallback.ByName(name); fallback != nil {
+			tr.merge(tool, fallback)
 		}
 	}
 
@@ -140,6 +140,18 @@ func (tr *Tools) def(name, varname string, mkline MkLine) *Tool {
 	}
 
 	return tool
+}
+
+func (tr *Tools) merge(target, source *Tool) {
+	if target.Varname == "" && source.Varname != "" {
+		target.Varname = source.Varname
+	}
+	if !target.MustUseVarForm && source.MustUseVarForm {
+		target.MustUseVarForm = true
+	}
+	if source.Validity > target.Validity {
+		target.Validity = source.Validity
+	}
 }
 
 func (tr *Tools) Trace() {
@@ -158,17 +170,23 @@ func (tr *Tools) Trace() {
 	for _, toolname := range keys {
 		trace.Stepf("tool %+v", tr.byName[toolname])
 	}
+
+	if tr.fallback != nil {
+		tr.fallback.Trace()
+	}
 }
 
 // ParseToolLine updates the tool definitions according to the given
 // line from a Makefile.
-func (tr *Tools) ParseToolLine(mkline MkLine) {
-	tr.ParseToolLineCreate(mkline, false)
-}
-
-// ParseToolLineCreate updates the tool definitions according to the given
-// line from a Makefile, registering the tools if necessary.
-func (tr *Tools) ParseToolLineCreate(mkline MkLine, createIfAbsent bool) {
+//
+// If fromInfrastructure is true, the tool is defined even when it is only
+// added to USE_TOOLS (which normally doesn't define anything). This way,
+// pkglint also finds those tools whose definitions are too difficult to
+// parse from the code.
+//
+// If addToUseTools is true, a USE_TOOLS line makes a tool immediately
+// usable. This should only be done if the current line is unconditional.
+func (tr *Tools) ParseToolLine(mkline MkLine, fromInfrastructure bool, addToUseTools bool) {
 	switch {
 
 	case mkline.IsVarassign():
@@ -194,13 +212,13 @@ func (tr *Tools) ParseToolLineCreate(mkline MkLine, createIfAbsent bool) {
 		case "_TOOLS.*":
 			if !containsVarRef(varparam) {
 				tr.Define(varparam, "", mkline)
-				for _, tool := range splitOnSpace(value) {
+				for _, tool := range fields(value) {
 					tr.Define(tool, "", mkline)
 				}
 			}
 
 		case "USE_TOOLS":
-			tr.parseUseTools(mkline, createIfAbsent)
+			tr.parseUseTools(mkline, fromInfrastructure, addToUseTools)
 		}
 
 	case mkline.IsInclude():
@@ -214,61 +232,68 @@ func (tr *Tools) ParseToolLineCreate(mkline MkLine, createIfAbsent bool) {
 // It determines the validity of the tool, i.e. in which places it may be used.
 //
 // If createIfAbsent is true and the tools is unknown, it is registered.
-func (tr *Tools) parseUseTools(mkline MkLine, createIfAbsent bool) {
+// This can be done only in the pkgsrc infrastructure files, where the
+// actual definition is assumed to be in some other file. In packages
+// though, this assumption cannot be made and pkglint needs to be strict.
+func (tr *Tools) parseUseTools(mkline MkLine, createIfAbsent bool, addToUseTools bool) {
 	value := mkline.Value()
 	if containsVarRef(value) {
 		return
 	}
 
-	deps := splitOnSpace(value)
+	deps := fields(value)
 
 	// See mk/tools/autoconf.mk:/^\.if !defined/
 	if matches(value, `\bautoconf213\b`) {
-		for _, name := range [...]string{"autoconf-2.13", "autoheader-2.13", "autoreconf-2.13", "autoscan-2.13", "autoupdate-2.13", "ifnames-2.13"} {
-			if createIfAbsent {
-				tr.Define(name, "", mkline)
-			}
-			deps = append(deps, name)
-		}
+		deps = append(deps, "autoconf-2.13", "autoheader-2.13", "autoreconf-2.13", "autoscan-2.13", "autoupdate-2.13", "ifnames-2.13")
 	}
 	if matches(value, `\bautoconf\b`) {
-		for _, name := range [...]string{"autoheader", "autom4te", "autoreconf", "autoscan", "autoupdate", "ifnames"} {
-			if createIfAbsent {
-				tr.Define(name, "", mkline)
-			}
-			deps = append(deps, name)
-		}
+		deps = append(deps, "autoheader", "autom4te", "autoreconf", "autoscan", "autoupdate", "ifnames")
 	}
 
+	validity := tr.validity(mkline.Basename, addToUseTools)
 	for _, dep := range deps {
 		name := strings.Split(dep, ":")[0]
-		tool := tr.ByName(name)
-		if tool == nil && createIfAbsent {
-			tr.Define(name, "", mkline)
-		}
-		if tool != nil {
-			validity := tr.validity(mkline.Filename)
-			if validity > tool.Validity {
-				tool.SetValidity(validity, tr.TraceName)
-			}
+		if createIfAbsent || tr.ByName(name) != nil {
+			tr.defTool(name, "", false, validity)
 		}
 	}
 }
 
-func (tr *Tools) validity(fileName string) Validity {
-	basename := path.Base(fileName)
-	if basename == "Makefile" && tr.SeenPrefs {
-		return AtRunTime
-	}
-	if basename == "bsd.prefs.mk" || basename == "Makefile" {
+func (tr *Tools) validity(basename string, useTools bool) Validity {
+	switch {
+	case IsPrefs(basename): // IsPrefs is not 100% accurate here, but good enough
 		return AfterPrefsMk
+	case basename == "Makefile" && !tr.SeenPrefs:
+		return AfterPrefsMk
+	case useTools, basename == "bsd.pkg.mk":
+		return AtRunTime
+	default:
+		return Nowhere
 	}
-	return AtRunTime
 }
 
-func (tr *Tools) ByVarname(varname string) (tool *Tool) { return tr.byVarname[varname] }
+func (tr *Tools) ByVarname(varname string) *Tool {
+	tool := tr.byVarname[varname]
+	if tool == nil && tr.fallback != nil {
+		fallback := tr.fallback.ByVarname(varname)
+		if fallback != nil {
+			return tr.defTool(fallback.Name, fallback.Varname, fallback.MustUseVarForm, fallback.Validity)
+		}
+	}
+	return tool
+}
 
-func (tr *Tools) ByName(name string) (tool *Tool) { return tr.byName[name] }
+func (tr *Tools) ByName(name string) *Tool {
+	tool := tr.byName[name]
+	if tool == nil && tr.fallback != nil {
+		fallback := tr.fallback.ByName(name)
+		if fallback != nil {
+			return tr.defTool(fallback.Name, fallback.Varname, fallback.MustUseVarForm, fallback.Validity)
+		}
+	}
+	return tool
+}
 
 func (tr *Tools) Usable(tool *Tool, time ToolTime) bool {
 	if time == LoadTime {
@@ -278,40 +303,9 @@ func (tr *Tools) Usable(tool *Tool, time ToolTime) bool {
 	}
 }
 
-func (tr *Tools) AddAll(other Tools) {
-	if trace.Tracing && len(other.byName) != 0 {
-		defer trace.Call(other.TraceName+" to "+tr.TraceName, len(other.byName))()
-	}
-
-	// Same as the code below, just a little faster.
-	if !trace.Tracing {
-		for _, otherTool := range other.byName {
-			tool := tr.def(otherTool.Name, otherTool.Varname, nil)
-			tool.MustUseVarForm = tool.MustUseVarForm || otherTool.MustUseVarForm
-			if otherTool.Validity > tool.Validity {
-				tool.SetValidity(otherTool.Validity, tr.TraceName)
-			}
-		}
-		return
-	}
-
-	var names []string
-	for name := range other.byName {
-		names = append(names, name)
-	}
-	sort.Strings(names)
-
-	for _, name := range names {
-		otherTool := other.byName[name]
-		if trace.Tracing {
-			trace.Stepf("Tools.AddAll %+v", *otherTool)
-		}
-		tool := tr.def(otherTool.Name, otherTool.Varname, nil)
-		tool.MustUseVarForm = tool.MustUseVarForm || otherTool.MustUseVarForm
-		if otherTool.Validity > tool.Validity {
-			tool.SetValidity(otherTool.Validity, tr.TraceName)
-		}
-	}
+func (tr *Tools) Fallback(other *Tools) {
+	G.Assertf(tr.fallback == nil, "Tools.Fallback must only be called once.")
+	tr.fallback = other
 }
 
 func (tr *Tools) IsValidToolName(name string) bool {

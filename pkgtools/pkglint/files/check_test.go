@@ -161,17 +161,8 @@ func (t *Tester) SetupOption(name, description string) {
 	G.Pkgsrc.PkgOptions[name] = description
 }
 
-func (t *Tester) SetupTool(name, varname string) *Tool {
-	tools := G.Pkgsrc.Tools
-	return tools.Define(name, varname, dummyMkLine)
-}
-
-// SetupToolUsable registers a tool and immediately makes it usable,
-// as if the tool were predefined globally in pkgsrc.
-func (t *Tester) SetupToolUsable(name, varname string) *Tool {
-	tool := t.SetupTool(name, varname)
-	tool.SetValidity(AtRunTime, G.Pkgsrc.Tools.TraceName)
-	return tool
+func (t *Tester) SetupTool(name, varname string, validity Validity) *Tool {
+	return G.Pkgsrc.Tools.defTool(name, varname, false, validity)
 }
 
 // SetupFileLines creates a temporary file and writes the given lines to it.
@@ -247,8 +238,9 @@ func (t *Tester) SetupCategory(name string) {
 	}
 }
 
-// SetupPackage sets up all files for a package so that it does not produce
-// any warnings.
+// SetupPackage sets up all files for a package (including the pkgsrc
+// infrastructure) so that it does not produce any warnings. After calling
+// this method, individual files can be overwritten as necessary.
 //
 // The given makefileLines start in line 20. Except if they are variable
 // definitions for already existing variables, then they replace that line.

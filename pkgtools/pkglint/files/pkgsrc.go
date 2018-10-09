@@ -4,6 +4,8 @@ import (
 	"io/ioutil"
 	"netbsd.org/pkglint/regex"
 	"netbsd.org/pkglint/trace"
+	"os"
+	"path/filepath"
 	"sort"
 	"strconv"
 	"strings"
@@ -21,7 +23,7 @@ type Pkgsrc struct {
 	// within the bsd.pkg.mk file.
 	buildDefs map[string]bool
 
-	Tools Tools
+	Tools *Tools
 
 	MasterSiteURLToVar map[string]string // "https://github.com/" => "MASTER_SITE_GITHUB"
 	MasterSiteVarToURL map[string]string // "MASTER_SITE_GITHUB" => "https://github.com/"
@@ -62,13 +64,30 @@ func NewPkgsrc(dir string) *Pkgsrc {
 	// Some user-defined variables do not influence the binary
 	// package at all and therefore do not have to be added to
 	// BUILD_DEFS; therefore they are marked as "already added".
-	src.AddBuildDefs("DISTDIR", "FETCH_CMD", "FETCH_OUTPUT_ARGS")
+	src.AddBuildDefs(
+		"DISTDIR",
+		"FETCH_CMD",
+		"FETCH_OUTPUT_ARGS",
+		"FETCH_USING",
+		"PKGSRC_RUN_TEST")
+
+	// The following variables are used so often that not every
+	// package should need to add it to BUILD_DEFS manually.
+	src.AddBuildDefs(
+		"PKGSRC_COMPILER",
+		"PKGSRC_USE_SSP",
+		"UNPRIVILEGED",
+		"USE_CROSS_COMPILE")
+
+	// The following variables are so obscure that they are
+	// probably not used in practice.
+	src.AddBuildDefs(
+		"MANINSTALL")
 
 	// The following variables are added to _BUILD_DEFS by the pkgsrc
 	// infrastructure and thus don't need to be added by the package again.
 	// To regenerate the below list:
 	//  grep -hr '^_BUILD_DEFS+=' mk/ | tr ' \t' '\n\n' | sed -e 's,.*=,,' -e '/^_/d' -e '/^$/d' -e 's,.*,"&"\,,' | sort -u
-	src.AddBuildDefs("PKG_HACKS")
 	src.AddBuildDefs(
 		"ABI",
 		"BUILTIN_PKGS",
@@ -129,6 +148,7 @@ func (src *Pkgsrc) LoadInfrastructure() {
 	src.loadUserDefinedVars()
 	src.loadTools()
 	src.initDeprecatedVars()
+	src.loadUntypedVars()
 }
 
 // Latest returns the latest package matching the given pattern.
@@ -221,45 +241,38 @@ func (src *Pkgsrc) loadTools() {
 		}
 	}
 
-	// TODO: parse bsd.prefs.mk instead of hardcoding this.
-	toolDefs := []struct {
-		Name    string
-		Varname string
+	// TODO: parse bsd.prefs.mk and bsd.pkg.mk instead of hardcoding this.
+	toolDefs := [...]struct {
+		Name     string
+		Varname  string
+		Validity Validity
 	}{
-		{"echo", "ECHO"},
-		{"echo -n", "ECHO_N"},
-		{"false", "FALSE"},
-		{"test", "TEST"},
-		{"true", "TRUE"}}
+		{"echo", "ECHO", AfterPrefsMk},
+		{"echo -n", "ECHO_N", AfterPrefsMk},
+		{"false", "FALSE", AtRunTime}, // from bsd.pkg.mk
+		{"test", "TEST", AfterPrefsMk},
+		{"true", "TRUE", AfterPrefsMk}}
 
 	for _, toolDef := range toolDefs {
-		tool := tools.Define(toolDef.Name, toolDef.Varname, dummyMkLine)
-		tool.MustUseVarForm = true
-		if toolDef.Name != "false" {
-			tool.SetValidity(AfterPrefsMk, tools.TraceName)
-		}
+		tools.defTool(toolDef.Name, toolDef.Varname, true, toolDef.Validity)
 	}
 
 	for _, basename := range toolFiles {
 		mklines := G.Pkgsrc.LoadMk("mk/tools/"+basename, MustSucceed|NotEmpty)
-		for _, mkline := range mklines.mklines {
-			tools.ParseToolLineCreate(mkline, true)
-		}
+		mklines.ForEach(func(mkline MkLine) {
+			tools.ParseToolLine(mkline, true, !mklines.indentation.IsConditional())
+		})
 	}
 
 	for _, relativeName := range [...]string{"mk/bsd.prefs.mk", "mk/bsd.pkg.mk"} {
 
 		mklines := G.Pkgsrc.LoadMk(relativeName, MustSucceed|NotEmpty)
-		for _, mkline := range mklines.mklines {
+		mklines.ForEach(func(mkline MkLine) {
 			if mkline.IsVarassign() {
-				switch mkline.Varname() {
+				varname := mkline.Varname()
+				switch varname {
 				case "USE_TOOLS":
-					// Since this line is in the pkgsrc infrastructure, each tool mentioned
-					// in USE_TOOLS is trusted to be also defined somewhere in the actual
-					// list of available tools.
-					//
-					// This assumption does not work for processing USE_TOOLS in packages, though.
-					tools.ParseToolLineCreate(mkline, true)
+					tools.ParseToolLine(mkline, true, !mklines.indentation.IsConditional())
 
 				case "_BUILD_DEFS":
 					for _, bdvar := range mkline.ValueSplit(mkline.Value(), "") {
@@ -267,12 +280,62 @@ func (src *Pkgsrc) loadTools() {
 					}
 				}
 			}
-		}
+		})
 	}
 
 	if trace.Tracing {
 		tools.Trace()
 	}
+}
+
+// loadUntypedVars scans all pkgsrc infrastructure files in mk/
+// to find variable definitions that are not yet covered in
+// Pkgsrc.InitVartypes.
+//
+// Even if pkglint cannot guess the type of each variable,
+// at least prevent the "used but not defined" warnings.
+func (src *Pkgsrc) loadUntypedVars() {
+
+	// Setting guessed to false prevents the vartype.guessed case in MkLineChecker.CheckVaruse.
+	unknownType := &Vartype{lkNone, BtUnknown, []ACLEntry{{"*", aclpAll}}, false}
+
+	handleLine := func(mkline MkLine) {
+		if mkline.IsVarassign() {
+			varcanon := mkline.Varcanon()
+
+			switch {
+			case
+				src.vartypes[varcanon] != nil,        // Already defined
+				src.Tools.ByVarname(varcanon) != nil, // Already known as a tool
+				hasPrefix(varcanon, "_"),             // Skip internal variables
+				contains(varcanon, "$"),              // Indirect or parameterized
+				hasSuffix(varcanon, "_MK"):           // Multiple-inclusion guard
+
+			default:
+				if trace.Tracing {
+					trace.Stepf("Untyped variable %q in %s", varcanon, mkline)
+				}
+				src.vartypes[varcanon] = unknownType
+			}
+		}
+	}
+
+	handleMkFile := func(path string) {
+		mklines := LoadMk(path, 0)
+		if mklines != nil {
+			mklines.ForEach(handleLine)
+		}
+	}
+
+	handleFile := func(pathName string, info os.FileInfo, err error) error {
+		baseName := info.Name()
+		if hasSuffix(baseName, ".mk") || baseName == "mk.conf" {
+			handleMkFile(filepath.ToSlash(pathName))
+		}
+		return nil
+	}
+
+	_ = filepath.Walk(src.File("mk"), handleFile)
 }
 
 func (src *Pkgsrc) parseSuggestedUpdates(lines []Line) []SuggestedUpdate {
@@ -633,7 +696,7 @@ func (src *Pkgsrc) loadMasterSites() {
 		if mkline.IsVarassign() {
 			varname := mkline.Varname()
 			if hasPrefix(varname, "MASTER_SITE_") && varname != "MASTER_SITE_BACKUP" {
-				for _, url := range splitOnSpace(mkline.Value()) {
+				for _, url := range fields(mkline.Value()) {
 					if matches(url, `^(?:http://|https://|ftp://)`) {
 						if nameToURL[varname] == "" {
 							nameToURL[varname] = url
@@ -641,6 +704,8 @@ func (src *Pkgsrc) loadMasterSites() {
 						urlToName[url] = varname
 					}
 				}
+				// TODO: register variable type, to avoid redundant
+				// definitions in vardefs.go.
 			}
 		}
 	}

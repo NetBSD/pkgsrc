@@ -176,13 +176,19 @@ func (s *Suite) Test_MkLineChecker_CheckVartype__skip(c *check.C) {
 func (s *Suite) Test_MkLineChecker_CheckVartype__append_to_non_list(c *check.C) {
 	t := s.Init(c)
 
+	t.SetupCommandLine("-Wall")
 	t.SetupVartypes()
-	mkline := t.NewMkLine("fname", 1, "DISTNAME+=suffix")
+	mklines := t.NewMkLines("fname.mk",
+		MkRcsID,
+		"DISTNAME+=\tsuffix",
+		"COMMENT=\tComment for",
+		"COMMENT+=\tthe package")
 
-	MkLineChecker{mkline}.Check()
+	mklines.Check()
 
 	t.CheckOutputLines(
-		"WARN: fname:1: The \"+=\" operator should only be used with lists.")
+		"WARN: fname.mk:2: The variable DISTNAME may not be appended to (only set, given a default value) in this file.",
+		"WARN: fname.mk:2: The \"+=\" operator should only be used with lists, not with DISTNAME.")
 }
 
 // Pkglint once interpreted all lists as consisting of shell tokens,
@@ -347,11 +353,17 @@ func (s *Suite) Test_MkLineChecker_checkVarusePermissions__load_time(c *check.C)
 	t.SetupVartypes()
 	mklines := t.NewMkLines("options.mk",
 		MkRcsID,
-		"WRKSRC:=${.CURDIR}")
+		"WRKSRC:=${.CURDIR}",
+		".if ${PKG_SYSCONFDIR.gdm} != \"etc\"",
+		".endif")
 
 	mklines.Check()
 
-	// Don't warn that ".CURDIR should not be evaluated at load time."
+	// Evaluating PKG_SYSCONFDIR.* at load time is probably ok, though
+	// pkglint cannot prove anything here.
+	//
+	// Evaluating .CURDIR at load time is ok since it is defined from
+	// the beginning.
 	t.CheckOutputLines(
 		"NOTE: options.mk:2: This variable value should be aligned to column 17.")
 }
@@ -555,8 +567,10 @@ func (s *Suite) Test_MkLineChecker_CheckVaruseShellword__mstar(c *check.C) {
 
 	mklines.Check()
 
-	// FIXME: There should be some notes and warnings; prevented by the PERL5 case in VariableNeedsQuoting.
-	t.CheckOutputEmpty()
+	// FIXME: There should be some notes and warnings about missing :M*;
+	// these are currently prevented by the PERL5 case in VariableNeedsQuoting.
+	t.CheckOutputLines(
+		"WARN: ~/options.mk:4: ADA_FLAGS is used but not defined.")
 }
 
 func (s *Suite) Test_MkLineChecker_CheckVaruseShellword__mstar_not_needed(c *check.C) {
@@ -611,7 +625,7 @@ func (s *Suite) Test_MkLineChecker_CheckVaruse__eq_nonlist(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"WARN: ~/options.mk:2: The :from=to modifier should only be used with lists.")
+		"WARN: ~/options.mk:2: The :from=to modifier should only be used with lists, not with WRKDIR.")
 }
 
 func (s *Suite) Test_MkLineChecker_CheckVaruse__for(c *check.C) {
@@ -629,6 +643,27 @@ func (s *Suite) Test_MkLineChecker_CheckVaruse__for(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_MkLineChecker_CheckVaruse__defined_in_infrastructure(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall")
+	t.SetupPkgsrc()
+	t.SetupVartypes()
+	t.CreateFileLines("mk/deeply/nested/infra.mk",
+		MkRcsID,
+		"INFRA_VAR?=\tvalue")
+	G.Pkgsrc.LoadInfrastructure()
+	mklines := t.SetupFileMkLines("category/package/module.mk",
+		MkRcsID,
+		"do-fetch:",
+		"\t: ${INFRA_VAR} ${UNDEFINED}")
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/module.mk:3: UNDEFINED is used but not defined.")
 }
 
 func (s *Suite) Test_MkLineChecker_CheckVaruse__build_defs(c *check.C) {
@@ -668,8 +703,9 @@ func (s *Suite) Test_MkLineChecker_checkVarassignSpecific(c *check.C) {
 		"_TOOLS_VARNAME.sed=     SED",
 		"DIST_SUBDIR=            ${PKGNAME}",
 		"WRKSRC=                 ${PKGNAME}",
-		"SITES_distfile.tar.gz=  ${MASTER_SITES_GITHUB:=user/}",
-		// TODO: The first of the below assignments should be flagged as redundant by RedundantScope.
+		"SITES_distfile.tar.gz=  ${MASTER_SITE_GITHUB:=user/}",
+		// TODO: The first of the below assignments should be flagged as redundant by RedundantScope;
+		// that check is currently only implemented for package Makefiles, not for other files.
 		"PYTHON_VERSIONS_ACCEPTED= -13",
 		"PYTHON_VERSIONS_ACCEPTED= 27 36")
 

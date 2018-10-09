@@ -169,12 +169,14 @@ func (pkglint *Pkglint) checkdirPackage(dir string) {
 	if pkg.DistinfoFile != pkg.vars.fallback["DISTINFO_FILE"] {
 		files = append(files, pkg.File(pkg.DistinfoFile))
 	}
+
 	haveDistinfo := false
 	havePatches := false
 
 	// Determine the used variables and PLIST directories before checking any of the Makefile fragments.
 	for _, fname := range files {
-		if (hasPrefix(path.Base(fname), "Makefile.") || hasSuffix(fname, ".mk")) &&
+		basename := path.Base(fname)
+		if (hasPrefix(basename, "Makefile.") || hasSuffix(fname, ".mk")) &&
 			!matches(fname, `patch-`) &&
 			!contains(fname, pkg.Pkgdir+"/") &&
 			!contains(fname, pkg.Filesdir+"/") {
@@ -182,7 +184,7 @@ func (pkglint *Pkglint) checkdirPackage(dir string) {
 				mklines.DetermineUsedVariables()
 			}
 		}
-		if hasPrefix(path.Base(fname), "PLIST") {
+		if hasPrefix(basename, "PLIST") {
 			pkg.loadPlistDirs(fname)
 		}
 	}
@@ -194,9 +196,10 @@ func (pkglint *Pkglint) checkdirPackage(dir string) {
 			}
 			continue
 		}
-		if fname == pkg.File("Makefile") {
+
+		if path.Base(fname) == "Makefile" {
 			if st, err := os.Lstat(fname); err == nil {
-				pkglint.checkExecutable(st)
+				pkglint.checkExecutable(fname, st)
 			}
 			if G.opts.CheckMakefile {
 				pkg.checkfilePackageMakefile(fname, lines)
@@ -215,14 +218,6 @@ func (pkglint *Pkglint) checkdirPackage(dir string) {
 	if pkg.Pkgdir == "." && G.opts.CheckDistinfo && G.opts.CheckPatches {
 		if havePatches && !haveDistinfo {
 			NewLineWhole(pkg.File(pkg.DistinfoFile)).Warnf("File not found. Please run \"%s makepatchsum\".", confMake)
-		}
-	}
-
-	if G.opts.CheckAlternatives {
-		for _, fname := range files {
-			if path.Base(fname) == "ALTERNATIVES" {
-				CheckfileAlternatives(fname, pkg.PlistFiles)
-			}
 		}
 	}
 }
@@ -246,6 +241,11 @@ func (pkg *Package) loadPackageMakefile() *MkLines {
 		}
 	}
 
+	if pkg.vars.Defined("USE_CMAKE") {
+		mainLines.Tools.defTool("cmake", "", false, AtRunTime)
+		mainLines.Tools.defTool("cpack", "", false, AtRunTime)
+	}
+
 	allLines.DetermineUsedVariables()
 	allLines.CheckRedundantVariables()
 
@@ -255,11 +255,11 @@ func (pkg *Package) loadPackageMakefile() *MkLines {
 	pkg.Patchdir, _ = pkg.vars.Value("PATCHDIR")
 
 	// See lang/php/ext.mk
-	if varIsDefined("PHPEXT_MK") {
-		if !varIsDefined("USE_PHP_EXT_PATCHES") {
+	if varIsDefinedSimilar("PHPEXT_MK") {
+		if !varIsDefinedSimilar("USE_PHP_EXT_PATCHES") {
 			pkg.Patchdir = "patches"
 		}
-		if varIsDefined("PECL_VERSION") {
+		if varIsDefinedSimilar("PECL_VERSION") {
 			pkg.DistinfoFile = "distinfo"
 		} else {
 			pkg.IgnoreMissingPatches = true
@@ -315,7 +315,7 @@ func (pkg *Package) readMakefile(fname string, mainLines *MkLines, allLines *MkL
 		}
 
 		if includeFile != "" {
-			if path.Base(fname) != "buildlink3.mk" {
+			if mkline.Basename != "buildlink3.mk" {
 				if m, bl3File := match1(includeFile, `^\.\./\.\./(.*)/buildlink3\.mk$`); m {
 					pkg.bl3[bl3File] = mkline.Line
 					if trace.Tracing {
@@ -333,7 +333,7 @@ func (pkg *Package) readMakefile(fname string, mainLines *MkLines, allLines *MkL
 				mkline.ExplainRelativeDirs()
 			}
 
-			if path.Base(fname) == "Makefile" && !hasPrefix(incDir, "../../mk/") && incBase != "buildlink3.mk" && incBase != "builtin.mk" && incBase != "options.mk" {
+			if mkline.Basename == "Makefile" && !hasPrefix(incDir, "../../mk/") && incBase != "buildlink3.mk" && incBase != "builtin.mk" && incBase != "options.mk" {
 				if trace.Tracing {
 					trace.Step1("Including %q sets seenMakefileCommon.", includeFile)
 				}

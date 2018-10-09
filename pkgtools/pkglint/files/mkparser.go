@@ -217,7 +217,8 @@ func (p *MkParser) MkCond() MkCond {
 	ands := []MkCond{and}
 	for {
 		mark := p.repl.Mark()
-		if !p.repl.AdvanceRegexp(`^\s*\|\|\s*`) {
+		p.repl.SkipHspace()
+		if !p.repl.AdvanceStr("||") {
 			break
 		}
 		next := p.mkCondAnd()
@@ -265,7 +266,7 @@ func (p *MkParser) mkCondAtom() MkCond {
 
 	repl := p.repl
 	mark := repl.Mark()
-	repl.SkipSpace()
+	repl.SkipHspace()
 	switch {
 	case repl.AdvanceStr("!"):
 		cond := p.mkCondAtom()
@@ -275,25 +276,25 @@ func (p *MkParser) mkCondAtom() MkCond {
 	case repl.AdvanceStr("("):
 		cond := p.MkCond()
 		if cond != nil {
-			repl.SkipSpace()
+			repl.SkipHspace()
 			if repl.AdvanceStr(")") {
 				return cond
 			}
 		}
-	case repl.AdvanceRegexp(`^defined\s*\(`):
+	case repl.HasPrefix("defined") && repl.AdvanceRegexp(`^defined\s*\(`):
 		if varname := p.Varname(); varname != "" {
 			if repl.AdvanceStr(")") {
 				return &mkCond{Defined: varname}
 			}
 		}
-	case repl.AdvanceRegexp(`^empty\s*\(`):
+	case repl.HasPrefix("empty") && repl.AdvanceRegexp(`^empty\s*\(`):
 		if varname := p.Varname(); varname != "" {
 			modifiers := p.VarUseModifiers(varname, ")")
 			if repl.AdvanceStr(")") {
 				return &mkCond{Empty: &MkVarUse{varname, modifiers}}
 			}
 		}
-	case repl.AdvanceRegexp(`^(commands|exists|make|target)\s*\(`):
+	case uint(repl.PeekByte()-'a') <= 'z'-'a' && repl.AdvanceRegexp(`^(commands|exists|make|target)\s*\(`):
 		funcname := repl.Group(1)
 		argMark := repl.Mark()
 		for p.VarUse() != nil || repl.AdvanceRegexp(`^[^$)]+`) {
@@ -402,6 +403,7 @@ type MkCondCallback struct {
 	CompareVarStr func(varuse *MkVarUse, op string, str string)
 	CompareVarVar func(left *MkVarUse, op string, right *MkVarUse)
 	Call          func(name string, arg string)
+	VarUse        func(varuse *MkVarUse)
 }
 
 type MkCondWalker struct{}
@@ -425,24 +427,41 @@ func (w *MkCondWalker) Walk(cond MkCond, callback *MkCondCallback) {
 		if callback.Defined != nil {
 			callback.Defined(cond.Defined)
 		}
+		if callback.VarUse != nil {
+			callback.VarUse(&MkVarUse{cond.Defined, nil})
+		}
 	case cond.Empty != nil:
 		if callback.Empty != nil {
 			callback.Empty(cond.Empty)
+		}
+		if callback.VarUse != nil {
+			callback.VarUse(cond.Empty)
 		}
 	case cond.CompareVarVar != nil:
 		if callback.CompareVarVar != nil {
 			cvv := cond.CompareVarVar
 			callback.CompareVarVar(cvv.Left, cvv.Op, cvv.Right)
 		}
+		if callback.VarUse != nil {
+			cvv := cond.CompareVarVar
+			callback.VarUse(cvv.Left)
+			callback.VarUse(cvv.Right)
+		}
 	case cond.CompareVarStr != nil:
 		if callback.CompareVarStr != nil {
 			cvs := cond.CompareVarStr
 			callback.CompareVarStr(cvs.Var, cvs.Op, cvs.Str)
 		}
+		if callback.VarUse != nil {
+			callback.VarUse(cond.CompareVarStr.Var)
+		}
 	case cond.CompareVarNum != nil:
 		if callback.CompareVarNum != nil {
 			cvn := cond.CompareVarNum
 			callback.CompareVarNum(cvn.Var, cvn.Op, cvn.Num)
+		}
+		if callback.VarUse != nil {
+			callback.VarUse(cond.CompareVarNum.Var)
 		}
 	case cond.Call != nil:
 		if callback.Call != nil {
