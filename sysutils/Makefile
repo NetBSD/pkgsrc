@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.778 2018/10/03 20:11:19 tnn Exp $
+# $NetBSD: Makefile,v 1.779 2018/10/09 15:20:34 abs Exp $
 #
 
 COMMENT=	System utilities
@@ -649,7 +649,6 @@ SUBDIR+=	user_interix
 SUBDIR+=	user_irix
 SUBDIR+=	vbetool
 SUBDIR+=	vcdimager
-SUBDIR+=	vcdimager-devel
 SUBDIR+=	vidc-tools
 SUBDIR+=	vifm
 SUBDIR+=	vip
