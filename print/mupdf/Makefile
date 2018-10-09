@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2018/10/09 12:34:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.64 2018/10/09 13:06:48 leot Exp $
 
 DISTNAME=	mupdf-1.14.0-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -10,6 +10,12 @@ HOMEPAGE=	https://mupdf.com/
 COMMENT=	Lightweight PDF, XPS and E-book viewer and toolkit
 LICENSE=	gnu-agpl-v3
 
+# XXX: The tarball originally packaged for mupdf-1.14.0 did not contain commit
+# XXX: id 7f77313e6d60fc917146b80cce2f9c1ab0152349 changes related to mupdf-gl
+# XXX: that defines realpath(3) for Windows and fix an inverted logic
+# XXX: condition regarding FREEGLUT macro check.
+# XXX: The DIST_SUBDIR definition can be removed in the next (post-1.14.0)
+# XXX: stable release of mupdf.
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
 USE_LANGUAGES=	c99
