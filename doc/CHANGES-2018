@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4334 2018/10/10 09:59:57 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4335 2018/10/10 15:17:21 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6046,3 +6046,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-subprocess32 to 3.5.3 [adam 2018-10-10]
 	Added devel/py-filelock version 3.0.9 [adam 2018-10-10]
 	Updated devel/py-tox to 3.5.2 [adam 2018-10-10]
+	Updated multimedia/adobe-flash-player to 31.0.0.122 [tsutsui 2018-10-10]
