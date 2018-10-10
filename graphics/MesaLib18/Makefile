@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/10/07 23:49:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2018/10/10 10:56:11 maya Exp $
 
 DISTNAME=	mesa-18.2.0
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -68,14 +68,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # as of 11.2.2
 BUILD_DEPENDS+=		${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
 CONFIGURE_ENV+=		ac_cv_prog_PYTHON2=${PYTHONBIN}
 .include "../../lang/python/tool.mk"
-
-# On NetBSD < 6 we need to compile with GCC from pkgsrc.
-# But GCC from pkgsrc does not add implicit -lc like base GCC does,
-# which breaks the build with -Wl,--no-undefined.
-# So we piggy back on -lpthread and inject -lc after it.
-.if !empty(MACHINE_PLATFORM:MNetBSD-[1-5].*-*)
-BUILDLINK_TRANSFORM+=   l:pthread:pthread:c l:m:m:c
-.endif
 
 # Handle platforms without exp2
 .if !empty(MACHINE_PLATFORM:MNetBSD-[1-5].*-*)
