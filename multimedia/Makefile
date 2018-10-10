@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.265 2018/09/30 19:05:43 maya Exp $
+# $NetBSD: Makefile,v 1.266 2018/10/10 20:09:07 maya Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -139,7 +139,6 @@ SUBDIR+=	libva
 SUBDIR+=	libva-driver-vdpau
 SUBDIR+=	libvdpau
 SUBDIR+=	libvpx
-SUBDIR+=	livestreamer
 SUBDIR+=	lsdvd
 SUBDIR+=	mate-media
 SUBDIR+=	mediainfo
