@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2018/10/07 23:49:31 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2018/10/10 11:03:02 maya Exp $
 
 BUILDLINK_TREE+=	MesaLib
 
@@ -42,9 +42,7 @@ MESALIB_SUPPORTS_EGL=	yes
 MESALIB_SUPPORTS_EGL=	no
 .endif
 
-.if ${X11_TYPE} == "modular"
-.include "../../devel/libpthread-stubs/buildlink3.mk"
-.endif
+.include "../../mk/pthread.buildlink3.mk"
 
 .include "../../x11/libXext/buildlink3.mk"
 .endif # MESALIB_BUILDLINK3_MK

@@ -1,6 +1,6 @@
-$NetBSD: patch-configure.ac,v 1.1 2018/10/07 23:49:31 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.2 2018/10/10 11:03:02 maya Exp $
 
-Don't check for pthread stubs on netbsd.
+Don't check for pthread stubs anywhere, as we don't provide it.
 
 From FreeBSD ports graphics/mesa-dri 18.0.0,
 DragonFly dports graphics/mesa-dri 17.3.1,
@@ -46,7 +46,7 @@ without DRI3 support.
  dnl project. Even then there's a notable issue as described in the project README
  case "$host_os" in
 -linux* | cygwin* | darwin* | solaris* | *-gnu* | gnu* | openbsd*)
-+linux* | cygwin* | darwin* | solaris* | *-gnu* | gnu* | openbsd* | netbsd*)
++*)
      pthread_stubs_possible="no"
      ;;
  * )
