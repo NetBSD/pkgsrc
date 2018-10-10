@@ -1,0 +1,31 @@
+$NetBSD: patch-build.xml,v 1.3 2018/10/10 21:55:20 rjs Exp $
+
+--- build.xml.orig	2017-06-11 10:37:36.000000000 +0000
++++ build.xml
+@@ -1,5 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project xmlns="antlib:org.apache.tools.ant"
++	 xmlns:if="ant:if"
+          name="abcl-master" default="abcl.wrapper" basedir=".">
+     <description>Compiling, testing, and packaging Armed Bear Common Lisp</description>
+ 
+@@ -280,6 +281,11 @@ For help on the automatic tests availabl
+       <abcl.compile.lisp/>
+     </target>
+ 
++    <condition property="compressedclassspace">
++      <matches string="${java.version}" 
++               pattern="1\.8\.0"/>
++    </condition>
++
+     <macrodef name="abcl.compile.lisp">
+       <element name="additional.jvmarg" optional="true"/>
+       <sequential>
+@@ -299,6 +305,7 @@ from ${abcl.home.dir}
+             classname="org.armedbear.lisp.Main">
+         <jvmarg value="-Dabcl.home=${abcl.home.dir}${file.separator}"/>
+         <jvmarg value="-Dabcl.autoload.verbose=Y"/>
++	<jvmarg if:set="compressedclassspace" value="-XX:CompressedClassSpaceSize=128m"/>
+         <additional.jvmarg/>
+         <arg value="--noinit"/>
+         <arg value="--nosystem"/>
