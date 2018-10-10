@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2018/06/12 17:50:23 bsiegert Exp $
+# $NetBSD: Makefile,v 1.21 2018/10/10 18:58:33 bsiegert Exp $
 
 DISTNAME=		tools
-PKGNAME=		go-tools-1.8
-PKGREVISION=		6
+PKGNAME=		go-tools-1.11.20181009
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=golang/}
 GITHUB_PROJECT=		${DISTNAME}
-GITHUB_TAG=		2946dd1
+GITHUB_TAG=		34804b1
 
 MAINTAINER=		bsiegert@NetBSD.org
 HOMEPAGE=		http://golang.org/
@@ -17,7 +16,8 @@ GO_SRCPATH=		golang.org/x/tools
 GO_DIST_BASE=		${DISTNAME}-${GITHUB_TAG}*
 
 USE_TOOLS+=		bash
-REPLACE_BASH+=		cmd/godoc/setup-godoc-app.bash
+REPLACE_BASH+=		cmd/getgo/*.bash
+REPLACE_BASH+=		cmd/godoc/*.bash
 REPLACE_BASH+=		cmd/toolstash/buildall
 
 CHECK_RELRO_SKIP+=	bin/benchcmp
