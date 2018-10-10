@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2018/09/15 13:40:34 wen Exp $
+# $NetBSD: Makefile,v 1.88 2018/10/10 17:21:55 minskim Exp $
 
 DISTNAME=	zsh-5.6.2
 CATEGORIES=	shells
@@ -44,7 +44,8 @@ INSTALLATION_DIRS+=	share/doc/zsh
 
 PLIST_VARS+=	xattr
 .if exists(/usr/include/sys/xattr.h) || \
-    exists(/usr/include/${NATIVE_MACHINE_GNU_ARCH}-${LOWER_OPSYS}-gnu/sys/xattr.h)
+    exists(/usr/include/${NATIVE_MACHINE_GNU_ARCH}-${LOWER_OPSYS}-gnu/sys/xattr.h) || \
+    defined(OSX_SDK_PATH) && exists(${OSX_SDK_PATH}/usr/include/sys/xattr.h)
 PLIST.xattr=	yes
 .endif
 PRINT_PLIST_AWK+=	{if ($$0 ~ /attr.so/) {$$0 = "$${PLIST.xattr}" $$0;}}
