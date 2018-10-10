@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.1 2018/10/07 23:49:31 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2018/10/10 11:03:02 maya Exp $
 
 SHA1 (mesa-18.2.0.tar.xz) = 73723d9f3815487f474d84eb91a5cd17edfb63d4
 RMD160 (mesa-18.2.0.tar.xz) = 51aae6c7a566d7d7da5e545ef3b4f04295897b21
 SHA512 (mesa-18.2.0.tar.xz) = e6e997e166845009f6b97da204384758c797c870b56332652c0a2636734638f9180b7e4dbad144495645308ae4d77981a2493a22d57973723338b658e0655557
 Size (mesa-18.2.0.tar.xz) = 11331164 bytes
 SHA1 (patch-configure) = c938bc7807a92fb4484d459b401133fb9fd7dbce
-SHA1 (patch-configure.ac) = 91dbbca01f324e987560a36986fc3d6c07be82c8
+SHA1 (patch-configure.ac) = 8347a3116906b8648a7841a6b109832397bd896e
 SHA1 (patch-include_GL_internal_dri__interface.h) = 146d2f3f3e50fc1947e8941301d9cf9d90a035e2
 SHA1 (patch-src_amd_vulkan_winsys_amdgpu_radv__amdgpu__cs.c) = 1fe81a7b16e36dc9125400c20543271216a33a45
 SHA1 (patch-src_compiler_builtin__type__macros.h) = 857bca0c0f55ec8d7a20b3807c7a5d7bd06bdfbf
