@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2018/10/10 09:55:32 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/filelock.py
+${PYSITELIB}/filelock.pyc
+${PYSITELIB}/filelock.pyo
