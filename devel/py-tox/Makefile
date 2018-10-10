@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2018/10/07 08:32:22 adam Exp $
+# $NetBSD: Makefile,v 1.11 2018/10/10 09:59:34 adam Exp $
 
-DISTNAME=	tox-3.4.0
+DISTNAME=	tox-3.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tox/}
@@ -10,8 +10,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Virtualenv-based automation of test activities
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-py>=1.4.17:../../devel/py-py
+DEPENDS+=	${PYPKGPREFIX}-filelock>=3.0.0:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-pluggy>=0.3.0<1.0:../../devel/py-pluggy
+DEPENDS+=	${PYPKGPREFIX}-py>=1.4.17:../../devel/py-py
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=30.0.0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-six>=1.0.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-toml>=0.9.4:../../textproc/py-toml

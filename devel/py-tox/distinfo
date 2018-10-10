@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2018/10/07 08:32:22 adam Exp $
+$NetBSD: distinfo,v 1.9 2018/10/10 09:59:34 adam Exp $
 
-SHA1 (tox-3.4.0.tar.gz) = fcf479bb13bd7ccea86d20a74769fe3b9cbc78f6
-RMD160 (tox-3.4.0.tar.gz) = 73a4ce53b68774a5d484f815a3085ceae3048643
-SHA512 (tox-3.4.0.tar.gz) = c14364dffac50bece66f15545325d7912459e49979b37b48ff399610517a43a10a4c005f4ca5ec9481fb4140803a18be64f94838610e07d1e7a4b3e5df2a7d87
-Size (tox-3.4.0.tar.gz) = 287178 bytes
+SHA1 (tox-3.5.2.tar.gz) = 828026408445bf0a5035f6fe22eba972d7ba57f6
+RMD160 (tox-3.5.2.tar.gz) = 7a75ce4c5819ffaf50bc2488933c45b21ed5dab8
+SHA512 (tox-3.5.2.tar.gz) = ea5a1c79083deab4bd6f1fe81a999f072be8d0e63d64c3e8361783931582b7451a561fca00d87e874ce471eae3aabd9d289eb6d8560e28e54d8632075aa1606c
+Size (tox-3.5.2.tar.gz) = 254193 bytes
