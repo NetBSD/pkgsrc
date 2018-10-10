@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4333 2018/10/10 08:21:17 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4334 2018/10/10 09:59:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6044,3 +6044,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated pkgtools/pkglint to 5.6.5 [rillig 2018-10-09]
 	Updated devel/py-async-timeout to 3.0.1 [adam 2018-10-10]
 	Updated devel/py-subprocess32 to 3.5.3 [adam 2018-10-10]
+	Added devel/py-filelock version 3.0.9 [adam 2018-10-10]
+	Updated devel/py-tox to 3.5.2 [adam 2018-10-10]
