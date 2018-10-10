@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4337 2018/10/10 19:16:54 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.4338 2018/10/10 19:55:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6050,3 +6050,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-hyperscan to 0.0.2 [minskim 2018-10-10]
 	Updated devel/go-tools to 1.11.20181009 [bsiegert 2018-10-10]
 	Updated devel/golint to 20180702 [bsiegert 2018-10-10]
+	Updated x11/libSM to 1.2.3 [wiz 2018-10-10]
