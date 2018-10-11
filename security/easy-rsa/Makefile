@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2018/07/04 13:40:34 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2018/10/11 09:13:30 adam Exp $
 
-DISTNAME=	EasyRSA-3.0.4
-PKGNAME=	${DISTNAME:S/EasyRSA/easy-rsa/}
+DISTNAME=	EasyRSA-nix-3.0.5
+PKGNAME=	${DISTNAME:S/EasyRSA-nix/easy-rsa/}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenVPN/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/OpenVPN/easy-rsa
 COMMENT=	CLI utility to build and manage a PKI CA
 LICENSE=	gnu-gpl-v2
+
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-nix//}
 
 USE_LANGUAGES=	# none
 NO_CONFIGURE=	yes
@@ -29,7 +31,7 @@ REQD_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
 SUBST_CLASSES+=		sysconf
-SUBST_STAGE.sysconf=	pre-configure
+SUBST_STAGE.sysconf=	pre-install
 SUBST_FILES.sysconf=	easyrsa vars.example
 SUBST_SED.sysconf=	-e "s|@SYSCONFDIR@|${PKG_SYSCONFDIR}|"
 
