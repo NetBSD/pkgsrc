@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/09/29 14:45:20 joerg Exp $
+$NetBSD: distinfo,v 1.2 2018/10/11 10:55:56 adam Exp $
 
-SHA1 (whitenoise-4.0b3.tar.gz) = e2e11b03211cef859ecf71524eb3311b3a85eda5
-RMD160 (whitenoise-4.0b3.tar.gz) = 6b93d167164d05cb04ef1e37baab377966890a87
-SHA512 (whitenoise-4.0b3.tar.gz) = f7707203391ee31ea41a2658bdcba1a377d15229539dc4b7d9f13ce5ea94839cb25bccd28a88f053cd664019c1d9c5bc2046a53d8bb40c02025a30b685ee9370
-Size (whitenoise-4.0b3.tar.gz) = 40696 bytes
+SHA1 (whitenoise-4.1.tar.gz) = 1dacb802c3d832261274dff0597c4ef7d1bded45
+RMD160 (whitenoise-4.1.tar.gz) = 32c6860c174b05f6e19a3662c80f704ef0e9be7d
+SHA512 (whitenoise-4.1.tar.gz) = 5e02f5a60e256023f81d83aa654f19b1612e1060bc807fdf3833a28c60c23544c526db75150a996cb2cb5075f1e03bcfe78a29a617219d3930b323401ba6b3f0
+Size (whitenoise-4.1.tar.gz) = 42659 bytes
