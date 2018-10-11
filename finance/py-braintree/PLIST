@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/08/02 15:26:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/10/11 10:44:19 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -224,6 +224,9 @@ ${PYSITELIB}/braintree/ideal_payment_gateway.pyo
 ${PYSITELIB}/braintree/ids_search.py
 ${PYSITELIB}/braintree/ids_search.pyc
 ${PYSITELIB}/braintree/ids_search.pyo
+${PYSITELIB}/braintree/local_payment_completed.py
+${PYSITELIB}/braintree/local_payment_completed.pyc
+${PYSITELIB}/braintree/local_payment_completed.pyo
 ${PYSITELIB}/braintree/masterpass_card.py
 ${PYSITELIB}/braintree/masterpass_card.pyc
 ${PYSITELIB}/braintree/masterpass_card.pyo
@@ -432,6 +435,9 @@ ${PYSITELIB}/braintree/util/datetime_parser.pyo
 ${PYSITELIB}/braintree/util/generator.py
 ${PYSITELIB}/braintree/util/generator.pyc
 ${PYSITELIB}/braintree/util/generator.pyo
+${PYSITELIB}/braintree/util/graphql_client.py
+${PYSITELIB}/braintree/util/graphql_client.pyc
+${PYSITELIB}/braintree/util/graphql_client.pyo
 ${PYSITELIB}/braintree/util/http.py
 ${PYSITELIB}/braintree/util/http.pyc
 ${PYSITELIB}/braintree/util/http.pyo
