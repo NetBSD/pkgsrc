@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4340 2018/10/10 20:09:43 maya Exp $
+$NetBSD: CHANGES-2018,v 1.4341 2018/10/11 08:21:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6053,3 +6053,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/libSM to 1.2.3 [wiz 2018-10-10]
 	Updated x11/libX11 to 1.6.7 [wiz 2018-10-10]
 	Removed multimedia/livestreamer [maya 2018-10-10]
+	Updated emulators/mame to 0.202 [adam 2018-10-11]
