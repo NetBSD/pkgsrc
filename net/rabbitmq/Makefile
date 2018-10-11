@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2018/10/11 12:14:22 jperkin Exp $
+# $NetBSD: Makefile,v 1.41 2018/10/11 15:24:58 jperkin Exp $
 
 DISTNAME=		rabbitmq-server-3.7.7
 PKGNAME=		${DISTNAME:S/-server//}
@@ -92,6 +92,7 @@ MAKE_ENV+=		RSYNC="${PREFIX}/bin/rsync"
 MAKE_ENV+=		VERSION="${PKGVERSION_NOREV}"
 
 INSTALL_TARGET=		install-erlapp install-scripts install-bin install-man
+TEST_TARGET=		check
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/deps/rabbit/docs/rabbitmq.config.example		\
