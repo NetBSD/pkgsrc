@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/02/10 13:07:03 kleink Exp $
+$NetBSD: distinfo,v 1.5 2018/10/11 10:52:51 adam Exp $
 
-SHA1 (Pyphen-0.9.4.tar.gz) = 0d313122b9a6d9333d3a30876d57d48f8c5fe185
-RMD160 (Pyphen-0.9.4.tar.gz) = cb626e9e4d68ff060eb2f2173a381bc43bcb4e4b
-SHA512 (Pyphen-0.9.4.tar.gz) = b48dcf02c5cdf5d7ee6d6968644958af9f31fba046612016d9ae1b8cfe44d438fe769592961f93f3342cc3f3af2dfc6cd40bbfe1be67e59de9a352c33f102917
-Size (Pyphen-0.9.4.tar.gz) = 1092404 bytes
+SHA1 (Pyphen-0.9.5.tar.gz) = 98a1c44377fe0b8c44437ac359cb27f589282ad6
+RMD160 (Pyphen-0.9.5.tar.gz) = 9df507b33f25538733d8cb189be83c56b11218b4
+SHA512 (Pyphen-0.9.5.tar.gz) = 15b9a29517df2b873b5b8d4739d8fa48a09ab199ab9246c7a4fd25c46253a74a18a88fd9484978476b3b1c8d88fed7729382b9dbe4f425724fe54bcd6227de96
+Size (Pyphen-0.9.5.tar.gz) = 2971389 bytes
