@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2018/08/22 09:46:47 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2018/10/11 12:19:04 leot Exp $
 
 DISTNAME=	mandoc-1.14.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc devel
 MASTER_SITES=	http://mdocml.bsd.lv/snapshots/
 
@@ -17,6 +17,8 @@ SUBST_STAGE.roff=	pre-build
 SUBST_FILES.roff=	mandoc.1 mandoc.3
 SUBST_FILES.roff+=	eqn.7 man.7 mdoc.7 tbl.7
 SUBST_SED.roff=		-e 's,Xr roff,Xr mandoc-roff,g'
+
+CFLAGS.NetBSD+=	-D_OPENBSD_SOURCE
 
 # test needs perl
 USE_TOOLS+=	perl:build
