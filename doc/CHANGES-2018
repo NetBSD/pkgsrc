@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4344 2018/10/11 10:17:03 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4345 2018/10/11 10:26:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6060,3 +6060,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/py-pygraphviz to 1.5 [adam 2018-10-11]
 	Updated graphics/py-graphviz to 0.9 [adam 2018-10-11]
 	Updated time/py-icalendar to 4.0.3 [adam 2018-10-11]
+	Updated www/py-drf-nested-routers to 0.91 [adam 2018-10-11]
+	Updated www/py-websocket-client to 0.53.0 [adam 2018-10-11]
