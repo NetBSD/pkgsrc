@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4341 2018/10/11 08:21:29 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4342 2018/10/11 09:46:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6054,3 +6054,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/libX11 to 1.6.7 [wiz 2018-10-10]
 	Removed multimedia/livestreamer [maya 2018-10-10]
 	Updated emulators/mame to 0.202 [adam 2018-10-11]
+	Updated security/easy-rsa to 3.0.5 [adam 2018-10-11]
+	Updated devel/libuv to 1.23.2 [adam 2018-10-11]
