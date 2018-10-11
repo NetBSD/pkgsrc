@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2018/07/04 13:40:34 jperkin Exp $
+# $NetBSD: Makefile,v 1.90 2018/10/11 17:49:26 spz Exp $
 
 DISTNAME=	gpgme-1.11.1
 CATEGORIES=	security
@@ -33,6 +33,6 @@ TEST_TARGET=		check
 .include "../../mk/pthread.buildlink3.mk"
 BUILDLINK_API_DEPENDS.libassuan+=	libassuan>=2.0.2
 .include "../../security/libassuan2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.17
+BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.28
 .include "../../security/libgpg-error/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
