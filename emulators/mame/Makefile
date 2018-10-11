@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.90 2018/08/30 22:56:46 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2018/10/11 08:20:54 adam Exp $
 
-DISTNAME=	mame-0.201
+DISTNAME=	mame-0.202
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mamedev/}
 GITHUB_TAG=	${DISTNAME:S/-//S/.//}
@@ -19,13 +19,11 @@ INSTALLATION_DIRS+=	${SHAREDIR}/artwork/bgfx/chains/crt-geom ${SHAREDIR}/hash
 DEPENDS+=		liberation-ttf-[0-9]*:../../fonts/liberation-ttf
 
 USE_LANGUAGES=		c99 c++
-GCC_REQD+=		5.3
+GCC_REQD+=		5
 USE_TOOLS+=		bsdtar gmake pkg-config
 UNLIMIT_RESOURCES+=	datasize
 MAKE_FILE=		makefile
 EXTRACT_USING=		bsdtar
-# 0.141 has too many conversion warnings
-MAKE_ENV=		NOWERROR=1
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -36,6 +34,10 @@ MAKE_ENV+=	LDOPTS="-Wl,-R${BUILDLINK_PREFIX.flac}/lib -L${BUILDLINK_PREFIX.flac}
 MAKE_ENV+=	LDOPTS="-Wl,-R${BUILDLINK_PREFIX.flac}/lib -L${BUILDLINK_PREFIX.flac}/lib"
 .endif
 
+# -Werror is problematic
+MAKE_ENV=	NOWERROR=1 VERBOSE=1
+# on Darwin, avoid SDL2.framework
+MAKE_ENV+=	USE_LIBSDL=1
 # use pkgsrc packages for expat, zlib, jpeg, flac, lua, sqlite3
 MAKE_ENV+=	USE_SYSTEM_LIB_EXPAT=1
 MAKE_ENV+=	USE_SYSTEM_LIB_ZLIB=1
@@ -43,6 +45,10 @@ MAKE_ENV+=	USE_SYSTEM_LIB_JPEG=1
 MAKE_ENV+=	USE_SYSTEM_LIB_FLAC=1
 MAKE_ENV+=	USE_SYSTEM_LIB_LUA=1
 MAKE_ENV+=	USE_SYSTEM_LIB_SQLITE3=1
+MAKE_ENV+=	USE_SYSTEM_LIB_UTF8PROC=1
+MAKE_ENV+=	USE_SYSTEM_LIB_GLM=1
+MAKE_ENV+=	USE_SYSTEM_LIB_RAPIDJSON=1
+MAKE_ENV+=	USE_SYSTEM_LIB_PUGIXML=1
 # no portmidi package exists yet
 #MAKE_ENV+=	USE_SYSTEM_LIB_PORTMIDI=1
 # find proper python binary
@@ -54,40 +60,13 @@ MAKE_ENV+=	USE_QTDEBUG=0
 # build tools
 MAKE_ENV+=	TOOLS=1
 
-.include "../../mk/compiler.mk"
-
-.if !empty(PKGSRC_COMPILER:Mclang)
-_WRAP_EXTRA_ARGS.CC+=	-Wno-error=cast-align \
-			-Wno-error=constant-logical-operand \
-			-Wno-error=sometimes-uninitialized \
-			-Wno-error=shift-count-overflow \
-			-Wno-error=unused-private-field \
-			-Wno-error=tautological-constant-out-of-range-compare \
-			-Wno-error=tautological-compare \
-			-Wno-error=self-assign-field \
-			-Wno-error=unused-const-variable \
-			-Wno-error=unused-function
-CWRAPPERS_APPEND.cc+=	-Wno-error=cast-align \
-			-Wno-error=constant-logical-operand \
-			-Wno-error=sometimes-uninitialized \
-			-Wno-error=shift-count-overflow \
-			-Wno-error=unused-private-field \
-			-Wno-error=tautological-constant-out-of-range-compare \
-			-Wno-error=tautological-compare \
-			-Wno-error=self-assign-field \
-			-Wno-error=unused-const-variable \
-			-Wno-error=unused-function
-MAKE_ENV+=		OPTIMIZE=2
-.endif
-
-.  include "../../mk/endian.mk"
-
-.if ${MACHINE_ENDIAN:Mbig}
+.include "../../mk/endian.mk"
+.if ${MACHINE_ENDIAN} == "big"
 MAKE_ENV+=	BIGENDIAN=1
 .endif
 
-PYTHON_FOR_BUILD_ONLY=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 0.151
+LUA_VERSIONS_ACCEPTED=		53
+PYTHON_FOR_BUILD_ONLY=		yes
 
 post-extract:
 	# will be chosen in preference to /usr/include/signal.h, but does not provide kill()
@@ -104,8 +83,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mame64 ${DESTDIR}${PREFIX}/bin/mame
 	set -e; \
 	for prg in castool chdman floptool imgtool jedutil ldresample ldverify \
-		nltool nlwav pngcmp regrep romcmp split src2html srcclean unidasm; \
-	do \
+		nltool nlwav pngcmp regrep romcmp split src2html srcclean unidasm; do \
 		${INSTALL_PROGRAM} ${WRKSRC}/"$$prg" ${DESTDIR}${PREFIX}/bin; \
 	done
 	${INSTALL_DATA} ${WRKSRC}/docs/man/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
@@ -118,15 +96,18 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/*.md ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/hash/* ${DESTDIR}${PREFIX}/${SHAREDIR}/hash
 
-.include "../../lang/python/application.mk"
 .include "../../audio/flac/buildlink3.mk"
+.include "../../converters/utf8proc/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../graphics/glm/buildlink3.mk"
 .include "../../fonts/SDL2_ttf/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
+.include "../../lang/lua/buildlink3.mk"
+.include "../../lang/python/pyversion.mk"
 .include "../../textproc/expat/buildlink3.mk"
-.include "../../x11/libXinerama/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../textproc/pugixml/buildlink3.mk"
+.include "../../textproc/rapidjson/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
