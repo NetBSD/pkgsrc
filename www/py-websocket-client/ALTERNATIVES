@@ -1,1 +1,1 @@
-bin/wsdump bin/wsdump@PYVERSSUFFIX@
+bin/wsdump bin/wsdump-@PYVERSSUFFIX@
