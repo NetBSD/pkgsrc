@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4347 2018/10/11 10:56:17 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4348 2018/10/11 12:19:33 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6066,3 +6066,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated finance/py-braintree to 3.49.0 [adam 2018-10-11]
 	Updated textproc/py-pyphen to 0.9.5 [adam 2018-10-11]
 	Updated www/py-whitenoise to 4.1 [adam 2018-10-11]
+	Updated textproc/mandoc to 1.14.4nb2 [leot 2018-10-11]
