@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/04/07 19:58:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/10/11 10:23:32 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -31,3 +31,6 @@ ${PYSITELIB}/rest_framework_nested/runtests/urls.pyo
 ${PYSITELIB}/rest_framework_nested/serializers.py
 ${PYSITELIB}/rest_framework_nested/serializers.pyc
 ${PYSITELIB}/rest_framework_nested/serializers.pyo
+${PYSITELIB}/rest_framework_nested/viewsets.py
+${PYSITELIB}/rest_framework_nested/viewsets.pyc
+${PYSITELIB}/rest_framework_nested/viewsets.pyo
