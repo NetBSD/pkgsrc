@@ -1,1 +1,1 @@
-bin/icalendar @PREFIX@/bin/icalendar@PYVERSSUFFIX@
+bin/icalendar @PREFIX@/bin/icalendar-@PYVERSSUFFIX@
