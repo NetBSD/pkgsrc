@@ -8,3 +8,5 @@ Mojo::IOLoop::ForkCall manages the forking and will emit an
 event (or execute a callback) when the forked process completes.
 Return values are serialized and sent from the child to the parent
 via an appropriate pipe for your platform.
+
+Deprecated! Use Mojo::IOLoop::Subprocess instead.
