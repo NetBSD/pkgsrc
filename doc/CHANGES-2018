@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4346 2018/10/11 10:44:45 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4347 2018/10/11 10:56:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6064,3 +6064,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-websocket-client to 0.53.0 [adam 2018-10-11]
 	Updated textproc/py-jsonpickle to 1.0 [adam 2018-10-11]
 	Updated finance/py-braintree to 3.49.0 [adam 2018-10-11]
+	Updated textproc/py-pyphen to 0.9.5 [adam 2018-10-11]
+	Updated www/py-whitenoise to 4.1 [adam 2018-10-11]
