@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4345 2018/10/11 10:26:52 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4346 2018/10/11 10:44:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6062,3 +6062,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/py-icalendar to 4.0.3 [adam 2018-10-11]
 	Updated www/py-drf-nested-routers to 0.91 [adam 2018-10-11]
 	Updated www/py-websocket-client to 0.53.0 [adam 2018-10-11]
+	Updated textproc/py-jsonpickle to 1.0 [adam 2018-10-11]
+	Updated finance/py-braintree to 3.49.0 [adam 2018-10-11]
