@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4349 2018/10/11 20:04:25 wiedi Exp $
+$NetBSD: CHANGES-2018,v 1.4350 2018/10/11 20:27:09 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6068,3 +6068,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-whitenoise to 4.1 [adam 2018-10-11]
 	Updated textproc/mandoc to 1.14.4nb2 [leot 2018-10-11]
 	Updated devel/slibtool to 0.5.25 [wiedi 2018-10-11]
+	Updated devel/p5-Mojo-IOLoop-ForkCall to 0.20 [wiedi 2018-10-11]
