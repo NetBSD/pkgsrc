@@ -1,4 +1,4 @@
-# $NetBSD: Haiku.mk,v 1.14 2016/03/10 16:58:19 jperkin Exp $
+# $NetBSD: Haiku.mk,v 1.15 2018/10/11 08:30:16 adam Exp $
 #
 # Variable definitions for the Haiku operating system.
 
@@ -9,7 +9,7 @@ PS?=		/bin/ps
 # and remove this comment.
 SU?=		/bin/su
 TYPE?=		type			# Shell builtin
- 
+
 # Use symlink for wrapper in mk/wrapper/bsd.wrapper.mk,
 # due to lack of hard link support.
 WRAPPER_USE_SYMLINK=	# defined
