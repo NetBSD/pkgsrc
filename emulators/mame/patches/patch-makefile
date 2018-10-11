@@ -1,11 +1,12 @@
-$NetBSD: patch-makefile,v 1.20 2017/09/09 22:40:58 dholland Exp $
+$NetBSD: patch-makefile,v 1.21 2018/10/11 08:20:54 adam Exp $
 
 Treat all BSDs the same.
+Do not set compiler optimization.
 Add missing rules for building with clang on FreeBSD and NetBSD.
 
---- makefile.orig	2017-03-29 03:12:20.000000000 +0000
+--- makefile.orig	2018-08-29 00:35:24.000000000 +0000
 +++ makefile
-@@ -180,19 +180,19 @@ GENIEOS := solaris
+@@ -190,19 +190,19 @@ GENIEOS := solaris
  endif
  ifeq ($(firstword $(filter FreeBSD,$(UNAME))),FreeBSD)
  OS := freebsd
@@ -29,7 +30,18 @@ Add missing rules for building with clang on FreeBSD and NetBSD.
  endif
  ifeq ($(firstword $(filter Darwin,$(UNAME))),Darwin)
  OS := macosx
-@@ -1357,6 +1357,23 @@ freebsd_x86: generate $(PROJECTDIR)/$(MA
+@@ -566,10 +566,6 @@ PROFILER =
+ SYMBOLS = 1
+ endif
+ 
+-# specify a default optimization level if none explicitly stated
+-ifndef OPTIMIZE
+-OPTIMIZE = 3
+-endif
+ 
+ # set the symbols level
+ ifdef SYMBOLS
+@@ -1395,6 +1391,23 @@ freebsd_x86: generate $(PROJECTDIR)/$(MA
  	$(SILENT) $(MAKE) -C $(PROJECTDIR)/$(MAKETYPE)-freebsd config=$(CONFIG)32
  
  #-------------------------------------------------
@@ -53,7 +65,7 @@ Add missing rules for building with clang on FreeBSD and NetBSD.
  # gmake-netbsd
  #-------------------------------------------------
  
-@@ -1377,6 +1394,23 @@ netbsd_x86: generate $(PROJECTDIR)/$(MAK
+@@ -1415,6 +1428,23 @@ netbsd_x86: generate $(PROJECTDIR)/$(MAK
  	$(SILENT) $(MAKE) -C $(PROJECTDIR)/$(MAKETYPE)-netbsd config=$(CONFIG)32
  
  #-------------------------------------------------
