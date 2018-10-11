@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2018/04/18 19:38:26 kamil Exp $
+$NetBSD: distinfo,v 1.9 2018/10/11 20:26:12 wiedi Exp $
 
-SHA1 (Mojo-IOLoop-ForkCall-0.19.tar.gz) = e865951f7dc8ea651df72ce78061c811677d5793
-RMD160 (Mojo-IOLoop-ForkCall-0.19.tar.gz) = 40ea63689c761733857c2566e3b206c2e0187c5d
-SHA512 (Mojo-IOLoop-ForkCall-0.19.tar.gz) = 9967bbbd58b332c55ff3d65b5da4a2feb3ce5de2ae944906742aaed14d9147c7777213ad31c3186c9ada876b375b7a81581a007fdd9cb8fe89b9e59f3274354d
-Size (Mojo-IOLoop-ForkCall-0.19.tar.gz) = 10318 bytes
+SHA1 (Mojo-IOLoop-ForkCall-0.20.tar.gz) = 980e725c0b39ae1b221965dff8dbba20b1507426
+RMD160 (Mojo-IOLoop-ForkCall-0.20.tar.gz) = 69b3271dbe9c80e0fc36a665004caac2371e1b8e
+SHA512 (Mojo-IOLoop-ForkCall-0.20.tar.gz) = 44419735e1b8d74592d9eb0f50ea6fa2ff604480842d13e3e3d25317dc31ae151fbd9daae1f3c8256c85a497e05358290888f4d2fdac85fad396672b02b732ca
+Size (Mojo-IOLoop-ForkCall-0.20.tar.gz) = 10605 bytes
