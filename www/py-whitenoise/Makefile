@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/09/29 14:45:20 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2018/10/11 10:55:56 adam Exp $
 
-DISTNAME=	whitenoise-4.0b3
+DISTNAME=	whitenoise-4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/whitenoise/}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://whitenoise.evans.io/
 COMMENT=	Simplified static file serving for WSGI applications
 LICENSE=	mit
 
-USE_LANGUAGES=	# empty
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
