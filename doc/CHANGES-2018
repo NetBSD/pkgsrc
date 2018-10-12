@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4355 2018/10/12 12:49:47 roy Exp $
+$NetBSD: CHANGES-2018,v 1.4356 2018/10/12 13:52:09 martin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6075,3 +6075,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-hypothesis to 3.76.0 [adam 2018-10-12]
 	Updated www/py-autobahn to 18.9.2 [adam 2018-10-12]
 	Updated mail/rspamd to 1.8.0nb1 [roy 2018-10-12]
+	Updated audio/id3lib to 3.8.3nb6 [martin 2018-10-12]
