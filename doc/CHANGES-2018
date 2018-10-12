@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4353 2018/10/12 10:26:06 leot Exp $
+$NetBSD: CHANGES-2018,v 1.4354 2018/10/12 11:51:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6072,3 +6072,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated games/neverball to 1.6.0nb2 [leot 2018-10-12]
 	Updated sysutils/dmidecode to 3.2 [msaitoh 2018-10-12]
 	Updated graphics/jbig2dec to 0.15 [leot 2018-10-12]
+	Updated devel/py-hypothesis to 3.76.0 [adam 2018-10-12]
+	Updated www/py-autobahn to 18.9.2 [adam 2018-10-12]
