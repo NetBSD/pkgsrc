@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4358 2018/10/12 15:46:50 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4359 2018/10/12 18:10:23 he Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6078,3 +6078,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated audio/id3lib to 3.8.3nb6 [martin 2018-10-12]
 	Updated www/tinyproxy to 1.10.0 [adam 2018-10-12]
 	Updated net/tor to 0.3.4.8 [adam 2018-10-12]
+	Updated wm/blackbox70 to 0.72 [he 2018-10-12]
