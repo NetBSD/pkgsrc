@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.4 2018/08/10 11:33:53 wiz Exp $
+$NetBSD: distinfo,v 1.5 2018/10/12 13:21:24 sborrill Exp $
 
 SHA1 (libmspack-0.7.1alpha.tar.gz) = 073348180586d7b0f61fd7f971162ffb5c1f6621
 RMD160 (libmspack-0.7.1alpha.tar.gz) = 4facf2e853fa1942df3d71b342aaf83c06209b40
 SHA512 (libmspack-0.7.1alpha.tar.gz) = e903629a34c29099a261a108e4eb9cda485ab999bbc3383e3cd6a39715077d00b26a1c641b0f3df0eef60d2e15a7ef623379df0cfe25b99d4eda080529ffec7b
 Size (libmspack-0.7.1alpha.tar.gz) = 486840 bytes
+SHA1 (patch-Makefile.am) = dff0e712bb577baa8587ee562e5d27c3831965cd
+SHA1 (patch-Makefile.in) = 761be4fd75d8e4496f1fe5d30e87d10f1a4e2913
