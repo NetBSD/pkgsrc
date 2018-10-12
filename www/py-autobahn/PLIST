@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/04/14 09:10:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/10/12 11:51:26 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -135,6 +135,9 @@ ${PYSITELIB}/autobahn/wamp/test/test_auth.pyo
 ${PYSITELIB}/autobahn/wamp/test/test_component.py
 ${PYSITELIB}/autobahn/wamp/test/test_component.pyc
 ${PYSITELIB}/autobahn/wamp/test/test_component.pyo
+${PYSITELIB}/autobahn/wamp/test/test_component_aio.py
+${PYSITELIB}/autobahn/wamp/test/test_component_aio.pyc
+${PYSITELIB}/autobahn/wamp/test/test_component_aio.pyo
 ${PYSITELIB}/autobahn/wamp/test/test_cryptosign.py
 ${PYSITELIB}/autobahn/wamp/test/test_cryptosign.pyc
 ${PYSITELIB}/autobahn/wamp/test/test_cryptosign.pyo
