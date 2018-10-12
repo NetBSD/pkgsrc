@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4360 2018/10/12 23:43:59 nia Exp $
+$NetBSD: CHANGES-2018,v 1.4361 2018/10/12 23:44:09 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6080,3 +6080,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/tor to 0.3.4.8 [adam 2018-10-12]
 	Updated wm/blackbox70 to 0.72 [he 2018-10-12]
 	Updated emulators/libretro-core-info to 1.7.5 [nia 2018-10-12]
+	Updated emulators/retroarch to 1.7.5 [nia 2018-10-12]
