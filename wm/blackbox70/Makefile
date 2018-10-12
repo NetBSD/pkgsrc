@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/10/12 18:28:53 he Exp $
+# $NetBSD: Makefile,v 1.15 2018/10/12 19:16:29 he Exp $
 
 VERSION=	0.72
 DISTNAME=	blackbox-${VERSION}
@@ -19,7 +19,7 @@ USE_LANGUAGES=	c c++03
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-USE_TOOLS+=	automake autoconf
+USE_TOOLS+=	automake autoconf gettext-m4
 
 LIBS+=		${BUILDLINK_LDADD.iconv}
 
@@ -31,5 +31,4 @@ pre-configure:
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../devel/gettext-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
