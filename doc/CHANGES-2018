@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4352 2018/10/12 10:08:41 msaitoh Exp $
+$NetBSD: CHANGES-2018,v 1.4353 2018/10/12 10:26:06 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6071,3 +6071,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Mojo-IOLoop-ForkCall to 0.20 [wiedi 2018-10-11]
 	Updated games/neverball to 1.6.0nb2 [leot 2018-10-12]
 	Updated sysutils/dmidecode to 3.2 [msaitoh 2018-10-12]
+	Updated graphics/jbig2dec to 0.15 [leot 2018-10-12]
