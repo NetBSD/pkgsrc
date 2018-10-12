@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2015/11/03 01:12:35 agc Exp $
+$NetBSD: distinfo,v 1.22 2018/10/12 13:51:59 martin Exp $
 
 SHA1 (id3lib-3.8.3.tar.gz) = c92c880da41d1ec0b242745a901702ae87970838
 RMD160 (id3lib-3.8.3.tar.gz) = bfa2499ec649ed40815ad0a370c78eb1517952c4
@@ -17,3 +17,4 @@ SHA1 (patch-as) = 50ca42926c603361864bf2891d6b4e01e7f59ade
 SHA1 (patch-at) = f5ab25d72d3d6e47c1710bbc17dd0cd0749a0b22
 SHA1 (patch-au) = 2d96d6cadaf8b1055337da6a5f85070ea6222583
 SHA1 (patch-av) = e54c0839ecfe4e3f70758e334666717b5a3b396f
+SHA1 (patch-src__mp3_parse.cpp) = 874614302be7cdcb9b95e8b32e17b488cdf21359
