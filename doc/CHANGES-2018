@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4356 2018/10/12 13:52:09 martin Exp $
+$NetBSD: CHANGES-2018,v 1.4357 2018/10/12 13:58:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6076,3 +6076,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-autobahn to 18.9.2 [adam 2018-10-12]
 	Updated mail/rspamd to 1.8.0nb1 [roy 2018-10-12]
 	Updated audio/id3lib to 3.8.3nb6 [martin 2018-10-12]
+	Updated www/tinyproxy to 1.10.0 [adam 2018-10-12]
