@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:18:57 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/10/12 18:00:55 he Exp $
 bin/blackbox
 bin/bsetbg
 bin/bsetroot
@@ -23,12 +23,33 @@ include/bt/Util.hh
 include/bt/XDG.hh
 lib/libbt.la
 lib/pkgconfig/libbt.pc
+man/fr/man1/blackbox.1
+man/fr/man1/bsetroot.1
+man/ja/man1/blackbox.1
+man/ja/man1/bsetroot.1
 man/man1/blackbox.1
 man/man1/bsetbg.1
 man/man1/bsetroot.1
+man/nl/man1/blackbox.1
+man/nl/man1/bsetroot.1
+man/sl/man1/blackbox.1
 share/blackbox/menu
+share/blackbox/styles/Artwiz
 share/blackbox/styles/Blue
+share/blackbox/styles/Cthulhain
+share/blackbox/styles/Flux
 share/blackbox/styles/Gray
 share/blackbox/styles/Green
+share/blackbox/styles/Minimal
+share/blackbox/styles/Nyz
+share/blackbox/styles/Operation
+share/blackbox/styles/Outcomes
 share/blackbox/styles/Purple
+share/blackbox/styles/Rampage
+share/blackbox/styles/Rancor
 share/blackbox/styles/Red
+share/blackbox/styles/Results
+share/blackbox/styles/Shade
+share/blackbox/styles/Spiff
+share/blackbox/styles/TDF
+share/blackbox/styles/Twice

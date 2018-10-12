@@ -1,19 +1,11 @@
-$NetBSD: patch-aa,v 1.2 2011/11/22 20:02:48 joerg Exp $
+$NetBSD: patch-lib_Image.cc,v 1.1 2018/10/12 18:00:55 he Exp $
 
 Sunpro cannot resolve sqrt(int) to either sqrt(double) or
 sqrt(long double).
 
---- lib/Image.cc.orig	2005-04-08 15:41:09.000000000 +0000
+--- lib/Image.cc.orig	2016-07-10 16:31:38.000000000 +0000
 +++ lib/Image.cc
-@@ -44,6 +44,7 @@
- #include <math.h>
- #include <stdio.h>
- #include <stdlib.h>
-+#include <string.h>
- 
- // #define COLORTABLE_DEBUG
- // #define MITSHM_DEBUG
-@@ -1694,14 +1695,14 @@ void bt::Image::egradient(const Color &f
+@@ -1704,14 +1704,14 @@ void bt::Image::egradient(const Color &f
      for (y = 0; y < height; ++y) {
        for (x = 0; x < width; ++x, ++p) {
          p->red   = static_cast<unsigned char>
@@ -34,7 +26,7 @@ sqrt(long double).
        }
      }
    } else {
-@@ -1709,14 +1710,14 @@ void bt::Image::egradient(const Color &f
+@@ -1719,14 +1719,14 @@ void bt::Image::egradient(const Color &f
      for (y = 0; y < height; ++y) {
        for (x = 0; x < width; ++x, ++p) {
          p->red   = static_cast<unsigned char>
