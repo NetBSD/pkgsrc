@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/10/12 18:00:55 he Exp $
+# $NetBSD: Makefile,v 1.14 2018/10/12 18:28:53 he Exp $
 
 VERSION=	0.72
 DISTNAME=	blackbox-${VERSION}
@@ -26,9 +26,10 @@ LIBS+=		${BUILDLINK_LDADD.iconv}
 BUILDLINK_DEPMETHOD.libXt?=	build
 
 pre-configure:
-		cd ${WRKSRC}; ./autogen.sh
+		cd ${WRKSRC}; ${SH} ./autogen.sh
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../devel/gettext-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
