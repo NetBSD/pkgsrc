@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2018/09/06 09:33:38 nia Exp $
+$NetBSD: distinfo,v 1.8 2018/10/12 23:43:47 nia Exp $
 
-SHA1 (RetroArch-1.7.4.tar.xz) = acbb21da9f057cd3edf8acb4b6ac6f4431f46332
-RMD160 (RetroArch-1.7.4.tar.xz) = d32949362c715888bde561cac0568516bed554d8
-SHA512 (RetroArch-1.7.4.tar.xz) = 8a7ec4e8b62225139f28f3bfcfa8a4469398a92d308192671f396ff45ef406dfa606c494a1f9e2db69c405a5b2e56cdb1c04e5f5a855ca451db92d46f98105d9
-Size (RetroArch-1.7.4.tar.xz) = 226048676 bytes
+SHA1 (RetroArch-1.7.5.tar.xz) = ddaf7233d876a8916e2656adea222e9a0c863fb6
+RMD160 (RetroArch-1.7.5.tar.xz) = 10c44ac6e90a2739c1f52618fbe3ed929763ab6f
+SHA512 (RetroArch-1.7.5.tar.xz) = 254da6a407c0660b688a87d84dbcc035d67d5712984728ae532dd56dcbb657afe61690712f7d60b94d93ae7859d9c65de7b7646e78fbf8ff1a8ce66467db2ec4
+Size (RetroArch-1.7.5.tar.xz) = 229302760 bytes
 SHA1 (patch-Makefile) = e40570eaf260e527442264c2ba424f2d7f499885
 SHA1 (patch-frontend_drivers_platform__unix.c) = 090b82414411067409167c2b144f3d1ecac4d21c
