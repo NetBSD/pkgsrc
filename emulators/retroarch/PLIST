@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/09/06 09:33:38 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/10/12 23:43:47 nia Exp $
 bin/retroarch
 man/man6/retroarch.6
 share/applications/retroarch.desktop
@@ -870,6 +870,7 @@ share/retroarch/assets/xmb/dot-art/png/menu_quickmenu.png
 share/retroarch/assets/xmb/dot-art/png/menu_record.png
 share/retroarch/assets/xmb/dot-art/png/menu_rewind.png
 share/retroarch/assets/xmb/dot-art/png/menu_saving.png
+share/retroarch/assets/xmb/dot-art/png/menu_stream.png
 share/retroarch/assets/xmb/dot-art/png/menu_ui.png
 share/retroarch/assets/xmb/dot-art/png/menu_updater.png
 share/retroarch/assets/xmb/dot-art/png/menu_user.png
@@ -1332,6 +1333,7 @@ share/retroarch/assets/xmb/monochrome-inverted/png/menu_quickmenu.png
 share/retroarch/assets/xmb/monochrome-inverted/png/menu_record.png
 share/retroarch/assets/xmb/monochrome-inverted/png/menu_rewind.png
 share/retroarch/assets/xmb/monochrome-inverted/png/menu_saving.png
+share/retroarch/assets/xmb/monochrome-inverted/png/menu_stream.png
 share/retroarch/assets/xmb/monochrome-inverted/png/menu_ui.png
 share/retroarch/assets/xmb/monochrome-inverted/png/menu_updater.png
 share/retroarch/assets/xmb/monochrome-inverted/png/menu_user.png
@@ -1665,6 +1667,7 @@ share/retroarch/assets/xmb/monochrome/png/menu_quickmenu.png
 share/retroarch/assets/xmb/monochrome/png/menu_record.png
 share/retroarch/assets/xmb/monochrome/png/menu_rewind.png
 share/retroarch/assets/xmb/monochrome/png/menu_saving.png
+share/retroarch/assets/xmb/monochrome/png/menu_stream.png
 share/retroarch/assets/xmb/monochrome/png/menu_ui.png
 share/retroarch/assets/xmb/monochrome/png/menu_updater.png
 share/retroarch/assets/xmb/monochrome/png/menu_user.png
@@ -1996,6 +1999,7 @@ share/retroarch/assets/xmb/neoactive/png/key.png
 share/retroarch/assets/xmb/neoactive/png/lakka.png
 share/retroarch/assets/xmb/neoactive/png/loadstate.png
 share/retroarch/assets/xmb/neoactive/png/menu_achievements.png
+share/retroarch/assets/xmb/neoactive/png/menu_audio.png
 share/retroarch/assets/xmb/neoactive/png/menu_drivers.png
 share/retroarch/assets/xmb/neoactive/png/menu_exit.png
 share/retroarch/assets/xmb/neoactive/png/menu_frameskip.png
@@ -2542,6 +2546,7 @@ share/retroarch/assets/xmb/retroactive/png/key.png
 share/retroarch/assets/xmb/retroactive/png/lakka.png
 share/retroarch/assets/xmb/retroactive/png/loadstate.png
 share/retroarch/assets/xmb/retroactive/png/menu_achievements.png
+share/retroarch/assets/xmb/retroactive/png/menu_audio.png
 share/retroarch/assets/xmb/retroactive/png/menu_drivers.png
 share/retroarch/assets/xmb/retroactive/png/menu_exit.png
 share/retroarch/assets/xmb/retroactive/png/menu_frameskip.png
@@ -2970,6 +2975,7 @@ share/retroarch/assets/xmb/retrosystem/png/menu_quickmenu.png
 share/retroarch/assets/xmb/retrosystem/png/menu_record.png
 share/retroarch/assets/xmb/retrosystem/png/menu_rewind.png
 share/retroarch/assets/xmb/retrosystem/png/menu_saving.png
+share/retroarch/assets/xmb/retrosystem/png/menu_stream.png
 share/retroarch/assets/xmb/retrosystem/png/menu_ui.png
 share/retroarch/assets/xmb/retrosystem/png/menu_updater.png
 share/retroarch/assets/xmb/retrosystem/png/menu_user.png
@@ -3583,10 +3589,10 @@ share/retroarch/assets/xmb/systematic/png/The 3DO Company - 3DO GDO-203P.png
 share/retroarch/assets/xmb/systematic/png/The 3DO Company - 3DO IMP-21J.png
 share/retroarch/assets/xmb/systematic/png/The 3DO Company - 3DO-content.png
 share/retroarch/assets/xmb/systematic/png/The 3DO Company - 3DO.png
-share/retroarch/assets/xmb/systematic/png/Thomson - TO8-content.png
-share/retroarch/assets/xmb/systematic/png/Thomson - TO8.png
-share/retroarch/assets/xmb/systematic/png/Thomson - TO8D-content.png
-share/retroarch/assets/xmb/systematic/png/Thomson - TO8D.png
+share/retroarch/assets/xmb/systematic/png/Thomson - MO-TO TO8.png
+share/retroarch/assets/xmb/systematic/png/Thomson - MO-TO Tape.png
+share/retroarch/assets/xmb/systematic/png/Thomson - MO-TO-content.png
+share/retroarch/assets/xmb/systematic/png/Thomson - MO-TO.png
 share/retroarch/assets/xmb/systematic/png/Tiger - Game.com-content.png
 share/retroarch/assets/xmb/systematic/png/Tiger - Game.com.png
 share/retroarch/assets/xmb/systematic/png/Tomb Raider-content.png
@@ -3655,6 +3661,7 @@ share/retroarch/assets/xmb/systematic/png/menu_quickmenu.png
 share/retroarch/assets/xmb/systematic/png/menu_record.png
 share/retroarch/assets/xmb/systematic/png/menu_rewind.png
 share/retroarch/assets/xmb/systematic/png/menu_saving.png
+share/retroarch/assets/xmb/systematic/png/menu_stream.png
 share/retroarch/assets/xmb/systematic/png/menu_ui.png
 share/retroarch/assets/xmb/systematic/png/menu_updater.png
 share/retroarch/assets/xmb/systematic/png/menu_user.png
