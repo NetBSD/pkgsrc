@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4354 2018/10/12 11:51:51 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4355 2018/10/12 12:49:47 roy Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6074,3 +6074,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/jbig2dec to 0.15 [leot 2018-10-12]
 	Updated devel/py-hypothesis to 3.76.0 [adam 2018-10-12]
 	Updated www/py-autobahn to 18.9.2 [adam 2018-10-12]
+	Updated mail/rspamd to 1.8.0nb1 [roy 2018-10-12]
