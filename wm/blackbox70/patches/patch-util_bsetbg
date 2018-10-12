@@ -1,0 +1,10 @@
+$NetBSD: patch-util_bsetbg,v 1.1 2018/10/12 18:00:55 he Exp $
+
+--- util/bsetbg.orig	2016-07-10 16:31:38.000000000 +0000
++++ util/bsetbg
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/bin/sh
+ 
+ # Copyright (c) 2000-2002 Timothy M. King (tmk@lordzork.com)
+ #
