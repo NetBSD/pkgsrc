@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: tinyproxy.sh,v 1.3 2017/02/18 05:59:23 nonaka Exp $
+# $NetBSD: tinyproxy.sh,v 1.4 2018/10/12 13:57:46 adam Exp $
 #
 
 # PROVIDE: tinyproxy
@@ -10,7 +10,7 @@
 
 name="tinyproxy"
 rcvar=$name
-command="@PREFIX@/sbin/${name}"
+command="@PREFIX@/bin/${name}"
 pidfile="@VARBASE@/run/tinyproxy/${name}.pid"
 required_files="@PKG_SYSCONFDIR@/${name}.conf"
 
