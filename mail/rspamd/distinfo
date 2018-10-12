@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2018/10/07 20:10:57 fhajny Exp $
+$NetBSD: distinfo,v 1.28 2018/10/12 12:49:28 roy Exp $
 
 SHA1 (rspamd-1.8.0.tar.gz) = 918331a060246d921c89ffc42e99feed0335a89a
 RMD160 (rspamd-1.8.0.tar.gz) = 2a263670bf68b22792f52e39b2fb44a6c2e42da5
@@ -6,5 +6,6 @@ SHA512 (rspamd-1.8.0.tar.gz) = 6e254abc70da5db1562273a5772ed90bc43a9cfdcb04f45b3
 Size (rspamd-1.8.0.tar.gz) = 4261319 bytes
 SHA1 (patch-CMakeLists.txt) = 1d3e66b52ef38638674baf4c10b68c97b2ca38ad
 SHA1 (patch-src_CMakeLists.txt) = c80015bb275ba8b9ad31491311275bf353f8f30a
+SHA1 (patch-src_libcryptobox_cryptobox.c) = 3173790f26ef713777fdfd3a7fc642d9c1ea6444
 SHA1 (patch-test_CMakeLists.txt) = 2e4aafd860f0f120928cce49b0995c739558bf0d
 SHA1 (patch-test_rspamd__lua__pcall__vs__resume__test.c) = 65e901af64ebcd983310707da9814fa09aa11410
