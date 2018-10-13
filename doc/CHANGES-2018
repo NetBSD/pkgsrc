@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4368 2018/10/13 11:15:37 leot Exp $
+$NetBSD: CHANGES-2018,v 1.4369 2018/10/13 13:56:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6089,3 +6089,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/rust to 1.29.1nb1 [he 2018-10-13]
 	Updated graphics/libexif to 0.6.21nb1 [leot 2018-10-13]
 	Updated www/tidy to 5.6.0nb1 [leot 2018-10-13]
+	Updated databases/ruby-sequel to 5.13.0 [taca 2018-10-13]
