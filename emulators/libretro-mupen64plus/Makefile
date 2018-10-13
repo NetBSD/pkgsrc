@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/10/03 15:01:10 nia Exp $
+# $NetBSD: Makefile,v 1.15 2018/10/13 17:28:57 nia Exp $
 
 DISTNAME=	libretro-mupen64plus-20180628
 PKGREVISION=	1
@@ -28,6 +28,7 @@ MAKE_FLAGS+=		GIT_VERSION="-pkgsrc"
 MAKE_FLAGS+=	WITH_DYNAREC=arm
 .elif ${MACHINE_ARCH} == "i386"
 MAKE_FLAGS+=	WITH_DYNAREC=x86
+BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 .elif ${MACHINE_ARCH} == "x86_64"
 MAKE_FLAGS+=	WITH_DYNAREC=x86_64
 .else
