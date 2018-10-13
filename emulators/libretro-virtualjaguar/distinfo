@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/10/13 16:19:31 nia Exp $
+
+SHA1 (libretro-virtualjaguar-20180812-f3cf607b20ee69e78dbfd80010d3f485fdf67283.tar.gz) = 1a90830112c45d6f5ba550491ccfced218d7a220
+RMD160 (libretro-virtualjaguar-20180812-f3cf607b20ee69e78dbfd80010d3f485fdf67283.tar.gz) = 15c98ba55e41f047d4059b362971aa02619951ff
+SHA512 (libretro-virtualjaguar-20180812-f3cf607b20ee69e78dbfd80010d3f485fdf67283.tar.gz) = f2a4fcfc9d7b0b1be9fb19c79385df1f022ad4b221953104018a630a9da9641fcc3452fa1ee78159fac73da84cf029c3fc8547983b7997915f3a118b0cc9340e
+Size (libretro-virtualjaguar-20180812-f3cf607b20ee69e78dbfd80010d3f485fdf67283.tar.gz) = 974071 bytes
