@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.39 2018/09/30 17:46:24 minskim Exp $
+$NetBSD: distinfo,v 1.40 2018/10/13 10:03:36 he Exp $
 
 SHA1 (rust-1.28.0-i686-apple-darwin.tar.gz) = 85d947b4d260361f63f77e1f4921ac89bd849d78
 RMD160 (rust-1.28.0-i686-apple-darwin.tar.gz) = 963abf1b0b5e2673c8e2d6c1b4d5a2d8ed9d8d2f
@@ -68,15 +68,24 @@ SHA1 (rust-std-1.28.0-x86_64-unknown-netbsd.tar.gz) = a0b835fe0ad2b5a6d94bd99323
 RMD160 (rust-std-1.28.0-x86_64-unknown-netbsd.tar.gz) = d06cabb8232d66d2a5cf3a1ee0f0f676c698e6c0
 SHA512 (rust-std-1.28.0-x86_64-unknown-netbsd.tar.gz) = 726c5ef43db24b3d0548a2b0534934d6fcb04b0b9228b80cace18f59e21ad6facfbc2af3220867988a35414ba95fb90e38cc47d826dd73cb588622132ea6e9da
 Size (rust-std-1.28.0-x86_64-unknown-netbsd.tar.gz) = 69236192 bytes
+SHA1 (rust-1.28.0-powerpc-unknown-netbsd.tar.gz) = 0e3e5be17acc8b088c2716e6d47ef6a51069fdde
+RMD160 (rust-1.28.0-powerpc-unknown-netbsd.tar.gz) = 848a243fa072eaf475583d8575d5457e66854c19
+SHA512 (rust-1.28.0-powerpc-unknown-netbsd.tar.gz) = 054837b5ddb0ec598d84336d4c257a430e8c096447c51e5e08b418d7a97f8ca5280998175f205cb2d901e7b92026c31ba3b972a0534f47eecd6d4aa0542a9655
+Size (rust-1.28.0-powerpc-unknown-netbsd.tar.gz) = 192518386 bytes
+SHA1 (rust-std-1.28.0-powerpc-unknown-netbsd.tar.gz) = 2eb760731636e19094d36aae84fca72094e1600a
+RMD160 (rust-std-1.28.0-powerpc-unknown-netbsd.tar.gz) = aa764f9cc59dd256718e17d5683bbc7e14657a75
+SHA512 (rust-std-1.28.0-powerpc-unknown-netbsd.tar.gz) = 265e71e390689a6e7624e3378fae767c22225bcbc03ad5fb84b91b48c53c3d364a3dc8bdcf11028aa618f0d11d126220911bb17e5c91f38361548e7673d37718
+Size (rust-std-1.28.0-powerpc-unknown-netbsd.tar.gz) = 66023865 bytes
 SHA1 (rustc-1.29.1-src.tar.gz) = 5b1cc48bda7d77137062908def9b3f428dc3996d
 RMD160 (rustc-1.29.1-src.tar.gz) = 780a25bb9c8fd60cde53ce617a0065362337d6ad
 SHA512 (rustc-1.29.1-src.tar.gz) = 3151c398a79169af7dd0735d5115112cb64858120a637eda018cb4544dd9988f7540120cc0122d2af7348968285650d8605837e9f40337ec95e549d5e8763f04
 Size (rustc-1.29.1-src.tar.gz) = 106095241 bytes
 SHA1 (patch-src_bootstrap_bin_rustc.rs) = 0abf893090a6053e01fd658096d9a2b5b8c144da
+SHA1 (patch-src_bootstrap_bootstrap.py) = ed0c794ed15454acb3cbb9ede38ed76be35c7ca6
 SHA1 (patch-src_bootstrap_lib.rs) = d86e173b931099730a4f18d044d7977c89f87b91
 SHA1 (patch-src_libbacktrace_configure) = b2c1e9b93a99408aad42ab9f1af27704cc81bdd8
 SHA1 (patch-src_liblibc_src_unix_solaris_mod.rs) = aeb7c22995e33c700ce3ea4336368a1fd08120e1
-SHA1 (patch-src_libstd_build.rs) = 32dad8a474300f9f37bce8b92acca762cf8cc4ab
+SHA1 (patch-src_libstd_build.rs) = 1edbf87339bd88e3178d4fa2fc408a6e802ed488
 SHA1 (patch-src_libstd_sys_unix_thread.rs) = 46ef46365658e2f895bd3dde9c74f352890e9ccc
 SHA1 (patch-src_llvm_CMakeLists.txt) = ffdf4337fdc84d8314c97c4e492e6b84244a99d1
 SHA1 (patch-src_llvm_cmake_modules_AddLLVM.cmake) = f0620ac62ecfb1d62d2dfa61b4c063d21c29b8f5
