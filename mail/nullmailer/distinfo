@@ -1,15 +1,14 @@
-$NetBSD: distinfo,v 1.20 2018/01/28 23:31:16 wiedi Exp $
+$NetBSD: distinfo,v 1.21 2018/10/13 14:38:54 schmonz Exp $
 
-SHA1 (nullmailer-2.1.tar.gz) = 79322908cb242a80f72f8e2888ac870f2f311bcf
-RMD160 (nullmailer-2.1.tar.gz) = 834f7d5c8ee387c5d7b15663f0aa00c7f04f795f
-SHA512 (nullmailer-2.1.tar.gz) = 5219e251f6648258247913fcb7036075a482b0800a98cde0d731aa4a6b514baae4d8a340b6757b8d532c4b8343b718642c0f519292e3660f8c04671ac274944b
-Size (nullmailer-2.1.tar.gz) = 255269 bytes
+SHA1 (nullmailer-2.2.tar.gz) = c19202fbd8b348b9e0fe9664d538fe35e1dcc9c0
+RMD160 (nullmailer-2.2.tar.gz) = e50701d5477c57136282ecc87618165057ec76a4
+SHA512 (nullmailer-2.2.tar.gz) = 21b29d59f3c386c13ce4541ae11dc5cd69f842085479d7fc9a69a540abc608ce5c1825f06bd3566536b392931f7eeb1b2d35addd816849e6f431877bb18c8268
+Size (nullmailer-2.2.tar.gz) = 257740 bytes
 SHA1 (patch-Makefile.in) = 56ce789f85f4feccce623c540dfb41d84e655c1a
 SHA1 (patch-doc_nullmailer-queue.8) = 6d2651b4ebc2500504ce4f5620842ffc6bf0c2f6
 SHA1 (patch-doc_nullmailer-send.8) = 1ab434a1a3293c11db87781217a1694798ba6f23
 SHA1 (patch-lib_fdbuf_fdobuf.h) = 716854a1421ef2021f5383f3e63bd19ece900a23
 SHA1 (patch-lib_selfpipe.cc) = a5d7e24bfbf3fa823cbd4e696a1c6488586e3512
-SHA1 (patch-src_sendmail.cc) = 0b5414d5d7fe8c152b08bd30561aa224a8f78bd3
 SHA1 (patch-test_Makefile.am) = 744771972ca47f154fbc4d8a59dc0fc9b3c616f8
 SHA1 (patch-test_Makefile.in) = 5250f65a0758a9442aa6aec076b67af18ea2444c
-SHA1 (patch-test_functions.in) = 5c8d10eb57fd1fda2bd904b85a0895104525a7a4
+SHA1 (patch-test_functions.in) = 35b5c9b2a8794ac59f0450fdae4e30e9b9d61ce0
