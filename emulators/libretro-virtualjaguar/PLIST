@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2018/10/13 16:19:31 nia Exp $
+lib/libretro/virtualjaguar_libretro.so
