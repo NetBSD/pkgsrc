@@ -1,0 +1,18 @@
+Libretro is a simple but powerful development interface that allows for
+the easy creation of emulators, games and multimedia applications that
+can plug straight into any libretro-compatible frontend. This development
+interface is open to others so that they can run these pluggable emulator
+and game cores also in their own programs or devices.
+
+Caprice32 is a software emulator of the Amstrad CPC 8-bit home computer
+series. The emulator faithfully imitates the CPC464, CPC664, and CPC6128
+models. By recreating the operations of all hardware components at a
+low level, the emulator achieves a high degree of compatibility with
+original CPC software. These programs or games can be run unmodified at
+real-time or higher speeds, depending on the emulator host environment.
+
+It is recommended that users enable "autorun" in the Core Options in
+the RetroArch F1 menu after selecting a disk image for the first time,
+then restart the core to load it.
+
+A virtual keyboard can be toggled by pressing the virtual "Y" button.
