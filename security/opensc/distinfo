@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.14 2016/08/04 13:08:25 mef Exp $
+$NetBSD: distinfo,v 1.15 2018/10/13 10:54:04 mlelstv Exp $
 
-SHA1 (opensc-0.16.0.tar.gz) = 8a5616ac514c4fbad50b0505dc61f082de3e479c
-RMD160 (opensc-0.16.0.tar.gz) = f785df816560493baceb71e2197346c724fc0834
-SHA512 (opensc-0.16.0.tar.gz) = 15f7d62388dde6dad226acab3cd54f8e2f2f53684dc0cb976c6fc6fbdb4487be931ca69bf965ab07c51efd16be64d5411f10bacea11a07fc823c92dd7bb25139
-Size (opensc-0.16.0.tar.gz) = 1760418 bytes
-SHA1 (patch-aa) = 8344b445def1b1b63519e97fd0185c5cf4b3b636
-SHA1 (patch-ab) = c8a8a21ed7fe387aa93e6454e30d284d77ffd67c
+SHA1 (opensc-0.19.0.tar.gz) = 7e4e52c15407b5e1642418068ae52a38b01cdaec
+RMD160 (opensc-0.19.0.tar.gz) = d589dc2d4371958e7e35e282c0f970b29eb18fbb
+SHA512 (opensc-0.19.0.tar.gz) = a54161b72e6ecea9d61d8bdf0fe0dbd0f97dd8fff0ce6ce344442d9dd9218779851054f8a9049c95c4276e69d3ab96afd0906ebb3278739c8f8e32ad3dbf2d4b
+Size (opensc-0.19.0.tar.gz) = 1607290 bytes
+SHA1 (patch-aa) = 5ca9245c763a9f8a8aa273e7e76c75168c52d0cd
+SHA1 (patch-ab) = 5ea2a3e623df6bc2c814c37ce89fed491149f8b4
 SHA1 (patch-configure.ac) = 9031a51162d883b3e3118820d400e07ef99dbad9
-SHA1 (patch-doc_tools_Makefile.am) = bbfb4ae09bfeef5f4d2ca36da3efda6d1a699a0d
+SHA1 (patch-doc_tools_Makefile.am) = 4535988c6fbe4b9f45838362f2f9604c91fecd53
 SHA1 (patch-src_common_compat__getopt.h) = a9c4fad2d1fd73f5b2c245a364cfd37d838f51eb
 SHA1 (patch-src_common_compat__getopt__main.c) = 96d51499ea6d48bd53a17e3849c44ae4e0c9b669
-SHA1 (patch-src_libopensc_log.c) = 1f6107d56298bf3b88d22c627dee6a9840b7309a
+SHA1 (patch-src_libopensc_log.c) = e272654963cf03a459369fa512a79b46daa30720
