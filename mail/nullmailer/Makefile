@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2018/07/18 00:06:20 joerg Exp $
+# $NetBSD: Makefile,v 1.46 2018/10/13 14:38:54 schmonz Exp $
 
-DISTNAME=		nullmailer-2.1
-PKGREVISION=		2
+DISTNAME=		nullmailer-2.2
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE:Q}
 
