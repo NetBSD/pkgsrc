@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4371 2018/10/13 16:19:43 nia Exp $
+$NetBSD: CHANGES-2018,v 1.4372 2018/10/13 17:02:29 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6092,3 +6092,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/ruby-sequel to 5.13.0 [taca 2018-10-13]
 	Updated mail/nullmailer to 2.2 [schmonz 2018-10-13]
 	Added emulators/libretro-virtualjaguar version 20180812 [nia 2018-10-13]
+	Added emulators/libretro-reicast version 20181013 [nia 2018-10-13]
