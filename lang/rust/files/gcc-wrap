@@ -1,0 +1,94 @@
+#! /bin/sh
+
+# Root of targets tools + dest directories
+# or unset to default to a native build.
+
+# This script assumes target tools in $root/tools 
+# and target's destdir in $root/dest, the result of a NetBSD build.sh.
+# ...or the native root, when we don't cross-compile
+root=${CROSS_ROOT:-/}
+
+native=false
+if [ $root = "/" ]; then
+	native=true
+else
+	# What's the tools/bin prefix (if we're cross-building)?
+	gnuarch=${GNU_CROSS_TARGET:?}
+fi
+
+# Who are we a wrapper for? (Typically either gcc or c++)
+who=$(basename $0 | sed -e 's/-wrap$//')
+
+args=""
+linking=false
+
+# Step through args, tweak where required
+set -- "$@"
+while [ $# -gt 0 ]; do
+	case "$1" in
+# Insert = at the front of -isystem args.
+# This is to get --sysroot prepended, so that
+# we pick up the correct set of header files.
+# (I thought this wasn't reqired, but apparently it is...)
+		-isystem)
+			shift
+			args="$args -isystem =$1"
+			;;
+# Also doctor -I directives of known paths and
+# redirect them to the --sysroot.
+		-I/usr/include)
+			args="$args -I=/usr/include"
+			;;
+		-I/usr/include/krb5)
+			args="$args -I=/usr/include/krb5"
+			;;
+		-l*)
+			args="$args $1"
+			linking=true
+			;;
+		*)
+			args="$args $1"
+			;;
+	esac
+	shift
+done
+
+if $linking; then
+	# Lib directories to ensure we search and have in run-path
+	libs="/lib /usr/lib /usr/pkg/lib"
+
+	for d in $libs; do
+		# Run-path is for when we execute on the target,
+		# so no $root prefix
+		if ! $native; then
+			args="$args -L ${root}/dest/$d"
+		fi
+		args="$args -Wl,-rpath,$d"
+	done
+
+	# ...and add a placeholder so we can tweak with chrpath,
+	# since chrpath can't extend the length of the run path
+	placeholder="placeholder-$(date | openssl dgst -sha1 | \
+		awk '{ print $2 }')"
+	args="$args -Wl,-rpath,/$placeholder"
+	# the / is a sneaky attempt to let it past cwrapper...
+
+	# More debugging
+	args="$args -Wl,--verbose"
+
+	# For backtrace() (have patch now elsewhere)
+	#args="$args -lexecinfo"
+fi
+
+if $native; then
+	# Try to avoid cwrappers, which does "undocumented magic"
+	cmd="/usr/bin/${who} $args"
+else
+	cmd="${root}/tools/bin/${gnuarch}-${who} \
+		--sysroot=${root}/dest \
+		$args"
+fi
+
+# Cannot echo to stdout, messes up e.g. "gcc -print-prog-name=ld" output...
+#echo $cmd >&2
+exec $cmd
