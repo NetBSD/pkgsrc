@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.53 2017/11/27 13:01:37 adam Exp $
+# $NetBSD: Makefile,v 1.54 2018/10/13 11:14:38 leot Exp $
 
 DISTNAME=	tidy-html5-5.6.0
 PKGNAME=	${DISTNAME:S/-html5//}
+PKGREVISION=	1
 CATEGORIES=	www textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=htacg/}
 

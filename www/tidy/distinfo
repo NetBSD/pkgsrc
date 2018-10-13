@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.24 2017/11/27 13:01:37 adam Exp $
+$NetBSD: distinfo,v 1.25 2018/10/13 11:14:38 leot Exp $
 
 SHA1 (tidy-html5-5.6.0.tar.gz) = bd6812f3493095c4ca42be11fe3884d1da11c361
 RMD160 (tidy-html5-5.6.0.tar.gz) = 54ffd0e53240ca7e2e619fb527bd1db7cb68e66f
 SHA512 (tidy-html5-5.6.0.tar.gz) = 179088a6dbd29bb0e4f0219222f755b186145495f7414f6d0e178803ab67140391283d35352d946f9790c6b1b5b462ee6e24f1cc84f19391cb9b65e73979ffd1
 Size (tidy-html5-5.6.0.tar.gz) = 665438 bytes
+SHA1 (patch-src_clean.c) = a846b09ef29b747f71e92669397e55a1e1b3bc8d
