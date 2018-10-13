@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4362 2018/10/12 23:50:39 nia Exp $
+$NetBSD: CHANGES-2018,v 1.4363 2018/10/13 01:25:22 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6082,3 +6082,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated emulators/libretro-core-info to 1.7.5 [nia 2018-10-12]
 	Updated emulators/retroarch to 1.7.5 [nia 2018-10-12]
 	Updated chat/gajim-plugin-omemo to 2.6.2 [nia 2018-10-12]
+	Updated net/dnscrypt-proxy2 to 2.0.17 [nia 2018-10-13]
