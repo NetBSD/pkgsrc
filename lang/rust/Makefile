@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2018/10/13 10:03:36 he Exp $
+# $NetBSD: Makefile,v 1.56 2018/10/13 11:46:47 he Exp $
 
 DISTNAME=	rustc-1.29.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -54,7 +54,7 @@ CONFIGURE_ARGS.SunOS+=	--disable-jemalloc
 #CONFIGURE_ARGS+=	--set=target.${TARGET}.cc=${.CURDIR}/files/gcc-wrap
 #CONFIGURE_ARGS+=	--set=target.${TARGET}.cxx=${.CURDIR}/files/c++-wrap
 #CONFIGURE_ARGS+=	--set=target.${TARGET}.linker=${.CURDIR}/files/gcc-wrap
-#CONFIGURE_ARGS+=	--set=target.${TARGET}.ar=${CROSS_ROOT}/tools/bin/${CROSS_TARGET}-ar
+#CONFIGURE_ARGS+=	--set=target.${TARGET}.ar=${CROSS_ROOT}/tools/bin/${GNU_CROSS_TARGET}-ar
 
 # May be required when cross-building on NetBSD
 #MAKE_ENV+=		OPENSSL_DIR=/usr
