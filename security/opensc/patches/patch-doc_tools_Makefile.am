@@ -1,17 +1,17 @@
-$NetBSD: patch-doc_tools_Makefile.am,v 1.1 2015/09/07 20:00:09 gdt Exp $
+$NetBSD: patch-doc_tools_Makefile.am,v 1.2 2018/10/13 10:54:05 mlelstv Exp $
 
 These files are interpreted as config files by the pkgsrc framework,
 and there's no agreed-upon place to put them.  For now, just skip
 installing them.  Not reported upstream.
 
---- doc/tools/Makefile.am.orig	2015-05-16 20:30:24.000000000 +0000
+--- doc/tools/Makefile.am.orig	2018-09-13 11:47:21.000000000 +0000
 +++ doc/tools/Makefile.am
-@@ -10,7 +10,7 @@ man1_MANS = $(patsubst $(srcdir)/%.xml, 
- man5_MANS = $(patsubst $(srcdir)/%.xml, %, $(wildcard $(srcdir)/*.5.xml))
+@@ -14,7 +14,7 @@ if ENABLE_MAN
+ man1_MANS = $(patsubst $(srcdir)/%.xml, %, $(wildcard $(srcdir)/*.1.xml))
  endif
  
 -completion_DATA = $(patsubst $(srcdir)/%.1.xml, %, $(wildcard $(srcdir)/*.1.xml))
 +#completion_DATA = $(patsubst $(srcdir)/%.1.xml, %, $(wildcard $(srcdir)/*.1.xml))
- completiondir = $(sysconfdir)/bash_completion.d
  
- tools.html: $(srcdir)/tools.xml $(wildcard $(srcdir)/*.1.xml) $(wildcard $(srcdir)/*.5.xml)
+ tools.html: $(srcdir)/tools.xml $(wildcard $(srcdir)/*.1.xml)
+ 	$(XSLTPROC) --nonet --path "$(srcdir)/..:$(xslstylesheetsdir)/html" --xinclude -o $@ html.xsl $<
