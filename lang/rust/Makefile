@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2018/10/13 11:46:47 he Exp $
+# $NetBSD: Makefile,v 1.57 2018/10/13 17:54:57 he Exp $
 
 DISTNAME=	rustc-1.29.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -238,6 +238,7 @@ post-extract:
 .if ${OPSYS} == "NetBSD"
 	${RM} -f ${.CURDIR}/files/c++-wrap
 	${LN} -s ${.CURDIR}/files/gcc-wrap ${.CURDIR}/files/c++-wrap
+	${CHMOD} +x ${.CURDIR}/files/gcc-wrap
 .endif
 
 .if ${OPSYS} != "SunOS"
