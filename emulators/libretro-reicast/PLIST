@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2018/10/13 17:02:16 nia Exp $
+lib/libretro/reicast_libretro.so
