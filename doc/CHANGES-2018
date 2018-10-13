@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4367 2018/10/13 10:18:02 leot Exp $
+$NetBSD: CHANGES-2018,v 1.4368 2018/10/13 11:15:37 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6088,3 +6088,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/libxml2 to 2.9.8nb3 [leot 2018-10-13]
 	Updated lang/rust to 1.29.1nb1 [he 2018-10-13]
 	Updated graphics/libexif to 0.6.21nb1 [leot 2018-10-13]
+	Updated www/tidy to 5.6.0nb1 [leot 2018-10-13]
