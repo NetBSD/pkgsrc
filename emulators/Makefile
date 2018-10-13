@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.285 2018/10/13 16:19:31 nia Exp $
+# $NetBSD: Makefile,v 1.286 2018/10/13 17:02:16 nia Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -118,6 +118,7 @@ SUBDIR+=	libretro-pcsx-rearmed
 SUBDIR+=	libretro-picodrive
 SUBDIR+=	libretro-ppsspp
 SUBDIR+=	libretro-prosystem
+SUBDIR+=	libretro-reicast
 SUBDIR+=	libretro-sameboy
 SUBDIR+=	libretro-snes9x
 SUBDIR+=	libretro-snes9x2005
