@@ -1,8 +1,8 @@
-$NetBSD: patch-test_functions.in,v 1.1 2017/10/28 04:51:06 schmonz Exp $
+$NetBSD: patch-test_functions.in,v 1.2 2018/10/13 14:38:54 schmonz Exp $
 
 Find and use mkfifo(8) and svc(8) for tests.
 
---- test/functions.in.orig	2017-10-24 02:56:07.000000000 +0000
+--- test/functions.in.orig	2018-10-11 23:55:29.000000000 +0000
 +++ test/functions.in
 @@ -10,7 +10,8 @@ mkdir -p \
      $tmpdir/protocols \
@@ -14,8 +14,8 @@ Find and use mkfifo(8) and svc(8) for tests.
  ln -s $builddir/src $tmpdir/sbin
  ln -s $builddir/src $tmpdir/bin
  ln -s $builddir/protocols/* $tmpdir/protocols/
-@@ -128,7 +129,7 @@ splitblank() {
-   done
+@@ -148,7 +149,7 @@ Just testing, please ignore
+ EOF
  }
  
 -export PATH=/bin:/usr/bin:/usr/local/bin
