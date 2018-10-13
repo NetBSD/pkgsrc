@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4363 2018/10/13 01:25:22 nia Exp $
+$NetBSD: CHANGES-2018,v 1.4364 2018/10/13 06:19:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6083,3 +6083,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated emulators/retroarch to 1.7.5 [nia 2018-10-12]
 	Updated chat/gajim-plugin-omemo to 2.6.2 [nia 2018-10-12]
 	Updated net/dnscrypt-proxy2 to 2.0.17 [nia 2018-10-13]
+	Updated lang/php71 to 7.1.23 [taca 2018-10-13]
+	Updated lang/php72 to 7.2.11 [taca 2018-10-13]
