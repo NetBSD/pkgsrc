@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.5 2015/09/07 19:59:42 gdt Exp $
+$NetBSD: patch-ab,v 1.6 2018/10/13 10:54:05 mlelstv Exp $
 
 This patch was added 2009-09-10 by hasso@, with comment:
   More userfriendly default configuration.
 
---- etc/opensc.conf.in.orig	2015-05-16 20:30:24.000000000 +0000
-+++ etc/opensc.conf.in
-@@ -451,6 +451,7 @@ app default {
+--- etc/opensc.conf.example.in.orig	2018-09-13 11:47:21.000000000 +0000
++++ etc/opensc.conf.example.in
+@@ -898,6 +898,7 @@ app default {
  		#
  		# Default: no
  		# try_emulation_first = yes;
