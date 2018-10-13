@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.60 2018/09/10 15:22:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.61 2018/10/13 13:56:25 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -82,6 +82,7 @@ ${GEM_LIBDIR}/doc/release_notes/5.1.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.10.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.11.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.12.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.13.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.2.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.3.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.4.0.txt
@@ -188,6 +189,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/caller_logging.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/columns_introspection.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/connection_expiration.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/connection_validator.rb
+${GEM_LIBDIR}/lib/sequel/extensions/constant_sql_override.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/constraint_validations.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/core_extensions.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/core_refinements.rb
@@ -394,6 +396,7 @@ ${GEM_LIBDIR}/spec/extensions/columns_updated_spec.rb
 ${GEM_LIBDIR}/spec/extensions/composition_spec.rb
 ${GEM_LIBDIR}/spec/extensions/connection_expiration_spec.rb
 ${GEM_LIBDIR}/spec/extensions/connection_validator_spec.rb
+${GEM_LIBDIR}/spec/extensions/constant_sql_override_spec.rb
 ${GEM_LIBDIR}/spec/extensions/constraint_validations_plugin_spec.rb
 ${GEM_LIBDIR}/spec/extensions/constraint_validations_spec.rb
 ${GEM_LIBDIR}/spec/extensions/core_refinements_spec.rb
