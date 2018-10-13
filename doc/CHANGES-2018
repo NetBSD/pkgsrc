@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4373 2018/10/13 17:58:45 nia Exp $
+$NetBSD: CHANGES-2018,v 1.4374 2018/10/13 23:23:50 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6094,3 +6094,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added emulators/libretro-virtualjaguar version 20180812 [nia 2018-10-13]
 	Added emulators/libretro-reicast version 20181013 [nia 2018-10-13]
 	Added emulators/libretro-cap32 version 20180827 [nia 2018-10-13]
+	Updated security/libtasn1 to 4.13 [leot 2018-10-13]
