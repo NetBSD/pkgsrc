@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/08/05 18:31:02 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2018/10/14 16:21:04 adam Exp $
 
-DISTNAME=	typing_extensions-3.6.5
+DISTNAME=	typing_extensions-3.6.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/typing-extensions/}
@@ -13,9 +13,8 @@ LICENSE=	python-software-foundation
 PLIST_VARS+=	requires
 
 .include "../../lang/python/pyversion.mk"
-.if "${PYPKGPREFIX}" == "py27" || "${PYPKGPREFIX}" == "py34"
+.if ${_PYTHON_VERSION} == 27 || ${_PYTHON_VERSION} == 34
 DEPENDS+=	${PYPKGPREFIX}-typing-[0-9]*:../../devel/py-typing
-
 PLIST.requires=	yes
 .endif
 
