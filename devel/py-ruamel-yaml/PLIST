@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/10/28 08:51:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/10/14 16:26:51 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -28,6 +28,18 @@ ${PYSITELIB}/ruamel/yaml/constructor.pyo
 ${PYSITELIB}/ruamel/yaml/cyaml.py
 ${PYSITELIB}/ruamel/yaml/cyaml.pyc
 ${PYSITELIB}/ruamel/yaml/cyaml.pyo
+${PYSITELIB}/ruamel/yaml/data/__init__.py
+${PYSITELIB}/ruamel/yaml/data/__init__.pyc
+${PYSITELIB}/ruamel/yaml/data/__init__.pyo
+${PYSITELIB}/ruamel/yaml/data/__main__.py
+${PYSITELIB}/ruamel/yaml/data/__main__.pyc
+${PYSITELIB}/ruamel/yaml/data/__main__.pyo
+${PYSITELIB}/ruamel/yaml/data/data.py
+${PYSITELIB}/ruamel/yaml/data/data.pyc
+${PYSITELIB}/ruamel/yaml/data/data.pyo
+${PYSITELIB}/ruamel/yaml/data/setup.py
+${PYSITELIB}/ruamel/yaml/data/setup.pyc
+${PYSITELIB}/ruamel/yaml/data/setup.pyo
 ${PYSITELIB}/ruamel/yaml/dumper.py
 ${PYSITELIB}/ruamel/yaml/dumper.pyc
 ${PYSITELIB}/ruamel/yaml/dumper.pyo
