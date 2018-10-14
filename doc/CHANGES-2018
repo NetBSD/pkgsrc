@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4380 2018/10/14 16:05:32 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4381 2018/10/14 16:28:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6107,3 +6107,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/ucspi-ssl to 0.999.10.6 [schmonz 2018-10-14]
 	Updated net/py-scp to 0.12.1 [adam 2018-10-14]
 	Updated textproc/py-jsbeautifier to 1.8.7 [adam 2018-10-14]
+	Updated www/py-django-admin-rangefilter to 0.3.8 [adam 2018-10-14]
+	Updated devel/py-ruamel-yaml to 0.15.72 [adam 2018-10-14]
+	Updated devel/py-typing-extensions to 3.6.6 [adam 2018-10-14]
