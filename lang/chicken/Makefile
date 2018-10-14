@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2018/01/01 18:16:36 rillig Exp $
+# $NetBSD: Makefile,v 1.59 2018/10/14 09:07:24 leot Exp $
 
-DISTNAME=	chicken-4.11.0
+DISTNAME=	chicken-4.13.0
 CATEGORIES=	lang
 MASTER_SITES=	http://code.call-cc.org/releases/${PKGVERSION_NOREV}/
 MASTER_SITES+=	http://code.call-cc.org/releases/${PKGVERSION_NOREV:R}/
