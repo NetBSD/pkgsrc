@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/10/03 01:40:32 nia Exp $
+$NetBSD: distinfo,v 1.5 2018/10/14 16:44:21 nia Exp $
 
-SHA1 (libretro-gambatte-20180709-7722012ce85e56c324cb2080645347689ca379ae.tar.gz) = 1b155bafe76acae6ec207eb7da2e417513c3f8d7
-RMD160 (libretro-gambatte-20180709-7722012ce85e56c324cb2080645347689ca379ae.tar.gz) = 3eb8c9cd7064525fb32b3cca486e74f1bcb64162
-SHA512 (libretro-gambatte-20180709-7722012ce85e56c324cb2080645347689ca379ae.tar.gz) = 4f7de8ff549c51fd69042eed7883f1f73cbdf3e06677c91be428161767b7d5af24304006029e6db8fc67e0c67bfdf6764d044dee99ddc75afcd83b52c9b654bf
-Size (libretro-gambatte-20180709-7722012ce85e56c324cb2080645347689ca379ae.tar.gz) = 180439 bytes
-SHA1 (patch-libgambatte_libretro_net__serial.cpp) = fad2ef612eb7893409dbae5aca30c8d79e9cb501
+SHA1 (libretro-gambatte-20181013-dca7f55d4f50036e9e37ab3c8f6957d0c68db918.tar.gz) = 73ded6d787b5fef3d73a02ed1dba1d286030b0d3
+RMD160 (libretro-gambatte-20181013-dca7f55d4f50036e9e37ab3c8f6957d0c68db918.tar.gz) = 4b2a5cd48ef5f621869f7b0add96aef9ffce1bf0
+SHA512 (libretro-gambatte-20181013-dca7f55d4f50036e9e37ab3c8f6957d0c68db918.tar.gz) = 3b28a00a85c5c7eb8dd53e652c6b3095d162779f248c08532bee0fa2ed9dbc65e392e389ecea4f8274af42a8fea28bff1c42a6c5e12fb2b40b87ca6f77fe7b8e
+Size (libretro-gambatte-20181013-dca7f55d4f50036e9e37ab3c8f6957d0c68db918.tar.gz) = 180956 bytes
