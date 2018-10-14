@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2018/08/14 14:54:26 adam Exp $
+$NetBSD: distinfo,v 1.8 2018/10/14 16:26:51 adam Exp $
 
-SHA1 (ruamel.yaml-0.15.54.tar.gz) = 7edbf7afd5f6a4630385bcb68db862011201c0b1
-RMD160 (ruamel.yaml-0.15.54.tar.gz) = 38cb0ed812c0eb081dc47feaab6e85efde13c439
-SHA512 (ruamel.yaml-0.15.54.tar.gz) = a1dbb1ae8e0d0fb9dfce19597c40ec43b4347adf4e3894c65955cdd4db24313e3104166e344f5e283e4b87374b5996931c6fb68ce9d67c4fee9434b1cd9d1d1f
-Size (ruamel.yaml-0.15.54.tar.gz) = 287986 bytes
+SHA1 (ruamel.yaml-0.15.72.tar.gz) = 7d8675c9a2cfbae50f01a66b1dd90601dd7c848a
+RMD160 (ruamel.yaml-0.15.72.tar.gz) = 93997d1d0e1d5e1810bf20ed33105869cccb202e
+SHA512 (ruamel.yaml-0.15.72.tar.gz) = d5bb6f07ac319da8fd5bd20b5967c256717604e3bc5bf73e660c287dc15eed74169ec20dfee67ef73ee2a32a7f839ec19e7cab30d666bf171475eb32ecba5ea8
+Size (ruamel.yaml-0.15.72.tar.gz) = 309859 bytes
