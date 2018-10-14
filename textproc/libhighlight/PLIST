@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2018/10/08 13:51:28 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/10/14 12:17:50 schmonz Exp $
 lib/libhighlight.la
 share/doc/highlight/AUTHORS
 share/doc/highlight/COPYING
-share/doc/highlight/ChangeLog
+share/doc/highlight/ChangeLog.adoc
 share/doc/highlight/INSTALL
 share/doc/highlight/README.adoc
 share/doc/highlight/README_DE.adoc
@@ -451,6 +451,7 @@ share/highlight/themes/dante.theme
 share/highlight/themes/darkblue.theme
 share/highlight/themes/darkbone.theme
 share/highlight/themes/darkness.theme
+share/highlight/themes/darkplus.theme
 share/highlight/themes/darkslategray.theme
 share/highlight/themes/darkspectrum.theme
 share/highlight/themes/denim.theme

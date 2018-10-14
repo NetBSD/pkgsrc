@@ -1,10 +1,10 @@
-$NetBSD: patch-src_makefile,v 1.3 2018/10/08 13:51:28 schmonz Exp $
+$NetBSD: patch-src_makefile,v 1.4 2018/10/14 12:17:50 schmonz Exp $
 
 Use pkgsrc-specified compiler and flags.
 
---- src/makefile.orig	2018-10-07 09:31:45.000000000 +0000
+--- src/makefile.orig	2018-10-13 19:26:45.000000000 +0000
 +++ src/makefile
-@@ -13,19 +13,20 @@
+@@ -13,13 +13,13 @@
  # See src/gui-qt/highlight.pro for the Qt GUI compilation options
  
  #CXX=clang++
@@ -20,14 +20,7 @@ Use pkgsrc-specified compiler and flags.
  #CFLAGS:=-ggdb ${CFLAGS} -std=c++11
  
  CFLAGS_DILU=-fno-strict-aliasing
- 
- SO_VERSION=3.45
- 
-+LSO_VERSION=$(shell echo ${SO_VERSION} | awk -F. '{ printf "%d:%d:0\n", $$1 - 1, $$2 }')
- 
- # Source paths
- CORE_DIR=./core/
-@@ -66,14 +67,16 @@ ifdef PIC
+@@ -66,14 +66,17 @@ ifdef PIC
  	CFLAGS+=-fPIC
  endif
  
@@ -40,6 +33,7 @@ Use pkgsrc-specified compiler and flags.
  #LDFLAGS= -Wl,--as-needed
  
 -CXX_COMPILE=${CXX} ${CFLAGS} -c -I ${INCLUDE_DIR} ${LUA_CFLAGS}
++LSO_VERSION=$(shell echo ${SO_VERSION} | awk -F. '{ printf "%d:%d:0\n", $$1 - 1, $$2 }')
 +LIBTOOL=libtool --tag=CXX
 +
 +CXX_COMPILE=${LIBTOOL} --mode=compile ${CXX} ${CFLAGS} ${CXX_DIR} -I ${INCLUDE_DIR} ${LUA_CFLAGS} -c
