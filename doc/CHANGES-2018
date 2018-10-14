@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4382 2018/10/14 16:44:38 nia Exp $
+$NetBSD: CHANGES-2018,v 1.4383 2018/10/14 16:52:12 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6111,3 +6111,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-ruamel-yaml to 0.15.72 [adam 2018-10-14]
 	Updated devel/py-typing-extensions to 3.6.6 [adam 2018-10-14]
 	Updated emulators/libretro-gambatte to 20181013 [nia 2018-10-14]
+	Updated emulators/libretro-mupen64plus to 20181013 [nia 2018-10-14]
