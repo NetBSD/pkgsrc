@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2018/08/07 06:17:45 adam Exp $
+# $NetBSD: Makefile,v 1.20 2018/10/14 09:15:53 adam Exp $
 
-DISTNAME=	lz4-2.1.0
+DISTNAME=	lz4-2.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lz4/}
@@ -16,7 +16,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 .include "../../lang/python/pyversion.mk"
-.if "${PYPKGPREFIX}" == "py27"
+.if ${_PYTHON_VERSION} == 27
 DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
 .endif
 
