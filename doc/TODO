@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18590 2018/10/14 09:07:56 leot Exp $
+$NetBSD: TODO,v 1.18591 2018/10/14 17:45:41 taca Exp $
 
 Suggested new packages
 ======================
@@ -1353,6 +1353,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o spl-1.0pre6
 	o squeak-5.0
 	o squeak-vm-4.10.2.2765
+	o squid-4.3
 	o squidview-0.81
 	o sqwebmail-5.8.2
 	o srp_client-1.7.5
