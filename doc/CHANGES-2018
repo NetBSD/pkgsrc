@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4381 2018/10/14 16:28:14 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4382 2018/10/14 16:44:38 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6110,3 +6110,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-django-admin-rangefilter to 0.3.8 [adam 2018-10-14]
 	Updated devel/py-ruamel-yaml to 0.15.72 [adam 2018-10-14]
 	Updated devel/py-typing-extensions to 3.6.6 [adam 2018-10-14]
+	Updated emulators/libretro-gambatte to 20181013 [nia 2018-10-14]
