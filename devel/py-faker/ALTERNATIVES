@@ -1,1 +1,1 @@
-bin/faker @PREFIX@/bin/faker@PYVERSSUFFIX@
+bin/faker @PREFIX@/bin/faker-@PYVERSSUFFIX@
