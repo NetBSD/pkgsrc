@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2018/08/22 09:46:08 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2018/10/14 12:21:11 schmonz Exp $
 #
 
-DISTNAME=		ucspi-ssl-0.99e
-PKGREVISION=		3
+DISTNAME=		ucspi-ssl-0.10.6
+PKGNAME=		${DISTNAME:S/-0./-0.999./}
 CATEGORIES=		net
 MASTER_SITES=		https://www.fehcom.de/ipnet/ucspi-ssl/
 EXTRACT_SUFX=		.tgz
@@ -11,7 +11,7 @@ MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://www.fehcom.de/ipnet/ucspi-ssl.html
 COMMENT=		Command-line tools for SSL client-server applications
 
-WRKSRC=			${WRKDIR}/host/superscript.com/net/${PKGNAME_NOREV}
+WRKSRC=			${WRKDIR}/host/superscript.com/net/${DISTNAME}
 DJB_SLASHPACKAGE=	YES
 DJB_RESTRICTED=		no
 
@@ -53,6 +53,9 @@ DJB_CONFIG_CMDS=							\
 
 .include "../../mk/bsd.prefs.mk"
 
+CFLAGS+=		-I${PREFIX}/include/qlibs
+LDFLAGS+=		-L${PREFIX}/lib/qlibs
+
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man2 share/doc/${PKGBASE} ${EGDIR}
 
 do-install: do-install-sslperl
@@ -76,11 +79,12 @@ do-install: do-install-sslperl
 	  ${INSTALL_DATA} ${WRKSRC}/etc/${i} ${DESTDIR}${EGDIR}
 .	endfor
 
-.	for i in CERTS CHAIN-SSL CHANGES TODO UCSPI-SSL
+.	for i in CERTS CHAIN-SSL CHANGES TLSVERSION_CIPHERSUITES TLS_1_3 TODO UCSPI-SSL
 	  ${INSTALL_DATA} ${WRKSRC}/doc/${i} \
 	    ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 .	endfor
 
+.include "../../net/fehqlibs/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/djbware.mk"
