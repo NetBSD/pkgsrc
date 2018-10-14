@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4375 2018/10/14 09:07:56 leot Exp $
+$NetBSD: CHANGES-2018,v 1.4376 2018/10/14 09:17:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6096,3 +6096,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Added emulators/libretro-cap32 version 20180827 [nia 2018-10-13]
 	Updated security/libtasn1 to 4.13 [leot 2018-10-13]
 	Updated lang/chicken to 4.13.0 [leot 2018-10-14]
+	Updated devel/py-faker to 0.9.2 [adam 2018-10-14]
+	Updated archivers/py-lz4 to 2.1.1 [adam 2018-10-14]
