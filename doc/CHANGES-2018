@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4378 2018/10/14 12:18:55 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.4379 2018/10/14 12:21:16 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6104,3 +6104,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/libhighlight to 3.47 [schmonz 2018-10-14]
 	Updated textproc/highlight to 3.47 [schmonz 2018-10-14]
 	Updated textproc/p5-highlight to 3.47 [schmonz 2018-10-14]
+	Updated net/ucspi-ssl to 0.999.10.6 [schmonz 2018-10-14]
