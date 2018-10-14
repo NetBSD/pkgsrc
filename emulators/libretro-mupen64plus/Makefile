@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2018/10/13 17:28:57 nia Exp $
+# $NetBSD: Makefile,v 1.16 2018/10/14 16:51:57 nia Exp $
 
-DISTNAME=	libretro-mupen64plus-20180628
-PKGREVISION=	1
+DISTNAME=	libretro-mupen64plus-20181013
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	mupen64plus-libretro
-GITHUB_TAG=	4ca2fa8633666e26e2f163dcd3c226b598cb2aa4
+GITHUB_TAG=	e7ea1ae1f7a6e9913a46946e322d1a2f6d8c4ae0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://docs.libretro.com/library/mupen64plus/
