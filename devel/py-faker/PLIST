@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.15 2018/09/14 07:28:54 adam Exp $
-bin/faker${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.16 2018/10/14 09:07:09 adam Exp $
+bin/faker-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -554,6 +554,9 @@ ${PYSITELIB}/faker/providers/lorem/el_GR/__init__.pyo
 ${PYSITELIB}/faker/providers/lorem/en_US/__init__.py
 ${PYSITELIB}/faker/providers/lorem/en_US/__init__.pyc
 ${PYSITELIB}/faker/providers/lorem/en_US/__init__.pyo
+${PYSITELIB}/faker/providers/lorem/fr_FR/__init__.py
+${PYSITELIB}/faker/providers/lorem/fr_FR/__init__.pyc
+${PYSITELIB}/faker/providers/lorem/fr_FR/__init__.pyo
 ${PYSITELIB}/faker/providers/lorem/he_IL/__init__.py
 ${PYSITELIB}/faker/providers/lorem/he_IL/__init__.pyc
 ${PYSITELIB}/faker/providers/lorem/he_IL/__init__.pyo
