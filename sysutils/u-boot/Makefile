@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/06/27 14:02:59 thorpej Exp $
+# $NetBSD: Makefile,v 1.7 2018/10/14 19:26:55 aymeric Exp $
 #
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
@@ -22,6 +22,7 @@ DEPENDS+=	u-boot-chip-[0-9]*:../../sysutils/u-boot-chip
 DEPENDS+=	u-boot-cubieboard2-[0-9]*:../../sysutils/u-boot-cubieboard2
 DEPENDS+=	u-boot-cubieboard4-[0-9]*:../../sysutils/u-boot-cubieboard4
 DEPENDS+=	u-boot-cubietruck-[0-9]*:../../sysutils/u-boot-cubietruck
+DEPENDS+=	u-boot-de0-nanosoc-[0-9]*:../../sysutils/u-boot-de0-nanosoc
 DEPENDS+=	u-boot-hummingbird-a31-[0-9]*:../../sysutils/u-boot-hummingbird-a31
 DEPENDS+=	u-boot-jetson-tk1-[0-9]*:../../sysutils/u-boot-jetson-tk1
 DEPENDS+=	u-boot-jetson-tx1-[0-9]*:../../sysutils/u-boot-jetson-tx1
