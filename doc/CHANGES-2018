@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4377 2018/10/14 12:11:12 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4378 2018/10/14 12:18:55 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6101,3 +6101,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/py-m3u8 to 0.3.6 [adam 2018-10-14]
 	Updated textproc/py-mistune to 0.8.4 [adam 2018-10-14]
 	Updated textproc/py-m2r to 0.2.1 [adam 2018-10-14]
+	Updated textproc/libhighlight to 3.47 [schmonz 2018-10-14]
+	Updated textproc/highlight to 3.47 [schmonz 2018-10-14]
+	Updated textproc/p5-highlight to 3.47 [schmonz 2018-10-14]
