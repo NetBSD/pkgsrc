@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4390 2018/10/15 09:03:39 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4391 2018/10/15 10:41:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6120,3 +6120,8 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated chat/py-hangups to 0.4.6 [leot 2018-10-15]
 	Updated devel/py-logbook to 1.4.1 [adam 2018-10-15]
 	Updated net/py-py3dns to 3.2.0 [adam 2018-10-15]
+	Updated devel/py-ZopeEvent to 4.4 [adam 2018-10-15]
+	Updated devel/py-ZopeSchema to 4.9.3 [adam 2018-10-15]
+	Updated devel/py-ZopeI18NMessageid to 4.2 [adam 2018-10-15]
+	Updated devel/py-ZopeConfiguration to 4.3.0 [adam 2018-10-15]
+	Updated devel/py-ZopeComponent to 4.5 [adam 2018-10-15]
