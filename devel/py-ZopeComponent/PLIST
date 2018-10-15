@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/01/16 19:32:25 bsiegert Exp $
-${PYSITELIB}/${EGG_NAME}-nspkg.pth
+@comment $NetBSD: PLIST,v 1.2 2018/10/15 10:40:33 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,6 +6,7 @@ ${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
 ${PYSITELIB}/zope/component/__init__.py
 ${PYSITELIB}/zope/component/__init__.pyc
 ${PYSITELIB}/zope/component/__init__.pyo
@@ -100,15 +100,15 @@ ${PYSITELIB}/zope/component/tests/test_factory.pyo
 ${PYSITELIB}/zope/component/tests/test_globalregistry.py
 ${PYSITELIB}/zope/component/tests/test_globalregistry.pyc
 ${PYSITELIB}/zope/component/tests/test_globalregistry.pyo
-${PYSITELIB}/zope/component/tests/test_hookable.py
-${PYSITELIB}/zope/component/tests/test_hookable.pyc
-${PYSITELIB}/zope/component/tests/test_hookable.pyo
 ${PYSITELIB}/zope/component/tests/test_hooks.py
 ${PYSITELIB}/zope/component/tests/test_hooks.pyc
 ${PYSITELIB}/zope/component/tests/test_hooks.pyo
 ${PYSITELIB}/zope/component/tests/test_interface.py
 ${PYSITELIB}/zope/component/tests/test_interface.pyc
 ${PYSITELIB}/zope/component/tests/test_interface.pyo
+${PYSITELIB}/zope/component/tests/test_interfaces.py
+${PYSITELIB}/zope/component/tests/test_interfaces.pyc
+${PYSITELIB}/zope/component/tests/test_interfaces.pyo
 ${PYSITELIB}/zope/component/tests/test_persistentregistry.py
 ${PYSITELIB}/zope/component/tests/test_persistentregistry.pyc
 ${PYSITELIB}/zope/component/tests/test_persistentregistry.pyo
