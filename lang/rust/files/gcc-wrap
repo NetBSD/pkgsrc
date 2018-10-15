@@ -20,7 +20,36 @@ fi
 who=$(basename $0 | sed -e 's/-wrap$//')
 
 args=""
-linking=false
+
+# May need to add $linkadd before first -l or fist -L
+linkadd="-Wl,--sysroot=${root}/dest"
+# (perhaps this is overly cautious, other adjustments we do
+# below may be sufficient...)
+# Lib directories to ensure we search and have in run-path
+libs="/lib /usr/lib /usr/pkg/lib"
+
+for d in $libs; do
+	if ! $native; then
+		linkadd="$linkadd -L=$d"
+		linkadd="$linkadd -Wl,-rpath-link=${root}/dest/$d"
+	fi
+	# Run-path is for when we execute on the target,
+	# so no $root prefix
+	linkadd="$linkadd -Wl,-rpath,$d"
+done
+
+# ...and add a placeholder so we can tweak RPATH with chrpath,
+# since chrpath can't extend the length of the run path
+# (This may also not be needed, we use LD_LIBRARY_PATH instead)
+placeholder="placeholder-$(date | openssl dgst -sha1 | \
+	awk '{ print $2 }')"
+linkadd="$linkadd -Wl,-rpath,/$placeholder"
+# the / is a sneaky attempt to let it past cwrapper...
+
+# More debugging
+linkadd="$linkadd -Wl,--verbose"
+
+linktweaked=false
 
 # Step through args, tweak where required
 set -- "$@"
@@ -43,8 +72,52 @@ while [ $# -gt 0 ]; do
 			args="$args -I=/usr/include/krb5"
 			;;
 		-l*)
+			if ! $linktweaked; then
+				args="$args $linkadd"
+				linktweaked=true
+			fi
 			args="$args $1"
-			linking=true
+			;;
+		-L)
+			if ! $linktweaked; then
+				args="$args $linkadd"
+				linktweaked=true
+			fi
+			shift
+			tweaked=false
+			# redirect these to -Wl,--sysroot
+			for d in /lib /usr/lib /usr/pkg/lib; do
+				if [ $1 = $d ]; then
+					args="$args -L =$d"
+					tweaked=true
+				fi
+			done
+			# Not redirected?  If so we need to add
+			if ! $tweaked; then
+				args="$args -L $1"
+			fi
+			;;
+			
+		-L/lib)
+			if ! $linktweaked; then
+				args="$args $linkadd"
+				linktweaked=true
+			fi
+			args="$args -L=/lib"
+			;;
+		-L/usr/lib)
+			if ! $linktweaked; then
+				args="$args $linkadd"
+				linktweaked=true
+			fi
+			args="$args -L=/usr/lib"
+			;;
+		-L/usr/pkg/lib)
+			if ! $linktweaked; then
+				args="$args $linkadd"
+				linktweaked=true
+			fi
+			args="$args -L=/usr/pkg/lib"
 			;;
 		*)
 			args="$args $1"
@@ -53,35 +126,9 @@ while [ $# -gt 0 ]; do
 	shift
 done
 
-if $linking; then
-	# Lib directories to ensure we search and have in run-path
-	libs="/lib /usr/lib /usr/pkg/lib"
-
-	for d in $libs; do
-		# Run-path is for when we execute on the target,
-		# so no $root prefix
-		if ! $native; then
-			args="$args -L ${root}/dest/$d"
-		fi
-		args="$args -Wl,-rpath,$d"
-	done
-
-	# ...and add a placeholder so we can tweak with chrpath,
-	# since chrpath can't extend the length of the run path
-	placeholder="placeholder-$(date | openssl dgst -sha1 | \
-		awk '{ print $2 }')"
-	args="$args -Wl,-rpath,/$placeholder"
-	# the / is a sneaky attempt to let it past cwrapper...
-
-	# More debugging
-	args="$args -Wl,--verbose"
-
-	# For backtrace() (have patch now elsewhere)
-	#args="$args -lexecinfo"
-fi
-
 if $native; then
 	# Try to avoid cwrappers, which does "undocumented magic"
+	# by invoking the compiler "directly".
 	cmd="/usr/bin/${who} $args"
 else
 	cmd="${root}/tools/bin/${gnuarch}-${who} \
