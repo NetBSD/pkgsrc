@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2018/08/07 09:36:42 adam Exp $
+# $NetBSD: Makefile,v 1.48 2018/10/15 08:21:03 adam Exp $
 
-DISTNAME=	Cython-0.28.5
+DISTNAME=	Cython-0.29
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/Cython/}
@@ -16,15 +16,15 @@ REPLACE_PYTHON+=	Cython/Debugger/libpython.py
 REPLACE_PYTHON+=	cython.py
 
 # for test only
-#USE_LANGUAGES+= c++
+#USE_LANGUAGES=	c c++
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} runtests.py
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} cython cython${PYVERSSUFFIX} && \
-		${MV} cythonize cythonize${PYVERSSUFFIX} && \
-		${MV} cygdb cygdb${PYVERSSUFFIX} || ${TRUE}
+		${MV} cython cython-${PYVERSSUFFIX} && \
+		${MV} cythonize cythonize-${PYVERSSUFFIX} && \
+		${MV} cygdb cygdb-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
