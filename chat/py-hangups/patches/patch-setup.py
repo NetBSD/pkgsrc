@@ -1,8 +1,8 @@
-$NetBSD: patch-setup.py,v 1.2 2018/07/16 17:43:25 leot Exp $
+$NetBSD: patch-setup.py,v 1.3 2018/10/15 08:55:49 leot Exp $
 
 Avoid too strict version requirements.
 
---- setup.py.orig	2018-07-15 22:09:11.000000000 +0000
+--- setup.py.orig	2018-10-14 20:15:25.000000000 +0000
 +++ setup.py
 @@ -25,16 +25,16 @@ with open('README.rst') as f:
  # hangups from breaking when new versions of dependencies are released,
@@ -15,7 +15,7 @@ Avoid too strict version requirements.
 -    'readlike==0.1.2',
 -    'requests>=2.6.0,<3',  # uses semantic versioning (after 2.6)
 -    'ReParser==1.4.3',
--    'protobuf>=3.1.0,<3.2.0',
+-    'protobuf>=3.1.0,<=3.6.1',
 -    'urwid==1.3.1',
 -    'MechanicalSoup==0.6.0',
 +    'ConfigArgParse>=0.11.0',
