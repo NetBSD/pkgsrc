@@ -1,10 +1,10 @@
-$NetBSD: patch-runtests.py,v 1.1 2014/09/14 17:44:49 wiz Exp $
+$NetBSD: patch-runtests.py,v 1.2 2018/10/15 08:21:03 adam Exp $
 
 Use correct make for pkgsrc.
 
---- runtests.py.orig	2014-09-10 15:49:05.000000000 +0000
+--- runtests.py.orig	2018-10-14 15:27:58.000000000 +0000
 +++ runtests.py
-@@ -1450,12 +1450,12 @@ class EmbedTest(unittest.TestCase):
+@@ -1770,12 +1770,12 @@ class EmbedTest(unittest.TestCase):
          self.old_dir = os.getcwd()
          os.chdir(self.working_dir)
          os.system(
@@ -19,12 +19,12 @@ Use correct make for pkgsrc.
          except:
              pass
          os.chdir(self.old_dir)
-@@ -1476,7 +1476,7 @@ class EmbedTest(unittest.TestCase):
+@@ -1795,7 +1795,7 @@ class EmbedTest(unittest.TestCase):
              cython = os.path.join(CY3_DIR, cython)
          cython = os.path.abspath(os.path.join('..', '..', cython))
-         self.assert_(os.system(
--            "make PYTHON='%s' CYTHON='%s' LIBDIR1='%s' test > make.output" % (sys.executable, cython, libdir)) == 0)
-+            "gmake PYTHON='%s' CYTHON='%s' LIBDIR1='%s' test > make.output" % (sys.executable, cython, libdir)) == 0)
+         self.assertEqual(0, os.system(
+-            "make PYTHON='%s' CYTHON='%s' LIBDIR1='%s' test > make.output" % (sys.executable, cython, libdir)))
++            "gmake PYTHON='%s' CYTHON='%s' LIBDIR1='%s' test > make.output" % (sys.executable, cython, libdir)))
          try:
              os.remove('make.output')
          except OSError:

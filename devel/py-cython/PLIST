@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.23 2018/03/15 09:30:18 adam Exp $
-bin/cygdb${PYVERSSUFFIX}
-bin/cython${PYVERSSUFFIX}
-bin/cythonize${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.24 2018/10/15 08:21:03 adam Exp $
+bin/cygdb-${PYVERSSUFFIX}
+bin/cython-${PYVERSSUFFIX}
+bin/cythonize-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -26,6 +26,9 @@ ${PYSITELIB}/Cython/Build/Inline.pyo
 ${PYSITELIB}/Cython/Build/IpythonMagic.py
 ${PYSITELIB}/Cython/Build/IpythonMagic.pyc
 ${PYSITELIB}/Cython/Build/IpythonMagic.pyo
+${PYSITELIB}/Cython/Build/Tests/TestCyCache.py
+${PYSITELIB}/Cython/Build/Tests/TestCyCache.pyc
+${PYSITELIB}/Cython/Build/Tests/TestCyCache.pyo
 ${PYSITELIB}/Cython/Build/Tests/TestInline.py
 ${PYSITELIB}/Cython/Build/Tests/TestInline.pyc
 ${PYSITELIB}/Cython/Build/Tests/TestInline.pyo
@@ -66,7 +69,6 @@ ${PYSITELIB}/Cython/Compiler/Code.pxd
 ${PYSITELIB}/Cython/Compiler/Code.py
 ${PYSITELIB}/Cython/Compiler/Code.pyc
 ${PYSITELIB}/Cython/Compiler/Code.pyo
-${PYSITELIB}/Cython/Compiler/Code.so
 ${PYSITELIB}/Cython/Compiler/CodeGeneration.py
 ${PYSITELIB}/Cython/Compiler/CodeGeneration.pyc
 ${PYSITELIB}/Cython/Compiler/CodeGeneration.pyo
@@ -100,7 +102,6 @@ ${PYSITELIB}/Cython/Compiler/Interpreter.pyo
 ${PYSITELIB}/Cython/Compiler/Lexicon.py
 ${PYSITELIB}/Cython/Compiler/Lexicon.pyc
 ${PYSITELIB}/Cython/Compiler/Lexicon.pyo
-${PYSITELIB}/Cython/Compiler/Lexicon.so
 ${PYSITELIB}/Cython/Compiler/Main.py
 ${PYSITELIB}/Cython/Compiler/Main.pyc
 ${PYSITELIB}/Cython/Compiler/Main.pyo
@@ -130,7 +131,6 @@ ${PYSITELIB}/Cython/Compiler/Parsing.pxd
 ${PYSITELIB}/Cython/Compiler/Parsing.py
 ${PYSITELIB}/Cython/Compiler/Parsing.pyc
 ${PYSITELIB}/Cython/Compiler/Parsing.pyo
-${PYSITELIB}/Cython/Compiler/Parsing.so
 ${PYSITELIB}/Cython/Compiler/Pipeline.py
 ${PYSITELIB}/Cython/Compiler/Pipeline.pyc
 ${PYSITELIB}/Cython/Compiler/Pipeline.pyo
@@ -140,7 +140,6 @@ ${PYSITELIB}/Cython/Compiler/PyrexTypes.pyo
 ${PYSITELIB}/Cython/Compiler/Pythran.py
 ${PYSITELIB}/Cython/Compiler/Pythran.pyc
 ${PYSITELIB}/Cython/Compiler/Pythran.pyo
-${PYSITELIB}/Cython/Compiler/Pythran.so
 ${PYSITELIB}/Cython/Compiler/Scanning.pxd
 ${PYSITELIB}/Cython/Compiler/Scanning.py
 ${PYSITELIB}/Cython/Compiler/Scanning.pyc
@@ -268,7 +267,6 @@ ${PYSITELIB}/Cython/Distutils/old_build_ext.py
 ${PYSITELIB}/Cython/Distutils/old_build_ext.pyc
 ${PYSITELIB}/Cython/Distutils/old_build_ext.pyo
 ${PYSITELIB}/Cython/Includes/Deprecated/python.pxd
-${PYSITELIB}/Cython/Includes/Deprecated/python2.5.pxd
 ${PYSITELIB}/Cython/Includes/Deprecated/python_bool.pxd
 ${PYSITELIB}/Cython/Includes/Deprecated/python_buffer.pxd
 ${PYSITELIB}/Cython/Includes/Deprecated/python_bytes.pxd
@@ -308,7 +306,9 @@ ${PYSITELIB}/Cython/Includes/cpython/__init__.pxd
 ${PYSITELIB}/Cython/Includes/cpython/array.pxd
 ${PYSITELIB}/Cython/Includes/cpython/bool.pxd
 ${PYSITELIB}/Cython/Includes/cpython/buffer.pxd
+${PYSITELIB}/Cython/Includes/cpython/bytearray.pxd
 ${PYSITELIB}/Cython/Includes/cpython/bytes.pxd
+${PYSITELIB}/Cython/Includes/cpython/ceval.pxd
 ${PYSITELIB}/Cython/Includes/cpython/cobject.pxd
 ${PYSITELIB}/Cython/Includes/cpython/complex.pxd
 ${PYSITELIB}/Cython/Includes/cpython/datetime.pxd
@@ -331,6 +331,7 @@ ${PYSITELIB}/Cython/Includes/cpython/number.pxd
 ${PYSITELIB}/Cython/Includes/cpython/object.pxd
 ${PYSITELIB}/Cython/Includes/cpython/oldbuffer.pxd
 ${PYSITELIB}/Cython/Includes/cpython/pycapsule.pxd
+${PYSITELIB}/Cython/Includes/cpython/pylifecycle.pxd
 ${PYSITELIB}/Cython/Includes/cpython/pystate.pxd
 ${PYSITELIB}/Cython/Includes/cpython/pythread.pxd
 ${PYSITELIB}/Cython/Includes/cpython/ref.pxd
@@ -362,6 +363,7 @@ ${PYSITELIB}/Cython/Includes/libcpp/algorithm.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/cast.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/complex.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/deque.pxd
+${PYSITELIB}/Cython/Includes/libcpp/forward_list.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/functional.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/iterator.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/limits.pxd
@@ -446,7 +448,6 @@ ${PYSITELIB}/Cython/Shadow.pyo
 ${PYSITELIB}/Cython/StringIOTree.py
 ${PYSITELIB}/Cython/StringIOTree.pyc
 ${PYSITELIB}/Cython/StringIOTree.pyo
-${PYSITELIB}/Cython/StringIOTree.so
 ${PYSITELIB}/Cython/Tempita/__init__.py
 ${PYSITELIB}/Cython/Tempita/__init__.pyc
 ${PYSITELIB}/Cython/Tempita/__init__.pyo
@@ -466,6 +467,9 @@ ${PYSITELIB}/Cython/TestUtils.pyo
 ${PYSITELIB}/Cython/Tests/TestCodeWriter.py
 ${PYSITELIB}/Cython/Tests/TestCodeWriter.pyc
 ${PYSITELIB}/Cython/Tests/TestCodeWriter.pyo
+${PYSITELIB}/Cython/Tests/TestCythonUtils.py
+${PYSITELIB}/Cython/Tests/TestCythonUtils.pyc
+${PYSITELIB}/Cython/Tests/TestCythonUtils.pyo
 ${PYSITELIB}/Cython/Tests/TestJediTyper.py
 ${PYSITELIB}/Cython/Tests/TestJediTyper.pyc
 ${PYSITELIB}/Cython/Tests/TestJediTyper.pyo
