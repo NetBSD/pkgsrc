@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4388 2018/10/15 08:24:51 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4389 2018/10/15 08:56:13 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6117,3 +6117,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/perl5 to 5.28.0nb2 [taca 2018-10-15]
 	Updated devel/py-cython to 0.29 [adam 2018-10-15]
 	Updated devel/py-freezegun to 0.3.11 [adam 2018-10-15]
+	Updated chat/py-hangups to 0.4.6 [leot 2018-10-15]
