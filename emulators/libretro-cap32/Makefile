@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/10/13 17:58:08 nia Exp $
+# $NetBSD: Makefile,v 1.2 2018/10/15 01:49:33 nia Exp $
 
 DISTNAME=	libretro-cap32-20180827
 CATEGORIES=	emulators
@@ -12,6 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 EXTRACT_USING=	bsdtar
 USE_TOOLS+=	gmake
+USE_LANGUAGES=	c99
 
 .include "../../mk/endian.mk"
 
