@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q3,v 1.1.2.2 2018/10/07 11:35:34 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q3,v 1.1.2.3 2018/10/15 17:44:16 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q3 branch:
 
@@ -16,4 +16,7 @@ www/firefox: security update
 Pullup ticket #5840 - requested by maya
 devel/git-base: security update
 devel/git: security update
+
+Pullup ticket #5841 - requested by ryo
+lang/rust: build fix
 
