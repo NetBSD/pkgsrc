@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- completions/pkg_delete.orig	2018-03-17 08:32:34.000000000 +0000
++++ completions/pkg_delete
+@@ -1,6 +1,6 @@
+ # bash completion for FreeBSD package management tools     -*- shell-script -*-
+ 
+-[[ $OSTYPE == *freebsd* ]] || return 1
++[[ $OSTYPE == *@(free|net)bsd* ]] || return 1
+ 
+ _pkg_delete()
+ {
