@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4392 2018/10/15 11:21:17 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4393 2018/10/15 11:25:45 he Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6127,3 +6127,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-ZopeComponent to 4.5 [adam 2018-10-15]
 	Updated security/py-libtaxii to 1.1.111 [adam 2018-10-15]
 	Updated www/py-django-contrib-comments to 1.9.0 [adam 2018-10-15]
+	Updated lang/rust to 1.29.1nb2 [he 2018-10-15]
