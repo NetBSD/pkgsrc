@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.57 2018/10/13 17:54:57 he Exp $
+# $NetBSD: Makefile,v 1.58 2018/10/15 11:22:23 he Exp $
 
 DISTNAME=	rustc-1.29.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	http://static.rust-lang.org/dist/
 
@@ -37,18 +37,18 @@ CONFIGURE_ARGS.SunOS+=	--disable-jemalloc
 # The gcc-wrap / c++-wrap script takes CROSS_ROOT environment variable
 # to do a cross-build.  The wrapper script assumes dest/ and tools/
 # as a result of a cross-build as subdirectories of this root
-#CROSS_ROOT=		/u/macppc
+#CROSS_ROOT=		/u/evbarm-armv7hf
 #MAKE_ENV+=		CROSS_ROOT=${CROSS_ROOT}
 
 # The GNU cross target designation
-#GNU_CROSS_TARGET=	powerpc--netbsd
+#GNU_CROSS_TARGET=	armv7--netbsdelf-eabihf
 #MAKE_ENV+=		GNU_CROSS_TARGET=${GNU_CROSS_TARGET}
 
 # To cross-build rust, you need to specify
 # the ultimate target to built for, as well as the
 # host the compiler is supposed to run on.
 # Rust's target designation
-#TARGET=			powerpc-unknown-netbsd
+#TARGET= 		armv7-unknown-netbsd-eabihf
 #CONFIGURE_ARGS+=	--host=${TARGET}
 #CONFIGURE_ARGS+=	--target=${TARGET}
 #CONFIGURE_ARGS+=	--set=target.${TARGET}.cc=${.CURDIR}/files/gcc-wrap
@@ -199,6 +199,28 @@ SITES.${RUST_STAGE0}=	ftp://golden-delicious.urc.uninett.no/pub/rust/
 SITES.${RUST_STD_STAGE0}=	ftp://golden-delicious.urc.uninett.no/pub/rust/
 pre-build-fix:
 .endif
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64) || make(distinfo) || make (makesum) || make(mdi)
+RUST_ARCH=		sparc64-unknown-netbsd
+RUST_STAGE0_VER=	1.29.1
+RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
+RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
+DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
+# Do not trust he@.
+SITES.${RUST_STAGE0}=	ftp://golden-delicious.urc.uninett.no/pub/rust/
+SITES.${RUST_STD_STAGE0}=	ftp://golden-delicious.urc.uninett.no/pub/rust/
+pre-build-fix:
+.endif
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv7hf) || make(distinfo) || make (makesum) || make(mdi)
+RUST_ARCH=		armv7-unknown-netbsd-eabihf
+RUST_STAGE0_VER=	1.29.1
+RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
+RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
+DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
+# Do not trust he@.
+SITES.${RUST_STAGE0}=	ftp://golden-delicious.urc.uninett.no/pub/rust/
+SITES.${RUST_STD_STAGE0}=	ftp://golden-delicious.urc.uninett.no/pub/rust/
+pre-build-fix:
+.endif
 
 # You may override RUST_BOOTSTRAP_PATH and RUST_ARCH in mk.conf if you have a local bootstrap compiler.
 .if !defined(RUST_ARCH) && !defined(RUST_BOOTSTRAP_PATH)
@@ -237,7 +259,11 @@ post-extract:
 		${WRKSRC}/src/vendor/libc/.cargo-checksum.json
 .if ${OPSYS} == "NetBSD"
 	${RM} -f ${.CURDIR}/files/c++-wrap
+	${RM} -f ${.CURDIR}/files/clang++-wrap
+	${RM} -f ${.CURDIR}/files/clang-wrap
 	${LN} -s ${.CURDIR}/files/gcc-wrap ${.CURDIR}/files/c++-wrap
+	${LN} -s ${.CURDIR}/files/gcc-wrap ${.CURDIR}/files/clang++-wrap
+	${LN} -s ${.CURDIR}/files/gcc-wrap ${.CURDIR}/files/clang-wrap
 	${CHMOD} +x ${.CURDIR}/files/gcc-wrap
 .endif
 
