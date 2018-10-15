@@ -1,0 +1,3 @@
+bin/cygdb @PREFIX@/bin/cygdb-@PYVERSSUFFIX@
+bin/cython @PREFIX@/bin/cython-@PYVERSSUFFIX@
+bin/cythonize @PREFIX@/bin/cythonize-@PYVERSSUFFIX@
