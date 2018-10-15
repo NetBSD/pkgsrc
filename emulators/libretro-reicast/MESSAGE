@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2018/10/13 17:02:16 nia Exp $
+$NetBSD: MESSAGE,v 1.2 2018/10/15 17:53:23 nia Exp $
 
 Reicast requires the following BIOS files in order to work:
 
@@ -13,12 +13,5 @@ In retroarch, you'll need to place them in the System Directory.
 
 Alternatively, you can place them in your Content Directory next to the
 software you are going to run.
-
---
-
-This package is not PaX MPROTECT-safe, because of its just-in-time
-compiler.
-
-MPROTECT must be disabled for RetroArch for this core to be usable.
 
 ===========================================================================
