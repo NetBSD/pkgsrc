@@ -1,0 +1,24 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2018/10/15 17:20:21 nia Exp $
+
+Use png and curl from pkgsrc.
+
+--- CMakeLists.txt.orig	2018-10-14 19:34:08.015071627 +0000
++++ CMakeLists.txt
+@@ -613,7 +613,7 @@ else()
+   set(LZO lzo2)
+ endif()
+ 
+-if(NOT APPLE AND NOT MSVC AND NOT LIBRETRO)
++if(NOT APPLE AND NOT MSVC)
+   check_lib(PNG libpng png png.h QUIET)
+ endif()
+ if (PNG_FOUND)
+@@ -687,7 +687,7 @@ else()
+ endif()
+ 
+ find_package(CURL)
+-if(CURL_FOUND AND NOT(LIBRETRO))
++if(CURL_FOUND)
+   message(STATUS "Using shared libcurl")
+   include_directories(${CURL_INCLUDE_DIRS})
+ else()
