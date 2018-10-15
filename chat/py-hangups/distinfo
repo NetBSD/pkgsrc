@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2018/07/16 17:43:24 leot Exp $
+$NetBSD: distinfo,v 1.4 2018/10/15 08:55:49 leot Exp $
 
-SHA1 (hangups-0.4.5.tar.gz) = 0aade831325946d8dbb70469a8e0da6426a24364
-RMD160 (hangups-0.4.5.tar.gz) = 3f40fc3e322a6b4599470a9a9c9b0b888c9d6d9b
-SHA512 (hangups-0.4.5.tar.gz) = e074f6b4243268b56e840f094083a3ed79c91509f28d372b21f19b28052b14e3ab0858fed17d36996752ae09c23903fdd029e7fad80024313a9e223e3f13a06f
-Size (hangups-0.4.5.tar.gz) = 85809 bytes
-SHA1 (patch-setup.py) = edbd86241944254612e64c08b1407e6818c0063f
+SHA1 (hangups-0.4.6.tar.gz) = 4d74c09b4ddb0f1e12da65078a17bd2646f56c7c
+RMD160 (hangups-0.4.6.tar.gz) = fc740390c3b4a5ed9796b1df29e47469adecf7fa
+SHA512 (hangups-0.4.6.tar.gz) = 643f9a5073a06a4dc85c582e9dac7503d4da74a6b87f09357623ad298c8b097071cb59f89ed32d54e1235c14605d36768b5abbd069d879b19b405c281d033bc8
+Size (hangups-0.4.6.tar.gz) = 85954 bytes
+SHA1 (patch-setup.py) = 20f9615b715bdd481723ed01137159f9aa1a17ef
