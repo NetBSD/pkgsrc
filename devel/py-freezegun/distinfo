@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/03/06 08:02:55 adam Exp $
+$NetBSD: distinfo,v 1.5 2018/10/15 08:23:47 adam Exp $
 
-SHA1 (freezegun-0.3.10.tar.gz) = fa34247eed5c08c5dd50872a8e838f044d0fcd1d
-RMD160 (freezegun-0.3.10.tar.gz) = e3bb0b241b47fad8491a96f1d18bb5278d40df2d
-SHA512 (freezegun-0.3.10.tar.gz) = 64364459dc72484e2124a20a0a84d2b88617efd0578fba687adb51635d578a1e36a00cb119998082610c608e7b6c3589bff5424e38845bad026e85449c8065a5
-Size (freezegun-0.3.10.tar.gz) = 20398 bytes
+SHA1 (freezegun-0.3.11.tar.gz) = aa1deb075739ff96446251b9eac2647700d203c8
+RMD160 (freezegun-0.3.11.tar.gz) = 5b8ca318495fe9f47a18a1226ea1dc9bdbc977ce
+SHA512 (freezegun-0.3.11.tar.gz) = e8b392176641d52f6ed795c9af5fbc0a62892aeedf32b42375b56ab44a9ad7a5ecd3bb81363ed0ae65204aff2ef894cd7f2e17f42be72f31d3409b2bffa59ab8
+Size (freezegun-0.3.11.tar.gz) = 23382 bytes
