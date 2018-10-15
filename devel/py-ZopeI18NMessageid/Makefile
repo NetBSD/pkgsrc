@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/10/07 11:54:30 adam Exp $
+# $NetBSD: Makefile,v 1.3 2018/10/15 10:33:47 adam Exp $
 
-DISTNAME=	zope.i18nmessageid-4.1.0
+DISTNAME=	zope.i18nmessageid-4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/zope.i18nm/ZopeI18NM/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.i18nmessageid/}
