@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4389 2018/10/15 08:56:13 leot Exp $
+$NetBSD: CHANGES-2018,v 1.4390 2018/10/15 09:03:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6118,3 +6118,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-cython to 0.29 [adam 2018-10-15]
 	Updated devel/py-freezegun to 0.3.11 [adam 2018-10-15]
 	Updated chat/py-hangups to 0.4.6 [leot 2018-10-15]
+	Updated devel/py-logbook to 1.4.1 [adam 2018-10-15]
+	Updated net/py-py3dns to 3.2.0 [adam 2018-10-15]
