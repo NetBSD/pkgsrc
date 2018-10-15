@@ -1,0 +1,18 @@
+$NetBSD: distinfo,v 1.1 2018/10/15 17:20:21 nia Exp $
+
+SHA1 (libretro-dolphin-20180827-a5bce7d67abeaa9142d466a578ca5049197073e9.tar.gz) = 10f66e6c88d28a0ee203ce29526c862286a30e65
+RMD160 (libretro-dolphin-20180827-a5bce7d67abeaa9142d466a578ca5049197073e9.tar.gz) = 6c60c2ba633d5195efe8a1c9632c7eea09444b52
+SHA512 (libretro-dolphin-20180827-a5bce7d67abeaa9142d466a578ca5049197073e9.tar.gz) = 2229d009cc0cd73838b8ffcf3d7cd97e8ea80b6ff4daded92367e11bcf43b752c8111ea5b029d76a3d92d8a15bb0c7e22fb6a9285c918148f82837135502d685
+Size (libretro-dolphin-20180827-a5bce7d67abeaa9142d466a578ca5049197073e9.tar.gz) = 37405005 bytes
+SHA1 (patch-CMakeLists.txt) = a2645cbadef33fa5da955f577d7b076b4d56d139
+SHA1 (patch-Externals_SFML_include_SFML_Config.hpp) = 75ece2ce86b54b219a80d6ff028ecc80a00454f5
+SHA1 (patch-Source_Core_Common_MemoryUtil.cpp) = dd5792447e2a06b0a94e64b33d5bd77f0c439724
+SHA1 (patch-Source_Core_Common_StringUtil.cpp) = e7617eb9c16f479f3a3edda1a2ed7496d5ca531c
+SHA1 (patch-Source_Core_Common_Swap.h) = bbba25b164dac8109c7e95256e108cff2c71924d
+SHA1 (patch-Source_Core_Common_Thread.cpp) = 2043bdbdc07eb0e3a0e78cf5258cac10b350d26b
+SHA1 (patch-Source_Core_Core_Analytics.cpp) = 7b6b5770eea86d71c42bf309eca86eff14b1b177
+SHA1 (patch-Source_Core_Core_HW_EXI_EXI__DeviceEthernet.h) = 4c57bf3268069a504ab476775d83c00af66fb22b
+SHA1 (patch-Source_Core_Core_IOS_Network_Socket.h) = 7b75283cc3a6a886300be6d66104bbd6d16a0968
+SHA1 (patch-Source_Core_Core_MemTools.cpp) = 5289516a468136fb0f3e7395f7af4c47d73e72ee
+SHA1 (patch-Source_Core_VideoCommon_DriverDetails.cpp) = 4edf1ff02454f52e36a8d1290192bb766f65f5e5
+SHA1 (patch-Source_Core_VideoCommon_DriverDetails.h) = 12be2c451f3a74a57de6212c44333fa51c1e7f4e
