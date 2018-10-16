@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2018/07/24 15:10:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.31 2018/10/16 09:44:51 adam Exp $
 bin/cftp-${PYVERSSUFFIX}
 bin/ckeygen-${PYVERSSUFFIX}
 bin/conch-${PYVERSSUFFIX}
@@ -193,8 +193,8 @@ ${PYSITELIB}/twisted/conch/ls.py
 ${PYSITELIB}/twisted/conch/ls.pyc
 ${PYSITELIB}/twisted/conch/ls.pyo
 ${PYSITELIB}/twisted/conch/manhole.py
-${PLIST.async}${PYSITELIB}/twisted/conch/manhole.pyc
-${PLIST.async}${PYSITELIB}/twisted/conch/manhole.pyo
+${PYSITELIB}/twisted/conch/manhole.pyc
+${PYSITELIB}/twisted/conch/manhole.pyo
 ${PYSITELIB}/twisted/conch/manhole_ssh.py
 ${PYSITELIB}/twisted/conch/manhole_ssh.pyc
 ${PYSITELIB}/twisted/conch/manhole_ssh.pyo
@@ -906,8 +906,8 @@ ${PLIST.py2x}${PYSITELIB}/twisted/mail/bounce.py
 ${PLIST.py2x}${PYSITELIB}/twisted/mail/bounce.pyc
 ${PLIST.py2x}${PYSITELIB}/twisted/mail/bounce.pyo
 ${PYSITELIB}/twisted/mail/imap4.py
-${PLIST.async}${PYSITELIB}/twisted/mail/imap4.pyc
-${PLIST.async}${PYSITELIB}/twisted/mail/imap4.pyo
+${PYSITELIB}/twisted/mail/imap4.pyc
+${PYSITELIB}/twisted/mail/imap4.pyo
 ${PYSITELIB}/twisted/mail/interfaces.py
 ${PYSITELIB}/twisted/mail/interfaces.pyc
 ${PYSITELIB}/twisted/mail/interfaces.pyo
