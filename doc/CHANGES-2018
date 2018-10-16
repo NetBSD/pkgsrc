@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4395 2018/10/15 17:20:34 nia Exp $
+$NetBSD: CHANGES-2018,v 1.4396 2018/10/16 06:12:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6130,3 +6130,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/rust to 1.29.1nb2 [he 2018-10-15]
 	Updated security/ocaml-safepass to 3.0 [jaapb 2018-10-15]
 	Added emulators/libretro-dolphin version 20180827 [nia 2018-10-15]
+	Updated www/lighttpd to 1.4.51 [wiz 2018-10-16]
