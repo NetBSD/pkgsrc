@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4397 2018/10/16 09:46:03 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4398 2018/10/16 11:14:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6133,3 +6133,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/lighttpd to 1.4.51 [wiz 2018-10-16]
 	Updated graphics/py-imagesize to 1.1.0 [adam 2018-10-16]
 	Updated net/py-twisted to 18.9.0 [adam 2018-10-16]
+	Updated devel/subversion to 1.10.3 [adam 2018-10-16]
