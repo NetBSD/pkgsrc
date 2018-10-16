@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2018/08/22 09:46:06 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2018/10/16 09:44:51 adam Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
 COMMENT=	Framework for writing networked applications
 .include "../../net/py-twisted/Makefile.common"
 
@@ -22,13 +21,6 @@ REPLACE_PYTHON+=	src/twisted/trial/test/scripttest.py
 REPLACE_PYTHON+=	src/twisted/python/test/pullpipe.py
 
 USE_LANGUAGES=		c99
-
-.include "../../lang/python/pyversion.mk"
-# Temporary fix for Python 3.7: omit files that do not compile
-PLIST_VARS+=		async
-.if ${_PYTHON_VERSION} != "37"
-PLIST.async=		yes
-.endif
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
