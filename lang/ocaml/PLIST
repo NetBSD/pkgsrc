@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.48 2018/09/25 11:39:12 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.49 2018/10/16 00:19:40 gdt Exp $
 bin/ocaml
-bin/ocaml-instr-graph
-bin/ocaml-instr-report
+${PLIST.instrumented_runtime}bin/ocaml-instr-graph
+${PLIST.instrumented_runtime}bin/ocaml-instr-report
 bin/ocamlc
 bin/ocamlc.byte
 ${PLIST.ocaml-opt}bin/ocamlc.opt
@@ -38,7 +38,7 @@ bin/ocamlprof.byte
 ${PLIST.ocaml-opt}bin/ocamlprof.opt
 bin/ocamlrun
 bin/ocamlrund
-bin/ocamlruni
+${PLIST.instrumented_runtime}bin/ocamlruni
 bin/ocamlyacc
 lib/ocaml/Makefile.config
 lib/ocaml/VERSION
@@ -1300,14 +1300,14 @@ ${PLIST.ocaml-opt}lib/ocaml/libasmrun.a
 ${PLIST.ocaml-opt}lib/ocaml/libasmrun_pic.a
 ${PLIST.ocaml-opt}lib/ocaml/libasmrun_shared.so
 ${PLIST.ocaml-opt}lib/ocaml/libasmrund.a
-${PLIST.ocaml-opt}lib/ocaml/libasmruni.a
+${PLIST.instrumented_runtime}${PLIST.ocaml-opt}lib/ocaml/libasmruni.a
 ${PLIST.ocaml-prof}${PLIST.ocaml-opt}lib/ocaml/libasmrunp.a
 ${PLIST.ocaml-opt}lib/ocaml/libbigarray.a
 ${PLIST.ocaml-opt}lib/ocaml/libcamlrun.a
 ${PLIST.ocaml-opt}lib/ocaml/libcamlrun_pic.a
 ${PLIST.ocaml-opt}lib/ocaml/libcamlrun_shared.so
 ${PLIST.ocaml-opt}lib/ocaml/libcamlrund.a
-${PLIST.ocaml-opt}lib/ocaml/libcamlruni.a
+${PLIST.instrumented_runtime}${PLIST.ocaml-opt}lib/ocaml/libcamlruni.a
 ${PLIST.ocaml-opt}lib/ocaml/libcamlstr.a
 ${PLIST.ocaml-spacetime}${PLIST.ocaml-opt}lib/ocaml/libraw_spacetime_lib.a
 ${PLIST.ocaml-opt}lib/ocaml/libthreads.a
@@ -2047,7 +2047,7 @@ lib/ocaml/stublibs/dllvmthreads.so
 lib/ocaml/sys.ml
 lib/ocaml/sys.mli
 lib/ocaml/target_camlheaderd
-lib/ocaml/target_camlheaderi
+${PLIST.instrumented_runtime}lib/ocaml/target_camlheaderi
 lib/ocaml/thread.mli
 lib/ocaml/threadUnix.mli
 lib/ocaml/threads/condition.cmi
