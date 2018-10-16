@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.41 2018/07/24 15:10:04 adam Exp $
+# $NetBSD: Makefile.common,v 1.42 2018/10/16 09:44:51 adam Exp $
 #
 # used by net/py-twisted/Makefile
 # used by net/py-twisted-docs/Makefile
 
-DISTNAME=	Twisted-18.7.0
+DISTNAME=	Twisted-18.9.0
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=T/Twisted/}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,5 +12,5 @@ MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.twistedmatrix.com/
 LICENSE=	mit
 
-DISTINFO_FILE?=		${.CURDIR}/../py-twisted/distinfo
-PATCHDIR?=		${.CURDIR}/../py-twisted/patches
+DISTINFO_FILE?=	${.CURDIR}/../py-twisted/distinfo
+PATCHDIR?=	${.CURDIR}/../py-twisted/patches
