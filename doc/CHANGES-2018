@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4398 2018/10/16 11:14:02 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4399 2018/10/16 13:52:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6134,3 +6134,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/py-imagesize to 1.1.0 [adam 2018-10-16]
 	Updated net/py-twisted to 18.9.0 [adam 2018-10-16]
 	Updated devel/subversion to 1.10.3 [adam 2018-10-16]
+	Removed textproc/py-prettytable successor textproc/py-ptable [adam 2018-10-16]
+	Added textproc/py-ptable version 0.9.2 [adam 2018-10-16]
+	Updated net/py-softlayer to 5.5.3 [adam 2018-10-16]
