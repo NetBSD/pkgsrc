@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.1 2018/10/07 23:49:31 ryoon Exp $
+$NetBSD: patch-configure,v 1.2 2018/10/16 15:21:20 jperkin Exp $
 
 Don't check for pthread stubs on netbsd.
 
@@ -28,7 +28,7 @@ without DRI3 support.
  
  case "$host_os" in
 -darwin*)
-+darwin* | freebsd*)
++darwin* | freebsd* | solaris*)
      LD_BUILD_ID=""
      ;;
  *)

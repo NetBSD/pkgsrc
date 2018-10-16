@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.2 2018/10/10 11:03:02 maya Exp $
+$NetBSD: patch-configure.ac,v 1.3 2018/10/16 15:21:20 jperkin Exp $
 
 Don't check for pthread stubs anywhere, as we don't provide it.
 
@@ -21,14 +21,14 @@ This change was made to work around a problem in libEGL,
 which fails to fall back to using DRI2 when run on a system
 without DRI3 support.
 
---- configure.ac.orig	2018-02-09 02:17:57.000000000 +0000
+--- configure.ac.orig	2018-09-07 21:18:07.000000000 +0000
 +++ configure.ac
 @@ -713,7 +713,7 @@ dnl
  dnl OSX linker does not support build-id
  dnl
  case "$host_os" in
 -darwin*)
-+darwin* | freebsd*)
++darwin* | freebsd* | solaris*)
      LD_BUILD_ID=""
      ;;
  *)
