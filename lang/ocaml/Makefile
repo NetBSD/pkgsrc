@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2018/07/19 12:16:38 jaapb Exp $
+# $NetBSD: Makefile,v 1.121 2018/10/16 00:19:40 gdt Exp $
 
 .include "Makefile.common"
 
@@ -12,7 +12,8 @@ USE_TOOLS+=		bash
 
 USE_GCC_RUNTIME=	yes
 
-PLIST_VARS+=	ocaml-stub ocaml-prof ocaml-opt ocaml-nat ocaml-spacetime
+PLIST_VARS+=	ocaml-stub ocaml-prof ocaml-opt ocaml-nat ocaml-spacetime \
+		instrumented_runtime
 
 .include "options.mk"
 ###
@@ -61,6 +62,13 @@ PLIST.ocaml-nat= yes
 PLIST.ocaml-spacetime= yes
 .endif
 
+# clock_gettime(2), required by POSIX, is necessary for the
+# instrumented_runtime feature.
+# It is missing on macOS before 10.12.
+.if ${OPSYS} != "Darwin" || ${OS_VERSION:R:R} >= 16
+PLIST.instrumented_runtime=yes
+.endif
+
 # This is needed because ${WRKSRC}/build/partial-install.sh uses
 # $PWD as part of its script.  However, with /bin/sh on SunOS
 # (cd work/foo-1.0 && echo $PWD) will show that the value of PWD is
@@ -80,8 +88,10 @@ EXTRA_RT_LIBS.*=
 
 PRINT_PLIST_AWK+=	{ gsub(/lib\/ocaml\/${PKGMANDIR:S|/|\\/|}/, "lib/ocaml/$${PKGMANDIR}"); }
 
+.if defined(PLIST.instrumented_runtime)
 REPLACE_BASH+=		tools/ocaml-instr-graph
 REPLACE_AWK+=		tools/ocaml-instr-report
+.endif
 
 do-test:
 	cd ${WRKSRC}/testsuite && ${MAKE_PROGRAM} all
