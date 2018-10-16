@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.109 2018/08/18 15:55:13 adam Exp $
+$NetBSD: distinfo,v 1.110 2018/10/16 11:13:41 adam Exp $
 
-SHA1 (subversion-1.10.2.tar.bz2) = bc52ef2e671f821998ac9a5f7ebecbbcaaef83b8
-RMD160 (subversion-1.10.2.tar.bz2) = 0bbd621bb7c61f62c6072c65e3d26de4ce273a5d
-SHA512 (subversion-1.10.2.tar.bz2) = ccbe860ec93a198745e40620cb7e005a85797e344a99ddbc0e24c32ad846976eae35cf5b3d62ba5751b998f0d40bbebbba72f484d92c92693bbb2112c989b129
-Size (subversion-1.10.2.tar.bz2) = 8369762 bytes
+SHA1 (subversion-1.10.3.tar.bz2) = 7bbf350bf21901af46eb40028c50d7b6d0d4f9e0
+RMD160 (subversion-1.10.3.tar.bz2) = ee2d709e4c57fab8a95742f15a9058bca5006848
+SHA512 (subversion-1.10.3.tar.bz2) = e753c76be2c7a7d1e47ef70a417f33ad48a5076ddbe02062b478b0baf8ce063f101aab3a86895e33f6277f273917b87d8c07b002e3e4f9fe3a750a2f8142ef6d
+Size (subversion-1.10.3.tar.bz2) = 8374465 bytes
 SHA1 (patch-Makefile.in) = 49195cc867b393e90cc4658f3e7cfed5a22a26f8
 SHA1 (patch-subversion_bindings_swig_perl_native_Makefile.PL.in) = 3fadde312693f2a304cd7e348c66cbd373c57854
 SHA1 (patch-tools_dev_benchmarks_large__dirs_create__bigdir.sh) = ff19087ff4d348fdcf904eb52406f6b717fe444a
