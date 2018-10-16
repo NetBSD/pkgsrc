@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.2 2018/10/10 11:03:02 maya Exp $
+$NetBSD: distinfo,v 1.3 2018/10/16 15:21:20 jperkin Exp $
 
 SHA1 (mesa-18.2.0.tar.xz) = 73723d9f3815487f474d84eb91a5cd17edfb63d4
 RMD160 (mesa-18.2.0.tar.xz) = 51aae6c7a566d7d7da5e545ef3b4f04295897b21
 SHA512 (mesa-18.2.0.tar.xz) = e6e997e166845009f6b97da204384758c797c870b56332652c0a2636734638f9180b7e4dbad144495645308ae4d77981a2493a22d57973723338b658e0655557
 Size (mesa-18.2.0.tar.xz) = 11331164 bytes
-SHA1 (patch-configure) = c938bc7807a92fb4484d459b401133fb9fd7dbce
-SHA1 (patch-configure.ac) = 8347a3116906b8648a7841a6b109832397bd896e
+SHA1 (patch-configure) = 39093e9c7c2ea503413988ba736c11da68711c1b
+SHA1 (patch-configure.ac) = 8ef8f1d91e905f2b7ee976c8552c03b712bfb139
 SHA1 (patch-include_GL_internal_dri__interface.h) = 146d2f3f3e50fc1947e8941301d9cf9d90a035e2
 SHA1 (patch-src_amd_vulkan_winsys_amdgpu_radv__amdgpu__cs.c) = 1fe81a7b16e36dc9125400c20543271216a33a45
 SHA1 (patch-src_compiler_builtin__type__macros.h) = 857bca0c0f55ec8d7a20b3807c7a5d7bd06bdfbf
@@ -45,7 +45,7 @@ SHA1 (patch-src_mapi_glapi_gen_gl__gentable.py) = 0b1d4ef3f78a9b3726ef7f9921608a
 SHA1 (patch-src_mapi_u__current.c) = 38d324fcd1c28d155106ccd248edb5eb1aa9ffac
 SHA1 (patch-src_mapi_u__current.h) = 465a992bd34057e9521f0a33e6f2e25cefc145ca
 SHA1 (patch-src_mesa_drivers_dri_i915_intel__screen.c) = e33f51b3502e8c52ff7283aeb807996717f79f4f
-SHA1 (patch-src_mesa_drivers_dri_i965_brw__performance__query.c) = 43ca8315a4964adf7bc99d772fd817deda3ec249
+SHA1 (patch-src_mesa_drivers_dri_i965_brw__performance__query.c) = 1250b3477c4b8013b928772b7dc7f24e8c4b67aa
 SHA1 (patch-src_mesa_drivers_dri_i965_intel__screen.c) = 795b17970e95347222514bacc0701aa86fa1ff02
 SHA1 (patch-src_mesa_drivers_dri_i965_intel__tiled__memcpy.c) = 5b940f9a56c694ffaf8a4383c3a2eae25cfd35a6
 SHA1 (patch-src_mesa_drivers_dri_swrast_swrast.c) = 3106f350e590f62c8bd29cd85f24f977639dccdb
@@ -56,9 +56,10 @@ SHA1 (patch-src_mesa_main_shader__query.cpp) = 3f9c31645d87855759def11344dee16af
 SHA1 (patch-src_mesa_tnl_t__pipeline.c) = e6abcdb24019ca57527d25c5cd86737332db98e3
 SHA1 (patch-src_mesa_x86_common__x86.c) = f8c4b93443ef66d017f6aa114b877565b30f2598
 SHA1 (patch-src_util_build__id.c) = 7a9547bbda9d2fb9f0018ccf27b70b59e497aa2c
+SHA1 (patch-src_util_disk__cache.c) = cc0b29780dba5d5b5e43c0798336f16a1f0008de
 SHA1 (patch-src_util_futex.h) = 35097c3b8baf8b969c6ec5ec1feb6f4e0a48237e
 SHA1 (patch-src_util_ralloc.c) = d311bfd9ed7e673d72e050668d351c1e6552cdc8
 SHA1 (patch-src_util_strndup.h) = 73f49694ca48ad6b9a9d8346c5b84fddec2463bd
-SHA1 (patch-src_util_u__atomic.h) = beb1df2bb28151bde0405bcae3994107be6813a5
+SHA1 (patch-src_util_u__atomic.h) = 31d4514538ef5ee53012695eb5c66134aaec981e
 SHA1 (patch-src_util_u__queue.c) = 1ea1c2f8e2971235aa98be96bfd6b2b68f876072
 SHA1 (patch-src_util_xmlconfig.c) = ad5619e067957b120a70c1c63421c92b356e16ac
