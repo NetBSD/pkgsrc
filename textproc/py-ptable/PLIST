@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2018/10/16 13:47:01 adam Exp $
+bin/ptable-${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/pbr.json
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/prettytable/__init__.py
+${PYSITELIB}/prettytable/__init__.pyc
+${PYSITELIB}/prettytable/__init__.pyo
+${PYSITELIB}/prettytable/_compact.py
+${PYSITELIB}/prettytable/_compact.pyc
+${PYSITELIB}/prettytable/_compact.pyo
+${PYSITELIB}/prettytable/cli.py
+${PYSITELIB}/prettytable/cli.pyc
+${PYSITELIB}/prettytable/cli.pyo
+${PYSITELIB}/prettytable/factory.py
+${PYSITELIB}/prettytable/factory.pyc
+${PYSITELIB}/prettytable/factory.pyo
+${PYSITELIB}/prettytable/prettytable.py
+${PYSITELIB}/prettytable/prettytable.pyc
+${PYSITELIB}/prettytable/prettytable.pyo
