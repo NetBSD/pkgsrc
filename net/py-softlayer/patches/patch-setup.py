@@ -1,25 +1,15 @@
-$NetBSD: patch-setup.py,v 1.1 2018/01/23 08:58:01 fhajny Exp $
+$NetBSD: patch-setup.py,v 1.2 2018/10/16 13:49:53 adam Exp $
 
-Version Python scripts.
+Relax requirements.
 
---- setup.py.orig	2018-01-15 20:57:28.000000000 +0000
+--- setup.py.orig	2018-10-16 13:35:40.000000000 +0000
 +++ setup.py
-@@ -1,6 +1,7 @@
- from __future__ import print_function
- import codecs
- import os
-+import sys
- 
- from setuptools import setup, find_packages
- 
-@@ -25,8 +26,8 @@ setup(
-     url='http://github.com/softlayer/softlayer-python',
-     entry_points={
-         'console_scripts': [
--            'slcli = SoftLayer.CLI.core:main',
--            'sl = SoftLayer.CLI.deprecated:main',
-+            'slcli' + sys.version[0:3] + ' = SoftLayer.CLI.core:main',
-+            'sl' + sys.version[0:3] + ' = SoftLayer.CLI.deprecated:main',
-         ],
-     },
+@@ -32,7 +32,7 @@ setup(
      install_requires=[
+         'six >= 1.7.0',
+         'ptable >= 0.9.2',
+-        'click >= 5, < 7',
++        'click >= 5',
+         'requests >= 2.18.4',
+         'prompt_toolkit >= 0.53',
+         'pygments >= 2.0.0',
