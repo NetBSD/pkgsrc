@@ -1,2 +1,2 @@
-bin/sl @PREFIX@/bin/sl@PYVERSSUFFIX@
-bin/slcli @PREFIX@/bin/slcli@PYVERSSUFFIX@
+bin/sl @PREFIX@/bin/sl-@PYVERSSUFFIX@
+bin/slcli @PREFIX@/bin/slcli-@PYVERSSUFFIX@
