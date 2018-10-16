@@ -1,0 +1,14 @@
+$NetBSD: patch-Source_Checks_Curses_CMakeLists.txt,v 1.1 2018/10/16 16:37:21 leot Exp $
+
+- Don't insist on ncurses
+
+--- Source/Checks/Curses/CMakeLists.txt.orig	2018-10-03 12:35:51.000000000 +0000
++++ Source/Checks/Curses/CMakeLists.txt
+@@ -4,7 +4,6 @@ if(POLICY CMP0060)
+ endif()
+ project(CheckCurses C)
+ 
+-set(CURSES_NEED_NCURSES TRUE)
+ find_package(Curses)
+ if(NOT CURSES_FOUND)
+   return()

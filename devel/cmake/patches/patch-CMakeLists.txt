@@ -1,8 +1,9 @@
-$NetBSD: patch-CMakeLists.txt,v 1.6 2018/07/21 06:52:55 ryoon Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.7 2018/10/16 16:37:21 leot Exp $
 
-Don't insist on ncurses.
+- Don't insist on ncurses.
+- NetBSD curses has wsyncup(3).
 
---- CMakeLists.txt.orig	2018-07-17 11:28:59.000000000 +0000
+--- CMakeLists.txt.orig	2018-10-03 12:35:51.000000000 +0000
 +++ CMakeLists.txt
 @@ -581,7 +581,6 @@ macro (CMAKE_BUILD_UTILITIES)
      set(BUILD_CursesDialog 0)
@@ -12,3 +13,23 @@ Don't insist on ncurses.
      find_package(Curses)
      if(NOT CURSES_FOUND)
        message(WARNING
+@@ -683,19 +682,6 @@ if(NOT CMake_TEST_EXTERNAL_CMAKE)
+   # build the utilities (a macro defined in this file)
+   CMAKE_BUILD_UTILITIES()
+ 
+-  # On NetBSD ncurses is required, since curses doesn't have the wsyncup()
+-  # function. ncurses is installed via pkgsrc, so the library is in /usr/pkg/lib,
+-  # which isn't in the default linker search path. So without RPATH ccmake
+-  # doesn't run and the build doesn't succeed since ccmake is executed for
+-  # generating the documentation.
+-  if(BUILD_CursesDialog)
+-    get_filename_component(_CURSES_DIR "${CURSES_LIBRARY}" PATH)
+-    set(CURSES_NEED_RPATH FALSE)
+-    if(NOT "${_CURSES_DIR}" STREQUAL "/lib" AND NOT "${_CURSES_DIR}" STREQUAL "/usr/lib" AND NOT "${_CURSES_DIR}" STREQUAL "/lib64" AND NOT "${_CURSES_DIR}" STREQUAL "/usr/lib64")
+-      set(CURSES_NEED_RPATH TRUE)
+-    endif()
+-  endif()
+-
+   if(BUILD_QtDialog)
+     if(APPLE)
+       set(CMAKE_BUNDLE_VERSION
