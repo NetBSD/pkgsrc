@@ -1,0 +1,13 @@
+# $NetBSD: tsm_ld.so.conf.x86_64,v 1.1 2018/10/17 13:54:39 hauke Exp $
+#
+# TSM Linux x86_64 ld.so load paths
+#
+# Part of this tsm version is still 32 bit, so we need to also install the
+# 32 bit ld.so.conf snippet under /emul/linux32/etc.
+
+/opt/tivoli/tsm/client/api/bin64
+/usr/local/ibm/gsk8_64/lib64
+/usr/local/ibm/gsk8_64/lib64/C/icc/icclib
+/usr/local/ibm/gsk8_64/lib64/C/icc/osslib
+/usr/local/ibm/gsk8_64/lib64/N/icc/icclib
+/usr/local/ibm/gsk8_64/lib64/N/icc/osslib
