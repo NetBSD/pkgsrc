@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.56 2018/01/04 14:47:17 jperkin Exp $
+$NetBSD: distinfo,v 1.57 2018/10/17 12:59:49 leot Exp $
 
 SHA1 (sbcl-1.4.3-source.tar.bz2) = cf610061ee2e8bf90efcf830f45412b68f43d0dc
 RMD160 (sbcl-1.4.3-source.tar.bz2) = eb3024ae6980239c6784ee4d234874782870cca4
 SHA512 (sbcl-1.4.3-source.tar.bz2) = e730f4f095e2c3b52836df0beae08219a2e3883b4e20ba7303f24d8e51aec7c6d278ad6f9d57fac36b5aebec3fefb118d07bfd4ca48a44a3324345f2993fca62
 Size (sbcl-1.4.3-source.tar.bz2) = 5953041 bytes
 SHA1 (patch-ab) = b087921f7317523fd78396518dfd2cb1c8e6d5f9
+SHA1 (patch-src_runtime_GNUmakefile) = bb1fffdaa90897d4ddcaedc3d480778917348281
 SHA1 (patch-src_runtime_backtrace.c) = ba3d7d152b279652d7074ebc9ba615c9d899f35c
 SHA1 (patch-src_runtime_breakpoint.c) = 019d98692411b5701ce14c023ed3afab71033323
 SHA1 (patch-src_runtime_bsd-os.c) = 1c2bb3ce517aea03bbc4f09708e8300085253286
