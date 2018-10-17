@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4404 2018/10/17 14:01:03 hauke Exp $
+$NetBSD: CHANGES-2018,v 1.4405 2018/10/17 15:33:36 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6142,3 +6142,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/lowdown to 0.4.1 [maya 2018-10-17]
 	Updated lang/sbcl to 1.4.3nb1 [leot 2018-10-17]
 	Added sysutils/tsm8 version 8.1.6.0 [hauke 2018-10-17]
+	Updated finance/gnucash-docs to 3.3 [bsiegert 2018-10-17]
