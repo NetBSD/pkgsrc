@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2018/10/07 06:25:30 adam Exp $
+# $NetBSD: Makefile,v 1.19 2018/10/17 08:59:16 jperkin Exp $
 
 DISTNAME=	zstd-1.3.6
 CATEGORIES=	archivers
@@ -11,7 +11,7 @@ COMMENT=	Fast real-time compression algorithm
 LICENSE=	modified-bsd OR gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		ggrep gmake pkg-config
 PKGCONFIG_OVERRIDE+=	lib/libzstd.pc.in
 MAKE_FLAGS=		MANDIR=${PREFIX}/${PKGMANDIR}
 MAKE_FLAGS+=		mandir=${PREFIX}/${PKGMANDIR}
