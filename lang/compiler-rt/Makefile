@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/08/10 15:57:54 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2018/10/17 08:39:13 jperkin Exp $
 
 DISTNAME=	compiler-rt-6.0.1.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -13,6 +13,7 @@ LICENSE=	modified-bsd OR mit
 
 USE_LANGUAGES=	c99 c++11
 USE_CMAKE=	yes
+USE_TOOLS+=	ggrep
 GCC_REQD+=	4.8
 SSP_SUPPORTED=	no
 
@@ -39,13 +40,6 @@ PYTHON_FOR_BUILD_ONLY=	yes
 
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-BUILD_DEPENDS+=		grep>=0:../../textproc/grep
-TOOLS_PATH.grep=	${PREFIX}/bin/ggrep
-.endif
 
 .include "../../devel/googletest/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"
