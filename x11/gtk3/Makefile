@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2018/08/22 09:48:01 wiz Exp $
+# $NetBSD: Makefile,v 1.119 2018/10/17 08:39:13 jperkin Exp $
 
 DISTNAME=	gtk+-3.22.30
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
@@ -13,7 +13,7 @@ COMMENT=	GIMP Toolkit v3 - libraries for building X11 user interfaces
 LICENSE=	gnu-lgpl-v2.1
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake perl pkg-config bash xgettext msgmerge
+USE_TOOLS+=		ggrep gmake perl pkg-config bash xgettext msgmerge
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 PTHREAD_AUTO_VARS=	yes
@@ -47,12 +47,6 @@ BUILD_DIRS=		. demos/gtk-demo
 
 .include "../../mk/bsd.prefs.mk"
 
-# gtk/Makefile.am hardcodes 'grep -o' so require GNU grep on platforms
-# which do not have it.
-.if ${OPSYS} == "SunOS"
-BUILD_DEPENDS+=		grep-[0-9]*:../../textproc/grep
-TOOLS_PATH.grep=	${PREFIX}/bin/ggrep
-.endif
 # isnan and isinf are part of libc, not libm on DragonFly
 # conf tests fail detection due to conflicting definitions, just skip them
 CONFIGURE_ENV.DragonFly+=	ac_cv_func_isinf=yes
