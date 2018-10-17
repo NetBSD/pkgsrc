@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2018/10/15 11:22:23 he Exp $
+# $NetBSD: Makefile,v 1.59 2018/10/17 08:39:13 jperkin Exp $
 
 DISTNAME=	rustc-1.29.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -14,7 +14,7 @@ LICENSE=	mit OR apache-2.0
 USE_GCC_RUNTIME=	yes
 USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
-USE_TOOLS+=		bash gmake perl:build pkg-config
+USE_TOOLS+=		bash ggrep gmake perl:build pkg-config
 # For internal llvm
 BUILD_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
 
@@ -230,9 +230,7 @@ RUST_BOOTSTRAP_PATH?=	${WRKDIR}/rust-bootstrap
 .endif
 
 .if ${OPSYS} == "SunOS"
-BUILD_DEPENDS+=		grep>=0:../../textproc/grep
 BUILD_DEPENDS+=		coreutils>=0:../../sysutils/coreutils
-TOOLS_PATH.grep=	${PREFIX}/bin/ggrep
 TOOLS_CREATE+=		md5sum
 TOOLS_PATH.md5sum=	${PREFIX}/bin/gmd5sum
 .endif
