@@ -1,15 +1,18 @@
-@comment $NetBSD: PLIST,v 1.2 2017/09/16 14:27:48 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/10/17 07:01:39 maya Exp $
 bin/lowdown
+bin/lowdown-diff
 include/lowdown.h
 lib/liblowdown.a
 man/man1/lowdown.1
 man/man3/lowdown.3
 man/man3/lowdown_buf.3
+man/man3/lowdown_buf_diff.3
 man/man3/lowdown_doc_free.3
 man/man3/lowdown_doc_new.3
 man/man3/lowdown_doc_parse.3
 man/man3/lowdown_errstr.3
 man/man3/lowdown_file.3
+man/man3/lowdown_file_diff.3
 man/man3/lowdown_html_free.3
 man/man3/lowdown_html_new.3
 man/man3/lowdown_html_rndr.3
@@ -19,3 +22,4 @@ man/man3/lowdown_nroff_rndr.3
 man/man3/lowdown_tree_free.3
 man/man3/lowdown_tree_new.3
 man/man3/lowdown_tree_rndr.3
+man/man5/lowdown.5
