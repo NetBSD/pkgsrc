@@ -1,0 +1,34 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2018/10/17 13:54:39 hauke Exp $
+
+Tivoli Storage Manager Client has been installed in
+		${EMULDIR}/opt/tivoli
+with binaries in
+		${EMULDIR}/opt/tivoli/tsm/client/ba/bin
+and configuration in
+		${PKG_SYSCONFDIR}
+
+NetBSD configuration hints:
+
+- TSM expects ${EMULDIR}/etc/mtab to exist and be meaningful. The
+  suse_base package sets up a symlink to ${EMULDIR}/proc/mounts,
+  which works on NetBSD 3 or newer if you mount procfs like
+  >> procfs  /emul/linux/proc  procfs  ro,linux  0 0 <<
+  in /etc/fstab.
+  Alternatively, make ${EMULDIR}/etc/mtab a symlink to /etc/fstab.
+
+- Make sure 'passworddir' is set in tsm.sys so that the passwd file
+  ends up in ${PKG_SYSCONFDIR} instead of the shadow hierarchy.
+
+- The environment variables DSM_DIR, DSM_CONFIG, DSM_LOG
+  need to be set properly. DSM_LOG may inadvertently end up in the emul
+  shadow hierarchy.
+  There is a sample start script in ${PREFIX}/share/examples/tsm.
+
+- For backing up the native filesystem hierarchy, use a construct
+  like "ln -s / /.`hostname`" to break out of the emul shadow hierarchy.
+
+- If you want to use the GUI client dsmj (option java), the directory
+  containing the java binary needs to be in PATH.
+
+===========================================================================
