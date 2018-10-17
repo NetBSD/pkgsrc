@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/10/17 13:54:39 hauke Exp $
+# $NetBSD: Makefile,v 1.2 2018/10/17 14:32:09 hauke Exp $
 
 DISTNAME=	tsm-8.1.6.0
 PKGNAME=	${DISTNAME:C/-/8-/}
@@ -10,6 +10,8 @@ DISTFILES=	8.1.6.0-TIV-TSMBAC-LinuxX86.tar
 MAINTAINER=	hauke@NetBSD.org
 HOMEPAGE=	https://www.ibm.com/us-en/marketplace/data-protection-and-recovery
 COMMENT=	IBM Spectrum Protect (aka Tivoli Storage Manager) Client
+
+CONFLICTS+=	tsm-[0-9]*
 
 PKG_SYSCONFSUBDIR=	tsm
 DOC_DIR=		share/doc/tsm
