@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4403 2018/10/17 13:00:12 leot Exp $
+$NetBSD: CHANGES-2018,v 1.4404 2018/10/17 14:01:03 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6141,3 +6141,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/libssh to 0.76 [maya 2018-10-16]
 	Updated textproc/lowdown to 0.4.1 [maya 2018-10-17]
 	Updated lang/sbcl to 1.4.3nb1 [leot 2018-10-17]
+	Added sysutils/tsm8 version 8.1.6.0 [hauke 2018-10-17]
