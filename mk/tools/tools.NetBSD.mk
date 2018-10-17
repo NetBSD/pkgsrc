@@ -1,4 +1,4 @@
-# $NetBSD: tools.NetBSD.mk,v 1.61 2017/04/21 16:03:10 maya Exp $
+# $NetBSD: tools.NetBSD.mk,v 1.62 2018/10/17 08:30:43 jperkin Exp $
 #
 # System-supplied tools for the NetBSD operating system.
 
@@ -41,6 +41,9 @@ TOOLS_PLATFORM.ftp?=		/usr/bin/ftp
 .if exists(/usr/bin/gettext)
 TOOLS_PLATFORM.gettext?=	/usr/bin/gettext
 .endif
+TOOLS_PLATFORM.gegrep?=		/usr/bin/egrep
+TOOLS_PLATFORM.gfgrep?=		/usr/bin/fgrep
+TOOLS_PLATFORM.ggrep?=		/usr/bin/grep
 TOOLS_PLATFORM.grep?=		/usr/bin/grep
 TOOLS_PLATFORM.groff?=		/usr/bin/groff
 TOOLS_PLATFORM.gsoelim?=	${TOOLS_PLATFORM.soelim}	# GNUish
