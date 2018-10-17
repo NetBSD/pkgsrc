@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.77 2018/01/04 14:47:17 jperkin Exp $
+# $NetBSD: Makefile,v 1.78 2018/10/17 12:59:49 leot Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-1.4.3
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sbcl/}
 EXTRACT_SUFX=		.tar.bz2
@@ -72,6 +73,17 @@ SUBST_FILES.fix-bins+=		src/runtime/Config.x86-sunos
 SUBST_SED.fix-bins=		-e 's,nm ,/usr/bin/nm ,'
 SUBST_SED.fix-bins+=		-e 's,ggrep,grep,'
 
+.if defined(TOOLS_PLATFORM.paxctl)
+SBCL_PAXCTL=	${PAXCTL} +m
+MAKE_ENV+=	SBCL_PAXCTL=${SBCL_PAXCTL:Q}
+.endif
+
+INSTALL_ENV+=	BUILD_ROOT=${DESTDIR:Q}
+INSTALL_ENV+=	INSTALL_ROOT=${PREFIX:Q}
+INSTALL_ENV+=	MAN_DIR=${PREFIX:Q}/${PKGMANDIR} 
+
+NOT_PAX_MPROTECT_SAFE+=	bin/sbcl
+
 .if !empty(MACHINE_PLATFORM:MSunOS-*-i386)
 SBCL_ARCH_ARGS=		"--arch=x86"
 .elif !empty(MACHINE_PLATFORM:MSunOS-*-x86_64)
@@ -79,20 +91,23 @@ SBCL_ARCH_ARGS=		"--arch=x86-64"
 .endif
 
 do-build:
-	cd ${WRKSRC} && ${SH} make.sh --prefix=${PREFIX} ${SBCL_ARCH_ARGS} --xc-host=${SBCL_BOOT_SYSTEM:Q}
+	${RUN} ${_ULIMIT_CMD} \
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${SH} make.sh --prefix=${PREFIX} ${SBCL_ARCH_ARGS} --xc-host=${SBCL_BOOT_SYSTEM:Q}
 
 post-build:
 	cd ${WRKSRC} && ${RM} -f contrib/sb-cover/test-output/*
 
 do-install:
-	cd ${WRKSRC} && BUILD_ROOT=${DESTDIR:Q} INSTALL_ROOT=${PREFIX:Q} MAN_DIR=${PREFIX:Q}/${PKGMANDIR} ${SH} install.sh
-	rm -f ${DESTDIR}${PREFIX}/lib/sbcl/sb-posix/test-output/write-test.txt
-	rm -f ${DESTDIR}${PREFIX}/lib/sbcl/sb-posix/test-output/read-test.txt
-	rm -f ${DESTDIR}${PREFIX}/lib/sbcl/asdf-install/installer.lisp.orig
+	${RUN} ${_ULIMIT_CMD} \
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${INSTALL_ENV} ${SH} install.sh
+	${RM} -f ${DESTDIR}${PREFIX}/lib/sbcl/sb-posix/test-output/write-test.txt
+	${RM} -f ${DESTDIR}${PREFIX}/lib/sbcl/sb-posix/test-output/read-test.txt
+	${RM} -f ${DESTDIR}${PREFIX}/lib/sbcl/asdf-install/installer.lisp.orig
 
 do-test:
 #	for f in compiler.pure.lisp interface.pure.lisp compiler.impure.lisp debug.impure.lisp interface.impure.lisp; do mv ${WRKSRC}/tests/$$f ${WRKSRC}/tests/$$f.off || :; done
-	cd ${WRKSRC}/tests && ${SH} ./run-tests.sh
+	${RUN} ${_ULIMIT_CMD} \
+	cd ${WRKSRC}/tests && ${PKGSRC_SETENV} ${TEST_ENV} ${SH} ./run-tests.sh
 
 .if ${MACHINE_ARCH} == "x86_64"
 PLIST_SUBST+=	SUFX64=-64
