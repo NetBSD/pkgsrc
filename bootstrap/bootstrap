@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.250 2018/09/09 10:01:26 schmonz Exp $
+# $NetBSD: bootstrap,v 1.251 2018/10/17 11:12:46 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -1308,10 +1308,10 @@ echo ".endif			# end pkgsrc settings" >> ${BOOTSTRAP_MKCONF}
 # build and register packages
 # usage: build_package <packagedirectory>
 build_package() {
-	run_cmd "(cd $pkgsrcdir/$1 && $bmake $make_quiet_flags MAKE_JOBS=${make_jobs} PKG_COMPRESSION=none -DPKG_PRESERVE MAKECONF=${BOOTSTRAP_MKCONF} install)"
+	run_cmd "(cd $pkgsrcdir/$1 && $bmake $make_quiet_flags MAKE_JOBS=${make_jobs} PKG_COMPRESSION=none -DPKG_PRESERVE PKGSRC_KEEP_BIN_PKGS=no MAKECONF=${BOOTSTRAP_MKCONF} install)"
 }
 build_package_nopreserve() {
-	run_cmd "(cd $pkgsrcdir/$1 && $bmake $make_quiet_flags MAKE_JOBS=${make_jobs} PKG_COMPRESSION=none MAKECONF=${BOOTSTRAP_MKCONF} install)"
+	run_cmd "(cd $pkgsrcdir/$1 && $bmake $make_quiet_flags MAKE_JOBS=${make_jobs} PKG_COMPRESSION=none PKGSRC_KEEP_BIN_PKGS=no MAKECONF=${BOOTSTRAP_MKCONF} install)"
 }
 
 #
