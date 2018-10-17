@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2018/10/17 14:32:09 hauke Exp $
+# $NetBSD: Makefile,v 1.3 2018/10/17 14:44:39 hauke Exp $
 
 DISTNAME=	tsm-8.1.6.0
 PKGNAME=	${DISTNAME:C/-/8-/}
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.software.ibm.com/storage/tivoli-storage-management/maintenance/client/v8r1/Linux/LinuxX86/BA/v816/
 DISTFILES=	8.1.6.0-TIV-TSMBAC-LinuxX86.tar
