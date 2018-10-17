@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.284 2018/08/22 20:48:37 maya Exp $
+# $NetBSD: replace.mk,v 1.285 2018/10/17 08:22:19 jperkin Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -970,21 +970,35 @@ TOOLS_PATH.[=		${LOCALBASE}/bin/g[
 ######################################################################
 
 # These tools are all supplied by the textproc/grep package if there is
-# no native tool available.
+# no native tool available.  If explicit GNU versions are requested via
+# "ggrep" then they are preferred.
 #
 _TOOLS.grep=	egrep fgrep grep
 
-.for _t_ in ${_TOOLS.grep}
-.  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
-.    if !empty(PKGPATH:Mtextproc/grep)
+.if !defined(TOOLS_IGNORE.ggrep) && !empty(_USE_TOOLS:Mggrep)
+.  if !empty(PKGPATH:Mtextproc/grep)
+MAKEFLAGS+=		TOOLS_IGNORE.ggrep=
+.  elif !empty(_TOOLS_USE_PKGSRC.ggrep:M[yY][eE][sS])
+TOOLS_DEPENDS.ggrep?=	grep>=2.5.1:../../textproc/grep
+.    for _t_ in ${_TOOLS.grep}
+TOOLS_CREATE+=		g${_t_}
+TOOLS_PATH.g${_t_}=	${LOCALBASE}/bin/g${_t_}
+TOOLS_ALIASES.g${_t_}=	${_t_}
+.    endfor
+.  endif
+.else
+.  for _t_ in ${_TOOLS.grep}
+.    if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
+.      if !empty(PKGPATH:Mtextproc/grep)
 MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
-.    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
+.      elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_DEPENDS.${_t_}?=	grep>=2.5.1:../../textproc/grep
 TOOLS_CREATE+=		${_t_}
 TOOLS_PATH.${_t_}=	${LOCALBASE}/bin/g${_t_}
+.      endif
 .    endif
-.  endif
-.endfor
+.  endfor
+.endif
 
 ######################################################################
 
