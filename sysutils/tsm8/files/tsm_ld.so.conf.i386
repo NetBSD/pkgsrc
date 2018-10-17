@@ -1,0 +1,8 @@
+# $NetBSD: tsm_ld.so.conf.i386,v 1.1 2018/10/17 13:54:39 hauke Exp $
+#
+# TSM Linux i386 ld.so load paths
+
+/opt/tivoli/tsm/client/ba/bin
+/opt/tivoli/tsm/client/api/bin
+/opt/tivoli/tsm/client/hsm/bin/
+/usr/local/ibm/gsk8/lib
