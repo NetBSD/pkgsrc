@@ -1,0 +1,4 @@
+# $NetBSD: TODO,v 1.1 2018/10/17 13:54:39 hauke Exp $
+
+- patch PREFIX, VARBASE, PKG_SYSCONFDIR in files/tsm_daily.sh
+- Work out license and distribution rules
