@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.61 2017/07/10 12:32:30 joerg Exp $
+# $NetBSD: tools.Linux.mk,v 1.62 2018/10/17 08:30:43 jperkin Exp $
 #
 # System-supplied tools for the Linux operating system.
 
@@ -77,8 +77,10 @@ TOOLS_PLATFORM.dirname?=	/usr/bin/dirname
 TOOLS_PLATFORM.echo?=		echo			# shell builtin
 .if exists(/bin/egrep)
 TOOLS_PLATFORM.egrep?=		/bin/egrep
+TOOLS_PLATFORM.gegrep?=		/bin/egrep
 .elif exists(/usr/bin/egrep)
 TOOLS_PLATFORM.egrep?=		/usr/bin/egrep
+TOOLS_PLATFORM.gegrep?=		/usr/bin/egrep
 .endif
 TOOLS_PLATFORM.env?=		/usr/bin/env
 .if exists(/usr/bin/expr)
@@ -89,8 +91,10 @@ TOOLS_PLATFORM.expr?=		/bin/expr
 TOOLS_PLATFORM.false?=		false			# shell builtin
 .if exists(/bin/fgrep)
 TOOLS_PLATFORM.fgrep?=		/bin/fgrep
+TOOLS_PLATFORM.gfgrep?=		/bin/fgrep
 .elif exists(/usr/bin/fgrep)
 TOOLS_PLATFORM.fgrep?=		/usr/bin/fgrep
+TOOLS_PLATFORM.gfgrep?=		/usr/bin/fgrep
 .endif
 TOOLS_PLATFORM.file?=		/usr/bin/file
 TOOLS_PLATFORM.find?=		/usr/bin/find
@@ -116,8 +120,10 @@ TOOLS_PLATFORM.gmake?=		/usr/bin/make
 .endif
 .if exists(/bin/grep)
 TOOLS_PLATFORM.grep?=		/bin/grep
+TOOLS_PLATFORM.ggrep?=		/bin/grep
 .elif exists(/usr/bin/grep)
 TOOLS_PLATFORM.grep?=		/usr/bin/grep
+TOOLS_PLATFORM.ggrep?=		/usr/bin/grep
 .endif
 .if exists(/usr/bin/groff)
 TOOLS_PLATFORM.groff?=		/usr/bin/groff
