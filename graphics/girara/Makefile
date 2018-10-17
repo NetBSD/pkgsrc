@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/10/04 19:03:23 leot Exp $
+# $NetBSD: Makefile,v 1.14 2018/10/17 14:10:29 jperkin Exp $
 
 DISTNAME=	girara-0.3.1
 CATEGORIES=	x11
@@ -11,6 +11,8 @@ COMMENT=	Library to develop simple and minimalist user interface
 LICENSE=	zlib
 
 USE_TOOLS+=	gettext pkg-config
+
+CFLAGS.SunOS+=	-D__EXTENSIONS__
 
 .include "../../devel/py-meson/build.mk"
 .include "../../x11/gtk3/buildlink3.mk"
