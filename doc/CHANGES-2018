@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4417 2018/10/18 16:26:00 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4418 2018/10/18 17:13:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6158,3 +6158,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ruby-rugged to 0.27.5 [taca 2018-10-18]
 	Updated net/ndpi to 2.4 [adam 2018-10-18]
 	Updated net/ntopng to 3.6.1 [adam 2018-10-18]
+	Updated x11/libdrm to 2.4.96 [wiz 2018-10-18]
