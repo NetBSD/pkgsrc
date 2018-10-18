@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2018/10/17 08:39:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.60 2018/10/18 11:49:46 martin Exp $
 
 DISTNAME=	rustc-1.29.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -62,7 +62,7 @@ CONFIGURE_ARGS.SunOS+=	--disable-jemalloc
 # Getting RPATH with $ORIGIN into bootstrap may be troublesome, so 
 # uncommenting the LD_LIBRARY_PATH setting may be required to run
 # the bootstrap
-MAKE_ENV+=		LD_LIBRARY_PATH=${.CURDIR}/work/rust-bootstrap/lib
+MAKE_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/rust-bootstrap/lib
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc)
 # Bootstrapping on NetBSD/powerpc requires no debug-info from rustc
