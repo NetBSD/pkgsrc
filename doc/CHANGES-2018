@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4413 2018/10/18 14:33:15 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4414 2018/10/18 14:40:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6153,3 +6153,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/ruby25-base to 2.5.3 [taca 2018-10-18]
 	Updated lang/ruby23-base to 2.3.8 [taca 2018-10-18]
 	Updated www/drupal7 to 7.60 [taca 2018-10-18]
+	Updated www/drupal8 to 8.6.2 [taca 2018-10-18]
