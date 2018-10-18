@@ -1,11 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1 2016/04/08 16:51:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/10/18 16:24:29 adam Exp $
 bin/ndpiReader
-include/libndpi-${PKGVERSION}/libndpi/ndpi_api.h
-include/libndpi-${PKGVERSION}/libndpi/ndpi_define.h
-include/libndpi-${PKGVERSION}/libndpi/ndpi_includes.h
-include/libndpi-${PKGVERSION}/libndpi/ndpi_main.h
-include/libndpi-${PKGVERSION}/libndpi/ndpi_protocol_ids.h
-include/libndpi-${PKGVERSION}/libndpi/ndpi_protocols.h
-include/libndpi-${PKGVERSION}/libndpi/ndpi_typedefs.h
-lib/libndpi.la
+include/ndpi/ndpi_api.h
+include/ndpi/ndpi_config.h
+include/ndpi/ndpi_define.h
+include/ndpi/ndpi_includes.h
+include/ndpi/ndpi_main.h
+include/ndpi/ndpi_protocol_ids.h
+include/ndpi/ndpi_protocols.h
+include/ndpi/ndpi_typedefs.h
+include/ndpi/ndpi_unix.h
+include/ndpi/ndpi_win32.h
+lib/libndpi.a
+lib/libndpi.so
+lib/libndpi.so.${PKGVERSION}.0
 lib/pkgconfig/libndpi.pc
