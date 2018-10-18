@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4416 2018/10/18 14:44:49 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4417 2018/10/18 16:26:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6156,3 +6156,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/drupal8 to 8.6.2 [taca 2018-10-18]
 	Updated devel/libgit2 to 0.27.5 [taca 2018-10-18]
 	Updated devel/ruby-rugged to 0.27.5 [taca 2018-10-18]
+	Updated net/ndpi to 2.4 [adam 2018-10-18]
+	Updated net/ntopng to 3.6.1 [adam 2018-10-18]
