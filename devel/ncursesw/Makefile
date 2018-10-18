@@ -4,6 +4,7 @@
 
 PKGNAME=	${DISTNAME:S/ncurses/ncursesw/}
 COMMENT=	Wide character CRT screen handling and optimization package
+PKGREVISION=	1
 
 PATCHDIR=	${.CURDIR}/../../devel/ncurses/patches
 DISTINFO_FILE=	${.CURDIR}/../../devel/ncurses/distinfo
