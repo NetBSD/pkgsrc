@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/09/06 12:30:34 taca Exp $
+# $NetBSD: Makefile,v 1.13 2018/10/18 16:17:25 jperkin Exp $
 
 MODNAME=		pdo_odbc
 CATEGORIES+=		databases
@@ -15,4 +15,5 @@ CONFIGURE_ARGS+=	--with-${PKGMODNAME}=unixODBC,${BUILDLINK_PREFIX.unixodbc}
 
 .include "../../databases/php-pdo/buildlink3.mk"
 .include "../../databases/unixodbc/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
