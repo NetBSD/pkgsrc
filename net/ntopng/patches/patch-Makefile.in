@@ -1,15 +1,18 @@
-$NetBSD: patch-Makefile.in,v 1.3 2016/07/01 04:51:15 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.4 2018/10/18 16:25:40 adam Exp $
 
-Use external nDPI.
+Use Lua instead of LuaJIT2.
 
---- Makefile.in.orig	2016-06-27 19:31:18.000000000 +0000
+--- Makefile.in.orig	2018-09-19 15:35:27.000000000 +0000
 +++ Makefile.in
-@@ -11,7 +11,7 @@ MAN_DIR=$(DESTDIR)@MAN_DIR@
+@@ -29,11 +29,7 @@ MONGOOSE_INC=-I$(MONGOOSE_HOME)
  ######
- HAS_NDPI=$(shell pkg-config --exists libndpi; echo $$?)
- ifeq ($(HAS_NDPI), 0)
--    NDPI_INC = $(shell pkg-config --cflags libndpi | sed -e 's/\(-I[^ \t]*\)/\1\/libndpi/g')
-+    NDPI_INC = $(shell pkg-config --cflags libndpi | sed -e 's/\(-I[^ ]*\)/\1\/libndpi/g')
-     NDPI_LIB = $(shell pkg-config --libs libndpi)
-     NDPI_LIB_DEP =
- else
+ 
+ # Set USE_LUAJIT=0 to use the standard Lua (no JIT)
+-USE_LUAJIT=1
+-
+-ifeq ($(OS),Darwin)
+ USE_LUAJIT=0
+-endif
+ 
+ ifeq ($(USE_LUAJIT), 0)
+   LUAJIT_INC = $(shell pkg-config --cflags lua) -DDONT_USE_LUAJIT
