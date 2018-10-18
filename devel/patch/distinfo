@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.12 2018/03/03 01:31:35 mef Exp $
+$NetBSD: distinfo,v 1.13 2018/10/18 19:26:16 leot Exp $
 
 SHA1 (patch-2.7.6.tar.xz) = 6f64fa75993bdb285ac4ed6eca6c9212725bff91
 RMD160 (patch-2.7.6.tar.xz) = 439753620b4d27d606110093d0e586719b8451c3
 SHA512 (patch-2.7.6.tar.xz) = fcca87bdb67a88685a8a25597f9e015f5e60197b9a269fa350ae35a7991ed8da553939b4bbc7f7d3cfd863c67142af403b04165633acbce4339056a905e87fbd
 Size (patch-2.7.6.tar.xz) = 783756 bytes
+SHA1 (patch-src_pch.c) = 0aed6cd0d64c380767c39908c388c91ddf3003d1
+SHA1 (patch-tests_Makefile.in) = f7fd200672b65f466a982084d2b907d32a8f0a77
+SHA1 (patch-tests_ed-style) = 7d7c2d04eddaab1d07c05022908a98ef9c984e08

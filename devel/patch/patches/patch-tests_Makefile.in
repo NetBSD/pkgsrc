@@ -1,0 +1,14 @@
+$NetBSD: patch-tests_Makefile.in,v 1.1 2018/10/18 19:26:16 leot Exp $
+
+ - Add ed-style test, related to CVE-2018-1000156 fix.
+
+--- tests/Makefile.in.orig	2018-02-03 13:33:56.000000000 +0000
++++ tests/Makefile.in
+@@ -1308,6 +1308,7 @@ TESTS = \
+ 	crlf-handling \
+ 	dash-o-append \
+ 	deep-directories \
++	ed-style \
+ 	empty-files \
+ 	false-match \
+ 	fifo \
