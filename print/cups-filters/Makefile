@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.104 2018/09/02 21:32:43 wiz Exp $
+# $NetBSD: Makefile,v 1.105 2018/10/18 10:49:44 leot Exp $
 
-DISTNAME=	cups-filters-1.21.1
-PKGREVISION=	1
+DISTNAME=	cups-filters-1.21.3
 CATEGORIES=	print
 MASTER_SITES=	http://openprinting.org/download/cups-filters/
 EXTRACT_SUFX=	.tar.xz
@@ -55,6 +54,8 @@ BUILD_DEFS+=		VARBASE
 RCD_SCRIPTS=		cups-browsed
 CONF_FILES=		${PREFIX}/share/examples/cups-filters/fonts/conf.d/99pdftoopvp.conf ${PKG_SYSCONFDIR}/fontconfig/conf.d/99pdftoopvp.conf
 CONF_FILES+=		${PREFIX}/share/examples/cups-filters/cups-browsed.conf ${PKG_SYSCONFDIR}/cups/cups-browsed.conf
+
+TEST_TARGET=		check
 
 post-extract:
 	${CP} ${FILESDIR}/cups-browsed-daemonize.sh ${WRKSRC}
