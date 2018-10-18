@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2018/07/20 03:34:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2018/10/18 16:25:40 adam Exp $
 
-DISTNAME=	ntopng-2.4-stable
-PKGNAME=	ntopng-2.4
-PKGREVISION=	18
+DISTNAME=	ntopng-3.6.1
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ntop/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ntop/}
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	https://www.ntop.org/
@@ -13,12 +11,25 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	redis-[0-9]*:../../databases/redis
 
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
-USE_TOOLS+=		autoconf automake gmake pkg-config
+USE_TOOLS+=		autoconf automake bash gmake pkg-config
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-ndpi-includes=${BUILDLINK_PREFIX.ndpi}/include/ndpi
 
 RCD_SCRIPTS+=		ntopng
+
+CXXFLAGS+=		-std=c++11  # va_copy()
+
+# Portable types
+CFLAGS.SunOS+=		-Du_int8_t=uint8_t
+CFLAGS.SunOS+=		-Du_int16_t=uint16_t
+CFLAGS.SunOS+=		-Du_int32_t=uint32_t
+CFLAGS.SunOS+=		-Du_int64_t=uint64_t
+LDFLAGS.SunOS+=		-lresolv
+
+REPLACE_BASH=		httpdocs/misc/ntopng-add-user.sh
+REPLACE_BASH+=		httpdocs/misc/ntopng-utils-manage-config.in
 
 SUBST_CLASSES+=		fix-vers
 SUBST_STAGE.fix-vers=	pre-configure
@@ -27,21 +38,14 @@ SUBST_FILES.fix-vers=	configure.seed
 SUBST_SED.fix-vers=	-e 's,@VERSION@,${PKGVERSION},g'
 SUBST_SED.fix-vers+=	-e 's,@SHORT_VERSION@,${PKGVERSION_NOREV},g'
 
-# Portable types
-CFLAGS.SunOS+=		-Du_int8_t=uint8_t
-CFLAGS.SunOS+=		-Du_int16_t=uint16_t
-CFLAGS.SunOS+=		-Du_int32_t=uint32_t
-CFLAGS.SunOS+=		-Du_int64_t=uint64_t
-
-LDFLAGS.SunOS+=		-lresolv
-
 pre-configure:
 	cd ${WRKSRC} && cp configure.seed configure.ac && autoreconf -fiv
 
 .include "../../databases/hiredis/buildlink3.mk"
 .include "../../databases/rrdtool/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../lang/LuaJIT2/buildlink3.mk"
+.include "../../geography/libmaxminddb/buildlink3.mk"
+.include "../../lang/lua/buildlink3.mk"
 .include "../../net/GeoIP/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../net/ndpi/buildlink3.mk"
