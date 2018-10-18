@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2018/10/18 11:49:46 martin Exp $
+# $NetBSD: Makefile,v 1.61 2018/10/18 15:35:49 he Exp $
 
 DISTNAME=	rustc-1.29.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -49,11 +49,12 @@ CONFIGURE_ARGS.SunOS+=	--disable-jemalloc
 # host the compiler is supposed to run on.
 # Rust's target designation
 #TARGET= 		armv7-unknown-netbsd-eabihf
+#SCRIPTS=		${WRKDIR}/scripts
 #CONFIGURE_ARGS+=	--host=${TARGET}
 #CONFIGURE_ARGS+=	--target=${TARGET}
-#CONFIGURE_ARGS+=	--set=target.${TARGET}.cc=${.CURDIR}/files/gcc-wrap
-#CONFIGURE_ARGS+=	--set=target.${TARGET}.cxx=${.CURDIR}/files/c++-wrap
-#CONFIGURE_ARGS+=	--set=target.${TARGET}.linker=${.CURDIR}/files/gcc-wrap
+#CONFIGURE_ARGS+=	--set=target.${TARGET}.cc=${SCRIPTS}/gcc-wrap
+#CONFIGURE_ARGS+=	--set=target.${TARGET}.cxx=${SCRIPTS}/c++-wrap
+#CONFIGURE_ARGS+=	--set=target.${TARGET}.linker=${SCRIPTS}/gcc-wrap
 #CONFIGURE_ARGS+=	--set=target.${TARGET}.ar=${CROSS_ROOT}/tools/bin/${GNU_CROSS_TARGET}-ar
 
 # May be required when cross-building on NetBSD
@@ -256,13 +257,17 @@ post-extract:
 	${CP} -f ${WRKSRC}/src/vendor/libc/.cargo-checksum.json.patched \
 		${WRKSRC}/src/vendor/libc/.cargo-checksum.json
 .if ${OPSYS} == "NetBSD"
-	${RM} -f ${.CURDIR}/files/c++-wrap
-	${RM} -f ${.CURDIR}/files/clang++-wrap
-	${RM} -f ${.CURDIR}/files/clang-wrap
-	${LN} -s ${.CURDIR}/files/gcc-wrap ${.CURDIR}/files/c++-wrap
-	${LN} -s ${.CURDIR}/files/gcc-wrap ${.CURDIR}/files/clang++-wrap
-	${LN} -s ${.CURDIR}/files/gcc-wrap ${.CURDIR}/files/clang-wrap
-	${CHMOD} +x ${.CURDIR}/files/gcc-wrap
+	SDIR=${WRKDIR}/scripts; \
+	${MKDIR} $${SDIR}; \
+	cd $${SDIR}; \
+	${RM} -f c++-wrap; \
+	${RM} -f clang++-wrap; \
+	${RM} -f clang-wrap; \
+	${CP} ${.CURDIR}/files/gcc-wrap .; \
+	${CHMOD} +x gcc-wrap; \
+	${LN} -s gcc-wrap c++-wrap; \
+	${LN} -s gcc-wrap clang++-wrap; \
+	${LN} -s gcc-wrap clang-wrap
 .endif
 
 .if ${OPSYS} != "SunOS"
