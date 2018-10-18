@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2018/10/02 02:56:59 wen Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/10/18 14:39:38 taca Exp $
 share/drupal/.csslintrc
 share/drupal/.editorconfig
 share/drupal/.eslintignore
@@ -4148,6 +4148,7 @@ share/drupal/core/modules/contextual/contextual.info.yml
 share/drupal/core/modules/contextual/contextual.libraries.yml
 share/drupal/core/modules/contextual/contextual.module
 share/drupal/core/modules/contextual/contextual.permissions.yml
+share/drupal/core/modules/contextual/contextual.post_update.php
 share/drupal/core/modules/contextual/contextual.routing.yml
 share/drupal/core/modules/contextual/contextual.views.inc
 share/drupal/core/modules/contextual/css/contextual.icons.theme.css
@@ -6699,11 +6700,7 @@ share/drupal/core/modules/node/src/Plugin/views/wizard/NodeRevision.php
 share/drupal/core/modules/node/src/ProxyClass/ParamConverter/NodePreviewConverter.php
 share/drupal/core/modules/node/src/Routing/RouteSubscriber.php
 share/drupal/core/modules/node/src/Tests/AssertButtonsTrait.php
-share/drupal/core/modules/node/src/Tests/NodeRevisionsTest.php
 share/drupal/core/modules/node/src/Tests/NodeTestBase.php
-share/drupal/core/modules/node/src/Tests/NodeTypeTest.php
-share/drupal/core/modules/node/src/Tests/PagePreviewTest.php
-share/drupal/core/modules/node/src/Tests/Views/NodeContextualLinksTest.php
 share/drupal/core/modules/node/src/Tests/Views/NodeTestBase.php
 share/drupal/core/modules/node/templates/field--node--created.html.twig
 share/drupal/core/modules/node/templates/field--node--title.html.twig
@@ -6788,6 +6785,7 @@ share/drupal/core/modules/node/tests/src/Functional/NodeQueryAlterTest.php
 share/drupal/core/modules/node/tests/src/Functional/NodeRSSContentTest.php
 share/drupal/core/modules/node/tests/src/Functional/NodeRevisionPermissionsTest.php
 share/drupal/core/modules/node/tests/src/Functional/NodeRevisionsAllTest.php
+share/drupal/core/modules/node/tests/src/Functional/NodeRevisionsTest.php
 share/drupal/core/modules/node/tests/src/Functional/NodeRevisionsUiBypassAccessTest.php
 share/drupal/core/modules/node/tests/src/Functional/NodeRevisionsUiTest.php
 share/drupal/core/modules/node/tests/src/Functional/NodeSaveTest.php
@@ -6798,9 +6796,11 @@ share/drupal/core/modules/node/tests/src/Functional/NodeTitleTest.php
 share/drupal/core/modules/node/tests/src/Functional/NodeTitleXSSTest.php
 share/drupal/core/modules/node/tests/src/Functional/NodeTranslationUITest.php
 share/drupal/core/modules/node/tests/src/Functional/NodeTypeInitialLanguageTest.php
+share/drupal/core/modules/node/tests/src/Functional/NodeTypeTest.php
 share/drupal/core/modules/node/tests/src/Functional/NodeTypeTranslationTest.php
 share/drupal/core/modules/node/tests/src/Functional/NodeViewLanguageTest.php
 share/drupal/core/modules/node/tests/src/Functional/NodeViewTest.php
+share/drupal/core/modules/node/tests/src/Functional/PagePreviewTest.php
 share/drupal/core/modules/node/tests/src/Functional/PageViewTest.php
 share/drupal/core/modules/node/tests/src/Functional/Rest/NodeJsonAnonTest.php
 share/drupal/core/modules/node/tests/src/Functional/Rest/NodeJsonBasicAuthTest.php
@@ -6822,6 +6822,7 @@ share/drupal/core/modules/node/tests/src/Functional/Views/BulkFormTest.php
 share/drupal/core/modules/node/tests/src/Functional/Views/FilterNodeAccessTest.php
 share/drupal/core/modules/node/tests/src/Functional/Views/FilterUidRevisionTest.php
 share/drupal/core/modules/node/tests/src/Functional/Views/FrontPageTest.php
+share/drupal/core/modules/node/tests/src/Functional/Views/NodeContextualLinksTest.php
 share/drupal/core/modules/node/tests/src/Functional/Views/NodeFieldFilterTest.php
 share/drupal/core/modules/node/tests/src/Functional/Views/NodeFieldTokensTest.php
 share/drupal/core/modules/node/tests/src/Functional/Views/NodeIntegrationTest.php
@@ -6832,6 +6833,7 @@ share/drupal/core/modules/node/tests/src/Functional/Views/PathPluginTest.php
 share/drupal/core/modules/node/tests/src/Functional/Views/RevisionLinkTest.php
 share/drupal/core/modules/node/tests/src/Functional/Views/RowPluginTest.php
 share/drupal/core/modules/node/tests/src/Functional/Views/StatusExtraTest.php
+share/drupal/core/modules/node/tests/src/FunctionalJavascript/ContextualLinksTest.php
 share/drupal/core/modules/node/tests/src/FunctionalJavascript/NodePreviewLinkTest.php
 share/drupal/core/modules/node/tests/src/FunctionalJavascript/TestSettingSummariesContentType.php
 share/drupal/core/modules/node/tests/src/Kernel/Action/UnpublishByKeywordActionTest.php
