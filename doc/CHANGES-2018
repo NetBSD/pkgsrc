@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4406 2018/10/18 07:51:58 maya Exp $
+$NetBSD: CHANGES-2018,v 1.4407 2018/10/18 10:11:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6144,3 +6144,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Added sysutils/tsm8 version 8.1.6.0 [hauke 2018-10-17]
 	Updated finance/gnucash-docs to 3.3 [bsiegert 2018-10-17]
 	Updated net/vsftpd to 3.0.3nb1 [maya 2018-10-18]
+	Updated devel/py-hypothesis to 3.78.0 [adam 2018-10-18]
+	Updated devel/py-test to 3.9.1 [adam 2018-10-18]
