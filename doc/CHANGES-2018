@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4420 2018/10/18 19:26:44 leot Exp $
+$NetBSD: CHANGES-2018,v 1.4421 2018/10/18 19:43:21 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6161,3 +6161,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/libdrm to 2.4.96 [wiz 2018-10-18]
 	Updated x11/modular-xorg-server to 1.20.2 [wiz 2018-10-18]
 	Updated devel/patch to 2.7.6nb1 [leot 2018-10-18]
+	Updated devel/ncurses to 6.1nb3 [leot 2018-10-18]
