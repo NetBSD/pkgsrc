@@ -1,1 +1,1 @@
-bin/alembic @PREFIX@/bin/alembic@PYVERSSUFFIX@
+bin/alembic @PREFIX@/bin/alembic-@PYVERSSUFFIX@
