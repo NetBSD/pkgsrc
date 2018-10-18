@@ -1,0 +1,48 @@
+$NetBSD: patch-tests_ed-style,v 1.1 2018/10/18 19:26:16 leot Exp $
+
+ - Add ed-style test, related to CVE-2018-1000156 fix.
+
+--- tests/ed-style.orig	2018-10-09 17:51:47.148455875 +0000
++++ tests/ed-style
+@@ -0,0 +1,41 @@
++# Copyright (C) 2018 Free Software Foundation, Inc.
++#
++# Copying and distribution of this file, with or without modification,
++# in any medium, are permitted without royalty provided the copyright
++# notice and this notice are preserved.
++
++. $srcdir/test-lib.sh
++
++require cat
++use_local_patch
++use_tmpdir
++
++# ==============================================================
++
++cat > ed1.diff <<EOF
++0a
++foo
++.
++EOF
++
++check 'patch -e foo -i ed1.diff' <<EOF
++EOF
++
++check 'cat foo' <<EOF
++foo
++EOF
++
++cat > ed2.diff <<EOF
++1337a
++r !echo bar
++,p
++EOF
++
++check 'patch -e foo -i ed2.diff 2> /dev/null || echo "Status: $?"' <<EOF
++?
++Status: 2
++EOF
++
++check 'cat foo' <<EOF
++foo
++EOF
