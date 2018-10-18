@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2018/07/04 13:40:31 jperkin Exp $
+# $NetBSD: Makefile,v 1.46 2018/10/18 07:51:40 maya Exp $
 
 DISTNAME=	vsftpd-3.0.3
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://security.appspot.com/downloads/
 
@@ -30,8 +31,7 @@ INSTALLATION_DIRS=	libexec ${PKGMANDIR}/man5 ${PKGMANDIR}/man8 \
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	vsftpd.8 vsftpd.conf.5 vsftpd.conf
-SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
-SUBST_SED.paths+=	-e 's,@VARBASE@,${VARBASE},g'
+SUBST_VARS.paths+=	PKG_SYSCONFDIR VARBASE
 SUBST_STAGE.paths=	pre-configure
 
 MAKE_ENV+=		LIBS=${LIBS:Q}
