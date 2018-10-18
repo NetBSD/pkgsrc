@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4409 2018/10/18 10:50:15 leot Exp $
+$NetBSD: CHANGES-2018,v 1.4410 2018/10/18 14:15:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6149,3 +6149,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-autopep8 to 1.4.1 [adam 2018-10-18]
 	Updated databases/py-alembic to 1.0.1 [adam 2018-10-18]
 	Updated print/cups-filters to 1.21.3 [leot 2018-10-18]
+	Updated lang/ruby24-base to 2.4.5 [taca 2018-10-18]
