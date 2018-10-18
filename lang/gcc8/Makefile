@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/09/15 03:06:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2018/10/18 15:11:59 jperkin Exp $
 
 GCC_PKGNAME=		gcc8
 .include		"version.mk"
@@ -122,6 +122,8 @@ MAKE_ENV+=		ac_cv_func_freelocale=no
 MAKE_ENV+=		ac_cv_func_newlocale=no
 MAKE_ENV+=		ac_cv_func_uselocale=no
 .endif
+
+MAKE_ENV.SunOS+=	ac_cv_func_mkostemp=no
 
 CONFIGURE_ARGS.DragonFly+=	--disable-bootstrap
 
