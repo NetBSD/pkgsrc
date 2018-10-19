@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4428 2018/10/19 16:44:47 leot Exp $
+$NetBSD: CHANGES-2018,v 1.4429 2018/10/19 19:39:15 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6170,3 +6170,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated wm/i3 to 4.15 [jperkin 2018-10-19]
 	Updated sysutils/riemann-client to 1.10.3 [jperkin 2018-10-19]
 	Updated devel/glib2 to 2.56.2nb3 [leot 2018-10-19]
+	Updated textproc/hunspell to 1.3.3nb8 [bsiegert 2018-10-19]
