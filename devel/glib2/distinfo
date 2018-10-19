@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.236 2018/10/08 10:12:05 prlw1 Exp $
+$NetBSD: distinfo,v 1.237 2018/10/19 16:44:15 leot Exp $
 
 SHA1 (glib-2.56.2.tar.xz) = 8b18a92f81a8d033abfb43a628bae3bbaf71800c
 RMD160 (glib-2.56.2.tar.xz) = 8fe9fd51a84ebe0f61b5cb2ab97325baa51c4eb3
@@ -17,10 +17,12 @@ SHA1 (patch-cb) = 56e2a9b2de04c8e528faf7ce778503fa55dcc3ac
 SHA1 (patch-cd) = a8a90eca84a687400a92b0e26fafe4b9b6014ec3
 SHA1 (patch-cl) = 58e5b4a3e8cf0750ceadba30e379954d800f77f7
 SHA1 (patch-cm) = 534af37ae8f2bd667f630142058d4de5ea91be93
+SHA1 (patch-gio_gcredentialsprivate.h) = dab92e07f8357a7dc1a569e37f65f9b199aee281
 SHA1 (patch-gio_gdbus-2.0_codegen_gdbus-codegen.in) = ccbb10335fb477e347993444d68d5e88d9e93050
 SHA1 (patch-gio_giomodule.c) = 08181ad8d46dde1a028faa246a4852e474610eaa
 SHA1 (patch-gio_glocalfileinfo.c) = 8e0b7e9543ce3c702c468f56e7ecf418d70b049f
 SHA1 (patch-gio_gresource-tool.c) = 4eb7c9df25e9ac3e977edf3be8fb977a6fb39182
+SHA1 (patch-gio_gunixcredentialsmessage.c) = c13119ddd6262db7c03e53857e987f0c495d3312
 SHA1 (patch-gio_inotify_inotify-kernel.c) = 18fc55be06dfa4ebf7128b8d1888aaff3b2b95c0
 SHA1 (patch-glib_gmain.c) = d09ff66e475ee52d37ac0dcb463110f690ce6511
 SHA1 (patch-glib_gthread-posix.c) = ca93c8dc358453eb79b518c884464c90d7628888
