@@ -1,0 +1,14 @@
+$NetBSD: patch-completions_pkg__delete,v 1.1 2018/10/19 20:28:25 leot Exp $
+
+Added pkg_install completions
+
+--- completions/pkg_delete.orig	2018-03-17 08:32:34.000000000 +0000
++++ completions/pkg_delete
+@@ -1,6 +1,6 @@
+ # bash completion for FreeBSD package management tools     -*- shell-script -*-
+ 
+-[[ $OSTYPE == *freebsd* ]] || return 1
++[[ $OSTYPE == *@(free|net)bsd* ]] || return 1
+ 
+ _pkg_delete()
+ {
