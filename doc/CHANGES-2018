@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4426 2018/10/19 15:22:06 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.4427 2018/10/19 15:53:50 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6168,3 +6168,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/spamassassin to 3.4.2 [bsiegert 2018-10-18]
 	Added geography/gpxsee version 6.3 [abs 2018-10-19]
 	Updated wm/i3 to 4.15 [jperkin 2018-10-19]
+	Updated sysutils/riemann-client to 1.10.3 [jperkin 2018-10-19]
