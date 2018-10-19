@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2018/10/19 08:57:22 abs Exp $
+bin/gpxsee
+share/applications/gpxsee.desktop
+share/gpxsee/csv/ellipsoids.csv
+share/gpxsee/csv/gcs.csv
+share/gpxsee/csv/pcs.csv
+share/gpxsee/maps/4UMaps.xml
+share/gpxsee/maps/OpenStreetMap.xml
+share/gpxsee/maps/OpenTopoMap.xml
+share/gpxsee/maps/USGS-imagery.xml
+share/gpxsee/maps/USGS-topo.xml
+share/mime/packages/gpxsee.xml
+share/pixmaps/gpxsee.png
