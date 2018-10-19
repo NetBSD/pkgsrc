@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.5 2017/03/14 14:51:28 jperkin Exp $
 
-SHA1 (bash-completion-2.8.tar.gz) = 2a0944481a29a55011064eb7cf92ea9bda3fbdde
-RMD160 (bash-completion-2.8.tar.gz) = 027fe8e54f0c09c3edf5191ef9df62608f12d288
-SHA512 (bash-completion-2.8.tar.gz) = 4ecf47e5cd5370990151fe810bac0413e0d1ef3800fde8b9be0b6eed5b0c88a26d44e2a4476cfade5d601a66a0d87ecfe1497cd40a6728e0c1c40356748fd06d
-Size (bash-completion-2.8.tar.gz) = 326534 bytes
-SHA1 (patch-bash__completion) = 8f5dc78072496d765f4303bbd7c2b87ecf1d213b
-SHA1 (patch-completions_pkg__delete) = b3cbb596d5adfddf31b99e51f000229e6c2ed9ba
+SHA1 (bash-completion-2.8.tar.xz) = 102d618c60fa001165153b58751d07f230aec7e8
+RMD160 (bash-completion-2.8.tar.xz) = 6ec05ded0b734ebeb9caf7d84bf09d937f923ddb
+SHA512 (bash-completion-2.8.tar.xz) = d839ef5a98811a2aade7ebdc0bc84c84a41c74db384f89913b06f3c25add1ba22528ac25392b19d27280685d258c74dcdc11247cbaae5b8d82f2c0b546abc268
+Size (bash-completion-2.8.tar.xz) = 286128 bytes
+SHA1 (patch-bash__completion) = e156374446bd0a981ecf3cf26427c10f93234467
+SHA1 (patch-completions_pkg__delete) = 01efc56fd2d65edec6336a55fca0fe3d59f84e6a

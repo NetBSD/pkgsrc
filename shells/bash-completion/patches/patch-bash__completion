@@ -1,5 +1,7 @@
 $NetBSD$
 
+Added pkgsrc completions
+
 --- bash_completion.orig	2018-03-17 08:32:34.000000000 +0000
 +++ bash_completion
 @@ -1402,6 +1402,11 @@ _terms()

@@ -8,14 +8,17 @@
 VERSION=	2.8
 DISTNAME=	bash-completion-${VERSION}
 CATEGORIES=	shells
-MASTER_SITES=	-https://github.com/scop/bash-completion/archive/${VERSION}${EXTRACT_SUFX}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=scop/}
+GITHUB_PROJECT= bash-completion
+GITHUB_RELEASE= ${VERSION}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bash-completion.alioth.debian.org/
 COMMENT=	Programmable completion specifications for bash
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	bash:run gmake autoconf automake
+USE_TOOLS+=	bash:run gmake
 
 USE_LANGUAGES=	# none
 GNU_CONFIGURE=	yes
@@ -26,10 +29,6 @@ SUBST_SED.path+=	-e "s,/etc/bash_completion,${PREFIX}/share/bash-completion/bash
 SUBST_STAGE.path=	pre-build
 SUBST_FILES.path+=	README
 SUBST_MESSAGE.path=	Fixing path to completion files.
-
-pre-configure:
-	set -e; cd ${WRKSRC}; \
-	autoreconf -i
 
 # aclocal; autoheader; automake -a --foreign -i; autoconf
 

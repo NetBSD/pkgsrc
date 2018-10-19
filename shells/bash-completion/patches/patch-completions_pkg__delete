@@ -1,5 +1,7 @@
 $NetBSD$
 
+Added pkg_install completions
+
 --- completions/pkg_delete.orig	2018-03-17 08:32:34.000000000 +0000
 +++ completions/pkg_delete
 @@ -1,6 +1,6 @@
