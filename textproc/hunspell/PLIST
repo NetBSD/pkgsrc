@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.6 2015/06/07 08:22:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/10/19 17:57:42 bsiegert Exp $
 bin/affixcompress
-bin/analyze
 bin/chmorph
 bin/hunspell
+bin/hunspell-analyze
+bin/hunspell-munch
+bin/hunspell-unmunch
 bin/hunzip
 bin/hzip
 bin/ispellaff2myspell
 bin/makealias
-bin/munch
-bin/unmunch
 bin/wordforms
 bin/wordlist2hunspell
 include/hunspell/affentry.hxx
