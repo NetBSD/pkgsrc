@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/10/04 19:08:46 leot Exp $
+# $NetBSD: Makefile,v 1.22 2018/10/19 15:18:49 jperkin Exp $
 
 DISTNAME=	zathura-0.4.1
 CATEGORIES=	print
@@ -15,6 +15,8 @@ USE_TOOLS+=	pkg-config
 # XXX: msgfmt needs to support `--xml', always use the one from pkgsrc
 TOOL_DEPENDS+=	gettext-tools>=0.15:../../devel/gettext-tools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+
+CFLAGS.SunOS+=	-D__EXTENSIONS__
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/py-meson/build.mk"
