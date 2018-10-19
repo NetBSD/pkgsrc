@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/09/24 09:32:30 adam Exp $
+# $NetBSD: Makefile,v 1.12 2018/10/19 15:24:50 jperkin Exp $
 
 DISTNAME=	selenium-3.14.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,6 +17,7 @@ USE_LANGUAGES=	# none
 # these are for Linux only; see selenium/webdriver/firefox/firefox_binary.py
 CHECK_SHLIBS_SKIP+=	${PYSITELIB}/selenium/webdriver/firefox/amd64/x_ignore_nofocus.so
 CHECK_SHLIBS_SKIP+=	${PYSITELIB}/selenium/webdriver/firefox/x86/x_ignore_nofocus.so
+CHECK_SSP_SKIP=		${CHECK_SHLIBS_SKIP}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
