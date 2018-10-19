@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.9 2017/03/14 14:51:28 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2018/10/19 20:28:25 leot Exp $
 #
 # Note to packagers:
 # packages installing additional completion files should drop
 # them into ${DESTDIR}${PREFIX}/share/bash-completion.d
 # with the name of the package as file name.
 
-DISTNAME=	bash-completion-2.1
-PKGREVISION=	1
+DISTNAME=	bash-completion-2.8
 CATEGORIES=	shells
-MASTER_SITES=	http://bash-completion.alioth.debian.org/files/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=scop/}
+GITHUB_RELEASE= ${PKGVERSION_NOREV}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bash-completion.alioth.debian.org/
