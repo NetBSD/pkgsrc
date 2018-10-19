@@ -1,0 +1,42 @@
+$NetBSD: patch-src_tools_Makefile.in,v 1.1 2018/10/19 17:57:42 bsiegert Exp $
+
+--- src/tools/Makefile.in.orig	2014-04-25 21:02:00.000000000 +0000
++++ src/tools/Makefile.in
+@@ -36,8 +36,8 @@ POST_UNINSTALL = :
+ build_triplet = @build@
+ host_triplet = @host@
+ target_triplet = @target@
+-bin_PROGRAMS = analyze$(EXEEXT) chmorph$(EXEEXT) hunspell$(EXEEXT) \
+-	munch$(EXEEXT) unmunch$(EXEEXT) hzip$(EXEEXT) hunzip$(EXEEXT)
++bin_PROGRAMS = hunspell-analyze$(EXEEXT) chmorph$(EXEEXT) hunspell$(EXEEXT) \
++	hunspell-munch$(EXEEXT) hunspell-unmunch$(EXEEXT) hzip$(EXEEXT) hunzip$(EXEEXT)
+ noinst_PROGRAMS = example$(EXEEXT)
+ subdir = src/tools
+ DIST_COMMON = $(dist_bin_SCRIPTS) $(srcdir)/Makefile.am \
+@@ -432,8 +432,8 @@ clean-noinstPROGRAMS:
+ 	list=`for p in $$list; do echo "$$p"; done | sed 's/$(EXEEXT)$$//'`; \
+ 	echo " rm -f" $$list; \
+ 	rm -f $$list
+-analyze$(EXEEXT): $(analyze_OBJECTS) $(analyze_DEPENDENCIES) $(EXTRA_analyze_DEPENDENCIES) 
+-	@rm -f analyze$(EXEEXT)
++hunspell-analyze$(EXEEXT): $(analyze_OBJECTS) $(analyze_DEPENDENCIES) $(EXTRA_analyze_DEPENDENCIES) 
++	@rm -f hunspell-analyze$(EXEEXT)
+ 	$(CXXLINK) $(analyze_OBJECTS) $(analyze_LDADD) $(LIBS)
+ chmorph$(EXEEXT): $(chmorph_OBJECTS) $(chmorph_DEPENDENCIES) $(EXTRA_chmorph_DEPENDENCIES) 
+ 	@rm -f chmorph$(EXEEXT)
+@@ -450,11 +450,11 @@ hunzip$(EXEEXT): $(hunzip_OBJECTS) $(hun
+ hzip$(EXEEXT): $(hzip_OBJECTS) $(hzip_DEPENDENCIES) $(EXTRA_hzip_DEPENDENCIES) 
+ 	@rm -f hzip$(EXEEXT)
+ 	$(LINK) $(hzip_OBJECTS) $(hzip_LDADD) $(LIBS)
+-munch$(EXEEXT): $(munch_OBJECTS) $(munch_DEPENDENCIES) $(EXTRA_munch_DEPENDENCIES) 
+-	@rm -f munch$(EXEEXT)
++hunspell-munch$(EXEEXT): $(munch_OBJECTS) $(munch_DEPENDENCIES) $(EXTRA_munch_DEPENDENCIES) 
++	@rm -f hunspell-munch$(EXEEXT)
+ 	$(LINK) $(munch_OBJECTS) $(munch_LDADD) $(LIBS)
+-unmunch$(EXEEXT): $(unmunch_OBJECTS) $(unmunch_DEPENDENCIES) $(EXTRA_unmunch_DEPENDENCIES) 
+-	@rm -f unmunch$(EXEEXT)
++hunspell-unmunch$(EXEEXT): $(unmunch_OBJECTS) $(unmunch_DEPENDENCIES) $(EXTRA_unmunch_DEPENDENCIES) 
++	@rm -f hunspell-unmunch$(EXEEXT)
+ 	$(LINK) $(unmunch_OBJECTS) $(unmunch_LDADD) $(LIBS)
+ install-dist_binSCRIPTS: $(dist_bin_SCRIPTS)
+ 	@$(NORMAL_INSTALL)
