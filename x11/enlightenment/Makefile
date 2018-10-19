@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2018/08/16 18:54:33 adam Exp $
+# $NetBSD: Makefile,v 1.48 2018/10/19 14:49:16 jperkin Exp $
 #
 
 DISTNAME=	enlightenment-0.17.3
@@ -30,6 +30,8 @@ CONF_FILES+=	${EGDIR}/enlightenment.menu \
 CONFIGURE_ARGS+=	--disable-mount-hal --disable-mount-udisks \
 			--disable-mount-eeze
 CONFIGURE_ENV+=		MODULE_ARCH="${LOWER_OPSYS}-${MACHINE_ARCH}"
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-pie
 
 BUILD_DEFS+=		PKG_SYSCONFBASE
 
