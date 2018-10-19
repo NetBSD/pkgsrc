@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4427 2018/10/19 15:53:50 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.4428 2018/10/19 16:44:47 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6169,3 +6169,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added geography/gpxsee version 6.3 [abs 2018-10-19]
 	Updated wm/i3 to 4.15 [jperkin 2018-10-19]
 	Updated sysutils/riemann-client to 1.10.3 [jperkin 2018-10-19]
+	Updated devel/glib2 to 2.56.2nb3 [leot 2018-10-19]
