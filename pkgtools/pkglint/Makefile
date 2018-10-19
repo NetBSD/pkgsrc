@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.551 2018/10/09 23:17:17 rillig Exp $
+# $NetBSD: Makefile,v 1.552 2018/10/19 15:17:26 jperkin Exp $
 
 PKGNAME=	pkglint-5.6.5
 DISTFILES=	# none
@@ -33,6 +33,9 @@ pre-install:
 
 post-install: do-install-man
 
+# This needs to come before bsd.prefs.mk so that SSP_SUPPORTED is properly set.
+.include "../../lang/go/go-package.mk"
+
 .include "../../mk/bsd.prefs.mk"
 
 do-install-man: .PHONY
@@ -47,7 +50,6 @@ do-install-man: .PHONY
 	${INSTALL_MAN} ${WRKSRC}/pkglint.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 .endif
 
-.include "../../lang/go/go-package.mk"
 .if !empty(PKGSRC_RUN_TEST:M[yY][eE][sS])
 .  include "../../devel/go-check/buildlink3.mk"
 .endif
