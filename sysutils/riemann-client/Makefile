@@ -1,23 +1,25 @@
-# $NetBSD: Makefile,v 1.3 2018/04/17 22:29:34 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2018/10/19 15:53:41 jperkin Exp $
 
-DISTNAME=	riemann-c-client-1.9.1
+GITHUB_PROJECT=	riemann-c-client
+GITHUB_TAG=	${DISTNAME}
+DISTNAME=	riemann-c-client-1.10.3
 PKGNAME=	${DISTNAME:S/c-//}
-PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=algernon/}
-EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/algernon/riemann-c-client/
 COMMENT=	C client library for the Riemann monitoring system
 LICENSE=	gnu-lgpl-v3
 
-GITHUB_PROJECT=	riemann-c-client
-GITHUB_RELEASE=	${DISTNAME}
-
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	autoconf automake autoreconf gmake pkg-config
+
+LDFLAGS.SunOS+=	-lsocket
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -i
 
 .include "options.mk"
 
