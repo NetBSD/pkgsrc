@@ -1,50 +1,17 @@
-$NetBSD: patch-bash__completion,v 1.2 2017/03/14 14:51:28 jperkin Exp $
+$NetBSD: patch-bash__completion,v 1.3 2018/10/19 20:28:25 leot Exp $
 
-Added pkgsrc and pkg_install completions
-Pull in upstream fix for bug 1289597.
+Added pkgsrc completions
 
---- bash_completion.orig	2013-04-05 10:55:51.000000000 +0000
+--- bash_completion.orig	2018-03-17 08:32:34.000000000 +0000
 +++ bash_completion
-@@ -707,7 +707,7 @@ _init_completion()
-         fi
-     done
- 
--    [[ $cword -eq 0 ]] && return 1
-+    [[ $cword -le 0 ]] && return 1
-     prev=${words[cword-1]}
- 
-     [[ ${split-} ]] && _split_longopt && split=true
-@@ -1365,6 +1365,34 @@ _terms()
+@@ -1402,6 +1402,11 @@ _terms()
      extract patch configure build install reinstall deinstall clean
      clean-depends kernel buildworld' make
  
 +# a little help for NetBSD pkgsrc users
-+[[ $OSTYPE = *netbsd* ]] && complete -W 'index search fetch fetch-list \
-+	extract patch configure build install reinstall \
-+	deinstall package clean clean-depends' make
-+
-+
-+[[ $OSTYPE = *netbsd* ]] && {
-+# NetBSD package management tool completion
-+#
-+_pkg_delete()
-+{
-+	local cur pkgdir prev
-+
-+	pkgdir=${PKG_DBDIR:-/var/db/pkg}/
-+	cur=`_get_cword`
-+	prev=${COMP_WORDS[COMP_CWORD-1]}
-+
-+	[ "$prev" = "-o" -o "$prev" = "-p" -o "$prev" = "-W" ] && return 0
-+
-+	COMPREPLY=( $( compgen -d $pkgdir$cur ) )
-+	COMPREPLY=( ${COMPREPLY[@]#$pkgdir} )
-+
-+	return 0
-+}
-+complete -F _pkg_delete $dirnames pkg_delete pkg_info
-+have pkg_deinstall && complete -F _pkg_delete $dirnames pkg_deinstall
-+}
++[[ $OSTYPE = *netbsd* ]] && complete -W 'index search fetch fetch-list
++       extract patch configure build install reinstall
++       deinstall package clean clean-depends' make
 +
  # This function provides simple user@host completion
  #
