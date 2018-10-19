@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4424 2018/10/18 19:55:10 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.4425 2018/10/19 08:58:53 abs Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6166,3 +6166,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/py-certifi to 2018.10.15 [adam 2018-10-18]
 	Updated www/py-urllib3 to 1.24 [adam 2018-10-18]
 	Updated mail/spamassassin to 3.4.2 [bsiegert 2018-10-18]
+	Added geography/gpxsee version 6.3 [abs 2018-10-19]
