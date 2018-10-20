@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 00:35:22 agc Exp $
+$NetBSD: distinfo,v 1.6 2018/10/20 13:56:42 wen Exp $
 
-SHA1 (Net-Libdnet-0.98.tar.gz) = 6a2cc2ebf4d90e07f3ad7bdef98ff1650efafc58
-RMD160 (Net-Libdnet-0.98.tar.gz) = 78861ed3dbd6e7ae2225b2465f56be8d6648ce7e
-SHA512 (Net-Libdnet-0.98.tar.gz) = bcfdee6da4df667fe73f9772adfe81279a0a2a0a1a3a69abff03fb6e43a1e9a8d2abb2373c3470048f134cfcef5e3581a4a422dfdcd63589cb28c99e8fc096db
-Size (Net-Libdnet-0.98.tar.gz) = 23244 bytes
+SHA1 (Net-Libdnet-0.99.tar.gz) = f4cae434a068973425aad01d373d560dce7003b4
+RMD160 (Net-Libdnet-0.99.tar.gz) = e79ec2da0667f4bff656b076576a4cee2853fc05
+SHA512 (Net-Libdnet-0.99.tar.gz) = fe62a7f59cf752fb6dd05233b83773ecd98db4b5cce447ba6c8fdbe4a173a061487003274eaf3ee6c1da5dc6a9da55f10ba021cb5b2140b673fa7bcd91a2f0c5
+Size (Net-Libdnet-0.99.tar.gz) = 24314 bytes
