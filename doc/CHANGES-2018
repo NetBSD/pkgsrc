@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4431 2018/10/20 04:17:05 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4432 2018/10/20 04:20:53 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6173,3 +6173,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/hunspell to 1.3.3nb8 [bsiegert 2018-10-19]
 	Updated shells/bash-completion to 2.8 [leot 2018-10-19]
 	Updated www/p5-Dancer to 1.3500 [wen 2018-10-20]
+	Updated www/p5-HTTP-Tinyish to 0.15 [wen 2018-10-20]
