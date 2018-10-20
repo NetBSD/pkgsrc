@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2018/10/02 00:47:31 wen Exp $
+# $NetBSD: Makefile,v 1.13 2018/10/20 13:34:10 wen Exp $
 
-DISTNAME=	Net-IDN-Encode-2.401
+DISTNAME=	Net-IDN-Encode-2.500
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/C/CF/CFAERBER/
