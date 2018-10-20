@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4433 2018/10/20 10:10:01 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4434 2018/10/20 12:40:48 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6175,3 +6175,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/p5-Dancer to 1.3500 [wen 2018-10-20]
 	Updated www/p5-HTTP-Tinyish to 0.15 [wen 2018-10-20]
 	Updated www/p5-libwww to 6.36 [wen 2018-10-20]
+	Updated www/p5-Cookie-Baker to 0.10 [wen 2018-10-20]
