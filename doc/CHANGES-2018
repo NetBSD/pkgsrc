@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4435 2018/10/20 12:44:27 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4436 2018/10/20 13:10:25 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6177,3 +6177,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/p5-libwww to 6.36 [wen 2018-10-20]
 	Updated www/p5-Cookie-Baker to 0.10 [wen 2018-10-20]
 	Updated www/p5-CGI-Simple to 1.21 [wen 2018-10-20]
+	Updated www/p5-Catalyst-Runtime to 5.90120 [wen 2018-10-20]
