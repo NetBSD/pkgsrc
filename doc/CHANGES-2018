@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4441 2018/10/20 13:35:16 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4442 2018/10/20 13:42:39 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6183,3 +6183,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/p5-XML-XPath to 1.44 [wen 2018-10-20]
 	Updated textproc/p5-XML-Feed to 0.55 [wen 2018-10-20]
 	Updated textproc/p5-Net-IDN-Encode to 2.500 [wen 2018-10-20]
+	Updated sysutils/p5-File-Remove to 1.58 [wen 2018-10-20]
