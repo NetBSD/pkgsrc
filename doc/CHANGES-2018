@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4446 2018/10/20 14:11:08 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4447 2018/10/20 14:33:27 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6188,3 +6188,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/p5-Net-Libdnet to 0.99 [wen 2018-10-20]
 	Updated math/p5-Math-BigInt to 1.999815 [wen 2018-10-20]
 	Updated net/p5-Net-IPv6Addr to 0.96 [wen 2018-10-20]
+	Updated net/p5-Net-DNS to 1.18 [wen 2018-10-20]
