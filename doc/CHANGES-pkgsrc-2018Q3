@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q3,v 1.1.2.4 2018/10/18 13:03:32 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q3,v 1.1.2.5 2018/10/20 16:32:43 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q3 branch:
 
@@ -22,4 +22,20 @@ lang/rust: build fix
 
 Pullup ticket #5843 - requested by maya
 security/libssh: security fix
+
+Pullup ticket #5846 - requested by bsiegert
+mail/spamassassin: security update
+
+Pullup ticket #5847 - requested by bsiegert
+devel/patch: security patches
+
+Pullup ticket #5848 - requested by bsiegert
+devel/libgit2: security update
+
+Pullup ticket #5849 - requested by bsiegert
+devel/ncurses: security patch
+devel/ncursesw: security patch
+
+Pullup ticket #5850 - requested by bsiegert
+lang/chicken: security update
 
