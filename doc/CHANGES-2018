@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4450 2018/10/21 15:55:58 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4451 2018/10/21 19:51:51 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6193,3 +6193,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/bind911 to 9.11.5 [taca 2018-10-21]
 	Updated net/bind912 to 9.12.3 [taca 2018-10-21]
 	Updated time/ruby-tzinfo-data to 1.2018.6 [taca 2018-10-21]
+	Added devel/py-semantic_version version 2.6.0 [minskim 2018-10-21]
