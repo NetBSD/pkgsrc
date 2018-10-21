@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/10/21 19:51:41 minskim Exp $
+
+SHA1 (semantic_version-2.6.0.tar.gz) = 9e1bae88b7775f2f9097292bb87a847a7fee32fa
+RMD160 (semantic_version-2.6.0.tar.gz) = e078cd3af2d6cfbfada40a3d51b005ad9148251e
+SHA512 (semantic_version-2.6.0.tar.gz) = 805449e7219aaa59d28cc267c27a6abab5cbbbfd52c72d66f24bcace39c9f864e4ed944a3dc614e14a700a5bc92272fa6420312f3169b01a4cfd9ddf3ffb42d6
+Size (semantic_version-2.6.0.tar.gz) = 13919 bytes
