@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2018/10/21 19:51:41 minskim Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/semantic_version/__init__.py
+${PYSITELIB}/semantic_version/__init__.pyc
+${PYSITELIB}/semantic_version/__init__.pyo
+${PYSITELIB}/semantic_version/base.py
+${PYSITELIB}/semantic_version/base.pyc
+${PYSITELIB}/semantic_version/base.pyo
+${PYSITELIB}/semantic_version/compat.py
+${PYSITELIB}/semantic_version/compat.pyc
+${PYSITELIB}/semantic_version/compat.pyo
+${PYSITELIB}/semantic_version/django_fields.py
+${PYSITELIB}/semantic_version/django_fields.pyc
+${PYSITELIB}/semantic_version/django_fields.pyo
