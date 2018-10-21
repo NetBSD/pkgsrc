@@ -1,8 +1,12 @@
-$NetBSD: patch-Makefile.in,v 1.4 2016/05/09 12:39:05 fhajny Exp $
+$NetBSD: patch-Makefile.in,v 1.5 2018/10/21 21:22:47 leot Exp $
 
 At least on SunOS, lang/nawk (nawk-20050424nb3) insists on
 a space between -f and the program file name, by penalty of
 "/opt/local/bin/nawk: no program filename"
+
+This was applied upstream via:
+ 
+ <https://github.com/tmux/tmux/pull/1464>
 
 --- Makefile.in.orig	2016-04-11 00:01:16.000000000 +0000
 +++ Makefile.in
