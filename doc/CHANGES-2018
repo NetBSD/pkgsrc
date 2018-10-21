@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4448 2018/10/20 15:34:35 gson Exp $
+$NetBSD: CHANGES-2018,v 1.4449 2018/10/21 15:52:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6190,3 +6190,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/p5-Net-IPv6Addr to 0.96 [wen 2018-10-20]
 	Updated net/p5-Net-DNS to 1.18 [wen 2018-10-20]
 	Updated misc/py-anita to 1.46 [gson 2018-10-20]
+	Updated net/bind911 to 9.11.5 [taca 2018-10-21]
+	Updated net/bind912 to 9.12.3 [taca 2018-10-21]
