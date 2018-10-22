@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2018/10/22 15:23:06 schmonz Exp $
+bin/authup
+bin/checknotroot
+bin/fixsmtpio
+bin/reup
+man/man8/authup.8
+man/man8/checknotroot.8
+man/man8/fixsmtpio.8
+man/man8/reup.8
