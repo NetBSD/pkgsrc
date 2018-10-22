@@ -1,4 +1,4 @@
-$NetBSD: patch-requests_____init____.py,v 1.3 2018/06/16 13:08:32 adam Exp $
+$NetBSD: patch-requests_____init____.py,v 1.4 2018/10/22 07:55:36 adam Exp $
 
 * Allow newer py-urllib3 and py-chardet.
 * Add workaround for segfault of security/py-certbot on NetBSD/amd64
@@ -7,13 +7,13 @@ $NetBSD: patch-requests_____init____.py,v 1.3 2018/06/16 13:08:32 adam Exp $
 
   This is introduced in https://github.com/shazow/urllib3
 
---- requests/__init__.py.orig	2018-06-12 14:39:23.000000000 +0000
+--- requests/__init__.py.orig	2018-10-18 15:41:45.000000000 +0000
 +++ requests/__init__.py
 @@ -60,15 +60,12 @@ def check_compatibility(urllib3_version,
-     # urllib3 >= 1.21.1, <= 1.23
+     # urllib3 >= 1.21.1, <= 1.24
      assert major == 1
      assert minor >= 21
--    assert minor <= 23
+-    assert minor <= 24
  
      # Check chardet for compatibility.
      major, minor, patch = chardet_version.split('.')[:3]
