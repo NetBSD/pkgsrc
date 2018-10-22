@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2017/12/11 10:44:16 manu Exp $
+$NetBSD: distinfo,v 1.8 2018/10/22 14:58:13 jperkin Exp $
 
 SHA1 (iftop-1.0pre4.tar.gz) = 7f8e16ea26a0dee37ec9d1cbcef7b27692036572
 RMD160 (iftop-1.0pre4.tar.gz) = 10730f5deccbc090ed0d5b91de009a1af9e0c90d
@@ -6,5 +6,6 @@ SHA512 (iftop-1.0pre4.tar.gz) = abd74e8025bb82fef9ebab4997b1d018201a523d47c01281
 Size (iftop-1.0pre4.tar.gz) = 204665 bytes
 SHA1 (patch-addrs_ioctl.c) = 3b7907efd321409038217eb2476814b9adbb5114
 SHA1 (patch-dlcommon.h) = 787296f9d337a6b6a5ef080452cd14a3580a5fc3
-SHA1 (patch-iftop.c) = 1f840b7446b839443279b3f2fa52a060401cdc88
+SHA1 (patch-iftop.c) = 6a04a3876a9d8a478749cc3f3c1e6fc3f8d4220d
 SHA1 (patch-iftop.h) = 4a0760bc69e821e43d41da46ab44dfd35ddfb5dd
+SHA1 (patch-options.c) = f85a229a50d520bf74d2605f85d52c8f0c82014b
