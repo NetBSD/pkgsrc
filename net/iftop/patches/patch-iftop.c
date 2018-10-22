@@ -1,9 +1,10 @@
-$NetBSD: patch-iftop.c,v 1.1 2017/12/11 10:44:17 manu Exp $
+$NetBSD: patch-iftop.c,v 1.2 2018/10/22 14:58:14 jperkin Exp $
 
---- iftop.c.orig	2014-01-19 21:21:19.000000000 +0100
-+++ iftop.c	2017-12-11 11:22:55.000000000 +0100
-@@ -756,8 +756,14 @@
-     }
+Support DLT_PPP_SERIAL.
+
+--- iftop.c.orig	2014-01-19 20:21:19.000000000 +0000
++++ iftop.c
+@@ -757,6 +757,12 @@ void packet_init() {
      else if(dlt == DLT_PPP) {
          packet_handler = handle_ppp_packet;
      }
@@ -16,4 +17,3 @@ $NetBSD: patch-iftop.c,v 1.1 2017/12/11 10:44:17 manu Exp $
  /* 
   * SLL support not available in older libpcaps
   */
- #ifdef DLT_LINUX_SLL
