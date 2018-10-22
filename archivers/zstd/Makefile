@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2018/10/17 08:59:16 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2018/10/22 15:28:02 adam Exp $
 
-DISTNAME=	zstd-1.3.6
+DISTNAME=	zstd-1.3.7
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=facebook/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -20,6 +20,7 @@ MAKE_FLAGS+=		INSTALL=${INSTALL:Q}
 BUILD_TARGET=		allmost
 TEST_TARGET=		test
 
+.include "../../archivers/lz4/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
