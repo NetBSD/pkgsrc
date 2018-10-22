@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/07/22 10:49:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/10/22 15:28:02 adam Exp $
 bin/unzstd
 bin/zstd
 bin/zstdcat
@@ -11,9 +11,11 @@ include/zstd.h
 include/zstd_errors.h
 lib/libzstd.a
 lib/libzstd.so
-lib/libzstd.so.1
 lib/libzstd.so.${PKGVERSION}
+lib/libzstd.so.1
 lib/pkgconfig/libzstd.pc
 man/man1/unzstd.1
 man/man1/zstd.1
 man/man1/zstdcat.1
+man/man1/zstdgrep.1
+man/man1/zstdless.1
