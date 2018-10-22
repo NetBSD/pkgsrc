@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/08/19 09:44:28 adam Exp $
+# $NetBSD: Makefile,v 1.12 2018/10/22 15:33:44 jperkin Exp $
 
 DISTNAME=	gevent-1.3.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -30,6 +30,12 @@ USE_LANGUAGES=	c c++
 
 # Explicitly disable inotify on SunOS, assumes Linux statfs.
 MAKE_ENV.SunOS+=	ac_cv_header_sys_inotify_h=no
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mclang) || !empty(CC_VERSION:Mgcc-[6-9]*)
+BUILDLINK_TRANSFORM.SunOS+=	opt:-D_XOPEN_SOURCE=500:-D_XOPEN_SOURCE=600
+.endif
 
 do-test:
 	cd ${WRKSRC}/src/greentest && \
