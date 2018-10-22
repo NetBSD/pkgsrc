@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2018/04/14 12:24:31 adam Exp $
+# $NetBSD: Makefile,v 1.23 2018/10/22 16:13:16 jperkin Exp $
 
 DISTNAME=	pyatspi-2.24.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyatspi/at-spi2/}
@@ -26,5 +26,7 @@ CONFLICTS=	${PYPKGPREFIX}-at-spi-[0-9]*
 
 CHECK_PORTABILITY_SKIP=	config/test-driver
 
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/py-gobject3-common/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
