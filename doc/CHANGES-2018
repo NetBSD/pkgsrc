@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4454 2018/10/22 07:56:32 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4455 2018/10/22 14:40:49 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6198,3 +6198,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/ikiwiki to 3.20180311nb4 [schmonz 2018-10-22]
 	Updated devel/py-requests to 2.20.0 [adam 2018-10-22]
 	Updated devel/py-requests-futures to 0.9.8 [adam 2018-10-22]
+	Added graphics/p5-Graph-Easy version 0.76 [schmonz 2018-10-22]
