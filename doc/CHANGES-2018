@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4452 2018/10/21 21:23:18 leot Exp $
+$NetBSD: CHANGES-2018,v 1.4453 2018/10/22 04:33:31 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6195,3 +6195,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/ruby-tzinfo-data to 1.2018.6 [taca 2018-10-21]
 	Added devel/py-semantic_version version 2.6.0 [minskim 2018-10-21]
 	Updated misc/tmux to 2.8 [leot 2018-10-21]
+	Updated www/ikiwiki to 3.20180311nb4 [schmonz 2018-10-22]
