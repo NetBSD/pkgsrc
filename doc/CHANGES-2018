@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4453 2018/10/22 04:33:31 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.4454 2018/10/22 07:56:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6196,3 +6196,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/py-semantic_version version 2.6.0 [minskim 2018-10-21]
 	Updated misc/tmux to 2.8 [leot 2018-10-21]
 	Updated www/ikiwiki to 3.20180311nb4 [schmonz 2018-10-22]
+	Updated devel/py-requests to 2.20.0 [adam 2018-10-22]
+	Updated devel/py-requests-futures to 0.9.8 [adam 2018-10-22]
