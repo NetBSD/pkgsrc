@@ -1,0 +1,7 @@
+To SMTP-authenticate users without patching ofmipd(8) or qmail-smtpd(8),
+compose the following programs into your configuration:
+
+- reup runs a program repeatedly until it succeeds.
+- authup offers SMTP or POP3 authentication and calls checkpassword.
+- checknotroot refuses to run as UID 0.
+- fixsmtpio filters SMTP I/O and exit status to suit authup.
