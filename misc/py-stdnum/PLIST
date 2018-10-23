@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/04/18 04:30:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/10/23 14:17:23 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -76,6 +76,9 @@ ${PYSITELIB}/stdnum/bg/vat.pyo
 ${PYSITELIB}/stdnum/bic.py
 ${PYSITELIB}/stdnum/bic.pyc
 ${PYSITELIB}/stdnum/bic.pyo
+${PYSITELIB}/stdnum/bitcoin.py
+${PYSITELIB}/stdnum/bitcoin.pyc
+${PYSITELIB}/stdnum/bitcoin.pyo
 ${PYSITELIB}/stdnum/br/__init__.py
 ${PYSITELIB}/stdnum/br/__init__.pyc
 ${PYSITELIB}/stdnum/br/__init__.pyo
@@ -394,6 +397,9 @@ ${PYSITELIB}/stdnum/isin.pyo
 ${PYSITELIB}/stdnum/ismn.py
 ${PYSITELIB}/stdnum/ismn.pyc
 ${PYSITELIB}/stdnum/ismn.pyo
+${PYSITELIB}/stdnum/iso11649.py
+${PYSITELIB}/stdnum/iso11649.pyc
+${PYSITELIB}/stdnum/iso11649.pyo
 ${PYSITELIB}/stdnum/iso6346.py
 ${PYSITELIB}/stdnum/iso6346.pyc
 ${PYSITELIB}/stdnum/iso6346.pyo
@@ -475,6 +481,12 @@ ${PYSITELIB}/stdnum/mt/__init__.pyo
 ${PYSITELIB}/stdnum/mt/vat.py
 ${PYSITELIB}/stdnum/mt/vat.pyc
 ${PYSITELIB}/stdnum/mt/vat.pyo
+${PYSITELIB}/stdnum/mu/__init__.py
+${PYSITELIB}/stdnum/mu/__init__.pyc
+${PYSITELIB}/stdnum/mu/__init__.pyo
+${PYSITELIB}/stdnum/mu/nid.py
+${PYSITELIB}/stdnum/mu/nid.pyc
+${PYSITELIB}/stdnum/mu/nid.pyo
 ${PYSITELIB}/stdnum/mx/__init__.py
 ${PYSITELIB}/stdnum/mx/__init__.pyc
 ${PYSITELIB}/stdnum/mx/__init__.pyo
@@ -509,6 +521,12 @@ ${PYSITELIB}/stdnum/nl/postcode.pyo
 ${PYSITELIB}/stdnum/no/__init__.py
 ${PYSITELIB}/stdnum/no/__init__.pyc
 ${PYSITELIB}/stdnum/no/__init__.pyo
+${PYSITELIB}/stdnum/no/iban.py
+${PYSITELIB}/stdnum/no/iban.pyc
+${PYSITELIB}/stdnum/no/iban.pyo
+${PYSITELIB}/stdnum/no/kontonr.py
+${PYSITELIB}/stdnum/no/kontonr.pyc
+${PYSITELIB}/stdnum/no/kontonr.pyo
 ${PYSITELIB}/stdnum/no/mva.py
 ${PYSITELIB}/stdnum/no/mva.pyc
 ${PYSITELIB}/stdnum/no/mva.pyo
