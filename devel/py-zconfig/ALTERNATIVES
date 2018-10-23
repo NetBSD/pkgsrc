@@ -1,2 +1,2 @@
-bin/zconfig @PREFIX@/bin/zconfig@PYVERSSUFFIX@
-bin/zconfig_schema2html @PREFIX@/bin/zconfig_schema2html@PYVERSSUFFIX@
+bin/zconfig @PREFIX@/bin/zconfig-@PYVERSSUFFIX@
+bin/zconfig_schema2html @PREFIX@/bin/zconfig_schema2html-@PYVERSSUFFIX@
