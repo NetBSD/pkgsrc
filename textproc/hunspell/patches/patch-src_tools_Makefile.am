@@ -1,0 +1,32 @@
+$NetBSD: patch-src_tools_Makefile.am,v 1.1 2018/10/23 11:45:34 bsiegert Exp $
+
+--- src/tools/Makefile.am.orig	2017-09-03 11:38:44.000000000 +0000
++++ src/tools/Makefile.am
+@@ -1,4 +1,4 @@
+-bin_PROGRAMS=analyze chmorph hunspell munch unmunch hzip hunzip
++bin_PROGRAMS=hunspell-analyze chmorph hunspell hunspell-munch hunspell-unmunch hzip hunzip
+ 
+ AM_CPPFLAGS=-I${top_builddir}/src/hunspell -I${top_srcdir}/src/hunspell -I${top_srcdir}/src/parsers
+ 
+@@ -6,8 +6,8 @@ hzip_SOURCES=hzip.cxx
+ hunzip_SOURCES=hunzip.cxx
+ hunzip_LDADD = ../hunspell/libhunspell-1.6.la
+ 
+-munch_SOURCES=munch.cxx munch.h
+-unmunch_SOURCES=unmunch.cxx unmunch.h
++hunspell_munch_SOURCES=munch.cxx munch.h
++hunspell_unmunch_SOURCES=unmunch.cxx unmunch.h
+ 
+ example_SOURCES=example.cxx
+ example_LDADD = ../hunspell/libhunspell-1.6.la
+@@ -16,8 +16,8 @@ hunspell_SOURCES=hunspell.cxx
+ hunspell_LDADD = @LIBINTL@ @LIBICONV@ ../parsers/libparsers.a \
+ 	../hunspell/libhunspell-1.6.la @CURSESLIB@ @READLINELIB@
+ 
+-analyze_SOURCES=analyze.cxx
+-analyze_LDADD = ../hunspell/libhunspell-1.6.la
++hunspell_analyze_SOURCES=analyze.cxx
++hunspell_analyze_LDADD = ../hunspell/libhunspell-1.6.la
+ 
+ bulkcheck_SOURCES=bulkcheck.cxx
+ bulkcheck_LDADD = ../hunspell/libhunspell-1.6.la
