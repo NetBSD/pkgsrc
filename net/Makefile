@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1230 2018/10/23 01:42:34 riastradh Exp $
+# $NetBSD: Makefile,v 1.1231 2018/10/23 03:17:22 riastradh Exp $
 #
 
 COMMENT=	Networking tools
@@ -709,6 +709,7 @@ SUBDIR+=	py-twisted
 SUBDIR+=	py-twisted-docs
 SUBDIR+=	py-twython
 SUBDIR+=	py-txamqp
+SUBDIR+=	py-txtorcon
 SUBDIR+=	py-xandikos
 SUBDIR+=	py-zeep
 SUBDIR+=	py-zmq
