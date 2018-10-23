@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.61 2018/06/19 01:30:26 maya Exp $
+@comment $NetBSD: PLIST,v 1.62 2018/10/23 22:55:13 maya Exp $
 bin/seamonkey
 lib/seamonkey/application.ini
 lib/seamonkey/blocklist.xml
@@ -490,7 +490,6 @@ lib/seamonkey/chrome/comm/content/communicator/migration/migration.xul
 lib/seamonkey/chrome/comm/content/communicator/nsContextMenu.js
 lib/seamonkey/chrome/comm/content/communicator/openLocation.js
 lib/seamonkey/chrome/comm/content/communicator/openLocation.xul
-lib/seamonkey/chrome/comm/content/communicator/passwordManager.xul
 lib/seamonkey/chrome/comm/content/communicator/permissions/cookieViewer.js
 lib/seamonkey/chrome/comm/content/communicator/permissions/cookieViewer.xul
 lib/seamonkey/chrome/comm/content/communicator/permissions/permissionsManager.js
@@ -2278,7 +2277,6 @@ lib/seamonkey/chrome/en-US/locale/en-US/communicator/notification.dtd
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/notification.properties
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/openLocation.dtd
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/openLocation.properties
-lib/seamonkey/chrome/en-US/locale/en-US/communicator/passwordManager.dtd
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/permissions/cookieViewer.dtd
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/permissions/cookieViewer.properties
 lib/seamonkey/chrome/en-US/locale/en-US/communicator/permissions/permissionsManager.dtd
@@ -4437,6 +4435,7 @@ lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/mes
 lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/messenger/threadPaneExtras.css
 lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/messenger/threadPaneLabels.css
 lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/messenger/virtualFolderListDialog.css
+lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/mozapps/aboutNetworking.css
 lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/mozapps/downloads/downloadIcon.png
 lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/mozapps/downloads/downloads.css
 lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/mozapps/downloads/unknownContentType.css
