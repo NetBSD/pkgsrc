@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1229 2018/10/08 14:48:46 adam Exp $
+# $NetBSD: Makefile,v 1.1230 2018/10/23 01:42:34 riastradh Exp $
 #
 
 COMMENT=	Networking tools
@@ -431,6 +431,7 @@ SUBDIR+=	nstx
 SUBDIR+=	ntop
 SUBDIR+=	ntopng
 SUBDIR+=	ntp4
+SUBDIR+=	nyx
 SUBDIR+=	obfs4proxy
 SUBDIR+=	ocaml-ipaddr
 SUBDIR+=	ocamlnet
@@ -678,6 +679,7 @@ SUBDIR+=	py-ncclient
 SUBDIR+=	py-netaddr
 SUBDIR+=	py-netifaces
 SUBDIR+=	py-netsnmp
+SUBDIR+=	py-nyx
 SUBDIR+=	py-omniORBpy
 SUBDIR+=	py-pcap
 SUBDIR+=	py-portend
@@ -690,6 +692,7 @@ SUBDIR+=	py-responses
 SUBDIR+=	py-rt
 SUBDIR+=	py-s3cmd
 SUBDIR+=	py-s3transfer
+SUBDIR+=	py-sbws
 SUBDIR+=	py-scp
 SUBDIR+=	py-simplesoap
 SUBDIR+=	py-smb

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2739 2018/10/21 19:51:45 minskim Exp $
+# $NetBSD: Makefile,v 1.2740 2018/10/23 01:42:34 riastradh Exp $
 #
 
 COMMENT=	Development utilities
@@ -2262,6 +2262,7 @@ SUBDIR+=	py-simplegeneric
 SUBDIR+=	py-singledispatch
 SUBDIR+=	py-sortedcontainers
 SUBDIR+=	py-speaklater
+SUBDIR+=	py-stem
 SUBDIR+=	py-stevedore
 SUBDIR+=	py-stompclient
 SUBDIR+=	py-stsci.distutils

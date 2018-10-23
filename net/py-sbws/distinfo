@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/10/23 01:42:35 riastradh Exp $
+
+SHA1 (sbws-0.8.0.tar.gz) = c666e64db9846f9ecce97c1b7756ff218ac0236d
+RMD160 (sbws-0.8.0.tar.gz) = 708b8fbcb1ecb7d79efcce5e5ca92f99c9687a94
+SHA512 (sbws-0.8.0.tar.gz) = 6af24a4aa3a756b5d9a7b3aba99339a1739f04f6ae8f4af9ad15cf16bcba9d5d416a6c3a37e85cb11f5f36bbc40753fcfbdf2af5858a9ae295e3d0a0eb368d5d
+Size (sbws-0.8.0.tar.gz) = 156048 bytes
