@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/07/29 14:17:06 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3 2018/10/23 07:07:25 leot Exp $
 
 DISTNAME=	libpsl-0.20.2
 PKGREVISION=	1
@@ -23,6 +23,8 @@ CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--enable-runtime=libicu
 
 PKGCONFIG_OVERRIDE+=	libpsl.pc.in
+
+TEST_TARGET=	check
 
 .include "../../lang/python/application.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
