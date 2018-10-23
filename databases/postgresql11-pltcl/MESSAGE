@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2018/10/23 16:02:52 adam Exp $
+
+Please see the PL/Tcl section of the PostgreSQL Programmer's Guide
+(databases/postgresql-docs) for information on programming with
+${PKGNAME}.
+===========================================================================
