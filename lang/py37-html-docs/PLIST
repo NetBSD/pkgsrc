@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2018/07/31 10:17:58 leot Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/10/23 09:06:58 leot Exp $
 share/doc/python3.7/.buildinfo
 share/doc/python3.7/_downloads/tzinfo_examples.py
 share/doc/python3.7/_images/hashlib-blake2-tree.png
 share/doc/python3.7/_images/logging_flow.png
 share/doc/python3.7/_images/pathlib-inheritance.png
 share/doc/python3.7/_images/python-video-icon.png
-share/doc/python3.7/_images/tulip_coro.png
 share/doc/python3.7/_images/turtle-star.png
 share/doc/python3.7/_images/win_installer.png
 share/doc/python3.7/_sources/about.rst.txt
@@ -134,9 +133,14 @@ share/doc/python3.7/_sources/library/argparse.rst.txt
 share/doc/python3.7/_sources/library/array.rst.txt
 share/doc/python3.7/_sources/library/ast.rst.txt
 share/doc/python3.7/_sources/library/asynchat.rst.txt
+share/doc/python3.7/_sources/library/asyncio-api-index.rst.txt
 share/doc/python3.7/_sources/library/asyncio-dev.rst.txt
 share/doc/python3.7/_sources/library/asyncio-eventloop.rst.txt
-share/doc/python3.7/_sources/library/asyncio-eventloops.rst.txt
+share/doc/python3.7/_sources/library/asyncio-exceptions.rst.txt
+share/doc/python3.7/_sources/library/asyncio-future.rst.txt
+share/doc/python3.7/_sources/library/asyncio-llapi-index.rst.txt
+share/doc/python3.7/_sources/library/asyncio-platforms.rst.txt
+share/doc/python3.7/_sources/library/asyncio-policy.rst.txt
 share/doc/python3.7/_sources/library/asyncio-protocol.rst.txt
 share/doc/python3.7/_sources/library/asyncio-queue.rst.txt
 share/doc/python3.7/_sources/library/asyncio-stream.rst.txt
@@ -664,9 +668,14 @@ share/doc/python3.7/library/argparse.html
 share/doc/python3.7/library/array.html
 share/doc/python3.7/library/ast.html
 share/doc/python3.7/library/asynchat.html
+share/doc/python3.7/library/asyncio-api-index.html
 share/doc/python3.7/library/asyncio-dev.html
 share/doc/python3.7/library/asyncio-eventloop.html
-share/doc/python3.7/library/asyncio-eventloops.html
+share/doc/python3.7/library/asyncio-exceptions.html
+share/doc/python3.7/library/asyncio-future.html
+share/doc/python3.7/library/asyncio-llapi-index.html
+share/doc/python3.7/library/asyncio-platforms.html
+share/doc/python3.7/library/asyncio-policy.html
 share/doc/python3.7/library/asyncio-protocol.html
 share/doc/python3.7/library/asyncio-queue.html
 share/doc/python3.7/library/asyncio-stream.html
