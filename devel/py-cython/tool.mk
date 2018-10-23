@@ -1,4 +1,4 @@
-# $NetBSD: tool.mk,v 1.1 2016/03/07 18:27:32 nros Exp $
+# $NetBSD: tool.mk,v 1.2 2018/10/23 18:04:52 jperkin Exp $
 #
 # This mk fragment can be included in all packages that uses `cython'
 # and `cythonize' as tools without version suffix.
@@ -19,7 +19,7 @@ BUILDLINK_TARGETS+=	buildlink-bin-cython
 buildlink-bin-cython:
 .for CYTHONTOOL in cython cythonize
 	${RUN} \
-	f="${PREFIX}/bin/${CYTHONTOOL}${PYVERSSUFFIX}"; \
+	f="${PREFIX}/bin/${CYTHONTOOL}-${PYVERSSUFFIX}"; \
 	t="${BUILDLINK_DIR}/bin/${CYTHONTOOL}"; \
 	if ${TEST} -f $$f -a ! -f $$t ; then \
 		${LN} -sf $$f $$t; \
