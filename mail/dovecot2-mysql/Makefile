@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/07/18 15:03:06 fhajny Exp $
-#
+# $NetBSD: Makefile,v 1.2 2018/10/23 16:29:18 adam Exp $
 
 .include "../../mail/dovecot2/Makefile.plugin"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2018/05/22 20:49:45 triaxx Exp $
+# $NetBSD: Makefile,v 1.97 2018/10/23 16:29:18 adam Exp $
 
 .include "../../mail/dovecot2/Makefile.common"
 
@@ -22,7 +22,7 @@ EGDIR=			${PREFIX}/share/examples/dovecot
 
 CNFS_cmd=		${SED} -ne "s,^share/examples/dovecot/,,p" PLIST
 CNFS=			${CNFS_cmd:sh}
-CONF_FILES=		${EGDIR}/dovecot.conf ${PKG_SYSCONFDIR}/dovecot/dovecot-example.conf
+CONF_FILES=		${EGDIR}/dovecot.conf ${PKG_SYSCONFDIR}/dovecot/dovecot.conf
 .for file in ${CNFS}
 CONF_FILES+=		${EGDIR}/${file:Q} ${PKG_SYSCONFDIR}/dovecot/${file:Q}
 .endfor
