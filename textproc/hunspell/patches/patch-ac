@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2009/09/22 09:16:51 sketch Exp $
+$NetBSD: patch-ac,v 1.2 2018/10/23 11:45:34 bsiegert Exp $
 
---- src/hunspell/replist.cxx.orig	Sat Nov  1 14:09:51 2008
-+++ src/hunspell/replist.cxx	Tue Sep 22 10:12:37 2009
-@@ -14,6 +14,15 @@
+--- src/hunspell/replist.cxx.orig	2017-09-03 11:38:44.000000000 +0000
++++ src/hunspell/replist.cxx
+@@ -76,6 +76,15 @@
  #include "replist.hxx"
  #include "csutil.hxx"
  
@@ -16,5 +16,5 @@ $NetBSD: patch-ac,v 1.1 2009/09/22 09:16:51 sketch Exp $
 +#endif
 +
  RepList::RepList(int n) {
-     dat = (replentry **) malloc(sizeof(replentry *) * n);
-     if (dat == 0) size = 0; else size = n;
+   dat = (replentry**)malloc(sizeof(replentry*) * n);
+   if (dat == 0)
