@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2017/11/07 12:05:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2018/10/23 07:42:23 leot Exp $
 bin/gtk-builder-tool
 bin/gtk-encode-symbolic-svg
 bin/gtk-launch
@@ -248,6 +248,9 @@ include/gtk-3.0/gtk/gtkentrycompletion.h
 include/gtk-3.0/gtk/gtkenums.h
 include/gtk-3.0/gtk/gtkeventbox.h
 include/gtk-3.0/gtk/gtkeventcontroller.h
+include/gtk-3.0/gtk/gtkeventcontrollerkey.h
+include/gtk-3.0/gtk/gtkeventcontrollermotion.h
+include/gtk-3.0/gtk/gtkeventcontrollerscroll.h
 include/gtk-3.0/gtk/gtkexpander.h
 include/gtk-3.0/gtk/gtkfilechooser.h
 include/gtk-3.0/gtk/gtkfilechooserbutton.h
@@ -269,6 +272,7 @@ include/gtk-3.0/gtk/gtkgesturemultipress.h
 include/gtk-3.0/gtk/gtkgesturepan.h
 include/gtk-3.0/gtk/gtkgesturerotate.h
 include/gtk-3.0/gtk/gtkgesturesingle.h
+include/gtk-3.0/gtk/gtkgesturestylus.h
 include/gtk-3.0/gtk/gtkgestureswipe.h
 include/gtk-3.0/gtk/gtkgesturezoom.h
 include/gtk-3.0/gtk/gtkglarea.h
@@ -707,6 +711,9 @@ share/gtk-doc/html/gtk3/GtkEntryBuffer.html
 share/gtk-doc/html/gtk3/GtkEntryCompletion.html
 share/gtk-doc/html/gtk3/GtkEventBox.html
 share/gtk-doc/html/gtk3/GtkEventController.html
+share/gtk-doc/html/gtk3/GtkEventControllerKey.html
+share/gtk-doc/html/gtk3/GtkEventControllerMotion.html
+share/gtk-doc/html/gtk3/GtkEventControllerScroll.html
 share/gtk-doc/html/gtk3/GtkExpander.html
 share/gtk-doc/html/gtk3/GtkFileChooser.html
 share/gtk-doc/html/gtk3/GtkFileChooserButton.html
@@ -730,6 +737,7 @@ share/gtk-doc/html/gtk3/GtkGestureMultiPress.html
 share/gtk-doc/html/gtk3/GtkGesturePan.html
 share/gtk-doc/html/gtk3/GtkGestureRotate.html
 share/gtk-doc/html/gtk3/GtkGestureSingle.html
+share/gtk-doc/html/gtk3/GtkGestureStylus.html
 share/gtk-doc/html/gtk3/GtkGestureSwipe.html
 share/gtk-doc/html/gtk3/GtkGestureZoom.html
 share/gtk-doc/html/gtk3/GtkGrid.html
