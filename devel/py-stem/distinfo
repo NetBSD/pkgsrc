@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/10/23 01:42:34 riastradh Exp $
+
+SHA1 (stem-1.7.0.tar.gz) = 1d075b54ebd32cf15e470c8f09a596cf8829a172
+RMD160 (stem-1.7.0.tar.gz) = 3f007f598864326a7debfb3b51c50be123f8a111
+SHA512 (stem-1.7.0.tar.gz) = 10750266860f4f90df5d4a3bf24ec68e28d12c84c136c35d2f168f767f4facae3d02cc62dc972a08666689695ea17337a7a6b80ec1c5ed8b9e5035d7417b07f5
+Size (stem-1.7.0.tar.gz) = 2196759 bytes

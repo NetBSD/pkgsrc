@@ -1,0 +1,6 @@
+# $NetBSD: Makefile.common,v 1.1 2018/10/23 01:42:34 riastradh Exp $
+
+# used by net/nyx/Makefile
+# used by net/py-nyx/Makefile
+
+VERSION=	2.0.4
