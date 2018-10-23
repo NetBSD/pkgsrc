@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST.i386,v 1.1 2018/10/23 10:16:12 jmcneill Exp $
+man/man8/biosdecode.8
+man/man8/ownership.8
+man/man8/vpddecode.8
+sbin/biosdecode
+sbin/ownership
+sbin/vpddecode

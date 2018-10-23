@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2018/10/23 03:32:03 msaitoh Exp $
+$NetBSD: distinfo,v 1.22 2018/10/23 10:16:12 jmcneill Exp $
 
 SHA1 (dmidecode-patches/dmidecode-3.2.tar.xz) = acf4b5c6e757066453fd06aa9060fceb257849bf
 RMD160 (dmidecode-patches/dmidecode-3.2.tar.xz) = 29c7718c1c149798a0f7d7b8830532ca2186c9d6
@@ -9,3 +9,4 @@ RMD160 (dmidecode-patches/fde47bb227b8fa817c88d7e10a8eb771c46de1df) = 0f7f3565a0
 SHA512 (dmidecode-patches/fde47bb227b8fa817c88d7e10a8eb771c46de1df) = ef5856934bcbf831cad6f733ecd8d0dad92087f4813579b75f89e5576a8be1df23fd670d2f86b0ac2ff1e084951b05ae15421a0e6e84b2cec76789ddec85e88f
 Size (dmidecode-patches/fde47bb227b8fa817c88d7e10a8eb771c46de1df) = 989 bytes
 SHA1 (patch-aa) = 6c861b3742b1627a1b60dbaea9df0843f2ed603d
+SHA1 (patch-dmidecode.c) = 63cf0302a13603038ee871cc7410009a722eae39

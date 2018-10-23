@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2018/10/23 03:32:03 msaitoh Exp $
+# $NetBSD: Makefile,v 1.25 2018/10/23 10:16:12 jmcneill Exp $
 #
 
 DISTNAME=	dmidecode-3.2
-PKGREVISION=	1
+PKGREVISION=	2
 EXTRACT_SUFX=	.tar.xz
 CATEGORIES=	sysutils
 MASTER_SITES=	http://download.savannah.gnu.org/releases/dmidecode/
@@ -20,6 +20,6 @@ PATCH_DIST_STRIP= -p1
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 
-ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
+ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64 *-*-aarch64
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,12 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2018/10/12 10:08:00 msaitoh Exp $
-man/man8/biosdecode.8
+@comment $NetBSD: PLIST,v 1.6 2018/10/23 10:16:12 jmcneill Exp $
 man/man8/dmidecode.8
-man/man8/ownership.8
-man/man8/vpddecode.8
-sbin/biosdecode
 sbin/dmidecode
-sbin/ownership
-sbin/vpddecode
 share/doc/dmidecode/AUTHORS
 share/doc/dmidecode/NEWS
 share/doc/dmidecode/README
