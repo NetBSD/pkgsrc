@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2018/04/05 08:14:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2018/10/23 07:57:05 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -125,15 +125,21 @@ ${PYSITELIB}/rest_framework/locale/zh_CN/LC_MESSAGES/django.mo
 ${PYSITELIB}/rest_framework/locale/zh_Hans/LC_MESSAGES/django.mo
 ${PYSITELIB}/rest_framework/locale/zh_Hant/LC_MESSAGES/django.mo
 ${PYSITELIB}/rest_framework/locale/zh_TW/LC_MESSAGES/django.mo
+${PYSITELIB}/rest_framework/management/__init__.py
+${PYSITELIB}/rest_framework/management/__init__.pyc
+${PYSITELIB}/rest_framework/management/__init__.pyo
+${PYSITELIB}/rest_framework/management/commands/__init__.py
+${PYSITELIB}/rest_framework/management/commands/__init__.pyc
+${PYSITELIB}/rest_framework/management/commands/__init__.pyo
+${PYSITELIB}/rest_framework/management/commands/generateschema.py
+${PYSITELIB}/rest_framework/management/commands/generateschema.pyc
+${PYSITELIB}/rest_framework/management/commands/generateschema.pyo
 ${PYSITELIB}/rest_framework/metadata.py
 ${PYSITELIB}/rest_framework/metadata.pyc
 ${PYSITELIB}/rest_framework/metadata.pyo
 ${PYSITELIB}/rest_framework/mixins.py
 ${PYSITELIB}/rest_framework/mixins.pyc
 ${PYSITELIB}/rest_framework/mixins.pyo
-${PYSITELIB}/rest_framework/models.py
-${PYSITELIB}/rest_framework/models.pyc
-${PYSITELIB}/rest_framework/models.pyo
 ${PYSITELIB}/rest_framework/negotiation.py
 ${PYSITELIB}/rest_framework/negotiation.pyc
 ${PYSITELIB}/rest_framework/negotiation.pyo
