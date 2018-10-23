@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2018/02/05 18:37:21 jperkin Exp $
+$NetBSD: distinfo,v 1.21 2018/10/23 10:45:01 jperkin Exp $
 
 SHA1 (mpeg4ip-1.6.1.tar.gz) = 2af97fc0da6a5c0bcb7b433c6715967487b80e38
 RMD160 (mpeg4ip-1.6.1.tar.gz) = ee8375d9581cccbbf685f730bb36f3866eaf12f7
@@ -27,6 +27,7 @@ SHA1 (patch-au) = f3eee9942c4f5ad716634edfa9535c8c9fda73ba
 SHA1 (patch-av) = 3b25351b26124c9a546c09d55900fe8df3224f6d
 SHA1 (patch-common_video_iso-mpeg4_include_basic.hpp) = 457aa492ef05abf0af8a17fea202ae18c28f1cc3
 SHA1 (patch-common_video_iso-mpeg4_src_type__basic.cpp) = 01f8b446af8cd7f012d2837bdbb13d13e4e6ac93
+SHA1 (patch-common_video_iso-mpeg4_src_vtc__ztq__QMInit.cpp) = a25ac4c2f8a1335d9d4250d933150da5d1aa223a
 SHA1 (patch-doc_mp4v2_MP4.3) = e799c63f63cdb1d360077b6f1410a081c1a49c5a
 SHA1 (patch-lib_mp4_atom.c) = 31e691f5f8bf8e7cf40ac2c55d61be1e5265ac2e
 SHA1 (patch-lib_mp4_ctab.c) = 334ee9a4d85705cb5fb029fd6925113328066b88
