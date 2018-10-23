@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2018/03/21 15:05:05 taca Exp $
+# $NetBSD: Makefile.common,v 1.37 2018/10/23 13:10:05 jperkin Exp $
 #
 # used by net/isc-dhcp4/Makefile
 # used by net/isc-dhcpd4/Makefile
@@ -27,7 +27,7 @@ DHCP_PID?=		${VARBASE}/run/isc-dhcp
 PKG_SYSCONFSUBDIR=	dhcp
 
 USE_TOOLS+=		gmake gunzip gzip tar
-USE_LANGUAGES+=		c c++
+USE_LANGUAGES+=		c99 c++
 
 PATCHDIR=		${.CURDIR}/../isc-dhcp4/patches
 DISTINFO_FILE= 		${.CURDIR}/../isc-dhcp4/distinfo
@@ -56,6 +56,8 @@ CONFIGURE_ENV+=		BUILD_CC=${NATIVE_CC:Q}
 CONFIGURE_ENV.NetBSD+=	ac_cv_file__dev_random=yes
 CONFIGURE_ARGS.NetBSD+=	--with-randomdev=/dev/random
 .endif
+
+CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600 -D__EXTENSIONS__
 
 SUBST_CLASSES+=		config
 SUBST_STAGE.config=	pre-configure
@@ -93,4 +95,5 @@ post-configure:
 				${CONFIGURE_ARGS}		\
 				${BIND_CONFIGURE_ARGS}
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
