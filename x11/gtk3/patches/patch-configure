@@ -1,18 +1,18 @@
-$NetBSD: patch-configure,v 1.3 2014/09/08 12:06:48 wiz Exp $
+$NetBSD: patch-configure,v 1.4 2018/10/23 07:42:23 leot Exp $
 
 Make gtk3-atk-bridge an option to avoid unwanted dbus dependency.
 
---- configure.orig	2014-03-25 00:21:59.000000000 +0000
+--- configure.orig	2018-09-19 01:46:05.000000000 +0000
 +++ configure
-@@ -1035,6 +1035,7 @@ enable_glibtest
+@@ -1062,6 +1062,7 @@ enable_glibtest
  enable_modules
  with_included_immodules
  with_x
 +with_atk_bridge
+ enable_win32_gles
  enable_cups
  enable_papi
- enable_cloudprint
-@@ -1782,6 +1783,7 @@ Optional Packages:
+@@ -1831,6 +1832,7 @@ Optional Packages:
    --with-included-immodules=MODULE1,MODULE2,...
                            build the specified input methods into gtk
    --with-x                use the X Window System
@@ -20,7 +20,7 @@ Make gtk3-atk-bridge an option to avoid unwanted dbus dependency.
    --with-html-dir=PATH    path to installed docs
    --with-xml-catalog=CATALOG
                            path to xml catalog to use
-@@ -24467,8 +24469,20 @@ fi
+@@ -26974,8 +26976,20 @@ fi
  # Check for Accessibility Toolkit flags
  ########################################
  
