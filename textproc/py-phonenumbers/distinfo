@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2018/04/26 13:23:36 adam Exp $
+$NetBSD: distinfo,v 1.12 2018/10/23 14:21:15 adam Exp $
 
-SHA1 (phonenumbers-8.9.4.tar.gz) = b65079342b52df18062c703149f5f651950980cb
-RMD160 (phonenumbers-8.9.4.tar.gz) = f573bca8a8dad0ce6debea1cb7cd137280c5a3da
-SHA512 (phonenumbers-8.9.4.tar.gz) = 55bf95f1900864ac18b7777ce3153cd6e1eb14a5f5d5c84c42f1c6dbb496f0143d4349c94ff4f0430d0b0202a3b5a86910b92ea567e69d3732346484f3b95b5c
-Size (phonenumbers-8.9.4.tar.gz) = 2683235 bytes
+SHA1 (phonenumbers-8.9.16.tar.gz) = 7794699682094d7d24313f6e257589620951a634
+RMD160 (phonenumbers-8.9.16.tar.gz) = b754886a539217a471a1684c23db73dd6c2f2b14
+SHA512 (phonenumbers-8.9.16.tar.gz) = 3ca545b654ae86220521827c84995e9bddcc65eae6ce3b6ddbe0cecc6e900ea9e6dca79373e9cae732a58a1daef3fd7f9ddb71935a77ed82a982b9a2e2a52b63
+Size (phonenumbers-8.9.16.tar.gz) = 2912838 bytes
