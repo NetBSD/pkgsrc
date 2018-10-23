@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.159 2018/10/13 02:46:11 maya Exp $
+# $NetBSD: sites.mk,v 1.160 2018/10/23 23:22:31 maya Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -99,16 +99,7 @@ MASTER_SITE_MOZILLA_ALL+=   \
 # see http://www.mozilla.org/mirrors.html
 MASTER_SITE_MOZILLA+=	\
 	http://releases.mozilla.org/pub/mozilla.org/ \
-	http://mirror.atlanticmetro.net/mozilla/ \
-	http://ftp.cvut.cz/mozilla/ \
-	http://mirror.waia.asn.au/pub/mozilla/ \
 	http://download-origin.cdn.mozilla.net/pub/mozilla.org/
-
-# for Extended Support Release version
-MASTER_SITE_MOZILLA_ESR+=	\
-	http://download-origin.cdn.mozilla.net/pub/mozilla.org/ \
-	http://dm-download02.mozilla.org/pub/mozilla.org/ \
-	http://ftp.mozilla.org/pub/mozilla.org/
 
 MASTER_SITE_XEMACS+=    \
 	ftp://ftp.xemacs.org/pub/xemacs/ \
