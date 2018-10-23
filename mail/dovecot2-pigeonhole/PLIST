@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2018/07/14 20:16:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2018/10/23 16:30:03 adam Exp $
 bin/sieve-dump
 bin/sieve-filter
 bin/sieve-test
@@ -86,6 +86,7 @@ share/doc/dovecot/sieve/extensions/vnd.dovecot.report.txt
 share/doc/dovecot/sieve/locations/dict.txt
 share/doc/dovecot/sieve/locations/file.txt
 share/doc/dovecot/sieve/locations/ldap.txt
+share/doc/dovecot/sieve/plugins/imap_filter_sieve.txt
 share/doc/dovecot/sieve/plugins/imapsieve.txt
 share/doc/dovecot/sieve/plugins/sieve_extprograms.txt
 share/examples/dovecot/conf.d/20-managesieve.conf
