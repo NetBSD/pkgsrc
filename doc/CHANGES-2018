@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4465 2018/10/23 07:59:51 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4466 2018/10/23 08:06:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6215,3 +6215,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-wheel to 0.32.2 [adam 2018-10-23]
 	Updated www/py-djangorestframework to 3.9.0 [adam 2018-10-23]
 	Updated www/py-autobahn to 18.10.1 [adam 2018-10-23]
+	Updated textproc/py-xlsxwriter to 1.1.2 [adam 2018-10-23]
+	Updated devel/py-xdis to 3.8.8 [adam 2018-10-23]
