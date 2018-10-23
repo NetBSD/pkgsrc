@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4474 2018/10/23 16:04:11 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4475 2018/10/23 16:31:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6229,3 +6229,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/py-stdnum to 1.10 [adam 2018-10-23]
 	Updated textproc/py-phonenumbers to 8.9.16 [adam 2018-10-23]
 	Added databases/postgresql11 version 11.0 [adam 2018-10-23]
+	Updated multimedia/x264-devel to 20181022 [adam 2018-10-23]
+	Updated mail/dovecot2 to 2.3.3 [adam 2018-10-23]
+	Updated mail/dovecot2-pigeonhole to 0.5.3 [adam 2018-10-23]
