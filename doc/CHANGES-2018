@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4464 2018/10/23 07:46:54 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4465 2018/10/23 07:59:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6213,3 +6213,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/gtk3 to 3.24.1 [leot 2018-10-23]
 	Updated net/py-gevent to 1.3.7 [adam 2018-10-23]
 	Updated devel/py-wheel to 0.32.2 [adam 2018-10-23]
+	Updated www/py-djangorestframework to 3.9.0 [adam 2018-10-23]
+	Updated www/py-autobahn to 18.10.1 [adam 2018-10-23]
