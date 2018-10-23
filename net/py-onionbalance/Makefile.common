@@ -1,0 +1,6 @@
+# $NetBSD: Makefile.common,v 1.1 2018/10/23 03:18:06 riastradh Exp $
+
+# used by net/onionbalance/Makefile
+# used by net/py-onionbalance/Makefile
+
+VERSION=	0.1.8
