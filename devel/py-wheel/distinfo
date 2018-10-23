@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2018/10/07 07:23:18 adam Exp $
+$NetBSD: distinfo,v 1.8 2018/10/23 07:46:04 adam Exp $
 
-SHA1 (wheel-0.32.1.tar.gz) = 12b1ce30e0a2734343cbdadbf0fbcfdfb2245db6
-RMD160 (wheel-0.32.1.tar.gz) = c73fb5935bd2168d8ba711b0840e14fabf0f5490
-SHA512 (wheel-0.32.1.tar.gz) = 237452b2d092bd422e99a812e282128295ace004aeed456970ca81115e250b2fa8ac1e82615b34f490282e95fad0dd070430fe22a6267726744545ee3e1acd33
-Size (wheel-0.32.1.tar.gz) = 17635 bytes
+SHA1 (wheel-0.32.2.tar.gz) = 313c581d71806654e5b56e2888c6381cfa1a12b8
+RMD160 (wheel-0.32.2.tar.gz) = 62d570974d3bab289342ec19376818291f77b93f
+SHA512 (wheel-0.32.2.tar.gz) = 584ac926ded13737070cfbed5ef18b685d4e4440d8b6d60a64178cd88cc380fcae6618d4446bffffebc6e1ce1acccf91d21bfefbe006dcff6771fe7ce5f62cd4
+Size (wheel-0.32.2.tar.gz) = 17647 bytes
