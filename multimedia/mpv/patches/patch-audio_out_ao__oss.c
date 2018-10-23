@@ -1,4 +1,4 @@
-$NetBSD: patch-audio_out_ao__oss.c,v 1.8 2018/10/23 12:39:35 leot Exp $
+$NetBSD: patch-audio_out_ao__oss.c,v 1.9 2018/10/23 13:08:39 leot Exp $
 
 - ioctl(..., SNDCTL_DSP_CHANNELS, &nchannels) for not supported nchannels does not
   return an error and instead set nchannels to the default value. Instead of
@@ -6,7 +6,7 @@ $NetBSD: patch-audio_out_ao__oss.c,v 1.8 2018/10/23 12:39:35 leot Exp $
 
 --- audio/out/ao_oss.c.orig	2018-10-02 19:03:41.000000000 +0000
 +++ audio/out/ao_oss.c
-@@ -336,19 +336,24 @@ static int reopen_device(struct ao *ao, 
+@@ -336,19 +336,23 @@ static int reopen_device(struct ao *ao, 
              mp_chmap_sel_add_map(&sel, &oss_layouts[n]);
          if (!ao_chmap_sel_adjust(ao, &sel, &channels))
              goto fail;
@@ -24,16 +24,15 @@ $NetBSD: patch-audio_out_ao__oss.c,v 1.8 2018/10/23 12:39:35 leot Exp $
                         reqchannels);
                  goto fail;
              }
-+            goto stereo;
++            if (nchannels != reqchannels) {
++                // Fallback to stereo
++                nchannels = 2;
++                goto stereo;
++            }
          } else {
 -            int c = reqchannels - 1;
 +stereo:
-+            if (nchannels != reqchannels) {
-+                // Fallback to stereo
-+                c = 1;
-+            } else {
-+                c = reqchannels - 1;
-+            }
++            c = nchannels - 1;
              if (ioctl(p->audio_fd, SNDCTL_DSP_STEREO, &c) == -1) {
                  MP_ERR(ao, "Failed to set audio device to %d channels.\n",
                         reqchannels);
