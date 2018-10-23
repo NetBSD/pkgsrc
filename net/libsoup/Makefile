@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2018/08/16 12:16:17 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2018/10/23 07:17:53 leot Exp $
 
-DISTNAME=	libsoup-2.62.3
+DISTNAME=	libsoup-2.64.2
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsoup/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -21,8 +21,9 @@ CONFIGURE_ENV+=		DATADIRNAME=share
 
 # XXX: disable Vala bindings otherwise the configure phase fails because is not
 # XXX: able to find vapigen.
-CONFIGURE_ARGS+=	--enable-vala=no \
-			--disable-tls-check
+CONFIGURE_ARGS+=	--enable-vala=no
+CONFIGURE_ARGS+=	--disable-tls-check
+CONFIGURE_ARGS+=	--with-apache-httpd=no
 
 PKGCONFIG_OVERRIDE+=	libsoup-2.4.pc.in
 PKGCONFIG_OVERRIDE+=	libsoup-gnome-2.4.pc.in
@@ -44,11 +45,6 @@ CWRAPPERS_APPEND.cc+=	-Wno-error=format-nonliteral
 
 .include "options.mk"
 
-REPLACE_PYTHON= libsoup/tld-parser.py
-PYTHON_FOR_BUILD_ONLY= yes
-
-.include "../../lang/python/application.mk"
-
 .include "../../databases/sqlite3/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.38.0
 .include "../../devel/glib2/buildlink3.mk"
@@ -57,4 +53,5 @@ BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-introspection
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../www/libpsl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
