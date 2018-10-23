@@ -1,4 +1,4 @@
-$NetBSD: patch-audio_out_ao__oss.c,v 1.7 2018/10/23 12:14:54 leot Exp $
+$NetBSD: patch-audio_out_ao__oss.c,v 1.8 2018/10/23 12:39:35 leot Exp $
 
 - ioctl(..., SNDCTL_DSP_CHANNELS, &nchannels) for not supported nchannels does not
   return an error and instead set nchannels to the default value. Instead of
@@ -6,12 +6,12 @@ $NetBSD: patch-audio_out_ao__oss.c,v 1.7 2018/10/23 12:14:54 leot Exp $
 
 --- audio/out/ao_oss.c.orig	2018-10-02 19:03:41.000000000 +0000
 +++ audio/out/ao_oss.c
-@@ -336,19 +336,23 @@ static int reopen_device(struct ao *ao, 
+@@ -336,19 +336,24 @@ static int reopen_device(struct ao *ao, 
              mp_chmap_sel_add_map(&sel, &oss_layouts[n]);
          if (!ao_chmap_sel_adjust(ao, &sel, &channels))
              goto fail;
 -        int reqchannels = channels.num;
-+        int nchannels, reqchannels;
++        int c, nchannels, reqchannels;
 +        nchannels = reqchannels = channels.num;
          // We only use SNDCTL_DSP_CHANNELS for >2 channels, in case some drivers don't have it
          if (reqchannels > 2) {
@@ -24,9 +24,10 @@ $NetBSD: patch-audio_out_ao__oss.c,v 1.7 2018/10/23 12:14:54 leot Exp $
                         reqchannels);
                  goto fail;
              }
++            goto stereo;
          } else {
 -            int c = reqchannels - 1;
-+            int c;
++stereo:
 +            if (nchannels != reqchannels) {
 +                // Fallback to stereo
 +                c = 1;
