@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1231 2018/10/23 03:17:22 riastradh Exp $
+# $NetBSD: Makefile,v 1.1232 2018/10/23 03:18:06 riastradh Exp $
 #
 
 COMMENT=	Networking tools
@@ -441,6 +441,7 @@ SUBDIR+=	oidentd
 SUBDIR+=	oinkmaster
 SUBDIR+=	omniNotify
 SUBDIR+=	omniORB
+SUBDIR+=	onionbalance
 SUBDIR+=	openag
 SUBDIR+=	openconnect
 SUBDIR+=	openh323
@@ -681,6 +682,7 @@ SUBDIR+=	py-netifaces
 SUBDIR+=	py-netsnmp
 SUBDIR+=	py-nyx
 SUBDIR+=	py-omniORBpy
+SUBDIR+=	py-onionbalance
 SUBDIR+=	py-pcap
 SUBDIR+=	py-portend
 SUBDIR+=	py-ptt
