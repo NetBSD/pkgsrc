@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2018/07/14 20:15:33 adam Exp $
+# $NetBSD: Makefile.common,v 1.21 2018/10/23 16:29:18 adam Exp $
 #
 # when updating to a new release, update ABI depends in
 # the buildlink3.mk file as well, since the plugins' version
@@ -7,9 +7,9 @@
 # used by mail/dovecot2/Makefile
 # used by mail/dovecot2/Makefile.plugin
 
-DISTNAME=	dovecot-2.3.2.1
+DISTNAME=	dovecot-2.3.3
 CATEGORIES=	mail
-MASTER_SITES=	https://www.dovecot.org/releases/${PKGVERSION_NOREV:R:R}/
+MASTER_SITES=	https://www.dovecot.org/releases/${PKGVERSION_NOREV:R}/
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.dovecot.org/
