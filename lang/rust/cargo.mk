@@ -1,4 +1,4 @@
-# $NetBSD: cargo.mk,v 1.3 2018/09/21 21:26:33 minskim Exp $
+# $NetBSD: cargo.mk,v 1.4 2018/10/23 16:39:29 minskim Exp $
 #
 # Common logic that can be used by packages that depend on cargo crates
 # from crates.io. This lets existing pkgsrc infrastructure fetch and verify
@@ -29,6 +29,7 @@ DISTFILES?=	${DEFAULT_DISTFILES}
 .for _crate in ${CARGO_CRATE_DEPENDS}
 DISTFILES+=	${_crate}.crate
 SITES.${_crate}.crate+= -${MASTER_SITE_CRATESIO}${_crate:C/-[0-9.]+$//}/${_crate:C/^.*-([0-9.]+)$/\1/}/download
+EXTRACT_DIR.${_crate}.crate?=	${CARGO_VENDOR_DIR}
 .endfor
 
 post-extract: cargo-vendor-crates
@@ -39,9 +40,8 @@ cargo-vendor-crates:
 	${RUN}${PRINTF} "[source.crates-io]\nreplace-with = \"vendored-sources\"\n[source.vendored-sources]\ndirectory = \"${CARGO_VENDOR_DIR}\"\n" >> ${WRKSRC}/.cargo/config
 	${RUN}${MKDIR} ${CARGO_VENDOR_DIR}
 .for _crate in ${CARGO_CRATE_DEPENDS}
-	${RUN}${TOOLS_PATH.bsdtar} -C ${CARGO_VENDOR_DIR} -xzf ${WRKDIR}/${_crate}.crate
 	${RUN}${PRINTF} '{"package":"%s","files":{}}'	\
-	  $$(${DIGEST} sha256 < ${WRKDIR}/${_crate}.crate) \
+	  $$(${DIGEST} sha256 < ${_DISTDIR}/${_crate}.crate) \
 	  > ${CARGO_VENDOR_DIR}/${_crate}/.cargo-checksum.json
 .endfor
 
