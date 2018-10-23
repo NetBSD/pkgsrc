@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4461 2018/10/23 06:47:12 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4462 2018/10/23 07:18:10 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6209,3 +6209,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-test to 3.9.2 [adam 2018-10-23]
 	Updated converters/help2man to 1.47.8 [adam 2018-10-23]
 	Updated textproc/py-openpyxl to 2.5.9 [adam 2018-10-23]
+	Updated net/libsoup to 2.64.2 [leot 2018-10-23]
