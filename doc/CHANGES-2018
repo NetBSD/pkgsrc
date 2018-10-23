@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4472 2018/10/23 11:46:52 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.4473 2018/10/23 14:21:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6226,3 +6226,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated editors/xfce4-mousepad to 0.4.1 [bsiegert 2018-10-23]
 	Updated devel/py-zconfig to 3.3.0 [adam 2018-10-23]
 	Updated textproc/hunspell to 1.6.2 [bsiegert 2018-10-23]
+	Updated misc/py-stdnum to 1.10 [adam 2018-10-23]
+	Updated textproc/py-phonenumbers to 8.9.16 [adam 2018-10-23]
