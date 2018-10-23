@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2018/08/22 09:46:30 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2018/10/23 12:33:04 jperkin Exp $
 
 TORBVER=	6.0.8
 
@@ -30,6 +30,8 @@ SUBST_SED.fix-build-dir+=	-e 's,mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-@CONFI
 
 MOZILLA_DIR=	# empty
 
+.include "../../mk/bsd.prefs.mk"
+
 CONFIGURE_ARGS+=	--enable-application=browser
 CONFIGURE_ARGS+=	--disable-tor-browser-update
 CONFIGURE_ARGS+=	--disable-webrtc
@@ -37,7 +39,9 @@ CONFIGURE_ARGS+=	--disable-gio
 CONFIGURE_ARGS+=	--disable-dbus
 CONFIGURE_ARGS+=	--disable-gnomeui
 CONFIGURE_ARGS+=        --disable-libnotify
+.if ${OPSYS} != "SunOS"
 CONFIGURE_ARGS+=        --enable-pie
+.endif
 CONFIGURE_ARGS+=        --enable-tor-data-in-home-dir
 CFLAGS+=		-DTOR_BROWSER_DATA_IN_HOME_DIR=1
 CFLAGS+=		-DTOR_BROWSER_DATA_OUTSIDE_APP_DIR=1
