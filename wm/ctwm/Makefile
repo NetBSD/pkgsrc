@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2018/09/22 07:00:38 maya Exp $
+# $NetBSD: Makefile,v 1.37 2018/10/23 16:53:37 jperkin Exp $
 #
 
 DISTNAME=	ctwm-4.0.2
@@ -22,12 +22,9 @@ TOOLS_PLATFORM.gm4?=	${TOOLS_PLATFORM.m4}
 .  endif
 .endif
 USE_TOOLS+=		gm4:run
-OPSYSVARS+=		EXTRA_DEFINES
-# The __EXTENSIONS__ is needed for sigjmp_buf.
-EXTRA_DEFINES.SunOS+=	-D__EXTENSIONS__
-MAKE_ENV+=		EXTRA_DEFINES=${EXTRA_DEFINES:Q}
 AUTO_MKDIRS=		yes
 
+CFLAGS.SunOS+=		-D__EXTENSIONS__
 
 # If M4_CMD is not set, it is autodetected as ${WRKDIR}/.tools/bin/m4
 CMAKE_ARGS+=		-DM4_CMD=${TOOLS_PATH.gm4}
