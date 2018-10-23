@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4467 2018/10/23 09:01:06 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4468 2018/10/23 09:03:34 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6219,3 +6219,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-xdis to 3.8.8 [adam 2018-10-23]
 	Updated devel/py-pluggy to 0.8.0 [adam 2018-10-23]
 	Updated databases/py-ldap to 3.1.0 [adam 2018-10-23]
+	Updated lang/py36-html-docs to 3.6.7 [leot 2018-10-23]
