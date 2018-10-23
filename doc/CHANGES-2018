@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4471 2018/10/23 10:16:40 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4472 2018/10/23 11:46:52 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6223,4 +6223,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/py37-html-docs to 3.7.1 [leot 2018-10-23]
 	Added devel/py-ZopeTestrunner version 4.9 [adam 2018-10-23]
 	Added devel/py-zope.exceptions version 4.3 [adam 2018-10-23]
+	Updated editors/xfce4-mousepad to 0.4.1 [bsiegert 2018-10-23]
 	Updated devel/py-zconfig to 3.3.0 [adam 2018-10-23]
+	Updated textproc/hunspell to 1.6.2 [bsiegert 2018-10-23]
