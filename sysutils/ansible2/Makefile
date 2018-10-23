@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/09/14 15:43:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2018/10/23 13:21:44 jperkin Exp $
 
 DISTNAME=	ansible-2.6.4
 CATEGORIES=	python sysutils
@@ -38,6 +38,9 @@ OWN_DIRS=		${PREFIX}/share/ansible
 
 CONF_FILES=		${EGDIR}/ansible.cfg ${PKG_SYSCONFDIR}/ansible.cfg
 CONF_FILES+=		${EGDIR}/hosts ${PKG_SYSCONFDIR}/hosts
+
+# Contains hardcoded paths to expected locations of package managers.
+CHECK_WRKREF_SKIP+=	*/ansible/module_utils/facts/system/pkg_mgr.py
 
 post-install:
 .for f in ansible-console.1 ansible-doc.1 ansible-galaxy.1 ansible-playbook.1 \
