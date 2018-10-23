@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4458 2018/10/22 17:33:09 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4459 2018/10/23 03:33:28 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6204,3 +6204,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated archivers/py-zstandard to 0.10.1 [adam 2018-10-22]
 	Updated lang/python36 to 3.6.7 [adam 2018-10-22]
 	Updated lang/python37 to 3.7.1 [adam 2018-10-22]
+	Updated sysutils/dmidecode to 3.2p1 [msaitoh 2018-10-22]
