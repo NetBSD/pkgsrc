@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2018/10/01 17:51:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2018/10/23 06:46:45 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -235,9 +235,6 @@ ${PYSITELIB}/openpyxl/drawing/graphic.pyo
 ${PYSITELIB}/openpyxl/drawing/image.py
 ${PYSITELIB}/openpyxl/drawing/image.pyc
 ${PYSITELIB}/openpyxl/drawing/image.pyo
-${PYSITELIB}/openpyxl/drawing/image_reader.py
-${PYSITELIB}/openpyxl/drawing/image_reader.pyc
-${PYSITELIB}/openpyxl/drawing/image_reader.pyo
 ${PYSITELIB}/openpyxl/drawing/line.py
 ${PYSITELIB}/openpyxl/drawing/line.pyc
 ${PYSITELIB}/openpyxl/drawing/line.pyo
@@ -319,6 +316,9 @@ ${PYSITELIB}/openpyxl/pivot/table.pyo
 ${PYSITELIB}/openpyxl/reader/__init__.py
 ${PYSITELIB}/openpyxl/reader/__init__.pyc
 ${PYSITELIB}/openpyxl/reader/__init__.pyo
+${PYSITELIB}/openpyxl/reader/drawings.py
+${PYSITELIB}/openpyxl/reader/drawings.pyc
+${PYSITELIB}/openpyxl/reader/drawings.pyo
 ${PYSITELIB}/openpyxl/reader/excel.py
 ${PYSITELIB}/openpyxl/reader/excel.pyc
 ${PYSITELIB}/openpyxl/reader/excel.pyo
