@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4459 2018/10/23 03:33:28 msaitoh Exp $
+$NetBSD: CHANGES-2018,v 1.4460 2018/10/23 06:34:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6205,3 +6205,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/python36 to 3.6.7 [adam 2018-10-22]
 	Updated lang/python37 to 3.7.1 [adam 2018-10-22]
 	Updated sysutils/dmidecode to 3.2p1 [msaitoh 2018-10-22]
+	Updated multimedia/mkvtoolnix to 28.0.0 [adam 2018-10-23]
+	Updated devel/py-test to 3.9.2 [adam 2018-10-23]
