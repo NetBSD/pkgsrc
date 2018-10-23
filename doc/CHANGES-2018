@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4466 2018/10/23 08:06:02 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4467 2018/10/23 09:01:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6217,3 +6217,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-autobahn to 18.10.1 [adam 2018-10-23]
 	Updated textproc/py-xlsxwriter to 1.1.2 [adam 2018-10-23]
 	Updated devel/py-xdis to 3.8.8 [adam 2018-10-23]
+	Updated devel/py-pluggy to 0.8.0 [adam 2018-10-23]
+	Updated databases/py-ldap to 3.1.0 [adam 2018-10-23]
