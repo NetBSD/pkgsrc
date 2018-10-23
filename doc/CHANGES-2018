@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4460 2018/10/23 06:34:20 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4461 2018/10/23 06:47:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6207,3 +6207,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/dmidecode to 3.2p1 [msaitoh 2018-10-22]
 	Updated multimedia/mkvtoolnix to 28.0.0 [adam 2018-10-23]
 	Updated devel/py-test to 3.9.2 [adam 2018-10-23]
+	Updated converters/help2man to 1.47.8 [adam 2018-10-23]
+	Updated textproc/py-openpyxl to 2.5.9 [adam 2018-10-23]
