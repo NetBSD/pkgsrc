@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.1 2018/06/28 14:04:10 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.2 2018/10/23 12:33:04 jperkin Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -51,7 +51,9 @@ CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}browser/components/loop/run-all-loop-tests
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}browser/extensions/loop/run-all-loop-tests.sh
 
 CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk3
+.if ${OPSYS} != "SunOS"
 CONFIGURE_ARGS+=	--enable-pie
+.endif
 CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--with-pthreads
 # Mozilla Bug 1432751

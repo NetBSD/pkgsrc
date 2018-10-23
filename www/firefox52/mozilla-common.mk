@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.2 2017/07/12 01:49:34 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.3 2018/10/23 12:33:04 jperkin Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -45,7 +45,9 @@ CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}intl/icu/source/configure
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}browser/components/loop/run-all-loop-tests.sh
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}browser/extensions/loop/run-all-loop-tests.sh
 
+.if ${OPSYS} != "SunOS"
 CONFIGURE_ARGS+=	--enable-pie
+.endif
 CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--with-pthreads
 CONFIGURE_ARGS+=	--enable-system-cairo
