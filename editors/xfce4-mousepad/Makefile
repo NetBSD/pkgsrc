@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2018/08/22 09:45:04 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2018/10/23 09:54:14 bsiegert Exp $
 
-PKGREVISION= 9
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	0.4.0
+VERSION=	0.4.1
 DISTNAME=	mousepad-${VERSION}
 PKGNAME=	xfce4-mousepad-${VERSION}
 CATEGORIES=	editors
