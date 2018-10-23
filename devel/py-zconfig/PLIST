@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2018/01/24 10:17:03 adam Exp $
-bin/zconfig${PYVERSSUFFIX}
-bin/zconfig_schema2html${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.7 2018/10/23 09:46:43 adam Exp $
+bin/zconfig-${PYVERSSUFFIX}
+bin/zconfig_schema2html-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -113,6 +113,7 @@ ${PYSITELIB}/ZConfig/tests/input/include.conf
 ${PYSITELIB}/ZConfig/tests/input/inner.conf
 ${PYSITELIB}/ZConfig/tests/input/library.xml
 ${PYSITELIB}/ZConfig/tests/input/logger.xml
+${PYSITELIB}/ZConfig/tests/input/non-ascii.txt
 ${PYSITELIB}/ZConfig/tests/input/outer.conf
 ${PYSITELIB}/ZConfig/tests/input/simple.conf
 ${PYSITELIB}/ZConfig/tests/input/simple.xml
