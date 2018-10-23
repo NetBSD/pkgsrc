@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2017/11/27 10:47:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2018/10/23 08:58:27 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -12,9 +12,18 @@ ${PYSITELIB}/ldap/__init__.pyo
 ${PYSITELIB}/ldap/async.py
 ${PYSITELIB}/ldap/async.pyc
 ${PYSITELIB}/ldap/async.pyo
+${PYSITELIB}/ldap/asyncsearch.py
+${PYSITELIB}/ldap/asyncsearch.pyc
+${PYSITELIB}/ldap/asyncsearch.pyo
 ${PYSITELIB}/ldap/cidict.py
 ${PYSITELIB}/ldap/cidict.pyc
 ${PYSITELIB}/ldap/cidict.pyo
+${PYSITELIB}/ldap/compat.py
+${PYSITELIB}/ldap/compat.pyc
+${PYSITELIB}/ldap/compat.pyo
+${PYSITELIB}/ldap/constants.py
+${PYSITELIB}/ldap/constants.pyc
+${PYSITELIB}/ldap/constants.pyo
 ${PYSITELIB}/ldap/controls/__init__.py
 ${PYSITELIB}/ldap/controls/__init__.pyc
 ${PYSITELIB}/ldap/controls/__init__.pyo
@@ -27,6 +36,9 @@ ${PYSITELIB}/ldap/controls/libldap.pyo
 ${PYSITELIB}/ldap/controls/openldap.py
 ${PYSITELIB}/ldap/controls/openldap.pyc
 ${PYSITELIB}/ldap/controls/openldap.pyo
+${PYSITELIB}/ldap/controls/pagedresults.py
+${PYSITELIB}/ldap/controls/pagedresults.pyc
+${PYSITELIB}/ldap/controls/pagedresults.pyo
 ${PYSITELIB}/ldap/controls/ppolicy.py
 ${PYSITELIB}/ldap/controls/ppolicy.pyc
 ${PYSITELIB}/ldap/controls/ppolicy.pyo
@@ -66,15 +78,9 @@ ${PYSITELIB}/ldap/filter.pyo
 ${PYSITELIB}/ldap/functions.py
 ${PYSITELIB}/ldap/functions.pyc
 ${PYSITELIB}/ldap/functions.pyo
-${PYSITELIB}/ldap/ldapobject/__init__.py
-${PYSITELIB}/ldap/ldapobject/__init__.pyc
-${PYSITELIB}/ldap/ldapobject/__init__.pyo
-${PYSITELIB}/ldap/ldapobject/reconnect.py
-${PYSITELIB}/ldap/ldapobject/reconnect.pyc
-${PYSITELIB}/ldap/ldapobject/reconnect.pyo
-${PYSITELIB}/ldap/ldapobject/simple.py
-${PYSITELIB}/ldap/ldapobject/simple.pyc
-${PYSITELIB}/ldap/ldapobject/simple.pyo
+${PYSITELIB}/ldap/ldapobject.py
+${PYSITELIB}/ldap/ldapobject.pyc
+${PYSITELIB}/ldap/ldapobject.pyo
 ${PYSITELIB}/ldap/logger.py
 ${PYSITELIB}/ldap/logger.pyc
 ${PYSITELIB}/ldap/logger.pyo
@@ -111,6 +117,20 @@ ${PYSITELIB}/ldapurl.pyo
 ${PYSITELIB}/ldif.py
 ${PYSITELIB}/ldif.pyc
 ${PYSITELIB}/ldif.pyo
-${PYSITELIB}/slapdtest.py
-${PYSITELIB}/slapdtest.pyc
-${PYSITELIB}/slapdtest.pyo
+${PYSITELIB}/slapdtest/__init__.py
+${PYSITELIB}/slapdtest/__init__.pyc
+${PYSITELIB}/slapdtest/__init__.pyo
+${PYSITELIB}/slapdtest/_slapdtest.py
+${PYSITELIB}/slapdtest/_slapdtest.pyc
+${PYSITELIB}/slapdtest/_slapdtest.pyo
+${PYSITELIB}/slapdtest/certs/README
+${PYSITELIB}/slapdtest/certs/ca.conf
+${PYSITELIB}/slapdtest/certs/ca.pem
+${PYSITELIB}/slapdtest/certs/client.conf
+${PYSITELIB}/slapdtest/certs/client.key
+${PYSITELIB}/slapdtest/certs/client.pem
+${PYSITELIB}/slapdtest/certs/gencerts.sh
+${PYSITELIB}/slapdtest/certs/gennssdb.sh
+${PYSITELIB}/slapdtest/certs/server.conf
+${PYSITELIB}/slapdtest/certs/server.key
+${PYSITELIB}/slapdtest/certs/server.pem
