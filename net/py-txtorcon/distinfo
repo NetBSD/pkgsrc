@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/10/23 03:17:22 riastradh Exp $
+
+SHA1 (txtorcon-18.3.0.tar.gz) = 58b409aa442202675fd9619f82aeae2086356d0e
+RMD160 (txtorcon-18.3.0.tar.gz) = fcda362f665b2c889bc5d73c7d8c6269566016de
+SHA512 (txtorcon-18.3.0.tar.gz) = 937423c05059b8c8847f12275b4b22cc4982cd32710fa50a0893b180a55716547f6ae37f38c46cbe62513b0463360900a1202fc3e5189cf023abcd637cb5022e
+Size (txtorcon-18.3.0.tar.gz) = 385335 bytes
