@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4480 2018/10/24 13:32:32 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.4481 2018/10/24 15:46:58 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6242,3 +6242,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/mkvtoolnix to 28.1.0 [adam 2018-10-24]
 	Updated archivers/unrar to 5.6.8 [adam 2018-10-24]
 	Updated mail/qmail to 1.03nb38 [schmonz 2018-10-24]
+	Updated mail/qmail-run to 20181024 [schmonz 2018-10-24]
