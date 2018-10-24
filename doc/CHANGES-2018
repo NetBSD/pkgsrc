@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4475 2018/10/23 16:31:12 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4476 2018/10/24 00:28:25 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6232,3 +6232,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/x264-devel to 20181022 [adam 2018-10-23]
 	Updated mail/dovecot2 to 2.3.3 [adam 2018-10-23]
 	Updated mail/dovecot2-pigeonhole to 0.5.3 [adam 2018-10-23]
+	Added lang/cbindgen version 0.6.6 [maya 2018-10-23]
+	Updated www/seamonkey to 2.49.4 [maya 2018-10-23]
+	Updated www/seamonkey-l10n to 2.49.4 [maya 2018-10-23]
