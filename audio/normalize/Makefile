@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2018/08/22 09:42:56 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2018/10/24 12:30:07 jperkin Exp $
 
 DISTNAME=	normalize-0.7.7
 PKGREVISION=	8
@@ -22,6 +22,9 @@ CONFIGURE_ARGS+=	--with-mad
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.libaudiofile}/include
 LDFLAGS+=		-L${BUILDLINK_PREFIX.libaudiofile}/lib
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libaudiofile}/lib -laudiofile
+
+# Hardcodes _POSIX_C_SOURCE=2 everywhere
+CFLAGS.SunOS+=	-std=gnu89
 
 # is a generated file which doesn't exist when REPLACE_PERL happens
 #REPLACE_PERL=		src/normalize-mp3
