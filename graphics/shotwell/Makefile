@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.95 2018/09/03 10:50:18 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2018/10/24 21:11:51 leot Exp $
 
 DISTNAME=		shotwell-0.22.0
-PKGREVISION=		24
+PKGREVISION=		25
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/shotwell/0.22/}
 EXTRACT_SUFX=		.tar.xz
