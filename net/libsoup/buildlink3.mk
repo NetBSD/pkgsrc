@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2018/07/20 03:33:54 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2018/10/24 09:12:18 prlw1 Exp $
 
 BUILDLINK_TREE+=	libsoup
 
@@ -16,6 +16,7 @@ pkgbase := libsoup
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../www/libpsl/buildlink3.mk"
 
 .if !empty(PKG_BUILD_OPTIONS.libsoup:Mgssapi)
 .include "../../mk/krb5.buildlink3.mk"
