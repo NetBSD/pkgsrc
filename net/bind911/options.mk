@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2018/09/09 13:11:38 taca Exp $
+# $NetBSD: options.mk,v 1.2 2018/10/24 11:27:28 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bind911
 PKG_SUPPORTED_OPTIONS=	bind-dig-sigchase bind-xml-statistics-server
@@ -65,6 +65,7 @@ CONFIGURE_ARGS+=	--enable-fetchlimit
 
 .if !empty(PKG_OPTIONS:Mgeoip)
 CONFIGURE_ARGS+=	--with-geoip=${PREFIX}
+LDFLAGS+=		-lGeoIP
 .include "../../net/GeoIP/buildlink3.mk"
 .endif
 
@@ -87,6 +88,7 @@ CONFIGURE_ARGS+=	--with-tuning=large
 .if !empty(PKG_OPTIONS:Mbind-xml-statistics-server)
 .include "../../textproc/libxml2/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-libxml2
+LDFLAGS+=		-lxml2
 .else
 CONFIGURE_ARGS+=	--without-libxml2
 .endif
