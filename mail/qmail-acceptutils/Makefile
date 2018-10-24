@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2018/10/22 15:23:06 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2018/10/24 13:18:54 schmonz Exp $
 
 DISTNAME=		netqmail-1.06
 PKGNAME=		qmail-acceptutils-${ACPATCHVERSION}
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		http://www.qmail.org/
 
@@ -14,6 +15,8 @@ ACPATCHVERSION=		20181022
 ACPATCH=		${DISTNAME}-acceptutils-${ACPATCHVERSION}.patch
 PATCHFILES+=		${ACPATCH}
 SITES.${ACPATCH}=	${HOMEPAGE}
+
+DEPENDS+=		stunnel-[0-9]*:../../security/stunnel
 
 CONFLICTS+=		qmail<=1.03nb32
 
