@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.8 2018/10/24 15:46:54 schmonz Exp $
+$NetBSD: MESSAGE,v 1.9 2018/10/24 16:28:28 schmonz Exp $
 
 Please read ${PREFIX}/share/doc/qmail-run/README.pkgsrc.
 
@@ -27,6 +27,9 @@ Outgoing submissions with SMTP AUTH over TLS:
 
 Filtering outgoing submissions:
 - List qmail-qfilter programs in ${PKG_SYSCONFDIR}/control/ofmipfilters
+
+User-controlled ofmipd address rewriting:
+- Set qmailofmipd_ofmipdcmd=${PREFIX}/bin/ofmipd-with-user-cdb in /etc/rc.conf
 
 Fetching Maildirs via POP3:
 - Set qmailpop3d=YES in /etc/rc.conf
