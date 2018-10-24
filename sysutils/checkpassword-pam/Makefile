@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2018/08/01 06:53:34 schmonz Exp $
+# $NetBSD: Makefile,v 1.12 2018/10/24 15:49:40 schmonz Exp $
 #
 
 DISTNAME=		checkpassword-pam-0.99
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=checkpasswd-pam/}
 
@@ -15,8 +15,6 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
 CHECKPASSWORD_BIN=	bin/checkpassword-pam
-
-.include "../../sysutils/checkpassword/options.mk"
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 
