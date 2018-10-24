@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.99 2018/07/20 03:34:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.100 2018/10/24 21:11:50 leot Exp $
 #
 
 DISTNAME=		monotone-viz-1.0.2-nolablgtk
 PKGNAME=		${DISTNAME:S/-nolablgtk//}
-PKGREVISION=		26
+PKGREVISION=		27
 CATEGORIES=		devel scm
 #MASTER_SITES=		http://oandrieu.nerim.net/monotone-viz/
 
