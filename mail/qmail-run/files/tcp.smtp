@@ -1,0 +1,2 @@
+127.:allow,RELAYCLIENT=""
+:allow,QMAILQUEUE="@PREFIX@/bin/qmail-qfilter-smtpd-queue",RCPTCHECK="@PREFIX@/bin/qmail-rcptcheck"
