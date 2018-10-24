@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4484 2018/10/24 15:50:42 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.4485 2018/10/24 16:58:57 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6246,3 +6246,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/mess822 to 0.58nb8 [schmonz 2018-10-24]
 	Updated sysutils/checkpassword-pam to 0.99nb2 [schmonz 2018-10-24]
 	Updated sysutils/checkpassword to 0.90nb2 [schmonz 2018-10-24]
+	Updated devel/ncursesw to 6.1nb2 [minskim 2018-10-24]
