@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailofmipd.sh,v 1.9 2017/08/05 15:21:03 schmonz Exp $
+# $NetBSD: qmailofmipd.sh,v 1.10 2018/10/24 15:46:54 schmonz Exp $
 #
 # @PKGNAME@ script to control ofmipd (SMTP submission service).
 #
@@ -11,7 +11,7 @@
 name="qmailofmipd"
 
 # User-settable rc.conf variables and their default values:
-: ${qmailofmipd_postenv:="QMAILQUEUE=@PREFIX@/bin/qmail-queue"}
+: ${qmailofmipd_postenv:=""}
 : ${qmailofmipd_tcpflags:="-vRl0"}
 : ${qmailofmipd_tcphost:="127.0.0.1"}
 : ${qmailofmipd_tcpport:="26"}
@@ -20,6 +20,7 @@ name="qmailofmipd"
 : ${qmailofmipd_tcpserver:="@PREFIX@/bin/tcpserver"}
 : ${qmailofmipd_preofmipd:=""}
 : ${qmailofmipd_ofmipdcmd:="@PREFIX@/bin/ofmipd"}
+: ${qmailofmipd_checkpassword:="@PREFIX@/bin/nbcheckpassword"}
 : ${qmailofmipd_postofmipd:=""}
 : ${qmailofmipd_log:="YES"}
 : ${qmailofmipd_logcmd:="logger -t nb${name} -p mail.info"}
@@ -30,7 +31,7 @@ if [ -f /etc/rc.subr ]; then
 fi
 
 rcvar=${name}
-required_files="@PKG_SYSCONFDIR@/control/concurrencyofmip"
+required_files="@PKG_SYSCONFDIR@/control/concurrencysubmission"
 required_files="${required_files} @PKG_SYSCONFDIR@/tcp.ofmip.cdb"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/rcpthosts"
 command="${qmailofmipd_tcpserver}"
@@ -55,9 +56,10 @@ qmailofmipd_precmd()
 @PREFIX@/bin/softlimit -m ${qmailofmipd_datalimit} ${qmailofmipd_pretcpserver}
 @PREFIX@/bin/argv0 ${qmailofmipd_tcpserver} ${procname}
 ${qmailofmipd_tcpflags} -x @PKG_SYSCONFDIR@/tcp.ofmip.cdb
--c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencyofmip`
--u `@ID@ -u @QMAIL_DAEMON_USER@` -g `@ID@ -g @QMAIL_DAEMON_USER@`
+-c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencysubmission`
 ${qmailofmipd_tcphost} ${qmailofmipd_tcpport}
+@PREFIX@/bin/reup -t 5 @PREFIX@/bin/authup smtp
+${qmailofmipd_checkpassword} @PREFIX@/bin/checknotroot @PREFIX@/bin/fixsmtpio
 ${qmailofmipd_preofmipd} ${qmailofmipd_ofmipdcmd} ${qmailofmipd_postofmipd}
 2>&1 |
 @PREFIX@/bin/pgrphack @PREFIX@/bin/setuidgid @QMAIL_LOG_USER@ ${qmailofmipd_logcmd}"

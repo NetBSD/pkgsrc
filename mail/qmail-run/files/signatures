@@ -1,0 +1,18 @@
+# Windows executables seen in active virii
+TVqQAAMAA
+TVpQAAIAA
+# Additional windows executable signatures not yet seen in virii
+TVpAALQAc
+TVpyAXkAX
+TVrmAU4AA
+TVrhARwAk
+TVoFAQUAA
+TVoAAAQAA
+TVoIARMAA
+TVouARsAA
+TVrQAT8AA
+# .ZIPfile signature seen in SoBig.E and mydoom:
+UEsDBBQAA
+UEsDBAoAAA
+# .GIF file found in a previous Microsoft virus making the rounds.
+R0lGODlhaAA7APcAAP///+rp6puSp6GZrDUjUUc6Zn53mFJMdbGvvVtXh2xre8bF1x8cU4yLprOy
