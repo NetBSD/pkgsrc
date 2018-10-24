@@ -1,4 +1,6 @@
-$NetBSD: patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp,v 1.5 2016/01/21 13:42:33 leot Exp $
+$NetBSD: patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp,v 1.6 2018/10/24 18:31:07 leot Exp $
+
+Add support for NetBSD.
 
 --- Source/JavaScriptCore/assembler/MacroAssemblerARM.cpp.orig	2016-01-20 12:12:59.000000000 +0000
 +++ Source/JavaScriptCore/assembler/MacroAssemblerARM.cpp

@@ -1,4 +1,6 @@
-$NetBSD: patch-Source_JavaScriptCore_assembler_ARMAssembler.h,v 1.6 2016/01/21 13:42:33 leot Exp $
+$NetBSD: patch-Source_JavaScriptCore_assembler_ARMAssembler.h,v 1.7 2018/10/24 18:31:07 leot Exp $
+
+Add support for NetBSD.
 
 --- Source/JavaScriptCore/assembler/ARMAssembler.h.orig	2016-01-20 12:12:59.000000000 +0000
 +++ Source/JavaScriptCore/assembler/ARMAssembler.h
@@ -6,7 +8,7 @@ $NetBSD: patch-Source_JavaScriptCore_assembler_ARMAssembler.h,v 1.6 2016/01/21 1
  
  #if ENABLE(ASSEMBLER) && CPU(ARM_TRADITIONAL)
  
-+#if defined(__NetBSD__)
++#if OS(NETBSD)
 +#include <sys/types.h>
 +#include <machine/sysarch.h>
 +#endif
@@ -18,7 +20,7 @@ $NetBSD: patch-Source_JavaScriptCore_assembler_ARMAssembler.h,v 1.6 2016/01/21 1
                  linuxPageFlush(current, current + page);
  
              linuxPageFlush(current, end);
-+#elif defined(__NetBSD__)
++#elif OS(NETBSD)
 +            struct arm_sync_icache_args arg;
 +            arg.addr = reinterpret_cast<uintptr_t>(code);
 +            arg.len = size;

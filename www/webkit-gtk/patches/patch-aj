@@ -1,4 +1,6 @@
-$NetBSD: patch-aj,v 1.6 2018/04/09 08:33:48 wiz Exp $
+$NetBSD: patch-aj,v 1.7 2018/10/24 18:31:08 leot Exp $
+
+Add support for NetBSD, OpenBSD and Solaris.
 
 --- Source/WTF/wtf/InlineASM.h.orig	2017-02-20 16:20:15.000000000 +0000
 +++ Source/WTF/wtf/InlineASM.h
@@ -7,7 +9,7 @@ $NetBSD: patch-aj,v 1.6 2018/04/09 08:33:48 wiz Exp $
  #endif
  
 -#if (OS(LINUX) || OS(FREEBSD)) && CPU(X86_64)
-+#if (OS(LINUX) || OS(FREEBSD) || OS(NETBSD) || OS(OPENBSD) || OS(SOLARIS)) && CPU(X86_64) || (OS(SOLARIS) && CPU(X86)) 
++#if ((OS(LINUX) || OS(FREEBSD) || OS(NETBSD) || OS(OPENBSD) || OS(SOLARIS)) && CPU(X86_64)) || (OS(SOLARIS) && CPU(X86)) 
  #define GLOBAL_REFERENCE(name) #name "@plt"
  #elif CPU(X86) && COMPILER(MINGW)
  #define GLOBAL_REFERENCE(name) "@" #name "@4"
