@@ -1,12 +1,12 @@
-$NetBSD: patch-Source_WebKit_PlatformGTK.cmake,v 1.1 2018/05/16 18:55:45 jperkin Exp $
+$NetBSD: patch-Source_WebKit_PlatformGTK.cmake,v 1.2 2018/10/24 18:31:07 leot Exp $
 
 SunOS ld does not support --version-script.
 
---- Source/WebKit/PlatformGTK.cmake.orig	2018-04-10 07:33:13.000000000 +0000
+--- Source/WebKit/PlatformGTK.cmake.orig	2018-08-21 16:06:11.000000000 +0000
 +++ Source/WebKit/PlatformGTK.cmake
-@@ -24,7 +24,7 @@ add_definitions(-DLOCALEDIR="${CMAKE_INS
+@@ -22,7 +22,7 @@ add_definitions(-DPKGLIBEXECDIR="${LIBEX
+ add_definitions(-DLOCALEDIR="${CMAKE_INSTALL_FULL_LOCALEDIR}")
  add_definitions(-DLIBDIR="${LIB_INSTALL_DIR}")
- add_definitions(-DDATADIR="${CMAKE_INSTALL_FULL_DATADIR}")
  
 -if (NOT DEVELOPER_MODE AND NOT CMAKE_SYSTEM_NAME MATCHES "Darwin")
 +if (NOT DEVELOPER_MODE AND NOT CMAKE_SYSTEM_NAME MATCHES "Darwin" AND NOT CMAKE_SYSTEM_NAME MATCHES "SunOS")
