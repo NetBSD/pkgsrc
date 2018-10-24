@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4476 2018/10/24 00:28:25 maya Exp $
+$NetBSD: CHANGES-2018,v 1.4477 2018/10/24 10:08:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6235,3 +6235,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Added lang/cbindgen version 0.6.6 [maya 2018-10-23]
 	Updated www/seamonkey to 2.49.4 [maya 2018-10-23]
 	Updated www/seamonkey-l10n to 2.49.4 [maya 2018-10-23]
+	Updated databases/repmgr to 4.2.0 [adam 2018-10-24]
+	Updated www/apache24 to 2.4.37 [adam 2018-10-24]
