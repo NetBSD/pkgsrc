@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.98 2018/09/14 09:01:53 schmonz Exp $
+# $NetBSD: Makefile,v 1.99 2018/10/24 13:32:26 schmonz Exp $
 #
 
 DISTNAME=		netqmail-1.06
 PKGNAME=		qmail-1.03
-PKGREVISION=		37
+PKGREVISION=		38
 CATEGORIES=		mail
 MASTER_SITES=		http://qmail.org/
 

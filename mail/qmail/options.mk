@@ -1,18 +1,19 @@
-# $NetBSD: options.mk,v 1.53 2018/09/14 16:44:09 schmonz Exp $
+# $NetBSD: options.mk,v 1.54 2018/10/24 13:32:26 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmail
-PKG_SUPPORTED_OPTIONS+=		eai inet6 pam sasl syncdir tls
+PKG_SUPPORTED_OPTIONS+=		eai inet6 pam syncdir tls
 PKG_SUPPORTED_OPTIONS+=		qmail-customerror qmail-srs
-PKG_SUGGESTED_OPTIONS+=		eai sasl syncdir tls
+PKG_SUGGESTED_OPTIONS+=		eai syncdir tls
 PKG_SUGGESTED_OPTIONS+=		qmail-customerror qmail-srs
 
 # Formerly optional patches, now unconditionally applied:
 QMAILPATCHES=			netqmail:${DEFAULT_DISTFILES}
 
-QMAILPATCHES+=			tls-smtpauth:${TLSSASL_PATCH}
-TLSSASL_PATCH=			netqmail-1.05-tls-smtpauth-20070417.patch
-PATCHFILES+=			${TLSSASL_PATCH}
-SITES.${TLSSASL_PATCH}=		https://raw.githubusercontent.com/shupp/legacy-qmail-related/master/patches/
+QMAILPATCHES+=			tls:${TLS_PATCH}
+TLS_PATCH=			netqmail-1.06-tls-20160918.patch
+PATCHFILES+=			${TLS_PATCH}
+SITES.${TLS_PATCH}=		http://inoa.net/qmail-tls/
+PATCH_DIST_STRIP.${TLS_PATCH}=	-p1
 
 QMAILPATCHES+=			bigdns:${BIGDNS_PATCH}
 BIGDNS_PATCH=			qmail-103.patch
@@ -43,7 +44,7 @@ PATCHFILES+=			${QBIFFUTMPX_PATCH}
 SITES.${QBIFFUTMPX_PATCH}=	https://schmonz.com/qmail/qbiffutmpx/
 
 QMAILPATCHES+=			rcptcheck:${RCPTCHECK_PATCH}
-RCPTCHECK_PATCH=		netqmail-1.06-tls-smtpauth-20070417-rcptcheck-20170716.patch
+RCPTCHECK_PATCH=		netqmail-1.06-tls-20160918-rcptcheck-20181022.patch
 PATCHFILES+=			${RCPTCHECK_PATCH}
 SITES.${RCPTCHECK_PATCH}=	https://schmonz.com/qmail/rcptcheck/
 
@@ -57,12 +58,9 @@ SITES.${REMOTE_PATCH}=		https://schmonz.com/qmail/remote/
 .if !empty(PKG_OPTIONS:Meai)
 .  include "../../devel/libidn2/buildlink3.mk"
 QMAILPATCHES+=			eai:${EAI_PATCH}
-EAI_PATCH=			qmail-smtputf8.patch
+EAI_PATCH=			netqmail-1.06-tls-20160918-smtputf8-20181024.patch
 PATCHFILES+=			${EAI_PATCH}
-SITES.${EAI_PATCH}=		http://arnt.gulbrandsen.priv.no/qmail/
-PATCH_DIST_CAT.${EAI_PATCH}=	${SED} \
-	-e 's|\(if (!stralloc_append(&firstpart,&ch)) temp_nomem();\)|if (ch == '"'\\\n'"' \&\& \!stralloc_append(\&firstpart,"\\r")) temp_nomem(); \1|' < ${EAI_PATCH}
-PATCH_DIST_STRIP.${EAI_PATCH}=	-p1
+SITES.${EAI_PATCH}=		https://schmonz.com/qmail/eai/
 .endif
 
 .if !empty(PKG_OPTIONS:Mpam)
@@ -81,6 +79,7 @@ PATCH_DIST_STRIP.${CUSTOMERROR_PATCH}=-p1
 
 PLIST_VARS+=			srs
 .if !empty(PKG_OPTIONS:Mqmail-srs)
+PLIST.srs=			yes
 .  include "../../mail/libsrs2/buildlink3.mk"
 QMAILPATCHES+=			srs:${SRS_PATCH}
 SRS_PATCH=			qmail-srs-0.8.patch
@@ -105,7 +104,6 @@ SUBST_CLASSES+=			srsreadme
 SUBST_STAGE.srsreadme=		do-configure
 SUBST_FILES.srsreadme=		README.srs
 SUBST_VARS.srsreadme=		PKG_SYSCONFDIR
-PLIST.srs=			yes
 MESSAGE_SRC+=			${PKGDIR}/MESSAGE.srs
 READMES+=			README.srs
 .endif
@@ -125,38 +123,16 @@ SUBST_MESSAGE.load=		Setting linker flags for syncdir.
 .endif
 
 PLIST_VARS+=			tls
-.if !empty(PKG_OPTIONS:Msasl) || !empty(PKG_OPTIONS:Mtls)
-.  if empty(PKG_OPTIONS:Msasl)
-PKG_OPTIONS+=			sasl
-.  endif
+.if !empty(PKG_OPTIONS:Mtls)
+PLIST.tls=			yes
 .  include "../../security/openssl/buildlink3.mk"
-.  if !empty(PKG_OPTIONS:Mtls)
-CFLAGS+=			-DTLS=20070408nb1	# NOTE: match what's _in_ the patch
+CFLAGS+=			-DTLS=20160918	# NOTE: match what's _in_ the patch
 USE_TOOLS+=			openssl
 SUBST_CLASSES+=			tmprsadh
 SUBST_STAGE.tmprsadh=		do-configure
 SUBST_FILES.tmprsadh=		update_tmprsadh.sh
 SUBST_SED.tmprsadh=		-e 's|^export PATH=.*||'
 SUBST_SED.tmprsadh+=		-e 's|^openssl |${OPENSSL} |'
-SUBST_SED.tmprsadh+=		-e 's|rsa512|rsa2048|g'
-SUBST_SED.tmprsadh+=		-e 's|rsa2048\.new 512|rsa2048.new 2048|g'
-SUBST_SED.tmprsadh+=		-e 's|dh1024|dh2048|g'
-SUBST_SED.tmprsadh+=		-e 's|dh2048\.new 1024|dh2048.new 2048|g'
-SUBST_CLASSES+=			keys
-SUBST_STAGE.keys=		do-configure
-SUBST_FILES.keys=		qmail-smtpd.c
-SUBST_SED.keys=			-e 's|\(keylen.* \)512|\12048|g'
-SUBST_SED.keys+=		-e 's|512\.pem|2048.pem|g'
-SUBST_SED.keys+=		-e 's|keylen = 1024|keylen = 2048|g'
-SUBST_SED.keys+=		-e 's|\(keylen == 1024\)|0 \&\& \1|g'
-SUBST_CLASSES+=			mankeys
-SUBST_STAGE.mankeys=		do-configure
-SUBST_FILES.mankeys=		qmail-smtpd.8 qmail-control.9
-SUBST_SED.mankeys=		-e 's|dh1024\.pem|dh2048.pem|g'
-SUBST_SED.mankeys+=		-e 's|1024 bit|2048 bit|g'
-SUBST_SED.mankeys+=		-e 's|rsa512\.pem|rsa2048.pem|g'
-SUBST_SED.mankeys+=		-e 's|512 bit RSA|2048 bit RSA|g'
-PLIST.tls=			yes
 MESSAGE_SRC+=			${PKGDIR}/MESSAGE.tls
 MESSAGE_SUBST+=			OPENSSL=${OPENSSL:Q}
 MESSAGE_SUBST+=			SERVERCERT=${PKG_SYSCONFDIR:Q}/control/servercert.pem
@@ -164,7 +140,6 @@ MESSAGE_SUBST+=			CLIENTCERT=${PKG_SYSCONFDIR:Q}/control/clientcert.pem
 MESSAGE_SUBST+=			QMAIL_DAEMON_USER=${QMAIL_DAEMON_USER:Q}
 MESSAGE_SUBST+=			QMAIL_QMAIL_GROUP=${QMAIL_QMAIL_GROUP:Q}
 DEPENDS+=			ucspi-ssl-[0-9]*:../../net/ucspi-ssl
-.  endif
 .else
 BUILDLINK_TRANSFORM+=		rm:-lssl
 BUILDLINK_TRANSFORM+=		rm:-lcrypto
@@ -173,5 +148,4 @@ DEPENDS+=			ucspi-tcp6-[0-9]*:../../net/ucspi-tcp6
 .else
 DEPENDS+=			ucspi-tcp-[0-9]*:../../net/ucspi-tcp
 .endif
-
 .endif
