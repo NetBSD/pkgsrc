@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2018/10/07 06:26:27 adam Exp $
+# $NetBSD: Makefile,v 1.4 2018/10/24 10:06:40 adam Exp $
 
-DISTNAME=	repmgr-4.1.1
+DISTNAME=	repmgr-4.2.0
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
 CATEGORIES=	databases
 MASTER_SITES=	https://repmgr.org/download/
