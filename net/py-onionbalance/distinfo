@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/10/23 03:18:06 riastradh Exp $
+$NetBSD: distinfo,v 1.2 2018/10/24 11:52:33 adam Exp $
 
-SHA1 (onionbalance-0.1.8.tar.gz) = e34e8685f1659d4c884d96fa61a60150d062042e
-RMD160 (onionbalance-0.1.8.tar.gz) = 26a7259cdb01486762eeb41ed81539780d5566d5
-SHA512 (onionbalance-0.1.8.tar.gz) = 062d853b8b873ca630bf313bba713e15e0efc8ed32cc16b0c14f7d5675dc5677c5bcc5ea5bd96a5ff5dca3f044cca12b5916161b73e353b09afe5808805207ce
-Size (onionbalance-0.1.8.tar.gz) = 139113 bytes
+SHA1 (OnionBalance-0.1.8.tar.gz) = ec37b1ed1314318853f6f149c265853462c4be77
+RMD160 (OnionBalance-0.1.8.tar.gz) = fbdfe5e4e815595c89f5d0fdfc1a3ea290c6e519
+SHA512 (OnionBalance-0.1.8.tar.gz) = dc43a8419a6bb2d3b44dfa6f6be3ea7ed4e303c41b64249e82156610d712b5c717be47c90e6b8b37f6d4308dd616cc4312aa6132a73a8a9136f1027375a4cca6
+Size (OnionBalance-0.1.8.tar.gz) = 55919 bytes
