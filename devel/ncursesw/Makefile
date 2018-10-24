@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2018/10/18 19:42:49 leot Exp $
+# $NetBSD: Makefile,v 1.18 2018/10/24 16:58:38 minskim Exp $
 
 .include "../../devel/ncurses/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/ncurses/ncursesw/}
 COMMENT=	Wide character CRT screen handling and optimization package
-PKGREVISION=	1
+PKGREVISION=	2
 
 PATCHDIR=	${.CURDIR}/../../devel/ncurses/patches
 DISTINFO_FILE=	${.CURDIR}/../../devel/ncurses/distinfo
@@ -14,7 +14,7 @@ CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/ncursesw
 
 INSTALLATION_DIRS+=	include/ncursesw
 INSTALLATION_DIRS+=	bin
-INSTALLATION_DIRS+=	lib
+INSTALLATION_DIRS+=	lib/pkgconfig
 
 BUILD_TARGET=	libs
 
@@ -25,6 +25,9 @@ SUBST_FILES.includes=	include/curses.h
 SUBST_SED.includes=	-e 's,<ncurses_dll\.h>,<ncurses/ncurses_dll\.h>,'
 SUBST_SED.includes+=	-e 's,<unctrl\.h>,<ncurses/unctrl\.h>,'
 
+post-build:
+	cd ${WRKSRC}/misc && ${SH} gen-pkgconfig
+
 do-install:
 	cd ${WRKSRC}/include &&	\
 	${MAKE_ENV} ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} install
@@ -33,6 +36,7 @@ do-install:
 		${LIBTOOL} --mode=install ${INSTALL_PROGRAM}	\
 		    ${WRKSRC}/lib/lib$${LIB}w.la ${DESTDIR}${PREFIX}/lib;	\
 	done
+	${INSTALL_DATA} ${WRKSRC}/misc/*.pc ${DESTDIR}${PREFIX}/lib/pkgconfig
 
 BUILDLINK_API_DEPENDS.ncurses+=	ncurses-${NC_VERS}{,nb*}
 BUILDLINK_ABI_DEPENDS.ncurses+=	ncurses-${NC_VERS}{,nb*}
