@@ -85,7 +85,6 @@ cerf			Enable libcerf support.
 cg			Add support for the Cg compiler.
 cgi			Enable CGI support.
 chasen			Use ChaSen as the Japanese Morphological Analzer.
-checkpassword-suid	Install checkpassword executable setuid root.
 cjk			Enable Chinese/Japanese/Korean support.
 clamav			Enable ClamAV support.
 clang-static-analyzer	Install the clang static analyzer.
@@ -124,8 +123,7 @@ deliver-suid		Install deliver executable setuid root.
 disable-compile-inits	Disable compile time implicit initialization.
 djbdns-cachestats	Patch to add stats for cache hits/misses.
 djbdns-ignoreip2	Patch to treat certain responses as NXDOMAIN.
-djbdns-qmerge1		Initial patches to address dnscache poisoning weakness.
-djbdns-qmerge2		Newer patches to address dnscache poisoning weakness.
+djbdns-mergequeries	Patch to address dnscache poisoning weakness.
 djbdns-tinydns64	Patch to fix tinydns-data on 64-bit platforms.
 djbfft-pentium		Optimize for Pentium{,MMX} processors.
 djbfft-ppro		Optimize for Pentium{Pro,II,III} processors.
@@ -618,19 +616,8 @@ python			Enable Python support.
 qdbm			Enable qdbm support.
 qemu			Use qemu.
 qemu-0			Use qemu-0.x.
-qmail-badrcptto		Patch to SMTP-reject particular envelope recipients.
-qmail-bigdns		Patch to handle oversized responses to MX queries.
 qmail-customerror	Patch to return custom messages from queue filters.
-qmail-maildiruniq	Patch to avoid name collisions when PIDs recycle fast.
-qmail-netqmail		Patch collection prepared by respected list members.
-qmail-outgoingip	Patch to force a particular source IP address.
-qmail-qregex		Patch to SMTP-reject customizable patterns.
-qmail-rcptcheck		Patch to SMTP-reject via a script or program.
-qmail-realrcptto	Patch to SMTP-reject nonexistent recipients.
-qmail-rejectutils	Patch to SMTP-reject recipients, senders, or content.
-qmail-remote		Patch to run $QMAILREMOTE instead of "qmail-remote".
 qmail-srs		Patch to implement Sender Rewriting Scheme with libsrs2.
-qmail-viruscan		Patch to SMTP-reject certain types of MIME attachments.
 qpopper-servermode	Enable server mode.
 qt			Enable support for QT.
 qt4			Enable support for QT4.
