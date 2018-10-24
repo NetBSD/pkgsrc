@@ -1,9 +1,17 @@
-@comment $NetBSD: PLIST,v 1.11 2018/09/10 09:07:49 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.12 2018/10/24 15:46:54 schmonz Exp $
 bin/qmail-isspam-rspamd
 bin/qmail-isspam-spamassassin
 bin/qmail-procmail
 bin/qmail-qread-client
 share/doc/qmail-run/README.pkgsrc
+share/examples/qmail-run/concurrencyincoming
+share/examples/qmail-run/concurrencypop3
+share/examples/qmail-run/concurrencysubmission
+share/examples/qmail-run/defaultdelivery
+share/examples/qmail-run/fixsmtpio
 share/examples/qmail-run/mailer.conf
-share/examples/qmail-run/spamdyke-ofmipd.conf
+share/examples/qmail-run/signatures
 share/examples/qmail-run/stunnel.conf
+share/examples/qmail-run/tcp.ofmip
+share/examples/qmail-run/tcp.pop3
+share/examples/qmail-run/tcp.smtp

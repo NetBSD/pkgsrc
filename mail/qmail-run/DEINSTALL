@@ -1,0 +1,14 @@
+# $NetBSD: DEINSTALL,v 1.1 2018/10/24 15:46:54 schmonz Exp $
+
+PKG_SYSCONFDIR=@PKG_SYSCONFDIR@
+
+case "${STAGE}" in
+
+POST-DEINSTALL)
+	for i in ofmip pop3 smtp; do
+		s="${PKG_SYSCONFDIR}/tcp.${i}"
+		[ -f "${s}.cdb" ] && ! [ -f "${s}" ] && rm -f "${s}.cdb"
+	done
+	;;
+
+esac

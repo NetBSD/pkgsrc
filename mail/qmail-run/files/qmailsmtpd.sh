@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailsmtpd.sh,v 1.17 2017/08/05 15:21:03 schmonz Exp $
+# $NetBSD: qmailsmtpd.sh,v 1.18 2018/10/24 15:46:54 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-smtpd (SMTP service).
 #
@@ -11,7 +11,7 @@
 name="qmailsmtpd"
 
 # User-settable rc.conf variables and their default values:
-: ${qmailsmtpd_postenv:="QMAILQUEUE=@PREFIX@/bin/qmail-queue"}
+: ${qmailsmtpd_postenv:=""}
 : ${qmailsmtpd_tcpflags:="-vRl0"}
 : ${qmailsmtpd_tcphost:="0"}
 : ${qmailsmtpd_tcpport:="25"}
