@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4485 2018/10/24 16:58:57 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.4486 2018/10/24 18:31:45 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6247,3 +6247,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/checkpassword-pam to 0.99nb2 [schmonz 2018-10-24]
 	Updated sysutils/checkpassword to 0.90nb2 [schmonz 2018-10-24]
 	Updated devel/ncursesw to 6.1nb2 [minskim 2018-10-24]
+	Updated www/webkit-gtk to 2.22.2 [leot 2018-10-24]
