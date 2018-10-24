@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2018/10/24 15:46:54 schmonz Exp $
+# $NetBSD: Makefile,v 1.50 2018/10/24 16:28:28 schmonz Exp $
 #
 
 DISTNAME=		qmail-run-20181024
@@ -61,6 +61,7 @@ MAKEVARS+=	PKG_SYSCONFDIR.qmail-run
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	mailer.conf
+SUBST_FILES.paths+=	ofmipd-with-user-cdb
 SUBST_FILES.paths+=	qmail-isspam-* qmail-procmail qmail-qread-client
 SUBST_FILES.paths+=	tcp.*
 SUBST_VARS.paths=	PKGNAME PKG_SYSCONFDIR PREFIX
@@ -73,13 +74,15 @@ post-extract:
 		tcp.ofmip tcp.pop3 tcp.smtp; do \
 		${CP} ${FILESDIR}/$$f ${WRKDIR}/$$f; \
 	done; \
-	for f in qmail-isspam-rspamd qmail-isspam-spamassassin \
+	for f in ofmipd-with-user-cdb \
+		qmail-isspam-rspamd qmail-isspam-spamassassin \
 		qmail-procmail qmail-qread-client; do \
 		${CP} ${FILESDIR}/$$f.sh ${WRKDIR}/$$f; \
 	done
 
 do-install:
-	for f in qmail-isspam-rspamd qmail-isspam-spamassassin \
+	for f in ofmipd-with-user-cdb \
+		qmail-isspam-rspamd qmail-isspam-spamassassin \
 		qmail-procmail qmail-qread-client; do \
 		${INSTALL_SCRIPT} ${WRKDIR}/$$f ${DESTDIR}${PREFIX}/bin; \
 	done
