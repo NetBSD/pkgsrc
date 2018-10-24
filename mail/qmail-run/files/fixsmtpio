@@ -1,0 +1,39 @@
+### For all users, authenticated or not:
+
+# Prepend acceptutils link to HELP message, so problems go to fixsmtpio author
+:help::*::&fixsmtpio_fixup
+
+# Replace hostname in initial greeting
+:greeting::2*::&fixsmtpio_fixup
+
+# Replace hostname in HELO/EHLO response
+:helo::2*::&fixsmtpio_fixup
+:ehlo::2*::&fixsmtpio_fixup
+
+# Replace hostname in QUIT response
+:quit::2*::&fixsmtpio_fixup
+
+########################################################################
+
+### For users authenticated via authup(8):
+
+# SMTP conversation already in progress, replace greeting
+AUTHUP_USER:greeting::2*::235 ok, go ahead (#2.0.0)
+
+# If client closes connection, tell authup the session succeeded
+AUTHUP_USER:clienteof::*:0:
+
+# If server greets us unhappily, preserve message, and tell authup to stop trying
+AUTHUP_USER:greeting::4*:14:&fixsmtpio_noop
+AUTHUP_USER:greeting::5*:15:&fixsmtpio_noop
+
+# If server times out, hide message, and tell authup to stop trying
+AUTHUP_USER:timeout::*:16:
+
+# Don't permit server to advertise further AUTH or STARTTLS
+AUTHUP_USER:ehlo::250?AUTH*::
+AUTHUP_USER:ehlo::250?STARTTLS::
+
+# Don't permit client to initiate further AUTH or STARTTLS
+AUTHUP_USER:auth:NOOP :*::502 unimplemented (#5.5.1)
+AUTHUP_USER:starttls:NOOP :*::502 unimplemented (#5.5.1)
