@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2018/08/19 19:59:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.42 2018/10/24 18:31:07 leot Exp $
 bin/WebKitWebDriver
 include/webkitgtk-4.0/JavaScriptCore/JSBase.h
 include/webkitgtk-4.0/JavaScriptCore/JSContextRef.h
@@ -8,6 +8,16 @@ include/webkitgtk-4.0/JavaScriptCore/JSTypedArray.h
 include/webkitgtk-4.0/JavaScriptCore/JSValueRef.h
 include/webkitgtk-4.0/JavaScriptCore/JavaScript.h
 include/webkitgtk-4.0/JavaScriptCore/WebKitAvailability.h
+include/webkitgtk-4.0/jsc/JSCAutocleanups.h
+include/webkitgtk-4.0/jsc/JSCClass.h
+include/webkitgtk-4.0/jsc/JSCContext.h
+include/webkitgtk-4.0/jsc/JSCDefines.h
+include/webkitgtk-4.0/jsc/JSCException.h
+include/webkitgtk-4.0/jsc/JSCValue.h
+include/webkitgtk-4.0/jsc/JSCVersion.h
+include/webkitgtk-4.0/jsc/JSCVirtualMachine.h
+include/webkitgtk-4.0/jsc/JSCWeakValue.h
+include/webkitgtk-4.0/jsc/jsc.h
 include/webkitgtk-4.0/webkit2/WebKitApplicationInfo.h
 include/webkitgtk-4.0/webkit2/WebKitAuthenticationRequest.h
 include/webkitgtk-4.0/webkit2/WebKitAutocleanups.h
@@ -198,10 +208,10 @@ ${PLIST.introspection}lib/girepository-1.0/WebKit2-4.0.typelib
 ${PLIST.introspection}lib/girepository-1.0/WebKit2WebExtension-4.0.typelib
 lib/libjavascriptcoregtk-4.0.so
 lib/libjavascriptcoregtk-4.0.so.18
-lib/libjavascriptcoregtk-4.0.so.18.7.13
+lib/libjavascriptcoregtk-4.0.so.18.11.3
 lib/libwebkit2gtk-4.0.so
 lib/libwebkit2gtk-4.0.so.37
-lib/libwebkit2gtk-4.0.so.37.28.5
+lib/libwebkit2gtk-4.0.so.37.33.3
 lib/pkgconfig/javascriptcoregtk-4.0.pc
 lib/pkgconfig/webkit2gtk-4.0.pc
 lib/pkgconfig/webkit2gtk-web-extension-4.0.pc

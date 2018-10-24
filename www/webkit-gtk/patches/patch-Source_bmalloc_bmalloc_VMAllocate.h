@@ -1,4 +1,4 @@
-$NetBSD: patch-Source_bmalloc_bmalloc_VMAllocate.h,v 1.1 2018/05/16 18:55:45 jperkin Exp $
+$NetBSD: patch-Source_bmalloc_bmalloc_VMAllocate.h,v 1.2 2018/10/24 18:31:08 leot Exp $
 
 Use posix_madvise on SunOS.
 
@@ -8,7 +8,7 @@ Use posix_madvise on SunOS.
      vmValidatePhysical(p, vmSize);
  #if BOS(DARWIN)
      SYSCALL(madvise(p, vmSize, MADV_FREE_REUSABLE));
-+#elif defined(__sun)
++#elif BOS(SOLARIS)
 +    SYSCALL(posix_madvise(p, vmSize, MADV_DONTNEED));
  #else
      SYSCALL(madvise(p, vmSize, MADV_DONTNEED));
@@ -17,7 +17,7 @@ Use posix_madvise on SunOS.
      vmValidatePhysical(p, vmSize);
  #if BOS(DARWIN)
      SYSCALL(madvise(p, vmSize, MADV_FREE_REUSE));
-+#elif defined(__sun)
++#elif BOS(SOLARIS)
 +    SYSCALL(posix_madvise(p, vmSize, MADV_NORMAL));
  #else
      SYSCALL(madvise(p, vmSize, MADV_NORMAL));
