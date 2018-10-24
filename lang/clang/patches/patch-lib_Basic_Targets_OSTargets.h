@@ -1,10 +1,35 @@
-$NetBSD: patch-lib_Basic_Targets_OSTargets.h,v 1.1 2018/08/09 14:56:41 jperkin Exp $
+$NetBSD: patch-lib_Basic_Targets_OSTargets.h,v 1.2 2018/10/24 21:12:59 maya Exp $
 
 Sync SunOS default defines with a working reality.
+NetBSD __float128, needed to build anything with base libstdc++
+which assumes __float128.
 
 --- lib/Basic/Targets/OSTargets.h.orig	2018-01-04 07:43:41.000000000 +0000
 +++ lib/Basic/Targets/OSTargets.h
-@@ -531,20 +531,16 @@ protected:
+@@ -358,12 +358,22 @@ protected:
+     Builder.defineMacro("__ELF__");
+     if (Opts.POSIXThreads)
+       Builder.defineMacro("_REENTRANT");
++    if (this->HasFloat128)
++      Builder.defineMacro("__FLOAT128__");
+   }
+ 
+ public:
+   NetBSDTargetInfo(const llvm::Triple &Triple, const TargetOptions &Opts)
+       : OSTargetInfo<Target>(Triple, Opts) {
+     this->MCountName = "_mcount";
++    switch (Triple.getArch()) {
++    default:
++      break;
++    case llvm::Triple::x86:
++    case llvm::Triple::x86_64:
++      this->HasFloat128 = true;
++      break;
++    }
+   }
+ };
+ 
+@@ -531,20 +541,16 @@ protected:
      Builder.defineMacro("__ELF__");
      Builder.defineMacro("__svr4__");
      Builder.defineMacro("__SVR4");
