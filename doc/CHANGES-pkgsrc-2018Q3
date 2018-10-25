@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q3,v 1.1.2.5 2018/10/20 16:32:43 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q3,v 1.1.2.6 2018/10/25 05:52:13 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q3 branch:
 
@@ -38,4 +38,7 @@ devel/ncursesw: security patch
 
 Pullup ticket #5850 - requested by bsiegert
 lang/chicken: security update
+
+Pullup ticket #5851 - requested by gdt
+lang/ocaml: build fix
 
