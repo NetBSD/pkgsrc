@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2018/08/06 05:02:40 tpaul Exp $
+# $NetBSD: Makefile,v 1.19 2018/10/25 09:08:37 adam Exp $
 
-DISTNAME=	salt-2018.3.2
+DISTNAME=	salt-2018.3.3
 PKGNAME=	${DISTNAME:S/-/-docs-/}
-CATEGORIES=	sysutils
+CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/salt/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
