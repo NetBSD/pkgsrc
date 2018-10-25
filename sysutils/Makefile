@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.781 2018/10/17 13:55:12 hauke Exp $
+# $NetBSD: Makefile,v 1.782 2018/10/25 06:36:58 jnemeth Exp $
 #
 
 COMMENT=	System utilities
@@ -226,7 +226,6 @@ SUBDIR+=	gworkspace
 SUBDIR+=	hal
 SUBDIR+=	hal-info
 SUBDIR+=	hddtemp
-SUBDIR+=	hivex
 SUBDIR+=	heirloom-basename
 SUBDIR+=	heirloom-cat
 SUBDIR+=	heirloom-chmod
@@ -286,6 +285,7 @@ SUBDIR+=	heirloom-whodo
 SUBDIR+=	heirloom-xargs
 SUBDIR+=	heirloom-yes
 SUBDIR+=	hfsutils
+SUBDIR+=	hivex
 SUBDIR+=	hs-temporary
 SUBDIR+=	htop
 SUBDIR+=	hytctl
