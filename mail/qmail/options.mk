@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.54 2018/10/24 13:32:26 schmonz Exp $
+# $NetBSD: options.mk,v 1.55 2018/10/25 14:02:37 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=		eai inet6 pam syncdir tls
@@ -61,6 +61,7 @@ QMAILPATCHES+=			eai:${EAI_PATCH}
 EAI_PATCH=			netqmail-1.06-tls-20160918-smtputf8-20181024.patch
 PATCHFILES+=			${EAI_PATCH}
 SITES.${EAI_PATCH}=		https://schmonz.com/qmail/eai/
+CFLAGS+=			-DEHLO=1
 .endif
 
 .if !empty(PKG_OPTIONS:Mpam)
