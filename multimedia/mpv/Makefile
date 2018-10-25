@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2018/10/03 09:07:20 leot Exp $
+# $NetBSD: Makefile,v 1.74 2018/10/25 08:32:39 leot Exp $
 
 DISTNAME=	mpv-0.29.1
 CATEGORIES=	multimedia
@@ -11,7 +11,7 @@ COMMENT=	Video player based on MPlayer and mplayer2
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 # needs sem_timedwait(3)
-NOT_FOR_PLATFORM=	NetBSD-[1-6]*-*
+NOT_FOR_PLATFORM=	NetBSD-[1-6].*-*
 
 NOT_PAX_MPROTECT_SAFE+=	bin/mpv
 
