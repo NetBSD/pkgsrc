@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4488 2018/10/25 09:51:19 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4489 2018/10/25 22:41:24 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6252,3 +6252,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/salt-docs to 2018.3.3 [adam 2018-10-25]
 	Updated time/py-pytz to 2018.6 [adam 2018-10-25]
 	Updated print/py-reportlab to 3.5.9 [adam 2018-10-25]
+	Updated x11/modular-xorg-server to 1.20.3 [maya 2018-10-25]
