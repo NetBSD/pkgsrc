@@ -1,12 +1,12 @@
-$NetBSD: patch-glib_configure,v 1.4 2015/10/17 09:50:48 tnn Exp $
+$NetBSD: patch-glib_configure,v 1.5 2018/10/25 09:47:19 jperkin Exp $
 
 Fix unportable test construct.
 Disable Carbon support in the bundled glib. It does not link correctly
 with the Frameworks and pkg-config should not need any of those features.
 
---- glib/configure.orig	2015-09-27 14:07:16.000000000 +0000
+--- glib/configure.orig	2017-03-19 14:57:03.000000000 +0000
 +++ glib/configure
-@@ -5298,6 +5298,7 @@ $as_echo_n "checking for Mac OS X Carbon
+@@ -5306,6 +5306,7 @@ $as_echo_n "checking for Mac OS X Carbon
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
@@ -14,7 +14,7 @@ with the Frameworks and pkg-config should not need any of those features.
  #include <Carbon/Carbon.h>
  #include <CoreServices/CoreServices.h>
  
-@@ -5885,7 +5886,7 @@ else
+@@ -5893,7 +5894,7 @@ else
    ENABLE_ALWAYS_BUILD_TESTS_FALSE=
  fi
  
@@ -23,3 +23,47 @@ with the Frameworks and pkg-config should not need any of those features.
      installed_test_metadir=${datadir}/installed-tests/glib
  
      installed_testdir=${libexecdir}/installed-tests/glib
+@@ -23334,16 +23335,34 @@ fi
+ 
+ case $host in
+   *-*-solaris* )
++    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for SunOS C99" >&5
++      $as_echo_n "checking for SunOS C99... " >&6; }
++    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
++#if __STDC_VERSION__-0 < 199901L
++#error not C99
++#endif
+ 
+-$as_echo "#define _XOPEN_SOURCE_EXTENDED 1" >>confdefs.h
+-
+-
+-$as_echo "#define _XOPEN_SOURCE 2" >>confdefs.h
+-
+-
+-$as_echo "#define __EXTENSIONS__ 1" >>confdefs.h
+-
+-     ;;
++int main()
++{
++  return 0;
++}
++_ACEOF
++    if ac_fn_c_try_compile "$LINENO"; then
++      g_have_sunos_c99=yes
++    else
++      g_have_sunos_c99=no
++    fi
++    rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
++    { $as_echo "$as_me:${as_lineno-$LINENO}: result: $g_have_sunos_c99" >&5
++      $as_echo "$g_have_sunos_c99" >&6; }
++    if test $g_have_sunos_c99 = yes; then
++      $as_echo "#define _XOPEN_SOURCE 600" >>confdefs.h
++    else
++      $as_echo "#define _XOPEN_SOURCE_EXTENDED 1" >>confdefs.h
++      $as_echo "#define _XOPEN_SOURCE 2" >>confdefs.h
++    fi
++    $as_echo "#define __EXTENSIONS__ 1" >>confdefs.h
++    ;;
+ esac
+ 
+ if test "$ac_cv_func_statfs" = yes; then :
