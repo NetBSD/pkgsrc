@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4489 2018/10/25 22:41:24 maya Exp $
+$NetBSD: CHANGES-2018,v 1.4490 2018/10/25 22:59:23 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6253,3 +6253,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/py-pytz to 2018.6 [adam 2018-10-25]
 	Updated print/py-reportlab to 3.5.9 [adam 2018-10-25]
 	Updated x11/modular-xorg-server to 1.20.3 [maya 2018-10-25]
+	Updated graphics/tiff to 4.0.9nb3 [maya 2018-10-25]
