@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2018/06/16 15:23:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2018/10/25 09:08:37 adam Exp $
 bin/salt
 bin/salt-api
 bin/salt-call
@@ -4104,24 +4104,24 @@ ${PYSITELIB}/salt/utils/aggregation.pyo
 ${PYSITELIB}/salt/utils/args.py
 ${PYSITELIB}/salt/utils/args.pyc
 ${PYSITELIB}/salt/utils/args.pyo
-${PYSITELIB}/salt/utils/async.py
-${PYSITELIB}/salt/utils/async.pyc
-${PYSITELIB}/salt/utils/async.pyo
+${PYSITELIB}/salt/utils/asynchronous.py
+${PYSITELIB}/salt/utils/asynchronous.pyc
+${PYSITELIB}/salt/utils/asynchronous.pyo
 ${PYSITELIB}/salt/utils/atomicfile.py
 ${PYSITELIB}/salt/utils/atomicfile.pyc
 ${PYSITELIB}/salt/utils/atomicfile.pyo
 ${PYSITELIB}/salt/utils/aws.py
 ${PYSITELIB}/salt/utils/aws.pyc
 ${PYSITELIB}/salt/utils/aws.pyo
-${PYSITELIB}/salt/utils/boto.py
-${PYSITELIB}/salt/utils/boto.pyc
-${PYSITELIB}/salt/utils/boto.pyo
-${PYSITELIB}/salt/utils/boto3.py
-${PYSITELIB}/salt/utils/boto3.pyc
-${PYSITELIB}/salt/utils/boto3.pyo
+${PYSITELIB}/salt/utils/boto3mod.py
+${PYSITELIB}/salt/utils/boto3mod.pyc
+${PYSITELIB}/salt/utils/boto3mod.pyo
 ${PYSITELIB}/salt/utils/boto_elb_tag.py
 ${PYSITELIB}/salt/utils/boto_elb_tag.pyc
 ${PYSITELIB}/salt/utils/boto_elb_tag.pyo
+${PYSITELIB}/salt/utils/botomod.py
+${PYSITELIB}/salt/utils/botomod.pyc
+${PYSITELIB}/salt/utils/botomod.pyo
 ${PYSITELIB}/salt/utils/cache.py
 ${PYSITELIB}/salt/utils/cache.pyc
 ${PYSITELIB}/salt/utils/cache.pyo
