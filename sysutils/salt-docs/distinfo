@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2018/08/06 05:02:40 tpaul Exp $
+$NetBSD: distinfo,v 1.10 2018/10/25 09:08:37 adam Exp $
 
-SHA1 (salt-2018.3.2.tar.gz) = 2df3d3c1c35d29b66909c74818ec6ec945c4550e
-RMD160 (salt-2018.3.2.tar.gz) = ab3c0397658280307110f020f4d9d9042336d0ee
-SHA512 (salt-2018.3.2.tar.gz) = 142ebe13638d7e6dd0aecc9f0325002d30e115fe8688f5f74cbeb7ff21020327d65ded0dcd845e55362b97568b696887fa22243d66d5eadef65f97152d4775d3
-Size (salt-2018.3.2.tar.gz) = 12996445 bytes
+SHA1 (salt-2018.3.3.tar.gz) = 18e148c2ef4418efe741c4b84d0ae284ebbf108b
+RMD160 (salt-2018.3.3.tar.gz) = 7a471e49f6b2f7e42263e89c88e195e1ce7293a1
+SHA512 (salt-2018.3.3.tar.gz) = f00ed83d5ec9d4767d7215fae8569ec560db61a0c8ded17469026e682e367c19811d33c6c53590a275ee24ad897a0eac09d8fde8ae9320d8706d6459ff3cc6da
+Size (salt-2018.3.3.tar.gz) = 13953724 bytes
+SHA1 (patch-doc___ext_saltdomain.py) = 6851f9fe98f2bf34b9d408255ca9ae85bd871341
