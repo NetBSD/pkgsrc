@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/11/15 22:13:38 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2018/10/25 21:46:03 minskim Exp $
 
 DISTNAME=	libsvm-3.20
 CATEGORIES=	math
@@ -27,6 +27,8 @@ SUBST_FILES.paths=	tools/grid.py tools/easy.py
 SUBST_STAGE.paths=	pre-build
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 
+.include "../../mk/bsd.prefs.mk"
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/svm-predict ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/svm-scale ${DESTDIR}${PREFIX}/bin
@@ -46,6 +48,14 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/easy.py ${DESTDIR}${PREFIX}/bin/svm-easy
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/checkdata.py ${DESTDIR}${PREFIX}/bin/svm-checkdata
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/subset.py ${DESTDIR}${PREFIX}/bin/svm-subset
+
+.if ${OPSYS} == "Darwin"
+.PHONY: fix-darwin-install-name
+post-install: fix-darwin-install-name
+fix-darwin-install-name:
+	install_name_tool -id ${PREFIX}/lib/libsvm.so.2 \
+		${DESTDIR}${PREFIX}/lib/libsvm.so.2
+.endif
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
