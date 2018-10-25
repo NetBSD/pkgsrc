@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.145 2018/10/24 18:31:07 leot Exp $
+# $NetBSD: Makefile,v 1.146 2018/10/25 09:58:18 leot Exp $
 
 DISTNAME=	webkitgtk-2.22.2
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
@@ -37,7 +37,6 @@ CMAKE_ARGS+=		-DENABLE_MINIBROWSER=ON
 CMAKE_ARGS+=		-DENABLE_GEOLOCATION=OFF
 CMAKE_ARGS+=		-DUSE_GSTREAMER_GL=OFF
 CMAKE_ARGS+=		-DUSE_LIBHYPHEN=OFF
-#CMAKE_ARGS+=		-DUSE_SYSTEM_MALLOC=ON # XXX: needs adjustements for sysinfo() stuffs in Source/WTF/wtf/RAMSize.cpp
 
 REPLACE_PERL+=	Source/JavaScriptCore/create_hash_table
 REPLACE_PERL+=	Source/WebCore/bindings/scripts/*.pl
