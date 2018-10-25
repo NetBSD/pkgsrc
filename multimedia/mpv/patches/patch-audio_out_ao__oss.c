@@ -1,8 +1,12 @@
-$NetBSD: patch-audio_out_ao__oss.c,v 1.9 2018/10/23 13:08:39 leot Exp $
+$NetBSD: patch-audio_out_ao__oss.c,v 1.10 2018/10/25 08:31:32 leot Exp $
 
 - ioctl(..., SNDCTL_DSP_CHANNELS, &nchannels) for not supported nchannels does not
   return an error and instead set nchannels to the default value. Instead of
   failing with no audio, fallbacks to stereo.
+
+Shared upstream via:
+
+ <https://github.com/mpv-player/mpv/pull/6234>
 
 --- audio/out/ao_oss.c.orig	2018-10-02 19:03:41.000000000 +0000
 +++ audio/out/ao_oss.c
