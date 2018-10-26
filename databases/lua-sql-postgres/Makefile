@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/10/09 21:41:56 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2018/10/26 11:11:33 jperkin Exp $
 
 PKGREVISION= 1
 .include "../../databases/lua-sql-mysql/Makefile.common"
@@ -10,8 +10,8 @@ COMMENT=	PostgreSQL bindings for Lua
 
 BUILD_TARGET=	postgres
 
-MAKE_FLAGS+=	DRIVER_LIBS_postgres="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.${PGSQL_TYPE}}/lib -L${BUILDLINK_PREFIX.${PGSQL_TYPE}}/lib -lpq"
-MAKE_FLAGS+=	DRIVER_INCS_postgres=-I${BUILDLINK_PREFIX.${PGSQL_TYPE}}/include
+# Abuse DRIVER_INCS to get our compiler flags into the build
+MAKE_FLAGS+=	DRIVER_INCS="${CFLAGS} ${COMPILER_RPATH_FLAG}${PGSQL_PREFIX}/lib -L${PGSQL_PREFIX}/lib"
 
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
