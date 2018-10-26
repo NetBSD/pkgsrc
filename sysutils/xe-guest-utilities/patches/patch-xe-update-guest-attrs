@@ -1,22 +1,23 @@
-$NetBSD: patch-xe-update-guest-attrs,v 1.3 2015/04/20 08:05:30 sborrill Exp $
+$NetBSD: patch-xe-update-guest-attrs,v 1.4 2018/10/26 09:15:07 sborrill Exp $
 
-Patch for pkgsrc and NetBSD ifconfig
+Support pkgsrc and NetBSD ifconfig
 
 --- xe-update-guest-attrs.orig	2010-12-20 15:34:07.000000000 +0000
-+++ xe-update-guest-attrs	2015-04-18 20:24:10.000000000 +0100
++++ xe-update-guest-attrs	2018-10-25 17:10:36.997953256 +0100
 @@ -39,7 +39,7 @@
  
  IPADDR_RE="\([[:digit:]]\{1,3\}\.\)\{3\}[[:digit:]]\{1,3\}"
  
 -export PATH=/usr/sbin:/usr/bin:/sbin:/bin
-+export PATH=/usr/sbin:/usr/bin:/sbin:/bin:/usr/pkg/sbin:/usr/pkg/bin
++export PATH=/usr/sbin:/usr/bin:/sbin:/bin:@PREFIX@/sbin:@PREFIX@/bin
  XENSTORE=${XENSTORE:-xenstore}
  
  XENSTORE_UPDATED=0
-@@ -133,49 +133,50 @@
+@@ -132,50 +132,66 @@
+ fi
  
  
- 
+-
 -# e.g.
 -# $ ip addr show
 -# 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 16436 qdisc noqueue 
@@ -60,6 +61,8 @@ Patch for pkgsrc and NetBSD ifconfig
 -        sed -n -e '/^[0-9a-z][0-9a-z]*\:/,/^$/d' \
 -               -e 's/^\([0-9a-z][0-9a-z]*\) .*/ifs="\$ifs \1"; current="\1"; /gp;' \
 -               -e 's/  *inet addr:\('$IPADDR_RE'\) .*/eval inet_\${current}="\1"; /gp;')
++#NetBSD 7 and earlier:
++#
 +#xennet0: flags=8863<UP,BROADCAST,NOTRAILERS,RUNNING,SIMPLEX,MULTICAST> mtu 1500
 +#	capabilities=2800<TCP4CSUM_Tx,UDP4CSUM_Tx>
 +#	enabled=0
@@ -72,6 +75,19 @@ Patch for pkgsrc and NetBSD ifconfig
 +#	inet6 ::1 prefixlen 128
 +#	inet6 fe80::1%lo0 prefixlen 64 scopeid 0x2
 +
++#NetBSD 8 and later:
++#
++#xennet0: flags=0x8863<UP,BROADCAST,NOTRAILERS,RUNNING,SIMPLEX,MULTICAST> mtu 1500
++#	capabilities=2800<TCP4CSUM_Tx,UDP4CSUM_Tx>
++#	enabled=0ec_capabilities=1<VLAN_MTU>
++#	ec_enabled=0
++#	address: 5e:a4:a1:fc:eb:70
++#	inet 192.168.1.17/24 broadcast 192.168.1.255 flags 0x0
++#	inet 10.20.30.40/16 broadcast 10.20.255.255 flags 0x0
++#	inet6 fe80::5ca4:a1ff:fefc:eb70%xennet0/64 flags 0x0 scopeid 0x1
++
++# Original:
++#
 +#/sbin/ifconfig | \
 +#        sed -n -e '/^[0-9a-z][0-9a-z]*\:/,/^$/d' \
 +#               -e 's/^\([0-9a-z][0-9a-z]*\) .*/ifs="\$ifs \1"; current="\1"; /gp;' \
@@ -94,6 +110,7 @@ Patch for pkgsrc and NetBSD ifconfig
 +			if ($2 == "alias") ip = $3
 +			else ip = $2
 +			if ($1 == "inet6") sub("%.*", "", ip)
++			sub("/.*", "", ip)
 +			if (ifs[current] != "") ifs[current] = ifs[current] ", " ip
 +			else ifs[current] = ip
 +		}
@@ -107,7 +124,7 @@ Patch for pkgsrc and NetBSD ifconfig
  
  # network
  for if in $ifs ; do
-@@ -206,16 +207,18 @@
+@@ -206,16 +222,18 @@
  fi
  
  # whether I support ballooning or not
@@ -125,12 +142,11 @@ Patch for pkgsrc and NetBSD ifconfig
  # build time addons
 -xenstore_write_cached "attr/PVAddons/MajorVersion" "5"
 -xenstore_write_cached "attr/PVAddons/MinorVersion" "6"
--xenstore_write_cached "attr/PVAddons/MicroVersion" "0" 
++xenstore_write_cached "attr/PVAddons/MajorVersion" "7"
++xenstore_write_cached "attr/PVAddons/MinorVersion" "0"
+ xenstore_write_cached "attr/PVAddons/MicroVersion" "0" 
 -xenstore_write_cached "attr/PVAddons/BuildVersion" "39674"
-+xenstore_write_cached "attr/PVAddons/MajorVersion" "@XENMAJOR@"
-+xenstore_write_cached "attr/PVAddons/MinorVersion" "@XENMINOR@"
-+xenstore_write_cached "attr/PVAddons/MicroVersion" "@XENTEENY@" 
-+xenstore_write_cached "attr/PVAddons/BuildVersion" "@XENBUILD@"
++xenstore_write_cached "attr/PVAddons/BuildVersion" "125243"
  xenstore_write_cached "attr/PVAddons/Installed" "1" 
  
  # update xenstore if necc
