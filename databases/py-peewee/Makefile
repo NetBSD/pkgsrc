@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2018/10/07 08:42:24 adam Exp $
+# $NetBSD: Makefile,v 1.46 2018/10/26 11:57:01 jperkin Exp $
 
 DISTNAME=	peewee-3.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,6 +19,11 @@ FILES_SUBST+=	PKGMANDIR=${PKGMANDIR}
 MESSAGE_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
 
 REPLACE_PYTHON+=	pwiz.py
+
+SUBST_CLASSES+=		lpath
+SUBST_STAGE.lpath=	pre-configure
+SUBST_FILES.lpath=	setup.py
+SUBST_VARS.lpath=	BUILDLINK_PREFIX.sqlite3
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
