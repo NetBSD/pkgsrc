@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/10/30 21:54:03 mef Exp $
+# $NetBSD: Makefile,v 1.4 2018/10/26 10:09:30 jperkin Exp $
 
 DISTNAME=	binutils-2.24
 PKGNAME=	cross-freemint-${DISTNAME}
@@ -27,6 +27,9 @@ GNU_CONFIGURE_PREFIX=	${FREEMINT_PREFIX}
 
 CONFIGURE_ARGS+=	--disable-werror --target=m68k-atari-mint
 INFO_FILES=		yes
+
+# Used in macro tests but never actually set anywhere
+CPPFLAGS+=	-DHAVE_STRERROR=1
 
 INSTALLATION_DIRS+=	bin ${FREEMINT_PREFIX}
 
