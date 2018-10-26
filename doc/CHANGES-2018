@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4495 2018/10/26 09:28:27 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4496 2018/10/26 10:20:55 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6264,3 +6264,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-filebrowser_safe to 0.5.0 [adam 2018-10-26]
 	Updated www/py-grappelli_safe to 0.5.1 [adam 2018-10-26]
 	Updated www/py-mezzanine to 4.3.1 [adam 2018-10-26]
+	Updated x11/modular-xorg-server to 1.20.3nb1 [maya 2018-10-26]
+	Updated sysutils/libpciaccess to 0.14nb1 [maya 2018-10-26]
