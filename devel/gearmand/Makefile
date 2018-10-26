@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2018/08/23 08:21:02 fhajny Exp $
+# $NetBSD: Makefile,v 1.34 2018/10/26 12:36:21 jperkin Exp $
 
 DISTNAME=	gearmand-1.1.18
 CATEGORIES=	devel
@@ -19,6 +19,9 @@ USE_LANGUAGES=	c gnu++03
 CONFIGURE_ARGS+=	--enable-jobserver=no
 CONFIGURE_ARGS+=	--disable-libdrizzle
 CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-libs}
+
+CONFIGURE_ENV.SunOS+=	ax_cv_check_cflags__Werror__pie=no
+CONFIGURE_ENV.SunOS+=	ax_cv_check_cxxflags__Werror__pie=no
 
 .include "options.mk"
 
