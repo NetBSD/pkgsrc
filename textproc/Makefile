@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1006 2018/10/16 14:32:37 adam Exp $
+# $NetBSD: Makefile,v 1.1007 2018/10/26 20:43:07 bsiegert Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -247,6 +247,7 @@ SUBDIR+=	heirloom-uniq
 SUBDIR+=	heirloom-wc
 SUBDIR+=	helpdeco
 SUBDIR+=	hevea
+SUBDIR+=	hfstospell
 SUBDIR+=	highlight
 SUBDIR+=	highway
 SUBDIR+=	hre
