@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4497 2018/10/26 18:10:06 maya Exp $
+$NetBSD: CHANGES-2018,v 1.4498 2018/10/26 20:43:46 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6267,3 +6267,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/modular-xorg-server to 1.20.3nb1 [maya 2018-10-26]
 	Updated sysutils/libpciaccess to 0.14nb1 [maya 2018-10-26]
 	Updated multimedia/mkvtoolnix to 28.2.0 [maya 2018-10-26]
+	Added textproc/hfstospell version 0.5.1 [bsiegert 2018-10-26]
