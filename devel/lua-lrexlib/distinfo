@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 03:27:47 agc Exp $
+$NetBSD: distinfo,v 1.4 2018/10/26 12:03:49 jperkin Exp $
 
 SHA1 (lrexlib-rel-2-7-2.zip) = c353b1dacb7b1ecbd6e0dd0a32e701ceec0b88d1
 RMD160 (lrexlib-rel-2-7-2.zip) = 269d33666b8095305589634b2ea76bf2c4720de6
 SHA512 (lrexlib-rel-2-7-2.zip) = 2741ff9f363f9e57dc31b96a474d4da9481a7e99af86cdd5860b50e1ed5eb1d29a14f45a5be819cfd9f28a703189cf79a9aa872a69d1d70bb5fd6ba68990438f
 Size (lrexlib-rel-2-7-2.zip) = 78058 bytes
 SHA1 (patch-BSDmakefile) = a37a165cfc268ded28bd846bdcea0c1cb0f95818
+SHA1 (patch-src_posix_lposix.c) = 6c6cf87dd364549104ef25250b910982f077788d
