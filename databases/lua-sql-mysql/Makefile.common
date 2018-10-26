@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2017/09/24 14:27:55 wiz Exp $
+# $NetBSD: Makefile.common,v 1.3 2018/10/26 11:00:05 jperkin Exp $
 #
 # used by databases/lua-sql-postgres/Makefile
 # used by databases/lua-sql-sqlite/Makefile
@@ -15,12 +15,10 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 LICENSE=	mit
 HOMEPAGE=	https://keplerproject.github.io/luasql/
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=	gmake
 
 MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
-MAKE_FLAGS+=	LUA_LIBDIR=${DESTDIR}${PREFIX}/${LUA_CDIR}
-MAKE_FLAGS+=	LUA_DIR=${DESTDIR}${PREFIX}/${LUA_LDIR}
-MAKE_FLAGS+=	LUA_INC=${DESTDIR}${PREFIX}/${LUA_INCDIR}
+MAKE_FLAGS+=	LUA_INC=${BUILDLINK_PREFIX.${LUA_PACKAGE}}/${LUA_INCDIR}
 
 DISTINFO_FILE=	${.CURDIR}/../../databases/lua-sql-mysql/distinfo
 PATCHDIR=	${.CURDIR}/../../databases/lua-sql-mysql/patches
