@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2018/10/24 15:42:47 bsiegert Exp $
+# $NetBSD: Makefile,v 1.39 2018/10/26 17:03:27 bsiegert Exp $
 #
 
 DISTNAME=		enchant-1.6.0
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		textproc
 MASTER_SITES=		http://www.abisource.com/downloads/enchant/1.6.0/
 
@@ -19,7 +19,12 @@ PKGCONFIG_OVERRIDE+=	enchant.pc.in
 GNU_CONFIGURE=		yes
 CFLAGS.SunOS+=		-D__EXTENSIONS__
 
-CONFIGURE_ARGS+=	--with-myspell-dir=${BUILDLINK_PREFIX.hunspell}/share/hunspell
+INSTALLATION_DIRS+=	share/examples
+MAKE_DIRS+=		${PREFIX}/share/enchant
+CONF_FILES=		${PREFIX}/share/examples/enchant-1.ordering ${PREFIX}/share/enchant/enchant.ordering
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/share && ${MV} enchant/enchant.ordering examples/enchant-1.ordering
 
 .include "options.mk"
 
