@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/12/30 13:31:40 adam Exp $
+$NetBSD: distinfo,v 1.2 2018/10/26 09:23:31 adam Exp $
 
-SHA1 (filebrowser_safe-0.4.7.tar.gz) = 1a11e4499dbc90b0dc9a20c897568fb1d2963b84
-RMD160 (filebrowser_safe-0.4.7.tar.gz) = 18d8783b00a74a6a660ce866a84bd5c05634b96b
-SHA512 (filebrowser_safe-0.4.7.tar.gz) = db2b8c26daaf4d6ca4d6accfdb810c62652e6fe3eefbd5e9b57d5e3f44cded66309a35522d4bf77ea14e9064d94fc0af5354d5f5b5265006caad18506bc21da1
-Size (filebrowser_safe-0.4.7.tar.gz) = 71304 bytes
+SHA1 (filebrowser_safe-0.5.0.tar.gz) = f16fc592fd30dc94b09eb293945194f116d04428
+RMD160 (filebrowser_safe-0.5.0.tar.gz) = 07c1e9bc899673bb905049e30d38d2f4a35053ed
+SHA512 (filebrowser_safe-0.5.0.tar.gz) = 53e458b311e758e95b3d7dbe9612e58b3a285a6b3c0fab3d89865a891f78fabddd4d7dca7825c176d150149d05bb8080e4e13d616ad44914b5790f2ea463cb54
+Size (filebrowser_safe-0.5.0.tar.gz) = 76694 bytes
