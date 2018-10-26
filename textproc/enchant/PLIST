@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:17:15 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/10/26 17:03:27 bsiegert Exp $
 bin/enchant
 bin/enchant-lsmod
 include/enchant/enchant++.h
@@ -10,4 +10,4 @@ ${PLIST.hunspell}lib/enchant/libenchant_myspell.la
 lib/libenchant.la
 lib/pkgconfig/enchant.pc
 man/man1/enchant.1
-share/enchant/enchant.ordering
+share/examples/enchant-1.ordering
