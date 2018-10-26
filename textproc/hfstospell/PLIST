@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2018/10/26 20:43:07 bsiegert Exp $
+bin/hfst-ospell
+bin/hfst-ospell-office
+include/ZHfstOspeller.h
+include/ZHfstOspellerXmlMetadata.h
+include/hfst-ol.h
+include/hfstol-stdafx.h
+include/ol-exceptions.h
+include/ospell.h
+lib/libhfstospell.la
+lib/pkgconfig/hfstospell.pc
+man/man1/hfst-ospell-office.1
+man/man1/hfst-ospell.1

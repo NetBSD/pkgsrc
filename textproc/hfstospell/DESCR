@@ -1,0 +1,4 @@
+This is a minimal hfst optimized lookup format based spell checker library and
+a demonstrational implementation of command line based spell checker. The
+library is licenced under Apache licence version 2, other licences can be
+obtained from University of Helsinki.
