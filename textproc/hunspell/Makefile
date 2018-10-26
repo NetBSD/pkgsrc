@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.28 2018/10/23 11:45:34 bsiegert Exp $
+# $NetBSD: Makefile,v 1.29 2018/10/26 07:43:05 leot Exp $
 
 DISTNAME=	hunspell-1.6.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hunspell/}
-GITHUB_PROJECT=	hunspell
-GITHUB_TAG=	v1.6.2
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	ahoka@NetBSD.org
 HOMEPAGE=	https://hunspell.github.io/
 COMMENT=	Improved spellchecker
 LICENSE=	mpl-1.1 OR gnu-lgpl-v2.1 OR gnu-gpl-v2
 
-#WRKSRC=			${WRKDIR}/${DISTNAME:C/-[0-9]+$//}
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config perl:run autoreconf autoconf automake
