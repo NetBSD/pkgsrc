@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/07/17 22:18:06 alnsn Exp $
+# $NetBSD: Makefile,v 1.8 2018/10/26 12:06:13 jperkin Exp $
 
 DISTNAME=	luarocks-2.4.4
 PKGNAME=	${DISTNAME:S/luarocks/${LUA_PKGPREFIX}-rocks/}
@@ -12,6 +12,7 @@ LICENSE=	mit
 
 USE_TOOLS+=	curl:run    # downloader (curl or wget)
 USE_TOOLS+=	openssl:run # md5-checker (openssl or md5sum)
+USE_TOOLS+=	unzip
 
 .include "../../mk/bsd.prefs.mk"
 
