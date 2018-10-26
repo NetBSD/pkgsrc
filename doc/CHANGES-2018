@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4494 2018/10/26 09:15:44 sborrill Exp $
+$NetBSD: CHANGES-2018,v 1.4495 2018/10/26 09:28:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6260,3 +6260,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-mechanize to 0.3.7 [adam 2018-10-26]
 	Updated comms/py-colorama to 0.4.0 [adam 2018-10-26]
 	Updated sysutils/xe-guest-utilities to 7.0.0 [sborrill 2018-10-26]
+	Updated www/py-bleach to 3.0.2 [adam 2018-10-26]
+	Updated www/py-filebrowser_safe to 0.5.0 [adam 2018-10-26]
+	Updated www/py-grappelli_safe to 0.5.1 [adam 2018-10-26]
+	Updated www/py-mezzanine to 4.3.1 [adam 2018-10-26]
