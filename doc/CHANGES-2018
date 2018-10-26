@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4491 2018/10/25 23:00:23 maya Exp $
+$NetBSD: CHANGES-2018,v 1.4492 2018/10/26 08:06:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6255,3 +6255,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/modular-xorg-server to 1.20.3 [maya 2018-10-25]
 	Updated graphics/tiff to 4.0.9nb3 [maya 2018-10-25]
 	Updated lang/clang to 6.0.1nb1 [maya 2018-10-25]
+	Updated devel/py-hypothesis to 3.80.0 [adam 2018-10-26]
+	Updated time/py-dateutil to 2.7.4 [adam 2018-10-26]
