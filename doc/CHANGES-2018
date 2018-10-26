@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4493 2018/10/26 08:16:19 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4494 2018/10/26 09:15:44 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6259,3 +6259,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/py-dateutil to 2.7.4 [adam 2018-10-26]
 	Updated www/py-mechanize to 0.3.7 [adam 2018-10-26]
 	Updated comms/py-colorama to 0.4.0 [adam 2018-10-26]
+	Updated sysutils/xe-guest-utilities to 7.0.0 [sborrill 2018-10-26]
