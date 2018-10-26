@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/12/30 13:29:47 adam Exp $
+# $NetBSD: Makefile,v 1.2 2018/10/26 09:24:14 adam Exp $
 
-DISTNAME=	grappelli_safe-0.4.7
+DISTNAME=	grappelli_safe-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/grappelli_safe/}
