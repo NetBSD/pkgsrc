@@ -1,21 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/12/30 13:44:21 adam Exp $
+$NetBSD: distinfo,v 1.4 2018/10/26 09:27:09 adam Exp $
 
-SHA1 (Mezzanine-4.2.3.tar.gz) = a3319d8f4e0387855b49a75feea0f4c1e510d2cf
-RMD160 (Mezzanine-4.2.3.tar.gz) = bb444a9d656a8a886c74b41ca1478aa9b1299f89
-SHA512 (Mezzanine-4.2.3.tar.gz) = 3a9ad97e2ab18b6e907b46c55a03c1533a674a0b7fc5025d82aa2bcb5957a4ca4e289763a8019f8fd1e0f8fe06f4d612f89c71fea87de868ed82e6faa536e674
-Size (Mezzanine-4.2.3.tar.gz) = 6249272 bytes
-SHA1 (patch-mezzanine_blog_migrations_0003__auto__20170411__0504.py) = dfb439df9fcdec0557e1d946ea1ef1a6abd3a712
-SHA1 (patch-mezzanine_blog_templatetags_blog__tags.py) = 19ce513504304b49c1b30105f1d4a53d4db8f633
-SHA1 (patch-mezzanine_core_auth__backends.py) = 64a01c0b7a85a4f12f27d10b000ba6c7a12fb1f8
-SHA1 (patch-mezzanine_core_managers.py) = 76e7e5528f225499f5c22fa6b9b8227e1f47c651
-SHA1 (patch-mezzanine_core_models.py) = 9fcbd5feb064d5860a41f7e0eb0db988dd7b8ad4
-SHA1 (patch-mezzanine_core_templatetags_mezzanine__tags.py) = f6d0e7cc7833f6d08a91db8a2dff7f970a09b79e
-SHA1 (patch-mezzanine_generic_migrations_0003__auto__20170411__0504.py) = db912eef23154db88eab374de4ad49544d596fcc
-SHA1 (patch-mezzanine_generic_templatetags_comment__tags.py) = 18c79b0128b4f4e9a6e5a86a1d48418b4e673fec
-SHA1 (patch-mezzanine_generic_templatetags_rating__tags.py) = 8c7889f3a5d5a4c2c03bc4668429063a898499ee
-SHA1 (patch-mezzanine_generic_tests.py) = 174bf0846ce29b249741b143c3991bd0be5c5ba7
-SHA1 (patch-mezzanine_pages_migrations_0004__auto__20170411__0504.py) = 904fd0894fb1e75dbf95a86213c621d4c2b5bf15
-SHA1 (patch-mezzanine_pages_templatetags_pages__tags.py) = 55d199b354056c8bc0550fd47c566ef192424fb0
-SHA1 (patch-mezzanine_template_____init____.py) = 231910e2080c80fbd89281af371744ca88b6bf61
-SHA1 (patch-mezzanine_utils_email.py) = 6faad20f8604228edee60d024cf854378bbf89aa
-SHA1 (patch-setup.py) = b6b3b12e560adcc2d3e13221023df5b5eb22171a
+SHA1 (Mezzanine-4.3.1.tar.gz) = 3d8a60489488772f345b7bd538af5ac69c958814
+RMD160 (Mezzanine-4.3.1.tar.gz) = 86f7837c50a2658b5e1715570110fec1bb15dbdb
+SHA512 (Mezzanine-4.3.1.tar.gz) = 9f16e5403faa069b95fcc1b8d5eea0e6bfc70861708a11074aa002ecf1a424354f3aa3cd5af68a7d01c4b6ed2b381a4cdcee1ceac75d06d659a9e4c59a94f74b
+Size (Mezzanine-4.3.1.tar.gz) = 6208692 bytes
