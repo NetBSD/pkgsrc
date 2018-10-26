@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4496 2018/10/26 10:20:55 maya Exp $
+$NetBSD: CHANGES-2018,v 1.4497 2018/10/26 18:10:06 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6266,3 +6266,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-mezzanine to 4.3.1 [adam 2018-10-26]
 	Updated x11/modular-xorg-server to 1.20.3nb1 [maya 2018-10-26]
 	Updated sysutils/libpciaccess to 0.14nb1 [maya 2018-10-26]
+	Updated multimedia/mkvtoolnix to 28.2.0 [maya 2018-10-26]
