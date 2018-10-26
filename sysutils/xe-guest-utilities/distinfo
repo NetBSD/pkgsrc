@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:32:39 agc Exp $
+$NetBSD: distinfo,v 1.5 2018/10/26 09:15:06 sborrill Exp $
 
 SHA1 (xe-guest-utilities_5.6.0-595.tar.gz) = 7373f2cc37ba3761ee92051513e09787371eb77e
 RMD160 (xe-guest-utilities_5.6.0-595.tar.gz) = f526fd9ae1b47f22860915aba825ddd440b445b8
 SHA512 (xe-guest-utilities_5.6.0-595.tar.gz) = b34cb8afac674fe6d40fda44a03183392c690965ccfb7c708f30c53fb70770b6e3900563356bce3722f37263170dcb368a0725b6f0bb5730e78636c990394061
 Size (xe-guest-utilities_5.6.0-595.tar.gz) = 454235 bytes
 SHA1 (patch-xe-daemon) = 3107fa2e018d66a2ca37b1c2a748c65aa1be3e2f
-SHA1 (patch-xe-update-guest-attrs) = 97da7db38dbb42b2a4f8584ece32b7cbb15ea34b
+SHA1 (patch-xe-update-guest-attrs) = dc4d1f8d8a60090f5498cce5932d08e832c3045f
