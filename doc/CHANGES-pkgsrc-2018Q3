@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q3,v 1.1.2.6 2018/10/25 05:52:13 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q3,v 1.1.2.7 2018/10/26 07:04:07 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q3 branch:
 
@@ -41,4 +41,10 @@ lang/chicken: security update
 
 Pullup ticket #5851 - requested by gdt
 lang/ocaml: build fix
+
+Pullup ticket #5852 - requested by maya
+x11/modular-xorg-server: security update
+
+Pullup ticket #5853 - requested by maya
+graphics/tiff: security patch
 
