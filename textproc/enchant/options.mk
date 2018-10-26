@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2009/10/12 19:56:04 ahoka Exp $
+# $NetBSD: options.mk,v 1.6 2018/10/26 17:03:27 bsiegert Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.enchant
 PKG_SUPPORTED_OPTIONS=	aspell enchant-zemberek hunspell ispell
@@ -28,8 +28,9 @@ CONFIGURE_ARGS+=	--disable-zemberek
 
 PLIST_VARS+=            hunspell
 .if !empty(PKG_OPTIONS:Mhunspell)
-CONFIGURE_ARGS+=	--enable-myspell
 .include "../../textproc/hunspell/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-myspell
+CONFIGURE_ARGS+=	--with-myspell-dir=${BUILDLINK_PREFIX.hunspell}/share/hunspell
 DEPENDS+=		hunspell-en_US-[0-9]*:../../textproc/hunspell-en_US
 PLIST.hunspell=		yes
 .else
