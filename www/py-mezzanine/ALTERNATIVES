@@ -1,1 +1,1 @@
-bin/mezzanine-project @PREFIX@/bin/mezzanine-project@PYVERSSUFFIX@
+bin/mezzanine-project @PREFIX@/bin/mezzanine-project-@PYVERSSUFFIX@
