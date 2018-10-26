@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/06/14 01:56:27 agc Exp $
+$NetBSD: distinfo,v 1.2 2018/10/26 12:52:43 jperkin Exp $
 
-SHA1 (py36-python-lua-20170109/python-lua-9e5657932708d7f5cf6531cb21afc81c4708d3ac.zip) = 240113dc4da577f86d20ecee6f399e771feb908b
-RMD160 (py36-python-lua-20170109/python-lua-9e5657932708d7f5cf6531cb21afc81c4708d3ac.zip) = b73473b6ea579e7332efe8d6a82d63533f0191ec
-SHA512 (py36-python-lua-20170109/python-lua-9e5657932708d7f5cf6531cb21afc81c4708d3ac.zip) = d94f2b28b4f90ad6091880d85f5e7928c7b9b3b024d519f77d99e7ee54a2904ed50a5e75f5e3d893fff6482c3f2ae613ce01ae5bcd9a0581889a9ca6d294ee4d
-Size (py36-python-lua-20170109/python-lua-9e5657932708d7f5cf6531cb21afc81c4708d3ac.zip) = 99326 bytes
+SHA1 (python-lua/python-lua-9e5657932708d7f5cf6531cb21afc81c4708d3ac.zip) = 240113dc4da577f86d20ecee6f399e771feb908b
+RMD160 (python-lua/python-lua-9e5657932708d7f5cf6531cb21afc81c4708d3ac.zip) = b73473b6ea579e7332efe8d6a82d63533f0191ec
+SHA512 (python-lua/python-lua-9e5657932708d7f5cf6531cb21afc81c4708d3ac.zip) = d94f2b28b4f90ad6091880d85f5e7928c7b9b3b024d519f77d99e7ee54a2904ed50a5e75f5e3d893fff6482c3f2ae613ce01ae5bcd9a0581889a9ca6d294ee4d
+Size (python-lua/python-lua-9e5657932708d7f5cf6531cb21afc81c4708d3ac.zip) = 99326 bytes
