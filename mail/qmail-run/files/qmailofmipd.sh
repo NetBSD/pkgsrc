@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailofmipd.sh,v 1.10 2018/10/24 15:46:54 schmonz Exp $
+# $NetBSD: qmailofmipd.sh,v 1.11 2018/10/27 19:16:16 schmonz Exp $
 #
 # @PKGNAME@ script to control ofmipd (SMTP submission service).
 #
@@ -11,13 +11,13 @@
 name="qmailofmipd"
 
 # User-settable rc.conf variables and their default values:
-: ${qmailofmipd_postenv:=""}
-: ${qmailofmipd_tcpflags:="-vRl0"}
-: ${qmailofmipd_tcphost:="127.0.0.1"}
-: ${qmailofmipd_tcpport:="26"}
-: ${qmailofmipd_datalimit:="180000000"}
+: ${qmailofmipd_postenv:="@SETENV@ SSL_UID=$(@ID@ -u @UCSPI_SSL_USER@) SSL_GID=$(@ID@ -g @UCSPI_SSL_GROUP@)"}
+: ${qmailofmipd_tcpflags:="-neV -vRl0"}
+: ${qmailofmipd_tcphost:="0.0.0.0"}
+: ${qmailofmipd_tcpport:="587"}
+: ${qmailofmipd_datalimit:="360000000"}
 : ${qmailofmipd_pretcpserver:=""}
-: ${qmailofmipd_tcpserver:="@PREFIX@/bin/tcpserver"}
+: ${qmailofmipd_tcpserver:="@PREFIX@/bin/sslserver"}
 : ${qmailofmipd_preofmipd:=""}
 : ${qmailofmipd_ofmipdcmd:="@PREFIX@/bin/ofmipd"}
 : ${qmailofmipd_checkpassword:="@PREFIX@/bin/nbcheckpassword"}
