@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2018/08/22 09:46:35 wiz Exp $
+# $NetBSD: Makefile,v 1.128 2018/10/27 11:46:04 tron Exp $
 
 DISTNAME=		lsof_4.89
 PKGNAME=		${DISTNAME:S/_/-/}
@@ -21,6 +21,7 @@ CONFIGURE_ARGS+=	-n ${LOWER_OPSYS}
 CONFIGURE_ENV+=		LSOF_CC="${CC} ${CFLAGS}"
 MAKE_FLAGS+=		LSOF_BLDCMT="NetBSD pkgsrc rocks!"
 OSVERSION_SPECIFIC=	yes
+EXTRACT_USING=		bsdtar
 
 TMPWRK=			${WRKDIR}/${DISTNAME}
 SRCBALL_NAME=		${DISTNAME}_src
@@ -31,7 +32,7 @@ REPLACE_PERL+=	scripts/sort_res.perl5 scripts/count_pf.perl5 \
 		scripts/idrlogin.perl5 scripts/count_pf.perl \
 		scripts/idrlogin.perl scripts/list_fields.perl \
 		scripts/watch_a_file.perl
-USE_TOOLS+=	gtar pax perl:run
+USE_TOOLS+=	perl:run
 
 TEST_DIRS=		tests
 TEST_TARGET=		test
@@ -62,7 +63,7 @@ post-extract:
 		exit 1 ; \
 	fi)
 .endif
-	@(cd ${TMPWRK} ; \
+	@cd ${TMPWRK} ; \
 	EXPMD5=`${GREP} 'MD5 (' README.${DISTNAME} | ${SED} 's/^[ ]*//'` ; \
 	CALCMD5=`${DIGEST} MD5 ${SRCBALL_NAME}.tar` ; \
 	if [ "$${EXPMD5}"X != "$${CALCMD5}"X ]; then \
@@ -70,12 +71,8 @@ post-extract:
 		${ECHO} "($$EXPMD5 != $$CALCMD5)" ; \
 		exit 1 ; \
 	fi ; \
-	if [ X${EXTRACT_USING} = Xgtar ]; then \
-		${GTAR} -xf ${SRCBALL_NAME}.tar; \
-	else \
-		pax -O -r < ${SRCBALL_NAME}.tar; \
-	fi)
-	@( cd ${WRKSRC} ; ${ECHO} "y" | ./Inventory || exit 1 )
+	${TOOLS_PATH.bsdtar} -xf ${SRCBALL_NAME}.tar
+	@cd ${WRKSRC} ; ${ECHO} "y" | ./Inventory || exit 1
 
 INSTALLATION_DIRS+=	sbin ${PKGMANDIR}/man8 share/lsof
 SPECIAL_PERMS+=		${PREFIX}/sbin/lsof ${REAL_ROOT_USER} ${REAL_GROUP} 2755
