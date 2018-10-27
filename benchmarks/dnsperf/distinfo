@@ -1,7 +1,11 @@
-$NetBSD: distinfo,v 1.3 2017/05/03 06:59:13 mef Exp $
+$NetBSD: distinfo,v 1.4 2018/10/27 12:04:33 tron Exp $
 
 SHA1 (dnsperf-src-2.1.0.0-1.tar.gz) = 1a5d32feb41dd174f82f57ba62389d3480619c91
 RMD160 (dnsperf-src-2.1.0.0-1.tar.gz) = 0392903f300750ca53785f342a547eee5eb9db6d
 SHA512 (dnsperf-src-2.1.0.0-1.tar.gz) = 5571bd0855aba4affcdf81724919e60ab6762d646f8d9a6abf177a2a588675c636842f2fb708bf648004b9c411e9c9b68789f7c6bbbd87afc24c8299a21aa6c9
 Size (dnsperf-src-2.1.0.0-1.tar.gz) = 561502 bytes
 SHA1 (patch-Makefile.in) = 9f5377a75d9674a3aeb12f933f0a552564534d91
+SHA1 (patch-datafile.h) = d05f41b5d02048ffe5ca7261cd0164202fb9821a
+SHA1 (patch-dns.h) = 1c78fc5dd05c4eb32563c2cfacdabadfa9937c1b
+SHA1 (patch-os.h) = 53b573fddee3495a8b8e73088b1a4742a6b1b9ae
+SHA1 (patch-util.h) = 94893a9d867aabd43650e66ffbbb0995ceb9becd
