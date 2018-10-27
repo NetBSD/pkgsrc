@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.4 2017/06/02 08:37:49 adam Exp $
+# $NetBSD: options.mk,v 1.5 2018/10/27 07:57:10 maya Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dnsmasq
-PKG_SUPPORTED_OPTIONS=	dbus inet6
+PKG_SUPPORTED_OPTIONS=	dbus inet6 dnssec
 PKG_SUGGESTED_OPTIONS=	inet6
 
 .include "../../mk/bsd.options.mk"
@@ -19,4 +19,11 @@ PLIST.dbus=	yes
 
 .if empty(PKG_OPTIONS:Minet6)
 CFLAGS+=	-DNO_IPV6
+.endif
+
+.if !empty(PKG_OPTIONS:Mdnssec)
+USE_TOOLS+=	pkg-config
+CFLAGS+=	-DHAVE_DNSSEC
+.include "../../security/nettle/buildlink3.mk"
+.include "../../devel/gmp/buildlink3.mk"
 .endif
