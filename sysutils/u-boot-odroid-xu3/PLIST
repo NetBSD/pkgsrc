@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2018/10/27 10:02:13 skrll Exp $
+share/u-boot/odroid-xu3/u-boot
+share/u-boot/odrdoi-xu3/u-boot-dtb.bin
