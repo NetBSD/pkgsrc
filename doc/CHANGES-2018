@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4499 2018/10/27 07:57:26 maya Exp $
+$NetBSD: CHANGES-2018,v 1.4500 2018/10/27 17:28:27 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6269,3 +6269,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/mkvtoolnix to 28.2.0 [maya 2018-10-26]
 	Added textproc/hfstospell version 0.5.1 [bsiegert 2018-10-26]
 	Updated net/dnsmasq to 2.80 [maya 2018-10-27]
+	Updated mail/qmail-acceptutils to 20181027 [schmonz 2018-10-27]
