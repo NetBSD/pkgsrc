@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2018/10/24 16:28:28 schmonz Exp $
+# $NetBSD: Makefile,v 1.51 2018/10/27 19:16:16 schmonz Exp $
 #
 
-DISTNAME=		qmail-run-20181024
+DISTNAME=		qmail-run-20181027
 CATEGORIES=		mail
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -13,7 +13,7 @@ LICENSE=		2-clause-bsd
 DEPENDS+=		pkg_alternatives-[0-9]*:../../pkgtools/pkg_alternatives
 DEPENDS_QMAIL=		qmail>=1.03nb36:../../mail/qmail
 DEPENDS+=		${DEPENDS_QMAIL}
-DEPENDS+=		qmail-acceptutils-[0-9]*:../../mail/qmail-acceptutils
+DEPENDS+=		qmail-acceptutils>=20181027:../../mail/qmail-acceptutils
 DEPENDS+=		qmail-qfilter>1.5nb1:../../mail/qmail-qfilter
 DEPENDS+=		qmail-rejectutils-[0-9]*:../../mail/qmail-rejectutils
 
@@ -21,15 +21,20 @@ WRKSRC=			${WRKDIR}
 NO_BUILD=		yes
 NO_CHECKSUM=		yes
 
+FILES_SUBST+=		QMAIL_ALIAS_USER=${QMAIL_ALIAS_USER:Q}
 FILES_SUBST+=		QMAIL_DAEMON_USER=${QMAIL_DAEMON_USER:Q}
 FILES_SUBST+=		QMAIL_LOG_USER=${QMAIL_LOG_USER:Q}
 FILES_SUBST+=		QMAIL_SEND_USER=${QMAIL_SEND_USER:Q}
 FILES_SUBST+=		QMAIL_QUEUE_EXTRA=${QMAIL_QUEUE_EXTRA:Q}
 FILES_SUBST+=		PKGNAME=${PKGNAME:Q}
+FILES_SUBST+=		UCSPI_SSL_USER=${UCSPI_SSL_USER:Q}
+FILES_SUBST+=		UCSPI_SSL_GROUP=${UCSPI_SSL_GROUP:Q}
+MESSAGE_SUBST+=		QMAIL_ALIAS_USER=${QMAIL_ALIAS_USER:Q}
 MESSAGE_SUBST+=		PKG_SYSCONFBASE=${PKG_SYSCONFBASE:Q}
 RCD_SCRIPTS=		qmail qmailofmipd qmailpop3d qmailqread qmailsend qmailsmtpd
 
 .for f in defaultdelivery fixsmtpio signatures \
+	pop3capabilities smtpcapabilities \
 	concurrencyincoming concurrencypop3 concurrencysubmission
 CONF_FILES+=		${PREFIX}/share/examples/qmail-run/${f} \
 			${PKG_SYSCONFDIR}/control/${f}
@@ -40,8 +45,10 @@ CONF_FILES+=		${PREFIX}/share/examples/qmail-run/${f} \
 .endfor
 
 INSTALLATION_DIRS=	bin share/doc/qmail-run share/examples/qmail-run
-BUILD_DEFS+=		QMAIL_DAEMON_USER QMAIL_LOG_USER QMAIL_SEND_USER
+BUILD_DEFS+=		QMAIL_ALIAS_USER QMAIL_DAEMON_USER
+BUILD_DEFS+=		QMAIL_LOG_USER QMAIL_SEND_USER
 BUILD_DEFS+=		QMAIL_QUEUE_EXTRA PKG_SYSCONFBASE
+BUILD_DEFS+=		UCSPI_SSL_USER UCSPI_SSL_GROUP
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -68,8 +75,9 @@ SUBST_VARS.paths=	PKGNAME PKG_SYSCONFDIR PREFIX
 SUBST_VARS.paths+=	CAT ECHO GREP SED SH SORT TRUE
 
 post-extract:
-	for f in README.pkgsrc mailer.conf stunnel.conf \
+	for f in README.pkgsrc mailer.conf \
 		defaultdelivery fixsmtpio signatures \
+		pop3capabilities smtpcapabilities \
 		concurrencyincoming concurrencypop3 concurrencysubmission \
 		tcp.ofmip tcp.pop3 tcp.smtp; do \
 		${CP} ${FILESDIR}/$$f ${WRKDIR}/$$f; \
@@ -89,14 +97,13 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/README.pkgsrc \
 		${DESTDIR}${PREFIX}/share/doc/qmail-run
 	for f in defaultdelivery fixsmtpio signatures \
+		pop3capabilities smtpcapabilities \
 		concurrencyincoming concurrencypop3 concurrencysubmission \
 		tcp.ofmip tcp.pop3 tcp.smtp; do \
 		${INSTALL_DATA} ${WRKDIR}/$${f} \
 			${DESTDIR}${PREFIX}/share/examples/qmail-run; \
 	done; \
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf \
-		${DESTDIR}${PREFIX}/share/examples/qmail-run
-	${INSTALL_DATA} ${WRKDIR}/stunnel.conf \
 		${DESTDIR}${PREFIX}/share/examples/qmail-run
 
 .include "../../mk/bsd.pkg.mk"
