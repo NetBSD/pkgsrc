@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.1 2018/06/20 11:04:19 mef Exp $
+$NetBSD: distinfo,v 1.2 2018/10/27 20:58:39 leot Exp $
 
 SHA1 (emacs-26.1.tar.gz) = 278c4873693173136fb7503ec75cefa32d2ab658
 RMD160 (emacs-26.1.tar.gz) = f13fe104345738c853bcce2e3e061dbfb8692bc5
 SHA512 (emacs-26.1.tar.gz) = 0be0c093f15f620d7d200a4ca4ddd9ec68481d966d08e4606a42e399ba0eb125ffed05771cc5cd6524a56135d2b8dc5c2fd48f04716f98531d2837efbccc09ef
 Size (emacs-26.1.tar.gz) = 65007481 bytes
+SHA1 (patch-configure) = ceb64518bd90b9c6dbd46174ad19e540b5ea96ed
+SHA1 (patch-configure.ac) = 232c4466c7de759881169c7016b07537043a6d54
 SHA1 (patch-src_inotify.c) = 1fdc6566ed57e8418f1ddc85bb03518d7d9d6bb3

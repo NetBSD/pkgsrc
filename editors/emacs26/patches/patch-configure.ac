@@ -1,0 +1,17 @@
+$NetBSD: patch-configure.ac,v 1.1 2018/10/27 20:58:39 leot Exp $
+
+Do not inject X11 LDFLAGS, pkgsrc handles that.
+Fixes PR pkg/53688.
+
+--- configure.ac.orig	2017-09-11 16:55:00.000000000 +0000
++++ configure.ac
+@@ -1383,7 +1383,8 @@ ac_link="$ac_link $LD_SWITCH_SYSTEM"
+ ## LD_SWITCH_SYSTEM_TEMACS.
+ case "$opsys" in
+   netbsd|openbsd)
+-   LD_SWITCH_SYSTEM="\$(LD_SWITCH_X_SITE_RPATH) $LD_SWITCH_SYSTEM" ;;
++### This is handled by pkgsrc.
++###   LD_SWITCH_SYSTEM="\$(LD_SWITCH_X_SITE_RPATH) $LD_SWITCH_SYSTEM" ;;
+ esac
+ 
+ 
