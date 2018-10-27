@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2016/10/14 10:31:12 maya Exp $
+# $NetBSD: Makefile,v 1.11 2018/10/27 21:44:53 abs Exp $
 #
 
 DISTNAME=	acpica-unix2-20160930
 PKGNAME=	${DISTNAME:S/-unix2-/-utils-/}
+PKGREVISION=	1
 CATEGORIES=	sysutils devel
 MASTER_SITES=	https://acpica.org/sites/acpica/files/
 
@@ -50,5 +51,11 @@ do-test:
 ## Template tests
 # This test is broken too
 #	cd ${WRKSRC}/tests/templates && gmake
+
+.include "../../mk/compiler.mk"
+
+.if !empty(CC_VERSION:Mgcc-8*)
+CFLAGS+=	-Wno-error=format-truncation
+.endif
 
 .include "../../mk/bsd.pkg.mk"
