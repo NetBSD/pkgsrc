@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4500 2018/10/27 17:28:27 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.4501 2018/10/27 19:16:21 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6270,3 +6270,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added textproc/hfstospell version 0.5.1 [bsiegert 2018-10-26]
 	Updated net/dnsmasq to 2.80 [maya 2018-10-27]
 	Updated mail/qmail-acceptutils to 20181027 [schmonz 2018-10-27]
+	Updated mail/qmail-run to 20181027 [schmonz 2018-10-27]
