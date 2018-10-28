@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailofmipd.sh,v 1.12 2018/10/28 15:01:57 schmonz Exp $
+# $NetBSD: qmailofmipd.sh,v 1.13 2018/10/28 16:38:36 schmonz Exp $
 #
 # @PKGNAME@ script to control ofmipd (SMTP submission service).
 #
@@ -11,7 +11,7 @@
 name="qmailofmipd"
 
 # User-settable rc.conf variables and their default values:
-: ${qmailofmipd_postenv:="SSL_UID=$(@ID@ -u @UCSPI_SSL_USER@) SSL_GID=$(@ID@ -g @UCSPI_SSL_GROUP@) CERTFILE=@PKG_SYSCONFDIR@/servercert.pem"}
+: ${qmailofmipd_postenv:="SSL_UID=$(@ID@ -u @UCSPI_SSL_USER@) SSL_GID=$(@ID@ -g @UCSPI_SSL_GROUP@) DHFILE=@PKG_SYSCONFDIR@/control/dh2048.pem CERTFILE=@PKG_SYSCONFDIR@/control/servercert.pem"}
 : ${qmailofmipd_tcpflags:="-neV -vRl0"}
 : ${qmailofmipd_tcphost:="0.0.0.0"}
 : ${qmailofmipd_tcpport:="587"}
@@ -31,8 +31,10 @@ if [ -f /etc/rc.subr ]; then
 fi
 
 rcvar=${name}
-required_files="@PKG_SYSCONFDIR@/control/me"
-required_files="@PKG_SYSCONFDIR@/control/concurrencysubmission"
+required_files="@PKG_SYSCONFDIR@/control/dh2048.pem"
+required_files="${required_files} @PKG_SYSCONFDIR@/control/servercert.pem"
+required_files="${required_files} @PKG_SYSCONFDIR@/control/me"
+required_files="${required_files} @PKG_SYSCONFDIR@/control/concurrencysubmission"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/rcpthosts"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/smtpcapabilities"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/fixsmtpio"
