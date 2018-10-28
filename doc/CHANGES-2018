@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4509 2018/10/28 15:08:33 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4510 2018/10/28 15:19:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6279,3 +6279,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/rust to 1.29.2 [he 2018-10-28]
 	Updated mail/qmail-run to 20181028 [schmonz 2018-10-28]
 	Added www/py-zope.proxy version 4.3.1 [taca 2018-10-28]
+	Added devel/py-zope.deferredimport version 4.3 [taca 2018-10-28]
+	Added devel/py-zope.deprecation version 4.3.0 [taca 2018-10-28]
+	Added devel/py-zope.hookable version 4.2.0 [taca 2018-10-28]
