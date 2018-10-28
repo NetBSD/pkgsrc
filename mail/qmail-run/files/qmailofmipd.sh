@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailofmipd.sh,v 1.11 2018/10/27 19:16:16 schmonz Exp $
+# $NetBSD: qmailofmipd.sh,v 1.12 2018/10/28 15:01:57 schmonz Exp $
 #
 # @PKGNAME@ script to control ofmipd (SMTP submission service).
 #
@@ -11,7 +11,7 @@
 name="qmailofmipd"
 
 # User-settable rc.conf variables and their default values:
-: ${qmailofmipd_postenv:="@SETENV@ SSL_UID=$(@ID@ -u @UCSPI_SSL_USER@) SSL_GID=$(@ID@ -g @UCSPI_SSL_GROUP@)"}
+: ${qmailofmipd_postenv:="SSL_UID=$(@ID@ -u @UCSPI_SSL_USER@) SSL_GID=$(@ID@ -g @UCSPI_SSL_GROUP@) CERTFILE=@PKG_SYSCONFDIR@/servercert.pem"}
 : ${qmailofmipd_tcpflags:="-neV -vRl0"}
 : ${qmailofmipd_tcphost:="0.0.0.0"}
 : ${qmailofmipd_tcpport:="587"}
@@ -31,9 +31,12 @@ if [ -f /etc/rc.subr ]; then
 fi
 
 rcvar=${name}
+required_files="@PKG_SYSCONFDIR@/control/me"
 required_files="@PKG_SYSCONFDIR@/control/concurrencysubmission"
-required_files="${required_files} @PKG_SYSCONFDIR@/tcp.ofmip.cdb"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/rcpthosts"
+required_files="${required_files} @PKG_SYSCONFDIR@/control/smtpcapabilities"
+required_files="${required_files} @PKG_SYSCONFDIR@/control/fixsmtpio"
+required_files="${required_files} @PKG_SYSCONFDIR@/tcp.ofmip.cdb"
 command="${qmailofmipd_tcpserver}"
 procname=nb${name}
 start_precmd="qmailofmipd_precmd"
