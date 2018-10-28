@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/10/28 15:16:09 taca Exp $
+
+SHA1 (zope.deprecation-4.3.0.tar.gz) = ee66f204f80cd314adf362860a3845440bdd5d67
+RMD160 (zope.deprecation-4.3.0.tar.gz) = 1c3830087b3d2a289bf2a1d35c4969246d822dcb
+SHA512 (zope.deprecation-4.3.0.tar.gz) = 90d479dc77340c60652b5afe57a1b899cede2184cd8766b33eaafbe86f3a69a8c119cff494c29b071925d4a34e3ef9c09a74cc4618415358f42a3b7bd85e8118
+Size (zope.deprecation-4.3.0.tar.gz) = 24853 bytes
