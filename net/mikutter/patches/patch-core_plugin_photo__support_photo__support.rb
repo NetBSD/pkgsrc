@@ -1,8 +1,8 @@
-$NetBSD: patch-core_plugin_photo__support_photo__support.rb,v 1.5 2018/03/09 14:37:02 tsutsui Exp $
+$NetBSD: patch-core_plugin_photo__support_photo__support.rb,v 1.6 2018/10/28 06:47:31 tsutsui Exp $
 
 - temporary workaround to skip totorijp gems (sorry, @toshi_a)
 
---- core/plugin/photo_support/photo_support.rb.orig	2017-06-10 01:11:51.000000000 +0000
+--- core/plugin/photo_support/photo_support.rb.orig	2018-10-28 04:50:27.000000000 +0000
 +++ core/plugin/photo_support/photo_support.rb
 @@ -1,7 +1,7 @@
  # coding: utf-8
@@ -12,8 +12,8 @@ $NetBSD: patch-core_plugin_photo__support_photo__support.rb,v 1.5 2018/03/09 14:
 +#require 'totoridipjp'
  
  module Plugin::PhotoSupport
-   INSTAGRAM_PATTERN = %r{\Ahttps?://(?:instagr\.am|(?:www\.)?instagram\.com)/p/([a-zA-Z0-9_\-]+)/}
-@@ -181,9 +181,14 @@ Plugin.create :photo_support do
+   SUPPORTED_IMAGE_FORMATS = GdkPixbuf::Pixbuf.formats.flat_map{|f| f.extensions }.freeze
+@@ -172,9 +172,14 @@ Plugin.create :photo_support do
  
    # totori.dip.jp
    defimageopener('totori.dip.jp', %r#\Ahttp://totori\.dip\.jp/?\Z#) do |display_url|
