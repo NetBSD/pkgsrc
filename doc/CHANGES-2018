@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4512 2018/10/28 15:28:12 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4513 2018/10/28 15:29:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6287,3 +6287,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/roundcube-plugin-enigma to 1.3.8 [taca 2018-10-28]
 	Updated mail/roundcube-plugin-password to 1.3.8 [taca 2018-10-28]
 	Updated mail/roundcube-plugin-zipdownload to 1.3.8 [taca 2018-10-28]
+	Updated time/ruby-tzinfo03 to 0.3.55 [taca 2018-10-28]
