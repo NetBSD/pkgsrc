@@ -1,0 +1,11 @@
+===============
+ zope.hookable
+===============
+
+This package supports the efficient creation of "hookable" objects, which
+are callable objects that are meant to be optionally replaced.
+
+The idea is that you create a function that does some default thing and make it
+hookable. Later, someone can modify what it does by calling its sethook method
+and changing its implementation.  All users of the function, including those
+that imported it, will see the change.
