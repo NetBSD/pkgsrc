@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4502 2018/10/28 03:43:59 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.4503 2018/10/28 03:44:11 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6272,3 +6272,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/qmail-acceptutils to 20181027 [schmonz 2018-10-27]
 	Updated mail/qmail-run to 20181027 [schmonz 2018-10-27]
 	Updated textproc/xapian to 1.4.8 [schmonz 2018-10-28]
+	Updated textproc/xapian-omega to 1.4.8 [schmonz 2018-10-28]
