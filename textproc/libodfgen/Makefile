@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2018/08/16 18:54:32 adam Exp $
+# $NetBSD: Makefile,v 1.19 2018/10/28 16:32:36 abs Exp $
 
 DISTNAME=	libodfgen-0.1.6
 PKGREVISION=	7
@@ -25,6 +25,11 @@ PKGCONFIG_OVERRIDE+=	libodfgen.pc.in
 CONFIGURE_ARGS+=	--with-sharedptr=c++11
 .else
 CONFIGURE_ARGS+=	--with-sharedptr=tr1
+.endif
+
+# Avoid erroring out due to multiple -Werror=parentheses with gcc8
+.if !empty(CC_VERSION:Mgcc-8*)
+CONFIGURE_ARGS+=--disable-werror
 .endif
 
 .include "../../converters/libetonyek/buildlink3.mk"
