@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4516 2018/10/28 15:39:28 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4517 2018/10/28 16:38:41 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6291,3 +6291,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/ruby-tzinfo-data to 1.2018.7 [taca 2018-10-28]
 	Added devel/ruby-google-protobuf version 3.6.1 [taca 2018-10-28]
 	Added devel/ruby-cucumber-messages version 1.1.2 [taca 2018-10-28]
+	Updated mail/qmail-run to 20181028nb1 [schmonz 2018-10-28]
