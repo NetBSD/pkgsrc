@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2741 2018/10/23 09:39:59 adam Exp $
+# $NetBSD: Makefile,v 1.2742 2018/10/28 15:18:44 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2341,7 +2341,10 @@ SUBDIR+=	py-xopen
 SUBDIR+=	py-zanata-python-client
 SUBDIR+=	py-zc.lockfile
 SUBDIR+=	py-zconfig
+SUBDIR+=	py-zope.deferredimport
+SUBDIR+=	py-zope.deprecation
 SUBDIR+=	py-zope.exceptions
+SUBDIR+=	py-zope.hookable
 SUBDIR+=	py-zope.testing
 SUBDIR+=	python-mode
 SUBDIR+=	pythontidy
