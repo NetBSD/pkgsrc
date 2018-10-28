@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2018/07/06 16:21:56 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.14 2018/10/28 03:43:17 schmonz Exp $
 bin/copydatabase
 bin/quest
 bin/simpleexpand
@@ -9,6 +9,7 @@ bin/xapian-compact
 bin/xapian-config
 bin/xapian-delve
 bin/xapian-metadata
+bin/xapian-pos
 bin/xapian-progsrv
 bin/xapian-replicate
 bin/xapian-replicate-server
@@ -61,6 +62,7 @@ man/man1/xapian-compact.1
 man/man1/xapian-config.1
 man/man1/xapian-delve.1
 man/man1/xapian-metadata.1
+man/man1/xapian-pos.1
 man/man1/xapian-progsrv.1
 man/man1/xapian-replicate-server.1
 man/man1/xapian-replicate.1
