@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2018/10/28 15:17:47 taca Exp $
+
+SHA1 (zope.hookable-4.2.0.tar.gz) = 7aed58847bf92b330deda16d34b3e17607af8692
+RMD160 (zope.hookable-4.2.0.tar.gz) = 8d9428d044f17670fbf55ddcc68f822a8f340e96
+SHA512 (zope.hookable-4.2.0.tar.gz) = 89360637339ccc4131d4a6b5fda27a8721a03f0110cf5a63dfe14202c38cacc304fcd7e12d0f5d2779647d0e1e0fc7d04b7c6514ee88d167498fb62db3147a11
+Size (zope.hookable-4.2.0.tar.gz) = 22011 bytes
+SHA1 (patch-setup.py) = 530806b5c0764a8846d3e74df6c759ccee758c57
+SHA1 (patch-tox.ini) = c06bbfd3717aa4f97b80d675a5f75c4e2ef134e7
