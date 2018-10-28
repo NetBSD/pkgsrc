@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailpop3d.sh,v 1.21 2018/10/28 15:01:57 schmonz Exp $
+# $NetBSD: qmailpop3d.sh,v 1.22 2018/10/28 16:38:36 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-pop3d (POP3 server for Maildirs).
 #
@@ -10,7 +10,7 @@
 name="qmailpop3d"
 
 # User-settable rc.conf variables and their default values:
-: ${qmailpop3d_postenv:="SSL_UID=$(@ID@ -u @UCSPI_SSL_USER@) SSL_GID=$(@ID@ -g @UCSPI_SSL_GROUP@) CERTFILE=@PKG_SYSCONFDIR@/servercert.pem"}
+: ${qmailpop3d_postenv:="SSL_UID=$(@ID@ -u @UCSPI_SSL_USER@) SSL_GID=$(@ID@ -g @UCSPI_SSL_GROUP@) DHFILE=@PKG_SYSCONFDIR@/control/dh2048.pem CERTFILE=@PKG_SYSCONFDIR@/control/servercert.pem"}
 : ${qmailpop3d_tcpflags:="-neV -vRl0"}
 : ${qmailpop3d_tcphost:="0.0.0.0"}
 : ${qmailpop3d_tcpport:="110"}
@@ -30,7 +30,9 @@ if [ -f /etc/rc.subr ]; then
 fi
 
 rcvar=${name}
-required_files="@PKG_SYSCONFDIR@/control/me"
+required_files="@PKG_SYSCONFDIR@/control/dh2048.pem"
+required_files="${required_files} @PKG_SYSCONFDIR@/control/servercert.pem"
+required_files="${required_files} @PKG_SYSCONFDIR@/control/me"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/concurrencypop3"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/pop3capabilities"
 required_files="${required_files} @PKG_SYSCONFDIR@/tcp.pop3.cdb"
