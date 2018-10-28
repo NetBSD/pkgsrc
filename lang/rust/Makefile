@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.61 2018/10/18 15:35:49 he Exp $
+# $NetBSD: Makefile,v 1.62 2018/10/28 13:21:36 he Exp $
 
-DISTNAME=	rustc-1.29.1-src
+DISTNAME=	rustc-1.29.2-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
-PKGREVISION=	2
+#PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://static.rust-lang.org/dist/
 
@@ -38,10 +38,14 @@ CONFIGURE_ARGS.SunOS+=	--disable-jemalloc
 # to do a cross-build.  The wrapper script assumes dest/ and tools/
 # as a result of a cross-build as subdirectories of this root
 #CROSS_ROOT=		/u/evbarm-armv7hf
+#CROSS_ROOT=		/u/sparc64
+#CROSS_ROOT=		/u/macppc
 #MAKE_ENV+=		CROSS_ROOT=${CROSS_ROOT}
 
 # The GNU cross target designation
 #GNU_CROSS_TARGET=	armv7--netbsdelf-eabihf
+#GNU_CROSS_TARGET=	sparc64--netbsd
+#GNU_CROSS_TARGET=	powerpc--netbsd
 #MAKE_ENV+=		GNU_CROSS_TARGET=${GNU_CROSS_TARGET}
 
 # To cross-build rust, you need to specify
@@ -49,6 +53,8 @@ CONFIGURE_ARGS.SunOS+=	--disable-jemalloc
 # host the compiler is supposed to run on.
 # Rust's target designation
 #TARGET= 		armv7-unknown-netbsd-eabihf
+#TARGET= 		sparc64-unknown-netbsd
+#TARGET= 		powerpc-unknown-netbsd
 #SCRIPTS=		${WRKDIR}/scripts
 #CONFIGURE_ARGS+=	--host=${TARGET}
 #CONFIGURE_ARGS+=	--target=${TARGET}
@@ -191,7 +197,7 @@ pre-build-fix:
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH=		powerpc-unknown-netbsd
-RUST_STAGE0_VER=	1.28.0
+RUST_STAGE0_VER=	1.29.2
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
@@ -202,7 +208,7 @@ pre-build-fix:
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64) || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH=		sparc64-unknown-netbsd
-RUST_STAGE0_VER=	1.29.1
+RUST_STAGE0_VER=	1.29.2
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
@@ -213,7 +219,7 @@ pre-build-fix:
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv7hf) || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH=		armv7-unknown-netbsd-eabihf
-RUST_STAGE0_VER=	1.29.1
+RUST_STAGE0_VER=	1.29.2
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
@@ -402,11 +408,11 @@ stage0-bootstrap: install
 .endif
 
 .include "../../devel/cmake/buildlink3.mk"
-.include "../../devel/libgit2/buildlink3.mk"
+#.include "../../devel/libgit2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
-.include "../../security/libssh2/buildlink3.mk"
+#.include "../../security/libssh2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../www/curl/buildlink3.mk"
+#.include "../../www/curl/buildlink3.mk"
 .include "../../www/http-parser/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
