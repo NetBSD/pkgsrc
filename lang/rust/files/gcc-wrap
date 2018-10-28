@@ -71,6 +71,23 @@ while [ $# -gt 0 ]; do
 		-I/usr/include/krb5)
 			args="$args -I=/usr/include/krb5"
 			;;
+		-I/usr/pkg/include)
+			args="$args -I=/usr/pkg/include"
+			;;
+		-I)
+			if [ $2 = "/usr/include" ]; then
+				args="$args -I=/usr/include"
+				shift
+			elif [ $2 = "/usr/include/krb5" ]; then
+				args="$args -I=/usr/include/krb5"
+				shift
+			elif [ $2 = "/usr/pkg/include" ]; then
+				args="$args -I=/usr/pkg/include"
+				shift
+			else
+				args="$args -I"
+			fi
+			;;
 		-l*)
 			if ! $linktweaked; then
 				args="$args $linkadd"
