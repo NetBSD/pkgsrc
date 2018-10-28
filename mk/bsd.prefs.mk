@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.399 2018/10/28 18:08:15 sevan Exp $
+# $NetBSD: bsd.prefs.mk,v 1.400 2018/10/28 18:41:41 sevan Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -279,7 +279,6 @@ OS_VARIANT=		SCOOSR6
 .elif ${OPSYS} == "Minix"
 LOWER_VENDOR?=		unknown
 LOWER_OPSYS:=		${OPSYS:tl}
-LDFLAGS+=		-lcompat_minix -lminlib
 
 .elif !defined(LOWER_OPSYS)
 LOWER_OPSYS:=		${OPSYS:tl}
