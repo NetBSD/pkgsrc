@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2018/10/28 15:37:51 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/ISSUE_TEMPLATE.md
+${GEM_LIBDIR}/.github/PULL_REQUEST_TEMPLATE.md
+${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.rsync
+${GEM_LIBDIR}/.subrepo
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/Makefile
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/cucumber-messages.gemspec
+${GEM_LIBDIR}/default.mk
+${GEM_LIBDIR}/lib/cucumber/messages.rb
+${GEM_LIBDIR}/lib/cucumber/messages_pb.rb
+${GEM_LIBDIR}/messages.proto
+${GEM_LIBDIR}/spec/capture_warnings.rb
+${GEM_LIBDIR}/spec/coverage.rb
+${GEM_LIBDIR}/spec/cucumber/messages/messages_spec.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
