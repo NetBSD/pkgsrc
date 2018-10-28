@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4505 2018/10/28 13:04:48 nia Exp $
+$NetBSD: CHANGES-2018,v 1.4506 2018/10/28 13:21:19 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6275,3 +6275,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/xapian-omega to 1.4.8 [schmonz 2018-10-28]
 	Updated net/mikutter to 3.8.2 [tsutsui 2018-10-28]
 	Updated emulators/libretro-gambatte to 20181022 [nia 2018-10-28]
+	Updated emulators/libretro-reicast to 20181026 [nia 2018-10-28]
