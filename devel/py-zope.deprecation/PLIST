@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2018/10/28 15:16:09 taca Exp $
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/zope/deprecation/__init__.py
+${PYSITELIB}/zope/deprecation/__init__.pyc
+${PYSITELIB}/zope/deprecation/__init__.pyo
+${PYSITELIB}/zope/deprecation/deprecation.py
+${PYSITELIB}/zope/deprecation/deprecation.pyc
+${PYSITELIB}/zope/deprecation/deprecation.pyo
+${PYSITELIB}/zope/deprecation/fixture.py
+${PYSITELIB}/zope/deprecation/fixture.pyc
+${PYSITELIB}/zope/deprecation/fixture.pyo
+${PYSITELIB}/zope/deprecation/tests.py
+${PYSITELIB}/zope/deprecation/tests.pyc
+${PYSITELIB}/zope/deprecation/tests.pyo
