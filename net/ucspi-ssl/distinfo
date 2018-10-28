@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2018/10/14 12:21:11 schmonz Exp $
+$NetBSD: distinfo,v 1.11 2018/10/28 17:10:27 schmonz Exp $
 
 SHA1 (ucspi-ssl-0.10.6.tgz) = 88cdb2cb370bd40086287baa449afe783bd81a0a
 RMD160 (ucspi-ssl-0.10.6.tgz) = 8a9b632bee5dcb96b88893161eff283d5ec52c5d
@@ -6,3 +6,4 @@ SHA512 (ucspi-ssl-0.10.6.tgz) = 297f8bdaca881ba39883a1f36daa76456fc0e65b1fb2908c
 Size (ucspi-ssl-0.10.6.tgz) = 71680 bytes
 SHA1 (patch-src_print-dl.sh) = 456ae878c5116bbdfab1e9b4c049f6e4e80bc2b1
 SHA1 (patch-src_print-ld.sh) = f05f316eb6b95a3a9cb5726c9e7bb2d27dfc1b7b
+SHA1 (patch-src_ucspissl.h) = a73b19d3b5e70450c8dc0382836aa6ccc8e79a6e
