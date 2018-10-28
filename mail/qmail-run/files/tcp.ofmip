@@ -1,2 +1,1 @@
-127.:allow,RELAYCLIENT=""
-:allow,QMAILQUEUE="@PREFIX@/bin/qmail-qfilter-ofmipd-queue",UCSPITLS="!",CERTFILE="@PKG_SYSCONFDIR@/control/servercert.pem"
+:allow,QMAILQUEUE="@PREFIX@/bin/qmail-qfilter-ofmipd-queue",UCSPITLS="!",PYMSGAUTH_TOLERATE_UNCONFIGURED="1"
