@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4507 2018/10/28 13:22:16 he Exp $
+$NetBSD: CHANGES-2018,v 1.4508 2018/10/28 15:02:03 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6277,3 +6277,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated emulators/libretro-gambatte to 20181022 [nia 2018-10-28]
 	Updated emulators/libretro-reicast to 20181026 [nia 2018-10-28]
 	Updated lang/rust to 1.29.2 [he 2018-10-28]
+	Updated mail/qmail-run to 20181028 [schmonz 2018-10-28]
