@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailpop3d.sh,v 1.20 2018/10/24 15:46:54 schmonz Exp $
+# $NetBSD: qmailpop3d.sh,v 1.21 2018/10/28 15:01:57 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-pop3d (POP3 server for Maildirs).
 #
@@ -10,13 +10,13 @@
 name="qmailpop3d"
 
 # User-settable rc.conf variables and their default values:
-: ${qmailpop3d_postenv:=""}
-: ${qmailpop3d_tcpflags:="-vRHl0"}
-: ${qmailpop3d_tcphost:="0"}
+: ${qmailpop3d_postenv:="SSL_UID=$(@ID@ -u @UCSPI_SSL_USER@) SSL_GID=$(@ID@ -g @UCSPI_SSL_GROUP@) CERTFILE=@PKG_SYSCONFDIR@/servercert.pem"}
+: ${qmailpop3d_tcpflags:="-neV -vRl0"}
+: ${qmailpop3d_tcphost:="0.0.0.0"}
 : ${qmailpop3d_tcpport:="110"}
 : ${qmailpop3d_datalimit:="180000000"}
 : ${qmailpop3d_pretcpserver:=""}
-: ${qmailpop3d_tcpserver:="@PREFIX@/bin/tcpserver"}
+: ${qmailpop3d_tcpserver:="@PREFIX@/bin/sslserver"}
 : ${qmailpop3d_prepop3d:=""}
 : ${qmailpop3d_pop3dcmd:="@PREFIX@/bin/qmail-pop3d"}
 : ${qmailpop3d_checkpassword:="@PREFIX@/bin/nbcheckpassword"}
@@ -32,6 +32,7 @@ fi
 rcvar=${name}
 required_files="@PKG_SYSCONFDIR@/control/me"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/concurrencypop3"
+required_files="${required_files} @PKG_SYSCONFDIR@/control/pop3capabilities"
 required_files="${required_files} @PKG_SYSCONFDIR@/tcp.pop3.cdb"
 command="${qmailpop3d_tcpserver}"
 procname=nb${name}
@@ -56,8 +57,8 @@ qmailpop3d_precmd()
 @PREFIX@/bin/argv0 ${qmailpop3d_tcpserver} ${procname}
 ${qmailpop3d_tcpflags} -x @PKG_SYSCONFDIR@/tcp.pop3.cdb
 -c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencypop3`
-${qmailpop3d_tcphost} ${qmailpop3d_tcpport} @PREFIX@/bin/qmail-popup
-`@HEAD@ -1 @PKG_SYSCONFDIR@/control/me`
+${qmailpop3d_tcphost} ${qmailpop3d_tcpport}
+@PREFIX@/bin/authup pop3
 ${qmailpop3d_checkpassword} @PREFIX@/bin/checknotroot
 ${qmailpop3d_prepop3d} ${qmailpop3d_pop3dcmd} ${qmailpop3d_maildirname}
 2>&1 |
