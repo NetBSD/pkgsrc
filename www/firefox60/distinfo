@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.2 2018/09/15 06:04:04 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2018/10/29 01:16:58 maya Exp $
 
-SHA1 (firefox-60.2.0esr.source.tar.xz) = 62f542bea08ba39965fe5179404a2a8b336e6358
-RMD160 (firefox-60.2.0esr.source.tar.xz) = e5cac1a241279e6a4dadcd7ea860ebe2e2983626
-SHA512 (firefox-60.2.0esr.source.tar.xz) = 672632ad7868a013250ec9540287e9fee30a890b1357dd1c475877d8917273d31135c38607e20c8232a890ba7b273055454b05f612a994c46fa7fe665edbe36c
-Size (firefox-60.2.0esr.source.tar.xz) = 267132936 bytes
+SHA1 (firefox-60.3.0esr.source.tar.xz) = bac0745b6abdd5887ec0a46041a8252c344cdc64
+RMD160 (firefox-60.3.0esr.source.tar.xz) = ff553704aad2911adbce4e4590d87861d1a1e188
+SHA512 (firefox-60.3.0esr.source.tar.xz) = 7ded25a38835fbd73a58085e24ad83308afee1784a3bf853d75093c1500ad46988f5865c106abdae938cfbd1fb10746cc1795ece7994fd7eba8a002158cf1bcd
+Size (firefox-60.3.0esr.source.tar.xz) = 268340600 bytes
 SHA1 (patch-aa) = fdabcc9b055f6439fdbda9b38ab7cec08ff3e231
 SHA1 (patch-browser_app_profile_firefox.js) = 9a43095d94f83f315b9a3ce4a7b0a4301e9c40e6
 SHA1 (patch-build_moz.configure_old.configure) = 1df6867eaf73a350fbe8fcd5bd34e1fcab09d707
@@ -36,8 +36,6 @@ SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info_
 SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_video__capture__linux.cc) = a69bc7b7096b410582e725f9dbec57fee90d6686
 SHA1 (patch-modules_pdfium_update.sh) = b0bf091325c9322c54880de067871354cd689038
 SHA1 (patch-servo_components_style_build__gecko.rs) = fca2260a70b496fc010f165ff4d68788b7e28632
-SHA1 (patch-third__party_rust_libloading_.cargo-checksum.json) = 00bb69b7e72911de1658f97b338d1d77e9d11cdb
-SHA1 (patch-third__party_rust_libloading_build.rs) = 279b0381546d9e2868d4a6e20a8bd195792fc034
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = 5b6d2e5c9f685d32894898d3ef3aec09a1a1e5ce
 SHA1 (patch-toolkit_library_moz.build) = ecb6125e996d5496335c58ecd3433ad3214f29f0
 SHA1 (patch-toolkit_moz.configure) = 40ee147cc1d2c62dd6c83b3f67ce9e61f758ea57
