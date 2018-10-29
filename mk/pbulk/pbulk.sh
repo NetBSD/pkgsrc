@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pbulk.sh,v 1.7 2018/02/08 12:59:28 triaxx Exp $
+# $NetBSD: pbulk.sh,v 1.8 2018/10/29 02:47:08 sevan Exp $
 set -e
 
 usage="usage: ${0##*/} [-lun] [-c mk.conf.fragment] [-d nodes]"
@@ -46,7 +46,7 @@ fi
 # Do it early since adding it after it fails is problematic:
 if [ ! -n "$unprivileged" ]; then
 case "$(uname)" in
-NetBSD)
+NetBSD|Minix)
 if ! id pbulk; then user add -m -g users pbulk; fi
 ;;
 FreeBSD)
