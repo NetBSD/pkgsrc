@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/06/28 14:04:10 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/10/29 01:16:58 maya Exp $
 bin/firefox60
 lib/firefox60/application.ini
 lib/firefox60/browser/blocklist.xml
@@ -3024,6 +3024,10 @@ lib/firefox60/browser/features/formautofill@mozilla.org/chrome/skin/windows/auto
 lib/firefox60/browser/features/formautofill@mozilla.org/chrome/skin/windows/editDialog.css
 lib/firefox60/browser/features/formautofill@mozilla.org/en-US/locale/en-US/formautofill.properties
 lib/firefox60/browser/features/formautofill@mozilla.org/install.rdf
+lib/firefox60/browser/features/jaws-esr@mozilla.org/bootstrap.js
+lib/firefox60/browser/features/jaws-esr@mozilla.org/chrome.manifest
+lib/firefox60/browser/features/jaws-esr@mozilla.org/en-US/locale/en-US/jaws-esr.properties
+lib/firefox60/browser/features/jaws-esr@mozilla.org/install.rdf
 lib/firefox60/browser/features/onboarding@mozilla.org/bootstrap.js
 lib/firefox60/browser/features/onboarding@mozilla.org/chrome.manifest
 lib/firefox60/browser/features/onboarding@mozilla.org/chrome/content/img/figure_addons.svg
