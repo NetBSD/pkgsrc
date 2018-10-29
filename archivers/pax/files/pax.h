@@ -1,4 +1,4 @@
-/*	$NetBSD: pax.h,v 1.13 2014/03/14 22:16:50 ryoon Exp $	*/
+/*	$NetBSD: pax.h,v 1.14 2018/10/29 20:18:02 triaxx Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -265,7 +265,7 @@ typedef struct oplist {
 #  define major(x)		((int)(0x00ff & ((x) >> 8)))
 #  define minor(x)		((int)(0xffff00ff & (x)))
 #  define makedev(maj,min)	((0xff00 & ((maj)<<8))|(0xffff00ff & (min)))
-# elif defined(_SCO_DS)
+# elif defined(_SCO_DS) || defined(__linux__)
 #  include <sys/sysmacros.h>
 # endif
 # define MAJOR(x)	major(x)
