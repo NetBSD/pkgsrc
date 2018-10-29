@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/10/28 16:32:36 abs Exp $
+# $NetBSD: Makefile,v 1.20 2018/10/29 14:42:19 abs Exp $
 
 DISTNAME=	libodfgen-0.1.6
 PKGREVISION=	7
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=	--with-sharedptr=tr1
 .endif
 
 # Avoid erroring out due to multiple -Werror=parentheses with gcc8
-.if !empty(CC_VERSION:Mgcc-8*)
+.if !empty(CC_VERSION:Mgcc-[89]*)
 CONFIGURE_ARGS+=--disable-werror
 .endif
 
