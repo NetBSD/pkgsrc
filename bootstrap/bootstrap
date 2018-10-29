@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.253 2018/10/28 18:41:41 sevan Exp $
+# $NetBSD: bootstrap,v 1.254 2018/10/29 15:16:32 triaxx Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -718,6 +718,10 @@ Linux)
 		need_awk=no
 		need_sed=no
 	fi
+  # Arch does not provide pax anymore
+  if [ -f /etc/arch-release ]; then
+    need_pax=yes
+  fi
 	set_opsys=no
 	machine_arch=`uname -m`
 	# Override machine_arch where required.
@@ -1352,6 +1356,9 @@ yes)	build_package "textproc/nbsed";;
 esac
 case "$need_extras" in
 yes)	build_package "pkgtools/bootstrap-extras";;
+esac
+case "$need_pax" in
+yes)    build_package "archivers/pax"
 esac
 build_package "pkgtools/pkg_install"
 
