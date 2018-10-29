@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4524 2018/10/29 16:18:34 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.4525 2018/10/29 17:57:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6303,3 +6303,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/py-tzdata to 2018.7 [adam 2018-10-29]
 	Updated www/webkit-gtk to 2.22.3 [leot 2018-10-29]
 	Updated textproc/uriparser to 0.9.0 [bsiegert 2018-10-29]
+	Updated devel/py-setuptools to 40.5.0 [adam 2018-10-29]
