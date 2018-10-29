@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.400 2018/10/28 18:41:41 sevan Exp $
+# $NetBSD: bsd.prefs.mk,v 1.401 2018/10/29 01:50:00 sevan Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -328,6 +328,8 @@ OBJECT_FMT?=	a.out
 .elif ${OPSYS} == "FreeBSD"
 OBJECT_FMT?=	ELF
 .elif ${OPSYS} == "DragonFly"
+OBJECT_FMT=	ELF
+.elif ${OPSYS} == "Minix"
 OBJECT_FMT=	ELF
 .elif ${OPSYS} == "MirBSD"
 OBJECT_FMT=	ELF
