@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q3,v 1.1.2.9 2018/10/29 17:46:57 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q3,v 1.1.2.10 2018/10/29 19:07:56 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q3 branch:
 
@@ -63,4 +63,21 @@ lang/ruby23-base: security update
 Pullup ticket #5865 - requested by taca
 lang/ruby: security update
 lang/ruby25-base: security update
+
+Pullup ticket #5855 - requested by maya
+multimedia/mkvtoolnix: security fix
+
+Pullup ticket #5867 - requested by spz
+graphics/tiff: security fix
+
+Pullup ticket #5868 - requested by maya
+time/ruby-tzinfo-data: timezone data update
+time/ruby-tzinfo03: timezone data update
+
+Pullup ticket #5870 - requested by maya
+time/py-dateutil: timezone data update
+time/py-tzdata: timezone data update
+
+Pullup ticket #5869 - requested by maya
+www/firefox60: security fix, build fix
 
