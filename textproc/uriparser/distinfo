@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2018/08/20 05:23:08 wiz Exp $
+$NetBSD: distinfo,v 1.9 2018/10/29 16:17:25 bsiegert Exp $
 
-SHA1 (uriparser-0.8.6.tar.bz2) = 5e0bece039a7ae5b666b710a6db02138da2a1ef5
-RMD160 (uriparser-0.8.6.tar.bz2) = dfa7676bf771b638b80255a63a30b73b002b99cd
-SHA512 (uriparser-0.8.6.tar.bz2) = b95e6d7c7f835002f6ea1a9c0962f4d385cd16519c40b921e9a9679140fd5d6cd326002b452fc73431aa2f36d049ae510c034a423eca143a6285f9b4b3dd7b83
-Size (uriparser-0.8.6.tar.bz2) = 360214 bytes
+SHA1 (uriparser-0.9.0.tar.bz2) = 9b5d849e2fc8f96c1b832c4510ca05d092d02ba6
+RMD160 (uriparser-0.9.0.tar.bz2) = f4d1c357b1ca6c79acc2a657ddd822bf4bc7f1d4
+SHA512 (uriparser-0.9.0.tar.bz2) = 8ad631726c59d244b945221e803dcb13daa6df6550b3de94da19745f4b4d53a5ce17dba54280273181479f2803dea4ca7b0154ac3b54ca39fc4eda2c8a03e3f7
+Size (uriparser-0.9.0.tar.bz2) = 371895 bytes
 SHA1 (patch-aa) = 71f3582a2988c6c35a1a2b1995d50f47f22939bd
