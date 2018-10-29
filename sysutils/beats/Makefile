@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2018/10/19 16:49:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.32 2018/10/29 13:27:25 jperkin Exp $
 
 DISTNAME=		beats-6.2.4
 PKGREVISION=		1
@@ -54,6 +54,10 @@ OWN_DIRS+=		${BEATS_DIR} ${BEATS_LOGDIR}
 
 MAKE_ENV+=		GOPATH=${WRKDIR}:${PREFIX}/gopkg
 MAKE_ENV+=		CGO_LDFLAGS="-L${BUILDLINK_PREFIX.libpcap}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libpcap}/lib"
+
+# The build system defaults to -i which modifies system files!
+MAKE_ENV+=		GOBUILD_FLAGS=
+
 BUILD_TARGET=		#
 
 INSTALLATION_DIRS+=	bin share/examples/beats
