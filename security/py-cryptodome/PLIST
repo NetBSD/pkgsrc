@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2018/07/11 07:59:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/10/29 11:07:21 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -22,6 +22,9 @@ ${PYSITELIB}/Crypto/Cipher/CAST.pyo
 ${PYSITELIB}/Crypto/Cipher/ChaCha20.py
 ${PYSITELIB}/Crypto/Cipher/ChaCha20.pyc
 ${PYSITELIB}/Crypto/Cipher/ChaCha20.pyo
+${PYSITELIB}/Crypto/Cipher/ChaCha20_Poly1305.py
+${PYSITELIB}/Crypto/Cipher/ChaCha20_Poly1305.pyc
+${PYSITELIB}/Crypto/Cipher/ChaCha20_Poly1305.pyo
 ${PYSITELIB}/Crypto/Cipher/DES.py
 ${PYSITELIB}/Crypto/Cipher/DES.pyc
 ${PYSITELIB}/Crypto/Cipher/DES.pyo
@@ -110,6 +113,9 @@ ${PYSITELIB}/Crypto/Hash/MD4.pyo
 ${PYSITELIB}/Crypto/Hash/MD5.py
 ${PYSITELIB}/Crypto/Hash/MD5.pyc
 ${PYSITELIB}/Crypto/Hash/MD5.pyo
+${PYSITELIB}/Crypto/Hash/Poly1305.py
+${PYSITELIB}/Crypto/Hash/Poly1305.pyc
+${PYSITELIB}/Crypto/Hash/Poly1305.pyo
 ${PYSITELIB}/Crypto/Hash/RIPEMD.py
 ${PYSITELIB}/Crypto/Hash/RIPEMD.pyc
 ${PYSITELIB}/Crypto/Hash/RIPEMD.pyo
@@ -169,6 +175,7 @@ ${PYSITELIB}/Crypto/Hash/__init__.pyo
 ${PYSITELIB}/Crypto/Hash/_ghash_clmul.so
 ${PYSITELIB}/Crypto/Hash/_ghash_portable.so
 ${PYSITELIB}/Crypto/Hash/_keccak.so
+${PYSITELIB}/Crypto/Hash/_poly1305.so
 ${PYSITELIB}/Crypto/Hash/keccak.py
 ${PYSITELIB}/Crypto/Hash/keccak.pyc
 ${PYSITELIB}/Crypto/Hash/keccak.pyo
@@ -270,6 +277,9 @@ ${PYSITELIB}/Crypto/SelfTest/Cipher/test_CTR.pyo
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_ChaCha20.py
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_ChaCha20.pyc
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_ChaCha20.pyo
+${PYSITELIB}/Crypto/SelfTest/Cipher/test_ChaCha20_Poly1305.py
+${PYSITELIB}/Crypto/SelfTest/Cipher/test_ChaCha20_Poly1305.pyc
+${PYSITELIB}/Crypto/SelfTest/Cipher/test_ChaCha20_Poly1305.pyo
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_DES.py
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_DES.pyc
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_DES.pyo
@@ -410,6 +420,7 @@ ${PYSITELIB}/Crypto/SelfTest/Cipher/test_vectors/TDES/TOFBvartext.rsp
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_vectors/wycheproof/aes_eax_test.json
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_vectors/wycheproof/aes_gcm_test.json
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_vectors/wycheproof/aes_siv_cmac_test.json
+${PYSITELIB}/Crypto/SelfTest/Cipher/test_vectors/wycheproof/chacha20_poly1305_test.json
 ${PYSITELIB}/Crypto/SelfTest/Hash/__init__.py
 ${PYSITELIB}/Crypto/SelfTest/Hash/__init__.pyc
 ${PYSITELIB}/Crypto/SelfTest/Hash/__init__.pyo
@@ -434,6 +445,9 @@ ${PYSITELIB}/Crypto/SelfTest/Hash/test_MD4.pyo
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_MD5.py
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_MD5.pyc
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_MD5.pyo
+${PYSITELIB}/Crypto/SelfTest/Hash/test_Poly1305.py
+${PYSITELIB}/Crypto/SelfTest/Hash/test_Poly1305.pyc
+${PYSITELIB}/Crypto/SelfTest/Hash/test_Poly1305.pyo
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_RIPEMD160.py
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_RIPEMD160.pyc
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_RIPEMD160.pyo
