@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.196 2018/10/28 22:22:19 abs Exp $
+# $NetBSD: gcc.mk,v 1.197 2018/10/29 11:53:18 abs Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -143,7 +143,7 @@ _GCC6_PATTERNS= 6 6.*
 _GCC7_PATTERNS= 7 7.*
 
 # _GCC8_PATTERNS matches N s.t. 8.0 <= N < 9.
-_GCC8_PATTERNS= 8.*
+_GCC8_PATTERNS= 8 8.*
 
 # _GCC_AUX_PATTERNS matches 8-digit date YYYYMMDD*
 _GCC_AUX_PATTERNS= 20[1-2][0-9][0-1][0-9][0-3][0-9]*
