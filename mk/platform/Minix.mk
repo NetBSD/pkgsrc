@@ -1,4 +1,4 @@
-# $NetBSD: Minix.mk,v 1.6 2016/03/10 16:58:19 jperkin Exp $
+# $NetBSD: Minix.mk,v 1.7 2018/10/29 10:53:31 sevan Exp $
 #
 # Variable definitions for the Minix operating system.
 
@@ -16,7 +16,7 @@ DEF_UMASK?=		022
 DEFAULT_SERIAL_DEVICE?=	/dev/null
 EXPORT_SYMBOLS_LDFLAGS?=	# Don't add symbols to the dynamic symbol table
 GROUPADD?=		/usr/sbin/groupadd
-NOLOGIN?=		/bin/false
+NOLOGIN?=		/usr/bin/false
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 ROOT_CMD?=		${SU} - root -c
 ROOT_GROUP?=	operator
