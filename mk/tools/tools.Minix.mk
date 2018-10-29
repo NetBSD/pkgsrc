@@ -1,4 +1,4 @@
-# $NetBSD: tools.Minix.mk,v 1.5 2018/10/28 17:17:40 sevan Exp $
+# $NetBSD: tools.Minix.mk,v 1.6 2018/10/29 10:31:05 sevan Exp $
 #
 # System-supplied tools for the Minix operating system.
 
@@ -12,7 +12,7 @@ TOOLS_PLATFORM.bzip2?=		/usr/bin/bzip2
 TOOLS_PLATFORM.cat?=		/bin/cat
 TOOLS_PLATFORM.chgrp?=		/usr/bin/chgrp
 TOOLS_PLATFORM.chmod?=		/bin/chmod
-TOOLS_PLATFORM.chown?=		/usr/bin/chown
+TOOLS_PLATFORM.chown?=		/sbin/chown
 TOOLS_PLATFORM.cmp?=		/usr/bin/cmp
 TOOLS_PLATFORM.cp?=		/bin/cp 
 TOOLS_PLATFORM.cut?=		/usr/bin/cut
