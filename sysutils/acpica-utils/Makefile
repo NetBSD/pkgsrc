@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/10/27 21:44:53 abs Exp $
+# $NetBSD: Makefile,v 1.12 2018/10/29 14:42:08 abs Exp $
 #
 
 DISTNAME=	acpica-unix2-20160930
@@ -54,7 +54,7 @@ do-test:
 
 .include "../../mk/compiler.mk"
 
-.if !empty(CC_VERSION:Mgcc-8*)
+.if !empty(CC_VERSION:Mgcc-[89]*)
 CFLAGS+=	-Wno-error=format-truncation
 .endif
 
