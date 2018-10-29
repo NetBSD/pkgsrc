@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q3,v 1.1.2.10 2018/10/29 19:07:56 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q3,v 1.1.2.11 2018/10/29 20:24:08 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q3 branch:
 
@@ -80,4 +80,27 @@ time/py-tzdata: timezone data update
 
 Pullup ticket #5869 - requested by maya
 www/firefox60: security fix, build fix
+
+Pullup ticket #5857 - requested by taca
+databases/mysql57-client: build fix
+
+Pullup ticket #5858 - requested by taca
+databases/mysql56-client: build fix
+
+Pullup ticket #5859 - requested by taca
+lang/php: security update
+lang/php71: security update
+
+Pullup ticket #5860 - requested by taca
+lang/php: security update
+lang/php72: security update
+
+Pullup ticket #5863 - requested by taca
+www/drupal7: security update
+
+Pullup ticket #5864 - requested by taca
+www/drupal8: security update
+
+Pullup ticket #5871 - requested by bsiegert
+textproc/uriparser: security update
 
