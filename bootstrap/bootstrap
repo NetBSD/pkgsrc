@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.254 2018/10/29 15:16:32 triaxx Exp $
+# $NetBSD: bootstrap,v 1.255 2018/10/29 17:41:35 triaxx Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -719,9 +719,9 @@ Linux)
 		need_sed=no
 	fi
   # Arch does not provide pax anymore
-  if [ -f /etc/arch-release ]; then
-    need_pax=yes
-  fi
+	if [ -f /etc/arch-release ]; then
+		need_pax=yes
+	fi
 	set_opsys=no
 	machine_arch=`uname -m`
 	# Override machine_arch where required.
