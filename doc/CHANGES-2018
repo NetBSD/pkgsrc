@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4521 2018/10/29 08:25:26 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4522 2018/10/29 11:12:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6298,3 +6298,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/firefox60-l10n to 60.3.0 [maya 2018-10-29]
 	Updated devel/py-hypothesis to 3.81.0 [adam 2018-10-29]
 	Updated devel/py-test to 3.9.3 [adam 2018-10-29]
+	Updated security/py-cryptodome to 3.7.0 [adam 2018-10-29]
+	Updated time/py-dateutil to 2.7.5 [adam 2018-10-29]
+	Updated time/py-tzdata to 2018.7 [adam 2018-10-29]
