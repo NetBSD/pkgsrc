@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/08/22 09:43:03 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2018/10/29 17:36:57 jperkin Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
@@ -132,6 +132,10 @@ PLIST.mgcp=	yes
 .    endif
 .  endif
 .endfor
+
+.if ${OPSYS} == "SunOS"
+PLIST.mgcp=	yes
+.endif
 
 PLIST_VARS+=	unbound
 .if exists(/usr/include/unbound.h)
@@ -297,4 +301,5 @@ post-install:
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
