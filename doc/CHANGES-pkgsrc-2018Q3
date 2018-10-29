@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q3,v 1.1.2.8 2018/10/26 17:55:37 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q3,v 1.1.2.9 2018/10/29 17:46:57 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q3 branch:
 
@@ -51,4 +51,16 @@ graphics/tiff: security patch
 Pullup ticket #5854 - requested by maya
 www/seamonkey: security update
 www/seamonkey-l10n: security update
+
+Pullup ticket #5861 - requested by taca
+lang/ruby: security update
+lang/ruby24-base: security update
+
+Pullup ticket #5862 - requested by taca
+lang/ruby: security update
+lang/ruby23-base: security update
+
+Pullup ticket #5865 - requested by taca
+lang/ruby: security update
+lang/ruby25-base: security update
 
