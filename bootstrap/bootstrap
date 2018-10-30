@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.255 2018/10/29 17:41:35 triaxx Exp $
+# $NetBSD: bootstrap,v 1.256 2018/10/30 15:22:53 sevan Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -732,7 +732,7 @@ Linux)
 	;;
 Minix)
 	root_group=operator
-	need_bsd_install=yes
+	need_bsd_install=no
 	need_awk=no
 	need_sed=no
 	set_opsys=no
