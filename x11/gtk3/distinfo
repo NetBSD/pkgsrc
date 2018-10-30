@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.58 2018/10/29 21:35:17 leot Exp $
+$NetBSD: distinfo,v 1.59 2018/10/30 17:49:37 leot Exp $
 
 SHA1 (gtk+-3.24.1.tar.xz) = 0a5ce28ba6065a484308093bdb56ff6056b0db3c
 RMD160 (gtk+-3.24.1.tar.xz) = f1e26685ff6a267ad0a81e0f8dd06112b6a5a5b8
@@ -12,4 +12,4 @@ SHA1 (patch-gdk_x11_gdkscreen-x11.h) = 455d6c3de8421984ba3c99baf51cd31982a3df78
 SHA1 (patch-gdk_x11_gdkwindow-x11.h) = c80f7c9d5a570817e54fd74fa903a53400dc6f64
 SHA1 (patch-gtk_a11y_gtkaccessibility.c) = 13232c85bd570f21ea03153dacde4ca98c7c76a8
 SHA1 (patch-gtk_fallback-c89.c) = eaf5ac8aace9eab673eed0e265d4cb2617bf1fcd
-SHA1 (patch-gtk_gtkfontchooserwidget.c) = 6ede4fce683b70808c5d611dfb53312bf092665d
+SHA1 (patch-gtk_gtkfontchooserwidget.c) = 5ca98e5417865d8c60333c8c2b2ba757755ef547
