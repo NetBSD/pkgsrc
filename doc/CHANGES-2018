@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4527 2018/10/30 02:48:24 manu Exp $
+$NetBSD: CHANGES-2018,v 1.4528 2018/10/30 10:15:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6306,3 +6306,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-setuptools to 40.5.0 [adam 2018-10-29]
 	Updated lang/rust to 1.30.0 [he 2018-10-29]
 	Updated net/nagios-plugin-syncrepl to 0.5 [manu 2018-10-30]
+	Updated time/py-pytz to 2018.7 [adam 2018-10-30]
+	Updated devel/py-py to 1.7.0 [adam 2018-10-30]
+	Updated devel/py-test-xdist to 1.24.0 [adam 2018-10-30]
