@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/03/09 23:47:47 manu Exp $
+# $NetBSD: Makefile,v 1.4 2018/10/30 02:48:24 manu Exp $
 #
 
 PKGNAME=	nagios-plugin-syncrepl-${DISTNAME:C/.*-//}
-DISTNAME=	check_syncrepl-0.2
+DISTNAME=	check_syncrepl-0.5
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.espci.fr/pub/nagios-local/
 EXTRACT_SUFX=	.tgz
