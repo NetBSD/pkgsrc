@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2018/10/26 09:11:54 adam Exp $
+# $NetBSD: Makefile,v 1.12 2018/10/30 09:48:29 hauke Exp $
 
 DISTNAME=	bleach-3.0.2
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bleach/}
@@ -16,6 +17,8 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner>=2.0:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.0.0:../../devel/py-test
 
 USE_LANGUAGES=	# none
+
+REPLACE_SH+=	bleach/_vendor/pip_install_vendor.sh
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
