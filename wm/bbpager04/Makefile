@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.9 2017/08/01 16:47:45 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.10 2018/10/30 10:19:12 bsiegert Exp $
 
-DISTNAME=	bbpager-0.4.1beta1
-PKGNAME=	bbpager04-0.4.1.1
+DISTNAME=	bbpager-0.4.7
+PKGNAME=	bbpager04-0.4.7
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bbtools/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://bbtools.windsofstorm.net/available.phtml
 COMMENT=	Pager for the blackbox window manager
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
