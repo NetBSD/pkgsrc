@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4526 2018/10/29 22:46:45 he Exp $
+$NetBSD: CHANGES-2018,v 1.4527 2018/10/30 02:48:24 manu Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6305,3 +6305,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/uriparser to 0.9.0 [bsiegert 2018-10-29]
 	Updated devel/py-setuptools to 40.5.0 [adam 2018-10-29]
 	Updated lang/rust to 1.30.0 [he 2018-10-29]
+	Updated net/nagios-plugin-syncrepl to 0.5 [manu 2018-10-30]
