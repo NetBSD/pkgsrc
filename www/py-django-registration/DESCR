@@ -1,4 +1,4 @@
-django-registratio is a simple application which provides flexible
+django-registration is a simple application which provides flexible
 user registration for Django-based projects. The default setup
 implements a fairly common workflow:
 
