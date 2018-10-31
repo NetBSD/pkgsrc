@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4546 2018/10/31 14:07:41 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4547 2018/10/31 18:40:51 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6330,3 +6330,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-File-ChangeNotify to 0.29 [wen 2018-10-31]
 	Updated math/py-numpy to 1.15.3 [adam 2018-10-31]
 	Updated devel/py-tox to 3.5.3 [adam 2018-10-31]
+	Updated emulators/libretro-fbalpha to 0.2.97.43.20181022 [nia 2018-10-31]
