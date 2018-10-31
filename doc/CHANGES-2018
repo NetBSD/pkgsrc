@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4535 2018/10/31 11:54:12 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4536 2018/10/31 11:57:09 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6318,3 +6318,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-future to 0.17.1 [adam 2018-10-31]
 	Updated databases/p5-DBD-CSV to 0.54 [wen 2018-10-31]
 	Updated databases/p5-DBI to 1.642 [wen 2018-10-31]
+	Updated devel/p5-Clone to 0.41 [wen 2018-10-31]
