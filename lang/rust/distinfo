@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.44 2018/10/31 15:53:17 jperkin Exp $
+$NetBSD: distinfo,v 1.45 2018/10/31 16:30:44 martin Exp $
 
 SHA1 (rust-1.29.1-i686-unknown-netbsd.tar.gz) = f4f8cbd0a2581546680328765bf5d7d351cf0643
 RMD160 (rust-1.29.1-i686-unknown-netbsd.tar.gz) = a590d8dfed10220e8013796cd66c5c9eed51bf37
@@ -100,6 +100,7 @@ SHA1 (patch-src_bootstrap_bin_rustc.rs) = 0abf893090a6053e01fd658096d9a2b5b8c144
 SHA1 (patch-src_bootstrap_bootstrap.py) = 96ef9368eaa5e10e607ff031d50ed05f3a915775
 SHA1 (patch-src_bootstrap_lib.rs) = d86e173b931099730a4f18d044d7977c89f87b91
 SHA1 (patch-src_libbacktrace_configure) = b2c1e9b93a99408aad42ab9f1af27704cc81bdd8
+SHA1 (patch-src_liblibc_src_unix_bsd_netbsdlike_netbsd_mod.rs) = e5b564bb247094cc8e4e6935a02262b3385cb7e6
 SHA1 (patch-src_liblibc_src_unix_solaris_mod.rs) = aeb7c22995e33c700ce3ea4336368a1fd08120e1
 SHA1 (patch-src_libstd_build.rs) = 1edbf87339bd88e3178d4fa2fc408a6e802ed488
 SHA1 (patch-src_libstd_sys_unix_thread.rs) = 46ef46365658e2f895bd3dde9c74f352890e9ccc
