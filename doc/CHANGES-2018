@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4532 2018/10/31 08:35:45 leot Exp $
+$NetBSD: CHANGES-2018,v 1.4533 2018/10/31 10:55:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6314,3 +6314,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/getmail to 5.7 [schmonz 2018-10-30]
 	Updated www/curl to 7.62.0 [leot 2018-10-31]
 	Updated net/hub to 2.6.0 [leot 2018-10-31]
+	Updated devel/py-uvloop to 0.11.3 [adam 2018-10-31]
+	Updated devel/py-future to 0.17.1 [adam 2018-10-31]
