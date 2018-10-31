@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4547 2018/10/31 18:40:51 nia Exp $
+$NetBSD: CHANGES-2018,v 1.4548 2018/10/31 20:16:52 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6331,3 +6331,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/py-numpy to 1.15.3 [adam 2018-10-31]
 	Updated devel/py-tox to 3.5.3 [adam 2018-10-31]
 	Updated emulators/libretro-fbalpha to 0.2.97.43.20181022 [nia 2018-10-31]
+	Added biology/py-pydicom version 1.2.0 [leot 2018-10-31]
