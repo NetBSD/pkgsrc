@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.43 2018/10/29 22:24:11 he Exp $
+$NetBSD: distinfo,v 1.44 2018/10/31 15:53:17 jperkin Exp $
 
 SHA1 (rust-1.29.1-i686-unknown-netbsd.tar.gz) = f4f8cbd0a2581546680328765bf5d7d351cf0643
 RMD160 (rust-1.29.1-i686-unknown-netbsd.tar.gz) = a590d8dfed10220e8013796cd66c5c9eed51bf37
@@ -110,3 +110,4 @@ SHA1 (patch-src_llvm_include_llvm-c_DataTypes.h) = 432693204912e79059ee31e815ad1
 SHA1 (patch-src_llvm_include_llvm_Analysis_ConstantFolding.h) = 861089ea7ec8985b9b9fce53ffadfa3e9eed4a72
 SHA1 (patch-src_tools_cargo_src_cargo_core_profiles.rs) = 17e19ccaf29e5d2e6a42c5e59837169ebbc7c58e
 SHA1 (patch-src_tools_cargo_tests_testsuite_build.rs) = 10c0f9cc2f2c4fdc651fc123ef5d84cadf93feb5
+SHA1 (patch-src_vendor_rand_src_rngs_os.rs) = 318c9e0ed77f83bb34f5512638545ff16844e8fd
