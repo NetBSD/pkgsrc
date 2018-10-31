@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2018/10/29 22:24:11 he Exp $
+# $NetBSD: Makefile,v 1.64 2018/10/31 15:53:17 jperkin Exp $
 
 DISTNAME=	rustc-1.30.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -89,6 +89,8 @@ CONFIGURE_ARGS+=	--enable-vendor
 
 # cargo defaults to using the number of available CPUs
 MAKE_ENV+=		CARGO_BUILD_JOBS=${MAKE_JOBS:U1}
+
+CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 
 UNLIMIT_RESOURCES+=	cputime
 
@@ -269,8 +271,13 @@ post-extract:
 	cat ${WRKSRC}/src/vendor/libc/.cargo-checksum.json | \
 		${SED} -e 's/9c6af198a2f80da827054784faf70bc404673d9568fb45664b4f73c46245fdbd/c3851969a854d6ccaa8a94369f1288025149d1ebdc74b36f224423f35b18f7a7/' > \
 		${WRKSRC}/src/vendor/libc/.cargo-checksum.json.patched
+	cat ${WRKSRC}/src/vendor/rand/.cargo-checksum.json | \
+		${SED} -e 's/cb94a0b54e47022b2e9b58b45e0196785c61d083760333276226da435cc040d9/bcb195562cf830c9e2078757e6d0976f86ede59816ff305e21a2764a4a4cf43e/' > \
+		${WRKSRC}/src/vendor/rand/.cargo-checksum.json.patched
 	${CP} -f ${WRKSRC}/src/vendor/libc/.cargo-checksum.json.patched \
 		${WRKSRC}/src/vendor/libc/.cargo-checksum.json
+	${CP} -f ${WRKSRC}/src/vendor/rand/.cargo-checksum.json.patched \
+		${WRKSRC}/src/vendor/rand/.cargo-checksum.json
 .if ${OPSYS} == "NetBSD"
 	SDIR=${WRKDIR}/scripts; \
 	${MKDIR} $${SDIR}; \
@@ -302,7 +309,7 @@ pre-build: pre-build-fix
 do-build:
 	cd ${WRKSRC} \
 	&& env ${MAKE_ENV} \
-		${PYTHONBIN} ./x.py -v dist
+		${PYTHONBIN} ./x.py -v dist -j ${MAKE_JOBS:U1}
 
 do-install:
 	cd ${WRKSRC} \
