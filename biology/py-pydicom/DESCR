@@ -1,0 +1,6 @@
+Pydicom is a pure Python package for working with DICOM files such as medical
+images, reports, and radiotherapy objects.
+
+Pydicom makes it easy to read these complex files into natural pythonic
+structures for easy manipulation. Modified datasets can be written again to
+DICOM format files.
