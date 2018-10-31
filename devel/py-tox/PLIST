@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/10/10 09:59:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/10/31 14:07:19 adam Exp $
 bin/tox-${PYVERSSUFFIX}
 bin/tox-quickstart-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -37,9 +37,21 @@ ${PYSITELIB}/tox/hookspecs.pyo
 ${PYSITELIB}/tox/interpreters.py
 ${PYSITELIB}/tox/interpreters.pyc
 ${PYSITELIB}/tox/interpreters.pyo
-${PYSITELIB}/tox/package.py
-${PYSITELIB}/tox/package.pyc
-${PYSITELIB}/tox/package.pyo
+${PYSITELIB}/tox/package/__init__.py
+${PYSITELIB}/tox/package/__init__.pyc
+${PYSITELIB}/tox/package/__init__.pyo
+${PYSITELIB}/tox/package/builder/__init__.py
+${PYSITELIB}/tox/package/builder/__init__.pyc
+${PYSITELIB}/tox/package/builder/__init__.pyo
+${PYSITELIB}/tox/package/builder/isolated.py
+${PYSITELIB}/tox/package/builder/isolated.pyc
+${PYSITELIB}/tox/package/builder/isolated.pyo
+${PYSITELIB}/tox/package/builder/legacy.py
+${PYSITELIB}/tox/package/builder/legacy.pyc
+${PYSITELIB}/tox/package/builder/legacy.pyo
+${PYSITELIB}/tox/package/view.py
+${PYSITELIB}/tox/package/view.pyc
+${PYSITELIB}/tox/package/view.pyo
 ${PYSITELIB}/tox/result.py
 ${PYSITELIB}/tox/result.pyc
 ${PYSITELIB}/tox/result.pyo
