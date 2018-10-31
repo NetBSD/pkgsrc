@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.70 2018/07/11 18:13:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.71 2018/10/31 08:06:24 leot Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -9,6 +9,7 @@ include/curl/multi.h
 include/curl/stdcheaders.h
 include/curl/system.h
 include/curl/typecheck-gcc.h
+include/curl/urlapi.h
 lib/libcurl.la
 lib/pkgconfig/libcurl.pc
 man/man1/curl-config.1
@@ -134,6 +135,7 @@ man/man3/CURLOPT_DNS_LOCAL_IP6.3
 man/man3/CURLOPT_DNS_SERVERS.3
 man/man3/CURLOPT_DNS_SHUFFLE_ADDRESSES.3
 man/man3/CURLOPT_DNS_USE_GLOBAL_CACHE.3
+man/man3/CURLOPT_DOH_URL.3
 man/man3/CURLOPT_EGDSOCKET.3
 man/man3/CURLOPT_ERRORBUFFER.3
 man/man3/CURLOPT_EXPECT_100_TIMEOUT_MS.3
@@ -337,7 +339,9 @@ man/man3/CURLOPT_TRANSFERTEXT.3
 man/man3/CURLOPT_TRANSFER_ENCODING.3
 man/man3/CURLOPT_UNIX_SOCKET_PATH.3
 man/man3/CURLOPT_UNRESTRICTED_AUTH.3
+man/man3/CURLOPT_UPKEEP_INTERVAL_MS.3
 man/man3/CURLOPT_UPLOAD.3
+man/man3/CURLOPT_UPLOAD_BUFFERSIZE.3
 man/man3/CURLOPT_URL.3
 man/man3/CURLOPT_USERAGENT.3
 man/man3/CURLOPT_USERNAME.3
@@ -363,6 +367,7 @@ man/man3/curl_easy_send.3
 man/man3/curl_easy_setopt.3
 man/man3/curl_easy_strerror.3
 man/man3/curl_easy_unescape.3
+man/man3/curl_easy_upkeep.3
 man/man3/curl_escape.3
 man/man3/curl_formadd.3
 man/man3/curl_formfree.3
@@ -411,6 +416,11 @@ man/man3/curl_slist_free_all.3
 man/man3/curl_strequal.3
 man/man3/curl_strnequal.3
 man/man3/curl_unescape.3
+man/man3/curl_url.3
+man/man3/curl_url_cleanup.3
+man/man3/curl_url_dup.3
+man/man3/curl_url_get.3
+man/man3/curl_url_set.3
 man/man3/curl_version.3
 man/man3/curl_version_info.3
 man/man3/libcurl-easy.3
@@ -422,6 +432,7 @@ man/man3/libcurl-share.3
 man/man3/libcurl-symbols.3
 man/man3/libcurl-thread.3
 man/man3/libcurl-tutorial.3
+man/man3/libcurl-url.3
 man/man3/libcurl.3
 share/aclocal/libcurl.m4
 share/doc/curl/FAQ
