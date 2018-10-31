@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4533 2018/10/31 10:55:14 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4534 2018/10/31 11:46:08 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6316,3 +6316,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/hub to 2.6.0 [leot 2018-10-31]
 	Updated devel/py-uvloop to 0.11.3 [adam 2018-10-31]
 	Updated devel/py-future to 0.17.1 [adam 2018-10-31]
+	Updated databases/p5-DBD-CSV to 0.54 [wen 2018-10-31]
