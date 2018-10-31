@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/09/16 04:47:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2018/10/31 11:37:35 jperkin Exp $
 
 DISTNAME=	mintbin-CVS-20110527
 PKGNAME=	cross-freemint-${DISTNAME:S/CVS-//}
@@ -23,6 +23,9 @@ GNU_CONFIGURE_PREFIX=	${FREEMINT_PREFIX}
 
 CONFIGURE_ARGS+=	--target=m68k-atari-mint
 INFO_FILES=		yes
+
+# Used in macro tests but never actually set anywhere
+CPPFLAGS+=		-DHAVE_STRERROR=1
 
 INSTALLATION_DIRS+=	bin ${FREEMINT_PREFIX}
 
