@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/10/31 20:15:40 leot Exp $
+
+SHA1 (pydicom-1.2.0.tar.gz) = dcc41a56d25322ba9326ed7431ee80c1125dd997
+RMD160 (pydicom-1.2.0.tar.gz) = 1ef6d7f68d5944c227cd80a8db38242630573fbc
+SHA512 (pydicom-1.2.0.tar.gz) = 8e5cf899509a9928b641e4db95f7731928823933d24b36daa6cb92fe27fd0d536bb7e32340559917a6ee98339582d06a3936b8e63bb2fa97d9c98b91c383fd88
+Size (pydicom-1.2.0.tar.gz) = 7041217 bytes
