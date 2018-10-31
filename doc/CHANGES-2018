@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4531 2018/10/31 08:07:00 leot Exp $
+$NetBSD: CHANGES-2018,v 1.4532 2018/10/31 08:35:45 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6313,3 +6313,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ccache to 3.5 [adam 2018-10-30]
 	Updated mail/getmail to 5.7 [schmonz 2018-10-30]
 	Updated www/curl to 7.62.0 [leot 2018-10-31]
+	Updated net/hub to 2.6.0 [leot 2018-10-31]
