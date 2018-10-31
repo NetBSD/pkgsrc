@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2017/12/19 09:42:48 markd Exp $
+$NetBSD: distinfo,v 1.5 2018/10/31 12:11:02 jperkin Exp $
 
 SHA1 (texstudio-2.12.6.tar.gz) = 9a68dc26c14ea5b5c413ab5dfa02653e5b8a2557
 RMD160 (texstudio-2.12.6.tar.gz) = d184a71590c87610b4a8fb5540dd05f4d47b7df7
 SHA512 (texstudio-2.12.6.tar.gz) = 674667ce4137bfd30fc85e242c4ab891b3b6517cbdd2b6465fd4117ce2128e9854907cb52d42d5e4d60e8c5b38738eac95dbd140e5db67a21561ba6c617d80fb
 Size (texstudio-2.12.6.tar.gz) = 26578309 bytes
+SHA1 (patch-pdfviewer_PDFDocument.cpp) = 93cd5faa1bfade9d8eb50b62975aa0d76f8a417d
