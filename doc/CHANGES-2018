@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4539 2018/10/31 12:14:36 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4540 2018/10/31 12:17:43 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6309,6 +6309,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/py-pytz to 2018.7 [adam 2018-10-30]
 	Updated devel/py-py to 1.7.0 [adam 2018-10-30]
 	Updated devel/py-test-xdist to 1.24.0 [adam 2018-10-30]
+	Updated wm/bbpager04 to 0.4.7 [bsiegert 2018-10-30]
 	Updated devel/memcached to 1.5.11 [adam 2018-10-30]
 	Updated devel/ccache to 3.5 [adam 2018-10-30]
 	Updated mail/getmail to 5.7 [schmonz 2018-10-30]
