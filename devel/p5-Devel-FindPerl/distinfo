@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:28:09 agc Exp $
+$NetBSD: distinfo,v 1.5 2018/10/31 12:17:06 wen Exp $
 
-SHA1 (Devel-FindPerl-0.014.tar.gz) = d43038323702219058ed4d05d1f6e111c8745d85
-RMD160 (Devel-FindPerl-0.014.tar.gz) = bddd304b4bc4e405f7bec8e997edcd38b49ffaf9
-SHA512 (Devel-FindPerl-0.014.tar.gz) = 958044c628ce1d004031f753673ec7cd066bb70387b2ecef6e91dcdb050a1aac0b036b7a78c38f731ec22d8fcf109f9421f640b4e008a44ff9de382cff944cea
-Size (Devel-FindPerl-0.014.tar.gz) = 13815 bytes
+SHA1 (Devel-FindPerl-0.015.tar.gz) = e896d251a73ba2aceed29ab109e146ef09cabbc4
+RMD160 (Devel-FindPerl-0.015.tar.gz) = b5765e4df007a8435c2be6ff40e49f15a0142799
+SHA512 (Devel-FindPerl-0.015.tar.gz) = e6165e9db47eaf966a542822d84a14c4de0a7f6f60630f31873cd96eb71bbe2d9e2a52f52726d2ea98349d36fc1772ce850ba2a375c343eee7af5dd9cec74253
+Size (Devel-FindPerl-0.015.tar.gz) = 13882 bytes
