@@ -1,14 +1,24 @@
-$NetBSD: patch-configure,v 1.2 2016/05/05 11:12:14 wiz Exp $
+$NetBSD: patch-configure,v 1.3 2018/11/01 21:10:22 adam Exp $
 
 Add frameworks required to link under OS X.
+Use absolute paths for dlopen(); don't expect users set LD_LIBRARY_PATH.
 
---- configure.orig	2016-01-03 05:52:28.000000000 +0000
+--- configure.orig	2018-10-31 14:59:01.000000000 +0000
 +++ configure
-@@ -12024,6 +12024,7 @@ fi
- 
+@@ -12198,6 +12198,7 @@ $as_echo_n "checking for ImageIO support
+ $as_echo "$enable_imageio" >&6; }
          if test x$enable_imageio = xyes; then
              IMG_LIBS="-Wl,-framework,ApplicationServices -lobjc $IMG_LIBS"
 +            IMG_LIBS="-Wl,-framework,Cocoa -Wl,-framework,Carbon -Wl,-framework,IOKit -Wl,-framework,ForceFeedback $IMG_LIBS"
          else
              CFLAGS="$CFLAGS -DSDL_IMAGE_USE_COMMON_BACKEND"
          fi
+@@ -12233,7 +12234,7 @@ find_lib()
+         host_lib_path="/usr/$base_libdir /usr/local/$base_libdir"
+     fi
+     for path in $env_lib_path $gcc_bin_path $gcc_lib_path $host_lib_path; do
+-        lib=`ls -- $path/$1 2>/dev/null | sed -e '/\.so\..*\./d' -e 's,.*/,,' | sort | tail -1`
++        lib=`ls -- $path/$1 2>/dev/null | sed -e '/\.so\..*\./d' | sort | tail -1`
+         if test x$lib != x; then
+             echo $lib
+             return
