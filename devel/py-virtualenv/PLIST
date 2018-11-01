@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.33 2018/05/27 12:42:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.34 2018/11/01 18:09:52 adam Exp $
 bin/virtualenv-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/virtualenv.py
 ${PYSITELIB}/virtualenv.pyc
@@ -12,6 +13,6 @@ ${PYSITELIB}/virtualenv.pyo
 ${PYSITELIB}/virtualenv_support/__init__.py
 ${PYSITELIB}/virtualenv_support/__init__.pyc
 ${PYSITELIB}/virtualenv_support/__init__.pyo
-${PYSITELIB}/virtualenv_support/pip-10.0.1-py2.py3-none-any.whl
-${PYSITELIB}/virtualenv_support/setuptools-39.1.0-py2.py3-none-any.whl
-${PYSITELIB}/virtualenv_support/wheel-0.31.1-py2.py3-none-any.whl
+${PYSITELIB}/virtualenv_support/pip-18.1-py2.py3-none-any.whl
+${PYSITELIB}/virtualenv_support/setuptools-40.5.0-py2.py3-none-any.whl
+${PYSITELIB}/virtualenv_support/wheel-0.32.2-py2.py3-none-any.whl
