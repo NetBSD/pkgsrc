@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4557 2018/11/01 16:22:15 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4558 2018/11/01 18:12:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6365,3 +6365,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/mlterm to 3.8.7 [tsutsui 2018-11-01]
 	Updated www/ruby-loofah to 2.2.3 [taca 2018-11-01]
 	Updated databases/ruby-sequel to 5.14.0 [taca 2018-11-01]
+	Updated lang/py-asttokens to 1.1.12 [adam 2018-11-01]
+	Updated devel/py-virtualenv to 16.1.0 [adam 2018-11-01]
