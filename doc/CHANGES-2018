@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4549 2018/10/31 20:37:26 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.4550 2018/11/01 09:37:28 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6333,3 +6333,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated emulators/libretro-fbalpha to 0.2.97.43.20181022 [nia 2018-10-31]
 	Added biology/py-pydicom version 1.2.0 [leot 2018-10-31]
 	Updated mail/qgreylist to 0.3nb7 [schmonz 2018-10-31]
+	Added wm/icewm14 version 1.4.2 [bsiegert 2018-11-01]
+	Added textproc/enchant2 version 2.2.3 [bsiegert 2018-11-01]
