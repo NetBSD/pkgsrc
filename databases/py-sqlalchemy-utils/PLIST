@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/02/22 09:56:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/11/01 13:01:23 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -51,9 +51,6 @@ ${PYSITELIB}/sqlalchemy_utils/i18n.pyo
 ${PYSITELIB}/sqlalchemy_utils/listeners.py
 ${PYSITELIB}/sqlalchemy_utils/listeners.pyc
 ${PYSITELIB}/sqlalchemy_utils/listeners.pyo
-${PYSITELIB}/sqlalchemy_utils/materialized_view.py
-${PYSITELIB}/sqlalchemy_utils/materialized_view.pyc
-${PYSITELIB}/sqlalchemy_utils/materialized_view.pyo
 ${PYSITELIB}/sqlalchemy_utils/models.py
 ${PYSITELIB}/sqlalchemy_utils/models.pyc
 ${PYSITELIB}/sqlalchemy_utils/models.pyo
@@ -177,3 +174,6 @@ ${PYSITELIB}/sqlalchemy_utils/types/weekdays.pyo
 ${PYSITELIB}/sqlalchemy_utils/utils.py
 ${PYSITELIB}/sqlalchemy_utils/utils.pyc
 ${PYSITELIB}/sqlalchemy_utils/utils.pyo
+${PYSITELIB}/sqlalchemy_utils/view.py
+${PYSITELIB}/sqlalchemy_utils/view.pyc
+${PYSITELIB}/sqlalchemy_utils/view.pyo
