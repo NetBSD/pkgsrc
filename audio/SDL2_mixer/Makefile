@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2018/07/26 08:02:24 adam Exp $
+# $NetBSD: Makefile,v 1.8 2018/11/01 21:12:40 adam Exp $
 
-DISTNAME=	SDL2_mixer-2.0.2
+DISTNAME=	SDL2_mixer-2.0.4
 CATEGORIES=	audio devel
 MASTER_SITES=	http://www.libsdl.org/projects/SDL_mixer/release/
 
@@ -17,5 +17,10 @@ PKGCONFIG_OVERRIDE+=	SDL2_mixer.pc.in
 
 .include "options.mk"
 
+.include "../../audio/flac/buildlink3.mk"
+.include "../../audio/libmodplug/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
+.include "../../audio/mpg123/buildlink3.mk"
+.include "../../audio/opusfile/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
