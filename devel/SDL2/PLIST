@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/10/23 20:48:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/11/01 21:08:28 adam Exp $
 bin/sdl2-config
 include/SDL2/SDL.h
 include/SDL2/SDL_assert.h
@@ -45,6 +45,7 @@ include/SDL2/SDL_render.h
 include/SDL2/SDL_revision.h
 include/SDL2/SDL_rwops.h
 include/SDL2/SDL_scancode.h
+include/SDL2/SDL_sensor.h
 include/SDL2/SDL_shape.h
 include/SDL2/SDL_stdinc.h
 include/SDL2/SDL_surface.h
