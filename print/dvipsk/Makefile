@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2018/05/13 17:19:19 bsiegert Exp $
+# $NetBSD: Makefile,v 1.21 2018/11/01 10:55:57 markd Exp $
 
 DISTNAME=	texlive-20180414-source
 PKGNAME=	dvipsk-5.998
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2018/
 EXTRACT_SUFX=	.tar.xz
