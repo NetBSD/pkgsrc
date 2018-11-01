@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4552 2018/11/01 14:10:58 tsutsui Exp $
+$NetBSD: CHANGES-2018,v 1.4553 2018/11/01 14:27:19 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6339,3 +6339,25 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-sqlalchemy-utils to 0.33.6 [adam 2018-11-01]
 	Updated databases/py-alembic to 1.0.2 [adam 2018-11-01]
 	Updated graphics/ruby-cairo to 1.16.2 [tsutsui 2018-11-01]
+	Updated devel/ruby-gnome2-atk to 3.3.0 [tsutsui 2018-11-01]
+	Updated devel/ruby-gnome2-gio to 3.3.0 [tsutsui 2018-11-01]
+	Updated devel/ruby-gnome2-glib to 3.3.0 [tsutsui 2018-11-01]
+	Updated devel/ruby-gnome2-gobject-introspection to 3.3.0 [tsutsui 2018-11-01]
+	Updated devel/ruby-gnome2-pango to 3.3.0 [tsutsui 2018-11-01]
+	Updated graphics/ruby-gnome2-cairo-gobject to 3.3.0 [tsutsui 2018-11-01]
+	Updated graphics/ruby-gnome2-clutter to 3.3.0 [tsutsui 2018-11-01]
+	Updated graphics/ruby-gnome2-clutter-gdk to 3.3.0 [tsutsui 2018-11-01]
+	Updated graphics/ruby-gnome2-clutter-gtk to 3.3.0 [tsutsui 2018-11-01]
+	Updated graphics/ruby-gnome2-gdk3 to 3.3.0 [tsutsui 2018-11-01]
+	Updated graphics/ruby-gnome2-gdkpixbuf to 3.3.0 [tsutsui 2018-11-01]
+	Updated graphics/ruby-gnome2-rsvg to 3.3.0 [tsutsui 2018-11-01]
+	Updated multimedia/ruby-gnome2-clutter-gstreamer to 3.3.0 [tsutsui 2018-11-01]
+	Updated multimedia/ruby-gnome2-gstreamer to 3.3.0 [tsutsui 2018-11-01]
+	Updated print/ruby-gnome2-poppler to 3.3.0 [tsutsui 2018-11-01]
+	Updated www/ruby-gnome2-webkit-gtk to 3.3.0 [tsutsui 2018-11-01]
+	Updated www/ruby-gnome2-webkit-gtk2 to 3.3.0 [tsutsui 2018-11-01]
+	Updated x11/ruby-gnome2-gtk to 3.3.0 [tsutsui 2018-11-01]
+	Updated x11/ruby-gnome2-gtk3 to 3.3.0 [tsutsui 2018-11-01]
+	Updated x11/ruby-gnome2-gtksourceview2 to 3.3.0 [tsutsui 2018-11-01]
+	Updated x11/ruby-gnome2-gtksourceview3 to 3.3.0 [tsutsui 2018-11-01]
+	Updated x11/ruby-gnome2-vte to 3.3.0 [tsutsui 2018-11-01]
