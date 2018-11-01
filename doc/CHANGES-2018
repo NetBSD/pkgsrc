@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4551 2018/11/01 13:06:04 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4552 2018/11/01 14:10:58 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6338,3 +6338,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-sqlalchemy to 1.2.13 [adam 2018-11-01]
 	Updated databases/py-sqlalchemy-utils to 0.33.6 [adam 2018-11-01]
 	Updated databases/py-alembic to 1.0.2 [adam 2018-11-01]
+	Updated graphics/ruby-cairo to 1.16.2 [tsutsui 2018-11-01]
