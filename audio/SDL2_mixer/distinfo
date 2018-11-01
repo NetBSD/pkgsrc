@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2018/06/24 10:28:45 adam Exp $
+$NetBSD: distinfo,v 1.6 2018/11/01 21:12:40 adam Exp $
 
-SHA1 (SDL2_mixer-2.0.2.tar.gz) = 24af8db6e3e0e2a3f4af53fe08e891423d02f1d4
-RMD160 (SDL2_mixer-2.0.2.tar.gz) = f748e93033cf5e2fb9fbd8bed86459a7b4d40c76
-SHA512 (SDL2_mixer-2.0.2.tar.gz) = c40b5ac93933df1cc932e7afe796ad6765aafb24077601a23f98ac625a83341079ad903c164eafd022aff6011872e7a7956eebd8e3d3edad1bf5dc7eb9c306b7
-Size (SDL2_mixer-2.0.2.tar.gz) = 9620763 bytes
+SHA1 (SDL2_mixer-2.0.4.tar.gz) = 242a63b1c7f38e358e94b1e0dc5120a6c1f3763b
+RMD160 (SDL2_mixer-2.0.4.tar.gz) = d5674a92bc9a81e3aba0072c4d7e2314e56958d6
+SHA512 (SDL2_mixer-2.0.4.tar.gz) = 98c56069640668aaececa63748de21fc8f243c7d06386c45c43d0ee472bbb2595ccda644d9886ce5b95c3a3dee3c0a96903cf9a89ddc18d38f041133470699a3
+Size (SDL2_mixer-2.0.4.tar.gz) = 11125077 bytes
+SHA1 (patch-configure) = 1666d97f82c5f3dca03eb45dad6b9e73dc61dffd
