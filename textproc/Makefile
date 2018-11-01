@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1007 2018/10/26 20:43:07 bsiegert Exp $
+# $NetBSD: Makefile,v 1.1008 2018/11/01 09:36:47 bsiegert Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -180,6 +180,7 @@ SUBDIR+=	emacs-dict-client
 SUBDIR+=	emacs-muse
 SUBDIR+=	enca
 SUBDIR+=	enchant
+SUBDIR+=	enchant2
 SUBDIR+=	epubcheck
 SUBDIR+=	epubpreflight
 SUBDIR+=	erlang-fast_xml
