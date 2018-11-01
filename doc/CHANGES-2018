@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4555 2018/11/01 15:11:26 tsutsui Exp $
+$NetBSD: CHANGES-2018,v 1.4556 2018/11/01 16:12:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6363,3 +6363,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/ruby-gnome2-vte to 3.3.0 [tsutsui 2018-11-01]
 	Updated textproc/ruby-nokogiri to 1.8.5 [tsutsui 2018-11-01]
 	Updated x11/mlterm to 3.8.7 [tsutsui 2018-11-01]
+	Updated www/ruby-loofah to 2.2.3 [taca 2018-11-01]
