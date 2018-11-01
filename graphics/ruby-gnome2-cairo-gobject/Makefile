@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/04/13 16:31:09 tsutsui Exp $
+# $NetBSD: Makefile,v 1.16 2018/11/01 14:22:59 tsutsui Exp $
 #
 
 DISTNAME=		cairo-gobject-${VERSION}
@@ -9,7 +9,7 @@ CATEGORIES=		graphics gnome
 MAINTAINER=		tsutsui@NetBSD.org
 
 DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-glib>=${VERSION}:../../devel/ruby-gnome2-glib
-DEPENDS+=		${RUBY_PKGPREFIX}-cairo>=1.14.3:../../graphics/ruby-cairo
+DEPENDS+=		${RUBY_PKGPREFIX}-cairo>=1.16.1:../../graphics/ruby-cairo
 
 .include "../../devel/ruby-gnome2-glib/buildlink3.mk"
 .include "../../graphics/ruby-cairo/buildlink3.mk"
