@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4559 2018/11/01 21:13:27 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4560 2018/11/01 23:58:16 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6370,3 +6370,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/SDL2 to 2.0.9 [adam 2018-11-01]
 	Updated graphics/SDL2_image to 2.0.4 [adam 2018-11-01]
 	Updated audio/SDL2_mixer to 2.0.4 [adam 2018-11-01]
+	Updated devel/py-lupa to 1.7 [alnsn 2018-11-01]
