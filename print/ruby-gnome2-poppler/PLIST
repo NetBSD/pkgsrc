@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/06/09 03:36:09 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/11/01 14:23:00 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_LIBDIR}/COPYING.LIB
@@ -24,6 +24,8 @@ ${GEM_LIBDIR}/sample/pdf2svg.rb
 ${GEM_LIBDIR}/sample/pdf2text.rb
 ${GEM_LIBDIR}/sample/pdfcrop.rb
 ${GEM_LIBDIR}/sample/pdfdiv.rb
+${GEM_LIBDIR}/test/fixtures/form.odt
+${GEM_LIBDIR}/test/fixtures/form.pdf
 ${GEM_LIBDIR}/test/fixtures/image.odt
 ${GEM_LIBDIR}/test/fixtures/image.pdf
 ${GEM_LIBDIR}/test/fixtures/multiple-pages.odt
