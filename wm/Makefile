@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.134 2018/03/07 11:57:32 wiz Exp $
+# $NetBSD: Makefile,v 1.135 2018/11/01 09:25:29 bsiegert Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -46,6 +46,7 @@ SUBDIR+=	i3
 SUBDIR+=	icewm
 SUBDIR+=	icewm-imlib
 SUBDIR+=	icewm13
+SUBDIR+=	icewm14
 SUBDIR+=	icewmconf
 SUBDIR+=	jwm
 SUBDIR+=	larswm
