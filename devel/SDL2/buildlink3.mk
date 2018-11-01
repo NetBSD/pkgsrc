@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2018/03/07 11:57:29 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2018/11/01 21:08:28 adam Exp $
 
 BUILDLINK_TREE+=	SDL2
 
@@ -19,22 +19,29 @@ pkgbase := SDL2
 
 .include "../../converters/libiconv/buildlink3.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.SDL2:Mopengl) && empty(OPSYS:MDarwin)
+.if !empty(PKG_BUILD_OPTIONS.SDL2:Mopengl) && ${OPSYS} != "Darwin"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .endif
-
-.if !empty(PKG_BUILD_OPTIONS.SDL2:Mx11)
-.include "../../x11/xorgproto/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.endif
-
-.include "../../mk/dlopen.buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/oss.buildlink3.mk"
-.endif	# SDL2_BUILDLINK3_MK
 
 .if !empty(PKG_BUILD_OPTIONS.SDL2:Mrpi)
 .include "../../misc/raspberrypi-userland/buildlink3.mk"
 .endif
+
+.if !empty(PKG_BUILD_OPTIONS.SDL2:Moss)
+.include "../../mk/oss.buildlink3.mk"
+.endif
+
+.if !empty(PKG_BUILD_OPTIONS.SDL2:Mx11)
+.include "../../x11/libXcursor/buildlink3.mk"
+.include "../../x11/libXi/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
+.include "../../x11/libXScrnSaver/buildlink3.mk"
+.endif
+
+.include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+
+.endif	# SDL2_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-SDL2
