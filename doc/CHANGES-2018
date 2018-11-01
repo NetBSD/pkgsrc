@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4558 2018/11/01 18:12:49 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4559 2018/11/01 21:13:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6367,3 +6367,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/ruby-sequel to 5.14.0 [taca 2018-11-01]
 	Updated lang/py-asttokens to 1.1.12 [adam 2018-11-01]
 	Updated devel/py-virtualenv to 16.1.0 [adam 2018-11-01]
+	Updated devel/SDL2 to 2.0.9 [adam 2018-11-01]
+	Updated graphics/SDL2_image to 2.0.4 [adam 2018-11-01]
+	Updated audio/SDL2_mixer to 2.0.4 [adam 2018-11-01]
