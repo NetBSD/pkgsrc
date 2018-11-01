@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2018/11/01 09:36:47 bsiegert Exp $
+bin/enchant-2
+bin/enchant-lsmod-2
+include/enchant-2/enchant++.h
+include/enchant-2/enchant-provider.h
+include/enchant-2/enchant.h
+${PLIST.aspell}lib/enchant-2/enchant_aspell.la
+${PLIST.hunspell}lib/enchant-2/enchant_hunspell.la
+${PLIST.zemberek}lib/enchant-2/enchant_zemberek.la
+lib/libenchant-2.la
+lib/pkgconfig/enchant-2.pc
+man/man1/enchant-2.1
+man/man1/enchant-lsmod-2.1
+share/examples/enchant.ordering
