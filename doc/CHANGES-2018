@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4563 2018/11/02 12:30:30 gdt Exp $
+$NetBSD: CHANGES-2018,v 1.4564 2018/11/02 23:09:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6376,3 +6376,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-asyncpg to 0.18.1 [adam 2018-11-02]
 	Updated devel/py-cached-property to 1.5.1 [adam 2018-11-02]
 	Updated chat/jabberd2 to 2.7.0 [gdt 2018-11-02]
+	Updated graphics/libimagequant to 2.12.2 [adam 2018-11-02]
+	Updated security/libgcrypt to 1.8.4 [adam 2018-11-02]
