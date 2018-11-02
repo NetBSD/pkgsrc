@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2018/07/11 09:00:17 adam Exp $
+# $NetBSD: Makefile,v 1.8 2018/11/02 11:51:38 adam Exp $
 
-DISTNAME=	asyncpg-0.17.0
+DISTNAME=	asyncpg-0.18.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asyncpg/}
@@ -13,7 +13,7 @@ LICENSE=	apache-2.0
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8>=3.5.0:../../devel/py-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-uvloop>=0.8.0:../../devel/py-uvloop
 
-PYTHON_VERSIONS_ACCEPTED=	37 36 35
+PYTHON_VERSIONS_INCOMPATIBLE=	27 34
 
 # Testing requires postgresql-contrib
 
