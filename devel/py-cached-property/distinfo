@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/07/09 07:15:32 adam Exp $
+$NetBSD: distinfo,v 1.6 2018/11/02 11:54:13 adam Exp $
 
-SHA1 (cached-property-1.4.3.tar.gz) = 46cf9b97b0062534ebac540a11980c0d7e1623d9
-RMD160 (cached-property-1.4.3.tar.gz) = 8b6d63b497c38ddd4862f119758ed9d2b0d789a3
-SHA512 (cached-property-1.4.3.tar.gz) = e36e61af8f68a253573efbac666abd4e897142b3cec2499c50ba932924f8dad786979e1a297df7f0898310ae1aec1116615dff6e39c0b203e262628b450ad91f
-Size (cached-property-1.4.3.tar.gz) = 11252 bytes
+SHA1 (cached-property-1.5.1.tar.gz) = 53bfbd1b3daa60f0f5c002d923ec3e75c76194e4
+RMD160 (cached-property-1.5.1.tar.gz) = 084bed8505a97d24368726fa96d5732978e69ae6
+SHA512 (cached-property-1.5.1.tar.gz) = 61bbedb48336af7c0b465421eb4d3b6b48155cfe4fd6270ff49caefe0d80e40b50c4801a68a5564931d316e374b69112ad14f72687a015ce81aaeade6fcf9ce3
+Size (cached-property-1.5.1.tar.gz) = 12791 bytes
