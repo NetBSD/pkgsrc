@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q3,v 1.1.2.11 2018/10/29 20:24:08 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q3,v 1.1.2.12 2018/11/02 06:33:43 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q3 branch:
 
@@ -103,4 +103,7 @@ www/drupal8: security update
 
 Pullup ticket #5871 - requested by bsiegert
 textproc/uriparser: security update
+
+Pullup ticket #5872 - requested by leot
+www/curl: security update
 
