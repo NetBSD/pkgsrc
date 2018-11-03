@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailpop3d.sh,v 1.22 2018/10/28 16:38:36 schmonz Exp $
+# $NetBSD: qmailpop3d.sh,v 1.23 2018/11/03 17:08:26 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-pop3d (POP3 server for Maildirs).
 #
@@ -11,7 +11,7 @@ name="qmailpop3d"
 
 # User-settable rc.conf variables and their default values:
 : ${qmailpop3d_postenv:="SSL_UID=$(@ID@ -u @UCSPI_SSL_USER@) SSL_GID=$(@ID@ -g @UCSPI_SSL_GROUP@) DHFILE=@PKG_SYSCONFDIR@/control/dh2048.pem CERTFILE=@PKG_SYSCONFDIR@/control/servercert.pem"}
-: ${qmailpop3d_tcpflags:="-neV -vRl0"}
+: ${qmailpop3d_tcpflags:="-ne -vRl0"}
 : ${qmailpop3d_tcphost:="0.0.0.0"}
 : ${qmailpop3d_tcpport:="110"}
 : ${qmailpop3d_datalimit:="180000000"}
@@ -22,7 +22,7 @@ name="qmailpop3d"
 : ${qmailpop3d_checkpassword:="@PREFIX@/bin/nbcheckpassword"}
 : ${qmailpop3d_maildirname:="Maildir"}
 : ${qmailpop3d_log:="YES"}
-: ${qmailpop3d_logcmd:="logger -t nb${name} -p mail.info"}
+: ${qmailpop3d_logcmd:="logger -t nbqmail/pop3d -p mail.info"}
 : ${qmailpop3d_nologcmd:="@PREFIX@/bin/multilog -*"}
 
 if [ -f /etc/rc.subr ]; then
