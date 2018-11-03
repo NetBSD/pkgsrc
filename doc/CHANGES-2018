@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4570 2018/11/03 13:04:32 leot Exp $
+$NetBSD: CHANGES-2018,v 1.4571 2018/11/03 17:01:13 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6386,3 +6386,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/amavisd-new to 2.11.1 [spz 2018-11-03]
 	Updated devel/jq to 1.6 [leot 2018-11-03]
 	Updated net/youtube-dl to 20181103 [leot 2018-11-03]
+	Updated net/fehqlibs to 0.9nb1 [schmonz 2018-11-03]
