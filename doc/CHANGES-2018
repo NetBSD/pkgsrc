@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4572 2018/11/03 17:08:31 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.4573 2018/11/03 17:37:42 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6388,3 +6388,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/youtube-dl to 20181103 [leot 2018-11-03]
 	Updated net/fehqlibs to 0.9nb1 [schmonz 2018-11-03]
 	Updated mail/qmail-run to 20181103 [schmonz 2018-11-03]
+	Updated devel/go-siphash to 1.2.0 [alnsn 2018-11-03]
