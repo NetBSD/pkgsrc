@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.12 2018/07/20 09:41:28 wiz Exp $
+$NetBSD: distinfo,v 1.13 2018/11/03 10:51:54 wiz Exp $
 
-SHA1 (xf86-video-r128-6.11.0.tar.bz2) = eaf0d08be3a23a9ed2f2ce24175c4d2d398e6d28
-RMD160 (xf86-video-r128-6.11.0.tar.bz2) = 614096a61169f0d1e556690c00e59ee82e7fb884
-SHA512 (xf86-video-r128-6.11.0.tar.bz2) = 1211cac52f65010aa4e168a173660186ad2b8595688a910ac545b0321d0d6879e02284b3bb26779faf3cf5b3b3031f33adb63ff596fb55a8f7a1f465ca0db1ba
-Size (xf86-video-r128-6.11.0.tar.bz2) = 482903 bytes
+SHA1 (xf86-video-r128-6.12.0.tar.bz2) = 7cfa41d386fa43b5d30299203e4845d8afba4899
+RMD160 (xf86-video-r128-6.12.0.tar.bz2) = 36c87a81d8f1e9e6a39f9a458efc05e8934a5cae
+SHA512 (xf86-video-r128-6.12.0.tar.bz2) = 0e667e2cfa8a87a00846361d86528c93754c403c812b66798953fa4c857b2143b2c4c44885da467e7f910d8cb910b69492cdcb6f25e2197bae6617364d152e38
+Size (xf86-video-r128-6.12.0.tar.bz2) = 483999 bytes
 SHA1 (patch-configure) = b8aec279d402f4bd31693f34e0ccab4155159cd4
 SHA1 (patch-src_r128__probe.c) = 3a0e00262f8b996392b2a9c1a5b887a1016f6203
