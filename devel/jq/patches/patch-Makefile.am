@@ -1,6 +1,7 @@
-$NetBSD: patch-Makefile.am,v 1.1 2018/11/03 12:47:16 leot Exp $
+$NetBSD: patch-Makefile.am,v 1.2 2018/11/03 12:51:54 leot Exp $
 
-Fix dynamic linking.
+Do dynamic linking of libtool libraries too (otherwise bin/jq can
+ends up to be statically linked).
 
 --- Makefile.am.orig	2018-11-02 01:49:29.000000000 +0000
 +++ Makefile.am
