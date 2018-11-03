@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailofmipd.sh,v 1.13 2018/10/28 16:38:36 schmonz Exp $
+# $NetBSD: qmailofmipd.sh,v 1.14 2018/11/03 17:08:26 schmonz Exp $
 #
 # @PKGNAME@ script to control ofmipd (SMTP submission service).
 #
@@ -12,7 +12,7 @@ name="qmailofmipd"
 
 # User-settable rc.conf variables and their default values:
 : ${qmailofmipd_postenv:="SSL_UID=$(@ID@ -u @UCSPI_SSL_USER@) SSL_GID=$(@ID@ -g @UCSPI_SSL_GROUP@) DHFILE=@PKG_SYSCONFDIR@/control/dh2048.pem CERTFILE=@PKG_SYSCONFDIR@/control/servercert.pem"}
-: ${qmailofmipd_tcpflags:="-neV -vRl0"}
+: ${qmailofmipd_tcpflags:="-ne -vRl0"}
 : ${qmailofmipd_tcphost:="0.0.0.0"}
 : ${qmailofmipd_tcpport:="587"}
 : ${qmailofmipd_datalimit:="360000000"}
@@ -23,7 +23,7 @@ name="qmailofmipd"
 : ${qmailofmipd_checkpassword:="@PREFIX@/bin/nbcheckpassword"}
 : ${qmailofmipd_postofmipd:=""}
 : ${qmailofmipd_log:="YES"}
-: ${qmailofmipd_logcmd:="logger -t nb${name} -p mail.info"}
+: ${qmailofmipd_logcmd:="logger -t nbqmail/ofmipd -p mail.info"}
 : ${qmailofmipd_nologcmd:="@PREFIX@/bin/multilog -*"}
 
 if [ -f /etc/rc.subr ]; then
