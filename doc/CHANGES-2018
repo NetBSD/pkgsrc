@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4568 2018/11/03 11:43:21 spz Exp $
+$NetBSD: CHANGES-2018,v 1.4569 2018/11/03 12:47:48 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6384,3 +6384,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-jsbeautifier to 1.8.8 [adam 2018-11-03]
 	Updated x11/xf86-video-r128 to 6.12.0 [wiz 2018-11-03]
 	Updated mail/amavisd-new to 2.11.1 [spz 2018-11-03]
+	Updated devel/jq to 1.6 [leot 2018-11-03]
