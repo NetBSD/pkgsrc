@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/04/26 07:56:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/11/03 11:31:35 maya Exp $
 bin/ffmpeg4
 bin/ffprobe4
 include/ffmpeg4/libavcodec/ac3_parser.h
@@ -200,8 +200,6 @@ ${PLIST.doc}share/doc/ffmpeg4/ffmpeg.html
 share/doc/ffmpeg4/ffmpeg.txt
 ${PLIST.doc}share/doc/ffmpeg4/ffprobe-all.html
 ${PLIST.doc}share/doc/ffmpeg4/ffprobe.html
-${PLIST.doc}share/doc/ffmpeg4/ffserver-all.html
-${PLIST.doc}share/doc/ffmpeg4/ffserver.html
 share/doc/ffmpeg4/filter_design.txt
 ${PLIST.doc}share/doc/ffmpeg4/general.html
 ${PLIST.doc}share/doc/ffmpeg4/git-howto.html
