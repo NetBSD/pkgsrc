@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4567 2018/11/03 10:52:05 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.4568 2018/11/03 11:43:21 spz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6383,3 +6383,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/tesseract to 4.0.0 [adam 2018-11-03]
 	Updated textproc/py-jsbeautifier to 1.8.8 [adam 2018-11-03]
 	Updated x11/xf86-video-r128 to 6.12.0 [wiz 2018-11-03]
+	Updated mail/amavisd-new to 2.11.1 [spz 2018-11-03]
