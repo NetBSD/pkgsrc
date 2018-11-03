@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4566 2018/11/03 09:18:21 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4567 2018/11/03 10:52:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6382,3 +6382,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/ffmpeg3 to 3.4.5 [adam 2018-11-03]
 	Updated graphics/tesseract to 4.0.0 [adam 2018-11-03]
 	Updated textproc/py-jsbeautifier to 1.8.8 [adam 2018-11-03]
+	Updated x11/xf86-video-r128 to 6.12.0 [wiz 2018-11-03]
