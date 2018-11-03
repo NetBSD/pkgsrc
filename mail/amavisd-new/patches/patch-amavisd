@@ -1,0 +1,15 @@
+$NetBSD: patch-amavisd,v 1.1 2018/11/03 11:41:30 spz Exp $
+
+fix a 'Unescaped left brace in regex'
+
+--- amavisd.orig	2018-10-09 12:41:10.000000000 +0000
++++ amavisd
+@@ -28856,7 +28856,7 @@ sub run_av(@) {
+         my $f = $bare_fnames->[$k];  my $multi = 0;
+         if ($one_at_a_time) {  # glob templates may be substrings anywhere
+           local($1);  @query_expanded = @query_template;  # start afresh
+-          s{ ( {} (?: / \* )? | \* ) }
++          s{ ( \{\} (?: / \* )? | \* ) }
+            { $1 eq '{}'   ? "$tempdir/parts"
+            : $1 eq '{}/*' ? ($multi=1,"$tempdir/parts/$f")
+            : $1 eq '*'    ? ($multi=1,$f)  : $1
