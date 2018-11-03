@@ -1,7 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2017/09/29 06:14:39 alnsn Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/11/03 17:36:48 alnsn Exp $
 gopkg/pkg/${GO_PLATFORM}/github.com/dchest/siphash.a
-gopkg/src/github.com/dchest/siphash/README
+gopkg/src/github.com/dchest/siphash/README.md
+gopkg/src/github.com/dchest/siphash/blocks.go
+gopkg/src/github.com/dchest/siphash/blocks_amd64.s
 gopkg/src/github.com/dchest/siphash/hash.go
+gopkg/src/github.com/dchest/siphash/hash128.go
+gopkg/src/github.com/dchest/siphash/hash128_amd64.s
+gopkg/src/github.com/dchest/siphash/hash_amd64.s
+gopkg/src/github.com/dchest/siphash/hash_asm.go
 gopkg/src/github.com/dchest/siphash/siphash.go
 gopkg/src/github.com/dchest/siphash/siphash_test.go
-@pkgdir bin
