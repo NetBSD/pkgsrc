@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2018/07/30 03:17:50 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2018/11/04 18:38:01 bsiegert Exp $
 
 DISTNAME=	viper-1.0.2
 PKGNAME=	go-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=spf13/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
