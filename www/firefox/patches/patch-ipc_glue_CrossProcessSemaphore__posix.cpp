@@ -1,9 +1,6 @@
-$NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.3 2017/09/30 05:34:12 ryoon Exp $
+$NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.4 2018/11/04 00:38:44 ryoon Exp $
 
-- avoid use of sem_t on NetBSD
-  http://mail-index.netbsd.org/pkgsrc-bugs/2017/06/23/msg062225.html
-
---- ipc/glue/CrossProcessSemaphore_posix.cpp.orig	2017-09-14 20:16:01.000000000 +0000
+--- ipc/glue/CrossProcessSemaphore_posix.cpp.orig	2018-10-18 20:06:05.000000000 +0000
 +++ ipc/glue/CrossProcessSemaphore_posix.cpp
 @@ -9,6 +9,11 @@
  #include "nsDebug.h"
@@ -59,7 +56,7 @@ $NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.3 2017/09/30 05:34:
    sem->mRefCount = &data->mRefCount;
    *sem->mRefCount = 1;
  
-@@ -84,24 +109,44 @@ CrossProcessSemaphore::Create(CrossProce
+@@ -86,24 +111,44 @@ CrossProcessSemaphore::Create(CrossProce
  
    int32_t oldCount = data->mRefCount++;
    if (oldCount == 0) {
@@ -104,7 +101,7 @@ $NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.3 2017/09/30 05:34:
    , mRefCount(nullptr)
  {
    MOZ_COUNT_CTOR(CrossProcessSemaphore);
-@@ -113,17 +158,58 @@ CrossProcessSemaphore::~CrossProcessSema
+@@ -115,17 +160,58 @@ CrossProcessSemaphore::~CrossProcessSema
  
    if (oldCount == 0) {
      // Nothing can be done if the destroy fails so ignore return code.
@@ -163,7 +160,7 @@ $NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.3 2017/09/30 05:34:
    if (aWaitTime.isSome()) {
      struct timespec ts;
      if (clock_gettime(CLOCK_REALTIME, &ts) == -1) {
-@@ -140,6 +226,7 @@ CrossProcessSemaphore::Wait(const Maybe<
+@@ -142,6 +228,7 @@ CrossProcessSemaphore::Wait(const Maybe<
      while ((ret = sem_wait(mSemaphore)) == -1 && errno == EINTR) {
      }
    }
@@ -171,7 +168,7 @@ $NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.3 2017/09/30 05:34:
    return ret == 0;
  }
  
-@@ -147,7 +234,17 @@ void
+@@ -149,7 +236,17 @@ void
  CrossProcessSemaphore::Signal()
  {
    MOZ_ASSERT(*mRefCount > 0, "Attempting to signal a semaphore with zero ref count");
