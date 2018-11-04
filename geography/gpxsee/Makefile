@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.1.1.1 2018/10/19 08:57:22 abs Exp $
+# $NetBSD: Makefile,v 1.2 2018/11/04 22:43:40 adam Exp $
 
-GITHUB_PROJECT=	GPXSee
-DISTNAME=	6.3
-PKGNAME=	${GITHUB_PROJECT:tl}-${DISTNAME}
+DISTNAME=	GPXSee-6.3
+PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tumic0/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
+GITHUB_PROJECT=	GPXSee
 
 MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	https://github.com/tumic0/GPXSee/
 COMMENT=	GPS log file viewer and analyzer
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/GPXSee-6.3
 USE_LANGUAGES=	c++03
 QMAKE=		${QTDIR}/bin/qmake
 
@@ -30,5 +28,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/icons/gpxsee.png ${DESTDIR}${PREFIX}/share/pixmaps
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
