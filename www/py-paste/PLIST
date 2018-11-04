@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/07/09 21:16:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/11/04 09:08:35 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -215,6 +215,9 @@ ${PYSITELIB}/paste/util/finddata.pyo
 ${PYSITELIB}/paste/util/findpackage.py
 ${PYSITELIB}/paste/util/findpackage.pyc
 ${PYSITELIB}/paste/util/findpackage.pyo
+${PYSITELIB}/paste/util/html.py
+${PYSITELIB}/paste/util/html.pyc
+${PYSITELIB}/paste/util/html.pyo
 ${PYSITELIB}/paste/util/import_string.py
 ${PYSITELIB}/paste/util/import_string.pyc
 ${PYSITELIB}/paste/util/import_string.pyo
@@ -243,7 +246,6 @@ ${PYSITELIB}/paste/util/scgiserver.py
 ${PYSITELIB}/paste/util/scgiserver.pyc
 ${PYSITELIB}/paste/util/scgiserver.pyo
 ${PYSITELIB}/paste/util/template.py
-${PYSITELIB}/paste/util/template.py.2015-04-30-123224
 ${PYSITELIB}/paste/util/template.pyc
 ${PYSITELIB}/paste/util/template.pyo
 ${PYSITELIB}/paste/util/threadedprint.py
