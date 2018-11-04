@@ -1,11 +1,8 @@
-$NetBSD: patch-ipc_glue_CrossProcessSemaphore.h,v 1.1 2017/06/29 08:07:59 martin Exp $
+$NetBSD: patch-ipc_glue_CrossProcessSemaphore.h,v 1.2 2018/11/04 00:38:44 ryoon Exp $
 
-- avoid use of sem_t on NetBSD
-  http://mail-index.netbsd.org/pkgsrc-bugs/2017/06/23/msg062225.html
-
---- ipc/glue/CrossProcessSemaphore.h.orig	2017-06-05 20:45:20.000000000 +0000
+--- ipc/glue/CrossProcessSemaphore.h.orig	2018-10-18 20:06:06.000000000 +0000
 +++ ipc/glue/CrossProcessSemaphore.h
-@@ -91,7 +91,13 @@ private:
+@@ -93,7 +93,13 @@ private:
    HANDLE mSemaphore;
  #elif !defined(OS_MACOSX)
    RefPtr<mozilla::ipc::SharedMemoryBasic> mSharedBuffer;
