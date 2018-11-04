@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/09/18 20:52:11 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/11/04 12:36:09 bsiegert Exp $
 go110/AUTHORS
 go110/CONTRIBUTING.md
 go110/CONTRIBUTORS
@@ -7386,6 +7386,7 @@ go110/test/fixedbugs/issue24817.go
 go110/test/fixedbugs/issue25322.go
 go110/test/fixedbugs/issue25322.out
 go110/test/fixedbugs/issue2615.go
+go110/test/fixedbugs/issue27143.go
 go110/test/fixedbugs/issue3552.dir/one.go
 go110/test/fixedbugs/issue3552.dir/two.go
 go110/test/fixedbugs/issue3552.go
