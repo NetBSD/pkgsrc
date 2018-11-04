@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2018/10/19 08:57:22 abs Exp $
+$NetBSD: distinfo,v 1.2 2018/11/04 22:43:40 adam Exp $
 
-SHA1 (GPXSee/6.3.tar.gz) = a57f4eb72c6ca373f4bd1d61cf444443fdb17972
-RMD160 (GPXSee/6.3.tar.gz) = b6ffd187c6ccd9c2eb7720c0fcb2f035985ef1df
-SHA512 (GPXSee/6.3.tar.gz) = 7a4f23444517a0481490f8f1a0520634e63e0416dd5fd5bdb01942df138839595dffd4bced21e264552915c38e5653e927244ea5ca185ff3f93df56fad3e9c73
-Size (GPXSee/6.3.tar.gz) = 3861093 bytes
+SHA1 (GPXSee-6.3.tar.gz) = a57f4eb72c6ca373f4bd1d61cf444443fdb17972
+RMD160 (GPXSee-6.3.tar.gz) = b6ffd187c6ccd9c2eb7720c0fcb2f035985ef1df
+SHA512 (GPXSee-6.3.tar.gz) = 7a4f23444517a0481490f8f1a0520634e63e0416dd5fd5bdb01942df138839595dffd4bced21e264552915c38e5653e927244ea5ca185ff3f93df56fad3e9c73
+Size (GPXSee-6.3.tar.gz) = 3861093 bytes
 SHA1 (patch-src_config.h) = 42ab46ea889e0c1c95dfa3ae614beaaa97f4b23d
