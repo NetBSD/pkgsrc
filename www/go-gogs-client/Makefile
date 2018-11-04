@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2018/07/13 00:56:23 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2018/11/04 18:38:09 bsiegert Exp $
 
 DISTNAME=	go-gogs-client-0.0.20171114
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gogs/}
 GITHUB_TAG=	5898069c37e1044229e3853adba654d61e45816b
