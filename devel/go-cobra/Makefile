@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2018/09/02 20:55:15 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2018/11/04 18:37:59 bsiegert Exp $
 
 DISTNAME=	cobra-0.0.3
 PKGNAME=	go-${DISTNAME}
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=spf13/}
 CATEGORIES=	devel
 GITHUB_TAG=	v${PKGVERSION_NOREV}
