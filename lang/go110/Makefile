@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2018/09/18 20:52:11 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2018/11/04 12:36:09 bsiegert Exp $
 
 .include "../../lang/go/version.mk"
 
 DISTNAME=	go${GO110_VERSION}.src
 PKGNAME=	go110-${GO110_VERSION}
-PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	https://storage.googleapis.com/golang/
 EXTRACT_USING=	bsdtar
