@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.117 2018/11/04 00:38:44 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.118 2018/11/04 09:10:40 maya Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -116,19 +116,6 @@ SUBST_STAGE.prefix=		pre-configure
 SUBST_MESSAGE.prefix=		Setting PREFIX
 SUBST_FILES.prefix+=		${MOZILLA_DIR}xpcom/build/BinaryPath.h
 SUBST_VARS.prefix+=		PREFIX
-
-.if !empty(LP64PLATFORMS:@.PLAT.@${MACHINE_PLATFORM:M${.PLAT.}}@) || \
-	(defined(ABI) && ${ABI} == "64")
-RUST_USIZE=	u64
-.else
-RUST_USIZE=	u32
-.endif
-
-SUBST_CLASSES+=			rust-usize
-SUBST_STAGE.rust-usize=		pre-configure
-SUBST_MESSAGE.rust-usize=	Workaround for usize type mismatch
-SUBST_FILES.rust-usize+=	${MOZILLA_DIR}servo/components/style/gecko/snapshot_helpers.rs
-SUBST_VARS.rust-usize+=		RUST_USIZE
 
 CONFIG_GUESS_OVERRIDE+=		${MOZILLA_DIR}build/autoconf/config.guess
 CONFIG_GUESS_OVERRIDE+=		${MOZILLA_DIR}js/src/build/autoconf/config.guess
