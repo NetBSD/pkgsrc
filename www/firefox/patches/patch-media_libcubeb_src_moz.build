@@ -1,9 +1,6 @@
-$NetBSD: patch-media_libcubeb_src_moz.build,v 1.15 2018/06/28 13:52:37 ryoon Exp $
+$NetBSD: patch-media_libcubeb_src_moz.build,v 1.16 2018/11/04 00:38:45 ryoon Exp $
 
-* Add OSS audio support
-* Support system library
-
---- media/libcubeb/src/moz.build.orig	2018-06-21 20:03:51.000000000 +0000
+--- media/libcubeb/src/moz.build.orig	2018-10-18 20:06:09.000000000 +0000
 +++ media/libcubeb/src/moz.build
 @@ -23,6 +23,12 @@ if CONFIG['MOZ_ALSA']:
      ]

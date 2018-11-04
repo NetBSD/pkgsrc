@@ -1,25 +1,10 @@
-$NetBSD: patch-aa,v 1.58 2018/06/28 13:52:37 ryoon Exp $
+$NetBSD: patch-aa,v 1.59 2018/11/04 00:38:44 ryoon Exp $
 
-* Disable libjpeg-turbo check
-* Add system libraries option
 * Add OSS audio support
 
---- old-configure.in.orig	2018-06-21 20:03:54.000000000 +0000
+--- old-configure.in.orig	2018-10-18 20:06:09.000000000 +0000
 +++ old-configure.in
-@@ -1815,11 +1815,7 @@ if test "$MOZ_SYSTEM_JPEG" = 1; then
-                      #include <jpeglib.h> ],
-                    [ #if JPEG_LIB_VERSION < $MOZJPEG
-                      #error "Insufficient JPEG library version ($MOZJPEG required)."
--                     #endif
--                     #ifndef JCS_EXTENSIONS
--                     #error "libjpeg-turbo JCS_EXTENSIONS required"
--                     #endif
--                     ],
-+                     #endif ],
-                    MOZ_SYSTEM_JPEG=1,
-                    AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
- fi
-@@ -2606,6 +2602,67 @@ MOZ_WEBM_ENCODER=1
+@@ -2543,6 +2543,67 @@ MOZ_WEBM_ENCODER=1
  AC_DEFINE(MOZ_WEBM_ENCODER)
  AC_SUBST(MOZ_WEBM_ENCODER)
  

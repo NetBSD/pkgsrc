@@ -1,9 +1,9 @@
-$NetBSD: patch-browser_app_profile_firefox.js,v 1.8 2018/06/28 13:52:37 ryoon Exp $
+$NetBSD: patch-browser_app_profile_firefox.js,v 1.9 2018/11/04 00:38:44 ryoon Exp $
 
---- browser/app/profile/firefox.js.orig	2018-06-21 20:03:42.000000000 +0000
+--- browser/app/profile/firefox.js.orig	2018-10-18 20:06:03.000000000 +0000
 +++ browser/app/profile/firefox.js
-@@ -1737,6 +1737,12 @@ pref("app.shield.optoutstudies.enabled",
- pref("app.shield.optoutstudies.enabled", false);
+@@ -1781,3 +1781,9 @@ pref("prio.publicKeyB", "26E6674E65425B8
+ pref("browser.fastblock.enabled", true);
  #endif
  
 +// Select UI locale from LANG/LC_MESSAGE environmental variables
@@ -12,6 +12,3 @@ $NetBSD: patch-browser_app_profile_firefox.js,v 1.8 2018/06/28 13:52:37 ryoon Ex
 +// Disable multiprocess window support. Workaround for PR 53273.
 +pref("browser.tabs.remote.autostart", false);
 +
- // Savant Shield study preferences
- pref("shield.savant.enabled", false);
- pref("shield.savant.loglevel", "warn");

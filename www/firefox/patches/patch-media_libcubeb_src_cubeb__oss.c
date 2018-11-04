@@ -1,8 +1,8 @@
-$NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.11 2018/06/28 13:52:37 ryoon Exp $
+$NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.12 2018/11/04 00:38:45 ryoon Exp $
 
 * Restore OSS audio support code
 
---- media/libcubeb/src/cubeb_oss.c.orig	2018-06-26 19:15:51.303299728 +0000
+--- media/libcubeb/src/cubeb_oss.c.orig	2018-10-25 10:52:12.966650761 +0000
 +++ media/libcubeb/src/cubeb_oss.c
 @@ -0,0 +1,453 @@
 +/*
