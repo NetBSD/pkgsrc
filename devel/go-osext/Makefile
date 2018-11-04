@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2018/06/12 17:50:22 bsiegert Exp $
+# $NetBSD: Makefile,v 1.7 2018/11/04 18:38:00 bsiegert Exp $
 
 DISTNAME=	osext-0.0.20151222
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kardianos/}
 CATEGORIES=	devel
 GITHUB_TAG=	29ae4ffbc9a6fe9fb2bc5029050ce6996ea1d3bc

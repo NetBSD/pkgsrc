@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2018/09/29 15:27:07 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2018/11/04 18:38:08 bsiegert Exp $
 
 DISTNAME=	glob-0.2.3
 PKGNAME=	go-${DISTNAME}
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gobwas/}
 CATEGORIES=	textproc
 GITHUB_PROJECT=	${PKGBASE:S/^go-//}
