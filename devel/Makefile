@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2744 2018/10/28 15:39:09 taca Exp $
+# $NetBSD: Makefile,v 1.2745 2018/11/04 00:28:48 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -134,6 +134,7 @@ SUBDIR+=	c++gsl
 SUBDIR+=	calltree-perl
 SUBDIR+=	capstone
 SUBDIR+=	catch
+SUBDIR+=	cbindgen
 SUBDIR+=	cbrowser
 SUBDIR+=	ccache
 SUBDIR+=	cdecl
