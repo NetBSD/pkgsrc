@@ -1,4 +1,7 @@
-$NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.28 2018/11/04 00:38:45 ryoon Exp $
+$NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.29 2018/11/04 04:46:57 ryoon Exp $
+
+* Support alsa audio under NetBSD
+* Avoid https://github.com/kinetiknz/cubeb/issues/226
 
 --- media/libcubeb/src/cubeb_alsa.c.orig	2018-10-18 20:06:09.000000000 +0000
 +++ media/libcubeb/src/cubeb_alsa.c
