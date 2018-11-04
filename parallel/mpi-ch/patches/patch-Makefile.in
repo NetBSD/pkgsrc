@@ -1,19 +1,9 @@
-$NetBSD: patch-Makefile.in,v 1.3 2017/04/29 18:18:52 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.4 2018/11/04 11:49:40 bsiegert Exp $
 
-Link mpiexec.gforker also against mpllib.
 Do not create libopa symlink; it conflicts with parallel/openpa/PLIST.
 
 --- Makefile.in.orig	2015-11-12 04:08:10.000000000 +0000
 +++ Makefile.in
-@@ -10241,7 +10242,7 @@ common_pm_includes = \
- # we may not want to add AM_CPPFLAGS for this program
- @BUILD_PM_GFORKER_TRUE@@PRIMARY_PM_GFORKER_TRUE@src_pm_gforker_mpiexec_CPPFLAGS = $(common_pm_includes) $(AM_CPPFLAGS)
- @BUILD_PM_GFORKER_TRUE@@PRIMARY_PM_GFORKER_FALSE@src_pm_gforker_mpiexec_gforker_SOURCES = src/pm/gforker/mpiexec.c 
--@BUILD_PM_GFORKER_TRUE@@PRIMARY_PM_GFORKER_FALSE@src_pm_gforker_mpiexec_gforker_LDADD = src/pm/util/libmpiexec.a
-+@BUILD_PM_GFORKER_TRUE@@PRIMARY_PM_GFORKER_FALSE@src_pm_gforker_mpiexec_gforker_LDADD = src/pm/util/libmpiexec.a $(mpllib)
- # we may not want to add AM_CPPFLAGS for this program
- @BUILD_PM_GFORKER_TRUE@@PRIMARY_PM_GFORKER_FALSE@src_pm_gforker_mpiexec_gforker_CPPFLAGS = $(common_pm_includes) $(AM_CPPFLAGS)
- @BUILD_PM_REMSHELL_TRUE@@PRIMARY_PM_REMSHELL_TRUE@src_pm_remshell_mpiexec_SOURCES = src/pm/remshell/mpiexec.c 
 @@ -39783,9 +39784,6 @@ install-exec-hook:
  		if test "@MPILIBNAME@" != "mpl" ; then \
  			cd ${DESTDIR}${libdir} && ln -f -s lib@MPILIBNAME@@SHLIB_EXT@ libmpl@SHLIB_EXT@ ; \
