@@ -1,10 +1,8 @@
-$NetBSD: patch-gfx_angle_checkout_src_common_third__party_smhasher_src_PMurHash.cpp,v 1.1 2018/06/26 09:37:10 jperkin Exp $
+$NetBSD: patch-gfx_angle_checkout_src_common_third__party_smhasher_src_PMurHash.cpp,v 1.2 2018/11/04 00:38:44 ryoon Exp $
 
-Fix build where _LITTLE_ENDIAN is not an integer.
-
---- gfx/angle/checkout/src/common/third_party/smhasher/src/PMurHash.cpp.orig	2018-06-05 19:47:29.000000000 +0000
+--- gfx/angle/checkout/src/common/third_party/smhasher/src/PMurHash.cpp.orig	2018-10-18 20:06:05.000000000 +0000
 +++ gfx/angle/checkout/src/common/third_party/smhasher/src/PMurHash.cpp
-@@ -91,7 +91,7 @@ on big endian machines, or a byte-by-byt
+@@ -92,7 +92,7 @@ on big endian machines, or a byte-by-byt
  /* gcc 'may' define __LITTLE_ENDIAN__ or __BIG_ENDIAN__ to 1 (Note the trailing __),
   * or even _LITTLE_ENDIAN or _BIG_ENDIAN (Note the single _ prefix) */
  #if !defined(__BYTE_ORDER)
