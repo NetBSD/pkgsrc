@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4576 2018/11/04 00:39:12 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.4577 2018/11/04 00:50:39 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6392,3 +6392,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/cbindgen version 0.6.6 [ryoon 2018-11-04]
 	Updated devel/nss to 3.40 [ryoon 2018-11-04]
 	Updated www/firefox to 63.0.1 [ryoon 2018-11-04]
+	Updated www/firefox-l10n to 63.0.1 [ryoon 2018-11-04]
