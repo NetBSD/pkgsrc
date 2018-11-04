@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/03/21 12:09:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.3.6.1 2018/11/04 20:02:38 spz Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/CHANGELOG.md
@@ -26,6 +26,7 @@ ${GEM_LIBDIR}/lib/loofah/scrubber.rb
 ${GEM_LIBDIR}/lib/loofah/scrubbers.rb
 ${GEM_LIBDIR}/lib/loofah/xml/document.rb
 ${GEM_LIBDIR}/lib/loofah/xml/document_fragment.rb
+${GEM_LIBDIR}/test/assets/msword.html
 ${GEM_LIBDIR}/test/assets/testdata_sanitizer_tests1.dat
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/html5/test_sanitizer.rb
