@@ -1,11 +1,11 @@
-# $NetBSD: version.mk,v 1.47 2018/10/26 13:49:23 leot Exp $
+# $NetBSD: version.mk,v 1.48 2018/11/04 12:36:09 bsiegert Exp $
 
 SSP_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
 
 GO111_VERSION=	1.11.1
-GO110_VERSION=	1.10.4
+GO110_VERSION=	1.10.5
 GO19_VERSION=	1.9.7
 GO14_VERSION=	1.4.3
 GO_VERSION=	${GO110_VERSION}
