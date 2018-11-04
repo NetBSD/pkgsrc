@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.85 2018/08/22 09:46:10 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2018/11/04 11:49:40 bsiegert Exp $
 
-DISTNAME=	mpich-3.2
-PKGREVISION=	1
+DISTNAME=	mpich-3.2.1
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.mpich.org/static/tarballs/${PKGVERSION_NOREV}/
 
@@ -31,9 +30,7 @@ CONFIGURE_ARGS+=	--with-hwloc-prefix=${BUILDLINK_PREFIX.hwloc}
 CONFIGURE_ARGS+=	--with-openpa-prefix=${BUILDLINK_PREFIX.openpa}
 CONFIGURE_ARGS+=	--with-pm=hydra:gforker
 CONFIGURE_ARGS+=	--with-thread-package=posix
-# Make MPI compiler wrapper usable outside pkgsrc:
-CONFIGURE_ENV+=		WRAPPER_LDFLAGS="-L${MPI_PREFIX}/lib ${COMPILER_RPATH_FLAG}${MPI_PREFIX}/lib"
-CONFIGURE_ENV+=		MPICH_LDFLAGS="-L${MPI_PREFIX}/lib ${COMPILER_RPATH_FLAG}${MPI_PREFIX}/lib"
+CONFIGURE_ARGS+=	--enable-wrapper-rpath
 
 LDFLAGS+=		-lm
 
