@@ -1,8 +1,8 @@
-$NetBSD: patch-dom_media_CubebUtils.cpp,v 1.1 2017/04/27 01:49:47 ryoon Exp $
+$NetBSD: patch-dom_media_CubebUtils.cpp,v 1.2 2018/11/04 00:38:44 ryoon Exp $
 
---- dom/media/CubebUtils.cpp.orig	2017-04-11 04:15:21.000000000 +0000
+--- dom/media/CubebUtils.cpp.orig	2018-10-18 20:06:04.000000000 +0000
 +++ dom/media/CubebUtils.cpp
-@@ -71,7 +71,8 @@ const char* AUDIOSTREAM_BACKEND_ID_STR[]
+@@ -159,7 +159,8 @@ const char* AUDIOSTREAM_BACKEND_ID_STR[]
    "sndio",
    "opensl",
    "audiotrack",

@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.116 2018/09/21 10:11:19 jperkin Exp $
+# $NetBSD: mozilla-common.mk,v 1.117 2018/11/04 00:38:44 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -20,10 +20,13 @@ ALL_ENV+=	PYTHON3=${LOCALBASE}/bin/python3.7
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 USE_TOOLS+=		pkg-config perl gmake autoconf213 unzip zip
-USE_LANGUAGES+=		c99 c++14 # c++14 for index_sequence
+USE_LANGUAGES+=		c99 gnu++14
 UNLIMIT_RESOURCES+=	datasize
 
 .include "../../mk/bsd.prefs.mk"
+
+TOOL_DEPENDS+=		cbindgen-[0-9]*:../../devel/cbindgen
+TOOL_DEPENDS+=		nodejs-[0-9]*:../../lang/nodejs
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 BUILD_DEPENDS+=		yasm>=1.1:../../devel/yasm
@@ -68,11 +71,15 @@ CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}js/src/tests/update-test262.sh
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}intl/icu/source/configure
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}browser/components/loop/run-all-loop-tests.sh
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}browser/extensions/loop/run-all-loop-tests.sh
+#CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}modules/pdfium/update.sh
 
 CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk3
 .if ${OPSYS} != "SunOS"
 CONFIGURE_ARGS+=	--enable-pie
 .endif
+CONFIGURE_ARGS+=	--enable-release
+CONFIGURE_ARGS+=	--enable-rust-simd
+CONFIGURE_ARGS+=	--enable-webrender=build
 CONFIGURE_ARGS+=	--disable-tests
 # Mozilla Bug 1432751
 #CONFIGURE_ARGS+=	--enable-system-cairo
@@ -84,7 +91,7 @@ CONFIGURE_ARGS+=	--enable-system-ffi
 CONFIGURE_ARGS+=	--with-system-icu
 CONFIGURE_ARGS+=	--with-system-nss
 CONFIGURE_ARGS+=	--with-system-nspr
-CONFIGURE_ARGS+=	--with-system-jpeg
+#CONFIGURE_ARGS+=	--with-system-jpeg
 CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--with-system-bz2
 CONFIGURE_ARGS+=	--with-system-libevent=${BUILDLINK_PREFIX.libevent}
@@ -109,6 +116,19 @@ SUBST_STAGE.prefix=		pre-configure
 SUBST_MESSAGE.prefix=		Setting PREFIX
 SUBST_FILES.prefix+=		${MOZILLA_DIR}xpcom/build/BinaryPath.h
 SUBST_VARS.prefix+=		PREFIX
+
+.if !empty(LP64PLATFORMS:@.PLAT.@${MACHINE_PLATFORM:M${.PLAT.}}@) || \
+	(defined(ABI) && ${ABI} == "64")
+RUST_USIZE=	u64
+.else
+RUST_USIZE=	u32
+.endif
+
+SUBST_CLASSES+=			rust-usize
+SUBST_STAGE.rust-usize=		pre-configure
+SUBST_MESSAGE.rust-usize=	Workaround for usize type mismatch
+SUBST_FILES.rust-usize+=	${MOZILLA_DIR}servo/components/style/gecko/snapshot_helpers.rs
+SUBST_VARS.rust-usize+=		RUST_USIZE
 
 CONFIG_GUESS_OVERRIDE+=		${MOZILLA_DIR}build/autoconf/config.guess
 CONFIG_GUESS_OVERRIDE+=		${MOZILLA_DIR}js/src/build/autoconf/config.guess
@@ -214,14 +234,15 @@ BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.19
 BUILDLINK_API_DEPENDS.nss+=	nss>=3.38
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
+#.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 #BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.10.2nb4
 #.include "../../graphics/cairo/buildlink3.mk"
 BUILDLINK_DEPMETHOD.clang=	build
+BUILDLINK_API_DEPENDS.clang+=	clang>=6.0.1nb1
 .include "../../lang/clang/buildlink3.mk"
-BUILDLINK_API_DEPENDS.rust+=	rust>=1.24.0
 BUILDLINK_DEPMETHOD.rust=	build
+BUILDLINK_API_DEPENDS.rust+=	rust>=1.24.0
 .include "../../lang/rust/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libvpx+=	libvpx>=1.3.0
 .include "../../multimedia/libvpx/buildlink3.mk"
