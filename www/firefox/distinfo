@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.328 2018/11/04 04:46:57 ryoon Exp $
+$NetBSD: distinfo,v 1.329 2018/11/04 09:10:40 maya Exp $
 
 SHA1 (firefox-63.0.1.source.tar.xz) = d62a85ce78904171e9f863154fb8cd031cdbe4ee
 RMD160 (firefox-63.0.1.source.tar.xz) = 28f6431150deb10b967e4181ebfb5c332deedbd2
@@ -7,6 +7,7 @@ Size (firefox-63.0.1.source.tar.xz) = 265358784 bytes
 SHA1 (patch-aa) = 2df509e4c7478eb2a9d894b661ff62bca0e4c785
 SHA1 (patch-browser_app_profile_firefox.js) = 3ff1487607da5c7dc917fe9f793c6d281119974a
 SHA1 (patch-build_moz.configure_old.configure) = 91bab1cbbe02332ec076b49b6e598730202fbc99
+SHA1 (patch-dom_base_nsAttrName.h) = 89389af93bda7de9fd9a4b0fc6fa6505da390134
 SHA1 (patch-dom_media_CubebUtils.cpp) = ee3b7dca9f9486249b134262891d55dabe1a8f90
 SHA1 (patch-gfx_angle_checkout_src_common_third__party_smhasher_src_PMurHash.cpp) = 383f25417ad74f3ef8034437b52fc23f3bcbfc24
 SHA1 (patch-gfx_angle_checkout_src_compiler_translator_InfoSink.h) = 2f73c76c48852613e0c55c1680fcc2a9eb3cf4ef
@@ -29,7 +30,6 @@ SHA1 (patch-media_libcubeb_update.sh) = cddb5849fa2972e961e4891bc8a79a650df06d8d
 SHA1 (patch-media_libpng_pngpriv.h) = c8084332560017cd7c9b519b61d125fa28af0dbc
 SHA1 (patch-modules_pdfium_update.sh) = b0bf091325c9322c54880de067871354cd689038
 SHA1 (patch-servo_components_style_build__gecko.rs) = 1045b4e336c329d2673d096aeead83b6bc58ed13
-SHA1 (patch-servo_components_style_gecko_snapshot__helpers.rs) = fae6c2802a02750fe42b96227d794c26545d8741
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = 082aa7830b33cb91c2606fb06059d544c70a7e62
 SHA1 (patch-toolkit_library_moz.build) = 102e3713552c26f76e8b4e473846bb8fbc44b278
 SHA1 (patch-toolkit_moz.configure) = 40ee147cc1d2c62dd6c83b3f67ce9e61f758ea57
