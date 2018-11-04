@@ -1,6 +1,6 @@
-$NetBSD: patch-build_moz.configure_old.configure,v 1.8 2018/09/05 15:29:58 ryoon Exp $
+$NetBSD: patch-build_moz.configure_old.configure,v 1.9 2018/11/04 00:38:44 ryoon Exp $
 
---- build/moz.configure/old.configure.orig	2018-08-30 16:44:17.000000000 +0000
+--- build/moz.configure/old.configure.orig	2018-10-18 20:06:03.000000000 +0000
 +++ build/moz.configure/old.configure
 @@ -259,6 +259,7 @@ def old_configure_options(*options):
      '--with-nspr-prefix',
