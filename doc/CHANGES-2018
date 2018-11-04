@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4575 2018/11/04 00:33:56 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.4576 2018/11/04 00:39:12 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6391,3 +6391,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/go-siphash to 1.2.0 [alnsn 2018-11-03]
 	Added devel/cbindgen version 0.6.6 [ryoon 2018-11-04]
 	Updated devel/nss to 3.40 [ryoon 2018-11-04]
+	Updated www/firefox to 63.0.1 [ryoon 2018-11-04]
