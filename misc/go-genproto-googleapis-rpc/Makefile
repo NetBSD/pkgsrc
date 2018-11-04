@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2018/09/11 19:57:37 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2018/11/04 18:38:04 bsiegert Exp $
 
 PKGNAME=	${DISTNAME:S/genproto-/genproto-googleapis-rpc-/}
+PKGREVISION=	1
 
 COMMENT=	Generated Go packages for RPC
 
