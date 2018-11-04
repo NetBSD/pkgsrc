@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2018/10/22 15:31:00 adam Exp $
+$NetBSD: distinfo,v 1.8 2018/11/04 22:12:03 adam Exp $
 
-SHA1 (zstandard-0.10.1.tar.gz) = f49a345131797d949f9ed7f4e9b5b19c0d801ccb
-RMD160 (zstandard-0.10.1.tar.gz) = 23ba3e53473ca2faadc1635ace0406af6e58e329
-SHA512 (zstandard-0.10.1.tar.gz) = 9191ef460a8cab33cbd488e51ed122fb6c6e364ec3161f5d2933ba5d28dd98425b268bea9d9d47d44dbfb8316fd1d00579efc277310191a52203ef76ed822309
-Size (zstandard-0.10.1.tar.gz) = 611517 bytes
+SHA1 (zstandard-0.10.2.tar.gz) = 34927eb1c094a98ffcdbd7af995e4d7695d1a878
+RMD160 (zstandard-0.10.2.tar.gz) = c8f080cde62a0cb8c95d806a88868f9e535c9e8b
+SHA512 (zstandard-0.10.2.tar.gz) = 5bd2c618dfd7c5ee4f66bccd3b1fc74b96312ef3b14eff170b51d5609b3192ff93077fbf7b19f4eddc7180a76881c4ecd0180e78106b27776717ba727c43f3a3
+Size (zstandard-0.10.2.tar.gz) = 611644 bytes
 SHA1 (patch-zstd.c) = c884da8109768cc331c61fd3caa0b38b8d9c706e
