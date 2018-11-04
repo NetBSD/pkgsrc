@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2018/11/04 00:28:01 ryoon Exp $
+bin/cbindgen
