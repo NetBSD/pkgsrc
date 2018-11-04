@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4579 2018/11/04 12:36:41 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.4580 2018/11/04 22:27:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6397,3 +6397,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-paste to 3.0.3 [adam 2018-11-04]
 	Updated parallel/mpi-ch to 3.2.1 [bsiegert 2018-11-04]
 	Updated lang/go110 to 1.10.5 [bsiegert 2018-11-04]
+	Updated archivers/py-zstandard to 0.10.2 [adam 2018-11-04]
+	Updated www/py-urllib3 to 1.24.1 [adam 2018-11-04]
+	Updated net/py-responses to 0.10.2 [adam 2018-11-04]
