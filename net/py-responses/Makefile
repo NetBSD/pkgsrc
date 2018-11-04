@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/04/11 19:56:28 adam Exp $
+# $NetBSD: Makefile,v 1.3 2018/11/04 22:26:04 adam Exp $
 
-DISTNAME=	responses-0.9.0
+DISTNAME=	responses-0.10.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/responses/}
@@ -10,13 +10,12 @@ HOMEPAGE=	https://github.com/getsentry/responses
 COMMENT=	Utility library for mocking out the requests Python library
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-cookies-[0-9]*:../../www/py-cookies
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.0:../../devel/py-requests
 
 .include "../../lang/python/pyversion.mk"
-
-.if "${PYPKGPREFIX}" == "py27"
+.if ${_PYTHON_VERSION} == 27
+DEPENDS+=	${PYPKGPREFIX}-cookies-[0-9]*:../../www/py-cookies
 DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 .endif
 
