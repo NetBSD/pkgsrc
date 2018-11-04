@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2018/08/29 12:25:52 adam Exp $
+# $NetBSD: Makefile.common,v 1.5 2018/11/04 16:51:30 bsiegert Exp $
 # used by devel/libblkid/Makefile
 # used by devel/libuuid/Makefile
 # used by x11/mcookie/Makefile
@@ -16,9 +16,7 @@ PATCHDIR=	${.CURDIR}/../../devel/libuuid/patches
 
 USE_GCC_RUNTIME=	yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config ksh
-# XXX PR pkg/52877 configure is broken on netbsd6
-CONFIG_SHELL=		ksh
+USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-all-programs
 CONFIGURE_ARGS+=	--disable-bash-completion
@@ -30,3 +28,11 @@ CONFIGURE_ARGS+=	--without-ncursesw
 CONFIGURE_ARGS+=	--disable-nls
 
 TEST_TARGET=		check
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+# XXX PR pkg/52877: configure is broken on netbsd6
+.if (${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[0123456].*))
+USE_TOOLS+=            ksh
+CONFIG_SHELL=          ksh
+.endif
