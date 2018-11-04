@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.11 2018/07/28 12:29:20 bsiegert Exp $
+# $NetBSD: options.mk,v 1.12 2018/11/04 16:34:57 bsiegert Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wget
 PKG_SUPPORTED_OPTIONS=	idn inet6 psl
 PKG_OPTIONS_REQUIRED_GROUPS=	ssl
 PKG_OPTIONS_GROUP.ssl=	gnutls openssl
-PKG_SUGGESTED_OPTIONS=	idn inet6 openssl
+PKG_SUGGESTED_OPTIONS=	idn inet6 openssl psl
 
 .include "../../mk/bsd.options.mk"
 
