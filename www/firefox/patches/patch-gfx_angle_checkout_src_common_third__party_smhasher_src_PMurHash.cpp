@@ -1,4 +1,6 @@
-$NetBSD: patch-gfx_angle_checkout_src_common_third__party_smhasher_src_PMurHash.cpp,v 1.2 2018/11/04 00:38:44 ryoon Exp $
+$NetBSD: patch-gfx_angle_checkout_src_common_third__party_smhasher_src_PMurHash.cpp,v 1.3 2018/11/04 04:46:57 ryoon Exp $
+
+Fix build where _LITTLE_ENDIAN is not an integer.
 
 --- gfx/angle/checkout/src/common/third_party/smhasher/src/PMurHash.cpp.orig	2018-10-18 20:06:05.000000000 +0000
 +++ gfx/angle/checkout/src/common/third_party/smhasher/src/PMurHash.cpp

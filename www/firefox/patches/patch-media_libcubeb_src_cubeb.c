@@ -1,4 +1,6 @@
-$NetBSD: patch-media_libcubeb_src_cubeb.c,v 1.8 2018/11/04 00:38:45 ryoon Exp $
+$NetBSD: patch-media_libcubeb_src_cubeb.c,v 1.9 2018/11/04 04:46:57 ryoon Exp $
+
+* Support OSS audio
 
 --- media/libcubeb/src/cubeb.c.orig	2018-10-18 20:06:09.000000000 +0000
 +++ media/libcubeb/src/cubeb.c

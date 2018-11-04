@@ -1,4 +1,6 @@
-$NetBSD: patch-toolkit_library_moz.build,v 1.17 2018/11/04 00:38:45 ryoon Exp $
+$NetBSD: patch-toolkit_library_moz.build,v 1.18 2018/11/04 04:46:57 ryoon Exp $
+
+* Restore OSS support
 
 --- toolkit/library/moz.build.orig	2018-10-18 20:06:16.000000000 +0000
 +++ toolkit/library/moz.build
