@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4587 2018/11/05 12:47:15 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4588 2018/11/05 18:08:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6409,3 +6409,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/py-numpy to 1.15.4 [adam 2018-11-05]
 	Updated sysutils/htop to 2.2.0 [jperkin 2018-11-05]
 	Updated sysutils/py-psutil to 5.4.8 [adam 2018-11-05]
+	Updated lang/py-asttokens to 1.1.13 [adam 2018-11-05]
+	Updated www/py-paste to 3.0.4 [adam 2018-11-05]
