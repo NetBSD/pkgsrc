@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.77 2017/10/10 13:57:23 jperkin Exp $
+# $NetBSD: SunOS.mk,v 1.78 2018/11/05 19:26:38 schmonz Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -131,7 +131,7 @@ _OPSYS_SUPPORTS_CWRAPPERS=	yes
 _OPSYS_SUPPORTS_FORTIFY=yes
 
 # support stack protection (with GCC)
-_OPSYS_SUPPORTS_SSP=	yes
+_OPSYS_SUPPORTS_SSP?=	yes
 
 _OPSYS_CAN_CHECK_SHLIBS=	yes # requires readelf
 
