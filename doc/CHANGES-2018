@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4589 2018/11/05 18:22:24 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.4590 2018/11/05 19:00:07 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6397,6 +6397,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-paste to 3.0.3 [adam 2018-11-04]
 	Updated parallel/mpi-ch to 3.2.1 [bsiegert 2018-11-04]
 	Updated lang/go110 to 1.10.5 [bsiegert 2018-11-04]
+	Updated lang/go111 to 1.11.2 [bsiegert 2018-11-04]
 	Updated archivers/py-zstandard to 0.10.2 [adam 2018-11-04]
 	Updated www/py-urllib3 to 1.24.1 [adam 2018-11-04]
 	Updated net/py-responses to 0.10.2 [adam 2018-11-04]
@@ -6412,3 +6413,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/py-asttokens to 1.1.13 [adam 2018-11-05]
 	Updated www/py-paste to 3.0.4 [adam 2018-11-05]
 	Updated mail/swaks to 20181104.0 [schmonz 2018-11-05]
+	Updated wm/xfce4-wm to 4.13.1 [bsiegert 2018-11-05]
