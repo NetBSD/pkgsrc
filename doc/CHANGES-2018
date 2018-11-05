@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4586 2018/11/05 12:19:33 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.4587 2018/11/05 12:47:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6408,3 +6408,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated archivers/py-lz4 to 2.1.2 [adam 2018-11-05]
 	Updated math/py-numpy to 1.15.4 [adam 2018-11-05]
 	Updated sysutils/htop to 2.2.0 [jperkin 2018-11-05]
+	Updated sysutils/py-psutil to 5.4.8 [adam 2018-11-05]
