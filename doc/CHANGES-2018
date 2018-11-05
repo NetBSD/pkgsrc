@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4588 2018/11/05 18:08:29 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4589 2018/11/05 18:22:24 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6411,3 +6411,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/py-psutil to 5.4.8 [adam 2018-11-05]
 	Updated lang/py-asttokens to 1.1.13 [adam 2018-11-05]
 	Updated www/py-paste to 3.0.4 [adam 2018-11-05]
+	Updated mail/swaks to 20181104.0 [schmonz 2018-11-05]
