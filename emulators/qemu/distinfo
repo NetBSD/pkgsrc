@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.137 2018/08/16 10:15:09 adam Exp $
+$NetBSD: distinfo,v 1.138 2018/11/05 07:27:59 skrll Exp $
 
 SHA1 (qemu-3.0.0.tar.xz) = fffb4aa0139c7290295a129e040cec0df4468ea6
 RMD160 (qemu-3.0.0.tar.xz) = ea61cb8b6b144c7017c3a53161f883c3aeb15611
@@ -9,6 +9,9 @@ SHA1 (patch-audio_audio.c) = 98a1de2fd48638886b5d16f6a61dc72910e98b41
 SHA1 (patch-block.c) = 5eb15a87d6646719bf1e9277fbe73a99e4905481
 SHA1 (patch-contrib_ivshmem-client_ivshmem-client.c) = 40c8751607cbf66a37e4c4e08f2664b864e2e984
 SHA1 (patch-contrib_ivshmem-server_ivshmem-server.c) = d8f53432b5752f4263dc4ef96108a976a05147a3
+SHA1 (patch-hw_arm_boot.c) = bd28e4b8e8732a2b01ba1d0e8a727e8e7bc5227a
+SHA1 (patch-hw_core_loader.c) = 06ff8bfa5be720e428668987598d55b6799202e7
+SHA1 (patch-hw_core_uboot__image.h) = 26a656310d991747b7080b9f28042afd536e4c28
 SHA1 (patch-hw_display_omap__dss.c) = 6b13242f28e32346bc70548c216c578d98fd3420
 SHA1 (patch-hw_net_etraxfs__eth.c) = e5dd1661d60dbcd27b332403e0843500ba9544bc
 SHA1 (patch-hw_net_xilinx__axienet.c) = ebcd2676d64ce6f31e4a8c976d4fdf530ad5e8b7
