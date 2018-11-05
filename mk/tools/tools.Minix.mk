@@ -1,4 +1,4 @@
-# $NetBSD: tools.Minix.mk,v 1.7 2018/10/29 10:44:29 sevan Exp $
+# $NetBSD: tools.Minix.mk,v 1.8 2018/11/05 12:57:47 sevan Exp $
 #
 # System-supplied tools for the Minix operating system.
 
@@ -7,6 +7,7 @@ TOOLS_PLATFORM.[?=		/bin/[
 TOOLS_PLATFORM.awk?=		/usr/bin/awk
 TOOLS_PLATFORM.basename?=	/usr/bin/basename
 TOOLS_PLATFORM.bsdtar?=		/bin/tar
+TOOLS_PLATFORM.byacc?= 		/usr/bin/yacc
 TOOLS_PLATFORM.bzcat?=		/usr/bin/bzcat
 TOOLS_PLATFORM.bzip2?=		/usr/bin/bzip2
 TOOLS_PLATFORM.cat?=		/bin/cat
@@ -30,6 +31,9 @@ TOOLS_PLATFORM.file?=		/usr/bin/file
 TOOLS_PLATFORM.find?=		/usr/bin/find
 TOOLS_PLATFORM.flex?=		/usr/bin/flex
 TOOLS_PLATFORM.ftp?=		/usr/bin/ftp
+TOOLS_PLATFORM.gegrep?= 	/usr/bin/egrep
+TOOLS_PLATFORM.gfgrep?= 	/usr/bin/fgrep
+TOOLS_PLATFORM.ggrep?= 		/usr/bin/grep
 TOOLS_PLATFORM.grep?=		/usr/bin/grep
 TOOLS_PLATFORM.gunzip?=		/usr/bin/gunzip -f
 TOOLS_PLATFORM.gzcat?=		/usr/bin/gzcat
@@ -38,18 +42,21 @@ TOOLS_PLATFORM.head?=		/usr/bin/head
 TOOLS_PLATFORM.hostname?=	/bin/hostname
 TOOLS_PLATFORM.id?=		/usr/bin/id
 TOOLS_PLATFORM.install?=	/usr/bin/install
+TOOLS_PLATFORM.install-info?= 	/usr/bin/install-info
 TOOLS_PLATFORM.ksh?=		/bin/ksh
 TOOLS_PLATFORM.lex?=		/usr/bin/lex
 TOOLS_PLATFORM.ln?=		/bin/ln
 TOOLS_PLATFORM.ls?=		/bin/ls
 TOOLS_PLATFORM.m4?=		/usr/bin/m4
 TOOLS_PLATFORM.mail?=		/usr/bin/mail
+TOOLS_PLATFORM.makeinfo?= 	/usr/bin/makeinfo
 TOOLS_PLATFORM.mkdir?=		/bin/mkdir -p
 TOOLS_PLATFORM.mktemp?=		/usr/bin/mktemp
 TOOLS_PLATFORM.mtree?=		/usr/sbin/mtree
 TOOLS_PLATFORM.mv?=		/bin/mv
 TOOLS_PLATFORM.nice?=		/usr/bin/nice
 TOOLS_PLATFORM.nroff?=		/usr/bin/nroff
+TOOLS_PLATFORM.openssl?= 	/usr/bin/openssl
 TOOLS_PLATFORM.patch?=		/usr/bin/patch
 TOOLS_PLATFORM.pax?=		/bin/pax
 TOOLS_PLATFORM.printf?=		/usr/bin/printf
@@ -72,4 +79,6 @@ TOOLS_PLATFORM.tsort?=		/usr/bin/tsort
 TOOLS_PLATFORM.uniq?=		/usr/bin/uniq
 TOOLS_PLATFORM.wc?=		/usr/bin/wc
 TOOLS_PLATFORM.xargs?=		/usr/bin/xargs
+TOOLS_PLATFORM.xz?= 		/usr/bin/xz
+TOOLS_PLATFORM.xzcat?= 		/usr/bin/xzcat
 TOOLS_PLATFORM.yacc?=		/usr/bin/yacc
