@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.55 2018/07/24 23:46:15 maya Exp $ -->
+<!-- $NetBSD: components.xml,v 1.56 2018/11/05 20:36:35 rillig Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -202,7 +202,12 @@ converters    games         mbone         print         x11
   <para>The <filename>distinfo</filename> file also contains the
   checksums for all the patches found in the
   <filename>patches</filename> directory (see <xref
-  linkend="components.patches"/>).</para>
+  linkend="components.patches"/>). These checksums ensure that patches
+  are only applied intentionally and that they don't accidentally change,
+  e.g. when merging different changes together. They also make sure that
+  new patches are actually added to CVS and old ones are removed.
+  Too see whether the patches and the <filename>distinfo</filename> file
+  match, run <command>pkglint</command> after changing the patches.</para>
 
   <para>To regenerate the <filename>distinfo</filename> file, use the
   <command>make distinfo</command> command.</para>
