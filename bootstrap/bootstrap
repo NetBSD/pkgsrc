@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.256 2018/10/30 15:22:53 sevan Exp $
+# $NetBSD: bootstrap,v 1.257 2018/11/05 19:26:38 schmonz Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -841,6 +841,7 @@ SunOS)
 	whoamiprog="${idprog} -un"
 	machine_arch=`uname -p | sed -e 's/i86pc/i386/'`
 	check_compiler=yes
+	check_ssp=yes
 	;;
 UnixWare)
 	root_group=sys
@@ -991,6 +992,27 @@ if [ "$compiler" = "" ] && [ x"$check_compiler" = x"yes" ]; then
 	fi
 fi
 
+has_ssp_support() {
+	_compiler=cc
+	if [ "$compiler" != "" ]; then
+		_compiler="$compiler"
+	fi
+
+	mkdir_p_early ${wrkdir}/tmp
+	echo 'int main(void){return 0;}' > ${wrkdir}/tmp/ssp.c
+	${_compiler} -fstack-protector-strong -o ${wrkdir}/tmp/ssp ${wrkdir}/tmp/ssp.c >/dev/null 2>&1
+
+	if [ $? -eq 0 ]; then
+		echo yes
+	else
+		echo no
+	fi
+}
+
+if [ "$has_ssp" = "" ] && [ x"$check_ssp" = x"yes" ]; then
+	has_ssp=`has_ssp_support`
+fi
+
 mkdir_p_early ${wrkdir}/bin
 
 # build install-sh
@@ -1025,6 +1047,9 @@ fi
 PKG_DBDIR=$pkgdbdir; export PKG_DBDIR
 LOCALBASE=$prefix; export LOCALBASE
 VARBASE=$varbase; export VARBASE
+if [ x"$has_ssp" = x"no" ] && [ x"$check_ssp" = x"yes" ]; then
+_OPSYS_SUPPORTS_SSP=no; export _OPSYS_SUPPORTS_SSP
+fi
 
 # set up an example mk.conf file
 TARGET_MKCONF=${wrkdir}/mk.conf.example
@@ -1071,6 +1096,10 @@ if [ -n "$SUNWSPROBASE" ]; then
 	echo "SUNWSPROBASE=		$SUNWSPROBASE" >> ${TARGET_MKCONF}
 fi
 echo "" >> ${TARGET_MKCONF}
+
+if [ x"$has_ssp" = x"no" ] && [ x"$check_ssp" = x"yes" ]; then
+	echo "_OPSYS_SUPPORTS_SSP=	no" >> ${TARGET_MKCONF}
+fi
 
 # enable unprivileged builds if not root
 if [ "$unprivileged" = "yes" ]; then
