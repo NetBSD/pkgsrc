@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.11 2017/11/24 02:06:13 maya Exp $
+$NetBSD: distinfo,v 1.12 2018/11/05 12:19:23 jperkin Exp $
 
-SHA1 (htop-2.0.2.tar.gz) = 201f793f13dce2448e36047079875b9bd5bba75a
-RMD160 (htop-2.0.2.tar.gz) = af17b9f7e1744e2db4d6a28c95cdfb9536343786
-SHA512 (htop-2.0.2.tar.gz) = 1c9bf71a36c56b301667aa6d03756fc757fbcb63e848d9581d10db3df6193cdeb00e55ceb6e2392794ac03ea034b04459a8fe550b3ac2318cd86263a74c78cda
-Size (htop-2.0.2.tar.gz) = 476364 bytes
-SHA1 (patch-TraceScreen.c) = 85f9e26c9a2ddf1e1b4df7010194a43bf622b2ea
-SHA1 (patch-configure.ac) = 87557f0b0027462f244cd0c9e14739d10bbfc010
+SHA1 (htop-2.2.0.tar.gz) = 5da790e6addf495edc4d8ed7d69d1f0de085c7ad
+RMD160 (htop-2.2.0.tar.gz) = 4d89c35c22c5e6377d374af0e0ff68610b22c79f
+SHA512 (htop-2.2.0.tar.gz) = ec1335bf0e3e0387e5e50acbc508d0effad19c4bc1ac312419dc97b82901f4819600d6f87a91668f39d429536d17304d4b14634426a06bec2ecd09df24adc62e
+Size (htop-2.2.0.tar.gz) = 308109 bytes
+SHA1 (patch-configure) = b7205e0d3466d89be4ab4fb29676091c05b599b1
 SHA1 (patch-linux_Platform.c) = d37f4f5116023fa8d8f58f6b925e4f86e9748cea
