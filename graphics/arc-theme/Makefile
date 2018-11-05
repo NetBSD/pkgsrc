@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2018/05/13 20:34:45 youri Exp $
+# $NetBSD: Makefile,v 1.11 2018/11/05 16:58:32 bsiegert Exp $
 
 DISTNAME=	arc-theme
 PKGNAME=	arc-theme-20170302
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=horst3180/}
 
@@ -22,6 +23,8 @@ DEPENDS+=	gnome-themes-standard-[0-9]*:../../graphics/gnome-themes-standard
 pre-configure:
 	${LN} -s 3.20 ${WRKSRC}/common/gtk-3.0/3.22
 	${LN} -s 3.20 ${WRKSRC}/common/gnome-shell/3.22
+	${LN} -s 3.20 ${WRKSRC}/common/gtk-3.0/3.24
+	${LN} -s 3.20 ${WRKSRC}/common/gnome-shell/3.24
 	cd ${WRKSRC} && autoreconf --verbose --force --install
 
 .include "../../x11/gtk2/buildlink3.mk"
