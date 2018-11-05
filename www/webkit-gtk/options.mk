@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2018/10/24 18:31:07 leot Exp $
+# $NetBSD: options.mk,v 1.14 2018/11/05 16:50:48 bsiegert Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.webkit-gtk
@@ -50,7 +50,7 @@ CMAKE_ARGS+=	-DENABLE_WEBGL=OFF
 #
 .if !empty(PKG_OPTIONS:Menchant)
 CMAKE_ARGS+=	-DENABLE_SPELLCHECK=ON
-.include "../../textproc/enchant/buildlink3.mk"
+.include "../../textproc/enchant2/buildlink3.mk"
 .else
 CMAKE_ARGS+=	-DENABLE_SPELLCHECK=OFF
 .endif
