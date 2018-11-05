@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4581 2018/11/05 05:42:51 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.4582 2018/11/05 05:43:04 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6401,3 +6401,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-urllib3 to 1.24.1 [adam 2018-11-04]
 	Updated net/py-responses to 0.10.2 [adam 2018-11-04]
 	Updated textproc/xapian to 1.4.9 [schmonz 2018-11-05]
+	Updated textproc/xapian-omega to 1.4.9 [schmonz 2018-11-05]
