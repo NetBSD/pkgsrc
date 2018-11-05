@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18600 2018/11/04 21:43:48 wiz Exp $
+$NetBSD: TODO,v 1.18601 2018/11/05 12:19:33 jperkin Exp $
 
 Suggested new packages
 ======================
@@ -840,7 +840,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hs-zlib-0.6.1.1
 	o html2wml-0.4.11
 	o htmldoc-1.8.28
-	o htop-2.1.1
 	o http_load-20140814
 	o hugo-0.32
 	o icbirc-2.0
