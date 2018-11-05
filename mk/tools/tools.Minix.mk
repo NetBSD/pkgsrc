@@ -1,4 +1,4 @@
-# $NetBSD: tools.Minix.mk,v 1.9 2018/11/05 13:24:46 sevan Exp $
+# $NetBSD: tools.Minix.mk,v 1.10 2018/11/05 13:32:53 sevan Exp $
 #
 # System-supplied tools for the Minix operating system.
 
@@ -35,6 +35,7 @@ TOOLS_PLATFORM.gegrep?= 	/usr/bin/egrep
 TOOLS_PLATFORM.gfgrep?= 	/usr/bin/fgrep
 TOOLS_PLATFORM.ggrep?= 		/usr/bin/grep
 TOOLS_PLATFORM.grep?=		/usr/bin/grep
+TOOLS_PLATFORM.gsoelim?=	${TOOLS_PLATFORM.soelim}	# GNUish
 TOOLS_PLATFORM.gunzip?=		/usr/bin/gunzip -f
 TOOLS_PLATFORM.gzcat?=		/usr/bin/gzcat
 TOOLS_PLATFORM.gzip?=		/usr/bin/gzip -nf ${GZIP}
@@ -70,11 +71,15 @@ TOOLS_PLATFORM.readelf?=	/usr/bin/readelf
 .else
 TOOLS_PLATFORM.readelf?=	${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-readelf
 .endif
+TOOLS_PLATFORM.readlink?=	/usr/bin/readlink
 TOOLS_PLATFORM.rm?=		/bin/rm
 TOOLS_PLATFORM.rmdir?=		/bin/rmdir
+TOOLS_PLATFORM.sdiff?=		/usr/bin/sdiff
 TOOLS_PLATFORM.sed?=		/usr/bin/sed
 TOOLS_PLATFORM.sh?=		/bin/sh
+TOOLS_PLATFORM.shlock?=		/usr/bin/shlock
 TOOLS_PLATFORM.sleep?=		/bin/sleep
+TOOLS_PLATFORM.soelim?=		/usr/bin/soelim
 TOOLS_PLATFORM.sort?=		/usr/bin/sort
 .if empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 TOOLS_PLATFORM.strip?=		/usr/bin/strip
