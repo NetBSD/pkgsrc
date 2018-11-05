@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.24 2017/06/18 22:56:55 youri Exp $
+$NetBSD: distinfo,v 1.25 2018/11/05 18:58:49 bsiegert Exp $
 
-SHA1 (xfwm4-4.13.0.tar.bz2) = 2a009e0e24c92e37d7fa16c76a4ed55cb4ade9cc
-RMD160 (xfwm4-4.13.0.tar.bz2) = 6793acf360ea06e601c90e3317938b01b372b3c2
-SHA512 (xfwm4-4.13.0.tar.bz2) = 01c6cc31dc179ccb51f9881f64ee9e4e16320ab888381d0b203ca0b2a46097048c30eabe7083aaec869c80e8e358c287896d6a1965a36ed6f2f981c27cfb2dce
-Size (xfwm4-4.13.0.tar.bz2) = 1229878 bytes
+SHA1 (xfwm4-4.13.1.tar.bz2) = 74e367d8b1e37872c3a7c5d0b5a1e0b1195a6228
+RMD160 (xfwm4-4.13.1.tar.bz2) = ca6a598107a1a0bb8ab2e9837a43c25955295754
+SHA512 (xfwm4-4.13.1.tar.bz2) = 2ac5acdefff3a89b8525719b345dfeb2dc71104b4da341afe99d7c57c049753c4cdb81a512d1f344e5fb463c7143673e83316b63888777bdcf254c4a07ca8320
+Size (xfwm4-4.13.1.tar.bz2) = 1224120 bytes
 SHA1 (patch-defaults_defaults) = 116409b6ee52344984bf6547c9f6cf06d6d66b92
