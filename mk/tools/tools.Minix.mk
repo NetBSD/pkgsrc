@@ -1,4 +1,4 @@
-# $NetBSD: tools.Minix.mk,v 1.8 2018/11/05 12:57:47 sevan Exp $
+# $NetBSD: tools.Minix.mk,v 1.9 2018/11/05 13:24:46 sevan Exp $
 #
 # System-supplied tools for the Minix operating system.
 
@@ -41,7 +41,11 @@ TOOLS_PLATFORM.gzip?=		/usr/bin/gzip -nf ${GZIP}
 TOOLS_PLATFORM.head?=		/usr/bin/head
 TOOLS_PLATFORM.hostname?=	/bin/hostname
 TOOLS_PLATFORM.id?=		/usr/bin/id
+.if empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 TOOLS_PLATFORM.install?=	/usr/bin/install
+.else
+TOOLS_PLATFORM.install?=	${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-install
+.endif
 TOOLS_PLATFORM.install-info?= 	/usr/bin/install-info
 TOOLS_PLATFORM.ksh?=		/bin/ksh
 TOOLS_PLATFORM.lex?=		/usr/bin/lex
@@ -61,13 +65,22 @@ TOOLS_PLATFORM.patch?=		/usr/bin/patch
 TOOLS_PLATFORM.pax?=		/bin/pax
 TOOLS_PLATFORM.printf?=		/usr/bin/printf
 TOOLS_PLATFORM.pwd?=		/bin/pwd
+.if empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+TOOLS_PLATFORM.readelf?=	/usr/bin/readelf
+.else
+TOOLS_PLATFORM.readelf?=	${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-readelf
+.endif
 TOOLS_PLATFORM.rm?=		/bin/rm
 TOOLS_PLATFORM.rmdir?=		/bin/rmdir
 TOOLS_PLATFORM.sed?=		/usr/bin/sed
 TOOLS_PLATFORM.sh?=		/bin/sh
 TOOLS_PLATFORM.sleep?=		/bin/sleep
 TOOLS_PLATFORM.sort?=		/usr/bin/sort
+.if empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 TOOLS_PLATFORM.strip?=		/usr/bin/strip
+.else
+TOOLS_PLATFORM.strip?=		${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-strip
+.endif
 TOOLS_PLATFORM.tail?=		/usr/bin/tail
 TOOLS_PLATFORM.tar?=		/bin/tar
 TOOLS_PLATFORM.tee?=		/usr/bin/tee
@@ -82,3 +95,26 @@ TOOLS_PLATFORM.xargs?=		/usr/bin/xargs
 TOOLS_PLATFORM.xz?= 		/usr/bin/xz
 TOOLS_PLATFORM.xzcat?= 		/usr/bin/xzcat
 TOOLS_PLATFORM.yacc?=		/usr/bin/yacc
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.  for _t_ in ar as ld nm objcopy objdump ranlib readelf strip
+TOOLS_PATH.${MACHINE_GNU_PLATFORM}-${_t_}?=	\
+	${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-${_t_}
+TOOLS_CREATE+=	${MACHINE_GNU_PLATFORM}-${_t_}
+.  endfor
+
+TOOLS_PATH.ar?=		${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-ar
+TOOLS_CREATE+=			ar
+TOOLS_PATH.ranlib?=		${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-ranlib
+TOOLS_CREATE+=			ranlib
+
+NATIVE_CC:=	/usr/bin/cc -B /usr/libexec -B /usr/bin
+CC=		${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-gcc
+
+NATIVE_CXX:=	/usr/bin/c++ -B /usr/libexec -B /usr/bin
+CXX=		${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-g++
+
+NATIVE_LD:=	/usr/bin/ld
+LD=		${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-ld
+
+.endif
