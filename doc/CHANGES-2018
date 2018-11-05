@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4582 2018/11/05 05:43:04 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.4583 2018/11/05 08:04:44 skrll Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6402,3 +6402,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/py-responses to 0.10.2 [adam 2018-11-04]
 	Updated textproc/xapian to 1.4.9 [schmonz 2018-11-05]
 	Updated textproc/xapian-omega to 1.4.9 [schmonz 2018-11-05]
+	Updated emulators/qemu to 3.0.0nb3 [nick 2018-11-05]
