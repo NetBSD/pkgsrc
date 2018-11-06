@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/10/03 08:18:54 leot Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/11/06 13:55:41 leot Exp $
 bin/sqlmap
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -476,6 +476,27 @@ ${PYSITELIB}/sqlmap/plugins/dbms/firebird/syntax.pyo
 ${PYSITELIB}/sqlmap/plugins/dbms/firebird/takeover.py
 ${PYSITELIB}/sqlmap/plugins/dbms/firebird/takeover.pyc
 ${PYSITELIB}/sqlmap/plugins/dbms/firebird/takeover.pyo
+${PYSITELIB}/sqlmap/plugins/dbms/h2/__init__.py
+${PYSITELIB}/sqlmap/plugins/dbms/h2/__init__.pyc
+${PYSITELIB}/sqlmap/plugins/dbms/h2/__init__.pyo
+${PYSITELIB}/sqlmap/plugins/dbms/h2/connector.py
+${PYSITELIB}/sqlmap/plugins/dbms/h2/connector.pyc
+${PYSITELIB}/sqlmap/plugins/dbms/h2/connector.pyo
+${PYSITELIB}/sqlmap/plugins/dbms/h2/enumeration.py
+${PYSITELIB}/sqlmap/plugins/dbms/h2/enumeration.pyc
+${PYSITELIB}/sqlmap/plugins/dbms/h2/enumeration.pyo
+${PYSITELIB}/sqlmap/plugins/dbms/h2/filesystem.py
+${PYSITELIB}/sqlmap/plugins/dbms/h2/filesystem.pyc
+${PYSITELIB}/sqlmap/plugins/dbms/h2/filesystem.pyo
+${PYSITELIB}/sqlmap/plugins/dbms/h2/fingerprint.py
+${PYSITELIB}/sqlmap/plugins/dbms/h2/fingerprint.pyc
+${PYSITELIB}/sqlmap/plugins/dbms/h2/fingerprint.pyo
+${PYSITELIB}/sqlmap/plugins/dbms/h2/syntax.py
+${PYSITELIB}/sqlmap/plugins/dbms/h2/syntax.pyc
+${PYSITELIB}/sqlmap/plugins/dbms/h2/syntax.pyo
+${PYSITELIB}/sqlmap/plugins/dbms/h2/takeover.py
+${PYSITELIB}/sqlmap/plugins/dbms/h2/takeover.pyc
+${PYSITELIB}/sqlmap/plugins/dbms/h2/takeover.pyo
 ${PYSITELIB}/sqlmap/plugins/dbms/hsqldb/__init__.py
 ${PYSITELIB}/sqlmap/plugins/dbms/hsqldb/__init__.pyc
 ${PYSITELIB}/sqlmap/plugins/dbms/hsqldb/__init__.pyo
@@ -811,6 +832,9 @@ ${PYSITELIB}/sqlmap/tamper/least.pyo
 ${PYSITELIB}/sqlmap/tamper/lowercase.py
 ${PYSITELIB}/sqlmap/tamper/lowercase.pyc
 ${PYSITELIB}/sqlmap/tamper/lowercase.pyo
+${PYSITELIB}/sqlmap/tamper/luanginx.py
+${PYSITELIB}/sqlmap/tamper/luanginx.pyc
+${PYSITELIB}/sqlmap/tamper/luanginx.pyo
 ${PYSITELIB}/sqlmap/tamper/modsecurityversioned.py
 ${PYSITELIB}/sqlmap/tamper/modsecurityversioned.pyc
 ${PYSITELIB}/sqlmap/tamper/modsecurityversioned.pyo
@@ -820,9 +844,6 @@ ${PYSITELIB}/sqlmap/tamper/modsecurityzeroversioned.pyo
 ${PYSITELIB}/sqlmap/tamper/multiplespaces.py
 ${PYSITELIB}/sqlmap/tamper/multiplespaces.pyc
 ${PYSITELIB}/sqlmap/tamper/multiplespaces.pyo
-${PYSITELIB}/sqlmap/tamper/nonrecursivereplacement.py
-${PYSITELIB}/sqlmap/tamper/nonrecursivereplacement.pyc
-${PYSITELIB}/sqlmap/tamper/nonrecursivereplacement.pyo
 ${PYSITELIB}/sqlmap/tamper/overlongutf8.py
 ${PYSITELIB}/sqlmap/tamper/overlongutf8.pyc
 ${PYSITELIB}/sqlmap/tamper/overlongutf8.pyo
@@ -844,9 +865,6 @@ ${PYSITELIB}/sqlmap/tamper/randomcase.pyo
 ${PYSITELIB}/sqlmap/tamper/randomcomments.py
 ${PYSITELIB}/sqlmap/tamper/randomcomments.pyc
 ${PYSITELIB}/sqlmap/tamper/randomcomments.pyo
-${PYSITELIB}/sqlmap/tamper/securesphere.py
-${PYSITELIB}/sqlmap/tamper/securesphere.pyc
-${PYSITELIB}/sqlmap/tamper/securesphere.pyo
 ${PYSITELIB}/sqlmap/tamper/sp_password.py
 ${PYSITELIB}/sqlmap/tamper/sp_password.pyc
 ${PYSITELIB}/sqlmap/tamper/sp_password.pyo
@@ -1221,6 +1239,9 @@ ${PYSITELIB}/sqlmap/waf/binarysec.pyo
 ${PYSITELIB}/sqlmap/waf/blockdos.py
 ${PYSITELIB}/sqlmap/waf/blockdos.pyc
 ${PYSITELIB}/sqlmap/waf/blockdos.pyo
+${PYSITELIB}/sqlmap/waf/chinacache.py
+${PYSITELIB}/sqlmap/waf/chinacache.pyc
+${PYSITELIB}/sqlmap/waf/chinacache.pyo
 ${PYSITELIB}/sqlmap/waf/ciscoacexml.py
 ${PYSITELIB}/sqlmap/waf/ciscoacexml.pyc
 ${PYSITELIB}/sqlmap/waf/ciscoacexml.pyo
