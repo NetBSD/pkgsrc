@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4594 2018/11/06 13:56:12 leot Exp $
+$NetBSD: CHANGES-2018,v 1.4595 2018/11/06 14:33:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6418,3 +6418,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated biology/htslib to 1.9 [adam 2018-11-06]
 	Updated biology/samtools to 1.9 [adam 2018-11-06]
 	Updated security/sqlmap to 1.2.11 [leot 2018-11-06]
+	Updated www/py-channels to 2.1.5 [adam 2018-11-06]
+	Updated www/py-websockets to 7.0 [adam 2018-11-06]
+	Updated www/py-websocket-client to 0.54.0 [adam 2018-11-06]
