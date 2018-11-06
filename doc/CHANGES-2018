@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4592 2018/11/06 10:27:26 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4593 2018/11/06 10:49:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6416,3 +6416,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated wm/xfce4-wm to 4.13.1 [bsiegert 2018-11-05]
 	Updated lang/gcc6 to 6.5.0 [maya 2018-11-05]
 	Updated biology/htslib to 1.9 [adam 2018-11-06]
+	Updated biology/samtools to 1.9 [adam 2018-11-06]
