@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/09/07 11:26:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/11/06 14:31:48 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,6 +7,9 @@ ${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/websockets/__init__.py
 ${PYSITELIB}/websockets/__init__.pyc
 ${PYSITELIB}/websockets/__init__.pyo
+${PYSITELIB}/websockets/__main__.py
+${PYSITELIB}/websockets/__main__.pyc
+${PYSITELIB}/websockets/__main__.pyo
 ${PYSITELIB}/websockets/client.py
 ${PYSITELIB}/websockets/client.pyc
 ${PYSITELIB}/websockets/client.pyo
@@ -25,12 +28,6 @@ ${PYSITELIB}/websockets/extensions/base.pyo
 ${PYSITELIB}/websockets/extensions/permessage_deflate.py
 ${PYSITELIB}/websockets/extensions/permessage_deflate.pyc
 ${PYSITELIB}/websockets/extensions/permessage_deflate.pyo
-${PYSITELIB}/websockets/extensions/test_base.py
-${PYSITELIB}/websockets/extensions/test_base.pyc
-${PYSITELIB}/websockets/extensions/test_base.pyo
-${PYSITELIB}/websockets/extensions/test_permessage_deflate.py
-${PYSITELIB}/websockets/extensions/test_permessage_deflate.pyc
-${PYSITELIB}/websockets/extensions/test_permessage_deflate.pyo
 ${PYSITELIB}/websockets/framing.py
 ${PYSITELIB}/websockets/framing.pyc
 ${PYSITELIB}/websockets/framing.pyo
@@ -49,9 +46,6 @@ ${PYSITELIB}/websockets/protocol.pyo
 ${PYSITELIB}/websockets/py35/__init__.py
 ${PYSITELIB}/websockets/py35/__init__.pyc
 ${PYSITELIB}/websockets/py35/__init__.pyo
-${PYSITELIB}/websockets/py35/_test_client_server.py
-${PLIST.py35}${PYSITELIB}/websockets/py35/_test_client_server.pyc
-${PLIST.py35}${PYSITELIB}/websockets/py35/_test_client_server.pyo
 ${PYSITELIB}/websockets/py35/client.py
 ${PLIST.py35}${PYSITELIB}/websockets/py35/client.pyc
 ${PLIST.py35}${PYSITELIB}/websockets/py35/client.pyo
@@ -61,9 +55,6 @@ ${PLIST.py35}${PYSITELIB}/websockets/py35/server.pyo
 ${PYSITELIB}/websockets/py36/__init__.py
 ${PYSITELIB}/websockets/py36/__init__.pyc
 ${PYSITELIB}/websockets/py36/__init__.pyo
-${PYSITELIB}/websockets/py36/_test_client_server.py
-${PLIST.py35}${PYSITELIB}/websockets/py36/_test_client_server.pyc
-${PLIST.py35}${PYSITELIB}/websockets/py36/_test_client_server.pyo
 ${PYSITELIB}/websockets/py36/protocol.py
 ${PLIST.py36}${PYSITELIB}/websockets/py36/protocol.pyc
 ${PLIST.py36}${PYSITELIB}/websockets/py36/protocol.pyo
@@ -72,37 +63,6 @@ ${PYSITELIB}/websockets/server.pyc
 ${PYSITELIB}/websockets/server.pyo
 ${PYSITELIB}/websockets/speedups.c
 ${PYSITELIB}/websockets/speedups.so
-${PYSITELIB}/websockets/test_client_server.py
-${PYSITELIB}/websockets/test_client_server.pyc
-${PYSITELIB}/websockets/test_client_server.pyo
-${PYSITELIB}/websockets/test_exceptions.py
-${PYSITELIB}/websockets/test_exceptions.pyc
-${PYSITELIB}/websockets/test_exceptions.pyo
-${PYSITELIB}/websockets/test_framing.py
-${PYSITELIB}/websockets/test_framing.pyc
-${PYSITELIB}/websockets/test_framing.pyo
-${PYSITELIB}/websockets/test_handshake.py
-${PYSITELIB}/websockets/test_handshake.pyc
-${PYSITELIB}/websockets/test_handshake.pyo
-${PYSITELIB}/websockets/test_headers.py
-${PYSITELIB}/websockets/test_headers.pyc
-${PYSITELIB}/websockets/test_headers.pyo
-${PYSITELIB}/websockets/test_http.py
-${PYSITELIB}/websockets/test_http.pyc
-${PYSITELIB}/websockets/test_http.pyo
-${PYSITELIB}/websockets/test_localhost.pem
-${PYSITELIB}/websockets/test_protocol.py
-${PYSITELIB}/websockets/test_protocol.pyc
-${PYSITELIB}/websockets/test_protocol.pyo
-${PYSITELIB}/websockets/test_speedups.py
-${PYSITELIB}/websockets/test_speedups.pyc
-${PYSITELIB}/websockets/test_speedups.pyo
-${PYSITELIB}/websockets/test_uri.py
-${PYSITELIB}/websockets/test_uri.pyc
-${PYSITELIB}/websockets/test_uri.pyo
-${PYSITELIB}/websockets/test_utils.py
-${PYSITELIB}/websockets/test_utils.pyc
-${PYSITELIB}/websockets/test_utils.pyo
 ${PYSITELIB}/websockets/uri.py
 ${PYSITELIB}/websockets/uri.pyc
 ${PYSITELIB}/websockets/uri.pyo
