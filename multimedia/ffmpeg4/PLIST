@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/11/03 11:31:35 maya Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/11/06 19:31:09 adam Exp $
 bin/ffmpeg4
 bin/ffprobe4
 include/ffmpeg4/libavcodec/ac3_parser.h
@@ -119,19 +119,19 @@ include/ffmpeg4/libswscale/version.h
 lib/ffmpeg4/libavcodec.a
 lib/ffmpeg4/libavcodec.so
 lib/ffmpeg4/libavcodec.so.58
-lib/ffmpeg4/libavcodec.so.58.18.100
+lib/ffmpeg4/libavcodec.so.58.35.100
 lib/ffmpeg4/libavdevice.a
 lib/ffmpeg4/libavdevice.so
 lib/ffmpeg4/libavdevice.so.58
-lib/ffmpeg4/libavdevice.so.58.3.100
+lib/ffmpeg4/libavdevice.so.58.5.100
 lib/ffmpeg4/libavfilter.a
 lib/ffmpeg4/libavfilter.so
 lib/ffmpeg4/libavfilter.so.7
-lib/ffmpeg4/libavfilter.so.7.16.100
+lib/ffmpeg4/libavfilter.so.7.40.101
 lib/ffmpeg4/libavformat.a
 lib/ffmpeg4/libavformat.so
 lib/ffmpeg4/libavformat.so.58
-lib/ffmpeg4/libavformat.so.58.12.100
+lib/ffmpeg4/libavformat.so.58.20.100
 lib/ffmpeg4/libavresample.a
 lib/ffmpeg4/libavresample.so
 lib/ffmpeg4/libavresample.so.4
@@ -139,19 +139,19 @@ lib/ffmpeg4/libavresample.so.4.0.0
 lib/ffmpeg4/libavutil.a
 lib/ffmpeg4/libavutil.so
 lib/ffmpeg4/libavutil.so.56
-lib/ffmpeg4/libavutil.so.56.14.100
+lib/ffmpeg4/libavutil.so.56.22.100
 lib/ffmpeg4/libpostproc.a
 lib/ffmpeg4/libpostproc.so
 lib/ffmpeg4/libpostproc.so.55
-lib/ffmpeg4/libpostproc.so.55.1.100
+lib/ffmpeg4/libpostproc.so.55.3.100
 lib/ffmpeg4/libswresample.a
 lib/ffmpeg4/libswresample.so
 lib/ffmpeg4/libswresample.so.3
-lib/ffmpeg4/libswresample.so.3.1.100
+lib/ffmpeg4/libswresample.so.3.3.100
 lib/ffmpeg4/libswscale.a
 lib/ffmpeg4/libswscale.so
 lib/ffmpeg4/libswscale.so.5
-lib/ffmpeg4/libswscale.so.5.1.100
+lib/ffmpeg4/libswscale.so.5.3.100
 lib/ffmpeg4/pkgconfig/libavcodec.pc
 lib/ffmpeg4/pkgconfig/libavdevice.pc
 lib/ffmpeg4/pkgconfig/libavfilter.pc
