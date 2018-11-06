@@ -1,32 +1,27 @@
-# $NetBSD: Makefile,v 1.3 2018/08/22 09:42:59 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2018/11/06 10:24:14 adam Exp $
 
-DISTNAME=	htslib-1.8
-PKGREVISION=	1
+DISTNAME=	htslib-1.9
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=samtools/}
-GITHUB_PROJECT=	htslib
-GITHUB_TAG=	${PKGVERSION_NOREV}
+EXTRACT_SUFX=	.tar.bz2
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://www.htslib.org/
 COMMENT=	C library for high-throughput sequencing data formats
 LICENSE=	mit
 
-USE_TOOLS+=	autoconf automake autoreconf gmake perl
-GNU_CONFIGURE=	yes
-REPLACE_PERL=	test/compare_sam.pl test/test.pl
-
-SUBST_CLASSES+=		version
-SUBST_STAGE.version=	pre-configure
-SUBST_SED.version=	-e "s|m4_esyscmd_s(\[make print-version\])|[${PKGVERSION_NOREV}]|"
-SUBST_FILES.version=	${WRKSRC}/configure.ac
-
+USE_TOOLS+=		gmake perl
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-libcurl
 PKGCONFIG_OVERRIDE=	htslib.pc.in
+TEST_TARGET=		test
 
-pre-configure:
-	cd ${WRKSRC} && autoreconf
+REPLACE_PERL+=		test/compare_sam.pl
+REPLACE_PERL+=		test/test.pl
 
-.include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
