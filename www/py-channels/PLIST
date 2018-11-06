@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/06/14 07:57:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/11/06 14:21:51 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -40,9 +40,6 @@ ${PYSITELIB}/channels/http.pyo
 ${PYSITELIB}/channels/layers.py
 ${PYSITELIB}/channels/layers.pyc
 ${PYSITELIB}/channels/layers.pyo
-${PYSITELIB}/channels/log.py
-${PYSITELIB}/channels/log.pyc
-${PYSITELIB}/channels/log.pyo
 ${PYSITELIB}/channels/management/__init__.py
 ${PYSITELIB}/channels/management/__init__.pyc
 ${PYSITELIB}/channels/management/__init__.pyo
@@ -73,7 +70,6 @@ ${PYSITELIB}/channels/sessions.pyo
 ${PYSITELIB}/channels/signals.py
 ${PYSITELIB}/channels/signals.pyc
 ${PYSITELIB}/channels/signals.pyo
-${PYSITELIB}/channels/static/channels/js/websocketbridge.js
 ${PYSITELIB}/channels/staticfiles.py
 ${PYSITELIB}/channels/staticfiles.pyc
 ${PYSITELIB}/channels/staticfiles.pyo
