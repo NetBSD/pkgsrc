@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/10/11 10:26:30 adam Exp $
+$NetBSD: distinfo,v 1.6 2018/11/06 14:33:26 adam Exp $
 
-SHA1 (websocket_client-0.53.0.tar.gz) = 09bd8914944646fde9d2672392579a982ea0f031
-RMD160 (websocket_client-0.53.0.tar.gz) = 08f8044a230bc83812592859e8870176dbc30c6c
-SHA512 (websocket_client-0.53.0.tar.gz) = a20aad73545eb9cff493a9583e1ba5c895096b8de28f4360925f4ed2906d74cf96023ccea9097a23e71402430a623ce9a1456b14add26587b320de903503cb34
-Size (websocket_client-0.53.0.tar.gz) = 43276 bytes
+SHA1 (websocket_client-0.54.0.tar.gz) = 4ffb81e4dcae90f4959450f04efbc9ad7e0e451a
+RMD160 (websocket_client-0.54.0.tar.gz) = 9058c0b2d691f1bab5e0e6359e4cbc09ad1a103a
+SHA512 (websocket_client-0.54.0.tar.gz) = ba4dfb6b879ec88ca446f44a77b91bbace55faa1a276f493174f3dc5b96b4d400d43c886798666da98e331610f71b4629f894d97f4614acf8d64affe8370bfec
+Size (websocket_client-0.54.0.tar.gz) = 36413 bytes
