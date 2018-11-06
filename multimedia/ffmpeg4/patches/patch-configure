@@ -1,11 +1,12 @@
-$NetBSD: patch-configure,v 1.2 2018/05/27 16:28:12 tsutsui Exp $
+$NetBSD: patch-configure,v 1.3 2018/11/06 19:31:09 adam Exp $
 
 Enable PIC on NetBSD, even on i386 to avoid text relocations.
 Do not use 'rsync'.
+Portability fixes.
 
---- configure.orig	2018-04-20 10:02:55.000000000 +0000
+--- configure.orig	2018-11-05 23:22:33.000000000 +0000
 +++ configure
-@@ -2165,7 +2165,6 @@ TOOLCHAIN_FEATURES="
+@@ -2203,7 +2203,6 @@ TOOLCHAIN_FEATURES="
      inline_asm_labels
      inline_asm_nonlocal_labels
      pragma_deprecated
@@ -13,7 +14,19 @@ Do not use 'rsync'.
      symver_asm_label
      symver_gnu_asm
      vfp_args
-@@ -5043,6 +5042,7 @@ case $target_os in
+@@ -4844,9 +4843,9 @@ elif enabled mips; then
+                 disable mipsdsp
+                 disable mipsdspr2
+                 # When gcc version less than 5.3.0, add -fno-expensive-optimizations flag.
+-                if [ $cc == gcc ]; then
++                if [ $cc = gcc ]; then
+                     gcc_version=$(gcc -dumpversion)
+-                    if [ "$(echo "$gcc_version 5.3.0" | tr " " "\n" | sort -rV | head -n 1)" == "$gcc_version" ]; then
++                    if [ "$(echo "$gcc_version 5.3.0" | tr " " "\n" | sort -rV | head -n 1)" = "$gcc_version" ]; then
+                         expensive_optimization_flag=""
+                     else
+                         expensive_optimization_flag="-fno-expensive-optimizations"
+@@ -5140,6 +5139,7 @@ case $target_os in
          ;;
      netbsd)
          disable symver
@@ -21,7 +34,7 @@ Do not use 'rsync'.
          oss_indev_extralibs="-lossaudio"
          oss_outdev_extralibs="-lossaudio"
          enabled gcc || check_ldflags -Wl,-zmuldefs
-@@ -5429,10 +5429,13 @@ done
+@@ -5526,10 +5526,13 @@ done
  check_cc pragma_deprecated "" '_Pragma("GCC diagnostic ignored \"-Wdeprecated-declarations\"")'
  
  # The global variable ensures the bits appear unchanged in the object file.
@@ -38,11 +51,11 @@ Do not use 'rsync'.
  
  check_cc const_nan math.h "struct { double d; } static const bar[] = { { NAN } }"
  
-@@ -6190,7 +6193,6 @@ enabled makeinfo \
+@@ -6299,7 +6302,6 @@ enabled makeinfo \
  disabled makeinfo_html && texi2html --help 2> /dev/null | grep -q 'init-file' && enable texi2html || disable texi2html
  perl -v            > /dev/null 2>&1 && enable perl      || disable perl
  pod2man --help     > /dev/null 2>&1 && enable pod2man   || disable pod2man
 -rsync --help 2> /dev/null | grep -q 'contimeout' && enable rsync_contimeout || disable rsync_contimeout
  
  # check V4L2 codecs available in the API
- check_header linux/fb.h
+ check_headers linux/fb.h
