@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4597 2018/11/07 04:32:51 maya Exp $
+$NetBSD: CHANGES-2018,v 1.4598 2018/11/07 11:59:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6424,3 +6424,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/tor to 0.3.4.9 [adam 2018-11-06]
 	Updated multimedia/ffmpeg4 to 4.1 [adam 2018-11-06]
 	Updated lang/gcc8 to 8.2.0nb2 [maya 2018-11-07]
+	Updated databases/sqlite3 to 3.25.3 [adam 2018-11-07]
+	Updated security/gnupg2 to 2.2.11 [adam 2018-11-07]
