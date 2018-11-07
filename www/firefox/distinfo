@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.329 2018/11/04 09:10:40 maya Exp $
+$NetBSD: distinfo,v 1.330 2018/11/07 12:55:11 martin Exp $
 
 SHA1 (firefox-63.0.1.source.tar.xz) = d62a85ce78904171e9f863154fb8cd031cdbe4ee
 RMD160 (firefox-63.0.1.source.tar.xz) = 28f6431150deb10b967e4181ebfb5c332deedbd2
@@ -21,6 +21,7 @@ SHA1 (patch-js_src_gc_Memory.cpp) = 40d8285d3f5a060e68a2884dd81b39950f45ff95
 SHA1 (patch-js_src_threading_posix_Thread.cpp) = 47e612a676e614fd6dd43b8a3140218a3fbdc7fa
 SHA1 (patch-js_src_util_NativeStack.cpp) = 31541b96f763024f78fb6b4ef69e0d8806b224fa
 SHA1 (patch-js_src_wasm_WasmSignalHandlers.cpp) = 1c665a9383638774c00f6c5fead5d786b6c7944a
+SHA1 (patch-js_xpconnect_src_XPCMaps.cpp) = ff27c30fb34e0f1dcaade9a1163cb3407f01edef
 SHA1 (patch-media_libcubeb_gtest_moz.build) = ea6dcc7ceeb76ce1fb9d508cf43080a2eef3a9e4
 SHA1 (patch-media_libcubeb_src_cubeb.c) = 4fe5512c89fa9e0dd64573d2784e5e0f7fd4d866
 SHA1 (patch-media_libcubeb_src_cubeb__alsa.c) = f359a66a22f11142d05746e15894d998d3e3bf5a
@@ -37,4 +38,5 @@ SHA1 (patch-toolkit_mozapps_installer_packager.mk) = b2343fbad2556504dfd13601c02
 SHA1 (patch-toolkit_xre_glxtest.cpp) = cf048491778610454b914400e53072afedd96e7b
 SHA1 (patch-xpcom_base_nscore.h) = d7c96eda884d7f370442749c43caba50da61bbe4
 SHA1 (patch-xpcom_build_BinaryPath.h) = 9ec4b740388a4a887401efbb89810e96336576f7
-SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcinvoke__sparc64__netbsd.cpp) = 0792c2c626d906e71c5183994cb32bf8cdb3e239
+SHA1 (patch-xpcom_reflect_xptcall_md_unix_moz.build) = 412da80be2aa43852e08ad35e6523ae0842167ab
+SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcinvoke__sparc64__openbsd.cpp) = 569f10c29da6e8d30ee6b8568c85a629557a3943
