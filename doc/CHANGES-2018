@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4600 2018/11/07 13:00:32 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.4601 2018/11/07 13:08:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6428,3 +6428,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/gnupg2 to 2.2.11 [adam 2018-11-07]
 	Updated net/youtube-dl to 20181107 [leot 2018-11-07]
 	Updated print/qpdf to 8.2.1 [ryoon 2018-11-07]
+	Updated multimedia/libaom to 1.0.0nb1 [ryoon 2018-11-07]
