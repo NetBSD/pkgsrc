@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.118 2018/11/04 09:10:40 maya Exp $
+# $NetBSD: mozilla-common.mk,v 1.119 2018/11/07 12:55:11 martin Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -26,7 +26,11 @@ UNLIMIT_RESOURCES+=	datasize
 .include "../../mk/bsd.prefs.mk"
 
 TOOL_DEPENDS+=		cbindgen-[0-9]*:../../devel/cbindgen
+.if ${MACHINE_ARCH} == "sparc64"
+CONFIGURE_ARGS+=	--disable-nodejs
+.else
 TOOL_DEPENDS+=		nodejs-[0-9]*:../../lang/nodejs
+.endif
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 BUILD_DEPENDS+=		yasm>=1.1:../../devel/yasm
