@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/06/01 16:35:36 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2018/11/07 12:52:14 ryoon Exp $
 #
 
 DISTNAME=	LinLibertineTTF_5.1.3_2011_06_21
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://linuxlibertine.sourceforge.net/
 COMMENT=	Free TrueType font family
-#LICENSE=	gnu-gpl-v2 OR SIL OPEN FONT LICENSE Version 1.0
+LICENSE=	gnu-gpl-v2 OR ofl-v1.0
 
 WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	yes
