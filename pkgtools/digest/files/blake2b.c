@@ -24,8 +24,6 @@
  * SUCH DAMAGE.
  */
 
-#define	_POSIX_C_SOURCE	200809L
-
 #include <assert.h>
 #include <stdint.h>
 #include <string.h>
@@ -34,7 +32,7 @@
 
 void *(*volatile blake2b_explicit_memset_impl)(void *, int, size_t) = &memset;
 static void *
-explicit_memset(void *buf, int c, size_t n)
+blake2b_explicit_memset(void *buf, int c, size_t n)
 {
 
 	return (*blake2b_explicit_memset_impl)(buf, c, n);
@@ -169,7 +167,7 @@ blake2b_compress(uint64_t h[8], uint64_t c, uint64_t last,
 	h[6] ^= v6 ^ v14;
 	h[7] ^= v7 ^ v15;
 
-	(void)explicit_memset(m, 0, sizeof m);
+	(void)blake2b_explicit_memset(m, 0, sizeof m);
 }
 
 void
@@ -281,7 +279,7 @@ blake2b_final(struct blake2b *B, void *digest)
 	}
 
 	/* Erase the state.  */
-	(void)explicit_memset(B, 0, sizeof B);
+	(void)blake2b_explicit_memset(B, 0, sizeof B);
 }
 
 void
