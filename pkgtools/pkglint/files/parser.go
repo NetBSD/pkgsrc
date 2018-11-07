@@ -16,7 +16,7 @@ func NewParser(line Line, s string, emitWarnings bool) *Parser {
 }
 
 func (p *Parser) EOF() bool {
-	return p.repl.EOF()
+	return p.repl.Rest() == ""
 }
 
 func (p *Parser) Rest() string {
@@ -30,7 +30,7 @@ func (p *Parser) PkgbasePattern() (pkgbase string) {
 		if repl.AdvanceRegexp(`^\$\{\w+\}`) ||
 			repl.AdvanceRegexp(`^[\w.*+,{}]+`) ||
 			repl.AdvanceRegexp(`^\[[\d-]+\]`) {
-			pkgbase += repl.Group(0)
+			pkgbase += repl.Str()
 			continue
 		}
 
@@ -73,7 +73,7 @@ func (p *Parser) Dependency() *DependencyPattern {
 		op := repl.Str()
 		if repl.AdvanceRegexp(`^(?:(?:\$\{\w+\})+|\d[\w.]*)`) {
 			dp.LowerOp = op
-			dp.Lower = repl.Group(0)
+			dp.Lower = repl.Str()
 		} else {
 			repl.Reset(mark2)
 		}
@@ -82,7 +82,7 @@ func (p *Parser) Dependency() *DependencyPattern {
 		op := repl.Str()
 		if repl.AdvanceRegexp(`^(?:(?:\$\{\w+\})+|\d[\w.]*)`) {
 			dp.UpperOp = op
-			dp.Upper = repl.Group(0)
+			dp.Upper = repl.Str()
 		} else {
 			repl.Reset(mark2)
 		}
@@ -90,7 +90,7 @@ func (p *Parser) Dependency() *DependencyPattern {
 	if dp.LowerOp != "" || dp.UpperOp != "" {
 		return &dp
 	}
-	if repl.AdvanceStr("-") && !repl.EOF() {
+	if repl.AdvanceStr("-") && repl.Rest() != "" {
 		dp.Wildcard = repl.AdvanceRest()
 		return &dp
 	}

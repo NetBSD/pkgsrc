@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"io/ioutil"
 	"netbsd.org/pkglint/regex"
-	"netbsd.org/pkglint/trace"
 	"os"
 	"path"
 	"path/filepath"
@@ -36,6 +35,9 @@ func hasPrefix(s, prefix string) bool {
 }
 func hasSuffix(s, suffix string) bool {
 	return strings.HasSuffix(s, suffix)
+}
+func sprintf(format string, args ...interface{}) string {
+	return fmt.Sprintf(format, args...)
 }
 func fields(s string) []string {
 	return strings.Fields(s)
@@ -72,13 +74,17 @@ func replaceAllFunc(s string, re regex.Pattern, repl func(string) string) string
 func trimHspace(str string) string {
 	start := 0
 	end := len(str)
-	for start < end && (str[start] == ' ' || str[start] == '\t') {
+	for start < end && isHspace(str[start]) {
 		start++
 	}
-	for start < end && (str[end-1] == ' ' || str[end-1] == '\t') {
+	for start < end && isHspace(str[end-1]) {
 		end--
 	}
 	return str[start:end]
+}
+
+func isHspace(ch byte) bool {
+	return ch == ' ' || ch == '\t'
 }
 
 func ifelseStr(cond bool, a, b string) string {
@@ -111,9 +117,9 @@ func mustMatch(s string, re regex.Pattern) []string {
 	panic(fmt.Sprintf("mustMatch %q %q", s, re))
 }
 
-func isEmptyDir(fname string) bool {
-	dirents, err := ioutil.ReadDir(fname)
-	if err != nil || hasSuffix(fname, "/CVS") {
+func isEmptyDir(fileName string) bool {
+	dirents, err := ioutil.ReadDir(fileName)
+	if err != nil || hasSuffix(fileName, "/CVS") {
 		return true
 	}
 	for _, dirent := range dirents {
@@ -121,7 +127,7 @@ func isEmptyDir(fname string) bool {
 		if isIgnoredFilename(name) {
 			continue
 		}
-		if dirent.IsDir() && isEmptyDir(fname+"/"+name) {
+		if dirent.IsDir() && isEmptyDir(fileName+"/"+name) {
 			continue
 		}
 		return false
@@ -129,16 +135,16 @@ func isEmptyDir(fname string) bool {
 	return true
 }
 
-func getSubdirs(fname string) []string {
-	dirents, err := ioutil.ReadDir(fname)
+func getSubdirs(fileName string) []string {
+	dirents, err := ioutil.ReadDir(fileName)
 	if err != nil {
-		NewLineWhole(fname).Fatalf("Cannot be read: %s", err)
+		NewLineWhole(fileName).Fatalf("Cannot be read: %s", err)
 	}
 
 	var subdirs []string
 	for _, dirent := range dirents {
 		name := dirent.Name()
-		if dirent.IsDir() && !isIgnoredFilename(name) && !isEmptyDir(fname+"/"+name) {
+		if dirent.IsDir() && !isIgnoredFilename(name) && !isEmptyDir(fileName+"/"+name) {
 			subdirs = append(subdirs, name)
 		}
 	}
@@ -154,10 +160,13 @@ func isIgnoredFilename(fileName string) bool {
 }
 
 // Checks whether a file is already committed to the CVS repository.
-func isCommitted(fname string) bool {
-	lines := loadCvsEntries(fname)
-	needle := "/" + path.Base(fname) + "/"
-	for _, line := range lines {
+func isCommitted(fileName string) bool {
+	lines := loadCvsEntries(fileName)
+	if lines == nil {
+		return false
+	}
+	needle := "/" + path.Base(fileName) + "/"
+	for _, line := range lines.Lines {
 		if hasPrefix(line.Text, needle) {
 			return true
 		}
@@ -165,14 +174,18 @@ func isCommitted(fname string) bool {
 	return false
 }
 
-func isLocallyModified(fname string) bool {
-	baseName := path.Base(fname)
+func isLocallyModified(fileName string) bool {
+	baseName := path.Base(fileName)
 
-	lines := loadCvsEntries(fname)
-	for _, line := range lines {
+	lines := loadCvsEntries(fileName)
+	if lines == nil {
+		return false
+	}
+
+	for _, line := range lines.Lines {
 		fields := strings.Split(line.Text, "/")
 		if 3 < len(fields) && fields[1] == baseName {
-			st, err := os.Stat(fname)
+			st, err := os.Stat(fileName)
 			if err != nil {
 				return true
 			}
@@ -190,8 +203,8 @@ func isLocallyModified(fname string) bool {
 	return false
 }
 
-func loadCvsEntries(fname string) []Line {
-	dir := path.Dir(fname)
+func loadCvsEntries(fileName string) Lines {
+	dir := path.Dir(fileName)
 	if dir == G.CvsEntriesDir {
 		return G.CvsEntriesLines
 	}
@@ -289,13 +302,13 @@ func varIsUsedSimilar(varname string) bool {
 		G.Pkg != nil && G.Pkg.vars.UsedSimilar(varname)
 }
 
-func fileExists(fname string) bool {
-	st, err := os.Stat(fname)
+func fileExists(fileName string) bool {
+	st, err := os.Stat(fileName)
 	return err == nil && st.Mode().IsRegular()
 }
 
-func dirExists(fname string) bool {
-	st, err := os.Stat(fname)
+func dirExists(fileName string) bool {
+	st, err := os.Stat(fileName)
 	return err == nil && st.Mode().IsDir()
 }
 
@@ -339,6 +352,10 @@ func mkopSubst(s string, left bool, from string, right bool, to string, flags st
 
 // relpath returns the relative path from `from` to `to`.
 func relpath(from, to string) string {
+	if hasPrefix(to, from) && len(to) > len(from)+1 && to[len(from)] == '/' {
+		return path.Clean(to[len(from)+1:])
+	}
+
 	absFrom := abspath(from)
 	absTo := abspath(to)
 	rel, err := filepath.Rel(absFrom, absTo)
@@ -350,17 +367,17 @@ func relpath(from, to string) string {
 	return result
 }
 
-func abspath(fname string) string {
-	abs, err := filepath.Abs(fname)
-	G.Assertf(err == nil, "abspath %q.", fname)
+func abspath(fileName string) string {
+	abs, err := filepath.Abs(fileName)
+	G.Assertf(err == nil, "abspath %q.", fileName)
 	return filepath.ToSlash(abs)
 }
 
 // Differs from path.Clean in that only "../../" is replaced, not "../".
 // Also, the initial directory is always kept.
 // This is to provide the package path as context in recursive invocations of pkglint.
-func cleanpath(fname string) string {
-	tmp := fname
+func cleanpath(fileName string) string {
+	tmp := fileName
 	for len(tmp) > 2 && hasPrefix(tmp, "./") {
 		tmp = tmp[2:]
 	}
@@ -745,7 +762,7 @@ type fileCacheEntry struct {
 	count   int
 	key     string
 	options LoadOptions
-	lines   []Line
+	lines   Lines
 }
 
 func NewFileCache(size int) *FileCache {
@@ -756,7 +773,7 @@ func NewFileCache(size int) *FileCache {
 		0}
 }
 
-func (c *FileCache) Put(fileName string, options LoadOptions, lines []Line) {
+func (c *FileCache) Put(fileName string, options LoadOptions, lines Lines) {
 	key := c.key(fileName)
 
 	entry := c.mapping[key]
@@ -777,11 +794,9 @@ func (c *FileCache) Put(fileName string, options LoadOptions, lines []Line) {
 }
 
 func (c *FileCache) removeOldEntries() {
-	printStats := func() bool { return false }()
-
 	sort.Slice(c.table, func(i, j int) bool { return c.table[j].count < c.table[i].count })
 
-	if printStats {
+	if G.Testing {
 		for _, e := range c.table {
 			G.logOut.Printf("FileCache %q with count %d.\n", e.key, e.count)
 		}
@@ -791,7 +806,7 @@ func (c *FileCache) removeOldEntries() {
 	newLen := len(c.table)
 	for newLen > 0 && c.table[newLen-1].count == minCount {
 		e := c.table[newLen-1]
-		if printStats {
+		if G.Testing {
 			G.logOut.Printf("FileCache.Evict %q with count %d.\n", e.key, e.count)
 		}
 		delete(c.mapping, e.key)
@@ -801,25 +816,25 @@ func (c *FileCache) removeOldEntries() {
 
 	// To avoid files getting stuck in the cache.
 	for _, e := range c.table {
-		if printStats {
+		if G.Testing {
 			G.logOut.Printf("FileCache.Halve %q with count %d.\n", e.key, e.count)
 		}
 		e.count /= 2
 	}
 }
 
-func (c *FileCache) Get(fileName string, options LoadOptions) []Line {
+func (c *FileCache) Get(fileName string, options LoadOptions) Lines {
 	key := c.key(fileName)
 	entry, found := c.mapping[key]
 	if found && entry.options == options {
 		c.hits++
 		entry.count++
 
-		lines := make([]Line, len(entry.lines))
-		for i, line := range entry.lines {
+		lines := make([]Line, entry.lines.Len())
+		for i, line := range entry.lines.Lines {
 			lines[i] = NewLineMulti(fileName, int(line.firstLine), int(line.lastLine), line.Text, line.raw)
 		}
-		return lines
+		return NewLines(fileName, lines)
 	}
 	c.misses++
 	return nil
@@ -841,3 +856,7 @@ func (c *FileCache) Evict(fileName string) {
 func (c *FileCache) key(fileName string) string {
 	return path.Clean(fileName)
 }
+
+func makeHelp(topic string) string { return bmake("help topic=" + topic) }
+
+func bmake(target string) string { return sprintf("%s %s", confMake, target) }

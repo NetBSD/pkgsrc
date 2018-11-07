@@ -1,29 +1,34 @@
 package licenses
 
 import (
-	"netbsd.org/pkglint/regex"
 	"netbsd.org/pkglint/textproc"
+	"strings"
 )
 
-// Condition describes a complex license condition.
-// It has either `Name` or `Paren` or `Children` set.
-// In the `Children` case, `And` and `Or` specify the operators used.
-// Malformed license conditions can have both `And` and `Or` set.
+// Condition describes the syntax of a complex license condition.
+// It has either Name or Paren or Children set.
+// In the Children case, either And or Or specify the operators used.
+// Only malformed license conditions can have both And and Or set.
 type Condition struct {
-	Name     string       `json:",omitempty"`
-	Paren    *Condition   `json:",omitempty"`
-	And      bool         `json:",omitempty"`
-	Or       bool         `json:",omitempty"`
-	Children []*Condition `json:",omitempty"`
+	Name     string       `json:",omitempty"` // A license name, such as gnu-gpl-v2
+	Paren    *Condition   `json:",omitempty"` // A parenthesized expression
+	And      bool         `json:",omitempty"` // license1 AND license2
+	Or       bool         `json:",omitempty"` // license1 OR license2
+	Children []*Condition `json:",omitempty"` // The operands of And and Or
 }
 
-func Parse(licenses string, res *regex.Registry) *Condition {
-	lexer := &licenseLexer{repl: textproc.NewPrefixReplacer(licenses, res)}
+func Parse(licenses string) *Condition {
+	lexer := &licenseLexer{lexer: textproc.NewLexer(licenses)}
 	result := liyyNewParser().Parse(lexer)
-	if result == 0 && lexer.repl.EOF() {
-		return lexer.result
+	if result != 0 || !lexer.lexer.EOF() {
+		return nil
 	}
-	return nil
+
+	cond := lexer.result
+	if !cond.And && !cond.Or && cond.Name == "" && len(cond.Children) == 1 {
+		cond = cond.Children[0]
+	}
+	return cond
 }
 
 func (cond *Condition) String() string {
@@ -33,15 +38,15 @@ func (cond *Condition) String() string {
 	if cond.Paren != nil {
 		return "(" + cond.Paren.String() + ")"
 	}
-	s := ""
+	var s strings.Builder
 	separator := [...]string{"", " AND ", " OR ", " MIXED "}[b2i(cond.And)+2*b2i(cond.Or)]
 	for i, child := range cond.Children {
 		if i != 0 {
-			s += separator
+			s.WriteString(separator)
 		}
-		s += child.String()
+		s.WriteString(child.String())
 	}
-	return s
+	return s.String()
 }
 
 func (cond *Condition) Walk(callback func(*Condition)) {
@@ -57,34 +62,37 @@ func (cond *Condition) Walk(callback func(*Condition)) {
 //go:generate goyacc -p liyy -o licensesyacc.go -v licensesyacc.log licenses.y
 
 type licenseLexer struct {
-	repl   *textproc.PrefixReplacer
+	lexer  *textproc.Lexer
 	result *Condition
 	error  string
 }
 
+var licenseNameChars = textproc.NewByteSet("A-Za-z0-9---.")
+
 func (lexer *licenseLexer) Lex(llval *liyySymType) int {
-	repl := lexer.repl
-	repl.SkipHspace()
+	repl := lexer.lexer
+	repl.NextHspace()
 	switch {
 	case repl.EOF():
 		return 0
-	case repl.AdvanceStr("("):
+	case repl.NextByte('('):
 		return ltOPEN
-	case repl.AdvanceStr(")"):
+	case repl.NextByte(')'):
 		return ltCLOSE
-	case repl.AdvanceRegexp(`^[\w-.]+`):
-		word := repl.Group(0)
-		switch word {
-		case "AND":
-			return ltAND
-		case "OR":
-			return ltOR
-		default:
-			llval.Node = &Condition{Name: word}
-			return ltNAME
-		}
 	}
-	return -1
+
+	word := repl.NextBytesSet(licenseNameChars)
+	switch word {
+	case "AND":
+		return ltAND
+	case "OR":
+		return ltOR
+	case "":
+		return -1
+	default:
+		llval.Node = &Condition{Name: word}
+		return ltNAME
+	}
 }
 
 func (lexer *licenseLexer) Error(s string) {

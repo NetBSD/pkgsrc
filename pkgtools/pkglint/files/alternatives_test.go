@@ -38,7 +38,7 @@ func (s *Suite) Test_CheckfileAlternatives__empty(c *check.C) {
 
 	G.Pkg = NewPackage(".")
 
-	CheckfileAlternatives("ALTERNATIVES", G.Pkg.PlistFiles)
+	CheckfileAlternatives("ALTERNATIVES")
 
 	t.CheckOutputLines(
 		"ERROR: ALTERNATIVES: Must not be empty.")
