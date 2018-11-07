@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2018/10/30 17:30:15 adam Exp $
+$NetBSD: distinfo,v 1.5 2018/11/07 13:08:29 ryoon Exp $
 
 SHA1 (aom-d14c5bb4f336ef1842046089849dee4a301fbbf0.tar.gz) = deaf4f5420055cba0385a4e7dd91720211b7b97d
 RMD160 (aom-d14c5bb4f336ef1842046089849dee4a301fbbf0.tar.gz) = 3f01d1408b715acb54537ba933bac4e03bc4f157
@@ -8,3 +8,4 @@ SHA1 (patch-aom_exports__com) = 23e24008c0e0ea08f0998d1553f880f64bcb4d3c
 SHA1 (patch-build_cmake_aom__configure.cmake) = e0dbccb5dd1b6137ff29f915a221fbae1c56b49b
 SHA1 (patch-build_cmake_aom__optimization.cmake) = 56eda2e9e40cd20ce955ca311ded4a11f2ae3d1c
 SHA1 (patch-build_cmake_exports.cmake) = b64a36404b96a8ede42ac7419c28d2075c910395
+SHA1 (patch-build_cmake_version.cmake) = 37bf922fbf2a1aa412d2a47c054f42cff38ad4c3

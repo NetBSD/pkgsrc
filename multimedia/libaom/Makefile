@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2018/10/30 17:30:15 adam Exp $
+# $NetBSD: Makefile,v 1.4 2018/11/07 13:08:29 ryoon Exp $
 
 PKGNAME=	libaom-1.0.0
+PKGREVISION=	1
 DISTNAME=	aom-d14c5bb4f336ef1842046089849dee4a301fbbf0
 CATEGORIES=	multimedia
 #MASTER_SITES=	-https://aomedia.googlesource.com/aom/+archive/d14c5bb4f336ef1842046089849dee4a301fbbf0.tar.gz
@@ -15,6 +16,11 @@ WRKSRC=		${WRKDIR}
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	perl
+
+SUBST_CLASSES+=		version
+SUBST_FILES.version=	build/cmake/version.cmake
+SUBST_STAGE.version=	pre-configure
+SUBST_VARS.version=	PKGVERSION_NOREV
 
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	../
