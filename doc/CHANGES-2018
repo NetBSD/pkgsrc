@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4601 2018/11/07 13:08:57 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.4602 2018/11/07 21:01:20 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6429,3 +6429,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/youtube-dl to 20181107 [leot 2018-11-07]
 	Updated print/qpdf to 8.2.1 [ryoon 2018-11-07]
 	Updated multimedia/libaom to 1.0.0nb1 [ryoon 2018-11-07]
+	Updated pkgtools/pkglint to 5.6.6 [rillig 2018-11-07]
