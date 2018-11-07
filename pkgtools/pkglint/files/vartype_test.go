@@ -10,7 +10,7 @@ func (s *Suite) Test_Vartype_EffectivePermissions(c *check.C) {
 	t.SetupVartypes()
 
 	if typ := G.Pkgsrc.vartypes["PREFIX"]; c.Check(typ, check.NotNil) {
-		c.Check(typ.basicType.name, equals, "Pathname")
+		c.Check(typ.basicType.name, equals, "PathName")
 		c.Check(typ.aclEntries, check.DeepEquals, []ACLEntry{{glob: "*", permissions: aclpUse}})
 		c.Check(typ.EffectivePermissions("Makefile"), equals, aclpUse)
 	}

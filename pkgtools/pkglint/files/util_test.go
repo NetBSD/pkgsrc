@@ -84,23 +84,34 @@ func (s *Suite) Test_cleanpath(c *check.C) {
 	c.Check(cleanpath("dir/"), equals, "dir")
 }
 
-func (s *Suite) Test_relpath__failure(c *check.C) {
+// Relpath is called so often that handling the most common calls
+// without file system IO makes sense.
+func (s *Suite) Test_relpath__quick(c *check.C) {
+	c.Check(relpath("some/dir", "some/dir/../.."), equals, "../..")
+	c.Check(relpath("some/dir", "some/dir/./././../.."), equals, "../..")
+	c.Check(relpath("some/dir", "some/dir/"), equals, ".")
+	c.Check(relpath("some/dir", "some/directory"), equals, "../directory")
+}
+
+// This is not really an internal error but won't happen in practice anyway.
+// Therefore using ExpectPanic instead of ExpectFatal is ok.
+func (s *Suite) Test_relpath__failure_on_Windows(c *check.C) {
 	t := s.Init(c)
 
 	if runtime.GOOS == "windows" {
-		t.ExpectFatal(
+		t.ExpectPanic(
 			func() { relpath("c:/", "d:/") },
-			"FATAL: Pkglint internal error: relpath \"c:/\" \"d:/\".")
+			"Pkglint internal error: relpath \"c:/\" \"d:/\".")
 	}
 }
 
-func (s *Suite) Test_abspath(c *check.C) {
+func (s *Suite) Test_abspath__on_Windows(c *check.C) {
 	t := s.Init(c)
 
 	if runtime.GOOS == "windows" {
-		t.ExpectFatal(
+		t.ExpectPanic(
 			func() { abspath("file\u0000name") },
-			"FATAL: Pkglint internal error: abspath \"file\\x00name\".")
+			"Pkglint internal error: abspath \"file\\x00name\".")
 	}
 }
 
@@ -156,8 +167,8 @@ func (s *Suite) Test_detab(c *check.C) {
 	c.Check(detab("12345678\t"), equals, "12345678        ")
 }
 
-const reMkIncludeBenchmark = `^\.(\s*)(s?include)\s+\"([^\"]+)\"\s*(?:#.*)?$`
-const reMkIncludeBenchmarkPositive = `^\.(\s*)(s?include)\s+\"(.+)\"\s*(?:#.*)?$`
+const reMkIncludeBenchmark = `^\.([\t ]*)(s?include)[\t ]+\"([^\"]+)\"[\t ]*(?:#.*)?$`
+const reMkIncludeBenchmarkPositive = `^\.([\t ]*)(s?include)[\t ]+\"(.+)\"[\t ]*(?:#.*)?$`
 
 func Benchmark_match3_buildlink3(b *testing.B) {
 	for i := 0; i < b.N; i++ {
@@ -246,6 +257,7 @@ func (s *Suite) Test_isLocallyModified(c *check.C) {
 	c.Check(isLocallyModified(modified), equals, true)
 	c.Check(isLocallyModified(t.File("enoent")), equals, true)
 	c.Check(isLocallyModified(t.File("not_mentioned")), equals, false)
+	c.Check(isLocallyModified(t.File("subdir/file")), equals, false)
 }
 
 func (s *Suite) Test_Scope_Defined(c *check.C) {
@@ -359,13 +371,15 @@ func (s *Suite) Test_FileCache(c *check.C) {
 	c.Check(cache.Get("Makefile", MustSucceed|LogErrors), check.IsNil) // Wrong LoadOptions.
 
 	linesFromCache := cache.Get("Makefile", 0)
-	c.Check(linesFromCache, check.HasLen, 2)
-	c.Check(linesFromCache[1].Filename, equals, "Makefile")
+	c.Check(linesFromCache.FileName, equals, "Makefile")
+	c.Check(linesFromCache.Lines, check.HasLen, 2)
+	c.Check(linesFromCache.Lines[0].FileName, equals, "Makefile")
 
 	// Cache keys are normalized using path.Clean.
 	linesFromCache2 := cache.Get("./Makefile", 0)
-	c.Check(linesFromCache2, check.HasLen, 2)
-	c.Check(linesFromCache2[1].Filename, equals, "./Makefile")
+	c.Check(linesFromCache2.FileName, equals, "./Makefile")
+	c.Check(linesFromCache2.Lines, check.HasLen, 2)
+	c.Check(linesFromCache2.Lines[0].FileName, equals, "./Makefile")
 
 	cache.Put("file1.mk", 0, lines)
 	cache.Put("file2.mk", 0, lines)
@@ -392,4 +406,16 @@ func (s *Suite) Test_FileCache(c *check.C) {
 	c.Check(cache.mapping, check.HasLen, 1)
 	c.Check(cache.hits, equals, 7)
 	c.Check(cache.misses, equals, 5)
+
+	t.CheckOutputLines(
+		"FileCache \"Makefile\" with count 4.",
+		"FileCache \"file1.mk\" with count 2.",
+		"FileCache \"file2.mk\" with count 2.",
+		"FileCache.Evict \"file2.mk\" with count 2.",
+		"FileCache.Evict \"file1.mk\" with count 2.",
+		"FileCache.Halve \"Makefile\" with count 4.")
+}
+
+func (s *Suite) Test_makeHelp(c *check.C) {
+	c.Check(makeHelp("subst"), equals, confMake+" help topic=subst")
 }
