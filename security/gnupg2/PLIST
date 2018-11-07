@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.8 2017/11/24 12:33:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/11/07 11:59:08 adam Exp $
 bin/dirmngr
 bin/dirmngr-client
 bin/g13
 bin/gpg-agent
 bin/gpg-connect-agent
+bin/gpg-wks-server
 bin/gpg2
 bin/gpgconf
 bin/gpgparsemail
