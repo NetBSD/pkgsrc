@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.553 2018/11/04 18:38:05 bsiegert Exp $
+# $NetBSD: Makefile,v 1.554 2018/11/07 20:58:22 rillig Exp $
 
-PKGNAME=	pkglint-5.6.5
-PKGREVISION=	1
+PKGNAME=	pkglint-5.6.6
 DISTFILES=	# none
 CATEGORIES=	pkgtools
 
@@ -17,7 +16,6 @@ AUTO_MKDIRS=	yes
 GO_SRCPATH=	netbsd.org/pkglint
 
 CHECK_RELRO_SKIP+=	bin/pkglint
-CHECK_RELRO_SKIP+=	bin/plist-clash
 
 SUBST_CLASSES+=		pkglint
 SUBST_STAGE.pkglint=	post-configure
@@ -25,11 +23,21 @@ SUBST_FILES.pkglint+=	pkglint.go
 SUBST_SED.pkglint+=	-e s\|@VERSION@\|${PKGNAME:S/pkglint-//}\|g
 SUBST_SED.pkglint+=	-e s\|@BMAKE@\|${MAKE:T:Q}\|g
 
+TOOLS_CREATE+=		goyacc
+TOOLS_PATH.goyacc=	${WRKDIR}/bin/goyacc
+USE_TOOLS+=		goyacc
+
 do-extract:
 	${RUN} ${MKDIR} ${WRKDIR}/pkglint
 	${RUN} cd ${FILESDIR} && ${PAX} -rw . ${WRKDIR}/pkglint
+	${RUN} ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} get golang.org/x/tools/cmd/goyacc
+	${RUN} ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} install golang.org/x/tools/cmd/goyacc
+
+pre-build:
+	${RUN} ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} generate ${GO_BUILD_PATTERN}
 
 pre-install:
+	${RUN} rm -f ${WRKDIR}/bin/goyacc
 	${RUN} rm -rf ${WRKDIR}/pkg
 
 post-install: do-install-man
