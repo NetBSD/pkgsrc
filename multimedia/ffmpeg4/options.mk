@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2018/10/09 11:04:10 leot Exp $
+# $NetBSD: options.mk,v 1.8 2018/11/07 13:10:01 ryoon Exp $
 
 # Global and legacy options
 
@@ -57,6 +57,7 @@ CONFIGURE_ARGS+=	--disable-libass
 # av1 option
 .if !empty(PKG_OPTIONS:Mav1)
 CONFIGURE_ARGS+=	--enable-libaom
+BUILDLINK_API_DEPENDS.libaom+=	libaom>=1.0.0nb1
 .include "../../multimedia/libaom/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-libaom
