@@ -40,7 +40,7 @@ func (s *Suite) Test_ShTokenizer_ShAtom(c *check.C) {
 			text += ":" + strings.Replace(strings.Replace(modifier, "\\", "\\\\", -1), ":", "\\:", -1)
 		}
 		text += "}"
-		varuse := &MkVarUse{varname: varname, modifiers: modifiers}
+		varuse := NewMkVarUse(varname, modifiers...)
 		return &ShAtom{shtVaruse, text, shqPlain, varuse}
 	}
 	text := func(s string) *ShAtom { return atom(shtWord, s) }
@@ -112,11 +112,11 @@ func (s *Suite) Test_ShTokenizer_ShAtom(c *check.C) {
 	check("`",
 		backt(text("`")))
 
-	check("`cat fname`",
+	check("`cat fileName`",
 		backt(text("`")),
 		backt(text("cat")),
 		backt(space),
-		backt(text("fname")),
+		backt(text("fileName")),
 		text("`"))
 
 	check("hello, \"world\"",
