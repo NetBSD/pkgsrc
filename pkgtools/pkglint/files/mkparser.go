@@ -2,7 +2,6 @@ package main
 
 import (
 	"netbsd.org/pkglint/regex"
-	"netbsd.org/pkglint/trace"
 	"strings"
 )
 
@@ -12,6 +11,8 @@ type MkParser struct {
 	*Parser
 }
 
+// NewMkParser creates a new parser for the given text.
+// If emitWarnings is false, line may be nil.
 func NewMkParser(line Line, text string, emitWarnings bool) *MkParser {
 	return &MkParser{NewParser(line, text, emitWarnings)}
 }
@@ -105,10 +106,11 @@ func (p *MkParser) VarUse() *MkVarUse {
 	return nil
 }
 
-func (p *MkParser) VarUseModifiers(varname, closing string) []string {
+func (p *MkParser) VarUseModifiers(varname, closing string) []MkVarUseModifier {
 	repl := p.repl
 
-	var modifiers []string
+	var modifiers []MkVarUseModifier
+	appendModifier := func(s string) { modifiers = append(modifiers, MkVarUseModifier{s}) }
 	mayOmitColon := false
 loop:
 	for repl.AdvanceStr(":") || mayOmitColon {
@@ -118,7 +120,7 @@ loop:
 		switch repl.PeekByte() {
 		case 'E', 'H', 'L', 'O', 'Q', 'R', 'T', 's', 't', 'u':
 			if repl.AdvanceRegexp(`^(E|H|L|Ox?|Q|R|T|sh|tA|tW|tl|tu|tw|u)`) {
-				modifiers = append(modifiers, repl.Since(modifierMark))
+				appendModifier(repl.Since(modifierMark))
 				continue
 			}
 			if repl.AdvanceStr("ts") {
@@ -130,7 +132,7 @@ loop:
 				} else {
 					break loop
 				}
-				modifiers = append(modifiers, repl.Since(modifierMark))
+				appendModifier(repl.Since(modifierMark))
 				continue
 			}
 
@@ -139,7 +141,7 @@ loop:
 				for p.VarUse() != nil || repl.AdvanceRegexp(regex.Pattern(`^([^$:\\`+closing+`]|\$\$|\\.)+`)) {
 				}
 				arg := repl.Since(modifierMark)
-				modifiers = append(modifiers, strings.Replace(arg, "\\:", ":", -1))
+				appendModifier(strings.Replace(arg, "\\:", ":", -1))
 				continue
 			}
 
@@ -156,7 +158,7 @@ loop:
 					}
 					if repl.AdvanceStr(separator) {
 						repl.AdvanceRegexp(`^[1gW]`)
-						modifiers = append(modifiers, repl.Since(modifierMark))
+						appendModifier(repl.Since(modifierMark))
 						mayOmitColon = true
 						continue
 					}
@@ -171,13 +173,13 @@ loop:
 				if !repl.AdvanceStr("@") && p.EmitWarnings {
 					p.Line.Warnf("Modifier ${%s:@%s@...@} is missing the final \"@\".", varname, loopvar)
 				}
-				modifiers = append(modifiers, repl.Since(modifierMark))
+				appendModifier(repl.Since(modifierMark))
 				continue
 			}
 
 		case '[':
 			if repl.AdvanceRegexp(`^\[(?:[-.\d]+|#)\]`) {
-				modifiers = append(modifiers, repl.Since(modifierMark))
+				appendModifier(repl.Since(modifierMark))
 				continue
 			}
 
@@ -189,7 +191,7 @@ loop:
 			if repl.AdvanceStr(":") {
 				for p.VarUse() != nil || repl.AdvanceRegexp(re) {
 				}
-				modifiers = append(modifiers, repl.Since(modifierMark))
+				appendModifier(repl.Since(modifierMark))
 				continue
 			}
 		}
@@ -199,7 +201,7 @@ loop:
 		for p.VarUse() != nil || repl.AdvanceRegexp(regex.Pattern(`^([^:$`+closing+`]|\$\$)+`)) {
 		}
 		if suffixSubst := repl.Since(modifierMark); contains(suffixSubst, "=") {
-			modifiers = append(modifiers, suffixSubst)
+			appendModifier(suffixSubst)
 			continue
 		}
 	}
@@ -243,7 +245,7 @@ func (p *MkParser) mkCondAnd() MkCond {
 	atoms := []MkCond{atom}
 	for {
 		mark := p.repl.Mark()
-		if !p.repl.AdvanceRegexp(`^\s*&&\s*`) {
+		if !p.repl.AdvanceRegexp(`^[\t ]*&&[\t ]*`) {
 			break
 		}
 		next := p.mkCondAtom()
@@ -281,23 +283,23 @@ func (p *MkParser) mkCondAtom() MkCond {
 				return cond
 			}
 		}
-	case repl.HasPrefix("defined") && repl.AdvanceRegexp(`^defined\s*\(`):
+	case repl.HasPrefix("defined") && repl.AdvanceRegexp(`^defined[\t ]*\(`):
 		if varname := p.Varname(); varname != "" {
 			if repl.AdvanceStr(")") {
 				return &mkCond{Defined: varname}
 			}
 		}
-	case repl.HasPrefix("empty") && repl.AdvanceRegexp(`^empty\s*\(`):
+	case repl.HasPrefix("empty") && repl.AdvanceRegexp(`^empty[\t ]*\(`):
 		if varname := p.Varname(); varname != "" {
 			modifiers := p.VarUseModifiers(varname, ")")
 			if repl.AdvanceStr(")") {
 				return &mkCond{Empty: &MkVarUse{varname, modifiers}}
 			}
 		}
-	case uint(repl.PeekByte()-'a') <= 'z'-'a' && repl.AdvanceRegexp(`^(commands|exists|make|target)\s*\(`):
+	case uint(repl.PeekByte()-'a') <= 'z'-'a' && repl.AdvanceRegexp(`^(commands|exists|make|target)[\t ]*\(`):
 		funcname := repl.Group(1)
 		argMark := repl.Mark()
-		for p.VarUse() != nil || repl.AdvanceRegexp(`^[^$)]+`) {
+		for p.VarUse() != nil || repl.NextBytesFunc(func(b byte) bool { return b != '$' && b != ')' }) != "" {
 		}
 		arg := repl.Since(argMark)
 		if repl.AdvanceStr(")") {
@@ -314,15 +316,15 @@ func (p *MkParser) mkCondAtom() MkCond {
 			}
 		}
 		if lhs != nil {
-			if repl.AdvanceRegexp(`^\s*(<|<=|==|!=|>=|>)\s*(\d+(?:\.\d+)?)`) {
+			if repl.AdvanceRegexp(`^[\t ]*(<|<=|==|!=|>=|>)[\t ]*(\d+(?:\.\d+)?)`) {
 				return &mkCond{CompareVarNum: &MkCondCompareVarNum{lhs, repl.Group(1), repl.Group(2)}}
 			}
-			if repl.AdvanceRegexp(`^\s*(<|<=|==|!=|>=|>)\s*`) {
+			if repl.AdvanceRegexp(`^[\t ]*(<|<=|==|!=|>=|>)[\t ]*`) {
 				op := repl.Group(1)
 				if (op == "!=" || op == "==") && repl.AdvanceRegexp(`^"([^"\$\\]*)"`) {
 					return &mkCond{CompareVarStr: &MkCondCompareVarStr{lhs, op, repl.Group(1)}}
 				} else if repl.AdvanceRegexp(`^\w+`) {
-					return &mkCond{CompareVarStr: &MkCondCompareVarStr{lhs, op, repl.Group(0)}}
+					return &mkCond{CompareVarStr: &MkCondCompareVarStr{lhs, op, repl.Str()}}
 				} else if rhs := p.VarUse(); rhs != nil {
 					return &mkCond{CompareVarVar: &MkCondCompareVarVar{lhs, op, rhs}}
 				} else if repl.PeekByte() == '"' {
@@ -341,7 +343,7 @@ func (p *MkParser) mkCondAtom() MkCond {
 			}
 		}
 		if repl.AdvanceRegexp(`^\d+(?:\.\d+)?`) {
-			return &mkCond{Num: repl.Group(0)}
+			return &mkCond{Num: repl.Str()}
 		}
 	}
 	repl.Reset(mark)
@@ -356,7 +358,7 @@ func (p *MkParser) Varname() string {
 	isVarnameChar := func(c byte) bool {
 		return 'A' <= c && c <= 'Z' || c == '_' || 'a' <= c && c <= 'z' || '0' <= c && c <= '9' || c == '+' || c == '-' || c == '.' || c == '*'
 	}
-	for p.VarUse() != nil || repl.AdvanceBytesFunc(isVarnameChar) {
+	for p.VarUse() != nil || repl.NextBytesFunc(isVarnameChar) != "" {
 	}
 	return repl.Since(mark)
 }
