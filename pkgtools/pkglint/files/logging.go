@@ -13,21 +13,25 @@ type LogLevel struct {
 }
 
 var (
-	llFatal   = &LogLevel{"FATAL", "fatal"}
-	llError   = &LogLevel{"ERROR", "error"}
-	llWarn    = &LogLevel{"WARN", "warning"}
-	llNote    = &LogLevel{"NOTE", "note"}
-	llAutofix = &LogLevel{"AUTOFIX", "autofix"}
+	Fatal           = &LogLevel{"FATAL", "fatal"}
+	Error           = &LogLevel{"ERROR", "error"}
+	Warn            = &LogLevel{"WARN", "warning"}
+	Note            = &LogLevel{"NOTE", "note"}
+	AutofixLogLevel = &LogLevel{"AUTOFIX", "autofix"}
 )
 
 var dummyLine = NewLine("", 0, "", nil)
 var dummyMkLine = NewMkLine(dummyLine)
 
-func shallBeLogged(msg string) bool {
-	if len(G.opts.LogOnly) > 0 {
+// shallBeLogged tests whether a diagnostic with the given format should
+// be logged. It only inspects the --only arguments.
+//
+// Duplicates are handled in main.logf.
+func shallBeLogged(format string) bool {
+	if len(G.Opts.LogOnly) > 0 {
 		found := false
-		for _, substr := range G.opts.LogOnly {
-			if contains(msg, substr) {
+		for _, substr := range G.Opts.LogOnly {
+			if contains(format, substr) {
 				found = true
 				break
 			}
@@ -40,8 +44,8 @@ func shallBeLogged(msg string) bool {
 	return true
 }
 
-func loggedAlready(fname, lineno, msg string) bool {
-	uniq := path.Clean(fname) + ":" + lineno + ":" + msg
+func loggedAlready(fileName, lineno, msg string) bool {
+	uniq := path.Clean(fileName) + ":" + lineno + ":" + msg
 	if G.logged[uniq] {
 		return true
 	}
@@ -53,53 +57,55 @@ func loggedAlready(fname, lineno, msg string) bool {
 	return false
 }
 
-func logs(level *LogLevel, fname, lineno, format, msg string) bool {
-	if fname != "" {
-		fname = cleanpath(fname)
+func logf(level *LogLevel, fileName, lineno, format, msg string) bool {
+	// TODO: Only ever output ASCII, no matter what's in the message.
+
+	if fileName != "" {
+		fileName = cleanpath(fileName)
 	}
-	if G.Testing && format != "Magic-Autofix-Format" && !hasSuffix(format, ".") && !hasSuffix(format, ": %s") && !hasSuffix(format, ". %s") {
-		panic(fmt.Sprintf("Diagnostic format %q must end in a period.", format))
+	if G.Testing && format != AutofixFormat && !hasSuffix(format, ": %s") && !hasSuffix(format, ". %s") {
+		G.Assertf(hasSuffix(format, "."), "Diagnostic format %q must end in a period.", format)
 	}
 
-	if !G.opts.LogVerbose && loggedAlready(fname, lineno, msg) {
+	if !G.Opts.LogVerbose && format != AutofixFormat && loggedAlready(fileName, lineno, msg) {
 		G.explainNext = false
 		return false
 	}
 
 	var text, sep string
-	if !G.opts.GccOutput {
+	if !G.Opts.GccOutput {
 		text += sep + level.TraditionalName + ":"
 		sep = " "
 	}
-	if fname != "" {
-		text += sep + fname
+	if fileName != "" {
+		text += sep + fileName
 		sep = ": "
 		if lineno != "" {
 			text += ":" + lineno
 		}
 	}
-	if G.opts.GccOutput {
+	if G.Opts.GccOutput {
 		text += sep + level.GccName + ":"
 		sep = " "
 	}
-	if G.opts.Profiling && format != "Magic-Autofix-Format" {
+	if G.Opts.Profiling && format != AutofixFormat && level != Fatal {
 		G.loghisto.Add(format, 1)
 	}
 	text += sep + msg + "\n"
 
 	out := G.logOut
-	if level == llFatal {
+	if level == Fatal {
 		out = G.logErr
 	}
 
 	out.Write(text)
 
 	switch level {
-	case llFatal:
+	case Fatal:
 		panic(pkglintFatal{})
-	case llError:
+	case Error:
 		G.errors++
-	case llWarn:
+	case Warn:
 		G.warnings++
 	}
 	return true
@@ -130,7 +136,7 @@ func Explain(explanation ...string) {
 		return
 	}
 	G.explanationsAvailable = true
-	if !G.opts.Explain {
+	if !G.Opts.Explain {
 		return
 	}
 
@@ -169,12 +175,12 @@ func NewSeparatorWriter(out io.Writer) *SeparatorWriter {
 
 func (wr *SeparatorWriter) WriteLine(text string) {
 	wr.Write(text)
-	io.WriteString(wr.out, "\n")
+	_, _ = io.WriteString(wr.out, "\n")
 }
 
 func (wr *SeparatorWriter) Write(text string) {
 	if wr.needSeparator && wr.wroteSomething {
-		io.WriteString(wr.out, "\n")
+		_, _ = io.WriteString(wr.out, "\n")
 		wr.needSeparator = false
 	}
 	n, err := io.WriteString(wr.out, text)

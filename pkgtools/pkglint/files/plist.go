@@ -1,21 +1,20 @@
 package main
 
 import (
-	"netbsd.org/pkglint/trace"
 	"path"
 	"sort"
 	"strings"
 )
 
-func ChecklinesPlist(lines []Line) {
+func ChecklinesPlist(lines Lines) {
 	if trace.Tracing {
-		defer trace.Call1(lines[0].Filename)()
+		defer trace.Call1(lines.FileName)()
 	}
 
-	CheckLineRcsid(lines[0], `@comment `, "@comment ")
+	CheckLineRcsid(lines.Lines[0], `@comment `, "@comment ")
 
-	if len(lines) == 1 {
-		lines[0].Warnf("PLIST files shouldn't be empty.")
+	if lines.Len() == 1 {
+		lines.Lines[0].Warnf("PLIST files shouldn't be empty.")
 		Explain(
 			"One reason for empty PLISTs is that this is a newly created package",
 			"and that the author didn't run \"bmake print-PLIST\" after installing",
@@ -49,12 +48,12 @@ type PlistLine struct {
 	text      string // Line.Text without any conditions of the form ${PLIST.cond}
 }
 
-func (ck *PlistChecker) Check(plainLines []Line) {
+func (ck *PlistChecker) Check(plainLines Lines) {
 	plines := ck.NewLines(plainLines)
 	ck.collectFilesAndDirs(plines)
 
 	if plines[0].Basename == "PLIST.common_end" {
-		commonLines := Load(strings.TrimSuffix(plines[0].Filename, "_end"), NotEmpty)
+		commonLines := Load(strings.TrimSuffix(plines[0].FileName, "_end"), NotEmpty)
 		if commonLines != nil {
 			ck.collectFilesAndDirs(ck.NewLines(commonLines))
 		}
@@ -66,7 +65,7 @@ func (ck *PlistChecker) Check(plainLines []Line) {
 	}
 	ChecklinesTrailingEmptyLines(plainLines)
 
-	if G.opts.WarnPlistSort {
+	if G.Opts.WarnPlistSort {
 		sorter := NewPlistLineSorter(plines)
 		sorter.Sort()
 		if !sorter.autofixed {
@@ -77,9 +76,9 @@ func (ck *PlistChecker) Check(plainLines []Line) {
 	}
 }
 
-func (ck *PlistChecker) NewLines(lines []Line) []*PlistLine {
-	plines := make([]*PlistLine, len(lines))
-	for i, line := range lines {
+func (ck *PlistChecker) NewLines(lines Lines) []*PlistLine {
+	plines := make([]*PlistLine, lines.Len())
+	for i, line := range lines.Lines {
 		condition, text := "", line.Text
 		if hasPrefix(text, "${PLIST.") {
 			if m, cond, rest := match2(text, `^(?:\$\{(PLIST\.[\w-.]+)\})+(.*)`); m {
@@ -122,7 +121,7 @@ func (ck *PlistChecker) checkline(pline *PlistLine) {
 	text := pline.text
 	if hasAlnumPrefix(text) {
 		ck.checkpath(pline)
-	} else if m, cmd, arg := match2(text, `^(?:\$\{[\w.]+\})?@([a-z-]+)\s*(.*)`); m {
+	} else if m, cmd, arg := match2(text, `^(?:\$\{[\w.]+\})?@([a-z-]+)[\t ]*(.*)`); m {
 		pline.CheckDirective(cmd, arg)
 	} else if hasPrefix(text, "$") {
 		ck.checkpath(pline)
@@ -203,9 +202,9 @@ func (ck *PlistChecker) checkpath(pline *PlistLine) {
 }
 
 func (ck *PlistChecker) checkSorted(pline *PlistLine) {
-	if text := pline.text; G.opts.WarnPlistSort && hasAlnumPrefix(text) && !containsVarRef(text) {
+	if text := pline.text; G.Opts.WarnPlistSort && hasAlnumPrefix(text) && !containsVarRef(text) {
 		if ck.lastFname != "" {
-			if ck.lastFname > text && !G.opts.Autofix {
+			if ck.lastFname > text && !G.Opts.Autofix {
 				pline.Warnf("%q should be sorted before %q.", text, ck.lastFname)
 				Explain(
 					"The files in the PLIST should be sorted alphabetically.",
@@ -228,8 +227,7 @@ func (ck *PlistChecker) checkDuplicate(pline *PlistLine) {
 	}
 
 	fix := pline.Autofix()
-	fix.Errorf("Duplicate filename %q, already appeared in %s.",
-		text, prev.ReferenceFrom(pline.Line))
+	fix.Errorf("Duplicate file name %q, already appeared in %s.", text, pline.RefTo(prev.Line))
 	fix.Delete()
 	fix.Apply()
 }
@@ -291,8 +289,7 @@ func (ck *PlistChecker) checkpathLib(pline *PlistLine, dirname, basename string)
 	if contains(basename, ".a") || contains(basename, ".so") {
 		if m, noext := match1(pline.text, `^(.*)(?:\.a|\.so[0-9.]*)$`); m {
 			if laLine := ck.allFiles[noext+".la"]; laLine != nil {
-				pline.Warnf("Redundant library found. The libtool library is in %s.",
-					laLine.ReferenceFrom(pline.Line))
+				pline.Warnf("Redundant library found. The libtool library is in %s.", pline.RefTo(laLine.Line))
 			}
 		}
 	}
@@ -301,7 +298,7 @@ func (ck *PlistChecker) checkpathLib(pline *PlistLine, dirname, basename string)
 func (ck *PlistChecker) checkpathMan(pline *PlistLine) {
 	m, catOrMan, section, manpage, ext, gz := match5(pline.text, `^man/(cat|man)(\w+)/(.*?)\.(\w+)(\.gz)?$`)
 	if !m {
-		// maybe: line.Warnf("Invalid filename %q for manual page.", text)
+		// maybe: line.Warnf("Invalid file name %q for manual page.", text)
 		return
 	}
 
@@ -370,7 +367,7 @@ func (ck *PlistChecker) checkpathShare(pline *PlistLine) {
 		}
 
 	case hasPrefix(text, "share/doc/html/"):
-		if G.opts.WarnPlistDepr {
+		if G.Opts.WarnPlistDepr {
 			pline.Warnf("Use of \"share/doc/html\" is deprecated. Use \"share/doc/${PKGBASE}\" instead.")
 		}
 
@@ -494,7 +491,7 @@ func NewPlistLineSorter(plines []*PlistLine) *plistLineSorter {
 
 func (s *plistLineSorter) Sort() {
 	if line := s.unsortable; line != nil {
-		if G.opts.PrintAutofix || G.opts.Autofix {
+		if G.Opts.ShowAutofix || G.Opts.Autofix {
 			trace.Stepf("%s: This line prevents pkglint from sorting the PLIST automatically.", line)
 		}
 		return
@@ -524,7 +521,7 @@ func (s *plistLineSorter) Sort() {
 	}
 
 	fix := firstLine.Autofix()
-	fix.Notef("Silent-Magic-Diagnostic")
+	fix.Notef(SilentAutofixFormat)
 	fix.Describef(int(firstLine.firstLine), "Sorting the whole file.")
 	fix.Apply()
 
@@ -539,5 +536,5 @@ func (s *plistLineSorter) Sort() {
 		lines = append(lines, pline.Line)
 	}
 
-	s.autofixed = SaveAutofixChanges(lines)
+	s.autofixed = SaveAutofixChanges(NewLines(lines[0].FileName, lines))
 }

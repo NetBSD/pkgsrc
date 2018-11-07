@@ -2,46 +2,44 @@ package main
 
 import (
 	"netbsd.org/pkglint/regex"
-	"netbsd.org/pkglint/trace"
 	"strings"
 )
 
 // Expecter records the state when checking a list of lines from top to bottom.
 type Expecter struct {
-	lines []Line
+	lines Lines
 	index int
-	m     []string
+	m     []string // The groups from the last successful regex match
 }
 
-func NewExpecter(lines []Line) *Expecter {
+func NewExpecter(lines Lines) *Expecter {
 	return &Expecter{lines, 0, nil}
 }
 
 func (exp *Expecter) CurrentLine() Line {
-	if exp.index < len(exp.lines) {
-		return exp.lines[exp.index]
+	if exp.index < exp.lines.Len() {
+		return exp.lines.Lines[exp.index]
 	}
-
-	return NewLineEOF(exp.lines[0].Filename)
+	return NewLineEOF(exp.lines.FileName)
 }
 
 func (exp *Expecter) PreviousLine() Line {
-	return exp.lines[exp.index-1]
-}
-
-func (exp *Expecter) Index() int {
-	return exp.index
+	return exp.lines.Lines[exp.index-1]
 }
 
 func (exp *Expecter) EOF() bool {
-	return !(exp.index < len(exp.lines))
+	return !(exp.index < exp.lines.Len())
 }
 
 func (exp *Expecter) Group(index int) string {
 	return exp.m[index]
 }
 
+// Advance skips the current line and returns true.
 func (exp *Expecter) Advance() bool {
+	if exp.EOF() {
+		return false
+	}
 	exp.index++
 	exp.m = nil
 	return true
@@ -57,7 +55,7 @@ func (exp *Expecter) AdvanceIfMatches(re regex.Pattern) bool {
 	}
 
 	if !exp.EOF() {
-		if m := G.res.Match(exp.lines[exp.index].Text, re); m != nil {
+		if m := G.res.Match(exp.lines.Lines[exp.index].Text, re); m != nil {
 			exp.index++
 			exp.m = m
 			return true
@@ -71,7 +69,7 @@ func (exp *Expecter) AdvanceIfPrefix(prefix string) bool {
 		defer trace.Call2(exp.CurrentLine().Text, prefix)()
 	}
 
-	return !exp.EOF() && strings.HasPrefix(exp.lines[exp.index].Text, prefix) && exp.Advance()
+	return !exp.EOF() && strings.HasPrefix(exp.lines.Lines[exp.index].Text, prefix) && exp.Advance()
 }
 
 func (exp *Expecter) AdvanceIfEquals(text string) bool {
@@ -79,46 +77,50 @@ func (exp *Expecter) AdvanceIfEquals(text string) bool {
 		defer trace.Call2(exp.CurrentLine().Text, text)()
 	}
 
-	return !exp.EOF() && exp.lines[exp.index].Text == text && exp.Advance()
+	return !exp.EOF() && exp.lines.Lines[exp.index].Text == text && exp.Advance()
 }
 
-func (exp *Expecter) ExpectEmptyLine(warnSpace bool) bool {
+func (exp *Expecter) ExpectEmptyLine() bool {
 	if exp.AdvanceIfEquals("") {
 		return true
 	}
 
-	if warnSpace {
-		fix := exp.CurrentLine().Autofix()
-		fix.Notef("Empty line expected.")
-		fix.InsertBefore("")
-		fix.Apply()
+	if G.Opts.WarnSpace {
+		if exp.index == 0 {
+			fix := exp.CurrentLine().Autofix()
+			fix.Notef("Empty line expected before this line.")
+			fix.InsertBefore("")
+			fix.Apply()
+		} else {
+			fix := exp.PreviousLine().Autofix()
+			fix.Notef("Empty line expected after this line.")
+			fix.InsertAfter("")
+			fix.Apply()
+		}
 	}
 	return false
 }
 
 func (exp *Expecter) ExpectText(text string) bool {
-	if !exp.EOF() && exp.lines[exp.index].Text == text {
-		exp.index++
-		exp.m = nil
-		return true
+	result := exp.AdvanceIfEquals(text)
+	if !result {
+		exp.CurrentLine().Warnf("This line should contain the following text: %s", text)
 	}
-
-	exp.CurrentLine().Warnf("This line should contain the following text: %s", text)
-	return false
-}
-
-func (exp *Expecter) SkipToFooter() {
-	exp.index = len(exp.lines) - 2
+	return result
 }
 
 // MkExpecter records the state when checking a list of Makefile lines from top to bottom.
 type MkExpecter struct {
-	mklines *MkLines
+	mklines MkLines
 	Expecter
 }
 
-func NewMkExpecter(mklines *MkLines) *MkExpecter {
+func NewMkExpecter(mklines MkLines) *MkExpecter {
 	return &MkExpecter{mklines, *NewExpecter(mklines.lines)}
+}
+
+func (exp *MkExpecter) PreviousMkLine() MkLine {
+	return exp.mklines.mklines[exp.index-1]
 }
 
 func (exp *MkExpecter) CurrentMkLine() MkLine {
@@ -133,4 +135,8 @@ func (exp *MkExpecter) AdvanceWhile(pred func(mkline MkLine) bool) {
 	for !exp.EOF() && pred(exp.CurrentMkLine()) {
 		exp.Advance()
 	}
+}
+
+func (exp *MkExpecter) AdvanceIf(pred func(mkline MkLine) bool) bool {
+	return !exp.EOF() && pred(exp.CurrentMkLine()) && exp.Advance()
 }

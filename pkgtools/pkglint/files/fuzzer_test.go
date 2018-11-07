@@ -5,6 +5,8 @@ import (
 	"math/rand"
 )
 
+// Fuzzer generates random strings.
+// The structure of the strings is configurable.
 type Fuzzer struct {
 	seed  int64
 	rnd   *rand.Rand
@@ -12,14 +14,17 @@ type Fuzzer struct {
 		r      rune
 		weight int
 	}
-	total int
-	last  string
-	ok    bool
+	total int    // The sum of all stock weights
+	last  string //
+	ok    bool   // Whether the last string was processed correctly
 }
 
+// NewFuzzer returns a fuzzer.
+// If no seed is passed, a random seed is chosen.
+// To reproduce a previous run, pass the seed from that run as the parameter.
 func NewFuzzer(seed ...int64) *Fuzzer {
 	var actualSeed int64
-	if len(seed) != 0 {
+	if len(seed) > 0 {
 		actualSeed = seed[0]
 	} else {
 		actualSeed = rand.Int63()
@@ -52,12 +57,12 @@ func (f *Fuzzer) addChar(r rune, weight int) {
 }
 
 func (f *Fuzzer) Generate(length int) string {
-	s := ""
+	rs := make([]rune, length, length)
 	for i := 0; i < length; i++ {
-		s += string(f.randomChar())
+		rs[i] = f.randomChar()
 	}
-	f.last = s
-	return s
+	f.last = string(rs)
+	return f.last
 }
 
 func (f *Fuzzer) randomChar() rune {
@@ -71,17 +76,20 @@ func (f *Fuzzer) randomChar() rune {
 	panic("Out of stock")
 }
 
+// CheckOk is typically used in a defer statement and is run after all
+// the tests to check whether they have been marked as ok.
 func (f *Fuzzer) CheckOk() {
 	if !f.ok {
-		dummyLine.Errorf("Fuzzing failed with seed %d, last generated value: %s", f.seed, f.last)
+		panic(sprintf("Fuzzing failed with seed %d, last generated value: %s", f.seed, f.last))
 	}
 }
 
+// Ok marks the current string as processed correctly.
 func (f *Fuzzer) Ok() { f.ok = true }
 
 func (s *Suite) Test_Fuzzer__out_of_stock(c *check.C) {
 	fuzzer := NewFuzzer(0)
-	fuzzer.total = 1 // Trick the fuzzer to achieve full code coverage.
+	fuzzer.total = 1 // Intentionally damage the fuzzer to achieve full code coverage.
 
 	c.Check(
 		func() { fuzzer.Generate(1) },

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"netbsd.org/pkglint/trace"
-	"sort"
+	"fmt"
+	"netbsd.org/pkglint/textproc"
 )
 
 func CheckdirCategory(dir string) {
@@ -20,19 +20,36 @@ func CheckdirCategory(dir string) {
 	exp := NewMkExpecter(mklines)
 	for exp.AdvanceIfPrefix("#") {
 	}
-	exp.ExpectEmptyLine(G.opts.WarnSpace)
+	exp.ExpectEmptyLine()
 
-	if exp.AdvanceIfMatches(`^COMMENT=\t*(.*)`) {
-		MkLineChecker{mklines.mklines[exp.Index()-1]}.CheckValidCharactersInValue(`[- '(),/0-9A-Za-z]`)
+	if exp.AdvanceIf(func(mkline MkLine) bool { return mkline.IsVarassign() && mkline.Varname() == "COMMENT" }) {
+		mkline := exp.PreviousMkLine()
+
+		lex := textproc.NewLexer(mkline.Value())
+		valid := textproc.NewByteSet("--- '(),/0-9A-Za-z")
+		invalid := valid.Inverse()
+		uni := ""
+
+		for !lex.EOF() {
+			_ = lex.NextBytesSet(valid)
+			ch := lex.NextByteSet(invalid)
+			if ch != -1 {
+				uni += fmt.Sprintf(" %U", ch)
+			}
+		}
+
+		if uni != "" {
+			mkline.Warnf("%s contains invalid characters (%s).", mkline.Varname(), uni[1:])
+		}
+
 	} else {
 		exp.CurrentLine().Errorf("COMMENT= line expected.")
 	}
-	exp.ExpectEmptyLine(G.opts.WarnSpace)
+	exp.ExpectEmptyLine()
 
 	type subdir struct {
-		name   string
-		line   Line
-		active bool
+		name string
+		line MkLine
 	}
 
 	// And now to the most complicated part of the category Makefiles,
@@ -40,46 +57,43 @@ func CheckdirCategory(dir string) {
 	// collect the SUBDIRs in the Makefile and in the file system.
 
 	fSubdirs := getSubdirs(dir)
-	sort.Strings(fSubdirs)
 	var mSubdirs []subdir
 
-	prevSubdir := ""
+	seen := make(map[string]MkLine)
 	for !exp.EOF() {
-		line := exp.CurrentLine()
-		text := line.Text
+		mkline := exp.CurrentMkLine()
 
-		if m, commentFlag, indentation, name, comment := match4(text, `^(#?)SUBDIR\+=(\s*)(\S+)\s*(?:#\s*(.*?)\s*|)$`); m {
-			commentedOut := commentFlag == "#"
-			if commentedOut && comment == "" {
-				line.Warnf("%q commented out without giving a reason.", name)
-			}
-
-			if indentation != "\t" {
-				line.Warnf("Indentation should be a single tab character.")
-			}
-
-			if name == prevSubdir {
-				line.Errorf("%q must only appear once.", name)
-			} else if name < prevSubdir {
-				line.Warnf("%q should come before %q.", name, prevSubdir)
-			} else {
-				// correctly ordered
-			}
-
-			mSubdirs = append(mSubdirs, subdir{name, line, !commentedOut})
-			prevSubdir = name
+		if (mkline.IsVarassign() || mkline.IsCommentedVarassign()) && mkline.Varname() == "SUBDIR" {
 			exp.Advance()
 
+			name := mkline.Value()
+			if mkline.IsCommentedVarassign() && mkline.VarassignComment() == "" {
+				mkline.Warnf("%q commented out without giving a reason.", name)
+			}
+
+			if prev := seen[name]; prev != nil {
+				mkline.Errorf("%q must only appear once, already seen in %s.", name, mkline.RefTo(prev))
+			}
+			seen[name] = mkline
+
+			if len(mSubdirs) > 0 {
+				if prev := mSubdirs[len(mSubdirs)-1].name; name < prev {
+					mkline.Warnf("%q should come before %q.", name, prev)
+				}
+			}
+
+			mSubdirs = append(mSubdirs, subdir{name, mkline})
+
 		} else {
-			if line.Text != "" {
-				line.Errorf("SUBDIR+= line or empty line expected.")
+			if !mkline.IsEmpty() {
+				mkline.Errorf("SUBDIR+= line or empty line expected.")
 			}
 			break
 		}
 	}
 
 	// To prevent unnecessary warnings about subdirectories that are
-	// in one list, but not in the other, we generate the sets of
+	// in one list but not in the other, generate the sets of
 	// subdirs of each list.
 	fCheck := make(map[string]bool)
 	mCheck := make(map[string]bool)
@@ -90,82 +104,62 @@ func CheckdirCategory(dir string) {
 		mCheck[msub.name] = true
 	}
 
-	fIndex, fAtend, fNeednext, fCurrent := 0, false, true, ""
-	mIndex, mAtend, mNeednext, mCurrent := 0, false, true, ""
+	fRest := fSubdirs[:]
+	mRest := mSubdirs[:]
 
-	var subdirs []string
+	for len(mRest) > 0 || len(fRest) > 0 {
 
-	var line Line
-	mActive := false
-
-	for !(mAtend && fAtend) {
-		if !mAtend && mNeednext {
-			mNeednext = false
-			if mIndex >= len(mSubdirs) {
-				mAtend = true
-				line = exp.CurrentLine()
-				continue
-			} else {
-				mCurrent = mSubdirs[mIndex].name
-				line = mSubdirs[mIndex].line
-				mActive = mSubdirs[mIndex].active
-				mIndex++
-			}
-		}
-
-		if !fAtend && fNeednext {
-			fNeednext = false
-			if fIndex >= len(fSubdirs) {
-				fAtend = true
-				continue
-			} else {
-				fCurrent = fSubdirs[fIndex]
-				fIndex++
-			}
-		}
-
-		if !fAtend && (mAtend || fCurrent < mCurrent) {
+		if len(fRest) > 0 && (len(mRest) == 0 || fRest[0] < mRest[0].name) {
+			fCurrent := fRest[0]
 			if !mCheck[fCurrent] {
+				var line Line
+				if len(mRest) > 0 {
+					line = mRest[0].line.Line
+				} else {
+					line = exp.CurrentLine()
+				}
+
 				fix := line.Autofix()
-				fix.Errorf("%q exists in the file system, but not in the Makefile.", fCurrent)
+				fix.Errorf("%q exists in the file system but not in the Makefile.", fCurrent)
 				fix.InsertBefore("SUBDIR+=\t" + fCurrent)
 				fix.Apply()
 			}
-			fNeednext = true
+			fRest = fRest[1:]
 
-		} else if !mAtend && (fAtend || mCurrent < fCurrent) {
-			if !fCheck[mCurrent] {
-				fix := line.Autofix()
-				fix.Errorf("%q exists in the Makefile, but not in the file system.", mCurrent)
+		} else if len(mRest) > 0 && (len(fRest) == 0 || mRest[0].name < fRest[0]) {
+			if !fCheck[mRest[0].name] {
+				fix := mRest[0].line.Autofix()
+				fix.Errorf("%q exists in the Makefile but not in the file system.", mRest[0].name)
 				fix.Delete()
 				fix.Apply()
 			}
-			mNeednext = true
+			mRest = mRest[1:]
 
-		} else { // f_current == m_current
-			fNeednext = true
-			mNeednext = true
-			if mActive {
-				subdirs = append(subdirs, dir+"/"+mCurrent)
-			}
+		} else {
+			fRest = fRest[1:]
+			mRest = mRest[1:]
 		}
 	}
 
 	// the pkgsrc-wip category Makefile defines its own targets for
 	// generating indexes and READMEs. Just skip them.
-	if G.Wip {
-		exp.SkipToFooter()
-	}
-
-	exp.ExpectEmptyLine(G.opts.WarnSpace)
-	exp.ExpectText(".include \"../mk/misc/category.mk\"")
-	if !exp.EOF() {
-		exp.CurrentLine().Errorf("The file should end here.")
+	if !G.Wip {
+		exp.ExpectEmptyLine()
+		exp.ExpectText(".include \"../mk/misc/category.mk\"")
+		if !exp.EOF() {
+			exp.CurrentLine().Errorf("The file should end here.")
+		}
 	}
 
 	mklines.SaveAutofixChanges()
 
-	if G.opts.Recursive {
-		G.Todo = append(append([]string(nil), subdirs...), G.Todo...)
+	if G.Opts.Recursive {
+		var recurseInto []string
+		for _, msub := range mSubdirs {
+			if !msub.line.IsCommentedVarassign() {
+				recurseInto = append(recurseInto, dir+"/"+msub.name)
+			}
+		}
+		G.Todo = append(recurseInto, G.Todo...)
 	}
 }

@@ -4,7 +4,6 @@ package main
 
 import (
 	"netbsd.org/pkglint/textproc"
-	"netbsd.org/pkglint/trace"
 	"path"
 )
 
@@ -14,6 +13,8 @@ const (
 	reShVaruse       = `\$\$` + `(?:` + reShVarname + `|` + `\{` + reShVarname + `(?:` + reShVarexpansion + `)?` + `\})`
 	reShDollar       = `\\\$\$|` + reShVaruse + `|\$\$[,\-/]`
 )
+
+// TODO: Can ShellLine and ShellProgramChecker be merged into one type?
 
 type ShellLine struct {
 	mkline MkLine
@@ -91,7 +92,7 @@ outer:
 				repl.AdvanceRegexp(`^\$\$\{([0-9A-Z_a-z]+|#)\}`),
 				repl.AdvanceRegexp(`^\$\$(\$)\$`):
 				shvarname := repl.Group(1)
-				if G.opts.WarnQuoting && checkQuoting && shline.variableNeedsQuoting(shvarname) {
+				if G.Opts.WarnQuoting && checkQuoting && shline.variableNeedsQuoting(shvarname) {
 					line.Warnf("Unquoted shell variable %q.", shvarname)
 					Explain(
 						"When a shell variable contains white-space, it is expanded (split",
@@ -103,9 +104,9 @@ outer:
 						"",
 						"Example:",
 						"\tfname=\"Curriculum vitae.doc\"",
-						"\tcp $fname /tmp",
+						"\tcp $fileName /tmp",
 						"\t# tries to copy the two files \"Curriculum\" and \"Vitae.doc\"",
-						"\tcp \"$fname\" /tmp",
+						"\tcp \"$fileName\" /tmp",
 						"\t# copies one file, as intended")
 				}
 
@@ -131,11 +132,11 @@ outer:
 
 		case quoting == shqSquot:
 			switch {
-			case repl.AdvanceRegexp(`^'`):
+			case repl.AdvanceStr("'"):
 				quoting = shqPlain
-			case repl.AdvanceRegexp(`^[^\$\']+`):
+			case repl.NextBytesFunc(func(b byte) bool { return b != '$' && b != '\'' }) != "":
 				// just skip
-			case repl.AdvanceRegexp(`^\$\$`):
+			case repl.AdvanceStr("$$"):
 				// just skip
 			default:
 				break outer
@@ -147,7 +148,7 @@ outer:
 				quoting = shqPlain
 			case repl.AdvanceStr("`"):
 				quoting = shqDquotBackt
-			case repl.AdvanceRegexp("^[^$\"\\\\`]+"):
+			case repl.NextBytesFunc(func(b byte) bool { return b != '$' && b != '"' && b != '\\' && b != '`' }) != "":
 				break
 			case repl.AdvanceStr("\\$$"):
 				break
@@ -222,7 +223,7 @@ func (shline *ShellLine) unescapeBackticks(shellword string, repl *textproc.Pref
 	}
 
 	line := shline.mkline.Line
-	for !repl.EOF() {
+	for repl.Rest() != "" {
 		switch {
 		case repl.AdvanceStr("`"):
 			if quoting == shqBackt {
@@ -282,7 +283,8 @@ func (shline *ShellLine) CheckShellCommandLine(shelltext string) {
 			"to understand, since all the complexity of using sed and mv is",
 			"hidden behind the scenes.",
 			"",
-			"Run \""+confMake+" help topic=subst\" for more information.")
+			// TODO: Provide a copy-and-paste example.
+			sprintf("Run %q for more information.", makeHelp("subst")))
 		if contains(shelltext, "#") {
 			Explain(
 				"When migrating to the SUBST framework, pay attention to \"#\"",
@@ -302,19 +304,18 @@ func (shline *ShellLine) CheckShellCommandLine(shelltext string) {
 		line.Notef("You don't need to use \"-\" before %q.", cmd)
 	}
 
-	repl := G.NewPrefixReplacer(shelltext)
-	repl.SkipHspace()
-	if repl.AdvanceRegexp(`^[-@]+`) {
-		shline.checkHiddenAndSuppress(repl.Group(0), repl.Rest())
+	lexer := textproc.NewLexer(shelltext)
+	lexer.NextHspace()
+	hiddenAndSuppress := lexer.NextBytesFunc(func(b byte) bool { return b == '-' || b == '@' })
+	if hiddenAndSuppress != "" {
+		shline.checkHiddenAndSuppress(hiddenAndSuppress, lexer.Rest())
 	}
-	setE := false
-	if repl.AdvanceStr("${RUN}") {
-		setE = true
-	} else {
-		repl.AdvanceStr("${_PKG_SILENT}${_PKG_DEBUG}")
+	setE := lexer.NextString("${RUN}") != ""
+	if !setE {
+		lexer.NextString("${_PKG_SILENT}${_PKG_DEBUG}")
 	}
 
-	shline.CheckShellCommand(repl.Rest(), &setE, RunTime)
+	shline.CheckShellCommand(lexer.Rest(), &setE, RunTime)
 }
 
 func (shline *ShellLine) CheckShellCommand(shellcmd string, pSetE *bool, time ToolTime) {
@@ -345,7 +346,7 @@ func (shline *ShellLine) CheckShellCommand(shellcmd string, pSetE *bool, time To
 		}
 	}
 	walker.Callback.AndOr = func(andor *MkShAndOr) {
-		if G.opts.WarnExtra && !*pSetE && walker.Current().Index != 0 {
+		if G.Opts.WarnExtra && !*pSetE && walker.Current().Index != 0 {
 			spc.checkSetE(walker.Parent(1).(*MkShList), walker.Current().Index, andor)
 		}
 	}
@@ -405,7 +406,7 @@ func (shline *ShellLine) checkHiddenAndSuppress(hiddenAndSuppress, rest string) 
 					"cannot be assigned to the command, which is very difficult to debug.",
 					"",
 					"It is better to insert ${RUN} at the beginning of the whole command",
-					"line.  This will hide the command by default, but shows it when",
+					"line.  This will hide the command by default but shows it when",
 					"PKG_DEBUG_LEVEL is set.")
 			}
 		}
@@ -463,7 +464,7 @@ func (scc *SimpleCommandChecker) checkCommandStart() {
 	case matches(shellword, `\$\{(PKGSRCDIR|PREFIX)(:Q)?\}`):
 	case scc.handleComment():
 	default:
-		if G.opts.WarnExtra && !(G.Mk != nil && G.Mk.indentation.DependsOn("OPSYS")) {
+		if G.Opts.WarnExtra && !(G.Mk != nil && G.Mk.indentation.DependsOn("OPSYS")) {
 			scc.shline.mkline.Warnf("Unknown shell command %q.", shellword)
 			Explain(
 				"If you want your package to be portable to all platforms that pkgsrc",
@@ -632,7 +633,7 @@ func (scc *SimpleCommandChecker) checkAutoMkdirs() {
 	for _, arg := range scc.strcmd.Args {
 		if !contains(arg, "$$") && !matches(arg, `\$\{[_.]*[a-z]`) {
 			if m, dirname := match1(arg, `^(?:\$\{DESTDIR\})?\$\{PREFIX(?:|:Q)\}/(.*)`); m {
-				if G.Pkg != nil && G.Pkg.PlistDirs[dirname] {
+				if G.Pkg != nil && G.Pkg.Plist.Dirs[dirname] {
 					scc.shline.mkline.Notef("You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= %s\" instead of %q.", dirname, cmdname)
 					Explain(
 						"Many packages include a list of all needed directories in their",
@@ -792,7 +793,7 @@ func (spc *ShellProgramChecker) checkPipeExitcode(line Line, pipeline *MkShPipel
 		return false, ""
 	}
 
-	if G.opts.WarnExtra && len(pipeline.Cmds) > 1 {
+	if G.Opts.WarnExtra && len(pipeline.Cmds) > 1 {
 		if canFail, cmd := canFail(); canFail {
 			if cmd != "" {
 				line.Warnf("The exitcode of %q at the left of the | operator is ignored.", cmd)
@@ -1005,6 +1006,8 @@ func splitIntoShellTokens(line Line, text string) (tokens []string, rest string)
 
 // Example: "word1 word2;;;" => "word1", "word2;;;"
 // Compare devel/bmake/files/str.c, function brk_string.
+//
+// TODO: Move to mkline.go or mkparser.go.
 func splitIntoMkWords(line Line, text string) (words []string, rest string) {
 	if trace.Tracing {
 		defer trace.Call(line, text)()

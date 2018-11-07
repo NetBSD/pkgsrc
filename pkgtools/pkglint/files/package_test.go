@@ -23,7 +23,7 @@ func (s *Suite) Test_Package_checklinesBuildlink3Inclusion__package_but_not_file
 
 	t.CreateFileLines("category/dependency/buildlink3.mk")
 	G.Pkg = NewPackage(t.File("category/package"))
-	G.Pkg.bl3["../../category/dependency/buildlink3.mk"] = t.NewLine("fname", 1, "")
+	G.Pkg.bl3["../../category/dependency/buildlink3.mk"] = t.NewLine("fileName", 1, "")
 	mklines := t.NewMkLines("category/package/buildlink3.mk",
 		MkRcsID)
 
@@ -403,88 +403,6 @@ func (s *Suite) Test_Package_loadPackageMakefile__dump(c *check.C) {
 		"~/category/package/Makefile:6: LICENSE=\t2-clause-bsd")
 }
 
-func (s *Suite) Test_Pkglint_checkdirPackage(c *check.C) {
-	t := s.Init(c)
-
-	t.Chdir("category/package")
-	t.CreateFileLines("Makefile",
-		MkRcsID)
-
-	G.checkdirPackage(".")
-
-	t.CheckOutputLines(
-		"WARN: Makefile: Neither PLIST nor PLIST.common exist, and PLIST_SRC is unset.",
-		"WARN: distinfo: File not found. Please run \""+confMake+" makesum\" or define NO_CHECKSUM=yes in the package Makefile.",
-		"ERROR: Makefile: Each package must define its LICENSE.",
-		"WARN: Makefile: No COMMENT given.")
-}
-
-func (s *Suite) Test_Pkglint_checkdirPackage__PKGDIR(c *check.C) {
-	t := s.Init(c)
-
-	t.SetupVartypes()
-	t.SetupPkgsrc()
-	t.CreateFileLines("category/Makefile")
-	t.CreateFileLines("other/package/Makefile",
-		MkRcsID)
-	t.CreateFileLines("other/package/PLIST",
-		PlistRcsID,
-		"bin/program")
-	t.CreateFileLines("other/package/distinfo",
-		RcsID,
-		"",
-		"SHA1 (patch-aa) = da39a3ee5e6b4b0d3255bfef95601890afd80709")
-	t.CreateFileLines("category/package/patches/patch-aa",
-		RcsID)
-	t.Chdir("category/package")
-	t.CreateFileLines("Makefile",
-		MkRcsID,
-		"",
-		"CATEGORIES=category",
-		"",
-		"COMMENT=\tComment",
-		"LICENSE=\t2-clause-bsd",
-		"PKGDIR=\t../../other/package")
-
-	// DISTINFO_FILE is resolved relative to PKGDIR, the other places
-	// are resolved relative to the package base directory.
-	G.checkdirPackage(".")
-
-	t.CheckOutputLines(
-		"ERROR: patches/patch-aa:1: Patch files must not be empty.")
-}
-
-func (s *Suite) Test_Pkglint_checkdirPackage__patch_without_distinfo(c *check.C) {
-	t := s.Init(c)
-
-	pkg := t.SetupPackage("category/package")
-	t.CreateFileDummyPatch("category/package/patches/patch-aa")
-	t.Remove("category/package/distinfo")
-
-	G.CheckDirent(pkg)
-
-	// FIXME: One of the below warnings is redundant.
-	t.CheckOutputLines(
-		"WARN: ~/category/package/distinfo: File not found. Please run \""+confMake+" makesum\" or define NO_CHECKSUM=yes in the package Makefile.",
-		"WARN: ~/category/package/distinfo: File not found. Please run \""+confMake+" makepatchsum\".")
-}
-
-func (s *Suite) Test_Pkglint_checkdirPackage__meta_package_without_license(c *check.C) {
-	t := s.Init(c)
-
-	t.Chdir("category/package")
-	t.CreateFileLines("Makefile",
-		MkRcsID,
-		"",
-		"META_PACKAGE=\tyes")
-	t.SetupVartypes()
-
-	G.checkdirPackage(".")
-
-	t.CheckOutputLines(
-		"WARN: Makefile: No COMMENT given.") // No error about missing LICENSE.
-}
-
 func (s *Suite) Test_Package__varuse_at_load_time(c *check.C) {
 	t := s.Init(c)
 
@@ -582,8 +500,10 @@ func (s *Suite) Test_Package_loadPackageMakefile(c *check.C) {
 	// A file including itself does not lead to an endless loop while parsing
 	// but may still produce unexpected warnings, such as redundant definitions.
 	t.CheckOutputLines(
-		"NOTE: ~/category/package/Makefile:3: Definition of PKGNAME is redundant because of Makefile:3.",
-		"NOTE: ~/category/package/Makefile:4: Definition of DISTNAME is redundant because of Makefile:4.")
+		"NOTE: ~/category/package/Makefile:3: Definition of PKGNAME is redundant "+
+			"because of ../../category/package/Makefile:3.",
+		"NOTE: ~/category/package/Makefile:4: Definition of DISTNAME is redundant "+
+			"because of ../../category/package/Makefile:4.")
 }
 
 func (s *Suite) Test_Package_loadPackageMakefile__PECL_VERSION(c *check.C) {
@@ -609,8 +529,6 @@ func (s *Suite) Test_Package_loadPackageMakefile__PECL_VERSION(c *check.C) {
 		".include \"../../lang/php/ext.mk\"")
 
 	G.CheckDirent(pkg)
-
-	t.CheckOutputLines()
 }
 
 func (s *Suite) Test_Package_CheckInclude__conditional_and_unconditional_include(c *check.C) {
@@ -626,8 +544,8 @@ func (s *Suite) Test_Package_CheckInclude__conditional_and_unconditional_include
 	t.CreateFileLines("Makefile",
 		MkRcsID,
 		"",
-		"COMMENT\t=Description",
-		"LICENSE\t= gnu-gpl-v2",
+		"COMMENT=\tDescription",
+		"LICENSE=\tgnu-gpl-v2",
 		".include \"../../devel/zlib/buildlink3.mk\"",
 		".if ${OPSYS} == \"Linux\"",
 		".include \"../../sysutils/coreutils/buildlink3.mk\"",
@@ -757,7 +675,7 @@ func (s *Suite) Test_Package__redundant_master_sites(c *check.C) {
 	G.checkdirPackage(t.File("math/R-date"))
 
 	t.CheckOutputLines(
-		"NOTE: ~/math/R-date/Makefile:6: Definition of MASTER_SITES is redundant because of ../R/Makefile.extension:4.")
+		"NOTE: ~/math/R-date/Makefile:6: Definition of MASTER_SITES is redundant because of ../../math/R/Makefile.extension:4.")
 }
 
 func (s *Suite) Test_Package_checkUpdate(c *check.C) {
@@ -1031,30 +949,6 @@ func (s *Suite) Test_Package_checkLocallyModified(c *check.C) {
 
 	G.CurrentUsername = "owner"
 
-	G.CheckDirent(pkg)
-
-	t.CheckOutputEmpty()
-}
-
-func (s *Suite) Test_Pkglint_checkdirPackage__filename_with_variable(c *check.C) {
-	t := s.Init(c)
-
-	t.SetupCommandLine("-Wall,no-order")
-	pkg := t.SetupPackage("category/package",
-		".include \"../../mk/bsd.prefs.mk\"",
-		"",
-		"RUBY_VERSIONS_ACCEPTED=\t22 23 24 25", // As of 2018.
-		".for rv in ${RUBY_VERSIONS_ACCEPTED}",
-		"RUBY_VER?=\t\t${rv}",
-		".endfor",
-		"",
-		"RUBY_PKGDIR=\t../../lang/ruby-${RUBY_VER}-base",
-		"DISTINFO_FILE=\t${RUBY_PKGDIR}/distinfo")
-
-	// Pkglint cannot currently resolve the location of DISTINFO_FILE completely
-	// because the variable \"rv\" comes from a .for loop.
-	//
-	// TODO: iterate over variables in simple .for loops like the above.
 	G.CheckDirent(pkg)
 
 	t.CheckOutputEmpty()

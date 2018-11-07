@@ -3,7 +3,7 @@ package licenses
 import (
 	"encoding/json"
 	"gopkg.in/check.v1"
-	"netbsd.org/pkglint/regex"
+	"netbsd.org/pkglint/intqa"
 	"strings"
 	"testing"
 )
@@ -11,17 +11,17 @@ import (
 type Suite struct{}
 
 func (s *Suite) Test_Parse(c *check.C) {
-	res := regex.NewRegistry()
 	checkParse := func(cond string, expected string) {
-		c.Check(toJSON(Parse(cond, &res)), check.Equals, expected)
+		c.Check(toJSON(Parse(cond)), check.Equals, expected)
 	}
 	checkParseDeep := func(cond string, expected *Condition) {
-		c.Check(Parse(cond, &res), check.DeepEquals, expected)
+		c.Check(Parse(cond), check.DeepEquals, expected)
 	}
 
-	checkParseDeep("gnu-gpl-v2", NewSingleton(NewName("gnu-gpl-v2")))
+	checkParseDeep("gnu-gpl-v2", NewName("gnu-gpl-v2"))
 
-	checkParse("gnu-gpl-v2", "{Children:[{Name:gnu-gpl-v2}]}")
+	checkParse("gnu-gpl-v2", "{Name:gnu-gpl-v2}")
+
 	checkParse("a AND b", "{And:true,Children:[{Name:a},{Name:b}]}")
 	checkParse("a OR b", "{Or:true,Children:[{Name:a},{Name:b}]}")
 
@@ -46,13 +46,13 @@ func (s *Suite) Test_Parse(c *check.C) {
 			NewParen(NewAnd(NewName("c"), NewName("d")))))
 
 	checkParse("a AND b OR c AND d", "{And:true,Or:true,Children:[{Name:a},{Name:b},{Name:c},{Name:d}]}")
-	checkParse("((a AND (b AND c)))", "{Children:[{Paren:{Children:[{Paren:{And:true,Children:[{Name:a},{Paren:{And:true,Children:[{Name:b},{Name:c}]}}]}}]}}]}")
+	checkParse("((a AND (b AND c)))", "{Paren:{Children:[{Paren:{And:true,Children:[{Name:a},{Paren:{And:true,Children:[{Name:b},{Name:c}]}}]}}]}}")
 
-	c.Check(Parse("a AND b OR c AND d", &res).String(), check.Equals, "a MIXED b MIXED c MIXED d")
+	c.Check(Parse("a AND b OR c AND d").String(), check.Equals, "a MIXED b MIXED c MIXED d")
 
-	c.Check(Parse("AND artistic", &res), check.IsNil)
+	c.Check(Parse("AND artistic"), check.IsNil)
 
-	c.Check(Parse("invalid/character", &res), check.IsNil)
+	c.Check(Parse("invalid/character"), check.IsNil)
 }
 
 func (s *Suite) Test_Condition_String(c *check.C) {
@@ -83,10 +83,8 @@ func (s *Suite) Test_Condition_String(c *check.C) {
 	c.Check(mixed.String(), check.Equals, "a MIXED b MIXED c")
 }
 
-func (s *Suite) Test_Walk(c *check.C) {
-	res := regex.NewRegistry()
-
-	condition := Parse("(a OR b) AND (c AND d)", &res)
+func (s *Suite) Test_Condition_Walk(c *check.C) {
+	condition := Parse("(a OR b) AND (c AND d)")
 
 	var out []string
 	condition.Walk(func(condition *Condition) {
@@ -115,9 +113,6 @@ func NewName(name string) *Condition {
 func NewParen(child *Condition) *Condition {
 	return &Condition{Paren: child}
 }
-func NewSingleton(child *Condition) *Condition {
-	return &Condition{Children: []*Condition{child}}
-}
 func NewAnd(parts ...*Condition) *Condition {
 	return &Condition{Children: parts, And: true}
 }
@@ -126,11 +121,18 @@ func NewOr(parts ...*Condition) *Condition {
 }
 
 func toJSON(cond *Condition) string {
-	json, _ := json.Marshal(cond)
-	return strings.Replace(string(json), "\"", "", -1)
+	jsonStr, _ := json.Marshal(cond)
+	return strings.Replace(string(jsonStr), "\"", "", -1)
 }
 
 func Test(t *testing.T) {
 	check.Suite(new(Suite))
 	check.TestingT(t)
+}
+
+func (s *Suite) Test__test_names(c *check.C) {
+	ck := intqa.NewTestNameChecker(c)
+	ck.IgnoreFiles("*yacc.go")
+	ck.ShowWarnings(false)
+	ck.Check()
 }

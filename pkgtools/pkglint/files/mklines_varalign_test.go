@@ -46,6 +46,8 @@ func (vt *VaralignTester) Run() {
 }
 
 func (vt *VaralignTester) run(autofix bool) {
+	t := vt.tester
+
 	cmdline := []string{"-Wall"}
 	if autofix {
 		cmdline = append(cmdline, "--autofix")
@@ -53,9 +55,9 @@ func (vt *VaralignTester) run(autofix bool) {
 	if vt.source {
 		cmdline = append(cmdline, "--source")
 	}
-	vt.tester.SetupCommandLine(cmdline...)
+	t.SetupCommandLine(cmdline...)
 
-	mklines := vt.tester.SetupFileMkLines("Makefile", vt.input...)
+	mklines := t.SetupFileMkLines("Makefile", vt.input...)
 
 	var varalign VaralignBlock
 	for _, mkline := range mklines.mklines {
@@ -64,12 +66,20 @@ func (vt *VaralignTester) run(autofix bool) {
 	varalign.Finish()
 
 	if autofix {
-		vt.tester.CheckOutputLines(vt.autofixes...)
+		if len(vt.autofixes) > 0 {
+			t.CheckOutputLines(vt.autofixes...)
+		} else {
+			t.CheckOutputEmpty()
+		}
 
 		SaveAutofixChanges(mklines.lines)
-		vt.tester.CheckFileLinesDetab("Makefile", vt.fixed...)
+		t.CheckFileLinesDetab("Makefile", vt.fixed...)
 	} else {
-		vt.tester.CheckOutputLines(vt.diagnostics...)
+		if len(vt.diagnostics) > 0 {
+			t.CheckOutputLines(vt.diagnostics...)
+		} else {
+			t.CheckOutputEmpty()
+		}
 	}
 }
 
@@ -686,7 +696,7 @@ func (s *Suite) Test_Varalign__outlier_6(c *check.C) {
 	vt.Run()
 }
 
-// The long line is not an outlier, but very close. One more space, and
+// The long line is not an outlier but very close. One more space, and
 // it would count.
 func (s *Suite) Test_Varalign__outlier_10(c *check.C) {
 	vt := NewVaralignTester(s, c)
@@ -758,7 +768,7 @@ func (s *Suite) Test_Varalign__outlier_14(c *check.C) {
 // since compared to the DIST line, it is at least two tabs away.
 // Pkglint before 2018-26-01 suggested that it "should be aligned to column 9",
 // which is not possible since the variable name is already longer.
-func (s *Suite) Test_MkLines__variable_alignment__long_short(c *check.C) {
+func (s *Suite) Test_Varalign__long_short(c *check.C) {
 	vt := NewVaralignTester(s, c)
 	vt.Input(
 		"INSTALLATION_DIRS=\tbin",

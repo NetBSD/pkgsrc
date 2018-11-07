@@ -10,7 +10,7 @@ func (s *Suite) Test_MkParser_MkTokens(c *check.C) {
 	t := s.Init(c)
 
 	checkRest := func(input string, expectedTokens []*MkToken, expectedRest string) {
-		line := t.NewLines("Test_MkParser_MkTokens.mk", input)[0]
+		line := t.NewLines("Test_MkParser_MkTokens.mk", input).Lines[0]
 		p := NewMkParser(line, input, true)
 		actualTokens := p.MkTokens()
 		c.Check(actualTokens, deepEquals, expectedTokens)
@@ -34,10 +34,10 @@ func (s *Suite) Test_MkParser_MkTokens(c *check.C) {
 			text += ":" + modifier
 		}
 		text += "}"
-		return &MkToken{Text: text, Varuse: &MkVarUse{varname: varname, modifiers: modifiers}}
+		return &MkToken{Text: text, Varuse: NewMkVarUse(varname, modifiers...)}
 	}
 	varuseText := func(text, varname string, modifiers ...string) *MkToken {
-		return &MkToken{Text: text, Varuse: &MkVarUse{varname: varname, modifiers: modifiers}}
+		return &MkToken{Text: text, Varuse: NewMkVarUse(varname, modifiers...)}
 	}
 
 	check("literal", literal("literal"))
@@ -147,7 +147,7 @@ func (s *Suite) Test_MkParser_MkTokens(c *check.C) {
 	checkRest("${VAR:S,a,b,c,d,e,f}",
 		[]*MkToken{{
 			Text:   "${VAR:S,a,b,c,d,e,f}",
-			Varuse: &MkVarUse{varname: "VAR", modifiers: []string{"S,a,b,"}}}},
+			Varuse: NewMkVarUse("VAR", "S,a,b,")}},
 		"")
 }
 
@@ -161,9 +161,7 @@ func (s *Suite) Test_MkParser_MkCond(c *check.C) {
 	check := func(input string, expectedTree MkCond) {
 		checkRest(input, expectedTree, "")
 	}
-	varuse := func(varname string, modifiers ...string) *MkVarUse {
-		return &MkVarUse{varname: varname, modifiers: modifiers}
-	}
+	varuse := NewMkVarUse
 
 	check("${OPSYS:MNetBSD}",
 		&mkCond{Not: &mkCond{Empty: varuse("OPSYS", "MNetBSD")}})
@@ -286,7 +284,12 @@ func (s *Suite) Test_MkCondWalker_Walk(c *check.C) {
 	var events []string
 
 	varuseStr := func(varuse *MkVarUse) string {
-		return strings.Join(append([]string{varuse.varname}, varuse.modifiers...), ":")
+		strs := make([]string, 1+len(varuse.modifiers), 1+len(varuse.modifiers))
+		strs[0] = varuse.varname
+		for i, mod := range varuse.modifiers {
+			strs[1+i] = mod.Text
+		}
+		return strings.Join(strs, ":")
 	}
 
 	addEvent := func(name string, args ...string) {

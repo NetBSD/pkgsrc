@@ -3,6 +3,7 @@
 package getopt
 
 import (
+	"errors"
 	"fmt"
 	"io"
 	"strings"
@@ -26,9 +27,9 @@ func NewOptions() *Options {
 //  opts := NewOptions()
 //  warnings := opts.AddFlagGroup('W', "warnings", "warning,...", "Enable the given warnings")
 //  warnings.AddFlagVar("extra", &extra, false, "Print extra warnings")
-func (o *Options) AddFlagGroup(shortName rune, longName, argDescription, description string) *FlagGroup {
+func (o *Options) AddFlagGroup(shortName rune, longName, argsName, description string) *FlagGroup {
 	grp := new(FlagGroup)
-	opt := &option{shortName, longName, argDescription, description, grp}
+	opt := &option{shortName, longName, argsName, description, grp}
 	o.options = append(o.options, opt)
 	return grp
 }
@@ -108,9 +109,9 @@ func (o *Options) handleLongOption(args []string, i int, opt *option, argval *st
 			*data = true
 		} else {
 			switch *argval {
-			case "true", "on", "enabled", "1":
+			case "true", "on", "enabled", "1", "yes":
 				*data = true
-			case "false", "off", "disabled", "0":
+			case "false", "off", "disabled", "0", "no":
 				*data = false
 			default:
 				return 0, optErr("invalid argument for option --" + opt.longName)
@@ -138,7 +139,7 @@ func (o *Options) handleLongOption(args []string, i int, opt *option, argval *st
 			return 0, optErr("option requires an argument: --" + opt.longName)
 		}
 	}
-	panic("getopt: unknown option type")
+	panic("getopt: internal error: unknown option type")
 }
 
 func (o *Options) parseShortOptions(args []string, i int, optchars string) (skip int, err error) {
@@ -182,100 +183,113 @@ optchar:
 	return 0, nil
 }
 
+// Help writes a summary of the options to the given writer,
+// in tabular format.
 func (o *Options) Help(out io.Writer, generalUsage string) {
 	wr := tabwriter.NewWriter(out, 1, 0, 2, ' ', tabwriter.TabIndent)
 
-	io.WriteString(wr, "usage: "+generalUsage+"\n")
-	io.WriteString(wr, "\n")
-	wr.Flush()
+	rowf := func(format string, args ...interface{}) {
+		_, _ = fmt.Fprintf(wr, format, args...)
+		_, _ = io.WriteString(wr, "\n")
+	}
+	finishTable := func() { _ = wr.Flush() }
+
+	rowf("usage: %s", generalUsage)
+	rowf("")
+	finishTable()
 
 	for _, opt := range o.options {
-		if opt.argDescription == "" {
-			fmt.Fprintf(wr, "  -%c, --%s\t %s\n",
+		if opt.argsName == "" {
+			rowf("  -%c, --%s\t %s",
 				opt.shortName, opt.longName, opt.description)
 		} else {
-			fmt.Fprintf(wr, "  -%c, --%s=%s\t %s\n",
-				opt.shortName, opt.longName, opt.argDescription, opt.description)
+			rowf("  -%c, --%s=%s\t %s",
+				opt.shortName, opt.longName, opt.argsName, opt.description)
 		}
 	}
-	wr.Flush()
+	finishTable()
 
 	hasFlagGroups := false
 	for _, opt := range o.options {
 		switch flagGroup := opt.data.(type) {
 		case *FlagGroup:
 			hasFlagGroups = true
-			io.WriteString(wr, "\n")
-			fmt.Fprintf(wr, "  Flags for -%c, --%s:\n", opt.shortName, opt.longName)
-			io.WriteString(wr, "    all\t all of the following\n")
-			io.WriteString(wr, "    none\t none of the following\n")
+			rowf("")
+			rowf("  Flags for -%c, --%s:", opt.shortName, opt.longName)
+			rowf("    all\t all of the following")
+			rowf("    none\t none of the following")
 			for _, flag := range flagGroup.flags {
 				state := "disabled"
 				if *flag.value {
 					state = "enabled"
 				}
-				fmt.Fprintf(wr, "    %s\t %s (%v)\n", flag.name, flag.help, state)
+				rowf("    %s\t %s (%v)", flag.name, flag.description, state)
 			}
-			wr.Flush()
+			finishTable()
 		}
 	}
 	if hasFlagGroups {
-		io.WriteString(wr, "\n")
-		io.WriteString(wr, "  (Prefix a flag with \"no-\" to disable it.)\n")
-		wr.Flush()
+		rowf("")
+		rowf("  (Prefix a flag with \"no-\" to disable it.)")
+		finishTable()
 	}
 }
 
 type option struct {
-	shortName      rune
-	longName       string
-	argDescription string
-	description    string
-	data           interface{}
+	shortName   rune
+	longName    string
+	argsName    string
+	description string
+	data        interface{}
 }
 
 type FlagGroup struct {
 	flags []*groupFlag
 }
 
-func (fg *FlagGroup) AddFlagVar(name string, flag *bool, defval bool, help string) {
-	opt := &groupFlag{name, flag, help}
+type groupFlag struct {
+	name        string
+	value       *bool
+	description string
+}
+
+func (fg *FlagGroup) AddFlagVar(name string, flag *bool, defval bool, description string) {
+	opt := &groupFlag{name, flag, description}
 	fg.flags = append(fg.flags, opt)
 	*flag = defval
 }
 
-func (fg *FlagGroup) parse(optionPrefix, arg string) (err error) {
-argopt:
-	for _, argopt := range strings.Split(arg, ",") {
-		if argopt == "none" || argopt == "all" {
-			for _, opt := range fg.flags {
-				*opt.value = argopt == "all"
-			}
-			continue argopt
+func (fg *FlagGroup) parse(optionPrefix, arg string) error {
+	for _, argOpt := range strings.Split(arg, ",") {
+		err := fg.parseOpt(optionPrefix, argOpt)
+		if err != nil {
+			return err
 		}
-		for _, opt := range fg.flags {
-			if argopt == opt.name {
-				*opt.value = true
-				continue argopt
-			}
-			if argopt == "no-"+opt.name {
-				*opt.value = false
-				continue argopt
-			}
-		}
-		return optErr("unknown option: " + optionPrefix + argopt)
 	}
 	return nil
 }
 
-type groupFlag struct {
-	name  string
-	value *bool
-	help  string
+func (fg *FlagGroup) parseOpt(optionPrefix, argOpt string) error {
+
+	if argOpt == "none" || argOpt == "all" {
+		for _, opt := range fg.flags {
+			*opt.value = argOpt == "all"
+		}
+		return nil
+	}
+
+	for _, opt := range fg.flags {
+		if argOpt == opt.name {
+			*opt.value = true
+			return nil
+		}
+		if argOpt == "no-"+opt.name {
+			*opt.value = false
+			return nil
+		}
+	}
+
+	return optErr("unknown option: " + optionPrefix + argOpt)
 }
 
-type optErr string
-
-func (err optErr) Error() string {
-	return string(err)
-}
+func optErr(str string) error { return errors.New(str) }

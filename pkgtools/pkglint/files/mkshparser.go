@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"netbsd.org/pkglint/trace"
 	"strconv"
 )
 
