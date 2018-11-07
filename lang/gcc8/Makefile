@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2018/10/28 22:21:04 abs Exp $
+# $NetBSD: Makefile,v 1.7 2018/11/07 04:32:32 maya Exp $
 
 GCC_PKGNAME=		gcc8
 .include		"version.mk"
 
 DISTNAME=	gcc-${GCC8_DIST_VERSION}
 PKGNAME=	${GCC_PKGNAME}-${GCC8_DIST_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 ## When bumping the PKGREVISION of this package the PKGREVISION of
 ## lang/gcc8-libs needs to be bump to be at least 1 more than the
 ## PKGREVISION of this package!
