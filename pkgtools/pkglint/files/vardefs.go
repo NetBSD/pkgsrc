@@ -1,7 +1,7 @@
 package main
 
 import (
-	"netbsd.org/pkglint/trace"
+	"netbsd.org/pkglint/regex"
 	"path"
 	"strings"
 )
@@ -110,6 +110,12 @@ func (src *Pkgsrc) InitVartypes() {
 			return joined
 		}())
 
+	// enumFrom parses all variable definitions for the given file,
+	// and for all variables matching one of the varcanons, all values
+	// are added as allowed values.
+	//
+	// If the file cannot be found, the allowed values are taken from
+	// defval. This is mostly useful when testing pkglint.
 	enumFrom := func(fileName string, defval string, varcanons ...string) *BasicType {
 		mklines := LoadMk(src.File(fileName), NotEmpty)
 		values := make(map[string]bool)
@@ -132,7 +138,7 @@ func (src *Pkgsrc) InitVartypes() {
 			}
 		}
 
-		if len(values) != 0 {
+		if len(values) > 0 {
 			joined := keysJoined(values)
 			if trace.Tracing {
 				trace.Stepf("Enum from %s in: %s", strings.Join(varcanons, " "), fileName, joined)
@@ -144,6 +150,20 @@ func (src *Pkgsrc) InitVartypes() {
 			trace.Stepf("Enum from default value: %s", defval)
 		}
 		return enum(defval)
+	}
+
+	// enumFromDirs reads the directories from category, takes all
+	// that have a single number in them and ranks them from earliest
+	// to latest.
+	//
+	// If the directories cannot be found, the allowed values are taken
+	// from defval. This is mostly useful when testing pkglint.
+	enumFromDirs := func(category string, re regex.Pattern, repl string, defval string) *BasicType {
+		versions := src.ListVersions(category, re, repl, false)
+		if len(versions) == 0 {
+			return enum(defval)
+		}
+		return enum(strings.Join(versions, " "))
 	}
 
 	compilers := enumFrom(
@@ -342,7 +362,7 @@ func (src *Pkgsrc) InitVartypes() {
 	usrpkg("ICECAST_CHUNKLEN", lkNone, BtInteger)
 	usrpkg("ICECAST_SOURCE_BUFFSIZE", lkNone, BtInteger)
 	usrpkg("IMAP_UW_CCLIENT_MBOX_FMT", lkNone, enum("mbox mbx mh mmdf mtx mx news phile tenex unix"))
-	usrpkg("IMAP_UW_MAILSPOOLHOME", lkNone, BtFilename)
+	usrpkg("IMAP_UW_MAILSPOOLHOME", lkNone, BtFileName)
 	usrpkg("IMDICTDIR", lkNone, BtPathname)
 	usrpkg("INN_DATA_DIR", lkNone, BtPathname)
 	usrpkg("INN_USER", lkNone, BtUserGroupName)
@@ -419,7 +439,7 @@ func (src *Pkgsrc) InitVartypes() {
 	usrpkg("PILRC_USE_GTK", lkNone, BtYesNo)
 	usrpkg("PKG_JVM_DEFAULT", lkNone, jvms)
 	usrpkg("POPTOP_USE_MPPE", lkNone, BtYes)
-	usrpkg("PROCMAIL_MAILSPOOLHOME", lkNone, BtFilename)
+	usrpkg("PROCMAIL_MAILSPOOLHOME", lkNone, BtFileName)
 	usrpkg("PROCMAIL_TRUSTED_IDS", lkShell, BtUnknown) // Comma-separated list of string or integer literals.
 	usrpkg("PVM_SSH", lkNone, BtPathname)
 	usrpkg("QMAILDIR", lkNone, BtPathname)
@@ -437,7 +457,7 @@ func (src *Pkgsrc) InitVartypes() {
 	usrpkg("RSSH_CVS_PATH", lkNone, BtPathname)
 	usrpkg("RSSH_RDIST_PATH", lkNone, BtPathname)
 	usrpkg("RSSH_RSYNC_PATH", lkNone, BtPathname)
-	usrpkg("SAWFISH_THEMES", lkShell, BtFilename)
+	usrpkg("SAWFISH_THEMES", lkShell, BtFileName)
 	usrpkg("SCREWS_GROUP", lkNone, BtUserGroupName)
 	usrpkg("SCREWS_USER", lkNone, BtUserGroupName)
 	usrpkg("SDIST_PAWD", lkNone, enum("pawd pwd"))
@@ -470,7 +490,7 @@ func (src *Pkgsrc) InitVartypes() {
 	acl(".TARGET", lkNone, BtPathname, "buildlink3.mk:; *: use, use-loadtime")
 	acl("@", lkNone, BtPathname, "buildlink3.mk:; *: use, use-loadtime")
 	acl("ALL_ENV", lkShell, BtShellWord, "")
-	acl("ALTERNATIVES_FILE", lkNone, BtFilename, "")
+	acl("ALTERNATIVES_FILE", lkNone, BtFileName, "")
 	acl("ALTERNATIVES_SRC", lkShell, BtPathname, "")
 	pkg("APACHE_MODULE", lkNone, BtYes)
 	sys("AR", lkNone, BtShellCommand)
@@ -625,15 +645,15 @@ func (src *Pkgsrc) InitVartypes() {
 	acl("DESTDIR_VARNAME", lkNone, BtVariableName, "Makefile, Makefile.common: set")
 	sys("DEVOSSAUDIO", lkNone, BtPathname)
 	sys("DEVOSSSOUND", lkNone, BtPathname)
-	pkglist("DISTFILES", lkShell, BtFilename)
+	pkglist("DISTFILES", lkShell, BtFileName)
 	pkg("DISTINFO_FILE", lkNone, BtRelativePkgPath)
-	pkg("DISTNAME", lkNone, BtFilename)
+	pkg("DISTNAME", lkNone, BtFileName)
 	pkg("DIST_SUBDIR", lkNone, BtPathname)
 	acl("DJB_BUILD_ARGS", lkShell, BtShellWord, "")
 	acl("DJB_BUILD_TARGETS", lkShell, BtIdentifier, "")
 	acl("DJB_CONFIG_CMDS", lkNone, BtShellCommands, "options.mk: set")
 	acl("DJB_CONFIG_DIRS", lkShell, BtWrksrcSubdirectory, "")
-	acl("DJB_CONFIG_HOME", lkNone, BtFilename, "")
+	acl("DJB_CONFIG_HOME", lkNone, BtFileName, "")
 	acl("DJB_CONFIG_PREFIX", lkNone, BtPathname, "")
 	acl("DJB_INSTALL_TARGETS", lkShell, BtIdentifier, "")
 	acl("DJB_MAKE_TARGETS", lkNone, BtYesNo, "")
@@ -652,7 +672,7 @@ func (src *Pkgsrc) InitVartypes() {
 	acl("ECHO", lkNone, BtShellCommand, "*: use")
 	sys("ECHO_MSG", lkNone, BtShellCommand)
 	sys("ECHO_N", lkNone, BtShellCommand)
-	pkg("EGDIR", lkNone, BtPathname) // Not defined anywhere, but used in many places like this.
+	pkg("EGDIR", lkNone, BtPathname) // Not defined anywhere but used in many places like this.
 	sys("EMACS_BIN", lkNone, BtPathname)
 	sys("EMACS_ETCPREFIX", lkNone, BtPathname)
 	sys("EMACS_FLAVOR", lkNone, enum("emacs xemacs"))
@@ -723,7 +743,7 @@ func (src *Pkgsrc) InitVartypes() {
 	pkglist("GENERATE_PLIST", lkNone, BtShellCommands)
 	pkg("GITHUB_PROJECT", lkNone, BtIdentifier)
 	pkg("GITHUB_TAG", lkNone, BtIdentifier)
-	pkg("GITHUB_RELEASE", lkNone, BtFilename)
+	pkg("GITHUB_RELEASE", lkNone, BtFileName)
 	pkg("GITHUB_TYPE", lkNone, enum("tag release"))
 	pkg("GMAKE_REQD", lkNone, BtVersion)
 	acl("GNU_ARCH", lkNone, enum("mips"), "")
@@ -774,9 +794,9 @@ func (src *Pkgsrc) InitVartypes() {
 	sys("JAVA_BINPREFIX", lkNone, BtPathname)
 	pkg("JAVA_CLASSPATH", lkNone, BtShellWord)
 	pkg("JAVA_HOME", lkNone, BtPathname)
-	pkg("JAVA_NAME", lkNone, BtFilename)
+	pkg("JAVA_NAME", lkNone, BtFileName)
 	pkglist("JAVA_UNLIMIT", lkShell, enum("cmdsize datasize stacksize"))
-	pkglist("JAVA_WRAPPERS", lkSpace, BtFilename)
+	pkglist("JAVA_WRAPPERS", lkSpace, BtFileName)
 	pkg("JAVA_WRAPPER_BIN.*", lkNone, BtPathname)
 	sys("KRB5BASE", lkNone, BtPathname)
 	acl("KRB5_ACCEPTED", lkShell, enum("heimdal mit-krb5"), "")
@@ -908,7 +928,7 @@ func (src *Pkgsrc) InitVartypes() {
 	sys("PAMBASE", lkNone, BtPathname)
 	usr("PAM_DEFAULT", lkNone, enum("linux-pam openpam solaris-pam"))
 	acl("PATCHDIR", lkNone, BtRelativePkgPath, "Makefile: set; Makefile.common: default, set")
-	pkglist("PATCHFILES", lkShell, BtFilename)
+	pkglist("PATCHFILES", lkShell, BtFileName)
 	acl("PATCH_ARGS", lkShell, BtShellWord, "")
 	acl("PATCH_DIST_ARGS", lkShell, BtShellWord, "Makefile: set, append")
 	acl("PATCH_DIST_CAT", lkNone, BtShellCommand, "")
@@ -963,7 +983,7 @@ func (src *Pkgsrc) InitVartypes() {
 	acl("PKGTOOLS_ENV", lkShell, BtShellWord, "")
 	sys("PKGVERSION", lkNone, BtVersion)
 	sys("PKGVERSION_NOREV", lkNone, BtVersion) // Without the nb* part.
-	sys("PKGWILDCARD", lkNone, BtFilemask)
+	sys("PKGWILDCARD", lkNone, BtFileMask)
 	sys("PKG_ADMIN", lkNone, BtShellCommand)
 	sys("PKG_APACHE", lkNone, enum("apache24"))
 	pkg("PKG_APACHE_ACCEPTED", lkShell, enum("apache24"))
@@ -1042,8 +1062,10 @@ func (src *Pkgsrc) InitVartypes() {
 	acl("PTHREAD_OPTS", lkShell, enum("native optional require"), "Makefile: set, append; Makefile.common, buildlink3.mk: append")
 	sysload("PTHREAD_TYPE", lkNone, BtIdentifier) // Or "native" or "none".
 	pkg("PY_PATCHPLIST", lkNone, BtYes)
-	acl("PYPKGPREFIX", lkNone, enum("py27 py34 py35 py36"), "pyversion.mk: set; *: use-loadtime, use")
-	pkg("PYTHON_FOR_BUILD_ONLY", lkNone, BtYes)
+	acl("PYPKGPREFIX", lkNone, enumFromDirs("lang", `^python(\d+)$`, "py$1", "py27 py36"), ""+
+		"pyversion.mk: set; "+
+		"*: use-loadtime, use")
+	pkg("PYTHON_FOR_BUILD_ONLY", lkNone, enum("yes no test tool YES")) // See lang/python/pyversion.mk
 	pkglist("REPLACE_PYTHON", lkShell, BtPathmask)
 	pkglist("PYTHON_VERSIONS_ACCEPTED", lkShell, BtVersion)
 	pkglist("PYTHON_VERSIONS_INCOMPATIBLE", lkShell, BtVersion)
@@ -1051,7 +1073,7 @@ func (src *Pkgsrc) InitVartypes() {
 	usr("PYTHON_VERSION_REQD", lkNone, BtVersion)
 	pkglist("PYTHON_VERSIONED_DEPENDENCIES", lkShell, BtPythonDependency)
 	sys("RANLIB", lkNone, BtShellCommand)
-	pkglist("RCD_SCRIPTS", lkShell, BtFilename)
+	pkglist("RCD_SCRIPTS", lkShell, BtFileName)
 	acl("RCD_SCRIPT_SRC.*", lkNone, BtPathname, "Makefile: set")
 	acl("RCD_SCRIPT_WRK.*", lkNone, BtPathname, "Makefile: set")
 	usr("REAL_ROOT_USER", lkNone, BtUserGroupName)
@@ -1064,7 +1086,7 @@ func (src *Pkgsrc) InitVartypes() {
 	acl("REPLACE_FILES.*", lkShell, BtPathmask, "Makefile, Makefile.common: set, append")
 	acl("REPLACE_INTERPRETER", lkShell, BtIdentifier, "Makefile, Makefile.common: append")
 	pkglist("REPLACE_KSH", lkShell, BtPathmask)
-	pkglist("REPLACE_LOCALEDIR_PATTERNS", lkShell, BtFilemask)
+	pkglist("REPLACE_LOCALEDIR_PATTERNS", lkShell, BtFileMask)
 	pkglist("REPLACE_LUA", lkShell, BtPathmask)
 	pkglist("REPLACE_PERL", lkShell, BtPathmask)
 	pkglist("REPLACE_PYTHON", lkShell, BtPathmask)
@@ -1095,16 +1117,16 @@ func (src *Pkgsrc) InitVartypes() {
 	acl("SITES.*", lkShell, BtFetchURL, "Makefile, Makefile.common, options.mk: set, append, use")
 	usr("SMF_PREFIS", lkNone, BtPathname)
 	pkg("SMF_SRCDIR", lkNone, BtPathname)
-	pkg("SMF_NAME", lkNone, BtFilename)
+	pkg("SMF_NAME", lkNone, BtFileName)
 	pkg("SMF_MANIFEST", lkNone, BtPathname)
 	pkg("SMF_INSTANCES", lkShell, BtIdentifier)
-	pkg("SMF_METHODS", lkShell, BtFilename)
+	pkg("SMF_METHODS", lkShell, BtFileName)
 	pkg("SMF_METHOD_SRC.*", lkNone, BtPathname)
 	pkg("SMF_METHOD_SHELL", lkNone, BtShellCommand)
 	pkglist("SPECIAL_PERMS", lkShell, BtPerms)
 	sys("STEP_MSG", lkNone, BtShellCommand)
 	sys("STRIP", lkNone, BtShellCommand) // see mk/tools/strip.mk
-	acl("SUBDIR", lkShell, BtFilename, "Makefile: append; *:")
+	acl("SUBDIR", lkShell, BtFileName, "Makefile: append; *:")
 	acl("SUBST_CLASSES", lkShell, BtIdentifier, "Makefile: set, append; *: append")
 	acl("SUBST_CLASSES.*", lkShell, BtIdentifier, "Makefile: set, append; *: append")
 	acl("SUBST_FILES.*", lkShell, BtPathmask, "Makefile, Makefile.*, *.mk: set, append")
@@ -1120,7 +1142,7 @@ func (src *Pkgsrc) InitVartypes() {
 	acl("TEST_TARGET", lkShell, BtIdentifier, "Makefile: set; Makefile.common: default, set; options.mk: set, append")
 	pkglist("TEXINFO_REQD", lkShell, BtVersion)
 	acl("TOOL_DEPENDS", lkSpace, BtDependencyWithPath, "Makefile, Makefile.common, *.mk: append")
-	sys("TOOLS_ALIASES", lkShell, BtFilename)
+	sys("TOOLS_ALIASES", lkShell, BtFileName)
 	sys("TOOLS_BROKEN", lkShell, BtTool)
 	sys("TOOLS_CMD.*", lkNone, BtPathname)
 	acl("TOOLS_CREATE", lkShell, BtTool, "Makefile, Makefile.common, options.mk: append")
@@ -1212,9 +1234,7 @@ func parseACLEntries(varname string, aclEntries string) []ACLEntry {
 		} else {
 			globs = strings.TrimSuffix(arg, ":")
 		}
-		if perms == prevperms {
-			G.Panicf("Repeated permissions %q for %q.", perms, varname)
-		}
+		G.Assertf(perms != prevperms, "Repeated permissions %q for %q.", perms, varname)
 		prevperms = perms
 
 		var permissions ACLPermissions
@@ -1233,7 +1253,7 @@ func parseACLEntries(varname string, aclEntries string) []ACLEntry {
 			case "":
 				break
 			default:
-				G.Panicf("Invalid ACL permission %q for %q.", perm, varname)
+				G.Assertf(false, "Invalid ACL permission %q for %q.", perm, varname)
 			}
 		}
 
@@ -1245,12 +1265,11 @@ func parseACLEntries(varname string, aclEntries string) []ACLEntry {
 				"bsd.options.mk", "pkgconfig-builtin.mk", "pyversion.mk":
 				break
 			default:
-				G.Panicf("Invalid ACL glob %q for %q.", glob, varname)
+				G.Assertf(false, "Invalid ACL glob %q for %q.", glob, varname)
 			}
 			for _, prev := range result {
-				if matched, err := path.Match(prev.glob, glob); err != nil || matched {
-					G.Panicf("Ineffective ACL glob %q for %q.", glob, varname)
-				}
+				matched, err := path.Match(prev.glob, glob)
+				G.Assertf(err == nil && !matched, "Ineffective ACL glob %q for %q.", glob, varname)
 			}
 			result = append(result, ACLEntry{glob, permissions})
 		}

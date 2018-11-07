@@ -1,10 +1,8 @@
 package main
 
-import "netbsd.org/pkglint/trace"
-
-func ChecklinesOptionsMk(mklines *MkLines) {
+func ChecklinesOptionsMk(mklines MkLines) {
 	if trace.Tracing {
-		defer trace.Call1(mklines.lines[0].Filename)()
+		defer trace.Call1(mklines.lines.FileName)()
 	}
 
 	mklines.Check()
@@ -75,11 +73,13 @@ loop:
 
 			NewMkCondWalker().Walk(cond, &MkCondCallback{
 				Empty: func(varuse *MkVarUse) {
-					if varuse.varname == "PKG_OPTIONS" && len(varuse.modifiers) == 1 && hasPrefix(varuse.modifiers[0], "M") {
-						option := varuse.modifiers[0][1:]
-						if !containsVarRef(option) {
-							handledOptions[option] = mkline
-							optionsInDeclarationOrder = append(optionsInDeclarationOrder, option)
+					if varuse.varname == "PKG_OPTIONS" && len(varuse.modifiers) == 1 {
+						if m, positive, pattern := varuse.modifiers[0].MatchMatch(); m && positive {
+							option := pattern
+							if !containsVarRef(option) {
+								handledOptions[option] = mkline
+								optionsInDeclarationOrder = append(optionsInDeclarationOrder, option)
+							}
 						}
 					}
 				}})

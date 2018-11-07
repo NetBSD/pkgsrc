@@ -3,7 +3,6 @@ package textproc
 import (
 	"fmt"
 	"netbsd.org/pkglint/regex"
-	"netbsd.org/pkglint/trace"
 	"strings"
 )
 
@@ -24,10 +23,6 @@ func NewPrefixReplacer(s string, res *regex.Registry) *PrefixReplacer {
 	return &PrefixReplacer{s, "", nil, res}
 }
 
-func (pr *PrefixReplacer) EOF() bool {
-	return pr.rest == ""
-}
-
 func (pr *PrefixReplacer) Rest() string {
 	return pr.rest
 }
@@ -46,33 +41,8 @@ func (pr *PrefixReplacer) AdvanceStr(prefix string) bool {
 	pr.m = nil
 	pr.s = ""
 	if strings.HasPrefix(pr.rest, prefix) {
-		if trace.Tracing {
-			trace.Stepf("PrefixReplacer.AdvanceStr(%q, %q)", pr.rest, prefix)
-		}
 		pr.s = prefix
 		pr.rest = pr.rest[len(prefix):]
-		return true
-	}
-	return false
-}
-
-func (pr *PrefixReplacer) AdvanceByte(b byte) bool {
-	if len(pr.rest) != 0 && pr.rest[0] == b {
-		pr.s = pr.rest[:1]
-		pr.rest = pr.rest[1:]
-		return true
-	}
-	return false
-}
-
-func (pr *PrefixReplacer) AdvanceBytesFunc(fn func(c byte) bool) bool {
-	i := 0
-	for i < len(pr.rest) && fn(pr.rest[i]) {
-		i++
-	}
-	if i != 0 {
-		pr.s = pr.rest[:i]
-		pr.rest = pr.rest[i:]
 		return true
 	}
 	return false
@@ -99,15 +69,26 @@ func (pr *PrefixReplacer) AdvanceRegexp(re regex.Pattern) bool {
 		panic(fmt.Sprintf("PrefixReplacer.AdvanceRegexp: the empty string must not match the regular expression %q.", re))
 	}
 	if m := pr.res.Match(pr.rest, re); m != nil {
-		if trace.Tracing {
-			trace.Stepf("PrefixReplacer.AdvanceRegexp(%q, %q, %q)", pr.rest, re, m[0])
-		}
 		pr.rest = pr.rest[len(m[0]):]
 		pr.m = m
 		pr.s = m[0]
 		return true
 	}
 	return false
+}
+
+// NextBytesFunc chops off the longest prefix (possibly empty) consisting
+// solely of bytes for which fn returns true.
+func (pr *PrefixReplacer) NextBytesFunc(fn func(b byte) bool) string {
+	i := 0
+	rest := pr.rest
+	for i < len(rest) && fn(rest[i]) {
+		i++
+	}
+	if i != 0 {
+		pr.rest = rest[i:]
+	}
+	return rest[:i]
 }
 
 func (pr *PrefixReplacer) PeekByte() int {

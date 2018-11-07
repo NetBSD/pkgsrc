@@ -18,18 +18,18 @@ func (h *Histogram) Add(s string, n int) {
 	h.histo[s] += n
 }
 
-func (h *Histogram) PrintStats(caption string, out io.Writer, limit int) {
-	type entry struct {
+func (h *Histogram) PrintStats(out io.Writer, caption string, limit int) {
+	type row struct {
 		s     string
 		count int
 	}
 
-	entries := make([]entry, len(h.histo))
+	entries := make([]row, len(h.histo))
 
-	i := 0
+	n := 0
 	for s, count := range h.histo {
-		entries[i] = entry{s, count}
-		i++
+		entries[n] = row{s, count}
+		n++
 	}
 
 	sort.SliceStable(entries, func(i, j int) bool {
@@ -39,9 +39,9 @@ func (h *Histogram) PrintStats(caption string, out io.Writer, limit int) {
 	})
 
 	for i, entry := range entries {
-		fmt.Fprintf(out, "%s %6d %s\n", caption, entry.count, entry.s)
 		if limit >= 0 && i >= limit {
 			break
 		}
+		_, _ = fmt.Fprintf(out, "%s %6d %s\n", caption, entry.count, entry.s)
 	}
 }

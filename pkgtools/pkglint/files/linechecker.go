@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"netbsd.org/pkglint/regex"
-	"netbsd.org/pkglint/trace"
 	"strings"
 )
 
@@ -19,7 +18,7 @@ func CheckLineAbsolutePathname(line Line, text string) {
 	//
 	// Another context where absolute pathnames usually appear is in
 	// assignments like "bindir=/bin".
-	if m, path := match1(text, `(?:^|\s|\$[{(]DESTDIR[)}]|[\w_]+\s*=\s*)(/(?:[^"'\s\\]|"[^"*]"|'[^']*')*)`); m {
+	if m, path := match1(text, `(?:^|[\t ]|\$[{(]DESTDIR[)}]|[\w_]+[\t ]*=[\t ]*)(/(?:[^"' \t\\]|"[^"*]"|'[^']*')*)`); m {
 		if matches(path, `^/\w`) {
 			CheckwordAbsolutePathname(line, path)
 		}

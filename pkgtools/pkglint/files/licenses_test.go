@@ -44,7 +44,7 @@ func (s *Suite) Test_LicenseChecker_Check(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_checkToplevelUnusedLicenses(c *check.C) {
+func (s *Suite) Test_Pkgsrc_checkToplevelUnusedLicenses(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupPkgsrc()

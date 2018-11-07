@@ -149,7 +149,7 @@ func (vt *Vartype) IsBasicSafe() bool {
 		BtDistSuffix,
 		BtEmulPlatform,
 		BtFileMode,
-		BtFilename,
+		BtFileName,
 		BtIdentifier,
 		BtInteger,
 		BtMachineGnuPlatform,
@@ -213,8 +213,8 @@ var (
 	BtDistSuffix             = &BasicType{"DistSuffix", (*VartypeCheck).DistSuffix}
 	BtEmulPlatform           = &BasicType{"EmulPlatform", (*VartypeCheck).EmulPlatform}
 	BtFetchURL               = &BasicType{"FetchURL", (*VartypeCheck).FetchURL}
-	BtFilename               = &BasicType{"Filename", (*VartypeCheck).Filename}
-	BtFilemask               = &BasicType{"Filemask", (*VartypeCheck).Filemask}
+	BtFileName               = &BasicType{"FileName", (*VartypeCheck).FileName}
+	BtFileMask               = &BasicType{"FileMask", (*VartypeCheck).FileMask}
 	BtFileMode               = &BasicType{"FileMode", (*VartypeCheck).FileMode}
 	BtGccReqd                = &BasicType{"GccReqd", (*VartypeCheck).GccReqd}
 	BtHomepage               = &BasicType{"Homepage", (*VartypeCheck).Homepage}
@@ -229,8 +229,8 @@ var (
 	BtMessage                = &BasicType{"Message", (*VartypeCheck).Message}
 	BtOption                 = &BasicType{"Option", (*VartypeCheck).Option}
 	BtPathlist               = &BasicType{"Pathlist", (*VartypeCheck).Pathlist}
-	BtPathmask               = &BasicType{"Pathmask", (*VartypeCheck).Pathmask}
-	BtPathname               = &BasicType{"Pathname", (*VartypeCheck).Pathname}
+	BtPathmask               = &BasicType{"PathMask", (*VartypeCheck).PathMask}
+	BtPathname               = &BasicType{"PathName", (*VartypeCheck).PathName}
 	BtPerl5Packlist          = &BasicType{"Perl5Packlist", (*VartypeCheck).Perl5Packlist}
 	BtPerms                  = &BasicType{"Perms", (*VartypeCheck).Perms}
 	BtPkgName                = &BasicType{"Pkgname", (*VartypeCheck).Pkgname}

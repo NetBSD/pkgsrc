@@ -7,7 +7,6 @@ import (
 	"time"
 
 	"gopkg.in/check.v1"
-	"netbsd.org/pkglint/trace"
 	"os"
 )
 
@@ -37,7 +36,7 @@ func (s *Suite) Test_Pkglint_Main__no_args(c *check.C) {
 
 	c.Check(exitcode, equals, 1)
 	t.CheckOutputLines(
-		"FATAL: \".\" is not inside a pkgsrc tree.")
+		"FATAL: \".\" must be inside a pkgsrc tree.")
 }
 
 func (s *Suite) Test_Pkglint_Main__only(c *check.C) {
@@ -48,7 +47,7 @@ func (s *Suite) Test_Pkglint_Main__only(c *check.C) {
 	if c.Check(exitcode, check.NotNil) {
 		c.Check(*exitcode, equals, 0)
 	}
-	c.Check(G.opts.LogOnly, deepEquals, []string{":Q"})
+	c.Check(G.Opts.LogOnly, deepEquals, []string{":Q"})
 	t.CheckOutputLines(
 		confVersion)
 }
@@ -68,18 +67,18 @@ func (s *Suite) Test_Pkglint_Main__unknown_option(c *check.C) {
 		"  -d, --debug                 log verbose call traces for debugging",
 		"  -e, --explain               explain the diagnostics or give further help",
 		"  -f, --show-autofix          show what pkglint can fix automatically",
-		"  -F, --autofix               try to automatically fix some errors (experimental)",
+		"  -F, --autofix               try to automatically fix some errors",
 		"  -g, --gcc-output-format     mimic the gcc output format",
-		"  -h, --help                  print a detailed usage message",
+		"  -h, --help                  show a detailed usage message",
 		"  -I, --dumpmakefile          dump the Makefile after parsing",
 		"  -i, --import                prepare the import of a wip package",
 		"  -m, --log-verbose           allow the same log message more than once",
 		"  -o, --only                  only log messages containing the given text",
 		"  -p, --profiling             profile the executing program",
-		"  -q, --quiet                 don't print a summary line when finishing",
+		"  -q, --quiet                 don't show a summary line when finishing",
 		"  -r, --recursive             check subdirectories, too",
 		"  -s, --source                show the source lines together with diagnostics",
-		"  -V, --version               print the version number of pkglint",
+		"  -V, --version               show the version number of pkglint",
 		"  -W, --warning=warning,...   enable or disable groups of warnings",
 		"",
 		"  Flags for -C, --check:",
@@ -135,7 +134,7 @@ func (s *Suite) Test_Pkglint_Main__panic(c *check.C) {
 // initialize only those parts of the infrastructure they really
 // need.
 //
-// Especially covers Pkglint.PrintSummary and Pkglint.Checkfile.
+// Especially covers Pkglint.ShowSummary and Pkglint.Checkfile.
 func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 	t := s.Init(c)
 
@@ -242,8 +241,7 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 		"ERROR: ~/sysutils/checkperms/README: Packages in main pkgsrc must not have a README file.",
 		"ERROR: ~/sysutils/checkperms/TODO: Packages in main pkgsrc must not have a TODO file.",
 		"ERROR: ~/sysutils/checkperms/distinfo:7: SHA1 hash of patches/patch-checkperms.c differs "+
-			"(distinfo has asdfasdf, patch file has e775969de639ec703866c0336c4c8e0fdd96309c). "+
-			"Run \""+confMake+" makepatchsum\".",
+			"(distinfo has asdfasdf, patch file has e775969de639ec703866c0336c4c8e0fdd96309c).",
 		"WARN: ~/sysutils/checkperms/patches/patch-checkperms.c:12: Premature end of patch hunk "+
 			"(expected 1 lines to be deleted and 0 lines to be added).",
 		"4 errors and 2 warnings found.",
@@ -349,7 +347,7 @@ func (s *Suite) Test_Pkglint_CheckDirent(c *check.C) {
 func (s *Suite) Test_resolveVariableRefs__circular_reference(c *check.C) {
 	t := s.Init(c)
 
-	mkline := t.NewMkLine("fname", 1, "GCC_VERSION=${GCC_VERSION}")
+	mkline := t.NewMkLine("fileName", 1, "GCC_VERSION=${GCC_VERSION}")
 	G.Pkg = NewPackage(t.File("category/pkgbase"))
 	G.Pkg.vars.Define("GCC_VERSION", mkline)
 
@@ -361,9 +359,9 @@ func (s *Suite) Test_resolveVariableRefs__circular_reference(c *check.C) {
 func (s *Suite) Test_resolveVariableRefs__multilevel(c *check.C) {
 	t := s.Init(c)
 
-	mkline1 := t.NewMkLine("fname", 10, "_=${SECOND}")
-	mkline2 := t.NewMkLine("fname", 11, "_=${THIRD}")
-	mkline3 := t.NewMkLine("fname", 12, "_=got it")
+	mkline1 := t.NewMkLine("fileName", 10, "_=${SECOND}")
+	mkline2 := t.NewMkLine("fileName", 11, "_=${THIRD}")
+	mkline3 := t.NewMkLine("fileName", 12, "_=got it")
 	G.Pkg = NewPackage(t.File("category/pkgbase"))
 	defineVar(mkline1, "FIRST")
 	defineVar(mkline2, "SECOND")
@@ -380,7 +378,7 @@ func (s *Suite) Test_resolveVariableRefs__multilevel(c *check.C) {
 func (s *Suite) Test_resolveVariableRefs__special_chars(c *check.C) {
 	t := s.Init(c)
 
-	mkline := t.NewMkLine("fname", 10, "_=x11")
+	mkline := t.NewMkLine("fileName", 10, "_=x11")
 	G.Pkg = NewPackage(t.File("category/pkg"))
 	G.Pkg.vars.Define("GST_PLUGINS0.10_TYPE", mkline)
 
@@ -478,7 +476,7 @@ func (s *Suite) Test_Pkglint_Checkfile__alternatives(c *check.C) {
 	lines := t.SetupFileLines("category/package/ALTERNATIVES",
 		"bin/tar @PREFIX@/bin/gnu-tar")
 
-	G.Main("pkglint", lines[0].Filename)
+	G.Main("pkglint", lines.FileName)
 
 	t.CheckOutputLines(
 		"NOTE: ~/category/package/ALTERNATIVES:1: @PREFIX@/ can be omitted from the file name.",
@@ -608,7 +606,7 @@ func (s *Suite) Test_Pkglint_Tool__lookup_by_varname_fallback(c *check.C) {
 	t := s.Init(c)
 
 	G.Mk = t.NewMkLines("Makefile", MkRcsID)
-	G.Pkgsrc.Tools.defTool("tool", "TOOL", false, Nowhere)
+	G.Pkgsrc.Tools.def("tool", "TOOL", false, Nowhere)
 
 	loadTimeTool, loadTimeUsable := G.Tool("${TOOL}", LoadTime)
 	runTimeTool, runTimeUsable := G.Tool("${TOOL}", RunTime)
@@ -623,7 +621,7 @@ func (s *Suite) Test_Pkglint_Tool__lookup_by_varname_fallback_runtime(c *check.C
 	t := s.Init(c)
 
 	G.Mk = t.NewMkLines("Makefile", MkRcsID)
-	G.Pkgsrc.Tools.defTool("tool", "TOOL", false, AtRunTime)
+	G.Pkgsrc.Tools.def("tool", "TOOL", false, AtRunTime)
 
 	loadTimeTool, loadTimeUsable := G.Tool("${TOOL}", LoadTime)
 	runTimeTool, runTimeUsable := G.Tool("${TOOL}", RunTime)
@@ -652,7 +650,7 @@ func (s *Suite) Test_Pkglint_ToolByVarname(c *check.C) {
 	t := s.Init(c)
 
 	G.Mk = t.NewMkLines("Makefile", MkRcsID)
-	G.Pkgsrc.Tools.defTool("tool", "TOOL", false, AtRunTime)
+	G.Pkgsrc.Tools.def("tool", "TOOL", false, AtRunTime)
 
 	c.Check(G.ToolByVarname("TOOL", LoadTime).String(), equals, "tool:TOOL::AtRunTime")
 	c.Check(G.ToolByVarname("TOOL", RunTime).String(), equals, "tool:TOOL::AtRunTime")
@@ -855,6 +853,112 @@ func (s *Suite) Test_Pkglint_checkMode__skipped(c *check.C) {
 		"ERROR: device: Only files and directories are allowed in pkgsrc.")
 }
 
+func (s *Suite) Test_Pkglint_checkdirPackage(c *check.C) {
+	t := s.Init(c)
+
+	t.Chdir("category/package")
+	t.CreateFileLines("Makefile",
+		MkRcsID)
+
+	G.checkdirPackage(".")
+
+	t.CheckOutputLines(
+		"WARN: Makefile: Neither PLIST nor PLIST.common exist, and PLIST_SRC is unset.",
+		"WARN: distinfo: File not found. Please run \""+confMake+" makesum\" or define NO_CHECKSUM=yes in the package Makefile.",
+		"ERROR: Makefile: Each package must define its LICENSE.",
+		"WARN: Makefile: No COMMENT given.")
+}
+
+func (s *Suite) Test_Pkglint_checkdirPackage__PKGDIR(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupVartypes()
+	t.SetupPkgsrc()
+	t.CreateFileLines("category/Makefile")
+	t.CreateFileLines("other/package/Makefile",
+		MkRcsID)
+	t.CreateFileLines("other/package/PLIST",
+		PlistRcsID,
+		"bin/program")
+	t.CreateFileLines("other/package/distinfo",
+		RcsID,
+		"",
+		"SHA1 (patch-aa) = da39a3ee5e6b4b0d3255bfef95601890afd80709")
+	t.CreateFileLines("category/package/patches/patch-aa",
+		RcsID)
+	t.Chdir("category/package")
+	t.CreateFileLines("Makefile",
+		MkRcsID,
+		"",
+		"CATEGORIES=\tcategory",
+		"",
+		"COMMENT=\tComment",
+		"LICENSE=\t2-clause-bsd",
+		"PKGDIR=\t\t../../other/package")
+
+	// DISTINFO_FILE is resolved relative to PKGDIR, the other places
+	// are resolved relative to the package base directory.
+	G.checkdirPackage(".")
+
+	t.CheckOutputLines(
+		"ERROR: patches/patch-aa:1: Patch files must not be empty.")
+}
+
+func (s *Suite) Test_Pkglint_checkdirPackage__patch_without_distinfo(c *check.C) {
+	t := s.Init(c)
+
+	pkg := t.SetupPackage("category/package")
+	t.CreateFileDummyPatch("category/package/patches/patch-aa")
+	t.Remove("category/package/distinfo")
+
+	G.CheckDirent(pkg)
+
+	// FIXME: One of the below warnings is redundant.
+	t.CheckOutputLines(
+		"WARN: ~/category/package/distinfo: File not found. Please run \""+confMake+" makesum\" or define NO_CHECKSUM=yes in the package Makefile.",
+		"WARN: ~/category/package/distinfo: File not found. Please run \""+confMake+" makepatchsum\".")
+}
+
+func (s *Suite) Test_Pkglint_checkdirPackage__meta_package_without_license(c *check.C) {
+	t := s.Init(c)
+
+	t.Chdir("category/package")
+	t.CreateFileLines("Makefile",
+		MkRcsID,
+		"",
+		"META_PACKAGE=\tyes")
+	t.SetupVartypes()
+
+	G.checkdirPackage(".")
+
+	t.CheckOutputLines(
+		"WARN: Makefile: No COMMENT given.") // No error about missing LICENSE.
+}
+
+func (s *Suite) Test_Pkglint_checkdirPackage__filename_with_variable(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall,no-order")
+	pkg := t.SetupPackage("category/package",
+		".include \"../../mk/bsd.prefs.mk\"",
+		"",
+		"RUBY_VERSIONS_ACCEPTED=\t22 23 24 25", // As of 2018.
+		".for rv in ${RUBY_VERSIONS_ACCEPTED}",
+		"RUBY_VER?=\t\t${rv}",
+		".endfor",
+		"",
+		"RUBY_PKGDIR=\t../../lang/ruby-${RUBY_VER}-base",
+		"DISTINFO_FILE=\t${RUBY_PKGDIR}/distinfo")
+
+	// Pkglint cannot currently resolve the location of DISTINFO_FILE completely
+	// because the variable \"rv\" comes from a .for loop.
+	//
+	// TODO: iterate over variables in simple .for loops like the above.
+	G.CheckDirent(pkg)
+
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_Pkglint_checkdirPackage__ALTERNATIVES(c *check.C) {
 	t := s.Init(c)
 
@@ -870,13 +974,38 @@ func (s *Suite) Test_Pkglint_checkdirPackage__ALTERNATIVES(c *check.C) {
 			"Alternative implementation \"bin/wrapper-impl\" must appear in the PLIST.")
 }
 
+func (s *Suite) Test_Pkglint_ShowSummary__explanations_with_only(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("--only", "interesting")
+	line := t.NewLine("Makefile", 27, "The old song")
+
+	line.Warnf("Filtered warning.")               // Is not logged.
+	Explain("Explanation for the above warning.") // Neither would this explanation be logged.
+	G.ShowSummary()
+
+	c.Check(G.explanationsAvailable, equals, false)
+	t.CheckOutputLines(
+		"Looks fine.") // "pkglint -e" is not advertised since the above explanation is not relevant.
+
+	line.Warnf("What an interesting line.")
+	Explain("This explanation is available.")
+	G.ShowSummary()
+
+	c.Check(G.explanationsAvailable, equals, true)
+	t.CheckOutputLines(
+		"WARN: Makefile:27: What an interesting line.",
+		"0 errors and 1 warning found.",
+		"(Run \"pkglint -e\" to show explanations.)")
+}
+
 func (s *Suite) Test_CheckfileMk__enoent(c *check.C) {
 	t := s.Init(c)
 
-	CheckfileMk(t.File("fname.mk"))
+	CheckfileMk(t.File("fileName.mk"))
 
 	t.CheckOutputLines(
-		"ERROR: ~/fname.mk: Cannot be read.")
+		"ERROR: ~/fileName.mk: Cannot be read.")
 }
 
 func (s *Suite) Test_Pkglint_checkExecutable(c *check.C) {
@@ -897,6 +1026,20 @@ func (s *Suite) Test_Pkglint_checkExecutable(c *check.C) {
 	// FIXME: The error message "Cannot clear executable bits" is swallowed.
 	t.CheckOutputLines(
 		"AUTOFIX: ~/file.mk: Clearing executable bits")
+}
+
+func (s *Suite) Test_Pkglint_checkExecutable__already_committed(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("CVS/Entries",
+		"/file.mk/modified////")
+	fileName := t.File("file.mk")
+	fileInfo := ExecutableFileInfo{path.Base(fileName)}
+
+	G.checkExecutable(fileName, fileInfo)
+
+	// See the "Too late" comment in Pkglint.checkExecutable.
+	t.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_main(c *check.C) {

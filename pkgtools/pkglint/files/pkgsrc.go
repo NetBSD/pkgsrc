@@ -3,7 +3,6 @@ package main
 import (
 	"io/ioutil"
 	"netbsd.org/pkglint/regex"
-	"netbsd.org/pkglint/trace"
 	"os"
 	"path/filepath"
 	"sort"
@@ -30,16 +29,16 @@ type Pkgsrc struct {
 
 	PkgOptions map[string]string // "x11" => "Provides X11 support"
 
-	suggestedUpdates    []SuggestedUpdate  //
-	suggestedWipUpdates []SuggestedUpdate  //
-	LastChange          map[string]*Change //
-	latest              map[string]string  // "lang/php[0-9]*" => "lang/php70"
+	suggestedUpdates    []SuggestedUpdate   //
+	suggestedWipUpdates []SuggestedUpdate   //
+	LastChange          map[string]*Change  //
+	listVersions        map[string][]string // See ListVersions
 
 	UserDefinedVars Scope               // Used for checking BUILD_DEFS
 	Deprecated      map[string]string   //
 	vartypes        map[string]*Vartype // varcanon => type
 
-	Hashes       map[string]*Hash // Maps "alg:fname" => hash (inter-package check).
+	Hashes       map[string]*Hash // Maps "alg:fileName" => hash (inter-package check).
 	UsedLicenses map[string]bool  // Maps "license name" => true (inter-package check).
 }
 
@@ -54,7 +53,7 @@ func NewPkgsrc(dir string) *Pkgsrc {
 		nil,
 		nil,
 		make(map[string]*Change),
-		make(map[string]string),
+		make(map[string][]string),
 		NewScope(),
 		make(map[string]string),
 		make(map[string]*Vartype),
@@ -152,13 +151,30 @@ func (src *Pkgsrc) LoadInfrastructure() {
 }
 
 // Latest returns the latest package matching the given pattern.
-// It searches the `category` for subdirectories matching the given
-// regular expression, and returns the `repl` string, in which the
-// placeholder is filled with the best result.
+// It searches the category for subdirectories matching the given
+// regular expression, takes the latest of them and replaces its
+// name with repl.
 //
 // Example:
-//  Latest("lang", `^php[0-9]+$`, "../../lang/$0") => "../../lang/php72"
+//  Latest("lang", `^php[0-9]+$`, "../../lang/$0")
+//      => "../../lang/php72"
 func (src *Pkgsrc) Latest(category string, re regex.Pattern, repl string) string {
+	versions := src.ListVersions(category, re, repl, true)
+
+	if len(versions) > 0 {
+		return versions[len(versions)-1]
+	}
+	return ""
+}
+
+// ListVersions searches the category for subdirectories matching the given
+// regular expression, replaces their names with repl and returns a slice
+// of them, properly sorted from early to late.
+//
+// Example:
+//  ListVersions("lang", `^php[0-9]+$`, "php-$0")
+//      => {"php-53", "php-56", "php-73"}
+func (src *Pkgsrc) ListVersions(category string, re regex.Pattern, repl string, errorIfEmpty bool) []string {
 	if G.Testing {
 		G.Assertf(
 			hasPrefix(string(re), "^") && hasSuffix(string(re), "$"),
@@ -166,36 +182,46 @@ func (src *Pkgsrc) Latest(category string, re regex.Pattern, repl string) string
 	}
 
 	cacheKey := category + "/" + string(re) + " => " + repl
-	if latest, found := src.latest[cacheKey]; found {
+	if latest, found := src.listVersions[cacheKey]; found {
 		return latest
 	}
 
 	categoryDir := src.File(category)
-	error := func() string {
-		dummyLine.Errorf("Cannot find latest version of %q in %q.", re, categoryDir)
-		src.latest[cacheKey] = ""
-		return ""
-	}
-
-	fileInfos, err := ioutil.ReadDir(categoryDir)
-	if err != nil {
-		return error()
+	error := func() []string {
+		if errorIfEmpty {
+			dummyLine.Errorf("Cannot find package versions of %q in %q.", re, categoryDir)
+		}
+		src.listVersions[cacheKey] = nil
+		return nil
 	}
 
 	var names []string
-	for _, fileInfo := range fileInfos {
+	for _, fileInfo := range src.ReadDir(category) {
 		name := fileInfo.Name()
 		if matches(name, re) {
 			names = append(names, name)
 		}
 	}
+	if len(names) == 0 {
+		return error()
+	}
 
+	// In the pkgsrc directories, the major versions of packages are
+	// written without dots, which leads to ambiguities:
+	//
+	// databases/postgresql: 94 < 95 < 96 < 10 < 11
+	// lang/go: go19 < go110 < go111 < go2
 	keys := make(map[string]int)
 	for _, name := range names {
 		if m, pkgbase, versionStr := match2(name, `^(\D+)(\d+)$`); m {
 			version, _ := strconv.Atoi(versionStr)
 			if pkgbase == "postgresql" && version < 60 {
 				version = 10 * version
+			}
+			if pkgbase == "go" {
+				major, _ := strconv.Atoi(versionStr[:1])
+				minor, _ := strconv.Atoi(versionStr[1:])
+				version = 100*major + minor
 			}
 			keys[name] = version
 		}
@@ -208,16 +234,13 @@ func (src *Pkgsrc) Latest(category string, re regex.Pattern, repl string) string
 		return naturalLess(names[i], names[j])
 	})
 
-	latest := ""
-	for _, name := range names {
-		latest = replaceAll(name, re, repl)
-	}
-	if latest == "" {
-		return error()
+	var repls = make([]string, len(names), len(names))
+	for i, name := range names {
+		repls[i] = replaceAll(name, re, repl)
 	}
 
-	src.latest[cacheKey] = latest
-	return latest
+	src.listVersions[cacheKey] = repls
+	return repls
 }
 
 // loadTools loads the tool definitions from `mk/tools/*`.
@@ -254,7 +277,7 @@ func (src *Pkgsrc) loadTools() {
 		{"true", "TRUE", AfterPrefsMk}}
 
 	for _, toolDef := range toolDefs {
-		tools.defTool(toolDef.Name, toolDef.Varname, true, toolDef.Validity)
+		tools.def(toolDef.Name, toolDef.Varname, true, toolDef.Validity)
 	}
 
 	for _, basename := range toolFiles {
@@ -322,7 +345,7 @@ func (src *Pkgsrc) loadUntypedVars() {
 
 	handleMkFile := func(path string) {
 		mklines := LoadMk(path, 0)
-		if mklines != nil {
+		if mklines != nil && len(mklines.mklines) > 0 {
 			mklines.ForEach(handleLine)
 		}
 	}
@@ -338,10 +361,14 @@ func (src *Pkgsrc) loadUntypedVars() {
 	_ = filepath.Walk(src.File("mk"), handleFile)
 }
 
-func (src *Pkgsrc) parseSuggestedUpdates(lines []Line) []SuggestedUpdate {
+func (src *Pkgsrc) parseSuggestedUpdates(lines Lines) []SuggestedUpdate {
+	if lines == nil {
+		return nil
+	}
+
 	var updates []SuggestedUpdate
 	state := 0
-	for _, line := range lines {
+	for _, line := range lines.Lines {
 		text := line.Text
 
 		if state == 0 && text == "Suggested package updates" {
@@ -355,7 +382,7 @@ func (src *Pkgsrc) parseSuggestedUpdates(lines []Line) []SuggestedUpdate {
 		}
 
 		if state == 3 {
-			if m, pkgname, comment := match2(text, `^\to\s(\S+)(?:\s*(.+))?$`); m {
+			if m, pkgname, comment := match2(text, `^\to[\t ]([^\t ]+)(?:[\t ]*(.+))?$`); m {
 				if m, pkgbase, pkgversion := match2(pkgname, rePkgname); m {
 					updates = append(updates, SuggestedUpdate{line, pkgbase, pkgversion, comment})
 				} else {
@@ -374,7 +401,7 @@ func (src *Pkgsrc) loadSuggestedUpdates() {
 	src.suggestedWipUpdates = src.parseSuggestedUpdates(Load(G.Pkgsrc.File("wip/TODO"), NotEmpty))
 }
 
-func (src *Pkgsrc) loadDocChangesFromFile(fname string) []*Change {
+func (src *Pkgsrc) loadDocChangesFromFile(fileName string) []*Change {
 
 	parseChange := func(line Line) *Change {
 		text := line.Text
@@ -408,17 +435,17 @@ func (src *Pkgsrc) loadDocChangesFromFile(fname string) []*Change {
 	}
 
 	year := ""
-	if m, yyyy := match1(fname, `-(\d+)$`); m && yyyy >= "2018" {
+	if m, yyyy := match1(fileName, `-(\d+)$`); m && yyyy >= "2018" {
 		year = yyyy
 	}
 
-	lines := Load(fname, MustSucceed|NotEmpty)
+	lines := Load(fileName, MustSucceed|NotEmpty)
 	var changes []*Change
-	for _, line := range lines {
+	for _, line := range lines.Lines {
 		if change := parseChange(line); change != nil {
 			changes = append(changes, change)
 			if year != "" && change.Date[0:4] != year {
-				line.Warnf("Year %s for %s does not match the file name %s.", change.Date[0:4], change.Pkgpath, fname)
+				line.Warnf("Year %s for %s does not match the file name %s.", change.Date[0:4], change.Pkgpath, fileName)
 			}
 			if len(changes) >= 2 && year != "" {
 				if prev := changes[len(changes)-2]; change.Date < prev.Date {
@@ -432,7 +459,7 @@ func (src *Pkgsrc) loadDocChangesFromFile(fname string) []*Change {
 						"and which aren't.",
 						"",
 						"To prevent this kind of mistakes in the future, make sure that",
-						"your system time is correct and use \""+confMake+" cce\" to commit",
+						sprintf("your system time is correct and run %q to commit", bmake("cce")),
 						"the changes entry.")
 				}
 			}
@@ -453,24 +480,24 @@ func (src *Pkgsrc) GetSuggestedPackageUpdates() []SuggestedUpdate {
 }
 
 func (src *Pkgsrc) loadDocChanges() {
-	docdir := G.Pkgsrc.File("doc")
-	files, err := ioutil.ReadDir(docdir)
-	if err != nil {
-		NewLineWhole(docdir).Fatalf("Cannot be read.")
+	docDir := src.File("doc")
+	files := src.ReadDir("doc")
+	if len(files) == 0 {
+		NewLineWhole(docDir).Fatalf("Cannot be read for loading the package changes.")
 	}
 
-	var fnames []string
+	var fileNames []string
 	for _, file := range files {
-		fname := file.Name()
-		if matches(fname, `^CHANGES-20\d\d$`) && fname >= "CHANGES-2011" {
-			fnames = append(fnames, fname)
+		fileName := file.Name()
+		if matches(fileName, `^CHANGES-20\d\d$`) && fileName >= "CHANGES-2011" {
+			fileNames = append(fileNames, fileName)
 		}
 	}
 
-	sort.Strings(fnames)
+	sort.Strings(fileNames)
 	src.LastChange = make(map[string]*Change)
-	for _, fname := range fnames {
-		changes := src.loadDocChangesFromFile(docdir + "/" + fname)
+	for _, fileName := range fileNames {
+		changes := src.loadDocChangesFromFile(docDir + "/" + fileName)
 		for _, change := range changes {
 			src.LastChange[change.Pkgpath] = change
 		}
@@ -652,13 +679,33 @@ func (src *Pkgsrc) initDeprecatedVars() {
 }
 
 // Load loads the file relative to the pkgsrc top directory.
-func (src *Pkgsrc) Load(fileName string, options LoadOptions) []Line {
+func (src *Pkgsrc) Load(fileName string, options LoadOptions) Lines {
 	return Load(src.File(fileName), options)
 }
 
 // LoadMk loads the Makefile relative to the pkgsrc top directory.
-func (src *Pkgsrc) LoadMk(fileName string, options LoadOptions) *MkLines {
+func (src *Pkgsrc) LoadMk(fileName string, options LoadOptions) MkLines {
 	return LoadMk(src.File(fileName), options)
+}
+
+// ReadDir reads the file listing from the given directory (relative to the pkgsrc root),
+// filtering out any ignored files (CVS/*) and empty directories.
+func (src *Pkgsrc) ReadDir(dirName string) []os.FileInfo {
+	dir := src.File(dirName)
+	files, err := ioutil.ReadDir(dir)
+	if err != nil {
+		return nil
+	}
+
+	var relevantFiles []os.FileInfo
+	for _, dirent := range files {
+		name := dirent.Name()
+		if !dirent.IsDir() || !isIgnoredFilename(name) && !isEmptyDir(dir+"/"+name) {
+			relevantFiles = append(relevantFiles, dirent)
+		}
+	}
+
+	return relevantFiles
 }
 
 // File resolves a file name relative to the pkgsrc top directory.
@@ -690,20 +737,16 @@ func (src *Pkgsrc) IsBuildDef(varname string) bool {
 func (src *Pkgsrc) loadMasterSites() {
 	mklines := src.LoadMk("mk/fetch/sites.mk", MustSucceed|NotEmpty)
 
-	nameToURL := src.MasterSiteVarToURL
-	urlToName := src.MasterSiteURLToVar
 	for _, mkline := range mklines.mklines {
 		if mkline.IsVarassign() {
 			varname := mkline.Varname()
 			if hasPrefix(varname, "MASTER_SITE_") && varname != "MASTER_SITE_BACKUP" {
 				for _, url := range fields(mkline.Value()) {
 					if matches(url, `^(?:http://|https://|ftp://)`) {
-						if nameToURL[varname] == "" {
-							nameToURL[varname] = url
-						}
-						urlToName[url] = varname
+						src.registerMasterSite(varname, url)
 					}
 				}
+
 				// TODO: register variable type, to avoid redundant
 				// definitions in vardefs.go.
 			}
@@ -711,18 +754,28 @@ func (src *Pkgsrc) loadMasterSites() {
 	}
 
 	// Explicitly allowed, although not defined in mk/fetch/sites.mk.
-	nameToURL["MASTER_SITE_LOCAL"] = "ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/LOCAL_PORTS/"
+	src.registerMasterSite("MASTER_SITE_LOCAL", "ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/LOCAL_PORTS/")
 
 	if trace.Tracing {
-		trace.Stepf("Loaded %d MASTER_SITE_* URLs.", len(urlToName))
+		trace.Stepf("Loaded %d MASTER_SITE_* URLs.", len(G.Pkgsrc.MasterSiteURLToVar))
 	}
+}
+
+func (src *Pkgsrc) registerMasterSite(varname, url string) {
+	nameToURL := src.MasterSiteVarToURL
+	urlToName := src.MasterSiteURLToVar
+
+	if nameToURL[varname] == "" {
+		nameToURL[varname] = url
+	}
+	urlToName[url] = varname
 }
 
 func (src *Pkgsrc) loadPkgOptions() {
 	lines := src.Load("mk/defaults/options.description", MustSucceed)
 
-	for _, line := range lines {
-		if m, optname, optdescr := match2(line.Text, `^([-0-9a-z_+]+)(?:\s+(.*))?$`); m {
+	for _, line := range lines.Lines {
+		if m, optname, optdescr := match2(line.Text, `^([-0-9a-z_+]+)(?:[\t ]+(.*))?$`); m {
 			src.PkgOptions[optname] = optdescr
 		} else {
 			line.Fatalf("Unknown line format: %s", line.Text)
@@ -738,10 +791,13 @@ func (src *Pkgsrc) VariableType(varname string) (vartype *Vartype) {
 		defer trace.Call(varname, trace.Result(&vartype))()
 	}
 
-	if vartype := src.vartypes[varname]; vartype != nil {
+	// When scanning mk/** for otherwise unknown variables, their type
+	// is set to BtUnknown. These variables must not override the guess
+	// based on the variable name.
+	if vartype = src.vartypes[varname]; vartype != nil && vartype.basicType != BtUnknown {
 		return vartype
 	}
-	if vartype := src.vartypes[varnameCanon(varname)]; vartype != nil {
+	if vartype = src.vartypes[varnameCanon(varname)]; vartype != nil && vartype.basicType != BtUnknown {
 		return vartype
 	}
 
@@ -797,6 +853,15 @@ func (src *Pkgsrc) VariableType(varname string) (vartype *Vartype) {
 		gtype = &Vartype{lkShell, BtLdFlag, allowRuntime, true}
 	case hasSuffix(varbase, "_MK"):
 		gtype = &Vartype{lkNone, BtUnknown, allowAll, true}
+	}
+
+	if gtype == nil {
+		if vartype = src.vartypes[varname]; vartype != nil {
+			return vartype
+		}
+		if vartype = src.vartypes[varnameCanon(varname)]; vartype != nil {
+			return vartype
+		}
 	}
 
 	if trace.Tracing {

@@ -58,7 +58,7 @@ func (s *Suite) Test_SubstContext__complete(c *check.C) {
 func (s *Suite) Test_SubstContext__OPSYSVARS(c *check.C) {
 	t := s.Init(c)
 
-	G.opts.WarnExtra = true
+	G.Opts.WarnExtra = true
 	ctx := NewSubstContext()
 
 	ctx.Varassign(newSubstLine(t, 11, "SUBST_CLASSES.SunOS+=prefix"))
@@ -299,6 +299,56 @@ func (s *Suite) Test_SubstContext__do_patch(c *check.C) {
 	// No warning, since there is nothing to fix automatically.
 	// This case also doesn't occur in practice.
 	t.CheckOutputEmpty()
+}
+
+// Variables mentioned in SUBST_VARS are not considered "foreign"
+// in the block and may be mixed with the other SUBST variables.
+func (s *Suite) Test_SubstContext__SUBST_VARS_defined_in_block(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wextra,no-space")
+	t.SetupVartypes()
+
+	mklines := t.NewMkLines("os.mk",
+		MkRcsID,
+		"",
+		"SUBST_CLASSES+=         os",
+		"SUBST_STAGE.os=         pre-configure",
+		"SUBST_FILES.os=         guess-os.h",
+		"SUBST_VARS.os=          TODAY1",
+		"TODAY1!=                date",
+		"TODAY2!=                date")
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"WARN: os.mk:8: TODAY2 is defined but not used.",
+		"WARN: os.mk:8: Foreign variable \"TODAY2\" in SUBST block.")
+}
+
+// Variables mentioned in SUBST_VARS may appear in the same paragraph,
+// or alternatively anywhere else in the file.
+func (s *Suite) Test_SubstContext__SUBST_VARS_in_next_paragraph(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wextra,no-space")
+	t.SetupVartypes()
+
+	mklines := t.NewMkLines("os.mk",
+		MkRcsID,
+		"",
+		"SUBST_CLASSES+=         os",
+		"SUBST_STAGE.os=         pre-configure",
+		"SUBST_FILES.os=         guess-os.h",
+		"SUBST_VARS.os=          TODAY1",
+		"",
+		"TODAY1!=                date",
+		"TODAY2!=                date")
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"WARN: os.mk:9: TODAY2 is defined but not used.")
 }
 
 // simulateSubstLines only tests some of the inner workings of SubstContext.

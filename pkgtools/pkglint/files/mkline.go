@@ -4,7 +4,7 @@ package main
 
 import (
 	"fmt"
-	"netbsd.org/pkglint/trace"
+	"netbsd.org/pkglint/textproc"
 	"path"
 	"strings"
 )
@@ -69,7 +69,7 @@ func NewMkLine(line Line) *MkLineImpl {
 	}
 
 	if m, commented, varname, spaceAfterVarname, op, valueAlign, value, spaceAfterValue, comment := MatchVarassign(text); m {
-		if G.opts.WarnSpace && spaceAfterVarname != "" {
+		if G.Opts.WarnSpace && spaceAfterVarname != "" {
 			switch {
 			case hasSuffix(varname, "+") && op == "=":
 				break
@@ -126,11 +126,11 @@ func NewMkLine(line Line) *MkLineImpl {
 		return &MkLineImpl{line, &mkLineIncludeImpl{directive == "include", false, indent, includefile, ""}}
 	}
 
-	if m, indent, directive, includefile := match3(text, `^\.(\s*)(s?include)\s+<([^>]+)>\s*(?:#.*)?$`); m {
+	if m, indent, directive, includefile := match3(text, `^\.([\t ]*)(s?include)[\t ]+<([^>]+)>[\t ]*(?:#.*)?$`); m {
 		return &MkLineImpl{line, &mkLineIncludeImpl{directive == "include", true, indent, includefile, ""}}
 	}
 
-	if m, targets, whitespace, sources := match3(text, `^([^\s:]+(?:\s*[^\s:]+)*)(\s*):\s*([^#]*?)(?:\s*#.*)?$`); m {
+	if m, targets, whitespace, sources := match3(text, `^([^\t :]+(?:[\t ]*[^\t :]+)*)([\t ]*):[\t ]*([^#]*?)(?:[\t ]*#.*)?$`); m {
 		if whitespace != "" {
 			line.Warnf("Space before colon in dependency line.")
 		}
@@ -146,7 +146,7 @@ func NewMkLine(line Line) *MkLineImpl {
 }
 
 func (mkline *MkLineImpl) String() string {
-	return fmt.Sprintf("%s:%s", mkline.Filename, mkline.Linenos())
+	return fmt.Sprintf("%s:%s", mkline.FileName, mkline.Linenos())
 }
 
 func (mkline *MkLineImpl) IsVarassign() bool {
@@ -356,9 +356,19 @@ func (mkline *MkLineImpl) ResolveVarsInRelativePath(relativePath string, adjustD
 	if G.Pkg != nil {
 		basedir = G.Pkg.File(".")
 	} else {
-		basedir = path.Dir(mkline.Filename)
+		basedir = path.Dir(mkline.FileName)
 	}
 	pkgsrcdir := relpath(basedir, G.Pkgsrc.File("."))
+
+	if G.Testing {
+		// Relative pkgsrc paths usually only contain two or three levels.
+		// A possible reason for reaching this assertion is:
+		// Tests that access the file system must create their lines
+		// using t.SetupFileMkLines, not using t.NewMkLines.
+		G.Assertf(!contains(pkgsrcdir, "../../../../.."),
+			"Relative path %q for %q is too deep below the pkgsrc root %q.",
+			pkgsrcdir, basedir, G.Pkgsrc.File("."))
+	}
 
 	tmp := relativePath
 	tmp = strings.Replace(tmp, "${PKGSRCDIR}", pkgsrcdir, -1)
@@ -411,6 +421,15 @@ func (mkline *MkLineImpl) ExplainRelativeDirs() {
 		"Directories in the form \"../../category/package\" make it easier to",
 		"move a package around in pkgsrc, for example from pkgsrc-wip to the",
 		"main pkgsrc repository.")
+}
+
+// RefTo returns a reference to another line,
+// which can be in the same file or in a different file.
+//
+// If there is a type mismatch when calling this function, try to add ".line" to
+// either the method receiver or the other line.
+func (mkline *MkLineImpl) RefTo(other MkLine) string {
+	return mkline.Line.RefTo(other.Line)
 }
 
 func matchMkDirective(text string) (m bool, indent, directive, args, comment string) {
@@ -604,7 +623,7 @@ func (mkline *MkLineImpl) DetermineUsedVariables() []string {
 		}
 		searchIn(varname)
 		for _, mod := range varuse.modifiers {
-			searchIn(mod)
+			searchIn(mod.Text)
 		}
 	}
 
@@ -774,7 +793,7 @@ func (ind *Indentation) String() string {
 	s := ""
 	for _, level := range ind.levels[1:] {
 		s += fmt.Sprintf(" %d", level.depth)
-		if len(level.conditionalVars) != 0 {
+		if len(level.conditionalVars) > 0 {
 			s += " (" + strings.Join(level.conditionalVars, " ") + ")"
 		}
 	}
@@ -876,15 +895,15 @@ func (ind *Indentation) Condition() string {
 	return ind.top().condition
 }
 
-func (ind *Indentation) AddCheckedFile(filename string) {
+func (ind *Indentation) AddCheckedFile(fileName string) {
 	top := ind.top()
-	top.checkedFiles = append(top.checkedFiles, filename)
+	top.checkedFiles = append(top.checkedFiles, fileName)
 }
 
-func (ind *Indentation) IsCheckedFile(filename string) bool {
+func (ind *Indentation) IsCheckedFile(fileName string) bool {
 	for _, level := range ind.levels {
 		for _, levelFilename := range level.checkedFiles {
-			if filename == levelFilename {
+			if fileName == levelFilename {
 				return true
 			}
 		}
@@ -961,6 +980,18 @@ func (ind *Indentation) TrackAfter(mkline MkLine) {
 
 	if trace.Tracing {
 		trace.Stepf("Indentation after line %s: %s", mkline.Linenos(), ind)
+	}
+}
+
+func (ind *Indentation) CheckFinish(fileName string) {
+	if ind.Len() <= 1 {
+		return
+	}
+	eofLine := NewLineEOF(fileName)
+	for ind.Len() > 1 {
+		openingMkline := ind.levels[ind.Len()-1].mkline
+		eofLine.Errorf(".%s from %s must be closed.", openingMkline.Directive(), eofLine.RefTo(openingMkline.Line))
+		ind.Pop()
 	}
 }
 
@@ -1068,24 +1099,26 @@ func MatchVarassign(text string) (m, commented bool, varname, spaceAfterVarname,
 	return
 }
 
-func MatchMkInclude(text string) (m bool, indentation, directive, filename string) {
-	repl := G.NewPrefixReplacer(text)
-	if repl.AdvanceStr(".") {
-		if repl.AdvanceHspace() {
-			indentation = repl.Str()
+func MatchMkInclude(text string) (m bool, indentation, directive, fileName string) {
+	lexer := textproc.NewLexer(text)
+	if lexer.NextString(".") != "" {
+		indentation = lexer.NextHspace()
+		directive = lexer.NextString("include")
+		if directive == "" {
+			directive = lexer.NextString("sinclude")
 		}
-		if repl.AdvanceStr("include") || repl.AdvanceStr("sinclude") {
-			directive = repl.Str()
-			repl.SkipHspace()
-			if repl.AdvanceByte('"') {
-				if repl.AdvanceBytesFunc(func(c byte) bool { return c != '"' }) {
-					filename = repl.Str()
-					if repl.AdvanceByte('"') {
-						repl.SkipHspace()
-						if repl.EOF() || repl.PeekByte() == '#' {
-							m = true
-							return
-						}
+		if directive != "" {
+			lexer.NextHspace()
+			if lexer.NextByte('"') {
+				// Note: strictly speaking, the full MkVarUse would have to be parsed
+				// here. But since these usually don't contain double quotes, it has
+				// worked fine up to now.
+				fileName = lexer.NextBytesFunc(func(c byte) bool { return c != '"' })
+				if fileName != "" && lexer.NextByte('"') {
+					lexer.NextHspace()
+					if lexer.EOF() || lexer.NextByte('#') {
+						m = true
+						return
 					}
 				}
 			}
