@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4599 2018/11/07 12:29:04 leot Exp $
+$NetBSD: CHANGES-2018,v 1.4600 2018/11/07 13:00:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6427,3 +6427,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/sqlite3 to 3.25.3 [adam 2018-11-07]
 	Updated security/gnupg2 to 2.2.11 [adam 2018-11-07]
 	Updated net/youtube-dl to 20181107 [leot 2018-11-07]
+	Updated print/qpdf to 8.2.1 [ryoon 2018-11-07]
