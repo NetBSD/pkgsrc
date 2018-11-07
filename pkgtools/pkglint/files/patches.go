@@ -3,29 +3,28 @@ package main
 // Checks for patch files.
 
 import (
-	"netbsd.org/pkglint/trace"
 	"path"
 	"strings"
 )
 
-func ChecklinesPatch(lines []Line) {
+func ChecklinesPatch(lines Lines) {
 	if trace.Tracing {
-		defer trace.Call1(lines[0].Filename)()
+		defer trace.Call1(lines.FileName)()
 	}
 
 	(&PatchChecker{lines, NewExpecter(lines), false, false}).Check()
 }
 
 type PatchChecker struct {
-	lines             []Line
+	lines             Lines
 	exp               *Expecter
 	seenDocumentation bool
 	previousLineEmpty bool
 }
 
 const (
-	rePatchUniFileDel = `^---\s(\S+)(?:\s+(.*))?$`
-	rePatchUniFileAdd = `^\+\+\+\s(\S+)(?:\s+(.*))?$`
+	rePatchUniFileDel = `^---[\t ]([^\t ]+)(?:[\t ]+(.*))?$`
+	rePatchUniFileAdd = `^\+\+\+[\t ]([^\t ]+)(?:[\t ]+(.*))?$`
 	rePatchUniHunk    = `^@@ -(\d+)(?:,(\d+))? \+(\d+)(?:,(\d+))? @@(.*)$`
 )
 
@@ -34,15 +33,15 @@ func (ck *PatchChecker) Check() {
 		defer trace.Call0()()
 	}
 
-	if CheckLineRcsid(ck.lines[0], ``, "") {
+	if CheckLineRcsid(ck.lines.Lines[0], ``, "") {
 		ck.exp.Advance()
 	}
 	if ck.exp.EOF() {
-		ck.lines[0].Errorf("Patch files must not be empty.")
+		ck.lines.Lines[0].Errorf("Patch files must not be empty.")
 		return
 	}
 
-	ck.previousLineEmpty = ck.exp.ExpectEmptyLine(G.opts.WarnSpace)
+	ck.previousLineEmpty = ck.exp.ExpectEmptyLine()
 
 	patchedFiles := 0
 	for !ck.exp.EOF() {
@@ -71,8 +70,8 @@ func (ck *PatchChecker) Check() {
 			ck.exp.StepBack()
 		}
 
-		if ck.exp.AdvanceIfMatches(`^\*\*\*\s(\S+)(.*)$`) {
-			if ck.exp.AdvanceIfMatches(`^---\s(\S+)(.*)$`) {
+		if ck.exp.AdvanceIfMatches(`^\*\*\*[\t ]([^\t ]+)(.*)$`) {
+			if ck.exp.AdvanceIfMatches(`^---[\t ]([^\t ]+)(.*)$`) {
 				ck.checkBeginDiff(line, patchedFiles)
 				line.Warnf("Please use unified diffs (diff -u) for patches.")
 				return
@@ -89,15 +88,15 @@ func (ck *PatchChecker) Check() {
 	}
 
 	if patchedFiles > 1 {
-		NewLineWhole(ck.lines[0].Filename).Warnf("Contains patches for %d files, should be only one.", patchedFiles)
+		ck.lines.Warnf("Contains patches for %d files, should be only one.", patchedFiles)
 	} else if patchedFiles == 0 {
-		NewLineWhole(ck.lines[0].Filename).Errorf("Contains no patch.")
+		ck.lines.Errorf("Contains no patch.")
 	}
 
 	ChecklinesTrailingEmptyLines(ck.lines)
-	sha1Before, err := computePatchSha1Hex(ck.lines[0].Filename)
+	sha1Before, err := computePatchSha1Hex(ck.lines.FileName)
 	if SaveAutofixChanges(ck.lines) && G.Pkg != nil && err == nil {
-		sha1After, err := computePatchSha1Hex(ck.lines[0].Filename)
+		sha1After, err := computePatchSha1Hex(ck.lines.FileName)
 		if err == nil {
 			AutofixDistinfo(sha1Before, sha1After)
 		}
@@ -204,7 +203,7 @@ func (ck *PatchChecker) checkBeginDiff(line Line, patchedFiles int) {
 			"submitting a patch upstream, the corresponding bug report should",
 			"be mentioned in this file, to prevent duplicate work.")
 	}
-	if G.opts.WarnSpace && !ck.previousLineEmpty {
+	if G.Opts.WarnSpace && !ck.previousLineEmpty {
 		fix := line.Autofix()
 		fix.Notef("Empty line expected.")
 		fix.InsertBefore("")
@@ -217,7 +216,7 @@ func (ck *PatchChecker) checklineContext(text string, patchedFileType FileType) 
 		defer trace.Call2(text, patchedFileType.String())()
 	}
 
-	if G.opts.WarnExtra {
+	if G.Opts.WarnExtra {
 		ck.checklineAdded(text, patchedFileType)
 	} else {
 		ck.checktextRcsid(text)
@@ -315,12 +314,12 @@ func (ft FileType) String() string {
 }
 
 // This is used to select the proper subroutine for detecting absolute pathnames.
-func guessFileType(fname string) (fileType FileType) {
+func guessFileType(fileName string) (fileType FileType) {
 	if trace.Tracing {
-		defer trace.Call(fname, trace.Result(&fileType))()
+		defer trace.Call(fileName, trace.Result(&fileType))()
 	}
 
-	basename := path.Base(fname)
+	basename := path.Base(fileName)
 	basename = strings.TrimSuffix(basename, ".in") // doesn't influence the content type
 	ext := strings.ToLower(strings.TrimLeft(path.Ext(basename), "."))
 
@@ -343,7 +342,7 @@ func guessFileType(fname string) (fileType FileType) {
 	}
 
 	if trace.Tracing {
-		trace.Step1("Unknown file type for %q", fname)
+		trace.Step1("Unknown file type for %q", fileName)
 	}
 	return ftUnknown
 }
@@ -359,10 +358,10 @@ func (ck *PatchChecker) checklineSourceAbsolutePathname(line Line, text string) 
 		}
 
 		switch {
-		case matches(before, `[A-Z_]\s*$`):
+		case matches(before, `[A-Z_][\t ]*$`):
 			// ok; C example: const char *echo_cmd = PREFIX "/bin/echo";
 
-		case matches(before, `\+\s*$`):
+		case matches(before, `\+[\t ]*$`):
 			// ok; Python example: libdir = prefix + '/lib'
 
 		default:
@@ -388,7 +387,7 @@ func (ck *PatchChecker) checklineOtherAbsolutePathname(line Line, text string) {
 			// Example: @prefix@/bin
 			// Example: ${prefix}/bin
 
-		case matches(before, `\+\s*["']$`):
+		case matches(before, `\+[\t ]*["']$`):
 			// Example: prefix + '/lib'
 
 		// XXX new: case matches(before, `\bs.$`): // Example: sed -e s,/usr,@PREFIX@,

@@ -101,7 +101,7 @@ type MkShForClause struct {
 
 // MkShCaseClause is a "case" statement, including all its branches.
 //
-// Example: case $filename in *.c) echo "C source" ;; esac
+// Example: case $fileName in *.c) echo "C source" ;; esac
 type MkShCaseClause struct {
 	Word  *ShToken
 	Cases []*MkShCaseItem

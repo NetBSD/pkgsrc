@@ -10,7 +10,7 @@ package main
 // do not.
 //
 // Some methods allow modification of the raw lines contained in the
-// logical line, but leave the Text field untouched. These methods are
+// logical line but leave the Text field untouched. These methods are
 // used in the --autofix mode.
 
 import (
@@ -19,10 +19,9 @@ import (
 	"strconv"
 )
 
-type Line = *LineImpl
-
 type RawLine struct {
 	Lineno int
+	// XXX: This is only needed for Autofix; probably should be moved there.
 	orignl string
 	textnl string
 }
@@ -31,8 +30,10 @@ func (rline *RawLine) String() string {
 	return strconv.Itoa(rline.Lineno) + ":" + rline.textnl
 }
 
+type Line = *LineImpl
+
 type LineImpl struct {
-	Filename  string
+	FileName  string
 	Basename  string
 	firstLine int32 // Zero means not applicable, -1 means EOF
 	lastLine  int32 // Usually the same as firstLine, may differ in Makefiles
@@ -42,23 +43,23 @@ type LineImpl struct {
 	Once
 }
 
-func NewLine(fname string, lineno int, text string, rawLines []*RawLine) Line {
-	return NewLineMulti(fname, lineno, lineno, text, rawLines)
+func NewLine(fileName string, lineno int, text string, rawLines []*RawLine) Line {
+	return NewLineMulti(fileName, lineno, lineno, text, rawLines)
 }
 
 // NewLineMulti is for logical Makefile lines that end with backslash.
-func NewLineMulti(fname string, firstLine, lastLine int, text string, rawLines []*RawLine) Line {
-	return &LineImpl{fname, path.Base(fname), int32(firstLine), int32(lastLine), text, rawLines, nil, Once{}}
+func NewLineMulti(fileName string, firstLine, lastLine int, text string, rawLines []*RawLine) Line {
+	return &LineImpl{fileName, path.Base(fileName), int32(firstLine), int32(lastLine), text, rawLines, nil, Once{}}
 }
 
 // NewLineEOF creates a dummy line for logging, with the "line number" EOF.
-func NewLineEOF(fname string) Line {
-	return NewLineMulti(fname, -1, 0, "", nil)
+func NewLineEOF(fileName string) Line {
+	return NewLineMulti(fileName, -1, 0, "", nil)
 }
 
 // NewLineWhole creates a dummy line for logging messages that affect a file as a whole.
-func NewLineWhole(fname string) Line {
-	return NewLine(fname, 0, "", nil)
+func NewLineWhole(fileName string) Line {
+	return NewLine(fileName, 0, "", nil)
 }
 
 func (line *LineImpl) Linenos() string {
@@ -74,19 +75,28 @@ func (line *LineImpl) Linenos() string {
 	}
 }
 
-func (line *LineImpl) ReferenceFrom(other Line) string {
-	if line.Filename != other.Filename {
-		return cleanpath(relpath(path.Dir(other.Filename), line.Filename)) + ":" + line.Linenos()
+// RefTo returns a reference to another line,
+// which can be in the same file or in a different file.
+func (line *LineImpl) RefTo(other Line) string {
+	if line.FileName != other.FileName {
+		return cleanpath(relpath(path.Dir(line.FileName), other.FileName)) + ":" + other.Linenos()
 	}
-	return "line " + line.Linenos()
+	return "line " + other.Linenos()
+}
+
+// PathToFile returns the relative path from this line to the given file path.
+// This is typically used for arguments in diagnostics, which should always be
+// relative to the line with which the diagnostic is associated.
+func (line *LineImpl) PathToFile(filePath string) string {
+	return relpath(path.Dir(line.FileName), filePath)
 }
 
 func (line *LineImpl) IsMultiline() bool {
 	return line.firstLine > 0 && line.firstLine != line.lastLine
 }
 
-func (line *LineImpl) printSource(out *SeparatorWriter) {
-	if !G.opts.PrintSource {
+func (line *LineImpl) showSource(out *SeparatorWriter) {
+	if !G.Opts.ShowSource {
 		return
 	}
 
@@ -109,7 +119,7 @@ func (line *LineImpl) printSource(out *SeparatorWriter) {
 		for _, before := range line.autofix.linesBefore {
 			out.Write("+\t" + before)
 		}
-		printDiff(line.autofix.lines)
+		printDiff(line.raw)
 		for _, after := range line.autofix.linesAfter {
 			out.Write("+\t" + after)
 		}
@@ -119,7 +129,7 @@ func (line *LineImpl) printSource(out *SeparatorWriter) {
 }
 
 func (line *LineImpl) log(level *LogLevel, format string, args []interface{}) {
-	if G.opts.PrintAutofix || G.opts.Autofix {
+	if G.Opts.ShowAutofix || G.Opts.Autofix {
 		// In these two cases, the only interesting diagnostics are
 		// those that can be fixed automatically.
 		// These are logged by Autofix.Apply.
@@ -130,36 +140,33 @@ func (line *LineImpl) log(level *LogLevel, format string, args []interface{}) {
 		return
 	}
 
-	out := G.logOut
-	if level == llError {
-		out = G.logErr
+	if G.Opts.ShowSource {
+		line.showSource(G.logOut)
 	}
-
-	logs(level, line.Filename, line.Linenos(), format, fmt.Sprintf(format, args...))
-	if !G.opts.PrintAutofix && G.opts.PrintSource {
-		line.printSource(out)
-		out.Separate()
+	logf(level, line.FileName, line.Linenos(), format, fmt.Sprintf(format, args...))
+	if G.Opts.ShowSource {
+		G.logOut.Separate()
 	}
 }
 
 func (line *LineImpl) Fatalf(format string, args ...interface{}) {
-	line.log(llFatal, format, args)
+	line.log(Fatal, format, args)
 }
 
 func (line *LineImpl) Errorf(format string, args ...interface{}) {
-	line.log(llError, format, args)
+	line.log(Error, format, args)
 }
 
 func (line *LineImpl) Warnf(format string, args ...interface{}) {
-	line.log(llWarn, format, args)
+	line.log(Warn, format, args)
 }
 
 func (line *LineImpl) Notef(format string, args ...interface{}) {
-	line.log(llNote, format, args)
+	line.log(Note, format, args)
 }
 
 func (line *LineImpl) String() string {
-	return line.Filename + ":" + line.Linenos() + ": " + line.Text
+	return line.FileName + ":" + line.Linenos() + ": " + line.Text
 }
 
 // Autofix returns the autofix instance belonging to the line.
@@ -178,11 +185,11 @@ func (line *LineImpl) String() string {
 //
 //  fix.Replace("from", "to")
 //  fix.ReplaceAfter("prefix", "from", "to")
-//  fix.ReplaceRegex(`\s+`, "space", -1)
+//  fix.ReplaceRegex(`[\t ]+`, "space", -1)
 //  fix.InsertBefore("new line")
 //  fix.InsertAfter("new line")
 //  fix.Delete()
-//  fix.Custom(func(...))
+//  fix.Custom(func(showAutofix, autofix bool) {})
 //
 //  fix.Apply()
 func (line *LineImpl) Autofix() *Autofix {
