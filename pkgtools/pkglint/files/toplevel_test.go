@@ -27,5 +27,9 @@ func (s *Suite) Test_CheckdirToplevel(c *check.C) {
 		"WARN: ~/Makefile:3: Indentation should be a single tab character.",
 		"ERROR: ~/Makefile:6: Each subdir must only appear once.",
 		"WARN: ~/Makefile:7: \"ignoreme\" commented out without giving a reason.",
-		"WARN: ~/Makefile:9: bbb should come before ccc.")
+		"WARN: ~/Makefile:9: bbb should come before ccc.",
+
+		// This warning is at the very end because mklines.Check() is called at the end.
+		// Ideally it would be at the same place as the other warning from Makefile:3.
+		"NOTE: ~/Makefile:3: This variable value should be aligned with tabs, not spaces, to column 17.")
 }

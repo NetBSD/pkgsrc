@@ -2,6 +2,7 @@ package getopt
 
 import (
 	"gopkg.in/check.v1"
+	"netbsd.org/pkglint/intqa"
 	"strings"
 	"testing"
 )
@@ -12,7 +13,7 @@ var _ = check.Suite(new(Suite))
 
 func Test(t *testing.T) { check.TestingT(t) }
 
-func (s *Suite) Test_Options_Parse_short(c *check.C) {
+func (s *Suite) Test_Options_Parse__short(c *check.C) {
 	opts := NewOptions()
 	var help bool
 	opts.AddFlagVar('h', "help", &help, false, "prints a help page")
@@ -24,7 +25,7 @@ func (s *Suite) Test_Options_Parse_short(c *check.C) {
 	c.Check(help, check.Equals, true)
 }
 
-func (s *Suite) Test_Options_Parse_unknown_short(c *check.C) {
+func (s *Suite) Test_Options_Parse__unknown_short(c *check.C) {
 	opts := NewOptions()
 
 	_, err := opts.Parse([]string{"progname", "-z"})
@@ -32,7 +33,7 @@ func (s *Suite) Test_Options_Parse_unknown_short(c *check.C) {
 	c.Check(err.Error(), check.Equals, "progname: unknown option: -z")
 }
 
-func (s *Suite) Test_Options_Parse_unknown_long(c *check.C) {
+func (s *Suite) Test_Options_Parse__unknown_long(c *check.C) {
 	opts := NewOptions()
 
 	_, err := opts.Parse([]string{"progname", "--unknown-long"})
@@ -40,7 +41,7 @@ func (s *Suite) Test_Options_Parse_unknown_long(c *check.C) {
 	c.Check(err.Error(), check.Equals, "progname: unknown option: --unknown-long")
 }
 
-func (s *Suite) Test_Options_Parse_unknown_flag_in_group(c *check.C) {
+func (s *Suite) Test_Options_Parse__unknown_flag_in_group(c *check.C) {
 	opts := NewOptions()
 	opts.AddFlagGroup('W', "warnings", "", "")
 
@@ -57,7 +58,7 @@ func (s *Suite) Test_Options_Parse_unknown_flag_in_group(c *check.C) {
 	c.Check(err.Error(), check.Equals, "progname: option requires an argument: -W")
 }
 
-func (s *Suite) Test_Options_Parse_abbreviated_long(c *check.C) {
+func (s *Suite) Test_Options_Parse__abbreviated_long(c *check.C) {
 	opts := NewOptions()
 	var longFlag, longerFlag bool
 	opts.AddFlagVar('?', "long", &longFlag, false, "")
@@ -83,7 +84,7 @@ func (s *Suite) Test_Options_Parse_abbreviated_long(c *check.C) {
 	c.Check(longerFlag, check.Equals, true)
 }
 
-func (s *Suite) Test_Options_Parse_mixed_args_and_options(c *check.C) {
+func (s *Suite) Test_Options_Parse__mixed_args_and_options(c *check.C) {
 	opts := NewOptions()
 	var aflag, bflag bool
 	opts.AddFlagVar('a', "aflag", &aflag, false, "")
@@ -106,7 +107,7 @@ func (s *Suite) Test_Options_Parse_mixed_args_and_options(c *check.C) {
 	c.Check(bflag, check.Equals, false)
 }
 
-func (s *Suite) Test_Options_Parse_string_list(c *check.C) {
+func (s *Suite) Test_Options_Parse__string_list(c *check.C) {
 	opts := NewOptions()
 	var verbose bool
 	var includes []string
@@ -140,43 +141,43 @@ func (s *Suite) Test_Options_Parse_string_list(c *check.C) {
 }
 
 func (s *Suite) Test_Options_Parse__long_flags(c *check.C) {
-	var aflag, bflag, cflag, dflag, eflag, fflag, gflag, hflag, iflag, jflag bool
+	var posFlags [5]bool
+	var negFlags [5]bool
+	var otherFlags [2]bool
 
 	opts := NewOptions()
-	opts.AddFlagVar('a', "aflag", &aflag, false, "")
-	opts.AddFlagVar('b', "bflag", &bflag, false, "")
-	opts.AddFlagVar('c', "cflag", &cflag, false, "")
-	opts.AddFlagVar('d', "dflag", &dflag, false, "")
-	opts.AddFlagVar('e', "eflag", &eflag, true, "")
-	opts.AddFlagVar('f', "fflag", &fflag, true, "")
-	opts.AddFlagVar('g', "gflag", &gflag, true, "")
-	opts.AddFlagVar('h', "hflag", &hflag, true, "")
-	opts.AddFlagVar('i', "iflag", &iflag, false, "")
-	opts.AddFlagVar('j', "jflag", &jflag, false, "")
+	opts.AddFlagVar(0, "pos0", &posFlags[0], false, "")
+	opts.AddFlagVar(0, "pos1", &posFlags[1], false, "")
+	opts.AddFlagVar(0, "pos2", &posFlags[2], false, "")
+	opts.AddFlagVar(0, "pos3", &posFlags[3], false, "")
+	opts.AddFlagVar(0, "pos4", &posFlags[4], false, "")
+	opts.AddFlagVar(0, "neg0", &negFlags[0], true, "")
+	opts.AddFlagVar(0, "neg1", &negFlags[1], true, "")
+	opts.AddFlagVar(0, "neg2", &negFlags[2], true, "")
+	opts.AddFlagVar(0, "neg3", &negFlags[3], true, "")
+	opts.AddFlagVar(0, "neg4", &negFlags[4], true, "")
+	opts.AddFlagVar(0, "other0", &otherFlags[0], false, "")
+	opts.AddFlagVar(0, "other1", &otherFlags[1], false, "")
 
 	args, err := opts.Parse([]string{"progname",
-		"--aflag=true",
-		"--bflag=on",
-		"--cflag=enabled",
-		"--dflag=1",
-		"--eflag=false",
-		"--fflag=off",
-		"--gflag=disabled",
-		"--hflag=0",
-		"--iflag",
-		"--jflag=unknown"})
+		"--pos0=true",
+		"--pos1=on",
+		"--pos2=enabled",
+		"--pos3=1",
+		"--pos4=yes",
+		"--neg0=false",
+		"--neg1=off",
+		"--neg2=disabled",
+		"--neg3=0",
+		"--neg4=no",
+		"--other0",
+		"--other1=unknown"})
 
 	c.Check(args, check.HasLen, 0)
-	c.Check(aflag, check.Equals, true)
-	c.Check(bflag, check.Equals, true)
-	c.Check(cflag, check.Equals, true)
-	c.Check(dflag, check.Equals, true)
-	c.Check(eflag, check.Equals, false)
-	c.Check(fflag, check.Equals, false)
-	c.Check(gflag, check.Equals, false)
-	c.Check(hflag, check.Equals, false)
-	c.Check(iflag, check.Equals, true)
-	c.Check(err, check.ErrorMatches, `^progname: invalid argument for option --jflag$`)
+	c.Check(posFlags, check.Equals, [5]bool{true, true, true, true, true})
+	c.Check(negFlags, check.Equals, [5]bool{false, false, false, false, false})
+	c.Check(otherFlags, check.Equals, [2]bool{true, false})
+	c.Check(err.Error(), check.Equals, "progname: invalid argument for option --other1")
 }
 
 func (s *Suite) Test_Options_handleLongOption__flag_group_without_argument(c *check.C) {
@@ -227,12 +228,14 @@ func (s *Suite) Test_Options_handleLongOption__internal_error(c *check.C) {
 	opts := NewOptions()
 	group := opts.AddFlagGroup('W', "warnings", "warning,...", "Print selected warnings")
 	group.AddFlagVar("extra", &extra, false, "Print extra warnings")
+
+	// Intentionally damage internal structure to reach full code coverage.
 	opts.options[0].data = "unexpected value"
 
 	c.Check(
 		func() { _, _ = opts.Parse([]string{"progname", "--warnings"}) },
 		check.Panics,
-		"getopt: unknown option type")
+		"getopt: internal error: unknown option type")
 }
 
 func (s *Suite) Test_Options_parseShortOptions__flag_group_separate_argument(c *check.C) {
@@ -274,4 +277,10 @@ func (s *Suite) Test_Options_Help(c *check.C) {
 		"    extra   Print extra warnings (disabled)\n"+
 		"\n"+
 		"  (Prefix a flag with \"no-\" to disable it.)\n")
+}
+
+func (s *Suite) Test__test_names(c *check.C) {
+	ck := intqa.NewTestNameChecker(c)
+	ck.ShowWarnings(false)
+	ck.Check()
 }
