@@ -5,3 +5,6 @@ compose the following programs into your configuration:
 - authup offers SMTP or POP3 authentication and calls checkpassword.
 - checknotroot refuses to run as UID 0.
 - fixsmtpio filters SMTP I/O and exit status to suit authup.
+
+authup and fixsmtpio can also offer STARTTLS for message submission and
+incoming SMTP, respectively.

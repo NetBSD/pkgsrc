@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/10/27 17:28:22 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2018/11/08 20:54:53 schmonz Exp $
 
 DISTNAME=		netqmail-1.06
 PKGNAME=		qmail-acceptutils-${ACPATCHVERSION}
@@ -7,10 +7,10 @@ MASTER_SITES=		http://www.qmail.org/
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://schmonz.com/qmail/acceptutils/
-COMMENT=		Offer SMTP AUTH with new features and no patch conflicts
+COMMENT=		Offer TLS and SMTP AUTH with new features and no patch conflicts
 LICENSE=		public-domain
 
-ACPATCHVERSION=		20181027
+ACPATCHVERSION=		20181108
 ACPATCH=		${DISTNAME}-acceptutils-${ACPATCHVERSION}.patch
 PATCHFILES+=		${ACPATCH}
 SITES.${ACPATCH}=	${HOMEPAGE}
