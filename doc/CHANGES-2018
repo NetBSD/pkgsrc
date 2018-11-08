@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4611 2018/11/08 14:45:47 prlw1 Exp $
+$NetBSD: CHANGES-2018,v 1.4612 2018/11/08 15:07:29 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6461,3 +6461,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/gst-plugins1-bad to 1.14.4 [prlw1 2018-11-08]
 	Updated multimedia/gst-plugins1-ugly to 1.14.4 [prlw1 2018-11-08]
 	Updated graphics/potrace to 1.15 [kleink 2018-11-08]
+	Updated multimedia/gst-plugins1-libav to 1.14.4 [prlw1 2018-11-08]
