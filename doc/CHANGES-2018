@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4614 2018/11/08 20:55:01 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.4615 2018/11/08 20:57:38 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6464,3 +6464,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/gst-plugins1-libav to 1.14.4 [prlw1 2018-11-08]
 	Updated sysutils/u-boot-pinebook to 2018.11rc3 [jakllsch 2018-11-08]
 	Updated mail/qmail-acceptutils to 20181108 [schmonz 2018-11-08]
+	Updated mail/qmail-run to 20181108 [schmonz 2018-11-08]
