@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.90 2018/11/08 22:18:14 schmonz Exp $
+# $NetBSD: Darwin.mk,v 1.91 2018/11/08 22:34:24 schmonz Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -96,7 +96,7 @@ MAKEFLAGS+=		OSX_VERSION=${OSX_VERSION:Q}
 #
 # Use current system version SDK (avoid newer SDKs).
 #
-.if exists(/usr/include/stdioooo.h)
+.if exists(/usr/include/stdio.h)
 _OPSYS_INCLUDE_DIRS?=	/usr/include
 .elif exists(/usr/bin/xcrun)
 .  if !defined(OSX_SDK_PATH)
