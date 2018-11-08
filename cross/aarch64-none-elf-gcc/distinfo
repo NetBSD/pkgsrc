@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2017/09/01 20:56:43 jmcneill Exp $
+$NetBSD: distinfo,v 1.2 2018/11/08 23:28:28 mrg Exp $
 
 SHA1 (gcc-7.2.0.tar.gz) = dec3effe9f73bf2216a88804ac805a05f9b33ea8
 RMD160 (gcc-7.2.0.tar.gz) = fa4eb09ea8c3fc388c6918096f134e188cce4c2d
@@ -9,6 +9,7 @@ RMD160 (newlib-2.5.0.tar.gz) = fc2beafe309701e02da3d2dff737236f67c0de4d
 SHA512 (newlib-2.5.0.tar.gz) = 4c99e8dfcb4a7ad0769b9e173ff06628d82e4993ef87d3adf9d6b5578626b14de81b4b3c5f0673ddbb49dc9f3d3628f9f8d4432dcded91f5cd3d27b7d44343cd
 Size (newlib-2.5.0.tar.gz) = 17912392 bytes
 SHA1 (patch-contrib_download__prerequisites) = be9b02068b3d4d783e92bee66d480bb2bfe35a84
+SHA1 (patch-gcc_config_aarch64_aarch64.h) = bf1ab74227badf54afb6cc8d5536f3449ab6c251
 SHA1 (patch-gcc_system.h) = 72a75ff773b9b5f3d2f16f4ec7d29e032aba5f53
 SHA1 (patch-libcc1_configure) = 0368733ddf79b109fcc7146b0baeb37ab31e634a
 SHA1 (patch-libcc1_connection.cc) = 2acd56a6f62b29ed3f02eecb7bf103e4564a442c
