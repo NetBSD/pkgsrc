@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4603 2018/11/08 02:58:30 markd Exp $
+$NetBSD: CHANGES-2018,v 1.4604 2018/11/08 05:33:36 markd Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6432,3 +6432,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated pkgtools/pkglint to 5.6.6 [rillig 2018-11-07]
 	Updated devel/hdf5 to 1.10.4 [markd 2018-11-08]
 	Updated devel/hdf5-c++ to 1.10.4 [markd 2018-11-08]
+	Updated time/ical to 3.0.3 [markd 2018-11-08]
