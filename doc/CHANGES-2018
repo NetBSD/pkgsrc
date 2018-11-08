@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4608 2018/11/08 14:40:53 prlw1 Exp $
+$NetBSD: CHANGES-2018,v 1.4609 2018/11/08 14:41:23 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6456,3 +6456,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/php71 to 7.1.24 [taca 2018-11-08]
 	Updated lang/php72 to 7.2.12 [taca 2018-11-08]
 	Updated multimedia/gstreamer1 to 1.14.4 [prlw1 2018-11-08]
+	Updated multimedia/gst-plugins1-base to 1.14.4nb1 [prlw1 2018-11-08]
