@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.2 2018/10/27 17:28:22 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2018/11/08 20:54:53 schmonz Exp $
 
-SHA1 (netqmail-1.06-acceptutils-20181027.patch) = 0b0bc9ff513d39a4da832fa23da57582f52046ae
-RMD160 (netqmail-1.06-acceptutils-20181027.patch) = 73f6a8c2f4e55d69ad0ba36b2d65bd8716127ecf
-SHA512 (netqmail-1.06-acceptutils-20181027.patch) = 5323feafa10a12e825c48dd5cdff10ad083ac704617915e784651752d69aebece419937c03219881a2bdefa8b84bc678b5b04a48f466038ebbf33a24610dea83
-Size (netqmail-1.06-acceptutils-20181027.patch) = 98793 bytes
+SHA1 (netqmail-1.06-acceptutils-20181108.patch) = 76aceac5a61473ef700d62df5f3eec386f5dc02e
+RMD160 (netqmail-1.06-acceptutils-20181108.patch) = b1169f64e021afc5e27d2d59036183ae85fa3153
+SHA512 (netqmail-1.06-acceptutils-20181108.patch) = 32b16ecf19cc6270da0633bc95a80e82681e812b39657b212b43c31576224176f1f9d75049bbc44aaee4126535b7d4d46c227bc7ce9f9ca598f0b3e70c796d6e
+Size (netqmail-1.06-acceptutils-20181108.patch) = 106720 bytes
 SHA1 (netqmail-1.06.tar.gz) = 9ee9a603e2ad3d8e1d34b900e19b7a5d275f538b
 RMD160 (netqmail-1.06.tar.gz) = d31598afa862abb35bc1feb8d038ab619b5a17a2
 SHA512 (netqmail-1.06.tar.gz) = de40a6d8fac502bd785010434d99b99f2c0524e10aea3d0f2a0d35c70fce91e991eb1fb8f20a1276eb56d7e73130ea5e2c178f6075d138af47b28d9ca6e6046b
