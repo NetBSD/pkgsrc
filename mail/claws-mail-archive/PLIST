@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.9 2013/07/24 15:29:21 drochner Exp $
-include/claws-mail/plugins/claws-mail/archiver.h
-include/claws-mail/plugins/claws-mail/archiver_prefs.h

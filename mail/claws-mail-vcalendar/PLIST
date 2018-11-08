@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.9 2013/07/24 15:29:22 drochner Exp $
-include/claws-mail/plugins/claws-mail/ical.h
-include/claws-mail/plugins/vcalendar/vcal_interface.h
