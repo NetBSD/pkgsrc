@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.554 2018/11/07 20:58:22 rillig Exp $
+# $NetBSD: Makefile,v 1.555 2018/11/08 19:41:32 rillig Exp $
 
 PKGNAME=	pkglint-5.6.6
 DISTFILES=	# none
@@ -27,9 +27,17 @@ TOOLS_CREATE+=		goyacc
 TOOLS_PATH.goyacc=	${WRKDIR}/bin/goyacc
 USE_TOOLS+=		goyacc
 
+# This needs to come before bsd.prefs.mk so that SSP_SUPPORTED is properly set.
+.include "../../lang/go/go-package.mk"
+
+.include "../../mk/bsd.prefs.mk"
+
 do-extract:
 	${RUN} ${MKDIR} ${WRKDIR}/pkglint
 	${RUN} cd ${FILESDIR} && ${PAX} -rw . ${WRKDIR}/pkglint
+.if !${PKGSRC_RUN_TEST:M[yY][eE][sS]}
+	${RUN} rm -rf ${WRKDIR}/pkglint/intqa
+.endif
 	${RUN} ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} get golang.org/x/tools/cmd/goyacc
 	${RUN} ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} install golang.org/x/tools/cmd/goyacc
 
@@ -41,11 +49,6 @@ pre-install:
 	${RUN} rm -rf ${WRKDIR}/pkg
 
 post-install: do-install-man
-
-# This needs to come before bsd.prefs.mk so that SSP_SUPPORTED is properly set.
-.include "../../lang/go/go-package.mk"
-
-.include "../../mk/bsd.prefs.mk"
 
 do-install-man: .PHONY
 .if ${MANINSTALL:Mcatinstall}
