@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.11 2018/10/28 15:01:57 schmonz Exp $
+$NetBSD: MESSAGE,v 1.12 2018/11/08 20:57:28 schmonz Exp $
 
 Please read ${PREFIX}/share/doc/qmail-run/README.pkgsrc.
 
@@ -19,7 +19,7 @@ Incoming SMTP deliveries:
 - Optionally list qmail-rcptcheck programs in control/rcptchecks.
 - Optionally list qmail-qfilter programs in control/smtpfilters.
 
-Outgoing submissions with SMTP AUTH over TLS:
+Outgoing authentication-only submission:
 - Set qmailofmipd=YES in /etc/rc.conf.
 - Optionally list qmail-qfilter programs in control/ofmipfilters.
 
@@ -28,5 +28,8 @@ User-controlled ofmipd address rewriting:
 
 Fetching Maildirs via POP3:
 - Set qmailpop3d=YES in /etc/rc.conf.
+
+TLS for incoming and outgoing SMTP, submission, and POP3:
+- Create cert and DH params as instructed by the qmail package.
 
 ===========================================================================
