@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4610 2018/11/08 14:42:33 kleink Exp $
+$NetBSD: CHANGES-2018,v 1.4611 2018/11/08 14:45:47 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6456,5 +6456,8 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/php71 to 7.1.24 [taca 2018-11-08]
 	Updated lang/php72 to 7.2.12 [taca 2018-11-08]
 	Updated multimedia/gstreamer1 to 1.14.4 [prlw1 2018-11-08]
-	Updated multimedia/gst-plugins1-base to 1.14.4nb1 [prlw1 2018-11-08]
+	Updated multimedia/gst-plugins1-base to 1.14.4 [prlw1 2018-11-08]
+	Updated multimedia/gst-plugins1-good to 1.14.4 [prlw1 2018-11-08]
+	Updated multimedia/gst-plugins1-bad to 1.14.4 [prlw1 2018-11-08]
+	Updated multimedia/gst-plugins1-ugly to 1.14.4 [prlw1 2018-11-08]
 	Updated graphics/potrace to 1.15 [kleink 2018-11-08]
