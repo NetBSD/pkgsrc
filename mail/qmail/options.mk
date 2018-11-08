@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.55 2018/10/25 14:02:37 schmonz Exp $
+# $NetBSD: options.mk,v 1.56 2018/11/08 20:58:08 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=		eai inet6 pam syncdir tls
@@ -9,11 +9,10 @@ PKG_SUGGESTED_OPTIONS+=		qmail-customerror qmail-srs
 # Formerly optional patches, now unconditionally applied:
 QMAILPATCHES=			netqmail:${DEFAULT_DISTFILES}
 
-QMAILPATCHES+=			tls:${TLS_PATCH}
-TLS_PATCH=			netqmail-1.06-tls-20160918.patch
-PATCHFILES+=			${TLS_PATCH}
-SITES.${TLS_PATCH}=		http://inoa.net/qmail-tls/
-PATCH_DIST_STRIP.${TLS_PATCH}=	-p1
+QMAILPATCHES+=			tls:${TLSREMOTE_PATCH}
+TLSREMOTE_PATCH=		netqmail-1.06-tls-20160918-onlyremote-20181107.patch
+PATCHFILES+=			${TLSREMOTE_PATCH}
+SITES.${TLSREMOTE_PATCH}=	https://schmonz.com/qmail/tlsonlyremote/
 
 QMAILPATCHES+=			bigdns:${BIGDNS_PATCH}
 BIGDNS_PATCH=			qmail-103.patch
@@ -44,9 +43,10 @@ PATCHFILES+=			${QBIFFUTMPX_PATCH}
 SITES.${QBIFFUTMPX_PATCH}=	https://schmonz.com/qmail/qbiffutmpx/
 
 QMAILPATCHES+=			rcptcheck:${RCPTCHECK_PATCH}
-RCPTCHECK_PATCH=		netqmail-1.06-tls-20160918-rcptcheck-20181022.patch
+RCPTCHECK_PATCH=		qmail-smtpd.patch
 PATCHFILES+=			${RCPTCHECK_PATCH}
-SITES.${RCPTCHECK_PATCH}=	https://schmonz.com/qmail/rcptcheck/
+SITES.${RCPTCHECK_PATCH}=	http://www.soffian.org/downloads/qmail/
+PATCH_DIST_STRIP.${RCPTCHECK_PATCH}=-p1
 
 QMAILPATCHES+=			remote:${REMOTE_PATCH}
 REMOTE_PATCH=			netqmail-1.06-qmailremote-20170716.patch
@@ -58,7 +58,7 @@ SITES.${REMOTE_PATCH}=		https://schmonz.com/qmail/remote/
 .if !empty(PKG_OPTIONS:Meai)
 .  include "../../devel/libidn2/buildlink3.mk"
 QMAILPATCHES+=			eai:${EAI_PATCH}
-EAI_PATCH=			netqmail-1.06-tls-20160918-smtputf8-20181024.patch
+EAI_PATCH=			netqmail-1.06-tls-20160918-onlyremote-20181107-smtputf8-20181107.patch
 PATCHFILES+=			${EAI_PATCH}
 SITES.${EAI_PATCH}=		https://schmonz.com/qmail/eai/
 CFLAGS+=			-DEHLO=1
