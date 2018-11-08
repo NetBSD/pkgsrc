@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.12 2018/01/31 10:22:48 jperkin Exp $
+$NetBSD: distinfo,v 1.13 2018/11/08 14:40:20 kleink Exp $
 
-SHA1 (potrace-1.14.tar.gz) = c61dc9c37157aaf757cc6f5fa2806a3c83af74c4
-RMD160 (potrace-1.14.tar.gz) = fdc2237616a83d2212054dcf1e5f44f3878fd8f4
-SHA512 (potrace-1.14.tar.gz) = ade5e18adfbfccbc1298d0bd416fe3ef49ebe0284b81d43e0dd0040498d0ef6995e6ac9dac0a1eb5c251921bc97c32db3213dbe0ab40365d87f92013dcdc99b5
-Size (potrace-1.14.tar.gz) = 649685 bytes
-SHA1 (patch-src_backend__eps.c) = baacc3fdbac3bc1d63084f2e192b2c17e42621a9
-SHA1 (patch-src_main.c) = 90116a4478d81c72a42714cb4feb04938c6b151e
-SHA1 (patch-src_mkbitmap.c) = 083afb4616146ede33a9bf79ab7f69d33af49030
+SHA1 (potrace-1.15.tar.gz) = 1a0a4faca17370731b939487847662c8ed1b660d
+RMD160 (potrace-1.15.tar.gz) = 3693c10fae055c36b9728a21f3d2739a3fa8df74
+SHA512 (potrace-1.15.tar.gz) = c9a8edd4f3339da587b9b32e12c83c8f7b993c7c23f551fa267545d9411679bc024924e23596ed1c83985693fc894b65dfa9f860275de395d9e0a88da37a4f02
+Size (potrace-1.15.tar.gz) = 650840 bytes
