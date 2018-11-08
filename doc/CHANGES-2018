@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4602 2018/11/07 21:01:20 rillig Exp $
+$NetBSD: CHANGES-2018,v 1.4603 2018/11/08 02:58:30 markd Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6430,3 +6430,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/qpdf to 8.2.1 [ryoon 2018-11-07]
 	Updated multimedia/libaom to 1.0.0nb1 [ryoon 2018-11-07]
 	Updated pkgtools/pkglint to 5.6.6 [rillig 2018-11-07]
+	Updated devel/hdf5 to 1.10.4 [markd 2018-11-08]
+	Updated devel/hdf5-c++ to 1.10.4 [markd 2018-11-08]
