@@ -1,18 +1,7 @@
-$NetBSD: distinfo,v 1.14 2018/02/18 23:50:36 he Exp $
+$NetBSD: distinfo,v 1.15 2018/11/08 05:32:23 markd Exp $
 
-SHA1 (ical-3.0.2.tar.gz) = 8a0c2f132979320cb2c24b187cb7238698161e5d
-RMD160 (ical-3.0.2.tar.gz) = e66326edf0cc562e601770959df3a415126ae8c5
-SHA512 (ical-3.0.2.tar.gz) = 6ce7f2d49133c246c6f792203a7a494bcec6d55eb59fac43b6610bc97d0fdbf44cbfa230014241ede581ceb10047d10320fd1a119587d7ba6693ab69b0c7c938
-Size (ical-3.0.2.tar.gz) = 308788 bytes
-SHA1 (patch-bitmaps_dleft.xbm) = 06259c3088efd7f99788b8c1fce15c6e429de59e
-SHA1 (patch-bitmaps_done.xbm) = 5c47063e18725d7c5d2af5f63e626b28db099640
-SHA1 (patch-bitmaps_dright.xbm) = 15b1cc3c92e31643d0853f0068be4c9018c76437
-SHA1 (patch-bitmaps_ical.xbm) = fcd8ffc2494334b8c61a6577f5fab533453b5385
-SHA1 (patch-bitmaps_left.xbm) = da199839502d9dfbf23c0c5d788d47214d8539a2
-SHA1 (patch-bitmaps_right.xbm) = f034a1f923b7dbc6930df1cd64c7073a1eeeb71a
-SHA1 (patch-bitmaps_sleft.xbm) = 5fbfe6c881d55dbad5c044942932e2c1c5f29122
-SHA1 (patch-bitmaps_sright.xbm) = 329bfd258ffadc44f28eab37fff005ffcae0f90b
-SHA1 (patch-bitmaps_todo.xbm) = 2f81f93fcbcbc2394037f75f1441afaa3fa393cf
-SHA1 (patch-calendar_Item.C) = 66fbf2c57829188ca9ae0456ef13c1bc8bba8702
-SHA1 (patch-ical.C) = 83811014ee3f1582dd4b469d5b1aa7df47c1df58
-SHA1 (patch-time_Time.C) = 8e2452a91f81884d6fd99487f81c35108e7d9023
+SHA1 (ical-3.0.3.tar.gz) = d9c9fbd264b17b6ab7182070766af71cc2d99088
+RMD160 (ical-3.0.3.tar.gz) = ff458cd12050c73295743a92ae52c1fd0235d27a
+SHA512 (ical-3.0.3.tar.gz) = 4217bcd02bdb5e255deef297723a0e252198c02248df1374064b04370621b0529d12d1443a36fceb5286da5a758003fa4a9ea2d05280df37b119df91bb85c2d9
+Size (ical-3.0.3.tar.gz) = 331158 bytes
+SHA1 (patch-time_Time.C) = bda17ecae23f8c0e5cf67bf72929418cbd518dbb
