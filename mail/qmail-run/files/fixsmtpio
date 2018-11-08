@@ -30,10 +30,6 @@ AUTHUP_USER:greeting::5*:15:&fixsmtpio_noop
 # If server times out, hide message, and tell authup to stop trying
 AUTHUP_USER:timeout::*:16:
 
-# Don't permit server to advertise further AUTH or STARTTLS
+# Don't permit server to advertise or respond to further AUTH
 AUTHUP_USER:ehlo::250?AUTH*::
-AUTHUP_USER:ehlo::250?STARTTLS::
-
-# Don't permit client to initiate further AUTH or STARTTLS
 AUTHUP_USER:auth:NOOP :*::502 unimplemented (#5.5.1)
-AUTHUP_USER:starttls:NOOP :*::502 unimplemented (#5.5.1)
