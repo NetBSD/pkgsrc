@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4604 2018/11/08 05:33:36 markd Exp $
+$NetBSD: CHANGES-2018,v 1.4605 2018/11/08 07:36:15 markd Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6433,3 +6433,23 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/hdf5 to 1.10.4 [markd 2018-11-08]
 	Updated devel/hdf5-c++ to 1.10.4 [markd 2018-11-08]
 	Updated time/ical to 3.0.3 [markd 2018-11-08]
+	Updated mail/claws-mail to 3.17.1 [markd 2018-11-08]
+	Updated mail/claws-mail-archive to 3.17.1 [markd 2018-11-08]
+	Updated mail/claws-mail-attachwarner to 3.17.1 [markd 2018-11-08]
+	Updated mail/claws-mail-attremover to 3.17.1 [markd 2018-11-08]
+	Updated mail/claws-mail-bogofilter to 3.17.1 [markd 2018-11-08]
+	Updated mail/claws-mail-fetchinfo to 3.17.1 [markd 2018-11-08]
+	Updated mail/claws-mail-mailmbox to 3.17.1 [markd 2018-11-08]
+	Updated mail/claws-mail-managesieve to 3.17.1 [markd 2018-11-08]
+	Updated mail/claws-mail-newmail to 3.17.1 [markd 2018-11-08]
+	Updated mail/claws-mail-notification to 3.17.1 [markd 2018-11-08]
+	Updated mail/claws-mail-pgp to 3.17.1 [markd 2018-11-08]
+	Updated mail/claws-mail-pgpcore to 3.17.1 [markd 2018-11-08]
+	Updated mail/claws-mail-pgpinline to 3.17.1 [markd 2018-11-08]
+	Updated mail/claws-mail-pgpmime to 3.17.1 [markd 2018-11-08]
+	Updated mail/claws-mail-rssyl to 3.17.1 [markd 2018-11-08]
+	Updated mail/claws-mail-smime to 3.17.1 [markd 2018-11-08]
+	Updated mail/claws-mail-spamassassin to 3.17.1 [markd 2018-11-08]
+	Updated mail/claws-mail-spamreport to 3.17.1 [markd 2018-11-08]
+	Updated mail/claws-mail-tnef to 3.17.1 [markd 2018-11-08]
+	Updated mail/claws-mail-vcalendar to 3.17.1 [markd 2018-11-08]
