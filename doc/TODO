@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18602 2018/11/06 19:33:07 adam Exp $
+$NetBSD: TODO,v 1.18603 2018/11/08 12:22:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -459,7 +459,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bzr-svn-1.2.2
 	o bzrtools-2.6.0
 	o c4-1.10
-	o cabextract-1.8
+	o cabextract-1.9
 	o cairo-1.16.0
 	o cal3d-0.11.0
 	o calc-2.11.10.1
@@ -984,7 +984,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmediawiki-4.14.0
 	o libmilter-8.16.0.16
 	o libmpdclient-2.16
-	o libmspack-0.8
+	o libmspack-0.9
 	o libmtag-0.3.6
 	o liboobs-2.32.0 [GNOME 2.32]
 	o liboop-1.0.1
@@ -1263,6 +1263,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
 	o qbzr-0.23.2
+	o qdirstat-1.5
 	o qlandkartegt-1.8.1 [pkg/53376]
 	o qnetwalk-1.4
 	o qt4-creator-3.4.0
