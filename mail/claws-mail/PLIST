@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2016/09/03 18:09:32 nros Exp $
+@comment $NetBSD: PLIST,v 1.25 2018/11/08 07:29:35 markd Exp $
 bin/claws-mail
 bin/sylpheed-claws
 include/claws-mail/account.h
@@ -20,6 +20,7 @@ include/claws-mail/addrgather.h
 include/claws-mail/addrharvest.h
 include/claws-mail/addrindex.h
 include/claws-mail/addritem.h
+include/claws-mail/addrmerge.h
 include/claws-mail/addrquery.h
 include/claws-mail/addrselect.h
 include/claws-mail/advsearch.h
@@ -40,6 +41,7 @@ include/claws-mail/common/pkcs5_pbkdf2.h
 include/claws-mail/common/plugin.h
 include/claws-mail/common/prefs.h
 include/claws-mail/common/progressindicator.h
+include/claws-mail/common/proxy.h
 include/claws-mail/common/quoted-printable.h
 include/claws-mail/common/session.h
 include/claws-mail/common/smtp.h
@@ -70,6 +72,7 @@ include/claws-mail/editldap.h
 include/claws-mail/editldap_basedn.h
 include/claws-mail/edittags.h
 include/claws-mail/editvcard.h
+include/claws-mail/entity.h
 include/claws-mail/enriched.h
 include/claws-mail/etpan/etpan-errors.h
 include/claws-mail/etpan/etpan-ssl.h
@@ -185,6 +188,7 @@ include/claws-mail/prefs_message.h
 include/claws-mail/prefs_migration.h
 include/claws-mail/prefs_msg_colors.h
 include/claws-mail/prefs_other.h
+include/claws-mail/prefs_proxy.h
 include/claws-mail/prefs_quote.h
 include/claws-mail/prefs_receive.h
 include/claws-mail/prefs_send.h
@@ -242,13 +246,15 @@ share/locale/en_GB/LC_MESSAGES/claws-mail.mo
 share/locale/es/LC_MESSAGES/claws-mail.mo
 share/locale/fi/LC_MESSAGES/claws-mail.mo
 share/locale/fr/LC_MESSAGES/claws-mail.mo
-share/locale/he/LC_MESSAGES/claws-mail.mo
 share/locale/hu/LC_MESSAGES/claws-mail.mo
 share/locale/id_ID/LC_MESSAGES/claws-mail.mo
 share/locale/it/LC_MESSAGES/claws-mail.mo
+share/locale/ja/LC_MESSAGES/claws-mail.mo
 share/locale/nb/LC_MESSAGES/claws-mail.mo
 share/locale/nl/LC_MESSAGES/claws-mail.mo
+share/locale/pl/LC_MESSAGES/claws-mail.mo
 share/locale/pt_BR/LC_MESSAGES/claws-mail.mo
+share/locale/ro/LC_MESSAGES/claws-mail.mo
 share/locale/ru/LC_MESSAGES/claws-mail.mo
 share/locale/sk/LC_MESSAGES/claws-mail.mo
 share/locale/sv/LC_MESSAGES/claws-mail.mo
