@@ -1,4 +1,4 @@
-$NetBSD: patch-time_Time.C,v 1.1 2013/01/09 17:22:14 is Exp $
+$NetBSD: patch-time_Time.C,v 1.2 2018/11/08 05:32:23 markd Exp $
 
 --- time/Time.C.orig	2009-01-18 13:18:20.000000000 +0000
 +++ time/Time.C
@@ -10,22 +10,6 @@ $NetBSD: patch-time_Time.C,v 1.1 2013/01/09 17:22:14 is Exp $
  #include <stdlib.h>
  
  #include "config.h"
-@@ -54,13 +53,13 @@ void Time::BreakDown(int& mday, WeekDay&
-                      int& hour, int& min, int& sec, int& milli,
-                      const char *tz) const
- {
--    const char *old;
-+    char *old;
-     if (! initialized) Initialize();
- 
-     time_t clock = (time_t) round(rep + offset);
- 
-     if (tz) {
--        if ((old=getenv("TZ"))) old=strdupa(old);
-+        if ((old=getenv("TZ"))) old=strdup(old);
-         setenv("TZ", tz, 1);
-         tzset();
-     }
 @@ -80,6 +79,8 @@ void Time::BreakDown(int& mday, WeekDay&
      min   = t->tm_min;
      sec   = t->tm_sec;
