@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2018/08/17 11:50:51 wiz Exp $
+# $NetBSD: Makefile.common,v 1.32 2018/11/08 14:40:23 prlw1 Exp $
 #
 # used by audio/gst-plugins1-dts/Makefile
 # used by audio/gst-plugins1-faac/Makefile
@@ -12,7 +12,7 @@
 ## used by audio/gst-plugins1-musepack/Makefile (probably newer libmusepack or libmpcdec is needed)
 
 GST_PLUGINS1_TYPE=	bad
-GST_PLUGINS1_VER=	1.14.2
+GST_PLUGINS1_VER=	1.14.4
 
 # Disable all drivers and features by default.
 .for driver in	\
@@ -48,8 +48,8 @@ PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-wayland.pc.in
 PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-webrtc.pc.in
 
 .include "../../devel/orc/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.14.2
+BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.14.4
 .include "../../multimedia/gstreamer1/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gst-plugins1-base+=	gst-plugins1-base>=1.14.2
+BUILDLINK_API_DEPENDS.gst-plugins1-base+=	gst-plugins1-base>=1.14.4
 .include "../../multimedia/gst-plugins1-base/plugins.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
