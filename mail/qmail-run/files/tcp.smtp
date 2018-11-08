@@ -1,2 +1,2 @@
 127.:allow,RELAYCLIENT=""
-:allow,QMAILQUEUE="@PREFIX@/bin/qmail-qfilter-smtpd-queue",RCPTCHECK="@PREFIX@/bin/qmail-rcptcheck"
+:allow,UCSPITLS="",GREETDELAY="2",QMAILQUEUE="@PREFIX@/bin/qmail-qfilter-smtpd-queue",RCPTCHECK="@PREFIX@/bin/qmail-rcptcheck"
