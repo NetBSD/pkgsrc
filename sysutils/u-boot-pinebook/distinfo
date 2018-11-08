@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2018/09/22 14:44:24 jmcneill Exp $
+$NetBSD: distinfo,v 1.6 2018/11/08 19:41:30 jakllsch Exp $
 
-SHA1 (u-boot-pinebook-2018.07rc1-9533bb9d6b2052c3c4e88ce43b633f6ec67f324e.tar.gz) = faa7780fb9239c56d085b47b2af24bf0d2c87968
-RMD160 (u-boot-pinebook-2018.07rc1-9533bb9d6b2052c3c4e88ce43b633f6ec67f324e.tar.gz) = 58ee4749ef9134eba1a5b727f4ec3e0049f9326a
-SHA512 (u-boot-pinebook-2018.07rc1-9533bb9d6b2052c3c4e88ce43b633f6ec67f324e.tar.gz) = e8757f4f8b32a4476c2037caf6e3887fad7d51eab065b82e31d3b899a187a49fd5f8111b964aa2b97f533aa3d5e7adcdcfb5f94ec6517ed6ac0141a80038859c
-Size (u-boot-pinebook-2018.07rc1-9533bb9d6b2052c3c4e88ce43b633f6ec67f324e.tar.gz) = 15915036 bytes
+SHA1 (u-boot-pinebook-2018.11rc3-88eea875b3b82a0e50cbb112e0aea2259dc2e011.tar.gz) = 01c5758bc57eb98917931026d018109a36aa300c
+RMD160 (u-boot-pinebook-2018.11rc3-88eea875b3b82a0e50cbb112e0aea2259dc2e011.tar.gz) = e863c04c13bdf7fdaa5353a094fa47ef257991ac
+SHA512 (u-boot-pinebook-2018.11rc3-88eea875b3b82a0e50cbb112e0aea2259dc2e011.tar.gz) = 8eae2de988815a7ad12917997defab3d6011d87db011dd9c68852053f40802857b1d49321e81a095423e3f7d357aa485d53e25c77d602e7ee291c5dc29c81a29
+Size (u-boot-pinebook-2018.11rc3-88eea875b3b82a0e50cbb112e0aea2259dc2e011.tar.gz) = 16611473 bytes
 SHA1 (patch-arch_arm_cpu_armv8_Kconfig) = 82dee7f627ba721ba3548b49569ee2491764d86a
 SHA1 (patch-lib_bch.c) = 00a80689266d3ab8d2af862327e7c852220a0713
