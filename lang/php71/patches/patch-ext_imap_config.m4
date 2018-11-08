@@ -1,6 +1,6 @@
-$NetBSD: patch-ext_imap_config.m4,v 1.1 2016/08/04 14:09:03 jdolecek Exp $
+$NetBSD: patch-ext_imap_config.m4,v 1.2 2018/11/08 13:59:11 taca Exp $
 
---- ext/imap/config.m4.orig	2015-06-23 17:33:33.000000000 +0000
+--- ext/imap/config.m4.orig	2018-11-07 15:35:32.000000000 +0000
 +++ ext/imap/config.m4
 @@ -48,6 +48,14 @@ AC_DEFUN([PHP_IMAP_TEST_BUILD], [
    ])
@@ -24,5 +24,5 @@ $NetBSD: patch-ext_imap_config.m4,v 1.1 2016/08/04 14:09:03 jdolecek Exp $
 -  else
 +  elif test "$PHP_IMAP_LINKAGE" != "yes"; then
      AC_EGREP_HEADER(auth_gss, $IMAP_INC_DIR/linkage.h, [
-       AC_MSG_ERROR([This c-client library is built with Kerberos support. 
+       AC_MSG_ERROR([This c-client library is built with Kerberos support.
  
