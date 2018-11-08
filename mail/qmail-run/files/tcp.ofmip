@@ -1,1 +1,1 @@
-:allow,QMAILQUEUE="@PREFIX@/bin/qmail-qfilter-ofmipd-queue",UCSPITLS="!",PYMSGAUTH_TOLERATE_UNCONFIGURED="1"
+:allow,UCSPITLS="!",QMAILQUEUE="@PREFIX@/bin/qmail-qfilter-ofmipd-queue",PYMSGAUTH_TOLERATE_UNCONFIGURED="1"
