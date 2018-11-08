@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2018/11/03 17:08:26 schmonz Exp $
+# $NetBSD: Makefile,v 1.55 2018/11/08 20:57:28 schmonz Exp $
 #
 
-DISTNAME=		qmail-run-20181103
+DISTNAME=		qmail-run-20181108
 CATEGORIES=		mail
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -10,10 +10,11 @@ MAINTAINER=		schmonz@NetBSD.org
 COMMENT=		Configures qmail to receive and deliver mail
 LICENSE=		2-clause-bsd
 
+DEPENDS+=		greetdelay-[0-9]*:../../mail/greetdelay
 DEPENDS+=		pkg_alternatives-[0-9]*:../../pkgtools/pkg_alternatives
 DEPENDS_QMAIL=		qmail>=1.03nb36:../../mail/qmail
 DEPENDS+=		${DEPENDS_QMAIL}
-DEPENDS+=		qmail-acceptutils>=20181027:../../mail/qmail-acceptutils
+DEPENDS+=		qmail-acceptutils>=20181108:../../mail/qmail-acceptutils
 DEPENDS+=		qmail-qfilter>1.5nb1:../../mail/qmail-qfilter
 DEPENDS+=		qmail-rejectutils-[0-9]*:../../mail/qmail-rejectutils
 
