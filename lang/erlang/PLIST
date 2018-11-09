@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2018/09/03 14:51:02 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.33 2018/11/09 17:16:01 nia Exp $
 bin/ct_run
 bin/dialyzer
 bin/epmd
@@ -1413,6 +1413,7 @@ lib/erlang/lib/kernel-${VERSION.kernel}/ebin/logger_disk_log_h.beam
 lib/erlang/lib/kernel-${VERSION.kernel}/ebin/logger_filters.beam
 lib/erlang/lib/kernel-${VERSION.kernel}/ebin/logger_formatter.beam
 lib/erlang/lib/kernel-${VERSION.kernel}/ebin/logger_h_common.beam
+lib/erlang/lib/kernel-${VERSION.kernel}/ebin/logger_handler_watcher.beam
 lib/erlang/lib/kernel-${VERSION.kernel}/ebin/logger_server.beam
 lib/erlang/lib/kernel-${VERSION.kernel}/ebin/logger_simple_h.beam
 lib/erlang/lib/kernel-${VERSION.kernel}/ebin/logger_std_h.beam
@@ -1528,6 +1529,7 @@ lib/erlang/lib/kernel-${VERSION.kernel}/src/logger_filters.erl
 lib/erlang/lib/kernel-${VERSION.kernel}/src/logger_formatter.erl
 lib/erlang/lib/kernel-${VERSION.kernel}/src/logger_h_common.erl
 lib/erlang/lib/kernel-${VERSION.kernel}/src/logger_h_common.hrl
+lib/erlang/lib/kernel-${VERSION.kernel}/src/logger_handler_watcher.erl
 lib/erlang/lib/kernel-${VERSION.kernel}/src/logger_internal.hrl
 lib/erlang/lib/kernel-${VERSION.kernel}/src/logger_server.erl
 lib/erlang/lib/kernel-${VERSION.kernel}/src/logger_simple_h.erl
@@ -2550,7 +2552,6 @@ lib/erlang/lib/ssh-${VERSION.ssh}/src/ssh_xfer.erl
 lib/erlang/lib/ssh-${VERSION.ssh}/src/ssh_xfer.hrl
 lib/erlang/lib/ssh-${VERSION.ssh}/src/sshc_sup.erl
 lib/erlang/lib/ssh-${VERSION.ssh}/src/sshd_sup.erl
-lib/erlang/lib/ssl-${VERSION.ssl}/ebin/dtls.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/dtls_connection.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/dtls_connection_sup.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/dtls_handshake.beam
@@ -2569,6 +2570,7 @@ lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_alert.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_app.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_certificate.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_cipher.beam
+lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_cipher_format.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_config.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_connection.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_connection_sup.beam
@@ -2591,11 +2593,11 @@ lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_session_cache_api.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_srp_primes.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_sup.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_v3.beam
-lib/erlang/lib/ssl-${VERSION.ssl}/ebin/tls.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/tls_connection.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/tls_connection_sup.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/tls_handshake.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/tls_record.beam
+lib/erlang/lib/ssl-${VERSION.ssl}/ebin/tls_sender.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/tls_socket.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/tls_v1.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/examples/certs/etc/client/cacerts.pem
@@ -2609,7 +2611,6 @@ lib/erlang/lib/ssl-${VERSION.ssl}/examples/certs/etc/server/key.pem
 lib/erlang/lib/ssl-${VERSION.ssl}/examples/ebin/client_server.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/examples/src/Makefile
 lib/erlang/lib/ssl-${VERSION.ssl}/examples/src/client_server.erl
-lib/erlang/lib/ssl-${VERSION.ssl}/src/dtls.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/dtls_connection.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/dtls_connection.hrl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/dtls_connection_sup.erl
@@ -2632,6 +2633,7 @@ lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_app.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_certificate.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_cipher.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_cipher.hrl
+lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_cipher_format.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_config.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_connection.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_connection.hrl
@@ -2659,7 +2661,6 @@ lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_srp.hrl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_srp_primes.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_sup.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_v3.erl
-lib/erlang/lib/ssl-${VERSION.ssl}/src/tls.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/tls_connection.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/tls_connection.hrl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/tls_connection_sup.erl
@@ -2667,6 +2668,7 @@ lib/erlang/lib/ssl-${VERSION.ssl}/src/tls_handshake.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/tls_handshake.hrl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/tls_record.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/tls_record.hrl
+lib/erlang/lib/ssl-${VERSION.ssl}/src/tls_sender.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/tls_socket.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/tls_v1.erl
 lib/erlang/lib/stdlib-${VERSION.stdlib}/ebin/array.beam
@@ -2924,6 +2926,7 @@ lib/erlang/lib/tools-${VERSION.tools}/emacs/erlang.el
 lib/erlang/lib/tools-${VERSION.tools}/emacs/erlang_appwiz.el
 lib/erlang/lib/tools-${VERSION.tools}/emacs/erldoc.el
 lib/erlang/lib/tools-${VERSION.tools}/examples/xref_examples.erl
+lib/erlang/lib/tools-${VERSION.tools}/priv/styles.css
 lib/erlang/lib/tools-${VERSION.tools}/src/cover.erl
 lib/erlang/lib/tools-${VERSION.tools}/src/cprof.erl
 lib/erlang/lib/tools-${VERSION.tools}/src/eprof.erl
