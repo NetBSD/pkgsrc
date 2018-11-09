@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2018/10/11 12:10:08 jperkin Exp $
+$NetBSD: distinfo,v 1.10 2018/11/09 17:17:28 nia Exp $
 
-SHA1 (elixir-1.7.3.tar.gz) = ec476ad1ef116d0dbb04d9065befad38ecfe8e1e
-RMD160 (elixir-1.7.3.tar.gz) = b248cf3675a738dd063d9df110faefb6f4b5026a
-SHA512 (elixir-1.7.3.tar.gz) = 67c8de5a85eefc5f7d7ed42ec8b96cb34937cea6c94eb1f2c27237fc0b4c51b2eb39d65c2a4dce4788cb6ed1879fb1839cd8d73c66be71b0b4895952dc228f05
-Size (elixir-1.7.3.tar.gz) = 2140430 bytes
+SHA1 (elixir-1.7.4.tar.gz) = 0e8e51ae2a7b446850fc711da5a70c66d2329976
+RMD160 (elixir-1.7.4.tar.gz) = 627d80e31bdef16df1b9ba173ad5c0ac67f440a4
+SHA512 (elixir-1.7.4.tar.gz) = 594e76601e0d6f7eeddfcaa9b76a2e5c66f702a497599fffc5e9255790c18ac5e00b986fc45fd3b90335522f51272bcd4bcf2b9f8951b94eebfb1d56ac7cebc2
+Size (elixir-1.7.4.tar.gz) = 2139938 bytes
 SHA1 (patch-Makefile) = 815906a3d7532a95582a53d7c9ef9f42dc9d215f
