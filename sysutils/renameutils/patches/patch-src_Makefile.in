@@ -1,0 +1,14 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2018/11/09 12:50:49 bsiegert Exp $
+
+Fix typo in src/Makefile.in. This should be fixed in the next upstream release.
+--- src/Makefile.in~	2012-04-23 07:24:10.000000000 -0400
++++ src/Makefile.in	2017-09-16 14:12:56.000000000 -0400
+@@ -1577,7 +1577,7 @@
+ 	@[ -f icp ] || (echo $(LN_S) icmd icp ; $(LN_S) icmd icp)
+ 
+ install-exec-local:
+-	$(mkdir_p) $(DESTDIR)($bindir)
++	$(mkdir_p) $(DESTDIR)$(bindir)
+ 	@[ -f $(DESTDIR)$(bindir)/qmv ] || (echo $(LN_S) qcmd $(DESTDIR)$(bindir)/qmv ; $(LN_S) qcmd $(DESTDIR)$(bindir)/qmv)
+ 	@[ -f $(DESTDIR)$(bindir)/qcp ] || (echo $(LN_S) qcmd $(DESTDIR)$(bindir)/qcp ; $(LN_S) qcmd $(DESTDIR)$(bindir)/qcp)
+ 	@[ -f $(DESTDIR)$(bindir)/imv ] || (echo $(LN_S) icmd $(DESTDIR)$(bindir)/imv ; $(LN_S) icmd $(DESTDIR)$(bindir)/imv)
