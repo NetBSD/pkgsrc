@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/11/09 11:48:03 leot Exp $
+# $NetBSD: Makefile,v 1.10 2018/11/09 12:00:16 martin Exp $
 
 UBOOT_VERSION=		2018.11rc3
 UBOOT_TARGET=		pinebook
@@ -23,5 +23,5 @@ post-build:
 
 .include "../../sysutils/arm-trusted-firmware-sun50iw1p1/buildlink3.mk"
 .include "../../sysutils/u-boot/u-boot-arm64.mk"
-# Switch to EL1 before booting kernel (required for 32-bit support)
-PKG_SUGGESTED_OPTIONS+=	el1
+
+CHECK_PORTABILITY_SKIP+=tools/imx_cntr_image.sh
