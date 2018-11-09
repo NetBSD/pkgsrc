@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2018/07/18 22:55:07 maya Exp $
+$NetBSD: distinfo,v 1.12 2018/11/09 11:22:13 mrg Exp $
 
 SHA1 (gcc-7.3.0.tar.xz) = 9689b9cae7b2886fdaa08449a26701f095c04e48
 RMD160 (gcc-7.3.0.tar.xz) = 31f6934a0e0c0ca84b6668110f9afdb91c1f9023
@@ -11,7 +11,10 @@ Size (isl-0.16.1.tar.bz2) = 1626446 bytes
 SHA1 (patch-contrib_download__prerequisites) = 86c6c16e0e3e3a0bcb38579a8b4004f603fac1ca
 SHA1 (patch-gcc_Makefile.in) = d96a57a098e49a2c5ea6478dd5d22aba584fc1bc
 SHA1 (patch-gcc_common_config_arm_arm-common.c) = 7c973cb9554a52f4b85f8fc98708f5e5cce8e8bd
-SHA1 (patch-gcc_config.gcc) = fd19774e62c2931d52eda2f979c1db65202ed4fb
+SHA1 (patch-gcc_config.gcc) = 20d1444cc2c031c8adc96289e1ccc6c1d29eb72f
+SHA1 (patch-gcc_config_aarch64_aarch64-netbsd.h) = ed7bc42813b33c87242f5ef0a304a621b873c9eb
+SHA1 (patch-gcc_config_aarch64_aarch64.h) = 5339d9c7ce9d040097c29cc3b7ec1d2fbfff811c
+SHA1 (patch-gcc_config_aarch64_t-aarch64-netbsd) = 0e7feb6f238b0a752ccc50e95e09b017cb368a90
 SHA1 (patch-gcc_config_alpha_elf.h) = 05657c528109480296cbe8a98461cba7853af492
 SHA1 (patch-gcc_config_alpha_linux.h) = fce1256bce232143ff6c1c1b8b9c855737adb23f
 SHA1 (patch-gcc_config_arm_arm.h) = 92c8bff1063e153fec4454e6dea5334a42b0dad6
@@ -34,7 +37,7 @@ SHA1 (patch-libcilkrts_runtime_os-unix.c) = b25632587d9fbe8ff38377fe34cb16225355
 SHA1 (patch-libdecnumber_decNumber.c) = cec90e49c829bfc6ba1ec605d2fac7daaad62762
 SHA1 (patch-libffi_configure) = bcfbfe8abddc378e2de4a39ad0669583b37e0292
 SHA1 (patch-libffi_testsuite_libffi.call_float2.c) = 6321dde308579448c27c2b6e1e30633699dd145f
-SHA1 (patch-libgcc_config.host) = 1c2ebce3a44d935e9bbab30952b51b6f3716e47e
+SHA1 (patch-libgcc_config.host) = 4fa15e83a446e026507ac4f16c4f7ef686544c43
 SHA1 (patch-libgcc_config_arm_t-netbsd) = fe986b09ccbfc253aaaca263e8e38f06da4891cc
 SHA1 (patch-libgcc_config_arm_t-netbsd-eabi) = 1e818e92fe79f57d305ff42ce3449dddf87c3179
 SHA1 (patch-libgcc_config_i386_cpuinfo.h) = d217e3c65178c96c7314cb88c740b9586d4e8fed
