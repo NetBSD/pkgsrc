@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4622 2018/11/09 18:04:00 nia Exp $
+$NetBSD: CHANGES-2018,v 1.4623 2018/11/09 18:14:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6474,3 +6474,9 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/erlang to 21.1.1 [nia 2018-11-09]
 	Updated lang/elixir to 1.7.4 [nia 2018-11-09]
 	Updated security/gnutls to 3.6.4 [nia 2018-11-09]
+	Updated databases/postgresql93 to 9.3.25 [adam 2018-11-09]
+	Updated databases/postgresql94 to 9.4.20 [adam 2018-11-09]
+	Updated databases/postgresql95 to 9.5.15 [adam 2018-11-09]
+	Updated databases/postgresql96 to 9.6.11 [adam 2018-11-09]
+	Updated databases/postgresql10 to 10.6 [adam 2018-11-09]
+	Updated databases/postgresql11 to 11.1 [adam 2018-11-09]
