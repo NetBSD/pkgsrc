@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/11/09 06:46:03 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2018/11/09 06:59:20 rillig Exp $
 
 all install:
 	@set -eu; \
-	env | sed -n -e '/^.*_set=yes$$/p' | LC_ALL=C sort \
+	env | sed -n -e 's/^\([^=]*\)_set=yes$$/\1/p' | LC_ALL=C sort \
 	> "$$REGRESS_TMPDIR/make-${.TARGET}.vars"
