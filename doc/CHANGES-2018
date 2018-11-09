@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4620 2018/11/09 17:16:13 nia Exp $
+$NetBSD: CHANGES-2018,v 1.4621 2018/11/09 17:17:39 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6472,3 +6472,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/libxml2 to 2.9.8nb4 [leot 2018-11-09]
 	Updated mail/getmail to 5.8 [schmonz 2018-11-09]
 	Updated lang/erlang to 21.1.1 [nia 2018-11-09]
+	Updated lang/elixir to 1.7.4 [nia 2018-11-09]
