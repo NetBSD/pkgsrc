@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2018/10/23 16:02:51 adam Exp $
+# $NetBSD: options.mk,v 1.2 2018/11/09 18:12:24 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql11
 PKG_SUPPORTED_OPTIONS=	bonjour dtrace icu llvm gssapi ldap pam
@@ -46,6 +46,7 @@ PLIST_VARS+=		llvm
 .if !empty(PKG_OPTIONS:Mllvm)
 .  include "../../lang/llvm/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-llvm
+CONFIGURE_ENV+=		CLANG=${CC}	# XXX: make it be better
 PLIST.llvm=		yes
 .endif
 
