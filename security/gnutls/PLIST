@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.60 2018/08/16 11:05:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.61 2018/11/09 18:03:45 nia Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
@@ -148,6 +148,7 @@ man/man3/gnutls_certificate_set_x509_trust_dir.3
 man/man3/gnutls_certificate_set_x509_trust_file.3
 man/man3/gnutls_certificate_set_x509_trust_mem.3
 man/man3/gnutls_certificate_type_get.3
+man/man3/gnutls_certificate_type_get2.3
 man/man3/gnutls_certificate_type_get_id.3
 man/man3/gnutls_certificate_type_get_name.3
 man/man3/gnutls_certificate_type_list.3
@@ -514,6 +515,7 @@ man/man3/gnutls_prf.3
 man/man3/gnutls_prf_raw.3
 man/man3/gnutls_prf_rfc5705.3
 man/man3/gnutls_priority_certificate_type_list.3
+man/man3/gnutls_priority_certificate_type_list2.3
 man/man3/gnutls_priority_cipher_list.3
 man/man3/gnutls_priority_compression_list.3
 man/man3/gnutls_priority_deinit.3
@@ -656,6 +658,7 @@ man/man3/gnutls_record_recv_seq.3
 man/man3/gnutls_record_send.3
 man/man3/gnutls_record_send2.3
 man/man3/gnutls_record_send_range.3
+man/man3/gnutls_record_set_max_early_data_size.3
 man/man3/gnutls_record_set_max_size.3
 man/man3/gnutls_record_set_state.3
 man/man3/gnutls_record_set_timeout.3
