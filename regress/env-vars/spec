@@ -1,0 +1,65 @@
+# $NetBSD: spec,v 1.1 2018/11/09 06:46:03 rillig Exp $
+#
+
+tmpdir=${TMPDIR:-/tmp}/pkgsrc-env-vars
+rm -rf "$tmpdir"
+mkdir -p "$tmpdir"
+
+require_file_has_lines() { # filename line...
+	rfhl_expected="$tmpdir/expected"
+	rfhl_actual=$1
+	shift
+
+	printf '%s\n' "$@" > "$rfhl_expected"
+
+	if diff -u "$rfhl_expected" "$rfhl_actual" > /dev/null; then
+		:
+	else
+		regress_fail "Expected files to be equal."
+		diff -u "$rfhl_expected" "$rfhl_actual" || true
+	fi
+
+	rm -f "$rfhl_expected"
+}
+
+
+do_test() {
+	env REGRESS_TMPDIR="$tmpdir" $TEST_MAKE clean
+	env REGRESS_TMPDIR="$tmpdir" $TEST_MAKE update
+}
+
+check_result() {
+
+	# In the {pre,do,post}-* targets, only the PKGSRC_MAKE_ENV
+	# variables are set.
+	#
+	require_file_has_lines "$tmpdir/do-build.vars" \
+		"PKGSRC_MAKE_ENV_set=yes"
+
+	# In the configure script of the package, some more variables
+	# are set.
+	#
+	require_file_has_lines "$tmpdir/configure.vars" \
+		"ALL_ENV_set=yes" \
+		"CONFIGURE_ENV_set=yes" \
+		"PKGSRC_MAKE_ENV_set=yes"
+
+	# In the build phase, when the default do-build commands are
+	# run, the Makefiles from the package have access to these
+	# variables:
+	#
+	require_file_has_lines "$tmpdir/make-all.vars" \
+		"ALL_ENV_set=yes" \
+		"MAKE_ENV_set=yes" \
+		"PKGSRC_MAKE_ENV_set=yes"
+
+	# In the install phase, when the default do-install commands are
+	# run, the Makefiles from the package have access to these
+	# variables:
+	#
+	require_file_has_lines "$tmpdir/make-install.vars" \
+		"ALL_ENV_set=yes" \
+		"INSTALL_ENV_set=yes" \
+		"MAKE_ENV_set=yes" \
+		"PKGSRC_MAKE_ENV_set=yes"
+}
