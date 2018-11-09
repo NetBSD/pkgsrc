@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2017/12/15 17:37:21 minskim Exp $
+# $NetBSD: Makefile,v 1.60 2018/11/09 22:16:49 maya Exp $
 #
 
 COMMENT=	Shells
@@ -19,6 +19,7 @@ SUBDIR+=	heirloom-sh
 SUBDIR+=	lshell
 SUBDIR+=	mksh
 SUBDIR+=	nologinmsg
+SUBDIR+=	oksh
 SUBDIR+=	osh
 SUBDIR+=	pdksh
 SUBDIR+=	perlsh
