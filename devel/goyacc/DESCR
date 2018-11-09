@@ -1,2 +1,0 @@
-Goyacc is a version of yacc for Go. It is written in Go and generates
-parsers written in Go.
