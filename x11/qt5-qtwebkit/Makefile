@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.56 2018/08/22 09:48:05 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2018/11/09 13:45:00 bsiegert Exp $
 
 DISTNAME=	qtwebkit-${QTWKVERSION}
 PKGNAME=	qt5-qtwebkit-${QTWKVERSION:S/-/./}
-PKGREVISION=	9
+PKGREVISION=	10
 MASTER_SITES=	${MASTER_SITE_GITHUB:=annulen/}
 GITHUB_PROJECT=	webkit
 GITHUB_RELEASE=	${DISTNAME}
-#MASTER_SITES=	https://github.com/annulen/webkit/releases/download/qtwebkit-${QTWKVERSION}/
 CATEGORIES=	x11
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,7 +16,11 @@ EXTRACT_SUFX=	.tar.xz
 
 QTWKVERSION=	5.212.0-alpha2
 
-PYTHON_VERSIONS_ACCEPTED=	27 # as if 5.212.0-alpha2
+PATCHFILES=		0325d51c4a2a05fb.patch 6c7b0f61c12d28cc.patch
+PATCH_SITES=		https://github.com/annulen/webkit/commit/
+PATCH_DIST_STRIP=	-p1
+
+PYTHON_VERSIONS_ACCEPTED=	27 # as of 5.212.0-alpha2
 
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=   opt:-ldl:${BUILDLINK_LDADD.dl:M*}
