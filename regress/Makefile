@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2016/06/11 10:48:28 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2018/11/09 06:46:35 rillig Exp $
+#
+# See pkgtools/pkg_regress for the tool to run these tests.
 #
 
 COMMENT=	Regression tests for pkgsrc infrastructure
@@ -10,6 +12,7 @@ SUBDIR+=	buildlink-transform
 SUBDIR+=	buildlink-unwrap
 SUBDIR+=	check-portability
 SUBDIR+=	compiler
+SUBDIR+=	env-vars
 SUBDIR+=	ignore-tools
 SUBDIR+=	make-env-phases
 SUBDIR+=	make-quoting
