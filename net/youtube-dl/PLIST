@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.69 2018/09/24 11:07:09 leot Exp $
+@comment $NetBSD: PLIST,v 1.69.2.1 2018/11/09 18:56:38 spz Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -1025,6 +1025,9 @@ ${PYSITELIB}/youtube_dl/extractor/limelight.pyo
 ${PYSITELIB}/youtube_dl/extractor/line.py
 ${PYSITELIB}/youtube_dl/extractor/line.pyc
 ${PYSITELIB}/youtube_dl/extractor/line.pyo
+${PYSITELIB}/youtube_dl/extractor/linkedin.py
+${PYSITELIB}/youtube_dl/extractor/linkedin.pyc
+${PYSITELIB}/youtube_dl/extractor/linkedin.pyo
 ${PYSITELIB}/youtube_dl/extractor/litv.py
 ${PYSITELIB}/youtube_dl/extractor/litv.pyc
 ${PYSITELIB}/youtube_dl/extractor/litv.pyo
@@ -1970,9 +1973,6 @@ ${PYSITELIB}/youtube_dl/extractor/tv2.pyo
 ${PYSITELIB}/youtube_dl/extractor/tv2hu.py
 ${PYSITELIB}/youtube_dl/extractor/tv2hu.pyc
 ${PYSITELIB}/youtube_dl/extractor/tv2hu.pyo
-${PYSITELIB}/youtube_dl/extractor/tv3.py
-${PYSITELIB}/youtube_dl/extractor/tv3.pyc
-${PYSITELIB}/youtube_dl/extractor/tv3.pyo
 ${PYSITELIB}/youtube_dl/extractor/tv4.py
 ${PYSITELIB}/youtube_dl/extractor/tv4.pyc
 ${PYSITELIB}/youtube_dl/extractor/tv4.pyo
@@ -2027,6 +2027,9 @@ ${PYSITELIB}/youtube_dl/extractor/twentymin.pyo
 ${PYSITELIB}/youtube_dl/extractor/twentythreevideo.py
 ${PYSITELIB}/youtube_dl/extractor/twentythreevideo.pyc
 ${PYSITELIB}/youtube_dl/extractor/twentythreevideo.pyo
+${PYSITELIB}/youtube_dl/extractor/twitcasting.py
+${PYSITELIB}/youtube_dl/extractor/twitcasting.pyc
+${PYSITELIB}/youtube_dl/extractor/twitcasting.pyo
 ${PYSITELIB}/youtube_dl/extractor/twitch.py
 ${PYSITELIB}/youtube_dl/extractor/twitch.pyc
 ${PYSITELIB}/youtube_dl/extractor/twitch.pyo
