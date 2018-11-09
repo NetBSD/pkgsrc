@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.110 2018/10/24 21:11:56 leot Exp $
+# $NetBSD: Makefile,v 1.111 2018/11/09 09:17:07 abs Exp $
 
 DISTNAME=	midori_0.5.11_all_
 PKGNAME=	${DISTNAME:S/_all_//:S/_/-/}
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	www
 MASTER_SITES=	http://midori-browser.org/downloads/
 
@@ -28,11 +28,15 @@ CHECK_PORTABILITY_SKIP+=	win32/makedist/makedist.midori
 
 BUILD_DEPENDS+=		librsvg>=2.18:../../graphics/librsvg
 
-DEPENDS+=		gnome-themes-[0-9]*:../../x11/gnome-themes
+DEPENDS+=		gnome-themes-standard-[0-9]*:../../graphics/gnome-themes-standard
 
 EGDIR=			${PREFIX}/share/examples/midori
 OWN_DIRS=		${PKG_SYSCONFDIR}/xdg/midori
 CONF_FILES=		${EGDIR}/search ${PKG_SYSCONFDIR}/xdg/midori/search
+
+# Otherwise build chokes on .orig files
+pre-configure:
+	${FIND} ${WRKSRC} -name "*.orig*" -exec ${RM} -f {} \;
 
 .include "../../mk/bsd.prefs.mk"
 
