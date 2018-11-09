@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.257 2018/11/05 19:26:38 schmonz Exp $
+# $NetBSD: bootstrap,v 1.258 2018/11/09 13:37:09 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -993,14 +993,9 @@ if [ "$compiler" = "" ] && [ x"$check_compiler" = x"yes" ]; then
 fi
 
 has_ssp_support() {
-	_compiler=cc
-	if [ "$compiler" != "" ]; then
-		_compiler="$compiler"
-	fi
-
 	mkdir_p_early ${wrkdir}/tmp
 	echo 'int main(void){return 0;}' > ${wrkdir}/tmp/ssp.c
-	${_compiler} -fstack-protector-strong -o ${wrkdir}/tmp/ssp ${wrkdir}/tmp/ssp.c >/dev/null 2>&1
+	${CC:-cc} -fstack-protector-strong -o ${wrkdir}/tmp/ssp ${wrkdir}/tmp/ssp.c >/dev/null 2>&1
 
 	if [ $? -eq 0 ]; then
 		echo yes
