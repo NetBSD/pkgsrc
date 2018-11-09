@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q3,v 1.1.2.13 2018/11/04 20:03:36 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q3,v 1.1.2.14 2018/11/09 18:57:59 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q3 branch:
 
@@ -109,4 +109,19 @@ www/curl: security update
 
 Pullup ticket #5874 - requested by taca
 www/ruby-loofah: security update
+
+Pullup ticket #5875 - requested by taca
+mail/roundcube: security update
+
+Pullup ticket #5876 - requested by taca
+mail/roundcube-plugin-enigma: security update
+
+Pullup ticket #5877 - requested by taca
+mail/roundcube-plugin-password: dependency update
+
+Pullup ticket #5878 - requested by taca
+mail/roundcube-plugin-zipdownload: dependency update
+
+Pullup ticket #5879 - requested by maya
+net/youtube-dl: functionality update
 
