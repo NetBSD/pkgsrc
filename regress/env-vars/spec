@@ -1,4 +1,4 @@
-# $NetBSD: spec,v 1.1 2018/11/09 06:46:03 rillig Exp $
+# $NetBSD: spec,v 1.2 2018/11/09 06:59:20 rillig Exp $
 #
 
 tmpdir=${TMPDIR:-/tmp}/pkgsrc-env-vars
@@ -34,32 +34,32 @@ check_result() {
 	# variables are set.
 	#
 	require_file_has_lines "$tmpdir/do-build.vars" \
-		"PKGSRC_MAKE_ENV_set=yes"
+		"PKGSRC_MAKE_ENV"
 
 	# In the configure script of the package, some more variables
 	# are set.
 	#
 	require_file_has_lines "$tmpdir/configure.vars" \
-		"ALL_ENV_set=yes" \
-		"CONFIGURE_ENV_set=yes" \
-		"PKGSRC_MAKE_ENV_set=yes"
+		"ALL_ENV" \
+		"CONFIGURE_ENV" \
+		"PKGSRC_MAKE_ENV"
 
 	# In the build phase, when the default do-build commands are
 	# run, the Makefiles from the package have access to these
 	# variables:
 	#
 	require_file_has_lines "$tmpdir/make-all.vars" \
-		"ALL_ENV_set=yes" \
-		"MAKE_ENV_set=yes" \
-		"PKGSRC_MAKE_ENV_set=yes"
+		"ALL_ENV" \
+		"MAKE_ENV" \
+		"PKGSRC_MAKE_ENV"
 
 	# In the install phase, when the default do-install commands are
 	# run, the Makefiles from the package have access to these
 	# variables:
 	#
 	require_file_has_lines "$tmpdir/make-install.vars" \
-		"ALL_ENV_set=yes" \
-		"INSTALL_ENV_set=yes" \
-		"MAKE_ENV_set=yes" \
-		"PKGSRC_MAKE_ENV_set=yes"
+		"ALL_ENV" \
+		"INSTALL_ENV" \
+		"MAKE_ENV" \
+		"PKGSRC_MAKE_ENV"
 }
