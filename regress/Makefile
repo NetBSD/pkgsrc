@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2018/11/09 06:46:35 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2018/11/09 06:48:27 rillig Exp $
 #
-# See pkgtools/pkg_regress for the tool to run these tests.
+# See https://www.netbsd.org/docs/pkgsrc/regression.html for more
+# information about these tests.
 #
 
 COMMENT=	Regression tests for pkgsrc infrastructure
