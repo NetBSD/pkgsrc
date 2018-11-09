@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2018/11/09 12:50:49 bsiegert Exp $
+
+SHA1 (renameutils-0.12.0.tar.gz) = 8c6edae4ee374330a01a95257fd552b5cb7540bc
+RMD160 (renameutils-0.12.0.tar.gz) = 996cf00d764ed3f4443fcf7af4ed3649bda365f3
+SHA512 (renameutils-0.12.0.tar.gz) = 8aae157e6ead86a2fbf970ecdb27d6067c2d35c04058ead9a3c0af3d99d466d37d8c4f1da0562ef2bea9cf9bd5f8de4d14340906427df421dba1a5c234c63bd6
+Size (renameutils-0.12.0.tar.gz) = 954114 bytes
+SHA1 (patch-src_Makefile.in) = 7651e887d78a0dc44ccccca6d180e4ac26ade7d9
+SHA1 (patch-src_icmd.c) = 39107f0b3b7d9ca7b10243e7a9ca732143f89229
+SHA1 (patch-src_qcmd.c) = 210650d9f6bd78a4351c93ce8bab5dfcbeafb23b
