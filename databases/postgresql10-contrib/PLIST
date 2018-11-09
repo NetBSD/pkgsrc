@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/05/13 08:13:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/11/09 18:12:24 adam Exp $
 bin/oid2name
 bin/pg_standby
 bin/vacuumlo
@@ -169,6 +169,7 @@ share/postgresql/extension/pg_stat_statements--1.2--1.3.sql
 share/postgresql/extension/pg_stat_statements--1.3--1.4.sql
 share/postgresql/extension/pg_stat_statements--1.4--1.5.sql
 share/postgresql/extension/pg_stat_statements--1.4.sql
+share/postgresql/extension/pg_stat_statements--1.5--1.6.sql
 share/postgresql/extension/pg_stat_statements--unpackaged--1.0.sql
 share/postgresql/extension/pg_stat_statements.control
 share/postgresql/extension/pg_trgm--1.0--1.1.sql

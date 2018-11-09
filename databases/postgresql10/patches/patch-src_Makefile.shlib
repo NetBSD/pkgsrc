@@ -1,10 +1,10 @@
-$NetBSD: patch-src_Makefile.shlib,v 1.2 2018/01/22 11:05:29 jperkin Exp $
+$NetBSD: patch-src_Makefile.shlib,v 1.3 2018/11/09 18:12:24 adam Exp $
 
 Use correct linker flags.
 
---- src/Makefile.shlib.orig	2017-11-07 00:46:52.000000000 +0000
+--- src/Makefile.shlib.orig	2018-11-05 21:45:50.000000000 +0000
 +++ src/Makefile.shlib
-@@ -150,17 +150,11 @@ endif
+@@ -156,9 +156,6 @@ endif
  
  ifeq ($(PORTNAME), freebsd)
    ifdef ELF_SYSTEM
@@ -14,6 +14,8 @@ Use correct linker flags.
      LINK.shared		= $(COMPILER) -shared
      ifdef soname
        LINK.shared	+= -Wl,-x,-soname,$(soname)
+@@ -169,9 +166,6 @@ ifeq ($(PORTNAME), freebsd)
+       LINK.shared	+= -Wl,--version-script=$(exports_file)
      endif
    else
 -    ifdef SO_MAJOR_VERSION
@@ -22,7 +24,7 @@ Use correct linker flags.
      LINK.shared		= $(LD) -x -Bshareable -Bforcearchive
    endif
  endif
-@@ -176,6 +170,17 @@ ifeq ($(PORTNAME), netbsd)
+@@ -192,6 +186,17 @@ ifeq ($(PORTNAME), netbsd)
    endif
  endif
  
@@ -40,7 +42,7 @@ Use correct linker flags.
  ifeq ($(PORTNAME), hpux)
    ifdef SO_MAJOR_VERSION
      shlib			= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION)
-@@ -231,7 +236,7 @@ ifeq ($(PORTNAME), solaris)
+@@ -247,7 +252,7 @@ ifeq ($(PORTNAME), solaris)
      ifeq ($(with_gnu_ld), yes)
        LINK.shared	+= -Wl,-soname,$(soname)
      else
@@ -49,7 +51,7 @@ Use correct linker flags.
      endif
    endif
  endif
-@@ -450,8 +455,10 @@ ifdef soname
+@@ -458,8 +463,10 @@ ifdef soname
  # we don't install $(shlib) on AIX
  # (see http://archives.postgresql.org/message-id/52EF20B2E3209443BC37736D00C3C1380A6E79FE@EXADV1.host.magwien.gv.at)
  ifneq ($(PORTNAME), aix)
@@ -61,7 +63,7 @@ Use correct linker flags.
  ifneq ($(PORTNAME), win32)
  ifneq ($(shlib), $(shlib_major))
  	cd '$(DESTDIR)$(libdir)' && \
-@@ -464,7 +471,7 @@ ifneq ($(shlib), $(shlib_bare))
+@@ -472,7 +479,7 @@ ifneq ($(shlib), $(shlib_bare))
  	$(LN_S) $(shlib) $(shlib_bare)
  endif
  endif # not win32
