@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/07/04 21:45:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/11/09 19:47:48 adam Exp $
 include/bitstream/atsc/a52.h
 include/bitstream/common.h
 include/bitstream/dvb/ci.h
@@ -90,6 +90,7 @@ include/bitstream/ietf/rtcp.h
 include/bitstream/ietf/rtcp3611.h
 include/bitstream/ietf/rtcp_fb.h
 include/bitstream/ietf/rtcp_rr.h
+include/bitstream/ietf/rtcp_sdes.h
 include/bitstream/ietf/rtcp_sr.h
 include/bitstream/ietf/rtp.h
 include/bitstream/ietf/rtp2250.h
