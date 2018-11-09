@@ -1,0 +1,5 @@
+# $NetBSD: configure,v 1.1 2018/11/09 06:46:03 rillig Exp $
+set -eu
+
+env | sed -n -e '/^.*_set=yes$/p' | LC_ALL=C sort \
+> "$REGRESS_TMPDIR/configure.vars"
