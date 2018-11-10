@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4639 2018/11/10 09:52:06 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4640 2018/11/10 09:54:55 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6496,3 +6496,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/p5-SNMP-Info to 3.62 [wen 2018-11-10]
 	Updated net/p5-RT-Client-REST to 0.53 [wen 2018-11-10]
 	Updated misc/p5-Locale-libintl to 1.30 [wen 2018-11-10]
+	Updated misc/p5-Business-ISMN to 1.201 [wen 2018-11-10]
