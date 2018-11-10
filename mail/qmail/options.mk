@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.57 2018/11/10 15:29:01 schmonz Exp $
+# $NetBSD: options.mk,v 1.58 2018/11/10 16:27:18 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=		eai inet6 pam syncdir tls
@@ -51,7 +51,7 @@ QMAILPATCHES+=			spp:${SPP_PATCH}
 SPP_PATCH=			qmail-spp-0.42.tar.gz
 PATCHFILES+=			${SPP_PATCH}
 SITES.${SPP_PATCH}=		${MASTER_SITE_SOURCEFORGE:=qmail-spp/}
-PATCH_DIST_CAT.${SPP_PATCH}=	${TAR} -xOf ${SPP_PATCH} qmail-spp-0.42/netqmail-spp.diff \
+PATCH_DIST_CAT.${SPP_PATCH}=	${TAR} -zxOf ${SPP_PATCH} ./qmail-spp-0.42/netqmail-spp.diff \
 				| ${SED} -e 's|sppfok \!= 1|sppfok == -1|'
 PATCH_DIST_STRIP.${SPP_PATCH}=	-p1
 LICENSE+=			AND gnu-gpl-v2
