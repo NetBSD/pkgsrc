@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4635 2018/11/10 06:37:21 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4636 2018/11/10 08:41:43 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6492,3 +6492,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/p5-Text-Trac to 0.19 [wen 2018-11-10]
 	Updated textproc/p5-Pod-Readme to 1.2.3 [wen 2018-11-10]
 	Updated textproc/p5-Lingua-EN-Fathom to 1.22 [wen 2018-11-10]
+	Updated security/p5-CryptX to 0.062 [wen 2018-11-10]
