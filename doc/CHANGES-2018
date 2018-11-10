@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4637 2018/11/10 09:33:19 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4638 2018/11/10 09:44:51 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6494,3 +6494,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/p5-Lingua-EN-Fathom to 1.22 [wen 2018-11-10]
 	Updated security/p5-CryptX to 0.062 [wen 2018-11-10]
 	Updated net/p5-SNMP-Info to 3.62 [wen 2018-11-10]
+	Updated net/p5-RT-Client-REST to 0.53 [wen 2018-11-10]
