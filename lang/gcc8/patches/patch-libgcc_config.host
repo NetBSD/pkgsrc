@@ -1,10 +1,23 @@
-$NetBSD: patch-libgcc_config.host,v 1.1 2018/05/05 04:08:36 maya Exp $
+$NetBSD: patch-libgcc_config.host,v 1.2 2018/11/10 11:45:27 mrg Exp $
 
-Add libgcc x86 netbsd config
+Add libgcc x86 and arm64 netbsd config
 
---- libgcc/config.host.orig	2017-03-10 19:33:27.000000000 +0000
-+++ libgcc/config.host
-@@ -605,10 +605,10 @@ x86_64-*-freebsd*)
+--- libgcc/config.host.orig	2018-04-06 13:04:17.000000000 -0700
++++ libgcc/config.host	2018-11-09 03:33:30.166898124 -0800
+@@ -350,6 +350,12 @@
+ 	tmake_file="${tmake_file} ${cpu_type}/t-aarch64"
+ 	tmake_file="${tmake_file} ${cpu_type}/t-softfp t-softfp"
+ 	;;
++aarch64*-*-netbsd*)
++	extra_parts="$extra_parts crtfastmath.o"
++	tmake_file="${tmake_file} ${cpu_type}/t-aarch64"
++	tmake_file="${tmake_file} ${cpu_type}/t-softfp t-softfp t-crtfm"
++	md_unwind_header=aarch64/aarch64-unwind.h
++	;;
+ aarch64*-*-linux*)
+ 	extra_parts="$extra_parts crtfastmath.o"
+ 	md_unwind_header=aarch64/linux-unwind.h
+@@ -632,10 +638,10 @@
  	md_unwind_header=i386/freebsd-unwind.h
  	;;
  i[34567]86-*-netbsdelf*)
