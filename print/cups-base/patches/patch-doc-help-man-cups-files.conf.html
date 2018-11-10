@@ -1,13 +1,13 @@
-$NetBSD: patch-doc-help-man-cups-files.conf.html,v 1.1 2017/11/12 14:10:15 khorben Exp $
+$NetBSD: patch-doc-help-man-cups-files.conf.html,v 1.2 2018/11/10 19:51:12 leot Exp $
 
 Add a PidFile configuration directive to write a PID file.
 
---- doc/help/man-cups-files.conf.html.orig	2017-03-28 20:26:53.000000000 +0200
-+++ doc/help/man-cups-files.conf.html	2017-07-17 17:25:02.000000000 +0200
-@@ -116,6 +116,10 @@
- 
- </pre>
- The default is "/var/log/cups/page_log".
+--- doc/help/man-cups-files.conf.html.orig	2018-11-08 13:49:36.000000000 +0000
++++ doc/help/man-cups-files.conf.html
+@@ -118,6 +118,10 @@ The default is "/var/log/cups/page_log".
+ <dt><a name="PassEnv"></a><b>PassEnv </b><i>variable </i>[ ... <i>variable </i>]
+ <dd style="margin-left: 5.0em">Passes the specified environment variable(s) to child processes.
+ Note: the standard CUPS filter and backend environment variables cannot be overridden using this directive.
 +<dt><a name="PidFile"></a><b>PidFile </b><i>path</i>
 +<dd style="margin-left: 5.0em">Specifies the file the CUPS scheduler writes its PID to
 +(set to an ampty value to disable the PID file).
