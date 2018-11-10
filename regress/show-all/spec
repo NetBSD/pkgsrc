@@ -1,0 +1,70 @@
+# $NetBSD: spec,v 1.1 2018/11/10 10:40:56 rillig Exp $
+
+tmpdir=${TMPDIR:-/tmp}/pkgsrc-show-all
+rm -rf "$tmpdir"
+mkdir -p "$tmpdir"
+
+require_file() {
+	if diff -u "$3" "$1" > /dev/null; then
+		:
+	else
+		regress_fail "Expected files to be equal."
+		diff -u "$3" "$1" || true
+	fi
+}
+
+
+do_test() {
+	$TEST_MAKE show-all-regress > "$tmpdir/show-all-regress.out"
+}
+
+check_result() {
+	exit_status 0
+
+	cat <<'EOF' > "$tmpdir/expected"
+regress:
+  pkg	REGRESS.undefined (undefined)
+  pkg	REGRESS.empty = # empty
+  pkg	REGRESS.value = All * kinds of `strange' \escape $characters
+  pkg	REGRESS_ENV.undefined (undefined)
+  pkg	REGRESS_ENV.empty = # empty
+  pkg	REGRESS_ENV.space = # empty
+  pkg	REGRESS_ENV.value (sorted) = \
+  		*=all \
+  		VAR1=value1 \
+  		VAR2=`command \
+  		backticks` \
+  		execution \
+  		via \
+  		# end of REGRESS_ENV.value
+  pkg	REGRESS_ARGS.undefined (undefined)
+  pkg	REGRESS_ARGS.empty = # empty
+  pkg	REGRESS_ARGS.space = # empty
+  pkg	REGRESS_ARGS.value = \
+  		VAR1=value1 \
+  		VAR2=`command \
+  		execution \
+  		via \
+  		backticks` \
+  		*=all \
+  		# end of REGRESS_ARGS.value
+  pkg	* = show-all-regress
+  pkg	** = asterisk
+
+EOF
+
+	# The "*" variable is built-in into bmake and expands to the current
+	# make target, which in this case is "show-all-regress".
+
+	# The "**" variable ensures that show-all doesn't accidentally expand
+	# filenames.
+
+	# It's a bit strange that bmake doesn't handle the backticks command
+	# as a single word. Luckily, this is a rare case.
+	#
+	# On the other hand, if it did, bmake would also have to handle
+	# variable expansion and all the other syntactic difficulties from
+	# parsing shell commands, and that would be just too much.
+
+	require_file "$tmpdir/show-all-regress.out" --equals "$tmpdir/expected"
+}
