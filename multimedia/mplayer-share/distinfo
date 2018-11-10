@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.94 2018/05/27 15:27:13 tsutsui Exp $
+$NetBSD: distinfo,v 1.95 2018/11/10 03:48:51 mrg Exp $
 
 SHA1 (mplayer/MPlayer-1.3.0.tar.xz) = 11db20434a4e1aabb9c52f7712241dae1b3730e3
 RMD160 (mplayer/MPlayer-1.3.0.tar.xz) = b6688b186f41267ca3cec59c67afe34396c51ade
 SHA512 (mplayer/MPlayer-1.3.0.tar.xz) = 10007e471a941f8a3dabf6149e6e44fc1a364a9ccb5cd08c670fc22560e5053a15f3249e9d3e18cdda06b6b7e77e537026b5d33dc356e928c63747d6ed73dbae
 Size (mplayer/MPlayer-1.3.0.tar.xz) = 13278984 bytes
 SHA1 (patch-Makefile) = be30a8e90383d6af5902380587b5075fd9c73b83
-SHA1 (patch-aa) = bd9b8a10923a7aa8ace18cb848727044e72d937d
 SHA1 (patch-ae) = 286f5ac075ea4123a1a6276f97e02a4dda9b3e67
 SHA1 (patch-an) = 330c427e30b686165fda15a85b730a3f53e0d217
+SHA1 (patch-configure) = afbc92006fc9594ef54e89ad56fe0937f0577e26
 SHA1 (patch-gui_interface.c) = 04c347b6cb0a54132e6b089142c8ed282f583a1c
 SHA1 (patch-libao2_ao_sun.c) = ce7042b394b9b8c051597c734b70290c8bf0a8d5
 SHA1 (patch-libmpcodecs_vf__screenshot.c) = a99f81ae7fb3da72e623b0169124e4aa2e20ce37
