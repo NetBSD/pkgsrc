@@ -1,15 +1,6 @@
-$NetBSD: distinfo,v 1.13 2015/11/03 00:56:26 agc Exp $
+$NetBSD: distinfo,v 1.14 2018/11/10 19:55:54 wiz Exp $
 
-SHA1 (star-1.4.3.tar.gz) = c59b68d97edba77a9ac6000be04d457ded1eefe9
-RMD160 (star-1.4.3.tar.gz) = f7ec71bfab1723c994e5eed7e6818394a41d44d9
-SHA512 (star-1.4.3.tar.gz) = 984001fe5c32775706d1e36220e1bccd2ffc4d87a969df05b5953b55192b2dc7ac663449c09688b87c13d6e57e1a230f79dc0aedecfe9e0f7e9ddbbb70f6ee0d
-Size (star-1.4.3.tar.gz) = 520388 bytes
-SHA1 (patch-aa) = 4fe4af396adf23eb7ac071b02a7bf726ab1e4318
-SHA1 (patch-ab) = aea3af88d3bedf2ce7a7744c90062ba4e57bb79f
-SHA1 (patch-ac) = 81e6361db3903e5b04fae4e70ad3a37f9a2f4fa7
-SHA1 (patch-ad) = 2be98feac17350b37c242a6f84f539e81330ee14
-SHA1 (patch-ae) = 9f08ee4a8f1f150d08d8c4688e0c5061ad2db52e
-SHA1 (patch-af) = b28ca20dd8cd5326a9d9836880f09740abca7525
-SHA1 (patch-lib_fexec.c) = 5a40df04d84c0e44037cdcc723325cce741e2e0f
-SHA1 (patch-star_fflags.c) = 66fb755de21734eed5c18c896c7aa2ed13696d99
-SHA1 (patch-star_star__unix.c) = 3c478f3cd166f8ee03477a3cb00ef8609be53f4b
+SHA1 (schily-2018-10-30.tar.bz2) = 2c70cd99d732c70193577d61793c32399fcc7378
+RMD160 (schily-2018-10-30.tar.bz2) = f5a843cde89f3e5d54b1925da288fab97990d3eb
+SHA512 (schily-2018-10-30.tar.bz2) = 72765d11eff52f744a707605a53365da69037c3d982c7b8f4cee98f109f856ee28af3420f63c3fe5a7890649c4eb0fa4dd69d367b7ec41026f288d6237c98d96
+Size (schily-2018-10-30.tar.bz2) = 4311065 bytes
