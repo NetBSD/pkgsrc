@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4648 2018/11/10 18:35:51 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4649 2018/11/10 19:35:57 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6469,6 +6469,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-requests to 2.20.1 [adam 2018-11-09]
 	Updated net/py-responses to 0.10.3 [adam 2018-11-09]
 	Updated devel/py-test-sugar to 0.9.2 [adam 2018-11-09]
+	Added sysutils/renameutils version 0.12.0 [bsiegert 2018-11-09]
 	Updated textproc/libxml2 to 2.9.8nb4 [leot 2018-11-09]
 	Updated mail/getmail to 5.8 [schmonz 2018-11-09]
 	Updated lang/erlang to 21.1.1 [nia 2018-11-09]
@@ -6505,3 +6506,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated geography/py-geojson to 2.4.1 [kleink 2018-11-10]
 	Updated security/py-itsdangerous to 1.1.0 [kleink 2018-11-10]
 	Updated lang/nodejs to 10.13.0 [adam 2018-11-10]
+	Updated x11/qt5-qtdeclarative to 5.11.2nb1 [bsiegert 2018-11-10]
