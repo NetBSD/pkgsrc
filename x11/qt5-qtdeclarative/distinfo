@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2018/10/01 17:44:47 adam Exp $
+$NetBSD: distinfo,v 1.12 2018/11/10 19:33:47 bsiegert Exp $
 
 SHA1 (qtdeclarative-everywhere-src-5.11.2.tar.xz) = 51ca1331dc9bb1a1ad15ed4398ce358387cf22d6
 RMD160 (qtdeclarative-everywhere-src-5.11.2.tar.xz) = 67be20bd74bfca77aa79520f1d55d3a749c269e1
@@ -9,3 +9,4 @@ SHA1 (patch-src_3rdparty_masm_assembler_ARMAssembler.h) = fbcbe9e0fd3514d95f54a8
 SHA1 (patch-src_3rdparty_masm_assembler_ARMv7Assembler.h) = 505b2a585a7ed98e63403a3cc44d839a4f80c01d
 SHA1 (patch-src_3rdparty_masm_wtf_Compiler.h) = 8d7e318e0148eea0f262ec13463bc15bd03478dc
 SHA1 (patch-src_qml_jsruntime_qv4alloca__p.h) = 1035da974789f897bb7071284fae21c979844f62
+SHA1 (patch-tools_qmltestrunner_qmltestrunner.pro) = eaf41fae8062e5809f9aadfbc2c456b42760a893
