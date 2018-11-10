@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4642 2018/11/10 10:01:21 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4643 2018/11/10 15:29:06 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6499,3 +6499,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/p5-Business-ISMN to 1.201 [wen 2018-11-10]
 	Updated math/p5-Statistics-Descriptive to 3.0702 [wen 2018-11-10]
 	Updated math/p5-Math-Utils to 1.13 [wen 2018-11-10]
+	Updated mail/qmail to 1.03nb40 [schmonz 2018-11-10]
