@@ -1,0 +1,61 @@
+# $NetBSD: Makefile.common,v 1.1 2018/11/10 19:49:47 wiz Exp $
+# used by archivers/star/Makefile
+# used by devel/smake/Makefile
+# used by shells/bosh/Makefile
+# used by shells/pbosh/Makefile
+
+# All packages based on the schilytools tarball should include this Makefile
+# fragment to inherit and share the same pkgsrc platform specific code.
+
+# Map PKGSRC_COMPILER to CCOM used by schilytools build system.
+.if !empty(PKGSRC_COMPILER:Mgcc)
+MAKE_FLAGS+=	CCOM=gcc
+.elif !empty(PKGSRC_COMPILER:Mclang)
+MAKE_FLAGS+=	CCOM=clang
+# Other compilers are currently untested, try to use them as cc
+.else
+MAKE_FLAGS+=	CCOM=cc
+.endif
+
+# OS rules
+# Some rules were copied from old packages (that are now part of schilytools
+# too) to not break what people have done in the past.
+pre-configure:
+	printf "Create OS rules...\n"
+	cd ${WRKSRC}/RULES && . ${WRKSRC}/RULES/MKLINKS
+	printf "Create pkgsrc OS rules...\n"
+	cd ${WRKSRC}/RULES && unset r ;					\
+	for i in arm mipsel x86_64 sparc64 powerpc ;			\
+	do								\
+		r="$$r i386-netbsd-gcc.rul@$$i-netbsd-gcc.rul" ;	\
+		r="$$r i386-netbsd-cc.rul@$$i-netbsd-cc.rul" ;		\
+	done ;								\
+	r="$$r i386-freebsd-gcc.rul@x86_64-freebsd-gcc.rul" ;		\
+	r="$$r i386-freebsd-cc.rul@x86_64-freebsd-cc.rul" ;		\
+	${SED} -e 's/cc-gcc.rul/cc-$$(C_ARCH).rul/'			\
+		 i386-netbsd-gcc.rul >pkgsrc_i386-netbsd-clang.rul ;	\
+	r="$$r pkgsrc_i386-netbsd-clang.rul@i386-netbsd-clang.rul" ;	\
+	for i in netbsd-clang.rul netbsd-cc.rul netbsd-gcc.rul ;	\
+	do								\
+		r="$$r i386-$$i@${MACHINE}-$$i" ;			\
+	done ;								\
+									\
+	for i in $$r ;							\
+	do								\
+		existing=`printf "%s\\n" $$i | ${SED} -e 's/@.*//'` ;	\
+		target=`printf "%s\\n" $$i | ${SED} -e 's/.*@//'` ;	\
+		printf "%s " "$$target";				\
+		if ${TEST} -e "$$existing" ; then : ;			\
+		else							\
+			printf "(Link target %s not present)\n"		\
+				"$$existing";				\
+			continue ;					\
+		fi;							\
+		if ${TEST} -e "$$target" ;				\
+		then							\
+			printf "(already present)\n" ;			\
+		else							\
+			${LN} -s "$$existing" "$$target" ;		\
+			printf "(created)\n" ;				\
+		fi;							\
+	done
