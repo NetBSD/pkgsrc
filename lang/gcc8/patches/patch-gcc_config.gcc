@@ -1,20 +1,38 @@
-$NetBSD: patch-gcc_config.gcc,v 1.1 2018/05/05 04:08:36 maya Exp $
+$NetBSD: patch-gcc_config.gcc,v 1.2 2018/11/10 11:45:27 mrg Exp $
 
---- gcc/config.gcc.orig	2017-10-21 21:09:53.000000000 +0000
-+++ gcc/config.gcc
-@@ -801,6 +801,11 @@ case ${target} in
+add arm64 support
+
+build cabs* rename support
+
+fix x86 crtstuff.
+
+--- gcc/config.gcc.orig	2018-06-25 19:34:01.000000000 +0000
++++ gcc/config.gcc	2018-11-10 00:20:47.655130032 +0000
+@@ -812,6 +812,9 @@
    gas=yes
    gnu_ld=yes
    use_gcc_stdint=wrap
 +  # cabs/cabsf are renamed to __c99_cabs/cabsf
-+  tm_p_file="${tm_p_file} netbsd-protos.h"
 +  target_gtfiles="${target_gtfiles} \$(srcdir)/config/netbsd.c"
-+  extra_objs="${extra_objs} netbsd.o"
 +  default_gnu_indirect_function=yes
    case ${enable_threads} in
      "" | yes | posix) thread_file='posix' ;;
    esac
-@@ -1498,10 +1503,12 @@ x86_64-*-freebsd*)
+@@ -980,6 +983,13 @@
+ 	tm_file="${tm_file} aarch64/aarch64-elf.h aarch64/aarch64-freebsd.h"
+ 	tmake_file="${tmake_file} aarch64/t-aarch64 aarch64/t-aarch64-freebsd"
+ 	;;
++aarch64*-*-netbsd*)
++	tm_file="${tm_file} dbxelf.h elfos.h ${nbsd_tm_file}"
++	tm_file="${tm_file} aarch64/aarch64-elf.h aarch64/aarch64-netbsd.h"
++	tmake_file="${tmake_file} aarch64/t-aarch64 aarch64/t-aarch64-netbsd"
++	extra_options="${extra_options} netbsd.opt netbsd-elf.opt"
++	# XXX big endian
++	;;
+ aarch64*-*-linux*)
+ 	tm_file="${tm_file} dbxelf.h elfos.h gnu-user.h linux.h glibc-stdint.h"
+ 	tm_file="${tm_file} aarch64/aarch64-elf.h aarch64/aarch64-linux.h"
+@@ -1523,10 +1533,12 @@
  i[34567]86-*-netbsdelf*)
  	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h ${nbsd_tm_file} i386/netbsd-elf.h"
  	extra_options="${extra_options} netbsd.opt netbsd-elf.opt"
