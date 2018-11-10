@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2018/11/10 19:49:47 wiz Exp $
+bin/smake
+man/man1/smake.1
+share/lib/smake/defaults.smk
