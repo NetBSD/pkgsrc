@@ -1,4 +1,4 @@
-# $NetBSD: show.mk,v 1.14 2018/05/28 22:34:47 rillig Exp $
+# $NetBSD: show.mk,v 1.15 2018/11/10 10:40:55 rillig Exp $
 #
 # This file contains some targets that print information gathered from
 # variables. They do not modify any variables.
@@ -136,30 +136,72 @@ show-all: .PHONY
 
 show-all: show-all-${g}
 
+# In the following code, the variables are evaluated as late as possible.
+# This is especially important for variables that use the :sh modifier,
+# like SUBST_FILES.pkglocaledir from mk/configure/replace-localedir.mk.
+#
+# When finally showing the variables, it is unavoidable that variables
+# using the :sh modifier may show warnings, for example because ${WRKDIR}
+# doesn't exist.
+
 show-all-${g}: .PHONY
 	@echo "${g}:"
 .  for c in ${_SHOW_ALL_CATEGORIES}
 .    for v in ${${c}.${g}}
-.      if defined(${v})
-# Be careful not to evaluate variables too early. Some may use the :sh
-# modifier, which can end up taking much time and issuing unexpected
-# warnings and error messages.
-#
-# When finally showing the variables, it is unavoidable that those
-# variables requiring ${WRKDIR} to exist will show a warning.
-#
-	@value=${${v}:M*:Q};						\
-	if [ "$$value" ]; then						\
-	  echo "  ${_LABEL.${c}}	${v} = $$value";		\
+.      if (${v:M*_ENV}			\
+	|| ${v:M*_ENV.*})
+
+# multi-valued variables, values are sorted
+	${RUN}								\
+	if ${!defined(${v}) :? true : false}; then			\
+	  printf '  %s\t%s (undefined)\n' ${_LABEL.${c}} ${v:Q};	\
+	elif value=${${v}:U:M*:Q} && test "x$$value" = "x"; then	\
+	  printf '  %s\t%s = # empty\n' ${_LABEL.${c}} ${v:Q};		\
 	else								\
-	  echo "  ${_LABEL.${c}}	${v} (defined, but empty)";	\
+	  printf '  %s\t%s (sorted) = \\\n' ${_LABEL.${c}} ${v:Q};	\
+	  printf '  \t\t%s \\\n' ${${v}:O:@x@${x:Q}@};			\
+	  printf '  \t\t# end of %s\n' ${v:Q};				\
 	fi
+
+.      elif (${v:M*_ARGS}		\
+	|| ${v:M*_ARGS.*}		\
+	|| ${v:M*_CMD}			\
+	|| ${v:M*_CMD_DEFAULT}		\
+	|| ${v:M*_SKIP}			\
+	|| ${v:MMASTER_SITE*}		\
+	|| ${v:MSUBST_FILES.*}		\
+	|| ${v:MSUBST_SED.*}		\
+	|| ${v:MSUBST_FILTER_CMD.*}	\
+	|| ${v:M*_SUBST})
+
+# multi-valued variables, preserving original order
+	${RUN}								\
+	if ${!defined(${v}) :? true : false}; then			\
+	  printf '  %s\t%s (undefined)\n' ${_LABEL.${c}} ${v:Q};	\
+	elif value=${${v}:U:M*:Q} && test "x$$value" = "x"; then	\
+	  printf '  %s\t%s = # empty\n' ${_LABEL.${c}} ${v:Q};		\
+	else								\
+	  printf '  %s\t%s = \\\n' ${_LABEL.${c}} ${v:Q};		\
+	  printf '  \t\t%s \\\n' ${${v}:@x@${x:Q}@};			\
+	  printf '  \t\t# end of %s\n' ${v:Q};				\
+	fi
+
 .      else
-	@echo "  ${_LABEL.${c}}	${v} (undefined)"
+
+# single-valued variables
+	${RUN}								\
+	if ${!defined(${v}) :? true : false}; then			\
+	  printf '  %s\t%s (undefined)\n' ${_LABEL.${c}} ${v:Q};	\
+	elif value=${${v}:U:Q} && test "x$$value" = "x"; then		\
+	  printf '  %s\t%s = # empty\n' ${_LABEL.${c}} ${v:Q};		\
+	else								\
+	  printf '  %s\t%s = %s\n' ${_LABEL.${c}} ${v:Q} "$$value";	\
+	fi
+
 .      endif
 .    endfor
 .  endfor
-	@echo ""
+	${RUN} printf '\n'
 .endfor
 
 .PHONY: show-depends-options
