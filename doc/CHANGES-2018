@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4650 2018/11/10 19:39:57 prlw1 Exp $
+$NetBSD: CHANGES-2018,v 1.4651 2018/11/10 19:50:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6508,3 +6508,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/nodejs to 10.13.0 [adam 2018-11-10]
 	Updated x11/qt5-qtdeclarative to 5.11.2nb1 [bsiegert 2018-11-10]
 	Updated net/get_iplayer to 3.17 [prlw1 2018-11-10]
+	Added devel/smake version 1.3nb2 [wiz 2018-11-10]
