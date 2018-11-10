@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4645 2018/11/10 15:36:44 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.4646 2018/11/10 16:13:14 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6502,3 +6502,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/qmail to 1.03nb40 [schmonz 2018-11-10]
 	Updated mail/qmail-run to 20181110 [schmonz 2018-11-10]
 	Updated mail/qmail-rejectutils to 20181110 [schmonz 2018-11-10]
+	Updated geography/py-geojson to 2.4.1 [kleink 2018-11-10]
