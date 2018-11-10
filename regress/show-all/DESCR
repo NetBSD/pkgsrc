@@ -1,0 +1,5 @@
+Ensures that the show-all target prints all variants of variable values
+as intended. This involves sorted multi-valued variables (like
+CONFIGURE_ENV), other multi-valued variables (like CONFIGURE_ARGS),
+variables containing special characters that need to be escaped, and
+various other edge cases.
