@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.10 2018/09/07 20:21:20 wiz Exp $
+$NetBSD: distinfo,v 1.11 2018/11/10 19:51:12 leot Exp $
 
-SHA1 (cups-2.2.8-source.tar.gz) = f8c572d5b2405091e3be6836523a6abdda645f60
-RMD160 (cups-2.2.8-source.tar.gz) = 79bc052e3f70408a698bfbe2556b53d2f0140b2c
-SHA512 (cups-2.2.8-source.tar.gz) = 6ed44c5e6f1c46c85b06691713ce476330c93834243720ad2c04fa983e20cde9f6ebfc2eb2ba8bb3700f11320471b99856d6402d3641038da690f89c49fbd261
-Size (cups-2.2.8-source.tar.gz) = 10374921 bytes
+SHA1 (cups-2.2.9-source.tar.gz) = 918a9dd5585a9bcd626f46377b26f041b6be9fc8
+RMD160 (cups-2.2.9-source.tar.gz) = cc8581c620020d44e9fb8da927025fc1d0446496
+SHA512 (cups-2.2.9-source.tar.gz) = 423d2a215a115d5f78ce73118e8a2e566662e5d7f8acbffea39e1bfefb2f48f94841c8b85d731b0786b682dc579df8dfb5508570225b5205a182fbb2cd6dd2a5
+Size (cups-2.2.9-source.tar.gz) = 10402885 bytes
 SHA1 (patch-ae) = f34ec899f4816bdcf96ff315e001e3ac5a960200
 SHA1 (patch-af) = 6ae6ae6006387db69bf7c15f7c8500708c9e8f56
 SHA1 (patch-ai) = 2c1ca67ea6f6c1dedb4c8ff97736f328a2b9a7c6
@@ -21,14 +21,12 @@ SHA1 (patch-config-scripts_cups-libtool.m4) = a6139fbbbee7038d11654c0a2387af21f4
 SHA1 (patch-config-scripts_cups-manpages.m4) = 5cc943738df29f11fc366557938b82c1e9162344
 SHA1 (patch-config-scripts_cups-opsys.m4) = 2bbacc401d4d8dbc157889b6a6cf66684c52357b
 SHA1 (patch-cups-tls.c) = f89c25f8089d9e11a983a270adbb2cbde3c22511
-SHA1 (patch-cups_ipp.c) = 139e6596ba22c62c3d2b16852b2da0d0e677151a
 SHA1 (patch-cups_thread.c) = e625a2b81f3d831d2a0c02bc0fa9a9d31c1097a7
-SHA1 (patch-doc-help-man-cups-files.conf.html) = fcd3d06c00b0a85b6c0790235ccb68685252ea68
+SHA1 (patch-doc-help-man-cups-files.conf.html) = c26754104788eb619e69e49d6d51bf84ab047876
 SHA1 (patch-man-cups-files.conf.man.in) = 820da58aa3f854018a48b68256d0cf0dc75b986e
-SHA1 (patch-ppdc_Makefile) = cdeb0ef9a68f9dd85453ef3076a0120ad9983698
 SHA1 (patch-scheduler-conf.c) = 179964f8d251be3c21f4cfc7b67f3196beda29dc
 SHA1 (patch-scheduler-conf.h) = d11f3b789af096dcaca13a38f6484727ff895bee
 SHA1 (patch-scheduler-main.c) = cb31fa7427b497108ce7724bbfee1b784b9330ab
 SHA1 (patch-scheduler_auth.c) = 8c9a5338c9eb84336db0d487008795227fa9e7f0
 SHA1 (patch-scheduler_dirsvc.c) = aae5b924fb8fb39007cf04d8b83747e8724485cf
-SHA1 (patch-test_ippfind.c) = 6db56b9b1b9a26d5c40336af4dc6cde98abd9c19
+SHA1 (patch-test_ippfind.c) = 70403f5e7d5bd56772616f64fc2dff1482994b79
