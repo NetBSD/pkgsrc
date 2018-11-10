@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4647 2018/11/10 17:28:19 kleink Exp $
+$NetBSD: CHANGES-2018,v 1.4648 2018/11/10 18:35:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6504,3 +6504,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/qmail-rejectutils to 20181110 [schmonz 2018-11-10]
 	Updated geography/py-geojson to 2.4.1 [kleink 2018-11-10]
 	Updated security/py-itsdangerous to 1.1.0 [kleink 2018-11-10]
+	Updated lang/nodejs to 10.13.0 [adam 2018-11-10]
