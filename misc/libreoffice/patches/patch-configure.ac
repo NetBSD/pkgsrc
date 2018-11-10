@@ -1,8 +1,27 @@
-$NetBSD: patch-configure.ac,v 1.11 2018/08/18 00:11:32 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.12 2018/11/10 21:35:07 mrg Exp $
 
---- configure.ac.orig	2018-08-02 19:54:54.000000000 +0000
-+++ configure.ac
-@@ -6008,14 +6008,14 @@ if test "$GCC" = "yes" -o "$COM_IS_CLANG
+add arm64 support.
+
+fix __cxa_exception check.
+
+fix wrong default paths.
+
+
+--- configure.ac.orig	2018-09-20 09:44:38.000000000 +0000
++++ configure.ac	2018-11-10 09:32:15.242164059 +0000
+@@ -4286,6 +4286,11 @@
+     P_SEP=:
+ 
+     case "$host_cpu" in
++    aarch64)
++        CPUNAME=AARCH64
++        RTL_ARCH=AARCH64
++        PLATFORMID=netbsd_aarch64
++        ;;
+     i*86)
+         CPUNAME=INTEL
+         RTL_ARCH=x86
+@@ -6013,14 +6018,14 @@
          ], [AC_MSG_RESULT([no])])
      AC_LANG_POP([C++])
  
@@ -20,7 +39,7 @@ $NetBSD: patch-configure.ac,v 1.11 2018/08/18 00:11:32 ryoon Exp $
              AC_MSG_RESULT([yes])
          ], [AC_MSG_RESULT([no])])
      AC_LANG_POP([C++])
-@@ -7607,7 +7607,7 @@ else
+@@ -7612,7 +7617,7 @@
      if test "$COM" = "MSC"; then
          LIBJPEG_LIBS="${WORKDIR}/UnpackedTarball/libjpeg-turbo/.libs/libjpeg.lib"
      else
@@ -29,7 +48,7 @@ $NetBSD: patch-configure.ac,v 1.11 2018/08/18 00:11:32 ryoon Exp $
      fi
  
      case "$host_cpu" in
-@@ -9203,11 +9203,11 @@ dnl HarfBuzz
+@@ -9208,11 +9213,11 @@
  dnl ===================================================================
  libo_CHECK_SYSTEM_MODULE([graphite],[GRAPHITE],[graphite2 >= 0.9.3],
                           ["-I${WORKDIR}/UnpackedTarball/graphite/include -DGRAPHITE2_STATIC"],
@@ -43,7 +62,7 @@ $NetBSD: patch-configure.ac,v 1.11 2018/08/18 00:11:32 ryoon Exp $
  
  if test "$COM" = "MSC"; then # override the above
      GRAPHITE_LIBS="${WORKDIR}/LinkTarget/StaticLibrary/graphite.lib"
-@@ -10387,7 +10387,7 @@ if test "$build_for_ios" = "YES"; then
+@@ -10410,7 +10415,7 @@
  elif test "$enable_mpl_subset" = "yes"; then
      AC_MSG_CHECKING([whether gpgmepp should be disabled due to building just MPL])
      AC_MSG_RESULT([yes])
@@ -52,16 +71,16 @@ $NetBSD: patch-configure.ac,v 1.11 2018/08/18 00:11:32 ryoon Exp $
      dnl ===================================================================
      dnl Check for system gpgme
      dnl ===================================================================
-@@ -10397,7 +10397,7 @@ elif test "$_os" = "Linux" -o "$_os" = "
+@@ -10420,7 +10425,7 @@
          SYSTEM_GPGMEPP=TRUE
  
          # C++ library doesn't come with fancy gpgmepp-config, check for headers the old-fashioned way
 -        AC_CHECK_HEADER(gpgme++/gpgmepp_version.h, [ GPGMEPP_CFLAGS=-I/usr/include/gpgme++ ],
-+        AC_CHECK_HEADER(gpgme++/gpgmepp_version.h, [ GPGMEPP_CFLAGS=-I@PREFIX@/include/gpgme++ ],
++        AC_CHECK_HEADER(gpgme++/gpgmepp_version.h, [ GPGMEPP_CFLAGS=-I/usr/pkg/include/gpgme++ ],
              [AC_MSG_ERROR([gpgmepp headers not found, install gpgmepp development package])], [])
          # progress_callback is the only func with plain C linkage
          # checking for it also filters out older, KDE-dependent libgpgmepp versions
-@@ -11730,8 +11730,8 @@ EOF
+@@ -11753,8 +11758,8 @@
      dnl Checking for ant.jar
      if test "$ANT_HOME" != "NO_ANT_HOME"; then
          AC_MSG_CHECKING([Ant lib directory])
