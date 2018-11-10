@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/09/03 08:09:51 wiz Exp $
+$NetBSD: distinfo,v 1.4 2018/11/10 06:36:24 wen Exp $
 
-SHA1 (Lingua-EN-Fathom-1.19.tar.gz) = 86b30b8d0b8b906affe6bf888fbf42e1a2972148
-RMD160 (Lingua-EN-Fathom-1.19.tar.gz) = d51ef3550be2b994ccf06ea68bfaac018cf97eb2
-SHA512 (Lingua-EN-Fathom-1.19.tar.gz) = 0f3f65352b59a57055dcbfe6669604451be4ae784fc1b4dbeed5998ded78e0e28a4f5279c542fd551b6be714b497a51a9b2195093da47f7e341ca6a21bbd10e5
-Size (Lingua-EN-Fathom-1.19.tar.gz) = 10686 bytes
+SHA1 (Lingua-EN-Fathom-1.22.tar.gz) = 7fe5028e1c1308a93ba17cd8e6aa28cf7e3c516a
+RMD160 (Lingua-EN-Fathom-1.22.tar.gz) = 6b592c79a01de32b40db13e15312ec3b8817f257
+SHA512 (Lingua-EN-Fathom-1.22.tar.gz) = 46d997bc4a7621196bdfa58f52751c3eeba6b1d8d6dc913eeffaa86c80d19646fb6aea847fdc3c3d77118b6f1bd279e6915debcea4889576c97ca046a80beb7d
+Size (Lingua-EN-Fathom-1.22.tar.gz) = 10976 bytes
