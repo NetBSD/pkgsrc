@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2018/11/07 04:32:32 maya Exp $
+$NetBSD: distinfo,v 1.6 2018/11/10 11:45:27 mrg Exp $
 
 SHA1 (gcc-8.2.0.tar.xz) = 19926bdb6c4b58891015929853d41aeff019d400
 RMD160 (gcc-8.2.0.tar.xz) = 4fba19867980d04bed1e62d46d4787c99f4fd13d
@@ -10,20 +10,25 @@ SHA512 (isl-0.16.1.tar.bz2) = c188667a84dc5bdddb4ab7c35f89c91bf15a8171f4fcaf4130
 Size (isl-0.16.1.tar.bz2) = 1626446 bytes
 SHA1 (patch-contrib_download__prerequisites) = 86c6c16e0e3e3a0bcb38579a8b4004f603fac1ca
 SHA1 (patch-gcc_Makefile.in) = c0f97c75ba1d37eae894141edd58bb36b734f651
-SHA1 (patch-gcc_config.gcc) = c57c3668688a96950a706cb9643b40e5631545f9
+SHA1 (patch-gcc_config.gcc) = 4a971d1df7f05cfaefdf462d1b7c6dea1e838713
+SHA1 (patch-gcc_config_aarch64_aarch64-builtins.c) = b10ef4b9ad39e605fc4e2a0c8dffdae677842e94
+SHA1 (patch-gcc_config_aarch64_aarch64-netbsd.h) = ed7bc42813b33c87242f5ef0a304a621b873c9eb
+SHA1 (patch-gcc_config_aarch64_aarch64.h) = 54b90eb2cfedb6c57d01c1a1094c851756648f09
+SHA1 (patch-gcc_config_aarch64_t-aarch64-netbsd) = 0e7feb6f238b0a752ccc50e95e09b017cb368a90
 SHA1 (patch-gcc_config_arm_arm.h) = aba0bab2489cb7224d45eca0977156fe4f7a74a8
-SHA1 (patch-gcc_config_netbsd-elf.h) = 0fcfadfe0734f9583fdec7817112a42fb7be0eb3
+SHA1 (patch-gcc_config_netbsd-elf.h) = e392918cce01627d64d4153329775c7ad03b4a45
 SHA1 (patch-gcc_config_netbsd-protos.h) = 6d28864b4ccc8c1a63fe28e43601b84b63a00633
 SHA1 (patch-gcc_config_t-netbsd) = 802ad5706aa7ca9629f8e237f08fbb1569d28846
 SHA1 (patch-gcc_config_x-netbsd) = 6dc3d78e26df62054ea29f98ca51592858e671e3
 SHA1 (patch-gcc_configure) = 15fb7af267b79965f83bc64ce8aad1279b0ea52d
 SHA1 (patch-gcc_ggc-common.c) = a5d2dba635859f5d680c3f80d7c30b42461c752b
+SHA1 (patch-gcc_ginclude_stddef.h) = 583b7931aad14058be75569b0138efad8ac74113
 SHA1 (patch-gcc_lto_lto.c) = 7bd85ac8ade76a28c394f6fbe5d495f91824f79f
 SHA1 (patch-gcc_targhooks.c) = b28d8a9696d07bbfb00b7d8c55193ba99447ff1d
 SHA1 (patch-isl_configure) = 36b37778ee13c0b364fb24d5864d6a9e65b29b7d
 SHA1 (patch-libffi_configure) = bcfbfe8abddc378e2de4a39ad0669583b37e0292
 SHA1 (patch-libffi_testsuite_libffi.call_float2.c) = 6321dde308579448c27c2b6e1e30633699dd145f
-SHA1 (patch-libgcc_config.host) = bdd4cd27249c8b62793204428d95c977d58f06fb
+SHA1 (patch-libgcc_config.host) = 8d8fab73ae6b6476f648f73ad9c05436926f5d13
 SHA1 (patch-libgcc_crtstuff.c) = e3a3b02a26229992851f195b5701cb1b86c29efe
 SHA1 (patch-libgfortran_io_io.h) = d44676239a7f45e42054d24bd5224f43c20055c0
 SHA1 (patch-libsanitizer_configure.tgt) = 0a47782f01631d1c91e28a8735865c8571fbcf7d
