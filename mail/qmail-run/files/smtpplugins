@@ -1,0 +1,17 @@
+# qmail-spp configuration file
+
+# plugins to execute on client's connection
+[connection]
+
+# plugins to execute on HELO/EHLO commands
+[helo]
+
+# plugins to execute on MAIL command
+[mail]
+
+# plugins to execute on RCPT command
+[rcpt]
+@PREFIX@/bin/qmail-rcptcheck
+
+# plugins to execute on DATA command
+[data]
