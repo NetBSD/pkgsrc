@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 01:18:04 agc Exp $
+$NetBSD: distinfo,v 1.6 2018/11/10 17:27:36 kleink Exp $
 
-SHA1 (itsdangerous-0.24.tar.gz) = 0a6ae9c20cd72e89d75314ebc7b0f390f93e6a0d
-RMD160 (itsdangerous-0.24.tar.gz) = 870c1cef9d39c74f2d376be07b50d0e11f343018
-SHA512 (itsdangerous-0.24.tar.gz) = 2863b6e5fda178db59bd214c6d24d04422c1021bb41bf11598aba1cbc43053aff3bb1e0539940b5769de04b68c03e8bd01d728dcbfc4bd0ba05867688574a297
-Size (itsdangerous-0.24.tar.gz) = 46541 bytes
+SHA1 (itsdangerous-1.1.0.tar.gz) = b79fef5caacdd247f7def3fe59e6def34bc86905
+RMD160 (itsdangerous-1.1.0.tar.gz) = 3a1b71343357fd9cef28039753c78f0bf24d91ff
+SHA512 (itsdangerous-1.1.0.tar.gz) = 61bab3fce5f87a3b5fc8fad61e735a63df6aa039416ee3494e1c99a2a1162b4fb72793bc5dc949de0985724c40121810b159513606c4c3976a7666dba3a1b93d
+Size (itsdangerous-1.1.0.tar.gz) = 53219 bytes
