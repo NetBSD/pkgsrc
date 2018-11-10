@@ -1,11 +1,3 @@
-Star is a full-featured tar command that can access local and remote
-tar archives (files and tapes). It reads and writes POSIX compliant
-tar archives as well as non-POSIX GNU tar archives.
-Star is the first POSIX.1-2001 compliant tar implementation. It includes
-a FIFO for speed, a pattern matcher, multi-volume support, the ability to
-archive sparse files and ACLs and the ability to archive extended file flags.
-It supports automatic archive format detection, automatic byte order
-recognition, automatic archivecompression/decompression. It includes the
-only known platform independent "rmt" server program that implements all
-Sun/GNU/Schily/BSD enhancements and allows any "rmt" client from any OS to
-contact any OS as server.
+The Schily tape archiver
+
+Unique standard tape archiver (the oldest free TAR implementation).
