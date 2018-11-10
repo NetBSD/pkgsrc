@@ -1,16 +1,7 @@
-$NetBSD: distinfo,v 1.9 2015/11/02 23:49:48 agc Exp $
+$NetBSD: distinfo,v 1.10 2018/11/10 20:03:40 wiz Exp $
 
-SHA1 (xrn/9.01.tgz) = a560d07629efaa907ae01527192dd474e11555ad
-RMD160 (xrn/9.01.tgz) = c98d26e17fd8c511d9272378a54943ef9a453d3a
-SHA512 (xrn/9.01.tgz) = 05baa1e2aa15c6e284482026a81ac37724e024af97218ebf0e1bd7d0209922bf1a32e0bf337c6216d5face5a607bba5274fee0a67f1dd72d6e1fd6a9286a3a11
-Size (xrn/9.01.tgz) = 357098 bytes
-SHA1 (patch-aa) = 5560da41c2ef1d077fcc696f954bca7528d577af
-SHA1 (patch-ab) = 8e44803fcbffc0985a68479bf8f177793c1d857f
-SHA1 (patch-ac) = 4113548f1b957aef9748571b05f4ee03a8c302ca
-SHA1 (patch-ad) = b4b88f463cfab63500d284620fb32a6a418fd6ca
-SHA1 (patch-ae) = 3a1eef86f89acaa3b0bb6a78bfbd8d7c4be969d2
-SHA1 (patch-af) = 849b86cac73328cf2a773bc289f97c3e21456f71
-SHA1 (patch-ag) = f42c743a45c68b7702494399dbf40c3ac9cefd13
-SHA1 (patch-clientlib.c) = 21ed52e3648803572be6b7ddb6c67fb546418364
-SHA1 (patch-compose.c) = 3f98c97236401aeb8db9e7c560a9c12d46d2a95e
-SHA1 (patch-rclex.l) = 9fa36815375c1d389cbf286cd15a8322d7006209
+SHA1 (xrn-10.11.tar.gz) = 4dfe8063b1356c74f2e92ab84d93ff464a174e70
+RMD160 (xrn-10.11.tar.gz) = 7bb29af447efcb4197be2f780d7bd9733f5523a5
+SHA512 (xrn-10.11.tar.gz) = e65def882d2bfbf376fa903d35007091d94ba0a927bc75bfd988d6f7f9826949db777344fd539c294c0f0af3a15ab02e470279491cca12c9314f901061fe09a7
+Size (xrn-10.11.tar.gz) = 469671 bytes
+SHA1 (patch-config.h) = e1386011fe2c1f7fb518f0f5a7b3b4a9b93a00f1
