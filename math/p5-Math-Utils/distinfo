@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/08/20 02:32:20 wen Exp $
+$NetBSD: distinfo,v 1.3 2018/11/10 10:00:39 wen Exp $
 
-SHA1 (Math-Utils-1.12.tar.gz) = c23427c602583268b3476d1953a8a4901d91be44
-RMD160 (Math-Utils-1.12.tar.gz) = 4d813a4cc4cb23cce344101598a8b6610f92d0e1
-SHA512 (Math-Utils-1.12.tar.gz) = 21c7f8f02a2607448b74962758622e57da9a50046eff5ab3ae928174b761c91ddf0ecc73ad14c89c4ac6b2ed880a8ccc669ec942502387d8363062d3cc4fd380
-Size (Math-Utils-1.12.tar.gz) = 27579 bytes
+SHA1 (Math-Utils-1.13.tar.gz) = cfe7a4122674b643bb15e79d931a06cda09df593
+RMD160 (Math-Utils-1.13.tar.gz) = f2eef949bbc6098ef6fd18c5b8a83ead738d3179
+SHA512 (Math-Utils-1.13.tar.gz) = 9462ee15e98e1b1a81a8d8c290a3a749c959865a9cd5df8d4306b04ffd51244716d9e0af9a7cd1ea5f25d6201570800a4278343d0136acbc0472560fbdcf5c31
+Size (Math-Utils-1.13.tar.gz) = 30250 bytes
