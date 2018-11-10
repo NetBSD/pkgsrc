@@ -1,18 +1,7 @@
-$NetBSD: distinfo,v 1.92 2018/10/28 09:45:07 spz Exp $
+$NetBSD: distinfo,v 1.93 2018/11/10 21:14:53 maya Exp $
 
-SHA1 (tiff-4.0.9.tar.gz) = 87d4543579176cc568668617c22baceccd568296
-RMD160 (tiff-4.0.9.tar.gz) = ab5b3b7297e79344775b1e70c4d54c90c06836a3
-SHA512 (tiff-4.0.9.tar.gz) = 04f3d5eefccf9c1a0393659fe27f3dddd31108c401ba0dc587bca152a1c1f6bc844ba41622ff5572da8cc278593eff8c402b44e7af0a0090e91d326c2d79f6cd
-Size (tiff-4.0.9.tar.gz) = 2305681 bytes
-SHA1 (patch-CVE-2017-11613) = 76db7d185ef5b82e7136ce451432e3e4b0cc5c12
-SHA1 (patch-CVE-2017-18013) = ebfdfb964aeafb3d8af2f7ad151270d8133f3e96
-SHA1 (patch-CVE-2017-9935) = d33f3311e5bb96bf415f894237ab4dfcfafd2610
-SHA1 (patch-CVE-2018-10963) = 564b65546c0e63a00d87ef9bb9d9cc8c5ca5a4ee
-SHA1 (patch-CVE-2018-17100) = 85290ca7d806087e640b1a6f5c3de5dda9c2060e
-SHA1 (patch-CVE-2018-17101) = 02039854f7c79d5937d585ca3e6355a7f41b7d1a
-SHA1 (patch-CVE-2018-5784) = 26e2c196b4150958dd37b33c1900c5baa6188661
-SHA1 (patch-CVE-2018-8905) = 3a7081957ff2f4d6e777df5a9609ba89eecd8fbc
+SHA1 (tiff-4.0.10.tar.gz) = c783b80f05cdacf282aa022dc5f5b0ede5e021ae
+RMD160 (tiff-4.0.10.tar.gz) = b25cc4002f2493e71763d0a465a50e9d6ee2aff0
+SHA512 (tiff-4.0.10.tar.gz) = d213e5db09fd56b8977b187c5a756f60d6e3e998be172550c2892dbdb4b2a8e8c750202bc863fe27d0d1c577ab9de1710d15e9f6ed665aadbfd857525a81eea8
+Size (tiff-4.0.10.tar.gz) = 2402867 bytes
 SHA1 (patch-configure) = a0032133f06b6ac92bbf52349fabe83f74ea14a6
-SHA1 (patch-libtiff_tif__jbig.c) = feb404c5c70c0f4f10fa53351fab4db163bbccf3
-SHA1 (patch-libtiff_tif__read.c) = a69f7a462e0dfe6b01240816ed546d7e381044e8
-SHA1 (patch-tools_pal2rgb.c) = f91652e8013940c162add870ceb9845e2730bc2c
