@@ -1,0 +1,11 @@
+The Schily Bourne Shell
+
+The Schily Bourne Shell was derived from the Bourne Shell sources from
+OpenSolaris.
+
+The Schily Bourne Shell is actively maintained and enhanced on a regular base.
+It can be compiled into three variants:
+- The non-POSIX SVr4/OpenSolaris variant (obosh)
+- The minimal POSIX compliant variant (pbosh)
+- The POSIX compliant extended variant (bosh)
+This package contains the third variant.
