@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2018/08/21 12:01:00 wiz Exp $
+$NetBSD: distinfo,v 1.11 2018/11/10 09:58:03 wen Exp $
 
-SHA1 (Statistics-Descriptive-3.0701.tar.gz) = 27c90cdf8a89dac32641dde48bd91240674a428a
-RMD160 (Statistics-Descriptive-3.0701.tar.gz) = e15d5a5341d61262c4177b5a431e6b0b151bbd7f
-SHA512 (Statistics-Descriptive-3.0701.tar.gz) = 756e04e6021417b1e669db2132642da561f9d33af1fc2f2181a1a3e9b90dd55254c59b642fef6c0128cb817dfc6965a963746746e0a38f1bb85013cc4b5cc85a
-Size (Statistics-Descriptive-3.0701.tar.gz) = 53640 bytes
+SHA1 (Statistics-Descriptive-3.0702.tar.gz) = d8ba80b934bdecfc8aeb01ed1a0a258d99a9a95c
+RMD160 (Statistics-Descriptive-3.0702.tar.gz) = 18da8b7ceb8003d83be78b67d31db191736f1a67
+SHA512 (Statistics-Descriptive-3.0702.tar.gz) = e0742ec356a38ad38f52e56a3ef58af6e539fbfa090d9a1d154560f353a3346d1c800d5d9f7bb0e2f32fb92b611fec16c939a19b7af104ec6ebe627c6c719df6
+Size (Statistics-Descriptive-3.0702.tar.gz) = 53706 bytes
