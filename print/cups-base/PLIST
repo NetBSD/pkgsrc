@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/06/24 10:17:42 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/11/10 19:51:12 leot Exp $
 bin/cancel
 bin/cups-config
 bin/cupstestdsc
@@ -32,10 +32,7 @@ include/cups/sidechannel.h
 include/cups/transcode.h
 include/cups/versioning.h
 lib/libcups.la
-lib/libcupscgi.la
 lib/libcupsimage.la
-lib/libcupsmime.la
-lib/libcupsppdc.la
 ${PLIST.apple}libexec/cups/apple/http
 ${PLIST.apple}libexec/cups/apple/https
 ${PLIST.apple}libexec/cups/apple/ipp
