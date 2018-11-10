@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.11 2018/04/02 08:20:17 prlw1 Exp $
+# $NetBSD: Makefile,v 1.12 2018/11/10 19:39:19 prlw1 Exp $
 
-DISTNAME=	get_iplayer-3.13
+DISTNAME=	get_iplayer-3.17
 CATEGORIES=	net multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=get-iplayer/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	shattered@NetBSD.org
 HOMEPAGE=	https://github.com/get-iplayer/${GITHUB_PROJECT}
 COMMENT=	Search, index, record or stream BBC iPlayer broadcasts
 LICENSE=	gnu-gpl-v3
-
-GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 DEPENDS+=	p5-XML-LibXML-[0-9]*:../../textproc/p5-XML-LibXML
 DEPENDS+=	p5-libwww>=6.0:../../www/p5-libwww
