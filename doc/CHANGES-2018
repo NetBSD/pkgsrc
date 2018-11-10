@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4640 2018/11/10 09:54:55 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4641 2018/11/10 09:58:44 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6497,3 +6497,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/p5-RT-Client-REST to 0.53 [wen 2018-11-10]
 	Updated misc/p5-Locale-libintl to 1.30 [wen 2018-11-10]
 	Updated misc/p5-Business-ISMN to 1.201 [wen 2018-11-10]
+	Updated math/p5-Statistics-Descriptive to 3.0702 [wen 2018-11-10]
