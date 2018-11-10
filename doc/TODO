@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18605 2018/11/10 19:56:29 wiz Exp $
+$NetBSD: TODO,v 1.18606 2018/11/10 20:03:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1539,7 +1539,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xrmap-factbook_text-2008
 	o xrmap-flags-2.9
 	o xrmap-hymns-1.4
-	o xrn-9.02
 	o xsc-1.6
 	o xscorch-0.2.1
 	o xsd-3.3.0
