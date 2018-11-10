@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2015/11/21 17:14:26 adam Exp $
+# $NetBSD: options.mk,v 1.10 2018/11/10 20:50:28 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.transcode
 PKG_SUPPORTED_OPTIONS=	a52 dv faac imagemagick mjpegtools lzo libxml2 x264
@@ -11,7 +11,6 @@ PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
 .if !empty(PKG_OPTIONS:Ma52)
 .  include "../../audio/liba52/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-a52
-CONFIGURE_ARGS+=	--enable-a52-default-decoder
 PLIST.a52=		yes
 .else
 CONFIGURE_ARGS+=	--disable-a52

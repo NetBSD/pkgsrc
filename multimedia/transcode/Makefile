@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2018/04/17 22:29:44 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2018/11/10 20:50:28 wiz Exp $
 
 DISTNAME=	transcode-1.1.7
 PKGREVISION=	29
@@ -16,7 +16,6 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		awk:run gmake pkg-config
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-xio
 CONFIGURE_ARGS+=	--enable-freetype2
 CONFIGURE_ARGS+=	--enable-libmpeg2
 CONFIGURE_ARGS+=	--enable-libmpeg2convert
@@ -25,7 +24,6 @@ CONFIGURE_ARGS+=	--enable-ogg
 CONFIGURE_ARGS+=	--enable-theora
 CONFIGURE_ARGS+=	--enable-vorbis
 CONFIGURE_ARGS+=	--enable-xvid
-CONFIGURE_ARGS+=	--with-libavcodec-prefix=${BUILDLINK_PREFIX.ffmpeg}
 CONFIGURE_ENV+=		PATH_TO_AWK=${AWK:Q}
 
 PTHREAD_AUTO_VARS=	yes
@@ -59,6 +57,7 @@ LIBS+=			${LIBOSSAUDIO}
 .include "../../multimedia/libmpeg2/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
+.include "../../multimedia/xvidcore/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
