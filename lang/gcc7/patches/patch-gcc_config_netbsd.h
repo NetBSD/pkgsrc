@@ -1,4 +1,4 @@
-$NetBSD: patch-gcc_config_netbsd.h,v 1.2 2018/01/25 23:27:30 maya Exp $
+$NetBSD: patch-gcc_config_netbsd.h,v 1.3 2018/11/10 04:24:00 mrg Exp $
 
 Handle netbsd's compatibility non-C99 cabs (causes link
 failure with gfortran)
@@ -15,16 +15,3 @@ failure with gfortran)
  /* TARGET_OS_CPP_BUILTINS() common to all NetBSD targets.  */
  #define NETBSD_OS_CPP_BUILTINS_COMMON()		\
    do						\
-@@ -181,6 +184,12 @@ along with GCC; see the file COPYING3.  
- #undef WINT_TYPE
- #define WINT_TYPE "int"
- 
-+#undef SUBTARGET_INIT_BUILTINS
-+#define SUBTARGET_INIT_BUILTINS			\
-+do {						\
-+  netbsd_patch_builtins ();			\
-+} while(0)
-+
- #undef  SUBTARGET_INIT_BUILTINS
- #define SUBTARGET_INIT_BUILTINS						\
-   do {									\
