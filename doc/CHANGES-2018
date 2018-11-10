@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4652 2018/11/10 19:51:30 leot Exp $
+$NetBSD: CHANGES-2018,v 1.4653 2018/11/10 19:51:45 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6510,3 +6510,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/get_iplayer to 3.17 [prlw1 2018-11-10]
 	Added devel/smake version 1.3nb2 [wiz 2018-11-10]
 	Updated print/cups-base to 2.2.9 [leot 2018-11-10]
+	Updated print/cups to 2.2.9 [leot 2018-11-10]
