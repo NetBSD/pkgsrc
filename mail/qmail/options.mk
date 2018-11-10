@@ -1,60 +1,10 @@
-# $NetBSD: options.mk,v 1.58 2018/11/10 16:27:18 schmonz Exp $
+# $NetBSD: options.mk,v 1.59 2018/11/10 16:42:52 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=		eai inet6 pam syncdir tls
 PKG_SUPPORTED_OPTIONS+=		qmail-customerror qmail-srs
 PKG_SUGGESTED_OPTIONS+=		eai syncdir tls
 PKG_SUGGESTED_OPTIONS+=		qmail-customerror qmail-srs
-
-# Formerly optional patches, now unconditionally applied:
-QMAILPATCHES=			netqmail:${DEFAULT_DISTFILES}
-
-QMAILPATCHES+=			tls:${TLSREMOTE_PATCH}
-TLSREMOTE_PATCH=		netqmail-1.06-tls-20160918-onlyremote-20181107.patch
-PATCHFILES+=			${TLSREMOTE_PATCH}
-SITES.${TLSREMOTE_PATCH}=	https://schmonz.com/qmail/tlsonlyremote/
-
-QMAILPATCHES+=			bigdns:${BIGDNS_PATCH}
-BIGDNS_PATCH=			qmail-103.patch
-PATCHFILES+=			${BIGDNS_PATCH}
-SITES.${BIGDNS_PATCH}=		http://www.ckdhr.com/ckd/
-SITES.${BIGDNS_PATCH}+=		${MASTER_SITE_LOCAL}
-PATCH_DIST_STRIP.${BIGDNS_PATCH}=-p1
-
-QMAILPATCHES+=			destdir:${DESTDIR_PATCH}
-DESTDIR_PATCH=			netqmail-1.06-destdir-20170716.patch
-PATCHFILES+=			${DESTDIR_PATCH}
-SITES.${DESTDIR_PATCH}=		https://schmonz.com/qmail/destdir/
-
-QMAILPATCHES+=			maildiruniq:${MAILDIRUNIQ_PATCH}
-MAILDIRUNIQ_PATCH=		qmail-1.03-maildir-uniq.patch
-PATCHFILES+=			${MAILDIRUNIQ_PATCH}
-SITES.${MAILDIRUNIQ_PATCH}=	http://www.memoryhole.net/qmail/
-PATCH_DIST_STRIP.${MAILDIRUNIQ_PATCH}=-p1
-
-QMAILPATCHES+=			outgoingip:${OUTGOINGIP_PATCH}
-OUTGOINGIP_PATCH=		outgoingip.patch
-PATCHFILES+=			${OUTGOINGIP_PATCH}
-SITES.${OUTGOINGIP_PATCH}=	http://www.qmail.org/
-
-QMAILPATCHES+=			qbiffutmpx:${QBIFFUTMPX_PATCH}
-QBIFFUTMPX_PATCH=		netqmail-1.06-qbiffutmpx-20170820.patch
-PATCHFILES+=			${QBIFFUTMPX_PATCH}
-SITES.${QBIFFUTMPX_PATCH}=	https://schmonz.com/qmail/qbiffutmpx/
-
-QMAILPATCHES+=			remote:${REMOTE_PATCH}
-REMOTE_PATCH=			netqmail-1.06-qmailremote-20170716.patch
-PATCHFILES+=			${REMOTE_PATCH}
-SITES.${REMOTE_PATCH}=		https://schmonz.com/qmail/remote/
-
-QMAILPATCHES+=			spp:${SPP_PATCH}
-SPP_PATCH=			qmail-spp-0.42.tar.gz
-PATCHFILES+=			${SPP_PATCH}
-SITES.${SPP_PATCH}=		${MASTER_SITE_SOURCEFORGE:=qmail-spp/}
-PATCH_DIST_CAT.${SPP_PATCH}=	${TAR} -zxOf ${SPP_PATCH} ./qmail-spp-0.42/netqmail-spp.diff \
-				| ${SED} -e 's|sppfok \!= 1|sppfok == -1|'
-PATCH_DIST_STRIP.${SPP_PATCH}=	-p1
-LICENSE+=			AND gnu-gpl-v2
 
 .include "../../mk/bsd.options.mk"
 
