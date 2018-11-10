@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.556 2018/11/10 11:41:40 rillig Exp $
+# $NetBSD: Makefile,v 1.557 2018/11/10 11:45:29 rillig Exp $
 
 PKGNAME=	pkglint-5.6.6
 CATEGORIES=	pkgtools
@@ -27,12 +27,6 @@ SUBST_FILES.pkglint+=	${WRKSRC.pkglint}/pkglint.go
 SUBST_SED.pkglint+=	-e s\|@VERSION@\|${PKGVERSION}\|g
 SUBST_SED.pkglint+=	-e s\|@BMAKE@\|${MAKE:T:Q}\|g
 
-# This needs to come before bsd.prefs.mk so that SSP_SUPPORTED is properly set.
-.include "../../lang/go/go-package.mk"
-WRKSRC=		${WRKDIR}/src	# Is set unconditionally by go-package.mk
-
-.include "../../mk/bsd.prefs.mk"
-
 EXTRACT_PAX_ARGS=	${"${PKGSRC_RUN_TEST:M[yY][eE][sS]}" :?: -s '|.*/intqa/.*||'}
 
 WRKSRC.tools=		${WRKSRC}/golang.org/x/tools
@@ -56,6 +50,12 @@ do-install:
 	${RUN} cd ${WRKDIR} && pax -rw bin/pkglint ${DESTDIR}/${PREFIX}
 
 post-install: do-install-man
+
+# This needs to come before bsd.prefs.mk so that SSP_SUPPORTED is properly set.
+.include "../../lang/go/go-package.mk"
+WRKSRC=		${WRKDIR}/src	# Is set unconditionally by go-package.mk
+
+.include "../../mk/bsd.prefs.mk"
 
 do-install-man: .PHONY
 .if ${MANINSTALL:Mcatinstall}
