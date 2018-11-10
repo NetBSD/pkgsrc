@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.56 2018/11/08 20:58:08 schmonz Exp $
+# $NetBSD: options.mk,v 1.57 2018/11/10 15:29:01 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=		eai inet6 pam syncdir tls
@@ -42,23 +42,26 @@ QBIFFUTMPX_PATCH=		netqmail-1.06-qbiffutmpx-20170820.patch
 PATCHFILES+=			${QBIFFUTMPX_PATCH}
 SITES.${QBIFFUTMPX_PATCH}=	https://schmonz.com/qmail/qbiffutmpx/
 
-QMAILPATCHES+=			rcptcheck:${RCPTCHECK_PATCH}
-RCPTCHECK_PATCH=		qmail-smtpd.patch
-PATCHFILES+=			${RCPTCHECK_PATCH}
-SITES.${RCPTCHECK_PATCH}=	http://www.soffian.org/downloads/qmail/
-PATCH_DIST_STRIP.${RCPTCHECK_PATCH}=-p1
-
 QMAILPATCHES+=			remote:${REMOTE_PATCH}
 REMOTE_PATCH=			netqmail-1.06-qmailremote-20170716.patch
 PATCHFILES+=			${REMOTE_PATCH}
 SITES.${REMOTE_PATCH}=		https://schmonz.com/qmail/remote/
+
+QMAILPATCHES+=			spp:${SPP_PATCH}
+SPP_PATCH=			qmail-spp-0.42.tar.gz
+PATCHFILES+=			${SPP_PATCH}
+SITES.${SPP_PATCH}=		${MASTER_SITE_SOURCEFORGE:=qmail-spp/}
+PATCH_DIST_CAT.${SPP_PATCH}=	${TAR} -xOf ${SPP_PATCH} qmail-spp-0.42/netqmail-spp.diff \
+				| ${SED} -e 's|sppfok \!= 1|sppfok == -1|'
+PATCH_DIST_STRIP.${SPP_PATCH}=	-p1
+LICENSE+=			AND gnu-gpl-v2
 
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Meai)
 .  include "../../devel/libidn2/buildlink3.mk"
 QMAILPATCHES+=			eai:${EAI_PATCH}
-EAI_PATCH=			netqmail-1.06-tls-20160918-onlyremote-20181107-smtputf8-20181107.patch
+EAI_PATCH=			netqmail-1.06-tls-20160918-onlyremote-20181107-spp-20181109-smtputf8-20181109.patch
 PATCHFILES+=			${EAI_PATCH}
 SITES.${EAI_PATCH}=		https://schmonz.com/qmail/eai/
 CFLAGS+=			-DEHLO=1
