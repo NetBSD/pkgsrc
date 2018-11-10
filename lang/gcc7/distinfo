@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2018/11/09 11:22:13 mrg Exp $
+$NetBSD: distinfo,v 1.13 2018/11/10 04:24:00 mrg Exp $
 
 SHA1 (gcc-7.3.0.tar.xz) = 9689b9cae7b2886fdaa08449a26701f095c04e48
 RMD160 (gcc-7.3.0.tar.xz) = 31f6934a0e0c0ca84b6668110f9afdb91c1f9023
@@ -12,6 +12,7 @@ SHA1 (patch-contrib_download__prerequisites) = 86c6c16e0e3e3a0bcb38579a8b4004f60
 SHA1 (patch-gcc_Makefile.in) = d96a57a098e49a2c5ea6478dd5d22aba584fc1bc
 SHA1 (patch-gcc_common_config_arm_arm-common.c) = 7c973cb9554a52f4b85f8fc98708f5e5cce8e8bd
 SHA1 (patch-gcc_config.gcc) = 20d1444cc2c031c8adc96289e1ccc6c1d29eb72f
+SHA1 (patch-gcc_config_aarch64_aarch64-builtins.c) = b10ef4b9ad39e605fc4e2a0c8dffdae677842e94
 SHA1 (patch-gcc_config_aarch64_aarch64-netbsd.h) = ed7bc42813b33c87242f5ef0a304a621b873c9eb
 SHA1 (patch-gcc_config_aarch64_aarch64.h) = 5339d9c7ce9d040097c29cc3b7ec1d2fbfff811c
 SHA1 (patch-gcc_config_aarch64_t-aarch64-netbsd) = 0e7feb6f238b0a752ccc50e95e09b017cb368a90
@@ -22,7 +23,7 @@ SHA1 (patch-gcc_config_arm_netbsd-eabi.h) = 9c1d2148e306024e8de3bdc9802fb63b976e
 SHA1 (patch-gcc_config_arm_netbsd-elf.h) = 80a07645fab197969b4a6f518fdc81bda7376375
 SHA1 (patch-gcc_config_netbsd-elf.h) = 5a9b5ef26c03bec3cd58e2f446224aa6e94a30d5
 SHA1 (patch-gcc_config_netbsd-protos.h) = 6d28864b4ccc8c1a63fe28e43601b84b63a00633
-SHA1 (patch-gcc_config_netbsd.h) = 8861abb345b3ad72574fbe7afca2ea78b81d9632
+SHA1 (patch-gcc_config_netbsd.h) = 662226f4491f94b641f78b1273a9047434d75aed
 SHA1 (patch-gcc_config_t-netbsd) = 802ad5706aa7ca9629f8e237f08fbb1569d28846
 SHA1 (patch-gcc_config_x-netbsd) = 6dc3d78e26df62054ea29f98ca51592858e671e3
 SHA1 (patch-gcc_configure) = 15fb7af267b79965f83bc64ce8aad1279b0ea52d
