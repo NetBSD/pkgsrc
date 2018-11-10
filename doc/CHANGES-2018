@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4657 2018/11/10 20:03:51 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.4658 2018/11/10 21:21:22 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6515,3 +6515,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added shells/bosh version 20181030 [wiz 2018-11-10]
 	Added shells/pbosh version 20181030 [wiz 2018-11-10]
 	Updated news/xrn to 10.11 [wiz 2018-11-10]
+	Updated graphics/tiff to 4.0.10 [maya 2018-11-10]
