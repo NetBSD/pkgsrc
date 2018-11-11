@@ -1,0 +1,16 @@
+# $NetBSD: path.help,v 1.1 2018/11/11 20:38:27 rillig Exp $
+
+# Package-settable variables:
+#
+# PREPEND_PATH
+#	A space-separated list of path names. All directories that are
+#	added to this list are added to the PATH environment variable,
+#	in reverse order. To add a directory at the very front of the
+#	PATH, append to this variable after including bsd.prefs.mk and
+#	right before including bsd.pkg.mk.
+#
+#	The modified PATH is available in all {pre,do,post}-* targets,
+#	as well as the configure scripts and invocations of the make
+#	targets in the package itself.
+#
+# Keywords: PATH
