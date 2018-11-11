@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4658 2018/11/10 21:21:22 maya Exp $
+$NetBSD: CHANGES-2018,v 1.4659 2018/11/11 02:00:18 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6516,3 +6516,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added shells/pbosh version 20181030 [wiz 2018-11-10]
 	Updated news/xrn to 10.11 [wiz 2018-11-10]
 	Updated graphics/tiff to 4.0.10 [maya 2018-11-10]
+	Updated mail/greylisting-spp to 1.1 [schmonz 2018-11-11]
