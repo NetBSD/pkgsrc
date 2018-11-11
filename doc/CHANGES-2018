@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4659 2018/11/11 02:00:18 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.4660 2018/11/11 22:03:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6517,3 +6517,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated news/xrn to 10.11 [wiz 2018-11-10]
 	Updated graphics/tiff to 4.0.10 [maya 2018-11-10]
 	Updated mail/greylisting-spp to 1.1 [schmonz 2018-11-11]
+	Updated devel/py-test to 3.10.1 [adam 2018-11-11]
+	Updated devel/py-test-xdist to 1.24.1 [adam 2018-11-11]
+	Updated databases/py-sqlalchemy to 1.2.14 [adam 2018-11-11]
+	Updated databases/py-asyncpg to 0.18.2 [adam 2018-11-11]
