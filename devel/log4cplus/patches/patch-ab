@@ -1,3 +1,9 @@
+$NetBSD: patch-ab,v 1.2 2018/11/11 21:16:48 sno Exp $
+
+Fix C-API compiling and threadpool resize, upstream commits
+* e73dc3fb config.hxx: fix C API compiling
+* 5d74c170 config.hxx: fix threadpool compiling
+
 diff --git a/include/log4cplus/config.hxx b/include/log4cplus/config.hxx
 index 57ac533d..667c47cd 100644
 --- include/log4cplus/config.hxx
