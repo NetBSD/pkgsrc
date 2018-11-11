@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.557 2018/11/10 11:45:29 rillig Exp $
+# $NetBSD: Makefile,v 1.558 2018/11/11 20:55:23 rillig Exp $
 
 PKGNAME=	pkglint-5.6.6
 CATEGORIES=	pkgtools
@@ -31,6 +31,8 @@ EXTRACT_PAX_ARGS=	${"${PKGSRC_RUN_TEST:M[yY][eE][sS]}" :?: -s '|.*/intqa/.*||'}
 
 WRKSRC.tools=		${WRKSRC}/golang.org/x/tools
 WRKSRC.pkglint=		${WRKSRC}/netbsd.org/pkglint
+
+PREPEND_PATH+=		${WRKDIR}/bin	# for goyacc
 
 post-extract:
 	${RUN} ${MKDIR} ${WRKSRC.pkglint}
