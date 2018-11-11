@@ -1,0 +1,21 @@
+diff --git a/include/log4cplus/config.hxx b/include/log4cplus/config.hxx
+index 57ac533d..667c47cd 100644
+--- include/log4cplus/config.hxx
++++ include/log4cplus/config.hxx
+@@ -31,7 +31,6 @@
+ #else
+ #  include <log4cplus/config/defines.hxx>
+ #endif
+-#include <cstddef>
+ 
+ # if ! defined (LOG4CPLUS_WORKING_LOCALE) \
+   && ! defined (LOG4CPLUS_WORKING_C_LOCALE) \
+@@ -178,6 +178,8 @@
+ #endif
+ 
+ #if defined(__cplusplus)
++#include <cstddef>
++
+ namespace log4cplus
+ {
+
