@@ -1,0 +1,24 @@
+$NetBSD: patch-test_Makefile,v 1.1 2018/11/11 01:59:23 schmonz Exp $
+
+Avoid unnecessary use of unportable "echo -n".
+
+--- test/Makefile.orig	2008-04-27 20:17:06.000000000 +0000
++++ test/Makefile
+@@ -60,7 +60,7 @@ run-tests: greylisting-spp
+ 	echo junk01@tivano.de >envdir/SMTPMAILFROM; ./test-accept.sh envdir
+ 	echo junk@tivano.de >envdir/SMTPMAILFROM
+ 	echo junk01@tivano.de >envdir/SMTPRCPTTO; ./test-accept.sh envdir
+-	echo -n "" >envdir/SMTPMAILFROM; ./test-reject-later.sh envdir
++	>envdir/SMTPMAILFROM; ./test-reject-later.sh envdir
+ 	sleep 1
+ 	./test-accept.sh envdir
+ 	./test-reject-later.sh envdir
+@@ -72,7 +72,7 @@ run-tests: greylisting-spp
+ 		>envdir/SMTPMAILFROM
+ 	./test-accept.sh envdir
+ 	rm -rf $(TESTDB); mkdir -p dbdir
+-	echo -n "" >envdir/SMTPMAILFROM
++	>envdir/SMTPMAILFROM
+ 	echo junk01@tivano.de >envdir/SMTPRCPTTO; ./test-reject-later.sh envdir
+ 	echo junk02@tivano.de >envdir/SMTPRCPTTO; ./test-reject-later.sh envdir
+ 	sleep 1
