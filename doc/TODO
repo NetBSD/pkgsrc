@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18607 2018/11/11 10:39:29 wiz Exp $
+$NetBSD: TODO,v 1.18608 2018/11/11 22:03:32 adam Exp $
 
 Suggested new packages
 ======================
@@ -1261,7 +1261,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-simpletal-5.1
 	o py-spf-2.0.12t
 	o py-sybase-0.37
-	o py-test-xdist-1.24.1
 	o py-wxWidgets-4.0.0
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
