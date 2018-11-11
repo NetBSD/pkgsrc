@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18606 2018/11/10 20:03:51 wiz Exp $
+$NetBSD: TODO,v 1.18607 2018/11/11 10:39:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -342,7 +342,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaDemos-8.3.0
-	o MesaLib-18.2.3
+	o MesaLib-18.2.4
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o PAM-0.99.7.1
@@ -674,6 +674,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ghc-8.2
 	o ghc7-7.10.1
 	o ghdl-0.33
+	o gimp-2.10.8
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-server-2.3.5
@@ -778,7 +779,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o handbrake-1.1.0
 	o hanzim-3.5
-	o harfbuzz-2.1.0
+	o harfbuzz-2.1.1
 	o harminv-1.4
 	o haskell-mode-13.20
 	o hdevtools-0.1.3.0
@@ -1087,7 +1088,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o munin-node-1.4.6
 	o munin-server-1.4.6
 	o muse-0.9.2
-	o musicpd-0.21
+	o musicpd-0.21.1
 	o myodbc-5.3.4
 	o mysql-server-5.5.62
 	o mysql-server-5.6.42
@@ -1235,12 +1236,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
 	o py-augeas-1.0.3
+	o py-cairo-1.18.0
 	o py-cassa-1.11.0
 	o py-cssselect2-0.2.1
 	o py-doctor-15.1.0
 	o py-ephem3-3.7.6.0
 	o py-gnome-menus-3.8.0
 	o py-gobject3-3.30.1
+	o py-gstreamer1-1.14.4
 	o py-hgview-1.9.0
 	o py-hsm-1.1.1
 	o py-input-pad-1.4.2
@@ -1258,6 +1261,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-simpletal-5.1
 	o py-spf-2.0.12t
 	o py-sybase-0.37
+	o py-test-xdist-1.24.1
 	o py-wxWidgets-4.0.0
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
@@ -1391,6 +1395,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o swi-prolog-packages-7.1.37
 	o swt-4.5
 	o sympa-6.2.14
+	o syncthing-0.14.52
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1 [needs polkit|GNOME 2.30]
 	o systrace-1.6e
@@ -1457,7 +1462,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o userppp-030706
 	o userspace-rcu-0.9.1
 	o utilisp-1.14
-	o vala-0.42.2
+	o vala-0.42.3
 	o varnish-6.0
 	o varnish-5.1.3
 	o vbetool-1.1
