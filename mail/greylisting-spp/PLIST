@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2018/11/11 01:59:23 schmonz Exp $
+bin/greylisting-spp
+share/doc/greylisting-spp/README
+share/doc/greylisting-spp/README.db-bdb
+share/doc/greylisting-spp/README.db-file
+share/doc/greylisting-spp/README.db-sqlite
+share/doc/greylisting-spp/README.db-sqlite3
+share/doc/greylisting-spp/README.dbapi
