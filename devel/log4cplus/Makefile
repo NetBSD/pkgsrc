@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2013/09/23 13:55:50 obache Exp $
+# $NetBSD: Makefile,v 1.7 2018/11/11 20:09:56 sno Exp $
 #
 
-DISTNAME=	log4cplus-1.1.1
-PKGREVISION=	1
+DISTNAME=	log4cplus-2.0.2
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=log4cplus/}
+GITHUB_RELEASE=	REL_2_0_2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=log4cplus/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	reed@reedmedia.net
@@ -14,7 +14,14 @@ LICENSE=	apache-2.0 AND 2-clause-bsd
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++	# C for configure
+USE_TOOLS+=	pkg-config autoconf automake autoreconf gmake
+USE_LANGUAGES=	c99 c++11	# C for configure
+
+CONFIGURE_ARGS+=	--with-iconv
+CONFIGURE_ARGS+=	--without-wchar_t-support
+CONFIGURE_ARGS+=	--without-qt
+CONFIGURE_ARGS+=	--without-qt5
+CONFIGURE_ARGS+=	--without-python
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
@@ -24,6 +31,7 @@ CPPFLAGS+=	-Werror=ignored-attributes
 CHECK_BUILTIN.pthread:= yes
 .include "../../mk/pthread.builtin.mk"
 CHECK_BUILTIN.pthread:= no
+CONFIGURE_ARGS+=	--enable-threads
 
 # TLS is not supported by NetBSD<6
 .if !empty(MACHINE_PLATFORM:MNetBSD-[0-5].*-*)
@@ -31,4 +39,5 @@ CONFIGURE_ENV+=	ac_cv_thread_local=no
 CONFIGURE_ENV+=	ac_cv__thread_keyword=no
 .endif
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

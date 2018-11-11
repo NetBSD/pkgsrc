@@ -1,0 +1,12 @@
+diff --git a/src/clogger.cxx b/src/clogger.cxx
+index b3d29752..bf534f07 100644
+--- src/clogger.cxx
++++ src/clogger.cxx
+@@ -44,7 +44,6 @@ using namespace log4cplus::helpers;
+ LOG4CPLUS_EXPORT void *
+ log4cplus_initialize(void)
+ {
+-    Initializer * initializer = 0;
+     try
+     {
+         return new Initializer();
