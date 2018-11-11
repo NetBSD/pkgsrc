@@ -1,7 +1,8 @@
-$NetBSD: patch-build_cmake_aom__configure.cmake,v 1.2 2018/10/23 17:30:21 jperkin Exp $
+$NetBSD: patch-build_cmake_aom__configure.cmake,v 1.3 2018/11/11 18:03:17 leot Exp $
 
-Don't disable fortify just because it's a release build.
-Set CPU correctly on SunOS.
+- Don't disable fortify just because it's a release build.
+- Set CPU correctly on SunOS.
+- Add support for NetBSD/*arm*
 
 --- build/cmake/aom_configure.cmake.orig	2018-10-01 03:20:05.000000000 +0000
 +++ build/cmake/aom_configure.cmake
@@ -18,7 +19,17 @@ Set CPU correctly on SunOS.
    elseif("${CMAKE_SYSTEM_PROCESSOR}" MATCHES "^arm" OR
           "${CMAKE_SYSTEM_PROCESSOR}" MATCHES "^mips")
      set(AOM_TARGET_CPU "${CMAKE_SYSTEM_PROCESSOR}")
-@@ -290,9 +294,6 @@ else()
+@@ -151,7 +155,8 @@ elseif("${AOM_TARGET_CPU}" MATCHES "arm"
+   if("${AOM_TARGET_SYSTEM}" STREQUAL "Darwin")
+     set(AS_EXECUTABLE as)
+     set(AOM_AS_FLAGS -arch ${AOM_TARGET_CPU} -isysroot ${CMAKE_OSX_SYSROOT})
+-  elseif("${AOM_TARGET_SYSTEM}" STREQUAL "Linux")
++  elseif("${AOM_TARGET_SYSTEM}" STREQUAL "Linux" OR
++         "${AOM_TARGET_SYSTEM}" STREQUAL "NetBSD")
+     if(NOT AS_EXECUTABLE)
+       set(AS_EXECUTABLE as)
+     endif()
+@@ -290,9 +295,6 @@ else()
      add_compiler_flag_if_supported("-Werror")
    endif()
  
