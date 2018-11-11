@@ -1,3 +1,7 @@
+$NetBSD: patch-aa,v 1.2 2018/11/11 21:16:48 sno Exp $
+
+Remove unused variable - upstream commit d556e94c
+
 diff --git a/src/clogger.cxx b/src/clogger.cxx
 index b3d29752..bf534f07 100644
 --- src/clogger.cxx
