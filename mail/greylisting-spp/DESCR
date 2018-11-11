@@ -1,0 +1,2 @@
+greylisting-spp is a qmail-spp plugin for greylisting. It can track its
+state in a flat file, Berkeley DB 4, or SQLite 2 or 3.
