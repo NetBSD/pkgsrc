@@ -1,4 +1,4 @@
-# $NetBSD: show.mk,v 1.15 2018/11/10 10:40:55 rillig Exp $
+# $NetBSD: show.mk,v 1.16 2018/11/11 19:07:12 rillig Exp $
 #
 # This file contains some targets that print information gathered from
 # variables. They do not modify any variables.
@@ -149,18 +149,20 @@ show-all-${g}: .PHONY
 .  for c in ${_SHOW_ALL_CATEGORIES}
 .    for v in ${${c}.${g}}
 .      if (${v:M*_ENV}			\
-	|| ${v:M*_ENV.*})
+	|| ${v:M*_ENV.*}		\
+	|| ${v} == PLIST_SUBST		\
+	|| ${v:MSUBST_VARS.*})
 
 # multi-valued variables, values are sorted
 	${RUN}								\
 	if ${!defined(${v}) :? true : false}; then			\
-	  printf '  %s\t%s (undefined)\n' ${_LABEL.${c}} ${v:Q};	\
+	  printf '  %s\t%-23s # undefined\n' ${_LABEL.${c}} ${v:Q};	\
 	elif value=${${v}:U:M*:Q} && test "x$$value" = "x"; then	\
-	  printf '  %s\t%s = # empty\n' ${_LABEL.${c}} ${v:Q};		\
+	  printf '  %s\t%-23s # empty\n' ${_LABEL.${c}} ${v:Q}=;	\
 	else								\
-	  printf '  %s\t%s (sorted) = \\\n' ${_LABEL.${c}} ${v:Q};	\
-	  printf '  \t\t%s \\\n' ${${v}:O:@x@${x:Q}@};			\
-	  printf '  \t\t# end of %s\n' ${v:Q};				\
+	  printf '  %s\t%-23s \\\n' ${_LABEL.${c}} ${v:Q}=;		\
+	  printf '\t\t\t\t%s \\\n' ${${v}:O:@x@${x:Q}@};		\
+	  printf '\t\t\t\t# end of %s (sorted)\n' ${v:Q};		\
 	fi
 
 .      elif (${v:M*_ARGS}		\
@@ -168,6 +170,7 @@ show-all-${g}: .PHONY
 	|| ${v:M*_CMD}			\
 	|| ${v:M*_CMD_DEFAULT}		\
 	|| ${v:M*_SKIP}			\
+	|| ${v:M*INSTALL_SRC}		\
 	|| ${v:MMASTER_SITE*}		\
 	|| ${v:MSUBST_FILES.*}		\
 	|| ${v:MSUBST_SED.*}		\
@@ -177,13 +180,13 @@ show-all-${g}: .PHONY
 # multi-valued variables, preserving original order
 	${RUN}								\
 	if ${!defined(${v}) :? true : false}; then			\
-	  printf '  %s\t%s (undefined)\n' ${_LABEL.${c}} ${v:Q};	\
+	  printf '  %s\t%-23s # undefined\n' ${_LABEL.${c}} ${v:Q};	\
 	elif value=${${v}:U:M*:Q} && test "x$$value" = "x"; then	\
-	  printf '  %s\t%s = # empty\n' ${_LABEL.${c}} ${v:Q};		\
+	  printf '  %s\t%-23s # empty\n' ${_LABEL.${c}} ${v:Q}=;	\
 	else								\
-	  printf '  %s\t%s = \\\n' ${_LABEL.${c}} ${v:Q};		\
-	  printf '  \t\t%s \\\n' ${${v}:@x@${x:Q}@};			\
-	  printf '  \t\t# end of %s\n' ${v:Q};				\
+	  printf '  %s\t%-23s \\\n' ${_LABEL.${c}} ${v:Q}=;		\
+	  printf '\t\t\t\t%s \\\n' ${${v}:@x@${x:Q}@};			\
+	  printf '\t\t\t\t# end of %s\n' ${v:Q};			\
 	fi
 
 .      else
@@ -191,11 +194,12 @@ show-all-${g}: .PHONY
 # single-valued variables
 	${RUN}								\
 	if ${!defined(${v}) :? true : false}; then			\
-	  printf '  %s\t%s (undefined)\n' ${_LABEL.${c}} ${v:Q};	\
+	  printf '  %s\t%-23s # undefined\n' ${_LABEL.${c}} ${v:Q};	\
 	elif value=${${v}:U:Q} && test "x$$value" = "x"; then		\
-	  printf '  %s\t%s = # empty\n' ${_LABEL.${c}} ${v:Q};		\
+	  printf '  %s\t%-23s # empty\n' ${_LABEL.${c}} ${v:Q}=;	\
 	else								\
-	  printf '  %s\t%s = %s\n' ${_LABEL.${c}} ${v:Q} "$$value";	\
+	  case "$$value" in (*[\	\ ]) eol="# ends with space";; (*) eol=""; esac; \
+	  printf '  %s\t%-23s %s\n' ${_LABEL.${c}} ${v:Q}= "$$value$$eol"; \
 	fi
 
 .      endif
@@ -213,4 +217,3 @@ show-depends-options:
 		cd ${.CURDIR}/../../$$dir &&                            \
 		${RECURSIVE_MAKE} ${MAKEFLAGS} show-options;            \
 	done
-
