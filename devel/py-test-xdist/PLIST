@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/02/22 09:36:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/11/11 21:57:17 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -36,12 +36,12 @@ ${PYSITELIB}/xdist/scheduler/__init__.pyo
 ${PYSITELIB}/xdist/scheduler/each.py
 ${PYSITELIB}/xdist/scheduler/each.pyc
 ${PYSITELIB}/xdist/scheduler/each.pyo
-${PYSITELIB}/xdist/scheduler/filescope.py
-${PYSITELIB}/xdist/scheduler/filescope.pyc
-${PYSITELIB}/xdist/scheduler/filescope.pyo
 ${PYSITELIB}/xdist/scheduler/load.py
 ${PYSITELIB}/xdist/scheduler/load.pyc
 ${PYSITELIB}/xdist/scheduler/load.pyo
+${PYSITELIB}/xdist/scheduler/loadfile.py
+${PYSITELIB}/xdist/scheduler/loadfile.pyc
+${PYSITELIB}/xdist/scheduler/loadfile.pyo
 ${PYSITELIB}/xdist/scheduler/loadscope.py
 ${PYSITELIB}/xdist/scheduler/loadscope.pyc
 ${PYSITELIB}/xdist/scheduler/loadscope.pyo
