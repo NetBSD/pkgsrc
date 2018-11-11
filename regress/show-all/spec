@@ -1,4 +1,4 @@
-# $NetBSD: spec,v 1.1 2018/11/10 10:40:56 rillig Exp $
+# $NetBSD: spec,v 1.2 2018/11/11 19:07:12 rillig Exp $
 
 tmpdir=${TMPDIR:-/tmp}/pkgsrc-show-all
 rm -rf "$tmpdir"
@@ -23,33 +23,34 @@ check_result() {
 
 	cat <<'EOF' > "$tmpdir/expected"
 regress:
-  pkg	REGRESS.undefined (undefined)
-  pkg	REGRESS.empty = # empty
-  pkg	REGRESS.value = All * kinds of `strange' \escape $characters
-  pkg	REGRESS_ENV.undefined (undefined)
-  pkg	REGRESS_ENV.empty = # empty
-  pkg	REGRESS_ENV.space = # empty
-  pkg	REGRESS_ENV.value (sorted) = \
-  		*=all \
-  		VAR1=value1 \
-  		VAR2=`command \
-  		backticks` \
-  		execution \
-  		via \
-  		# end of REGRESS_ENV.value
-  pkg	REGRESS_ARGS.undefined (undefined)
-  pkg	REGRESS_ARGS.empty = # empty
-  pkg	REGRESS_ARGS.space = # empty
-  pkg	REGRESS_ARGS.value = \
-  		VAR1=value1 \
-  		VAR2=`command \
-  		execution \
-  		via \
-  		backticks` \
-  		*=all \
-  		# end of REGRESS_ARGS.value
-  pkg	* = show-all-regress
-  pkg	** = asterisk
+  pkg	REGRESS_ENV.undefined   # undefined
+  pkg	REGRESS_ENV.empty=      # empty
+  pkg	REGRESS_ENV.space=      # empty
+  pkg	REGRESS_ENV.value=      \
+				*=all \
+				VAR1=value1 \
+				VAR2=`command \
+				backticks` \
+				execution \
+				via \
+				# end of REGRESS_ENV.value (sorted)
+  pkg	REGRESS_ARGS.undefined  # undefined
+  pkg	REGRESS_ARGS.empty=     # empty
+  pkg	REGRESS_ARGS.space=     # empty
+  pkg	REGRESS_ARGS.value=     \
+				VAR1=value1 \
+				VAR2=`command \
+				execution \
+				via \
+				backticks` \
+				*=all \
+				# end of REGRESS_ARGS.value
+  pkg	REGRESS.undefined       # undefined
+  pkg	REGRESS.empty=          # empty
+  pkg	REGRESS.space=           # ends with space
+  pkg	REGRESS.value=          All * kinds of `strange' \escape $characters
+  pkg	*=                      show-all-regress
+  pkg	**=                     asterisk
 
 EOF
 
