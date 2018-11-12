@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.214 2018/10/09 16:56:17 abs Exp $
+# $NetBSD: Makefile,v 1.215 2018/11/12 03:52:40 ryoon Exp $
 
 # (Intended to be upgraded to vlc3 when dependencies resolved)
 DISTNAME=		vlc-${VLC_VERSION}
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vlc/}
 MASTER_SITES+=		http://download.videolan.org/pub/videolan/vlc/${VLC_VERSION}/

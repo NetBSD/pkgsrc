@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2018/04/16 14:34:00 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2018/11/12 03:51:31 ryoon Exp $
 
 BUILDLINK_TREE+=	keybinder
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	keybinder
 KEYBINDER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.keybinder+=	keybinder>=0.3.0
-BUILDLINK_ABI_DEPENDS.keybinder?=	keybinder>=0.3.0nb5
+BUILDLINK_ABI_DEPENDS.keybinder?=	keybinder>=0.3.0nb6
 BUILDLINK_PKGSRCDIR.keybinder?=		../../x11/keybinder
 
 .include "../../devel/gobject-introspection/buildlink3.mk"

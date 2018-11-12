@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2018/03/12 11:15:40 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2018/11/12 03:51:20 ryoon Exp $
 
 BUILDLINK_TREE+=	libass
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libass
 LIBASS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libass+=	libass>=0.9.12
-BUILDLINK_ABI_DEPENDS.libass+=	libass>=0.14.0nb1
+BUILDLINK_ABI_DEPENDS.libass+=	libass>=0.14.0nb2
 BUILDLINK_PKGSRCDIR.libass?=	../../multimedia/libass
 
 .include "../../converters/fribidi/buildlink3.mk"

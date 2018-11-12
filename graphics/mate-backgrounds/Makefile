@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2018/05/14 12:51:39 youri Exp $
+# $NetBSD: Makefile,v 1.7 2018/11/12 03:52:15 ryoon Exp $
 
+PKGREVISION= 1
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	mate-backgrounds-${VERSION}

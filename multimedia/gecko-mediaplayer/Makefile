@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2018/08/16 18:55:04 adam Exp $
+# $NetBSD: Makefile,v 1.60 2018/11/12 03:52:37 ryoon Exp $
 
 DISTNAME=	gecko-mediaplayer-1.0.9
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	multimedia www
 MASTER_SITES=	http://gecko-mediaplayer.googlecode.com/svn/packages/
 

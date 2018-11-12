@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2018/10/03 23:15:28 nia Exp $
+# $NetBSD: Makefile,v 1.6 2018/11/12 03:52:02 ryoon Exp $
 
 DISTNAME=	bitcoin-0.16.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bitcoin/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
