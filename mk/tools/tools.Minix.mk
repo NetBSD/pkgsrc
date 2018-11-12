@@ -1,4 +1,4 @@
-# $NetBSD: tools.Minix.mk,v 1.12 2018/11/05 13:44:05 sevan Exp $
+# $NetBSD: tools.Minix.mk,v 1.13 2018/11/12 13:34:39 jperkin Exp $
 #
 # System-supplied tools for the Minix operating system.
 
@@ -36,6 +36,7 @@ TOOLS_PLATFORM.gfgrep?=		/usr/bin/fgrep
 TOOLS_PLATFORM.ggrep?=		/usr/bin/grep
 TOOLS_PLATFORM.grep?=		/usr/bin/grep
 TOOLS_PLATFORM.gsoelim?=	${TOOLS_PLATFORM.soelim}	# GNUish
+TOOLS_PLATFORM.gstrip?=		/usr/bin/strip
 TOOLS_PLATFORM.gunzip?=		/usr/bin/gunzip -f
 TOOLS_PLATFORM.gzcat?=		/usr/bin/gzcat
 TOOLS_PLATFORM.gzip?=		/usr/bin/gzip -nf ${GZIP}
