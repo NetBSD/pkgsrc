@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2018/04/16 14:35:20 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2018/11/12 03:53:06 ryoon Exp $
 
 DISTNAME=	Notes-0.1.0
 PKGNAME=	deforaos-notes-0.1.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11
 MASTER_SITES=	https://www.defora.org/os/download/download/4428/
 

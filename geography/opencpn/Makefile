@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2018/08/27 15:48:15 bouyer Exp $
+# $NetBSD: Makefile,v 1.27 2018/11/12 03:52:08 ryoon Exp $
 
 DISTNAME=	OpenCPN-4.8.6
 PKGNAME=	${DISTNAME:S/OpenCPN/opencpn/}
+PKGREVISION=	1
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenCPN/}
 GITHUB_PROJECT=	OpenCPN

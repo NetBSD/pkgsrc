@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2018/08/25 13:20:58 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2018/11/12 03:51:25 ryoon Exp $
 
 DISTNAME=	gtkspell3-3.0.9
+PKGREVISION=	1
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkspell/}
 EXTRACT_SUFX=	.tar.xz

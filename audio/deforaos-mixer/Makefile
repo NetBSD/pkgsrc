@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2018/04/16 14:34:05 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2018/11/12 03:51:39 ryoon Exp $
 
 DISTNAME=	Mixer-0.2.2
 PKGNAME=	deforaos-mixer-0.2.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	https://www.defora.org/os/download/download/4456/
 

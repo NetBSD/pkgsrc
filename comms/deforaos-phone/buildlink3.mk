@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2018/04/16 14:33:45 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2018/11/12 03:51:08 ryoon Exp $
 
 BUILDLINK_TREE+=	deforaos-phone
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	deforaos-phone
 DEFORAOS_PHONE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.deforaos-phone+=	deforaos-phone>=0.4.3
-BUILDLINK_ABI_DEPENDS.deforaos-phone?=	deforaos-phone>=0.5.1nb2
+BUILDLINK_ABI_DEPENDS.deforaos-phone?=	deforaos-phone>=0.5.1nb3
 BUILDLINK_PKGSRCDIR.deforaos-phone?=	../../comms/deforaos-phone
 
 .include "../../x11/deforaos-libdesktop/buildlink3.mk"

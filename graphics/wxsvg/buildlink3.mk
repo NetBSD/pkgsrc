@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.40 2018/04/16 14:33:52 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.41 2018/11/12 03:51:18 ryoon Exp $
 
 BUILDLINK_TREE+=	wxsvg
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	wxsvg
 WXSVG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.wxsvg+=	wxsvg>=1.0beta5
-BUILDLINK_ABI_DEPENDS.wxsvg+=	wxsvg>=1.5.3nb11
+BUILDLINK_ABI_DEPENDS.wxsvg+=	wxsvg>=1.5.3nb12
 BUILDLINK_PKGSRCDIR.wxsvg?=	../../graphics/wxsvg
 
 .include "../../fonts/fontconfig/buildlink3.mk"

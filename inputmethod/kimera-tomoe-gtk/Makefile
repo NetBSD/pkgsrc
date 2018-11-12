@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2018/04/16 14:34:45 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2018/11/12 03:52:23 ryoon Exp $
 #
 
 DISTNAME=	kimera-tomoe-gtk-0.5
-PKGREVISION=	26
+PKGREVISION=	27
 CATEGORIES=	inputmethod japanese
 MASTER_SITES=	${MASTER_SITE_OSDN:=kimera/24906/}
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.34 2018/04/16 14:33:52 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.35 2018/11/12 03:51:18 ryoon Exp $
 #
 
 BUILDLINK_TREE+=	libscigraphica
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	libscigraphica
 LIBSCIGRAPHICA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libscigraphica+=	libscigraphica>=2.1.1
-BUILDLINK_ABI_DEPENDS.libscigraphica+=	libscigraphica>=2.1.1nb32
+BUILDLINK_ABI_DEPENDS.libscigraphica+=	libscigraphica>=2.1.1nb33
 BUILDLINK_PKGSRCDIR.libscigraphica?=	../../graphics/libscigraphica
 
 .include "../../graphics/libart/buildlink3.mk"

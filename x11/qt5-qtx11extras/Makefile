@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2018/10/01 17:44:49 adam Exp $
+# $NetBSD: Makefile,v 1.29 2018/11/12 03:51:36 ryoon Exp $
 
 DISTNAME=	qtx11extras-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtx11extras-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	Qt5 module for X11 extras
 
 BUILD_TARGET=		sub-src

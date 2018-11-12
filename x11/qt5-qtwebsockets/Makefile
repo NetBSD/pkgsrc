@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2018/10/01 17:44:49 adam Exp $
+# $NetBSD: Makefile,v 1.23 2018/11/12 03:51:36 ryoon Exp $
 
 DISTNAME=	qtwebsockets-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtwebsockets-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	Qt5 module for websockets
 
 MAKE_ENV+=		QTDIR=${QTDIR}

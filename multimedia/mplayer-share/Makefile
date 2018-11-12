@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2018/07/06 15:06:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.60 2018/11/12 03:52:39 ryoon Exp $
 
-PKGREVISION=	11
+PKGREVISION=	12
 .include "Makefile.common"
 
 PKGNAME=	mplayer-share-${MPLAYER_VERSION}
