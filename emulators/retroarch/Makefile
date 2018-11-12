@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2018/10/15 17:53:23 nia Exp $
+# $NetBSD: Makefile,v 1.15 2018/11/12 03:52:01 ryoon Exp $
 
 PKGNAME=	retroarch-${RETROARCH_VERSION}
+PKGREVISION=	1
 DISTNAME=	RetroArch-${RETROARCH_VERSION}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/RetroArch/releases/download/v${RETROARCH_VERSION}/}

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.68 2018/08/22 09:45:43 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2018/11/12 03:52:33 ryoon Exp $
 
 DISTNAME=	gkrellweather-2.0.7
 PKGNAME=	gkrellm-weather-2.0.7
-PKGREVISION=	38
+PKGREVISION=	39
 CATEGORIES=	misc
 #MASTER_SITES=	http://kmlinux.fjfi.cvut.cz/~makovick/gkrellm/
 EXTRACT_SUFX=	.tgz

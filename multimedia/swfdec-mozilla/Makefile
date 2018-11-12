@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.68 2018/10/24 21:11:53 leot Exp $
+# $NetBSD: Makefile,v 1.69 2018/11/12 03:52:39 ryoon Exp $
 #
 
 DISTNAME=	swfdec-mozilla-0.8.2
-PKGREVISION=	63
+PKGREVISION=	64
 CATEGORIES=	multimedia
 MASTER_SITES=	https://swfdec.freedesktop.org/download/swfdec-mozilla/0.8/
 

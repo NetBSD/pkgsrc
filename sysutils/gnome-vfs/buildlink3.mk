@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.58 2018/04/16 14:33:56 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.59 2018/11/12 03:51:24 ryoon Exp $
 
 BUILDLINK_TREE+=	gnome-vfs
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnome-vfs
 GNOME_VFS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnome-vfs+=	gnome-vfs>=2.8.0
-BUILDLINK_ABI_DEPENDS.gnome-vfs+=	gnome-vfs>=2.24.4nb36
+BUILDLINK_ABI_DEPENDS.gnome-vfs+=	gnome-vfs>=2.24.4nb37
 BUILDLINK_PKGSRCDIR.gnome-vfs?=		../../sysutils/gnome-vfs
 
 pkgbase := gnome-vfs
