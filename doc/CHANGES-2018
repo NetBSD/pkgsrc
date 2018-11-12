@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4662 2018/11/12 07:25:23 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4663 2018/11/12 10:52:20 he Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6524,3 +6524,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated fonts/harfbuzz to 2.1.1 [ryoon 2018-11-12]
 	Updated emulators/mame to 0.203 [adam 2018-11-12]
 	Updated www/libsass to 3.5.5 [adam 2018-11-12]
+	Updated sysutils/zabbix to 4.0.1 [he 2018-11-12]
