@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2018/04/16 14:35:17 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2018/11/12 03:53:02 ryoon Exp $
 
 DISTNAME=		obconf-2.0.4
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		wm
 MASTER_SITES=		http://openbox.org/dist/obconf/
 

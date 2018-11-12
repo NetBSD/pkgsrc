@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.89 2018/04/16 14:35:28 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2018/11/12 03:53:16 ryoon Exp $
 #
 
 DISTNAME=	zenity-2.32.1
-PKGREVISION=	24
+PKGREVISION=	25
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/zenity/2.32/}
 EXTRACT_SUFX=	.tar.bz2

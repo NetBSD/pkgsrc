@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.125 2018/08/16 18:54:52 adam Exp $
+# $NetBSD: Makefile,v 1.126 2018/11/12 03:52:14 ryoon Exp $
 #
 
 PKGNAME=	kipi-plugins-4.13.0
-PKGREVISION=	15
+PKGREVISION=	16
 DISTNAME=	digikam-4.13.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_KDE:=digikam/}

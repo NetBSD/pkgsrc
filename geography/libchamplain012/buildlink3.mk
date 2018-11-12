@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.16 2018/10/24 21:11:45 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2018/11/12 03:51:15 ryoon Exp $
 
 BUILDLINK_TREE+=	libchamplain012
 
 .if !defined(LIBCHAMPLAIN012_BUILDLINK3_MK)
 LIBCHAMPLAIN012_BUILDLINK3_MK:=
 
-BUILDLINK_ABI_DEPENDS.libchamplain012+=	libchamplain012>=0.12.10nb17
+BUILDLINK_ABI_DEPENDS.libchamplain012+=	libchamplain012>=0.12.10nb18
 BUILDLINK_API_DEPENDS.libchamplain012+=	libchamplain012>=0.12.9
 BUILDLINK_PKGSRCDIR.libchamplain012?=	../../geography/libchamplain012
 
