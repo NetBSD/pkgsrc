@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.62 2018/10/17 08:30:43 jperkin Exp $
+# $NetBSD: tools.Linux.mk,v 1.63 2018/11/12 13:34:39 jperkin Exp $
 #
 # System-supplied tools for the Linux operating system.
 
@@ -136,6 +136,7 @@ TOOLS_PLATFORM.gsed?=		/usr/bin/sed
 .if exists(/usr/bin/soelim)
 TOOLS_PLATFORM.gsoelim?=	/usr/bin/soelim
 .endif
+TOOLS_PLATFORM.gstrip?=		/usr/bin/strip
 .if exists(/bin/tar)
 TOOLS_PLATFORM.gtar?=		/bin/tar
 .elif exists(/usr/bin/tar)
