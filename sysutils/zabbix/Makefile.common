@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.9 2018/09/20 13:44:47 he Exp $
+# $NetBSD: Makefile.common,v 1.10 2018/11/12 10:51:34 he Exp $
 # used by sysutils/zabbix/Makefile
 # used by sysutils/zabbix-frontend/Makefile
 
-DISTNAME=	zabbix-3.4.14
+DISTNAME=	zabbix-4.0.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zabbix/}
 

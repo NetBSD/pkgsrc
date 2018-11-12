@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2018/09/29 19:34:29 wiedi Exp $
+# $NetBSD: Makefile,v 1.16 2018/11/12 10:51:34 he Exp $
 
 # PKGREVISION= 1
-PKGREVISION= 1
 .include "Makefile.common"
 
 COMMENT=	Enterprise-class Monitoring Solution for Everyone
@@ -50,6 +49,7 @@ PKG_GECOS.${ZABBIX_USER}=Zabbix user
 post-install:
 	cd ${WRKSRC}/database/${ZABBIX_DB_TYPE}; \
 		${PAX} -rw . ${DESTDIR}${PREFIX}/share/zabbix/
+	rm ${DESTDIR}${PREFIX}/share/zabbix/Makefile*
 
 .include "options.mk"
 
