@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2018/07/19 15:15:23 jaapb Exp $
+# $NetBSD: Makefile,v 1.3 2018/11/12 16:10:20 jaapb Exp $
 
 DISTNAME=	lwt_log-1.1.0
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aantron/}
 GITHUB_PROJECT=	lwt_log
