@@ -1,4 +1,4 @@
-# $NetBSD: tools.DragonFly.mk,v 1.44 2015/02/01 08:48:56 obache Exp $
+# $NetBSD: tools.DragonFly.mk,v 1.45 2018/11/12 13:34:39 jperkin Exp $
 #
 # System-supplied tools for the DragonFly operating system.
 
@@ -36,6 +36,7 @@ TOOLS_PLATFORM.flex?=		/usr/bin/flex
 TOOLS_PLATFORM.ftp?=		/usr/bin/ftp
 TOOLS_PLATFORM.grep?=		/usr/bin/grep
 TOOLS_PLATFORM.groff?=		/usr/bin/groff
+TOOLS_PLATFORM.gstrip?=		/usr/bin/strip
 .if exists(/usr/bin/gtar)
 TOOLS_PLATFORM.gtar?=		/usr/bin/gtar
 .endif
