@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2016/02/02 06:12:10 dbj Exp $
+# $NetBSD: Makefile,v 1.64 2018/11/12 14:40:20 jperkin Exp $
 
 DISTNAME=	sox-14.4.2
 PKGREVISION=	2
@@ -27,6 +27,9 @@ SUBST_SED.gsm=		-e "s!gsm/gsm.h!gsm.h!"
 SUBST_STAGE.gsm=	pre-configure
 
 .include "options.mk"
+
+# failed to convert strong functions and variables: Invalid type identifier
+CTF_FILES_SKIP+=	lib/libsox.so.3.0.0
 
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/gsm/buildlink3.mk"

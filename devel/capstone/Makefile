@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/02/23 02:42:06 khorben Exp $
+# $NetBSD: Makefile,v 1.11 2018/11/12 14:40:21 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -14,5 +14,7 @@ TEST_TARGET=			check
 
 # Don't use FreeBSD/DragonFly specific paths
 ALL_ENV+=	USE_GENERIC_LIBDATADIR=yes
+
+CTF_SUPPORTED=	no # https://smartos.org/bugview/OS-6510
 
 .include "../../mk/bsd.pkg.mk"

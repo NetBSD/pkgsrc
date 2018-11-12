@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.180 2018/08/22 09:45:21 wiz Exp $
+# $NetBSD: Makefile,v 1.181 2018/11/12 14:40:21 jperkin Exp $
 
 DISTNAME=	mono-4.0.4.1
 PKGREVISION=	13
@@ -25,6 +25,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q} --with-icu=yes
 CONFIGURE_ARGS+=	--with-preview=yes --with-libgdiplus=installed
 CONFIGURE_ARGS+=	--disable-dtrace
+
+CTF_SUPPORTED=	no	# https://smartos.org/bugview/OS-6510
 
 .include "options.mk"
 
