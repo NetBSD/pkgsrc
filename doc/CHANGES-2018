@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4663 2018/11/12 10:52:20 he Exp $
+$NetBSD: CHANGES-2018,v 1.4664 2018/11/12 12:26:38 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6525,3 +6525,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated emulators/mame to 0.203 [adam 2018-11-12]
 	Updated www/libsass to 3.5.5 [adam 2018-11-12]
 	Updated sysutils/zabbix to 4.0.1 [he 2018-11-12]
+	Updated www/py-wtforms to 2.2.1 [kleink 2018-11-12]
