@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.74 2018/11/12 13:47:32 jperkin Exp $
+# $NetBSD: install.mk,v 1.75 2018/11/12 14:22:58 jperkin Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -183,6 +183,9 @@ _INSTALL_ALL_TARGETS+=		pre-install
 _INSTALL_ALL_TARGETS+=		do-install
 _INSTALL_ALL_TARGETS+=		post-install
 _INSTALL_ALL_TARGETS+=		plist
+.if ${_PKGSRC_USE_CTF} == "yes"
+_INSTALL_ALL_TARGETS+=		install-ctf
+.endif
 .if ${STRIP_DEBUG:Uno:tl} == "yes" && ${STRIP_DEBUG_SUPPORTED:Uyes:tl} == "yes"
 _INSTALL_ALL_TARGETS+=		install-strip-debug
 .endif
@@ -335,6 +338,30 @@ pre-install:
 post-install:
 	@${DO_NADA}
 .endif
+
+######################################################################
+### install-ctf (PRIVATE)
+######################################################################
+### install-ctf creates CTF information from debug binaries.
+###
+.PHONY: install-ctf
+install-ctf: plist
+	@${STEP_MSG} "Generating CTF data"
+	${RUN}cd ${DESTDIR:Q}${PREFIX:Q};				\
+	${CAT} ${_PLIST_NOKEYWORDS} | while read f; do			\
+		[ ! -h "$${f}" ] || continue;				\
+		case "$${f}" in						\
+		${CTF_FILES_SKIP:@p@${p}) continue ;;@}			\
+		*) ;;							\
+		esac;							\
+		tmp_f="$${f}.XXX";					\
+		if ${CTFCONVERT} -o "$${tmp_f}" "$${f}" 2>/dev/null; then \
+			if [ -f "$${tmp_f}" -a -f "$${f}" ]; then	\
+				${MV} "$${tmp_f}" "$${f}";		\
+			fi;						\
+		fi;							\
+		${RM} -f "$${tmp_f}";					\
+	done
 
 ######################################################################
 ### install-strip-debug (PRIVATE)
