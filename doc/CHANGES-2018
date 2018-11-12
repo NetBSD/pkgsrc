@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4665 2018/11/12 12:51:40 kleink Exp $
+$NetBSD: CHANGES-2018,v 1.4666 2018/11/12 14:36:00 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6527,3 +6527,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/zabbix to 4.0.1 [he 2018-11-12]
 	Updated www/py-wtforms to 2.2.1 [kleink 2018-11-12]
 	Updated textproc/py-cssselect2 to 0.2.1 [kleink 2018-11-12]
+	Updated graphics/py-cairocffi to 0.9.0 [kleink 2018-11-12]
