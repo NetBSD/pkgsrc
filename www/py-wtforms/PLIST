@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/01/08 16:56:23 kleink Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/11/12 12:25:51 kleink Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -106,8 +106,11 @@ ${PYSITELIB}/wtforms/form.pyo
 ${PYSITELIB}/wtforms/i18n.py
 ${PYSITELIB}/wtforms/i18n.pyc
 ${PYSITELIB}/wtforms/i18n.pyo
+${PYSITELIB}/wtforms/locale/README.md
 ${PYSITELIB}/wtforms/locale/ar/LC_MESSAGES/wtforms.mo
 ${PYSITELIB}/wtforms/locale/ar/LC_MESSAGES/wtforms.po
+${PYSITELIB}/wtforms/locale/bg/LC_MESSAGES/wtforms.mo
+${PYSITELIB}/wtforms/locale/bg/LC_MESSAGES/wtforms.po
 ${PYSITELIB}/wtforms/locale/ca/LC_MESSAGES/wtforms.mo
 ${PYSITELIB}/wtforms/locale/ca/LC_MESSAGES/wtforms.po
 ${PYSITELIB}/wtforms/locale/cs_CZ/LC_MESSAGES/wtforms.mo
@@ -128,8 +131,14 @@ ${PYSITELIB}/wtforms/locale/et/LC_MESSAGES/wtforms.mo
 ${PYSITELIB}/wtforms/locale/et/LC_MESSAGES/wtforms.po
 ${PYSITELIB}/wtforms/locale/fa/LC_MESSAGES/wtforms.mo
 ${PYSITELIB}/wtforms/locale/fa/LC_MESSAGES/wtforms.po
+${PYSITELIB}/wtforms/locale/fi/LC_MESSAGES/wtforms.mo
+${PYSITELIB}/wtforms/locale/fi/LC_MESSAGES/wtforms.po
 ${PYSITELIB}/wtforms/locale/fr/LC_MESSAGES/wtforms.mo
 ${PYSITELIB}/wtforms/locale/fr/LC_MESSAGES/wtforms.po
+${PYSITELIB}/wtforms/locale/he/LC_MESSAGES/wtforms.mo
+${PYSITELIB}/wtforms/locale/he/LC_MESSAGES/wtforms.po
+${PYSITELIB}/wtforms/locale/hu/LC_MESSAGES/wtforms.mo
+${PYSITELIB}/wtforms/locale/hu/LC_MESSAGES/wtforms.po
 ${PYSITELIB}/wtforms/locale/it/LC_MESSAGES/wtforms.mo
 ${PYSITELIB}/wtforms/locale/it/LC_MESSAGES/wtforms.po
 ${PYSITELIB}/wtforms/locale/ja/LC_MESSAGES/wtforms.mo
@@ -146,6 +155,12 @@ ${PYSITELIB}/wtforms/locale/pt/LC_MESSAGES/wtforms.mo
 ${PYSITELIB}/wtforms/locale/pt/LC_MESSAGES/wtforms.po
 ${PYSITELIB}/wtforms/locale/ru/LC_MESSAGES/wtforms.mo
 ${PYSITELIB}/wtforms/locale/ru/LC_MESSAGES/wtforms.po
+${PYSITELIB}/wtforms/locale/sk/LC_MESSAGES/wtforms.mo
+${PYSITELIB}/wtforms/locale/sk/LC_MESSAGES/wtforms.po
+${PYSITELIB}/wtforms/locale/sv/LC_MESSAGES/wtforms.mo
+${PYSITELIB}/wtforms/locale/sv/LC_MESSAGES/wtforms.po
+${PYSITELIB}/wtforms/locale/tr/LC_MESSAGES/wtforms.mo
+${PYSITELIB}/wtforms/locale/tr/LC_MESSAGES/wtforms.po
 ${PYSITELIB}/wtforms/locale/uk/LC_MESSAGES/wtforms.mo
 ${PYSITELIB}/wtforms/locale/uk/LC_MESSAGES/wtforms.po
 ${PYSITELIB}/wtforms/locale/wtforms.pot
