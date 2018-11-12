@@ -1,4 +1,4 @@
-# $NetBSD: tools.Bitrig.mk,v 1.1 2015/06/04 15:48:45 sevan Exp $
+# $NetBSD: tools.Bitrig.mk,v 1.2 2018/11/12 13:34:39 jperkin Exp $
 #
 # System-supplied tools for the Bitrig operating system.
 
@@ -28,6 +28,7 @@ TOOLS_PLATFORM.file?=		/usr/bin/file
 TOOLS_PLATFORM.find?=		/usr/bin/find
 TOOLS_PLATFORM.flex?=		/usr/bin/flex
 TOOLS_PLATFORM.grep?=		/usr/bin/grep
+TOOLS_PLATFORM.gstrip?=		/usr/bin/strip
 TOOLS_PLATFORM.gunzip?=		/usr/bin/gunzip -f
 TOOLS_PLATFORM.gzcat?=		/usr/bin/gzcat
 TOOLS_PLATFORM.gzip?=		/usr/bin/gzip -nf ${GZIP}
