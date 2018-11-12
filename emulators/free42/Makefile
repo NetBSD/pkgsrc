@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2018/09/02 15:31:05 gdt Exp $
+# $NetBSD: Makefile,v 1.14 2018/11/12 03:52:00 ryoon Exp $
 
 DISTNAME=	free42
 PKGNAME=	${DISTNAME}-1.4.78
-PKGREVISION=	7
+PKGREVISION=	8
 DIST_SUBDIR=	${PKGNAME_NOREV}
 CATEGORIES=	emulators
 #MASTER_SITES=	http://thomasokken.com/free42/download/
