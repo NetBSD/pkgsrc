@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.72 2017/08/08 17:17:25 jlam Exp $
+# $NetBSD: install.mk,v 1.73 2018/11/12 13:42:16 jperkin Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -338,16 +338,20 @@ post-install:
 .PHONY: install-strip-debug
 install-strip-debug: plist
 	@${STEP_MSG} "Automatic stripping of debug information"
-	${RUN}${CAT} ${_PLIST_NOKEYWORDS} \
-	| ${SED} -e 's|^|${DESTDIR}${PREFIX}/|' \
-	| while read f; do \
-		tmp_f="$${f}.XXX"; \
-		if ${STRIP} -g -o "$${tmp_f}" "$${f}" 2> /dev/null; then \
-			[ ! -f "$${f}" ] || \
-			    ${MV} "$${tmp_f}" "$${f}"; \
-		else \
-			${RM} -f "$${tmp_f}"; \
-		fi \
+	${RUN}cd ${DESTDIR:Q}${PREFIX:Q};				\
+	${CAT} ${_PLIST_NOKEYWORDS} | while read f; do			\
+		[ ! -h "$${f}" ] || continue;				\
+		case "$${f}" in						\
+		${STRIP_FILES_SKIP:@p@${p}) continue;;@}		\
+		*) ;;							\
+		esac;							\
+		tmp_f="$${f}.XXX";					\
+		if ${STRIP_DBG} -o "$${tmp_f}" "$${f}" 2>/dev/null; then \
+			if [ -f "$${tmp_f}" -a -f "$${f}" ]; then	\
+				${MV} "$${tmp_f}" "$${f}";		\
+			fi;						\
+		fi;							\
+		${RM} -f "$${tmp_f}";					\
 	done
 
 ######################################################################
