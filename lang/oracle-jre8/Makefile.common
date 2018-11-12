@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2018/05/26 22:24:01 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.14 2018/11/12 14:40:21 jperkin Exp $
 # used by lang/oracle-jre8/Makefile
 # used by lang/oracle-jdk8/Makefile
 
@@ -24,6 +24,7 @@ USE_TOOLS+=	pax
 CHECK_RELRO_SUPPORTED=	no
 CHECK_SHLIBS_SUPPORTED=	no
 CHECK_SSP_SUPPORTED=	no
+CTF_SUPPORTED=		no
 
 # JDK8 Update number
 UPDATE_NUMBER=	172
