@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4667 2018/11/12 15:49:38 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.4668 2018/11/12 16:09:46 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6529,3 +6529,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-cssselect2 to 0.2.1 [kleink 2018-11-12]
 	Updated graphics/py-cairocffi to 0.9.0 [kleink 2018-11-12]
 	Updated devel/p5-Pegex to 0.70 [schmonz 2018-11-12]
+	Updated lang/ocaml to 4.07.1 [jaapb 2018-11-12]
