@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2018/08/22 09:45:20 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2018/11/12 13:49:16 jperkin Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -173,6 +173,9 @@ CHECK_PORTABILITY_SKIP+=	distrib/prep-bin-dist-mingw
 CHECK_SHLIBS_SKIP+=		*/libHS*-ghc${PKGVERSION_NOREV}.*
 .endif
 
+
+# ld: fatal: relocation error ... relocation requires reference symbol
+STRIP_FILES_SKIP+=		lib/${PKGNAME_NOREV}/libHSrts.a
 
 # -----------------------------------------------------------------------------
 # Dependencies
