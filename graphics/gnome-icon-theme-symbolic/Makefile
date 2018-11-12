@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2018/04/16 14:34:37 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2018/11/12 03:52:13 ryoon Exp $
 
 DISTNAME=		gnome-icon-theme-symbolic-3.12.0
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		graphics gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-icon-theme-symbolic/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=		.tar.xz

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2018/04/16 14:34:05 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2018/11/12 03:51:40 ryoon Exp $
 #
 
 DISTNAME=	glurp-0.12.3
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=glurp/}
 

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2018/08/22 09:42:58 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2018/11/12 03:51:45 ryoon Exp $
 
-PKGREVISION= 8
+PKGREVISION= 9
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-xmms-plugin-0.5.3
