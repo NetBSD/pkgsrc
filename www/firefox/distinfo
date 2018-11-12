@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.330 2018/11/07 12:55:11 martin Exp $
+$NetBSD: distinfo,v 1.331 2018/11/12 12:50:52 jperkin Exp $
 
 SHA1 (firefox-63.0.1.source.tar.xz) = d62a85ce78904171e9f863154fb8cd031cdbe4ee
 RMD160 (firefox-63.0.1.source.tar.xz) = 28f6431150deb10b967e4181ebfb5c332deedbd2
 SHA512 (firefox-63.0.1.source.tar.xz) = 29acad70259d71a924cbaf4c2f01fb034cf8090759b3a2d74a5eabc2823f83b6508434e619d8501d3930702e2bbad373581a70e2ce57aead9af77fc42766fbe2
 Size (firefox-63.0.1.source.tar.xz) = 265358784 bytes
-SHA1 (patch-aa) = 2df509e4c7478eb2a9d894b661ff62bca0e4c785
+SHA1 (patch-aa) = 649bafc86814ed9819a51f8347c5058123bd2d51
 SHA1 (patch-browser_app_profile_firefox.js) = 3ff1487607da5c7dc917fe9f793c6d281119974a
 SHA1 (patch-build_moz.configure_old.configure) = 91bab1cbbe02332ec076b49b6e598730202fbc99
 SHA1 (patch-dom_base_nsAttrName.h) = 89389af93bda7de9fd9a4b0fc6fa6505da390134
@@ -30,6 +30,7 @@ SHA1 (patch-media_libcubeb_src_moz.build) = 10f8355e3b3c6d35cca99f3717246e865886
 SHA1 (patch-media_libcubeb_update.sh) = cddb5849fa2972e961e4891bc8a79a650df06d8d
 SHA1 (patch-media_libpng_pngpriv.h) = c8084332560017cd7c9b519b61d125fa28af0dbc
 SHA1 (patch-modules_pdfium_update.sh) = b0bf091325c9322c54880de067871354cd689038
+SHA1 (patch-python_mozbuild_mozbuild_action_check__binary.py) = 8103ca9f95fe98a4461c97abcd4cafd5ae5294f0
 SHA1 (patch-servo_components_style_build__gecko.rs) = 1045b4e336c329d2673d096aeead83b6bc58ed13
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = 082aa7830b33cb91c2606fb06059d544c70a7e62
 SHA1 (patch-toolkit_library_moz.build) = 102e3713552c26f76e8b4e473846bb8fbc44b278
@@ -38,5 +39,6 @@ SHA1 (patch-toolkit_mozapps_installer_packager.mk) = b2343fbad2556504dfd13601c02
 SHA1 (patch-toolkit_xre_glxtest.cpp) = cf048491778610454b914400e53072afedd96e7b
 SHA1 (patch-xpcom_base_nscore.h) = d7c96eda884d7f370442749c43caba50da61bbe4
 SHA1 (patch-xpcom_build_BinaryPath.h) = 9ec4b740388a4a887401efbb89810e96336576f7
+SHA1 (patch-xpcom_components_nsComponentManager.cpp) = 70546c05971ca4fef138b70e77ff341a61393c24
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_moz.build) = 412da80be2aa43852e08ad35e6523ae0842167ab
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcinvoke__sparc64__openbsd.cpp) = 569f10c29da6e8d30ee6b8568c85a629557a3943
