@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2018/07/19 15:15:29 jaapb Exp $
+# $NetBSD: Makefile,v 1.8 2018/11/12 16:10:27 jaapb Exp $
 
 GITHUB_PROJECT=	markup.ml
 GITHUB_TAG=	${PKGVERSION_NOREV}
 DISTNAME=	markup-0.7.6
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aantron/}
 
