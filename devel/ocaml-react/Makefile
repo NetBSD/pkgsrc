@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2018/07/19 15:15:25 jaapb Exp $
+# $NetBSD: Makefile,v 1.19 2018/11/12 16:10:22 jaapb Exp $
 
 DISTNAME=	react-1.2.1
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	http://erratique.ch/software/react/releases/
 EXTRACT_SUFX=	.tbz
