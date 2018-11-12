@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2018/11/12 10:42:07 tnn Exp $
+java/openjdk8/jre/lib/${ARCH}/libjsoundalsa.so
