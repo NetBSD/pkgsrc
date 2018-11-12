@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2018/08/22 09:43:33 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2018/11/12 14:40:21 jperkin Exp $
 
 DISTNAME=	nasm-2.13.03
 PKGREVISION=	1
@@ -19,5 +19,7 @@ INSTALL_TARGET=		install_everything
 
 INSTALL_ENV+=	INSTALLROOT=${DESTDIR}
 MAKE_ENV+=	PERL5=${PERL5:Q}
+
+CTF_SUPPORTED=	no # https://smartos.org/bugview/OS-6510
 
 .include "../../mk/bsd.pkg.mk"
