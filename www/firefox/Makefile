@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.346 2018/11/12 03:53:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.347 2018/11/12 12:50:52 jperkin Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		63.0
@@ -26,6 +26,8 @@ CONFIGURE_ARGS+=	--enable-application=browser
 CFLAGS+=	-I${PREFIX}/include/nspr
 # for lang/gcc6
 CFLAGS+=	-D_GLIBCXX_INCLUDE_NEXT_C_HEADERS
+
+CFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
 
 # workround for link of libxul.so etc.
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/firefox ${COMPILER_RPATH_FLAG}${PREFIX}/lib
