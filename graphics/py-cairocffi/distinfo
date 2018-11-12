@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2018/07/18 00:24:30 joerg Exp $
+$NetBSD: distinfo,v 1.7 2018/11/12 14:35:23 kleink Exp $
 
-SHA1 (cairocffi-0.8.0.tar.gz) = 5d2a983b3a60dfd974c5c736338cd0ffacaae8cb
-RMD160 (cairocffi-0.8.0.tar.gz) = ef591d28ca183e829b446b77bcd79069e3b00554
-SHA512 (cairocffi-0.8.0.tar.gz) = 70179e05ca4a4efeaa39ade1ee1a96d280d198ecff5ae8c8fc634c24d8922ea6a3e1eb6cf5f55c5fc9d3f5b2fc3131a53051690eb86712762d8b6400df8a630a
-Size (cairocffi-0.8.0.tar.gz) = 79217 bytes
+SHA1 (cairocffi-0.9.0.tar.gz) = 864c9ceeb42c42d3660287c1acdc53ab37c2f12d
+RMD160 (cairocffi-0.9.0.tar.gz) = 111d84931f3315f5da65ac66d632071c3757f0d0
+SHA512 (cairocffi-0.9.0.tar.gz) = 0d3d54e0d54b3696c8336d8b3a6d745628da51d9d9f8c50f36006c007e1432a95dd9bafd8d865923059d040cc4e9f7989b3670a5318383b357ffc979eeb920d5
+Size (cairocffi-0.9.0.tar.gz) = 84652 bytes
 SHA1 (patch-cairocffi_____init____.py) = 25e068711b14523041f07163104fd8fb75d7e9cb
