@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2018/07/19 15:15:27 jaapb Exp $
+# $NetBSD: Makefile,v 1.16 2018/11/12 16:10:25 jaapb Exp $
 
 DISTNAME=	dose3-5.0.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	misc
 MASTER_SITES=	https://gforge.inria.fr/frs/download.php/file/36063/
 

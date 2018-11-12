@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2018/07/19 15:15:23 jaapb Exp $
+# $NetBSD: Makefile,v 1.6 2018/11/12 16:10:16 jaapb Exp $
 
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 DISTNAME=	lwt_ssl-1.1.2
 CATEGORIES=	devel security
 GITHUB_PROJECT=	lwt_ssl
