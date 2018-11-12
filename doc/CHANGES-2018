@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4661 2018/11/12 03:54:39 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.4662 2018/11/12 07:25:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6522,3 +6522,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-sqlalchemy to 1.2.14 [adam 2018-11-11]
 	Updated databases/py-asyncpg to 0.18.2 [adam 2018-11-11]
 	Updated fonts/harfbuzz to 2.1.1 [ryoon 2018-11-12]
+	Updated emulators/mame to 0.203 [adam 2018-11-12]
+	Updated www/libsass to 3.5.5 [adam 2018-11-12]
