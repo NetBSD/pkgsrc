@@ -1,4 +1,4 @@
-# $NetBSD: tools.GNUkFreeBSD.mk,v 1.5 2015/02/01 08:48:56 obache Exp $
+# $NetBSD: tools.GNUkFreeBSD.mk,v 1.6 2018/11/12 13:34:39 jperkin Exp $
 #
 # System-supplied tools for the Debian GNU/kFreeBSD operating system.
 
@@ -38,6 +38,7 @@ TOOLS_PLATFORM.gmake?=		/usr/bin/make
 TOOLS_PLATFORM.grep?=		/bin/grep
 TOOLS_PLATFORM.gsed?=		/bin/sed
 TOOLS_PLATFORM.gsoelim?=	/usr/bin/soelim
+TOOLS_PLATFORM.gstrip?=		/usr/bin/strip
 TOOLS_PLATFORM.gtar?=		/bin/tar
 TOOLS_PLATFORM.gunzip?=		/bin/gunzip -f
 TOOLS_PLATFORM.gzcat?=		/bin/zcat
