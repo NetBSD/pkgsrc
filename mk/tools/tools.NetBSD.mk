@@ -1,4 +1,4 @@
-# $NetBSD: tools.NetBSD.mk,v 1.62 2018/10/17 08:30:43 jperkin Exp $
+# $NetBSD: tools.NetBSD.mk,v 1.63 2018/11/12 13:34:39 jperkin Exp $
 #
 # System-supplied tools for the NetBSD operating system.
 
@@ -47,6 +47,7 @@ TOOLS_PLATFORM.ggrep?=		/usr/bin/grep
 TOOLS_PLATFORM.grep?=		/usr/bin/grep
 TOOLS_PLATFORM.groff?=		/usr/bin/groff
 TOOLS_PLATFORM.gsoelim?=	${TOOLS_PLATFORM.soelim}	# GNUish
+TOOLS_PLATFORM.gstrip?=		/usr/bin/strip
 TOOLS_PLATFORM.gunzip?=		/usr/bin/gunzip -f
 TOOLS_PLATFORM.gzcat?=		/usr/bin/gzcat
 TOOLS_PLATFORM.gzip?=		/usr/bin/gzip -nf ${GZIP}
