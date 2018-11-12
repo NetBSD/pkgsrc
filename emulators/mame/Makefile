@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.91 2018/10/11 08:20:54 adam Exp $
+# $NetBSD: Makefile,v 1.92 2018/11/12 07:20:58 adam Exp $
 
-DISTNAME=	mame-0.202
+DISTNAME=	mame-0.203
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mamedev/}
 GITHUB_TAG=	${DISTNAME:S/-//S/.//}
@@ -17,6 +17,7 @@ INSTALLATION_DIRS+=	${SHAREDIR}/artwork/bgfx/border_blur
 INSTALLATION_DIRS+=	${SHAREDIR}/artwork/bgfx/chains/crt-geom ${SHAREDIR}/hash
 
 DEPENDS+=		liberation-ttf-[0-9]*:../../fonts/liberation-ttf
+BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 USE_LANGUAGES=		c99 c++
 GCC_REQD+=		5
@@ -35,7 +36,7 @@ MAKE_ENV+=	LDOPTS="-Wl,-R${BUILDLINK_PREFIX.flac}/lib -L${BUILDLINK_PREFIX.flac}
 .endif
 
 # -Werror is problematic
-MAKE_ENV=	NOWERROR=1 VERBOSE=1
+MAKE_ENV=	NOWERROR=1
 # on Darwin, avoid SDL2.framework
 MAKE_ENV+=	USE_LIBSDL=1
 # use pkgsrc packages for expat, zlib, jpeg, flac, lua, sqlite3
@@ -104,6 +105,7 @@ do-install:
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../graphics/glm/buildlink3.mk"
 .include "../../fonts/SDL2_ttf/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../textproc/expat/buildlink3.mk"

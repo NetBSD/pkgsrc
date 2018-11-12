@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2018/08/30 22:56:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.29 2018/11/12 07:20:58 adam Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -132,6 +132,7 @@ share/mame/hash/bbc_flop_80186.xml
 share/mame/hash/bbc_flop_arm.xml
 share/mame/hash/bbc_flop_torch.xml
 share/mame/hash/bbc_flop_z80.xml
+share/mame/hash/bbc_rom.xml
 share/mame/hash/bbca_cass.xml
 share/mame/hash/bbcb_cass.xml
 share/mame/hash/bbcb_cass_de.xml
@@ -289,6 +290,7 @@ share/mame/hash/m5_cass.xml
 share/mame/hash/m5_flop.xml
 share/mame/hash/mac_flop.xml
 share/mame/hash/mac_hdd.xml
+share/mame/hash/mac_hdflop.xml
 share/mame/hash/mbc200.xml
 share/mame/hash/mbc55x.xml
 share/mame/hash/mc10.xml
