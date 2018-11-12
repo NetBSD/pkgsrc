@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.89 2018/08/12 19:36:40 rillig Exp $
+# $NetBSD: compiler.mk,v 1.90 2018/11/12 14:22:58 jperkin Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -203,6 +203,13 @@ _WRAP_EXTRA_ARGS.CXX+=	${_SSP_CFLAGS}
 CWRAPPERS_APPEND.cc+=	${_SSP_CFLAGS}
 CWRAPPERS_APPEND.cxx+=	${_SSP_CFLAGS}
 CWRAPPERS_APPEND.f77+=	${_SSP_CFLAGS}
+.endif
+
+# Add debug flags if the user has requested CTF and the compiler supports it.
+#
+.if ${_PKGSRC_USE_CTF} == "yes" && defined(_CTF_CFLAGS)
+_WRAP_EXTRA_ARGS.CC+=	${_CTF_CFLAGS}
+CWRAPPERS_APPEND.cc+=	${_CTF_CFLAGS}
 .endif
 
 # If the languages are not requested, force them not to be available

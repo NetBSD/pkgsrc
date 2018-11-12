@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.78 2018/11/05 19:26:38 schmonz Exp $
+# $NetBSD: SunOS.mk,v 1.79 2018/11/12 14:22:58 jperkin Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -127,13 +127,10 @@ _OPSYS_INCLUDE_DIRS?=	/usr/include
 _OPSYS_SUPPORTS_CWRAPPERS=	yes
 .endif
 
-# support FORTIFY (with GCC)
-_OPSYS_SUPPORTS_FORTIFY=yes
-
-# support stack protection (with GCC)
-_OPSYS_SUPPORTS_SSP?=	yes
-
-_OPSYS_CAN_CHECK_SHLIBS=	yes # requires readelf
+_OPSYS_SUPPORTS_CTF=		yes # Compact Type Format conversion.
+_OPSYS_SUPPORTS_FORTIFY=	yes # Requires GCC
+_OPSYS_SUPPORTS_SSP?=		yes # Requires GCC
+_OPSYS_CAN_CHECK_SHLIBS=	yes # Requires readelf
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.

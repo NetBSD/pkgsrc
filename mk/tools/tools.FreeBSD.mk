@@ -1,4 +1,4 @@
-# $NetBSD: tools.FreeBSD.mk,v 1.46 2018/11/12 13:34:39 jperkin Exp $
+# $NetBSD: tools.FreeBSD.mk,v 1.47 2018/11/12 14:22:58 jperkin Exp $
 #
 # System-supplied tools for the FreeBSD operating system.
 
@@ -18,6 +18,7 @@ TOOLS_PLATFORM.chown?=		/usr/sbin/chown
 TOOLS_PLATFORM.cmp?=		/usr/bin/cmp
 TOOLS_PLATFORM.cp?=		/bin/cp
 TOOLS_PLATFORM.csh?=		/bin/csh
+TOOLS_PLATFORM.ctfconvert?=	/usr/bin/ctfconvert
 TOOLS_PLATFORM.cut?=		/usr/bin/cut
 TOOLS_PLATFORM.date?=		/bin/date
 TOOLS_PLATFORM.diff?=		/usr/bin/diff
