@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.197 2018/10/29 11:53:18 abs Exp $
+# $NetBSD: gcc.mk,v 1.198 2018/11/12 14:22:58 jperkin Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -394,6 +394,8 @@ _STACK_CHECK_CFLAGS=	-fstack-check
 .if ${_PKGSRC_USE_STACK_CHECK} == "yes"
 _GCC_CFLAGS+=		${_STACK_CHECK_CFLAGS}
 .endif
+
+_CTF_CFLAGS=		-gdwarf-2
 
 # GCC has this annoying behaviour where it advocates in a multi-line
 # banner the use of "#include" over "#import" when including headers.
