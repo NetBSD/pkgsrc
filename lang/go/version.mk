@@ -1,5 +1,6 @@
-# $NetBSD: version.mk,v 1.50 2018/11/12 13:48:45 jperkin Exp $
+# $NetBSD: version.mk,v 1.51 2018/11/12 14:40:21 jperkin Exp $
 
+CTF_SUPPORTED=		no
 SSP_SUPPORTED=		no
 STRIP_DEBUG_SUPPORTED=	no
 

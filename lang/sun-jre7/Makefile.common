@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2017/10/04 10:00:11 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.15 2018/11/12 14:40:22 jperkin Exp $
 # used by lang/sun-jre7/Makefile
 # used by lang/sun-jdk7/Makefile
 
@@ -21,6 +21,7 @@ EMUL_PLATFORMS=		linux-i386 linux-x86_64 solaris-i386 solaris-x86_64
 # pre-built binaries without RELRO or SSP
 CHECK_RELRO_SUPPORTED=	no
 CHECK_SSP_SUPPORTED=	no
+CTF_SUPPORTED=		no
 
 USE_TOOLS+=	pax
 
