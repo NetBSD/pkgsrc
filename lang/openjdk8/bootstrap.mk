@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.12 2018/09/17 10:50:26 tnn Exp $
+# $NetBSD: bootstrap.mk,v 1.13 2018/11/12 10:42:07 tnn Exp $
 #
 # This file contains a map of available binary bootstrap toolchains
 # and which kit to use for each supported platform.
@@ -27,6 +27,7 @@ ONLY_FOR_PLATFORM=	NetBSD-[5-9].*-i386 NetBSD-[5-9].*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-[7-9].*-sparc64 NetBSD-[7-9].*-earmv[67]hf
 ONLY_FOR_PLATFORM+=	NetBSD-*-aarch64
 ONLY_FOR_PLATFORM+=	DragonFly-[34].*-* SunOS-*-* FreeBSD-10.*-x86_64
+ONLY_FOR_PLATFORM+=	Linux-*-x86_64
 
 BOOT.nb5-i386=		bootstrap-jdk-1.7.76-netbsd-5-i386-20150301.tar.xz
 BOOT.nb5-amd64=		bootstrap-jdk-1.7.76-netbsd-5-amd64-20150301.tar.xz
@@ -101,6 +102,10 @@ EXTRACT_ONLY+=		${BOOT.dfly3.8-amd64}
 .if !empty(MACHINE_PLATFORM:MFreeBSD-10.*-x86_64) || make(distinfo)
 DISTFILES+=		${BOOT.fbsd10-amd64}
 EXTRACT_ONLY+=		${BOOT.fbsd10-amd64}
+.endif
+
+.if ${OPSYS} == "Linux"
+# TODO adoptopenjdk?
 .endif
 
 .if ${OPSYS} == "SunOS"
