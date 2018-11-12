@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2018/04/13 13:55:39 jaapb Exp $
+# $NetBSD: Makefile,v 1.35 2018/11/12 16:10:29 jaapb Exp $
 
 DISTNAME=	labltk-8.06.3
-PKGREVISION=	3
+PKGREVISION=	5
 CATEGORIES=	x11
 # caution: it's the 1701, not the filename, that identifies the download
 MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/1701/
