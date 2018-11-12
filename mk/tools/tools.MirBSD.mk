@@ -1,4 +1,4 @@
-# $NetBSD: tools.MirBSD.mk,v 1.5 2014/03/06 07:34:20 uebayasi Exp $
+# $NetBSD: tools.MirBSD.mk,v 1.6 2018/11/12 13:34:39 jperkin Exp $
 #
 # System-supplied tools for the MirOS operating system.
 
@@ -27,6 +27,7 @@ TOOLS_PLATFORM.file?=		/usr/bin/file
 TOOLS_PLATFORM.find?=		/usr/bin/find
 TOOLS_PLATFORM.flex?=		/usr/bin/lex
 TOOLS_PLATFORM.grep?=		/usr/bin/grep
+TOOLS_PLATFORM.gstrip?=		/usr/bin/strip
 TOOLS_PLATFORM.gunzip?=		/usr/bin/gunzip -f
 TOOLS_PLATFORM.gzcat?=		/usr/bin/gzcat
 TOOLS_PLATFORM.gzip?=		/usr/bin/gzip -nf ${GZIP}
