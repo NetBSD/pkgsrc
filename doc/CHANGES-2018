@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4669 2018/11/12 16:11:03 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.4670 2018/11/12 17:13:47 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6531,3 +6531,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Pegex to 0.70 [schmonz 2018-11-12]
 	Updated lang/ocaml to 4.07.1 [jaapb 2018-11-12]
 	Updated lang/camlp5 to 7.07 [jaapb 2018-11-12]
+	Updated devel/menhir to 20181026 [jaapb 2018-11-12]
