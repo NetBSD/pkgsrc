@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/11/12 03:51:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.21 2018/11/12 14:40:21 jperkin Exp $
 
 PKGREVISION=	6
 .include "Makefile.common"
@@ -96,6 +96,10 @@ SUBST_STAGE.fix-tools=	pre-install
 SUBST_MESSAGE.fix-tools=Unwrapping tools path in delegate paths.
 SUBST_FILES.fix-tools=	config/delegates.xml
 SUBST_SED.fix-tools=	-e 's,${TOOLS_DIR},,g'
+
+# failed to convert strong functions and variables: Invalid type identifier
+CTF_FILES_SKIP+=	lib/libMagickCore-6.Q16.so.5.0.0
+CTF_FILES_SKIP+=	lib/libMagickWand-6.Q16.so.5.0.0
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
