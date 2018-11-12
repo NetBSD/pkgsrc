@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.73 2018/11/12 13:42:16 jperkin Exp $
+# $NetBSD: install.mk,v 1.74 2018/11/12 13:47:32 jperkin Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -55,6 +55,13 @@
 #	A variable name that should be set as staged installation location
 #	presented as ${DESTDIR} at install phase.
 #	"DESTDIR" is set by default.
+#
+# STRIP_DEBUG_SUPPORTED
+#	If set to anything other than "yes" (the default), stripping will
+#	be disabled for the package.
+#
+# STRIP_FILES_SKIP
+#	A list of files relative to ${PREFIX} that will not be stripped.
 
 ######################################################################
 ### install (PUBLIC)
@@ -176,7 +183,7 @@ _INSTALL_ALL_TARGETS+=		pre-install
 _INSTALL_ALL_TARGETS+=		do-install
 _INSTALL_ALL_TARGETS+=		post-install
 _INSTALL_ALL_TARGETS+=		plist
-.if !empty(STRIP_DEBUG:M[Yy][Ee][Ss])
+.if ${STRIP_DEBUG:Uno:tl} == "yes" && ${STRIP_DEBUG_SUPPORTED:Uyes:tl} == "yes"
 _INSTALL_ALL_TARGETS+=		install-strip-debug
 .endif
 _INSTALL_ALL_TARGETS+=		install-doc-handling
