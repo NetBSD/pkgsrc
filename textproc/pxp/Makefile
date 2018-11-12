@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2018/07/19 15:15:30 jaapb Exp $
+# $NetBSD: Makefile,v 1.23 2018/11/12 16:10:28 jaapb Exp $
 #
 
 DISTNAME=		pxp-1.2.8
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		textproc
 MASTER_SITES=		http://download.camlcity.org/download/
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2018/07/19 15:15:22 jaapb Exp $
+# $NetBSD: Makefile,v 1.18 2018/11/12 16:10:18 jaapb Exp $
 
 VERSION=	2.8.0
 GITHUB_PROJECT=	batteries-included
 GITHUB_TAG=	v${VERSION}
 DISTNAME=	batteries-${VERSION}
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml-batteries-team/}
 
