@@ -1,4 +1,4 @@
-# $NetBSD: clang.mk,v 1.18 2017/07/11 19:41:20 joerg Exp $
+# $NetBSD: clang.mk,v 1.19 2018/11/12 14:22:58 jperkin Exp $
 #
 # This is the compiler definition for the clang compiler.
 #
@@ -52,6 +52,8 @@ _COMPILER_ABI_FLAG.64=	-m64
 _COMPILER_LD_FLAG=	-Wl,
 _LINKER_RPATH_FLAG=	-R
 _COMPILER_RPATH_FLAG=	${_COMPILER_LD_FLAG}${_LINKER_RPATH_FLAG}
+
+_CTF_CFLAGS=		-gdwarf-2
 
 # The user can choose the level of stack smashing protection.
 .if ${PKGSRC_USE_SSP} == "all"
