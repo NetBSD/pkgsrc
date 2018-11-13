@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/07/19 09:24:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/11/13 11:23:38 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -521,6 +521,12 @@ ${PYSITELIB}/cryptography_vectors/keywrap/kwtestvectors/TKW_AD.txt
 ${PYSITELIB}/cryptography_vectors/keywrap/kwtestvectors/TKW_AD_inv.txt
 ${PYSITELIB}/cryptography_vectors/keywrap/kwtestvectors/TKW_AE.txt
 ${PYSITELIB}/cryptography_vectors/keywrap/kwtestvectors/TKW_AE_inv.txt
+${PYSITELIB}/cryptography_vectors/pkcs12/cert-aes256cbc-no-key.p12
+${PYSITELIB}/cryptography_vectors/pkcs12/cert-key-aes256cbc.p12
+${PYSITELIB}/cryptography_vectors/pkcs12/cert-none-key-none.p12
+${PYSITELIB}/cryptography_vectors/pkcs12/cert-rc2-key-3des.p12
+${PYSITELIB}/cryptography_vectors/pkcs12/no-cert-key-aes256cbc.p12
+${PYSITELIB}/cryptography_vectors/pkcs12/no-password.p12
 ${PYSITELIB}/cryptography_vectors/twofactor/rfc-4226.txt
 ${PYSITELIB}/cryptography_vectors/twofactor/rfc-6238.txt
 ${PYSITELIB}/cryptography_vectors/x509/PKITS_data/ReadMe.txt
@@ -2085,7 +2091,9 @@ ${PYSITELIB}/cryptography_vectors/x509/alternate-rsa-sha1-oid.pem
 ${PYSITELIB}/cryptography_vectors/x509/badasn1time.pem
 ${PYSITELIB}/cryptography_vectors/x509/badssl-sct.pem
 ${PYSITELIB}/cryptography_vectors/x509/bigoid.pem
+${PYSITELIB}/cryptography_vectors/x509/cryptography-scts.pem
 ${PYSITELIB}/cryptography_vectors/x509/cryptography.io.pem
+${PYSITELIB}/cryptography_vectors/x509/cryptography.io.precert.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/aia_ca_issuers.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/aia_ocsp.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/aia_ocsp_ca_issuers.pem
@@ -2095,6 +2103,8 @@ ${PYSITELIB}/cryptography_vectors/x509/custom/authority_key_identifier.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/authority_key_identifier_no_keyid.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/basic_constraints_not_critical.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/bc_path_length_zero.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/ca/ca.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/ca/ca_key.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/cdp_all_reasons.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/cdp_crl_issuer.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/cdp_empty_hostname.pem
@@ -2110,6 +2120,14 @@ ${PYSITELIB}/cryptography_vectors/x509/custom/crl_delta_crl_indicator.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/crl_dup_entry_ext.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/crl_empty.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/crl_ian_aia_aki.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/crl_idp_fullname_indirect_crl.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/crl_idp_fullname_only.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/crl_idp_fullname_only_aa.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/crl_idp_fullname_only_user.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/crl_idp_only_ca.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/crl_idp_reasons_only.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/crl_idp_relative_user_all_reasons.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/crl_idp_relativename_only.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/crl_inval_cert_issuer_entry_ext.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/crl_md2_unknown_crit_entry_ext.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/crl_unsupported_reason.pem
@@ -2158,7 +2176,18 @@ ${PYSITELIB}/cryptography_vectors/x509/custom/valid_signature.pem
 ${PYSITELIB}/cryptography_vectors/x509/department-of-state-root.pem
 ${PYSITELIB}/cryptography_vectors/x509/e-trust.ru.der
 ${PYSITELIB}/cryptography_vectors/x509/ecdsa_root.pem
+${PYSITELIB}/cryptography_vectors/x509/letsencryptx3.pem
+${PYSITELIB}/cryptography_vectors/x509/ocsp/req-ext-nonce.der
+${PYSITELIB}/cryptography_vectors/x509/ocsp/req-invalid-hash-alg.der
+${PYSITELIB}/cryptography_vectors/x509/ocsp/req-multi-sha1.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/req-sha1.der
+${PYSITELIB}/cryptography_vectors/x509/ocsp/resp-delegate-unknown-cert.der
+${PYSITELIB}/cryptography_vectors/x509/ocsp/resp-responder-key-hash.der
+${PYSITELIB}/cryptography_vectors/x509/ocsp/resp-revoked-no-next-update.der
+${PYSITELIB}/cryptography_vectors/x509/ocsp/resp-revoked-reason.der
+${PYSITELIB}/cryptography_vectors/x509/ocsp/resp-revoked.der
+${PYSITELIB}/cryptography_vectors/x509/ocsp/resp-sha256.der
+${PYSITELIB}/cryptography_vectors/x509/ocsp/resp-unauthorized.der
 ${PYSITELIB}/cryptography_vectors/x509/rapidssl_sha256_ca_g3.pem
 ${PYSITELIB}/cryptography_vectors/x509/requests/basic_constraints.pem
 ${PYSITELIB}/cryptography_vectors/x509/requests/dsa_sha1.der
