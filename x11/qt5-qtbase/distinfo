@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.44 2018/10/01 17:44:47 adam Exp $
+$NetBSD: distinfo,v 1.45 2018/11/13 09:24:37 markd Exp $
 
 SHA1 (qtbase-everywhere-src-5.11.2.tar.xz) = 6f337bdf04fd988f2da4d0fbce431a82224b1c4e
 RMD160 (qtbase-everywhere-src-5.11.2.tar.xz) = dcbc0b2dcba794c243253be747f7d624b4ef9459
@@ -13,7 +13,7 @@ SHA1 (patch-qmake_generators_makefile.cpp) = 26366f21108534a321d9d7c7f87066e9acf
 SHA1 (patch-qmake_generators_unix_unixmake2.cpp) = f0a4fdd304af2ee6c1b63022ccfcebd2640f0fcb
 SHA1 (patch-src_corelib_codecs_qiconvcodec.cpp) = e050b334cecc56259bd1755cd2de8c5bbf1409c0
 SHA1 (patch-src_corelib_global_qconfig-bootstrapped.h) = bb29280da569d5644ee4a45609fd7e672c7f4f63
-SHA1 (patch-src_corelib_io_io.pri) = fd2f93b5af4dda729b274dd0d8f82ca29b3cb62a
+SHA1 (patch-src_corelib_io_io.pri) = 01936f91c6f09acd3ead5f15a3d7a457c806173a
 SHA1 (patch-src_corelib_io_qstandardpaths_unix.cpp) = de4b6c6be89524763e40698bcf5e8f413abdb938
 SHA1 (patch-src_corelib_io_qstorageinfo_unix.cpp) = 9919194e9f6b47f1f311b8f8223a6a7519152073
 SHA1 (patch-src_corelib_thread_qwaitcondition__unix.cpp) = 37f61c305335ca6a690b0491220ca8de508bfdb6
