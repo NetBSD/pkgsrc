@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.347 2018/11/12 12:50:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.348 2018/11/13 13:13:47 wiz Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		63.0
@@ -47,7 +47,6 @@ SUBST_CLASSES+=			dfly_malloc_h
 SUBST_STAGE.dfly_malloc_h=	pre-configure
 SUBST_MESSAGE.dfly_malloc_h=	Dont include malloc.h on dragonflybsd
 SUBST_SED.dfly_malloc_h=	-e 's,HAVE_MALLOC_H,HAVE_MALLOC_H \&\& !defined(__DragonFly__),g'
-SUBST_FILES.dfly_malloc_h=	media/libav/libavutil/mem.c
 SUBST_FILES.dfly_malloc_h+=	media/ffvpx/libavutil/mem.c
 
 LDFLAGS.DragonFly=	-lplc4 -lnspr4
