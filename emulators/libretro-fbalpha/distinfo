@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2018/10/31 18:40:41 nia Exp $
+$NetBSD: distinfo,v 1.4 2018/11/13 17:16:25 nia Exp $
 
 SHA1 (libretro-fbalpha-0.2.97.43.20181022-20daa807957d7fce64371620271b502811318163.tar.gz) = 45025f8fb79afcbb65d3de7d927f5eeed709faaf
 RMD160 (libretro-fbalpha-0.2.97.43.20181022-20daa807957d7fce64371620271b502811318163.tar.gz) = d42603bb5298965cbcc0565846b893a2fef7685d
 SHA512 (libretro-fbalpha-0.2.97.43.20181022-20daa807957d7fce64371620271b502811318163.tar.gz) = a5aee22e6e17905ac33bd221efced9844579ec11dfe7ba55755fdd327099f1017ec7d83ff5dbb5390ddfb4fe5661d792ffda204cbe3e14bd8598ae5800f77f4c
 Size (libretro-fbalpha-0.2.97.43.20181022-20daa807957d7fce64371620271b502811318163.tar.gz) = 10216979 bytes
 SHA1 (patch-makefile.libretro) = 53580ffc41c22c745d70aa9949c5df2affc783d4
+SHA1 (patch-src_burner_libretro_burn__endian.h) = fbca4fbadbc6a15630719ab6d9494d00a36f226a
