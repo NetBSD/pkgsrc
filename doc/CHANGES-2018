@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4677 2018/11/13 13:35:08 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.4678 2018/11/13 14:53:08 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6552,3 +6552,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/py-gstreamer1 to 1.14.4 [adam 2018-11-13]
 	Updated security/py-m2crypto to 0.31.0 [adam 2018-11-13]
 	Updated textproc/gtkspell3 to 3.0.10 [bsiegert 2018-11-13]
+	Updated net/mikutter to 3.8.3 [tsutsui 2018-11-13]
