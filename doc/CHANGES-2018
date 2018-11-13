@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4674 2018/11/13 11:42:35 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4675 2018/11/13 13:00:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6549,3 +6549,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/py-cryptography to 2.4.1 [adam 2018-11-13]
 	Updated textproc/py-sphinx to 1.8.2 [adam 2018-11-13]
 	Updated devel/py-autopep8 to 1.4.3 [adam 2018-11-13]
+	Updated multimedia/py-gstreamer1 to 1.14.4 [adam 2018-11-13]
