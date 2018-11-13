@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/08/25 12:03:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/11/13 13:33:29 bsiegert Exp $
 include/gtkspell-3.0/gtkspell/gtkspell.h
 lib/libgtkspell3-3.la
 lib/pkgconfig/gtkspell3-3.0.pc
@@ -6,7 +6,6 @@ share/gtk-doc/html/gtkspell3/annotation-glossary.html
 share/gtk-doc/html/gtkspell3/api-index-full.html
 share/gtk-doc/html/gtkspell3/ch02.html
 share/gtk-doc/html/gtkspell3/chapter-tutorial.html
-share/gtk-doc/html/gtkspell3/deprecated-api-index.html
 share/gtk-doc/html/gtkspell3/gtkspell3-gtkspell.html
 share/gtk-doc/html/gtkspell3/gtkspell3.devhelp2
 share/gtk-doc/html/gtkspell3/home.png
