@@ -12,6 +12,7 @@
 # plugins to execute on RCPT command
 [rcpt]
 @PREFIX@/bin/qmail-rcptcheck
+@PREFIX@/bin/greylisting-spp-with-exemptions
 
 # plugins to execute on DATA command
 [data]

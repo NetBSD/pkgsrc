@@ -1,13 +1,13 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.12 2018/11/08 20:57:28 schmonz Exp $
+$NetBSD: MESSAGE,v 1.13 2018/11/13 16:34:58 schmonz Exp $
 
 Please read ${PREFIX}/share/doc/qmail-run/README.pkgsrc.
 
 Assuming NetBSD-style mailwrapper(8) and rc(8), to enable qmail for...
 
 Local and outgoing deliveries:
-- Check configuration in ${PKG_SYSCONFDIR} (including alias/.qmail-*).
-- Replace /etc/mailer.conf with share/examples/qmail-run/mailer.conf.
+- Check configuration in ${PKG_SYSCONFDIR} (especially alias/.qmail-*).
+- Copy ${PREFIX}/share/examples/qmail-run/mailer.conf to /etc/mailer.conf.
 - Set qmailsend=YES in /etc/rc.conf.
 
 Local non-root users to see the queue:
@@ -16,15 +16,15 @@ Local non-root users to see the queue:
 
 Incoming SMTP deliveries:
 - Set qmailsmtpd=YES in /etc/rc.conf.
-- Optionally list qmail-rcptcheck programs in control/rcptchecks.
-- Optionally list qmail-qfilter programs in control/smtpfilters.
+- Add any qmail-rcptcheck programs to control/rcptchecks.
+- Add any qmail-qfilter programs to control/smtpfilters.
+- Add any qmail-spp programs to control/smtpplugins.
+- Add any domains exempt from greylisting to control/greylist/exemptrcpthosts.
+- Add any addresses exempt from greylisting to control/greylist/exemptrcpts.
 
 Outgoing authentication-only submission:
 - Set qmailofmipd=YES in /etc/rc.conf.
-- Optionally list qmail-qfilter programs in control/ofmipfilters.
-
-User-controlled ofmipd address rewriting:
-- Set qmailofmipd_ofmipdcmd=${PREFIX}/bin/ofmipd-with-user-cdb in /etc/rc.conf.
+- Add any qmail-qfilter programs to control/ofmipfilters.
 
 Fetching Maildirs via POP3:
 - Set qmailpop3d=YES in /etc/rc.conf.
