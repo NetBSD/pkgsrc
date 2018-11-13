@@ -1,2 +1,2 @@
 127.:allow,RELAYCLIENT=""
-:allow,UCSPITLS="",GREETDELAY="2",QMAILQUEUE="@PREFIX@/bin/qmail-qfilter-smtpd-queue"
+:allow,UCSPITLS="",GREETDELAY="2",GL_DATABASE="@PKG_SYSCONFDIR@/control/greylist/database",GL_VERBOSE="1",QMAILQUEUE="@PREFIX@/bin/qmail-qfilter-smtpd-queue"
