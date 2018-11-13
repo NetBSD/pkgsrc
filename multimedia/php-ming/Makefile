@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2016/09/11 17:03:27 taca Exp $
+# $NetBSD: Makefile,v 1.29 2018/11/13 10:22:25 markd Exp $
 
 .include "../../multimedia/ming/Makefile.common"
 PECL_VERSION=		${MING_VERSION}
 MODNAME=		ming
-PKGREVISION=		2
 CATEGORIES+=		multimedia
 DIST_SUBDIR?=		#empty
 EXTRACT_SUFX=		.tar.gz
@@ -21,11 +20,17 @@ CONFIGURE_ARGS+=	--with-${MODNAME}=${BUILDLINK_PREFIX.ming}
 PHPSETUPSUBDIR=		php_ext
 MODULESDIR=		${WRKSRC}/${PHPSETUPSUBDIR}/modules
 CONFIGURE_DIRS=		${PHPSETUPSUBDIR}
+USE_TOOLS+=		aclocal autoconf automake autoheader pkg-config
 
 # missing in 0.4.4 release tarball.
 post-extract:
 		${CP} ${FILESDIR}/config.m4 ${WRKSRC}/${PHPSETUPSUBDIR}
 
+pre-configure:
+	cd ${WRKSRC}; sh ./autogen.sh
+
+
 .include "../../lang/php/ext.mk"
+DISTNAME=		ming-${MING_VERSION:S/./_/g}
 .include "../../multimedia/ming/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
