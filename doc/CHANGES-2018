@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4670 2018/11/12 17:13:47 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.4671 2018/11/13 04:11:55 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6532,3 +6532,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/ocaml to 4.07.1 [jaapb 2018-11-12]
 	Updated lang/camlp5 to 7.07 [jaapb 2018-11-12]
 	Updated devel/menhir to 20181026 [jaapb 2018-11-12]
+	Updated cad/pcb to 4.1.3 [dmcmahill 2018-11-12]
