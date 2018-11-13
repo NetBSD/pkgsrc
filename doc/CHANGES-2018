@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4672 2018/11/13 09:04:58 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4673 2018/11/13 11:31:31 markd Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6535,3 +6535,13 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated cad/pcb to 4.1.3 [dmcmahill 2018-11-12]
 	Updated devel/libuv to 1.24.0 [adam 2018-11-13]
 	Updated devel/py-setuptools to 40.6.1 [adam 2018-11-13]
+	Updated math/py-scikit-image to 0.14.1 [markd 2018-11-13]
+	Updated multimedia/ming to 0.4.8 [markd 2018-11-13]
+	Updated multimedia/php-ming to 0.4.8 [markd 2018-11-13]
+	Updated multimedia/py-ming to 0.4.8 [markd 2018-11-13]
+	Updated multimedia/xine-lib to 1.2.9 [markd 2018-11-13]
+	Updated multimedia/xine-v4l to 1.2.9 [markd 2018-11-13]
+	Updated multimedia/xine-v4l2 to 1.2.9 [markd 2018-11-13]
+	Updated audio/xine-alsa to 1.2.9 [markd 2018-11-13]
+	Updated audio/xine-esound to 1.2.9 [markd 2018-11-13]
+	Updated audio/xine-pulse to 1.2.9 [markd 2018-11-13]
