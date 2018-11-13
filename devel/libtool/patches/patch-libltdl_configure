@@ -1,16 +1,16 @@
-$NetBSD: patch-libltdl_configure,v 1.1 2017/03/06 16:14:07 jperkin Exp $
+$NetBSD: patch-libltdl_configure,v 1.2 2018/11/13 21:44:42 sevan Exp $
 
 Automatically generated using manual-* patches and bootstrap.
 DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
 
---- libltdl/configure.orig	2017-02-02 10:07:29.000000000 +0000
+--- libltdl/configure.orig	2018-11-13 09:14:36.380678459 +0000
 +++ libltdl/configure
 @@ -4788,7 +4788,7 @@ else
      lt_cv_sys_max_cmd_len=8192;
      ;;
  
 -  bitrig* | darwin* | dragonfly* | freebsd* | netbsd* | openbsd*)
-+  bitrig* | darwin* | dragonfly* | freebsd* | netbsd* | openbsd* | mirbsd*)
++  bitrig* | darwin* | dragonfly* | freebsd* | minix* | netbsd* | openbsd* | mirbsd*)
      # This has been around since 386BSD, at least.  Likely further.
      if test -x /sbin/sysctl; then
        lt_cv_sys_max_cmd_len=`/sbin/sysctl -n kern.argmax`
@@ -28,6 +28,12 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    lt_cv_deplibs_check_method=pass_all
    ;;
  
+-netbsd*)
+-  if echo __ELF__ | $CC -E - | $GREP __ELF__ > /dev/null; then
+-    lt_cv_deplibs_check_method='match_pattern /lib[^/]+(\.so\.[0-9]+\.[0-9]+|_pic\.a)$'
+-  else
+-    lt_cv_deplibs_check_method='match_pattern /lib[^/]+(\.so|_pic\.a)$'
+-  fi
 +midnightbsd*)
 +  # might to use match_pattern like MirBSD, but there is no well-defined
 +  # naming scheme for libraries yet, as the current one is deprecated, and
@@ -39,12 +45,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
 +  lt_cv_deplibs_check_method='match_pattern /lib[^/]+(\.so\.[0-9]+\.[0-9]+|\.so|_pic\.a)$'
 +  ;;
 +
- netbsd*)
--  if echo __ELF__ | $CC -E - | $GREP __ELF__ > /dev/null; then
--    lt_cv_deplibs_check_method='match_pattern /lib[^/]+(\.so\.[0-9]+\.[0-9]+|_pic\.a)$'
--  else
--    lt_cv_deplibs_check_method='match_pattern /lib[^/]+(\.so|_pic\.a)$'
--  fi
++netbsd* | minix*)
 +  lt_cv_deplibs_check_method='match_pattern /lib[^/]+(\.so|_pic\.a)$'
    ;;
  
@@ -170,7 +171,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
        fi
        ;;
  
-+    netbsd*)
++    netbsd* | minix*)
 +      archive_cmds='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
 +      archive_expsym_cmds='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
 +      hardcode_libdir_flag_spec='${wl}-rpath,$libdir'
@@ -215,7 +216,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
 -      hardcode_libdir_flag_spec='-R$libdir'
 +      ;;
 +
-+    netbsd*)
++    netbsd* | minix*)
 +      archive_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
 +      archive_expsym_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
 +      hardcode_libdir_flag_spec='${wl}-rpath,$libdir'
@@ -278,7 +279,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    esac
    need_lib_prefix=no
    need_version=no
-@@ -11301,19 +11377,36 @@ fi
+@@ -11301,19 +11377,48 @@ fi
    dynamic_linker='GNU/Linux ld.so'
    ;;
  
@@ -288,6 +289,18 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
 +  need_version=no
 +  library_names_spec='${libname}${release}${shared_ext}${versuffix2} ${libname}${release}${shared_ext} $libname${shared_ext}'
 +  finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
++  shlibpath_var=LD_LIBRARY_PATH
++  shlibpath_overrides_runpath=yes
++  hardcode_into_libs=yes
++  ;;
++
++minix*)
++  version_type=linux
++  need_lib_prefix=no
++  need_version=no
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
++  soname_spec='${libname}${release}${shared_ext}$major'
++  dynamic_linker='Minix ld.elf_so'
 +  shlibpath_var=LD_LIBRARY_PATH
 +  shlibpath_overrides_runpath=yes
 +  hardcode_into_libs=yes
@@ -325,7 +338,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    shlibpath_var=LD_LIBRARY_PATH
    shlibpath_overrides_runpath=yes
    hardcode_into_libs=yes
-@@ -11339,7 +11432,7 @@ newsos6)
+@@ -11339,7 +11444,7 @@ newsos6)
    ;;
  
  openbsd* | bitrig*)
@@ -334,7 +347,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    sys_lib_dlsearch_path_spec=/usr/lib
    need_lib_prefix=no
    if test -z "`echo __ELF__ | $CC -E - | $GREP __ELF__`"; then
-@@ -11347,7 +11440,7 @@ openbsd* | bitrig*)
+@@ -11347,7 +11452,7 @@ openbsd* | bitrig*)
    else
      need_version=yes
    fi
@@ -343,17 +356,19 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    shlibpath_overrides_runpath=yes
-@@ -12923,6 +13016,9 @@ else
+@@ -12923,7 +13028,10 @@ else
      # at 6.2 and later dlopen does load deplibs.
      lt_cv_sys_dlopen_deplibs=yes
      ;;
+-  netbsd*)
 +  mirbsd*)
 +    lt_cv_sys_dlopen_deplibs=yes
 +    ;;
-   netbsd*)
++  netbsd* | minix*)
      lt_cv_sys_dlopen_deplibs=yes
      ;;
-@@ -15440,7 +15536,10 @@ func_cc_basename ()
+   openbsd*)
+@@ -15440,7 +15548,10 @@ func_cc_basename ()
          *) break;;
        esac
      done

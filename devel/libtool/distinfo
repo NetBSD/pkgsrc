@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.104 2018/03/12 16:36:44 hans Exp $
+$NetBSD: distinfo,v 1.105 2018/11/13 21:44:42 sevan Exp $
 
 SHA1 (libtool-2.4.6.tar.gz) = 25b6931265230a06f0fc2146df64c04e5ae6ec33
 RMD160 (libtool-2.4.6.tar.gz) = 6f4b4c3e89426652da3acffa707f71bb4ccee26a
@@ -6,6 +6,6 @@ SHA512 (libtool-2.4.6.tar.gz) = 3233d81cb2739a54b840a0a82064eebbfaa4fb442fb993a3
 Size (libtool-2.4.6.tar.gz) = 1806697 bytes
 SHA1 (patch-Makefile.in) = 0adb634335acd5fb280c99b5d43ae568018ca0af
 SHA1 (patch-build-aux_depcomp) = ae6f93ad4fac1df648cfcb62601c72f9ebb30233
-SHA1 (patch-build-aux_ltmain.sh) = eebdc102cacb1970240abeb4a7310d09d505be02
-SHA1 (patch-configure) = 2cbf275a4de712bc151c5065b62b2bdb37c83188
-SHA1 (patch-libltdl_configure) = 87535836200547ceb8463a98e86561c2adf1f0ed
+SHA1 (patch-build-aux_ltmain.sh) = 110c3976ccdc2a69c34001923427e47e9c4b3b37
+SHA1 (patch-configure) = 30b05f8f258b3e16abf7daadb9d59cce9dbd9976
+SHA1 (patch-libltdl_configure) = 73cc33d5ce0a91c7cd976d4a386e17d69d377c24
