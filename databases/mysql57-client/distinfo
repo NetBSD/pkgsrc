@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2018/10/01 00:11:29 sevan Exp $
+$NetBSD: distinfo,v 1.24 2018/11/13 11:24:38 markd Exp $
 
 SHA1 (mysql-5.7.23.tar.gz) = 0c07dd1670f3749c482180227717738c031bb5b4
 RMD160 (mysql-5.7.23.tar.gz) = 20021aa73537f4630b72931925bec78c251b06e6
@@ -28,7 +28,7 @@ SHA1 (patch-mysys_stacktrace.c) = 3e0794f544f0e35f44a694330885478247657842
 SHA1 (patch-rapid_plugin_group__replication_libmysqlgcs_src_bindings_xcom_xcom_sock__probe__ix.c) = 1a389fca13ada1be74d96276e11baee16bbc2363
 SHA1 (patch-rapid_plugin_group__replication_libmysqlgcs_src_bindings_xcom_xcom_xcom__memory.c) = 7077900830f904c74c79439b856d9d176fc27f15
 SHA1 (patch-rapid_plugin_group__replication_libmysqlgcs_src_bindings_xcom_xcom_xcom__transport.c) = d7f87bff5a41ff6a130fcf74dc520b38cedf5924
-SHA1 (patch-rapid_plugin_group__replication_rpcgen.cmake) = 5c14be97bd1fd04b2b845f1a2422452445733474
+SHA1 (patch-rapid_plugin_group__replication_rpcgen.cmake) = ff0679ed644d79abe52b208f6b60b5a4e480ed3f
 SHA1 (patch-rapid_plugin_x_CMakeLists.txt) = aedf7d93889d4e7b4e04d182fe1a6775134f97e8
 SHA1 (patch-rapid_unittest_gunit_xplugin_CMakeLists.txt) = c0ae4570e138869a3203f7d4704a0b6b5c19e517
 SHA1 (patch-scripts_CMakeLists.txt) = b149f40f65c4ce8f6f4a7adf75f5ec4be44319f1
