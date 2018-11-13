@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/01/30 10:20:11 adam Exp $
+# $NetBSD: Makefile,v 1.3 2018/11/13 09:57:10 markd Exp $
 
-DISTNAME=	scikit-image-0.13.1
+DISTNAME=	scikit-image-0.14.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-image/}
@@ -9,6 +9,8 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://scikit-image.org
 COMMENT=	Image processing routines for SciPy
 LICENSE=	modified-bsd
+
+USE_LANGUAGES=	c c++
 
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=2.9.0:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-PyWavelets>=0.5.2:../../math/py-pywavelets

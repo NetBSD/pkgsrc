@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/11/22 11:14:52 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/11/13 09:57:10 markd Exp $
 bin/skivi${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -149,9 +149,11 @@ ${PYSITELIB}/skimage/data/disk-matlab-output.npz
 ${PYSITELIB}/skimage/data/foo3x5x4indexed.png
 ${PYSITELIB}/skimage/data/grass.png
 ${PYSITELIB}/skimage/data/gray_morph_output.npz
+${PYSITELIB}/skimage/data/green_palette.png
 ${PYSITELIB}/skimage/data/horse.png
 ${PYSITELIB}/skimage/data/hubble_deep_field.jpg
 ${PYSITELIB}/skimage/data/ihc.png
+${PYSITELIB}/skimage/data/lfw_subset.npy
 ${PYSITELIB}/skimage/data/logo.png
 ${PYSITELIB}/skimage/data/moon.png
 ${PYSITELIB}/skimage/data/motorcycle_disp.npz
@@ -183,6 +185,9 @@ ${PYSITELIB}/skimage/draw/__init__.py
 ${PYSITELIB}/skimage/draw/__init__.pyc
 ${PYSITELIB}/skimage/draw/__init__.pyo
 ${PYSITELIB}/skimage/draw/_draw.so
+${PYSITELIB}/skimage/draw/_random_shapes.py
+${PYSITELIB}/skimage/draw/_random_shapes.pyc
+${PYSITELIB}/skimage/draw/_random_shapes.pyo
 ${PYSITELIB}/skimage/draw/draw.py
 ${PYSITELIB}/skimage/draw/draw.pyc
 ${PYSITELIB}/skimage/draw/draw.pyo
@@ -201,6 +206,9 @@ ${PYSITELIB}/skimage/draw/tests/test_draw.pyo
 ${PYSITELIB}/skimage/draw/tests/test_draw3d.py
 ${PYSITELIB}/skimage/draw/tests/test_draw3d.pyc
 ${PYSITELIB}/skimage/draw/tests/test_draw3d.pyo
+${PYSITELIB}/skimage/draw/tests/test_random_shapes.py
+${PYSITELIB}/skimage/draw/tests/test_random_shapes.pyc
+${PYSITELIB}/skimage/draw/tests/test_random_shapes.pyo
 ${PYSITELIB}/skimage/exposure/__init__.py
 ${PYSITELIB}/skimage/exposure/__init__.pyc
 ${PYSITELIB}/skimage/exposure/__init__.pyo
@@ -244,6 +252,7 @@ ${PYSITELIB}/skimage/feature/_canny.pyo
 ${PYSITELIB}/skimage/feature/_daisy.py
 ${PYSITELIB}/skimage/feature/_daisy.pyc
 ${PYSITELIB}/skimage/feature/_daisy.pyo
+${PYSITELIB}/skimage/feature/_haar.so
 ${PYSITELIB}/skimage/feature/_hessian_det_appx.so
 ${PYSITELIB}/skimage/feature/_hog.py
 ${PYSITELIB}/skimage/feature/_hog.pyc
@@ -265,6 +274,9 @@ ${PYSITELIB}/skimage/feature/corner.py
 ${PYSITELIB}/skimage/feature/corner.pyc
 ${PYSITELIB}/skimage/feature/corner.pyo
 ${PYSITELIB}/skimage/feature/corner_cy.so
+${PYSITELIB}/skimage/feature/haar.py
+${PYSITELIB}/skimage/feature/haar.pyc
+${PYSITELIB}/skimage/feature/haar.pyo
 ${PYSITELIB}/skimage/feature/match.py
 ${PYSITELIB}/skimage/feature/match.pyc
 ${PYSITELIB}/skimage/feature/match.pyo
@@ -305,6 +317,9 @@ ${PYSITELIB}/skimage/feature/tests/test_corner.pyo
 ${PYSITELIB}/skimage/feature/tests/test_daisy.py
 ${PYSITELIB}/skimage/feature/tests/test_daisy.pyc
 ${PYSITELIB}/skimage/feature/tests/test_daisy.pyo
+${PYSITELIB}/skimage/feature/tests/test_haar.py
+${PYSITELIB}/skimage/feature/tests/test_haar.pyc
+${PYSITELIB}/skimage/feature/tests/test_haar.pyo
 ${PYSITELIB}/skimage/feature/tests/test_hog.py
 ${PYSITELIB}/skimage/feature/tests/test_hog.pyc
 ${PYSITELIB}/skimage/feature/tests/test_hog.pyo
@@ -382,6 +397,7 @@ ${PYSITELIB}/skimage/filters/rank/tests/test_rank.pyo
 ${PYSITELIB}/skimage/filters/setup.py
 ${PYSITELIB}/skimage/filters/setup.pyc
 ${PYSITELIB}/skimage/filters/setup.pyo
+${PYSITELIB}/skimage/filters/tests/.coverage
 ${PYSITELIB}/skimage/filters/tests/__init__.py
 ${PYSITELIB}/skimage/filters/tests/__init__.pyc
 ${PYSITELIB}/skimage/filters/tests/__init__.pyo
@@ -432,6 +448,9 @@ ${PYSITELIB}/skimage/future/graph/setup.py
 ${PYSITELIB}/skimage/future/graph/setup.pyc
 ${PYSITELIB}/skimage/future/graph/setup.pyo
 ${PYSITELIB}/skimage/future/graph/tests/test_rag.py
+${PYSITELIB}/skimage/future/manual_segmentation.py
+${PYSITELIB}/skimage/future/manual_segmentation.pyc
+${PYSITELIB}/skimage/future/manual_segmentation.pyo
 ${PYSITELIB}/skimage/future/setup.py
 ${PYSITELIB}/skimage/future/setup.pyc
 ${PYSITELIB}/skimage/future/setup.pyo
@@ -489,10 +508,6 @@ ${PYSITELIB}/skimage/io/_plugins/fits_plugin.ini
 ${PYSITELIB}/skimage/io/_plugins/fits_plugin.py
 ${PYSITELIB}/skimage/io/_plugins/fits_plugin.pyc
 ${PYSITELIB}/skimage/io/_plugins/fits_plugin.pyo
-${PYSITELIB}/skimage/io/_plugins/freeimage_plugin.ini
-${PYSITELIB}/skimage/io/_plugins/freeimage_plugin.py
-${PYSITELIB}/skimage/io/_plugins/freeimage_plugin.pyc
-${PYSITELIB}/skimage/io/_plugins/freeimage_plugin.pyo
 ${PYSITELIB}/skimage/io/_plugins/gdal_plugin.ini
 ${PYSITELIB}/skimage/io/_plugins/gdal_plugin.py
 ${PYSITELIB}/skimage/io/_plugins/gdal_plugin.pyc
@@ -534,10 +549,6 @@ ${PYSITELIB}/skimage/io/_plugins/simpleitk_plugin.pyo
 ${PYSITELIB}/skimage/io/_plugins/skivi.py
 ${PYSITELIB}/skimage/io/_plugins/skivi.pyc
 ${PYSITELIB}/skimage/io/_plugins/skivi.pyo
-${PYSITELIB}/skimage/io/_plugins/test_plugin.ini
-${PYSITELIB}/skimage/io/_plugins/test_plugin.py
-${PYSITELIB}/skimage/io/_plugins/test_plugin.pyc
-${PYSITELIB}/skimage/io/_plugins/test_plugin.pyo
 ${PYSITELIB}/skimage/io/_plugins/tifffile_plugin.ini
 ${PYSITELIB}/skimage/io/_plugins/tifffile_plugin.py
 ${PYSITELIB}/skimage/io/_plugins/tifffile_plugin.pyc
@@ -796,6 +807,9 @@ ${PYSITELIB}/skimage/novice/tests/test_novice.pyo
 ${PYSITELIB}/skimage/restoration/__init__.py
 ${PYSITELIB}/skimage/restoration/__init__.pyc
 ${PYSITELIB}/skimage/restoration/__init__.pyo
+${PYSITELIB}/skimage/restoration/_cycle_spin.py
+${PYSITELIB}/skimage/restoration/_cycle_spin.pyc
+${PYSITELIB}/skimage/restoration/_cycle_spin.pyo
 ${PYSITELIB}/skimage/restoration/_denoise.py
 ${PYSITELIB}/skimage/restoration/_denoise.pyc
 ${PYSITELIB}/skimage/restoration/_denoise.pyo
@@ -841,9 +855,6 @@ ${PYSITELIB}/skimage/restoration/uft.pyo
 ${PYSITELIB}/skimage/restoration/unwrap.py
 ${PYSITELIB}/skimage/restoration/unwrap.pyc
 ${PYSITELIB}/skimage/restoration/unwrap.pyo
-${PYSITELIB}/skimage/run-hessian.py
-${PYSITELIB}/skimage/run-hessian.pyc
-${PYSITELIB}/skimage/run-hessian.pyo
 ${PYSITELIB}/skimage/scripts/__init__.py
 ${PYSITELIB}/skimage/scripts/__init__.pyc
 ${PYSITELIB}/skimage/scripts/__init__.pyo
@@ -853,6 +864,9 @@ ${PYSITELIB}/skimage/scripts/skivi.pyo
 ${PYSITELIB}/skimage/segmentation/__init__.py
 ${PYSITELIB}/skimage/segmentation/__init__.pyc
 ${PYSITELIB}/skimage/segmentation/__init__.pyo
+${PYSITELIB}/skimage/segmentation/_chan_vese.py
+${PYSITELIB}/skimage/segmentation/_chan_vese.pyc
+${PYSITELIB}/skimage/segmentation/_chan_vese.pyo
 ${PYSITELIB}/skimage/segmentation/_clear_border.py
 ${PYSITELIB}/skimage/segmentation/_clear_border.pyc
 ${PYSITELIB}/skimage/segmentation/_clear_border.pyo
@@ -874,6 +888,9 @@ ${PYSITELIB}/skimage/segmentation/active_contour_model.pyo
 ${PYSITELIB}/skimage/segmentation/boundaries.py
 ${PYSITELIB}/skimage/segmentation/boundaries.pyc
 ${PYSITELIB}/skimage/segmentation/boundaries.pyo
+${PYSITELIB}/skimage/segmentation/morphsnakes.py
+${PYSITELIB}/skimage/segmentation/morphsnakes.pyc
+${PYSITELIB}/skimage/segmentation/morphsnakes.pyo
 ${PYSITELIB}/skimage/segmentation/random_walker_segmentation.py
 ${PYSITELIB}/skimage/segmentation/random_walker_segmentation.pyc
 ${PYSITELIB}/skimage/segmentation/random_walker_segmentation.pyo
@@ -892,6 +909,9 @@ ${PYSITELIB}/skimage/segmentation/tests/test_active_contour_model.pyo
 ${PYSITELIB}/skimage/segmentation/tests/test_boundaries.py
 ${PYSITELIB}/skimage/segmentation/tests/test_boundaries.pyc
 ${PYSITELIB}/skimage/segmentation/tests/test_boundaries.pyo
+${PYSITELIB}/skimage/segmentation/tests/test_chan_vese.py
+${PYSITELIB}/skimage/segmentation/tests/test_chan_vese.pyc
+${PYSITELIB}/skimage/segmentation/tests/test_chan_vese.pyo
 ${PYSITELIB}/skimage/segmentation/tests/test_clear_border.py
 ${PYSITELIB}/skimage/segmentation/tests/test_clear_border.pyc
 ${PYSITELIB}/skimage/segmentation/tests/test_clear_border.pyo
@@ -901,6 +921,9 @@ ${PYSITELIB}/skimage/segmentation/tests/test_felzenszwalb.pyo
 ${PYSITELIB}/skimage/segmentation/tests/test_join.py
 ${PYSITELIB}/skimage/segmentation/tests/test_join.pyc
 ${PYSITELIB}/skimage/segmentation/tests/test_join.pyo
+${PYSITELIB}/skimage/segmentation/tests/test_morphsnakes.py
+${PYSITELIB}/skimage/segmentation/tests/test_morphsnakes.pyc
+${PYSITELIB}/skimage/segmentation/tests/test_morphsnakes.pyo
 ${PYSITELIB}/skimage/segmentation/tests/test_quickshift.py
 ${PYSITELIB}/skimage/segmentation/tests/test_quickshift.pyc
 ${PYSITELIB}/skimage/segmentation/tests/test_quickshift.pyo
@@ -980,6 +1003,9 @@ ${PYSITELIB}/skimage/util/__init__.pyo
 ${PYSITELIB}/skimage/util/_invert.py
 ${PYSITELIB}/skimage/util/_invert.pyc
 ${PYSITELIB}/skimage/util/_invert.pyo
+${PYSITELIB}/skimage/util/_montage.py
+${PYSITELIB}/skimage/util/_montage.pyc
+${PYSITELIB}/skimage/util/_montage.pyo
 ${PYSITELIB}/skimage/util/_regular_grid.py
 ${PYSITELIB}/skimage/util/_regular_grid.pyc
 ${PYSITELIB}/skimage/util/_regular_grid.pyo
@@ -995,9 +1021,9 @@ ${PYSITELIB}/skimage/util/colormap.pyo
 ${PYSITELIB}/skimage/util/dtype.py
 ${PYSITELIB}/skimage/util/dtype.pyc
 ${PYSITELIB}/skimage/util/dtype.pyo
-${PYSITELIB}/skimage/util/montage.py
-${PYSITELIB}/skimage/util/montage.pyc
-${PYSITELIB}/skimage/util/montage.pyo
+${PYSITELIB}/skimage/util/lookfor.py
+${PYSITELIB}/skimage/util/lookfor.pyc
+${PYSITELIB}/skimage/util/lookfor.pyo
 ${PYSITELIB}/skimage/util/noise.py
 ${PYSITELIB}/skimage/util/noise.pyc
 ${PYSITELIB}/skimage/util/noise.pyo
@@ -1136,5 +1162,3 @@ ${PYSITELIB}/skimage/viewer/widgets/core.pyo
 ${PYSITELIB}/skimage/viewer/widgets/history.py
 ${PYSITELIB}/skimage/viewer/widgets/history.pyc
 ${PYSITELIB}/skimage/viewer/widgets/history.pyo
-@pkgdir lib/python${PYVERSSUFFIX}/site-packages/skimage/data/tests/__pycache__
-@pkgdir lib/python${PYVERSSUFFIX}/site-packages/skimage/data/__pycache__
