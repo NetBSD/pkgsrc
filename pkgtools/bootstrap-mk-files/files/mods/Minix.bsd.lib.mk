@@ -1,4 +1,4 @@
-#	$NetBSD: Minix.bsd.lib.mk,v 1.1 2011/11/06 21:01:30 tcort Exp $
+#	$NetBSD: Minix.bsd.lib.mk,v 1.2 2018/11/13 21:06:48 sevan Exp $
 #	@(#)bsd.lib.mk	8.3 (Berkeley) 4/22/94
 
 .if !target(__initialized__)
@@ -142,8 +142,7 @@ APICFLAGS?= -k
 
 .endif
 
-# Minix does not support shared libraries yet
-MKPICLIB?= no
+MKPICLIB?= yes
 
 # Platform-independent linker flags for ELF shared libraries
 .if ${OBJECT_FMT} == "ELF"
