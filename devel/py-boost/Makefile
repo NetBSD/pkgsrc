@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/04/29 20:41:11 adam Exp $
+# $NetBSD: Makefile,v 1.10 2018/11/13 12:00:33 markd Exp $
 
 BOOST_PACKAGE=		python
 BOOST_COMMENT=		(Boost.Python binary library)
@@ -17,9 +17,15 @@ MAKE_ENV+=		BOOST_BUILD_PATH=${WRKSRC}
 .include "../../devel/boost-jam/bjam.mk"
 .include "../../lang/python/pyversion.mk"
 
+.if exists(${PYTHONBIN}m)
+M=	m
+.else
+M=
+.endif
+
 post-configure:
 	${ECHO} 'using python : ${PYVERSSUFFIX} :' \
-	    '${PREFIX}/bin/python${PYVERSSUFFIX} ;' \
+	    '${PREFIX}/bin/python${PYVERSSUFFIX} : ${PREFIX}/include/python${PYVERSSUFFIX}${M} ;' \
 	    >${WRKSRC}/user-config.jam
 
 do-build: bjam-build
