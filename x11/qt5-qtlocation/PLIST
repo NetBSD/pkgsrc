@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/06/19 07:21:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/11/13 09:34:47 markd Exp $
 lib/pkgconfig/Qt5Location.pc
 lib/pkgconfig/Qt5Positioning.pc
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/error_messages_p.h
@@ -300,6 +300,7 @@ qt5/lib/cmake/Qt5Positioning/Qt5PositioningConfig.cmake
 qt5/lib/cmake/Qt5Positioning/Qt5PositioningConfigVersion.cmake
 qt5/lib/cmake/Qt5Positioning/Qt5Positioning_QGeoPositionInfoSourceFactoryGeoclue.cmake
 qt5/lib/cmake/Qt5Positioning/Qt5Positioning_QGeoPositionInfoSourceFactoryPoll.cmake
+qt5/lib/cmake/Qt5Positioning/Qt5Positioning_QGeoPositionInfoSourceFactorySerialNmea.cmake
 qt5/lib/cmake/Qt5PositioningQuick/Qt5PositioningQuickConfig.cmake
 qt5/lib/cmake/Qt5PositioningQuick/Qt5PositioningQuickConfigVersion.cmake
 qt5/lib/libQt5Location.prl
@@ -333,6 +334,7 @@ qt5/plugins/geoservices/libqtgeoservices_nokia.so
 qt5/plugins/geoservices/libqtgeoservices_osm.so
 qt5/plugins/position/libqtposition_geoclue.so
 qt5/plugins/position/libqtposition_positionpoll.so
+qt5/plugins/position/libqtposition_serialnmea.so
 qt5/qml/Qt/labs/location/liblocationlabsplugin.so
 qt5/qml/Qt/labs/location/plugins.qmltypes
 qt5/qml/Qt/labs/location/qmldir
