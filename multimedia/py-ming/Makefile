@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2018/07/03 05:03:26 adam Exp $
+# $NetBSD: Makefile,v 1.30 2018/11/13 10:23:47 markd Exp $
 
 .include "../../multimedia/ming/Makefile.common"
 
-PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=		4
+PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/_/./g}
 CATEGORIES=		multimedia
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -13,14 +12,14 @@ LICENSE=		gnu-lgpl-v2.1
 
 PY_PATCHPLIST=		yes
 PYSETUPSUBDIR=		py_ext
-EGG_NAME=		${DISTNAME:S/ming/mingc/}
+EGG_NAME=		${DISTNAME:S/ming/mingc/:S/_/./g}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37
 
-SUBST_CLASSES+=		giflib
-SUBST_STAGE.giflib=	pre-configure
-SUBST_FILES.giflib=	py_ext/setup.py
-SUBST_SED.giflib=	-e 's/ungif/gif/g'
+pre-configure:
+	cd ${WRKSRC}/py_ext; \
+	sed -e 's/@srcdir@/./' -e 's/@ZLIB@/-lz/' -e 's/@PNGLIB@/-lpng/' -e 's/@GIFLIB@/-lgif/' \
+	-e "s/@MING_VERSION@/${MING_VERSION}/" < setup.py.in > setup.py
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
