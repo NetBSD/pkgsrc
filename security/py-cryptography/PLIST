@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2017/10/12 08:28:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2018/11/13 11:23:38 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -20,6 +20,9 @@ ${PYSITELIB}/cryptography/fernet.pyo
 ${PYSITELIB}/cryptography/hazmat/__init__.py
 ${PYSITELIB}/cryptography/hazmat/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/__init__.pyo
+${PYSITELIB}/cryptography/hazmat/_oid.py
+${PYSITELIB}/cryptography/hazmat/_oid.pyc
+${PYSITELIB}/cryptography/hazmat/_oid.pyo
 ${PYSITELIB}/cryptography/hazmat/backends/__init__.py
 ${PYSITELIB}/cryptography/hazmat/backends/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/backends/__init__.pyo
@@ -62,6 +65,9 @@ ${PYSITELIB}/cryptography/hazmat/backends/openssl/hashes.pyo
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/hmac.py
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/hmac.pyc
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/hmac.pyo
+${PYSITELIB}/cryptography/hazmat/backends/openssl/ocsp.py
+${PYSITELIB}/cryptography/hazmat/backends/openssl/ocsp.pyc
+${PYSITELIB}/cryptography/hazmat/backends/openssl/ocsp.pyo
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/rsa.py
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/rsa.pyc
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/rsa.pyo
@@ -77,12 +83,12 @@ ${PYSITELIB}/cryptography/hazmat/backends/openssl/x509.pyo
 ${PYSITELIB}/cryptography/hazmat/bindings/__init__.py
 ${PYSITELIB}/cryptography/hazmat/bindings/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/bindings/__init__.pyo
-${PLIST.py2x}${PYSITELIB}/cryptography/hazmat/bindings/_constant_time.so
-${PLIST.py2x}${PYSITELIB}/cryptography/hazmat/bindings/_openssl.so
-${PLIST.py2x}${PYSITELIB}/cryptography/hazmat/bindings/_padding.so
 ${PLIST.py3x}${PYSITELIB}/cryptography/hazmat/bindings/_constant_time.abi3.so
+${PLIST.py2x}${PYSITELIB}/cryptography/hazmat/bindings/_constant_time.so
 ${PLIST.py3x}${PYSITELIB}/cryptography/hazmat/bindings/_openssl.abi3.so
+${PLIST.py2x}${PYSITELIB}/cryptography/hazmat/bindings/_openssl.so
 ${PLIST.py3x}${PYSITELIB}/cryptography/hazmat/bindings/_padding.abi3.so
+${PLIST.py2x}${PYSITELIB}/cryptography/hazmat/bindings/_padding.so
 ${PYSITELIB}/cryptography/hazmat/bindings/openssl/__init__.py
 ${PYSITELIB}/cryptography/hazmat/bindings/openssl/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/bindings/openssl/__init__.pyo
@@ -212,6 +218,9 @@ ${PYSITELIB}/cryptography/x509/general_name.pyo
 ${PYSITELIB}/cryptography/x509/name.py
 ${PYSITELIB}/cryptography/x509/name.pyc
 ${PYSITELIB}/cryptography/x509/name.pyo
+${PYSITELIB}/cryptography/x509/ocsp.py
+${PYSITELIB}/cryptography/x509/ocsp.pyc
+${PYSITELIB}/cryptography/x509/ocsp.pyo
 ${PYSITELIB}/cryptography/x509/oid.py
 ${PYSITELIB}/cryptography/x509/oid.pyc
 ${PYSITELIB}/cryptography/x509/oid.pyo
