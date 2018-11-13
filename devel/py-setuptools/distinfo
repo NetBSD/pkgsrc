@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.137 2018/11/13 09:04:37 adam Exp $
+$NetBSD: distinfo,v 1.138 2018/11/13 16:03:58 adam Exp $
 
-SHA1 (setuptools-40.6.1.zip) = 1ad39602693d3707ea8e1bf2e293afe7b53cf8f5
-RMD160 (setuptools-40.6.1.zip) = d8c63e90259403a1f528f0490a9015ecc6298673
-SHA512 (setuptools-40.6.1.zip) = b1a9ca1c38957c38b416917e043e980b449d0b5a5230f38132f400558e186713ebe9a0b5825bad902869716494949da0e70a1eafdc4c1b9d07ef198ebbcf3d2e
-Size (setuptools-40.6.1.zip) = 838998 bytes
+SHA1 (setuptools-40.6.2.zip) = 49f14096136fbecdbdf700ba1a95c20fc772187f
+RMD160 (setuptools-40.6.2.zip) = 6cde1c38839e18dd3f48fbe5fd205e58d6915122
+SHA512 (setuptools-40.6.2.zip) = 3f1aa20e905deb22dda366f479f87cd772238d07e869fdc4f65a7926373414a77b7ddbfd78fd9825154409b3c01d787830354d206a45cdfca879bf35d3b83e03
+Size (setuptools-40.6.2.zip) = 839184 bytes
 SHA1 (patch-setup.py) = dd94c9a4e15b8b0dc428515f73369ed168b8c7b2
