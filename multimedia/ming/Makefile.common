@@ -1,11 +1,13 @@
-# $NetBSD: Makefile.common,v 1.7 2013/06/14 09:00:19 obache Exp $
+# $NetBSD: Makefile.common,v 1.8 2018/11/13 10:18:26 markd Exp $
 #
 # used by multimedia/php-ming/Makefile
 # used by multimedia/py-ming/Makefile
 
-MING_VERSION=	0.4.5
-DISTNAME=	ming-${MING_VERSION}
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ming/}
+MING_VERSION=	0.4.8
+DISTNAME=	ming-${MING_VERSION:S/./_/g}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libming/libming/archive/}
 
 DISTINFO_FILE=	${.CURDIR}/../../multimedia/ming/distinfo
 PATCHDIR=	${.CURDIR}/../../multimedia/ming/patches
+
+WRKSRC=		${WRKDIR}/libming-ming-${MING_VERSION:S/./_/g}
