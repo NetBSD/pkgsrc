@@ -611,6 +611,7 @@ psycopg1		Enable psycopg 1.1.x support.
 psycopg2		Enable psycopg 2.x support.
 pulseaudio		Enable support for the PulseAudio sound server.
 py-numpy		Enable support for NumPy.
+pymalloc		Build python with the pymalloc specialist object allocator.
 pyrex			Enable Pyrex language support.
 python			Enable Python support.
 qdbm			Enable qdbm support.
