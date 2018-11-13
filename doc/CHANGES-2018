@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4673 2018/11/13 11:31:31 markd Exp $
+$NetBSD: CHANGES-2018,v 1.4674 2018/11/13 11:42:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6545,3 +6545,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated audio/xine-alsa to 1.2.9 [markd 2018-11-13]
 	Updated audio/xine-esound to 1.2.9 [markd 2018-11-13]
 	Updated audio/xine-pulse to 1.2.9 [markd 2018-11-13]
+	Updated security/py-cryptography_vectors to 2.4.1 [adam 2018-11-13]
+	Updated security/py-cryptography to 2.4.1 [adam 2018-11-13]
+	Updated textproc/py-sphinx to 1.8.2 [adam 2018-11-13]
+	Updated devel/py-autopep8 to 1.4.3 [adam 2018-11-13]
