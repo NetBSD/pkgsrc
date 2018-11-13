@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4680 2018/11/13 16:06:12 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4681 2018/11/13 16:35:06 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6556,3 +6556,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/adobe-flash-player to 31.0.0.148 [tsutsui 2018-11-13]
 	Updated devel/py-setuptools to 40.6.2 [adam 2018-11-13]
 	Updated textproc/py-validators to 0.12.3 [adam 2018-11-13]
+	Updated mail/qmail-run to 20181113 [schmonz 2018-11-13]
