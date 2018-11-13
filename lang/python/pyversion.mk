@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.126 2018/10/19 16:12:36 bsiegert Exp $
+# $NetBSD: pyversion.mk,v 1.127 2018/11/13 11:57:26 markd Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -176,7 +176,11 @@ BUILDLINK_DEPMETHOD.python?=	build
 .endif
 
 PYTHONBIN=	${LOCALBASE}/bin/python${PYVERSSUFFIX}
+.if exists(${PYTHONBIN}m)
+PYTHONCONFIG=	${LOCALBASE}/bin/python${PYVERSSUFFIX}m-config
+.else
 PYTHONCONFIG=	${LOCALBASE}/bin/python${PYVERSSUFFIX}-config
+.endif
 PY_COMPILE_ALL= \
 	${PYTHONBIN} ${PREFIX}/lib/python${PYVERSSUFFIX}/compileall.py -q
 PY_COMPILE_O_ALL= \
