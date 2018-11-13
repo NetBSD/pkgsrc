@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4679 2018/11/13 15:45:55 tsutsui Exp $
+$NetBSD: CHANGES-2018,v 1.4680 2018/11/13 16:06:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6554,3 +6554,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/gtkspell3 to 3.0.10 [bsiegert 2018-11-13]
 	Updated net/mikutter to 3.8.3 [tsutsui 2018-11-13]
 	Updated multimedia/adobe-flash-player to 31.0.0.148 [tsutsui 2018-11-13]
+	Updated devel/py-setuptools to 40.6.2 [adam 2018-11-13]
+	Updated textproc/py-validators to 0.12.3 [adam 2018-11-13]
