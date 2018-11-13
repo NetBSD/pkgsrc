@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2018/08/22 09:45:49 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2018/11/13 10:18:26 markd Exp $
 #
 
 .include "Makefile.common"
 
-PKGREVISION=	7
+PKGNAME=	${DISTNAME:S/_/./g}
 CATEGORIES=	multimedia
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,6 +13,7 @@ LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config bison flex
+USE_TOOLS+=	aclocal autoconf automake autoheader
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
@@ -33,6 +34,9 @@ TEST_TARGET=	check
 
 # XXX: "man" is not in SUBDIRS of "docs"
 INSTALL_DIRS=	. docs/man
+
+pre-configure:
+	cd ${WRKSRC}; sh ./autogen.sh
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"

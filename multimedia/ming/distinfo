@@ -1,12 +1,7 @@
-$NetBSD: distinfo,v 1.17 2015/11/03 23:54:30 agc Exp $
+$NetBSD: distinfo,v 1.18 2018/11/13 10:18:26 markd Exp $
 
-SHA1 (ming-0.4.5.tar.gz) = 97c201040729917bf7c62da9616a87f4a920f473
-RMD160 (ming-0.4.5.tar.gz) = 9ef9cf769a03c6e356dca299c85e06a2cdd6a155
-SHA512 (ming-0.4.5.tar.gz) = c7b8ef7769fabfde792ad58d9d72fea380dd3091b4ef52d4779a2b28ec742ddcbeb6c69ed119cd19543554f4c1d01aa4e50e87509f495e83272a33b3c4b920c0
-Size (ming-0.4.5.tar.gz) = 15029578 bytes
-SHA1 (patch-ae) = 614e322330d2d2ab1e0ef1beadf1395014ecd880
-SHA1 (patch-php__ext_ming.c) = a6f0231a602e39b638c5c8f369e2747c978f9762
-SHA1 (patch-src_blocks_gifdbl.c) = 212535b773d373a9836facb9bbc248749ca9d552
-SHA1 (patch-src_libming.h) = bba5e6f93913359b7109e3b18177f819989be98f
-SHA1 (patch-util_gif2dbl.c) = bd897674d5146ac6d6c2b4df6399f18e283c22e6
-SHA1 (patch-util_gif2mask.c) = b98e2bcbbf6e3237acf71aaa02f3e36f6fb62dfd
+SHA1 (ming-0_4_8.tar.gz) = ef94923ea4f71fca0950c4a9ff1eb33e1712c17b
+RMD160 (ming-0_4_8.tar.gz) = 4110608567c768bb67338c4bd3967322e63c32d4
+SHA512 (ming-0_4_8.tar.gz) = e395acde9119ad32f4cedd500bcceee70bdd563222a41dda899cc318d5e34eb580abc38ac39c6dec7821913a0a70d2f953fc81f52255b623e34f7c3aaafbc9c0
+Size (ming-0_4_8.tar.gz) = 14908459 bytes
+SHA1 (patch-configure.in) = 9c231dc2e06d12e05b8e82d48f1df2aed33de697
