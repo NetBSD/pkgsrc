@@ -1,22 +1,8 @@
-$NetBSD: patch-ag,v 1.29 2016/06/19 23:05:17 joerg Exp $
+$NetBSD: patch-ag,v 1.30 2018/11/13 11:10:41 markd Exp $
 
-1. chunk:
-https://bugs.xine-project.org/show_bug.cgi?id=536
-3. chunk
-https://bugs.xine-project.org/show_bug.cgi?id=531
-
---- configure.ac.orig	2014-05-29 11:11:59.000000000 +0000
+--- configure.ac.orig	2018-01-11 12:49:46.000000000 +0000
 +++ configure.ac
-@@ -9,7 +9,7 @@ m4_esyscmd([./version.sh])
- 
- dnl Initialize autoconf, autoheader, and automake
- AC_INIT([xine-lib], XINE_VERSION_SPEC, [xine-bugs@lists.sourceforge.net])
--AM_INIT_AUTOMAKE
-+AM_INIT_AUTOMAKE([subdir-objects])
- AC_CONFIG_SRCDIR([src/xine-engine/xine.c])
- AC_CONFIG_MACRO_DIR([m4])
- AC_CONFIG_LIBOBJ_DIR([lib])
-@@ -466,7 +466,8 @@ AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[]],
+@@ -468,7 +468,8 @@ AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[]],
  CC_ATTRIBUTE_ALIGNED
  
  CC_ATTRIBUTE_VISIBILITY([protected],
@@ -26,11 +12,3 @@ https://bugs.xine-project.org/show_bug.cgi?id=531
                          [CC_ATTRIBUTE_VISIBILITY([default], [visibility_export="default"])])
  CC_ATTRIBUTE_VISIBILITY([internal])
  
-@@ -920,6 +921,7 @@ AC_CHECK_FUNCS([strncasecmp _strnicmp], 
- 
- AC_FUNC_FSEEKO
- 
-+AC_LIBOBJ(dummy)
- AC_REPLACE_FUNCS([asprintf basename gettimeofday setenv strcasestr strndup strpbrk strsep strtok_r timegm unsetenv memmem])
- 
- AC_LIBSOURCE([hstrerror.c])
