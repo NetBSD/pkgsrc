@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2018/11/13 12:55:31 adam Exp $
+
+python-config --ldflags is for linking executables; use --libs instead
+
+--- configure.orig	2018-11-13 12:01:21.000000000 +0000
++++ configure
+@@ -14460,7 +14460,7 @@ fi
+ $as_echo_n "checking for libraries required to embed python... " >&6; }
+ 
+ if $PYTHON-config --help 1>/dev/null 2>/dev/null; then
+-  PYTHON_LIBS=`$PYTHON-config --ldflags 2>/dev/null`
++  PYTHON_LIBS=`$PYTHON-config --libs 2>/dev/null`
+   PYTHON_LIB=`$PYTHON -c "import distutils.sysconfig as s; print(s.get_python_lib(standard_lib=1))"`
+   if echo "$host_os" | grep darwin >/dev/null 2>&1; then
+                 PYTHON_LIB_LOC=/usr/lib
