@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Linux,v 1.4 2018/05/18 15:22:02 bacon Exp $
+@comment $NetBSD: PLIST.Linux,v 1.5 2018/11/13 09:24:37 markd Exp $
 qt5/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qevdevkeyboard_defaultmap_p.h
 qt5/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qevdevkeyboardhandler_p.h
 qt5/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qevdevkeyboardmanager_p.h
@@ -26,6 +26,7 @@ qt5/lib/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QEvdevTabletPlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QEvdevTouchScreenPlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake
+qt5/lib/cmake/Qt5Gui/Qt5Gui_QTsLibPlugin.cmake
 qt5/lib/cmake/Qt5Network/Qt5Network_QConnmanEnginePlugin.cmake
 qt5/lib/cmake/Qt5Network/Qt5Network_QNetworkManagerEnginePlugin.cmake
 qt5/lib/libQt5InputSupport.a
@@ -37,4 +38,5 @@ qt5/plugins/generic/libqevdevkeyboardplugin.so
 qt5/plugins/generic/libqevdevmouseplugin.so
 qt5/plugins/generic/libqevdevtabletplugin.so
 qt5/plugins/generic/libqevdevtouchplugin.so
+qt5/plugins/generic/libqtslibplugin.so
 qt5/plugins/platforms/libqlinuxfb.so

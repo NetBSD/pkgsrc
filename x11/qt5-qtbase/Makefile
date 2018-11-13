@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2018/11/12 03:51:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.66 2018/11/13 09:24:37 markd Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
@@ -152,6 +152,12 @@ PC_FILES=		Qt5Concurrent.pc Qt5Core.pc Qt5DBus.pc \
 			Qt5PrintSupport.pc Qt5Sql.pc Qt5Test.pc \
 			Qt5Widgets.pc Qt5Xml.pc
 
+.if ${OPSYS} == "Linux"
+QMAKE_EXTRA=		QMAKE_PLATFORM += linux
+.else
+QMAKE_EXTRA=
+.endif
+
 pre-configure:
 	${SED}  -e 's:@LOCALBASE@:${LOCALBASE}:g' \
 		-e 's:@X11BASE@:${X11BASE}:g' \
@@ -171,6 +177,7 @@ pre-configure:
 		-e 's:@PTHREAD_LIBS@:${PTHREAD_LIBS:Q}:g' \
 		-e 's:@COMPILER_RPATH_FLAG@:${COMPILER_RPATH_FLAG}:g' \
 		-e 's:@QMAKE_RANLIB@:${QMAKE_RANLIB:Q}:g' \
+		-e 's:@QMAKE_EXTRA@:${QMAKE_EXTRA:Q}:g' \
 		${FILESDIR}/${QMAKE_CONF} > ${WRKSRC}/qmake.conf
 		for dir in ${WRKSRC}/mkspecs/*; do \
 			cp ${WRKSRC}/qmake.conf $${dir}; \
