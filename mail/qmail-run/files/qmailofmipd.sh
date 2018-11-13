@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailofmipd.sh,v 1.15 2018/11/08 20:57:28 schmonz Exp $
+# $NetBSD: qmailofmipd.sh,v 1.16 2018/11/13 16:34:58 schmonz Exp $
 #
 # @PKGNAME@ script to control ofmipd (SMTP submission service).
 #
@@ -19,7 +19,7 @@ name="qmailofmipd"
 : ${qmailofmipd_pretcpserver:=""}
 : ${qmailofmipd_tcpserver:="@PREFIX@/bin/sslserver"}
 : ${qmailofmipd_preofmipd:=""}
-: ${qmailofmipd_ofmipdcmd:="@PREFIX@/bin/ofmipd"}
+: ${qmailofmipd_ofmipdcmd:="@PREFIX@/bin/ofmipd-with-user-cdb"}
 : ${qmailofmipd_checkpassword:="@PREFIX@/bin/nbcheckpassword"}
 : ${qmailofmipd_postofmipd:=""}
 : ${qmailofmipd_log:="YES"}

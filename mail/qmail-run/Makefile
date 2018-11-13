@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2018/11/10 15:31:18 schmonz Exp $
+# $NetBSD: Makefile,v 1.57 2018/11/13 16:34:58 schmonz Exp $
 #
 
-DISTNAME=		qmail-run-20181110
+DISTNAME=		qmail-run-20181113
 CATEGORIES=		mail
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -11,6 +11,7 @@ COMMENT=		Configures qmail to receive and deliver mail
 LICENSE=		2-clause-bsd
 
 DEPENDS+=		greetdelay-[0-9]*:../../mail/greetdelay
+DEPENDS+=		greylisting-spp-[0-9]*:../../mail/greylisting-spp
 DEPENDS+=		pkg_alternatives-[0-9]*:../../pkgtools/pkg_alternatives
 DEPENDS_QMAIL=		qmail>=1.03nb40:../../mail/qmail
 DEPENDS+=		${DEPENDS_QMAIL}
@@ -32,20 +33,28 @@ FILES_SUBST+=		UCSPI_SSL_GROUP=${UCSPI_SSL_GROUP:Q}
 MESSAGE_SUBST+=		PKG_SYSCONFBASE=${PKG_SYSCONFBASE:Q}
 RCD_SCRIPTS=		qmail qmailofmipd qmailpop3d qmailqread qmailsend qmailsmtpd
 
+EGDIR=			share/examples/qmail-run
 .for f in defaultdelivery fixsmtpio signatures \
 	pop3capabilities smtpcapabilities smtpplugins \
 	concurrencyincoming concurrencypop3 concurrencysubmission
-CONF_FILES+=		${PREFIX}/share/examples/qmail-run/${f} \
+CONF_FILES+=		${PREFIX}/${EGDIR}/${f} \
 			${PKG_SYSCONFDIR}/control/${f}
 .endfor
 .for f in tcp.ofmip tcp.pop3 tcp.smtp
-CONF_FILES+=		${PREFIX}/share/examples/qmail-run/${f} \
+CONF_FILES+=		${PREFIX}/${EGDIR}/${f} \
 			${PKG_SYSCONFDIR}/${f}
 .endfor
+GREYLISTDIR=		${PKG_SYSCONFDIR}/control/greylist
+OWN_DIRS_PERMS+=	${GREYLISTDIR} ${QMAIL_DAEMON_USER} ${QMAIL_QMAIL_GROUP} 775
+CONF_FILES_PERMS+=	${PREFIX}/${EGDIR}/greylist-database ${GREYLISTDIR}/database ${QMAIL_DAEMON_USER} ${QMAIL_QMAIL_GROUP} 664
+.for f in exemptrcpthosts exemptrcpts
+CONF_FILES+=		${PREFIX}/${EGDIR}/greylist-${f} \
+			${GREYLISTDIR}/${f}
+.endfor
 
-INSTALLATION_DIRS=	bin share/doc/qmail-run share/examples/qmail-run
+INSTALLATION_DIRS=	bin share/doc/qmail-run ${EGDIR}
 BUILD_DEFS+=		QMAIL_DAEMON_USER QMAIL_LOG_USER QMAIL_SEND_USER
-BUILD_DEFS+=		QMAIL_QUEUE_EXTRA PKG_SYSCONFBASE
+BUILD_DEFS+=		QMAIL_QMAIL_GROUP QMAIL_QUEUE_EXTRA PKG_SYSCONFBASE
 BUILD_DEFS+=		UCSPI_SSL_USER UCSPI_SSL_GROUP
 
 .include "../../mk/bsd.prefs.mk"
@@ -66,7 +75,7 @@ MAKEVARS+=	PKG_SYSCONFDIR.qmail-run
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	mailer.conf
-SUBST_FILES.paths+=	ofmipd-with-user-cdb
+SUBST_FILES.paths+=	greylisting-spp-with-exemptions ofmipd-with-user-cdb
 SUBST_FILES.paths+=	qmail-isspam-* qmail-procmail qmail-qread-client
 SUBST_FILES.paths+=	smtpplugins tcp.*
 SUBST_VARS.paths=	PKGNAME PKG_SYSCONFDIR PREFIX
@@ -80,14 +89,14 @@ post-extract:
 		tcp.ofmip tcp.pop3 tcp.smtp; do \
 		${CP} ${FILESDIR}/$$f ${WRKDIR}/$$f; \
 	done; \
-	for f in ofmipd-with-user-cdb \
+	for f in greylisting-spp-with-exemptions ofmipd-with-user-cdb \
 		qmail-isspam-rspamd qmail-isspam-spamassassin \
 		qmail-procmail qmail-qread-client; do \
 		${CP} ${FILESDIR}/$$f.sh ${WRKDIR}/$$f; \
 	done
 
 do-install:
-	for f in ofmipd-with-user-cdb \
+	for f in greylisting-spp-with-exemptions ofmipd-with-user-cdb \
 		qmail-isspam-rspamd qmail-isspam-spamassassin \
 		qmail-procmail qmail-qread-client; do \
 		${INSTALL_SCRIPT} ${WRKDIR}/$$f ${DESTDIR}${PREFIX}/bin; \
@@ -99,9 +108,12 @@ do-install:
 		concurrencyincoming concurrencypop3 concurrencysubmission \
 		tcp.ofmip tcp.pop3 tcp.smtp; do \
 		${INSTALL_DATA} ${WRKDIR}/$${f} \
-			${DESTDIR}${PREFIX}/share/examples/qmail-run; \
+			${DESTDIR}${PREFIX}/${EGDIR}; \
+	done; \
+	for f in database exemptrcpthosts exemptrcpts; do \
+		${TOUCH} ${DESTDIR}${PREFIX}/${EGDIR}/greylist-$${f}; \
 	done; \
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf \
-		${DESTDIR}${PREFIX}/share/examples/qmail-run
+		${DESTDIR}${PREFIX}/${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"
