@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2018/11/12 03:51:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2018/11/13 13:33:29 bsiegert Exp $
 
-DISTNAME=	gtkspell3-3.0.9
-PKGREVISION=	1
+DISTNAME=	gtkspell3-3.0.10
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkspell/}
 EXTRACT_SUFX=	.tar.xz
@@ -17,6 +16,6 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	gtkspell-3.0.pc.in
 CONFIGURE_ARGS+=	--disable-gtk-doc
 
-.include "../../textproc/enchant/buildlink3.mk"
+.include "../../textproc/enchant2/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
