@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.108 2017/08/02 03:41:35 maya Exp $
+$NetBSD: distinfo,v 1.109 2018/11/13 11:10:41 markd Exp $
 
-SHA1 (xine-lib-1.2.6.tar.xz) = ac929eef2b7bf5c27699bbed612b953a01fccba5
-RMD160 (xine-lib-1.2.6.tar.xz) = 05edcd9a36e93d2fc9d1bf13cae3b32d4bd996da
-SHA512 (xine-lib-1.2.6.tar.xz) = ed4b1bc29daf85021cb83393d010ddca0ce9da508a8ddb9fec554f18eda1d156fc08f0aeaabeb7afe93fc445f049f84057e0708e6c87cd123c5cd2b20f8a25fd
-Size (xine-lib-1.2.6.tar.xz) = 5020964 bytes
-SHA1 (patch-ag) = e2eb9fdf9b7c013c3958c095edbfb09e6d1aedaf
+SHA1 (xine-lib-1.2.9.tar.xz) = ad6e72b7d8ff6172a8a170ab1bc38577ae321371
+RMD160 (xine-lib-1.2.9.tar.xz) = 3feb81b93add382c5382984980189f323f2ac746
+SHA512 (xine-lib-1.2.9.tar.xz) = bc672b32d6d72e6fa5641319e0bd15d721ea4b65e6d025e3cdbf6ba3655a7b2c714809d919a53fca8a908a7ce37541a341c13dd8a336799c2e942d5f86b84d3c
+Size (xine-lib-1.2.9.tar.xz) = 5180452 bytes
+SHA1 (patch-ag) = ef924c08b4d1d0dbc48f619d69b608c9d0def9fe
 SHA1 (patch-cb) = 708ee946dd1708a40baef5ac193a46dc22bff8b5
-SHA1 (patch-contrib_libxdg-basedir_basedir.c) = 307900aadc912d9a4b71b602821bf7d6b27f3e0f
+SHA1 (patch-contrib_libxdg-basedir_basedir.c) = 8dd88fd712853e58363148023be6ef0906486206
 SHA1 (patch-fa) = 9312a3bab4ae8482a208948277f1d11fb7eaaf8c
 SHA1 (patch-include_xine_attributes.h) = e7cb5f50d95a2523e2de83250fe11a12f0126a7f
 SHA1 (patch-include_xine_post.h) = 30629bff9486bf6b7ca889189cfad406eb242674
@@ -14,19 +14,17 @@ SHA1 (patch-src-post-audio-stretch.c) = 6f950bcd47fdf68b691744dc105f59f821748ce1
 SHA1 (patch-src-post-audio-upmix.c) = 70ca6babfa9a7add0ac70a6024fcff429e1bc49d
 SHA1 (patch-src-post-audio-upmix_mono.c) = 2c70ded10118cbeed5be3c948886f7311ddb7bbd
 SHA1 (patch-src-post-audio-volnorm.c) = b110542ae4c21762cf369a4cf2b6c66343c3b761
-SHA1 (patch-src-post-deinterlace-xine_plugin.c) = 536365d479b5cd0354365a53db4f19f8404788ac
+SHA1 (patch-src-post-deinterlace-xine_plugin.c) = 996db1d9546bc2fcf5ca03d15befae3fdb9a6c00
 SHA1 (patch-src-post-mosaico-mosaico.c) = 04f21603055b1e8e7490ba5d6e006ca5a9b683a3
 SHA1 (patch-src-post-mosaico-switch.c) = ff46e13acfbcaf0167943b536b12cb95ec7591d4
 SHA1 (patch-src-post-planar-boxblur.c) = 191ce5819fce39a247adaefe07e3302870c3d1c3
 SHA1 (patch-src-post-planar-denoise3d.c) = e140ff0b7867fd850099ff073f67201b4649dcad
-SHA1 (patch-src-post-planar-eq.c) = 2c81fdb839456affa6882577479cea7934121619
-SHA1 (patch-src-post-planar-eq2.c) = 3a99bf71d43d17628fd21a261974e7a854eb70aa
+SHA1 (patch-src-post-planar-eq.c) = ae26bd7cbd53bc750319964f0be0b75a781367bb
+SHA1 (patch-src-post-planar-eq2.c) = 7711ea2c3b8ede9adf9b54f7b95f4458ffed852b
 SHA1 (patch-src-post-planar-expand.c) = 9d9ec1f5619f9a3d832bcace54d23011371f2067
-SHA1 (patch-src-post-planar-noise.c) = 2deabf5d80e2c45959a4f89bbf2528f7e1c9e1f5
+SHA1 (patch-src-post-planar-noise.c) = 8a9a2fee5d41af6d4e318abfcbeddd0ced33e478
 SHA1 (patch-src-post-planar-pp.c) = f5bea421785132c5f1422ae9f0d468974fb0ae5d
 SHA1 (patch-src-post-planar-unsharp.c) = 9f29c624f96a91760df960343096247d8c09c58d
-SHA1 (patch-src_input_input__dvd.c) = 9e491411a22e1f4467ce0e1aba83346305a1b6d3
 SHA1 (patch-src_libw32dll_wine_registry.c) = a36b4155a1d0d43ae698641178ef4afc97e7e70a
-SHA1 (patch-src_video__out_Makefile.am) = 49a3c53da9cde55a96b5798cc32467f9334e2d76
+SHA1 (patch-src_video__out_Makefile.am) = f94911c06a181d1ef9735912db60883b6e4f05dc
 SHA1 (patch-src_video__out_macosx_Makefile.am) = 8350a75e3a4c0b2f684e07dcc18259fcc5b28115
-SHA1 (patch-src_xine-engine_Makefile.am) = e44ca141304e102faa40763ef083e8c1f60089e7
