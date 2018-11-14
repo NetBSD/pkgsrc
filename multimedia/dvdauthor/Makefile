@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2018/11/12 03:52:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.55 2018/11/14 21:39:08 markd Exp $
 
 DISTNAME=		dvdauthor-0.7.1
 PKGREVISION=		16
@@ -16,6 +16,12 @@ GNU_CONFIGURE=		YES
 USE_TOOLS+=		flex gmake yacc pkg-config
 # To keep a consistent behavior with previous releases
 CONFIGURE_ARGS+=	--enable-default-video-format=ntsc
+
+SUBST_CLASSES+=		freetype
+SUBST_STAGE.freetype=	post-patch
+SUBST_FILES.freetype=	configure
+SUBST_MESSAGE.freetype=	Dont use obsolete freetype-config
+SUBST_SED.freetype=	-e "s,freetype-config,pkg-config freetype2,"
 
 .include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
