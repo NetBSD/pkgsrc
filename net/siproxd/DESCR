@@ -1,0 +1,4 @@
+Siproxd is a proxy/masquerading daemon for the SIP protocol. It handles
+registrations of SIP clients on a private IP network and performs rewriting
+of the SIP message bodies to make SIP connections work via a masquerading
+firewall (NAT).

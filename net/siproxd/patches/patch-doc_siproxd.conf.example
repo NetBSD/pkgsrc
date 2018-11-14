@@ -1,0 +1,60 @@
+$NetBSD: patch-doc_siproxd.conf.example,v 1.1 2018/11/14 15:25:28 hauke Exp $
+
+Substitute path and user information.
+
+--- doc/siproxd.conf.example.orig	2016-03-25 18:44:51.000000000 +0000
++++ doc/siproxd.conf.example
+@@ -1,5 +1,5 @@
+ #
+-# /etc/siproxd.conf - siproxd configuration file
++# @PKG_SYSCONFDIR@/siproxd.conf - siproxd configuration file
+ #
+ # !! This is a sample file, adapt it to your needs before using it !!
+ #
+@@ -78,8 +78,8 @@ silence_log = 1
+ # Secure Enviroment settings:
+ #   user:	uid/gid to switch to after startup
+ #   chrootjail:	path to chroot to (chroot jail)
+-user = nobody
+-#chrootjail = /var/lib/siproxd/
++user = @SIPROXD_USER@
++#chrootjail = @SIPROXD_HOME@/
+ 
+ ######################################################################
+ # Memory settings
+@@ -100,7 +100,7 @@ user = nobody
+ #   the specified directory path does exist!
+ #   Note: If running in chroot jail, this path starts relative
+ #         to the jail.
+-registration_file = /var/lib/siproxd/siproxd_registrations
++registration_file = @VARBASE@/run/siproxd/siproxd_registrations
+ 
+ ######################################################################
+ # Automatically save current registrations every 'n' seconds
+@@ -113,7 +113,7 @@ autosave_registrations = 300
+ #   This file holds the PID of the main thread of siproxd.
+ #   Note: If running in chroot jail, this path starts relative
+ #         to the jail.
+-pid_file = /var/run/siproxd/siproxd.pid
++pid_file = @VARBASE@/run/siproxd/siproxd.pid
+ 
+ ######################################################################
+ # global switch to control the RTP proxy behaviour
+@@ -213,7 +213,7 @@ tcp_keepalive = 20
+ #
+ # OR use individual per user passwords stored in a file
+ #
+-#proxy_auth_pwfile = /etc/siproxd_passwd.cfg
++#proxy_auth_pwfile = @PKG_SYSCONFDIR@/siproxd_passwd.cfg
+ #
+ # 'proxy_auth_pwfile' has precedence over 'proxy_auth_passwd'
+ 
+@@ -323,7 +323,7 @@ debug_port = 0
+ # the processing order is given by the load order.
+ #
+ # plugin_dir: MUST be terminated with '/'
+-plugindir=/usr/lib/siproxd/
++plugindir=@PREFIX@/lib/siproxd/
+ #
+ # List of plugins to load. MUST use the .la file extension!
+ #load_plugin=plugin_demo.la
