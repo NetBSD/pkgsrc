@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4683 2018/11/14 09:28:44 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4684 2018/11/14 10:41:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6561,3 +6561,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-test-django to 3.4.4 [adam 2018-11-14]
 	Updated devel/py-faker to 1.0.0 [adam 2018-11-14]
 	Updated security/py-argon2_cffi to 18.3.0 [adam 2018-11-14]
+	Updated math/py-simpleeval to 0.9.8 [adam 2018-11-14]
+	Updated time/py-pendulum to 2.0.4 [adam 2018-11-14]
+	Updated textproc/py-regex to 2018.11.07 [adam 2018-11-14]
+	Updated databases/py-whisper to 1.1.4 [adam 2018-11-14]
