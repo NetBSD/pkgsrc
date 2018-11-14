@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2018/08/07 10:09:43 adam Exp $
+$NetBSD: distinfo,v 1.11 2018/11/14 10:31:58 adam Exp $
 
-SHA1 (pendulum-2.0.3.tar.gz) = 10d60882c4d57e53c1fa2847a0d5eeba96c96d20
-RMD160 (pendulum-2.0.3.tar.gz) = 47d9bd2e656f92c675596bf9e16642ae14ac8abf
-SHA512 (pendulum-2.0.3.tar.gz) = 79bf1fa6d5ffa47264a247ad613c1f2a54f751c7be53f540ed71a7bac0f957ead0025e6559ab85415cb4911e0993f9de3f8dc9cfd17834932720dddc995a55e0
-Size (pendulum-2.0.3.tar.gz) = 75580 bytes
+SHA1 (pendulum-2.0.4.tar.gz) = eaee945d717191eeee17a20fb21f8e5069e84d77
+RMD160 (pendulum-2.0.4.tar.gz) = 7acef3b49fcf7a7ebbcf0c1dc2d9c8d7521683ca
+SHA512 (pendulum-2.0.4.tar.gz) = bc669990cb78d262dd970a702917649c9cda83690ad4ad0c316cb91baa75104c769cc7cdc4c80a5f5a2b83d9315cdb8a7cfe15fe1369b055d295c083d57439d4
+Size (pendulum-2.0.4.tar.gz) = 75745 bytes
