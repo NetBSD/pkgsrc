@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4684 2018/11/14 10:41:51 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4685 2018/11/14 13:00:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6565,3 +6565,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/py-pendulum to 2.0.4 [adam 2018-11-14]
 	Updated textproc/py-regex to 2018.11.07 [adam 2018-11-14]
 	Updated databases/py-whisper to 1.1.4 [adam 2018-11-14]
+	Updated devel/re2c to 1.1.1 [adam 2018-11-14]
+	Updated security/sudo to 1.8.26 [adam 2018-11-14]
