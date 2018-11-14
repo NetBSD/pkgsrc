@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.26 2018/11/12 03:51:09 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.27 2018/11/14 22:21:13 kleink Exp $
 
 BUILDLINK_TREE+=	SDL_Pango
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	SDL_Pango
 SDL_PANGO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.SDL_Pango+=	SDL_Pango>=0.1.2
-BUILDLINK_ABI_DEPENDS.SDL_Pango+=	SDL_Pango>=0.1.2nb25
+BUILDLINK_ABI_DEPENDS.SDL_Pango+=	SDL_Pango>=0.1.2nb26
 BUILDLINK_PKGSRCDIR.SDL_Pango?=		../../devel/SDL_Pango
 
 # Seems to be unnecessary, pkg-config does not show anything from SDL

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.68 2018/11/12 03:52:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.69 2018/11/14 22:21:26 kleink Exp $
 #
 
 DISTNAME=		tme-0.8
-PKGREVISION=		36
+PKGREVISION=		37
 CATEGORIES=		emulators
 MASTER_SITES=		http://csail.mit.edu/~fredette/tme/
 

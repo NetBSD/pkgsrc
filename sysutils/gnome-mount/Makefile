@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2018/11/12 03:52:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.47 2018/11/14 22:22:24 kleink Exp $
 #
 
 DISTNAME=		gnome-mount-0.8
-PKGREVISION=		41
+PKGREVISION=		42
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		http://hal.freedesktop.org/releases/
 

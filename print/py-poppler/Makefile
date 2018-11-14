@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2018/11/12 03:52:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.45 2018/11/14 22:22:19 kleink Exp $
 
 DISTNAME=	pypoppler-0.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	35
+PKGREVISION=	36
 CATEGORIES=	print
 MASTER_SITES=	https://launchpad.net/poppler-python/trunk/development/+download/
 

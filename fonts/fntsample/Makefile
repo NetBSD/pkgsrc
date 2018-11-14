@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2018/11/12 03:52:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.32 2018/11/14 22:21:27 kleink Exp $
 #
 
 DISTNAME=	fntsample-5.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=eugmes/}
 GITHUB_TAG=	release/${PKGVERSION_NOREV}

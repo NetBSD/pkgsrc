@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2018/11/12 03:52:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2018/11/14 22:22:10 kleink Exp $
 
 DISTNAME=		gitso-0.6
-PKGREVISION=		19
+PKGREVISION=		20
 CATEGORIES=		net x11
 MASTER_SITES=		http://gitso.googlecode.com/files/
 DISTFILES=		gitso_0.6_linux_all.tar.gz

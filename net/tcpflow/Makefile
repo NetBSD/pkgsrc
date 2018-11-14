@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2018/08/21 06:52:11 adam Exp $
+# $NetBSD: Makefile,v 1.19 2018/11/14 22:22:14 kleink Exp $
 
 DISTNAME=	tcpflow-1.5.0
+PKGREVISION=	1
 CATEGORIES=	net security
 MASTER_SITES=	http://downloads.digitalcorpora.org/downloads/tcpflow/
 

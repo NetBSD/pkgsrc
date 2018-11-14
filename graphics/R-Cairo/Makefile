@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2018/07/18 00:07:51 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2018/11/14 22:21:34 kleink Exp $
 
 DISTNAME=	Cairo_1.5-9
+PKGREVISION=	1
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
