@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.33 2018/11/12 03:51:19 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.34 2018/11/14 22:21:54 kleink Exp $
 
 BUILDLINK_TREE+=	tomoe-gtk
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	tomoe-gtk
 TOMOE_GTK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.tomoe-gtk+=	tomoe-gtk>=0.6.0
-BUILDLINK_ABI_DEPENDS.tomoe-gtk+=	tomoe-gtk>=0.6.0nb31
+BUILDLINK_ABI_DEPENDS.tomoe-gtk+=	tomoe-gtk>=0.6.0nb32
 BUILDLINK_PKGSRCDIR.tomoe-gtk?=		../../inputmethod/tomoe-gtk
 
 .include "../../inputmethod/tomoe/buildlink3.mk"

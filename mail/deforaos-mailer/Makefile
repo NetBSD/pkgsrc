@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2018/11/12 03:51:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.32 2018/11/14 22:21:58 kleink Exp $
 
 DISTNAME=	Mailer-0.1.8
 PKGNAME=	deforaos-mailer-0.1.8
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	mail
 MASTER_SITES=	https://www.defora.org/os/download/download/4439/
 
