@@ -6,11 +6,17 @@ psmsg='#
 case ${STAGE} in
 
 POST-INSTALL)
-	cd ${PREFIX}/share/qmail/setup && ./config-fast `./hostname`
+	cd ${PREFIX}/share/qmail/setup && ./config-fast-pkgsrc `./hostname`
 
-	cd ${PKG_SYSCONFDIR}/control
+	cd ${PKG_SYSCONFDIR}/.pkgsrc-defaults-do-not-edit
 	for i in locals rcpthosts; do
-		${SORT} -u ${i} > ${i}.tmp && mv ${i}.tmp ${i}
+		${SORT} -u ${i} > ${i}.tmp && ${MV} ${i}.tmp ${i}
+	done
+
+	cd ${PKG_SYSCONFDIR}
+	for i in defaultdomain locals me plusdomain rcpthosts; do
+		[ -f control/${i} ] \
+			|| ${CP} .pkgsrc-defaults-do-not-edit/${i} control
 	done
 
 	cd ${PKG_SYSCONFDIR}/alias
