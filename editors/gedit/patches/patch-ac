@@ -1,7 +1,62 @@
-$NetBSD: patch-ac,v 1.1 2010/11/03 19:55:18 drochner Exp $
+$NetBSD: patch-ac,v 1.2 2018/11/14 21:17:22 bsiegert Exp $
+
+Enchant V2 support
 
 --- configure.orig	2010-09-28 07:31:53.000000000 +0000
 +++ configure
+@@ -13665,7 +13665,7 @@ fi
+ 
+ 
+ 
+-ENCHANT_REQUIRED=1.2.0
++ENCHANT_REQUIRED=2.0.0
+ ISO_CODES_REQUIRED=0.35
+ 
+ # Check whether --enable-spell was given.
+@@ -13687,12 +13687,12 @@ if test -n "$ENCHANT_CFLAGS"; then
+     pkg_cv_ENCHANT_CFLAGS="$ENCHANT_CFLAGS"
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"enchant >= \$ENCHANT_REQUIRED\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "enchant >= $ENCHANT_REQUIRED") 2>&5
++    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"enchant-2 >= \$ENCHANT_REQUIRED\""; } >&5
++  ($PKG_CONFIG --exists --print-errors "enchant-2 >= $ENCHANT_REQUIRED") 2>&5
+   ac_status=$?
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+-  pkg_cv_ENCHANT_CFLAGS=`$PKG_CONFIG --cflags "enchant >= $ENCHANT_REQUIRED" 2>/dev/null`
++  pkg_cv_ENCHANT_CFLAGS=`$PKG_CONFIG --cflags "enchant-2 >= $ENCHANT_REQUIRED" 2>/dev/null`
+ else
+   pkg_failed=yes
+ fi
+@@ -13703,12 +13703,12 @@ if test -n "$ENCHANT_LIBS"; then
+     pkg_cv_ENCHANT_LIBS="$ENCHANT_LIBS"
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"enchant >= \$ENCHANT_REQUIRED\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "enchant >= $ENCHANT_REQUIRED") 2>&5
++    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"enchant-2 >= \$ENCHANT_REQUIRED\""; } >&5
++  ($PKG_CONFIG --exists --print-errors "enchant-2 >= $ENCHANT_REQUIRED") 2>&5
+   ac_status=$?
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+-  pkg_cv_ENCHANT_LIBS=`$PKG_CONFIG --libs "enchant >= $ENCHANT_REQUIRED" 2>/dev/null`
++  pkg_cv_ENCHANT_LIBS=`$PKG_CONFIG --libs "enchant-2 >= $ENCHANT_REQUIRED" 2>/dev/null`
+ else
+   pkg_failed=yes
+ fi
+@@ -13728,9 +13728,9 @@ else
+         _pkg_short_errors_supported=no
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+-	        ENCHANT_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "enchant >= $ENCHANT_REQUIRED" 2>&1`
++	        ENCHANT_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "enchant-2 >= $ENCHANT_REQUIRED" 2>&1`
+         else
+-	        ENCHANT_PKG_ERRORS=`$PKG_CONFIG --print-errors "enchant >= $ENCHANT_REQUIRED" 2>&1`
++	        ENCHANT_PKG_ERRORS=`$PKG_CONFIG --print-errors "enchant-2 >= $ENCHANT_REQUIRED" 2>&1`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$ENCHANT_PKG_ERRORS" >&5
 @@ -14406,7 +14406,7 @@ if test "${am_cv_pathless_PYTHON+set}" =
    $as_echo_n "(cached) " >&6
  else

@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.54 2015/11/03 03:32:16 agc Exp $
+$NetBSD: distinfo,v 1.55 2018/11/14 21:17:22 bsiegert Exp $
 
 SHA1 (gedit-2.30.4.tar.bz2) = ff7f4088d0b89224b84406557a7d9970323fdcc3
 RMD160 (gedit-2.30.4.tar.bz2) = b2659b8847ef02c66a70acd2f4a492555e1e4d21
 SHA512 (gedit-2.30.4.tar.bz2) = 31d96a86d4d207fe83aa1c8b8faadd82c2c6eeca019f2df4fdf75a8678233e76edf7a09f32dba6350ab9fc003029cbb585608d864632e1d13c42650d1894b5e1
 Size (gedit-2.30.4.tar.bz2) = 4705692 bytes
 SHA1 (patch-ab) = 06f1492437126f8ee12bda5b5dd090b713885ba2
-SHA1 (patch-ac) = 997c8a7ddcfc98369afdf42dddeff5cf6e159c23
+SHA1 (patch-ac) = a664f803d9801f46414750da5f9c956e6cef9c18
 SHA1 (patch-tests_document-saver.c) = 5317930c5da888c33f43f341e627b2e85829212b
