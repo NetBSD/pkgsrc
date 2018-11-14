@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2018/11/14 15:25:28 hauke Exp $
+lib/siproxd/plugin_codecfilter.la
+lib/siproxd/plugin_defaulttarget.la
+lib/siproxd/plugin_demo.la
+lib/siproxd/plugin_fix_DTAG.la
+lib/siproxd/plugin_fix_bogus_via.la
+lib/siproxd/plugin_fix_fbox_anoncall.la
+lib/siproxd/plugin_logcall.la
+lib/siproxd/plugin_prefix.la
+lib/siproxd/plugin_regex.la
+lib/siproxd/plugin_shortdial.la
+lib/siproxd/plugin_siptrunk.la
+lib/siproxd/plugin_stripheader.la
+lib/siproxd/plugin_stun.la
+sbin/siproxd
+share/doc/siproxd/FAQ
+share/doc/siproxd/KNOWN_BUGS
+share/doc/siproxd/README
+share/doc/siproxd/RELNOTES
+share/doc/siproxd/RFC3261_compliance.txt
+share/examples/siproxd/sample_asterisk.txt
+share/examples/siproxd/sample_cfg_budgetone.txt
+share/examples/siproxd/sample_cfg_x-lite.txt
+share/examples/siproxd/siproxd.conf.example
+share/examples/siproxd/siproxd_passwd.cfg
