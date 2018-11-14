@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2017/12/21 07:57:10 adam Exp $
+$NetBSD: distinfo,v 1.18 2018/11/14 12:54:55 adam Exp $
 
-SHA1 (re2c-1.0.3.tar.gz) = 46e2157542e86f11fd3d9cdb1971b704decdf83e
-RMD160 (re2c-1.0.3.tar.gz) = bc5861f99da1b2d16af17b7afcc63a7a5dba4f8a
-SHA512 (re2c-1.0.3.tar.gz) = 7b2a43828da872a957af88fb0a226e1936a45c8a1020ba1f6544b588aaa61dff8df40e84f9053c30ac8e17c41164e70627d57f5d3721a34b2aba7b1dbf25b6ae
-Size (re2c-1.0.3.tar.gz) = 5806555 bytes
+SHA1 (re2c-1.1.1.tar.gz) = a87eddf0d2d2cec0cf07517efe5cbdbd696cb6f4
+RMD160 (re2c-1.1.1.tar.gz) = dafab7c2320266aa34eed66aa33f5e76074c010b
+SHA512 (re2c-1.1.1.tar.gz) = a6fe73611103588043748340976f0e6d07169a6546cb80627c0ccd2ceac83f362dbbf371530361d893537fd95deb19503b2c73c41ed40efe7787210d6c757397
+Size (re2c-1.1.1.tar.gz) = 5907416 bytes
