@@ -1,0 +1,21 @@
+$NetBSD: patch-doc_Makefile.in,v 1.1 2018/11/14 15:25:28 hauke Exp $
+
+DESTDIR support for configuration files
+
+--- doc/Makefile.in.orig	2012-04-06 22:58:58.000000000 +0200
++++ doc/Makefile.in	2012-04-06 22:59:04.000000000 +0200
+@@ -547,10 +547,10 @@
+ # install local data
+ #
+ install-data-local:
+-	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)
+-	$(INSTALL_DATA) $(srcdir)/siproxd.conf.example	$(DESTDIR)$(sysconfdir)/
+-	$(INSTALL_DATA) $(srcdir)/siproxd_passwd.cfg	$(DESTDIR)$(sysconfdir)/
+-	chmod 600 $(DESTDIR)$(sysconfdir)/siproxd_passwd.cfg
++	$(mkinstalldirs) $(DESTDIR)$(prefix)/share/examples/siproxd
++	$(INSTALL_DATA) $(srcdir)/siproxd.conf.example	$(DESTDIR)$(prefix)/share/examples/siproxd/
++	$(INSTALL_DATA) $(srcdir)/siproxd_passwd.cfg	$(DESTDIR)$(prefix)/share/examples/siproxd/
++	chmod 600 $(DESTDIR)$(prefix)/share/examples/siproxd/siproxd_passwd.cfg
+ 	$(mkinstalldirs) $(DESTDIR)$(docdir)
+ @have_docbook2pdf_TRUE@	$(INSTALL_DATA) $(srcdir)/pdf/*			$(DESTDIR)$(docdir)/
+ @have_docbook2html_TRUE@	$(INSTALL_DATA) $(srcdir)/html/*		$(DESTDIR)$(docdir)/
