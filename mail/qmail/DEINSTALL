@@ -1,4 +1,4 @@
-# $NetBSD: DEINSTALL,v 1.5 2006/04/29 04:53:17 schmonz Exp $
+# $NetBSD: DEINSTALL,v 1.6 2018/11/14 16:43:17 schmonz Exp $
 
 QMAILDIR=@QMAILDIR@
 
@@ -6,12 +6,23 @@ VAR_QMAIL_DIRS="alias bin boot control doc man queue users"
 
 case "${STAGE}" in
 
-POST-DEINSTALL)
-
-	for dir in $VAR_QMAIL_DIRS; do
-		if [ -h ${QMAILDIR}/$dir ]; then
-			${RM} -f ${QMAILDIR}/$dir
-		fi
+DEINSTALL)
+	cd ${PKG_SYSCONFDIR}
+	for i in postmaster mailer-daemon root; do
+		[ -s alias/.qmail-${i} ] \
+			|| ${RM} -f alias/.qmail-${i}
 	done
+	for i in defaultdomain locals me plusdomain rcpthosts; do
+		${CMP} -s control/${i} .pkgsrc-defaults-do-not-edit/${i} \
+			&& ${RM} -f control/${i}
+		${RM} -f .pkgsrc-defaults-do-not-edit/${i}
+	done
+
+	cd ${QMAILDIR}
+	for dir in ${VAR_QMAIL_DIRS}; do
+		[ -h ${dir} ] \
+			&& ${RM} -f ${dir}
+	done
+
 	;;
 esac
