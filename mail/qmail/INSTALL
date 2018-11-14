@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.11 2018/11/14 16:43:17 schmonz Exp $
+# $NetBSD: INSTALL,v 1.12 2018/11/14 16:44:13 schmonz Exp $
 
 DOCDIR=@DOCDIR@
 EGDIR=@EGDIR@
@@ -13,7 +13,7 @@ VAR_QMAIL_DIRS="alias bin boot control doc man queue users"
 is_queue_fs_case_sensitive() {
 	cd ${QMAIL_QUEUE_DIR}
 	${MKDIR} pkgsrc
-        ${TOUCH} pkgsrc/case-check pkgsrc/case-CHECK
+	${TOUCH} pkgsrc/case-check pkgsrc/case-CHECK
 	count=$(${ECHO} case-* | ${WC} -w)
 	${RM} -f pkgsrc/case-*
 	${RMDIR} pkgsrc
