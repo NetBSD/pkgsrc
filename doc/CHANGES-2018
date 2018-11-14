@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4687 2018/11/14 16:09:13 nia Exp $
+$NetBSD: CHANGES-2018,v 1.4688 2018/11/14 16:43:23 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6569,3 +6569,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/sudo to 1.8.26 [adam 2018-11-14]
 	Added net/siproxd version 0.8.2nb2 [hauke 2018-11-14]
 	Updated www/lynx to 2.8.9.1 [nia 2018-11-14]
+	Updated mail/qmail to 1.03nb41 [schmonz 2018-11-14]
