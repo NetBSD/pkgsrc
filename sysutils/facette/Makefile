@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2018/11/12 03:52:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2018/11/14 22:22:23 kleink Exp $
 
 DISTNAME=	facette-0.4.0dev
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=facette/}
 

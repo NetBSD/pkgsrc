@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.49 2018/11/12 03:51:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.50 2018/11/14 22:21:00 kleink Exp $
 #
 
 BMP_USE_ESD:=		yes
 .include "../../audio/bmp/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/bmp/bmp-esound/}
-PKGREVISION=		36
+PKGREVISION=		37
 CATEGORIES+=		gnome
 
 COMMENT=		BMP plugin to output sound through the esound daemon

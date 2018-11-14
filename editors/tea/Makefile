@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2018/11/12 03:51:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.49 2018/11/14 22:21:24 kleink Exp $
 
 DISTNAME=		tea-16.0.5
-PKGREVISION=		40
+PKGREVISION=		41
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tea-editor/}
 #https://github.com/psemiletov/tea-qt

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.31 2018/11/12 03:51:33 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.32 2018/11/14 22:22:48 kleink Exp $
 
 BUILDLINK_TREE+=	p5-gtk2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	p5-gtk2
 P5_GTK2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.p5-gtk2+=	p5-gtk2>=1.182
-BUILDLINK_ABI_DEPENDS.p5-gtk2+=	p5-gtk2>=1.24992nb4
+BUILDLINK_ABI_DEPENDS.p5-gtk2+=	p5-gtk2>=1.24992nb5
 BUILDLINK_PKGSRCDIR.p5-gtk2?=	../../x11/p5-gtk2
 
 .include "../../devel/p5-glib2/buildlink3.mk"
