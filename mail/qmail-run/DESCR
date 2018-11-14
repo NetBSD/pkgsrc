@@ -1,3 +1,3 @@
-This package creates all the needed config files to run qmail, provides
-wrappers for procmail, spamassassin, and rspamd and an example
-mailer.conf, and installs NetBSD-style rc.d scripts.
+This package creates the config files and NetBSD-style rc.d scripts
+needed to run qmail, and provides convenient wrappers for procmail,
+spamassassin, and rspamd.
