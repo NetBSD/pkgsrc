@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.131 2018/06/15 22:24:38 tez Exp $
+# $NetBSD: Makefile,v 1.132 2018/11/14 16:09:03 nia Exp $
 
-DISTNAME=	lynx2.8.8rel.2
+DISTNAME=	lynx2.8.9rel.1
 PKGNAME=	${DISTNAME:S/lynx/lynx-/:S/rel//}
-PKGREVISION=	9
 CATEGORIES=	www
 MASTER_SITES=	https://invisible-mirror.net/archives/lynx/tarballs/
 MASTER_SITES+=	ftp://ftp.cyf-kr.edu.pl/pub/unix/lynx/${SUBDIR:Q}/
@@ -17,7 +16,6 @@ LICENSE=	gnu-gpl-v2
 MAKE_JOBS_SAFE=		no
 
 SUBDIR=			current
-WRKSRC=			${WRKDIR}/lynx2-8-8
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 BROKEN_GETTEXT_DETECTION= yes
