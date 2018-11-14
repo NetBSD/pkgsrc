@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.102 2018/11/10 16:42:52 schmonz Exp $
+# $NetBSD: Makefile,v 1.103 2018/11/14 16:43:17 schmonz Exp $
 #
 
 DISTNAME=		netqmail-1.06
 PKGNAME=		qmail-1.03
-PKGREVISION=		40
+PKGREVISION=		41
 CATEGORIES=		mail
 MASTER_SITES=		http://qmail.org/
 
@@ -42,6 +42,7 @@ DJB_RESTRICTED=		no
 PKG_SYSCONFSUBDIR=	qmail
 OWN_DIRS+=		${PKG_SYSCONFDIR} ${PKG_SYSCONFDIR}/alias
 OWN_DIRS+=		${PKG_SYSCONFDIR}/control ${PKG_SYSCONFDIR}/users
+OWN_DIRS+=		${PKG_SYSCONFDIR}/.pkgsrc-defaults-do-not-edit
 OWN_DIRS+=		${QMAILDIR} ${QMAIL_QUEUE_DIR}
 
 DOCDIR=			${PREFIX}/share/doc/qmail
@@ -57,10 +58,11 @@ FILES_SUBST+=		QMAIL_QMAIL_GROUP=${QMAIL_QMAIL_GROUP:Q}
 FILES_SUBST+=		QMAIL_QUEUE_DIR=${QMAIL_QUEUE_DIR:Q}
 FILES_SUBST+=		QMAIL_QUEUE_EXTRA=${QMAIL_QUEUE_EXTRA:Q}
 FILES_SUBST+=		PKGNAME=${PKGNAME:Q}
+FILES_SUBST+=		WC=${WC:Q}
 
 SETUP_PROGRAMS=		dnsfq dnsip dnsptr hostname ipmeprint
 SETUP_PROGRAMS+=	install-destdir instcheck
-SETUP_SCRIPTS=		config config-fast
+SETUP_SCRIPTS=		config config-fast config-fast-pkgsrc
 
 MANDIRS=		man
 .for j in 1 5 7 8
@@ -204,6 +206,10 @@ post-patch:
 		( ${ECHO} '#ifdef TLS'; ${CAT} $$i; ${ECHO} '#endif' ) > $$i.new; \
 		mv $$i.new $$i; \
 	done
+
+post-build:
+	cd ${WRKSRC}; \
+	${SED} -e 's|${QMAILDIR}/control/|${PKG_SYSCONFDIR}/.pkgsrc-defaults-do-not-edit/|' < config-fast > config-fast-pkgsrc
 
 pre-install:
 	${MKDIR} ${DESTDIR}${QMAILDIR}

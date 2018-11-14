@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.10 2017/08/13 23:42:55 schmonz Exp $
+# $NetBSD: INSTALL,v 1.11 2018/11/14 16:43:17 schmonz Exp $
 
 DOCDIR=@DOCDIR@
 EGDIR=@EGDIR@
@@ -6,8 +6,23 @@ PKGMANDIR=@PKGMANDIR@
 QMAILDIR=@QMAILDIR@
 QMAIL_QUEUE_DIR=@QMAIL_QUEUE_DIR@
 QMAIL_QUEUE_EXTRA=@QMAIL_QUEUE_EXTRA@
+WC=@WC@
 
 VAR_QMAIL_DIRS="alias bin boot control doc man queue users"
+
+is_queue_fs_case_sensitive() {
+	cd ${QMAIL_QUEUE_DIR}
+	${MKDIR} pkgsrc
+        ${TOUCH} pkgsrc/case-check pkgsrc/case-CHECK
+	count=$(${ECHO} case-* | ${WC} -w)
+	${RM} -f pkgsrc/case-*
+	${RMDIR} pkgsrc
+	if [ ${count} -eq 2 ]; then
+		return 0
+	else
+		return 1
+	fi
+}
 
 case ${STAGE} in
 
@@ -38,6 +53,16 @@ Please adjust your definition of QMAIL_QUEUE_DIR, then try again.
 ===========================================================================
 EOF
 		exit 1
+	fi
+
+	if ! is_queue_fs_case_sensitive; then
+		${CAT} <<EOF
+===========================================================================
+
+WARNING: QMAIL_QUEUE_DIR is on a case-insensitive filesystem.
+
+===========================================================================
+EOF
 	fi
 
 	# keep in sync with Makefile:pre-install
