@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2018/11/12 03:52:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2018/11/14 22:21:50 kleink Exp $
 
 DISTNAME=	ibus-kkc-1.5.21
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	inputmethod japanese
 #MASTER_SITES=	https://bitbucket.org/libkkc/ibus-kkc/downloads/
 
