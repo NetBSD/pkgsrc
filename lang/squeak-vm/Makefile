@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.43 2018/07/06 15:06:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.44 2018/11/14 22:21:55 kleink Exp $
 #
 
 SQUEAK_VERSION=	4.10.2.2614
 
 DISTNAME=	Squeak-${SQUEAK_VERSION}-src
 PKGNAME=	squeak-vm-${SQUEAK_VERSION:C/-/./}
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	lang
 MASTER_SITES=	http://squeakvm.org/unix/release/
 MASTER_SITES+=	http://ftp.squeak.org/3.10/unix-linux/

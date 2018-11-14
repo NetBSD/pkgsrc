@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2018/03/12 11:15:33 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2018/11/14 22:21:35 kleink Exp $
 
 BUILDLINK_TREE+=	cairomm
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	cairomm
 CAIROMM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.cairomm+=	cairomm>=1.2.2
-BUILDLINK_ABI_DEPENDS.cairomm+=	cairomm>=1.12.2nb1
+BUILDLINK_ABI_DEPENDS.cairomm+=	cairomm>=1.12.2nb3
 BUILDLINK_PKGSRCDIR.cairomm?=	../../graphics/cairomm
 
 .include "../../graphics/cairo/buildlink3.mk"
