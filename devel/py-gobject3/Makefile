@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.34 2018/04/14 12:27:35 adam Exp $
+# $NetBSD: Makefile,v 1.35 2018/11/14 22:21:20 kleink Exp $
 
 PY_PATCHPLIST=	yes
 EGG_NAME?=	${DISTNAME:C/-([^0-9])/_\1/g}
 PLIST_SUBST+=	EGG_FILE=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
 
+PKGREVISION= 1
 .include "Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//:S/-/3-/}
