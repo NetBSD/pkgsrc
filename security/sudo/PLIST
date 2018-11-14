@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2018/11/14 12:59:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2018/11/14 15:30:42 leot Exp $
 bin/cvtsudoers
 bin/sudo
 bin/sudoedit
@@ -32,7 +32,7 @@ share/doc/sudo/UPGRADE
 ${PLIST.ldap}share/doc/sudo/schema.ActiveDirectory
 ${PLIST.ldap}share/doc/sudo/schema.OpenLDAP
 ${PLIST.ldap}share/doc/sudo/schema.iPlanet
-share/doc/sudo/schema.olcSudo
+${PLIST.ldap}share/doc/sudo/schema.olcSudo
 share/examples/sudo/pam.conf
 share/examples/sudo/sudo.conf
 share/examples/sudo/sudoers
