@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4682 2018/11/14 09:11:02 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4683 2018/11/14 09:28:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6559,3 +6559,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/qmail-run to 20181113 [schmonz 2018-11-13]
 	Updated textproc/py-openpyxl to 2.5.10 [adam 2018-11-14]
 	Updated www/py-test-django to 3.4.4 [adam 2018-11-14]
+	Updated devel/py-faker to 1.0.0 [adam 2018-11-14]
+	Updated security/py-argon2_cffi to 18.3.0 [adam 2018-11-14]
