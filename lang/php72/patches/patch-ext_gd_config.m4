@@ -1,6 +1,8 @@
-$NetBSD: patch-ext_gd_config.m4,v 1.1 2017/12/06 21:36:34 jdolecek Exp $
+$NetBSD: patch-ext_gd_config.m4,v 1.2 2018/11/14 21:26:54 markd Exp $
 
---- ext/gd/config.m4.orig	2017-11-28 09:22:54.000000000 +0000
+Allow pkg-config rather than freetype-config
+
+--- ext/gd/config.m4.orig	2018-10-09 15:09:51.000000000 +0000
 +++ ext/gd/config.m4
 @@ -43,18 +43,7 @@ dnl Checks for the configure options
  dnl
@@ -47,7 +49,42 @@ $NetBSD: patch-ext_gd_config.m4,v 1.1 2017/12/06 21:36:34 jdolecek Exp $
      ],[
        -L$PHP_ZLIB_DIR/$PHP_LIBDIR -lz -L$GD_PNG_DIR/$PHP_LIBDIR
      ])
-@@ -220,7 +208,9 @@ AC_DEFUN([PHP_GD_CHECK_VERSION],[
+@@ -186,6 +174,9 @@ AC_DEFUN([PHP_GD_XPM],[
+ AC_DEFUN([PHP_GD_FREETYPE2],[
+   if test "$PHP_FREETYPE_DIR" != "no"; then
+ 
++    AC_PATH_PROG(PKG_CONFIG, pkg-config, no)
++
++    AC_MSG_CHECKING([for freetype])
+     for i in $PHP_FREETYPE_DIR /usr/local /usr; do
+       if test -f "$i/bin/freetype-config"; then
+         FREETYPE2_DIR=$i
+@@ -194,13 +185,20 @@ AC_DEFUN([PHP_GD_FREETYPE2],[
+       fi
+     done
+ 
+-    if test -z "$FREETYPE2_DIR"; then
++    if test -n "$FREETYPE2_CONFIG"; then
++      FREETYPE2_CFLAGS=`$FREETYPE2_CONFIG --cflags`
++      FREETYPE2_LIBS=`$FREETYPE2_CONFIG --libs`
++      AC_MSG_RESULT([found in $FREETYPE2_DIR])
++    elif test "$PKG_CONFIG" != "no" && $PKG_CONFIG --exists freetype2; then
++      FREETYPE2_DIR=pkg-config
++      FREETYPE2_CFLAGS=`$PKG_CONFIG freetype2 --cflags`
++      FREETYPE2_LIBS=`$PKG_CONFIG freetype2 --libs`
++      AC_MSG_RESULT([found by pkg-config])
++    else
++      AC_MSG_RESULT([not found])
+       AC_MSG_ERROR([freetype-config not found.])
+     fi
+ 
+-    FREETYPE2_CFLAGS=`$FREETYPE2_CONFIG --cflags`
+-    FREETYPE2_LIBS=`$FREETYPE2_CONFIG --libs`
+-
+     PHP_EVAL_INCLINE($FREETYPE2_CFLAGS)
+     PHP_EVAL_LIBLINE($FREETYPE2_LIBS, GD_SHARED_LIBADD)
+     AC_DEFINE(HAVE_LIBFREETYPE,1,[ ])
+@@ -220,7 +218,9 @@ AC_DEFUN([PHP_GD_CHECK_VERSION],[
    PHP_CHECK_LIBRARY(gd, gdImageCreateFromPng,   [AC_DEFINE(HAVE_GD_PNG,              1, [ ])], [], [ $GD_SHARED_LIBADD ])
    PHP_CHECK_LIBRARY(gd, gdImageCreateFromWebp,  [AC_DEFINE(HAVE_GD_WEBP,             1, [ ])], [], [ $GD_SHARED_LIBADD ])
    PHP_CHECK_LIBRARY(gd, gdImageCreateFromJpeg,  [AC_DEFINE(HAVE_GD_JPG,              1, [ ])], [], [ $GD_SHARED_LIBADD ])
