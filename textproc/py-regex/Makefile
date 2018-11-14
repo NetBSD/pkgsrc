@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2018/08/19 09:13:51 adam Exp $
+# $NetBSD: Makefile,v 1.14 2018/11/14 10:35:35 adam Exp $
 
-DISTNAME=	regex-2018.08.17
+DISTNAME=	regex-2018.11.07
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/regex/}
@@ -11,11 +11,10 @@ COMMENT=	Alternative regular expression module, to replace re
 LICENSE=	python-software-foundation
 
 .include "../../lang/python/pyversion.mk"
-
-.if !empty(_PYTHON_VERSION:M3*)
-TESTDIR=	${WRKSRC}/regex_3
-.else
+.if ${_PYTHON_VERSION} == 27
 TESTDIR=	${WRKSRC}/regex_2
+.else
+TESTDIR=	${WRKSRC}/regex_3
 .endif
 
 EGG_NAME=	${DISTNAME:S/.0/./g}
