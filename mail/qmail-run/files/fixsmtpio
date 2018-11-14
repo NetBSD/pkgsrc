@@ -13,6 +13,10 @@
 # Replace hostname in QUIT response
 :quit::2*::&fixsmtpio_fixup
 
+# Adjust greylisting-spp messages to look more qmail-ish
+:rcpt::451 GL - temporary*::451 greylisted, retry later (#4.7.1)
+:data::451 GL - temporary*::451 greylisted, retry later (#4.7.1)
+
 ########################################################################
 
 ### For users authenticated via authup(8):
