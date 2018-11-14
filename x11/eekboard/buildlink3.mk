@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.34 2018/11/12 03:51:28 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.35 2018/11/14 22:22:39 kleink Exp $
 #
 
 BUILDLINK_TREE+=	eekboard
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	eekboard
 EEKBOARD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.eekboard+=	eekboard>=1.0.6
-BUILDLINK_ABI_DEPENDS.eekboard?=	eekboard>=1.0.8nb19
+BUILDLINK_ABI_DEPENDS.eekboard?=	eekboard>=1.0.8nb20
 BUILDLINK_PKGSRCDIR.eekboard?=		../../x11/eekboard
 
 .include "../../devel/glib2/buildlink3.mk"

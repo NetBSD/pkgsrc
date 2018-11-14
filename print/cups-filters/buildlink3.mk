@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2018/11/12 03:51:21 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2018/11/14 22:22:16 kleink Exp $
 
 BUILDLINK_TREE+=	cups-filters
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	cups-filters
 CUPS_FILTERS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.cups-filters+=	cups-filters>=1.8.2
-BUILDLINK_ABI_DEPENDS.cups-filters?=	cups-filters>=1.21.3nb1
+BUILDLINK_ABI_DEPENDS.cups-filters?=	cups-filters>=1.21.3nb2
 BUILDLINK_PKGSRCDIR.cups-filters?=	../../print/cups-filters
 
 .include "../../print/cups-base/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2018/11/12 03:51:13 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2018/11/14 22:21:18 kleink Exp $
 
 BUILDLINK_TREE+=	libwnck3
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libwnck3
 LIBWNCK3_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libwnck3+=	libwnck3>=3.2.1
-BUILDLINK_ABI_DEPENDS.libwnck3?=	libwnck3>=3.24.1nb4
+BUILDLINK_ABI_DEPENDS.libwnck3?=	libwnck3>=3.24.1nb5
 BUILDLINK_PKGSRCDIR.libwnck3?=		../../devel/libwnck3
 
 .include "../../devel/gettext-lib/buildlink3.mk"

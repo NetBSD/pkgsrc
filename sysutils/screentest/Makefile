@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2018/11/12 03:52:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.44 2018/11/14 22:22:28 kleink Exp $
 
 DISTNAME=	screentest-2.0
-PKGREVISION=	27
+PKGREVISION=	28
 CATEGORIES=	sysutils x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=screentest/}
 
