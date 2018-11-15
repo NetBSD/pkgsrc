@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2018/04/03 20:58:19 adam Exp $
-bin/buildbot-worker${PYVERSSUFFIX}
-bin/buildbot_worker_windows_service${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.4 2018/11/15 14:14:14 adam Exp $
+bin/buildbot-worker-${PYVERSSUFFIX}
+bin/buildbot_worker_windows_service-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
