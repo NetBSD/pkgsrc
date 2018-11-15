@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4695 2018/11/15 09:53:53 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4696 2018/11/15 10:08:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6580,3 +6580,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-django-filter to 2.0.0 [adam 2018-11-15]
 	Updated databases/py-alembic to 1.0.3 [adam 2018-11-15]
 	Updated www/py-parsel to 1.5.1 [adam 2018-11-15]
+	Updated www/py-autobahn to 18.11.1 [adam 2018-11-15]
+	Updated time/py-tempora to 1.14 [adam 2018-11-15]
