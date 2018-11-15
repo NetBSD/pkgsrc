@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/16 14:06:06 nils Exp $
-${PYSITELIB}/whichcraft.pyo
-${PYSITELIB}/whichcraft.pyc
+@comment $NetBSD: PLIST,v 1.2 2018/11/15 10:24:26 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/whichcraft.py
+${PYSITELIB}/whichcraft.pyc
+${PYSITELIB}/whichcraft.pyo
