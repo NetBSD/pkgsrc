@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4704 2018/11/15 23:48:36 nia Exp $
+$NetBSD: CHANGES-2018,v 1.4705 2018/11/15 23:50:14 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6597,3 +6597,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/gifsicle to 1.91 [schmonz 2018-11-15]
 	Updated net/dnscrypt-proxy2 to 2.0.18 [nia 2018-11-15]
 	Added textproc/py-precis-i18n version 1.0.0 [nia 2018-11-15]
+	Updated chat/py-nbxmpp to 0.6.8 [nia 2018-11-15]
