@@ -1,15 +1,7 @@
-$NetBSD: patch-ah,v 1.2 2010/01/10 05:39:30 obache Exp $
+$NetBSD: patch-ah,v 1.3 2018/11/15 01:13:02 markd Exp $
 
 --- dao/ScsiIf-freebsd-cam.cc.orig	2007-12-29 12:26:33.000000000 +0000
 +++ dao/ScsiIf-freebsd-cam.cc
-@@ -32,6 +32,7 @@
- 
- #include "ScsiIf.h"
- #include "log.h"
-+#include "util.h"
- 
- #define DEF_RETRY_COUNT 1
- 
 @@ -220,6 +221,12 @@ int ScsiIf::inquiry()
  	for (i = 3; i >= 0 && revision_[i] == ' '; i--)
  		revision_[i] = 0;

@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.36 2015/12/29 05:06:06 dholland Exp $
+# $NetBSD: Makefile,v 1.37 2018/11/15 01:13:01 markd Exp $
 
 .include "../../sysutils/cdrdao/Makefile.common"
-
-PKGREVISION=	1
 
 PKGNAME=		cdrdao-${CDRDAO_VER}
 
 COMMENT=		Records audio or data CD-Rs in disk-at-once (DAO) mode
 
-CONFIGURE_ARGS+=	--without-xdao
+CONFIGURE_ARGS+=	--without-gcdmaster
+CONFIGURE_ARGS+=	--without-lame
 
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
 CONFIGURE_ARGS+=	--without-posix-threads
