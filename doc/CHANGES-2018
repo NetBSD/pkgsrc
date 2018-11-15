@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4692 2018/11/14 18:51:39 kleink Exp $
+$NetBSD: CHANGES-2018,v 1.4693 2018/11/15 01:14:59 markd Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6574,3 +6574,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/cairo to 1.16.0 [kleink 2018-11-14]
 	Updated print/py-weasyprint to 43 [kleink 2018-11-14]
 	Updated graphics/cairo-gobject to 1.16.0 [kleink 2018-11-14]
+	Updated sysutils/cdrdao to 1.2.4 [markd 2018-11-15]
+	Updated sysutils/gcdmaster to 1.2.4 [markd 2018-11-15]
