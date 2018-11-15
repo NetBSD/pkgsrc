@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2018/08/28 07:26:19 adam Exp $
+# $NetBSD: Makefile,v 1.6 2018/11/15 14:14:14 adam Exp $
 
-DISTNAME=	buildbot-console-view-1.3.0
+DISTNAME=	buildbot-console-view-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/buildbot-console-view/}
