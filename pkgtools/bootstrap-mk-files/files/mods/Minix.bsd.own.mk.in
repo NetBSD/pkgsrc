@@ -1,4 +1,4 @@
-#	$NetBSD: Minix.bsd.own.mk.in,v 1.2 2018/09/01 21:56:04 tnn Exp $
+#	$NetBSD: Minix.bsd.own.mk.in,v 1.3 2018/11/15 00:50:44 sevan Exp $
 
 .if !defined(_BSD_OWN_MK_)
 _BSD_OWN_MK_=1
@@ -109,7 +109,7 @@ NOPIC?=1
 # OBJECT_FMT:		currently either "ELF" or "a.out".
 # SHLIB_TYPE:		"ELF" or "a.out" or "" to force static libraries.
 #
-OBJECT_FMT?=a.out
+OBJECT_FMT?=ELF
 
 .if ${CC:M*gcc*} != ""
 .if ${MACHINE_ARCH} == "x86_64"
