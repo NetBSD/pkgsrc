@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/02/25 01:08:43 minskim Exp $
+$NetBSD: distinfo,v 1.3 2018/11/15 10:24:26 adam Exp $
 
-SHA1 (whichcraft-0.4.1.tar.gz) = 60661c004d6bc5d6276f2330cca24587c1dffbbb
-RMD160 (whichcraft-0.4.1.tar.gz) = c8938b1f70abd573012f4d1b592833da2f1abde7
-SHA512 (whichcraft-0.4.1.tar.gz) = 92633be99badd0ce06cf28b23366f89f2104ef2364ec8f637230fe46b378d1398a64f4d8b367358c833a2038159debc70b0498e94d2729918b95847defd59cae
-Size (whichcraft-0.4.1.tar.gz) = 8095 bytes
+SHA1 (whichcraft-0.5.2.tar.gz) = 627943cce7e404e2d504231c3bc51062a4bfc9a7
+RMD160 (whichcraft-0.5.2.tar.gz) = 8d6dcf173d04b86527031bbad1555a4864c82f5b
+SHA512 (whichcraft-0.5.2.tar.gz) = 28b7be346b781f69c8fef419efd91fc2daa6b337c1eda0a2fc47d04134c479a5ded6eed3583825b111a48d7a79667676b6ce49693552233e78c7d517ac91a73c
+Size (whichcraft-0.5.2.tar.gz) = 6480 bytes
