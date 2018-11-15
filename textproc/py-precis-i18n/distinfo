@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/11/15 23:48:23 nia Exp $
+
+SHA1 (precis_i18n-1.0.0.tar.gz) = e44674ae62b6f6e07bea9da7997d4a7bd5b54971
+RMD160 (precis_i18n-1.0.0.tar.gz) = d93c01afd9dd943db378de09eb08f0f80193c0cb
+SHA512 (precis_i18n-1.0.0.tar.gz) = 9017852fdd2a066b8e31521bd39843f3b1f87259ce87e1567cfaa2b932b52b745ad84eb89b77a4c3ea0a04e513573655266b2cc73997e951268646da7a000e5d
+Size (precis_i18n-1.0.0.tar.gz) = 61251 bytes
