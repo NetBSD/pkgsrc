@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4697 2018/11/15 10:24:49 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4698 2018/11/15 12:30:22 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6584,3 +6584,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/py-tempora to 1.14 [adam 2018-11-15]
 	Updated devel/py-distorm3 to 3.3.8 [adam 2018-11-15]
 	Updated devel/py-whichcraft to 0.5.2 [adam 2018-11-15]
+	Updated geography/opencpn to 4.8.8 [bouyer 2018-11-15]
