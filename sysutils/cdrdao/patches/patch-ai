@@ -1,26 +1,26 @@
-$NetBSD: patch-ai,v 1.4 2009/11/22 21:05:18 drochner Exp $
+$NetBSD: patch-ai,v 1.5 2018/11/15 01:13:02 markd Exp $
 
---- configure.orig	2009-10-05 13:58:33.000000000 +0200
+--- configure.orig	2018-05-16 10:47:00.000000000 +0000
 +++ configure
-@@ -10072,7 +10072,7 @@ if test "$scglib" = yes; then
+@@ -7436,7 +7436,7 @@ if test "$scglib" = yes; then
    scsilib_objs="ScsiIf-lib.o"
  
    case "$host" in
--    *-freebsd*)
-+    *-freebsd* | *-dragonfly*)
+-    *-freebsd* | *-kfreebsd*-gnu)
++    *-freebsd* | *-kfreebsd*-gnu | *-dragonfly*)
  			       scsilib_libs="$scsilib_libs -lcam"
  			       ;;
    esac
-@@ -10090,7 +10090,7 @@ else
+@@ -7454,7 +7454,7 @@ else
  	       scsilib_objs="ScsiIf-linux.o sg_err.o"
  	       ;;
  
--    *-freebsd*)
-+    *-freebsd* | *-dragonfly*)
+-    *-freebsd* | *-kfreebsd*-gnu)
++    *-freebsd* | *-kfreebsd*-gnu | *-dragonfly*)
  	       scsilib_libs="-lcam"
  	       scsilib_objs="ScsiIf-freebsd-cam.o"
  	       ;;
-@@ -10130,7 +10130,7 @@ case "$host" in
+@@ -7492,7 +7492,7 @@ case "$host" in
  esac
  
  case "$host" in
@@ -29,12 +29,12 @@ $NetBSD: patch-ai,v 1.4 2009/11/22 21:05:18 drochner Exp $
  	      if test "$use_pthreads" = yes; then
  		LDFLAGS="-pthread $LDFLAGS"
  		thread_libs=""
-@@ -10148,7 +10148,7 @@ _ACEOF
+@@ -7508,7 +7508,7 @@ $as_echo "#define _P1003_1B_VISIBLE 1" >
  esac
  
  case "$host" in
--  *-linux* | *-freebsd* | *-solaris*)
-+  *-linux* | *-freebsd* | *-solaris* | *-netbsd* | *-dragonfly*)
+-  *-linux* | *-freebsd* | *-kfreebsd*-gnu | *-solaris*)
++  *-linux* | *-freebsd* | *-kfreebsd*-gnu | *-solaris* | *-netbsd* | *-dragonfly*)
  	     sound_if_obj=SoundIF-ao.o
  	     ;;
  
