@@ -1,19 +1,6 @@
-$NetBSD: distinfo,v 1.40 2018/10/18 14:32:48 taca Exp $
+$NetBSD: distinfo,v 1.41 2018/11/15 14:26:45 prlw1 Exp $
 
-SHA1 (drupal-7.60.tar.gz) = aa54d7fc85d2bc2dc20a639208b91256f8f8d2b0
-RMD160 (drupal-7.60.tar.gz) = 839ce4dc73fa52cf0cdbae9d8bcd74772c9b0c5b
-SHA512 (drupal-7.60.tar.gz) = fee59cf303a6c44e3fa3cbeda4912f7d61ffe8294282f9ad0416a6536cc6ea65cf114a6a801dd1f68572185c2b1e300f58f907f9bd61f96beaba3706c527d512
-Size (drupal-7.60.tar.gz) = 3283058 bytes
-SHA1 (patch-includes_bootstrap.inc) = 19af750379de283a17a1f8f202586d588fa58569
-SHA1 (patch-includes_form.inc) = 3f8955b576ebf292573f0953f0a07467dbdd4f64
-SHA1 (patch-includes_install.inc) = ff182d242f4637f7bbb509a1b043671ebd952f64
-SHA1 (patch-includes_menu.inc) = 7aa6f4ae82b37f024d54cc7dc6c6d5433f352916
-SHA1 (patch-includes_module.inc) = 4af9f2c26eb16d39bbcd08949183b54a78391b25
-SHA1 (patch-includes_theme.inc) = 4421f9ad1235825f7b3c360e44bbac994fcfe214
-SHA1 (patch-modules_book_book.module) = bab6aabf09736f5ebb7e60860a96116c2779db06
-SHA1 (patch-modules_field_modules_list_list.install) = 45fffa25115818babe9e743fb1f02020d620efca
-SHA1 (patch-modules_locale_locale.test) = 66f82c0517d32100da28f33b10d1caa27de839be
-SHA1 (patch-modules_simpletest_tests_themes_test__theme_theme-settings.php) = 40f7c7578f4f3c802cd2aaf55130ad9b22b9fea2
-SHA1 (patch-modules_system_system.admin.inc) = d052516a117ca5fecf0da81779ecaac9ef1c4e18
-SHA1 (patch-modules_system_system.tar.inc) = f5bbca9c1b0f5dbb52b744fd5627f83fb8e71cc6
-SHA1 (patch-modules_system_system.test) = 5761278afaa8369453b5857f806cd5d34a2589d0
+SHA1 (drupal-7.61.tar.gz) = 84de421176793566679a7931a2a009cf6c1fbe19
+RMD160 (drupal-7.61.tar.gz) = 44f908cb190bddcabed24fb87c5ebec30a3bf323
+SHA512 (drupal-7.61.tar.gz) = 8f0bdd5b7ef33e62d09698b3889726fab1edb14df6263635bca65c9bbe0400df618dbf02ef298eeee169d48ab554d3b58d867bd4ce0d429b4b9167979917db51
+Size (drupal-7.61.tar.gz) = 3287629 bytes
