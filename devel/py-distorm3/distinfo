@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/10/13 10:28:04 adam Exp $
+$NetBSD: distinfo,v 1.4 2018/11/15 10:20:51 adam Exp $
 
-SHA1 (distorm3-3.3.4.zip) = ae5a59d6dd4dc2f82f1ae93c279addb5a32ee58a
-RMD160 (distorm3-3.3.4.zip) = c5e045e0d2401a6a20fce59d337636c7a294e070
-SHA512 (distorm3-3.3.4.zip) = ac989fcbfa857f86fa5cd6c054a2f5e7bd2d7ccaf345950062dd70542e5e4ae5d179cda58e721f54b889549c63cbdfc6ed985a35f767dbbd3db4577fdc592ec6
-Size (distorm3-3.3.4.zip) = 129202 bytes
+SHA1 (distorm3-3.3.8.tar.gz) = 73b79758d771264d268b5d5fe1ec7c1b439dab31
+RMD160 (distorm3-3.3.8.tar.gz) = 8840341d40d72a37ec94cf86400df09b343fef83
+SHA512 (distorm3-3.3.8.tar.gz) = 85f1b1ee333295c017da8f1c849d26b81351349c48b488160c728a38eb389b7c014a67c31788d99b8bb2cbb330d08199858d2794bac0c93f0d9bafb0ee16192a
+Size (distorm3-3.3.8.tar.gz) = 157060 bytes
