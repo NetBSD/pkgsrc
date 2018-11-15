@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4696 2018/11/15 10:08:02 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4697 2018/11/15 10:24:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6582,3 +6582,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-parsel to 1.5.1 [adam 2018-11-15]
 	Updated www/py-autobahn to 18.11.1 [adam 2018-11-15]
 	Updated time/py-tempora to 1.14 [adam 2018-11-15]
+	Updated devel/py-distorm3 to 3.3.8 [adam 2018-11-15]
+	Updated devel/py-whichcraft to 0.5.2 [adam 2018-11-15]
