@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.259 2018/11/11 19:31:54 rillig Exp $
+# $NetBSD: bootstrap,v 1.260 2018/11/15 22:08:30 sevan Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -732,7 +732,7 @@ Linux)
 	esac
 	;;
 Minix)
-	root_group=operator
+	root_group=wheel
 	need_bsd_install=no
 	need_awk=no
 	need_sed=no
