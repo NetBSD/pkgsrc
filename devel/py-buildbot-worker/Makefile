@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2018/08/28 07:26:19 adam Exp $
+# $NetBSD: Makefile,v 1.8 2018/11/15 14:14:14 adam Exp $
 
-DISTNAME=	buildbot-worker-1.3.0
+DISTNAME=	buildbot-worker-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/buildbot-worker/}
@@ -19,8 +19,8 @@ USE_LANGUAGES=	# none
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} buildbot-worker buildbot-worker${PYVERSSUFFIX} && \
-	${MV} buildbot_worker_windows_service buildbot_worker_windows_service${PYVERSSUFFIX} || ${TRUE}
+	${MV} buildbot-worker buildbot-worker-${PYVERSSUFFIX} && \
+	${MV} buildbot_worker_windows_service buildbot_worker_windows_service-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
