@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4694 2018/11/15 09:23:08 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4695 2018/11/15 09:53:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6578,3 +6578,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/gcdmaster to 1.2.4 [markd 2018-11-15]
 	Added biology/bcftools version 1.9 [adam 2018-11-15]
 	Updated www/py-django-filter to 2.0.0 [adam 2018-11-15]
+	Updated databases/py-alembic to 1.0.3 [adam 2018-11-15]
+	Updated www/py-parsel to 1.5.1 [adam 2018-11-15]
