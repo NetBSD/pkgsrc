@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/11/15 09:21:24 adam Exp $
+
+SHA1 (bcftools-1.9.tar.bz2) = 9b649c3f407528ee193210f68b8e21e8b0aebf31
+RMD160 (bcftools-1.9.tar.bz2) = 59b9997aaa509ba84c41b7e78821f31eca8d90dc
+SHA512 (bcftools-1.9.tar.bz2) = fd662fb0d214eb75ac04fc4494e8dbaca84d10698ca14801427341def6a5df4af99e7bd4cd873da5422ae921deb49b940cedb926da356b1eabfac525a38f806c
+Size (bcftools-1.9.tar.bz2) = 3134355 bytes

@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.47 2018/10/31 20:16:30 leot Exp $
+# $NetBSD: Makefile,v 1.48 2018/11/15 09:21:24 adam Exp $
 #
 
 COMMENT=	Software for the biological sciences
 
 SUBDIR+=	arka
 SUBDIR+=	azara
+SUBDIR+=	bcftools
 SUBDIR+=	bioperl
 SUBDIR+=	bodr
 SUBDIR+=	bwa
