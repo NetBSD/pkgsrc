@@ -1,2 +1,2 @@
-bin/buildbot @PREFIX@/bin/buildbot@PYVERSSUFFIX@
-bin/buildbot_windows_service @PREFIX@/bin/buildbot_windows_service@PYVERSSUFFIX@
+bin/buildbot @PREFIX@/bin/buildbot-@PYVERSSUFFIX@
+bin/buildbot_windows_service @PREFIX@/bin/buildbot_windows_service-@PYVERSSUFFIX@
