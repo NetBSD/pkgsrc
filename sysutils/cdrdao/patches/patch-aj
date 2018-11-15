@@ -1,7 +1,7 @@
-$NetBSD: patch-aj,v 1.2 2009/11/22 21:05:18 drochner Exp $
+$NetBSD: patch-aj,v 1.3 2018/11/15 01:13:02 markd Exp $
 
---- xdao/SoundIF-solaris.cc.orig	2007-12-29 13:31:54.000000000 +0100
-+++ xdao/SoundIF-solaris.cc
+--- gcdmaster/SoundIF-solaris.cc.orig	2007-12-29 13:31:54.000000000 +0100
++++ gcdmaster/SoundIF-solaris.cc
 @@ -45,6 +45,7 @@
   * Sound interface for Solaris. Thanks to Tobias Oetiker <oetiker@ee.ethz.ch>.
   */
