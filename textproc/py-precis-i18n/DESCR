@@ -1,0 +1,5 @@
+If you want your application to accept unicode user names and passwords,
+you must be careful in how you validate and compare them. The PRECIS
+framework makes internationalized user names and passwords safer for
+use by applications. PRECIS profiles transform unicode strings into a
+canonical form, suitable for comparison.
