@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/09/19 16:13:00 nia Exp $
+$NetBSD: distinfo,v 1.2 2018/11/15 23:50:04 nia Exp $
 
-SHA1 (nbxmpp-0.6.7.tar.gz) = 384a34592f89d6e80cbe27e9048fed3cb4e79429
-RMD160 (nbxmpp-0.6.7.tar.gz) = 57c8c49104e3f0be8046955db9d3edf993bdad7c
-SHA512 (nbxmpp-0.6.7.tar.gz) = 95617cf3e947472515814c8acaaa7adf198732aada82e637467d1b92efb2a5d3d03335ba848c269ae73336c22f02ba3f8bc32b9afc726b0526b7028c13736981
-Size (nbxmpp-0.6.7.tar.gz) = 1516391 bytes
+SHA1 (nbxmpp-0.6.8.tar.gz) = aedf2979e4fa62978303e81c26fec51de1626cfd
+RMD160 (nbxmpp-0.6.8.tar.gz) = dc3e7eb81bf3b926411ede5001e7a94db90c41e9
+SHA512 (nbxmpp-0.6.8.tar.gz) = 94d88a2fbca2a7d50b9af4d7c8134e6dd22fee85ea70e1735add72736f7d84c409c1ea3058c97a7da4e77a70f6682d6ec60f6431cebc4f988b368428380b4884
+Size (nbxmpp-0.6.8.tar.gz) = 1516479 bytes
