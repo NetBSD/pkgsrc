@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2018/11/14 21:26:54 markd Exp $
+# $NetBSD: Makefile,v 1.46 2018/11/15 02:32:22 taca Exp $
 
 MODNAME=		gd
 CATEGORIES+=		graphics
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--without-t1lib
 
 USE_PHP_EXT_PATCHES=	yes
 
-USE_TOOLS+		pkg-config
+USE_TOOLS+=		pkg-config
 
 .include "options.mk"
 
