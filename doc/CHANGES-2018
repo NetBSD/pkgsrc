@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4699 2018/11/15 13:49:03 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.4700 2018/11/15 14:14:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6586,3 +6586,10 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-whichcraft to 0.5.2 [adam 2018-11-15]
 	Updated geography/opencpn to 4.8.8 [bouyer 2018-11-15]
 	Updated net/ucspi-tcp to 0.88nb6 [schmonz 2018-11-15]
+	Updated devel/py-buildbot to 1.5.0 [adam 2018-11-15]
+	Updated devel/py-buildbot-worker to 1.5.0 [adam 2018-11-15]
+	Updated devel/py-buildbot-console-view to 1.5.0 [adam 2018-11-15]
+	Updated devel/py-buildbot-grid-view to 1.5.0 [adam 2018-11-15]
+	Updated devel/py-buildbot-pkg to 1.5.0 [adam 2018-11-15]
+	Updated devel/py-buildbot-waterfall-view to 1.5.0 [adam 2018-11-15]
+	Updated devel/py-buildbot-www to 1.5.0 [adam 2018-11-15]
