@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2018/10/18 14:32:48 taca Exp $
+# $NetBSD: Makefile,v 1.53 2018/11/15 14:26:45 prlw1 Exp $
 
-DISTNAME=	drupal-7.60
+DISTNAME=	drupal-7.61
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	https://ftp.drupal.org/files/projects/
@@ -64,22 +64,6 @@ INSTALLATION_DIRS+=	${DRUPAL}/${i}
 
 post-extract:
 	${CP} ${FILESDIR}/drupal.conf ${WRKSRC}
-
-pre-install:
-	${RM} \
-	${WRKSRC}/includes/bootstrap.inc.orig \
-	${WRKSRC}/includes/form.inc.orig \
-	${WRKSRC}/includes/install.inc.orig \
-	${WRKSRC}/includes/menu.inc.orig \
-	${WRKSRC}/includes/module.inc.orig \
-	${WRKSRC}/includes/theme.inc.orig \
-	${WRKSRC}/modules/book/book.module.orig \
-	${WRKSRC}/modules/field/modules/list/list.install.orig \
-	${WRKSRC}/modules/locale/locale.test.orig \
-	${WRKSRC}/modules/simpletest/tests/themes/test_theme/theme-settings.php.orig \
-	${WRKSRC}/modules/system/system.admin.inc.orig \
-	${WRKSRC}/modules/system/system.test.orig \
-	${WRKSRC}/modules/system/system.tar.inc.orig
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/robots.txt ${DESTDIR}${PREFIX}/${DRUPAL}
