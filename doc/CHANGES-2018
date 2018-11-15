@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4702 2018/11/15 22:06:49 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.4703 2018/11/15 22:39:09 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6595,3 +6595,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-buildbot-www to 1.5.0 [adam 2018-11-15]
 	Updated www/drupal7 to 7.61 [prlw1 2018-11-15]
 	Updated graphics/gifsicle to 1.91 [schmonz 2018-11-15]
+	Updated net/dnscrypt-proxy2 to 2.0.18 [nia 2018-11-15]
