@@ -1,4 +1,4 @@
-# $NetBSD: Minix.mk,v 1.8 2018/11/15 00:40:57 sevan Exp $
+# $NetBSD: Minix.mk,v 1.9 2018/11/15 01:05:09 sevan Exp $
 #
 # Variable definitions for the Minix operating system.
 
@@ -19,7 +19,7 @@ GROUPADD?=		/usr/sbin/groupadd
 NOLOGIN?=		/usr/bin/false
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 ROOT_CMD?=		${SU} - root -c
-ROOT_GROUP?=	operator
+ROOT_GROUP?= 		wheel
 ROOT_USER?=		root
 SERIAL_DEVICES?=	/dev/null
 USERADD?=		/usr/sbin/useradd
