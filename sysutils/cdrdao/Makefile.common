@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2016/06/16 12:58:07 wiz Exp $
+# $NetBSD: Makefile.common,v 1.16 2018/11/15 01:13:01 markd Exp $
 #
 # used by sysutils/cdrdao/Makefile
 # used by sysutils/gcdmaster/Makefile
@@ -15,7 +15,7 @@ COMMENT=		Records audio or data CD-Rs in disk-at-once (DAO) mode
 PATCHDIR=		${.CURDIR}/../../sysutils/cdrdao/patches
 DISTINFO_FILE=		${.CURDIR}/../../sysutils/cdrdao/distinfo
 
-CDRDAO_VER=		1.2.3
+CDRDAO_VER=		1.2.4
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
