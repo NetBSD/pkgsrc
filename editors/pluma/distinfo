@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2018/05/14 13:23:50 youri Exp $
+$NetBSD: distinfo,v 1.4 2018/11/16 19:01:25 bsiegert Exp $
 
 SHA1 (pluma-1.20.1.tar.xz) = 88bf75cff72fc99e179abd1c9e61b31e0ec44bfb
 RMD160 (pluma-1.20.1.tar.xz) = 85523e93007675c7e46bea5fd856b1ba43dd8b06
 SHA512 (pluma-1.20.1.tar.xz) = 7782fd227524e524b4e97eb196f01085d5bd5dd0d3d91bae21742ba4da6496fe13c2669606265932c323a34ea007d0c0164f79783d5bb5dde049ce40fc1b2b1d
 Size (pluma-1.20.1.tar.xz) = 3414916 bytes
+SHA1 (patch-configure) = 9fc23946abf5197603ce28bef2c0e54b5be96c86
