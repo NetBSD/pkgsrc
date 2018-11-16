@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/09/11 05:18:51 adam Exp $
+# $NetBSD: Makefile,v 1.3 2018/11/16 15:34:33 kleink Exp $
 
-DISTNAME=	piexif-1.0.13
+DISTNAME=	piexif-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/piexif/}
