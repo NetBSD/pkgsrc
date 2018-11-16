@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.804 2018/10/22 14:40:33 schmonz Exp $
+# $NetBSD: Makefile,v 1.805 2018/11/16 00:16:42 schmonz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -514,6 +514,7 @@ SUBDIR+=	ruby-imlib2
 SUBDIR+=	ruby-mini-magick
 SUBDIR+=	ruby-oily_png
 SUBDIR+=	ruby-opengl
+SUBDIR+=	ruby-screengif
 SUBDIR+=	s10sh
 SUBDIR+=	sane-backends
 SUBDIR+=	sane-frontends
