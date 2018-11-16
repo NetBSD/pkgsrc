@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4718 2018/11/16 15:28:49 kleink Exp $
+$NetBSD: CHANGES-2018,v 1.4719 2018/11/16 15:35:16 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6609,3 +6609,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added print/py-weasyprint0 version 0.42.3 [kleink 2018-11-16]
 	Updated www/py-flask-flatpages to 0.7.0 [kleink 2018-11-16]
 	Updated geography/py-google-maps-services-python to 2.5.1 [kleink 2018-11-16]
+	Updated graphics/py-piexif to 1.1.2 [kleink 2018-11-16]
