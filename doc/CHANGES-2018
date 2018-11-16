@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4716 2018/11/16 14:14:23 kleink Exp $
+$NetBSD: CHANGES-2018,v 1.4717 2018/11/16 14:58:30 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6607,3 +6607,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/Geomyidae to 0.34 [leot 2018-11-16]
 	Updated textproc/hunspell to 1.7.0 [bsiegert 2018-11-16]
 	Added print/py-weasyprint0 version 0.42.3 [kleink 2018-11-16]
+	Updated www/py-flask-flatpages to 0.7.0 [kleink 2018-11-16]
