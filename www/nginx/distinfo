@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.64 2018/08/24 18:27:07 adam Exp $
+$NetBSD: distinfo,v 1.65 2018/11/16 00:26:19 nia Exp $
 
 SHA1 (array-var-nginx-module-0.05.tar.gz) = c69fac77814947009ab783a471783b3c95a63a26
 RMD160 (array-var-nginx-module-0.05.tar.gz) = 89bd4efc04864e3e90781588a337338951ec8733
@@ -28,18 +28,18 @@ SHA1 (naxsi-0.56.tar.gz) = 42ce137bd3e52a612793bcea43f3ffbb8376910a
 RMD160 (naxsi-0.56.tar.gz) = a5c97194ef3db415a4bab07c44f9e9f2860b9e1a
 SHA512 (naxsi-0.56.tar.gz) = 4660751849bce303af6010b7257532404710106a94817e78d4bc4b566f8019620f24f30207f1d4366b88132a5124e34b164dc67ed80b6710f4bad66115564cbd
 Size (naxsi-0.56.tar.gz) = 192120 bytes
-SHA1 (nginx-1.14.0.tar.gz) = 016ab1a12c9a0c9444f9073e4300223ffd6fadbe
-RMD160 (nginx-1.14.0.tar.gz) = aa5445ef786c83de81f9b98b261caf1bd13e2d89
-SHA512 (nginx-1.14.0.tar.gz) = 40f086c9f741727e6f55802b6c3a66f081f7c49c38646dc1491aa3e3c35bae12b65ea6594386609fc849bcd99a60d7cd8ecb3f8d519e0e9ab8db01d653e930e9
-Size (nginx-1.14.0.tar.gz) = 1016272 bytes
+SHA1 (nginx-1.14.1.tar.gz) = a9dc8c5b055a3f0021d09c112d27422f45dd439c
+RMD160 (nginx-1.14.1.tar.gz) = 75b7037d4127afbdb7e1994f32e6fab19826cb0b
+SHA512 (nginx-1.14.1.tar.gz) = 906c9f44462c0a6b3d9d968641038511012de2662d8490bdb863e540988c2fb15f5cf8a8172e65267dab525e5edf2e9945d7da42a0aa2de5ac81de33fadcd9f3
+Size (nginx-1.14.1.tar.gz) = 1014040 bytes
 SHA1 (nginx-rtmp-module-1.2.1.tar.gz) = 7c6ae1afc117e3bf946b0d81f99d41fe538a7245
 RMD160 (nginx-rtmp-module-1.2.1.tar.gz) = 5fc0b4ac0b2c0a6d70957a5256754db8a9e934cf
 SHA512 (nginx-rtmp-module-1.2.1.tar.gz) = 4a0af5e9afa4deb0b53de8de7ddb2cfa6430d372e1ef9e421f01b509548bd134d427345442ac1ce667338cc2a1484dc2ab732e316e878ac7d3537dc527d5f922
 Size (nginx-rtmp-module-1.2.1.tar.gz) = 519919 bytes
-SHA1 (nginx_http_push_module-1.2.1.tar.gz) = 7144874b2bb8adb57b93da31ba2276bdfdeede33
-RMD160 (nginx_http_push_module-1.2.1.tar.gz) = aeae5bbb2becaa83a52ccf1350f7b8ee170ab388
-SHA512 (nginx_http_push_module-1.2.1.tar.gz) = 172557a10a41b573faaa283508796b0482640c0236ba284539b2e5c07d51d3d6b52e8b33c0ee89871ebd4a895aaf637cb340d86e1313336eb644c6cde263b06d
-Size (nginx_http_push_module-1.2.1.tar.gz) = 645188 bytes
+SHA1 (nginx_http_push_module-1.2.3.tar.gz) = bf458b75961f3f3e4bfdcde39f0a9a00cc701325
+RMD160 (nginx_http_push_module-1.2.3.tar.gz) = 560155e772e58075ca4f8efcaa01bfa2be5731e4
+SHA512 (nginx_http_push_module-1.2.3.tar.gz) = e2f23ec82669af4be77cb4d6ee24347fc8438b658a0d16d42d6a8e81b074685f5cd1d2060ccf314e610f9d3aee3720181243133af3e450d2c0d7105a1873f13f
+Size (nginx_http_push_module-1.2.3.tar.gz) = 669479 bytes
 SHA1 (ngx_devel_kit-0.3.0.tar.gz) = b556d068db23037be30436af559795f45dd93c67
 RMD160 (ngx_devel_kit-0.3.0.tar.gz) = beb2736eb06e8e26f60643623553789346f653da
 SHA512 (ngx_devel_kit-0.3.0.tar.gz) = 558764c9be913a4f61d0e277d07bf3c272e1ce086b3fadb85b693a7e92805cd9fca4da7a8d29c96e53fc0d23b331327d3b2561ff61f19d2330e7d5d35ac7d614

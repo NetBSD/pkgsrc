@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.47 2018/10/01 20:55:36 triaxx Exp $
+# $NetBSD: options.mk,v 1.48 2018/11/16 00:26:19 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=		dav flv gtools inet6 luajit mail-proxy memcache naxsi \
@@ -185,7 +185,7 @@ CONFIGURE_ARGS+=	--without-http_uwsgi_module
 CONFIGURE_ARGS+=	--add-module=../nchan-${PUSH_VERSION}
 .endif
 .if !empty(PKG_OPTIONS:Mpush) || make(makesum)
-PUSH_VERSION=		1.2.1
+PUSH_VERSION=		1.2.3
 PUSH_DISTNAME=		nginx_http_push_module-${PUSH_VERSION}
 PUSH_DISTFILE=		${PUSH_DISTNAME}.tar.gz
 SITES.${PUSH_DISTFILE}=	-https://github.com/slact/nchan/archive/v${PUSH_VERSION}.tar.gz
