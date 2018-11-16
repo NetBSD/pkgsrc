@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2018/11/14 22:21:22 kleink Exp $
+# $NetBSD: Makefile,v 1.17 2018/11/16 13:02:45 bsiegert Exp $
 
 DISTNAME=	codelite-9.1
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	editors x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=eranif/}
 
