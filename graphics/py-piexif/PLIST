@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/09/11 05:18:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/11/16 15:34:33 kleink Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -30,6 +30,9 @@ ${PYSITELIB}/piexif/_remove.pyo
 ${PYSITELIB}/piexif/_transplant.py
 ${PYSITELIB}/piexif/_transplant.pyc
 ${PYSITELIB}/piexif/_transplant.pyo
+${PYSITELIB}/piexif/_webp.py
+${PYSITELIB}/piexif/_webp.pyc
+${PYSITELIB}/piexif/_webp.pyo
 ${PYSITELIB}/piexif/helper.py
 ${PYSITELIB}/piexif/helper.pyc
 ${PYSITELIB}/piexif/helper.pyo
