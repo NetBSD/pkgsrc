@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2018/11/14 22:21:08 kleink Exp $
+# $NetBSD: Makefile,v 1.44 2018/11/16 00:00:02 nia Exp $
 
-DISTNAME=	gajim-1.0.3
-PKGREVISION=	4
+DISTNAME=	gajim-1.1.0
 CATEGORIES=	chat python
-MASTER_SITES=	https://www.gajim.org/downloads/1.0/
+MASTER_SITES=	https://www.gajim.org/downloads/1.1/
 
 MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	http://www.gajim.org/
@@ -20,12 +19,12 @@ _TOOLS_USE_PKGSRC.msgfmt=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-DEPENDS+=	${PYPKGPREFIX}-asn1-[0-9]*:../../security/py-asn1
+DEPENDS+=	${PYPKGPREFIX}-cssutils-[0-9]*:../../textproc/py-cssutils
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 DEPENDS+=	${PYPKGPREFIX}-keyring-[0-9]*:../../security/py-keyring
 DEPENDS+=	${PYPKGPREFIX}-nbxmpp-[0-9]*:../../chat/py-nbxmpp
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL-[0-9]*:../../security/py-OpenSSL
-DEPENDS+=	${PYPKGPREFIX}-idna-[0-9]*:../../www/py-idna
+DEPENDS+=	${PYPKGPREFIX}-precis-i18n-[0-9]*:../../textproc/py-precis-i18n
 
 .include "options.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
