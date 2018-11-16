@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.717 2018/07/26 12:22:50 jaapb Exp $
+# $NetBSD: Makefile,v 1.718 2018/11/16 14:13:20 kleink Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -141,6 +141,7 @@ SUBDIR+=	py-poppler
 SUBDIR+=	py-pslib
 SUBDIR+=	py-reportlab
 SUBDIR+=	py-weasyprint
+SUBDIR+=	py-weasyprint0
 SUBDIR+=	qpdf
 SUBDIR+=	qpdfview
 SUBDIR+=	rlpr
