@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2018/07/04 14:09:07 bsiegert Exp $
+# $NetBSD: Makefile,v 1.107 2018/11/16 16:00:18 leot Exp $
 
 DISTNAME=	make-4.2.1
 PKGNAME=	g${DISTNAME}
@@ -28,6 +28,10 @@ CONFIGURE_ARGS+=	--program-prefix=g
 # workaround for broken strndup
 CONFIGURE_ARGS.MirBSD+=	ac_cv_func_strndup=no
 
+# XXX: Do not install gmake setgid and do not override the owner group
+# XXX: based on possible /dev/kmem permissions.
+CONFIGURE_ARGS+=	ac_cv_func_getloadavg_setgid=no
+
 AUTO_MKDIRS=		yes
 
 PLIST_SRC=		${PKGDIR}/PLIST
@@ -35,8 +39,6 @@ PLIST_SRC=		${PKGDIR}/PLIST
 .include "options.mk"
 
 post-install:
-	${CHMOD} g-s ${DESTDIR}${PREFIX}/bin/gmake
-	${CHGRP} ${BINGRP} ${DESTDIR}${PREFIX}/bin/gmake
 	${LN} -sf ${PREFIX}/bin/gmake ${DESTDIR}${PREFIX}/${PKGGNUDIR}/bin/make
 	${LN} -sf ${PREFIX}/${PKGMANDIR}/man1/gmake.1 ${DESTDIR}${PREFIX}/${PKGGNUDIR}${PKGMANDIR}/man1/make.1
 
