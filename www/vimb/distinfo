@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/04/12 13:25:11 leot Exp $
+$NetBSD: distinfo,v 1.3 2018/11/16 11:05:31 leot Exp $
 
-SHA1 (vimb-2.12.tar.gz) = 57212aa4c283ad275a4dc3d2ecec7d4c4ae688d4
-RMD160 (vimb-2.12.tar.gz) = 5d9ab7e53f562e9eef1797d720d7e3b3fb6a4db7
-SHA512 (vimb-2.12.tar.gz) = cd11bc73c089c5e9fa2d2c9cd1a3bc5e7ac8a79cbf7261b7f9f89316cf656669419914b1a0aac023020c4e37842045aa6f7dfe971368a682ff662a9412577839
-Size (vimb-2.12.tar.gz) = 132958 bytes
+SHA1 (vimb-3.3.0.tar.gz) = 32e730b01b12fb647ded33569765947bb75dae50
+RMD160 (vimb-3.3.0.tar.gz) = de57de2e19398e71fc8f7ef5a3f575d7b87291b7
+SHA512 (vimb-3.3.0.tar.gz) = 9bdf89455504ed6fff11d8b33a0c8faa9b84bdb432f1e6ebb4ec6611c29b796ae8dd6ed3536b4e421291d239de603e8a902b2665263b9db91bfcb11204d848a0
+Size (vimb-3.3.0.tar.gz) = 136151 bytes
