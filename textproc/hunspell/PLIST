@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/10/23 11:45:34 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/11/16 13:02:20 bsiegert Exp $
 bin/affixcompress
 bin/chmorph
 bin/hunspell
@@ -12,13 +12,11 @@ bin/makealias
 bin/wordforms
 bin/wordlist2hunspell
 include/hunspell/atypes.hxx
-include/hunspell/csutil.hxx
-include/hunspell/htypes.hxx
 include/hunspell/hunspell.h
 include/hunspell/hunspell.hxx
 include/hunspell/hunvisapi.h
 include/hunspell/w_char.hxx
-lib/libhunspell-1.6.la
+lib/libhunspell-1.7.la
 lib/pkgconfig/hunspell.pc
 man/hu/man1/hunspell.1
 man/man1/hunspell.1
