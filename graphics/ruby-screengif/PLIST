@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2018/11/16 00:16:15 schmonz Exp $
+bin/screengif
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/DEVNOTES.md
+${GEM_LIBDIR}/Dockerfile
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/Makefile
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Vagrantfile
+${GEM_LIBDIR}/bin/screengif
+${GEM_LIBDIR}/lib/screengif.rb
+${GEM_LIBDIR}/lib/screengif/draw_progressbar.rb
+${GEM_LIBDIR}/lib/screengif/options.rb
+${GEM_LIBDIR}/lib/screengif/util.rb
+${GEM_LIBDIR}/screengif.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
