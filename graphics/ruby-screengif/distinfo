@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/11/16 00:16:15 schmonz Exp $
+
+SHA1 (screengif-0.0.3.gem) = 164bc792bd18078bbddb844932d94c84410afd30
+RMD160 (screengif-0.0.3.gem) = 94dcb4cb6f0a94b29cf457c34aadeb34cc7ba295
+SHA512 (screengif-0.0.3.gem) = 04287678bf522b89d62f4d067bcd599b97c3ffe061e3142502e1b93f49ec81cd60fdfab164c7fad9f1bd76b7da12d27b173e986ad5180648ae3e3d74bcb7ef22
+Size (screengif-0.0.3.gem) = 11264 bytes
