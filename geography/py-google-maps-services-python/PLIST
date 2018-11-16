@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/01/10 13:42:02 kleink Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/11/16 15:27:37 kleink Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -28,6 +28,9 @@ ${PYSITELIB}/googlemaps/exceptions.pyo
 ${PYSITELIB}/googlemaps/geocoding.py
 ${PYSITELIB}/googlemaps/geocoding.pyc
 ${PYSITELIB}/googlemaps/geocoding.pyo
+${PYSITELIB}/googlemaps/geolocation.py
+${PYSITELIB}/googlemaps/geolocation.pyc
+${PYSITELIB}/googlemaps/geolocation.pyo
 ${PYSITELIB}/googlemaps/places.py
 ${PYSITELIB}/googlemaps/places.pyc
 ${PYSITELIB}/googlemaps/places.pyo
