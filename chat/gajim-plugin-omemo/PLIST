@@ -1,9 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2018/09/20 00:23:12 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/11/16 00:04:14 nia Exp $
 ${PYSITELIB}/gajim/data/plugins/omemo/__init__.py
-${PYSITELIB}/gajim/data/plugins/omemo/config_dialog.ui
-${PYSITELIB}/gajim/data/plugins/omemo/download_progress_dialog.ui
 ${PYSITELIB}/gajim/data/plugins/omemo/file_crypto.py
-${PYSITELIB}/gajim/data/plugins/omemo/fpr_dialog.ui
+${PYSITELIB}/gajim/data/plugins/omemo/gtk/__init__.py
+${PYSITELIB}/gajim/data/plugins/omemo/gtk/config.py
+${PYSITELIB}/gajim/data/plugins/omemo/gtk/config.ui
+${PYSITELIB}/gajim/data/plugins/omemo/gtk/key.py
+${PYSITELIB}/gajim/data/plugins/omemo/gtk/progress.py
+${PYSITELIB}/gajim/data/plugins/omemo/gtk/progress.ui
+${PYSITELIB}/gajim/data/plugins/omemo/gtk/style.css
+${PYSITELIB}/gajim/data/plugins/omemo/gtk/util.py
 ${PYSITELIB}/gajim/data/plugins/omemo/manifest.ini
 ${PYSITELIB}/gajim/data/plugins/omemo/omemo.png
 ${PYSITELIB}/gajim/data/plugins/omemo/omemo/__init__.py
@@ -21,5 +26,4 @@ ${PYSITELIB}/gajim/data/plugins/omemo/omemo/state.py
 ${PYSITELIB}/gajim/data/plugins/omemo/omemo16x16.png
 ${PYSITELIB}/gajim/data/plugins/omemo/omemo_connection.py
 ${PYSITELIB}/gajim/data/plugins/omemo/omemoplugin.py
-${PYSITELIB}/gajim/data/plugins/omemo/ui.py
 ${PYSITELIB}/gajim/data/plugins/omemo/xmpp.py
