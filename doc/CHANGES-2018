@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4714 2018/11/16 12:32:16 leot Exp $
+$NetBSD: CHANGES-2018,v 1.4715 2018/11/16 13:05:56 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6605,3 +6605,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated cross/aarch64-none-elf-gcc to 7.2.0nb3 [leot 2018-11-16]
 	Updated www/vimb to 3.3.0 [leot 2018-11-16]
 	Updated net/Geomyidae to 0.34 [leot 2018-11-16]
+	Updated textproc/hunspell to 1.7.0 [bsiegert 2018-11-16]
