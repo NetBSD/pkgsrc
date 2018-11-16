@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4708 2018/11/16 00:16:56 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.4709 2018/11/16 00:26:29 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6601,3 +6601,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated chat/gajim to 1.1.0 [nia 2018-11-16]
 	Updated chat/gajim-plugin-omemo to 2.6.23 [nia 2018-11-16]
 	Added graphics/ruby-screengif version 0.0.3 [schmonz 2018-11-16]
+	Updated www/nginx to 1.14.1 [nia 2018-11-16]
