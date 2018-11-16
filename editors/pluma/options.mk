@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2018/07/03 05:03:15 adam Exp $
+# $NetBSD: options.mk,v 1.8 2018/11/16 19:01:25 bsiegert Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pluma
 PKG_SUPPORTED_OPTIONS=	enchant
@@ -9,7 +9,7 @@ PKG_SUGGESTED_OPTIONS=	enchant
 PLIST_VARS+=	enchant python
 
 .if !empty(PKG_OPTIONS:Menchant)
-.include "../../textproc/enchant/buildlink3.mk"
+.include "../../textproc/enchant2/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-spell
 PLIST.enchant=	yes
