@@ -1,10 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2018/06/14 00:24:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/11/17 20:02:41 bsiegert Exp $
 bin/qdirstat
 bin/qdirstat-cache-writer
 share/applications/qdirstat.desktop
-share/doc/qdirstat/Contributing.md
-share/doc/qdirstat/DevHistory.md
-share/doc/qdirstat/LICENSE
-share/doc/qdirstat/README.md
-share/doc/qdirstat/TODO.md
 share/pixmaps/qdirstat.png
