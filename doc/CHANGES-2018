@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4723 2018/11/16 23:40:33 maya Exp $
+$NetBSD: CHANGES-2018,v 1.4724 2018/11/17 20:03:15 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6614,3 +6614,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Removed databases/py-firebase [kleink 2018-11-16]
 	Updated www/firefox to 63.0.3 [maya 2018-11-16]
 	Updated www/firefox-l10n to 63.0.3 [maya 2018-11-16]
+	Updated sysutils/qdirstat to 1.5 [bsiegert 2018-11-17]
