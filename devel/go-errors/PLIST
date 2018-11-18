@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2017/08/17 01:23:10 gavan Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/11/18 07:29:52 ryoon Exp $
 gopkg/pkg/${GO_PLATFORM}/github.com/pkg/errors.a
 gopkg/src/github.com/pkg/errors/LICENSE
 gopkg/src/github.com/pkg/errors/README.md
 gopkg/src/github.com/pkg/errors/appveyor.yml
+gopkg/src/github.com/pkg/errors/bench_test.go
 gopkg/src/github.com/pkg/errors/errors.go
 gopkg/src/github.com/pkg/errors/errors_test.go
 gopkg/src/github.com/pkg/errors/example_test.go
+gopkg/src/github.com/pkg/errors/format_test.go
 gopkg/src/github.com/pkg/errors/stack.go
 gopkg/src/github.com/pkg/errors/stack_test.go
-@pkgdir bin
