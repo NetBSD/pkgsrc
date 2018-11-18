@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2018/11/18 08:46:07 ryoon Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/wellington/spritewell.a
+gopkg/src/github.com/wellington/spritewell/README.md
+gopkg/src/github.com/wellington/spritewell/inline.go
+gopkg/src/github.com/wellington/spritewell/inline_test.go
+gopkg/src/github.com/wellington/spritewell/sprite.go
+gopkg/src/github.com/wellington/spritewell/sprite_test.go
+gopkg/src/github.com/wellington/spritewell/test/139.jpg
+gopkg/src/github.com/wellington/spritewell/test/139.png
+gopkg/src/github.com/wellington/spritewell/test/140.jpg
+gopkg/src/github.com/wellington/spritewell/test/140.png
+gopkg/src/github.com/wellington/spritewell/test/bad/interlace.png
+gopkg/src/github.com/wellington/spritewell/test/gopher-front.svg
+gopkg/src/github.com/wellington/spritewell/test/gopher-front.svg.png
+gopkg/src/github.com/wellington/spritewell/test/many/bird.jpg
+gopkg/src/github.com/wellington/spritewell/test/many/in.jpg
+gopkg/src/github.com/wellington/spritewell/test/many/pencil.jpg
+gopkg/src/github.com/wellington/spritewell/test/many/rss.jpg
+gopkg/src/github.com/wellington/spritewell/test/many/twitt.jpg
+gopkg/src/github.com/wellington/spritewell/test/pixel.png
+gopkg/src/github.com/wellington/spritewell/test/pixel.png.svg
+gopkg/src/github.com/wellington/spritewell/types.go

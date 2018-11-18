@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/11/18 08:46:07 ryoon Exp $
+
+SHA1 (spritewell-0.5.0.tar.gz) = 218ea9f35b1526bb0d03b00a0e6d2fddc7c85c02
+RMD160 (spritewell-0.5.0.tar.gz) = 37ca64369afe057ef19472960ef4d1682973b5ca
+SHA512 (spritewell-0.5.0.tar.gz) = 6c87c0314e07e675edb8831d12e973cf7a4ba72d1cde0aa22a1dc7a184159c721361fa24b88779293d6cf318f8cf21830328d41dd2da9131eac7c0ad95c6b9ba
+Size (spritewell-0.5.0.tar.gz) = 94234 bytes
