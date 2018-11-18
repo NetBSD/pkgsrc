@@ -1,0 +1,6 @@
+Package colour provides Quake-style colour formatting for Unix
+terminals.
+
+The package level functions can be used to write to stdout (or
+strings or other files). If stdout is not a terminal, colour
+formatting will be stripped.
