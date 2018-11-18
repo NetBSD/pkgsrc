@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2747 2018/11/18 07:47:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.2748 2018/11/18 07:50:40 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -341,6 +341,7 @@ SUBDIR+=	go-cli
 SUBDIR+=	go-cobra
 SUBDIR+=	go-colorable
 SUBDIR+=	go-colortext
+SUBDIR+=	go-colour
 SUBDIR+=	go-consul-api
 SUBDIR+=	go-debounce
 SUBDIR+=	go-ed25519
