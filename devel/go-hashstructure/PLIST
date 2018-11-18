@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2018/11/18 08:02:08 ryoon Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/mitchellh/hashstructure.a
+gopkg/src/github.com/mitchellh/hashstructure/LICENSE
+gopkg/src/github.com/mitchellh/hashstructure/README.md
+gopkg/src/github.com/mitchellh/hashstructure/go.mod
+gopkg/src/github.com/mitchellh/hashstructure/hashstructure.go
+gopkg/src/github.com/mitchellh/hashstructure/hashstructure_examples_test.go
+gopkg/src/github.com/mitchellh/hashstructure/hashstructure_test.go
+gopkg/src/github.com/mitchellh/hashstructure/include.go
