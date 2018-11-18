@@ -1,0 +1,50 @@
+$NetBSD: patch-configure,v 1.3 2018/11/18 12:06:23 bsiegert Exp $
+
+Enchant2 support.
+
+--- configure.orig	2017-06-04 21:13:23.000000000 +0000
++++ configure
+@@ -16361,12 +16361,12 @@ if test -n "$ENCHANT_CFLAGS"; then
+     pkg_cv_ENCHANT_CFLAGS="$ENCHANT_CFLAGS"
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"enchant\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "enchant") 2>&5
++    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"enchant-2\""; } >&5
++  ($PKG_CONFIG --exists --print-errors "enchant-2") 2>&5
+   ac_status=$?
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+-  pkg_cv_ENCHANT_CFLAGS=`$PKG_CONFIG --cflags "enchant" 2>/dev/null`
++  pkg_cv_ENCHANT_CFLAGS=`$PKG_CONFIG --cflags "enchant-2" 2>/dev/null`
+ 		      test "x$?" != "x0" && pkg_failed=yes
+ else
+   pkg_failed=yes
+@@ -16378,12 +16378,12 @@ if test -n "$ENCHANT_LIBS"; then
+     pkg_cv_ENCHANT_LIBS="$ENCHANT_LIBS"
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"enchant\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "enchant") 2>&5
++    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"enchant-2\""; } >&5
++  ($PKG_CONFIG --exists --print-errors "enchant-2") 2>&5
+   ac_status=$?
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+-  pkg_cv_ENCHANT_LIBS=`$PKG_CONFIG --libs "enchant" 2>/dev/null`
++  pkg_cv_ENCHANT_LIBS=`$PKG_CONFIG --libs "enchant-2" 2>/dev/null`
+ 		      test "x$?" != "x0" && pkg_failed=yes
+ else
+   pkg_failed=yes
+@@ -16404,9 +16404,9 @@ else
+         _pkg_short_errors_supported=no
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+-	        ENCHANT_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "enchant" 2>&1`
++	        ENCHANT_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "enchant-2" 2>&1`
+         else
+-	        ENCHANT_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "enchant" 2>&1`
++	        ENCHANT_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "enchant-2" 2>&1`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$ENCHANT_PKG_ERRORS" >&5
