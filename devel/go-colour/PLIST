@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2018/11/18 07:49:26 ryoon Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/alecthomas/colour.a
+gopkg/src/github.com/alecthomas/colour/COPYING
+gopkg/src/github.com/alecthomas/colour/README.md
+gopkg/src/github.com/alecthomas/colour/colour.go
+gopkg/src/github.com/alecthomas/colour/colour_test.go
