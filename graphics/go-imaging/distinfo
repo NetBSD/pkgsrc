@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/11/18 08:32:54 ryoon Exp $
+
+SHA1 (imaging-1.5.0.tar.gz) = ee12dc5777e1d097df037291f5cfef4a384239a2
+RMD160 (imaging-1.5.0.tar.gz) = 3ae213e221c4d46d005f6423eb83ef1424f5b74e
+SHA512 (imaging-1.5.0.tar.gz) = 8fdc5ec93ee16cd15ff4c569116d3ccfe0cb7ea0b6c30d07701386fc0feada49795f2be23ff336fa74b481892f53e0e88b4c1b4f6fe78998b67f49d31b802fee
+Size (imaging-1.5.0.tar.gz) = 1886547 bytes
