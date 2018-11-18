@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2014/01/10 09:50:42 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2018/11/18 12:06:23 bsiegert Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mcabber
 PKG_SUPPORTED_OPTIONS=	aspell enchant gpgme otr ssl
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--enable-aspell
 .endif
 
 .if !empty(PKG_OPTIONS:Menchant)
-.include "../../textproc/enchant/buildlink3.mk"
+.include "../../textproc/enchant2/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-enchant
 .endif
 
