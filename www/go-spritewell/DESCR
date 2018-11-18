@@ -1,0 +1,3 @@
+Spritewell performs image composition on a glob of source images.
+This is useful for creating spritesheets of images. This is a thread
+safe library and is optimized for multicore systems.
