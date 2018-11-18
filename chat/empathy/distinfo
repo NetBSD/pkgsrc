@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.13 2015/11/03 01:20:18 agc Exp $
+$NetBSD: distinfo,v 1.14 2018/11/18 11:48:56 bsiegert Exp $
 
 SHA1 (empathy-2.34.0.tar.gz) = 533be910844e92e24be7232d2d122e9dc8b2267f
 RMD160 (empathy-2.34.0.tar.gz) = dfff9212f8c7f5d1c745a4b6bd3f6dbaf4ef02ab
 SHA512 (empathy-2.34.0.tar.gz) = 9b6539f645357c9f1f9a4ff5fa0e7511d02163c5433f1439388adbeae96138f66aca4af8078e016fd78c147ba91ef88d342da55e4392486d68f065857ca3775e
 Size (empathy-2.34.0.tar.gz) = 5085101 bytes
-SHA1 (patch-ad) = 2f0df78b7ee7ae3f58610894a6899397a4601ba7
+SHA1 (patch-ad) = a63038d8f86b93b235b77804cc35347ccb8f9501
 SHA1 (patch-libempathy_empathy-auth-factory.c) = 4f2e4fe7ad4e15bd075c39791248143a5c0f005f
 SHA1 (patch-src_Makefile.am) = b80be45492abf1a4bf79f4c408f07beb4ee4ed29
 SHA1 (patch-src_Makefile.in) = bf630e12c9517d0bb7b4e0e32ee47d4197ab0d92
