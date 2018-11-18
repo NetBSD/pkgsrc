@@ -1,0 +1,10 @@
+Go assertion library (fork of stretchr/testify/require)
+
+This is a fork of stretchr's assertion library that does two things:
+
+    It makes spotting differences in equality much easier. It uses
+    repr and diffmatchpatch to display structural differences in
+    colour.
+
+    Aborts tests on first assertion failure (the same behaviour as
+    stretchr/testify/require).
