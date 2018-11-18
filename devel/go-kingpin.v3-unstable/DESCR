@@ -1,0 +1,4 @@
+Kingpin is a fluent-style, type-safe command-line parser. It supports
+flags, nested commands, and positional arguments.
+
+This package is based on unstable v3 branch.
