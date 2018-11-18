@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2748 2018/11/18 07:50:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.2749 2018/11/18 07:52:56 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -365,6 +365,7 @@ SUBDIR+=	go-gopkgs
 SUBDIR+=	go-goptlib
 SUBDIR+=	go-goreturns
 SUBDIR+=	go-homedir
+SUBDIR+=	go-humanize
 SUBDIR+=	go-i18n
 SUBDIR+=	go-immutable-radix
 SUBDIR+=	go-ini
