@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4731 2018/11/18 07:47:11 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.4732 2018/11/18 07:49:53 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6622,3 +6622,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added www/go-urlesc version 0.0.0.20170810 [ryoon 2018-11-18]
 	Updated devel/go-purell to 1.1.0 [ryoon 2018-11-18]
 	Added devel/go-assert version 0.0.0.20170929 [ryoon 2018-11-18]
+	Added devel/go-colour version 0.0.0.20160524 [ryoon 2018-11-18]
