@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2018/11/18 07:57:34 ryoon Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/alecthomas/repr.a
+gopkg/src/github.com/alecthomas/repr/COPYING
+gopkg/src/github.com/alecthomas/repr/README.md
+gopkg/src/github.com/alecthomas/repr/repr.go
+gopkg/src/github.com/alecthomas/repr/repr_test.go
