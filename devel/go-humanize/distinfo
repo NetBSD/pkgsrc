@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/11/18 07:51:51 ryoon Exp $
+
+SHA1 (go-humanize-1.0.0.tar.gz) = a58d51328a05f7885fa9f4a476ba9260cd74223e
+RMD160 (go-humanize-1.0.0.tar.gz) = efc424b15511190e85ed8a5d32d3b0c0a69c8add
+SHA512 (go-humanize-1.0.0.tar.gz) = 95df73ba306ae1a465f5b299a78eae1cfe99e2a288c49286a5ee6da6b8aa3ec14d0eef88bfa474bcf2bafdd0bbf47d513848d4f1dedf110845af39f2ad4157d4
+Size (go-humanize-1.0.0.tar.gz) = 17260 bytes
