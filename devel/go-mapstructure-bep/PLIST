@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2018/11/18 08:06:21 ryoon Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/bep/mapstructure.a
+gopkg/src/github.com/bep/mapstructure/LICENSE
+gopkg/src/github.com/bep/mapstructure/README.md
+gopkg/src/github.com/bep/mapstructure/decode_hooks.go
+gopkg/src/github.com/bep/mapstructure/decode_hooks_test.go
+gopkg/src/github.com/bep/mapstructure/error.go
+gopkg/src/github.com/bep/mapstructure/mapstructure.go
+gopkg/src/github.com/bep/mapstructure/mapstructure_benchmark_test.go
+gopkg/src/github.com/bep/mapstructure/mapstructure_bugs_test.go
+gopkg/src/github.com/bep/mapstructure/mapstructure_examples_test.go
+gopkg/src/github.com/bep/mapstructure/mapstructure_test.go
