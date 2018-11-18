@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2751 2018/11/18 07:58:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.2752 2018/11/18 08:00:40 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -394,6 +394,7 @@ SUBDIR+=	go-sys
 SUBDIR+=	go-termbox
 SUBDIR+=	go-testify
 SUBDIR+=	go-tools
+SUBDIR+=	go-try
 SUBDIR+=	go-viper
 SUBDIR+=	go-yaml
 SUBDIR+=	gob2
