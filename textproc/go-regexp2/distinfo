@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/11/18 08:27:13 ryoon Exp $
+
+SHA1 (regexp2-1.1.6.tar.gz) = 2d0e0895ca41cb91eb346c172bce08fbf5ec41c0
+RMD160 (regexp2-1.1.6.tar.gz) = a13436fa137d86e3420fabdbe9d10110e42f022b
+SHA512 (regexp2-1.1.6.tar.gz) = 300b5214d7691b5d34f15f0cf7822e8b49a860d6467417ce896432d68559a6652ee083d14240f105807b5b4ddf7ba47f25318d9486de66e3e3b076f8b7104eba
+Size (regexp2-1.1.6.tar.gz) = 203691 bytes
