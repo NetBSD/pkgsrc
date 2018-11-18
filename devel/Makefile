@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2749 2018/11/18 07:52:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.2750 2018/11/18 07:56:35 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -371,6 +371,7 @@ SUBDIR+=	go-immutable-radix
 SUBDIR+=	go-ini
 SUBDIR+=	go-isatty
 SUBDIR+=	go-jwalterweatherman
+SUBDIR+=	go-kingpin.v3-unstable
 SUBDIR+=	go-logrus
 SUBDIR+=	go-mapstructure
 SUBDIR+=	go-mow-cli
