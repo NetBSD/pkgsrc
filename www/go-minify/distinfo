@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/11/18 08:40:17 ryoon Exp $
+
+SHA1 (minify-2.3.8.tar.gz) = ca6c3e5820b83f32dc0d06ce32c27a4252f4d142
+RMD160 (minify-2.3.8.tar.gz) = 2b84a1aa4ca19e0065bda932096bfca497b3b582
+SHA512 (minify-2.3.8.tar.gz) = dced371cb18a7b69048a5c2fbb6df4bd9143e11f7d346c8378c819a8dd6dc810e2090c340a7d26ddaae0208578c92a307d534170a57fd9ff36093c19576803dd
+Size (minify-2.3.8.tar.gz) = 2125614 bytes
