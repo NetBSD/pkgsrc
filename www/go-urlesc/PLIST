@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2018/11/18 07:36:50 ryoon Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/PuerkitoBio/urlesc.a
+gopkg/src/github.com/PuerkitoBio/urlesc/LICENSE
+gopkg/src/github.com/PuerkitoBio/urlesc/README.md
+gopkg/src/github.com/PuerkitoBio/urlesc/urlesc.go
+gopkg/src/github.com/PuerkitoBio/urlesc/urlesc_test.go
