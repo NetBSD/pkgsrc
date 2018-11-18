@@ -1,0 +1,6 @@
+go-diff offers algorithms to perform operations required for synchronizing
+plain text:
+
+    Compare two texts and return their differences.
+    Perform fuzzy matching of text.
+    Apply patches onto text.
