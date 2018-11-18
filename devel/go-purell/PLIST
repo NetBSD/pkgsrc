@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2017/08/17 01:37:13 gavan Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/11/18 07:42:38 ryoon Exp $
 gopkg/pkg/${GO_PLATFORM}/github.com/PuerkitoBio/purell.a
 gopkg/src/github.com/PuerkitoBio/purell/LICENSE
 gopkg/src/github.com/PuerkitoBio/purell/README.md
+gopkg/src/github.com/PuerkitoBio/purell/bench_test.go
+gopkg/src/github.com/PuerkitoBio/purell/benchmarks/v0.1.0
 gopkg/src/github.com/PuerkitoBio/purell/example_test.go
 gopkg/src/github.com/PuerkitoBio/purell/purell.go
 gopkg/src/github.com/PuerkitoBio/purell/purell_test.go
 gopkg/src/github.com/PuerkitoBio/purell/urlnorm_test.go
-@pkgdir bin
