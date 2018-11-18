@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2017/08/17 01:15:39 gavan Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/11/18 07:21:36 ryoon Exp $
 bin/amberc
 gopkg/pkg/${GO_PLATFORM}/github.com/eknkc/amber.a
 gopkg/pkg/${GO_PLATFORM}/github.com/eknkc/amber/parser.a
+gopkg/src/github.com/eknkc/amber/LICENSE
 gopkg/src/github.com/eknkc/amber/README.md
 gopkg/src/github.com/eknkc/amber/amber_test.go
 gopkg/src/github.com/eknkc/amber/amberc/cli.go
@@ -23,3 +24,6 @@ gopkg/src/github.com/eknkc/amber/samples/input.html
 gopkg/src/github.com/eknkc/amber/samples/multilevel.inheritance.a.amber
 gopkg/src/github.com/eknkc/amber/samples/multilevel.inheritance.b.amber
 gopkg/src/github.com/eknkc/amber/samples/multilevel.inheritance.c.amber
+gopkg/src/github.com/eknkc/amber/samples/recursion.extends.amber
+gopkg/src/github.com/eknkc/amber/samples/recursion.parent.amber
+gopkg/src/github.com/eknkc/amber/samples/recursion.top.amber
