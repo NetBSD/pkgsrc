@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/11/18 08:17:22 ryoon Exp $
+
+SHA1 (locker-0.0.0.20171007-a6e239ea1c69bff1cfdb20c4b73dadf52f784b6a.tar.gz) = f3c24b8924a6f91b7ca86d7eab420749b87aa3fd
+RMD160 (locker-0.0.0.20171007-a6e239ea1c69bff1cfdb20c4b73dadf52f784b6a.tar.gz) = 4b1e2e328799cd15d031dda6914a69dc1aba4c61
+SHA512 (locker-0.0.0.20171007-a6e239ea1c69bff1cfdb20c4b73dadf52f784b6a.tar.gz) = b6eaa606660ab6fd2a952a8ef727c830db859658636ee7b214014f2b4a1ec3c671d85745f94ed118ed9d2cc9909a15d26c6be72baed5b6e13eccb5cfe20e58bd
+Size (locker-0.0.0.20171007-a6e239ea1c69bff1cfdb20c4b73dadf52f784b6a.tar.gz) = 2112 bytes
