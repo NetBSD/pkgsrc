@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4728 2018/11/18 07:30:18 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.4729 2018/11/18 07:37:24 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6619,3 +6619,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/libreoffice to 6.1.3.2 [ryoon 2018-11-18]
 	Updated devel/go-amber to 0.0.20171010 [ryoon 2018-11-18]
 	Updated devel/go-errors to 0.8.0 [ryoon 2018-11-18]
+	Added www/go-urlesc version 0.0.0.20170810 [ryoon 2018-11-18]
