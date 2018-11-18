@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/11/18 08:02:08 ryoon Exp $
+
+SHA1 (hashstructure-1.0.0.tar.gz) = 4aca4957f0e5835d8f8356699c726cf6ee7c1eb1
+RMD160 (hashstructure-1.0.0.tar.gz) = fc43a21ab6cac2ca460204e56dabcf49f9359ccd
+SHA512 (hashstructure-1.0.0.tar.gz) = a2b0688cb9e352c3ade1a928ad6c3bb9feeb066703af4b125789f045537677898544b97610272edab1476894c261c558ba6ca95e32a894f5471dfb055cf88265
+Size (hashstructure-1.0.0.tar.gz) = 6507 bytes
