@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/08/15 15:32:11 nia Exp $
+$NetBSD: distinfo,v 1.2 2018/11/18 11:54:10 nia Exp $
 
-SHA1 (libretro-sameboy-0.11.1.tar.gz) = 24fc72540732b927ba399f4d3dabc16bc8881947
-RMD160 (libretro-sameboy-0.11.1.tar.gz) = aad527582c98e690a8ccb4911d81d378a7e0cde3
-SHA512 (libretro-sameboy-0.11.1.tar.gz) = cddb399093af192df843c593cd56f5cc2fa4b61b6ab6a41fa6520670b17f991efe63b567224021c9e0b177e3b30abb2068970b646db5d403f211e97a728f6661
-Size (libretro-sameboy-0.11.1.tar.gz) = 2428875 bytes
+SHA1 (libretro-sameboy-0.11.2.tar.gz) = 0f989a4a007466fbffc53e96265f4d73e9cf2f79
+RMD160 (libretro-sameboy-0.11.2.tar.gz) = 37415df146f33279e5627880c7b39c86ed78506f
+SHA512 (libretro-sameboy-0.11.2.tar.gz) = 478d0d4dff2bd6030b3fe97aa0b0381696f818129717d6af2f9d2631181737038ac588ab00dbb4eab3d6251762381f2ac564cb39b31912f5949a0006f863af38
+Size (libretro-sameboy-0.11.2.tar.gz) = 2430898 bytes
