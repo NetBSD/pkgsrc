@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4751 2018/11/18 08:58:51 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.4752 2018/11/18 10:51:53 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6642,3 +6642,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added www/go-tocss version 0.5.0 [ryoon 2018-11-18]
 	Updated www/go-toml-burntsushi to 0.3.1 [ryoon 2018-11-18]
 	Updated www/hugo to 0.51 [ryoon 2018-11-18]
+	Updated net/gallery-dl to 1.6.0 [leot 2018-11-18]
