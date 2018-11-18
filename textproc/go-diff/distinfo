@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/11/18 08:24:23 ryoon Exp $
+
+SHA1 (go-diff-1.0.0.tar.gz) = 43df4e5176bb2c543924c5743585c8be0deb66f4
+RMD160 (go-diff-1.0.0.tar.gz) = b27379dcb319afbefb6fac2963401ceb4648785d
+SHA512 (go-diff-1.0.0.tar.gz) = aed012908610c75dbf7141ee5652d6b1b21ebf6e6a72ed88cbe32213ad8ca6ccdbfe1d42815eb8cbd98276acf75306aef21b729237746d30e24ac6dbc36552b0
+Size (go-diff-1.0.0.tar.gz) = 41609 bytes
