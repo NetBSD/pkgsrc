@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/11/18 08:06:21 ryoon Exp $
+
+SHA1 (mapstructure-bep-0.0.20180511-bb74f1db0675b241733089d5a1faa5dd8b0ef57b.tar.gz) = d24a9c3168f1da1127db69a5fb76875a6992bd63
+RMD160 (mapstructure-bep-0.0.20180511-bb74f1db0675b241733089d5a1faa5dd8b0ef57b.tar.gz) = 8738de6d8d1b7b8fc961fe120b7a73ff7b792684
+SHA512 (mapstructure-bep-0.0.20180511-bb74f1db0675b241733089d5a1faa5dd8b0ef57b.tar.gz) = b5740447fa3b81ff8b713f328dbbf866f01527ee71f23141595d0c0f39d865f9ea95a04bac118dc223a3ebfc3ebeb5b8f857fec66f4232ef7da8f292ac8cab59
+Size (mapstructure-bep-0.0.20180511-bb74f1db0675b241733089d5a1faa5dd8b0ef57b.tar.gz) = 18671 bytes
