@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4742 2018/11/18 08:25:09 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.4743 2018/11/18 08:27:50 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6633,3 +6633,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/go-locker version 0.0.0.20171007 [ryoon 2018-11-18]
 	Added textproc/go-chroma version 0.5.0 [ryoon 2018-11-18]
 	Added textproc/go-diff version 1.0.0 [ryoon 2018-11-18]
+	Added textproc/go-regexp2 version 1.1.6 [ryoon 2018-11-18]
