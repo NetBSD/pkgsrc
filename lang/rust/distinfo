@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.45 2018/10/31 16:30:44 martin Exp $
+$NetBSD: distinfo,v 1.46 2018/11/18 07:03:01 ryoon Exp $
 
 SHA1 (rust-1.29.1-i686-unknown-netbsd.tar.gz) = f4f8cbd0a2581546680328765bf5d7d351cf0643
 RMD160 (rust-1.29.1-i686-unknown-netbsd.tar.gz) = a590d8dfed10220e8013796cd66c5c9eed51bf37
@@ -92,10 +92,10 @@ SHA1 (rust-std-1.30.0-sparc64-unknown-netbsd.tar.gz) = 2fe0fee646e503c13d9f9e903
 RMD160 (rust-std-1.30.0-sparc64-unknown-netbsd.tar.gz) = f96e6e863466f48342ac369aa714b2d24311dc78
 SHA512 (rust-std-1.30.0-sparc64-unknown-netbsd.tar.gz) = 9a8b40347a0ea094e9fbb5ee868fff88fd7a981f5721adcfd162fd7c1445b6d8b623f01a753cb9483cb91d5878e04fa894c84edc85f005e884131433ce56558b
 Size (rust-std-1.30.0-sparc64-unknown-netbsd.tar.gz) = 69501419 bytes
-SHA1 (rustc-1.30.0-src.tar.gz) = 682f6dddecf0d612ab3029afe63fc4f49ca8e3d8
-RMD160 (rustc-1.30.0-src.tar.gz) = 94a3905854ed41875c6b68b0cc5c056d095fefa4
-SHA512 (rustc-1.30.0-src.tar.gz) = a4737727818397a26974449e9e7ddc09ae7430a08102ae05729317b19675fa89ad82a8f5bc5b7c913d894866a30dfe3c539c80e29c2b0ade6ecde06db8216981
-Size (rustc-1.30.0-src.tar.gz) = 149490609 bytes
+SHA1 (rustc-1.30.1-src.tar.gz) = 3cd836173e51c795defdf486fbaae94946a5a9b7
+RMD160 (rustc-1.30.1-src.tar.gz) = 9b8bda1fb32573e9b4160393d2031ff5e06df2f7
+SHA512 (rustc-1.30.1-src.tar.gz) = 8eb09bec937f705acd31d05aaa4ef03cabc43b8d9104462436c3155581d7efc753928fd1076f8831eab2cd718284f2ee928bdde06ab47c2ac37de254cea0f099
+Size (rustc-1.30.1-src.tar.gz) = 149474922 bytes
 SHA1 (patch-src_bootstrap_bin_rustc.rs) = 0abf893090a6053e01fd658096d9a2b5b8c144da
 SHA1 (patch-src_bootstrap_bootstrap.py) = 96ef9368eaa5e10e607ff031d50ed05f3a915775
 SHA1 (patch-src_bootstrap_lib.rs) = d86e173b931099730a4f18d044d7977c89f87b91
