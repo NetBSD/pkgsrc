@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/11/18 08:48:11 ryoon Exp $
+
+SHA1 (go-tocss-0.5.0.tar.gz) = e7d3eabd9f2edac48506c6580927b29a0ad28c26
+RMD160 (go-tocss-0.5.0.tar.gz) = aade891d5961bdbcdbb77e7ec6663ad4e3a2532a
+SHA512 (go-tocss-0.5.0.tar.gz) = df9c08241a0223bbb6b37b5da576a186152554ddc442cd0568a2f9bf7898e668587fe393c03f41e2b1cc994a3cd19d54c39fcf0e69e168451aff690883f42376
+Size (go-tocss-0.5.0.tar.gz) = 5370 bytes
