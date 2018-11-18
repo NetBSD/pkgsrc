@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/08/17 01:31:19 gavan Exp $
+$NetBSD: distinfo,v 1.2 2018/11/18 08:11:08 ryoon Exp $
 
-SHA1 (jWalterWeatherman-20170523-0efa5202c04663c757d84f90f5219c1250baf94f.tar.gz) = f6155eb5e800326dd05e22a0911d4b9724356ac8
-RMD160 (jWalterWeatherman-20170523-0efa5202c04663c757d84f90f5219c1250baf94f.tar.gz) = 4dbb1882a2f1315831d9d76ee8842d001bf3eb8a
-SHA512 (jWalterWeatherman-20170523-0efa5202c04663c757d84f90f5219c1250baf94f.tar.gz) = e994187443d8c4f05e9864a9c6db52847f3459d4afb1b094bfd9ab6d9d374856028319f7b8a99e2483242a2decc6432e8fd85cb567b4f6dc76dc700900eb5ca1
-Size (jWalterWeatherman-20170523-0efa5202c04663c757d84f90f5219c1250baf94f.tar.gz) = 6340 bytes
+SHA1 (jwalterweatherman-20181028-94f6ae3ed3bceceafa716478c5fbf8d29ca601a1.tar.gz) = b11df79c315172cacbad9bf82564a15533477d97
+RMD160 (jwalterweatherman-20181028-94f6ae3ed3bceceafa716478c5fbf8d29ca601a1.tar.gz) = e7f4fc4fabbffb9175a587e41e637dc6b2387f8f
+SHA512 (jwalterweatherman-20181028-94f6ae3ed3bceceafa716478c5fbf8d29ca601a1.tar.gz) = 960829b25973b7359deb7a85bb3b7d0fca69faf1ccecbea771772330db4fc1331921d03268378a06f350403de6ff6f749de729fefa90af5c489a4a0313f5f398
+Size (jwalterweatherman-20181028-94f6ae3ed3bceceafa716478c5fbf8d29ca601a1.tar.gz) = 6867 bytes

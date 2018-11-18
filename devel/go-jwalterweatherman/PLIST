@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2017/08/17 01:31:19 gavan Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/11/18 08:11:07 ryoon Exp $
 gopkg/pkg/${GO_PLATFORM}/github.com/spf13/jwalterweatherman.a
 gopkg/src/github.com/spf13/jwalterweatherman/LICENSE
 gopkg/src/github.com/spf13/jwalterweatherman/README.md
 gopkg/src/github.com/spf13/jwalterweatherman/default_notepad.go
 gopkg/src/github.com/spf13/jwalterweatherman/default_notepad_test.go
+gopkg/src/github.com/spf13/jwalterweatherman/go.mod
 gopkg/src/github.com/spf13/jwalterweatherman/log_counter.go
 gopkg/src/github.com/spf13/jwalterweatherman/notepad.go
 gopkg/src/github.com/spf13/jwalterweatherman/notepad_test.go
-@pkgdir bin
