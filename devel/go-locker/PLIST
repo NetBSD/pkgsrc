@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2018/11/18 08:17:22 ryoon Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/BurntSushi/locker.a
+gopkg/src/github.com/BurntSushi/locker/Makefile
+gopkg/src/github.com/BurntSushi/locker/README.md
+gopkg/src/github.com/BurntSushi/locker/UNLICENSE
+gopkg/src/github.com/BurntSushi/locker/locker.go
+gopkg/src/github.com/BurntSushi/locker/session.vim
