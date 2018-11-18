@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4733 2018/11/18 07:52:14 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.4734 2018/11/18 07:55:24 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6624,3 +6624,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/go-assert version 0.0.0.20170929 [ryoon 2018-11-18]
 	Added devel/go-colour version 0.0.0.20160524 [ryoon 2018-11-18]
 	Added devel/go-humanize version 1.0.0 [ryoon 2018-11-18]
+	Added devel/go-kingpin.v3-unstable version 3.0.0.0.20100811 [ryoon 2018-11-18]
