@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/08/17 01:37:13 gavan Exp $
+$NetBSD: distinfo,v 1.2 2018/11/18 07:42:38 ryoon Exp $
 
-SHA1 (purell-0.1.0.tar.gz) = e5aaaeb4ade770117cc773ab02ce0fb5cfeafa3b
-RMD160 (purell-0.1.0.tar.gz) = 7cac2ce737d38edd06ab9cbbdd9fb524e1445c92
-SHA512 (purell-0.1.0.tar.gz) = ff45214f7b23d3043cbda68572939711be74440c22d35d3f37385373bd63e516f621ae1eb298d2234357cdb1be70eee9c0cc913fe0f44742204488e522637137
-Size (purell-0.1.0.tar.gz) = 10674 bytes
+SHA1 (purell-1.1.0.tar.gz) = 0a5a8363712eb489e8afc32a2f722226c5ab8b8c
+RMD160 (purell-1.1.0.tar.gz) = fffde8e4ef8e0ed4a2224430be7d3d323c40bd21
+SHA512 (purell-1.1.0.tar.gz) = 17e734a28ece431657fa9c7c1a492185d8d0a976ad4bd17285b038144252dc3ff595e54b3924408d80ed02cb2f6e99b72c05490fe23f88dcb338f358a6cda7f5
+Size (purell-1.1.0.tar.gz) = 11653 bytes
