@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4736 2018/11/18 07:59:59 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.4737 2018/11/18 08:02:38 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6627,3 +6627,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/go-kingpin.v3-unstable version 3.0.0.0.20100811 [ryoon 2018-11-18]
 	Added devel/go-repr version 0.0.0.20180921 [ryoon 2018-11-18]
 	Added devel/go-try version 1.0.0.0 [ryoon 2018-11-18]
+	Added devel/go-hashstructure version 1.0.0 [ryoon 2018-11-18]
