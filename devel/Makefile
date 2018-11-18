@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2750 2018/11/18 07:56:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.2751 2018/11/18 07:58:35 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -383,6 +383,7 @@ SUBDIR+=	go-properties
 SUBDIR+=	go-protobuf
 SUBDIR+=	go-purell
 SUBDIR+=	go-ratelimit
+SUBDIR+=	go-repr
 SUBDIR+=	go-review
 SUBDIR+=	go-sanitized_anchor_name
 SUBDIR+=	go-shellwords
