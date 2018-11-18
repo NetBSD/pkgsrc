@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.99 2018/11/14 22:21:08 kleink Exp $
+# $NetBSD: Makefile,v 1.100 2018/11/18 11:48:56 bsiegert Exp $
 
 DISTNAME=	empathy-2.34.0
-PKGREVISION=	66
+PKGREVISION=	67
 CATEGORIES=	chat gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/empathy/2.34/}
 
@@ -49,7 +49,7 @@ BUILDLINK_API_DEPENDS.enchant+=		enchant>=1.2.0
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
-.include "../../textproc/enchant/buildlink3.mk"
+.include "../../textproc/enchant2/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
