@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4740 2018/11/18 08:17:56 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.4741 2018/11/18 08:22:50 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6631,3 +6631,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/go-mapstructure-bep version 0.0.20180511 [ryoon 2018-11-18]
 	Updated devel/go-jwalterweatherman to 20181028 [ryoon 2018-11-18]
 	Added devel/go-locker version 0.0.0.20171007 [ryoon 2018-11-18]
+	Added textproc/go-chroma version 0.5.0 [ryoon 2018-11-18]
