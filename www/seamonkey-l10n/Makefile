@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2018/10/23 22:55:13 maya Exp $
+# $NetBSD: Makefile,v 1.45 2018/11/18 07:16:48 ryoon Exp $
 #
 
 SM_VER=		2.49.4
@@ -24,5 +24,5 @@ SM_LOCALES=		cs de en-GB en-US es-AR es-ES fr	\
 EXTENSIONS_DIR=		${PREFIX}/lib/seamonkey/extensions
 XPI_FILES=		${SM_LOCALES:C/.*/seamonkey-${SM_VER}.&.langpack.xpi/}
 
-.include "../../www/firefox/xpi.mk"
+.include "../../www/firefox52/xpi.mk"
 .include "../../mk/bsd.pkg.mk"
