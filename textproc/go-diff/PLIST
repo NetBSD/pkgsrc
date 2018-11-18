@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2018/11/18 08:24:23 ryoon Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/sergi/go-diff/diffmatchpatch.a
+gopkg/src/github.com/sergi/go-diff/APACHE-LICENSE-2.0
+gopkg/src/github.com/sergi/go-diff/AUTHORS
+gopkg/src/github.com/sergi/go-diff/CONTRIBUTORS
+gopkg/src/github.com/sergi/go-diff/LICENSE
+gopkg/src/github.com/sergi/go-diff/Makefile
+gopkg/src/github.com/sergi/go-diff/README.md
+gopkg/src/github.com/sergi/go-diff/diffmatchpatch/benchutil_test.go
+gopkg/src/github.com/sergi/go-diff/diffmatchpatch/diff.go
+gopkg/src/github.com/sergi/go-diff/diffmatchpatch/diff_test.go
+gopkg/src/github.com/sergi/go-diff/diffmatchpatch/diffmatchpatch.go
+gopkg/src/github.com/sergi/go-diff/diffmatchpatch/match.go
+gopkg/src/github.com/sergi/go-diff/diffmatchpatch/match_test.go
+gopkg/src/github.com/sergi/go-diff/diffmatchpatch/mathutil.go
+gopkg/src/github.com/sergi/go-diff/diffmatchpatch/patch.go
+gopkg/src/github.com/sergi/go-diff/diffmatchpatch/patch_test.go
+gopkg/src/github.com/sergi/go-diff/diffmatchpatch/stringutil.go
+gopkg/src/github.com/sergi/go-diff/diffmatchpatch/stringutil_test.go
+gopkg/src/github.com/sergi/go-diff/scripts/lint.sh
+gopkg/src/github.com/sergi/go-diff/testdata/speedtest1.txt
+gopkg/src/github.com/sergi/go-diff/testdata/speedtest2.txt
