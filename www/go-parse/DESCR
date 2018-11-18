@@ -1,0 +1,8 @@
+This package contains several lexers and parsers written in Go.
+All subpackages are built to be streaming, high performance and to
+be in accordance with the official (latest) specifications.
+
+The lexers are implemented using buffer.Lexer in
+https://github.com/tdewolff/parse/buffer and the parsers work on
+top of the lexers. Some subpackages have hashes defined (using
+Hasher) that speed up common byte-slice comparisons.
