@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2018/11/18 08:48:11 ryoon Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/bep/go-tocss/scss.a
+gopkg/pkg/${GO_PLATFORM}/github.com/bep/go-tocss/scss/libsass.a
+gopkg/pkg/${GO_PLATFORM}/github.com/bep/go-tocss/tocss.a
+gopkg/src/github.com/bep/go-tocss/LICENSE
+gopkg/src/github.com/bep/go-tocss/README.md
+gopkg/src/github.com/bep/go-tocss/appveyor.yml
+gopkg/src/github.com/bep/go-tocss/scss/common.go
+gopkg/src/github.com/bep/go-tocss/scss/common_test.go
+gopkg/src/github.com/bep/go-tocss/scss/libsass/transpiler.go
+gopkg/src/github.com/bep/go-tocss/scss/libsass/transpiler_test.go
+gopkg/src/github.com/bep/go-tocss/tocss/transpiler.go
