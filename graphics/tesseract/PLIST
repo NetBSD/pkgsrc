@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2018/11/03 09:13:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2018/11/18 18:07:20 adam Exp $
 bin/ambiguous_words
 bin/classifier_tester
 bin/cntraining
@@ -40,6 +40,24 @@ include/tesseract/thresholder.h
 include/tesseract/unichar.h
 lib/libtesseract.la
 lib/pkgconfig/tesseract.pc
+man/man1/ambiguous_words.1
+man/man1/classifier_tester.1
+man/man1/cntraining.1
+man/man1/combine_lang_model.1
+man/man1/combine_tessdata.1
+man/man1/dawg2wordlist.1
+man/man1/lstmeval.1
+man/man1/lstmtraining.1
+man/man1/merge_unicharsets.1
+man/man1/mftraining.1
+man/man1/set_unicharset_properties.1
+man/man1/shapeclustering.1
+man/man1/tesseract.1
+man/man1/text2image.1
+man/man1/unicharset_extractor.1
+man/man1/wordlist2dawg.1
+man/man5/unicharambigs.5
+man/man5/unicharset.5
 share/tessdata/afr.traineddata
 share/tessdata/amh.traineddata
 share/tessdata/ara.traineddata
