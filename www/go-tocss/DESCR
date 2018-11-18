@@ -1,0 +1,8 @@
+This is currently a, hopefully, simple to use LibSass Go API. It
+uses the C bindings in https://github.com/wellington/go-libsass/libs
+to do the heavy lifting.
+
+The primary motivation for this project is to add SCSS support to
+Hugo. It is has some generic tocss package names hoping that there
+will be a solid native Go implementation that can replace LibSass
+in the near future.
