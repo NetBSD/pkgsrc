@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2018/11/18 07:46:43 ryoon Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/alecthomas/assert.a
+gopkg/src/github.com/alecthomas/assert/LICENCE.txt
+gopkg/src/github.com/alecthomas/assert/README.md
+gopkg/src/github.com/alecthomas/assert/_example/diff.png
+gopkg/src/github.com/alecthomas/assert/_example/example_test.go
+gopkg/src/github.com/alecthomas/assert/assertions.go
+gopkg/src/github.com/alecthomas/assert/diff.go
+gopkg/src/github.com/alecthomas/assert/doc.go
+gopkg/src/github.com/alecthomas/assert/errors.go
+gopkg/src/github.com/alecthomas/assert/forward_assertions.go
+gopkg/src/github.com/alecthomas/assert/http_assertions.go
