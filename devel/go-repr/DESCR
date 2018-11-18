@@ -1,0 +1,6 @@
+This package attempts to represent Go values in a form that can be
+used almost directly in Go source code.
+
+Unfortunately, some values (such as pointers to basic types) can
+not be represented directly in Go. These values will be represented
+as &<value>. eg. &23
