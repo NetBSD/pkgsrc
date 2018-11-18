@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>pan.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <name>Pan Newsreader</name>
+  <name xml:lang="zh_TW">Pan 新聞閱讀器</name>
+  <name xml:lang="zh_CN">Pan 新闻阅读器</name>
+  <name xml:lang="vi">Bộ đọc tin tức Pan</name>
+  <name xml:lang="uk">Переглядач новин "Pan"</name>
+  <name xml:lang="tr">Pan Haber Okuyucusu</name>
+  <name xml:lang="sv">Pan diskussionsgruppsläsare</name>
+  <name xml:lang="sr@latin">Čitač vesti Pan</name>
+  <name xml:lang="sr">Читач вести Пан</name>
+  <name xml:lang="sq">Pan - Lexuesi i Lajmeve</name>
+  <name xml:lang="sk">Pan - Program pre prácu s diskusnými skupinami</name>
+  <name xml:lang="pt_BR">Leitor de Notícias Pan</name>
+  <name xml:lang="pl">Czytnik grup dyskusyjnych Pan</name>
+  <name xml:lang="oc">Legidor de novèlas Pan</name>
+  <name xml:lang="nl">Pan nieuwslezer</name>
+  <name xml:lang="nb">Pan newsleser</name>
+  <name xml:lang="ms">Pembaca berita Pan</name>
+  <name xml:lang="lv">Pan Jaunumlasītājs</name>
+  <name xml:lang="ko">판, 뉴스리더</name>
+  <name xml:lang="ja">ニュースリーダー Pan</name>
+  <name xml:lang="it">Pan Lettore di News</name>
+  <name xml:lang="hu">Pan hírolvasó</name>
+  <name xml:lang="hr">Pan program za čitanje novosti</name>
+  <name xml:lang="fr">Lecteur de nouvelles Pan</name>
+  <name xml:lang="eu">Pan berri-irakurlea</name>
+  <name xml:lang="et">Uudiseriider Pan</name>
+  <name xml:lang="es">Lector de noticias Pan</name>
+  <name xml:lang="en_GB">Pan Newsreader</name>
+  <name xml:lang="en_CA">Pan Newsreader</name>
+  <name xml:lang="dz">པེན་ གནས་ཚུལ་ལྷག་མི་</name>
+  <name xml:lang="de">Pan Newsreader</name>
+  <name xml:lang="da">Pan - nyhedsgruppelæser</name>
+  <name xml:lang="cs">Diskusní klient</name>
+  <name xml:lang="bg">Четец на новини (Pan)</name>
+  <name xml:lang="az">Pan Xəbərlər Oxuyucusu</name>
+  <summary>Read and post Usenet articles</summary>
+  <summary xml:lang="tr">Usenet makalelerini okuyun ve gönderin</summary>
+  <summary xml:lang="sv">Läs och posta Usenet-artiklar</summary>
+  <summary xml:lang="sr@latin">Čitajte i objavljujte članke na Juznetu</summary>
+  <summary xml:lang="sr">Читајте и објављујте чланке на Јузнету</summary>
+  <summary xml:lang="pt_BR">Leia e envie artigos na usenet</summary>
+  <summary xml:lang="pl">Czytanie i wysyłanie wiadomości w sieci Usenet</summary>
+  <summary xml:lang="hu">Usenet cikkek olvasása és közzététele</summary>
+  <summary xml:lang="es">Leer y publicar artículos en Usenet</summary>
+  <summary xml:lang="de">Usenet-Artikel lesen und senden</summary>
+  <summary xml:lang="da">Læs og send artikler på Usenet</summary>
+  <summary xml:lang="cs">Čtení a vystavování příspěvků na síti Usenet</summary>
+  <description>
+    <p>Pan is a Usenet newsreader that is good at both text and binaries. It
+    supports offline reading, scoring and killfiles, yEnc, NZB, PGP handling,
+    multiple servers, and secure connections.</p>
+    <p xml:lang="sv">Pan är en läsare för Usenet-diskussionsgrupper som är bra på både text och binärer. Det stöder frånkopplad läsning, poängsättning och ignorerafiler, yEnc, NZB, PGP-hantering, multipla servrar och säkra anslutningar.</p>
+    <p xml:lang="sr@latin">Pan je Juznetov čitač vesti koji je dobar kako sa tekstom tako i sa izvršnima. Podržava čitanje van mreže, bodovanje i ubijanje datoteka, uEnc, NZB, PGP rukovanje, više servera i bezbedne veze.</p>
+    <p xml:lang="sr">Пан је Јузнетов читач вести који је добар како са текстом тако и са извршнима. Подржава читање ван мреже, бодовање и убијање датотека, уЕнц, НЗБ, ПГП руковање, више сервера и безбедне везе.</p>
+    <p xml:lang="pt_BR">Pan é um leitor de notícias Usenet que é bom em texto e em binários. Ele oferece suporte a leitura offline, marcando e killfiles, yEnc, NZB, PGP manipulação, vários servidores e conexões seguras.</p>
+    <p xml:lang="pl">Pan jest czytnikiem sieci Usenet z dobrą obsługą tekstu i plików binarnych. Obsługuje czytanie w trybie offline, punktację i listy blokowania, yEnc, NZB, PGP, wiele serwerów i bezpieczne połączenia.</p>
+    <p xml:lang="hu">A Pan egy Usenet hírolvasó, amely jó mind szöveges, mind bináris adatok esetén. Támogatja a kapcsolat nélküli olvasást, értékelést és a killfájlokat, kezeli az yEnc-t, NZB-t és a PGP-t, több kiszolgálót támogat és támogatja a biztonságos kapcsolatokat is.</p>
+    <p xml:lang="es">Pan es un lector de noticias de Usenet que funciona tanto con texto como con binarios. Soporta lectura sin conexión, puntuación, «killfiles», yEnc, NZB, gestión de PGP, varios servidores y conexiones seguras.</p>
+    <p xml:lang="de">Pan ist ein Newsreader für das Usenet, der sowohl mit Text als auch binären Inhalten umgehen kann. Unterstützt werden Offline-Lesen, Bewertungen und Killfiles, yEnc, NZB, Hochladen binärer Inhalte, Umgang mit PGP, Multiserver und sichere Verbindungen.</p>
+    <p xml:lang="da">Pan er en nyhedsgruppelæser for Usenet, som er god til både tekst og binære filer. Den understøtter læsning uden forbindelse til internettet, bedømmelse og kill-filer, yEnc, NZB, PGP-håndtering, flere servere og sikre forbindelser.</p>
+    <p xml:lang="cs">Pan je diskusní klient, který si umí poradit s textovými i binárními příspěvky. Podporuje práci v režimu offline, hodnocení, killfiles, yEnc, NZB, práci s PGP a více servery a zabezpečené připojení.</p>
+    <p>It is also the only Unix newsreader to get a perfect score on the Good
+    Net-Keeping Seal of Approval evaluations.</p>
+    <p xml:lang="sv">Det är också den enda diskussionsgruppläsaren för Unix att få full poäng hos utvärderingarna hos Good Net-Keeping Seal of Approval.</p>
+    <p xml:lang="sr@latin">Takođe je jedini Juniksov čitač vesti koji je dobio odličnu ocenu na vrednovanjima pečata odobravanja dobrog održavanja mreže (GNKSA).</p>
+    <p xml:lang="sr">Такође је једини Јуниксов читач вести који је добио одличну оцену на вредновањима печата одобравања доброг одржавања мреже (GNKSA).</p>
+    <p xml:lang="pt_BR">É também o único leitor de notícias de Unix para obter uma pontuação perfeita sobre as avaliações do Good Net-Keeping Seal of Approval.</p>
+    <p xml:lang="pl">Jest także jedynym czytnikiem grup dyskusyjnych dla systemu UNIX, który uzyskał idealny wynik w badaniach „Good Net-Keeping Seal of Approval”.</p>
+    <p xml:lang="hu">Ez az egyetlen Unix hírolvasó, amely tökéletes pontszámot kapott a Good Net-Keeping Seal of Approval értékeléseken.</p>
+    <p xml:lang="es">También es el único lector de noticias de Unix para obtener una puntuación perfecta en las pruebas del Sello de aprobación de lectores de noticias (GNKSA).</p>
+    <p xml:lang="de">Pan ist auch der einzige Unix-Newsreader, der eine perfekte Bewertung im »Good NetKeeping Seal of Approval« hat.</p>
+    <p xml:lang="da">Det er også den eneste nyhedsgruppelæser for Unix, som får en perfekt bedømmelse på Good Net-Keeping Seal of Approval-evalueringerne.</p>
+    <p xml:lang="cs">Jedná se o jediný diskusní klient, který získal nejlepší možné hodnocení v rámci Good Net-Keeping Seal of Approval.</p>
+  </description>
+  <screenshots>
+    <screenshot type="default" height="1127" width="637">
+      <image>http://pan.rebelbase.com/screenshots/pan-140.png</image>
+    </screenshot>
+  </screenshots>
+  <url type="homepage">http://pan.rebelbase.com/</url>
+  <update_contact>pan-users@nongnu.org</update_contact>
+  <project_license>GPL-2.0</project_license>
+  <developer_name>Pan</developer_name>
+  <url type="bugtracker">https://bugzilla.gnome.org/enter_bug.cgi?product=Pan</url>
+  <url type="donation">http://pan.rebelbase.com/tipjar/</url>
+  <url type="help">http://pan.rebelbase.com/manual/html/</url>
+  <url type="translate">https://l10n.gnome.org/module/pan2/</url>
+  <translation type="gettext">pan</translation>
+</component>

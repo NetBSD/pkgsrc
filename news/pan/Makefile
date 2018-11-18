@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.97 2018/11/14 22:22:15 kleink Exp $
+# $NetBSD: Makefile,v 1.98 2018/11/18 14:29:03 rhialto Exp $
 
 DISTNAME=		pan-0.145
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		news
 MASTER_SITES=		http://pan.rebelbase.com/download/releases/${DISTNAME:C/pan-//}/source/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		rhialto@falu.nl
+MAINTAINER=		rhialto@NetBSD.org
 HOMEPAGE=		http://pan.rebelbase.com/
 COMMENT=		Newsreader for GTK2
 LICENSE=		gnu-gpl-v2
 
-BUILD_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
+TOOL_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
 
-USE_TOOLS+=		gettext-m4 gmake perl pkg-config
+USE_TOOLS+=		gmake msgfmt perl pkg-config
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
@@ -26,8 +26,15 @@ LIBS+=			-lcompat
 
 LIBS.SunOS+=	-lsocket -liconv
 
+# "Build" these files out of thin air, since base msgfmt doesn't know
+# about --xml --desktop.
+pre-build:
+	${CP} ${FILESDIR}/pan.appdata.xml ${WRKSRC}/
+	${CP} ${FILESDIR}/pan.desktop ${WRKSRC}/
+
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mail/gmime/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/gtkspell/buildlink3.mk"
