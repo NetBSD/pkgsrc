@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4744 2018/11/18 08:33:33 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.4745 2018/11/18 08:38:21 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6635,3 +6635,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added textproc/go-diff version 1.0.0 [ryoon 2018-11-18]
 	Added textproc/go-regexp2 version 1.1.6 [ryoon 2018-11-18]
 	Added graphics/go-imaging version 1.5.0 [ryoon 2018-11-18]
+	Added www/go-libsass version 0.9.2.0.20180625 [ryoon 2018-11-18]
