@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.784 2018/11/09 12:50:49 bsiegert Exp $
+# $NetBSD: Makefile,v 1.785 2018/11/19 12:52:53 tnn Exp $
 #
 
 COMMENT=	System utilities
@@ -404,6 +404,7 @@ SUBDIR+=	openstack_init
 SUBDIR+=	openxenmanager
 SUBDIR+=	osname
 SUBDIR+=	ovmf
+SUBDIR+=	p5-BackupPC-XS
 SUBDIR+=	p5-Config-Augeas
 SUBDIR+=	p5-Config-Simple
 SUBDIR+=	p5-Daemon-Generic
