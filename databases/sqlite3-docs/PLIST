@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.80 2018/10/01 08:02:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.81 2018/11/19 16:21:19 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -219,6 +219,7 @@ share/doc/sqlite3/chronology.html
 share/doc/sqlite3/cintro.html
 share/doc/sqlite3/cli.html
 share/doc/sqlite3/codeofconduct.html
+share/doc/sqlite3/codeofethics.html
 share/doc/sqlite3/compile.html
 share/doc/sqlite3/completion.html
 share/doc/sqlite3/conflict.html
@@ -363,7 +364,7 @@ share/doc/sqlite3/images/foreignlogos/airbus2.gif
 share/doc/sqlite3/images/foreignlogos/apple.gif
 share/doc/sqlite3/images/foreignlogos/bentley.gif
 share/doc/sqlite3/images/foreignlogos/bentley.jpg
-share/doc/sqlite3/images/foreignlogos/bloomberg.gif
+share/doc/sqlite3/images/foreignlogos/bloomberg.png
 share/doc/sqlite3/images/foreignlogos/bosch_logo1.gif
 share/doc/sqlite3/images/foreignlogos/dropbox.gif
 share/doc/sqlite3/images/foreignlogos/expensify.png
@@ -646,6 +647,7 @@ share/doc/sqlite3/releaselog/3_24_0.html
 share/doc/sqlite3/releaselog/3_25_0.html
 share/doc/sqlite3/releaselog/3_25_1.html
 share/doc/sqlite3/releaselog/3_25_2.html
+share/doc/sqlite3/releaselog/3_25_3.html
 share/doc/sqlite3/releaselog/3_2_0.html
 share/doc/sqlite3/releaselog/3_2_1.html
 share/doc/sqlite3/releaselog/3_2_2.html
