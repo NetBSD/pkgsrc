@@ -1,0 +1,2 @@
+BackupPC::XS implements various BackupPC functions in a perl-callable
+module. This module is required by sysutils/backuppc>=4.0.
