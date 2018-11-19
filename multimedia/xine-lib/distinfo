@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.109 2018/11/13 11:10:41 markd Exp $
+$NetBSD: distinfo,v 1.110 2018/11/19 12:48:31 jperkin Exp $
 
 SHA1 (xine-lib-1.2.9.tar.xz) = ad6e72b7d8ff6172a8a170ab1bc38577ae321371
 RMD160 (xine-lib-1.2.9.tar.xz) = 3feb81b93add382c5382984980189f323f2ac746
@@ -22,7 +22,7 @@ SHA1 (patch-src-post-planar-denoise3d.c) = e140ff0b7867fd850099ff073f67201b4649d
 SHA1 (patch-src-post-planar-eq.c) = ae26bd7cbd53bc750319964f0be0b75a781367bb
 SHA1 (patch-src-post-planar-eq2.c) = 7711ea2c3b8ede9adf9b54f7b95f4458ffed852b
 SHA1 (patch-src-post-planar-expand.c) = 9d9ec1f5619f9a3d832bcace54d23011371f2067
-SHA1 (patch-src-post-planar-noise.c) = 8a9a2fee5d41af6d4e318abfcbeddd0ced33e478
+SHA1 (patch-src-post-planar-noise.c) = ad3ddd33b3e818ff41b9a5f520c2b80d46d476a1
 SHA1 (patch-src-post-planar-pp.c) = f5bea421785132c5f1422ae9f0d468974fb0ae5d
 SHA1 (patch-src-post-planar-unsharp.c) = 9f29c624f96a91760df960343096247d8c09c58d
 SHA1 (patch-src_libw32dll_wine_registry.c) = a36b4155a1d0d43ae698641178ef4afc97e7e70a

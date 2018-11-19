@@ -1,4 +1,4 @@
-$NetBSD: patch-src-post-planar-noise.c,v 1.4 2018/11/13 11:10:41 markd Exp $
+$NetBSD: patch-src-post-planar-noise.c,v 1.5 2018/11/19 12:48:32 jperkin Exp $
 
 https://bugs.xine-project.org/show_bug.cgi?id=524
 
@@ -15,6 +15,15 @@ Disable MMX sections on SunOS.
  
  #if defined(ARCH_X86_64)
  #  define TYPEA int64_t
+@@ -231,7 +231,7 @@ static inline void lineNoiseAvg_C(uint8_
+     }
+ }
+ 
+-#ifdef ARCH_X86
++#if defined(ARCH_X86) && !defined(__sun)
+ 
+ static inline void lineNoiseAvg_MMX(uint8_t *dst, uint8_t *src, int len, int8_t **shift){
+   TYPEA mmx_len = len & (~7);
 @@ -340,15 +340,20 @@ static const char *const enum_quality[]
   * description of params struct
   */
