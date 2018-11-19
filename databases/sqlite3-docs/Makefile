@@ -1,11 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2018/11/07 11:51:25 adam Exp $
+# $NetBSD: Makefile,v 1.46 2018/11/19 16:21:19 adam Exp $
 
-# docs for latest version are not available
-#DISTNAME=	sqlite-doc-${SQLITE3_DISTVERSION}
-#PKGNAME=	sqlite3-docs-${SQLITE3_VERSION}
-
-DISTNAME=	sqlite-doc-3250200
-PKGNAME=	sqlite3-docs-3.25.2
+DISTNAME=	sqlite-doc-${SQLITE3_DISTVERSION}
+PKGNAME=	sqlite3-docs-${SQLITE3_VERSION}
 CATEGORIES=	databases
 EXTRACT_SUFX=	.zip
 
