@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/11/17 20:02:41 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6 2018/11/19 06:23:27 markd Exp $
 
 DISTNAME=	qdirstat-1.5
 CATEGORIES=	sysutils
@@ -26,7 +26,7 @@ pre-configure:
 do-configure:
 	cd ${WRKSRC} && qmake
 
-#INSTALLATION_DIRS= bin share/applications share/pixmaps share/doc/qdirstat
+INSTALLATION_DIRS= bin share/applications share/pixmaps
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/qdirstat ${DESTDIR}${PREFIX}/bin/qdirstat
