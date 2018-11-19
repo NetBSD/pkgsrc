@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4757 2018/11/19 16:21:51 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4758 2018/11/19 17:01:07 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6649,3 +6649,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/nginx-devel to 1.15.6 [adam 2018-11-19]
 	Added sysutils/p5-BackupPC-XS version 0.57 [tnn 2018-11-19]
 	Updated databases/sqlite3-docs to 3.25.3 [adam 2018-11-19]
+	Added graphics/papirus-icon-theme version 20181007 [nia 2018-11-19]
