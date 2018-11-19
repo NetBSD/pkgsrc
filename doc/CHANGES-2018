@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4753 2018/11/18 11:54:19 nia Exp $
+$NetBSD: CHANGES-2018,v 1.4754 2018/11/19 10:30:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6644,3 +6644,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/hugo to 0.51 [ryoon 2018-11-18]
 	Updated net/gallery-dl to 1.6.0 [leot 2018-11-18]
 	Updated emulators/libretro-sameboy to 0.11.2 [nia 2018-11-18]
+	Updated devel/py-wheel to 0.32.3 [adam 2018-11-19]
+	Updated devel/py-test-timeout to 1.3.3 [adam 2018-11-19]
