@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2018/10/02 12:05:35 adam Exp $
+# $NetBSD: Makefile,v 1.39 2018/11/20 08:59:29 maya Exp $
 
 DISTNAME=	openexr-2.3.0
 CATEGORIES=	graphics
@@ -14,10 +14,10 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
+GCC_REQD+=		6
 PKGCONFIG_OVERRIDE=	OpenEXR.pc.in
 TEST_TARGET=		check
 
-GCC_REQD+=	4.3
 
 .include "../../mk/bsd.prefs.mk"
 
