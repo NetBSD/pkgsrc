@@ -1,12 +1,12 @@
-$NetBSD: patch-config_delegates.mgk.in,v 1.1 2016/06/06 11:46:34 wiz Exp $
+$NetBSD: patch-config_delegates.mgk.in,v 1.2 2018/11/20 10:19:29 adam Exp $
 
 Avoid tools directory in installed file.
 
---- config/delegates.mgk.in.orig	2016-05-30 17:19:54.000000000 +0000
+--- config/delegates.mgk.in.orig	2018-11-17 16:13:19.000000000 +0000
 +++ config/delegates.mgk.in
-@@ -98,8 +98,8 @@
-   <!-- Read CMYK Postscript, EPS, and PDF  -->
-   <delegate decode="gs-cmyk" stealth="True" command='"@PSDelegate@" -q -dBATCH -dSAFER -dMaxBitmap=50000000 -dNOPAUSE -sDEVICE=@GSCMYKDevice@ -dTextAlphaBits=%u -dGraphicsAlphaBits=%u -r%s %s "-sOutputFile=%s" -- "%s" -c quit' />
+@@ -107,8 +107,8 @@
+   <!-- Read color PDF using Poppler's pdftoppm -->
+   <delegate decode="poppler-color" stealth="True" command='"pdftoppm" "-freetype" "yes" "-rx" "-aa" "yes" "-aaVector" "yes" "72" "-ry" "72" "%s" ">" "%s"' />
  
 -  <delegate decode="hpg" command='"@HPGLDecodeDelegate@" -q -m eps -f `basename "%o"` "%i" && @MVDelegate@ -f `basename "%o"` "%o"' />
 -  <delegate decode="hpgl" command='"@HPGLDecodeDelegate@" -q -m eps -f `basename "%o"` "%i" && @MVDelegate@ -f `basename "%o"` "%o"' />
