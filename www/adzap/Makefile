@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2018/08/22 09:47:22 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2018/11/20 09:26:11 maya Exp $
 
 DISTNAME=	adzap-20110915
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www perl5
 MASTER_SITES=	http://adzapper.sourceforge.net/
 
@@ -24,6 +24,8 @@ SUBST_MESSAGE.paths=	Fixing absolute paths.
 SUBST_FILES.paths=	scripts/squid_redirect
 SUBST_FILES.paths+=	scripts/wrapzap
 SUBST_VARS.paths=	PREFIX
+
+DEPENDS+=		p5-Perl4-CoreLibs-[0-9]*:../../devel/p5-Perl4-CoreLibs
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/squid_redirect-nodata \
