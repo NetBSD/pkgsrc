@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2757 2018/11/20 17:28:10 maya Exp $
+# $NetBSD: Makefile,v 1.2758 2018/11/20 17:29:24 maya Exp $
 #
 
 COMMENT=	Development utilities
@@ -729,6 +729,7 @@ SUBDIR+=	lua-penlight
 SUBDIR+=	lua-posix
 SUBDIR+=	lua-rocks
 SUBDIR+=	lua-std-_debug
+SUBDIR+=	lua-std-normalize
 SUBDIR+=	lua-stdlib
 SUBDIR+=	lutok
 SUBDIR+=	lwp
