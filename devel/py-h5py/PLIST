@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/11/16 22:36:04 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/11/20 05:39:28 markd Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -60,6 +60,9 @@ ${PYSITELIB}/h5py/h5i.so
 ${PYSITELIB}/h5py/h5l.so
 ${PYSITELIB}/h5py/h5o.so
 ${PYSITELIB}/h5py/h5p.so
+${PYSITELIB}/h5py/h5py_warnings.py
+${PYSITELIB}/h5py/h5py_warnings.pyc
+${PYSITELIB}/h5py/h5py_warnings.pyo
 ${PYSITELIB}/h5py/h5r.so
 ${PYSITELIB}/h5py/h5s.so
 ${PYSITELIB}/h5py/h5t.so
@@ -97,6 +100,9 @@ ${PYSITELIB}/h5py/tests/hl/test_dims_dimensionproxy.pyo
 ${PYSITELIB}/h5py/tests/hl/test_file.py
 ${PYSITELIB}/h5py/tests/hl/test_file.pyc
 ${PYSITELIB}/h5py/tests/hl/test_file.pyo
+${PYSITELIB}/h5py/tests/hl/test_filters.py
+${PYSITELIB}/h5py/tests/hl/test_filters.pyc
+${PYSITELIB}/h5py/tests/hl/test_filters.pyo
 ${PYSITELIB}/h5py/tests/hl/test_threads.py
 ${PYSITELIB}/h5py/tests/hl/test_threads.pyc
 ${PYSITELIB}/h5py/tests/hl/test_threads.pyo
