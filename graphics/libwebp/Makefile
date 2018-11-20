@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2018/04/27 14:26:41 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2018/11/20 17:26:19 adam Exp $
 
-DISTNAME=	libwebp-1.0.0
+DISTNAME=	libwebp-1.0.1
 CATEGORIES=	graphics
 MASTER_SITES=	http://downloads.webmproject.org/releases/webp/
 
@@ -9,32 +9,30 @@ HOMEPAGE=	https://developers.google.com/speed/webp/
 COMMENT=	WebP image format library and tools
 LICENSE=	modified-bsd
 
-.include "options.mk"
-
-USE_LIBTOOL=	yes
-GNU_CONFIGURE=	yes
-
-CONFIGURE_ARGS+=	--enable-libwebpdemux
-CONFIGURE_ARGS+=	--enable-libwebpmux
-CONFIGURE_ARGS+=	--enable-libwebpdemux
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-gl
 CONFIGURE_ARGS+=	--enable-libwebpdecoder
 CONFIGURE_ARGS+=	--enable-libwebpextras
-CONFIGURE_ARGS+=	--disable-gl
+CONFIGURE_ARGS+=	--enable-libwebpdemux
+CONFIGURE_ARGS+=	--enable-libwebpmux
+
+.include "options.mk"
 
 .include "../../mk/compiler.mk"
 # fix PR pkg/45934
 .if (!empty(MACHINE_PLATFORM:MSunOS-*-i386) || !empty(MACHINE_PLATFORM:MMirBSD-*-i386)) && !empty(CC_VERSION:Mgcc-[23]*)
-CPPFLAGS += -D__pic__
+CPPFLAGS+=	-D__pic__
 .endif
 
+PKGCONFIG_OVERRIDE+=	src/demux/libwebpdemux.pc.in
 PKGCONFIG_OVERRIDE+=	src/libwebp.pc.in
-PKGCONFIG_OVERRIDE+=    src/libwebpdecoder.pc.in
-PKGCONFIG_OVERRIDE+=    src/demux/libwebpdemux.pc.in
-PKGCONFIG_OVERRIDE+=    src/mux/libwebpmux.pc.in
+PKGCONFIG_OVERRIDE+=	src/libwebpdecoder.pc.in
+PKGCONFIG_OVERRIDE+=	src/mux/libwebpmux.pc.in
 
 INSTALLATION_DIRS+=	share/doc/${PKGBASE}
 
-#Needed to comply with the BSD license and redistribution
+# Needed to comply with the BSD license and redistribution
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/COPYING \
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
