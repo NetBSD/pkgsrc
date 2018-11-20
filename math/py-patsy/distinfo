@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/01/17 12:07:19 adam Exp $
+$NetBSD: distinfo,v 1.3 2018/11/20 13:31:03 adam Exp $
 
-SHA1 (patsy-0.5.0.tar.gz) = 938b08b4cce260680ea8e0bdec58efb1f14975e1
-RMD160 (patsy-0.5.0.tar.gz) = 769a2541687d633412f432f75d1a2893407639e5
-SHA512 (patsy-0.5.0.tar.gz) = f967cc1fdb66ee95d093e1c3e2b5fd48a50b98235a4b78f7c411fa35b93910fcb38735089af437fe7087bfe887f55c51052ef0bee2a49e774f42115aa4c4c53c
-Size (patsy-0.5.0.tar.gz) = 399109 bytes
+SHA1 (patsy-0.5.1.tar.gz) = d7a9087ee83f641867768299b58466e84ea298eb
+RMD160 (patsy-0.5.1.tar.gz) = 2ca7512c63fedba257228597444869cd3164fa07
+SHA512 (patsy-0.5.1.tar.gz) = aeb56411e68713ec75c0b5344890939f721c460d3c7643b9fd57d7c928421d21408b0f2963348edf27a025842989dbae6fd5cfccd3f9d9497d60a1dffe8d7bdc
+Size (patsy-0.5.1.tar.gz) = 397623 bytes
