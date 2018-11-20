@@ -1,0 +1,13 @@
+This project aims to provide a sensible means of storing and managing arbitrary
+HTML element attributes for later emitting them into templates.
+
+There are a wide variety of types of attributes and using the "normal" Django
+method of adding ModelFields for each on a business model is cumbersome at best
+and moreover may require related tables to allow cases where any number of the
+same type of attribute should be supported (i.e., data-attributes). This can
+contribute to performance problems.
+
+To avoid these pitfalls, this package allows all of these attributes to be
+stored together in a single text field in the database as a JSON blob, but
+provides a nice widget to provide an intuitive, key/value pair interface and
+provide sensible validation of the keys used.
