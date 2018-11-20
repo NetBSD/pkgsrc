@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2018/03/05 12:46:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.16 2018/11/20 17:30:47 maya Exp $
 
 DISTNAME=	luaposix-34.0.4
 PKGNAME=	${DISTNAME:S/lua/${LUA_PKGPREFIX}-/}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=luaposix/}
 GITHUB_PROJECT=	luaposix
@@ -18,8 +19,10 @@ INSTALLATION_DIRS+=	${LUA_LDIR} ${LUA_CDIR}
 
 .include "../../lang/lua/luaversion.mk"
 
+DEPENDS+=	${LUA_PKGPREFIX}-std-normalize-[0-9]*:../../devel/lua-std-normalize
+DEPENDS+=	${LUA_PKGPREFIX}-std-_debug-[0-9]*:../../devel/lua-std-_debug
 .if ${LUA_PKGPREFIX} == "lua51"
-DEPENDS+=	lua51-BitOp-[0-9]*:../../devel/lua-BitOp
+DEPENDS+=	lua51-bitlib-[0-9]*:../../devel/lua-bitlib
 .endif
 
 LIBFLAG+=	${LDFLAGS} -shared -fPIC
