@@ -1,1 +1,9 @@
-Code audit tool for python.
+Code audit tool for Python and JavaScript. Pylama wraps these tools:
+* pycodestyle (formerly pep8)
+* pydocstyle (formerly pep257)
+* PyFlakes
+* Mccabe
+* Pylint
+* Radon
+* gjslin
+* eradicate

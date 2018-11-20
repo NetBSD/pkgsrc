@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.4 2018/07/05 11:23:29 adam Exp $
+$NetBSD: distinfo,v 1.5 2018/11/20 14:14:16 adam Exp $
 
-SHA1 (pylama-7.4.3.tar.gz) = 45e4780ea0d492df7c7a35ed358610f69f075fff
-RMD160 (pylama-7.4.3.tar.gz) = 122aae2985f3bd3402e394dc9ac41fa2e36e5728
-SHA512 (pylama-7.4.3.tar.gz) = 7d4ab9cb0a1390fa4d2dc96bd88cac52b4ec5a4a72e08e1e6dab913fea06e5bb19c761c1c23dcddf91a297f6688a1196e52cdd2f05dc9cb8564d3178a99e27b8
-Size (pylama-7.4.3.tar.gz) = 28631 bytes
-SHA1 (patch-pylama_config.py) = 0b2dd66c33b60d6c5da75aae421172dd4a3717ec
-SHA1 (patch-pylama_main.py) = 33b955fac19021faedc54b0dad3ff8c719268bd3
+SHA1 (pylama-7.6.6.tar.gz) = a168ef9c08603a629fde3c8f20074435361f2985
+RMD160 (pylama-7.6.6.tar.gz) = 71950b45bac1b86494454b8ea2d42aff85261f06
+SHA512 (pylama-7.6.6.tar.gz) = 5bb1c28ee14a871f6df7d91ac855be22064e9ae21614d89d92633899c54aa2273bb91683063655f795aef517d1180902053a770264be4e1165d985b071016402
+Size (pylama-7.6.6.tar.gz) = 32401 bytes
+SHA1 (patch-setup.py) = b0efe33e509008ad6e696eaf17cad60ac6750370
