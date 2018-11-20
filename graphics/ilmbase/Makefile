@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/10/02 12:05:35 adam Exp $
+# $NetBSD: Makefile,v 1.21 2018/11/20 08:59:29 maya Exp $
 
 DISTNAME=	ilmbase-2.3.0
 CATEGORIES=	graphics
@@ -15,6 +15,7 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bash gmake
 GNU_CONFIGURE=		yes
+GCC_REQD+=		6
 TEST_TARGET=		check
 LIBS.SunOS=		-lm
 CONFIG_SHELL=		bash
