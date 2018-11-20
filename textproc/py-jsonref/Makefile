@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/09/29 13:47:27 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2018/11/20 11:52:43 adam Exp $
 
-DISTNAME=	jsonref-0.1
+DISTNAME=	jsonref-0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsonref/}
@@ -10,10 +10,10 @@ HOMEPAGE=	https://github.com/gazpachoking/jsonref
 COMMENT=	JSON References for Python
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 do-test:
 	cd ${WRKSRC} && py.test-${PYVERSSUFFIX} tests.py
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

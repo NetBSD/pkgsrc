@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/09/29 13:47:27 joerg Exp $
+$NetBSD: distinfo,v 1.2 2018/11/20 11:52:43 adam Exp $
 
-SHA1 (jsonref-0.1.tar.gz) = f513631471573ceb59c2af2f962929b8e5a3ed11
-RMD160 (jsonref-0.1.tar.gz) = 4ba9e6e41990cef63a9359ba5c5895507028b5d4
-SHA512 (jsonref-0.1.tar.gz) = 9900601feab0c20c902a6d5575fd411898af126a650d0c9ff955f50f5bd1f5da8e5a071ca86cac31ce3c5fb35a516f849cbb70098cac2cfdc910ba33a1f7411b
-Size (jsonref-0.1.tar.gz) = 12296 bytes
+SHA1 (jsonref-0.2.tar.gz) = 7e76e8d3d324f90b9ffbd166ba1d57329aaaea30
+RMD160 (jsonref-0.2.tar.gz) = b92d50b169d82d3f24af253ffe34c4fd150e7931
+SHA512 (jsonref-0.2.tar.gz) = 415eaefcaf2c7a02bf70749522fef0d96f1e0cc5772edd50ca016a564258df21dd3eb178b7a33ee61e606125fb802a29b0cb8855a81c6116baf6393208927b0f
+Size (jsonref-0.2.tar.gz) = 13032 bytes
