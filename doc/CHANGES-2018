@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4770 2018/11/20 18:16:22 gdt Exp $
+$NetBSD: CHANGES-2018,v 1.4771 2018/11/20 18:55:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6672,3 +6672,12 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/lua-bitlib version 5.3.0 [maya 2018-11-20]
 	Updated devel/lua-posix to 34.0.4nb1 [maya 2018-11-20]
 	Updated databases/postgresql-postgis2 to 2.5.1 [gdt 2018-11-20]
+	Updated www/py-django-filer to 1.4.0 [adam 2018-11-20]
+	Added www/py-djangocms-attributes-field version 0.4.0 [adam 2018-11-20]
+	Updated www/py-djangocms-text-ckeditor to 3.6.1 [adam 2018-11-20]
+	Updated www/py-djangocms-file to 2.1.0 [adam 2018-11-20]
+	Updated www/py-djangocms-googlemap to 1.2.0 [adam 2018-11-20]
+	Updated www/py-djangocms-inherit to 0.2.2 [adam 2018-11-20]
+	Updated www/py-djangocms-picture to 2.1.1 [adam 2018-11-20]
+	Updated www/py-djangocms-style to 2.1.0 [adam 2018-11-20]
+	Updated www/py-djangocms-video to 2.1.0 [adam 2018-11-20]
