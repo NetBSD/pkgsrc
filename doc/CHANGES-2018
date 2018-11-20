@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4766 2018/11/20 13:31:24 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4767 2018/11/20 14:14:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6662,3 +6662,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-jsonref to 0.2 [adam 2018-11-20]
 	Updated textproc/py-pyaml to 18.11.0 [adam 2018-11-20]
 	Updated math/py-patsy to 0.5.1 [adam 2018-11-20]
+	Added textproc/py-eradicate version 0.2.1 [adam 2018-11-20]
+	Updated devel/py-lama to 7.6.6 [adam 2018-11-20]
