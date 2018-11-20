@@ -1,0 +1,1 @@
+bin/eradicate @PREFIX@/bin/eradicate-@PYVERSSUFFIX@
