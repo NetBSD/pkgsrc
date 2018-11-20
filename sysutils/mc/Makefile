@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2018/08/22 09:46:35 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2018/11/20 08:04:59 maya Exp $
 
 DISTNAME=	mc-4.8.21
 PKGREVISION=	1
@@ -31,6 +31,7 @@ CHECK_WRKREF_SKIP+=	bin/mcview
 PLIST_SRC+=		${PKGDIR}/PLIST.cons.saver
 .endif
 
+CONFIGURE_ARGS.Darwin+=	ac_cv_func_utimensat=no
 # we need working e2fsprogs and gpm packages first
 CONFIGURE_ARGS+=	--without-ext2undel
 CONFIGURE_ARGS+=	--without-gpm-mouse
