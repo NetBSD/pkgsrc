@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4767 2018/11/20 14:14:44 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4768 2018/11/20 17:28:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6664,3 +6664,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/py-patsy to 0.5.1 [adam 2018-11-20]
 	Added textproc/py-eradicate version 0.2.1 [adam 2018-11-20]
 	Updated devel/py-lama to 7.6.6 [adam 2018-11-20]
+	Updated www/py-djangocms-admin-style to 1.2.9 [adam 2018-11-20]
+	Updated www/py-django-cms to 3.5.3 [adam 2018-11-20]
+	Updated graphics/libwebp to 1.0.1 [adam 2018-11-20]
