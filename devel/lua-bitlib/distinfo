@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/11/20 17:26:20 maya Exp $
+
+SHA1 (bitlib-5.3.0.tar.gz) = 995834b630a64c31fb77b08b5f75b950d31918c5
+RMD160 (bitlib-5.3.0.tar.gz) = cf09dee8e2e18c8f0ae11e1886db1713b7edfef1
+SHA512 (bitlib-5.3.0.tar.gz) = 234807e201197bc27720864a328f5b63a9fe8bf88bf1fb64cd178532c0745a330b23455fcff0e50d365034f3e43af3c835de7f10a685275da66a7a1ca873e90a
+Size (bitlib-5.3.0.tar.gz) = 21884 bytes
