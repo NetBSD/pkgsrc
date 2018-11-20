@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2018/11/20 17:29:24 maya Exp $
+${LUA_LDIR}/std/normalize/_base.lua
+${LUA_LDIR}/std/normalize/_strict.lua
+${LUA_LDIR}/std/normalize/_typecheck.lua
+${LUA_LDIR}/std/normalize/init.lua
+${LUA_LDIR}/std/normalize/version.lua
+${LUA_DOCDIR}/index.html
+${LUA_DOCDIR}/ldoc.css

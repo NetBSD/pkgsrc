@@ -1,0 +1,8 @@
+This is a collection of normalized lua functions for Lua 5.1
+(including LuaJIT), 5.2 and 5.3.
+
+It can inject deterministic versions of core Lua functions that do not
+behave identically across all supported Lua implementations into your
+module's lexical environment.  Each function is as thin and fast a
+version as is possible in each Lua implementation, evaluating to the
+Lua C implementation with no overhead when semantics allow.
