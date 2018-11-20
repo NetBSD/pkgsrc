@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.36 2018/11/14 22:56:11 kleink Exp $
+# $NetBSD: Makefile,v 1.37 2018/11/20 13:20:42 leot Exp $
 
 .include "../../graphics/cairo/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-gobject-/}
+PKGREVISION=	3
 
 BUILD_DIRS=	util/cairo-gobject
 INSTALL_DIRS=	util/cairo-gobject
