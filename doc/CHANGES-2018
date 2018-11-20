@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4759 2018/11/20 05:40:57 markd Exp $
+$NetBSD: CHANGES-2018,v 1.4760 2018/11/20 08:14:16 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6651,3 +6651,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/sqlite3-docs to 3.25.3 [adam 2018-11-19]
 	Added graphics/papirus-icon-theme version 20181007 [nia 2018-11-19]
 	Updated devel/py-h5py to 2.8.0 [markd 2018-11-20]
+	Updated x11/gtk3 to 3.24.1nb3 [maya 2018-11-20]
