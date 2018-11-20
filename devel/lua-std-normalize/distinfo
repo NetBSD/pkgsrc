@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/11/20 17:29:24 maya Exp $
+
+SHA1 (std.normalize-2.0.2.tar.gz) = bc4a2fdf4e8c5bb6b3676dcdd0925c34fa426589
+RMD160 (std.normalize-2.0.2.tar.gz) = a541f8fbb63f30f5eb3957f7b1bd69625586b3e2
+SHA512 (std.normalize-2.0.2.tar.gz) = bde7d834ce5324ee6af7e3f76d138f75bb6c55612e6e524a06d7886b92b346043a2ad4befec5f68342d369e7ed610f00388243b18886a53de6cce123b6a7637f
+Size (std.normalize-2.0.2.tar.gz) = 45936 bytes
