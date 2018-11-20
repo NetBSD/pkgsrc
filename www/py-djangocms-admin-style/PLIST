@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2018/05/29 12:53:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2018/11/20 17:08:28 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -193,6 +193,7 @@ ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/libs/jquery.m
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/libs/js.cookie-2.1.2.min.js
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/modules/datetimefields.js
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/modules/drag-touch-support.js
+${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/modules/form-submit.js
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/modules/jquery.ui.touch-punch.min.js
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/modules/related-widget-wrapper.js
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/modules/toolbar-dropdown.js
