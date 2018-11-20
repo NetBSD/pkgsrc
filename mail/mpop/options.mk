@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2016/06/18 18:55:52 bsiegert Exp $
+# $NetBSD: options.mk,v 1.3 2018/11/20 09:29:24 maya Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.mpop
-PKG_SUPPORTED_OPTIONS=		gsasl
+PKG_SUPPORTED_OPTIONS=		gsasl idn
 PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
 PKG_OPTIONS_GROUP.ssl=		gnutls ssl
 PKG_SUGGESTED_OPTIONS=		ssl
@@ -22,4 +22,12 @@ CONFIGURE_ARGS+=	--disable-tls
 .if !empty(PKG_OPTIONS:Mgsasl)
 CONFIGURE_ARGS+=	--enable-gsasl
 .  include "../../security/gsasl/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Midn)
+.  include "../../devel/libidn/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-libidn
+CONFIGURE_ARGS+=	--with-libidn-prefix=${BUILDLINK_PREFIX.libidn}
+.else
+CONFIGURE_ARGS+=	--without-libidn
 .endif
