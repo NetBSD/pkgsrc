@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2018/09/23 23:11:49 gdt Exp $
+@comment $NetBSD: PLIST,v 1.16 2018/11/20 18:16:15 gdt Exp $
 bin/pgsql2shp
 bin/raster2pgsql
 bin/shp2pgsql
@@ -74,7 +74,8 @@ share/postgresql/extension/postgis--2.4.2--${PKGVERSION}.sql
 share/postgresql/extension/postgis--2.4.3--${PKGVERSION}.sql
 share/postgresql/extension/postgis--2.4.4--${PKGVERSION}.sql
 share/postgresql/extension/postgis--2.4.5--${PKGVERSION}.sql
-share/postgresql/extension/postgis--2.5.0rc2--${PKGVERSION}.sql
+share/postgresql/extension/postgis--2.4.6--${PKGVERSION}.sql
+share/postgresql/extension/postgis--2.5.0--${PKGVERSION}.sql
 share/postgresql/extension/postgis--${PKGVERSION}--${PKGVERSION}next.sql
 share/postgresql/extension/postgis--${PKGVERSION}.sql
 share/postgresql/extension/postgis--${PKGVERSION}next--${PKGVERSION}.sql
@@ -121,7 +122,8 @@ share/postgresql/extension/postgis_tiger_geocoder--2.4.2--${PKGVERSION}.sql
 share/postgresql/extension/postgis_tiger_geocoder--2.4.3--${PKGVERSION}.sql
 share/postgresql/extension/postgis_tiger_geocoder--2.4.4--${PKGVERSION}.sql
 share/postgresql/extension/postgis_tiger_geocoder--2.4.5--${PKGVERSION}.sql
-share/postgresql/extension/postgis_tiger_geocoder--2.5.0rc2--${PKGVERSION}.sql
+share/postgresql/extension/postgis_tiger_geocoder--2.4.6--${PKGVERSION}.sql
+share/postgresql/extension/postgis_tiger_geocoder--2.5.0--${PKGVERSION}.sql
 share/postgresql/extension/postgis_tiger_geocoder--${PKGVERSION}--${PKGVERSION}next.sql
 share/postgresql/extension/postgis_tiger_geocoder--${PKGVERSION}.sql
 share/postgresql/extension/postgis_tiger_geocoder--${PKGVERSION}next--${PKGVERSION}.sql
@@ -168,7 +170,8 @@ share/postgresql/extension/postgis_topology--2.4.2--${PKGVERSION}.sql
 share/postgresql/extension/postgis_topology--2.4.3--${PKGVERSION}.sql
 share/postgresql/extension/postgis_topology--2.4.4--${PKGVERSION}.sql
 share/postgresql/extension/postgis_topology--2.4.5--${PKGVERSION}.sql
-share/postgresql/extension/postgis_topology--2.5.0rc2--${PKGVERSION}.sql
+share/postgresql/extension/postgis_topology--2.4.6--${PKGVERSION}.sql
+share/postgresql/extension/postgis_topology--2.5.0--${PKGVERSION}.sql
 share/postgresql/extension/postgis_topology--${PKGVERSION}--${PKGVERSION}next.sql
 share/postgresql/extension/postgis_topology--${PKGVERSION}.sql
 share/postgresql/extension/postgis_topology--${PKGVERSION}next--${PKGVERSION}.sql
