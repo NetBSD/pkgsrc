@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4772 2018/11/20 21:24:02 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4773 2018/11/20 21:26:44 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6683,3 +6683,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-djangocms-video to 2.1.0 [adam 2018-11-20]
 	Updated devel/py-test-localserver to 0.5.0 [adam 2018-11-20]
 	Updated www/py-django-admin-rangefilter to 0.3.9 [adam 2018-11-20]
+	Updated devel/gradle to 4.10.2 [schmonz 2018-11-20]
