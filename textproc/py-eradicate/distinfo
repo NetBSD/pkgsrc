@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/11/20 14:09:58 adam Exp $
+
+SHA1 (eradicate-0.2.1.tar.gz) = 92c106b801f88459f2edadc884cce1bc479c9374
+RMD160 (eradicate-0.2.1.tar.gz) = 0fd21cb6152ad6f8aee490640e40b38200131b98
+SHA512 (eradicate-0.2.1.tar.gz) = 726db51e1d5ecc89a256e2c28835c20e60f4f42cef55193ec8cd3323c06f00e7c1bc270517baebcd69a145bc189f392c96d60b4582f48aef10ece05582942167
+Size (eradicate-0.2.1.tar.gz) = 4357 bytes
