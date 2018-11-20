@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4768 2018/11/20 17:28:43 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4769 2018/11/20 17:34:46 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6667,3 +6667,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-djangocms-admin-style to 1.2.9 [adam 2018-11-20]
 	Updated www/py-django-cms to 3.5.3 [adam 2018-11-20]
 	Updated graphics/libwebp to 1.0.1 [adam 2018-11-20]
+	Added devel/lua-std-_debug version 1.0 [maya 2018-11-20]
+	Added devel/lua-std-normalize version 2.0.2 [maya 2018-11-20]
+	Added devel/lua-bitlib version 5.3.0 [maya 2018-11-20]
+	Updated devel/lua-posix to 34.0.4nb1 [maya 2018-11-20]
