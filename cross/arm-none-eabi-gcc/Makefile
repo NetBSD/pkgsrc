@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/10/23 12:02:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2018/11/20 21:24:58 maya Exp $
 
 DISTNAME=		gcc-8.2.0
 PKGNAME=		cross-arm-none-eabi-${DISTNAME}
@@ -51,14 +51,6 @@ CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 INFO_FILES=		yes
 
 PLIST_VARS+=		libcpp
-
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-# geattrtab on neon.md results in a very deeply nested expression
-# with > 255 brackets. This was reported against GCC 4.9.1 at least
-# already, but it seems noone cares enough in GCC to fix the generator.
-CFLAGS+=	-fbracket-depth=1024
-.endif
 
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin"
 PLIST.libcpp=	yes
