@@ -1,4 +1,4 @@
-# $NetBSD: transform-mipspro-cc,v 1.12 2018/08/22 20:48:37 maya Exp $
+# $NetBSD: transform-mipspro-cc,v 1.13 2018/11/20 09:21:23 maya Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -61,6 +61,7 @@ case $arg in
 -R*		) transform_to "-Wl,-rpath,${arg#-R}" ;;
 -Wl,-R*		) transform_to "-Wl,-rpath,${arg#-Wl,-R}" ;;
 
+-Wp,-MD,*      ) transform_to "-Wp,-MDupdate,${arg#-Wp,-MD,}" ;;
 # The MIPSpro compiler accepts these -W* directives, so just pass them
 # on through.
 -W[ablfpR]*,*	) transform_pass ;;
