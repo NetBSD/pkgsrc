@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2018/11/20 18:38:34 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/djangocms_attributes_field/__init__.py
+${PYSITELIB}/djangocms_attributes_field/__init__.pyc
+${PYSITELIB}/djangocms_attributes_field/__init__.pyo
+${PYSITELIB}/djangocms_attributes_field/fields.py
+${PYSITELIB}/djangocms_attributes_field/fields.pyc
+${PYSITELIB}/djangocms_attributes_field/fields.pyo
+${PYSITELIB}/djangocms_attributes_field/models.py
+${PYSITELIB}/djangocms_attributes_field/models.pyc
+${PYSITELIB}/djangocms_attributes_field/models.pyo
+${PYSITELIB}/djangocms_attributes_field/widgets.py
+${PYSITELIB}/djangocms_attributes_field/widgets.pyc
+${PYSITELIB}/djangocms_attributes_field/widgets.pyo
