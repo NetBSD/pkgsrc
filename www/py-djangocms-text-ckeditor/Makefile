@@ -1,22 +1,20 @@
-# $NetBSD: Makefile,v 1.8 2016/05/13 15:44:16 adam Exp $
+# $NetBSD: Makefile,v 1.9 2018/11/20 18:40:17 adam Exp $
 
-DISTNAME=	djangocms-text-ckeditor-2.9.3
+DISTNAME=	djangocms-text-ckeditor-3.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	${MASTER_SITE_GITHUB:=divio/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/djangocms-text-ckeditor/}
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	https://github.com/divio/djangocms-text-ckeditor/
+HOMEPAGE=	https://github.com/divio/djangocms-text-ckeditor
 COMMENT=	Text Plugin for django-cms with CK-Editor
 LICENSE=	modified-bsd
 
-GITHUB_PROJECT=	djangocms-text-ckeditor
-GITHUB_TAG=	${PKGVERSION_NOREV}
+DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
+DEPENDS+=	${PYPKGPREFIX}-django-cms>=3.3.0:../../www/py-django-cms
+DEPENDS+=	${PYPKGPREFIX}-html5lib>=0.999999999:../../textproc/py-html5lib
 
-DEPENDS+=	${PYPKGPREFIX}-django-cms-[0-9]*:../../www/py-django-cms
-
-EXTRACT_USING=		bsdtar
-USE_LANGUAGES=		# none
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
