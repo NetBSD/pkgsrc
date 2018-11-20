@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/03/25 21:04:04 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/11/20 18:47:52 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -11,6 +11,9 @@ ${PYSITELIB}/djangocms_picture/__init__.pyo
 ${PYSITELIB}/djangocms_picture/cms_plugins.py
 ${PYSITELIB}/djangocms_picture/cms_plugins.pyc
 ${PYSITELIB}/djangocms_picture/cms_plugins.pyo
+${PYSITELIB}/djangocms_picture/forms.py
+${PYSITELIB}/djangocms_picture/forms.pyc
+${PYSITELIB}/djangocms_picture/forms.pyo
 ${PYSITELIB}/djangocms_picture/locale/af/LC_MESSAGES/django.mo
 ${PYSITELIB}/djangocms_picture/locale/af/LC_MESSAGES/django.po
 ${PYSITELIB}/djangocms_picture/locale/ar/LC_MESSAGES/django.mo
@@ -165,19 +168,28 @@ ${PYSITELIB}/djangocms_picture/migrations/0001_initial.pyo
 ${PYSITELIB}/djangocms_picture/migrations/0002_auto_20151018_1927.py
 ${PYSITELIB}/djangocms_picture/migrations/0002_auto_20151018_1927.pyc
 ${PYSITELIB}/djangocms_picture/migrations/0002_auto_20151018_1927.pyo
+${PYSITELIB}/djangocms_picture/migrations/0003_migrate_to_filer.py
+${PYSITELIB}/djangocms_picture/migrations/0003_migrate_to_filer.pyc
+${PYSITELIB}/djangocms_picture/migrations/0003_migrate_to_filer.pyo
+${PYSITELIB}/djangocms_picture/migrations/0004_adapt_fields.py
+${PYSITELIB}/djangocms_picture/migrations/0004_adapt_fields.pyc
+${PYSITELIB}/djangocms_picture/migrations/0004_adapt_fields.pyo
+${PYSITELIB}/djangocms_picture/migrations/0005_reset_null_values.py
+${PYSITELIB}/djangocms_picture/migrations/0005_reset_null_values.pyc
+${PYSITELIB}/djangocms_picture/migrations/0005_reset_null_values.pyo
+${PYSITELIB}/djangocms_picture/migrations/0006_remove_null_values.py
+${PYSITELIB}/djangocms_picture/migrations/0006_remove_null_values.pyc
+${PYSITELIB}/djangocms_picture/migrations/0006_remove_null_values.pyo
+${PYSITELIB}/djangocms_picture/migrations/0007_fix_alignment.py
+${PYSITELIB}/djangocms_picture/migrations/0007_fix_alignment.pyc
+${PYSITELIB}/djangocms_picture/migrations/0007_fix_alignment.pyo
+${PYSITELIB}/djangocms_picture/migrations/0008_picture_use_responsive_image.py
+${PYSITELIB}/djangocms_picture/migrations/0008_picture_use_responsive_image.pyc
+${PYSITELIB}/djangocms_picture/migrations/0008_picture_use_responsive_image.pyo
 ${PYSITELIB}/djangocms_picture/migrations/__init__.py
 ${PYSITELIB}/djangocms_picture/migrations/__init__.pyc
 ${PYSITELIB}/djangocms_picture/migrations/__init__.pyo
 ${PYSITELIB}/djangocms_picture/models.py
 ${PYSITELIB}/djangocms_picture/models.pyc
 ${PYSITELIB}/djangocms_picture/models.pyo
-${PYSITELIB}/djangocms_picture/south_migrations/0001_initial.py
-${PYSITELIB}/djangocms_picture/south_migrations/0001_initial.pyc
-${PYSITELIB}/djangocms_picture/south_migrations/0001_initial.pyo
-${PYSITELIB}/djangocms_picture/south_migrations/0002_auto__add_field_picture_width__add_field_picture_height.py
-${PYSITELIB}/djangocms_picture/south_migrations/0002_auto__add_field_picture_width__add_field_picture_height.pyc
-${PYSITELIB}/djangocms_picture/south_migrations/0002_auto__add_field_picture_width__add_field_picture_height.pyo
-${PYSITELIB}/djangocms_picture/south_migrations/__init__.py
-${PYSITELIB}/djangocms_picture/south_migrations/__init__.pyc
-${PYSITELIB}/djangocms_picture/south_migrations/__init__.pyo
-${PYSITELIB}/djangocms_picture/templates/cms/plugins/picture.html
+${PYSITELIB}/djangocms_picture/templates/djangocms_picture/default/picture.html
