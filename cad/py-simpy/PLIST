@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2018/08/29 16:29:47 minskim Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/11/20 11:49:38 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -15,6 +15,9 @@ ${PYSITELIB}/simpy/core.pyo
 ${PYSITELIB}/simpy/events.py
 ${PYSITELIB}/simpy/events.pyc
 ${PYSITELIB}/simpy/events.pyo
+${PYSITELIB}/simpy/exceptions.py
+${PYSITELIB}/simpy/exceptions.pyc
+${PYSITELIB}/simpy/exceptions.pyo
 ${PYSITELIB}/simpy/resources/__init__.py
 ${PYSITELIB}/simpy/resources/__init__.pyc
 ${PYSITELIB}/simpy/resources/__init__.pyo
