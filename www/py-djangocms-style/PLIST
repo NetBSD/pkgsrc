@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/03/25 21:04:04 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/11/20 18:48:56 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -151,25 +151,25 @@ ${PYSITELIB}/djangocms_style/migrations/0001_initial.pyo
 ${PYSITELIB}/djangocms_style/migrations/0002_set_related_name_for_cmsplugin_ptr.py
 ${PYSITELIB}/djangocms_style/migrations/0002_set_related_name_for_cmsplugin_ptr.pyc
 ${PYSITELIB}/djangocms_style/migrations/0002_set_related_name_for_cmsplugin_ptr.pyo
+${PYSITELIB}/djangocms_style/migrations/0003_adapted_fields.py
+${PYSITELIB}/djangocms_style/migrations/0003_adapted_fields.pyc
+${PYSITELIB}/djangocms_style/migrations/0003_adapted_fields.pyo
+${PYSITELIB}/djangocms_style/migrations/0004_use_positive_small_integer_field.py
+${PYSITELIB}/djangocms_style/migrations/0004_use_positive_small_integer_field.pyc
+${PYSITELIB}/djangocms_style/migrations/0004_use_positive_small_integer_field.pyo
+${PYSITELIB}/djangocms_style/migrations/0005_reset_null_values.py
+${PYSITELIB}/djangocms_style/migrations/0005_reset_null_values.pyc
+${PYSITELIB}/djangocms_style/migrations/0005_reset_null_values.pyo
+${PYSITELIB}/djangocms_style/migrations/0006_removed_null_fields.py
+${PYSITELIB}/djangocms_style/migrations/0006_removed_null_fields.pyc
+${PYSITELIB}/djangocms_style/migrations/0006_removed_null_fields.pyo
+${PYSITELIB}/djangocms_style/migrations/0007_style_template.py
+${PYSITELIB}/djangocms_style/migrations/0007_style_template.pyc
+${PYSITELIB}/djangocms_style/migrations/0007_style_template.pyo
 ${PYSITELIB}/djangocms_style/migrations/__init__.py
 ${PYSITELIB}/djangocms_style/migrations/__init__.pyc
 ${PYSITELIB}/djangocms_style/migrations/__init__.pyo
 ${PYSITELIB}/djangocms_style/models.py
 ${PYSITELIB}/djangocms_style/models.pyc
 ${PYSITELIB}/djangocms_style/models.pyo
-${PYSITELIB}/djangocms_style/south_migrations/0001_initial.py
-${PYSITELIB}/djangocms_style/south_migrations/0001_initial.pyc
-${PYSITELIB}/djangocms_style/south_migrations/0001_initial.pyo
-${PYSITELIB}/djangocms_style/south_migrations/0002_auto__add_field_style_padding_left__add_field_style_padding_right__add.py
-${PYSITELIB}/djangocms_style/south_migrations/0002_auto__add_field_style_padding_left__add_field_style_padding_right__add.pyc
-${PYSITELIB}/djangocms_style/south_migrations/0002_auto__add_field_style_padding_left__add_field_style_padding_right__add.pyo
-${PYSITELIB}/djangocms_style/south_migrations/0003_auto__add_field_style_tag_type__add_field_style_additional_classes.py
-${PYSITELIB}/djangocms_style/south_migrations/0003_auto__add_field_style_tag_type__add_field_style_additional_classes.pyc
-${PYSITELIB}/djangocms_style/south_migrations/0003_auto__add_field_style_tag_type__add_field_style_additional_classes.pyo
-${PYSITELIB}/djangocms_style/south_migrations/0004_plugin_rename.py
-${PYSITELIB}/djangocms_style/south_migrations/0004_plugin_rename.pyc
-${PYSITELIB}/djangocms_style/south_migrations/0004_plugin_rename.pyo
-${PYSITELIB}/djangocms_style/south_migrations/__init__.py
-${PYSITELIB}/djangocms_style/south_migrations/__init__.pyc
-${PYSITELIB}/djangocms_style/south_migrations/__init__.pyo
-${PYSITELIB}/djangocms_style/templates/cms/plugins/style.html
+${PYSITELIB}/djangocms_style/templates/djangocms_style/default/style.html
