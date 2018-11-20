@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4764 2018/11/20 10:53:04 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4765 2018/11/20 11:53:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6658,3 +6658,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/p5-GraphicsMagick to 1.3.31 [adam 2018-11-20]
 	Updated databases/py-apsw to 3.25.2 [adam 2018-11-20]
 	Updated databases/py-multidict to 4.5.0 [adam 2018-11-20]
+	Updated cad/py-simpy to 3.0.11 [adam 2018-11-20]
+	Updated textproc/py-jsonref to 0.2 [adam 2018-11-20]
