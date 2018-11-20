@@ -1,17 +1,14 @@
-# $NetBSD: Makefile,v 1.1 2018/02/26 13:19:55 leot Exp $
+# $NetBSD: Makefile,v 1.2 2018/11/20 23:42:59 leot Exp $
 
-DISTNAME=	torsocks_2.2.0.orig
-PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
+DISTNAME=	torsocks-2.3.0
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/t/torsocks/}
+MASTER_SITES=	https://people.torproject.org/~dgoulet/torsocks/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gitweb.torproject.org/torsocks.git
 COMMENT=	Library to torify applications
 LICENSE=	gnu-gpl-v2
-
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
