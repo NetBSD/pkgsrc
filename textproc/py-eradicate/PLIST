@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2018/11/20 14:09:58 adam Exp $
+bin/eradicate-${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/eradicate.py
+${PYSITELIB}/eradicate.pyc
+${PYSITELIB}/eradicate.pyo
