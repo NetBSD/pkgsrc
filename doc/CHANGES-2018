@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4779 2018/11/21 17:21:38 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4780 2018/11/21 17:32:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6695,3 +6695,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/gnuplot to 5.2.5 [adam 2018-11-21]
 	Updated www/py-httpie to 1.0.0 [adam 2018-11-21]
 	Updated www/py-httplib2 to 0.12.0 [adam 2018-11-21]
+	Added devel/py-prompt_toolkit2 version 2.0.7 [adam 2018-11-21]
+	Updated devel/py-ipython to 7.1.1 [adam 2018-11-21]
