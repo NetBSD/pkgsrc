@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/10/16 15:21:20 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2018/11/21 07:15:22 maya Exp $
 
 DISTNAME=	mesa-18.2.0
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -90,6 +90,7 @@ INSTALLATION_DIRS+=	share/examples/MesaLib
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/src/util/drirc ${DESTDIR}${PREFIX}/share/examples/MesaLib
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
