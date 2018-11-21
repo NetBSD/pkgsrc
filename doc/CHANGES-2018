@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4778 2018/11/21 17:12:34 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4779 2018/11/21 17:21:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6693,3 +6693,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/cmake to 3.13.0 [adam 2018-11-21]
 	Updated devel/libcerf to 1.7 [adam 2018-11-21]
 	Updated graphics/gnuplot to 5.2.5 [adam 2018-11-21]
+	Updated www/py-httpie to 1.0.0 [adam 2018-11-21]
+	Updated www/py-httplib2 to 0.12.0 [adam 2018-11-21]
