@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4780 2018/11/21 17:32:10 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4781 2018/11/21 19:51:25 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6697,3 +6697,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-httplib2 to 0.12.0 [adam 2018-11-21]
 	Added devel/py-prompt_toolkit2 version 2.0.7 [adam 2018-11-21]
 	Updated devel/py-ipython to 7.1.1 [adam 2018-11-21]
+	Updated mail/qmail-acceptutils to 20181121 [schmonz 2018-11-21]
