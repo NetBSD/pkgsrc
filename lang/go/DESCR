@@ -1,0 +1,8 @@
+This is a meta package providing the latest release of the Go
+programming language that is available for the host system.
+
+The actual Go programming language is provided by packages such as
+lang/go111, lang/go110, etc.  This package merely allows users to
+install "go" instead of having to figure out the exact package name.
+
+No package should depend on this package directly.
