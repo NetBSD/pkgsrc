@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2018/10/29 11:54:11 leot Exp $
+@comment $NetBSD: PLIST,v 1.44 2018/11/21 20:36:42 leot Exp $
 bin/WebKitWebDriver
 include/webkitgtk-4.0/JavaScriptCore/JSBase.h
 include/webkitgtk-4.0/JavaScriptCore/JSContextRef.h
@@ -208,10 +208,10 @@ ${PLIST.introspection}lib/girepository-1.0/WebKit2-4.0.typelib
 ${PLIST.introspection}lib/girepository-1.0/WebKit2WebExtension-4.0.typelib
 lib/libjavascriptcoregtk-4.0.so
 lib/libjavascriptcoregtk-4.0.so.18
-lib/libjavascriptcoregtk-4.0.so.18.11.4
+lib/libjavascriptcoregtk-4.0.so.18.11.5
 lib/libwebkit2gtk-4.0.so
 lib/libwebkit2gtk-4.0.so.37
-lib/libwebkit2gtk-4.0.so.37.33.4
+lib/libwebkit2gtk-4.0.so.37.33.5
 lib/pkgconfig/javascriptcoregtk-4.0.pc
 lib/pkgconfig/webkit2gtk-4.0.pc
 lib/pkgconfig/webkit2gtk-web-extension-4.0.pc
