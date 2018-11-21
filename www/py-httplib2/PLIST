@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/04/02 13:03:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/11/21 17:21:17 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,6 +7,9 @@ ${PYSITELIB}/httplib2/__init__.py
 ${PYSITELIB}/httplib2/__init__.pyc
 ${PYSITELIB}/httplib2/__init__.pyo
 ${PYSITELIB}/httplib2/cacerts.txt
+${PYSITELIB}/httplib2/certs.py
+${PYSITELIB}/httplib2/certs.pyc
+${PYSITELIB}/httplib2/certs.pyo
 ${PYSITELIB}/httplib2/iri2uri.py
 ${PYSITELIB}/httplib2/iri2uri.pyc
 ${PYSITELIB}/httplib2/iri2uri.pyo
