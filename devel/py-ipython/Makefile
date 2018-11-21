@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2018/08/02 14:06:23 adam Exp $
+# $NetBSD: Makefile,v 1.31 2018/11/21 17:31:50 adam Exp $
 
-DISTNAME=	ipython-6.5.0
+DISTNAME=	ipython-7.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipython/}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-jedi>=0.10:../../editors/py-jedi
 DEPENDS+=	${PYPKGPREFIX}-pexpect-[0-9]*:../../devel/py-pexpect
 DEPENDS+=	${PYPKGPREFIX}-pickleshare-[0-9]*:../../databases/py-pickleshare
-DEPENDS+=	${PYPKGPREFIX}-prompt_toolkit>=1.0.15:../../devel/py-prompt_toolkit
+DEPENDS+=	${PYPKGPREFIX}-prompt_toolkit>=2.0.0:../../devel/py-prompt_toolkit2
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=18.5:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-simplegeneric>0.8:../../devel/py-simplegeneric
@@ -27,15 +27,16 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-.if "${PYPKGPREFIX}" == "py34"
+.if ${_PYTHON_VERSION} == 34
 DEPENDS+=	${PYPKGPREFIX}-typing-[0-9]*:../../devel/py-typing
 .endif
 
 post-install:
-	cd ${DESTDIR}${PREFIX} && ${RM} bin/iptest3 bin/ipython3 && \
-	${MV} bin/iptest bin/iptest${PYVERSSUFFIX} && \
-	${MV} bin/ipython bin/ipython${PYVERSSUFFIX} && \
-	${MV} ${PKGMANDIR}/man1/ipython.1 ${PKGMANDIR}/man1/ipython${PYVERSSUFFIX}.1 || ${TRUE}
+	cd ${DESTDIR}${PREFIX} && \
+	${RM} bin/iptest3 bin/ipython3 && \
+	${MV} bin/iptest bin/iptest-${PYVERSSUFFIX} && \
+	${MV} bin/ipython bin/ipython-${PYVERSSUFFIX} && \
+	${MV} ${PKGMANDIR}/man1/ipython.1 ${PKGMANDIR}/man1/ipython-${PYVERSSUFFIX}.1 || ${TRUE}
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
