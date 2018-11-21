@@ -1,12 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2018/05/02 07:29:16 adam Exp $
-bin/http
+@comment $NetBSD: PLIST,v 1.4 2018/11/21 17:18:04 adam Exp $
+bin/http-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/test.sh
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/httpie/__init__.py
 ${PYSITELIB}/httpie/__init__.pyc
