@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4782 2018/11/21 20:37:18 leot Exp $
+$NetBSD: CHANGES-2018,v 1.4783 2018/11/21 21:47:05 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6699,3 +6699,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-ipython to 7.1.1 [adam 2018-11-21]
 	Updated mail/qmail-acceptutils to 20181121 [schmonz 2018-11-21]
 	Updated www/webkit-gtk to 2.22.4 [leot 2018-11-21]
+	Updated net/mosh to 1.3.2 [leot 2018-11-21]
