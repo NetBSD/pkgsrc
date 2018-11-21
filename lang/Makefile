@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.499 2018/10/24 08:37:00 leot Exp $
+# $NetBSD: Makefile,v 1.500 2018/11/21 11:25:00 jperkin Exp $
 #
 
 COMMENT=	Programming languages
@@ -89,7 +89,7 @@ SUBDIR+=	ghc-bootstrap
 SUBDIR+=	ghc7
 SUBDIR+=	gnat_util
 SUBDIR+=	gnucobol
-#SUBDIR+=	go		# only contains Makefile fragments
+SUBDIR+=	go
 SUBDIR+=	go-hcl
 SUBDIR+=	go110
 SUBDIR+=	go111
