@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4777 2018/11/21 14:41:21 nia Exp $
+$NetBSD: CHANGES-2018,v 1.4778 2018/11/21 17:12:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6690,3 +6690,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-Unidecode to 1.0.23 [adam 2018-11-21]
 	Updated devel/py-dash to 4.7.4 [adam 2018-11-21]
 	Updated graphics/papirus-icon-theme to 20181120 [nia 2018-11-21]
+	Updated devel/cmake to 3.13.0 [adam 2018-11-21]
+	Updated devel/libcerf to 1.7 [adam 2018-11-21]
+	Updated graphics/gnuplot to 5.2.5 [adam 2018-11-21]
