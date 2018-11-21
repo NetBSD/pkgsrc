@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2018/07/07 11:59:05 adam Exp $
+# $NetBSD: options.mk,v 1.14 2018/11/21 17:12:06 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnuplot
 PKG_SUPPORTED_OPTIONS=	cairo cerf gd gnuplot-pdf-doc lua pdf qt4 qt5 wxwidgets x11
@@ -41,10 +41,10 @@ PLIST.gnuplot-pdf-doc=	yes
 BUILD_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 BUILD_DEPENDS+=	tex-ucs-[0-9]*:../../print/tex-ucs
 post-build:
-	(cd ${WRKSRC}/docs; ${GMAKE} gnuplot.pdf)
+	cd ${WRKSRC}/docs && ${GMAKE} gnuplot.pdf
 post-install:
-	(cd ${WRKSRC}/docs; \
-	${INSTALL_DATA} gnuplot.pdf ${DESTDIR}${PREFIX}/share/gnuplot/${API_VERSION})
+	cd ${WRKSRC}/docs && \
+	${INSTALL_DATA} gnuplot.pdf ${DESTDIR}${PREFIX}/share/gnuplot/${API_VERSION}
 .endif
 
 .if !empty(PKG_OPTIONS:Mx11)
