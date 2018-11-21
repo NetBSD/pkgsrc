@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.11 2018/08/02 14:06:23 adam Exp $
+$NetBSD: distinfo,v 1.12 2018/11/21 17:31:50 adam Exp $
 
-SHA1 (ipython-6.5.0.tar.gz) = b525bc4ac057fb8f5c36e255e7b49a8c7cd0e8d7
-RMD160 (ipython-6.5.0.tar.gz) = 00bca7a24732647ff65feee9c75849aaa827ba39
-SHA512 (ipython-6.5.0.tar.gz) = 88d2d5688c5caeca288520118c289397ac2225569108fad2139aedea66d44b50d1789ce2550f580624f1c1709422bf40e6c4a401f2afa29449f6785e7dcf1ec3
-Size (ipython-6.5.0.tar.gz) = 5084444 bytes
+SHA1 (ipython-7.1.1.tar.gz) = 6831d67857cabe2cbd720cab309d0c26aa234b83
+RMD160 (ipython-7.1.1.tar.gz) = 84345166ba00ee638d1fcc22c6d1a9aa5879bc0f
+SHA512 (ipython-7.1.1.tar.gz) = 180c799a65381aeae85b9efb29660b3f8e69e7b140b24794c92dca67ce6c480966eb2761f4fbf617da623f9232cbd2c03498cfee192d010d7e351ecf7ffde38c
+Size (ipython-7.1.1.tar.gz) = 5112249 bytes
 SHA1 (patch-setupbase.py) = 8cd647afb3f26f19f5b8d872af7835b73615b324

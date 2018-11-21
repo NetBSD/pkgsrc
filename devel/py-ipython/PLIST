@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.9 2017/12/13 08:58:03 adam Exp $
-bin/iptest${PYVERSSUFFIX}
-bin/ipython${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.10 2018/11/21 17:31:50 adam Exp $
+bin/iptest-${PYVERSSUFFIX}
+bin/ipython-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/IPython/__init__.py
 ${PYSITELIB}/IPython/__init__.pyc
@@ -23,6 +23,9 @@ ${PYSITELIB}/IPython/core/alias.pyo
 ${PYSITELIB}/IPython/core/application.py
 ${PYSITELIB}/IPython/core/application.pyc
 ${PYSITELIB}/IPython/core/application.pyo
+${PYSITELIB}/IPython/core/async_helpers.py
+${PYSITELIB}/IPython/core/async_helpers.pyc
+${PYSITELIB}/IPython/core/async_helpers.pyo
 ${PYSITELIB}/IPython/core/autocall.py
 ${PYSITELIB}/IPython/core/autocall.pyc
 ${PYSITELIB}/IPython/core/autocall.pyo
@@ -89,6 +92,9 @@ ${PYSITELIB}/IPython/core/inputsplitter.pyo
 ${PYSITELIB}/IPython/core/inputtransformer.py
 ${PYSITELIB}/IPython/core/inputtransformer.pyc
 ${PYSITELIB}/IPython/core/inputtransformer.pyo
+${PYSITELIB}/IPython/core/inputtransformer2.py
+${PYSITELIB}/IPython/core/inputtransformer2.pyc
+${PYSITELIB}/IPython/core/inputtransformer2.pyo
 ${PYSITELIB}/IPython/core/interactiveshell.py
 ${PYSITELIB}/IPython/core/interactiveshell.pyc
 ${PYSITELIB}/IPython/core/interactiveshell.pyo
@@ -221,6 +227,9 @@ ${PYSITELIB}/IPython/core/tests/test_alias.pyo
 ${PYSITELIB}/IPython/core/tests/test_application.py
 ${PYSITELIB}/IPython/core/tests/test_application.pyc
 ${PYSITELIB}/IPython/core/tests/test_application.pyo
+${PYSITELIB}/IPython/core/tests/test_async_helpers.py
+${PYSITELIB}/IPython/core/tests/test_async_helpers.pyc
+${PYSITELIB}/IPython/core/tests/test_async_helpers.pyo
 ${PYSITELIB}/IPython/core/tests/test_autocall.py
 ${PYSITELIB}/IPython/core/tests/test_autocall.pyc
 ${PYSITELIB}/IPython/core/tests/test_autocall.pyo
@@ -269,6 +278,12 @@ ${PYSITELIB}/IPython/core/tests/test_inputsplitter.pyo
 ${PYSITELIB}/IPython/core/tests/test_inputtransformer.py
 ${PYSITELIB}/IPython/core/tests/test_inputtransformer.pyc
 ${PYSITELIB}/IPython/core/tests/test_inputtransformer.pyo
+${PYSITELIB}/IPython/core/tests/test_inputtransformer2.py
+${PYSITELIB}/IPython/core/tests/test_inputtransformer2.pyc
+${PYSITELIB}/IPython/core/tests/test_inputtransformer2.pyo
+${PYSITELIB}/IPython/core/tests/test_inputtransformer2_line.py
+${PYSITELIB}/IPython/core/tests/test_inputtransformer2_line.pyc
+${PYSITELIB}/IPython/core/tests/test_inputtransformer2_line.pyo
 ${PYSITELIB}/IPython/core/tests/test_interactiveshell.py
 ${PYSITELIB}/IPython/core/tests/test_interactiveshell.pyc
 ${PYSITELIB}/IPython/core/tests/test_interactiveshell.pyo
@@ -615,6 +630,9 @@ ${PYSITELIB}/IPython/terminal/shortcuts.pyo
 ${PYSITELIB}/IPython/terminal/tests/__init__.py
 ${PYSITELIB}/IPython/terminal/tests/__init__.pyc
 ${PYSITELIB}/IPython/terminal/tests/__init__.pyo
+${PYSITELIB}/IPython/terminal/tests/test_debug_magic.py
+${PYSITELIB}/IPython/terminal/tests/test_debug_magic.pyc
+${PYSITELIB}/IPython/terminal/tests/test_debug_magic.pyo
 ${PYSITELIB}/IPython/terminal/tests/test_embed.py
 ${PYSITELIB}/IPython/terminal/tests/test_embed.pyc
 ${PYSITELIB}/IPython/terminal/tests/test_embed.pyo
@@ -877,9 +895,6 @@ ${PYSITELIB}/IPython/utils/text.pyo
 ${PYSITELIB}/IPython/utils/timing.py
 ${PYSITELIB}/IPython/utils/timing.pyc
 ${PYSITELIB}/IPython/utils/timing.pyo
-${PYSITELIB}/IPython/utils/tokenize2.py
-${PYSITELIB}/IPython/utils/tokenize2.pyc
-${PYSITELIB}/IPython/utils/tokenize2.pyo
 ${PYSITELIB}/IPython/utils/tokenutil.py
 ${PYSITELIB}/IPython/utils/tokenutil.pyc
 ${PYSITELIB}/IPython/utils/tokenutil.pyo
@@ -898,4 +913,4 @@ ${PYSITELIB}/IPython/utils/version.pyo
 ${PYSITELIB}/IPython/utils/wildcard.py
 ${PYSITELIB}/IPython/utils/wildcard.pyc
 ${PYSITELIB}/IPython/utils/wildcard.pyo
-man/man1/ipython${PYVERSSUFFIX}.1
+man/man1/ipython-${PYVERSSUFFIX}.1
