@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/11/20 21:24:58 maya Exp $
+# $NetBSD: Makefile,v 1.21 2018/11/21 00:16:04 ryoon Exp $
 
 DISTNAME=		gcc-8.2.0
 PKGNAME=		cross-arm-none-eabi-${DISTNAME}
@@ -52,6 +52,7 @@ INFO_FILES=		yes
 
 PLIST_VARS+=		libcpp
 
+.include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin"
 PLIST.libcpp=	yes
 .endif
