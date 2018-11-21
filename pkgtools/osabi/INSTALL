@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.4 2014/10/28 02:08:38 cheusov Exp $
+# $NetBSD: INSTALL,v 1.5 2018/11/21 14:15:32 jmcneill Exp $
 
 UNAME="@UNAME@"
 PKG_ADMIN="@PKG_ADMIN@"
@@ -38,6 +38,7 @@ PRE-INSTALL)
 
 	if ${TEST} "${OS_VERSION}" != "${PKG_VERSION}" ;then 
 		echo "The Operating System version (${OS_VERSION}) does not match ${PKG_VERSION}"
+		echo "To force installation of this package, add CHECK_OSABI=no to pkg_install.conf"
 		exit 1
 	fi
 	;;
