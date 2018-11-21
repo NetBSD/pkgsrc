@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4775 2018/11/21 10:39:11 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4776 2018/11/21 11:02:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6687,3 +6687,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/torsocks to 2.3.0 [leot 2018-11-20]
 	Updated security/py-cryptography_vectors to 2.4.2 [adam 2018-11-21]
 	Updated security/py-cryptography to 2.4.2 [adam 2018-11-21]
+	Updated textproc/py-Unidecode to 1.0.23 [adam 2018-11-21]
+	Updated devel/py-dash to 4.7.4 [adam 2018-11-21]
