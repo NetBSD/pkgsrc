@@ -1,1 +1,1 @@
-bin/unidecode @PREFIX@/bin/unidecode@PYVERSSUFFIX@
+bin/unidecode @PREFIX@/bin/unidecode-@PYVERSSUFFIX@
