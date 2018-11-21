@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4774 2018/11/20 23:43:13 leot Exp $
+$NetBSD: CHANGES-2018,v 1.4775 2018/11/21 10:39:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6685,3 +6685,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-django-admin-rangefilter to 0.3.9 [adam 2018-11-20]
 	Updated devel/gradle to 4.10.2 [schmonz 2018-11-20]
 	Updated net/torsocks to 2.3.0 [leot 2018-11-20]
+	Updated security/py-cryptography_vectors to 2.4.2 [adam 2018-11-21]
+	Updated security/py-cryptography to 2.4.2 [adam 2018-11-21]
