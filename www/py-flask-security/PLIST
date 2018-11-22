@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/08/05 17:54:13 kleink Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/11/22 03:16:18 markd Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -8,9 +8,15 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/flask_security/__init__.py
 ${PYSITELIB}/flask_security/__init__.pyc
 ${PYSITELIB}/flask_security/__init__.pyo
+${PYSITELIB}/flask_security/babel.py
+${PYSITELIB}/flask_security/babel.pyc
+${PYSITELIB}/flask_security/babel.pyo
 ${PYSITELIB}/flask_security/changeable.py
 ${PYSITELIB}/flask_security/changeable.pyc
 ${PYSITELIB}/flask_security/changeable.pyo
+${PYSITELIB}/flask_security/cli.py
+${PYSITELIB}/flask_security/cli.pyc
+${PYSITELIB}/flask_security/cli.pyo
 ${PYSITELIB}/flask_security/confirmable.py
 ${PYSITELIB}/flask_security/confirmable.pyc
 ${PYSITELIB}/flask_security/confirmable.pyo
@@ -63,6 +69,16 @@ ${PYSITELIB}/flask_security/templates/security/register_user.html
 ${PYSITELIB}/flask_security/templates/security/reset_password.html
 ${PYSITELIB}/flask_security/templates/security/send_confirmation.html
 ${PYSITELIB}/flask_security/templates/security/send_login.html
+${PYSITELIB}/flask_security/translations/da_DK/LC_MESSAGES/flask_security.mo
+${PYSITELIB}/flask_security/translations/da_DK/LC_MESSAGES/flask_security.po
+${PYSITELIB}/flask_security/translations/de_DE/LC_MESSAGES/flask_security.mo
+${PYSITELIB}/flask_security/translations/de_DE/LC_MESSAGES/flask_security.po
+${PYSITELIB}/flask_security/translations/flask_security.pot
+${PYSITELIB}/flask_security/translations/fr_FR/LC_MESSAGES/flask_security.mo
+${PYSITELIB}/flask_security/translations/fr_FR/LC_MESSAGES/flask_security.po
+${PYSITELIB}/flask_security/translations/nl_NL/LC_MESSAGES/messages.po
+${PYSITELIB}/flask_security/translations/ru_RU/LC_MESSAGES/flask_security.mo
+${PYSITELIB}/flask_security/translations/ru_RU/LC_MESSAGES/flask_security.po
 ${PYSITELIB}/flask_security/utils.py
 ${PYSITELIB}/flask_security/utils.pyc
 ${PYSITELIB}/flask_security/utils.pyo
