@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18618 2018/11/21 21:47:05 leot Exp $
+$NetBSD: TODO,v 1.18619 2018/11/22 11:28:13 adam Exp $
 
 Suggested new packages
 ======================
@@ -1087,7 +1087,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o muse-0.9.2
 	o musicpd-0.21.3
 	o myodbc-5.3.4
-	o mysql-server-5.5.62
 	o mysql-server-5.6.42
 	o mysql-server-5.7.24
 	o mysql-server-8.0.13
