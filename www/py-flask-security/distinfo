@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2016/01/08 17:52:33 kleink Exp $
+$NetBSD: distinfo,v 1.10 2018/11/22 03:16:18 markd Exp $
 
-SHA1 (Flask-Security-1.7.5.tar.gz) = 7962f133fa471e9c6b9e7af9cdead4407eb1ba57
-RMD160 (Flask-Security-1.7.5.tar.gz) = 8fe419bfc63c0f86adaadc012677e6fdf3b5d633
-SHA512 (Flask-Security-1.7.5.tar.gz) = 41fd806d35746bdc212aa4ab01af678d39765a6d4df42cd19c87b8a2060374112d3e8a5f2fc243e88906505d6a942b9a824cf19a29b2c0eebacde9299534ffc9
-Size (Flask-Security-1.7.5.tar.gz) = 42261 bytes
+SHA1 (Flask-Security-3.0.0.tar.gz) = 6a2b9bc23c24d728b8d2d5b8aabb0c9feb45615c
+RMD160 (Flask-Security-3.0.0.tar.gz) = 2bc3bed86bf177df6c26a4233b86d60e33d0f265
+SHA512 (Flask-Security-3.0.0.tar.gz) = 09b94f0850372513add5c054c07aa465ecb95e8d1c414647e3ebee571ec08c94a29f0c138d092c02a55e242c422bc53f929ca066d671c082dcb29834ac753984
+Size (Flask-Security-3.0.0.tar.gz) = 160367 bytes
