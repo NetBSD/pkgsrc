@@ -1,9 +1,9 @@
-$NetBSD: patch-sql_CMakeLists.txt,v 1.1 2016/09/16 06:49:11 adam Exp $
+$NetBSD: patch-sql_CMakeLists.txt,v 1.2 2018/11/22 16:14:53 adam Exp $
 
---- sql/CMakeLists.txt.orig	2016-07-12 11:55:26.000000000 +0000
+--- sql/CMakeLists.txt.orig	2018-10-04 05:48:22.000000000 +0000
 +++ sql/CMakeLists.txt
-@@ -24,6 +24,8 @@ INCLUDE_DIRECTORIES(
-   ${ZLIB_INCLUDE_DIR}
+@@ -23,6 +23,8 @@ INCLUDE_DIRECTORIES(
+   ${CMAKE_SOURCE_DIR}/regex 
    ${SSL_INCLUDE_DIRS}
    ${CMAKE_BINARY_DIR}/sql
 +  ${CMAKE_BINARY_DIR}/include
