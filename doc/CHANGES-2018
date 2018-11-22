@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4790 2018/11/22 12:40:52 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.4791 2018/11/22 12:59:37 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6709,3 +6709,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/mysql56-client to 5.6.42 [adam 2018-11-22]
 	Updated databases/mysql56-server to 5.6.42 [adam 2018-11-22]
 	Updated www/php-nextcloud to 14.0.3 [ryoon 2018-11-22]
+	Updated graphics/babl to 0.1.60 [ryoon 2018-11-22]
