@@ -1,12 +1,12 @@
-$NetBSD: patch-extensions_gggl.c,v 1.1 2018/05/01 20:26:38 martin Exp $
+$NetBSD: patch-extensions_gggl.c,v 1.2 2018/11/22 12:59:07 ryoon Exp $
 
 Patch also submitted upstream:
 	https://bugzilla.gnome.org/show_bug.cgi?id=795726
 
 Fixes crashes on alignment critical architectures.
 
---- extensions/gggl.c.orig	2018-04-07 16:38:23.000000000 +0200
-+++ extensions/gggl.c	2018-05-01 22:09:47.319795395 +0200
+--- extensions/gggl.c.orig	2018-10-22 16:57:44.000000000 +0000
++++ extensions/gggl.c
 @@ -56,12 +56,15 @@ conv_F_8 (const Babl *conversion,unsigne
  
    while (n--)
@@ -127,28 +127,28 @@ Fixes crashes on alignment critical architectures.
        dst           += 4;
        src           += 8;
      }
-@@ -178,7 +202,9 @@ conv_16_8 (const Babl *conversion,unsign
+@@ -189,7 +213,9 @@ conv_16_8 (const Babl *conversion,unsign
+ 
    while (n--)
      {
- #define div_257(a) ((((a)+128)-(((a)+128)>>8))>>8)
 -      (*(unsigned char *) dst) = div_257 (*(unsigned short *) src);
 +      unsigned short sv;
 +      memcpy(&sv, src, sizeof(sv));
 +      *dst = div_257 (sv);
-       dst                     += 1;
-       src                     += 2;
+       dst += 1;
+       src += 2;
      }
-@@ -191,7 +217,8 @@ conv_8_16 (const Babl *conversion,unsign
- 
+@@ -201,7 +227,8 @@ conv_8_16 (const Babl *conversion,unsign
+   long n = samples;
    while (n--)
      {
--      (*(unsigned short *) dst) = ((*(unsigned char *) src) << 8) | *src;
+-      (*(unsigned short *) dst) = *src << 8 | *src;
 +      unsigned short dv = (*src << 8) | *src;
 +      memcpy(dst, &dv, sizeof(dv));
-       dst                      += 2;
-       src                      += 1;
+       dst += 2;
+       src += 1;
      }
-@@ -353,12 +380,14 @@ conv_gaF_gAF (const Babl *conversion,uns
+@@ -363,12 +390,14 @@ conv_gaF_gAF (const Babl *conversion,uns
  
    while (n--)
      {
@@ -167,7 +167,7 @@ Fixes crashes on alignment critical architectures.
        dst           += 4;
        src           += 4;
      }
-@@ -371,15 +400,19 @@ conv_gAF_gaF (const Babl *conversion,uns
+@@ -381,15 +410,19 @@ conv_gAF_gaF (const Babl *conversion,uns
  
    while (n--)
      {
@@ -192,7 +192,7 @@ Fixes crashes on alignment critical architectures.
        dst           += 4;
        src           += 4;
      }
-@@ -394,16 +427,9 @@ conv_rgbaF_rgbF (const Babl *conversion,
+@@ -404,16 +437,9 @@ conv_rgbaF_rgbF (const Babl *conversion,
  
    while (n--)
      {
@@ -212,7 +212,7 @@ Fixes crashes on alignment critical architectures.
      }
  }
  
-@@ -411,15 +437,12 @@ static void
+@@ -421,15 +447,12 @@ static void
  conv_rgbF_rgbaF (const Babl *conversion,unsigned char *src, unsigned char *dst, long samples)
  {
    long n = samples;
@@ -231,7 +231,7 @@ Fixes crashes on alignment critical architectures.
      }
  }
  
-@@ -433,7 +456,7 @@ conv_gaF_gF (const Babl *conversion,unsi
+@@ -443,7 +466,7 @@ conv_gaF_gF (const Babl *conversion,unsi
  
    while (n--)
      {
@@ -240,7 +240,7 @@ Fixes crashes on alignment critical architectures.
        dst         += 4;
        src         += 4;
        src         += 4;
-@@ -444,13 +467,14 @@ static void
+@@ -454,13 +477,14 @@ static void
  conv_gF_gaF (const Babl *conversion,unsigned char *src, unsigned char *dst, long samples)
  {
    long n = samples;
@@ -257,7 +257,7 @@ Fixes crashes on alignment critical architectures.
        dst           += 4;
      }
  }
-@@ -472,7 +496,7 @@ conv_gF_rgbF (const Babl *conversion,uns
+@@ -482,7 +506,7 @@ conv_gF_rgbF (const Babl *conversion,uns
  
        for (c = 0; c < 3; c++)
          {
@@ -266,7 +266,7 @@ Fixes crashes on alignment critical architectures.
            dst             += 4;
          }
        src += 4;
-@@ -521,11 +545,11 @@ conv_gaF_rgbaF (const Babl *conversion,u
+@@ -531,11 +555,11 @@ conv_gaF_rgbaF (const Babl *conversion,u
  
        for (c = 0; c < 3; c++)
          {
@@ -280,7 +280,7 @@ Fixes crashes on alignment critical architectures.
        dst           += 4;
        src           += 4;
      }
-@@ -543,16 +567,20 @@ conv_rgbaF_rgbA8 (const Babl *conversion
+@@ -553,16 +577,20 @@ conv_rgbaF_rgbA8 (const Babl *conversion
  
    while (n--)
      {
@@ -304,7 +304,7 @@ Fixes crashes on alignment critical architectures.
        dst++;
        src += 4;
      }
-@@ -569,12 +597,17 @@ conv_rgbaF_rgb16 (const Babl *conversion
+@@ -579,12 +607,17 @@ conv_rgbaF_rgb16 (const Babl *conversion
  
        for (c = 0; c < 3; c++)
          {
@@ -327,7 +327,7 @@ Fixes crashes on alignment critical architectures.
            dst                    += 2;
            src                    += 4;
          }
-@@ -589,10 +622,14 @@ conv_rgbA16_rgbaF (const Babl *conversio
+@@ -599,10 +632,14 @@ conv_rgbA16_rgbaF (const Babl *conversio
  
    while (n--)
      {
@@ -343,7 +343,7 @@ Fixes crashes on alignment critical architectures.
        if (alpha == 0.0f)
          recip_alpha = 10000.0;
        else
-@@ -600,11 +637,15 @@ conv_rgbA16_rgbaF (const Babl *conversio
+@@ -610,11 +647,15 @@ conv_rgbA16_rgbaF (const Babl *conversio
  
        for (c = 0; c < 3; c++)
          {
@@ -361,7 +361,7 @@ Fixes crashes on alignment critical architectures.
        dst           += 4;
        src           += 2;
      }
-@@ -614,16 +655,13 @@ static void
+@@ -624,16 +665,13 @@ static void
  conv_gF_rgbaF (const Babl *conversion,unsigned char *src, unsigned char *dst, long samples)
  {
    long n = samples;
@@ -382,7 +382,7 @@ Fixes crashes on alignment critical architectures.
        dst           += 4;
        src           += 4;
      }
-@@ -638,15 +676,18 @@ conv_gF_rgbaF (const Babl *conversion,un
+@@ -648,15 +686,18 @@ conv_gF_rgbaF (const Babl *conversion,un
                   int samples)
     {
      long n=samples;
@@ -403,7 +403,7 @@ Fixes crashes on alignment critical architectures.
          dst += 4;
      }
     }
-@@ -657,15 +698,18 @@ conv_gF_rgbaF (const Babl *conversion,un
+@@ -667,15 +708,18 @@ conv_gF_rgbaF (const Babl *conversion,un
                 int samples)
     {
      long n=samples;
@@ -424,7 +424,7 @@ Fixes crashes on alignment critical architectures.
          dst += 4;
      }
     }
-@@ -676,15 +720,21 @@ conv_gF_rgbaF (const Babl *conversion,un
+@@ -686,15 +730,21 @@ conv_gF_rgbaF (const Babl *conversion,un
                    int samples)
     {
      long n=samples;
@@ -448,7 +448,7 @@ Fixes crashes on alignment critical architectures.
          src += 2;
          dst += 4;
      }
-@@ -696,14 +746,12 @@ conv_gF_rgbaF (const Babl *conversion,un
+@@ -706,14 +756,12 @@ conv_gF_rgbaF (const Babl *conversion,un
                 int samples)
     {
      long n=samples;
@@ -468,7 +468,7 @@ Fixes crashes on alignment critical architectures.
          dst += 4;
          src += 4;
  
-@@ -719,11 +767,12 @@ conv_rgba8_rgbA8 (const Babl *conversion
+@@ -729,11 +777,12 @@ conv_rgba8_rgbA8 (const Babl *conversion
      {
        if (src[3] == 255)
          {
@@ -483,7 +483,7 @@ Fixes crashes on alignment critical architectures.
          }
        else
          {
-@@ -747,12 +796,13 @@ conv_rgbA8_rgba8 (const Babl *conversion
+@@ -757,12 +806,13 @@ conv_rgbA8_rgba8 (const Babl *conversion
      {
        if (src[3] == 255)
          {
@@ -499,7 +499,7 @@ Fixes crashes on alignment critical architectures.
            dst                  += 4;
          }
        else
-@@ -773,7 +823,10 @@ conv_rgb8_rgba8 (const Babl *conversion,
+@@ -786,7 +836,10 @@ conv_rgb8_rgba8 (const Babl *conversion,
    long n = samples-1;
    while (n--)
      {
