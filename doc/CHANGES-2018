@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4793 2018/11/22 13:03:01 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.4794 2018/11/22 13:09:11 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6712,3 +6712,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/babl to 0.1.60 [ryoon 2018-11-22]
 	Updated graphics/gegl to 0.4.12 [ryoon 2018-11-22]
 	Updated graphics/gimp to 2.10.8 [ryoon 2018-11-22]
+	Added security/acmesh version 2.7.9 [ryoon 2018-11-22]
