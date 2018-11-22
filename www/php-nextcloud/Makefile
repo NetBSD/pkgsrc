@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2018/08/22 09:47:57 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2018/11/22 12:28:11 ryoon Exp $
 #
 
-DISTNAME=	nextcloud-13.0.5
+DISTNAME=	nextcloud-14.0.3
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://download.nextcloud.com/server/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -22,6 +21,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.4.0:../../archivers/php-zlib
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=5.4.0:../../databases/php-pdo
 DEPENDS+=	${PHP_PKG_PREFIX}-posix>=5.4.0:../../devel/php-posix
 DEPENDS+=	${PHP_PKG_PREFIX}-curl>=5.4.0:../../www/php-curl
+DEPENDS+=	${PHP_PKG_PREFIX}-intl>=5.4.0:../../textproc/php-intl
 
 .include "options.mk"
 
