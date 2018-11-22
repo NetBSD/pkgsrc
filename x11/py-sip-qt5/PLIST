@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2018/11/22 02:30:53 markd Exp $
+${PYSITELIB}/PyQt5/sip.pyi
+${PYSITELIB}/PyQt5/sip.so
+${PYSITELIB}/PyQt5_sip-${PKGVERSION}.dist-info/INSTALLER
+${PYSITELIB}/PyQt5_sip-${PKGVERSION}.dist-info/METADATA
+${PYSITELIB}/PyQt5_sip-${PKGVERSION}.dist-info/RECORD
