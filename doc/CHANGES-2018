@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4796 2018/11/22 16:17:04 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4797 2018/11/22 18:15:47 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6716,3 +6716,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/adobe-flash-player to 31.0.0.153 [tsutsui 2018-11-22]
 	Updated databases/mysql57-client to 5.7.24 [adam 2018-11-22]
 	Updated databases/mysql57-server to 5.7.24 [adam 2018-11-22]
+	Updated net/youtube-dl to 20181123 [leot 2018-11-22]
