@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.63 2018/09/30 16:14:55 minskim Exp $
+@comment $NetBSD: PLIST,v 1.64 2018/11/22 13:02:21 ryoon Exp $
 bin/gimp
 bin/gimp-2.10
 bin/gimp-console
@@ -1040,6 +1040,7 @@ share/gimp/2.0/icons/Color/scalable/apps/gimp-line-spacing.svg
 share/gimp/2.0/icons/Color/scalable/apps/gimp-linked.svg
 share/gimp/2.0/icons/Color/scalable/apps/gimp-list.svg
 share/gimp/2.0/icons/Color/scalable/apps/gimp-menu-left.svg
+share/gimp/2.0/icons/Color/scalable/apps/gimp-marker.svg
 share/gimp/2.0/icons/Color/scalable/apps/gimp-menu-right.svg
 share/gimp/2.0/icons/Color/scalable/apps/gimp-merge-down.svg
 share/gimp/2.0/icons/Color/scalable/apps/gimp-move-to-screen.svg
@@ -1225,6 +1226,7 @@ share/gimp/2.0/icons/Color/scalable/apps/media-floppy.svg
 share/gimp/2.0/icons/Color/scalable/apps/media-optical.svg
 share/gimp/2.0/icons/Color/scalable/apps/media-playback-pause.svg
 share/gimp/2.0/icons/Color/scalable/apps/media-playback-start.svg
+share/gimp/2.0/icons/Color/scalable/apps/media-record.svg
 share/gimp/2.0/icons/Color/scalable/apps/media-seek-backward.svg
 share/gimp/2.0/icons/Color/scalable/apps/media-skip-backward.svg
 share/gimp/2.0/icons/Color/scalable/apps/media-skip-forward.svg
@@ -1987,6 +1989,7 @@ share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-letter-spacing.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-line-spacing.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-linked.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-list.svg
+share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-marker.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-menu-left.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-menu-right.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-merge-down.svg
@@ -2170,6 +2173,7 @@ share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/help-about.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/list-add.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/list-remove.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/media-floppy.svg
+share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/media-record.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/media-optical.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/media-playback-pause.svg
 share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/media-playback-start.svg
@@ -2488,6 +2492,7 @@ share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-letter-spacing.svg
 share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-line-spacing.svg
 share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-linked.svg
 share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-list.svg
+share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-marker.svg
 share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-menu-left.svg
 share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-menu-right.svg
 share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-merge-down.svg
@@ -2674,6 +2679,7 @@ share/gimp/2.0/icons/Symbolic/scalable/apps/media-floppy.svg
 share/gimp/2.0/icons/Symbolic/scalable/apps/media-optical.svg
 share/gimp/2.0/icons/Symbolic/scalable/apps/media-playback-pause.svg
 share/gimp/2.0/icons/Symbolic/scalable/apps/media-playback-start.svg
+share/gimp/2.0/icons/Symbolic/scalable/apps/media-record.svg
 share/gimp/2.0/icons/Symbolic/scalable/apps/media-seek-backward.svg
 share/gimp/2.0/icons/Symbolic/scalable/apps/media-skip-backward.svg
 share/gimp/2.0/icons/Symbolic/scalable/apps/media-skip-forward.svg
@@ -3721,6 +3727,7 @@ share/gtk-doc/html/libgimpwidgets/gimp-letter-spacing.png
 share/gtk-doc/html/libgimpwidgets/gimp-line-spacing.png
 share/gtk-doc/html/libgimpwidgets/gimp-linked.png
 share/gtk-doc/html/libgimpwidgets/gimp-list.png
+share/gtk-doc/html/libgimpwidgets/gimp-marker.png
 share/gtk-doc/html/libgimpwidgets/gimp-menu-left.png
 share/gtk-doc/html/libgimpwidgets/gimp-menu-right.png
 share/gtk-doc/html/libgimpwidgets/gimp-merge-down.png
@@ -4355,4 +4362,3 @@ share/locale/zh_TW/LC_MESSAGES/gimp20-tips.mo
 share/locale/zh_TW/LC_MESSAGES/gimp20.mo
 share/metainfo/gimp-data-extras.metainfo.xml
 share/metainfo/org.gimp.GIMP.appdata.xml
-@pkgdir share/gimp/2.0/fonts
