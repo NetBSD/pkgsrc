@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2017/11/19 16:31:04 he Exp $
+@comment $NetBSD: PLIST,v 1.25.8.1 2018/11/22 05:50:52 spz Exp $
 bin/fax2ps
 bin/fax2tiff
 bin/pal2rgb
@@ -90,8 +90,7 @@ man/man3/TIFFtile.3
 man/man3/libtiff.3
 share/doc/tiff/COPYRIGHT
 share/doc/tiff/ChangeLog
-share/doc/tiff/README
-share/doc/tiff/README.vms
+share/doc/tiff/README.md
 share/doc/tiff/RELEASE-DATE
 share/doc/tiff/TODO
 share/doc/tiff/VERSION
@@ -226,6 +225,7 @@ share/doc/tiff/html/v3.9.1.html
 share/doc/tiff/html/v3.9.2.html
 share/doc/tiff/html/v4.0.0.html
 share/doc/tiff/html/v4.0.1.html
+share/doc/tiff/html/v${PKGVERSION}.html
 share/doc/tiff/html/v4.0.2.html
 share/doc/tiff/html/v4.0.3.html
 share/doc/tiff/html/v4.0.4.html
@@ -234,4 +234,4 @@ share/doc/tiff/html/v4.0.5.html
 share/doc/tiff/html/v4.0.6.html
 share/doc/tiff/html/v4.0.7.html
 share/doc/tiff/html/v4.0.8.html
-share/doc/tiff/html/v${PKGVERSION}.html
+share/doc/tiff/html/v4.0.9.html
