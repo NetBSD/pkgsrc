@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4792 2018/11/22 13:01:51 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.4793 2018/11/22 13:03:01 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6711,3 +6711,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/php-nextcloud to 14.0.3 [ryoon 2018-11-22]
 	Updated graphics/babl to 0.1.60 [ryoon 2018-11-22]
 	Updated graphics/gegl to 0.4.12 [ryoon 2018-11-22]
+	Updated graphics/gimp to 2.10.8 [ryoon 2018-11-22]
