@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/07/31 09:51:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/11/22 11:53:33 adam Exp $
 bin/msql2mysql
 bin/mysql
 bin/mysql_client_test
@@ -116,11 +116,8 @@ man/man1/myisam_ftdump.1
 man/man1/myisamchk.1
 man/man1/myisamlog.1
 man/man1/myisampack.1
-man/man1/mysql-stress-test.pl.1
-man/man1/mysql-test-run.pl.1
 man/man1/mysql.1
 man/man1/mysql.server.1
-man/man1/mysql_client_test.1
 man/man1/mysql_client_test_embedded.1
 man/man1/mysql_config.1
 man/man1/mysql_config_editor.1
@@ -149,7 +146,6 @@ man/man1/mysqlimport.1
 man/man1/mysqlman.1
 man/man1/mysqlshow.1
 man/man1/mysqlslap.1
-man/man1/mysqltest.1
 man/man1/mysqltest_embedded.1
 man/man1/perror.1
 man/man1/replace.1
