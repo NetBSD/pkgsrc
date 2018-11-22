@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2018/08/22 09:43:12 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2018/11/22 16:14:53 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
-PKGREVISION=	1
 COMMENT=	MySQL 5, a free SQL database (server)
 
 CONFLICTS=	mysql3-server-[0-9]*
@@ -77,6 +76,7 @@ SUBST_FILES.perlpath+=	scripts/mysqldumpslow.sh
 SUBST_SED.perlpath=	-e 's,@PERL_PATH@,${PERL5},g'
 
 INSTALLATION_DIRS+=	bin
+TEST_TARGET=		test
 
 .include "../../mk/compiler.mk"
 
