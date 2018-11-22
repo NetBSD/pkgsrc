@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/11/16 13:02:46 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4 2018/11/22 15:06:09 nia Exp $
 #
 
 DISTNAME=		enchant-2.2.3
@@ -24,6 +24,12 @@ CFLAGS.SunOS+=		-D__EXTENSIONS__
 INSTALLATION_DIRS+=	share/examples
 MAKE_DIRS+=		${PREFIX}/share/enchant
 CONF_FILES=		${PREFIX}/share/examples/enchant.ordering ${PREFIX}/share/enchant/enchant.ordering
+
+# unsupported in pkgsrc - other dictionaries can be used instead
+# avoid PLIST problems
+CONFIGURE_ARGS+=	--without-hspell
+CONFIGURE_ARGS+=	--without-uspell
+CONFIGURE_ARGS+=	--without-voikko
 
 # XXX: needs unittest-cpp as a test dependency
 #TEST_TARGET=		check
