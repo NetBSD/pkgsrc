@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4795 2018/11/22 16:10:03 tsutsui Exp $
+$NetBSD: CHANGES-2018,v 1.4796 2018/11/22 16:17:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6714,3 +6714,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/gimp to 2.10.8 [ryoon 2018-11-22]
 	Added security/acmesh version 2.7.9 [ryoon 2018-11-22]
 	Updated multimedia/adobe-flash-player to 31.0.0.153 [tsutsui 2018-11-22]
+	Updated databases/mysql57-client to 5.7.24 [adam 2018-11-22]
+	Updated databases/mysql57-server to 5.7.24 [adam 2018-11-22]
