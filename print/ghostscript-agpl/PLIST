@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2018/09/05 13:19:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2018/11/22 01:12:43 leot Exp $
 bin/dvipdf
 bin/eps2eps
 bin/gs
@@ -70,7 +70,6 @@ man/man1/ps2pdfwr.1
 man/man1/ps2ps.1
 share/doc/ghostscript/${PKGVERSION}/API.htm
 share/doc/ghostscript/${PKGVERSION}/C-style.htm
-share/doc/ghostscript/${PKGVERSION}/COPYING
 share/doc/ghostscript/${PKGVERSION}/Commprod.htm
 share/doc/ghostscript/${PKGVERSION}/DLL.htm
 share/doc/ghostscript/${PKGVERSION}/Deprecated.htm
@@ -79,7 +78,6 @@ share/doc/ghostscript/${PKGVERSION}/Devices.htm
 share/doc/ghostscript/${PKGVERSION}/Drivers.htm
 share/doc/ghostscript/${PKGVERSION}/Fonts.htm
 share/doc/ghostscript/${PKGVERSION}/GS9_Color_Management.pdf
-share/doc/ghostscript/${PKGVERSION}/GS9_Color_Management.tex
 share/doc/ghostscript/${PKGVERSION}/History9.htm
 share/doc/ghostscript/${PKGVERSION}/Install.htm
 share/doc/ghostscript/${PKGVERSION}/Language.htm
@@ -98,11 +96,17 @@ share/doc/ghostscript/${PKGVERSION}/Use.htm
 share/doc/ghostscript/${PKGVERSION}/VectorDevices.htm
 share/doc/ghostscript/${PKGVERSION}/WhatIsGS.htm
 share/doc/ghostscript/${PKGVERSION}/gdevds32.c
-share/doc/ghostscript/${PKGVERSION}/gs-vms.hlp
-share/doc/ghostscript/${PKGVERSION}/gsdoc.el
+share/doc/ghostscript/${PKGVERSION}/gs-style.css
+share/doc/ghostscript/${PKGVERSION}/images/Artifex_logo.png
+share/doc/ghostscript/${PKGVERSION}/images/favicon.png
+share/doc/ghostscript/${PKGVERSION}/images/ghostscript_logo.png
+share/doc/ghostscript/${PKGVERSION}/images/hamburger-light.png
+share/doc/ghostscript/${PKGVERSION}/images/x-light.png
 share/doc/ghostscript/${PKGVERSION}/index.html
+share/doc/ghostscript/${PKGVERSION}/index.js
 share/doc/ghostscript/${PKGVERSION}/pscet_status.txt
 share/doc/ghostscript/${PKGVERSION}/sample_downscale_device.htm
+share/doc/ghostscript/${PKGVERSION}/style.css
 share/doc/ghostscript/${PKGVERSION}/subclass.htm
 share/doc/ghostscript/${PKGVERSION}/thirdparty.htm
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/CIDFSubst/DroidSansFallback.ttf
