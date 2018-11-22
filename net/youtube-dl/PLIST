@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.71 2018/11/03 13:04:16 leot Exp $
+@comment $NetBSD: PLIST,v 1.72 2018/11/22 18:15:16 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -356,6 +356,9 @@ ${PYSITELIB}/youtube_dl/extractor/chirbit.pyo
 ${PYSITELIB}/youtube_dl/extractor/cinchcast.py
 ${PYSITELIB}/youtube_dl/extractor/cinchcast.pyc
 ${PYSITELIB}/youtube_dl/extractor/cinchcast.pyo
+${PYSITELIB}/youtube_dl/extractor/ciscolive.py
+${PYSITELIB}/youtube_dl/extractor/ciscolive.pyc
+${PYSITELIB}/youtube_dl/extractor/ciscolive.pyo
 ${PYSITELIB}/youtube_dl/extractor/cjsw.py
 ${PYSITELIB}/youtube_dl/extractor/cjsw.pyc
 ${PYSITELIB}/youtube_dl/extractor/cjsw.pyo
@@ -2282,6 +2285,9 @@ ${PYSITELIB}/youtube_dl/extractor/wrzuta.pyo
 ${PYSITELIB}/youtube_dl/extractor/wsj.py
 ${PYSITELIB}/youtube_dl/extractor/wsj.pyc
 ${PYSITELIB}/youtube_dl/extractor/wsj.pyo
+${PYSITELIB}/youtube_dl/extractor/wwe.py
+${PYSITELIB}/youtube_dl/extractor/wwe.pyc
+${PYSITELIB}/youtube_dl/extractor/wwe.pyo
 ${PYSITELIB}/youtube_dl/extractor/xbef.py
 ${PYSITELIB}/youtube_dl/extractor/xbef.pyc
 ${PYSITELIB}/youtube_dl/extractor/xbef.pyo
@@ -2378,6 +2384,9 @@ ${PYSITELIB}/youtube_dl/extractor/zdf.pyo
 ${PYSITELIB}/youtube_dl/extractor/zingmp3.py
 ${PYSITELIB}/youtube_dl/extractor/zingmp3.pyc
 ${PYSITELIB}/youtube_dl/extractor/zingmp3.pyo
+${PYSITELIB}/youtube_dl/extractor/zype.py
+${PYSITELIB}/youtube_dl/extractor/zype.pyc
+${PYSITELIB}/youtube_dl/extractor/zype.pyo
 ${PYSITELIB}/youtube_dl/jsinterp.py
 ${PYSITELIB}/youtube_dl/jsinterp.pyc
 ${PYSITELIB}/youtube_dl/jsinterp.pyo
