@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2017/04/05 12:33:49 fhajny Exp $
+$NetBSD: MESSAGE,v 1.3 2018/11/22 12:30:49 ryoon Exp $
 
 To use Nextcloud, you will need to perform the following steps.
 
@@ -90,6 +90,7 @@ server {
 	extension=curl.so
 	extension=gd.so
 	extension=iconv.so
+	extension=intl.so
 	extension=json.so
 	extension=mbstring.so
 	extension=zip.so
