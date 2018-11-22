@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2018/11/22 13:08:28 ryoon Exp $
+sbin/acme.sh
