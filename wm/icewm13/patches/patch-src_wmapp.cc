@@ -1,28 +1,8 @@
-$NetBSD: patch-src_wmapp.cc,v 1.2 2018/11/22 04:56:03 ryo Exp $
+$NetBSD: patch-src_wmapp.cc,v 1.1 2018/11/22 04:56:03 ryo Exp $
 
-* Avoid passing 4-byte aligned data to 8-byte aligned needing functions.
-* Avoid calling method with null instance.
-
---- src/wmapp.cc.orig	2009-11-08 18:59:46.000000000 +0000
+--- src/wmapp.cc.orig	2013-11-17 16:54:39.000000000 +0000
 +++ src/wmapp.cc
-@@ -219,6 +219,7 @@ static void registerProtocols2(Window xi
- #endif
- 
-     pid_t pid = getpid();
-+    long lpid = (long)pid;
-     const char wmname[] = "IceWM "VERSION" ("HOSTOS"/"HOSTCPU")";
- 
- #ifdef GNOME1_HINTS
-@@ -238,7 +239,7 @@ static void registerProtocols2(Window xi
- 
-     XChangeProperty(xapp->display(), xid,
-                     _XA_NET_WM_PID, XA_CARDINAL, 32,
--                    PropModeReplace, (unsigned char *)&pid, 1);
-+                    PropModeReplace, (unsigned char *)&lpid, 1);
- 
-     XChangeProperty(xapp->display(), xid,
-                     _XA_NET_WM_NAME, XA_STRING, 8,
-@@ -607,14 +608,21 @@ static void initPixmaps() {
+@@ -621,14 +621,21 @@ static void initPixmaps() {
  
          for (int a = 0; a <= 1; a++) {
              for (int b = 0; b <= 1; b++) {
@@ -50,4 +30,4 @@ $NetBSD: patch-src_wmapp.cc,v 1.2 2018/11/22 04:56:03 ryo Exp $
 +                titleB[a]->replicate(true, copyMask);
          }
  
-         menuButton[0] = paths.loadPixmap(0, "menuButtonI.xpm");
+         menuButton[0] = paths->loadPixmap(0, "menuButtonI.xpm");
