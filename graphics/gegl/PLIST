@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2018/08/28 13:32:45 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.21 2018/11/22 13:00:03 ryoon Exp $
 bin/gegl
 bin/gegl-gcut
 bin/gegl-imgcmp
@@ -6,7 +6,10 @@ include/gegl-0.4/gegl-apply.h
 include/gegl-0.4/gegl-audio-fragment.h
 include/gegl-0.4/gegl-buffer-backend.h
 include/gegl-0.4/gegl-buffer-cl-iterator.h
+include/gegl-0.4/gegl-buffer-enums.h
 include/gegl-0.4/gegl-buffer-iterator.h
+include/gegl-0.4/gegl-buffer-iterator2.h
+include/gegl-0.4/gegl-buffer-matrix2.h
 include/gegl-0.4/gegl-buffer.h
 include/gegl-0.4/gegl-color.h
 include/gegl-0.4/gegl-cpuaccel.h
@@ -25,6 +28,7 @@ include/gegl-0.4/gegl-path.h
 include/gegl-0.4/gegl-plugin.h
 include/gegl-0.4/gegl-processor.h
 include/gegl-0.4/gegl-random.h
+include/gegl-0.4/gegl-rectangle.h
 include/gegl-0.4/gegl-tile-backend.h
 include/gegl-0.4/gegl-tile-handler.h
 include/gegl-0.4/gegl-tile-source.h
@@ -81,6 +85,7 @@ lib/gegl-0.4/gegl-common-gpl3.la
 lib/gegl-0.4/gegl-common.la
 lib/gegl-0.4/gegl-core.la
 lib/gegl-0.4/gegl-generated.la
+lib/gegl-0.4/gif-load.la
 lib/gegl-0.4/grey2.json
 lib/gegl-0.4/jp2-load.la
 lib/gegl-0.4/jpg-load.la
