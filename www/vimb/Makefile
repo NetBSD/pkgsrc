@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2018/11/16 11:05:31 leot Exp $
+# $NetBSD: Makefile,v 1.26 2018/11/22 09:14:42 leot Exp $
 
 DISTNAME=	vimb-3.3.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fanglingsu/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://fanglingsu.github.io/vimb/
 COMMENT=	Vim-like webkit browser
 LICENSE=	gnu-gpl-v3
