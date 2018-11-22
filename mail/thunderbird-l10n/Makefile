@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2018/07/30 19:53:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.68 2018/11/22 12:39:55 ryoon Exp $
 #
 
 TB_VER=		52.9.1
@@ -28,5 +28,5 @@ TB_LOCALES=	        ar ast be bg bn-BD br ca cs cy		\
 EXTENSIONS_DIR=		${PREFIX}/lib/thunderbird/extensions
 XPI_FILES=		${TB_LOCALES:=.xpi}
 
-.include "../../www/firefox/xpi.mk"
+.include "../../www/firefox52/xpi.mk"
 .include "../../mk/bsd.pkg.mk"
