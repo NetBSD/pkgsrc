@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.688 2018/09/06 13:36:16 adam Exp $
+# $NetBSD: Makefile,v 1.689 2018/11/22 13:09:42 ryoon Exp $
 #
 
 COMMENT=	Security tools
@@ -14,6 +14,7 @@ SUBDIR+=	PACK
 SUBDIR+=	PortableSigner
 SUBDIR+=	R-digest
 SUBDIR+=	TweetNaCl
+SUBDIR+=	acmesh
 SUBDIR+=	aide
 SUBDIR+=	aide06
 SUBDIR+=	amap
