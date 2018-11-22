@@ -1,11 +1,7 @@
-# $NetBSD: options.mk,v 1.6 2018/10/26 17:03:27 bsiegert Exp $
+# $NetBSD: options.mk,v 1.7 2018/11/22 14:56:07 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.enchant
 PKG_SUPPORTED_OPTIONS=	aspell enchant-zemberek hunspell ispell
-# Package also supports the following:
-# hspell - Hebrew spelling
-# uspell - Yiddish spelling
-# voikko - Finnish spelling
 PKG_SUGGESTED_OPTIONS=	hunspell
 
 .include "../../mk/bsd.options.mk"
