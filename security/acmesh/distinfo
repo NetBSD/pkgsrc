@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/11/22 13:08:28 ryoon Exp $
+
+SHA1 (acme.sh-2.7.9.tar.gz) = 82dd82a74d1b04f55ed936293a8c5553237f32dd
+RMD160 (acme.sh-2.7.9.tar.gz) = ea3ade012fa6f330970b02baab33c466716badb1
+SHA512 (acme.sh-2.7.9.tar.gz) = 24374783ca52835b400b84316ffab5e9066805362f02082f8ef409e21ca590d837b3dd11401633947f9fcc98dc977b0e8b6076d5deecd02b38478f257500a052
+Size (acme.sh-2.7.9.tar.gz) = 110323 bytes
