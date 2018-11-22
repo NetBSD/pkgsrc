@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2018/06/04 10:10:22 jmcneill Exp $
 
-DISTNAME=	yarn-v1.7.0
+DISTNAME=	yarn-v1.12.3
 PKGNAME=	${DISTNAME:S/-v/-/}
 CATEGORIES=	devel
 MASTER_SITES=	https://yarnpkg.com/downloads/${PKGVERSION_NOREV}/
