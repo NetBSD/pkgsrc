@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2018/11/22 15:51:45 prlw1 Exp $
+# $NetBSD: Makefile,v 1.94 2018/11/22 16:09:23 adam Exp $
 
 .include "Makefile.common"
 
@@ -24,8 +24,6 @@ CONFIGURE_ARGS+=	--without-perl
 PKGCONFIG_OVERRIDE+=	magick/GraphicsMagick.pc.in
 PKGCONFIG_OVERRIDE+=	wand/GraphicsMagickWand.pc.in
 PKGCONFIG_OVERRIDE+=	Magick++/lib/GraphicsMagick++.pc.in
-
-CHECK_WRKREF_SKIP=	${PREFIX}/lib/libGraphicsMagick.*
 
 TEST_TARGET=	check
 
