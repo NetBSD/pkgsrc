@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q3,v 1.1.2.14 2018/11/09 18:57:59 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q3,v 1.1.2.15 2018/11/22 05:53:23 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q3 branch:
 
@@ -124,4 +124,10 @@ mail/roundcube-plugin-zipdownload: dependency update
 
 Pullup ticket #5879 - requested by maya
 net/youtube-dl: functionality update
+
+Pullup ticket #5880 - requested by nia
+security/gnutls: security update
+
+Pullup ticket #5881 - requested by maya
+graphics/tiff: security update
 
