@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4803 2018/11/23 09:22:58 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4804 2018/11/23 10:31:44 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6724,3 +6724,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/intel-vaapi-driver to 2.2.0 [leot 2018-11-23]
 	Updated www/py-django-extensions to 2.1.4 [adam 2018-11-23]
 	Updated www/nghttp2 to 1.35.0 [adam 2018-11-23]
+	Added graphics/adapta-gtk-theme version 3.95.0.11 [nia 2018-11-23]
