@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2018/11/14 22:22:14 kleink Exp $
+# $NetBSD: Makefile,v 1.51 2018/11/23 07:30:02 ryoon Exp $
 
 DISTNAME=	samba-${VERSION}
-PKGREVISION=	11
 CATEGORIES=	net
 MASTER_SITES=	http://download.samba.org/pub/samba/stable/
 
@@ -12,7 +11,7 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
-VERSION=	4.6.8
+VERSION=	4.9.2
 CONFLICTS+=	ja-samba-[0-9]* tdb-[0-9]* winbind-[0-9]*
 
 GCC_REQD+=	4.4
@@ -97,6 +96,7 @@ CONFIGURE_ARGS+=	--jobs=${MAKE_JOBS}
 .else
 CONFIGURE_ARGS+=	--jobs=1
 .endif
+CONFIGURE_ARGS+=	--without-gpgme
 
 # Depends on ncurses, explicitly disable for now.
 CONFIGURE_ARGS+=	--without-regedit
@@ -204,7 +204,9 @@ PY_PATCHPLIST=	yes
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../databases/lmdb/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
+.include "../../textproc/jansson/buildlink3.mk"
 BUILDLINK_API_DEPENDS.talloc+=	talloc>=2.1.9
 .include "../../devel/talloc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
