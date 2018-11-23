@@ -1,7 +1,16 @@
-$NetBSD: patch-Makefile.am,v 1.1 2012/07/30 07:21:11 sbd Exp $
+$NetBSD: patch-Makefile.am,v 1.2 2018/11/23 22:33:13 spz Exp $
 
---- Makefile.am.orig	2012-02-21 11:36:51.000000000 +0000
+--- Makefile.am.orig	2016-02-09 22:52:51.000000000 +0000
 +++ Makefile.am
+@@ -4,7 +4,7 @@ AUTOMAKE_OPTIONS = 1.10 foreign
+ include $(top_srcdir)/config/automake/vars.am
+ include $(top_srcdir)/config/automake/installperms.am
+ 
+-ACLOCAL_AMFLAGS = --force -I config -I . -I config/gettext-macros -I config/gnulib -I config/amanda -I config/macro-archive -I /usr/share/aclocal
++ACLOCAL_AMFLAGS = --force -I config -I . -I config/gettext-macros -I config/gnulib -I config/amanda -I config/macro-archive 
+ 
+ if WANT_CLIENT
+ CLIENT_SUBDIRS = client-src application-src
 @@ -43,7 +43,7 @@ SUBDIRS = . \
  	packaging \
  	installcheck

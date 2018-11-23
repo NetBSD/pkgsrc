@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2012/07/30 07:21:10 sbd Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/11/23 22:33:13 spz Exp $
 ${PERL5_SUB_INSTALLVENDORLIB}/Amanda/Application.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Amanda/Application/Zfs.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/auto/Amanda/Application/libApplication.la
 lib/amanda/libamclient.la
 libexec/amanda/amandad
+${PLIST.amanda-bsdtar}libexec/amanda/application/ambsdtar
 libexec/amanda/application/amgtar
 libexec/amanda/application/amlog-script
 libexec/amanda/application/ampgsql
