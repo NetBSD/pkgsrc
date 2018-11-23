@@ -1,26 +1,19 @@
-$NetBSD: patch-va_Makefile.am,v 1.1 2017/02/24 16:44:03 maya Exp $
+$NetBSD: patch-va_Makefile.am,v 1.2 2018/11/23 08:05:04 ryoon Exp $
 
 Don't hardcore -ldl
 
---- va/Makefile.am.orig	2016-11-10 00:34:35.000000000 +0000
+--- va/Makefile.am.orig	2018-10-23 13:50:59.000000000 +0000
 +++ va/Makefile.am
-@@ -76,13 +76,13 @@ noinst_HEADERS			= $(libva_source_h_priv
- libva_la_SOURCES		= $(libva_source_c)
+@@ -91,7 +91,7 @@ libva_la_SOURCES		= $(libva_source_c)
+ libva_la_CFLAGS			= $(libva_cflags)
  libva_la_LDFLAGS		= $(libva_ldflags)
  libva_la_DEPENDENCIES		= libva.syms
 -libva_la_LIBADD			= $(LIBVA_LIBS) -ldl
 +libva_la_LIBADD			= $(LIBVA_LIBS)
  
- lib_LTLIBRARIES			+= libva-tpi.la
- libva_tpi_la_SOURCES		= va_tpi.c
- libva_tpi_la_LDFLAGS		= $(LDADD) -no-undefined
- libva_tpi_la_DEPENDENCIES	= libva.la 
--libva_tpi_la_LIBADD		= libva.la -ldl
-+libva_tpi_la_LIBADD		= libva.la
- 
  if USE_DRM
  SUBDIRS				+= drm
-@@ -91,7 +91,7 @@ libva_drm_la_SOURCES		=
+@@ -101,7 +101,7 @@ libva_drm_la_CFLAGS		= $(libva_cflags)
  libva_drm_la_LDFLAGS		= $(LDADD)
  libva_drm_la_DEPENDENCIES	= libva.la drm/libva_drm.la
  libva_drm_la_LIBADD		= libva.la drm/libva_drm.la \
@@ -29,7 +22,7 @@ Don't hardcore -ldl
  endif
  
  if USE_X11
-@@ -102,7 +102,7 @@ libva_x11_la_SOURCES		= 
+@@ -113,7 +113,7 @@ libva_x11_la_CFLAGS		= $(libva_cflags)
  libva_x11_la_LDFLAGS		= $(LDADD)
  libva_x11_la_DEPENDENCIES	= libva.la x11/libva_x11.la
  libva_x11_la_LIBADD		= libva.la x11/libva_x11.la \
@@ -38,7 +31,7 @@ Don't hardcore -ldl
  endif
  
  if USE_GLX
-@@ -112,7 +112,7 @@ libva_glx_la_SOURCES		=
+@@ -124,7 +124,7 @@ libva_glx_la_CFLAGS		= $(libva_cflags)
  libva_glx_la_LDFLAGS		= $(LDADD)
  libva_glx_la_DEPENDENCIES	= libva.la glx/libva_glx.la libva-x11.la
  libva_glx_la_LIBADD		= libva.la glx/libva_glx.la libva-x11.la \
@@ -46,17 +39,8 @@ Don't hardcore -ldl
 +	$(GLX_LIBS)
  endif
  
- if USE_EGL
-@@ -122,7 +122,7 @@ libva_egl_la_SOURCES		=
- libva_egl_la_LDFLAGS		= $(LDADD)
- libva_egl_la_DEPENDENCIES	= libva.la egl/libva_egl.la 
- libva_egl_la_LIBADD		= libva.la egl/libva_egl.la \
--	$(EGL_LIBS) -ldl
-+	$(EGL_LIBS)
- endif
- 
  if USE_WAYLAND
-@@ -132,7 +132,7 @@ libva_wayland_la_SOURCES	=
+@@ -135,7 +135,7 @@ libva_wayland_la_CFLAGS		= $(libva_cflag
  libva_wayland_la_LDFLAGS	= $(LDADD)
  libva_wayland_la_DEPENDENCIES	= libva.la wayland/libva_wayland.la
  libva_wayland_la_LIBADD		= libva.la wayland/libva_wayland.la \
@@ -64,4 +48,4 @@ Don't hardcore -ldl
 +	$(WAYLAND_LIBS) $(DRM_LIBS)
  endif
  
- DIST_SUBDIRS = x11 glx egl drm wayland
+ DIST_SUBDIRS = x11 glx drm wayland
