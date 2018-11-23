@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4797 2018/11/22 18:15:47 leot Exp $
+$NetBSD: CHANGES-2018,v 1.4798 2018/11/23 05:30:15 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6717,3 +6717,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/mysql57-client to 5.7.24 [adam 2018-11-22]
 	Updated databases/mysql57-server to 5.7.24 [adam 2018-11-22]
 	Updated net/youtube-dl to 20181123 [leot 2018-11-22]
+	Updated cross/aarch64-none-elf-binutils to 2.31.1 [ryoon 2018-11-23]
