@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.11 2017/09/14 11:33:33 adam Exp $
+$NetBSD: distinfo,v 1.12 2018/11/23 08:05:04 ryoon Exp $
 
-SHA1 (libva-1.8.3.tar.bz2) = 8eee9e28b0ae3bfbe8cd44a91396207714967204
-RMD160 (libva-1.8.3.tar.bz2) = c29b15bb81573962c2855a2a6526bce1a82d01ee
-SHA512 (libva-1.8.3.tar.bz2) = 870cfaa5c4487f4cb4b01c11379484e3884aa5e9026c3836cc7681804a5e08a0b245b2aa788984a24a3094bd64068fbd0406e66cb4c5e30fc84e31095eb4a3e1
-Size (libva-1.8.3.tar.bz2) = 453242 bytes
+SHA1 (libva-2.3.0.tar.bz2) = e1138529355cce78fa2edc7c5b1c5aeb40dd0ce5
+RMD160 (libva-2.3.0.tar.bz2) = e2e1b68d59006cf2d0d2b3761b8181e2021f2691
+SHA512 (libva-2.3.0.tar.bz2) = e6e8b5e5c3dcfc4ad11560828c849ff522e3cd8db6763fe8d2fcec41c05461b3f354aaba82c7c78b8623f3d1c842851209fbbd046d027a0b88c6d9861e2ecfd3
+Size (libva-2.3.0.tar.bz2) = 509537 bytes
 SHA1 (patch-aa) = 3e4966037c46fada25cc869b672a7e78dda5b04b
-SHA1 (patch-va_Makefile.am) = 0bf9bb930bce79994ef060e6ad44cb1bf9eb0773
+SHA1 (patch-va_Makefile.am) = af963e8279aacf706b6442372ce7cb1436395c74
 SHA1 (patch-va_glx_va__glx__private.h) = daf6552189295a86f1f073ef107b7449e4098251
-SHA1 (patch-va_va__trace.c) = 4dfdc200e9e34625929612e594d880cff1f6271d
+SHA1 (patch-va_va__trace.c) = 3947615333d00cf2b84c255ac85cbc97eda6652d
