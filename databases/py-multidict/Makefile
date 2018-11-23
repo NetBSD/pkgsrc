@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2018/11/20 10:52:40 adam Exp $
+# $NetBSD: Makefile,v 1.13 2018/11/23 12:14:48 adam Exp $
 
-DISTNAME=	multidict-4.5.0
+DISTNAME=	multidict-4.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/multidict/}
