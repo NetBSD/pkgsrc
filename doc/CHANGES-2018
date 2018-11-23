@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4807 2018/11/23 14:20:01 nia Exp $
+$NetBSD: CHANGES-2018,v 1.4808 2018/11/23 14:57:54 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6730,3 +6730,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/py-reportlab to 3.5.11 [adam 2018-11-23]
 	Updated databases/py-multidict to 4.5.1 [adam 2018-11-23]
 	Updated net/dnscrypt-proxy2 to 2.0.19 [nia 2018-11-23]
+	Updated devel/git to 2.19.2 [leot 2018-11-23]
