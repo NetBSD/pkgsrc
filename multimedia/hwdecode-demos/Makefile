@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2018/11/14 22:22:06 kleink Exp $
+# $NetBSD: Makefile,v 1.17 2018/11/23 08:06:32 ryoon Exp $
 #
 
 DISTNAME=	hwdecode-demos-0.9.4
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	multimedia
 #MASTER_SITES=	http://www.splitted-desktop.com/~gbeauchesne/hwdecode-demos/
 

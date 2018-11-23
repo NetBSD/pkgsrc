@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2017/04/09 10:39:52 leot Exp $
+# $NetBSD: Makefile,v 1.3 2018/11/23 08:06:32 ryoon Exp $
 
 DISTNAME=	intel-vaapi-driver-1.8.0
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=01org/}
 
