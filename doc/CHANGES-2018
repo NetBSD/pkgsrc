@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4804 2018/11/23 10:31:44 nia Exp $
+$NetBSD: CHANGES-2018,v 1.4805 2018/11/23 11:42:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6725,3 +6725,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-django-extensions to 2.1.4 [adam 2018-11-23]
 	Updated www/nghttp2 to 1.35.0 [adam 2018-11-23]
 	Added graphics/adapta-gtk-theme version 3.95.0.11 [nia 2018-11-23]
+	Updated net/py-responses to 0.10.4 [adam 2018-11-23]
+	Updated textproc/py-openpyxl to 2.5.11 [adam 2018-11-23]
