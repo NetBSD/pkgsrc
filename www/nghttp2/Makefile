@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.43 2018/10/04 13:07:35 adam Exp $
+# $NetBSD: Makefile,v 1.44 2018/11/23 09:22:40 adam Exp $
 
-DISTNAME=	nghttp2-1.34.0
+DISTNAME=	nghttp2-1.35.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tatsuhiro-t/}
 EXTRACT_SUFX=	.tar.xz
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://nghttp2.org/
 COMMENT=	Implementation of HTTP/2 in C
 LICENSE=	mit
 
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
-
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++14
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
