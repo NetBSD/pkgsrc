@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.38 2018/11/13 11:10:41 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.39 2018/11/23 08:06:29 ryoon Exp $
 
 BUILDLINK_TREE+=	xine-lib
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xine-lib
 XINE_LIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xine-lib+=	xine-lib>=1rc3c
-BUILDLINK_ABI_DEPENDS.xine-lib+=	xine-lib>=1.2.6nb11
+BUILDLINK_ABI_DEPENDS.xine-lib+=	xine-lib>=1.2.9nb1
 BUILDLINK_PKGSRCDIR.xine-lib?=		../../multimedia/xine-lib
 
 .include "../../multimedia/ffmpeg3/buildlink3.mk"
