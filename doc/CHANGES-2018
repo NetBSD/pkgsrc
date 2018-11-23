@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4808 2018/11/23 14:57:54 leot Exp $
+$NetBSD: CHANGES-2018,v 1.4809 2018/11/23 21:37:17 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6731,3 +6731,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-multidict to 4.5.1 [adam 2018-11-23]
 	Updated net/dnscrypt-proxy2 to 2.0.19 [nia 2018-11-23]
 	Updated devel/git to 2.19.2 [leot 2018-11-23]
+	Updated www/bozohttpd to 20181123 [mrg 2018-11-23]
