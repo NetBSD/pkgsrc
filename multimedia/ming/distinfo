@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.18 2018/11/13 10:18:26 markd Exp $
+$NetBSD: distinfo,v 1.19 2018/11/23 12:13:19 jperkin Exp $
 
 SHA1 (ming-0_4_8.tar.gz) = ef94923ea4f71fca0950c4a9ff1eb33e1712c17b
 RMD160 (ming-0_4_8.tar.gz) = 4110608567c768bb67338c4bd3967322e63c32d4
 SHA512 (ming-0_4_8.tar.gz) = e395acde9119ad32f4cedd500bcceee70bdd563222a41dda899cc318d5e34eb580abc38ac39c6dec7821913a0a70d2f953fc81f52255b623e34f7c3aaafbc9c0
 Size (ming-0_4_8.tar.gz) = 14908459 bytes
 SHA1 (patch-configure.in) = 9c231dc2e06d12e05b8e82d48f1df2aed33de697
+SHA1 (patch-util_parser.c) = f41454623af76bc893d3040513dcd900f5b76a32
