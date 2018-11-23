@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/11/23 10:30:45 nia Exp $
+
+SHA1 (adapta-gtk-theme-3.95.0.11.tar.gz) = 946d2a74baea2a2a03566fa60f96a90ca30e84bc
+RMD160 (adapta-gtk-theme-3.95.0.11.tar.gz) = 7f940af70bfae3a2cd7dbf287ae074ce64742785
+SHA512 (adapta-gtk-theme-3.95.0.11.tar.gz) = 648f8ad2cf8095c599ff4be4d6d47e0935d6b5bea65c27a36ea69cca89129c59fd078b629a38a048ef300c1bb4ca506c18c4ef0afc9753134894d3a99c83fff1
+Size (adapta-gtk-theme-3.95.0.11.tar.gz) = 664080 bytes
