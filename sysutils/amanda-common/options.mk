@@ -1,14 +1,21 @@
-# $NetBSD: options.mk,v 1.13 2017/03/28 12:50:26 bouyer Exp $
+# $NetBSD: options.mk,v 1.14 2018/11/23 22:33:13 spz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.amanda
 # Common options.
-PKG_SUPPORTED_OPTIONS+=	inet6 amanda-fqdn amanda-ssh kerberos ndmp
+PKG_SUPPORTED_OPTIONS+=	inet6 amanda-bsdtar amanda-fqdn amanda-ssh kerberos ndmp
 PKG_SUGGESTED_OPTIONS+=	inet6 amanda-fqdn amanda-ssh
 # Client options.
 PKG_SUPPORTED_OPTIONS+=	amanda-smb amanda-dump-snap
 .if (${OPSYS} != "NetBSD" || \
     (!empty(OS_VERSION:M[7-9].*)))
 PKG_SUGGESTED_OPTIONS+=	amanda-dump-snap
+.endif
+
+.if (${OPSYS} == "NetBSD" || \
+     ${OPSYS} == "FreeBSD" || \
+     ${OPSYS} == "DragonFly" || \
+     ${OPSYS} == "OpenBSD")
+PKG_SUGGESTED_OPTIONS+=	amanda-bsdtar
 .endif
 
 PKG_OPTIONS_LEGACY_VARS+=	AMANDA_FQDN:amanda-fqdn
@@ -22,6 +29,12 @@ PKG_OPTIONS_LEGACY_VARS+=	AMANDA_DUMP_SNAP:amanda-dump-snap
 CONFIGURE_ARGS+=	--with-ipv6
 .else
 CONFIGURE_ARGS+=	--without-ipv6
+.endif
+
+.if !empty(PKG_OPTIONS:Mamanda-bsdtar)
+CONFIGURE_ARGS+=        --with-bsdtar=/usr/bin/tar
+.else
+CONFIGURE_ARGS+=        --without-bsdtar
 .endif
 
 .if !empty(PKG_OPTIONS:Mamanda-fqdn)
