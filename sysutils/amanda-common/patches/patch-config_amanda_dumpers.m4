@@ -1,20 +1,9 @@
-$NetBSD: patch-config_amanda_dumpers.m4,v 1.1 2012/07/30 07:21:11 sbd Exp $
-
-* Fix shell portability problem.
+$NetBSD: patch-config_amanda_dumpers.m4,v 1.2 2018/11/23 22:33:13 spz Exp $
 
 * Add '--with-dump-use-snapshot' code.
 
 --- config/amanda/dumpers.m4.orig	2012-02-21 11:36:49.000000000 +0000
 +++ config/amanda/dumpers.m4
-@@ -166,7 +166,7 @@ AC_DEFUN([AMANDA_PROG_SUNTAR],
- 	    # done
- 	],
- 	[
--	    if test "x$SUNTAR" == "x"; then
-+	    if test "x$SUNTAR" = "x"; then
- 		SUNTAR="/usr/sbin/tar"
- 	    fi
- 	]
 @@ -484,6 +484,44 @@ AC_DEFUN([AMANDA_PROG_DUMP_RESTORE],
  		    [Define this if dump accepts -h for honoring nodump. ])
  	    fi
