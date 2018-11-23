@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4799 2018/11/23 05:31:19 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.4800 2018/11/23 07:32:51 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6719,3 +6719,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/youtube-dl to 20181123 [leot 2018-11-22]
 	Updated cross/aarch64-none-elf-binutils to 2.31.1 [ryoon 2018-11-23]
 	Updated cross/aarch64-none-elf-gcc to 8.2.0 [ryoon 2018-11-23]
+	Updated net/samba4 to 4.9.2 [ryoon 2018-11-23]
