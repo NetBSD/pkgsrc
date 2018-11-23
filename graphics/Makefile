@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.807 2018/11/19 16:55:35 nia Exp $
+# $NetBSD: Makefile,v 1.808 2018/11/23 10:30:45 nia Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -35,6 +35,7 @@ SUBDIR+=	SDL2_image
 SUBDIR+=	SDL_image
 SUBDIR+=	aalib
 SUBDIR+=	adaptagrams
+SUBDIR+=	adapta-gtk-theme
 SUBDIR+=	adwaita-icon-theme
 SUBDIR+=	agg
 SUBDIR+=	ansilove
