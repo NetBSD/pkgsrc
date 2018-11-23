@@ -1,3 +1,3 @@
-# $NetBSD: version.mk,v 1.4 2012/09/24 05:12:54 sbd Exp $
-AMANDA_VERSION=	3.3.1
+# $NetBSD: version.mk,v 1.5 2018/11/23 22:33:13 spz Exp $
+AMANDA_VERSION=	3.3.9
 # Do NOT set PKGREVISION in this file!

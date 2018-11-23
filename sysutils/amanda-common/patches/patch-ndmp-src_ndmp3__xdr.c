@@ -1,8 +1,8 @@
-$NetBSD: patch-ndmp-src_ndmp3__xdr.c,v 1.1 2014/07/28 15:53:44 jperkin Exp $
+$NetBSD: patch-ndmp-src_ndmp3__xdr.c,v 1.2 2018/11/23 22:33:13 spz Exp $
 
 Compat for SunOS 64-bit.
 
---- ndmp-src/ndmp3_xdr.c.orig	2012-02-21 11:38:58.000000000 +0000
+--- ndmp-src/ndmp3_xdr.c.orig	2016-02-09 22:53:39.000000000 +0000
 +++ ndmp-src/ndmp3_xdr.c
 @@ -3,6 +3,14 @@
   * It was generated using rpcgen.
@@ -16,6 +16,6 @@ Compat for SunOS 64-bit.
 +#define IXDR_GET_U_LONG IXDR_GET_U_INT32
 +#endif
 +#endif
+ #include "config.h"
  #include "ndmp3.h"
  #ifndef NDMOS_OPTION_NO_NDMP3
- #define ndmp3_u_quad unsigned long long
