@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/11/16 10:06:23 leot Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/11/23 05:30:45 ryoon Exp $
 cross-aarch64-none-elf/aarch64-none-elf/include/_ansi.h
 cross-aarch64-none-elf/aarch64-none-elf/include/_newlib_version.h
 cross-aarch64-none-elf/aarch64-none-elf/include/_syslist.h
@@ -77,8 +77,6 @@ cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/bits/basic_str
 cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/bits/basic_string.tcc
 cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/bits/boost_concept_check.h
 cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/bits/c++0x_warning.h
-cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/bits/c++14_warning.h
-cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/bits/c++17_warning.h
 cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/bits/char_traits.h
 cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/bits/codecvt.h
 cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/bits/concept_check.h
@@ -92,6 +90,10 @@ cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/bits/exception
 cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/bits/exception_ptr.h
 cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/bits/forward_list.h
 cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/bits/forward_list.tcc
+cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/bits/fs_dir.h
+cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/bits/fs_fwd.h
+cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/bits/fs_ops.h
+cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/bits/fs_path.h
 cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/bits/fstream.tcc
 cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/bits/functexcept.h
 cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/bits/functional_hash.h
@@ -197,6 +199,7 @@ cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/cctype
 cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/cerrno
 cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/cfenv
 cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/cfloat
+cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/charconv
 cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/chrono
 cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/cinttypes
 cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/ciso646
@@ -581,6 +584,7 @@ cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/ext/vstring.tc
 cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/ext/vstring_fwd.h
 cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/ext/vstring_util.h
 cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/fenv.h
+cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/filesystem
 cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/forward_list
 cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/fstream
 cross-aarch64-none-elf/aarch64-none-elf/include/c++/${PKGVERSION}/functional
@@ -777,6 +781,7 @@ cross-aarch64-none-elf/aarch64-none-elf/include/cpio.h
 cross-aarch64-none-elf/aarch64-none-elf/include/ctype.h
 cross-aarch64-none-elf/aarch64-none-elf/include/devctl.h
 cross-aarch64-none-elf/aarch64-none-elf/include/dirent.h
+cross-aarch64-none-elf/aarch64-none-elf/include/elf.h
 cross-aarch64-none-elf/aarch64-none-elf/include/envlock.h
 cross-aarch64-none-elf/aarch64-none-elf/include/envz.h
 cross-aarch64-none-elf/aarch64-none-elf/include/errno.h
@@ -825,6 +830,13 @@ cross-aarch64-none-elf/aarch64-none-elf/include/search.h
 cross-aarch64-none-elf/aarch64-none-elf/include/setjmp.h
 cross-aarch64-none-elf/aarch64-none-elf/include/signal.h
 cross-aarch64-none-elf/aarch64-none-elf/include/spawn.h
+cross-aarch64-none-elf/aarch64-none-elf/include/ssp/ssp.h
+cross-aarch64-none-elf/aarch64-none-elf/include/ssp/stdio.h
+cross-aarch64-none-elf/aarch64-none-elf/include/ssp/stdlib.h
+cross-aarch64-none-elf/aarch64-none-elf/include/ssp/string.h
+cross-aarch64-none-elf/aarch64-none-elf/include/ssp/strings.h
+cross-aarch64-none-elf/aarch64-none-elf/include/ssp/unistd.h
+cross-aarch64-none-elf/aarch64-none-elf/include/ssp/wchar.h
 cross-aarch64-none-elf/aarch64-none-elf/include/stdatomic.h
 cross-aarch64-none-elf/aarch64-none-elf/include/stdint.h
 cross-aarch64-none-elf/aarch64-none-elf/include/stdio.h
@@ -834,7 +846,6 @@ cross-aarch64-none-elf/aarch64-none-elf/include/string.h
 cross-aarch64-none-elf/aarch64-none-elf/include/strings.h
 cross-aarch64-none-elf/aarch64-none-elf/include/sys/_default_fcntl.h
 cross-aarch64-none-elf/aarch64-none-elf/include/sys/_intsup.h
-cross-aarch64-none-elf/aarch64-none-elf/include/sys/_locale.h
 cross-aarch64-none-elf/aarch64-none-elf/include/sys/_pthreadtypes.h
 cross-aarch64-none-elf/aarch64-none-elf/include/sys/_sigset.h
 cross-aarch64-none-elf/aarch64-none-elf/include/sys/_stdint.h
@@ -884,6 +895,7 @@ cross-aarch64-none-elf/aarch64-none-elf/include/utmp.h
 cross-aarch64-none-elf/aarch64-none-elf/include/wchar.h
 cross-aarch64-none-elf/aarch64-none-elf/include/wctype.h
 cross-aarch64-none-elf/aarch64-none-elf/include/wordexp.h
+cross-aarch64-none-elf/aarch64-none-elf/include/xlocale.h
 cross-aarch64-none-elf/aarch64-none-elf/lib/aem-validation.specs
 cross-aarch64-none-elf/aarch64-none-elf/lib/aem-ve.specs
 cross-aarch64-none-elf/aarch64-none-elf/lib/cpu-init/rdimon-aem-el3.o
@@ -1023,12 +1035,10 @@ cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/cfg
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/cgraph.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/chkp-builtins.def
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/cif-code.def
-cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/cilk-builtins.def
-cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/cilk.h
-cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/cilkplus.def
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/collect-utils.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/collect2-aix.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/collect2.h
+cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/color-macros.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/conditions.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/config.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/config/aarch64/aarch64-arches.def
@@ -1055,6 +1065,7 @@ cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/cp/
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/cp/cp-tree.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/cp/cxx-pretty-print.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/cp/name-lookup.h
+cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/cp/operators.def
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/cp/type-utils.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/cppbuiltin.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/cppdefault.h
@@ -1091,6 +1102,7 @@ cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/exp
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/expr.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/fibonacci_heap.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/file-find.h
+cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/file-prefix-map.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/filenames.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/fixed-value.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/flag-types.h
@@ -1120,6 +1132,8 @@ cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/gim
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/gimple-match.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/gimple-predict.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/gimple-pretty-print.h
+cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/gimple-ssa-evrp-analyze.h
+cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/gimple-ssa-warn-restrict.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/gimple-ssa.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/gimple-streamer.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/gimple-walk.h
@@ -1161,15 +1175,20 @@ cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/ins
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/insn-codes.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/insn-constants.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/insn-flags.h
+cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/insn-modes-inline.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/insn-modes.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/insn-notes.def
+cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/int-vector-builder.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/internal-fn.def
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/internal-fn.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/intl.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/ipa-chkp.h
+cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/ipa-fnsummary.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/ipa-icf-gimple.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/ipa-icf.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/ipa-inline.h
+cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/ipa-param-manipulation.h
+cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/ipa-predicate.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/ipa-prop.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/ipa-ref.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/ipa-reference.h
@@ -1208,6 +1227,7 @@ cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/omp
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/omp-grid.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/omp-low.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/omp-offload.h
+cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/omp-simd-clone.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/optabs-libfuncs.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/optabs-query.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/optabs-tree.h
@@ -1230,12 +1250,15 @@ cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/plu
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/plugin-version.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/plugin.def
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/plugin.h
+cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/poly-int-types.h
+cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/poly-int.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/predict.def
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/predict.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/prefix.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/pretty-print.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/print-rtl.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/print-tree.h
+cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/profile-count.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/profile.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/read-md.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/read-rtl-function.h
@@ -1256,15 +1279,16 @@ cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/rtl
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/rtl.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/rtlhash.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/rtlhooks-def.h
+cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/rtx-vector-builder.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/run-rtl-passes.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/safe-ctype.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/sanitizer.def
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/sbitmap.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/sched-int.h
-cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/sdbout.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/sel-sched-dump.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/sel-sched-ir.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/sel-sched.h
+cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/selftest-diagnostic.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/selftest-rtl.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/selftest.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/sese.h
@@ -1333,6 +1357,7 @@ cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/tre
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/tree-ssa-alias.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/tree-ssa-ccp.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/tree-ssa-coalesce.h
+cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/tree-ssa-dce.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/tree-ssa-dom.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/tree-ssa-live.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/tree-ssa-loop-ivopts.h
@@ -1343,14 +1368,15 @@ cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/tre
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/tree-ssa-propagate.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/tree-ssa-sccvn.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/tree-ssa-scopedtables.h
+cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/tree-ssa-strlen.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/tree-ssa-ter.h
-cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/tree-ssa-threadbackward.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/tree-ssa-threadedge.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/tree-ssa-threadupdate.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/tree-ssa.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/tree-ssanames.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/tree-stdarg.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/tree-streamer.h
+cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/tree-vector-builder.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/tree-vectorizer.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/tree-vrp.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/tree.def
@@ -1364,10 +1390,14 @@ cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/ubs
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/valtrack.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/value-prof.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/varasm.h
+cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/vec-perm-indices.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/vec.h
+cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/vector-builder.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/version.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/vmsdbg.h
+cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/vr-values.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/vtable-verify.h
+cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/wide-int-bitmask.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/wide-int-print.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/wide-int.h
 cross-aarch64-none-elf/lib/gcc/aarch64-none-elf/${PKGVERSION}/plugin/include/xcoff.h
