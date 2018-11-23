@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4806 2018/11/23 12:15:08 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4807 2018/11/23 14:20:01 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6729,3 +6729,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-openpyxl to 2.5.11 [adam 2018-11-23]
 	Updated print/py-reportlab to 3.5.11 [adam 2018-11-23]
 	Updated databases/py-multidict to 4.5.1 [adam 2018-11-23]
+	Updated net/dnscrypt-proxy2 to 2.0.19 [nia 2018-11-23]
