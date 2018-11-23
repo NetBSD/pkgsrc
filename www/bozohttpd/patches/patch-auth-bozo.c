@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.19 2010/05/10 03:42:18 mrg Exp $
+$NetBSD: patch-auth-bozo.c,v 1.1 2018/11/23 21:30:27 mrg Exp $
 
---- auth-bozo.c.orig	2010-05-09 19:51:28.000000000 -0700
-+++ auth-bozo.c	2010-05-09 20:13:45.000000000 -0700
-@@ -38,6 +38,10 @@
+--- auth-bozo.c.orig	2018-11-23 13:10:04.000000000 -0800
++++ auth-bozo.c	2018-11-23 13:15:02.729491334 -0800
+@@ -40,6 +40,10 @@
  #include <stdlib.h>
  #include <unistd.h>
  
@@ -12,8 +12,8 @@ $NetBSD: patch-aa,v 1.19 2010/05/10 03:42:18 mrg Exp $
 +
  #include "bozohttpd.h"
  
- #ifndef AUTH_FILE
-@@ -99,7 +103,7 @@
+ static	ssize_t	base64_decode(const unsigned char *, size_t,
+@@ -101,7 +105,7 @@
  			    request->hr_authpass));
  			if (strcmp(request->hr_authuser, user) != 0)
  				continue;
