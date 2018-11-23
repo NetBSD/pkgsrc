@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/04/09 10:39:52 leot Exp $
+$NetBSD: distinfo,v 1.3 2018/11/23 09:14:31 leot Exp $
 
-SHA1 (intel-vaapi-driver-1.8.0.tar.gz) = d3f207de4d5fedcc7a37c5954bf501b7d40d9b5b
-RMD160 (intel-vaapi-driver-1.8.0.tar.gz) = 0a843644554fca01759f9910c8d3f15e0d7df9a8
-SHA512 (intel-vaapi-driver-1.8.0.tar.gz) = fbf68ad5f7558366dadf6e8d834ed89665e86167676ca72fdca218023f5709b0bdf1b124f11ed3f7c10b60741a2574a8ea7c3e5607a6727d3b9cc2ed44981542
-Size (intel-vaapi-driver-1.8.0.tar.gz) = 2308240 bytes
+SHA1 (intel-vaapi-driver-2.2.0.tar.gz) = b65e2105d6d46d18e7ef644e6588a7debd051542
+RMD160 (intel-vaapi-driver-2.2.0.tar.gz) = 7df2a5f68617dcdc5c9c1be999732f3ce4f949c7
+SHA512 (intel-vaapi-driver-2.2.0.tar.gz) = 8843e184c0d4d98a694f4fb1ba692a63795968879257b5f791f9bdf2a32e3d0fe3f9cac46533d78721d91c949063778e97b58bbbc1ba4da95b53b306c04e8e90
+Size (intel-vaapi-driver-2.2.0.tar.gz) = 3966600 bytes
