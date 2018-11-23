@@ -1,0 +1,6 @@
+Adapta is an adaptive GTK+ 2 and GTK+ 3 theme based on Material Design
+guidelines. This package also includes Adapta window manager themes for
+Xfce, MATE, and Openbox.
+
+Note: The Adapta authors strongly recommend using either the Roboto or
+Noto fonts with Adapta.
