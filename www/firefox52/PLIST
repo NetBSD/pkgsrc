@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/03/16 22:53:19 maya Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/11/24 01:53:57 mrg Exp $
 bin/firefox52
 lib/firefox52/application.ini
 lib/firefox52/browser/blocklist.xml
@@ -1151,6 +1151,7 @@ lib/firefox52/browser/chrome/devtools/modules/devtools/client/shared/vendor/reac
 lib/firefox52/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-redux.js
 lib/firefox52/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-virtualized.js
 lib/firefox52/browser/chrome/devtools/modules/devtools/client/shared/vendor/react.js
+${PLIST.debug}lib/firefox52/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dev.js
 lib/firefox52/browser/chrome/devtools/modules/devtools/client/shared/vendor/redux.js
 lib/firefox52/browser/chrome/devtools/modules/devtools/client/shared/vendor/reselect.js
 lib/firefox52/browser/chrome/devtools/modules/devtools/client/shared/vendor/seamless-immutable.js
