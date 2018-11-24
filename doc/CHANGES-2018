@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4823 2018/11/24 09:57:59 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4824 2018/11/24 10:02:03 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6746,3 +6746,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/p5-WWW-Form-UrlEncoded to 0.25 [wen 2018-11-24]
 	Updated www/p5-WWW-Mechanize to 1.90 [wen 2018-11-24]
 	Updated devel/p5-Modern-Perl to 1.20181021 [wen 2018-11-24]
+	Updated devel/p5-Module-CoreList to 5.20181120 [wen 2018-11-24]
