@@ -17,11 +17,14 @@
 :rcpt::451 GL - temporary*::451 greylisted, retry later (#4.7.1)
 :data::451 GL - temporary*::451 greylisted, retry later (#4.7.1)
 
+# Remove greeting for child process restarted after upgrading to STARTTLS
+SSL_CIPHER:greeting::2*::
+
 ########################################################################
 
 ### For users authenticated via authup(8):
 
-# SMTP conversation already in progress, replace greeting
+# Replace greeting for child process started after authenticating
 AUTHUP_USER:greeting::2*::235 ok, go ahead (#2.0.0)
 
 # If client closes connection, tell authup the session succeeded
