@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/09/27 16:17:20 wiz Exp $
+$NetBSD: distinfo,v 1.4 2018/11/24 09:22:25 wen Exp $
 
-SHA1 (Role-REST-Client-0.22.tar.gz) = 8ebb85274ce2eb1ce649536f2921a5730249075e
-RMD160 (Role-REST-Client-0.22.tar.gz) = ee25a8951f505e3063a286f3a36c583bb8ad46e0
-SHA512 (Role-REST-Client-0.22.tar.gz) = e0e4e37655e631c284e2fd627c7e7422975ef08b1d073d762d4a3895ae5ae1f1738cce53d607f6a378101636fe2ffe8cc8c78e3899dda1ba81e5faa98ed5fa69
-Size (Role-REST-Client-0.22.tar.gz) = 19832 bytes
+SHA1 (Role-REST-Client-0.23.tar.gz) = 2fc1cc4113b15d83a355721713456d671a17dd6a
+RMD160 (Role-REST-Client-0.23.tar.gz) = cb7d4e16fc27043256f48aff7a0204cb1ce7a584
+SHA512 (Role-REST-Client-0.23.tar.gz) = 2eeedfb566f5191ed50ffd89355d9c61f625aa47cf2407893252c80cca8c1df0cfc88442b3adbfa6123d54eb72d955c13db9826b4a7facadb6ec79b620ceb8c2
+Size (Role-REST-Client-0.23.tar.gz) = 20221 bytes
