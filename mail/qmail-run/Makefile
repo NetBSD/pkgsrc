@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2018/11/24 16:38:14 schmonz Exp $
+# $NetBSD: Makefile,v 1.60 2018/11/24 17:12:00 schmonz Exp $
 #
 
-DISTNAME=		qmail-run-20181124
+DISTNAME=		qmail-run-20181124.1
 CATEGORIES=		mail
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -15,7 +15,7 @@ DEPENDS+=		greylisting-spp-[0-9]*:../../mail/greylisting-spp
 DEPENDS+=		pkg_alternatives-[0-9]*:../../pkgtools/pkg_alternatives
 DEPENDS_QMAIL=		qmail>=1.03nb41:../../mail/qmail
 DEPENDS+=		${DEPENDS_QMAIL}
-DEPENDS+=		qmail-acceptutils>=20181124:../../mail/qmail-acceptutils
+DEPENDS+=		qmail-acceptutils>=20181124.1:../../mail/qmail-acceptutils
 DEPENDS+=		qmail-qfilter>1.5nb1:../../mail/qmail-qfilter
 DEPENDS+=		qmail-rejectutils>=20181110:../../mail/qmail-rejectutils
 

@@ -18,7 +18,7 @@
 :data::451 GL - temporary*::451 greylisted, retry later (#4.7.1)
 
 # Remove greeting for child process restarted after upgrading to STARTTLS
-SSL_CIPHER:greeting::2*::
+FIXSMTPIOTLS:greeting::2*::
 
 ########################################################################
 
