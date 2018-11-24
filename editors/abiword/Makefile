@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.179 2018/11/14 22:21:21 kleink Exp $
+# $NetBSD: Makefile,v 1.180 2018/11/24 19:14:09 nia Exp $
 
 .include 	"Makefile.common"
 DISTNAME=	abiword-${ABIVERSION}
-PKGREVISION=	20
 CATEGORIES=	editors
 MASTER_SITES=	http://www.abiword.com/downloads/abiword/${PKGVERSION_NOREV}/source/
 
@@ -18,7 +17,7 @@ DEPENDS+=	adwaita-icon-theme>0:../../graphics/adwaita-icon-theme
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	autoconf automake gmake pkg-config
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++11
 
 CONFIGURE_ARGS+=	--disable-default-plugins	#do not build any plugins by default
 CONFIGURE_ARGS+=	--enable-spell         # (Gtk+ only) include spell checking support
