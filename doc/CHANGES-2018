@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4827 2018/11/24 11:45:04 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4828 2018/11/24 11:51:18 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6750,3 +6750,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Module-ExtractUse to 0.343 [wen 2018-11-24]
 	Updated net/bftpd to 5.0 [nia 2018-11-24]
 	Updated devel/p5-MooseX-Getopt to 0.74 [wen 2018-11-24]
+	Updated devel/p5-Object-Declare to 0.24 [wen 2018-11-24]
