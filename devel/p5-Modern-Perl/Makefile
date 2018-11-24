@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2018/09/02 07:17:01 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2018/11/24 09:57:00 wen Exp $
 
-DISTNAME=	Modern-Perl-1.20180901
+DISTNAME=	Modern-Perl-1.20181021
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/C/CH/CHROMATIC/}
@@ -12,7 +12,7 @@ LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Modern/Perl/.packlist
-PERL5_MODULE_TYPE=	Module::Build
+
 PERL5_REQD+=            5.10.0
 
 .include "../../lang/perl5/module.mk"
