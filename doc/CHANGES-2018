@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4835 2018/11/24 15:35:40 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4836 2018/11/24 16:36:35 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6759,3 +6759,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added multimedia/libva-utils version 2.3.0 [ryoon 2018-11-24]
 	Updated devel/py-cython to 0.29.1 [adam 2018-11-24]
 	Updated devel/py-test to 4.0.1 [adam 2018-11-24]
+	Updated mail/qmail-acceptutils to 20181124 [schmonz 2018-11-24]
