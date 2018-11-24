@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4838 2018/11/24 17:11:19 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.4839 2018/11/24 17:12:55 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6762,3 +6762,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/qmail-acceptutils to 20181124 [schmonz 2018-11-24]
 	Updated mail/qmail-run to 20181124 [schmonz 2018-11-24]
 	Updated mail/qmail-acceptutils to 20181124.1 [schmonz 2018-11-24]
+	Updated mail/qmail-run to 20181124.1 [schmonz 2018-11-24]
