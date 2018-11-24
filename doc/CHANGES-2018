@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4813 2018/11/24 04:02:31 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4814 2018/11/24 04:07:08 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6736,3 +6736,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated archivers/p5-Archive-Zip to 1.64 [wen 2018-11-24]
 	Updated converters/p5-Cpanel-JSON-XS to 4.07 [wen 2018-11-24]
 	Updated converters/p5-JSON-XS to 4.0 [wen 2018-11-24]
+	Updated databases/p5-DB_File to 1.843 [wen 2018-11-24]
