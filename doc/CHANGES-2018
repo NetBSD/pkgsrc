@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4825 2018/11/24 11:00:15 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4826 2018/11/24 11:29:29 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6748,3 +6748,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Modern-Perl to 1.20181021 [wen 2018-11-24]
 	Updated devel/p5-Module-CoreList to 5.20181120 [wen 2018-11-24]
 	Updated devel/p5-Module-ExtractUse to 0.343 [wen 2018-11-24]
+	Updated net/bftpd to 5.0 [nia 2018-11-24]
