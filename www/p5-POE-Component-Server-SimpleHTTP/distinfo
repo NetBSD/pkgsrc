@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/09/27 16:04:54 wiz Exp $
+$NetBSD: distinfo,v 1.5 2018/11/24 08:21:23 wen Exp $
 
-SHA1 (POE-Component-Server-SimpleHTTP-2.26.tar.gz) = 9cbe07432d7b469b13b397e3edb57cc99502efe4
-RMD160 (POE-Component-Server-SimpleHTTP-2.26.tar.gz) = da914ac03ec966a4fd0b43c4242908652c68e3b5
-SHA512 (POE-Component-Server-SimpleHTTP-2.26.tar.gz) = 74d992bcec76318e502a0e869d8d70c0bc14b3dc4280c400ca1ecb31f56379fcfee5586b216fcec0db4d9751d4d9c4c22fc1acb85f5f715421c7ffec868af97b
-Size (POE-Component-Server-SimpleHTTP-2.26.tar.gz) = 44105 bytes
+SHA1 (POE-Component-Server-SimpleHTTP-2.28.tar.gz) = 1c8901994bcc23aa11b1613b5f1638329cf06afb
+RMD160 (POE-Component-Server-SimpleHTTP-2.28.tar.gz) = 7108ccf51610eecf911ab477e6e3e7bc415e6288
+SHA512 (POE-Component-Server-SimpleHTTP-2.28.tar.gz) = 1755341a2f9f2dad9f961135909369eee5f632d4ac2df95441df37c71acfa2528c7b8f6515b43ed91afd9858e4fd8053e6686c29cde0d6cdf2f0b1271456106d
+Size (POE-Component-Server-SimpleHTTP-2.28.tar.gz) = 44982 bytes
