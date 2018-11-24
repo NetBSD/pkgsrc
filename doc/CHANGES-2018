@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4810 2018/11/24 03:31:00 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4811 2018/11/24 03:45:02 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6733,3 +6733,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/git to 2.19.2 [leot 2018-11-23]
 	Updated www/bozohttpd to 20181123 [mrg 2018-11-23]
 	Updated archivers/p5-Archive-Tar to 1.32 [wen 2018-11-24]
+	Updated archivers/p5-Archive-Zip to 1.64 [wen 2018-11-24]
