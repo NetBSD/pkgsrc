@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2018/11/24 12:50:01 nia Exp $
+# $NetBSD: Makefile,v 1.2 2018/11/24 15:04:04 nia Exp $
 
 DISTNAME=	dmz-cursor-theme_${PKGVERSION_NOREV}
 PKGNAME=	xcursor-vanilla-dmz-0.4.5
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_DEBIAN:=/pool/main/d/dmz-cursor-theme/}
+MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/d/dmz-cursor-theme/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
