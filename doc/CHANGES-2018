@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4818 2018/11/24 08:22:19 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4819 2018/11/24 09:23:23 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6741,3 +6741,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/p5-Dancer2 to 0.207000 [wen 2018-11-24]
 	Updated www/p5-HTML-Selector-XPath to 0.25 [wen 2018-11-24]
 	Updated www/p5-POE-Component-Server-SimpleHTTP to 2.28 [wen 2018-11-24]
+	Updated www/p5-Role-REST-Client to 0.23 [wen 2018-11-24]
