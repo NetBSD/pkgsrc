@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2018/08/22 09:44:16 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2018/11/24 10:59:19 wen Exp $
 #
 
-DISTNAME=	Module-ExtractUse-0.342
+DISTNAME=	Module-ExtractUse-0.343
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Module/}
 
@@ -12,7 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Module-ExtractUse/
 COMMENT=	Perl 5 module to find out what modules are used
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-Parse-RecDescent>=1.94:../../devel/p5-Parse-RecDescent
+DEPENDS+=	p5-Parse-RecDescent>=1.967.9:../../devel/p5-Parse-RecDescent
 DEPENDS+=	p5-Pod-Strip>=1.00:../../textproc/p5-Pod-Strip
 
 BUILD_DEPENDS+=	p5-Test-Deep>=0.087:../../devel/p5-Test-Deep
