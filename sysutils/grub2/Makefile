@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/11/23 15:41:19 triaxx Exp $
+# $NetBSD: Makefile,v 1.18 2018/11/24 07:55:28 triaxx Exp $
 
 DISTNAME=		grub-2.02
 PKGNAME=		${DISTNAME:S/grub/grub2/}
@@ -16,7 +16,7 @@ CONFLICTS=		grub-[0-9]*
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
 
 USE_LANGUAGES+=		c c++
-USE_TOOLS+=		gmake flex bison gettext:run awk
+USE_TOOLS+=		gmake flex bison gettext:run awk pkg-config
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
@@ -43,7 +43,6 @@ FORTIFY_SUPPORTED=	no
 GCC_REQD+=		4.4
 FLEX_REQD=		2.5.35
 BUILD_DEPENDS+=		help2man>=1.36:../../converters/help2man
-BUILD_DEPENDS+=		pkg-config-[0-9]*:../../devel/pkg-config
 
 #
 # The configure script sets the variables `target_cpu' and `platform', which
