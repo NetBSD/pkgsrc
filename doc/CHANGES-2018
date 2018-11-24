@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4833 2018/11/24 14:07:34 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.4834 2018/11/24 14:09:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6756,3 +6756,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added x11/xcursor-vanilla-dmz version 0.4.5 [nia 2018-11-24]
 	Added x11/xcursor-capitaine version 2.1 [nia 2018-11-24]
 	Updated multimedia/intel-vaapi-driver to 2.2.0nb1 [ryoon 2018-11-24]
+	Added multimedia/libva-utils version 2.3.0 [ryoon 2018-11-24]
