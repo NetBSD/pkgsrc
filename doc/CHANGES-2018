@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4840 2018/11/24 19:14:26 nia Exp $
+$NetBSD: CHANGES-2018,v 1.4841 2018/11/24 19:14:56 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6764,3 +6764,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/qmail-acceptutils to 20181124.1 [schmonz 2018-11-24]
 	Updated mail/qmail-run to 20181124.1 [schmonz 2018-11-24]
 	Updated editors/abiword to 3.0.2 [nia 2018-11-24]
+	Updated editors/abiword-plugins to 3.0.2 [nia 2018-11-24]
