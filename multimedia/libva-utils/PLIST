@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2018/11/24 14:08:56 ryoon Exp $
+bin/avcenc
+bin/avcstreamoutdemo
+bin/h264encode
+bin/hevcencode
+bin/jpegenc
+bin/loadjpeg
+bin/mpeg2vaenc
+bin/mpeg2vldemo
+bin/vainfo
+bin/vavpp
+bin/vp8enc
+bin/vp9enc
