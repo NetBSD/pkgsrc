@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2018/08/22 09:47:56 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2018/11/24 09:52:47 wen Exp $
 
-DISTNAME=	WWW-Mechanize-1.88
+DISTNAME=	WWW-Mechanize-1.90
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=WWW/}
 
@@ -14,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-CGI-[0-9]*:../../www/p5-CGI
 DEPENDS+=	p5-HTML-Form>=6.00:../../www/p5-HTML-Form
 DEPENDS+=	p5-HTML-Parser>=3.33:../../www/p5-HTML-Parser
-DEPENDS+=	p5-HTML-Tree-[0-9]*:../../www/p5-HTML-Tree
+DEPENDS+=	p5-HTML-Tree>=5.0:../../www/p5-HTML-Tree
 DEPENDS+=	p5-HTTP-Daemon-[0-9]*:../../www/p5-HTTP-Daemon
 DEPENDS+=	p5-HTTP-Message>=1.3:../../www/p5-HTTP-Message
 DEPENDS+=	p5-HTTP-Server-Simple>=0.35:../../www/p5-HTTP-Server-Simple
