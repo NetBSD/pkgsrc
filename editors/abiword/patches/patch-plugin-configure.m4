@@ -1,10 +1,10 @@
-$NetBSD: patch-plugin-configure.m4,v 1.1 2015/09/13 21:32:13 nros Exp $
+$NetBSD: patch-plugin-configure.m4,v 1.2 2018/11/24 19:14:09 nia Exp $
 * adapt wordperfect plugins to dependecies available in pkgsrc 
   from abiword svn date 2014-12-27
---- plugin-configure.m4.orig	2014-12-23 05:13:14.000000000 +0000
+--- plugin-configure.m4.orig	2016-10-21 00:42:58.000000000 +0000
 +++ plugin-configure.m4
-@@ -1355,7 +1355,7 @@ AC_SUBST([BMP_CFLAGS])
- AC_SUBST([BMP_LIBS])
+@@ -72,7 +72,7 @@ AC_SUBST([GRAMMAR_CFLAGS])
+ AC_SUBST([GRAMMAR_LIBS])
  
  
 -wpg_pkgs="$gsf_req libwpg-0.2 >= 0.2.0 libwpd-0.9 >= 0.9.0 libwpd-stream-0.9 >= 0.9.0"
@@ -12,8 +12,8 @@ $NetBSD: patch-plugin-configure.m4,v 1.1 2015/09/13 21:32:13 nros Exp $
  wpg_deps="no"
  
  if test "$enable_wpg" != ""; then
-@@ -1469,8 +1469,8 @@ AC_SUBST([AIKSAURUS_CFLAGS])
- AC_SUBST([AIKSAURUS_LIBS])
+@@ -962,8 +962,8 @@ AC_SUBST([XSLFO_CFLAGS])
+ AC_SUBST([XSLFO_LIBS])
  
  
 -wordperfect_pkgs="libwpg-0.2 >= 0.2.0 libwpd-0.9 >= 0.9.0 libwpd-stream-0.9 >= 0.9.0 $gsf_req"
