@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4830 2018/11/24 12:10:22 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4831 2018/11/24 12:50:18 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6753,3 +6753,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Object-Declare to 0.24 [wen 2018-11-24]
 	Updated devel/p5-Object-Signature to 1.08 [wen 2018-11-24]
 	Updated devel/p5-Parallel-ForkManager to 2.02 [wen 2018-11-24]
+	Added x11/xcursor-vanilla-dmz version 0.4.5 [nia 2018-11-24]
