@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4809 2018/11/23 21:37:17 mrg Exp $
+$NetBSD: CHANGES-2018,v 1.4810 2018/11/24 03:31:00 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6732,3 +6732,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/dnscrypt-proxy2 to 2.0.19 [nia 2018-11-23]
 	Updated devel/git to 2.19.2 [leot 2018-11-23]
 	Updated www/bozohttpd to 20181123 [mrg 2018-11-23]
+	Updated archivers/p5-Archive-Tar to 1.32 [wen 2018-11-24]
