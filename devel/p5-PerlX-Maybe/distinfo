@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/03/14 08:02:23 wiz Exp $
+$NetBSD: distinfo,v 1.2 2018/11/25 14:44:38 wen Exp $
 
-SHA1 (PerlX-Maybe-1.001.tar.gz) = d79473df467f5aa4e5134a78f2278c8573562f91
-RMD160 (PerlX-Maybe-1.001.tar.gz) = 52ee448573bd6412e28f8230a7d1a323d08785f7
-SHA512 (PerlX-Maybe-1.001.tar.gz) = 9132e80a27ff18ba6a1c4b156c421a0737e65a03361b1c9a30a8de2c3653e64ff99c9a069045ed413760a717f526ffa7709624ba3ec04aa2d83f5e51432d0342
-Size (PerlX-Maybe-1.001.tar.gz) = 16810 bytes
+SHA1 (PerlX-Maybe-1.201.tar.gz) = 8af98f130cf2e38ddd2bdb4de2690b248befd216
+RMD160 (PerlX-Maybe-1.201.tar.gz) = 46740620fcf7220435a07a4e7245083b4e095a82
+SHA512 (PerlX-Maybe-1.201.tar.gz) = e98059e7be69ca0893cc0e48af616be940808b9574a57691c0661a21a35010f46a7c45b202e57495360d3bf4d29c29d9430fb8a91cc4f963ff48d37c6087c2d3
+Size (PerlX-Maybe-1.201.tar.gz) = 18147 bytes
