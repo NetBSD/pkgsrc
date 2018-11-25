@@ -1,11 +1,25 @@
-$NetBSD: patch-panel-plugin_battery.c,v 1.2 2017/06/20 21:26:54 youri Exp $
+$NetBSD: patch-panel-plugin_battery.c,v 1.3 2018/11/25 20:55:42 martin Exp $
 
 Fix for NetBSD.
 
---- panel-plugin/battery.c.orig	2012-06-17 20:05:17.000000000 +0000
-+++ panel-plugin/battery.c
-@@ -30,8 +30,16 @@
- #elif (defined(__OpenBSD__) || defined(__NetBSD__))
+--- panel-plugin/battery.c.orig	2016-10-29 08:37:38.000000000 +0200
++++ panel-plugin/battery.c	2018-11-25 21:49:59.741230700 +0100
+@@ -26,13 +26,28 @@
+ #include <config.h>
+ #endif
+ 
+-#if (defined(__FreeBSD__) || defined(__FreeBSD_kernel__)) && (defined(i386) || defined(__i386__))
++#ifdef __NetBSD__
++#include <sys/param.h>
++#include <sys/ioctl.h>
++#include <dev/apm/apmbios.h>
++#include <dev/apm/apmio.h>
++#define APMDEVICE "/dev/apm"
++#define _ACPI_APM_BATT_UNKNOWN	0xffff /* from sys/dev/acpi/acpi_apm.c */
++#elif (defined(__FreeBSD__) || defined(__FreeBSD_kernel__)) && (defined(i386) || defined(__i386__))
+ #include <machine/apm_bios.h>
+-#elif (defined(__OpenBSD__) || defined(__NetBSD__))
++#elif (defined(__OpenBSD__)
  #include <sys/param.h>
  #include <sys/ioctl.h>
 +#if defined(__sparc64__)
@@ -21,7 +35,7 @@ Fix for NetBSD.
  #elif __linux__
  #include <libapm.h>
  #endif
-@@ -172,7 +180,7 @@ init_options(t_battmon_options *options)
+@@ -162,7 +177,7 @@ init_options(t_battmon_options *options)
  gboolean
  detect_battery_info(t_battmon *battmon)
  {
@@ -30,7 +44,7 @@ Fix for NetBSD.
    /* This is how I read the information from the APM subsystem under
       FreeBSD.  Each time this functions is called (once every second)
       the APM device is opened, read from and then closed.
-@@ -411,7 +419,7 @@ update_apm_status(t_battmon *battmon)
+@@ -401,7 +416,7 @@ update_apm_status(t_battmon *battmon)
          acline = apm.ac_line_status ? TRUE : FALSE;
  
      }
@@ -39,7 +53,7 @@ Fix for NetBSD.
      else {
   /* This is how I read the information from the APM subsystem under
       FreeBSD.  Each time this functions is called (once every second)
-@@ -510,6 +518,11 @@ battmon.c:241: for each function it appe
+@@ -500,6 +515,11 @@ battmon.c:241: for each function it appe
      if(battmon->options.display_percentage && charge > 0 && !(battmon->options.hide_when_full && acline && charge >= 99)){
          gtk_widget_show(GTK_WIDGET(battmon->charge));
          gtk_widget_show(GTK_WIDGET(battmon->timechargealignment));
@@ -51,7 +65,7 @@ Fix for NetBSD.
          g_snprintf(buffer, sizeof(buffer),"%d%% ", charge);
          gtk_label_set_text(battmon->charge,buffer);
      } else {
-@@ -519,6 +532,10 @@ battmon.c:241: for each function it appe
+@@ -509,6 +529,10 @@ battmon.c:241: for each function it appe
      if (battmon->options.display_time && time_remaining > 0 && !(battmon->options.hide_when_full && acline && charge >= 99 )){
          gtk_widget_show(GTK_WIDGET(battmon->rtime));
          gtk_widget_show(GTK_WIDGET(battmon->timechargealignment));
