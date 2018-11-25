@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4848 2018/11/25 13:50:41 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4849 2018/11/25 14:26:35 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6773,3 +6773,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Test-HTTP-LocalServer to 0.64 [wen 2018-11-25]
 	Updated devel/p5-Specio to 0.43 [wen 2018-11-25]
 	Updated devel/p5-Proc-Pidfile to 1.09 [wen 2018-11-25]
+	Updated devel/p5-prefork to 1.05 [wen 2018-11-25]
