@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.74 2018/10/08 10:35:15 abs Exp $
+# $Id: pkg_chk.sh,v 1.75 2018/11/25 20:17:26 martin Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Make -g list user-installed packages first, followed by commented
@@ -35,6 +35,7 @@
 PATH=${PATH}:/usr/sbin:/usr/bin
 
 SUMMARY_FILES="pkg_summary.bz2 pkg_summary.gz pkg_summary.txt"
+DO_CLEAN="CLEANDEPENDS=yes"
 
 bin_pkg_info2pkgdb()
     {
@@ -665,7 +666,7 @@ pkg_install()
 	    unset PKG_PATH
 	fi
     elif [ -n "$opt_s" ]; then
-	run_cmd "cd $PKGSRCDIR/$PKGDIR && ${MAKE} update CLEANDEPENDS=yes"
+	run_cmd "cd $PKGSRCDIR/$PKGDIR && ${MAKE} update ${DO_CLEAN}"
     fi
 
     if [ -z "$opt_n" -a -z "$opt_q" -a ! -d $PKG_DBDIR/$PKGNAME ];then
@@ -758,6 +759,7 @@ usage()
 	-b	Use binary packages
 	-C conf Use pkgchk.conf file 'conf'
 	-D tags Comma separated list of additional pkgchk.conf tags to set
+	-d	do not clean the pkg build dirs
 	-f	Perform a 'make fetch' for all required packages
 	-g	Generate an initial pkgchk.conf file
 	-h	This help
@@ -803,7 +805,7 @@ verbose_var()
     }
 
 original_argv="$@" # just used for verbose output
-while getopts BC:D:L:P:U:abcfghiklNnpqrsuv ch; do
+while getopts BC:D:L:P:U:abcdfghiklNnpqrsuv ch; do
     case "$ch" in
 	a ) opt_a=1 ;;
 	B ) opt_B=1 ;;
@@ -811,6 +813,7 @@ while getopts BC:D:L:P:U:abcfghiklNnpqrsuv ch; do
 	C ) opt_C="$OPTARG" ;;
 	c ) opt_a=1 ; opt_q=1 ; echo "** -c deprecated - use -a -q" 1>&2 ;;
 	D ) opt_D="$OPTARG" ;;
+	d ) DO_CLEAN="NOCLEAN=yes" ;;
 	f ) opt_f=1 ;;
 	g ) opt_g=1 ;;
 	h ) opt_h=1 ;;
