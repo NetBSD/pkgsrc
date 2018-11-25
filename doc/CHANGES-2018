@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4849 2018/11/25 14:26:35 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4850 2018/11/25 14:38:23 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6774,3 +6774,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Specio to 0.43 [wen 2018-11-25]
 	Updated devel/p5-Proc-Pidfile to 1.09 [wen 2018-11-25]
 	Updated devel/p5-prefork to 1.05 [wen 2018-11-25]
+	Updated devel/p5-PPIx-Regexp to 0.063 [wen 2018-11-25]
