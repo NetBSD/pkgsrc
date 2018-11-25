@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4854 2018/11/25 17:03:42 gdt Exp $
+$NetBSD: CHANGES-2018,v 1.4855 2018/11/25 20:17:41 martin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6780,3 +6780,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/py-cryptodome to 3.7.1 [adam 2018-11-25]
 	Updated graphics/py-graphviz to 0.10.1 [adam 2018-11-25]
 	Updated devel/libusb1 to 1.0.22 [gdt 2018-11-25]
+	Updated pkgtools/pkg_chk to 2.0.11 [martin 2018-11-25]
