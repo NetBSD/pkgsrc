@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2018/11/12 14:40:21 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.15 2018/11/25 12:41:50 ryoon Exp $
 # used by lang/oracle-jre8/Makefile
 # used by lang/oracle-jdk8/Makefile
 
@@ -27,7 +27,7 @@ CHECK_SSP_SUPPORTED=	no
 CTF_SUPPORTED=		no
 
 # JDK8 Update number
-UPDATE_NUMBER=	172
+UPDATE_NUMBER=	191
 
 .include "../../mk/bsd.prefs.mk"
 

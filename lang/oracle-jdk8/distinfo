@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.13 2018/05/26 22:24:01 ryoon Exp $
+$NetBSD: distinfo,v 1.14 2018/11/25 12:41:50 ryoon Exp $
 
-SHA1 (jdk-8u172-linux-i586.tar.gz) = adedbac62c21c3127ba5e69297311e0b9b07bb82
-RMD160 (jdk-8u172-linux-i586.tar.gz) = 1d89ddf4df41025c8f70f113788d81badfd1e773
-SHA512 (jdk-8u172-linux-i586.tar.gz) = 1b2a8a582e85f0ea6b2ae5358e5392b351a6bb4f1277c15281861387119cce9cc0c0c8efddf483aa79eddc273812874413af24c0bafa9e39281995f9cfa0719e
-Size (jdk-8u172-linux-i586.tar.gz) = 193889453 bytes
-SHA1 (jdk-8u172-linux-x64.tar.gz) = 6800d754822fbb4900976447a9c8624c84017f26
-RMD160 (jdk-8u172-linux-x64.tar.gz) = 3036eeb6aa31a8ddd2224f3d4df076e4ca21659e
-SHA512 (jdk-8u172-linux-x64.tar.gz) = b098de15802a1053053f955e87a2ad9bc56667f249180eebe70620f6ce0a2ff5377652b72cf99c11f73ed1ab7962ca01e6c4f2f52286c0cefe8fc8bfe1229889
-Size (jdk-8u172-linux-x64.tar.gz) = 190921804 bytes
-SHA1 (jdk-8u172-solaris-x64.tar.gz) = 64cdd96fbcf6e76d227d324b52ab79e267537ad6
-RMD160 (jdk-8u172-solaris-x64.tar.gz) = 5b91b94e157ec9e7765a3f1d771e965160643ea8
-SHA512 (jdk-8u172-solaris-x64.tar.gz) = 7de041389aac89060091b08aac55d713fb99a7805fce94605e9798bbcc228dbc65db265d9dcbac87953d7c82b9773debb26bbe83301cd8a344233cb7045964e4
-Size (jdk-8u172-solaris-x64.tar.gz) = 101774902 bytes
+SHA1 (jdk-8u191-linux-i586.tar.gz) = 5da824d3f561f3d55fad069b53f5e1101b6071b8
+RMD160 (jdk-8u191-linux-i586.tar.gz) = c26f7e40c53bb1bc676a323ef8b54ac4e7cea776
+SHA512 (jdk-8u191-linux-i586.tar.gz) = 32cd7506791b457c64a3ee96e216e1676f962982ffd10c4335c8d7f785cf57bba23c332d0d3358a66b0ba655474a03a8e9e4f94facf3af743e73e05929ac3887
+Size (jdk-8u191-linux-i586.tar.gz) = 194712017 bytes
+SHA1 (jdk-8u191-linux-x64.tar.gz) = 699b8aaba9fdacfc8d00d1cf8f727c3b302ed623
+RMD160 (jdk-8u191-linux-x64.tar.gz) = dfdca9d60ad6cbb41fffd6cf73f6b34a2bece0d5
+SHA512 (jdk-8u191-linux-x64.tar.gz) = 28306b229d4eca8d0428565e10bbe200605cd7ca8f71e2c80d6333f71fc8bb2dd5bfb1bf60b469682a85162297c1031528bf55874c0b08f64775d4a1946cad03
+Size (jdk-8u191-linux-x64.tar.gz) = 191753373 bytes
+SHA1 (jdk-8u191-solaris-x64.tar.gz) = f5521cee8aeac44494877967f693e9bc7568b832
+RMD160 (jdk-8u191-solaris-x64.tar.gz) = f532e021f640c84e5e975f5954d66aa5f3383219
+SHA512 (jdk-8u191-solaris-x64.tar.gz) = 8f1e95343856682ffbd0ee7cfcf6c32f43a226778fb22b99f056305730e76ef13a42540c14adf3537e41b585d7057fca470fa870ce9d5dc5a910549bd7ca9df0
+Size (jdk-8u191-solaris-x64.tar.gz) = 96606199 bytes

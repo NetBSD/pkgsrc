@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/09/19 18:19:24 abs Exp $
+# $NetBSD: Makefile,v 1.8 2018/11/25 12:41:50 ryoon Exp $
 
 # Note: This must be kept in sync with the oracle-jre8 package
 # Note: make sure you include sums for both the x86_64 and the x86_32
@@ -6,7 +6,6 @@
 
 DISTNAME=	jdk-8u${UPDATE_NUMBER}-${DIST_OS}-${DIST_ARCH}
 PKGNAME=	oracle-jdk8-8.0.${UPDATE_NUMBER}
-PKGREVISION=	1
 MASTER_SITES=	# empty
 
 LICENSE=	oracle-binary-code-license
