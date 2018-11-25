@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/09/09 06:58:13 wiz Exp $
+$NetBSD: distinfo,v 1.5 2018/11/25 13:49:20 wen Exp $
 
-SHA1 (Proc-Pidfile-1.07.tar.gz) = 3f378aa61c9f2f7ffb74f77248dbf9636f694fd8
-RMD160 (Proc-Pidfile-1.07.tar.gz) = 362c0db7de9fb6bd011f297a5e2bef916edf6118
-SHA512 (Proc-Pidfile-1.07.tar.gz) = 7dc132b4ebf1ee1a532661fc2d8375b2b22cf0d14825eed443ce3e721e723c59f4456e4e1f58bb4d7b744d5af796c8366e3e227e2f93fc42eb13f281ef88a334
-Size (Proc-Pidfile-1.07.tar.gz) = 12204 bytes
+SHA1 (Proc-Pidfile-1.09.tar.gz) = 01fc51b0779c9cb60950ee30f9a416a7a1a75a41
+RMD160 (Proc-Pidfile-1.09.tar.gz) = 64e80f301533c6eb31cf978e8553ce59812a8056
+SHA512 (Proc-Pidfile-1.09.tar.gz) = 320c731348f57bbd3f5b9c9a316657b10c112f5a46305f7cf4ed138bfeb35445df26e8fd287261ec5c014b588e132a6555b48b8673aa377c36c82d21007d7270
+Size (Proc-Pidfile-1.09.tar.gz) = 14153 bytes
