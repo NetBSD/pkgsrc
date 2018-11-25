@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.43 2018/07/04 13:40:36 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.44 2018/11/25 20:20:57 spz Exp $
 
 # used by sysutils/amanda-common/Makefile
 # used by sysutils/amanda-client/Makefile
@@ -79,6 +79,7 @@ CONFIGURE_ARGS+=	--with-bsdtcp-security
 CONFIGURE_ARGS+=	--with-bsdudp-security
 CONFIGURE_ARGS+=	--with-dump-honor-nodump
 CONFIGURE_ARGS+=	--disable-installperms
+CONFIGURE_ARGS+=	--with-security-file=${PKG_SYSCONFDIR:Q}/amanda/amanda-security.conf
 
 LDFLAGS.SunOS+=		-lsocket
 LDFLAGS.NetBSD+=	-lutil

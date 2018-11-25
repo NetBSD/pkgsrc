@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2018/11/23 22:33:13 spz Exp $
+# $NetBSD: Makefile,v 1.77 2018/11/25 20:20:57 spz Exp $
 
 PKGNAME=		amanda-common-${AMANDA_VERSION}
-#PKGREVISION=		1
+PKGREVISION=		1
 
 COMMENT=		Common libraries and binaries for Amanda
 
@@ -29,6 +29,9 @@ OWN_DIRS_PERMS+=	${VARBASE}/log/amanda ${AMANDA_USER} ${AMANDA_GROUP} 0750
 
 CONF_FILES_PERMS=	${PREFIX}/share/doc/amanda/example/amanda-client.conf \
 			${PKG_SYSCONFDIR}/amanda/amanda-client.conf     \
+			${AMANDA_USER} ${AMANDA_GROUP} 0600
+CONF_FILES_PERMS=	${PREFIX}/share/doc/amanda/example/amanda-security.conf \
+			${PKG_SYSCONFDIR}/amanda/amanda-security.conf     \
 			${AMANDA_USER} ${AMANDA_GROUP} 0600
 
 REQD_FILES_PERMS+=	/dev/null ${AMANDA_VAR}/amandates ${AMANDA_USER} ${AMANDA_GROUP} 0640
