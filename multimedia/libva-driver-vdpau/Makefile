@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2018/11/23 08:06:32 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.8 2018/11/25 20:39:29 wiz Exp $
 
-DISTNAME=	vdpau-driver-${PKGNAME:C/^.*-//}
+DISTNAME=	vdpau-driver-${PKGNAME_NOREV:C/^.*-//}
 PKGNAME=	libva-driver-vdpau-0.7.4
 PKGREVISION=	1
 CATEGORIES=	multimedia
