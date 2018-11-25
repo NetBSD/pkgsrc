@@ -1,9 +1,9 @@
-$NetBSD: patch-libusb_os_sunos__usb.c,v 1.2 2017/10/02 13:20:28 leot Exp $
+$NetBSD: patch-libusb_os_sunos__usb.c,v 1.3 2018/11/25 17:03:34 gdt Exp $
 
 add di_prop_exists() for cases such as illumos not having the function yet
 add timerfd support for cases such as illumos already having support
 
---- libusb/os/sunos_usb.c.orig	2016-04-01 02:22:35.735471484 +0000
+--- libusb/os/sunos_usb.c.orig	2018-03-17 07:23:37.000000000 +0000
 +++ libusb/os/sunos_usb.c
 @@ -1,6 +1,7 @@
  /*
@@ -13,7 +13,7 @@ add timerfd support for cases such as illumos already having support
   *
   * This library is free software; you can redistribute it and/or
   * modify it under the terms of the GNU Lesser General Public
-@@ -38,6 +39,12 @@
+@@ -43,6 +44,12 @@
  #include "libusbi.h"
  #include "sunos_usb.h"
  
@@ -23,10 +23,10 @@ add timerfd support for cases such as illumos already having support
 +}
 +#endif
 +
- /*
-  * Backend functions
-  */
-@@ -1254,6 +1261,13 @@
+ #define UPDATEDRV_PATH	"/usr/sbin/update_drv"
+ #define UPDATEDRV	"update_drv"
+ 
+@@ -1637,6 +1644,13 @@ sunos_usb_get_status(int fd)
  	return (status);
  }
  
@@ -37,10 +37,10 @@ add timerfd support for cases such as illumos already having support
 +}
 +#endif
 +
- const struct usbi_os_backend sunos_backend = {
+ const struct usbi_os_backend usbi_backend = {
          .name = "Solaris",
          .caps = 0,
-@@ -1286,6 +1300,9 @@
+@@ -1669,6 +1683,9 @@ const struct usbi_os_backend usbi_backen
          .clear_transfer_priv = sunos_clear_transfer_priv,
          .handle_transfer_completion = sunos_handle_transfer_completion,
          .clock_gettime = sunos_clock_gettime,
