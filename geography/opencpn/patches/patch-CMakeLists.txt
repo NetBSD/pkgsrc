@@ -1,7 +1,7 @@
-$NetBSD: patch-CMakeLists.txt,v 1.7 2018/07/19 17:58:57 bouyer Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.8 2018/11/25 17:04:40 bouyer Exp $
 
---- CMakeLists.txt.orig	2018-02-07 12:08:26.000000000 +0100
-+++ CMakeLists.txt	2018-07-19 17:20:24.093239101 +0200
+--- CMakeLists.txt.orig	2018-11-07 04:14:41.000000000 +0100
++++ CMakeLists.txt	2018-11-25 14:47:14.684811535 +0100
 @@ -91,8 +91,21 @@
  # Based on code from nohal
  IF (NOT WIN32)
@@ -42,20 +42,15 @@ $NetBSD: patch-CMakeLists.txt,v 1.7 2018/07/19 17:58:57 bouyer Exp $
    find_path(OPENGLESv1_INCLUDE_DIR GLES/gl.h )
    IF (OPENGLESv1_INCLUDE_DIR)
      MESSAGE (STATUS "Found OpenGLESv1")
-@@ -868,7 +880,11 @@
+@@ -927,7 +939,6 @@
  
   
  IF(NOT WIN32 AND NOT APPLE AND NOT QT_ANDROID)
 -  OPTION(OCPN_FORCE_GTK3 "Force the build to use GTK3" OFF)
-+  IF(CMAKE_SYSTEM_NAME MATCHES ".*NetBSD")
-+    OPTION(OCPN_FORCE_GTK3 "Force the build to use GTK3" ON)
-+  ELSE(CMAKE_SYSTEM_NAME MATCHES ".*NetBSD")
-+    OPTION(OCPN_FORCE_GTK3 "Force the build to use GTK3" OFF)
-+  ENDIF(CMAKE_SYSTEM_NAME MATCHES ".*NetBSD")
  
    IF(NOT OCPN_FORCE_GTK3)
      FIND_PACKAGE(GTK2)
-@@ -1919,10 +1935,10 @@
+@@ -1978,10 +1989,10 @@
  
  #   Certain older Cmake FindGTK2 modules ( e.g. cmake-2.8.0-2) do not yield all of the required link libraries
  #   So, add them manually.  These declarations may be redundant in some architectures, but do no harm.
