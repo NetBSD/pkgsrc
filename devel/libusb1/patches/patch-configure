@@ -1,12 +1,12 @@
-$NetBSD: patch-configure,v 1.5 2017/10/02 13:20:28 leot Exp $
+$NetBSD: patch-configure,v 1.6 2018/11/25 17:03:34 gdt Exp $
 
 prepare DragonFlyBSD backend support
 
---- configure.orig	2016-03-25 05:42:03.826039410 +0000
+--- configure.orig	2018-03-25 01:20:03.000000000 +0000
 +++ configure
-@@ -11939,6 +11942,11 @@ $as_echo "OpenBSD" >&6; }
- 	backend="openbsd"
- 	threads="posix"
+@@ -16266,6 +16266,11 @@ $as_echo "OpenBSD" >&6; }
+ 	backend=openbsd
+ 	threads=posix
  	;;
 +*-dragonfly*)
 +	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: DragonflyBSD (using OpenBSD backend)" >&5

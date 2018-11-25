@@ -1,12 +1,12 @@
-$NetBSD: patch-configure.ac,v 1.5 2017/10/02 13:20:28 leot Exp $
+$NetBSD: patch-configure.ac,v 1.6 2018/11/25 17:03:34 gdt Exp $
 
 prepare DragonFlyBSD support
 
---- configure.ac.orig	2015-09-05 17:20:40.000000000 +0000
+--- configure.ac.orig	2018-03-17 07:23:37.000000000 +0000
 +++ configure.ac
 @@ -72,6 +72,10 @@ case $host in
- 	backend="openbsd"
- 	threads="posix"
+ 	backend=openbsd
+ 	threads=posix
  	;;
 +*-dragonfly*)
 +	AC_MSG_RESULT([DragonflyBSD (using OpenBSD backend)])
@@ -14,4 +14,4 @@ prepare DragonFlyBSD support
 +	;;
  *-netbsd*)
  	AC_MSG_RESULT([NetBSD])
- 	backend="netbsd"
+ 	backend=netbsd
