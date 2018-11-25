@@ -1,16 +1,16 @@
-.\"	$NetBSD: pkg_chk.8,v 1.30 2014/04/21 21:32:26 abs Exp $
+.\"	$NetBSD: pkg_chk.8,v 1.31 2018/11/25 20:17:26 martin Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@NetBSD.org)
 .\" Absolutely no warranty.
 .\"
-.Dd May 2, 2008
+.Dd November 25, 2018
 .Dt PKG_CHK 8
 .Sh NAME
 .Nm pkg_chk
 .Nd check, and optionally update, installed packages
 .Sh SYNOPSIS
 .Nm
-.Op Fl aBbcfhiklNnpqrsuv
+.Op Fl aBbcdfhiklNnpqrsuv
 .Op Fl C Ar conf
 .Op Fl D Ar tags
 .Op Fl L Ar file
@@ -61,6 +61,8 @@ Add the comma separated list of tags to those checked when parsing
 .Pa pkgchk.conf .
 Also includes
 .Ev PKGCHK_TAGS .
+.It Fl d
+do not clean the build directories after updating packages from source.
 .It Fl f
 Fetch all missing/mismatched packages found.
 Can be used with
