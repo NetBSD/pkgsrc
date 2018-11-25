@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4846 2018/11/25 13:13:42 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4847 2018/11/25 13:19:09 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6771,3 +6771,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Test-Script to 1.25 [wen 2018-11-25]
 	Updated devel/p5-Test-POE-Client-TCP to 1.26 [wen 2018-11-25]
 	Updated devel/p5-Test-HTTP-LocalServer to 0.64 [wen 2018-11-25]
+	Updated devel/p5-Specio to 0.43 [wen 2018-11-25]
