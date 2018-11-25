@@ -1,0 +1,5 @@
+$NetBSD: MESSAGE,v 1.1 2018/11/25 12:03:32 spz Exp $
+===============================================================================
+You will need to edit ${PKG_SYSCONFDIR}/amanda/amanda-security.conf
+to allow the backup program(s) you intend to use.
+===============================================================================
