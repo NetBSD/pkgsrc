@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.12 2018/11/14 16:44:13 schmonz Exp $
+# $NetBSD: INSTALL,v 1.13 2018/11/25 16:15:53 schmonz Exp $
 
 DOCDIR=@DOCDIR@
 EGDIR=@EGDIR@
@@ -14,7 +14,7 @@ is_queue_fs_case_sensitive() {
 	cd ${QMAIL_QUEUE_DIR}
 	${MKDIR} pkgsrc
 	${TOUCH} pkgsrc/case-check pkgsrc/case-CHECK
-	count=$(${ECHO} case-* | ${WC} -w)
+	count=$(${ECHO} pkgsrc/case-* | ${WC} -w)
 	${RM} -f pkgsrc/case-*
 	${RMDIR} pkgsrc
 	if [ ${count} -eq 2 ]; then
