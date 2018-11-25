@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4842 2018/11/25 12:42:49 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.4843 2018/11/25 12:49:33 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6767,3 +6767,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated editors/abiword-plugins to 3.0.2 [nia 2018-11-24]
 	Updated lang/oracle-jre8 to 8.0.191 [ryoon 2018-11-25]
 	Updated lang/oracle-jdk8 to 8.0.191 [ryoon 2018-11-25]
+	Updated devel/p5-Test-Trap to 0.3.4 [wen 2018-11-25]
