@@ -1,22 +1,22 @@
-$NetBSD: distinfo,v 1.13 2018/05/26 22:24:01 ryoon Exp $
+$NetBSD: distinfo,v 1.14 2018/11/25 12:41:50 ryoon Exp $
 
 SHA1 (jce_policy-8.zip) = 7d25dcee3e6ef2c984d748a14614b37c18ce3507
 RMD160 (jce_policy-8.zip) = bdcb54a9900c00b52c24d024282b6e40c148d49c
 SHA512 (jce_policy-8.zip) = abbaa81a35f904ec61b4cf3c2d1ca8c8d49e53bb248e698185eea906939d68f5063412800585ec74027aab1012ef189aebe1dc99fe8ef4230a0ecb0b527f88e5
 Size (jce_policy-8.zip) = 8409 bytes
-SHA1 (jre-8u172-linux-i586.tar.gz) = 937a5c04107b883d806e44157778eabed5405b9f
-RMD160 (jre-8u172-linux-i586.tar.gz) = 1e08be8f882ea13ece2aeabe066042bc862acef0
-SHA512 (jre-8u172-linux-i586.tar.gz) = a4773fe39b69f22e6a646cd6b8ebdf189252e5b686f4000e43fc418ef133ac1b3e24374693c41eed5b3063849f33bbbf70a3ffe04c52ef9b1b8ac1b8d1d0dd22
-Size (jre-8u172-linux-i586.tar.gz) = 84306480 bytes
-SHA1 (jre-8u172-linux-x64.tar.gz) = c6508015af88ec0363503569d4dddd544b32e818
-RMD160 (jre-8u172-linux-x64.tar.gz) = 73de25cbd7b0198c148c68e4ae7b0df228179a83
-SHA512 (jre-8u172-linux-x64.tar.gz) = e113138946eb95fb2c9ea8bdc5ca4b8d0c3e9ae35baaf12a04c0f5a0c9af390f181d2e39fa1c71eb8c91d734a944c9239fdc10dcfc9b8a19829dad24dd35447f
-Size (jre-8u172-linux-x64.tar.gz) = 81182269 bytes
-SHA1 (jre-8u172-macosx-x64.tar.gz) = b5b616f96545466a972566e6728e97bce15f78c7
-RMD160 (jre-8u172-macosx-x64.tar.gz) = b1e23160abf0f60aa6171c32a2a7cafcd6f31d8e
-SHA512 (jre-8u172-macosx-x64.tar.gz) = 1f08141da0bb0195b0097166dca4f728d0253e6e9eac2ab0f7d108ac149f2460eb5aaf96f1087b1c4e471a880247a3de92bb567997c457ca56ba1071a517900f
-Size (jre-8u172-macosx-x64.tar.gz) = 69441581 bytes
-SHA1 (jre-8u172-solaris-x64.tar.gz) = ad94c4e9d79f821bff04caef2472f8129358651c
-RMD160 (jre-8u172-solaris-x64.tar.gz) = 4c48cc37d4e0b636d57e10890e3ee85dcaf60248
-SHA512 (jre-8u172-solaris-x64.tar.gz) = 79184f1d2e5a54bea947cdaadcd25b902b54bb667ec5496198b0f7150bb06d4ab5f9488d2480945b0bf5e1672cebe7284b6e1f91348c973df49ecd2708ee66a9
-Size (jre-8u172-solaris-x64.tar.gz) = 52470278 bytes
+SHA1 (jre-8u191-linux-i586.tar.gz) = e872a0a11441c46e7aa3202867adb587995fa086
+RMD160 (jre-8u191-linux-i586.tar.gz) = 7c254d19766bf950963b61a3327e4e4fb16b4655
+SHA512 (jre-8u191-linux-i586.tar.gz) = 50c21edae45a9eb2956dd452cb212fbd8fa7e1988803a910b134e7902a6201c0e29942bf81d65ba3b84ca44e448696634dc39c220f10989dab34ccb9e2ce36ee
+Size (jre-8u191-linux-i586.tar.gz) = 87789234 bytes
+SHA1 (jre-8u191-linux-x64.tar.gz) = 507264cdfb9c95a344b6800f48771b6b15606543
+RMD160 (jre-8u191-linux-x64.tar.gz) = 52598fdb4a7dff50e1ae12645709f66ecea671ae
+SHA512 (jre-8u191-linux-x64.tar.gz) = 3f0d79d6076053261cb856f60f5eff9de65c7953e1e7c98f0ae9dfb23e906bc95a9e8ec2291e59f951d265162330f1f0dae71e93d5dc79dc3153370246d8e6d6
+Size (jre-8u191-linux-x64.tar.gz) = 84587096 bytes
+SHA1 (jre-8u191-macosx-x64.tar.gz) = 53f6590b4bdaf76060cd142e9b007bc167d9e35b
+RMD160 (jre-8u191-macosx-x64.tar.gz) = 19f3c5be1df3ea047f2992a912daf326393cff28
+SHA512 (jre-8u191-macosx-x64.tar.gz) = 52aeafcb70daecadde896d98d81bc06e62d85289cadc7ff6e49c8032fc46892c760e544386fb9e3df6a5c0461d187670e7068f1bd1e23dcff8fe017ee305610b
+Size (jre-8u191-macosx-x64.tar.gz) = 71044668 bytes
+SHA1 (jre-8u191-solaris-x64.tar.gz) = 522ad20e1c267b1ac6051684cbdd288a2d5e973d
+RMD160 (jre-8u191-solaris-x64.tar.gz) = 35fc8842779142cd0f34dee1feb38a797f1c57cb
+SHA512 (jre-8u191-solaris-x64.tar.gz) = 30aeba09a9e18d35a9cef6a3ecf03b9ce50c11aa59cd5b78bc3e37b9a2533391a6eb6f6d146d69d0c7159200834c913bb3201cf9131a9aebd7b2643209565c5b
+Size (jre-8u191-solaris-x64.tar.gz) = 52576774 bytes
