@@ -1,0 +1,15 @@
+$NetBSD: patch-common-src_Makefile.am,v 1.1 2018/11/25 20:20:57 spz Exp $
+
+pkgsrcify
+
+--- common-src/Makefile.am.orig	2016-02-09 22:52:51.000000000 +0000
++++ common-src/Makefile.am
+@@ -172,7 +172,7 @@ BUILT_SOURCES += genversion.h version.c
+ amanda-security.conf: make_security_file
+ 	./make_security_file
+ 
+-etcamandadir = ${CONFIG_DIR}
++etcamandadir = ${docdir}/example
+ etcamanda_FILE = amanda-security.conf
+ etcamanda_DATA = ${etcamanda_FILE}
+ 
