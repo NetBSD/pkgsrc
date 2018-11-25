@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4852 2018/11/25 14:52:43 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4853 2018/11/25 15:10:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6777,3 +6777,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-PPIx-Regexp to 0.063 [wen 2018-11-25]
 	Updated devel/p5-PerlX-Maybe to 1.201 [wen 2018-11-25]
 	Updated devel/p5-Perl-Tidy to 20181120 [wen 2018-11-25]
+	Updated security/py-cryptodome to 3.7.1 [adam 2018-11-25]
+	Updated graphics/py-graphviz to 0.10.1 [adam 2018-11-25]
