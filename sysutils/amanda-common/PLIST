@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2018/11/23 22:33:13 spz Exp $
-etc/amanda/amanda-security.conf
+@comment $NetBSD: PLIST,v 1.10 2018/11/25 20:20:57 spz Exp $
 lib/amanda/libamanda.la
 lib/amanda/libamandad.la
 lib/amanda/libamar.la
@@ -75,6 +74,7 @@ share/doc/amanda/NEWS
 share/doc/amanda/ReleaseNotes
 share/doc/amanda/example/amanda-client-postgresql.conf
 share/doc/amanda/example/amanda-client.conf
+share/doc/amanda/example/amanda-security.conf
 share/doc/amanda/example/amanda.conf
 share/doc/amanda/example/amandaclient.xml
 share/doc/amanda/example/amandaserver.xml
