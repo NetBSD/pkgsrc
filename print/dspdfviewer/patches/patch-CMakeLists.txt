@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2018/11/26 14:38:27 fox Exp $
+
+Fix the location of manpage
+
+--- CMakeLists.txt.orig	2017-04-20 11:02:53.067851000 +0000
++++ CMakeLists.txt
+@@ -95,7 +95,7 @@ install(TARGETS	dspdfviewer
+ 	RUNTIME DESTINATION bin)
+ 
+ install(FILES docs/dspdfviewer.1
+-	DESTINATION share/man/man1)
++	DESTINATION man/man1)
+ 
+ install(FILES dspdfviewer.desktop
+ 	DESTINATION share/applications)
