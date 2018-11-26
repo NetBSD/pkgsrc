@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4859 2018/11/26 09:47:11 fox Exp $
+$NetBSD: CHANGES-2018,v 1.4860 2018/11/26 12:26:54 tron Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6786,3 +6786,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-astroid to 2.1.0 [adam 2018-11-26]
 	Updated devel/py-pylint to 2.2.0 [adam 2018-11-26]
 	Updated editors/hnb to 1.9.17nb5 [fox 2018-11-26]
+	Updated mail/mutt to 1.11.0 [tron 2018-11-26]
