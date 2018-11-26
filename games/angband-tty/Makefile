@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2018/11/20 18:09:46 maya Exp $
+# $NetBSD: Makefile,v 1.42 2018/11/26 07:12:39 dholland Exp $
 #
 
 DISTNAME=		angband-283
@@ -25,7 +25,7 @@ BUILD_TARGET=		angband
 
 SPOILERFILE=		angband-spoilers.tar.gz
 
-SETGIDGAME=		yes
+USE_GAMESGROUP=		yes
 SPECIAL_PERMS=		bin/angband ${SETGID_GAMES_PERMS}
 
 INSTALLATION_DIRS=	bin
