@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2005/10/01 18:52:03 kristerw Exp $
+$NetBSD: patch-ac,v 1.2 2018/11/26 09:15:53 fox Exp $
+
+Added the curses library path for pkgsrc.
 
 --- src/Makefile.orig	Sat Oct  1 20:43:07 2005
 +++ src/Makefile	Sat Oct  1 20:43:40 2005
