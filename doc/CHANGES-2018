@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4861 2018/11/26 14:50:50 fox Exp $
+$NetBSD: CHANGES-2018,v 1.4862 2018/11/26 15:26:38 fox Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6787,4 +6787,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-pylint to 2.2.0 [adam 2018-11-26]
 	Updated editors/hnb to 1.9.17nb5 [fox 2018-11-26]
 	Updated mail/mutt to 1.11.0 [tron 2018-11-26]
-	Updated print/dspdfviewer to 1.15.1 [fox 2018-11-26]
+	Added print/dspdfviewer to 1.15.1 [fox 2018-11-26]
