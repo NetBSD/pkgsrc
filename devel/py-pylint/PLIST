@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.12 2018/08/02 15:19:23 adam Exp $
-bin/epylint${PYVERSSUFFIX}
-bin/pylint${PYVERSSUFFIX}
-bin/pyreverse${PYVERSSUFFIX}
-bin/symilar${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.13 2018/11/26 09:09:34 adam Exp $
+bin/epylint-${PYVERSSUFFIX}
+bin/pylint-${PYVERSSUFFIX}
+bin/pyreverse-${PYVERSSUFFIX}
+bin/symilar-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -177,7 +177,6 @@ ${PYSITELIB}/pylint/reporters/ureports/nodes.pyo
 ${PYSITELIB}/pylint/reporters/ureports/text_writer.py
 ${PYSITELIB}/pylint/reporters/ureports/text_writer.pyc
 ${PYSITELIB}/pylint/reporters/ureports/text_writer.pyo
-${PYSITELIB}/pylint/test/a.py
 ${PYSITELIB}/pylint/test/acceptance/test_stdlib.py
 ${PYSITELIB}/pylint/test/conftest.py
 ${PYSITELIB}/pylint/test/data/__init__.py
@@ -252,6 +251,9 @@ ${PYSITELIB}/pylint/test/functional/assigning_non_slot.py
 ${PYSITELIB}/pylint/test/functional/assigning_non_slot.txt
 ${PYSITELIB}/pylint/test/functional/assignment_from_no_return.py
 ${PYSITELIB}/pylint/test/functional/assignment_from_no_return.txt
+${PYSITELIB}/pylint/test/functional/assignment_from_no_return_py3.py
+${PYSITELIB}/pylint/test/functional/assignment_from_no_return_py3.rc
+${PYSITELIB}/pylint/test/functional/assignment_from_no_return_py3.txt
 ${PYSITELIB}/pylint/test/functional/async_functions.py
 ${PYSITELIB}/pylint/test/functional/async_functions.rc
 ${PYSITELIB}/pylint/test/functional/async_functions.txt
@@ -336,6 +338,8 @@ ${PYSITELIB}/pylint/test/functional/consider_using_set_comprehension.py
 ${PYSITELIB}/pylint/test/functional/consider_using_set_comprehension.txt
 ${PYSITELIB}/pylint/test/functional/continue_in_finally.py
 ${PYSITELIB}/pylint/test/functional/continue_in_finally.txt
+${PYSITELIB}/pylint/test/functional/control_pragmas.py
+${PYSITELIB}/pylint/test/functional/control_pragmas.txt
 ${PYSITELIB}/pylint/test/functional/crash_missing_module_type.py
 ${PYSITELIB}/pylint/test/functional/crash_missing_module_type.txt
 ${PYSITELIB}/pylint/test/functional/ctor_arguments.py
@@ -388,12 +392,17 @@ ${PYSITELIB}/pylint/test/functional/docstrings.py
 ${PYSITELIB}/pylint/test/functional/docstrings.txt
 ${PYSITELIB}/pylint/test/functional/duplicate_argument_name.py
 ${PYSITELIB}/pylint/test/functional/duplicate_argument_name.txt
+${PYSITELIB}/pylint/test/functional/duplicate_argument_name_py3.py
+${PYSITELIB}/pylint/test/functional/duplicate_argument_name_py3.rc
+${PYSITELIB}/pylint/test/functional/duplicate_argument_name_py3.txt
 ${PYSITELIB}/pylint/test/functional/duplicate_bases.py
 ${PYSITELIB}/pylint/test/functional/duplicate_bases.txt
 ${PYSITELIB}/pylint/test/functional/duplicate_dict_literal_key.py
 ${PYSITELIB}/pylint/test/functional/duplicate_dict_literal_key.txt
 ${PYSITELIB}/pylint/test/functional/duplicate_except.py
 ${PYSITELIB}/pylint/test/functional/duplicate_except.txt
+${PYSITELIB}/pylint/test/functional/duplicate_string_formatting_argument.py
+${PYSITELIB}/pylint/test/functional/duplicate_string_formatting_argument.txt
 ${PYSITELIB}/pylint/test/functional/eval_used.py
 ${PYSITELIB}/pylint/test/functional/eval_used.txt
 ${PYSITELIB}/pylint/test/functional/exception_is_binary_op.py
@@ -434,6 +443,8 @@ ${PYSITELIB}/pylint/test/functional/genexpr_variable_scope.py
 ${PYSITELIB}/pylint/test/functional/genexpr_variable_scope.txt
 ${PYSITELIB}/pylint/test/functional/globals.py
 ${PYSITELIB}/pylint/test/functional/globals.txt
+${PYSITELIB}/pylint/test/functional/implicit_str_concat_in_sequence.py
+${PYSITELIB}/pylint/test/functional/implicit_str_concat_in_sequence.txt
 ${PYSITELIB}/pylint/test/functional/import_error.py
 ${PYSITELIB}/pylint/test/functional/import_error.rc
 ${PYSITELIB}/pylint/test/functional/import_error.txt
@@ -601,10 +612,6 @@ ${PYSITELIB}/pylint/test/functional/names_in__all__.py
 ${PYSITELIB}/pylint/test/functional/names_in__all__.txt
 ${PYSITELIB}/pylint/test/functional/nested_blocks_issue1088.py
 ${PYSITELIB}/pylint/test/functional/nested_blocks_issue1088.txt
-${PYSITELIB}/pylint/test/functional/newstyle__slots__.py
-${PYSITELIB}/pylint/test/functional/newstyle__slots__.txt
-${PYSITELIB}/pylint/test/functional/newstyle_properties.py
-${PYSITELIB}/pylint/test/functional/newstyle_properties.txt
 ${PYSITELIB}/pylint/test/functional/no_classmethod_decorator.py
 ${PYSITELIB}/pylint/test/functional/no_classmethod_decorator.txt
 ${PYSITELIB}/pylint/test/functional/no_else_return.py
@@ -642,9 +649,6 @@ ${PYSITELIB}/pylint/test/functional/not_in_loop.py
 ${PYSITELIB}/pylint/test/functional/not_in_loop.txt
 ${PYSITELIB}/pylint/test/functional/old_division_manually.py
 ${PYSITELIB}/pylint/test/functional/old_division_manually.rc
-${PYSITELIB}/pylint/test/functional/old_style_class_py27.py
-${PYSITELIB}/pylint/test/functional/old_style_class_py27.rc
-${PYSITELIB}/pylint/test/functional/old_style_class_py27.txt
 ${PYSITELIB}/pylint/test/functional/postponed_evaluation_activated.py
 ${PYSITELIB}/pylint/test/functional/postponed_evaluation_activated.rc
 ${PYSITELIB}/pylint/test/functional/postponed_evaluation_activated.txt
@@ -694,6 +698,8 @@ ${PYSITELIB}/pylint/test/functional/self_cls_assignment.py
 ${PYSITELIB}/pylint/test/functional/self_cls_assignment.txt
 ${PYSITELIB}/pylint/test/functional/signature_differs.py
 ${PYSITELIB}/pylint/test/functional/signature_differs.txt
+${PYSITELIB}/pylint/test/functional/simplifiable_if_expression.py
+${PYSITELIB}/pylint/test/functional/simplifiable_if_expression.txt
 ${PYSITELIB}/pylint/test/functional/simplifiable_if_statement.py
 ${PYSITELIB}/pylint/test/functional/simplifiable_if_statement.txt
 ${PYSITELIB}/pylint/test/functional/simplify_chained_comparison.py
@@ -964,7 +970,6 @@ ${PYSITELIB}/pylint/test/functional/yield_outside_func.txt
 ${PYSITELIB}/pylint/test/input/__init__.py
 ${PYSITELIB}/pylint/test/input/func_3k_removed_stuff_py_30.py
 ${PYSITELIB}/pylint/test/input/func_bad_cont_dictcomp_py27.py
-${PYSITELIB}/pylint/test/input/func_block_disable_msg.py
 ${PYSITELIB}/pylint/test/input/func_bug113231.py
 ${PYSITELIB}/pylint/test/input/func_disable_linebased.py
 ${PYSITELIB}/pylint/test/input/func_dotted_ancestor.py
@@ -1028,7 +1033,9 @@ ${PYSITELIB}/pylint/test/input/func_w0612.py
 ${PYSITELIB}/pylint/test/input/func_w0613.py
 ${PYSITELIB}/pylint/test/input/func_w0623_py30.py
 ${PYSITELIB}/pylint/test/input/func_w0801.py
+${PYSITELIB}/pylint/test/input/hide_code_with_imports.py
 ${PYSITELIB}/pylint/test/input/ignore_except_pass_by_default.py
+${PYSITELIB}/pylint/test/input/multiline-import
 ${PYSITELIB}/pylint/test/input/noext
 ${PYSITELIB}/pylint/test/input/not__init__.py
 ${PYSITELIB}/pylint/test/input/similar1
@@ -1038,7 +1045,6 @@ ${PYSITELIB}/pylint/test/input/w0801_same.py
 ${PYSITELIB}/pylint/test/messages/builtin_module.txt
 ${PYSITELIB}/pylint/test/messages/func_3k_removed_stuff_py_30.txt
 ${PYSITELIB}/pylint/test/messages/func_bad_cont_dictcomp_py27.txt
-${PYSITELIB}/pylint/test/messages/func_block_disable_msg.txt
 ${PYSITELIB}/pylint/test/messages/func_bug113231.txt
 ${PYSITELIB}/pylint/test/messages/func_disable_linebased.txt
 ${PYSITELIB}/pylint/test/messages/func_disable_linebased_py30.txt
@@ -1098,7 +1104,6 @@ ${PYSITELIB}/pylint/test/regrtest_data/.pylintrc
 ${PYSITELIB}/pylint/test/regrtest_data/absimp/__init__.py
 ${PYSITELIB}/pylint/test/regrtest_data/absimp/string.py
 ${PYSITELIB}/pylint/test/regrtest_data/application_crash.py
-${PYSITELIB}/pylint/test/regrtest_data/awesome_module.py
 ${PYSITELIB}/pylint/test/regrtest_data/bad_package/__init__.py
 ${PYSITELIB}/pylint/test/regrtest_data/bad_package/wrong.py
 ${PYSITELIB}/pylint/test/regrtest_data/beyond_top/__init__.py
@@ -1112,6 +1117,8 @@ ${PYSITELIB}/pylint/test/regrtest_data/dummy/another.py
 ${PYSITELIB}/pylint/test/regrtest_data/dummy/dummy.py
 ${PYSITELIB}/pylint/test/regrtest_data/dummy_plugin.rc
 ${PYSITELIB}/pylint/test/regrtest_data/dummy_plugin/dummy_plugin.py
+${PYSITELIB}/pylint/test/regrtest_data/empty.py
+${PYSITELIB}/pylint/test/regrtest_data/func_block_disable_msg.py
 ${PYSITELIB}/pylint/test/regrtest_data/import_assign.py
 ${PYSITELIB}/pylint/test/regrtest_data/import_package_subpackage_module.py
 ${PYSITELIB}/pylint/test/regrtest_data/import_something.py
@@ -1135,6 +1142,7 @@ ${PYSITELIB}/pylint/test/regrtest_data/special_attr_scope_lookup_crash.py
 ${PYSITELIB}/pylint/test/regrtest_data/syntax_error.py
 ${PYSITELIB}/pylint/test/regrtest_data/test_pylintrc_comments.py
 ${PYSITELIB}/pylint/test/regrtest_data/try_finally_disable_msg_crash.py
+${PYSITELIB}/pylint/test/regrtest_data/wildcard.py
 ${PYSITELIB}/pylint/test/regrtest_data/wrong_import_position.py
 ${PYSITELIB}/pylint/test/test_func.py
 ${PYSITELIB}/pylint/test/test_functional.py
@@ -1168,7 +1176,7 @@ ${PYSITELIB}/pylint/testutils.py
 ${PYSITELIB}/pylint/utils.py
 ${PYSITELIB}/pylint/utils.pyc
 ${PYSITELIB}/pylint/utils.pyo
-man/man1/epylint${PYVERSSUFFIX}.1
-man/man1/pylint${PYVERSSUFFIX}.1
-man/man1/pyreverse${PYVERSSUFFIX}.1
-man/man1/symilar${PYVERSSUFFIX}.1
+man/man1/epylint-${PYVERSSUFFIX}.1
+man/man1/pylint-${PYVERSSUFFIX}.1
+man/man1/pyreverse-${PYVERSSUFFIX}.1
+man/man1/symilar-${PYVERSSUFFIX}.1
