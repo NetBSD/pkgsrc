@@ -1,12 +1,12 @@
-# $NetBSD: options.mk,v 1.15 2018/07/25 14:19:16 leot Exp $
+# $NetBSD: options.mk,v 1.16 2018/11/26 12:24:47 abs Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpv
 
 .include "../../multimedia/libva/available.mk"
 .include "../../multimedia/libvdpau/available.mk"
 
-PKG_SUPPORTED_OPTIONS=	ass caca lua pulseaudio rpi sdl2 v4l2
-PKG_SUGGESTED_OPTIONS=	ass lua pulseaudio
+PKG_SUPPORTED_OPTIONS=	ass bluray caca lua pulseaudio rpi sdl2 v4l2
+PKG_SUGGESTED_OPTIONS=	ass bluray lua pulseaudio
 
 .if ${VAAPI_AVAILABLE} == "yes"
 PKG_SUPPORTED_OPTIONS+=	vaapi
@@ -19,6 +19,16 @@ PKG_SUGGESTED_OPTIONS+=	vdpau
 .endif
 
 .include "../../mk/bsd.options.mk"
+
+###
+### libbluray support
+###
+.if !empty(PKG_OPTIONS:Mbluray)
+WAF_CONFIGURE_ARGS+=	--enable-libbluray
+.include "../../multimedia/libbluray/buildlink3.mk"
+.else
+WAF_CONFIGURE_ARGS+=	--disable-libbluray
+.endif
 
 ###
 ### caca support (video output)
