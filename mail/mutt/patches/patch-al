@@ -1,17 +1,8 @@
-$NetBSD: patch-al,v 1.11 2017/05/10 12:29:13 jperkin Exp $
+$NetBSD: patch-al,v 1.12 2018/11/26 12:26:19 tron Exp $
 
---- configure.orig	2017-04-18 23:07:15.000000000 +0000
-+++ configure
-@@ -8406,7 +8406,7 @@ fi
- 
-         old_LIBS="$LIBS"
-         LIBS="$LIBS $MUTTLIBS"
--        for ac_func in start_color typeahead bkgdset curs_set meta use_default_colors resizeterm
-+        for ac_func in start_color typeahead bkgdset curs_set meta use_default_colors resizeterm mvchgat mvwchgat
- do
- 
- { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_func declaration" >&5
-@@ -9463,7 +9463,7 @@ fi
+--- configure.orig	2018-11-25 17:43:07.000000000 +0000
++++ configure	2018-11-26 11:59:44.000000000 +0000
+@@ -9712,7 +9712,7 @@
  
  if test x$mutt_cv_setgid = xyes; then
          DOTLOCK_GROUP='mail'
@@ -20,7 +11,7 @@ $NetBSD: patch-al,v 1.11 2017/05/10 12:29:13 jperkin Exp $
  else
          DOTLOCK_GROUP=''
          DOTLOCK_PERMISSION=755
-@@ -9772,6 +9772,7 @@ fi
+@@ -10022,6 +10022,7 @@
      case "`$KRB5CFGPATH --version`" in
        "Kerberos 5 "*)	GSSAPI_IMPL="MIT";;
        ?eimdal*)		GSSAPI_IMPL="Heimdal";;
@@ -28,7 +19,7 @@ $NetBSD: patch-al,v 1.11 2017/05/10 12:29:13 jperkin Exp $
        *)		GSSAPI_IMPL="Unknown";;
     esac
    else
-@@ -10021,7 +10022,7 @@ rm -f confcache
+@@ -10271,7 +10272,7 @@
        { $as_echo "$as_me:${as_lineno-$LINENO}: result: GSSAPI libraries not found" >&5
  $as_echo "GSSAPI libraries not found" >&6; }
      fi
