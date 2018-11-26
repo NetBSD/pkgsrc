@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.27 2015/09/08 11:57:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.28 2018/11/26 09:15:53 fox Exp $
 #
 
 DISTNAME=	hnb-1.9.17
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hnb/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hnb.sourceforge.net/
 COMMENT=	Hierarchical data organizer
+LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=		gmake
 
