@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/11/25 17:03:34 gdt Exp $
+# $NetBSD: Makefile,v 1.17 2018/11/26 11:17:31 jperkin Exp $
 
 DISTNAME=	libusb-1.0.22
 PKGNAME=	${DISTNAME:S/libusb/libusb1/}
@@ -11,7 +11,6 @@ HOMEPAGE=	http://libusb.info/
 COMMENT=	USB Access Library (version 1)
 LICENSE=	gnu-lgpl-v2.1
 
-# Solaris doesn't support the hardware-level interface (IIRC).
 # Works on Dragonfly but explicitly not wanted by DragonFly upstream;
 # see PR 47042.
 NOT_FOR_PLATFORM=	DragonFly-*-*
@@ -28,6 +27,8 @@ CONFIGURE_ARGS.Linux+=	--disable-udev
 
 CONFIGURE_ARGS+=	--enable-tests-build
 #CONFIGURE_ARGS+=	--enable-examples-build
+
+LDFLAGS.SunOS+=		-lcmdutils # list_create(9F)
 
 CONFLICTS=	libusbx-[0-9]*
 
