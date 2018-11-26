@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.202 2018/08/22 09:45:27 wiz Exp $
+# $NetBSD: Makefile,v 1.203 2018/11/26 12:26:19 tron Exp $
 
-DISTNAME=		mutt-1.10.1
-PKGREVISION=		1
+DISTNAME=		mutt-1.11.0
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.mutt.org/pub/mutt/
 
@@ -23,6 +22,7 @@ CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ARGS+=	--enable-external-dotlock
 CONFIGURE_ARGS+=	--enable-pop
 CONFIGURE_ARGS+=	--enable-imap
+INFO_FILES=		yes
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD"
 # Force sendmail to /usr/sbin to avoid postfix's
