@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2017/07/19 12:30:02 jaapb Exp $
-
-SHA1 (ppx_traverse_builtins-0.9.0.tar.gz) = fd840728907c6364ce868b094c72d7f2b0183e12
-RMD160 (ppx_traverse_builtins-0.9.0.tar.gz) = bc2cf6b112af77ec499bba58ba6ad213dd08814a
-SHA512 (ppx_traverse_builtins-0.9.0.tar.gz) = c8d77138f8fcd4d440870eb9126f5aca2d9fa917fac6bd9aa7f6dd4fb3e75f5860efbdc312ffc23b375808c33e1527726318918bf7bee61f470ef3a2cb40f6ba
-Size (ppx_traverse_builtins-0.9.0.tar.gz) = 6328 bytes
