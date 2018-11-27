@@ -1,0 +1,40 @@
+$NetBSD: patch-Makefile,v 1.1 2018/11/27 19:25:05 nia Exp $
+
+Needs -lpurple.
+
+--- Makefile.orig	2018-10-14 19:45:13.000000000 +0000
++++ Makefile
+@@ -2,14 +2,13 @@ PURPLE_PLUGIN_DIR=~/.purple/plugins
+ PIDGIN_DIR=./pidgin-2.11.0
+ PURPLE_PLUGIN_SRC_DIR=$(PIDGIN_DIR)/libpurple/plugins
+ 
+-CC ?= gcc
+-
+ PKG_CONFIG ?= pkg-config
+ GLIB_CFLAGS ?= $(shell $(PKG_CONFIG) --cflags glib-2.0)
+ GLIB_LDFLAGS ?= $(shell $(PKG_CONFIG) --libs glib-2.0)
+ 
+ LIBPURPLE_CFLAGS ?= $(shell $(PKG_CONFIG) --cflags purple)
+-LIBPURPLE_LDFLAGS ?= $(shell $(PKG_CONFIG) --cflags purple) \
++LIBPURPLE_LDFLAGS=$(shell $(PKG_CONFIG) --libs purple) \
++		     -Wl,-R$(shell $(PKG_CONFIG) --variable=plugindir purple) \
+ 		     -L$(shell $(PKG_CONFIG) --variable=plugindir purple)
+ 
+ XML2_CONFIG ?= xml2-config
+@@ -32,14 +31,10 @@ PKGCFG_L=$(GLIB_LDFLAGS) \
+ 	 $(LIBPURPLE_LDFLAGS) \
+ 	 $(XML2_LDFLAGS)
+ 
+-CFLAGS=-std=c11 -Wall -g -Wstrict-overflow -fPIC -shared -D_XOPEN_SOURCE=700 -D_BSD_SOURCE -D_DEFAULT_SOURCE $(PKGCFG_C) $(HEADERS)
++CFLAGS+=-std=c11 -Wall -Wstrict-overflow -fPIC -shared -D_XOPEN_SOURCE=700 -D_BSD_SOURCE -D_DEFAULT_SOURCE $(PKGCFG_C) $(HEADERS)
+ PLUGIN_CPPFLAGS=-DPURPLE_PLUGINS
+ 
+-ifneq ("$(wildcard /etc/redhat-release)","")
+-	LJABBER?=-lxmpp
+-else
+-	LJABBER?=-ljabber
+-endif
++LJABBER?=-ljabber
+ LFLAGS= -ldl -lm $(PKGCFG_L) $(LJABBER)
+ 
+ all: $(BDIR)/carbons.so
