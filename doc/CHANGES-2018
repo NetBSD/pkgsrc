@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4888 2018/11/27 18:57:13 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.4889 2018/11/27 19:03:18 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6818,3 +6818,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added chat/lurch-purple version 0.6.7 [nia 2018-11-27]
 	Removed chat/line-purple [maya 2018-11-27]
 	Updated devel/ocaml-ppxlib to 0.3.1 [jaapb 2018-11-27]
+	Updated security/ocaml-ssl to 0.5.7 [jaapb 2018-11-27]
