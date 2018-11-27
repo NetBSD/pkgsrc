@@ -1,11 +1,36 @@
-$NetBSD: patch-ad,v 1.15 2015/07/11 04:26:57 rodent Exp $
+$NetBSD: patch-ad,v 1.16 2018/11/27 23:36:00 sevan Exp $
 
 * GNU/kFreeBSD parts: use host of Debian GNU/kFreeBSD 7.0.
 * OpenBSD's vish requires stdlib.h.
+* Support Minix
 
---- configure.orig	2012-12-09 22:09:32.000000000 +0000
+--- configure.orig	Sun Dec  9 22:09:32 2012
 +++ configure
-@@ -6779,7 +6779,7 @@ ia64-*-hpux*)
+@@ -5210,7 +5210,7 @@ else
+     lt_cv_sys_max_cmd_len=8192;
+     ;;
+ 
+-  netbsd* | freebsd* | openbsd* | darwin* | dragonfly*)
++  netbsd* | freebsd* | openbsd* | darwin* | dragonfly* | minix*)
+     # This has been around since 386BSD, at least.  Likely further.
+     if test -x /sbin/sysctl; then
+       lt_cv_sys_max_cmd_len=`/sbin/sysctl -n kern.argmax`
+@@ -5702,12 +5702,8 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu)
+   lt_cv_deplibs_check_method=pass_all
+   ;;
+ 
+-netbsd*)
+-  if echo __ELF__ | $CC -E - | $GREP __ELF__ > /dev/null; then
+-    lt_cv_deplibs_check_method='match_pattern /lib[^/]+(\.so\.[0-9]+\.[0-9]+|_pic\.a)$'
+-  else
+-    lt_cv_deplibs_check_method='match_pattern /lib[^/]+(\.so|_pic\.a)$'
+-  fi
++netbsd* | minix*)
++  lt_cv_deplibs_check_method='match_pattern /lib[^/]+(\.so|_pic\.a)$'
+   ;;
+ 
+ newos6*)
+@@ -6779,7 +6775,7 @@ ia64-*-hpux*)
    rm -rf conftest*
    ;;
  
@@ -14,7 +39,7 @@ $NetBSD: patch-ad,v 1.15 2015/07/11 04:26:57 rodent Exp $
  s390*-*linux*|s390*-*tpf*|sparc*-*linux*)
    # Find out which ABI we are using.
    echo 'int i;' > conftest.$ac_ext
-@@ -6791,7 +6791,7 @@ s390*-*linux*|s390*-*tpf*|sparc*-*linux*
+@@ -6791,7 +6787,7 @@ s390*-*linux*|s390*-*tpf*|sparc*-*linux*)
      case `/usr/bin/file conftest.o` in
        *32-bit*)
  	case $host in
@@ -23,7 +48,7 @@ $NetBSD: patch-ad,v 1.15 2015/07/11 04:26:57 rodent Exp $
  	    LD="${LD-ld} -m elf_i386_fbsd"
  	    ;;
  	  x86_64-*linux*)
-@@ -6810,7 +6810,7 @@ s390*-*linux*|s390*-*tpf*|sparc*-*linux*
+@@ -6810,7 +6806,7 @@ s390*-*linux*|s390*-*tpf*|sparc*-*linux*)
  	;;
        *64-bit*)
  	case $host in
@@ -32,7 +57,29 @@ $NetBSD: patch-ad,v 1.15 2015/07/11 04:26:57 rodent Exp $
  	    LD="${LD-ld} -m elf_x86_64_fbsd"
  	    ;;
  	  x86_64-*linux*)
-@@ -9567,29 +9567,6 @@ fi
+@@ -9130,14 +9126,13 @@ _LT_EOF
+       fi
+       ;;
+ 
+-    netbsd*)
+-      if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
+-	archive_cmds='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
+-	wlarc=
+-      else
+-	archive_cmds='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
+-	archive_expsym_cmds='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
+-      fi
++    netbsd* | minix*)
++      archive_cmds='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++      archive_expsym_cmds='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++      hardcode_libdir_flag_spec='${wl}-rpath,$libdir'
++      hardcode_direct=yes
++      hardcode_shlibpath_var=no
++      output_verbose_link_cmd=func_echo_all
+       ;;
+ 
+     solaris*)
+@@ -9567,29 +9562,6 @@ fi
        hardcode_shlibpath_var=no
        ;;
  
@@ -62,7 +109,28 @@ $NetBSD: patch-ad,v 1.15 2015/07/11 04:26:57 rodent Exp $
      # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
      freebsd* | dragonfly*)
        archive_cmds='$CC -shared $pic_flag -o $lib $libobjs $deplibs $compiler_flags'
-@@ -10561,10 +10538,6 @@ dgux*)
+@@ -9763,15 +9735,13 @@ $as_echo "$lt_cv_irix_exported_symbol" >&6; }
+       link_all_deplibs=yes
+       ;;
+ 
+-    netbsd*)
+-      if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
+-	archive_cmds='$LD -Bshareable -o $lib $libobjs $deplibs $linker_flags'  # a.out
+-      else
+-	archive_cmds='$LD -shared -o $lib $libobjs $deplibs $linker_flags'      # ELF
+-      fi
+-      hardcode_libdir_flag_spec='-R$libdir'
++    netbsd* | minix*)
++      archive_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++      archive_expsym_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++      hardcode_libdir_flag_spec='${wl}-rpath,$libdir'
+       hardcode_direct=yes
+       hardcode_shlibpath_var=no
++      output_verbose_link_cmd=func_echo_all
+       ;;
+ 
+     newsos6)
+@@ -10561,10 +10531,6 @@ dgux*)
    shlibpath_var=LD_LIBRARY_PATH
    ;;
  
@@ -73,7 +141,7 @@ $NetBSD: patch-ad,v 1.15 2015/07/11 04:26:57 rodent Exp $
  freebsd* | dragonfly*)
    # DragonFly does not have aout.  When/if they implement a new
    # versioning mechanism, adjust this.
-@@ -10572,7 +10545,6 @@ freebsd* | dragonfly*)
+@@ -10572,7 +10538,6 @@ freebsd* | dragonfly*)
      objformat=`/usr/bin/objformat`
    else
      case $host_os in
@@ -81,7 +149,7 @@ $NetBSD: patch-ad,v 1.15 2015/07/11 04:26:57 rodent Exp $
      *) objformat=elf ;;
      esac
    fi
-@@ -10590,18 +10562,6 @@ freebsd* | dragonfly*)
+@@ -10590,18 +10555,6 @@ freebsd* | dragonfly*)
    esac
    shlibpath_var=LD_LIBRARY_PATH
    case $host_os in
@@ -100,7 +168,26 @@ $NetBSD: patch-ad,v 1.15 2015/07/11 04:26:57 rodent Exp $
    *) # from 4.6 on, and DragonFly
      shlibpath_overrides_runpath=yes
      hardcode_into_libs=yes
-@@ -12702,7 +12662,11 @@ fi #if test -n "$GCC"; then
+@@ -10799,6 +10752,18 @@ fi
+   dynamic_linker='GNU/Linux ld.so'
+   ;;
+ 
++minix*)
++  version_type=linux
++  need_lib_prefix=no
++  need_version=no
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
++  soname_spec='${libname}${release}${shared_ext}$major'
++  dynamic_linker='Minix ld.elf_so'
++  shlibpath_var=LD_LIBRARY_PATH
++  shlibpath_overrides_runpath=yes
++  hardcode_into_libs=yes
++  ;;
++
+ netbsd*)
+   version_type=sunos
+   need_lib_prefix=no
+@@ -12702,7 +12667,11 @@ fi #if test -n "$GCC"; then
  esac
  
  CC="$CC $abi"
@@ -113,7 +200,7 @@ $NetBSD: patch-ad,v 1.15 2015/07/11 04:26:57 rodent Exp $
  
  
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for __attribute__" >&5
-@@ -14227,7 +14191,7 @@ case "$host" in
+@@ -14227,7 +14196,7 @@ case "$host" in
  	native_pthread_support="netbsd 3 uses explict pthread"
  		PTHREAD_LIBADD="-lpthread"
  	;;
@@ -122,7 +209,7 @@ $NetBSD: patch-ad,v 1.15 2015/07/11 04:26:57 rodent Exp $
  	native_pthread_support=yes
  	PTHREAD_LIBADD="-pthread"
  	;;
-@@ -14245,7 +14209,7 @@ case "$host" in
+@@ -14245,7 +14214,7 @@ case "$host" in
  		;;
  	esac
  	;;
@@ -131,7 +218,7 @@ $NetBSD: patch-ad,v 1.15 2015/07/11 04:26:57 rodent Exp $
  	native_pthread_support=yes
  	PTHREAD_CFLAGS=-pthread
  	PTHREAD_LIBADD=-pthread
-@@ -16057,6 +16021,7 @@ fi
+@@ -16057,6 +16026,7 @@ fi
  for ac_header in vis.h
  do :
    ac_fn_c_check_header_compile "$LINENO" "vis.h" "ac_cv_header_vis_h" "
@@ -139,7 +226,7 @@ $NetBSD: patch-ad,v 1.15 2015/07/11 04:26:57 rodent Exp $
  #include <vis.h>
  #ifndef VIS_SP
  #error invis
-@@ -20473,6 +20438,7 @@ else
+@@ -20473,6 +20443,7 @@ else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  #ifdef HAVE_VIS_H
@@ -147,7 +234,7 @@ $NetBSD: patch-ad,v 1.15 2015/07/11 04:26:57 rodent Exp $
  #include <vis.h>
  #endif
  struct foo { int foo; } xx;
-@@ -20510,6 +20476,7 @@ else
+@@ -20510,6 +20481,7 @@ else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  #ifdef HAVE_VIS_H
@@ -155,7 +242,7 @@ $NetBSD: patch-ad,v 1.15 2015/07/11 04:26:57 rodent Exp $
  #include <vis.h>
  #endif
  struct foo { int foo; } xx;
-@@ -20547,6 +20514,7 @@ else
+@@ -20547,6 +20519,7 @@ else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  #ifdef HAVE_VIS_H
@@ -163,7 +250,7 @@ $NetBSD: patch-ad,v 1.15 2015/07/11 04:26:57 rodent Exp $
  #include <vis.h>
  #endif
  struct foo { int foo; } xx;
-@@ -20584,6 +20552,7 @@ else
+@@ -20584,6 +20557,7 @@ else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  #ifdef HAVE_VIS_H
@@ -171,7 +258,7 @@ $NetBSD: patch-ad,v 1.15 2015/07/11 04:26:57 rodent Exp $
  #include <vis.h>
  #endif
  struct foo { int foo; } xx;
-@@ -20621,6 +20590,7 @@ else
+@@ -20621,6 +20595,7 @@ else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  #ifdef HAVE_VIS_H
@@ -179,7 +266,7 @@ $NetBSD: patch-ad,v 1.15 2015/07/11 04:26:57 rodent Exp $
  #include <vis.h>
  #endif
  struct foo { int foo; } xx;
-@@ -20658,6 +20628,7 @@ else
+@@ -20658,6 +20633,7 @@ else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  #ifdef HAVE_VIS_H
@@ -187,7 +274,7 @@ $NetBSD: patch-ad,v 1.15 2015/07/11 04:26:57 rodent Exp $
  #include <vis.h>
  #endif
  struct foo { int foo; } xx;
-@@ -20695,6 +20666,7 @@ else
+@@ -20695,6 +20671,7 @@ else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  #ifdef HAVE_VIS_H
@@ -195,7 +282,7 @@ $NetBSD: patch-ad,v 1.15 2015/07/11 04:26:57 rodent Exp $
  #include <vis.h>
  #endif
  struct foo { int foo; } xx;
-@@ -20732,6 +20704,7 @@ else
+@@ -20732,6 +20709,7 @@ else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  #ifdef HAVE_VIS_H

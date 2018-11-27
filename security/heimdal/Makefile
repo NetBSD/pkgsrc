@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2018/07/20 03:33:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.128 2018/11/27 23:36:00 sevan Exp $
 
 DISTNAME=	heimdal-1.5.3
 PKGREVISION=	18
@@ -120,6 +120,11 @@ PLIST.hcrypto=		yes
 PLIST.hcrypto=		yes
 .endif
 PLIST.vis=		yes
+# all of the tools need to link against pthread, force it.
+PTHREAD_AUTO_VARS=	yes
+.endif
+
+.if ${OPSYS} == "Minix"
 # all of the tools need to link against pthread, force it.
 PTHREAD_AUTO_VARS=	yes
 .endif
