@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4886 2018/11/27 17:44:34 nia Exp $
+$NetBSD: CHANGES-2018,v 1.4887 2018/11/27 18:22:50 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6816,3 +6816,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ocaml-migrate-parsetree to 1.1.0 [jaapb 2018-11-27]
 	Updated devel/ocaml-ppx_tools_versioned to 5.2.1 [jaapb 2018-11-27]
 	Added chat/lurch-purple version 0.6.7 [nia 2018-11-27]
+	Removed chat/line-purple [maya 2018-11-27]
