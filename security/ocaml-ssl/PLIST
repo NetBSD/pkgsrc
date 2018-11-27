@@ -1,18 +1,24 @@
-@comment $NetBSD: PLIST,v 1.5 2016/02/03 12:48:38 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/11/27 19:03:09 jaapb Exp $
 ${OCAML_SITELIB}/ssl/META
-${OCAML_SITELIB}/ssl/libssl_stubs.a
-${OCAML_SITELIB}/ssl/libssl_threads_stubs.a
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ssl/libssl_stubs.a
+${OCAML_SITELIB}/ssl/opam
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ssl/ssl.a
 ${OCAML_SITELIB}/ssl/ssl.cma
 ${OCAML_SITELIB}/ssl/ssl.cmi
+${OCAML_SITELIB}/ssl/ssl.cmt
+${OCAML_SITELIB}/ssl/ssl.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ssl/ssl.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ssl/ssl.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ssl/ssl.cmxs
+${OCAML_SITELIB}/ssl/ssl.dune
+${OCAML_SITELIB}/ssl/ssl.ml
 ${OCAML_SITELIB}/ssl/ssl.mli
-${PLIST.ocaml-opt}${OCAML_SITELIB}/ssl/ssl_threads.a
-${OCAML_SITELIB}/ssl/ssl_threads.cma
 ${OCAML_SITELIB}/ssl/ssl_threads.cmi
+${OCAML_SITELIB}/ssl/ssl_threads.cmt
+${OCAML_SITELIB}/ssl/ssl_threads.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ssl/ssl_threads.cmx
-${PLIST.ocaml-opt}${OCAML_SITELIB}/ssl/ssl_threads.cmxa
+${OCAML_SITELIB}/ssl/ssl_threads.ml
 ${OCAML_SITELIB}/ssl/ssl_threads.mli
-${OCAML_SITELIB}/ssl/dllssl_stubs.so
-${OCAML_SITELIB}/ssl/dllssl_threads_stubs.so
+${OCAML_SITELIB}/stublibs/dllssl_stubs.so
+share/doc/ssl/CHANGES
+share/doc/ssl/README.md
