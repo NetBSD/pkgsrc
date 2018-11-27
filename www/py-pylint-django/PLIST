@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2018/08/27 11:18:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/11/27 16:22:41 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -32,6 +32,9 @@ ${PYSITELIB}/pylint_django/checkers/json_response.pyo
 ${PYSITELIB}/pylint_django/checkers/models.py
 ${PYSITELIB}/pylint_django/checkers/models.pyc
 ${PYSITELIB}/pylint_django/checkers/models.pyo
+${PYSITELIB}/pylint_django/compat.py
+${PYSITELIB}/pylint_django/compat.pyc
+${PYSITELIB}/pylint_django/compat.pyo
 ${PYSITELIB}/pylint_django/plugin.py
 ${PYSITELIB}/pylint_django/plugin.pyc
 ${PYSITELIB}/pylint_django/plugin.pyo
