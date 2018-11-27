@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2018/08/18 01:11:16 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2018/11/27 13:07:25 bsiegert Exp $
 
 SHA1 (en_dict-20121020.tar.gz) = 3d6b85cbede261b3703b916e6a1a3303f6cba9a6
 RMD160 (en_dict-20121020.tar.gz) = ae6a1fcf214b9ba1b9d300edeec4d61ad62caf18
@@ -25,6 +25,7 @@ RMD160 (table.tar.gz) = b678c943b232b8aba2c462c7b81b2f99f27ecd07
 SHA512 (table.tar.gz) = 99e1d69c679355fcf3e117a1ef39b131cbd3af841387d2335757247d840b90ff6b7323e16fca98cf7a043033faf250d2e9c6d47b96845d18c278a0cf6f30fec9
 Size (table.tar.gz) = 4144686 bytes
 SHA1 (patch-cmake_FcitxMacro.cmake) = e3dcba315711fc6b96f5620de1e03e096635bab2
+SHA1 (patch-cmake_FindEnchant.cmake) = e2a2572d60515c80ec736dd1d8d07779aa324da0
 SHA1 (patch-src_im_pinyin_data_CMakeLists.txt) = dd17df37a5b6781a645a4190cb8111811f804189
 SHA1 (patch-src_im_table_data_CMakeLists.txt) = 3ef3d05ee036f9bb845b69c97c50ac76cc11478e
 SHA1 (patch-src_lib_fcitx-utils_utils.c) = d89eccbcc8c1ee330efbcddea152db6d2725959b
