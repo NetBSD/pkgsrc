@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2018/07/19 14:14:28 jaapb Exp $
+# $NetBSD: Makefile.common,v 1.6 2018/11/27 17:15:49 jaapb Exp $
 
 # used by devel/ocaml-lwt_glib/Makefile
 # used by devel/ocaml-lwt_ppx/Makefile
@@ -13,7 +13,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 GITHUB_PROJECT=	lwt
 GITHUB_TAG=	${LWT_VERSION}
 
-OCAML_USE_JBUILDER=	yes
+OCAML_USE_DUNE=	yes
 
 DISTINFO_FILE=	${PKGDIR}/../../devel/ocaml-lwt/distinfo
 PATCHDIR=	${PKGDIR}/../../devel/ocaml-lwt/patches
