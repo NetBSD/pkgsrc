@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.19 2018/07/19 14:14:28 jaapb Exp $
+$NetBSD: distinfo,v 1.20 2018/11/27 17:15:49 jaapb Exp $
 
 SHA1 (lwt-4.1.0.tar.gz) = 2a780c8be6022967d94e069fa132933a8d14e6ff
 RMD160 (lwt-4.1.0.tar.gz) = 17c0175cb745a30e9786ed78fccb15d9b78ca561
 SHA512 (lwt-4.1.0.tar.gz) = 28bc51e75d5e4c74171f17aaba86fdefad70f57f9f2023680044d5bf65250d8531501adc85d0422e644c1e318dcee0a4d53f7841c82d9dca9854e8fbb09987f2
 Size (lwt-4.1.0.tar.gz) = 279251 bytes
 SHA1 (patch-src_unix_config_discover.ml) = ef8ea37d85f20d56654514617050ee46d6080ef1
+SHA1 (patch-src_unix_lwt__fmt.mli) = 929a5b54038d29a1f2130e230e0b7481776cbe43
 SHA1 (patch-src_unix_unix__c_unix__stat__job__utils.c) = 5ec0ae3afe3d65e673681fcf8faeebf811e64518
