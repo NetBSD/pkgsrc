@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.15 2018/02/12 08:06:56 adam Exp $
+# $NetBSD: Makefile,v 1.16 2018/11/27 16:31:09 adam Exp $
 
-DISTNAME=	coverage-4.5.1
+DISTNAME=	coverage-4.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/coverage/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://nedbatchelder.com/code/coverage/
+HOMEPAGE=	https://coverage.readthedocs.io/
 COMMENT=	Python module that measures code coverage for Python
 LICENSE=	modified-bsd
 
