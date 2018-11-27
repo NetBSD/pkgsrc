@@ -1,11 +1,10 @@
-$NetBSD: patch-src_bootstrap_bootstrap.py,v 1.2 2018/10/29 22:24:11 he Exp $
+$NetBSD: patch-src_bootstrap_bootstrap.py,v 1.3 2018/11/27 15:45:23 adam Exp $
 
-Use `uname -p` on NetBSD, as that's reliable & sensible there.
-Also force debuginfo to 0, otherwise the build doesn't work on
-NetBSD/macppc (powerpc).
-Also, handle earmv7hf for NetBSD.
+Use `uname -p` on NetBSD, as that is reliable and sensible there.
+Do not use debuginfo; optimize 'bootstrap' instead.
+Handle earmv7hf for NetBSD.
 
---- src/bootstrap/bootstrap.py.orig	2018-09-20 17:28:03.000000000 +0000
+--- src/bootstrap/bootstrap.py.orig	2018-11-07 03:22:38.000000000 +0000
 +++ src/bootstrap/bootstrap.py
 @@ -196,6 +196,11 @@ def default_build_triple():
          'OpenBSD': 'unknown-openbsd'
@@ -33,3 +32,12 @@ Also, handle earmv7hf for NetBSD.
          else:
              ostype += 'eabihf'
      elif cputype == 'mips':
+@@ -622,7 +629,7 @@ class RustBuild(object):
+         env["LIBRARY_PATH"] = os.path.join(self.bin_root(), "lib") + \
+             (os.pathsep + env["LIBRARY_PATH"]) \
+             if "LIBRARY_PATH" in env else ""
+-        env["RUSTFLAGS"] = "-Cdebuginfo=2 "
++        env["RUSTFLAGS"] = "-Copt-level=2 "
+ 
+         build_section = "target.{}".format(self.build_triple())
+         target_features = []

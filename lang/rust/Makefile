@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2018/11/18 07:03:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.66 2018/11/27 15:45:23 adam Exp $
 
 DISTNAME=	rustc-1.30.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -18,6 +18,8 @@ USE_TOOLS+=		bash ggrep gmake perl:build pkg-config
 BUILD_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
 
 HAS_CONFIGURE=		yes
+CONFIG_SHELL=		${PYTHONBIN}
+CONFIGURE_SCRIPT=	src/bootstrap/configure.py
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
@@ -31,6 +33,10 @@ CONFIGURE_ARGS+=	--disable-codegen-tests
 CONFIGURE_ARGS+=	--disable-dist-src
 CONFIGURE_ARGS+=	--disable-llvm-static-stdcpp
 CONFIGURE_ARGS+=	--disable-ninja
+# XXX: to be enabled in the future
+#CONFIGURE_ARGS+=	--jemalloc-root=${BUILDLINK_PREFIX.jemalloc}/lib
+#CONFIGURE_ARGS+=	--enable-llvm-link-shared
+#CONFIGURE_ARGS+=	--llvm-root=${BUILDLINK_PREFIX.llvm}
 CONFIGURE_ARGS.SunOS+=	--disable-jemalloc
 
 # The gcc-wrap / c++-wrap script takes CROSS_ROOT environment variable
@@ -51,9 +57,9 @@ MAKE_ENV+=		GNU_CROSS_TARGET=${GNU_CROSS_TARGET}
 # the ultimate target to built for, as well as the
 # host the compiler is supposed to run on.
 # Rust's target designation
-#TARGET= 		armv7-unknown-netbsd-eabihf
-#TARGET= 		sparc64-unknown-netbsd
-#TARGET= 		powerpc-unknown-netbsd
+#TARGET=		armv7-unknown-netbsd-eabihf
+#TARGET=		sparc64-unknown-netbsd
+#TARGET=		powerpc-unknown-netbsd
 #SCRIPTS=		${WRKDIR}/scripts
 #CONFIGURE_ARGS+=	--host=${TARGET}
 #CONFIGURE_ARGS+=	--target=${TARGET}
@@ -65,7 +71,7 @@ MAKE_ENV+=		GNU_CROSS_TARGET=${GNU_CROSS_TARGET}
 # May be required when cross-building on NetBSD
 #MAKE_ENV+=		OPENSSL_DIR=/usr
 
-# Getting RPATH with $ORIGIN into bootstrap may be troublesome, so 
+# Getting RPATH with $ORIGIN into bootstrap may be troublesome, so
 # uncommenting the LD_LIBRARY_PATH setting may be required to run
 # the bootstrap
 MAKE_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/rust-bootstrap/lib
@@ -250,6 +256,9 @@ RUST_BOOTSTRAP_PATH?=	${WRKDIR}/rust-bootstrap
 BUILD_DEPENDS+=		coreutils>=0:../../sysutils/coreutils
 TOOLS_CREATE+=		md5sum
 TOOLS_PATH.md5sum=	${PREFIX}/bin/gmd5sum
+.else
+LD_LIBRARY_PATH=	${RUST_BOOTSTRAP_PATH}/lib
+PKGSRC_MAKE_ENV+=	LD_LIBRARY_PATH=${LD_LIBRARY_PATH:Q}
 .endif
 
 SUBST_CLASSES+=		rpath
@@ -291,11 +300,6 @@ post-extract:
 	${LN} -s gcc-wrap clang-wrap
 .endif
 
-.if ${OPSYS} != "SunOS"
-LD_LIBRARY_PATH=	${RUST_BOOTSTRAP_PATH}/lib
-PKGSRC_MAKE_ENV+=	LD_LIBRARY_PATH=${LD_LIBRARY_PATH:Q}
-.endif
-
 .if ${OPSYS} == "FreeBSD"
 MAKE_ENV+=		OPENSSL_DIR=${SSLBASE}
 .endif
@@ -307,23 +311,20 @@ pre-build: pre-build-fix
 
 do-build:
 	cd ${WRKSRC} \
-	&& env ${MAKE_ENV} \
-		${PYTHONBIN} ./x.py -v dist -j ${MAKE_JOBS:U1}
+	&& ${SETENV} ${MAKE_ENV} \
+		${PYTHONBIN} ./x.py -v build -j ${MAKE_JOBS:U1}
 
 do-install:
 	cd ${WRKSRC} \
-	&& env ${MAKE_ENV} ${INSTALL_ENV} \
-		${PYTHONBIN} ./x.py -v install
+	&& ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} \
+		${PYTHONBIN} ./x.py -v install -j ${MAKE_JOBS:U1}
 
-post-install:
-	${RM} -f ${DESTDIR}${PREFIX}/lib/rustlib/install.log
-	${RM} -f ${DESTDIR}${PREFIX}/lib/rustlib/uninstall.sh
-	${RM} -rf ${DESTDIR}${PREFIX}/lib/rustlib/src
-
-GENERATE_PLIST+= find ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
-		 sed 's,${DESTDIR}${PREFIX}/,,' | ${SORT} ;
+GENERATE_PLIST+=find ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
+		sed 's,${DESTDIR}${PREFIX}/,,' | ${SORT} ;
 
 .if ${OPSYS} == "Darwin"
+LDFLAGS+=		-headerpad_max_install_names
+
 .PHONY: fix-darwin-install-name
 post-install: fix-darwin-install-name
 fix-darwin-install-name:
@@ -387,9 +388,9 @@ stage0-bootstrap: install
 	done;); \
 	${GTAR} -czf $${RUSTC_FILE} $${RUSTC}; \
 	${CP} $${DISTDIR}/$${RUST_STD_FILE} .; \
-	echo "Fixed stage0 bootstrap in ${BOOTSTRAP_TMPDIR}:"; \
-	echo "$${RUSTC_FILE}"; \
-	echo "$${RUST_STD_FILE}"; \
+	${ECHO} "Fixed stage0 bootstrap in ${BOOTSTRAP_TMPDIR}:"; \
+	${ECHO} "$${RUSTC_FILE}"; \
+	${ECHO} "$${RUST_STD_FILE}"; \
 	)
 .endif
 .if ${OS_VARIANT} == "SmartOS"
@@ -423,8 +424,10 @@ stage0-bootstrap: install
 .endif
 
 .include "../../devel/cmake/buildlink3.mk"
+#.include "../../devel/jemalloc/buildlink3.mk"
 #.include "../../devel/libgit2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+#.include "../../lang/llvm/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 #.include "../../security/libssh2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
