@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2018/01/10 16:46:03 jaapb Exp $
+# $NetBSD: options.mk,v 1.2 2018/11/27 19:49:45 jaapb Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ocaml-csv
 PKG_SUPPORTED_OPTIONS=	lwt
@@ -15,7 +15,7 @@ PLIST_VARS+=	lwt
 .if !empty(PKG_OPTIONS:Mlwt)
 .include "../../devel/ocaml-lwt/buildlink3.mk"
 PLIST.lwt=	yes
-JBUILDER_BUILD_PACKAGES+=	csv-lwt
+DUNE_BUILD_PACKAGES+=	csv-lwt
 OPAM_INSTALL_FILES+=	csv-lwt
 .else
 .endif
