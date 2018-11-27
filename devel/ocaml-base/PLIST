@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/05/09 14:34:07 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/11/27 14:47:49 jaapb Exp $
 ${OCAML_SITELIB}/base/META
 ${OCAML_SITELIB}/base/applicative.ml
 ${OCAML_SITELIB}/base/applicative.mli
@@ -23,7 +23,7 @@ ${OCAML_SITELIB}/base/base.ml
 ${OCAML_SITELIB}/base/base__.cmi
 ${OCAML_SITELIB}/base/base__.cmt
 ${OCAML_SITELIB}/base/base__.cmx
-${OCAML_SITELIB}/base/base__.ml-gen
+${OCAML_SITELIB}/base/base__.ml
 ${OCAML_SITELIB}/base/base__Applicative.cmi
 ${OCAML_SITELIB}/base/base__Applicative.cmt
 ${OCAML_SITELIB}/base/base__Applicative.cmti
