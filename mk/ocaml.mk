@@ -1,4 +1,4 @@
-# $NetBSD: ocaml.mk,v 1.21 2018/07/11 09:18:28 jaapb Exp $
+# $NetBSD: ocaml.mk,v 1.22 2018/11/27 15:03:28 jaapb Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
 #
@@ -28,6 +28,8 @@
 # package uses topkg [implies OCAML_USE_FINDLIB]
 # OCAML_USE_JBUILDER
 # package uses jbuilder [implies OCAML_USE_OPAM]
+# OCAML_USE_DUNE
+# package uses dune [implies OCAML_USE_OPAM]
 # OCAML_TOPKG_DOCDIR
 # different targets for topkg (bytecode, optional bytecode, native)
 # OASIS_BUILD_ARGS
@@ -60,6 +62,10 @@ _PKG_VARS.ocaml=	\
 	JBUILDER_BUILD_FLAGS \
 	JBUILDER_BUILD_PACKAGES \
 	JBUILDER_BUILD_TARGETS \
+	OCAML_USE_DUNE \
+	DUNE_BUILD_FLAGS \
+	DUNE_BUILD_PACKAGES \
+	DUNE_BUILD_TARGETS \
 	OCAML_BUILD_ARGS \
 	OPAM_INSTALL_FILES
 _DEF_VARS.ocaml=	\
@@ -82,6 +88,9 @@ OCAML_USE_TOPKG?=	no
 # Default value of OCAML_USE_JBUILDER
 OCAML_USE_JBUILDER?=	no
 
+# Default value of OCAML_USE_DUNE
+OCAML_USE_DUNE?=	no
+
 OCAML_TOPKG_NAME?=	${PKGBASE:S/^ocaml-//}
 OCAML_TOPKG_DOCDIR?=	${PREFIX}/share/doc
 
@@ -95,6 +104,9 @@ OPAM_INSTALL_FILES?=	${OCAML_TOPKG_NAME}
 JBUILDER_BUILD_FLAGS?=	# empty
 JBUILDER_BUILD_TARGETS?=	@install
 JBUILDER_BUILD_PACKAGES?=	# empty
+DUNE_BUILD_FLAGS?=	# empty
+DUNE_BUILD_TARGETS?=	@install
+DUNE_BUILD_PACKAGES?=	# empty
 
 # Default value of OASIS_BUILD_ARGS
 OASIS_BUILD_ARGS?=	# empty
@@ -132,9 +144,12 @@ CONFIGURE_ARGS+=	--override is_native false
 .endif
 .endif
 
-# Configure stuff for JBUILDER
+# Configure stuff for JBUILDER/DUNE
 .if ${OCAML_USE_JBUILDER} == "yes"
 .include "../../devel/ocaml-jbuilder/buildlink3.mk"
+OCAML_USE_OPAM?=	yes
+.elif ${OCAML_USE_DUNE} == "yes"
+.include "../../devel/ocaml-dune/buildlink3.mk"
 OCAML_USE_OPAM?=	yes
 .else
 OCAML_USE_OPAM?=	no
@@ -243,7 +258,7 @@ do-install:
 		$$i.install; \
 	done
 
-.endif # topkg-opam
+.endif # opam
 
 #
 # jbuilder targets
@@ -262,7 +277,26 @@ do-build:
 		${JBUILDER_BUILD_FLAGS} ${JBUILDER_BUILD_TARGETS}
 .endif
 
-.endif # topkg-jbuilder
+.endif # jbuilder
+
+#
+# dune targets
+#
+.if ${OCAML_USE_DUNE} == "yes"
+
+do-build:
+.if !empty(DUNE_BUILD_PACKAGES)
+	${RUN} ${_ULIMIT_CMD} \
+		cd ${WRKSRC} && dune build -j ${MAKE_JOBS} \
+		${DUNE_BUILD_FLAGS} -p ${DUNE_BUILD_PACKAGES:ts,} \
+		${DUNE_BUILD_TARGETS}
+.else
+	${RUN} ${_ULIMIT_CMD} \
+		cd ${WRKSRC} && dune build --profile release -j ${MAKE_JOBS} \
+		${DUNE_BUILD_FLAGS} ${DUNE_BUILD_TARGETS}
+.endif
+
+.endif # dune
 
 # Add dependency on ocaml.
 .include "../../lang/ocaml/buildlink3.mk"
