@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/05/09 14:26:35 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/11/27 15:21:18 jaapb Exp $
 ${OCAML_SITELIB}/parsexp/META
 ${OCAML_SITELIB}/parsexp/cst.ml
 ${OCAML_SITELIB}/parsexp/cst.mli
@@ -22,7 +22,7 @@ ${OCAML_SITELIB}/parsexp/parsexp.mli
 ${OCAML_SITELIB}/parsexp/parsexp__.cmi
 ${OCAML_SITELIB}/parsexp/parsexp__.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/parsexp/parsexp__.cmx
-${OCAML_SITELIB}/parsexp/parsexp__.ml-gen
+${OCAML_SITELIB}/parsexp/parsexp__.ml
 ${OCAML_SITELIB}/parsexp/parsexp__Cst.cmi
 ${OCAML_SITELIB}/parsexp/parsexp__Cst.cmt
 ${OCAML_SITELIB}/parsexp/parsexp__Cst.cmti
