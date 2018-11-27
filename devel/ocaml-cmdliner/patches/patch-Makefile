@@ -1,7 +1,8 @@
-$NetBSD: patch-Makefile,v 1.1 2018/04/09 08:54:36 jaapb Exp $
+$NetBSD: patch-Makefile,v 1.2 2018/11/27 15:56:11 jaapb Exp $
 
-These variables are set by the package Makefile
---- Makefile.orig	2017-08-07 15:10:49.000000000 +0000
+PREFIX, LIBDIR and DOCDIR set by the package Makefile
+Use BSD_INSTALL_*
+--- Makefile.orig	2018-11-26 09:20:41.000000000 +0000
 +++ Makefile
 @@ -10,9 +10,9 @@
  
@@ -14,5 +15,40 @@ These variables are set by the package Makefile
 +#LIBDIR=$(DESTDIR)$(PREFIX)/lib/ocaml/cmdliner
 +#DOCDIR=$(DESTDIR)$(PREFIX)/share/doc/cmdliner
  NATIVE=$(shell ocamlopt -version > /dev/null 2>&1 && echo true)
+ EXT_LIB=.a
  
- INSTALL=install
+@@ -34,8 +34,8 @@ all: $(BUILD-TARGETS)
+ install: $(INSTALL-TARGETS)
+ 
+ install-doc:
+-	$(INSTALL) -d $(DOCDIR)
+-	$(INSTALL) CHANGES.md LICENSE.md README.md $(DOCDIR)
++	$(BSD_INSTALL_DATA_DIR) $(DOCDIR)
++	$(BSD_INSTALL_DATA) CHANGES.md LICENSE.md README.md $(DOCDIR)
+ 
+ clean:
+ 	ocaml build.ml clean
+@@ -53,18 +53,18 @@ create-libdir:
+ 	$(INSTALL) -d $(LIBDIR)
+ 
+ install-common: create-libdir
+-	$(INSTALL) pkg/META $(BASE).mli $(BASE).cmi $(BASE).cmti $(LIBDIR)
+-	$(INSTALL) cmdliner.opam $(LIBDIR)/opam
++	$(BSD_INSTALL_DATA) pkg/META $(BASE).mli $(BASE).cmi $(BASE).cmti $(LIBDIR)
++	$(BSD_INSTALL_DATA) cmdliner.opam $(LIBDIR)/opam
+ 
+ install-byte: create-libdir
+-	$(INSTALL) $(BASE).cma $(LIBDIR)
++	$(BSD_INSTALL_DATA) $(BASE).cma $(LIBDIR)
+ 
+ install-native: create-libdir
+-	$(INSTALL) $(BASE).cmxa $(BASE)$(EXT_LIB) $(wildcard $(B)/cmdliner*.cmx) \
++	$(BSD_INSTALL_DATA) $(BASE).cmxa $(BASE)$(EXT_LIB) $(wildcard $(B)/cmdliner*.cmx) \
+   $(LIBDIR)
+ 
+ install-native-dynlink: create-libdir
+-	$(INSTALL) $(BASE).cmxs $(LIBDIR)
++	$(BSD_INSTALL_DATA) $(BASE).cmxs $(LIBDIR)
+ 
+ .PHONY: all install install-doc clean build-byte build-native \
+ 	build-native-dynlink create-libdir install-common install-byte \
