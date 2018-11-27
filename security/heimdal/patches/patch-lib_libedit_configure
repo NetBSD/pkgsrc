@@ -1,10 +1,97 @@
-$NetBSD: patch-lib_libedit_configure,v 1.2 2015/07/11 04:26:57 rodent Exp $
+$NetBSD: patch-lib_libedit_configure,v 1.3 2018/11/27 23:36:00 sevan Exp $
 
 Include termcap in the termcap test
+Support Minix
 
---- lib/libedit/configure.orig	2012-12-09 22:09:25.000000000 +0000
+--- lib/libedit/configure.orig	Sun Dec  9 22:09:25 2012
 +++ lib/libedit/configure
-@@ -11603,7 +11603,50 @@ test -n "$NROFF" || NROFF="/bin/false"
+@@ -4877,7 +4877,7 @@ else
+     lt_cv_sys_max_cmd_len=8192;
+     ;;
+ 
+-  netbsd* | freebsd* | openbsd* | darwin* | dragonfly*)
++  netbsd* | freebsd* | openbsd* | darwin* | dragonfly* | minix*)
+     # This has been around since 386BSD, at least.  Likely further.
+     if test -x /sbin/sysctl; then
+       lt_cv_sys_max_cmd_len=`/sbin/sysctl -n kern.argmax`
+@@ -5369,12 +5369,8 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu)
+   lt_cv_deplibs_check_method=pass_all
+   ;;
+ 
+-netbsd*)
+-  if echo __ELF__ | $CC -E - | $GREP __ELF__ > /dev/null; then
+-    lt_cv_deplibs_check_method='match_pattern /lib[^/]+(\.so\.[0-9]+\.[0-9]+|_pic\.a)$'
+-  else
+-    lt_cv_deplibs_check_method='match_pattern /lib[^/]+(\.so|_pic\.a)$'
+-  fi
++netbsd* | minix*)
++  lt_cv_deplibs_check_method='match_pattern /lib[^/]+(\.so|_pic\.a)$'
+   ;;
+ 
+ newos6*)
+@@ -8661,14 +8657,13 @@ _LT_EOF
+       fi
+       ;;
+ 
+-    netbsd*)
+-      if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
+-	archive_cmds='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
+-	wlarc=
+-      else
+-	archive_cmds='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
+-	archive_expsym_cmds='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
+-      fi
++    netbsd* | minix*)
++      archive_cmds='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++      archive_expsym_cmds='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++      hardcode_libdir_flag_spec='${wl}-rpath,$libdir'
++      hardcode_direct=yes
++      hardcode_shlibpath_var=no
++      output_verbose_link_cmd=func_echo_all
+       ;;
+ 
+     solaris*)
+@@ -9294,15 +9289,13 @@ $as_echo "$lt_cv_irix_exported_symbol" >&6; }
+       link_all_deplibs=yes
+       ;;
+ 
+-    netbsd*)
+-      if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
+-	archive_cmds='$LD -Bshareable -o $lib $libobjs $deplibs $linker_flags'  # a.out
+-      else
+-	archive_cmds='$LD -shared -o $lib $libobjs $deplibs $linker_flags'      # ELF
+-      fi
+-      hardcode_libdir_flag_spec='-R$libdir'
++    netbsd* | minix*)
++      archive_cmds='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++      archive_expsym_cmds='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++      hardcode_libdir_flag_spec='${wl}-rpath,$libdir'
+       hardcode_direct=yes
+       hardcode_shlibpath_var=no
++      output_verbose_link_cmd=func_echo_all
+       ;;
+ 
+     newsos6)
+@@ -10330,6 +10323,18 @@ fi
+   dynamic_linker='GNU/Linux ld.so'
+   ;;
+ 
++minix*)
++  version_type=linux
++  need_lib_prefix=no
++  need_version=no
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
++  soname_spec='${libname}${release}${shared_ext}$major'
++  dynamic_linker='Minix ld.elf_so'
++  shlibpath_var=LD_LIBRARY_PATH
++  shlibpath_overrides_runpath=yes
++  hardcode_into_libs=yes
++  ;;
++
+ netbsd*)
+   version_type=sunos
+   need_lib_prefix=no
+@@ -11603,7 +11608,50 @@ test -n "$NROFF" || NROFF="/bin/false"
  
  
  
@@ -55,7 +142,7 @@ Include termcap in the termcap test
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for tgetent in -lcurses" >&5
  $as_echo_n "checking for tgetent in -lcurses... " >&6; }
  if test "${ac_cv_lib_curses_tgetent+set}" = set; then :
-@@ -11692,11 +11735,12 @@ _ACEOF
+@@ -11692,11 +11740,12 @@ _ACEOF
    LIBS="-lncurses $LIBS"
  
  else
