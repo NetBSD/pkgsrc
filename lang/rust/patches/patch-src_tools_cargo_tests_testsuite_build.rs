@@ -1,10 +1,10 @@
-$NetBSD: patch-src_tools_cargo_tests_testsuite_build.rs,v 1.1 2018/10/29 22:24:11 he Exp $
+$NetBSD: patch-src_tools_cargo_tests_testsuite_build.rs,v 1.2 2018/11/27 15:45:23 adam Exp $
 
 Don't attempt incremental operations on sparc64, ref.
 https://sources.debian.org/patches/cargo/0.29.0-1/2007_sparc64_disable_incremental_build.patch/
 
---- ./src/tools/cargo/tests/testsuite/build.rs.orig	2018-10-24 20:01:28.000000000 +0000
-+++ ./src/tools/cargo/tests/testsuite/build.rs
+--- src/tools/cargo/tests/testsuite/build.rs.orig	2018-10-24 20:01:28.000000000 +0000
++++ src/tools/cargo/tests/testsuite/build.rs
 @@ -38,6 +38,7 @@ fn cargo_fail_with_no_stderr() {
  
  /// Check that the `CARGO_INCREMENTAL` environment variable results in
