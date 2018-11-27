@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2018/11/26 09:09:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2018/11/27 16:16:55 adam Exp $
 bin/epylint-${PYVERSSUFFIX}
 bin/pylint-${PYVERSSUFFIX}
 bin/pyreverse-${PYVERSSUFFIX}
@@ -445,6 +445,10 @@ ${PYSITELIB}/pylint/test/functional/globals.py
 ${PYSITELIB}/pylint/test/functional/globals.txt
 ${PYSITELIB}/pylint/test/functional/implicit_str_concat_in_sequence.py
 ${PYSITELIB}/pylint/test/functional/implicit_str_concat_in_sequence.txt
+${PYSITELIB}/pylint/test/functional/implicit_str_concat_in_sequence_latin1.py
+${PYSITELIB}/pylint/test/functional/implicit_str_concat_in_sequence_latin1.txt
+${PYSITELIB}/pylint/test/functional/implicit_str_concat_in_sequence_utf8.py
+${PYSITELIB}/pylint/test/functional/implicit_str_concat_in_sequence_utf8.txt
 ${PYSITELIB}/pylint/test/functional/import_error.py
 ${PYSITELIB}/pylint/test/functional/import_error.rc
 ${PYSITELIB}/pylint/test/functional/import_error.txt
