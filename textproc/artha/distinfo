@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:59:18 agc Exp $
+$NetBSD: distinfo,v 1.3 2018/11/27 14:29:27 bsiegert Exp $
 
 SHA1 (artha-1.0.3.tar.bz2) = 8bced6357b425f74d4b13ec6d35b8a50236fae94
 RMD160 (artha-1.0.3.tar.bz2) = 22c6e454cb647a97be6ca06bd1980959f389926b
 SHA512 (artha-1.0.3.tar.bz2) = de8379a0c2f79b7e2aeb582887f9346c9f56e83bacc5b47746f6f922ac1a5404edf4f5187e7273581366183a2c59d94258322bf52fb6bf51a02f9b7d12732c4b
 Size (artha-1.0.3.tar.bz2) = 363674 bytes
+SHA1 (patch-src_suggestions.c) = ab26e38803c9169dfa4cd6ab3a7cad6c7c2ab7cd
