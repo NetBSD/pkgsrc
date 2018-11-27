@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4868 2018/11/27 13:28:24 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.4869 2018/11/27 13:30:06 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6794,3 +6794,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Removed devel/ocaml-ppx_core [jaapb 2018-11-27]
 	Removed devel/ocaml-ppx_driver [jaapb 2018-11-27]
 	Removed devel/ocaml-ppx_metaquot [jaapb 2018-11-27]
+	Removed devel/ocaml-ppx_traverse_builtins [jaapb 2018-11-27]
