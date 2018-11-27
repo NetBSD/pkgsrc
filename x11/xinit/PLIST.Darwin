@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST.Darwin,v 1.1 2015/10/01 12:32:22 tnn Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.2 2018/11/27 16:29:46 maya Exp $
 bin/startx
 bin/xinit
 man/man1/startx.1
 man/man1/xinit.1
-share/examples/xinit/launchd_startx
-share/examples/xinit/privileged_startx
+libexec/launchd_startx
+libexec/privileged_startx
 share/examples/xinit/privileged_startx.d/10-tmpdirs
 share/examples/xinit/privileged_startx.d/20-font_cache
 share/examples/xinit/xinitrc
