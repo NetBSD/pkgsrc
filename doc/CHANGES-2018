@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4882 2018/11/27 16:46:16 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.4883 2018/11/27 16:54:06 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6812,3 +6812,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-daemon to 2.2.0 [adam 2018-11-27]
 	Updated misc/ocaml-topkg to 1.0.0 [jaapb 2018-11-27]
 	Updated textproc/ocaml-uchar to 0.0.2 [jaapb 2018-11-27]
+	Updated misc/ocaml-opam to 2.0.1 [jaapb 2018-11-27]
