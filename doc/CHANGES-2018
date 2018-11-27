@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4863 2018/11/26 15:29:10 fox Exp $
+$NetBSD: CHANGES-2018,v 1.4864 2018/11/27 07:04:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6788,3 +6788,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated editors/hnb to 1.9.17nb5 [fox 2018-11-26]
 	Updated mail/mutt to 1.11.0 [tron 2018-11-26]
 	Added print/dspdfviewer version 1.15.1 [fox 2018-11-26]
+	Updated security/py-cryptodome to 3.7.2 [adam 2018-11-27]
+	Updated security/py-asyncssh to 1.15.0 [adam 2018-11-27]
