@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2018/11/27 19:25:05 nia Exp $
+
+SHA1 (carbons-purple-0.2.1.tar.gz) = 7cc39a82ee562196f804f66ddb7f2d74ca67bbac
+RMD160 (carbons-purple-0.2.1.tar.gz) = 7b847baeace9eac5d56f3a648715357de5c9e405
+SHA512 (carbons-purple-0.2.1.tar.gz) = 1184ff3fa7f7a8f1c90d8a66ca050bf605dab6056a8f732648b0a6ba747e2975fb82bb411caf5e3752cbd74b702c74908388174d925787dbf3fe9de900cf9eb6
+Size (carbons-purple-0.2.1.tar.gz) = 21773 bytes
+SHA1 (patch-Makefile) = 1c0754391b4589a5741e58043155484427875536
