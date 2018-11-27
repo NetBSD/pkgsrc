@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2018/11/14 22:22:30 kleink Exp $
+# $NetBSD: Makefile,v 1.9 2018/11/27 14:29:27 bsiegert Exp $
 
 DISTNAME=       artha-1.0.3
-PKGREVISION=     7
+PKGREVISION=    8
 CATEGORIES=     textproc
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=artha/}
 EXTRACT_SUFX=   .tar.bz2
@@ -19,7 +19,7 @@ USE_LANGUAGES=  c
 .include "options.mk"
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../textproc/enchant/buildlink3.mk"
+.include "../../textproc/enchant2/buildlink3.mk"
 .include "../../textproc/WordNet/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
