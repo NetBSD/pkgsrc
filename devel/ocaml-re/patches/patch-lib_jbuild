@@ -1,0 +1,12 @@
+$NetBSD: patch-lib_jbuild,v 1.1 2018/11/27 16:07:28 jaapb Exp $
+
+The seq library is installed by default in NetBSD,
+no need for a compatibility layer
+--- lib/jbuild.orig	2018-08-04 15:26:35.000000000 +0000
++++ lib/jbuild
+@@ -3,5 +3,4 @@
+ (library
+  ((name re)
+   (synopsis "Pure OCaml regular expression library")
+-  (libraries (seq))
+   (public_name re)))
