@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.11 2018/01/10 16:44:16 jaapb Exp $
+$NetBSD: distinfo,v 1.12 2018/11/27 19:03:09 jaapb Exp $
 
-SHA1 (ocaml-ssl-0.5.5.tar.gz) = 30edd6c0b17b6c28e7f5f502eed2bdf8532b8281
-RMD160 (ocaml-ssl-0.5.5.tar.gz) = a19283635e0fdcb37f23504658d3c52387185d6a
-SHA512 (ocaml-ssl-0.5.5.tar.gz) = c5996981339ed749e68654b0e397464af0e533791fe0fa66c62d1b5b08752ce7073e41504b81f9d0d690dd1128419add18d8017fe6b20ede179b44ca68d5016c
-Size (ocaml-ssl-0.5.5.tar.gz) = 47660 bytes
-SHA1 (patch-src_Makefile) = fa5e74f567aff37d8e25fd93ef2db7fdd5b0b17a
+SHA1 (ocaml-ssl-0.5.7.tar.gz) = 388a8494fd1da01838afb13263b4b0f4f7a85fa4
+RMD160 (ocaml-ssl-0.5.7.tar.gz) = 6f2bf3737d2381ed0a1051e45bc2888c02b845fa
+SHA512 (ocaml-ssl-0.5.7.tar.gz) = b412cbdcd92ee3ba227161d804d20b32c8cbda2e4eb0c195adb5d47b56b25e3ce8c831b9f4fae1c76d21b61df1b151745c9477cb850851f712ebb01146c69e7a
+Size (ocaml-ssl-0.5.7.tar.gz) = 30006 bytes
