@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2018/11/13 21:08:34 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.19 2018/11/27 13:53:46 jaapb Exp $
 bin/ocamlfind
 ${OCAML_SITELIB}/bigarray/META
 ${OCAML_SITELIB}/bytes/META
@@ -29,6 +29,7 @@ ${OCAML_SITELIB}/findlib/fl_package_base.cmi
 ${OCAML_SITELIB}/findlib/fl_package_base.mli
 ${OCAML_SITELIB}/findlib/topfind.cmi
 ${OCAML_SITELIB}/findlib/topfind.mli
+@optional ${OCAML_SITELIB}/graphics/META
 ${OCAML_SITELIB}/ocamldoc/META
 ${PLIST.64bit}${OCAML_SITELIB}/raw_spacetime/META
 ${OCAML_SITELIB}/stdlib/META
