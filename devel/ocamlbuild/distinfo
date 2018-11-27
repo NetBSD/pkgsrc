@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/01/10 16:13:18 jaapb Exp $
+$NetBSD: distinfo,v 1.6 2018/11/27 13:59:42 jaapb Exp $
 
-SHA1 (ocamlbuild-0.12.0.tar.gz) = ac8024b4ed6d92a5871dc218259a683808753b1f
-RMD160 (ocamlbuild-0.12.0.tar.gz) = d4622df37340010a3a5c29b24cb1357931be1273
-SHA512 (ocamlbuild-0.12.0.tar.gz) = 0755a8410a1e083d344e2389bbff06ae2ad5daaf9b186147fd0d2fa094bdc3a2e8e94e2a1e666a63276d10899274b905535300f47d50e747e86f17cf562abe08
-Size (ocamlbuild-0.12.0.tar.gz) = 197030 bytes
+SHA1 (ocamlbuild-0.13.1.tar.gz) = 092907719d184ca5ada87958eea1866e83b0fd51
+RMD160 (ocamlbuild-0.13.1.tar.gz) = 190d6cb3b6332cfb27672be9a56bbf047785ec2b
+SHA512 (ocamlbuild-0.13.1.tar.gz) = ca22c4dfb9ddf20a5b0010a3df13495c8baf05fa6d660ea8ced2df86448bdc411d8231ffd05fb5fbfe96882e524a352cea555da3b97c16e9505b7520b96fa7b7
+Size (ocamlbuild-0.13.1.tar.gz) = 198011 bytes
