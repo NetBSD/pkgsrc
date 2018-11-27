@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2018/04/09 10:20:44 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/11/27 19:08:14 jaapb Exp $
 ${OCAML_SITELIB}/pcre/META
 ${OCAML_SITELIB}/pcre/libpcre_stubs.a
 ${OCAML_SITELIB}/pcre/opam
@@ -21,6 +21,6 @@ share/examples/pcre-ocaml/Makefile
 share/examples/pcre-ocaml/README.md
 share/examples/pcre-ocaml/cloc.ml
 share/examples/pcre-ocaml/count_hash.ml
-share/examples/pcre-ocaml/jbuild
+share/examples/pcre-ocaml/dune
 share/examples/pcre-ocaml/pcregrep.ml
 share/examples/pcre-ocaml/subst.ml
