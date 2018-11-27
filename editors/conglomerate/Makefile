@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.108 2018/11/14 22:21:22 kleink Exp $
+# $NetBSD: Makefile,v 1.109 2018/11/27 15:11:09 bsiegert Exp $
 #
 
 DISTNAME=	conglomerate-0.9.1
-PKGREVISION=	58
+PKGREVISION=	59
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=conglomerate/}
 
@@ -34,7 +34,7 @@ GCONF_SCHEMAS=		conglomerate.schemas
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
-.include "../../textproc/enchant/buildlink3.mk"
+.include "../../textproc/enchant2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
