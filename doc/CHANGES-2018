@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4879 2018/11/27 16:24:43 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4880 2018/11/27 16:36:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6808,3 +6808,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-natsort to 5.5.0 [adam 2018-11-27]
 	Updated devel/py-test-testmon to 0.9.14 [adam 2018-11-27]
 	Updated www/py-pylint-django to 2.0.4 [adam 2018-11-27]
+	Updated devel/py-coverage to 4.5.2 [adam 2018-11-27]
+	Updated devel/py-daemon to 2.2.0 [adam 2018-11-27]
