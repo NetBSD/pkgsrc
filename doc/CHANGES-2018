@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4864 2018/11/27 07:04:00 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4865 2018/11/27 13:24:24 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6790,3 +6790,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added print/dspdfviewer version 1.15.1 [fox 2018-11-26]
 	Updated security/py-cryptodome to 3.7.2 [adam 2018-11-27]
 	Updated security/py-asyncssh to 1.15.0 [adam 2018-11-27]
+	Removed devel/ocaml-ppx_ast [jaapb 2018-11-27]
