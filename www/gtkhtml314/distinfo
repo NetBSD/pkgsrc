@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.29 2015/11/04 02:46:54 agc Exp $
+$NetBSD: distinfo,v 1.30 2018/11/27 20:32:06 bsiegert Exp $
 
 SHA1 (gtkhtml-3.32.2.tar.bz2) = db8a943ddeec0b86766e671e8f8c427706dbcdd4
 RMD160 (gtkhtml-3.32.2.tar.bz2) = b71afbd07c658c2ec6ac285cc428ac1943d39e46
 SHA512 (gtkhtml-3.32.2.tar.bz2) = a641a6e2208ad9db9ab3c3dc4696cf010b70f64d302b6f889a275db396544570ee5c894835a18ea94699375d0e2fd91fd7414a0546ce5f62bcb6d603d331b1d5
 Size (gtkhtml-3.32.2.tar.bz2) = 1217025 bytes
+SHA1 (patch-components_editor_gtkhtml-spell-checker.c) = 4d10e8b18ec7ecb7db1105f91bd5eed996b6accc
