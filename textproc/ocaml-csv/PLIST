@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/04/12 11:10:52 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/11/27 19:49:45 jaapb Exp $
 bin/csvtool
 ${PLIST.lwt}${OCAML_SITELIB}/csv-lwt/META
 ${PLIST.lwt}${OCAML_SITELIB}/csv-lwt/csv-lwt.dune
@@ -15,7 +15,7 @@ ${PLIST.lwt}${OCAML_SITELIB}/csv-lwt/csv_lwt.mli
 ${PLIST.lwt}${OCAML_SITELIB}/csv-lwt/csv_lwt__.cmi
 ${PLIST.lwt}${OCAML_SITELIB}/csv-lwt/csv_lwt__.cmt
 ${PLIST.lwt}${PLIST.ocaml-opt}${OCAML_SITELIB}/csv-lwt/csv_lwt__.cmx
-${PLIST.lwt}${OCAML_SITELIB}/csv-lwt/csv_lwt__.ml-gen
+${PLIST.lwt}${OCAML_SITELIB}/csv-lwt/csv_lwt__.ml
 ${PLIST.lwt}${OCAML_SITELIB}/csv-lwt/csv_lwt__Csv_utils.cmi
 ${PLIST.lwt}${OCAML_SITELIB}/csv-lwt/csv_lwt__Csv_utils.cmt
 ${PLIST.lwt}${PLIST.ocaml-opt}${OCAML_SITELIB}/csv-lwt/csv_lwt__Csv_utils.cmx
@@ -36,7 +36,7 @@ ${OCAML_SITELIB}/csv/csv.mli
 ${OCAML_SITELIB}/csv/csv__.cmi
 ${OCAML_SITELIB}/csv/csv__.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/csv/csv__.cmx
-${OCAML_SITELIB}/csv/csv__.ml-gen
+${OCAML_SITELIB}/csv/csv__.ml
 ${OCAML_SITELIB}/csv/csv__Csv_row.cmi
 ${OCAML_SITELIB}/csv/csv__Csv_row.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/csv/csv__Csv_row.cmx
