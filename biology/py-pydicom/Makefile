@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2018/10/31 20:15:40 leot Exp $
 
-DISTNAME=	pydicom-1.2.0
+DISTNAME=	pydicom-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	biology python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pydicom/}
