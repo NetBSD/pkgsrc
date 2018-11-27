@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/04/05 10:45:05 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/11/27 16:07:28 jaapb Exp $
 ${OCAML_SITELIB}/re/META
 ${OCAML_SITELIB}/re/automata.ml
 ${OCAML_SITELIB}/re/automata.mli
@@ -79,7 +79,7 @@ ${OCAML_SITELIB}/re/re.ml
 ${OCAML_SITELIB}/re/re__.cmi
 ${OCAML_SITELIB}/re/re__.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/re/re__.cmx
-${OCAML_SITELIB}/re/re__.ml-gen
+${OCAML_SITELIB}/re/re__.ml
 ${OCAML_SITELIB}/re/re__Automata.cmi
 ${OCAML_SITELIB}/re/re__Automata.cmt
 ${OCAML_SITELIB}/re/re__Automata.cmti
