@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/05/09 14:46:59 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2018/11/27 18:57:00 jaapb Exp $
 
-SHA1 (ppxlib-0.3.0.tar.gz) = 721aec388ba104dfde81df064605e1b254cd2b52
-RMD160 (ppxlib-0.3.0.tar.gz) = 637b186f898a286228b0e4422b702c8a9b77e292
-SHA512 (ppxlib-0.3.0.tar.gz) = 2b158f7ef62aea1d70471cab750ebcd5311a32d98fb5cea42f66eaaa81c28b222af99be2c52067f3b87646ac4b9b2a41544273fc060dc3b03ad2b660a387585a
-Size (ppxlib-0.3.0.tar.gz) = 173963 bytes
+SHA1 (ppxlib-0.3.1.tar.gz) = 2faf6cbe01ff9a9b83f9435ff571d3387f944c2f
+RMD160 (ppxlib-0.3.1.tar.gz) = 52df5b6e5472842a73dc03005d25f0dceea3b01b
+SHA512 (ppxlib-0.3.1.tar.gz) = 6553d96132bfeca174d8e11d5eb7259f44bc76da962900bc333bcb9836cefe99d074fb518869372b894ba0dc2b074b585e546e8d85b4c0f4f086577fe61174fd
+Size (ppxlib-0.3.1.tar.gz) = 173101 bytes
