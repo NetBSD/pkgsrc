@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4876 2018/11/27 15:56:26 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.4877 2018/11/27 16:00:06 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6802,3 +6802,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/ocaml-dune version 1.5.1 [jaapb 2018-11-27]
 	Updated databases/ocaml-sqlite3 to 4.4.1 [jaapb 2018-11-27]
 	Updated devel/ocaml-cmdliner to 1.0.3 [jaapb 2018-11-27]
+	Updated devel/ocaml-cppo to 1.6.5 [jaapb 2018-11-27]
