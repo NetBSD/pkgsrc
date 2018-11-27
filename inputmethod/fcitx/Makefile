@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2018/11/14 22:21:49 kleink Exp $
+# $NetBSD: Makefile,v 1.18 2018/11/27 13:07:25 bsiegert Exp $
 #
 
 DISTNAME=		fcitx-4.2.9.6
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		inputmethod
 MASTER_SITES=		https://download.fcitx-im.org/fcitx/
 EXTRACT_SUFX=		.tar.xz
@@ -67,7 +67,7 @@ post-extract:
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/gettext-tools/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
-.include "../../textproc/enchant/buildlink3.mk"
+.include "../../textproc/enchant2/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
