@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2017/07/11 10:34:30 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/11/27 14:03:45 jaapb Exp $
 ${OCAML_SITELIB}/opam-file-format/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/opam-file-format/opam-file-format.a
 ${OCAML_SITELIB}/opam-file-format/opam-file-format.cma
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/opam-file-format/opam-file-format.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/opam-file-format/opam-file-format.cmxs
 ${OCAML_SITELIB}/opam-file-format/opamBaseParser.cmi
 ${OCAML_SITELIB}/opam-file-format/opamBaseParser.cmo
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/opam-file-format/opamBaseParser.cmx
