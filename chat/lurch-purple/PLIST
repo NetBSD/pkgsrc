@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2018/11/27 17:44:14 nia Exp $
+lib/purple-2/lurch.so
