@@ -1,0 +1,6 @@
+If you have multiple devices and want messages sent and received
+by one device show up on all others, XEP-0280: Message Carbons is
+what you are looking for.
+
+This is an experimental XMPP XEP-0280: Message Carbons plugin for
+libpurple (Pidgin, Finch, etc.)
