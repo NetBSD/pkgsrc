@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4880 2018/11/27 16:36:52 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4881 2018/11/27 16:43:17 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6810,3 +6810,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-pylint-django to 2.0.4 [adam 2018-11-27]
 	Updated devel/py-coverage to 4.5.2 [adam 2018-11-27]
 	Updated devel/py-daemon to 2.2.0 [adam 2018-11-27]
+	Updated misc/ocaml-topkg to 1.0.0 [jaapb 2018-11-27]
