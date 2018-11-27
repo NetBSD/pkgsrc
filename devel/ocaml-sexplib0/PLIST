@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/05/09 14:18:13 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/11/27 14:45:05 jaapb Exp $
 ${OCAML_SITELIB}/sexplib0/META
 ${OCAML_SITELIB}/sexplib0/opam
 ${OCAML_SITELIB}/sexplib0/sexp.ml
@@ -14,7 +14,7 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/sexplib0/sexplib0.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/sexplib0/sexplib0.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/sexplib0/sexplib0.cmxs
 ${OCAML_SITELIB}/sexplib0/sexplib0.dune
-${OCAML_SITELIB}/sexplib0/sexplib0.ml-gen
+${OCAML_SITELIB}/sexplib0/sexplib0.ml
 ${OCAML_SITELIB}/sexplib0/sexplib0__Sexp.cmi
 ${OCAML_SITELIB}/sexplib0/sexplib0__Sexp.cmt
 ${OCAML_SITELIB}/sexplib0/sexplib0__Sexp.cmti
