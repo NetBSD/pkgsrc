@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2018/11/12 16:10:19 jaapb Exp $
+# $NetBSD: Makefile,v 1.39 2018/11/27 17:15:49 jaapb Exp $
 #
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "Makefile.common"
 
 PKGNAME=	ocaml-${DISTNAME}
@@ -11,13 +11,11 @@ MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	http://www.ocsigen.org/
 COMMENT=	Cooperative threading library for OCaml
 
-#MAKE_JOBS_SAFE=	no
-JBUILDER_BUILD_PACKAGES=	lwt
+OCAML_FINDLIB_DIRS=	lwt stublibs
+DUNE_BUILD_PACKAGES=	lwt
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	-use-libev false
-
-OCAML_USE_JBUILDER=	yes
 
 CFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
 
