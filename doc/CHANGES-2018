@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4891 2018/11/27 19:25:18 nia Exp $
+$NetBSD: CHANGES-2018,v 1.4892 2018/11/27 19:49:57 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6821,3 +6821,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/ocaml-ssl to 0.5.7 [jaapb 2018-11-27]
 	Updated devel/pcre-ocaml to 7.3.5 [jaapb 2018-11-27]
 	Added chat/carbons-purple version 0.2.1 [nia 2018-11-27]
+	Updated textproc/ocaml-csv to 2.2 [jaapb 2018-11-27]
