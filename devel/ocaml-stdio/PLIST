@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/05/09 14:44:12 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/11/27 15:25:39 jaapb Exp $
 ${OCAML_SITELIB}/stdio/META
 ${OCAML_SITELIB}/stdio/import.ml
 ${OCAML_SITELIB}/stdio/in_channel.ml
@@ -20,7 +20,7 @@ ${OCAML_SITELIB}/stdio/stdio.mli
 ${OCAML_SITELIB}/stdio/stdio__.cmi
 ${OCAML_SITELIB}/stdio/stdio__.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/stdio/stdio__.cmx
-${PLIST.ocaml-opt}${OCAML_SITELIB}/stdio/stdio__.ml-gen
+${PLIST.ocaml-opt}${OCAML_SITELIB}/stdio/stdio__.ml
 ${OCAML_SITELIB}/stdio/stdio__Import.cmi
 ${OCAML_SITELIB}/stdio/stdio__Import.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/stdio/stdio__Import.cmx
