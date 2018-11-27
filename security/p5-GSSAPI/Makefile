@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/08/22 09:46:26 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2018/11/27 23:58:40 sevan Exp $
 #
 
 DISTNAME=	GSSAPI-0.28
@@ -17,5 +17,5 @@ MAKE_PARAMS+=	--gssapiimpl=${KRB5BASE}
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/krb5.buildlink3.mk"
-
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
