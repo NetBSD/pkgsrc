@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.45 2015/11/04 01:17:46 agc Exp $
+$NetBSD: distinfo,v 1.46 2018/11/27 23:36:00 sevan Exp $
 
 SHA1 (heimdal-1.5.3.tar.gz) = 23f39a099ae862dce1f5f4e5c3720861849a4bd0
 RMD160 (heimdal-1.5.3.tar.gz) = 834660b4c0fe81a3aac4ffd9d8d37d74add1fa70
 SHA512 (heimdal-1.5.3.tar.gz) = 5c7890f60d6fe6b5034fca204eb7cdb33fdc397fe09b169212b6267310b83bb0b3b06a4c2888841be34c92cbd701bd95734b4019c33c147459c4a449861c4431
 Size (heimdal-1.5.3.tar.gz) = 6798305 bytes
-SHA1 (patch-ad) = 1768f055dbdb6e7ed958dec34a0eb7e466712e38
+SHA1 (patch-ad) = 24acb603565e3c03acde37c0120ba25ef2bf27e1
 SHA1 (patch-al) = 0cea9e7d48f2796b6856d9ef4512cfddcb5bfd03
 SHA1 (patch-cf_install-catman.sh) = 72f3ffa374fb63dcaa89dec288936ecfff1b5228
 SHA1 (patch-cf_libtool.m4) = ffc6c28e13051976c8c25a0f1e486ba7d693facc
@@ -13,7 +13,7 @@ SHA1 (patch-cf_roken-frag.m4) = 599216f2650facaff0559f2a9cc27439e2f1f099
 SHA1 (patch-kdc_version-script.map) = bef9c33f2e4f4faa61771e2c462e43f1a56d0fb0
 SHA1 (patch-lib_ipc_server.c) = fa806b549ed5cb3c4427e3865642e6d9555a59b0
 SHA1 (patch-lib_libedit_aclocal.m4) = a556a5e2afab645263d3413422fc2e0a9825956b
-SHA1 (patch-lib_libedit_configure) = 54f92775849874b748e88e8f8923cc187cec5bae
+SHA1 (patch-lib_libedit_configure) = f7b0ce50a722d1320b01ef2bd97abb16b447d22f
 SHA1 (patch-lib_libedit_configure.ac) = 3c6122731b47cb94a488874b3e8d35f3a0bee3b1
 SHA1 (patch-lib_libedit_src_unvis.c) = 117c91ead1ca94aaed38c2d0611588fec6746d61
 SHA1 (patch-lib_libedit_src_vis.c) = ade98e513187c3fa03194909409a9bb23f66509a
