@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.217 2018/11/23 08:06:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.218 2018/11/27 18:28:48 maya Exp $
 
 # (Intended to be upgraded to vlc3 when dependencies resolved)
 DISTNAME=		vlc-${VLC_VERSION}
@@ -66,7 +66,7 @@ CFLAGS+=		-fPIC
 CXXFLAGS+=		-fPIC
 
 # which platforms support OSSv4?
-.if ${MACHINE_PLATFORM:MNetBSD-[789]*-*}
+.if ${MACHINE_PLATFORM:MNetBSD-*-*}
 PLIST.oss=		yes
 .include "../../mk/oss.buildlink3.mk"
 .else
