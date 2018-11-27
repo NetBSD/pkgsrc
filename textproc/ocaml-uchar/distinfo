@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/12/30 12:02:10 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2018/11/27 16:46:05 jaapb Exp $
 
-SHA1 (uchar-0.0.1.tar.gz) = 3b22f264be8ceda428d7fa22a813e65d96e6dc83
-RMD160 (uchar-0.0.1.tar.gz) = 5024476db24145e05766660edc926d50c111f9cb
-SHA512 (uchar-0.0.1.tar.gz) = 6bdc3646cb959af1a289e22f5202da2f3e3462b42a563ec4a999e96ba7b2d0c95e2d42ef06b35cd9c477eebfadef5bba4abdb60997faa7e6848aa6bcb5d729c2
-Size (uchar-0.0.1.tar.gz) = 23471 bytes
+SHA1 (uchar-0.0.2.tar.gz) = bf557294c00c3590332a12dfb5ad322950a05866
+RMD160 (uchar-0.0.2.tar.gz) = 2d7fe60ddbe37fcfee8b2eee7de0003a129ec649
+SHA512 (uchar-0.0.2.tar.gz) = 487a9706cf9dfc9b9c94442a51766cc211687d6ebcb4dd3c94d09cb1ed6d7fd61e966e91a4121fe2d1681b2fd6bfee9079d3bccccdb6d65ba2111524ab5dd1bc
+Size (uchar-0.0.2.tar.gz) = 21815 bytes
