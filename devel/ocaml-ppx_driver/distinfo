@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2018/01/10 16:06:00 jaapb Exp $
-
-SHA1 (ppx_driver-0.9.2.tar.gz) = 74240076ff449ca29208b3de95493a5499dd1575
-RMD160 (ppx_driver-0.9.2.tar.gz) = 188d01dea8a5b37a131e122f12e9a294c328ab54
-SHA512 (ppx_driver-0.9.2.tar.gz) = 8fe1cdcaf34bdd317153ef5c959e8eabe321a2b5590016e7a303964d649634390ca438b6f72036d7e15a74075e6d6e71572977babbaf46f2ed6da5123aac4501
-Size (ppx_driver-0.9.2.tar.gz) = 28688 bytes
