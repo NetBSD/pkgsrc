@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/07/19 14:18:09 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/11/27 23:33:40 jaapb Exp $
 ${PLIST.ocaml-opt}bin/ydump
 ${OCAML_SITELIB}/yojson/META
 ${OCAML_SITELIB}/yojson/opam
@@ -11,6 +11,7 @@ ${OCAML_SITELIB}/yojson/yojson.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/yojson/yojson.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/yojson/yojson.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/yojson/yojson.cmxs
+${OCAML_SITELIB}/yojson/yojson.dune
 ${OCAML_SITELIB}/yojson/yojson.ml
 ${OCAML_SITELIB}/yojson/yojson.mli
 ${OCAML_SITELIB}/yojson/yojson_biniou.cmi
