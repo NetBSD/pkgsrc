@@ -1,0 +1,3 @@
+bin/dmypy @PREFIX@/bin/dmypy-@PYVERSSUFFIX@
+bin/mypy @PREFIX@/bin/mypy-@PYVERSSUFFIX@
+bin/stubgen @PREFIX@/bin/stubgen-@PYVERSSUFFIX@
