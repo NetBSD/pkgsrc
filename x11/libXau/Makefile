@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/03/07 11:57:35 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2018/11/28 14:08:47 sevan Exp $
 
 DISTNAME=		libXau-1.0.8
 PKGREVISION=		1
@@ -23,5 +23,6 @@ CPPFLAGS.OSF1+=		-pthread # Required by compiler if including pthread.h
 
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
