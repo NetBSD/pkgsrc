@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.146 2018/11/10 18:35:18 adam Exp $
+# $NetBSD: Makefile,v 1.147 2018/11/28 08:36:04 adam Exp $
 
-DISTNAME=	node-v10.13.0
+DISTNAME=	node-v10.14.0
 
 USE_LANGUAGES=	c gnu++14
 
@@ -8,7 +8,7 @@ USE_LANGUAGES=	c gnu++14
 GCC_REQD+=	4.9.4
 
 # Stated by the changelog
-BUILDLINK_API_DEPENDS.libuv+=   libuv>=1.23
+BUILDLINK_API_DEPENDS.libuv+=	libuv>=1.23
 
 .include "../../mk/bsd.prefs.mk"
 
