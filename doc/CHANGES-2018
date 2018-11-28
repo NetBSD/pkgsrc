@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4909 2018/11/28 18:49:12 nia Exp $
+$NetBSD: CHANGES-2018,v 1.4910 2018/11/28 19:57:31 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6847,3 +6847,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/qmail-acceptutils to 20181128 [schmonz 2018-11-28]
 	Updated mail/qmail-run to 20181128 [schmonz 2018-11-28]
 	Added x11/kitty version 0.12.3 [nia 2018-11-28]
+	Updated net/gallery-dl to 1.6.1 [leot 2018-11-28]
