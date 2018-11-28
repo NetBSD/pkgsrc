@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/11/28 19:09:19 nia Exp $
+# $NetBSD: Makefile,v 1.3 2018/11/28 19:28:37 nia Exp $
 
 DISTNAME=	kitty-0.12.3
 CATEGORIES=	x11
@@ -29,13 +29,6 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 PYTHON_VERSIONS_INCOMPATIBLE=	27 34
 
 REPLACE_PYTHON+=	kitty/launcher/kitty
-
-PLIST_AWK+=		-f ../../lang/python/plist-python.awk
-PLIST_AWK_ENV+=		PYVERS="${PYVERSSUFFIX:S/.//}"
-PRINT_PLIST_AWK+=	/^[^@]/ && /[^\/]+\.py[co]$$/ {
-PRINT_PLIST_AWK+=	gsub(/__pycache__\//, "")
-PRINT_PLIST_AWK+=	gsub(/opt-1\.pyc$$/, "pyo")
-PRINT_PLIST_AWK+=	gsub(/\.cpython-${_PYTHON_VERSION}/, "")}
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
@@ -68,6 +61,7 @@ do-install:
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
