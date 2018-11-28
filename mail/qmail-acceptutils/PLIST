@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2018/10/22 15:23:06 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/11/28 16:17:36 schmonz Exp $
 bin/authup
 bin/checknotroot
 bin/fixsmtpio
+bin/qmail-qfilter-addtlsheader
 bin/reup
 man/man8/authup.8
 man/man8/checknotroot.8
 man/man8/fixsmtpio.8
+man/man8/qmail-qfilter-addtlsheader.8
 man/man8/reup.8
