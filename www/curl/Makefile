@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.202 2018/10/31 08:06:24 leot Exp $
+# $NetBSD: Makefile,v 1.203 2018/11/28 01:32:25 sevan Exp $
 
 DISTNAME=	curl-7.62.0
 CATEGORIES=	www
@@ -35,6 +35,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/${f} ${DESTDIR}${PREFIX}/share/doc/curl/
 .endfor
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
