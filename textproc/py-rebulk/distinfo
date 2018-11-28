@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/09/30 14:11:32 adam Exp $
+$NetBSD: distinfo,v 1.3 2018/11/28 14:45:36 adam Exp $
 
-SHA1 (rebulk-0.9.0.tar.gz) = 00d2525a7e0c2d6b0e13b2b6ffaa8c5f6a921e84
-RMD160 (rebulk-0.9.0.tar.gz) = 18a7d16855194f08d1d80fd952c5f4b48423d1dc
-SHA512 (rebulk-0.9.0.tar.gz) = 25a22b3a5f5519f6f8c10abf6a477f212c0500264cfdcc5a9be09d3818462a051b1a7cd78f94991c44ac6bcdc7435b9909e65de48d1bd8138989e0da98d10262
-Size (rebulk-0.9.0.tar.gz) = 257342 bytes
+SHA1 (rebulk-1.0.0.tar.gz) = d17f486a5a21d298e0598b6db0c7bb43ce4502fd
+RMD160 (rebulk-1.0.0.tar.gz) = e446571462d80acbafa269dc7fb72d4a60d2030d
+SHA512 (rebulk-1.0.0.tar.gz) = c812c06c55c0cf2ef97b02806ca7bfa0319dfd6b1beb674f66d12e5b78180e0d96e9562fedfcf19d09134d25dd4fc8999359d5e9010f612515e0e58d45b8c6d2
+Size (rebulk-1.0.0.tar.gz) = 255918 bytes
