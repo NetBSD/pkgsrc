@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.829 2018/11/24 13:09:57 nia Exp $
+# $NetBSD: Makefile,v 1.830 2018/11/28 18:48:58 nia Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -201,6 +201,7 @@ SUBDIR+=	kguiaddons
 SUBDIR+=	kinit
 SUBDIR+=	kirigami2
 SUBDIR+=	kitemviews
+SUBDIR+=	kitty
 SUBDIR+=	kjobwidgets
 SUBDIR+=	konsole
 SUBDIR+=	kterm
