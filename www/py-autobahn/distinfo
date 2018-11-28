@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.16 2018/11/15 10:05:26 adam Exp $
+$NetBSD: distinfo,v 1.17 2018/11/28 14:33:10 adam Exp $
 
-SHA1 (autobahn-18.11.1.tar.gz) = 8ff25730c6952395e3b121ada651777aaa002d98
-RMD160 (autobahn-18.11.1.tar.gz) = a172cb7df1d018e8358a0aa5257fbcaa814d37f3
-SHA512 (autobahn-18.11.1.tar.gz) = 1059a60c0d924969a529b4fb10cff2548b7eae3b0189025c3101840aae3fbdd83405e878368648b2884fe167cbc240294438cbdb654658c16a5244bb27312f98
-Size (autobahn-18.11.1.tar.gz) = 228222 bytes
+SHA1 (autobahn-18.11.2.tar.gz) = 3295ab29c5254494837462db13de9564e2821cfb
+RMD160 (autobahn-18.11.2.tar.gz) = f4fcaf00a926bf4f92fdf7437ec0872fb5c49e28
+SHA512 (autobahn-18.11.2.tar.gz) = 0a25524e93c272f7f27554bd3c5f64bf4aaa86c65538b45525a240c747637f6b4d04c09473b37447a94869f15006915eab3b8046f1fac422ccd841a88640b2d2
+Size (autobahn-18.11.2.tar.gz) = 228384 bytes
 SHA1 (patch-setup.py) = f6dc41dbf480789b176b42bf12cbafd5a2076fde
