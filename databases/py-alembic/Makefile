@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.11 2018/11/15 09:50:38 adam Exp $
+# $NetBSD: Makefile,v 1.12 2018/11/28 09:15:54 adam Exp $
 
-DISTNAME=	alembic-1.0.3
+DISTNAME=	alembic-1.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/alembic/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://alembic.zzzcomputing.com/
+HOMEPAGE=	https://alembic.sqlalchemy.org/
 COMMENT=	Database migration tool for SQLAlchemy
 LICENSE=	mit
 
