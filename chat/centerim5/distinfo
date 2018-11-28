@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/11/28 15:12:27 nia Exp $
+
+SHA1 (centerim5-5.0.1.tar.gz) = 4da0d37a307d369b9f54759c14a96cbbec26d46c
+RMD160 (centerim5-5.0.1.tar.gz) = bca6c8da1b90dc5524be00fe1a7a547f2b0820fd
+SHA512 (centerim5-5.0.1.tar.gz) = 8d9e7cbb1abc3ed8cd91761ebe9a2355c2e39b59cab23de0ad4bfbbf35f4bce062fee5d01b8239d839fc5cef0c74b31187ab1a85a39c46ef679bfc86e628281f
+Size (centerim5-5.0.1.tar.gz) = 764152 bytes
