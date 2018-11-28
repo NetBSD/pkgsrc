@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.4 2018/09/27 19:53:07 tnn Exp $
+$NetBSD: distinfo,v 1.5 2018/11/28 16:03:41 nia Exp $
 
-SHA1 (telegram-purple_1.3.0.orig.tar.gz) = 764a41616c813f14bd0c823fadf7901041b44ae7
-RMD160 (telegram-purple_1.3.0.orig.tar.gz) = a90a1b193bf8ff48e3ec120a8f41f5dcd71693eb
-SHA512 (telegram-purple_1.3.0.orig.tar.gz) = 580de77a595d676c3cfe618b10da424767ab3f5aced959e7342fc2babe34b16de53c5e8f07dab977c01d2364d7103a85cff59ed70f0b51409347a46a61c9d75a
-Size (telegram-purple_1.3.0.orig.tar.gz) = 498493 bytes
+SHA1 (telegram-purple_1.3.1.orig.tar.gz) = 7462102ded6fd33dc1d016692aa916b89edd07dc
+RMD160 (telegram-purple_1.3.1.orig.tar.gz) = 050aa7c0a9476cb284091f36d69834d16f4fe77e
+SHA512 (telegram-purple_1.3.1.orig.tar.gz) = 3d088ea8b77aeba1d7f26dcd3223420bcd50372d610368b8786eca0cbdb0a11bcc2d93f7948348c5e0305479703f74e5b5ad8e06e782e2df119cfd73a4e4a63e
+Size (telegram-purple_1.3.1.orig.tar.gz) = 509083 bytes
 SHA1 (patch-configure) = a517d347dcaad90e8f24ccd9f92c1216a9f05545
 SHA1 (patch-tgl_tl-parser_portable__endian.h) = b4c4179fbb29bdbcc368a837d0dc6a6b84e0e23c
 SHA1 (patch-tgl_tl-parser_tl-parser.c) = bd6af1514d724f71ffffb51b824baa18084c289d
