@@ -1,8 +1,16 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.1 2018/11/01 09:25:29 bsiegert Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.2 2018/11/28 16:24:54 jperkin Exp $
 
---- src/CMakeLists.txt.orig	2017-07-30 08:53:35.000000000 +0000
+--- src/CMakeLists.txt.orig	2017-07-30 08:53:35.524267864 +0000
 +++ src/CMakeLists.txt
-@@ -338,7 +338,7 @@ set(icewm_libs ${sm_LIBS} ${nls_LIBS} ${
+@@ -47,6 +47,7 @@ ENDIF()
+ if(ENABLE_NLS OR CONFIG_I18N)
+ 	find_library(CONFIG_LIBICONV iconv)
+ 	if(CONFIG_LIBICONV)
++        	SET(CXXFLAGS_COMMON "${CXXFLAGS_COMMON} -DCONFIG_LIBICONV")
+ 		LIST(APPEND nls_LIBS iconv)
+ 	endif()
+ 	find_library(CONFIG_LIBINTL intl)
+@@ -338,7 +339,7 @@ set(icewm_libs ${sm_LIBS} ${nls_LIBS} ${
  TARGET_LINK_LIBRARIES(icewm${EXEEXT} ${icewm_libs})
  
  ADD_EXECUTABLE(genpref${EXEEXT} genpref.cc misc.cc)
@@ -11,7 +19,7 @@ $NetBSD: patch-src_CMakeLists.txt,v 1.1 2018/11/01 09:25:29 bsiegert Exp $
  
  IF(CONFIG_FDO_MENUS)
  ADD_EXECUTABLE(icewm-menu-fdo${EXEEXT} fdomenu.cc misc.cc)
-@@ -387,7 +387,7 @@ if(NOT CMAKE_CROSSCOMPILING)
+@@ -387,7 +388,7 @@ if(NOT CMAKE_CROSSCOMPILING)
     ADD_CUSTOM_COMMAND(TARGET genpref${EXEEXT}
        POST_BUILD
        COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_BINARY_DIR}/lib
