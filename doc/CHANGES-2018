@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4904 2018/11/28 15:12:44 nia Exp $
+$NetBSD: CHANGES-2018,v 1.4905 2018/11/28 16:03:53 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6842,3 +6842,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-rebulk to 1.0.0 [adam 2018-11-28]
 	Updated textproc/py-guessit to 3.0.3 [adam 2018-11-28]
 	Added chat/centerim5 version 5.0.1 [nia 2018-11-28]
+	Updated chat/telegram-purple to 1.3.1 [nia 2018-11-28]
