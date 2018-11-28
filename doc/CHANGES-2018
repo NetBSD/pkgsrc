@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4900 2018/11/28 14:38:38 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4901 2018/11/28 14:43:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6836,3 +6836,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-daphne to 2.2.3 [adam 2018-11-28]
 	Updated devel/py-pylint to 2.2.2 [adam 2018-11-28]
 	Updated databases/py-multidict to 4.5.2 [adam 2018-11-28]
+	Updated devel/py-sortedcontainers to 2.1.0 [adam 2018-11-28]
+	Updated devel/cmake to 3.13.1 [adam 2018-11-28]
