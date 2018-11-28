@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailofmipd.sh,v 1.17 2018/11/28 16:22:41 schmonz Exp $
+# $NetBSD: qmailofmipd.sh,v 1.18 2018/11/28 16:42:44 schmonz Exp $
 #
 # @PKGNAME@ script to control ofmipd (SMTP submission service).
 #
@@ -12,16 +12,16 @@ name="qmailofmipd"
 
 # User-settable rc.conf variables and their default values:
 : ${qmailofmipd_postenv:="SSL_UID=$(@ID@ -u @UCSPI_SSL_USER@) SSL_GID=$(@ID@ -g @UCSPI_SSL_GROUP@)"}
-: ${qmailofmipd_tcpflags:="-ne -vRl0"}
-: ${qmailofmipd_tcphost:="0.0.0.0"}
-: ${qmailofmipd_tcpport:="587"}
 : ${qmailofmipd_datalimit:="360000000"}
 : ${qmailofmipd_pretcpserver:=""}
 : ${qmailofmipd_tcpserver:="@PREFIX@/bin/sslserver"}
-: ${qmailofmipd_preofmipd:="@PREFIX@/bin/checknotroot @PREFIX@/bin/fixsmtpio"}
-: ${qmailofmipd_ofmipdcmd:="@PREFIX@/bin/ofmipd-with-user-cdb"}
+: ${qmailofmipd_tcpflags:="-ne -vRl0"}
+: ${qmailofmipd_tcphost:="0.0.0.0"}
+: ${qmailofmipd_tcpport:="587"}
 : ${qmailofmipd_precheckpassword:="@PREFIX@/bin/reup -t 5 @PREFIX@/bin/authup smtp"}
 : ${qmailofmipd_checkpassword:="@PREFIX@/bin/nbcheckpassword"}
+: ${qmailofmipd_preofmipd:="@PREFIX@/bin/checknotroot @PREFIX@/bin/fixsmtpio"}
+: ${qmailofmipd_ofmipdcmd:="@PREFIX@/bin/ofmipd-with-user-cdb"}
 : ${qmailofmipd_postofmipd:=""}
 : ${qmailofmipd_log:="YES"}
 : ${qmailofmipd_logcmd:="logger -t nbqmail/ofmipd -p mail.info"}
