@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2018/11/28 15:12:27 nia Exp $
+bin/centerim5
+lib/centerim5/extaction.la
+lib/libcppconsui.la
+man/man1/centerim5.1
+share/locale/cs/LC_MESSAGES/centerim5.mo
+share/locale/nl/LC_MESSAGES/centerim5.mo
+share/locale/ru/LC_MESSAGES/centerim5.mo
