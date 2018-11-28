@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/11/28 18:48:58 nia Exp $
+# $NetBSD: Makefile,v 1.2 2018/11/28 19:09:19 nia Exp $
 
 DISTNAME=	kitty-0.12.3
 CATEGORIES=	x11
@@ -29,6 +29,13 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 PYTHON_VERSIONS_INCOMPATIBLE=	27 34
 
 REPLACE_PYTHON+=	kitty/launcher/kitty
+
+PLIST_AWK+=		-f ../../lang/python/plist-python.awk
+PLIST_AWK_ENV+=		PYVERS="${PYVERSSUFFIX:S/.//}"
+PRINT_PLIST_AWK+=	/^[^@]/ && /[^\/]+\.py[co]$$/ {
+PRINT_PLIST_AWK+=	gsub(/__pycache__\//, "")
+PRINT_PLIST_AWK+=	gsub(/opt-1\.pyc$$/, "pyo")
+PRINT_PLIST_AWK+=	gsub(/\.cpython-${_PYTHON_VERSION}/, "")}
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
