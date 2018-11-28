@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2018/09/27 19:27:57 tnn Exp $
+# $NetBSD: Makefile.common,v 1.24 2018/11/28 08:36:04 adam Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs6/Makefile
 # used by lang/nodejs8/Makefile
@@ -17,7 +17,7 @@ USE_TOOLS+=	bash gmake pkg-config
 USE_LANGUAGES=	c c++
 
 PYTHON_FOR_BUILD_ONLY=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 0.10.24
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.10.24
 
 GCC_REQD+=		4.8
 
