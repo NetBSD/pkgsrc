@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.3 2017/07/11 14:16:23 jaapb Exp $
+$NetBSD: distinfo,v 1.4 2018/11/28 12:04:35 jaapb Exp $
 
-SHA1 (Zarith-1.4.1.tar.gz) = add8a775d63fb9f5e54acf46161e53c0b1854c42
-RMD160 (Zarith-1.4.1.tar.gz) = 34d1e23ac8703e116ba6b10ab008c2ce11089970
-SHA512 (Zarith-1.4.1.tar.gz) = 8bbc4cc5fa19a561301b9f81ca9487fcb73d7b9445ec1939fb377a692cf52f35892787d717ab0393582bc15a3872b20a93b36457f5e33d06de9915c4521486a4
-Size (Zarith-1.4.1.tar.gz) = 87747 bytes
+SHA1 (Zarith-1.7.tar.gz) = e0f6fcc166caf2d9d4aac9d4112b39bc82bbd0fe
+RMD160 (Zarith-1.7.tar.gz) = 3af83f38fb7bbaa98f4493f530f3c51a1edf8abb
+SHA512 (Zarith-1.7.tar.gz) = 812b5f9b24ce7a24d3370b8728ff6eeb56e3280fa1573e694fe54e781668c29bf8ff95e94aeff59df948adc85b8acd6b4efe117fb50a124f19b4227bee78e753
+Size (Zarith-1.7.tar.gz) = 89617 bytes
 SHA1 (patch-configure) = a9fadfcaf6c3b0a21ff3d1829af2cb15454904a0
-SHA1 (patch-project.mak) = ae9cd0e0efb2b93b62cfbecd81122578ec007505
