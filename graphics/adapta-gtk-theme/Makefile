@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/11/23 10:30:45 nia Exp $
+# $NetBSD: Makefile,v 1.2 2018/11/28 11:00:45 nia Exp $
 
 DISTNAME=	adapta-gtk-theme-3.95.0.11
 CATEGORIES=	graphics
@@ -40,6 +40,16 @@ REPLACE_BASH+=	wm/asset/assets-metacity-scripts/render-assets-metacity.sh
 REPLACE_BASH+=	wm/asset/assets-openbox-scripts/clone-assets-openbox.sh
 REPLACE_BASH+=	wm/asset/assets-xfwm-scripts/recolor-assets-xfwm.sh
 REPLACE_BASH+=	wm/asset/assets-xfwm-scripts/render-assets-xfwm.sh
+
+SUBST_CLASSES+=		fix-cp
+SUBST_STAGE.fix-cp=	pre-configure
+SUBST_MESSAGE.fix-cp=	Replace cp -Rv with cp -R, since -v is non-standard.
+SUBST_FILES.fix-cp+=	Makefile.am
+SUBST_FILES.fix-cp+=	extra/Makefile.am
+SUBST_FILES.fix-cp+=	gtk/Makefile.am
+SUBST_FILES.fix-cp+=	shell/Makefile.am
+SUBST_FILES.fix-cp+=	wm/Makefile.am
+SUBST_SED.fix-cp=	-e 's,cp -Rv ,cp -R ,g'
 
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
