@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailofmipd.sh,v 1.16 2018/11/13 16:34:58 schmonz Exp $
+# $NetBSD: qmailofmipd.sh,v 1.17 2018/11/28 16:22:41 schmonz Exp $
 #
 # @PKGNAME@ script to control ofmipd (SMTP submission service).
 #
@@ -18,8 +18,9 @@ name="qmailofmipd"
 : ${qmailofmipd_datalimit:="360000000"}
 : ${qmailofmipd_pretcpserver:=""}
 : ${qmailofmipd_tcpserver:="@PREFIX@/bin/sslserver"}
-: ${qmailofmipd_preofmipd:=""}
+: ${qmailofmipd_preofmipd:="@PREFIX@/bin/checknotroot @PREFIX@/bin/fixsmtpio"}
 : ${qmailofmipd_ofmipdcmd:="@PREFIX@/bin/ofmipd-with-user-cdb"}
+: ${qmailofmipd_precheckpassword:="@PREFIX@/bin/reup -t 5 @PREFIX@/bin/authup smtp"}
 : ${qmailofmipd_checkpassword:="@PREFIX@/bin/nbcheckpassword"}
 : ${qmailofmipd_postofmipd:=""}
 : ${qmailofmipd_log:="YES"}
@@ -28,6 +29,7 @@ name="qmailofmipd"
 : ${qmailofmipd_tls:="auto"}
 : ${qmailofmipd_tls_dhparams:="@PKG_SYSCONFDIR@/control/dh2048.pem"}
 : ${qmailofmipd_tls_cert:="@PKG_SYSCONFDIR@/control/servercert.pem"}
+: ${qmailofmipd_tls_key:=""}
 
 if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
@@ -71,6 +73,9 @@ qmailofmipd_disable_tls() {
 qmailofmipd_enable_tls() {
 	qmailofmipd_postenv="${qmailofmipd_postenv} DHFILE=${qmailofmipd_tls_dhparams}"
 	qmailofmipd_postenv="${qmailofmipd_postenv} CERTFILE=${qmailofmipd_tls_cert}"
+	if [ -f "${qmailofmipd_tls_key}" ]; then
+		qmailofmipd_postenv="${qmailofmipd_postenv} KEYFILE=${qmailofmipd_tls_key}"
+	fi
 }
 
 qmailofmipd_precmd()
@@ -88,8 +93,7 @@ qmailofmipd_precmd()
 ${qmailofmipd_tcpflags} -x @PKG_SYSCONFDIR@/tcp.ofmip.cdb
 -c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencysubmission`
 ${qmailofmipd_tcphost} ${qmailofmipd_tcpport}
-@PREFIX@/bin/reup -t 5 @PREFIX@/bin/authup smtp
-${qmailofmipd_checkpassword} @PREFIX@/bin/checknotroot @PREFIX@/bin/fixsmtpio
+${qmailofmipd_precheckpassword} ${qmailofmipd_checkpassword}
 ${qmailofmipd_preofmipd} ${qmailofmipd_ofmipdcmd} ${qmailofmipd_postofmipd}
 2>&1 |
 @PREFIX@/bin/pgrphack @PREFIX@/bin/setuidgid @QMAIL_LOG_USER@ ${qmailofmipd_logcmd}"

@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailpop3d.sh,v 1.24 2018/11/08 20:57:28 schmonz Exp $
+# $NetBSD: qmailpop3d.sh,v 1.25 2018/11/28 16:22:41 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-pop3d (POP3 server for Maildirs).
 #
@@ -17,16 +17,18 @@ name="qmailpop3d"
 : ${qmailpop3d_datalimit:="180000000"}
 : ${qmailpop3d_pretcpserver:=""}
 : ${qmailpop3d_tcpserver:="@PREFIX@/bin/sslserver"}
-: ${qmailpop3d_prepop3d:=""}
+: ${qmailpop3d_prepop3d:="@PREFIX@/bin/checknotroot"}
 : ${qmailpop3d_pop3dcmd:="@PREFIX@/bin/qmail-pop3d"}
+: ${qmailpop3d_precheckpassword:="@PREFIX@/bin/authup pop3"}
 : ${qmailpop3d_checkpassword:="@PREFIX@/bin/nbcheckpassword"}
-: ${qmailpop3d_maildirname:="Maildir"}
+: ${qmailpop3d_postpop3d:="Maildir"}
 : ${qmailpop3d_log:="YES"}
 : ${qmailpop3d_logcmd:="logger -t nbqmail/pop3d -p mail.info"}
 : ${qmailpop3d_nologcmd:="@PREFIX@/bin/multilog -*"}
 : ${qmailpop3d_tls:="auto"}
-: ${qmailpop3pd_tls_dhparams:="@PKG_SYSCONFDIR@/control/dh2048.pem"}
-: ${qmailpop3pd_tls_cert:="@PKG_SYSCONFDIR@/control/servercert.pem"}
+: ${qmailpop3d_tls_dhparams:="@PKG_SYSCONFDIR@/control/dh2048.pem"}
+: ${qmailpop3d_tls_cert:="@PKG_SYSCONFDIR@/control/servercert.pem"}
+: ${qmailpop3d_tls_key:=""}
 
 if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
@@ -68,6 +70,9 @@ qmailpop3d_disable_tls() {
 qmailpop3d_enable_tls() {
 	qmailpop3d_postenv="${qmailpop3d_postenv} DHFILE=${qmailpop3d_tls_dhparams}"
 	qmailpop3d_postenv="${qmailpop3d_postenv} CERTFILE=${qmailpop3d_tls_cert}"
+	if [ -f "${qmailpop3d_tls_key}" ]; then
+		qmailpop3d_postenv="${qmailpop3d_postenv} KEYFILE=${qmailpop3d_tls_key}"
+	fi
 }
 
 qmailpop3d_precmd()
@@ -85,9 +90,8 @@ qmailpop3d_precmd()
 ${qmailpop3d_tcpflags} -x @PKG_SYSCONFDIR@/tcp.pop3.cdb
 -c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencypop3`
 ${qmailpop3d_tcphost} ${qmailpop3d_tcpport}
-@PREFIX@/bin/authup pop3
-${qmailpop3d_checkpassword} @PREFIX@/bin/checknotroot
-${qmailpop3d_prepop3d} ${qmailpop3d_pop3dcmd} ${qmailpop3d_maildirname}
+${qmailpop3d_precheckpassword} ${qmailpop3d_checkpassword}
+${qmailpop3d_prepop3d} ${qmailpop3d_pop3dcmd} ${qmailpop3d_postpop3d}
 2>&1 |
 @PREFIX@/bin/pgrphack @PREFIX@/bin/setuidgid @QMAIL_LOG_USER@ ${qmailpop3d_logcmd}"
 	command_args="&"

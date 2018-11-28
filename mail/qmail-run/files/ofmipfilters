@@ -1,0 +1,2 @@
+#@PREFIX@/bin/pymsgauth-filter
+@PREFIX@/bin/qmail-qfilter-addtlsheader
