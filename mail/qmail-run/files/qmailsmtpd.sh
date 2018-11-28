@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailsmtpd.sh,v 1.21 2018/11/13 16:34:58 schmonz Exp $
+# $NetBSD: qmailsmtpd.sh,v 1.22 2018/11/28 16:22:41 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-smtpd (SMTP service).
 #
@@ -27,6 +27,7 @@ name="qmailsmtpd"
 : ${qmailsmtpd_tls:="auto"}
 : ${qmailsmtpd_tls_dhparams:="@PKG_SYSCONFDIR@/control/dh2048.pem"}
 : ${qmailsmtpd_tls_cert:="@PKG_SYSCONFDIR@/control/servercert.pem"}
+: ${qmailsmtpd_tls_key:=""}
 
 if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
@@ -68,6 +69,9 @@ qmailsmtpd_disable_tls() {
 qmailsmtpd_enable_tls() {
 	qmailsmtpd_postenv="${qmailsmtpd_postenv} DHFILE=${qmailsmtpd_tls_dhparams}"
 	qmailsmtpd_postenv="${qmailsmtpd_postenv} CERTFILE=${qmailsmtpd_tls_cert}"
+	if [ -f "${qmailsmtpd_tls_key}" ]; then
+		qmailsmtpd_postenv="${qmailsmtpd_postenv} KEYFILE=${qmailsmtpd_tls_key}"
+	fi
 }
 
 qmailsmtpd_precmd()

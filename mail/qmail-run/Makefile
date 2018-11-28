@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2018/11/24 17:12:00 schmonz Exp $
+# $NetBSD: Makefile,v 1.61 2018/11/28 16:22:41 schmonz Exp $
 #
 
-DISTNAME=		qmail-run-20181124.1
+DISTNAME=		qmail-run-20181128
 CATEGORIES=		mail
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -15,9 +15,9 @@ DEPENDS+=		greylisting-spp-[0-9]*:../../mail/greylisting-spp
 DEPENDS+=		pkg_alternatives-[0-9]*:../../pkgtools/pkg_alternatives
 DEPENDS_QMAIL=		qmail>=1.03nb41:../../mail/qmail
 DEPENDS+=		${DEPENDS_QMAIL}
-DEPENDS+=		qmail-acceptutils>=20181124.1:../../mail/qmail-acceptutils
+DEPENDS+=		qmail-acceptutils>=20181128:../../mail/qmail-acceptutils
 DEPENDS+=		qmail-qfilter>1.5nb1:../../mail/qmail-qfilter
-DEPENDS+=		qmail-rejectutils>=20181110:../../mail/qmail-rejectutils
+DEPENDS+=		qmail-rejectutils>=20181128:../../mail/qmail-rejectutils
 
 WRKSRC=			${WRKDIR}
 NO_BUILD=		yes
@@ -34,7 +34,8 @@ MESSAGE_SUBST+=		PKG_SYSCONFBASE=${PKG_SYSCONFBASE:Q}
 RCD_SCRIPTS=		qmail qmailofmipd qmailpop3d qmailqread qmailsend qmailsmtpd
 
 EGDIR=			share/examples/qmail-run
-.for f in defaultdelivery fixsmtpio signatures rcptchecks smtpfilters \
+.for f in defaultdelivery fixsmtpio signatures rcptchecks \
+	ofmipfilters smtpfilters \
 	pop3capabilities smtpcapabilities smtpplugins \
 	concurrencyincoming concurrencypop3 concurrencysubmission
 CONF_FILES+=		${PREFIX}/${EGDIR}/${f} \
@@ -77,13 +78,14 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	mailer.conf
 SUBST_FILES.paths+=	greylisting-spp-with-exemptions ofmipd-with-user-cdb
 SUBST_FILES.paths+=	qmail-isspam-* qmail-procmail qmail-qread-client
-SUBST_FILES.paths+=	rcptchecks smtpfilters smtpplugins tcp.*
+SUBST_FILES.paths+=	rcptchecks ofmipfilters smtpfilters smtpplugins tcp.*
 SUBST_VARS.paths=	PKGNAME PKG_SYSCONFDIR PREFIX
 SUBST_VARS.paths+=	CAT ECHO GREP SED SH SORT TRUE
 
 post-extract:
 	for f in README.pkgsrc mailer.conf \
-		defaultdelivery fixsmtpio signatures rcptchecks smtpfilters \
+		defaultdelivery fixsmtpio signatures rcptchecks \
+		ofmipfilters smtpfilters \
 		pop3capabilities smtpcapabilities smtpplugins \
 		concurrencyincoming concurrencypop3 concurrencysubmission \
 		tcp.ofmip tcp.pop3 tcp.smtp; do \
@@ -103,7 +105,8 @@ do-install:
 	done
 	${INSTALL_DATA} ${WRKDIR}/README.pkgsrc \
 		${DESTDIR}${PREFIX}/share/doc/qmail-run
-	for f in defaultdelivery fixsmtpio signatures rcptchecks smtpfilters \
+	for f in defaultdelivery fixsmtpio signatures rcptchecks \
+		ofmipfilters smtpfilters \
 		pop3capabilities smtpcapabilities smtpplugins \
 		concurrencyincoming concurrencypop3 concurrencysubmission \
 		tcp.ofmip tcp.pop3 tcp.smtp; do \
