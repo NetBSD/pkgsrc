@@ -1,1 +1,1 @@
-bin/guessit @PREFIX@/bin/guessit@PYVERSSUFFIX@
+bin/guessit @PREFIX@/bin/guessit-@PYVERSSUFFIX@

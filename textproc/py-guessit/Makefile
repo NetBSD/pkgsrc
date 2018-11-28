@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2018/07/03 09:46:42 adam Exp $
+# $NetBSD: Makefile,v 1.4 2018/11/28 14:48:15 adam Exp $
 
-DISTNAME=	guessit-3.0.0
+DISTNAME=	guessit-3.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/guessit/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://guessit.io/
+HOMEPAGE=	https://guessit.readthedocs.io/en/latest/
 COMMENT=	Extracts as much information as possible from a video filename
 LICENSE=	gnu-lgpl-v3
 
@@ -21,7 +21,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 USE_LANGUAGES=	# none
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} guessit guessit${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && \
+		${MV} guessit guessit-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
