@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailpop3d.sh,v 1.25 2018/11/28 16:22:41 schmonz Exp $
+# $NetBSD: qmailpop3d.sh,v 1.26 2018/11/28 16:42:44 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-pop3d (POP3 server for Maildirs).
 #
@@ -11,16 +11,16 @@ name="qmailpop3d"
 
 # User-settable rc.conf variables and their default values:
 : ${qmailpop3d_postenv:="SSL_UID=$(@ID@ -u @UCSPI_SSL_USER@) SSL_GID=$(@ID@ -g @UCSPI_SSL_GROUP@)"}
-: ${qmailpop3d_tcpflags:="-ne -vRl0"}
-: ${qmailpop3d_tcphost:="0.0.0.0"}
-: ${qmailpop3d_tcpport:="110"}
 : ${qmailpop3d_datalimit:="180000000"}
 : ${qmailpop3d_pretcpserver:=""}
 : ${qmailpop3d_tcpserver:="@PREFIX@/bin/sslserver"}
-: ${qmailpop3d_prepop3d:="@PREFIX@/bin/checknotroot"}
-: ${qmailpop3d_pop3dcmd:="@PREFIX@/bin/qmail-pop3d"}
+: ${qmailpop3d_tcpflags:="-ne -vRl0"}
+: ${qmailpop3d_tcphost:="0.0.0.0"}
+: ${qmailpop3d_tcpport:="110"}
 : ${qmailpop3d_precheckpassword:="@PREFIX@/bin/authup pop3"}
 : ${qmailpop3d_checkpassword:="@PREFIX@/bin/nbcheckpassword"}
+: ${qmailpop3d_prepop3d:="@PREFIX@/bin/checknotroot"}
+: ${qmailpop3d_pop3dcmd:="@PREFIX@/bin/qmail-pop3d"}
 : ${qmailpop3d_postpop3d:="Maildir"}
 : ${qmailpop3d_log:="YES"}
 : ${qmailpop3d_logcmd:="logger -t nbqmail/pop3d -p mail.info"}
