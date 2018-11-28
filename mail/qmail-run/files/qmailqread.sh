@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailqread.sh,v 1.15 2018/11/03 17:08:26 schmonz Exp $
+# $NetBSD: qmailqread.sh,v 1.16 2018/11/28 16:42:44 schmonz Exp $
 #
 # @PKGNAME@ script to control a service providing local non-root
 # users access to see the queue. Adapted from a script by Steinar Haug.
@@ -13,10 +13,10 @@ name="qmailqread"
 
 # User-settable rc.conf variables and their default values:
 : ${qmailqread_postenv:=""}
+: ${qmailqread_tcpserver:="@PREFIX@/bin/tcpserver"}
 : ${qmailqread_tcpflags:="-R1"}
 : ${qmailqread_tcphost:="127.0.0.1"}
 : ${qmailqread_tcpport:="20025"}
-: ${qmailqread_tcpserver:="@PREFIX@/bin/tcpserver"}
 : ${qmailqread_log:="YES"}
 : ${qmailqread_logcmd:="logger -t nbqmail/qread -p mail.info"}
 : ${qmailqread_nologcmd:="@PREFIX@/bin/multilog -*"}
