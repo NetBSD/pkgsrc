@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2018/07/03 09:46:42 adam Exp $
-bin/guessit${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.4 2018/11/28 14:48:15 adam Exp $
+bin/guessit-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -26,6 +26,9 @@ ${PYSITELIB}/guessit/config/options.json
 ${PYSITELIB}/guessit/jsonutils.py
 ${PYSITELIB}/guessit/jsonutils.pyc
 ${PYSITELIB}/guessit/jsonutils.pyo
+${PYSITELIB}/guessit/monkeypatch.py
+${PYSITELIB}/guessit/monkeypatch.pyc
+${PYSITELIB}/guessit/monkeypatch.pyo
 ${PYSITELIB}/guessit/options.py
 ${PYSITELIB}/guessit/options.pyc
 ${PYSITELIB}/guessit/options.pyo
