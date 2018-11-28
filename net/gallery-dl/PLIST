@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2018/11/18 10:51:38 leot Exp $
+@comment $NetBSD: PLIST,v 1.19 2018/11/28 19:56:58 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -171,6 +171,9 @@ ${PYSITELIB}/gallery_dl/extractor/imgur.pyo
 ${PYSITELIB}/gallery_dl/extractor/jaiminisbox.py
 ${PYSITELIB}/gallery_dl/extractor/jaiminisbox.pyc
 ${PYSITELIB}/gallery_dl/extractor/jaiminisbox.pyo
+${PYSITELIB}/gallery_dl/extractor/joyreactor.py
+${PYSITELIB}/gallery_dl/extractor/joyreactor.pyc
+${PYSITELIB}/gallery_dl/extractor/joyreactor.pyo
 ${PYSITELIB}/gallery_dl/extractor/khinsider.py
 ${PYSITELIB}/gallery_dl/extractor/khinsider.pyc
 ${PYSITELIB}/gallery_dl/extractor/khinsider.pyo
@@ -216,6 +219,9 @@ ${PYSITELIB}/gallery_dl/extractor/message.pyo
 ${PYSITELIB}/gallery_dl/extractor/myportfolio.py
 ${PYSITELIB}/gallery_dl/extractor/myportfolio.pyc
 ${PYSITELIB}/gallery_dl/extractor/myportfolio.pyo
+${PYSITELIB}/gallery_dl/extractor/newgrounds.py
+${PYSITELIB}/gallery_dl/extractor/newgrounds.pyc
+${PYSITELIB}/gallery_dl/extractor/newgrounds.pyo
 ${PYSITELIB}/gallery_dl/extractor/ngomik.py
 ${PYSITELIB}/gallery_dl/extractor/ngomik.pyc
 ${PYSITELIB}/gallery_dl/extractor/ngomik.pyo
@@ -246,6 +252,9 @@ ${PYSITELIB}/gallery_dl/extractor/pinterest.pyo
 ${PYSITELIB}/gallery_dl/extractor/pixiv.py
 ${PYSITELIB}/gallery_dl/extractor/pixiv.pyc
 ${PYSITELIB}/gallery_dl/extractor/pixiv.pyo
+${PYSITELIB}/gallery_dl/extractor/pornreactor.py
+${PYSITELIB}/gallery_dl/extractor/pornreactor.pyc
+${PYSITELIB}/gallery_dl/extractor/pornreactor.pyo
 ${PYSITELIB}/gallery_dl/extractor/powermanga.py
 ${PYSITELIB}/gallery_dl/extractor/powermanga.pyc
 ${PYSITELIB}/gallery_dl/extractor/powermanga.pyo
