@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4898 2018/11/28 12:08:03 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.4899 2018/11/28 14:01:47 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6831,3 +6831,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-sqlalchemy-utils to 0.33.8 [adam 2018-11-28]
 	Updated math/ocaml-zarith to 1.7 [jaapb 2018-11-28]
 	Updated security/ocaml-cryptokit to 1.13 [jaapb 2018-11-28]
+	Updated sysutils/xenkernel411 to 4.11.0nb1 [bouyer 2018-11-28]
