@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2018/08/22 09:45:19 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2018/11/28 16:08:41 abs Exp $
 
 GCC_PKGNAME=		gcc5
-PKGREVISION=		3
+PKGREVISION=		4
 .include		"version.mk"
 
 DISTNAME=	gcc-${GCC5_DIST_VERSION}
@@ -37,6 +37,7 @@ GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
 GNU_CONFIGURE_PREFIX=	${GCC_PREFIX}
 INFO_FILES=		yes
 CONFIGURE_ARGS+=	--disable-libstdcxx-pch
+GCC_TARGET_MACHINE=	${MACHINE_GNU_PLATFORM}
 
 UNLIMIT_RESOURCES+=	datasize
 UNLIMIT_RESOURCES+=	stacksize
