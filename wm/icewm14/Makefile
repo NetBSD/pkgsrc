@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/11/01 09:25:29 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2018/11/28 16:24:54 jperkin Exp $
 
 DISTNAME=	icewm-1.4.2
 CATEGORIES=	wm
@@ -19,6 +19,8 @@ FILESDIR=	${.CURDIR}/../../wm/icewm/files
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++03
 USE_TOOLS+=	msgfmt pkg-config
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 post-extract:
 	cp ${FILESDIR}/bsd-daemon.xpm ${WRKSRC}/lib/taskbar
