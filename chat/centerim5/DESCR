@@ -1,0 +1,12 @@
+CenterIM is a text-mode multi-protocol instant messaging client
+for Linux, *BSD, Solaris and other Unices. The program supports
+most of widely used IM protocols, including AIM, ICQ, IRC, QQ,
+Skype, XMPP (Jabber).
+
+CenterIM is a powerful communication tool that can be used through
+SSH, without the need for VNC/Remote Desktop. CenterIM started as
+a fork of CenterICQ.
+
+Development has ceased on CenterIM4 in favor of CenterIM5, which
+is a ground up rewrite and uses the libpurple library as a
+communication backend.
