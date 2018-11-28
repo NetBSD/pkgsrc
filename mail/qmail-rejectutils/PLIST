@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2018/05/28 12:56:24 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/11/28 16:06:34 schmonz Exp $
 bin/qmail-qfilter-viruscan
 bin/qmail-qfilter-ofmipd-queue
+bin/qmail-qfilter-queue
 bin/qmail-qfilter-smtpd-queue
 bin/qmail-rcptcheck
 bin/qmail-rcptcheck-badrcptto
