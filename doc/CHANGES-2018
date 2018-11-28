@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4902 2018/11/28 14:45:47 leot Exp $
+$NetBSD: CHANGES-2018,v 1.4903 2018/11/28 14:50:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6839,3 +6839,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-sortedcontainers to 2.1.0 [adam 2018-11-28]
 	Updated devel/cmake to 3.13.1 [adam 2018-11-28]
 	Updated misc/tmux to 2.8nb1 [leot 2018-11-28]
+	Updated textproc/py-rebulk to 1.0.0 [adam 2018-11-28]
+	Updated textproc/py-guessit to 3.0.3 [adam 2018-11-28]
