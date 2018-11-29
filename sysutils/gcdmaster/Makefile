@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.90 2018/11/15 01:13:02 markd Exp $
+# $NetBSD: Makefile,v 1.91 2018/11/29 11:21:56 prlw1 Exp $
 
+PKGREVISION= 1
 .include "../../sysutils/cdrdao/Makefile.common"
 
 PKGNAME=	gcdmaster-${CDRDAO_VER}
