@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2017/10/17 18:31:40 adam Exp $
-bin/jupyter-nbconvert${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.3 2018/11/29 18:26:33 adam Exp $
+bin/jupyter-nbconvert-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
 ${PYSITELIB}/${EGG_FILE}/dependency_links.txt
@@ -72,6 +72,7 @@ ${PYSITELIB}/nbconvert/exporters/tests/base.pyo
 ${PYSITELIB}/nbconvert/exporters/tests/cheese.py
 ${PYSITELIB}/nbconvert/exporters/tests/cheese.pyc
 ${PYSITELIB}/nbconvert/exporters/tests/cheese.pyo
+${PYSITELIB}/nbconvert/exporters/tests/files/attachment.ipynb
 ${PYSITELIB}/nbconvert/exporters/tests/files/notebook2.ipynb
 ${PYSITELIB}/nbconvert/exporters/tests/files/pngmetadata.ipynb
 ${PYSITELIB}/nbconvert/exporters/tests/files/prompt_numbers.ipynb
@@ -249,11 +250,13 @@ ${PYSITELIB}/nbconvert/preprocessors/tests/fake_kernelmanager.pyc
 ${PYSITELIB}/nbconvert/preprocessors/tests/fake_kernelmanager.pyo
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/Clear Output.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/Disable Stdin.ipynb
+${PYSITELIB}/nbconvert/preprocessors/tests/files/Empty Cell.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/Factorials.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/HelloWorld.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/Inline Image.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/Interrupt.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/SVG.ipynb
+${PYSITELIB}/nbconvert/preprocessors/tests/files/Skip Exceptions with Cell Tags.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/Skip Exceptions.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/Unicode.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/python.png
@@ -353,6 +356,9 @@ ${PYSITELIB}/nbconvert/tests/files/testimage.png
 ${PYSITELIB}/nbconvert/tests/test_nbconvertapp.py
 ${PYSITELIB}/nbconvert/tests/test_nbconvertapp.pyc
 ${PYSITELIB}/nbconvert/tests/test_nbconvertapp.pyo
+${PYSITELIB}/nbconvert/tests/utils.py
+${PYSITELIB}/nbconvert/tests/utils.pyc
+${PYSITELIB}/nbconvert/tests/utils.pyo
 ${PYSITELIB}/nbconvert/utils/__init__.py
 ${PYSITELIB}/nbconvert/utils/__init__.pyc
 ${PYSITELIB}/nbconvert/utils/__init__.pyo
@@ -380,6 +386,9 @@ ${PYSITELIB}/nbconvert/utils/tests/test_io.pyo
 ${PYSITELIB}/nbconvert/utils/tests/test_pandoc.py
 ${PYSITELIB}/nbconvert/utils/tests/test_pandoc.pyc
 ${PYSITELIB}/nbconvert/utils/tests/test_pandoc.pyo
+${PYSITELIB}/nbconvert/utils/tests/test_version.py
+${PYSITELIB}/nbconvert/utils/tests/test_version.pyc
+${PYSITELIB}/nbconvert/utils/tests/test_version.pyo
 ${PYSITELIB}/nbconvert/utils/version.py
 ${PYSITELIB}/nbconvert/utils/version.pyc
 ${PYSITELIB}/nbconvert/utils/version.pyo
