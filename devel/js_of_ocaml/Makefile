@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2018/11/12 16:10:18 jaapb Exp $
+# $NetBSD: Makefile,v 1.30 2018/11/29 11:59:21 jaapb Exp $
 #
 
 GITHUB_PROJECT=	js_of_ocaml
 DISTNAME=	${GITHUB_PROJECT}-3.2.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
@@ -15,12 +15,12 @@ LICENSE=	gnu-lgpl-v2
 USE_TOOLS=	bash
 
 OCAML_USE_FINDLIB=	yes
-OCAML_USE_JBUILDER=	yes
+OCAML_USE_DUNE=	yes
 
 OPAM_INSTALL_FILES=	js_of_ocaml js_of_ocaml-ocamlbuild \
 	js_of_ocaml-ppx js_of_ocaml-ppx_deriving_json \
 	js_of_ocaml-lwt js_of_ocaml-compiler
-JBUILDER_BUILD_PACKAGES=	js_of_ocaml-compiler js_of_ocaml js_of_ocaml-ocamlbuild \
+DUNE_BUILD_PACKAGES=	js_of_ocaml-compiler js_of_ocaml js_of_ocaml-ocamlbuild \
 	js_of_ocaml-ppx js_of_ocaml-ppx_deriving_json \
 	js_of_ocaml-lwt
 
