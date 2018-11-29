@@ -1,23 +1,17 @@
-# $NetBSD: Makefile,v 1.43 2017/01/19 18:52:17 agc Exp $
+# $NetBSD: Makefile,v 1.44 2018/11/29 00:36:23 markd Exp $
 
-DISTNAME=	vm-7.19
+DISTNAME=	vm-8.2.0b
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	mail
-MASTER_SITES=	ftp://ftp.uni-mainz.de/pub/software/gnu/vm/
-MASTER_SITES+=	ftp://tug.org/vm/
-MASTER_SITES+=	ftp://psg.com/pub/vm/
-MASTER_SITES+=	ftp://sunsite.cnlab-switch.ch/mirror/vm/
-MASTER_SITES+=	http://www.interhack.net/projects/vm/
-MASTER_SITES+=	http://ftp.lip6.fr/pub/unix/mail/vm/
-MASTER_SITES+=	http://ftp.jussieu.fr/pub/unix/mail/vm/
-MASTER_SITES+=	ftp://ftp.surfnet.nl/pub/mail/vm/
+MASTER_SITES=	https://launchpad.net/vm/8.2.x/8.2.0b/+download/
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.wonderworks.com/vm/
+HOMEPAGE=	https://launchpad.net/vm
 COMMENT=	VM (View Mail) is an advanced mail user agent for Emacs
 
-USE_TOOLS+=	makeinfo
+USE_TOOLS+=	makeinfo gmake gtar
+GNU_CONFIGURE=	yes
 INFO_FILES=	yes
 
 MAKEFLAGS+=	EMACS=${EMACS_BIN:Q}
@@ -31,19 +25,10 @@ INSTALLATION_DIRS=	bin ${EMACS_INFOPREFIX} ${EMACS_LISPPREFIX}/vm	\
 			${PIXMAPDIR}
 
 PIXMAPDIR=		${PIXMAPDIR.${EMACS_FLAVOR}}
-PIXMAPDIR.emacs=	${EMACS_LISPPREFIX}/vm/pixmaps
+PIXMAPDIR.emacs=	${PREFIX:Q}/share/vm/pixmaps
 PIXMAPDIR.xemacs=	${EMACS_LISPPREFIX:H}/etc/vm
-
-do-install:
-	cd ${WRKSRC} && ${INSTALL_DATA} *.el *.elc ${DESTDIR}${EMACS_LISPPREFIX}/vm
-	cd ${WRKSRC}; for f in *.info *.info-[0-9]*; do			\
-		${TEST} ! -f "$$f" ||					\
-		${INSTALL_DATA} "$$f" ${DESTDIR}${EMACS_INFOPREFIX};	\
-	done
-	${INSTALL_DATA} ${WRKSRC}/pixmaps/*.x[pb]m ${DESTDIR}${PIXMAPDIR}
-	cd ${WRKSRC} && ${INSTALL_PROGRAM} qp-decode qp-encode		\
-		base64-decode base64-encode ${DESTDIR}${PREFIX}/bin
 
 .include "../../editors/emacs/modules.mk"
 
+.include "../../misc/bbdb/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
