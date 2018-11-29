@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4917 2018/11/29 13:58:23 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4918 2018/11/29 13:59:31 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6863,3 +6863,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/ruby-actionmailer42 to 4.2.11 [taca 2018-11-29]
 	Updated devel/ruby-railties42 to 4.2.11 [taca 2018-11-29]
 	Updated www/ruby-rails42 to 4.2.11 [taca 2018-11-29]
+	Updated graphics/imlib2 to 1.5.1 [leot 2018-11-29]
