@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2018/11/29 10:45:37 jaapb Exp $
+${OCAML_SITELIB}/xml-light/META
+${OCAML_SITELIB}/xml-light/dtd.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/xml-light/dtd.cmx
+${OCAML_SITELIB}/xml-light/dtd.mli
+${PLIST.ocaml-opt}${OCAML_SITELIB}/xml-light/xml-light.a
+${OCAML_SITELIB}/xml-light/xml-light.cma
+${PLIST.ocaml-opt}${OCAML_SITELIB}/xml-light/xml-light.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/xml-light/xml-light.cmxs
+${OCAML_SITELIB}/xml-light/xml.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/xml-light/xml.cmx
+${OCAML_SITELIB}/xml-light/xml.mli
+${OCAML_SITELIB}/xml-light/xmlParser.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/xml-light/xmlParser.cmx
+${OCAML_SITELIB}/xml-light/xmlParser.mli
