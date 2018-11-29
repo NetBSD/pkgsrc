@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2018/09/15 12:36:41 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.43 2018/11/29 08:55:10 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -584,6 +584,7 @@ share/vim/${VIM_SUBDIR}/indent/prolog.vim
 share/vim/${VIM_SUBDIR}/indent/pyrex.vim
 share/vim/${VIM_SUBDIR}/indent/python.vim
 share/vim/${VIM_SUBDIR}/indent/r.vim
+share/vim/${VIM_SUBDIR}/indent/raml.vim
 share/vim/${VIM_SUBDIR}/indent/readline.vim
 share/vim/${VIM_SUBDIR}/indent/rhelp.vim
 share/vim/${VIM_SUBDIR}/indent/rmd.vim
@@ -1133,6 +1134,7 @@ share/vim/${VIM_SUBDIR}/syntax/quake.vim
 share/vim/${VIM_SUBDIR}/syntax/r.vim
 share/vim/${VIM_SUBDIR}/syntax/racc.vim
 share/vim/${VIM_SUBDIR}/syntax/radiance.vim
+share/vim/${VIM_SUBDIR}/syntax/raml.vim
 share/vim/${VIM_SUBDIR}/syntax/ratpoison.vim
 share/vim/${VIM_SUBDIR}/syntax/rc.vim
 share/vim/${VIM_SUBDIR}/syntax/rcs.vim
