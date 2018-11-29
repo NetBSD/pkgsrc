@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.17 2015/11/03 23:27:23 agc Exp $
+$NetBSD: distinfo,v 1.18 2018/11/29 00:36:23 markd Exp $
 
-SHA1 (vm-7.19.tar.gz) = 0fe9012b8988ebdec7641f48aca0ef365549c590
-RMD160 (vm-7.19.tar.gz) = 7a28c0a096f1f8093cffb9fc621cd270dd67b432
-SHA512 (vm-7.19.tar.gz) = 1faa19ea102dc730c147039e5eb1c5ad63ad1dc06ca5813710ed59f09d7731e9cc5724d3b48d28c1209ca0be75f62350f4de4e84df8faffee3fb4751767c106e
-Size (vm-7.19.tar.gz) = 381658 bytes
-SHA1 (patch-aa) = 7b8e9b8bcc1c03604fc0d2a81683754b823dc7a6
-SHA1 (patch-ab) = 51ea93e4b4066fbab7e75d03bea2cffd20c85440
-SHA1 (patch-vm-folder.el) = c496a4a3fe26568d86d2d4f47087f9d67fd583e9
+SHA1 (vm-8.2.0b.tgz) = cd7ba5ad202173a7d44d24f873f8e64811f8eea1
+RMD160 (vm-8.2.0b.tgz) = d94e96c430cfdd615a4e6afe1b70337a1aad8bb5
+SHA512 (vm-8.2.0b.tgz) = 37b642975e8fe7e350c0a648f83608b28d8616417d376d9888c89b37c90d8bdb3c91cdc4c91a0f5072d29ac81bfea3d88f9b36699379bf8a5bdd15dd5a70858d
+Size (vm-8.2.0b.tgz) = 839789 bytes
+SHA1 (patch-info_vm-pcrisis.texinfo) = 13369e08a17b392a3dd2259f8b5326f9286a4f7b
+SHA1 (patch-info_vm.texinfo) = 52debfbd4a73552e38e266579f82ea608e841702
+SHA1 (patch-lisp_vm-pcrisis.el) = e3214d8414434c981267aba2e8fc2401a4924a4b

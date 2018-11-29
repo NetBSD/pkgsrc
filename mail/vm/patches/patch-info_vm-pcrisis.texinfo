@@ -1,0 +1,15 @@
+$NetBSD: patch-info_vm-pcrisis.texinfo,v 1.1 2018/11/29 00:36:23 markd Exp $
+
+revision 1503. Adjusted the texinfo files for makeinfo version 5.2
+
+--- info/vm-pcrisis.texinfo.orig	2011-12-27 22:19:28.000000000 +0000
++++ info/vm-pcrisis.texinfo
+@@ -1179,7 +1179,7 @@ bear this in mind when you set up the pr
+ 
+ @c ***************************************************************************
+ 
+-@unnumberedsubsec vmpc-auto-profiles-file
++@unnumberedsec vmpc-auto-profiles-file
+ @vindex vmpc-auto-profiles-file
+ 
+ The variable @code{vmpc-auto-profiles-file} contains the name of the
