@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4920 2018/11/29 14:32:24 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.4921 2018/11/29 14:38:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6875,3 +6875,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ruby-railties51 to 5.1.6.1 [taca 2018-11-29]
 	Updated www/ruby-rails51 to 5.1.6.1 [taca 2018-11-29]
 	Updated lang/rust to 1.30.1nb1 [jperkin 2018-11-29]
+	Removed sysutils/ruby-activesambaldap [taca 2018-11-29]
