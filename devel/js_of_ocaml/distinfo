@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.17 2018/08/13 12:57:37 jaapb Exp $
+$NetBSD: distinfo,v 1.18 2018/11/29 11:59:21 jaapb Exp $
 
 SHA1 (js_of_ocaml-3.2.1.tar.gz) = 168c3c50eca387fa5b7f0d079c3d00ad7d883526
 RMD160 (js_of_ocaml-3.2.1.tar.gz) = efd4c9de4f2971628da4a409139a89d0170d6878
 SHA512 (js_of_ocaml-3.2.1.tar.gz) = 55faf40f70f21a14b2ae6e9b6f920d649dfa101bb0e4ea3e24c3254ca6a2669b7e09b86c64b931d7d32beb280a61e7000e9508fb77c2512896fba36c5db33705
 Size (js_of_ocaml-3.2.1.tar.gz) = 1441397 bytes
+SHA1 (patch-lib_tyxml_tyxml__js.ml) = 4b44f20b26387f90ec0ec7ec1398754bfed683bd
