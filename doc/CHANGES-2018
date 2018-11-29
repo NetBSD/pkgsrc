@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4916 2018/11/29 12:00:58 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.4917 2018/11/29 13:58:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6854,3 +6854,12 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/ocsigen to 2.9nb4 [jaapb 2018-11-29]
 	Updated audio/libcanberra to 0.30 [prlw1 2018-11-29]
 	Updated textproc/ocaml-tyxml to 4.3.0 [jaapb 2018-11-29]
+	Updated devel/ruby-activesupport42 to 4.2.11 [taca 2018-11-29]
+	Updated devel/ruby-activejob42 to 4.2.11 [taca 2018-11-29]
+	Updated devel/ruby-activemodel42 to 4.2.11 [taca 2018-11-29]
+	Updated databases/ruby-activerecord42 to 4.2.11 [taca 2018-11-29]
+	Updated www/ruby-actionview42 to 4.2.11 [taca 2018-11-29]
+	Updated www/ruby-actionpack42 to 4.2.11 [taca 2018-11-29]
+	Updated mail/ruby-actionmailer42 to 4.2.11 [taca 2018-11-29]
+	Updated devel/ruby-railties42 to 4.2.11 [taca 2018-11-29]
+	Updated www/ruby-rails42 to 4.2.11 [taca 2018-11-29]
