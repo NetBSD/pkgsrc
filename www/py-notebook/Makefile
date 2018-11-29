@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2018/05/11 19:46:36 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2018/11/29 18:34:12 adam Exp $
 
-DISTNAME=	notebook-5.5.0
+DISTNAME=	notebook-5.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/notebook/}
@@ -26,10 +26,10 @@ DEPENDS+=	${PYPKGPREFIX}-zmq>=17.0.0:../../net/py-zmq
 USE_LANGUAGES=	# none
 
 post-install:
-	for f in jupyter-bundlerextension jupyter-nbextension jupyter-notebook jupyter-serverextension; do \
-		${MV} ${DESTDIR}${PREFIX}/bin/$$f ${DESTDIR}${PREFIX}/bin/$${f}${PYVERSSUFFIX} || ${TRUE}; \
-	done
+.for name in bundlerextension nbextension notebook serverextension
+	cd ${DESTDIR}${PREFIX}/bin && \
+		${MV} jupyter-${name} jupyter-${name}-${PYVERSSUFFIX} || ${TRUE}
+.endfor
 
-.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
