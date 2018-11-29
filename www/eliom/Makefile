@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2018/11/12 16:10:28 jaapb Exp $
+# $NetBSD: Makefile,v 1.25 2018/11/29 12:04:23 jaapb Exp $
 #
 
 GITHUB_PROJECT=	eliom
 DISTNAME=	${GITHUB_PROJECT}-6.3.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 

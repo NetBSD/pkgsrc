@@ -1,6 +1,7 @@
-$NetBSD: patch-src__tags,v 1.2 2018/04/13 13:17:34 jaapb Exp $
+$NetBSD: patch-src__tags,v 1.3 2018/11/29 12:04:23 jaapb Exp $
 
 lwt_ppx is now its own package and has been renamed
+Use xml-light (patch from upstream)
 --- src/_tags.orig	2018-02-08 14:30:46.000000000 +0000
 +++ src/_tags
 @@ -2,23 +2,23 @@
@@ -19,9 +20,10 @@ lwt_ppx is now its own package and has been renamed
  <lib/server/*.ml{,i}>:thread
  <lib/server/*.ml{,i}>:package(lwt,ocsigenserver,ocsigenserver.ext,tyxml.functor)
 -<lib/server/*.ml{,i}>:package(react,lwt_react,js_of_ocaml)
+-
 +<lib/server/*.ml{,i}>:package(react,lwt_react,js_of_ocaml,lwt_log)
- 
  <lib/server/*.ml{,i}>:package(js_of_ocaml-ppx.deriving)
++<lib/server/*.ml{,i}>:package(xml-light)
  
  <lib/*.eliom{,i}>:eliom_ppx
  
