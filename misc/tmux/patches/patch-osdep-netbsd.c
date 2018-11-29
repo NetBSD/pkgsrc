@@ -1,6 +1,10 @@
-$NetBSD: patch-osdep-netbsd.c,v 1.1 2018/11/28 14:45:19 leot Exp $
+$NetBSD: patch-osdep-netbsd.c,v 1.2 2018/11/29 10:51:34 leot Exp $
 
 Implement osdep_get_cwd() via mount_procfs(8) (inspired by osdep-sunos.c).
+
+This was applied upstream via:
+
+ <https://github.com/tmux/tmux/pull/1556>
 
 --- osdep-netbsd.c.orig	2016-01-21 00:00:28.000000000 +0000
 +++ osdep-netbsd.c
