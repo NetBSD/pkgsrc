@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.830 2018/11/28 18:48:58 nia Exp $
+# $NetBSD: Makefile,v 1.831 2018/11/29 05:37:51 jnemeth Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -492,9 +492,9 @@ SUBDIR+=	xcompmgr
 SUBDIR+=	xconsole
 SUBDIR+=	xcruise
 SUBDIR+=	xcursor
-SUBDIR+=	xcursorgen
 SUBDIR+=	xcursor-capitaine
 SUBDIR+=	xcursor-vanilla-dmz
+SUBDIR+=	xcursorgen
 SUBDIR+=	xdaemon
 SUBDIR+=	xdaemon2
 SUBDIR+=	xdbedizzy
