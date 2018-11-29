@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2018/01/25 09:51:57 adam Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.5 2018/11/29 18:24:36 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/ipykernel/__init__.py
 ${PYSITELIB}/ipykernel/__init__.pyc
 ${PYSITELIB}/ipykernel/__init__.pyo
@@ -131,6 +135,9 @@ ${PYSITELIB}/ipykernel/tests/__init__.pyo
 ${PYSITELIB}/ipykernel/tests/_asyncio.py
 ${PLIST.async}${PYSITELIB}/ipykernel/tests/_asyncio.pyc
 ${PLIST.async}${PYSITELIB}/ipykernel/tests/_asyncio.pyo
+${PYSITELIB}/ipykernel/tests/test_async.py
+${PYSITELIB}/ipykernel/tests/test_async.pyc
+${PYSITELIB}/ipykernel/tests/test_async.pyo
 ${PYSITELIB}/ipykernel/tests/test_connect.py
 ${PYSITELIB}/ipykernel/tests/test_connect.pyc
 ${PYSITELIB}/ipykernel/tests/test_connect.pyo
