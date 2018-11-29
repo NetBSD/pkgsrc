@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2018/02/27 06:54:16 adam Exp $
+$NetBSD: distinfo,v 1.7 2018/11/29 18:24:36 adam Exp $
 
-SHA1 (ipykernel-4.8.2.tar.gz) = e8cd8fb9c9e9228c44682852db2d2af782a0ed35
-RMD160 (ipykernel-4.8.2.tar.gz) = 927ae8b255d5cafecda71da211dc5b9f382608e5
-SHA512 (ipykernel-4.8.2.tar.gz) = 6542b086ef14abe70f51393e585c1e02eac0967b863c2e3de2dfdcbcdc2f4c01597bd035990f09f07d76005628a3345be97d1b5e5ce7a772ce7074bb31b4d4df
-Size (ipykernel-4.8.2.tar.gz) = 94441 bytes
+SHA1 (ipykernel-5.1.0.tar.gz) = e18fff36d896b9639ea69cfaf722af563c15bf40
+RMD160 (ipykernel-5.1.0.tar.gz) = 9b8c07b1b6629b6e816acb0382b5e1a1c7c599ae
+SHA512 (ipykernel-5.1.0.tar.gz) = 0792b7f86d81b178c46522c8d6cf5fd57b0e411dfff13832d4e3d38782bae743fac7390dd5f2e2e738db66ce1137ec26e74511896b47667c88e23a245606a698
+Size (ipykernel-5.1.0.tar.gz) = 101198 bytes
