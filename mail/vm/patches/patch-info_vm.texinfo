@@ -1,0 +1,133 @@
+$NetBSD: patch-info_vm.texinfo,v 1.1 2018/11/29 00:36:23 markd Exp $
+
+revision 1503. Adjusted the texinfo files for makeinfo version 5.2 
+
+--- info/vm.texinfo.orig	2011-12-27 22:19:28.000000000 +0000
++++ info/vm.texinfo
+@@ -914,7 +914,8 @@ following formats:
+ 
+ @example
+ ``pop:@var{HOST}:@var{PORT}:@var{AUTH}:@var{USER}:@var{PASSWORD}''
+-``imap:@var{HOST}:@var{PORT}:@var{MAILBOX}:@var{AUTH}:@var{USER}:@var{PASSWORD}''@end example
++``imap:@var{HOST}:@var{PORT}:@var{MAILBOX}:@var{AUTH}:@var{USER}:@var{PASSWORD}''
++@end example
+ 
+ @noindent Remote mailboxes accessed by VM in this fashion are referred
+ to as @dfn{server folders} (and @dfn{@acronym{POP} folders} or @dfn{@acronym{IMAP}
+@@ -1208,7 +1209,7 @@ The variable's value should be an associ
+ @end example
+ 
+ @var{IMAPDROP} is an @acronym{IMAP} maildrop specification (@ref{maildrop
+-  specification}). 
++specification}). 
+ 
+ @var{NAME} is a string that should give a less cumbersome name that you
+ will use to refer to this maildrop when using @code{vm-visit-imap-folder}.
+@@ -2814,7 +2815,7 @@ composition and will analyze your messag
+ * @acronym{MIME} preview::        Previewing a @acronym{MIME} message before sending.
+ @end menu
+ 
+-@node @acronym{MIME} attachments, @acronym{MIME} characters, Sending @acronym{MIME} Messages, Sending @acronym{MIME} Messages, 
++@node @acronym{MIME} attachments, @acronym{MIME} characters, Sending @acronym{MIME} Messages, Sending @acronym{MIME} Messages 
+ @unnumberedsec @acronym{MIME} attachments
+ 
+ @kindex C-c C-a
+@@ -2868,7 +2869,7 @@ Alternatively, you can mark one or more
+ before invoking this command.  All the marked messages will be
+ attached as a digest in the outgoing message.
+ 
+-@unnumberedsubsubsec Point-to-point attachment operations
++@unnumberedsubsec Point-to-point attachment operations
+ 
+ @cindex point-to-point attachment operations
+ A number of @dfn{point-to-point operations} allow you to attach objects
+@@ -3425,7 +3426,7 @@ command.  There is a separate variable
+ works like @code{vm-delete-after-saving} but applies to the @kbd{A}
+ (@code{vm-auto-archive-messages}) command (see below).
+ 
+-@unnumberedsubsec vm-auto-folder-alist
++@unnumberedsec vm-auto-folder-alist
+ 
+ @vindex vm-auto-folder-alist
+ The variable @code{vm-auto-folder-alist} is used to specify
+@@ -3477,7 +3478,7 @@ matching is case-insensitive.  Note that
+ always case-insensitive because the Internet message standard RFC 822
+ specifies that header names are case indistinct.
+ 
+-@unnumberedsubsec Other commands
++@unnumberedsec Other commands
+ 
+ @table @kbd
+ @findex vm-save-message-sans-headers
+@@ -5174,7 +5175,7 @@ the offline operation.  Similarly, @emph
+ been expunged in the cache folder are expunged on the server.
+ 
+ @anchor{@acronym{UIDVALIDITY}}
+-@unnumberedsubsec @acronym{UIDVALIDITY}
++@unnumberedsec @acronym{UIDVALIDITY}
+ 
+ @cindex @acronym{UIDVALIDITY}
+ Messages on an @acronym{IMAP} server have unique id numbers called UID's.
+@@ -5198,7 +5199,7 @@ time, but note that it is not possible t
+ setting the @code{vm-enable-external-messages} flag to @code{(imap)} before
+ you refresh the cache so that it will be quicker. @pxref{External Messages}.
+ 
+-@unnumberedsubsec Operations for the IMAP server
++@unnumberedsec Operations for the IMAP server
+ 
+ @cindex vm-list-imap-folders
+ The command @code{vm-list-imap-folders} lists the folders available on the
+@@ -6021,7 +6022,7 @@ packages in your environment.
+ Useful ways to customize VM.
+ @section Reading messages
+ 
+-@unnumberedsubsubsec Shrunken headers
++@unnumberedsubsec Shrunken headers
+ 
+ @cindex headers, shrunken
+ @vindex vm-enable-addons
+@@ -6069,7 +6070,7 @@ part.  You can use the same function to
+ 
+ @section Saving messages and attachments
+ 
+-@unnumberedsubsubsec Auto saving attachments
++@unnumberedsubsec Auto saving attachments
+ 
+ Messages with attachments get bulky and increase the size of VM
+ folders, slowing down VM.  The functions
+@@ -6179,7 +6180,7 @@ The project code base is maintained at t
+ @uref{http://launchpad.net/vm}.  The ``VM Development Team'' can be
+ reached here using the email address @email{vm@@lists.launchpad.net}.
+ 
+-@unnumberedsubsec Savannah project site
++@unnumberedsec Savannah project site
+ 
+ The changes made in each of the releases is described in the @samp{NEWS}
+ file, which can be found in the source code repository.  The changes made
+@@ -6197,7 +6198,7 @@ the @code{Source Code} menu.  The @code{
+ takes you to a page that lists various version of VM source code, and
+ gives instructions for downloading it via @samp{Bazaar} (@code{bzr}).
+ 
+-@unnumberedsubsec Technical support
++@unnumberedsec Technical support
+ 
+ VM has a dedicated usenet newsgroup @code{gnu.emacs.vm.info} and a
+ gmane newsgroup @code{gmane.emacs.viewmail}, in which the developers
+@@ -6220,7 +6221,7 @@ alternative approaches to narrow down th
+ 
+ The best way to report bugs is via the Launchpad bug tacker.  See below.
+ 
+-@unnumberedsubsec Get Involved
++@unnumberedsec Get Involved
+ 
+ VM is now supported and maintained by the user community.  So, as an
+ active user, your participation is key to keep the project going.  
+@@ -6545,7 +6546,7 @@ server are listed.  In the normal cases,
+ @acronym{IMAP} folders.)
+ @end itemize
+ 
+-@unnumberedsubsubsec Folder variables
++@unnumberedsubsec Folder variables
+ 
+ Internal to Emacs, VM stores the folder as simply a text buffer.  However, it
+ remembers a variety of data about the message contents in the buffer
