@@ -1,1 +1,1 @@
-bin/jupyter-nbconvert @PREFIX@/bin/jupyter-nbconvert@PYVERSSUFFIX@
+bin/jupyter-nbconvert @PREFIX@/bin/jupyter-nbconvert-@PYVERSSUFFIX@
