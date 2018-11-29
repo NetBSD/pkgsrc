@@ -1,9 +1,26 @@
-$NetBSD: patch-src_server_ocsigen__server.ml,v 1.1 2018/04/13 13:15:00 jaapb Exp $
+$NetBSD: patch-src_server_ocsigen__server.ml,v 1.2 2018/11/29 10:54:14 jaapb Exp $
 
 Lwt_chan no longer exists in Lwt 4, replaced by Lwt_io
+Replace tyxml.parser with xml-light (patch from upstream)
 --- src/server/ocsigen_server.ml.orig	2018-02-01 12:55:17.000000000 +0000
 +++ src/server/ocsigen_server.ml
-@@ -1317,13 +1317,13 @@ let start_server () =
+@@ -1029,9 +1029,12 @@ let errmsg = function
+   | Ocsigen_extensions.Error_in_config_file msg ->
+     (("Fatal - Error in configuration file: "^msg),
+      50)
+-  | Simplexmlparser.Xml_parser_error s ->
+-    (("Fatal - Error in configuration file: "^s),
+-     51)
++  | Xml.Error (s, loc) ->
++    let begin_char, end_char = Xml.range loc and line = Xml.line loc in
++    raise (Ocsigen_extensions.Error_in_config_file
++             (Printf.sprintf "%s, line %d, characters %d-%d"
++                (Xml.error_msg s)
++                line begin_char end_char))
+   | Ocsigen_loader.Dynlink_error (s, exn) ->
+     (("Fatal - While loading "^s^": "^(Printexc.to_string exn)),
+      52)
+@@ -1317,13 +1320,13 @@ let start_server () =
  
        Ocsigen_extensions.end_initialisation ();
  

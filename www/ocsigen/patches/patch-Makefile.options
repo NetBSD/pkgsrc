@@ -1,6 +1,7 @@
-$NetBSD: patch-Makefile.options,v 1.4 2018/04/13 13:15:00 jaapb Exp $
+$NetBSD: patch-Makefile.options,v 1.5 2018/11/29 10:54:14 jaapb Exp $
 
 Support for preemptive threads is in lwt.unix now
+Replace tyxml.parser with xml-light (patch from upstream)
 --- Makefile.options.orig	2018-02-01 12:55:17.000000000 +0000
 +++ Makefile.options
 @@ -25,7 +25,7 @@ endif
@@ -12,3 +13,12 @@ Support for preemptive threads is in lwt.unix now
  endif
  
  BASE_PACKAGE := lwt ipaddr bytes
+@@ -39,7 +39,7 @@ SERVER_PACKAGE := lwt_ssl           \
+                   findlib           \
+ 	          cryptokit         \
+ 		  tyxml             \
+-	          tyxml.parser      \
++	          xml-light      \
+                   dynlink           \
+ 
+ INITPACKAGE := \"$(shell ${OCAMLFIND} query -p-format -recursive        \
