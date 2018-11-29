@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4925 2018/11/29 16:28:18 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.4926 2018/11/29 18:34:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6880,3 +6880,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/erlang to 21.1.3 [nia 2018-11-29]
 	Updated security/polkit to 0.115nb2 [wiz 2018-11-29]
 	Updated x11/proxymngr to 1.0.4nb2 [wiz 2018-11-29]
+	Updated devel/py-ipykernel to 5.1.0 [adam 2018-11-29]
+	Updated www/py-nbconvert to 5.4.0 [adam 2018-11-29]
+	Updated www/py-notebook to 5.7.2 [adam 2018-11-29]
