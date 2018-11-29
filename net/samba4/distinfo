@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.19 2018/11/23 07:30:02 ryoon Exp $
+$NetBSD: distinfo,v 1.20 2018/11/29 14:46:46 taca Exp $
 
-SHA1 (samba-4.9.2.tar.gz) = 3b777a95aed4946717094bbe830279ba5ee2370f
-RMD160 (samba-4.9.2.tar.gz) = 4db2cf6684e724514f3ea1eaa7ed93c756f72f28
-SHA512 (samba-4.9.2.tar.gz) = 67de5faeda45e5c245bf02cc195cdf9ca4b63f17625837badf7c50d97250e94de5309c9ef824bd7890bc771b1dc0a3bfbafea09880850b5167f0bf8a8ef488ed
-Size (samba-4.9.2.tar.gz) = 18042752 bytes
+SHA1 (samba-4.9.3.tar.gz) = 99d9006495aa5d0c4b904ff8ab0b8daf0e694183
+RMD160 (samba-4.9.3.tar.gz) = 830c0052e6704f97e1d3c6d07564e9cb0fc4d928
+SHA512 (samba-4.9.3.tar.gz) = bdcba835857f1f41d47932e5c06cff446301c916b78195124814eac89dfce93f12e6e7aa1b53cfff30fdd12d8ce6409dda4e454d8f26fb7ea8e0a97996f93783
+Size (samba-4.9.3.tar.gz) = 18043670 bytes
 SHA1 (patch-buildtools_wafsamba_wscript) = 5604936a825675647157331df2333f4237c611f5
 SHA1 (patch-dynconfig_wscript) = 4d769a4d07487b5f62c112d3b0095196bb058117
 SHA1 (patch-lib_ldb_ldb__mdb_ldb__mdb.c) = 3dcee7618a15058351d488ad003929effa100e41
