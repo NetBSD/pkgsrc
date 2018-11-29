@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2018/08/03 09:19:56 jaapb Exp $
+# $NetBSD: options.mk,v 1.6 2018/11/29 11:59:21 jaapb Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.js_of_ocaml
 PKG_SUPPORTED_OPTIONS=	ocaml-tyxml camlp4
@@ -17,7 +17,7 @@ PLIST_VARS+=	tyxml camlp4
 .include "../../textproc/ocaml-tyxml/buildlink3.mk"
 .include "../../devel/ocaml-reactiveData/buildlink3.mk"
 PLIST.tyxml=	yes
-JBUILDER_BUILD_PACKAGES+=	js_of_ocaml-tyxml
+DUNE_BUILD_PACKAGES+=	js_of_ocaml-tyxml
 OPAM_INSTALL_FILES+=	js_of_ocaml-tyxml
 .else
 .endif
@@ -29,7 +29,7 @@ OPAM_INSTALL_FILES+=	js_of_ocaml-tyxml
 .include "../../lang/camlp4/buildlink3.mk"
 DEPENDS+=	ocaml-deriving-ocsigen>=0.8.1:../../devel/ocaml-deriving-ocsigen
 PLIST.camlp4=	yes
-JBUILDER_BUILD_PACKAGES+=	js_of_ocaml-camlp4
+DUNE_BUILD_PACKAGES+=	js_of_ocaml-camlp4
 OPAM_INSTALL_FILES+=	js_of_ocaml-camlp4
 .else
 .endif
