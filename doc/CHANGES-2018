@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4913 2018/11/29 10:45:51 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.4914 2018/11/29 10:54:32 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6851,3 +6851,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/vm to 8.2.0b [markd 2018-11-29]
 	Updated www/lighttpd to 1.4.52 [wiz 2018-11-29]
 	Added textproc/ocaml-xml-light version 2.4 [jaapb 2018-11-29]
+	Updated www/ocsigen to 2.9nb4 [jaapb 2018-11-29]
