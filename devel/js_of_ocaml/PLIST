@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2018/08/03 09:19:56 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.20 2018/11/29 11:59:21 jaapb Exp $
 bin/js_of_ocaml
 bin/jsoo_link
 bin/jsoo_minify
@@ -90,7 +90,7 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-compiler/js_of_ocaml_compiler.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-compiler/js_of_ocaml_compiler.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-compiler/js_of_ocaml_compiler.cmxs
 ${OCAML_SITELIB}/js_of_ocaml-compiler/js_of_ocaml-compiler.dune
-${OCAML_SITELIB}/js_of_ocaml-compiler/js_of_ocaml_compiler.ml-gen
+${OCAML_SITELIB}/js_of_ocaml-compiler/js_of_ocaml_compiler.ml
 ${OCAML_SITELIB}/js_of_ocaml-compiler/js_of_ocaml_compiler__Annot_lexer.cmi
 ${OCAML_SITELIB}/js_of_ocaml-compiler/js_of_ocaml_compiler__Annot_lexer.cmt
 ${OCAML_SITELIB}/js_of_ocaml-compiler/js_of_ocaml_compiler__Annot_lexer.cmti
@@ -425,7 +425,7 @@ ${OCAML_SITELIB}/js_of_ocaml-ppx/ppx_js.mli
 ${OCAML_SITELIB}/js_of_ocaml-ppx/ppx_js__.cmi
 ${OCAML_SITELIB}/js_of_ocaml-ppx/ppx_js__.cmt
 ${OCAML_SITELIB}/js_of_ocaml-ppx/ppx_js__.cmx
-${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-ppx/ppx_js__.ml-gen
+${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-ppx/ppx_js__.ml
 ${OCAML_SITELIB}/js_of_ocaml-ppx/ppx_js__Ppx_js_internal.cmi
 ${OCAML_SITELIB}/js_of_ocaml-ppx/ppx_js__Ppx_js_internal.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-ppx/ppx_js__Ppx_js_internal.cmx
