@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2018/11/14 22:21:18 kleink Exp $
+# $NetBSD: Makefile,v 1.39 2018/11/29 11:21:50 prlw1 Exp $
 
 DISTNAME=	ocamlgraph-1.8.8
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	devel
 MASTER_SITES=	http://ocamlgraph.lri.fr/download/
 
