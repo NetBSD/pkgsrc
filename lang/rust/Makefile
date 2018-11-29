@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.66 2018/11/27 15:45:23 adam Exp $
+# $NetBSD: Makefile,v 1.67 2018/11/29 14:32:14 jperkin Exp $
 
 DISTNAME=	rustc-1.30.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://static.rust-lang.org/dist/
 
@@ -423,14 +424,18 @@ stage0-bootstrap: install
 	 ${GTAR} -zcf ${PKGNAME_NOREV}-${RUST_ARCH}.tar.gz ${PKGNAME_NOREV}-${RUST_ARCH})
 .endif
 
+# These dependencies currently use the bundled sources as they require
+# development features not yet available in released versions.
+#
+#.include "../../devel/libgit2/buildlink3.mk"
+#.include "../../security/libssh2/buildlink3.mk"
+#.include "../../www/curl/buildlink3.mk"
+#.include "../../www/http-parser/buildlink3.mk"
+
 .include "../../devel/cmake/buildlink3.mk"
 #.include "../../devel/jemalloc/buildlink3.mk"
-#.include "../../devel/libgit2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 #.include "../../lang/llvm/buildlink3.mk"
 .include "../../lang/python/tool.mk"
-#.include "../../security/libssh2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-#.include "../../www/curl/buildlink3.mk"
-.include "../../www/http-parser/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
