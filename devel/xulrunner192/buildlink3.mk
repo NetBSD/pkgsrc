@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.39 2018/11/14 22:21:21 kleink Exp $
+# $NetBSD: buildlink3.mk,v 1.40 2018/11/29 11:21:46 prlw1 Exp $
 
 BUILDLINK_TREE+=	xulrunner192
 
@@ -11,7 +11,7 @@ xulrunner192-preconfigure:
 	cp ${PREFIX}/lib/xulrunner192/pkgconfig/* ${BUILDLINK_DIR}/lib/pkgconfig
 
 BUILDLINK_API_DEPENDS.xulrunner192+=	xulrunner192>=1.9.2.17nb2<2.0
-BUILDLINK_ABI_DEPENDS.xulrunner192+=	xulrunner192>=1.9.2.28nb49
+BUILDLINK_ABI_DEPENDS.xulrunner192+=	xulrunner192>=1.9.2.28nb50
 BUILDLINK_PKGSRCDIR.xulrunner192?=	../../devel/xulrunner192
 
 pkgbase := xulrunner192
