@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4911 2018/11/29 00:38:21 markd Exp $
+$NetBSD: CHANGES-2018,v 1.4912 2018/11/29 06:34:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6849,3 +6849,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added x11/kitty version 0.12.3 [nia 2018-11-28]
 	Updated net/gallery-dl to 1.6.1 [leot 2018-11-28]
 	Updated mail/vm to 8.2.0b [markd 2018-11-29]
+	Updated www/lighttpd to 1.4.52 [wiz 2018-11-29]
