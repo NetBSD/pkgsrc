@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:32:29 agc Exp $
-
-SHA1 (activesambaldap-0.1.0.gem) = 00a844546c22a57c1661eec9f0ff598c88fcd017
-RMD160 (activesambaldap-0.1.0.gem) = 275fa79b3a9e62371ad3610a1f502f4e5d0e1385
-SHA512 (activesambaldap-0.1.0.gem) = 5eb9630d4b442391cd768d17ce3d1e910dfa661a7a31b3a0450f42185dc343b3159d0b869e6a42d07fe3f48b16942794ad51c1ca31e25de78608cb7cbb9c9735
-Size (activesambaldap-0.1.0.gem) = 51712 bytes
