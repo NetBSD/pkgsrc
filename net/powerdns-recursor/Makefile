@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.30 2018/09/04 10:22:38 fhajny Exp $
-#
+# $NetBSD: Makefile,v 1.31 2018/11/30 12:57:41 adam Exp $
 
-DISTNAME=		pdns-recursor-4.1.4
-CATEGORIES=		net
-MASTER_SITES=		http://downloads.powerdns.com/releases/
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	pdns-recursor-4.1.8
+CATEGORIES=	net
+MASTER_SITES=	http://downloads.powerdns.com/releases/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://www.powerdns.com/
-COMMENT=		PowerDNS resolver/recursing nameserver
-LICENSE=		gnu-gpl-v2
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://www.powerdns.com/
+COMMENT=	PowerDNS resolver/recursing nameserver
+LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++11
 USE_TOOLS+=		gmake pkg-config
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--without-net-snmp
 
 RCD_SCRIPTS+=		pdns_recursor
 
