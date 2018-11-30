@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.11 2018/02/01 21:00:25 adam Exp $
+$NetBSD: distinfo,v 1.12 2018/11/30 10:37:07 adam Exp $
 
-SHA1 (networkx-2.1.zip) = a481bea7b41c0d6af191c7d2bcde56d75da20b3e
-RMD160 (networkx-2.1.zip) = 52295c8c57b4e6897244f0129f396af2c5114997
-SHA512 (networkx-2.1.zip) = 61b819ccfdd38e009e5b363f4bf551f2924bbf751b078aab1b41da9faf4c6b0841f38750b96bd359d3aebefef01e65e88b4c43a378ec25bbd45283d92bdae678
-Size (networkx-2.1.zip) = 1612593 bytes
+SHA1 (networkx-2.2.zip) = a68f8faa3726c220b93d68cfa28bed24874ba3fc
+RMD160 (networkx-2.2.zip) = 255c9146174fb6aa67378001648a00335b4f2392
+SHA512 (networkx-2.2.zip) = 098e58c5f93c72c789e736102815e2f6388eb34147a674941519ef6f6d6452cc09b76d8523893418cb69df133e7623ea2c62fa51144f598f592ebce0e3e3ccbb
+Size (networkx-2.2.zip) = 1700336 bytes
+SHA1 (patch-setup.py) = 7996c9a19da1da3b017f6e646d37d085e42bfb82
