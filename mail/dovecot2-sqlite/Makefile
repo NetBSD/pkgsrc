@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2018/10/23 16:29:18 adam Exp $
+# $NetBSD: Makefile,v 1.15 2018/11/30 18:43:10 adam Exp $
 
-.include "../../mail/dovecot2/Makefile.plugin"
+.include "../../mail/dovecot2/Makefile.common"
 
-PKGNAME=		${DISTNAME:S/dovecot/dovecot-sqlite/}
-COMMENT+=		(sqlite plugin)
+PKGNAME=	${DISTNAME:S/dovecot/dovecot-sqlite/}
+COMMENT+=	(SQLite plugin)
 
 CONFIGURE_ARGS+=	--with-sql=plugin
 CONFIGURE_ARGS+=	--with-sqlite

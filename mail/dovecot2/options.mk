@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.10 2016/07/18 15:03:05 fhajny Exp $
+# $NetBSD: options.mk,v 1.11 2018/11/30 18:43:09 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
 PKG_SUPPORTED_OPTIONS=	kqueue pam tcpwrappers
-PKG_OPTIONS_OPTIONAL_GROUPS= ssl
+PKG_OPTIONS_OPTIONAL_GROUPS=ssl
 PKG_OPTIONS_GROUP.ssl=	gnutls ssl
 PKG_SUGGESTED_OPTIONS=	pam ssl tcpwrappers
 
