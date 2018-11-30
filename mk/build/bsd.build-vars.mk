@@ -1,4 +1,4 @@
-# $NetBSD: bsd.build-vars.mk,v 1.12 2017/08/07 23:54:09 maya Exp $
+# $NetBSD: bsd.build-vars.mk,v 1.13 2018/11/30 18:38:19 rillig Exp $
 #
 # Package-settable variables:
 #
@@ -24,6 +24,8 @@
 _VARGROUPS+=		build-vars
 _USER_VARS.build-vars=	# none
 _PKG_VARS.build-vars=	BUILD_DIRS MAKE_ENV MAKE_PROGRAM MAKE_FLAGS MAKE_FILE NO_BUILD
+_LISTED_VARS.build-vars=	BUILD_DIRS
+_SORTED_VARS.build-vars=	MAKE_ENV MAKE_FLAGS
 
 BUILD_DIRS?=	${CONFIGURE_DIRS}
 MAKE_ENV?=	# empty
