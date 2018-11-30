@@ -1,4 +1,4 @@
-# $NetBSD: features-vars.mk,v 1.23 2014/07/17 13:07:14 ryoon Exp $
+# $NetBSD: features-vars.mk,v 1.24 2018/11/30 18:38:19 rillig Exp $
 #
 # The platforms that are supported by pkgsrc differ in the amount of
 # functions they provide in the C library (libc). Functions that are
@@ -67,6 +67,7 @@ _VARGROUPS+=		features
 _USER_VARS.features=	# none
 _PKG_VARS.features=	USE_FEATURES
 _SYS_VARS.features=	MISSING_FEATURES
+_SORTED_VARS.features=	*S
 
 MISSING_FEATURES=	# empty
 USE_FEATURES?=		# none

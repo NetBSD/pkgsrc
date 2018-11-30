@@ -1,4 +1,4 @@
-# $NetBSD: show.mk,v 1.16 2018/11/11 19:07:12 rillig Exp $
+# $NetBSD: show.mk,v 1.17 2018/11/30 18:38:20 rillig Exp $
 #
 # This file contains some targets that print information gathered from
 # variables. They do not modify any variables.
@@ -124,6 +124,22 @@ show-build-defs: .PHONY
 #	All variables that are used by this file, whether internal or
 #	not, primary or not.
 #
+# Variables that control the presentation of individual variables:
+#
+# _SORTED_VARS.*
+#	A list of patterns describing the variable names to be shown as
+#	lists, one word per line, sorted alphabetically.
+#
+#	Default: # none
+#	Example: *_ENV *_FILES SUBST_VARS.*
+#
+# _LISTED_VARS.*
+#	A list of patterns describing the variable names to be shown as
+#	lists, one word per line, in the given order.
+#
+#	Default: # none
+#	Example: *_ARGS *_CMD SUBST_SED.*
+#
 _SHOW_ALL_CATEGORIES=	_USER_VARS _PKG_VARS _SYS_VARS _USE_VARS _DEF_VARS
 _LABEL._USER_VARS=	usr
 _LABEL._PKG_VARS=	pkg
@@ -145,13 +161,12 @@ show-all: show-all-${g}
 # doesn't exist.
 
 show-all-${g}: .PHONY
-	@echo "${g}:"
+	@${RUN} printf '%s:\n' ${g:Q}
+
 .  for c in ${_SHOW_ALL_CATEGORIES}
 .    for v in ${${c}.${g}}
-.      if (${v:M*_ENV}			\
-	|| ${v:M*_ENV.*}		\
-	|| ${v} == PLIST_SUBST		\
-	|| ${v:MSUBST_VARS.*})
+
+.      if ${_SORTED_VARS.${g}:U:@pattern@ ${v:M${pattern}} @:M*}
 
 # multi-valued variables, values are sorted
 	${RUN}								\
@@ -165,17 +180,7 @@ show-all-${g}: .PHONY
 	  printf '\t\t\t\t# end of %s (sorted)\n' ${v:Q};		\
 	fi
 
-.      elif (${v:M*_ARGS}		\
-	|| ${v:M*_ARGS.*}		\
-	|| ${v:M*_CMD}			\
-	|| ${v:M*_CMD_DEFAULT}		\
-	|| ${v:M*_SKIP}			\
-	|| ${v:M*INSTALL_SRC}		\
-	|| ${v:MMASTER_SITE*}		\
-	|| ${v:MSUBST_FILES.*}		\
-	|| ${v:MSUBST_SED.*}		\
-	|| ${v:MSUBST_FILTER_CMD.*}	\
-	|| ${v:M*_SUBST})
+.      elif ${_LISTED_VARS.${g}:U:@pattern@ ${v:M${pattern}} @:M*}
 
 # multi-valued variables, preserving original order
 	${RUN}								\

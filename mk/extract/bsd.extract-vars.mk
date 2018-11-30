@@ -1,4 +1,4 @@
-# $NetBSD: bsd.extract-vars.mk,v 1.16 2013/11/16 07:45:26 shattered Exp $
+# $NetBSD: bsd.extract-vars.mk,v 1.17 2018/11/30 18:38:19 rillig Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -18,6 +18,7 @@ _VARGROUPS+=		extract
 _PKG_VARS.extract=	EXTRACT_DIR EXTRACT_ONLY EXTRACT_SUFX EXTRACT_CMD \
 			EXTRACT_OPTS EXTRACT_USING EXTRACT_ELEMENTS
 _SYS_VARS.extract=	EXTRACT_CMD_DEFAULT
+_LISTED_VARS.extract=	EXTRACT_CMD EXTRACT_CMD_DEFAULT
 
 EXTRACT_ONLY?=		${DISTFILES}
 EXTRACT_SUFX?=		.tar.gz

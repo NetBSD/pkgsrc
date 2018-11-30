@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.56 2018/08/22 20:48:37 maya Exp $
+# $NetBSD: bsd.tools.mk,v 1.57 2018/11/30 18:38:20 rillig Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -181,3 +181,4 @@ _PKG_VARS.tools=	USE_TOOLS TOOLS_BROKEN TOOLS_CREATE \
 _SYS_VARS.tools+=	${pv}.${t}
 .  endfor
 .endfor
+_SORTED_VARS.tools=	USE_TOOLS TOOLS_CREATE TOOLS_GNU_MISSING
