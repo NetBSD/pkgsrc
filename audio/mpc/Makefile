@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2018/05/07 10:46:52 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2018/11/30 15:06:56 wiz Exp $
 
-DISTNAME=		mpc-0.30
+DISTNAME=		mpc-0.31
 CATEGORIES=		audio
 #MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=musicpd/}
 MASTER_SITES=		http://www.musicpd.org/download/mpc/0/
