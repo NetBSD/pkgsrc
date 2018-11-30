@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $NetBSD: pkg_regress.sh,v 1.6 2016/06/11 10:31:06 rillig Exp $
+# $NetBSD: pkg_regress.sh,v 1.7 2018/11/30 19:07:37 rillig Exp $
 #
 set -e
 
@@ -149,3 +149,6 @@ fi
 
 echo "Statistics:"
 echo "  $passed passed, $failed failed"
+if [ $failed -ne 0 ]; then
+	exit 1
+fi

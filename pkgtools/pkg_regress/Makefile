@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2018/11/30 18:42:12 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2018/11/30 19:07:37 rillig Exp $
 
-PKGNAME=	pkg_regress-0.3
+PKGNAME=	pkg_regress-0.4
 CATEGORIES=	pkgtools
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
