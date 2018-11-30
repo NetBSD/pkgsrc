@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18634 2018/11/30 17:25:21 nia Exp $
+$NetBSD: TODO,v 1.18635 2018/11/30 23:26:28 nia Exp $
 
 Suggested new packages
 ======================
@@ -328,6 +328,20 @@ Suggested new packages
 	util: gccmakedep, lndir
 	xcb: xcb-demo, xpyb
 	non-xorg: xf86-input-wacom, xinput_calibrator
+
+	Missing libretro core packages
+	https://github.com/libretro
+	Computer system emulators: libretro-px68k (wip), libretro-hatari,
+	libretro-atari800, libretro-dosbox, libretro-uae?, libretro-vice,
+	libretro-81
+	Video game system emulators: libretro-citra, libretro-beetle-pcfx,
+	libretro-beetle-lynx (or Handy, too buggy?), libretro-kronos,
+	some version of MAME
+	Standalone games: libretro-nxengine (Cave Story), libretro-2048,
+	libretro-dinothawr, libretro-mrboom, libretro-thepowdertoy,
+	libretro-openlara, libretro-gw, libretro-tyrquake (wip),
+	libretro-prboom (wip), libretro-easyrpg, libretro-scummvm,
+	libretro-stonesoup, libretro-cannonball, libretro-reminiscence
 
 Suggested package updates
 =========================
