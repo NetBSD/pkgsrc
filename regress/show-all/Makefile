@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/11/11 19:07:12 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2018/11/30 19:15:49 rillig Exp $
 
 DISTNAME=	show-all-1.0
 CATEGORIES=	regress
@@ -30,5 +30,7 @@ _PKG_VARS.regress+=	REGRESS_ENV.undefined REGRESS_ENV.empty REGRESS_ENV.space RE
 _PKG_VARS.regress+=	REGRESS_ARGS.undefined REGRESS_ARGS.empty REGRESS_ARGS.space REGRESS_ARGS.value
 _PKG_VARS.regress+=	REGRESS.undefined REGRESS.empty REGRESS.space REGRESS.value
 _PKG_VARS.regress+=	* **
+_SORTED_VARS.regress=	*_ENV.*
+_LISTED_VARS.regress=	*_ARGS.*
 
 .include "../../mk/bsd.pkg.mk"
