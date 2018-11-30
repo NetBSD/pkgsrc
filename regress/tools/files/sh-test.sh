@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: sh-test.sh,v 1.1 2006/11/09 12:39:55 rillig Exp $
+# $NetBSD: sh-test.sh,v 1.2 2018/11/30 19:55:26 rillig Exp $
 #
 
 set -e
@@ -37,5 +37,8 @@ sh_assert_equals() {
 nl="
 "
 
+# This test fails with /bin/sh from 2018-11-08, see bin/53754.
+if [ "`uname -s`" != "NetBSD" ]; then
 line="#define bindir \"/usr/bin\" /* bar */"
 sh_assert_equals "removing C comments" "#define bindir \"/usr/bin\" " "${line%%/\**}"
+fi
