@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.113 2018/09/14 16:01:05 tnn Exp $
+# $NetBSD: java-vm.mk,v 1.114 2018/11/30 18:38:19 rillig Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -59,6 +59,7 @@ _VARGROUPS+=		java
 _USER_VARS.java=	PKG_JVM_DEFAULT
 _PKG_VARS.java=		USE_JAVA USE_JAVA2 PKG_JVMS_ACCEPTED
 _SYS_VARS.java=		PKG_JVM PKG_JAVA_HOME JAVA_BINPREFIX
+_SORTED_VARS.java=	PKG_JVMS_ACCEPTED
 
 .include "../../mk/bsd.prefs.mk"
 
