@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.33 2018/10/23 16:30:03 adam Exp $
+$NetBSD: distinfo,v 1.34 2018/11/30 18:44:11 adam Exp $
 
-SHA1 (dovecot-2.3-pigeonhole-0.5.3.tar.gz) = 12173c665e5d02029b453ffd4d9a64a0071b9e10
-RMD160 (dovecot-2.3-pigeonhole-0.5.3.tar.gz) = c0d6dc00bc505c2b35c4a4bb06b272f7e86c574e
-SHA512 (dovecot-2.3-pigeonhole-0.5.3.tar.gz) = 8403b1976a915836ba875b96825446d46e0d8c7ff245ed1f2b014347fdc78a81f9ed6dbd05bd3b4f1f7072edc5e9a302201cdb375de44436adcbb83919f203f5
-Size (dovecot-2.3-pigeonhole-0.5.3.tar.gz) = 1827329 bytes
+SHA1 (dovecot-2.3-pigeonhole-0.5.4.tar.gz) = 213feaca641cee9e07e7bb43e9ce7fb59af3e129
+RMD160 (dovecot-2.3-pigeonhole-0.5.4.tar.gz) = 2f6b0dd5d05cfb08c2313925e0c5183a8bbf98c3
+SHA512 (dovecot-2.3-pigeonhole-0.5.4.tar.gz) = 9c82cce7540f8ab66e2e370e0220c99048d6ac53ed680cd763e0b03d0200e2451cee4303ef97b87a16e7248e1c73b92ba91b47a2a20c75cb2cd62695a28046f3
+Size (dovecot-2.3-pigeonhole-0.5.4.tar.gz) = 1831570 bytes
 SHA1 (patch-aa) = 264399e166b5fece22bacd47b043c59f8f0f0a29
