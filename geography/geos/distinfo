@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.28 2018/09/11 16:13:29 gdt Exp $
+$NetBSD: distinfo,v 1.29 2018/11/30 16:00:45 gdt Exp $
 
-SHA1 (geos-3.7.0.tar.bz2) = a42cfc1178784ebdf124c6537ee3158e5acac698
-RMD160 (geos-3.7.0.tar.bz2) = 3e3ea84b5b7e81f7e0c483bdbe3d7ad9417e2da9
-SHA512 (geos-3.7.0.tar.bz2) = fcca5e503efa32bb388376b2a06b9ca5c74fbcddba750cce6b3b4109eb2eb122058aead12b9462cdd881f425cd75d7241645ab344f25ce022bc0659954560742
-Size (geos-3.7.0.tar.bz2) = 2028814 bytes
+SHA1 (geos-3.7.1.tar.bz2) = c06a2e7620b9197c6b9ac456395f4ee4fed9cb86
+RMD160 (geos-3.7.1.tar.bz2) = a19ab2818a8d184bd0a92b3f7a1916c353d209af
+SHA512 (geos-3.7.1.tar.bz2) = 01e8087bcd3cb8f873adb7b56910e1575ccb3336badfdd3f13bc6792095b7010e5ab109ea0d0cd3d1459e2e526e83bcf64d6ee3f7eb47be75639becdaacd2a87
+Size (geos-3.7.1.tar.bz2) = 2055129 bytes
 SHA1 (patch-ae) = bcc9e39928dca6c3e78326c0bfb7dcf96e4bcf10
 SHA1 (patch-capi_geos__ts__c.cpp) = bde78fc0ef30e0d75ccba5f89c6f62d957783d03
