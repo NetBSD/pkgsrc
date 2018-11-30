@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.88 2018/08/10 19:29:04 nia Exp $
+# $NetBSD: license.mk,v 1.89 2018/11/30 18:38:19 rillig Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -265,3 +265,9 @@ guess-license: .PHONY
 	| ${AWK} -F ';' '{ print $$2 }' \
 	| LC_ALL=C ${SORT} | uniq -c | LC_ALL=C ${SORT} -nr \
 	| ${AWK} 'BEGIN { printf("%5s   %s\n", "Files", "License") } { printf("%5d   %s\n", $$1, $$2); }'
+
+_VARGROUPS+=		license
+_USER_VARS.license=	ACCEPTABLE_LICENSES SKIP_LICENSE_CHECK
+_PKG_VARS.license=	LICENSE
+_SYS_VARS.license=	DEFAULT_ACCEPTABLE_LICENSES
+_SORTED_VARS.license=	*_LICENSES SKIP_*

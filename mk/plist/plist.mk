@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.50 2017/06/14 16:23:09 prlw1 Exp $
+# $NetBSD: plist.mk,v 1.51 2018/11/30 18:38:20 rillig Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -45,6 +45,8 @@ _VARGROUPS+=		plist
 _USER_VARS.plist=	# none
 _PKG_VARS.plist=	PLIST_SUBST PLIST_VARS PLIST_SRC GENERATE_PLIST
 _SYS_VARS.plist=	PLIST_TYPE PLIST
+_SORTED_VARS.plist=	*_SUBST *_VARS
+_LISTED_VARS.plist=	*_SRC GENERATE_PLIST
 
 PLIST_VARS?=		# empty
 PLIST_AWK?=		# empty

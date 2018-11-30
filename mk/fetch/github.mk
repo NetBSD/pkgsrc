@@ -1,4 +1,4 @@
-# $NetBSD: github.mk,v 1.11 2018/08/01 18:01:32 rillig Exp $
+# $NetBSD: github.mk,v 1.12 2018/11/30 18:38:20 rillig Exp $
 #
 # github.com master site handling
 #
@@ -76,3 +76,4 @@ _VARGROUPS+=		github
 _PKG_VARS.github=	GITHUB_PROJECT GITHUB_TAG GITHUB_TYPE
 _DEF_VARS.github=	_USE_GITHUB _GITHUB_DEFAULT_DISTFILES SITES.${_GITHUB_DEFAULT_DISTFILES}
 _USE_VARS.github=	PKGBASE PKGVERSION_NOREV
+_LISTED_VARS.github=	SITES.*
