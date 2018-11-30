@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4935 2018/11/30 15:05:20 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.4936 2018/11/30 15:07:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6899,3 +6899,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/erlang to 21.1.4 [nia 2018-11-30]
 	Updated textproc/itstool to 2.0.5 [wiz 2018-11-30]
 	Updated devel/waf to 2.0.12 [wiz 2018-11-30]
+	Updated audio/mpc to 0.31 [wiz 2018-11-30]
