@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4928 2018/11/30 10:37:25 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4929 2018/11/30 11:29:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6888,3 +6888,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-pathlib2 to 2.3.3 [adam 2018-11-29]
 	Updated devel/py-ipython to 7.2.0 [adam 2018-11-30]
 	Updated math/py-networkx to 2.2 [adam 2018-11-30]
+	Updated comms/py-colorama to 0.4.1 [adam 2018-11-30]
+	Updated www/py-httpie to 1.0.2 [adam 2018-11-30]
