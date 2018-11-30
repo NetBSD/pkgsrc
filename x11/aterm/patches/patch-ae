@@ -1,9 +1,6 @@
-$NetBSD: patch-ae,v 1.9 2018/11/30 17:25:05 nia Exp $
+$NetBSD: patch-ae,v 1.10 2018/11/30 17:30:24 nia Exp $
 
 - Use pseudo-terminal multiplexor on NetBSD.
-- Correctly set the terminal size on FreeBSD and NetBSD.
-(these parts apparently from upstream)
-
 - Use ctype.h functions correctly.
 
 --- src/command.c.orig	2006-06-26 18:01:20.000000000 +0000
