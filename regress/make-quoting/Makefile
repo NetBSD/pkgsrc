@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2008/03/04 11:02:25 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2018/11/30 19:06:32 rillig Exp $
 #
 
-DISTNAME=	regress-make-1.0
+DISTNAME=	regress-make-18.11
 CATEGORIES=	regress
 DISTFILES=	# empty
 
@@ -51,7 +51,7 @@ do-regress:
 	@${_PKG_SILENT}${_PKG_DEBUG}					\
 	${ECHO_MSG} "Running testcase "${t:Q};				\
 	${MAKE} ${MAKEFLAGS} -s -f ${FILESDIR:Q}/${t:Q}.mk		\
-	| diff - ${FILESDIR:Q}/${t:Q}.out
+	| diff -u ${FILESDIR:Q}/${t:Q}.out -
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
