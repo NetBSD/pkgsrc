@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4939 2018/11/30 15:47:04 nia Exp $
+$NetBSD: CHANGES-2018,v 1.4940 2018/11/30 16:00:52 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6903,3 +6903,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/meld to 3.19.1 [wiz 2018-11-30]
 	Updated fonts/harfbuzz to 2.1.3 [wiz 2018-11-30]
 	Added fonts/twemoji-color-font-ttf version 11.2.0 [nia 2018-11-30]
+	Updated geography/geos to 3.7.1 [gdt 2018-11-30]
