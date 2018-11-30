@@ -1,4 +1,4 @@
-# $NetBSD: test.mk,v 1.19 2018/01/13 12:48:56 joerg Exp $
+# $NetBSD: test.mk,v 1.20 2018/11/30 18:38:19 rillig Exp $
 #
 # After the "build" phase, many packages provide some sort of self-test
 # that can be run on the not-yet installed package. To enable these
@@ -41,6 +41,8 @@
 _VARGROUPS+=		test
 _USER_VARS.test=	PKGSRC_RUN_TEST
 _PKG_VARS.test=		TEST_DIRS TEST_ENV TEST_MAKE_FLAGS MAKE_FILE TEST_TARGET
+_SORTED_VARS.test=	*_ENV
+_LISTED_VARS.test=	*_DIRS *_FLAGS
 
 TEST_DIRS?=		${BUILD_DIRS}
 TEST_ENV+=		${MAKE_ENV}
