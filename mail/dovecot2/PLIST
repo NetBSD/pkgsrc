@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.62 2018/10/23 16:29:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.63 2018/11/30 18:43:09 adam Exp $
+@pkgdir etc/dovecot
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -780,6 +781,7 @@ share/doc/dovecot/wiki/Design.Lua.txt
 share/doc/dovecot/wiki/Design.MailProcess.txt
 share/doc/dovecot/wiki/Design.Memory.txt
 share/doc/dovecot/wiki/Design.OutputStreams.txt
+share/doc/dovecot/wiki/Design.ParameterForwarding.txt
 share/doc/dovecot/wiki/Design.Plugins.txt
 share/doc/dovecot/wiki/Design.Processes.txt
 share/doc/dovecot/wiki/Design.Storage.ErrorHandling.txt
@@ -1040,4 +1042,3 @@ share/examples/dovecot/dovecot-openssl.cnf
 share/examples/dovecot/dovecot-sql.conf.ext
 share/examples/dovecot/dovecot.conf
 share/examples/dovecot/mkcert.sh
-@pkgdir etc/dovecot
