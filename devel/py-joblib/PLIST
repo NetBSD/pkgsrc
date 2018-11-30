@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/08/14 17:39:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/11/30 12:20:44 adam Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/joblib/__init__.py
 ${PYSITELIB}/joblib/__init__.pyc
@@ -114,6 +114,9 @@ ${PYSITELIB}/joblib/externals/loky/backend/synchronize.pyo
 ${PYSITELIB}/joblib/externals/loky/backend/utils.py
 ${PYSITELIB}/joblib/externals/loky/backend/utils.pyc
 ${PYSITELIB}/joblib/externals/loky/backend/utils.pyo
+${PYSITELIB}/joblib/externals/loky/cloudpickle_wrapper.py
+${PYSITELIB}/joblib/externals/loky/cloudpickle_wrapper.pyc
+${PYSITELIB}/joblib/externals/loky/cloudpickle_wrapper.pyo
 ${PYSITELIB}/joblib/externals/loky/process_executor.py
 ${PYSITELIB}/joblib/externals/loky/process_executor.pyc
 ${PYSITELIB}/joblib/externals/loky/process_executor.pyo
@@ -263,6 +266,9 @@ ${PYSITELIB}/joblib/test/test_memmapping.pyo
 ${PYSITELIB}/joblib/test/test_memory.py
 ${PYSITELIB}/joblib/test/test_memory.pyc
 ${PYSITELIB}/joblib/test/test_memory.pyo
+${PYSITELIB}/joblib/test/test_module.py
+${PYSITELIB}/joblib/test/test_module.pyc
+${PYSITELIB}/joblib/test/test_module.pyo
 ${PYSITELIB}/joblib/test/test_my_exceptions.py
 ${PYSITELIB}/joblib/test/test_my_exceptions.pyc
 ${PYSITELIB}/joblib/test/test_my_exceptions.pyo
@@ -278,6 +284,9 @@ ${PYSITELIB}/joblib/test/test_numpy_pickle_utils.pyo
 ${PYSITELIB}/joblib/test/test_parallel.py
 ${PYSITELIB}/joblib/test/test_parallel.pyc
 ${PYSITELIB}/joblib/test/test_parallel.pyo
+${PYSITELIB}/joblib/test/test_store_backends.py
+${PYSITELIB}/joblib/test/test_store_backends.pyc
+${PYSITELIB}/joblib/test/test_store_backends.pyo
 ${PYSITELIB}/joblib/test/test_testing.py
 ${PYSITELIB}/joblib/test/test_testing.pyc
 ${PYSITELIB}/joblib/test/test_testing.pyo
