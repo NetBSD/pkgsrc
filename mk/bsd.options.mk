@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.73 2016/12/01 15:28:57 wiz Exp $
+# $NetBSD: bsd.options.mk,v 1.74 2018/11/30 18:38:19 rillig Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -164,6 +164,7 @@ _PKG_VARS.options=	PKG_SUPPORTED_OPTIONS PKG_OPTIONS_VAR		\
 	PKG_LEGACY_OPTIONS PKG_OPTIONS_DEPRECATED_WARNINGS
 _PKG_VARS.options+=	PKG_DISABLED_OPTIONS
 _SYS_VARS.options=	PKG_OPTIONS
+_LISTED_VARS.options=	*S *S.*
 
 .include "bsd.prefs.mk"
 

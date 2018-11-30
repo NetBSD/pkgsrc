@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.24 2018/06/24 21:19:10 wiz Exp $
+# $NetBSD: modules.mk,v 1.25 2018/11/30 18:38:19 rillig Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -214,6 +214,9 @@ _SYS_VARS.emacs=	EMACS_BIN EMACS_ETCPREFIX EMACS_FLAVOR \
 			EMACS_VERSION_MAJOR EMACS_VERSION_MINOR \
 			EMACS_VERSION_MICRO
 _DEF_VARS.emacs=	_EMACS_TYPE _EMACS_PKGBASE
+_SORTED_VARS.emacs=	*_MODULES
+_LISTED_VARS.emacs=	*VERSIONS*
+
 BUILD_DEFS+=		${_USER_VARS.emacs}
 BUILD_DEFS_EFFECTS+=	${_SYS_VARS.emacs}
 
