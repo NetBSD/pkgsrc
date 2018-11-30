@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.18 2018/11/30 17:25:05 nia Exp $
+$NetBSD: distinfo,v 1.19 2018/11/30 17:30:24 nia Exp $
 
 SHA1 (aterm-1.0.1.tar.bz2) = a975753b415306a0734efc3773de8a86129bb54b
 RMD160 (aterm-1.0.1.tar.bz2) = 74c46af824c19d0c24c26178f0cb38c2d4e66e21
 SHA512 (aterm-1.0.1.tar.bz2) = 05c78590bba55d892d9f7add384e4ae8d56197dbcd9caff2be4a52d5c162e767a464359ba806fc95961d8035575a2b4a962fc35cfa44f95025b477fa3e15e56b
 Size (aterm-1.0.1.tar.bz2) = 276810 bytes
-SHA1 (patch-aa) = 6cd2d1144d79b000fb21efe239efedd6b9a0f05b
+SHA1 (patch-aa) = a8ef932bf0dd997915158d5015ce08ede0ce4cd3
 SHA1 (patch-ac) = 0e28da19c8f146ff14984add086e03a38db561ef
 SHA1 (patch-ad) = 0a23eb40ccf1ecb181c167e9c156a99924a288b3
-SHA1 (patch-ae) = 71f79a38bde196410b80dc50d67c343604e206fa
+SHA1 (patch-ae) = b1cab6c56d0567c1f29c60cf66f20cbc9a56b5cd
 SHA1 (patch-src_misc.c) = af6b8c7ccde2dba8bbcdcd91f7e6e37c3d1c5301
 SHA1 (patch-src_pixmap.c) = 6288ba39bb7c7d80df7a48ff9df53cebee29a84c
 SHA1 (patch-src_xdefaults.c) = dec764692c359503d6bd091dbfd2c44bdf220cf8
