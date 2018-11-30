@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18633 2018/11/30 15:27:00 wiz Exp $
+$NetBSD: TODO,v 1.18634 2018/11/30 17:25:21 nia Exp $
 
 Suggested new packages
 ======================
@@ -415,7 +415,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o asn1c-0.9.27
 	o aspell-nb-2.0.10
 	o asterisk13-13.21.1
-	o aterm-1.0.1
 	o attica-qt5-5.45.0
 	o aubio-0.4.2
 	o audacious-3.7.1
