@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2018/11/14 22:22:38 kleink Exp $
+# $NetBSD: Makefile,v 1.56 2018/11/30 17:25:05 nia Exp $
 #
 
-DISTNAME=	aterm-1.0.0
-PKGREVISION=	19
+DISTNAME=	aterm-1.0.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aterm/}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,6 +11,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.afterstep.org/aterm.php
 COMMENT=	Aterm (Afterstep XVT) - a VT102 emulator for the X window system
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	YES
 MAKE_JOBS_SAFE=	no

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2016/05/01 19:35:09 dholland Exp $
+# $NetBSD: options.mk,v 1.4 2018/11/30 17:25:05 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.aterm
 PKG_SUPPORTED_OPTIONS=	aterm-big5 aterm-greek aterm-kanji aterm-xterm-scroll \
@@ -7,7 +7,9 @@ PKG_SUPPORTED_OPTIONS=	aterm-big5 aterm-greek aterm-kanji aterm-xterm-scroll \
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mafterstep)
+.include "../../graphics/tiff/buildlink3.mk"
 .include "../../wm/afterstep/buildlink3.mk"
+LDFLAGS.NetBSD+=-lexecinfo
 .else
 CONFIGURE_ARGS+=--without-afterimage_config --without-afterstep_config
 .endif
