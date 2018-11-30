@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.6 2016/05/01 19:56:40 dholland Exp $
+$NetBSD: patch-aa,v 1.7 2018/11/30 17:25:05 nia Exp $
 
 - Use ctype.h functions properly.
 - Silence debug prints.
 - Don't assume :0 if DISPLAY isn't set.
 
---- src/main.c.orig	2005-06-20 16:10:19.000000000 +0000
+--- src/main.c.orig	2007-08-01 14:08:29.000000000 +0000
 +++ src/main.c
 @@ -196,7 +196,7 @@ xerror_handler (Display * dpy, XErrorEve
  void
@@ -15,20 +15,7 @@ $NetBSD: patch-aa,v 1.6 2016/05/01 19:56:40 dholland Exp $
  	int             i = atoi(rs_color[idx]);
  
  	if (i >= 8 && i <= 15) {	/* bright colors */
-@@ -1037,12 +1037,10 @@ resize_window(XEvent* ev)
- 	XConfigureEvent *xconf = &(ev->xconfigure);
- 	
- 	while( XCheckTypedWindowEvent( Xdisplay, TermWin.parent, ConfigureNotify, ev ) );
--	fprintf( stderr, "config_geom = %dx%d\n", xconf->width, xconf->height );
-     resize_window1(xconf->width, xconf->height);
- #if 1
- 	XTranslateCoordinates (Xdisplay, TermWin.parent, Xroot, 0, 0, &root_x, &root_y, &wdumm);
- 
--	fprintf( stderr, "root_geom = %dx%d%+d%+d, root_size = %dx%d\n", xconf->width, xconf->height, root_x, root_y, XdisplayWidth, XdisplayHeight ); 
- 	TermWin.root_x = root_x ; 
- 	TermWin.root_y = root_y ; 
- 	TermWin.root_width = xconf->width ; 
-@@ -1215,7 +1213,7 @@ set_window_color(int idx, const char *co
+@@ -1218,7 +1218,7 @@ set_window_color(int idx, const char *co
  	return;
  
  /* handle color aliases */
@@ -37,7 +24,7 @@ $NetBSD: patch-aa,v 1.6 2016/05/01 19:56:40 dholland Exp $
  	i = atoi(color);
  	if (i >= 8 && i <= 15) {	/* bright colors */
  	    i -= 8;
-@@ -1432,7 +1430,7 @@ change_font(int init, const char *fontna
+@@ -1435,7 +1435,7 @@ change_font(int init, const char *fontna
  		break;
  
  	    default:
@@ -46,7 +33,7 @@ $NetBSD: patch-aa,v 1.6 2016/05/01 19:56:40 dholland Exp $
  		    return;
  		if (idx < 0 || idx >= (NFONTS))
  		    return;
-@@ -2047,9 +2045,14 @@ main(int argc, char *argv[])
+@@ -2057,9 +2057,14 @@ main(int argc, char *argv[])
   */
      get_options(argc, argv);
  
