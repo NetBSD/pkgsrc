@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4930 2018/11/30 12:23:53 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4931 2018/11/30 12:57:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6892,3 +6892,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-httpie to 1.0.2 [adam 2018-11-30]
 	Updated devel/py-joblib to 0.13.0 [adam 2018-11-30]
 	Updated www/py-bottle to 0.12.14 [adam 2018-11-30]
+	Updated net/powerdns to 4.1.5 [adam 2018-11-30]
+	Updated net/powerdns-recursor to 4.1.8 [adam 2018-11-30]
