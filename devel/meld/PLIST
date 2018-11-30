@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.30 2018/04/16 13:15:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.31 2018/11/30 15:20:08 wiz Exp $
 bin/meld
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/meld/__init__.py
 ${PYSITELIB}/meld/__init__.pyc
 ${PYSITELIB}/meld/__init__.pyo
+${PYSITELIB}/meld/actiongutter.py
+${PYSITELIB}/meld/actiongutter.pyc
+${PYSITELIB}/meld/actiongutter.pyo
 ${PYSITELIB}/meld/build_helpers.py
 ${PYSITELIB}/meld/build_helpers.pyc
 ${PYSITELIB}/meld/build_helpers.pyo
@@ -187,7 +190,7 @@ ${PYSITELIB}/meld/windowstate.py
 ${PYSITELIB}/meld/windowstate.pyc
 ${PYSITELIB}/meld/windowstate.pyo
 man/man1/meld.1
-share/applications/meld.desktop
+share/applications/org.gnome.meld.desktop
 share/doc/${PKGNAME}/COPYING
 share/doc/${PKGNAME}/NEWS
 share/glib-2.0/schemas/org.gnome.meld.gschema.xml
@@ -207,18 +210,18 @@ share/help/C/meld/resolving-conflicts.page
 share/help/C/meld/text-filters.page
 share/help/C/meld/vc-mode.page
 share/help/C/meld/vc-supported.page
-share/icons/HighContrast/scalable/apps/meld.svg
+share/icons/HighContrast/scalable/apps/org.gnome.meld.svg
 share/icons/hicolor/16x16/actions/meld-change-apply-left.png
 share/icons/hicolor/16x16/actions/meld-change-apply-right.png
 share/icons/hicolor/16x16/actions/meld-change-copy.png
 share/icons/hicolor/16x16/actions/meld-change-delete.png
 share/icons/hicolor/16x16/apps/meld-version-control.png
-share/icons/hicolor/16x16/apps/meld.png
-share/icons/hicolor/22x22/apps/meld.png
-share/icons/hicolor/32x32/apps/meld.png
+share/icons/hicolor/16x16/apps/org.gnome.meld.png
+share/icons/hicolor/22x22/apps/org.gnome.meld.png
+share/icons/hicolor/32x32/apps/org.gnome.meld.png
 share/icons/hicolor/48x48/apps/meld-version-control.png
-share/icons/hicolor/48x48/apps/meld.png
-share/icons/hicolor/scalable/apps/meld.svg
+share/icons/hicolor/48x48/apps/org.gnome.meld.png
+share/icons/hicolor/scalable/apps/org.gnome.meld.svg
 share/locale/ar/LC_MESSAGES/meld.mo
 share/locale/bg/LC_MESSAGES/meld.mo
 share/locale/bs/LC_MESSAGES/meld.mo
@@ -300,5 +303,5 @@ share/meld/ui/shortcuts.ui
 share/meld/ui/tab-placeholder.ui
 share/meld/ui/vcview-ui.xml
 share/meld/ui/vcview.ui
-share/metainfo/meld.appdata.xml
-share/mime/packages/meld.xml
+share/metainfo/org.gnome.meld.appdata.xml
+share/mime/packages/org.gnome.meld.xml
