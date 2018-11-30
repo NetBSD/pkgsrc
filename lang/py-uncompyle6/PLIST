@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/09/20 13:48:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/11/30 13:09:29 adam Exp $
 bin/pydisassemble-${PYVERSSUFFIX}
 bin/uncompyle6-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -35,9 +35,6 @@ ${PYSITELIB}/uncompyle6/parser.pyo
 ${PYSITELIB}/uncompyle6/parsers/__init__.py
 ${PYSITELIB}/uncompyle6/parsers/__init__.pyc
 ${PYSITELIB}/uncompyle6/parsers/__init__.pyo
-${PYSITELIB}/uncompyle6/parsers/astnode.py
-${PYSITELIB}/uncompyle6/parsers/astnode.pyc
-${PYSITELIB}/uncompyle6/parsers/astnode.pyo
 ${PYSITELIB}/uncompyle6/parsers/parse13.py
 ${PYSITELIB}/uncompyle6/parsers/parse13.pyc
 ${PYSITELIB}/uncompyle6/parsers/parse13.pyo
@@ -98,6 +95,9 @@ ${PYSITELIB}/uncompyle6/parsers/parse36.pyo
 ${PYSITELIB}/uncompyle6/parsers/parse37.py
 ${PYSITELIB}/uncompyle6/parsers/parse37.pyc
 ${PYSITELIB}/uncompyle6/parsers/parse37.pyo
+${PYSITELIB}/uncompyle6/parsers/treenode.py
+${PYSITELIB}/uncompyle6/parsers/treenode.pyc
+${PYSITELIB}/uncompyle6/parsers/treenode.pyo
 ${PYSITELIB}/uncompyle6/scanner.py
 ${PYSITELIB}/uncompyle6/scanner.pyc
 ${PYSITELIB}/uncompyle6/scanner.pyo
