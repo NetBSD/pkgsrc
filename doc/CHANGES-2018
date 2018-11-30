@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4942 2018/11/30 17:25:21 nia Exp $
+$NetBSD: CHANGES-2018,v 1.4943 2018/11/30 18:44:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6906,3 +6906,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated geography/geos to 3.7.1 [gdt 2018-11-30]
 	Added graphics/papirus-folders version 1.0.0 [nia 2018-11-30]
 	Updated x11/aterm to 1.0.1 [nia 2018-11-30]
+	Updated mail/dovecot2 to 2.3.4 [adam 2018-11-30]
+	Updated mail/dovecot2-pigeonhole to 0.5.4 [adam 2018-11-30]
