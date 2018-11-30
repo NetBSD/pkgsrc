@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkgtasks.mk,v 1.8 2017/08/23 17:53:32 jlam Exp $
+# $NetBSD: bsd.pkgtasks.mk,v 1.9 2018/11/30 18:38:20 rillig Exp $
 #
 # Copyright (c) 2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -26,8 +26,6 @@
 # CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
-
-_VARGROUPS+=	pkgtasks
 
 # PKG_CONFIG
 #	User-settable variable for whether the directory- and
@@ -84,7 +82,12 @@ _VARGROUPS+=	pkgtasks
 #	Possible: yes, no (case-insensitive)
 #	Default: yes
 #
-_USER_VARS.pkgtasks+=	PKG_CONFIG PKG_CONFIG_PERMS PKG_INIT_SCRIPTS
+
+_VARGROUPS+=		pkgtasks
+_USER_VARS.pkgtasks=	PKG_CONFIG PKG_CONFIG_PERMS PKG_INIT_SCRIPTS
+_USE_VARS.pkgtasks=	FILES_SUBST
+_SORTED_VARS.pkgtasks=	FILES_SUBST
+
 PKG_CONFIG?=		yes
 PKG_CONFIG_PERMS?=	no
 PKG_CREATE_USERGROUP?=	yes

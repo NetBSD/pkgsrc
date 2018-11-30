@@ -1,4 +1,4 @@
-# $NetBSD: go-package.mk,v 1.20 2018/10/26 13:49:23 leot Exp $
+# $NetBSD: go-package.mk,v 1.21 2018/11/30 18:38:19 rillig Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 #
@@ -92,3 +92,15 @@ do-install:
 	${RUN} cd ${WRKDIR}; [ ! -d bin ] || ${PAX} -rw bin ${DESTDIR}${PREFIX}
 	${RUN} cd ${WRKDIR}; [ ! -d pkg ] || ${PAX} -rw src pkg ${DESTDIR}${PREFIX}/gopkg
 .endif
+
+_VARGROUPS+=		go
+_PKG_VARS.go=		GO_SRCPATH GO_DIST_BASE GO_BUILD_PATTERN
+_USER_VARS.go=		GO_VERSION_DEFAULT
+_SYS_VARS.go=		GO GO_VERSION GOVERSSUFFIX GOARCH GOCHAR \
+			GOOPT GOTOOLDIR GO_PLATFORM
+_DEF_VARS.go=		GO14_VERSION GO19_VERSION GO110_VERSION \
+			GO111_VERSION INSTALLATION_DIRS MAKE_JOBS_SAFE \
+			NOT_FOR_PLATFORM ONLY_FOR_PLATFORM SSP_SUPPORTED \
+			WRKSRC
+_USE_VARS.go=		GO_PACKAGE_DEP
+_SORTED_VARS.go=	INSTALLATION_DIRS *_FOR_PLATFORM
