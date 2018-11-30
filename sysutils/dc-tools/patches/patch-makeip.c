@@ -1,3 +1,5 @@
+$NetBSD: patch-makeip.c,v 1.2 2018/11/30 19:27:25 maya Exp $
+
 --- makeip.c.orig	2000-09-05 11:56:58.000000000 -0700
 +++ makeip.c	2018-11-30 08:24:17.000000000 -0800
 @@ -74,7 +74,7 @@ int parse_input(FILE *fh, char *ip)
@@ -32,12 +34,3 @@
        return 0;
      }
        
-@@ -183,7 +184,7 @@ int main(int argc, char *argv[])
- 
-   ip_tmpl = getenv("IP_TEMPLATE_FILE");
-   if(ip_tmpl == NULL)
--    ip_tmpl = "IP.TMPL";
-+    ip_tmpl = "/usr/local/pkg/share/dc-tools/IP.TMPL";
- 
-   makeip(ip_tmpl, argv[1], argv[2]);
- 

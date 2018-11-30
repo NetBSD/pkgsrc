@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2018/11/30 16:33:37 thorpej Exp $
+$NetBSD: distinfo,v 1.10 2018/11/30 19:27:24 maya Exp $
 
 SHA1 (dc-tools/1.6.tar.gz) = eed5be42a30bc7221c5308db5b46b8996775fdef
 RMD160 (dc-tools/1.6.tar.gz) = ca538169072c8124276dd460e0b55d31d6170850
@@ -20,5 +20,5 @@ SHA1 (dc-tools/serial_slave.tar.gz) = 56e77360d5f6dd0336a11fe9f117655afe9a8792
 RMD160 (dc-tools/serial_slave.tar.gz) = a5e06803ccb5bee7f6d76fa0619e90473358ae2a
 SHA512 (dc-tools/serial_slave.tar.gz) = d717297a1a70fabf2b613d89c31c3ff3da642be2b4cd1507378bedea0f1cfe4505a71a25540797ed1f2b14ab934ce12ba3ab1ff1db7b79c1fef7d7b7dd68373f
 Size (dc-tools/serial_slave.tar.gz) = 9524 bytes
-SHA1 (patch-makeip.c) = 5466b370f663349cb40bd19eacac62b88d461f08
-SHA1 (patch-scramble.c) = f6c22806523a1b75f8558d86c76110b749830867
+SHA1 (patch-makeip.c) = e058c4ad064bb98f87514d35f4cb202d63db06d2
+SHA1 (patch-scramble.c) = 1b3568a7f78962ed9ffeab10d0f3ffa526d62c21
