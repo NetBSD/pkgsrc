@@ -1,7 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2018/11/30 17:25:05 nia Exp $
+$NetBSD: patch-aa,v 1.8 2018/11/30 17:30:24 nia Exp $
 
 - Use ctype.h functions properly.
-- Silence debug prints.
 - Don't assume :0 if DISPLAY isn't set.
 
 --- src/main.c.orig	2007-08-01 14:08:29.000000000 +0000
