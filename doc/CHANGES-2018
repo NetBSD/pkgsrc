@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4943 2018/11/30 18:44:36 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4944 2018/11/30 19:07:47 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6908,3 +6908,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/aterm to 1.0.1 [nia 2018-11-30]
 	Updated mail/dovecot2 to 2.3.4 [adam 2018-11-30]
 	Updated mail/dovecot2-pigeonhole to 0.5.4 [adam 2018-11-30]
+	Updated pkgtools/pkg_regress to 0.4 [rillig 2018-11-30]
