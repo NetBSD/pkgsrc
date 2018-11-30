@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.809 2018/11/29 05:29:55 jnemeth Exp $
+# $NetBSD: Makefile,v 1.810 2018/11/30 16:42:33 nia Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -410,6 +410,7 @@ SUBDIR+=	p5-cairo-gobject
 SUBDIR+=	p5-clutter
 SUBDIR+=	panomatic
 SUBDIR+=	paper-icon-theme
+SUBDIR+=	papirus-folders
 SUBDIR+=	papirus-icon-theme
 SUBDIR+=	pdiff
 SUBDIR+=	pear-Image_Canvas
