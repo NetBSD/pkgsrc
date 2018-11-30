@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/09/20 13:48:55 adam Exp $
+# $NetBSD: Makefile,v 1.2 2018/11/30 13:09:29 adam Exp $
 
-DISTNAME=	uncompyle6-3.2.3
+DISTNAME=	uncompyle6-3.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uncompyle6/}
