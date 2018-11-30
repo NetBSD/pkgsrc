@@ -1,1 +1,1 @@
-bin/bottle.py @PREFIX@/bin/bottle@PYVERSSUFFIX@.py
+bin/bottle.py @PREFIX@/bin/bottle-@PYVERSSUFFIX@.py
