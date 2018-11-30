@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4933 2018/11/30 13:47:14 nia Exp $
+$NetBSD: CHANGES-2018,v 1.4934 2018/11/30 15:04:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6897,3 +6897,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/py-uncompyle6 to 3.2.4 [adam 2018-11-30]
 	Updated devel/py-macholib to 1.11 [adam 2018-11-30]
 	Updated lang/erlang to 21.1.4 [nia 2018-11-30]
+	Updated textproc/itstool to 2.0.5 [wiz 2018-11-30]
