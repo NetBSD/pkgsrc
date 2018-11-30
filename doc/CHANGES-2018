@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4931 2018/11/30 12:57:58 adam Exp $
+$NetBSD: CHANGES-2018,v 1.4932 2018/11/30 13:10:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6894,3 +6894,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-bottle to 0.12.14 [adam 2018-11-30]
 	Updated net/powerdns to 4.1.5 [adam 2018-11-30]
 	Updated net/powerdns-recursor to 4.1.8 [adam 2018-11-30]
+	Updated lang/py-uncompyle6 to 3.2.4 [adam 2018-11-30]
+	Updated devel/py-macholib to 1.11 [adam 2018-11-30]
