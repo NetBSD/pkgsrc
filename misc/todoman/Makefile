@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2018/05/26 22:13:08 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2018/12/01 14:31:10 wiz Exp $
 
-DISTNAME=	todoman-3.4.0
+DISTNAME=	todoman-3.5.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/todoman/}
 
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-click-log-[0-9]*:../../devel/py-click-log
 DEPENDS+=	${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-humanize-[0-9]*:../../textproc/py-humanize
-DEPENDS+=	${PYPKGPREFIX}-icalendar-[0-9]*:../../time/py-icalendar
+DEPENDS+=	${PYPKGPREFIX}-icalendar>=4.0.3:../../time/py-icalendar
 DEPENDS+=	${PYPKGPREFIX}-parsedatetime-[0-9]*:../../time/py-parsedatetime
 DEPENDS+=	${PYPKGPREFIX}-tabulate-[0-9]*:../../textproc/py-tabulate
 DEPENDS+=	${PYPKGPREFIX}-urwid-[0-9]*:../../devel/py-urwid
