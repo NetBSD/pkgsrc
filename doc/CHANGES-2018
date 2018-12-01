@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4952 2018/12/01 03:01:13 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4953 2018/12/01 03:04:51 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6917,3 +6917,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-FFI-CheckLib to 0.23 [wen 2018-12-01]
 	Updated devel/p5-File-NFSLock to 1.29 [wen 2018-12-01]
 	Updated devel/p5-File-Slurp to 9999.25 [wen 2018-12-01]
+	Updated devel/p5-Future to 0.39 [wen 2018-12-01]
