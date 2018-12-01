@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 03:28:26 agc Exp $
+$NetBSD: distinfo,v 1.3 2018/12/01 13:23:51 nia Exp $
 
-SHA1 (compton-20150920-d7f95b56b176281bfb252c54defef48c9cd1f4e1.tar.gz) = 97c32266e60eff1db2e9a59c7077e0f56b11ee38
-RMD160 (compton-20150920-d7f95b56b176281bfb252c54defef48c9cd1f4e1.tar.gz) = 7fe9bc15bdecf08a91e2ef0fe4e139731ec0047b
-SHA512 (compton-20150920-d7f95b56b176281bfb252c54defef48c9cd1f4e1.tar.gz) = 302635b2a88c72497344f95a67227cb5ebec2149f891eb425eb215c63cd9ac7e70df72bdd48f80238b0a9c236489e093d4a8572a6517fe3931a480ee17659240
-Size (compton-20150920-d7f95b56b176281bfb252c54defef48c9cd1f4e1.tar.gz) = 163180 bytes
+SHA1 (compton-4.0.tar.gz) = f94eb9f964f2cc7c547a153c1f7e435bbaa32c8d
+RMD160 (compton-4.0.tar.gz) = f283e11f9d33b79d3c57c7d52e9013d0539b2e01
+SHA512 (compton-4.0.tar.gz) = ba585df25792519b8093a5a91d62ca2d3b02dd9df41d787dc4007cee5c8aef7cd0a3c267b58d21026c97b7859f7c5376384dffb7da728a99ccc4122a2ae43679
+Size (compton-4.0.tar.gz) = 171662 bytes
+SHA1 (patch-Makefile) = 240dcfc712d9697399a747f4c668a6c86fec317d
