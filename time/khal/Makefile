@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2018/05/27 12:35:32 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2018/12/01 16:42:08 wiz Exp $
 
-DISTNAME=		khal-0.9.9
+DISTNAME=		khal-0.9.10
 CATEGORIES=		time net
 MASTER_SITES=		${MASTER_SITE_PYPI:=k/khal/}
 
@@ -28,6 +28,7 @@ DEPENDS+=		${PYPKGPREFIX}-setproctitle-[0-9]*:../../sysutils/py-setproctitle
 USE_TOOLS+=		gmake
 BUILD_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 BUILD_DEPENDS+=		${PYPKGPREFIX}-sphinxcontrib-newsfeed-[0-9]*:../../textproc/py-sphinxcontrib-newsfeed
+# 0.9.10: one test failure https://github.com/pimutils/khal/issues/825
 # TEST_DEPENDS
 BUILD_DEPENDS+=		${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
 BUILD_DEPENDS+=		${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
