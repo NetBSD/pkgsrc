@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4945 2018/12/01 01:58:06 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4946 2018/12/01 02:31:20 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6910,3 +6910,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/dovecot2-pigeonhole to 0.5.4 [adam 2018-11-30]
 	Updated pkgtools/pkg_regress to 0.4 [rillig 2018-11-30]
 	Updated devel/p5-Config-File to 1.51 [wen 2018-12-01]
+	Updated devel/p5-CPAN-FindDependencies to 2.48 [wen 2018-12-01]
