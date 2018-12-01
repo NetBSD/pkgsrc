@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2018/10/31 12:13:49 wen Exp $
+$NetBSD: distinfo,v 1.9 2018/12/01 02:40:17 wen Exp $
 
-SHA1 (Data-Dumper-2.172.tar.gz) = 33a943c61dc1d4954c756581832b2a820b77fb04
-RMD160 (Data-Dumper-2.172.tar.gz) = 65bf72cfe6e50fe9dcc7aa98604b76cd778ea691
-SHA512 (Data-Dumper-2.172.tar.gz) = a29664de1a33f330acbbe11cecd3dfba455ad2f3fca26775fd75a1c2e506633e2e841149a385affc35feba8029dddeb00a38d762872304a429017bac758077ec
-Size (Data-Dumper-2.172.tar.gz) = 110199 bytes
+SHA1 (Data-Dumper-2.173.tar.gz) = 91ca53fd5499b913996009e763d73ebeb51be8c3
+RMD160 (Data-Dumper-2.173.tar.gz) = 3b94eaabf6e95d5b0e706f06b729d916c7e293ef
+SHA512 (Data-Dumper-2.173.tar.gz) = a8d45fdce075bfe8752d423d535cc5279c012c733b0219884204119c9365e93c971858331e74c20df7beaa9b24ad54e1bf9eeb8d8bff53cf21fb88889d7602c2
+Size (Data-Dumper-2.173.tar.gz) = 110256 bytes
