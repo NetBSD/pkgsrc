@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4974 2018/12/01 16:37:05 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.4975 2018/12/01 16:42:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6939,3 +6939,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/syncdir to 1.0nb2 [schmonz 2018-12-01]
 	Updated x11/libxcb to 1.13.1 [wiz 2018-12-01]
 	Updated textproc/xerces-c to 3.2.2 [wiz 2018-12-01]
+	Updated time/khal to 0.9.10 [wiz 2018-12-01]
