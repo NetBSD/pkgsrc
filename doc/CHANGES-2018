@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4976 2018/12/01 16:44:15 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.4977 2018/12/01 17:07:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6941,3 +6941,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/xerces-c to 3.2.2 [wiz 2018-12-01]
 	Updated time/khal to 0.9.10 [wiz 2018-12-01]
 	Updated print/latexmk to 461 [wiz 2018-12-01]
+	Updated finance/gnucash to 3.3nb6 [wiz 2018-12-01]
