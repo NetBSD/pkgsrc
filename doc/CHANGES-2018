@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4954 2018/12/01 04:58:46 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.4955 2018/12/01 05:55:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6919,3 +6919,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-File-Slurp to 9999.25 [wen 2018-12-01]
 	Updated devel/p5-Future to 0.39 [wen 2018-12-01]
 	Updated devel/automake to 1.16.1 [wiz 2018-12-01]
+	Updated misc/goffice0.10 to 0.10.44 [wiz 2018-12-01]
