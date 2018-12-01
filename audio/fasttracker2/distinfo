@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2018/12/01 18:20:09 fox Exp $
+
+SHA1 (ft2clone-b120-code.zip) = 6988d96b52de4673252d8154770cae399b4eef33
+RMD160 (ft2clone-b120-code.zip) = 77b7f5976b19b053efdbd1406d9e8a20e3daa81d
+SHA512 (ft2clone-b120-code.zip) = 70b4f1439efe05394aa4c78ea8b69fa5d7ac21317382f203d0bb3835e1219bfbbeaa2372d1ebcc9c21d38585814745d46bc061e016eedc650bbc684f7d0fa668
+Size (ft2clone-b120-code.zip) = 3468698 bytes
+SHA1 (patch-src_ft2__diskop.c) = 51807a606e4dc0b5aac3e35f0e5917904442a883
+SHA1 (patch-src_ft2__unicode.c) = 173ffddcb464834d67f85d759e2dbf01004f5f81
