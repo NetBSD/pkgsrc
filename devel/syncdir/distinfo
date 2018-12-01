@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2018/12/01 14:58:49 schmonz Exp $
+$NetBSD: distinfo,v 1.8 2018/12/01 23:36:15 schmonz Exp $
 
-SHA1 (syncdir-1.0-libtoolize-20181112-dlsym-20181112.patch) = bfcaeaee0080d4b27983b800efc4370f186b8b37
-RMD160 (syncdir-1.0-libtoolize-20181112-dlsym-20181112.patch) = 194c7061b0a0eb97a69c5aed049b4f5c833cbf50
-SHA512 (syncdir-1.0-libtoolize-20181112-dlsym-20181112.patch) = 47e0de97c0256b5c8deda0d84bc1df874873819e31a90b41bee4dc1160e48d9a1dfe7d51fbff98458d68655624a621d7215b99b15cc7ec0de6faef1e936af2a3
-Size (syncdir-1.0-libtoolize-20181112-dlsym-20181112.patch) = 5776 bytes
+SHA1 (syncdir-1.0-libtoolize-20181112-dlsym-20181201.patch) = 5c8fbc1387bb4b8a3ed7b4320ae6f5acfe7fb48f
+RMD160 (syncdir-1.0-libtoolize-20181112-dlsym-20181201.patch) = 973e84743789a7219d397c30cb3986d9ea1915ba
+SHA512 (syncdir-1.0-libtoolize-20181112-dlsym-20181201.patch) = 385c04f65cccff24cbba57d3faf26de8386725fd5b8c53beaf85c7cf817f7cee1defe80696d22fd9d0f4b8f0644dd15a0594b40345f7a9a514fd484fa8ad0289
+Size (syncdir-1.0-libtoolize-20181112-dlsym-20181201.patch) = 5802 bytes
 SHA1 (syncdir-1.0-libtoolize-20181112.patch) = 811fd4ccb69b3b255485c1667c95b30a12e96e17
 RMD160 (syncdir-1.0-libtoolize-20181112.patch) = 50ced2ee85ac81f55e90f95e8fafeb8fb5518204
 SHA512 (syncdir-1.0-libtoolize-20181112.patch) = 67881906547d4928e939e5b35ecb8a26b07affd4946522473639aa7c346279bfbb27680a7c500ad3030cd4f5fb840e1c452f9e825f9bd5ee4f8e85ced335b408
