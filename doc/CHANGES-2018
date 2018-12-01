@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4961 2018/12/01 09:58:58 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.4962 2018/12/01 10:15:47 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6926,3 +6926,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Git-Repository to 1.323 [wen 2018-12-01]
 	Updated devel/p5-glib2 to 1.328 [wen 2018-12-01]
 	Updated www/php-nextcloud to 14.0.4 [ryoon 2018-12-01]
+	Updated www/liferea to 1.12.5a [leot 2018-12-01]
