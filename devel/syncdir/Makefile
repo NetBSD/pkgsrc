@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/12/01 14:58:49 schmonz Exp $
+# $NetBSD: Makefile,v 1.14 2018/12/01 23:36:15 schmonz Exp $
 #
 
 DISTNAME=		syncdir-1.0
@@ -17,7 +17,7 @@ LIBTOOL_PATCH=		syncdir-1.0-libtoolize-20181112.patch
 PATCHFILES+=		${LIBTOOL_PATCH}
 SITES.${LIBTOOL_PATCH}=	https://schmonz.com/qmail/syncdirlibtool/
 
-DLSYM_PATCH=		syncdir-1.0-libtoolize-20181112-dlsym-20181112.patch
+DLSYM_PATCH=		syncdir-1.0-libtoolize-20181112-dlsym-20181201.patch
 PATCHFILES+=		${DLSYM_PATCH}
 SITES.${DLSYM_PATCH}=	https://schmonz.com/qmail/syncdirdlsym/
 
