@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4983 2018/12/01 20:18:29 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.4984 2018/12/01 20:23:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6948,3 +6948,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/syncthing to 0.14.52 [wiz 2018-12-01]
 	Added audio/fasttracker2 version b120 [fox 2018-12-01]
 	Updated devel/libgit2 to 0.27.7 [wiz 2018-12-01]
+	Updated devel/py-pygit2 to 0.27.2 [wiz 2018-12-01]
