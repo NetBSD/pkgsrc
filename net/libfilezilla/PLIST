@@ -1,13 +1,15 @@
-@comment $NetBSD: PLIST,v 1.5 2017/10/02 15:22:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/12/01 11:15:42 wiz Exp $
 include/libfilezilla/apply.hpp
 include/libfilezilla/buffer.hpp
 include/libfilezilla/encode.hpp
+include/libfilezilla/encryption.hpp
 include/libfilezilla/event.hpp
 include/libfilezilla/event_handler.hpp
 include/libfilezilla/event_loop.hpp
 include/libfilezilla/file.hpp
 include/libfilezilla/format.hpp
 include/libfilezilla/glue/wx.hpp
+include/libfilezilla/hash.hpp
 include/libfilezilla/iputils.hpp
 include/libfilezilla/libfilezilla.hpp
 include/libfilezilla/local_filesys.hpp
@@ -19,6 +21,7 @@ include/libfilezilla/private/windows.hpp
 include/libfilezilla/process.hpp
 include/libfilezilla/recursive_remove.hpp
 include/libfilezilla/shared.hpp
+include/libfilezilla/signature.hpp
 include/libfilezilla/string.hpp
 include/libfilezilla/thread.hpp
 include/libfilezilla/thread_pool.hpp
