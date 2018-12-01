@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18645 2018/12/01 11:38:23 wiz Exp $
+$NetBSD: TODO,v 1.18646 2018/12/01 13:26:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -772,7 +772,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gtklevel9-5.1
 	o gtkmagnetic-23
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
-	o gtksourceview3-3.24.9
 	o gtksourceview4-4.0.3
 	o gtl-3.6
 	o gtodo-0.16.0rc2
