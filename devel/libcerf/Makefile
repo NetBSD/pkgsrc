@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/11/21 17:09:33 adam Exp $
+# $NetBSD: Makefile,v 1.6 2018/12/01 21:22:36 gson Exp $
 
 DISTNAME=	libcerf-1.7
 CATEGORIES=	devel math
@@ -10,6 +10,7 @@ HOMEPAGE=	http://apps.jcns.fz-juelich.de/doku/sc/libcerf
 COMMENT=	Library providing efficient and accurate complex error functions
 LICENSE=	mit
 
+USE_LANGUAGES=		c99
 USE_CMAKE=		yes
 CMAKE_ARG_PATH=		${WRKSRC}
 CONFIGURE_DIRS=		${WRKDIR}/build
