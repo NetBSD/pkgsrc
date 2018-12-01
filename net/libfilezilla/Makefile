@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2018/08/16 08:29:25 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2018/12/01 11:15:42 wiz Exp $
 
-DISTNAME=	libfilezilla-0.13.0
+DISTNAME=	libfilezilla-0.15.1
 CATEGORIES=	devel
-MASTER_SITES=	http://download.filezilla-project.org/libfilezilla/
+#MASTER_SITES=	https://dl2.cdn.filezilla-project.org/libfilezilla/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,6 +11,7 @@ COMMENT=	Library for building high-performing, platform-independent programs
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
@@ -19,4 +20,6 @@ PKGCONFIG_OVERRIDE+=	lib/libfilezilla.pc.in
 # GCC 4.9 is required to support C++14
 GCC_REQD+=	4.9
 
+BUILDLINK_API_DEPENDS.nettle+=	nettle>=3.1
+.include "../../security/nettle/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
