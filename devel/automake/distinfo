@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.53 2017/06/23 12:52:56 wiz Exp $
+$NetBSD: distinfo,v 1.54 2018/12/01 04:58:36 wiz Exp $
 
-SHA1 (automake-1.15.1.tar.xz) = 45632d466c16ecf18d9c18dc4be883cde59acb59
-RMD160 (automake-1.15.1.tar.xz) = 023dcfded47763358972c16d48a7f2d7ff384569
-SHA512 (automake-1.15.1.tar.xz) = 02f661b2676f1d44334ce1c7188f9913a6874bf46ba487708ad8090ad57905f14aead80fefed815e21effacfbb925e23b944ea7dd32563dca39c1a4174eda688
-Size (automake-1.15.1.tar.xz) = 1509496 bytes
-SHA1 (patch-m4_python.m4) = cc28a1433d5442e66ea521e0f9f3b24e5155ad86
+SHA1 (automake-1.16.1.tar.xz) = 1012bc79956013d53da0890f8493388a6cb20831
+RMD160 (automake-1.16.1.tar.xz) = 8c2a91e8fc0595dbf4854be3cef4d14bb8c5e756
+SHA512 (automake-1.16.1.tar.xz) = 4013bd31f4903b10875caa7d6ac16a14623a4eb91aa758924dee5b990e234fb50848d131e2dbdbbbc32f89c41a14f9c52a0064c37aa6760c524d607b354b13c3
+Size (automake-1.16.1.tar.xz) = 1534936 bytes
