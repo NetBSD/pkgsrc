@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4947 2018/12/01 02:37:09 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4948 2018/12/01 02:41:21 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6912,3 +6912,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Config-File to 1.51 [wen 2018-12-01]
 	Updated devel/p5-CPAN-FindDependencies to 2.48 [wen 2018-12-01]
 	Updated devel/p5-CPAN-Perl-Releases to 3.84 [wen 2018-12-01]
+	Updated devel/p5-Data-Dumper to 2.173 [wen 2018-12-01]
