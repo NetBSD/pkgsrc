@@ -1,0 +1,26 @@
+$NetBSD: patch-Makefile,v 1.1 2018/12/01 13:23:51 nia Exp $
+
+Fix undefined symbols.
+
+Honour CFLAGS.
+
+--- Makefile.orig	2018-11-19 12:26:47.000000000 +0000
++++ Makefile
+@@ -9,14 +9,14 @@ MANDIR ?= $(PREFIX)/share/man/man1
+ APPDIR ?= $(PREFIX)/share/applications
+ ICODIR ?= $(PREFIX)/share/icons/hicolor/
+ 
+-PACKAGES = x11 x11-xcb xcb-renderutil xcb-render xcb-damage xcb-randr xcb-composite xcb-shape xcb-image xcb-xfixes xext pixman-1
++PACKAGES = x11 x11-xcb xcb-renderutil xcb-render xcb-damage xcb-randr xcb-composite xcb-shape xcb-image xcb-xfixes xext pixman-1 xcb-present
+ LIBS = -lm -lrt -lev
+ INCS =
+ 
+-OBJS = compton.o config.o win.o x.o
++OBJS = compton.o config.o diagnostic.o win.o x.o
+ 
+ # === Configuration flags ===
+-CFG = -std=c11 -D_GNU_SOURCE -Wall -Wextra -Wno-unused-parameter -Wnonnull
++CFG = $(CFLAGS) -std=c11 -D_GNU_SOURCE -Wall -Wextra -Wno-unused-parameter -Wnonnull
+ 
+ ifeq "$(CC)" "clang"
+   CFG += -Wconditional-uninitialized
