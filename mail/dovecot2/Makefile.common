@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2018/11/30 18:43:09 adam Exp $
+# $NetBSD: Makefile.common,v 1.23 2018/12/01 11:42:41 schmonz Exp $
 #
 # when updating to a new release, update ABI depends in
 # the buildlink3.mk file as well, since the plugins' version
@@ -23,15 +23,15 @@ LICENSE=	mit AND gnu-lgpl-v2.1 AND modified-bsd
 DISTINFO_FILE=	${.CURDIR}/../../mail/dovecot2/distinfo
 PATCHDIR=	${.CURDIR}/../../mail/dovecot2/patches
 
-.if "${PKGPATH}" != "mail/dovecot2"
-DEPENDS+=	dovecot>=${PKGVERSION_NOREV}{nb*,}:../../mail/dovecot2
-.endif
-
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config rpcgen
 GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
+
+.if "${PKGPATH}" != "mail/dovecot2"
+DEPENDS+=		dovecot>=${PKGVERSION_NOREV}{nb*,}:../../mail/dovecot2
+.endif
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
