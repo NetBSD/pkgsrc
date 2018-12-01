@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2018/11/12 17:54:40 schmonz Exp $
+# $NetBSD: Makefile,v 1.13 2018/12/01 14:58:49 schmonz Exp $
 #
 
 DISTNAME=		syncdir-1.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${HOMEPAGE}
 
@@ -12,6 +12,14 @@ COMMENT=		Synchronous open, link, rename, and unlink
 LICENSE=		gnu-gpl-v2
 
 USE_LIBTOOL=		yes
+
+LIBTOOL_PATCH=		syncdir-1.0-libtoolize-20181112.patch
+PATCHFILES+=		${LIBTOOL_PATCH}
+SITES.${LIBTOOL_PATCH}=	https://schmonz.com/qmail/syncdirlibtool/
+
+DLSYM_PATCH=		syncdir-1.0-libtoolize-20181112-dlsym-20181112.patch
+PATCHFILES+=		${DLSYM_PATCH}
+SITES.${DLSYM_PATCH}=	https://schmonz.com/qmail/syncdirdlsym/
 
 INSTALLATION_DIRS=	lib
 
