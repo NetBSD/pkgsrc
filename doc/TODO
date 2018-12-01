@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18654 2018/12/01 17:19:42 wiz Exp $
+$NetBSD: TODO,v 1.18655 2018/12/01 17:22:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -462,7 +462,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o boson-0.13
 	o bottlerocket-0.05b3
 	o brasero-3.4.0
-	o brotli-1.0.7
 	o bsdtar-3.3.3
 	o bwa-0.7.12 [needs shm_open(3), please contact MAINTAINER]
 	o byacc-20170201
