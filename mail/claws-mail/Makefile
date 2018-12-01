@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.95 2018/11/14 22:21:55 kleink Exp $
+# $NetBSD: Makefile,v 1.96 2018/12/01 17:31:06 bsiegert Exp $
 
 INSTALLATION_DIRS+=	${EGDIR}
 INSTALLATION_DIRS+=	share/claws-mail
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "Makefile.common"
 
 PKGNAME=	claws-mail-${CLAWS_VERSION}
