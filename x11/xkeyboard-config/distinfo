@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.28 2018/06/17 08:14:24 wiz Exp $
+$NetBSD: distinfo,v 1.29 2018/12/01 14:28:41 wiz Exp $
 
-SHA1 (xkeyboard-config-2.24.tar.bz2) = 2df5b347a4cd9891d2a15fdc4c1734629756a070
-RMD160 (xkeyboard-config-2.24.tar.bz2) = eb65d27c750d4dc092b3ae85bece12eac5e1cd91
-SHA512 (xkeyboard-config-2.24.tar.bz2) = 96b65d18a85443a9bf93d65a4423da6e2b3d44882dae6a03bf46768a92017e9762cf3721361ba399c2873d53782944d0292eb673484f1cd8a8bdbf643e7a1dc0
-Size (xkeyboard-config-2.24.tar.bz2) = 1057889 bytes
+SHA1 (xkeyboard-config-2.25.tar.bz2) = 1a444ceca4a4f29718771cef74c7f009b8f18f57
+RMD160 (xkeyboard-config-2.25.tar.bz2) = 50bd858f7a9ea17fedc056f8a8e53a8bd33e5aa0
+SHA512 (xkeyboard-config-2.25.tar.bz2) = 2d9d6bdd885edc8e03e5a2c136c3b29b4ea795122709fa210bf151c4e7416a44fa2928bb29137ee8c6691d8646c1f645748576dea3f940ce84c8d4d0f91e09eb
+Size (xkeyboard-config-2.25.tar.bz2) = 1055253 bytes
