@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18636 2018/12/01 04:58:46 wiz Exp $
+$NetBSD: TODO,v 1.18637 2018/12/01 05:55:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -752,7 +752,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gob-2.0.19
 	o gobby-0.5.0
 	o gobject-introspection-1.58.1
-	o goffice0.10-0.10.44
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
 	o goocanvas-2.0.2
