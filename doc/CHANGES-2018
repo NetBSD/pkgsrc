@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4964 2018/12/01 11:15:51 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.4965 2018/12/01 11:16:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6929,3 +6929,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/liferea to 1.12.5a [leot 2018-12-01]
 	Updated mail/gmime3 to 3.2.2 [wiz 2018-12-01]
 	Updated net/libfilezilla to 0.15.1 [wiz 2018-12-01]
+	Updated net/filezilla to 3.39.0 [wiz 2018-12-01]
