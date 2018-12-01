@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2018/08/16 12:02:10 wiz Exp $
+$NetBSD: distinfo,v 1.12 2018/12/01 16:44:05 wiz Exp $
 
-SHA1 (latexmk-459.zip) = 8050eff7df367581abbe414e2be4f7552ab6f3cd
-RMD160 (latexmk-459.zip) = c444fa7ae22f3721534ac5f40098bd9726349927
-SHA512 (latexmk-459.zip) = 2d317f9e4181e956b359f4df188caffde94858cdc091a31f613c0c77cf09896dfd31c34f8b80b3f21c039d51d4903c22330fddbf43bfffe3d8014c028bb37f07
-Size (latexmk-459.zip) = 434050 bytes
+SHA1 (latexmk-461.zip) = d1db4d008c6318167eff7091e64c0221e3292cbc
+RMD160 (latexmk-461.zip) = 921fce511be50fee61aa3cf8b7f323a541965778
+SHA512 (latexmk-461.zip) = d874de8ff91826469b01cbc77f0e8a66e93265b6605af3efd22244ef37bce18c8ef39ee0b0720bca9170a99cbf767eab62c396678e21332e7c12a957fb5791ff
+Size (latexmk-461.zip) = 449697 bytes
