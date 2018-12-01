@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18646 2018/12/01 13:26:20 wiz Exp $
+$NetBSD: TODO,v 1.18647 2018/12/01 14:28:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1515,7 +1515,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xhippo-3.5
 	o xine-1.2.3
 	o xjman-0.7
-	o xkeyboard-config-2.25
 	o xli-2006.11.10
 	o xlockmore-5.55
 	o xmake-2.0.5
