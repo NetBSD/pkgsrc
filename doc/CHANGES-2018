@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4972 2018/12/01 14:58:54 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.4973 2018/12/01 16:30:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6937,3 +6937,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/xkeyboard-config to 2.25 [wiz 2018-12-01]
 	Updated misc/todoman to 3.5.0 [wiz 2018-12-01]
 	Updated devel/syncdir to 1.0nb2 [schmonz 2018-12-01]
+	Updated x11/libxcb to 1.13.1 [wiz 2018-12-01]
