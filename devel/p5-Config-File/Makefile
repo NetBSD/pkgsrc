@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2018/08/22 09:43:46 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2018/12/01 01:57:17 wen Exp $
 
-DISTNAME=	Config-File-1.50
+DISTNAME=	Config-File-1.51
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
-#PKGREVISION=	1
 CATEGORIES=	devel perl5
-MASTER_SITES=	https://cpan.metacpan.org/authors/id/G/GW/GWOLF/
+MASTER_SITES=	https://cpan.metacpan.org/authors/id/T/TH/THESEAL/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/pod/Config::File
