@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.66 2016/04/12 16:33:04 leot Exp $
+$NetBSD: distinfo,v 1.67 2018/12/01 10:15:15 leot Exp $
 
-SHA1 (liferea-1.10.19.tar.bz2) = 5afed65c2a91464ade8007d14e0c9d2fe54c90f6
-RMD160 (liferea-1.10.19.tar.bz2) = 75fb3ef42b174d13977c8212e53e8aaece7b1b08
-SHA512 (liferea-1.10.19.tar.bz2) = f09b547cf7a2163782b5b4f547b21cfdb87ec972a51e4b1bd2f308f328f65d2475931a1b1bac45b68ffb6e040b46e13003f4cebfd01a2cdddb6abab30cf127c9
-Size (liferea-1.10.19.tar.bz2) = 1453859 bytes
+SHA1 (liferea-1.12.5a.tar.bz2) = 71474b92905880364cef9a9c513922d83667d55a
+RMD160 (liferea-1.12.5a.tar.bz2) = 109d093623056153815445ec0b8fe6145bdbc039
+SHA512 (liferea-1.12.5a.tar.bz2) = 6ada3750d40310cc56577baff29796bd26d1da6d74958dbfd46d9477ac24c2f33f5a88cd82a143073dd2e34dcfb4d82fdeec8029307f7c6a4e16e587d2148b5c
+Size (liferea-1.12.5a.tar.bz2) = 1470744 bytes
