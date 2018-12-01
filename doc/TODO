@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18637 2018/12/01 05:55:49 wiz Exp $
+$NetBSD: TODO,v 1.18638 2018/12/01 05:57:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -472,7 +472,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bzr-svn-1.2.2
 	o bzrtools-2.6.0
 	o c4-1.10
-	o cabextract-1.9
 	o cal3d-0.11.0
 	o calc-2.11.10.1
 	o calcoo-2.1.0
