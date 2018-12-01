@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18643 2018/12/01 11:16:44 wiz Exp $
+$NetBSD: TODO,v 1.18644 2018/12/01 11:33:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -737,7 +737,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnu-crypto-2.1.0
 	o gnu-pw-mgr-2.0
 	o gnucap-20130423
-	o gnumeric112-1.12.44
 	o gnustep-back-0.24.1
 	o gnustep-base-1.24.8
 	o gnustep-examples-1.4.0
@@ -988,7 +987,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmcs-0.7.2
 	o libmediawiki-4.14.0
 	o libmilter-8.16.0.16
-	o libmpdclient-2.16
 	o libmtag-0.3.6
 	o liboobs-2.32.0 [GNOME 2.32]
 	o liboop-1.0.1
