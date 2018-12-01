@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4959 2018/12/01 07:36:41 wen Exp $
+$NetBSD: CHANGES-2018,v 1.4960 2018/12/01 07:50:42 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6924,3 +6924,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated archivers/libmspack to 0.9.1alpha [wiz 2018-12-01]
 	Updated devel/p5-Module-CoreList to 5.20181130 [wen 2018-12-01]
 	Updated devel/p5-Git-Repository to 1.323 [wen 2018-12-01]
+	Updated devel/p5-glib2 to 1.328 [wen 2018-12-01]
