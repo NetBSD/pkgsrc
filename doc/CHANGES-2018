@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4969 2018/12/01 13:26:20 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.4970 2018/12/01 14:28:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6934,3 +6934,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated audio/libmpdclient to 2.16 [wiz 2018-12-01]
 	Updated mail/notmuch to 0.28 [wiz 2018-12-01]
 	Updated x11/gtksourceview3 to 3.24.9 [wiz 2018-12-01]
+	Updated x11/xkeyboard-config to 2.25 [wiz 2018-12-01]
