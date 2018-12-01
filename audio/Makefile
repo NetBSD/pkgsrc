@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.553 2018/09/21 13:25:08 maya Exp $
+# $NetBSD: Makefile,v 1.554 2018/12/01 18:22:31 fox Exp $
 #
 
 COMMENT=	Audio tools
@@ -89,6 +89,7 @@ SUBDIR+=	eyeD3
 SUBDIR+=	ezstream
 SUBDIR+=	faac
 SUBDIR+=	faad2
+SUBDIR+=	fasttracker2
 SUBDIR+=	fdk-aac
 SUBDIR+=	festival
 SUBDIR+=	festival-doc
