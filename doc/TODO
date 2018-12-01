@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18649 2018/12/01 16:30:51 wiz Exp $
+$NetBSD: TODO,v 1.18650 2018/12/01 16:37:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1495,9 +1495,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xaric-0.13.7
-	o xcb-util-0.4.1
 	o xcoral-3.14
-	o xerces-c-3.2.2
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
 	o xf86-video-geode-2.11.9 [wip]
