@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2018/11/22 12:28:11 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.15 2018/12/01 09:53:27 ryoon Exp $
 share/nextcloud/.htaccess
 share/nextcloud/.user.ini
 share/nextcloud/3rdparty/.drone.yml
@@ -4057,6 +4057,7 @@ share/nextcloud/apps/cloud_federation_api/lib/Capabilities.php
 share/nextcloud/apps/cloud_federation_api/lib/Config.php
 share/nextcloud/apps/cloud_federation_api/lib/Controller/RequestHandlerController.php
 share/nextcloud/apps/comments/.bowerrc
+share/nextcloud/apps/comments/.l10nignore
 share/nextcloud/apps/comments/appinfo/app.php
 share/nextcloud/apps/comments/appinfo/info.xml
 share/nextcloud/apps/comments/appinfo/routes.php
@@ -4479,6 +4480,7 @@ share/nextcloud/apps/dav/lib/CalDAV/CalendarManager.php
 share/nextcloud/apps/dav/lib/CalDAV/CalendarObject.php
 share/nextcloud/apps/dav/lib/CalDAV/CalendarRoot.php
 share/nextcloud/apps/dav/lib/CalDAV/InvitationResponse/InvitationResponseServer.php
+share/nextcloud/apps/dav/lib/CalDAV/Outbox.php
 share/nextcloud/apps/dav/lib/CalDAV/Plugin.php
 share/nextcloud/apps/dav/lib/CalDAV/Principal/Collection.php
 share/nextcloud/apps/dav/lib/CalDAV/Principal/User.php
@@ -5198,6 +5200,7 @@ share/nextcloud/apps/federation/lib/SyncFederationAddressBooks.php
 share/nextcloud/apps/federation/lib/SyncJob.php
 share/nextcloud/apps/federation/lib/TrustedServers.php
 share/nextcloud/apps/federation/templates/settings-admin.php
+share/nextcloud/apps/files/.l10nignore
 share/nextcloud/apps/files/ajax/download.php
 share/nextcloud/apps/files/ajax/list.php
 share/nextcloud/apps/files/appinfo/app.php
@@ -6979,8 +6982,6 @@ share/nextcloud/apps/files_texteditor/js/sidebarpreview.js
 share/nextcloud/apps/files_texteditor/l10n/.gitkeep
 share/nextcloud/apps/files_texteditor/l10n/ast.js
 share/nextcloud/apps/files_texteditor/l10n/ast.json
-share/nextcloud/apps/files_texteditor/l10n/az.js
-share/nextcloud/apps/files_texteditor/l10n/az.json
 share/nextcloud/apps/files_texteditor/l10n/bg.js
 share/nextcloud/apps/files_texteditor/l10n/bg.json
 share/nextcloud/apps/files_texteditor/l10n/ca.js
@@ -7356,6 +7357,7 @@ share/nextcloud/apps/files_trashbin/lib/Storage.php
 share/nextcloud/apps/files_trashbin/lib/Trashbin.php
 share/nextcloud/apps/files_trashbin/list.php
 share/nextcloud/apps/files_trashbin/templates/index.php
+share/nextcloud/apps/files_versions/.l10nignore
 share/nextcloud/apps/files_versions/ajax/getVersions.php
 share/nextcloud/apps/files_versions/ajax/rollbackVersion.php
 share/nextcloud/apps/files_versions/appinfo/app.php
@@ -8406,6 +8408,7 @@ share/nextcloud/apps/nextcloud_announcements/lib/Notification/Notifier.php
 share/nextcloud/apps/nextcloud_announcements/lib/Settings/Admin.php
 share/nextcloud/apps/nextcloud_announcements/templates/admin.php
 share/nextcloud/apps/notifications/.babelrc.js
+share/nextcloud/apps/notifications/.l10nignore
 share/nextcloud/apps/notifications/COPYING
 share/nextcloud/apps/notifications/appinfo/app.php
 share/nextcloud/apps/notifications/appinfo/database.xml
@@ -8568,6 +8571,7 @@ share/nextcloud/apps/notifications/lib/Exceptions/NotificationNotFoundException.
 share/nextcloud/apps/notifications/lib/Handler.php
 share/nextcloud/apps/notifications/lib/Notifier/AdminNotifications.php
 share/nextcloud/apps/notifications/lib/Push.php
+share/nextcloud/apps/oauth2/.l10nignore
 share/nextcloud/apps/oauth2/appinfo/database.xml
 share/nextcloud/apps/oauth2/appinfo/info.xml
 share/nextcloud/apps/oauth2/appinfo/routes.php
@@ -9259,7 +9263,7 @@ share/nextcloud/apps/support/lib/Sections/ServerSection.php
 share/nextcloud/apps/support/lib/Service/SubscriptionService.php
 share/nextcloud/apps/support/lib/Settings/Admin.php
 share/nextcloud/apps/support/lib/Settings/Section.php
-share/nextcloud/apps/support/resources/Why the Nextcloud Subscription?.pdf
+share/nextcloud/apps/support/resources/Why the Nextcloud Subscription.pdf
 share/nextcloud/apps/support/templates/admin.php
 share/nextcloud/apps/survey_client/COPYING
 share/nextcloud/apps/survey_client/ISSUE_TEMPLATE.md
@@ -9899,6 +9903,7 @@ share/nextcloud/apps/twofactor_backupcodes/lib/Service/BackupCodeStorage.php
 share/nextcloud/apps/twofactor_backupcodes/lib/Settings/Personal.php
 share/nextcloud/apps/twofactor_backupcodes/templates/challenge.php
 share/nextcloud/apps/twofactor_backupcodes/templates/personal.php
+share/nextcloud/apps/updatenotification/.l10nignore
 share/nextcloud/apps/updatenotification/appinfo/app.php
 share/nextcloud/apps/updatenotification/appinfo/info.xml
 share/nextcloud/apps/updatenotification/appinfo/routes.php
@@ -10637,6 +10642,7 @@ share/nextcloud/apps/workflowengine/templates/admin.php
 share/nextcloud/config/.htaccess
 share/nextcloud/config/config.sample.php
 share/nextcloud/console.php
+share/nextcloud/core/.l10nignore
 share/nextcloud/core/Application.php
 share/nextcloud/core/BackgroundJobs/BackgroundCleanupUpdaterBackupsJob.php
 share/nextcloud/core/Command/App/CheckCode.php
@@ -10860,7 +10866,6 @@ share/nextcloud/core/doc/admin/_images/sharing-files-1.png
 share/nextcloud/core/doc/admin/_images/skeleton-files.png
 share/nextcloud/core/doc/admin/_images/skeleton-files1.png
 share/nextcloud/core/doc/admin/_images/smb.png
-share/nextcloud/core/doc/admin/_images/smtp-config-php-sendmail.png
 share/nextcloud/core/doc/admin/_images/smtp-config-smtp.png
 share/nextcloud/core/doc/admin/_images/smtp-config-wizard.png
 share/nextcloud/core/doc/admin/_images/theming.png
@@ -11654,6 +11659,8 @@ share/nextcloud/core/js/update.js
 share/nextcloud/core/js/visitortimezone.js
 share/nextcloud/core/l10n/af.js
 share/nextcloud/core/l10n/af.json
+share/nextcloud/core/l10n/ar.js
+share/nextcloud/core/l10n/ar.json
 share/nextcloud/core/l10n/ast.js
 share/nextcloud/core/l10n/ast.json
 share/nextcloud/core/l10n/bg.js
@@ -11770,8 +11777,6 @@ share/nextcloud/core/l10n/tr.js
 share/nextcloud/core/l10n/tr.json
 share/nextcloud/core/l10n/uk.js
 share/nextcloud/core/l10n/uk.json
-share/nextcloud/core/l10n/uz.js
-share/nextcloud/core/l10n/uz.json
 share/nextcloud/core/l10n/vi.js
 share/nextcloud/core/l10n/vi.json
 share/nextcloud/core/l10n/zh_CN.js
@@ -13019,6 +13024,7 @@ share/nextcloud/resources/config/mimetypemapping.dist.json
 share/nextcloud/resources/locales.json
 share/nextcloud/robots.txt
 share/nextcloud/settings/.babelrc.js
+share/nextcloud/settings/.l10nignore
 share/nextcloud/settings/Activity/Provider.php
 share/nextcloud/settings/Activity/SecurityFilter.php
 share/nextcloud/settings/Activity/SecurityProvider.php
