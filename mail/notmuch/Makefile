@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2018/06/17 09:07:53 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2018/12/01 11:38:12 wiz Exp $
 
-DISTNAME=	notmuch-0.27
+DISTNAME=	notmuch-0.28
 CATEGORIES=	mail
 MASTER_SITES=	https://notmuchmail.org/releases/
 
@@ -13,7 +13,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake makeinfo pkg-config
+USE_TOOLS+=	bash gmake makeinfo pkg-config
 MAKE_FLAGS+=	PYTHON=${PYTHONBIN}
 INFO_FILES=	yes
 #TEST_TARGET=	check
