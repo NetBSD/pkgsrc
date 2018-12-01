@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2018/09/28 20:49:26 wiedi Exp $
+# $NetBSD: Makefile,v 1.13 2018/12/01 11:33:08 wiz Exp $
 
-DISTNAME=	libmpdclient-2.14
+DISTNAME=	libmpdclient-2.16
 CATEGORIES=	audio
 MASTER_SITES=	http://www.musicpd.org/download/libmpdclient/2/
 EXTRACT_SUFX=	.tar.xz
