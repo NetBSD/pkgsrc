@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.269 2018/11/14 22:21:27 kleink Exp $
+# $NetBSD: Makefile,v 1.270 2018/12/01 17:07:26 wiz Exp $
 
 DISTNAME=		gnucash-3.3
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 EXTRACT_SUFX=		.tar.bz2
@@ -78,5 +78,4 @@ BUILDLINK_API_DEPENDS.boost-headers+=   boost-headers>=1.64.0nb3
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
-.include "../../x11/gtkmm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
