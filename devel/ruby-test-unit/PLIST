@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2017/06/05 14:17:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2018/12/02 06:37:54 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/GPL
@@ -26,6 +26,7 @@ ${GEM_LIBDIR}/lib/test/unit/collector/objectspace.rb
 ${GEM_LIBDIR}/lib/test/unit/collector/xml.rb
 ${GEM_LIBDIR}/lib/test/unit/color-scheme.rb
 ${GEM_LIBDIR}/lib/test/unit/color.rb
+${GEM_LIBDIR}/lib/test/unit/data-sets.rb
 ${GEM_LIBDIR}/lib/test/unit/data.rb
 ${GEM_LIBDIR}/lib/test/unit/diff.rb
 ${GEM_LIBDIR}/lib/test/unit/error.rb
