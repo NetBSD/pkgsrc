@@ -18,8 +18,8 @@ type Condition struct {
 }
 
 func Parse(licenses string) *Condition {
-	lexer := &licenseLexer{lexer: textproc.NewLexer(licenses)}
-	result := liyyNewParser().Parse(lexer)
+	lexer := licenseLexer{lexer: textproc.NewLexer(licenses)}
+	result := liyyNewParser().Parse(&lexer)
 	if result != 0 || !lexer.lexer.EOF() {
 		return nil
 	}
@@ -70,18 +70,18 @@ type licenseLexer struct {
 var licenseNameChars = textproc.NewByteSet("A-Za-z0-9---.")
 
 func (lexer *licenseLexer) Lex(llval *liyySymType) int {
-	repl := lexer.lexer
-	repl.NextHspace()
+	lex := lexer.lexer
+	lex.NextHspace()
 	switch {
-	case repl.EOF():
+	case lex.EOF():
 		return 0
-	case repl.NextByte('('):
+	case lex.SkipByte('('):
 		return ltOPEN
-	case repl.NextByte(')'):
+	case lex.SkipByte(')'):
 		return ltCLOSE
 	}
 
-	word := repl.NextBytesSet(licenseNameChars)
+	word := lex.NextBytesSet(licenseNameChars)
 	switch word {
 	case "AND":
 		return ltAND

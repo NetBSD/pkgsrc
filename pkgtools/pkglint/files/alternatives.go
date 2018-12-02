@@ -2,8 +2,8 @@ package main
 
 import "strings"
 
-func CheckfileAlternatives(fileName string) {
-	lines := Load(fileName, NotEmpty|LogErrors)
+func CheckfileAlternatives(filename string) {
+	lines := Load(filename, NotEmpty|LogErrors)
 	if lines == nil {
 		return
 	}
@@ -32,7 +32,7 @@ func CheckfileAlternatives(fileName string) {
 			}
 
 			fix := line.Autofix()
-			fix.Notef("@PREFIX@/ can be omitted from the file name.")
+			fix.Notef("@PREFIX@/ can be omitted from the filename.")
 			fix.Explain(
 				"The alternative implementation is always interpreted relative to",
 				"${PREFIX}.")
@@ -40,7 +40,7 @@ func CheckfileAlternatives(fileName string) {
 			fix.Apply()
 		} else {
 			line.Errorf("Invalid ALTERNATIVES line %q.", line.Text)
-			Explain(
+			G.Explain(
 				sprintf("Run %q for more information.", makeHelp("alternatives")))
 		}
 	}

@@ -29,43 +29,55 @@ func NewOptions() *Options {
 //  warnings.AddFlagVar("extra", &extra, false, "Print extra warnings")
 func (o *Options) AddFlagGroup(shortName rune, longName, argsName, description string) *FlagGroup {
 	grp := new(FlagGroup)
-	opt := &option{shortName, longName, argsName, description, grp}
-	o.options = append(o.options, opt)
+	opt := option{shortName, longName, argsName, description, grp}
+	o.options = append(o.options, &opt)
 	return grp
 }
 
 func (o *Options) AddFlagVar(shortName rune, longName string, pflag *bool, defval bool, description string) {
 	*pflag = defval
-	opt := &option{shortName, longName, "", description, pflag}
-	o.options = append(o.options, opt)
+	opt := option{shortName, longName, "", description, pflag}
+	o.options = append(o.options, &opt)
+}
+
+func (o *Options) AddStrVar(shortName rune, longName string, pstr *string, defval string, description string) {
+	*pstr = defval
+	opt := option{shortName, longName, "", description, pstr}
+	o.options = append(o.options, &opt)
 }
 
 func (o *Options) AddStrList(shortName rune, longName string, plist *[]string, description string) {
 	*plist = []string{}
-	opt := &option{shortName, longName, "", description, plist}
-	o.options = append(o.options, opt)
+	opt := option{shortName, longName, "", description, plist}
+	o.options = append(o.options, &opt)
 }
 
 // Parse extracts the command line options from the given arguments.
 // args[0] is the program name, as in os.Args.
 func (o *Options) Parse(args []string) (remainingArgs []string, err error) {
 	var skip int
+
 	for i := 1; i < len(args) && err == nil; i++ {
 		arg := args[i]
 		switch {
+
 		case arg == "--":
 			remainingArgs = append(remainingArgs, args[i+1:]...)
 			return
+
 		case strings.HasPrefix(arg, "--"):
 			skip, err = o.parseLongOption(args, i, arg[2:])
 			i += skip
+
 		case strings.HasPrefix(arg, "-"):
 			skip, err = o.parseShortOptions(args, i, arg[1:])
 			i += skip
+
 		default:
 			remainingArgs = append(remainingArgs, arg)
 		}
 	}
+
 	if err != nil {
 		err = optErr(args[0] + ": " + err.Error())
 	}
@@ -75,6 +87,7 @@ func (o *Options) Parse(args []string) (remainingArgs []string, err error) {
 func (o *Options) parseLongOption(args []string, i int, argRest string) (skip int, err error) {
 	parts := strings.SplitN(argRest, "=", 2)
 	argname := parts[0]
+
 	var argval *string
 	if 1 < len(parts) {
 		argval = &parts[1]
@@ -96,6 +109,7 @@ func (o *Options) parseLongOption(args []string, i int, argRest string) (skip in
 			}
 		}
 	}
+
 	if prefixOpt != nil {
 		return o.handleLongOption(args, i, prefixOpt, argval)
 	}
@@ -104,6 +118,7 @@ func (o *Options) parseLongOption(args []string, i int, argRest string) (skip in
 
 func (o *Options) handleLongOption(args []string, i int, opt *option, argval *string) (skip int, err error) {
 	switch data := opt.data.(type) {
+
 	case *bool:
 		if argval == nil {
 			*data = true
@@ -118,6 +133,19 @@ func (o *Options) handleLongOption(args []string, i int, opt *option, argval *st
 			}
 		}
 		return 0, nil
+
+	case *string:
+		switch {
+		case argval != nil:
+			*data = *argval
+			return 0, nil
+		case i+1 < len(args):
+			*data = args[i+1]
+			return 1, nil
+		default:
+			return 0, optErr("option requires an argument: --" + opt.longName)
+		}
+
 	case *[]string:
 		switch {
 		case argval != nil:
@@ -129,6 +157,7 @@ func (o *Options) handleLongOption(args []string, i int, opt *option, argval *st
 		default:
 			return 0, optErr("option requires an argument: --" + opt.longName)
 		}
+
 	case *FlagGroup:
 		switch {
 		case argval != nil:
@@ -139,6 +168,7 @@ func (o *Options) handleLongOption(args []string, i int, opt *option, argval *st
 			return 0, optErr("option requires an argument: --" + opt.longName)
 		}
 	}
+
 	panic("getopt: internal error: unknown option type")
 }
 
@@ -148,9 +178,23 @@ optchar:
 		for _, opt := range o.options {
 			if optchar == opt.shortName {
 				switch data := opt.data.(type) {
+
 				case *bool:
 					*data = true
 					continue optchar
+
+				case *string:
+					argarg := optchars[ai+utf8.RuneLen(optchar):]
+					switch {
+					case argarg != "":
+						*data = argarg
+						return 0, nil
+					case i+1 < len(args):
+						*data = args[i+1]
+						return 1, nil
+					default:
+						return 0, optErr("option requires an argument: -" + string([]rune{optchar}))
+					}
 
 				case *[]string:
 					argarg := optchars[ai+utf8.RuneLen(optchar):]
@@ -178,8 +222,10 @@ optchar:
 				}
 			}
 		}
+
 		return 0, optErr("unknown option: -" + string([]rune{optchar}))
 	}
+
 	return 0, nil
 }
 
@@ -218,6 +264,7 @@ func (o *Options) Help(out io.Writer, generalUsage string) {
 			rowf("  Flags for -%c, --%s:", opt.shortName, opt.longName)
 			rowf("    all\t all of the following")
 			rowf("    none\t none of the following")
+
 			for _, flag := range flagGroup.flags {
 				state := "disabled"
 				if *flag.value {
@@ -225,9 +272,11 @@ func (o *Options) Help(out io.Writer, generalUsage string) {
 				}
 				rowf("    %s\t %s (%v)", flag.name, flag.description, state)
 			}
+
 			finishTable()
 		}
 	}
+
 	if hasFlagGroups {
 		rowf("")
 		rowf("  (Prefix a flag with \"no-\" to disable it.)")
@@ -254,8 +303,8 @@ type groupFlag struct {
 }
 
 func (fg *FlagGroup) AddFlagVar(name string, flag *bool, defval bool, description string) {
-	opt := &groupFlag{name, flag, description}
-	fg.flags = append(fg.flags, opt)
+	opt := groupFlag{name, flag, description}
+	fg.flags = append(fg.flags, &opt)
 	*flag = defval
 }
 

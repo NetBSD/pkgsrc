@@ -3,6 +3,8 @@ package textproc
 import (
 	"gopkg.in/check.v1"
 	"netbsd.org/pkglint/intqa"
+	"regexp"
+	"strings"
 	"testing"
 	"unicode"
 )
@@ -59,7 +61,11 @@ func (s *Suite) Test_Lexer_PeekByte(c *check.C) {
 func (s *Suite) Test_Lexer_Skip(c *check.C) {
 	lexer := NewLexer("example text")
 
-	lexer.Skip(7)
+	c.Check(lexer.Skip(7), equals, true)
+
+	c.Check(lexer.Rest(), equals, " text")
+
+	c.Check(lexer.Skip(0), equals, false)
 
 	c.Check(lexer.Rest(), equals, " text")
 
@@ -80,25 +86,48 @@ func (s *Suite) Test_Lexer_NextString(c *check.C) {
 	c.Check(lexer.NextString("xt"), equals, "xt")
 }
 
+func (s *Suite) Test_Lexer_SkipString(c *check.C) {
+	lexer := NewLexer("text")
+
+	c.Check(lexer.SkipString("te"), equals, true)
+	c.Check(lexer.SkipString("st"), equals, false)
+	c.Check(lexer.SkipString("xt"), equals, true)
+}
+
+func (s *Suite) Test_Lexer_SkipHspace(c *check.C) {
+	lexer := NewLexer("spaces   \t \t  and tabs\n\t ")
+
+	c.Check(lexer.NextString("spaces"), equals, "spaces")
+	c.Check(lexer.SkipHspace(), equals, true)
+	c.Check(lexer.Rest(), equals, "and tabs\n\t ")
+	c.Check(lexer.SkipHspace(), equals, false) // No space left.
+	c.Check(lexer.NextString("and tabs"), equals, "and tabs")
+	c.Check(lexer.SkipHspace(), equals, false) // Newline is not a horizontal space.
+	c.Check(lexer.NextString("\n"), equals, "\n")
+	c.Check(lexer.SkipHspace(), equals, true)
+}
+
 func (s *Suite) Test_Lexer_NextHspace(c *check.C) {
-	lexer := NewLexer("spaces   \t \t  and tabs\n")
+	lexer := NewLexer("spaces   \t \t  and tabs\n\t ")
 
 	c.Check(lexer.NextString("spaces"), equals, "spaces")
 	c.Check(lexer.NextHspace(), equals, "   \t \t  ")
 	c.Check(lexer.NextHspace(), equals, "") // No space left.
 	c.Check(lexer.NextString("and tabs"), equals, "and tabs")
 	c.Check(lexer.NextHspace(), equals, "") // Newline is not a horizontal space.
+	c.Check(lexer.NextString("\n"), equals, "\n")
+	c.Check(lexer.NextHspace(), equals, "\t ")
 }
 
-func (s *Suite) Test_Lexer_NextByte(c *check.C) {
+func (s *Suite) Test_Lexer_SkipByte(c *check.C) {
 	lexer := NewLexer("byte")
 
-	c.Check(lexer.NextByte('b'), equals, true)
-	c.Check(lexer.NextByte('b'), equals, false) // The b is already chopped off.
-	c.Check(lexer.NextByte('y'), equals, true)
-	c.Check(lexer.NextByte('t'), equals, true)
-	c.Check(lexer.NextByte('e'), equals, true)
-	c.Check(lexer.NextByte(0), equals, false) // This is not a C string.
+	c.Check(lexer.SkipByte('b'), equals, true)
+	c.Check(lexer.SkipByte('b'), equals, false) // The b is already chopped off.
+	c.Check(lexer.SkipByte('y'), equals, true)
+	c.Check(lexer.SkipByte('t'), equals, true)
+	c.Check(lexer.SkipByte('e'), equals, true)
+	c.Check(lexer.SkipByte(0), equals, false) // This is not a C string.
 }
 
 func (s *Suite) Test_Lexer_NextBytesFunc(c *check.C) {
@@ -117,6 +146,7 @@ func (s *Suite) Test_Lexer_NextByteSet(c *check.C) {
 	c.Check(lexer.NextByteSet(Alnum), equals, int('a'))
 	c.Check(lexer.NextByteSet(Alnum), equals, int('n'))
 	c.Check(lexer.NextByteSet(Space), equals, int(' '))
+	c.Check(lexer.NextByteSet(Space), equals, -1)
 	c.Check(lexer.NextByteSet(Alnum), equals, int('a'))
 	c.Check(lexer.NextByteSet(Space), equals, int('\n'))
 	c.Check(lexer.NextByteSet(Alnum), equals, -1)
@@ -135,6 +165,48 @@ func (s *Suite) Test_Lexer_NextBytesSet(c *check.C) {
 	c.Check(lexer.NextBytesSet(Alnum), equals, "string")
 	c.Check(lexer.NextBytesSet(Hspace), equals, "\t\t ")
 	c.Check(lexer.NextBytesSet(Space), equals, "\n")
+}
+
+func (s *Suite) Test_Lexer_SkipRegexp(c *check.C) {
+	lexer := NewLexer("an alphanumerical 90_ \tstring\t\t \n")
+
+	c.Check(lexer.SkipRegexp(regexp.MustCompile(`^\w+`)), equals, true)
+	c.Check(lexer.Rest(), equals, " alphanumerical 90_ \tstring\t\t \n")
+	c.Check(lexer.SkipRegexp(regexp.MustCompile(`^.+`)), equals, true)
+	c.Check(lexer.Rest(), equals, "\n")
+	c.Check(lexer.SkipRegexp(regexp.MustCompile(`^.+`)), equals, false)
+	// This call returns false since the matched string was empty.
+	c.Check(lexer.SkipRegexp(regexp.MustCompile(`^.*`)), equals, false)
+	c.Check(lexer.Rest(), equals, "\n")
+}
+
+func (s *Suite) Test_Lexer_SkipRegexp__panic(c *check.C) {
+	lexer := NewLexer("an alphanumerical 90_ \tstring\t\t \n")
+
+	c.Check(
+		func() { lexer.SkipRegexp(regexp.MustCompile(`\w+`)) },
+		check.Panics,
+		"Lexer.SkipRegexp: regular expression \"\\\\w+\" must have prefix \"^\".")
+}
+
+func (s *Suite) Test_Lexer_NextRegexp(c *check.C) {
+	lexer := NewLexer("an alphanumerical 90_ \tstring\t\t \n")
+
+	c.Check(lexer.NextRegexp(regexp.MustCompile(`^\w+`))[0], equals, "an")
+	c.Check(lexer.NextRegexp(regexp.MustCompile(`^[\w ]+`))[0], equals, " alphanumerical 90_ ")
+	c.Check(lexer.NextRegexp(regexp.MustCompile(`^.+`))[0], equals, "\tstring\t\t ")
+	c.Check(lexer.NextRegexp(regexp.MustCompile(`^.+`)), check.IsNil)
+	c.Check(lexer.NextRegexp(regexp.MustCompile(`^.*`))[0], equals, "")
+	c.Check(lexer.Rest(), equals, "\n")
+}
+
+func (s *Suite) Test_Lexer_NextRegexp__panic(c *check.C) {
+	lexer := NewLexer("an alphanumerical 90_ \tstring\t\t \n")
+
+	c.Check(
+		func() { lexer.NextRegexp(regexp.MustCompile(`\w+`)) },
+		check.Panics,
+		"Lexer.NextRegexp: regular expression \"\\\\w+\" must have prefix \"^\".")
 }
 
 func (s *Suite) Test_Lexer_Mark__beginning(c *check.C) {
@@ -241,49 +313,69 @@ func (s *Suite) Test_Lexer_Commit(c *check.C) {
 func (s *Suite) Test_NewByteSet(c *check.C) {
 	set := NewByteSet("A-Za-z0-9_\xFC")
 
-	c.Check(set.bits, equals, [4]uint64{
-		0x03ff000000000000, // 9-0
-		0x07fffffe87fffffe, // z-a _ Z-A
-		0x0000000000000000,
-		0x1000000000000000}) // \xFC
-}
-
-// Ensures that the bit manipulations work when a range spans
-// multiple of the uint64 words.
-func (s *Suite) Test_NewByteSet__large_range(c *check.C) {
-	set := NewByteSet("\x01-\xFE")
-
-	c.Check(set.bits, equals, [4]uint64{
-		0xfffffffffffffffe,
-		0xffffffffffffffff,
-		0xffffffffffffffff,
-		0x7fffffffffffffff})
+	expected := "" +
+		"ABCDEFGHIJKLMNOPQRSTUVWXYZ" +
+		"abcdefghijklmnopqrstuvwxyz" +
+		"0123456789_\xFC"
+	for i := 0; i < 256; i++ {
+		c.Check(
+			set.Contains(byte(i)),
+			equals,
+			strings.IndexByte(expected, byte(i)) != -1)
+	}
 }
 
 // Demonstrates how to specify a byte set that includes a hyphen,
 // since that is also used for byte ranges.
-// The hyphen must be written as ---, and it must be at the beginning.
+// The hyphen must be written as ---, which is a range from hyphen to hyphen.
 func (s *Suite) Test_NewByteSet__range_hyphen(c *check.C) {
 	set := NewByteSet("---a-z")
 
-	c.Check(set.bits, equals, [4]uint64{
-		0x0000200000000000,
-		0x07fffffe00000000,
-		0x0000000000000000,
-		0x0000000000000000})
+	expected := "abcdefghijklmnopqrstuvwxyz-"
+	for i := 0; i < 256; i++ {
+		c.Check(
+			set.Contains(byte(i)),
+			equals,
+			strings.IndexByte(expected, byte(i)) != -1)
+	}
 }
 
 func (s *Suite) Test_ByteSet_Inverse(c *check.C) {
 	set := NewByteSet("A-Za-z0-9_\xFC")
 	inverse := set.Inverse()
 
-	c.Check(inverse.bits, equals, [4]uint64{
-		0xfc00ffffffffffff,
-		0xf800000178000001,
-		0xffffffffffffffff,
-		0xefffffffffffffff})
+	for i := 0; i < 256; i++ {
+		c.Check(
+			inverse.Contains(byte(i)),
+			equals,
+			!set.Contains(byte(i)))
+	}
+}
 
-	c.Check(inverse.Inverse().bits, equals, set.bits)
+func (s *Suite) Test_ByteSet_Contains(c *check.C) {
+	set := NewByteSet("A-Za-z0-9_\xFC")
+
+	c.Check(set.Contains(0x00), equals, false)
+	c.Check(set.Contains('-'), equals, false)
+	c.Check(set.Contains('A'), equals, true)
+	c.Check(set.Contains('Z'), equals, true)
+	c.Check(set.Contains('['), equals, false)
+	c.Check(set.Contains(0xFC), equals, true)
+	c.Check(set.Contains(0xFD), equals, false)
+}
+
+func (s *Suite) Test__XPrint(c *check.C) {
+	set := XPrint
+
+	c.Check(set.Contains(0x00), equals, false)
+	c.Check(set.Contains(0x08), equals, false)
+	c.Check(set.Contains('\t'), equals, true)
+	c.Check(set.Contains('\n'), equals, true)
+	c.Check(set.Contains('\v'), equals, false)
+	c.Check(set.Contains(' '), equals, true)
+	c.Check(set.Contains('~'), equals, true)
+	c.Check(set.Contains(0x7F), equals, false)
+	c.Check(set.Contains(0xA0), equals, false)
 }
 
 func (s *Suite) Test__test_names(c *check.C) {

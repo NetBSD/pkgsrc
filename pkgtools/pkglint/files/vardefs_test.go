@@ -48,7 +48,8 @@ func (s *Suite) Test_Pkgsrc_InitVartypes__enumFrom(c *check.C) {
 
 	checkEnumValues("EMACS_VERSIONS_ACCEPTED", "ShellList of enum: emacs29 emacs31 ")
 	checkEnumValues("PKG_JVM", "enum: jdk16 openjdk7 openjdk8 oracle-jdk8 sun-jdk6 sun-jdk7 ")
-	checkEnumValues("USE_LANGUAGES", "ShellList of enum: ada c c++ c++03 c++0x c++11 c++14 c99 fortran fortran77 gnu++03 gnu++0x gnu++11 gnu++14 java obj-c++ objc ")
+	checkEnumValues("USE_LANGUAGES", "ShellList of enum: ada c c++ c++03 c++0x c++11 c++14 c99 "+
+		"fortran fortran77 gnu++03 gnu++0x gnu++11 gnu++14 java obj-c++ objc ")
 	checkEnumValues("PKGSRC_COMPILER", "ShellList of enum: ccache distcc f2c g95 gcc ido mipspro-ucode sunpro ")
 }
 
