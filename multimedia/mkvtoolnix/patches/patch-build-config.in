@@ -1,13 +1,13 @@
-$NetBSD: patch-build-config.in,v 1.1 2018/02/02 10:04:40 jperkin Exp $
+$NetBSD: patch-build-config.in,v 1.2 2018/12/02 17:13:41 adam Exp $
 
 Leave pkgsrc to handle security features.
 
---- build-config.in.orig	2018-01-15 17:56:15.000000000 +0000
+--- build-config.in.orig	2018-12-01 11:15:36.000000000 +0000
 +++ build-config.in
-@@ -91,7 +91,7 @@ MATROSKA_LIBS = @MATROSKA_LIBS@
- EGREP = @EGREP@
+@@ -97,7 +97,7 @@ EGREP = @EGREP@
  EXTRA_CFLAGS = @EXTRA_CFLAGS@
  EXTRA_LDFLAGS = @EXTRA_LDFLAGS@
+ FMT_INTERNAL = @FMT_INTERNAL@
 -FSTACK_PROTECTOR = @FSTACK_PROTECTOR@
 +FSTACK_PROTECTOR =
  GOOGLE_BENCHMARK = @GOOGLE_BENCHMARK@
