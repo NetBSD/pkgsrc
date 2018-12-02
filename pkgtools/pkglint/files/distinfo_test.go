@@ -274,7 +274,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkPatchSha1(c *check.C) {
 	G.Pkg = NewPackage(t.File("category/package"))
 	distinfoLine := t.NewLine(t.File("category/package/distinfo"), 5, "")
 
-	checker := &distinfoLinesChecker{}
+	checker := distinfoLinesChecker{}
 	checker.checkPatchSha1(distinfoLine, "patch-nonexistent", "distinfo-sha1")
 
 	t.CheckOutputLines(
