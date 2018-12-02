@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5005 2018/12/02 11:06:21 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.5006 2018/12/02 11:30:39 tron Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6970,3 +6970,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/calibre to 3.34.0 [wiz 2018-12-02]
 	Updated devel/pangomm to 2.42.0 [wiz 2018-12-02]
 	Updated devel/boehm-gc to 7.6.8 [wiz 2018-12-02]
+	Updated mail/mutt to 1.11.1 [tron 2018-12-02]
