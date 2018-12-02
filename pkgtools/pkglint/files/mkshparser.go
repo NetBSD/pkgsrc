@@ -12,7 +12,7 @@ func parseShellProgram(line Line, program string) (list *MkShList, err error) {
 
 	tokens, rest := splitIntoShellTokens(line, program)
 	lexer := NewShellLexer(tokens, rest)
-	parser := &shyyParserImpl{}
+	parser := shyyParserImpl{}
 
 	succeeded := parser.Parse(lexer)
 
