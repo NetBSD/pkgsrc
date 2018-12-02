@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4991 2018/12/02 06:48:05 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4992 2018/12/02 06:49:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6956,3 +6956,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/ruby-activeldap to 5.2.2 [taca 2018-12-02]
 	Updated devel/ruby-bindata to 2.4.4 [taca 2018-12-02]
 	Added devel/ruby-c21e version 1.1.8 [taca 2018-12-02]
+	Updated math/nickle to 2.84 [wiz 2018-12-02]
