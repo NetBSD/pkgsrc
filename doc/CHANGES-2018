@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4988 2018/12/02 06:38:13 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4989 2018/12/02 06:42:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6953,3 +6953,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated pkgtools/pkglint to 5.6.7 [rillig 2018-12-02]
 	Updated databases/ruby-sequel to 5.15.0 [taca 2018-12-02]
 	Updated devel/ruby-test-unit to 3.2.9 [taca 2018-12-02]
+	Updated databases/ruby-activeldap to 5.2.2 [taca 2018-12-02]
