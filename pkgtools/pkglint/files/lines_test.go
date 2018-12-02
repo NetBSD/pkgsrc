@@ -47,8 +47,18 @@ func (s *Suite) Test_Lines_CheckRcsID__wip(c *check.C) {
 	G.CheckDirent(t.File("wip/package"))
 
 	t.CheckOutputLines(
-		"ERROR: ~/wip/package/file1.mk:1: Expected exactly \"# $"+"NetBSD$\".",
+		"NOTE: ~/wip/package/file1.mk:1: Expected exactly \"# $"+"NetBSD$\".",
 		"ERROR: ~/wip/package/file3.mk:1: Expected \"# $"+"NetBSD$\".",
 		"ERROR: ~/wip/package/file4.mk:1: Expected \"# $"+"NetBSD$\".",
 		"ERROR: ~/wip/package/file5.mk:1: Expected \"# $"+"NetBSD$\".")
+
+	G.Logger.Opts.Autofix = true
+
+	G.CheckDirent(t.File("wip/package"))
+
+	t.CheckOutputLines(
+		"AUTOFIX: ~/wip/package/file1.mk:1: Replacing \"# $NetBSD: lines_test.go,v 1.2 2018/12/02 23:12:43 rillig Exp $\" with \"# $NetBSD: lines_test.go,v 1.2 2018/12/02 23:12:43 rillig Exp $\".",
+		"AUTOFIX: ~/wip/package/file3.mk:1: Inserting a line \"# $NetBSD: lines_test.go,v 1.2 2018/12/02 23:12:43 rillig Exp $\" before this line.",
+		"AUTOFIX: ~/wip/package/file4.mk:1: Inserting a line \"# $NetBSD: lines_test.go,v 1.2 2018/12/02 23:12:43 rillig Exp $\" before this line.",
+		"AUTOFIX: ~/wip/package/file5.mk:1: Inserting a line \"# $NetBSD: lines_test.go,v 1.2 2018/12/02 23:12:43 rillig Exp $\" before this line.")
 }
