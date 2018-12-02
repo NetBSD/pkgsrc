@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2017/03/23 17:06:56 joerg Exp $
+$NetBSD: distinfo,v 1.8 2018/12/02 19:17:33 bsiegert Exp $
 
 SHA1 (subtitleeditor-0.30.0.tar.gz) = bf1a2064b4c68bf21c05a095ad3f746b53da4ac8
 RMD160 (subtitleeditor-0.30.0.tar.gz) = 77cd4b22740453e986d35cbdd7335fbd5728149c
@@ -7,6 +7,8 @@ Size (subtitleeditor-0.30.0.tar.gz) = 1094597 bytes
 SHA1 (patch-aa) = b78809f0e10b76fe298edb4b4c7f995e81ee5276
 SHA1 (patch-plugins_actions_documentmanagement_documentmanagement.cc) = e16a40abe9f4418d078a7505abb0688f782912f7
 SHA1 (patch-plugins_actions_findandreplace_findandreplace_cc) = 8861c1aab7e5fd4551af2019f28cc9e735fdcfdb
+SHA1 (patch-plugins_actions_spellchecking_spellchecking.cc) = 410cc155748a9d35ccbb2870cbd46b773d11a170
+SHA1 (patch-plugins_actions_spellchecking_spellchecking.h) = 73f3f34959c2e5d37e913caf3afed98f85cfee0b
 SHA1 (patch-plugins_subtitleformats_advancedsubstationalpha_advancedsubstationalpha.cc) = 813f2890b4fb5ab8802ddb75d978b60b13c1a92e
 SHA1 (patch-plugins_subtitleformats_mpsub_mpsub.cc) = 49f23c5d1e6b8ad8fab687019280bfb2a932c3d3
 SHA1 (patch-plugins_subtitleformats_substationalpha_substationalpha.cc) = a806c0b86530144dedff2415af1df57a262715d3
