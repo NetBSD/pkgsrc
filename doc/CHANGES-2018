@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4995 2018/12/02 07:45:12 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.4996 2018/12/02 08:35:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6960,3 +6960,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated shells/bash-completion to 2.8nb1 [wiz 2018-12-02]
 	Updated devel/dconf to 0.30.1 [wiz 2018-12-02]
 	Updated devel/pcre2 to 10.32 [wiz 2018-12-02]
+	Updated graphics/MesaLib18 to 18.2.5 [wiz 2018-12-02]
