@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4997 2018/12/02 09:06:32 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.4998 2018/12/02 09:11:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6962,3 +6962,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/pcre2 to 10.32 [wiz 2018-12-02]
 	Updated graphics/MesaLib18 to 18.2.5 [wiz 2018-12-02]
 	Updated net/wireshark to 2.6.4 [wiz 2018-12-02]
+	Updated graphics/py-cairo to 1.18.0 [wiz 2018-12-02]
