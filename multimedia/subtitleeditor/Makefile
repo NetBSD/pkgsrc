@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2018/11/14 22:22:07 kleink Exp $
+# $NetBSD: Makefile,v 1.44 2018/12/02 19:17:33 bsiegert Exp $
 
 DISTNAME=		subtitleeditor-0.30.0
-PKGREVISION=		30
+PKGREVISION=		31
 CATEGORIES=		multimedia
 #MASTER_SITES=		http://download.gna.org/subtitleeditor/0.30/
 
@@ -23,7 +23,7 @@ BUILDLINK_API_DEPENDS.glibmm+=	glibmm>=2.16.3
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-good/buildlink3.mk"
-.include "../../textproc/enchant/buildlink3.mk"
+.include "../../textproc/enchant2/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../textproc/libxml++/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtkmm+=	gtkmm>=2.12
