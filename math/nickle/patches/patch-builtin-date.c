@@ -1,9 +1,9 @@
-$NetBSD: patch-builtin-date.c,v 1.1 2018/01/03 12:12:07 jperkin Exp $
+$NetBSD: patch-builtin-date.c,v 1.2 2018/12/02 06:49:24 wiz Exp $
 
 Fix missing tm_zone on SunOS.
 Pull in upstream fix for missing timelocal().
 
---- builtin-date.c.orig	2017-11-14 10:30:06.000000000 +0000
+--- builtin-date.c.orig	2018-09-24 21:43:45.000000000 +0000
 +++ builtin-date.c
 @@ -76,7 +76,11 @@ to_date(struct tm *tm)
      BoxValueSet (box, 6, int_value(tm->tm_wday));
@@ -27,12 +27,3 @@ Pull in upstream fix for missing timelocal().
  }
  
  static Value
-@@ -143,7 +149,7 @@ do_Date_timelocal(Value v)
-     time_t	seconds;
- 
-     from_date(v, &tm);
--    seconds = timelocal(&tm);
-+    seconds = mktime(&tm);
-     RETURN(Reduce(NewSignedDigitInteger((signed_digit) seconds)));
- }
- 
