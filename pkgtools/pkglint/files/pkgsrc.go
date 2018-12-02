@@ -323,8 +323,8 @@ func (src *Pkgsrc) loadTools() {
 					tools.ParseToolLine(mkline, true, !mklines.indentation.IsConditional())
 
 				case "_BUILD_DEFS":
-					for _, bdvar := range mkline.ValueFields(mkline.Value()) {
-						src.AddBuildDefs(bdvar)
+					for _, buildDefsVar := range mkline.Fields() {
+						src.AddBuildDefs(buildDefsVar)
 					}
 				}
 			}

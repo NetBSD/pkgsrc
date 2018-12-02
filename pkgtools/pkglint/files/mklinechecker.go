@@ -162,7 +162,7 @@ func (ck MkLineChecker) checkDirective(forVars map[string]bool, ind *Indentation
 		ck.checkDirectiveFor(forVars, ind)
 
 	case directive == "undef":
-		for _, varname := range fields(args) {
+		for _, varname := range mkline.Fields() {
 			if forVars[varname] {
 				mkline.Notef("Using \".undef\" after a \".for\" loop is unnecessary.")
 			}
@@ -203,8 +203,8 @@ func (ck MkLineChecker) checkDirectiveFor(forVars map[string]bool, indentation *
 
 			if matches(forvar, `^[_a-z][_a-z0-9]*$`) {
 				// Fine.
-			} else if strings.IndexFunc(forvar, func(r rune) bool { return 'A' <= r && r <= 'Z' }) != -1 {
-				mkline.Warnf(".for variable names should not contain uppercase letters.")
+			} else if matches(forvar, `^[A-Z_a-z][0-9A-Z_a-z]*$`) {
+				mkline.Warnf("The variable name %q in the .for loop should not contain uppercase letters.", forvar)
 			} else {
 				mkline.Errorf("Invalid variable name %q.", forvar)
 			}
@@ -764,18 +764,18 @@ func (ck MkLineChecker) checkVaruseDeprecated(varuse *MkVarUse) {
 	}
 }
 
-func (ck MkLineChecker) checkVarassignDecreasingVersions(varname, value string) {
+func (ck MkLineChecker) checkVarassignDecreasingVersions() {
 	if trace.Tracing {
-		defer trace.Call2(varname, value)()
+		defer trace.Call0()()
 	}
 
 	mkline := ck.MkLine
-	strVersions := fields(value)
+	strVersions := mkline.Fields()
 	intVersions := make([]int, len(strVersions))
 	for i, strVersion := range strVersions {
 		iver, err := strconv.Atoi(strVersion)
 		if err != nil || !(iver > 0) {
-			mkline.Errorf("All values for %s must be positive integers.", varname)
+			mkline.Errorf("All values for %s must be positive integers.", mkline.Varname())
 			return
 		}
 		intVersions[i] = iver
@@ -783,7 +783,7 @@ func (ck MkLineChecker) checkVarassignDecreasingVersions(varname, value string) 
 
 	for i, ver := range intVersions {
 		if i > 0 && ver >= intVersions[i-1] {
-			mkline.Warnf("The values for %s should be in decreasing order.", varname)
+			mkline.Warnf("The values for %s should be in decreasing order.", mkline.Varname())
 			G.Explain(
 				"If they aren't, it may be possible that needless versions of",
 				"packages are installed.")
@@ -945,7 +945,7 @@ func (ck MkLineChecker) checkVarassignSpecific() {
 	}
 
 	if varname == "PYTHON_VERSIONS_ACCEPTED" {
-		ck.checkVarassignDecreasingVersions(varname, value)
+		ck.checkVarassignDecreasingVersions()
 	}
 
 	if mkline.VarassignComment() == "# defined" && !hasSuffix(varname, "_MK") && !hasSuffix(varname, "_COMMON") {
@@ -971,8 +971,8 @@ func (ck MkLineChecker) checkVarassignSpecific() {
 	}
 
 	if varname == "PKG_SKIP_REASON" && G.Mk.indentation.DependsOn("OPSYS") {
-		mkline.Notef("Consider defining NOT_FOR_PLATFORM instead of " +
-			"setting PKG_SKIP_REASON depending on ${OPSYS}.")
+		mkline.Notef("Consider setting NOT_FOR_PLATFORM instead of " +
+			"PKG_SKIP_REASON depending on ${OPSYS}.")
 	}
 }
 
@@ -1151,53 +1151,26 @@ func (ck MkLineChecker) checkDirectiveCond() {
 		return
 	}
 
-	checkEmpty := func(varuse *MkVarUse) {
-		varname := varuse.varname
-		if matches(varname, `^\$.*:[MN]`) {
-			mkline.Warnf("The empty() function takes a variable name as parameter, not a variable expression.")
-			G.Explain(
-				"Instead of empty(${VARNAME:Mpattern}), you should write either",
-				"of the following:",
-				"",
-				"\tempty(VARNAME:Mpattern)",
-				"\t${VARNAME:Mpattern} == \"\"",
-				"",
-				"Instead of !empty(${VARNAME:Mpattern}), you should write either",
-				"of the following:",
-				"",
-				"\t!empty(VARNAME:Mpattern)",
-				"\t${VARNAME:Mpattern}")
-		}
-
-		modifiers := varuse.modifiers
-		for _, modifier := range modifiers {
-			if m, positive, pattern := modifier.MatchMatch(); m && (positive || len(modifiers) == 1) {
-				ck.checkVartype(varname, opUseMatch, pattern, "")
-
-				vartype := G.Pkgsrc.VariableType(varname)
-				if matches(pattern, `^[\w-/]+$`) && vartype != nil && !vartype.IsConsideredList() {
-					mkline.Notef("%s should be compared using == instead of the :M or :N modifier without wildcards.", varname)
-					G.Explain(
-						"This variable has a single value, not a list of values.  Therefore",
-						"it feels strange to apply list operators like :M and :N onto it.",
-						"A more direct approach is to use the == and != operators.",
-						"",
-						"An entirely different case is when the pattern contains wildcards",
-						"like ^, *, $.  In such a case, using the :M or :N modifiers is",
-						"useful and preferred.")
-				}
-			}
-		}
-	}
-
 	checkCompareVarStr := func(varuse *MkVarUse, op string, value string) {
 		varname := varuse.varname
 		varmods := varuse.modifiers
-		if len(varmods) == 0 {
+		switch len(varmods) {
+		case 0:
 			ck.checkCompareVarStr(varname, op, value)
-		} else if len(varmods) == 1 {
+
+		case 1:
 			if m, _, _ := varmods[0].MatchMatch(); m && value != "" {
 				ck.checkVartype(varname, opUseMatch, value, "")
+			}
+
+		default:
+			// This case covers ${VAR:Mfilter:O:u} or similar uses in conditions.
+			// To check these properly, pkglint first needs to know the most common modifiers and how they interact.
+			// As of November 2018, the modifiers are not modeled.
+			// The following tracing statement makes it easy to discover these cases,
+			// in order to decide whether checking them is worthwhile.
+			if trace.Tracing {
+				trace.Stepf("checkCompareVarStr ${%s%s} %s %s", varuse.varname, varuse.Mod(), op, value)
 			}
 		}
 	}
@@ -1209,9 +1182,50 @@ func (ck MkLineChecker) checkDirectiveCond() {
 	}
 
 	cond.Walk(&MkCondCallback{
-		Empty:         checkEmpty,
+		Empty:         ck.checkDirectiveCondEmpty,
 		CompareVarStr: checkCompareVarStr,
 		VarUse:        checkVarUse})
+}
+
+// checkDirectiveCondEmpty checks a condition of the form empty(...) in an .if directive.
+func (ck MkLineChecker) checkDirectiveCondEmpty(varuse *MkVarUse) {
+	varname := varuse.varname
+	if matches(varname, `^\$.*:[MN]`) {
+		ck.MkLine.Warnf("The empty() function takes a variable name as parameter, not a variable expression.")
+		G.Explain(
+			"Instead of empty(${VARNAME:Mpattern}), you should write either",
+			"of the following:",
+			"",
+			"\tempty(VARNAME:Mpattern)",
+			"\t${VARNAME:Mpattern} == \"\"",
+			"",
+			"Instead of !empty(${VARNAME:Mpattern}), you should write either",
+			"of the following:",
+			"",
+			"\t!empty(VARNAME:Mpattern)",
+			"\t${VARNAME:Mpattern}")
+	}
+
+	modifiers := varuse.modifiers
+	for _, modifier := range modifiers {
+		if m, positive, pattern := modifier.MatchMatch(); m && (positive || len(modifiers) == 1) {
+			ck.checkVartype(varname, opUseMatch, pattern, "")
+
+			vartype := G.Pkgsrc.VariableType(varname)
+			if matches(pattern, `^[\w-/]+$`) && vartype != nil && !vartype.IsConsideredList() {
+				ck.MkLine.Notef("%s should be compared using %s instead of matching against %q.",
+					varname, ifelseStr(positive, "==", "!="), ":"+modifier.Text)
+				G.Explain(
+					"This variable has a single value, not a list of values.",
+					"Therefore it feels strange to apply list operators like :M and :N onto it.",
+					"A more direct approach is to use the == and != operators.",
+					"",
+					"An entirely different case is when the pattern contains wildcards like ^, *, $.",
+					"In such a case, using the :M or :N modifiers is useful and preferred.")
+			}
+		}
+	}
+
 }
 
 func (ck MkLineChecker) checkCompareVarStr(varname, op, value string) {
@@ -1226,6 +1240,17 @@ func (ck MkLineChecker) checkCompareVarStr(varname, op, value string) {
 	}
 }
 
+// CheckRelativePkgdir checks a reference from one pkgsrc package to another.
+// These references should always have the form ../../category/package.
+//
+// When used in DEPENDS or similar variables, these directories could theoretically
+// also be relative to the pkgsrc root, which would save a few keystrokes.
+// This, however, is not implemented in pkgsrc and suggestions regarding this topic
+// have not been made in the last two decades on the public mailing lists.
+// While being a bit redundant, the current scheme works well.
+//
+// When used in .include directives, the relative package directories must be written
+// with the leading ../.. anyway, so the benefit might not be too big at all.
 func (ck MkLineChecker) CheckRelativePkgdir(pkgdir string) {
 	if trace.Tracing {
 		defer trace.Call1(pkgdir)()
@@ -1233,8 +1258,9 @@ func (ck MkLineChecker) CheckRelativePkgdir(pkgdir string) {
 
 	mkline := ck.MkLine
 	ck.CheckRelativePath(pkgdir, true)
-	pkgdir = mkline.ResolveVarsInRelativePath(pkgdir, false)
+	pkgdir = mkline.ResolveVarsInRelativePath(pkgdir)
 
+	// XXX: Is the leading "./" realistic?
 	if m, otherpkgpath := match1(pkgdir, `^(?:\./)?\.\./\.\./([^/]+/[^/]+)$`); m {
 		if !fileExists(G.Pkgsrc.File(otherpkgpath + "/Makefile")) {
 			mkline.Errorf("There is no package in %q.", otherpkgpath)
@@ -1249,6 +1275,8 @@ func (ck MkLineChecker) CheckRelativePkgdir(pkgdir string) {
 	}
 }
 
+// CheckRelativePath checks a relative path that leads to the directory of another package
+// or to a subdirectory thereof or a file within there.
 func (ck MkLineChecker) CheckRelativePath(relativePath string, mustExist bool) {
 	if trace.Tracing {
 		defer trace.Call(relativePath, mustExist)()
@@ -1259,7 +1287,7 @@ func (ck MkLineChecker) CheckRelativePath(relativePath string, mustExist bool) {
 		mkline.Errorf("A main pkgsrc package must not depend on a pkgsrc-wip package.")
 	}
 
-	resolvedPath := mkline.ResolveVarsInRelativePath(relativePath, true)
+	resolvedPath := mkline.ResolveVarsInRelativePath(relativePath)
 	if containsVarRef(resolvedPath) {
 		return
 	}
@@ -1270,7 +1298,7 @@ func (ck MkLineChecker) CheckRelativePath(relativePath string, mustExist bool) {
 	}
 	if _, err := os.Stat(abs); err != nil {
 		if mustExist {
-			mkline.Errorf("%q does not exist.", resolvedPath)
+			mkline.Errorf("Relative path %q does not exist.", resolvedPath)
 		}
 		return
 	}
@@ -1286,5 +1314,6 @@ func (ck MkLineChecker) CheckRelativePath(relativePath string, mustExist bool) {
 		// For category Makefiles.
 	default:
 		mkline.Warnf("Invalid relative path %q.", relativePath)
+		// TODO: Explain this warning.
 	}
 }
