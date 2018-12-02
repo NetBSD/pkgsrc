@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.56 2018/10/26 18:09:39 maya Exp $
+$NetBSD: distinfo,v 1.57 2018/12/02 17:13:41 adam Exp $
 
-SHA1 (mkvtoolnix-28.2.0.tar.xz) = e54ee2ccc241ca3d21d7cc61daa934c51da798f0
-RMD160 (mkvtoolnix-28.2.0.tar.xz) = 903e89f5110e9eb472dbe3e16b6b7c369f2026e2
-SHA512 (mkvtoolnix-28.2.0.tar.xz) = 89c9890673a1755d203878b7cc656b44a0835bcb71f96f1f5d0f94b9bf651b95efb93c16601480f7c3c8abec16a5d655238705d84b54549ba094445236ab1efd
-Size (mkvtoolnix-28.2.0.tar.xz) = 6546844 bytes
-SHA1 (patch-build-config.in) = 89c67720f7886741dcabbbed88cfbfd31bf4ccc7
+SHA1 (mkvtoolnix-29.0.0.tar.xz) = c794cc9e37dc24207051c21eb8e7f4a2deef7cb6
+RMD160 (mkvtoolnix-29.0.0.tar.xz) = 174006d8e7aab417335c60bd168dc8698842689c
+SHA512 (mkvtoolnix-29.0.0.tar.xz) = bfb5e31fdd43dbb1c3a54a9b82af414abd43f8edad1cc87e5118f8c1781185470152163fda828303c58db97df27c8037b7fa64e2077c69e3204d5080f0248dae
+Size (mkvtoolnix-29.0.0.tar.xz) = 7051380 bytes
+SHA1 (patch-Rakefile) = bac8a1e581725e329079ab0acccd83795d707594
+SHA1 (patch-build-config.in) = a9072de691ee3e011b472280dd276a67f1799fac
