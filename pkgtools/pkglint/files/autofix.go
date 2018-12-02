@@ -303,6 +303,10 @@ func (fix *Autofix) Apply() {
 }
 
 func (fix *Autofix) Realign(mkline MkLine, newWidth int) {
+
+	// XXX: Check whether this method can be implemented as Custom fix.
+	// This complicated code should not be in the Autofix type.
+
 	fix.assertRealLine()
 	G.Assertf(mkline.IsMultiline(), "Line must be a multiline.")
 	G.Assertf(mkline.IsVarassign() || mkline.IsCommentedVarassign(), "Line must be a variable assignment.")
@@ -315,8 +319,7 @@ func (fix *Autofix) Realign(mkline MkLine, newWidth int) {
 	oldWidth := 0      // The minimum required indentation in the original lines.
 
 	{
-		// Parsing the continuation marker as variable value
-		// is cheating but works well.
+		// Parsing the continuation marker as variable value is cheating but works well.
 		text := strings.TrimSuffix(mkline.raw[0].orignl, "\n")
 		m, _, _, _, _, valueAlign, value, _, _ := MatchVarassign(text)
 		if m && value != "\\" {
