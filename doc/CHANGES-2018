@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4985 2018/12/02 00:49:06 leot Exp $
+$NetBSD: CHANGES-2018,v 1.4986 2018/12/02 01:58:03 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6950,3 +6950,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/libgit2 to 0.27.7 [wiz 2018-12-01]
 	Updated devel/py-pygit2 to 0.27.2 [wiz 2018-12-01]
 	Updated mail/fdm to 1.9nb3 [leot 2018-12-02]
+	Updated pkgtools/pkglint to 5.6.7 [rillig 2018-12-02]
