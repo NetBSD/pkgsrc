@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5014 2018/12/02 17:14:14 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5015 2018/12/02 19:36:07 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6983,3 +6983,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/jsoncpp to 1.8.4 [adam 2018-12-02]
 	Added textproc/fmtlib version 5.2.1 [adam 2018-12-02]
 	Updated multimedia/mkvtoolnix to 29.0.0 [adam 2018-12-02]
+	Updated www/bluefish to 2.2.10 [bsiegert 2018-12-02]
