@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2018/05/04 15:33:22 leot Exp $
+$NetBSD: distinfo,v 1.10 2018/12/02 00:48:46 leot Exp $
 
 SHA1 (fdm-1.9.tar.gz) = 818bf39418ae4b170b4c3aa7c852015bf4802d7a
 RMD160 (fdm-1.9.tar.gz) = f44d009ac29cdf244509ce032270758be7f4be32
@@ -6,4 +6,5 @@ SHA512 (fdm-1.9.tar.gz) = ec204e58a95b00f51912b572d25418f4c4161a53e0b8e42c7c887d
 Size (fdm-1.9.tar.gz) = 175815 bytes
 SHA1 (patch-Makefile.am) = 864d905906a0bd78a6beb95093300fba0f52f10c
 SHA1 (patch-configure.ac) = 745810f7b1fe7cf4295cf8b68a9c4757c6ce4386
+SHA1 (patch-connect.c) = ee95c91b2bbf37539a3c94e006e135c5c6c49f86
 SHA1 (patch-fdm.h) = 98d01387d0e17d782950571c1b25e8faf841649b
