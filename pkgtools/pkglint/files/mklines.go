@@ -87,7 +87,7 @@ func (mklines *MkLinesImpl) checkAll() {
 		return targets
 	}()
 
-	CheckLineRcsid(mklines.lines.Lines[0], `#[\t ]+`, "# ")
+	mklines.lines.CheckRcsID(0, `#[\t ]+`, "# ")
 
 	substContext := NewSubstContext()
 	var varalign VaralignBlock
@@ -114,7 +114,7 @@ func (mklines *MkLinesImpl) checkAll() {
 
 			switch mkline.Varcanon() {
 			case "PLIST_VARS":
-				ids := mkline.ValueSplit(resolveVariableRefs(mkline.Value()), "")
+				ids := mkline.ValueFields(resolveVariableRefs(mkline.Value()))
 				for _, id := range ids {
 					if !mklines.plistVarSkip && mklines.plistVarSet[id] == nil {
 						mkline.Warnf("%q is added to PLIST_VARS, but PLIST.%s is not defined in this file.", id, id)
@@ -234,7 +234,7 @@ func (mklines *MkLinesImpl) DetermineDefinedVariables() {
 			}
 
 		case "PLIST_VARS":
-			ids := mkline.ValueSplit(resolveVariableRefs(mkline.Value()), "")
+			ids := mkline.ValueFields(resolveVariableRefs(mkline.Value()))
 			for _, id := range ids {
 				if trace.Tracing {
 					trace.Step1("PLIST.%s is added to PLIST_VARS.", id)
@@ -269,7 +269,7 @@ func (mklines *MkLinesImpl) collectPlistVars() {
 		if mkline.IsVarassign() {
 			switch mkline.Varcanon() {
 			case "PLIST_VARS":
-				ids := mkline.ValueSplit(resolveVariableRefs(mkline.Value()), "")
+				ids := mkline.ValueFields(resolveVariableRefs(mkline.Value()))
 				for _, id := range ids {
 					if containsVarRef(id) {
 						mklines.plistVarSkip = true
@@ -333,12 +333,12 @@ func (mklines *MkLinesImpl) determineDocumentedVariables() {
 
 			commentLines++
 
-			parser := NewMkParser(mkline.Line, words[1], false)
+			parser := NewMkParser(nil, words[1], false)
 			varname := parser.Varname()
-			if hasSuffix(varname, ".") && parser.repl.AdvanceRegexp(`^<\w+>`) {
+			if hasSuffix(varname, ".") && parser.lexer.SkipRegexp(G.res.Compile(`^<\w+>`)) {
 				varname += "*"
 			}
-			parser.repl.AdvanceStr(":")
+			parser.lexer.SkipByte(':')
 
 			varbase := varnameBase(varname)
 			if varbase == strings.ToUpper(varbase) && matches(varbase, `[A-Z]`) && parser.EOF() {
@@ -376,7 +376,7 @@ func (mklines *MkLinesImpl) CheckRedundantVariables() {
 	scope.OnOverwrite = func(old, new MkLine) {
 		if isRelevant(old, new) {
 			old.Warnf("Variable %s is overwritten in %s.", new.Varname(), old.RefTo(new))
-			Explain(
+			G.Explain(
 				"The variable definition in this line does not have an effect since",
 				"it is overwritten elsewhere.  This typically happens because of a",
 				"typo (writing = instead of +=) or because the line that overwrites",

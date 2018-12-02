@@ -46,7 +46,7 @@ func (s *Suite) Test_ChecklinesPlist(c *check.C) {
 		"WARN: PLIST:14: Packages that install icon theme files should set ICON_THEMES.",
 		"ERROR: PLIST:15: Packages that install hicolor icons "+
 			"must include \"../../graphics/hicolor-icon-theme/buildlink3.mk\" in the Makefile.",
-		"ERROR: PLIST:18: Duplicate file name \"share/tzinfo\", already appeared in line 17.")
+		"ERROR: PLIST:18: Duplicate filename \"share/tzinfo\", already appeared in line 17.")
 }
 
 func (s *Suite) Test_ChecklinesPlist__empty(c *check.C) {
@@ -131,7 +131,7 @@ func (s *Suite) Test_plistLineSorter_Sort(c *check.C) {
 		"${PLIST.linux}${PLIST.x86_64}lib/lib-linux-x86_64.so", // Double condition, see graphics/graphviz
 		"lib/after.la",
 		"@exec echo \"after lib/after.la\"")
-	ck := &PlistChecker{nil, nil, "", Once{}}
+	ck := PlistChecker{nil, nil, "", Once{}}
 	plines := ck.NewLines(lines)
 
 	sorter1 := NewPlistLineSorter(plines)
@@ -288,11 +288,11 @@ func (s *Suite) Test_PlistChecker__remove_same_entries(c *check.C) {
 	ChecklinesPlist(lines)
 
 	t.CheckOutputLines(
-		"ERROR: ~/PLIST:2: Duplicate file name \"bin/true\", already appeared in line 3.",
-		"ERROR: ~/PLIST:4: Duplicate file name \"bin/true\", already appeared in line 3.",
-		"ERROR: ~/PLIST:5: Duplicate file name \"bin/true\", already appeared in line 3.",
+		"ERROR: ~/PLIST:2: Duplicate filename \"bin/true\", already appeared in line 3.",
+		"ERROR: ~/PLIST:4: Duplicate filename \"bin/true\", already appeared in line 3.",
+		"ERROR: ~/PLIST:5: Duplicate filename \"bin/true\", already appeared in line 3.",
 		"WARN: ~/PLIST:6: \"bin/false\" should be sorted before \"bin/true\".",
-		"ERROR: ~/PLIST:8: Duplicate file name \"bin/true\", already appeared in line 3.")
+		"ERROR: ~/PLIST:8: Duplicate filename \"bin/true\", already appeared in line 3.")
 
 	t.SetupCommandLine("-Wall", "--autofix")
 
@@ -513,7 +513,7 @@ func (s *Suite) Test_PlistLine_CheckTrailingWhitespace(c *check.C) {
 	ChecklinesPlist(lines)
 
 	t.CheckOutputLines(
-		"ERROR: ~/PLIST:2: pkgsrc does not support filenames ending in white-space.")
+		"ERROR: ~/PLIST:2: pkgsrc does not support filenames ending in whitespace.")
 }
 
 func (s *Suite) Test_PlistLine_CheckDirective(c *check.C) {
@@ -555,8 +555,8 @@ func (s *Suite) Test_plistLineSorter__unsortable(c *check.C) {
 
 	t.CheckOutputLines(
 		"TRACE: + ChecklinesPlist(\"~/PLIST\")",
-		"TRACE: 1 + CheckLineRcsid(\"@comment \", \"@comment \")",
-		"TRACE: 1 - CheckLineRcsid(\"@comment \", \"@comment \")",
+		"TRACE: 1 + (*LinesImpl).CheckRcsID(\"@comment \", \"@comment \")",
+		"TRACE: 1 - (*LinesImpl).CheckRcsID(\"@comment \", \"@comment \")",
 		"TRACE: 1   ~/PLIST:2: bin/program${OPSYS}: This line prevents pkglint from sorting the PLIST automatically.",
 		"TRACE: 1 + SaveAutofixChanges()",
 		"TRACE: 1 - SaveAutofixChanges()",

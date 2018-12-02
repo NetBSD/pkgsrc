@@ -2,6 +2,7 @@ package main
 
 import (
 	"gopkg.in/check.v1"
+	"strings"
 )
 
 func (s *Suite) Test_splitIntoShellTokens__line_continuation(c *check.C) {
@@ -85,6 +86,16 @@ func (s *Suite) Test_splitIntoShellTokens__varuse_with_embedded_space_and_other_
 	c.Check(rest, equals, "")
 }
 
+// Two shell variables, next to each other,
+// are two separate atoms but count as a single token.
+func (s *Suite) Test_splitIntoShellTokens__two_shell_variables(c *check.C) {
+	code := "echo $$i$$j"
+	words, rest := splitIntoShellTokens(dummyLine, code)
+
+	c.Check(words, deepEquals, []string{"echo", "$$i$$j"})
+	c.Check(rest, equals, "")
+}
+
 func (s *Suite) Test_splitIntoMkWords__semicolons(c *check.C) {
 	words, rest := splitIntoMkWords(dummyLine, "word1 word2;;;")
 
@@ -142,7 +153,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 	t.SetupTool("unzip", "UNZIP_CMD", AtRunTime)
 
 	checkShellCommandLine := func(shellCommand string) {
-		G.Mk = t.NewMkLines("fileName",
+		G.Mk = t.NewMkLines("filename",
 			"\t"+shellCommand)
 		shline := NewShellLine(G.Mk.mklines[0])
 
@@ -158,10 +169,10 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 	checkShellCommandLine("uname=`uname`; echo $$uname; echo; ${PREFIX}/bin/command")
 
 	t.CheckOutputLines(
-		"WARN: fileName:1: Unknown shell command \"uname\".",
-		"WARN: fileName:1: Please switch to \"set -e\" mode before using a semicolon (after \"uname=`uname`\") to separate commands.",
-		"WARN: fileName:1: Unknown shell command \"echo\".",
-		"WARN: fileName:1: Unknown shell command \"echo\".")
+		"WARN: filename:1: Unknown shell command \"uname\".",
+		"WARN: filename:1: Please switch to \"set -e\" mode before using a semicolon (after \"uname=`uname`\") to separate commands.",
+		"WARN: filename:1: Unknown shell command \"echo\".",
+		"WARN: filename:1: Unknown shell command \"echo\".")
 
 	t.SetupTool("echo", "", AtRunTime)
 	t.SetupVartypes()
@@ -169,39 +180,41 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 	checkShellCommandLine("echo ${PKGNAME:Q}") // vucQuotPlain
 
 	t.CheckOutputLines(
-		"WARN: fileName:1: PKGNAME may not be used in this file; it would be ok in Makefile, Makefile.*, *.mk.",
-		"NOTE: fileName:1: The :Q operator isn't necessary for ${PKGNAME} here.")
+		"WARN: filename:1: PKGNAME may not be used in this file; it would be ok in Makefile, Makefile.*, *.mk.",
+		"NOTE: filename:1: The :Q operator isn't necessary for ${PKGNAME} here.")
 
 	checkShellCommandLine("echo \"${CFLAGS:Q}\"") // vucQuotDquot
 
 	t.CheckOutputLines(
-		"WARN: fileName:1: Please don't use the :Q operator in double quotes.",
-		"WARN: fileName:1: CFLAGS may not be used in this file; "+
+		"WARN: filename:1: Please don't use the :Q operator in double quotes.",
+		"WARN: filename:1: CFLAGS may not be used in this file; "+
 			"it would be ok in Makefile, Makefile.common, options.mk, *.mk.",
-		"WARN: fileName:1: Please use ${CFLAGS:M*:Q} instead of ${CFLAGS:Q} "+
+		"WARN: filename:1: Please use ${CFLAGS:M*:Q} instead of ${CFLAGS:Q} "+
 			"and make sure the variable appears outside of any quoting characters.")
 
 	checkShellCommandLine("echo '${COMMENT:Q}'") // vucQuotSquot
 
 	t.CheckOutputLines(
-		"WARN: fileName:1: COMMENT may not be used in any file; it is a write-only variable.",
-		"WARN: fileName:1: Please move ${COMMENT:Q} outside of any quoting characters.")
+		"WARN: filename:1: COMMENT may not be used in any file; it is a write-only variable.",
+		"WARN: filename:1: Please move ${COMMENT:Q} outside of any quoting characters.")
 
 	checkShellCommandLine("echo target=$@ exitcode=$$? '$$' \"\\$$\"")
 
 	t.CheckOutputLines(
-		"WARN: fileName:1: Please use \"${.TARGET}\" instead of \"$@\".",
-		"WARN: fileName:1: The $? shell variable is often not available in \"set -e\" mode.")
+		"WARN: filename:1: Please use \"${.TARGET}\" instead of \"$@\".",
+		"WARN: filename:1: The $? shell variable is often not available in \"set -e\" mode.")
 
 	checkShellCommandLine("echo $$@")
 
 	t.CheckOutputLines(
-		"WARN: fileName:1: The $@ shell variable should only be used in double quotes.")
+		"WARN: filename:1: The $@ shell variable should only be used in double quotes.")
 
 	checkShellCommandLine("echo \"$$\"") // As seen by make(1); the shell sees: echo "$"
 
-	t.CheckOutputLines(
-		"WARN: fileName:1: Unescaped $ or strange shell variable found.")
+	// No warning about a possibly missed variable name.
+	// This occurs only rarely, and typically as part of a regular expression
+	// where it is used intentionally.
+	t.CheckOutputEmpty()
 
 	checkShellCommandLine("echo \"\\n\"")
 
@@ -219,7 +232,8 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 	checkShellCommandLine("${RUN} subdir=\"`unzip -c \"$$e\" install.rdf | awk '/re/ { print \"hello\" }'`\"")
 
 	t.CheckOutputLines(
-		"WARN: fileName:1: The exitcode of \"unzip\" at the left of the | operator is ignored.")
+		"WARN: filename:1: Double quotes inside backticks inside double quotes are error prone.",
+		"WARN: filename:1: The exitcode of \"unzip\" at the left of the | operator is ignored.")
 
 	// From mail/thunderbird/Makefile, rev. 1.159
 	checkShellCommandLine("" +
@@ -232,8 +246,9 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 		"done")
 
 	t.CheckOutputLines(
-		"WARN: fileName:1: XPI_FILES is used but not defined.",
-		"WARN: fileName:1: The exitcode of \"${UNZIP_CMD}\" at the left of the | operator is ignored.")
+		"WARN: filename:1: XPI_FILES is used but not defined.",
+		"WARN: filename:1: Double quotes inside backticks inside double quotes are error prone.",
+		"WARN: filename:1: The exitcode of \"${UNZIP_CMD}\" at the left of the | operator is ignored.")
 
 	// From x11/wxGTK28/Makefile
 	checkShellCommandLine("" +
@@ -244,25 +259,25 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 		"done")
 
 	t.CheckOutputLines(
-		"WARN: fileName:1: WRKSRC may not be used in this file; it would be ok in Makefile, Makefile.*, *.mk.",
-		"WARN: fileName:1: Unknown shell command \"[\".",
-		"WARN: fileName:1: Unknown shell command \"${TOOLS_PATH.msgfmt}\".")
+		"WARN: filename:1: WRKSRC may not be used in this file; it would be ok in Makefile, Makefile.*, *.mk.",
+		"WARN: filename:1: Unknown shell command \"[\".",
+		"WARN: filename:1: Unknown shell command \"${TOOLS_PATH.msgfmt}\".")
 
 	checkShellCommandLine("@cp from to")
 
 	t.CheckOutputLines(
-		"WARN: fileName:1: The shell command \"cp\" should not be hidden.")
+		"WARN: filename:1: The shell command \"cp\" should not be hidden.")
 
 	checkShellCommandLine("-cp from to")
 
 	t.CheckOutputLines(
-		"WARN: fileName:1: Using a leading \"-\" to suppress errors is deprecated.")
+		"WARN: filename:1: Using a leading \"-\" to suppress errors is deprecated.")
 
 	checkShellCommandLine("-${MKDIR} deeply/nested/subdir")
 
 	t.CheckOutputLines(
-		"NOTE: fileName:1: You don't need to use \"-\" before \"${MKDIR} deeply/nested/subdir\".",
-		"WARN: fileName:1: Using a leading \"-\" to suppress errors is deprecated.")
+		"NOTE: filename:1: You don't need to use \"-\" before \"${MKDIR} deeply/nested/subdir\".",
+		"WARN: filename:1: Using a leading \"-\" to suppress errors is deprecated.")
 
 	G.Pkg = NewPackage(t.File("category/pkgbase"))
 	G.Pkg.Plist.Dirs["share/pkgbase"] = true
@@ -271,15 +286,15 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 	checkShellCommandLine("${RUN} ${INSTALL_DATA_DIR} share/pkgbase ${PREFIX}/share/pkgbase")
 
 	t.CheckOutputLines(
-		"NOTE: fileName:1: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= share/pkgbase\" "+
+		"NOTE: filename:1: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= share/pkgbase\" "+
 			"instead of \"${INSTALL_DATA_DIR}\".",
-		"WARN: fileName:1: The INSTALL_*_DIR commands can only handle one directory at a time.")
+		"WARN: filename:1: The INSTALL_*_DIR commands can only handle one directory at a time.")
 
 	// A directory that is not found in the PLIST.
 	checkShellCommandLine("${RUN} ${INSTALL_DATA_DIR} ${PREFIX}/share/other")
 
 	t.CheckOutputLines(
-		"NOTE: fileName:1: You can use \"INSTALLATION_DIRS+= share/other\" instead of \"${INSTALL_DATA_DIR}\".")
+		"NOTE: filename:1: You can use \"INSTALLATION_DIRS+= share/other\" instead of \"${INSTALL_DATA_DIR}\".")
 
 	G.Pkg = nil
 
@@ -293,7 +308,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__strip(c *check.C) {
 	t := s.Init(c)
 
 	checkShellCommandLine := func(shellCommand string) {
-		G.Mk = t.NewMkLines("fileName",
+		G.Mk = t.NewMkLines("filename",
 			"\t"+shellCommand)
 
 		G.Mk.ForEach(func(mkline MkLine) {
@@ -305,8 +320,8 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__strip(c *check.C) {
 	checkShellCommandLine("${STRIP} executable")
 
 	t.CheckOutputLines(
-		"WARN: fileName:1: Unknown shell command \"${STRIP}\".",
-		"WARN: fileName:1: STRIP is used but not defined.")
+		"WARN: filename:1: Unknown shell command \"${STRIP}\".",
+		"WARN: filename:1: STRIP is used but not defined.")
 
 	t.SetupVartypes()
 
@@ -363,7 +378,7 @@ func (s *Suite) Test_ShellProgramChecker_checkPipeExitcode(c *check.C) {
 		"\t cat | right-side",
 		"\t cat | echo | right-side",
 		"\t echo | cat | right-side",
-		"\t sed s,s,s, fileName | right-side",
+		"\t sed s,s,s, filename | right-side",
 		"\t sed s,s,s < input | right-side",
 		"\t ./unknown | right-side",
 		"\t var=value | right-side",
@@ -404,7 +419,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__implementation(c *check.C)
 	t := s.Init(c)
 
 	t.SetupVartypes()
-	G.Mk = t.NewMkLines("fileName",
+	G.Mk = t.NewMkLines("filename",
 		"# dummy")
 	shline := NewShellLine(G.Mk.mklines[0])
 
@@ -419,13 +434,13 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__implementation(c *check.C)
 	G.Mk.ForEach(func(mkline MkLine) { shline.CheckWord(text, false, RunTime) })
 
 	t.CheckOutputLines(
-		"WARN: fileName:1: Unknown shell command \"echo\".")
+		"WARN: filename:1: Unknown shell command \"echo\".")
 
 	G.Mk.ForEach(func(mkline MkLine) { shline.CheckShellCommandLine(text) })
 
 	// No parse errors
 	t.CheckOutputLines(
-		"WARN: fileName:1: Unknown shell command \"echo\".")
+		"WARN: filename:1: Unknown shell command \"echo\".")
 }
 
 func (s *Suite) Test_ShellLine_CheckShellCommandLine__dollar_without_variable(c *check.C) {
@@ -433,7 +448,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__dollar_without_variable(c 
 
 	t.SetupVartypes()
 	t.SetupTool("pax", "", AtRunTime)
-	G.Mk = t.NewMkLines("fileName",
+	G.Mk = t.NewMkLines("filename",
 		"# dummy")
 	shline := NewShellLine(G.Mk.mklines[0])
 
@@ -457,11 +472,17 @@ func (s *Suite) Test_ShellLine_CheckWord(c *check.C) {
 
 	checkWord("${${list}}", false)
 
-	t.CheckOutputEmpty() // No warning for variables that are completely indirect.
+	// No warning for the outer variable since it is completely indirect.
+	// The inner variable ${list} must still be defined, though.
+	t.CheckOutputLines(
+		"WARN: dummy.mk:1: list is used but not defined.",
+		"WARN: dummy.mk:1: list is used but not defined.")
 
 	checkWord("${SED_FILE.${id}}", false)
 
-	t.CheckOutputEmpty() // No warning for variables that are partly indirect.
+	// No warning for variables that are partly indirect.
+	t.CheckOutputLines(
+		"WARN: dummy.mk:1: id is used but not defined.")
 
 	// The unquoted $@ takes a different code path in pkglint than the quoted $@.
 	checkWord("$@", false)
@@ -508,7 +529,7 @@ func (s *Suite) Test_ShellLine_CheckWord(c *check.C) {
 func (s *Suite) Test_ShellLine_CheckWord__dollar_without_variable(c *check.C) {
 	t := s.Init(c)
 
-	shline := t.NewShellLine("fileName", 1, "# dummy")
+	shline := t.NewShellLine("filename", 1, "# dummy")
 
 	shline.CheckWord("/.*~$$//g", false, RunTime) // Typical argument to pax(1).
 
@@ -519,50 +540,51 @@ func (s *Suite) Test_ShellLine_CheckWord__backslash_plus(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupTool("find", "FIND", AtRunTime)
-	shline := t.NewShellLine("fileName", 1, "\tfind . -exec rm -rf {} \\+")
+	shline := t.NewShellLine("filename", 1, "\tfind . -exec rm -rf {} \\+")
 
 	shline.CheckShellCommandLine(shline.mkline.ShellCommand())
 
-	// FIXME: A backslash before any other character than "\` keeps its original meaning.
-	t.CheckOutputLines(
-		"WARN: fileName:1: Pkglint parse error in ShellLine.CheckWord at \"\\\\+\" (quoting=plain), rest: \\+")
+	// A backslash before any other character than " \ ` is discarded by the parser.
+	t.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_ShellLine_CheckWord__squot_dollar(c *check.C) {
 	t := s.Init(c)
 
-	shline := t.NewShellLine("fileName", 1, "\t'$")
+	shline := t.NewShellLine("filename", 1, "\t'$")
 
 	shline.CheckWord(shline.mkline.ShellCommand(), false, RunTime)
 
 	// FIXME: Should be parsed correctly. Make passes the dollar through (probably),
 	// and the shell parser should complain about the unfinished string literal.
 	t.CheckOutputLines(
-		"WARN: fileName:1: Pkglint parse error in ShellLine.CheckWord at \"'$\" (quoting=s), rest: $")
+		"WARN: filename:1: Pkglint parse error in ShTokenizer.ShAtom at \"$\" (quoting=s).",
+		"WARN: filename:1: Pkglint parse error in ShellLine.CheckWord at \"'$\" (quoting=s), rest: $")
 }
 
 func (s *Suite) Test_ShellLine_CheckWord__dquot_dollar(c *check.C) {
 	t := s.Init(c)
 
-	shline := t.NewShellLine("fileName", 1, "\t\"$")
+	shline := t.NewShellLine("filename", 1, "\t\"$")
 
 	shline.CheckWord(shline.mkline.ShellCommand(), false, RunTime)
 
 	// FIXME: Should be parsed correctly. Make passes the dollar through (probably),
 	// and the shell parser should complain about the unfinished string literal.
 	t.CheckOutputLines(
-		"WARN: fileName:1: Pkglint parse error in ShellLine.CheckWord at \"\\\"$\" (quoting=d), rest: $")
+		"WARN: filename:1: Pkglint parse error in ShTokenizer.ShAtom at \"$\" (quoting=d).",
+		"WARN: filename:1: Pkglint parse error in ShellLine.CheckWord at \"\\\"$\" (quoting=d), rest: $")
 }
 
 func (s *Suite) Test_ShellLine_CheckWord__dollar_subshell(c *check.C) {
 	t := s.Init(c)
 
-	shline := t.NewShellLine("fileName", 1, "\t$$(echo output)")
+	shline := t.NewShellLine("filename", 1, "\t$$(echo output)")
 
 	shline.CheckWord(shline.mkline.ShellCommand(), false, RunTime)
 
 	t.CheckOutputLines(
-		"WARN: fileName:1: Invoking subshells via $(...) is not portable enough.")
+		"WARN: filename:1: Invoking subshells via $(...) is not portable enough.")
 }
 
 func (s *Suite) Test_ShellLine_CheckWord__PKGMANDIR(c *check.C) {
@@ -585,7 +607,7 @@ func (s *Suite) Test_ShellLine_CheckWord__PKGMANDIR(c *check.C) {
 func (s *Suite) Test_ShellLine_unescapeBackticks__unfinished(c *check.C) {
 	t := s.Init(c)
 
-	mklines := t.NewMkLines("fileName.mk",
+	mklines := t.NewMkLines("filename.mk",
 		MkRcsID,
 		"",
 		"pre-configure:",
@@ -599,30 +621,64 @@ func (s *Suite) Test_ShellLine_unescapeBackticks__unfinished(c *check.C) {
 
 	// FIXME: Mention the unfinished backquote.
 	t.CheckOutputLines(
-		"WARN: fileName.mk:4: Pkglint ShellLine.CheckShellCommand: parse error at []string{\"\"}",
-		"WARN: fileName.mk:5: Pkglint ShellLine.CheckShellCommand: parse error at []string{\"echo\"}")
+		"WARN: filename.mk:4: Pkglint ShellLine.CheckShellCommand: parse error at []string{\"\"}",
+		"WARN: filename.mk:5: Pkglint ShellLine.CheckShellCommand: parse error at []string{\"echo\"}")
 }
 
 func (s *Suite) Test_ShellLine_unescapeBackticks__unfinished_direct(c *check.C) {
 	t := s.Init(c)
 
+	mkline := t.NewMkLine("dummy.mk", 123, "\t# shell command")
+
 	// This call is unrealistic. It doesn't happen in practice, and this
 	// direct, forcing test is only to reach the code coverage.
-	NewShellLine(dummyMkLine).unescapeBackticks(
-		"dummy",
-		G.NewPrefixReplacer(""),
-		shqBackt)
+	atoms := []*ShAtom{
+		NewShAtom(shtText, "`", shqBackt)}
+	NewShellLine(mkline).
+		unescapeBackticks(&atoms, shqBackt)
 
 	t.CheckOutputLines(
-		"ERROR: Unfinished backquotes: ")
+		"ERROR: dummy.mk:123: Unfinished backticks after \"\".")
 }
 
 func (s *Suite) Test_ShellLine_variableNeedsQuoting(c *check.C) {
+
+	test := func(shVarname string, expected bool) {
+		c.Check((*ShellLine).variableNeedsQuoting(nil, shVarname), equals, expected)
+	}
+
+	test("#", false) // A length is always an integer.
+	test("?", false) // The exit code is always an integer.
+	test("$", false) // The PID is always an integer.
+
+	// In most cases, file and directory names don't contain special characters,
+	// and if they do, the package will probably not build. Therefore pkglint
+	// doesn't require them to be quoted, but doing so does not hurt.
+	test("d", false)    // Typically used for directories.
+	test("f", false)    // Typically used for files.
+	test("i", false)    // Typically used for literal values without special characters.
+	test("id", false)   // Identifiers usually don't use special characters.
+	test("dir", false)  // See d above.
+	test("file", false) // See f above.
+	test("src", false)  // Typically used when copying files or directories.
+	test("dst", false)  // Typically used when copying files or directories.
+
+	test("bindir", false) // A typical GNU-style directory.
+	test("mandir", false) // A typical GNU-style directory.
+	test("prefix", false) //
+
+	test("bindirs", true) // A list of directories is typically separated by spaces.
+	test("var", true)     // Other variables are unknown, so they should be quoted.
+	test("0", true)       // The program name may contain special characters when given as full path.
+	test("1", true)       // Command line arguments can be arbitrary strings.
+}
+
+func (s *Suite) Test_ShellLine_variableNeedsQuoting__integration(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupVartypes()
 	t.SetupTool("cp", "", AtRunTime)
-	mklines := t.NewMkLines("fileName.mk",
+	mklines := t.NewMkLines("filename.mk",
 		MkRcsID,
 		"",
 		// It's a bit silly to use shell variables in CONFIGURE_ARGS,
@@ -636,7 +692,7 @@ func (s *Suite) Test_ShellLine_variableNeedsQuoting(c *check.C) {
 	// Quoting check is currently disabled for real shell commands.
 	// See ShellLine.CheckShellCommand, spc.checkWord.
 	t.CheckOutputLines(
-		"WARN: fileName.mk:3: Unquoted shell variable \"target\".")
+		"WARN: filename.mk:3: Unquoted shell variable \"target\".")
 }
 
 func (s *Suite) Test_ShellLine_CheckShellCommandLine__echo(c *check.C) {
@@ -644,9 +700,9 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__echo(c *check.C) {
 
 	echo := t.SetupTool("echo", "ECHO", AtRunTime)
 	echo.MustUseVarForm = true
-	G.Mk = t.NewMkLines("fileName",
+	G.Mk = t.NewMkLines("filename",
 		"# dummy")
-	mkline := t.NewMkLine("fileName", 3, "# dummy")
+	mkline := t.NewMkLine("filename", 3, "# dummy")
 
 	MkLineChecker{mkline}.checkText("echo \"hello, world\"")
 
@@ -655,7 +711,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__echo(c *check.C) {
 	NewShellLine(mkline).CheckShellCommandLine("echo \"hello, world\"")
 
 	t.CheckOutputLines(
-		"WARN: fileName:3: Please use \"${ECHO}\" instead of \"echo\".")
+		"WARN: filename:3: Please use \"${ECHO}\" instead of \"echo\".")
 }
 
 func (s *Suite) Test_ShellLine_CheckShellCommandLine__shell_variables(c *check.C) {
@@ -697,21 +753,21 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__shell_variables(c *check.C
 func (s *Suite) Test_ShellLine_checkInstallCommand(c *check.C) {
 	t := s.Init(c)
 
-	G.Mk = t.NewMkLines("fileName",
+	G.Mk = t.NewMkLines("filename",
 		"# dummy")
 	G.Mk.target = "do-install"
 
-	shline := t.NewShellLine("fileName", 1, "\tdummy")
+	shline := t.NewShellLine("filename", 1, "\tdummy")
 
 	shline.checkInstallCommand("sed")
 
 	t.CheckOutputLines(
-		"WARN: fileName:1: The shell command \"sed\" should not be used in the install phase.")
+		"WARN: filename:1: The shell command \"sed\" should not be used in the install phase.")
 
 	shline.checkInstallCommand("cp")
 
 	t.CheckOutputLines(
-		"WARN: fileName:1: ${CP} should not be used to install files.")
+		"WARN: filename:1: ${CP} should not be used to install files.")
 }
 
 func (s *Suite) Test_splitIntoMkWords(c *check.C) {
@@ -739,7 +795,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__sed_and_mv(c *check.C) {
 	t.SetupVartypes()
 	t.SetupTool("sed", "SED", AtRunTime)
 	t.SetupTool("mv", "MV", AtRunTime)
-	shline := t.NewShellLine("Makefile", 85, "\t${RUN} ${SED} 's,#,// comment:,g' fileName > fileName.tmp; ${MV} fileName.tmp fileName")
+	shline := t.NewShellLine("Makefile", 85, "\t${RUN} ${SED} 's,#,// comment:,g' filename > filename.tmp; ${MV} filename.tmp filename")
 
 	shline.CheckShellCommandLine(shline.mkline.ShellCommand())
 
@@ -813,34 +869,123 @@ func (s *Suite) Test_ShellLine__shell_comment_with_line_continuation(c *check.C)
 		"WARN: ~/Makefile:3--4: A shell comment does not stop at the end of line.")
 }
 
+func (s *Suite) Test_ShellLine_checkWordQuoting(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupVartypes()
+	t.SetupTool("grep", "GREP", AtRunTime)
+
+	test := func(lineno int, input string) {
+		shline := t.NewShellLine("module.mk", lineno, "\t"+input)
+
+		shline.checkWordQuoting(shline.mkline.ShellCommand(), true, RunTime)
+	}
+
+	test(101, "socklen=`${GREP} 'expr' ${WRKSRC}/config.h`")
+
+	test(102, "s,$$from,$$to,")
+
+	// This variable is typically defined by GNU Configure,
+	// which cannot handle directories with special characters.
+	// Therefore using it unquoted is considered safe.
+	test(103, "${PREFIX}/$$bindir/program")
+
+	test(104, "$$@")
+
+	// TODO: Add separate tests for "set +e" and "set -e".
+	test(105, "$$?")
+
+	test(106, "$$(cat /bin/true)")
+
+	test(107, "\"$$\"")
+
+	test(108, "$$$$")
+
+	// TODO: The $ variable in line 108 doesn't need quoting.
+	t.CheckOutputLines(
+		"WARN: module.mk:102: Unquoted shell variable \"from\".",
+		"WARN: module.mk:102: Unquoted shell variable \"to\".",
+		"WARN: module.mk:104: The $@ shell variable should only be used in double quotes.",
+		"WARN: module.mk:105: The $? shell variable is often not available in \"set -e\" mode.",
+		"WARN: module.mk:106: Invoking subshells via $(...) is not portable enough.")
+}
+
 func (s *Suite) Test_ShellLine_unescapeBackticks(c *check.C) {
 	t := s.Init(c)
 
-	shline := t.NewShellLine("dummy.mk", 13, "# dummy")
-	// foobar="`echo \"foo   bar\" "\ " "three"`"
-	text := "foobar=\"`echo \\\"foo   bar\\\" \"\\ \" \"three\"`\""
-	repl := G.NewPrefixReplacer(text)
-	repl.AdvanceStr("foobar=\"`")
+	test := func(lineno int, input string, expectedOutput string, expectedRest string) {
+		shline := t.NewShellLine("dummy.mk", lineno, "# dummy")
 
-	backtCommand, newQuoting := shline.unescapeBackticks(text, repl, shqDquotBackt)
+		tok := NewShTokenizer(nil, input, false)
+		atoms := tok.ShAtoms()
 
-	c.Check(backtCommand, equals, "echo \"foo   bar\" \"\\ \" \"three\"")
-	c.Check(newQuoting, equals, shqDquot)
-	c.Check(repl.Rest(), equals, "\"")
+		// Set up the correct quoting mode for the test by skipping
+		// uninteresting atoms at the beginning.
+		q := shqPlain
+		for atoms[0].MkText != "`" {
+			q = atoms[0].Quoting
+			atoms = atoms[1:]
+		}
+		c.Check(tok.Rest(), equals, "")
+
+		backtCommand := shline.unescapeBackticks(&atoms, q)
+
+		var actualRest strings.Builder
+		for _, atom := range atoms {
+			actualRest.WriteString(atom.MkText)
+		}
+
+		c.Check(backtCommand, equals, expectedOutput)
+		c.Check(actualRest.String(), equals, expectedRest)
+	}
+
+	// The 1xx test cases are in shqPlain mode.
+
+	test(100, "`echo`end", "echo", "end")
+	test(101, "`echo $$var`end", "echo $$var", "end")
+	test(102, "``end", "", "end")
+	test(103, "`echo \"hello\"`end", "echo \"hello\"", "end")
+	test(104, "`echo 'hello'`end", "echo 'hello'", "end")
+	test(105, "`echo '\\\\\\\\'`end", "echo '\\\\'", "end")
+
+	// Only the characters " $ ` \ are unescaped. All others stay the same.
+	test(120, "`echo '\\n'`end", "echo '\\n'", "end")
+	test(121, "\tsocklen=`${GREP} 'expr' ${WRKSRC}/config.h`", "${GREP} 'expr' ${WRKSRC}/config.h", "")
+
+	// TODO: Add more details regarding which backslash is meant.
+	t.CheckOutputLines(
+		"WARN: dummy.mk:120: Backslashes should be doubled inside backticks.")
+
+	// The 2xx test cases are in shqDquot mode.
+
+	test(200, "\"`echo`\"", "echo", "\"")
+	test(201, "\"`echo \"\"`\"", "echo \"\"", "\"")
 
 	t.CheckOutputLines(
-		"WARN: dummy.mk:13: Backslashes should be doubled inside backticks.")
+		"WARN: dummy.mk:201: Double quotes inside backticks inside double quotes are error prone.")
+
+	// varname="`echo \"one   two\" "\ " "three"`"
+	test(202,
+		"varname=\"`echo \\\"one   two\\\" \"\\ \" \"three\"`\"",
+		"echo \"one   two\" \"\\ \" \"three\"",
+		"\"")
+
+	// TODO: Add more details regarding which backslash and backtick is meant.
+	t.CheckOutputLines(
+		"WARN: dummy.mk:202: Backslashes should be doubled inside backticks.",
+		"WARN: dummy.mk:202: Double quotes inside backticks inside double quotes are error prone.",
+		"WARN: dummy.mk:202: Double quotes inside backticks inside double quotes are error prone.")
 }
 
 func (s *Suite) Test_ShellLine_unescapeBackticks__dquotBacktDquot(c *check.C) {
 	t := s.Init(c)
 
-	mkline := t.NewMkLine("dummy.mk", 13, "\t var=\"`\"\"`\"")
+	t.SetupTool("echo", "", AtRunTime)
+	mkline := t.NewMkLine("dummy.mk", 13, "\t var=\"`echo \"\"`\"")
 
 	MkLineChecker{mkline}.Check()
 
 	t.CheckOutputLines(
-		"WARN: dummy.mk:13: Double quotes inside backticks inside double quotes are error prone.",
 		"WARN: dummy.mk:13: Double quotes inside backticks inside double quotes are error prone.")
 }
 
@@ -1157,6 +1302,7 @@ func (s *Suite) Test_ShellProgramChecker_canFail(c *check.C) {
 
 	t.SetupVartypes()
 	t.SetupTool("echo", "", AtRunTime)
+	t.SetupTool("env", "", AtRunTime)
 	t.SetupTool("grep", "GREP", AtRunTime)
 	t.SetupTool("sed", "", AtRunTime)
 	t.SetupTool("touch", "", AtRunTime)
@@ -1178,7 +1324,8 @@ func (s *Suite) Test_ShellProgramChecker_canFail(c *check.C) {
 		"\techo 'starting'; echo 'done.'",
 		"\techo 'logging' > log; echo 'done.'",
 		"\techo 'to stderr' 1>&2; echo 'done.'",
-		"\techo 'hello' | tr -d 'aeiou'")
+		"\techo 'hello' | tr -d 'aeiou'",
+		"\tenv | grep '^PATH='")
 
 	mklines.Check()
 

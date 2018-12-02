@@ -140,10 +140,13 @@ func (vt *Vartype) IsShell() bool {
 	return false
 }
 
-// IsBasicSafe returns whether the basic vartype consists only of
-// characters that don't need escaping in most contexts, like A-Za-z0-9-_.
-func (vt *Vartype) IsBasicSafe() bool {
-	switch vt.basicType {
+// NeedsQ returns whether variables of this type need the :Q
+// modifier to be safely embedded in other variables or shell programs.
+//
+// Variables that can consists only of characters like A-Za-z0-9-._
+// don't need the :Q modifier. All others do, for safety reasons.
+func (bt *BasicType) NeedsQ() bool {
+	switch bt {
 	case BtBuildlinkDepmethod,
 		BtCategory,
 		BtDistSuffix,
@@ -172,9 +175,9 @@ func (vt *Vartype) IsBasicSafe() bool {
 		BtWrkdirSubdirectory,
 		BtYesNo,
 		BtYesNoIndirectly:
-		return true
+		return false
 	}
-	return false
+	return !bt.IsEnum()
 }
 
 func (vt *Vartype) IsPlainString() bool {
@@ -213,7 +216,7 @@ var (
 	BtDistSuffix             = &BasicType{"DistSuffix", (*VartypeCheck).DistSuffix}
 	BtEmulPlatform           = &BasicType{"EmulPlatform", (*VartypeCheck).EmulPlatform}
 	BtFetchURL               = &BasicType{"FetchURL", (*VartypeCheck).FetchURL}
-	BtFileName               = &BasicType{"FileName", (*VartypeCheck).FileName}
+	BtFileName               = &BasicType{"Filename", (*VartypeCheck).Filename}
 	BtFileMask               = &BasicType{"FileMask", (*VartypeCheck).FileMask}
 	BtFileMode               = &BasicType{"FileMode", (*VartypeCheck).FileMode}
 	BtGccReqd                = &BasicType{"GccReqd", (*VartypeCheck).GccReqd}
@@ -230,7 +233,7 @@ var (
 	BtOption                 = &BasicType{"Option", (*VartypeCheck).Option}
 	BtPathlist               = &BasicType{"Pathlist", (*VartypeCheck).Pathlist}
 	BtPathmask               = &BasicType{"PathMask", (*VartypeCheck).PathMask}
-	BtPathname               = &BasicType{"PathName", (*VartypeCheck).PathName}
+	BtPathname               = &BasicType{"Pathname", (*VartypeCheck).Pathname}
 	BtPerl5Packlist          = &BasicType{"Perl5Packlist", (*VartypeCheck).Perl5Packlist}
 	BtPerms                  = &BasicType{"Perms", (*VartypeCheck).Perms}
 	BtPkgName                = &BasicType{"Pkgname", (*VartypeCheck).Pkgname}
@@ -242,7 +245,6 @@ var (
 	BtRelativePkgDir         = &BasicType{"RelativePkgDir", (*VartypeCheck).RelativePkgDir}
 	BtRelativePkgPath        = &BasicType{"RelativePkgPath", (*VartypeCheck).RelativePkgPath}
 	BtRestricted             = &BasicType{"Restricted", (*VartypeCheck).Restricted}
-	BtSedCommand             = &BasicType{"SedCommand", (*VartypeCheck).SedCommand}
 	BtSedCommands            = &BasicType{"SedCommands", (*VartypeCheck).SedCommands}
 	BtShellCommand           = &BasicType{"ShellCommand", nil}
 	BtShellCommands          = &BasicType{"ShellCommands", nil}

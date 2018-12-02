@@ -225,7 +225,7 @@ func (ck *Buildlink3Checker) checkVaruseInPkgbase(pkgbase string, pkgbaseLine Mk
 	}
 
 	if warned {
-		Explain(
+		G.Explain(
 			"The identifiers in the BUILDLINK_TREE variable should be plain",
 			"strings that do not refer to any variable.",
 			"",

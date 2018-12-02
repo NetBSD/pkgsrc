@@ -84,7 +84,16 @@ type Tools struct {
 	byName    map[string]*Tool // "sed" => tool
 	byVarname map[string]*Tool // "GREP_CMD" => tool
 	fallback  *Tools
-	SeenPrefs bool // Determines the effect of adding the tool to USE_TOOLS
+
+	// Determines the effect of adding the tool to USE_TOOLS.
+	//
+	// As long as bsd.prefs.mk has definitely not been included by the current file,
+	// tools added to USE_TOOLS are available at load time, but only after bsd.prefs.mk
+	// has been included.
+	//
+	// Adding a tool to USE_TOOLS _after_ bsd.prefs.mk has been included, on the other
+	// hand, only makes the tool available at run time.
+	SeenPrefs bool
 }
 
 func NewTools(traceName string) *Tools {
@@ -116,14 +125,14 @@ func (tr *Tools) Define(name, varname string, mkline MkLine) *Tool {
 }
 
 func (tr *Tools) def(name, varname string, mustUseVarForm bool, validity Validity) *Tool {
-	fresh := &Tool{name, varname, mustUseVarForm, validity}
+	fresh := Tool{name, varname, mustUseVarForm, validity}
 
 	tool := tr.byName[name]
 	if tool == nil {
-		tool = fresh
+		tool = &fresh
 		tr.byName[name] = tool
 	} else {
-		tr.merge(tool, fresh)
+		tr.merge(tool, &fresh)
 	}
 
 	if tr.fallback != nil {
@@ -221,7 +230,7 @@ func (tr *Tools) ParseToolLine(mkline MkLine, fromInfrastructure bool, addToUseT
 		}
 
 	case mkline.IsInclude():
-		if IsPrefs(mkline.IncludeFile()) {
+		if IsPrefs(mkline.IncludedFile()) {
 			tr.SeenPrefs = true
 		}
 	}
