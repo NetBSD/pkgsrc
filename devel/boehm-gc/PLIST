@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2016/08/09 12:50:39 mef Exp $
+@comment $NetBSD: PLIST,v 1.18 2018/12/02 11:06:11 wiz Exp $
 include/gc.h
 include/gc/cord.h
 include/gc/cord_pos.h
@@ -50,7 +50,6 @@ share/doc/gc/README.win32
 share/doc/gc/README.win64
 share/doc/gc/debugging.html
 share/doc/gc/finalization.html
-share/doc/gc/gc.man
 share/doc/gc/gcdescr.html
 share/doc/gc/gcinterface.html
 share/doc/gc/leak.html
