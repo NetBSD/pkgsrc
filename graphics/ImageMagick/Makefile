@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.251 2018/11/14 22:21:34 kleink Exp $
+# $NetBSD: Makefile,v 1.252 2018/12/02 10:20:20 wiz Exp $
 
-PKGREVISION= 2
 .include "Makefile.common"
 
 PKGNAME=	ImageMagick-${DISTVERSION}
@@ -46,11 +45,9 @@ CFLAGS+=		-O
 
 PKG_SYSCONFSUBDIR=	ImageMagick-${IM_MAJOR_LIB_VER}
 EGDIR=		${PREFIX}/share/examples/ImageMagick
-CONF_FILES=	${EGDIR}/coder.xml ${PKG_SYSCONFDIR}/coder.xml
 CONF_FILES+=	${EGDIR}/colors.xml ${PKG_SYSCONFDIR}/colors.xml
 CONF_FILES+=	${EGDIR}/delegates.xml ${PKG_SYSCONFDIR}/delegates.xml
 CONF_FILES+=	${EGDIR}/log.xml ${PKG_SYSCONFDIR}/log.xml
-CONF_FILES+=	${EGDIR}/magic.xml ${PKG_SYSCONFDIR}/magic.xml
 CONF_FILES+=	${EGDIR}/mime.xml ${PKG_SYSCONFDIR}/mime.xml
 CONF_FILES+=	${EGDIR}/policy.xml ${PKG_SYSCONFDIR}/policy.xml
 CONF_FILES+=	${EGDIR}/thresholds.xml ${PKG_SYSCONFDIR}/thresholds.xml
