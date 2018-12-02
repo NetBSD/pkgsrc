@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.180 2018/11/24 19:14:09 nia Exp $
+# $NetBSD: Makefile,v 1.181 2018/12/02 21:51:06 bsiegert Exp $
 
 .include 	"Makefile.common"
 DISTNAME=	abiword-${ABIVERSION}
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://www.abiword.com/downloads/abiword/${PKGVERSION_NOREV}/source/
 
@@ -50,7 +51,7 @@ BUILDLINK_TRANSFORM+=	opt:-no-undefined:-Wl,--no-undefined
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../textproc/enchant/buildlink3.mk"
+.include "../../textproc/enchant2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/redland/buildlink3.mk"
 .include "../../time/libical/buildlink3.mk"
