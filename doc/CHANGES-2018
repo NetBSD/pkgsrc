@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5012 2018/12/02 16:24:20 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5013 2018/12/02 16:38:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6978,3 +6978,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/boost-headers to 1.68.0nb1 [wiz 2018-12-02]
 	Updated textproc/py-JWT to 1.7.0 [adam 2018-12-02]
 	Updated mail/py-authres to 1.1.1 [adam 2018-12-02]
+	Updated net/py-softlayer to 5.6.4 [adam 2018-12-02]
+	Updated www/py-livereload to 2.6.0 [adam 2018-12-02]
