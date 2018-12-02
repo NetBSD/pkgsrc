@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2018/10/19 20:28:25 leot Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/12/02 07:06:20 wiz Exp $
 etc/profile.d/bash_completion.sh
+lib/pkgconfig/bash-completion.pc
 share/bash-completion/bash_completion
 share/bash-completion/completions/2to3
 share/bash-completion/completions/7z
@@ -659,5 +660,3 @@ share/bash-completion/helpers/perl
 share/bash-completion/helpers/python
 share/cmake/bash-completion/bash-completion-config-version.cmake
 share/cmake/bash-completion/bash-completion-config.cmake
-share/pkgconfig/bash-completion.pc
-@pkgdir share/bash-completion.d
