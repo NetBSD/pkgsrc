@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5013 2018/12/02 16:38:41 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5014 2018/12/02 17:14:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6980,3 +6980,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/py-authres to 1.1.1 [adam 2018-12-02]
 	Updated net/py-softlayer to 5.6.4 [adam 2018-12-02]
 	Updated www/py-livereload to 2.6.0 [adam 2018-12-02]
+	Updated textproc/jsoncpp to 1.8.4 [adam 2018-12-02]
+	Added textproc/fmtlib version 5.2.1 [adam 2018-12-02]
+	Updated multimedia/mkvtoolnix to 29.0.0 [adam 2018-12-02]
