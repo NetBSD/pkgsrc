@@ -153,9 +153,9 @@ term : term separator and_or {
 
 for_clause : tkFOR tkWORD linebreak do_group {
 	args := NewShToken("\"$$@\"",
-		&ShAtom{shtWord, "\"",shqDquot, nil},
-		&ShAtom{shtWord, "$$@",shqDquot, nil},
-		&ShAtom{shtWord,"\"",shqPlain, nil})
+		&ShAtom{shtText, "\"", shqDquot, nil},
+		&ShAtom{shtShVarUse, "$$@", shqDquot, "@"},
+		&ShAtom{shtText, "\"", shqPlain, nil})
 	$$ = &MkShForClause{$2.MkText, []*ShToken{args}, $4}
 }
 for_clause : tkFOR tkWORD linebreak tkIN sequential_sep do_group {

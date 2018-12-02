@@ -101,8 +101,8 @@ func (s *Suite) Test_Autofix_ReplaceAfter__autofix(c *check.C) {
 		"AUTOFIX: ~/Makefile:1: Replacing \"n\" with \"v\".",
 		"-\t# line 1 \\",
 		"+\t# live 1 \\",
-		">\tcontinuation 1 \\",
-		">\tcontinuation 2")
+		"\tcontinuation 1 \\",
+		"\tcontinuation 2")
 }
 
 func (s *Suite) Test_Autofix_ReplaceRegex__show_autofix(c *check.C) {
@@ -261,7 +261,7 @@ func (s *Suite) Test_Autofix__multiple_fixes(c *check.C) {
 
 	t.SetupCommandLine("--show-autofix", "--explain")
 
-	line := t.NewLine("fileName", 1, "original")
+	line := t.NewLine("filename", 1, "original")
 
 	c.Check(line.autofix, check.IsNil)
 	c.Check(line.raw, check.DeepEquals, t.NewRawLines(1, "original\n"))
@@ -276,7 +276,7 @@ func (s *Suite) Test_Autofix__multiple_fixes(c *check.C) {
 	c.Check(line.autofix, check.NotNil)
 	c.Check(line.raw, check.DeepEquals, t.NewRawLines(1, "original\n", "lriginao\n"))
 	t.CheckOutputLines(
-		"AUTOFIX: fileName:1: Replacing \"original\" with \"lriginao\".")
+		"AUTOFIX: filename:1: Replacing \"original\" with \"lriginao\".")
 
 	{
 		fix := line.Autofix()
@@ -289,7 +289,7 @@ func (s *Suite) Test_Autofix__multiple_fixes(c *check.C) {
 	c.Check(line.raw, check.DeepEquals, t.NewRawLines(1, "original\n", "lruginao\n"))
 	c.Check(line.raw[0].textnl, equals, "lruginao\n")
 	t.CheckOutputLines(
-		"AUTOFIX: fileName:1: Replacing \"i\" with \"u\".")
+		"AUTOFIX: filename:1: Replacing \"i\" with \"u\".")
 
 	{
 		fix := line.Autofix()
@@ -302,7 +302,7 @@ func (s *Suite) Test_Autofix__multiple_fixes(c *check.C) {
 	c.Check(line.raw, check.DeepEquals, t.NewRawLines(1, "original\n", "middle\n"))
 	c.Check(line.raw[0].textnl, equals, "middle\n")
 	t.CheckOutputLines(
-		"AUTOFIX: fileName:1: Replacing \"lruginao\" with \"middle\".")
+		"AUTOFIX: filename:1: Replacing \"lruginao\" with \"middle\".")
 
 	c.Check(line.raw[0].textnl, equals, "middle\n")
 	t.CheckOutputEmpty()
@@ -316,7 +316,7 @@ func (s *Suite) Test_Autofix__multiple_fixes(c *check.C) {
 
 	c.Check(line.Autofix().RawText(), equals, "")
 	t.CheckOutputLines(
-		"AUTOFIX: fileName:1: Deleting this line.")
+		"AUTOFIX: filename:1: Deleting this line.")
 }
 
 func (s *Suite) Test_Autofix_Explain__without_explain_option(c *check.C) {
@@ -446,20 +446,23 @@ func (s *Suite) Test_Autofix__show_autofix_and_source_continuation_line(c *check
 		"after")
 	line := mklines.lines.Lines[1]
 
-	{
-		fix := line.Autofix()
-		fix.Warnf("Using \"old\" is deprecated.")
-		fix.Replace("old", "new")
-		fix.Apply()
-	}
+	fix := line.Autofix()
+	fix.Warnf("Using \"old\" is deprecated.")
+	fix.Replace("old", "new")
+	fix.Apply()
 
+	// Using a tab for indentation preserves the exact layout in the output
+	// since in pkgsrc Makefiles, tabs are also used in the middle of the line
+	// to align the variable values. Using a single space for indentation would
+	// make some of the lines appear misaligned in the pkglint output although
+	// they are correct in the Makefiles.
 	t.CheckOutputLines(
 		"WARN: ~/Makefile:2--4: Using \"old\" is deprecated.",
 		"AUTOFIX: ~/Makefile:3: Replacing \"old\" with \"new\".",
-		">\t# before \\",
+		"\t# before \\",
 		"-\tThe old song \\",
 		"+\tThe new song \\",
-		">\tafter")
+		"\tafter")
 }
 
 func (s *Suite) Test_Autofix_InsertBefore(c *check.C) {
@@ -650,7 +653,7 @@ func (s *Suite) Test_Autofix_skip(c *check.C) {
 
 	t.SetupCommandLine("--only", "few", "--autofix")
 
-	mklines := t.SetupFileMkLines("fileName",
+	mklines := t.SetupFileMkLines("filename",
 		"VAR=\t111 222 333 444 555 \\",
 		"666")
 	lines := mklines.lines
@@ -675,7 +678,7 @@ func (s *Suite) Test_Autofix_skip(c *check.C) {
 	SaveAutofixChanges(lines)
 
 	t.CheckOutputEmpty()
-	t.CheckFileLines("fileName",
+	t.CheckFileLines("filename",
 		"VAR=\t111 222 333 444 555 \\",
 		"666")
 	c.Check(fix.RawText(), equals, ""+
@@ -710,7 +713,7 @@ func (s *Suite) Test_Autofix_Apply__only(c *check.C) {
 func (s *Suite) Test_Autofix_Apply__panic(c *check.C) {
 	t := s.Init(c)
 
-	line := t.NewLine("fileName", 123, "text")
+	line := t.NewLine("filename", 123, "text")
 
 	t.ExpectPanic(
 		func() {
@@ -835,6 +838,83 @@ func (s *Suite) Test_SaveAutofixChanges__cannot_overwrite(c *check.C) {
 	c.Check(t.Output(), check.Matches, ""+
 		"AUTOFIX: ~/file.txt:1: Replacing \"line\" with \"Line\".\n"+
 		"ERROR: ~/file.txt.pkglint.tmp: Cannot overwrite with autofixed content: .*\n")
+}
+
+// Up to 2018-11-25, pkglint in some cases logged only the source without
+// a corresponding warning.
+func (s *Suite) Test_Autofix__lonely_source(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall", "--source")
+	G.Logger.Opts.LogVerbose = false // For realistic conditions; otherwise all diagnostics are logged.
+
+	t.SetupPackage("x11/xorg-cf-files",
+		".include \"../../x11/xorgproto/buildlink3.mk\"")
+	t.SetupPackage("x11/xorgproto",
+		"DISTNAME=\txorgproto-1.0")
+	t.CreateFileDummyBuildlink3("x11/xorgproto/buildlink3.mk")
+	t.CreateFileLines("x11/xorgproto/builtin.mk",
+		MkRcsID,
+		"",
+		"BUILTIN_PKG:=\txorgproto",
+		"",
+		"PRE_XORGPROTO_LIST_MISSING =\tapplewmproto",
+		"",
+		".for id in ${PRE_XORGPROTO_LIST_MISSING}",
+		".endfor")
+	G.Pkgsrc.LoadInfrastructure()
+	t.Chdir(".")
+
+	G.CheckDirent("x11/xorg-cf-files")
+	G.CheckDirent("x11/xorgproto")
+
+	t.CheckOutputLines(
+		">\tPRE_XORGPROTO_LIST_MISSING =\tapplewmproto",
+		"NOTE: x11/xorgproto/builtin.mk:5: Unnecessary space after variable name \"PRE_XORGPROTO_LIST_MISSING\".")
+}
+
+// Up to 2018-11-26, pkglint in some cases logged only the source without
+// a corresponding warning.
+func (s *Suite) Test_Autofix__lonely_source_2(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall", "--source", "--explain")
+	G.Logger.Opts.LogVerbose = false // For realistic conditions; otherwise all diagnostics are logged.
+
+	t.SetupPackage("print/tex-bibtex8",
+		"MAKE_FLAGS+=\tCFLAGS=${CFLAGS.${PKGSRC_COMPILER}}")
+	G.Pkgsrc.LoadInfrastructure()
+	t.Chdir(".")
+
+	G.CheckDirent("print/tex-bibtex8")
+
+	t.CheckOutputLines(
+		">\tMAKE_FLAGS+=\tCFLAGS=${CFLAGS.${PKGSRC_COMPILER}}",
+		"WARN: print/tex-bibtex8/Makefile:20: Please use ${CFLAGS.${PKGSRC_COMPILER}:Q} instead of ${CFLAGS.${PKGSRC_COMPILER}}.",
+		"",
+		"\tSee the pkgsrc guide, section \"Echoing a string exactly as-is\":",
+		"\thttps://www.NetBSD.org/docs/pkgsrc/pkgsrc.html#echo-literal",
+		"",
+		">\tMAKE_FLAGS+=\tCFLAGS=${CFLAGS.${PKGSRC_COMPILER}}",
+		"WARN: print/tex-bibtex8/Makefile:20: The list variable PKGSRC_COMPILER should not be embedded in a word.",
+		"",
+		"\tWhen a list variable has multiple elements, this expression expands",
+		"\tto something unexpected:",
+		"",
+		"\tExample: ${MASTER_SITE_SOURCEFORGE}directory/ expands to",
+		"",
+		"\t\thttps://mirror1.sf.net/ https://mirror2.sf.net/directory/",
+		"",
+		"\tThe first URL is missing the directory.  To fix this, write",
+		"\t\t${MASTER_SITE_SOURCEFORGE:=directory/}.",
+		"",
+		"\tExample: -l${LIBS} expands to",
+		"",
+		"\t\t-llib1 lib2",
+		"",
+		"\tThe second library is missing the -l.  To fix this, write",
+		"\t${LIBS:@lib@-l${lib}@}.",
+		"")
 }
 
 // RawText returns the raw text of the fixed line, including line ends.

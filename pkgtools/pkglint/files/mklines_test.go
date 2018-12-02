@@ -10,7 +10,7 @@ func (s *Suite) Test_MkLines_Check__autofix_directive_indentation(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("--autofix", "-Wspace")
-	lines := t.SetupFileLines("fileName.mk",
+	lines := t.SetupFileLines("filename.mk",
 		MkRcsID,
 		".if defined(A)",
 		".for a in ${A}",
@@ -23,11 +23,11 @@ func (s *Suite) Test_MkLines_Check__autofix_directive_indentation(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"AUTOFIX: ~/fileName.mk:3: Replacing \".\" with \".  \".",
-		"AUTOFIX: ~/fileName.mk:4: Replacing \".\" with \".    \".",
-		"AUTOFIX: ~/fileName.mk:5: Replacing \".\" with \".    \".",
-		"AUTOFIX: ~/fileName.mk:6: Replacing \".\" with \".  \".")
-	t.CheckFileLines("fileName.mk",
+		"AUTOFIX: ~/filename.mk:3: Replacing \".\" with \".  \".",
+		"AUTOFIX: ~/filename.mk:4: Replacing \".\" with \".    \".",
+		"AUTOFIX: ~/filename.mk:5: Replacing \".\" with \".    \".",
+		"AUTOFIX: ~/filename.mk:6: Replacing \".\" with \".  \".")
+	t.CheckFileLines("filename.mk",
 		"# $"+"NetBSD$",
 		".if defined(A)",
 		".  for a in ${A}",
@@ -140,6 +140,11 @@ func (s *Suite) Test_MkLines__varuse_sh_modifier(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
+// For parameterized variables, the "defined but not used" and
+// the "used but not defined" checks are loosened a bit.
+// When VAR.param1 is defined or used, VAR.param2 is also regarded
+// as defined or used since often in pkgsrc, parameterized variables
+// are not referred to by their exact names but by VAR.${param}.
 func (s *Suite) Test_MkLines__varuse_parameterized(c *check.C) {
 	t := s.Init(c)
 
@@ -151,8 +156,9 @@ func (s *Suite) Test_MkLines__varuse_parameterized(c *check.C) {
 
 	mklines.Check()
 
-	// No warnings about defined but not used or vice versa
-	t.CheckOutputEmpty()
+	// No warnings about CONFIGURE_ARGS.* being defined but not used or vice versa.
+	t.CheckOutputLines(
+		"WARN: converters/wv2/Makefile:2: ICONV_TYPE is used but not defined.")
 }
 
 // Even very complicated shell commands are parsed correctly.
@@ -339,7 +345,8 @@ func (s *Suite) Test_MkLines_DetermineDefinedVariables(c *check.C) {
 	// The OSV.NetBSD variable is used implicitly via the OSV variable, therefore no warning.
 	t.CheckOutputLines(
 		// FIXME: the below warning is wrong; it's ok to have SUBST blocks in all files, maybe except buildlink3.mk.
-		"WARN: determine-defined-variables.mk:12: The variable SUBST_VARS.subst may not be set (only given a default value, appended to) in this file; it would be ok in Makefile, Makefile.common, options.mk.",
+		"WARN: determine-defined-variables.mk:12: The variable SUBST_VARS.subst may not be set "+
+			"(only given a default value, appended to) in this file; it would be ok in Makefile, Makefile.common, options.mk.",
 		"WARN: determine-defined-variables.mk:16: Unknown shell command \"unknown-command\".")
 }
 
@@ -371,7 +378,7 @@ func (s *Suite) Test_MkLines_DetermineDefinedVariables__BUILTIN_FIND_FILES_VAR(c
 func (s *Suite) Test_MkLines_DetermineUsedVariables__simple(c *check.C) {
 	t := s.Init(c)
 
-	mklines := t.NewMkLines("fileName",
+	mklines := t.NewMkLines("filename",
 		"\t${VAR}")
 	mkline := mklines.mklines[0]
 	G.Mk = mklines
@@ -385,49 +392,57 @@ func (s *Suite) Test_MkLines_DetermineUsedVariables__simple(c *check.C) {
 func (s *Suite) Test_MkLines_DetermineUsedVariables__nested(c *check.C) {
 	t := s.Init(c)
 
-	mklines := t.NewMkLines("fileName",
+	mklines := t.NewMkLines("filename.mk",
+		MkRcsID,
+		"",
+		"LHS.${lparam}=\tRHS.${rparam}",
+		"",
+		"target:",
 		"\t${outer.${inner}}")
-	mkline := mklines.mklines[0]
+	assignMkline := mklines.mklines[2]
+	shellMkline := mklines.mklines[5]
 	G.Mk = mklines
 
 	mklines.DetermineUsedVariables()
 
-	c.Check(len(mklines.vars.used), equals, 3)
-	c.Check(mklines.vars.FirstUse("inner"), equals, mkline)
-	c.Check(mklines.vars.FirstUse("outer.*"), equals, mkline)
-	c.Check(mklines.vars.FirstUse("outer.${inner}"), equals, mkline)
+	c.Check(len(mklines.vars.used), equals, 5)
+	c.Check(mklines.vars.FirstUse("lparam"), equals, assignMkline)
+	c.Check(mklines.vars.FirstUse("rparam"), equals, assignMkline)
+	c.Check(mklines.vars.FirstUse("inner"), equals, shellMkline)
+	c.Check(mklines.vars.FirstUse("outer.*"), equals, shellMkline)
+	c.Check(mklines.vars.FirstUse("outer.${inner}"), equals, shellMkline)
 }
 
 func (s *Suite) Test_MkLines__private_tool_undefined(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupVartypes()
-	mklines := t.NewMkLines("fileName",
+	mklines := t.NewMkLines("filename",
 		MkRcsID,
 		"",
-		"\tmd5sum fileName")
+		"\tmd5sum filename")
 
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"WARN: fileName:3: Unknown shell command \"md5sum\".")
+		"WARN: filename:3: Unknown shell command \"md5sum\".")
 }
 
 func (s *Suite) Test_MkLines__private_tool_defined(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupVartypes()
-	mklines := t.NewMkLines("fileName",
+	mklines := t.NewMkLines("filename",
 		MkRcsID,
 		"TOOLS_CREATE+=\tmd5sum",
 		"",
-		"\tmd5sum fileName")
+		"\tmd5sum filename")
 
 	mklines.Check()
 
 	// TODO: Is it necessary to add the tool to USE_TOOLS? If not, why not?
 	t.CheckOutputLines(
-		"WARN: fileName:4: The \"md5sum\" tool is used but not added to USE_TOOLS.")
+		"WARN: filename:4: The \"md5sum\" tool is used but not added to USE_TOOLS.")
 }
 
 func (s *Suite) Test_MkLines_Check__indentation(c *check.C) {
@@ -613,12 +628,12 @@ func (s *Suite) Test_MkLines__wip_category_Makefile(c *check.C) {
 		"WARN: ~/wip/Makefile:14: Unusual target \"clean-tmpdir\".",
 		"",
 		"\tIf you want to define your own target, declare it like this:",
-		"\t",
+		"",
 		"\t\t.PHONY: my-target",
-		"\t",
-		"\tIn the rare case that you actually want a file-based make(1)",
-		"\ttarget, write it like this:",
-		"\t",
+		"",
+		"\tIn the rare case that you actually want a file-based make(1) target,",
+		"\twrite it like this:",
+		"",
 		"\t\t${.CURDIR}/my-file:",
 		"")
 }
@@ -971,8 +986,10 @@ func (s *Suite) Test_MkLines_Check__MASTER_SITE_in_HOMEPAGE(c *check.C) {
 	G.Mk.Check()
 
 	t.CheckOutputLines(
-		"WARN: devel/catch/Makefile:2: HOMEPAGE should not be defined in terms of MASTER_SITEs. Use https://github.com/philsquared/Catch/ directly.",
-		"WARN: devel/catch/Makefile:3: HOMEPAGE should not be defined in terms of MASTER_SITEs. Use https://github.com/ directly.",
+		"WARN: devel/catch/Makefile:2: HOMEPAGE should not be defined in terms of MASTER_SITEs. "+
+			"Use https://github.com/philsquared/Catch/ directly.",
+		"WARN: devel/catch/Makefile:3: HOMEPAGE should not be defined in terms of MASTER_SITEs. "+
+			"Use https://github.com/ directly.",
 		"WARN: devel/catch/Makefile:4: HOMEPAGE should not be defined in terms of MASTER_SITEs.",
 		"WARN: devel/catch/Makefile:5: HOMEPAGE should not be defined in terms of MASTER_SITEs.")
 }
@@ -1031,7 +1048,7 @@ func (s *Suite) Test_MkLines_Check__extra_warnings(c *check.C) {
 
 	t.CheckOutputLines(
 		"WARN: options.mk:3: The values for PYTHON_VERSIONS_ACCEPTED should be in decreasing order.",
-		"NOTE: options.mk:5: Please use \"# empty\", \"# none\" or \"yes\" instead of \"# defined\".",
+		"NOTE: options.mk:5: Please use \"# empty\", \"# none\" or \"# yes\" instead of \"# defined\".",
 		"WARN: options.mk:7: Please include \"../../mk/bsd.prefs.mk\" before using \"?=\".",
 		"WARN: options.mk:11: Building the package should take place entirely inside ${WRKSRC}, not \"${WRKSRC}/..\".",
 		"NOTE: options.mk:11: You can use \"../build\" instead of \"${WRKSRC}/../build\".")
@@ -1078,7 +1095,7 @@ func (s *Suite) Test_VaralignBlock_Check__autofix(c *check.C) {
 
 	t.SetupCommandLine("-Wspace", "--show-autofix")
 
-	lines := t.NewLines("file.mk",
+	mklines := t.NewMkLines("file.mk",
 		"VAR=   value",    // Indentation 7, fixed to 8.
 		"",                //
 		"VAR=    value",   // Indentation 8, fixed to 8.
@@ -1093,9 +1110,9 @@ func (s *Suite) Test_VaralignBlock_Check__autofix(c *check.C) {
 		"",                //
 		"VAR=\tvalue")     // Already aligned with tabs only, left unchanged.
 
-	varalign := &VaralignBlock{}
-	for _, line := range lines.Lines {
-		varalign.Check(NewMkLine(line))
+	var varalign VaralignBlock
+	for _, line := range mklines.mklines {
+		varalign.Check(line)
 	}
 	varalign.Finish()
 
@@ -1114,10 +1131,11 @@ func (s *Suite) Test_VaralignBlock_Check__autofix(c *check.C) {
 		"AUTOFIX: file.mk:11: Replacing \"    \\t\" with \"\\t\\t\".")
 }
 
+// When the lines of a paragraph are inconsistently aligned,
+// they are realigned to the minimum required width.
 func (s *Suite) Test_VaralignBlock_Check__reduce_indentation(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("-Wspace")
 	mklines := t.NewMkLines("file.mk",
 		"VAR= \tvalue",
 		"VAR=    \tvalue",
@@ -1127,7 +1145,7 @@ func (s *Suite) Test_VaralignBlock_Check__reduce_indentation(c *check.C) {
 		"VAR=\t\t\tdeep",
 		"VAR=\t\t\tindentation")
 
-	varalign := new(VaralignBlock)
+	var varalign VaralignBlock
 	for _, mkline := range mklines.mklines {
 		varalign.Check(mkline)
 	}
@@ -1139,6 +1157,9 @@ func (s *Suite) Test_VaralignBlock_Check__reduce_indentation(c *check.C) {
 		"NOTE: file.mk:3: This variable value should be aligned to column 9.")
 }
 
+// For every variable assignment, there is at least one space or tab between the variable
+// name and the value. Even if it is the longest line, and even if the value would start
+// exactly at a tab stop.
 func (s *Suite) Test_VaralignBlock_Check__longest_line_no_space(c *check.C) {
 	t := s.Init(c)
 
@@ -1147,9 +1168,9 @@ func (s *Suite) Test_VaralignBlock_Check__longest_line_no_space(c *check.C) {
 		"SUBST_CLASSES+= aaaaaaaa",
 		"SUBST_STAGE.aaaaaaaa= pre-configure",
 		"SUBST_FILES.aaaaaaaa= *.pl",
-		"SUBST_FILTER_CMD.aaaaaaaa=cat")
+		"SUBST_FILTER_CMD.aaaaaa=cat")
 
-	varalign := new(VaralignBlock)
+	var varalign VaralignBlock
 	for _, mkline := range mklines.mklines {
 		varalign.Check(mkline)
 	}
@@ -1172,7 +1193,7 @@ func (s *Suite) Test_VaralignBlock_Check__only_spaces(c *check.C) {
 		"SUBST_FILES.aaaaaaaa= *.pl",
 		"SUBST_FILTER_CMD.aaaaaaaa= cat")
 
-	varalign := new(VaralignBlock)
+	var varalign VaralignBlock
 	for _, mkline := range mklines.mklines {
 		varalign.Check(mkline)
 	}

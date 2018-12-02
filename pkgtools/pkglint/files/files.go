@@ -15,18 +15,18 @@ const (
 	LogErrors                           //
 )
 
-func Load(fileName string, options LoadOptions) Lines {
-	if fromCache := G.fileCache.Get(fileName, options); fromCache != nil {
+func Load(filename string, options LoadOptions) Lines {
+	if fromCache := G.fileCache.Get(filename, options); fromCache != nil {
 		return fromCache
 	}
 
-	rawBytes, err := ioutil.ReadFile(fileName)
+	rawBytes, err := ioutil.ReadFile(filename)
 	if err != nil {
 		switch {
 		case options&MustSucceed != 0:
-			NewLineWhole(fileName).Fatalf("Cannot be read.")
+			NewLineWhole(filename).Fatalf("Cannot be read.")
 		case options&LogErrors != 0:
-			NewLineWhole(fileName).Errorf("Cannot be read.")
+			NewLineWhole(filename).Errorf("Cannot be read.")
 		}
 		return nil
 	}
@@ -35,38 +35,38 @@ func Load(fileName string, options LoadOptions) Lines {
 	if rawText == "" && options&NotEmpty != 0 {
 		switch {
 		case options&MustSucceed != 0:
-			NewLineWhole(fileName).Fatalf("Must not be empty.")
+			NewLineWhole(filename).Fatalf("Must not be empty.")
 		case options&LogErrors != 0:
-			NewLineWhole(fileName).Errorf("Must not be empty.")
+			NewLineWhole(filename).Errorf("Must not be empty.")
 		}
 		return nil
 	}
 
 	if G.Opts.Profiling {
-		G.loaded.Add(path.Clean(fileName), 1)
+		G.loaded.Add(path.Clean(filename), 1)
 	}
 
-	result := convertToLogicalLines(fileName, rawText, options&Makefile != 0)
-	if hasSuffix(fileName, ".mk") {
-		G.fileCache.Put(fileName, options, result)
+	result := convertToLogicalLines(filename, rawText, options&Makefile != 0)
+	if hasSuffix(filename, ".mk") {
+		G.fileCache.Put(filename, options, result)
 	}
 	return result
 }
 
-func LoadMk(fileName string, options LoadOptions) MkLines {
-	lines := Load(fileName, options|Makefile)
+func LoadMk(filename string, options LoadOptions) MkLines {
+	lines := Load(filename, options|Makefile)
 	if lines == nil {
 		return nil
 	}
 	return NewMkLines(lines)
 }
 
-func nextLogicalLine(fileName string, rawLines []*RawLine, index int) (Line, int) {
+func nextLogicalLine(filename string, rawLines []*RawLine, index int) (Line, int) {
 	{ // Handle the common case efficiently
 		rawLine := rawLines[index]
 		textnl := rawLine.textnl
 		if hasSuffix(textnl, "\n") && !hasSuffix(textnl, "\\\n") {
-			return NewLine(fileName, rawLine.Lineno, textnl[:len(textnl)-1], rawLines[index:index+1]), index + 1
+			return NewLine(filename, rawLine.Lineno, textnl[:len(textnl)-1], rawLines[index]), index + 1
 		}
 	}
 
@@ -96,7 +96,7 @@ func nextLogicalLine(fileName string, rawLines []*RawLine, index int) (Line, int
 
 	lastlineno := rawLines[index].Lineno
 
-	return NewLineMulti(fileName, firstlineno, lastlineno, text.String(), lineRawLines), index + 1
+	return NewLineMulti(filename, firstlineno, lastlineno, text.String(), lineRawLines), index + 1
 }
 
 func matchContinuationLine(textnl string) (leadingWhitespace, text, trailingWhitespace, cont string) {
@@ -133,7 +133,7 @@ func matchContinuationLine(textnl string) (leadingWhitespace, text, trailingWhit
 	return
 }
 
-func convertToLogicalLines(fileName string, rawText string, joinBackslashLines bool) Lines {
+func convertToLogicalLines(filename string, rawText string, joinBackslashLines bool) Lines {
 	var rawLines []*RawLine
 	for lineno, rawLine := range strings.SplitAfter(rawText, "\n") {
 		if rawLine != "" {
@@ -144,14 +144,14 @@ func convertToLogicalLines(fileName string, rawText string, joinBackslashLines b
 	var loglines []Line
 	if joinBackslashLines {
 		for lineno := 0; lineno < len(rawLines); {
-			line, nextLineno := nextLogicalLine(fileName, rawLines, lineno)
+			line, nextLineno := nextLogicalLine(filename, rawLines, lineno)
 			loglines = append(loglines, line)
 			lineno = nextLineno
 		}
 	} else {
 		for _, rawLine := range rawLines {
 			text := strings.TrimSuffix(rawLine.textnl, "\n")
-			logline := NewLine(fileName, rawLine.Lineno, text, []*RawLine{rawLine})
+			logline := NewLine(filename, rawLine.Lineno, text, rawLine)
 			loglines = append(loglines, logline)
 		}
 	}
@@ -160,5 +160,5 @@ func convertToLogicalLines(fileName string, rawText string, joinBackslashLines b
 		loglines[len(loglines)-1].Errorf("File must end with a newline.")
 	}
 
-	return NewLines(fileName, loglines)
+	return NewLines(filename, loglines)
 }

@@ -99,7 +99,7 @@ func (fix *Autofix) ReplaceAfter(prefix, from string, to string) {
 		if rawLine.Lineno != 0 {
 			replaced := strings.Replace(rawLine.textnl, prefix+from, prefix+to, 1)
 			if replaced != rawLine.textnl {
-				if G.Opts.ShowAutofix || G.Opts.Autofix {
+				if G.Logger.IsAutofix() {
 					rawLine.textnl = replaced
 				}
 				fix.Describef(rawLine.Lineno, "Replacing %q with %q.", from, to)
@@ -136,7 +136,7 @@ func (fix *Autofix) ReplaceRegex(from regex.Pattern, toText string, howOften int
 
 			replaced := replaceAllFunc(rawLine.textnl, from, replace)
 			if replaced != rawLine.textnl {
-				if G.Opts.ShowAutofix || G.Opts.Autofix {
+				if G.Logger.IsAutofix() {
 					rawLine.textnl = replaced
 				}
 				for _, fromText := range froms {
@@ -175,7 +175,7 @@ func (fix *Autofix) Custom(fixer func(showAutofix, autofix bool)) {
 		return
 	}
 
-	fixer(G.Opts.ShowAutofix, G.Opts.Autofix)
+	fixer(G.Logger.Opts.ShowAutofix, G.Logger.Opts.Autofix)
 }
 
 // Describef is used while Autofix.Custom is called to remember a description
@@ -193,7 +193,7 @@ func (fix *Autofix) InsertBefore(text string) {
 		return
 	}
 
-	if G.Opts.ShowAutofix || G.Opts.Autofix {
+	if G.Logger.IsAutofix() {
 		fix.linesBefore = append(fix.linesBefore, text+"\n")
 	}
 	fix.Describef(fix.line.raw[0].Lineno, "Inserting a line %q before this line.", text)
@@ -207,7 +207,7 @@ func (fix *Autofix) InsertAfter(text string) {
 		return
 	}
 
-	if G.Opts.ShowAutofix || G.Opts.Autofix {
+	if G.Logger.IsAutofix() {
 		fix.linesAfter = append(fix.linesAfter, text+"\n")
 	}
 	fix.Describef(fix.line.raw[len(fix.line.raw)-1].Lineno, "Inserting a line %q after this line.", text)
@@ -223,7 +223,7 @@ func (fix *Autofix) Delete() {
 	}
 
 	for _, line := range fix.line.raw {
-		if G.Opts.ShowAutofix || G.Opts.Autofix {
+		if G.Logger.IsAutofix() {
 			line.textnl = ""
 		}
 		fix.Describef(line.Lineno, "Deleting this line.")
@@ -244,7 +244,7 @@ func (fix *Autofix) Apply() {
 	// To fix this assertion, call one of Autofix.Errorf, Autofix.Warnf
 	// or Autofix.Notef before calling Apply.
 	G.Assertf(
-		fix.level != nil && fix.diagFormat != "",
+		fix.level != nil,
 		"Each autofix must have a log level and a diagnostic.")
 
 	reset := func() {
@@ -256,22 +256,23 @@ func (fix *Autofix) Apply() {
 		fix.autofixShortTerm = autofixShortTerm{}
 	}
 
-	G.explainNext = shallBeLogged(fix.diagFormat)
-	if !G.explainNext || len(fix.actions) == 0 {
+	if !G.Logger.Relevant(fix.diagFormat) || len(fix.actions) == 0 {
 		reset()
 		return
 	}
 
-	logDiagnostic := (G.Opts.ShowAutofix || !G.Opts.Autofix) &&
+	logDiagnostic := (G.Logger.Opts.ShowAutofix || !G.Logger.Opts.Autofix) &&
 		fix.diagFormat != SilentAutofixFormat
-	logFix := G.Opts.Autofix || G.Opts.ShowAutofix
+	logFix := G.Logger.IsAutofix()
 
 	if logDiagnostic {
-		if !logFix {
-			line.showSource(G.logOut)
-		}
 		msg := fmt.Sprintf(fix.diagFormat, fix.diagArgs...)
-		logf(fix.level, line.FileName, line.Linenos(), fix.diagFormat, msg)
+		if !logFix {
+			if fix.diagFormat == AutofixFormat || G.Logger.FirstTime(line.Filename, line.Linenos(), msg) {
+				line.showSource(G.out)
+			}
+		}
+		G.Logf(fix.level, line.Filename, line.Linenos(), fix.diagFormat, msg)
 	}
 
 	if logFix {
@@ -280,20 +281,20 @@ func (fix *Autofix) Apply() {
 			if action.lineno != 0 {
 				lineno = strconv.Itoa(action.lineno)
 			}
-			logf(AutofixLogLevel, line.FileName, lineno, AutofixFormat, action.description)
+			G.Logf(AutofixLogLevel, line.Filename, lineno, AutofixFormat, action.description)
 		}
 	}
 
 	if logDiagnostic || logFix {
 		if logFix {
-			line.showSource(G.logOut)
+			line.showSource(G.out)
 		}
 		if logDiagnostic && len(fix.explanation) > 0 {
-			Explain(fix.explanation...)
+			G.Explain(fix.explanation...)
 		}
-		if G.Opts.ShowSource {
-			if !G.Opts.Explain || !logDiagnostic || len(fix.explanation) == 0 {
-				G.logOut.Separate()
+		if G.Logger.Opts.ShowSource {
+			if !G.Logger.Opts.Explain || !logDiagnostic || len(fix.explanation) == 0 {
+				G.out.Separate()
 			}
 		}
 	}
@@ -348,11 +349,11 @@ func (fix *Autofix) Realign(mkline MkLine, newWidth int) {
 
 	for _, rawLine := range fix.line.raw[1:] {
 		_, comment, oldSpace := match2(rawLine.textnl, `^(#?)([ \t]*)`)
-		newWidth := tabWidth(oldSpace) - oldWidth + newWidth
-		newSpace := strings.Repeat("\t", newWidth/8) + strings.Repeat(" ", newWidth%8)
+		newLineWidth := tabWidth(oldSpace) - oldWidth + newWidth
+		newSpace := strings.Repeat("\t", newLineWidth/8) + strings.Repeat(" ", newLineWidth%8)
 		replaced := strings.Replace(rawLine.textnl, comment+oldSpace, comment+newSpace, 1)
 		if replaced != rawLine.textnl {
-			if G.Opts.ShowAutofix || G.Opts.Autofix {
+			if G.Logger.IsAutofix() {
 				rawLine.textnl = replaced
 			}
 			fix.Describef(rawLine.Lineno, "Replacing indentation %q with %q.", oldSpace, newSpace)
@@ -380,7 +381,7 @@ func (fix *Autofix) skip() bool {
 		fix.diagFormat != "",
 		"Autofix: The diagnostic must be given before the action.")
 	// This check is necessary for the --only command line option.
-	return !shallBeLogged(fix.diagFormat)
+	return !G.shallBeLogged(fix.diagFormat)
 }
 
 func (fix *Autofix) assertRealLine() {
@@ -397,13 +398,13 @@ func SaveAutofixChanges(lines Lines) (autofixed bool) {
 	}
 
 	// Fast lane for the case that nothing is written back to disk.
-	if !G.Opts.Autofix {
+	if !G.Logger.Opts.Autofix {
 		for _, line := range lines.Lines {
 			if line.autofix != nil && line.autofix.modified {
 				G.autofixAvailable = true
-				if G.Opts.ShowAutofix {
+				if G.Logger.Opts.ShowAutofix {
 					// Only in this case can the loaded lines be modified.
-					G.fileCache.Evict(line.FileName)
+					G.fileCache.Evict(line.Filename)
 				}
 			}
 		}
@@ -413,10 +414,10 @@ func SaveAutofixChanges(lines Lines) (autofixed bool) {
 	changes := make(map[string][]string)
 	changed := make(map[string]bool)
 	for _, line := range lines.Lines {
-		chlines := changes[line.FileName]
+		chlines := changes[line.Filename]
 		if fix := line.autofix; fix != nil {
 			if fix.modified {
-				changed[line.FileName] = true
+				changed[line.Filename] = true
 			}
 			chlines = append(chlines, fix.linesBefore...)
 			for _, raw := range line.raw {
@@ -428,25 +429,25 @@ func SaveAutofixChanges(lines Lines) (autofixed bool) {
 				chlines = append(chlines, raw.textnl)
 			}
 		}
-		changes[line.FileName] = chlines
+		changes[line.Filename] = chlines
 	}
 
-	for fileName := range changed {
-		G.fileCache.Evict(fileName)
-		changedLines := changes[fileName]
-		tmpName := fileName + ".pkglint.tmp"
+	for filename := range changed {
+		G.fileCache.Evict(filename)
+		changedLines := changes[filename]
+		tmpName := filename + ".pkglint.tmp"
 		text := ""
 		for _, changedLine := range changedLines {
 			text += changedLine
 		}
 		err := ioutil.WriteFile(tmpName, []byte(text), 0666)
 		if err != nil {
-			logf(Error, tmpName, "", "Cannot write: %s", "Cannot write: "+err.Error())
+			G.Logf(Error, tmpName, "", "Cannot write: %s", "Cannot write: "+err.Error())
 			continue
 		}
-		err = os.Rename(tmpName, fileName)
+		err = os.Rename(tmpName, filename)
 		if err != nil {
-			logf(Error, tmpName, "",
+			G.Logf(Error, tmpName, "",
 				"Cannot overwrite with autofixed content: %s",
 				"Cannot overwrite with autofixed content: "+err.Error())
 			continue

@@ -12,7 +12,7 @@ func ChecklinesOptionsMk(mklines MkLines) {
 
 	if exp.EOF() || !(exp.CurrentMkLine().IsVarassign() && exp.CurrentMkLine().Varname() == "PKG_OPTIONS_VAR") {
 		exp.CurrentLine().Warnf("Expected definition of PKG_OPTIONS_VAR.")
-		Explain(
+		G.Explain(
 			"The input variables in an options.mk file should always be",
 			"mentioned in the same order: PKG_OPTIONS_VAR,",
 			"PKG_SUPPORTED_OPTIONS, PKG_SUGGESTED_OPTIONS.  This way, the",
@@ -30,7 +30,9 @@ loop:
 		mkline := exp.CurrentMkLine()
 		switch {
 		case mkline.IsComment():
+			break
 		case mkline.IsEmpty():
+			break
 
 		case mkline.IsVarassign():
 			switch mkline.Varcanon() {
@@ -47,14 +49,14 @@ loop:
 			// The conditionals are typically for OPSYS and MACHINE_ARCH.
 
 		case mkline.IsInclude():
-			if mkline.IncludeFile() == "../../mk/bsd.options.mk" {
+			if mkline.IncludedFile() == "../../mk/bsd.options.mk" {
 				exp.Advance()
 				break loop
 			}
 
 		default:
 			exp.CurrentLine().Warnf("Expected inclusion of \"../../mk/bsd.options.mk\".")
-			Explain(
+			G.Explain(
 				"After defining the input variables (PKG_OPTIONS_VAR, etc.),",
 				"bsd.options.mk should be included to do the actual processing.",
 				"No other actions should take place in this part of the file",
@@ -71,7 +73,7 @@ loop:
 				continue
 			}
 
-			NewMkCondWalker().Walk(cond, &MkCondCallback{
+			cond.Walk(&MkCondCallback{
 				Empty: func(varuse *MkVarUse) {
 					if varuse.varname == "PKG_OPTIONS" && len(varuse.modifiers) == 1 {
 						if m, positive, pattern := varuse.modifiers[0].MatchMatch(); m && positive {
@@ -86,7 +88,7 @@ loop:
 
 			if cond.Empty != nil && mkline.HasElseBranch() {
 				mkline.Notef("The positive branch of the .if/.else should be the one where the option is set.")
-				Explain(
+				G.Explain(
 					"For consistency among packages, the upper branch of this",
 					".if/.else statement should always handle the case where the",
 					"option is activated.  A missing exclamation mark at this",
@@ -100,13 +102,13 @@ loop:
 		handled := handledOptions[option]
 		if declared != nil && handled == nil {
 			declared.Warnf("Option %q should be handled below in an .if block.", option)
-			Explain(
+			G.Explain(
 				"If an option is not processed in this file, it may either be a",
 				"typo, or the option does not have any effect.")
 		}
 		if declared == nil && handled != nil {
 			handled.Warnf("Option %q is handled but not added to PKG_SUPPORTED_OPTIONS.", option)
-			Explain(
+			G.Explain(
 				"This block of code will never be run since PKG_OPTIONS cannot",
 				"contain this value.  This is most probably a typo.")
 		}

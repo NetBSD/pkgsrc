@@ -11,7 +11,8 @@ type ShAtomType uint8
 const (
 	shtSpace    ShAtomType = iota
 	shtVaruse              // ${PREFIX}
-	shtWord                // while, cat, ENV=value
+	shtShVarUse            // $${var:-pol}
+	shtText                // while, cat, ENV=value
 	shtOperator            // (, ;, |
 	shtComment             // # ...
 	shtSubshell            // $$(
@@ -21,16 +22,20 @@ func (t ShAtomType) String() string {
 	return [...]string{
 		"space",
 		"varuse",
-		"word",
+		"shvaruse",
+		"text",
 		"operator",
 		"comment",
 		"subshell",
 	}[t]
 }
 
+// IsWord checks whether the atom counts as text.
+// Makefile variables, shell variables and other text counts,
+// but keywords, operators and separators don't.
 func (t ShAtomType) IsWord() bool {
 	switch t {
-	case shtVaruse, shtWord:
+	case shtVaruse, shtShVarUse, shtText:
 		return true
 	}
 	return false
@@ -44,7 +49,7 @@ type ShAtom struct {
 }
 
 func (atom *ShAtom) String() string {
-	if atom.Type == shtWord && atom.Quoting == shqPlain && atom.data == nil {
+	if atom.Type == shtText && atom.Quoting == shqPlain && atom.data == nil {
 		return fmt.Sprintf("%q", atom.MkText)
 	}
 	if atom.Type == shtVaruse {
@@ -60,6 +65,12 @@ func (atom *ShAtom) VarUse() *MkVarUse {
 		return atom.data.(*MkVarUse)
 	}
 	return nil
+}
+
+// ShVarname applies to shell variable atoms like $$varname or $${varname:-modifier}
+// and returns the name of the shell variable.
+func (atom *ShAtom) ShVarname() string {
+	return atom.data.(string)
 }
 
 // ShQuoting describes the context in which a string appears

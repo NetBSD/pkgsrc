@@ -48,6 +48,37 @@ func (s *Suite) Test_Pkgsrc_parseSuggestedUpdates(c *check.C) {
 		{lines.Lines[6], "freeciv-client", "2.5.0", "(urgent)"}})
 }
 
+func (s *Suite) Test_Pkgsrc_checkToplevelUnusedLicenses(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupPkgsrc()
+	t.CreateFileLines("mk/misc/category.mk")
+	t.CreateFileLines("licenses/2-clause-bsd")
+	t.CreateFileLines("licenses/gnu-gpl-v3")
+
+	t.CreateFileLines("Makefile",
+		MkRcsID,
+		"SUBDIR+=\tcategory")
+
+	t.CreateFileLines("category/Makefile",
+		MkRcsID,
+		"COMMENT=\tExample category",
+		"",
+		"SUBDIR+=\tpackage",
+		"",
+		".include \"../mk/misc/category.mk\"")
+
+	t.SetupPackage("category/package",
+		"LICENSE=\t2-clause-bsd")
+
+	G.Main("pkglint", "-r", "-Cglobal", t.File("."))
+
+	t.CheckOutputLines(
+		"WARN: ~/licenses/gnu-gpl-v2: This license seems to be unused.", // Added by Tester.SetupPkgsrc
+		"WARN: ~/licenses/gnu-gpl-v3: This license seems to be unused.",
+		"0 errors and 2 warnings found.")
+}
+
 func (s *Suite) Test_Pkgsrc_loadTools(c *check.C) {
 	t := s.Init(c)
 
@@ -162,7 +193,7 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile(c *check.C) {
 	c.Check(*changes[6], equals, Change{changes[6].Line, "Downgraded", "category/package", "1.2", "author7", "2018-01-07"})
 
 	t.CheckOutputLines(
-		"WARN: ~/doc/CHANGES-2018:1: Year 2015 for category/package does not match the file name ~/doc/CHANGES-2018.",
+		"WARN: ~/doc/CHANGES-2018:1: Year 2015 for category/package does not match the filename ~/doc/CHANGES-2018.",
 		"WARN: ~/doc/CHANGES-2018:6: Date 2018-01-06 for category/package is earlier than 2018-01-09 for category/package.",
 		"WARN: ~/doc/CHANGES-2018:12: Unknown doc/CHANGES line: \tAdded another [new package]")
 }
@@ -212,17 +243,21 @@ func (s *Suite) Test_Pkgsrc__deprecated(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupTool("echo", "ECHO", AtRunTime)
+	t.SetupVartypes()
 	G.Pkgsrc.initDeprecatedVars()
 	mklines := t.NewMkLines("Makefile",
-		"USE_PERL5=\tyes",
-		"SUBST_POSTCMD.class=${ECHO}")
+		MkRcsID,
+		"USE_PERL5=\t\tyes",
+		"SUBST_POSTCMD.class=\t${ECHO}",
+		"CPPFLAGS+=\t\t${BUILDLINK_CPPFLAGS.${PKG_JVM}}")
 
-	MkLineChecker{mklines.mklines[0]}.checkVarassign()
-	MkLineChecker{mklines.mklines[1]}.checkVarassign()
+	mklines.Check()
 
 	t.CheckOutputLines(
-		"WARN: Makefile:1: Definition of USE_PERL5 is deprecated. Use USE_TOOLS+=perl or USE_TOOLS+=perl:run instead.",
-		"WARN: Makefile:2: Definition of SUBST_POSTCMD.class is deprecated. Has been removed, as it seemed unused.")
+		"WARN: Makefile:2: Definition of USE_PERL5 is deprecated. Use USE_TOOLS+=perl or USE_TOOLS+=perl:run instead.",
+		"WARN: Makefile:3: Definition of SUBST_POSTCMD.class is deprecated. Has been removed, as it seemed unused.",
+		"WARN: Makefile:4: Use of \"PKG_JVM\" is deprecated. Use PKG_DEFAULT_JVM instead.",
+		"WARN: Makefile:4: BUILDLINK_CPPFLAGS.${PKG_JVM} may not be used in any file; it is a write-only variable.")
 }
 
 func (s *Suite) Test_Pkgsrc_ListVersions__no_basedir(c *check.C) {
@@ -427,9 +462,9 @@ func (s *Suite) Test_Pkgsrc_VariableType(c *check.C) {
 	}
 
 	checkType("_PERL5_PACKLIST_AWK_STRIP_DESTDIR", "")
-	checkType("SOME_DIR", "PathName (guessed)")
-	checkType("SOMEDIR", "PathName (guessed)")
-	checkType("SEARCHPATHS", "ShellList of PathName (guessed)")
+	checkType("SOME_DIR", "Pathname (guessed)")
+	checkType("SOMEDIR", "Pathname (guessed)")
+	checkType("SEARCHPATHS", "ShellList of Pathname (guessed)")
 	checkType("MYPACKAGE_USER", "UserGroupName (guessed)")
 	checkType("MYPACKAGE_GROUP", "UserGroupName (guessed)")
 	checkType("MY_CMD_ENV", "ShellList of ShellWord (guessed)")
@@ -462,16 +497,22 @@ func (s *Suite) Test_Pkgsrc_VariableType__varparam(c *check.C) {
 func (s *Suite) Test_Pkgsrc_VariableType__from_mk(c *check.C) {
 	t := s.Init(c)
 
+	// The type of OSNAME.* cannot be guessed from the variable name,
+	// but it is a known variable since the pkgsrc infrastructure uses
+	// it. But still, its type is unknown.
+
 	t.SetupPkgsrc()
 	t.CreateFileLines("mk/sys-vars.mk",
 		MkRcsID,
 		"",
 		"PKGSRC_MAKE_ENV?=\t# none",
-		"CPPPATH?=\tcpp")
+		"CPPPATH?=\tcpp",
+		"OSNAME.Linux?=\tLinux")
 
 	pkg := t.SetupPackage("category/package",
 		"PKGSRC_MAKE_ENV+=\tCPP=${CPPPATH:Q}",
-		"PKGSRC_UNKNOWN_ENV+=\tCPP=${ABCPATH:Q}")
+		"PKGSRC_UNKNOWN_ENV+=\tCPP=${ABCPATH:Q}",
+		"OSNAME.SunOS=\t\t${OSNAME.Other}")
 
 	G.Main("pkglint", "-Wall", pkg)
 
@@ -481,6 +522,10 @@ func (s *Suite) Test_Pkgsrc_VariableType__from_mk(c *check.C) {
 
 	if typ := G.Pkgsrc.VariableType("CPPPATH"); c.Check(typ, check.NotNil) {
 		c.Check(typ.String(), equals, "Pathlist (guessed)")
+	}
+
+	if typ := G.Pkgsrc.VariableType("OSNAME.Other"); c.Check(typ, check.NotNil) {
+		c.Check(typ.String(), equals, "Unknown")
 	}
 
 	// No warnings about "defined but not used" or "used but not defined"

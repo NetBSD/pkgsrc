@@ -9,11 +9,11 @@ func (s *Suite) Test_convertToLogicalLines__no_continuation(c *check.C) {
 		"first line\n" +
 		"second line\n"
 
-	lines := convertToLogicalLines("fileName", rawText, false)
+	lines := convertToLogicalLines("filename", rawText, false)
 
 	c.Check(lines.Len(), equals, 2)
-	c.Check(lines.Lines[0].String(), equals, "fileName:1: first line")
-	c.Check(lines.Lines[1].String(), equals, "fileName:2: second line")
+	c.Check(lines.Lines[0].String(), equals, "filename:1: first line")
+	c.Check(lines.Lines[1].String(), equals, "filename:2: second line")
 }
 
 func (s *Suite) Test_convertToLogicalLines__continuation(c *check.C) {
@@ -22,11 +22,11 @@ func (s *Suite) Test_convertToLogicalLines__continuation(c *check.C) {
 		"still first line\n" +
 		"second line\n"
 
-	lines := convertToLogicalLines("fileName", rawText, true)
+	lines := convertToLogicalLines("filename", rawText, true)
 
 	c.Check(lines.Len(), equals, 2)
-	c.Check(lines.Lines[0].String(), equals, "fileName:1--2: first line, still first line")
-	c.Check(lines.Lines[1].String(), equals, "fileName:3: second line")
+	c.Check(lines.Lines[0].String(), equals, "filename:1--2: first line, still first line")
+	c.Check(lines.Lines[1].String(), equals, "filename:3: second line")
 }
 
 func (s *Suite) Test_convertToLogicalLines__continuation_in_last_line(c *check.C) {
@@ -35,10 +35,10 @@ func (s *Suite) Test_convertToLogicalLines__continuation_in_last_line(c *check.C
 	rawText := "" +
 		"last line\\\n"
 
-	lines := convertToLogicalLines("fileName", rawText, true)
+	lines := convertToLogicalLines("filename", rawText, true)
 
 	c.Check(lines.Len(), equals, 1)
-	c.Check(lines.Lines[0].String(), equals, "fileName:1: last line\\")
+	c.Check(lines.Lines[0].String(), equals, "filename:1: last line\\")
 	t.CheckOutputEmpty()
 }
 
@@ -119,12 +119,28 @@ func (s *Suite) Test_convertToLogicalLines__missing_newline_at_eof_in_continuati
 	rawText := "" +
 		"last line\\"
 
-	lines := convertToLogicalLines("fileName", rawText, true)
+	lines := convertToLogicalLines("filename", rawText, true)
 
 	c.Check(lines.Len(), equals, 1)
-	c.Check(lines.Lines[0].String(), equals, "fileName:1: last line\\")
+	c.Check(lines.Lines[0].String(), equals, "filename:1: last line\\")
 	t.CheckOutputLines(
-		"ERROR: fileName:1: File must end with a newline.")
+		"ERROR: filename:1: File must end with a newline.")
+}
+
+func (s *Suite) Test_convertToLogicalLines__missing_newline_at_eof_with_source(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall", "--source")
+	rawText := "" +
+		"last line\\"
+
+	lines := convertToLogicalLines("filename", rawText, true)
+
+	c.Check(lines.Len(), equals, 1)
+	c.Check(lines.Lines[0].String(), equals, "filename:1: last line\\")
+	t.CheckOutputLines(
+		// FIXME: linebreak is missing before ERROR.
+		">\tlast line\\ERROR: filename:1: File must end with a newline.")
 }
 
 func (s *Suite) Test_matchContinuationLine(c *check.C) {

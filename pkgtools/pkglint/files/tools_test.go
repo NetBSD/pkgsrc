@@ -53,18 +53,19 @@ func (s *Suite) Test_Tools_ParseToolLine(c *check.C) {
 func (s *Suite) Test_Tools_Define__invalid_tool_name(c *check.C) {
 	t := s.Init(c)
 
+	mkline := t.NewMkLine("dummy.mk", 123, "DUMMY=\tvalue")
 	reg := NewTools("")
 
-	reg.Define("tool_name", "", dummyMkLine)
-	reg.Define("tool:dependency", "", dummyMkLine)
-	reg.Define("tool:build", "", dummyMkLine)
+	reg.Define("tool_name", "", mkline)
+	reg.Define("tool:dependency", "", mkline)
+	reg.Define("tool:build", "", mkline)
 
 	// As of October 2018, the underscore is not used in any tool name.
 	// If there should ever be such a case, just use a different character for testing.
 	t.CheckOutputLines(
-		"ERROR: Invalid tool name \"tool_name\".",
-		"ERROR: Invalid tool name \"tool:dependency\".",
-		"ERROR: Invalid tool name \"tool:build\".")
+		"ERROR: dummy.mk:123: Invalid tool name \"tool_name\".",
+		"ERROR: dummy.mk:123: Invalid tool name \"tool:dependency\".",
+		"ERROR: dummy.mk:123: Invalid tool name \"tool:build\".")
 }
 
 func (s *Suite) Test_Tools_Trace__coverage(c *check.C) {
@@ -108,15 +109,17 @@ func (s *Suite) Test_Tools__USE_TOOLS_predefined_sed(c *check.C) {
 // variable name. When trying to define the tool with its variable name
 // later, the existing definition is amended.
 func (s *Suite) Test_Tools__add_varname_later(c *check.C) {
+	t := s.Init(c)
 
+	mkline := t.NewMkLine("dummy.mk", 123, "DUMMY=\tvalue")
 	tools := NewTools("")
-	tool := tools.Define("tool", "", dummyMkLine)
+	tool := tools.Define("tool", "", mkline)
 
 	c.Check(tool.Name, equals, "tool")
 	c.Check(tool.Varname, equals, "")
 
 	// Updates the existing tool definition.
-	tools.Define("tool", "TOOL", dummyMkLine)
+	tools.Define("tool", "TOOL", mkline)
 
 	c.Check(tool.Name, equals, "tool")
 	c.Check(tool.Varname, equals, "TOOL")

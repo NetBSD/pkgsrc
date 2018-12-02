@@ -87,7 +87,9 @@ func (s *Suite) Test_MkShWalker_Walk(c *check.C) {
 			"        Pipeline with 1 commands",
 			"         Command ",
 			"   SimpleCommand case-item-action",
-			"            Path List.AndOr[0].Pipeline[0].Command[0].CompoundCommand.IfClause.List[2].AndOr[0].Pipeline[0].Command[0].CompoundCommand.CaseClause.CaseItem[0].List[1].AndOr[0].Pipeline[0].Command[0].SimpleCommand",
+			"            Path List.AndOr[0].Pipeline[0].Command[0].CompoundCommand.IfClause." +
+				"List[2].AndOr[0].Pipeline[0].Command[0].CompoundCommand.CaseClause.CaseItem[0]." +
+				"List[1].AndOr[0].Pipeline[0].Command[0].SimpleCommand",
 			"            Word case-item-action",
 			"           AndOr with 1 pipelines",
 			"        Pipeline with 1 commands",
@@ -164,7 +166,9 @@ func (s *Suite) Test_MkShWalker_Walk(c *check.C) {
 			"        Pipeline with 1 commands",
 			"         Command ",
 			"   SimpleCommand :",
-			"            Path List.AndOr[4].Pipeline[0].Command[0].CompoundCommand.LoopClause.List[1].AndOr[0].Pipeline[0].Command[0].FunctionDefinition.CompoundCommand.List.AndOr[0].Pipeline[0].Command[0].SimpleCommand",
+			"            Path List.AndOr[4].Pipeline[0].Command[0].CompoundCommand.LoopClause." +
+				"List[1].AndOr[0].Pipeline[0].Command[0].FunctionDefinition.CompoundCommand." +
+				"List.AndOr[0].Pipeline[0].Command[0].SimpleCommand",
 			"            Word :",
 			"       Redirects with 1 redirects",
 			"        Redirect >&",

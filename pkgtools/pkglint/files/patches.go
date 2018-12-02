@@ -33,7 +33,7 @@ func (ck *PatchChecker) Check() {
 		defer trace.Call0()()
 	}
 
-	if CheckLineRcsid(ck.lines.Lines[0], ``, "") {
+	if ck.lines.CheckRcsID(0, ``, "") {
 		ck.exp.Advance()
 	}
 	if ck.exp.EOF() {
@@ -168,7 +168,7 @@ func (ck *PatchChecker) checkUnifiedDiff(patchedFile string) {
 		line := ck.exp.CurrentLine()
 		if !ck.isEmptyLine(line.Text) && !matches(line.Text, rePatchUniFileDel) {
 			line.Warnf("Empty line or end of file expected.")
-			Explain(
+			G.Explain(
 				"This line is not part of the patch anymore, although it may",
 				"look so.  To make this situation clear, there should be an",
 				"empty line before this line.  If the line doesn't contain",
@@ -184,7 +184,7 @@ func (ck *PatchChecker) checkBeginDiff(line Line, patchedFiles int) {
 
 	if !ck.seenDocumentation && patchedFiles == 0 {
 		line.Errorf("Each patch must be documented.")
-		Explain(
+		G.Explain(
 			"Pkgsrc tries to have as few patches as possible.  Therefore, each",
 			"patch must document why it is necessary.  Typical reasons are",
 			"portability or security.  A typical documented patch looks like",
@@ -241,7 +241,7 @@ func (ck *PatchChecker) checklineAdded(addedText string, patchedFileType FileTyp
 	case ftConfigure:
 		if hasSuffix(addedText, ": Avoid regenerating within pkgsrc") {
 			line.Errorf("This code must not be included in patches.")
-			Explain(
+			G.Explain(
 				"It is generated automatically by pkgsrc after the patch phase.",
 				"",
 				"For more details, look for \"configure-scripts-override\" in",
@@ -314,12 +314,12 @@ func (ft FileType) String() string {
 }
 
 // This is used to select the proper subroutine for detecting absolute pathnames.
-func guessFileType(fileName string) (fileType FileType) {
+func guessFileType(filename string) (fileType FileType) {
 	if trace.Tracing {
-		defer trace.Call(fileName, trace.Result(&fileType))()
+		defer trace.Call(filename, trace.Result(&fileType))()
 	}
 
-	basename := path.Base(fileName)
+	basename := path.Base(filename)
 	basename = strings.TrimSuffix(basename, ".in") // doesn't influence the content type
 	ext := strings.ToLower(strings.TrimLeft(path.Ext(basename), "."))
 
@@ -342,7 +342,7 @@ func guessFileType(fileName string) (fileType FileType) {
 	}
 
 	if trace.Tracing {
-		trace.Step1("Unknown file type for %q", fileName)
+		trace.Step1("Unknown file type for %q", filename)
 	}
 	return ftUnknown
 }
@@ -365,7 +365,7 @@ func (ck *PatchChecker) checklineSourceAbsolutePathname(line Line, text string) 
 			// ok; Python example: libdir = prefix + '/lib'
 
 		default:
-			CheckwordAbsolutePathname(line, str)
+			LineChecker{line}.CheckWordAbsolutePathname(str)
 		}
 	}
 }
@@ -378,7 +378,7 @@ func (ck *PatchChecker) checklineOtherAbsolutePathname(line Line, text string) {
 	if hasPrefix(text, "#") && !hasPrefix(text, "#!") {
 		// Don't warn for absolute pathnames in comments, except for shell interpreters.
 
-	} else if m, before, path, _ := match3(text, `^(.*?)((?:/[\w.]+)*/(?:bin|dev|etc|home|lib|mnt|opt|proc|sbin|tmp|usr|var)\b[\w./\-]*)(.*)$`); m {
+	} else if m, before, dir, _ := match3(text, `^(.*?)((?:/[\w.]+)*/(?:bin|dev|etc|home|lib|mnt|opt|proc|sbin|tmp|usr|var)\b[\w./\-]*)(.*)$`); m {
 		switch {
 		case matches(before, `[\w).@}]$`) && !matches(before, `DESTDIR.$`):
 			// Example: $prefix/bin
@@ -396,7 +396,7 @@ func (ck *PatchChecker) checklineOtherAbsolutePathname(line Line, text string) {
 			if trace.Tracing {
 				trace.Step1("before=%q", before)
 			}
-			CheckwordAbsolutePathname(line, path)
+			LineChecker{line}.CheckWordAbsolutePathname(dir)
 		}
 	}
 }

@@ -2,8 +2,10 @@ package main
 
 import (
 	"fmt"
+	"hash/crc64"
 	"io/ioutil"
 	"netbsd.org/pkglint/regex"
+	"netbsd.org/pkglint/textproc"
 	"os"
 	"path"
 	"path/filepath"
@@ -117,9 +119,9 @@ func mustMatch(s string, re regex.Pattern) []string {
 	panic(fmt.Sprintf("mustMatch %q %q", s, re))
 }
 
-func isEmptyDir(fileName string) bool {
-	dirents, err := ioutil.ReadDir(fileName)
-	if err != nil || hasSuffix(fileName, "/CVS") {
+func isEmptyDir(filename string) bool {
+	dirents, err := ioutil.ReadDir(filename)
+	if err != nil || hasSuffix(filename, "/CVS") {
 		return true
 	}
 	for _, dirent := range dirents {
@@ -127,7 +129,7 @@ func isEmptyDir(fileName string) bool {
 		if isIgnoredFilename(name) {
 			continue
 		}
-		if dirent.IsDir() && isEmptyDir(fileName+"/"+name) {
+		if dirent.IsDir() && isEmptyDir(filename+"/"+name) {
 			continue
 		}
 		return false
@@ -135,24 +137,24 @@ func isEmptyDir(fileName string) bool {
 	return true
 }
 
-func getSubdirs(fileName string) []string {
-	dirents, err := ioutil.ReadDir(fileName)
+func getSubdirs(filename string) []string {
+	dirents, err := ioutil.ReadDir(filename)
 	if err != nil {
-		NewLineWhole(fileName).Fatalf("Cannot be read: %s", err)
+		NewLineWhole(filename).Fatalf("Cannot be read: %s", err)
 	}
 
 	var subdirs []string
 	for _, dirent := range dirents {
 		name := dirent.Name()
-		if dirent.IsDir() && !isIgnoredFilename(name) && !isEmptyDir(fileName+"/"+name) {
+		if dirent.IsDir() && !isIgnoredFilename(name) && !isEmptyDir(filename+"/"+name) {
 			subdirs = append(subdirs, name)
 		}
 	}
 	return subdirs
 }
 
-func isIgnoredFilename(fileName string) bool {
-	switch fileName {
+func isIgnoredFilename(filename string) bool {
+	switch filename {
 	case ".", "..", "CVS", ".svn", ".git", ".hg":
 		return true
 	}
@@ -160,12 +162,12 @@ func isIgnoredFilename(fileName string) bool {
 }
 
 // Checks whether a file is already committed to the CVS repository.
-func isCommitted(fileName string) bool {
-	lines := loadCvsEntries(fileName)
+func isCommitted(filename string) bool {
+	lines := loadCvsEntries(filename)
 	if lines == nil {
 		return false
 	}
-	needle := "/" + path.Base(fileName) + "/"
+	needle := "/" + path.Base(filename) + "/"
 	for _, line := range lines.Lines {
 		if hasPrefix(line.Text, needle) {
 			return true
@@ -174,10 +176,10 @@ func isCommitted(fileName string) bool {
 	return false
 }
 
-func isLocallyModified(fileName string) bool {
-	baseName := path.Base(fileName)
+func isLocallyModified(filename string) bool {
+	baseName := path.Base(filename)
 
-	lines := loadCvsEntries(fileName)
+	lines := loadCvsEntries(filename)
 	if lines == nil {
 		return false
 	}
@@ -185,14 +187,14 @@ func isLocallyModified(fileName string) bool {
 	for _, line := range lines.Lines {
 		fields := strings.Split(line.Text, "/")
 		if 3 < len(fields) && fields[1] == baseName {
-			st, err := os.Stat(fileName)
+			st, err := os.Stat(filename)
 			if err != nil {
 				return true
 			}
 
 			// According to http://cvsman.com/cvs-1.12.12/cvs_19.php, format both timestamps.
 			cvsModTime := fields[3]
-			fsModTime := st.ModTime().Format(time.ANSIC)
+			fsModTime := st.ModTime().UTC().Format(time.ANSIC)
 			if trace.Tracing {
 				trace.Stepf("cvs.time=%q fs.time=%q", cvsModTime, fsModTime)
 			}
@@ -203,8 +205,8 @@ func isLocallyModified(fileName string) bool {
 	return false
 }
 
-func loadCvsEntries(fileName string) Lines {
-	dir := path.Dir(fileName)
+func loadCvsEntries(filename string) Lines {
+	dir := path.Dir(filename)
 	if dir == G.CvsEntriesDir {
 		return G.CvsEntriesLines
 	}
@@ -249,7 +251,6 @@ func shorten(s string, maxChars int) string {
 	for i := range s {
 		if chars >= maxChars {
 			return s[:i] + "..."
-			break
 		}
 		chars++
 	}
@@ -302,13 +303,13 @@ func varIsUsedSimilar(varname string) bool {
 		G.Pkg != nil && G.Pkg.vars.UsedSimilar(varname)
 }
 
-func fileExists(fileName string) bool {
-	st, err := os.Stat(fileName)
+func fileExists(filename string) bool {
+	st, err := os.Stat(filename)
 	return err == nil && st.Mode().IsRegular()
 }
 
-func dirExists(fileName string) bool {
-	st, err := os.Stat(fileName)
+func dirExists(filename string) bool {
+	st, err := os.Stat(filename)
 	return err == nil && st.Mode().IsDir()
 }
 
@@ -367,77 +368,72 @@ func relpath(from, to string) string {
 	return result
 }
 
-func abspath(fileName string) string {
-	abs, err := filepath.Abs(fileName)
-	G.Assertf(err == nil, "abspath %q.", fileName)
+func abspath(filename string) string {
+	abs, err := filepath.Abs(filename)
+	G.Assertf(err == nil, "abspath %q.", filename)
 	return filepath.ToSlash(abs)
 }
 
 // Differs from path.Clean in that only "../../" is replaced, not "../".
 // Also, the initial directory is always kept.
 // This is to provide the package path as context in recursive invocations of pkglint.
-func cleanpath(fileName string) string {
-	tmp := fileName
-	for len(tmp) > 2 && hasPrefix(tmp, "./") {
-		tmp = tmp[2:]
-	}
-	for contains(tmp, "/./") {
-		tmp = strings.Replace(tmp, "/./", "/", -1)
-	}
-	if len(tmp) > 2 && hasSuffix(tmp, "/.") {
-		tmp = tmp[:len(tmp)-2]
-	}
-	for contains(tmp, "//") {
-		tmp = strings.Replace(tmp, "//", "/", -1)
+func cleanpath(filename string) string {
+	parts := make([]string, 0, 5)
+	lex := textproc.NewLexer(filename)
+	for lex.SkipString("./") {
 	}
 
-	// Repeatedly replace `/[^.][^/]*/[^.][^/]*/\.\./\.\./` with "/"
-again:
-	slash0 := -1
-	slash1 := -1
-	slash2 := -1
-	for i, ch := range []byte(tmp) {
-		if ch == '/' {
-			slash0 = slash1
-			slash1 = slash2
-			slash2 = i
-			if slash0 != -1 && tmp[slash0+1:slash1] != ".." && tmp[slash1+1:slash2] != ".." && hasPrefix(tmp[i:], "/../../") {
-				tmp = tmp[:slash0] + tmp[i+6:]
-				goto again
+	for !lex.EOF() {
+		part := lex.NextBytesFunc(func(b byte) bool { return b != '/' })
+		parts = append(parts, part)
+		n := len(parts)
+		if n >= 5 && parts[n-1] == ".." && parts[n-2] == ".." && parts[n-3] != ".." && parts[n-4] != ".." {
+			parts = parts[:n-4]
+		}
+		if lex.SkipByte('/') {
+			for lex.SkipByte('/') || lex.SkipString("./") {
 			}
 		}
 	}
 
-	tmp = strings.TrimSuffix(tmp, "/")
-	return tmp
+	if len(parts) == 0 {
+		return "."
+	}
+	return strings.Join(parts, "/")
 }
 
 func containsVarRef(s string) bool {
 	return contains(s, "${")
 }
 
-func hasAlnumPrefix(s string) bool {
-	if s == "" {
-		return false
-	}
-	b := s[0]
-	return '0' <= b && b <= '9' || 'A' <= b && b <= 'Z' || b == '_' || 'a' <= b && b <= 'z'
-}
+func hasAlnumPrefix(s string) bool { return s != "" && textproc.AlnumU.Contains(s[0]) }
 
 // Once remembers with which arguments its FirstTime method has been called
 // and only returns true on each first call.
 type Once struct {
-	seen map[string]bool
+	seen map[uint64]bool
 }
 
 func (o *Once) FirstTime(what string) bool {
-	if o.seen == nil {
-		o.seen = make(map[string]bool)
+	return o.check(crc64.Checksum([]byte(what), crc64.MakeTable(crc64.ECMA)))
+}
+
+func (o *Once) FirstTimeSlice(whats ...string) bool {
+	crc := crc64.New(crc64.MakeTable(crc64.ECMA))
+	for _, what := range whats {
+		_, _ = crc.Write([]byte(what))
 	}
-	if _, ok := o.seen[what]; ok {
+	return o.check(crc.Sum64())
+}
+
+func (o *Once) check(key uint64) bool {
+	if _, ok := o.seen[key]; ok {
 		return false
 	}
-	o.seen[what] = true
+	if o.seen == nil {
+		o.seen = make(map[uint64]bool)
+	}
+	o.seen[key] = true
 	return true
 }
 
@@ -596,8 +592,8 @@ func naturalLess(str1, str2 string) bool {
 
 	idx := 0
 	len1, len2 := len(str1), len(str2)
-	len := len1 + len2 - imax(len1, len2)
-	for idx < len {
+	minLen := len1 + len2 - imax(len1, len2)
+	for idx < minLen {
 		c1, c2 := str1[idx], str2[idx]
 		dig1, dig2 := isDigit(c1), isDigit(c2)
 		switch {
@@ -727,8 +723,8 @@ func (s *RedundantScope) Handle(mkline MkLine) {
 
 // IsPrefs returns whether the given file, when included, loads the user
 // preferences.
-func IsPrefs(fileName string) bool {
-	switch path.Base(fileName) {
+func IsPrefs(filename string) bool {
+	switch path.Base(filename) {
 	case // See https://github.com/golang/go/issues/28057
 		"bsd.prefs.mk",         // in mk/
 		"bsd.fast.prefs.mk",    // in mk/
@@ -742,7 +738,7 @@ func IsPrefs(fileName string) bool {
 
 func isalnum(s string) bool {
 	for _, ch := range []byte(s) {
-		if !('0' <= ch && ch <= '9' || 'A' <= ch && ch <= 'Z' || ch == '_' || 'a' <= ch && ch <= 'z') {
+		if !textproc.AlnumU.Contains(ch) {
 			return false
 		}
 	}
@@ -773,8 +769,8 @@ func NewFileCache(size int) *FileCache {
 		0}
 }
 
-func (c *FileCache) Put(fileName string, options LoadOptions, lines Lines) {
-	key := c.key(fileName)
+func (c *FileCache) Put(filename string, options LoadOptions, lines Lines) {
+	key := c.key(filename)
 
 	entry := c.mapping[key]
 	if entry == nil {
@@ -798,7 +794,9 @@ func (c *FileCache) removeOldEntries() {
 
 	if G.Testing {
 		for _, e := range c.table {
-			G.logOut.Printf("FileCache %q with count %d.\n", e.key, e.count)
+			if trace.Tracing {
+				trace.Stepf("FileCache %q with count %d.", e.key, e.count)
+			}
 		}
 	}
 
@@ -806,8 +804,8 @@ func (c *FileCache) removeOldEntries() {
 	newLen := len(c.table)
 	for newLen > 0 && c.table[newLen-1].count == minCount {
 		e := c.table[newLen-1]
-		if G.Testing {
-			G.logOut.Printf("FileCache.Evict %q with count %d.\n", e.key, e.count)
+		if trace.Tracing {
+			trace.Stepf("FileCache.Evict %q with count %d.", e.key, e.count)
 		}
 		delete(c.mapping, e.key)
 		newLen--
@@ -816,15 +814,15 @@ func (c *FileCache) removeOldEntries() {
 
 	// To avoid files getting stuck in the cache.
 	for _, e := range c.table {
-		if G.Testing {
-			G.logOut.Printf("FileCache.Halve %q with count %d.\n", e.key, e.count)
+		if trace.Tracing {
+			trace.Stepf("FileCache.Halve %q with count %d.", e.key, e.count)
 		}
 		e.count /= 2
 	}
 }
 
-func (c *FileCache) Get(fileName string, options LoadOptions) Lines {
-	key := c.key(fileName)
+func (c *FileCache) Get(filename string, options LoadOptions) Lines {
+	key := c.key(filename)
 	entry, found := c.mapping[key]
 	if found && entry.options == options {
 		c.hits++
@@ -832,16 +830,16 @@ func (c *FileCache) Get(fileName string, options LoadOptions) Lines {
 
 		lines := make([]Line, entry.lines.Len())
 		for i, line := range entry.lines.Lines {
-			lines[i] = NewLineMulti(fileName, int(line.firstLine), int(line.lastLine), line.Text, line.raw)
+			lines[i] = NewLineMulti(filename, int(line.firstLine), int(line.lastLine), line.Text, line.raw)
 		}
-		return NewLines(fileName, lines)
+		return NewLines(filename, lines)
 	}
 	c.misses++
 	return nil
 }
 
-func (c *FileCache) Evict(fileName string) {
-	key := c.key(fileName)
+func (c *FileCache) Evict(filename string) {
+	key := c.key(filename)
 	entry, found := c.mapping[key]
 	if found {
 		delete(c.mapping, key)
@@ -853,10 +851,89 @@ func (c *FileCache) Evict(fileName string) {
 	}
 }
 
-func (c *FileCache) key(fileName string) string {
-	return path.Clean(fileName)
+func (c *FileCache) key(filename string) string {
+	return path.Clean(filename)
 }
 
 func makeHelp(topic string) string { return bmake("help topic=" + topic) }
 
 func bmake(target string) string { return sprintf("%s %s", confMake, target) }
+
+func seeGuide(sectionName, sectionID string) string {
+	return sprintf("See the pkgsrc guide, section %q: https://www.NetBSD.org/docs/pkgsrc/pkgsrc.html#%s",
+		sectionName, sectionID)
+}
+
+func wrap(max int, lines ...string) []string {
+	var wrapped []string
+	var buf strings.Builder
+	nonSpace := textproc.Space.Inverse()
+
+	for _, line := range lines {
+		if line == "" || isHspace(line[0]) || line[0] == '*' {
+			if buf.Len() > 0 {
+				wrapped = append(wrapped, buf.String())
+				buf.Reset()
+			}
+			wrapped = append(wrapped, line)
+			continue
+		}
+
+		lexer := textproc.NewLexer(line)
+		for !lexer.EOF() {
+			bol := len(lexer.Rest()) == len(line)
+			space := lexer.NextBytesSet(textproc.Space)
+			word := lexer.NextBytesSet(nonSpace)
+
+			if bol && space == "" && buf.Len() > 0 {
+				space = " "
+			}
+
+			if buf.Len() > 0 && buf.Len()+len(space)+len(word) > max {
+				wrapped = append(wrapped, buf.String())
+				buf.Reset()
+				if hasPrefix(space, " ") {
+					space = ""
+				}
+			}
+
+			buf.WriteString(space)
+			buf.WriteString(word)
+		}
+	}
+
+	if buf.Len() > 0 {
+		wrapped = append(wrapped, buf.String())
+	}
+
+	return wrapped
+}
+
+// escapePrintable returns an ASCII-only string that represents the given string
+// very closely, but without putting any physical terminal or terminal emulator
+// at the risk of interpreting malicious data from the files checked by pkglint.
+// This escaping is not reversible, and it doesn't need to.
+func escapePrintable(s string) string {
+	i := 0
+	for i < len(s) && textproc.XPrint.Contains(s[i]) {
+		i++
+	}
+	if i == len(s) {
+		return s
+	}
+
+	var escaped strings.Builder
+	escaped.WriteString(s[:i])
+	rest := s[i:]
+	for j, r := range rest {
+		switch {
+		case rune(byte(r)) == r && textproc.XPrint.Contains(byte(rest[j])):
+			escaped.WriteByte(byte(r))
+		case r == 0xFFFD && !hasPrefix(rest[j:], "\uFFFD"):
+			_, _ = fmt.Fprintf(&escaped, "\\x%02X", rest[j])
+		default:
+			_, _ = fmt.Fprintf(&escaped, "%U", r)
+		}
+	}
+	return escaped.String()
+}

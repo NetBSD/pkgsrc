@@ -2,24 +2,6 @@ package main
 
 import "netbsd.org/pkglint/licenses"
 
-func (src *Pkgsrc) checkToplevelUnusedLicenses() {
-	usedLicenses := src.UsedLicenses
-	if usedLicenses == nil {
-		return
-	}
-
-	licensesDir := src.File("licenses")
-	for _, licenseFile := range src.ReadDir("licenses") {
-		licenseName := licenseFile.Name()
-		if !usedLicenses[licenseName] {
-			licensePath := licensesDir + "/" + licenseName
-			if fileExists(licensePath) {
-				NewLineWhole(licensePath).Warnf("This license seems to be unused.")
-			}
-		}
-	}
-}
-
 type LicenseChecker struct {
 	MkLine MkLine
 }
@@ -40,7 +22,7 @@ func (lc *LicenseChecker) Check(value string, op MkOperator) {
 	cond.Walk(lc.checkNode)
 }
 
-func (lc *LicenseChecker) checkLicenseName(license string) {
+func (lc *LicenseChecker) checkName(license string) {
 	licenseFile := ""
 	if G.Pkg != nil {
 		if mkline := G.Pkg.vars.FirstDefinition("LICENSE_FILE"); mkline != nil {
@@ -65,23 +47,24 @@ func (lc *LicenseChecker) checkLicenseName(license string) {
 		"no-redistribution",
 		"shareware":
 		lc.MkLine.Errorf("License %q must not be used.", license)
-		Explain(
+		G.Explain(
 			"Instead of using these deprecated licenses, extract the actual",
 			"license from the package into the pkgsrc/licenses/ directory",
-			"and define LICENSE to that file name.  See the pkgsrc guide,",
-			"keyword LICENSE, for more information.")
+			"and define LICENSE to that filename.",
+			"",
+			seeGuide("Handling licenses", "handling-licenses"))
 	}
 }
 
 func (lc *LicenseChecker) checkNode(cond *licenses.Condition) {
-	if license := cond.Name; license != "" && license != "append-placeholder" {
-		lc.checkLicenseName(license)
+	if name := cond.Name; name != "" && name != "append-placeholder" {
+		lc.checkName(name)
 		return
 	}
 
 	if cond.And && cond.Or {
 		lc.MkLine.Errorf("AND and OR operators in license conditions can only be combined using parentheses.")
-		Explain(
+		G.Explain(
 			"Examples for valid license conditions are:",
 			"",
 			"\tlicense1 AND license2 AND (license3 OR license4)",

@@ -1,6 +1,10 @@
 package textproc
 
-import "strings"
+import (
+	"fmt"
+	"regexp"
+	"strings"
+)
 
 // Lexer provides a flexible way of splitting a string into several parts
 // by repeatedly chopping off a prefix that matches a string, a function
@@ -20,7 +24,7 @@ type LexerMark string
 // It cannot match Unicode code points individually and is therefore
 // usually used with ASCII characters.
 type ByteSet struct {
-	bits [4]uint64
+	bits [256]bool
 }
 
 func NewLexer(text string) *Lexer {
@@ -42,8 +46,9 @@ func (l *Lexer) PeekByte() int {
 }
 
 // Skip skips the next n bytes.
-func (l *Lexer) Skip(n int) {
+func (l *Lexer) Skip(n int) bool {
 	l.rest = l.rest[n:]
+	return n > 0
 }
 
 // NextString tests whether the remaining string has the given prefix,
@@ -54,6 +59,34 @@ func (l *Lexer) NextString(prefix string) string {
 		return prefix
 	}
 	return ""
+}
+
+// SkipString skips over the given string, if the remaining string starts
+// with it. It returns whether it actually skipped.
+func (l *Lexer) SkipString(prefix string) bool {
+	skipped := strings.HasPrefix(l.rest, prefix)
+	if skipped {
+		l.rest = l.rest[len(prefix):]
+	}
+	return skipped
+}
+
+// SkipHspace chops off the longest prefix (possibly empty) consisting
+// solely of horizontal whitespace, which is the ASCII space (U+0020)
+// and tab (U+0009).
+func (l *Lexer) SkipHspace() bool {
+	// Very similar code as in NextHspace, inlined here for performance reasons.
+	// As of Go 1.11, the compiler does not inline a call to NextHspace here.
+	i := 0
+	rest := l.rest
+	for i < len(rest) && (rest[i] == ' ' || rest[i] == '\t') {
+		i++
+	}
+	if i > 0 {
+		l.rest = rest[i:]
+		return true
+	}
+	return false
 }
 
 // NextHspace chops off the longest prefix (possibly empty) consisting
@@ -73,12 +106,9 @@ func (l *Lexer) NextHspace() string {
 	return rest[:i]
 }
 
-// NextByte returns true if the remaining string starts with the given byte,
+// SkipByte returns true if the remaining string starts with the given byte,
 // and in that case, chops it off.
-//
-// The return type differs from the other methods since creating a string
-// would be too much work for such a simple operation.
-func (l *Lexer) NextByte(b byte) bool {
+func (l *Lexer) SkipByte(b byte) bool {
 	if len(l.rest) > 0 && l.rest[0] == b {
 		l.rest = l.rest[1:]
 		return true
@@ -104,7 +134,7 @@ func (l *Lexer) NextBytesFunc(fn func(b byte) bool) string {
 // otherwise -1.
 func (l *Lexer) NextByteSet(set *ByteSet) int {
 	rest := l.rest
-	if 0 < len(rest) && set.bits[rest[0]/64]&(1<<(rest[0]%64)) != 0 {
+	if 0 < len(rest) && set.Contains(rest[0]) {
 		l.rest = rest[1:]
 		return int(rest[0])
 	}
@@ -118,13 +148,41 @@ func (l *Lexer) NextBytesSet(bytes *ByteSet) string {
 	// As of Go 1.11, the compiler does not inline variable function arguments.
 	i := 0
 	rest := l.rest
-	for i < len(rest) && bytes.bits[rest[i]/64]&(1<<(rest[i]%64)) != 0 {
+	for i < len(rest) && bytes.Contains(rest[i]) {
 		i++
 	}
 	if i != 0 {
 		l.rest = rest[i:]
 	}
 	return rest[:i]
+}
+
+// SkipRegexp returns true if the remaining string matches the given regular
+// expression, and in that case, chops it off.
+func (l *Lexer) SkipRegexp(re *regexp.Regexp) bool {
+	if !strings.HasPrefix(re.String(), "^") {
+		panic(fmt.Sprintf("Lexer.SkipRegexp: regular expression %q must have prefix %q.", re, "^"))
+	}
+	str := re.FindString(l.rest)
+	if str != "" {
+		l.Skip(len(str))
+	}
+	return str != ""
+}
+
+// NextRegexp tests whether the remaining string matches the given regular
+// expression, and in that case, skips over it and returns the matched substrings,
+// as in regexp.FindStringSubmatch.
+// If the regular expression does not match, returns nil.
+func (l *Lexer) NextRegexp(re *regexp.Regexp) []string {
+	if !strings.HasPrefix(re.String(), "^") {
+		panic(fmt.Sprintf("Lexer.NextRegexp: regular expression %q must have prefix %q.", re, "^"))
+	}
+	m := re.FindStringSubmatch(l.rest)
+	if m != nil {
+		l.Skip(len(m[0]))
+	}
+	return m
 }
 
 // Mark returns the current position of the lexer,
@@ -164,26 +222,12 @@ func NewByteSet(chars string) *ByteSet {
 		case i+2 < len(chars) && chars[i+1] == '-':
 			min := uint(chars[i])
 			max := uint(chars[i+2]) // inclusive
-			for j := uint(0); j < 4; j++ {
-				minBit := 64 * j
-				if min < minBit+64 && minBit <= max {
-					loMask := ^uint64(0)
-					if minBit < min {
-						loMask <<= min - minBit
-					}
-
-					hiMask := ^uint64(0)
-					if minBit+63 > max {
-						hiMask >>= minBit + 63 - max
-					}
-
-					set.bits[j] |= loMask & hiMask
-				}
+			for c := min; c <= max; c++ {
+				set.bits[c] = true
 			}
 			i += 3
 		default:
-			ch := chars[i]
-			set.bits[ch/64] |= 1 << (ch % 64)
+			set.bits[chars[i]] = true
 			i++
 		}
 	}
@@ -192,8 +236,15 @@ func NewByteSet(chars string) *ByteSet {
 
 // Inverse returns a byte set that matches the inverted set of bytes.
 func (bs *ByteSet) Inverse() *ByteSet {
-	return &ByteSet{[4]uint64{^bs.bits[0], ^bs.bits[1], ^bs.bits[2], ^bs.bits[3]}}
+	var inv ByteSet
+	for i := 0; i < 256; i++ {
+		inv.bits[i] = !bs.Contains(byte(i))
+	}
+	return &inv
 }
+
+// Contains tests whether the byte set contains the given byte.
+func (bs *ByteSet) Contains(b byte) bool { return bs.bits[b] }
 
 // Predefined byte sets for parsing ASCII text.
 var (
@@ -202,4 +253,5 @@ var (
 	Digit  = NewByteSet("0-9")        // The digits zero to nine
 	Space  = NewByteSet("\t\n ")      // Tab, newline, space
 	Hspace = NewByteSet("\t ")        // Tab, space
+	XPrint = NewByteSet("\n\t -~")    // Printable ASCII, plus tab and newline
 )

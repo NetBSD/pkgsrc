@@ -31,7 +31,7 @@ type TestNameChecker struct {
 
 type testeePrefix struct {
 	prefix   string
-	fileName string
+	filename string
 }
 
 // testeeElement is an element of the source code that can be tested.
@@ -94,27 +94,9 @@ func (ck *TestNameChecker) addWarning(format string, args ...interface{}) {
 	ck.warnings = append(ck.warnings, "W: "+fmt.Sprintf(format, args...))
 }
 
-func newElement(typeName, funcName, fileName string) *testeeElement {
-	typeName = strings.TrimSuffix(typeName, "Impl")
-
-	e := &testeeElement{File: fileName, Type: typeName, Func: funcName}
-
-	e.FullName = e.Type + ifelseStr(e.Type != "" && e.Func != "", ".", "") + e.Func
-
-	e.Test = strings.HasSuffix(e.File, "_test.go") && e.Type != "" && strings.HasPrefix(e.Func, "Test")
-
-	if e.Test {
-		e.Prefix = strings.Split(strings.TrimPrefix(e.Func, "Test"), "__")[0]
-	} else {
-		e.Prefix = e.Type + ifelseStr(e.Type != "" && e.Func != "", "_", "") + e.Func
-	}
-
-	return e
-}
-
 // addElement adds a single type or function declaration
 // to the known elements.
-func (ck *TestNameChecker) addElement(elements *[]*testeeElement, decl ast.Decl, fileName string) {
+func (ck *TestNameChecker) addElement(elements *[]*testeeElement, decl ast.Decl, filename string) {
 	switch decl := decl.(type) {
 
 	case *ast.GenDecl:
@@ -122,7 +104,7 @@ func (ck *TestNameChecker) addElement(elements *[]*testeeElement, decl ast.Decl,
 			switch spec := spec.(type) {
 			case *ast.TypeSpec:
 				typeName := spec.Name.Name
-				*elements = append(*elements, newElement(typeName, "", fileName))
+				*elements = append(*elements, newElement(typeName, "", filename))
 			}
 		}
 
@@ -136,7 +118,7 @@ func (ck *TestNameChecker) addElement(elements *[]*testeeElement, decl ast.Decl,
 				typeName = typeExpr.(*ast.Ident).Name
 			}
 		}
-		*elements = append(*elements, newElement(typeName, decl.Name.Name, fileName))
+		*elements = append(*elements, newElement(typeName, decl.Name.Name, filename))
 	}
 }
 
@@ -145,12 +127,12 @@ func (ck *TestNameChecker) addElement(elements *[]*testeeElement, decl ast.Decl,
 //
 // It doesn't really belong to this type (TestNameChecker) but
 // merely uses its infrastructure.
-func (ck *TestNameChecker) fixTabs(fileName string) {
-	if ck.isIgnored(fileName) {
+func (ck *TestNameChecker) fixTabs(filename string) {
+	if ck.isIgnored(filename) {
 		return
 	}
 
-	readBytes, err := ioutil.ReadFile(fileName)
+	readBytes, err := ioutil.ReadFile(filename)
 	ck.c.Assert(err, check.IsNil)
 
 	var fixed bytes.Buffer
@@ -161,10 +143,10 @@ func (ck *TestNameChecker) fixTabs(fileName string) {
 	}
 
 	if fixed.String() != string(readBytes) {
-		tmpName := fileName + ".tmp"
+		tmpName := filename + ".tmp"
 		err = ioutil.WriteFile(tmpName, fixed.Bytes(), 0666)
 		ck.c.Assert(err, check.IsNil)
-		err = os.Rename(tmpName, fileName)
+		err = os.Rename(tmpName, filename)
 		ck.c.Assert(err, check.IsNil)
 	}
 }
@@ -181,25 +163,14 @@ func (ck *TestNameChecker) loadAllElements() []*testeeElement {
 
 	var elements []*testeeElement
 	for _, pkg := range pkgs {
-		for fileName, file := range pkg.Files {
+		for filename, file := range pkg.Files {
 			for _, decl := range file.Decls {
-				ck.addElement(&elements, decl, fileName)
+				ck.addElement(&elements, decl, filename)
 			}
 		}
 	}
 
-	sort.Slice(elements, func(i, j int) bool {
-		ti := elements[i]
-		tj := elements[j]
-		switch {
-		case ti.Type != tj.Type:
-			return ti.Type < tj.Type
-		case ti.Func != tj.Func:
-			return ti.Func < tj.Func
-		default:
-			return ti.File < tj.File
-		}
-	})
+	sort.Slice(elements, func(i, j int) bool { return elements[i].Less(elements[j]) })
 
 	return elements
 }
@@ -219,7 +190,7 @@ func (ck *TestNameChecker) collectTesteeByName(elements []*testeeElement) map[st
 	}
 
 	for _, p := range ck.prefixes {
-		prefixes[p.prefix] = newElement(p.prefix, "", p.fileName)
+		prefixes[p.prefix] = newElement(p.prefix, "", p.filename)
 	}
 
 	return prefixes
@@ -233,7 +204,7 @@ func (ck *TestNameChecker) checkTestName(test *testeeElement, prefix string, des
 	} else if !strings.HasSuffix(testee.File, "_test.go") {
 		correctTestFile := strings.TrimSuffix(testee.File, ".go") + "_test.go"
 		if correctTestFile != test.File {
-			ck.addWarning("Test %q for %q should be in %s instead of %s.",
+			ck.addError("Test %q for %q must be in %s instead of %s.",
 				test.FullName, testee.FullName, correctTestFile, test.File)
 		}
 	}
@@ -300,9 +271,9 @@ func (ck *TestNameChecker) Check() {
 	}
 }
 
-func (ck *TestNameChecker) isIgnored(fileName string) bool {
+func (ck *TestNameChecker) isIgnored(filename string) bool {
 	for _, mask := range ck.ignore {
-		ok, err := filepath.Match(mask, fileName)
+		ok, err := filepath.Match(mask, filename)
 		if err != nil {
 			panic(err)
 		}
@@ -311,6 +282,35 @@ func (ck *TestNameChecker) isIgnored(fileName string) bool {
 		}
 	}
 	return false
+}
+
+func newElement(typeName, funcName, filename string) *testeeElement {
+	typeName = strings.TrimSuffix(typeName, "Impl")
+
+	e := &testeeElement{File: filename, Type: typeName, Func: funcName}
+
+	e.FullName = e.Type + ifelseStr(e.Type != "" && e.Func != "", ".", "") + e.Func
+
+	e.Test = strings.HasSuffix(e.File, "_test.go") && e.Type != "" && strings.HasPrefix(e.Func, "Test")
+
+	if e.Test {
+		e.Prefix = strings.Split(strings.TrimPrefix(e.Func, "Test"), "__")[0]
+	} else {
+		e.Prefix = e.Type + ifelseStr(e.Type != "" && e.Func != "", "_", "") + e.Func
+	}
+
+	return e
+}
+
+func (el *testeeElement) Less(other *testeeElement) bool {
+	switch {
+	case el.Type != other.Type:
+		return el.Type < other.Type
+	case el.Func != other.Func:
+		return el.Func < other.Func
+	default:
+		return el.File < other.File
+	}
 }
 
 func ifelseStr(cond bool, a, b string) string {

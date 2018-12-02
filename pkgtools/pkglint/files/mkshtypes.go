@@ -101,7 +101,7 @@ type MkShForClause struct {
 
 // MkShCaseClause is a "case" statement, including all its branches.
 //
-// Example: case $fileName in *.c) echo "C source" ;; esac
+// Example: case $filename in *.c) echo "C source" ;; esac
 type MkShCaseClause struct {
 	Word  *ShToken
 	Cases []*MkShCaseItem
@@ -160,7 +160,7 @@ type MkShSimpleCommand struct {
 }
 
 func NewStrCommand(cmd *MkShSimpleCommand) *StrCommand {
-	strcmd := &StrCommand{
+	strcmd := StrCommand{
 		make([]string, len(cmd.Assignments)),
 		"",
 		make([]string, len(cmd.Args))}
@@ -173,7 +173,7 @@ func NewStrCommand(cmd *MkShSimpleCommand) *StrCommand {
 	for i, arg := range cmd.Args {
 		strcmd.Args[i] = arg.MkText
 	}
-	return strcmd
+	return &strcmd
 }
 
 // StrCommand is structurally similar to MkShSimpleCommand, but all
@@ -227,7 +227,7 @@ func (c *StrCommand) String() string {
 type MkShRedirection struct {
 	Fd     int      // Or -1
 	Op     string   // See io_file in shell.y for possible values
-	Target *ShToken // The file name or &fd
+	Target *ShToken // The filename or &fd
 }
 
 type MkShSeparator uint8

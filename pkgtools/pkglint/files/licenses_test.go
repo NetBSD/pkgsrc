@@ -8,10 +8,10 @@ func (s *Suite) Test_LicenseChecker_Check(c *check.C) {
 	t := s.Init(c)
 
 	t.CreateFileLines("licenses/gnu-gpl-v2",
-		"Most software \u2026")
+		"The licenses for most software are designed to take away ...")
 	mkline := t.NewMkLine("Makefile", 7, "LICENSE=dummy")
 
-	licenseChecker := &LicenseChecker{mkline}
+	licenseChecker := LicenseChecker{mkline}
 	licenseChecker.Check("gpl-v2", opAssign)
 
 	t.CheckOutputLines(
@@ -44,67 +44,14 @@ func (s *Suite) Test_LicenseChecker_Check(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_Pkgsrc_checkToplevelUnusedLicenses(c *check.C) {
+func (s *Suite) Test_LicenseChecker_checkName__LICENSE_FILE(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupPkgsrc()
-	t.CreateFileLines("mk/misc/category.mk")
-	t.CreateFileLines("licenses/2-clause-bsd")
-	t.CreateFileLines("licenses/gnu-gpl-v3")
-
-	t.CreateFileLines("Makefile",
-		MkRcsID,
-		"SUBDIR+=\tcategory")
-
-	t.CreateFileLines("category/Makefile",
-		MkRcsID,
-		"COMMENT=\tExample category",
+	t.SetupPackage("category/package",
+		"LICENSE=\tmy-license",
 		"",
-		"SUBDIR+=\tpackage",
-		"",
-		".include \"../mk/misc/category.mk\"")
-
-	t.CreateFileLines("category/package/Makefile",
-		MkRcsID,
-		"CATEGORIES=\tcategory",
-		"",
-		"COMMENT=Example package",
-		"LICENSE=\t2-clause-bsd",
-		"NO_CHECKSUM=\tyes")
-	t.CreateFileLines("category/package/PLIST",
-		PlistRcsID,
-		"bin/program")
-
-	G.Main("pkglint", "-r", "-Cglobal", t.File("."))
-
-	t.CheckOutputLines(
-		"WARN: ~/licenses/gnu-gpl-v2: This license seems to be unused.", // Added by Tester.SetupPkgsrc
-		"WARN: ~/licenses/gnu-gpl-v3: This license seems to be unused.",
-		"0 errors and 2 warnings found.")
-}
-
-func (s *Suite) Test_LicenseChecker_checkLicenseName__LICENSE_FILE(c *check.C) {
-	t := s.Init(c)
-
-	t.SetupPkgsrc()
-	t.SetupCommandLine("-Wno-space")
-	t.CreateFileLines("category/package/DESCR",
-		"Package description")
-	t.CreateFileLines("category/package/Makefile",
-		MkRcsID,
-		"",
-		"CATEGORIES=     chinese",
-		"",
-		"COMMENT=        Useful tools",
-		"LICENSE=        my-license",
-		"",
-		"LICENSE_FILE=   my-license",
-		"NO_CHECKSUM=    yes",
-		"",
-		".include \"../../mk/bsd.pkg.mk\"")
-	t.CreateFileLines("category/package/PLIST",
-		PlistRcsID,
-		"bin/program")
+		"LICENSE_FILE=\tmy-license")
 	t.CreateFileLines("category/package/my-license",
 		"An individual license file.")
 
