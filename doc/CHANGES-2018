@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5009 2018/12/02 12:43:33 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.5010 2018/12/02 13:41:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6974,3 +6974,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-mercurial to 4.8 [wiz 2018-12-02]
 	Updated devel/syncdir to 1.0nb3 [schmonz 2018-12-02]
 	Updated graphics/png to 1.6.36 [wiz 2018-12-02]
+	Updated lang/perl5 to 5.28.1 [adam 2018-12-02]
