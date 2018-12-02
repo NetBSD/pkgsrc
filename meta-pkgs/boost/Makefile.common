@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.78 2018/09/07 10:03:45 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.79 2018/12/02 14:32:17 wiz Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -91,20 +91,23 @@ post-wrapper:
 pre-configure:
 	${FIND} ${WRKSRC} -type f -print0 | ${XARGS} -0 ${TOUCH}
 
-# Generate a new user.hpp or use the installed one, depending on the package
-# we are building.
-.  if ${BOOST_CONFIG} == "installed"
-.    include "../../devel/boost-headers/buildlink3.mk"
-do-configure:
-	${CP} -f \
-	    ${BUILDLINK_PREFIX.boost-headers}/include/boost/config/user.hpp \
-	    ${WRKSRC}/boost/config/user.hpp
-.  elif ${BOOST_CONFIG} == "generate"
-do-configure:
-	cd ${WRKSRC}/libs/config && \
-	    ${SETENV} ${CONFIGURE_ENV} ${SH} ./configure
-	${CP} -f ${WRKSRC}/libs/config/user.hpp ${WRKSRC}/boost/config/user.hpp
-.  endif
+# According to https://github.com/boostorg/config/issues/240
+# the user.hpp generation is intended only for porting to new platforms
+# and we should use the provided one.
+## Generate a new user.hpp or use the installed one, depending on the package
+## we are building.
+#.  if ${BOOST_CONFIG} == "installed"
+#.    include "../../devel/boost-headers/buildlink3.mk"
+#do-configure:
+#	${CP} -f \
+#	    ${BUILDLINK_PREFIX.boost-headers}/include/boost/config/user.hpp \
+#	    ${WRKSRC}/boost/config/user.hpp
+#.  elif ${BOOST_CONFIG} == "generate"
+#do-configure:
+#	cd ${WRKSRC}/libs/config && \
+#	    ${SETENV} ${CONFIGURE_ENV} ${SH} ./configure
+#	${CP} -f ${WRKSRC}/libs/config/user.hpp ${WRKSRC}/boost/config/user.hpp
+#.  endif
 
 boost-install-libs:
 	${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/lib
