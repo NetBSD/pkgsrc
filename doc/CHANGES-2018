@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4986 2018/12/02 01:58:03 rillig Exp $
+$NetBSD: CHANGES-2018,v 1.4987 2018/12/02 06:37:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6951,3 +6951,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-pygit2 to 0.27.2 [wiz 2018-12-01]
 	Updated mail/fdm to 1.9nb3 [leot 2018-12-02]
 	Updated pkgtools/pkglint to 5.6.7 [rillig 2018-12-02]
+	Updated databases/ruby-sequel to 5.15.0 [taca 2018-12-02]
