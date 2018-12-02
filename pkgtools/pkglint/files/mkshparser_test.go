@@ -262,6 +262,7 @@ func (s *ShSuite) Test_ShellParser__term(c *check.C) {
 func (s *ShSuite) Test_ShellParser__for_clause(c *check.C) {
 	b := s.init(c)
 
+	// If this test fails, the cause might be in shell.y, in the for_clause rule.
 	s.test("for var do echo $var ; done",
 		b.List().AddCommand(b.For(
 			"var",
