@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.4989 2018/12/02 06:42:38 taca Exp $
+$NetBSD: CHANGES-2018,v 1.4990 2018/12/02 06:44:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6954,3 +6954,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/ruby-sequel to 5.15.0 [taca 2018-12-02]
 	Updated devel/ruby-test-unit to 3.2.9 [taca 2018-12-02]
 	Updated databases/ruby-activeldap to 5.2.2 [taca 2018-12-02]
+	Updated devel/ruby-bindata to 2.4.4 [taca 2018-12-02]
