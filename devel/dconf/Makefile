@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2018/09/03 10:50:17 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2018/12/02 07:11:55 wiz Exp $
 
-DISTNAME=	dconf-0.28.0
-PKGREVISION=	1
+DISTNAME=	dconf-0.30.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dconf/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -34,6 +33,7 @@ SUBST_SED.sysdir=	-e s,/etc,${PKG_SYSCONFDIR},g
 #MESON_ARGS+=		-D enable-gtk-doc=true
 # man option does not work without gtk-doc option
 #MESON_ARGS+=		-D enable-man=true
+MESON_ARGS+=		-D bash_completion=false
 
 PKGCONFIG_OVERRIDE=		output/meson-private/dconf.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-build
@@ -62,5 +62,6 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.44.0
 #.include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../devel/glib2/modules.mk"
 .include "../../devel/py-meson/build.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
