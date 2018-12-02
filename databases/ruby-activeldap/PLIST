@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/09/03 15:08:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/12/02 06:42:10 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/COPYING
@@ -36,7 +36,6 @@ ${GEM_LIBDIR}/examples/usermod-binary-add-time
 ${GEM_LIBDIR}/examples/usermod-binary-del
 ${GEM_LIBDIR}/examples/usermod-lang-add
 ${GEM_LIBDIR}/lib/active_ldap.rb
-${GEM_LIBDIR}/lib/active_ldap/action_controller/ldap_benchmarking.rb
 ${GEM_LIBDIR}/lib/active_ldap/acts/tree.rb
 ${GEM_LIBDIR}/lib/active_ldap/adapter/base.rb
 ${GEM_LIBDIR}/lib/active_ldap/adapter/jndi.rb
@@ -68,12 +67,14 @@ ${GEM_LIBDIR}/lib/active_ldap/compatible.rb
 ${GEM_LIBDIR}/lib/active_ldap/configuration.rb
 ${GEM_LIBDIR}/lib/active_ldap/connection.rb
 ${GEM_LIBDIR}/lib/active_ldap/distinguished_name.rb
+${GEM_LIBDIR}/lib/active_ldap/entry.rb
 ${GEM_LIBDIR}/lib/active_ldap/entry_attribute.rb
 ${GEM_LIBDIR}/lib/active_ldap/escape.rb
 ${GEM_LIBDIR}/lib/active_ldap/get_text.rb
 ${GEM_LIBDIR}/lib/active_ldap/get_text/parser.rb
 ${GEM_LIBDIR}/lib/active_ldap/helper.rb
 ${GEM_LIBDIR}/lib/active_ldap/human_readable.rb
+${GEM_LIBDIR}/lib/active_ldap/ldap_controls.rb
 ${GEM_LIBDIR}/lib/active_ldap/ldap_error.rb
 ${GEM_LIBDIR}/lib/active_ldap/ldif.rb
 ${GEM_LIBDIR}/lib/active_ldap/log_subscriber.rb
@@ -85,8 +86,7 @@ ${GEM_LIBDIR}/lib/active_ldap/railtie.rb
 ${GEM_LIBDIR}/lib/active_ldap/railties/controller_runtime.rb
 ${GEM_LIBDIR}/lib/active_ldap/schema.rb
 ${GEM_LIBDIR}/lib/active_ldap/schema/syntaxes.rb
-${GEM_LIBDIR}/lib/active_ldap/timeout.rb
-${GEM_LIBDIR}/lib/active_ldap/timeout_stub.rb
+${GEM_LIBDIR}/lib/active_ldap/supported_control.rb
 ${GEM_LIBDIR}/lib/active_ldap/user_password.rb
 ${GEM_LIBDIR}/lib/active_ldap/validations.rb
 ${GEM_LIBDIR}/lib/active_ldap/version.rb
@@ -102,6 +102,7 @@ ${GEM_LIBDIR}/test/add-phonetic-attribute-options-to-slapd.ldif
 ${GEM_LIBDIR}/test/al-test-utils.rb
 ${GEM_LIBDIR}/test/command.rb
 ${GEM_LIBDIR}/test/config.yaml.sample
+${GEM_LIBDIR}/test/enable-start-tls.ldif
 ${GEM_LIBDIR}/test/fixtures/lower_case_object_class_schema.rb
 ${GEM_LIBDIR}/test/run-test.rb
 ${GEM_LIBDIR}/test/test_acts_as_tree.rb
@@ -118,6 +119,8 @@ ${GEM_LIBDIR}/test/test_connection_per_class.rb
 ${GEM_LIBDIR}/test/test_connection_per_dn.rb
 ${GEM_LIBDIR}/test/test_dirty.rb
 ${GEM_LIBDIR}/test/test_dn.rb
+${GEM_LIBDIR}/test/test_entry.rb
+${GEM_LIBDIR}/test/test_entry_attribute.rb
 ${GEM_LIBDIR}/test/test_find.rb
 ${GEM_LIBDIR}/test/test_groupadd.rb
 ${GEM_LIBDIR}/test/test_groupdel.rb
@@ -130,6 +133,7 @@ ${GEM_LIBDIR}/test/test_object_class.rb
 ${GEM_LIBDIR}/test/test_persistence.rb
 ${GEM_LIBDIR}/test/test_reflection.rb
 ${GEM_LIBDIR}/test/test_schema.rb
+${GEM_LIBDIR}/test/test_supported_control.rb
 ${GEM_LIBDIR}/test/test_syntax.rb
 ${GEM_LIBDIR}/test/test_user.rb
 ${GEM_LIBDIR}/test/test_user_password.rb
