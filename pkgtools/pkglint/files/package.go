@@ -160,8 +160,8 @@ func (pkg *Package) loadPackageMakefile() MkLines {
 		mainLines.Tools.def("cpack", "", false, AtRunTime)
 	}
 
-	allLines.DetermineUsedVariables()
-	allLines.CheckRedundantVariables()
+	allLines.collectUsedVariables()
+	allLines.CheckRedundantAssignments()
 
 	pkg.Pkgdir, _ = pkg.vars.Value("PKGDIR")
 	pkg.DistinfoFile, _ = pkg.vars.Value("DISTINFO_FILE")
@@ -217,7 +217,7 @@ func (pkg *Package) readMakefile(filename string, mainLines MkLines, allLines Mk
 
 		var includedFile, incDir, incBase string
 		if mkline.IsInclude() {
-			includedFile = resolveVariableRefs(mkline.ResolveVarsInRelativePath(mkline.IncludedFile(), true))
+			includedFile = resolveVariableRefs(mkline.ResolveVarsInRelativePath(mkline.IncludedFile()))
 			if containsVarRef(includedFile) {
 				if !contains(filename, "/mk/") {
 					mkline.Notef("Skipping include file %q. This may result in false warnings.", includedFile)
@@ -753,7 +753,7 @@ func (pkg *Package) checkLocallyModified(filename string) {
 	}
 }
 
-func (pkg *Package) CheckInclude(mkline MkLine, indentation *Indentation) {
+func (pkg *Package) checkIncludeConditionally(mkline MkLine, indentation *Indentation) {
 	conditionalVars := mkline.ConditionalVars()
 	if len(conditionalVars) == 0 {
 		conditionalVars = indentation.Varnames()

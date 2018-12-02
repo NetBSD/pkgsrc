@@ -61,7 +61,7 @@ func (vt *VaralignTester) run(autofix bool) {
 
 	var varalign VaralignBlock
 	for _, mkline := range mklines.mklines {
-		varalign.Check(mkline)
+		varalign.Process(mkline)
 	}
 	varalign.Finish()
 
