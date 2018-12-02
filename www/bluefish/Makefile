@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.136 2018/11/14 22:22:35 kleink Exp $
+# $NetBSD: Makefile,v 1.137 2018/12/02 19:35:26 bsiegert Exp $
 
-DISTNAME=	bluefish-2.2.8
-PKGREVISION=	9
+DISTNAME=	bluefish-2.2.10
 CATEGORIES=	www
-MASTER_SITES=	http://bluefish.mrball.net/stable/source/
-MASTER_SITES+=	http://www.bennewitz.com/bluefish/stable/source/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bluefish/${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -48,6 +46,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 2.2.4
 .include "../../fonts/gucharmap/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../textproc/enchant/buildlink3.mk"
+.include "../../textproc/enchant2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
