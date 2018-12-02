@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/10/16 13:49:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/12/02 16:33:59 adam Exp $
 bin/sl-${PYVERSSUFFIX}
 bin/slcli-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -152,6 +152,12 @@ ${PYSITELIB}/SoftLayer/CLI/custom_types.pyo
 ${PYSITELIB}/SoftLayer/CLI/dedicatedhost/__init__.py
 ${PYSITELIB}/SoftLayer/CLI/dedicatedhost/__init__.pyc
 ${PYSITELIB}/SoftLayer/CLI/dedicatedhost/__init__.pyo
+${PYSITELIB}/SoftLayer/CLI/dedicatedhost/cancel.py
+${PYSITELIB}/SoftLayer/CLI/dedicatedhost/cancel.pyc
+${PYSITELIB}/SoftLayer/CLI/dedicatedhost/cancel.pyo
+${PYSITELIB}/SoftLayer/CLI/dedicatedhost/cancel_guests.py
+${PYSITELIB}/SoftLayer/CLI/dedicatedhost/cancel_guests.pyc
+${PYSITELIB}/SoftLayer/CLI/dedicatedhost/cancel_guests.pyo
 ${PYSITELIB}/SoftLayer/CLI/dedicatedhost/create.py
 ${PYSITELIB}/SoftLayer/CLI/dedicatedhost/create.pyc
 ${PYSITELIB}/SoftLayer/CLI/dedicatedhost/create.pyo
@@ -164,6 +170,9 @@ ${PYSITELIB}/SoftLayer/CLI/dedicatedhost/detail.pyo
 ${PYSITELIB}/SoftLayer/CLI/dedicatedhost/list.py
 ${PYSITELIB}/SoftLayer/CLI/dedicatedhost/list.pyc
 ${PYSITELIB}/SoftLayer/CLI/dedicatedhost/list.pyo
+${PYSITELIB}/SoftLayer/CLI/dedicatedhost/list_guests.py
+${PYSITELIB}/SoftLayer/CLI/dedicatedhost/list_guests.pyc
+${PYSITELIB}/SoftLayer/CLI/dedicatedhost/list_guests.pyo
 ${PYSITELIB}/SoftLayer/CLI/deprecated.py
 ${PYSITELIB}/SoftLayer/CLI/deprecated.pyc
 ${PYSITELIB}/SoftLayer/CLI/deprecated.pyo
@@ -704,6 +713,24 @@ ${PYSITELIB}/SoftLayer/CLI/virt/__init__.pyo
 ${PYSITELIB}/SoftLayer/CLI/virt/cancel.py
 ${PYSITELIB}/SoftLayer/CLI/virt/cancel.pyc
 ${PYSITELIB}/SoftLayer/CLI/virt/cancel.pyo
+${PYSITELIB}/SoftLayer/CLI/virt/capacity/__init__.py
+${PYSITELIB}/SoftLayer/CLI/virt/capacity/__init__.pyc
+${PYSITELIB}/SoftLayer/CLI/virt/capacity/__init__.pyo
+${PYSITELIB}/SoftLayer/CLI/virt/capacity/create.py
+${PYSITELIB}/SoftLayer/CLI/virt/capacity/create.pyc
+${PYSITELIB}/SoftLayer/CLI/virt/capacity/create.pyo
+${PYSITELIB}/SoftLayer/CLI/virt/capacity/create_guest.py
+${PYSITELIB}/SoftLayer/CLI/virt/capacity/create_guest.pyc
+${PYSITELIB}/SoftLayer/CLI/virt/capacity/create_guest.pyo
+${PYSITELIB}/SoftLayer/CLI/virt/capacity/create_options.py
+${PYSITELIB}/SoftLayer/CLI/virt/capacity/create_options.pyc
+${PYSITELIB}/SoftLayer/CLI/virt/capacity/create_options.pyo
+${PYSITELIB}/SoftLayer/CLI/virt/capacity/detail.py
+${PYSITELIB}/SoftLayer/CLI/virt/capacity/detail.pyc
+${PYSITELIB}/SoftLayer/CLI/virt/capacity/detail.pyo
+${PYSITELIB}/SoftLayer/CLI/virt/capacity/list.py
+${PYSITELIB}/SoftLayer/CLI/virt/capacity/list.pyc
+${PYSITELIB}/SoftLayer/CLI/virt/capacity/list.pyo
 ${PYSITELIB}/SoftLayer/CLI/virt/capture.py
 ${PYSITELIB}/SoftLayer/CLI/virt/capture.pyc
 ${PYSITELIB}/SoftLayer/CLI/virt/capture.pyo
@@ -860,6 +887,9 @@ ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_ContentDelivery_Account.pyo
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_Firewall_Update_Request.py
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_Firewall_Update_Request.pyc
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_Firewall_Update_Request.pyo
+${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_Pod.py
+${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_Pod.pyc
+${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_Pod.pyo
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_SecurityGroup.py
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_SecurityGroup.pyc
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_SecurityGroup.pyo
@@ -926,6 +956,9 @@ ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Virtual_Guest.pyo
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Virtual_Guest_Block_Device_Template_Group.py
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Virtual_Guest_Block_Device_Template_Group.pyc
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Virtual_Guest_Block_Device_Template_Group.pyo
+${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Virtual_ReservedCapacityGroup.py
+${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Virtual_ReservedCapacityGroup.pyc
+${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Virtual_ReservedCapacityGroup.pyo
 ${PYSITELIB}/SoftLayer/fixtures/__init__.py
 ${PYSITELIB}/SoftLayer/fixtures/__init__.pyc
 ${PYSITELIB}/SoftLayer/fixtures/__init__.pyo
@@ -995,6 +1028,9 @@ ${PYSITELIB}/SoftLayer/managers/user.pyo
 ${PYSITELIB}/SoftLayer/managers/vs.py
 ${PYSITELIB}/SoftLayer/managers/vs.pyc
 ${PYSITELIB}/SoftLayer/managers/vs.pyo
+${PYSITELIB}/SoftLayer/managers/vs_capacity.py
+${PYSITELIB}/SoftLayer/managers/vs_capacity.pyc
+${PYSITELIB}/SoftLayer/managers/vs_capacity.pyo
 ${PYSITELIB}/SoftLayer/shell/__init__.py
 ${PYSITELIB}/SoftLayer/shell/__init__.pyc
 ${PYSITELIB}/SoftLayer/shell/__init__.pyo
