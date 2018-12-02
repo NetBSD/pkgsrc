@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2761 2018/11/27 14:30:02 jaapb Exp $
+# $NetBSD: Makefile,v 1.2762 2018/12/02 06:47:49 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2412,6 +2412,7 @@ SUBDIR+=	ruby-blankslate
 SUBDIR+=	ruby-bsearch
 SUBDIR+=	ruby-byaccr
 SUBDIR+=	ruby-byebug
+SUBDIR+=	ruby-c21e
 SUBDIR+=	ruby-celluloid
 SUBDIR+=	ruby-celluloid-essentials
 SUBDIR+=	ruby-celluloid-extras
