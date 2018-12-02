@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2018/11/14 22:21:21 kleink Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2018/12/02 21:51:06 bsiegert Exp $
 
 BUILDLINK_TREE+=	abiword
 
@@ -16,7 +16,7 @@ BUILDLINK_PKGSRCDIR.abiword?=	../../editors/abiword
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-.include "../../textproc/enchant/buildlink3.mk"
+.include "../../textproc/enchant2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/redland/buildlink3.mk"
 .include "../../time/libical/buildlink3.mk"
