@@ -31,6 +31,7 @@ type mkLineAssignImpl struct {
 	value       string     // The trimmed value
 	valueMk     []*MkToken // The value, sent through splitIntoMkWords
 	valueMkRest string     // nonempty in case of parse errors
+	fields      []string   // The value, space-separated according to shell quoting rules
 	comment     string
 }
 type mkLineShell struct {
@@ -43,9 +44,10 @@ type mkLineDirectiveImpl struct {
 	indent    string // the space between the leading "." and the directive
 	directive string // "if", "else", "for", etc.
 	args      string
-	comment   string // mainly interesting for .endif and .endfor
-	elseLine  MkLine // for .if (filled in later)
-	cond      MkCond // for .if and .elif (filled in later as needed)
+	comment   string   // mainly interesting for .endif and .endfor
+	elseLine  MkLine   // for .if (filled in later)
+	cond      MkCond   // for .if and .elif (filled in on first access)
+	fields    []string // the arguments for the .for loop (filled in on first access)
 }
 type mkLineInclude = *mkLineIncludeImpl // See https://github.com/golang/go/issues/28045
 type mkLineIncludeImpl struct {
@@ -110,6 +112,7 @@ func NewMkLine(line Line) *MkLineImpl {
 			strings.Replace(value, "\\#", "#", -1),
 			nil,
 			"",
+			nil,
 			comment}}
 	}
 
@@ -128,7 +131,7 @@ func NewMkLine(line Line) *MkLineImpl {
 	}
 
 	if m, indent, directive, args, comment := matchMkDirective(text); m {
-		return &MkLineImpl{line, &mkLineDirectiveImpl{indent, directive, args, comment, nil, nil}}
+		return &MkLineImpl{line, &mkLineDirectiveImpl{indent, directive, args, comment, nil, nil, nil}}
 	}
 
 	if m, indent, directive, includedFile := MatchMkInclude(text); m {
@@ -472,6 +475,41 @@ func (mkline *MkLineImpl) ValueTokens() []*MkToken {
 	return assign.valueMk
 }
 
+// Fields applies to variable assignments and .for loops.
+// For variable assignments, it returns the right-hand side, properly split into words.
+// For .for loops, it returns all arguments (including variable names), properly split into words.
+func (mkline *MkLineImpl) Fields() []string {
+	if mkline.IsVarassign() {
+		value := mkline.Value()
+		if value == "" {
+			return nil
+		}
+
+		assign := mkline.data.(mkLineAssign)
+		if assign.fields != nil {
+			return assign.fields
+		}
+
+		assign.fields = mkline.ValueFields(value)
+		return assign.fields
+	}
+
+	// For .for loops.
+	args := mkline.Args()
+	if args == "" {
+		return nil
+	}
+
+	directive := mkline.data.(mkLineDirective)
+	if directive.fields != nil {
+		return directive.fields
+	}
+
+	directive.fields = mkline.ValueFields(args)
+	return directive.fields
+
+}
+
 func (mkline *MkLineImpl) WithoutMakeVariables(value string) string {
 	valueNovar := ""
 	for _, token := range NewMkParser(nil, value, false).MkTokens() {
@@ -482,7 +520,7 @@ func (mkline *MkLineImpl) WithoutMakeVariables(value string) string {
 	return valueNovar
 }
 
-func (mkline *MkLineImpl) ResolveVarsInRelativePath(relativePath string, adjustDepth bool) string {
+func (mkline *MkLineImpl) ResolveVarsInRelativePath(relativePath string) string {
 
 	var basedir string
 	if G.Pkg != nil {
@@ -524,13 +562,6 @@ func (mkline *MkLineImpl) ResolveVarsInRelativePath(relativePath string, adjustD
 		// There is already G.Pkg.Value, maybe that can be used here.
 		tmp = strings.Replace(tmp, "${FILESDIR}", G.Pkg.Filesdir, -1)
 		tmp = strings.Replace(tmp, "${PKGDIR}", G.Pkg.Pkgdir, -1)
-	}
-
-	// TODO: What is this good for, and in which cases does it make a difference?
-	if adjustDepth {
-		if hasPrefix(tmp, "../../") && !hasPrefix(tmp[6:], ".") {
-			tmp = pkgsrcdir + "/" + tmp[6:]
-		}
 	}
 
 	tmp = cleanpath(tmp)

@@ -35,6 +35,8 @@ func (rline *RawLine) String() string { return sprintf("%d:%s", rline.Lineno, rl
 type Line = *LineImpl
 
 type LineImpl struct {
+	// TODO: Consider storing pointers to the Filename and Basename instead of strings to save memory.
+	// But first find out where and why pkglint needs so much memory (200 MB for a full recursive run over pkgsrc + wip).
 	Filename  string // uses / as directory separator on all platforms
 	Basename  string // the last component of the Filename
 	firstLine int32  // zero means the whole file, -1 means EOF

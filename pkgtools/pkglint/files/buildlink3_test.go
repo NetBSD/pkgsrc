@@ -8,7 +8,7 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk__unfinished_url2pkg(c *check.C) {
 	t.SetupVartypes()
 	t.CreateFileLines("x11/Xbae/Makefile")
 	t.CreateFileLines("mk/motif.buildlink3.mk")
-	mklines := t.SetupFileMkLines("buildlink3.mk",
+	mklines := t.SetupFileMkLines("category/package/buildlink3.mk",
 		MkRcsID,
 		"# XXX This file was created automatically using createbuildlink-@PKGVERSION@",
 		"",
@@ -30,7 +30,7 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk__unfinished_url2pkg(c *check.C) {
 	ChecklinesBuildlink3Mk(mklines)
 
 	t.CheckOutputLines(
-		"ERROR: ~/buildlink3.mk:2: This comment indicates unfinished work (url2pkg).")
+		"ERROR: ~/category/package/buildlink3.mk:2: This comment indicates unfinished work (url2pkg).")
 }
 
 // Before version 5.3, pkglint wrongly warned here.

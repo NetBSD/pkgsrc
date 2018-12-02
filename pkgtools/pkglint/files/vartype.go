@@ -16,6 +16,7 @@ type Vartype struct {
 
 type KindOfList uint8
 
+// TODO: Remove lkSpace. Since 2015 the .for variables are split on shell words, like everywhere else.
 const (
 	lkNone  KindOfList = iota // Plain data type
 	lkSpace                   // List entries are separated by whitespace; used in .for loops.
@@ -202,6 +203,10 @@ func (bt *BasicType) HasEnum(value string) bool {
 func (bt *BasicType) AllowedEnums() string {
 	return bt.name[6 : len(bt.name)-1]
 }
+
+// TODO: Try to implement BasicType.PossibleChars()
+// TODO: Try to implement BasicType.CanBeEmpty()
+// TODO: Try to implement BasicType.PossibleWords() / PossibleValues()
 
 var (
 	BtAwkCommand             = &BasicType{"AwkCommand", (*VartypeCheck).AwkCommand}

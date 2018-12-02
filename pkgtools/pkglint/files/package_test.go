@@ -531,7 +531,7 @@ func (s *Suite) Test_Package_loadPackageMakefile__PECL_VERSION(c *check.C) {
 	G.CheckDirent(pkg)
 }
 
-func (s *Suite) Test_Package_CheckInclude__conditional_and_unconditional_include(c *check.C) {
+func (s *Suite) Test_Package_checkIncludeConditionally__conditional_and_unconditional_include(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupVartypes()
@@ -618,7 +618,7 @@ func (s *Suite) Test_Package__include_after_exists(c *check.C) {
 		"WARN: distinfo: File not found. Please run \""+confMake+" makesum\" or define NO_CHECKSUM=yes in the package Makefile.",
 		"ERROR: Makefile: Each package must define its LICENSE.",
 		"WARN: Makefile: No COMMENT given.",
-		"ERROR: Makefile:4: \"options.mk\" does not exist.")
+		"ERROR: Makefile:4: Relative path \"options.mk\" does not exist.")
 }
 
 // See https://github.com/rillig/pkglint/issues/1

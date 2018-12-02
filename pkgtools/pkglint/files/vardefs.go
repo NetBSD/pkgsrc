@@ -141,7 +141,7 @@ func (src *Pkgsrc) InitVartypes() {
 		if len(values) > 0 {
 			joined := keysJoined(values)
 			if trace.Tracing {
-				trace.Stepf("Enum from %s in: %s", strings.Join(varcanons, " "), filename, joined)
+				trace.Stepf("Enum from %s in %s with values: %s", strings.Join(varcanons, " "), filename, joined)
 			}
 			return enum(joined)
 		}
@@ -487,6 +487,7 @@ func (src *Pkgsrc) InitVartypes() {
 	// some other variables, sorted alphabetically
 
 	acl(".CURDIR", lkNone, BtPathname, "buildlink3.mk:; *: use, use-loadtime")
+	acl(".IMPSRC", lkShell, BtPathname, "buildlink3.mk:; *: use, use-loadtime")
 	acl(".TARGET", lkNone, BtPathname, "buildlink3.mk:; *: use, use-loadtime")
 	acl("@", lkNone, BtPathname, "buildlink3.mk:; *: use, use-loadtime")
 	acl("ALL_ENV", lkShell, BtShellWord, "")

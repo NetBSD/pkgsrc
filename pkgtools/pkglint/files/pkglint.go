@@ -359,7 +359,7 @@ func (pkglint *Pkglint) checkdirPackage(dir string) {
 			!contains(filename, pkg.Pkgdir+"/") &&
 			!contains(filename, pkg.Filesdir+"/") {
 			if fragmentMklines := LoadMk(filename, MustSucceed); fragmentMklines != nil {
-				fragmentMklines.DetermineUsedVariables()
+				fragmentMklines.collectUsedVariables()
 			}
 		}
 		if hasPrefix(basename, "PLIST") {
@@ -422,6 +422,8 @@ func findPkgsrcTopdir(filename string) string {
 }
 
 func resolveVariableRefs(text string) (resolved string) {
+	// TODO: How does this fit into the Scope type, which is newer than this function?
+
 	if !contains(text, "${") {
 		return text
 	}
