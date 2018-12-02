@@ -25,10 +25,48 @@ func (s *Suite) Test_Options_Parse__short(c *check.C) {
 	c.Check(help, check.Equals, true)
 }
 
+func (s *Suite) Test_Options_Parse__short_string(c *check.C) {
+	opts := NewOptions()
+	var help bool
+	var src string
+	var dst string
+	opts.AddFlagVar('h', "help", &help, false, "prints a help page")
+	opts.AddStrVar('s', "src", &src, "", "source of the copy operation")
+	opts.AddStrVar('d', "dst", &dst, "", "destination of the copy operation")
+
+	args, err := opts.Parse([]string{"copy", "-hssource", "-d", "destination"})
+
+	c.Assert(err, check.IsNil)
+	c.Check(args, check.IsNil)
+	c.Check(help, check.Equals, true)
+	c.Check(src, check.Equals, "source")
+	c.Check(dst, check.Equals, "destination")
+}
+
+func (s *Suite) Test_Options_Parse__short_string_unfinished(c *check.C) {
+	opts := NewOptions()
+	var unfinished string
+	opts.AddStrVar('u', "unfinished", &unfinished, "", "demo")
+
+	args, err := opts.Parse([]string{"program", "-u"})
+
+	c.Assert(err.Error(), check.Equals, "program: option requires an argument: -u")
+	c.Check(args, check.IsNil)
+	c.Check(unfinished, check.Equals, "")
+}
+
 func (s *Suite) Test_Options_Parse__unknown_short(c *check.C) {
 	opts := NewOptions()
 
 	_, err := opts.Parse([]string{"progname", "-z"})
+
+	c.Check(err.Error(), check.Equals, "progname: unknown option: -z")
+}
+
+func (s *Suite) Test_Options_Parse__unknown_short_with_argument(c *check.C) {
+	opts := NewOptions()
+
+	_, err := opts.Parse([]string{"progname", "-z", "arg"})
 
 	c.Check(err.Error(), check.Equals, "progname: unknown option: -z")
 }
@@ -180,6 +218,47 @@ func (s *Suite) Test_Options_Parse__long_flags(c *check.C) {
 	c.Check(err.Error(), check.Equals, "progname: invalid argument for option --other1")
 }
 
+func (s *Suite) Test_Options_Parse__long_string(c *check.C) {
+	opts := NewOptions()
+	var src, dst string
+	opts.AddStrVar('s', "src", &src, "", "source of the copy operation")
+	opts.AddStrVar('d', "dst", &dst, "", "destination of the copy operation")
+
+	args, err := opts.Parse([]string{"copy", "--src=source", "--dst", "destination", "arg"})
+
+	c.Assert(err, check.IsNil)
+	c.Check(args, check.DeepEquals, []string{"arg"})
+	c.Check(src, check.Equals, "source")
+	c.Check(dst, check.Equals, "destination")
+}
+
+func (s *Suite) Test_Options_Parse__long_string_unfinished(c *check.C) {
+	opts := NewOptions()
+	var unfinished string
+	opts.AddStrVar('u', "unfinished", &unfinished, "", "unfinished option")
+
+	args, err := opts.Parse([]string{"program", "--unfinished"})
+
+	c.Check(err.Error(), check.Equals, "program: option requires an argument: --unfinished")
+	c.Check(args, check.IsNil)
+	c.Check(unfinished, check.Equals, "")
+}
+
+func (s *Suite) Test_Options_handleLongOption__string(c *check.C) {
+	var extra bool
+
+	opts := NewOptions()
+
+	group := opts.AddFlagGroup('W', "warnings", "warning,...", "Print selected warnings")
+	group.AddFlagVar("extra", &extra, false, "Print extra warnings")
+
+	args, err := opts.Parse([]string{"progname", "--warnings"})
+
+	c.Check(args, check.IsNil)
+	c.Check(err.Error(), check.Equals, "progname: option requires an argument: --warnings")
+	c.Check(extra, check.Equals, false)
+}
+
 func (s *Suite) Test_Options_handleLongOption__flag_group_without_argument(c *check.C) {
 	var extra bool
 
@@ -208,18 +287,44 @@ func (s *Suite) Test_Options_handleLongOption__flag_group_separate_argument(c *c
 	c.Check(extra, check.Equals, true)
 }
 
-func (s *Suite) Test_Options_handleLongOption__flag_group_negated(c *check.C) {
-	var extra bool
+func (s *Suite) Test_Options_handleLongOption__flag_group_all_then_disable(c *check.C) {
+	var false1, false2, true1, true2 bool
 
 	opts := NewOptions()
-	group := opts.AddFlagGroup('W', "warnings", "warning,...", "Print selected warnings")
-	group.AddFlagVar("extra", &extra, true, "Print extra warnings")
+	group := opts.AddFlagGroup('a', "answers", "answer,...", "Choose the answers")
+	group.AddFlagVar("false1", &false1, false, "A")
+	group.AddFlagVar("false2", &false2, false, "B")
+	group.AddFlagVar("true1", &true1, true, "C")
+	group.AddFlagVar("true2", &true2, true, "C")
 
-	args, err := opts.Parse([]string{"progname", "--warnings", "all,no-extra"})
+	args, err := opts.Parse([]string{"progname", "--answers", "all,no-false1,no-true1", "arg"})
 
-	c.Check(args, check.IsNil)
 	c.Check(err, check.IsNil)
-	c.Check(extra, check.Equals, false)
+	c.Check(args, check.DeepEquals, []string{"arg"})
+	c.Check(false1, check.Equals, false)
+	c.Check(false2, check.Equals, true)
+	c.Check(true1, check.Equals, false)
+	c.Check(true2, check.Equals, true)
+}
+
+func (s *Suite) Test_Options_handleLongOption__flag_group_none_then_enable(c *check.C) {
+	var false1, false2, true1, true2 bool
+
+	opts := NewOptions()
+	group := opts.AddFlagGroup('a', "answers", "answer,...", "Choose the answers")
+	group.AddFlagVar("false1", &false1, false, "A")
+	group.AddFlagVar("false2", &false2, false, "B")
+	group.AddFlagVar("true1", &true1, true, "C")
+	group.AddFlagVar("true2", &true2, true, "C")
+
+	args, err := opts.Parse([]string{"progname", "--answers", "none,false1,true1", "arg"})
+
+	c.Check(err, check.IsNil)
+	c.Check(args, check.DeepEquals, []string{"arg"})
+	c.Check(false1, check.Equals, true)
+	c.Check(false2, check.Equals, false)
+	c.Check(true1, check.Equals, true)
+	c.Check(true2, check.Equals, false)
 }
 
 func (s *Suite) Test_Options_handleLongOption__internal_error(c *check.C) {
@@ -253,10 +358,30 @@ func (s *Suite) Test_Options_parseShortOptions__flag_group_separate_argument(c *
 }
 
 func (s *Suite) Test_Options_Help(c *check.C) {
-	var verbose, basic, extra bool
+	var verbose bool
+	var name string
 
 	opts := NewOptions()
 	opts.AddFlagVar('v', "verbose", &verbose, false, "Print a detailed log")
+	opts.AddStrVar('n', "name", &name, "", "Name of the print job")
+
+	var out strings.Builder
+	opts.Help(&out, "progname [options] args")
+
+	c.Check(out.String(), check.Equals, ""+
+		"usage: progname [options] args\n"+
+		"\n"+
+		"  -v, --verbose   Print a detailed log\n"+
+		"  -n, --name      Name of the print job\n")
+}
+
+func (s *Suite) Test_Options_Help__with_flag_group(c *check.C) {
+	var verbose, basic, extra bool
+	var name string
+
+	opts := NewOptions()
+	opts.AddFlagVar('v', "verbose", &verbose, false, "Print a detailed log")
+	opts.AddStrVar('n', "name", &name, "", "Name of the print job")
 	group := opts.AddFlagGroup('W', "warnings", "warning,...", "Print selected warnings")
 	group.AddFlagVar("basic", &basic, true, "Print basic warnings")
 	group.AddFlagVar("extra", &extra, false, "Print extra warnings")
@@ -268,6 +393,7 @@ func (s *Suite) Test_Options_Help(c *check.C) {
 		"usage: progname [options] args\n"+
 		"\n"+
 		"  -v, --verbose                Print a detailed log\n"+
+		"  -n, --name                   Name of the print job\n"+
 		"  -W, --warnings=warning,...   Print selected warnings\n"+
 		"\n"+
 		"  Flags for -W, --warnings:\n"+
