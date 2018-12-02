@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.92 2018/07/27 10:23:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.93 2018/12/02 11:06:11 wiz Exp $
 
-DISTNAME=	gc-7.6.4
+DISTNAME=	gc-7.6.8
 PKGNAME=	${DISTNAME:S/gc/boehm-gc/}
-PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://www.hboehm.info/gc/gc_source/
 
@@ -23,7 +22,7 @@ TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(MACHINE_PLATFORM:MDarwin-10.6*)
+.if !empty(MACHINE_PLATFORM:MDarwin-10.6.*)
 CFLAGS+=		-D_XOPEN_SOURCE
 .endif
 
