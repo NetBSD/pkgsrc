@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5008 2018/12/02 12:40:10 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.5009 2018/12/02 12:43:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6973,3 +6973,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/mutt to 1.11.1 [tron 2018-12-02]
 	Updated devel/py-mercurial to 4.8 [wiz 2018-12-02]
 	Updated devel/syncdir to 1.0nb3 [schmonz 2018-12-02]
+	Updated graphics/png to 1.6.36 [wiz 2018-12-02]
