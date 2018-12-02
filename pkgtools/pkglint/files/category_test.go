@@ -23,7 +23,7 @@ func (s *Suite) Test_CheckdirCategory__totally_broken(c *check.C) {
 		"NOTE: ~/archivers/Makefile:2: This variable value should be aligned to column 17.",
 		"NOTE: ~/archivers/Makefile:3: This variable value should be aligned with tabs, not spaces, to column 17.",
 		"NOTE: ~/archivers/Makefile:4: This variable value should be aligned to column 17.",
-		"ERROR: ~/archivers/Makefile:6: \"../mk/category.mk\" does not exist.",
+		"ERROR: ~/archivers/Makefile:6: Relative path \"../mk/category.mk\" does not exist.",
 		"NOTE: ~/archivers/Makefile:1: Empty line expected after this line.",
 		"ERROR: ~/archivers/Makefile:2: COMMENT= line expected.",
 		"NOTE: ~/archivers/Makefile:1: Empty line expected after this line.", // XXX: Duplicate.

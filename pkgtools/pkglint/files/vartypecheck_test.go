@@ -216,7 +216,7 @@ func (s *Suite) Test_VartypeCheck_DependencyWithPath(c *check.C) {
 	vt.Output(
 		"WARN: ~/category/package/filename.mk:1: Invalid dependency pattern with path \"Perl\".",
 		"WARN: ~/category/package/filename.mk:2: Dependencies should have the form \"../../category/package\".",
-		"ERROR: ~/category/package/filename.mk:3: \"../../lang/perl5\" does not exist.",
+		"ERROR: ~/category/package/filename.mk:3: Relative path \"../../lang/perl5\" does not exist.",
 		"ERROR: ~/category/package/filename.mk:3: There is no package in \"lang/perl5\".",
 		"WARN: ~/category/package/filename.mk:3: Please use USE_TOOLS+=perl:run instead of this dependency.",
 		"WARN: ~/category/package/filename.mk:4: Invalid dependency pattern \"broken0.12.1\".",
@@ -305,7 +305,7 @@ func (s *Suite) Test_VartypeCheck_Enum__use_match(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"NOTE: module.mk:3: MACHINE_ARCH should be compared using == instead of the :M or :N modifier without wildcards.",
+		"NOTE: module.mk:3: MACHINE_ARCH should be compared using == instead of matching against \":Mi386\".",
 		"WARN: module.mk:5: Use ${PKGSRC_COMPILER:Mclang} instead of the == operator.")
 }
 
@@ -524,7 +524,7 @@ func (s *Suite) Test_VartypeCheck_License(c *check.C) {
 	G.Mk = t.NewMkLines("perl5.mk",
 		MkRcsID,
 		"PERL5_LICENSE= gnu-gpl-v2 OR artistic")
-	G.Mk.DetermineDefinedVariables()
+	G.Mk.collectDefinedVariables()
 
 	vt := NewVartypeCheckTester(t, (*VartypeCheck).License)
 
@@ -753,9 +753,9 @@ func (s *Suite) Test_VartypeCheck_PkgPath(c *check.C) {
 		"../../invalid/relative")
 
 	vt.Output(
-		"ERROR: filename:3: \"../../invalid\" does not exist.",
+		"ERROR: filename:3: Relative path \"../../invalid\" does not exist.",
 		"WARN: filename:3: \"../../invalid\" is not a valid relative package directory.",
-		"ERROR: filename:4: \"../../../../invalid/relative\" does not exist.",
+		"ERROR: filename:4: Relative path \"../../../../invalid/relative\" does not exist.",
 		"WARN: filename:4: \"../../../../invalid/relative\" is not a valid relative package directory.")
 }
 
@@ -862,9 +862,9 @@ func (s *Suite) Test_VartypeCheck_RelativePkgPath(c *check.C) {
 		"../../invalid/relative")
 
 	vt.Output(
-		"ERROR: filename:1: \"category/other-package\" does not exist.",
-		"ERROR: filename:4: \"invalid\" does not exist.",
-		"ERROR: filename:5: \"../../invalid/relative\" does not exist.")
+		"ERROR: filename:1: Relative path \"category/other-package\" does not exist.",
+		"ERROR: filename:4: Relative path \"invalid\" does not exist.",
+		"ERROR: filename:5: Relative path \"../../invalid/relative\" does not exist.")
 }
 
 func (s *Suite) Test_VartypeCheck_Restricted(c *check.C) {

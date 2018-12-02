@@ -45,7 +45,7 @@ func (ls *LinesImpl) CheckRcsID(index int, prefixRe regex.Pattern, suggestedPref
 
 		if G.Wip && expanded != "" {
 			fix := line.Autofix()
-			fix.Errorf("Expected exactly %q.", suggestedPrefix+"$"+"NetBSD$")
+			fix.Notef("Expected exactly %q.", suggestedPrefix+"$"+"NetBSD$")
 			fix.Explain(
 				"Several files in pkgsrc must contain the CVS Id, so that their",
 				"current version can be traced back later from a binary package.",
@@ -59,7 +59,7 @@ func (ls *LinesImpl) CheckRcsID(index int, prefixRe regex.Pattern, suggestedPref
 				"",
 				"To preserve the history of the CVS Id, should that ever be needed,",
 				"remove the leading $.")
-			fix.InsertBefore(suggestedPrefix + "$" + "NetBSD$")
+			fix.ReplaceRegex(`.*`, suggestedPrefix+"$"+"NetBSD$", 1)
 			fix.Apply()
 		}
 
