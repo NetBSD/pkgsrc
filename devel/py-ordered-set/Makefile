@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2018/09/24 09:00:06 adam Exp $
+# $NetBSD: Makefile,v 1.5 2018/12/03 19:29:05 adam Exp $
 
-DISTNAME=	ordered-set-3.0.2
+DISTNAME=	ordered-set-3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/ordered-set/}
