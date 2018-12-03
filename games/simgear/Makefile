@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2018/12/03 08:35:28 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2018/12/03 22:22:24 nia Exp $
 
 DISTNAME=	simgear-2018.2.2
 PKGREVISION=	7
@@ -19,6 +19,7 @@ LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
