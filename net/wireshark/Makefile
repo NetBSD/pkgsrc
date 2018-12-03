@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.200 2018/12/03 14:19:24 wiz Exp $
+# $NetBSD: Makefile,v 1.201 2018/12/03 15:35:15 adam Exp $
 
 DISTNAME=	wireshark-2.6.5
 CATEGORIES=	net
@@ -13,26 +13,22 @@ LICENSE=	gnu-gpl-v2
 CONFLICTS+=		ethereal-[0-9]*
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake perl pkg-config yacc lex
-
 USE_LIBTOOL=		yes
-SHLIBTOOL_OVERRIDE=	# empty
-CHECK_PORTABILITY_SKIP+=packaging/macosx/*/*
-
-PKGCONFIG_OVERRIDE+=	wireshark.pc.in
-
+USE_TOOLS+=		gmake perl pkg-config yacc lex
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-static=no
-CONFIGURE_ARGS+=	--with-ssl=${SSLBASE:Q}
 CONFIGURE_ARGS+=	--with-pcap=${BUILDLINK_PREFIX.libpcap}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 CONFIGURE_ENV+=		ac_cv_path_YACCDUMMY=${TOOLS_PATH.yacc}
 CONFIGURE_ENV+=		ac_cv_path_LEXDUMMY=${TOOLS_PATH.lex}
+PKGCONFIG_OVERRIDE+=	wireshark.pc.in
+SHLIBTOOL_OVERRIDE=	# empty
+
+CHECK_PORTABILITY_SKIP+=	packaging/macosx/*/*
 
 PTHREAD_OPTS+=		require
 
 PYTHON_FOR_BUILD_ONLY=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 1.10.5
 REPLACE_PYTHON+=		help/faq.py
 REPLACE_PYTHON+=		tools/asn2deb
 REPLACE_PYTHON+=		tools/asn2wrs.py
@@ -54,8 +50,6 @@ REPLACE_PYTHON+=		tools/rdps.py
 USE_BUILTIN.libpcap=	no
 .endif
 
-CONFIGURE_ARGS.Darwin+=	--disable-osx-deploy-target
-
 # Extra post install targets are in options.mk
 post-install: ${POST_INSTALL_TARGETS}
 
@@ -69,16 +63,19 @@ BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.1
 # [-Wint-conversion]
 BUILDLINK_TRANSFORM+=	rm:-DGDK_PIXBUF_DISABLE_DEPRECATED
 
+.include "../../archivers/lz4/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../net/libpcap/buildlink3.mk"
 .include "../../devel/libsmi/buildlink3.mk"
-.include "../../security/libgcrypt/buildlink3.mk"
-.include "../../security/gnutls/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
-
+.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/snappy/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../net/libcares/buildlink3.mk"
+.include "../../net/libpcap/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
+.include "../../security/libgcrypt/buildlink3.mk"
+.include "../../security/libssh/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/krb5.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
