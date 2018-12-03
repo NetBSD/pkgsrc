@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/12/03 02:29:20 manu Exp $
+
+SHA1 (check_dnsmaster-0.1.tgz) = 4a391ca050f2abb0aa81df6cf427491e40dc304e
+RMD160 (check_dnsmaster-0.1.tgz) = 4a44bdf8d29d13cfb90bc8bc7152f5fbd920dd99
+SHA512 (check_dnsmaster-0.1.tgz) = 1c9e9bf2d79774eff8a0b155f468d7aa12aa12382d9d28482125cd1877d0d76deb6a4028f62b3e71540ab48a0bf0d8e396790cb3b13271b02a0f562bd6b7fb7c
+Size (check_dnsmaster-0.1.tgz) = 5011 bytes
