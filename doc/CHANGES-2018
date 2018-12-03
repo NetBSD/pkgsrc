@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5020 2018/12/03 08:26:02 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.5021 2018/12/03 11:08:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6989,3 +6989,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added www/p5-LWP-Protocol-Net-Curl version 0.023 [manu 2018-12-03]
 	Added net/nagios-plugin-dnsmaster version 0.1 [manu 2018-12-03]
 	Updated print/poppler to 0.71.0 [wiz 2018-12-03]
+	Updated graphics/MesaLib18 to 18.2.6 [wiz 2018-12-03]
