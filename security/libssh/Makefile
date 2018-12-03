@@ -1,31 +1,36 @@
-# $NetBSD: Makefile,v 1.24 2018/10/16 20:25:25 maya Exp $
+# $NetBSD: Makefile,v 1.25 2018/12/03 15:19:51 adam Exp $
 #
 # history: upstream renamed 0.11 to 0.1.1;
 # we have to use the old-style convention so that version compares work.
-#
-VER=			0.7.6
-DISTNAME=		libssh-${VER}
-PKGNAME=		libssh-0.76
-CATEGORIES=		security
-MASTER_SITES=		https://www.libssh.org/files/0.7/
-EXTRACT_SUFX=		.tar.xz
 
-MAINTAINER=		is@NetBSD.org
-HOMEPAGE=		http://www.libssh.org/
-COMMENT=		SSHv2+v1 protocol library
-LICENSE=		2-clause-bsd
+VER=		0.8.5
+DISTNAME=	libssh-${VER}
+PKGNAME=	libssh-0.85
+CATEGORIES=	security
+MASTER_SITES=	https://www.libssh.org/files/${VER:R}/
+EXTRACT_SUFX=	.tar.xz
 
-DIST_SUBDIR=		security
+MAINTAINER=	is@NetBSD.org
+HOMEPAGE=	http://www.libssh.org/
+COMMENT=	SSHv2+v1 protocol library
+LICENSE=	2-clause-bsd
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
-CMAKE_ARGS+=		WITH_TESTING=yes
-
 PKGCONFIG_OVERRIDE+=	libssh.pc.in
-TEST_TARGET=		check
+TEST_TARGET=		test
+
+CONFIGURE_DIRS=		${WRKDIR}/build
+CMAKE_ARG_PATH=		${WRKSRC}
+CMAKE_ARGS+=		-DUNIT_TESTING=ON
 
 .include "options.mk"
 
+post-extract:
+	${MKDIR} ${WRKDIR}/build
+
 .include "../../devel/argp/buildlink3.mk"
+.include "../../devel/cmocka/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../mk/krb5.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
