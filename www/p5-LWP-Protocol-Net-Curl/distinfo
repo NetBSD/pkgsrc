@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/12/03 02:20:36 manu Exp $
+
+SHA1 (LWP-Protocol-Net-Curl-0.023.tar.gz) = 1c7c9d7e6d07dff4ee8a0146beae7d2cd66b85e3
+RMD160 (LWP-Protocol-Net-Curl-0.023.tar.gz) = 08163386d1b8a3eeef89f9303e22fde5ae1a3054
+SHA512 (LWP-Protocol-Net-Curl-0.023.tar.gz) = 05db1f0776da7534ef5b6494b448448c9566b09bcfceb1ca88c4a61a80a020b9e01be136eee0324014bc9143aeb6e89029b4832df157fb493d4b2de449c79632
+Size (LWP-Protocol-Net-Curl-0.023.tar.gz) = 32463 bytes
