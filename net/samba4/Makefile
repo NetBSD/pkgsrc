@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2018/11/29 14:46:46 taca Exp $
+# $NetBSD: Makefile,v 1.53 2018/12/03 13:51:52 mlelstv Exp $
 
 DISTNAME=	samba-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://download.samba.org/pub/samba/stable/
 
@@ -31,7 +32,7 @@ SMB_LOCALSTATE?=	${VARBASE}
 SMB_INFO?=		${PREFIX}/info
 SMB_MAN?=		${PREFIX}/${PKGMANDIR}
 SMB_STATE?=		${VARBASE}/run
-SMB_PRIVATE?=		${SMB_LIB}/samba/private
+SMB_PRIVATE?=		${PKG_SYSCONFDIR}/private
 SMB_PID?=		${VARBASE}/run
 SMB_CACHE?=		${VARBASE}/run
 SMB_LOCK?=		${VARBASE}/run
