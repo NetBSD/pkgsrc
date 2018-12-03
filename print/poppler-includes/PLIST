@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2018/06/17 14:29:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2018/12/03 13:06:36 ryoon Exp $
 include/poppler/Annot.h
 include/poppler/Array.h
 include/poppler/BuiltinFont.h
@@ -77,7 +77,6 @@ include/poppler/UnicodeMapTables.h
 include/poppler/UnicodeTypeTable.h
 include/poppler/ViewerPreferences.h
 include/poppler/XRef.h
-include/poppler/XpdfPluginAPI.h
 include/poppler/fofi/FoFiBase.h
 include/poppler/fofi/FoFiEncodings.h
 include/poppler/fofi/FoFiIdentifier.h
@@ -85,9 +84,9 @@ include/poppler/fofi/FoFiTrueType.h
 include/poppler/fofi/FoFiType1.h
 include/poppler/fofi/FoFiType1C.h
 include/poppler/goo/FixedPoint.h
+include/poppler/goo/GooCheckedOps.h
 include/poppler/goo/GooLikely.h
 include/poppler/goo/GooList.h
-include/poppler/goo/GooMutex.h
 include/poppler/goo/GooString.h
 include/poppler/goo/GooTimer.h
 include/poppler/goo/ImgWriter.h
@@ -95,6 +94,7 @@ include/poppler/goo/JpegWriter.h
 include/poppler/goo/NetPBMWriter.h
 include/poppler/goo/PNGWriter.h
 include/poppler/goo/TiffWriter.h
+include/poppler/goo/gdir.h
 include/poppler/goo/gfile.h
 include/poppler/goo/gmem.h
 include/poppler/goo/grandom.h
