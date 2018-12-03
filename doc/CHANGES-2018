@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5023 2018/12/03 11:43:37 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.5024 2018/12/03 12:15:15 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6992,3 +6992,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/MesaLib18 to 18.2.6 [wiz 2018-12-03]
 	Updated mail/gmime3 to 3.2.3 [wiz 2018-12-03]
 	Updated fonts/harfbuzz to 2.2.0 [wiz 2018-12-03]
+	Updated multimedia/mkvtoolnix to 29.0.0nb1 [jperkin 2018-12-03]
