@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5029 2018/12/03 19:04:35 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5030 2018/12/03 19:32:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7000,3 +7000,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/ImageMagick to 7.0.8.14nb1 [jperkin 2018-12-03]
 	Updated www/py-django to 1.11.17 [adam 2018-12-03]
 	Updated www/py-django2 to 2.1.4 [adam 2018-12-03]
+	Updated devel/py-ordered-set to 3.1 [adam 2018-12-03]
+	Updated www/py-whitenoise to 4.1.2 [adam 2018-12-03]
