@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/09/24 09:00:06 adam Exp $
+$NetBSD: distinfo,v 1.5 2018/12/03 19:29:05 adam Exp $
 
-SHA1 (ordered-set-3.0.2.tar.gz) = 1dbef836a89389a22ad7e3a60de1fc5c02b9e366
-RMD160 (ordered-set-3.0.2.tar.gz) = 879bbbc58ba3c4e6e727fdab5ef2828996ead0d3
-SHA512 (ordered-set-3.0.2.tar.gz) = 18e1bc8a5cc64a3b8b9a01e2a0f4a696c25591e269e649243aa1c48b7740a249895c226038b55e2aada151d3b1feb4f9d601b85298901da7db9d1733f8b815d1
-Size (ordered-set-3.0.2.tar.gz) = 9147 bytes
+SHA1 (ordered-set-3.1.tar.gz) = 9d1700857506746da6d490db2b7a988c7d3f5d85
+RMD160 (ordered-set-3.1.tar.gz) = addbca997216aed97f7d73bb18f2094fb3e61f5f
+SHA512 (ordered-set-3.1.tar.gz) = 8d51c86fed8617a6d48c35ec4e6c989b556809e2fb012e4005f656c6627d4cccc2667c2d6e2d144d0d886a2089bb9a81685b7097fb20e5939f8d4e172bb76133
+Size (ordered-set-3.1.tar.gz) = 10498 bytes
