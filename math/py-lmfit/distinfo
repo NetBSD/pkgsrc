@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/07/13 06:22:35 adam Exp $
+$NetBSD: distinfo,v 1.6 2018/12/03 20:41:44 adam Exp $
 
-SHA1 (lmfit-0.9.11.tar.gz) = 4ddfa62357990ad2dcaa49077442f5789d8efa61
-RMD160 (lmfit-0.9.11.tar.gz) = fe1c29354627524f769cde7f03517dad45d7cacb
-SHA512 (lmfit-0.9.11.tar.gz) = fb09fe90e99e0468a04195a3ee1d95d84f5cd2933133fced00fc4118559f0fa38f243a893cbda9b3e9b23fd24e0def562a1658da12b5485ff6645ea5aaf5296b
-Size (lmfit-0.9.11.tar.gz) = 1600601 bytes
+SHA1 (lmfit-0.9.12.tar.gz) = 7c4a15975d9920c9cf12fd98aca7e7706daf18c9
+RMD160 (lmfit-0.9.12.tar.gz) = dc4bb6835e34fadd8786c1dd760f09df694dba6b
+SHA512 (lmfit-0.9.12.tar.gz) = 09b840955867d64ecf6cb64fcc06b6426a1644b510b34ef27d8cee55a8c65d9002f0e76276f9e05feabed0b49656c5a78cf286e423203769f1de292f01f6ccb0
+Size (lmfit-0.9.12.tar.gz) = 1569497 bytes
