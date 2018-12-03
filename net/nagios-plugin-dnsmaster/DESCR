@@ -1,0 +1,4 @@
+$NetBSD: DESCR,v 1.1 2018/12/03 02:29:20 manu Exp $
+
+This Nagios plugin checks that domain NS servers are consistant over
+local and distant server.
