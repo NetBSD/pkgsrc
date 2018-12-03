@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2018/08/22 09:47:13 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2018/12/03 19:31:56 markd Exp $
 
 DISTNAME=	xindy
 PKGNAME=	tex-${DISTNAME}-2.5.1
-PKGREVISION=	1
+PKGREVISION=	2
 TEXLIVE_REV=	43948
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/xindy
 COMMENT=	General-purpose index processor
 LICENSE=	gnu-gpl-v2
+
+DEPENDS+=	xindy>=2.5.1:../../textproc/xindy
 
 USE_TOOLS+=	perl:run
 
