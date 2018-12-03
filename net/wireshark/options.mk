@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.21 2018/09/11 11:43:33 adam Exp $
+# $NetBSD: options.mk,v 1.22 2018/12/03 15:35:15 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.wireshark
-PKG_SUPPORTED_OPTIONS=		gtk3 lua
+PKG_SUPPORTED_OPTIONS=		gtk3 http2 lua
 PKG_OPTIONS_OPTIONAL_GROUPS=	qt
 PKG_OPTIONS_GROUP.qt=		qt4 qt5
 PKG_SUGGESTED_OPTIONS=		qt5 lua
@@ -85,9 +85,15 @@ install-icons:
 .if !empty(PKG_OPTIONS:Mlua)
 LUA_VERSIONS_INCOMPATIBLE=	53
 .include "../../lang/lua/buildlink3.mk"
-
 CONFIGURE_ARGS+=	--with-lua=yes
 PLIST.lua=		yes
 .else
 CONFIGURE_ARGS+=	--with-lua=no
+.endif
+
+.if !empty(PKG_OPTIONS:Mhttp2)
+.include "../../www/nghttp2/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-nghttp2
+.else
+CONFIGURE_ARGS+=	--without-nghttp2
 .endif
