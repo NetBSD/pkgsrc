@@ -1,2 +1,2 @@
-bin/django-admin @PREFIX@/bin/django-admin@PYVERSSUFFIX@
-bin/django-admin.py @PREFIX@/bin/django-admin@PYVERSSUFFIX@.py
+bin/django-admin @PREFIX@/bin/django-admin-@PYVERSSUFFIX@
+bin/django-admin.py @PREFIX@/bin/django-admin-@PYVERSSUFFIX@.py
