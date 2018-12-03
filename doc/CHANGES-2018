@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5025 2018/12/03 12:55:17 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.5026 2018/12/03 14:19:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6994,3 +6994,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated fonts/harfbuzz to 2.2.0 [wiz 2018-12-03]
 	Updated multimedia/mkvtoolnix to 29.0.0nb1 [jperkin 2018-12-03]
 	Updated www/py-google-api-python-client to 1.7.5 [wiz 2018-12-03]
+	Updated net/wireshark to 2.6.5 [wiz 2018-12-03]
