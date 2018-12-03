@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5016 2018/12/02 23:12:53 rillig Exp $
+$NetBSD: CHANGES-2018,v 1.5017 2018/12/03 02:17:18 manu Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -6985,3 +6985,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/mkvtoolnix to 29.0.0 [adam 2018-12-02]
 	Updated www/bluefish to 2.2.10 [bsiegert 2018-12-02]
 	Updated pkgtools/pkglint to 5.6.8 [rillig 2018-12-02]
+	Added www/p5-Net-Curl version 0.39 [manu 2018-12-03]
