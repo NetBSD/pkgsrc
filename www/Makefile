@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1350 2018/12/03 02:17:18 manu Exp $
+# $NetBSD: Makefile,v 1.1351 2018/12/03 02:20:36 manu Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -451,6 +451,7 @@ SUBDIR+=	p5-LWP-Authen-Wsse
 SUBDIR+=	p5-LWP-ConsoleLogger
 SUBDIR+=	p5-LWP-MediaTypes
 SUBDIR+=	p5-LWP-Online
+SUBDIR+=	p5-LWP-Protocol-Net-Curl
 SUBDIR+=	p5-LWP-Protocol-PSGI
 SUBDIR+=	p5-LWP-Protocol-https
 SUBDIR+=	p5-LWP-UserAgent-Determined
