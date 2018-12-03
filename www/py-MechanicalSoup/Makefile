@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2018/08/02 15:39:31 adam Exp $
+# $NetBSD: Makefile,v 1.5 2018/12/03 19:59:32 adam Exp $
 
-DISTNAME=	MechanicalSoup-0.10.0
+DISTNAME=	MechanicalSoup-0.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=M/MechanicalSoup/}
@@ -19,6 +19,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-requests-mock-[0-9]*:../../devel/py-requests-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-httpbin-[0-9]*:../../www/py-test-httpbin
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
 
 USE_LANGUAGES=	# none
