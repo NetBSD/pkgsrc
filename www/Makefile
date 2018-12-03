@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1349 2018/11/20 18:38:34 adam Exp $
+# $NetBSD: Makefile,v 1.1350 2018/12/03 02:17:18 manu Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -458,6 +458,7 @@ SUBDIR+=	p5-LWPx-ParanoidAgent
 SUBDIR+=	p5-LWPx-TimedHTTP
 SUBDIR+=	p5-MasonX-Request-WithApacheSession
 SUBDIR+=	p5-Mojolicious
+SUBDIR+=	p5-Net-Curl
 SUBDIR+=	p5-Net-FastCGI
 SUBDIR+=	p5-Net-HTTP
 SUBDIR+=	p5-POE-Component-Server-PSGI
