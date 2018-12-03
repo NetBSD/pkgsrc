@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.81 2018/10/02 08:06:44 adam Exp $
+$NetBSD: distinfo,v 1.82 2018/12/03 18:59:35 adam Exp $
 
-SHA1 (Django-1.11.16.tar.gz) = fd34d73528695d758223b173e130732b1cac3ff4
-RMD160 (Django-1.11.16.tar.gz) = cb10f58288ce4228b4504688fcd4c0fdfcb8785f
-SHA512 (Django-1.11.16.tar.gz) = bf1329ac364c9037fd6cecd0e8565c8bd8d830343671f9ce5415a10e70da37256667675b3f97e4d2508a8a912fa7a06ca7f585586ac18e6734c939bc41a8b455
-Size (Django-1.11.16.tar.gz) = 7852514 bytes
-SHA1 (patch-django_contrib_admin_widgets.py) = 16c7b0607c5e85f67726e93bf3649414abe7c7fb
+SHA1 (Django-1.11.17.tar.gz) = eefdad39bfc854130676d9a0780f083f93e55642
+RMD160 (Django-1.11.17.tar.gz) = 55cc7003400615c6e2cf15cd3126c1ab46f6c649
+SHA512 (Django-1.11.17.tar.gz) = ecf798ce8037d79dbbe673ad583e6414c9a24b807442feb967927b78cacb467f7f5c20e938116829d9b0df0563ee110a8d07294fd40b99dbd6356c8bae151bd6
+Size (Django-1.11.17.tar.gz) = 7853439 bytes
