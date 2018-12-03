@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.102 2018/10/02 08:06:44 adam Exp $
+# $NetBSD: Makefile,v 1.103 2018/12/03 18:59:35 adam Exp $
 
-DISTNAME=	Django-1.11.16
+DISTNAME=	Django-1.11.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	https://www.djangoproject.com/m/releases/${PKGVERSION_NOREV:R}/
@@ -17,13 +17,10 @@ USE_LANGUAGES=	# none
 REPLACE_PYTHON+=	django/bin/django-admin.py
 REPLACE_PYTHON+=	django/conf/project_template/manage.py-tpl
 
-post-patch:
-	${RM} ${WRKSRC}/django/contrib/admin/widgets.py.orig
-
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} django-admin django-admin${PYVERSSUFFIX} && \
-		${MV} django-admin.py django-admin${PYVERSSUFFIX}.py || ${TRUE}
+		${MV} django-admin django-admin-${PYVERSSUFFIX} && \
+		${MV} django-admin.py django-admin-${PYVERSSUFFIX}.py || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
