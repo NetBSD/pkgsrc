@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2018/11/23 07:30:02 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.15 2018/12/03 13:51:52 mlelstv Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/findsmb
@@ -623,6 +623,7 @@ lib/samba/private/libcli-smb-common-samba4.so
 lib/samba/private/libcli-spoolss-samba4.so
 lib/samba/private/libcliauth-samba4.so
 lib/samba/private/libcluster-samba4.so
+lib/samba/private/libcmdline-contexts-samba4.so
 lib/samba/private/libcmdline-credentials-samba4.so
 lib/samba/private/libcmocka-samba4.so
 lib/samba/private/libcom_err-samba4.so.0
@@ -685,6 +686,7 @@ lib/samba/private/libnon-posix-acls-samba4.so
 lib/samba/private/libnpa-tstream-samba4.so
 lib/samba/private/libnss-info-samba4.so
 lib/samba/private/libpac-samba4.so
+lib/samba/private/libpopt-samba3-cmdline-samba4.so
 lib/samba/private/libpopt-samba3-samba4.so
 lib/samba/private/libposix-eadb-samba4.so
 lib/samba/private/libprinting-migrate-samba4.so
