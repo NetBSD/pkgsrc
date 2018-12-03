@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/10/22 07:56:11 adam Exp $
+$NetBSD: distinfo,v 1.3 2018/12/03 19:34:39 adam Exp $
 
-SHA1 (requests-futures-0.9.8.tar.gz) = fba6ebe0cd3f0f89b7d9b0c9701631c05433f5fb
-RMD160 (requests-futures-0.9.8.tar.gz) = 38ed3ac104b56096f0e901321d9ad431da7d6116
-SHA512 (requests-futures-0.9.8.tar.gz) = c2df14b1890d5daf0112c37eeed56bb1e1a7032dff09f1c59fed88be154cf02282df5fd44a9c237f194deae979ac9ef37e144b79ec553e64c65e4d3ff5f83427
-Size (requests-futures-0.9.8.tar.gz) = 7729 bytes
+SHA1 (requests-futures-0.9.9.tar.gz) = e62ca6f60822fd723459911e6b8f78956e16789c
+RMD160 (requests-futures-0.9.9.tar.gz) = b93fbb9031c357704c4e9c4c0b81f4e3aa35c069
+SHA512 (requests-futures-0.9.9.tar.gz) = f7acfa0c5dab5501a705bf3a331be11f2c91d46839fdbbdeebad223dd63d288127f2ae071640b5cbee41693282c706353bacbcdb0639621ad03b924d21da89a6
+Size (requests-futures-0.9.9.tar.gz) = 10507 bytes
