@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5040 2018/12/04 08:17:44 wen Exp $
+$NetBSD: CHANGES-2018,v 1.5041 2018/12/04 08:44:56 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7013,3 +7013,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Software-License to 0.103014 [wen 2018-12-04]
 	Updated devel/p5-Test-Simple to 1.302141 [wen 2018-12-04]
 	Updated devel/p5-Test2-Suite to 0.000116 [wen 2018-12-04]
+	Updated mail/p5-Mail-DKIM to 0.54 [wen 2018-12-04]
