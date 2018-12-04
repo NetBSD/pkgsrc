@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5038 2018/12/04 08:05:33 wen Exp $
+$NetBSD: CHANGES-2018,v 1.5039 2018/12/04 08:10:52 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7011,3 +7011,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated games/flightgear to 2018.2.2 [nia 2018-12-04]
 	Updated devel/p5-Date-Manip to 6.75 [wen 2018-12-04]
 	Updated devel/p5-Software-License to 0.103014 [wen 2018-12-04]
+	Updated devel/p5-Test-Simple to 1.302141 [wen 2018-12-04]
