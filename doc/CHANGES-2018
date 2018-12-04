@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5045 2018/12/04 12:05:03 he Exp $
+$NetBSD: CHANGES-2018,v 1.5046 2018/12/04 12:11:22 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7018,3 +7018,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/p5-Pod-Tree to 1.29 [wen 2018-12-04]
 	Updated databases/sqlite3 to 3.26.0 [adam 2018-12-04]
 	Updated net/unbound to 1.8.2 [he 2018-12-04]
+	Updated www/moodle to 3.6 [wen 2018-12-04]
