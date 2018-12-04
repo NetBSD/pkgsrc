@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2018/12/02 17:12:18 adam Exp $
+$NetBSD: distinfo,v 1.2 2018/12/04 10:05:22 jperkin Exp $
 
 SHA1 (fmt-5.2.1.tar.gz) = 8b38f1ecdf137e8ca24e9b66145c1b94fa5f921d
 RMD160 (fmt-5.2.1.tar.gz) = 35cec2d51a003bdb35282897e0d1400d0b2f9db2
 SHA512 (fmt-5.2.1.tar.gz) = 2b63a741df4df9c3cbf04098c6548bb3d0f9836fe912325542298df57c888f43e72159469fb87685b423694e43e4418545377d5ee6393f2709955be2c13780a8
 Size (fmt-5.2.1.tar.gz) = 648668 bytes
+SHA1 (patch-include_fmt_posix.h) = 083c19a7f1fc02e04f355e3d45781b47364baca1
