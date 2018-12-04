@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2018/11/28 16:22:41 schmonz Exp $
+# $NetBSD: Makefile,v 1.62 2018/12/04 17:00:59 schmonz Exp $
 #
 
-DISTNAME=		qmail-run-20181128
+DISTNAME=		qmail-run-20181204
 CATEGORIES=		mail
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -13,7 +13,7 @@ LICENSE=		2-clause-bsd
 DEPENDS+=		greetdelay-[0-9]*:../../mail/greetdelay
 DEPENDS+=		greylisting-spp-[0-9]*:../../mail/greylisting-spp
 DEPENDS+=		pkg_alternatives-[0-9]*:../../pkgtools/pkg_alternatives
-DEPENDS_QMAIL=		qmail>=1.03nb41:../../mail/qmail
+DEPENDS_QMAIL=		qmail>=1.03nb42:../../mail/qmail
 DEPENDS+=		${DEPENDS_QMAIL}
 DEPENDS+=		qmail-acceptutils>=20181128:../../mail/qmail-acceptutils
 DEPENDS+=		qmail-qfilter>1.5nb1:../../mail/qmail-qfilter
@@ -26,7 +26,6 @@ NO_CHECKSUM=		yes
 FILES_SUBST+=		QMAIL_DAEMON_USER=${QMAIL_DAEMON_USER:Q}
 FILES_SUBST+=		QMAIL_LOG_USER=${QMAIL_LOG_USER:Q}
 FILES_SUBST+=		QMAIL_SEND_USER=${QMAIL_SEND_USER:Q}
-FILES_SUBST+=		QMAIL_QUEUE_EXTRA=${QMAIL_QUEUE_EXTRA:Q}
 FILES_SUBST+=		PKGNAME=${PKGNAME:Q}
 FILES_SUBST+=		UCSPI_SSL_USER=${UCSPI_SSL_USER:Q}
 FILES_SUBST+=		UCSPI_SSL_GROUP=${UCSPI_SSL_GROUP:Q}
@@ -55,7 +54,7 @@ CONF_FILES+=		${PREFIX}/${EGDIR}/greylist-${f} \
 
 INSTALLATION_DIRS=	bin share/doc/qmail-run ${EGDIR}
 BUILD_DEFS+=		QMAIL_DAEMON_USER QMAIL_LOG_USER QMAIL_SEND_USER
-BUILD_DEFS+=		QMAIL_QMAIL_GROUP QMAIL_QUEUE_EXTRA PKG_SYSCONFBASE
+BUILD_DEFS+=		QMAIL_QMAIL_GROUP PKG_SYSCONFBASE
 BUILD_DEFS+=		UCSPI_SSL_USER UCSPI_SSL_GROUP
 
 .include "../../mk/bsd.prefs.mk"
