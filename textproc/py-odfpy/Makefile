@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/07/06 11:03:10 adam Exp $
+# $NetBSD: Makefile,v 1.3 2018/12/04 13:25:59 adam Exp $
 
-DISTNAME=	odfpy-1.3.6
+DISTNAME=	odfpy-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/odfpy/}
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/eea/odfpy
 COMMENT=	Python API and tools to manipulate OpenDocument files
 LICENSE=	gnu-gpl-v2
+
+DEPENDS+=	${PYPKGPREFIX}-defusedxml-[0-9]*:../../textproc/py-defusedxml
 
 USE_LANGUAGES=	# none
 
