@@ -1,17 +1,9 @@
-$NetBSD: distinfo,v 1.8 2017/02/08 00:03:30 joerg Exp $
+$NetBSD: distinfo,v 1.9 2018/12/04 03:56:27 nia Exp $
 
-SHA1 (flightgear-2.8.0.tar.bz2) = fee4b2f1f6aca8e163ea018ae9897b99971c20bd
-RMD160 (flightgear-2.8.0.tar.bz2) = 97d8f572aeb186bfed27eb5b06803a0fa5213a61
-SHA512 (flightgear-2.8.0.tar.bz2) = 4d9b2584dd7c2fa4ad28d9769a9429809e420c7bf858967a5bb461f8ecb78dd079ff01c78febb95b7c3edce40dbf01e077bf7423324958e0b0a3cc74df12e1c1
-Size (flightgear-2.8.0.tar.bz2) = 2311023 bytes
-SHA1 (patch-CMakeModules_FindPLIB_cmake) = c5761d425743761f5f0c711ef2ca384a06f6d524
-SHA1 (patch-src_Canvas_ShivaVG_src_shConfig_h) = bd70a1e41a59196e31789e38ec67e65cef546edf
-SHA1 (patch-src_Canvas_ShivaVG_src_shDefs.h) = a71c8f03ccf871cda5bcc4c80a34a2df55c38b37
-SHA1 (patch-src_FDM_JSBSim_FGFDMExec.cpp) = 251d84aa2cfdd854f5b3061bbb5cff4ad382f5a8
-SHA1 (patch-src_FDM_JSBSim_input__output_FGScript.cpp) = e683fecdc1d01df3029c1d23923c3d63145ce29b
-SHA1 (patch-src_FDM_JSBSim_models_FGInput.cpp) = fa044c54b02c39857b5df183f183c04fdc2e2b11
-SHA1 (patch-src_FDM_JSBSim_models_propulsion_FGEngine.cpp) = 9c066364096452868194f84d8c853131aec83f80
-SHA1 (patch-src_Main_locale_cxx) = 327f4103ff3aea60f2394a2ed192c5f6af36f60b
-SHA1 (patch-src_Network_ATC-Inputs_cxx) = 08644c682ddddcefea48aa84fa538b8fd20289c0
-SHA1 (patch-src_Network_ATC-Outputs_cxx) = d5367f8536988b2705b2ba4f8d86e28576b04648
-SHA1 (patch-utils_TerraSync_terrasync_cxx) = 48855911a5052301f2c7a449ac8ff14ada9ae8ea
+SHA1 (flightgear-2018.2.2.tar.bz2) = 7bf06d3ad218ce4e99eede7aa250fbdf938eb7a3
+RMD160 (flightgear-2018.2.2.tar.bz2) = 1af2854949ab282c0bb0e19e79756b9ee54f25c6
+SHA512 (flightgear-2018.2.2.tar.bz2) = f845fcd24e14a4d3abba5f6011d6fe61d4c8ab587989b597c2ab16d75711e9dc6808d6c91e2ba56ff7d644278bc10e09c116e82ba0f6391b03c5bc84a546f440
+Size (flightgear-2018.2.2.tar.bz2) = 8346698 bytes
+SHA1 (patch-3rdparty_hts__engine__API_lib_HTS__misc.c) = 78de7201192e73f6f032ffcadd5ec2f63423390f
+SHA1 (patch-3rdparty_iaxclient_lib_libiax2_src_iax.c) = d6ae7b47253c1ba8f79e42cde27189d32e603eea
+SHA1 (patch-3rdparty_joystick_jsNone.cxx) = 4a662c71f97dd2d5093f09d4631d672e5278f082
