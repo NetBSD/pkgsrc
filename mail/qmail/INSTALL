@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.13 2018/11/25 16:15:53 schmonz Exp $
+# $NetBSD: INSTALL,v 1.14 2018/12/04 17:01:39 schmonz Exp $
 
 DOCDIR=@DOCDIR@
 EGDIR=@EGDIR@
@@ -109,17 +109,26 @@ EOF
 		exit 1
 	fi
 
-	if ! [ -z ${QMAIL_QUEUE_EXTRA} ]; then
-		${CAT} <<EOF
-===========================================================================
+	cd ${PREFIX}/share/qmail/setup && ./config-fast-pkgsrc `./hostname`
 
-NOTE: Before using qmail, create a .qmail file corresponding with the local
-user or alias "${QMAIL_QUEUE_EXTRA}" that meets the requirements for
-QUEUE_EXTRA.
+	cd ${PKG_SYSCONFDIR}/.pkgsrc-defaults-do-not-edit
+	for i in locals rcpthosts; do
+		${SORT} -u ${i} > ${i}.tmp && ${MV} ${i}.tmp ${i}
+	done
 
-===========================================================================
-EOF
-	fi
+	cd ${PKG_SYSCONFDIR}
+	for i in defaultdomain locals me plusdomain rcpthosts; do
+		[ -f control/${i} ] \
+			|| ${CP} .pkgsrc-defaults-do-not-edit/${i} control
+	done
+
+	cd ${PKG_SYSCONFDIR}/alias
+	for i in mailer-daemon postmaster root ${QMAIL_QUEUE_EXTRA}; do
+		[ -s .qmail-${i} ] \
+			|| ${ECHO} '# pkgsrc says: replace this comment with your config' \
+			> .qmail-${i}
+		${CHMOD} 644 .qmail-${i}
+	done
 
 	;;
 
