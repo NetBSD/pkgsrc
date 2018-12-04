@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/07/10 01:16:37 minskim Exp $
+$NetBSD: distinfo,v 1.2 2018/12/04 12:54:01 adam Exp $
 
-SHA1 (kafka-python-1.4.3.tar.gz) = c6ab39a03301fad5a8190bf3c382d3d3a7383ff4
-RMD160 (kafka-python-1.4.3.tar.gz) = 35a0f1a9753c5ff1292e09a2fff59d5d16d4d2cf
-SHA512 (kafka-python-1.4.3.tar.gz) = a3102d910a16da5dd9bc5067c4628f93771549beeaf7a00ea6466193dbe3c0f8af781210d46dfee4174eeaf22b4eb1e7bb5236e746ea56e7a41ea1ec94ae7215
-Size (kafka-python-1.4.3.tar.gz) = 262992 bytes
+SHA1 (kafka-python-1.4.4.tar.gz) = 8d8a4c9d61506e1895afb379a9eb780f7b68347c
+RMD160 (kafka-python-1.4.4.tar.gz) = 08c22d9182b5b55ef9eddc6f581cd0e059bbdfdb
+SHA512 (kafka-python-1.4.4.tar.gz) = 856116c01a162411542e603de7202f9ff5e3987aeee77691366771c5cca7f836bdab66b921e97100159f38e1a17c4e94cb772376f4809bf8bea4203b2b00f788
+Size (kafka-python-1.4.4.tar.gz) = 279069 bytes
