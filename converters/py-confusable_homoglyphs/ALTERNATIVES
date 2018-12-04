@@ -1,1 +1,1 @@
-bin/confusable_homoglyphs @PREFIX@/bin/confusable_homoglyphs@PYVERSSUFFIX@
+bin/confusable_homoglyphs @PREFIX@/bin/confusable_homoglyphs-@PYVERSSUFFIX@
