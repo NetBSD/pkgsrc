@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5036 2018/12/04 03:57:32 nia Exp $
+$NetBSD: CHANGES-2018,v 1.5037 2018/12/04 06:09:39 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7009,3 +7009,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/py-lmfit to 0.9.12 [adam 2018-12-03]
 	Updated games/flightgear-data to 2018.2.2 [nia 2018-12-04]
 	Updated games/flightgear to 2018.2.2 [nia 2018-12-04]
+	Updated devel/p5-Date-Manip to 6.75 [wen 2018-12-04]
