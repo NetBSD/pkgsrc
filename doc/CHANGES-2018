@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5034 2018/12/03 20:42:03 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5035 2018/12/04 03:57:17 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7007,3 +7007,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/syncdir to 1.0nb4 [schmonz 2018-12-03]
 	Updated www/py-MechanicalSoup to 0.11.0 [adam 2018-12-03]
 	Updated math/py-lmfit to 0.9.12 [adam 2018-12-03]
+	Updated games/flightgear-data to 2018.2.2 [nia 2018-12-04]
