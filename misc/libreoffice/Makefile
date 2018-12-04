@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.175 2018/12/03 08:35:30 wiz Exp $
+# $NetBSD: Makefile,v 1.176 2018/12/04 12:56:48 ryoon Exp $
 
 VERREL=		6.1.3
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -103,14 +103,14 @@ MORE_DISTFILES= \
 	Amiri-0.111.zip \
 	ReemKufi-0.7.zip
 
-MORE_DISTFILES+=		harfbuzz-2.1.1.tar.bz2
+MORE_DISTFILES+=		harfbuzz-2.2.0.tar.bz2
 
 .for md in ${MORE_DISTFILES}
 DISTFILES+=		${md}
 SITES.${md}=		https://dev-www.libreoffice.org/src/
 .endfor
 
-SITES.harfbuzz-2.1.1.tar.bz2=	https://www.freedesktop.org/software/harfbuzz/release/
+SITES.harfbuzz-2.2.0.tar.bz2=	https://www.freedesktop.org/software/harfbuzz/release/
 
 .include "options.mk"
 
