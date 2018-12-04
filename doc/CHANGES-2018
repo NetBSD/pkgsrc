@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5042 2018/12/04 08:54:07 wen Exp $
+$NetBSD: CHANGES-2018,v 1.5043 2018/12/04 09:04:42 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7015,3 +7015,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Test2-Suite to 0.000116 [wen 2018-12-04]
 	Updated mail/p5-Mail-DKIM to 0.54 [wen 2018-12-04]
 	Updated databases/p5-DBD-SQLite to 1.60 [wen 2018-12-04]
+	Updated textproc/p5-Pod-Tree to 1.29 [wen 2018-12-04]
