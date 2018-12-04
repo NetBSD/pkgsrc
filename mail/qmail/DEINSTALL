@@ -1,6 +1,7 @@
-# $NetBSD: DEINSTALL,v 1.6 2018/11/14 16:43:17 schmonz Exp $
+# $NetBSD: DEINSTALL,v 1.7 2018/12/04 17:01:39 schmonz Exp $
 
 QMAILDIR=@QMAILDIR@
+QMAIL_QUEUE_EXTRA=@QMAIL_QUEUE_EXTRA@
 
 VAR_QMAIL_DIRS="alias bin boot control doc man queue users"
 
@@ -8,9 +9,12 @@ case "${STAGE}" in
 
 DEINSTALL)
 	cd ${PKG_SYSCONFDIR}
-	for i in postmaster mailer-daemon root; do
-		[ -s alias/.qmail-${i} ] \
-			|| ${RM} -f alias/.qmail-${i}
+	for i in mailer-daemon postmaster root ${QMAIL_QUEUE_EXTRA}; do
+		contents=$(${CAT} alias/.qmail-${i})
+		if [ "${contents}" = '# pkgsrc says: replace this comment with your config' ] \
+			|| [ "${contents}" = '' ]; then
+			${RM} -f alias/.qmail-${i}
+		fi
 	done
 	for i in defaultdomain locals me plusdomain rcpthosts; do
 		${CMP} -s control/${i} .pkgsrc-defaults-do-not-edit/${i} \
