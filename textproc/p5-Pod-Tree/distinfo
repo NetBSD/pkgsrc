@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/11/04 01:59:47 agc Exp $
+$NetBSD: distinfo,v 1.9 2018/12/04 09:03:21 wen Exp $
 
-SHA1 (Pod-Tree-1.25.tar.gz) = c948dc5f49163f5d913259bc54675591e2a0cf12
-RMD160 (Pod-Tree-1.25.tar.gz) = 310ad2b55dc8c386d160d417ae5657254711aaa5
-SHA512 (Pod-Tree-1.25.tar.gz) = b7c757f8e3ea2e9ead3437a129ce24e672b742b1e209b08780d1daccd393a8a6d61b827b4beb68223423984d0bef6ecf06be19c55d90f516e40e7393be48fa34
-Size (Pod-Tree-1.25.tar.gz) = 64140 bytes
+SHA1 (Pod-Tree-1.29.tar.gz) = 6834b8caec60be50e975e922b52052c334417674
+RMD160 (Pod-Tree-1.29.tar.gz) = c5a6dcbd2c5ee13e538dc563c8d45db3138b8068
+SHA512 (Pod-Tree-1.29.tar.gz) = 46ff73d4fb3bcb37204adbbc1f5706267a85b7bc4343776637e3cf28448de6c517a8e214379da15b5285004b30916e19086d950083fba2117c300b564dd6c303
+Size (Pod-Tree-1.29.tar.gz) = 68422 bytes
