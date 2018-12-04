@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18679 2018/12/04 03:57:17 nia Exp $
+$NetBSD: TODO,v 1.18680 2018/12/04 03:57:32 nia Exp $
 
 Suggested new packages
 ======================
@@ -623,7 +623,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fillets-ng-data-0.7.4
 	o flashplayer-0.4.13
 	o flashrom-0.9.8
-	o flightgear-2.12
 	o flite-1.4
 	o flow-tools-0.411
 	o flpsed-0.7.3
