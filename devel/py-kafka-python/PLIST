@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/07/10 01:16:37 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/12/04 12:54:01 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -6,6 +6,21 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/kafka/__init__.py
 ${PYSITELIB}/kafka/__init__.pyc
 ${PYSITELIB}/kafka/__init__.pyo
+${PYSITELIB}/kafka/admin/__init__.py
+${PYSITELIB}/kafka/admin/__init__.pyc
+${PYSITELIB}/kafka/admin/__init__.pyo
+${PYSITELIB}/kafka/admin/client.py
+${PYSITELIB}/kafka/admin/client.pyc
+${PYSITELIB}/kafka/admin/client.pyo
+${PYSITELIB}/kafka/admin/config_resource.py
+${PYSITELIB}/kafka/admin/config_resource.pyc
+${PYSITELIB}/kafka/admin/config_resource.pyo
+${PYSITELIB}/kafka/admin/new_partitions.py
+${PYSITELIB}/kafka/admin/new_partitions.pyc
+${PYSITELIB}/kafka/admin/new_partitions.pyo
+${PYSITELIB}/kafka/admin/new_topic.py
+${PYSITELIB}/kafka/admin/new_topic.pyc
+${PYSITELIB}/kafka/admin/new_topic.pyo
 ${PYSITELIB}/kafka/client.py
 ${PYSITELIB}/kafka/client.pyc
 ${PYSITELIB}/kafka/client.pyo
@@ -282,6 +297,9 @@ ${PYSITELIB}/kafka/util.pyo
 ${PYSITELIB}/kafka/vendor/__init__.py
 ${PYSITELIB}/kafka/vendor/__init__.pyc
 ${PYSITELIB}/kafka/vendor/__init__.pyo
+${PYSITELIB}/kafka/vendor/enum34.py
+${PYSITELIB}/kafka/vendor/enum34.pyc
+${PYSITELIB}/kafka/vendor/enum34.pyo
 ${PYSITELIB}/kafka/vendor/selectors34.py
 ${PYSITELIB}/kafka/vendor/selectors34.pyc
 ${PYSITELIB}/kafka/vendor/selectors34.pyo
