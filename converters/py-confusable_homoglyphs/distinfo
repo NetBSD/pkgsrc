@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/05/17 10:38:13 adam Exp $
+$NetBSD: distinfo,v 1.3 2018/12/04 13:29:13 adam Exp $
 
-SHA1 (confusable_homoglyphs-3.1.1.tar.gz) = 8484d93506af8dfeed80fa430ad106d338a84723
-RMD160 (confusable_homoglyphs-3.1.1.tar.gz) = 9fb5d823205f9bff1ece5194bd9c97933a5835de
-SHA512 (confusable_homoglyphs-3.1.1.tar.gz) = 7909607b5a15e48c2a20d8b70e85195278ceafbde908d6df1e0ef57bf138082fc3a2eff9317b17de985159ed8fbcd3267e7f0e898382ac6a23e41b2977a07b95
-Size (confusable_homoglyphs-3.1.1.tar.gz) = 161575 bytes
+SHA1 (confusable_homoglyphs-3.2.0.tar.gz) = f0f5affd8418d510f4a578989636169423d8a990
+RMD160 (confusable_homoglyphs-3.2.0.tar.gz) = c19a7dbd5c5958ab8725f54ca7709a7ae921d1d2
+SHA512 (confusable_homoglyphs-3.2.0.tar.gz) = 0a46a5bc94393592f6fa088bbe2f95cc301972c55de08231f3607828fcd3c5cb462514b80013283ef8cd8d76eaa3e14258ac8f3433c9c2cd1a89bcebca8fa7f6
+Size (confusable_homoglyphs-3.2.0.tar.gz) = 161937 bytes
