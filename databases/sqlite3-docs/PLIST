@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.81 2018/11/19 16:21:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.82 2018/12/04 12:03:53 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -41,7 +41,7 @@ share/doc/sqlite3/c3ref/c_any.html
 share/doc/sqlite3/c3ref/c_blob.html
 share/doc/sqlite3/c3ref/c_checkpoint_full.html
 share/doc/sqlite3/c3ref/c_config_covering_index_scan.html
-share/doc/sqlite3/c3ref/c_dbconfig_enable_fkey.html
+share/doc/sqlite3/c3ref/c_dbconfig_defensive.html
 share/doc/sqlite3/c3ref/c_dbstatus_options.html
 share/doc/sqlite3/c3ref/c_deny.html
 share/doc/sqlite3/c3ref/c_deserialize_freeonclose.html
@@ -55,7 +55,7 @@ share/doc/sqlite3/c3ref/c_limit_attached.html
 share/doc/sqlite3/c3ref/c_lock_exclusive.html
 share/doc/sqlite3/c3ref/c_mutex_fast.html
 share/doc/sqlite3/c3ref/c_open_autoproxy.html
-share/doc/sqlite3/c3ref/c_prepare_persistent.html
+share/doc/sqlite3/c3ref/c_prepare_normalize.html
 share/doc/sqlite3/c3ref/c_scanstat_est.html
 share/doc/sqlite3/c3ref/c_serialize_nocopy.html
 share/doc/sqlite3/c3ref/c_shm_exclusive.html
@@ -236,6 +236,7 @@ share/doc/sqlite3/cvstrac.css
 share/doc/sqlite3/datatype3.html
 share/doc/sqlite3/datatypes.html
 share/doc/sqlite3/dbhash.html
+share/doc/sqlite3/dbpage.html
 share/doc/sqlite3/dbstat.html
 share/doc/sqlite3/debugging.html
 share/doc/sqlite3/deterministic.html
@@ -570,6 +571,7 @@ share/doc/sqlite3/lockingv3.html
 share/doc/sqlite3/locrsf.html
 share/doc/sqlite3/lts.html
 share/doc/sqlite3/malloc.html
+share/doc/sqlite3/memstat.html
 share/doc/sqlite3/mingw.html
 share/doc/sqlite3/mmap.html
 share/doc/sqlite3/mostdeployed.html
@@ -648,6 +650,7 @@ share/doc/sqlite3/releaselog/3_25_0.html
 share/doc/sqlite3/releaselog/3_25_1.html
 share/doc/sqlite3/releaselog/3_25_2.html
 share/doc/sqlite3/releaselog/3_25_3.html
+share/doc/sqlite3/releaselog/3_26_0.html
 share/doc/sqlite3/releaselog/3_2_0.html
 share/doc/sqlite3/releaselog/3_2_1.html
 share/doc/sqlite3/releaselog/3_2_2.html
@@ -789,13 +792,16 @@ share/doc/sqlite3/rtree.html
 share/doc/sqlite3/search
 share/doc/sqlite3/search.d/admin
 share/doc/sqlite3/search.d/search.db
+share/doc/sqlite3/security.html
 share/doc/sqlite3/selfcontained.html
 share/doc/sqlite3/series.html
 share/doc/sqlite3/serverless.html
 share/doc/sqlite3/session.html
 share/doc/sqlite3/session/c_changeset_abort.html
 share/doc/sqlite3/session/c_changeset_conflict.html
-share/doc/sqlite3/session/c_changesetapply_nosavepoint.html
+share/doc/sqlite3/session/c_changesetapply_invert.html
+share/doc/sqlite3/session/c_changesetstart_invert.html
+share/doc/sqlite3/session/c_session_config_strmsize.html
 share/doc/sqlite3/session/changegroup.html
 share/doc/sqlite3/session/changeset_iter.html
 share/doc/sqlite3/session/constlist.html
@@ -827,6 +833,7 @@ share/doc/sqlite3/session/sqlite3rebaser_delete.html
 share/doc/sqlite3/session/sqlite3rebaser_rebase.html
 share/doc/sqlite3/session/sqlite3session_attach.html
 share/doc/sqlite3/session/sqlite3session_changeset.html
+share/doc/sqlite3/session/sqlite3session_config.html
 share/doc/sqlite3/session/sqlite3session_create.html
 share/doc/sqlite3/session/sqlite3session_delete.html
 share/doc/sqlite3/session/sqlite3session_diff.html
