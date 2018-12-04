@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/08/16 11:37:01 adam Exp $
+$NetBSD: distinfo,v 1.5 2018/12/04 13:18:54 adam Exp $
 
-SHA1 (ofxparse-0.19.tar.gz) = af601769cabdfd72f05b55d3c5cfc20eaeafb676
-RMD160 (ofxparse-0.19.tar.gz) = 6314f402def21d62bce674976185790752cb448a
-SHA512 (ofxparse-0.19.tar.gz) = 1272cb8a5994247facd8b27bccb1ab29b878f4a02f2d9d368504c8aaf8772c608f807d197fa5c52182b270479b07c19cd966eeba822b9382d2f2c9723458b07a
-Size (ofxparse-0.19.tar.gz) = 54140 bytes
+SHA1 (ofxparse-0.20.tar.gz) = 264f28872fe7b03206f7f9b6a1b69187cdd468c6
+RMD160 (ofxparse-0.20.tar.gz) = f790ca67e6d6136e0bb78aed840d9f1d565e9e53
+SHA512 (ofxparse-0.20.tar.gz) = cde07411143dfbd26141415d53f5073408bd71b48c5cbac252e82cd85735722806b8b42e040008a0d3a5c26e46aec2db73ba33836de1137bd301d694db2fd729
+Size (ofxparse-0.20.tar.gz) = 53178 bytes
