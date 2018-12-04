@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5050 2018/12/04 13:29:32 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5051 2018/12/04 17:02:04 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7026,3 +7026,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated finance/py-ofxparse to 0.20 [adam 2018-12-04]
 	Updated textproc/py-odfpy to 1.4.0 [adam 2018-12-04]
 	Updated converters/py-confusable_homoglyphs to 3.2.0 [adam 2018-12-04]
+	Updated mail/qmail to 1.03nb42 [schmonz 2018-12-04]
