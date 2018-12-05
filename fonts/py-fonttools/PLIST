@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2018/11/02 09:59:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2018/12/05 15:42:55 adam Exp $
 bin/fonttools-${PYVERSSUFFIX}
 bin/pyftinspect-${PYVERSSUFFIX}
 bin/pyftmerge-${PYVERSSUFFIX}
@@ -91,6 +91,9 @@ ${PYSITELIB}/fontTools/misc/classifyTools.pyo
 ${PYSITELIB}/fontTools/misc/cliTools.py
 ${PYSITELIB}/fontTools/misc/cliTools.pyc
 ${PYSITELIB}/fontTools/misc/cliTools.pyo
+${PYSITELIB}/fontTools/misc/dictTools.py
+${PYSITELIB}/fontTools/misc/dictTools.pyc
+${PYSITELIB}/fontTools/misc/dictTools.pyo
 ${PYSITELIB}/fontTools/misc/eexec.py
 ${PYSITELIB}/fontTools/misc/eexec.pyc
 ${PYSITELIB}/fontTools/misc/eexec.pyo
@@ -106,6 +109,9 @@ ${PYSITELIB}/fontTools/misc/filenames.pyo
 ${PYSITELIB}/fontTools/misc/fixedTools.py
 ${PYSITELIB}/fontTools/misc/fixedTools.pyc
 ${PYSITELIB}/fontTools/misc/fixedTools.pyo
+${PYSITELIB}/fontTools/misc/intTools.py
+${PYSITELIB}/fontTools/misc/intTools.pyc
+${PYSITELIB}/fontTools/misc/intTools.pyo
 ${PYSITELIB}/fontTools/misc/loggingTools.py
 ${PYSITELIB}/fontTools/misc/loggingTools.pyc
 ${PYSITELIB}/fontTools/misc/loggingTools.pyo
@@ -235,6 +241,9 @@ ${PYSITELIB}/fontTools/subset/__init__.pyo
 ${PYSITELIB}/fontTools/subset/__main__.py
 ${PYSITELIB}/fontTools/subset/__main__.pyc
 ${PYSITELIB}/fontTools/subset/__main__.pyo
+${PYSITELIB}/fontTools/subset/cff.py
+${PYSITELIB}/fontTools/subset/cff.pyc
+${PYSITELIB}/fontTools/subset/cff.pyo
 ${PYSITELIB}/fontTools/svgLib/__init__.py
 ${PYSITELIB}/fontTools/svgLib/__init__.pyc
 ${PYSITELIB}/fontTools/svgLib/__init__.pyo
