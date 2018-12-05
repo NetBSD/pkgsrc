@@ -1,4 +1,4 @@
-f# $NetBSD: Makefile,v 1.31 2018/12/05 18:40:14 scole Exp $
+# $NetBSD: Makefile,v 1.32 2018/12/05 18:42:06 scole Exp $
 #
 
 DISTNAME=	quirc-0.9.84
