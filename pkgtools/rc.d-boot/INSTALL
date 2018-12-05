@@ -1,0 +1,10 @@
+# $NetBSD: INSTALL,v 1.1 2018/12/05 19:23:04 schmonz Exp $
+
+case ${STAGE} in
+
+POST-INSTALL)
+	launchctl load -w /Library/LaunchDaemons/org.pkgsrc.rc.d-boot.plist
+
+	;;
+
+esac
