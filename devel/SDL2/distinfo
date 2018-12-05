@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.30 2018/11/01 21:08:28 adam Exp $
+$NetBSD: distinfo,v 1.31 2018/12/05 10:46:15 bsiegert Exp $
 
 SHA1 (SDL2-2.0.9.tar.gz) = 4354c6baad9a48486182656a7506abfb63e9bff5
 RMD160 (SDL2-2.0.9.tar.gz) = db2efabf55af41cddf015db0b5213b11ef22b9d0
@@ -7,4 +7,5 @@ Size (SDL2-2.0.9.tar.gz) = 5246942 bytes
 SHA1 (patch-configure) = 5637a66f8890586026034f5324829e61c94ac5be
 SHA1 (patch-src_audio_netbsd_SDL__netbsdaudio.c) = 7a1f32ea7029f8dc99aecfaead7c68f2fd6cb230
 SHA1 (patch-src_joystick_bsd_SDL__sysjoystick.c) = 152b5df76a91c7e7acde126b1464fdd464cf1ba2
+SHA1 (patch-src_video_cocoa_SDL__cocoawindow.m) = 1d5ac9c17ceadf668925734b5cad311e26f2fc58
 SHA1 (patch-src_video_x11_SDL__x11opengl.c) = 70b63021c12c52760c0811c673b259844bdfcdc0
