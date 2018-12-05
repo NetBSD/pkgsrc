@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5060 2018/12/05 21:15:31 leot Exp $
+$NetBSD: CHANGES-2018,v 1.5061 2018/12/05 21:20:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7040,3 +7040,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/cups-filters to 1.21.4 [leot 2018-12-05]
 	Added pkgtools/rc.d-boot version 20181205 [schmonz 2018-12-05]
 	Updated print/cups-filters to 1.21.5 [leot 2018-12-05]
+	Updated net/sslh to 1.20 [wiz 2018-12-05]
