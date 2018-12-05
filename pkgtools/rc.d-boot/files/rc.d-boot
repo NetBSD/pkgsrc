@@ -8,7 +8,7 @@ run_all_rcd_scripts() {
 		test -d ${rcd} && echo ${rcd}/*;
 	done)
 
-	files=$(@PREFIX@/sbin/rcorder -s nostart ${scripts})
+	files=$(@RCORDER@ -s nostart ${scripts})
 
 	for _rc_elem in $files; do
 		$_rc_elem ${action}
