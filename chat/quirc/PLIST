@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:37:49 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/12/05 18:40:14 scole Exp $
 bin/quirc
 share/doc/quirc/AUTHORS
 share/doc/quirc/COPYING
@@ -14,13 +14,13 @@ share/doc/quirc/quedit.txt
 share/doc/quirc/rfc1459.txt
 share/quirc/VERSION
 share/quirc/dal.tcl
-share/quirc/default.tcl
+share/quirc/themes/default.tcl
 share/quirc/doc.tcl
 share/quirc/fontsel
 share/quirc/fun.tcl
 share/quirc/global.tcl
 share/quirc/info.tcl
-share/quirc/install.tcl
+share/quirc/common/install.tcl
 share/quirc/listfile.tcl
 share/quirc/mircservers.tcl
 share/quirc/newserver.tcl
