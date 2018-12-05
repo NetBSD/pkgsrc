@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2017/09/03 11:27:47 leot Exp $
+@comment $NetBSD: PLIST,v 1.21 2018/12/05 18:49:39 leot Exp $
 bin/driverless
 bin/foomatic-rip
 bin/ttfread
@@ -35,7 +35,6 @@ libexec/cups/filter/imagetopdf
 libexec/cups/filter/imagetops
 libexec/cups/filter/imagetoraster
 libexec/cups/filter/pdftoijs
-libexec/cups/filter/pdftoopvp
 libexec/cups/filter/pdftopdf
 libexec/cups/filter/pdftops
 libexec/cups/filter/pdftoraster
@@ -89,7 +88,6 @@ share/doc/cups-filters/INSTALL
 share/doc/cups-filters/NEWS
 share/doc/cups-filters/README
 share/examples/cups-filters/cups-browsed.conf
-share/examples/cups-filters/fonts/conf.d/99pdftoopvp.conf
 share/ppd/cupsfilters/Fuji_Xerox-DocuPrint_CM305_df-PDF.ppd
 share/ppd/cupsfilters/Generic-PDF_Printer-PDF.ppd
 share/ppd/cupsfilters/HP-Color_LaserJet_CM3530_MFP-PDF.ppd
