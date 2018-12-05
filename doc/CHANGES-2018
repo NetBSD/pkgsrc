@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5058 2018/12/05 18:50:25 leot Exp $
+$NetBSD: CHANGES-2018,v 1.5059 2018/12/05 19:24:05 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7038,3 +7038,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-libmc to 1.6.0 [adam 2018-12-05]
 	Updated chat/quirc to 0.9.84nb10 [scole 2018-12-05]
 	Updated print/cups-filters to 1.21.4 [leot 2018-12-05]
+	Added pkgtools/rc.d-boot version 20181205 [schmonz 2018-12-05]
