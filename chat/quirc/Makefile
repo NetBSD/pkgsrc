@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2018/07/04 13:40:11 jperkin Exp $
+f# $NetBSD: Makefile,v 1.31 2018/12/05 18:40:14 scole Exp $
 #
 
 DISTNAME=	quirc-0.9.84
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	chat
 #MASTER_SITES=	http://quirc.org/
 
@@ -26,8 +26,21 @@ SUBST_SED.T86=		-e 's,8_3,8_6,g'
 SUBST_SED.T86+=		-e 's,8.3,8.6,g'
 SUBST_SED.T86+=		-e 's,83,86,g'
 
+INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS+=	share/doc/quirc
+INSTALLATION_DIRS+=	share/quirc
+INSTALLATION_DIRS+=	share/quirc/common
+INSTALLATION_DIRS+=	share/quirc/themes
+
 pre-configure:
 	cd ${WRKSRC} && autoreconf -i
+
+# move default.tcl to themes/default.tcl and install to common/install.tcl
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/share/quirc/default.tcl \
+		${DESTDIR}${PREFIX}/share/quirc/themes
+	${MV} ${DESTDIR}${PREFIX}/share/quirc/install.tcl \
+		${DESTDIR}${PREFIX}/share/quirc/common
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
