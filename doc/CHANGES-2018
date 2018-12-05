@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5053 2018/12/05 10:54:49 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.5054 2018/12/05 12:10:56 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7029,3 +7029,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/qmail to 1.03nb42 [schmonz 2018-12-04]
 	Updated mail/qmail-run to 20181204 [schmonz 2018-12-04]
 	Updated security/libssh to 0.85nb1 [wiz 2018-12-05]
+	Updated biology/py-pydicom to 1.2.1 [bsiegert 2018-12-05]
