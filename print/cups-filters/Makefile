@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.109 2018/12/05 18:49:39 leot Exp $
+# $NetBSD: Makefile,v 1.110 2018/12/05 21:15:08 leot Exp $
 
-DISTNAME=	cups-filters-1.21.4
+DISTNAME=	cups-filters-1.21.5
 CATEGORIES=	print
 MASTER_SITES=	http://openprinting.org/download/cups-filters/
 EXTRACT_SUFX=	.tar.xz
@@ -23,7 +23,9 @@ CONFIGURE_ARGS+=	--disable-braille
 CONFIGURE_ARGS+=	--disable-ldap
 CONFIGURE_ARGS+=	--disable-mutool
 CONFIGURE_ARGS+=	--enable-ijs
-# XXX: Temporary disable opvp filters: not yet ported to poppler 0.71.0
+# XXX: Temporary disable opvp filters: not yet ported to poppler 0.71.0.
+# XXX: Upstream bug report:
+# XXX:  <https://github.com/OpenPrinting/cups-filters/issues/75>
 CONFIGURE_ARGS+=	--disable-opvp
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--with-apple-raster-filter=rastertopdf
