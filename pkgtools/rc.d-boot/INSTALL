@@ -1,9 +1,17 @@
-# $NetBSD: INSTALL,v 1.1 2018/12/05 19:23:04 schmonz Exp $
+# $NetBSD: INSTALL,v 1.2 2018/12/05 19:49:26 schmonz Exp $
+
+OPSYS=@OPSYS@
 
 case ${STAGE} in
 
 POST-INSTALL)
-	launchctl load -w /Library/LaunchDaemons/org.pkgsrc.rc.d-boot.plist
+	case "${OPSYS}" in
+	Darwin)
+		launchctl load -w /Library/LaunchDaemons/org.pkgsrc.rc.d-boot.plist
+		;;
+	NetBSD)
+		;;
+	esac
 
 	;;
 
