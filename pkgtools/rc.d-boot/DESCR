@@ -1,0 +1,2 @@
+This package runs all rc.conf-enabled rc.d scripts at boot time as one
+"service" in your operating system's normal boot process.
