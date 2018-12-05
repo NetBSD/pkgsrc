@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5059 2018/12/05 19:24:05 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.5060 2018/12/05 21:15:31 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7039,3 +7039,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated chat/quirc to 0.9.84nb10 [scole 2018-12-05]
 	Updated print/cups-filters to 1.21.4 [leot 2018-12-05]
 	Added pkgtools/rc.d-boot version 20181205 [schmonz 2018-12-05]
+	Updated print/cups-filters to 1.21.5 [leot 2018-12-05]
