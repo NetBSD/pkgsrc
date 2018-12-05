@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>Disabled</key>
+	<false/>
+	<key>Label</key>
+	<string>org.pkgsrc.rc.d-boot</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>@PREFIX@/sbin/rc.d-boot</string>
+		<string>start</string>
+	</array>
+	<key>OnDemand</key>
+	<false/>
+	<key>KeepAlive</key>
+	<false/>
+	<key>LaunchOnlyOnce</key>
+	<true/>
+</dict>
+</plist>

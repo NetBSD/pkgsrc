@@ -1,0 +1,31 @@
+#!/bin/sh
+
+run_all_rcd_scripts() {
+	action="$1"; shift
+
+	# from NetBSD /etc/rc
+	scripts=$(for rcd in @RCD_SCRIPTS_DIR@; do
+		test -d ${rcd} && echo ${rcd}/*;
+	done)
+
+	files=$(@PREFIX@/sbin/rcorder -s nostart ${scripts})
+
+	for _rc_elem in $files; do
+		$_rc_elem ${action}
+	done
+}
+
+usage() {
+	echo >&2 "usage: $0 <start|stop>"
+	exit 1
+}
+
+main() {
+	[ $# -eq 1 ] || usage
+	action="$1"; shift
+
+	run_all_rcd_scripts "${action}"
+}
+
+main "$@"
+exit $?
