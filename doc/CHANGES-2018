@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5066 2018/12/06 14:33:31 taca Exp $
+$NetBSD: CHANGES-2018,v 1.5067 2018/12/06 14:36:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7046,3 +7046,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added misc/ruby-mimemagic version 0.3.2 [taca 2018-12-06]
 	Added devel/ruby-marcel version 0.3.3 [taca 2018-12-06]
 	Added devel/ruby-cucumber-expressions version 6.0.1 [taca 2018-12-06]
+	Added devel/ruby-hocon version 1.2.5 [taca 2018-12-06]
