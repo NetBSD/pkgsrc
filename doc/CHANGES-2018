@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5070 2018/12/06 15:38:50 tsutsui Exp $
+$NetBSD: CHANGES-2018,v 1.5071 2018/12/06 19:32:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7050,3 +7050,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/ruby-semantic_puppet version 1.0.2 [taca 2018-12-06]
 	Added sysutils/ruby-puppet-resource_api version 1.6.2 [taca 2018-12-06]
 	Updated multimedia/adobe-flash-player to 32.0.0.101 [tsutsui 2018-12-06]
+	Added time/py-aniso8601 version 4.0.1 [adam 2018-12-06]
+	Added www/py-flask-restful version 0.3.6 [adam 2018-12-06]
