@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5063 2018/12/06 07:09:18 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.5064 2018/12/06 14:21:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7043,3 +7043,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/sslh to 1.20 [wiz 2018-12-05]
 	Added mail/qmail-spp-spf version 20091020 [schmonz 2018-12-06]
 	Updated net/syncthing to 0.14.54 [wiz 2018-12-06]
+	Added misc/ruby-mimemagic version 0.3.2 [taca 2018-12-06]
