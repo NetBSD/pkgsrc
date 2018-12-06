@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5069 2018/12/06 14:42:03 taca Exp $
+$NetBSD: CHANGES-2018,v 1.5070 2018/12/06 15:38:50 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7049,3 +7049,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/ruby-hocon version 1.2.5 [taca 2018-12-06]
 	Added devel/ruby-semantic_puppet version 1.0.2 [taca 2018-12-06]
 	Added sysutils/ruby-puppet-resource_api version 1.6.2 [taca 2018-12-06]
+	Updated multimedia/adobe-flash-player to 32.0.0.101 [tsutsui 2018-12-06]
