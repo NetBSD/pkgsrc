@@ -1,0 +1,6 @@
+# Puppet::ResourceApi
+
+This is an implementation of the Resource API specification.  Find a working
+example of a new-style providers in the Palo Alto Firewall module: base
+provider, type, actual provider with validation and xml processing, and new
+unit tests for 100% coverage.
