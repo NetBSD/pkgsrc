@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2018/12/06 00:07:33 schmonz Exp $
+bin/qmail-spp-spf
+share/doc/qmail-spp-spf/README
