@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/12/06 14:35:17 taca Exp $
+
+SHA1 (hocon-1.2.5.gem) = 5d234c73830576a438dd14992f3e801bbe05d656
+RMD160 (hocon-1.2.5.gem) = e03e5f8ebca6f6093ea5ec8ed02310e43676f6ee
+SHA512 (hocon-1.2.5.gem) = 7d2d86c28edd6ed6dd99358558093cd224b9922bcbcdd2e95e23134ef0e9a2bae6129e7273435032850b672094e77f8f5b6d8cfeec03762b39ed6b63fc5fb5dd
+Size (hocon-1.2.5.gem) = 147968 bytes
