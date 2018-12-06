@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/12/06 14:20:39 taca Exp $
+
+SHA1 (mimemagic-0.3.2.gem) = 1e4afc91ea0eae00a0a502ec70596028ce6bcedf
+RMD160 (mimemagic-0.3.2.gem) = 2940d4062c64003ab857e29b1adfb61cb7962f5f
+SHA512 (mimemagic-0.3.2.gem) = 0d919ecf7f787c1b72ea337945089070db3647976192adeb510985542962a9efc9a2dc62c51024a9a32afbebf804c21745cc06d6d4738f570f1d2eee0b1ae181
+Size (mimemagic-0.3.2.gem) = 366080 bytes
