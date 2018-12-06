@@ -1,0 +1,16 @@
+Library for parsing ISO 8601 strings
+
+Features
+* Pure Python implementation
+* Python 3 support
+* Logical behavior
+  - Parse a time, get a datetime.time
+  - Parse a date, get a datetime.date
+  - Parse a datetime, get a datetime.datetime
+  - Parse a duration, get a datetime.timedelta
+  - Parse an interval, get a tuple of dates or datetimes
+  - Parse a repeating interval, get a date or datetime generator
+* UTC offset represented as fixed-offset tzinfo
+* Parser separate from representation, allowing parsing to different datetime
+  formats
+* No regular expressions
