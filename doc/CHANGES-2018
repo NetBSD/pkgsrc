@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5065 2018/12/06 14:26:07 taca Exp $
+$NetBSD: CHANGES-2018,v 1.5066 2018/12/06 14:33:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7045,3 +7045,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/syncthing to 0.14.54 [wiz 2018-12-06]
 	Added misc/ruby-mimemagic version 0.3.2 [taca 2018-12-06]
 	Added devel/ruby-marcel version 0.3.3 [taca 2018-12-06]
+	Added devel/ruby-cucumber-expressions version 6.0.1 [taca 2018-12-06]
