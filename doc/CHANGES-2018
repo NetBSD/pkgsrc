@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5067 2018/12/06 14:36:21 taca Exp $
+$NetBSD: CHANGES-2018,v 1.5068 2018/12/06 14:39:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7047,3 +7047,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/ruby-marcel version 0.3.3 [taca 2018-12-06]
 	Added devel/ruby-cucumber-expressions version 6.0.1 [taca 2018-12-06]
 	Added devel/ruby-hocon version 1.2.5 [taca 2018-12-06]
+	Added devel/ruby-semantic_puppet version 1.0.2 [taca 2018-12-06]
