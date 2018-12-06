@@ -1,0 +1,2 @@
+Run a command in other directories.  Useful for running things like 'git
+status' or 'make' in a few projects at once.  Can run jobs in parallel.
