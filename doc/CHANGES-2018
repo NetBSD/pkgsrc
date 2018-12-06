@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5074 2018/12/06 19:54:15 leot Exp $
+$NetBSD: CHANGES-2018,v 1.5075 2018/12/06 19:55:34 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7052,6 +7052,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/adobe-flash-player to 32.0.0.101 [tsutsui 2018-12-06]
 	Added time/py-aniso8601 version 4.0.1 [adam 2018-12-06]
 	Added www/py-flask-restful version 0.3.6 [adam 2018-12-06]
-	Updated textproc/json-yaml to 1.1.2 [leot 2018-12-06]
 	Updated textproc/json-yaml to 1.1.2 [leot 2018-12-06]
 	Added multimedia/nostt version 1.1.1 [leot 2018-12-06]
