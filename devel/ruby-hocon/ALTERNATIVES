@@ -1,0 +1,1 @@
+bin/hocon @PREFIX@/bin/hocon@RUBY_SUFFIX@
