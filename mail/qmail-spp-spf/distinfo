@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2018/12/06 00:07:33 schmonz Exp $
+
+SHA1 (qmail-spp-spf-20091020.c) = 3aca350c027345126cc631ffecdbbb697c9c4c45
+RMD160 (qmail-spp-spf-20091020.c) = 874bf86fdd4ddb671ad0827e1bf56cdda1deaec9
+SHA512 (qmail-spp-spf-20091020.c) = ffccb601ffa6d9088fc2530024412628a69f57f6448b78fa0d37d4aecc4a886360682bcaf49391f94edeb56b1cbf576122183461f25d4a661ce16e1eeeed8bf0
+Size (qmail-spp-spf-20091020.c) = 14965 bytes
+SHA1 (patch-qmail-spp-spf-20091020.c) = 6148fb9f1f56b6e154890a3de10877572e139add
