@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.787 2018/12/06 14:41:45 taca Exp $
+# $NetBSD: Makefile,v 1.788 2018/12/06 20:04:25 leot Exp $
 #
 
 COMMENT=	System utilities
@@ -707,6 +707,7 @@ SUBDIR+=	wbm-virtual-server
 SUBDIR+=	webmin
 SUBDIR+=	whowatch
 SUBDIR+=	wipe
+SUBDIR+=	within
 SUBDIR+=	wmSMPmon
 SUBDIR+=	wmcpuload
 SUBDIR+=	wmmemmon
