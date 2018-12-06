@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5061 2018/12/05 21:20:41 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.5062 2018/12/06 00:08:07 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7041,3 +7041,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added pkgtools/rc.d-boot version 20181205 [schmonz 2018-12-05]
 	Updated print/cups-filters to 1.21.5 [leot 2018-12-05]
 	Updated net/sslh to 1.20 [wiz 2018-12-05]
+	Added mail/qmail-spp-spf version 20091020 [schmonz 2018-12-06]
