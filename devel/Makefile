@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2764 2018/12/06 14:33:14 taca Exp $
+# $NetBSD: Makefile,v 1.2765 2018/12/06 14:35:49 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2468,6 +2468,7 @@ SUBDIR+=	ruby-highline
 SUBDIR+=	ruby-highline17
 SUBDIR+=	ruby-hike
 SUBDIR+=	ruby-hike1
+SUBDIR+=	ruby-hocon
 SUBDIR+=	ruby-i18n
 SUBDIR+=	ruby-idn
 SUBDIR+=	ruby-iniparse
