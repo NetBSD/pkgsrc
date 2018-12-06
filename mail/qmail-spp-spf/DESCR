@@ -1,0 +1,2 @@
+This is an implementation of SPF as a qmail-spp module. It
+requires libspf2.
