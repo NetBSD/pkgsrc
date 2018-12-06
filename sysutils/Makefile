@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.786 2018/11/29 14:36:46 taca Exp $
+# $NetBSD: Makefile,v 1.787 2018/12/06 14:41:45 taca Exp $
 #
 
 COMMENT=	System utilities
@@ -532,6 +532,7 @@ SUBDIR+=	ruby-facter
 SUBDIR+=	ruby-fssm
 SUBDIR+=	ruby-listen
 SUBDIR+=	ruby-notify
+SUBDIR+=	ruby-puppet-resource_api
 SUBDIR+=	ruby-quota
 SUBDIR+=	ruby-rb-appscript
 SUBDIR+=	ruby-rb-inotify
