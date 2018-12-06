@@ -1,0 +1,17 @@
+SemanticPuppet
+==============
+
+Library of useful tools for working with Semantic Versions and module
+dependencies.
+
+Description
+-----------
+
+Library of tools used by Puppet to parse, validate, and compare Semantic
+Versions and Version Ranges and to query and resolve module dependencies.
+
+For sparse, but accurate documentation, please see the docs directory.
+
+This library is used by a number of Puppet Labs projects, including
+[Puppet](https://github.com/puppetlabs/puppet) and
+[r10k](https://github.com/puppetlabs/r10k).
