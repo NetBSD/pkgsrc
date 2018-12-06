@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2762 2018/12/02 06:47:49 taca Exp $
+# $NetBSD: Makefile,v 1.2763 2018/12/06 14:25:48 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2483,6 +2483,7 @@ SUBDIR+=	ruby-lockfile
 SUBDIR+=	ruby-log4r
 SUBDIR+=	ruby-logging
 SUBDIR+=	ruby-loquacious
+SUBDIR+=	ruby-marcel
 SUBDIR+=	ruby-memcache
 SUBDIR+=	ruby-memoist
 SUBDIR+=	ruby-mercenary
