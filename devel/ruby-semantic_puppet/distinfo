@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/12/06 14:38:28 taca Exp $
+
+SHA1 (semantic_puppet-1.0.2.gem) = c83560a9698fbcb5b28bd652d0a698e45c52b4ee
+RMD160 (semantic_puppet-1.0.2.gem) = 78fc080237a7450d0d51fd6e4e38ef209d9bb437
+SHA512 (semantic_puppet-1.0.2.gem) = b059d8c7b13ae96dfe012318e7c6ee483cc09986d5d065c8422167a27a14d8e99433229c90388a7ff9ee425a0f5b6a6a6d5bc55f8b81901490afd8039ea86480
+Size (semantic_puppet-1.0.2.gem) = 31744 bytes
