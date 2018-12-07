@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.12 2018/12/07 01:54:52 manu Exp $
+# $NetBSD: Makefile.php,v 1.13 2018/12/07 16:04:50 taca Exp $
 # used by lang/php70/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
@@ -45,9 +45,6 @@ CONFIGURE_ARGS+=	--enable-mysqlnd
 CONFIGURE_ARGS+=	--enable-xml
 CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX}
 .include "../../textproc/libxml2/buildlink3.mk"
-
-CONFIGURE_ARGS+=	--with-sqlite3=shared
-.include "../../databases/sqlite3/buildlink3.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${PHP_PKG_PREFIX}
 PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts readline disable-filter-url
