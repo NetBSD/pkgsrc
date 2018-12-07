@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2017/07/17 16:09:38 jperkin Exp $
+$NetBSD: distinfo,v 1.2 2018/12/07 17:34:57 maya Exp $
 
 SHA1 (mailsend-1.19.tar.gz) = 6a86890244ada27e5be03155e8c01b7e2948ff5e
 RMD160 (mailsend-1.19.tar.gz) = b7146e77d11471a28e47a408532c0b2ffd3067b2
 SHA512 (mailsend-1.19.tar.gz) = e9640c2fb63d50d7db092c1f3cab0613c969901629e9cbf79c974e70fec582fa88eecf3ba0dbe74259fe53568f29efcdd07daf3593d26c9710b660d0cef55038
 Size (mailsend-1.19.tar.gz) = 447647 bytes
+SHA1 (patch-Makefile.in) = 017cf81d63550e53be6861362d5689305f7db89a
