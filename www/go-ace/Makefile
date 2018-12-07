@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/11/04 18:38:08 bsiegert Exp $
+# $NetBSD: Makefile,v 1.7 2018/12/07 12:01:41 ryoon Exp $
 
 DISTNAME=	ace-0.0.4b
 PKGNAME=	go-${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	4
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yosssi/}
 CATEGORIES=	www
 GITHUB_TAG=	71afeb714739f9d5f7e1849bcd4a0a5938e1a70d
-GITHUB_PROJECT= ${PKGBASE:S/^go-//}
+GITHUB_PROJECT=	${PKGBASE:S/^go-//}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/yosssi/ace
