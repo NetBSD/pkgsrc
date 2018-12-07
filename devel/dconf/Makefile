@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2018/12/02 07:11:55 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2018/12/07 20:02:58 schmonz Exp $
 
 DISTNAME=	dconf-0.30.1
 CATEGORIES=	devel gnome
@@ -47,13 +47,19 @@ post-install:
 	    -change \
 	    "@rpath/libdconf.1.dylib" \
 	    "${PREFIX}/lib/libdconf.1.dylib" \
-	    ${PREFIX}/lib/libdconf.1.dylib
+	    ${DESTDIR}${PREFIX}/lib/libdconf.1.dylib
 	install_name_tool \
 	    -id ${PREFIX}/lib/gio/modules/libdconfsettings.dylib \
 	    -change \
 	    "@rpath/libdconfsettings.dylib" \
 	    "${PREFIX}/gio/modules/libdconfsettings.dylib" \
-	    ${PREFIX}/lib/gio/modules/libdconfsettings.dylib
+	    ${DESTDIR}${PREFIX}/lib/gio/modules/libdconfsettings.dylib
+	install_name_tool \
+	    -id ${PREFIX}/lib/libdconf.dylib \
+	    -change \
+	    "@rpath/libdconf.1.dylib" \
+	    "${PREFIX}/lib/libdconf.1.dylib" \
+	    ${DESTDIR}${PREFIX}/bin/dconf
 .endif
 
 BUILDLINK_DEPMETHOD.vala=	build
