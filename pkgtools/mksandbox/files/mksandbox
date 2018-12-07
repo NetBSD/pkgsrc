@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.13 2018/09/29 18:59:29 sevan Exp $
+# $NetBSD: mksandbox,v 1.14 2018/12/07 12:40:39 sevan Exp $
 
 # Copyright (c) 2002,2012 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -28,8 +28,8 @@
 
 # Usage: mksandbox [--mounthost=host] [--rodirs=dir1,...] [--rwdirs=dir1,...]
 #		   [--pkgsrc=dir] [--src=srcdir] [--xsrc=xsrcdir]
-#		   [--without-src] [--without-pkgsrc] [--without-x]
-#		   [--verbose] sandbox-dir
+#		   [--without-src] [--without-pkgsrc] [--without-xsrc]
+#		   [--without-x] [--verbose] sandbox-dir
 #
 # A small shell script to set up a sandbox (usually for a pkgsrc bulk
 # build), using null mounts.
