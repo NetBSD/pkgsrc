@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.14 2018/12/02 07:11:55 wiz Exp $
+$NetBSD: distinfo,v 1.15 2018/12/07 20:02:58 schmonz Exp $
 
 SHA1 (dconf-0.30.1.tar.xz) = 181cdedc20a5ecd2d6e6aab4538ff199b5eaa1f9
 RMD160 (dconf-0.30.1.tar.xz) = c1b65608f36fd8f29a3e5204b95fc5afddd0affc
 SHA512 (dconf-0.30.1.tar.xz) = f7d136aec7cb75b64c7d9446d520f4c4af368e6d22346b7bb8ad66c08afaa03a72aacd44016dae7690e37b7d0deb9a16187445db176427a12a8b3cd3885c9e03
 Size (dconf-0.30.1.tar.xz) = 104376 bytes
+SHA1 (patch-meson.build) = 2015b184e88ed797b52152d00e96e45988cf01bf
