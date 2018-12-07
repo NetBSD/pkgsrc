@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5080 2018/12/07 12:08:02 wen Exp $
+$NetBSD: CHANGES-2018,v 1.5081 2018/12/07 17:15:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7060,3 +7060,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/moodle to 3.6.1 [wen 2018-12-07]
 	Updated emulators/mame to 0.204 [wiz 2018-12-07]
 	Updated security/p5-CryptX to 0.063 [wen 2018-12-07]
+	Updated lang/php71 to 7.1.26 [taca 2018-12-07]
+	Updated lang/php72 to 7.2.13 [taca 2018-12-07]
+	Updated lang/php70 to 7.0.33 [taca 2018-12-07]
+	Updated lang/php56 to 5.6.39 [taca 2018-12-07]
