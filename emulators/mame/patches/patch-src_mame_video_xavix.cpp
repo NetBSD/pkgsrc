@@ -1,6 +1,7 @@
-$NetBSD: patch-src_mame_video_xavix.cpp,v 1.1 2018/12/07 10:32:53 wiz Exp $
+$NetBSD: patch-src_mame_video_xavix.cpp,v 1.2 2018/12/07 22:09:16 wiz Exp $
 
 For sin, atan in std::.
+https://github.com/mamedev/mame/pull/4379
 
 --- src/mame/video/xavix.cpp.orig	2018-11-27 19:12:23.000000000 +0000
 +++ src/mame/video/xavix.cpp

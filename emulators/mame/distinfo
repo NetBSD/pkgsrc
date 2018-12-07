@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.74 2018/12/07 10:32:53 wiz Exp $
+$NetBSD: distinfo,v 1.75 2018/12/07 22:09:16 wiz Exp $
 
 SHA1 (mame-0.204.tar.gz) = 770f600c4c83793ffade1fae471df9e0a8087300
 RMD160 (mame-0.204.tar.gz) = 9a17f89b8fc34fbe26885f47ecc9de282e4fff1c
@@ -15,4 +15,4 @@ SHA1 (patch-scripts_genie.lua) = 91940dbcf30e0abd25167a79b53deb43a18daf86
 SHA1 (patch-scripts_toolchain.lua) = 6227e19645ce1f632401629bc9c988736e5e1ba7
 SHA1 (patch-src_devices_cpu_mips_mips3.cpp) = 64de7e132051d7b55bd1b9ae1cf0b5bbc826dc33
 SHA1 (patch-src_devices_cpu_mips_ps2vif1.cpp) = dffb66d3fd7579b285684ece4c819fd29722d920
-SHA1 (patch-src_mame_video_xavix.cpp) = 3373a4d2e2970a903c56d7159beb6655544b9b29
+SHA1 (patch-src_mame_video_xavix.cpp) = 3791a7937488bd134a3607616e5483f0d30b96f8
