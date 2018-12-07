@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5078 2018/12/07 00:31:21 wen Exp $
+$NetBSD: CHANGES-2018,v 1.5079 2018/12/07 10:33:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7058,3 +7058,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/py-m3u8 to 0.3.7 [adam 2018-12-06]
 	Updated textproc/py-markdown2 to 2.3.7 [adam 2018-12-06]
 	Updated www/moodle to 3.6.1 [wen 2018-12-07]
+	Updated emulators/mame to 0.204 [wiz 2018-12-07]
