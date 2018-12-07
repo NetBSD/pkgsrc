@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2018/11/12 07:20:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2018/12/07 10:32:53 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -199,6 +199,7 @@ share/mame/hash/dragon_os9.xml
 share/mame/hash/e01_flop.xml
 share/mame/hash/ec1841.xml
 share/mame/hash/einstein.xml
+share/mame/hash/ekara.xml
 share/mame/hash/electron_cart.xml
 share/mame/hash/electron_cass.xml
 share/mame/hash/electron_flop.xml
