@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/08/27 15:14:03 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2018/12/07 21:49:36 wiz Exp $
 
-DISTNAME=	libcanlock-3.0.2
+DISTNAME=	libcanlock-3.0.3
 CATEGORIES=	news
 MASTER_SITES=	http://micha.freeshell.org/libcanlock/src/
 EXTRACT_SUFX=	.tar.bz2
