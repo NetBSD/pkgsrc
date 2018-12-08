@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.21 2015/07/04 16:18:30 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2018/12/08 20:32:06 nia Exp $
 #
 
 DISTNAME=	arphic-ttf-2.11
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	fonts
-MASTER_SITES=	ftp://freebsd.sinica.edu.tw/pub/keith/zh-arphicttf/
-DISTFILES=	${FONT_FILES:=.gz} ${MISC_FILES}
+MASTER_SITES=	https://ctan.org/tex-archive/fonts/arphic-ttf/
+DISTFILES=	${FONT_FILES} ${MISC_FILES}
 
 MAINTAINER=	rxg@NetBSD.org
 COMMENT=	Chinese TrueType fonts from Arphic Technology
@@ -14,7 +14,7 @@ LICENSE=	arphic-public
 CONFLICTS=	arphicttf-[0-9]*
 
 FONT_FILES=	bkai00mp.ttf bsmi00lp.ttf gbsn00lp.ttf gkai00mp.ttf
-MISC_FILES=	ARPHICPL.TXT logo.gif release.txt
+MISC_FILES=	ARPHICPL.txt release.txt
 
 DIST_SUBDIR=	arphic-ttf
 WRKSRC=		${WRKDIR}
