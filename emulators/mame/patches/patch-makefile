@@ -1,8 +1,11 @@
-$NetBSD: patch-makefile,v 1.21 2018/10/11 08:20:54 adam Exp $
+$NetBSD: patch-makefile,v 1.22 2018/12/08 23:18:54 wiz Exp $
 
 Treat all BSDs the same.
+
 Do not set compiler optimization.
+
 Add missing rules for building with clang on FreeBSD and NetBSD.
+https://github.com/mamedev/mame/pull/4383
 
 --- makefile.orig	2018-08-29 00:35:24.000000000 +0000
 +++ makefile
