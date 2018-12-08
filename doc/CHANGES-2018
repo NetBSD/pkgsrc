@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5088 2018/12/08 08:33:59 wen Exp $
+$NetBSD: CHANGES-2018,v 1.5089 2018/12/08 08:42:09 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7071,3 +7071,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/p5-RT-Client-REST to 0.54 [wen 2018-12-08]
 	Updated net/p5-SNMP-Info to 3.63 [wen 2018-12-08]
 	Updated sysutils/p5-BackupPC-XS to 0.58 [wen 2018-12-08]
+	Updated textproc/p5-XML-Compile to 1.61 [wen 2018-12-08]
