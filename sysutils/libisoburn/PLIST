@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/05/03 19:03:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/12/08 10:46:30 wen Exp $
 bin/osirrox
 bin/xorrecord
 bin/xorriso
@@ -9,8 +9,10 @@ include/libisoburn/xorriso.h
 info/xorrecord.info
 info/xorriso.info
 info/xorrisofs.info
+info/xorriso-tcltk.info
 lib/libisoburn.la
 lib/pkgconfig/libisoburn-1.pc
 man/man1/xorrecord.1
 man/man1/xorriso.1
 man/man1/xorrisofs.1
+man/man1/xorriso-tcltk.1
