@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.90 2018/12/08 09:10:14 triaxx Exp $
+# $NetBSD: license.mk,v 1.91 2018/12/08 17:08:22 triaxx Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -102,7 +102,6 @@
 # -license suffix, and nonfree licenses end in -license.
 #
 DEFAULT_ACCEPTABLE_LICENSES= \
-	abell-94 \
 	apache-1.1 apache-2.0 \
 	arphic-public \
 	artistic artistic-2.0 \
