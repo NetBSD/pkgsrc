@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5086 2018/12/08 08:18:30 wen Exp $
+$NetBSD: CHANGES-2018,v 1.5087 2018/12/08 08:22:53 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7069,3 +7069,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/p5-Net-DNS to 1.19 [wen 2018-12-08]
 	Updated lang/rust to 1.31.0 [ryoon 2018-12-08]
 	Updated net/p5-RT-Client-REST to 0.54 [wen 2018-12-08]
+	Updated net/p5-SNMP-Info to 3.63 [wen 2018-12-08]
