@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2018/11/14 22:22:51 kleink Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2018/12/08 10:47:17 bouyer Exp $
 
 BUILDLINK_TREE+=	wxGTK30
 
@@ -14,6 +14,10 @@ PREPEND_PATH+=			${PREFIX}/libexec/wx-3.0
 CONFIGURE_ARGS+=		--with-wx-version=3.0
 CONFIGURE_ARGS+=		--with-wx-config=${PREFIX}/libexec/wx-3.0/wx-config
 
+pkgbase := wxGTK30
+.include "../../mk/pkg-build-options.mk"
+
+
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
@@ -22,7 +26,11 @@ CONFIGURE_ARGS+=		--with-wx-config=${PREFIX}/libexec/wx-3.0/wx-config
 .if ${OPSYS} != "Darwin"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
+.if !empty(PKG_BUILD_OPTIONS.wxGTK30:Mgtk2)
+.include "../../x11/gtk2/buildlink3.mk"
+.else
 .include "../../x11/gtk3/buildlink3.mk"
+.endif
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .endif
