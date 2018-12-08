@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2016/06/18 08:03:41 mef Exp $
+# $NetBSD: Makefile,v 1.15 2018/12/08 12:22:03 wen Exp $
 #
 
-DISTNAME=	byacc-20160606
+DISTNAME=	byacc-20180609
 CATEGORIES=	devel
-MASTER_SITES=	ftp://invisible-island.net/byacc/
+MASTER_SITES=	https://invisible-mirror.net/archives/byacc/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
