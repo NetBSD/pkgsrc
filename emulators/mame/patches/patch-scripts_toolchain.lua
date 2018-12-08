@@ -1,6 +1,7 @@
-$NetBSD: patch-scripts_toolchain.lua,v 1.3 2018/10/11 08:20:54 adam Exp $
+$NetBSD: patch-scripts_toolchain.lua,v 1.4 2018/12/08 23:18:54 wiz Exp $
 
 Allow Clang on FreeBSD, NetBSD, and OpenBSD.
+https://github.com/mamedev/mame/pull/4383
 
 --- scripts/toolchain.lua.orig	2018-09-26 04:43:31.000000000 +0000
 +++ scripts/toolchain.lua
