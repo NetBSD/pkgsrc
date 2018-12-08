@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5092 2018/12/08 11:01:21 wen Exp $
+$NetBSD: CHANGES-2018,v 1.5093 2018/12/08 11:32:50 mef Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7075,3 +7075,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/libisoburn to 1.5.0 [wen 2018-12-08]
 	Updated sysutils/libisofs to 1.5.0 [wen 2018-12-08]
 	Updated sysutils/libburn to 1.5.0 [wen 2018-12-08]
+	Updated cad/gtkwave to 3.3.97 [mef 2018-12-08]
