@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.128 2018/10/27 11:46:04 tron Exp $
+# $NetBSD: Makefile,v 1.129 2018/12/08 09:10:59 triaxx Exp $
 
 DISTNAME=		lsof_4.89
 PKGNAME=		${DISTNAME:S/_/-/}
 PKGREVISION=		1
 CATEGORIES=		sysutils
-MASTER_SITES=		ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/
-MASTER_SITES+=		ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/OLD/
+MASTER_SITES=		ftp://ftp.mirrorservice.org/sites/lsof.itap.purdue.edu/pub/tools/unix/lsof/
+MASTER_SITES+=		ftp://ftp.mirrorservice.org/sites/lsof.itap.purdue.edu/pub/tools/unix/lsof/OLD/
 MASTER_SITES+=		ftp://ftp.fu-berlin.de/pub/unix/tools/lsof/
 MASTER_SITES+=		ftp://ftp.fu-berlin.de/pub/unix/tools/lsof/OLD/
 EXTRACT_SUFX=		.tar.bz2
@@ -13,6 +13,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://people.freebsd.org/~abe/
 COMMENT=		Lists information about open files
+LICENSE=		abell-94
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/${SRCBALL_NAME}
 HAS_CONFIGURE=		yes
