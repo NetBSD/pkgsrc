@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5083 2018/12/07 21:49:45 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.5084 2018/12/08 04:37:22 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7066,3 +7066,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/php56 to 5.6.39 [taca 2018-12-07]
 	Updated x11/xf86-video-i740 to 1.4.0 [wiz 2018-12-07]
 	Updated news/libcanlock to 3.0.3 [wiz 2018-12-07]
+	Updated net/p5-Net-DNS to 1.19 [wen 2018-12-08]
