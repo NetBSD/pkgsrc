@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2015/03/12 18:43:38 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2018/12/08 10:59:21 wen Exp $
 
-DISTNAME=	libburn-1.3.8
+DISTNAME=	libburn-1.5.0
 #PKGNAME=	${DISTNAME:S/.pl/pl/}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://files.libburnia-project.org/releases/
