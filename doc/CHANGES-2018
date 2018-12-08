@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5095 2018/12/08 17:29:37 leot Exp $
+$NetBSD: CHANGES-2018,v 1.5096 2018/12/08 17:48:16 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7078,3 +7078,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated cad/gtkwave to 3.3.97 [mef 2018-12-08]
 	Updated devel/byacc to 20180609 [wen 2018-12-08]
 	Updated net/youtube-dl to 20181203 [leot 2018-12-08]
+	Updated sysutils/lsof to 4.91 [triaxx 2018-12-08]
