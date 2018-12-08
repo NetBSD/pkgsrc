@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5091 2018/12/08 10:55:52 wen Exp $
+$NetBSD: CHANGES-2018,v 1.5092 2018/12/08 11:01:21 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7074,3 +7074,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/p5-XML-Compile to 1.61 [wen 2018-12-08]
 	Updated sysutils/libisoburn to 1.5.0 [wen 2018-12-08]
 	Updated sysutils/libisofs to 1.5.0 [wen 2018-12-08]
+	Updated sysutils/libburn to 1.5.0 [wen 2018-12-08]
