@@ -1,12 +1,12 @@
-$NetBSD: patch-lib_Basic_Targets_OSTargets.h,v 1.2 2018/10/24 21:12:59 maya Exp $
+$NetBSD: patch-lib_Basic_Targets_OSTargets.h,v 1.3 2018/12/09 20:04:38 adam Exp $
 
 Sync SunOS default defines with a working reality.
 NetBSD __float128, needed to build anything with base libstdc++
 which assumes __float128.
 
---- lib/Basic/Targets/OSTargets.h.orig	2018-01-04 07:43:41.000000000 +0000
+--- lib/Basic/Targets/OSTargets.h.orig	2018-07-23 17:44:00.000000000 +0000
 +++ lib/Basic/Targets/OSTargets.h
-@@ -358,12 +358,22 @@ protected:
+@@ -364,12 +364,22 @@ protected:
      Builder.defineMacro("__ELF__");
      if (Opts.POSIXThreads)
        Builder.defineMacro("_REENTRANT");
@@ -17,7 +17,7 @@ which assumes __float128.
  public:
    NetBSDTargetInfo(const llvm::Triple &Triple, const TargetOptions &Opts)
        : OSTargetInfo<Target>(Triple, Opts) {
-     this->MCountName = "_mcount";
+     this->MCountName = "__mcount";
 +    switch (Triple.getArch()) {
 +    default:
 +      break;
@@ -29,7 +29,7 @@ which assumes __float128.
    }
  };
  
-@@ -531,20 +541,16 @@ protected:
+@@ -538,19 +548,14 @@ protected:
      Builder.defineMacro("__ELF__");
      Builder.defineMacro("__svr4__");
      Builder.defineMacro("__SVR4");
@@ -49,13 +49,10 @@ which assumes __float128.
 -    Builder.defineMacro("_LARGEFILE_SOURCE");
 -    Builder.defineMacro("_LARGEFILE64_SOURCE");
 -    Builder.defineMacro("__EXTENSIONS__");
--    Builder.defineMacro("_REENTRANT");
 +      Builder.defineMacro("_LARGEFILE_SOURCE");
 +      Builder.defineMacro("_LARGEFILE64_SOURCE");
 +      Builder.defineMacro("__EXTENSIONS__");
 +    }
-+    if (Opts.POSIXThreads)
-+      Builder.defineMacro("_REENTRANT");
-   }
- 
- public:
+     if (Opts.POSIXThreads)
+       Builder.defineMacro("_REENTRANT");
+     if (this->HasFloat128)
