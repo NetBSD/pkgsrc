@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/08/09 14:16:08 jperkin Exp $
+# $NetBSD: Makefile,v 1.2 2018/12/09 20:04:39 adam Exp $
 
-DISTNAME=	libcxx-6.0.1.src
+DISTNAME=	libcxx-7.0.0.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
@@ -35,8 +35,11 @@ CMAKE_ARGS+=	-DLIBCXX_CXX_ABI=libcxxabi
 CMAKE_ARGS+=	-DLIBCXX_CXX_ABI_INCLUDE_PATHS=${WRKDIR}/${LIBCXXABI}/include
 CMAKE_ARGS+=	-DLIBCXX_ENABLE_ABI_LINKER_SCRIPT:BOOL=OFF
 
+# avoid conflict with stddef.h
+CXXFLAGS.NetBSD+=	-D__DEFINED_max_align_t=1
+
 post-extract:
-	${RUN} mkdir -p ${WRKDIR}/build
+	${MKDIR} ${WRKDIR}/build
 
 .include "../../lang/libcxxabi/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"
