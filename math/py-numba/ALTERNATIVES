@@ -1,2 +1,2 @@
-bin/numba @PREFIX@/bin/numba@PYVERSSUFFIX@
-bin/pycc @PREFIX@/bin/pycc@PYVERSSUFFIX@
+bin/numba @PREFIX@/bin/numba-@PYVERSSUFFIX@
+bin/pycc @PREFIX@/bin/pycc-@PYVERSSUFFIX@
