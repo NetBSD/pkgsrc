@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5105 2018/12/09 20:13:09 leot Exp $
+$NetBSD: CHANGES-2018,v 1.5106 2018/12/09 20:26:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7108,3 +7108,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/polly to 7.0.0 [adam 2018-12-09]
 	Updated security/nettle to 3.4.1 [leot 2018-12-09]
 	Updated security/gnutls to 3.6.5 [leot 2018-12-09]
+	Updated devel/include-what-you-use to 0.11 [adam 2018-12-09]
+	Updated devel/py-llvmlite to 0.26.0 [adam 2018-12-09]
+	Updated math/py-numba to 0.41.0 [adam 2018-12-09]
