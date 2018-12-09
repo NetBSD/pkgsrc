@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2017/10/13 17:24:05 christos Exp $
+# $NetBSD: Makefile,v 1.5 2018/12/09 21:05:34 adam Exp $
 #
 
 DISTNAME=		xl2tpd-20171013
 CATEGORIES=		net
-#PKGREVISION=		1
 MASTER_SITES=		-https://github.com/xelerance/xl2tpd/archive/master.zip
 EXTRACT_SUFX=		.zip
 WRKSRC=			${WRKDIR}/xl2tpd-master

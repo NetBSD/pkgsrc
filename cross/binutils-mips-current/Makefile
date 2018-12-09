@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2016/07/09 06:37:58 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2018/12/09 21:05:32 adam Exp $
 #
 # GNU binutils snapshot, configured to target MIPS (NetBSD/playstation2)
 
 BINUTILS_VER=		2.25
 
 DISTNAME=		binutils-${BINUTILS_VER}
-#PKGREVISION=		1
 PKGNAME=		binutils-mips-${BINUTILS_VER}
 PKGREVISION=		1
 CATEGORIES=		cross lang
