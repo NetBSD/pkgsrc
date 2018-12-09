@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/11/28 08:15:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/12/09 20:37:29 adam Exp $
 bin/dmypy-${PYVERSSUFFIX}
 bin/mypy-${PYVERSSUFFIX}
 bin/stubgen-${PYVERSSUFFIX}
@@ -20,6 +20,9 @@ ${PYSITELIB}/mypy/api.pyo
 ${PYSITELIB}/mypy/applytype.py
 ${PYSITELIB}/mypy/applytype.pyc
 ${PYSITELIB}/mypy/applytype.pyo
+${PYSITELIB}/mypy/argmap.py
+${PYSITELIB}/mypy/argmap.pyc
+${PYSITELIB}/mypy/argmap.pyo
 ${PYSITELIB}/mypy/binder.py
 ${PYSITELIB}/mypy/binder.pyc
 ${PYSITELIB}/mypy/binder.pyo
@@ -50,6 +53,9 @@ ${PYSITELIB}/mypy/defaults.pyo
 ${PYSITELIB}/mypy/dmypy.py
 ${PYSITELIB}/mypy/dmypy.pyc
 ${PYSITELIB}/mypy/dmypy.pyo
+${PYSITELIB}/mypy/dmypy_os.py
+${PYSITELIB}/mypy/dmypy_os.pyc
+${PYSITELIB}/mypy/dmypy_os.pyo
 ${PYSITELIB}/mypy/dmypy_server.py
 ${PYSITELIB}/mypy/dmypy_server.pyc
 ${PYSITELIB}/mypy/dmypy_server.pyo
@@ -104,6 +110,9 @@ ${PYSITELIB}/mypy/infer.pyo
 ${PYSITELIB}/mypy/interpreted_plugin.py
 ${PYSITELIB}/mypy/interpreted_plugin.pyc
 ${PYSITELIB}/mypy/interpreted_plugin.pyo
+${PYSITELIB}/mypy/ipc.py
+${PYSITELIB}/mypy/ipc.pyc
+${PYSITELIB}/mypy/ipc.pyo
 ${PYSITELIB}/mypy/join.py
 ${PYSITELIB}/mypy/join.pyc
 ${PYSITELIB}/mypy/join.pyo
@@ -155,6 +164,9 @@ ${PYSITELIB}/mypy/plugins/attrs.pyo
 ${PYSITELIB}/mypy/plugins/common.py
 ${PYSITELIB}/mypy/plugins/common.pyc
 ${PYSITELIB}/mypy/plugins/common.pyo
+${PYSITELIB}/mypy/plugins/ctypes.py
+${PYSITELIB}/mypy/plugins/ctypes.pyc
+${PYSITELIB}/mypy/plugins/ctypes.pyo
 ${PYSITELIB}/mypy/plugins/dataclasses.py
 ${PYSITELIB}/mypy/plugins/dataclasses.pyc
 ${PYSITELIB}/mypy/plugins/dataclasses.pyo
@@ -275,6 +287,9 @@ ${PYSITELIB}/mypy/test/testcheck.pyo
 ${PYSITELIB}/mypy/test/testcmdline.py
 ${PYSITELIB}/mypy/test/testcmdline.pyc
 ${PYSITELIB}/mypy/test/testcmdline.pyo
+${PYSITELIB}/mypy/test/testdaemon.py
+${PYSITELIB}/mypy/test/testdaemon.pyc
+${PYSITELIB}/mypy/test/testdaemon.pyo
 ${PYSITELIB}/mypy/test/testdeps.py
 ${PYSITELIB}/mypy/test/testdeps.pyc
 ${PYSITELIB}/mypy/test/testdeps.pyo
@@ -299,6 +314,9 @@ ${PYSITELIB}/mypy/test/testgraph.pyo
 ${PYSITELIB}/mypy/test/testinfer.py
 ${PYSITELIB}/mypy/test/testinfer.pyc
 ${PYSITELIB}/mypy/test/testinfer.pyo
+${PYSITELIB}/mypy/test/testipc.py
+${PYSITELIB}/mypy/test/testipc.pyc
+${PYSITELIB}/mypy/test/testipc.pyo
 ${PYSITELIB}/mypy/test/testmerge.py
 ${PYSITELIB}/mypy/test/testmerge.pyc
 ${PYSITELIB}/mypy/test/testmerge.pyo
@@ -793,6 +811,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/3/email/utils.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/encodings/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/encodings/utf_8.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/enum.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/3/faulthandler.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/fcntl.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/fnmatch.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/functools.pyi
@@ -920,7 +939,6 @@ ${PYSITELIB}/mypy/typeshed/third_party/2/enum.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2/fb303/FacebookService.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2/fb303/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2/gflags.pyi
-${PYSITELIB}/mypy/typeshed/third_party/2/itsdangerous.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2/kazoo/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2/kazoo/client.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2/kazoo/exceptions.pyi
@@ -1152,6 +1170,7 @@ ${PYSITELIB}/mypy/typeshed/third_party/2and3/google/protobuf/unittest_proto3_are
 ${PYSITELIB}/mypy/typeshed/third_party/2and3/google/protobuf/util/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2and3/google/protobuf/util/json_format_proto3_pb2.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2and3/google/protobuf/wrappers_pb2.pyi
+${PYSITELIB}/mypy/typeshed/third_party/2and3/itsdangerous.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2and3/jinja2/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2and3/jinja2/_compat.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2and3/jinja2/_stringdefs.pyi
@@ -1298,6 +1317,7 @@ ${PYSITELIB}/mypy/typeshed/third_party/2and3/werkzeug/wsgi.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2and3/yaml/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2and3/yaml/composer.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2and3/yaml/constructor.pyi
+${PYSITELIB}/mypy/typeshed/third_party/2and3/yaml/cyaml.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2and3/yaml/dumper.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2and3/yaml/emitter.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2and3/yaml/error.pyi
@@ -1321,8 +1341,6 @@ ${PYSITELIB}/mypy/typeshed/third_party/3/docutils/parsers/rst/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/3/docutils/parsers/rst/nodes.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/3/docutils/parsers/rst/roles.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/3/docutils/parsers/rst/states.pyi
-${PYSITELIB}/mypy/typeshed/third_party/3/enum.pyi
-${PYSITELIB}/mypy/typeshed/third_party/3/itsdangerous.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/3/jwt/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/3/jwt/algorithms.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/3/jwt/contrib/__init__.pyi
