@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.568 2018/11/29 05:22:35 jnemeth Exp $
+# $NetBSD: Makefile,v 1.569 2018/12/09 12:16:41 taca Exp $
 
 COMMENT=	Databases
 
@@ -271,6 +271,7 @@ SUBDIR+=	php-pgsql
 SUBDIR+=	php-redis
 SUBDIR+=	php-redis3
 SUBDIR+=	php-rrd
+SUBDIR+=	php-sqlite3
 SUBDIR+=	php-sqlrelay
 SUBDIR+=	phpldapadmin
 SUBDIR+=	phpmyadmin
