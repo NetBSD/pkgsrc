@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5110 2018/12/09 21:51:14 leot Exp $
+$NetBSD: CHANGES-2018,v 1.5111 2018/12/09 22:14:07 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7118,3 +7118,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-pytoml to 0.1.20 [adam 2018-12-09]
 	Updated textproc/py-html-sanitizer to 1.6.3 [adam 2018-12-09]
 	Updated fonts/unifont to 11.0.03 [leot 2018-12-09]
+	Updated multimedia/ffmpeg4 to 4.1nb3 [maya 2018-12-09]
+	Updated multimedia/ffplay4 to 4.1nb2 [maya 2018-12-09]
