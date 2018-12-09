@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5108 2018/12/09 20:48:03 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5109 2018/12/09 20:53:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7115,3 +7115,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/jansson to 2.12 [adam 2018-12-09]
 	Updated lang/py-mypy to 0.650 [adam 2018-12-09]
 	Updated devel/py-pbr to 5.1.1 [adam 2018-12-09]
+	Updated textproc/py-pytoml to 0.1.20 [adam 2018-12-09]
+	Updated textproc/py-html-sanitizer to 1.6.3 [adam 2018-12-09]
