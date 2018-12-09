@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.191 2018/11/09 18:03:45 nia Exp $
+# $NetBSD: Makefile,v 1.192 2018/12/09 20:12:41 leot Exp $
 
-DISTNAME=	gnutls-3.6.4
+DISTNAME=	gnutls-3.6.5
 CATEGORIES=	security devel
 MASTER_SITES=	ftp://ftp.gnutls.org/gcrypt/gnutls/v3.6/
 EXTRACT_SUFX=	.tar.xz
@@ -28,13 +28,7 @@ CONFIGURE_ARGS+=		--enable-local-libopts
 CONFIGURE_ARGS.SunOS+=		--disable-hardware-acceleration
 CONFIGURE_ARGS.FreeBSD+=	ac_cv_type_max_align_t=yes
 
-# as of 3.5.8, 0 test failures
 TEST_TARGET=		check
-# without the USE_TOOLS line below, the fastopen.sh test fails
-# but when this line is added, the tool path for bash is embedded
-# in to the binaries, so only enable this for testing and
-# disable before commit
-#USE_TOOLS+=		bash
 
 INFO_FILES=		yes
 
@@ -85,7 +79,7 @@ CHECK_BUILTIN.zlib:=yes
 #.include "../../lang/guile20/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libtasn1+=	libtasn1>=4.9
 .include "../../security/libtasn1/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nettle+=		nettle>=3.1
+BUILDLINK_API_DEPENDS.nettle+=		nettle>=3.4.1
 .include "../../security/nettle/buildlink3.mk"
 BUILDLINK_API_DEPENDS.p11-kit+=	p11-kit>=0.23.1
 .include "../../security/p11-kit/buildlink3.mk"

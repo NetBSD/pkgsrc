@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.61 2018/11/09 18:03:45 nia Exp $
+@comment $NetBSD: PLIST,v 1.62 2018/12/09 20:12:41 leot Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
@@ -86,6 +86,12 @@ man/man3/gnutls_anon_set_params_function.3
 man/man3/gnutls_anon_set_server_dh_params.3
 man/man3/gnutls_anon_set_server_known_dh_params.3
 man/man3/gnutls_anon_set_server_params_function.3
+man/man3/gnutls_anti_replay_deinit.3
+man/man3/gnutls_anti_replay_enable.3
+man/man3/gnutls_anti_replay_init.3
+man/man3/gnutls_anti_replay_set_add_function.3
+man/man3/gnutls_anti_replay_set_ptr.3
+man/man3/gnutls_anti_replay_set_window.3
 man/man3/gnutls_auth_client_get_type.3
 man/man3/gnutls_auth_get_type.3
 man/man3/gnutls_auth_server_get_type.3
@@ -188,6 +194,7 @@ man/man3/gnutls_crypto_register_cipher.3
 man/man3/gnutls_crypto_register_digest.3
 man/man3/gnutls_crypto_register_mac.3
 man/man3/gnutls_db_check_entry.3
+man/man3/gnutls_db_check_entry_expire_time.3
 man/man3/gnutls_db_check_entry_time.3
 man/man3/gnutls_db_get_default_cache_expiration.3
 man/man3/gnutls_db_get_ptr.3
@@ -532,6 +539,7 @@ man/man3/gnutls_priority_set_direct.3
 man/man3/gnutls_priority_sign_list.3
 man/man3/gnutls_priority_string_list.3
 man/man3/gnutls_privkey_decrypt_data.3
+man/man3/gnutls_privkey_decrypt_data2.3
 man/man3/gnutls_privkey_deinit.3
 man/man3/gnutls_privkey_export_dsa_raw.3
 man/man3/gnutls_privkey_export_dsa_raw2.3
@@ -649,14 +657,17 @@ man/man3/gnutls_record_disable_padding.3
 man/man3/gnutls_record_discard_queued.3
 man/man3/gnutls_record_get_direction.3
 man/man3/gnutls_record_get_discarded.3
+man/man3/gnutls_record_get_max_early_data_size.3
 man/man3/gnutls_record_get_max_size.3
 man/man3/gnutls_record_get_state.3
 man/man3/gnutls_record_overhead_size.3
 man/man3/gnutls_record_recv.3
+man/man3/gnutls_record_recv_early_data.3
 man/man3/gnutls_record_recv_packet.3
 man/man3/gnutls_record_recv_seq.3
 man/man3/gnutls_record_send.3
 man/man3/gnutls_record_send2.3
+man/man3/gnutls_record_send_early_data.3
 man/man3/gnutls_record_send_range.3
 man/man3/gnutls_record_set_max_early_data_size.3
 man/man3/gnutls_record_set_max_size.3
