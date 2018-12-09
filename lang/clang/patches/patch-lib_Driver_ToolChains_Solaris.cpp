@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_Driver_ToolChains_Solaris.cpp,v 1.1 2018/08/09 14:56:41 jperkin Exp $
+$NetBSD: patch-lib_Driver_ToolChains_Solaris.cpp,v 1.2 2018/12/09 20:04:38 adam Exp $
 
 Use compiler-rt instead of libgcc.
 Pull in libcxx correctly.
@@ -7,7 +7,7 @@ Don't specify --dynamic-linker, makes it impossible for the user to use -Wl,-r
 Ensure we reset to -zdefaultextract prior to adding compiler-rt.
 Test removing -Bdynamic for golang.
 
---- lib/Driver/ToolChains/Solaris.cpp.orig	2018-01-04 07:43:41.000000000 +0000
+--- lib/Driver/ToolChains/Solaris.cpp.orig	2018-02-06 13:21:12.000000000 +0000
 +++ lib/Driver/ToolChains/Solaris.cpp
 @@ -49,8 +49,29 @@ void solaris::Linker::ConstructJob(Compi
                                     const InputInfoList &Inputs,
@@ -39,25 +39,21 @@ Test removing -Bdynamic for golang.
    // Demangle C++ names in errors
    CmdArgs.push_back("-C");
  
-@@ -62,15 +83,8 @@ void solaris::Linker::ConstructJob(Compi
-   if (Args.hasArg(options::OPT_static)) {
+@@ -63,13 +84,8 @@ void solaris::Linker::ConstructJob(Compi
      CmdArgs.push_back("-Bstatic");
      CmdArgs.push_back("-dn");
--  } else {
+   } else {
 -    CmdArgs.push_back("-Bdynamic");
--    if (Args.hasArg(options::OPT_shared)) {
--      CmdArgs.push_back("-shared");
+     if (Args.hasArg(options::OPT_shared)) {
+       CmdArgs.push_back("-shared");
 -    } else {
 -      CmdArgs.push_back("--dynamic-linker");
 -      CmdArgs.push_back(
 -          Args.MakeArgString(getToolChain().GetFilePath("ld.so.1")));
--    }
-+  } else if (Args.hasArg(options::OPT_shared)) {
-+    CmdArgs.push_back("-shared");
-   }
+     }
  
-   if (Output.isFilename()) {
-@@ -83,13 +97,11 @@ void solaris::Linker::ConstructJob(Compi
+     // libpthread has been folded into libc since Solaris 10, no need to do
+@@ -88,13 +104,11 @@ void solaris::Linker::ConstructJob(Compi
    if (!Args.hasArg(options::OPT_nostdlib, options::OPT_nostartfiles)) {
      if (!Args.hasArg(options::OPT_shared))
        CmdArgs.push_back(
@@ -73,13 +69,20 @@ Test removing -Bdynamic for golang.
 +        Args.MakeArgString(SysPath + "values-Xa.o"));
    }
  
-   getToolChain().AddFilePathLibArgs(Args, CmdArgs);
-@@ -100,21 +112,21 @@ void solaris::Linker::ConstructJob(Compi
+   // Provide __start___sancov_guards.  Solaris ld doesn't automatically create
+@@ -113,21 +127,18 @@ void solaris::Linker::ConstructJob(Compi
    AddLinkerInputs(getToolChain(), Inputs, Args, CmdArgs, JA);
  
    if (!Args.hasArg(options::OPT_nostdlib, options::OPT_nodefaultlibs)) {
 -    if (getToolChain().ShouldLinkCXXStdlib(Args))
 -      getToolChain().AddCXXStdlibLibArgs(Args, CmdArgs);
+-    if (Args.hasArg(options::OPT_fstack_protector) ||
+-        Args.hasArg(options::OPT_fstack_protector_strong) ||
+-        Args.hasArg(options::OPT_fstack_protector_all)) {
+-      // Explicitly link ssp libraries, not folded into Solaris libc.
+-      CmdArgs.push_back("-lssp_nonshared");
+-      CmdArgs.push_back("-lssp");
+-    }
 -    CmdArgs.push_back("-lgcc_s");
 -    CmdArgs.push_back("-lc");
 -    if (!Args.hasArg(options::OPT_shared)) {
@@ -96,7 +99,12 @@ Test removing -Bdynamic for golang.
        CmdArgs.push_back("-lm");
      }
 +    CmdArgs.push_back("-lc");
+     if (NeedsSanitizerDeps)
+       linkSanitizerRuntimeDeps(getToolChain(), CmdArgs);
    }
+@@ -139,11 +150,7 @@ void solaris::Linker::ConstructJob(Compi
+       getToolChain().getCompilerRTArgString(Args, "sancov_end", false));
+   CmdArgs.push_back("--no-whole-archive");
  
 -  if (!Args.hasArg(options::OPT_nostdlib, options::OPT_nostartfiles)) {
 -    CmdArgs.push_back(
@@ -107,46 +115,37 @@ Test removing -Bdynamic for golang.
  
    getToolChain().addProfileRTLibs(Args, CmdArgs);
  
-@@ -127,35 +139,9 @@ void solaris::Linker::ConstructJob(Compi
- Solaris::Solaris(const Driver &D, const llvm::Triple &Triple,
+@@ -172,26 +179,9 @@ Solaris::Solaris(const Driver &D, const 
                   const ArgList &Args)
      : Generic_ELF(D, Triple, Args) {
--
+ 
 -  GCCInstallation.init(Triple, Args);
 -
+-  StringRef LibSuffix = getSolarisLibSuffix(Triple);
 -  path_list &Paths = getFilePaths();
--  if (GCCInstallation.isValid())
--    addPathIfExists(D, GCCInstallation.getInstallPath(), Paths);
--
--  addPathIfExists(D, getDriver().getInstalledDir(), Paths);
--  if (getDriver().getInstalledDir() != getDriver().Dir)
--    addPathIfExists(D, getDriver().Dir, Paths);
--
--  addPathIfExists(D, getDriver().SysRoot + getDriver().Dir + "/../lib", Paths);
--
--  std::string LibPath = "/usr/lib/";
--  switch (Triple.getArch()) {
--  case llvm::Triple::x86:
--  case llvm::Triple::sparc:
--    break;
--  case llvm::Triple::x86_64:
--    LibPath += "amd64/";
--    break;
--  case llvm::Triple::sparcv9:
--    LibPath += "sparcv9/";
--    break;
--  default:
--    llvm_unreachable("Unsupported architecture");
+-  if (GCCInstallation.isValid()) {
+-    // On Solaris gcc uses both an architecture-specific path with triple in it
+-    // as well as a more generic lib path (+arch suffix).
+-    addPathIfExists(D,
+-                    GCCInstallation.getInstallPath() +
+-                        GCCInstallation.getMultilib().gccSuffix(),
+-                    Paths);
+-    addPathIfExists(D, GCCInstallation.getParentLibPath() + LibSuffix, Paths);
 -  }
 -
--  addPathIfExists(D, getDriver().SysRoot + LibPath, Paths);
+-  // If we are currently running Clang inside of the requested system root,
+-  // add its parent library path to those searched.
+-  if (StringRef(D.Dir).startswith(D.SysRoot))
+-    addPathIfExists(D, D.Dir + "/../lib", Paths);
+-
+-  addPathIfExists(D, D.SysRoot + "/usr/lib" + LibSuffix, Paths);
 +  // No special handling, the C runtime files are found directly above
 +  // and crle handles adding the default system library paths if they
 +  // are necessary.
  }
  
- Tool *Solaris::buildAssembler() const {
-@@ -164,30 +150,41 @@ Tool *Solaris::buildAssembler() const {
+ SanitizerMask Solaris::getSupportedSanitizers() const {
+@@ -211,6 +201,32 @@ Tool *Solaris::buildAssembler() const {
  
  Tool *Solaris::buildLinker() const { return new tools::solaris::Linker(*this); }
  
@@ -176,35 +175,6 @@ Test removing -Bdynamic for golang.
 +  }
 +}
 +
- void Solaris::AddClangCXXStdlibIncludeArgs(const ArgList &DriverArgs,
-                                            ArgStringList &CC1Args) const {
-   if (DriverArgs.hasArg(options::OPT_nostdlibinc) ||
-       DriverArgs.hasArg(options::OPT_nostdincxx))
-     return;
- 
--  // Include the support directory for things like xlocale and fudged system
--  // headers.
--  // FIXME: This is a weird mix of libc++ and libstdc++. We should also be
--  // checking the value of -stdlib= here and adding the includes for libc++
--  // rather than libstdc++ if it's requested.
--  addSystemInclude(DriverArgs, CC1Args, "/usr/include/c++/v1/support/solaris");
--
--  if (GCCInstallation.isValid()) {
--    GCCVersion Version = GCCInstallation.getVersion();
--    addSystemInclude(DriverArgs, CC1Args,
--                     getDriver().SysRoot + "/usr/gcc/" +
--                     Version.MajorStr + "." +
--                     Version.MinorStr +
--                     "/include/c++/" + Version.Text);
--    addSystemInclude(DriverArgs, CC1Args,
--                     getDriver().SysRoot + "/usr/gcc/" + Version.MajorStr +
--                     "." + Version.MinorStr + "/include/c++/" +
--                     Version.Text + "/" +
--                     GCCInstallation.getTriple().str());
--  }
-+  // Currently assumes pkgsrc layout.
-+  addSystemInclude(DriverArgs, CC1Args,
-+                   llvm::sys::path::parent_path(getDriver().getInstalledDir())
-+                   + "/include/c++/v1");
-+  return;
- }
+ void Solaris::AddClangSystemIncludeArgs(const ArgList &DriverArgs,
+                                         ArgStringList &CC1Args) const {
+   const Driver &D = getDriver();

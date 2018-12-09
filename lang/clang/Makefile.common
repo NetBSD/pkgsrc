@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.28 2018/08/09 14:56:41 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.29 2018/12/09 20:04:38 adam Exp $
 # used by lang/clang/Makefile
 # used by lang/clang-static-analyzer/Makefile
 
-DISTNAME=	cfe-6.0.1.src
+DISTNAME=	cfe-7.0.0.src
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -65,6 +65,7 @@ REPLACE_PYTHON+=	utils/analyzer/ubiviz
 REPLACE_PYTHON+=	utils/check_cfc/check_cfc.py
 REPLACE_PYTHON+=	utils/check_cfc/obj_diff.py
 REPLACE_PYTHON+=	utils/check_cfc/test_check_cfc.py
+REPLACE_PYTHON+=	utils/hmaptool/hmaptool
 REPLACE_PYTHON+=	utils/token-delta.py
 REPLACE_PYTHON+=	www/builtins.py
 
@@ -129,7 +130,7 @@ CMAKE_ARGS+=		-DCLANG_INCLUDE_TESTS=OFF
 .endif
 
 post-extract:
-	${RUN} mkdir -p ${WRKDIR}/build
+	${MKDIR} ${WRKDIR}/build
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

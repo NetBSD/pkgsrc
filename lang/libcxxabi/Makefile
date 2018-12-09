@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/08/09 14:13:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.2 2018/12/09 20:04:40 adam Exp $
 
-DISTNAME=	libcxxabi-6.0.1.src
+DISTNAME=	libcxxabi-7.0.0.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
@@ -33,8 +33,11 @@ CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=${CXX:Q}
 CMAKE_ARGS+=	-DLIBCXXABI_LIBCXX_INCLUDES=${WRKDIR}/${LIBCXX}/include
 CMAKE_ARGS+=	-DLIBCXXABI_USE_LLVM_UNWINDER=YES
 
+# avoid conflict with stddef.h
+CXXFLAGS.NetBSD+=	-D__DEFINED_max_align_t=1
+
 post-extract:
-	${RUN} mkdir -p ${WRKDIR}/build
+	${MKDIR} ${WRKDIR}/build
 
 .include "../../lang/libunwind/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2018/08/07 10:44:50 adam Exp $
+# $NetBSD: Makefile,v 1.11 2018/12/09 20:04:39 adam Exp $
 
-DISTNAME=	polly-6.0.1.src
+DISTNAME=	polly-7.0.0.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
@@ -25,7 +25,7 @@ CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=${CXX:Q}
 
 post-extract:
-	${RUN} mkdir -p ${WRKDIR}/build
+	${MKDIR} ${WRKDIR}/build
 
 .include "../../lang/llvm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

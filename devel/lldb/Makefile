@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2018/08/07 10:44:50 adam Exp $
+# $NetBSD: Makefile,v 1.18 2018/12/09 20:04:39 adam Exp $
 
-DISTNAME=	lldb-6.0.1.src
+DISTNAME=	lldb-7.0.0.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
@@ -74,7 +74,7 @@ CMAKE_ARGS+=	-DLLDB_DISABLE_CURSES:BOOL=TRUE
 .endif
 
 post-extract:
-	${RUN} mkdir -p ${WRKDIR}/build
+	${MKDIR} ${WRKDIR}/build
 
 #.include "../../devel/googletest/buildlink3.mk" # check-lldb-unit
 .include "../../devel/libatomic_ops/buildlink3.mk"
@@ -82,8 +82,8 @@ post-extract:
 .include "../../lang/clang/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/tool.mk"
 .include "../../lang/python/extension.mk"
+.include "../../lang/python/tool.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/08/07 10:44:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/12/09 20:04:39 adam Exp $
 include/polly/Canonicalization.h
 include/polly/CodeGen/BlockGenerators.h
 include/polly/CodeGen/CodeGeneration.h
@@ -35,6 +35,7 @@ include/polly/Simplify.h
 include/polly/Support/DumpModulePass.h
 include/polly/Support/GICHelper.h
 include/polly/Support/ISLOStream.h
+include/polly/Support/ISLOperators.h
 include/polly/Support/ISLTools.h
 include/polly/Support/LinkGPURuntime.h
 include/polly/Support/SCEVAffinator.h
@@ -49,22 +50,12 @@ include/polly/isl/arg.h
 include/polly/isl/ast.h
 include/polly/isl/ast_build.h
 include/polly/isl/ast_type.h
-include/polly/isl/band.h
 include/polly/isl/constraint.h
+include/polly/isl/cpp-checked-conversion.h
+include/polly/isl/cpp-checked.h
+include/polly/isl/cpp.h
 include/polly/isl/ctx.h
-include/polly/isl/deprecated/aff_int.h
-include/polly/isl/deprecated/ast_int.h
-include/polly/isl/deprecated/constraint_int.h
-include/polly/isl/deprecated/ilp_int.h
-include/polly/isl/deprecated/int.h
-include/polly/isl/deprecated/map_int.h
-include/polly/isl/deprecated/mat_int.h
-include/polly/isl/deprecated/point_int.h
-include/polly/isl/deprecated/polynomial_int.h
-include/polly/isl/deprecated/set_int.h
-include/polly/isl/deprecated/union_map_int.h
-include/polly/isl/deprecated/val_int.h
-include/polly/isl/deprecated/vec_int.h
+include/polly/isl/fixed_box.h
 include/polly/isl/flow.h
 include/polly/isl/hash.h
 include/polly/isl/hmap.h
@@ -72,6 +63,7 @@ include/polly/isl/id.h
 include/polly/isl/id_to_ast_expr.h
 include/polly/isl/id_to_id.h
 include/polly/isl/id_to_pw_aff.h
+include/polly/isl/id_type.h
 include/polly/isl/ilp.h
 include/polly/isl/isl-noexceptions.h
 include/polly/isl/list.h
@@ -101,14 +93,17 @@ include/polly/isl/schedule_type.h
 include/polly/isl/set.h
 include/polly/isl/set_type.h
 include/polly/isl/space.h
+include/polly/isl/space_type.h
 include/polly/isl/stdint.h
 include/polly/isl/stream.h
+include/polly/isl/stride_info.h
 include/polly/isl/union_map.h
 include/polly/isl/union_map_type.h
 include/polly/isl/union_set.h
 include/polly/isl/union_set_type.h
 include/polly/isl/val.h
 include/polly/isl/val_gmp.h
+include/polly/isl/val_type.h
 include/polly/isl/vec.h
 include/polly/isl/version.h
 include/polly/isl/vertices.h

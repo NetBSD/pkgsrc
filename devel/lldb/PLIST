@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/08/07 10:44:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/12/09 20:04:39 adam Exp $
 bin/lldb
 bin/lldb-argdumper
 bin/lldb-mi
@@ -71,7 +71,6 @@ include/lldb/API/SBValue.h
 include/lldb/API/SBValueList.h
 include/lldb/API/SBVariablesOptions.h
 include/lldb/API/SBWatchpoint.h
-include/lldb/API/SystemInitializerFull.h
 include/lldb/Breakpoint/Breakpoint.h
 include/lldb/Breakpoint/BreakpointID.h
 include/lldb/Breakpoint/BreakpointIDList.h
@@ -106,6 +105,7 @@ include/lldb/Core/Communication.h
 include/lldb/Core/Debugger.h
 include/lldb/Core/Disassembler.h
 include/lldb/Core/DumpDataExtractor.h
+include/lldb/Core/DumpRegisterValue.h
 include/lldb/Core/EmulateInstruction.h
 include/lldb/Core/Event.h
 include/lldb/Core/FileLineResolver.h
@@ -278,7 +278,6 @@ include/lldb/Host/windows/windows.h
 include/lldb/Initialization/SystemInitializer.h
 include/lldb/Initialization/SystemInitializerCommon.h
 include/lldb/Initialization/SystemLifetimeManager.h
-include/lldb/Interpreter/Args.h
 include/lldb/Interpreter/CommandAlias.h
 include/lldb/Interpreter/CommandCompletions.h
 include/lldb/Interpreter/CommandHistory.h
@@ -288,6 +287,7 @@ include/lldb/Interpreter/CommandObjectMultiword.h
 include/lldb/Interpreter/CommandObjectRegexCommand.h
 include/lldb/Interpreter/CommandOptionValidators.h
 include/lldb/Interpreter/CommandReturnObject.h
+include/lldb/Interpreter/OptionArgParser.h
 include/lldb/Interpreter/OptionGroupArchitecture.h
 include/lldb/Interpreter/OptionGroupBoolean.h
 include/lldb/Interpreter/OptionGroupFile.h
@@ -432,8 +432,10 @@ include/lldb/Target/Unwind.h
 include/lldb/Target/UnwindAssembly.h
 include/lldb/Utility/AnsiTerminal.h
 include/lldb/Utility/ArchSpec.h
+include/lldb/Utility/Args.h
 include/lldb/Utility/Baton.h
 include/lldb/Utility/CleanUp.h
+include/lldb/Utility/CompletionRequest.h
 include/lldb/Utility/Connection.h
 include/lldb/Utility/ConstString.h
 include/lldb/Utility/DataBuffer.h
@@ -443,10 +445,10 @@ include/lldb/Utility/DataEncoder.h
 include/lldb/Utility/DataExtractor.h
 include/lldb/Utility/Either.h
 include/lldb/Utility/Endian.h
+include/lldb/Utility/Environment.h
 include/lldb/Utility/FastDemangle.h
 include/lldb/Utility/FileSpec.h
 include/lldb/Utility/Flags.h
-include/lldb/Utility/History.h
 include/lldb/Utility/IOObject.h
 include/lldb/Utility/Iterable.h
 include/lldb/Utility/JSON.h
@@ -467,6 +469,7 @@ include/lldb/Utility/StreamGDBRemote.h
 include/lldb/Utility/StreamString.h
 include/lldb/Utility/StreamTee.h
 include/lldb/Utility/StringExtractor.h
+include/lldb/Utility/StringExtractorGDBRemote.h
 include/lldb/Utility/StringLexer.h
 include/lldb/Utility/StringList.h
 include/lldb/Utility/StructuredData.h
@@ -493,7 +496,7 @@ include/lldb/lldb-types.h
 include/lldb/lldb-versioning.h
 lib/liblldb.so
 lib/liblldb.so.${PKGVERSION}
-${PLIST.posix}lib/liblldb.so.6
+${PLIST.posix}lib/liblldb.so.7
 lib/liblldbBase.a
 lib/liblldbBreakpoint.a
 lib/liblldbCommands.a
@@ -518,9 +521,11 @@ lib/liblldbPluginABISysV_s390x.a
 lib/liblldbPluginABISysV_x86_64.a
 lib/liblldbPluginAppleObjCRuntime.a
 lib/liblldbPluginArchitectureArm.a
+lib/liblldbPluginArchitecturePPC64.a
 lib/liblldbPluginCPlusPlusLanguage.a
 lib/liblldbPluginCXXItaniumABI.a
 lib/liblldbPluginDisassemblerLLVM.a
+lib/liblldbPluginDynamicLoaderDarwinKernel.a
 lib/liblldbPluginDynamicLoaderHexagonDYLD.a
 lib/liblldbPluginDynamicLoaderMacOSXDYLD.a
 lib/liblldbPluginDynamicLoaderPosixDYLD.a
@@ -533,6 +538,7 @@ lib/liblldbPluginInstructionARM.a
 lib/liblldbPluginInstructionARM64.a
 lib/liblldbPluginInstructionMIPS.a
 lib/liblldbPluginInstructionMIPS64.a
+lib/liblldbPluginInstructionPPC64.a
 lib/liblldbPluginInstrumentationRuntimeASan.a
 lib/liblldbPluginInstrumentationRuntimeMainThreadChecker.a
 lib/liblldbPluginInstrumentationRuntimeTSan.a
@@ -566,6 +572,7 @@ lib/liblldbPluginPlatformWindows.a
 ${PLIST.posix}lib/liblldbPluginProcess${OPSYS}.a
 lib/liblldbPluginProcessElfCore.a
 lib/liblldbPluginProcessGDBRemote.a
+lib/liblldbPluginProcessMachCore.a
 lib/liblldbPluginProcessMinidump.a
 ${PLIST.posix}lib/liblldbPluginProcessPOSIX.a
 lib/liblldbPluginProcessUtility.a

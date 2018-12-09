@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/08/09 13:40:34 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/12/09 20:04:40 adam Exp $
 lib/clang/${PKGVERSION}/include/sanitizer/allocator_interface.h
 lib/clang/${PKGVERSION}/include/sanitizer/asan_interface.h
 lib/clang/${PKGVERSION}/include/sanitizer/common_interface_defs.h
@@ -9,10 +9,11 @@ lib/clang/${PKGVERSION}/include/sanitizer/hwasan_interface.h
 lib/clang/${PKGVERSION}/include/sanitizer/linux_syscall_hooks.h
 lib/clang/${PKGVERSION}/include/sanitizer/lsan_interface.h
 lib/clang/${PKGVERSION}/include/sanitizer/msan_interface.h
+lib/clang/${PKGVERSION}/include/sanitizer/netbsd_syscall_hooks.h
 lib/clang/${PKGVERSION}/include/sanitizer/scudo_interface.h
 lib/clang/${PKGVERSION}/include/sanitizer/tsan_interface.h
 lib/clang/${PKGVERSION}/include/sanitizer/tsan_interface_atomic.h
 lib/clang/${PKGVERSION}/include/xray/xray_interface.h
 lib/clang/${PKGVERSION}/include/xray/xray_log_interface.h
-lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.builtins-i386.a
-lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.builtins-x86_64.a
+lib/clang/${PKGVERSION}/share/asan_blacklist.txt
+lib/clang/${PKGVERSION}/share/cfi_blacklist.txt
