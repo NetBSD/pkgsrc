@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2018/07/20 03:34:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2018/12/09 18:52:27 adam Exp $
 #
 
 DISTNAME=	fuse-darling-dmg-20160310
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_GITHUB:=darlinghq/}
 GITHUB_PROJECT=	darling-dmg

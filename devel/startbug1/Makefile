@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2018/08/22 09:45:00 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2018/12/09 18:52:25 adam Exp $
 
 DISTNAME=	starbug1-1.6.01
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_OSDN:=starbug1/57514/}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.94 2018/11/29 11:21:49 prlw1 Exp $
+# $NetBSD: Makefile,v 1.95 2018/12/09 18:52:24 adam Exp $
 
 DISTNAME=	mono-tools-3.10
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	devel
 MASTER_SITES=	http://download.mono-project.com/sources/mono-tools/
 

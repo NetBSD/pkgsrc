@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2018/07/20 03:34:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.42 2018/12/09 18:52:21 adam Exp $
 
 DISTNAME=	sqlite3-1.3.13
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

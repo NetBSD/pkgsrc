@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2018/08/22 09:46:09 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2018/12/09 18:52:43 adam Exp $
 
 DISTNAME=	newsbeuter-2.9
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	news
 MASTER_SITES=	https://www.newsbeuter.org/downloads/
 

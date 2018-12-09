@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2018/07/28 22:32:29 nia Exp $
+# $NetBSD: Makefile,v 1.4 2018/12/09 18:52:52 adam Exp $
 
 DISTNAME=	slop-7.4
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=naelstrof/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
