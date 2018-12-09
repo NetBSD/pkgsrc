@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2018/05/04 05:43:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2018/12/09 17:11:43 adam Exp $
 bin/gpg-error
 bin/gpg-error-config
 bin/gpgrt-config
@@ -7,7 +7,8 @@ include/gpg-error.h
 include/gpgrt.h
 info/gpgrt.info
 lib/libgpg-error.la
-man/man1/gpg-error-config.1
+lib/pkgconfig/gpg-error.pc
+man/man1/gpgrt-config.1
 share/aclocal/gpg-error.m4
 share/aclocal/gpgrt.m4
 share/common-lisp/source/gpg-error/gpg-error-codes.lisp
