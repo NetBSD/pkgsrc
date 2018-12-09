@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2016/02/25 15:49:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.21 2018/12/09 21:05:33 adam Exp $
 #
 
 DISTNAME=	libmpeg3-1.8-src
 PKGNAME=	${DISTNAME:S/-src//}
-#PKGREVISION=	1
 CATEGORIES=	devel audio graphics multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=heroines/}
 EXTRACT_SUFX=	.tar.bz2
