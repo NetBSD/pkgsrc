@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2018/08/22 09:46:18 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2018/12/09 21:05:35 adam Exp $
 
 CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--disable-php5
@@ -9,6 +9,5 @@ PYTHON_FOR_BUILD_ONLY=	yes
 
 EXTRACT_USING=		bsdtar
 
-#PKGREVISION= 1
 PKGREVISION= 2
 .include "../../security/lasso/Makefile.common"
