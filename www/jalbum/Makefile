@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2017/10/09 15:26:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.32 2018/12/09 21:05:36 adam Exp $
 
 DISTNAME=		Jalbum${VERSION}
 PKGNAME=		jalbum-${VERSION}
-#PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		http://jalbum.net/download/
 DIST_SUBDIR=		${PKGNAME_NOREV}
