@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2018/05/27 15:22:55 tsutsui Exp $
+# $NetBSD: Makefile,v 1.47 2018/12/09 03:04:34 sevan Exp $
 
 DISTNAME=	xvidcore-1.3.3
 PKGREVISION=	1
@@ -51,4 +51,5 @@ post-install:
 	${LN} -sf ${DESTDIR}${PREFIX}/lib/libxvidcore.4.dylib ${DESTDIR}${PREFIX}/lib/libxvidcore.dylib
 .endif
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

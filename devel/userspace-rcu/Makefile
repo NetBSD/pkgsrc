@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/05/26 14:32:57 pettai Exp $
+# $NetBSD: Makefile,v 1.12 2018/12/09 03:04:34 sevan Exp $
 #
 
 DISTNAME=	userspace-rcu-0.8.7
@@ -26,4 +26,5 @@ PKGCONFIG_OVERRIDE+=	liburcu-qsbr.pc.in
 PKGCONFIG_OVERRIDE+=	liburcu-signal.pc.in
 PKGCONFIG_OVERRIDE+=	liburcu.pc.in
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
