@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2018/12/03 13:51:52 mlelstv Exp $
+@comment $NetBSD: PLIST,v 1.16 2018/12/09 14:48:03 ryoon Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/findsmb
@@ -560,7 +560,7 @@ lib/samba/ldb/ldb.so
 lib/samba/ldb/ldbsamba_extensions.so
 lib/samba/ldb/linked_attributes.so
 lib/samba/ldb/local_password.so
-lib/samba/ldb/mdb.so
+${PLIST.64bit}lib/samba/ldb/mdb.so
 lib/samba/ldb/new_partition.so
 lib/samba/ldb/objectclass.so
 lib/samba/ldb/objectclass_attrs.so
@@ -667,7 +667,7 @@ lib/samba/private/libkrb5-samba4.so.26.0.0
 lib/samba/private/libkrb5samba-samba4.so
 lib/samba/private/libldb-cmdline-samba4.so
 lib/samba/private/libldb-key-value-samba4.so
-lib/samba/private/libldb-mdb-int-samba4.so
+${PLIST.64-bit}lib/samba/private/libldb-mdb-int-samba4.so
 lib/samba/private/libldb.so.1
 lib/samba/private/libldb.so.1.4.3
 lib/samba/private/libldbsamba-samba4.so
