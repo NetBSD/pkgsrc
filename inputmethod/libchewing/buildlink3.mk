@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2018/07/20 03:33:51 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2018/12/09 18:52:03 adam Exp $
 
 BUILDLINK_TREE+=	libchewing
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libchewing
 LIBCHEWING_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libchewing+=	libchewing>=0.3.2
-BUILDLINK_ABI_DEPENDS.libchewing+=	libchewing>=0.4.0nb10
+BUILDLINK_ABI_DEPENDS.libchewing+=	libchewing>=0.4.0nb11
 BUILDLINK_PKGSRCDIR.libchewing?=	../../inputmethod/libchewing
 
 .include "../../databases/sqlite3/buildlink3.mk"
