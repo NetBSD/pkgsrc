@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5103 2018/12/09 20:10:48 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5104 2018/12/09 20:12:04 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7106,3 +7106,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/libunwind to 7.0.0 [adam 2018-12-09]
 	Updated devel/lldb to 7.0.0 [adam 2018-12-09]
 	Updated devel/polly to 7.0.0 [adam 2018-12-09]
+	Updated security/nettle to 3.4.1 [leot 2018-12-09]
