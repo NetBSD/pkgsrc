@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2017/10/27 08:49:01 taca Exp $
+# $NetBSD: Makefile,v 1.4 2018/12/09 16:19:00 taca Exp $
 
 DISTNAME=	${PHP_PKG_PREFIX}-extensions-${PHP_VERSION}
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs www
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -43,6 +44,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql>=${PHP_VERSION}<${NEXT_VERS}:../../databas
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_pgsql>=${PHP_VERSION}<${NEXT_VERS}:../../databases/php-pdo_pgsql
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_sqlite>=${PHP_VERSION}<${NEXT_VERS}:../../databases/php-pdo_sqlite
 DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=${PHP_VERSION}<${NEXT_VERS}:../../databases/php-pgsql
+DEPENDS+=	${PHP_PKG_PREFIX}-sqlite3>=${PHP_VERSION}<${NEXT_VERS}:../../databases/php-sqlite3
 DEPENDS+=	${PHP_PKG_PREFIX}-posix>=${PHP_VERSION}<${NEXT_VERS}:../../devel/php-posix
 DEPENDS+=	${PHP_PKG_PREFIX}-pspell>=${PHP_VERSION}<${NEXT_VERS}:../../textproc/php-pspell
 DEPENDS+=	${PHP_PKG_PREFIX}-shmop>=${PHP_VERSION}<${NEXT_VERS}:../../devel/php-shmop
