@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/05/17 15:47:46 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/12/09 20:22:55 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -19,6 +19,9 @@ ${PYSITELIB}/llvmlite/binding/analysis.pyo
 ${PYSITELIB}/llvmlite/binding/common.py
 ${PYSITELIB}/llvmlite/binding/common.pyc
 ${PYSITELIB}/llvmlite/binding/common.pyo
+${PYSITELIB}/llvmlite/binding/context.py
+${PYSITELIB}/llvmlite/binding/context.pyc
+${PYSITELIB}/llvmlite/binding/context.pyo
 ${PYSITELIB}/llvmlite/binding/dylib.py
 ${PYSITELIB}/llvmlite/binding/dylib.pyc
 ${PYSITELIB}/llvmlite/binding/dylib.pyo
