@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.24 2018/08/07 10:44:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2018/12/09 20:04:38 adam Exp $
 bin/c-index-test
 bin/clang
 bin/clang++
-bin/clang-6.0
+bin/clang-7
 bin/clang-cl
 bin/clang-cpp
 bin/clang-format
@@ -10,7 +10,9 @@ bin/clang-import-test
 bin/clang-offload-bundler
 bin/clang-refactor
 bin/clang-rename
+bin/diagtool
 bin/git-clang-format
+bin/hmaptool
 include/clang-c/BuildSystem.h
 include/clang-c/CXCompilationDatabase.h
 include/clang-c/CXErrorCode.h
@@ -60,6 +62,7 @@ include/clang/AST/CommentNodes.inc
 include/clang/AST/CommentParser.h
 include/clang/AST/CommentSema.h
 include/clang/AST/CommentVisitor.h
+include/clang/AST/ComparisonCategories.h
 include/clang/AST/DataCollection.h
 include/clang/AST/Decl.h
 include/clang/AST/DeclAccessPair.h
@@ -91,11 +94,13 @@ include/clang/AST/Mangle.h
 include/clang/AST/MangleNumberingContext.h
 include/clang/AST/NSAPI.h
 include/clang/AST/NestedNameSpecifier.h
+include/clang/AST/NonTrivialTypeVisitor.h
 include/clang/AST/ODRHash.h
 include/clang/AST/OpenMPClause.h
 include/clang/AST/OperationKinds.def
 include/clang/AST/OperationKinds.h
 include/clang/AST/ParentMap.h
+include/clang/AST/PrettyDeclStackTrace.h
 include/clang/AST/PrettyPrinter.h
 include/clang/AST/QualTypeNames.h
 include/clang/AST/RawCommentList.h
@@ -157,6 +162,7 @@ include/clang/Analysis/CFGStmtMap.h
 include/clang/Analysis/CallGraph.h
 include/clang/Analysis/CloneDetection.h
 include/clang/Analysis/CodeInjector.h
+include/clang/Analysis/ConstructionContext.h
 include/clang/Analysis/DomainSpecific/CocoaConventions.h
 include/clang/Analysis/DomainSpecific/ObjCNoReturn.h
 include/clang/Analysis/FlowSensitive/DataflowValues.h
@@ -172,6 +178,7 @@ include/clang/Basic/AttrList.inc
 include/clang/Basic/AttrSubMatchRulesList.inc
 include/clang/Basic/AttrSubjectMatchRules.h
 include/clang/Basic/Attributes.h
+include/clang/Basic/BitmaskEnum.h
 include/clang/Basic/Builtins.def
 include/clang/Basic/Builtins.h
 include/clang/Basic/BuiltinsAArch64.def
@@ -216,6 +223,7 @@ include/clang/Basic/DiagnosticSemaKinds.inc
 include/clang/Basic/DiagnosticSerializationKinds.inc
 include/clang/Basic/ExceptionSpecificationType.h
 include/clang/Basic/ExpressionTraits.h
+include/clang/Basic/Features.def
 include/clang/Basic/FileManager.h
 include/clang/Basic/FileSystemOptions.h
 include/clang/Basic/FileSystemStatCache.h
@@ -249,6 +257,7 @@ include/clang/Basic/SourceLocation.h
 include/clang/Basic/SourceManager.h
 include/clang/Basic/SourceManagerInternals.h
 include/clang/Basic/Specifiers.h
+include/clang/Basic/Stack.h
 include/clang/Basic/SyncScope.h
 include/clang/Basic/TargetBuiltins.h
 include/clang/Basic/TargetCXXABI.h
@@ -260,11 +269,12 @@ include/clang/Basic/TokenKinds.h
 include/clang/Basic/TypeTraits.h
 include/clang/Basic/Version.h
 include/clang/Basic/Version.inc
-include/clang/Basic/VersionTuple.h
 include/clang/Basic/VirtualFileSystem.h
 include/clang/Basic/Visibility.h
 include/clang/Basic/X86Target.def
+include/clang/Basic/XRayInstr.h
 include/clang/Basic/XRayLists.h
+include/clang/Basic/arm_fp16.inc
 include/clang/Basic/arm_neon.inc
 include/clang/CodeGen/BackendUtil.h
 include/clang/CodeGen/CGFunctionInfo.h
@@ -391,7 +401,6 @@ include/clang/Sema/AttrParsedAttrKinds.inc
 include/clang/Sema/AttrParsedAttrList.inc
 include/clang/Sema/AttrSpellingListIndex.inc
 include/clang/Sema/AttrTemplateInstantiate.inc
-include/clang/Sema/AttributeList.h
 include/clang/Sema/CXXFieldCollector.h
 include/clang/Sema/CleanupInfo.h
 include/clang/Sema/CodeCompleteConsumer.h
@@ -408,8 +417,8 @@ include/clang/Sema/MultiplexExternalSemaSource.h
 include/clang/Sema/ObjCMethodList.h
 include/clang/Sema/Overload.h
 include/clang/Sema/Ownership.h
+include/clang/Sema/ParsedAttr.h
 include/clang/Sema/ParsedTemplate.h
-include/clang/Sema/PrettyDeclStackTrace.h
 include/clang/Sema/Scope.h
 include/clang/Sema/ScopeInfo.h
 include/clang/Sema/Sema.h
@@ -420,6 +429,7 @@ include/clang/Sema/SemaInternal.h
 include/clang/Sema/SemaLambda.h
 include/clang/Sema/Template.h
 include/clang/Sema/TemplateDeduction.h
+include/clang/Sema/TemplateInstCallback.h
 include/clang/Sema/TypoCorrection.h
 include/clang/Sema/Weak.h
 include/clang/Serialization/ASTBitCodes.h
@@ -474,7 +484,13 @@ include/clang/StaticAnalyzer/Core/PathSensitive/MemRegion.h
 include/clang/StaticAnalyzer/Core/PathSensitive/ProgramState.h
 include/clang/StaticAnalyzer/Core/PathSensitive/ProgramStateTrait.h
 include/clang/StaticAnalyzer/Core/PathSensitive/ProgramState_Fwd.h
+include/clang/StaticAnalyzer/Core/PathSensitive/RangedConstraintManager.h
 include/clang/StaticAnalyzer/Core/PathSensitive/Regions.def
+include/clang/StaticAnalyzer/Core/PathSensitive/SMTConstraintManager.h
+include/clang/StaticAnalyzer/Core/PathSensitive/SMTContext.h
+include/clang/StaticAnalyzer/Core/PathSensitive/SMTExpr.h
+include/clang/StaticAnalyzer/Core/PathSensitive/SMTSolver.h
+include/clang/StaticAnalyzer/Core/PathSensitive/SMTSort.h
 include/clang/StaticAnalyzer/Core/PathSensitive/SValBuilder.h
 include/clang/StaticAnalyzer/Core/PathSensitive/SValVisitor.h
 include/clang/StaticAnalyzer/Core/PathSensitive/SVals.def
@@ -496,6 +512,7 @@ include/clang/StaticAnalyzer/Frontend/FrontendActions.h
 include/clang/StaticAnalyzer/Frontend/ModelConsumer.h
 include/clang/Tooling/ASTDiff/ASTDiff.h
 include/clang/Tooling/ASTDiff/ASTDiffInternal.h
+include/clang/Tooling/AllTUsExecution.h
 include/clang/Tooling/ArgumentsAdjusters.h
 include/clang/Tooling/CommonOptionsParser.h
 include/clang/Tooling/CompilationDatabase.h
@@ -507,6 +524,8 @@ include/clang/Tooling/DiagnosticsYaml.h
 include/clang/Tooling/Execution.h
 include/clang/Tooling/FileMatchTrie.h
 include/clang/Tooling/FixIt.h
+include/clang/Tooling/Inclusions/HeaderIncludes.h
+include/clang/Tooling/Inclusions/IncludeStyle.h
 include/clang/Tooling/JSONCompilationDatabase.h
 include/clang/Tooling/Refactoring.h
 include/clang/Tooling/Refactoring/ASTSelection.h
@@ -538,7 +557,9 @@ include/clang/Tooling/Tooling.h
 lib/clang/${PKGVERSION}/include/__clang_cuda_builtin_vars.h
 lib/clang/${PKGVERSION}/include/__clang_cuda_cmath.h
 lib/clang/${PKGVERSION}/include/__clang_cuda_complex_builtins.h
+lib/clang/${PKGVERSION}/include/__clang_cuda_device_functions.h
 lib/clang/${PKGVERSION}/include/__clang_cuda_intrinsics.h
+lib/clang/${PKGVERSION}/include/__clang_cuda_libdevice_declares.h
 lib/clang/${PKGVERSION}/include/__clang_cuda_math_forward_declares.h
 lib/clang/${PKGVERSION}/include/__clang_cuda_runtime_wrapper.h
 lib/clang/${PKGVERSION}/include/__stddef_max_align_t.h
@@ -549,6 +570,7 @@ lib/clang/${PKGVERSION}/include/altivec.h
 lib/clang/${PKGVERSION}/include/ammintrin.h
 lib/clang/${PKGVERSION}/include/arm64intr.h
 lib/clang/${PKGVERSION}/include/arm_acle.h
+lib/clang/${PKGVERSION}/include/arm_fp16.h
 lib/clang/${PKGVERSION}/include/arm_neon.h
 lib/clang/${PKGVERSION}/include/armintr.h
 lib/clang/${PKGVERSION}/include/avx2intrin.h
@@ -578,6 +600,7 @@ lib/clang/${PKGVERSION}/include/avxintrin.h
 lib/clang/${PKGVERSION}/include/bmi2intrin.h
 lib/clang/${PKGVERSION}/include/bmiintrin.h
 lib/clang/${PKGVERSION}/include/cetintrin.h
+lib/clang/${PKGVERSION}/include/cldemoteintrin.h
 lib/clang/${PKGVERSION}/include/clflushoptintrin.h
 lib/clang/${PKGVERSION}/include/clwbintrin.h
 lib/clang/${PKGVERSION}/include/clzerointrin.h
@@ -598,6 +621,7 @@ lib/clang/${PKGVERSION}/include/ia32intrin.h
 lib/clang/${PKGVERSION}/include/immintrin.h
 lib/clang/${PKGVERSION}/include/intrin.h
 lib/clang/${PKGVERSION}/include/inttypes.h
+lib/clang/${PKGVERSION}/include/invpcidintrin.h
 lib/clang/${PKGVERSION}/include/iso646.h
 lib/clang/${PKGVERSION}/include/limits.h
 lib/clang/${PKGVERSION}/include/lwpintrin.h
@@ -606,17 +630,21 @@ lib/clang/${PKGVERSION}/include/mm3dnow.h
 lib/clang/${PKGVERSION}/include/mm_malloc.h
 lib/clang/${PKGVERSION}/include/mmintrin.h
 lib/clang/${PKGVERSION}/include/module.modulemap
+lib/clang/${PKGVERSION}/include/movdirintrin.h
 lib/clang/${PKGVERSION}/include/msa.h
 lib/clang/${PKGVERSION}/include/mwaitxintrin.h
 lib/clang/${PKGVERSION}/include/nmmintrin.h
 lib/clang/${PKGVERSION}/include/opencl-c.h
+lib/clang/${PKGVERSION}/include/pconfigintrin.h
 lib/clang/${PKGVERSION}/include/pkuintrin.h
 lib/clang/${PKGVERSION}/include/pmmintrin.h
 lib/clang/${PKGVERSION}/include/popcntintrin.h
 lib/clang/${PKGVERSION}/include/prfchwintrin.h
+lib/clang/${PKGVERSION}/include/ptwriteintrin.h
 lib/clang/${PKGVERSION}/include/rdseedintrin.h
 lib/clang/${PKGVERSION}/include/rtmintrin.h
 lib/clang/${PKGVERSION}/include/s390intrin.h
+lib/clang/${PKGVERSION}/include/sgxintrin.h
 lib/clang/${PKGVERSION}/include/shaintrin.h
 lib/clang/${PKGVERSION}/include/smmintrin.h
 lib/clang/${PKGVERSION}/include/stdalign.h
@@ -635,6 +663,8 @@ lib/clang/${PKGVERSION}/include/vaesintrin.h
 lib/clang/${PKGVERSION}/include/varargs.h
 lib/clang/${PKGVERSION}/include/vecintrin.h
 lib/clang/${PKGVERSION}/include/vpclmulqdqintrin.h
+lib/clang/${PKGVERSION}/include/waitpkgintrin.h
+lib/clang/${PKGVERSION}/include/wbnoinvdintrin.h
 lib/clang/${PKGVERSION}/include/wmmintrin.h
 lib/clang/${PKGVERSION}/include/x86intrin.h
 lib/clang/${PKGVERSION}/include/xmmintrin.h
@@ -648,8 +678,7 @@ lib/cmake/clang/ClangConfig.cmake
 lib/cmake/clang/ClangTargets-release.cmake
 lib/cmake/clang/ClangTargets.cmake
 lib/libclang.${SOEXT}
-${PLIST.notdylib}lib/libclang.${SOEXT}.${LLVM_MAJOR}
-${PLIST.notdylib}lib/libclang.${SOEXT}.6
+${PLIST.notdylib}lib/libclang.${SOEXT}.7
 lib/libclangAST.a
 lib/libclangASTMatchers.a
 lib/libclangAnalysis.a
@@ -663,6 +692,7 @@ lib/libclangFormat.a
 lib/libclangFrontend.a
 lib/libclangFrontendTool.a
 lib/libclangHandleCXX.a
+lib/libclangHandleLLVM.a
 lib/libclangIndex.a
 lib/libclangLex.a
 lib/libclangParse.a
@@ -673,6 +703,7 @@ lib/libclangSerialization.a
 lib/libclangTooling.a
 lib/libclangToolingASTDiff.a
 lib/libclangToolingCore.a
+lib/libclangToolingInclusions.a
 lib/libclangToolingRefactor.a
 share/clang/bash-autocomplete.sh
 share/clang/clang-format-bbedit.applescript
