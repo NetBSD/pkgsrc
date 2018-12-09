@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2018/11/12 03:51:31 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2018/12/09 18:52:11 adam Exp $
 
 BUILDLINK_TREE+=	kactivities-stats
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kactivities-stats
 KACTIVITIES_STATS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kactivities-stats+=	kactivities-stats>=5.41.0
-BUILDLINK_ABI_DEPENDS.kactivities-stats?=	kactivities-stats>=5.47.0nb5
+BUILDLINK_ABI_DEPENDS.kactivities-stats?=	kactivities-stats>=5.47.0nb6
 BUILDLINK_PKGSRCDIR.kactivities-stats?=	../../x11/kactivities-stats
 
 .include "../../x11/kactivities5/buildlink3.mk"
