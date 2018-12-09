@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.131 2018/12/09 07:14:03 triaxx Exp $
+# $NetBSD: Makefile,v 1.132 2018/12/09 09:33:36 triaxx Exp $
 
 DISTNAME=		lsof_4.91
 PKGNAME=		${DISTNAME:S/_/-/}
+PKGREVISION=		1	
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://ftp.mirrorservice.org/sites/lsof.itap.purdue.edu/pub/tools/unix/lsof/
 MASTER_SITES+=		ftp://ftp.mirrorservice.org/sites/lsof.itap.purdue.edu/pub/tools/unix/lsof/OLD/
@@ -32,6 +33,7 @@ REPLACE_PERL+=	scripts/sort_res.perl5 scripts/count_pf.perl5 \
 		scripts/idrlogin.perl5 scripts/count_pf.perl \
 		scripts/idrlogin.perl scripts/list_fields.perl \
 		scripts/watch_a_file.perl
+REPLACE_AWK+=	scripts/xusers.awk
 USE_TOOLS+=	digest perl:run
 
 TEST_DIRS=		tests
@@ -53,7 +55,7 @@ REAL_GROUP=		sys
 MAKE_ENV+=		CPPFLAGS=
 CONFIGURE_ENV+=		LSOF_RANLIB="/bin/true"
 .endif
-INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
+INSTALLATION_DIRS+=	sbin ${PKGMANDIR}/man8 share/doc/lsof share/examples/lsof
 
 post-extract:
 .if ${OPSYS} == "FreeBSD"
@@ -73,15 +75,22 @@ post-extract:
 	${TOOLS_PATH.bsdtar} -xf ${SRCBALL_NAME}.tar
 	cd ${WRKSRC} ; ${ECHO} "y" | ./Inventory || exit 1
 
-INSTALLATION_DIRS+=	sbin ${PKGMANDIR}/man8 share/lsof
 SPECIAL_PERMS+=		${PREFIX}/sbin/lsof ${REAL_ROOT_USER} ${REAL_GROUP} 2755
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/lsof ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_MAN} ${WRKSRC}/lsof.8 \
 	  ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/lsof.8
-	${INSTALL_SCRIPT} ${WRKSRC}/scripts/* ${DESTDIR}${PREFIX}/share/lsof
-	${CHMOD} 0444 ${DESTDIR}${PREFIX}/share/lsof/00*
+	${INSTALL_DATA} ${WRKSRC}/00* ${DESTDIR}${PREFIX}/share/doc/lsof
+	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${DESTDIR}${PREFIX}/share/doc/lsof
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/*.perl* \
+	  ${DESTDIR}${PREFIX}/share/examples/lsof
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/xusers.awk \
+	  ${DESTDIR}${PREFIX}/share/examples/lsof
+	${INSTALL_DATA} ${WRKSRC}/scripts/list_fields.awk \
+	  ${DESTDIR}${PREFIX}/share/examples/lsof
+	${INSTALL_DATA} ${WRKSRC}/scripts/00* \
+	  ${DESTDIR}${PREFIX}/share/examples/lsof
 
 opt:
 .for dir in ${TEST_DIRS}
