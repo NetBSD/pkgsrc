@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2018/11/12 03:51:21 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2018/12/09 18:52:06 adam Exp $
 
 BUILDLINK_TREE+=	kxmlrpcclient
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kxmlrpcclient
 KXMLRPCCLIENT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kxmlrpcclient+=	kxmlrpcclient>=5.21.0
-BUILDLINK_ABI_DEPENDS.kxmlrpcclient?=	kxmlrpcclient>=5.47.0nb4
+BUILDLINK_ABI_DEPENDS.kxmlrpcclient?=	kxmlrpcclient>=5.47.0nb5
 BUILDLINK_PKGSRCDIR.kxmlrpcclient?=	../../net/kxmlrpcclient
 
 .include "../../devel/kio/buildlink3.mk"
