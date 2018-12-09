@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5101 2018/12/09 17:13:02 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5102 2018/12/09 18:37:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7093,3 +7093,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated meta-pkgs/php72-extensions to 7.2.13nb1 [taca 2018-12-09]
 	Updated www/nghttp2 to 1.35.1 [adam 2018-12-09]
 	Updated security/libgpg-error to 1.33 [adam 2018-12-09]
+	Updated textproc/icu to 63.1 [adam 2018-12-09]
+	Updated lang/nodejs to 10.14.1 [adam 2018-12-09]
+	Updated lang/tcl to 8.6.9 [adam 2018-12-09]
+	Updated x11/tk to 8.6.9 [adam 2018-12-09]
