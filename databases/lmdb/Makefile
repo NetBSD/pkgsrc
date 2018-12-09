@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/11/25 15:50:13 fhajny Exp $
+# $NetBSD: Makefile,v 1.7 2018/12/09 03:04:34 sevan Exp $
 
 DISTNAME=	LMDB-0.9.18
 PKGNAME=	${DISTNAME:tl}
@@ -27,4 +27,5 @@ INSTALLATION_DIRS+=	include
 INSTALLATION_DIRS+=	lib
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
