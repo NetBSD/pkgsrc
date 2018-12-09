@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2018/09/03 23:47:44 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2018/12/09 20:25:12 adam Exp $
 
-DISTNAME=	numba-0.39.0
+DISTNAME=	numba-0.41.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numba/}
 
@@ -27,8 +26,8 @@ DEPENDS+=	${PYPKGPREFIX}-singledispatch-[0-9]*:../../devel/py-singledispatch
 
 post-install:
 .for cmd in numba pycc
-	${MV} ${DESTDIR}${PREFIX}/bin/${cmd} \
-		${DESTDIR}${PREFIX}/bin/${cmd}${PYVERSSUFFIX}
+	cd ${DESTDIR}${PREFIX}/bin && \
+		${MV} ${cmd} ${cmd}-${PYVERSSUFFIX} || ${TRUE}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
