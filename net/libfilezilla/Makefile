@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2018/12/01 11:15:42 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2018/12/09 03:04:34 sevan Exp $
 
 DISTNAME=	libfilezilla-0.15.1
 CATEGORIES=	devel
@@ -22,4 +22,5 @@ GCC_REQD+=	4.9
 
 BUILDLINK_API_DEPENDS.nettle+=	nettle>=3.1
 .include "../../security/nettle/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
