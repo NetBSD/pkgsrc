@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.10 2018/12/07 16:04:50 taca Exp $
+# $NetBSD: Makefile.php,v 1.11 2018/12/09 12:14:36 taca Exp $
 # used by lang/php72/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
@@ -36,6 +36,7 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--without-mysqli
 CONFIGURE_ARGS+=	--without-iconv
 CONFIGURE_ARGS+=	--without-pear
+CONFIGURE_ARGS+=	--without-sqlite3
 #CONFIGURE_ARGS+=	--without-intl
 
 CONFIGURE_ARGS+=	--disable-posix
