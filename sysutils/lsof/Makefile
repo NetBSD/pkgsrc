@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2018/12/08 17:12:37 triaxx Exp $
+# $NetBSD: Makefile,v 1.131 2018/12/09 07:14:03 triaxx Exp $
 
 DISTNAME=		lsof_4.91
 PKGNAME=		${DISTNAME:S/_/-/}
@@ -32,7 +32,7 @@ REPLACE_PERL+=	scripts/sort_res.perl5 scripts/count_pf.perl5 \
 		scripts/idrlogin.perl5 scripts/count_pf.perl \
 		scripts/idrlogin.perl scripts/list_fields.perl \
 		scripts/watch_a_file.perl
-USE_TOOLS+=	perl:run
+USE_TOOLS+=	digest perl:run
 
 TEST_DIRS=		tests
 TEST_TARGET=		test
@@ -46,7 +46,6 @@ REAL_GROUP=		${REAL_ROOT_GROUP}
 REAL_GROUP=		kmem
 CONFIGURE_ENV+=		NETBSD_SYS="${NETBSDSRCDIR}/sys"
 CPPFLAGS+=		-D_KMEMUSER
-CPPFLAGS+=		"-DVFS_PROTOS(fsname)="
 .elif ${OPSYS} == "FreeBSD"
 BUILDLINK_PASSTHRU_DIRS+=	/usr/src/sys
 .elif ${OPSYS} == "SunOS"
@@ -58,12 +57,12 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 
 post-extract:
 .if ${OPSYS} == "FreeBSD"
-	@(if [ ! -x /usr/src/sys ]; then \
+	if [ ! -x /usr/src/sys ]; then \
 		${ECHO} "Lsof requires kernel sources to be found in /usr/src/sys." ; \
 		exit 1 ; \
-	fi)
+	fi
 .endif
-	@cd ${TMPWRK} ; \
+	cd ${TMPWRK} ; \
 	EXPMD5=`${GREP} 'MD5 (' README.${DISTNAME} | ${SED} 's/^[ ]*//'` ; \
 	CALCMD5=`${DIGEST} MD5 ${SRCBALL_NAME}.tar` ; \
 	if [ "$${EXPMD5}"X != "$${CALCMD5}"X ]; then \
@@ -72,7 +71,7 @@ post-extract:
 		exit 1 ; \
 	fi ; \
 	${TOOLS_PATH.bsdtar} -xf ${SRCBALL_NAME}.tar
-	@cd ${WRKSRC} ; ${ECHO} "y" | ./Inventory || exit 1
+	cd ${WRKSRC} ; ${ECHO} "y" | ./Inventory || exit 1
 
 INSTALLATION_DIRS+=	sbin ${PKGMANDIR}/man8 share/lsof
 SPECIAL_PERMS+=		${PREFIX}/sbin/lsof ${REAL_ROOT_USER} ${REAL_GROUP} 2755
@@ -82,12 +81,12 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/lsof.8 \
 	  ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/lsof.8
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/* ${DESTDIR}${PREFIX}/share/lsof
-	@${CHMOD} 0444 ${DESTDIR}${PREFIX}/share/lsof/00*
+	${CHMOD} 0444 ${DESTDIR}${PREFIX}/share/lsof/00*
 
 opt:
-.for _dir_ in ${TEST_DIRS}
+.for dir in ${TEST_DIRS}
 	${RUN}${_ULIMIT_CMD}			\
-	cd ${WRKSRC} && cd ${_dir_} &&		\
+	cd ${WRKSRC} && cd ${dir} &&		\
 	${TEST_MAKE_CMD} opt
 .endfor
 .include "../../mk/bsd.pkg.mk"
