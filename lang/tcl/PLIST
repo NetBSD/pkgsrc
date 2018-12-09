@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2018/02/03 17:51:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2018/12/09 18:33:55 adam Exp $
 bin/sqlite3_analyzer
 bin/tclsh
 bin/tclsh${BASEVER}
@@ -292,15 +292,15 @@ lib/tcl${BASEVER}/shell1.1/pkgIndex.tcl
 lib/tcl${BASEVER}/shell1.1/shell.tcl
 lib/tcl${BASEVER}/tclAppInit.c
 lib/tcl${BASEVER}/tclIndex
-lib/tcl${BASEVER}/tcltest2.4/pkgIndex.tcl
-lib/tcl${BASEVER}/tcltest2.4/tcltest.tcl
+lib/tcl${BASEVER}/tcltest2.5/pkgIndex.tcl
+lib/tcl${BASEVER}/tcltest2.5/tcltest.tcl
 lib/tcl${BASEVER}/tm.tcl
 lib/tcl${BASEVER}/word.tcl
 lib/tcl8/8.4/platform-1.0.14.tm
 lib/tcl8/8.4/platform/shell-1.1.4.tm
 lib/tcl8/8.5/msgcat-1.6.1.tm
-lib/tcl8/8.5/tcltest-2.4.1.tm
-lib/tcl8/8.6/http-2.8.12.tm
+lib/tcl8/8.5/tcltest-2.5.0.tm
+lib/tcl8/8.6/http-2.9.0.tm
 lib/tcl8/8.6/tdbc/sqlite3-${TDBC_VERSION}.tm
 lib/tclConfig.sh
 lib/tclooConfig.sh
