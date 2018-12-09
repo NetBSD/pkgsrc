@@ -1,9 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2016/11/15 16:35:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/12/09 20:12:47 adam Exp $
 bin/fix_includes.py
 bin/include-what-you-use
 bin/iwyu_tool.py
+share/include-what-you-use/boost-1.64-all-private.imp
+share/include-what-you-use/boost-1.64-all.imp
 share/include-what-you-use/boost-all-private.imp
 share/include-what-you-use/boost-all.imp
+share/include-what-you-use/clang-6.intrinsics.imp
+share/include-what-you-use/gcc-8.intrinsics.imp
 share/include-what-you-use/gcc.libc.imp
 share/include-what-you-use/gcc.stl.headers.imp
 share/include-what-you-use/gcc.symbols.imp
