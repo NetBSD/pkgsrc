@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5098 2018/12/09 12:16:59 taca Exp $
+$NetBSD: CHANGES-2018,v 1.5099 2018/12/09 12:23:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7081,3 +7081,9 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/lsof to 4.91 [triaxx 2018-12-08]
 	Updated cad/klayout to 0.25.6 [mef 2018-12-09]
 	Added databases/php-sqlite3 version 7.1.25 [taca 2018-12-09]
+	Updated lang/php56 to 5.6.39nb1 [taca 2018-12-09]
+	Updated lang/php70 to 7.0.33nb1 [taca 2018-12-09]
+	Updated lang/php71 to 7.1.25nb1 [taca 2018-12-09]
+	Updated lang/php72 to 7.2.13nb1 [taca 2018-12-09]
+	Updated www/ap-php to 7.1.25nb1 [taca 2018-12-09]
+	Updated www/php-fpm to 7.1.25nb1 [taca 2018-12-09]
