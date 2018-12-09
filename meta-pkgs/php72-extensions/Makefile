@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2018/03/14 15:49:38 taca Exp $
+# $NetBSD: Makefile,v 1.2 2018/12/09 16:20:03 taca Exp $
 
 DISTNAME=	${PHP_PKG_PREFIX}-extensions-${PHP_VERSION}
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs www
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -39,6 +40,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pcntl>=${PHP_VERSION}<${NEXT_VERS}:../../devel/php-p
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=${PHP_VERSION}<${NEXT_VERS}:../../databases/php-pdo
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_dblib>=${PHP_VERSION}<${NEXT_VERS}:../../databases/php-pdo_dblib
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql>=${PHP_VERSION}<${NEXT_VERS}:../../databases/php-pdo_mysql
+DEPENDS+=	${PHP_PKG_PREFIX}-sqlite3>=${PHP_VERSION}<${NEXT_VERS}:../../databases/php-sqlite3
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_pgsql>=${PHP_VERSION}<${NEXT_VERS}:../../databases/php-pdo_pgsql
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_sqlite>=${PHP_VERSION}<${NEXT_VERS}:../../databases/php-pdo_sqlite
 DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=${PHP_VERSION}<${NEXT_VERS}:../../databases/php-pgsql
