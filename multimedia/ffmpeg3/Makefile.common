@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.33 2018/11/03 08:06:46 adam Exp $
+# $NetBSD: Makefile.common,v 1.34 2018/12/09 22:22:27 maya Exp $
 # used by multimedia/ffmpeg3/Makefile
 # used by multimedia/ffplay3/Makefile
 
@@ -17,7 +17,6 @@ USE_TOOLS+=		gmake pod2man perl pkg-config
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--cc=${CC:Q}
 CONFIGURE_ARGS+=	--disable-debug
-CONFIGURE_ARGS+=	--disable-optimizations
 CONFIGURE_ARGS+=	--disable-stripping
 CONFIGURE_ARGS+=	--enable-gpl
 CONFIGURE_ARGS+=	--enable-libxml2
