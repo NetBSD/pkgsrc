@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2018/11/12 03:51:23 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2018/12/09 18:52:07 adam Exp $
 
 BUILDLINK_TREE+=	gpgmepp
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gpgmepp
 GPGMEPP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gpgmepp+=	gpgmepp>=15.12.2
-BUILDLINK_ABI_DEPENDS.gpgmepp?=	gpgmepp>=15.12.2nb11
+BUILDLINK_ABI_DEPENDS.gpgmepp?=	gpgmepp>=15.12.2nb12
 BUILDLINK_PKGSRCDIR.gpgmepp?=	../../security/gpgmepp
 
 .include "../../devel/boost-headers/buildlink3.mk"
