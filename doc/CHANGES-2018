@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5099 2018/12/09 12:23:22 taca Exp $
+$NetBSD: CHANGES-2018,v 1.5100 2018/12/09 16:20:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7087,3 +7087,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/php72 to 7.2.13nb1 [taca 2018-12-09]
 	Updated www/ap-php to 7.1.25nb1 [taca 2018-12-09]
 	Updated www/php-fpm to 7.1.25nb1 [taca 2018-12-09]
+	Updated meta-pkgs/php56-extensions to 5.6.39nb1 [taca 2018-12-09]
+	Updated meta-pkgs/php70-extensions to 7.0.33nb1 [taca 2018-12-09]
+	Updated meta-pkgs/php71-extensions to 7.1.25nb1 [taca 2018-12-09]
+	Updated meta-pkgs/php72-extensions to 7.2.13nb1 [taca 2018-12-09]
