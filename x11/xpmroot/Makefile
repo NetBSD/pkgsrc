@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.65 2017/09/06 10:40:36 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2018/12/09 21:05:37 adam Exp $
 #
 
 DISTNAME=	fvwm-${PKG_VERSION}
 PKGNAME=	xpmroot-${PKG_VERSION}
-#PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.fvwm.org/pub/fvwm/version-2/
 

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/08/01 16:51:20 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2018/12/09 21:05:36 adam Exp $
 
 DISTNAME=	mod_authnz_external-${DISTVERS}
-#PKGREVISION=	1
 PKGNAME=	${APACHE_PKG_PREFIX}-authnz-external-${DISTVERS}
 CATEGORIES=	www
 MASTER_SITES=	https://github.com/phokz/mod-auth-external/archive/
