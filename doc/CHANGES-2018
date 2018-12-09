@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5096 2018/12/08 17:48:16 triaxx Exp $
+$NetBSD: CHANGES-2018,v 1.5097 2018/12/09 05:37:12 mef Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7079,3 +7079,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/byacc to 20180609 [wen 2018-12-08]
 	Updated net/youtube-dl to 20181203 [leot 2018-12-08]
 	Updated sysutils/lsof to 4.91 [triaxx 2018-12-08]
+	Updated cad/klayout to 0.25.6 [mef 2018-12-09]
