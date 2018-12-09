@@ -1,1 +1,1 @@
-bin/pbr @PREFIX@/bin/pbr@PYVERSSUFFIX@
+bin/pbr @PREFIX@/bin/pbr-@PYVERSSUFFIX@
