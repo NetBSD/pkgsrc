@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.33 2018/04/19 22:12:25 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.34 2018/12/09 20:12:41 leot Exp $
 
 BUILDLINK_TREE+=	gnutls
 
@@ -14,6 +14,7 @@ BUILDLINK_PKGSRCDIR.gnutls?=	../../security/gnutls
 .include "../../devel/libcfg+/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/libtasn1/buildlink3.mk"
+BUILDLINK_API_DEPENDS.nettle+=		nettle>=3.4.1
 .include "../../security/nettle/buildlink3.mk"
 .include "../../security/p11-kit/buildlink3.mk"
 .include "../../textproc/libunistring/buildlink3.mk"
