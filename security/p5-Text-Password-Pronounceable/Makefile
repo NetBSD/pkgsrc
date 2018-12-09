@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2018/08/22 09:46:28 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2018/12/09 21:05:35 adam Exp $
 
 DISTNAME=	Text-Password-Pronounceable-0.30
 PKGNAME=	p5-${DISTNAME}
-#PKGREVISION=	1
 PKGREVISION=	9
 CATEGORIES=	perl5 textproc security
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
