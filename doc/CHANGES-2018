@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5107 2018/12/09 20:33:31 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5108 2018/12/09 20:48:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7113,3 +7113,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/py-numba to 0.41.0 [adam 2018-12-09]
 	Updated devel/git to 2.20.0 [adam 2018-12-09]
 	Updated textproc/jansson to 2.12 [adam 2018-12-09]
+	Updated lang/py-mypy to 0.650 [adam 2018-12-09]
+	Updated devel/py-pbr to 5.1.1 [adam 2018-12-09]
