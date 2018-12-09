@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.91 2018/12/08 17:08:22 triaxx Exp $
+# $NetBSD: license.mk,v 1.92 2018/12/09 06:07:23 triaxx Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -162,6 +162,10 @@ DEFAULT_ACCEPTABLE_LICENSES+=	vera-ttf-license
 
 # DFSG, not evaluated by OSI/FSF
 DEFAULT_ACCEPTABLE_LICENSES+=	happy
+
+# DFSG, not evaluated by OSI/FSF
+# Mainly used in https://sources.debian.org/copyright/license/lsof/
+DEFAULT_ACCEPTABLE_LICENSES+=	purdue
 
 ##### Variant spellings
 
