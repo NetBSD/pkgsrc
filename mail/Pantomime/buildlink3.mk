@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.24 2018/07/20 03:33:52 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2018/12/09 18:52:04 adam Exp $
 
 BUILDLINK_TREE+=	Pantomime
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	Pantomime
 PANTOMIME_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.Pantomime+=	Pantomime>1.1.9
-BUILDLINK_ABI_DEPENDS.Pantomime+=	Pantomime>=1.2.0nb14
+BUILDLINK_ABI_DEPENDS.Pantomime+=	Pantomime>=1.2.0nb15
 BUILDLINK_PKGSRCDIR.Pantomime?=		../../mail/Pantomime
 
 .include "../../devel/gnustep-make/gnustep.mk"

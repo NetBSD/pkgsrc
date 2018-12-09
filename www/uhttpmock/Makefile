@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2018/10/24 21:11:48 leot Exp $
+# $NetBSD: Makefile,v 1.19 2018/12/09 18:52:10 adam Exp $
 
 DISTNAME=	uhttpmock-0.4.0
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	www devel
 MASTER_SITES=	http://tecnocode.co.uk/downloads/uhttpmock/
 EXTRACT_SUFX=	.tar.xz

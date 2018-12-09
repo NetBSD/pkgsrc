@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2018/08/26 13:25:33 schmonz Exp $
+# $NetBSD: Makefile,v 1.8 2018/12/09 18:52:47 adam Exp $
 
 PKGNAME=		csharp-${PKGNAME_MODULE}
+PKGREVISION=		1
 COMMENT=		C\# bindings for Xapian search engine
 HOMEPAGE=		https://xapian.org/docs/bindings/csharp/
 
