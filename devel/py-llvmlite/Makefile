@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2018/08/07 10:46:42 adam Exp $
+# $NetBSD: Makefile,v 1.6 2018/12/09 20:22:55 adam Exp $
 
-DISTNAME=	llvmlite-0.24.0
+DISTNAME=	llvmlite-0.26.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/llvmlite/}
@@ -13,9 +13,12 @@ LICENSE=	2-clause-bsd
 USE_LANGUAGES=	c++
 
 .include "../../lang/python/pyversion.mk"
-.if "${PYPKGPREFIX}" == "py27"
+.if ${_PYTHON_VERSION} == 27
 DEPENDS+=	${PYPKGPREFIX}-enum34-[0-9]*:../../devel/py-enum34
 .endif
+
+pre-configure:
+	${LN} -f ${WRKSRC}/ffi/Makefile.freebsd ${WRKSRC}/ffi/Makefile.netbsd
 
 post-install:
 .if ${OPSYS} == "Darwin"
