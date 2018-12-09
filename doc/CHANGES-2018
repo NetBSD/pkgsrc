@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5102 2018/12/09 18:37:18 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5103 2018/12/09 20:10:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7097,3 +7097,12 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/nodejs to 10.14.1 [adam 2018-12-09]
 	Updated lang/tcl to 8.6.9 [adam 2018-12-09]
 	Updated x11/tk to 8.6.9 [adam 2018-12-09]
+	Updated lang/llvm to 7.0.0 [adam 2018-12-09]
+	Updated lang/clang to 7.0.0 [adam 2018-12-09]
+	Updated lang/clang-static-analyzer to 7.0.0 [adam 2018-12-09]
+	Updated lang/compiler-rt to 7.0.0 [adam 2018-12-09]
+	Updated lang/libcxx to 7.0.0 [adam 2018-12-09]
+	Updated lang/libcxxabi to 7.0.0 [adam 2018-12-09]
+	Updated lang/libunwind to 7.0.0 [adam 2018-12-09]
+	Updated devel/lldb to 7.0.0 [adam 2018-12-09]
+	Updated devel/polly to 7.0.0 [adam 2018-12-09]
