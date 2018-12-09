@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5097 2018/12/09 05:37:12 mef Exp $
+$NetBSD: CHANGES-2018,v 1.5098 2018/12/09 12:16:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7080,3 +7080,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/youtube-dl to 20181203 [leot 2018-12-08]
 	Updated sysutils/lsof to 4.91 [triaxx 2018-12-08]
 	Updated cad/klayout to 0.25.6 [mef 2018-12-09]
+	Added databases/php-sqlite3 version 7.1.25 [taca 2018-12-09]
