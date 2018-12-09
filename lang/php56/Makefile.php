@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.5 2018/07/18 07:33:12 manu Exp $
+# $NetBSD: Makefile.php,v 1.6 2018/12/09 12:14:36 taca Exp $
 # used by lang/php56/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
@@ -28,6 +28,7 @@ CONFIGURE_ARGS+=	--with-regex=system
 CONFIGURE_ARGS+=	--without-mysql
 CONFIGURE_ARGS+=	--without-iconv
 CONFIGURE_ARGS+=	--without-pear
+CONFIGURE_ARGS+=	--without-sqlite3
 #CONFIGURE_ARGS+=	--without-intl
 
 CONFIGURE_ARGS+=	--disable-posix
