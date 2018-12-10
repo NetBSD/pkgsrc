@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5133 2018/12/10 20:45:10 leot Exp $
+$NetBSD: CHANGES-2018,v 1.5134 2018/12/10 20:50:09 fox Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7149,3 +7149,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/phpmyadmin to 4.8.3 [tm 2018-12-10]
 	Updated fonts/awesome-ttf to 5.5.0 [tm 2018-12-10]
 	Added fonts/awesome-otf version 5.5.0 [tm 2018-12-10]
+	Added audio/din version 38a [fox 2018-12-10]
