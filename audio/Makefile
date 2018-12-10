@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.554 2018/12/01 18:22:31 fox Exp $
+# $NetBSD: Makefile,v 1.555 2018/12/10 20:36:00 fox Exp $
 #
 
 COMMENT=	Audio tools
@@ -76,6 +76,7 @@ SUBDIR+=	daapd
 SUBDIR+=	dap
 SUBDIR+=	darkice
 SUBDIR+=	deforaos-mixer
+SUBDIR+=	din
 SUBDIR+=	disc-cover
 SUBDIR+=	distmp3
 SUBDIR+=	easyh10
