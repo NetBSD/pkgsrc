@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18699 2018/12/10 15:19:04 adam Exp $
+$NetBSD: TODO,v 1.18700 2018/12/10 19:31:46 tm Exp $
 
 Suggested new packages
 ======================
@@ -1155,7 +1155,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o php-tiki6-6.14
 	o php-tt-rss-1.15.3
 	o php-tt-rss-fever-plugin-1.4.7
-	o phpmyadmin-4.8
 	o phraseanet-3.8.6
 	o phraseanet-indexer-3.8.6
 	o picocom-3.0
