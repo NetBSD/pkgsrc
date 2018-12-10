@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.27 2018/09/06 19:07:12 leot Exp $
+# $NetBSD: Makefile,v 1.28 2018/12/10 14:59:50 leot Exp $
 
-PKGREVISION= 2
 .include "Makefile.common"
 
 PKGNAME=		swi-prolog-lite-${SWIPLVERS}
@@ -31,9 +30,7 @@ REPLACE_FILES.swipl+=	library/dialect/sicstus/swipl-lfr.pl
 
 TEST_TARGET=		check
 
-.include "../../devel/ncurses/buildlink3.mk"
-# uses rl_event_hook() interface
-.include "../../devel/readline/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
