@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/07/23 18:39:51 adam Exp $
+$NetBSD: distinfo,v 1.5 2018/12/10 11:22:37 adam Exp $
 
-SHA1 (munkres-1.0.11.tar.gz) = b32cd39ec9e2eefb4db52c1ff4b2ac0f5df0b2c0
-RMD160 (munkres-1.0.11.tar.gz) = d79235c896c26ea7a99c6fdc644935969ca73e8f
-SHA512 (munkres-1.0.11.tar.gz) = cf9f009483efb82dd34fdd9b4996fc6323802b38e532b24d6c6f241a68f5732689894027a3d4d3cb2207f0a786463702e01864b4f899f5d207beca3e892eab67
-Size (munkres-1.0.11.tar.gz) = 11322 bytes
+SHA1 (munkres-1.0.12.tar.gz) = 8e50cfe8cfde5f7be250476fab34d108a7b0aa16
+RMD160 (munkres-1.0.12.tar.gz) = 64145a12881cd8f0edbda4a9d2e14808efe1df70
+SHA512 (munkres-1.0.12.tar.gz) = 9049fd350b739c9095b6e1da8fe0041210d4723ab8c0c6a7fc9943392bebf9eb224c6f420c8158a47607277e13fba2f3c7803ee222d58e8e3720d5647f44e596
+Size (munkres-1.0.12.tar.gz) = 12126 bytes
