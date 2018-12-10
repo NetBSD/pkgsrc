@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2018/12/10 15:18:21 maya Exp $
+# $NetBSD: Makefile,v 1.53 2018/12/10 15:18:58 maya Exp $
 
 DISTNAME=	libetpan-1.9.1
 CATEGORIES=	mail
@@ -16,6 +16,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 MAKE_JOBS_SAFE=		no
 USE_TOOLS+=		autoconf automake
+TEST_TARGET=		check
 
 pre-configure:
 	cd ${WRKSRC} && \
