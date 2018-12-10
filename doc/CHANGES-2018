@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5128 2018/12/10 15:19:04 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5129 2018/12/10 15:19:17 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7145,3 +7145,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/swi-prolog-packages to 7.6.4 [leot 2018-12-10]
 	Updated databases/py-postgresql to 5.0.6 [adam 2018-12-10]
 	Updated devel/py-pyparsing to 2.3.0 [adam 2018-12-10]
+	Updated mail/libetpan to 1.9.1 [maya 2018-12-10]
