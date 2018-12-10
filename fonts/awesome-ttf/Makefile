@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.3 2017/08/01 17:40:11 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2018/12/10 20:08:01 tm Exp $
 #
 
-DISTNAME=	font-awesome-4.4.0
-PKGNAME=	awesome-ttf-4.4.0
+VERSION=	5.5.0
+DISTNAME=	fontawesome-free-${VERSION}-web
+PKGNAME=	awesome-ttf-${VERSION}
 CATEGORIES=	fonts
-#MASTER_SITES=	http://fortawesome.github.io/Font-Awesome/assets/
+MASTER_SITES=	https://use.fontawesome.com/releases/v${VERSION}/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	khorben@defora.org
-#HOMEPAGE=	http://fortawesome.github.io/Font-Awesome/assets/
+MAINTAINER=	tm@core.io
+HOMEPAGE=	https://fontawesome.com/
 COMMENT=	The iconic font and CSS toolkit
 LICENSE=	ofl-v1.1
 
+USE_LANGUAGES=	# none
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
@@ -20,6 +22,6 @@ FONTS_DIRS.ttf=	share/fonts/X11/TTF
 INSTALLATION_DIRS=	${FONTS_DIRS.ttf}
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/fonts/*.ttf ${DESTDIR}${PREFIX}/${FONTS_DIRS.ttf}
+	${INSTALL_DATA} ${WRKSRC}/webfonts/*.ttf ${DESTDIR}${PREFIX}/${FONTS_DIRS.ttf}
 
 .include "../../mk/bsd.pkg.mk"
