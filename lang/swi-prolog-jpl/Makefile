@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.4 2015/08/18 07:31:10 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2018/12/10 14:59:50 leot Exp $
 
-PKGREVISION= 2
 .include "../../lang/swi-prolog-lite/Makefile.common"
 
 PKGNAME=		swi-prolog-jpl-${SWIPLVERS}
@@ -47,8 +46,6 @@ post-configure:
 .include "../../lang/swi-prolog-lite/buildlink3.mk"
 .include "../../mk/java-vm.mk"
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
-# uses rl_event_hook() interface
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
