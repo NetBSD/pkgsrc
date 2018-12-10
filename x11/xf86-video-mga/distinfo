@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2017/01/18 18:26:41 wiz Exp $
+$NetBSD: distinfo,v 1.13 2018/12/10 08:35:48 wiz Exp $
 
-SHA1 (xf86-video-mga-1.6.5.tar.bz2) = a21605f79694ac2b57fe1abaf049732ac60ac90b
-RMD160 (xf86-video-mga-1.6.5.tar.bz2) = e459675a3981c3ed0794ab247a810379e45c9b11
-SHA512 (xf86-video-mga-1.6.5.tar.bz2) = e1a624cb5d98796e9138bfc512b62d5130885140b1751c01f29a8eff96f66a2b57cb5abe23c1fa2b55188acabd6554c5897190a4e1aee1ec09245d53b88f69d8
-Size (xf86-video-mga-1.6.5.tar.bz2) = 478350 bytes
+SHA1 (xf86-video-mga-2.0.0.tar.bz2) = 833f2710a1fd7b3f2db3700b2ad055527da5033b
+RMD160 (xf86-video-mga-2.0.0.tar.bz2) = d82781b98c54a1f97b1be57093d069bec2a1fdd4
+SHA512 (xf86-video-mga-2.0.0.tar.bz2) = b92006486aef815ff4399f291d610c65d88c0b32a9dae97658c644715ff62b221b01495b5c7a2311745e26f699c1c1f753b81c7bf54cf75567af9f78ac015540
+Size (xf86-video-mga-2.0.0.tar.bz2) = 452486 bytes
