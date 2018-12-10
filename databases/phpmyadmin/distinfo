@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.106 2016/12/30 04:44:43 taca Exp $
+$NetBSD: distinfo,v 1.107 2018/12/10 19:27:46 tm Exp $
 
-SHA1 (phpMyAdmin-4.6.5.2-all-languages.tar.xz) = 0870868690c2f97468cb764a13d5e6b3ffda35c7
-RMD160 (phpMyAdmin-4.6.5.2-all-languages.tar.xz) = be40587f74dd1763226764891de38b12c8c30ec6
-SHA512 (phpMyAdmin-4.6.5.2-all-languages.tar.xz) = 10fecd5f313b3685b3d4d7c86b20e9466abc54298267f2ed41cf81096fae5bf8472860ac3ebd5ecba8644b43f69eaf944625a8a12beaba637bcefba0940f3a11
-Size (phpMyAdmin-4.6.5.2-all-languages.tar.xz) = 6136880 bytes
-SHA1 (patch-libraries_vendor_config.php) = af587496e999bf1e92d6c5a9ab8053fe6e92a0f2
+SHA1 (phpMyAdmin-4.8.3-all-languages.tar.xz) = 69d9ef27687d0e29bf039f49b01c89f80a99dd87
+RMD160 (phpMyAdmin-4.8.3-all-languages.tar.xz) = 92848d08d04dbdd588a63bc554716d4d2685bfe5
+SHA512 (phpMyAdmin-4.8.3-all-languages.tar.xz) = 95998eda6a2db9020671073c62458d819cbd5e54c5f56f467b109401f6b9ebd2dfbc34cc840980bf2d3a7ee3bc93683b7fe20d9bd72b537d8aa066d39089ff89
+Size (phpMyAdmin-4.8.3-all-languages.tar.xz) = 5996528 bytes
+SHA1 (patch-libraries_vendor__config.php) = e0fefe54dabf5fb716a315121c3cbec20925f73c

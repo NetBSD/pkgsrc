@@ -1,8 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.14 2016/08/23 15:53:14 taca Exp $
+$NetBSD: MESSAGE,v 1.15 2018/12/10 19:27:46 tm Exp $
 
-Do *not* edit "${CONF_INC_PHP}" to customize
-this package because it is a link which will removed during upgrades.
+No custom configuration files are stored in "${PMCONFDIR}", do not
+change files there because they will removed during upgrades.
+
 The actual configuration file is "${PMCONFFILE}".
 
 You will need to make phpMyAdmin accessible through your HTTP server.
@@ -17,6 +18,6 @@ to make phpMyAdmin accessible through:
 
 If you are setting up phpmyadmin for the first time you will need to
 comment out the configuration block in your apache.conf which denies
-access to the scripts directory.  This only need to be done the first
+access to the setup directory.  This only need to be done the first
 time you access your phpmyadmin installation.
 ===========================================================================
