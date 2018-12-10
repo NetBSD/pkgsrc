@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5124 2018/12/10 11:06:18 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.5125 2018/12/10 11:34:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7136,3 +7136,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-google-api-python-client to 1.7.6 [wiz 2018-12-10]
 	Updated www/py-idna to 2.8 [wiz 2018-12-10]
 	Updated devel/waf to 2.0.13 [wiz 2018-12-10]
+	Updated math/py-munkres to 1.0.12 [adam 2018-12-10]
+	Updated databases/py-pymysql to 0.9.2 [adam 2018-12-10]
