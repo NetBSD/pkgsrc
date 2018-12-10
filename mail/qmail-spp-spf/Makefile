@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/12/06 00:07:33 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2018/12/10 22:38:24 schmonz Exp $
 
 DISTNAME=		qmail-spp-spf-20091020.c
 PKGNAME=		${DISTNAME:S/.c$//}
@@ -13,18 +13,20 @@ LICENSE=		gnu-gpl-v2
 
 WRKSRC=			${WRKDIR}
 
-LDFLAGS.SunOS+=		-lnsl
+USE_LIBTOOL=		yes
 
 INSTALLATION_DIRS=	bin share/doc/${PKGBASE}
 
 do-build:
 	cd ${WRKSRC} && \
-	${CC} ${CFLAGS} ${LDFLAGS} -lspf2 -o ${PKGBASE} ${DISTNAME}
+	${LIBTOOL} --mode=compile ${CC} ${CFLAGS} -c ${DISTNAME} && \
+	${LIBTOOL} --mode=link ${CC} ${LDFLAGS} -lspf2 -o ${PKGBASE} ${DISTNAME}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PKGBASE} \
-		${DESTDIR}${PREFIX}/bin/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/${DISTNAME} \
+	cd ${WRKSRC} && \
+	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${PKGBASE} \
+		${DESTDIR}${PREFIX}/bin/${PKGBASE} && \
+	${INSTALL_DATA} ${DISTNAME} \
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/README
 
 .include "../../mail/libspf2/buildlink3.mk"
