@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.14 2017/01/19 18:52:15 agc Exp $
+# $NetBSD: Makefile.common,v 1.15 2018/12/10 14:59:50 leot Exp $
 #
 # used by lang/swi-prolog/Makefile
 # used by lang/swi-prolog-packages/Makefile
 # used by lang/swi-prolog-jpl/Makefile
 
-SWIPLVERS=		6.6.6
-DISTNAME=		pl-${SWIPLVERS}
+SWIPLVERS=		7.6.4
+DISTNAME=		swipl-${SWIPLVERS}
 CATEGORIES=		lang
 MASTER_SITES=		http://www.swi-prolog.org/download/stable/src/
 MASTER_SITES+=		http://www.swi-prolog.org/download/devel/src/
@@ -16,3 +16,6 @@ LICENSE=		gnu-lgpl-v2.1
 DIST_SUBDIR=		swi-prolog
 DISTINFO_FILE=		${.CURDIR}/../../lang/swi-prolog-lite/distinfo
 PATCHDIR=		${.CURDIR}/../../lang/swi-prolog-lite/patches
+
+CONFIGURE_ENV+=		CMFLAGS="-fPIC"
+CONFIGURE_ENV+=		COFLAGS=${CFLAGS:M*:Q}

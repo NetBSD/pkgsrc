@@ -1,15 +1,19 @@
-$NetBSD: patch-ad,v 1.5 2014/05/28 10:29:12 markd Exp $
+$NetBSD: patch-ad,v 1.6 2018/12/10 14:59:50 leot Exp $
 
 Split install target.
 
---- packages/Makefile.in.orig	2014-04-25 14:06:38.000000000 +0000
+--- packages/Makefile.in.orig	2018-01-12 12:04:38.000000000 +0000
 +++ packages/Makefile.in
-@@ -91,6 +91,8 @@ install::
- 	for p in $(PKG); do \
- 	    if [ -r $$p/Makefile ]; then $(MAKE) -C $$p $@ || exit 1; fi; \
-         done
-+
-+post-install::
- 	$(FORCE_MKINDEX)
+@@ -112,9 +112,11 @@ install::
+ 	        $(MAKE) -C $$p $@ || echo $$p >> .failed.$@; \
+ 	    fi; \
+ 	done
+-	$(FORCE_MKINDEX)
+ 	$(END_FORPKG)
  
++post-install::
++	$(FORCE_MKINDEX)
++
  rpm-install: html-install
+ 	$(BEGIN_FORPKG)
+ 	for p in $(PKG); do \
