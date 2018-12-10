@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5131 2018/12/10 20:09:34 tm Exp $
+$NetBSD: CHANGES-2018,v 1.5132 2018/12/10 20:20:09 tm Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7148,3 +7148,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/libetpan to 1.9.1 [maya 2018-12-10]
 	Updated databases/phpmyadmin to 4.8.3 [tm 2018-12-10]
 	Updated fonts/awesome-ttf to 5.5.0 [tm 2018-12-10]
+	Added font/awesome-otf version 5.5.0 [tm 2018-12-10]
