@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.94 2018/12/10 15:39:10 gdt Exp $
+# $NetBSD: license.mk,v 1.95 2018/12/10 15:50:10 gdt Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -105,12 +105,14 @@
 # Keywords: licence license
 #
 
-# This list is not complete.  Free and Open Source licenses should be
-# added to the list as they are added to pkgsrc.
+# The convention is that Free and Open Source licenses do not have a
+# -license suffix, and non-Free licenses end in -license.  Thus,
+# license in DEFAULT_ACCEPTABLE_LICENSES should not end in -license.
 #
-# The convention is that Free or Open Source licenses do not have a
-# -license suffix, and nonfree licenses end in -license.
-#
+# First, we set DEFAULT_ACCEPTABLE_LICENSES to the set of licenses
+# formally approved as Free Software by FSF or Open Source by OSI,
+# except that we exclude the AGPL (clearly a Free license), following
+# the decision of the board of TNF.
 DEFAULT_ACCEPTABLE_LICENSES= \
 	apache-1.1 apache-2.0 \
 	arphic-public \
@@ -163,19 +165,26 @@ DEFAULT_ACCEPTABLE_LICENSES= \
 	zpl-2.1 \
 	zsh
 
-# not approved by OSI, derived from BSD
+# The following licenses meet the DFSG (but are not formally approved
+# by FSF/OSI) as evidenced by inclusion in Debian main.
+#
+# \todo reference to package
+DEFAULT_ACCEPTABLE_LICENSES+=	happy
+# used in https://sources.debian.org/copyright/license/lsof/
+DEFAULT_ACCEPTABLE_LICENSES+=	purdue
+
+# The following licenses are included based on it being obvious they
+# would be approved.
+#
+# derived from BSD
 DEFAULT_ACCEPTABLE_LICENSES+=	info-zip
 
-# not approved by OSI, in line with Free Software principles but with rename
-# restrictions and typefaces can not be sold by itself.
+# The following licenses do not currently meet our standards for
+# inclusion.
+
+# mostly inline with Free Software principles and typefaces can not be
+# sold by itself.
 DEFAULT_ACCEPTABLE_LICENSES+=	vera-ttf-license
-
-# DFSG, not evaluated by OSI/FSF
-DEFAULT_ACCEPTABLE_LICENSES+=	happy
-
-# DFSG, not evaluated by OSI/FSF
-# Mainly used in https://sources.debian.org/copyright/license/lsof/
-DEFAULT_ACCEPTABLE_LICENSES+=	purdue
 
 ##### Variant spellings
 
