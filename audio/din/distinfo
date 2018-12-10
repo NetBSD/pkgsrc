@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2018/12/10 20:33:06 fox Exp $
+
+SHA1 (din-38a.tar.gz) = f5c2b3eeb21257eadc73e9a65ae97b58badfc947
+RMD160 (din-38a.tar.gz) = 209b7a0f6cc0781db113db2729a2c9698ecacddd
+SHA512 (din-38a.tar.gz) = 252154fdf401d4eb37979c63765280d065ff57b680789020d068b682e71ddbaec5361168615d1b325d41f095620c72bf3f622471082f01ec185667c417135484
+Size (din-38a.tar.gz) = 3619380 bytes
+SHA1 (patch-src_Makefile.am) = 652aefcb5d654896283545ddf0b96dabb0baa8ca
+SHA1 (patch-src_Makefile.in) = 6abe0ee6b73e61451b8258603167cee8c5d46cb7
