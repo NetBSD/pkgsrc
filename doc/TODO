@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18698 2018/12/10 15:02:51 leot Exp $
+$NetBSD: TODO,v 1.18699 2018/12/10 15:19:04 adam Exp $
 
 Suggested new packages
 ======================
@@ -1215,7 +1215,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-newt-0.52.20
 	o py-omniORBpy-3.7
 	o py-pendrell-0.3.7
-	o py-postgresql-5.0.6
 	o py-ptt-1.10.2
 	o py-pycountry-1.20
 	o py-simplejson-3.16.1
