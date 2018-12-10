@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.78 2018/12/03 08:35:32 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2018/12/10 10:59:26 wiz Exp $
 
 DISTNAME=	texlive-20180414-source
 PKGNAME=	web2c-2018
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	print
 MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2018/
 EXTRACT_SUFX=	.tar.xz
