@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/02 17:58:21 khorben Exp $
-share/fonts/X11/TTF/fontawesome-webfont.ttf
+@comment $NetBSD: PLIST,v 1.2 2018/12/10 20:08:01 tm Exp $
+share/fonts/X11/TTF/fa-brands-400.ttf
+share/fonts/X11/TTF/fa-regular-400.ttf
+share/fonts/X11/TTF/fa-solid-900.ttf
