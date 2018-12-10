@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2018/12/09 14:48:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.55 2018/12/10 00:14:23 ryoon Exp $
 
 DISTNAME=	samba-${VERSION}
 PKGREVISION=	1
@@ -145,7 +145,6 @@ CONFIGURE_ARGS+=	--with-ldb-lmdb
 PLIST.64bit=		yes
 .else
 CONFIGURE_ARGS+=	--without-ldb-lmdb
-PLIST.64bit=		no
 .endif
 
 INSTALLATION_DIRS+=	${DOCDIR} ${EGDIR}
