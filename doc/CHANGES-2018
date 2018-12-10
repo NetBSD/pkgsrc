@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5118 2018/12/10 08:55:54 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.5119 2018/12/10 08:59:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7128,3 +7128,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/xf86-video-mga to 2.0.0 [wiz 2018-12-10]
 	Updated graphics/ImageMagick to 7.0.8.15 [wiz 2018-12-10]
 	Updated devel/boehm-gc to 8.0.0 [wiz 2018-12-10]
+	Updated sysutils/dbus to 1.12.12 [wiz 2018-12-10]
