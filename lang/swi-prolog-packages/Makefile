@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.50 2018/12/09 21:05:33 adam Exp $
+# $NetBSD: Makefile,v 1.51 2018/12/10 14:59:50 leot Exp $
 
-PKGREVISION= 2
 .include "../../lang/swi-prolog-lite/Makefile.common"
 
 PKGNAME=		swi-prolog-packages-${SWIPLVERS}
@@ -68,10 +67,15 @@ DISPLAY= :2
 
 MAKE_ENV+=		DISPLAY=${DISPLAY:Q}
 
+# XXX: editline bindings seems limited and does not support completion, remove
+# XXX: them in order to always use readline.pl.
 post-install: teardownx
+	${RM} ${DESTDIR}${PREFIX}/lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_GNU_PLATFORM}/libedit4pl.so || ${TRUE}
+	${RM} ${DESTDIR}${PREFIX}/lib/swi-prolog-${PKGVERSION}/library/editline.pl || ${TRUE}
 	${RM} -f ${LOCALBASE}/lib/swi-prolog-${SWIPLVERS}/xpce-${XPCE_VERSION}/prolog/lib/.pwd
 	${INSTALL_DATA} ${WRKSRC}/packages/xpce/man/xpce-client.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xpce-client.1
 	${INSTALL_DATA} ${WRKSRC}/packages/xpce/man/xpce.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xpce.1
+
 teardownx:
 	${ECHO} teardownx: Xvfb-PID: `${CAT} ${WRKDIR}/.Xvfb.pid`
 	sleep 5
@@ -86,13 +90,13 @@ CHECK_WRKREF_SKIP=	lib/swi-prolog-${SWIPLVERS}/xpce-${XPCE_VERSION}/lib/${MACHIN
 .include "../../lang/swi-prolog-lite/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
-# uses rl_event_hook() interface
+.include "../../devel/ossp-uuid/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
