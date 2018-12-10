@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/11/04 03:29:02 agc Exp $
+$NetBSD: distinfo,v 1.9 2018/12/10 08:31:50 wiz Exp $
 
-SHA1 (xf86-video-i128-1.3.6.tar.bz2) = 4e66922f46169bf893cea00b33f80cf450070270
-RMD160 (xf86-video-i128-1.3.6.tar.bz2) = c9d0eb30c260f40aebba0d8bbe2f1f88056c6f9a
-SHA512 (xf86-video-i128-1.3.6.tar.bz2) = 688956107fe473941da9d22914dc1aa1889b8a1bb75678692d40630396eca5426a4506bb0a536c48b6ed7a2b580a80af5b8b5d3199e2b04d8f24c404f60d3c34
-Size (xf86-video-i128-1.3.6.tar.bz2) = 324894 bytes
-SHA1 (patch-src_i128__driver.c) = 96ea154c39e120e190e4fa850ecbbc8333528ce9
+SHA1 (xf86-video-i128-1.4.0.tar.bz2) = 56d5b897b2695222c13e59d2ade74620a99e1011
+RMD160 (xf86-video-i128-1.4.0.tar.bz2) = 053fc470a9cd650085c01ca3b5009fc3dff258fb
+SHA512 (xf86-video-i128-1.4.0.tar.bz2) = d58baee3f20b3ad2ece6853da0ff20a6d54b984c6e3289bad2715cc003b277a0b44d20ded25cfc116400468df552390bdb5d80fbd3fb60861488ee5d027664b2
+Size (xf86-video-i128-1.4.0.tar.bz2) = 331897 bytes
