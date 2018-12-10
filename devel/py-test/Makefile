@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.66 2018/11/24 15:35:13 adam Exp $
+# $NetBSD: Makefile,v 1.67 2018/12/10 23:59:20 leot Exp $
 
 DISTNAME=	pytest-4.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest/}
 
@@ -25,7 +26,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 .if ${_PYTHON_VERSION} == 27
 DEPENDS+=	${PYPKGPREFIX}-funcsigs-[0-9]*:../../devel/py-funcsigs
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-.elif ${_PYTHON_VERSION} < 36
+.endif
+.if ${_PYTHON_VERSION} < 36
 DEPENDS+=	${PYPKGPREFIX}-pathlib2>=2.2.0:../../devel/py-pathlib2
 .endif
 
