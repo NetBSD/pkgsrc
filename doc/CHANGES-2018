@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5113 2018/12/10 07:55:16 leot Exp $
+$NetBSD: CHANGES-2018,v 1.5114 2018/12/10 07:55:56 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7123,3 +7123,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/ffplay3 to 3.4.5nb2 [maya 2018-12-09]
 	Updated multimedia/ffmpeg3 to 3.4.5nb3 [maya 2018-12-09]
 	Updated print/cups-base to 2.2.10 [leot 2018-12-10]
+	Updated print/cups to 2.2.10 [leot 2018-12-10]
