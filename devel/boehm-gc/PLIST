@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2018/12/02 11:06:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2018/12/10 08:55:45 wiz Exp $
 include/gc.h
 include/gc/cord.h
 include/gc/cord_pos.h
@@ -8,7 +8,6 @@ include/gc/gc_allocator.h
 include/gc/gc_backptr.h
 include/gc/gc_config_macros.h
 include/gc/gc_cpp.h
-include/gc/gc_disclaim.h
 include/gc/gc_gcj.h
 include/gc/gc_inline.h
 include/gc/gc_mark.h
@@ -18,7 +17,6 @@ include/gc/gc_typed.h
 include/gc/gc_version.h
 include/gc/javaxfc.h
 include/gc/leak_detector.h
-include/gc/weakpointer.h
 include/gc_cpp.h
 lib/libcord.la
 lib/libgc.la
@@ -48,13 +46,13 @@ share/doc/gc/README.symbian
 share/doc/gc/README.uts
 share/doc/gc/README.win32
 share/doc/gc/README.win64
-share/doc/gc/debugging.html
-share/doc/gc/finalization.html
-share/doc/gc/gcdescr.html
-share/doc/gc/gcinterface.html
-share/doc/gc/leak.html
-share/doc/gc/overview.html
-share/doc/gc/porting.html
-share/doc/gc/scale.html
-share/doc/gc/simple_example.html
-share/doc/gc/tree.html
+share/doc/gc/debugging.md
+share/doc/gc/finalization.md
+share/doc/gc/gcdescr.md
+share/doc/gc/gcinterface.md
+share/doc/gc/leak.md
+share/doc/gc/overview.md
+share/doc/gc/porting.md
+share/doc/gc/scale.md
+share/doc/gc/simple_example.md
+share/doc/gc/tree.md
