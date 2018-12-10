@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2018/12/10 20:19:07 tm Exp $
+share/fonts/X11/OTF/Font Awesome 5 Brands-Regular-400.otf
+share/fonts/X11/OTF/Font Awesome 5 Free-Regular-400.otf
+share/fonts/X11/OTF/Font Awesome 5 Free-Solid-900.otf
