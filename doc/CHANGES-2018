@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5127 2018/12/10 15:02:51 leot Exp $
+$NetBSD: CHANGES-2018,v 1.5128 2018/12/10 15:19:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7143,3 +7143,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/swi-prolog-jpl to 7.6.4 [leot 2018-12-10]
 	Updated lang/swi-prolog-lite to 7.6.4 [leot 2018-12-10]
 	Updated lang/swi-prolog-packages to 7.6.4 [leot 2018-12-10]
+	Updated databases/py-postgresql to 5.0.6 [adam 2018-12-10]
+	Updated devel/py-pyparsing to 2.3.0 [adam 2018-12-10]
