@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.92 2018/12/09 06:07:23 triaxx Exp $
+# $NetBSD: license.mk,v 1.93 2018/12/10 15:37:49 gdt Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -66,22 +66,37 @@
 #	The list of licenses that will be the default value of
 #	ACCEPTABLE_LICENSES.  Adapting the longstanding policy of Open
 #	Source or Free licenses not requiring tags, it should contain
-#	almost all licenses that are Open Source or Free, so as to provide
-#	the most expansive default that almost all people find
-#	acceptable.  (Many people will want to add more licenses to
-#	ACCEPTABLE_LICENSES; the point is to have a default that very
-#	few people want to shrink.)
+#	all licenses that are definitively Free or Open Source --
+#	except those specifically excluded by the TNF board -- so as
+#	to provide the most expansive default that almost all people
+#	find acceptable.  (Many people will want to add more licenses
+#	to ACCEPTABLE_LICENSES; the point is to have a default that
+#	very few people want to shrink.)
 #
-#	As an exception to the Open Source or Free policy, the board
-#	of The NetBSD Foundation has decided that licenses that
-#	trigger obligations from use (rather than redistribution),
-#	such as the Affero GPL, should not be in
+#	Licenses approved by FSF as Free and by OSI as Open Source
+#	will be added by default, without annotation, as these
+#	organizations publish lists of approved licenses.
+#
+#	Licenses approved by Debian as meeting the Debian Free
+#	Software Guidelines will also be added by default.  They
+#	should be in a second section with a comment about each one,
+#	because Debian does not publish an accepted license list and
+#	acceptability must be inferred from inclusion in main.
+#
+#	The board of The NetBSD Foundation is the final arbiter of
+#	which licenses may be in DEFAULT_ACCEPTABLE_LICENSES.  As an
+#	exception to the above policy on treating Free, Open Source,
+#	and DFSG licenses as acceptable, the board has decided that
+#	licenses that trigger obligations from use (rather than
+#	redistribution), such as the Affero GPL, should not be in
 #	DEFAULT_ACCEPTABLE_LICENSES.
 #
 #	Licenses not formally approved as Free or Open Source may be
-#	added if they have terms that would obviously be approved if
-#	the effort were made.  Such license names will have a comment
-#	near them in the assignment to DEFAULT_ACCEPTABLE_LICENSES.
+#	added if they have terms that would 1) obviously be approved
+#	by FSF or OSI if the effort were made and 2) obviously not
+#	trigger the above issue with AGPL-type licenses.  Such license
+#	names will be in an additional section and have a comment near
+#	them in the assignment to DEFAULT_ACCEPTABLE_LICENSES.
 #
 #	The pkg_install sources also have a
 #	DEFAULT_ACCEPTABLE_LICENSES list, and that should be updated
