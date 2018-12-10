@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5129 2018/12/10 15:19:17 maya Exp $
+$NetBSD: CHANGES-2018,v 1.5130 2018/12/10 19:31:46 tm Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7146,3 +7146,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-postgresql to 5.0.6 [adam 2018-12-10]
 	Updated devel/py-pyparsing to 2.3.0 [adam 2018-12-10]
 	Updated mail/libetpan to 1.9.1 [maya 2018-12-10]
+	Updated databases/phpmyadmin to 4.8.3 [tm 2018-12-10]
