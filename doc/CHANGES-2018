@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5122 2018/12/10 11:01:30 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.5123 2018/12/10 11:03:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7134,3 +7134,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-JWT to 1.7.1 [adam 2018-12-10]
 	Updated print/poppler to 0.72.0 [wiz 2018-12-10]
 	Updated www/py-google-api-python-client to 1.7.6 [wiz 2018-12-10]
+	Updated www/py-idna to 2.8 [wiz 2018-12-10]
