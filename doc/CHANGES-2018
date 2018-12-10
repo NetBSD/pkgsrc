@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5115 2018/12/10 08:32:00 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.5116 2018/12/10 08:35:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7125,3 +7125,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/cups-base to 2.2.10 [leot 2018-12-10]
 	Updated print/cups to 2.2.10 [leot 2018-12-10]
 	Updated x11/xf86-video-i128 to 1.4.0 [wiz 2018-12-10]
+	Updated x11/xf86-video-mga to 2.0.0 [wiz 2018-12-10]
