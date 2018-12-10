@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5121 2018/12/10 10:28:18 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.5122 2018/12/10 11:01:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7133,3 +7133,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-cherrypy to 18.1.0 [adam 2018-12-10]
 	Updated textproc/py-JWT to 1.7.1 [adam 2018-12-10]
 	Updated print/poppler to 0.72.0 [wiz 2018-12-10]
+	Updated www/py-google-api-python-client to 1.7.6 [wiz 2018-12-10]
