@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.28 2018/09/13 10:57:47 adam Exp $
+$NetBSD: distinfo,v 1.29 2018/12/10 08:59:59 adam Exp $
 
-SHA1 (CherryPy-18.0.1.tar.gz) = 33c0453110da65f2eec103a8c9854cf9974bb559
-RMD160 (CherryPy-18.0.1.tar.gz) = 5f73153fadc64272b5acb110d3294d1efa669aa5
-SHA512 (CherryPy-18.0.1.tar.gz) = f815f2f89298781662976f1717a13d3e885a93236c39ee3be93f1fc94d30d4cbe54fe8cc20ba63be09e8d1025521d7eb138de542dc084a215abeb160493e915f
-Size (CherryPy-18.0.1.tar.gz) = 682007 bytes
+SHA1 (CherryPy-18.1.0.tar.gz) = 82c038a2c1d30408cfcefdd11f7daf49b4f9676b
+RMD160 (CherryPy-18.1.0.tar.gz) = ff28e7a3d71027bb29cc2617a923fe85e22a6d59
+SHA512 (CherryPy-18.1.0.tar.gz) = 58ae40ef62efeda051bf5dd35768a599094792d06a0e7c6e34c21cc5b003b700f43a02460d38a00067d255939e341fc438d248e3499fad76ccc8100f8eac94d3
+Size (CherryPy-18.1.0.tar.gz) = 682792 bytes
