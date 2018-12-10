@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.93 2018/12/10 15:37:49 gdt Exp $
+# $NetBSD: license.mk,v 1.94 2018/12/10 15:39:10 gdt Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -19,11 +19,6 @@
 #	build the package and instead print an error message.
 #	(pkg_install has code to behave the same way, but it is not
 #	yet turned on.)
-#
-#	XXX: Perhaps there should be some mechanism to prevent running
-#	programs that are part of packages that declare LICENSEs that
-#	are not in ACCEPTABLE_LICENSES or some per-user variable.
-#	This is surely controversial and requires discussion.
 #
 #	To include the default licenses, you can use the += operator
 #	in mk.conf. To override it, use the plain = operator.
