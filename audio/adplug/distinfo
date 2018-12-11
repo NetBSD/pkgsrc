@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 01:12:24 agc Exp $
+$NetBSD: distinfo,v 1.7 2018/12/11 09:50:44 wiz Exp $
 
-SHA1 (adplug-2.1.tar.bz2) = 49dd798467f194ece1863f18019912f8089cb9df
-RMD160 (adplug-2.1.tar.bz2) = 8788c174507fe39d3415f36e1ac60df6b84c889f
-SHA512 (adplug-2.1.tar.bz2) = 498e18df60660f40cb6504922abbe736867d6a36a42f12f1003d85c522b660575e5cfc70a5f7ab94aeec1bf78d1ab3ba649c156ba5521f38018ea19953fee5ff
-Size (adplug-2.1.tar.bz2) = 730686 bytes
-SHA1 (patch-adplugdb_adplugdb_cpp) = 06471351d5b263e515b115960ec0e3d3564dbd16
-SHA1 (patch-src_fmopl_c) = e5a081da04b9935a6c146c487bf578a5a78e5436
-SHA1 (patch-src_player.h) = a1bf12c872a244d56fa0cd776ecd22cc5af3bca4
+SHA1 (adplug-2.3.1.tar.bz2) = c6efe2e3ec744b45b607a18fb0ef04c87374b4ba
+RMD160 (adplug-2.3.1.tar.bz2) = 928c26a97248fb4e5c63813ff52369e812d1dd2c
+SHA512 (adplug-2.3.1.tar.bz2) = 324ce084ecf5b0d180b335ebcacd5ab80806a5c9fbdeed6ef7cbd6c2f2cb476d9d9f38f596b7d6100e3d6cab42294300559200297b4b3f34190c1f516454c8c3
+Size (adplug-2.3.1.tar.bz2) = 1478424 bytes
