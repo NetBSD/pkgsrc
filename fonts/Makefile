@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.320 2018/11/30 15:46:47 nia Exp $
+# $NetBSD: Makefile,v 1.321 2018/12/11 08:38:40 tm Exp $
 #
 
 COMMENT=	Fonts
@@ -40,6 +40,7 @@ SUBDIR+=	anatolian-ttf
 SUBDIR+=	arphic-ttf
 SUBDIR+=	artwiz-fonts
 SUBDIR+=	asea-ttf
+SUBDIR+=	awesome-otf
 SUBDIR+=	awesome-ttf
 SUBDIR+=	baekmuk-ttf
 SUBDIR+=	bakoma-fonts
