@@ -1,11 +1,23 @@
-case ${STAGE} in
+# $NetBSD: INSTALL,v 1.10 2018/12/11 17:49:40 schmonz Exp $
 
-POST-INSTALL)
+case "${STAGE}" in
+
+PRE-INSTALL)
 	cd ${PKG_SYSCONFDIR}
 	for i in ofmip pop3 smtp; do
-		${CHMOD} 644 tcp.${i}
-		${PREFIX}/bin/tcprules tcp.${i}.cdb tcp.${i}.tmp < tcp.${i}
-		${CHMOD} 644 tcp.${i}.cdb
+		s="tcp.${i}"
+		[ -f "${s}" ] && ${MV} -f "${s}" "control/tcprules/${i}"
+		[ -f "${s}.cdb" ] && ${RM} -f "${s}.cdb"
+	done
+
+	;;
+
+POST-INSTALL)
+	cd ${PKG_SYSCONFDIR}/control/tcprules
+	for i in ofmip pop3 smtp; do
+		${CHMOD} 644 ${i}
+		${PREFIX}/bin/tcprules ${i}.cdb ${i}.tmp < ${i}
+		${CHMOD} 644 ${i}.cdb
 	done
 
 	;;
