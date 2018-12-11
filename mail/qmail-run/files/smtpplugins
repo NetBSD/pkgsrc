@@ -8,6 +8,7 @@
 
 # plugins to execute on MAIL command
 [mail]
+@PREFIX@/bin/qmail-spp-spf
 
 # plugins to execute on RCPT command
 [rcpt]
