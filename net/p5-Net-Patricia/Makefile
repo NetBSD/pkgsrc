@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/08/22 09:46:02 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2018/12/11 08:47:16 tm Exp $
 #
 
 DISTNAME=	Net-Patricia-1.22
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
-MAINTAINER=	tm@core.io
+MAINTAINER=	tm@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Net-Patricia/
 COMMENT=	Patricia Trie perl module for fast IP address lookups
 LICENSE=	gnu-gpl-v2 AND 2-clause-bsd
