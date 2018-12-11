@@ -1,4 +1,4 @@
-$NetBSD: patch-texk_web2c_luatexdir_lua_lepdflib.cc,v 1.6 2018/12/04 13:00:42 ryoon Exp $
+$NetBSD: patch-texk_web2c_luatexdir_lua_lepdflib.cc,v 1.7 2018/12/11 13:35:12 ryoon Exp $
 
 --- texk/web2c/luatexdir/lua/lepdflib.cc.orig	2018-02-14 14:44:38.000000000 +0000
 +++ texk/web2c/luatexdir/lua/lepdflib.cc
@@ -47,7 +47,7 @@ $NetBSD: patch-texk_web2c_luatexdir_lua_lepdflib.cc,v 1.6 2018/12/04 13:00:42 ry
          uout->pc = uin->pc;                                    \
          uout->pd = uin->pd;                                    \
      } else                                                     \
-@@ -669,7 +671,7 @@ static int m_##in##_##function(lua_State
+@@ -669,14 +671,14 @@ static int m_##in##_##function(lua_State
  #define m_poppler_get_GOOSTRING(in, function)                  \
  static int m_##in##_##function(lua_State * L)                  \
  {                                                              \
@@ -56,6 +56,32 @@ $NetBSD: patch-texk_web2c_luatexdir_lua_lepdflib.cc,v 1.6 2018/12/04 13:00:42 ry
      udstruct *uin;                                             \
      uin = (udstruct *) luaL_checkudata(L, 1, M_##in);          \
      if (uin->pd != NULL && uin->pd->pc != uin->pc)             \
+         pdfdoc_changed_error(L);                               \
+     gs = ((in *) uin->d)->function();                          \
+     if (gs != NULL)                                            \
+-        lua_pushlstring(L, gs->getCString(), gs->getLength()); \
++        lua_pushlstring(L, gs->c_str(), gs->getLength()); \
+     else                                                       \
+         lua_pushnil(L);                                        \
+     return 1;                                                  \
+@@ -911,7 +913,7 @@ static int m_Array_getString(lua_State *
+     if (i > 0 && i <= len) {
+         gs = new GooString();
+         if (((Array *) uin->d)->getString(i - 1, gs))
+-            lua_pushlstring(L, gs->getCString(), gs->getLength());
++            lua_pushlstring(L, gs->c_str(), gs->getLength());
+         else
+             lua_pushnil(L);
+         delete gs;
+@@ -1063,7 +1065,7 @@ static int m_Catalog_getJS(lua_State * L
+     if (i > 0 && i <= len) {
+         gs = ((Catalog *) uin->d)->getJS(i - 1);
+         if (gs != NULL)
+-            lua_pushlstring(L, gs->getCString(), gs->getLength());
++            lua_pushlstring(L, gs->c_str(), gs->getLength());
+         else
+             lua_pushnil(L);
+         delete gs;
 @@ -1125,7 +1127,7 @@ m_poppler_get_INT(Dict, getLength);
  
  static int m_Dict_add(lua_State * L)
@@ -65,6 +91,15 @@ $NetBSD: patch-texk_web2c_luatexdir_lua_lepdflib.cc,v 1.6 2018/12/04 13:00:42 ry
      udstruct *uin, *uobj;
      uin = (udstruct *) luaL_checkudata(L, 1, M_Dict);
      if (uin->pd != NULL && uin->pd->pc != uin->pc)
+@@ -1378,7 +1380,7 @@ static int m_GooString__tostring(lua_Sta
+     uin = (udstruct *) luaL_checkudata(L, 1, M_GooString);
+     if (uin->pd != NULL && uin->pd->pc != uin->pc)
+         pdfdoc_changed_error(L);
+-    lua_pushlstring(L, ((GooString *) uin->d)->getCString(),
++    lua_pushlstring(L, ((GooString *) uin->d)->c_str(),
+                     ((GooString *) uin->d)->getLength());
+     return 1;
+ }
 @@ -1527,9 +1529,9 @@ static int m_Object_initBool(lua_State *
          pdfdoc_changed_error(L);
      luaL_checktype(L, 2, LUA_TBOOLEAN);
@@ -77,7 +112,7 @@ $NetBSD: patch-texk_web2c_luatexdir_lua_lepdflib.cc,v 1.6 2018/12/04 13:00:42 ry
      return 0;
  }
  
-@@ -1807,7 +1809,7 @@ static int m_Object_getNum(lua_State * L
+@@ -1807,14 +1809,14 @@ static int m_Object_getNum(lua_State * L
  
  static int m_Object_getString(lua_State * L)
  {
@@ -86,6 +121,14 @@ $NetBSD: patch-texk_web2c_luatexdir_lua_lepdflib.cc,v 1.6 2018/12/04 13:00:42 ry
      udstruct *uin;
      uin = (udstruct *) luaL_checkudata(L, 1, M_Object);
      if (uin->pd != NULL && uin->pd->pc != uin->pc)
+         pdfdoc_changed_error(L);
+     if (((Object *) uin->d)->isString()) {
+         gs = ((Object *) uin->d)->getString();
+-        lua_pushlstring(L, gs->getCString(), gs->getLength());
++        lua_pushlstring(L, gs->c_str(), gs->getLength());
+     } else
+         lua_pushnil(L);
+     return 1;
 @@ -2051,7 +2053,7 @@ static int m_Object_dictAdd(lua_State * 
          pdfdoc_changed_error(L);
      if (!((Object *) uin->d)->isDict())
@@ -95,7 +138,7 @@ $NetBSD: patch-texk_web2c_luatexdir_lua_lepdflib.cc,v 1.6 2018/12/04 13:00:42 ry
      return 0;
  }
  
-@@ -2465,7 +2467,7 @@ m_PDFDoc_INT(getErrorCode);
+@@ -2465,14 +2467,14 @@ m_PDFDoc_INT(getErrorCode);
  
  static int m_PDFDoc_getFileName(lua_State * L)
  {
@@ -104,6 +147,14 @@ $NetBSD: patch-texk_web2c_luatexdir_lua_lepdflib.cc,v 1.6 2018/12/04 13:00:42 ry
      udstruct *uin;
      uin = (udstruct *) luaL_checkudata(L, 1, M_PDFDoc);
      if (uin->pd != NULL && uin->pd->pc != uin->pc)
+         pdfdoc_changed_error(L);
+     gs = ((PdfDocument *) uin->d)->doc->getFileName();
+     if (gs != NULL)
+-        lua_pushlstring(L, gs->getCString(), gs->getLength());
++        lua_pushlstring(L, gs->c_str(), gs->getLength());
+     else
+         lua_pushnil(L);
+     return 1;
 @@ -2553,7 +2555,7 @@ m_PDFDoc_INT(getNumPages);
  
  static int m_PDFDoc_readMetadata(lua_State * L)
@@ -113,6 +164,15 @@ $NetBSD: patch-texk_web2c_luatexdir_lua_lepdflib.cc,v 1.6 2018/12/04 13:00:42 ry
      udstruct *uin;
      uin = (udstruct *) luaL_checkudata(L, 1, M_PDFDoc);
      if (uin->pd != NULL && uin->pd->pc != uin->pc)
+@@ -2561,7 +2563,7 @@ static int m_PDFDoc_readMetadata(lua_Sta
+     if (((PdfDocument *) uin->d)->doc->getCatalog()->isOk()) {
+         gs = ((PdfDocument *) uin->d)->doc->readMetadata();
+         if (gs != NULL)
+-            lua_pushlstring(L, gs->getCString(), gs->getLength());
++            lua_pushlstring(L, gs->c_str(), gs->getLength());
+         else
+             lua_pushnil(L);
+     } else
 @@ -2571,7 +2573,7 @@ static int m_PDFDoc_readMetadata(lua_Sta
  
  static int m_PDFDoc_getStructTreeRoot(lua_State * L)
@@ -155,7 +215,7 @@ $NetBSD: patch-texk_web2c_luatexdir_lua_lepdflib.cc,v 1.6 2018/12/04 13:00:42 ry
      Ref *r;
      udstruct *uin, *uout;
      uin = (udstruct *) luaL_checkudata(L, 1, M_StructElement);
-@@ -3226,13 +3228,13 @@ static int m_StructElement_setRevision(l
+@@ -3226,16 +3228,16 @@ static int m_StructElement_setRevision(l
  
  static int m_StructElement_getText(lua_State * L)
  {
@@ -170,7 +230,11 @@ $NetBSD: patch-texk_web2c_luatexdir_lua_lepdflib.cc,v 1.6 2018/12/04 13:00:42 ry
 +    i = (bool) lua_toboolean(L, 2);
      gs =  ((StructElement *) uin->d)->getText(i);
      if (gs != NULL)
-         lua_pushlstring(L, gs->getCString(), gs->getLength());
+-        lua_pushlstring(L, gs->getCString(), gs->getLength());
++        lua_pushlstring(L, gs->c_str(), gs->getLength());
+     else
+         lua_pushnil(L);
+     return 1;
 @@ -3321,7 +3323,7 @@ static int m_StructElement_findAttribute
  {
      Attribute::Type t;
