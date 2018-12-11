@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5141 2018/12/11 12:41:02 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.5142 2018/12/11 14:17:39 tm Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7160,3 +7160,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated audio/fasttracker2 to b121 [fox 2018-12-11]
 	Added security/gcr version 3.28.0nb1 [bsiegert 2018-12-11]
 	Updated www/midori to 7.0 [bsiegert 2018-12-11]
+	Updated print/php-pdflib to 4.1.2 [tm 2018-12-11]
