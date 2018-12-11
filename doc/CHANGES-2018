@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5134 2018/12/10 20:50:09 fox Exp $
+$NetBSD: CHANGES-2018,v 1.5135 2018/12/11 09:16:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7150,3 +7150,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated fonts/awesome-ttf to 5.5.0 [tm 2018-12-10]
 	Added fonts/awesome-otf version 5.5.0 [tm 2018-12-10]
 	Added audio/din version 38a [fox 2018-12-10]
+	Updated devel/py-requests to 2.21.0 [adam 2018-12-11]
+	Updated print/py-reportlab to 3.5.12 [adam 2018-12-11]
