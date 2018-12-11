@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2017/04/05 17:34:38 adam Exp $
+# $NetBSD: Makefile,v 1.7 2018/12/11 08:45:30 tm Exp $
 
 DISTNAME=	lrzip-0.631
 CATEGORIES=	archivers
 MASTER_SITES=	http://ck.kolivas.org/apps/lrzip/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tm@core.io
+MAINTAINER=	tm@NetBSD.org
 HOMEPAGE=	http://ck.kolivas.org/apps/lrzip/
 COMMENT=	Long Range ZIP or Lzma RZIP
 LICENSE=	gnu-gpl-v2
