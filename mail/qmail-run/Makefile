@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2018/12/04 17:00:59 schmonz Exp $
+# $NetBSD: Makefile,v 1.63 2018/12/11 17:49:40 schmonz Exp $
 #
 
-DISTNAME=		qmail-run-20181204
+DISTNAME=		qmail-run-20181211
 CATEGORIES=		mail
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -18,6 +18,7 @@ DEPENDS+=		${DEPENDS_QMAIL}
 DEPENDS+=		qmail-acceptutils>=20181128:../../mail/qmail-acceptutils
 DEPENDS+=		qmail-qfilter>1.5nb1:../../mail/qmail-qfilter
 DEPENDS+=		qmail-rejectutils>=20181128:../../mail/qmail-rejectutils
+DEPENDS+=		qmail-spp-spf-[0-9]*:../../mail/qmail-spp-spf
 
 WRKSRC=			${WRKDIR}
 NO_BUILD=		yes
@@ -40,9 +41,11 @@ EGDIR=			share/examples/qmail-run
 CONF_FILES+=		${PREFIX}/${EGDIR}/${f} \
 			${PKG_SYSCONFDIR}/control/${f}
 .endfor
-.for f in tcp.ofmip tcp.pop3 tcp.smtp
-CONF_FILES+=		${PREFIX}/${EGDIR}/${f} \
-			${PKG_SYSCONFDIR}/${f}
+TCPRULESDIR=		${PKG_SYSCONFDIR}/control/tcprules
+OWN_DIRS+=		${TCPRULESDIR}
+.for f in ofmip pop3 smtp
+CONF_FILES+=		${PREFIX}/${EGDIR}/tcprules-${f} \
+			${TCPRULESDIR}/${f}
 .endfor
 GREYLISTDIR=		${PKG_SYSCONFDIR}/control/greylist
 OWN_DIRS_PERMS+=	${GREYLISTDIR} ${QMAIL_DAEMON_USER} ${QMAIL_QMAIL_GROUP} 775
@@ -77,7 +80,7 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	mailer.conf
 SUBST_FILES.paths+=	greylisting-spp-with-exemptions ofmipd-with-user-cdb
 SUBST_FILES.paths+=	qmail-isspam-* qmail-procmail qmail-qread-client
-SUBST_FILES.paths+=	rcptchecks ofmipfilters smtpfilters smtpplugins tcp.*
+SUBST_FILES.paths+=	rcptchecks ofmipfilters smtpfilters smtpplugins tcprules-*
 SUBST_VARS.paths=	PKGNAME PKG_SYSCONFDIR PREFIX
 SUBST_VARS.paths+=	CAT ECHO GREP SED SH SORT TRUE
 
@@ -87,7 +90,7 @@ post-extract:
 		ofmipfilters smtpfilters \
 		pop3capabilities smtpcapabilities smtpplugins \
 		concurrencyincoming concurrencypop3 concurrencysubmission \
-		tcp.ofmip tcp.pop3 tcp.smtp; do \
+		tcprules-ofmip tcprules-pop3 tcprules-smtp; do \
 		${CP} ${FILESDIR}/$$f ${WRKDIR}/$$f; \
 	done; \
 	for f in greylisting-spp-with-exemptions ofmipd-with-user-cdb \
@@ -108,7 +111,7 @@ do-install:
 		ofmipfilters smtpfilters \
 		pop3capabilities smtpcapabilities smtpplugins \
 		concurrencyincoming concurrencypop3 concurrencysubmission \
-		tcp.ofmip tcp.pop3 tcp.smtp; do \
+		tcprules-ofmip tcprules-pop3 tcprules-smtp; do \
 		${INSTALL_DATA} ${WRKDIR}/$${f} \
 			${DESTDIR}${PREFIX}/${EGDIR}; \
 	done; \
