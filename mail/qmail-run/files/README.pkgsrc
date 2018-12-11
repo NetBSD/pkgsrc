@@ -42,5 +42,5 @@ LWQ suggests doing some things that the qmail-run package doesn't do:
 Instead, the qmail-run package:
 * Provides NetBSD-style rc.d scripts, including one very similar to qmailctl.
 * Sends log messages to syslog(3) by default.
-* Stores tcp.smtp{,cdb} and tcp.pop3{,cdb} in ${PKG_SYSCONFDIR}.
+* Stores tcprules in ${PKG_SYSCONFDIR}/control/tcprules.
 * Uses mailwrapper(8) and mailer.conf(5).
