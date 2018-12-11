@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.26 2018/10/06 12:12:48 adam Exp $
+$NetBSD: distinfo,v 1.27 2018/12/11 17:55:56 jklos Exp $
 
 SHA1 (x265_2.9.tar.gz) = 3c005b4ab409c6f996b36ad88d780ff85fbc9abf
 RMD160 (x265_2.9.tar.gz) = ea6772ec426c141eb1756cdf6bb2def3d6319f47
 SHA512 (x265_2.9.tar.gz) = 270818c7fd84947fde371e32bef225c1880cfb0bcd95378d95b51f50577a134d7cd585fcdfa43b103a24d76c5ad826b09509a07eb9e208e8f2b56f2f77365cf3
 Size (x265_2.9.tar.gz) = 1385848 bytes
 SHA1 (patch-CMakeLists.txt) = fbf4d08133a48b342a060f1b45bab0253455a1b1
+SHA1 (patch-common_cpu.cpp) = 78ca000d57dba65bd0bf6d6c4d3bd878ae3387e7
+SHA1 (patch-common_cpu.h) = 33e3bb9bc9cb60735aa09efa185c474ebd3e6af5
+SHA1 (patch-common_quant.cpp) = 8cbaf6f00c1799ffaa503ffa372f05b76e97ae3b
 SHA1 (patch-encoder_encoder.cpp) = 907db18c8e9afd51684ed886da70c23ac3d3652a
