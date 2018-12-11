@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5135 2018/12/11 09:16:28 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5136 2018/12/11 09:46:16 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7152,3 +7152,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added audio/din version 38a [fox 2018-12-10]
 	Updated devel/py-requests to 2.21.0 [adam 2018-12-11]
 	Updated print/py-reportlab to 3.5.12 [adam 2018-12-11]
+	Updated www/drupal8 to 8.6.4 [prlw1 2018-12-11]
