@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.154 2018/12/10 19:27:46 tm Exp $
+# $NetBSD: Makefile,v 1.155 2018/12/11 08:45:54 tm Exp $
 
 DISTNAME=	phpMyAdmin-4.8.3-all-languages
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/-all-languages//:tl}
@@ -6,7 +6,7 @@ CATEGORIES=	databases www
 MASTER_SITES=	https://files.phpmyadmin.net/phpMyAdmin/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	tm@core.io
+MAINTAINER=	tm@NetBSD.org
 HOMEPAGE=	https://www.phpmyadmin.net/
 COMMENT=	Set of PHP-scripts to adminstrate MySQL over the WWW
 LICENSE=	gnu-gpl-v2
