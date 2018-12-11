@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5137 2018/12/11 09:50:54 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.5138 2018/12/11 09:51:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7154,3 +7154,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/py-reportlab to 3.5.12 [adam 2018-12-11]
 	Updated www/drupal8 to 8.6.4 [prlw1 2018-12-11]
 	Updated audio/adplug to 2.3.1 [wiz 2018-12-11]
+	Updated www/py-mod_wsgi to 4.6.5 [adam 2018-12-11]
+	Updated www/py-channels to 2.1.6 [adam 2018-12-11]
