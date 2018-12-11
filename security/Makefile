@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.689 2018/11/22 13:09:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.690 2018/12/11 12:36:28 bsiegert Exp $
 #
 
 COMMENT=	Security tools
@@ -91,6 +91,7 @@ SUBDIR+=	fprint-demo
 SUBDIR+=	fragroute
 SUBDIR+=	fsh
 SUBDIR+=	fwbuilder
+SUBDIR+=	gcr
 SUBDIR+=	gnome-keyring
 SUBDIR+=	gnome-keyring-manager
 SUBDIR+=	gnome-keyring-sharp
