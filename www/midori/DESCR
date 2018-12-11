@@ -1,7 +1,7 @@
 Midori is a lightweight web browser.
 
 Features
-	Full integration with GTK+ 2
+	Full integration with GTK+ 3
 	Fast rendering with WebKit
 	Tabs, windows and session management
 	Bookmarks with XBEL and token support
