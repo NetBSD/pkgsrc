@@ -1,4 +1,4 @@
-$NetBSD: patch-sdext_source_pdfimport_xpdfwrapper_pdfioutdev__gpl.cxx,v 1.6 2018/12/04 12:56:49 ryoon Exp $
+$NetBSD: patch-sdext_source_pdfimport_xpdfwrapper_pdfioutdev__gpl.cxx,v 1.7 2018/12/11 12:59:49 ryoon Exp $
 
 --- sdext/source/pdfimport/xpdfwrapper/pdfioutdev_gpl.cxx.orig	2018-10-29 19:55:29.000000000 +0000
 +++ sdext/source/pdfimport/xpdfwrapper/pdfioutdev_gpl.cxx
@@ -11,6 +11,15 @@ $NetBSD: patch-sdext_source_pdfimport_xpdfwrapper_pdfioutdev__gpl.cxx,v 1.6 2018
      m_bSkipImages(false)
  {
  }
+@@ -555,7 +555,7 @@ void PDFOutDev::processLink(Link* link, 
+     LinkAction* pAction = link->getAction();
+     if (pAction && pAction->getKind() == actionURI)
+     {
+-        const char* pURI = static_cast<LinkURI*>(pAction)->getURI()->getCString();
++        const char* pURI = static_cast<LinkURI*>(pAction)->getURI()->c_str();
+ 
+         std::vector<char> aEsc( lcl_escapeLineFeeds(pURI) );
+ 
 @@ -578,7 +578,7 @@ void PDFOutDev::restoreState(GfxState*)
      printf( "restoreState\n" );
  }
@@ -20,6 +29,15 @@ $NetBSD: patch-sdext_source_pdfimport_xpdfwrapper_pdfioutdev__gpl.cxx,v 1.6 2018
  {
      assert(pMat);
  
+@@ -753,7 +753,7 @@ void PDFOutDev::updateFont(GfxState *sta
+ 
+             aFont = it->second;
+ 
+-            std::vector<char> aEsc( lcl_escapeLineFeeds(aFont.familyName.getCString()) );
++            std::vector<char> aEsc( lcl_escapeLineFeeds(aFont.familyName.c_str()) );
+             printf( " %d %d %d %d %f %d %s",
+                     aFont.isEmbedded,
+                     aFont.isBold,
 @@ -939,11 +939,11 @@ void PDFOutDev::endTextObject(GfxState*)
  }
  

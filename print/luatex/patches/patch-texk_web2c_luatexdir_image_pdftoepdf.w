@@ -1,4 +1,4 @@
-$NetBSD: patch-texk_web2c_luatexdir_image_pdftoepdf.w,v 1.6 2018/12/04 13:00:42 ryoon Exp $
+$NetBSD: patch-texk_web2c_luatexdir_image_pdftoepdf.w,v 1.7 2018/12/11 13:35:12 ryoon Exp $
 
 --- texk/web2c/luatexdir/image/pdftoepdf.w.orig	2018-01-17 18:00:12.000000000 +0000
 +++ texk/web2c/luatexdir/image/pdftoepdf.w
@@ -11,7 +11,7 @@ $NetBSD: patch-texk_web2c_luatexdir_image_pdftoepdf.w,v 1.6 2018/12/04 13:00:42 
  
  /* Maintain AVL tree of all PDF files for embedding */
  
-@@ -361,9 +361,9 @@ void copyReal(PDF pdf, double d)
+@@ -361,12 +361,12 @@ void copyReal(PDF pdf, double d)
      pdf->cave = true;
  }
  
@@ -22,7 +22,11 @@ $NetBSD: patch-texk_web2c_luatexdir_image_pdftoepdf.w,v 1.6 2018/12/04 13:00:42 
 +    const char *p;
      unsigned char c;
      size_t i, l;
-     p = string->getCString();
+-    p = string->getCString();
++    p = string->c_str();
+     l = (size_t) string->getLength();
+     if (pdf->cave)
+         pdf_out(pdf, ' ');
 @@ -393,7 +393,7 @@ static void copyString(PDF pdf, GooStrin
      pdf->cave = true;
  }
