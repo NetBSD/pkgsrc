@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailpop3d.sh,v 1.26 2018/11/28 16:42:44 schmonz Exp $
+# $NetBSD: qmailpop3d.sh,v 1.27 2018/12/11 17:49:41 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-pop3d (POP3 server for Maildirs).
 #
@@ -38,7 +38,7 @@ rcvar=${name}
 required_files="@PKG_SYSCONFDIR@/control/me"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/concurrencypop3"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/pop3capabilities"
-required_files="${required_files} @PKG_SYSCONFDIR@/tcp.pop3.cdb"
+required_files="${required_files} @PKG_SYSCONFDIR@/control/tcprules/pop3.cdb"
 command="${qmailpop3d_tcpserver}"
 procname=nb${name}
 start_precmd="qmailpop3d_precmd"
@@ -87,7 +87,7 @@ qmailpop3d_precmd()
 	command="@PREFIX@/bin/pgrphack @SETENV@ - ${qmailpop3d_postenv}
 @PREFIX@/bin/softlimit -m ${qmailpop3d_datalimit} ${qmailpop3d_pretcpserver}
 @PREFIX@/bin/argv0 ${qmailpop3d_tcpserver} ${procname}
-${qmailpop3d_tcpflags} -x @PKG_SYSCONFDIR@/tcp.pop3.cdb
+${qmailpop3d_tcpflags} -x @PKG_SYSCONFDIR@/control/tcprules/pop3.cdb
 -c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencypop3`
 ${qmailpop3d_tcphost} ${qmailpop3d_tcpport}
 ${qmailpop3d_precheckpassword} ${qmailpop3d_checkpassword}
@@ -125,10 +125,10 @@ qmailpop3d_cont()
 
 qmailpop3d_cdb()
 {
-	@ECHO@ "Reloading @PKG_SYSCONFDIR@/tcp.pop3."
-	cd @PKG_SYSCONFDIR@
-	@PREFIX@/bin/tcprules tcp.pop3.cdb tcp.pop3.tmp < tcp.pop3
-	@CHMOD@ 644 tcp.pop3.cdb
+	@ECHO@ "Reloading @PKG_SYSCONFDIR@/control/tcprules/pop3."
+	cd @PKG_SYSCONFDIR@/control/tcprules
+	@PREFIX@/bin/tcprules pop3.cdb pop3.tmp < pop3
+	@CHMOD@ 644 pop3.cdb
 }
 
 if [ -f /etc/rc.subr ]; then
