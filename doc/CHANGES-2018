@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5138 2018/12/11 09:51:59 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5139 2018/12/11 10:37:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7156,3 +7156,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated audio/adplug to 2.3.1 [wiz 2018-12-11]
 	Updated www/py-mod_wsgi to 4.6.5 [adam 2018-12-11]
 	Updated www/py-channels to 2.1.6 [adam 2018-12-11]
+	Updated audio/musicpd to 0.21.3 [wiz 2018-12-11]
