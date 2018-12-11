@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.79 2018/12/09 18:28:16 adam Exp $
+$NetBSD: distinfo,v 1.80 2018/12/11 10:15:55 abs Exp $
 
 SHA1 (icu4c-63_1-src.tgz) = ad523232f19af1c698c6489f8e15f7e9824f1662
 RMD160 (icu4c-63_1-src.tgz) = 5c895a6e2b135978df59e135ed772747aec0065f
@@ -10,6 +10,7 @@ SHA1 (patch-common_putil.cpp) = 6aa70b8698d663d3c798bafd9010a824c9609c20
 SHA1 (patch-common_putilimp.h) = a68faa97c2bffeecaca1586e26f5bbe48e71b262
 SHA1 (patch-common_umutex.h) = 096d3e15ef7b84533456af4570ed70747a4ef70c
 SHA1 (patch-common_unicode_platform.h) = 8b7b8bcf6f5185225a1ca516ac212a495f7b47e8
+SHA1 (patch-common_unicode_urename.h) = bc27b21c9a041a16ed1dd077e5c5af7e4cee4cf3
 SHA1 (patch-common_uposixdefs.h) = 4739ca7d4662335adcb322cd0943770651d548ce
 SHA1 (patch-config_Makefile.inc.in) = e7cee161315321d2580074054d87714b55319886
 SHA1 (patch-config_icu-config-bottom) = 168b89ee9180d4ae545125866ee91eb004010501
@@ -19,6 +20,7 @@ SHA1 (patch-config_mh-solaris-gcc) = e1097930f577917d3583e425d9d2affa1c3dcaf2
 SHA1 (patch-configure) = fdeae51f4390779dfd8df8471196e322cbb9ea3d
 SHA1 (patch-configure.ac) = b0291cf02351cbad9b0c7340baea9eb81cabb158
 SHA1 (patch-i18n_double-conversion-utils.h) = 773e93ed9baffa241d5af61bd631d2d7c4a867f8
+SHA1 (patch-i18n_uspoof.cpp) = b7d1757912a6da39c080b1453f4730cbb9b5fd65
 SHA1 (patch-icudefs.mk.in) = c2a9469bf896b5f0702d5795c3b1c2b394893663
 SHA1 (patch-runConfigureICU) = 3cd60613104fa4f1b81529795e75d5cf7f477b64
 SHA1 (patch-tools-toolutil-pkg_genc.cpp) = 3cbcf3387d6a39315b26a3e2a2ffb715507e9110
