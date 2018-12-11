@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailofmipd.sh,v 1.18 2018/11/28 16:42:44 schmonz Exp $
+# $NetBSD: qmailofmipd.sh,v 1.19 2018/12/11 17:49:41 schmonz Exp $
 #
 # @PKGNAME@ script to control ofmipd (SMTP submission service).
 #
@@ -41,7 +41,7 @@ required_files="${required_files} @PKG_SYSCONFDIR@/control/concurrencysubmission
 required_files="${required_files} @PKG_SYSCONFDIR@/control/rcpthosts"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/smtpcapabilities"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/fixsmtpio"
-required_files="${required_files} @PKG_SYSCONFDIR@/tcp.ofmip.cdb"
+required_files="${required_files} @PKG_SYSCONFDIR@/control/tcprules/ofmip.cdb"
 command="${qmailofmipd_tcpserver}"
 procname=nb${name}
 start_precmd="qmailofmipd_precmd"
@@ -90,7 +90,7 @@ qmailofmipd_precmd()
 	command="@PREFIX@/bin/pgrphack @SETENV@ - ${qmailofmipd_postenv}
 @PREFIX@/bin/softlimit -m ${qmailofmipd_datalimit} ${qmailofmipd_pretcpserver}
 @PREFIX@/bin/argv0 ${qmailofmipd_tcpserver} ${procname}
-${qmailofmipd_tcpflags} -x @PKG_SYSCONFDIR@/tcp.ofmip.cdb
+${qmailofmipd_tcpflags} -x @PKG_SYSCONFDIR@/control/tcprules/ofmip.cdb
 -c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencysubmission`
 ${qmailofmipd_tcphost} ${qmailofmipd_tcpport}
 ${qmailofmipd_precheckpassword} ${qmailofmipd_checkpassword}
@@ -128,10 +128,10 @@ qmailofmipd_cont()
 
 qmailofmipd_cdb()
 {
-	@ECHO@ "Reloading @PKG_SYSCONFDIR@/tcp.ofmip."
-	cd @PKG_SYSCONFDIR@
-	@PREFIX@/bin/tcprules tcp.ofmip.cdb tcp.ofmip.tmp < tcp.ofmip
-	@CHMOD@ 644 tcp.ofmip.cdb
+	@ECHO@ "Reloading @PKG_SYSCONFDIR@/control/tcprules/ofmip"
+	cd @PKG_SYSCONFDIR@/control/tcprules
+	@PREFIX@/bin/tcprules ofmip.cdb ofmip.tmp < ofmip
+	@CHMOD@ 644 ofmip.cdb
 }
 
 if [ -f /etc/rc.subr ]; then

@@ -1,0 +1,2 @@
+127.:allow,RELAYCLIENT=""
+:allow,UCSPITLS="",GREETDELAY="2",SPP_SPF_RESULT_FAIL="E550 spf_smtp_msg",SPP_SPF_RESULT_PASS="SGL_WHITELISTED=1",GL_DATABASE="@PKG_SYSCONFDIR@/control/greylist/database",GL_VERBOSE="1",QMAILQUEUE="@PREFIX@/bin/qmail-qfilter-queue",QMAILQUEUEFILTERS="control/smtpfilters"

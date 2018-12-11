@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailsmtpd.sh,v 1.23 2018/11/28 16:42:44 schmonz Exp $
+# $NetBSD: qmailsmtpd.sh,v 1.24 2018/12/11 17:49:41 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-smtpd (SMTP service).
 #
@@ -37,7 +37,7 @@ rcvar=${name}
 required_files="@PKG_SYSCONFDIR@/control/me"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/concurrencyincoming"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/rcpthosts"
-required_files="${required_files} @PKG_SYSCONFDIR@/tcp.smtp.cdb"
+required_files="${required_files} @PKG_SYSCONFDIR@/control/tcprules/smtp.cdb"
 command="${qmailsmtpd_tcpserver}"
 procname=nb${name}
 start_precmd="qmailsmtpd_precmd"
@@ -86,7 +86,7 @@ qmailsmtpd_precmd()
 	command="@PREFIX@/bin/pgrphack @SETENV@ - ${qmailsmtpd_postenv}
 @PREFIX@/bin/softlimit -m ${qmailsmtpd_datalimit} ${qmailsmtpd_pretcpserver}
 @PREFIX@/bin/argv0 ${qmailsmtpd_tcpserver} ${procname}
-${qmailsmtpd_tcpflags} -x @PKG_SYSCONFDIR@/tcp.smtp.cdb
+${qmailsmtpd_tcpflags} -x @PKG_SYSCONFDIR@/control/tcprules/smtp.cdb
 -c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencyincoming`
 -u `@ID@ -u @QMAIL_DAEMON_USER@` -g `@ID@ -g @QMAIL_DAEMON_USER@`
 ${qmailsmtpd_tcphost} ${qmailsmtpd_tcpport}
@@ -124,10 +124,10 @@ qmailsmtpd_cont()
 
 qmailsmtpd_cdb()
 {
-	@ECHO@ "Reloading @PKG_SYSCONFDIR@/tcp.smtp."
-	cd @PKG_SYSCONFDIR@
-	@PREFIX@/bin/tcprules tcp.smtp.cdb tcp.smtp.tmp < tcp.smtp
-	@CHMOD@ 644 tcp.smtp.cdb
+	@ECHO@ "Reloading @PKG_SYSCONFDIR@/control/tcprules/smtp."
+	cd @PKG_SYSCONFDIR@/control/tcprules
+	@PREFIX@/bin/tcprules smtp.cdb smtp.tmp < smtp
+	@CHMOD@ 644 smtp.cdb
 }
 
 if [ -f /etc/rc.subr ]; then
