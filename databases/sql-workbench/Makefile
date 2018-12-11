@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2017/06/12 12:07:39 abs Exp $
+# $NetBSD: Makefile,v 1.5 2018/12/11 15:29:31 abs Exp $
 
-DISTNAME=	Workbench-Build122
-PKGNAME=	sql-workbench-122
+DISTNAME=	Workbench-Build124
+PKGNAME=	sql-workbench-124
 CATEGORIES=	databases
 MASTER_SITES=	http://www.sql-workbench.net/
 EXTRACT_SUFX=	.zip
@@ -12,10 +12,10 @@ COMMENT=	JDBC-based cross-platform SQL query tool
 
 EXTRACT_DIR=	${WRKSRC}
 
-USE_JAVA=	run
-USE_JAVA2=	8
-PKG_JVMS_ACCEPTED=  oracle-jdk8 openjdk8
-USE_TOOLS+=	pax
+USE_JAVA=		run
+USE_JAVA2=		8
+PKG_JVMS_ACCEPTED=	oracle-jdk8 openjdk8
+USE_TOOLS+=		pax
 
 INSTALLATION_DIRS=	bin share/${PKGBASE}
 
