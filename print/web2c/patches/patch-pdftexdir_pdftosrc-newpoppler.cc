@@ -1,4 +1,4 @@
-$NetBSD: patch-pdftexdir_pdftosrc-newpoppler.cc,v 1.2 2018/12/04 13:01:44 ryoon Exp $
+$NetBSD: patch-pdftexdir_pdftosrc-newpoppler.cc,v 1.3 2018/12/11 13:59:04 ryoon Exp $
 
 --- pdftexdir/pdftosrc-newpoppler.cc.orig	2017-10-17 21:52:13.000000000 +0000
 +++ pdftexdir/pdftosrc-newpoppler.cc
@@ -11,6 +11,33 @@ $NetBSD: patch-pdftexdir_pdftosrc-newpoppler.cc,v 1.2 2018/12/04 13:01:44 ryoon 
      int objnum = 0, objgen = 0;
      bool extract_xref_table = false;
      int c;
+@@ -109,7 +109,7 @@ int main(int argc, char *argv[])
+             fprintf(stderr, "No SourceName found\n");
+             exit(1);
+         }
+-        outname = srcName.getString()->getCString();
++        outname = srcName.getString()->c_str();
+         // We cannot free srcName, as objname shares its string.
+         // srcName.free();
+     } else if (objnum > 0) {
+@@ -118,7 +118,7 @@ int main(int argc, char *argv[])
+             fprintf(stderr, "Not a Stream object\n");
+             exit(1);
+         }
+-        sprintf(buf, "%s", fileName->getCString());
++        sprintf(buf, "%s", fileName->c_str());
+         if ((p = strrchr(buf, '.')) == 0)
+             p = strchr(buf, 0);
+         if (objgen == 0)
+@@ -128,7 +128,7 @@ int main(int argc, char *argv[])
+         outname = buf;
+     } else {                    // objnum < 0 means we are extracting the XRef table
+         extract_xref_table = true;
+-        sprintf(buf, "%s", fileName->getCString());
++        sprintf(buf, "%s", fileName->c_str());
+         if ((p = strrchr(buf, '.')) == 0)
+             p = strchr(buf, 0);
+         sprintf(p, ".xref");
 @@ -173,9 +173,9 @@ int main(int argc, char *argv[])
  
                  // parse the header: object numbers and offsets

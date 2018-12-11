@@ -1,4 +1,4 @@
-$NetBSD: patch-pdftexdir_pdftoepdf-newpoppler.cc,v 1.2 2018/12/04 13:01:44 ryoon Exp $
+$NetBSD: patch-pdftexdir_pdftoepdf-newpoppler.cc,v 1.3 2018/12/11 13:59:04 ryoon Exp $
 
 --- pdftexdir/pdftoepdf-newpoppler.cc.orig	2018-04-04 04:08:11.000000000 +0000
 +++ pdftexdir/pdftoepdf-newpoppler.cc
@@ -52,7 +52,7 @@ $NetBSD: patch-pdftexdir_pdftoepdf-newpoppler.cc,v 1.2 2018/12/04 13:01:44 ryoon
          if (!charset.isNull() &&
              charset.isString() && is_subsetable(fontmap))
 -            epdf_mark_glyphs(fd, charset.getString()->getCString());
-+            epdf_mark_glyphs(fd, (char *)charset.getString()->getCString());
++            epdf_mark_glyphs(fd, (char *)charset.getString()->c_str());
          else
              embed_whole_font(fd);
          addFontDesc(fontdescRef.getRef(), fd);
@@ -76,6 +76,15 @@ $NetBSD: patch-pdftexdir_pdftoepdf-newpoppler.cc,v 1.2 2018/12/04 13:01:44 ryoon
      if (obj->isBool()) {
          pdf_printf("%s", obj->getBool()? "true" : "false");
      } else if (obj->isInt()) {
+@@ -566,7 +566,7 @@ static void copyObject(Object * obj)
+         pdf_printf("%s", convertNumToPDF(obj->getNum()));
+     } else if (obj->isString()) {
+         s = obj->getString();
+-        p = s->getCString();
++        p = s->c_str();
+         l = s->getLength();
+         if (strlen(p) == (unsigned int) l) {
+             pdf_puts("(");
 @@ -655,7 +655,7 @@ static void writeRefs()
  static void writeEncodings()
  {
