@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5139 2018/12/11 10:37:31 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.5140 2018/12/11 12:13:13 fox Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7157,3 +7157,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-mod_wsgi to 4.6.5 [adam 2018-12-11]
 	Updated www/py-channels to 2.1.6 [adam 2018-12-11]
 	Updated audio/musicpd to 0.21.3 [wiz 2018-12-11]
+	Updated audio/fasttracker2 to b121 [fox 2018-12-11]
