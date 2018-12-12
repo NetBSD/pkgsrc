@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5155 2018/12/12 14:10:27 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.5156 2018/12/12 14:22:54 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7175,3 +7175,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/nss to 3.41 [ryoon 2018-12-12]
 	Updated www/firefox to 64.0 [ryoon 2018-12-12]
 	Updated www/firefox-l10n to 64.0 [ryoon 2018-12-12]
+	Updated lang/openjdk8 to 1.8.192 [ryoon 2018-12-12]
