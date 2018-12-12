@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.11 2018/12/09 12:14:36 taca Exp $
+# $NetBSD: Makefile.php,v 1.12 2018/12/12 15:44:43 taca Exp $
 # used by lang/php72/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
@@ -53,9 +53,9 @@ CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX}
 CONFIGURE_ARGS+=	--with-pcre-regex=${BUILDLINK_PREFIX.pcre}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${PHP_PKG_PREFIX}
-PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts readline argon2 sqlite3
+PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts readline argon2
 PKG_SUPPORTED_OPTIONS+=	disable-filter-url
-PKG_SUGGESTED_OPTIONS+=	inet6 ssl readline sqlite3
+PKG_SUGGESTED_OPTIONS+=	inet6 ssl readline
 
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin" || ${OPSYS} == "FreeBSD"
 PKG_SUPPORTED_OPTIONS+=	dtrace
@@ -104,13 +104,6 @@ INSTALL_MAKE_FLAGS+=	-r
 .if !empty(PKG_OPTIONS:Margon2)
 CONFIGURE_ARGS+=	--with-password-argon2=${BUILDLINK_PREFIX.argon2}
 .include "../../security/argon2/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Msqlite3)
-CONFIGURE_ARGS+=	--with-sqlite3=${BUILDLINK_PREFIX.sqlite3}
-.include "../../databases/sqlite3/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=    --without-sqlite3
 .endif
 
 .if !empty(PKG_OPTIONS:Mdisable-filter-url)
