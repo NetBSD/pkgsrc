@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5145 2018/12/11 17:49:47 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.5146 2018/12/12 01:08:35 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7164,3 +7164,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/sql-workbench to 124 [abs 2018-12-11]
 	Updated net/unbound to 1.8.3 [he 2018-12-11]
 	Updated mail/qmail-run to 20181211 [schmonz 2018-12-11]
+	Updated mail/qmail-run to 20181211.1 [schmonz 2018-12-12]
