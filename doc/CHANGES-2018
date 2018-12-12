@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5151 2018/12/12 12:50:25 pho Exp $
+$NetBSD: CHANGES-2018,v 1.5152 2018/12/12 12:55:33 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7171,3 +7171,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/creduce to 2.8.0nb2 [adam 2018-12-12]
 	Updated textproc/oniguruma to 6.9.1 [adam 2018-12-12]
 	Updated time/wmmoonclock to 1.29 [pho 2018-12-12]
+	Updated net/youtube-dl to 20181209 [leot 2018-12-12]
