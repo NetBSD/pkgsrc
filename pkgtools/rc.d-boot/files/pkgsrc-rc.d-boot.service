@@ -1,0 +1,12 @@
+[Unit]
+Description = Run all pkgsrc rc.d scripts enabled in /etc/rc.conf
+After = syslog.target network.target
+
+[Service]
+Type = oneshot
+ExecStart = @PREFIX@/sbin/rc.d-boot start
+ExecStop = @PREFIX@/sbin/rc.d-boot stop
+RemainAfterExit = True
+
+[Install]
+WantedBy = multi-user.target
