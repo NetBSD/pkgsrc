@@ -1,23 +1,18 @@
-# $NetBSD: Makefile,v 1.26 2017/10/25 21:59:33 khorben Exp $
+# $NetBSD: Makefile,v 1.27 2018/12/12 12:45:19 pho Exp $
 
-DISTNAME=	wmMoonClock-1.27
-PKGREVISION=	1
+DISTNAME=	wmmoonclock-1.29
 CATEGORIES=	x11 time
-MASTER_SITES=	http://reality.sgiweb.org/freeware/source/wmMoonClock/
+MASTER_SITES=	https://www.dockapps.net/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-# HOMEPAGE=	http://nis-www.lanl.gov/~mgh/WindowMaker/DockApps.shtml
+HOMEPAGE=	https://www.dockapps.net/wmmoonclock
 COMMENT=	Shows lunar ephemeris to fairly high accuracy
+LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/Src
-USE_TOOLS+=	gmake
+USE_TOOLS+=	pkg-config
+GNU_CONFIGURE=	YES
 
-MAKE_FLAGS+=		CFLAGS=${CFLAGS:Q}
-MAKE_FLAGS+=		COPTS=${LDFLAGS:Q}
-MAKE_FLAGS.SunOS+=	EXTRA_LOCAL_LIBS=-lsocket
-
-INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
-
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
