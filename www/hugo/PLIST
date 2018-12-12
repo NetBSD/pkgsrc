@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2018/11/18 08:58:22 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/12/12 14:26:46 ryoon Exp $
 bin/generate
 bin/hugo
 gopkg/pkg/${GO_PLATFORM}/github.com/gohugoio/hugo/bufferpool.a
 gopkg/pkg/${GO_PLATFORM}/github.com/gohugoio/hugo/cache.a
+gopkg/pkg/${GO_PLATFORM}/github.com/gohugoio/hugo/cache/filecache.a
 gopkg/pkg/${GO_PLATFORM}/github.com/gohugoio/hugo/commands.a
 gopkg/pkg/${GO_PLATFORM}/github.com/gohugoio/hugo/common/collections.a
 gopkg/pkg/${GO_PLATFORM}/github.com/gohugoio/hugo/common/herrors.a
@@ -83,12 +84,17 @@ gopkg/src/github.com/gohugoio/hugo/CONTRIBUTING.md
 gopkg/src/github.com/gohugoio/hugo/Dockerfile
 gopkg/src/github.com/gohugoio/hugo/LICENSE
 gopkg/src/github.com/gohugoio/hugo/README.md
-gopkg/src/github.com/gohugoio/hugo/appveyor.yml
 gopkg/src/github.com/gohugoio/hugo/bench.sh
 gopkg/src/github.com/gohugoio/hugo/benchSite.sh
 gopkg/src/github.com/gohugoio/hugo/bepdock.sh
 gopkg/src/github.com/gohugoio/hugo/bufferpool/bufpool.go
 gopkg/src/github.com/gohugoio/hugo/bufferpool/bufpool_test.go
+gopkg/src/github.com/gohugoio/hugo/cache/filecache/filecache.go
+gopkg/src/github.com/gohugoio/hugo/cache/filecache/filecache_config.go
+gopkg/src/github.com/gohugoio/hugo/cache/filecache/filecache_config_test.go
+gopkg/src/github.com/gohugoio/hugo/cache/filecache/filecache_pruner.go
+gopkg/src/github.com/gohugoio/hugo/cache/filecache/filecache_pruner_test.go
+gopkg/src/github.com/gohugoio/hugo/cache/filecache/filecache_test.go
 gopkg/src/github.com/gohugoio/hugo/cache/partitioned_lazy_cache.go
 gopkg/src/github.com/gohugoio/hugo/cache/partitioned_lazy_cache_test.go
 gopkg/src/github.com/gohugoio/hugo/commands/benchmark.go
@@ -470,6 +476,7 @@ gopkg/src/github.com/gohugoio/hugo/docs/content/en/news/0.49-relnotes/index.md
 gopkg/src/github.com/gohugoio/hugo/docs/content/en/news/0.49.1-relnotes/index.md
 gopkg/src/github.com/gohugoio/hugo/docs/content/en/news/0.49.2-relnotes/index.md
 gopkg/src/github.com/gohugoio/hugo/docs/content/en/news/0.50-relnotes/index.md
+gopkg/src/github.com/gohugoio/hugo/docs/content/en/news/0.51-relnotes/index.md
 gopkg/src/github.com/gohugoio/hugo/docs/content/en/news/${PKGVERSION}-relnotes/index.md
 gopkg/src/github.com/gohugoio/hugo/docs/content/en/news/0.7-relnotes/index.md
 gopkg/src/github.com/gohugoio/hugo/docs/content/en/news/0.8-relnotes/index.md
@@ -1381,8 +1388,6 @@ gopkg/src/github.com/gohugoio/hugo/tpl/crypto/crypto.go
 gopkg/src/github.com/gohugoio/hugo/tpl/crypto/crypto_test.go
 gopkg/src/github.com/gohugoio/hugo/tpl/crypto/init.go
 gopkg/src/github.com/gohugoio/hugo/tpl/crypto/init_test.go
-gopkg/src/github.com/gohugoio/hugo/tpl/data/cache.go
-gopkg/src/github.com/gohugoio/hugo/tpl/data/cache_test.go
 gopkg/src/github.com/gohugoio/hugo/tpl/data/data.go
 gopkg/src/github.com/gohugoio/hugo/tpl/data/data_test.go
 gopkg/src/github.com/gohugoio/hugo/tpl/data/init.go
@@ -1425,6 +1430,7 @@ gopkg/src/github.com/gohugoio/hugo/tpl/partials/partials.go
 gopkg/src/github.com/gohugoio/hugo/tpl/path/init.go
 gopkg/src/github.com/gohugoio/hugo/tpl/path/init_test.go
 gopkg/src/github.com/gohugoio/hugo/tpl/path/path.go
+gopkg/src/github.com/gohugoio/hugo/tpl/path/path_test.go
 gopkg/src/github.com/gohugoio/hugo/tpl/resources/init.go
 gopkg/src/github.com/gohugoio/hugo/tpl/resources/resources.go
 gopkg/src/github.com/gohugoio/hugo/tpl/safe/init.go
@@ -1471,6 +1477,7 @@ gopkg/src/github.com/gohugoio/hugo/tpl/tplimpl/embedded/templates/shortcodes/gis
 gopkg/src/github.com/gohugoio/hugo/tpl/tplimpl/embedded/templates/shortcodes/highlight.html
 gopkg/src/github.com/gohugoio/hugo/tpl/tplimpl/embedded/templates/shortcodes/instagram.html
 gopkg/src/github.com/gohugoio/hugo/tpl/tplimpl/embedded/templates/shortcodes/instagram_simple.html
+gopkg/src/github.com/gohugoio/hugo/tpl/tplimpl/embedded/templates/shortcodes/param.html
 gopkg/src/github.com/gohugoio/hugo/tpl/tplimpl/embedded/templates/shortcodes/ref.html
 gopkg/src/github.com/gohugoio/hugo/tpl/tplimpl/embedded/templates/shortcodes/relref.html
 gopkg/src/github.com/gohugoio/hugo/tpl/tplimpl/embedded/templates/shortcodes/twitter.html
