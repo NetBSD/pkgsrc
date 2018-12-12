@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.73 2018/12/08 17:29:22 leot Exp $
+@comment $NetBSD: PLIST,v 1.74 2018/12/12 12:55:17 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -1001,6 +1001,9 @@ ${PYSITELIB}/youtube_dl/extractor/learnr.pyo
 ${PYSITELIB}/youtube_dl/extractor/lecture2go.py
 ${PYSITELIB}/youtube_dl/extractor/lecture2go.pyc
 ${PYSITELIB}/youtube_dl/extractor/lecture2go.pyo
+${PYSITELIB}/youtube_dl/extractor/lecturio.py
+${PYSITELIB}/youtube_dl/extractor/lecturio.pyc
+${PYSITELIB}/youtube_dl/extractor/lecturio.pyo
 ${PYSITELIB}/youtube_dl/extractor/leeco.py
 ${PYSITELIB}/youtube_dl/extractor/leeco.pyc
 ${PYSITELIB}/youtube_dl/extractor/leeco.pyo
@@ -1826,6 +1829,9 @@ ${PYSITELIB}/youtube_dl/extractor/tbs.pyo
 ${PYSITELIB}/youtube_dl/extractor/tdslifeway.py
 ${PYSITELIB}/youtube_dl/extractor/tdslifeway.pyc
 ${PYSITELIB}/youtube_dl/extractor/tdslifeway.pyo
+${PYSITELIB}/youtube_dl/extractor/teachable.py
+${PYSITELIB}/youtube_dl/extractor/teachable.pyc
+${PYSITELIB}/youtube_dl/extractor/teachable.pyo
 ${PYSITELIB}/youtube_dl/extractor/teachertube.py
 ${PYSITELIB}/youtube_dl/extractor/teachertube.pyc
 ${PYSITELIB}/youtube_dl/extractor/teachertube.pyo
@@ -2069,9 +2075,6 @@ ${PYSITELIB}/youtube_dl/extractor/uol.pyo
 ${PYSITELIB}/youtube_dl/extractor/uplynk.py
 ${PYSITELIB}/youtube_dl/extractor/uplynk.pyc
 ${PYSITELIB}/youtube_dl/extractor/uplynk.pyo
-${PYSITELIB}/youtube_dl/extractor/upskill.py
-${PYSITELIB}/youtube_dl/extractor/upskill.pyc
-${PYSITELIB}/youtube_dl/extractor/upskill.pyo
 ${PYSITELIB}/youtube_dl/extractor/urort.py
 ${PYSITELIB}/youtube_dl/extractor/urort.pyc
 ${PYSITELIB}/youtube_dl/extractor/urort.pyo
