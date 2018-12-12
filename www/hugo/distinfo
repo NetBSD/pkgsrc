@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2018/11/18 08:58:22 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2018/12/12 14:26:46 ryoon Exp $
 
-SHA1 (hugo-0.51.tar.gz) = 7d0bdfaa974d8586c18cf8d3f9c628ad3548d2a5
-RMD160 (hugo-0.51.tar.gz) = 140bf88ed66966142b250994aad683c390f09a23
-SHA512 (hugo-0.51.tar.gz) = 47c04c0388856c02aaf1be58676c0f625b30552c3ccc11c77a014d70bfb18ba6856268a1f3714ec75c8462753e333a597285064ab56f80c946669c35c5d2ee0c
-Size (hugo-0.51.tar.gz) = 19948327 bytes
+SHA1 (hugo-0.52.tar.gz) = ed3bcafa6655e47175c529a662d605988a9507ef
+RMD160 (hugo-0.52.tar.gz) = 185bce328e5f0175a598dd15051f372eb0a7e3f6
+SHA512 (hugo-0.52.tar.gz) = 45baf7d3b98b7ed5aee7a8d154a87d32f89a56cd00cff48f21d5c69bef7f13ebd9726885885ce74f9c65587669090ce613ae5bb3652a9e1dd3a47a69faa44272
+Size (hugo-0.52.tar.gz) = 19961000 bytes
 SHA1 (patch-helpers_content.go) = 7c16f7512f0a3bf2fbb873cebd8ad91686d68521
