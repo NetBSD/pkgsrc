@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.74 2018/11/14 22:21:55 kleink Exp $
+# $NetBSD: Makefile,v 1.75 2018/12/12 14:22:11 ryoon Exp $
 
-DISTNAME=	openjdk-1.8.181-20180914
-PKGNAME=	openjdk8-1.8.181
+DISTNAME=	openjdk-1.8.192-20181209
+PKGNAME=	openjdk8-1.8.192
 CATEGORIES=	lang
-PKGREVISION=	3
 MASTER_SITES=	${MASTER_SITE_LOCAL:=openjdk7/}
 EXTRACT_SUFX=	.tar.xz
 
@@ -26,7 +25,7 @@ JAVA_WRAPPERS=	jar java javac javadoc javah javap jcmd jhat jps jstack \
 BUILD_DEPENDS+=		mozilla-rootcerts>=1.0.20140820nb2:../../security/mozilla-rootcerts
 
 GNU_CONFIGURE=		yes
-CONFIGURE_SCRIPT=	common/autoconf/configure
+CONFIGURE_SCRIPT=	configure
 CONFIG_SHELL=		bash
 CONFIG_SUB_OVERRIDE+=	common/autoconf/build-aux/config.sub
 CONFIG_GUESS_OVERRIDE+=	common/autoconf/build-aux/config.guess
@@ -116,6 +115,7 @@ MAKE_ENV+=	ARCH_DATA_MODEL=${ABI:Q}
 .endif
 
 .if !empty(PKGSRC_COMPILER:Mclang)
+CONFIGURE_ARGS+=	--with-toolchain-type=clang
 MAKE_ENV+=		USE_CLANG=true
 _WRAP_EXTRA_ARGS.CC+=	-Wno-return-type
 CWRAPPERS_APPEND.cc+=	-Wno-return-type
@@ -145,6 +145,9 @@ BUILDLINK_TRANSFORM+=	rm:-fpch-deps
 _WRAP_EXTRA_ARGS.CXX+=	-mstackrealign
 CWRAPPERS_APPEND.cxx+=	-mstackrealign
 .  endif
+.else
+# GCC
+CONFIGURE_ARGS+=	--with-toolchain-type=gcc
 .endif
 .include "bootstrap.mk"
 
