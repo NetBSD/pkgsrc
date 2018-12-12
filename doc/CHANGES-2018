@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5153 2018/12/12 14:02:45 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.5154 2018/12/12 14:09:22 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7173,3 +7173,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/wmmoonclock to 1.29 [pho 2018-12-12]
 	Updated net/youtube-dl to 20181209 [leot 2018-12-12]
 	Updated devel/nss to 3.41 [ryoon 2018-12-12]
+	Updated www/firefox to 64.0 [ryoon 2018-12-12]
