@@ -1,15 +1,18 @@
-# $NetBSD: INSTALL,v 1.2 2018/12/05 19:49:26 schmonz Exp $
+# $NetBSD: INSTALL,v 1.3 2018/12/12 02:08:10 schmonz Exp $
 
-OPSYS=@OPSYS@
+RCDBOOT_STYLE=@RCDBOOT_STYLE@
 
-case ${STAGE} in
+case "${STAGE}" in
 
 POST-INSTALL)
-	case "${OPSYS}" in
-	Darwin)
+	case "${RCDBOOT_STYLE}" in
+	darwin-launchd)
 		launchctl load -w /Library/LaunchDaemons/org.pkgsrc.rc.d-boot.plist
 		;;
-	NetBSD)
+	linux-systemd)
+		systemctl enable --now /etc/systemd/system/pkgsrc-rc.d-boot.service
+		;;
+	netbsd-native)
 		;;
 	esac
 
