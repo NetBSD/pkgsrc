@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5146 2018/12/12 01:08:35 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.5147 2018/12/12 02:08:15 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7165,3 +7165,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/unbound to 1.8.3 [he 2018-12-11]
 	Updated mail/qmail-run to 20181211 [schmonz 2018-12-11]
 	Updated mail/qmail-run to 20181211.1 [schmonz 2018-12-12]
+	Updated pkgtools/rc.d-boot to 20181211 [schmonz 2018-12-12]
