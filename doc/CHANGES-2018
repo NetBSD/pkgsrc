@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5158 2018/12/12 15:10:35 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.5159 2018/12/12 16:38:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7178,3 +7178,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/openjdk8 to 1.8.192 [ryoon 2018-12-12]
 	Updated www/hugo to 0.52 [ryoon 2018-12-12]
 	Updated graphics/ImageMagick to 7.0.8.16 [bsiegert 2018-12-12]
+	Updated emulators/qemu to 3.1.0 [adam 2018-12-12]
+	Updated lang/nodejs to 10.14.2 [adam 2018-12-12]
