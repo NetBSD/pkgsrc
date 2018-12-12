@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.71 2018/10/31 08:06:24 leot Exp $
+@comment $NetBSD: PLIST,v 1.72 2018/12/12 11:09:55 leot Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -122,6 +122,7 @@ man/man3/CURLOPT_COOKIESESSION.3
 man/man3/CURLOPT_COPYPOSTFIELDS.3
 man/man3/CURLOPT_CRLF.3
 man/man3/CURLOPT_CRLFILE.3
+man/man3/CURLOPT_CURLU.3
 man/man3/CURLOPT_CUSTOMREQUEST.3
 man/man3/CURLOPT_DEBUGDATA.3
 man/man3/CURLOPT_DEBUGFUNCTION.3
