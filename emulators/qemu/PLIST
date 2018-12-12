@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.54 2018/04/25 07:56:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.55 2018/12/12 16:26:58 adam Exp $
 ${PLIST.ivshmem}bin/ivshmem-client
 ${PLIST.ivshmem}bin/ivshmem-server
 ${PLIST.alpha}bin/qemu-alpha
 ${PLIST.arm}bin/qemu-arm
 ${PLIST.armeb}bin/qemu-armeb
 ${PLIST.cris}bin/qemu-cris
+bin/qemu-edid
 bin/qemu-ga
 ${PLIST.i386}bin/qemu-i386
 bin/qemu-img
@@ -44,7 +45,6 @@ bin/qemu-system-nios2
 bin/qemu-system-or1k
 bin/qemu-system-ppc
 bin/qemu-system-ppc64
-bin/qemu-system-ppcemb
 bin/qemu-system-riscv32
 bin/qemu-system-riscv64
 bin/qemu-system-s390x
@@ -62,6 +62,7 @@ ${PLIST.x86_64}bin/qemu-x86_64
 man/man1/qemu-img.1
 man/man1/qemu.1
 man/man7/qemu-block-drivers.7
+man/man7/qemu-cpu-models.7
 man/man7/qemu-ga-ref.7
 man/man7/qemu-qmp-ref.7
 man/man8/qemu-ga.8
@@ -161,8 +162,10 @@ share/qemu/spapr-rtas.bin
 share/qemu/trace-events-all
 share/qemu/u-boot-sam460-20100605.bin
 share/qemu/u-boot.e500
+share/qemu/vgabios-bochs-display.bin
 share/qemu/vgabios-cirrus.bin
 share/qemu/vgabios-qxl.bin
+share/qemu/vgabios-ramfb.bin
 share/qemu/vgabios-stdvga.bin
 share/qemu/vgabios-virtio.bin
 share/qemu/vgabios-vmware.bin
