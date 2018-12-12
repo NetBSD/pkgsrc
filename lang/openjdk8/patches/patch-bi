@@ -1,8 +1,8 @@
-$NetBSD: patch-bi,v 1.1 2015/02/08 08:41:25 tnn Exp $
+$NetBSD: patch-bi,v 1.2 2018/12/12 14:22:11 ryoon Exp $
 
 DragonFly support.
 
---- hotspot/src/os_cpu/bsd_x86/vm/os_bsd_x86.cpp.orig	2015-02-02 15:32:37.000000000 +0000
+--- hotspot/src/os_cpu/bsd_x86/vm/os_bsd_x86.cpp.orig	2018-12-09 09:51:15.000000000 +0000
 +++ hotspot/src/os_cpu/bsd_x86/vm/os_bsd_x86.cpp
 @@ -96,7 +96,7 @@
  #define SPELL_REG_FP "ebp"
@@ -15,11 +15,11 @@ DragonFly support.
  #  define context_pc uc_mcontext.mc_rip
 @@ -283,13 +283,8 @@ address os::current_stack_pointer() {
    register void *esp;
-   __asm__("mov %%"SPELL_REG_SP", %0":"=r"(esp));
+   __asm__("mov %%" SPELL_REG_SP ", %0" : "=r" (esp));
    return (address) esp;
 -#elif defined(SPARC_WORKS)
 -  register void *esp;
--  __asm__("mov %%"SPELL_REG_SP", %0":"=r"(esp));
+-  __asm__("mov %%" SPELL_REG_SP ", %0" : "=r" (esp));
 -  return (address) ((char*)esp + sizeof(long)*2);
  #else
 -  register void *esp __asm__ (SPELL_REG_SP);
@@ -34,7 +34,7 @@ DragonFly support.
  intptr_t* _get_previous_fp() {
 -#if defined(SPARC_WORKS) || defined(__clang__) || defined(__llvm__)
 -  register intptr_t **ebp;
--  __asm__("mov %%"SPELL_REG_FP", %0":"=r"(ebp));
+-  __asm__("mov %%" SPELL_REG_FP ", %0" : "=r" (ebp));
 -#else
 -  register intptr_t **ebp __asm__ (SPELL_REG_FP);
 -#endif

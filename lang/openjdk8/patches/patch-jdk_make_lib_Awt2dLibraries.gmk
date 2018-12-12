@@ -1,11 +1,11 @@
-$NetBSD: patch-jdk_make_lib_Awt2dLibraries.gmk,v 1.4 2018/02/23 14:43:49 fhajny Exp $
+$NetBSD: patch-jdk_make_lib_Awt2dLibraries.gmk,v 1.5 2018/12/12 14:22:11 ryoon Exp $
 
 GCC support.
 Proper libiconv link (and SunOS needs it too).
 
---- jdk/make/lib/Awt2dLibraries.gmk.orig	2017-11-28 00:13:34.000000000 +0000
+--- jdk/make/lib/Awt2dLibraries.gmk.orig	2018-12-09 09:51:37.000000000 +0000
 +++ jdk/make/lib/Awt2dLibraries.gmk
-@@ -48,6 +48,8 @@ ifneq ($(OPENJDK_TARGET_OS), windows)
+@@ -45,6 +45,8 @@ ifneq ($(OPENJDK_TARGET_OS), windows)
    BUILD_LIBMLIB_LDLIBS += $(LIBM) $(LIBDL)
  endif
  
@@ -14,7 +14,7 @@ Proper libiconv link (and SunOS needs it too).
  $(eval $(call SetupNativeCompilation,BUILD_LIBMLIB_IMAGE, \
      LIBRARY := mlib_image, \
      OUTPUT_DIR := $(INSTALL_LIBRARIES_HERE), \
-@@ -695,7 +697,6 @@ $(eval $(call SetupNativeCompilation,BUI
+@@ -684,7 +686,6 @@ $(eval $(call SetupNativeCompilation,BUI
          $(SHARED_LIBRARY_FLAGS) \
          -I$(JDK_TOPDIR)/src/share/native/sun/java2d \
          -I$(JDK_TOPDIR)/src/share/native/sun/awt/debug, \
@@ -22,7 +22,7 @@ Proper libiconv link (and SunOS needs it too).
      CFLAGS_windows := -DCMS_IS_WINDOWS_, \
      MAPFILE := $(JDK_TOPDIR)/make/mapfiles/liblcms/mapfile-vers, \
      LDFLAGS := $(LDFLAGS_JDKLIB) \
-@@ -1070,7 +1071,7 @@ else # OPENJDK_TARGET_OS not windows
+@@ -1062,7 +1063,7 @@ else # OPENJDK_TARGET_OS not windows
        JAWT_LIBS += -lawt
      endif
      ifndef BUILD_HEADLESS_ONLY
@@ -31,16 +31,3 @@ Proper libiconv link (and SunOS needs it too).
      else
        JAWT_LIBS += -lawt_headless
        HEADLESS_CFLAG += -DHEADLESS
-@@ -1273,10 +1274,9 @@ ifndef BUILD_HEADLESS_ONLY
-   else ifeq ($(OPENJDK_TARGET_OS), windows)
-     LIBSPLASHSCREEN_LDFLAGS_SUFFIX += kernel32.lib user32.lib gdi32.lib delayimp.lib -DELAYLOAD:user32.dll
-   else ifeq ($(OPENJDK_TARGET_OS), solaris)
--    # Solaris still uses OPENWIN_LIB ..
--    LIBSPLASHSCREEN_LDFLAGS_SUFFIX += -L$(OPENWIN_LIB)$(OPENJDK_TARGET_CPU_ISADIR) -lX11 -lXext $(LIBM) -lpthread
-+    LIBSPLASHSCREEN_LDFLAGS_SUFFIX += $(X_LIBS) -lX11 -lXext $(LIBM) -L$(PACKAGE_PATH)/lib $(LIBICONV) -pthread
-   else ifeq ($(OPENJDK_TARGET_OS), bsd)
--    LIBSPLASHSCREEN_LDFLAGS_SUFFIX += $(X_LIBS) -lX11 -lXext $(LIBM) -L$(PACKAGE_PATH)/lib -liconv -pthread
-+    LIBSPLASHSCREEN_LDFLAGS_SUFFIX += $(X_LIBS) -lX11 -lXext $(LIBM) -L$(PACKAGE_PATH)/lib $(LIBICONV) -pthread
-   else	# .. all other Unixes can use X_LIBS
-     LIBSPLASHSCREEN_LDFLAGS_SUFFIX += $(X_LIBS) -lX11 -lXext $(LIBM) -lpthread
-   endif
