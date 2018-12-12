@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/12/05 19:23:04 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/12/12 02:08:10 schmonz Exp $
 sbin/rc.d-boot
 share/examples/rc.d-boot/org.pkgsrc.rc.d-boot.plist
+share/examples/rc.d-boot/pkgsrc-rc.d-boot.service

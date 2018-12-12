@@ -1,0 +1,29 @@
+# $NetBSD: DEINSTALL,v 1.1 2018/12/12 02:08:10 schmonz Exp $
+
+RCDBOOT_STYLE=@RCDBOOT_STYLE@
+
+case "${STAGE}" in
+
+DEINSTALL)
+	case "${RCDBOOT_STYLE}" in
+	darwin-launchd)
+		;;
+	linux-systemd)
+		systemctl disable pkgsrc-rc.d-boot.service
+		;;
+	netbsd-native)
+		;;
+	esac
+
+	${CAT} <<EOF
+===========================================================================
+
+pkgsrc-provided rc.d scripts will no longer be started at boot.
+
+If you wish to stop them, please do so now.
+
+===========================================================================
+EOF
+	;;
+
+esac
