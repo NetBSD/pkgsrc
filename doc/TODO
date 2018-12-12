@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18705 2018/12/12 19:08:56 bsiegert Exp $
+$NetBSD: TODO,v 1.18706 2018/12/12 19:14:09 bsiegert Exp $
 
 Suggested new packages
 ======================
@@ -178,18 +178,6 @@ Suggested new packages
 
 	Raster3D [pkg/34225]
 	http://skuld.bmsc.washington.edu/raster3d/
-
-	libpcapnav [pkg/34473]
-	http://netdude.sourceforge.net/
-	Wrapper library that allows navigation in tcpdump traces
-
-	libnetdude [pkg/34473]
-	http://netdude.sourceforge.net/
-	Library for manipulating libpcap/tcpdump trace files
-
-	netdude [pkg/34473]
-	http://netdude.sourceforge.net/
-	NETwork DUmp data Displayer and Editor for tcpdump tracefiles
 
 	BennuGD
 	http://www.bennugd.org/
