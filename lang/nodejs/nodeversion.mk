@@ -1,4 +1,4 @@
-# $NetBSD: nodeversion.mk,v 1.4 2018/11/28 08:36:04 adam Exp $
+# $NetBSD: nodeversion.mk,v 1.5 2018/12/12 16:38:06 adam Exp $
 
 # This file determins which nodejs version is used as a dependency for
 # a package.
@@ -63,10 +63,10 @@ NODE_VERSIONS_INCOMPATIBLE?=	# empty
 
 # Resolve NODE_VERSIONS_INCOMPATIBLE and generate the _OK vars.
 .for v in ${NODE_VERSIONS_ACCEPTED}
-.if empty(NODE_VERSIONS_INCOMPATIBLE:M${v})
+.  if empty(NODE_VERSIONS_INCOMPATIBLE:M${v})
 _NODE_VERSION_${v}_OK=		yes
 _NODE_VERSIONS_ACCEPTED+=	${v}
-.endif
+.  endif
 .endfor
 
 # Pick a version
