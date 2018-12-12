@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5149 2018/12/12 11:10:11 leot Exp $
+$NetBSD: CHANGES-2018,v 1.5150 2018/12/12 12:47:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7168,3 +7168,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated pkgtools/rc.d-boot to 20181211 [schmonz 2018-12-12]
 	Updated net/hub to 2.6.1 [leot 2018-12-12]
 	Updated www/curl to 7.63.0 [leot 2018-12-12]
+	Updated devel/creduce to 2.8.0nb2 [adam 2018-12-12]
+	Updated textproc/oniguruma to 6.9.1 [adam 2018-12-12]
