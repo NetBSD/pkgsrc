@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.120 2018/11/13 13:13:47 wiz Exp $
+# $NetBSD: mozilla-common.mk,v 1.121 2018/12/12 14:08:50 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -78,9 +78,6 @@ CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}browser/extensions/loop/run-all-loop-tests
 #CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}modules/pdfium/update.sh
 
 CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk3
-.if ${OPSYS} != "SunOS"
-CONFIGURE_ARGS+=	--enable-pie
-.endif
 CONFIGURE_ARGS+=	--enable-release
 CONFIGURE_ARGS+=	--enable-rust-simd
 CONFIGURE_ARGS+=	--enable-webrender=build
@@ -216,7 +213,7 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.19
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nss+=	nss>=3.38
+BUILDLINK_API_DEPENDS.nss+=	nss>=3.40.1
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"
