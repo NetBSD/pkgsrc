@@ -1,6 +1,6 @@
-$NetBSD: patch-hotspot_make_bsd_makefiles_saproc.make,v 1.1 2017/07/24 12:27:33 wiz Exp $
+$NetBSD: patch-hotspot_make_bsd_makefiles_saproc.make,v 1.2 2018/12/12 14:22:11 ryoon Exp $
 
---- hotspot/make/bsd/makefiles/saproc.make.orig	2017-04-27 09:45:08.000000000 +0000
+--- hotspot/make/bsd/makefiles/saproc.make.orig	2018-12-09 09:51:15.000000000 +0000
 +++ hotspot/make/bsd/makefiles/saproc.make
 @@ -107,7 +107,6 @@ ifneq ($(filter-out ia64 arm zero,$(SRCA
  endif
@@ -12,7 +12,7 @@ $NetBSD: patch-hotspot_make_bsd_makefiles_saproc.make,v 1.1 2017/07/24 12:27:33 
  else
 @@ -116,6 +115,8 @@ SA_LFLAGS = $(LFLAGS)
  endif
- SA_LFLAGS += $(LDFLAGS_HASH_STYLE)
+ SA_LFLAGS += $(LDFLAGS_HASH_STYLE) $(EXTRA_LDFLAGS)
  
 +SA_LFLAGS += $(EXTRA_LDFLAGS)
 +
