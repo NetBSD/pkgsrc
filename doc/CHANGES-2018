@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5148 2018/12/12 10:12:00 leot Exp $
+$NetBSD: CHANGES-2018,v 1.5149 2018/12/12 11:10:11 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7167,3 +7167,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/qmail-run to 20181211.1 [schmonz 2018-12-12]
 	Updated pkgtools/rc.d-boot to 20181211 [schmonz 2018-12-12]
 	Updated net/hub to 2.6.1 [leot 2018-12-12]
+	Updated www/curl to 7.63.0 [leot 2018-12-12]
