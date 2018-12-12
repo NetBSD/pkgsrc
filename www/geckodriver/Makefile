@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/09/21 21:26:33 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2018/12/12 04:51:35 minskim Exp $
 
 DISTNAME=	geckodriver-0.20.1
 CATEGORIES=	www
@@ -98,8 +98,8 @@ do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --locked --frozen --release
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/geckodriver ${DESTDIR}${PREFIX}/bin
+	cd ${WRKSRC} && ${PREFIX}/bin/cargo install --root ${DESTDIR}${PREFIX}
+	rm ${DESTDIR}${PREFIX}/.crates.toml
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
