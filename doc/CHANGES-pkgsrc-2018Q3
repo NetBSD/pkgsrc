@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q3,v 1.1.2.16 2018/11/29 06:22:03 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q3,v 1.1.2.17 2018/12/12 06:55:20 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q3 branch:
 
@@ -133,3 +133,6 @@ graphics/tiff: security update
 
 Pullup ticket #5882 - requested by maya
 x11/xinit: build fix
+
+Pullup ticket #5884 - requested by nia
+www/nginx: security update
