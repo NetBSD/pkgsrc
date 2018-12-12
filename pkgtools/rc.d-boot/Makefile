@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2018/12/05 19:49:26 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2018/12/12 02:08:10 schmonz Exp $
 #
 
-PKGNAME=		rc.d-boot-20181205
+PKGNAME=		rc.d-boot-20181211
 CATEGORIES=		pkgtools
 
 MAINTAINER=		schmonz@NetBSD.org
 COMMENT=		Run package rc.d scripts at boot on any supported OS
+LICENSE=		2-clause-bsd
 
-ONLY_FOR_PLATFORM=	Darwin-*-* NetBSD-*-*
+ONLY_FOR_PLATFORM=	# empty by default
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -24,14 +25,26 @@ NO_BUILD=		yes
 
 SUBST_CLASSES=		paths
 SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	rc.d-boot org.pkgsrc.rc.d-boot.plist
+SUBST_FILES.paths=	rc.d-boot
+SUBST_FILES.paths+=	org.pkgsrc.rc.d-boot.plist \
+			pkgsrc-rc.d-boot.service
 SUBST_VARS.paths=	PREFIX RCD_SCRIPTS_DIR RCORDER
 
-FILES_SUBST+=		OPSYS=${OPSYS:Q}
+FILES_SUBST+=		RCDBOOT_STYLE=${RCDBOOT_STYLE:Q}
 
-.if ${OPSYS} == "Darwin"
+.if ${OPSYS} == "Darwin" && exists (/Library/LaunchDaemons)
+ONLY_FOR_PLATFORM+=	Darwin-*-*
+RCDBOOT_STYLE=		darwin-launchd
 CONF_FILES+=		${PREFIX}/share/examples/${PKGBASE}/org.pkgsrc.rc.d-boot.plist \
 			/Library/LaunchDaemons/org.pkgsrc.rc.d-boot.plist
+.elif ${OPSYS} == "Linux" && exists(/etc/systemd/system)
+ONLY_FOR_PLATFORM+=	Linux-*-*
+RCDBOOT_STYLE=		linux-systemd
+CONF_FILES+=		${PREFIX}/share/examples/${PKGBASE}/pkgsrc-rc.d-boot.service \
+			/etc/systemd/system/pkgsrc-rc.d-boot.service
+.elif ${OPSYS} == "NetBSD" && exists(/etc/rc.d)
+ONLY_FOR_PLATFORM+=	NetBSD-*-*
+RCDBOOT_STYLE=		netbsd-native
 .endif
 
 INSTALLATION_DIRS=	sbin share/examples/${PKGBASE}
@@ -40,7 +53,10 @@ do-extract:
 	${CP} -R ${FILESDIR} ${WRKSRC}
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/org.pkgsrc.rc.d-boot.plist ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}/
+.	for i in org.pkgsrc.rc.d-boot.plist \
+		pkgsrc-rc.d-boot.service
+	${INSTALL_DATA} ${WRKSRC}/${i} ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}/
+.	endfor
 	${INSTALL_SCRIPT} ${WRKSRC}/rc.d-boot ${DESTDIR}${PREFIX}/sbin/
 
 .include "../../mk/bsd.pkg.mk"
