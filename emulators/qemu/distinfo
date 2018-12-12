@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.138 2018/11/05 07:27:59 skrll Exp $
+$NetBSD: distinfo,v 1.139 2018/12/12 16:26:58 adam Exp $
 
-SHA1 (qemu-3.0.0.tar.xz) = fffb4aa0139c7290295a129e040cec0df4468ea6
-RMD160 (qemu-3.0.0.tar.xz) = ea61cb8b6b144c7017c3a53161f883c3aeb15611
-SHA512 (qemu-3.0.0.tar.xz) = a764302f50b9aca4134bbbc1f361b98e71240cdc7b25600dfe733bf4cf17bd86000bd28357697b08f3b656899dceb9e459350b8d55557817444ed5d7fa380a5a
-Size (qemu-3.0.0.tar.xz) = 35624516 bytes
+SHA1 (qemu-3.1.0.tar.xz) = 3ed63c0c05abc8c8ec075dac2688c229f139a5da
+RMD160 (qemu-3.1.0.tar.xz) = 7650d76b8578ee2c31cef048c7929b30c607b83d
+SHA512 (qemu-3.1.0.tar.xz) = 7e8dae823937cfac2f0c60406bd3bdcb89df40313dab2a4bed327d5198f7fcc68ac8b31e44692caa09299cc71256ee0b8c17e4f49f78ada8043d424f5daf82fe
+Size (qemu-3.1.0.tar.xz) = 36070104 bytes
 SHA1 (patch-Makefile) = b3899fb8d0dd2f29bf3edd843836612e6e6c019c
 SHA1 (patch-audio_audio.c) = 98a1de2fd48638886b5d16f6a61dc72910e98b41
 SHA1 (patch-block.c) = 5eb15a87d6646719bf1e9277fbe73a99e4905481
