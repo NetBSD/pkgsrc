@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.22 2015/11/04 03:28:29 agc Exp $
+$NetBSD: distinfo,v 1.23 2018/12/12 19:07:22 bsiegert Exp $
 
-SHA1 (fox-1.6.50.tar.gz) = 7d3affba025df64553f33ab2c547135e8ed1a144
-RMD160 (fox-1.6.50.tar.gz) = e1afb440db7fd46a41eeb10dce1f57af912b1f88
-SHA512 (fox-1.6.50.tar.gz) = 195751d223e9af7d76a3bd3192ae7566a129cfe254f0ba3035b4f7e189c68b43daa8276edad95ebf2b1b403b6212a755000eebf1716a11bb7f06845fde4aceae
-Size (fox-1.6.50.tar.gz) = 4381855 bytes
+SHA1 (fox-1.6.57.tar.gz) = 323d3e3619671e0705e4c031c0211558225b131b
+RMD160 (fox-1.6.57.tar.gz) = 9adcae37d60429ab2b593d56227afd5b95ee6817
+SHA512 (fox-1.6.57.tar.gz) = e7b91054a9ea674818803415284cb61572935d22466e446cb37ef68344e2684e8acd567f7c8a6912f939dcbcc37455119ad6a01ac30513f460d0b3937b7e6087
+Size (fox-1.6.57.tar.gz) = 4284018 bytes
 SHA1 (patch-aa) = 06444b562a32d3471dd8d65f5af2c49e11b3e491
