@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 23:49:54 agc Exp $
+$NetBSD: distinfo,v 1.5 2018/12/13 01:03:59 pho Exp $
 
-SHA1 (whohas-0.29.tar.gz) = 6c171275db45ab6b7f259613432e93ef879610b8
-RMD160 (whohas-0.29.tar.gz) = b3458435ff472142ee3d9fb254b18deb13e58226
-SHA512 (whohas-0.29.tar.gz) = c078cc252c57e0f7d91769194f1d8e88ffc4481540ab4d573faa64d73ffa86128acba68fd43fcfb45e79b5f57f4232de9799fbf2bad1fbc0f4c85921a34d84b9
-Size (whohas-0.29.tar.gz) = 194111 bytes
+SHA1 (whohas-0.29.1.tar.gz) = 671a0caaac3ce89d156edff211a1999ebe4a1167
+RMD160 (whohas-0.29.1.tar.gz) = c89177a4c330eb576f534c4a14588e775c1870e0
+SHA512 (whohas-0.29.1.tar.gz) = 15ece8eeef4cbdf790efeb809cefa59d826e6f784b2f5375009d6eff30077617bc64d05596437b8281a472bf5877b15fd87df78c5367a8e0ee0c97f695906486
+Size (whohas-0.29.1.tar.gz) = 196217 bytes
