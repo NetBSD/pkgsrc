@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5169 2018/12/13 11:23:05 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5170 2018/12/13 11:48:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7196,3 +7196,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-bottle to 0.12.15 [adam 2018-12-13]
 	Updated www/py-yarl to 1.3.0 [adam 2018-12-13]
 	Updated net/py-xandikos to 0.0.11 [adam 2018-12-13]
+	Updated databases/py-sqlalchemy to 1.2.15 [adam 2018-12-13]
+	Updated databases/py-sqlalchemy-utils to 0.33.9 [adam 2018-12-13]
