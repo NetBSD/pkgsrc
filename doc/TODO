@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18706 2018/12/12 19:14:09 bsiegert Exp $
+$NetBSD: TODO,v 1.18707 2018/12/13 01:05:07 pho Exp $
 
 Suggested new packages
 ======================
@@ -1425,7 +1425,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o websvn-2.3.3
 	o weewm-0.01
 	o wgetpaste-2.26
-	o whohas-0.29.1
 	o whowatch-1.8.5
 	o windowlab-1.40
 	o wine-3.0.3
