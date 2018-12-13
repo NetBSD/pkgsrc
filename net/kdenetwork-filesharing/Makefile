@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2018/08/16 18:55:06 adam Exp $
+# $NetBSD: Makefile,v 1.21 2018/12/13 19:52:16 adam Exp $
 
 DISTNAME=	kdenetwork-filesharing-${_KDE_VERSION}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	net
 COMMENT=	Properties dialog plugin to share directory with local network
 

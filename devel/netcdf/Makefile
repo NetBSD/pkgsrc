@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2018/08/16 18:54:29 adam Exp $
+# $NetBSD: Makefile,v 1.51 2018/12/13 19:51:34 adam Exp $
 
 DISTNAME=	netcdf-4.6.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://www.unidata.ucar.edu/downloads/netcdf/ftp/
 

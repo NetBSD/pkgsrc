@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2018/08/16 18:54:44 adam Exp $
+# $NetBSD: Makefile,v 1.28 2018/12/13 19:51:51 adam Exp $
 
 DISTNAME=	bovo-${_KDE_VERSION}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	games
 COMMENT=	Five-in-a-row Board Game
 
