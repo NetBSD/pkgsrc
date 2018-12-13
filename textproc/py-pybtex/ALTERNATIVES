@@ -1,0 +1,3 @@
+bin/pybtex @PREFIX@/bin/pybtex-@PYVERSSUFFIX@
+bin/pybtex-convert @PREFIX@/bin/pybtex-convert-@PYVERSSUFFIX@
+bin/pybtex-format @PREFIX@/bin/pybtex-format-@PYVERSSUFFIX@
