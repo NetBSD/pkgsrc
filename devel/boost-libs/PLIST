@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2018/04/29 20:41:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.37 2018/12/13 19:22:56 adam Exp $
 lib/libboost_atomic.a
 lib/libboost_atomic.so
 lib/libboost_atomic.so.${BOOST_VERSION}
@@ -75,9 +75,6 @@ lib/libboost_regex.so.${BOOST_VERSION}
 lib/libboost_serialization.a
 lib/libboost_serialization.so
 lib/libboost_serialization.so.${BOOST_VERSION}
-lib/libboost_signals.a
-lib/libboost_signals.so
-lib/libboost_signals.so.${BOOST_VERSION}
 lib/libboost_stacktrace_addr2line.a
 lib/libboost_stacktrace_addr2line.so
 lib/libboost_stacktrace_addr2line.so.${BOOST_VERSION}

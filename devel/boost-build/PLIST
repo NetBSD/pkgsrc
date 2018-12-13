@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2018/04/29 20:41:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2018/12/13 19:22:56 adam Exp $
 share/boost-build/__init__.py
 share/boost-build/bootstrap.jam
 share/boost-build/build-system.jam
@@ -119,6 +119,7 @@ share/boost-build/tools/features/internal-feature.jam
 share/boost-build/tools/features/library-feature.jam
 share/boost-build/tools/features/link-feature.jam
 share/boost-build/tools/features/linkflags-feature.jam
+share/boost-build/tools/features/local-visibility-feature.jam
 share/boost-build/tools/features/location-feature.jam
 share/boost-build/tools/features/location-prefix-feature.jam
 share/boost-build/tools/features/name-feature.jam
@@ -139,6 +140,7 @@ share/boost-build/tools/features/toolset-feature.jam
 share/boost-build/tools/features/user-interface-feature.jam
 share/boost-build/tools/features/variant-feature.jam
 share/boost-build/tools/features/version-feature.jam
+share/boost-build/tools/features/visibility-feature.jam
 share/boost-build/tools/features/warnings-feature.jam
 share/boost-build/tools/flags.jam
 share/boost-build/tools/fop.jam
