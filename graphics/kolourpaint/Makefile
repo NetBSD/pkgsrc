@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2018/08/16 18:54:53 adam Exp $
+# $NetBSD: Makefile,v 1.40 2018/12/13 19:52:01 adam Exp $
 
 DISTNAME=	kolourpaint-16.04.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	graphics
 COMMENT=	KDE paint program
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/16.04.0/src/}
