@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2018/07/27 07:28:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2018/12/13 21:13:45 adam Exp $
 
-DISTNAME=	sphinxcontrib-bibtex-0.4.0
+DISTNAME=	sphinxcontrib-bibtex-0.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinxcontrib-bibtex/}
 
@@ -11,10 +10,13 @@ HOMEPAGE=	https://github.com/mcmtroffaes/sphinxcontrib-bibtex
 COMMENT=	Sphinx extension for BibTeX style citations
 LICENSE=	2-clause-bsd
 
-USE_LANGUAGES=		# none
+DEPENDS+=	${PYPKGPREFIX}-oset>=0.1.3:../../devel/py-oset
+DEPENDS+=	${PYPKGPREFIX}-six>=1.4.1:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.6:../../textproc/py-sphinx
+DEPENDS+=	${PYPKGPREFIX}-pybtex>=0.20:../../textproc/py-pybtex
+DEPENDS+=	${PYPKGPREFIX}-pybtex-docutils>=0.2.0:../../textproc/py-pybtex-docutils
 
-DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
-DEPENDS+=		${PYPKGPREFIX}-oset-[0-9]*:../../devel/py-oset
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
