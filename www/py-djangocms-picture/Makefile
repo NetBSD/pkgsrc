@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2018/11/20 18:47:52 adam Exp $
+# $NetBSD: Makefile,v 1.7 2018/12/13 21:32:31 adam Exp $
 
-DISTNAME=	djangocms-picture-2.1.1
+DISTNAME=	djangocms-picture-2.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/djangocms-picture/}
