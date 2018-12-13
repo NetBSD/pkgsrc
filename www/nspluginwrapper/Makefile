@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.66 2018/11/14 22:22:37 kleink Exp $
+# $NetBSD: Makefile,v 1.67 2018/12/13 19:52:25 adam Exp $
 #
 
 DISTNAME=	nspluginwrapper-1.4.4
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	www
 MASTER_SITES=	http://nspluginwrapper.org/download/
 MASTER_SITES+=	http://teokurebsd.org/netbsd/packages/distfiles/nspluginwrapper/
