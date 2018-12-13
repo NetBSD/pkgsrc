@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2018/11/20 18:54:24 adam Exp $
+# $NetBSD: Makefile,v 1.6 2018/12/13 21:36:46 adam Exp $
 
-DISTNAME=	djangocms-video-2.1.0
+DISTNAME=	djangocms-video-2.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/djangocms-video/}
