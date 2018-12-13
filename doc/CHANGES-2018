@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5174 2018/12/13 20:00:16 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5175 2018/12/13 21:14:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7212,3 +7212,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-redis to 3.0.1 [adam 2018-12-13]
 	Updated textproc/py-jsbeautifier to 1.8.9 [adam 2018-12-13]
 	Updated devel/py-test-xdist to 1.25.0 [adam 2018-12-13]
+	Updated textproc/py-pybtex to 0.22.0 [adam 2018-12-13]
+	Updated textproc/py-sphinxcontrib-bibtex to 0.4.1 [adam 2018-12-13]
