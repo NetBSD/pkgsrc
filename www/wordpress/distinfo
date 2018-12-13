@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.65 2018/12/07 12:25:58 morr Exp $
+$NetBSD: distinfo,v 1.66 2018/12/13 07:09:42 morr Exp $
 
-SHA1 (wordpress-5.0.tar.gz) = 67758958f14c1dcefe37ce6558d470a4e142893b
-RMD160 (wordpress-5.0.tar.gz) = 8a2c1f14d227f16d57873ff880c57b126737f09a
-SHA512 (wordpress-5.0.tar.gz) = 6aa6c06bf916c411b10b5112c31ea15c30119e8ce0398efae25aee27f166060b54d01c053a5e31c4f9eaa52a602ea9bc940d5557f46f33daa24c8e4fa9f44799
-Size (wordpress-5.0.tar.gz) = 10503584 bytes
+SHA1 (wordpress-5.0.1.tar.gz) = 298bd17feb7b4948e7eb8fa0cde17438a67db19a
+RMD160 (wordpress-5.0.1.tar.gz) = c5c2a8567e02461996304b1832db5350b48434d3
+SHA512 (wordpress-5.0.1.tar.gz) = 7e89ad55730d0434f84f2ceedc17ce0a3de3b15b4c4e906dcda4b3d7503f7e04721d2964d6602d208f36f5507c7699776deeeace2a8d7d19c946a7aa42357f48
+Size (wordpress-5.0.1.tar.gz) = 10506712 bytes
