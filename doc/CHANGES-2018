@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5165 2018/12/13 05:34:56 maya Exp $
+$NetBSD: CHANGES-2018,v 1.5166 2018/12/13 07:13:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7187,3 +7187,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/gnutls to 3.6.5nb1 [leot 2018-12-13]
 	Updated misc/whohas to 0.29.1 [pho 2018-12-13]
 	Updated net/inetutils to 1.9.4nb2 [maya 2018-12-13]
+	Updated devel/py-setuptools to 40.6.3 [adam 2018-12-13]
+	Updated devel/py-faker to 1.0.1 [adam 2018-12-13]
+	Updated devel/py-hypothesis to 3.83.1 [adam 2018-12-13]
+	Updated finance/py-braintree to 3.50.0 [adam 2018-12-13]
