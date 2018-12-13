@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2018/08/16 18:54:43 adam Exp $
+# $NetBSD: Makefile,v 1.17 2018/12/13 19:51:50 adam Exp $
 
 DISTNAME=	abba19584636c28cd98e3810e857f493cb63d06c
 PKGNAME=	emulationstation-2.0.0_rc1_20150210
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	emulators games
 MASTER_SITES=	https://github.com/Aloshi/EmulationStation/archive/
 EXTRACT_SUFX=	.zip
