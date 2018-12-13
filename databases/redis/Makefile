@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2018/08/19 08:39:36 adam Exp $
+# $NetBSD: Makefile,v 1.41 2018/12/13 19:34:33 adam Exp $
 
-DISTNAME=	redis-4.0.11
+DISTNAME=	redis-5.0.3
 CATEGORIES=	databases
 MASTER_SITES=	http://download.redis.io/releases/
 
@@ -10,7 +10,7 @@ COMMENT=	Persistent key-value database with built-in net interface
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=		c99
-USE_TOOLS+=		gmake pax
+USE_TOOLS+=		gmake
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -65,8 +65,6 @@ post-install:
 .for file in ${DOCFILES}
 	${INSTALL_DATA} ${WRKSRC}/${file} ${DESTDIR}${PREFIX}/${DOCDIR}/${file}
 .endfor
-	cd ${WRKSRC}/utils && pax -rwpp . ${DESTDIR}${EGDIR}/utils/
-	cd ${WRKSRC}/tests && pax -rwpp . ${DESTDIR}${EGDIR}/tests/
 
 do-test:
 	cd ${WRKSRC} && ${SH} runtest
