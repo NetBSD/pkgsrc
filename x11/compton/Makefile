@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/12/01 13:25:51 nia Exp $
+# $NetBSD: Makefile,v 1.6 2018/12/13 14:39:24 tnn Exp $
 
 DISTNAME=	compton-4.0
 CATEGORIES=	x11 wm
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=yshui/}
 GITHUB_TAG=	v4
 
 MAINTAINER=	nia@NetBSD.org
-HOMEPAGE=	https://github.com/chjj/compton
+HOMEPAGE=	https://github.com/yshui/compton
 COMMENT=	Configurable compositing manager for X11
 LICENSE=	mit AND mpl-2.0
 
