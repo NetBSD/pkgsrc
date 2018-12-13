@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2018/04/09 09:08:34 adam Exp $
+# $NetBSD: Makefile,v 1.5 2018/12/13 11:22:46 adam Exp $
 
-DISTNAME=	xandikos-0.0.9
+DISTNAME=	xandikos-0.0.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xandikos/}
@@ -20,7 +20,8 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} xandikos xandikos${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && \
+		${MV} xandikos xandikos-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
