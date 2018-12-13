@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/07/26 13:55:30 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2018/12/13 20:45:49 adam Exp $
 
-SHA1 (pybtex-0.21.tar.gz) = c8387343b8a8203316b73a0a3bac3a3dfe45dad5
-RMD160 (pybtex-0.21.tar.gz) = df7b5504fbeaabbd748801ee9917d2138b62a6a6
-SHA512 (pybtex-0.21.tar.gz) = 25540b879a2ddec9db28e63fa18ce4f4e3992f5e2feef7f35339644c4b7ba1358464a3388ec356f06d5c90f1a344ba440d3e940447ab848b76e34b353b2b3d9b
-Size (pybtex-0.21.tar.gz) = 364772 bytes
+SHA1 (pybtex-0.22.0.tar.gz) = cfd437f61d5b97607fe18e6993df454b68805360
+RMD160 (pybtex-0.22.0.tar.gz) = dbf66be6874dcb858f0ba8e2c19c739e039d0795
+SHA512 (pybtex-0.22.0.tar.gz) = eb10111414f8ff894d7d43462ffa02c748af052172439038ce2fdb3c0ca0aa735e480e2f31ee5e49ac29762c046a357e42efc58515d7a0f7d59369617d5f2660
+Size (pybtex-0.22.0.tar.gz) = 365268 bytes
