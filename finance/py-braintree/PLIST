@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/10/11 10:44:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/12/13 07:13:28 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -305,6 +305,9 @@ ${PYSITELIB}/braintree/plan.pyo
 ${PYSITELIB}/braintree/plan_gateway.py
 ${PYSITELIB}/braintree/plan_gateway.pyc
 ${PYSITELIB}/braintree/plan_gateway.pyo
+${PYSITELIB}/braintree/processor_response_types.py
+${PYSITELIB}/braintree/processor_response_types.pyc
+${PYSITELIB}/braintree/processor_response_types.pyo
 ${PYSITELIB}/braintree/resource.py
 ${PYSITELIB}/braintree/resource.pyc
 ${PYSITELIB}/braintree/resource.pyo
