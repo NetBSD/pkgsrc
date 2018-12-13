@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5172 2018/12/13 19:24:08 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5173 2018/12/13 19:38:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7208,3 +7208,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/boost-mpi to 1.69.0 [adam 2018-12-13]
 	Updated devel/py-boost to 1.69.0 [adam 2018-12-13]
 	Updated meta-pkgs/boost to 1.69.0 [adam 2018-12-13]
+	Updated databases/redis to 5.0.3 [adam 2018-12-13]
+	Updated databases/py-redis to 3.0.1 [adam 2018-12-13]
