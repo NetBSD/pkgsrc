@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2018/12/10 19:27:46 tm Exp $
+@comment $NetBSD: PLIST,v 1.47 2018/12/13 08:22:42 tm Exp $
 share/doc/phpmyadmin/CODE_OF_CONDUCT.md
 share/doc/phpmyadmin/CONTRIBUTING.md
 share/doc/phpmyadmin/ChangeLog
@@ -136,6 +136,7 @@ share/phpmyadmin/js/db_central_columns.js
 share/phpmyadmin/js/db_multi_table_query.js
 share/phpmyadmin/js/db_operations.js
 share/phpmyadmin/js/db_qbe.js
+share/phpmyadmin/js/db_query_generator.js
 share/phpmyadmin/js/db_search.js
 share/phpmyadmin/js/db_structure.js
 share/phpmyadmin/js/db_tracking.js
@@ -1874,6 +1875,7 @@ share/phpmyadmin/vendor/phpmyadmin/sql-parser/src/Utils/Tokens.php
 share/phpmyadmin/vendor/phpseclib/phpseclib/AUTHORS
 share/phpmyadmin/vendor/phpseclib/phpseclib/LICENSE
 share/phpmyadmin/vendor/phpseclib/phpseclib/README.md
+share/phpmyadmin/vendor/phpseclib/phpseclib/appveyor.yml
 share/phpmyadmin/vendor/phpseclib/phpseclib/composer.json
 share/phpmyadmin/vendor/phpseclib/phpseclib/phpseclib/Crypt/AES.php
 share/phpmyadmin/vendor/phpseclib/phpseclib/phpseclib/Crypt/Base.php
