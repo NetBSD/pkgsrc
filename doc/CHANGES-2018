@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5170 2018/12/13 11:48:05 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5171 2018/12/13 19:14:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7198,3 +7198,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/py-xandikos to 0.0.11 [adam 2018-12-13]
 	Updated databases/py-sqlalchemy to 1.2.15 [adam 2018-12-13]
 	Updated databases/py-sqlalchemy-utils to 0.33.9 [adam 2018-12-13]
+	Updated parallel/hwloc to 1.11.12 [adam 2018-12-13]
+	Updated devel/libatomic_ops to 7.6.8 [adam 2018-12-13]
