@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2018/12/12 12:45:19 pho Exp $
+# $NetBSD: Makefile,v 1.28 2018/12/13 17:31:57 jperkin Exp $
 
 DISTNAME=	wmmoonclock-1.29
+PKGNAME=	${DISTNAME:C/moonclock/MoonClock/}
 CATEGORIES=	x11 time
 MASTER_SITES=	https://www.dockapps.net/download/
 
