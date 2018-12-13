@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2018/10/09 12:21:20 leot Exp $
+# $NetBSD: Makefile,v 1.12 2018/12/13 19:52:17 adam Exp $
 
 DISTNAME=	megatools-1.10.2
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://megatools.megous.com/builds/
 

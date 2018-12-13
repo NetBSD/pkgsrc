@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.88 2018/11/23 08:06:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.89 2018/12/13 19:52:15 adam Exp $
 
 DISTNAME=		xine-ui-0.99.8
-PKGREVISION=		21
+PKGREVISION=		22
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xine/}
 EXTRACT_SUFX=		.tar.xz

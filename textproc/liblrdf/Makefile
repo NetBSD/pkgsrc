@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2018/08/16 18:54:32 adam Exp $
+# $NetBSD: Makefile,v 1.22 2018/12/13 19:51:37 adam Exp $
 #
 
 DISTNAME=	liblrdf-0.5.0
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	textproc
 MASTER_SITES=	# github download sucks for packaging
 
