@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/07/26 10:37:57 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2018/12/13 21:13:45 adam Exp $
 
-SHA1 (sphinxcontrib-bibtex-0.4.0.tar.gz) = 900d94732f2c43d34c4bce1197254f187acde5fa
-RMD160 (sphinxcontrib-bibtex-0.4.0.tar.gz) = a343d1d4a60f130d667b6883f4da44a36dd8bb45
-SHA512 (sphinxcontrib-bibtex-0.4.0.tar.gz) = c076b5d45b958b7476c74e95237bbe60fdeac26aa2e85d6fa0012399ea2339f7ec8551594f37d3ec302325bca33a5dfe88bf53bd727a245a575be558d4698cf7
-Size (sphinxcontrib-bibtex-0.4.0.tar.gz) = 48872 bytes
+SHA1 (sphinxcontrib-bibtex-0.4.1.tar.gz) = d4f6cb00966a818978b8a67a3d21fa97c984208e
+RMD160 (sphinxcontrib-bibtex-0.4.1.tar.gz) = e0624faafdbe2f1757143f5a4e7fcc4c3962a103
+SHA512 (sphinxcontrib-bibtex-0.4.1.tar.gz) = 2cde3890b789458c23c2d2be102d05ce54f897da95dfe18506111949e6aa55c30eba6e68b9e00431a264b48a275327ab85fa5dfe769e5705d6c0f07770f2bf4e
+Size (sphinxcontrib-bibtex-0.4.1.tar.gz) = 48288 bytes
