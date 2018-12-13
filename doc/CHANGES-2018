@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5167 2018/12/13 08:24:35 tm Exp $
+$NetBSD: CHANGES-2018,v 1.5168 2018/12/13 11:03:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7192,3 +7192,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-hypothesis to 3.83.1 [adam 2018-12-13]
 	Updated finance/py-braintree to 3.50.0 [adam 2018-12-13]
 	Updated databases/phpmyadmin to 4.8.4 [tm 2018-12-13]
+	Updated security/py-bcrypt to 3.1.5 [adam 2018-12-13]
+	Updated www/py-bottle to 0.12.15 [adam 2018-12-13]
