@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2018/09/18 08:41:33 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2018/12/13 19:51:33 adam Exp $
 
 DISTNAME=	mariadb-connector-c-3.0.6
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=MariaDB/}
 

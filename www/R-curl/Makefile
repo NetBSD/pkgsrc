@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2018/08/16 18:55:13 adam Exp $
+# $NetBSD: Makefile,v 1.7 2018/12/13 19:52:24 adam Exp $
 
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www R
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

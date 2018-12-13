@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2018/08/16 18:55:14 adam Exp $
+# $NetBSD: Makefile,v 1.6 2018/12/13 19:52:25 adam Exp $
 
 PKGNAME=		${APACHE_PKG_PREFIX}-${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		2
 COMMENT=		Passenger module for Apache 2.x
 
 BUILDLINK_DEPMETHOD.curl=	build
