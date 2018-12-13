@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5163 2018/12/13 00:10:38 leot Exp $
+$NetBSD: CHANGES-2018,v 1.5164 2018/12/13 01:05:07 pho Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7185,3 +7185,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/fox to 1.6.57 [bsiegert 2018-12-12]
 	Updated devel/boehm-gc to 8.0.0nb1 [wiz 2018-12-12]
 	Updated security/gnutls to 3.6.5nb1 [leot 2018-12-13]
+	Updated misc/whohas to 0.29.1 [pho 2018-12-13]
