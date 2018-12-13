@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2018/11/20 18:54:24 adam Exp $
+$NetBSD: distinfo,v 1.5 2018/12/13 21:36:46 adam Exp $
 
-SHA1 (djangocms-video-2.1.0.tar.gz) = ab9ab9131cacc3ad8f17d33fb35c617fe75609e5
-RMD160 (djangocms-video-2.1.0.tar.gz) = b0e6d8862db6e269add0d0cdc75a85a7de062317
-SHA512 (djangocms-video-2.1.0.tar.gz) = cb9d0573c1da2e6671b112b189848adc22eaa1b88a6b6219186349d9125ba1ed47bff408d5babe2b7a6a82e2384cfd71fd5a43825c3b701da4986d30634d87d7
-Size (djangocms-video-2.1.0.tar.gz) = 28119 bytes
+SHA1 (djangocms-video-2.1.1.tar.gz) = 5404c2b711e57e135b0af4a38e2b502bc2114785
+RMD160 (djangocms-video-2.1.1.tar.gz) = 0b2cbfa56b9219814c2a0996b2e2f0afd5602163
+SHA512 (djangocms-video-2.1.1.tar.gz) = 799b75a3ed1f35075e97a40940e6d25183a96240992f2a04693fbb9c7ab1806fbfbecc1a54afbcce0fa536454ba09106f83b00f82df8c267198ed3f5e4916e9d
+Size (djangocms-video-2.1.1.tar.gz) = 27084 bytes
 SHA1 (patch-setup.py) = 5a764fb3cd4efaf1b3ac9a144cc3141ad5fe5b4c
