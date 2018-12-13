@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/12/09 20:11:40 leot Exp $
+# $NetBSD: Makefile,v 1.21 2018/12/13 10:49:38 gson Exp $
 
 DISTNAME=	nettle-3.4.1
 CATEGORIES=	devel security
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.lysator.liu.se/~nisse/nettle/
 COMMENT=	Cryptographic library
 LICENSE=	gnu-lgpl-v2.1
 
-USE_LANGUAGES=		c
+USE_LANGUAGES=		c c99
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gm4 gmake
 GNU_CONFIGURE=		yes
