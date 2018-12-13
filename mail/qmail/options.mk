@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.59 2018/11/10 16:42:52 schmonz Exp $
+# $NetBSD: options.mk,v 1.60 2018/12/13 05:01:55 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=		eai inet6 pam syncdir tls
@@ -79,6 +79,8 @@ SUBST_MESSAGE.load=		Setting linker flags for syncdir.
 PLIST_VARS+=			tls
 .if !empty(PKG_OPTIONS:Mtls)
 PLIST.tls=			yes
+BUILDLINK_API_DEPENDS.openssl+=	openssl<1.1
+BUILDLINK_ABI_DEPENDS.openssl+=	openssl<1.1
 .  include "../../security/openssl/buildlink3.mk"
 CFLAGS+=			-DTLS=20160918	# NOTE: match what's _in_ the patch
 USE_TOOLS+=			openssl
