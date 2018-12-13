@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2018/08/16 18:55:16 adam Exp $
+# $NetBSD: Makefile,v 1.34 2018/12/13 19:52:26 adam Exp $
 
 DISTNAME=	patron-0.13.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

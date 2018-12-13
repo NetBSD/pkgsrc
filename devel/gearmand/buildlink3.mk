@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2018/08/23 08:21:02 fhajny Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2018/12/13 19:51:33 adam Exp $
 
 BUILDLINK_TREE+=	gearmand
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gearmand
 GEARMAND_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gearmand+=	gearmand>=1.0.6nb17
-BUILDLINK_ABI_DEPENDS.gearmand+=	gearmand>=1.0.6nb29
+BUILDLINK_ABI_DEPENDS.gearmand+=	gearmand>=1.1.18nb2
 BUILDLINK_PKGSRCDIR.gearmand?=		../../devel/gearmand
 
 .include "../../devel/boost-headers/buildlink3.mk"
