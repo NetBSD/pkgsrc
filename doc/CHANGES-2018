@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5175 2018/12/13 21:14:06 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5176 2018/12/13 21:38:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7214,3 +7214,8 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-test-xdist to 1.25.0 [adam 2018-12-13]
 	Updated textproc/py-pybtex to 0.22.0 [adam 2018-12-13]
 	Updated textproc/py-sphinxcontrib-bibtex to 0.4.1 [adam 2018-12-13]
+	Updated www/py-djangocms-attributes-field to 1.0.0 [adam 2018-12-13]
+	Updated www/py-djangocms-file to 2.2.0 [adam 2018-12-13]
+	Updated www/py-djangocms-picture to 2.1.3 [adam 2018-12-13]
+	Updated www/py-djangocms-text-ckeditor to 3.7.0 [adam 2018-12-13]
+	Updated www/py-djangocms-video to 2.1.1 [adam 2018-12-13]
