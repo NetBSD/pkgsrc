@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2017/09/16 19:26:44 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2018/12/13 19:37:48 adam Exp $
 
-DISTNAME=	redis-2.10.6
+DISTNAME=	redis-3.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/redis/}
@@ -10,10 +10,10 @@ HOMEPAGE=	https://github.com/andymccurdy/redis-py/
 COMMENT=	Redis Python client
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test>=2.5.0:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=2.5.0:../../devel/py-test
 
-USE_LANGUAGES=		# none
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
