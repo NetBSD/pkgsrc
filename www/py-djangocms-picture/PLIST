@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/11/20 18:47:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/12/13 21:32:31 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -186,6 +186,9 @@ ${PYSITELIB}/djangocms_picture/migrations/0007_fix_alignment.pyo
 ${PYSITELIB}/djangocms_picture/migrations/0008_picture_use_responsive_image.py
 ${PYSITELIB}/djangocms_picture/migrations/0008_picture_use_responsive_image.pyc
 ${PYSITELIB}/djangocms_picture/migrations/0008_picture_use_responsive_image.pyo
+${PYSITELIB}/djangocms_picture/migrations/0009_auto_20181212_1003.py
+${PYSITELIB}/djangocms_picture/migrations/0009_auto_20181212_1003.pyc
+${PYSITELIB}/djangocms_picture/migrations/0009_auto_20181212_1003.pyo
 ${PYSITELIB}/djangocms_picture/migrations/__init__.py
 ${PYSITELIB}/djangocms_picture/migrations/__init__.pyc
 ${PYSITELIB}/djangocms_picture/migrations/__init__.pyo
