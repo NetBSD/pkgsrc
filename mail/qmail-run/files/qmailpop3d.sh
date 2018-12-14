@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailpop3d.sh,v 1.28 2018/12/14 06:49:31 schmonz Exp $
+# $NetBSD: qmailpop3d.sh,v 1.29 2018/12/14 06:55:07 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-pop3d (POP3 server for Maildirs).
 #
@@ -77,8 +77,7 @@ qmailpop3d_enable_tls() {
 	fi
 }
 
-qmailpop3d_precmd()
-{
+qmailpop3d_precmd() {
 	if [ -f /etc/rc.subr ] && ! checkyesno qmailpop3d_log; then
 		qmailpop3d_logcmd=${qmailpop3d_nologcmd}
 	fi
@@ -103,13 +102,11 @@ ${qmailpop3d_prepop3d} ${qmailpop3d_pop3dcmd} ${qmailpop3d_postpop3d}
 	rc_flags=""
 }
 
-qmailpop3d_stat()
-{
+qmailpop3d_stat() {
 	run_rc_command status
 }
 
-qmailpop3d_pause()
-{
+qmailpop3d_pause() {
 	if ! statusmsg=`run_rc_command status`; then
 		@ECHO@ $statusmsg
 		return 1
@@ -118,8 +115,7 @@ qmailpop3d_pause()
 	kill -STOP $rc_pid
 }
 
-qmailpop3d_cont()
-{
+qmailpop3d_cont() {
 	if ! statusmsg=`run_rc_command status`; then
 		@ECHO@ $statusmsg
 		return 1
@@ -134,8 +130,7 @@ qmailpop3d_needcdb() {
 	[ -f "${_src}" -a "${_src}" -nt "${_dst}" ] || [ ! -f "${_dst}" ]
 }
 
-qmailpop3d_cdb()
-{
+qmailpop3d_cdb() {
 	@ECHO@ "Reloading ${qmailpop3d_tcprules}."
 	@PREFIX@/bin/tcprules ${qmailpop3d_tcprules}.cdb ${qmailpop3d_tcprules}.tmp < ${qmailpop3d_tcprules}
 	@CHMOD@ 644 ${qmailpop3d_tcprules}.cdb
