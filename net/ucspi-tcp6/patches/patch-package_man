@@ -1,10 +1,10 @@
-$NetBSD: patch-package_man,v 1.3 2018/10/07 12:55:16 schmonz Exp $
+$NetBSD: patch-package_man,v 1.4 2018/12/14 22:52:15 schmonz Exp $
 
 Support DESTDIR.
 
---- package/man.orig	2018-08-27 21:16:33.000000000 +0000
+--- package/man.orig	2018-11-10 19:42:10.000000000 +0000
 +++ package/man
-@@ -9,20 +9,11 @@ mandir=""
+@@ -10,20 +10,11 @@ mandir=""
  usemanpath=0
  usemandoc=0
  
@@ -27,7 +27,7 @@ Support DESTDIR.
  if [ -f conf-man ]
  then
     mandir=`head -1 conf-man`
-@@ -57,7 +48,7 @@ fi
+@@ -58,7 +49,7 @@ fi
  
  if [ $usemandoc -eq 0 ]
  then
@@ -36,7 +36,7 @@ Support DESTDIR.
  else
    shout "Installing ${me} un-compressed man-files in ${mandir}."
  fi
-@@ -70,11 +61,11 @@ done
+@@ -71,11 +62,11 @@ done
  for manfile in $all
  do
    dir="man`echo $manfile | awk -F. '{print $NF}'`"
@@ -45,8 +45,8 @@ Support DESTDIR.
    if [ $usemandoc -eq 0 ]
    then
      safe gzip $manfile && \
--         install -m 644 "$manfile.gz" $mandir/$dir/"${manfile#*/}.gz"
-+         install -m 644 "$manfile.gz" $destdir/$mandir/$dir/"${manfile#*/}.gz"
+-         cp "$manfile.gz" "$mandir/$dir/$manfile.gz"
++         cp "$manfile.gz" "$destdir/$mandir/$dir/$manfile.gz"
    else
-     safe install -m 644 $manfile $mandir/$dir/${manfile#*./}
+     safe cp "$manfile" "$mandir/$dir/$manfile"
    fi
