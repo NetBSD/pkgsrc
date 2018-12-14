@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5186 2018/12/14 13:32:21 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5187 2018/12/14 13:41:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7261,3 +7261,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-gobject to 2.28.7nb1 [adam 2018-12-14]
 	Updated www/py-WebOb to 1.8.4 [adam 2018-12-14]
 	Updated www/py-PasteDeploy to 2.0.1 [adam 2018-12-14]
+	Updated www/py-WSGIProxy2 to 0.4.5 [adam 2018-12-14]
+	Updated www/py-WebTest to 2.0.32 [adam 2018-12-14]
