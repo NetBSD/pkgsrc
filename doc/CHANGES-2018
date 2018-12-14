@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5178 2018/12/14 00:55:12 jmcneill Exp $
+$NetBSD: CHANGES-2018,v 1.5179 2018/12/14 06:49:36 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7251,3 +7251,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/u-boot-pocketchip to 2018.11 [jmcneill 2018-12-13]
 	Updated sysutils/u-boot-sopine-baseboard to 2018.11 [jmcneill 2018-12-13]
 	Updated sysutils/u-boot to 2018.11 [jmcneill 2018-12-13]
+	Updated mail/qmail-run to 20181214 [schmonz 2018-12-14]
