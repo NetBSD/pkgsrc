@@ -1,2 +1,2 @@
-@PREFIX@/bin/qmail-qfilter-viruscan
+#@PREFIX@/bin/qmail-qfilter-viruscan
 @PREFIX@/bin/qmail-qfilter-addtlsheader

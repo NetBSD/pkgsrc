@@ -1,3 +1,58 @@
+ Getting started
+ ===============
+
+Assuming NetBSD-style mailwrapper(8) and rc(8), to enable qmail for...
+
+Local and outbound delivery:
+- Run "/etc/rc.d/postfix stop" and set postfix=NO in /etc/rc.conf.
+- Replace /etc/mailer.conf with ${PREFIX}/share/examples/qmail-run/mailer.conf.
+- Check configuration in ${PKG_SYSCONFDIR} (especially alias/.qmail-*).
+- Set qmailsend=YES and qmailqread=YES in /etc/rc.conf.
+- Run "/etc/rc.d/qmail start".
+
+Incoming SMTP on port 25:
+- Set qmailsmtpd=YES in /etc/rc.conf.
+- Add any qmail-rcptcheck programs to control/rcptchecks.
+- Add any qmail-qfilter programs to control/smtpfilters.
+- Add any qmail-spp programs (such as greylisting) to control/smtpplugins.
+- Run "/etc/rc.d/qmailsmtpd start".
+
+Greylisting:
+- Add any exempt recipient addresses to control/greylist/exemptrcpts.
+- Add any exempt recipient domains to control/greylist/exemptrcpthosts.
+- Tuples are (IP,sender,recipient). To effectively omit IP, add
+  GL_WRAPPER_TCPREMOTEIP="127.127.127.127" to control/tcprules/smtp,
+  then run "/etc/rc.d/qmailsmtpd cdb".
+- Uncomment "greylisting-spp-wrapper" in control/smtpplugins.
+
+Authenticated message submission on port 587:
+- Set qmailofmipd=YES in /etc/rc.conf.
+- Add any qmail-qfilter programs to control/ofmipfilters.
+- Run "/etc/rc.d/qmailofmipd start".
+
+POP3 (for Maildirs only) on port 110:
+- Set qmailpop3d=YES in /etc/rc.conf.
+- Run "/etc/rc.d/qmailpop3d start".
+
+TLS encryption for SMTP, submission, POP3, and remote delivery:
+- Create cert and DH params (as instructed by the qmail package).
+- Run "/etc/rc.d/qmail restart".
+
+Sender Policy Framework:
+- Configure Sender Rewriting Scheme (as instructed by the qmail package)
+  so your auto-forwarded messages will reach servers that choose to
+  enforce the forwarded domains' SPF policies.
+- Publish a DNS TXT record with your desired policy.
+- Incoming messages that explicit-fail published policy are nonetheless
+  accepted. To reject -- including rejecting auto-forwarded messages
+  from servers that haven't configured SRS -- add
+  SPP_SPF_RESULT_FAIL="E550 spf_smtp_msg" to control/tcprules/smtp,
+  then run "/etc/rc.d/qmailsmtpd cdb".
+- Messages that explicit-pass are not greylisted. To remove the
+  exemption, remove SPP_SPF_RESULT_PASS="SGL_WHITELISTED=1" from
+  control/tcprules/smtp, then run "/etc/rc.d/qmailsmtpd cdb".
+
+
  Getting help
  ============
 
