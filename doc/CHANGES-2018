@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5180 2018/12/14 07:19:44 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.5181 2018/12/14 09:09:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7253,3 +7253,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/u-boot to 2018.11 [jmcneill 2018-12-13]
 	Updated mail/qmail-run to 20181214 [schmonz 2018-12-14]
 	Updated mail/greylisting-spp to 1.1nb1 [schmonz 2018-12-14]
+	Added audio/game-music-emu version 0.6.2 [wiz 2018-12-14]
