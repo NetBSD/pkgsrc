@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.19 2018/12/11 17:49:40 schmonz Exp $
-bin/greylisting-spp-with-exemptions
+@comment $NetBSD: PLIST,v 1.20 2018/12/14 06:49:30 schmonz Exp $
+bin/greylisting-spp-wrapper
 bin/ofmipd-with-user-cdb
 bin/qmail-isspam-rspamd
 bin/qmail-isspam-spamassassin
