@@ -1,0 +1,12 @@
+$NetBSD: patch-Makefile.am,v 1.1 2018/12/14 17:03:04 bsiegert Exp $
+
+Skip examples subdirectory, we do not install examples.
+
+--- Makefile.am.orig	2006-10-09 04:06:36.000000000 +0000
++++ Makefile.am
+@@ -1,4 +1,4 @@
+-SUBDIRS = gpc src font_freetype font_win32_tt include examples
++SUBDIRS = gpc src font_freetype font_win32_tt include
+ 
+ pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfig_DATA = libagg.pc
