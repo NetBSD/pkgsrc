@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailsmtpd.sh,v 1.24 2018/12/11 17:49:41 schmonz Exp $
+# $NetBSD: qmailsmtpd.sh,v 1.25 2018/12/14 06:49:31 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-smtpd (SMTP service).
 #
@@ -18,6 +18,8 @@ name="qmailsmtpd"
 : ${qmailsmtpd_tcpflags:="-ne -vRl0"}
 : ${qmailsmtpd_tcphost:="0.0.0.0"}
 : ${qmailsmtpd_tcpport:="25"}
+: ${qmailsmtpd_tcprules:="@PKG_SYSCONFDIR@/control/tcprules/smtp"}
+: ${qmailsmtpd_autocdb:="YES"}
 : ${qmailsmtpd_presmtpd:="@PREFIX@/bin/greetdelay @PREFIX@/bin/rblsmtpd -r zen.spamhaus.org @PREFIX@/bin/fixsmtpio"}
 : ${qmailsmtpd_smtpdcmd:="@PREFIX@/bin/qmail-smtpd"}
 : ${qmailsmtpd_postsmtpd:=""}
@@ -37,7 +39,7 @@ rcvar=${name}
 required_files="@PKG_SYSCONFDIR@/control/me"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/concurrencyincoming"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/rcpthosts"
-required_files="${required_files} @PKG_SYSCONFDIR@/control/tcprules/smtp.cdb"
+required_files="${required_files} ${qmailsmtpd_tcprules}.cdb"
 command="${qmailsmtpd_tcpserver}"
 procname=nb${name}
 start_precmd="qmailsmtpd_precmd"
@@ -80,13 +82,16 @@ qmailsmtpd_precmd()
 		qmailsmtpd_logcmd=${qmailsmtpd_nologcmd}
 	fi
 	qmailsmtpd_configure_tls
+	if [ -f /etc/rc.subr ] && checkyesno qmailsmtpd_autocdb; then
+		qmailsmtpd_needcdb && qmailsmtpd_cdb
+	fi
 	# tcpserver(1) is akin to inetd(8), but runs one service per process.
 	# We want to signal only the tcpserver process responsible for this
 	# service. Use argv0(1) to set procname to "nbqmailsmtpd".
 	command="@PREFIX@/bin/pgrphack @SETENV@ - ${qmailsmtpd_postenv}
 @PREFIX@/bin/softlimit -m ${qmailsmtpd_datalimit} ${qmailsmtpd_pretcpserver}
 @PREFIX@/bin/argv0 ${qmailsmtpd_tcpserver} ${procname}
-${qmailsmtpd_tcpflags} -x @PKG_SYSCONFDIR@/control/tcprules/smtp.cdb
+${qmailsmtpd_tcpflags} -x ${qmailsmtpd_tcprules}.cdb
 -c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencyincoming`
 -u `@ID@ -u @QMAIL_DAEMON_USER@` -g `@ID@ -g @QMAIL_DAEMON_USER@`
 ${qmailsmtpd_tcphost} ${qmailsmtpd_tcpport}
@@ -122,12 +127,17 @@ qmailsmtpd_cont()
 	kill -CONT $rc_pid
 }
 
+qmailsmtpd_needcdb() {
+	_src=${qmailsmtpd_tcprules}
+	_dst=${qmailsmtpd_tcprules}.cdb
+	[ -f "${_src}" -a "${_src}" -nt "${_dst}" ] || [ ! -f "${_dst}" ]
+}
+
 qmailsmtpd_cdb()
 {
-	@ECHO@ "Reloading @PKG_SYSCONFDIR@/control/tcprules/smtp."
-	cd @PKG_SYSCONFDIR@/control/tcprules
-	@PREFIX@/bin/tcprules smtp.cdb smtp.tmp < smtp
-	@CHMOD@ 644 smtp.cdb
+	@ECHO@ "Reloading ${qmailsmtpd_tcprules}."
+	@PREFIX@/bin/tcprules ${qmailsmtpd_tcprules}.cdb ${qmailsmtpd_tcprules}.tmp < ${qmailsmtpd_tcprules}
+	@CHMOD@ 644 ${qmailsmtpd_tcprules}.cdb
 }
 
 if [ -f /etc/rc.subr ]; then
