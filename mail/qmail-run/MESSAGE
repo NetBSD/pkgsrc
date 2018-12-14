@@ -1,34 +1,16 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.14 2018/11/14 16:46:58 schmonz Exp $
+$NetBSD: MESSAGE,v 1.15 2018/12/14 06:49:30 schmonz Exp $
 
-Please read ${PREFIX}/share/doc/qmail-run/README.pkgsrc.
+Assuming NetBSD-style mailwrapper(8) and rc(8), to enable qmail for
+local and outbound delivery:
 
-Assuming NetBSD-style mailwrapper(8) and rc(8), to enable qmail for...
-
-Local and outbound delivery:
+- Run "/etc/rc.d/postfix stop" and set postfix=NO in /etc/rc.conf.
+- Replace /etc/mailer.conf with ${PREFIX}/share/examples/qmail-run/mailer.conf.
 - Check configuration in ${PKG_SYSCONFDIR} (especially alias/.qmail-*).
-- Copy ${PREFIX}/share/examples/qmail-run/mailer.conf to /etc/mailer.conf.
 - Set qmailsend=YES and qmailqread=YES in /etc/rc.conf.
+- Run "/etc/rc.d/qmail start".
 
-Incoming SMTP on port 25:
-- Add any qmail-rcptcheck programs to control/rcptchecks.
-- Add any qmail-qfilter programs to control/smtpfilters.
-- Add any qmail-spp programs (such as greylisting) to control/smtpplugins.
-- Set qmailsmtpd=YES in /etc/rc.conf.
-
-Greylisting:
-- Add any exempt recipient addresses to control/greylist/exemptrcpts.
-- Add any exempt recipient domains to control/greylist/exemptrcpthosts.
-- Uncomment "greylisting-spp-with-exemptions" in control/smtpplugins.
-
-Authenticated submission on port 587:
-- Add any qmail-qfilter programs to control/ofmipfilters.
-- Set qmailofmipd=YES in /etc/rc.conf.
-
-POP3 (for Maildirs only) on port 110:
-- Set qmailpop3d=YES in /etc/rc.conf.
-
-TLS encryption everywhere applicable:
-- Create cert and DH params as instructed by the qmail package.
+For SMTP, TLS, and more, please read
+${PREFIX}/share/doc/qmail-run/README.pkgsrc.
 
 ===========================================================================
