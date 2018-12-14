@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailpop3d.sh,v 1.27 2018/12/11 17:49:41 schmonz Exp $
+# $NetBSD: qmailpop3d.sh,v 1.28 2018/12/14 06:49:31 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-pop3d (POP3 server for Maildirs).
 #
@@ -17,6 +17,8 @@ name="qmailpop3d"
 : ${qmailpop3d_tcpflags:="-ne -vRl0"}
 : ${qmailpop3d_tcphost:="0.0.0.0"}
 : ${qmailpop3d_tcpport:="110"}
+: ${qmailpop3d_tcprules:="@PKG_SYSCONFDIR@/control/tcprules/pop3"}
+: ${qmailpop3d_autocdb:="YES"}
 : ${qmailpop3d_precheckpassword:="@PREFIX@/bin/authup pop3"}
 : ${qmailpop3d_checkpassword:="@PREFIX@/bin/nbcheckpassword"}
 : ${qmailpop3d_prepop3d:="@PREFIX@/bin/checknotroot"}
@@ -38,7 +40,7 @@ rcvar=${name}
 required_files="@PKG_SYSCONFDIR@/control/me"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/concurrencypop3"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/pop3capabilities"
-required_files="${required_files} @PKG_SYSCONFDIR@/control/tcprules/pop3.cdb"
+required_files="${required_files} ${qmailpop3d_tcprules}.cdb"
 command="${qmailpop3d_tcpserver}"
 procname=nb${name}
 start_precmd="qmailpop3d_precmd"
@@ -81,13 +83,16 @@ qmailpop3d_precmd()
 		qmailpop3d_logcmd=${qmailpop3d_nologcmd}
 	fi
 	qmailpop3d_configure_tls
+	if [ -f /etc/rc.subr ] && checkyesno qmailpop3d_autocdb; then
+		qmailpop3d_needcdb && qmailpop3d_cdb
+	fi
 	# tcpserver(1) is akin to inetd(8), but runs one service per process.
 	# We want to signal only the tcpserver process responsible for this
 	# service. Use argv0(1) to set procname to "nbqmailpop3d".
 	command="@PREFIX@/bin/pgrphack @SETENV@ - ${qmailpop3d_postenv}
 @PREFIX@/bin/softlimit -m ${qmailpop3d_datalimit} ${qmailpop3d_pretcpserver}
 @PREFIX@/bin/argv0 ${qmailpop3d_tcpserver} ${procname}
-${qmailpop3d_tcpflags} -x @PKG_SYSCONFDIR@/control/tcprules/pop3.cdb
+${qmailpop3d_tcpflags} -x ${qmailpop3d_tcprules}.cdb
 -c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencypop3`
 ${qmailpop3d_tcphost} ${qmailpop3d_tcpport}
 ${qmailpop3d_precheckpassword} ${qmailpop3d_checkpassword}
@@ -123,12 +128,17 @@ qmailpop3d_cont()
 	kill -CONT $rc_pid
 }
 
+qmailpop3d_needcdb() {
+	_src=${qmailpop3d_tcprules}
+	_dst=${qmailpop3d_tcprules}.cdb
+	[ -f "${_src}" -a "${_src}" -nt "${_dst}" ] || [ ! -f "${_dst}" ]
+}
+
 qmailpop3d_cdb()
 {
-	@ECHO@ "Reloading @PKG_SYSCONFDIR@/control/tcprules/pop3."
-	cd @PKG_SYSCONFDIR@/control/tcprules
-	@PREFIX@/bin/tcprules pop3.cdb pop3.tmp < pop3
-	@CHMOD@ 644 pop3.cdb
+	@ECHO@ "Reloading ${qmailpop3d_tcprules}."
+	@PREFIX@/bin/tcprules ${qmailpop3d_tcprules}.cdb ${qmailpop3d_tcprules}.tmp < ${qmailpop3d_tcprules}
+	@CHMOD@ 644 ${qmailpop3d_tcprules}.cdb
 }
 
 if [ -f /etc/rc.subr ]; then
