@@ -1,10 +1,10 @@
 #!@SH@
 #
-# $NetBSD: greylisting-spp-with-exemptions.sh,v 1.1 2018/11/13 16:34:58 schmonz Exp $
+# $NetBSD: greylisting-spp-wrapper.sh,v 1.1 2018/12/14 06:49:31 schmonz Exp $
 #
-# @PKGNAME@ wrapper to skip greylisting for certain recipient
-# addresses and domains.
-# Requires greylisting-spp.
+# @PKGNAME@ wrapper for greylisting-spp.
+# Skips greylisting for configured recipient addresses and domains.
+# Optionally assigns a fixed "ip" in (ip,sender,recipient).
 #
 
 EXEMPTRCPTS=@PKG_SYSCONFDIR@/control/greylist/exemptrcpts
@@ -28,10 +28,14 @@ main() {
 
 	if is_exempt_recipient_address "$rcpt"; then
 		@ECHO@ >&2 "greylisting skipped for recipient address: $rcpt"
-		export GL_WHITELISTED="1"
+		GL_WHITELISTED="1"; export GL_WHITELISTED
 	elif is_exempt_recipient_domain "$rcpthost"; then
 		@ECHO@ >&2 "greylisting skipped for recipient domain: $rcpthost"
-		export GL_WHITELISTED="1"
+		GL_WHITELISTED="1"; export GL_WHITELISTED
+	fi
+
+	if [ -n "$GL_WRAPPER_TCPREMOTEIP" ]; then
+		TCPREMOTEIP="$GL_WRAPPER_TCPREMOTEIP"; export TCPREMOTEIP
 	fi
 }
 
