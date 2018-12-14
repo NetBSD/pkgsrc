@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5182 2018/12/14 09:19:01 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5183 2018/12/14 10:47:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7255,3 +7255,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/greylisting-spp to 1.1nb1 [schmonz 2018-12-14]
 	Added audio/game-music-emu version 0.6.2 [wiz 2018-12-14]
 	Updated www/py-flask-babel to 0.12.2 [adam 2018-12-14]
+	Added www/py-flask-caching version 1.4.0 [adam 2018-12-14]
+	Updated www/py-flask-common to 0.3.0 [adam 2018-12-14]
