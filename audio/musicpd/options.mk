@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.31 2018/12/11 10:37:20 wiz Exp $
+# $NetBSD: options.mk,v 1.32 2018/12/14 09:09:59 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
-PKG_SUPPORTED_OPTIONS=	adplug audiofile avahi bzip2 curl faad ffmpeg flac fluidsynth id3 inet6 libao lame jack libmms libmpdclient libsoxr libwildmidi mikmod modplug mpg123 musepack musicpd-soundcloud openal opus pulseaudio shine shout sqlite3 tremor twolame vorbis wavpack zziplib
+PKG_SUPPORTED_OPTIONS=	adplug audiofile avahi bzip2 curl faad ffmpeg flac fluidsynth game-music-emu id3 inet6 libao lame jack libmms libmpdclient libsoxr libwildmidi mikmod modplug mpg123 musepack musicpd-soundcloud openal opus pulseaudio shine shout sqlite3 tremor twolame vorbis wavpack zziplib
 PKG_SUGGESTED_OPTIONS=	audiofile curl faad flac id3 inet6 libao musepack vorbis
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	vorbis
@@ -55,10 +55,9 @@ BUILDLINK_ABI_DEPENDS.flac+=	flac>=1.2
 .  include "../../audio/fluidsynth/buildlink3.mk"
 .endif
 
-# needs to be imported from wip first
-#.if !empty(PKG_OPTIONS:Mgme)
-#.  include "../../wip/libgme/buildlink3.mk"
-#.endif
+.if !empty(PKG_OPTIONS:Mgame-music-emu)
+.  include "../../audio/game-music-emu/buildlink3.mk"
+.endif
 
 .if !empty(PKG_OPTIONS:Mid3)
 .  include "../../audio/libid3tag/buildlink3.mk"
