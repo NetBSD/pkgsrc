@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/10/23 15:33:03 adam Exp $
+$NetBSD: distinfo,v 1.5 2018/12/14 08:52:22 adam Exp $
 
-SHA1 (Flask-Babel-0.11.2.tar.gz) = b6ae8989b1a124023aa7fc0e5d34c50b360b3065
-RMD160 (Flask-Babel-0.11.2.tar.gz) = d299acff3d2091eadbc9ec3fb91385f2a716d8d8
-SHA512 (Flask-Babel-0.11.2.tar.gz) = d95947983ff5bc33a28384f000512e85ed64c16555aa03e110a32b7c0c9e91eebc02259bfc69a0dbc84adb6ecf8155cffaecde5726658d64d36435060de3f22b
-Size (Flask-Babel-0.11.2.tar.gz) = 41105 bytes
+SHA1 (Flask-Babel-0.12.2.tar.gz) = 773fd5208b0ae6c9a818aea941b0a6436981b1be
+RMD160 (Flask-Babel-0.12.2.tar.gz) = 826fd8df10aa7d6634c46c41f58c660adbaecaf9
+SHA512 (Flask-Babel-0.12.2.tar.gz) = c43bf5cf6c66e3a8a52298f52bd6300cf0b0c53a1f0fb5862b1bcf8a9800ea0e043c9f85125bb9eb5c281a3c0583c63f0f9653792204883a6f82080547b37104
+Size (Flask-Babel-0.12.2.tar.gz) = 44567 bytes
