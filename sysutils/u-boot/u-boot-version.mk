@@ -1,3 +1,3 @@
-# $NetBSD: u-boot-version.mk,v 1.2 2018/05/25 10:45:22 jmcneill Exp $
+# $NetBSD: u-boot-version.mk,v 1.3 2018/12/14 00:52:26 jmcneill Exp $
 
-UBOOT_VERSION?=	2018.05
+UBOOT_VERSION?=	2018.11
