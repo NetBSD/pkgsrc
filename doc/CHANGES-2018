@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5185 2018/12/14 12:38:42 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5186 2018/12/14 13:32:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7259,3 +7259,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-flask-common to 0.3.0 [adam 2018-12-14]
 	Updated print/p5-biblatex-biber to 2.11nb2 [wiz 2018-12-14]
 	Updated devel/py-gobject to 2.28.7nb1 [adam 2018-12-14]
+	Updated www/py-WebOb to 1.8.4 [adam 2018-12-14]
+	Updated www/py-PasteDeploy to 2.0.1 [adam 2018-12-14]
