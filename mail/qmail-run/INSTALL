@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.10 2018/12/11 17:49:40 schmonz Exp $
+# $NetBSD: INSTALL,v 1.11 2018/12/14 06:49:30 schmonz Exp $
 
 case "${STAGE}" in
 
@@ -12,13 +12,4 @@ PRE-INSTALL)
 
 	;;
 
-POST-INSTALL)
-	cd ${PKG_SYSCONFDIR}/control/tcprules
-	for i in ofmip pop3 smtp; do
-		${CHMOD} 644 ${i}
-		${PREFIX}/bin/tcprules ${i}.cdb ${i}.tmp < ${i}
-		${CHMOD} 644 ${i}.cdb
-	done
-
-	;;
 esac
