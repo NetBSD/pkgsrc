@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1352 2018/12/06 19:32:05 adam Exp $
+# $NetBSD: Makefile,v 1.1353 2018/12/14 10:44:40 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -683,6 +683,7 @@ SUBDIR+=	py-flask-babel
 SUBDIR+=	py-flask-babelex
 SUBDIR+=	py-flask-bootstrap
 SUBDIR+=	py-flask-cache
+SUBDIR+=	py-flask-caching
 SUBDIR+=	py-flask-common
 SUBDIR+=	py-flask-debugtoolbar
 SUBDIR+=	py-flask-flatpages
