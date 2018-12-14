@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailsend.sh,v 1.15 2018/12/12 01:08:30 schmonz Exp $
+# $NetBSD: qmailsend.sh,v 1.16 2018/12/14 06:55:07 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-send (local and outgoing mail).
 #
@@ -40,8 +40,7 @@ alrm_cmd="qmailsend_doqueue"
 flush_cmd="qmailsend_doqueue"
 hup_cmd="qmailsend_hup"
 
-qmailsend_prestart()
-{
+qmailsend_prestart() {
 	if [ -f /etc/rc.subr ] && ! checkyesno qmailsend_log; then
 		qmailsend_logcmd=${qmailsend_nologcmd}
 	fi
@@ -55,23 +54,19 @@ ${qmailsend_logcmd}"
 	rc_flags=""
 }
 
-qmailsend_poststart()
-{
+qmailsend_poststart() {
 	echo $! > ${pidfile}
 }
 
-qmailsend_poststop()
-{
+qmailsend_poststop() {
 	rm -f ${pidfile}
 }
 
-qmailsend_stat()
-{
+qmailsend_stat() {
 	run_rc_command status
 }
 
-qmailsend_pause()
-{
+qmailsend_pause() {
 	if ! statusmsg=`run_rc_command status`; then
 		@ECHO@ $statusmsg
 		return 1
@@ -80,8 +75,7 @@ qmailsend_pause()
 	kill -STOP $rc_pid
 }
 
-qmailsend_cont()
-{
+qmailsend_cont() {
 	if ! statusmsg=`run_rc_command status`; then
 		@ECHO@ $statusmsg
 		return 1
@@ -90,8 +84,7 @@ qmailsend_cont()
 	kill -CONT $rc_pid
 }
 
-qmailsend_doqueue()
-{
+qmailsend_doqueue() {
 	if ! statusmsg=`run_rc_command status`; then
 		@ECHO@ $statusmsg
 		return 1
@@ -101,14 +94,12 @@ qmailsend_doqueue()
 	kill -ALRM $rc_pid
 }
 
-qmailsend_queue()
-{
+qmailsend_queue() {
 	@PREFIX@/bin/qmail-qstat
 	@PREFIX@/bin/qmail-qread
 }
 
-qmailsend_hup()
-{
+qmailsend_hup() {
 	run_rc_command reload
 }
 
