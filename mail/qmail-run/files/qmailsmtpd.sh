@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailsmtpd.sh,v 1.25 2018/12/14 06:49:31 schmonz Exp $
+# $NetBSD: qmailsmtpd.sh,v 1.26 2018/12/14 06:55:07 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-smtpd (SMTP service).
 #
@@ -76,8 +76,7 @@ qmailsmtpd_enable_tls() {
 	fi
 }
 
-qmailsmtpd_precmd()
-{
+qmailsmtpd_precmd() {
 	if [ -f /etc/rc.subr ] && ! checkyesno qmailsmtpd_log; then
 		qmailsmtpd_logcmd=${qmailsmtpd_nologcmd}
 	fi
@@ -102,13 +101,11 @@ ${qmailsmtpd_presmtpd} ${qmailsmtpd_smtpdcmd} ${qmailsmtpd_postsmtpd}
 	rc_flags=""
 }
 
-qmailsmtpd_stat()
-{
+qmailsmtpd_stat() {
 	run_rc_command status
 }
 
-qmailsmtpd_pause()
-{
+qmailsmtpd_pause() {
 	if ! statusmsg=`run_rc_command status`; then
 		@ECHO@ $statusmsg
 		return 1
@@ -117,8 +114,7 @@ qmailsmtpd_pause()
 	kill -STOP $rc_pid
 }
 
-qmailsmtpd_cont()
-{
+qmailsmtpd_cont() {
 	if ! statusmsg=`run_rc_command status`; then
 		@ECHO@ $statusmsg
 		return 1
@@ -133,8 +129,7 @@ qmailsmtpd_needcdb() {
 	[ -f "${_src}" -a "${_src}" -nt "${_dst}" ] || [ ! -f "${_dst}" ]
 }
 
-qmailsmtpd_cdb()
-{
+qmailsmtpd_cdb() {
 	@ECHO@ "Reloading ${qmailsmtpd_tcprules}."
 	@PREFIX@/bin/tcprules ${qmailsmtpd_tcprules}.cdb ${qmailsmtpd_tcprules}.tmp < ${qmailsmtpd_tcprules}
 	@CHMOD@ 644 ${qmailsmtpd_tcprules}.cdb
