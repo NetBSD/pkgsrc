@@ -1,15 +1,8 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 20:57:06 agc Exp $
+$NetBSD: distinfo,v 1.8 2018/12/14 17:27:01 triaxx Exp $
 
-SHA1 (warzone2100-2.2.2.tar.gz) = d61bd1a87f0a6c1184c640987f759b1ac702b9e1
-RMD160 (warzone2100-2.2.2.tar.gz) = d7af614267acdb548fcbe5f78ed46e8c4d6f33de
-SHA512 (warzone2100-2.2.2.tar.gz) = 763eb464687323aadaab3d679629e36902fbd3e2bdd88b3cf426b0b282eb55c184cf9f56bae24245ae2ee7edaf208352a813cdf1f065cd792fc2c38bf1f47d08
-Size (warzone2100-2.2.2.tar.gz) = 50163580 bytes
-SHA1 (patch-aa) = 95c066ff4340ba6e4c021846541b53eb4cad0704
-SHA1 (patch-ab) = e82a085ddf27a5443e011ada57e78cca1ab66c79
-SHA1 (patch-ac) = c09fcad63f725f414667980efce48157a04169a9
-SHA1 (patch-ad) = af29beef3b2014bf1b3d1068b2b3caa7d948de80
-SHA1 (patch-ae) = 9a5f2fccd93100e87968d2dc9d783acc595ad5d3
-SHA1 (patch-af) = 46ea523fb72ed0f081d85dfea0813fde79087c82
-SHA1 (patch-ag) = 2604a894e8579377f4b3ac8eae7250ed2c73a21c
-SHA1 (patch-build__tools_autorevision_autorevision.cpp) = b68854d02ee6d0fe1b4293c6b1b5c0e1e36fb3a6
-SHA1 (patch-lib_ivis__common_png__util.c) = 6a0ac9f5a29d431041af01c1d5acbb6fdbb919fe
+SHA1 (warzone2100-3.2.3.tar.xz) = 33bf08ac130d54d36550ada4e3db99c3545ef153
+RMD160 (warzone2100-3.2.3.tar.xz) = 12b5615b6cea9ea13848dc1a130ca535c7539ad5
+SHA512 (warzone2100-3.2.3.tar.xz) = 4b1bc0a0bb50a8b4726a2762a922ee233b92f9835e38bbab80c159a9cb301df7434a73ba5acfb17404031467c02a9b3480d6a0d44906d70896311b3468141746
+Size (warzone2100-3.2.3.tar.xz) = 81314060 bytes
+SHA1 (patch-lib_exceptionhandler_exceptionhandler.cpp) = 04345173f2fc98da9f26c30963507972786571c0
+SHA1 (patch-lib_qtgame_wzapp__qt.cpp) = 45564765d911a52534a14966c1f9418fd417956f
