@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2018/11/14 22:21:09 kleink Exp $
+# $NetBSD: Makefile,v 1.109 2018/12/14 21:35:43 rillig Exp $
 
 .include "Makefile.common"
 
@@ -49,11 +49,9 @@ post-install:
 		${DESTDIR}${PREFIX}/include/xchat/
 
 .if !empty(PKG_OPTIONS:Mgnome)
-
 	${INSTALL_DATA_DIR} ${DESTDIR}${GCONF_SCHEMAS_DIR}
-# In case there're ever additional schema files, use ODE loop.
-	${GCONF_SCHEMAS:@.s.@${INSTALL_DATA} ${WRKSRC}/src/common/dbus/${.s.} \
-		${DESTDIR}${GCONF_SCHEMAS_DIR}/@}
+	cd ${WRKSRC}/src/common/dbus \
+	&& ${INSTALL_DATA} ${GCONF_SCHEMAS} ${DESTDIR}${GCONF_SCHEMAS_DIR}/
 .endif
 
 .include "../../mk/bsd.pkg.mk"
