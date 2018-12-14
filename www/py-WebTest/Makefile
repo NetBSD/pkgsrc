@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2018/07/26 10:47:47 adam Exp $
+# $NetBSD: Makefile,v 1.5 2018/12/14 13:41:08 adam Exp $
 
-DISTNAME=	WebTest-2.0.30
+DISTNAME=	WebTest-2.0.32
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=W/WebTest/}
@@ -10,9 +10,9 @@ HOMEPAGE=	http://webtest.pythonpaste.org/
 COMMENT=	Helper to test WSGI applications
 LICENSE=	mit
 
+DEPENDS+=	${PYPKGPREFIX}-WebOb>=1.2:../../www/py-WebOb
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-DEPENDS+=	${PYPKGPREFIX}-WebOb>=1.2:../../www/py-WebOb
 DEPENDS+=	${PYPKGPREFIX}-waitress>=0.8.5:../../www/py-waitress
 TEST_DEPENDS+=	${PYPKGPREFIX}-PasteDeploy-[0-9]*:../../www/py-PasteDeploy
 TEST_DEPENDS+=	${PYPKGPREFIX}-WSGIProxy2-[0-9]*:../../www/py-WSGIProxy2
