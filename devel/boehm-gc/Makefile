@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2018/12/12 21:43:28 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2018/12/14 09:21:22 wiz Exp $
 
 DISTNAME=	gc-8.0.0
 PKGNAME=	${DISTNAME:S/gc/boehm-gc/}
@@ -21,8 +21,6 @@ CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/doc
 PKGCONFIG_OVERRIDE=	bdw-gc.pc.in
 INSTALLATION_DIRS=	${PKGMANDIR}/man3
 
-# on NetBSD, needs
-# sysctl -w security.pax.mprotect.enabled=0
 TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
@@ -36,7 +34,9 @@ CFLAGS+=		-D_XOPEN_SOURCE
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/gc.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3/gc.3
 
-do-test:
+# historical pkgsrc test target, can be removed in one of the next updates
+.PHONY: manual-do-test
+manual-do-test:
 	cd ${WRKSRC} && \
 	${RM} -f gctest && ${MAKE_PROGRAM} gctest && ./gctest && \
 	${RM} -f test_cpp && ${MAKE_PROGRAM} test_cpp && ./test_cpp 10
