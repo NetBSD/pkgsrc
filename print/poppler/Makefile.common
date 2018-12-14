@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.103 2018/12/10 10:28:08 wiz Exp $
+# $NetBSD: Makefile.common,v 1.104 2018/12/14 13:16:26 gson Exp $
 #
 # used by print/poppler/Makefile
 # used by print/poppler-cpp/Makefile
@@ -21,7 +21,8 @@ PATCHDIR=		${.CURDIR}/../../print/poppler/patches
 
 USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++14
+GCC_REQD=		4.9
 
 USE_CMAKE=		yes
 
