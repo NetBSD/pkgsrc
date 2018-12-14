@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.154 2018/12/13 22:50:27 leot Exp $
+# $NetBSD: Makefile,v 1.155 2018/12/14 15:51:13 leot Exp $
 
 DISTNAME=	webkitgtk-2.22.5
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://www.webkitgtk.org/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -18,7 +19,7 @@ TOOL_DEPENDS+=	gettext-tools>=0.18:../../devel/gettext-tools
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++11
-USE_TOOLS+=	automake bison gmake perl:build pkg-config msgfmt
+USE_TOOLS+=	automake bison flex gmake perl pkg-config msgfmt
 
 # Enabling -gdwarf-2 hits GNU ar limits on file size.
 CTF_SUPPORTED=	no
@@ -80,7 +81,7 @@ TOOL_DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
 CMAKE_ARGS+=	-DRUBY_EXECUTABLE=${RUBY}
 
 PYTHON_FOR_BUILD_ONLY=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 2.22.2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 2.22.5
 .include "../../lang/python/application.mk"
 CMAKE_ARGS+=	-DPYTHON_EXECUTABLE=${PYTHONBIN}
 
@@ -103,8 +104,6 @@ BUILDLINK_API_DEPENDS.glib2+= glib2>=2.32.1
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
-# A correct Webkit build requires flex 2.5.33
-.include "../../devel/flex/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/woff2/buildlink3.mk"
