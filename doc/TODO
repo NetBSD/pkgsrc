@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18707 2018/12/13 01:05:07 pho Exp $
+$NetBSD: TODO,v 1.18708 2018/12/14 17:28:10 triaxx Exp $
 
 Suggested new packages
 ======================
@@ -1419,7 +1419,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
 	o warmux-11.04.1
-	o warzone2100-2.3.8
 	o wcalc-2.4
 	o webalizer-2.23.05
 	o websvn-2.3.3
