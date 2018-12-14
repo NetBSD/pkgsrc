@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2018/11/27 14:41:07 bsiegert Exp $
+# $NetBSD: Makefile,v 1.46 2018/12/14 12:40:28 adam Exp $
 
 DISTNAME=	gedit-3.22.1
 PKGREVISION=	7
@@ -18,7 +18,6 @@ GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	data/gedit.pc.in
 PY_PATCHPLIST=		yes
-#PY_PEP3147=		no
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 REPLACE_PYTHON+=	plugins/externaltools/data/send-to-fpaste.tool.in
 
