@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/12/09 18:52:35 adam Exp $
+# $NetBSD: Makefile,v 1.3 2018/12/14 07:19:39 schmonz Exp $
 
 DISTNAME=		greylisting-spp-1.1
 PKGREVISION=		1
