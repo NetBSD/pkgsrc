@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailqread.sh,v 1.16 2018/11/28 16:42:44 schmonz Exp $
+# $NetBSD: qmailqread.sh,v 1.17 2018/12/14 06:55:07 schmonz Exp $
 #
 # @PKGNAME@ script to control a service providing local non-root
 # users access to see the queue. Adapted from a script by Steinar Haug.
@@ -34,8 +34,7 @@ stat_cmd="qmailqread_stat"
 pause_cmd="qmailqread_pause"
 cont_cmd="qmailqread_cont"
 
-qmailqread_precmd()
-{
+qmailqread_precmd() {
 	if [ -f /etc/rc.subr ] && ! checkyesno qmailqread_log; then
 		qmailqread_logcmd=${qmailqread_nologcmd}
 	fi
@@ -54,13 +53,11 @@ ${qmailqread_tcphost} ${qmailqread_tcpport}
 	rc_flags=""
 }
 
-qmailqread_stat()
-{
+qmailqread_stat() {
 	run_rc_command status
 }
 
-qmailqread_pause()
-{
+qmailqread_pause() {
 	if ! statusmsg=`run_rc_command status`; then
 		@ECHO@ $statusmsg
 		return 1
@@ -69,8 +66,7 @@ qmailqread_pause()
 	kill -STOP $rc_pid
 }
 
-qmailqread_cont()
-{
+qmailqread_cont() {
 	if ! statusmsg=`run_rc_command status`; then
 		@ECHO@ $statusmsg
 		return 1

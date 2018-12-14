@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailofmipd.sh,v 1.20 2018/12/14 06:49:31 schmonz Exp $
+# $NetBSD: qmailofmipd.sh,v 1.21 2018/12/14 06:55:07 schmonz Exp $
 #
 # @PKGNAME@ script to control ofmipd (SMTP submission service).
 #
@@ -80,8 +80,7 @@ qmailofmipd_enable_tls() {
 	fi
 }
 
-qmailofmipd_precmd()
-{
+qmailofmipd_precmd() {
 	if [ -f /etc/rc.subr ] && ! checkyesno qmailofmipd_log; then
 		qmailofmipd_logcmd=${qmailofmipd_nologcmd}
 	fi
@@ -106,13 +105,11 @@ ${qmailofmipd_preofmipd} ${qmailofmipd_ofmipdcmd} ${qmailofmipd_postofmipd}
 	rc_flags=""
 }
 
-qmailofmipd_stat()
-{
+qmailofmipd_stat() {
 	run_rc_command status
 }
 
-qmailofmipd_pause()
-{
+qmailofmipd_pause() {
 	if ! statusmsg=`run_rc_command status`; then
 		@ECHO@ $statusmsg
 		return 1
@@ -121,8 +118,7 @@ qmailofmipd_pause()
 	kill -STOP $rc_pid
 }
 
-qmailofmipd_cont()
-{
+qmailofmipd_cont() {
 	if ! statusmsg=`run_rc_command status`; then
 		@ECHO@ $statusmsg
 		return 1
@@ -137,8 +133,7 @@ qmailofmipd_needcdb() {
 	[ -f "${_src}" -a "${_src}" -nt "${_dst}" ] || [ ! -f "${_dst}" ]
 }
 
-qmailofmipd_cdb()
-{
+qmailofmipd_cdb() {
 	@ECHO@ "Reloading ${qmailofmipd_tcprules}"
 	@PREFIX@/bin/tcprules ${qmailofmipd_tcprules}.cdb ${qmailofmipd_tcprules}.tmp < ${qmailofmipd_tcprules}
 	@CHMOD@ 644 ${qmailofmipd_tcprules}.cdb
