@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2018/01/23 11:23:13 adam Exp $
+$NetBSD: distinfo,v 1.28 2018/12/14 12:37:21 adam Exp $
 
 SHA1 (pygobject-2.28.7.tar.xz) = 8e3cb8621c2e1d8dbeba5c3c007c7421b936a36c
 RMD160 (pygobject-2.28.7.tar.xz) = e9fea538da79ad27c42434d4a2173b3eb636408b
@@ -9,4 +9,5 @@ SHA1 (patch-configure) = bb69993ce23b2782fa3cff69c4b8c64cc6a16b78
 SHA1 (patch-dsextras.py) = 9ebb5b418ef902acea227d6d84691285ce2d1863
 SHA1 (patch-glib_Makefile.in) = 859360e5f5df3095236b002129feb4ad85546373
 SHA1 (patch-gobject_Makefile.in) = fa97ba35a52b890a4e7e0c16fc0cac1b215c91c2
+SHA1 (patch-py-compile) = 01584ae9ff16d3b7e29c35eecb5bce6cbac1abcc
 SHA1 (patch-pygi_info.c) = cd2d0f0b16a84c05b805edec89d4508507811c49
