@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.134 2018/12/12 14:08:50 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.135 2018/12/14 10:21:27 prlw1 Exp $
 bin/firefox
 lib/firefox/actors/AudibleAutoplayChild.jsm
 lib/firefox/actors/AudioPlaybackChild.jsm
@@ -4843,6 +4843,7 @@ lib/firefox/components/NetworkGeolocationProvider.js
 lib/firefox/components/NotificationStorage.js
 lib/firefox/components/PageIconProtocolHandler.js
 lib/firefox/components/PageThumbsStorageService.js
+${PLIST.webrtc}lib/firefox/components/PeerConnection.js
 lib/firefox/components/PlacesCategoriesStarter.js
 lib/firefox/components/PresentationControlService.js
 lib/firefox/components/PresentationDataChannelSessionTransport.js
