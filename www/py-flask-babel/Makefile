@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2017/10/23 15:33:03 adam Exp $
+# $NetBSD: Makefile,v 1.9 2018/12/14 08:52:22 adam Exp $
 
-DISTNAME=	Flask-Babel-0.11.2
+DISTNAME=	Flask-Babel-0.12.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-CATEGORIES=	www
+CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-Babel/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-babel>=2.3:../../devel/py-babel
 DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.5:../../textproc/py-jinja2
 
-USE_LANGUAGES=		# none
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
