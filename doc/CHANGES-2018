@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5188 2018/12/14 14:47:42 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5189 2018/12/14 17:28:10 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7265,3 +7265,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-WebTest to 2.0.32 [adam 2018-12-14]
 	Updated devel/py-test to 4.0.2 [adam 2018-12-14]
 	Updated devel/py-tox to 3.6.0 [adam 2018-12-14]
+	Updated games/warzone2100 to 3.2.3 [triaxx 2018-12-14]
