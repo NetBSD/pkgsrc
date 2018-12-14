@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2018/01/23 11:23:13 adam Exp $
+# $NetBSD: Makefile,v 1.57 2018/12/14 12:37:21 adam Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
+PKGREVISION=	1
 
 DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 
@@ -27,8 +28,6 @@ REPLACE_PYTHON+=	codegen/scmexpr.py
 REPLACE_PYTHON+=	docs/xsl/fixxref.py.in
 
 PYTHON_SELF_CONFLICT=	yes
-
-PY_PEP3147=	no
 
 BUILDLINK_API_DEPENDS.py-gobject-shared+=	py-gobject-shared>=${PKGVERSION_NOREV}
 
