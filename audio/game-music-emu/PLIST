@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2018/12/14 09:08:45 wiz Exp $
+include/gme/gme.h
+lib/libgme.so
+lib/libgme.so.0
+lib/libgme.so.${PKGVERSION}
+lib/pkgconfig/libgme.pc
