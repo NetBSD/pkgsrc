@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2015/04/25 14:23:07 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2018/12/14 17:03:04 bsiegert Exp $
 #
 
 DISTNAME=	agg-2.5
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.antigrain.com/
 
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 MAKE_JOBS_SAFE=		no
 USE_TOOLS+=	gmake msgfmt pkg-config aclocal autoheader \
-            automake autoconf
+            automake autoconf autoreconf
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=            yes
 GNU_CONFIGURE=          yes
@@ -21,7 +21,7 @@ GNU_CONFIGURE=          yes
 PKGCONFIG_OVERRIDE+=	libagg.pc.in
 
 pre-configure:
-	cd ${WRKSRC}; chmod +x autogen.sh; ./autogen.sh
+	cd ${WRKSRC}; ${TOOLS_PATH.autoreconf} -vi
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,10 +1,20 @@
-$NetBSD: patch-configure.in,v 1.1 2012/05/05 00:55:47 wiz Exp $
+$NetBSD: patch-configure.in,v 1.2 2018/12/14 17:03:04 bsiegert Exp $
 
 Remove obsolete macro. Fixes build with automake-1.12.
 
 --- configure.in.orig	2006-10-09 04:06:36.000000000 +0000
 +++ configure.in
-@@ -8,7 +8,6 @@ dnl Checks for programs.
+@@ -1,14 +1,14 @@
+-AC_INIT(src/agg_arc.cpp) # give me a source file, any source file...
++AC_INIT(agg, 2.5.0)
++AC_CONFIG_SRCDIR(src/agg_arc.cpp) # give me a source file, any source file...
+ AC_CANONICAL_TARGET
+ AC_CONFIG_HEADERS(include/config.h)
+-AM_INIT_AUTOMAKE(agg, 2.5.0)
++AM_INIT_AUTOMAKE(foreign)
+ 
+ 
+ dnl Checks for programs.
  AC_PROG_CC
  AC_PROG_CXX
  AC_ISC_POSIX
