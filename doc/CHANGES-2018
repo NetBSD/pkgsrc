@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5189 2018/12/14 17:28:10 triaxx Exp $
+$NetBSD: CHANGES-2018,v 1.5190 2018/12/14 22:51:38 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7266,3 +7266,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-test to 4.0.2 [adam 2018-12-14]
 	Updated devel/py-tox to 3.6.0 [adam 2018-12-14]
 	Updated games/warzone2100 to 3.2.3 [triaxx 2018-12-14]
+	Updated net/fehqlibs to 0.9.10 [schmonz 2018-12-14]
