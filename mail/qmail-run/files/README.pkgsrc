@@ -35,11 +35,11 @@ POP3 (for Maildirs only) on port 110:
 - Run "/etc/rc.d/qmailpop3d start".
 
 TLS encryption for SMTP, submission, POP3, and remote delivery:
-- Create cert and DH params (as instructed by the qmail package).
+- Create cert and DH params (follow steps in `pkg_info -qD qmail`).
 - Run "/etc/rc.d/qmail restart".
 
 Sender Policy Framework:
-- Configure Sender Rewriting Scheme (as instructed by the qmail package)
+- Configure Sender Rewriting Scheme (see ${PREFIX}/share/doc/qmail/README.srs)
   so your auto-forwarded messages will reach servers that choose to
   enforce the forwarded domains' SPF policies.
 - Publish a DNS TXT record with your desired policy.

@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailsmtpd.sh,v 1.26 2018/12/14 06:55:07 schmonz Exp $
+# $NetBSD: qmailsmtpd.sh,v 1.27 2018/12/15 06:31:34 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-smtpd (SMTP service).
 #
@@ -39,7 +39,7 @@ rcvar=${name}
 required_files="@PKG_SYSCONFDIR@/control/me"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/concurrencyincoming"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/rcpthosts"
-required_files="${required_files} ${qmailsmtpd_tcprules}.cdb"
+required_files="${required_files} ${qmailsmtpd_tcprules}"
 command="${qmailsmtpd_tcpserver}"
 procname=nb${name}
 start_precmd="qmailsmtpd_precmd"

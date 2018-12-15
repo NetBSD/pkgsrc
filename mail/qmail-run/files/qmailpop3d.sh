@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailpop3d.sh,v 1.29 2018/12/14 06:55:07 schmonz Exp $
+# $NetBSD: qmailpop3d.sh,v 1.30 2018/12/15 06:31:34 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-pop3d (POP3 server for Maildirs).
 #
@@ -40,7 +40,7 @@ rcvar=${name}
 required_files="@PKG_SYSCONFDIR@/control/me"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/concurrencypop3"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/pop3capabilities"
-required_files="${required_files} ${qmailpop3d_tcprules}.cdb"
+required_files="${required_files} ${qmailpop3d_tcprules}"
 command="${qmailpop3d_tcpserver}"
 procname=nb${name}
 start_precmd="qmailpop3d_precmd"
