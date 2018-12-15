@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2018/10/11 15:24:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.42 2018/12/15 21:12:22 wiz Exp $
 
 DISTNAME=		rabbitmq-server-3.7.7
 PKGNAME=		${DISTNAME:S/-server//}
@@ -8,7 +8,7 @@ EXTRACT_SUFX=		.tar.xz
 GITHUB_PROJECT=		rabbitmq-server
 GITHUB_RELEASE=		v${PKGVERSION_NOREV}
 
-MAINTAINER=		filip@joyent.com
+MAINTAINER=		fhajny@NetBSD.org
 HOMEPAGE=		http://www.rabbitmq.com/server.html
 COMMENT=		Implementation of AMQP that provides robust messaging for applications
 LICENSE=		mpl-1.1
