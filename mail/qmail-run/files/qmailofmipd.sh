@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailofmipd.sh,v 1.21 2018/12/14 06:55:07 schmonz Exp $
+# $NetBSD: qmailofmipd.sh,v 1.22 2018/12/15 06:31:34 schmonz Exp $
 #
 # @PKGNAME@ script to control ofmipd (SMTP submission service).
 #
@@ -43,7 +43,7 @@ required_files="${required_files} @PKG_SYSCONFDIR@/control/concurrencysubmission
 required_files="${required_files} @PKG_SYSCONFDIR@/control/rcpthosts"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/smtpcapabilities"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/fixsmtpio"
-required_files="${required_files} ${qmailofmipd_tcprules}.cdb"
+required_files="${required_files} ${qmailofmipd_tcprules}"
 command="${qmailofmipd_tcpserver}"
 procname=nb${name}
 start_precmd="qmailofmipd_precmd"
