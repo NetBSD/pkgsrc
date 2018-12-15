@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2018/11/04 18:38:06 bsiegert Exp $
+# $NetBSD: Makefile,v 1.34 2018/12/15 21:12:23 wiz Exp $
 
 DISTNAME=		beats-6.2.4
 PKGREVISION=		2
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GITHUB:=elastic/}
 GITHUB_PROJECT=		beats
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 
-MAINTAINER=		filip@joyent.com
+MAINTAINER=		fhajny@NetBSD.org
 HOMEPAGE=		https://www.elastic.co/products/beats
 COMMENT=		Data Shippers for Elasticsearch
 LICENSE=		apache-2.0
