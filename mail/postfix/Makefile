@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.306 2018/12/09 18:52:36 adam Exp $
+# $NetBSD: Makefile,v 1.307 2018/12/15 16:35:23 taca Exp $
 
-PKGREVISION= 3
 .include "../../mail/postfix/Makefile.common"
 
 COMMENT=	Postfix SMTP server and tools
