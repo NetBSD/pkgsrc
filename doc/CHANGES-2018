@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5203 2018/12/15 17:33:19 maya Exp $
+$NetBSD: CHANGES-2018,v 1.5204 2018/12/15 21:03:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7289,3 +7289,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Added math/bcal version 2.1 [leot 2018-12-15]
 	Updated lang/nodejs to 10.14.2nb1 [maya 2018-12-15]
 	Updated lang/nodejs8 to 8.12.0nb2 [maya 2018-12-15]
+	Updated devel/py-cython to 0.29.2 [adam 2018-12-15]
+	Updated textproc/py-xlrd to 1.2.0 [adam 2018-12-15]
