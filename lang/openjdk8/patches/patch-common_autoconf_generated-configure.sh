@@ -1,10 +1,19 @@
-$NetBSD: patch-common_autoconf_generated-configure.sh,v 1.15 2018/12/12 14:22:11 ryoon Exp $
+$NetBSD: patch-common_autoconf_generated-configure.sh,v 1.16 2018/12/15 20:27:45 jperkin Exp $
 
 BOOT_JDK_VERSION part: pkg/51221 (Build error with OpenJDK8 and i386) and
 pkg/53223.
 
 --- common/autoconf/generated-configure.sh.orig	2018-12-09 09:50:43.000000000 +0000
 +++ common/autoconf/generated-configure.sh
+@@ -4132,7 +4132,7 @@ VALID_TOOLCHAINS_all="gcc clang solstudi
+ # These toolchains are valid on different platforms
+ VALID_TOOLCHAINS_bsd="clang gcc"
+ VALID_TOOLCHAINS_linux="gcc clang"
+-VALID_TOOLCHAINS_solaris="solstudio"
++VALID_TOOLCHAINS_solaris="gcc solstudio"
+ VALID_TOOLCHAINS_macosx="gcc clang"
+ VALID_TOOLCHAINS_aix="xlc"
+ VALID_TOOLCHAINS_windows="microsoft"
 @@ -15404,9 +15404,6 @@ done
    # We need to find a recent version of GNU make. Especially on Solaris, this can be tricky.
    if test "x$MAKE" != x; then
@@ -222,7 +231,7 @@ pkg/53223.
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -24796,16 +24793,15 @@ $as_echo_n "checking flags for boot jdk 
+@@ -24796,16 +24793,15 @@ $as_echo_n "checking flags for boot jdk
    # Maximum amount of heap memory.
    # Maximum stack size.
    if test "x$BOOT_JDK_BITS" = x32; then
@@ -276,7 +285,30 @@ pkg/53223.
            # This is not a symbolic link! We are done!
            break
          fi
-@@ -42453,7 +42449,8 @@ $as_echo "alsa pulse x11" >&6; }
+@@ -41214,6 +41210,12 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
+       SET_SHARED_LIBRARY_ORIGIN="$SET_EXECUTABLE_ORIGIN"
+       SET_SHARED_LIBRARY_NAME='-Xlinker -install_name -Xlinker @rpath/$1'
+       SET_SHARED_LIBRARY_MAPFILE=''
++    elif test "x$OPENJDK_TARGET_OS" = xsolaris; then
++      SHARED_LIBRARY_FLAGS="-shared"
++      SET_EXECUTABLE_ORIGIN='-R\$$$$ORIGIN$1'
++      SET_SHARED_LIBRARY_ORIGIN="$SET_EXECUTABLE_ORIGIN"
++      SET_SHARED_LIBRARY_NAME=''
++      SET_SHARED_LIBRARY_MAPFILE=''
+     else
+       # Default works for linux, might work on other platforms as well.
+       SHARED_LIBRARY_FLAGS='-shared'
+@@ -41262,7 +41264,9 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
+   if test "x$OPENJDK_TARGET_OS" = xsolaris; then
+     CFLAGS_JDK="${CFLAGS_JDK} -D__solaris__"
+     CXXFLAGS_JDK="${CXXFLAGS_JDK} -D__solaris__"
++    if test "x$TOOLCHAIN_TYPE" = xsolstudio; then
+     CFLAGS_JDKLIB_EXTRA='-xstrconst'
++    fi
+   fi
+   # The (cross) compiler is now configured, we can now test capabilities
+   # of the target platform.
+@@ -42453,7 +42457,8 @@ $as_echo "alsa pulse x11" >&6; }
    if test "x$OPENJDK_TARGET_OS" = xbsd; then
      { $as_echo "$as_me:${as_lineno-$LINENO}: checking what is not needed on BSD?" >&5
  $as_echo_n "checking what is not needed on BSD?... " >&6; }
@@ -286,7 +318,7 @@ pkg/53223.
        ALSA_NOT_NEEDED=yes
        PULSE_NOT_NEEDED=yes
        { $as_echo "$as_me:${as_lineno-$LINENO}: result: alsa pulse" >&5
-@@ -43683,7 +43680,7 @@ $as_echo "$as_me: WARNING: Can't find pr
+@@ -43683,7 +43688,7 @@ $as_echo "$as_me: WARNING: Can't find pr
      BUILD_FREETYPE=no
    fi
    # Now check if configure found a version of 'msbuild.exe'
@@ -295,7 +327,7 @@ pkg/53223.
      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Can't find an msbuild.exe executable (you may try to install .NET 4.0) - ignoring --with-freetype-src" >&5
  $as_echo "$as_me: WARNING: Can't find an msbuild.exe executable (you may try to install .NET 4.0) - ignoring --with-freetype-src" >&2;}
      BUILD_FREETYPE=no
-@@ -44099,7 +44096,11 @@ $as_echo "$as_me: WARNING: --with-freety
+@@ -44099,7 +44104,11 @@ $as_echo "$as_me: WARNING: --with-freety
  
        # Allow --with-freetype-lib and --with-freetype-include to override
        if test "x$with_freetype_include" != x; then
@@ -308,7 +340,7 @@ pkg/53223.
        fi
        if test "x$with_freetype_lib" != x; then
          POTENTIAL_FREETYPE_LIB_PATH="$with_freetype_lib"
-@@ -47209,7 +47210,7 @@ $as_echo "$as_me: The path of FREETYPE_I
+@@ -47209,7 +47218,7 @@ $as_echo "$as_me: The path of FREETYPE_I
      FREETYPE_INCLUDE_PATH="`cd "$path"; $THEPWDCMD -L`"
    fi
  
@@ -317,7 +349,7 @@ pkg/53223.
          FREETYPE_CFLAGS="-I$FREETYPE_INCLUDE_PATH/freetype2 -I$FREETYPE_INCLUDE_PATH"
        else
          FREETYPE_CFLAGS="-I$FREETYPE_INCLUDE_PATH"
-@@ -47342,7 +47343,7 @@ $as_echo "$as_me: The path of FREETYPE_L
+@@ -47342,7 +47351,7 @@ $as_echo "$as_me: The path of FREETYPE_L
        if test "x$OPENJDK_TARGET_OS" = xwindows; then
          FREETYPE_LIBS="$FREETYPE_LIB_PATH/freetype.lib"
        else
@@ -326,7 +358,7 @@ pkg/53223.
        fi
      fi
  
-@@ -48571,9 +48572,6 @@ fi
+@@ -48571,9 +48580,6 @@ fi
  
  
  
@@ -336,7 +368,7 @@ pkg/53223.
  
      llvm_components="jit mcjit engine nativecodegen native"
      unset LLVM_CFLAGS
-@@ -48616,7 +48614,7 @@ fi
+@@ -48616,7 +48622,7 @@ fi
    fi
  
    # libCrun is the c++ runtime-library with SunStudio (roughly the equivalent of gcc's libstdc++.so)
