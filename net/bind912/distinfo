@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.4 2018/10/24 11:10:31 jperkin Exp $
+$NetBSD: distinfo,v 1.5 2018/12/15 16:40:20 taca Exp $
 
-SHA1 (bind-9.12.3.tar.gz) = 55131f7ab7d9f970ec3097eba5bbfb06346bcf7a
-RMD160 (bind-9.12.3.tar.gz) = bbfc7901afad2f2bcfa1d0515fd4eac01539da5e
-SHA512 (bind-9.12.3.tar.gz) = ffb9a1fbf2ae06f5af51754ef3809ebd7239184359eda11c6f09a9959e362a3fbc78bad81538bfdb2aea64c4d9718f5e4fc06e726f465b888d1099bac6020922
-Size (bind-9.12.3.tar.gz) = 8616664 bytes
+SHA1 (bind-9.12.3-P1.tar.gz) = 1bc1ff64051d467fa27b2a8266c5ea3e495609c7
+RMD160 (bind-9.12.3-P1.tar.gz) = eb0c67a00f9b3bba858734ca3aa9e624fac11362
+SHA512 (bind-9.12.3-P1.tar.gz) = c1c91de88e4297e79b527775edd525c6fa948f169977563ab2e6ca93cac7317f8ca85863567f5cc151d4c6e3c081864ab1cf813bcfdd1165b52e9471b8317c28
+Size (bind-9.12.3-P1.tar.gz) = 8625693 bytes
 SHA1 (patch-bin_tests_system_metadata_tests.sh) = d01a492d0b7738760bdbff714248e279a78fef28
 SHA1 (patch-config.threads.in) = 8341bdb11888d3efdde5f115de91b1f46aa40bd0
 SHA1 (patch-configure) = 7d74eef1002351a5513c7c617e28721b39de65d0
