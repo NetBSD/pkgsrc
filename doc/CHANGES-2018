@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5193 2018/12/15 06:31:41 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.5194 2018/12/15 10:28:41 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7270,3 +7270,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/ucspi-tcp6 to 1.10.1 [schmonz 2018-12-14]
 	Updated net/ucspi-ssl to 0.999.10.7 [schmonz 2018-12-14]
 	Updated mail/qmail-run to 20181215 [schmonz 2018-12-15]
+	Updated lang/go110 to 1.10.7 [bsiegert 2018-12-15]
