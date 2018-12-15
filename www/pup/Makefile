@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/11/04 18:38:08 bsiegert Exp $
+# $NetBSD: Makefile,v 1.10 2018/12/15 21:12:24 wiz Exp $
 
 DISTNAME=		pup-0.4.0
 PKGREVISION=		6
@@ -6,7 +6,7 @@ CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_GITHUB:=ericchiang/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 
-MAINTAINER=		filip@joyent.com
+MAINTAINER=		fhajny@NetBSD.org
 HOMEPAGE=		https://github.com/ericchiang/pup/
 COMMENT=		Parsing HTML at the command line
 LICENSE=		mit

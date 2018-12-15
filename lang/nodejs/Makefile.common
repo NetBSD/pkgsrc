@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2018/11/28 08:36:04 adam Exp $
+# $NetBSD: Makefile.common,v 1.25 2018/12/15 21:12:21 wiz Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs6/Makefile
 # used by lang/nodejs8/Makefile
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	https://nodejs.org/dist/${DISTNAME:S/node-//}/
 PKGNAME=	${DISTNAME:S/-v/js-/}
 
-MAINTAINER=	filip@joyent.com
+MAINTAINER=	fhajny@NetBSD.org
 HOMEPAGE=	https://nodejs.org/
 COMMENT=	V8 JavaScript for clients and servers
 LICENSE=	mit
