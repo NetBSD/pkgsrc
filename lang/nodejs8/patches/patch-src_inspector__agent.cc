@@ -1,4 +1,4 @@
-$NetBSD: patch-src_inspector__agent.cc,v 1.1 2017/11/01 12:07:31 fhajny Exp $
+$NetBSD: patch-src_inspector__agent.cc,v 1.2 2018/12/15 17:27:21 maya Exp $
 
 --- src/inspector_agent.cc.orig	2017-05-30 17:32:13.000000000 +0000
 +++ src/inspector_agent.cc
@@ -7,7 +7,7 @@ $NetBSD: patch-src_inspector__agent.cc,v 1.1 2017/11/01 12:07:31 fhajny Exp $
    // follow the pthreads specification to the letter rather than in spirit:
    // https://lists.freebsd.org/pipermail/freebsd-current/2014-March/048885.html
 -#ifndef __FreeBSD__
-+#if defined(__FreeBSD__) && !defined(__NetBSD__) 
++#if !defined(__FreeBSD__) && !defined(__NetBSD__) 
    CHECK_EQ(0, pthread_attr_setstacksize(&attr, PTHREAD_STACK_MIN));
  #endif  // __FreeBSD__
    CHECK_EQ(0, pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_DETACHED));
