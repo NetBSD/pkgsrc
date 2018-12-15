@@ -1,0 +1,27 @@
+# $NetBSD: Makefile.common,v 1.1 2018/12/15 17:12:44 taca Exp $
+# used by lang/php73/Makefile.php
+# used by lang/php/ext.mk
+# used by meta-pkgs/php73-extensions/Makefile
+
+PHP_VERSION_REQD=	73
+
+.include "../../lang/php/common.mk"
+
+CATEGORIES+=		www
+MAINTAINER?=		pkgsrc-users@NetBSD.org
+
+# needed due to (broken?) configure checks in php-xmlrpc and php5-dom
+CONFIGURE_ENV+=		PHP_LIBXML_SHARED="1"
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+# configure test gets confused by wrappers dropping -R /usr/lib
+CONFIGURE_ARGS+=	php_cv_cc_dashr=no
+.endif
+
+# not every extension actually depend on PCRE, and those which do
+# don't use internal pcre structures, so default to build-time
+# dependency only
+BUILDLINK_DEPMETHOD.pcre2?=	build
+CONFIGURE_ARGS+=	--with-pcre-regex=${BUILDLINK_PREFIX.pcre2}
+.include "../../devel/pcre2/buildlink3.mk"
