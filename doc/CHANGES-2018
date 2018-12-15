@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5202 2018/12/15 17:26:23 leot Exp $
+$NetBSD: CHANGES-2018,v 1.5203 2018/12/15 17:33:19 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7287,3 +7287,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Added lang/php73 version 7.3.0 [taca 2018-12-15]
 	Added meta-pkgs/php73-extensions version 7.3.0 [taca 2018-12-15]
 	Added math/bcal version 2.1 [leot 2018-12-15]
+	Updated lang/nodejs to 10.14.2nb1 [maya 2018-12-15]
+	Updated lang/nodejs8 to 8.12.0nb2 [maya 2018-12-15]
