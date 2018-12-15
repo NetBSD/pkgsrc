@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/08/05 15:00:46 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2018/12/15 16:51:36 schmonz Exp $
 
 DISTNAME=		qpasswd-0.5
 CATEGORIES=		sysutils
@@ -19,6 +19,7 @@ SUBST_SED.paths=	-e 's|/etc/qpasswd|${PKG_SYSCONFDIR}/qpasswd|g'
 
 DJB_RESTRICTED=		no
 
+LDFLAGS.FreeBSD+=	-lcrypt
 LDFLAGS.Linux+=		-lcrypt
 LDFLAGS.NetBSD+=	-lcrypt
 
