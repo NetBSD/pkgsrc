@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2016/03/05 11:27:54 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2018/12/15 16:53:02 schmonz Exp $
 #
 
 DISTNAME=		tpm-1.1b
@@ -31,5 +31,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/libtcpa/License ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
+BUILDLINK_API_DEPENDS.openssl+=	openssl<1.1
+BUILDLINK_ABI_DEPENDS.openssl+=	openssl<1.1
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
