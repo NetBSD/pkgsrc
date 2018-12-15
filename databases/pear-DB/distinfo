@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2016/06/13 07:51:52 wen Exp $
+$NetBSD: distinfo,v 1.7 2018/12/15 16:45:47 taca Exp $
 
-SHA1 (pear/DB-1.9.2.tgz) = f57bd4fdacee9f273b4330864dd78dfca2c2b77c
-RMD160 (pear/DB-1.9.2.tgz) = c83114d8d0a44200ffa12c70e525f78e7da0e3b9
-SHA512 (pear/DB-1.9.2.tgz) = 126bbbb847a24c20731f1e5f4a549e9d7e0651a760f10c49cfc7550f80dd8b05f3560bc80110bcaab9e79dcbb714c6113948f14a727f7f4087a23178b3db0afa
-Size (pear/DB-1.9.2.tgz) = 133795 bytes
+SHA1 (pear/DB-1.9.3.tgz) = d437d0c01f8b86f4d37ff90eb9a007b1100f42f9
+RMD160 (pear/DB-1.9.3.tgz) = 68c0467dda7f3f46967defa492660f8435c4e291
+SHA512 (pear/DB-1.9.3.tgz) = 3fe98f97307818f65c0eaf291169fd13533a4d484d34d7fa7aa82580f6ec3d89b984292f173da2cf896f5f15531db9bde2be981e5a7679cc00c48aa2f9cc1142
+Size (pear/DB-1.9.3.tgz) = 132290 bytes
