@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2018/12/15 17:25:15 leot Exp $
+bin/bcal
+man/man1/bcal.1
+share/doc/bcal/README.md

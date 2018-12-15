@@ -1,0 +1,32 @@
+$NetBSD: patch-Makefile,v 1.1 2018/12/15 17:25:15 leot Exp $
+
+ - Respect LDFLAGS
+ - Respect existing LDLIBS
+ - Remove default -O3
+
+--- Makefile
++++ Makefile
+@@ -4,20 +4,19 @@ MANDIR = $(DESTDIR)$(PREFIX)/share/man/man1
+ DOCDIR = $(DESTDIR)$(PREFIX)/share/doc/bcal
+ STRIP ?= strip
+ 
+-CFLAGS ?= -O3
+ CFLAGS += -Wall -Wextra -Wno-unused-parameter -Werror
+-LDLIBS = -lreadline
++LDLIBS += -lreadline
+ 
+ SRC = $(wildcard src/*.c)
+ INCLUDE = -Iinc
+ 
+ bcal: $(SRC)
+-	$(CC) $(CFLAGS) $(INCLUDE) -o bcal $(SRC) $(LDLIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) $(INCLUDE) -o bcal $(SRC) $(LDLIBS)
+ 
+ all: bcal
+ 
+ x86: $(SRC)
+-	$(CC) -m64 $(CFLAGS) $(INCLUDE) -o bcal $(SRC) $(LDLIBS)
++	$(CC) -m64 $(CFLAGS) $(LDFLAGS) $(INCLUDE) -o bcal $(SRC) $(LDLIBS)
+ 	strip bcal
+ 
+ distclean: clean
