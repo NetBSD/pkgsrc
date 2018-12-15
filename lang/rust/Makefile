@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2018/12/08 07:24:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.69 2018/12/15 12:41:43 jperkin Exp $
 
 DISTNAME=	rustc-1.31.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -161,15 +161,15 @@ RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 pre-build-fix:
 .endif
-#.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
-#RUST_STAGE0_VER=	1.30.1
-#RUST_ARCH:=		x86_64-sun-solaris
-#RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
-#SITES.${RUST_STAGE0}=	https://us-east.manta.joyent.com/pkgsrc/public/pkg-bootstraps/
-#DISTFILES:=		${DISTFILES} ${RUST_STAGE0}
-#RUST_BOOTSTRAP_PATH?=	${WRKDIR}/rust-${RUST_STAGE0_VER}-${RUST_ARCH}
-#pre-build-fix:
-#.endif
+.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
+RUST_STAGE0_VER=	1.30.0
+RUST_ARCH:=		x86_64-sun-solaris
+RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
+SITES.${RUST_STAGE0}=	https://us-east.manta.joyent.com/pkgsrc/public/pkg-bootstraps/
+DISTFILES:=		${DISTFILES} ${RUST_STAGE0}
+RUST_BOOTSTRAP_PATH?=	${WRKDIR}/rust-${RUST_STAGE0_VER}-${RUST_ARCH}
+pre-build-fix:
+.endif
 .if !empty(MACHINE_PLATFORM:MFreeBSD-*-i386) || make(distinfo) || make (makesum) || make(mdi)
 RUST_STAGE0_VER=	1.30.1
 RUST_ARCH:=		i686-unknown-freebsd
