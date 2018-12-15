@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2018/09/10 12:18:09 fhajny Exp $
+# $NetBSD: Makefile,v 1.27 2018/12/15 21:12:20 wiz Exp $
 
 DISTNAME=	python-driver-3.15.1
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}-cassandra/}
@@ -6,7 +6,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=datastax/}
 GITHUB_PROJECT=	python-driver
 
-MAINTAINER=	filip@joyent.com
+MAINTAINER=	fhajny@NetBSD.org
 HOMEPAGE=	https://github.com/datastax/python-driver/
 COMMENT=	DataStax Python Driver for Apache Cassandra
 LICENSE=	apache-2.0

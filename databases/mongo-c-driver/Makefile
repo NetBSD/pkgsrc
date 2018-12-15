@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.36 2018/07/30 12:48:48 jperkin Exp $
+# $NetBSD: Makefile,v 1.37 2018/12/15 21:12:19 wiz Exp $
 
 DISTNAME=	mongo-c-driver-1.9.5
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mongodb/}
 
-MAINTAINER=	filip@joyent.com
+MAINTAINER=	fhajny@NetBSD.org
 HOMEPAGE=	https://github.com/mongodb/mongo-c-driver/
 COMMENT=	MongoDB client library written in C
 LICENSE=	apache-2.0

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2018/05/14 15:51:40 fhajny Exp $
+# $NetBSD: Makefile,v 1.13 2018/12/15 21:12:22 wiz Exp $
 
 DISTNAME=	rabbitmq-c-0.9.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alanxz/}
 
-MAINTAINER=	filip@joyent.com
+MAINTAINER=	fhajny@NetBSD.org
 HOMEPAGE=	https://github.com/alanxz/rabbitmq-c
 COMMENT=	C-language AMQP client library for use with AMQP servers
 LICENSE=	mit

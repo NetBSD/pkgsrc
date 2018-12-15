@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2018/10/02 16:53:46 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2018/12/15 21:12:22 wiz Exp $
 
 DISTNAME=	scikit-learn-0.20.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-learn/}
 
-MAINTAINER=	filip@joyent.com
+MAINTAINER=	fhajny@NetBSD.org
 HOMEPAGE=	http://scikit-learn.org/
 COMMENT=	Machine learning algorithms for Python
 LICENSE=	modified-bsd
