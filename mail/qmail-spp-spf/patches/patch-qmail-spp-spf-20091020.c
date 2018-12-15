@@ -1,10 +1,18 @@
-$NetBSD: patch-qmail-spp-spf-20091020.c,v 1.1 2018/12/06 00:07:33 schmonz Exp $
+$NetBSD: patch-qmail-spp-spf-20091020.c,v 1.2 2018/12/15 21:15:16 schmonz Exp $
 
-Adjust include path and IPv6 struct access.
+Adjust include path and IPv6 struct access. Ensure AF_INET{,6} is defined.
 
---- qmail-spp-spf-20091020.c.orig	2018-12-05 23:27:39.000000000 +0000
+--- qmail-spp-spf-20091020.c.orig	2018-12-15 21:12:41.000000000 +0000
 +++ qmail-spp-spf-20091020.c
-@@ -150,7 +150,7 @@
+@@ -143,6 +143,7 @@
+       "make" or "tcprules" commands.)
+ */
+ 
++#include <sys/socket.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+@@ -150,7 +151,7 @@
  #include <time.h>
  #include <arpa/inet.h>
  #include <unistd.h>
@@ -13,7 +21,7 @@ Adjust include path and IPv6 struct access.
  
  #define LOG "qmail-spp-spf: "
  #define LOGR "qmail-spp-spf:%s: "
-@@ -263,10 +263,17 @@ int random_ip_passes(SPF_request_t *spf_
+@@ -263,10 +264,17 @@ int random_ip_passes(SPF_request_t *spf_
      }
    else
      {
