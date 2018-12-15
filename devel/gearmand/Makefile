@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2018/12/13 19:51:33 adam Exp $
+# $NetBSD: Makefile,v 1.37 2018/12/15 21:12:20 wiz Exp $
 
 DISTNAME=	gearmand-1.1.18
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=gearman/}
 GITHUB_PROJECT= gearmand
 GITHUB_RELEASE= ${PKGVERSION_NOREV}
 
-MAINTAINER=	filip@joyent.com
+MAINTAINER=	fhajny@NetBSD.org
 HOMEPAGE=	http://gearman.org/
 COMMENT=	Gearman C Server and Library
 LICENSE=	modified-bsd

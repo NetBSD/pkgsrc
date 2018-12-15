@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2018/04/27 14:06:56 fhajny Exp $
+# $NetBSD: Makefile,v 1.10 2018/12/15 21:12:23 wiz Exp $
 
 DISTNAME=	liblognorm-2.0.5
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.liblognorm.com/files/download/
 
-MAINTAINER=	filip@joyent.com
+MAINTAINER=	fhajny@NetBSD.org
 HOMEPAGE=	http://www.liblognorm.com/
 COMMENT=	Tool to normalize log data
 LICENSE=	gnu-lgpl-v2.1

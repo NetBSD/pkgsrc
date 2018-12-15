@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/07/18 00:06:24 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2018/12/15 21:12:24 wiz Exp $
 #
 
 DISTNAME=	sphinx-2.2.11-release
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://sphinxsearch.com/files/
 
-MAINTAINER=	filip@joyent.com
+MAINTAINER=	fhajny@NetBSD.org
 HOMEPAGE=	http://www.sphinxsearch.com/
 COMMENT=	Sphinx Full-Text Search Engine
 LICENSE=	gnu-gpl-v2
