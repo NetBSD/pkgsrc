@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2017/12/08 16:49:01 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.18 2018/12/15 21:12:23 wiz Exp $
 #
 # used by sysutils/collectd/Makefile
 # used by sysutils/collectd-amqp/Makefile
@@ -22,7 +22,7 @@ MASTER_SITES=	http://collectd.org/files/
 CATEGORIES=	sysutils
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	filip@joyent.com
+MAINTAINER=	fhajny@NetBSD.org
 HOMEPAGE=	http://collectd.org/
 LICENSE=	gnu-gpl-v2
 

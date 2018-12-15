@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.41 2018/12/13 19:34:33 adam Exp $
+# $NetBSD: Makefile,v 1.42 2018/12/15 21:12:20 wiz Exp $
 
 DISTNAME=	redis-5.0.3
 CATEGORIES=	databases
 MASTER_SITES=	http://download.redis.io/releases/
 
-MAINTAINER=	filip@joyent.com
+MAINTAINER=	fhajny@NetBSD.org
 HOMEPAGE=	https://redis.io/
 COMMENT=	Persistent key-value database with built-in net interface
 LICENSE=	modified-bsd
