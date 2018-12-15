@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.64 2018/12/12 16:04:10 ryoon Exp $
+$NetBSD: distinfo,v 1.65 2018/12/15 20:27:45 jperkin Exp $
 
 SHA1 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 7408f52d3bbe35c2b14bbd3215cbf60f1335d334
 RMD160 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 24f1577b5fc86d137f070aedb4610c8c89e45815
@@ -63,7 +63,7 @@ SHA1 (patch-bh) = 6194a7c319a496f8ff7df173912cf87118f26a63
 SHA1 (patch-bi) = 5409f0944d6f850baeaaa7c64d2e8ad52233e1e9
 SHA1 (patch-bn) = a50dbe17236a90d60d4bbb852ae447e51a279892
 SHA1 (patch-common_autoconf_boot-jdk.m4) = a29767c79544dea243019cc841d834f756172462
-SHA1 (patch-common_autoconf_generated-configure.sh) = bd10cdd8d06c6620cf350df8b5a0e6dd392ef058
+SHA1 (patch-common_autoconf_generated-configure.sh) = bb925091b859f6feea7963b9d99d3c7d6654982f
 SHA1 (patch-common_autoconf_spec.gmk.in) = e98bc4c8a09f49c6a26447e6f78abf4709ee694b
 SHA1 (patch-hotspot_agent_src_os_bsd_Makefile) = 6e4c41b080577ed7cd418ee3b84f7f5a73dd11e6
 SHA1 (patch-hotspot_agent_src_share_classes_sun_jvm_hotspot_utilities_PlatformInfo.java) = 893f3b7ad0839a75be49ddd0f5eefcff2dbd2928
@@ -121,6 +121,7 @@ SHA1 (patch-jdk_src_share_classes_sun_security_jca_ProviderConfig.java) = b7d53d
 SHA1 (patch-jdk_src_share_lib_security_java.security-bsd) = 5a64fc1205a5bd2f6586ad65ca21f93dfffb1606
 SHA1 (patch-jdk_src_share_native_sun_awt_image_jpeg_imageioJPEG.c) = 9d8900a6f9cc6af99b08e281b0d6d4c337916317
 SHA1 (patch-jdk_src_share_native_sun_awt_image_jpeg_jpegdecoder.c) = 5986de69be2eb36546274a8242b8d13ed7599b50
+SHA1 (patch-jdk_src_share_native_sun_awt_libpng_pngpriv.h) = bd2ef7ea0b2cd9ec8cb637e0c0d4dc3a25021773
 SHA1 (patch-jdk_src_share_native_sun_security_ec_impl_ecc__impl.h) = 18e79e74dc8ec2b24ab91ad8af2195bfd508d1b4
 SHA1 (patch-jdk_src_solaris_bin_ergo.c) = 0e2e496a0d596cc9de546c722b3387ad5a08bc21
 SHA1 (patch-jdk_src_solaris_bin_ergo__i586.c) = f6fd4c1e0627867ba8d5071da7c53697177805dd
