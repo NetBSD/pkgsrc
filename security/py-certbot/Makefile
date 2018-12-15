@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2018/03/13 10:08:51 fhajny Exp $
+# $NetBSD: Makefile,v 1.9 2018/12/15 21:12:23 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security
 
 COMMENT=	Client for the Let's Encrypt CA
-MAINTAINER=	filip@joyent.com
+MAINTAINER=	fhajny@NetBSD.org
 LICENSE=	apache-2.0
 
 EGG_NAME=	${DISTNAME}
