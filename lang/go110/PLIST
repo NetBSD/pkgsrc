@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/11/04 12:36:09 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/12/15 10:23:32 bsiegert Exp $
 go110/AUTHORS
 go110/CONTRIBUTING.md
 go110/CONTRIBUTORS
@@ -1966,6 +1966,7 @@ go110/src/cmd/go/internal/generate/generate.go
 go110/src/cmd/go/internal/generate/generate_test.go
 go110/src/cmd/go/internal/get/discovery.go
 go110/src/cmd/go/internal/get/get.go
+go110/src/cmd/go/internal/get/path.go
 go110/src/cmd/go/internal/get/pkg_test.go
 go110/src/cmd/go/internal/get/tag_test.go
 go110/src/cmd/go/internal/get/vcs.go
