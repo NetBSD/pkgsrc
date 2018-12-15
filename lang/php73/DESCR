@@ -1,0 +1,22 @@
+PHP is a widely-used open source general-purpose scripting language
+that is especially suited for web development and can be embedded
+into HTML. It is modular, and object-oriented. Much of its syntax
+is borrowed from C, Java and Perl with a couple of unique PHP-specific
+features thrown in.  The language is designed to allow web developers
+to write dynamically generated pages quickly.
+
+This package provides PHP version 7.3.x.
+
+PHP 7.3.0 comes with numerous improvements and new features such as
+
+* Flexible Heredoc and Nowdoc Syntax
+* PCRE2 Migration
+* Multiple MBString Improvements
+* LDAP Controls Support
+* Improved FPM Logging
+* Windows File Deletion Improvements
+* Several Deprecations
+
+For source downloads of PHP 7.3.0 please visit our downloads page Windows
+binaries can be found on the PHP for Windows site.  The list of changes is
+recorded in the ChangeLog.
