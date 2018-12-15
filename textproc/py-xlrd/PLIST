@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.8 2017/08/31 09:27:44 adam Exp $
-bin/runxlrd${PYVERSSUFFIX}.py
+@comment $NetBSD: PLIST,v 1.9 2018/12/15 21:02:58 adam Exp $
+bin/runxlrd-${PYVERSSUFFIX}.py
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/xlrd/__init__.py
 ${PYSITELIB}/xlrd/__init__.pyc
@@ -17,10 +16,6 @@ ${PYSITELIB}/xlrd/book.pyo
 ${PYSITELIB}/xlrd/compdoc.py
 ${PYSITELIB}/xlrd/compdoc.pyc
 ${PYSITELIB}/xlrd/compdoc.pyo
-${PYSITELIB}/xlrd/examples/namesdemo.xls
-${PYSITELIB}/xlrd/examples/xlrdnameAPIdemo.py
-${PYSITELIB}/xlrd/examples/xlrdnameAPIdemo.pyc
-${PYSITELIB}/xlrd/examples/xlrdnameAPIdemo.pyo
 ${PYSITELIB}/xlrd/formatting.py
 ${PYSITELIB}/xlrd/formatting.pyc
 ${PYSITELIB}/xlrd/formatting.pyo
