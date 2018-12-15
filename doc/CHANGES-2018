@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5198 2018/12/15 16:46:10 taca Exp $
+$NetBSD: CHANGES-2018,v 1.5199 2018/12/15 16:48:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7283,3 +7283,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/bind912 to 9.12.3pl1 [taca 2018-12-15]
 	Updated www/contao35 to 3.5.37 [taca 2018-12-15]
 	Updated databases/pear-DB to 1.9.3 [taca 2018-12-15]
+	Updated lang/pear to 1.10.7 [taca 2018-12-15]
