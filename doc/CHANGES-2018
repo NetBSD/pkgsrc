@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5200 2018/12/15 17:14:10 taca Exp $
+$NetBSD: CHANGES-2018,v 1.5201 2018/12/15 17:17:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7285,3 +7285,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/pear-DB to 1.9.3 [taca 2018-12-15]
 	Updated lang/pear to 1.10.7 [taca 2018-12-15]
 	Added lang/php73 version 7.3.0 [taca 2018-12-15]
+	Added meta-pkgs/php73-extensions version 7.3.0 [taca 2018-12-15]
