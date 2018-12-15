@@ -1,0 +1,27 @@
+$NetBSD: patch-configure,v 1.1 2018/12/15 17:12:44 taca Exp $
+
+Don't automatically add libgcc on SunOS. Reported upstream as #75941.
+
+The meta_ccld removal reported upstream as #75940.
+
+--- configure.orig	2018-12-04 16:12:21.000000000 +0000
++++ configure
+@@ -5453,9 +5453,6 @@ fi
+ case $host_alias in
+   *solaris*)
+     CPPFLAGS="$CPPFLAGS -D_POSIX_PTHREAD_SEMANTICS"
+-    if test "${enable_libgcc+set}" != "set" && test "$GCC" = "yes"; then
+-      enable_libgcc=yes
+-    fi
+     ;;
+   *dgux*)
+     CPPFLAGS="$CPPFLAGS -D_BSD_TIMEOFDAY_FLAVOR"
+@@ -83290,7 +83287,7 @@ $as_echo "#define HAVE_TIDYBUFFIO_H 1" >
+   fi
+ 
+   TIDY_LIBDIR=$TIDY_DIR/$PHP_LIBDIR
+-  if test "$TIDY_LIB_NAME" == 'tidyp'; then
++  if test "$TIDY_LIB_NAME" = 'tidyp'; then
+ 
+ $as_echo "#define HAVE_TIDYP_H 1" >>confdefs.h
+ 
