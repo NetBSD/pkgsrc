@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.10 2018/04/30 06:50:58 ryoon Exp $
+$NetBSD: distinfo,v 1.11 2018/12/16 22:19:25 nia Exp $
 
-SHA1 (xml-security-c-1.7.3.tar.gz) = bcbe98e0bd3695a0b961a223cce53e2f35c4681b
-RMD160 (xml-security-c-1.7.3.tar.gz) = f0c9c3668a3ff2e13647909b926e20fdba828ad2
-SHA512 (xml-security-c-1.7.3.tar.gz) = ea46709d6706edf345e19132d9998774e50dc7b5947a7b4a55e3627998f5ac66f976fdff0a5015ef3cee73c03c04f3c4cf993efd397082491c2000c6548b89d2
-Size (xml-security-c-1.7.3.tar.gz) = 909320 bytes
-SHA1 (patch-xsec_Makefile.in) = f610c63b888f8f744a5de5b47975eb7dc4aee55b
-SHA1 (patch-xsec_tools_checksig_InteropResolver.cpp) = bdc668a7f0212113d0efbaf189e7021a44108e26
+SHA1 (xml-security-c-2.0.2.tar.gz) = 281efe6701397036af420244be26815589cec982
+RMD160 (xml-security-c-2.0.2.tar.gz) = dec0d113943e48495cc4a5a33a1d892f793a08f0
+SHA512 (xml-security-c-2.0.2.tar.gz) = bebadee2daf27181f5bcc955a909397976e8fd2e67f5e546f5adbede0ca790647cbec9181b0b609da59d525ff3baa9f899af2a3d815bc7a2f3a57bd8b30c011b
+Size (xml-security-c-2.0.2.tar.gz) = 904933 bytes
