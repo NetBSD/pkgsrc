@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.13 2017/02/18 13:09:11 adam Exp $
-bin/pygmentize${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.14 2018/12/16 17:56:54 adam Exp $
+bin/pygmentize-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -489,6 +489,9 @@ ${PYSITELIB}/pygments/lexers/whiley.pyo
 ${PYSITELIB}/pygments/lexers/x10.py
 ${PYSITELIB}/pygments/lexers/x10.pyc
 ${PYSITELIB}/pygments/lexers/x10.pyo
+${PYSITELIB}/pygments/lexers/xorg.py
+${PYSITELIB}/pygments/lexers/xorg.pyc
+${PYSITELIB}/pygments/lexers/xorg.pyo
 ${PYSITELIB}/pygments/modeline.py
 ${PYSITELIB}/pygments/modeline.pyc
 ${PYSITELIB}/pygments/modeline.pyo
