@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.209 2018/11/28 15:12:27 nia Exp $
+# $NetBSD: Makefile,v 1.210 2018/12/16 02:05:23 nia Exp $
 #
 
 COMMENT=	Communication programs
@@ -154,5 +154,6 @@ SUBDIR+=	ysm
 SUBDIR+=	zenicb
 SUBDIR+=	zenirc
 SUBDIR+=	zircon
+SUBDIR+=	znc
 
 .include "../mk/misc/category.mk"

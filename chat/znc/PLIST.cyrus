@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.cyrus,v 1.1 2018/12/16 02:05:23 nia Exp $
+lib/znc/cyrusauth.so
