@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.3 2018/10/29 01:16:58 maya Exp $
+$NetBSD: distinfo,v 1.4 2018/12/16 07:38:47 ryoon Exp $
 
-SHA1 (firefox-60.3.0esr.source.tar.xz) = bac0745b6abdd5887ec0a46041a8252c344cdc64
-RMD160 (firefox-60.3.0esr.source.tar.xz) = ff553704aad2911adbce4e4590d87861d1a1e188
-SHA512 (firefox-60.3.0esr.source.tar.xz) = 7ded25a38835fbd73a58085e24ad83308afee1784a3bf853d75093c1500ad46988f5865c106abdae938cfbd1fb10746cc1795ece7994fd7eba8a002158cf1bcd
-Size (firefox-60.3.0esr.source.tar.xz) = 268340600 bytes
+SHA1 (firefox-60.4.0esr.source.tar.xz) = 0fa5a71ce2cb90ea4be719a92645aa09dff3721f
+RMD160 (firefox-60.4.0esr.source.tar.xz) = f0b67654864aadb454923cd1ac9abffe0ac20c7c
+SHA512 (firefox-60.4.0esr.source.tar.xz) = 8119f52b2fc06f76868bf0781fec9d46c8551f0a3ca832ac9bdef6aa6d77c1d785e50d35059f0df5e3586f3396b912af06e448d65e7f5d1f468338eebe8b2cd4
+Size (firefox-60.4.0esr.source.tar.xz) = 268425148 bytes
 SHA1 (patch-aa) = fdabcc9b055f6439fdbda9b38ab7cec08ff3e231
 SHA1 (patch-browser_app_profile_firefox.js) = 9a43095d94f83f315b9a3ce4a7b0a4301e9c40e6
 SHA1 (patch-build_moz.configure_old.configure) = 1df6867eaf73a350fbe8fcd5bd34e1fcab09d707
