@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5213 2018/12/16 05:32:11 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.5214 2018/12/16 06:42:10 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7302,3 +7302,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-IO-Pager to 0.40 [wen 2018-12-16]
 	Updated devel/p5-IO-Prompter to 0.004015 [wen 2018-12-16]
 	Updated mail/qmail-run to 20181216 [schmonz 2018-12-16]
+	Updated devel/p5-List-AllUtils to 0.15 [wen 2018-12-16]
