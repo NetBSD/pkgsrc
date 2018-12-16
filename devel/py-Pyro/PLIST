@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.7 2017/10/08 10:21:57 adam Exp $
-bin/pyro4-check-config
-bin/pyro4-flameserver
-bin/pyro4-httpgateway
-bin/pyro4-ns
-bin/pyro4-nsc
-bin/pyro4-test-echoserver
+@comment $NetBSD: PLIST,v 1.8 2018/12/16 14:33:24 adam Exp $
+bin/pyro4-check-config-${PYVERSSUFFIX}
+bin/pyro4-flameserver-${PYVERSSUFFIX}
+bin/pyro4-httpgateway-${PYVERSSUFFIX}
+bin/pyro4-ns-${PYVERSSUFFIX}
+bin/pyro4-nsc-${PYVERSSUFFIX}
+bin/pyro4-test-echoserver-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -44,6 +44,9 @@ ${PYSITELIB}/Pyro4/nsc.pyo
 ${PYSITELIB}/Pyro4/socketserver/__init__.py
 ${PYSITELIB}/Pyro4/socketserver/__init__.pyc
 ${PYSITELIB}/Pyro4/socketserver/__init__.pyo
+${PYSITELIB}/Pyro4/socketserver/existingconnectionserver.py
+${PYSITELIB}/Pyro4/socketserver/existingconnectionserver.pyc
+${PYSITELIB}/Pyro4/socketserver/existingconnectionserver.pyo
 ${PYSITELIB}/Pyro4/socketserver/multiplexserver.py
 ${PYSITELIB}/Pyro4/socketserver/multiplexserver.pyc
 ${PYSITELIB}/Pyro4/socketserver/multiplexserver.pyo
