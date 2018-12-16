@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5211 2018/12/16 04:50:34 wen Exp $
+$NetBSD: CHANGES-2018,v 1.5212 2018/12/16 04:56:26 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7300,3 +7300,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated converters/p5-JSON-PP to 4.00 [wen 2018-12-16]
 	Updated devel/p5-IO-Handle-Util to 0.02 [wen 2018-12-16]
 	Updated devel/p5-IO-Pager to 0.40 [wen 2018-12-16]
+	Updated devel/p5-IO-Prompter to 0.004015 [wen 2018-12-16]
