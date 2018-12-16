@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2018/12/16 14:04:55 adam Exp $
+
+SHA1 (djangocms-audio-1.1.0.tar.gz) = 93264b5b1617b016d4fd09915a603f154e7af558
+RMD160 (djangocms-audio-1.1.0.tar.gz) = 448b0328e459d42e2cad837a6c1c1dc6737515c8
+SHA512 (djangocms-audio-1.1.0.tar.gz) = c19b752ccd768e0b0e6f9263ba881d3aaea2ab748392b66d936af4bffb581e2a1a62b4f684c0a3963778d92705fd968443d883583801acbf3f545eb17a65efaf
+Size (djangocms-audio-1.1.0.tar.gz) = 13018 bytes
+SHA1 (patch-setup.py) = 7fdbf759c90551cc8e0c26177f3d60db12241d59
