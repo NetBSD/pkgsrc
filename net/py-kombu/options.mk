@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2018/06/18 07:11:11 adam Exp $
+# $NetBSD: options.mk,v 1.4 2018/12/16 14:38:18 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-kombu
 PKG_SUPPORTED_OPTIONS=	beanstalk couchdb mongo msgpack pyro redis slmq
-PKG_SUPPORTED_OPTIONS+=	sqlalchemy sqs yaml zeromq zookeeper
+PKG_SUPPORTED_OPTIONS+=	sqlalchemy sqs zeromq zookeeper
 PKG_SUGGESTED_OPTIONS+=	# blank
 
 .include "../../mk/bsd.options.mk"
@@ -49,10 +49,6 @@ DEPENDS+=	${PYPKGPREFIX}-sqlalchemy-[0-9]*:../../databases/py-sqlalchemy
 .if !empty(PKG_OPTIONS:Msqs)
 DEPENDS+=	${PYPKGPREFIX}-boto3>=1.4.4:../../net/py-boto3
 DEPENDS+=	${PYPKGPREFIX}-curl-[0-9]*:../../www/py-curl
-.endif
-
-.if !empty(PKG_OPTIONS:Myaml)
-DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
 .endif
 
 .if !empty(PKG_OPTIONS:Mzeromq)
