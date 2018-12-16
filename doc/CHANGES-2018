@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5229 2018/12/16 09:05:52 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.5230 2018/12/16 09:55:10 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7318,3 +7318,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added mail/thunderbird52-l10n version 52.9.1 [ryoon 2018-12-16]
 	Added sysutils/p5-Unix-Processors version 2.046 [ryoon 2018-12-16]
 	Added cad/verilator version 4.006 [ryoon 2018-12-16]
+	Added lang/scala-sbt version 1.2.7 [ryoon 2018-12-16]
