@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5215 2018/12/16 06:45:22 wen Exp $
+$NetBSD: CHANGES-2018,v 1.5216 2018/12/16 06:54:27 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7304,3 +7304,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/qmail-run to 20181216 [schmonz 2018-12-16]
 	Updated devel/p5-List-AllUtils to 0.15 [wen 2018-12-16]
 	Updated devel/p5-Object-InsideOut to 4.05 [wen 2018-12-16]
+	Updated devel/p5-Shell-Config-Generate to 0.33 [wen 2018-12-16]
