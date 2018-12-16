@@ -1,0 +1,6 @@
+bin/pyro4-check-config @PREFIX@/bin/pyro4-check-config-@PYVERSSUFFIX@
+bin/pyro4-flameserver @PREFIX@/bin/pyro4-flameserver-@PYVERSSUFFIX@
+bin/pyro4-httpgateway @PREFIX@/bin/pyro4-httpgateway-@PYVERSSUFFIX@
+bin/pyro4-ns @PREFIX@/bin/pyro4-ns-@PYVERSSUFFIX@
+bin/pyro4-nsc @PREFIX@/bin/pyro4-nsc-@PYVERSSUFFIX@
+bin/pyro4-test-echoserver @PREFIX@/bin/pyro4-test-echoserver-@PYVERSSUFFIX@
