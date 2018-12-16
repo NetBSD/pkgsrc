@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailofmipd.sh,v 1.22 2018/12/15 06:31:34 schmonz Exp $
+# $NetBSD: qmailofmipd.sh,v 1.23 2018/12/16 05:32:07 schmonz Exp $
 #
 # @PKGNAME@ script to control ofmipd (SMTP submission service).
 #
@@ -16,7 +16,7 @@ name="qmailofmipd"
 : ${qmailofmipd_pretcpserver:=""}
 : ${qmailofmipd_tcpserver:="@PREFIX@/bin/sslserver"}
 : ${qmailofmipd_tcpflags:="-ne -vRl0"}
-: ${qmailofmipd_tcphost:="0.0.0.0"}
+: ${qmailofmipd_tcphost:="0"}
 : ${qmailofmipd_tcpport:="587"}
 : ${qmailofmipd_tcprules:="@PKG_SYSCONFDIR@/control/tcprules/ofmip"}
 : ${qmailofmipd_autocdb:="YES"}
@@ -91,15 +91,15 @@ qmailofmipd_precmd() {
 	# tcpserver(1) is akin to inetd(8), but runs one service per process.
 	# We want to signal only the tcpserver process responsible for this
 	# service. Use argv0(1) to set procname to "nbqmailofmipd".
-	command="@PREFIX@/bin/pgrphack @SETENV@ - ${qmailofmipd_postenv}
-@PREFIX@/bin/softlimit -m ${qmailofmipd_datalimit} ${qmailofmipd_pretcpserver}
-@PREFIX@/bin/argv0 ${qmailofmipd_tcpserver} ${procname}
-${qmailofmipd_tcpflags} -x ${qmailofmipd_tcprules}.cdb
--c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencysubmission`
-${qmailofmipd_tcphost} ${qmailofmipd_tcpport}
-${qmailofmipd_precheckpassword} ${qmailofmipd_checkpassword}
-${qmailofmipd_preofmipd} ${qmailofmipd_ofmipdcmd} ${qmailofmipd_postofmipd}
-2>&1 |
+	command="@PREFIX@/bin/pgrphack @SETENV@ - ${qmailofmipd_postenv} \
+@PREFIX@/bin/softlimit -m ${qmailofmipd_datalimit} ${qmailofmipd_pretcpserver} \
+@PREFIX@/bin/argv0 ${qmailofmipd_tcpserver} ${procname} \
+${qmailofmipd_tcpflags} -x ${qmailofmipd_tcprules}.cdb \
+-c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencysubmission` \
+${qmailofmipd_tcphost} ${qmailofmipd_tcpport} \
+${qmailofmipd_precheckpassword} ${qmailofmipd_checkpassword} \
+${qmailofmipd_preofmipd} ${qmailofmipd_ofmipdcmd} ${qmailofmipd_postofmipd} \
+2>&1 | \
 @PREFIX@/bin/pgrphack @PREFIX@/bin/setuidgid @QMAIL_LOG_USER@ ${qmailofmipd_logcmd}"
 	command_args="&"
 	rc_flags=""
