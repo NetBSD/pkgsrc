@@ -1,0 +1,5 @@
+django CMS Link is a plugin for django CMS that allows you to add links on your
+site.
+
+This plugin supports child plugins. If you add an other plugin as a child it
+will take this content instead of the link name as the content of the link.
