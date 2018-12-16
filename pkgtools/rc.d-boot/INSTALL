@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.3 2018/12/12 02:08:10 schmonz Exp $
+# $NetBSD: INSTALL,v 1.4 2018/12/16 05:41:01 schmonz Exp $
 
 RCDBOOT_STYLE=@RCDBOOT_STYLE@
 
@@ -8,6 +8,8 @@ POST-INSTALL)
 	case "${RCDBOOT_STYLE}" in
 	darwin-launchd)
 		launchctl load -w /Library/LaunchDaemons/org.pkgsrc.rc.d-boot.plist
+		;;
+	freebsd-native)
 		;;
 	linux-systemd)
 		systemctl enable --now /etc/systemd/system/pkgsrc-rc.d-boot.service
