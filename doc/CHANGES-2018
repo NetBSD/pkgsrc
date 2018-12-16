@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5220 2018/12/16 07:05:30 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.5221 2018/12/16 07:11:08 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7309,3 +7309,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/libhighlight to 3.48 [schmonz 2018-12-16]
 	Updated textproc/highlight to 3.48 [schmonz 2018-12-16]
 	Updated textproc/p5-highlight to 3.48 [schmonz 2018-12-16]
+	Updated devel/p5-Term-Table to 0.013 [wen 2018-12-16]
