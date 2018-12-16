@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/12/14 22:52:15 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2018/12/16 06:40:29 schmonz Exp $
 
 DISTNAME=		ucspi-tcp6-1.10.1
 CATEGORIES=		net
@@ -20,21 +20,10 @@ DJB_CONFIG_DIR=		${WRKSRC}
 CFLAGS+=		-I${PREFIX}/include/qlibs
 LDFLAGS+=		-L${PREFIX}/lib/qlibs
 
-INSTALLATION_DIRS=	bin
-
-.include "../../mk/bsd.prefs.mk"
-
-.if !defined(MANZ)
-SUBST_CLASSES+=		manz
-SUBST_STAGE.manz=	do-configure
-SUBST_FILES.manz=	package/man
-SUBST_SED.manz=		-e 's|safe gzip |safe true |g'
-SUBST_SED.manz+=	-e 's|\.gz||g'
-.endif
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 post-configure:
 	${RUN}cd ${DJB_CONFIG_DIR};		\
-	${ECHO} ${PKGMANDIR} > conf-man;	\
 	${MKDIR} compile;			\
 	${ECHO} ${DJB_CONFIG_PREFIX}/bin > compile/home
 
@@ -47,7 +36,12 @@ do-install:
 	for i in date@ finger@ http@ mconnect tcpcat who@; do		\
 	  ${INSTALL_SCRIPT} command/$${i} ${DESTDIR}${PREFIX}/bin;	\
 	done;								\
-	./package/man
+	for i in *.1; do						\
+	  ${INSTALL_MAN} man/$${i} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/;\
+	done;								\
+	for i in *.5; do						\
+	  ${INSTALL_MAN} man/$${i} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/;\
+	done
 
 .include "../../net/fehqlibs/buildlink3.mk"
 .include "../../mk/djbware.mk"
