@@ -1,0 +1,8 @@
+Verilator is the fastest free Verilog HDL simulator, and outperforms
+most commercial simulators. Verilator compiles synthesizable
+SystemVerilog (generally not test-bench code), plus some SystemVerilog
+and Synthesis assertions into single- or multithreaded C++ or
+SystemC code. Verilator is designed for large projects where fast
+simulation performance is of primary concern, and is especially
+well suited to generate executable models of CPUs for embedded
+software design teams.
