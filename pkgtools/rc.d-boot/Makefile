@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/12/12 02:08:10 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2018/12/16 05:41:01 schmonz Exp $
 #
 
 PKGNAME=		rc.d-boot-20181211
@@ -12,12 +12,12 @@ ONLY_FOR_PLATFORM=	# empty by default
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} != "NetBSD"
+.if exists(/sbin/rcorder)
+RCORDER=		/sbin/rcorder
+.else
 DEPENDS+=		rc.subr-[0-9]*:../../pkgtools/rc.subr
 DEPENDS+=		rcorder-[0-9]*:../../pkgtools/rcorder
 RCORDER=		${PREFIX}/sbin/rcorder
-.else
-RCORDER=		/sbin/rcorder
 .endif
 
 NO_CHECKSUM=		yes
@@ -33,17 +33,20 @@ SUBST_VARS.paths=	PREFIX RCD_SCRIPTS_DIR RCORDER
 FILES_SUBST+=		RCDBOOT_STYLE=${RCDBOOT_STYLE:Q}
 
 .if ${OPSYS} == "Darwin" && exists (/Library/LaunchDaemons)
-ONLY_FOR_PLATFORM+=	Darwin-*-*
+ONLY_FOR_PLATFORM+=	${OPSYS}-*-*
 RCDBOOT_STYLE=		darwin-launchd
 CONF_FILES+=		${PREFIX}/share/examples/${PKGBASE}/org.pkgsrc.rc.d-boot.plist \
 			/Library/LaunchDaemons/org.pkgsrc.rc.d-boot.plist
+.elif ${OPSYS} == "FreeBSD" && exists(/etc/rc.d)
+ONLY_FOR_PLATFORM+=	${OPSYS}-*-*
+RCDBOOT_STYLE=		freebsd-native
 .elif ${OPSYS} == "Linux" && exists(/etc/systemd/system)
-ONLY_FOR_PLATFORM+=	Linux-*-*
+ONLY_FOR_PLATFORM+=	${OPSYS}-*-*
 RCDBOOT_STYLE=		linux-systemd
 CONF_FILES+=		${PREFIX}/share/examples/${PKGBASE}/pkgsrc-rc.d-boot.service \
 			/etc/systemd/system/pkgsrc-rc.d-boot.service
 .elif ${OPSYS} == "NetBSD" && exists(/etc/rc.d)
-ONLY_FOR_PLATFORM+=	NetBSD-*-*
+ONLY_FOR_PLATFORM+=	${OPSYS}-*-*
 RCDBOOT_STYLE=		netbsd-native
 .endif
 
