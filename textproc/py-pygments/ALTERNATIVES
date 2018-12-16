@@ -1,1 +1,1 @@
-bin/pygmentize @PREFIX@/bin/pygmentize@PYVERSSUFFIX@
+bin/pygmentize @PREFIX@/bin/pygmentize-@PYVERSSUFFIX@
