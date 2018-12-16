@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5221 2018/12/16 07:11:08 wen Exp $
+$NetBSD: CHANGES-2018,v 1.5222 2018/12/16 07:39:38 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7310,3 +7310,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/highlight to 3.48 [schmonz 2018-12-16]
 	Updated textproc/p5-highlight to 3.48 [schmonz 2018-12-16]
 	Updated devel/p5-Term-Table to 0.013 [wen 2018-12-16]
+	Updated www/firefox60 to 60.4.0 [ryoon 2018-12-16]
