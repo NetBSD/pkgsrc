@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5240 2018/12/16 18:24:57 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5241 2018/12/16 22:19:39 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7338,3 +7338,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated converters/py-emoji to 0.5.1 [adam 2018-12-16]
 	Updated www/py-flask-user to 1.0.1.5 [adam 2018-12-16]
 	Updated www/py-daphne to 2.2.4 [adam 2018-12-16]
+	Updated security/xml-security-c to 2.0.2 [nia 2018-12-16]
