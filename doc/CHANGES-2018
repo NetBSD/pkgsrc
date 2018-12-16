@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5231 2018/12/16 10:07:37 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.5232 2018/12/16 12:07:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7320,3 +7320,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added cad/verilator version 4.006 [ryoon 2018-12-16]
 	Added lang/scala-sbt version 1.2.7 [ryoon 2018-12-16]
 	Updated lang/scala to 2.12.8 [ryoon 2018-12-16]
+	Updated devel/git to 2.20.1 [adam 2018-12-16]
