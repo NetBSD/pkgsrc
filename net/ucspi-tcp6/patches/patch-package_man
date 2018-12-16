@@ -1,6 +1,6 @@
-$NetBSD: patch-package_man,v 1.4 2018/12/14 22:52:15 schmonz Exp $
+$NetBSD: patch-package_man,v 1.5 2018/12/16 06:09:20 schmonz Exp $
 
-Support DESTDIR.
+Support DESTDIR. Avoid nroff.
 
 --- package/man.orig	2018-11-10 19:42:10.000000000 +0000
 +++ package/man
@@ -27,7 +27,18 @@ Support DESTDIR.
  if [ -f conf-man ]
  then
     mandir=`head -1 conf-man`
-@@ -58,7 +49,7 @@ fi
+@@ -49,16 +40,18 @@ else 
+ fi
+ 
+ cd man
++if false; then
+ if [ $usemandoc -eq 1 ]
+ then
+   safe make -f Makefile.mandoc
+ else
+   safe make 
+ fi
++fi
  
  if [ $usemandoc -eq 0 ]
  then
@@ -36,7 +47,7 @@ Support DESTDIR.
  else
    shout "Installing ${me} un-compressed man-files in ${mandir}."
  fi
-@@ -71,11 +62,11 @@ done
+@@ -71,11 +64,11 @@ done
  for manfile in $all
  do
    dir="man`echo $manfile | awk -F. '{print $NF}'`"
@@ -50,3 +61,19 @@ Support DESTDIR.
    else
      safe cp "$manfile" "$mandir/$dir/$manfile"
    fi
+@@ -83,6 +76,7 @@ done
+ 
+ ## nroff: Required for old catman systems only 
+ 
++if false; then
+ if [ $usemandoc -eq 0 ]
+ then
+   shout "Installing ${me} nroff'ed man-files in ${mandir}/catX."
+@@ -119,6 +113,7 @@ else
+      shout "Installing ${me} mandoc files in db (man -w)."
+   fi 
+ fi
++fi
+ 
+ cd ..
+ 
