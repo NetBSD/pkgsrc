@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2017/10/31 12:53:58 adam Exp $
+$NetBSD: distinfo,v 1.9 2018/12/16 14:33:24 adam Exp $
 
-SHA1 (Pyro4-4.63.tar.gz) = 89b635d05e5cca38b3c581e7e648a8eb41674b89
-RMD160 (Pyro4-4.63.tar.gz) = cc9accf72309923e5984b5d6289425ef560f125b
-SHA512 (Pyro4-4.63.tar.gz) = 2a73a38f26601a9d5c63d80018e4334a95bf2b49d52ea335526b9cc898a7472c13c7933a0091f9f625fa9dc2dfea9c085d56befa02c5a647f9a3f76ba5880ac3
-Size (Pyro4-4.63.tar.gz) = 473950 bytes
+SHA1 (Pyro4-4.74.tar.gz) = 526b5acf260d95a75e1507e6f646659d5c416576
+RMD160 (Pyro4-4.74.tar.gz) = 7d4c76edd38378426e530c5584c79ca99fdd0a89
+SHA512 (Pyro4-4.74.tar.gz) = f5a1f8d7e69d6a96d7fb116e6ec67f71fe5763320b1d82ba739612cb2fa0ba77764cf774b19a2db84e4bad55bef116b85e614f15f9eea820eb4861ca787823fa
+Size (Pyro4-4.74.tar.gz) = 470762 bytes
