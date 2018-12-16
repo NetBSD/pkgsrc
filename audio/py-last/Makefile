@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2018/04/09 07:28:54 adam Exp $
+# $NetBSD: Makefile,v 1.9 2018/12/16 14:45:02 adam Exp $
 
-DISTNAME=	pylast-2.2.0
+DISTNAME=	pylast-2.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylast/}
