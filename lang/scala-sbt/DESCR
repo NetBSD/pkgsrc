@@ -1,0 +1,21 @@
+sbt is a build tool for Scala, Java, and more.
+
+Features of sbt
+  * Little or no configuration required for simple projects
+  * Scala-based build definition that can use the full flexibility of Scala
+    code
+  * Accurate incremental recompilation using information extracted from the
+    compiler
+  * Continuous compilation and testing with triggered execution
+  * Packages and publishes jars
+  * Generates documentation with scaladoc
+  * Supports mixed Scala/Java projects
+  * Supports testing with ScalaCheck, specs, and ScalaTest. JUnit is
+    supported by a plugin.
+  * Starts the Scala REPL with project classes and dependencies on
+    the classpath
+  * Modularization supported with sub-projects
+  * External project support (list a git repository as a dependency!)
+  * Parallel task execution, including parallel test execution
+  * Library management support: inline declarations, external Ivy or Maven
+    configuration files, or manual management
