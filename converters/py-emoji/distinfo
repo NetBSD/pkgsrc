@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/07/25 11:56:18 nia Exp $
+$NetBSD: distinfo,v 1.2 2018/12/16 18:02:41 adam Exp $
 
-SHA1 (emoji-0.5.0.tar.gz) = df9e2f9109489ef30952f235676c5ee7f5a5c2d9
-RMD160 (emoji-0.5.0.tar.gz) = c0a3e2b07aeccc14c662f5608141bb9686e0f711
-SHA512 (emoji-0.5.0.tar.gz) = 218e1ff59e2eed69900f26abdeee1f7f283154ff85a56cc1c5dc4f2b80456b3ebb657fd1a4217937c3b6a460de349522cde6f8bfff7931b09f88b4f03f0d0888
-Size (emoji-0.5.0.tar.gz) = 41302 bytes
+SHA1 (emoji-0.5.1.tar.gz) = b8b989c253c9cd5b2060e8730ffdfdbb67f14604
+RMD160 (emoji-0.5.1.tar.gz) = 8f17c7c7d2b1327a249cbb2e9cb20885691c2563
+SHA512 (emoji-0.5.1.tar.gz) = 4bda412392e5097565b7a59b3e591ed7dde8eac872bb95e543bd3569ace627be9931eda64da7060f9fdd6e1899623925d5d53d1433212bbcc5fe10fc255e92ac
+Size (emoji-0.5.1.tar.gz) = 42304 bytes
