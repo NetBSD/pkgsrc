@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2018/12/16 18:20:57 adam Exp $
+# $NetBSD: Makefile,v 1.17 2018/12/16 18:24:08 adam Exp $
 
 DISTNAME=	Flask-User-1.0.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-User/}
-DIST_SUBDIR=	${PKGBASE:tl:S/${PYPKGPREFIX}/py/1}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/lingthio/Flask-User
