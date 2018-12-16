@@ -1,0 +1,6 @@
+django CMS Audio is a set of plugins for django CMS that allow you to publish
+audio files on your site (using an HTML5 player by default, but you can
+override this in your own templates if required).
+
+It uses files managed by Django Filer. The plugins allow you to select a single
+file or an entire folder of files.
