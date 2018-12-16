@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5205 2018/12/15 23:35:16 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5206 2018/12/16 00:24:20 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7294,3 +7294,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/cmake to 3.13.2 [adam 2018-12-15]
 	Updated www/nginx-devel to 1.15.7 [adam 2018-12-15]
 	Updated www/nginx to 1.14.2 [adam 2018-12-15]
+	Updated chat/weechat to 2.3 [nia 2018-12-16]
