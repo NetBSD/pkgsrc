@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/12/30 14:13:27 wiz Exp $
+$NetBSD: distinfo,v 1.3 2018/12/16 06:59:46 wen Exp $
 
-SHA1 (Shell-Guess-0.08.tar.gz) = 42389ce355126f76c612da34245b0f2e08a89930
-RMD160 (Shell-Guess-0.08.tar.gz) = 9abe8451529809e276c7e4dbfb4d1f143b82f0fa
-SHA512 (Shell-Guess-0.08.tar.gz) = 35f44886250905037e3d0fa48bf73b21a4e4779e47667d1c3fa61a982bc6bbbbcf130be44bb8132c151a6bf8346049ca87fa8c65c77ad009bf901805174a924d
-Size (Shell-Guess-0.08.tar.gz) = 21922 bytes
+SHA1 (Shell-Guess-0.09.tar.gz) = ed22f2f88cc646a5d97be8dc96b4c1fa6587d9b1
+RMD160 (Shell-Guess-0.09.tar.gz) = e96f47b2c7665ef43f6b9a086af774ee551dde15
+SHA512 (Shell-Guess-0.09.tar.gz) = 60d8b315491cd10eb2cb1c3941db6369d93148e0bd500c72bc082b1673624dead6485d4238e241127c3a04a0f776222fbb90a40af6a327ed9e2988852fff544e
+Size (Shell-Guess-0.09.tar.gz) = 21663 bytes
