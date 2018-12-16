@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2018/08/22 09:44:11 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2018/12/16 06:40:19 wen Exp $
 
-DISTNAME=	List-AllUtils-0.14
+DISTNAME=	List-AllUtils-0.15
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=List/}
 
@@ -11,8 +10,8 @@ HOMEPAGE=	http://search.cpan.org/dist/List-AllUtils/
 COMMENT=	Combines List::Util and List::SomeUtils
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-List-SomeUtils>=0.28:../../devel/p5-List-SomeUtils
-DEPENDS+=	p5-List-UtilsBy>=0.10:../../devel/p5-List-UtilsBy
+DEPENDS+=	p5-List-SomeUtils>=0.56:../../devel/p5-List-SomeUtils
+DEPENDS+=	p5-List-UtilsBy>=0.11:../../devel/p5-List-UtilsBy
 DEPENDS+=	p5-Scalar-List-Utils>=1.31:../../devel/p5-Scalar-List-Utils
 BUILD_DEPENDS+=	p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
 
