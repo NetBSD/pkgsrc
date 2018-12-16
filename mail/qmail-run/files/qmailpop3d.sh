@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailpop3d.sh,v 1.30 2018/12/15 06:31:34 schmonz Exp $
+# $NetBSD: qmailpop3d.sh,v 1.31 2018/12/16 05:32:07 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-pop3d (POP3 server for Maildirs).
 #
@@ -15,7 +15,7 @@ name="qmailpop3d"
 : ${qmailpop3d_pretcpserver:=""}
 : ${qmailpop3d_tcpserver:="@PREFIX@/bin/sslserver"}
 : ${qmailpop3d_tcpflags:="-ne -vRl0"}
-: ${qmailpop3d_tcphost:="0.0.0.0"}
+: ${qmailpop3d_tcphost:="0"}
 : ${qmailpop3d_tcpport:="110"}
 : ${qmailpop3d_tcprules:="@PKG_SYSCONFDIR@/control/tcprules/pop3"}
 : ${qmailpop3d_autocdb:="YES"}
@@ -88,15 +88,15 @@ qmailpop3d_precmd() {
 	# tcpserver(1) is akin to inetd(8), but runs one service per process.
 	# We want to signal only the tcpserver process responsible for this
 	# service. Use argv0(1) to set procname to "nbqmailpop3d".
-	command="@PREFIX@/bin/pgrphack @SETENV@ - ${qmailpop3d_postenv}
-@PREFIX@/bin/softlimit -m ${qmailpop3d_datalimit} ${qmailpop3d_pretcpserver}
-@PREFIX@/bin/argv0 ${qmailpop3d_tcpserver} ${procname}
-${qmailpop3d_tcpflags} -x ${qmailpop3d_tcprules}.cdb
--c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencypop3`
-${qmailpop3d_tcphost} ${qmailpop3d_tcpport}
-${qmailpop3d_precheckpassword} ${qmailpop3d_checkpassword}
-${qmailpop3d_prepop3d} ${qmailpop3d_pop3dcmd} ${qmailpop3d_postpop3d}
-2>&1 |
+	command="@PREFIX@/bin/pgrphack @SETENV@ - ${qmailpop3d_postenv} \
+@PREFIX@/bin/softlimit -m ${qmailpop3d_datalimit} ${qmailpop3d_pretcpserver} \
+@PREFIX@/bin/argv0 ${qmailpop3d_tcpserver} ${procname} \
+${qmailpop3d_tcpflags} -x ${qmailpop3d_tcprules}.cdb \
+-c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencypop3` \
+${qmailpop3d_tcphost} ${qmailpop3d_tcpport} \
+${qmailpop3d_precheckpassword} ${qmailpop3d_checkpassword} \
+${qmailpop3d_prepop3d} ${qmailpop3d_pop3dcmd} ${qmailpop3d_postpop3d} \
+2>&1 | \
 @PREFIX@/bin/pgrphack @PREFIX@/bin/setuidgid @QMAIL_LOG_USER@ ${qmailpop3d_logcmd}"
 	command_args="&"
 	rc_flags=""
