@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5239 2018/12/16 18:03:00 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5240 2018/12/16 18:24:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7336,3 +7336,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/py-Theano to 1.0.3 [adam 2018-12-16]
 	Updated textproc/py-pygments to 2.3.1 [adam 2018-12-16]
 	Updated converters/py-emoji to 0.5.1 [adam 2018-12-16]
+	Updated www/py-flask-user to 1.0.1.5 [adam 2018-12-16]
+	Updated www/py-daphne to 2.2.4 [adam 2018-12-16]
