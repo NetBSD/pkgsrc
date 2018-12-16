@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/06/18 07:11:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/12/16 14:38:18 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -119,6 +119,12 @@ ${PYSITELIB}/kombu/transport/SQS.pyo
 ${PYSITELIB}/kombu/transport/__init__.py
 ${PYSITELIB}/kombu/transport/__init__.pyc
 ${PYSITELIB}/kombu/transport/__init__.pyo
+${PYSITELIB}/kombu/transport/azureservicebus.py
+${PYSITELIB}/kombu/transport/azureservicebus.pyc
+${PYSITELIB}/kombu/transport/azureservicebus.pyo
+${PYSITELIB}/kombu/transport/azurestoragequeues.py
+${PYSITELIB}/kombu/transport/azurestoragequeues.pyc
+${PYSITELIB}/kombu/transport/azurestoragequeues.pyo
 ${PYSITELIB}/kombu/transport/base.py
 ${PYSITELIB}/kombu/transport/base.pyc
 ${PYSITELIB}/kombu/transport/base.pyo
