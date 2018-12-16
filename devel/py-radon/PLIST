@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/09/16 16:00:00 tnn Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/12/16 14:15:11 adam Exp $
 bin/radon-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -9,6 +9,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/radon/__init__.py
 ${PYSITELIB}/radon/__init__.pyc
 ${PYSITELIB}/radon/__init__.pyo
+${PYSITELIB}/radon/__main__.py
+${PYSITELIB}/radon/__main__.pyc
+${PYSITELIB}/radon/__main__.pyo
 ${PYSITELIB}/radon/cli/__init__.py
 ${PYSITELIB}/radon/cli/__init__.pyc
 ${PYSITELIB}/radon/cli/__init__.pyo
