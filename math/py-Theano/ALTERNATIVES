@@ -1,2 +1,2 @@
-bin/theano-cache @PREFIX@/bin/theano-cache@PYVERSSUFFIX@
-bin/theano-nose @PREFIX@/bin/theano-nose@PYVERSSUFFIX@
+bin/theano-cache @PREFIX@/bin/theano-cache-@PYVERSSUFFIX@
+bin/theano-nose @PREFIX@/bin/theano-nose-@PYVERSSUFFIX@
