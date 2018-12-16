@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5232 2018/12/16 12:07:40 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5233 2018/12/16 13:20:16 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7321,3 +7321,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added lang/scala-sbt version 1.2.7 [ryoon 2018-12-16]
 	Updated lang/scala to 2.12.8 [ryoon 2018-12-16]
 	Updated devel/git to 2.20.1 [adam 2018-12-16]
+	Updated www/php-nextcloud to 15.0.0 [ryoon 2018-12-16]
