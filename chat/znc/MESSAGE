@@ -1,9 +1,13 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2018/12/16 02:05:23 nia Exp $
+$NetBSD: MESSAGE,v 1.2 2018/12/16 14:08:03 nia Exp $
 
 Add the following to /etc/rc.conf:
 
 znc=YES
 znc_user="znc"
+
+To generate a config, do:
+
+/etc/rc.d/znc makeconf
 
 ===========================================================================
