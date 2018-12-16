@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.502 2018/12/15 17:13:52 taca Exp $
+# $NetBSD: Makefile,v 1.503 2018/12/16 09:55:52 ryoon Exp $
 #
 
 COMMENT=	Programming languages
@@ -252,6 +252,7 @@ SUBDIR+=	sablevm-classpath-gui
 SUBDIR+=	sather
 SUBDIR+=	sbcl
 SUBDIR+=	scala
+SUBDIR+=	scala-sbt
 SUBDIR+=	scheme48
 SUBDIR+=	scm
 SUBDIR+=	see
