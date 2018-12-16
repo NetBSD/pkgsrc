@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2017/10/31 12:53:58 adam Exp $
+# $NetBSD: Makefile,v 1.23 2018/12/16 14:33:24 adam Exp $
 
-DISTNAME=	Pyro4-4.63
+DISTNAME=	Pyro4-4.74
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pyro4/}
@@ -10,11 +10,18 @@ HOMEPAGE=	https://github.com/irmen/Pyro4
 COMMENT=	Distributed Object Technology system in Python
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-serpent>=1.23:../../devel/py-serpent
+DEPENDS+=	${PYPKGPREFIX}-serpent>=1.27:../../devel/py-serpent
 
 USE_LANGUAGES=	# none
 
-PYTHON_SELF_CONFLICT=	yes
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+		${MV} pyro4-check-config pyro4-check-config-${PYVERSSUFFIX} && \
+		${MV} pyro4-flameserver pyro4-flameserver-${PYVERSSUFFIX} && \
+		${MV} pyro4-httpgateway pyro4-httpgateway-${PYVERSSUFFIX} && \
+		${MV} pyro4-ns pyro4-ns-${PYVERSSUFFIX} && \
+		${MV} pyro4-nsc pyro4-nsc-${PYVERSSUFFIX} && \
+		${MV} pyro4-test-echoserver pyro4-test-echoserver-${PYVERSSUFFIX} || ${TRUE}
 
 do-test:
 	cd ${WRKSRC}/tests && ${PYTHONBIN} run_testsuite.py
