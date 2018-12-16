@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5209 2018/12/16 04:33:57 wen Exp $
+$NetBSD: CHANGES-2018,v 1.5210 2018/12/16 04:41:01 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7298,3 +7298,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added chat/znc version 1.7.1 [nia 2018-12-16]
 	Updated converters/p5-JSON to 4.00 [wen 2018-12-16]
 	Updated converters/p5-JSON-PP to 4.00 [wen 2018-12-16]
+	Updated devel/p5-IO-Handle-Util to 0.02 [wen 2018-12-16]
