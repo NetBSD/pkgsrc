@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST.python,v 1.1 2018/12/16 02:05:23 nia Exp $
+lib/znc/modpython.so
+lib/znc/modpython/_znc_core.so
+lib/znc/modpython/znc.py
+lib/znc/modpython/znc_core.py
+lib/znc/pyeval.py
