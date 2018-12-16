@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: znc.sh,v 1.1 2018/12/16 02:05:24 nia Exp $
+# $NetBSD: znc.sh,v 1.2 2018/12/16 14:08:03 nia Exp $
 #
 # RC-script for znc 1.0
 #
@@ -38,7 +38,7 @@ znc_saveconf(){
 }
 
 znc_makeconf(){
-	su -m ${znc_user} -c ${command} -d ${conf_dir} -r --makeconf
+	su -m ${znc_user} -c "${command} -d ${conf_dir} -r --makeconf"
 }
 
 load_rc_config "${name}"
