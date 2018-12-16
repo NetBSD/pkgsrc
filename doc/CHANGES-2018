@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5236 2018/12/16 14:20:45 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5237 2018/12/16 14:38:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7330,3 +7330,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-radon to 2.4.0 [adam 2018-12-16]
 	Updated graphics/py-dot to 1.4.1 [adam 2018-12-16]
 	Updated graphics/leptonica to 1.77.0 [adam 2018-12-16]
+	Updated devel/py-Pyro to 4.74 [adam 2018-12-16]
+	Updated net/py-kombu to 4.2.2 [adam 2018-12-16]
