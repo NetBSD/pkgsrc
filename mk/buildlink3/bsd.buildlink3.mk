@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.241 2018/08/22 20:48:36 maya Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.242 2018/12/16 23:21:52 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -204,7 +204,7 @@ _BLNK_PACKAGES+=	${_pkg_}
 .endfor
 
 _VARGROUPS+=		bl3
-.for v in BINDIR CFLAGS CPPFLAGS DEPENDS LDFLAGS LIBS
+.for v in BINDIR CFLAGS CPPFLAGS DEPENDS LDADD LDFLAGS LIBS
 _SYS_VARS.bl3+=		BUILDLINK_${v}
 .endfor
 .for p in ${_BUILDLINK_TREE}

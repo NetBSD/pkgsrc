@@ -1,4 +1,4 @@
-# $NetBSD: curses.buildlink3.mk,v 1.28 2018/08/18 08:18:42 ryoon Exp $
+# $NetBSD: curses.buildlink3.mk,v 1.29 2018/12/16 23:21:52 rillig Exp $
 #
 # This Makefile fragment is meant to be included by packages that require
 # any curses implementation instead of one particular one.  The available
@@ -139,8 +139,9 @@ USE_NCURSES=			yes
 .  elif ${CURSES_TYPE} == "pdcurses"
 .    include "../../devel/pdcurses/buildlink3.mk"
 .  endif
-.  for _var_ in PKGNAME PREFIX INCDIRS LIBDIRS LIBNAME LDADD
-BUILDLINK_${_var_}.curses=	${BUILDLINK_${_var_}.${CURSES_TYPE}}
+.  for var in BUILDLINK_PKGNAME BUILDLINK_PREFIX BUILDLINK_INCDIRS \
+	      BUILDLINK_LIBDIRS BUILDLINK_LIBNAME BUILDLINK_LDADD
+${var}.curses=			${${var}.${CURSES_TYPE}}
 .  endfor
 .endif
 
@@ -157,3 +158,16 @@ BUILDLINK_TRANSFORM+=		l:ncursesw:${BUILDLINK_LIBNAME.curses}
 BUILDLINK_TRANSFORM+=		l:ncurses:${BUILDLINK_LIBNAME.curses}
 .  endif
 .endif
+
+_VARGROUPS+=		curses
+_USER_VARS.curses=	CURSES_DEFAULT
+_PKG_VARS.curses=	FAKE_NCURSES USE_CURSES
+_SYS_VARS.curses=	PKG_OPTIONS CURSES_TYPE BUILDLINK_BUILTIN_MK.curses \
+			USE_NCURSES BUILDLINK_PKGNAME.curses \
+			BUILDLINK_PREFIX.curses BUILDLINK_INCDIRS.curses \
+			BUILDLINK_LIBDIRS.curses BUILDLINK_LIBNAME.curses \
+			BUILDLINK_LDADD.curses
+_USE_VARS.curses=	USE_BUILTIN.curses USE_BUILTIN.cursesw
+_DEF_VARS.curses=	USE_CURSES _CURSES_PKGS CHECK_BUILTIN.curses \
+			_CURSES_ACCEPTED _CURSES_TYPE _PKG_USE_CURSES \
+			H_CURSES BUILDLINK_TARGETS BUILDLINK_TRANSFORM
