@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2017/11/08 20:39:26 wiz Exp $
+$NetBSD: distinfo,v 1.3 2018/12/16 06:53:27 wen Exp $
 
-SHA1 (Shell-Config-Generate-0.31.tar.gz) = 5011d1b052d47aa38e87bd3818f9dcf4243f6f75
-RMD160 (Shell-Config-Generate-0.31.tar.gz) = 87c7b0f3bbe9c7138cd53257d0353ea7548a393e
-SHA512 (Shell-Config-Generate-0.31.tar.gz) = b3f23e79a9ab5187f025859ec11d378fba7448fb9afe17e3fb00aa36ae509e84eec7d4c6356fedac1586560da9b2cdf994961a1453c8ec3f076cbab5d7cb5618
-Size (Shell-Config-Generate-0.31.tar.gz) = 28407 bytes
+SHA1 (Shell-Config-Generate-0.33.tar.gz) = 1a9b5202f6d4e7bd41cbbca3f08261cae9a2c13d
+RMD160 (Shell-Config-Generate-0.33.tar.gz) = 011e8c3ae1f3ebe4752913d661fda7a3adb9d513
+SHA512 (Shell-Config-Generate-0.33.tar.gz) = 57041179a9798ec4dde78c13770fc58499776201891fe865baff4cd00efe6801411eb3bc1f89271cf4a35edf4782de33fdcb8a572c6c5adba188f50a13755bd3
+Size (Shell-Config-Generate-0.33.tar.gz) = 28382 bytes
 SHA1 (patch-maint_travis-install-system.sh) = b28029a8f850db767df1ddf61d6c49af915c07dc
