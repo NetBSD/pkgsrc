@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5235 2018/12/16 14:15:38 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5236 2018/12/16 14:20:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7328,3 +7328,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Added www/py-djangocms-link version 2.3.0 [adam 2018-12-16]
 	Updated fonts/py-fonttools to 3.34.0 [adam 2018-12-16]
 	Updated devel/py-radon to 2.4.0 [adam 2018-12-16]
+	Updated graphics/py-dot to 1.4.1 [adam 2018-12-16]
+	Updated graphics/leptonica to 1.77.0 [adam 2018-12-16]
