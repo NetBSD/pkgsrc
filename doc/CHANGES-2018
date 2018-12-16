@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5218 2018/12/16 07:05:18 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.5219 2018/12/16 07:05:24 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7307,3 +7307,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Shell-Config-Generate to 0.33 [wen 2018-12-16]
 	Updated devel/p5-Shell-Guess to 0.09 [wen 2018-12-16]
 	Updated textproc/libhighlight to 3.48 [schmonz 2018-12-16]
+	Updated textproc/highlight to 3.48 [schmonz 2018-12-16]
