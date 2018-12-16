@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2018/07/06 03:36:58 minskim Exp $
-bin/theano-cache${PYVERSSUFFIX}
-bin/theano-nose${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.2 2018/12/16 14:54:39 adam Exp $
+bin/theano-cache-${PYVERSSUFFIX}
+bin/theano-nose-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
