@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2018/05/09 11:39:04 adam Exp $
+# $NetBSD: Makefile,v 1.15 2018/12/16 14:20:22 adam Exp $
 
-DISTNAME=	leptonica-1.76.0
+DISTNAME=	leptonica-1.77.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=danbloomberg/}
 
@@ -24,6 +24,9 @@ TEST_TARGET=		check
 .if ${OPSYS} != "Linux"
 CONFIGURE_ENV+=		ac_cv_func_fmemopen=no
 .endif
+
+# Silence console messages
+CPPFLAGS+=		-DNO_CONSOLE_IO=1
 
 # Pass a SunOS that the build relies on
 CPPFLAGS.SunOS+=	-D__SOLARIS__=1
