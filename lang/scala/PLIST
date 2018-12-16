@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/03/13 03:16:41 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/12/16 10:07:11 ryoon Exp $
 bin/fsc
 bin/scala
 bin/scalac
@@ -15,10 +15,7 @@ share/${PKGNAME}/doc/README
 share/${PKGNAME}/doc/licenses/apache_jansi.txt
 share/${PKGNAME}/doc/licenses/bsd_asm.txt
 share/${PKGNAME}/doc/licenses/bsd_jline.txt
-share/${PKGNAME}/doc/licenses/mit_jquery-layout.txt
-share/${PKGNAME}/doc/licenses/mit_jquery-ui.txt
 share/${PKGNAME}/doc/licenses/mit_jquery.txt
-share/${PKGNAME}/doc/licenses/mit_sizzle.txt
 share/${PKGNAME}/doc/licenses/mit_tools.tooltip.txt
 share/${PKGNAME}/doc/tools/css/style.css
 share/${PKGNAME}/doc/tools/fsc.html
@@ -29,17 +26,11 @@ share/${PKGNAME}/doc/tools/scala.html
 share/${PKGNAME}/doc/tools/scalac.html
 share/${PKGNAME}/doc/tools/scaladoc.html
 share/${PKGNAME}/doc/tools/scalap.html
-share/${PKGNAME}/lib/akka-actor_2.11-2.3.10.jar
-share/${PKGNAME}/lib/config-1.2.1.jar
-share/${PKGNAME}/lib/jline-2.12.1.jar
-share/${PKGNAME}/lib/scala-actors-2.11.0.jar
-share/${PKGNAME}/lib/scala-actors-migration_2.11-1.1.0.jar
+share/${PKGNAME}/lib/jline-2.14.6.jar
 share/${PKGNAME}/lib/scala-compiler.jar
-share/${PKGNAME}/lib/scala-continuations-library_2.11-1.0.2.jar
-share/${PKGNAME}/lib/scala-continuations-plugin_${PKGVERSION}-1.0.2.jar
 share/${PKGNAME}/lib/scala-library.jar
-share/${PKGNAME}/lib/scala-parser-combinators_2.11-1.0.4.jar
+share/${PKGNAME}/lib/scala-parser-combinators_2.12-1.0.7.jar
 share/${PKGNAME}/lib/scala-reflect.jar
-share/${PKGNAME}/lib/scala-swing_2.11-1.0.2.jar
-share/${PKGNAME}/lib/scala-xml_2.11-1.0.4.jar
+share/${PKGNAME}/lib/scala-swing_2.12-2.0.3.jar
+share/${PKGNAME}/lib/scala-xml_2.12-1.0.6.jar
 share/${PKGNAME}/lib/scalap-${PKGVERSION}.jar
