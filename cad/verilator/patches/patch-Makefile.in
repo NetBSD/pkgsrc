@@ -1,0 +1,27 @@
+$NetBSD: patch-Makefile.in,v 1.1 2018/12/16 09:05:13 ryoon Exp $
+
+* Use BSD install command properly.
+
+--- Makefile.in.orig	2018-10-27 12:25:41.000000000 +0000
++++ Makefile.in
+@@ -299,15 +299,15 @@ VL_INST_DATA_SRCDIR_FILES = \
+ 
+ installbin:
+ 	$(MKINSTALLDIRS) $(DESTDIR)$(bindir)
+-	( cd ${srcdir}/bin ; $(INSTALL_PROGRAM) verilator $(DESTDIR)$(bindir)/verilator )
+-	( cd ${srcdir}/bin ; $(INSTALL_PROGRAM) verilator_coverage $(DESTDIR)$(bindir)/verilator_coverage )
+-	( cd ${srcdir}/bin ; $(INSTALL_PROGRAM) verilator_gantt $(DESTDIR)$(bindir)/verilator_gantt )
+-	( cd ${srcdir}/bin ; $(INSTALL_PROGRAM) verilator_profcfunc $(DESTDIR)$(bindir)/verilator_profcfunc )
++	( cd ${srcdir}/bin ; ${BSD_INSTALL_SCRIPT} verilator $(DESTDIR)$(bindir)/verilator )
++	( cd ${srcdir}/bin ; ${BSD_INSTALL_SCRIPT} verilator_coverage $(DESTDIR)$(bindir)/verilator_coverage )
++	( cd ${srcdir}/bin ; ${BSD_INSTALL_SCRIPT} verilator_gantt $(DESTDIR)$(bindir)/verilator_gantt )
++	( cd ${srcdir}/bin ; ${BSD_INSTALL_SCRIPT} verilator_profcfunc $(DESTDIR)$(bindir)/verilator_profcfunc )
+ 	( cd bin ; $(INSTALL_PROGRAM) verilator_bin $(DESTDIR)$(bindir)/verilator_bin )
+ 	( cd bin ; $(INSTALL_PROGRAM) verilator_bin_dbg $(DESTDIR)$(bindir)/verilator_bin_dbg )
+ 	( cd bin ; $(INSTALL_PROGRAM) verilator_coverage_bin_dbg $(DESTDIR)$(bindir)/verilator_coverage_bin_dbg )
+ 	$(MKINSTALLDIRS) $(DESTDIR)$(pkgdatadir)/bin
+-	( cd ${srcdir}/bin ; $(INSTALL_PROGRAM) verilator_includer $(DESTDIR)$(pkgdatadir)/bin/verilator_includer )
++	( cd ${srcdir}/bin ; ${BSD_INSTALL_SCRIPT} verilator_includer $(DESTDIR)$(pkgdatadir)/bin/verilator_includer )
+ 
+ # Man files can either be part of the original kit, or built in current directory
+ # So important we use $^ so VPATH is searched
