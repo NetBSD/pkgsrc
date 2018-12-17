@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5260 2018/12/17 15:13:12 taca Exp $
+$NetBSD: CHANGES-2018,v 1.5261 2018/12/17 15:47:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7359,3 +7359,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/ruby-tilt to 2.0.9 [taca 2018-12-17]
 	Updated www/heel to 3.2.1 [taca 2018-12-17]
 	Updated www/ruby-capybara to 3.12.0 [taca 2018-12-17]
+	Updated net/pear-Net_SMTP to 1.8.1 [taca 2018-12-17]
