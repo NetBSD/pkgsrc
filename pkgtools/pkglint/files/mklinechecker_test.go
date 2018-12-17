@@ -1,4 +1,4 @@
-package main
+package pkglint
 
 import "gopkg.in/check.v1"
 
@@ -181,7 +181,7 @@ func (s *Suite) Test_MkLineChecker_checkDependencyRule(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"WARN: category/package/filename.mk:8: Unusual target \"target-3\".")
+		"WARN: category/package/filename.mk:8: Undeclared target \"target-3\".")
 }
 
 func (s *Suite) Test_MkLineChecker_checkVartype__simple_type(c *check.C) {
@@ -518,7 +518,7 @@ func (s *Suite) Test_MkLineChecker__unclosed_varuse(c *check.C) {
 		"WARN: Makefile:2: EGDIRS is defined but not used.",
 
 		// XXX: This warning is redundant because of the "Unclosed" warning above.
-		"WARN: Makefile:2: Pkglint parse error in MkLine.Tokenize at "+
+		"WARN: Makefile:2: Internal pkglint error in MkLine.Tokenize at "+
 			"\"${EGDIR/apparmor.d ${EGDIR/dbus-1/system.d ${EGDIR/pam.d\".")
 }
 
@@ -653,9 +653,40 @@ func (s *Suite) Test_MkLineChecker_checkVartype__CFLAGS(c *check.C) {
 		"WARN: Makefile:2: Compiler flag \"%s\\\\\\\"\" should start with a hyphen.")
 }
 
+func (s *Suite) Test_MkLineChecker_checkDirectiveIndentation__autofix(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("--autofix", "-Wspace")
+	lines := t.SetupFileLines("filename.mk",
+		MkRcsID,
+		".if defined(A)",
+		".for a in ${A}",
+		".if defined(C)",
+		".endif",
+		".endfor",
+		".endif")
+	mklines := NewMkLines(lines)
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"AUTOFIX: ~/filename.mk:3: Replacing \".\" with \".  \".",
+		"AUTOFIX: ~/filename.mk:4: Replacing \".\" with \".    \".",
+		"AUTOFIX: ~/filename.mk:5: Replacing \".\" with \".    \".",
+		"AUTOFIX: ~/filename.mk:6: Replacing \".\" with \".  \".")
+	t.CheckFileLines("filename.mk",
+		"# $"+"NetBSD$",
+		".if defined(A)",
+		".  for a in ${A}",
+		".    if defined(C)",
+		".    endif",
+		".  endfor",
+		".endif")
+}
+
 // Up to 2018-01-28, pkglint applied the autofix also to the continuation
 // lines, which is incorrect. It replaced the dot in "4.*" with spaces.
-func (s *Suite) Test_MkLineChecker_checkDirectiveIndentation__autofix(c *check.C) {
+func (s *Suite) Test_MkLineChecker_checkDirectiveIndentation__autofix_multiline(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall", "--autofix")
@@ -913,6 +944,26 @@ func (s *Suite) Test_MkLineChecker_CheckVaruse__deprecated_PKG_DEBUG(c *check.C)
 	t.CheckOutputLines(
 		"WARN: module.mk:123: Use of \"_PKG_SILENT\" is deprecated. Use RUN (with more error checking) instead.",
 		"WARN: module.mk:123: Use of \"_PKG_DEBUG\" is deprecated. Use RUN (with more error checking) instead.")
+}
+
+// PR 46570, item "15. net/uucp/Makefile has a make loop"
+func (s *Suite) Test_MkLineChecker_checkVaruseUndefined__indirect_variables(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupTool("echo", "ECHO", AfterPrefsMk)
+	mkline := t.NewMkLine("net/uucp/Makefile", 123, "\techo ${UUCP_${var}}")
+
+	MkLineChecker{mkline}.Check()
+
+	// No warning about UUCP_${var} being used but not defined.
+	//
+	// Normally, parameterized variables use a dot instead of an underscore as separator.
+	// This is one of the few other cases. Pkglint doesn't warn about dynamic variable
+	// names like UUCP_${var} or SITES_${distfile}.
+	//
+	// It does warn about simple variable names though, like ${var} in this example.
+	t.CheckOutputLines(
+		"WARN: net/uucp/Makefile:123: var is used but not defined.")
 }
 
 func (s *Suite) Test_MkLineChecker_checkVarassignSpecific(c *check.C) {
