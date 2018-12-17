@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2018/11/16 00:16:15 schmonz Exp $
-bin/screengif
+@comment $NetBSD: PLIST,v 1.2 2018/12/17 15:58:59 taca Exp $
+bin/screengif${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/CHANGELOG.md
