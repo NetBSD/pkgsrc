@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5242 2018/12/17 00:16:01 rillig Exp $
+$NetBSD: CHANGES-2018,v 1.5243 2018/12/17 13:46:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7340,3 +7340,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-daphne to 2.2.4 [adam 2018-12-16]
 	Updated security/xml-security-c to 2.0.2 [nia 2018-12-16]
 	Updated pkgtools/pkglint to 5.6.9 [rillig 2018-12-17]
+	Updated devel/libuv to 1.24.1 [adam 2018-12-17]
+	Updated devel/py-dulwich to 0.19.9 [adam 2018-12-17]
