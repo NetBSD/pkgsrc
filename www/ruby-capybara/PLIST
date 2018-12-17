@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2018/09/23 16:50:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2018/12/17 15:12:50 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/History.md
 ${GEM_LIBDIR}/License.txt
@@ -37,25 +37,37 @@ ${GEM_LIBDIR}/lib/capybara/rack_test/node.rb
 ${GEM_LIBDIR}/lib/capybara/rails.rb
 ${GEM_LIBDIR}/lib/capybara/result.rb
 ${GEM_LIBDIR}/lib/capybara/rspec.rb
-${GEM_LIBDIR}/lib/capybara/rspec/compound.rb
 ${GEM_LIBDIR}/lib/capybara/rspec/features.rb
 ${GEM_LIBDIR}/lib/capybara/rspec/matcher_proxies.rb
 ${GEM_LIBDIR}/lib/capybara/rspec/matchers.rb
+${GEM_LIBDIR}/lib/capybara/rspec/matchers/base.rb
+${GEM_LIBDIR}/lib/capybara/rspec/matchers/become_closed.rb
+${GEM_LIBDIR}/lib/capybara/rspec/matchers/compound.rb
+${GEM_LIBDIR}/lib/capybara/rspec/matchers/have_current_path.rb
+${GEM_LIBDIR}/lib/capybara/rspec/matchers/have_selector.rb
+${GEM_LIBDIR}/lib/capybara/rspec/matchers/have_style.rb
+${GEM_LIBDIR}/lib/capybara/rspec/matchers/have_text.rb
+${GEM_LIBDIR}/lib/capybara/rspec/matchers/have_title.rb
+${GEM_LIBDIR}/lib/capybara/rspec/matchers/match_selector.rb
 ${GEM_LIBDIR}/lib/capybara/selector.rb
+${GEM_LIBDIR}/lib/capybara/selector/builders/css_builder.rb
+${GEM_LIBDIR}/lib/capybara/selector/builders/xpath_builder.rb
 ${GEM_LIBDIR}/lib/capybara/selector/css.rb
 ${GEM_LIBDIR}/lib/capybara/selector/filter.rb
 ${GEM_LIBDIR}/lib/capybara/selector/filter_set.rb
 ${GEM_LIBDIR}/lib/capybara/selector/filters/base.rb
 ${GEM_LIBDIR}/lib/capybara/selector/filters/expression_filter.rb
+${GEM_LIBDIR}/lib/capybara/selector/filters/locator_filter.rb
 ${GEM_LIBDIR}/lib/capybara/selector/filters/node_filter.rb
+${GEM_LIBDIR}/lib/capybara/selector/regexp_disassembler.rb
 ${GEM_LIBDIR}/lib/capybara/selector/selector.rb
 ${GEM_LIBDIR}/lib/capybara/selenium/driver.rb
 ${GEM_LIBDIR}/lib/capybara/selenium/driver_specializations/chrome_driver.rb
-${GEM_LIBDIR}/lib/capybara/selenium/driver_specializations/marionette_driver.rb
+${GEM_LIBDIR}/lib/capybara/selenium/driver_specializations/firefox_driver.rb
 ${GEM_LIBDIR}/lib/capybara/selenium/extensions/html5_drag.rb
 ${GEM_LIBDIR}/lib/capybara/selenium/node.rb
 ${GEM_LIBDIR}/lib/capybara/selenium/nodes/chrome_node.rb
-${GEM_LIBDIR}/lib/capybara/selenium/nodes/marionette_node.rb
+${GEM_LIBDIR}/lib/capybara/selenium/nodes/firefox_node.rb
 ${GEM_LIBDIR}/lib/capybara/selenium/patches/pause_duration_fix.rb
 ${GEM_LIBDIR}/lib/capybara/server.rb
 ${GEM_LIBDIR}/lib/capybara/server/animation_disabler.rb
@@ -114,6 +126,7 @@ ${GEM_LIBDIR}/lib/capybara/spec/session/frame/within_frame_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/go_back_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/go_forward_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/has_all_selectors_spec.rb
+${GEM_LIBDIR}/lib/capybara/spec/session/has_any_selectors_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/has_button_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/has_css_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/has_current_path_spec.rb
@@ -169,6 +182,7 @@ ${GEM_LIBDIR}/lib/capybara/spec/views/frame_two.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/header_links.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/host_links.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/initial_alert.erb
+${GEM_LIBDIR}/lib/capybara/spec/views/obscured.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/path.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/popup_one.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/popup_two.erb
@@ -195,6 +209,7 @@ ${GEM_LIBDIR}/lib/capybara/version.rb
 ${GEM_LIBDIR}/lib/capybara/window.rb
 ${GEM_LIBDIR}/spec/basic_node_spec.rb
 ${GEM_LIBDIR}/spec/capybara_spec.rb
+${GEM_LIBDIR}/spec/css_builder_spec.rb
 ${GEM_LIBDIR}/spec/css_splitter_spec.rb
 ${GEM_LIBDIR}/spec/dsl_spec.rb
 ${GEM_LIBDIR}/spec/filter_set_spec.rb
@@ -207,6 +222,7 @@ ${GEM_LIBDIR}/spec/minitest_spec.rb
 ${GEM_LIBDIR}/spec/minitest_spec_spec.rb
 ${GEM_LIBDIR}/spec/per_session_config_spec.rb
 ${GEM_LIBDIR}/spec/rack_test_spec.rb
+${GEM_LIBDIR}/spec/regexp_dissassembler_spec.rb
 ${GEM_LIBDIR}/spec/result_spec.rb
 ${GEM_LIBDIR}/spec/rspec/features_spec.rb
 ${GEM_LIBDIR}/spec/rspec/scenarios_spec.rb
@@ -218,11 +234,12 @@ ${GEM_LIBDIR}/spec/selector_spec.rb
 ${GEM_LIBDIR}/spec/selenium_spec_chrome.rb
 ${GEM_LIBDIR}/spec/selenium_spec_chrome_remote.rb
 ${GEM_LIBDIR}/spec/selenium_spec_edge.rb
+${GEM_LIBDIR}/spec/selenium_spec_firefox.rb
 ${GEM_LIBDIR}/spec/selenium_spec_firefox_remote.rb
 ${GEM_LIBDIR}/spec/selenium_spec_ie.rb
-${GEM_LIBDIR}/spec/selenium_spec_marionette.rb
 ${GEM_LIBDIR}/spec/server_spec.rb
 ${GEM_LIBDIR}/spec/session_spec.rb
 ${GEM_LIBDIR}/spec/shared_selenium_session.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/xpath_builder_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
