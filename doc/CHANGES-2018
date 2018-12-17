@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5252 2018/12/17 14:58:22 taca Exp $
+$NetBSD: CHANGES-2018,v 1.5253 2018/12/17 15:01:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7351,3 +7351,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ruby-term-ansicolor to 1.7.0 [taca 2018-12-17]
 	Updated devel/ruby-thor to 0.20.3 [taca 2018-12-17]
 	Updated devel/ruby-tins to 1.20.2 [taca 2018-12-17]
+	Updated misc/ruby-bundler to 1.17.2 [taca 2018-12-17]
