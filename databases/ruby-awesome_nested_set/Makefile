@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2018/03/18 14:21:20 taca Exp $
+# $NetBSD: Makefile,v 1.11 2018/12/17 14:34:16 taca Exp $
 
-DISTNAME=	awesome_nested_set-2.1.6
+DISTNAME=	awesome_nested_set-3.1.4
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	databases ruby
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,7 +11,7 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_ACTIVERECORD_DEPENDS}
 
-RUBY_RAILS_ACCEPTED=	32
+RUBY_RAILS_ACCEPTED=	42 51
 USE_LANGUAGES=	# none
 
 .include "../../lang/ruby/gem.mk"
