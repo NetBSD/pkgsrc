@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2018/09/11 07:16:28 adam Exp $
+# $NetBSD: Makefile,v 1.29 2018/12/17 13:46:16 adam Exp $
 
-DISTNAME=	dulwich-0.19.6
+DISTNAME=	dulwich-0.19.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dulwich/}
@@ -19,9 +19,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} dul-receive-pack dul-receive-pack${PYVERSSUFFIX} && \
-		${MV} dul-upload-pack dul-upload-pack${PYVERSSUFFIX} && \
-		${MV} dulwich dulwich${PYVERSSUFFIX} || ${TRUE}
+		${MV} dul-receive-pack dul-receive-pack-${PYVERSSUFFIX} && \
+		${MV} dul-upload-pack dul-upload-pack-${PYVERSSUFFIX} && \
+		${MV} dulwich dulwich-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
