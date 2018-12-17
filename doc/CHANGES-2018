@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5245 2018/12/17 14:48:28 taca Exp $
+$NetBSD: CHANGES-2018,v 1.5246 2018/12/17 14:49:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7344,3 +7344,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-dulwich to 0.19.9 [adam 2018-12-17]
 	Updated databases/ruby-awesome_nested_set to 3.1.4 [taca 2018-12-17]
 	Updated devel/ruby-concurrent-ruby to 1.1.4 [taca 2018-12-17]
+	Updated devel/ruby-curses to 1.2.5 [taca 2018-12-17]
