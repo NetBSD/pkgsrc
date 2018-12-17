@@ -1,4 +1,4 @@
-package main
+package pkglint
 
 type Toplevel struct {
 	dir            string
