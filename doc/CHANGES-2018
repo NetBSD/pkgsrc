@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5265 2018/12/17 16:31:12 taca Exp $
+$NetBSD: CHANGES-2018,v 1.5266 2018/12/17 19:46:16 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7364,3 +7364,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/ruby-screengif to 0.0.3nb1 [taca 2018-12-17]
 	Updated devel/py-python-slugify to 1.2.6 [taca 2018-12-17]
 	Updated devel/transifex-client to 0.13.5 [taca 2018-12-17]
+	Updated textproc/ruby-xpath to 3.2.0 [jperkin 2018-12-17]
