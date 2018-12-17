@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2016/10/17 19:55:50 bsiegert Exp $
+$NetBSD: distinfo,v 1.7 2018/12/17 15:56:32 taca Exp $
 
-SHA1 (basercms-3.0.9.zip) = c4e38071867b43fd84dd6cf5e2a8481e1876564b
-RMD160 (basercms-3.0.9.zip) = 9736371fe02f126bc2a0102898b95541d5cebcb1
-SHA512 (basercms-3.0.9.zip) = 0684e933a665d87113a541961967ce3db36433177f01a436dbfe1f6b288675e3ce259cbd10d609aa3e9c93e47dc8b57d176b80d2128b41dd79cd66c453470b29
-Size (basercms-3.0.9.zip) = 13159901 bytes
+SHA1 (basercms-3.0.16.zip) = 67f26797923a11abb0ef09d8fb9ee183c13142bd
+RMD160 (basercms-3.0.16.zip) = d032e28c4a7319a550accb98eff06b7094ac5adb
+SHA512 (basercms-3.0.16.zip) = 1913ba05a34ea10741575d95ac2d456c1b82720d5f2585965a3f77bbf25fe16b61228ad18dcfb2aaaa0e5d6253960d66a8ae43255912739439d6bbe2439e243a
+Size (basercms-3.0.16.zip) = 15979182 bytes
