@@ -1,0 +1,8 @@
+nnn is probably the fastest and most resource-sensitive file manager you have
+ever used. It integrates seamlessly with your DE and favourite GUI utilities,
+has a unique navigate-as-you-type mode with auto-select, disk usage analyzer
+mode, bookmarks, contexts, application launcher, familiar navigation shortcuts,
+subshell spawning and much more.
+
+Integrate utilities like sxiv or fzy easily, transfer selected files using
+lftp or use it as a (neo)vim plugin; nnn supports as many scripts as you need!
