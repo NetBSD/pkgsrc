@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2018/09/24 02:28:58 taca Exp $
+# $NetBSD: Makefile,v 1.15 2018/12/17 15:11:47 taca Exp $
 
-DISTNAME=	heel-3.2.0
-PKGREVISION=	1
+DISTNAME=	heel-3.2.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -16,9 +15,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-launchy>=2.4<3:../../misc/ruby-launchy
 DEPENDS+=	${RUBY_PKGPREFIX}-mime-types>=3.1<4:../../mail/ruby-mime-types
 
 CONFLICTS+=	ruby[1-9][0-9][0-9]-heel-[0-9]* heel-[0-9]*
-
-OVERRIDE_GEMSPEC+=	coderay>=0.8.260 launchy>=0.3.2 thin>=1.2 \
-			puma>=3.11.3
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
