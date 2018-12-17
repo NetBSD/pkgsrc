@@ -1,4 +1,4 @@
-package main
+package pkglint
 
 import (
 	"bytes"
@@ -139,7 +139,7 @@ func (t *Tester) SetupCommandLine(args ...string) {
 	defer func() { trace.Tracing = prevTracing }()
 
 	exitcode := G.ParseCommandLine(append([]string{"pkglint"}, args...))
-	if exitcode != nil && *exitcode != 0 {
+	if exitcode != -1 && exitcode != 0 {
 		t.CheckOutputEmpty()
 		t.c.Fatalf("Cannot parse command line: %#v", args)
 	}
@@ -199,7 +199,11 @@ func (t *Tester) SetupFileMkLines(relativeFileName string, lines ...string) MkLi
 // SetupPkgsrc sets up a minimal but complete pkgsrc installation in the
 // temporary folder, so that pkglint runs without any errors.
 // Individual files may be overwritten by calling other Setup* methods.
+//
 // This setup is especially interesting for testing Pkglint.Main.
+//
+// If the test works on a lower level than Pkglint.Main,
+// LoadInfrastructure must be called to actually load the infrastructure files.
 func (t *Tester) SetupPkgsrc() {
 
 	// This file is needed to locate the pkgsrc root directory.
@@ -317,9 +321,9 @@ func (t *Tester) SetupPackage(pkgpath string, makefileLines ...string) string {
 
 line:
 	for _, line := range makefileLines {
-		if m, prefix := match1(line, `^(\w+=)`); m {
+		if m, prefix := match1(line, `^#?(\w+=)`); m {
 			for i, existingLine := range mlines {
-				if hasPrefix(existingLine, prefix) {
+				if hasPrefix(strings.TrimPrefix(existingLine, "#"), prefix) {
 					mlines[i] = line
 					continue line
 				}
@@ -602,6 +606,7 @@ func (t *Tester) Output() string {
 
 	t.stdout.Reset()
 	t.stderr.Reset()
+	G.Logger.logged = Once{}
 
 	output := stdout + stderr
 	if t.tmpdir != "" {
@@ -617,6 +622,7 @@ func (t *Tester) Output() string {
 // See CheckOutputLines.
 func (t *Tester) CheckOutputEmpty() {
 	output := t.Output()
+
 	actualLines := strings.Split(output, "\n")
 	actualLines = actualLines[:len(actualLines)-1]
 	t.Check(emptyToNil(actualLines), deepEquals, emptyToNil(nil))

@@ -1,4 +1,4 @@
-package main
+package pkglint
 
 import (
 	"netbsd.org/pkglint/regex"
@@ -77,7 +77,7 @@ func (src *Pkgsrc) InitVartypes() {
 	}
 
 	bl3list := func(varname string, kindOfList KindOfList, checker *BasicType) {
-		acl(varname, kindOfList, checker, "buildlink3.mk, builtin.mk: append")
+		acl(varname, kindOfList, checker, "buildlink3.mk, builtin.mk: append; *: use")
 	}
 	cmdline := func(varname string, kindOfList KindOfList, checker *BasicType) {
 		acl(varname, kindOfList, checker, "buildlink3.mk, builtin.mk:; *: use-loadtime, use")
@@ -518,6 +518,7 @@ func (src *Pkgsrc) InitVartypes() {
 	pkglist("BROKEN_EXCEPT_ON_PLATFORM", lkSpace, BtMachinePlatformPattern)
 	pkglist("BROKEN_ON_PLATFORM", lkSpace, BtMachinePlatformPattern)
 	sys("BSD_MAKE_ENV", lkShell, BtShellWord)
+	// TODO: Align the permissions of the various BUILDLINK_*.* variables with each other.
 	acl("BUILDLINK_ABI_DEPENDS.*", lkSpace, BtDependency, "buildlink3.mk, builtin.mk: append, use-loadtime; *: append")
 	acl("BUILDLINK_API_DEPENDS.*", lkSpace, BtDependency, "buildlink3.mk, builtin.mk: append, use-loadtime; *: append")
 	acl("BUILDLINK_AUTO_DIRS.*", lkNone, BtYesNo, "buildlink3.mk: append")
@@ -1215,11 +1216,11 @@ func enum(values string) *BasicType {
 		valueMap[value] = true
 	}
 	name := "enum: " + values + " " // See IsEnum
-	basicType := &BasicType{name, nil}
+	basicType := BasicType{name, nil}
 	basicType.checker = func(check *VartypeCheck) {
-		check.Enum(valueMap, basicType)
+		check.Enum(valueMap, &basicType)
 	}
-	return basicType
+	return &basicType
 }
 
 func parseACLEntries(varname string, aclEntries string) []ACLEntry {

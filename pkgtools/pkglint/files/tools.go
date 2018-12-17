@@ -1,7 +1,6 @@
-package main
+package pkglint
 
 import (
-	"fmt"
 	"sort"
 	"strings"
 )
@@ -23,7 +22,7 @@ type Tool struct {
 }
 
 func (tool *Tool) String() string {
-	return fmt.Sprintf("%s:%s:%s:%s",
+	return sprintf("%s:%s:%s:%s",
 		tool.Name, tool.Varname, ifelseStr(tool.MustUseVarForm, "var", ""), tool.Validity)
 }
 

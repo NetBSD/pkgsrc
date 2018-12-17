@@ -1,4 +1,4 @@
-package main
+package pkglint
 
 // Checks for patch files.
 
@@ -103,7 +103,7 @@ func (ck *PatchChecker) Check() {
 	}
 }
 
-// See http://www.gnu.org/software/diffutils/manual/html_node/Detailed-Unified.html
+// See https://www.gnu.org/software/diffutils/manual/html_node/Detailed-Unified.html
 func (ck *PatchChecker) checkUnifiedDiff(patchedFile string) {
 	if trace.Tracing {
 		defer trace.Call0()()
@@ -129,22 +129,32 @@ func (ck *PatchChecker) checkUnifiedDiff(patchedFile string) {
 		for !ck.exp.EOF() && (linesToDel > 0 || linesToAdd > 0 || hasPrefix(ck.exp.CurrentLine().Text, "\\")) {
 			line := ck.exp.CurrentLine()
 			ck.exp.Advance()
+
 			text := line.Text
 			switch {
+
 			case text == "":
+				// There should be a space here, but that was a trailing space and
+				// has been trimmed down somewhere on its way. Doesn't matter,
+				// all the patch programs can handle this situation.
 				linesToDel--
 				linesToAdd--
+
 			case hasPrefix(text, " "), hasPrefix(text, "\t"):
 				linesToDel--
 				linesToAdd--
 				ck.checklineContext(text[1:], patchedFileType)
+
 			case hasPrefix(text, "-"):
 				linesToDel--
+
 			case hasPrefix(text, "+"):
 				linesToAdd--
 				ck.checklineAdded(text[1:], patchedFileType)
+
 			case hasPrefix(text, "\\"):
 				// \ No newline at end of file (or a translation of that message)
+
 			default:
 				line.Errorf("Invalid line in unified patch hunk: %s", text)
 				return
@@ -161,18 +171,20 @@ func (ck *PatchChecker) checkUnifiedDiff(patchedFile string) {
 				linesToDel, linesToAdd)
 		}
 	}
+
 	if !hasHunks {
 		ck.exp.CurrentLine().Errorf("No patch hunks for %q.", patchedFile)
 	}
+
 	if !ck.exp.EOF() {
 		line := ck.exp.CurrentLine()
 		if !ck.isEmptyLine(line.Text) && !matches(line.Text, rePatchUniFileDel) {
 			line.Warnf("Empty line or end of file expected.")
 			G.Explain(
-				"This line is not part of the patch anymore, although it may",
-				"look so.  To make this situation clear, there should be an",
-				"empty line before this line.  If the line doesn't contain",
-				"useful information, it should be removed.")
+				"This line is not part of the patch anymore, although it may look so.",
+				"To make this situation clear, there should be an",
+				"empty line before this line.",
+				"If the line doesn't contain useful information, it should be removed.")
 		}
 	}
 }
@@ -185,10 +197,10 @@ func (ck *PatchChecker) checkBeginDiff(line Line, patchedFiles int) {
 	if !ck.seenDocumentation && patchedFiles == 0 {
 		line.Errorf("Each patch must be documented.")
 		G.Explain(
-			"Pkgsrc tries to have as few patches as possible.  Therefore, each",
-			"patch must document why it is necessary.  Typical reasons are",
-			"portability or security.  A typical documented patch looks like",
-			"this:",
+			"Pkgsrc tries to have as few patches as possible.",
+			"Therefore, each patch must document why it is necessary.",
+			"Typical reasons are portability or security.",
+			"A typical documented patch looks like this:",
 			"",
 			"\t$"+"NetBSD$",
 			"",
@@ -199,8 +211,8 @@ func (ck *PatchChecker) checkBeginDiff(line Line, patchedFiles int) {
 			"corresponding CVE identifier.",
 			"",
 			"Each patch should be sent to the upstream maintainers of the",
-			"package, so that they can include it in future versions.  After",
-			"submitting a patch upstream, the corresponding bug report should",
+			"package, so that they can include it in future versions.",
+			"After submitting a patch upstream, the corresponding bug report should",
 			"be mentioned in this file, to prevent duplicate work.")
 	}
 	if G.Opts.WarnSpace && !ck.previousLineEmpty {
@@ -259,6 +271,8 @@ func (ck *PatchChecker) checktextUniHunkCr() {
 
 	line := ck.exp.PreviousLine()
 	if hasSuffix(line.Text, "\r") {
+		// This code has been introduced around 2006.
+		// As of 2018, this might be fixed by now.
 		fix := line.Autofix()
 		fix.Errorf("The hunk header must not end with a CR character.")
 		fix.Explain(
@@ -281,6 +295,9 @@ func (ck *PatchChecker) checktextRcsid(text string) {
 	}
 }
 
+// isEmptyLine tests whether a line provides essentially no interesting content.
+// The focus here is on human-generated content that is intended for other human readers.
+// Therefore text that is typical for patch generators is considered empty as well.
 func (ck *PatchChecker) isEmptyLine(text string) bool {
 	return text == "" ||
 		hasPrefix(text, "index ") ||
@@ -290,6 +307,9 @@ func (ck *PatchChecker) isEmptyLine(text string) bool {
 }
 
 type FileType uint8
+
+// TODO: Is this type really useful? It is mainly used for warning about absolute filenames,
+// and that check is questionable in itself.
 
 const (
 	ftSource FileType = iota

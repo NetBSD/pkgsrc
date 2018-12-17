@@ -58,6 +58,19 @@ func (s *Suite) Test_Lexer_PeekByte(c *check.C) {
 	c.Check(lexer.PeekByte(), equals, -1)
 }
 
+func (s *Suite) Test_Lexer_TestByteSet(c *check.C) {
+	lexer := NewLexer("text")
+
+	c.Check(lexer.TestByteSet(Upper), equals, false)
+	c.Check(lexer.TestByteSet(Lower), equals, true)
+	c.Check(lexer.TestByteSet(NewByteSet("t")), equals, true)
+
+	c.Check(lexer.NextString("text"), equals, "text")
+
+	c.Check(lexer.TestByteSet(Upper), equals, false)
+	c.Check(lexer.TestByteSet(Lower), equals, false)
+}
+
 func (s *Suite) Test_Lexer_Skip(c *check.C) {
 	lexer := NewLexer("example text")
 

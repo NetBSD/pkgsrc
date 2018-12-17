@@ -1,4 +1,4 @@
-package main
+package pkglint
 
 // When files are read in by pkglint, they are interpreted in terms of
 // lines. For Makefiles, line continuations are handled properly, allowing

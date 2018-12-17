@@ -1,4 +1,4 @@
-package main
+package pkglint
 
 import (
 	"path"
@@ -222,9 +222,9 @@ func (cv *VartypeCheck) Comment() {
 	if m, isA := match1(value, ` (is a|is an) `); m {
 		cv.Warnf("COMMENT should not contain %q.", isA)
 		G.Explain(
-			"The words \"package is a\" are redundant.  Since every package comment",
-			"could start with them, it is better to remove this redundancy in all",
-			"cases.")
+			"The words \"package is a\" are redundant.",
+			"Since every package comment could start with them,",
+			"it is better to remove this redundancy in all cases.")
 	}
 	if G.Pkg != nil && G.Pkg.EffectivePkgbase != "" {
 		pkgbase := G.Pkg.EffectivePkgbase
@@ -285,8 +285,9 @@ func (cv *VartypeCheck) Dependency() {
 		G.Explain(
 			"The \"{,nb*}\" extension is only necessary for dependencies of the",
 			"form \"pkgbase-1.2\", since the pattern \"pkgbase-1.2\" doesn't match",
-			"the version \"pkgbase-1.2nb5\".  For dependency patterns using the",
-			"comparison operators, this is not necessary.")
+			"the version \"pkgbase-1.2nb5\".",
+			"For dependency patterns using the comparison operators,",
+			"this is not necessary.")
 
 	} else if deppat == nil || !parser.EOF() {
 		cv.Warnf("Invalid dependency pattern %q.", value)
@@ -305,9 +306,9 @@ func (cv *VartypeCheck) Dependency() {
 		if inside != "0-9" {
 			cv.Warnf("Only [0-9]* is allowed in the numeric part of a dependency.")
 			G.Explain(
-				"The pattern -[0-9] means any version.  All other version patterns",
-				"should be expressed using the comparison operators like < or >= or",
-				"even >=2<3.",
+				"The pattern -[0-9] means any version.",
+				"All other version patterns should be expressed using",
+				"the comparison operators like < or >= or even >=2<3.",
 				"",
 				"Patterns like -[0-7] will only match the first digit of the version",
 				"number and will not do the correct thing when the package reaches",
@@ -333,8 +334,9 @@ func (cv *VartypeCheck) Dependency() {
 		cv.Warnf("Please use \"%[1]s-[0-9]*\" instead of \"%[1]s-*\".", deppat.Pkgbase)
 		G.Explain(
 			"If you use a * alone, the package specification may match other",
-			"packages that have the same prefix but a longer name.  For example,",
-			"foo-* matches foo-1.2 but also foo-client-1.2 and foo-server-1.2.")
+			"packages that have the same prefix but a longer name.",
+			"For example, foo-* matches foo-1.2 but also",
+			"foo-client-1.2 and foo-server-1.2.")
 	}
 
 	withoutCharClasses := replaceAll(wildcard, `\[[\d-]+\]`, "")
@@ -676,9 +678,9 @@ func (cv *VartypeCheck) Message() {
 		cv.Warnf("%s should not be quoted.", varname)
 		G.Explain(
 			"The quoting is only needed for variables which are interpreted as",
-			"multiple words (or, generally speaking, a list of something).  A",
-			"single text message does not belong to this class, since it is only",
-			"printed as a whole.")
+			"multiple words (or, generally speaking, a list of something).",
+			"A single text message does not belong to this class,",
+			"since it is only printed as a whole.")
 	}
 }
 
@@ -698,8 +700,8 @@ func (cv *VartypeCheck) Option() {
 		if _, found := G.Pkgsrc.PkgOptions[optname]; !found { // There's a difference between empty and absent here.
 			cv.Warnf("Unknown option %q.", optname)
 			G.Explain(
-				"This option is not documented in the mk/defaults/options.description",
-				"file.  Please think of a brief but precise description and either",
+				"This option is not documented in the mk/defaults/options.description file.",
+				"Please think of a brief but precise description and either",
 				"update that file yourself or suggest a description for this option",
 				"on the tech-pkg@NetBSD.org mailing list.")
 		}
@@ -832,8 +834,8 @@ func (cv *VartypeCheck) PkgRevision() {
 			"Usually, different packages using the same Makefile.common have",
 			"different dependencies and will be bumped at different times (e.g.",
 			"for shlib major bumps) and thus the PKGREVISIONs must be in the",
-			"separate Makefiles.  There is no practical way of having this",
-			"information in a commonly used Makefile.")
+			"separate Makefiles.",
+			"There is no practical way of having this information in a commonly used Makefile.")
 	}
 }
 
@@ -896,8 +898,8 @@ func (cv *VartypeCheck) PythonDependency() {
 		cv.Warnf("Invalid Python dependency %q.", cv.Value)
 		G.Explain(
 			"Python dependencies must be an identifier for a package, as",
-			"specified in lang/python/versioned_dependencies.mk.  This",
-			"identifier may be followed by :build for a build-time only",
+			"specified in lang/python/versioned_dependencies.mk.",
+			"This identifier may be followed by :build for a build-time only",
 			"dependency, or by :link for a run-time only dependency.")
 	}
 }
@@ -920,7 +922,8 @@ func (cv *VartypeCheck) Restricted() {
 		cv.Warnf("The only valid value for %s is ${RESTRICTED}.", cv.Varname)
 		G.Explain(
 			"These variables are used to control which files may be mirrored on",
-			"FTP servers or CD-ROM collections.  They are not intended to mark",
+			"FTP servers or CD-ROM collections.",
+			"They are not intended to mark",
 			"packages whose only MASTER_SITES are on ftp.NetBSD.org.")
 	}
 }
@@ -1169,10 +1172,9 @@ func (cv *VartypeCheck) Yes() {
 		if !matches(cv.Value, `^(?:YES|yes)(?:[\t ]+#.*)?$`) {
 			cv.Warnf("%s should be set to YES or yes.", cv.Varname)
 			G.Explain(
-				"This variable means \"yes\" if it is defined, and \"no\" if it is",
-				"undefined.  Even when it has the value \"no\", this means \"yes\".",
-				"Therefore when it is defined, its value should correspond to its",
-				"meaning.")
+				"This variable means \"yes\" if it is defined, and \"no\" if it is undefined.",
+				"Even when it has the value \"no\", this means \"yes\".",
+				"Therefore when it is defined, its value should correspond to its meaning.")
 		}
 	}
 }
@@ -1194,8 +1196,9 @@ func (cv *VartypeCheck) YesNo() {
 		cv.Warnf("%s should be matched against %q or %q, not compared with %q.", cv.Varname, yes1, no1, cv.Value)
 		G.Explain(
 			"The yes/no value can be written in either upper or lower case, and",
-			"both forms are actually used.  As long as this is the case, when",
-			"checking the variable value, both must be accepted.")
+			"both forms are actually used.",
+			"As long as this is the case, when checking the variable value,",
+			"both must be accepted.")
 	} else if !matches(cv.Value, `^(?:YES|yes|NO|no)(?:[\t ]+#.*)?$`) {
 		cv.Warnf("%s should be set to YES, yes, NO, or no.", cv.Varname)
 	}

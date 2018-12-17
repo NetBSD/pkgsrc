@@ -1,9 +1,6 @@
-package main
+package pkglint
 
-import (
-	"fmt"
-	"netbsd.org/pkglint/textproc"
-)
+import "netbsd.org/pkglint/textproc"
 
 func CheckdirCategory(dir string) {
 	if trace.Tracing {
@@ -34,7 +31,7 @@ func CheckdirCategory(dir string) {
 			_ = lex.NextBytesSet(valid)
 			ch := lex.NextByteSet(invalid)
 			if ch != -1 {
-				uni += fmt.Sprintf(" %U", ch)
+				uni += sprintf(" %U", ch)
 			}
 		}
 

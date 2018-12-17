@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.560 2018/12/02 23:12:43 rillig Exp $
+# $NetBSD: Makefile,v 1.561 2018/12/17 00:15:39 rillig Exp $
 
-PKGNAME=	pkglint-5.6.8
+PKGNAME=	pkglint-5.6.9
 CATEGORIES=	pkgtools
 DISTNAME=	tools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=golang/}
@@ -27,7 +27,7 @@ SUBST_FILES.pkglint+=	${WRKSRC.pkglint}/pkglint.go
 SUBST_SED.pkglint+=	-e s\|@VERSION@\|${PKGVERSION}\|g
 SUBST_SED.pkglint+=	-e s\|@BMAKE@\|${MAKE:T:Q}\|g
 
-EXTRACT_PAX_ARGS=	${"${PKGSRC_RUN_TEST:M[yY][eE][sS]}" :?: -s '|.*/intqa/.*||'}
+EXTRACT_PAX_ARGS=	-s ',.*/CVS$$,,' -s ',.*/CVS/.*,,'
 
 WRKSRC.tools=		${WRKSRC}/golang.org/x/tools
 WRKSRC.pkglint=		${WRKSRC}/netbsd.org/pkglint
@@ -49,7 +49,9 @@ do-test:
 	${RUN} ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} test -vet=off -v ${GO_BUILD_PATTERN}
 
 do-install:
-	${RUN} cd ${WRKDIR} && pax -rw bin/pkglint ${DESTDIR}/${PREFIX}
+	${RUN} cd ${WRKDIR} && ${PAX} -rw bin/pkglint ${DESTDIR}${PREFIX}
+	${RUN} cd ${WRKDIR} && ${PAX} -rw src/netbsd.org/pkglint	\
+		pkg/${GO_PLATFORM}/netbsd.org/pkglint* ${DESTDIR}${PREFIX}/gopkg
 
 post-install: do-install-man
 
@@ -71,7 +73,10 @@ do-install-man: .PHONY
 	${INSTALL_MAN} ${WRKSRC.pkglint}/pkglint.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 .endif
 
-.if !empty(PKGSRC_RUN_TEST:M[yY][eE][sS])
-.  include "../../devel/go-check/buildlink3.mk"
-.endif
+# Require devel/go-check even when PKGSRC_RUN_TEST is disabled
+# because netbsd.org/pkglint/intqa depends on it.
+# This package is always installed.
+BUILDLINK_DEPMETHOD.go-check=	full
+
+.include "../../devel/go-check/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,5 +1,5 @@
 %{
-package main
+package pkglint
 %}
 
 %token <Word> tkWORD
@@ -25,11 +25,11 @@ package main
 	Separator MkShSeparator
 	Simple *MkShSimpleCommand
 	FuncDef *MkShFunctionDefinition
-	For *MkShForClause
-	If *MkShIfClause
-	Case *MkShCaseClause
+	For *MkShFor
+	If *MkShIf
+	Case *MkShCase
 	CaseItem *MkShCaseItem
-	Loop *MkShLoopClause
+	Loop *MkShLoop
 	Words []*ShToken
 	Word *ShToken
 	Redirections []*MkShRedirection
@@ -86,7 +86,7 @@ pipeline : tkEXCLAM pipe_sequence {
 }
 
 pipe_sequence : command {
-	$$ = NewMkShPipeline(false, $1)
+	$$ = NewMkShPipeline(false, []*MkShCommand{$1})
 }
 pipe_sequence : pipe_sequence tkPIPE linebreak command {
 	$$.Add($4)
@@ -156,13 +156,13 @@ for_clause : tkFOR tkWORD linebreak do_group {
 		&ShAtom{shtText, "\"", shqDquot, nil},
 		&ShAtom{shtShVarUse, "$$@", shqDquot, "@"},
 		&ShAtom{shtText, "\"", shqPlain, nil})
-	$$ = &MkShForClause{$2.MkText, []*ShToken{args}, $4}
+	$$ = &MkShFor{$2.MkText, []*ShToken{args}, $4}
 }
 for_clause : tkFOR tkWORD linebreak tkIN sequential_sep do_group {
-	$$ = &MkShForClause{$2.MkText, nil, $6}
+	$$ = &MkShFor{$2.MkText, nil, $6}
 }
 for_clause : tkFOR tkWORD linebreak tkIN wordlist sequential_sep do_group {
-	$$ = &MkShForClause{$2.MkText, $5, $7}
+	$$ = &MkShFor{$2.MkText, $5, $7}
 }
 
 wordlist : tkWORD {
@@ -181,11 +181,11 @@ case_clause : tkCASE tkWORD linebreak tkIN linebreak case_list_ns tkESAC {
 	$$.Word = $2
 }
 case_clause : tkCASE tkWORD linebreak tkIN linebreak tkESAC {
-	$$ = &MkShCaseClause{$2, nil}
+	$$ = &MkShCase{$2, nil}
 }
 
 case_list_ns : case_item_ns {
-	$$ = &MkShCaseClause{nil, nil}
+	$$ = &MkShCase{nil, nil}
 	$$.Cases = append($$.Cases, $1)
 }
 case_list_ns : case_list case_item_ns {
@@ -193,7 +193,7 @@ case_list_ns : case_list case_item_ns {
 }
 
 case_list : case_item {
-	$$ = &MkShCaseClause{nil, nil}
+	$$ = &MkShCase{nil, nil}
 	$$.Cases = append($$.Cases, $1)
 }
 case_list : case_list case_item {
@@ -237,12 +237,12 @@ if_clause : tkIF compound_list tkTHEN compound_list else_part tkFI {
 	$$.Prepend($2, $4)
 }
 if_clause : tkIF compound_list tkTHEN compound_list tkFI {
-	$$ = &MkShIfClause{}
+	$$ = &MkShIf{}
 	$$.Prepend($2, $4)
 }
 
 else_part : tkELIF compound_list tkTHEN compound_list {
-	$$ = &MkShIfClause{}
+	$$ = &MkShIf{}
 	$$.Prepend($2, $4)
 }
 else_part : tkELIF compound_list tkTHEN compound_list else_part {
@@ -250,14 +250,14 @@ else_part : tkELIF compound_list tkTHEN compound_list else_part {
 	$$.Prepend($2, $4)
 }
 else_part : tkELSE compound_list {
-	$$ = &MkShIfClause{nil, nil, $2}
+	$$ = &MkShIf{nil, nil, $2}
 }
 
 while_clause : tkWHILE compound_list do_group {
-	$$ = &MkShLoopClause{$2, $3, false}
+	$$ = &MkShLoop{$2, $3, false}
 }
 until_clause : tkUNTIL compound_list do_group {
-	$$ = &MkShLoopClause{$2, $3, true}
+	$$ = &MkShLoop{$2, $3, true}
 }
 
 function_definition : tkWORD tkLPAREN tkRPAREN linebreak compound_command { /* Apply rule 9 */
