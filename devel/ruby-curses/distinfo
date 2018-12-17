@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.24 2017/09/18 00:53:56 taca Exp $
+$NetBSD: distinfo,v 1.25 2018/12/17 14:49:15 taca Exp $
 
-SHA1 (curses-1.2.4.gem) = 9bebe7a1bd0e5004ff0097604247571e5bf1b9cc
-RMD160 (curses-1.2.4.gem) = 4ade8091fe91b480eeaca89f75343ec9922a4a36
-SHA512 (curses-1.2.4.gem) = bece3833be353ef8db51717dcdbf060667be5d33d00ce78952c44b3a8c3df082c11649b0a2a30072ce99c6578ffde7dce0c0108e109e55022703cfa1c1861bb9
-Size (curses-1.2.4.gem) = 35328 bytes
+SHA1 (curses-1.2.5.gem) = 4a57e9792e1bc7d12bd36f878eb11de9c0ee4781
+RMD160 (curses-1.2.5.gem) = 6277de31f6c48381c4816b97e9998000cb07c727
+SHA512 (curses-1.2.5.gem) = eb1d56ecb8f1d55488a9a46d66193efaed1f85c16d0bfe43102d12f6b2e6e8ffe10f1c714d74f31cef4bac1158790764f5da9ca4b60740d3c7a2d2135f1536e4
+Size (curses-1.2.5.gem) = 35840 bytes
