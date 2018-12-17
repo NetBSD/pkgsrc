@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2018/09/23 15:44:56 taca Exp $
+@comment $NetBSD: PLIST,v 1.25 2018/12/17 15:00:41 taca Exp $
 bin/bundle${RUBY_SUFFIX}
 bin/bundler${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -37,6 +37,7 @@ ${GEM_LIBDIR}/lib/bundler/cli/package.rb
 ${GEM_LIBDIR}/lib/bundler/cli/platform.rb
 ${GEM_LIBDIR}/lib/bundler/cli/plugin.rb
 ${GEM_LIBDIR}/lib/bundler/cli/pristine.rb
+${GEM_LIBDIR}/lib/bundler/cli/remove.rb
 ${GEM_LIBDIR}/lib/bundler/cli/show.rb
 ${GEM_LIBDIR}/lib/bundler/cli/update.rb
 ${GEM_LIBDIR}/lib/bundler/cli/viz.rb
@@ -87,6 +88,7 @@ ${GEM_LIBDIR}/lib/bundler/plugin.rb
 ${GEM_LIBDIR}/lib/bundler/plugin/api.rb
 ${GEM_LIBDIR}/lib/bundler/plugin/api/source.rb
 ${GEM_LIBDIR}/lib/bundler/plugin/dsl.rb
+${GEM_LIBDIR}/lib/bundler/plugin/events.rb
 ${GEM_LIBDIR}/lib/bundler/plugin/index.rb
 ${GEM_LIBDIR}/lib/bundler/plugin/installer.rb
 ${GEM_LIBDIR}/lib/bundler/plugin/installer/git.rb
@@ -281,6 +283,9 @@ ${GEM_LIBDIR}/man/bundle-platform.ronn
 ${GEM_LIBDIR}/man/bundle-pristine.1
 ${GEM_LIBDIR}/man/bundle-pristine.1.txt
 ${GEM_LIBDIR}/man/bundle-pristine.ronn
+${GEM_LIBDIR}/man/bundle-remove.1
+${GEM_LIBDIR}/man/bundle-remove.1.txt
+${GEM_LIBDIR}/man/bundle-remove.ronn
 ${GEM_LIBDIR}/man/bundle-show.1
 ${GEM_LIBDIR}/man/bundle-show.1.txt
 ${GEM_LIBDIR}/man/bundle-show.ronn
