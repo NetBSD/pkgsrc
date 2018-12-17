@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5243 2018/12/17 13:46:34 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5244 2018/12/17 14:34:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7342,3 +7342,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated pkgtools/pkglint to 5.6.9 [rillig 2018-12-17]
 	Updated devel/libuv to 1.24.1 [adam 2018-12-17]
 	Updated devel/py-dulwich to 0.19.9 [adam 2018-12-17]
+	Updated databases/ruby-awesome_nested_set to 3.1.4 [taca 2018-12-17]
