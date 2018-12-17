@@ -1,11 +1,8 @@
-package main
+package pkglint
 
-import (
-	"fmt"
-	"strconv"
-)
+import "strconv"
 
-func parseShellProgram(line Line, program string) (list *MkShList, err error) {
+func parseShellProgram(line Line, program string) (*MkShList, error) {
 	if trace.Tracing {
 		defer trace.Call(program)()
 	}
@@ -27,16 +24,38 @@ type ParseError struct {
 }
 
 func (e *ParseError) Error() string {
-	return fmt.Sprintf("parse error at %#v", e.RemainingTokens)
+	return sprintf("parse error at %#v", e.RemainingTokens)
 }
 
+// ShellLexer categorizes tokens for shell commands, providing
+// the lexer required by the yacc-generated parser.
+//
+// The main work of tokenizing is done in ShellTokenizer though.
+//
+// Example:
+//  while :; do var=$$other; done
+// =>
+//  while
+//  space " "
+//  word ":"
+//  semicolon
+//  space " "
+//  do
+//  space " "
+//  assign "var=$$other"
+//  semicolon
+//  space " "
+//  done
+//
+// See splitIntoShellTokens and ShellTokenizer.
 type ShellLexer struct {
 	current        string
-	ioredirect     string
+	ioRedirect     string
 	remaining      []string
 	atCommandStart bool
 	sinceFor       int
 	sinceCase      int
+	inCasePattern  bool // true inside (pattern1|pattern2|pattern3); works only for simple cases
 	error          string
 	result         *MkShList
 }
@@ -44,11 +63,12 @@ type ShellLexer struct {
 func NewShellLexer(tokens []string, rest string) *ShellLexer {
 	return &ShellLexer{
 		current:        "",
-		ioredirect:     "",
+		ioRedirect:     "",
 		remaining:      tokens,
 		atCommandStart: true,
 		error:          rest}
 }
+
 func (lex *ShellLexer) Lex(lval *shyySymType) (ttype int) {
 	if len(lex.remaining) == 0 {
 		return 0
@@ -68,8 +88,8 @@ func (lex *ShellLexer) Lex(lval *shyySymType) (ttype int) {
 		}()
 	}
 
-	token := lex.ioredirect
-	lex.ioredirect = ""
+	token := lex.ioRedirect
+	lex.ioRedirect = ""
 	if token == "" {
 		token = lex.remaining[0]
 		lex.current = token
@@ -82,6 +102,7 @@ func (lex *ShellLexer) Lex(lval *shyySymType) (ttype int) {
 		return tkSEMI
 	case ";;":
 		lex.atCommandStart = true
+		lex.inCasePattern = true
 		return tkSEMISEMI
 	case "\n":
 		lex.atCommandStart = true
@@ -90,13 +111,14 @@ func (lex *ShellLexer) Lex(lval *shyySymType) (ttype int) {
 		lex.atCommandStart = true
 		return tkBACKGROUND
 	case "|":
-		lex.atCommandStart = true
+		lex.atCommandStart = !lex.inCasePattern
 		return tkPIPE
 	case "(":
-		lex.atCommandStart = true
+		lex.atCommandStart = !lex.inCasePattern
 		return tkLPAREN
 	case ")":
 		lex.atCommandStart = true
+		lex.inCasePattern = false
 		return tkRPAREN
 	case "&&":
 		lex.atCommandStart = true
@@ -104,6 +126,7 @@ func (lex *ShellLexer) Lex(lval *shyySymType) (ttype int) {
 	case "||":
 		lex.atCommandStart = true
 		return tkOR
+
 	case ">":
 		lex.atCommandStart = false
 		return tkGT
@@ -136,7 +159,7 @@ func (lex *ShellLexer) Lex(lval *shyySymType) (ttype int) {
 	if m, fdstr, op := match2(token, `^(\d+)(<<-|<<|<>|<&|>>|>&|>\||<|>)$`); m {
 		fd, _ := strconv.Atoi(fdstr)
 		lval.IONum = fd
-		lex.ioredirect = op
+		lex.ioRedirect = op
 		return tkIO_NUMBER
 	}
 
@@ -165,6 +188,7 @@ func (lex *ShellLexer) Lex(lval *shyySymType) (ttype int) {
 		case "do":
 			return tkDO
 		case "done":
+			// TODO: add test that ensures "lex.atCommandStart = false" is required here.
 			return tkDONE
 		case "in":
 			lex.atCommandStart = false
@@ -176,6 +200,7 @@ func (lex *ShellLexer) Lex(lval *shyySymType) (ttype int) {
 		case "{":
 			return tkLBRACE
 		case "}":
+			// TODO: add test that ensures "lex.atCommandStart = false" is required here.
 			return tkRBRACE
 		case "!":
 			return tkEXCLAM
@@ -199,16 +224,17 @@ func (lex *ShellLexer) Lex(lval *shyySymType) (ttype int) {
 	case lex.sinceCase == 2 && token == "in":
 		ttype = tkIN
 		lex.atCommandStart = false
+		lex.inCasePattern = true
 	case (lex.atCommandStart || lex.sinceCase == 3) && token == "esac":
 		ttype = tkESAC
 		lex.atCommandStart = false
 	case lex.atCommandStart && matches(token, `^[A-Za-z_]\w*=`):
 		ttype = tkASSIGNMENT_WORD
-		p := NewShTokenizer(dummyLine, token, false)
+		p := NewShTokenizer(dummyLine, token, false) // Just for converting the string to a ShToken
 		lval.Word = p.ShToken()
 	default:
 		ttype = tkWORD
-		p := NewShTokenizer(dummyLine, token, false)
+		p := NewShTokenizer(dummyLine, token, false) // Just for converting the string to a ShToken
 		lval.Word = p.ShToken()
 		lex.atCommandStart = false
 	}

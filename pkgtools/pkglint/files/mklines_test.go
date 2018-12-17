@@ -1,41 +1,9 @@
-package main
+package pkglint
 
 import (
-	"fmt"
 	"gopkg.in/check.v1"
 	"sort"
 )
-
-func (s *Suite) Test_MkLines_Check__autofix_directive_indentation(c *check.C) {
-	t := s.Init(c)
-
-	t.SetupCommandLine("--autofix", "-Wspace")
-	lines := t.SetupFileLines("filename.mk",
-		MkRcsID,
-		".if defined(A)",
-		".for a in ${A}",
-		".if defined(C)",
-		".endif",
-		".endfor",
-		".endif")
-	mklines := NewMkLines(lines)
-
-	mklines.Check()
-
-	t.CheckOutputLines(
-		"AUTOFIX: ~/filename.mk:3: Replacing \".\" with \".  \".",
-		"AUTOFIX: ~/filename.mk:4: Replacing \".\" with \".    \".",
-		"AUTOFIX: ~/filename.mk:5: Replacing \".\" with \".    \".",
-		"AUTOFIX: ~/filename.mk:6: Replacing \".\" with \".  \".")
-	t.CheckFileLines("filename.mk",
-		"# $"+"NetBSD$",
-		".if defined(A)",
-		".  for a in ${A}",
-		".    if defined(C)",
-		".    endif",
-		".  endfor",
-		".endif")
-}
 
 func (s *Suite) Test_MkLines_Check__unusual_target(c *check.C) {
 	t := s.Init(c)
@@ -51,7 +19,7 @@ func (s *Suite) Test_MkLines_Check__unusual_target(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"WARN: Makefile:3: Unusual target \"echo\".")
+		"WARN: Makefile:3: Undeclared target \"echo\".")
 }
 
 func (s *Suite) Test_MkLines__quoting_LDFLAGS_for_GNU_configure(c *check.C) {
@@ -218,33 +186,11 @@ func (s *Suite) Test_MkLines__PKG_SKIP_REASON_depending_on_OPSYS(c *check.C) {
 		"NOTE: Makefile:4: Consider setting NOT_FOR_PLATFORM instead of PKG_SKIP_REASON depending on ${OPSYS}.")
 }
 
-// PR 46570, item "15. net/uucp/Makefile has a make loop"
-func (s *Suite) Test_MkLines__indirect_variables(c *check.C) {
-	t := s.Init(c)
-
-	t.SetupTool("echo", "ECHO", AfterPrefsMk)
-	mklines := t.NewMkLines("net/uucp/Makefile",
-		MkRcsID,
-		"",
-		"post-configure:",
-		".for var in MAIL_PROGRAM CMDPATH",
-		"\t"+`${RUN} ${ECHO} "#define ${var} \""${UUCP_${var}}"\""`,
-		".endfor")
-
-	mklines.Check()
-
-	// No warning about UUCP_${var} being used but not defined.
-	// Normally, parameterized variables use a dot instead of an
-	// underscore as separator. This is one of the other cases,
-	// and pkglint just doesn't warn about dynamic variable names
-	// like UUCP_${var} or SITES_${distfile}.
-	t.CheckOutputEmpty()
-}
-
-func (s *Suite) Test_MkLines_Check__list_variable_as_part_of_word(c *check.C) {
+func (s *Suite) Test_MkLines_Check__use_list_variable_as_part_of_word(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupVartypes()
+	t.SetupTool("tr", "", AtRunTime)
 	mklines := t.NewMkLines("converters/chef/Makefile",
 		MkRcsID,
 		"\tcd ${WRKSRC} && tr '\\r' '\\n' < ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} > chef.l")
@@ -252,7 +198,6 @@ func (s *Suite) Test_MkLines_Check__list_variable_as_part_of_word(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"WARN: converters/chef/Makefile:2: Unknown shell command \"tr\".",
 		"WARN: converters/chef/Makefile:2: The list variable DISTFILES should not be embedded in a word.")
 }
 
@@ -263,17 +208,19 @@ func (s *Suite) Test_MkLines_Check__absolute_pathname_depending_on_OPSYS(c *chec
 	mklines := t.NewMkLines("games/heretic2-demo/Makefile",
 		MkRcsID,
 		".if ${OPSYS} == \"DragonFly\"",
-		"TOOLS_PLATFORM.gtar=\t/usr/bin/bsdtar",
+		"TAR_CMD=\t/usr/bin/bsdtar",
 		".endif",
-		"TOOLS_PLATFORM.gtar=\t/usr/bin/bsdtar")
+		"TAR_CMD=\t/usr/bin/bsdtar",
+		"",
+		"do-extract:",
+		"\t${TAR_CMD}")
 
 	mklines.Check()
 
-	// No warning about an unknown shell command in line 3,
-	// since that line depends on OPSYS.
+	// No warning about an unknown shell command in line 3 since that line depends on OPSYS.
+	// Shell commands that are specific to an operating system are probably defined
+	// and used intentionally, so even commands that are not known tools are allowed.
 	t.CheckOutputLines(
-		"WARN: games/heretic2-demo/Makefile:3: The variable TOOLS_PLATFORM.gtar may not be set by any package.",
-		"WARN: games/heretic2-demo/Makefile:5: The variable TOOLS_PLATFORM.gtar may not be set by any package.",
 		"WARN: games/heretic2-demo/Makefile:5: Unknown shell command \"/usr/bin/bsdtar\".")
 }
 
@@ -281,50 +228,77 @@ func (s *Suite) Test_MkLines_CheckForUsedComment(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("--show-autofix")
-	t.NewMkLines("Makefile.common",
-		MkRcsID,
-		"",
-		"# used by sysutils/mc",
-	).CheckForUsedComment("sysutils/mc")
 
-	t.CheckOutputEmpty()
+	test := func(pkgpath string, lines []string, diagnostics []string) {
+		mklines := t.NewMkLines("Makefile.common", lines...)
 
-	t.NewMkLines("Makefile.common").CheckForUsedComment("category/package")
+		mklines.CheckForUsedComment(pkgpath)
 
-	t.CheckOutputEmpty()
+		if len(diagnostics) > 0 {
+			t.CheckOutputLines(diagnostics...)
+		} else {
+			t.CheckOutputEmpty()
+		}
+	}
 
-	t.NewMkLines("Makefile.common",
-		MkRcsID,
-	).CheckForUsedComment("category/package")
+	lines := func(lines ...string) []string { return lines }
+	diagnostics := func(diagnostics ...string) []string { return diagnostics }
 
-	t.CheckOutputEmpty()
+	// This file is too short to be checked.
+	test(
+		"category/package",
+		lines(),
+		diagnostics())
 
-	t.NewMkLines("Makefile.common",
-		MkRcsID,
-		"",
-	).CheckForUsedComment("category/package")
+	// Still too short.
+	test(
+		"category/package",
+		lines(
+			MkRcsID),
+		diagnostics())
 
-	t.CheckOutputEmpty()
+	// Still too short.
+	test(
+		"category/package",
+		lines(
+			MkRcsID,
+			""),
+		diagnostics())
 
-	t.NewMkLines("Makefile.common",
-		MkRcsID,
-		"",
-		"VARNAME=\tvalue",
-	).CheckForUsedComment("category/package")
+	// This file is correctly mentioned.
+	test(
+		"sysutils/mc",
+		lines(
+			MkRcsID,
+			"",
+			"# used by sysutils/mc"),
+		diagnostics())
 
-	t.CheckOutputLines(
-		"WARN: Makefile.common:2: Please add a line \"# used by category/package\" here.",
-		"AUTOFIX: Makefile.common:2: Inserting a line \"# used by category/package\" before this line.")
+	// This file is not correctly mentioned, therefore the line is inserted.
+	// TODO: Since the following line is of a different type, an additional empty line should be inserted.
+	test(
+		"category/package",
+		lines(
+			MkRcsID,
+			"",
+			"VARNAME=\tvalue"),
+		diagnostics(
+			"WARN: Makefile.common:2: Please add a line \"# used by category/package\" here.",
+			"AUTOFIX: Makefile.common:2: Inserting a line \"# used by category/package\" before this line."))
 
-	t.NewMkLines("Makefile.common",
-		MkRcsID,
-		"#",
-		"#",
-	).CheckForUsedComment("category/package")
+	// The "used by" comments may either start in line 2 or in line 3.
+	test(
+		"category/package",
+		lines(
+			MkRcsID,
+			"#",
+			"#"),
+		diagnostics(
+			"WARN: Makefile.common:3: Please add a line \"# used by category/package\" here.",
+			"AUTOFIX: Makefile.common:3: Inserting a line \"# used by category/package\" before this line."))
 
-	t.CheckOutputLines(
-		"WARN: Makefile.common:3: Please add a line \"# used by category/package\" here.",
-		"AUTOFIX: Makefile.common:3: Inserting a line \"# used by category/package\" before this line.")
+	// TODO: What if there is an introductory comment first? That should stay at the top of the file.
+	// TODO: What if the "used by" comments appear in the second paragraph, preceded by only comments and empty lines?
 
 	c.Check(G.autofixAvailable, equals, true)
 }
@@ -353,7 +327,7 @@ func (s *Suite) Test_MkLines_collectDefinedVariables(c *check.C) {
 		"SUV=                    value for substitution",
 		"",
 		"pre-configure:",
-		"\t${RUN} autoreconf; autoheader-2.13; unknown-command",
+		"\t${RUN} autoreconf; autoheader-2.13",
 		"\t${ECHO} ${OSV:Q}")
 
 	mklines.Check()
@@ -362,10 +336,11 @@ func (s *Suite) Test_MkLines_collectDefinedVariables(c *check.C) {
 	// The SUV variable is used implicitly by the SUBST framework, therefore no warning.
 	// The OSV.NetBSD variable is used implicitly via the OSV variable, therefore no warning.
 	t.CheckOutputLines(
-		// FIXME: the below warning is wrong; it's ok to have SUBST blocks in all files, maybe except buildlink3.mk.
-		"WARN: determine-defined-variables.mk:12: The variable SUBST_VARS.subst may not be set "+
-			"(only given a default value, appended to) in this file; it would be ok in Makefile, Makefile.common, options.mk.",
-		"WARN: determine-defined-variables.mk:16: Unknown shell command \"unknown-command\".")
+		// FIXME: the below warning is wrong; it's ok to have SUBST blocks in all files,
+		// maybe except buildlink3.mk.
+		"WARN: determine-defined-variables.mk:12: The variable SUBST_VARS.subst may not be set " +
+			"(only given a default value, appended to) in this file; " +
+			"it would be ok in Makefile, Makefile.common, options.mk.")
 }
 
 func (s *Suite) Test_MkLines_collectDefinedVariables__BUILTIN_FIND_FILES_VAR(c *check.C) {
@@ -403,7 +378,7 @@ func (s *Suite) Test_MkLines_collectUsedVariables__simple(c *check.C) {
 
 	mklines.collectUsedVariables()
 
-	c.Check(len(mklines.vars.used), equals, 1)
+	c.Check(mklines.vars.used, deepEquals, map[string]MkLine{"VAR": mkline})
 	c.Check(mklines.vars.FirstUse("VAR"), equals, mkline)
 }
 
@@ -553,10 +528,10 @@ func (s *Suite) Test_MkLines_Check__endif_comment(c *check.C) {
 		".endfor # j",                 // Wrong, should be i.
 		"",
 		".if ${PKG_OPTIONS:Moption}",
-		".endif # option",
+		".endif # option", // Correct.
 		"",
 		".if ${PKG_OPTIONS:Moption}",
-		".endif # opti", // This typo gets unnoticed since "opti" is a substring of the condition.
+		".endif # opti", // This typo goes unnoticed since "opti" is a substring of the condition.
 		"",
 		".if ${OPSYS} == NetBSD",
 		".elif ${OPSYS} == FreeBSD",
@@ -573,7 +548,7 @@ func (s *Suite) Test_MkLines_Check__endif_comment(c *check.C) {
 		"WARN: opsys.mk:20: Comment \"NetBSD\" does not match condition \"${OPSYS} == FreeBSD\".")
 }
 
-func (s *Suite) Test_MkLines_Check__unbalanced_directives(c *check.C) {
+func (s *Suite) Test_MkLines_Check__unfinished_directives(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupVartypes()
@@ -592,6 +567,28 @@ func (s *Suite) Test_MkLines_Check__unbalanced_directives(c *check.C) {
 		"ERROR: opsys.mk:EOF: .if from line 5 must be closed.",
 		"ERROR: opsys.mk:EOF: .if from line 4 must be closed.",
 		"ERROR: opsys.mk:EOF: .for from line 3 must be closed.")
+}
+
+func (s *Suite) Test_MkLines_Check__unbalanced_directives(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupVartypes()
+	mklines := t.NewMkLines("opsys.mk",
+		MkRcsID,
+		"",
+		".for i in 1 2 3 4 5",
+		".  if ${OPSYS} == NetBSD",
+		".  endfor",
+		".endif")
+
+	mklines.Check()
+
+	// As of November 2018 pkglint doesn't find that the inner .if is closed by an .endfor.
+	// This is checked by bmake, though.
+	//
+	// As soon as pkglint starts to analyze .if/.for as regular statements
+	// like in most programming languages, it will find this inconsistency, too.
+	t.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_MkLines_Check__incomplete_subst_at_end(c *check.C) {
@@ -643,14 +640,14 @@ func (s *Suite) Test_MkLines__wip_category_Makefile(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"WARN: ~/wip/Makefile:14: Unusual target \"clean-tmpdir\".",
+		"WARN: ~/wip/Makefile:14: Undeclared target \"clean-tmpdir\".",
 		"",
-		"\tIf you want to define your own target, declare it like this:",
+		"\tTo define a custom target in a package, declare it like this:",
 		"",
 		"\t\t.PHONY: my-target",
 		"",
-		"\tIn the rare case that you actually want a file-based make(1) target,",
-		"\twrite it like this:",
+		"\tTo define a custom target that creates a file (should be rarely",
+		"\tneeded), declare it like this:",
 		"",
 		"\t\t${.CURDIR}/my-file:",
 		"")
@@ -667,6 +664,8 @@ func (s *Suite) Test_MkLines_collectDocumentedVariables(c *check.C) {
 		"# Copyright 2000-2018",
 		"#",
 		"# This whole comment is ignored, until the next empty line.",
+		"# Since it contains the word \"copyright\", it's probably legalese",
+		"# instead of documentation.",
 		"",
 		"# User-settable variables:",
 		"#",
@@ -687,22 +686,21 @@ func (s *Suite) Test_MkLines_collectDocumentedVariables(c *check.C) {
 		"# VARBASE3.${id}")
 
 	// The variables that appear in the documentation are marked as
-	// used, to prevent the "defined but not used" warnings.
+	// both used and defined, to prevent the "defined but not used" warnings.
 	mklines.collectDocumentedVariables()
 
 	var varnames []string
 	for varname, mkline := range mklines.vars.used {
-		varnames = append(varnames, fmt.Sprintf("%s (line %s)", varname, mkline.Linenos()))
+		varnames = append(varnames, sprintf("%s (line %s)", varname, mkline.Linenos()))
 	}
 	sort.Strings(varnames)
 
 	expected := []string{
-		"PKG_DEBUG_LEVEL (line 9)",
-		"PKG_VERBOSE (line 14)",
-		"VARBASE1.* (line 21)",
-		"VARBASE2.* (line 22)",
-		"VARBASE3.${id} (line 23)",
-		"VARBASE3.* (line 23)"}
+		"PKG_DEBUG_LEVEL (line 11)",
+		"PKG_VERBOSE (line 16)",
+		"VARBASE1.* (line 23)",
+		"VARBASE2.* (line 24)",
+		"VARBASE3.* (line 25)"}
 	c.Check(varnames, deepEquals, expected)
 }
 
@@ -743,7 +741,34 @@ func (s *Suite) Test_MkLines__unknown_options(c *check.C) {
 		"WARN: options.mk:4: Unknown option \"unknown\".")
 }
 
-func (s *Suite) Test_MkLines_CheckRedundantAssignments(c *check.C) {
+func (s *Suite) Test_MkLines_CheckRedundantAssignments__override_in_mk(c *check.C) {
+	t := s.Init(c)
+	included := t.NewMkLines("included.mk",
+		"OVERRIDE=\tprevious value",
+		"REDUNDANT=\tredundant")
+	including := t.NewMkLines("including.mk",
+		"OVERRIDE=\toverridden value",
+		"REDUNDANT=\tredundant")
+
+	var allLines []Line
+	allLines = append(allLines, included.lines.Lines...)
+	allLines = append(allLines, including.lines.Lines...)
+	mklines := NewMkLines(NewLines(included.lines.FileName, allLines))
+
+	// XXX: The warnings from here are not in the same order as the other warnings.
+	// XXX: There may be some warnings for the same file separated by warnings for other files.
+	mklines.CheckRedundantAssignments()
+
+	// No warning for VAR=... in Makefile since it makes sense to have common files
+	// with default values for variables, overriding some of them in each package.
+	t.CheckOutputLines(
+		// FIXME: The below warning is wrong because overwriting in a different file is ok.
+		"WARN: included.mk:1: Variable OVERRIDE is overwritten in including.mk:1.",
+		// FIXME: It's the other way round: including.mk:2 is redundant because of included.mk:2.
+		"NOTE: included.mk:2: Definition of REDUNDANT is redundant because of including.mk:2.")
+}
+
+func (s *Suite) Test_MkLines_CheckRedundantAssignments__override_in_Makefile(c *check.C) {
 	t := s.Init(c)
 	included := t.NewMkLines("module.mk",
 		"VAR=\tvalue ${OTHER}",
@@ -751,19 +776,24 @@ func (s *Suite) Test_MkLines_CheckRedundantAssignments(c *check.C) {
 		"VAR=\tnew value")
 	makefile := t.NewMkLines("Makefile",
 		"VAR=\tthe package may overwrite variables from other files")
-	allLines := append(append([]Line(nil), included.lines.Lines...), makefile.lines.Lines...)
+
+	var allLines []Line
+	allLines = append(allLines, included.lines.Lines...)
+	allLines = append(allLines, makefile.lines.Lines...)
 	mklines := NewMkLines(NewLines(included.lines.FileName, allLines))
 
 	// XXX: The warnings from here are not in the same order as the other warnings.
 	// XXX: There may be some warnings for the same file separated by warnings for other files.
 	mklines.CheckRedundantAssignments()
 
+	// No warning for VAR=... in Makefile since it makes sense to have common files
+	// with default values for variables, overriding some of them in each package.
 	t.CheckOutputLines(
 		"NOTE: module.mk:1: Definition of VAR is redundant because of line 2.",
 		"WARN: module.mk:1: Variable VAR is overwritten in line 3.")
 }
 
-func (s *Suite) Test_MkLines_CheckRedundantAssignments__different_value(c *check.C) {
+func (s *Suite) Test_MkLines_CheckRedundantAssignments__default_value_definitely_unused(c *check.C) {
 	t := s.Init(c)
 	mklines := t.NewMkLines("module.mk",
 		"VAR=\tvalue ${OTHER}",
@@ -771,7 +801,20 @@ func (s *Suite) Test_MkLines_CheckRedundantAssignments__different_value(c *check
 
 	mklines.CheckRedundantAssignments()
 
+	// FIXME: A default assignment after an unconditional assignment is redundant.
 	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_MkLines_CheckRedundantAssignments__default_value_overridden(c *check.C) {
+	t := s.Init(c)
+	mklines := t.NewMkLines("module.mk",
+		"VAR?=\tdefault value",
+		"VAR=\toverridden value")
+
+	mklines.CheckRedundantAssignments()
+
+	t.CheckOutputLines(
+		"WARN: module.mk:1: Variable VAR is overwritten in line 2.")
 }
 
 func (s *Suite) Test_MkLines_CheckRedundantAssignments__overwrite_same_value(c *check.C) {
@@ -784,6 +827,75 @@ func (s *Suite) Test_MkLines_CheckRedundantAssignments__overwrite_same_value(c *
 
 	t.CheckOutputLines(
 		"NOTE: module.mk:1: Definition of VAR is redundant because of line 2.")
+}
+
+func (s *Suite) Test_MkLines_CheckRedundantAssignments__conditional_overwrite(c *check.C) {
+	t := s.Init(c)
+	mklines := t.NewMkLines("module.mk",
+		"VAR=\tdefault",
+		".if ${OPSYS} == NetBSD",
+		"VAR=\topsys",
+		".endif")
+
+	mklines.CheckRedundantAssignments()
+
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_MkLines_CheckRedundantAssignments__conditional_default(c *check.C) {
+	t := s.Init(c)
+	mklines := t.NewMkLines("module.mk",
+		"VAR=\tdefault",
+		".if ${OPSYS} == NetBSD",
+		"VAR?=\topsys",
+		".endif")
+
+	mklines.CheckRedundantAssignments()
+
+	// TODO: WARN: module.mk:3: The value \"opsys\" will never be assigned to VAR because it is defined unconditionally in line 1.
+	t.CheckOutputEmpty()
+}
+
+// These warnings are precise and accurate since the value of VAR is not used between line 2 and 4.
+func (s *Suite) Test_MkLines_CheckRedundantAssignments__overwrite_same_variable_different_value(c *check.C) {
+	t := s.Init(c)
+	mklines := t.NewMkLines("module.mk",
+		"OTHER=\tvalue before",
+		"VAR=\tvalue ${OTHER}",
+		"OTHER=\tvalue after",
+		"VAR=\tvalue ${OTHER}")
+
+	mklines.CheckRedundantAssignments()
+
+	t.CheckOutputLines(
+		"WARN: module.mk:1: Variable OTHER is overwritten in line 3.",
+		"NOTE: module.mk:2: Definition of VAR is redundant because of line 4.")
+}
+
+func (s *Suite) Test_MkLines_CheckRedundantAssignments__overwrite_different_value_used_between(c *check.C) {
+	t := s.Init(c)
+	mklines := t.NewMkLines("module.mk",
+		"OTHER=\tvalue before",
+		"VAR=\tvalue ${OTHER}",
+
+		// VAR is used here at load time, therefore it must be defined at this point.
+		// At this point, VAR uses the \"before\" value of OTHER.
+		"RESULT1:=\t${VAR}",
+
+		"OTHER=\tvalue after",
+
+		// VAR is used here again at load time, this time using the \"after\" value of OTHER.
+		"RESULT2:=\t${VAR}",
+
+		// Still this definition is redundant.
+		"VAR=\tvalue ${OTHER}")
+
+	mklines.CheckRedundantAssignments()
+
+	t.CheckOutputLines(
+		"WARN: module.mk:1: Variable OTHER is overwritten in line 4.",
+		// FIXME: It's the other way round: line 6 is redundant because of line 2.
+		"NOTE: module.mk:2: Definition of VAR is redundant because of line 6.")
 }
 
 func (s *Suite) Test_MkLines_CheckRedundantAssignments__procedure_call(c *check.C) {
@@ -806,8 +918,22 @@ func (s *Suite) Test_MkLines_CheckRedundantAssignments__shell_and_eval(c *check.
 
 	mklines.CheckRedundantAssignments()
 
-	// Combining := and != is too complicated to be analyzed by pkglint,
-	// therefore no warning.
+	// As of November 2018, pkglint doesn't check redundancies that involve the := or != operators.
+	//
+	// What happens here is:
+	//
+	// Line 1 evaluates OTHER at load time.
+	// Line 1 assigns its value to VAR.
+	// Line 2 evaluates OTHER at load time.
+	// Line 2 passes its value through the shell and assigns the result to VAR.
+	//
+	// Since VAR is defined in line 1, not used afterwards and overwritten in line 2, it is redundant.
+	// Well, not quite, because evaluating ${OTHER} might have side-effects from :sh or ::= modifiers,
+	// but these are so rare that they are frowned upon and are not considered by pkglint.
+	//
+	// Expected result:
+	// WARN: module.mk:2: Previous definition of VAR in line 1 is unused.
+
 	t.CheckOutputEmpty()
 }
 
@@ -823,6 +949,8 @@ func (s *Suite) Test_MkLines_CheckRedundantAssignments__shell_and_eval_literal(c
 	// only done for procedure calls), the shell evaluation can have
 	// so many different side effects that pkglint cannot reliably
 	// help in this situation.
+	//
+	// TODO: Why not? The evaluation in line 1 is trivial to analyze.
 	t.CheckOutputEmpty()
 }
 
@@ -889,6 +1017,39 @@ func (s *Suite) Test_MkLines_Check__PLIST_VARS_indirect(c *check.C) {
 
 	mklines.Check()
 
+	// As of November 2018, pkglint doesn't analyze the .if 0 block.
+	// Therefore it doesn't know that the option1 block will never match because of the 0.
+	// This is ok though since it could be a temporary workaround from the package maintainer.
+	//
+	// As of November 2018, pkglint doesn't analyze the .for loop.
+	// Therefore it doesn't know that an .if block for option3 is missing.
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_MkLines_Check__PLIST_VARS_indirect_2(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wno-space")
+	t.SetupVartypes()
+	t.SetupOption("a", "")
+	t.SetupOption("b", "")
+	t.SetupOption("c", "")
+
+	mklines := t.NewMkLines("module.mk",
+		MkRcsID,
+		"",
+		"PKG_SUPPORTED_OPTIONS=  a b c",
+		"PLIST_VARS+=            ${PKG_SUPPORTED_OPTIONS:S,a,,g}",
+		"",
+		"PLIST_VARS+=            only-added",
+		"",
+		"PLIST.only-defined=     yes")
+
+	mklines.Check()
+
+	// If the PLIST_VARS contain complex expressions that involve other variables,
+	// it becomes too difficult for pkglint to decide whether the IDs can still match.
+	// Therefore, in such a case, no diagnostics are logged at all.
 	t.CheckOutputEmpty()
 }
 
@@ -946,33 +1107,6 @@ func (s *Suite) Test_MkLines_Check__defined_and_used_variables(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_MkLines_Check__indirect_PLIST_VARS(c *check.C) {
-	t := s.Init(c)
-
-	t.SetupCommandLine("-Wno-space")
-	t.SetupVartypes()
-	t.SetupOption("a", "")
-	t.SetupOption("b", "")
-	t.SetupOption("c", "")
-
-	mklines := t.NewMkLines("module.mk",
-		MkRcsID,
-		"",
-		"PKG_SUPPORTED_OPTIONS=  a b c",
-		"PLIST_VARS+=            ${PKG_SUPPORTED_OPTIONS:S,a,,g}",
-		"",
-		"PLIST_VARS+=            only-added",
-		"",
-		"PLIST.only-defined=     yes")
-
-	mklines.Check()
-
-	// If the PLIST_VARS contain complex expressions that involve other variables,
-	// it becomes too difficult for pkglint to decide whether the IDs can still match.
-	// Therefore, in such a case, no diagnostics are logged at all.
-	t.CheckOutputEmpty()
-}
-
 func (s *Suite) Test_MkLines_Check__hacks_mk(c *check.C) {
 	t := s.Init(c)
 
@@ -986,6 +1120,7 @@ func (s *Suite) Test_MkLines_Check__hacks_mk(c *check.C) {
 	mklines.Check()
 
 	// No warning about including bsd.prefs.mk before using the ?= operator.
+	// FIXME: Why not?
 	t.CheckOutputEmpty()
 }
 
@@ -1012,7 +1147,7 @@ func (s *Suite) Test_MkLines_Check__MASTER_SITE_in_HOMEPAGE(c *check.C) {
 		"WARN: devel/catch/Makefile:5: HOMEPAGE should not be defined in terms of MASTER_SITEs.")
 }
 
-func (s *Suite) Test_MkLines_Check__VERSION_as_wordpart_in_MASTER_SITES(c *check.C) {
+func (s *Suite) Test_MkLines_Check__VERSION_as_word_part_in_MASTER_SITES(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupVartypes()
@@ -1072,6 +1207,8 @@ func (s *Suite) Test_MkLines_Check__extra_warnings(c *check.C) {
 		"NOTE: options.mk:11: You can use \"../build\" instead of \"${WRKSRC}/../build\".")
 }
 
+// Ensures that during MkLines.ForEach, the conditional variables in
+// MkLines.Indentation are correctly updated for each line.
 func (s *Suite) Test_MkLines_ForEach__conditional_variables(c *check.C) {
 	t := s.Init(c)
 

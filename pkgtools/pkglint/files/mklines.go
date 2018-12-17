@@ -1,4 +1,4 @@
-package main
+package pkglint
 
 import (
 	"strings"
@@ -349,9 +349,14 @@ func (mklines *MkLinesImpl) collectDocumentedVariables() {
 	commentLines := 0
 	relevant := true
 
+	// TODO: Correctly interpret declarations like "package-settable variables:" and
+	// TODO: "user-settable variables", as well as "default: ...", "allowed: ...",
+	// TODO: "list of" and other types.
+
 	finish := func() {
 		if commentLines >= 3 && relevant {
 			for varname, mkline := range scope.used {
+				mklines.vars.Define(varname, mkline)
 				mklines.vars.Use(varname, mkline)
 			}
 		}
@@ -379,9 +384,10 @@ func (mklines *MkLinesImpl) collectDocumentedVariables() {
 			}
 			parser.lexer.SkipByte(':')
 
-			varbase := varnameBase(varname)
-			if varbase == strings.ToUpper(varbase) && matches(varbase, `[A-Z]`) && parser.EOF() {
-				scope.Use(varname, mkline)
+			varcanon := varnameCanon(varname)
+			if varcanon == strings.ToUpper(varcanon) && matches(varcanon, `[A-Z]`) && parser.EOF() {
+				scope.Define(varcanon, mkline)
+				scope.Use(varcanon, mkline)
 			}
 
 			if 1 < len(words) && words[1] == "Copyright" {
@@ -420,8 +426,9 @@ func (mklines *MkLinesImpl) CheckRedundantAssignments() {
 			old.Warnf("Variable %s is overwritten in %s.", new.Varname(), old.RefTo(new))
 			G.Explain(
 				"The variable definition in this line does not have an effect since",
-				"it is overwritten elsewhere.  This typically happens because of a",
-				"typo (writing = instead of +=) or because the line that overwrites",
+				"it is overwritten elsewhere.",
+				"This typically happens because of a typo (writing = instead of +=)",
+				"or because the line that overwrites",
 				"is in another file that is used by several packages.")
 		}
 	}
@@ -429,6 +436,8 @@ func (mklines *MkLinesImpl) CheckRedundantAssignments() {
 	mklines.ForEach(scope.Handle)
 }
 
+// CheckForUsedComment checks that this file (a Makefile.common) has the given
+// relativeName in one of the "# used by" comments at the beginning of the file.
 func (mklines *MkLinesImpl) CheckForUsedComment(relativeName string) {
 	lines := mklines.lines
 	if lines.Len() < 3 {
@@ -447,17 +456,21 @@ func (mklines *MkLinesImpl) CheckForUsedComment(relativeName string) {
 		i++
 	}
 
+	// TODO: Sort the comments.
+	// TODO: Discuss whether these comments are actually helpful.
+
 	fix := lines.Lines[i].Autofix()
 	fix.Warnf("Please add a line %q here.", expected)
 	fix.Explain(
 		"Since Makefile.common files usually don't have any comments and",
-		"therefore not a clearly defined interface, they should at least",
+		"therefore not a clearly defined purpose, they should at least",
 		"contain references to all files that include them, so that it is",
 		"easier to see what effects future changes may have.",
 		"",
 		"If there are more than five packages that use a Makefile.common,",
-		"you should think about giving it a proper name (maybe plugin.mk) and",
-		"documenting its interface.")
+		"that file should have a clearly defined and documented purpose,",
+		"and the filename should reflect that purpose.",
+		"Typical names are module.mk, plugin.mk or version.mk.")
 	fix.InsertBefore(expected)
 	fix.Apply()
 
