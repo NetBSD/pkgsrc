@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2017/06/21 14:07:29 taca Exp $
+# $NetBSD: Makefile,v 1.5 2018/12/17 15:04:53 taca Exp $
 
-DISTNAME=	airbrussh-1.3.0
+DISTNAME=	airbrussh-1.3.1
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,6 +9,8 @@ COMMENT=	Airbrussh pretties up your SSHKit and Capistrano output
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-sshkit>=1.9.0:../../security/ruby-sshkit
+
+USE_LANGUAGES=	# none
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
