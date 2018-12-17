@@ -1,4 +1,4 @@
-package main
+package pkglint
 
 import (
 	"netbsd.org/pkglint/regex"
@@ -6,6 +6,8 @@ import (
 )
 
 // Expecter records the state when checking a list of lines from top to bottom.
+//
+// TODO: Maybe rename to LineLexer.
 type Expecter struct {
 	lines Lines
 	index int

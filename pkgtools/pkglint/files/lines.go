@@ -1,4 +1,4 @@
-package main
+package pkglint
 
 import (
 	"netbsd.org/pkglint/regex"
@@ -51,11 +51,12 @@ func (ls *LinesImpl) CheckRcsID(index int, prefixRe regex.Pattern, suggestedPref
 				"current version can be traced back later from a binary package.",
 				"This is to ensure reproducible builds, for example for finding bugs.",
 				"",
-				"These CVS Ids are specific to the CVS version control system, and",
-				"pkgsrc-wip uses Git instead.  Therefore, having the expanded CVS Ids",
-				"in those files represents the file from which they were originally",
-				"copied but not their current state.  Because of that, these markers",
-				"should be replaced with the plain, unexpanded string $"+"NetBSD$.",
+				"These CVS Ids are specific to the CVS version control system,",
+				"and pkgsrc-wip uses Git instead.",
+				"Therefore, having the expanded CVS Ids in those files represents",
+				"the file from which they were originally copied but not their current state.",
+				"Because of that, these markers should be replaced with the plain,",
+				"unexpanded string $"+"NetBSD$.",
 				"",
 				"To preserve the history of the CVS Id, should that ever be needed,",
 				"remove the leading $.")

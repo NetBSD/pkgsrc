@@ -1,4 +1,4 @@
-package main
+package pkglint
 
 import (
 	"gopkg.in/check.v1"
@@ -42,6 +42,18 @@ func (s *Suite) Test_ACLPermissions_String(c *check.C) {
 	c.Check(ACLPermissions(0).String(), equals, "none")
 	c.Check(aclpAll.String(), equals, "set, set-default, append, use-loadtime, use")
 	c.Check(aclpUnknown.String(), equals, "unknown")
+}
+
+func (s *Suite) Test_ACLPermissions_HumanString(c *check.C) {
+
+	c.Check(ACLPermissions(0).HumanString(),
+		equals, "") // Doesn't happen in practice
+
+	c.Check(aclpAll.HumanString(),
+		equals, "set, given a default value, appended to, used at load time, used")
+
+	c.Check(aclpUnknown.HumanString(),
+		equals, "") // Doesn't happen in practice
 }
 
 func (s *Suite) Test_Vartype_IsConsideredList(c *check.C) {
