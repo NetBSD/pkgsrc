@@ -1,0 +1,30 @@
+$NetBSD: patch-configure.ac,v 1.1 2018/12/17 19:24:44 schmonz Exp $
+
+Test for res_close, not available in OpenBSD.
+
+--- configure.ac.orig	2012-02-20 07:30:42.000000000 +0000
++++ configure.ac
+@@ -231,6 +231,23 @@ AC_CHECK_DECLS([res_ndestroy], [], [], [
+ 	# include <resolv.h>
+ 	#endif
+ 	]])
++AC_CHECK_DECLS([res_close], [], [], [[
++	#ifdef HAVE_SYS_TYPES_H
++	# include <sys/types.h>
++	#endif
++	#ifdef HAVE_SYS_SOCKET_H
++	# include <sys/socket.h>		/* inet_ functions / structs */
++	#endif
++	#ifdef HAVE_NETINET_IN_H
++	# include <netinet/in.h>		/* inet_ functions / structs */
++	#endif
++	#ifdef HAVE_ARPA_NAMESER_H
++	#  include <arpa/nameser.h> /* DNS HEADER struct */
++	#endif
++	#ifdef HAVE_RESOLV_H
++	# include <resolv.h>
++	#endif
++	]])
+ 
+ AC_CHECK_DECLS([ns_t_spf], [], [], [[
+ 	#ifdef HAVE_SYS_TYPES_H
