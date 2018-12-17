@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5258 2018/12/17 15:10:59 taca Exp $
+$NetBSD: CHANGES-2018,v 1.5259 2018/12/17 15:12:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7357,3 +7357,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/ruby-rbnacl to 6.0.0 [taca 2018-12-17]
 	Updated security/ruby-sshkit to 1.18.0 [taca 2018-12-17]
 	Updated textproc/ruby-tilt to 2.0.9 [taca 2018-12-17]
+	Updated www/heel to 3.2.1 [taca 2018-12-17]
