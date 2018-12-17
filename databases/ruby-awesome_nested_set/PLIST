@@ -1,11 +1,22 @@
-@comment $NetBSD: PLIST,v 1.2 2014/07/16 07:56:28 rodent Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/12/17 14:34:16 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
-${GEM_LIBDIR}/lib/awesome_nested_set/awesome_nested_set.rb
-${GEM_LIBDIR}/lib/awesome_nested_set/helper.rb
-${GEM_LIBDIR}/lib/awesome_nested_set.rb
-${GEM_LIBDIR}/lib/awesome_nested_set/version.rb
 ${GEM_LIBDIR}/MIT-LICENSE
-${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/lib/awesome_nested_set.rb
+${GEM_LIBDIR}/lib/awesome_nested_set/awesome_nested_set.rb
+${GEM_LIBDIR}/lib/awesome_nested_set/columns.rb
+${GEM_LIBDIR}/lib/awesome_nested_set/helper.rb
+${GEM_LIBDIR}/lib/awesome_nested_set/iterator.rb
+${GEM_LIBDIR}/lib/awesome_nested_set/model.rb
+${GEM_LIBDIR}/lib/awesome_nested_set/model/movable.rb
+${GEM_LIBDIR}/lib/awesome_nested_set/model/prunable.rb
+${GEM_LIBDIR}/lib/awesome_nested_set/model/rebuildable.rb
+${GEM_LIBDIR}/lib/awesome_nested_set/model/relatable.rb
+${GEM_LIBDIR}/lib/awesome_nested_set/model/transactable.rb
+${GEM_LIBDIR}/lib/awesome_nested_set/model/validatable.rb
+${GEM_LIBDIR}/lib/awesome_nested_set/move.rb
+${GEM_LIBDIR}/lib/awesome_nested_set/set_validator.rb
+${GEM_LIBDIR}/lib/awesome_nested_set/tree.rb
+${GEM_LIBDIR}/lib/awesome_nested_set/version.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-@pkgdir lib/ruby/gems/2.0.0/build_info
