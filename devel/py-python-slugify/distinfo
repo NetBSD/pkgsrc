@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/09/23 18:16:24 taca Exp $
+$NetBSD: distinfo,v 1.2 2018/12/17 16:24:48 taca Exp $
 
-SHA1 (python-slugify-1.2.5.tar.gz) = 3fddf3c2f5eb6a9fe86b08375f07d4b1cb9075b8
-RMD160 (python-slugify-1.2.5.tar.gz) = 602eed0834e88dd20a466cc7969c6b726bb1ac41
-SHA512 (python-slugify-1.2.5.tar.gz) = 9a4ec9dadeff708a62b40a71dc0fff60d218139c49d7a02fdd09d8eebe810d78b56a59a4c627b158874214861709c59dc07470245fbbeadbe4f02937d14e6a3c
-Size (python-slugify-1.2.5.tar.gz) = 6594 bytes
+SHA1 (python-slugify-1.2.6.tar.gz) = cef3aed6d43c737e8463b5424a2fb7aa6f2de564
+RMD160 (python-slugify-1.2.6.tar.gz) = dc8d898462f96a12809803e5ce98190f914eff58
+SHA512 (python-slugify-1.2.6.tar.gz) = 632fdd2162ebbec0bc6ae0cf0df4a7316ecb4974603370084ea55b4f0af9e04aff8c96888e562fd8db31e645c999a3a178ee2ae534f55ea3fa364080ded82f66
+Size (python-slugify-1.2.6.tar.gz) = 6777 bytes
