@@ -1,4 +1,6 @@
-package main
+package pkglint
+
+import "netbsd.org/pkglint/textproc"
 
 type ShTokenizer struct {
 	parser *Parser
@@ -61,7 +63,7 @@ func (p *ShTokenizer) ShAtom(quoting ShQuoting) *ShAtom {
 		if hasPrefix(lexer.Rest(), "${") {
 			p.parser.Line.Warnf("Unclosed Make variable starting at %q.", shorten(lexer.Rest(), 20))
 		} else {
-			p.parser.Line.Warnf("Pkglint parse error in ShTokenizer.ShAtom at %q (quoting=%s).", lexer.Rest(), quoting)
+			p.parser.Line.Warnf("Internal pkglint error in ShTokenizer.ShAtom at %q (quoting=%s).", lexer.Rest(), quoting)
 		}
 	}
 	return atom
@@ -315,7 +317,7 @@ func (p *ShTokenizer) shVarUse(q ShQuoting) *ShAtom {
 		return nil
 	}
 
-	if lexer.PeekByte() >= '0' && lexer.PeekByte() <= '9' {
+	if lexer.TestByteSet(textproc.Digit) {
 		lexer.Skip(1)
 		text := lexer.Since(beforeDollar)
 		return &ShAtom{shtShVarUse, text, q, text[2:]}

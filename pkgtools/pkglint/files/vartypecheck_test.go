@@ -1,8 +1,6 @@
-package main
+package pkglint
 
 import (
-	"fmt"
-
 	"gopkg.in/check.v1"
 )
 
@@ -16,7 +14,7 @@ func (s *Suite) Test_VartypeCheck_AwkCommand(c *check.C) {
 		"{print $$0}")
 
 	vt.Output(
-		"WARN: filename:1: $0 is ambiguous. Use ${0} if you mean a Makefile variable or $$0 if you mean a shell variable.")
+		"WARN: filename:1: $0 is ambiguous. Use ${0} if you mean a Make variable or $$0 if you mean a shell variable.")
 }
 
 func (s *Suite) Test_VartypeCheck_BasicRegularExpression(c *check.C) {
@@ -28,7 +26,7 @@ func (s *Suite) Test_VartypeCheck_BasicRegularExpression(c *check.C) {
 		".*\\.pl$$")
 
 	vt.Output(
-		"WARN: filename:1: Pkglint parse error in MkLine.Tokenize at \"$\".")
+		"WARN: filename:1: Internal pkglint error in MkLine.Tokenize at \"$\".")
 }
 
 func (s *Suite) Test_VartypeCheck_BuildlinkDepmethod(c *check.C) {
@@ -1241,7 +1239,7 @@ func (vt *VartypeCheckTester) Values(values ...string) {
 				text = varname + opStr + value
 			}
 		case op == opUseMatch:
-			text = fmt.Sprintf(".if ${%s:M%s} == \"\"", varname, value)
+			text = sprintf(".if ${%s:M%s} == \"\"", varname, value)
 		default:
 			panic("Invalid operator: " + opStr)
 		}

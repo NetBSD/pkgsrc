@@ -1,7 +1,6 @@
-package main
+package pkglint
 
 import (
-	"fmt"
 	"reflect"
 	"strings"
 )
@@ -14,23 +13,48 @@ type MkShWalker struct {
 		Command            func(command *MkShCommand)
 		SimpleCommand      func(command *MkShSimpleCommand)
 		CompoundCommand    func(command *MkShCompoundCommand)
-		Case               func(caseClause *MkShCaseClause)
+		Case               func(caseClause *MkShCase)
 		CaseItem           func(caseItem *MkShCaseItem)
 		FunctionDefinition func(funcdef *MkShFunctionDefinition)
-		If                 func(ifClause *MkShIfClause)
-		Loop               func(loop *MkShLoopClause)
+		If                 func(ifClause *MkShIf)
+		Loop               func(loop *MkShLoop)
 		Words              func(words []*ShToken)
 		Word               func(word *ShToken)
 		Redirects          func(redirects []*MkShRedirection)
 		Redirect           func(redirect *MkShRedirection)
-		For                func(forClause *MkShForClause)
-		Varname            func(varname string)
+		For                func(forClause *MkShFor)
+
+		// For variable definition in a for loop.
+		Varname func(varname string)
 	}
+
+	// Context[0] is the currently visited element,
+	// Context[1] is its immediate parent element, and so on.
+	// This is useful when the check for a CaseItem needs to look at the enclosing Case.
 	Context []MkShWalkerPathElement
 }
 
 type MkShWalkerPathElement struct {
-	Index   int
+
+	// For fields that can be repeated, this is the index as seen from the parent element.
+	// For fields that cannot be repeated, it is -1.
+	//
+	// For example, in the SimpleCommand "var=value cmd arg1 arg2",
+	// there are multiple child elements of type Words.
+	//
+	// The first Words are the variable assignments, which have index 0.
+	//
+	// The command "cmd" has type Word, therefore it cannot be confused
+	// with either of the Words lists and has index -1.
+	//
+	// The second Words are the arguments, which have index 1.
+	// In this example, there are two arguments, so when visiting the
+	// arguments individually, arg1 will have index 0 and arg2 will have index 1.
+	//
+	// TODO: It might be worth defining negative indexes to correspond
+	// to the fields "Cond", "Action", "Else", etc.
+	Index int
+
 	Element interface{}
 }
 
@@ -40,15 +64,20 @@ func NewMkShWalker() *MkShWalker {
 
 // Path returns a representation of the path in the AST that is
 // currently visited.
+//
+// It is used for debugging only.
+//
+// See Test_MkShWalker_Walk, Callback.SimpleCommand for examples.
 func (w *MkShWalker) Path() string {
 	var path []string
 	for _, level := range w.Context {
 		typeName := reflect.TypeOf(level.Element).Elem().Name()
-		abbreviated := strings.Replace(typeName, "MkSh", "", 1)
+		abbreviated := strings.TrimPrefix(typeName, "MkSh")
 		if level.Index == -1 {
+			// TODO: This form should also be used if index == 0 and len == 1.
 			path = append(path, abbreviated)
 		} else {
-			path = append(path, fmt.Sprintf("%s[%d]", abbreviated, level.Index))
+			path = append(path, sprintf("%s[%d]", abbreviated, level.Index))
 		}
 	}
 	return strings.Join(path, ".")
@@ -59,6 +88,7 @@ func (w *MkShWalker) Path() string {
 func (w *MkShWalker) Walk(list *MkShList) {
 	w.walkList(-1, list)
 
+	// If this fails, the calls to w.push and w.pop are unbalanced.
 	G.Assertf(len(w.Context) == 0, "MkShWalker.Walk %v", w.Context)
 }
 
@@ -136,7 +166,7 @@ func (w *MkShWalker) walkSimpleCommand(index int, command *MkShSimpleCommand) {
 	if command.Name != nil {
 		w.walkWord(-1, command.Name)
 	}
-	w.walkWords(2, command.Args)
+	w.walkWords(1, command.Args)
 	w.walkRedirects(-1, command.Redirections)
 
 	w.pop()
@@ -167,21 +197,21 @@ func (w *MkShWalker) walkCompoundCommand(index int, command *MkShCompoundCommand
 	w.pop()
 }
 
-func (w *MkShWalker) walkCase(caseClause *MkShCaseClause) {
+func (w *MkShWalker) walkCase(caseClause *MkShCase) {
 	w.push(-1, caseClause)
 
 	if callback := w.Callback.Case; callback != nil {
 		callback(caseClause)
 	}
 
-	w.walkWord(0, caseClause.Word)
+	w.walkWord(-1, caseClause.Word)
 	for i, caseItem := range caseClause.Cases {
 		w.push(i, caseItem)
 		if callback := w.Callback.CaseItem; callback != nil {
 			callback(caseItem)
 		}
-		w.walkWords(0, caseItem.Patterns)
-		w.walkList(1, caseItem.Action)
+		w.walkWords(-1, caseItem.Patterns)
+		w.walkList(-1, caseItem.Action)
 		w.pop()
 	}
 
@@ -200,13 +230,14 @@ func (w *MkShWalker) walkFunctionDefinition(index int, funcdef *MkShFunctionDefi
 	w.pop()
 }
 
-func (w *MkShWalker) walkIf(ifClause *MkShIfClause) {
+func (w *MkShWalker) walkIf(ifClause *MkShIf) {
 	w.push(-1, ifClause)
 
 	if callback := w.Callback.If; callback != nil {
 		callback(ifClause)
 	}
 
+	// TODO: Replace these indices with proper field names; see MkShWalkerPathElement.Index.
 	for i, cond := range ifClause.Conds {
 		w.walkList(2*i, cond)
 		w.walkList(2*i+1, ifClause.Actions[i])
@@ -218,7 +249,7 @@ func (w *MkShWalker) walkIf(ifClause *MkShIfClause) {
 	w.pop()
 }
 
-func (w *MkShWalker) walkLoop(loop *MkShLoopClause) {
+func (w *MkShWalker) walkLoop(loop *MkShLoop) {
 	w.push(-1, loop)
 
 	if callback := w.Callback.Loop; callback != nil {
@@ -271,6 +302,9 @@ func (w *MkShWalker) walkRedirects(index int, redirects []*MkShRedirection) {
 	}
 
 	for i, redirect := range redirects {
+		// FIXME: The w.push/w.pop is missing here.
+		//  How does the path look like?
+		//  Are there ambiguities?
 		if callback := w.Callback.Redirect; callback != nil {
 			callback(redirect)
 		}
@@ -281,7 +315,7 @@ func (w *MkShWalker) walkRedirects(index int, redirects []*MkShRedirection) {
 	w.pop()
 }
 
-func (w *MkShWalker) walkFor(forClause *MkShForClause) {
+func (w *MkShWalker) walkFor(forClause *MkShFor) {
 	w.push(-1, forClause)
 
 	if callback := w.Callback.For; callback != nil {

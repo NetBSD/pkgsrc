@@ -1,8 +1,4 @@
-package main
-
-import (
-	"fmt"
-)
+package pkglint
 
 //go:generate goyacc -o shellyacc.go -v shellyacc.log -p shyy shell.y
 
@@ -50,13 +46,13 @@ type ShAtom struct {
 
 func (atom *ShAtom) String() string {
 	if atom.Type == shtText && atom.Quoting == shqPlain && atom.data == nil {
-		return fmt.Sprintf("%q", atom.MkText)
+		return sprintf("%q", atom.MkText)
 	}
 	if atom.Type == shtVaruse {
 		varuse := atom.VarUse()
-		return fmt.Sprintf("varuse(%q)", varuse.varname+varuse.Mod())
+		return sprintf("varuse(%q)", varuse.varname+varuse.Mod())
 	}
-	return fmt.Sprintf("ShAtom(%v, %q, %s)", atom.Type, atom.MkText, atom.Quoting)
+	return sprintf("ShAtom(%v, %q, %s)", atom.Type, atom.MkText, atom.Quoting)
 }
 
 // VarUse returns a read access to a Makefile variable, or nil for plain shell tokens.
@@ -133,5 +129,5 @@ func NewShToken(mkText string, atoms ...*ShAtom) *ShToken {
 }
 
 func (token *ShToken) String() string {
-	return fmt.Sprintf("ShToken(%v)", token.Atoms)
+	return sprintf("ShToken(%v)", token.Atoms)
 }

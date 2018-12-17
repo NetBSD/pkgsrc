@@ -1,4 +1,4 @@
-package main
+package pkglint
 
 import (
 	"gopkg.in/check.v1"
@@ -14,7 +14,7 @@ func (s *Suite) Test_splitIntoShellTokens__line_continuation(c *check.C) {
 	c.Check(rest, equals, "\\")
 
 	t.CheckOutputLines(
-		"WARN: Pkglint parse error in ShTokenizer.ShAtom at \"\\\\\" (quoting=plain).")
+		"WARN: Internal pkglint error in ShTokenizer.ShAtom at \"\\\\\" (quoting=plain).")
 }
 
 func (s *Suite) Test_splitIntoShellTokens__dollar_slash(c *check.C) {
@@ -276,7 +276,6 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 	checkShellCommandLine("-${MKDIR} deeply/nested/subdir")
 
 	t.CheckOutputLines(
-		"NOTE: filename:1: You don't need to use \"-\" before \"${MKDIR} deeply/nested/subdir\".",
 		"WARN: filename:1: Using a leading \"-\" to suppress errors is deprecated.")
 
 	G.Pkg = NewPackage(t.File("category/pkgbase"))
@@ -558,8 +557,8 @@ func (s *Suite) Test_ShellLine_CheckWord__squot_dollar(c *check.C) {
 	// FIXME: Should be parsed correctly. Make passes the dollar through (probably),
 	// and the shell parser should complain about the unfinished string literal.
 	t.CheckOutputLines(
-		"WARN: filename:1: Pkglint parse error in ShTokenizer.ShAtom at \"$\" (quoting=s).",
-		"WARN: filename:1: Pkglint parse error in ShellLine.CheckWord at \"'$\" (quoting=s), rest: $")
+		"WARN: filename:1: Internal pkglint error in ShTokenizer.ShAtom at \"$\" (quoting=s).",
+		"WARN: filename:1: Internal pkglint error in ShellLine.CheckWord at \"'$\" (quoting=s), rest: $")
 }
 
 func (s *Suite) Test_ShellLine_CheckWord__dquot_dollar(c *check.C) {
@@ -572,8 +571,8 @@ func (s *Suite) Test_ShellLine_CheckWord__dquot_dollar(c *check.C) {
 	// FIXME: Should be parsed correctly. Make passes the dollar through (probably),
 	// and the shell parser should complain about the unfinished string literal.
 	t.CheckOutputLines(
-		"WARN: filename:1: Pkglint parse error in ShTokenizer.ShAtom at \"$\" (quoting=d).",
-		"WARN: filename:1: Pkglint parse error in ShellLine.CheckWord at \"\\\"$\" (quoting=d), rest: $")
+		"WARN: filename:1: Internal pkglint error in ShTokenizer.ShAtom at \"$\" (quoting=d).",
+		"WARN: filename:1: Internal pkglint error in ShellLine.CheckWord at \"\\\"$\" (quoting=d), rest: $")
 }
 
 func (s *Suite) Test_ShellLine_CheckWord__dollar_subshell(c *check.C) {
@@ -729,10 +728,10 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__shell_variables(c *check.C
 	shline.CheckShellCommandLine(text)
 
 	t.CheckOutputLines(
-		"WARN: Makefile:3: $f is ambiguous. Use ${f} if you mean a Makefile variable or $$f if you mean a shell variable.",
-		"WARN: Makefile:3: $f is ambiguous. Use ${f} if you mean a Makefile variable or $$f if you mean a shell variable.",
-		"WARN: Makefile:3: $f is ambiguous. Use ${f} if you mean a Makefile variable or $$f if you mean a shell variable.",
-		"WARN: Makefile:3: $f is ambiguous. Use ${f} if you mean a Makefile variable or $$f if you mean a shell variable.",
+		"WARN: Makefile:3: $f is ambiguous. Use ${f} if you mean a Make variable or $$f if you mean a shell variable.",
+		"WARN: Makefile:3: $f is ambiguous. Use ${f} if you mean a Make variable or $$f if you mean a shell variable.",
+		"WARN: Makefile:3: $f is ambiguous. Use ${f} if you mean a Make variable or $$f if you mean a shell variable.",
+		"WARN: Makefile:3: $f is ambiguous. Use ${f} if you mean a Make variable or $$f if you mean a shell variable.",
 		"NOTE: Makefile:3: Please use the SUBST framework instead of ${SED} and ${MV}.",
 		"WARN: Makefile:3: f is used but not defined.",
 		"WARN: Makefile:3: f is used but not defined.",
@@ -1057,11 +1056,11 @@ func (s *Suite) Test_ShellLine_CheckShellCommand__subshell(c *check.C) {
 	// FIXME: "(" is not a shell command, it's an operator.
 	t.CheckOutputLines(
 		"WARN: Makefile:4: The shell command \"(\" should not be hidden.",
-		"WARN: Makefile:5: Pkglint parse error in ShTokenizer.ShAtom at \"$$(echo 1024))\" (quoting=S).",
+		"WARN: Makefile:5: Internal pkglint error in ShTokenizer.ShAtom at \"$$(echo 1024))\" (quoting=S).",
 		"WARN: Makefile:5: Invoking subshells via $(...) is not portable enough.",
-		"WARN: Makefile:6: Pkglint parse error in ShTokenizer.ShAtom at \"$$(echo 1024)))\" (quoting=S).",
+		"WARN: Makefile:6: Internal pkglint error in ShTokenizer.ShAtom at \"$$(echo 1024)))\" (quoting=S).",
 		"WARN: Makefile:6: The shell command \"(\" should not be hidden.",
-		"WARN: Makefile:6: Pkglint parse error in ShTokenizer.ShAtom at \"$$(echo 1024)))\" (quoting=S).",
+		"WARN: Makefile:6: Internal pkglint error in ShTokenizer.ShAtom at \"$$(echo 1024)))\" (quoting=S).",
 		"WARN: Makefile:6: Invoking subshells via $(...) is not portable enough.")
 }
 
@@ -1230,7 +1229,7 @@ func (s *Suite) Test_ShellProgramChecker_checkConditionalCd(c *check.C) {
 	// FIXME: Fix the parse error.
 	t.CheckOutputLines(
 		"ERROR: Makefile:3: The Solaris /bin/sh cannot handle \"cd\" inside conditionals.",
-		"WARN: Pkglint parse error in ShTokenizer.ShAtom at \"$$\" (quoting=plain).",
+		"WARN: Internal pkglint error in ShTokenizer.ShAtom at \"$$\" (quoting=plain).",
 		"WARN: Makefile:4: The exitcode of \"ls\" at the left of the | operator is ignored.")
 }
 

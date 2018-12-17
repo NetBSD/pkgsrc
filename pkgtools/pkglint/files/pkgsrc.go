@@ -1,8 +1,9 @@
-package main
+package pkglint
 
 import (
 	"io/ioutil"
 	"netbsd.org/pkglint/regex"
+	"netbsd.org/pkglint/textproc"
 	"os"
 	"path/filepath"
 	"sort"
@@ -488,8 +489,8 @@ func (src *Pkgsrc) loadDocChangesFromFile(filename string) []*Change {
 						"the changes entry.")
 				}
 			}
-		} else if text := line.Text; len(text) >= 2 && text[0] == '\t' && 'A' <= text[1] && text[1] <= 'Z' {
-			line.Warnf("Unknown doc/CHANGES line: %s", text)
+		} else if lex := textproc.NewLexer(line.Text); lex.SkipByte('\t') && lex.TestByteSet(textproc.Upper) {
+			line.Warnf("Unknown doc/CHANGES line: %s", line.Text)
 			G.Explain("See mk/misc/developer.mk for the rules.")
 		}
 	}

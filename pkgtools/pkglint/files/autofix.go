@@ -1,7 +1,6 @@
-package main
+package pkglint
 
 import (
-	"fmt"
 	"io/ioutil"
 	"netbsd.org/pkglint/regex"
 	"os"
@@ -182,7 +181,7 @@ func (fix *Autofix) Custom(fixer func(showAutofix, autofix bool)) {
 // of the actual fix for logging it later when Apply is called.
 // Describef may be called multiple times before calling Apply.
 func (fix *Autofix) Describef(lineno int, format string, args ...interface{}) {
-	fix.actions = append(fix.actions, autofixAction{fmt.Sprintf(format, args...), lineno})
+	fix.actions = append(fix.actions, autofixAction{sprintf(format, args...), lineno})
 }
 
 // InsertBefore prepends a line before the current line.
@@ -266,7 +265,7 @@ func (fix *Autofix) Apply() {
 	logFix := G.Logger.IsAutofix()
 
 	if logDiagnostic {
-		msg := fmt.Sprintf(fix.diagFormat, fix.diagArgs...)
+		msg := sprintf(fix.diagFormat, fix.diagArgs...)
 		if !logFix {
 			if fix.diagFormat == AutofixFormat || G.Logger.FirstTime(line.Filename, line.Linenos(), msg) {
 				line.showSource(G.out)

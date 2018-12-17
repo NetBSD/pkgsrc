@@ -1,4 +1,4 @@
-package main
+package pkglint
 
 func ChecklinesOptionsMk(mklines MkLines) {
 	if trace.Tracing {
@@ -15,8 +15,8 @@ func ChecklinesOptionsMk(mklines MkLines) {
 		G.Explain(
 			"The input variables in an options.mk file should always be",
 			"mentioned in the same order: PKG_OPTIONS_VAR,",
-			"PKG_SUPPORTED_OPTIONS, PKG_SUGGESTED_OPTIONS.  This way, the",
-			"options.mk files have the same structure and are easy to understand.")
+			"PKG_SUPPORTED_OPTIONS, PKG_SUGGESTED_OPTIONS.",
+			"This way, the options.mk files have the same structure and are easy to understand.")
 		return
 	}
 	exp.Advance()
@@ -91,8 +91,8 @@ loop:
 				G.Explain(
 					"For consistency among packages, the upper branch of this",
 					".if/.else statement should always handle the case where the",
-					"option is activated.  A missing exclamation mark at this",
-					"point can easily be overlooked.")
+					"option is activated.",
+					"A missing exclamation mark at this point can easily be overlooked.")
 			}
 		}
 	}
@@ -100,17 +100,20 @@ loop:
 	for _, option := range optionsInDeclarationOrder {
 		declared := declaredOptions[option]
 		handled := handledOptions[option]
+
 		if declared != nil && handled == nil {
 			declared.Warnf("Option %q should be handled below in an .if block.", option)
 			G.Explain(
 				"If an option is not processed in this file, it may either be a",
 				"typo, or the option does not have any effect.")
 		}
+
 		if declared == nil && handled != nil {
 			handled.Warnf("Option %q is handled but not added to PKG_SUPPORTED_OPTIONS.", option)
 			G.Explain(
 				"This block of code will never be run since PKG_OPTIONS cannot",
-				"contain this value.  This is most probably a typo.")
+				"contain this value.",
+				"This is most probably a typo.")
 		}
 	}
 

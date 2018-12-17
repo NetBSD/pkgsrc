@@ -1,4 +1,4 @@
-package main
+package pkglint
 
 import (
 	"fmt"
@@ -26,10 +26,10 @@ type Pkglint struct {
 	Mk     MkLines  // The Makefile (or fragment) that is currently checked, or nil.
 
 	Todo            []string // The files or directories that still need to be checked.
-	Wip             bool     // Is the currently checked item from pkgsrc-wip?
-	Infrastructure  bool     // Is the currently checked item from the pkgsrc infrastructure?
+	Wip             bool     // Is the currently checked file or package from pkgsrc-wip?
+	Infrastructure  bool     // Is the currently checked file from the pkgsrc infrastructure?
 	Testing         bool     // Is pkglint in self-testing mode (only during development)?
-	CurrentUsername string   // For checking against OWNER and MAINTAINER
+	Username        string   // For checking against OWNER and MAINTAINER
 	CvsEntriesDir   string   // Cached to avoid I/O
 	CvsEntriesLines Lines
 
@@ -47,6 +47,11 @@ func NewPkglint() Pkglint {
 }
 
 type CmdOpts struct {
+	// TODO: Are these Check* options really necessary?
+	//
+	// They had been introduced in order to make pkglint more flexible,
+	// but without any actual need.
+
 	CheckAlternatives,
 	CheckBuildlink3,
 	CheckDescr,
@@ -60,6 +65,13 @@ type CmdOpts struct {
 	CheckOptions,
 	CheckPatches,
 	CheckPlist bool
+
+	// TODO: Are these Warn* options really all necessary?
+	//
+	// Some of them may have been unreliable in the past when they were new.
+	// Instead of these fine-grained options, there is already --only, which
+	// could be contrasted by a future --ignore option, in order to suppress
+	// individual checks.
 
 	WarnAbsname,
 	WarnDirectcmd,
@@ -87,7 +99,7 @@ type CmdOpts struct {
 
 type Hash struct {
 	hash string
-	line Line
+	line Line // TODO: Maybe a Location object would already be enough.
 }
 
 type pkglintFatal struct{}
@@ -97,19 +109,18 @@ type pkglintFatal struct{}
 var (
 	G     = NewPkglint()
 	trace tracePkg.Tracer
-	exit  = os.Exit // Indirect access, to allow main() to be tested.
 )
 
-func main() {
+func Main() int {
 	G.out = NewSeparatorWriter(os.Stdout)
 	G.err = NewSeparatorWriter(os.Stderr)
 	trace.Out = os.Stdout
-	exitcode := G.Main(os.Args...)
+	exitCode := G.Main(os.Args...)
 	if G.Opts.Profiling {
 		G = Pkglint{} // Free all memory.
-		runtime.GC()  // Detect possible memory leaks.
+		runtime.GC()  // For detecting possible memory leaks; see qa-pkglint.
 	}
-	exit(exitcode)
+	return exitCode
 }
 
 // Main runs the main program with the given arguments.
@@ -120,19 +131,19 @@ func main() {
 // back to false.
 //
 // It also discards the -Wall option that is used by default in other tests.
-func (pkglint *Pkglint) Main(argv ...string) (exitcode int) {
+func (pkglint *Pkglint) Main(argv ...string) (exitCode int) {
 	defer func() {
 		if r := recover(); r != nil {
 			if _, ok := r.(pkglintFatal); ok {
-				exitcode = 1
+				exitCode = 1
 			} else {
 				panic(r)
 			}
 		}
 	}()
 
-	if exitcode := pkglint.ParseCommandLine(argv); exitcode != nil {
-		return *exitcode
+	if exitcode := pkglint.ParseCommandLine(argv); exitcode != -1 {
+		return exitcode
 	}
 
 	if pkglint.Opts.Profiling {
@@ -154,7 +165,7 @@ func (pkglint *Pkglint) Main(argv ...string) (exitcode int) {
 			pkglint.histo.PrintStats(pkglint.out.out, "loghisto", -1)
 			pkglint.res.PrintStats(pkglint.out.out)
 			pkglint.loaded.PrintStats(pkglint.out.out, "loaded", 10)
-			pkglint.out.WriteLine(fmt.Sprintf("fileCache: %d hits, %d misses", pkglint.fileCache.hits, pkglint.fileCache.misses))
+			pkglint.out.WriteLine(sprintf("fileCache: %d hits, %d misses", pkglint.fileCache.hits, pkglint.fileCache.misses))
 		}()
 	}
 
@@ -184,7 +195,7 @@ func (pkglint *Pkglint) Main(argv ...string) (exitcode int) {
 	currentUser, err := user.Current()
 	if err == nil {
 		// On Windows, this is `Computername\Username`.
-		pkglint.CurrentUsername = replaceAll(currentUser.Username, `^.*\\`, "")
+		pkglint.Username = replaceAll(currentUser.Username, `^.*\\`, "")
 	}
 
 	for len(pkglint.Todo) > 0 {
@@ -202,7 +213,7 @@ func (pkglint *Pkglint) Main(argv ...string) (exitcode int) {
 	return 0
 }
 
-func (pkglint *Pkglint) ParseCommandLine(args []string) *int {
+func (pkglint *Pkglint) ParseCommandLine(args []string) int {
 	gopts := &pkglint.Opts
 	lopts := &pkglint.Logger.Opts
 	opts := getopt.NewOptions()
@@ -253,28 +264,31 @@ func (pkglint *Pkglint) ParseCommandLine(args []string) *int {
 
 	remainingArgs, err := opts.Parse(args)
 	if err != nil {
-		_, _ = fmt.Fprintf(pkglint.err.out, "%s\n\n", err)
-		opts.Help(pkglint.err.out, "pkglint [options] dir...")
-		exitcode := 1
-		return &exitcode
+		errOut := pkglint.err.out
+		_, _ = fmt.Fprintln(errOut, err)
+		_, _ = fmt.Fprintln(errOut, "")
+		opts.Help(errOut, "pkglint [options] dir...")
+		return 1
 	}
 	gopts.args = remainingArgs
 
 	if gopts.ShowHelp {
 		opts.Help(pkglint.out.out, "pkglint [options] dir...")
-		exitcode := 0
-		return &exitcode
+		return 0
 	}
 
 	if pkglint.Opts.ShowVersion {
 		_, _ = fmt.Fprintf(pkglint.out.out, "%s\n", confVersion)
-		exitcode := 0
-		return &exitcode
+		return 0
 	}
 
-	return nil
+	return -1
 }
 
+// CheckDirent checks a directory or a single file.
+//
+// During tests, it assumes that Pkgsrc.LoadInfrastructure has been called.
+// It is the most high-level method for testing pkglint.
 func (pkglint *Pkglint) CheckDirent(filename string) {
 	if trace.Tracing {
 		defer trace.Call1(filename)()
@@ -352,6 +366,7 @@ func (pkglint *Pkglint) checkdirPackage(dir string) {
 	havePatches := false
 
 	// Determine the used variables and PLIST directories before checking any of the Makefile fragments.
+	// TODO: Why is this code necessary? What effect does it have?
 	for _, filename := range files {
 		basename := path.Base(filename)
 		if (hasPrefix(basename, "Makefile.") || hasSuffix(filename, ".mk")) &&
@@ -395,6 +410,7 @@ func (pkglint *Pkglint) checkdirPackage(dir string) {
 
 	if pkg.Pkgdir == "." && pkglint.Opts.CheckDistinfo && pkglint.Opts.CheckPatches {
 		if havePatches && !haveDistinfo {
+			// TODO: Add Line.RefTo to make the context clear.
 			NewLineWhole(pkg.File(pkg.DistinfoFile)).Warnf("File not found. Please run %q.", bmake("makepatchsum"))
 		}
 	}
@@ -407,7 +423,7 @@ func (pkglint *Pkglint) checkdirPackage(dir string) {
 // For runtime errors, use dummyLine.Fatalf.
 func (pkglint *Pkglint) Assertf(cond bool, format string, args ...interface{}) {
 	if !cond {
-		panic("Pkglint internal error: " + fmt.Sprintf(format, args...))
+		panic("Pkglint internal error: " + sprintf(format, args...))
 	}
 }
 
@@ -493,9 +509,8 @@ func ChecklinesDescr(lines Lines) {
 
 		line.Warnf("File too long (should be no more than %d lines).", maxLines)
 		G.Explain(
-			"The DESCR file should fit on a traditional terminal of 80x25",
-			"characters.  It is also intended to give a _brief_ summary about",
-			"the package's contents.")
+			"The DESCR file should fit on a traditional terminal of 80x25 characters.",
+			"It is also intended to give a _brief_ summary about the package's contents.")
 	}
 
 	SaveAutofixChanges(lines)
@@ -733,9 +748,10 @@ func (pkglint *Pkglint) checkExecutable(filename string, st os.FileInfo) {
 		fix := line.Autofix()
 		fix.Warnf("Should not be executable.")
 		fix.Explain(
-			"No package file should ever be executable.  Even the INSTALL and",
-			"DEINSTALL scripts are usually not usable in the form they have in",
-			"the package, as the pathnames get adjusted during installation.",
+			"No package file should ever be executable.",
+			"Even the INSTALL and DEINSTALL scripts are usually not usable",
+			"in the form they have in the package,",
+			"as the pathnames get adjusted during installation.",
 			"So there is no need to have any file executable.")
 		fix.Custom(func(showAutofix, autofix bool) {
 			fix.Describef(0, "Clearing executable bits")

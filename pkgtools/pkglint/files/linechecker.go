@@ -1,4 +1,4 @@
-package main
+package pkglint
 
 import (
 	"fmt"
@@ -117,20 +117,20 @@ func (ck LineChecker) CheckWordAbsolutePathname(word string) {
 		ck.line.Warnf("Found absolute pathname: %s", word)
 		if contains(ck.line.Text, "DESTDIR") {
 			G.Explain(
-				"Absolute pathnames are often an indicator for unportable code.  As",
-				"pkgsrc aims to be a portable system, absolute pathnames should be",
-				"avoided whenever possible.",
+				"Absolute pathnames are often an indicator for unportable code.",
+				"As pkgsrc aims to be a portable system,",
+				"absolute pathnames should be avoided whenever possible.",
 				"",
-				"A special variable in this context is ${DESTDIR}, which is used in",
-				"GNU projects to specify a different directory for installation than",
-				"what the programs see later when they are executed.  Usually it is",
-				"empty, so if anything after that variable starts with a slash, it is",
-				"considered an absolute pathname.")
+				"A special variable in this context is ${DESTDIR},",
+				"which is used in GNU projects to specify a different directory",
+				"for installation than what the programs see later when they are executed.",
+				"Usually it is empty, so if anything after that variable starts with a slash,",
+				"it is considered an absolute pathname.")
 		} else {
 			G.Explain(
-				"Absolute pathnames are often an indicator for unportable code.  As",
-				"pkgsrc aims to be a portable system, absolute pathnames should be",
-				"avoided whenever possible.")
+				"Absolute pathnames are often an indicator for unportable code.",
+				"As pkgsrc aims to be a portable system,",
+				"absolute pathnames should be avoided whenever possible.")
 
 			// TODO: Explain how to actually fix this warning properly.
 		}

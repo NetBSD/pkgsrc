@@ -1,4 +1,4 @@
-package main
+package pkglint
 
 // Checks concerning single lines in Makefiles.
 
@@ -73,9 +73,8 @@ func NewMkLine(line Line) *MkLineImpl {
 	if hasPrefix(text, " ") && line.Basename != "bsd.buildlink3.mk" {
 		line.Warnf("Makefile lines should not start with space characters.")
 		G.Explain(
-			"If you want this line to contain a shell program, use a tab",
-			"character for indentation.  Otherwise please remove the leading",
-			"whitespace.")
+			"If this line should be a shell command connected to a target, use a tab character for indentation.",
+			"Otherwise remove the leading whitespace.")
 	}
 
 	if m, commented, varname, spaceAfterVarname, op, valueAlign, value, spaceAfterValue, comment := MatchVarassign(text); m {
@@ -99,7 +98,8 @@ func NewMkLine(line Line) *MkLineImpl {
 			line.Warnf("The # character starts a comment.")
 			G.Explain(
 				"In a variable assignment, an unescaped # starts a comment that",
-				"continues until the end of the line.  To escape the #, write \\#.")
+				"continues until the end of the line.",
+				"To escape the #, write \\#.")
 		}
 
 		return &MkLineImpl{line, &mkLineAssignImpl{
@@ -162,7 +162,7 @@ func NewMkLine(line Line) *MkLineImpl {
 }
 
 func (mkline *MkLineImpl) String() string {
-	return fmt.Sprintf("%s:%s", mkline.Filename, mkline.Linenos())
+	return sprintf("%s:%s", mkline.Filename, mkline.Linenos())
 }
 
 // IsVarassign returns true for variable assignments of the form VAR=value.
@@ -357,7 +357,7 @@ func (mkline *MkLineImpl) Tokenize(s string, warn bool) []*MkToken {
 	p := NewMkParser(mkline.Line, s, true)
 	tokens := p.MkTokens()
 	if warn && p.Rest() != "" {
-		mkline.Warnf("Pkglint parse error in MkLine.Tokenize at %q.", p.Rest())
+		mkline.Warnf("Internal pkglint error in MkLine.Tokenize at %q.", p.Rest())
 	}
 	return tokens
 }
@@ -588,7 +588,10 @@ func (mkline *MkLineImpl) RefTo(other MkLine) string {
 	return mkline.Line.RefTo(other.Line)
 }
 
-var AlnumDash = textproc.NewByteSet("a-z---")
+var (
+	LowerDash = textproc.NewByteSet("a-z---")
+	AlnumDot  = textproc.NewByteSet("A-Za-z0-9_.")
+)
 
 func matchMkDirective(text string) (m bool, indent, directive, args, comment string) {
 	lexer := textproc.NewLexer(text)
@@ -597,7 +600,7 @@ func matchMkDirective(text string) (m bool, indent, directive, args, comment str
 	}
 
 	indent = lexer.NextHspace()
-	directive = lexer.NextBytesSet(AlnumDash)
+	directive = lexer.NextBytesSet(LowerDash)
 	switch directive {
 	case "if", "else", "elif", "endif",
 		"ifdef", "ifndef",
@@ -920,7 +923,7 @@ func (vuc *VarUseContext) String() string {
 	if vuc.vartype != nil {
 		typename = vuc.vartype.String()
 	}
-	return fmt.Sprintf("(%s time:%s quoting:%s wordpart:%v)", typename, vuc.time, vuc.quoting, vuc.IsWordPart)
+	return sprintf("(%s time:%s quoting:%s wordpart:%v)", typename, vuc.time, vuc.quoting, vuc.IsWordPart)
 }
 
 // Indentation remembers the stack of preprocessing directives and their
@@ -1157,7 +1160,12 @@ func (ind *Indentation) CheckFinish(filename string) {
 }
 
 // VarnameBytes contains characters that may be used in variable names.
-// The bracket is included here for the tool of the same name, e.g. "TOOLS_PATH.[".
+// The bracket is included only for the tool of the same name, e.g. "TOOLS_PATH.[".
+//
+// This approach differs from the one in devel/bmake/files/parse.c:/^Parse_IsVar,
+// but in practice it works equally well. Luckily there aren't many situations
+// where a complicated variable name contains unbalanced parentheses or braces,
+// which would confuse the devel/bmake parser.
 var VarnameBytes = textproc.NewByteSet("A-Za-z_0-9*+---.[")
 
 func MatchVarassign(text string) (m, commented bool, varname, spaceAfterVarname, op, valueAlign, value, spaceAfterValue, comment string) {

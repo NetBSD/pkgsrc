@@ -9,6 +9,13 @@ import (
 // Lexer provides a flexible way of splitting a string into several parts
 // by repeatedly chopping off a prefix that matches a string, a function
 // or a set of byte values.
+//
+// The Next* methods chop off and return the matched portion.
+//
+// The Skip* methods chop off the matched portion and return whether something matched.
+//
+// PeekByte and TestByteSet look at the next byte without chopping it off.
+// They are typically used in switch statements, which don't allow variable declarations.
 type Lexer struct {
 	rest string
 }
@@ -43,6 +50,13 @@ func (l *Lexer) PeekByte() int {
 		return int(l.rest[0])
 	}
 	return -1
+}
+
+// TestByteSet returns whether the remaining string starts with a byte
+// from the given set.
+func (l *Lexer) TestByteSet(set *ByteSet) bool {
+	rest := l.rest
+	return 0 < len(rest) && set.Contains(rest[0])
 }
 
 // Skip skips the next n bytes.
@@ -251,6 +265,8 @@ var (
 	Alnum  = NewByteSet("A-Za-z0-9")  // Alphanumerical, without underscore
 	AlnumU = NewByteSet("A-Za-z0-9_") // Alphanumerical, including underscore
 	Digit  = NewByteSet("0-9")        // The digits zero to nine
+	Upper  = NewByteSet("A-Z")        // The uppercase letters from A to Z
+	Lower  = NewByteSet("a-z")        // The lowercase letters from a to z
 	Space  = NewByteSet("\t\n ")      // Tab, newline, space
 	Hspace = NewByteSet("\t ")        // Tab, space
 	XPrint = NewByteSet("\n\t -~")    // Printable ASCII, plus tab and newline
