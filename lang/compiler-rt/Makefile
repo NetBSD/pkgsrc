@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/12/09 20:04:40 adam Exp $
+# $NetBSD: Makefile,v 1.6 2018/12/17 16:19:52 jperkin Exp $
 
 DISTNAME=	compiler-rt-7.0.0.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -35,6 +35,13 @@ CMAKE_ARGS+=	-DLLVM_CONFIG_PATH=${LLVM_CONFIG_PATH:Q}
 CMAKE_ARGS+=	-DCOMPILER_RT_ENABLE_IOS=OFF
 
 PLIST_SUBST+=	COMPILER_RT_OS_DIR=${OS_DIR}
+PLIST_VARS+=	asan
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "SunOS"
+PLIST.asan=	yes
+.endif
 
 TEST_TARGET=	check-compiler-rt
 
