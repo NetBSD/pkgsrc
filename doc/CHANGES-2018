@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5241 2018/12/16 22:19:39 nia Exp $
+$NetBSD: CHANGES-2018,v 1.5242 2018/12/17 00:16:01 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7339,3 +7339,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-flask-user to 1.0.1.5 [adam 2018-12-16]
 	Updated www/py-daphne to 2.2.4 [adam 2018-12-16]
 	Updated security/xml-security-c to 2.0.2 [nia 2018-12-16]
+	Updated pkgtools/pkglint to 5.6.9 [rillig 2018-12-17]
