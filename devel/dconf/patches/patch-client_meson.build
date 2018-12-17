@@ -1,0 +1,14 @@
+$NetBSD: patch-client_meson.build,v 1.1 2018/12/17 15:33:01 jperkin Exp $
+
+Fix link ordering.  https://gitlab.gnome.org/GNOME/dconf/issues/49
+
+--- client/meson.build.orig	2018-10-22 21:53:04.000000000 +0000
++++ client/meson.build
+@@ -38,6 +38,7 @@ libdconf = shared_library(
+   soversion: soversion,
+   include_directories: top_inc,
+   dependencies: deps,
++  link_with: libdconf_engine,
+   c_args: dconf_c_args,
+   install: true,
+ )
