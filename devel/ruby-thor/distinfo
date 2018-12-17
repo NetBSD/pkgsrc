@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2017/09/10 13:36:01 taca Exp $
+$NetBSD: distinfo,v 1.10 2018/12/17 14:57:05 taca Exp $
 
-SHA1 (thor-0.20.0.gem) = 2e921089cdc548fd06b585015cd2b15506792f63
-RMD160 (thor-0.20.0.gem) = 6db624e61c1c5bfb64662aef72bcca8147c4fbb3
-SHA512 (thor-0.20.0.gem) = 84b89d5066903856cd58b3463706ceaf7de85701f6cea4fc37f64359ee35603a8cf8b54866cf84f2fd6d0e6d665b2652bdc62e830aeb6a225cd0d41e59e27c0a
-Size (thor-0.20.0.gem) = 54272 bytes
+SHA1 (thor-0.20.3.gem) = 923d0cfe80a6d7d39e7211a3dab4a4b7589c9052
+RMD160 (thor-0.20.3.gem) = ad2ea220c4ab167e70f605b9134fba8ade5c8719
+SHA512 (thor-0.20.3.gem) = 4c834408321f4f13b4878ee0e57a1fcd9a2294faf6d4c8c52ed909c2f14634b7810e3a0bffa1920f37ccd7baced2ff103a06f679f653a133bd647ac1e9add522
+Size (thor-0.20.3.gem) = 55808 bytes
