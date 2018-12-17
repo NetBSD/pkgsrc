@@ -1,0 +1,14 @@
+$NetBSD: patch-gsettings_meson.build,v 1.1 2018/12/17 15:33:01 jperkin Exp $
+
+Fix link ordering.  https://gitlab.gnome.org/GNOME/dconf/issues/49
+
+--- gsettings/meson.build.orig	2018-10-22 21:53:04.000000000 +0000
++++ gsettings/meson.build
+@@ -3,6 +3,7 @@
+ # symbols other than g_io_module_*
+ backend_deps = [
+   libdconf_common_hidden,
++  libdconf_engine,
+   libdconf_gdbus_thread,
+ ]
+ 
