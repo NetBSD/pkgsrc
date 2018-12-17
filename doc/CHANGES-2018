@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5263 2018/12/17 15:59:21 taca Exp $
+$NetBSD: CHANGES-2018,v 1.5264 2018/12/17 16:25:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7362,3 +7362,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/pear-Net_SMTP to 1.8.1 [taca 2018-12-17]
 	Updated www/php-basercms to 3.0.16 [taca 2018-12-17]
 	Updated graphics/ruby-screengif to 0.0.3nb1 [taca 2018-12-17]
+	Updated devel/py-python-slugify to 1.2.6 [taca 2018-12-17]
