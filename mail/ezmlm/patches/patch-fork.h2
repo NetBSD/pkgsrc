@@ -1,0 +1,15 @@
+$NetBSD: patch-fork.h2,v 1.1 2018/12/17 02:33:13 schmonz Exp $
+
+Avoid conflicting declarations.
+
+--- fork.h2.orig	1997-06-30 03:11:54.000000000 +0000
++++ fork.h2
+@@ -1,7 +1,6 @@
+ #ifndef FORK_H
+ #define FORK_H
+ 
+-extern int fork();
+-extern int vfork();
++#include <unistd.h>
+ 
+ #endif
