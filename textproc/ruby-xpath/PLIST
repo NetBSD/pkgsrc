@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/03/17 16:28:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/12/17 19:46:06 jperkin Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/lib/xpath.rb
@@ -15,4 +15,3 @@ ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/union_spec.rb
 ${GEM_LIBDIR}/spec/xpath_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-
