@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2018/03/14 14:28:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2018/12/17 14:58:00 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
@@ -87,6 +87,7 @@ ${GEM_LIBDIR}/lib/tins/string_underscore.rb
 ${GEM_LIBDIR}/lib/tins/string_version.rb
 ${GEM_LIBDIR}/lib/tins/subhash.rb
 ${GEM_LIBDIR}/lib/tins/temp_io.rb
+${GEM_LIBDIR}/lib/tins/temp_io_enum.rb
 ${GEM_LIBDIR}/lib/tins/terminal.rb
 ${GEM_LIBDIR}/lib/tins/thread_local.rb
 ${GEM_LIBDIR}/lib/tins/time_dummy.rb
