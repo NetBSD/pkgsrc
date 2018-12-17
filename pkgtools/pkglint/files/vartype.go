@@ -1,4 +1,4 @@
-package main
+package pkglint
 
 import (
 	"path"
@@ -37,10 +37,10 @@ const (
 	aclpUseLoadtime                            // OTHER := ${VAR}, OTHER != ${VAR}
 	aclpUse                                    // OTHER = ${VAR}
 	aclpUnknown
-	aclpAll        = aclpAppend | aclpSetDefault | aclpSet | aclpUseLoadtime | aclpUse
-	aclpAllRuntime = aclpAppend | aclpSetDefault | aclpSet | aclpUse
 	aclpAllWrite   = aclpSet | aclpSetDefault | aclpAppend
 	aclpAllRead    = aclpUseLoadtime | aclpUse
+	aclpAll        = aclpAllWrite | aclpAllRead
+	aclpAllRuntime = aclpAll &^ aclpUseLoadtime
 )
 
 func (perms ACLPermissions) Contains(subset ACLPermissions) bool {

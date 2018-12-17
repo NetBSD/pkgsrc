@@ -1,4 +1,4 @@
-package main
+package pkglint
 
 import (
 	"netbsd.org/pkglint/textproc"
@@ -97,17 +97,21 @@ func (p *Parser) Dependency() *DependencyPattern {
 			lexer.Reset(mark2)
 		}
 	}
+
 	if dp.LowerOp != "" || dp.UpperOp != "" {
 		return &dp
 	}
+
 	if lexer.SkipByte('-') && lexer.Rest() != "" {
 		dp.Wildcard = lexer.Rest()
 		lexer.Skip(len(lexer.Rest()))
 		return &dp
 	}
+
 	if hasPrefix(dp.Pkgbase, "${") && hasSuffix(dp.Pkgbase, "}") {
 		return &dp
 	}
+
 	if hasSuffix(dp.Pkgbase, "-*") {
 		dp.Pkgbase = strings.TrimSuffix(dp.Pkgbase, "-*")
 		dp.Wildcard = "*"

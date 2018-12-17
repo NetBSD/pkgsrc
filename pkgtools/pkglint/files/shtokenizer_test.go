@@ -1,4 +1,4 @@
-package main
+package pkglint
 
 import (
 	"gopkg.in/check.v1"
@@ -588,30 +588,30 @@ func (s *Suite) Test_ShTokenizer__examples_from_fuzzing(c *check.C) {
 
 	// Just good that these redundant error messages don't occur every day.
 	t.CheckOutputLines(
-		"WARN: fuzzing.mk:4: Pkglint parse error in ShTokenizer.ShAtom at \"`\" (quoting=bd).",
+		"WARN: fuzzing.mk:4: Internal pkglint error in ShTokenizer.ShAtom at \"`\" (quoting=bd).",
 		"WARN: fuzzing.mk:4: Pkglint ShellLine.CheckShellCommand: parse error at []string{\"\"}",
 
-		"WARN: fuzzing.mk:5: Pkglint parse error in ShTokenizer.ShAtom at \"$`\" (quoting=bs).",
+		"WARN: fuzzing.mk:5: Internal pkglint error in ShTokenizer.ShAtom at \"$`\" (quoting=bs).",
 		"WARN: fuzzing.mk:5: Pkglint ShellLine.CheckShellCommand: parse error at []string{\"\"}",
-		"WARN: fuzzing.mk:5: Pkglint parse error in MkLine.Tokenize at \"$`\".",
+		"WARN: fuzzing.mk:5: Internal pkglint error in MkLine.Tokenize at \"$`\".",
 
 		"WARN: fuzzing.mk:6: Pkglint ShellLine.CheckShellCommand: parse error at []string{\"\"}",
 
-		"WARN: fuzzing.mk:7: Pkglint parse error in ShTokenizer.ShAtom at \"$|\" (quoting=db).",
+		"WARN: fuzzing.mk:7: Internal pkglint error in ShTokenizer.ShAtom at \"$|\" (quoting=db).",
 		"WARN: fuzzing.mk:7: Pkglint ShellLine.CheckShellCommand: parse error at []string{\"\"}",
-		"WARN: fuzzing.mk:7: Pkglint parse error in MkLine.Tokenize at \"$|\".",
+		"WARN: fuzzing.mk:7: Internal pkglint error in MkLine.Tokenize at \"$|\".",
 
-		"WARN: fuzzing.mk:8: Pkglint parse error in ShTokenizer.ShAtom at \"`\" (quoting=dbd).",
+		"WARN: fuzzing.mk:8: Internal pkglint error in ShTokenizer.ShAtom at \"`\" (quoting=dbd).",
 		"WARN: fuzzing.mk:8: Pkglint ShellLine.CheckShellCommand: parse error at []string{\"\"}",
 
 		"WARN: fuzzing.mk:9: Invoking subshells via $(...) is not portable enough.",
 
-		"WARN: fuzzing.mk:10: Pkglint parse error in ShTokenizer.ShAtom at \"`\" (quoting=S).",
+		"WARN: fuzzing.mk:10: Internal pkglint error in ShTokenizer.ShAtom at \"`\" (quoting=S).",
 		"WARN: fuzzing.mk:10: Invoking subshells via $(...) is not portable enough.",
 
-		"WARN: fuzzing.mk:11: Pkglint parse error in ShTokenizer.ShAtom at \"$)\" (quoting=Ss).",
+		"WARN: fuzzing.mk:11: Internal pkglint error in ShTokenizer.ShAtom at \"$)\" (quoting=Ss).",
 		"WARN: fuzzing.mk:11: Invoking subshells via $(...) is not portable enough.",
-		"WARN: fuzzing.mk:11: Pkglint parse error in MkLine.Tokenize at \"$)\".",
+		"WARN: fuzzing.mk:11: Internal pkglint error in MkLine.Tokenize at \"$)\".",
 
 		"WARN: fuzzing.mk:12: Pkglint ShellLine.CheckShellCommand: parse error at []string{\"\"}")
 }

@@ -1,4 +1,4 @@
-package main
+package pkglint
 
 import "netbsd.org/pkglint/textproc"
 

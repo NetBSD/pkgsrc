@@ -1,4 +1,4 @@
-package main
+package pkglint
 
 import (
 	"fmt"
@@ -116,7 +116,7 @@ func mustMatch(s string, re regex.Pattern) []string {
 	if m := G.res.Match(s, re); m != nil {
 		return m
 	}
-	panic(fmt.Sprintf("mustMatch %q %q", s, re))
+	panic(sprintf("mustMatch %q %q", s, re))
 }
 
 func isEmptyDir(filename string) bool {

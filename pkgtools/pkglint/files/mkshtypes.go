@@ -1,4 +1,4 @@
-package main
+package pkglint
 
 import (
 	"netbsd.org/pkglint/regex"
@@ -7,10 +7,14 @@ import (
 
 // MkShList is a list of shell commands, separated by newlines or semicolons.
 //
-// Example: cd $dir && echo "In $dir"; cd ..; ls -l
+// Example:
+//  cd $dir && echo "In $dir"; cd ..; ls -l
 type MkShList struct {
-	AndOrs     []*MkShAndOr
-	Separators []MkShSeparator // One less entry than in AndOrs.
+	AndOrs []*MkShAndOr
+
+	// The separators after each AndOr.
+	// There may be one less entry than in AndOrs.
+	Separators []MkShSeparator
 }
 
 func NewMkShList() *MkShList {
@@ -30,7 +34,11 @@ func (list *MkShList) AddSeparator(separator MkShSeparator) *MkShList {
 // MkShAndOr is a group of commands that are connected with && or ||
 // conditions.
 //
-// Example: cd $dir && echo "In $dir" || echo "Cannot cd into $dir"
+// The operators && and || have the same precedence and are evaluated
+// strictly from left to right.
+//
+// Example:
+//  cd $dir && echo "In $dir" || echo "Cannot cd into $dir"
 type MkShAndOr struct {
 	Pipes []*MkShPipeline
 	Ops   []string // Each element is either "&&" or "||"
@@ -54,7 +62,7 @@ type MkShPipeline struct {
 	Cmds    []*MkShCommand
 }
 
-func NewMkShPipeline(negated bool, cmds ...*MkShCommand) *MkShPipeline {
+func NewMkShPipeline(negated bool, cmds []*MkShCommand) *MkShPipeline {
 	return &MkShPipeline{negated, cmds}
 }
 
@@ -65,9 +73,10 @@ func (pipe *MkShPipeline) Add(cmd *MkShCommand) *MkShPipeline {
 
 // MkShCommand is a simple or compound shell command.
 //
-// Example: LC_ALL=C sort */*.c > sorted
-// Example: dir() { ls -l "$@"; }
-// Example: { echo "first"; echo "second"; }
+// Examples:
+//  LC_ALL=C sort */*.c > sorted
+//  dir() { ls -l "$@"; }
+//  { echo "first"; echo "second"; }
 type MkShCommand struct {
 	Simple    *MkShSimpleCommand
 	Compound  *MkShCompoundCommand
@@ -77,64 +86,70 @@ type MkShCommand struct {
 
 // MkShCompoundCommand is a group of commands.
 //
-// Example: { echo "first"; echo "second"; }
-// Example: for f in *.c; do compile "$f"; done
-// Example: if [ -f "$file" ]; then echo "It exists"; fi
-// Example: while sleep 1; do printf .; done
+// Examples:
+//  { echo "first"; echo "second"; }
+//  for f in *.c; do compile "$f"; done
+//  if [ -f "$file" ]; then echo "It exists"; fi
+//  while sleep 1; do printf .; done
 type MkShCompoundCommand struct {
 	Brace    *MkShList
 	Subshell *MkShList
-	For      *MkShForClause
-	Case     *MkShCaseClause
-	If       *MkShIfClause
-	Loop     *MkShLoopClause
+	For      *MkShFor
+	Case     *MkShCase
+	If       *MkShIf
+	Loop     *MkShLoop
 }
 
-// MkShForClause is a "for" loop.
+// MkShFor is a "for" loop.
 //
-// Example: for f in *.c; do compile "$f"; done
-type MkShForClause struct {
+// Example:
+//  for f in *.c; do compile "$f"; done
+type MkShFor struct {
 	Varname string
 	Values  []*ShToken
 	Body    *MkShList
 }
 
-// MkShCaseClause is a "case" statement, including all its branches.
+// MkShCase is a "case" statement, including all its branches.
 //
-// Example: case $filename in *.c) echo "C source" ;; esac
-type MkShCaseClause struct {
+// Example:
+//  case $filename in *.c) echo "C source" ;; esac
+type MkShCase struct {
 	Word  *ShToken
 	Cases []*MkShCaseItem
 }
 
 // MkShCaseItem is one branch of a "case" statement.
 //
-// Example: *.c) echo "C source" ;;
+// Example:
+//  *.c) echo "C source" ;;
 type MkShCaseItem struct {
 	Patterns  []*ShToken
 	Action    *MkShList
 	Separator MkShSeparator
 }
 
-// MkShIfClause is a conditional statement, possibly having
+// MkShIf is a conditional statement, possibly having
 // many branches.
 //
-// Example: if [ -f "$file" ]; then echo "It exists"; fi
-type MkShIfClause struct {
+// Example:
+//  if [ -f "$file" ]; then echo "It exists"; fi
+type MkShIf struct {
 	Conds   []*MkShList
 	Actions []*MkShList
 	Else    *MkShList
 }
 
-func (cl *MkShIfClause) Prepend(cond *MkShList, action *MkShList) {
+func (cl *MkShIf) Prepend(cond *MkShList, action *MkShList) {
 	cl.Conds = append([]*MkShList{cond}, cl.Conds...)
 	cl.Actions = append([]*MkShList{action}, cl.Actions...)
 }
 
-// MkShLoopClause is a "while" or "until" loop.
+// MkShLoop is a "while" or "until" loop.
 //
-// Example: while sleep 1; do printf .; done
-type MkShLoopClause struct {
+// Example:
+//  while sleep 1; do printf .; done
+type MkShLoop struct {
 	Cond   *MkShList
 	Action *MkShList
 	Until  bool
@@ -142,7 +157,8 @@ type MkShLoopClause struct {
 
 // MkShFunctionDefinition is the definition of a shell function.
 //
-// Example: dir() { ls -l "$@"; }
+// Example:
+//  dir() { ls -l "$@"; }
 type MkShFunctionDefinition struct {
 	Name string
 	Body *MkShCompoundCommand
@@ -151,12 +167,25 @@ type MkShFunctionDefinition struct {
 // MkShSimpleCommand is a shell command that does not involve any
 // pipeline or conditionals.
 //
-// Example: LC_ALL=C sort */*.c > sorted
+// Example:
+//  LC_ALL=C sort */*.c > sorted
 type MkShSimpleCommand struct {
 	Assignments  []*ShToken
 	Name         *ShToken
 	Args         []*ShToken
 	Redirections []*MkShRedirection
+}
+
+// StrCommand is structurally similar to MkShSimpleCommand, but all
+// components are converted to strings to allow for simpler checks,
+// especially for analyzing command line options.
+//
+// Example:
+//  LC_ALL=C sort */*.c > sorted
+type StrCommand struct {
+	Assignments []string
+	Name        string
+	Args        []string
 }
 
 func NewStrCommand(cmd *MkShSimpleCommand) *StrCommand {
@@ -174,17 +203,6 @@ func NewStrCommand(cmd *MkShSimpleCommand) *StrCommand {
 		strcmd.Args[i] = arg.MkText
 	}
 	return &strcmd
-}
-
-// StrCommand is structurally similar to MkShSimpleCommand, but all
-// components are converted to strings to allow for simpler checks,
-// especially for analyzing command line options.
-//
-// Example: LC_ALL=C sort */*.c > sorted
-type StrCommand struct {
-	Assignments []string
-	Name        string
-	Args        []string
 }
 
 // HasOption checks whether one of the arguments is exactly the given opt.
@@ -222,14 +240,16 @@ func (c *StrCommand) String() string {
 
 // MkShRedirection is a single file descriptor redirection.
 //
-// Example: > sorted
-// Example: 2>&1
+// Examples:
+//  > sorted
+//  2>&1
 type MkShRedirection struct {
 	Fd     int      // Or -1
 	Op     string   // See io_file in shell.y for possible values
 	Target *ShToken // The filename or &fd
 }
 
+// MkShSeparator is one of ; & newline.
 type MkShSeparator uint8
 
 const (

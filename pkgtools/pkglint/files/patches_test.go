@@ -1,4 +1,4 @@
-package main
+package pkglint
 
 import "gopkg.in/check.v1"
 
@@ -9,8 +9,11 @@ func (s *Suite) Test_ChecklinesPatch__with_comment(c *check.C) {
 	lines := t.NewLines("patch-WithComment",
 		RcsID,
 		"",
-		"Text",
-		"Text",
+		"This part describes:",
+		"* the purpose of the patch,",
+		"* to which operating systems it applies",
+		"* either why it is specific to pkgsrc",
+		"* or where it has been reported upstream",
 		"",
 		"--- file.orig",
 		"+++ file",
@@ -272,6 +275,10 @@ func (s *Suite) Test_ChecklinesPatch__two_patched_files(c *check.C) {
 	lines := t.NewLines("patch-aa",
 		RcsID,
 		"",
+		"A single patch file can apply to more than one file at a time.",
+		"It shouldn't though, to keep the relation between patch files",
+		"and patched files simple.",
+		"",
 		"--- oldfile",
 		"+++ newfile",
 		"@@ -1 +1 @@",
@@ -286,7 +293,6 @@ func (s *Suite) Test_ChecklinesPatch__two_patched_files(c *check.C) {
 	ChecklinesPatch(lines)
 
 	t.CheckOutputLines(
-		"ERROR: patch-aa:3: Each patch must be documented.",
 		"WARN: patch-aa: Contains patches for 2 files, should be only one.")
 }
 
@@ -480,7 +486,8 @@ func (s *Suite) Test_ChecklinesPatch__context_lines_with_tab_instead_of_space(c 
 	t.CheckOutputEmpty()
 }
 
-// Must not panic.
+// Before 2018-01-28, pkglint had panicked when checking an empty
+// patch file, as a slice index was out of bounds.
 func (s *Suite) Test_ChecklinesPatch__autofix_empty_patch(c *check.C) {
 	t := s.Init(c)
 
@@ -493,7 +500,8 @@ func (s *Suite) Test_ChecklinesPatch__autofix_empty_patch(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
-// Must not panic.
+// Before 2018-01-28, pkglint had panicked when checking an empty
+// patch file, as a slice index was out of bounds.
 func (s *Suite) Test_ChecklinesPatch__autofix_long_empty_patch(c *check.C) {
 	t := s.Init(c)
 
@@ -507,7 +515,7 @@ func (s *Suite) Test_ChecklinesPatch__autofix_long_empty_patch(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_ChecklinesPatch__crlf(c *check.C) {
+func (s *Suite) Test_ChecklinesPatch__crlf_autofix(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall", "--autofix")
@@ -524,6 +532,9 @@ func (s *Suite) Test_ChecklinesPatch__crlf(c *check.C) {
 
 	ChecklinesPatch(lines)
 
+	// To relieve the pkgsrc package maintainers from this boring work,
+	// the pkgsrc infrastructure could fix these issues before actually
+	// applying the patches.
 	t.CheckOutputLines(
 		"AUTOFIX: ~/patch-aa:7: Replacing \"\\r\\n\" with \"\\n\".")
 }
@@ -591,11 +602,6 @@ func (s *Suite) Test_ChecklinesPatch__invalid_line_in_hunk(c *check.C) {
 
 	ChecklinesPatch(lines)
 
-	// The first context line should start with a single space character,
-	// but that would mean trailing whitespace, so it may be left out.
-	// The last context line is omitted completely because it would also
-	// have trailing whitespace, and if that were removed, would be a
-	// trailing empty line.
 	t.CheckOutputLines(
 		"ERROR: ~/patch-aa:10: Invalid line in unified patch hunk: <<<<<<<<")
 }

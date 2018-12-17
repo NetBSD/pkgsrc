@@ -1,4 +1,4 @@
-package main
+package pkglint
 
 import (
 	"netbsd.org/pkglint/regex"
@@ -49,10 +49,10 @@ func (ck MkLineChecker) checkShellCommand() {
 		fix := mkline.Autofix()
 		fix.Notef("Shell programs should be indented with a single tab.")
 		fix.Explain(
-			"The first tab in the line marks the line as a shell command.  Since",
-			"every line of shell commands starts with a completely new shell",
-			"environment, there is no need to indent some of the commands, or to",
-			"use more horizontal space than necessary.")
+			"The first tab in the line marks the line as a shell command.",
+			"Since every line of shell commands starts with a completely new shell environment,",
+			"there is no need to indent some of the commands,",
+			"or to use more horizontal space than necessary.")
 		fix.ReplaceRegex(`^\t\t+`, "\t", 1)
 		fix.Apply()
 	}
@@ -83,8 +83,8 @@ func (ck MkLineChecker) checkInclude() {
 		G.Explain(
 			"To include portions of another Makefile, extract the common parts",
 			"and put them into a Makefile.common or a Makefile fragment called",
-			"module.mk or similar.  After that, both this one and the other",
-			"package should include the newly created file.")
+			"module.mk or similar.",
+			"After that, both this one and the other package should include the newly created file.")
 
 	case IsPrefs(includedFile):
 		if mkline.Basename == "buildlink3.mk" && includedFile == "../../mk/bsd.prefs.mk" {
@@ -267,14 +267,14 @@ func (ck MkLineChecker) checkDependencyRule(allowedTargets map[string]bool) {
 			// This is deliberate, see the explanation below.
 
 		} else if !allowedTargets[target] {
-			mkline.Warnf("Unusual target %q.", target)
+			mkline.Warnf("Undeclared target %q.", target)
 			G.Explain(
-				"If you want to define your own target, declare it like this:",
+				"To define a custom target in a package, declare it like this:",
 				"",
 				"\t.PHONY: my-target",
 				"",
-				"In the rare case that you actually want a file-based make(1)",
-				"target, write it like this:",
+				"To define a custom target that creates a file (should be rarely needed),",
+				"declare it like this:",
 				"",
 				"\t${.CURDIR}/my-file:")
 		}
@@ -351,10 +351,10 @@ func (ck MkLineChecker) checkVarassignPermissions() {
 		}
 		G.Explain(
 			"The allowed actions for a variable are determined based on the file",
-			"name in which the variable is used or defined.  The exact rules are",
+			"name in which the variable is used or defined.",
 			// FIXME: List the rules in this very explanation.
-			"hard-coded into pkglint.  If they seem to be incorrect, please ask",
-			"on the tech-pkg@NetBSD.org mailing list.")
+			"The exact rules are hard-coded into pkglint.",
+			"If they seem to be incorrect, please ask on the tech-pkg@NetBSD.org mailing list.")
 	}
 }
 
@@ -403,9 +403,10 @@ func (ck MkLineChecker) CheckVaruse(varuse *MkVarUse, vuc *VarUseContext) {
 			mkline.Warnf("The user-defined variable %s is used but not added to BUILD_DEFS.", varname)
 			G.Explain(
 				"When a pkgsrc package is built, many things can be configured by the",
-				"pkgsrc user in the mk.conf file.  All these configurations should be",
-				"recorded in the binary package so the package can be reliably",
-				"rebuilt.  The BUILD_DEFS variable contains a list of all these",
+				"pkgsrc user in the mk.conf file.",
+				"All these configurations should be recorded in the binary package",
+				"so the package can be reliably rebuilt.",
+				"The BUILD_DEFS variable contains a list of all these",
 				"user-settable variables, so please add your variable to it, too.")
 		}
 	}
@@ -558,10 +559,10 @@ func (ck MkLineChecker) checkVarusePermissions(varname string, vartype *Vartype,
 		}
 		G.Explain(
 			"The allowed actions for a variable are determined based on the file",
-			"name in which the variable is used or defined.  The exact rules are",
+			"name in which the variable is used or defined.",
 			// FIXME: List the rules in this very explanation.
-			"hard-coded into pkglint.  If they seem to be incorrect, please ask",
-			"on the tech-pkg@NetBSD.org mailing list.")
+			"The exact rules are hard-coded into pkglint.",
+			"If they seem to be incorrect, please ask on the tech-pkg@NetBSD.org mailing list.")
 	}
 }
 
@@ -595,15 +596,17 @@ func (ck MkLineChecker) warnVaruseToolLoadTime(varname string, tool *Tool) {
 	ck.MkLine.Warnf("The tool ${%s} cannot be used at load time.", varname)
 	G.Explain(
 		"To use a tool at load time, it must be declared in the package",
-		"Makefile by adding it to USE_TOOLS.  After that, bsd.prefs.mk must",
-		"be included.  Adding the tool to USE_TOOLS at any later time has",
-		"no effect, which means that the tool can only be used at run time.",
+		"Makefile by adding it to USE_TOOLS.",
+		"After that, bsd.prefs.mk must be included.",
+		"Adding the tool to USE_TOOLS at any later time has no effect,",
+		"which means that the tool can only be used at run time.",
 		"That's the rule for the package Makefiles.",
 		"",
 		"Since any other .mk file can be included from anywhere else, there",
 		"is no guarantee that the tool is properly defined for using it at",
-		"load time (see above for the tricky rules).  Therefore the tools can",
-		"only be used at run time, except in the package Makefile itself.")
+		"load time (see above for the tricky rules).",
+		"Therefore the tools can only be used at run time,",
+		"except in the package Makefile itself.")
 }
 
 func (ck MkLineChecker) warnVaruseLoadTime(varname string, isIndirect bool) {
@@ -612,10 +615,10 @@ func (ck MkLineChecker) warnVaruseLoadTime(varname string, isIndirect bool) {
 	if !isIndirect {
 		mkline.Warnf("%s should not be evaluated at load time.", varname)
 		G.Explain(
-			"Many variables, especially lists of something, get their values",
-			"incrementally.  Therefore it is generally unsafe to rely on their",
-			"value until it is clear that it will never change again.  This",
-			"point is reached when the whole package Makefile is loaded and",
+			"Many variables, especially lists of something, get their values incrementally.",
+			"Therefore it is generally unsafe to rely on their",
+			"value until it is clear that it will never change again.",
+			"This point is reached when the whole package Makefile is loaded and",
 			"execution of the shell commands starts; in some cases earlier.",
 			"",
 			"Additionally, when using the \":=\" operator, each $$ is replaced",
@@ -627,8 +630,8 @@ func (ck MkLineChecker) warnVaruseLoadTime(varname string, isIndirect bool) {
 	mkline.Warnf("%s should not be evaluated indirectly at load time.", varname)
 	G.Explain(
 		"The variable on the left-hand side may be evaluated at load time,",
-		"but the variable on the right-hand side may not.  Because of the",
-		"assignment in this line, the variable might be used indirectly",
+		"but the variable on the right-hand side may not.",
+		"Because of the assignment in this line, the variable might be used indirectly",
 		"at load time, before it is guaranteed to be properly initialized.")
 }
 
@@ -667,15 +670,16 @@ func (ck MkLineChecker) CheckVaruseShellword(varname string, vartype *Vartype, v
 					"",
 					"\thttps://mirror1.sf.net/ https://mirror2.sf.net/directory/",
 					"",
-					"The first URL is missing the directory.  To fix this, write",
+					"The first URL is missing the directory.",
+					"To fix this, write",
 					"\t${MASTER_SITE_SOURCEFORGE:=directory/}.",
 					"",
 					"Example: -l${LIBS} expands to",
 					"",
 					"\t-llib1 lib2",
 					"",
-					"The second library is missing the -l.  To fix this, write",
-					"${LIBS:@lib@-l${lib}@}.")
+					"The second library is missing the -l.",
+					"To fix this, write ${LIBS:S,^,-l,}.")
 			} else {
 				mkline.Warnf("The variable %s should be quoted as part of a shell word.", varname)
 				mkline.Explain(
@@ -952,10 +956,12 @@ func (ck MkLineChecker) checkVarassignSpecific() {
 		mkline.Notef("Please use \"# empty\", \"# none\" or \"# yes\" instead of \"# defined\".")
 		G.Explain(
 			"The value #defined says something about the state of the variable,",
-			"but not what that _means_.  In some cases a variable that is defined",
+			"but not what that _means_.",
+			"In some cases a variable that is defined",
 			"means \"yes\", in other cases it is an empty list (which is also",
 			"only the state of the variable), whose meaning could be described",
-			"with \"none\".  It is this meaning that should be described.")
+			"with \"none\".",
+			"It is this meaning that should be described.")
 	}
 
 	if varname == "DIST_SUBDIR" || varname == "WRKSRC" {
@@ -971,6 +977,7 @@ func (ck MkLineChecker) checkVarassignSpecific() {
 	}
 
 	if varname == "PKG_SKIP_REASON" && G.Mk.indentation.DependsOn("OPSYS") {
+		// TODO: Provide autofix for simple cases, like ".if ${OPSYS} == SunOS".
 		mkline.Notef("Consider setting NOT_FOR_PLATFORM instead of " +
 			"PKG_SKIP_REASON depending on ${OPSYS}.")
 	}
@@ -1000,10 +1007,11 @@ func (ck MkLineChecker) checkVarassignBsdPrefs() {
 	G.Explain(
 		"The ?= operator is used to provide a default value to a variable.",
 		"In pkgsrc, many variables can be set by the pkgsrc user in the",
-		"mk.conf file.  This file must be included explicitly.  If a ?=",
-		"operator appears before mk.conf has been included, it will not care",
-		"about the user's preferences, which can result in unexpected",
-		"behavior.",
+		"mk.conf file.",
+		"This file must be included explicitly.",
+		"If a ?= operator appears before mk.conf has been included,",
+		"it will not care about the user's preferences,",
+		"which can result in unexpected behavior.",
 		"",
 		"The easiest way to include the mk.conf file is by including the",
 		"bsd.prefs.mk file, which will take care of everything.")
@@ -1193,14 +1201,12 @@ func (ck MkLineChecker) checkDirectiveCondEmpty(varuse *MkVarUse) {
 	if matches(varname, `^\$.*:[MN]`) {
 		ck.MkLine.Warnf("The empty() function takes a variable name as parameter, not a variable expression.")
 		G.Explain(
-			"Instead of empty(${VARNAME:Mpattern}), you should write either",
-			"of the following:",
+			"Instead of empty(${VARNAME:Mpattern}), you should write either of the following:",
 			"",
 			"\tempty(VARNAME:Mpattern)",
 			"\t${VARNAME:Mpattern} == \"\"",
 			"",
-			"Instead of !empty(${VARNAME:Mpattern}), you should write either",
-			"of the following:",
+			"Instead of !empty(${VARNAME:Mpattern}), you should write either of the following:",
 			"",
 			"\t!empty(VARNAME:Mpattern)",
 			"\t${VARNAME:Mpattern}")
@@ -1234,9 +1240,8 @@ func (ck MkLineChecker) checkCompareVarStr(varname, op, value string) {
 	if varname == "PKGSRC_COMPILER" {
 		ck.MkLine.Warnf("Use ${PKGSRC_COMPILER:%s%s} instead of the %s operator.", ifelseStr(op == "==", "M", "N"), value, op)
 		G.Explain(
-			"The PKGSRC_COMPILER can be a list of chained compilers, e.g. \"ccache",
-			"distcc clang\".  Therefore, comparing it using == or != leads to",
-			"wrong results in these cases.")
+			"The PKGSRC_COMPILER can be a list of chained compilers, e.g. \"ccache distcc clang\".",
+			"Therefore, comparing it using == or != leads to wrong results in these cases.")
 	}
 }
 

@@ -1,8 +1,7 @@
-package main
+package pkglint
 
 import (
 	"bytes"
-	"fmt"
 	"io"
 	"netbsd.org/pkglint/histogram"
 	"path"
@@ -166,7 +165,7 @@ func (l *Logger) Diag(line Line, level *LogLevel, format string, args ...interfa
 
 	filename := line.Filename
 	linenos := line.Linenos()
-	msg := fmt.Sprintf(format, args...)
+	msg := sprintf(format, args...)
 	if !l.FirstTime(filename, linenos, msg) {
 		l.suppressDiag = false
 		return
@@ -208,9 +207,9 @@ func (l *Logger) Logf(level *LogLevel, filename, lineno, format, msg string) {
 	linenoSep := ifelseStr(effLineno != "", ":", "")
 	var diag string
 	if l.Opts.GccOutput {
-		diag = fmt.Sprintf("%s%s%s%s%s: %s\n", filename, linenoSep, effLineno, filenameSep, level.GccName, msg)
+		diag = sprintf("%s%s%s%s%s: %s\n", filename, linenoSep, effLineno, filenameSep, level.GccName, msg)
 	} else {
-		diag = fmt.Sprintf("%s%s%s%s%s: %s\n", level.TraditionalName, filenameSep, filename, linenoSep, effLineno, msg)
+		diag = sprintf("%s%s%s%s%s: %s\n", level.TraditionalName, filenameSep, filename, linenoSep, effLineno, msg)
 	}
 	out.Write(escapePrintable(diag))
 
