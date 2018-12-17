@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5264 2018/12/17 16:25:18 taca Exp $
+$NetBSD: CHANGES-2018,v 1.5265 2018/12/17 16:31:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7363,3 +7363,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/php-basercms to 3.0.16 [taca 2018-12-17]
 	Updated graphics/ruby-screengif to 0.0.3nb1 [taca 2018-12-17]
 	Updated devel/py-python-slugify to 1.2.6 [taca 2018-12-17]
+	Updated devel/transifex-client to 0.13.5 [taca 2018-12-17]
