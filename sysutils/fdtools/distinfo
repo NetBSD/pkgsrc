@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2018/05/28 12:00:39 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2018/12/17 17:04:38 schmonz Exp $
 
 SHA1 (fdtools-2015.03.28.tar.bz2) = 7bd1c9e067df8297e1f4bc430c33903899585aee
 RMD160 (fdtools-2015.03.28.tar.bz2) = d1bfed8c1718b5ec178cc763416f677f4cc26f0d
@@ -6,5 +6,6 @@ SHA512 (fdtools-2015.03.28.tar.bz2) = e6b5665869538758edd90876c1696d753aa5859e9d
 Size (fdtools-2015.03.28.tar.bz2) = 40057 bytes
 SHA1 (patch-conf-compile_defaults_host__compile.sh) = d30f146419e30cd717c299b8196918db3095f3e8
 SHA1 (patch-conf-compile_defaults_host__link.sh) = 77e80f0ed9adc0ead6f9afea9b76dbb630ff2ce0
+SHA1 (patch-src_.mkmed-data_src_prjlibs-c_standards.h) = aa91710e0b5610ce1b1c705d5837f876fb3afea5
 SHA1 (patch-src_recvfd.c) = 4fe086cae8fa9623e29954cb03ee5a63a72d25af
 SHA1 (patch-src_sigsched.c) = ed4cf2111ab65fb80f5cbcfd6aa0c49db12a845a
