@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.41 2018/11/10 15:29:01 schmonz Exp $
+$NetBSD: distinfo,v 1.42 2018/12/17 19:15:33 schmonz Exp $
 
-SHA1 (netqmail-1.06-destdir-20170716.patch) = 92b3fe539d7863792e951723e26f6cfb6062771a
-RMD160 (netqmail-1.06-destdir-20170716.patch) = bad1976ba87e0af934a50d02bd38eebb3b22cf03
-SHA512 (netqmail-1.06-destdir-20170716.patch) = 00dc4d90f52332784900d5c8b1142d5517d639115e1da4e1cf4880635d10107816981892f22847f682a71b7a15c348789bce20701d9bec20a2315c0fd1f2bf73
-Size (netqmail-1.06-destdir-20170716.patch) = 12871 bytes
+SHA1 (netqmail-1.06-destdir-20181217.patch) = b309f99d29af95358301ae6dde6b32c8db6c371a
+RMD160 (netqmail-1.06-destdir-20181217.patch) = e42312b05c6f5dbb6614bfffb17991e25a4518d0
+SHA512 (netqmail-1.06-destdir-20181217.patch) = 1cb02193f69930569c4c340c427d8e0002d1fb67b622ee8fd0fcbb273b5deca356fa2e0b11d44a2473cf2c083fc09d43bb3dfb70f22d284f262f2c2d6cf4221e
+Size (netqmail-1.06-destdir-20181217.patch) = 12726 bytes
 SHA1 (netqmail-1.06-qbiffutmpx-20170820.patch) = ebc33f028b12ef808d7dcaa05824cca06f7d27d4
 RMD160 (netqmail-1.06-qbiffutmpx-20170820.patch) = dd2d26902f5e12f6c318ad73cc01b1af07c855a3
 SHA512 (netqmail-1.06-qbiffutmpx-20170820.patch) = c2abcf345d242a42a72583fa85efc8fef37dd3f952407f5e6d3d46632c558ffb6909c60851abf23f113e712f902f7d82934cb07f79a75f511d6df48361a0972c

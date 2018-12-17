@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2018/12/16 23:46:44 schmonz Exp $
+# $NetBSD: Makefile,v 1.107 2018/12/17 19:15:33 schmonz Exp $
 #
 
 DISTNAME=		netqmail-1.06
@@ -159,7 +159,7 @@ SITES.${BIGDNS_PATCH}+=		${MASTER_SITE_LOCAL}
 PATCH_DIST_STRIP.${BIGDNS_PATCH}=-p1
 
 QMAILPATCHES+=			destdir:${DESTDIR_PATCH}
-DESTDIR_PATCH=			netqmail-1.06-destdir-20170716.patch
+DESTDIR_PATCH=			netqmail-1.06-destdir-20181217.patch
 PATCHFILES+=			${DESTDIR_PATCH}
 SITES.${DESTDIR_PATCH}=		https://schmonz.com/qmail/destdir/
 
