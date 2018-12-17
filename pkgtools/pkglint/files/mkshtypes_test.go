@@ -1,4 +1,4 @@
-package main
+package pkglint
 
 func (list *MkShList) AddSemicolon() *MkShList  { return list.AddSeparator(sepSemicolon) }
 func (list *MkShList) AddBackground() *MkShList { return list.AddSeparator(sepBackground) }
