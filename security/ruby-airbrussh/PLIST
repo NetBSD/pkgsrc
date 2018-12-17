@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/03/20 15:07:06 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/12/17 15:04:53 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rubocop.yml
@@ -18,8 +18,6 @@ ${GEM_LIBDIR}/appveyor.yml
 ${GEM_LIBDIR}/bin/console
 ${GEM_LIBDIR}/bin/setup
 ${GEM_LIBDIR}/bin/test_all.rb
-${GEM_LIBDIR}/demo.gif
-${GEM_LIBDIR}/formatting.png
 ${GEM_LIBDIR}/lib/airbrussh.rb
 ${GEM_LIBDIR}/lib/airbrussh/capistrano.rb
 ${GEM_LIBDIR}/lib/airbrussh/capistrano/tasks.rb
