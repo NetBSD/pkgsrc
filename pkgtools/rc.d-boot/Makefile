@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/12/16 05:41:01 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2018/12/17 03:03:47 schmonz Exp $
 #
 
 PKGNAME=		rc.d-boot-20181211
@@ -48,6 +48,8 @@ CONF_FILES+=		${PREFIX}/share/examples/${PKGBASE}/pkgsrc-rc.d-boot.service \
 .elif ${OPSYS} == "NetBSD" && exists(/etc/rc.d)
 ONLY_FOR_PLATFORM+=	${OPSYS}-*-*
 RCDBOOT_STYLE=		netbsd-native
+.else
+NOT_FOR_PLATFORM+=	${OPSYS}-*-*
 .endif
 
 INSTALLATION_DIRS=	sbin share/examples/${PKGBASE}
