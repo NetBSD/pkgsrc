@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2017/10/16 17:19:13 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/12/17 15:07:11 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.coveralls.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/.rubocop.yml
-${GEM_LIBDIR}/.ruby-version
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGES.md
@@ -21,6 +20,7 @@ ${GEM_LIBDIR}/lib/rbnacl.rb
 ${GEM_LIBDIR}/lib/rbnacl/aead/base.rb
 ${GEM_LIBDIR}/lib/rbnacl/aead/chacha20poly1305_ietf.rb
 ${GEM_LIBDIR}/lib/rbnacl/aead/chacha20poly1305_legacy.rb
+${GEM_LIBDIR}/lib/rbnacl/aead/xchacha20poly1305_ietf.rb
 ${GEM_LIBDIR}/lib/rbnacl/auth.rb
 ${GEM_LIBDIR}/lib/rbnacl/boxes/curve25519xsalsa20poly1305.rb
 ${GEM_LIBDIR}/lib/rbnacl/boxes/curve25519xsalsa20poly1305/private_key.rb
@@ -55,6 +55,7 @@ ${GEM_LIBDIR}/lib/rbnacl/version.rb
 ${GEM_LIBDIR}/rbnacl.gemspec
 ${GEM_LIBDIR}/spec/rbnacl/aead/chacha20poly1305_ietf_spec.rb
 ${GEM_LIBDIR}/spec/rbnacl/aead/chacha20poly1305_legacy_spec.rb
+${GEM_LIBDIR}/spec/rbnacl/aead/xchacha20poly1305_ietf_spec.rb
 ${GEM_LIBDIR}/spec/rbnacl/authenticators/poly1305_spec.rb
 ${GEM_LIBDIR}/spec/rbnacl/boxes/curve25519xsalsa20poly1305/private_key_spec.rb
 ${GEM_LIBDIR}/spec/rbnacl/boxes/curve25519xsalsa20poly1305/public_key_spec.rb
@@ -76,6 +77,7 @@ ${GEM_LIBDIR}/spec/rbnacl/util_spec.rb
 ${GEM_LIBDIR}/spec/shared/aead.rb
 ${GEM_LIBDIR}/spec/shared/authenticator.rb
 ${GEM_LIBDIR}/spec/shared/box.rb
+${GEM_LIBDIR}/spec/shared/hmac.rb
 ${GEM_LIBDIR}/spec/shared/key_equality.rb
 ${GEM_LIBDIR}/spec/shared/serializable.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
