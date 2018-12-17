@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2018/04/14 00:56:24 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2018/12/17 16:15:28 schmonz Exp $
 
 SHA1 (qmail-autoresponder-2.0.tar.gz) = 623e44450c3886fbd96d155d1bee3227f5c3fe8d
 RMD160 (qmail-autoresponder-2.0.tar.gz) = d2af01d082cf087bf6c1fae3ee1c4b834b089ec7
 SHA512 (qmail-autoresponder-2.0.tar.gz) = d1223b65453cb7c88de5b22a20a961441810e6db1d80ca976599b88cc5771602a678599354b11586e56273c02502b621cfffb610e9ff33632e4a7d7c28766ccb
 Size (qmail-autoresponder-2.0.tar.gz) = 35463 bytes
 SHA1 (patch-Makefile) = 6db92ac78fb8c498436264f1fb88213a8fec2c86
-SHA1 (patch-options.c) = b232156cf689d4ec1a1a98709c6dc283dff4bcc9
+SHA1 (patch-options.c) = 1939bb2811aa81b48702d02acebe40e06687609f
