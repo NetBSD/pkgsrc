@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2017/07/26 02:02:23 schmonz Exp $
+$NetBSD: distinfo,v 1.8 2018/12/17 02:33:13 schmonz Exp $
 
 SHA1 (ezmlm-0.53.tar.gz) = 3a7b618737fed8b774bec69c272d70f4142c1e30
 RMD160 (ezmlm-0.53.tar.gz) = 6d366de2d7028a984ba454f1bec9d2d9f495c88b
@@ -8,6 +8,7 @@ SHA1 (patch-MAN) = df107f569c8d67b0a379c108153ea91ba97283e4
 SHA1 (patch-Makefile) = 7ad560d4005e737fb97166e89114a72eb65bbb82
 SHA1 (patch-ezmlm-manage.c) = 727d313baa5c38e784096fb9fb3354e53d0338d9
 SHA1 (patch-ezmlm-return.c) = a3af924b10cc61b703abe2b10f572292505325c3
+SHA1 (patch-fork.h2) = 1d3f5f8ae8eb0cfd5009e4e584b7bf43ddef8c9f
 SHA1 (patch-log.c) = 1b155a4d3a36d23c2bdbc0b9ecd755f68b7ae9ca
 SHA1 (patch-log.h) = ef7f4795b7a6d14a8038c06300c738c76a3cdf4f
 SHA1 (patch-readwrite.h) = 5b64a802b1d4491ed9e64cde42fe04703b410d6e
