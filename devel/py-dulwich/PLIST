@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.13 2018/07/09 07:53:23 adam Exp $
-bin/dul-receive-pack${PYVERSSUFFIX}
-bin/dul-upload-pack${PYVERSSUFFIX}
-bin/dulwich${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.14 2018/12/17 13:46:16 adam Exp $
+bin/dul-receive-pack-${PYVERSSUFFIX}
+bin/dul-upload-pack-${PYVERSSUFFIX}
+bin/dulwich-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt.~1~
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt.~2~
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
@@ -35,6 +37,7 @@ ${PYSITELIB}/dulwich/client.pyo
 ${PYSITELIB}/dulwich/config.py
 ${PYSITELIB}/dulwich/config.pyc
 ${PYSITELIB}/dulwich/config.pyo
+${PYSITELIB}/dulwich/contrib/README.md
 ${PYSITELIB}/dulwich/contrib/__init__.py
 ${PYSITELIB}/dulwich/contrib/__init__.pyc
 ${PYSITELIB}/dulwich/contrib/__init__.pyo
