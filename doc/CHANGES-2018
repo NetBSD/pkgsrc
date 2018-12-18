@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5279 2018/12/18 17:08:39 nia Exp $
+$NetBSD: CHANGES-2018,v 1.5280 2018/12/18 22:30:43 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7381,3 +7381,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Added emulators/libretro-beetle-psx-hw version 20180808 [nia 2018-12-18]
 	Updated x11/x11vnc to 0.9.15 [tnn 2018-12-18]
 	Updated emulators/mednafen to 1.21.3 [nia 2018-12-18]
+	Updated net/youtube-dl to 20181217 [leot 2018-12-18]
+	Updated net/youtube-dl to 20181217 [leot 2018-12-18]
