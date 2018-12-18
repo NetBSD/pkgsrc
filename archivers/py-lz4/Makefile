@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2018/11/05 09:22:38 adam Exp $
+# $NetBSD: Makefile,v 1.22 2018/12/18 12:02:34 adam Exp $
 
-DISTNAME=	lz4-2.1.2
+DISTNAME=	lz4-2.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lz4/}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://github.com/python-lz4/python-lz4
 COMMENT=	Python LZ4 binding
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 BUILD_DEPENDS+=	${PYPKGPREFIX}-pkgconfig-[0-9]*:../../devel/py-pkgconfig
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
