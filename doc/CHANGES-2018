@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5272 2018/12/18 09:25:16 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5273 2018/12/18 09:58:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7371,3 +7371,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/z3 to 4.8.3 [kamil 2018-12-18]
 	Updated math/py-z3 to 4.8.3 [kamil 2018-12-18]
 	Updated devel/nasm to 2.14 [adam 2018-12-18]
+	Updated x11/qt5 to 5.12.0 [adam 2018-12-18]
