@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5267 2018/12/17 20:34:51 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.5268 2018/12/18 00:57:05 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7366,3 +7366,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/transifex-client to 0.13.5 [taca 2018-12-17]
 	Updated textproc/ruby-xpath to 3.2.0 [jperkin 2018-12-17]
 	Added sysutils/nnn version 2.1 [bsiegert 2018-12-17]
+	Updated emulators/libretro-snes9x to 1.58 [nia 2018-12-18]
