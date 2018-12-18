@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.3 2018/03/13 00:36:04 khorben Exp $
+# $NetBSD: Makefile.common,v 1.4 2018/12/18 06:46:39 kamil Exp $
 #
 # used by math/py-z3/Makefile
 # used by math/z3/Makefile
 
-DISTNAME=	z3-4.5.0
+DISTNAME=	z3-4.8.3
 GITHUB_TAG=	${DISTNAME}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Z3Prover/}
@@ -20,7 +20,5 @@ USE_LANGUAGES=	c c++
 BUILD_DIRS=	build
 
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
-CONFIGURE_ARGS+=	--destdir=${DESTDIR}
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
 .include "../../lang/python/tool.mk"
