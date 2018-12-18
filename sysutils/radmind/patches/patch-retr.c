@@ -1,4 +1,6 @@
-$NetBSD: patch-retr.c,v 1.1 2014/01/08 11:54:04 hauke Exp $
+$NetBSD: patch-retr.c,v 1.2 2018/12/18 14:16:18 hauke Exp $
+
+Remove stale extern declaration
 
 --- retr.c.orig	2010-12-13 03:42:49.000000000 +0000
 +++ retr.c
