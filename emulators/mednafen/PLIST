@@ -1,9 +1,28 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:51:06 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/12/18 17:08:20 nia Exp $
 bin/mednafen
-@comment belongs to libiconv: lib/charset.alias
+share/doc/mednafen/cdplay.html
+share/doc/mednafen/cheat.html
 share/doc/mednafen/debugger.html
+share/doc/mednafen/gb.html
+share/doc/mednafen/gba.html
+share/doc/mednafen/gg.html
+share/doc/mednafen/lynx.html
+share/doc/mednafen/md.html
 share/doc/mednafen/mednafen.html
+share/doc/mednafen/nes.html
 share/doc/mednafen/netplay.html
+share/doc/mednafen/ngp.html
+share/doc/mednafen/pce.html
+share/doc/mednafen/pce_fast.html
+share/doc/mednafen/pcfx.html
+share/doc/mednafen/psx.html
+share/doc/mednafen/sms.html
+share/doc/mednafen/snes.html
+share/doc/mednafen/snes_faust.html
+share/doc/mednafen/ss.html
+share/doc/mednafen/ssfplay.html
+share/doc/mednafen/vb.html
+share/doc/mednafen/wswan.html
 share/locale/de/LC_MESSAGES/mednafen.mo
 share/locale/es/LC_MESSAGES/mednafen.mo
 share/locale/ru/LC_MESSAGES/mednafen.mo
