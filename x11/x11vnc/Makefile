@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.75 2018/11/14 22:22:51 kleink Exp $
+# $NetBSD: Makefile,v 1.76 2018/12/18 15:53:46 tnn Exp $
 #
 
-DISTNAME=	x11vnc-0.9.13
-PKGREVISION=	37
+DISTNAME=	x11vnc-0.9.15
 CATEGORIES=	x11 net
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libvncserver/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=LibVNC/}
+GITHUB_PROJECT=	x11vnc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.karlrunge.com/x11vnc/
 COMMENT=	VNC server for real X displays
 LICENSE=	gnu-gpl-v2
 
+USE_TOOLS+=	autoconf automake autoreconf gmake pkg-config
 GNU_CONFIGURE=	yes
-
-CONFIGURE_ARGS+=	--with-system-libvncserver
 
 PTHREAD_AUTO_VARS=	yes
 SUBST_CLASSES+=		pthread
@@ -23,8 +22,8 @@ SUBST_SED.pthread=	-e 's|-lpthread||g'
 
 .include "options.mk"
 
-BUILD_DIRS=	x11vnc
-INSTALL_DIRS=	x11vnc classes
+pre-configure:
+	cd ${WRKSRC} && autoreconf -vif
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../net/libvncserver/buildlink3.mk"
