@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2018/12/11 10:15:55 abs Exp $
+# $NetBSD: Makefile,v 1.119 2018/12/18 06:14:08 kamil Exp $
 
 DISTNAME=	icu4c-63_1-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
@@ -128,6 +128,14 @@ SUBST_FILES.icu-config=	${DESTDIR}${PREFIX}/bin/icu-config
 SUBST_SED.icu-config+=	-e '/^ICUUC_FILE=/ s/libdir/bindir/'
 SUBST_SED.icu-config+=	-e 's/l$${LIBICU}/l$${ICUPREFIX}/g'
 SUBST_SED.icu-config+=	-e '/l$${ICUPREFIX}/ s/$${ICULIBSUFFIX_VERSION}//g'
+.endif
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+# The -faddrsig flag does not make libraries compatible with GNU strip(1)
+CWRAPPERS_APPEND.cxx+=	-fno-addrsig
+CWRAPPERS_APPEND.cc+=	-fno-addrsig
+_WRAP_EXTRA_ARGS.CXX+=	-fno-addrsig
+_WRAP_EXTRA_ARGS.CC+=	-fno-addrsig
 .endif
 
 .include "../../mk/bsd.pkg.mk"
