@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2018/10/01 17:44:48 adam Exp $
+$NetBSD: distinfo,v 1.8 2018/12/18 09:57:19 adam Exp $
 
-SHA1 (qtsensors-everywhere-src-5.11.2.tar.xz) = 2cd1a77d82ef024650caae51c5c6d7b531b15494
-RMD160 (qtsensors-everywhere-src-5.11.2.tar.xz) = d37f87d9828a553918bc706dfdc161b6fa389ef0
-SHA512 (qtsensors-everywhere-src-5.11.2.tar.xz) = 561129563cdfb0990539cd04ba1b6f0aee884007a801a4cb0fd4dd46aac2b58245ed919b23fac3d484d01f93ee428be3d4b8896a93af18acbce73e199a58ba80
-Size (qtsensors-everywhere-src-5.11.2.tar.xz) = 2028412 bytes
+SHA1 (qtsensors-everywhere-src-5.12.0.tar.xz) = 4a2bccca1982f1c5902ce20f550ce658aebecccc
+RMD160 (qtsensors-everywhere-src-5.12.0.tar.xz) = a21cb60c341403c548eebcdd3d804c23a26d367c
+SHA512 (qtsensors-everywhere-src-5.12.0.tar.xz) = f8b6777202e5c70fb529005a31a63025df317d70000394b8bf0f765d2657bcdade1a17ef1061dc28abb0b70845b56d6b74a2ea662a260590b6f778a9fd9708d1
+Size (qtsensors-everywhere-src-5.12.0.tar.xz) = 2031092 bytes

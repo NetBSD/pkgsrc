@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/06/19 07:21:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/12/18 09:57:19 adam Exp $
 lib/pkgconfig/Qt5Designer.pc
 lib/pkgconfig/Qt5Help.pc
 lib/pkgconfig/Qt5UiTools.pc
@@ -14,11 +14,10 @@ qt5/bin/lupdate
 ${PLIST.mac}qt5/bin/macchangeqt
 ${PLIST.mac}qt5/bin/macdeployqt
 qt5/bin/pixeltool
-qt5/bin/qcollectiongenerator
 qt5/bin/qdbus
 qt5/bin/qdbusviewer
+qt5/bin/qdistancefieldgenerator
 qt5/bin/qdoc
-qt5/bin/qhelpconverter
 qt5/bin/qhelpgenerator
 qt5/bin/qtattributionsscanner
 qt5/bin/qtdiag
@@ -202,11 +201,8 @@ qt5/include/QtDesignerComponents/QtDesignerComponentsDepends
 qt5/include/QtDesignerComponents/QtDesignerComponentsVersion
 qt5/include/QtDesignerComponents/qtdesignercomponentsversion.h
 qt5/include/QtHelp/${PKGVERSION}/QtHelp/private/qhelpcollectionhandler_p.h
-qt5/include/QtHelp/${PKGVERSION}/QtHelp/private/qhelpdatainterface_p.h
 qt5/include/QtHelp/${PKGVERSION}/QtHelp/private/qhelpdbreader_p.h
 qt5/include/QtHelp/${PKGVERSION}/QtHelp/private/qhelpengine_p.h
-qt5/include/QtHelp/${PKGVERSION}/QtHelp/private/qhelpgenerator_p.h
-qt5/include/QtHelp/${PKGVERSION}/QtHelp/private/qhelpprojectdata_p.h
 qt5/include/QtHelp/${PKGVERSION}/QtHelp/private/qhelpsearchindexreader_default_p.h
 qt5/include/QtHelp/${PKGVERSION}/QtHelp/private/qhelpsearchindexreader_p.h
 qt5/include/QtHelp/${PKGVERSION}/QtHelp/private/qhelpsearchindexwriter_default_p.h
@@ -268,17 +264,17 @@ qt5/lib/libQt5Designer.prl
 qt5/lib/libQt5Designer.so
 qt5/lib/libQt5Designer.so.${PKGVERSION}
 qt5/lib/libQt5Designer.so.5
-qt5/lib/libQt5Designer.so.5.11
+qt5/lib/libQt5Designer.so.5.12
 qt5/lib/libQt5DesignerComponents.prl
 qt5/lib/libQt5DesignerComponents.so
 qt5/lib/libQt5DesignerComponents.so.${PKGVERSION}
 qt5/lib/libQt5DesignerComponents.so.5
-qt5/lib/libQt5DesignerComponents.so.5.11
+qt5/lib/libQt5DesignerComponents.so.5.12
 qt5/lib/libQt5Help.prl
 qt5/lib/libQt5Help.so
 qt5/lib/libQt5Help.so.${PKGVERSION}
 qt5/lib/libQt5Help.so.5
-qt5/lib/libQt5Help.so.5.11
+qt5/lib/libQt5Help.so.5.12
 qt5/lib/libQt5UiTools.a
 qt5/lib/libQt5UiTools.prl
 qt5/lib/pkgconfig/Qt5Designer.pc
