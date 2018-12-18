@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5274 2018/12/18 10:22:29 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5275 2018/12/18 11:25:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7374,3 +7374,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/qt5 to 5.12.0 [adam 2018-12-18]
 	Updated net/py-responses to 0.10.5 [adam 2018-12-18]
 	Updated devel/py-typed-ast to 1.1.1 [adam 2018-12-18]
+	Updated devel/py-dogpile-cache to 0.7.1 [adam 2018-12-18]
