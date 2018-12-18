@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2018/12/18 15:50:48 nia Exp $
+# $NetBSD: Makefile.common,v 1.2 2018/12/18 16:12:13 nia Exp $
 
 # used by emulators/libretro-beetle-psx-hw/Makefile
 # used by emulators/libretro-beetle-psx/Makefile
@@ -10,7 +10,6 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	beetle-psx-libretro
 GITHUB_TAG=	7bb007de15b2f40a880b788ebf47a400c90827d9
 
-HOMEPAGE=	https://docs.libretro.com/library/beetle_psx/
 LICENSE=	gnu-gpl-v2
 
 DISTINFO_FILE=	${.CURDIR}/../../emulators/libretro-beetle-psx/distinfo
