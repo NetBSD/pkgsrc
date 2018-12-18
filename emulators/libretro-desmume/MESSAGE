@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2018/08/11 12:57:23 nia Exp $
-
-This package is not PaX MPROTECT-safe, because of its just-in-time
-compiler.
-
-MPROTECT must be disabled for RetroArch for this core to be usable.
-
-===========================================================================
