@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.9 2018/11/13 09:34:47 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/12/18 09:57:18 adam Exp $
 lib/pkgconfig/Qt5Location.pc
 lib/pkgconfig/Qt5Positioning.pc
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/error_messages_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/locationvaluetypehelper_p.h
-qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/mapitemviewdelegateincubator_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qabstractgeotilecache_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qcache3q_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qdeclarativecategory_p.h
@@ -15,6 +14,7 @@ qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qdeclarativegeomap_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qdeclarativegeomapcopyrightsnotice_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qdeclarativegeomapitembase_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qdeclarativegeomapitemgroup_p.h
+qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qdeclarativegeomapitemtransitionmanager_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qdeclarativegeomapitemview_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qdeclarativegeomapparameter_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qdeclarativegeomapquickitem_p.h
@@ -126,6 +126,7 @@ qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qplaceratings_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qplacereply_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qplaceresult_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qplacereview_p.h
+qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qplacesearchrequest_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qplacesearchresult_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qplacesupplier_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/qplaceuser_p.h
@@ -138,6 +139,7 @@ qt5/include/QtLocation/QGeoCodingManager
 qt5/include/QtLocation/QGeoCodingManagerEngine
 qt5/include/QtLocation/QGeoManeuver
 qt5/include/QtLocation/QGeoRoute
+qt5/include/QtLocation/QGeoRouteLeg
 qt5/include/QtLocation/QGeoRouteReply
 qt5/include/QtLocation/QGeoRouteRequest
 qt5/include/QtLocation/QGeoRouteSegment
@@ -284,6 +286,8 @@ qt5/include/QtPositioning/qtpositioningversion.h
 qt5/include/QtPositioningQuick/${PKGVERSION}/QtPositioningQuick/private/qdeclarativeposition_p.h
 qt5/include/QtPositioningQuick/${PKGVERSION}/QtPositioningQuick/private/qdeclarativepositionsource_p.h
 qt5/include/QtPositioningQuick/${PKGVERSION}/QtPositioningQuick/private/qpositioningquickglobal_p.h
+qt5/include/QtPositioningQuick/${PKGVERSION}/QtPositioningQuick/private/qquickgeocoordinateanimation_p.h
+qt5/include/QtPositioningQuick/${PKGVERSION}/QtPositioningQuick/private/qquickgeocoordinateanimation_p_p.h
 qt5/include/QtPositioningQuick/QtPositioningQuick
 qt5/include/QtPositioningQuick/QtPositioningQuickDepends
 qt5/include/QtPositioningQuick/QtPositioningQuickVersion
@@ -299,6 +303,7 @@ qt5/lib/cmake/Qt5Location/Qt5Location_QGeoServiceProviderFactoryOsm.cmake
 qt5/lib/cmake/Qt5Positioning/Qt5PositioningConfig.cmake
 qt5/lib/cmake/Qt5Positioning/Qt5PositioningConfigVersion.cmake
 qt5/lib/cmake/Qt5Positioning/Qt5Positioning_QGeoPositionInfoSourceFactoryGeoclue.cmake
+qt5/lib/cmake/Qt5Positioning/Qt5Positioning_QGeoPositionInfoSourceFactoryGeoclue2.cmake
 qt5/lib/cmake/Qt5Positioning/Qt5Positioning_QGeoPositionInfoSourceFactoryPoll.cmake
 qt5/lib/cmake/Qt5Positioning/Qt5Positioning_QGeoPositionInfoSourceFactorySerialNmea.cmake
 qt5/lib/cmake/Qt5PositioningQuick/Qt5PositioningQuickConfig.cmake
@@ -307,17 +312,17 @@ qt5/lib/libQt5Location.prl
 qt5/lib/libQt5Location.so
 qt5/lib/libQt5Location.so.${PKGVERSION}
 qt5/lib/libQt5Location.so.5
-qt5/lib/libQt5Location.so.5.11
+qt5/lib/libQt5Location.so.5.12
 qt5/lib/libQt5Positioning.prl
 qt5/lib/libQt5Positioning.so
 qt5/lib/libQt5Positioning.so.${PKGVERSION}
 qt5/lib/libQt5Positioning.so.5
-qt5/lib/libQt5Positioning.so.5.11
+qt5/lib/libQt5Positioning.so.5.12
 qt5/lib/libQt5PositioningQuick.prl
-qt5/lib/libQt5PositioningQuick.so.${PKGVERSION}
 qt5/lib/libQt5PositioningQuick.so
+qt5/lib/libQt5PositioningQuick.so.${PKGVERSION}
 qt5/lib/libQt5PositioningQuick.so.5
-qt5/lib/libQt5PositioningQuick.so.5.11
+qt5/lib/libQt5PositioningQuick.so.5.12
 qt5/lib/pkgconfig/Qt5Location.pc
 qt5/lib/pkgconfig/Qt5Positioning.pc
 qt5/lib/pkgconfig/Qt5PositioningQuick.pc
@@ -333,6 +338,7 @@ qt5/plugins/geoservices/libqtgeoservices_mapbox.so
 qt5/plugins/geoservices/libqtgeoservices_nokia.so
 qt5/plugins/geoservices/libqtgeoservices_osm.so
 qt5/plugins/position/libqtposition_geoclue.so
+qt5/plugins/position/libqtposition_geoclue2.so
 qt5/plugins/position/libqtposition_positionpoll.so
 qt5/plugins/position/libqtposition_serialnmea.so
 qt5/qml/Qt/labs/location/liblocationlabsplugin.so
