@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/03/13 00:31:16 khorben Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/12/18 06:46:39 kamil Exp $
 bin/z3
 include/z3++.h
 include/z3.h
@@ -7,12 +7,13 @@ include/z3_api.h
 include/z3_ast_containers.h
 include/z3_fixedpoint.h
 include/z3_fpa.h
-include/z3_interp.h
 include/z3_macros.h
 include/z3_optimization.h
 include/z3_polynomial.h
 include/z3_rcf.h
+include/z3_spacer.h
 include/z3_v1.h
+include/z3_version.h
 lib/libz3.so
 ${PLIST.ocaml}lib/ocaml/site-lib/Z3/META
 ${PLIST.ocaml}lib/ocaml/site-lib/Z3/dllz3ml.so
@@ -30,3 +31,5 @@ ${PLIST.ocaml}lib/ocaml/site-lib/Z3/z3ml.cmxs
 ${PLIST.ocaml}lib/ocaml/site-lib/Z3/z3native.cmi
 ${PLIST.ocaml}lib/ocaml/site-lib/Z3/z3native.cmx
 ${PLIST.ocaml}lib/ocaml/site-lib/Z3/z3native.mli
+${PLIST.java}lib/com.microsoft.z3.jar
+${PLIST.java}lib/libz3java.so

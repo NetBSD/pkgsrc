@@ -1,11 +1,7 @@
-$NetBSD: distinfo,v 1.7 2018/10/01 11:21:03 jperkin Exp $
+$NetBSD: distinfo,v 1.8 2018/12/18 06:46:39 kamil Exp $
 
-SHA1 (z3-4.5.0.tar.gz) = 6f4e94e025fcc2fa2896524d8fbb9de0b3033854
-RMD160 (z3-4.5.0.tar.gz) = 81121307ac83f42989da49efda31964a94f7f5d5
-SHA512 (z3-4.5.0.tar.gz) = 1ebc2c908d90b6b879f1e819c864ff894613276af47a440f27cf94968c195656952434754c3eb20f4bdbdd8497d227d22e1b4821c0d320b11052b5648d9e2dc7
-Size (z3-4.5.0.tar.gz) = 3573695 bytes
-SHA1 (patch-configure) = 8d5fe787f15fe781c3c23cee27058f898de8c95e
-SHA1 (patch-scripts_mk__util.py) = f3c6f13daeffb31e01f0ad50ca2c0dab2cdb87a2
-SHA1 (patch-src_interp_iz3interp.cpp) = d646a78e8469ea83829ad2f4b8bb2c4a9155e6f1
-SHA1 (patch-src_util_scoped__timer.cpp) = 68e0bdee94d54c93f3d493bf71abebcdccd921ba
-SHA1 (patch-src_util_stopwatch.h) = dbeab175ed4f507d5378f1966f8ed173c4c9a9a7
+SHA1 (z3-4.8.3.tar.gz) = bc713372c9be6808306a8e0844caf27c0a10ee2c
+RMD160 (z3-4.8.3.tar.gz) = 3b8bc18719725c0d110ca52f7e692519cbac341e
+SHA512 (z3-4.8.3.tar.gz) = 34a2dca0083ed469fdaf5ac062dda26248633245607ddd9ef90629c5f76ae30f87bfa4191c04ba9be7a617bf182a1bd00b59fd2274699e12ece69b86088c8044
+Size (z3-4.8.3.tar.gz) = 4119116 bytes
+SHA1 (patch-scripts_mk__util.py) = 59c17bbcd05be21089a89ae304662b69bd2a571d
