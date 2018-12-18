@@ -1,4 +1,6 @@
-$NetBSD: patch-configure.ac,v 1.1 2014/01/08 11:54:04 hauke Exp $
+$NetBSD: patch-configure.ac,v 1.2 2018/12/18 14:16:18 hauke Exp $
+
+Fix for Radmind bug #221, accomodating for 64 bit time_t
 
 --- configure.ac.orig	2010-12-13 03:43:38.000000000 +0000
 +++ configure.ac
