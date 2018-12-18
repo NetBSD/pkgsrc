@@ -1,22 +1,12 @@
-$NetBSD: patch-doc_Makefile.in,v 1.2 2017/05/18 21:44:42 adam Exp $
+$NetBSD: patch-doc_Makefile.in,v 1.3 2018/12/18 09:24:33 adam Exp $
 
 Use correct paths and tools.
 Do not build nasmdoc.pdf.
 Avoid cp -u, it is not portable.
 
---- doc/Makefile.in.orig	2017-05-02 05:18:37.000000000 +0000
+--- doc/Makefile.in.orig	2018-11-07 21:44:06.000000000 +0000
 +++ doc/Makefile.in
-@@ -9,7 +9,8 @@ prefix		= @prefix@
- exec_prefix	= @exec_prefix@
- bindir		= @bindir@
- mandir		= @mandir@
--docdir		= $(prefix)/doc/nasm
-+docdir		= $(prefix)/share/doc/nasm
-+htmldocdir	= $(docdir)/html
- infodir		= @infodir@
- datarootdir	= @datarootdir@
- 
-@@ -17,7 +18,7 @@ INSTALL		= @INSTALL@
+@@ -18,7 +18,7 @@ INSTALL		= @INSTALL@
  INSTALL_PROGRAM	= @INSTALL_PROGRAM@
  INSTALL_DATA	= @INSTALL_DATA@
  
@@ -25,32 +15,33 @@ Avoid cp -u, it is not portable.
  
  PDFOPT		= @PDFOPT@
  
-@@ -30,7 +31,7 @@ CP_UF		= cp -ufv
+@@ -32,7 +32,7 @@ CP_UF		= cp -ufv
  HTMLAUX		= nasmdoc.css local.css nasmlogw.png
  
  SRCS		= nasmdoc.src inslist.src changes.src version.src
 -OUT		= html nasmdoc.txt nasmdoc.pdf
 +OUT		= html nasmdoc.txt
  
+ .SUFFIXES:
  .SUFFIXES: .pfa .ph
- 
-@@ -42,7 +43,7 @@ inslist.src: inslist.pl ../x86/insns.dat
+@@ -45,7 +45,7 @@ inslist.src: inslist.pl ../x86/insns.dat
  .PHONY: html
  html: $(HTMLAUX)
- 	mkdir -p html
+ 	$(MKDIR) -p html
 -	for f in $(HTMLAUX); do $(CP_UF) "$(srcdir)/$$f" html/; done
 +	for f in $(HTMLAUX); do $(CP_F) "$(srcdir)/$$f" html/; done
  	$(MAKE) html/nasmdoc0.html
  
  RDSRC = $(PERL) $(srcdir)/rdsrc.pl -I$(srcdir)/
-@@ -81,6 +82,7 @@ spotless: clean
+@@ -84,7 +84,7 @@ spotless: clean
  	-$(RM_F) *.hlp nasmdoc.txt *.inf *.pdf *.dvi
  
  install: all
--	mkdir -p $(INSTALLROOT)$(docdir)/html
--	$(INSTALL_DATA) html/* $(INSTALLROOT)$(docdir)/html
--	$(INSTALL_DATA) nasmdoc.pdf nasmdoc.txt $(INSTALLROOT)$(docdir)
-+	$(BSD_INSTALL_DATA_DIR) $(INSTALLROOT)$(docdir)
-+	$(BSD_INSTALL_DATA_DIR) $(INSTALLROOT)$(htmldocdir)
-+	$(BSD_INSTALL_DATA) html/* $(INSTALLROOT)$(htmldocdir)
-+	$(BSD_INSTALL_DATA) nasmdoc.txt $(INSTALLROOT)$(docdir)
+-	$(MKDIR) -p $(DESTDIR)$(htmldir)
+-	$(INSTALL_DATA) html/* $(DESTDIR)$(htmldir)
+-	$(MKDIR) -p $(DESTDIR)$(docdir)
+-	$(INSTALL_DATA) nasmdoc.pdf nasmdoc.txt $(DESTDIR)$(docdir)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(htmldir)
++	$(BSD_INSTALL_DATA) html/* $(DESTDIR)$(htmldir)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(docdir)
++	$(BSD_INSTALL_DATA) nasmdoc.txt $(DESTDIR)$(docdir)

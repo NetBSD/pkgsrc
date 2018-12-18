@@ -1,10 +1,10 @@
-$NetBSD: patch-Makefile.in,v 1.2 2017/05/18 21:44:42 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.3 2018/12/18 09:24:33 adam Exp $
 
 Use correct tools.
 
---- Makefile.in.orig	2017-05-02 05:18:51.000000000 +0000
+--- Makefile.in.orig	2018-11-07 21:44:06.000000000 +0000
 +++ Makefile.in
-@@ -35,7 +35,7 @@ AR		= @AR@
+@@ -36,7 +36,7 @@ AR		= @AR@
  RANLIB		= @RANLIB@
  STRIP		= @STRIP@
  
@@ -13,22 +13,22 @@ Use correct tools.
  PERLFLAGS	= -I$(srcdir)/perllib -I$(srcdir)
  RUNPERL         = $(PERL) $(PERLFLAGS)
  
-@@ -334,12 +334,12 @@ nsis: nsis/nasm.nsi nsis/arch.nsh nsis/v
+@@ -344,12 +344,12 @@ nsis: nsis/nasm.nsi nsis/arch.nsh nsis/v
  manpages: nasm.1 ndisasm.1
  
  install: nasm$(X) ndisasm$(X)
--	$(MKDIR) -p $(INSTALLROOT)$(bindir)
--	$(INSTALL_PROGRAM) nasm$(X) $(INSTALLROOT)$(bindir)/nasm$(X)
--	$(INSTALL_PROGRAM) ndisasm$(X) $(INSTALLROOT)$(bindir)/ndisasm$(X)
--	$(MKDIR) -p $(INSTALLROOT)$(mandir)/man1
--	$(INSTALL_DATA) $(srcdir)/nasm.1 $(INSTALLROOT)$(mandir)/man1/nasm.1
--	$(INSTALL_DATA) $(srcdir)/ndisasm.1 $(INSTALLROOT)$(mandir)/man1/ndisasm.1
-+	$(BSD_INSTALL_PROGRAM_DIR) $(INSTALLROOT)$(bindir)
-+	$(BSD_INSTALL_PROGRAM) nasm$(X) $(INSTALLROOT)$(bindir)/nasm$(X)
-+	$(BSD_INSTALL_PROGRAM) ndisasm$(X) $(INSTALLROOT)$(bindir)/ndisasm$(X)
-+	$(BSD_INSTALL_MAN_DIR) $(INSTALLROOT)$(mandir)/man1
-+	$(BSD_INSTALL_MAN) $(srcdir)/nasm.1 $(INSTALLROOT)$(mandir)/man1/nasm.1
-+	$(BSD_INSTALL_MAN) $(srcdir)/ndisasm.1 $(INSTALLROOT)$(mandir)/man1/ndisasm.1
+-	$(MKDIR) $(DESTDIR)$(bindir)
+-	$(INSTALL_PROGRAM) nasm$(X) $(DESTDIR)$(bindir)/nasm$(X)
+-	$(INSTALL_PROGRAM) ndisasm$(X) $(DESTDIR)$(bindir)/ndisasm$(X)
+-	$(MKDIR) $(DESTDIR)$(mandir)/man1
+-	$(INSTALL_DATA) $(srcdir)/nasm.1 $(DESTDIR)$(mandir)/man1/nasm.1
+-	$(INSTALL_DATA) $(srcdir)/ndisasm.1 $(DESTDIR)$(mandir)/man1/ndisasm.1
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(bindir)
++	$(BSD_INSTALL_PROGRAM) nasm$(X) $(DESTDIR)$(bindir)/nasm$(X)
++	$(BSD_INSTALL_PROGRAM) ndisasm$(X) $(DESTDIR)$(bindir)/ndisasm$(X)
++	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(mandir)/man1
++	$(BSD_INSTALL_MAN) $(srcdir)/nasm.1 $(DESTDIR)$(mandir)/man1/nasm.1
++	$(BSD_INSTALL_MAN) $(srcdir)/ndisasm.1 $(DESTDIR)$(mandir)/man1/ndisasm.1
  
  clean:
  	for d in . $(SUBDIRS) $(XSUBDIRS); do \
