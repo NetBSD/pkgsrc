@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Linux,v 1.5 2018/11/13 09:24:37 markd Exp $
+@comment $NetBSD: PLIST.Linux,v 1.6 2018/12/18 09:57:18 adam Exp $
 qt5/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qevdevkeyboard_defaultmap_p.h
 qt5/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qevdevkeyboardhandler_p.h
 qt5/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qevdevkeyboardmanager_p.h
@@ -16,10 +16,10 @@ qt5/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qlibinputtouch_p
 qt5/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qtouchoutputmapping_p.h
 qt5/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qtslib_p.h
 qt5/include/QtInputSupport/QIntegrityHIDManager
-qt5/include/QtInputSupport/qintegrityhidmanager.h
 qt5/include/QtInputSupport/QtInputSupport
 qt5/include/QtInputSupport/QtInputSupportDepends
 qt5/include/QtInputSupport/QtInputSupportVersion
+qt5/include/QtInputSupport/qintegrityhidmanager.h
 qt5/include/QtInputSupport/qtinputsupportversion.h
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QEvdevKeyboardPlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake

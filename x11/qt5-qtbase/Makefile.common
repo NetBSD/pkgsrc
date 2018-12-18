@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2018/10/06 22:41:22 adam Exp $
+# $NetBSD: Makefile.common,v 1.29 2018/12/18 09:57:18 adam Exp $
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
 # used by x11/qt5-psql/Makefile
@@ -58,9 +58,8 @@ PLIST.unix=		yes
 # avoid creating a .qt directory in the users home directory
 SCRIPTS_ENV+=		HOME=${WRKDIR}
 
-.if empty(PKGPATH:Mx11/qt5-qtbase) \
-	&& empty(PKGPATH:Mx11/qt5-odbc) && empty(PKGPATH:Mx11/qt5-mysql) \
-	&& empty(PKGPATH:Mx11/qt5-psql)
+.if "${PKGPATH}" != "x11/qt5-qtbase" && "${PKGPATH}" != "x11/qt5-odbc" && \
+	"${PKGPATH}" != "x11/qt5-mysql" && "${PKGPATH}" != "x11/qt5-psql"
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${QTPREFIX}/bin/qmake -o Makefile
 .endif
@@ -69,7 +68,7 @@ do-configure:
 .PHONY: fix-darwin-install-name
 post-install: fix-darwin-install-name
 fix-darwin-install-name:
-	${FIND} ${DESTDIR}${PREFIX} -name "*.dylib" |			\
+	${FIND} ${DESTDIR}${PREFIX} -name "*.dylib" -print |		\
 		while read lib; do					\
 		libname=`basename $${lib}`;				\
 		libdir=`dirname $${lib} | sed -e 's,${DESTDIR},,'`;	\

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/06/19 07:21:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/12/18 09:57:20 adam Exp $
 lib/pkgconfig/Qt5XmlPatterns.pc
 qt5/bin/xmlpatterns
 qt5/bin/xmlpatternsvalidator
@@ -283,8 +283,8 @@ qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qtracefn_p.h
 qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qtreatas_p.h
 qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qtriplecontainer_p.h
 qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qtruthpredicate_p.h
-qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qtypeavailablefn_p.h
 qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qtxmlpatterns-config_p.h
+qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qtypeavailablefn_p.h
 qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qtypechecker_p.h
 qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qunaryexpression_p.h
 qt5/include/QtXmlPatterns/${PKGVERSION}/QtXmlPatterns/private/qunioniterator_p.h
@@ -411,9 +411,9 @@ qt5/lib/cmake/Qt5XmlPatterns/Qt5XmlPatternsConfig.cmake
 qt5/lib/cmake/Qt5XmlPatterns/Qt5XmlPatternsConfigVersion.cmake
 qt5/lib/libQt5XmlPatterns.prl
 qt5/lib/libQt5XmlPatterns.so
-qt5/lib/libQt5XmlPatterns.so.5
-qt5/lib/libQt5XmlPatterns.so.5.11
 qt5/lib/libQt5XmlPatterns.so.${PKGVERSION}
+qt5/lib/libQt5XmlPatterns.so.5
+qt5/lib/libQt5XmlPatterns.so.5.12
 qt5/lib/pkgconfig/Qt5XmlPatterns.pc
 qt5/mkspecs/modules/qt_lib_xmlpatterns.pri
 qt5/mkspecs/modules/qt_lib_xmlpatterns_private.pri
