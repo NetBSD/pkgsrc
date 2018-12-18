@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5270 2018/12/18 06:48:52 kamil Exp $
+$NetBSD: CHANGES-2018,v 1.5271 2018/12/18 06:49:12 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7369,3 +7369,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated emulators/libretro-snes9x to 1.58 [nia 2018-12-18]
 	Updated emulators/libretro-reicast to 20181213 [nia 2018-12-18]
 	Updated math/z3 to 4.8.3 [kamil 2018-12-18]
+	Updated math/py-z3 to 4.8.3 [kamil 2018-12-18]
