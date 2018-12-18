@@ -1,0 +1,17 @@
+Libretro is a simple but powerful development interface that allows for the
+easy creation of emulators, games and multimedia applications that can plug
+straight into any libretro-compatible frontend. This development interface is
+open to others so that they can run these pluggable emulator and game cores
+also in their own programs or devices.
+
+Mednafen PSX (Beetle PSX) is a Sony PlayStation 1 video game system emulator
+that can be used as a libretro core. It is a libretro port of Mednafen
+PlayStation.
+
+Mednafen can load CD-ROM games from a ripped/dumped copy of the disc, such
+as CUE+BIN. Additionally there is support for CloneCD "CCD/IMG/SUB" rips,
+and cdrdao "TOC" files. A CUE file is required.
+
+This is the OpenGL version. It is currently less accurate than the software
+renderer but will enable and/or speed up enhancements like upscaling and
+texture filtering.
