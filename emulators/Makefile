@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.288 2018/10/15 17:20:21 nia Exp $
+# $NetBSD: Makefile,v 1.289 2018/12/18 15:50:48 nia Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -91,6 +91,7 @@ SUBDIR+=	libdsk
 SUBDIR+=	libretro-beetle-ngp
 SUBDIR+=	libretro-beetle-pce-fast
 SUBDIR+=	libretro-beetle-psx
+SUBDIR+=	libretro-beetle-psx-hw
 SUBDIR+=	libretro-beetle-saturn
 SUBDIR+=	libretro-beetle-sgx
 SUBDIR+=	libretro-beetle-vb
