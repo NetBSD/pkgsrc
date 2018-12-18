@@ -1,0 +1,38 @@
+# $NetBSD: Makefile.common,v 1.1 2018/12/18 15:50:48 nia Exp $
+
+# used by emulators/libretro-beetle-psx-hw/Makefile
+# used by emulators/libretro-beetle-psx/Makefile
+
+VERSION=	20180808
+DISTNAME=	libretro-beetle-psx-${VERSION}
+CATEGORIES=	emulators
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+GITHUB_PROJECT=	beetle-psx-libretro
+GITHUB_TAG=	7bb007de15b2f40a880b788ebf47a400c90827d9
+
+HOMEPAGE=	https://docs.libretro.com/library/beetle_psx/
+LICENSE=	gnu-gpl-v2
+
+DISTINFO_FILE=	${.CURDIR}/../../emulators/libretro-beetle-psx/distinfo
+PATCHDIR=	${.CURDIR}/../../emulators/libretro-beetle-psx/patches
+MESSAGE_SRC=	${.CURDIR}/../../emulators/libretro-beetle-psx/MESSAGE
+
+EXTRACT_USING=	bsdtar
+
+USE_TOOLS+=	gmake
+USE_LANGUAGES=	c c++03
+
+MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
+
+.include "../../mk/endian.mk"
+
+.if ${MACHINE_ENDIAN} == "big"
+CFLAGS+=	-DMSB_FIRST
+.endif
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=link.T
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-undefined
+
+INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
+
+.include "../../mk/pthread.buildlink3.mk"
