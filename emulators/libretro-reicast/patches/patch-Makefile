@@ -1,12 +1,12 @@
-$NetBSD: patch-Makefile,v 1.1 2018/10/13 17:02:17 nia Exp $
+$NetBSD: patch-Makefile,v 1.2 2018/12/18 01:55:45 nia Exp $
 
 Don't override pkgsrc-set variables.
 
 Don't make assumptions based on uname.
 
---- Makefile.orig	2018-10-12 17:39:34.000000000 +0000
+--- Makefile.orig	2018-12-13 14:07:07.000000000 +0000
 +++ Makefile
-@@ -20,19 +20,6 @@ HAVE_CHD      := 1
+@@ -20,41 +20,12 @@ HAVE_CHD      := 1
  
  TARGET_NAME   := reicast
  
@@ -23,11 +23,13 @@ Don't make assumptions based on uname.
 -CFLAGS   := 
 -CXXFLAGS :=
 -
- GIT_VERSION := " $(shell git rev-parse --short HEAD || echo unknown)"
+-GIT_VERSION := " $(shell git rev-parse --short HEAD || echo unknown)"
  ifneq ($(GIT_VERSION)," unknown")
  	CXXFLAGS += -DGIT_VERSION=\"$(GIT_VERSION)\"
-@@ -42,15 +29,6 @@ UNAME=$(shell uname -a)
+ endif
  
+-UNAME=$(shell uname -a)
+-
  LIBRETRO_DIR := .
  
 -# Cross compile ?
@@ -39,10 +41,25 @@ Don't make assumptions based on uname.
 -# Target Dynarec
 -WITH_DYNAREC = $(ARCH)
 -
- ifeq ($(ARCH), $(filter $(ARCH), i386 i686))
- 	WITH_DYNAREC = x86
- endif
-@@ -635,7 +613,7 @@ RZDCY_CXXFLAGS += $(CORE_DEFINES)
+-ifeq ($(ARCH), $(filter $(ARCH), i386 i686))
+-	WITH_DYNAREC = x86
+-endif
+-
+ ifeq ($(platform),)
+ 	platform = unix
+ 	ifeq ($(UNAME),)
+@@ -631,10 +602,6 @@ endif
+ 
+ RZDCY_CXXFLAGS := $(RZDCY_CFLAGS) -fexceptions -fno-rtti -std=gnu++11
+ 
+-ifeq (,$(findstring msvc,$(platform)))
+-	CORE_DEFINES   += -funroll-loops
+-endif
+-
+ ifeq ($(HAVE_OIT), 1)
+ 	HAVE_CORE = 1
+ 	CORE_DEFINES += -DHAVE_OIT -DHAVE_GL4
+@@ -695,7 +662,7 @@ RZDCY_CXXFLAGS += $(CORE_DEFINES)
  CFLAGS         += $(CORE_DEFINES)
  CXXFLAGS       += $(CORE_DEFINES)
  
@@ -51,13 +68,14 @@ Don't make assumptions based on uname.
  CFLAGS   += -fno-strict-aliasing -ffast-math
  CXXFLAGS += -fno-rtti -fpermissive -fno-operator-names
  LIBS     += -lm 
-@@ -682,14 +660,14 @@ $(TARGET): $(OBJECTS)
+@@ -743,15 +710,15 @@ $(TARGET): $(OBJECTS)
  ifeq ($(STATIC_LINKING), 1)
  	$(AR) rcs $@ $(OBJECTS)
  else
 -	$(LD) $(MFLAGS) $(fpic) $(SHARED) $(LDFLAGS) $(OBJECTS) $(LDFLAGS_END) $(GL_LIB) $(LIBS) -o $@
 +	$(LD) $(fpic) $(SHARED) $(LDFLAGS) $(OBJECTS) $(LDFLAGS_END) $(GL_LIB) $(LIBS) -o $@
  endif
+ 	@echo "** BUILD SUCCESSFUL! GG NO RE **"
  
  %.o: %.cpp
 -	$(CXX) $(INCFLAGS) $(CFLAGS) $(MFLAGS) $(CXXFLAGS) $< -o $@
