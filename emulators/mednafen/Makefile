@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.23 2018/07/18 00:06:15 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2018/12/18 17:08:20 nia Exp $
 
-DISTNAME=	mednafen-0.8.D.3
-PKGNAME=	mednafen-0.8.13.3
-PKGREVISION=	4
+DISTNAME=	mednafen-1.21.3
 CATEGORIES=	emulators
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mednafen/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	https://mednafen.github.io/releases/files/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mednafen.sourceforge.net/
+HOMEPAGE=	https://mednafen.github.io/
 COMMENT=	Portable multi-system emulator
 LICENSE=	gnu-gpl-v2
+
+CONFIGURE_ARGS+=	--with-external-tremor
+CONFIGURE_ARGS+=	--with-external-lzo
 
 WRKSRC=			${WRKDIR}/mednafen
 GNU_CONFIGURE=		yes
@@ -26,23 +27,16 @@ SUBST_MESSAGE.dsp=	Fixing path to audio device.
 SUBST_FILES.dsp=	src/sexyal/drivers/oss.cpp src/sexyal/sexyal.cpp
 SUBST_SED.dsp=		-e s,/dev/dsp,${DEVOSSAUDIO},
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${X11_TYPE} == "modular"
-CONFIGURE_ARGS+=	--x-includes=${PREFIX:Q}/include
-CONFIGURE_ARGS+=	--x-libraries=${PREFIX:Q}/lib
-.endif
-
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/Documentation/*.html \
 		${DESTDIR}${PREFIX}/share/doc/mednafen
 
-.include "../../audio/esound/buildlink3.mk"
+.include "options.mk"
+.include "../../archivers/lzo/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
+.include "../../audio/tremor/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../misc/libcdio/buildlink3.mk"
-.include "../../net/SDL_net/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
