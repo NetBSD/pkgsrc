@@ -1,8 +1,23 @@
-$NetBSD: patch-transcript.c,v 1.1 2014/01/08 11:54:04 hauke Exp $
+$NetBSD: patch-transcript.c,v 1.2 2018/12/18 14:16:18 hauke Exp $
+
+Newer Linuxen (2018 Arch here) have moved makedev(3) and friends
+from <sys/types.h> to <sys/sysmacros.h>
+
+Fix for Radmind bug #221, accomodating for 64 bit time_t
 
 --- transcript.c.orig	2010-12-13 03:42:49.000000000 +0000
 +++ transcript.c
-@@ -271,7 +271,7 @@ transcript_parse( struct transcript *tra
+@@ -6,6 +6,9 @@
+ #include "config.h"
+ 
+ #include <sys/types.h>
++#if defined (__linux__)
++#include <sys/sysmacros.h>
++#endif
+ #include <sys/param.h>
+ #ifdef sun
+ #include <sys/mkdev.h>
+@@ -271,7 +274,7 @@ transcript_parse( struct transcript *tra
  	tran->t_pinfo.pi_stat.st_mode = strtol( argv[ 2 ], NULL, 8 );
  	tran->t_pinfo.pi_stat.st_uid = atoi( argv[ 3 ] );
  	tran->t_pinfo.pi_stat.st_gid = atoi( argv[ 4 ] );
@@ -11,7 +26,7 @@ $NetBSD: patch-transcript.c,v 1.1 2014/01/08 11:54:04 hauke Exp $
  	tran->t_pinfo.pi_stat.st_size = strtoofft( argv[ 6 ], NULL, 10 );
  	if ( tran->t_type != T_NEGATIVE ) {
  	    if (( cksum ) && ( strcmp( "-", argv [ 7 ] ) == 0  )) {
-@@ -436,12 +436,13 @@ t_print( struct pathinfo *fs, struct tra
+@@ -436,12 +439,13 @@ t_print( struct pathinfo *fs, struct tra
  	 * but the corresponding transcript is negative, hence, retain
  	 * the file system's mtime.  Woof!
  	 */

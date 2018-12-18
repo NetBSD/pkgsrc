@@ -1,20 +1,20 @@
-$NetBSD: distinfo,v 1.21 2016/04/14 11:17:31 hauke Exp $
+$NetBSD: distinfo,v 1.22 2018/12/18 14:16:17 hauke Exp $
 
 SHA1 (radmind-1.14.1.tar.gz) = 26f37f1c002384a9c609e688d6cee2fa15b6d0d2
 RMD160 (radmind-1.14.1.tar.gz) = 6b925083ef9dce2de21ebb0ffef287b1ffe9173d
 SHA512 (radmind-1.14.1.tar.gz) = bccf9681a6899be3b500065237dd1e04cd83ffb6f9be0e355412e7b0c556325f7d13435cec65a8a5e156e4411da915744f01a615472f6361d52c4d54d8be20eb
 Size (radmind-1.14.1.tar.gz) = 403553 bytes
-SHA1 (patch-Makefile.in) = 3602966fb8f7c5118fa378a6646b81dbf0d69ab7
+SHA1 (patch-Makefile.in) = 7667b83fe2984eaa2487c75a3f82eede0cda06e2
 SHA1 (patch-command.c) = 26e93be15a5a1113b8f75eb6eaf1d77892947bc7
-SHA1 (patch-command.h) = c050593ab68538e99bd79030e50e803d17027cdb
-SHA1 (patch-config.h.in) = a5e157b47fb28d33e2a28fecc9367ff410c6fda5
-SHA1 (patch-configure) = ecf336c9b77b1622a0190a67c268012cedd074b5
-SHA1 (patch-configure.ac) = 1d009458df88fba1a25425306a46cad7d2b51737
-SHA1 (patch-ktcheck.c) = 1dff9d5d0a169b2f544f66fc79a42d22f8a5f54d
-SHA1 (patch-largefile.h) = 574e908d716d50aab84fccdd699c8b03c56b6e05
-SHA1 (patch-lcksum.c) = 2d8a8285eb70988a32b41f77d4683ef5ca127883
-SHA1 (patch-libsnet_snet.c) = 2268af5ada0b8e1c212dbd258b1a1632f2ff7613
-SHA1 (patch-ra.sh) = 7bdaec355d9fbe98f0cb7e8f49d928f4c2dfd823
-SHA1 (patch-retr.c) = 69cdf4260583313f0a9f95dfe5597ee03897a313
-SHA1 (patch-transcript.c) = b309079b7a272547f4c8843b925dd29479cc7e1d
-SHA1 (patch-update.c) = e27b377378aae6d51cdbb3b9e9f04e5dd33ee211
+SHA1 (patch-command.h) = 03daa77363c681ef625cf429071f02245689e1e9
+SHA1 (patch-config.h.in) = 89bce7b9d256e81ebb6ce1319183cb346260bcde
+SHA1 (patch-configure) = 8d4c7daab7923da97efe94383278ecd30249e142
+SHA1 (patch-configure.ac) = 12968655962adc00ce095866151d11747ac9b565
+SHA1 (patch-ktcheck.c) = 83c03e417fc93863a8575b0cb2f93e09cba1d937
+SHA1 (patch-largefile.h) = 806f12878aa628f30355b82ac23a5c92740f42a1
+SHA1 (patch-lcksum.c) = 7b7b4da338bb13f2508c5b22307263eaedb32347
+SHA1 (patch-libsnet_snet.c) = 29484ae6775a1fe9d02980a84503762b55a093e9
+SHA1 (patch-ra.sh) = 05ba697814bf4833a9c38f881e43639067afba29
+SHA1 (patch-retr.c) = 8798a4467fad905aac5061ff1c9759c29f9b7f74
+SHA1 (patch-transcript.c) = 2fab20d210317b0e0ba52102359588670ba5f941
+SHA1 (patch-update.c) = 2b951451fc1b91492eb0efe16d28e21c5e8d0470
