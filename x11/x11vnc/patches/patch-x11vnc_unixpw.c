@@ -1,21 +1,21 @@
-$NetBSD: patch-x11vnc_unixpw.c,v 1.1 2013/11/02 07:32:28 obache Exp $
+$NetBSD: patch-x11vnc_unixpw.c,v 1.2 2018/12/18 15:53:46 tnn Exp $
 
 * Use openpty(3) if available
 
---- x11vnc/unixpw.c.orig	2011-08-10 22:31:32.000000000 +0000
-+++ x11vnc/unixpw.c
+--- src/unixpw.c.orig	2018-02-04 21:43:38.000000000 +0000
++++ src/unixpw.c
 @@ -92,6 +92,18 @@ extern char *crypt(const char*, const ch
  #define IS_BSD
  #endif
  
-+#if LIBVNCSERVER_HAVE_OPENPTY
-+#if LIBVNCSERVER_HAVE_UTIL_H
++#if HAVE_OPENPTY
++#if HAVE_UTIL_H
 +#include <util.h>
 +#endif
-+#if LIBVNCSERVER_HAVE_LIBUTIL_H
++#if HAVE_LIBUTIL_H
 +#include <libutil.h>
 +#endif
-+#if LIBVNCSERVER_HAVE_PTY_H
++#if HAVE_PTY_H
 +#include <pty.h>
 +#endif
 +#endif
@@ -27,7 +27,7 @@ $NetBSD: patch-x11vnc_unixpw.c,v 1.1 2013/11/02 07:32:28 obache Exp $
  #endif /* GRANTPT */
  }
  
-+#if LIBVNCSERVER_HAVE_OPENPTY
++#if HAVE_OPENPTY
 +char *get_pty_openpty(int *fd_p) {
 +	int fd, sfd;
 +
@@ -37,7 +37,7 @@ $NetBSD: patch-x11vnc_unixpw.c,v 1.1 2013/11/02 07:32:28 obache Exp $
 +		return NULL;
 +	}
 +
-+#if LIBVNCSERVER_HAVE_SYS_IOCTL_H && defined(TIOCFLUSH)
++#if HAVE_SYS_IOCTL_H && defined(TIOCFLUSH)
 +	ioctl(fd, TIOCFLUSH, (char *) 0);
 +#endif
 +	*fd_p = fd;
@@ -51,7 +51,7 @@ $NetBSD: patch-x11vnc_unixpw.c,v 1.1 2013/11/02 07:32:28 obache Exp $
  	if (getenv("BSD_PTY")) {
  		return get_pty_loop(fd_p);
  	}
-+#if LIBVNCSERVER_HAVE_OPENPTY
++#if HAVE_OPENPTY
 +	return get_pty_openpty(fd_p);
 +#else
  #ifdef IS_BSD
