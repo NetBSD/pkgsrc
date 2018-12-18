@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/11/28 19:28:37 nia Exp $
+# $NetBSD: Makefile,v 1.4 2018/12/18 16:06:37 nia Exp $
 
 DISTNAME=	kitty-0.12.3
 CATEGORIES=	x11
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=kovidgoyal/}
 GITHUB_PROJECT=	kitty
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://sw.kovidgoyal.net/kitty/index.html
 COMMENT=	GPU based terminal emulator
 LICENSE=	gnu-gpl-v3
