@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2018/11/18 07:21:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2018/12/19 15:47:05 bsiegert Exp $
 
 DISTNAME=	amber-0.0.20171010
 PKGNAME=	go-${DISTNAME}
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=eknkc/}
 CATEGORIES=	devel
 GITHUB_TAG=	cdade1c073850f4ffc70a829e31235ea6892853b
