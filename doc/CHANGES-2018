@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5282 2018/12/19 12:25:12 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.5283 2018/12/19 12:51:00 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7385,3 +7385,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/youtube-dl to 20181217 [leot 2018-12-18]
 	Updated misc/libreoffice to 6.1.4.2 [ryoon 2018-12-19]
 	Updated devel/fossil to 2.7 [bsiegert 2018-12-19]
+	Updated net/unifi to 5.9.29 [tnn 2018-12-19]
