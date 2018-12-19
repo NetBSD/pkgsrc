@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2018/11/18 08:17:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2018/12/19 15:47:09 bsiegert Exp $
 
 DISTNAME=	locker-0.0.0.20171007
 PKGNAME=	go-${DISTNAME}
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BurntSushi/}
 CATEGORIES=	devel
 GITHUB_PROJECT=	locker
