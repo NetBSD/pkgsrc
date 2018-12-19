@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2018/11/04 18:37:54 bsiegert Exp $
+# $NetBSD: Makefile,v 1.9 2018/12/19 15:46:59 bsiegert Exp $
 
 DISTNAME=	go-etcd-2.0.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coreos/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	databases
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
