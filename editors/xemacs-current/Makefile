@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.97 2018/03/12 11:16:25 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2018/12/19 13:41:45 hauke Exp $
 
 PKGNAME=	${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 COMMENT=	*BETA* XEmacs text editor version ${PKGVERSION_NOREV}
 
 # extra options for x11 support, not for sharing with xemacs-current-nox11
