@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2018/11/04 18:38:05 bsiegert Exp $
+# $NetBSD: Makefile,v 1.17 2018/12/19 15:47:02 bsiegert Exp $
 
 COMMENT=	Go supplementary cryptography libraries
-PKGREVISION=	3
+PKGREVISION=	4
 DISTNAME=	go-crypto-0.0.20180308
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=golang/}
