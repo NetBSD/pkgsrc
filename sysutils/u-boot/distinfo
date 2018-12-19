@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2018/12/14 00:52:26 jmcneill Exp $
+$NetBSD: distinfo,v 1.18 2018/12/19 12:03:01 ryoon Exp $
 
 SHA1 (u-boot-2018.11.tar.bz2) = e58e86c633ad3e2613196e0c0b0a7760ae5966d6
 RMD160 (u-boot-2018.11.tar.bz2) = f63c67750951d0e2883935a5d4cc3252f51a5453
@@ -12,3 +12,4 @@ SHA1 (patch-drivers_video_sunxi_sunxi__display.c) = 8e6a6a781cce25af5cba289fc2ca
 SHA1 (patch-include_configs_tegra-common-post.h) = dfc081d2a3f7cd32e340b03f6c77c629bffd29b4
 SHA1 (patch-include_configs_tegra-common.h) = 4cda8f9df2c7fc2b9cd9d4139ec679a42648e4f8
 SHA1 (patch-lib_bch.c) = b1f1c7418f1004c151b9e5e06ab7047a1736ae47
+SHA1 (patch-tools_imx__cntr__image.sh) = 715647e3b77b505513ae79b4fe673f4f7f9bf042
