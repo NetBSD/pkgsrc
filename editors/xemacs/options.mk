@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2018/01/30 11:52:18 hauke Exp $
+# $NetBSD: options.mk,v 1.16 2018/12/19 13:29:34 hauke Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.xemacs
 PKG_SUPPORTED_OPTIONS+=		ldap canna debug
@@ -27,10 +27,11 @@ CONFIGURE_ARGS+=	--site-libraries=${PREFIX}/lib:${X11BASE}/lib
 CONFIGURE_ARGS+=	--site-runtime-libraries=${PREFIX}/lib:${X11BASE}/lib
 # Lucid widgets
 CONFIGURE_ARGS+=	--with-toolbars=yes
-CONFIGURE_ARGS+=	--with-menubars=yes
+CONFIGURE_ARGS+=	--with-menubars=lucid
 CONFIGURE_ARGS+=	--with-scrollbars=lucid
-CONFIGURE_ARGS+=	--with-dialogs=lucid
-CONFIGURE_ARGS+=	--with-widgets=lucid
+# Setting these to 'lucid' will sneak in Motif, so don't
+CONFIGURE_ARGS+=	--with-dialogs=athena
+CONFIGURE_ARGS+=	--with-widgets=athena
 CONFIGURE_ARGS+=	--with-athena=xaw
 CONFIGURE_ARGS+=	--with-xim=xlib
 .else
@@ -69,7 +70,7 @@ CONFIGURE_ARGS+=	--without-canna
 
 PLIST_VARS+=            debug
 .if !empty(PKG_OPTIONS:Mdebug)
-CONFIGURE_ARGS+=	--enable-debug=yes --with-debug
+CONFIGURE_ARGS+=	--debug
 CFLAGS+=                -g3
 INSTALL_UNSTRIPPED=     yes
 .endif
