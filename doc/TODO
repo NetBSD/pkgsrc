@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18711 2018/12/18 17:08:39 nia Exp $
+$NetBSD: TODO,v 1.18712 2018/12/19 17:12:22 bsiegert Exp $
 
 Suggested new packages
 ======================
@@ -441,6 +441,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bmkdep-20140112
 	o bochs-2.6.9
 	o boolean-7.1
+	o borgbackup-1.1.8
 	o bos-2.5
 	o boson-0.13
 	o bottlerocket-0.05b3
@@ -484,6 +485,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o clawsker-0.7.13
 	o clojure-1.8.0
 	o clusterssh-4.05
+	o codeblocks-17.12
 	o colorize-0.3.4
 	o colortail-0.3.3
 	o compiz-0.8.10
@@ -1292,6 +1294,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o snes9x-1.55
 	o snobol-2.0
 	o snow-20130616
+	o snownews-1.6.10
 	o softhsm-2.0.0
 	o solfege-3.22.0
 	o solid-5.45.0
@@ -1322,7 +1325,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o strace-4.23
 	o stratagus-2.2.5.5
 	o streamtuner-2.2.0
-	o subtitleeditor-0.52.1
+	o subtitleeditor-0.54.0 [https://github.com/kitone/subtitleeditor]
 	o subversion-base-1.11.0
 	o superlu-5.1.1
 	o supertux-0.5
