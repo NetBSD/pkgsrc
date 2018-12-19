@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/11/04 18:22:17 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/12/19 15:27:03 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go111/AUTHORS
@@ -314,6 +314,9 @@ go111/misc/cgo/test/issue26517.go
 go111/misc/cgo/test/issue26743.go
 go111/misc/cgo/test/issue26743/a.go
 go111/misc/cgo/test/issue26743/b.go
+go111/misc/cgo/test/issue27340.go
+go111/misc/cgo/test/issue27340/a.go
+go111/misc/cgo/test/issue28896.go
 go111/misc/cgo/test/issue3250.go
 go111/misc/cgo/test/issue3250w.go
 go111/misc/cgo/test/issue3261.go
@@ -404,6 +407,7 @@ go111/misc/cgo/test/sigprocmask.c
 go111/misc/cgo/test/sigprocmask.go
 go111/misc/cgo/test/test22906.go
 go111/misc/cgo/test/test26213.go
+go111/misc/cgo/test/test27660.go
 go111/misc/cgo/testasan/main.go
 go111/misc/cgo/testcarchive/carchive_test.go
 go111/misc/cgo/testcarchive/main.c
@@ -2135,6 +2139,7 @@ go111/src/cmd/go/internal/generate/generate.go
 go111/src/cmd/go/internal/generate/generate_test.go
 go111/src/cmd/go/internal/get/discovery.go
 go111/src/cmd/go/internal/get/get.go
+go111/src/cmd/go/internal/get/path.go
 go111/src/cmd/go/internal/get/pkg_test.go
 go111/src/cmd/go/internal/get/tag_test.go
 go111/src/cmd/go/internal/get/vcs.go
@@ -2408,6 +2413,10 @@ go111/src/cmd/go/testdata/script/cover_pkgall_runtime.txt
 go111/src/cmd/go/testdata/script/cpu_profile_twice.txt
 go111/src/cmd/go/testdata/script/fileline.txt
 go111/src/cmd/go/testdata/script/gcflags_patterns.txt
+go111/src/cmd/go/testdata/script/get_brace.txt
+go111/src/cmd/go/testdata/script/get_dotfiles.txt
+go111/src/cmd/go/testdata/script/get_tilde.txt
+go111/src/cmd/go/testdata/script/get_unicode.txt
 go111/src/cmd/go/testdata/script/get_with_git_trace.txt
 go111/src/cmd/go/testdata/script/goflags.txt
 go111/src/cmd/go/testdata/script/help.txt
@@ -2500,6 +2509,7 @@ go111/src/cmd/go/testdata/script/mod_versions.txt
 go111/src/cmd/go/testdata/script/mod_why.txt
 go111/src/cmd/go/testdata/script/pattern_syntax_error.txt
 go111/src/cmd/go/testdata/script/run_hello.txt
+go111/src/cmd/go/testdata/script/run_wildcard.txt
 go111/src/cmd/go/testdata/script/test_badtest.txt
 go111/src/cmd/go/testdata/script/test_compile_binary.txt
 go111/src/cmd/go/testdata/script/vendor_complex.txt
@@ -8464,12 +8474,18 @@ go111/test/fixedbugs/issue26426.go
 go111/test/fixedbugs/issue26438.go
 go111/test/fixedbugs/issue26495.go
 go111/test/fixedbugs/issue27143.go
+go111/test/fixedbugs/issue27232.go
+go111/test/fixedbugs/issue27267.go
 go111/test/fixedbugs/issue27278.go
 go111/test/fixedbugs/issue27289.go
 go111/test/fixedbugs/issue27356.go
 go111/test/fixedbugs/issue27695.go
 go111/test/fixedbugs/issue27695b.go
+go111/test/fixedbugs/issue27695c.go
 go111/test/fixedbugs/issue27961.go
+go111/test/fixedbugs/issue28616.go
+go111/test/fixedbugs/issue28688.go
+go111/test/fixedbugs/issue28797.go
 go111/test/fixedbugs/issue3552.dir/one.go
 go111/test/fixedbugs/issue3552.dir/two.go
 go111/test/fixedbugs/issue3552.go
