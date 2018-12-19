@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5283 2018/12/19 12:51:00 tnn Exp $
+$NetBSD: CHANGES-2018,v 1.5284 2018/12/19 13:00:05 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7386,3 +7386,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/libreoffice to 6.1.4.2 [ryoon 2018-12-19]
 	Updated devel/fossil to 2.7 [bsiegert 2018-12-19]
 	Updated net/unifi to 5.9.29 [tnn 2018-12-19]
+	Removed lang/cbindgen successor devel/cbindgen [tnn 2018-12-19]
