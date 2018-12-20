@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5291 2018/12/20 19:34:21 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5292 2018/12/20 21:18:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7395,3 +7395,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/openldap to 2.4.47 [adam 2018-12-20]
 	Updated databases/lmdb to 0.9.23 [adam 2018-12-20]
 	Updated security/gnupg2 to 2.2.12 [adam 2018-12-20]
+	Updated net/py-smb to 1.1.25 [adam 2018-12-20]
+	Updated net/samba4 to 4.9.4 [adam 2018-12-20]
