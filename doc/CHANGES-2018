@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5288 2018/12/20 13:33:37 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.5289 2018/12/20 15:42:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7391,3 +7391,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/py-boto to 2.49.0nb1 [wiz 2018-12-20]
 	Updated wm/spectrwm to 3.2.0 [jaapb 2018-12-20]
 	Added textproc/p5-ODF-lpOD version 1.126 [bsiegert 2018-12-20]
+	Updated audio/icecast to 2.4.3nb10 [wiz 2018-12-20]
