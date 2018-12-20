@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2018/12/10 00:14:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.56 2018/12/20 21:18:22 adam Exp $
 
-DISTNAME=	samba-${VERSION}
-PKGREVISION=	1
+DISTNAME=	samba-4.9.4
 CATEGORIES=	net
 MASTER_SITES=	http://download.samba.org/pub/samba/stable/
 
@@ -12,7 +11,6 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
-VERSION=	4.9.3
 CONFLICTS+=	ja-samba-[0-9]* tdb-[0-9]* winbind-[0-9]*
 
 GCC_REQD+=	4.4
@@ -103,7 +101,7 @@ CONFIGURE_ARGS+=	--without-gpgme
 CONFIGURE_ARGS+=	--without-regedit
 
 # for winbind option build.
-.if ${OPSYS} != "SunOS"
+.if "${OPSYS}" != "Darwin" && "${OPSYS}" != "SunOS"
 LDFLAGS+=		-Wl,--allow-shlib-undefined
 .endif
 LDFLAGS+=		${BUILDLINK_LDADD.gettext}
@@ -141,7 +139,6 @@ FILES_SUBST+=	PWD_MKDB=${PWD_MKDB:Q}
 PLIST_VARS+=	64bit
 .if !empty(LP64PLATFORMS:@.PLAT.@${MACHINE_PLATFORM:M${.PLAT.}}@) || \
 	(defined(ABI) && ${ABI} == "64")
-CONFIGURE_ARGS+=	--with-ldb-lmdb
 PLIST.64bit=		yes
 .else
 CONFIGURE_ARGS+=	--without-ldb-lmdb
@@ -193,30 +190,29 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/examples/smb.conf.default \
 		${DESTDIR}${PREFIX}/${EGDIR}
 
-REPLACE_PERL+=	pidl/pidl
-REPLACE_PYTHON=	buildtools/bin/waf \
-		source4/setup/* \
-		source4/scripting/bin/* \
-		lib/tevent/tevent.py
+REPLACE_PERL+=		pidl/pidl
+REPLACE_PYTHON+=	buildtools/bin/waf
+REPLACE_PYTHON+=	source4/setup/wscript_build
+REPLACE_PYTHON+=	source4/scripting/bin/*
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # as of 4.3.2
-
-.include "../../lang/python/application.mk"
+PYTHON_VERSIONS_ACCEPTED=	27 # as of 4.3.2
 
 PY_PATCHPLIST=	yes
+.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 
 .if ${OPSYS} == "Linux"
 .include "../../devel/libuuid/buildlink3.mk"
 .endif
+.include "../../archivers/libarchive/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../databases/lmdb/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.talloc+=	talloc>=2.1.9
+.include "../../devel/talloc/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../databases/lmdb/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/jansson/buildlink3.mk"
-BUILDLINK_API_DEPENDS.talloc+=	talloc>=2.1.9
-.include "../../devel/talloc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
