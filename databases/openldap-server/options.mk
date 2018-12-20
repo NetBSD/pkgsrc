@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.19 2015/09/07 12:02:06 jperkin Exp $
+# $NetBSD: options.mk,v 1.20 2018/12/20 17:54:09 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openldap-server
 PKG_SUPPORTED_OPTIONS=	bdb dso inet6 sasl slapi slp smbk5pwd
@@ -94,10 +94,10 @@ CONFIGURE_ARGS+=	--enable-modules
 ###
 ### Enable SLAPI support
 ###
-.if empty(PKG_OPTIONS:Mslapi)
-CONFIGURE_ARGS+=	--disable-slapi
-.else
+.if !empty(PKG_OPTIONS:Mslapi)
 CONFIGURE_ARGS+=	--enable-slapi
 PLIST.slapi=		yes
 .include "../../devel/libltdl/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-slapi
 .endif

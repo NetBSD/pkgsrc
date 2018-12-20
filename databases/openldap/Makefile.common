@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.41 2018/07/04 13:40:12 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.42 2018/12/20 17:54:09 adam Exp $
 #
 # used by databases/openldap-client/Makefile
 # used by databases/openldap-cloak/Makefile
@@ -8,21 +8,9 @@
 
 .include "../../databases/openldap/Makefile.version"
 
-DISTNAME=	openldap-${OPENLDAP_VERSION}
 CATEGORIES=	databases
-MASTER_SITES=	ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/
-MASTER_SITES+=	http://www.openldap.org/software/download/OpenLDAP/openldap-release/
-MASTER_SITES+=	ftp://ftp.ntua.gr/mirror/OpenLDAP/openldap-release/
-MASTER_SITES+=	ftp://ftp.dti.ad.jp/pub/net/OpenLDAP/openldap-release/
-MASTER_SITES+=	ftp://ftp.u-aizu.ac.jp/pub/net/openldap/openldap-release/
-MASTER_SITES+=	ftp://ftp.nl.uu.net/pub/unix/db/openldap/openldap-release/
-MASTER_SITES+=	ftp://ftp.linux.pt/pub/mirrors/OpenLDAP/openldap-release/
-MASTER_SITES+=	ftp://sunsite.cnlab-switch.ch/mirror/OpenLDAP/openldap-release/
-EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://www.openldap.org/
-LICENSE=	modified-bsd
 
 CONFLICTS+=		ldapsdk-[0-9]*
 
