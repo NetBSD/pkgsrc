@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5289 2018/12/20 15:42:23 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.5290 2018/12/20 17:56:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7392,3 +7392,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated wm/spectrwm to 3.2.0 [jaapb 2018-12-20]
 	Added textproc/p5-ODF-lpOD version 1.126 [bsiegert 2018-12-20]
 	Updated audio/icecast to 2.4.3nb10 [wiz 2018-12-20]
+	Updated databases/openldap to 2.4.47 [adam 2018-12-20]
+	Updated databases/lmdb to 0.9.23 [adam 2018-12-20]
