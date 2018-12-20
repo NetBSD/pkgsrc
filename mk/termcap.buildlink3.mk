@@ -1,4 +1,4 @@
-# $NetBSD: termcap.buildlink3.mk,v 1.11 2016/04/11 04:22:34 dbj Exp $
+# $NetBSD: termcap.buildlink3.mk,v 1.12 2018/12/20 17:08:27 rillig Exp $
 #
 # This Makefile fragment is meant to be included by packages that require
 # a termcap implementation that supports the basic termcap functions:
@@ -69,3 +69,14 @@ BUILDLINK_PREFIX.termcap?=	${BUILDLINK_PREFIX.curses}
 BUILDLINK_LIBNAME.termcap?=	${BUILDLINK_LIBNAME.curses}
 BUILDLINK_LDADD.termcap?=	${BUILDLINK_LDADD.curses}
 .endif
+
+_VARGROUPS+=		termcap
+_DEF_VARS.termcap=	_TERMCAP_TYPES BUILD_DEFS_EFFECTS BUILDLINK_TRANSFORM
+_SYS_VARS.termcap=	CHECK_BUILTIN.termcap BUILTIN_LIBNAME.termcap \
+			TERMCAP_TYPE \
+			BUILDLINK_PREFIX.termcap BUILDLINK_LIBNAME.termcap \
+			BUILDLINK_LDADD.termcap \
+			BUILDLINK_PREFIX.curses BUILDLINK_LIBNAME.curses \
+			BUILDLINK_LDADD.curses
+_USER_VARS.termcap=	USE_BUILTIN.termcap
+_USE_VARS.termcap=	CURSES_TYPE
