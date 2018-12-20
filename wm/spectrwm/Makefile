@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.12 2018/03/12 11:17:44 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2018/12/20 12:33:23 jaapb Exp $
 
-DISTNAME=	spectrwm-2.5.1
-PKGREVISION=	2
+DISTNAME=	spectrwm-3.2.0
 CATEGORIES=	wm
-MASTER_SITES=	https://opensource.conformal.com/snapshots/spectrwm/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=conformal/}
+GITHUB_TAG=	${GITHUB_PROJECT:tu}_${PKGVERSION_NOREV:S/./_/g}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	https://opensource.conformal.com/wiki/spectrwm
+HOMEPAGE=	https://github.com/conformal/spectrwm
 COMMENT=	Small dynamic tiling window manager for X11
 LICENSE=	isc
 
@@ -25,18 +24,26 @@ MAKE_FLAGS+=		MANINSTALL=maninstall
 # sync with major.minor from ${WRKSRC}/lib/shlib_version.
 CFLAGS+=		-DSWM_LIB=\"${PREFIX}/lib/libswmhack.so.0.0\"
 .else
-USE_TOOLS+=		gmake
 CFLAGS+=		-I${PREFIX}/include
 LDFLAGS+=		-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib
 MAKE_FLAGS+=		MANDIR=${PREFIX}/${PKGMANDIR}
 .  if ${OPSYS} == "Darwin"
+USE_TOOLS+=		gmake
 BUILD_DIRS=		osx
+.  elif ${OPSYS} == "FreeBSD"
+BUILD_DIRS=		freebsd
+.  elif ${OPSYS} == "NetBSD"
+BUILD_DIRS=		netbsd
 .  else
+USE_TOOLS+=		gmake
 BUILD_DIRS=		linux
 .  endif
 .endif
 
 INSTALLATION_DIRS+=	share/examples/spectrwm
+
+post-extract:
+	${RUN} cd ${WRKSRC} && ${CP} -R freebsd netbsd
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/*.conf ${DESTDIR}${PREFIX}/share/examples/spectrwm

@@ -1,0 +1,51 @@
+$NetBSD: patch-netbsd_Makefile,v 1.1 2018/12/20 12:33:24 jaapb Exp $
+
+Changes from the freebsd Makefile to NetBSD
+(use DESTDIR and BSD_INSTALL_*, mainly)
+--- netbsd/Makefile.orig	2018-12-20 10:44:24.500341942 +0000
++++ netbsd/Makefile
+@@ -1,13 +1,11 @@
+-.sinclude <bsd.port.pre.mk>
++.sinclude <bsd.pkg.pre.mk>
+ 
+-PREFIX?= /usr/local
+-LOCALBASE?= /usr/local
++PREFIX?= /usr/pkg
++LOCALBASE?= /usr/pkg
+ 
+-SWM_BINDIR?= $(PREFIX)/bin
+-SWM_LIBDIR?= $(PREFIX)/lib
+-SWM_MANDIR?= $(PREFIX)/man
+-
+-CC?= cc
++SWM_BINDIR?= ${DESTDIR}$(PREFIX)/bin
++SWM_LIBDIR?= ${DESTDIR}$(PREFIX)/lib
++SWM_MANDIR?= ${DESTDIR}$(PREFIX)/${PKGMANDIR}
+ 
+ LVERS!=	awk -F = '/major/ { printf( "%s.", $$2 ) } /minor/ { printf( "%s", $$2 ) }' ${.CURDIR}/../lib/shlib_version
+ BUILDVERSION!= sh "${.CURDIR}/../buildver.sh"
+@@ -41,12 +39,12 @@ libswmhack.so.$(LVERS): swm_hack.so
+ 	$(CC) $(LDFLAGS) -shared -fpic -o ${.TARGET} ${.ALLSRC}
+ 
+ install: all
+-	install -m 755 -d $(SWM_BINDIR)
+-	install -m 755 -d $(SWM_LIBDIR)
+-	install -m 755 -d $(SWM_MANDIR)/man1
+-	install -m 755 spectrwm $(SWM_BINDIR)
+-	install -m 755 libswmhack.so.$(LVERS) $(SWM_LIBDIR)
+-	install -m 644 ../spectrwm.1 $(SWM_MANDIR)/man1/spectrwm.1
++	$(BSD_INSTALL_PROGRAM_DIR) $(SWM_BINDIR)
++	$(BSD_INSTALL_LIB_DIR) $(SWM_LIBDIR)
++	$(BSD_INSTALL_MAN_DIR) $(SWM_MANDIR)/man1
++	$(BSD_INSTALL_PROGRAM) spectrwm $(SWM_BINDIR)
++	$(BSD_INSTALL_LIB) libswmhack.so.$(LVERS) $(SWM_LIBDIR)
++	$(BSD_INSTALL_MAN) ../spectrwm.1 $(SWM_MANDIR)/man1/spectrwm.1
+ 	ln -sf spectrwm $(SWM_BINDIR)/scrotwm
+ 
+ clean:
+@@ -54,4 +52,4 @@ clean:
+ 
+ .PHONY:	all install clean
+ 
+-.sinclude <bsd.port.post.mk>
++.sinclude <bsd.pkg.post.mk>
