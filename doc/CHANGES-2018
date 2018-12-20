@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5285 2018/12/19 17:12:53 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.5286 2018/12/20 11:31:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7388,3 +7388,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/unifi to 5.9.29 [tnn 2018-12-19]
 	Removed lang/cbindgen successor devel/cbindgen [tnn 2018-12-19]
 	Updated lang/go111 to 1.11.4 [bsiegert 2018-12-19]
+	Updated net/py-boto to 2.49.0nb1 [wiz 2018-12-20]
