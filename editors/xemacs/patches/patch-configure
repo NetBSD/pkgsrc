@@ -1,0 +1,43 @@
+$NetBSD: patch-configure,v 1.3 2018/12/20 15:26:31 hauke Exp $
+
+On progressive Linuxen (Arch here), CPPFLAGS pre-filled with
+-D_FORTIFY_SOURCE=2 -Werror will make configure tests fail on
+pre-processor warnings. Make sure we set CPP to something that works.
+
+This patch should go upstream into configure.in, but it is really the
+autoconf AC_PROG_CPP macro definition that needs to be amended.
+
+--- configure.orig	2015-03-25 11:25:33.000000000 +0000
++++ configure
+@@ -2362,10 +2362,31 @@ else
+   echo "configure: failed program was:" >&5
+   cat conftest.$ac_ext >&5
+   rm -rf conftest*
++  # Some Linuxen (Arch) define _FORTIFY_SOURCE in CPPFLAGS together 
++  # with -Werror. Make sure the warnings do not disrupt feature tests.
++  CPP="${CC-cc} -E -Wno-cpp"
++  cat > conftest.$ac_ext <<EOF
++#line 2370 "configure"
++#include "confdefs.h"
++#include <assert.h>
++Syntax Error
++EOF
++ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
++{ (eval echo configure:2376: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
++ac_err=`grep -v '^ *+' conftest.out`
++if test -z "$ac_err"; then
++  :
++else
++  echo "$ac_err" >&5
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++  rm -rf conftest*
+   CPP=/lib/cpp
+ fi
+ rm -f conftest*
+ fi
++rm -f conftest*
++fi
+ rm -f conftest*
+ fi
+ rm -f conftest*
