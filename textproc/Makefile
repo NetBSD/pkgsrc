@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1016 2018/12/03 19:29:00 markd Exp $
+# $NetBSD: Makefile,v 1.1017 2018/12/20 13:32:55 bsiegert Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -486,6 +486,7 @@ SUBDIR+=	p5-Net-Dict
 SUBDIR+=	p5-Net-IDN-Encode
 SUBDIR+=	p5-Number-Format
 SUBDIR+=	p5-Number-Spell
+SUBDIR+=	p5-ODF-lpOD
 SUBDIR+=	p5-PDF
 SUBDIR+=	p5-PDF-API2
 SUBDIR+=	p5-PDF-Create

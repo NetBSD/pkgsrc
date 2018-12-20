@@ -1,0 +1,6 @@
+This module is an office document management interface. It allows the
+users to create or transform office documents, or to extract data from
+them. It can handle files which comply with the ODF standard and whose
+type is text (odt), spreadsheet (ods), presentation (odp) or drawing
+(odg). It interacts directly with the files and doesn't depend on a
+particular office software.
