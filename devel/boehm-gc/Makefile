@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.96 2018/12/14 09:21:22 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2018/12/20 23:55:24 wiz Exp $
 
 DISTNAME=	gc-8.0.0
 PKGNAME=	${DISTNAME:S/gc/boehm-gc/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.hboehm.info/gc/gc_source/
 
@@ -15,8 +15,6 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-cplusplus
-# https://github.com/ivmai/bdwgc/issues/255
-CONFIGURE_ARGS+=	--disable-munmap
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/doc
 PKGCONFIG_OVERRIDE=	bdw-gc.pc.in
 INSTALLATION_DIRS=	${PKGMANDIR}/man3
