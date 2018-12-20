@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1354 2018/12/16 14:06:51 adam Exp $
+# $NetBSD: Makefile,v 1.1355 2018/12/20 07:14:10 jnemeth Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -661,8 +661,8 @@ SUBDIR+=	py-django-treebeard
 SUBDIR+=	py-django14
 SUBDIR+=	py-django2
 SUBDIR+=	py-djangocms-admin-style
-SUBDIR+=	py-djangocms-audio
 SUBDIR+=	py-djangocms-attributes-field
+SUBDIR+=	py-djangocms-audio
 SUBDIR+=	py-djangocms-column
 SUBDIR+=	py-djangocms-file
 SUBDIR+=	py-djangocms-flash
