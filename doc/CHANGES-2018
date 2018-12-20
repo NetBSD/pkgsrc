@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5290 2018/12/20 17:56:02 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5291 2018/12/20 19:34:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7394,3 +7394,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated audio/icecast to 2.4.3nb10 [wiz 2018-12-20]
 	Updated databases/openldap to 2.4.47 [adam 2018-12-20]
 	Updated databases/lmdb to 0.9.23 [adam 2018-12-20]
+	Updated security/gnupg2 to 2.2.12 [adam 2018-12-20]
