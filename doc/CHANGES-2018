@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5317 2018/12/21 16:58:07 nia Exp $
+$NetBSD: CHANGES-2018,v 1.5318 2018/12/21 19:04:33 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7421,3 +7421,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/gsed to 4.6 [ryoon 2018-12-21]
 	Added games/liblcf version 0.5.4 [nia 2018-12-21]
 	Added games/easyrpg-player version 0.5.4 [nia 2018-12-21]
+	Added biology/kallisto version 0.45.0 [bacon 2018-12-21]
