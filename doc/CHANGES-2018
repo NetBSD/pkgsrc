@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5296 2018/12/21 03:07:39 wen Exp $
+$NetBSD: CHANGES-2018,v 1.5297 2018/12/21 06:15:24 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7400,4 +7400,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/boehm-gc to 8.0.0nb2 [wiz 2018-12-20]
 	Updated math/R to 3.5.2 [wen 2018-12-21]
 	Updated math/R-FNN to 1.1.2.2 [wen 2018-12-21]
-	Updated devel/R-IRdisplay to 0.7.0 [wen 201-12-21]
+	Updated devel/R-IRdisplay to 0.7.0 [wen 2018-12-21]
+	Updated devel/R-IRkernel to 0.8.14 [wen 2018-12-21]
