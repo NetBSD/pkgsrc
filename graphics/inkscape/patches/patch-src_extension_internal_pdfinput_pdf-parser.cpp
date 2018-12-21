@@ -1,4 +1,4 @@
-$NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.8 2018/06/21 10:25:35 wiz Exp $
+$NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.9 2018/12/21 08:46:16 wiz Exp $
 
 - Object.h is included in pdf-parser.h -- see patch for pdf-parser.h.
 - Support poppler 0.58
@@ -19,6 +19,15 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.8 2018/06/21 1
  #include "Array.h"
  #include "Dict.h"
  #include "Stream.h"
+@@ -318,7 +317,7 @@ PdfParser::PdfParser(XRef *xrefA,
+   builder->setDocumentSize(Inkscape::Util::Quantity::convert(state->getPageWidth(), "pt", "px"),
+                            Inkscape::Util::Quantity::convert(state->getPageHeight(), "pt", "px"));
+ 
+-  double *ctm = state->getCTM();
++  _POPPLER_CONST double *ctm = state->getCTM();
+   double scaledCTM[6];
+   for (int i = 0; i < 6; ++i) {
+     baseMatrix[i] = ctm[i];
 @@ -414,13 +413,21 @@ void PdfParser::parse(Object *obj, GBool
  
    if (obj->isArray()) {
@@ -106,6 +115,17 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.8 2018/06/21 1
 +#endif
    }
  }
+ 
+@@ -543,8 +570,8 @@ const char *PdfParser::getPreviousOperat
+ }
+ 
+ void PdfParser::execOp(Object *cmd, Object args[], int numArgs) {
+-  PdfOperator *op;
+-  char *name;
++  _POPPLER_CONST PdfOperator *op;
++  _POPPLER_CONST char *name;
+   Object *argPtr;
+   int i;
  
 @@ -692,9 +719,13 @@ void PdfParser::opSetDash(Object args[],
    if (length != 0) {
@@ -509,6 +529,33 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.8 2018/06/21 1
    if (colorSpace) {
      GfxColor color;
      state->setStrokeColorSpace(colorSpace);
+@@ -1572,7 +1751,7 @@ void PdfParser::doShadingPatternFillFall
+                                              GBool stroke, GBool eoFill) {
+   GfxShading *shading;
+   GfxPath *savedPath;
+-  double *ctm, *btm, *ptm;
++  _POPPLER_CONST double *ctm, *btm, *ptm;
+   double m[6], ictm[6], m1[6];
+   double xMin, yMin, xMax, yMax;
+   double det;
+@@ -1814,7 +1993,7 @@ void PdfParser::doFunctionShFill1(GfxFun
+   GfxColor color0M, color1M, colorM0, colorM1, colorMM;
+   GfxColor colors2[4];
+   double functionColorDelta = colorDeltas[pdfFunctionShading-1];
+-  double *matrix;
++  _POPPLER_CONST double *matrix;
+   double xM, yM;
+   int nComps, i, j;
+ 
+@@ -1994,7 +2173,7 @@ void PdfParser::doPatchMeshShFill(GfxPat
+   }
+ }
+ 
+-void PdfParser::fillPatch(GfxPatch *patch, int nComps, int depth) {
++void PdfParser::fillPatch(_POPPLER_CONST GfxPatch *patch, int nComps, int depth) {
+   GfxPatch patch00 = blankPatch();
+   GfxPatch patch01 = blankPatch();
+   GfxPatch patch10 = blankPatch();
 @@ -2310,7 +2489,7 @@ void PdfParser::opShowText(Object args[]
      builder->updateFont(state);
      fontChanged = gFalse;
@@ -563,6 +610,20 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.8 2018/06/21 1
    }
  }
  
+@@ -2405,11 +2590,11 @@ void PdfParser::doShowText(GooString *s)
+   double x, y, dx, dy, tdx, tdy;
+   double originX, originY, tOriginX, tOriginY;
+   double oldCTM[6], newCTM[6];
+-  double *mat;
++  const double *mat;
+   Object charProc;
+   Dict *resDict;
+   Parser *oldParser;
+-  char *p;
++  _POPPLER_CONST char *p;
+   int len, n, uLen;
+ 
+   font = state->getFont();
 @@ -2465,7 +2650,11 @@ void PdfParser::doShowText(GooString *s)
        //out->updateCTM(state, 1, 0, 0, 1, 0, 0);
        if (0){ /*!out->beginType3Char(state, curX + riseX, curY + riseY, tdx, tdy,

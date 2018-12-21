@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.65 2018/06/28 11:18:58 jperkin Exp $
+$NetBSD: distinfo,v 1.66 2018/12/21 08:46:16 wiz Exp $
 
 SHA1 (inkscape-0.92.2.tar.bz2) = c620d7aac594a0f839f2f7840d57e26f00991d16
 RMD160 (inkscape-0.92.2.tar.bz2) = 5508b38c47ed0a860a734eef8f8ca8e53f4e923a
@@ -17,8 +17,8 @@ SHA1 (patch-src_extension_internal_emf-inout.cpp) = 4fe6c24007b54d55d11502876e75
 SHA1 (patch-src_extension_internal_emf-print.cpp) = 5da493a452afa4b11bbb204c430fc3e63332c927
 SHA1 (patch-src_extension_internal_metafile-print.cpp) = 798a2f15986cd81d13bf576b1641a810d4d40573
 SHA1 (patch-src_extension_internal_pdfinput_pdf-input.cpp) = 437cb3a461df047fef3c91e86c89cdcf15ef9965
-SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.cpp) = a15b784ff4941807c31958643d671961fff248ac
-SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.h) = ba408f45544853f9323f8bd879bd55604072bb7a
+SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.cpp) = e81a411cbddc3e061aa65b4ecdac2a16883cf1d5
+SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.h) = 46caec54768a353fc9f9b781373d3b231dfc8392
 SHA1 (patch-src_extension_internal_pdfinput_svg-builder.cpp) = d7bfff0d3a1309b96eb70bc75b08d5d1ddf400da
 SHA1 (patch-src_extension_internal_wmf-inout.cpp) = b49b504d1cf9388d2ad7e1c91c339e7c3d5ffdf5
 SHA1 (patch-src_extension_internal_wmf-print.cpp) = b658d7a0697aaed55671507fe88ce93619ef1070
