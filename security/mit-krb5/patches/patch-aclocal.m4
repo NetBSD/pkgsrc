@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2018/06/15 20:46:01 tez Exp $
+$NetBSD: patch-aclocal.m4,v 1.1 2018/12/21 15:45:13 adam Exp $
 
 Don't make sunpro warnings into errors (warnings are seen in gcc too)
 Add --enable-pkgsrc-libtool option
