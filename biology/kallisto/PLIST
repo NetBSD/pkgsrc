@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2018/12/21 19:00:56 bacon Exp $
+bin/kallisto
+bin/kallisto-test
+share/kallisto/test/README.md
+share/kallisto/test/Snakefile
+share/kallisto/test/chrom.txt
+share/kallisto/test/reads_1.fastq.gz
+share/kallisto/test/reads_2.fastq.gz
+share/kallisto/test/transcripts.fasta.gz
+share/kallisto/test/transcripts.gtf.gz

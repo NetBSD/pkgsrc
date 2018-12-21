@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2018/12/21 19:00:56 bacon Exp $
+
+SHA1 (kallisto-0.45.0.tar.gz) = ab0890c5d675d678dbcf415a86512b4694b3a4a6
+RMD160 (kallisto-0.45.0.tar.gz) = f482f7525dde0bfc2425cf803812c1c7748c882e
+SHA512 (kallisto-0.45.0.tar.gz) = b120c36ccb4725b19307c3e90c7f9b73b87efc53f08d3f2c12fc2e4b7afc3c03c52ba07dff623c9c8ad5a7e89c1eeb907389ccf3e4440236e81a0611500639e2
+Size (kallisto-0.45.0.tar.gz) = 2250430 bytes
+SHA1 (patch-CMakeLists.txt) = 2817091347e35898fec0bab77e8d9cc5ca5fff3f
+SHA1 (patch-src_CMakeLists.txt) = 2ef72024591c5216fbf44fb7cdfa4a8330b0c81a
