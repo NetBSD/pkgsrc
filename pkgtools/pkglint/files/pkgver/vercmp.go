@@ -14,6 +14,7 @@ func imax(a, b int) int {
 	}
 	return b
 }
+
 func icmp(a, b int) int {
 	if a < b {
 		return -1
@@ -80,9 +81,7 @@ func newVersion(vstr string) *version {
 func (v *version) Add(i int) {
 	v.v = append(v.v, i)
 }
-func isdigit(b byte) bool {
-	return '0' <= b && b <= '9'
-}
+
 func (v *version) Place(i int) int {
 	if i < len(v.v) {
 		return v.v[i]

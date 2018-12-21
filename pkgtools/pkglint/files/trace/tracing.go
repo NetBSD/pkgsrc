@@ -84,11 +84,11 @@ func argsStr(args []interface{}) string {
 }
 
 func (t *Tracer) traceIndent() string {
-	indent := ""
+	var indent strings.Builder
 	for i := 0; i < t.depth; i++ {
-		indent += fmt.Sprintf("%d ", i+1)
+		_, _ = fmt.Fprintf(&indent, "%d ", i+1)
 	}
-	return indent
+	return indent.String()
 }
 
 func (t *Tracer) traceCall(args ...interface{}) func() {
@@ -103,12 +103,12 @@ func (t *Tracer) traceCall(args ...interface{}) func() {
 		}
 	}
 	indent := t.traceIndent()
-	_, _ = io.WriteString(t.Out, fmt.Sprintf("TRACE: %s+ %s(%s)\n", indent, funcname, argsStr(withoutResults(args))))
+	_, _ = fmt.Fprintf(t.Out, "TRACE: %s+ %s(%s)\n", indent, funcname, argsStr(withoutResults(args)))
 	t.depth++
 
 	return func() {
 		t.depth--
-		_, _ = io.WriteString(t.Out, fmt.Sprintf("TRACE: %s- %s(%s)\n", indent, funcname, argsStr(withResults(args))))
+		_, _ = fmt.Fprintf(t.Out, "TRACE: %s- %s(%s)\n", indent, funcname, argsStr(withResults(args)))
 	}
 }
 

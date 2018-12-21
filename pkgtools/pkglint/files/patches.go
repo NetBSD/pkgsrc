@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-func ChecklinesPatch(lines Lines) {
+func CheckLinesPatch(lines Lines) {
 	if trace.Tracing {
 		defer trace.Call1(lines.FileName)()
 	}
@@ -93,7 +93,7 @@ func (ck *PatchChecker) Check() {
 		ck.lines.Errorf("Contains no patch.")
 	}
 
-	ChecklinesTrailingEmptyLines(ck.lines)
+	CheckLinesTrailingEmptyLines(ck.lines)
 	sha1Before, err := computePatchSha1Hex(ck.lines.FileName)
 	if SaveAutofixChanges(ck.lines) && G.Pkg != nil && err == nil {
 		sha1After, err := computePatchSha1Hex(ck.lines.FileName)

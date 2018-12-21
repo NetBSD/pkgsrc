@@ -66,6 +66,8 @@ func (s *Suite) Test_VartypeCheck_Category(c *check.C) {
 func (s *Suite) Test_VartypeCheck_CFlag(c *check.C) {
 	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).CFlag)
 
+	vt.tester.SetupTool("pkg-config", "", AtRunTime)
+
 	vt.Varname("CFLAGS")
 	vt.Op(opAssignAppend)
 	vt.Values(
@@ -490,6 +492,8 @@ func (s *Suite) Test_VartypeCheck_Integer(c *check.C) {
 
 func (s *Suite) Test_VartypeCheck_LdFlag(c *check.C) {
 	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).LdFlag)
+
+	vt.tester.SetupTool("pkg-config", "", AtRunTime)
 
 	vt.Varname("LDFLAGS")
 	vt.Op(opAssignAppend)

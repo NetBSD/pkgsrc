@@ -121,10 +121,10 @@ func (pkg *Package) checkPossibleDowngrade() {
 	}
 }
 
-// checklinesBuildlink3Inclusion checks whether the package Makefile and
+// checkLinesBuildlink3Inclusion checks whether the package Makefile and
 // the corresponding buildlink3.mk agree for all included buildlink3.mk
 // files whether they are included conditionally or unconditionally.
-func (pkg *Package) checklinesBuildlink3Inclusion(mklines MkLines) {
+func (pkg *Package) checkLinesBuildlink3Inclusion(mklines MkLines) {
 	if trace.Tracing {
 		defer trace.Call0()()
 	}

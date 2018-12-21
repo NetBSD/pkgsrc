@@ -46,11 +46,11 @@ func (s *Suite) Test_Pkgsrc_InitVartypes__enumFrom(c *check.C) {
 		c.Check(vartype, equals, values)
 	}
 
-	checkEnumValues("EMACS_VERSIONS_ACCEPTED", "ShellList of enum: emacs29 emacs31 ")
+	checkEnumValues("EMACS_VERSIONS_ACCEPTED", "List of enum: emacs29 emacs31 ")
 	checkEnumValues("PKG_JVM", "enum: jdk16 openjdk7 openjdk8 oracle-jdk8 sun-jdk6 sun-jdk7 ")
-	checkEnumValues("USE_LANGUAGES", "ShellList of enum: ada c c++ c++03 c++0x c++11 c++14 c99 "+
+	checkEnumValues("USE_LANGUAGES", "List of enum: ada c c++ c++03 c++0x c++11 c++14 c99 "+
 		"fortran fortran77 gnu++03 gnu++0x gnu++11 gnu++14 java obj-c++ objc ")
-	checkEnumValues("PKGSRC_COMPILER", "ShellList of enum: ccache distcc f2c g95 gcc ido mipspro-ucode sunpro ")
+	checkEnumValues("PKGSRC_COMPILER", "List of enum: ccache distcc f2c g95 gcc ido mipspro-ucode sunpro ")
 }
 
 func (s *Suite) Test_Pkgsrc_InitVartypes__enumFromDirs(c *check.C) {
@@ -97,7 +97,7 @@ func (s *Suite) Test_Pkgsrc_InitVartypes__LP64PLATFORMS(c *check.C) {
 	pkg := t.SetupPackage("category/package",
 		"BROKEN_ON_PLATFORM=\t${LP64PLATFORMS}")
 
-	G.CheckDirent(pkg)
+	G.Check(pkg)
 
 	// No warning about a missing :Q operator.
 	// All PLATFORM variables must be either lkNone or lkSpace.
