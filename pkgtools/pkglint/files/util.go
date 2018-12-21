@@ -41,9 +41,6 @@ func hasSuffix(s, suffix string) bool {
 func sprintf(format string, args ...interface{}) string {
 	return fmt.Sprintf(format, args...)
 }
-func fields(s string) []string {
-	return strings.Fields(s)
-}
 func matches(s string, re regex.Pattern) bool {
 	return G.res.Matches(s, re)
 }
@@ -454,14 +451,14 @@ func (s *Scope) Define(varname string, mkline MkLine) {
 	if s.defined[varname] == nil {
 		s.defined[varname] = mkline
 		if trace.Tracing {
-			trace.Step2("Defining %q in line %s", varname, mkline.Linenos())
+			trace.Step2("Defining %q in %s", varname, mkline.String())
 		}
 	}
 	varcanon := varnameCanon(varname)
 	if varcanon != varname && s.defined[varcanon] == nil {
 		s.defined[varcanon] = mkline
 		if trace.Tracing {
-			trace.Step2("Defining %q in line %s", varcanon, mkline.Linenos())
+			trace.Step2("Defining %q in %s", varcanon, mkline.String())
 		}
 	}
 }
@@ -475,14 +472,14 @@ func (s *Scope) Use(varname string, line MkLine) {
 	if s.used[varname] == nil {
 		s.used[varname] = line
 		if trace.Tracing {
-			trace.Step2("Using %q in line %s", varname, line.Linenos())
+			trace.Step2("Using %q in %s", varname, line.String())
 		}
 	}
 	varcanon := varnameCanon(varname)
 	if varcanon != varname && s.used[varcanon] == nil {
 		s.used[varcanon] = line
 		if trace.Tracing {
-			trace.Step2("Using %q in line %s", varcanon, line.Linenos())
+			trace.Step2("Using %q in %s", varcanon, line.String())
 		}
 	}
 }
@@ -930,9 +927,9 @@ func escapePrintable(s string) string {
 		case rune(byte(r)) == r && textproc.XPrint.Contains(byte(rest[j])):
 			escaped.WriteByte(byte(r))
 		case r == 0xFFFD && !hasPrefix(rest[j:], "\uFFFD"):
-			_, _ = fmt.Fprintf(&escaped, "\\x%02X", rest[j])
+			_, _ = fmt.Fprintf(&escaped, "<\\x%02X>", rest[j])
 		default:
-			_, _ = fmt.Fprintf(&escaped, "%U", r)
+			_, _ = fmt.Fprintf(&escaped, "<%U>", r)
 		}
 	}
 	return escaped.String()

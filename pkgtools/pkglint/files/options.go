@@ -1,6 +1,6 @@
 package pkglint
 
-func ChecklinesOptionsMk(mklines MkLines) {
+func CheckLinesOptionsMk(mklines MkLines) {
 	if trace.Tracing {
 		defer trace.Call1(mklines.lines.FileName)()
 	}
@@ -37,7 +37,7 @@ loop:
 		case mkline.IsVarassign():
 			switch mkline.Varcanon() {
 			case "PKG_SUPPORTED_OPTIONS", "PKG_OPTIONS_GROUP.*", "PKG_OPTIONS_SET.*":
-				for _, option := range fields(mkline.Value()) {
+				for _, option := range mkline.ValueFields(mkline.Value()) {
 					if !containsVarRef(option) {
 						declaredOptions[option] = mkline
 						optionsInDeclarationOrder = append(optionsInDeclarationOrder, option)

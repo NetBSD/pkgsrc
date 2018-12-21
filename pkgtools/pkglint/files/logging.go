@@ -101,7 +101,7 @@ func (l *Logger) Explain(explanation ...string) {
 		if explanationLine != "" {
 			l.out.Write("\t")
 		}
-		l.out.WriteLine(explanationLine)
+		l.out.WriteLine(escapePrintable(explanationLine))
 	}
 	l.out.WriteLine("")
 }

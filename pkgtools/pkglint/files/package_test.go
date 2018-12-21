@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func (s *Suite) Test_Package_checklinesBuildlink3Inclusion__file_but_not_package(c *check.C) {
+func (s *Suite) Test_Package_checkLinesBuildlink3Inclusion__file_but_not_package(c *check.C) {
 	t := s.Init(c)
 
 	t.CreateFileLines("category/dependency/buildlink3.mk")
@@ -15,14 +15,14 @@ func (s *Suite) Test_Package_checklinesBuildlink3Inclusion__file_but_not_package
 		"",
 		".include \"../../category/dependency/buildlink3.mk\"")
 
-	G.Pkg.checklinesBuildlink3Inclusion(mklines)
+	G.Pkg.checkLinesBuildlink3Inclusion(mklines)
 
 	t.CheckOutputLines(
 		"WARN: category/package/buildlink3.mk:3: " +
 			"category/dependency/buildlink3.mk is included by this file but not by the package.")
 }
 
-func (s *Suite) Test_Package_checklinesBuildlink3Inclusion__package_but_not_file(c *check.C) {
+func (s *Suite) Test_Package_checkLinesBuildlink3Inclusion__package_but_not_file(c *check.C) {
 	t := s.Init(c)
 
 	t.CreateFileLines("category/dependency/buildlink3.mk")
@@ -32,16 +32,16 @@ func (s *Suite) Test_Package_checklinesBuildlink3Inclusion__package_but_not_file
 		MkRcsID)
 
 	t.EnableTracingToLog()
-	G.Pkg.checklinesBuildlink3Inclusion(mklines)
+	G.Pkg.checkLinesBuildlink3Inclusion(mklines)
 
 	// This is only traced but not logged as a regular warning since
 	// several packages have build dependencies that are not needed
 	// for building other packages. These cannot be flagged as warnings.
 	t.CheckOutputLines(
-		"TRACE: + (*Package).checklinesBuildlink3Inclusion()",
+		"TRACE: + (*Package).checkLinesBuildlink3Inclusion()",
 		"TRACE: 1   ../../category/dependency/buildlink3.mk/buildlink3.mk "+
 			"is included by the package but not by the buildlink3.mk file.",
-		"TRACE: - (*Package).checklinesBuildlink3Inclusion()")
+		"TRACE: - (*Package).checkLinesBuildlink3Inclusion()")
 }
 
 func (s *Suite) Test_Package_pkgnameFromDistname(c *check.C) {
@@ -234,7 +234,7 @@ func (s *Suite) Test_Package_CheckVarorder__license(c *check.C) {
 
 	t.SetupVartypes()
 
-	G.CheckDirent(t.File("x11/9term"))
+	G.Check(t.File("x11/9term"))
 
 	// Since the error is grave enough, the warning about the correct position is suppressed.
 	t.CheckOutputLines(
@@ -358,7 +358,7 @@ func (s *Suite) Test_Package_determineEffectivePkgVars__same(c *check.C) {
 		"DISTNAME=\tdistname-1.0",
 		"PKGNAME=\tdistname-1.0")
 
-	G.CheckDirent(pkg)
+	G.Check(pkg)
 
 	t.CheckOutputLines(
 		"NOTE: ~/category/package/Makefile:20: " +
@@ -372,7 +372,7 @@ func (s *Suite) Test_Package_determineEffectivePkgVars__invalid_DISTNAME(c *chec
 	pkg := t.SetupPackage("category/package",
 		"DISTNAME=\tpkgname-version")
 
-	G.CheckDirent(pkg)
+	G.Check(pkg)
 
 	t.CheckOutputLines(
 		"WARN: ~/category/package/Makefile:3: " +
@@ -512,7 +512,7 @@ func (s *Suite) Test_Package__varuse_at_load_time(c *check.C) {
 
 	t.SetupCommandLine("-q", "-Wall,no-space")
 	G.Pkgsrc.LoadInfrastructure()
-	G.CheckDirent(t.File("category/pkgbase"))
+	G.Check(t.File("category/pkgbase"))
 
 	t.CheckOutputLines(
 		"WARN: ~/category/pkgbase/Makefile:14: To use the tool ${FALSE} at load time, bsd.prefs.mk has to be included before.",
@@ -568,7 +568,7 @@ func (s *Suite) Test_Package_loadPackageMakefile__PECL_VERSION(c *check.C) {
 		"PECL_VERSION=\t1.1.2",
 		".include \"../../lang/php/ext.mk\"")
 
-	G.CheckDirent(pkg)
+	G.Check(pkg)
 }
 
 func (s *Suite) Test_Package_checkIncludeConditionally__conditional_and_unconditional_include(c *check.C) {
@@ -760,7 +760,7 @@ func (s *Suite) Test__distinfo_from_other_package(c *check.C) {
 		"",
 		"SHA1 (patch-aa) = 1234")
 
-	G.CheckDirent("x11/gst-x11")
+	G.Check("x11/gst-x11")
 
 	t.CheckOutputLines(
 		"WARN: x11/gst-x11/Makefile: Neither PLIST nor PLIST.common exist, and PLIST_SRC is unset.",
@@ -777,7 +777,7 @@ func (s *Suite) Test_Package_checkfilePackageMakefile__GNU_CONFIGURE(c *check.C)
 		"GNU_CONFIGURE=\tyes",
 		"USE_LANGUAGES=\t#")
 
-	G.CheckDirent(pkg)
+	G.Check(pkg)
 
 	t.CheckOutputLines(
 		"WARN: ~/category/package/Makefile:20: GNU_CONFIGURE almost always needs a C compiler, but \"c\" is not added to USE_LANGUAGES in line 21.")
@@ -793,7 +793,7 @@ func (s *Suite) Test_Package_checkfilePackageMakefile__GNU_CONFIGURE_ok(c *check
 		"GNU_CONFIGURE=\tyes",
 		"USE_LANGUAGES=\t# none, really")
 
-	G.CheckDirent(pkg)
+	G.Check(pkg)
 
 	t.CheckOutputEmpty()
 }
@@ -806,7 +806,7 @@ func (s *Suite) Test_Package_checkfilePackageMakefile__REPLACE_PERL(c *check.C) 
 		"REPLACE_PERL=\t*.pl",
 		"NO_CONFIGURE=\tyes")
 
-	G.CheckDirent(pkg)
+	G.Check(pkg)
 
 	t.CheckOutputLines(
 		"WARN: ~/category/package/Makefile:20: REPLACE_PERL is ignored when NO_CONFIGURE is set (in line 21).")
@@ -818,7 +818,7 @@ func (s *Suite) Test_Package_checkfilePackageMakefile__META_PACKAGE_with_distinf
 	pkg := t.SetupPackage("category/package",
 		"META_PACKAGE=\tyes")
 
-	G.CheckDirent(pkg)
+	G.Check(pkg)
 
 	t.CheckOutputLines(
 		"WARN: ~/category/package/distinfo: " +
@@ -832,7 +832,7 @@ func (s *Suite) Test_Package_checkfilePackageMakefile__USE_IMAKE_and_USE_X11(c *
 		"USE_X11=\tyes",
 		"USE_IMAKE=\tyes")
 
-	G.CheckDirent(pkg)
+	G.Check(pkg)
 
 	t.CheckOutputLines(
 		"NOTE: ~/category/package/Makefile:21: USE_IMAKE makes USE_X11 in line 20 redundant.")
@@ -846,7 +846,7 @@ func (s *Suite) Test_Package_readMakefile__skipping(c *check.C) {
 		".include \"${MYSQL_PKGSRCDIR:S/-client$/-server/}/buildlink3.mk\"")
 
 	t.EnableTracingToLog()
-	G.CheckDirent(pkg)
+	G.Check(pkg)
 	t.EnableSilentTracing()
 
 	// Since 2018-12-16 there is no warning or note anymore for the
@@ -891,7 +891,7 @@ func (s *Suite) Test_Package_readMakefile__relative(c *check.C) {
 	pkg := t.SetupPackage("category/package",
 		".include \"../package/extra.mk\"")
 
-	G.CheckDirent(pkg)
+	G.Check(pkg)
 
 	// FIXME: One of the below warnings is redundant.
 	t.CheckOutputLines(
@@ -915,7 +915,7 @@ func (s *Suite) Test_Package_checkLocallyModified(c *check.C) {
 	pkg := t.SetupPackage("category/package",
 		"MAINTAINER=\tpkgsrc-users@NetBSD.org")
 
-	G.CheckDirent(pkg)
+	G.Check(pkg)
 
 	t.CheckOutputEmpty()
 
@@ -924,7 +924,7 @@ func (s *Suite) Test_Package_checkLocallyModified(c *check.C) {
 	t.SetupPackage("category/package",
 		"MAINTAINER=\tmaintainer@example.org")
 
-	G.CheckDirent(pkg)
+	G.Check(pkg)
 
 	t.CheckOutputLines(
 		"NOTE: ~/category/package/Makefile: " +
@@ -936,7 +936,7 @@ func (s *Suite) Test_Package_checkLocallyModified(c *check.C) {
 		"#MAINTAINER=\t# undefined",
 		"OWNER=\towner@example.org")
 
-	G.CheckDirent(pkg)
+	G.Check(pkg)
 
 	t.CheckOutputLines(
 		"WARN: ~/category/package/Makefile: " +
@@ -948,7 +948,7 @@ func (s *Suite) Test_Package_checkLocallyModified(c *check.C) {
 		"MAINTAINER=\tmaintainer@example.org",
 		"OWNER=\towner@example.org")
 
-	G.CheckDirent(pkg)
+	G.Check(pkg)
 
 	t.CheckOutputLines(
 		"WARN: ~/category/package/Makefile: "+
@@ -960,7 +960,7 @@ func (s *Suite) Test_Package_checkLocallyModified(c *check.C) {
 
 	G.Username = "owner"
 
-	G.CheckDirent(pkg)
+	G.Check(pkg)
 
 	t.CheckOutputEmpty()
 }
