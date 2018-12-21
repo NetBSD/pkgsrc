@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5310 2018/12/21 13:05:10 wen Exp $
+$NetBSD: CHANGES-2018,v 1.5311 2018/12/21 15:15:16 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7414,3 +7414,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added lang/chicken5 version 5.0.0 [leot 2018-12-21]
 	Updated math/R-lme4 to 1.1.19 [wen 2018-12-21]
 	Updated www/R-curl to 3.2 [wen 2018-12-21]
+	Updated net/py-botocore to 1.12.70 [ryoon 2018-12-21]
