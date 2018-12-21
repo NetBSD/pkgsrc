@@ -109,6 +109,11 @@ func (line *LineImpl) showSource(out *SeparatorWriter) {
 		return
 	}
 
+	write := func(prefix, line string) {
+		out.Write(prefix)
+		out.Write(escapePrintable(line))
+	}
+
 	printDiff := func(rawLines []*RawLine) {
 		prefix := ">\t"
 		for _, rawLine := range rawLines {
@@ -120,24 +125,24 @@ func (line *LineImpl) showSource(out *SeparatorWriter) {
 		for _, rawLine := range rawLines {
 			if rawLine.textnl != rawLine.orignl {
 				if rawLine.orignl != "" {
-					out.Write("-\t" + rawLine.orignl)
+					write("-\t", rawLine.orignl)
 				}
 				if rawLine.textnl != "" {
-					out.Write("+\t" + rawLine.textnl)
+					write("+\t", rawLine.textnl)
 				}
 			} else {
-				out.Write(prefix + rawLine.orignl)
+				write(prefix, rawLine.orignl)
 			}
 		}
 	}
 
 	if line.autofix != nil {
 		for _, before := range line.autofix.linesBefore {
-			out.Write("+\t" + before)
+			write("+\t", before)
 		}
 		printDiff(line.raw)
 		for _, after := range line.autofix.linesAfter {
-			out.Write("+\t" + after)
+			write("+\t", after)
 		}
 	} else {
 		printDiff(line.raw)

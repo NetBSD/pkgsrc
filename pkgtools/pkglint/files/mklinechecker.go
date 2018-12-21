@@ -56,6 +56,7 @@ func (ck MkLineChecker) checkShellCommand() {
 		fix.ReplaceRegex(`^\t\t+`, "\t", 1)
 		fix.Apply()
 	}
+
 	ck.checkText(shellCommand)
 	NewShellLine(mkline).CheckShellCommandLine(shellCommand)
 }
@@ -195,7 +196,7 @@ func (ck MkLineChecker) checkDirectiveFor(forVars map[string]bool, indentation *
 	args := mkline.Args()
 
 	if m, vars, _ := match2(args, `^([^\t ]+(?:[\t ]*[^\t ]+)*?)[\t ]+in[\t ]+(.*)$`); m {
-		for _, forvar := range fields(vars) {
+		for _, forvar := range strings.Fields(vars) {
 			indentation.AddVar(forvar)
 			if !G.Infrastructure && hasPrefix(forvar, "_") {
 				mkline.Warnf("Variable names starting with an underscore (%s) are reserved for internal pkgsrc use.", forvar)
@@ -219,10 +220,10 @@ func (ck MkLineChecker) checkDirectiveFor(forVars map[string]bool, indentation *
 		// running pkglint over the whole pkgsrc tree did not produce any different result
 		// whether guessed was true or false, so currently it is not worth investing
 		// any work.
-		forLoopType := Vartype{lkSpace, BtUnknown, []ACLEntry{{"*", aclpAllRead}}, false}
+		forLoopType := Vartype{lkShell, BtUnknown, []ACLEntry{{"*", aclpAllRead}}, false}
 		forLoopContext := VarUseContext{&forLoopType, vucTimeParse, vucQuotFor, false}
-		for _, forLoopVar := range mkline.DetermineUsedVariables() {
-			ck.CheckVaruse(&MkVarUse{forLoopVar, nil}, &forLoopContext)
+		for _, itemsVar := range mkline.DetermineUsedVariables() {
+			ck.CheckVaruse(&MkVarUse{itemsVar, nil}, &forLoopContext)
 		}
 	}
 }
@@ -281,11 +282,11 @@ func (ck MkLineChecker) checkDependencyRule(allowedTargets map[string]bool) {
 	}
 }
 
-// checkVarassignPermissions checks the permissions for the left-hand side
+// checkVarassignLeftPermissions checks the permissions for the left-hand side
 // of a variable assignment line.
 //
 // See checkVarusePermissions.
-func (ck MkLineChecker) checkVarassignPermissions() {
+func (ck MkLineChecker) checkVarassignLeftPermissions() {
 	if !G.Opts.WarnPerm || G.Infrastructure {
 		return
 	}
@@ -395,6 +396,7 @@ func (ck MkLineChecker) CheckVaruse(varuse *MkVarUse, vuc *VarUseContext) {
 
 	if G.Opts.WarnQuoting && vuc.quoting != vucQuotUnknown && needsQuoting != unknown {
 		// FIXME: Why "Shellword" when there's no indication that this is actually a shell type?
+		// It's for splitting the value into tokens, taking "double" and 'single' quotes into account.
 		ck.CheckVaruseShellword(varname, vartype, vuc, varuse.Mod(), needsQuoting)
 	}
 
@@ -494,7 +496,7 @@ func (ck MkLineChecker) checkVaruseModifiersRange(varuse *MkVarUse) {
 // checkVarusePermissions checks the permissions for the right-hand side
 // of a variable assignment line.
 //
-// See checkVarassignPermissions.
+// See checkVarassignLeftPermissions.
 func (ck MkLineChecker) checkVarusePermissions(varname string, vartype *Vartype, vuc *VarUseContext) {
 	if !G.Opts.WarnPerm {
 		return
@@ -752,12 +754,6 @@ func (ck MkLineChecker) CheckVaruseShellword(varname string, vartype *Vartype, v
 }
 
 func (ck MkLineChecker) checkVaruseDeprecated(varuse *MkVarUse) {
-	// Temporarily disabled since this method is not called for all places,
-	// such as ${_PKG_SILENT} in a shell command.
-	if varuse != nil {
-		return
-	}
-
 	varname := varuse.varname
 	instead := G.Pkgsrc.Deprecated[varname]
 	if instead == "" {
@@ -796,6 +792,30 @@ func (ck MkLineChecker) checkVarassignDecreasingVersions() {
 }
 
 func (ck MkLineChecker) checkVarassign() {
+	ck.checkVarassignLeft()
+	ck.checkVarassignRight()
+}
+
+// checkVarassignLeft checks everything to the left of the assignment operator.
+func (ck MkLineChecker) checkVarassignLeft() {
+	varname := ck.MkLine.Varname()
+	if hasPrefix(varname, "_") && !G.Infrastructure {
+		ck.MkLine.Warnf("Variable names starting with an underscore (%s) are reserved for internal pkgsrc use.", varname)
+	}
+
+	ck.checkVarassignLeftNotUsed()
+	ck.checkVarassignLeftDeprecated()
+	ck.checkVarassignLeftPermissions()
+	ck.checkVarassignLeftBsdPrefs()
+
+	ck.checkTextVarUse(
+		ck.MkLine.Varname(),
+		&Vartype{lkNone, BtVariableName, []ACLEntry{{"*", aclpAll}}, false},
+		vucTimeParse)
+}
+
+// checkVarassignLeft checks everything to the right of the assignment operator.
+func (ck MkLineChecker) checkVarassignRight() {
 	mkline := ck.MkLine
 	varname := mkline.Varname()
 	op := mkline.Op()
@@ -806,23 +826,15 @@ func (ck MkLineChecker) checkVarassign() {
 		defer trace.Call(varname, op, value)()
 	}
 
-	defineVar(mkline, varname)
-	ck.checkVarassignPermissions()
-	ck.checkVarassignBsdPrefs()
-
 	ck.checkText(value)
 	ck.checkVartype(varname, op, value, comment)
 
-	ck.checkVarassignUnused()
+	ck.checkVarassignMisc()
 
-	ck.checkVarassignSpecific()
-
-	ck.checkVarassignDeprecated()
-
-	ck.checkVarassignVaruse()
+	ck.checkVarassignRightVaruse()
 }
 
-func (ck MkLineChecker) checkVarassignDeprecated() {
+func (ck MkLineChecker) checkVarassignLeftDeprecated() {
 	varname := ck.MkLine.Varname()
 	if fix := G.Pkgsrc.Deprecated[varname]; fix != "" {
 		ck.MkLine.Warnf("Definition of %s is deprecated. %s", varname, fix)
@@ -831,7 +843,7 @@ func (ck MkLineChecker) checkVarassignDeprecated() {
 	}
 }
 
-func (ck MkLineChecker) checkVarassignUnused() {
+func (ck MkLineChecker) checkVarassignLeftNotUsed() {
 	varname := ck.MkLine.Varname()
 	varcanon := varnameCanon(varname)
 
@@ -854,9 +866,10 @@ func (ck MkLineChecker) checkVarassignUnused() {
 	}
 }
 
-// checkVarassignVaruse checks that in a variable assignment, each variables used on either side
-// of the assignment has the correct data type and quoting.
-func (ck MkLineChecker) checkVarassignVaruse() {
+// checkVarassignRightVaruse checks that in a variable assignment,
+// each variable used on the right-hand side of the assignment operator
+// has the correct data type and quoting.
+func (ck MkLineChecker) checkVarassignRightVaruse() {
 	if trace.Tracing {
 		defer trace.Call()()
 	}
@@ -873,11 +886,6 @@ func (ck MkLineChecker) checkVarassignVaruse() {
 	if op == opAssignShell {
 		vartype = shellcommandsContextType
 	}
-
-	ck.checkTextVarUse(
-		ck.MkLine.Varname(),
-		&Vartype{lkNone, BtVariableName, []ACLEntry{{"*", aclpAll}}, false},
-		vucTimeParse)
 
 	if vartype != nil && vartype.IsShell() {
 		ck.checkVarassignVaruseShell(vartype, time)
@@ -907,7 +915,7 @@ func (ck MkLineChecker) checkTextVarUse(text string, vartype *Vartype, time vucT
 	}
 }
 
-// checkVarassignVaruseShell is very similar to checkVarassignVaruse, they just differ
+// checkVarassignVaruseShell is very similar to checkVarassignRightVaruse, they just differ
 // in the way they determine isWordPart.
 func (ck MkLineChecker) checkVarassignVaruseShell(vartype *Vartype, time vucTime) {
 	if trace.Tracing {
@@ -928,24 +936,20 @@ func (ck MkLineChecker) checkVarassignVaruseShell(vartype *Vartype, time vucTime
 	atoms := NewShTokenizer(mkline.Line, mkline.Value(), false).ShAtoms()
 	for i, atom := range atoms {
 		if varuse := atom.VarUse(); varuse != nil {
-			isWordPart := isWordPart(atoms, i)
-			vuc := VarUseContext{vartype, time, atom.Quoting.ToVarUseContext(), isWordPart}
+			wordPart := isWordPart(atoms, i)
+			vuc := VarUseContext{vartype, time, atom.Quoting.ToVarUseContext(), wordPart}
 			ck.CheckVaruse(varuse, &vuc)
 		}
 	}
 }
 
-func (ck MkLineChecker) checkVarassignSpecific() {
+func (ck MkLineChecker) checkVarassignMisc() {
 	mkline := ck.MkLine
 	varname := mkline.Varname()
 	value := mkline.Value()
 
 	if contains(value, "/etc/rc.d") && mkline.Varname() != "RPMIGNOREPATH" {
 		mkline.Warnf("Please use the RCD_SCRIPTS mechanism to install rc.d scripts automatically to ${RCD_SCRIPTS_EXAMPLEDIR}.")
-	}
-
-	if hasPrefix(varname, "_") && !G.Infrastructure {
-		mkline.Warnf("Variable names starting with an underscore (%s) are reserved for internal pkgsrc use.", varname)
 	}
 
 	if varname == "PYTHON_VERSIONS_ACCEPTED" {
@@ -983,7 +987,7 @@ func (ck MkLineChecker) checkVarassignSpecific() {
 	}
 }
 
-func (ck MkLineChecker) checkVarassignBsdPrefs() {
+func (ck MkLineChecker) checkVarassignLeftBsdPrefs() {
 	mkline := ck.MkLine
 
 	switch mkline.Varcanon() {
@@ -1054,11 +1058,6 @@ func (ck MkLineChecker) checkVartype(varname string, op MkOperator, value, comme
 	case value == "":
 		break
 
-	case vartype.kindOfList == lkSpace:
-		for _, word := range fields(value) {
-			ck.CheckVartypeBasic(varname, vartype.basicType, op, word, comment, vartype.guessed)
-		}
-
 	case vartype.kindOfList == lkShell:
 		words, _ := splitIntoMkWords(mkline.Line, value)
 		for _, word := range words {
@@ -1094,8 +1093,6 @@ func (ck MkLineChecker) checkText(text string) {
 
 	ck.checkTextWrksrcDotDot(text)
 	ck.checkTextRpath(text)
-	ck.checkTextDeprecated(text)
-
 }
 
 func (ck MkLineChecker) checkTextWrksrcDotDot(text string) {
@@ -1121,28 +1118,6 @@ func (ck MkLineChecker) checkTextWrksrcDotDot(text string) {
 func (ck MkLineChecker) checkTextRpath(text string) {
 	if m, flag := match1(text, `(-Wl,--rpath,|-Wl,-rpath-link,|-Wl,-rpath,|-Wl,-R\b)`); m {
 		ck.MkLine.Warnf("Please use ${COMPILER_RPATH_FLAG} instead of %q.", flag)
-	}
-}
-
-func (ck MkLineChecker) checkTextDeprecated(text string) {
-	rest := text
-	for {
-		m, r := G.res.ReplaceFirst(rest, `(?:^|[^$])\$\{([-A-Z0-9a-z_]+)(\.[\-0-9A-Z_a-z]+)?(?::[^\}]+)?\}`, "")
-		if m == nil {
-			break
-		}
-		rest = r
-
-		varbase, varext := m[1], m[2]
-		varname := varbase + varext
-		varcanon := varnameCanon(varname)
-		instead := G.Pkgsrc.Deprecated[varname]
-		if instead == "" {
-			instead = G.Pkgsrc.Deprecated[varcanon]
-		}
-		if instead != "" {
-			ck.MkLine.Warnf("Use of %q is deprecated. %s", varname, instead)
-		}
 	}
 }
 

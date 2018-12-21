@@ -1007,6 +1007,7 @@ func (s *Suite) Test_ShellLine__variable_outside_quotes(c *check.C) {
 func (s *Suite) Test_ShellLine_CheckShellCommand__cd_inside_if(c *check.C) {
 	t := s.Init(c)
 
+	t.SetupVartypes()
 	t.SetupTool("echo", "ECHO", AtRunTime)
 	mklines := t.NewMkLines("Makefile",
 		MkRcsID,
@@ -1023,6 +1024,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommand__cd_inside_if(c *check.C) {
 func (s *Suite) Test_ShellLine_CheckShellCommand__negated_pipe(c *check.C) {
 	t := s.Init(c)
 
+	t.SetupVartypes()
 	t.SetupTool("echo", "ECHO", AtRunTime)
 	t.SetupTool("test", "TEST", AtRunTime)
 	mklines := t.NewMkLines("Makefile",
@@ -1041,6 +1043,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommand__subshell(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupTool("echo", "ECHO", AtRunTime)
+	t.SetupTool("expr", "EXPR", AtRunTime)
 	mklines := t.NewMkLines("Makefile",
 		MkRcsID,
 		"",
@@ -1067,6 +1070,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommand__subshell(c *check.C) {
 func (s *Suite) Test_ShellLine_CheckShellCommand__case_patterns_from_variable(c *check.C) {
 	t := s.Init(c)
 
+	t.SetupVartypes()
 	mklines := t.NewMkLines("Makefile",
 		MkRcsID,
 		"",
@@ -1157,7 +1161,7 @@ func (s *Suite) Test_SimpleCommandChecker_handleCommandVariable__from_package(c 
 		MkRcsID,
 		"PYTHON_BIN=\tmy_cmd")
 
-	G.CheckDirent(pkg)
+	G.Check(pkg)
 
 	t.CheckOutputEmpty()
 }
