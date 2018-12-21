@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5309 2018/12/21 12:55:10 wen Exp $
+$NetBSD: CHANGES-2018,v 1.5310 2018/12/21 13:05:10 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7413,3 +7413,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added geography/R-maptools version 0.9.4 [wen 2018-12-21]
 	Added lang/chicken5 version 5.0.0 [leot 2018-12-21]
 	Updated math/R-lme4 to 1.1.19 [wen 2018-12-21]
+	Updated www/R-curl to 3.2 [wen 2018-12-21]
