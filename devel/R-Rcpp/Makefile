@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/07/28 14:40:42 brook Exp $
+# $NetBSD: Makefile,v 1.11 2018/12/21 08:11:23 wen Exp $
 
 CATEGORIES=	devel
 
@@ -8,7 +8,7 @@ COMMENT=	Seamless R and C++ Integration
 LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	Rcpp
-R_PKGVER=	0.12.17
+R_PKGVER=	1.0.0
 
 USE_LANGUAGES+=	c++
 
