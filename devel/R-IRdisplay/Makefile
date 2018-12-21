@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/07/28 14:40:42 brook Exp $
+# $NetBSD: Makefile,v 1.4 2018/12/21 03:06:46 wen Exp $
 
 CATEGORIES=	devel
 
@@ -10,7 +10,7 @@ LICENSE=	mit
 DEPENDS+=	R-repr-[0-9]*:../../devel/R-repr
 
 R_PKGNAME=	IRdisplay
-R_PKGVER=	0.5.0
+R_PKGVER=	0.7.0
 
 USE_LANGUAGES=	# none
 
