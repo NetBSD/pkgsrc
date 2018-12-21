@@ -30,7 +30,7 @@ func (s *Suite) Test_CheckFileAlternatives__PLIST(c *check.C) {
 		"ERROR: ALTERNATIVES:3: Alternative wrapper \"bin/echo\" must not appear in the PLIST.",
 		"ERROR: ALTERNATIVES:3: Alternative implementation \"bin/gnu-echo\" must appear in the PLIST.",
 		"ERROR: ALTERNATIVES:3: Alternative implementation \"bin/gnu-echo\" must be an absolute path.",
-		"ERROR: ALTERNATIVES:4: Invalid line \"bin/editor bin/vim -e\".",
+		"ERROR: ALTERNATIVES:4: Alternative implementation \"bin/vim\" must be an absolute path.",
 		"ERROR: ALTERNATIVES:5: Invalid line \"invalid\".",
 		"ERROR: ALTERNATIVES:6: Alternative implementation \"${PREFIX}/bin/firefox\" must appear in the PLIST.",
 		"ERROR: ALTERNATIVES:6: Alternative implementation \"${PREFIX}/bin/firefox\" must be an absolute path.",
@@ -42,7 +42,8 @@ func (s *Suite) Test_CheckFileAlternatives__PLIST(c *check.C) {
 	G.Check(".")
 
 	t.CheckOutputLines(
-		"AUTOFIX: ALTERNATIVES:3: Replacing \"bin/gnu-echo\" with \"@PREFIX@/bin/gnu-echo\".")
+		"AUTOFIX: ALTERNATIVES:3: Replacing \"bin/gnu-echo\" with \"@PREFIX@/bin/gnu-echo\".",
+		"AUTOFIX: ALTERNATIVES:4: Replacing \"bin/vim\" with \"@PREFIX@/bin/vim\".")
 }
 
 func (s *Suite) Test_CheckFileAlternatives__empty(c *check.C) {
