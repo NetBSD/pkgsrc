@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/07/28 14:40:49 brook Exp $
+# $NetBSD: Makefile,v 1.4 2018/12/21 12:53:49 wen Exp $
 #
 
 CATEGORIES=	math
@@ -9,7 +9,7 @@ COMMENT=	Linear mixed-effects models using Eigen and S4
 LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	lme4
-R_PKGVER=	1.1-15
+R_PKGVER=	1.1-19
 
 USE_LANGUAGES=	c c++
 
