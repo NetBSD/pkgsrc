@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5299 2018/12/21 06:26:32 wen Exp $
+$NetBSD: CHANGES-2018,v 1.5300 2018/12/21 08:05:37 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7404,3 +7404,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/R-IRkernel to 0.8.14 [wen 2018-12-21]
 	Updated devel/R-repr to 0.18 [wen 2018-12-21]
 	Updated devel/R-R6 to 2.3.0 [wen 2018-12-21]
+	Updated pkgtools/pkglint to 5.6.9 [rillig 2018-12-21]
