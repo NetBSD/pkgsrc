@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.504 2018/12/19 13:00:05 tnn Exp $
+# $NetBSD: Makefile,v 1.505 2018/12/21 12:35:59 leot Exp $
 #
 
 COMMENT=	Programming languages
@@ -25,6 +25,7 @@ SUBDIR+=	camlp5
 SUBDIR+=	ccsh
 SUBDIR+=	cdl3
 SUBDIR+=	chicken
+SUBDIR+=	chicken5
 SUBDIR+=	cim
 SUBDIR+=	cint
 SUBDIR+=	clang
