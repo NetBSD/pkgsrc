@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2018/12/21 16:57:35 nia Exp $
+bin/easyrpg-player
+man/man6/easyrpg-player.6
+share/bash-completion/completions/easyrpg-player
