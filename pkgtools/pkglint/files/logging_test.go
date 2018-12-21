@@ -618,12 +618,17 @@ func (s *Suite) Test_Logger_Logf__traditional_format(c *check.C) {
 func (s *Suite) Test_Logger_Logf__strange_characters(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("--gcc-output-format")
+	t.SetupCommandLine("--gcc-output-format", "--source", "--explain")
 
 	G.Logf(Note, "filename", "123", "Format.", "Unicode \U0001F645 and ANSI \x1B are never logged.")
+	G.Explain(
+		"Even a \u0007 in the explanation is silent.")
 
 	t.CheckOutputLines(
-		"filename:123: note: Unicode U+1F645 and ANSI U+001B are never logged.")
+		"filename:123: note: Unicode <U+1F645> and ANSI <U+001B> are never logged.",
+		"",
+		"\tEven a <U+0007> in the explanation is silent.",
+		"")
 }
 
 func (s *Suite) Test_Logger_Diag__show_source(c *check.C) {
