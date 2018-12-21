@@ -7,6 +7,11 @@ import (
 )
 
 type VartypeCheck struct {
+	// Note: if "go vet" or "go test" complains about a "variable with invalid type", update to go1.11.4.
+	// See https://github.com/golang/go/issues/28972.
+	// That doesn't help though since pkglint contains these "more convoluted alias declarations"
+	// mentioned in https://github.com/golang/go/commit/6971090515ba.
+
 	MkLine MkLine
 	Line   Line
 
@@ -560,6 +565,7 @@ func (cv *VartypeCheck) Identifier() {
 		return
 	}
 	if cv.Value != cv.ValueNoVar {
+		// TODO: Activate this warning again, or document why it is not useful.
 		//line.logWarning("Identifiers should be given directly.")
 	}
 	switch {
@@ -1073,7 +1079,7 @@ func (cv *VartypeCheck) UserGroupName() {
 	}
 }
 
-// VariableName checks that the value is a valid variable name.
+// VariableName checks that the value is a valid variable name to be used in Makefiles.
 func (cv *VartypeCheck) VariableName() {
 	if cv.Value == cv.ValueNoVar && !matches(cv.Value, `^[A-Z_][0-9A-Z_]*(?:[.].*)?$`) {
 		cv.Warnf("%q is not a valid variable name.", cv.Value)

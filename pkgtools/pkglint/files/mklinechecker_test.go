@@ -2,6 +2,19 @@ package pkglint
 
 import "gopkg.in/check.v1"
 
+func (s *Suite) Test_MkLineChecker_checkVarassignLeft(c *check.C) {
+	t := s.Init(c)
+
+	mkline := t.NewMkLine("module.mk", 123, "_VARNAME=\tvalue")
+
+	MkLineChecker{mkline}.checkVarassignLeft()
+
+	t.CheckOutputLines(
+		"WARN: module.mk:123: Variable names starting with an underscore "+
+			"(_VARNAME) are reserved for internal pkgsrc use.",
+		"WARN: module.mk:123: _VARNAME is defined but not used.")
+}
+
 func (s *Suite) Test_MkLineChecker_Check__url2pkg(c *check.C) {
 	t := s.Init(c)
 
@@ -339,7 +352,7 @@ func (s *Suite) Test_MkLineChecker_checkVarassign(c *check.C) {
 		"WARN: Makefile:2: ac_cv_libpari_libs is defined but not used.")
 }
 
-func (s *Suite) Test_MkLineChecker_checkVarassignPermissions(c *check.C) {
+func (s *Suite) Test_MkLineChecker_checkVarassignLeftPermissions(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall,no-space")
@@ -358,7 +371,7 @@ func (s *Suite) Test_MkLineChecker_checkVarassignPermissions(c *check.C) {
 }
 
 // Don't check the permissions for infrastructure files since they have their own rules.
-func (s *Suite) Test_MkLineChecker_checkVarassignPermissions__infrastructure(c *check.C) {
+func (s *Suite) Test_MkLineChecker_checkVarassignLeftPermissions__infrastructure(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupVartypes()
@@ -368,19 +381,19 @@ func (s *Suite) Test_MkLineChecker_checkVarassignPermissions__infrastructure(c *
 		"PKG_DEVELOPER?=\tyes")
 	t.CreateFileLines("mk/bsd.pkg.mk")
 
-	G.CheckDirent(t.File("mk/infra.mk"))
+	G.Check(t.File("mk/infra.mk"))
 
 	t.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_MkLineChecker_checkVarassignVaruse(c *check.C) {
+func (s *Suite) Test_MkLineChecker_checkVarassignRightVaruse(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupVartypes()
 
 	mkline := t.NewMkLine("module.mk", 123, "PLIST_SUBST+=\tLOCALBASE=${LOCALBASE:Q}")
 
-	MkLineChecker{mkline}.checkVarassignVaruse()
+	MkLineChecker{mkline}.checkVarassignRightVaruse()
 
 	t.CheckOutputLines(
 		"WARN: module.mk:123: Please use PREFIX instead of LOCALBASE.",
@@ -514,8 +527,8 @@ func (s *Suite) Test_MkLineChecker__unclosed_varuse(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"WARN: Makefile:2: Unclosed Make variable starting at \"${EGDIR/apparmor.d $...\".",
 		"WARN: Makefile:2: EGDIRS is defined but not used.",
+		"WARN: Makefile:2: Unclosed Make variable starting at \"${EGDIR/apparmor.d $...\".",
 
 		// XXX: This warning is redundant because of the "Unclosed" warning above.
 		"WARN: Makefile:2: Internal pkglint error in MkLine.Tokenize at "+
@@ -773,7 +786,7 @@ func (s *Suite) Test_MkLineChecker_CheckVaruseShellword__mstar_not_needed(c *che
 
 	// This package is guaranteed to not use GNU_CONFIGURE.
 	// Since the :M* hack is only needed for GNU_CONFIGURE, it is not necessary here.
-	G.CheckDirent(pkg)
+	G.Check(pkg)
 
 	// FIXME: Duplicate diagnostics.
 	t.CheckOutputLines(
@@ -790,7 +803,7 @@ func (s *Suite) Test_MkLineChecker_CheckVaruseShellword__q_not_needed(c *check.C
 		"MASTER_SITES=\t${HOMEPAGE:Q}")
 	G.Pkgsrc.LoadInfrastructure()
 
-	G.CheckDirent(pkg)
+	G.Check(pkg)
 
 	t.CheckOutputLines(
 		"NOTE: ~/category/package/Makefile:5: The :Q operator isn't necessary for ${HOMEPAGE} here.")
@@ -942,8 +955,7 @@ func (s *Suite) Test_MkLineChecker_CheckVaruse__deprecated_PKG_DEBUG(c *check.C)
 	MkLineChecker{mkline}.Check()
 
 	t.CheckOutputLines(
-		"WARN: module.mk:123: Use of \"_PKG_SILENT\" is deprecated. Use RUN (with more error checking) instead.",
-		"WARN: module.mk:123: Use of \"_PKG_DEBUG\" is deprecated. Use RUN (with more error checking) instead.")
+		"WARN: module.mk:123: Use of _PKG_SILENT and _PKG_DEBUG is deprecated. Use ${RUN} instead.")
 }
 
 // PR 46570, item "15. net/uucp/Makefile has a make loop"
@@ -966,7 +978,7 @@ func (s *Suite) Test_MkLineChecker_checkVaruseUndefined__indirect_variables(c *c
 		"WARN: net/uucp/Makefile:123: var is used but not defined.")
 }
 
-func (s *Suite) Test_MkLineChecker_checkVarassignSpecific(c *check.C) {
+func (s *Suite) Test_MkLineChecker_checkVarassignMisc(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupPkgsrc()
@@ -990,8 +1002,8 @@ func (s *Suite) Test_MkLineChecker_checkVarassignSpecific(c *check.C) {
 	// TODO: Split this test into several, one for each topic.
 	t.CheckOutputLines(
 		"WARN: ~/module.mk:2: Please use the RCD_SCRIPTS mechanism to install rc.d scripts automatically to ${RCD_SCRIPTS_EXAMPLEDIR}.",
-		"WARN: ~/module.mk:3: _TOOLS_VARNAME.sed is defined but not used.",
 		"WARN: ~/module.mk:3: Variable names starting with an underscore (_TOOLS_VARNAME.sed) are reserved for internal pkgsrc use.",
+		"WARN: ~/module.mk:3: _TOOLS_VARNAME.sed is defined but not used.",
 		"WARN: ~/module.mk:4: PKGNAME should not be used in DIST_SUBDIR as it includes the PKGREVISION. Please use PKGNAME_NOREV instead.",
 		"WARN: ~/module.mk:5: PKGNAME should not be used in WRKSRC as it includes the PKGREVISION. Please use PKGNAME_NOREV instead.",
 		"WARN: ~/module.mk:6: SITES_distfile.tar.gz is defined but not used.",
@@ -1019,8 +1031,10 @@ func (s *Suite) Test_MkLineChecker_checkText(c *check.C) {
 
 	mklines.Check()
 
+	// FIXME: Duplicate diagnostics.
 	t.CheckOutputLines(
 		"WARN: ~/module.mk:2: Please use ${COMPILER_RPATH_FLAG} instead of \"-Wl,--rpath,\".",
+		"WARN: ~/module.mk:3: Use of \"GAMEGRP\" is deprecated. Use GAMES_GROUP instead.",
 		"WARN: ~/module.mk:3: Use of \"GAMEGRP\" is deprecated. Use GAMES_GROUP instead.")
 }
 
