@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/12/06 19:32:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/12/21 21:06:30 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -17,9 +17,6 @@ ${PYSITELIB}/flask_restful/fields.pyo
 ${PYSITELIB}/flask_restful/inputs.py
 ${PYSITELIB}/flask_restful/inputs.pyc
 ${PYSITELIB}/flask_restful/inputs.pyo
-${PYSITELIB}/flask_restful/paging.py
-${PYSITELIB}/flask_restful/paging.pyc
-${PYSITELIB}/flask_restful/paging.pyo
 ${PYSITELIB}/flask_restful/representations/__init__.py
 ${PYSITELIB}/flask_restful/representations/__init__.pyc
 ${PYSITELIB}/flask_restful/representations/__init__.pyo
