@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.64 2018/12/16 08:12:15 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.65 2018/12/21 11:55:48 ryoon Exp $
 bin/thunderbird
 lib/thunderbird/application.ini
 lib/thunderbird/blocklist.xml
@@ -2434,8 +2434,9 @@ lib/thunderbird/chrome/icons/default/default256.png
 lib/thunderbird/chrome/icons/default/default32.png
 lib/thunderbird/chrome/icons/default/default48.png
 lib/thunderbird/chrome/icons/default/default64.png
-lib/thunderbird/chrome/messenger/content/branding/about-background.png
-lib/thunderbird/chrome/messenger/content/branding/about-logo.png
+${PLIST.nobranding}lib/thunderbird/chrome/messenger/content/branding/about-background.png
+${PLIST.nobranding}lib/thunderbird/chrome/messenger/content/branding/about-logo.png
+${PLIST.branding}lib/thunderbird/chrome/messenger/content/branding/about-logo.svg
 lib/thunderbird/chrome/messenger/content/branding/about-wordmark.svg
 lib/thunderbird/chrome/messenger/content/branding/about.png
 lib/thunderbird/chrome/messenger/content/branding/aboutDialog.css
