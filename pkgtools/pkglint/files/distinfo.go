@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-func ChecklinesDistinfo(lines Lines) {
+func CheckLinesDistinfo(lines Lines) {
 	if trace.Tracing {
 		defer trace.Call1(lines.FileName)()
 	}
@@ -27,7 +27,7 @@ func ChecklinesDistinfo(lines Lines) {
 		lines, patchdir, distinfoIsCommitted,
 		make(map[string]bool), "", nil, unknown, nil}
 	ck.checkLines(lines)
-	ChecklinesTrailingEmptyLines(lines)
+	CheckLinesTrailingEmptyLines(lines)
 	ck.checkUnrecordedPatches()
 	SaveAutofixChanges(lines)
 }

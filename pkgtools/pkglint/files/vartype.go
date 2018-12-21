@@ -16,10 +16,9 @@ type Vartype struct {
 
 type KindOfList uint8
 
-// TODO: Remove lkSpace. Since 2015 the .for variables are split on shell words, like everywhere else.
+// TODO: Rename lkNone to Plain, and lkShell to List.
 const (
 	lkNone  KindOfList = iota // Plain data type
-	lkSpace                   // List entries are separated by whitespace; used in .for loops.
 	lkShell                   // List entries are shell words; used in the :M, :S modifiers.
 )
 
@@ -105,11 +104,8 @@ func (vt *Vartype) AllowedFiles(perms ACLPermissions) string {
 // This distinction between "real lists" and "considered a list" makes
 // the implementation of checklineMkVartype easier.
 func (vt *Vartype) IsConsideredList() bool {
-	switch vt.kindOfList {
-	case lkShell:
+	if vt.kindOfList == lkShell {
 		return true
-	case lkSpace:
-		return false
 	}
 	switch vt.basicType {
 	case BtAwkCommand, BtSedCommands, BtShellCommand, BtShellCommands, BtLicense, BtConfFiles:
@@ -123,7 +119,7 @@ func (vt *Vartype) MayBeAppendedTo() bool {
 }
 
 func (vt *Vartype) String() string {
-	listPrefix := [...]string{"", "SpaceList of ", "ShellList of "}[vt.kindOfList]
+	listPrefix := [...]string{"", "List of "}[vt.kindOfList]
 	guessedSuffix := ifelseStr(vt.guessed, " (guessed)", "")
 	return listPrefix + vt.basicType.name + guessedSuffix
 }

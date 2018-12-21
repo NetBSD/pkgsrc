@@ -33,9 +33,7 @@ type MkVarUse struct {
 	modifiers []MkVarUseModifier // E.g. "Q", "S/from/to/"
 }
 
-//func NewMkVarUse(varname string, modifiers ...MkVarUseModifier) *MkVarUse {
-//	return &MkVarUse{varname, modifiers}
-//}
+func (vu *MkVarUse) String() string { return sprintf("${%s%s}", vu.varname, vu.Mod()) }
 
 type MkVarUseModifier struct {
 	Text string

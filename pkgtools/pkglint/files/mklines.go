@@ -180,7 +180,7 @@ func (mklines *MkLinesImpl) checkAll() {
 	substContext.Finish(NewMkLine(mklines.lines.EOFLine())) // TODO: mklines.EOFLine()
 	varalign.Finish()
 
-	ChecklinesTrailingEmptyLines(mklines.lines)
+	CheckLinesTrailingEmptyLines(mklines.lines)
 }
 
 func (mklines *MkLinesImpl) checkVarassignPlist(mkline MkLine) {
@@ -370,7 +370,7 @@ func (mklines *MkLinesImpl) collectDocumentedVariables() {
 		text := mkline.Text
 		switch {
 		case hasPrefix(text, "#"):
-			words := fields(text)
+			words := strings.Fields(text)
 			if len(words) <= 1 {
 				break
 			}

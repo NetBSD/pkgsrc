@@ -155,7 +155,7 @@ func (s *Suite) Test_Pkgsrc_loadTools__BUILD_DEFS(c *check.C) {
 		"_BUILD_DEFS+=\tPKG_SYSCONFBASEDIR PKG_SYSCONFDIR")
 	G.Pkgsrc.LoadInfrastructure()
 
-	G.CheckDirent(pkg)
+	G.Check(pkg)
 
 	c.Check(G.Pkgsrc.IsBuildDef("PKG_SYSCONFDIR"), equals, true)
 	c.Check(G.Pkgsrc.IsBuildDef("VARBASE"), equals, false)
@@ -233,7 +233,7 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__wip(c *check.C) {
 		"\to package-1.13 [cool new features]")
 	G.Pkgsrc.LoadInfrastructure()
 
-	G.CheckDirent(pkg)
+	G.Check(pkg)
 
 	t.CheckOutputLines(
 		"WARN: ~/wip/package/Makefile:3: This package should be updated to 1.13 ([cool new features]).")
@@ -463,13 +463,13 @@ func (s *Suite) Test_Pkgsrc_VariableType(c *check.C) {
 	checkType("_PERL5_PACKLIST_AWK_STRIP_DESTDIR", "")
 	checkType("SOME_DIR", "Pathname (guessed)")
 	checkType("SOMEDIR", "Pathname (guessed)")
-	checkType("SEARCHPATHS", "ShellList of Pathname (guessed)")
+	checkType("SEARCHPATHS", "List of Pathname (guessed)")
 	checkType("MYPACKAGE_USER", "UserGroupName (guessed)")
 	checkType("MYPACKAGE_GROUP", "UserGroupName (guessed)")
-	checkType("MY_CMD_ENV", "ShellList of ShellWord (guessed)")
-	checkType("MY_CMD_ARGS", "ShellList of ShellWord (guessed)")
-	checkType("MY_CMD_CFLAGS", "ShellList of CFlag (guessed)")
-	checkType("MY_CMD_LDFLAGS", "ShellList of LdFlag (guessed)")
+	checkType("MY_CMD_ENV", "List of ShellWord (guessed)")
+	checkType("MY_CMD_ARGS", "List of ShellWord (guessed)")
+	checkType("MY_CMD_CFLAGS", "List of CFlag (guessed)")
+	checkType("MY_CMD_LDFLAGS", "List of LdFlag (guessed)")
 	checkType("PLIST.abcde", "Yes")
 }
 
@@ -482,12 +482,12 @@ func (s *Suite) Test_Pkgsrc_VariableType__varparam(c *check.C) {
 	t1 := G.Pkgsrc.VariableType("FONT_DIRS")
 
 	c.Assert(t1, check.NotNil)
-	c.Check(t1.String(), equals, "ShellList of PathMask (guessed)")
+	c.Check(t1.String(), equals, "List of PathMask (guessed)")
 
 	t2 := G.Pkgsrc.VariableType("FONT_DIRS.ttf")
 
 	c.Assert(t2, check.NotNil)
-	c.Check(t2.String(), equals, "ShellList of PathMask (guessed)")
+	c.Check(t2.String(), equals, "List of PathMask (guessed)")
 }
 
 // Guessing the variable type also works for variables that are
@@ -516,7 +516,7 @@ func (s *Suite) Test_Pkgsrc_VariableType__from_mk(c *check.C) {
 	G.Main("pkglint", "-Wall", pkg)
 
 	if typ := G.Pkgsrc.VariableType("PKGSRC_MAKE_ENV"); c.Check(typ, check.NotNil) {
-		c.Check(typ.String(), equals, "ShellList of ShellWord (guessed)")
+		c.Check(typ.String(), equals, "List of ShellWord (guessed)")
 	}
 
 	if typ := G.Pkgsrc.VariableType("CPPPATH"); c.Check(typ, check.NotNil) {
@@ -532,7 +532,7 @@ func (s *Suite) Test_Pkgsrc_VariableType__from_mk(c *check.C) {
 	// and CPPPATH since these two variables are defined somewhere in the
 	// infrastructure.
 	t.CheckOutputLines(
-		"WARN: ~/category/package/Makefile:21: ABCPATH is used but not defined.",
 		"WARN: ~/category/package/Makefile:21: PKGSRC_UNKNOWN_ENV is defined but not used.",
+		"WARN: ~/category/package/Makefile:21: ABCPATH is used but not defined.",
 		"0 errors and 2 warnings found.")
 }

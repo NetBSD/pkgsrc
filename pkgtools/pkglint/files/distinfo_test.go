@@ -2,7 +2,7 @@ package pkglint
 
 import "gopkg.in/check.v1"
 
-func (s *Suite) Test_ChecklinesDistinfo(c *check.C) {
+func (s *Suite) Test_CheckLinesDistinfo(c *check.C) {
 	t := s.Init(c)
 
 	t.Chdir("category/package")
@@ -23,7 +23,7 @@ func (s *Suite) Test_ChecklinesDistinfo(c *check.C) {
 		"SHA1 (patch-nonexistent) = 1234")
 	G.Pkg = NewPackage(".")
 
-	ChecklinesDistinfo(lines)
+	CheckLinesDistinfo(lines)
 
 	t.CheckOutputLines(
 		"ERROR: distinfo:1: Expected \"$"+"NetBSD$\".",
@@ -85,7 +85,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkGlobalDistfileMismatch(c *check.C
 		"5 errors and 1 warning found.")
 }
 
-func (s *Suite) Test_ChecklinesDistinfo__uncommitted_patch(c *check.C) {
+func (s *Suite) Test_CheckLinesDistinfo__uncommitted_patch(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupPackage("category/package")
@@ -104,7 +104,7 @@ func (s *Suite) Test_ChecklinesDistinfo__uncommitted_patch(c *check.C) {
 		"WARN: distinfo:3: patches/patch-aa is registered in distinfo but not added to CVS.")
 }
 
-func (s *Suite) Test_ChecklinesDistinfo__unrecorded_patches(c *check.C) {
+func (s *Suite) Test_CheckLinesDistinfo__unrecorded_patches(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupPackage("category/package")
@@ -130,7 +130,7 @@ func (s *Suite) Test_ChecklinesDistinfo__unrecorded_patches(c *check.C) {
 // The distinfo file and the patches are usually placed in the package
 // directory. By defining PATCHDIR or DISTINFO_FILE, a package can define
 // that they are somewhere else in pkgsrc.
-func (s *Suite) Test_ChecklinesDistinfo__relative_path_in_distinfo(c *check.C) {
+func (s *Suite) Test_CheckLinesDistinfo__relative_path_in_distinfo(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupPackage("category/package",
@@ -160,7 +160,7 @@ func (s *Suite) Test_ChecklinesDistinfo__relative_path_in_distinfo(c *check.C) {
 
 // When the distinfo file and the patches are placed in the same package,
 // their diagnostics use short relative paths.
-func (s *Suite) Test_ChecklinesDistinfo__distinfo_and_patches_in_separate_directory(c *check.C) {
+func (s *Suite) Test_CheckLinesDistinfo__distinfo_and_patches_in_separate_directory(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupPackage("category/package",
@@ -188,7 +188,7 @@ func (s *Suite) Test_ChecklinesDistinfo__distinfo_and_patches_in_separate_direct
 			"is not recorded. Run \""+confMake+" makepatchsum\".")
 }
 
-func (s *Suite) Test_ChecklinesDistinfo__manual_patches(c *check.C) {
+func (s *Suite) Test_CheckLinesDistinfo__manual_patches(c *check.C) {
 	t := s.Init(c)
 
 	t.Chdir("category/package")
@@ -198,7 +198,7 @@ func (s *Suite) Test_ChecklinesDistinfo__manual_patches(c *check.C) {
 		"",
 		"SHA1 (patch-aa) = ...")
 
-	ChecklinesDistinfo(lines)
+	CheckLinesDistinfo(lines)
 
 	// When a distinfo file is checked on its own, without belonging to a package,
 	// the PATCHDIR is not known and therefore no diagnostics are logged.
@@ -206,7 +206,7 @@ func (s *Suite) Test_ChecklinesDistinfo__manual_patches(c *check.C) {
 
 	G.Pkg = NewPackage(".")
 
-	ChecklinesDistinfo(lines)
+	CheckLinesDistinfo(lines)
 
 	// When a distinfo file is checked in the context of a package,
 	// the PATCHDIR is known, therefore the check is active.
@@ -220,7 +220,7 @@ func (s *Suite) Test_ChecklinesDistinfo__manual_patches(c *check.C) {
 // infrastructure, there is nothing a package author can do about.
 //
 // XXX: Re-check the documentation for this test.
-func (s *Suite) Test_ChecklinesDistinfo__missing_php_patches(c *check.C) {
+func (s *Suite) Test_CheckLinesDistinfo__missing_php_patches(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupPkgsrc()
@@ -255,7 +255,7 @@ func (s *Suite) Test_ChecklinesDistinfo__missing_php_patches(c *check.C) {
 		".include \"../../lang/php/ext.mk\"",
 		".include \"../../mk/bsd.pkg.mk\"")
 
-	G.CheckDirent(t.File("archivers/php-bz2"))
+	G.Check(t.File("archivers/php-bz2"))
 
 	t.CreateFileLines("archivers/php-zlib/Makefile",
 		MkRcsID,
@@ -263,7 +263,7 @@ func (s *Suite) Test_ChecklinesDistinfo__missing_php_patches(c *check.C) {
 		".include \"../../lang/php/ext.mk\"",
 		".include \"../../mk/bsd.pkg.mk\"")
 
-	G.CheckDirent(t.File("archivers/php-zlib"))
+	G.Check(t.File("archivers/php-zlib"))
 
 	t.CheckOutputEmpty()
 }

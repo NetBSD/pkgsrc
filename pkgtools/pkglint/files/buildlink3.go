@@ -13,7 +13,7 @@ type Buildlink3Checker struct {
 	abi, api         *DependencyPattern
 }
 
-func ChecklinesBuildlink3Mk(mklines MkLines) {
+func CheckLinesBuildlink3Mk(mklines MkLines) {
 	(&Buildlink3Checker{mklines: mklines}).Check()
 }
 
@@ -64,7 +64,7 @@ func (ck *Buildlink3Checker) Check() {
 
 	if G.Pkg != nil {
 		// TODO: Commenting this line doesn't make any test fail, but it should.
-		G.Pkg.checklinesBuildlink3Inclusion(mklines)
+		G.Pkg.checkLinesBuildlink3Inclusion(mklines)
 	}
 
 	mklines.SaveAutofixChanges()

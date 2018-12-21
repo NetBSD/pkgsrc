@@ -148,7 +148,7 @@ func (s *Suite) Test_NewMkLine__autofix_space_after_varname(c *check.C) {
 		"VARNAME+ +=\t${VARNAME+}",
 		"pkgbase := pkglint")
 
-	CheckfileMk(filename)
+	CheckFileMk(filename)
 
 	t.CheckOutputLines(
 		"NOTE: ~/Makefile:2: Unnecessary space after variable name \"VARNAME\".",
@@ -157,7 +157,7 @@ func (s *Suite) Test_NewMkLine__autofix_space_after_varname(c *check.C) {
 
 	t.SetupCommandLine("-Wspace", "--autofix")
 
-	CheckfileMk(filename)
+	CheckFileMk(filename)
 
 	t.CheckOutputLines(
 		"AUTOFIX: ~/Makefile:2: Replacing \"VARNAME +=\" with \"VARNAME+=\".",
@@ -597,7 +597,7 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__PKGNAME_and_URL_list_in_URL_li
 		MkRcsID,
 		"MASTER_SITES=\tftp://ftp.gtk.org/${PKGNAME}/ ${MASTER_SITE_GNOME:=subdir/}")
 
-	MkLineChecker{G.Mk.mklines[1]}.checkVarassignVaruse()
+	MkLineChecker{G.Mk.mklines[1]}.checkVarassignRightVaruse()
 
 	t.CheckOutputEmpty() // Don't warn about missing :Q modifiers.
 }
@@ -612,7 +612,7 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__tool_in_CONFIGURE_ENV(c *check
 		"",
 		"CONFIGURE_ENV+=\tSYS_TAR_COMMAND_PATH=${TOOLS_TAR:Q}")
 
-	MkLineChecker{mklines.mklines[2]}.checkVarassignVaruse()
+	MkLineChecker{mklines.mklines[2]}.checkVarassignRightVaruse()
 
 	// The TOOLS_* variables only contain the path to the tool,
 	// without any additional arguments that might be necessary
@@ -633,8 +633,8 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__backticks(c *check.C) {
 		"COMPILE_CMD=\tcc `${CAT} ${WRKDIR}/compileflags`",
 		"COMMENT_CMD=\techo `echo ${COMMENT}`")
 
-	MkLineChecker{mklines.mklines[2]}.checkVarassignVaruse()
-	MkLineChecker{mklines.mklines[3]}.checkVarassignVaruse()
+	MkLineChecker{mklines.mklines[2]}.checkVarassignRightVaruse()
+	MkLineChecker{mklines.mklines[3]}.checkVarassignRightVaruse()
 
 	// Both CAT and WRKDIR are safe from quoting, therefore no warnings.
 	// But COMMENT may contain arbitrary characters and therefore must
