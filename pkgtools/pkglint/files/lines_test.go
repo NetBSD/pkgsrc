@@ -57,8 +57,8 @@ func (s *Suite) Test_Lines_CheckRcsID__wip(c *check.C) {
 	G.Check(t.File("wip/package"))
 
 	t.CheckOutputLines(
-		"AUTOFIX: ~/wip/package/file1.mk:1: Replacing \"# $NetBSD: lines_test.go,v 1.4 2018/12/21 08:05:24 rillig Exp $\" with \"# $NetBSD: lines_test.go,v 1.4 2018/12/21 08:05:24 rillig Exp $\".",
-		"AUTOFIX: ~/wip/package/file3.mk:1: Inserting a line \"# $NetBSD: lines_test.go,v 1.4 2018/12/21 08:05:24 rillig Exp $\" before this line.",
-		"AUTOFIX: ~/wip/package/file4.mk:1: Inserting a line \"# $NetBSD: lines_test.go,v 1.4 2018/12/21 08:05:24 rillig Exp $\" before this line.",
-		"AUTOFIX: ~/wip/package/file5.mk:1: Inserting a line \"# $NetBSD: lines_test.go,v 1.4 2018/12/21 08:05:24 rillig Exp $\" before this line.")
+		"AUTOFIX: ~/wip/package/file1.mk:1: Replacing \"# $"+"NetBSD: dummy $\" with \"# $"+"NetBSD$\".",
+		"AUTOFIX: ~/wip/package/file3.mk:1: Inserting a line \"# $"+"NetBSD$\" before this line.",
+		"AUTOFIX: ~/wip/package/file4.mk:1: Inserting a line \"# $"+"NetBSD$\" before this line.",
+		"AUTOFIX: ~/wip/package/file5.mk:1: Inserting a line \"# $"+"NetBSD$\" before this line.")
 }
