@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5304 2018/12/21 09:33:23 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.5305 2018/12/21 10:40:19 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7408,3 +7408,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/R-Rcpp to 1.0.0 [wen 2018-12-21]
 	Updated net/netatalk3 to 3.1.12 [hauke 2018-12-21]
 	Updated security/mbedtls to 2.14.1 [wiz 2018-12-21]
+	Added math/R-carData version 3.0.2 [wen 2018-12-21]
