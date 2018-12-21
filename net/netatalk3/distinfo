@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2018/12/21 09:18:52 hauke Exp $
+$NetBSD: distinfo,v 1.7 2018/12/21 09:59:21 hauke Exp $
 
 SHA1 (netatalk-3.1.12.tar.bz2) = cc1fe1ebdbdb4da9cf82835c440e82ba28a832c5
 RMD160 (netatalk-3.1.12.tar.bz2) = 30f44674f76f7d70d02772ddf2ff249e4aef3a50
@@ -10,7 +10,7 @@ SHA1 (patch-config_Makefile.in) = 81fff584e5cb98537a4fa671fb551ad0258ba092
 SHA1 (patch-config_pam_Makefile.in) = 8f69225c333b327b4c57ef12994666cc521e5c70
 SHA1 (patch-distrib_initscripts_Makefile.in) = fbeffa06a051fb61819d09e0396695cbe564780e
 SHA1 (patch-distrib_initscripts_netatalk.xml.tmpl) = dd7591e12eca3c1e7d7bc768cd1e060979dc383e
-SHA1 (patch-etc_afpd_quota.c) = bd93ed958229f73898cdc424a582e14186ac703c
+SHA1 (patch-etc_afpd_quota.c) = d7c87086c8eb1ff68e46c5972fcd0b2e18c592e5
 SHA1 (patch-etc_cnid__dbd_cnid__metad.c) = 6c28332ca3e11d11f3b5bb13fa01783dbb94c30f
 SHA1 (patch-etc_netatalk_netatalk.c) = 2bdbfc035e4bea9859cf970cd6b9a6503244185e
 SHA1 (patch-include_atalk_util.h) = a7a0763c5866288ad89a8b6b90c71767ee4d9d64
