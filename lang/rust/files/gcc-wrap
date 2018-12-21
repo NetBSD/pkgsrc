@@ -136,6 +136,9 @@ while [ $# -gt 0 ]; do
 			fi
 			args="$args -L=/usr/pkg/lib"
 			;;
+		-Wl,--enable-new-dtags)
+			# ignore
+			;;
 		*)
 			args="$args $1"
 			;;
