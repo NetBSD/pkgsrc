@@ -1,8 +1,9 @@
-# $NetBSD: options.mk,v 1.1 2015/06/12 09:05:05 fhajny Exp $
+# $NetBSD: options.mk,v 1.2 2018/12/21 09:33:14 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mbedtls
 PKG_SUPPORTED_OPTIONS=	mbedtls-tools tests zlib
 PKG_SUGGESTED_OPTIONS+=	# XXX: blank, though the package has "tests" by default
+PKG_SUGGESTED_OPTIONS+=	mbedtls-tools
 
 PLIST_VARS+=		tests tools
 
@@ -28,6 +29,7 @@ PLIST.tests=		yes
 . else
 PKG_FAIL_REASON+=	"option tests needs option mbedtls-tools"
 . endif
+.include "../../lang/python/tool.mk"
 .else
 CMAKE_ARGS+=		-DENABLE_TESTING=OFF
 .endif
