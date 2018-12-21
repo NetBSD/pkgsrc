@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2018/06/15 20:46:01 tez Exp $
+@comment $NetBSD: PLIST,v 1.20 2018/12/21 15:45:13 adam Exp $
 bin/compile_et
 bin/gss-client
 bin/k5srvutil
@@ -50,8 +50,8 @@ include/krb5/clpreauth_plugin.h
 include/krb5/hostrealm_plugin.h
 include/krb5/kadm5_auth_plugin.h
 include/krb5/kadm5_hook_plugin.h
-include/krb5/kdcpreauth_plugin.h
 include/krb5/kdcpolicy_plugin.h
+include/krb5/kdcpreauth_plugin.h
 include/krb5/krb5.h
 include/krb5/localauth_plugin.h
 include/krb5/locate_plugin.h
@@ -62,8 +62,8 @@ include/profile.h
 include/verto-module.h
 include/verto.h
 lib/krb5/plugins/kdb/libdb2.la
-lib/krb5/plugins/preauth/libpkinit.la
 lib/krb5/plugins/preauth/libotp.la
+lib/krb5/plugins/preauth/libpkinit.la
 lib/krb5/plugins/tls/libk5tls.la
 lib/libcom_err.la
 lib/libgssapi_krb5.la
@@ -77,7 +77,6 @@ lib/libkdb5.la
 lib/libkrad.la
 lib/libkrb5.la
 lib/libkrb5support.la
-@comment lib/libverto-k5ev.la
 lib/libverto.la
 lib/pkgconfig/gssrpc.pc
 lib/pkgconfig/kadm-client.pc
@@ -107,6 +106,7 @@ man/man5/k5login.5
 man/man5/kadm5.acl.5
 man/man5/kdc.conf.5
 man/man5/krb5.conf.5
+man/man7/kerberos.7
 man/man8/kadmin.local.8
 man/man8/kadmind.8
 man/man8/kdb5_ldap_util.8
@@ -133,5 +133,5 @@ share/et/et_h.awk
 share/examples/krb5/kdc.conf
 share/examples/krb5/krb5.conf
 share/examples/krb5/services.append
-share/locale/en_US/LC_MESSAGES/mit-krb5.mo
 share/locale/de/LC_MESSAGES/mit-krb5.mo
+share/locale/en_US/LC_MESSAGES/mit-krb5.mo

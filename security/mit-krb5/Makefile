@@ -1,15 +1,9 @@
-# $NetBSD: Makefile,v 1.98 2018/08/22 09:46:19 wiz Exp $
+# $NetBSD: Makefile,v 1.99 2018/12/21 15:45:13 adam Exp $
 
-DISTNAME=	krb5-1.16.1
+DISTNAME=	krb5-1.16.2
 PKGNAME=	mit-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5/${PKGVERSION_NOREV:R}/
-EXTRACT_SUFX=	.tar.gz
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
-
-#PATCH_SITES=	http://web.mit.edu/kerberos/advisories/
-#PATCHFILES=	2014-001-patch.txt
 
 MAINTAINER=	tez@NetBSD.org
 HOMEPAGE=	http://web.mit.edu/kerberos/
@@ -29,7 +23,7 @@ CONFLICTS+=	kth-krb4-[0-9]*
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		autoconf gzip m4 perl msgfmt
+USE_TOOLS+=		autoconf gzip m4 msgfmt perl
 .if ${OPSYS} == "SunOS"
 USE_TOOLS+=		bison
 .else
@@ -52,7 +46,7 @@ CONFIGURE_ARGS+=	--without-tcl
 CONFIGURE_ARGS+=	--enable-pkgsrc-libtool
 CONFIGURE_ARGS+=	--without-system-verto
 CONFIGURE_ARGS+=	--disable-aesni
-CONFIGURE_ENV+=		BUILDLINK_PREFIX_OPENSSL=${BUILDLINK_PREFIX.openssl:Q}
+CONFIGURE_ENV+=		BUILDLINK_PREFIX_OPENSSL=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ENV+=		DEFKTNAME=FILE:${PKG_SYSCONFDIR}/krb5.keytab
 MAKE_ENV+=		ROOT_USER=${ROOT_USER}
 LIBS.SunOS=		-lrt
@@ -67,18 +61,17 @@ RCD_SCRIPTS=		kadmind kdc
 
 INSTALLATION_DIRS=	bin include/gssapi include/gssrpc ${PKGINFODIR}	\
 			${PKGMANDIR}/man1 ${PKGMANDIR}/man5		\
-			${PKGMANDIR}/man8 sbin share/examples/krb5	\
-			share/et share/examples/rc.d share/gnats	\
+			${PKGMANDIR}/man7 ${PKGMANDIR}/man8		\
+			sbin share/examples/krb5 share/et		\
+			share/examples/rc.d share/gnats			\
 			lib/krb5/plugins/kdb lib/krb5/plugins/preauth	\
 			lib/krb5/plugins/tls include/krb5 include/kadm5 \
 			lib/pkgconfig
 
 pre-configure:
-	@${ECHO} "=> Generating configure";				\
-	cd ${WRKSRC}; autoconf -I ${WRKSRC} -f;
+	cd ${WRKSRC} && autoconf -I ${WRKSRC} -f
 
 post-install:
-	@${ECHO} "=> Installing info files";				\
 	cd ${WRKDIR}/${DISTNAME}/doc;					\
 	for f in *.info *.info-[0-9]*; do				\
 		${TEST} ! -f "$$f" ||					\
