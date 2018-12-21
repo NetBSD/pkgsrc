@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/12/06 19:32:05 adam Exp $
+$NetBSD: distinfo,v 1.2 2018/12/21 21:06:30 adam Exp $
 
-SHA1 (Flask-RESTful-0.3.6.tar.gz) = 69584f970645893ffdaad2e4db60cbdb949459ed
-RMD160 (Flask-RESTful-0.3.6.tar.gz) = 06a61de7d39c45f876c1856a3941be8f4f8cfda8
-SHA512 (Flask-RESTful-0.3.6.tar.gz) = 7d980a12ed5d72e16fc0e6b45abc75d552f4921a68ab3d4af0425b0b0c9f517cc8240615802ccd6147f122aa0d859d79bb2af7e694f48e614bf9870d8b50e931
-Size (Flask-RESTful-0.3.6.tar.gz) = 103092 bytes
-SHA1 (patch-setup.py) = 969a6b81bdee659f8e4df301ef22ab2493e5d85b
+SHA1 (Flask-RESTful-0.3.7.tar.gz) = 2759819ae9e012792dc36df5b1d1d73663b3638a
+RMD160 (Flask-RESTful-0.3.7.tar.gz) = af0ba61b0acbb18c6599f4956bdea84a035de1d3
+SHA512 (Flask-RESTful-0.3.7.tar.gz) = 72ceb0c6982e7c421be8a835cdfc49c10f780c499c1e77db58a07d46e4e11c53f9c48ce9ae87416d51606794c9232c41f0148d2296647fc124dbf9124e6d8f34
+Size (Flask-RESTful-0.3.7.tar.gz) = 105307 bytes
