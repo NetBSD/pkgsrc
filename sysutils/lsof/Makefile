@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.132 2018/12/09 09:33:36 triaxx Exp $
+# $NetBSD: Makefile,v 1.133 2018/12/21 07:06:03 wiz Exp $
 
 DISTNAME=		lsof_4.91
 PKGNAME=		${DISTNAME:S/_/-/}
-PKGREVISION=		1	
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://ftp.mirrorservice.org/sites/lsof.itap.purdue.edu/pub/tools/unix/lsof/
 MASTER_SITES+=		ftp://ftp.mirrorservice.org/sites/lsof.itap.purdue.edu/pub/tools/unix/lsof/OLD/
@@ -92,6 +92,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/scripts/00* \
 	  ${DESTDIR}${PREFIX}/share/examples/lsof
 
+.PHONY: opt
 opt:
 .for dir in ${TEST_DIRS}
 	${RUN}${_ULIMIT_CMD}			\
