@@ -1,10 +1,23 @@
-$NetBSD: patch-etc_afpd_quota.c,v 1.2 2016/11/07 12:46:52 christos Exp $
+$NetBSD: patch-etc_afpd_quota.c,v 1.3 2018/12/21 09:59:21 hauke Exp $
+
+SunOS derivatives need to explicitely include mntent.h for MNTTYPE_NFS
 
 NetBSD uses a different quota API.
 
---- etc/afpd/quota.c.orig	2013-04-09 12:56:18.000000000 +0000
+--- etc/afpd/quota.c.orig	2018-12-13 21:33:47.000000000 +0000
 +++ etc/afpd/quota.c
-@@ -36,10 +36,13 @@
+@@ -21,6 +21,10 @@
+ #include <unistd.h>
+ #include <fcntl.h>
+ 
++#if defined(HAVE_SYS_MNTTAB_H) || defined(__svr4__)
++#include <sys/mntent.h>
++#endif
++
+ #include <atalk/logger.h>
+ #include <atalk/afp.h>
+ #include <atalk/compat.h>
+@@ -36,10 +40,13 @@
  
  static int
  getfreespace(const AFPObj *obj, struct vol *vol, VolSpace *bfree, VolSpace *btotal,
@@ -21,7 +34,7 @@ NetBSD uses a different quota API.
  	time_t now;
  
  	if (time(&now) == -1) {
-@@ -48,64 +51,102 @@ getfreespace(const AFPObj *obj, struct v
+@@ -48,64 +55,102 @@ getfreespace(const AFPObj *obj, struct v
  		return -1;
  	}
  
