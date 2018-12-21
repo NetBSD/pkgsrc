@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5302 2018/12/21 08:15:01 wen Exp $
+$NetBSD: CHANGES-2018,v 1.5303 2018/12/21 09:19:08 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7406,3 +7406,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/R-R6 to 2.3.0 [wen 2018-12-21]
 	Updated pkgtools/pkglint to 5.6.10 [rillig 2018-12-21]
 	Updated devel/R-Rcpp to 1.0.0 [wen 2018-12-21]
+	Updated net/netatalk3 to 3.1.12 [hauke 2018-12-21]
