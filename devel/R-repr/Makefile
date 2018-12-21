@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/07/28 14:40:43 brook Exp $
+# $NetBSD: Makefile,v 1.4 2018/12/21 06:21:20 wen Exp $
 
 CATEGORIES=	devel
 
@@ -11,7 +11,7 @@ DEPENDS+=	R-htmltools-[0-9]*:../../textproc/R-htmltools
 DEPENDS+=	R-base64enc-[0-9]*:../../converters/R-base64enc
 
 R_PKGNAME=	repr
-R_PKGVER=	0.15.0
+R_PKGVER=	0.18
 
 USE_LANGUAGES=	# none
 
