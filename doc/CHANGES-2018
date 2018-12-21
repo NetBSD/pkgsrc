@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5315 2018/12/21 16:34:05 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.5316 2018/12/21 16:57:51 nia Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7419,3 +7419,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/py-boto3 to 1.9.70 [ryoon 2018-12-21]
 	Updated security/mit-krb5 to 1.16.2 [adam 2018-12-21]
 	Updated textproc/gsed to 4.6 [ryoon 2018-12-21]
+	Added games/liblcf version 0.5.4 [nia 2018-12-21]
