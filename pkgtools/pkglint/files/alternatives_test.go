@@ -2,7 +2,7 @@ package pkglint
 
 import "gopkg.in/check.v1"
 
-func (s *Suite) Test_CheckfileAlternatives__PLIST(c *check.C) {
+func (s *Suite) Test_CheckFileAlternatives__PLIST(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupPackage("category/package")
@@ -12,26 +12,40 @@ func (s *Suite) Test_CheckfileAlternatives__PLIST(c *check.C) {
 		"sbin/sendmail @PREFIX@/sbin/sendmail.exim@EXIMVER@",
 		"bin/echo bin/gnu-echo",
 		"bin/editor bin/vim -e",
-		"invalid")
+		"invalid",
+		"bin/browser\t${PREFIX}/bin/firefox",
+		"highscores   @VARBASE@/game/scores",
+		"sbin/init /sbin/init")
 	t.CreateFileLines("PLIST",
 		PlistRcsID,
 		"bin/echo",
 		"bin/vim",
 		"sbin/sendmail.exim${EXIMVER}")
 
-	G.CheckDirent(".")
+	G.Check(".")
 
 	t.CheckOutputLines(
 		"ERROR: ALTERNATIVES:1: Alternative implementation \"@PREFIX@/sbin/sendmail.postfix@POSTFIXVER@\" "+
 			"must appear in the PLIST as \"sbin/sendmail.postfix${POSTFIXVER}\".",
-		"NOTE: ALTERNATIVES:1: @PREFIX@/ can be omitted from the filename.",
-		"NOTE: ALTERNATIVES:2: @PREFIX@/ can be omitted from the filename.",
 		"ERROR: ALTERNATIVES:3: Alternative wrapper \"bin/echo\" must not appear in the PLIST.",
 		"ERROR: ALTERNATIVES:3: Alternative implementation \"bin/gnu-echo\" must appear in the PLIST.",
-		"ERROR: ALTERNATIVES:5: Invalid ALTERNATIVES line \"invalid\".")
+		"ERROR: ALTERNATIVES:3: Alternative implementation \"bin/gnu-echo\" must be an absolute path.",
+		"ERROR: ALTERNATIVES:4: Invalid line \"bin/editor bin/vim -e\".",
+		"ERROR: ALTERNATIVES:5: Invalid line \"invalid\".",
+		"ERROR: ALTERNATIVES:6: Alternative implementation \"${PREFIX}/bin/firefox\" must appear in the PLIST.",
+		"ERROR: ALTERNATIVES:6: Alternative implementation \"${PREFIX}/bin/firefox\" must be an absolute path.",
+		"ERROR: ALTERNATIVES:7: Alternative implementation \"@VARBASE@/game/scores\" "+
+			"must appear in the PLIST as \"${VARBASE}/game/scores\".")
+
+	t.SetupCommandLine("--autofix")
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"AUTOFIX: ALTERNATIVES:3: Replacing \"bin/gnu-echo\" with \"@PREFIX@/bin/gnu-echo\".")
 }
 
-func (s *Suite) Test_CheckfileAlternatives__empty(c *check.C) {
+func (s *Suite) Test_CheckFileAlternatives__empty(c *check.C) {
 	t := s.Init(c)
 
 	t.Chdir("category/package")
@@ -39,7 +53,7 @@ func (s *Suite) Test_CheckfileAlternatives__empty(c *check.C) {
 
 	G.Pkg = NewPackage(".")
 
-	CheckfileAlternatives("ALTERNATIVES")
+	CheckFileAlternatives("ALTERNATIVES")
 
 	t.CheckOutputLines(
 		"ERROR: ALTERNATIVES: Must not be empty.")

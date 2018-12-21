@@ -10,6 +10,11 @@ import (
 
 // TODO: Can ShellLine and ShellProgramChecker be merged into one type?
 
+// ShellLine is either a line from a Makefile starting with a tab,
+// thereby containing shell commands to be executed.
+//
+// Or it is a variable assignment line from a Makefile with a left-hand
+// side variable that is of some shell-like type; see Vartype.IsShell.
 type ShellLine struct {
 	mkline MkLine
 }
@@ -293,7 +298,9 @@ func (shline *ShellLine) CheckShellCommandLine(shelltext string) {
 	}
 	setE := lexer.SkipString("${RUN}")
 	if !setE {
-		lexer.NextString("${_PKG_SILENT}${_PKG_DEBUG}")
+		if lexer.NextString("${_PKG_SILENT}${_PKG_DEBUG}") != "" {
+			line.Warnf("Use of _PKG_SILENT and _PKG_DEBUG is deprecated. Use ${RUN} instead.")
+		}
 	}
 
 	shline.CheckShellCommand(lexer.Rest(), &setE, RunTime)
