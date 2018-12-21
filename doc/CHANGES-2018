@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5314 2018/12/21 15:49:34 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5315 2018/12/21 16:34:05 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7418,3 +7418,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/py-awscli to 1.16.78 [ryoon 2018-12-21]
 	Updated net/py-boto3 to 1.9.70 [ryoon 2018-12-21]
 	Updated security/mit-krb5 to 1.16.2 [adam 2018-12-21]
+	Updated textproc/gsed to 4.6 [ryoon 2018-12-21]
