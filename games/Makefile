@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.419 2018/10/04 15:47:28 roy Exp $
+# $NetBSD: Makefile,v 1.420 2018/12/21 16:56:18 nia Exp $
 #
 
 COMMENT=	Games
@@ -224,6 +224,7 @@ SUBDIR+=	lgogdownloader
 SUBDIR+=	libggz
 SUBDIR+=	libkdegames
 SUBDIR+=	libkmahjongg
+SUBDIR+=	liblcf
 SUBDIR+=	libretro-craft
 SUBDIR+=	lincity
 SUBDIR+=	lincity-ng
