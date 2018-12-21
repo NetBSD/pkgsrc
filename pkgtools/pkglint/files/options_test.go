@@ -2,7 +2,7 @@ package pkglint
 
 import "gopkg.in/check.v1"
 
-func (s *Suite) Test_ChecklinesOptionsMk(c *check.C) {
+func (s *Suite) Test_CheckLinesOptionsMk(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall,no-space")
@@ -54,7 +54,7 @@ func (s *Suite) Test_ChecklinesOptionsMk(c *check.C) {
 		".elif !empty(PKG_OPTIONS:Msqlite)",
 		".endif")
 
-	ChecklinesOptionsMk(mklines)
+	CheckLinesOptionsMk(mklines)
 
 	t.CheckOutputLines(
 		"WARN: ~/category/package/options.mk:6: l is used but not defined.",
@@ -72,7 +72,7 @@ func (s *Suite) Test_ChecklinesOptionsMk(c *check.C) {
 // variables, the whole analysis stops.
 //
 // This case doesn't happen in practice and thus is not worth being handled in detail.
-func (s *Suite) Test_ChecklinesOptionsMk__unexpected_line(c *check.C) {
+func (s *Suite) Test_CheckLinesOptionsMk__unexpected_line(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wno-space")
@@ -89,13 +89,13 @@ func (s *Suite) Test_ChecklinesOptionsMk__unexpected_line(c *check.C) {
 		"pre-configure:",
 		"\techo \"In the pre-configure stage.\"")
 
-	ChecklinesOptionsMk(mklines)
+	CheckLinesOptionsMk(mklines)
 
 	t.CheckOutputLines(
 		"WARN: ~/category/package/options.mk:5: Expected inclusion of \"../../mk/bsd.options.mk\".")
 }
 
-func (s *Suite) Test_ChecklinesOptionsMk__malformed_condition(c *check.C) {
+func (s *Suite) Test_CheckLinesOptionsMk__malformed_condition(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wno-space")
@@ -124,7 +124,7 @@ func (s *Suite) Test_ChecklinesOptionsMk__malformed_condition(c *check.C) {
 		".if ${OPSYS} == 'Darwin'",
 		".endif")
 
-	ChecklinesOptionsMk(mklines)
+	CheckLinesOptionsMk(mklines)
 
 	t.CheckOutputLines(
 		"WARN: ~/category/package/options.mk:13: Invalid condition, unrecognized part: \"${OPSYS} == 'Darwin'\".")

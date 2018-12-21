@@ -279,7 +279,7 @@ func (t *Tester) SetupCategory(name string) {
 // The given makefileLines start in line 20. Except if they are variable
 // definitions for already existing variables, then they replace that line.
 //
-// Returns the path to the package, ready to be used with Pkglint.CheckDirent.
+// Returns the path to the package, ready to be used with Pkglint.Check.
 //
 // After calling this method, individual files can be overwritten as necessary.
 // Then, G.Pkgsrc.LoadInfrastructure should be called to load all the files.
