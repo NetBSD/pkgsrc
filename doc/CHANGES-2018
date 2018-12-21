@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5319 2018/12/21 21:08:06 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5320 2018/12/21 23:13:15 he Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7424,3 +7424,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added biology/kallisto version 0.45.0 [bacon 2018-12-21]
 	Updated www/py-flask-restful to 0.3.7 [adam 2018-12-21]
 	Updated archivers/py-lz4 to 2.1.6 [adam 2018-12-21]
+	Updated lang/rust to 1.31.1 [he 2018-12-21]
