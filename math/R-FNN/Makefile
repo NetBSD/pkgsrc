@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/07/28 14:40:45 brook Exp $
+# $NetBSD: Makefile,v 1.3 2018/12/21 02:59:50 wen Exp $
 
 CATEGORIES=	math
 
@@ -8,9 +8,9 @@ COMMENT=	Fast Nearest Neighbor Search Algorithms and Applications
 LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	FNN
-R_PKGVER=	1.1
+R_PKGVER=	1.1.2.2
 
-USE_LANGUAGES+=	c++
+USE_LANGUAGES+=	c c++
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
