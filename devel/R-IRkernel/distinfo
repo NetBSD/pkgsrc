@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/02/12 19:44:46 minskim Exp $
+$NetBSD: distinfo,v 1.2 2018/12/21 06:14:14 wen Exp $
 
-SHA1 (R/IRkernel_0.8.11.tar.gz) = 6ca5c8111764dc231094b3c5cb182ab7219b4264
-RMD160 (R/IRkernel_0.8.11.tar.gz) = 03ae0616e692b94d54a73e30972a96d603078176
-SHA512 (R/IRkernel_0.8.11.tar.gz) = 7bf2c5b945857819a672f6b3af93cd90f0548c7984d8beefd08dd4ebb19069f65446e9bd6034144cc4954c591f4484481d0faf804180b674a7605ca0d58e8ecf
-Size (R/IRkernel_0.8.11.tar.gz) = 76555 bytes
+SHA1 (R/IRkernel_0.8.14.tar.gz) = be768343b6dd2a9cc67d09aa3d0a5c200e771a7e
+RMD160 (R/IRkernel_0.8.14.tar.gz) = c1571c9dce54bfd067f0943d7b7bec0e652f34a1
+SHA512 (R/IRkernel_0.8.14.tar.gz) = ecdba7e893e748d4d828614f08a1361e1fab29cfcaf78e9d42c838687db8b4736bd5caf24efa55cefdd1ab10335533a1a89250276ceec35210ca34b71c5b83ea
+Size (R/IRkernel_0.8.14.tar.gz) = 76628 bytes
