@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5307 2018/12/21 12:10:44 wen Exp $
+$NetBSD: CHANGES-2018,v 1.5308 2018/12/21 12:36:21 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7411,3 +7411,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added math/R-carData version 3.0.2 [wen 2018-12-21]
 	Updated math/R-sp to 1.3.1 [wen 2018-12-21]
 	Added geography/R-maptools version 0.9.4 [wen 2018-12-21]
+	Added lang/chicken5 version 5.0.0 [leot 2018-12-21]
