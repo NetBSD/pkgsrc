@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/05/31 01:47:03 wen Exp $
+$NetBSD: distinfo,v 1.3 2018/12/21 03:06:46 wen Exp $
 
-SHA1 (R/IRdisplay_0.5.0.tar.gz) = c74064cd7d10cacbf7dc609c5207213b223e9643
-RMD160 (R/IRdisplay_0.5.0.tar.gz) = 8f7fa329533c2e181ad71d075226eca23f8c62c8
-SHA512 (R/IRdisplay_0.5.0.tar.gz) = 308fa2f03d531f9da6ce4366fc43ebaf43505aece0dc586f5a20e94f6e17fbe976e54990772a691be0643ab54c496509171908d17601d239763ee3687712b397
-Size (R/IRdisplay_0.5.0.tar.gz) = 6674 bytes
+SHA1 (R/IRdisplay_0.7.0.tar.gz) = e4a4ba5416f1bbd42570adf8d53695668c278f69
+RMD160 (R/IRdisplay_0.7.0.tar.gz) = 5fd5f050a7cbae4437f57ca626c0fb6d76067e39
+SHA512 (R/IRdisplay_0.7.0.tar.gz) = 832a4b518388481423eb97cc3dad534e30ac348809bbb5f5d2081af59b44e07ac62fc881c21b0a835d6dacc23e92148a11532865d7ec72d1044768097f9349f9
+Size (R/IRdisplay_0.7.0.tar.gz) = 7599 bytes
