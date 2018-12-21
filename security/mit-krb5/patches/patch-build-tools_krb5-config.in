@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.5 2018/06/15 20:46:01 tez Exp $
+$NetBSD: patch-build-tools_krb5-config.in,v 1.1 2018/12/21 15:45:13 adam Exp $
 
 Add --enable-pkgsrc-libtool option
 
