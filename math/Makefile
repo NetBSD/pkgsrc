@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.402 2018/12/15 17:25:42 leot Exp $
+# $NetBSD: Makefile,v 1.403 2018/12/21 10:38:46 wen Exp $
 
 COMMENT=	Mathematics
 
@@ -30,6 +30,7 @@ SUBDIR+=	R-aplpack
 SUBDIR+=	R-bbmle
 SUBDIR+=	R-bitops
 SUBDIR+=	R-car
+SUBDIR+=	R-carData
 SUBDIR+=	R-chron
 SUBDIR+=	R-circular
 SUBDIR+=	R-classInt
