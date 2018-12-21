@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.5 2018/11/27 02:19:03 christos Exp $
+$NetBSD: distinfo,v 1.6 2018/12/21 09:18:52 hauke Exp $
 
-SHA1 (netatalk-3.1.11.tar.bz2) = 5aa7900e6f7de3c7ee812aa1130c1245d1974586
-RMD160 (netatalk-3.1.11.tar.bz2) = d0b671662afb642dc6bdfb44688fd459da5e7415
-SHA512 (netatalk-3.1.11.tar.bz2) = 330e584f34b5f5e8714b3eca8e11adb93134cc0afa73e9bc25ddadcf3e9a96779a2979dfc08a64d343b148bc2d4e0e0f25b08d9c46d6b68057611d04ecfd06ea
-Size (netatalk-3.1.11.tar.bz2) = 1812227 bytes
+SHA1 (netatalk-3.1.12.tar.bz2) = cc1fe1ebdbdb4da9cf82835c440e82ba28a832c5
+RMD160 (netatalk-3.1.12.tar.bz2) = 30f44674f76f7d70d02772ddf2ff249e4aef3a50
+SHA512 (netatalk-3.1.12.tar.bz2) = 0b22abaf0084d5684ccc049225abb34caa32893ea8fe7eb67901fde94726f054149ce78d2da49cf06fe30360eb18b2edccff20f9ac69d5ab5105f6d2f4178759
+Size (netatalk-3.1.12.tar.bz2) = 1918312 bytes
 SHA1 (patch-bin_ad_ad__cp.c) = bd2191a7a2731e6032f97dc66688175fc84275cc
 SHA1 (patch-config.h.in) = bd9e735c6d1c8bb8a1534f6674fa6358b29922c1
 SHA1 (patch-config_Makefile.in) = 81fff584e5cb98537a4fa671fb551ad0258ba092
