@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2018/10/15 10:33:47 adam Exp $
+$NetBSD: distinfo,v 1.4 2018/12/22 09:00:31 adam Exp $
 
-SHA1 (zope.i18nmessageid-4.2.tar.gz) = f89a45eb919c7166bf7d46145b3f6e3df6e82d8e
-RMD160 (zope.i18nmessageid-4.2.tar.gz) = 5174d8ea931e87ddfe1d0333ced83faba661e0fc
-SHA512 (zope.i18nmessageid-4.2.tar.gz) = 86044b00d78433b88e35b2334c1590b83275e0a63895bb87518ab9e2846ea7e6c9eb4d265b5b2ce7c7ebb8d966cafb90b456e56e68eda03921395bdc65fc35c6
-Size (zope.i18nmessageid-4.2.tar.gz) = 25949 bytes
+SHA1 (zope.i18nmessageid-4.3.1.tar.gz) = a0558da687a8e87f63a8544c92910fefaa488e8d
+RMD160 (zope.i18nmessageid-4.3.1.tar.gz) = 1a3b3b898e9a872975675897d40a95552f60a956
+SHA512 (zope.i18nmessageid-4.3.1.tar.gz) = 3b01c6e25c2f2188e90a16556b263d45f590f61ec22e0ed87980a903109cb3f1c96a5fe5cdea9694d5c7508c5923b0faee0c8387aa947b5ab42720783089cb9f
+Size (zope.i18nmessageid-4.3.1.tar.gz) = 27219 bytes
