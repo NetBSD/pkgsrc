@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5325 2018/12/22 09:42:36 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5326 2018/12/22 09:42:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7438,3 +7438,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-autobahn to 18.12.1 [adam 2018-12-22]
 	Updated math/py-numexpr to 2.6.9 [adam 2018-12-22]
 	Updated security/py-service_identity to 18.1.0 [adam 2018-12-22]
+	Updated x11/motif to 2.3.8 [wiz 2018-12-22]
