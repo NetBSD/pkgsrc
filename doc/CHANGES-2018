@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5322 2018/12/22 09:11:50 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5323 2018/12/22 09:16:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7431,3 +7431,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-ZopeTestrunner to 4.9.2 [adam 2018-12-22]
 	Updated devel/py-zope.deprecation to 4.4.0 [adam 2018-12-22]
 	Updated textproc/py-regex to 2018.11.22 [adam 2018-12-22]
+	Added net/py-smbc version 1.0.15.8 [adam 2018-12-22]
+	Updated www/py-djangocms-link to 2.3.1 [adam 2018-12-22]
