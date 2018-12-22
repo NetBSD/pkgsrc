@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5321 2018/12/22 09:06:00 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5322 2018/12/22 09:11:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7429,3 +7429,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-ZopeI18NMessageid to 4.3.1 [adam 2018-12-22]
 	Updated devel/py-zope.testing to 4.7 [adam 2018-12-22]
 	Updated devel/py-ZopeTestrunner to 4.9.2 [adam 2018-12-22]
+	Updated devel/py-zope.deprecation to 4.4.0 [adam 2018-12-22]
+	Updated textproc/py-regex to 2018.11.22 [adam 2018-12-22]
