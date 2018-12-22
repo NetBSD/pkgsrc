@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/12/22 21:52:06 bacon Exp $
+
+SHA1 (stacks-2.2.tar.gz) = ee99798378b906f356c23da0073d0361440263bf
+RMD160 (stacks-2.2.tar.gz) = 2f5097c668d9662dbbec705fe3bf00216c11d388
+SHA512 (stacks-2.2.tar.gz) = f1cffd12313fed1c171af46f9fb501373b43d57cd3004edae1034074f43169d43398743cf625ffa21be412c808ba1168513a33c63377ee13dd056406fa222095
+Size (stacks-2.2.tar.gz) = 10822973 bytes
