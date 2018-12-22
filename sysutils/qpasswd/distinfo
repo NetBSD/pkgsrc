@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.2 2018/12/17 16:32:18 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2018/12/22 01:08:56 schmonz Exp $
 
 SHA1 (qpasswd-0.5.tar.bz2) = 72cb41406cf1c3542fc70aefbbde74e7c3dd4cf5
 RMD160 (qpasswd-0.5.tar.bz2) = 0b596c1c487bd9d7c45d2710687f17e2b509a64d
 SHA512 (qpasswd-0.5.tar.bz2) = 3ff454b1939a84fb75be54b1a80d5710a710d78af565e2bcaacf1ec37eea9b56450e5c776c41e857cc3c8877dad950f8144023c11c4dca429b8b27108b466951
 Size (qpasswd-0.5.tar.bz2) = 71473 bytes
-SHA1 (patch-Makefile) = c0da81b6a27bc75c43e04bd88c7555ac67352ac9
+SHA1 (patch-Makefile) = bb11bb669614f08c20336124496f60d2edf45826
 SHA1 (patch-params.h) = 5836dc6d86b64efb54f23a8ea5558b3d00bb84ce
 SHA1 (patch-qpasswd.h) = 44e95989e51bec9620e587a27613ad6728af89e0
