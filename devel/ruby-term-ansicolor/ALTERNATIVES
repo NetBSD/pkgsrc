@@ -1,6 +1,6 @@
-bin/term_cdiff bin/term_cdiff@RUBY_SUFFIX@
-bin/term_colortab bin/term_colortab@RUBY_SUFFIX@
-bin/term_decolor bin/term_decolor@RUBY_SUFFIX@
-bin/term_display bin/term_display@RUBY_SUFFIX@
-bin/term_mandel bin/term_mandel@RUBY_SUFFIX@
-bin/term_snow bin/term_snow@RUBY_SUFFIX@
+bin/term_cdiff @PREFIX@/bin/term_cdiff@RUBY_SUFFIX@
+bin/term_colortab @PREFIX@/bin/term_colortab@RUBY_SUFFIX@
+bin/term_decolor @PREFIX@/bin/term_decolor@RUBY_SUFFIX@
+bin/term_display @PREFIX@/bin/term_display@RUBY_SUFFIX@
+bin/term_mandel @PREFIX@/bin/term_mandel@RUBY_SUFFIX@
+bin/term_snow @PREFIX@/bin/term_snow@RUBY_SUFFIX@
