@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5340 2018/12/22 21:54:00 bacon Exp $
+$NetBSD: CHANGES-2018,v 1.5341 2018/12/22 22:48:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7453,3 +7453,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/ruby-tilt to 2.0.9nb1 [taca 2018-12-22]
 	Updated www/py-websocket-client to 0.54.0nb1 [taca 2018-12-22]
 	Added biology/stacks version 2.2 [bacon 2018-12-22]
+	Updated www/py-aiohttp to 3.5.0 [adam 2018-12-22]
+	Updated www/py-bottle to 0.12.16 [adam 2018-12-22]
