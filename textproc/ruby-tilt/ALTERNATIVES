@@ -1,1 +1,1 @@
-bin/tilt bin/tilt@RUBY_SUFFIX@
+bin/tilt @PREFIX@/bin/tilt@RUBY_SUFFIX@
