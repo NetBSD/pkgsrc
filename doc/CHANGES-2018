@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5336 2018/12/22 17:28:23 taca Exp $
+$NetBSD: CHANGES-2018,v 1.5337 2018/12/22 17:30:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7449,3 +7449,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/py-tqdm to 4.23.3nb1 [taca 2018-12-22]
 	Updated misc/ruby-bundler to 1.17.2nb2 [taca 2018-12-22]
 	Updated misc/ruby-pry to 0.12.2nb1 [taca 2018-12-22]
+	Updated net/py-boto to 2.49.0nb2 [taca 2018-12-22]
