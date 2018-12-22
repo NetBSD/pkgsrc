@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/12/29 06:07:40 dholland Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/12/22 09:42:41 wiz Exp $
 bin/mwm
 bin/uil
 bin/xmbind
@@ -975,7 +975,7 @@ man/man3/XmVaCreateToggleButton.3
 man/man3/XmVaCreateToggleButtonGadget.3
 man/man3/XmWidgetGetBaselines.3
 man/man3/XmWidgetGetDisplayRect.3
+man/man4/mwmrc.4
 man/man5/Traits.5
 man/man5/UIL.5
 man/man5/WML.5
-man/man5/mwmrc.5
