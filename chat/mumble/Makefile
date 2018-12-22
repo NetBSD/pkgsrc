@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/12/22 18:17:39 nia Exp $
+# $NetBSD: Makefile,v 1.2 2018/12/22 18:28:07 nia Exp $
 
 DISTNAME=	mumble-1.2.19
 CATEGORIES=	chat audio
@@ -49,7 +49,7 @@ SUBST_CLASSES+=		oss
 SUBST_STAGE.oss=	pre-configure
 SUBST_MESSAGE.oss=	Correct path to OSS device.
 SUBST_FILES.oss+=	src/mumble/OSS.cpp
-SUBST_SED.oss=		-e "s,\"/dev/dsp\",\"${DEVOSSAUDIO}\",g"
+SUBST_SED.oss=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 .endif
 
 INSTALLATION_DIRS+=	bin lib
@@ -71,8 +71,7 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/release/.libs/libmumble.so.${PKGVERSION_NOREV} ${DESTDIR}${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/scripts/mumble.desktop ${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/icons/mumble.xpm ${DESTDIR}${PREFIX}/share/pixmaps
-	${INSTALL_DATA} ${WRKSRC}/icons/mumble.osx.png ${DESTDIR}${PREFIX}/share/icons/hicolor/128x128/apps
-	${MV} ${DESTDIR}${PREFIX}/share/icons/hicolor/128x128/apps/mumble.osx.png ${DESTDIR}${PREFIX}/share/icons/hicolor/128x128/apps/mumble.png
+	${INSTALL_DATA} ${WRKSRC}/icons/mumble.osx.png ${DESTDIR}${PREFIX}/share/icons/hicolor/128x128/apps/mumble.png
 	${INSTALL_DATA} ${WRKSRC}/icons/mumble.svg ${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps
 	${INSTALL_MAN} ${WRKSRC}/man/mumble.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
