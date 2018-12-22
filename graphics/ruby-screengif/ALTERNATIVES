@@ -1,1 +1,1 @@
-bin/screengif bin/screengif@RUBY_SUFFIX@
+bin/screengif @PREFIX@/bin/screengif@RUBY_SUFFIX@

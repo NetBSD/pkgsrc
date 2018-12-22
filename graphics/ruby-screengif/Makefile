@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2018/12/17 15:58:59 taca Exp $
+# $NetBSD: Makefile,v 1.3 2018/12/22 17:20:51 taca Exp $
 
 DISTNAME=	screengif-0.0.3
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 
 MAINTAINER=	schmonz@NetBSD.org
