@@ -1,16 +1,19 @@
-$NetBSD: distinfo,v 1.21 2018/12/20 21:18:22 adam Exp $
+$NetBSD: distinfo,v 1.22 2018/12/22 01:13:52 adam Exp $
 
 SHA1 (samba-4.9.4.tar.gz) = 7f8e15709e03e52d14bd9c85dd717366c106993f
 RMD160 (samba-4.9.4.tar.gz) = d0a43b85b85906f860de12b0b0abb1fcc5643b7a
 SHA512 (samba-4.9.4.tar.gz) = ecd9937caa12d409b9b4cf34982b1670346fa64c7ecd111b390e296771476e13eb7b868997bfe489f36b7bdc5c9fc3af42cd5ad276e9d85aaedfa8ac4cfc0617
 Size (samba-4.9.4.tar.gz) = 18053738 bytes
+SHA1 (patch-buildtools_wafsamba_samba__install.py) = 82e91af3125931767df06821983d40e6f94140c3
+SHA1 (patch-buildtools_wafsamba_samba__pidl.py) = 1469d23fd2094ce0ecf979df6ff8cfd69fae53a6
 SHA1 (patch-buildtools_wafsamba_wscript) = 5604936a825675647157331df2333f4237c611f5
-SHA1 (patch-dynconfig_wscript) = 4d769a4d07487b5f62c112d3b0095196bb058117
-SHA1 (patch-lib_ldb_ldb__mdb_ldb__mdb.c) = 3dcee7618a15058351d488ad003929effa100e41
+SHA1 (patch-docs-xml_wscript__build) = 5aa5cbf61882604b7ec9d19f0cd1537a23705ad0
+SHA1 (patch-dynconfig_wscript) = b77bc4aabaab2943962112c51dc539a65d015400
+SHA1 (patch-lib_ldb_ldb__mdb_ldb__mdb.c) = e6d10c0eb44bbad4fbdd52a9e66116ead8e1818d
 SHA1 (patch-lib_param_loadparm.h) = 0216b69d33d1e17260a446e11bee764116c52b18
 SHA1 (patch-lib_replace_wscript) = b6a042c2c13c0be78d7b64c0ce2efdaf4bbb1f3b
 SHA1 (patch-lib_tevent_wscript) = fbbe2024096b57d651d90064f53489a974db9d7a
 SHA1 (patch-nsswitch_wscript__build) = e8a6251e031ffa13d6347fade8891f7afd65d3eb
-SHA1 (patch-pidl_lib_wscript__build) = 82a4b42c20df7e6d8927b53471123f0536c81866
 SHA1 (patch-source4_heimdal__build_roken.h) = ee535f8e7cc46a3487d95bc859438c476a88fe60
 SHA1 (patch-source4_scripting_wsript_build) = bd4feddcaadf1c3d2d25eb7914e7b5843e4e9511
+SHA1 (patch-source4_torture_local_nss__tests.c) = 8c878a8ed771ba996a7a325a1ad41bd13016c70c
