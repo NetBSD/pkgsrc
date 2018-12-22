@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2018/10/03 11:48:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2018/12/22 09:30:10 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -44,6 +44,9 @@ ${PYSITELIB}/flask_admin/contrib/appengine/view.pyo
 ${PYSITELIB}/flask_admin/contrib/fileadmin/__init__.py
 ${PYSITELIB}/flask_admin/contrib/fileadmin/__init__.pyc
 ${PYSITELIB}/flask_admin/contrib/fileadmin/__init__.pyo
+${PYSITELIB}/flask_admin/contrib/fileadmin/azure.py
+${PYSITELIB}/flask_admin/contrib/fileadmin/azure.pyc
+${PYSITELIB}/flask_admin/contrib/fileadmin/azure.pyo
 ${PYSITELIB}/flask_admin/contrib/fileadmin/s3.py
 ${PYSITELIB}/flask_admin/contrib/fileadmin/s3.pyc
 ${PYSITELIB}/flask_admin/contrib/fileadmin/s3.pyo
@@ -164,6 +167,9 @@ ${PYSITELIB}/flask_admin/contrib/sqla/validators.pyo
 ${PYSITELIB}/flask_admin/contrib/sqla/view.py
 ${PYSITELIB}/flask_admin/contrib/sqla/view.pyc
 ${PYSITELIB}/flask_admin/contrib/sqla/view.pyo
+${PYSITELIB}/flask_admin/contrib/sqla/widgets.py
+${PYSITELIB}/flask_admin/contrib/sqla/widgets.pyc
+${PYSITELIB}/flask_admin/contrib/sqla/widgets.pyo
 ${PYSITELIB}/flask_admin/contrib/sqlamodel/__init__.py
 ${PYSITELIB}/flask_admin/contrib/sqlamodel/__init__.pyc
 ${PYSITELIB}/flask_admin/contrib/sqlamodel/__init__.pyo
@@ -222,6 +228,7 @@ ${PYSITELIB}/flask_admin/static/admin/css/bootstrap2/admin.css
 ${PYSITELIB}/flask_admin/static/admin/css/bootstrap2/rediscli.css
 ${PYSITELIB}/flask_admin/static/admin/css/bootstrap3/admin.css
 ${PYSITELIB}/flask_admin/static/admin/css/bootstrap3/rediscli.css
+${PYSITELIB}/flask_admin/static/admin/css/bootstrap3/submenu.css
 ${PYSITELIB}/flask_admin/static/admin/js/actions.js
 ${PYSITELIB}/flask_admin/static/admin/js/bs2_modal.js
 ${PYSITELIB}/flask_admin/static/admin/js/bs3_modal.js
@@ -298,6 +305,7 @@ ${PYSITELIB}/flask_admin/static/vendor/leaflet/leaflet.css
 ${PYSITELIB}/flask_admin/static/vendor/leaflet/leaflet.draw.css
 ${PYSITELIB}/flask_admin/static/vendor/leaflet/leaflet.draw.js
 ${PYSITELIB}/flask_admin/static/vendor/leaflet/leaflet.js
+${PYSITELIB}/flask_admin/static/vendor/leaflet/leaflet.js.map
 ${PYSITELIB}/flask_admin/static/vendor/moment.min.js
 ${PYSITELIB}/flask_admin/static/vendor/select2/LICENSE
 ${PYSITELIB}/flask_admin/static/vendor/select2/select2-bootstrap3.css
@@ -375,6 +383,9 @@ ${PYSITELIB}/flask_admin/tests/fileadmin/files/dummy.txt
 ${PYSITELIB}/flask_admin/tests/fileadmin/test_fileadmin.py
 ${PYSITELIB}/flask_admin/tests/fileadmin/test_fileadmin.pyc
 ${PYSITELIB}/flask_admin/tests/fileadmin/test_fileadmin.pyo
+${PYSITELIB}/flask_admin/tests/fileadmin/test_fileadmin_azure.py
+${PYSITELIB}/flask_admin/tests/fileadmin/test_fileadmin_azure.pyc
+${PYSITELIB}/flask_admin/tests/fileadmin/test_fileadmin_azure.pyo
 ${PYSITELIB}/flask_admin/tests/geoa/__init__.py
 ${PYSITELIB}/flask_admin/tests/geoa/__init__.pyc
 ${PYSITELIB}/flask_admin/tests/geoa/__init__.pyo
@@ -525,39 +536,3 @@ ${PYSITELIB}/flask_admin/translations/zh_Hans_CN/LC_MESSAGES/index.po
 ${PYSITELIB}/flask_admin/translations/zh_Hans_CN/LC_MESSAGES/introduction.po
 ${PYSITELIB}/flask_admin/translations/zh_Hant_TW/LC_MESSAGES/admin.mo
 ${PYSITELIB}/flask_admin/translations/zh_Hant_TW/LC_MESSAGES/admin.po
-share/examples/${PKGBASE}/__init__.py
-share/examples/${PKGBASE}/auth-flask-login/__init__.py
-share/examples/${PKGBASE}/auth-flask-login/app.py
-share/examples/${PKGBASE}/auth/__init__.py
-share/examples/${PKGBASE}/auth/app.py
-share/examples/${PKGBASE}/auth/config.py
-share/examples/${PKGBASE}/forms/__init__.py
-share/examples/${PKGBASE}/forms/app.py
-share/examples/${PKGBASE}/geo_alchemy/__init__.py
-share/examples/${PKGBASE}/geo_alchemy/app.py
-share/examples/${PKGBASE}/geo_alchemy/config.py
-share/examples/${PKGBASE}/layout/__init__.py
-share/examples/${PKGBASE}/layout/app.py
-share/examples/${PKGBASE}/layout_bootstrap3/__init__.py
-share/examples/${PKGBASE}/layout_bootstrap3/app.py
-share/examples/${PKGBASE}/quickstart/__init__.py
-share/examples/${PKGBASE}/quickstart/app.py
-share/examples/${PKGBASE}/quickstart/app2.py
-share/examples/${PKGBASE}/quickstart/app3.py
-share/examples/${PKGBASE}/simple/__init__.py
-share/examples/${PKGBASE}/simple/app.py
-share/examples/${PKGBASE}/sqla-association_proxy/__init__.py
-share/examples/${PKGBASE}/sqla-association_proxy/app.py
-share/examples/${PKGBASE}/sqla-custom-filter/__init__.py
-share/examples/${PKGBASE}/sqla-custom-filter/app.py
-share/examples/${PKGBASE}/sqla-filter-selectable/__init__.py
-share/examples/${PKGBASE}/sqla-filter-selectable/app.py
-share/examples/${PKGBASE}/sqla-hybrid_property/__init__.py
-share/examples/${PKGBASE}/sqla-hybrid_property/app.py
-share/examples/${PKGBASE}/sqla/__init__.py
-share/examples/${PKGBASE}/sqla/app.py
-share/examples/${PKGBASE}/sqla/app2.py
-share/examples/${PKGBASE}/swatch/__init__.py
-share/examples/${PKGBASE}/swatch/app.py
-share/examples/${PKGBASE}/swatch3/__init__.py
-share/examples/${PKGBASE}/swatch3/app.py
