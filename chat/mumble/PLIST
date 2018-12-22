@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2018/12/22 18:17:39 nia Exp $
+bin/mumble
+bin/murmurd
+lib/libcelt-mumble.so.0.7.0
+lib/libmumble.so.${PKGVERSION}
+man/man1/mumble.1
+share/applications/mumble.desktop
+share/icons/hicolor/128x128/apps/mumble.png
+share/icons/hicolor/scalable/apps/mumble.svg
+share/pixmaps/mumble.xpm
