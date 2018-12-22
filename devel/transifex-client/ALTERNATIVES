@@ -1,1 +1,1 @@
-bin/tx bin/tx-@PYVERSSUFFIX@
+bin/tx @PREFIX@/bin/tx-@PYVERSSUFFIX@
