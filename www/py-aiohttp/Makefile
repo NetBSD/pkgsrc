@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2018/09/06 13:53:16 adam Exp $
+# $NetBSD: Makefile,v 1.33 2018/12/22 22:45:47 adam Exp $
 
-DISTNAME=	aiohttp-3.4.4
+DISTNAME=	aiohttp-3.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiohttp/}
@@ -25,7 +25,9 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 34
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} != 37
 DEPENDS+=	${PYPKGPREFIX}-idna-ssl>=1.0:../../www/py-idna_ssl
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.6.5:../../devel/py-typing-extensions
 .endif
 
+.include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
