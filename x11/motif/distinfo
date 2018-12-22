@@ -1,22 +1,18 @@
-$NetBSD: distinfo,v 1.7 2015/11/04 03:28:49 agc Exp $
+$NetBSD: distinfo,v 1.8 2018/12/22 09:42:41 wiz Exp $
 
-SHA1 (motif-2.3.4-src.tgz) = 49ecfe2a0939232ca78ce318d938044e7f751b6d
-RMD160 (motif-2.3.4-src.tgz) = 96e1ed3c5b99d420e3e2e4eae1b5590961191a33
-SHA512 (motif-2.3.4-src.tgz) = fb1033caa68f25b93282fa6700d5b7856be217b3651072d86e7c93a747df5b31219230998eb93deae22a8fa698e816b1a30e52b3ae88ae1c01c1f0aac59a2af2
-Size (motif-2.3.4-src.tgz) = 9527040 bytes
-SHA1 (patch-Makefile.am) = 3185b240e3d6a60d3c04fa90fafe1af020de6a15
-SHA1 (patch-acinclude.m4) = 71ee2d26411be9d195b22f74a328af8c1fcb5aab
-SHA1 (patch-autogen.sh) = b334bec55c0a4aa5f27470cc4ff6401d08419a30
+SHA1 (motif-2.3.8.tar.gz) = ca9d8d67544434c5883d8d0fb684a48f8b0108bd
+RMD160 (motif-2.3.8.tar.gz) = a4c10db68d880d3096c97cc1c995351616a90a57
+SHA512 (motif-2.3.8.tar.gz) = 1ab8e8eece25ef97e948592b5fa3e19d98e932695290a18b7a8e90f1aa2766bc4f082bdbc3999dff5660e684821178a149040f76bb477163e53ca06474d02b55
+Size (motif-2.3.8.tar.gz) = 5704328 bytes
+SHA1 (patch-Makefile.in) = 9f4573cd47989a821ea616df53da924766fe3d39
 SHA1 (patch-clients_uil_UilDB.c) = 781b52e915e667eeb02359a51cfeefdb9556c4dd
 SHA1 (patch-clients_uil_UilDefI.h) = 6447a306809e65b4993d79e14a989a01aed2e0bc
 SHA1 (patch-clients_uil_UilDiags.c) = 39ac8307219b435baf3d1bf829809fcb6536b1a9
-SHA1 (patch-configure.ac) = a5bcdcf09478b23c4d5352c35c4a9cb64c2c0d73
 SHA1 (patch-doc_man_man3_Makefile.am) = b396f5e1235834f507a415c62b0efaa939943f1d
 SHA1 (patch-doc_man_man4_Makefile.am) = 154071494cf54a65e2e266861c81771a14156cae
 SHA1 (patch-doc_man_man5_Makefile.am) = 2f6e0cc239faf53e3391aef9da3def934023928e
 SHA1 (patch-lib_Xm_Scale.c) = d78669a3332ab9d7dd140a1a1d9532e065573c7b
 SHA1 (patch-lib_Xm_TextF.c) = 1bd1801d708ff2c832c131c9954b3bbfd444ed42
-SHA1 (patch-lib_Xm_XmP.h) = 31bd398e48286b013e991889f0adeaafb817de58
 SHA1 (patch-lib_Xm_Xmfuncs.h) = fef6a642988a8024da0bff00cdc40dc485695e2b
 SHA1 (patch-lib_Xm_Xmos.c) = 88af3627fad7c9ec40db0e8aca47e9617fe8c53b
 SHA1 (patch-lib_Xm_XpmI.h) = b27e0156bc2dd990a4d9642186b1638276054314
