@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2017/11/12 15:36:58 khorben Exp $
+# $NetBSD: options.mk,v 1.7 2018/12/22 01:13:52 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.samba4
 PKG_SUPPORTED_OPTIONS=	ads fam ldap pam winbind # cups # cups option is broken for me.
@@ -17,6 +17,8 @@ PKG_SUGGESTED_OPTIONS+=	ads
 
 .include "../../mk/bsd.options.mk"
 
+PLIST_VARS+=		ads cups fam ldap pam winbind
+
 ###
 ### Access Control List support.
 ###
@@ -31,6 +33,7 @@ CONFIGURE_ARGS+=	--without-acl-support
 ###
 .if !empty(PKG_OPTIONS:Mads)
 CONFIGURE_ARGS+=	--with-ads
+PLIST.ads=		yes
 .else
 CONFIGURE_ARGS+=	--without-ads
 .endif
@@ -38,7 +41,6 @@ CONFIGURE_ARGS+=	--without-ads
 ###
 ### Native CUPS support for providing printing services.
 ###
-PLIST_VARS+=		cups
 .if !empty(PKG_OPTIONS:Mcups)
 .  include "../../print/cups-base/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-cups
@@ -51,7 +53,6 @@ CONFIGURE_ARGS+=	--disable-cups
 ###
 ### File Alteration Monitor support.
 ###
-PLIST_VARS+=		fam
 .if !empty(PKG_OPTIONS:Mfam)
 .  include "../../mk/fam.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-fam
@@ -63,7 +64,6 @@ CONFIGURE_ARGS+=	--without-fam
 ###
 ### Support LDAP authentication and storage of Samba account information.
 ###
-PLIST_VARS+=		ldap
 # Active Directory requires ldap
 .if !empty(PKG_OPTIONS:Mldap) || !empty(PKG_OPTIONS:Mads)
 .  include "../../databases/openldap-client/buildlink3.mk"
@@ -76,7 +76,6 @@ CONFIGURE_ARGS+=	--without-ldap
 ###
 ### Support PAM authentication and build smbpass and winbind PAM modules.
 ###
-PLIST_VARS+=		pam
 .if !empty(PKG_OPTIONS:Mpam)
 .  include "../../mk/pam.buildlink3.mk"
 
@@ -92,7 +91,6 @@ CONFIGURE_ARGS+=	--without-pam
 ### Support querying a PDC for domain user and group information, e.g.,
 ### through NSS or PAM.
 ###
-PLIST_VARS+=		winbind
 .if !empty(PKG_OPTIONS:Mwinbind)
 CONFIGURE_ARGS+=	--with-winbind
 PLIST.winbind=		yes
