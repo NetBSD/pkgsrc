@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/08/27 11:16:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/12/22 22:45:47 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -136,6 +136,9 @@ ${PYSITELIB}/aiohttp/web_exceptions.pyo
 ${PYSITELIB}/aiohttp/web_fileresponse.py
 ${PYSITELIB}/aiohttp/web_fileresponse.pyc
 ${PYSITELIB}/aiohttp/web_fileresponse.pyo
+${PYSITELIB}/aiohttp/web_log.py
+${PYSITELIB}/aiohttp/web_log.pyc
+${PYSITELIB}/aiohttp/web_log.pyo
 ${PYSITELIB}/aiohttp/web_middlewares.py
 ${PYSITELIB}/aiohttp/web_middlewares.pyc
 ${PYSITELIB}/aiohttp/web_middlewares.pyo
