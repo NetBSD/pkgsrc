@@ -1,1 +1,1 @@
-bin/slugify bin/slugify@PYVERSSUFFIX@
+bin/slugify @PREFIX@/bin/slugify@PYVERSSUFFIX@
