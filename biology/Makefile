@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2018/12/21 19:03:46 bacon Exp $
+# $NetBSD: Makefile,v 1.50 2018/12/22 21:53:23 bacon Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -45,6 +45,7 @@ SUBDIR+=	py-pydicom
 SUBDIR+=	rasmol
 SUBDIR+=	samtools
 SUBDIR+=	sewer
+SUBDIR+=	stacks
 SUBDIR+=	stride
 SUBDIR+=	trimmomatic
 SUBDIR+=	xylem
