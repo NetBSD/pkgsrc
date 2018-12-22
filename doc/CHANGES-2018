@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5334 2018/12/22 17:26:00 taca Exp $
+$NetBSD: CHANGES-2018,v 1.5335 2018/12/22 17:27:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7447,3 +7447,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated fonts/py-fonttools to 3.34.2nb1 [taca 2018-12-22]
 	Updated graphics/ruby-screengif to 0.0.3nb2 [taca 2018-12-22]
 	Updated misc/py-tqdm to 4.23.3nb1 [taca 2018-12-22]
+	Updated misc/ruby-bundler to 1.17.2nb2 [taca 2018-12-22]
