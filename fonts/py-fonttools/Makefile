@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2018/12/22 09:20:03 adam Exp $
+# $NetBSD: Makefile,v 1.51 2018/12/22 17:19:35 taca Exp $
 
 DISTNAME=	fonttools-3.34.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	fonts python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/FontTools/}
 EXTRACT_SUFX=	.zip
