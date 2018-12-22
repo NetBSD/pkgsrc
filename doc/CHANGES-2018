@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5331 2018/12/22 17:18:32 taca Exp $
+$NetBSD: CHANGES-2018,v 1.5332 2018/12/22 17:19:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7444,3 +7444,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-python-slugify to 1.2.6nb1 [taca 2018-12-22]
 	Updated devel/ruby-term-ansicolor to 1.7.0nb1 [taca 2018-12-22]
 	Updated devel/transifex-client to 0.13.5nb1 [taca 2018-12-22]
+	Updated fonts/py-fonttools to 3.34.2nb1 [taca 2018-12-22]
