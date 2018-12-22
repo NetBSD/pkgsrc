@@ -1,4 +1,6 @@
-$NetBSD: patch-dynconfig_wscript,v 1.1 2017/11/11 01:32:46 jklos Exp $
+$NetBSD: patch-dynconfig_wscript,v 1.2 2018/12/22 01:13:52 adam Exp $
+
+Do not check installation prefix.
 
 --- dynconfig/wscript.orig	2017-01-11 07:55:14.000000000 +0000
 +++ dynconfig/wscript
