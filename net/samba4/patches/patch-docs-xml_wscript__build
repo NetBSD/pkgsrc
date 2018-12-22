@@ -1,0 +1,14 @@
+$NetBSD: patch-docs-xml_wscript__build,v 1.1 2018/12/22 01:13:52 adam Exp $
+
+Buidling smb.conf.5 is problematic.
+
+--- docs-xml/wscript_build.orig	2018-12-21 20:53:06.000000000 +0000
++++ docs-xml/wscript_build
+@@ -154,7 +154,6 @@ def SMBDOTCONF_MANPAGE(bld, target):
+ 
+ if ('XSLTPROC_MANPAGES' in bld.env and bld.env['XSLTPROC_MANPAGES']):
+ 
+-    SMBDOTCONF_MANPAGE(bld, 'manpages/smb.conf.5')
+     bld.SAMBAMANPAGES(manpages)
+ 
+     if bld.CONFIG_SET('WITH_PAM_MODULES') and bld.CONFIG_SET('HAVE_PAM_START'):

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2018/12/20 21:18:22 adam Exp $
+# $NetBSD: Makefile,v 1.57 2018/12/22 01:13:52 adam Exp $
 
 DISTNAME=	samba-4.9.4
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://download.samba.org/pub/samba/stable/
 
@@ -9,14 +10,16 @@ HOMEPAGE=	http://www.samba.org/
 COMMENT=	SMB/CIFS protocol server suite
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-
 CONFLICTS+=	ja-samba-[0-9]* tdb-[0-9]* winbind-[0-9]*
 
 GCC_REQD+=	4.4
-BUILD_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-DEPENDS+=	${PYPKGPREFIX}-iso8601-[0-9]*:../../time/py-iso8601
+BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+BUILD_DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
+BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+DEPENDS+=	p5-Parse-Yapp>=1.05:../../devel/p5-Parse-Yapp
 DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
+DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+DEPENDS+=	${PYPKGPREFIX}-iso8601-[0-9]*:../../time/py-iso8601
 
 BUILD_DEFS+=		VARBASE
 
@@ -52,8 +55,6 @@ FILES_SUBST+=		SMB_PID=${SMB_PID}
 # a full dependency since it's not actually needed by samba.
 USE_TOOLS+=		gmake mktemp perl:run pkg-config
 
-REPLACE_PERL=		script/findsmb.in
-
 USE_GNU_ICONV=		yes	# FIXME: something doesn't work on NetBSD
 BROKEN_GETTEXT_DETECTION=yes
 
@@ -63,8 +64,6 @@ BROKEN_GETTEXT_DETECTION=yes
 #CONFIGURE_ARGS+=	--fatal-errors
 
 HAS_CONFIGURE=		yes
-CONFIGURE_ENV+=		XSLTPROC=${FALSE} # suppress generation of man pages
-CONFIGURE_ARGS+=	--libdir=${SAMBA_LIB}
 CONFIG_SHELL=		${PYTHONBIN}
 CONFIGURE_SCRIPT=	${WRKSRC}/buildtools/bin/waf
 CONFIGURE_ARGS+=	configure
@@ -72,6 +71,7 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--infodir=${SMB_INFO}
 CONFIGURE_ARGS+=	--mandir=${SMB_MAN}
 CONFIGURE_ARGS+=	--datarootdir=${SMB_DATAROOT}
+CONFIGURE_ARGS+=	--libdir=${SAMBA_LIB}
 CONFIGURE_ARGS+=	--localedir=${SMB_LOCALE}
 CONFIGURE_ARGS+=	--docdir=${SMB_DOC}
 CONFIGURE_ARGS+=	--with-statedir=${SMB_STATE}
@@ -87,8 +87,9 @@ CONFIGURE_ARGS+=	--with-privileged-socket-dir=${SMB_PRIVSOCKETS}
 CONFIGURE_ARGS+=	--with-configdir=${SMB_CONFIG}
 CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.iconv}
 #CONFIGURE_ARGS+=	--bundled-libraries=com_err
-CONFIGURE_ARGS+=	--enable-gnutls
 CONFIGURE_ARGS+=	--abi-check-disable
+CONFIGURE_ARGS+=	--disable-symbol-versions
+CONFIGURE_ARGS+=	--enable-gnutls
 #CONFIGURE_ARGS+=	--bundled-libraries=!crypto,ldb,ntdb,!talloc,tdb,tevent
 .if defined(MAKE_JOBS) && !empty(MAKE_JOBS) && !(defined(MAKE_JOBS_SAFE) && !empty(MAKE_JOBS_SAFE:M[nN][oO]))
 CONFIGURE_ARGS+=	--jobs=${MAKE_JOBS}
@@ -108,23 +109,16 @@ LDFLAGS+=		${BUILDLINK_LDADD.gettext}
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${SMB_PRIVATELIB}
 
 CFLAGS.SunOS+=		-DHAVE_SOLARIS_GETGRENT_R
-
 # workaround https://bugzilla.samba.org/show_bug.cgi?id=12502 for now
 CFLAGS.SunOS+=		-DMSG_NOSIGNAL=0
 
 .include "options.mk"
 
-PLIST_VARS+=		macosx
-
-.if ${OPSYS} == "Darwin"
-PLIST.macosx=		yes
-.endif
-
 .if ${SHLIB_TYPE} == "dylib"
-PLIST_SUBST+=	LIBEXT=dylib
+PLIST_SUBST+=	SOEXT=dylib
 SAMBA_LIBEXT=	dylib
 .else
-PLIST_SUBST+=	LIBEXT=so
+PLIST_SUBST+=	SOEXT=so
 SAMBA_LIBEXT=	so
 .endif
 
@@ -152,6 +146,19 @@ CONF_FILES=	${PREFIX}/${EGDIR}/smb.conf.default ${SMB_CONFIG}/smb.conf
 OWN_DIRS_PERMS=	${SMB_PRIVATE} ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
 RCD_SCRIPTS+=	samba nmbd smbd ${WINBINDD_RCD_SCRIPT}
 
+SUBST_CLASSES+=		docbook
+SUBST_MESSAGE.docbook=	Fixing docbook URLs.
+SUBST_FILES.docbook+=	buildtools/wafsamba/wafsamba.py
+SUBST_FILES.docbook+=	ctdb/doc/*.xml
+SUBST_FILES.docbook+=	docs-xml/xslt/*.xsl
+SUBST_FILES.docbook+=	lib/ldb/docs/builddocs.sh
+SUBST_FILES.docbook+=	librpc/tools/*.xml
+SUBST_FILES.docbook+=	*/*/man/*.xml
+SUBST_FILES.docbook+=	*/*/*/man/*.xml
+SUBST_STAGE.docbook=	pre-configure
+SUBST_SED.docbook=	-e 's,http://www.oasis-open.org/docbook/xml,${PREFIX}/share/xml/docbook,g'
+SUBST_SED.docbook+=	-e 's,http://docbook.sourceforge.net/release/xsl/current,${PREFIX}/share/xsl/docbook,g'
+
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing paths.
 SUBST_FILES.paths=	${WRKDIR}/adduser.sh ${WRKDIR}/deluser.sh
@@ -178,7 +185,7 @@ post-extract:
 	${CP} ${FILESDIR}/adduser.sh ${FILESDIR}/deluser.sh ${WRKDIR}
 
 post-install:
-	set -e ; cd ${WRKSRC}/docs-xml/registry; for f in *.reg; do \
+	${RUN} cd ${WRKSRC}/docs-xml/registry; for f in *.reg; do \
 		${INSTALL_DATA} $${f} ${DESTDIR}${PREFIX}/${DOCDIR}/$${f}; \
 	done
 	${INSTALL_SCRIPT} ${WRKDIR}/adduser.sh \
@@ -190,7 +197,15 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/examples/smb.conf.default \
 		${DESTDIR}${PREFIX}/${EGDIR}
 
+REPLACE_PERL+=		librpc/tables.pl
 REPLACE_PERL+=		pidl/pidl
+REPLACE_PERL+=		pidl/tests/*.pl
+REPLACE_PERL+=		script/*.pl
+REPLACE_PERL+=		script/findsmb.in
+REPLACE_PERL+=		source3/script/*.pl
+REPLACE_PERL+=		source4/build/pasn1/pasn1.pl
+REPLACE_PERL+=		source4/script/*.pl
+REPLACE_PERL+=		third_party/nss_wrapper/nss_wrapper.pl
 REPLACE_PYTHON+=	buildtools/bin/waf
 REPLACE_PYTHON+=	source4/setup/wscript_build
 REPLACE_PYTHON+=	source4/scripting/bin/*
@@ -201,18 +216,20 @@ PY_PATCHPLIST=	yes
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 
-.if ${OPSYS} == "Linux"
+.if "${OPSYS}" == "Linux"
 .include "../../devel/libuuid/buildlink3.mk"
 .endif
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/lmdb/buildlink3.mk"
+.include "../../devel/cmocka/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.talloc+=	talloc>=2.1.9
-.include "../../devel/talloc/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
+BUILDLINK_API_DEPENDS.talloc+=	talloc>=2.1.9
+.include "../../devel/talloc/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
+.include "../../security/libgcrypt/buildlink3.mk"
 .include "../../textproc/jansson/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
