@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2018/12/22 09:13:57 adam Exp $
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/_smbc.so
+${PYSITELIB}/smbc/__init__.py
+${PYSITELIB}/smbc/__init__.pyc
+${PYSITELIB}/smbc/__init__.pyo
+${PYSITELIB}/smbc/xattr.py
+${PYSITELIB}/smbc/xattr.pyc
+${PYSITELIB}/smbc/xattr.pyo
