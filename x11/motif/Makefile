@@ -1,28 +1,21 @@
-# $NetBSD: Makefile,v 1.13 2018/03/12 11:15:54 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2018/12/22 09:42:41 wiz Exp $
 
-PKGVER=		2.3.4
-PKGREVISION=	8
-DISTNAME=	motif-${PKGVER}-src
-PKGNAME=	motif-${PKGVER}
-CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=motif/}
-EXTRACT_SUFX=	.tgz
+DISTNAME=		motif-2.3.8
+CATEGORIES=		x11
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=motif/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://motif.ics.com/
 COMMENT=		LGPLed Motif toolkit for the X Window System
 LICENSE=		gnu-lgpl-v2.1
 
-WRKSRC=			${WRKDIR}/motif-${PKGVER}
-
 .include "../../mk/bsd.prefs.mk"
 
 CONFLICTS+=		lesstif-[0-9]* openmotif-[0-9]*
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		flex gmake tbl pkg-config automake yacc
+USE_TOOLS+=		flex gmake tbl pkg-config yacc
 GNU_CONFIGURE=		yes
-MAKE_JOBS_SAFE=		no # PR 37233
 
 CFLAGS.SunOS+=		-Dsun
 
@@ -34,13 +27,13 @@ SUBST_SED.man_rename=		-e 's: Core.3: XCore.3:g'
 SUBST_SED.man_rename+=		-e 's: Object.3: XObject.3:g'
 SUBST_SED.man_rename+=		-e 's: Shell.3: XShell.3:g'
 
-CONFIGURE_ARGS+= \
-		--enable-jpeg --enable-png \
-		--with-libjpeg-includes=${JPEGBASE}/include \
-		--with-libjpeg-lib=${JPEGBASE}/lib \
-		--with-libpng-includes=${BUILDLINK_PREFIX.png}/include \
-		--with-libpng-lib=${BUILDLINK_PREFIX.png}/lib \
-		--x-libraries=${X11BASE}/lib
+CONFIGURE_ARGS+= --enable-jpeg
+CONFIGURE_ARGS+= --enable-png
+CONFIGURE_ARGS+= --with-libjpeg-includes=${JPEGBASE}/include
+CONFIGURE_ARGS+= --with-libjpeg-lib=${JPEGBASE}/lib
+CONFIGURE_ARGS+= --with-libpng-includes=${BUILDLINK_PREFIX.png}/include
+CONFIGURE_ARGS+= --with-libpng-lib=${BUILDLINK_PREFIX.png}/lib
+CONFIGURE_ARGS+= --x-libraries=${X11BASE}/lib
 
 CONFIGURE_ARGS+= --disable-printing
 
@@ -73,7 +66,6 @@ post-patch:
 			$${manpage} > $${manpage}.fixed;		\
 		${MV} -f $${manpage}.fixed $${manpage};			\
 	done;								\
-	${CP} -f man4/mwmrc.4 man5/mwmrc.5
 	set -e; \
 	cd ${WRKSRC}/doc/man/man3;					\
 	for name in Core Object Shell; do                               \
@@ -87,9 +79,6 @@ post-patch:
 		done;							\
 	done
 	${ECHO} "#include <X11/Xos_r.h>" > ${WRKSRC}/lib/Xm/Xmos_r.h
-
-pre-configure:
-	set -e; cd ${WRKSRC} ; sh ./autogen.sh
 
 # Filter the manpages through tbl.
 post-build:
