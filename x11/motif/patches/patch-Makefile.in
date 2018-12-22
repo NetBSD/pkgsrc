@@ -1,0 +1,16 @@
+$NetBSD: patch-Makefile.in,v 1.1 2018/12/22 09:42:41 wiz Exp $
+
+Do not build demos.
+
+--- Makefile.in.orig	2017-12-05 12:49:57.000000000 +0000
++++ Makefile.in
+@@ -390,8 +390,7 @@ SUBDIRS = bindings bitmaps \
+              include \
+              tools \
+              clients \
+-             doc \
+-             demos
++             doc
+ 
+ AUTOMAKE_OPTIONS = 1.4
+ ACLOCAL_AMFLAGS = -I .
