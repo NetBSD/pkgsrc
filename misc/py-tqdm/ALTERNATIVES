@@ -1,1 +1,1 @@
-bin/tqdm bin/tqdm@PYVERSSUFFIX@
+bin/tqdm @PREFIX@/bin/tqdm@PYVERSSUFFIX@
