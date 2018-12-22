@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2018/12/17 14:54:45 taca Exp $
+# $NetBSD: Makefile,v 1.9 2018/12/22 17:16:29 taca Exp $
 
 DISTNAME=	term-ansicolor-1.7.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	taca@NetBSD.org
