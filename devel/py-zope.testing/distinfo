@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/08/20 12:57:02 adam Exp $
+$NetBSD: distinfo,v 1.2 2018/12/22 09:02:54 adam Exp $
 
-SHA1 (zope.testing-4.6.2.tar.gz) = 8559029a5dc7ff848b72858265272badaf56d37f
-RMD160 (zope.testing-4.6.2.tar.gz) = 6ad2d9c2fcfe19321793fd94e49584e7116d17cb
-SHA512 (zope.testing-4.6.2.tar.gz) = 816c87a38c847aad67857c364bb9999f4283484c933be2bcb54066dac4a6f8c6f94dfde61860397003e7f17b8669e7964a7fbe28e7ca7313f5d131f17c0b672d
-Size (zope.testing-4.6.2.tar.gz) = 62710 bytes
+SHA1 (zope.testing-4.7.tar.gz) = 473895ad589e8f6cfb9474fd4e9ddc252b15ecd5
+RMD160 (zope.testing-4.7.tar.gz) = fbce0597ad02b5e556c47369c7b32ae8ebf92ec6
+SHA512 (zope.testing-4.7.tar.gz) = cdf87f95196880a0f55c740f6340286bb29e96e9273d0c645bbb50def54a0645cce22d971adba3f15ff57b1021a72749219af83abc4e8fa775fb982d8164791d
+Size (zope.testing-4.7.tar.gz) = 63474 bytes
