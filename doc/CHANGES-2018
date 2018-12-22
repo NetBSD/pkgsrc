@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5326 2018/12/22 09:42:51 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.5327 2018/12/22 11:48:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7439,3 +7439,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/py-numexpr to 2.6.9 [adam 2018-12-22]
 	Updated security/py-service_identity to 18.1.0 [adam 2018-12-22]
 	Updated x11/motif to 2.3.8 [wiz 2018-12-22]
+	Updated www/contao35 to 3.5.38 [taca 2018-12-22]
