@@ -1,2 +1,2 @@
-bin/bundle bin/bundle@RUBY_SUFFIX@
-bin/bundler bin/bundler@RUBY_SUFFIX@
+bin/bundle @PREFIX@/bin/bundle@RUBY_SUFFIX@
+bin/bundler @PREFIX@/bin/bundler@RUBY_SUFFIX@

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2018/12/20 11:29:52 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2018/12/22 17:26:46 taca Exp $
 
 DISTNAME=	bundler-1.17.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
