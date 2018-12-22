@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.210 2018/12/16 02:05:23 nia Exp $
+# $NetBSD: Makefile,v 1.211 2018/12/22 18:17:39 nia Exp $
 #
 
 COMMENT=	Communication programs
@@ -83,6 +83,7 @@ SUBDIR+=	lurch-purple
 SUBDIR+=	matterircd
 SUBDIR+=	mcabber
 SUBDIR+=	meanwhile
+SUBDIR+=	mumble
 SUBDIR+=	ninja
 SUBDIR+=	p5-IRC-Utils
 SUBDIR+=	p5-Net-AIM

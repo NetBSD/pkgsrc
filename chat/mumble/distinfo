@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2018/12/22 18:17:39 nia Exp $
+
+SHA1 (mumble-1.2.19.tar.gz) = 8ea9dafad14e6c730da72ae9b4625778e499d94f
+RMD160 (mumble-1.2.19.tar.gz) = 9c24e5348c4ae5689d1fc0759c17d547a9b83eaf
+SHA512 (mumble-1.2.19.tar.gz) = f91111194a899149b500a94afcf7cc5b9691c7ce8669f07fca2c66adbb3916ddb863bf703d04fb8387133fb75f3c8edb52974d1acf3febfafa1f73da19946de4
+Size (mumble-1.2.19.tar.gz) = 3210865 bytes
+SHA1 (patch-main.pro) = af7e2dcdc803dc9c81ce1d8bff06fdbee30c9bfa
+SHA1 (patch-src_mumble_AudioOutput.cpp) = 63ad8a2545af3c83daca8a953cc96030397869e8
+SHA1 (patch-src_mumble_mumble.pro) = 478325bf97a716da84374e16943b6e99b7ad4d78
+SHA1 (patch-src_mumble_mumble__pch.hpp) = aeb4e255e92e2f8cd7314241c81efdf63006e235
