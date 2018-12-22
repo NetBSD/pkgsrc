@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5332 2018/12/22 17:19:59 taca Exp $
+$NetBSD: CHANGES-2018,v 1.5333 2018/12/22 17:21:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7445,3 +7445,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ruby-term-ansicolor to 1.7.0nb1 [taca 2018-12-22]
 	Updated devel/transifex-client to 0.13.5nb1 [taca 2018-12-22]
 	Updated fonts/py-fonttools to 3.34.2nb1 [taca 2018-12-22]
+	Updated graphics/ruby-screengif to 0.0.3nb2 [taca 2018-12-22]
