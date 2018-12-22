@@ -1,1 +1,1 @@
-bin/pry bin/pry@RUBY_SUFFIX@
+bin/pry @PREFIX@/bin/pry@RUBY_SUFFIX@
