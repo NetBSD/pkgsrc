@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5341 2018/12/22 22:48:53 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5342 2018/12/23 00:13:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7455,3 +7455,12 @@ Changes to the packages collection and infrastructure in 2018:
 	Added biology/stacks version 2.2 [bacon 2018-12-22]
 	Updated www/py-aiohttp to 3.5.0 [adam 2018-12-22]
 	Updated www/py-bottle to 0.12.16 [adam 2018-12-22]
+	Updated lang/llvm to 7.0.1 [adam 2018-12-23]
+	Updated lang/clang to 7.0.1 [adam 2018-12-23]
+	Updated lang/clang-static-analyzer to 7.0.1 [adam 2018-12-23]
+	Updated lang/compiler-rt to 7.0.1 [adam 2018-12-23]
+	Updated lang/libcxx to 7.0.1 [adam 2018-12-23]
+	Updated lang/libcxxabi to 7.0.1 [adam 2018-12-23]
+	Updated lang/libunwind to 7.0.1 [adam 2018-12-23]
+	Updated devel/lldb to 7.0.1 [adam 2018-12-23]
+	Updated devel/polly to 7.0.1 [adam 2018-12-23]
