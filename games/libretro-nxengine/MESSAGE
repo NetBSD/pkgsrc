@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2018/12/23 15:05:52 nia Exp $
+
+To start the NXEngine core, you need to obtain NXEngine's data files. You
+can do this by going to RetroArch's main menu screen and selecting
+'Online Updater'. From there, select 'Content Downloader', then 'NXEngine'.
+
+After downloading Cave Story, go back to RetroArch's main menu screen.
+Select 'Load Content', then 'Downloads', then 'Doukutsu.exe'.
+
+===========================================================================
