@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5345 2018/12/23 17:22:53 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.5346 2018/12/23 22:53:01 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7467,3 +7467,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added games/libretro-nxengine version 20181126 [nia 2018-12-23]
 	Updated emulators/ckmame to 1.0 [wiz 2018-12-23]
 	Added textproc/json-schema version 1.0 [wiz 2018-12-23]
+	Updated textproc/translate-shell to 0.9.6.9 [leot 2018-12-23]
