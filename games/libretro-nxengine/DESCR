@@ -1,0 +1,16 @@
+Libretro is a simple but powerful development interface that allows
+for the easy creation of emulators, games and multimedia applications
+that can plug straight into any libretro-compatible frontend. This
+development interface is open to others so that they can run these
+pluggable emulator and game cores also in their own programs or
+devices.
+
+NXEngine is a Cave Story game engine clone developed by Caitlin
+Shaw.
+
+Cave Story is a platform-adventure video game developed over five
+years by Daisuke "Pixel" Amaya. Cave Story features 2D platform
+mechanics and is reminiscent of the classic games the developer
+played in his youth, such as Metroid and Castlevania. It received
+wide critical acclaim for its compelling characters, setting, story
+and gameplay.

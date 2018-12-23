@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.421 2018/12/21 16:57:35 nia Exp $
+# $NetBSD: Makefile,v 1.422 2018/12/23 15:05:51 nia Exp $
 #
 
 COMMENT=	Games
@@ -227,6 +227,7 @@ SUBDIR+=	libkdegames
 SUBDIR+=	libkmahjongg
 SUBDIR+=	liblcf
 SUBDIR+=	libretro-craft
+SUBDIR+=	libretro-nxengine
 SUBDIR+=	lincity
 SUBDIR+=	lincity-ng
 SUBDIR+=	liquidwar

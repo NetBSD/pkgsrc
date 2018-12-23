@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18715 2018/12/21 09:33:23 wiz Exp $
+$NetBSD: TODO,v 1.18716 2018/12/23 15:05:51 nia Exp $
 
 Suggested new packages
 ======================
@@ -325,11 +325,11 @@ Suggested new packages
 	Video game system emulators: libretro-citra, libretro-beetle-pcfx,
 	libretro-beetle-lynx (or Handy, too buggy?), libretro-kronos,
 	some version of MAME
-	Standalone games: libretro-nxengine (Cave Story), libretro-2048,
-	libretro-dinothawr, libretro-mrboom, libretro-thepowdertoy,
-	libretro-openlara, libretro-gw, libretro-tyrquake (wip),
-	libretro-prboom (wip), libretro-easyrpg, libretro-scummvm,
-	libretro-stonesoup, libretro-cannonball, libretro-reminiscence
+	Standalone games: libretro-2048, libretro-dinothawr, libretro-mrboom,
+	libretro-thepowdertoy, libretro-openlara, libretro-gw,
+	libretro-tyrquake (wip), libretro-prboom (wip), libretro-easyrpg,
+	libretro-scummvm, libretro-stonesoup, libretro-cannonball,
+	libretro-reminiscence
 
 Suggested package updates
 =========================
