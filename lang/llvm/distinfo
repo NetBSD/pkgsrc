@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.18 2018/12/15 23:41:45 jperkin Exp $
+$NetBSD: distinfo,v 1.19 2018/12/23 00:11:39 adam Exp $
 
-SHA1 (llvm-7.0.0.src.tar.xz) = 27503a22614626e935a05b609ab4211be72cd78b
-RMD160 (llvm-7.0.0.src.tar.xz) = af7af75c7fb15a004f887f81d71eae58c24c11e6
-SHA512 (llvm-7.0.0.src.tar.xz) = bdc9b851c158b17e1bbeb7ac5ae49821bfb1251a3826fe8a3932cd1a43f9fb0d620c3de67150c1d9297bf0b86fa917e75978da29c3f751b277866dc90395abec
-Size (llvm-7.0.0.src.tar.xz) = 28324368 bytes
+SHA1 (llvm-7.0.1.src.tar.xz) = f97632fcc3186eb0d396492ef8acfc807648580f
+RMD160 (llvm-7.0.1.src.tar.xz) = dae96c6f85afb60e73564dc40d02171d01ffdb8f
+SHA512 (llvm-7.0.1.src.tar.xz) = ac43a3cb71a53deb55e3693653847cf20bf6f5d9056f224e6956c96d63bc59ebee9404f088eec9cabe65337b4607a905ef931354b373cf64e0004c6905a6b5df
+Size (llvm-7.0.1.src.tar.xz) = 28311056 bytes
 SHA1 (patch-CMakeLists.txt) = 78e2dab2bf73f7e466ca2788fe6444e39b4ebd80
 SHA1 (patch-cmake_config-ix.cmake) = a345420169e4066e22d28ca6ad10840e83ccfa76
 SHA1 (patch-cmake_modules_AddLLVM.cmake) = 31d4f47f03bef021a24d53147c1b66abd64e1d87
