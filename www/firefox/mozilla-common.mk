@@ -1,9 +1,11 @@
-# $NetBSD: mozilla-common.mk,v 1.121 2018/12/12 14:08:50 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.122 2018/12/23 01:11:26 gutteridge Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
 # used by www/firefox/Makefile
 # used by www/seamonkey/Makefile
+
+.include "../../mk/bsd.prefs.mk"
 
 # Python 2.7 and Python 3.5 or later are required simultaneously.
 PYTHON_VERSIONS_ACCEPTED=	27
@@ -22,8 +24,6 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 USE_TOOLS+=		pkg-config perl gmake autoconf213 unzip zip
 USE_LANGUAGES+=		c99 gnu++14
 UNLIMIT_RESOURCES+=	datasize
-
-.include "../../mk/bsd.prefs.mk"
 
 TOOL_DEPENDS+=		cbindgen-[0-9]*:../../devel/cbindgen
 .if ${MACHINE_ARCH} == "sparc64"
