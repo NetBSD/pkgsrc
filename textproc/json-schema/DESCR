@@ -1,0 +1,2 @@
+json-schema is a C++ library for validating JSON documents against
+JSON Schemata based on jsoncpp.
