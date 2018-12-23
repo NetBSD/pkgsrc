@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2018/12/05 10:46:15 bsiegert Exp $
+# $NetBSD: Makefile,v 1.33 2018/12/23 14:27:15 nia Exp $
 
 DISTNAME=	SDL2-2.0.9
 PKGREVISION=	1
@@ -24,12 +24,6 @@ CHECK_PORTABILITY_SKIP+=build-scripts/iosbuild.sh
 .if ${OPSYS} != "Linux"
 BUILDLINK_TRANSFORM+=	rm:-ldl
 .endif
-
-SUBST_CLASSES+=		vc
-SUBST_STAGE.vc=		pre-configure
-SUBST_MESSAGE.vc=	Fixing path to VideoCore libraries.
-SUBST_FILES.vc=		configure
-SUBST_SED.vc+=		-e 's;/opt/vc;${PREFIX};g'
 
 CFLAGS+=	-DPREFIX=\"${PREFIX}\"
 
