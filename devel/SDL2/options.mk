@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2018/11/01 21:08:28 adam Exp $
+# $NetBSD: options.mk,v 1.8 2018/12/23 14:27:15 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.SDL2
 PKG_OPTIONS_REQUIRED_GROUPS=	gl
@@ -13,7 +13,7 @@ PKG_SUGGESTED_OPTIONS+=	x11
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if !empty(MACHINE_ARCH:M*arm*)
-PKG_OPTIONS_GROUP.gl+=	rpi
+PKG_OPTIONS_GROUP.gl+= rpi
 PKG_SUGGESTED_OPTIONS+=	rpi
 .else
 PKG_SUGGESTED_OPTIONS+=	opengl
@@ -23,10 +23,14 @@ PKG_SUGGESTED_OPTIONS+=	opengl
 
 .if !empty(PKG_OPTIONS:Malsa)
 .include "../../audio/alsa-lib/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-alsa
 .endif
 
 .if !empty(PKG_OPTIONS:Mdbus)
 .include "../../sysutils/dbus/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-dbus
 .endif
 
 .if !empty(PKG_OPTIONS:Mesound)
@@ -35,6 +39,8 @@ PKG_SUGGESTED_OPTIONS+=	opengl
 
 .if !empty(PKG_OPTIONS:Mnas)
 .include "../../audio/nas/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-nas
 .endif
 
 .if !empty(PKG_OPTIONS:Mopengl)
@@ -53,6 +59,8 @@ CONFIGURE_ARGS+=	--disable-oss
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
 .include "../../audio/pulseaudio/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-pulseaudio
 .endif
 
 .if !empty(PKG_OPTIONS:Mx11)
@@ -67,6 +75,17 @@ CONFIGURE_ARGS+=	--disable-x11-shared
 .endif
 
 .if !empty(PKG_OPTIONS:Mrpi)
-LOWER_VENDOR=	raspberry
+LOWER_VENDOR=		raspberry
+# fails to produce shared libraries
+# try standard GLES instead
+CONFIGURE_ARGS+=	--disable-video-rpi
+CONFIGURE_ARGS+=	--enable-video-opengles
+CONFIGURE_ARGS+=	--enable-video-opengles1
+CONFIGURE_ARGS+=	--enable-video-opengles2
+SUBST_CLASSES+=		gles
+SUBST_STAGE.gles=	pre-configure
+SUBST_MESSAGE.gles=	Fixing name of GLES library.
+SUBST_FILES.gles=	src/video/SDL_egl.c
+SUBST_SED.gles+=	-e 's/libGLESv2.so.2/libGLESv2.so/g'
 .include "../../misc/raspberrypi-userland/buildlink3.mk"
 .endif
