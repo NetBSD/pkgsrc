@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2018/12/17 16:19:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2018/12/23 00:11:39 adam Exp $
 
-DISTNAME=	compiler-rt-7.0.0.src
+DISTNAME=	compiler-rt-7.0.1.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
@@ -49,6 +49,11 @@ PYTHON_FOR_BUILD_ONLY=	yes
 
 post-extract:
 	${MKDIR} ${WRKDIR}/build
+
+post-install:
+	cd ${DESTDIR}${PREFIX} && \
+	${FIND} lib/clang/${PKGVERSION_NOREV} -type f -name '*.dylib' \
+		-exec install_name_tool -id ${PREFIX}/{} {} \;
 
 .include "../../devel/googletest/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"
