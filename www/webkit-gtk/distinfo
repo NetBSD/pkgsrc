@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.112 2018/12/13 22:50:27 leot Exp $
+$NetBSD: distinfo,v 1.113 2018/12/23 22:18:14 roy Exp $
 
 SHA1 (webkitgtk-2.22.5.tar.xz) = 809b067a1672a81a4ce31363a0872c668cc72953
 RMD160 (webkitgtk-2.22.5.tar.xz) = 6f251088424cfb2fc082a5625ba9f71fbc686759
 SHA512 (webkitgtk-2.22.5.tar.xz) = fcea9fab3d71869cc10e322b1b63864a9594624f6aa3e29efd8b47e5ca639145f8c2cdb299ecb51eadf3ac1238dac06b4b7ebe94969b2f61a21cea8b609007bc
 Size (webkitgtk-2.22.5.tar.xz) = 16774560 bytes
-SHA1 (patch-CMakeLists.txt) = 2f05f3682bda601c99544dafd8e79bd622dfc5a5
-SHA1 (patch-Source_JavaScriptCore_assembler_ARM64Assembler.h) = 7479e5933df6f8d1670e362ae68c253362eda9e9
+SHA1 (patch-CMakeLists.txt) = e43197a293419af02da21329c9897ae2994ab5a3
+SHA1 (patch-Source_JavaScriptCore_assembler_ARM64Assembler.h) = a41e02c7a1f9bfb91a2af36ec0410e1bf2b9a745
 SHA1 (patch-Source_JavaScriptCore_assembler_ARMAssembler.h) = bae08310572c2e23c69cbf6aa9760a67345dcfe3
 SHA1 (patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp) = ab75ef8714e5071fcd094735717a2f5d0321c747
 SHA1 (patch-Source_JavaScriptCore_heap_MarkedSpace.cpp) = e6a23d5ef22bddd0a9606fb0e472960e4cf5673e
