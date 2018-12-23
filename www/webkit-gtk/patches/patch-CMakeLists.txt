@@ -1,19 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.6 2018/12/23 22:18:14 roy Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.7 2018/12/23 22:22:47 roy Exp $
 
 - Fix support for arm
 - Fix support for ppc, from FreeBSD.
 
 --- CMakeLists.txt.orig	2018-12-13 01:57:34.000000000 +0000
 +++ CMakeLists.txt
-@@ -19,7 +19,7 @@ else ()
-     message(STATUS "The CMake build type is: ${CMAKE_BUILD_TYPE}")
- endif ()
- 
--set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/Source/cmake")
-+set (CMAKE_MODULE_PATH "/usr/obj.pkgsrc/www/webkit-gtk/work/.buildlink/cmake-Modules" "${CMAKE_SOURCE_DIR}/Source/cmake")
- 
- set(ENABLE_WEBCORE ON)
- 
 @@ -85,6 +85,8 @@ else ()
  endif ()
  if (LOWERCASE_CMAKE_SYSTEM_PROCESSOR MATCHES "^arm")
