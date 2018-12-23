@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5344 2018/12/23 15:36:57 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.5345 2018/12/23 17:22:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7466,3 +7466,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/polly to 7.0.1 [adam 2018-12-23]
 	Added games/libretro-nxengine version 20181126 [nia 2018-12-23]
 	Updated emulators/ckmame to 1.0 [wiz 2018-12-23]
+	Added textproc/json-schema version 1.0 [wiz 2018-12-23]
