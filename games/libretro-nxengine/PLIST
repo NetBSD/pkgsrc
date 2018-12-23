@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2018/12/23 15:05:52 nia Exp $
+lib/libretro/nxengine_libretro.so
