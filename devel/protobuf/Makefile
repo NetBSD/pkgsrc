@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/08/04 21:19:39 minskim Exp $
+# $NetBSD: Makefile,v 1.17 2018/12/23 23:51:26 tsutsui Exp $
 
 .include "Makefile.common"
 
@@ -19,6 +19,11 @@ PKGCONFIG_OVERRIDE+=	protobuf-lite.pc.in
 PKGCONFIG_OVERRIDE+=	protobuf.pc.in
 
 TEST_TARGET=	check
+
+.if ${MACHINE_ARCH} == "i386"
+# 64 bit atomic ops are required
+CXXFLAGS+=	-march=i586
+.endif
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && ./autogen.sh
