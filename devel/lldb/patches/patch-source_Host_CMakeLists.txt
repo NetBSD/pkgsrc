@@ -1,0 +1,23 @@
+$NetBSD: patch-source_Host_CMakeLists.txt,v 1.1 2018/12/23 00:14:08 adam Exp $
+
+On Darwin, also use libxml2 provided by PkgSrc.
+
+--- source/Host/CMakeLists.txt.orig	2018-12-22 21:03:37.000000000 +0000
++++ source/Host/CMakeLists.txt
+@@ -145,13 +145,9 @@ set(EXTRA_LIBS)
+ if (CMAKE_SYSTEM_NAME MATCHES "NetBSD")
+   list(APPEND EXTRA_LIBS kvm)
+ endif ()
+-if (APPLE)
+-  list(APPEND EXTRA_LIBS xml2)
+-else ()
+-  if (LIBXML2_FOUND)
+-    list(APPEND EXTRA_LIBS ${LIBXML2_LIBRARIES})
+-  endif()
+-endif ()
++if (LIBXML2_FOUND)
++  list(APPEND EXTRA_LIBS ${LIBXML2_LIBRARIES})
++endif()
+ if (HAVE_LIBDL)
+   list(APPEND EXTRA_LIBS ${CMAKE_DL_LIBS})
+ endif()
