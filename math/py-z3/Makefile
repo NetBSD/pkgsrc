@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2018/03/13 00:36:05 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2018/12/23 12:27:34 wiz Exp $
 
 .include "../../math/z3/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+GITHUB_PROJECT=	z3
 
 COMMENT=	Python bindings for the Z3 theorem prover / SMT solver
 
