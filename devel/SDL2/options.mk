@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2018/12/24 16:24:35 nia Exp $
+# $NetBSD: options.mk,v 1.10 2018/12/24 16:25:30 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.SDL2
 PKG_OPTIONS_REQUIRED_GROUPS=	gl
@@ -35,6 +35,8 @@ CONFIGURE_ARGS+=	--disable-dbus
 
 .if !empty(PKG_OPTIONS:Mesound)
 .include "../../audio/esound/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-esd
 .endif
 
 .if !empty(PKG_OPTIONS:Mnas)
