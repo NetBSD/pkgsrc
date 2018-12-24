@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/11/01 16:45:27 skrll Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/12/24 02:06:59 tsutsui Exp $
 bin/containers_check_frame_int
 bin/containers_datagram_receiver
 bin/containers_datagram_sender
@@ -243,7 +243,7 @@ lib/libmmal_vc_client.so
 lib/libopenmaxil.so
 lib/libvcfiled_check.a
 lib/libvchiq_arm.so
-lib/libvchostif.a
+lib/libvchostif.so
 lib/libvcilcs.a
 lib/libvcos.so
 lib/libvcsm.so
