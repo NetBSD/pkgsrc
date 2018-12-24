@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.2 2018/10/16 15:21:20 jperkin Exp $
+$NetBSD: patch-configure,v 1.3 2018/12/24 16:34:00 sevan Exp $
 
 Don't check for pthread stubs on netbsd.
 
@@ -55,7 +55,7 @@ without DRI3 support.
  
  case "$host_os" in
 -linux* | cygwin* | darwin* | solaris* | *-gnu* | gnu* | openbsd*)
-+linux* | cygwin* | darwin* | solaris* | *-gnu* | gnu* | openbsd* | netbsd*)
++*)
      pthread_stubs_possible="no"
      ;;
  * )
