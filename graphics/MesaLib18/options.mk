@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2018/10/07 23:49:31 ryoon Exp $
+# $NetBSD: options.mk,v 1.2 2018/12/24 02:30:45 sevan Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -197,8 +197,8 @@ GALLIUM_DRIVERS+=	r600
 # FULL_OS_VERSION_CMD=	${UNAME} -r
 # FULL_OS_VERSION=	${FULL_OS_VERSION_CMD:sh}
 
-# FreeBSD base llvm 3.9+ has problems building nouveau support
-.if ${OPSYS} != "FreeBSD" || (empty(OS_VERSION:M11.*) && empty(OS_VERSION:M12.*))
+# FreeBSD lacks nouveau support (there are official binaries from Nvidia)
+.if ${OPSYS} != "FreeBSD"
 # nVidia
 PLIST.nouveau=		yes
 GALLIUM_DRIVERS+=	nouveau
@@ -212,8 +212,8 @@ DRI_DRIVERS+=		radeon
 PLIST.r200_dri=		yes
 DRI_DRIVERS+=		r200
 
-# FreeBSD base llvm 3.9+ has problems building nouveau support
-.if ${OPSYS} != "FreeBSD" || (empty(OS_VERSION:M11.*) && empty(OS_VERSION:M12.*))
+# FreeBSD lacks nouveau support (there are official binaries from Nvidia)
+.if ${OPSYS} != "FreeBSD"
 # classic DRI nouveau
 PLIST.nouveau_dri=	yes
 DRI_DRIVERS+=		nouveau
