@@ -1,0 +1,16 @@
+$NetBSD: patch-interface_vmcs__host_CMakeLists.txt,v 1.1 2018/12/24 02:06:59 tsutsui Exp $
+
+- build libvchostif as shared lib to avoid undefined references
+  on linking libEGL.so
+
+--- interface/vmcs_host/CMakeLists.txt.orig	2017-01-07 08:24:37.000000000 +0000
++++ interface/vmcs_host/CMakeLists.txt
+@@ -9,7 +9,7 @@ add_definitions(-fno-strict-aliasing)
+ 
+ include_directories(${VMCS_TARGET}/vcfiled)
+ 
+-add_library(vchostif
++add_library(vchostif SHARED
+             ${VMCS_TARGET}/vcfilesys.c ${VMCS_TARGET}/vcmisc.c
+             vc_vchi_gencmd.c vc_vchi_filesys.c
+             vc_vchi_tvservice.c vc_vchi_cecservice.c
