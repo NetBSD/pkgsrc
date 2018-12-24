@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2018/09/03 11:22:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.38 2018/12/24 13:56:44 sevan Exp $
 ${PLIST.dri}include/EGL/egl.h
 ${PLIST.dri}include/EGL/eglext.h
 ${PLIST.dri}include/EGL/eglextchromium.h
@@ -63,10 +63,10 @@ ${PLIST.dri}lib/pkgconfig/glesv1_cm.pc
 ${PLIST.dri}lib/pkgconfig/glesv2.pc
 ${PLIST.wayland}lib/pkgconfig/wayland-egl.pc
 ${PLIST.xatracker}lib/pkgconfig/xatracker.pc
-${PLIST.vdpau}lib/vdpau/libvdpau_nouveau.so
-${PLIST.vdpau}lib/vdpau/libvdpau_nouveau.so.1
-${PLIST.vdpau}lib/vdpau/libvdpau_nouveau.so.1.0
-${PLIST.vdpau}lib/vdpau/libvdpau_nouveau.so.1.0.0
+${PLIST.nouveau}${PLIST.vdpau}lib/vdpau/libvdpau_nouveau.so
+${PLIST.nouveau}${PLIST.vdpau}lib/vdpau/libvdpau_nouveau.so.1
+${PLIST.nouveau}${PLIST.vdpau}lib/vdpau/libvdpau_nouveau.so.1.0
+${PLIST.nouveau}${PLIST.vdpau}lib/vdpau/libvdpau_nouveau.so.1.0.0
 ${PLIST.vdpau}lib/vdpau/libvdpau_r300.so
 ${PLIST.vdpau}lib/vdpau/libvdpau_r300.so.1
 ${PLIST.vdpau}lib/vdpau/libvdpau_r300.so.1.0
