@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2018/12/24 01:53:51 tsutsui Exp $
+# $NetBSD: Makefile,v 1.14 2018/12/24 01:57:01 tsutsui Exp $
 #
 
 DISTNAME=	userland-20170109
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	raspberrypi-${DISTNAME}
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jaredmcneill/}
