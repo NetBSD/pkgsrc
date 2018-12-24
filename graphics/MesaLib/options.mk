@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.62 2018/06/20 12:28:42 maya Exp $
+# $NetBSD: options.mk,v 1.63 2018/12/24 13:56:44 sevan Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -124,9 +124,12 @@ PLIST.vc4=		yes
 PLIST.r600=		yes
 GALLIUM_DRIVERS+=	r600
 
+# FreeBSD lacks nouveau support (there are official binaries from Nvidia)
+.if ${OPSYS} != "FreeBSD"
 # nVidia
 PLIST.nouveau=		yes
 GALLIUM_DRIVERS+=	nouveau
+.endif
 
 # classic DRI radeon
 PLIST.radeon_dri=	yes
@@ -136,9 +139,13 @@ DRI_DRIVERS+=		radeon
 PLIST.r200_dri=		yes
 DRI_DRIVERS+=		r200
 
+# FreeBSD lacks nouveau support (there are official binaries from Nvidia)
+.if ${OPSYS} != "FreeBSD"
 # classic DRI nouveau
 PLIST.nouveau_dri=	yes
 DRI_DRIVERS+=		nouveau
+.endif
+
 .endif
 
 .if ${OPSYS} == "Darwin"
