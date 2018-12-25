@@ -1,10 +1,11 @@
-$NetBSD: patch-libsync.h,v 1.1 2018/10/16 15:18:08 jperkin Exp $
+$NetBSD: patch-libsync.h,v 1.2 2018/12/25 01:13:57 sevan Exp $
 
 Fix public header on SunOS.
+If ETIME is not defined, use ETIMEDOUT.
 
---- libsync.h.orig	2018-10-04 14:50:03.000000000 +0000
+--- libsync.h.orig	2018-10-16 14:49:03.000000000 +0000
 +++ libsync.h
-@@ -33,6 +33,9 @@
+@@ -33,8 +33,15 @@
  #include <stdint.h>
  #include <string.h>
  #include <sys/ioctl.h>
@@ -13,4 +14,10 @@ Fix public header on SunOS.
 +#endif
  #include <sys/poll.h>
  #include <unistd.h>
++
++#ifndef ETIME
++#define ETIME ETIMEDOUT
++#endif
  
+ #if defined(__cplusplus)
+ extern "C" {
