@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5349 2018/12/26 00:44:53 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.5350 2018/12/26 23:39:23 he Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7471,3 +7471,4 @@ Changes to the packages collection and infrastructure in 2018:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2018Q4 branch [wiz 2018-12-23]
 	Updated pkgtools/rc.subr to 20181226 [schmonz 2018-12-26]
 	Updated pkgtools/rc.d-boot to 20181226 [schmonz 2018-12-26]
+	Updated sysutils/zabbix to 4.0.3 [he 2018-12-26]
