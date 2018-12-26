@@ -1,11 +1,12 @@
-$NetBSD: distinfo,v 1.54 2018/08/12 08:33:55 maya Exp $
+$NetBSD: distinfo,v 1.55 2018/12/26 10:45:46 adam Exp $
 
 SHA1 (octave-4.4.1.tar.gz) = 693fe46fdf49c62dec9f81100050ba2d2c1e4067
 RMD160 (octave-4.4.1.tar.gz) = 45d1efbd217308ff9a7b3354ccc004f37785a270
 SHA512 (octave-4.4.1.tar.gz) = 21a1f13e2145fa530f2169254d19442b572745d65b91453ba1f552f6eda6aecfead57dbe0260b3293a29db0aa0f27cfd4f26df332e6d640848a822b20c1232f8
 Size (octave-4.4.1.tar.gz) = 28626462 bytes
-SHA1 (patch-configure) = 4226f9c717ff13bff8508f14c229704388193057
+SHA1 (patch-configure) = f10abb7c15d7181da775fd8ccc824ef616cc2a32
 SHA1 (patch-configure.ac) = df35493bc99f8b133865d96f079f603a33ef5cc4
+SHA1 (patch-doc_interpreter_module.mk) = 66389cceddbe71fca0c8197275a839170d64ad5b
 SHA1 (patch-fseeko-fpos_t.c) = b38e7a38be2e0b323cd7f168f1d22d3df998691c
 SHA1 (patch-libgnu_stdio.in.h) = 112a424655d46c75fb68531fe7a84d9a0e97a984
 SHA1 (patch-libgui_src_settings-dialog.h) = 5bf82e5d313e06ec470a1da1a615c39f74bb880f
@@ -13,7 +14,7 @@ SHA1 (patch-libinterp_dldfcn_config-module.awk) = 4a6c7ee86a626a43b1c0c3514a5909
 SHA1 (patch-libinterp_dldfcn_module.mk) = 1ec48eb2115da9095a8d8fe9497b25c2bc41bd91
 SHA1 (patch-libinterp_module.mk) = 26889c064497eb2bcbd77199e96925f61359c128
 SHA1 (patch-liboctave_operators_mx-inlines.cc) = 67e9c8e9a3afe0339343087d68967ac6d9159bd5
-SHA1 (patch-m4_acinclude.m4) = 194b8c3cf6f5e45a0251b229af9b3a47c12aa608
+SHA1 (patch-m4_acinclude.m4) = 16dfa3a47403b0c6bc5935fdb5f1162a393b3f25
 SHA1 (patch-scripts_miscellaneous_unpack.m) = 82c9ca170762e223c8e5a6f88a7dd9fe2a2a33d0
 SHA1 (patch-scripts_pkg_private_configure__make.m) = 7d4b620f889faa66c4c9c581ef8a7e7692b68c94
 SHA1 (patch-scripts_plot_util_____gnuplot__drawnow____.m) = 449b178aefd78c5c1b03ffd960f2e8be3874efc2
