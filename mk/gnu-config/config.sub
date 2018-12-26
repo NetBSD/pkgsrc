@@ -1029,6 +1029,9 @@ case $cpu-$vendor in
 	mips3*-*)
 		cpu=mips64
 		;;
+	mips64*-*)
+		cpu=mips64
+		;;
 	ms1-*)
 		cpu=mt
 		;;
