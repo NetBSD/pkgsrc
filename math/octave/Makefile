@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.183 2018/12/13 19:52:09 adam Exp $
+# $NetBSD: Makefile,v 1.184 2018/12/26 10:45:46 adam Exp $
 
 DISTNAME=	octave-4.4.1
 PKGREVISION=	6
@@ -16,7 +16,7 @@ LICENSE=	gnu-gpl-v3
 #BUILD_DEPENDS+=	tex-epsf-[0-9]*:../../print/tex-epsf
 #BUILD_DEPENDS+=	tex-tex-[0-9]*:../../print/tex-tex
 #BUILD_DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
-#TOOL_DEPENDS+=	gtexinfo>=5.1:../../devel/gtexinfo
+#TOOL_DEPENDS+=		gtexinfo>=5.1:../../devel/gtexinfo
 
 DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 
@@ -65,11 +65,7 @@ PRINT_PLIST_AWK+=	{ gsub(/${MACHINE_GNU_PLATFORM}/, "$${MACHINE_GNU_PLATFORM}");
 CHECK_WRKREF_SKIP+=	lib/octave/${PKGVERSION_NOREV}/liboctinterp*.${SHLIB_TYPE}* \
 			lib/octave/${PKGVERSION_NOREV}/liboctinterp.a
 
-
 TEST_TARGET=	check
-
-#pre-configure:
-#	cd ${WRKSRC} && autoconf
 
 SUBST_CLASSES+=			fix-make
 SUBST_STAGE.fix-make=		pre-configure
@@ -88,17 +84,11 @@ SUBST_SED.qt5-pkg-config+=	-e 's,QtOpenGL,Qt5OpenGL,g'
 
 # Matches reduce-relocations logic in x11/qt5-qtbase
 .if ${OPSYS} != "Darwin" && ${OPSYS} != "SunOS" && \
-      (!empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Mx86_64))
+	${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == x86_64
 CFLAGS+=	-fPIC
 .endif
 
 PREPEND_PATH+=			${QTDIR}/bin
-
-MAKE_ENV+=			V=1
-
-#post-extract:
-#	find ${WRKSRC}/doc -type f -name '*.info*' -print | xargs rm -f
-#	mkdir ${WRKSRC}/src/pic
 
 post-install:
 .for f in ${OCTAVE_DOC}
