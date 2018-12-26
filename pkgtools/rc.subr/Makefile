@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2017/10/24 14:07:59 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2018/12/26 00:29:07 schmonz Exp $
 #
 
-PKGNAME=		rc.subr-20171024
+PKGNAME=		rc.subr-20181226
 CATEGORIES=		pkgtools
 
 MAINTAINER=		sbd@NetBSD.org
@@ -10,8 +10,7 @@ COMMENT=		Portable NetBSD rc.subr implementation for pkgsrc
 LICENSE=		original-bsd
 
 ONLY_FOR_PLATFORM=	Darwin-*-* FreeBSD-[0-4].*-* Interix-*-* IRIX*-*-*
-ONLY_FOR_PLATFORM+=	Linux-*-* SunOS-*-*
-ONLY_FOR_PLATFORM+=	QNX-*-*
+ONLY_FOR_PLATFORM+=	Linux-*-* OpenBSD-*-* QNX-*-* SunOS-*-*
 
 NO_BUILD=		yes
 NO_CONFIGURE=		yes
