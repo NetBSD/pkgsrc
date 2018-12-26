@@ -1,4 +1,4 @@
-# $NetBSD: rc.subr,v 1.14 2018/08/22 20:48:38 maya Exp $
+# $NetBSD: rc.subr,v 1.15 2018/12/26 00:29:07 schmonz Exp $
 #
 # Copyright (c) 1997-2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -857,6 +857,9 @@ load_rc_config()
 	else
 		. /etc/rc.conf
 		_rc_conf_loaded=true
+	fi
+	if [ "$_osname" = "OpenBSD" ] && [ -f /etc/rc.conf.local ]; then
+		. /etc/rc.conf.local
 	fi
 	if [ -f /etc/rc.conf.d/"$_command" ]; then
 		. /etc/rc.conf.d/"$_command"
