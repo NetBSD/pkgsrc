@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2018/10/18 07:51:40 maya Exp $
+# $NetBSD: Makefile,v 1.47 2018/12/26 11:11:23 adam Exp $
 
 DISTNAME=	vsftpd-3.0.3
 PKGREVISION=	1
@@ -44,7 +44,7 @@ SUBST_STAGE.dirfd=	pre-build
 SUBST_FILES.dirfd=	port/solaris_bogons.h
 SUBST_SED.dirfd=	-e '/dirfd_extras/d'
 .endif
-.if ${OPSYS} == "FreeBSD"
+.if !empty(PKGSRC_COMPILER:Mclang)
 SUBST_CLASSES+=		idirafter
 SUBST_MESSAGE.idirafter=Fix buggy -idirafter for clang
 SUBST_STAGE.idirafter=	pre-build
