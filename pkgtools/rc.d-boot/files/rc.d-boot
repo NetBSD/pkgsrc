@@ -1,17 +1,34 @@
 #!/bin/sh
 
+. /etc/rc.subr
+
 run_all_rcd_scripts() {
 	action="$1"; shift
 
-	# from NetBSD /etc/rc
-	scripts=$(for rcd in @RCD_SCRIPTS_DIR@; do
+	# mostly from NetBSD /etc/rc
+	contents=$(for rcd in @RCD_SCRIPTS_DIR@; do
 		test -d ${rcd} && echo ${rcd}/*;
 	done)
 
-	files=$(@RCORDER@ -s nostart ${scripts})
+	scripts=$(for rcd in ${contents}; do
+		test -f ${rcd} && echo ${rcd};
+	done)
+
+	rcd_scripts=$(for s in ${scripts}; do
+		@GREP@ -q '^# PROVIDE: ' ${s} && echo ${s};
+	done)
+
+	files=$(@RCORDER@ -s nostart ${rcd_scripts})
+	if [ "${action}" = stop ]; then
+		files=$(reverse_list ${files})
+	fi
 
 	for _rc_elem in $files; do
-		$_rc_elem ${action}
+		if [ "${action}" = list ]; then
+			echo $_rc_elem
+		else
+			$_rc_elem ${action}
+		fi
 	done
 }
 
