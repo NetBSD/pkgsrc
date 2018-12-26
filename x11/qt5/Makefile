@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2018/12/18 09:57:17 adam Exp $
+# $NetBSD: Makefile,v 1.15 2018/12/26 11:48:27 ryoon Exp $
 
 DISTNAME=	qt5-${QTVERSION}
-CATEGORIES=	x11
-MASTER_SITES=	# none
 
 COMMENT=	"meta-package" for version 5 of the QT GUI C++ toolkit
 
