@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.7 2018/08/12 08:33:55 maya Exp $
+$NetBSD: patch-configure,v 1.8 2018/12/26 10:45:46 adam Exp $
 
 Regen.
 
@@ -17,7 +17,18 @@ Additional changes are due to autoconf changes.
 
 --- configure.orig	2018-08-09 18:20:32.000000000 +0000
 +++ configure
-@@ -1733,6 +1733,7 @@ INCLUDE_NEXT_AS_FIRST_DIRECTIVE
+@@ -761,10 +761,6 @@ ac_ct_QHELPGENERATOR
+ QHELPGENERATOR
+ ac_ct_QHELPGENERATOR_QTVER
+ QHELPGENERATOR_QTVER
+-ac_ct_QCOLLECTIONGENERATOR
+-QCOLLECTIONGENERATOR
+-ac_ct_QCOLLECTIONGENERATOR_QTVER
+-QCOLLECTIONGENERATOR_QTVER
+ ac_ct_LRELEASE
+ LRELEASE
+ ac_ct_LRELEASE_QTVER
+@@ -1733,6 +1729,7 @@ INCLUDE_NEXT_AS_FIRST_DIRECTIVE
  INCLUDE_NEXT
  LIB_CRYPTO
  pkglibexecdir
@@ -25,7 +36,7 @@ Additional changes are due to autoconf changes.
  lispdir
  REPLACE_FDOPENDIR
  REPLACE_DIRFD
-@@ -2092,6 +2093,7 @@ PYTHON
+@@ -2092,6 +2089,7 @@ PYTHON
  DEFAULT_PAGER
  GNUPLOT
  GHOSTSCRIPT
@@ -33,7 +44,7 @@ Additional changes are due to autoconf changes.
  LN_S
  REPRODUCIBLE_TAR_FLAGS
  TEXI2PDF
-@@ -2221,7 +2223,6 @@ infodir
+@@ -2221,7 +2219,6 @@ infodir
  docdir
  oldincludedir
  includedir
@@ -41,7 +52,7 @@ Additional changes are due to autoconf changes.
  localstatedir
  sharedstatedir
  sysconfdir
-@@ -2446,7 +2447,6 @@ datadir='${datarootdir}'
+@@ -2446,7 +2443,6 @@ datadir='${datarootdir}'
  sysconfdir='${prefix}/etc'
  sharedstatedir='${prefix}/com'
  localstatedir='${prefix}/var'
@@ -49,7 +60,7 @@ Additional changes are due to autoconf changes.
  includedir='${prefix}/include'
  oldincludedir='/usr/include'
  docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
-@@ -2699,15 +2699,6 @@ do
+@@ -2699,15 +2695,6 @@ do
    | -silent | --silent | --silen | --sile | --sil)
      silent=yes ;;
  
@@ -65,7 +76,7 @@ Additional changes are due to autoconf changes.
    -sbindir | --sbindir | --sbindi | --sbind | --sbin | --sbi | --sb)
      ac_prev=sbindir ;;
    -sbindir=* | --sbindir=* | --sbindi=* | --sbind=* | --sbin=* \
-@@ -2845,7 +2836,7 @@ fi
+@@ -2845,7 +2832,7 @@ fi
  for ac_var in	exec_prefix prefix bindir sbindir libexecdir datarootdir \
  		datadir sysconfdir sharedstatedir localstatedir includedir \
  		oldincludedir docdir infodir htmldir dvidir pdfdir psdir \
@@ -74,7 +85,7 @@ Additional changes are due to autoconf changes.
  do
    eval ac_val=\$$ac_var
    # Remove trailing slashes.
-@@ -2998,7 +2989,6 @@ Fine tuning of the installation director
+@@ -2998,7 +2985,6 @@ Fine tuning of the installation director
    --sysconfdir=DIR        read-only single-machine data [PREFIX/etc]
    --sharedstatedir=DIR    modifiable architecture-independent data [PREFIX/com]
    --localstatedir=DIR     modifiable single-machine data [PREFIX/var]
@@ -82,7 +93,16 @@ Additional changes are due to autoconf changes.
    --libdir=DIR            object code libraries [EPREFIX/lib]
    --includedir=DIR        C header files [PREFIX/include]
    --oldincludedir=DIR     C header files for non-gcc [/usr/include]
-@@ -9414,7 +9404,10 @@ fi
+@@ -6043,7 +6029,7 @@ case $host_os in *\ *) host_os=`echo "$h
+     { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: configuring Octave for unknown system type" >&5
+ $as_echo "$as_me: WARNING: configuring Octave for unknown system type" >&2;}
+   fi
+-  canonical_host_type=$host
++  canonical_host_type=$host_alias
+ 
+   if test -z "$host_cpu"; then
+     host_cpu=unknown
+@@ -9414,7 +9400,10 @@ fi
  
  
  
@@ -94,7 +114,7 @@ Additional changes are due to autoconf changes.
  
  
  ## Programs used when running Octave.
-@@ -12974,6 +12967,11 @@ fi
+@@ -12974,6 +12963,11 @@ fi
  	  done
  	  ;;
  	-[lLR]*)
@@ -106,7 +126,7 @@ Additional changes are due to autoconf changes.
  	    ac_exists=false
    for ac_i in $ac_cv_f77_libs; do
      if test x"$ac_arg" = x"$ac_i"; then
-@@ -34971,13 +34969,13 @@ if test "$cross_compiling" = yes && test
+@@ -34971,13 +34965,13 @@ if test "$cross_compiling" = yes && test
    MKOCTFILE_LD_CXX=`echo "$LD_CXX" | $SED "s,$CROSS_TOOL_PREFIX,,"`
    MKOCTFILE_RANLIB=`echo "$RANLIB" | $SED "s,$CROSS_TOOL_PREFIX,,"`
  else
@@ -127,7 +147,7 @@ Additional changes are due to autoconf changes.
  fi
  { $as_echo "$as_me:${as_lineno-$LINENO}: defining CROSS_TOOL_PREFIX to be $CROSS_TOOL_PREFIX" >&5
  $as_echo "$as_me: defining CROSS_TOOL_PREFIX to be $CROSS_TOOL_PREFIX" >&6;}
-@@ -36091,6 +36089,8 @@ else
+@@ -36091,6 +36085,8 @@ else
  # ifdef _MSC_VER
  #  include <malloc.h>
  #  define alloca _alloca
@@ -136,3 +156,234 @@ Additional changes are due to autoconf changes.
  # else
  #  ifdef HAVE_ALLOCA_H
  #   include <alloca.h>
+@@ -71654,221 +71650,6 @@ fi
+ 
+ 
+   if test -n "$ac_tool_prefix"; then
+-  for ac_prog in qcollectiongenerator-qt$qt_version
+-  do
+-    # Extract the first word of "$ac_tool_prefix$ac_prog", so it can be a program name with args.
+-set dummy $ac_tool_prefix$ac_prog; ac_word=$2
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+-$as_echo_n "checking for $ac_word... " >&6; }
+-if ${ac_cv_prog_QCOLLECTIONGENERATOR_QTVER+:} false; then :
+-  $as_echo_n "(cached) " >&6
+-else
+-  if test -n "$QCOLLECTIONGENERATOR_QTVER"; then
+-  ac_cv_prog_QCOLLECTIONGENERATOR_QTVER="$QCOLLECTIONGENERATOR_QTVER" # Let the user override the test.
+-else
+-as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
+-for as_dir in $PATH
+-do
+-  IFS=$as_save_IFS
+-  test -z "$as_dir" && as_dir=.
+-    for ac_exec_ext in '' $ac_executable_extensions; do
+-  if as_fn_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
+-    ac_cv_prog_QCOLLECTIONGENERATOR_QTVER="$ac_tool_prefix$ac_prog"
+-    $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
+-    break 2
+-  fi
+-done
+-  done
+-IFS=$as_save_IFS
+-
+-fi
+-fi
+-QCOLLECTIONGENERATOR_QTVER=$ac_cv_prog_QCOLLECTIONGENERATOR_QTVER
+-if test -n "$QCOLLECTIONGENERATOR_QTVER"; then
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $QCOLLECTIONGENERATOR_QTVER" >&5
+-$as_echo "$QCOLLECTIONGENERATOR_QTVER" >&6; }
+-else
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+-$as_echo "no" >&6; }
+-fi
+-
+-
+-    test -n "$QCOLLECTIONGENERATOR_QTVER" && break
+-  done
+-fi
+-if test -z "$QCOLLECTIONGENERATOR_QTVER"; then
+-  ac_ct_QCOLLECTIONGENERATOR_QTVER=$QCOLLECTIONGENERATOR_QTVER
+-  for ac_prog in qcollectiongenerator-qt$qt_version
+-do
+-  # Extract the first word of "$ac_prog", so it can be a program name with args.
+-set dummy $ac_prog; ac_word=$2
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+-$as_echo_n "checking for $ac_word... " >&6; }
+-if ${ac_cv_prog_ac_ct_QCOLLECTIONGENERATOR_QTVER+:} false; then :
+-  $as_echo_n "(cached) " >&6
+-else
+-  if test -n "$ac_ct_QCOLLECTIONGENERATOR_QTVER"; then
+-  ac_cv_prog_ac_ct_QCOLLECTIONGENERATOR_QTVER="$ac_ct_QCOLLECTIONGENERATOR_QTVER" # Let the user override the test.
+-else
+-as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
+-for as_dir in $PATH
+-do
+-  IFS=$as_save_IFS
+-  test -z "$as_dir" && as_dir=.
+-    for ac_exec_ext in '' $ac_executable_extensions; do
+-  if as_fn_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
+-    ac_cv_prog_ac_ct_QCOLLECTIONGENERATOR_QTVER="$ac_prog"
+-    $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
+-    break 2
+-  fi
+-done
+-  done
+-IFS=$as_save_IFS
+-
+-fi
+-fi
+-ac_ct_QCOLLECTIONGENERATOR_QTVER=$ac_cv_prog_ac_ct_QCOLLECTIONGENERATOR_QTVER
+-if test -n "$ac_ct_QCOLLECTIONGENERATOR_QTVER"; then
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_ct_QCOLLECTIONGENERATOR_QTVER" >&5
+-$as_echo "$ac_ct_QCOLLECTIONGENERATOR_QTVER" >&6; }
+-else
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+-$as_echo "no" >&6; }
+-fi
+-
+-
+-  test -n "$ac_ct_QCOLLECTIONGENERATOR_QTVER" && break
+-done
+-
+-  if test "x$ac_ct_QCOLLECTIONGENERATOR_QTVER" = x; then
+-    QCOLLECTIONGENERATOR_QTVER=""
+-  else
+-    case $cross_compiling:$ac_tool_warned in
+-yes:)
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: using cross tools not prefixed with host triplet" >&5
+-$as_echo "$as_me: WARNING: using cross tools not prefixed with host triplet" >&2;}
+-ac_tool_warned=yes ;;
+-esac
+-    QCOLLECTIONGENERATOR_QTVER=$ac_ct_QCOLLECTIONGENERATOR_QTVER
+-  fi
+-fi
+-
+-  if test -z "$QCOLLECTIONGENERATOR_QTVER"; then
+-    if test -n "$ac_tool_prefix"; then
+-  for ac_prog in qcollectiongenerator
+-  do
+-    # Extract the first word of "$ac_tool_prefix$ac_prog", so it can be a program name with args.
+-set dummy $ac_tool_prefix$ac_prog; ac_word=$2
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+-$as_echo_n "checking for $ac_word... " >&6; }
+-if ${ac_cv_prog_QCOLLECTIONGENERATOR+:} false; then :
+-  $as_echo_n "(cached) " >&6
+-else
+-  if test -n "$QCOLLECTIONGENERATOR"; then
+-  ac_cv_prog_QCOLLECTIONGENERATOR="$QCOLLECTIONGENERATOR" # Let the user override the test.
+-else
+-as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
+-for as_dir in $PATH
+-do
+-  IFS=$as_save_IFS
+-  test -z "$as_dir" && as_dir=.
+-    for ac_exec_ext in '' $ac_executable_extensions; do
+-  if as_fn_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
+-    ac_cv_prog_QCOLLECTIONGENERATOR="$ac_tool_prefix$ac_prog"
+-    $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
+-    break 2
+-  fi
+-done
+-  done
+-IFS=$as_save_IFS
+-
+-fi
+-fi
+-QCOLLECTIONGENERATOR=$ac_cv_prog_QCOLLECTIONGENERATOR
+-if test -n "$QCOLLECTIONGENERATOR"; then
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $QCOLLECTIONGENERATOR" >&5
+-$as_echo "$QCOLLECTIONGENERATOR" >&6; }
+-else
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+-$as_echo "no" >&6; }
+-fi
+-
+-
+-    test -n "$QCOLLECTIONGENERATOR" && break
+-  done
+-fi
+-if test -z "$QCOLLECTIONGENERATOR"; then
+-  ac_ct_QCOLLECTIONGENERATOR=$QCOLLECTIONGENERATOR
+-  for ac_prog in qcollectiongenerator
+-do
+-  # Extract the first word of "$ac_prog", so it can be a program name with args.
+-set dummy $ac_prog; ac_word=$2
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+-$as_echo_n "checking for $ac_word... " >&6; }
+-if ${ac_cv_prog_ac_ct_QCOLLECTIONGENERATOR+:} false; then :
+-  $as_echo_n "(cached) " >&6
+-else
+-  if test -n "$ac_ct_QCOLLECTIONGENERATOR"; then
+-  ac_cv_prog_ac_ct_QCOLLECTIONGENERATOR="$ac_ct_QCOLLECTIONGENERATOR" # Let the user override the test.
+-else
+-as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
+-for as_dir in $PATH
+-do
+-  IFS=$as_save_IFS
+-  test -z "$as_dir" && as_dir=.
+-    for ac_exec_ext in '' $ac_executable_extensions; do
+-  if as_fn_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
+-    ac_cv_prog_ac_ct_QCOLLECTIONGENERATOR="$ac_prog"
+-    $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
+-    break 2
+-  fi
+-done
+-  done
+-IFS=$as_save_IFS
+-
+-fi
+-fi
+-ac_ct_QCOLLECTIONGENERATOR=$ac_cv_prog_ac_ct_QCOLLECTIONGENERATOR
+-if test -n "$ac_ct_QCOLLECTIONGENERATOR"; then
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_ct_QCOLLECTIONGENERATOR" >&5
+-$as_echo "$ac_ct_QCOLLECTIONGENERATOR" >&6; }
+-else
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+-$as_echo "no" >&6; }
+-fi
+-
+-
+-  test -n "$ac_ct_QCOLLECTIONGENERATOR" && break
+-done
+-
+-  if test "x$ac_ct_QCOLLECTIONGENERATOR" = x; then
+-    QCOLLECTIONGENERATOR=""
+-  else
+-    case $cross_compiling:$ac_tool_warned in
+-yes:)
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: using cross tools not prefixed with host triplet" >&5
+-$as_echo "$as_me: WARNING: using cross tools not prefixed with host triplet" >&2;}
+-ac_tool_warned=yes ;;
+-esac
+-    QCOLLECTIONGENERATOR=$ac_ct_QCOLLECTIONGENERATOR
+-  fi
+-fi
+-
+-    if test -n "$QCOLLECTIONGENERATOR"; then
+-      if test -n "$QTCHOOSER"; then
+-        QCOLLECTIONGENERATORFLAGS="-qt$qt_version"
+-      fi
+-      QT_TOOLS_AVAILABLE="$QT_TOOLS_AVAILABLE qcollectiongenerator"
+-    else
+-      QT_TOOLS_MISSING="$QT_TOOLS_MISSING qcollectiongenerator"
+-    fi
+-  else
+-    QCOLLECTIONGENERATOR="$QCOLLECTIONGENERATOR_QTVER"
+-    QT_TOOLS_AVAILABLE="$QT_TOOLS_AVAILABLE qcollectiongenerator"
+-  fi
+-
+-
+-  if test -n "$ac_tool_prefix"; then
+   for ac_prog in qhelpgenerator-qt$qt_version
+   do
+     # Extract the first word of "$ac_tool_prefix$ac_prog", so it can be a program name with args.
+@@ -72084,7 +71865,7 @@ fi
+ 
+ 
+     if test -n "$QT_TOOLS_MISSING"; then
+-      warn_qt_tools="one or more of the Qt utilities moc, uic, rcc, lrelease, qcollectiongenerator, and qhelpgenerator not found; disabling Qt GUI"
++      warn_qt_tools="one or more of the Qt utilities moc, uic, rcc, lrelease, and qhelpgenerator not found; disabling Qt GUI"
+       build_qt_gui=no
+       MOC_QTVER=
+       UIC_QTVER=
