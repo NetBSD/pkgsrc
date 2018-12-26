@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5347 2018/12/23 23:05:41 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.5348 2018/12/26 00:29:45 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7469,3 +7469,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added textproc/json-schema version 1.0 [wiz 2018-12-23]
 	Updated textproc/translate-shell to 0.9.6.9 [leot 2018-12-23]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2018Q4 branch [wiz 2018-12-23]
+	Updated pkgtools/rc.subr to 20181226 [schmonz 2018-12-26]
