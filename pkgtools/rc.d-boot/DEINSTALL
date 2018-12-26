@@ -1,6 +1,7 @@
-# $NetBSD: DEINSTALL,v 1.2 2018/12/16 05:41:01 schmonz Exp $
+# $NetBSD: DEINSTALL,v 1.3 2018/12/26 00:43:55 schmonz Exp $
 
 RCDBOOT_STYLE=@RCDBOOT_STYLE@
+RCD_SCRIPTS_DIR=@RCD_SCRIPTS_DIR@
 
 case "${STAGE}" in
 
@@ -14,6 +15,17 @@ DEINSTALL)
 		systemctl disable pkgsrc-rc.d-boot.service
 		;;
 	netbsd-native)
+		;;
+	openbsd-rcd)
+		short_order=$(rc.d-boot list | ${SED} -e "s|^${RCD_SCRIPTS_DIR}/||" | ${GREP} -v '^[A-Z]*$')
+		for _svc in ${short_order}; do
+			# lifted from OpenBSD 6.4 /usr/sbin/rcctl
+			${SED} "/^pkg_scripts[[:>:]]/{s/[[:<:]]${_svc}[[:>:]]//g
+				s/['\"]//g;s/ *= */=/;s/   */ /g;s/ $//;/=$/d;}" \
+				< /etc/rc.conf.local \
+				> /etc/rc.conf.local.tmp \
+				&& ${MV} /etc/rc.conf.local.tmp /etc/rc.conf.local
+		done
 		;;
 	esac
 
