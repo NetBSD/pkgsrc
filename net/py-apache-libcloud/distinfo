@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2017/09/26 17:21:10 adam Exp $
+$NetBSD: distinfo,v 1.8 2018/12/27 15:05:27 joerg Exp $
 
 SHA1 (apache-libcloud-2.2.1.tar.gz) = a59b545a90414f6b2fbc9805bf3ccb4090caef86
 RMD160 (apache-libcloud-2.2.1.tar.gz) = 4bbf6a9b58db6cf522a0c031ff62e3751dabf974
 SHA512 (apache-libcloud-2.2.1.tar.gz) = 97dc044d07888320655ea0cc16e21f61550f2c52a17464a45e6701841c03de315e94e520e50e112456869d2ae0c88e5c11175157660d1e81f2477f92ece0cb97
 Size (apache-libcloud-2.2.1.tar.gz) = 1768112 bytes
+SHA1 (patch-libcloud_compute_drivers_azure.py) = 0ec64d3d8ea729284fe7fc0b068fc432e3a07836
