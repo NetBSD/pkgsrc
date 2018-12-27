@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2018/07/03 05:03:32 adam Exp $
+# $NetBSD: Makefile,v 1.15 2018/12/27 15:13:00 joerg Exp $
 
 DISTNAME=	pyxmlsec-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security python
 MASTER_SITES=	http://labs.libre-entreprise.org/frs/download.php/897/
 
