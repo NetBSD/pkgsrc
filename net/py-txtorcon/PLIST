@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/10/23 03:17:22 riastradh Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/12/27 15:58:35 joerg Exp $
 ${PYSITELIB}/twisted/plugins/txtorcon_endpoint_parser.pyo
 ${PYSITELIB}/twisted/plugins/txtorcon_endpoint_parser.pyc
 ${PYSITELIB}/twisted/plugins/txtorcon_endpoint_parser.py
@@ -22,8 +22,8 @@ ${PYSITELIB}/txtorcon/circuit.pyo
 ${PYSITELIB}/txtorcon/circuit.pyc
 ${PYSITELIB}/txtorcon/controller.pyo
 ${PYSITELIB}/txtorcon/controller.pyc
-${PYSITELIB}/txtorcon/controller_py3.pyo
-${PYSITELIB}/txtorcon/controller_py3.pyc
+${PLIST.py3x}${PYSITELIB}/txtorcon/controller_py3.pyo
+${PLIST.py3x}${PYSITELIB}/txtorcon/controller_py3.pyc
 ${PYSITELIB}/txtorcon/endpoints.pyo
 ${PYSITELIB}/txtorcon/endpoints.pyc
 ${PYSITELIB}/txtorcon/interface.pyo
