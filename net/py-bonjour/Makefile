@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/11/28 14:24:31 hauke Exp $
+# $NetBSD: Makefile,v 1.3 2018/12/27 15:59:10 joerg Exp $
 
 PKGNAME=	${PYPKGPREFIX}-bonjour-${PKGVER}
 DISTNAME=	bonjour-py-${PKGVER}
@@ -17,6 +17,8 @@ EGFILES=	browse.py query.py register.py serviceTypes.py \
 		test.py wxBrowse.py
 DOCDIR=		share/py-bonjour
 DOCFILES=	COPYING.txt README
+
+PYTHON_VERSIONS_INCOMPATIBLE=	35 36 37 # Uses old exception syntax in 0.3
 
 .for ee in ${EGFILES}
 REPLACE_PYTHON+=	examples/${ee}
