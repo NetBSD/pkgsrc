@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/11/23 22:33:44 markd Exp $
+# $NetBSD: Makefile,v 1.13 2018/12/27 16:04:54 joerg Exp $
 
 DISTNAME=	Flask-Security-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -12,6 +12,7 @@ COMMENT=	Simple security for Flask apps
 LICENSE=	mit
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-babel>=1.3:../../devel/py-babel
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 DEPENDS+=	${PYPKGPREFIX}-flask>=0.11:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-flask-babelex>=0.9.3:../../www/py-flask-babelex
 DEPENDS+=	${PYPKGPREFIX}-flask-login>=0.3.0:../../www/py-flask-login
