@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/12/22 09:13:57 adam Exp $
+# $NetBSD: Makefile,v 1.2 2018/12/27 15:58:16 joerg Exp $
 
 DISTNAME=	pysmbc-1.0.15.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/hamano/pysmbc
 COMMENT=	Python bindings for libsmbclient
 LICENSE=	gnu-gpl-v2
+
+USE_TOOLS+=	pkg-config
 
 .include "../../net/samba4/buildlink3.mk"
 .include "../../lang/python/distutils.mk"
