@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2018/12/16 08:13:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.70 2018/12/27 13:24:06 ryoon Exp $
 #
 
 TB_VER=		60.3.3
@@ -16,6 +16,8 @@ DISTFILES=	${XPI_FILES}
 
 NO_BUILD=	yes
 
+INSTALLATION_DIRS=	lib/thunderbird/extensions
+
 TB_LOCALES=	        ar ast be bg br ca cs cy		\
                         da de dsb el en-GB en-US es-AR es-ES et	\
                         eu fi fr fy-NL ga-IE gd gl he hr hsb	\
@@ -28,5 +30,10 @@ TB_LOCALES=	        ar ast be bg br ca cs cy		\
 EXTENSIONS_DIR=		${PREFIX}/lib/thunderbird/extensions
 XPI_FILES=		${TB_LOCALES:=.xpi}
 
-.include "../../www/firefox60/xpi.mk"
+do-install:
+.for f in ${TB_LOCALES}
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${f}.xpi \
+	${DESTDIR}${EXTENSIONS_DIR}/langpack-${f}@thunderbird.mozilla.org.xpi
+.endfor
+
 .include "../../mk/bsd.pkg.mk"
