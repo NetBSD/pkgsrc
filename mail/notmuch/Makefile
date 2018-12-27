@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2018/12/01 11:38:12 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2018/12/27 15:07:05 joerg Exp $
 
 DISTNAME=	notmuch-0.28
 CATEGORIES=	mail
@@ -37,6 +37,9 @@ SUBST_STAGE.sphinx=	pre-configure
 SUBST_MESSAGE.sphinx=	Fix sphinx command names.
 
 LDFLAGS.SunOS+=	-lnsl
+
+post-extract:
+	${MV} ${WRKSRC}/version ${WRKSRC}/version.txt
 
 .include "../../lang/python/application.mk"
 BUILDLINK_API_DEPENDS.gmime3+=	gmime3>=3.0.3
