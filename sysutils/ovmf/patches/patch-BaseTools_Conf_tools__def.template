@@ -1,4 +1,4 @@
-$NetBSD: patch-BaseTools_Conf_tools__def.template,v 1.1 2017/10/23 14:21:57 maya Exp $
+$NetBSD: patch-BaseTools_Conf_tools__def.template,v 1.2 2018/12/27 15:12:36 joerg Exp $
 
 Avoid -flto (causes issues on netbsd)
 invoke 'gmake' rather than 'make'
@@ -7,6 +7,15 @@ call 'ar' rather than 'gcc-ar'
 
 --- BaseTools/Conf/tools_def.template.orig	2017-06-13 08:26:05.000000000 +0000
 +++ BaseTools/Conf/tools_def.template
+@@ -4370,7 +4370,7 @@ DEFINE GCC_AARCH64_RC_FLAGS        = -I 
+ 
+ DEFINE GCC44_ALL_CC_FLAGS            = -g -fshort-wchar -fno-builtin -fno-strict-aliasing -Wall -Werror -Wno-array-bounds -ffunction-sections -fdata-sections -include AutoGen.h -fno-common -DSTRING_ARRAY_NAME=$(BASE_NAME)Strings
+ DEFINE GCC44_IA32_CC_FLAGS           = DEF(GCC44_ALL_CC_FLAGS) -m32 -march=i586 -malign-double -fno-stack-protector -D EFI32 -fno-asynchronous-unwind-tables
+-DEFINE GCC44_X64_CC_FLAGS            = DEF(GCC44_ALL_CC_FLAGS) -m64 -fno-stack-protector "-DEFIAPI=__attribute__((ms_abi))" -maccumulate-outgoing-args -mno-red-zone -Wno-address -mcmodel=small -fpie -fno-asynchronous-unwind-tables
++DEFINE GCC44_X64_CC_FLAGS            = DEF(GCC44_ALL_CC_FLAGS) -m64 -fno-stack-protector "-DEFIAPI=__attribute__((ms_abi))" -mno-red-zone -Wno-address -mcmodel=small -fpie -fno-asynchronous-unwind-tables
+ DEFINE GCC44_IA32_X64_DLINK_COMMON   = -nostdlib -Wl,-n,-q,--gc-sections -z common-page-size=0x20
+ DEFINE GCC44_IA32_X64_ASLDLINK_FLAGS = DEF(GCC44_IA32_X64_DLINK_COMMON) -Wl,--entry,ReferenceAcpiTable -u ReferenceAcpiTable
+ DEFINE GCC44_IA32_X64_DLINK_FLAGS    = DEF(GCC44_IA32_X64_DLINK_COMMON) -Wl,--entry,$(IMAGE_ENTRY_POINT) -u $(IMAGE_ENTRY_POINT) -Wl,-Map,$(DEST_DIR_DEBUG)/$(BASE_NAME).map
 @@ -4503,7 +4503,7 @@ DEFINE GCC5_AARCH64_ASLDLINK_FLAGS   = D
  *_UNIXGCC_*_*_FAMILY               = GCC
  *_UNIXGCC_*_*_BUILDRULEFAMILY      = GCCLD
