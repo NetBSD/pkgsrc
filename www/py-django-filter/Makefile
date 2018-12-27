@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/11/15 09:22:51 adam Exp $
+# $NetBSD: Makefile,v 1.4 2018/12/27 16:05:06 joerg Exp $
 
 DISTNAME=	django-filter-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,6 +14,8 @@ DEPENDS+=	${PYPKGPREFIX}-django>=1.11:../../www/py-djangorestframework
 DEPENDS+=	${PYPKGPREFIX}-djangorestframework-[0-9]*:../../www/py-djangorestframework
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
