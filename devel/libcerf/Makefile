@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/12/01 21:22:36 gson Exp $
+# $NetBSD: Makefile,v 1.7 2018/12/27 15:57:46 joerg Exp $
 
 DISTNAME=	libcerf-1.7
 CATEGORIES=	devel math
@@ -14,6 +14,7 @@ USE_LANGUAGES=		c99
 USE_CMAKE=		yes
 CMAKE_ARG_PATH=		${WRKSRC}
 CONFIGURE_DIRS=		${WRKDIR}/build
+USE_TOOLS+=		pod2man
 
 post-extract:
 	${MKDIR} ${WRKDIR}/build
