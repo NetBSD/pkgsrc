@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2016/10/09 03:15:57 kamil Exp $
+# $NetBSD: Makefile,v 1.25 2018/12/27 16:01:54 joerg Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/myhdl/MyHDL/}
+PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Hardware description in Python
