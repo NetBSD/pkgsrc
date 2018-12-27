@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2018/11/15 10:24:26 adam Exp $
+$NetBSD: distinfo,v 1.4 2018/12/27 15:07:36 joerg Exp $
 
 SHA1 (whichcraft-0.5.2.tar.gz) = 627943cce7e404e2d504231c3bc51062a4bfc9a7
 RMD160 (whichcraft-0.5.2.tar.gz) = 8d6dcf173d04b86527031bbad1555a4864c82f5b
 SHA512 (whichcraft-0.5.2.tar.gz) = 28b7be346b781f69c8fef419efd91fc2daa6b337c1eda0a2fc47d04134c479a5ded6eed3583825b111a48d7a79667676b6ce49693552233e78c7d517ac91a73c
 Size (whichcraft-0.5.2.tar.gz) = 6480 bytes
+SHA1 (patch-README.rst) = 98f9b55b16354807bd88e2dfa622052b3f5d2389
