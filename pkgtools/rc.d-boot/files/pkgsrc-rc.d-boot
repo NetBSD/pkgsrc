@@ -1,0 +1,37 @@
+#! /bin/sh
+#
+# $NetBSD: pkgsrc-rc.d-boot,v 1.1 2018/12/28 20:24:02 schmonz Exp $
+#
+# @PKGNAME@ script to start/stop pkgsrc-provided services
+
+### BEGIN INIT INFO
+# Provides:		pkgsrc-rc.d-boot
+# Required-Start:	$remote_fs $network
+# Required-Stop:	$remote_fs $network
+# Default-Start:	2 3 4 5
+# Default-Stop:
+# Short-Description:	Starts all pkgsrc-provided services
+### END INIT INFO
+
+# chkconfig: 2345 70 30
+# description: Starts all pkgsrc-provided services
+
+PREFIX="@PREFIX@"
+export PATH="${PREFIX}/sbin:${PREFIX}/bin:${PATH}"
+RCDBOOT="${PREFIX}/sbin/rc.d-boot"
+
+test -x ${RCDBOOT} || exit 0
+
+case "$1" in
+	start|stop|reload|restart|status)
+		${RCDBOOT} "$1"
+		;;
+	force-reload)
+		${RCDBOOT} restart
+		;;
+	*)
+		echo $"Usage: $0 {start|stop|reload|force-reload|restart|status}"
+		exit 2
+esac
+
+exit $?
