@@ -1,10 +1,10 @@
-$NetBSD: patch-decode-dimms,v 1.8 2018/07/25 04:33:31 pgoyette Exp $
+$NetBSD XXX$
 
 Add NetBSD-specific ability to use spdmem(4)'s sysctl values as
 input.
 
---- eeprom/decode-dimms.orig	2018-05-31 13:53:29.771907986 +0800
-+++ eeprom/decode-dimms	2018-07-25 10:33:01.055537617 +0800
+--- eeprom/decode-dimms.orig	2018-12-26 18:47:14.272374157 +0800
++++ eeprom/decode-dimms	2018-12-26 18:45:01.641079634 +0800
 @@ -42,8 +42,9 @@
  use Fcntl qw(:DEFAULT :seek);
  use File::Basename;
@@ -17,7 +17,7 @@ input.
  
  use constant LITTLEENDIAN	=> "little-endian";
  use constant BIGENDIAN		=> "big-endian";
-@@ -341,6 +342,7 @@
+@@ -417,6 +418,7 @@
  );
  
  $use_sysfs = -d '/sys/bus';
@@ -25,7 +25,7 @@ input.
  
  # We consider that no data was written to this area of the SPD EEPROM if
  # all bytes read 0x00 or all bytes read 0xff
-@@ -2252,6 +2254,26 @@
+@@ -2328,6 +2330,26 @@
  	}
  }
  
@@ -52,7 +52,7 @@ input.
  # Read bytes from SPD-EEPROM
  # Note: offset must be a multiple of 16!
  sub readspd($$$)
-@@ -2261,6 +2283,9 @@
+@@ -2337,6 +2359,9 @@
  	if ($use_hexdump) {
  		@bytes = read_hexdump($dimm_i);
  		return @bytes[$offset..($offset + $size - 1)];
@@ -62,7 +62,7 @@ input.
  	} elsif ($use_sysfs) {
  		# Kernel 2.6 with sysfs
  		sysopen(HANDLE, "$dimm_i/eeprom", O_RDONLY)
-@@ -2337,7 +2362,7 @@
+@@ -2413,7 +2438,7 @@
  # Parse command-line
  foreach (@ARGV) {
  	if ($_ eq '-h' || $_ eq '--help') {
@@ -71,7 +71,7 @@ input.
  			"       $0 -h\n\n",
  			"  -f, --format            Print nice html output\n",
  			"  -b, --bodyonly          Don't print html header\n",
-@@ -2351,6 +2376,8 @@
+@@ -2427,6 +2452,8 @@
  			"  -x,                     Read data from hexdump files\n",
  			"  -X,                     Same as -x except treat multibyte hex\n",
  			"                          data as little endian\n",
@@ -80,7 +80,7 @@ input.
  			"  -h, --help              Display this usage summary\n";
  		print <<"EOF";
  
-@@ -2395,13 +2422,20 @@
+@@ -2471,13 +2498,20 @@
  		$use_hexdump = LITTLEENDIAN;
  		next;
  	}
@@ -102,7 +102,7 @@ input.
  }
  
  # Default values
-@@ -2479,7 +2513,7 @@
+@@ -2555,7 +2589,7 @@
  #  * chk_spd: The checksum or CRC value found in the EEPROM
  #  * chk_calc: The checksum or CRC computed from the EEPROM data
  # Keys are added over time.
@@ -111,7 +111,7 @@ input.
  
  for my $i (0 .. $#dimm) {
  	my @bytes = readspd(0, 128, $dimm[$i]->{file});
-@@ -2531,7 +2565,7 @@
+@@ -2607,7 +2641,7 @@
  		printl("Decoding EEPROM", $dimm[$current]->{eeprom});
  	}
  
@@ -120,7 +120,7 @@ input.
  		if ($dimm[$current]->{file} =~ /-([\da-f]+)$/i) {
  			my $dimm_num = hex($1) - 0x50 + 1;
  			if ($dimm_num >= 1 && $dimm_num <= 8) {
-@@ -2737,3 +2771,4 @@
+@@ -2813,3 +2847,4 @@
  printl2("\n\nNumber of SDRAM DIMMs detected and decoded", scalar @dimm);
  
  print "</body></html>\n" if ($opt_html && !$opt_bodyonly);
