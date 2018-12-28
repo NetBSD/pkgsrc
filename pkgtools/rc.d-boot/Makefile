@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/12/28 20:24:02 schmonz Exp $
+# $NetBSD: Makefile,v 1.8 2018/12/28 20:28:02 schmonz Exp $
 #
 
 PKGNAME=		rc.d-boot-20181228
@@ -30,7 +30,7 @@ SUBST_FILES.paths=	rc.d-boot
 SUBST_FILES.paths+=	org.pkgsrc.rc.d-boot.plist \
 			pkgsrc-rc.d-boot \
 			pkgsrc-rc.d-boot.service
-SUBST_VARS.paths=	GREP PREFIX RCD_SCRIPTS_DIR RCORDER
+SUBST_VARS.paths=	GREP PKGNAME PREFIX RCD_SCRIPTS_DIR RCORDER
 
 FILES_SUBST+=		RCDBOOT_STYLE=${RCDBOOT_STYLE:Q}
 FILES_SUBST+=		RCD_SCRIPTS_DIR=${RCD_SCRIPTS_DIR:Q}
