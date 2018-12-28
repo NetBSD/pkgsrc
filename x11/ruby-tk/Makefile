@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2018/03/29 03:16:11 taca Exp $
+# $NetBSD: Makefile,v 1.57 2018/12/28 12:34:36 taca Exp $
 
 DISTNAME=		${RUBY_DISTNAME}
 PKGNAME=		${RUBY_PKGPREFIX}-${RUBY_EXTNAME}-${RUBY_VERSION}
@@ -38,11 +38,6 @@ post-install:
 
 .include "../../lang/ruby/modules.mk"
 .include "../../lang/ruby/Makefile.common"
-.if ${RUBY_VER} == "18"
-.include "../../lang/tcl85/buildlink3.mk"
-.include "../../x11/tk85/buildlink3.mk"
-.else
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
-.endif
 .include "../../mk/bsd.pkg.mk"
