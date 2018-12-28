@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5353 2018/12/28 22:10:24 pgoyette Exp $
+$NetBSD: CHANGES-2018,v 1.5354 2018/12/28 22:30:39 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7475,3 +7475,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/py-parso to 0.3.1 [adam 2018-12-28]
 	Updated pkgtools/rc.d-boot to 20181228 [schmonz 2018-12-28]
 	Updated sysutils/decode-dimms to 20181123 [pgoyette 2018-12-28]
+	Updated editors/abiword to 3.0.2nb4 [gutteridge 2018-12-28]
+	Updated editors/abiword-plugins to 3.0.2nb4 [gutteridge 2018-12-28]
