@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.5 2018/12/26 00:43:55 schmonz Exp $
+# $NetBSD: INSTALL,v 1.6 2018/12/28 20:24:02 schmonz Exp $
 
 RCDBOOT_STYLE=@RCDBOOT_STYLE@
 RCD_SCRIPTS_DIR=@RCD_SCRIPTS_DIR@
@@ -14,6 +14,13 @@ POST-INSTALL)
 		;;
 	linux-systemd)
 		systemctl enable --now /etc/systemd/system/pkgsrc-rc.d-boot.service
+		;;
+	linux-sysv-debian)
+		update-rc.d pkgsrc-rc.d-boot defaults
+		;;
+	linux-sysv-redhat)
+		chkconfig --add pkgsrc-rc.d-boot
+		chkconfig pkgsrc-rc.d-boot on
 		;;
 	netbsd-native)
 		;;
