@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5350 2018/12/26 23:39:23 he Exp $
+$NetBSD: CHANGES-2018,v 1.5351 2018/12/28 14:18:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7472,3 +7472,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated pkgtools/rc.subr to 20181226 [schmonz 2018-12-26]
 	Updated pkgtools/rc.d-boot to 20181226 [schmonz 2018-12-26]
 	Updated sysutils/zabbix to 4.0.3 [he 2018-12-26]
+	Updated lang/py-parso to 0.3.1 [adam 2018-12-28]
