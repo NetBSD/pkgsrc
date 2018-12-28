@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/10/16 17:02:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/12/28 14:18:32 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -24,15 +24,12 @@ ${PYSITELIB}/parso/parser.pyo
 ${PYSITELIB}/parso/pgen2/__init__.py
 ${PYSITELIB}/parso/pgen2/__init__.pyc
 ${PYSITELIB}/parso/pgen2/__init__.pyo
-${PYSITELIB}/parso/pgen2/grammar.py
-${PYSITELIB}/parso/pgen2/grammar.pyc
-${PYSITELIB}/parso/pgen2/grammar.pyo
-${PYSITELIB}/parso/pgen2/parse.py
-${PYSITELIB}/parso/pgen2/parse.pyc
-${PYSITELIB}/parso/pgen2/parse.pyo
-${PYSITELIB}/parso/pgen2/pgen.py
-${PYSITELIB}/parso/pgen2/pgen.pyc
-${PYSITELIB}/parso/pgen2/pgen.pyo
+${PYSITELIB}/parso/pgen2/generator.py
+${PYSITELIB}/parso/pgen2/generator.pyc
+${PYSITELIB}/parso/pgen2/generator.pyo
+${PYSITELIB}/parso/pgen2/grammar_parser.py
+${PYSITELIB}/parso/pgen2/grammar_parser.pyc
+${PYSITELIB}/parso/pgen2/grammar_parser.pyo
 ${PYSITELIB}/parso/python/__init__.py
 ${PYSITELIB}/parso/python/__init__.pyc
 ${PYSITELIB}/parso/python/__init__.pyo
@@ -42,15 +39,13 @@ ${PYSITELIB}/parso/python/diff.pyo
 ${PYSITELIB}/parso/python/errors.py
 ${PYSITELIB}/parso/python/errors.pyc
 ${PYSITELIB}/parso/python/errors.pyo
-${PYSITELIB}/parso/python/fstring.py
-${PYSITELIB}/parso/python/fstring.pyc
-${PYSITELIB}/parso/python/fstring.pyo
 ${PYSITELIB}/parso/python/grammar26.txt
 ${PYSITELIB}/parso/python/grammar27.txt
 ${PYSITELIB}/parso/python/grammar33.txt
 ${PYSITELIB}/parso/python/grammar34.txt
 ${PYSITELIB}/parso/python/grammar35.txt
 ${PYSITELIB}/parso/python/grammar36.txt
+${PYSITELIB}/parso/python/grammar37.txt
 ${PYSITELIB}/parso/python/parser.py
 ${PYSITELIB}/parso/python/parser.pyc
 ${PYSITELIB}/parso/python/parser.pyo
