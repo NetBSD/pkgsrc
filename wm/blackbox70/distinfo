@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2018/12/27 15:10:17 joerg Exp $
+$NetBSD: distinfo,v 1.12 2018/12/29 00:29:32 joerg Exp $
 
 SHA1 (blackbox-0.72.tar.gz) = 87e90c7d6da9f94a79100433490b33de4189f194
 RMD160 (blackbox-0.72.tar.gz) = 3991d8512703cceafcd93185978684441d06d7d7
@@ -12,7 +12,6 @@ SHA1 (patch-doc_sl__SI_Makefile.am) = b348b43e5c8064cd4b46212d3bd609a2f41c7f02
 SHA1 (patch-lib_Image.cc) = ab49da02853b670843f4884517f0727d4569d50a
 SHA1 (patch-lib_Menu.cc) = b16a7439fa5db1d287e5353ec5986a9c3ffd6cfb
 SHA1 (patch-lib_Unicode.cc) = b2936e86dab0e4d0104312b5a387081a3fa02134
-SHA1 (patch-m4_gettext.m4) = 4b87f4ab9f1fc0ed6b71e3373990eedc34fa8789
 SHA1 (patch-src_Screen.cc) = 7a75160a66eb6317930af063514688c6e5028569
 SHA1 (patch-src_Toolbar.cc) = 2fdcea33eff7b6a99f22ce7a77c9b713b4f005b5
 SHA1 (patch-src_main.cc) = 24f43276e20f8fb89c6cb478e5e1bf52ea3eb659
