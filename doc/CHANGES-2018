@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5355 2018/12/29 04:41:08 gutteridge Exp $
+$NetBSD: CHANGES-2018,v 1.5356 2018/12/29 12:22:19 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7478,3 +7478,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated editors/abiword to 3.0.2nb4 [gutteridge 2018-12-28]
 	Updated editors/abiword-plugins to 3.0.2nb4 [gutteridge 2018-12-28]
 	Updated wm/blackbox70 to 0.72nb1 [gutteridge 2018-12-29]
+	Updated mail/qmail-acceptutils to 20181228 [schmonz 2018-12-29]
