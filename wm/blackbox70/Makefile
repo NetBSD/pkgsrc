@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2018/12/29 04:33:16 gutteridge Exp $
+# $NetBSD: Makefile,v 1.18 2018/12/29 04:37:25 gutteridge Exp $
 
 VERSION=	0.72
 DISTNAME=	blackbox-${VERSION}
+PKGREVISION=	1
 PKGNAME=	blackbox70-${VERSION}
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bbidulock/}
