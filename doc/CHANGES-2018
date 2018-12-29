@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5354 2018/12/28 22:30:39 gutteridge Exp $
+$NetBSD: CHANGES-2018,v 1.5355 2018/12/29 04:41:08 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7477,3 +7477,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/decode-dimms to 20181123 [pgoyette 2018-12-28]
 	Updated editors/abiword to 3.0.2nb4 [gutteridge 2018-12-28]
 	Updated editors/abiword-plugins to 3.0.2nb4 [gutteridge 2018-12-28]
+	Updated wm/blackbox70 to 0.72nb1 [gutteridge 2018-12-29]
