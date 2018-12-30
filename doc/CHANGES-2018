@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5363 2018/12/30 22:55:47 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.5364 2018/12/30 23:24:19 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7486,3 +7486,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/qmail-rejectutils to 20181230 [schmonz 2018-12-30]
 	Updated mail/qmail-run to 20181230 [schmonz 2018-12-30]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2018Q4 branch [wiz 2018-12-30]
+	Updated doc/guide to 20181231 [leot 2018-12-30]
