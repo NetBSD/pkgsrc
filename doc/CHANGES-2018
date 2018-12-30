@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5361 2018/12/30 19:06:51 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.5362 2018/12/30 19:09:25 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7484,3 +7484,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/SDL2 to 2.0.9nb2 [maya 2018-12-30]
 	Updated editors/lyx to 2.2.2nb10 [rhialto 2018-12-30]
 	Updated mail/qmail-rejectutils to 20181230 [schmonz 2018-12-30]
+	Updated mail/qmail-run to 20181230 [schmonz 2018-12-30]
