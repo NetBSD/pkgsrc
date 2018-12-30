@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.71 2018/12/13 19:51:50 adam Exp $
+# $NetBSD: Makefile,v 1.72 2018/12/30 15:55:56 rhialto Exp $
 
 DISTNAME=		lyx-2.2.2
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.lyx.org/pub/lyx/stable/2.2.x/
 MASTER_SITES+=		ftp://ftp.sdsc.edu/pub/other/lyx/stable/2.2.x/
@@ -69,7 +69,8 @@ CXXFLAGS.Linux+=	-fpermissive
 LDFLAGS.SunOS+=		-liconv
 
 CONFIGURE_ARGS+=	--without-included-mythes
-CONFIGURE_ARGS+=	--without-included-boost
+# XXX Uncomment this after updating LyX to latest:
+#CONFIGURE_ARGS+=	--without-included-boost
 
 CONFIGURE_ARGS+=	--with-extra-prefix=${BUILDLINK_PREFIX.qt4-libs} \
 			--with-qt4-dir=${QTDIR:Q} \
@@ -184,7 +185,7 @@ SUBST_SED.python+=	-e 's,command("python -tt,command("${PYTHONBIN} -tt,'
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../textproc/mythes/buildlink3.mk"
-.include "../../devel/boost-libs/buildlink3.mk"
+#.include "../../devel/boost-libs/buildlink3.mk"
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
