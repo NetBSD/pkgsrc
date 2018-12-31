@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5371 2018/12/31 09:59:41 wen Exp $
+$NetBSD: CHANGES-2018,v 1.5372 2018/12/31 10:08:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7494,3 +7494,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-CPAN to 2.22 [wen 2018-12-31]
 	Updated devel/p5-File-Find-Rule-Permissions to 2.04 [wen 2018-12-31]
 	Updated editors/nano to 3.2 [wen 2018-12-31]
+	Updated lang/python36 to 3.6.8 [adam 2018-12-31]
+	Updated lang/python37 to 3.7.2 [adam 2018-12-31]
