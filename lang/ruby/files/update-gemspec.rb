@@ -1,7 +1,7 @@
 #!/usr/pkg/bin/ruby
 # -*- coding: utf-8 -*-
 #
-# $NetBSD: update-gemspec.rb,v 1.10 2018/07/06 15:37:09 taca Exp $
+# $NetBSD: update-gemspec.rb,v 1.11 2018/12/31 14:36:15 taca Exp $
 #
 # Copyright (c) 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018
 # The NetBSD Foundation, Inc.
@@ -74,7 +74,9 @@ class GemSpecUpdater
           key = nil
         elsif /^:([a-z_]+)+/ =~ ru
           key = $1
-          @attr[key] = []
+          if @attr[key].nil?
+            @attr[key] = []
+          end
         elsif not key.nil?
           @attr[key].push ru unless key.nil?
         else
