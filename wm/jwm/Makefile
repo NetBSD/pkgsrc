@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2018/11/14 22:22:33 kleink Exp $
+# $NetBSD: Makefile,v 1.39 2018/12/31 22:15:16 tsutsui Exp $
 
 DISTNAME=		jwm-2.3.7
 PKGREVISION=		5
@@ -7,7 +7,7 @@ MASTER_SITES=		http://www.joewing.net/programs/jwm/releases/
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		tsutsui@NetBSD.org
-HOMEPAGE=		http://www.joewing.net/programs/jwm/
+HOMEPAGE=		http://joewing.net/projects/jwm/
 COMMENT=		Lightweight window manager with virtual desktops
 LICENSE=		mit
 
