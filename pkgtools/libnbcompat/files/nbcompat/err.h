@@ -1,4 +1,4 @@
-/*	$NetBSD: err.h,v 1.4 2004/08/23 03:32:13 jlam Exp $	*/
+/*	$NetBSD: err.h,v 1.5 2018/12/31 11:25:08 triaxx Exp $	*/
 
 /*
  * Copyright (c) 1989, 1993
@@ -40,9 +40,11 @@
 
 #if HAVE_ERR_H
 # include <err.h>
-#endif
-
-#if !HAVE_ERR
+#else
+# if !HAVE_SYS_CDEFS_H
+#  include <nbcompat/cdefs.h>
+# endif
+# include <stdarg.h>
 void	err __P((int, const char *, ...));
 void	errx __P((int, const char *, ...));
 void	verr __P((int, const char *, va_list));
@@ -50,6 +52,10 @@ void	verrx __P((int, const char *, va_list));
 #endif
 
 #if !HAVE_WARN
+# if !HAVE_SYS_CDEFS_H
+#  include <nbcompat/cdefs.h>
+# endif
+# include <stdarg.h>
 void	warn __P((const char *, ...));
 void	warnx __P((const char *, ...));
 void	vwarn __P((const char *, va_list));
