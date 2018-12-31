@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5374 2018/12/31 12:23:27 adam Exp $
+$NetBSD: CHANGES-2018,v 1.5375 2018/12/31 13:11:49 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7502,3 +7502,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-ldap3 to 2.5.2 [adam 2018-12-31]
 	Updated textproc/py-sphinx to 1.8.3 [adam 2018-12-31]
 	Updated devel/py-tox to 3.6.1 [adam 2018-12-31]
+	Updated graphics/cinepaint to 1.0.4 [ryoon 2018-12-31]
