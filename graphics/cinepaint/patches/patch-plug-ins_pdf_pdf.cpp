@@ -1,13 +1,26 @@
-$NetBSD: patch-plug-ins_pdf_pdf.cpp,v 1.1 2011/11/23 23:30:30 joerg Exp $
+$NetBSD: patch-plug-ins_pdf_pdf.cpp,v 1.2 2018/12/31 13:11:12 ryoon Exp $
 
---- plug-ins/pdf/pdf.cpp.orig	2011-11-23 17:14:05.000000000 +0000
+--- plug-ins/pdf/pdf.cpp.orig	2008-10-10 05:44:15.000000000 +0000
 +++ plug-ins/pdf/pdf.cpp
-@@ -40,6 +40,8 @@
- #include "pdf.h"
- #include "pdf_dialog.h"
+@@ -47,10 +47,10 @@ extern "C" {
+ #include "lib/wire/libtile.h"
+ #include "plugin_pdb.h"
+ #include "libgimp/stdplugins-intl.h"
++}
+ #ifdef HAVE_OY
+-#include <oyranos/oyranos.h>
++#include <oyranos.h>
+ #endif
+-}
  
-+#include <cstring>
-+
- extern "C" {
- #include <gtk/gtk.h>
- #include "lib/plugin_main.h"
+ #define WARN_S(text) cout <<__FILE__<<":"<<__LINE__<<" "<< text << endl;
+ 
+@@ -377,8 +377,6 @@ load_image(const char* filename)
+     // set a default profile for cmyk
+ #ifdef OYRANOS_H
+ # if OYRANOS_API > 12
+-    using namespace oyranos;
+-
+     if( vals.colourspace == PDF_CMYK )
+       profile_name = oyGetDefaultProfileName (oyEDITING_CMYK, myAllocFunc);
+     else

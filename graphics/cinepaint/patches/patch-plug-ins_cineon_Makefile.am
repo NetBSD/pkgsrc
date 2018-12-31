@@ -1,0 +1,13 @@
+$NetBSD: patch-plug-ins_cineon_Makefile.am,v 1.1 2018/12/31 13:11:12 ryoon Exp $
+
+--- plug-ins/cineon/Makefile.am.orig	2004-02-09 23:05:23.000000000 +0000
++++ plug-ins/cineon/Makefile.am
+@@ -27,7 +27,7 @@ INCLUDES = \
+ LDADD = \
+ 	$(top_builddir)/lib/libcinepaint.la	\
+ 	$(X_LIBS)				\
+-	-lc
++	-lm
+ 
+ DEPS = $(top_builddir)/lib/libcinepaint.la
+ 
