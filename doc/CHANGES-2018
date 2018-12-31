@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5381 2018/12/31 17:43:47 leot Exp $
+$NetBSD: CHANGES-2018,v 1.5382 2018/12/31 21:08:37 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7509,3 +7509,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated emulators/vice to 3.3 [rhialto 2018-12-31]
 	Updated math/capc-calc to 2.12.7.1 [chuck 2018-12-31]
 	Added misc/py-asciinema version 2.0.1 [leot 2018-12-31]
+	Updated multimedia/intel-vaapi-driver to 2.3.0 [leot 2018-12-31]
