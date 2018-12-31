@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2018/11/14 22:21:25 kleink Exp $
+# $NetBSD: Makefile,v 1.41 2018/12/31 06:21:09 maya Exp $
 
-DISTNAME=	e-uae-0.8.28
-PKGREVISION=	31
+DISTNAME=	e-uae-0.8.29-WIP4
+PKGNAME=	e-uae-0.8.28.99.4
 CATEGORIES=	emulators
-MASTER_SITES=	http://www.rcdrummond.net/uae/e-uae-0.8.28/
+MASTER_SITES=	http://www.rcdrummond.net/uae/${DISTNAME}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
