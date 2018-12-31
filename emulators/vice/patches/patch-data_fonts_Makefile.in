@@ -1,12 +1,12 @@
-$NetBSD: patch-data_fonts_Makefile.in,v 1.2 2017/08/16 17:54:09 adam Exp $
+$NetBSD: patch-data_fonts_Makefile.in,v 1.3 2018/12/31 15:38:55 rhialto Exp $
 
 Don't try to mess in ${HOME}.
 Don't try mkfontdir (that is done at pkg_add time).
 Don't use bdftopcf on Darwin.
 
---- data/fonts/Makefile.in.orig	2017-03-30 20:40:42.000000000 +0000
+--- data/fonts/Makefile.in.orig	2018-12-19 21:25:03.000000000 +0000
 +++ data/fonts/Makefile.in
-@@ -555,22 +555,9 @@ uninstall-am: uninstall-fontsDATA
+@@ -589,22 +589,10 @@ uninstall-am: uninstall-fontsDATA
  
  
  install: install-data-am
@@ -26,9 +26,10 @@ Don't use bdftopcf on Darwin.
 -@SDL_COMPILE_FALSE@	cd $(DESTDIR)$(fontsdir) ; \
 -@SDL_COMPILE_FALSE@	bdftopcf -o vice-cbm.pcf vice-cbm.bdf ; \
 -@SDL_COMPILE_FALSE@	${MKFONTDIR_BIN} .
-+@MACOSX_COCOA_FALSE@@SDL_COMPILE_FALSE@	@echo "Preparing fontdir..." ; \
-+@MACOSX_COCOA_FALSE@@SDL_COMPILE_FALSE@	cd $(DESTDIR)$(fontsdir) ; \
-+@MACOSX_COCOA_FALSE@@SDL_COMPILE_FALSE@	bdftopcf -o vice-cbm.pcf vice-cbm.bdf
++@UNIX_MACOSX_COMPILE_FALSE@@SDL_COMPILE_FALSE@	@echo "Preparing fontdir..." ; \
++@UNIX_MACOSX_COMPILE_FALSE@@SDL_COMPILE_FALSE@	cd $(DESTDIR)$(fontsdir) ; \
++@UNIX_MACOSX_COMPILE_FALSE@@SDL_COMPILE_FALSE@	bdftopcf -o vice-cbm.pcf vice-cbm.bdf ; \
++@UNIX_MACOSX_COMPILE_FALSE@@SDL_COMPILE_FALSE@	${MKFONTDIR_BIN} .
  
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
