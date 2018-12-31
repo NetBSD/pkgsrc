@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2018/07/31 10:12:26 leot Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/12/31 14:24:45 leot Exp $
 share/doc/python3.6/.buildinfo
 share/doc/python3.6/_images/hashlib-blake2-tree.png
 share/doc/python3.6/_images/logging_flow.png
 share/doc/python3.6/_images/pathlib-inheritance.png
-share/doc/python3.6/_images/python-video-icon.png
 share/doc/python3.6/_images/tulip_coro.png
 share/doc/python3.6/_images/turtle-star.png
 share/doc/python3.6/_images/win_installer.png
@@ -209,7 +208,7 @@ share/doc/python3.6/_sources/library/email.mime.rst.txt
 share/doc/python3.6/_sources/library/email.parser.rst.txt
 share/doc/python3.6/_sources/library/email.policy.rst.txt
 share/doc/python3.6/_sources/library/email.rst.txt
-share/doc/python3.6/_sources/library/email.util.rst.txt
+share/doc/python3.6/_sources/library/email.utils.rst.txt
 share/doc/python3.6/_sources/library/ensurepip.rst.txt
 share/doc/python3.6/_sources/library/enum.rst.txt
 share/doc/python3.6/_sources/library/errno.rst.txt
@@ -736,7 +735,7 @@ share/doc/python3.6/library/email.message.html
 share/doc/python3.6/library/email.mime.html
 share/doc/python3.6/library/email.parser.html
 share/doc/python3.6/library/email.policy.html
-share/doc/python3.6/library/email.util.html
+share/doc/python3.6/library/email.utils.html
 share/doc/python3.6/library/ensurepip.html
 share/doc/python3.6/library/enum.html
 share/doc/python3.6/library/errno.html
