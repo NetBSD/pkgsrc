@@ -1,0 +1,13 @@
+$NetBSD: patch-plug-ins_psd_Makefile.am,v 1.1 2018/12/31 13:11:12 ryoon Exp $
+
+--- plug-ins/psd/Makefile.am.orig	2004-02-10 01:14:55.000000000 +0000
++++ plug-ins/psd/Makefile.am
+@@ -15,7 +15,7 @@ INCLUDES = \
+ LDADD = \
+ 	$(top_builddir)/lib/libcinepaint.la	\
+ 	$(X_LIBS)				\
+-	-lc
++	-lm
+ 
+ DEPS = \
+ 	$(top_builddir)/lib/libcinepaint.la

@@ -1,0 +1,14 @@
+$NetBSD: patch-app_depth_Makefile.am,v 1.1 2018/12/31 13:11:12 ryoon Exp $
+
+--- app/depth/Makefile.am.orig	2007-10-25 10:14:01.000000000 +0000
++++ app/depth/Makefile.am
+@@ -11,7 +11,8 @@ noinst_LTLIBRARIES = libdepth.la
+ 
+ libdepth_la_LIBADD = \
+ 	$(top_builddir)/lib/libcinepaint.la \
+-	$(GTK_LIBS)
++	$(GTK_LIBS) \
++	-lm
+ 
+ libdepth_la_SOURCES = \
+ 	bezier_select.c \
