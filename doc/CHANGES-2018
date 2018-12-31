@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5369 2018/12/31 09:43:20 wen Exp $
+$NetBSD: CHANGES-2018,v 1.5370 2018/12/31 09:50:33 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7492,3 +7492,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Carp-Clan to 6.07 [wen 2018-12-31]
 	Updated devel/p5-CPAN-Perl-Releases to 3.86 [wen 2018-12-31]
 	Updated devel/p5-CPAN to 2.22 [wen 2018-12-31]
+	Updated devel/p5-File-Find-Rule-Permissions to 2.04 [wen 2018-12-31]
