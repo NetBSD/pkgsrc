@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.45 2018/07/14 16:05:19 maya Exp $
+$NetBSD: distinfo,v 1.46 2018/12/31 15:38:55 rhialto Exp $
 
-SHA1 (vice-3.2.tar.gz) = ab240eed57d4af1e215e4c9c23c437f45cedf6bf
-RMD160 (vice-3.2.tar.gz) = 4e3fb04607dda7188d49fb5f68c3766925212cc2
-SHA512 (vice-3.2.tar.gz) = d05081db90e2ee85745ecdee0b692a5c485b76b21a56463b17639de29c29c6deda3c39504122d8440f1667156d11dad504cea76b9b0272fc770ccfe0da3df616
-Size (vice-3.2.tar.gz) = 30279589 bytes
-SHA1 (patch-configure) = f810d83265f5b8e7162c7ff6dbbca7d84e163de0
-SHA1 (patch-data_fonts_Makefile.in) = 614a433448ec422108e5125c71d2e83fa3ecc21c
-SHA1 (patch-po_Makefile.in.in) = 6e028dde8a74f6c5d511057a19580285e3d506c7
+SHA1 (vice-3.3.tar.gz) = 55a34feb29955da40067ee5a5171278ed0191c93
+RMD160 (vice-3.3.tar.gz) = 7b014f2b3ed1287e74ba93c1e30a547fe40582ce
+SHA512 (vice-3.3.tar.gz) = 702942e33b6e3d7e29ca6ed483242319ed5f6be26831def88a282cf7dce25d4c34dbf3651fcf8b583492fcb280ce5f4304c6eda3712088a73db24772c7a2bb3a
+Size (vice-3.3.tar.gz) = 22742913 bytes
+SHA1 (patch-configure) = fd17525277067aa8aee3e2ea85d4c59c7f52a969
+SHA1 (patch-data_fonts_Makefile.in) = ed5b427acb6c6a20ff9e69fa9863b108e1d1675d

@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.135 2018/11/23 08:06:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.136 2018/12/31 15:38:55 rhialto Exp $
 
-DISTNAME=	vice-3.2
-PKGREVISION=	4
+DISTNAME=	vice-3.3
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vice-emu/}
-#MASTER_SITES+=	ftp://ftp.zimmers.net/pub/cbm/crossplatform/emulators/VICE/
-#MASTER_SITES+=	http://www.zimmers.net/anonftp/pub/cbm/crossplatform/emulators/VICE/
 
-MAINTAINER=	rhialto@falu.nl
+MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	http://vice-emu.sourceforge.net/
 COMMENT=	Emulator for C64, C128, CBM-II, PET, VIC20, Plus4 and C16
 LICENSE=	gnu-gpl-v2
@@ -19,11 +16,10 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 
 USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake msgfmt pkg-config perl
+USE_LANGUAGES=		c c++11
+USE_TOOLS+=		gmake pkg-config perl
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-ethernet
-CONFIGURE_ARGS+=	--enable-fullscreen
 CONFIGURE_ARGS.NetBSD+=	--without-oss
 
 # Avoid PLIST mismatch if these programs are installed
@@ -35,7 +31,15 @@ FONTS_DIRS.x11=		${PREFIX}/share/vice/fonts
 REQD_DIRS+=		${PREFIX}/share/vice/fonts
 REQD_DIRS+=		${PREFIX}/share/vice
 
-DEPENDS+=		xa65-[0-9]*:../../devel/xa65
+BUILD_DEPENDS+=		xa65-[0-9]*:../../devel/xa65
+
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	post-configure
+SUBST_FILES.prefix=	man/vice.1
+SUBST_FILES.prefix+=	doc/html/vice_4.html
+SUBST_FILES.prefix+=	doc/vice.info
+SUBST_FILES.prefix+=	doc/vice.txt
+SUBST_SED.prefix=	-e 's|/usr/local|${PREFIX}|g'
 
 .include "options.mk"
 
@@ -43,7 +47,6 @@ DEPENDS+=		xa65-[0-9]*:../../devel/xa65
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/mpg123/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
