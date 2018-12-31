@@ -1,0 +1,23 @@
+$NetBSD: patch-plug-ins_rawphoto_Makefile.am,v 1.1 2018/12/31 13:11:12 ryoon Exp $
+
+--- plug-ins/rawphoto/Makefile.am.orig	2007-03-21 09:41:33.000000000 +0000
++++ plug-ins/rawphoto/Makefile.am
+@@ -23,8 +23,7 @@ INCLUDES = \
+ 
+ LDADD = \
+ 	$(top_builddir)/lib/libcinepaint.la	\
+-	$(X_LIBS)				\
+-	-lc
++	$(X_LIBS)
+ 
+ DEPS = $(top_builddir)/lib/libcinepaint.la
+ 
+@@ -32,7 +31,7 @@ rawphoto_DEPENDENCIES = $(DEPS)
+ 
+ dcraw_LDADD = \
+ 	$(LCMS_LIB) \
+-	-ljpeg -lz -lc -lm
++	-ljpeg -lz -lm -lintl
+ 
+ .PHONY: files
+ 
