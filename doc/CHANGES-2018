@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5365 2018/12/31 06:21:51 maya Exp $
+$NetBSD: CHANGES-2018,v 1.5366 2018/12/31 09:13:56 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7488,3 +7488,4 @@ Changes to the packages collection and infrastructure in 2018:
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2018Q4 branch [wiz 2018-12-30]
 	Updated doc/guide to 20181231 [leot 2018-12-30]
 	Updated emulators/e-uae to 0.8.28.99.4 [maya 2018-12-31]
+	Updated devel/p5-Array-Compare to 3.0.2 [wen 2018-12-31]
