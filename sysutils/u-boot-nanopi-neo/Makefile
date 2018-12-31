@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/12/31 15:06:45 jmcneill Exp $
+# $NetBSD: Makefile,v 1.5 2018/12/31 15:06:47 jmcneill Exp $
 
 UBOOT_TARGET=		nanopi-neo
 UBOOT_CONFIG=		nanopi_neo_defconfig
