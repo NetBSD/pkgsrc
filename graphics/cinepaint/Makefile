@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.62 2018/11/14 22:21:35 kleink Exp $
+# $NetBSD: Makefile,v 1.63 2018/12/31 13:11:12 ryoon Exp $
 
-DISTNAME=	cinepaint-0.22-1
-PKGNAME=	cinepaint-0.22.1
-PKGREVISION=	34
+DISTNAME=	cinepaint-1.0-4
+PKGNAME=	cinepaint-1.0.4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cinepaint/}
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.cinepaint.org/
 COMMENT=	Motion picture painting and image retouching program
+LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND mit AND modified-bsd
 
 MAKE_JOBS_SAFE=		no
 
@@ -32,4 +32,5 @@ BUILDLINK_API_DEPENDS.lcms+=	lcms>=1.13 # needs _cmsLCMScolorSpace
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"

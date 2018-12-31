@@ -1,0 +1,15 @@
+$NetBSD: patch-plug-ins_snoise_Makefile.am,v 1.1 2018/12/31 13:11:12 ryoon Exp $
+
+--- plug-ins/snoise/Makefile.am.orig	2011-11-28 17:11:31.000000000 +0000
++++ plug-ins/snoise/Makefile.am
+@@ -14,9 +14,8 @@ INCLUDES = \
+ 
+ LDADD = $(top_builddir)/lib/libcinepaint.la	\
+ 	$(X_LIBS)				\
+-        $(top_builddir)/libhalf/cinepaint_half.lo       \
+         $(OPENEXR_LIBS) \
+-	-lc
++	-lm
+ 
+ DEPS = \
+ 	$(top_builddir)/lib/libcinepaint.la
