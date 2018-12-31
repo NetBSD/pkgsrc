@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/12/31 17:42:02 leot Exp $
+
+SHA1 (asciinema-2.0.1.tar.gz) = b263f4753cc701826313dfd1f695109af1e59a1e
+RMD160 (asciinema-2.0.1.tar.gz) = 2333a8c4d0c9c196d5f48a6c69213649d9aaaa0c
+SHA512 (asciinema-2.0.1.tar.gz) = dc6892b068161f111c53724f0de8bd82bbd9341f278733fc4de775a574ba5841e695115cadbbbe77ef58990f7b4059526c7c1438d4067ff9b3108eb71200b097
+Size (asciinema-2.0.1.tar.gz) = 17413 bytes
