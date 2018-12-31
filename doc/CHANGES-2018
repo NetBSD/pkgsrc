@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5383 2018/12/31 21:14:18 leot Exp $
+$NetBSD: CHANGES-2018,v 1.5384 2018/12/31 21:44:23 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7511,3 +7511,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added misc/py-asciinema version 2.0.1 [leot 2018-12-31]
 	Updated multimedia/intel-vaapi-driver to 2.3.0 [leot 2018-12-31]
 	Updated net/youtube-dl to 20181231 [leot 2018-12-31]
+	Updated emulators/PC6001VX to 3.1.1 [tsutsui 2018-12-31]
