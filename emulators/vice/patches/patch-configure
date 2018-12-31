@@ -1,14 +1,47 @@
-$NetBSD: patch-configure,v 1.1 2017/08/16 17:54:09 adam Exp $
+$NetBSD: patch-configure,v 1.2 2018/12/31 15:38:55 rhialto Exp $
 
-1. Portability problem with "text xx == yy"
-   (in a section for some other OS, so not too relevant).
-2. Use the NetBSD configuration for every OS since the PLIST is
+1. Use the NetBSD configuration for every OS since the PLIST is
    hardcoded for that.  Should fix every non-NetBSD platform.
 
---- configure.orig	2012-11-02 21:06:04.000000000 +0000
+--- configure.orig	2018-12-19 21:25:02.000000000 +0000
 +++ configure
-@@ -20158,7 +20158,7 @@ fi
+@@ -8782,34 +8782,6 @@ case "$host_os" in
  esac
+ 
+ 
+-case "$host_os" in
+-  freebsd*)
+-    CPPFLAGS="$CPPFLAGS -I/usr/local/include"
+-    fbsdrtp=`${CONFIG_SHELL-/bin/sh} "$srcdir/config.rpath" "$CC" "$GCC" "$LDFLAGS" "$LD" "$with_gnu_ld" "$host" "/usr/local/lib"`
+-    LDFLAGS="$LDFLAGS $fbsdrtp -L/usr/local/lib"
+-    ;;
+-  netbsd*)
+-    CPPFLAGS="$CPPFLAGS -I/usr/pkg/include -I/usr/include"
+-    nbsdrtp=`${CONFIG_SHELL-/bin/sh} "$srcdir/config.rpath" "$CC" "$GCC" "$LDFLAGS" "$LD" "$with_gnu_ld" "$host" "/usr/pkg/lib"`
+-    LDFLAGS="$LDFLAGS $nbsdrtp -L/usr/pkg/lib"
+-    if test -d "/usr/X11R7/lib"; then
+-      rtp=`${CONFIG_SHELL-/bin/sh} "$srcdir/config.rpath" "$CC" "$GCC" "$LDFLAGS" "$LD" "$with_gnu_ld" "$host" "/usr/X11R7/lib"`
+-      LDFLAGS="$LDFLAGS $rtp"
+-    else
+-      if test -d "/usr/X11R6/lib"; then
+-        rtp=`${CONFIG_SHELL-/bin/sh} "$srcdir/config.rpath" "$CC" "$GCC" "$LDFLAGS" "$LD" "$with_gnu_ld" "$host" "/usr/X11R6/lib"`
+-        LDFLAGS="$LDFLAGS $rtp"
+-      fi
+-    fi
+-    ;;
+-  dragonfly*)
+-    CPPFLAGS="$CPPFLAGS -I/usr/local/include"
+-    dfbsdrtp=`${CONFIG_SHELL-/bin/sh} "$srcdir/config.rpath" "$CC" "$GCC" "$LDFLAGS" "$LD" "$with_gnu_ld" "$host" "/usr/local/lib"`
+-    LDFLAGS="$LDFLAGS $dfbsdrtp -L/usr/local/lib"
+-    ;;
+-  *)
+-    ;;
+-esac
+ 
+ 
+ if test x"$enable_shared_ffmpeg" = "xyes" -o x"$enable_static_ffmpeg" = "xyes"; then
+@@ -21894,7 +21866,7 @@ _ACEOF
+ 
  
  case "$host_os" in
 -  netbsd*)
@@ -16,12 +49,10 @@ $NetBSD: patch-configure,v 1.1 2017/08/16 17:54:09 adam Exp $
      VICEDIR="$PREFIX/share/vice"
       if true; then
    ALTERNATE_DOCDIR_TRUE=
-@@ -20167,52 +20167,6 @@ else
-   ALTERNATE_DOCDIR_TRUE='#'
-   ALTERNATE_DOCDIR_FALSE=
+@@ -21905,51 +21877,6 @@ else
  fi
--
--    ;;
+ 
+     ;;
 -  freebsd*)
 -    VICEDIR="$PREFIX/lib/vice"
 -     if true; then
@@ -66,6 +97,7 @@ $NetBSD: patch-configure,v 1.1 2017/08/16 17:54:09 adam Exp $
 -  ALTERNATE_DOCDIR_FALSE=
 -fi
 -
-     ;;
+-    ;;
  esac
+ 
  
