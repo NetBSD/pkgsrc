@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5376 2018/12/31 13:21:33 wen Exp $
+$NetBSD: CHANGES-2018,v 1.5377 2018/12/31 13:55:55 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7504,3 +7504,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-tox to 3.6.1 [adam 2018-12-31]
 	Updated graphics/cinepaint to 1.0.4 [ryoon 2018-12-31]
 	Updated devel/p5-File-Flat to 1.05 [wen 2018-12-31]
+	Updated lang/py37-html-docs to 3.7.2 [leot 2018-12-31]
