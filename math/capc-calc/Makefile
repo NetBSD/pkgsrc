@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2017/01/05 16:52:19 roy Exp $
+# $NetBSD: Makefile,v 1.48 2018/12/31 16:35:25 chuck Exp $
 #
 
-DISTNAME=	calc-2.12.4.13
+DISTNAME=	calc-2.12.7.1
 PKGNAME=	capc-${DISTNAME:S/t/./}
-PKGREVISION=	3
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=calc/}
 EXTRACT_SUFX=	.tar.bz2

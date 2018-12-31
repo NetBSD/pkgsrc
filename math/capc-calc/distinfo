@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.27 2016/04/01 22:29:36 jperkin Exp $
+$NetBSD: distinfo,v 1.28 2018/12/31 16:35:25 chuck Exp $
 
-SHA1 (calc-2.12.4.13.tar.bz2) = 4d48fb78c903f10e9bcd05c42105498637dea834
-RMD160 (calc-2.12.4.13.tar.bz2) = c04d995a500ad7b0be27afbb6edaa6978c42437e
-SHA512 (calc-2.12.4.13.tar.bz2) = 7b7136c793917652ce2f2b3866b2db16a69dbead729d8a72b8c1359ebb8a4e1d4e7a3a8b214f8e85b9ccf41193ba6ffcb49926cc68f494e2b6cdff58559f2534
-Size (calc-2.12.4.13.tar.bz2) = 970778 bytes
-SHA1 (patch-aa) = c4a3850a2d1172174f750c795b2c77065bab6af6
+SHA1 (calc-2.12.7.1.tar.bz2) = 34a197fae1d28a39977f8441a6c0cbb95b516c6b
+RMD160 (calc-2.12.7.1.tar.bz2) = 080d21defde4f2f7a6c48c8a235d12c5f2c225e5
+SHA512 (calc-2.12.7.1.tar.bz2) = aeef950afffab311611168a8c390c7bcccdd3bcd0cc721bab2940d90a9e98ea0c1d79ee74e8053d88511084f2369f03d92587ff5d013d7fb859343e7a4450f6c
+Size (calc-2.12.7.1.tar.bz2) = 967943 bytes
+SHA1 (patch-Makefile) = 72678b64953393bf90b9bd8817d3bb214c04cda4
 SHA1 (patch-fposval_c) = 8a8d08f8b566e583faa3bd9033c4a9ac90cb343c
