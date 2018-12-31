@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2018/06/24 23:18:01 thorpej Exp $
+# $NetBSD: Makefile,v 1.2 2018/12/31 15:06:46 jmcneill Exp $
 
 UBOOT_TARGET=		orangepi-zero-plus
 UBOOT_CONFIG=		orangepi_zero_plus_defconfig
 UBOOT_BIN=		u-boot-sunxi-with-spl.bin
+
+PKGREVISION=		1
 
 # Switch to EL1 before booting kernel (required for 32-bit support)
 PKG_DEFAULT_OPTIONS+=   el1
