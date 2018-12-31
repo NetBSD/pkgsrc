@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2017/06/07 14:42:25 ryoon Exp $
+$NetBSD: distinfo,v 1.7 2018/12/31 13:20:16 wen Exp $
 
-SHA1 (File-Flat-1.04.tar.gz) = 09d9bef3425ef9bec75b5fb7a664e2e33052707e
-RMD160 (File-Flat-1.04.tar.gz) = 36847040787880043b569b2fac86509eb094b7a0
-SHA512 (File-Flat-1.04.tar.gz) = 5271c45be6ec057247310f74da13c59e9549d1514e13e8111708ca9288439a198dae95a71d561c07afd2ec32663fac436f7b8df1160c3a7f071b597ba12bd789
-Size (File-Flat-1.04.tar.gz) = 47183 bytes
+SHA1 (File-Flat-1.05.tar.gz) = 2e833aa68e30fa4effb2f391fbc5aeb04b88dd02
+RMD160 (File-Flat-1.05.tar.gz) = 560c9ef85a43ea14fd4ae0e897b285cd79190094
+SHA512 (File-Flat-1.05.tar.gz) = e2ec5d3f2cec1cd8ea5e3475c5e3f5094a70867b6b50afef6c072e132bb4652eceb012ccf77d5fc4273dae75ab955f374e4451c5b4beb9821aa9311bdfb438cc
+Size (File-Flat-1.05.tar.gz) = 48576 bytes
 SHA1 (patch-Makefile.PL) = 5644f639a72b19fc26bf3d26cad48f431e662fec
