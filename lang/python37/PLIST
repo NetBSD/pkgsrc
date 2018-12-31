@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/11/13 11:54:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/12/31 10:07:59 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 ${PLIST.pymalloc}bin/python${PY_VER_SUFFIX}
@@ -42,6 +42,17 @@ include/python${PY_VER_SUFFIX}${M}/genobject.h
 include/python${PY_VER_SUFFIX}${M}/graminit.h
 include/python${PY_VER_SUFFIX}${M}/grammar.h
 include/python${PY_VER_SUFFIX}${M}/import.h
+include/python${PY_VER_SUFFIX}${M}/internal/ceval.h
+include/python${PY_VER_SUFFIX}${M}/internal/condvar.h
+include/python${PY_VER_SUFFIX}${M}/internal/context.h
+include/python${PY_VER_SUFFIX}${M}/internal/gil.h
+include/python${PY_VER_SUFFIX}${M}/internal/hamt.h
+include/python${PY_VER_SUFFIX}${M}/internal/hash.h
+include/python${PY_VER_SUFFIX}${M}/internal/import.h
+include/python${PY_VER_SUFFIX}${M}/internal/mem.h
+include/python${PY_VER_SUFFIX}${M}/internal/pygetopt.h
+include/python${PY_VER_SUFFIX}${M}/internal/pystate.h
+include/python${PY_VER_SUFFIX}${M}/internal/warnings.h
 include/python${PY_VER_SUFFIX}${M}/intrcheck.h
 include/python${PY_VER_SUFFIX}${M}/iterobject.h
 include/python${PY_VER_SUFFIX}${M}/listobject.h
@@ -1363,8 +1374,8 @@ lib/python${PY_VER_SUFFIX}/ensurepip/__init__.pyo
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.py
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyo
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-10.0.1-py2.py3-none-any.whl
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-39.0.1-py2.py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-18.1-py2.py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-40.6.2-py2.py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyo
@@ -3171,10 +3182,6 @@ lib/python${PY_VER_SUFFIX}/test/test_asyncio/echo3.pyo
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/functional.py
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/functional.pyc
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/functional.pyo
-lib/python${PY_VER_SUFFIX}/test/test_asyncio/keycert3.pem
-lib/python${PY_VER_SUFFIX}/test/test_asyncio/pycacert.pem
-lib/python${PY_VER_SUFFIX}/test/test_asyncio/ssl_cert.pem
-lib/python${PY_VER_SUFFIX}/test/test_asyncio/ssl_key.pem
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_base_events.py
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_base_events.pyc
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_base_events.pyo
