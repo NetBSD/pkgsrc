@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2018/12/14 00:52:27 jmcneill Exp $
+# $NetBSD: Makefile,v 1.4 2018/12/31 15:06:46 jmcneill Exp $
 
 UBOOT_TARGET=		pine-h64
 UBOOT_CONFIG=		pine_h64_defconfig
 UBOOT_BIN=		u-boot-sunxi-with-spl.bin
+
+PKGREVISION=		1
 
 post-extract:
 	${CP} ${PREFIX}/share/arm-trusted-firmware/sun50i-h6/bl31.bin ${WRKSRC}
