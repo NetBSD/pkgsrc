@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.5378 2018/12/31 14:25:47 leot Exp $
+$NetBSD: CHANGES-2018,v 1.5379 2018/12/31 15:41:58 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -7506,3 +7506,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-File-Flat to 1.05 [wen 2018-12-31]
 	Updated lang/py37-html-docs to 3.7.2 [leot 2018-12-31]
 	Updated lang/py36-html-docs to 3.6.8 [leot 2018-12-31]
+	Updated emulators/vice to 3.3 [rhialto 2018-12-31]
