@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2014/01/15 16:23:31 drochner Exp $
+@comment $NetBSD: PLIST,v 1.15 2018/12/31 16:35:25 chuck Exp $
 bin/calc
 bin/calc-static
 bin/cscript/4dsphere
@@ -312,6 +312,7 @@ share/calc/help/log
 share/calc/help/lowbit
 share/calc/help/ltol
 share/calc/help/makelist
+share/calc/help/man
 share/calc/help/mat
 share/calc/help/matdim
 share/calc/help/matfill
@@ -457,7 +458,6 @@ share/calc/linear.cal
 share/calc/lnseries.cal
 share/calc/lucas.cal
 share/calc/lucas_chk.cal
-share/calc/lucas_tbl.cal
 share/calc/mersenne.cal
 share/calc/mfactor.cal
 share/calc/mod.cal
