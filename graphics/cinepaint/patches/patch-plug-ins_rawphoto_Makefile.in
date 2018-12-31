@@ -1,0 +1,13 @@
+$NetBSD: patch-plug-ins_rawphoto_Makefile.in,v 1.1 2018/12/31 13:11:12 ryoon Exp $
+
+--- plug-ins/rawphoto/Makefile.in.orig	2013-05-05 20:58:17.000000000 +0000
++++ plug-ins/rawphoto/Makefile.in
+@@ -436,7 +436,7 @@ clean-pluginlibPROGRAMS:
+ 	rm -f $$list
+ dcraw$(EXEEXT): $(dcraw_OBJECTS) $(dcraw_DEPENDENCIES) 
+ 	@rm -f dcraw$(EXEEXT)
+-	$(LINK) $(dcraw_OBJECTS) $(dcraw_LDADD) $(LIBS)
++	$(LINK) $(dcraw_OBJECTS) $(dcraw_LDADD) $(LIBS) -lintl
+ rawphoto$(EXEEXT): $(rawphoto_OBJECTS) $(rawphoto_DEPENDENCIES) 
+ 	@rm -f rawphoto$(EXEEXT)
+ 	$(LINK) $(rawphoto_OBJECTS) $(rawphoto_LDADD) $(LIBS)

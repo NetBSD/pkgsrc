@@ -1,0 +1,34 @@
+$NetBSD: patch-configure,v 1.1 2018/12/31 13:11:12 ryoon Exp $
+
+--- configure.orig	2013-05-05 20:19:45.000000000 +0000
++++ configure
+@@ -18939,7 +18939,7 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-if test "x$PKG_CONFIG" == "xno"; then
++if test "x$PKG_CONFIG" = "xno"; then
+   { $as_echo "$as_me:$LINENO: WARNING:
+ *** Check for pkg-config failed. Many packages requires it.
+ *** You can download it from http://pkgconfig.sourceforge.net/  ." >&5
+@@ -19544,16 +19544,16 @@ precision=PRECISION_U16
+ # Check whether --enable-precision was given.
+ if test "${enable_precision+set}" = set; then
+   enableval=$enable_precision; if eval "test x$enable_precision != x"; then
+-  if eval "test x$enable_precision == xu8"; then
++  if eval "test x$enable_precision = xu8"; then
+     precision=PRECISION_U8
+   fi
+-  if eval "test x$enable_precision == xu16"; then
++  if eval "test x$enable_precision = xu16"; then
+     precision=PRECISION_U16
+   fi
+-  if eval "test x$enable_precision == xhalf"; then
++  if eval "test x$enable_precision = xhalf"; then
+     precision=PRECISION_FLOAT16
+   fi
+-  if eval "test x$enable_precision == xfloat"; then
++  if eval "test x$enable_precision = xfloat"; then
+     precision=PRECISION_FLOAT
+   fi
+ fi

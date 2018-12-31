@@ -1,0 +1,20 @@
+$NetBSD: patch-app_Makefile.am,v 1.1 2018/12/31 13:11:12 ryoon Exp $
+
+--- app/Makefile.am.orig	2008-10-26 07:47:29.000000000 +0000
++++ app/Makefile.am
+@@ -420,11 +420,14 @@ cinepaint_LDADD = \
+ 	$(GTK_LIBS) \
+ 	$(X_LIBS) \
+ 	$(OYRANOS_LIBS) \
+-	$(LCMS_LIB)
++	$(LCMS_LIB) \
++	-lX11 \
++	-lm
+ 
+ cinepaint_remote_LDADD = \
+ 	$(GTK_LIBS) \
+ 	$(X_LIBS) \
++	-lX11 \
+ 	$(XMU_LIB)
+ 
+ ## DEPS = $(top_builddir)/lib/libcinepainti.a
