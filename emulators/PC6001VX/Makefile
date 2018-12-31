@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2018/12/22 16:06:30 tsutsui Exp $
+# $NetBSD: Makefile,v 1.30 2018/12/31 21:43:58 tsutsui Exp $
 
-VERSION=		3.1.0
+VERSION=		3.1.1
 DISTNAME=		PC6001VX_${VERSION}_src
 PKGNAME=		${DISTNAME:S/_src//:S/_/-/}
 #PKGREVISION=		
