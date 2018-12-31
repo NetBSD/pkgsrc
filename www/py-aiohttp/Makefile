@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2018/12/22 22:45:47 adam Exp $
+# $NetBSD: Makefile,v 1.34 2018/12/31 11:19:16 adam Exp $
 
-DISTNAME=	aiohttp-3.5.0
+DISTNAME=	aiohttp-3.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiohttp/}
@@ -18,7 +18,9 @@ DEPENDS+=	${PYPKGPREFIX}-yarl>=1.0:../../www/py-yarl
 TEST_DEPENDS+=	${PYPKGPREFIX}-async_generator-[0-9]*:../../devel/py-async_generator
 TEST_DEPENDS+=	${PYPKGPREFIX}-gunicorn-[0-9]*:../../www/py-gunicorn
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 34
 
