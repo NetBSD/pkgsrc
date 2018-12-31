@@ -1,0 +1,13 @@
+$NetBSD: patch-plug-ins_unsharp_Makefile.am,v 1.1 2018/12/31 13:11:12 ryoon Exp $
+
+--- plug-ins/unsharp/Makefile.am.orig	2004-02-10 00:47:34.000000000 +0000
++++ plug-ins/unsharp/Makefile.am
+@@ -15,7 +15,7 @@ INCLUDES = \
+ LDADD = \
+ 	$(top_builddir)/lib/libcinepaint.la	\
+ 	$(X_LIBS)				\
+-	-lc
++	-lm
+ 
+ DEPS = $(top_builddir)/lib/libcinepaint.la
+ 
