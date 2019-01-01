@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2018/09/24 01:26:50 taca Exp $
+# $NetBSD: Makefile,v 1.49 2019/01/01 20:22:55 nia Exp $
 
-DISTNAME=	bulk-medium-20180924
+DISTNAME=	bulk-medium-20190101
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -56,9 +56,7 @@ BUILD_DEPENDS+=	vorbis-tools-[0-9]*:../../audio/vorbis-tools
 BUILD_DEPENDS+=	jabberd>=1<2:../../chat/jabberd
 BUILD_DEPENDS+=	jabberd>=2:../../chat/jabberd2
 BUILD_DEPENDS+=	sirc-[0-9]*:../../chat/sirc
-BUILD_DEPENDS+=	xchat-[0-9]*:../../chat/xchat
-BUILD_DEPENDS+=	xchat-perl-[0-9]*:../../chat/xchat-perl
-BUILD_DEPENDS+=	xchat-python-[0-9]*:../../chat/xchat-python
+BUILD_DEPENDS+=	hexchat-[0-9]*:../../chat/hexchat
 BUILD_DEPENDS+=	fribidi-[0-9]*:../../converters/fribidi
 BUILD_DEPENDS+=	mysql-client>=5.5<5.6:../../databases/mysql55-client
 BUILD_DEPENDS+=	mysql-client>=5.6:../../databases/mysql56-client
