@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.12 2019/01/01 20:09:37 leot Exp $
+$NetBSD: CHANGES-2019,v 1.13 2019/01/01 22:16:27 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -14,3 +14,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/gtk3 to 3.24.2 [leot 2019-01-01]
 	Updated editors/mg to 20110905nb4 [wiz 2019-01-01]
 	Updated net/gallery-dl to 1.6.2 [leot 2019-01-01]
+	Updated emulators/snes9x to 1.58 [nia 2019-01-01]
