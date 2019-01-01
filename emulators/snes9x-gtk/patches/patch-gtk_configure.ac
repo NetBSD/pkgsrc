@@ -1,0 +1,20 @@
+$NetBSD: patch-gtk_configure.ac,v 1.1 2019/01/01 22:16:15 nia Exp $
+
+Attempt to fix the zlib detection.
+
+--- gtk/configure.ac.orig	2018-12-16 17:04:59.000000000 +0000
++++ gtk/configure.ac
+@@ -330,11 +330,10 @@ fi
+ CFLAGS="$CFLAGS -DNETPLAY_SUPPORT -DJMA_SUPPORT"
+ 
+ if test yes = "$with_zlib"; then
+-  AC_CHECK_HEADERS(zlib.h)
+-  AC_CHECK_LIB(z, gzread, [
++  AC_CHECK_HEADERS(zlib.h, [
+         CFLAGS="$CFLAGS -DZLIB"
+         LIBS="$LIBS -lz"
+-      ], ,)
++      ])
+ fi
+ 
+ if test yes = "$enable_dangerous_hacks"; then
