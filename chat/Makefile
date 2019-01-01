@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.211 2018/12/22 18:17:39 nia Exp $
+# $NetBSD: Makefile,v 1.212 2019/01/01 09:41:20 nia Exp $
 #
 
 COMMENT=	Communication programs
@@ -147,10 +147,6 @@ SUBDIR+=	unrealircd
 SUBDIR+=	vicq
 SUBDIR+=	weechat
 SUBDIR+=	xaric
-SUBDIR+=	xchat
-SUBDIR+=	xchat-perl
-SUBDIR+=	xchat-python
-SUBDIR+=	xchat-systray-integration
 SUBDIR+=	ysm
 SUBDIR+=	zenicb
 SUBDIR+=	zenirc
