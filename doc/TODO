@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18730 2019/01/01 18:36:21 nia Exp $
+$NetBSD: TODO,v 1.18731 2019/01/01 22:16:27 nia Exp $
 
 Suggested new packages
 ======================
@@ -1313,7 +1313,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o skype-4.3
 	o smokeping-2.6.11
 	o smproxy-1.0.3
-	o snes9x-1.55
 	o snobol-2.0
 	o snow-20130616
 	o snownews-1.6.10
