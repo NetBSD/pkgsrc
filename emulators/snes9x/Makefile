@@ -1,102 +1,57 @@
-# $NetBSD: Makefile,v 1.57 2018/08/15 07:21:07 nia Exp $
+# $NetBSD: Makefile,v 1.58 2019/01/01 22:16:14 nia Exp $
 
-SNESVER=		1.43
-DISTNAME=		snes9x-${SNESVER}-src
-PKGNAME=		snes9x-${SNESVER}
-PKGREVISION=		1
-CATEGORIES=		emulators
-MASTER_SITES=		http://www.lysator.liu.se/snes9x/${SNESVER}/
-MASTER_SITES+=		http://files.ipherswipsite.com/snes9x/
+.include "../../emulators/snes9x/Makefile.common"
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.snes9x.com/
-COMMENT=		Super Nintendo Entertainment System (SNES) emulator
-LICENSE=		snes9x-license
+MAINTAINER=	nia@NetBSD.org
+COMMENT=	Super Nintendo Entertainment System (SNES) emulator (CLI version)
 
-BROKEN_ON_PLATFORM=	${LP64PLATFORMS}
-MAKE_JOBS_SAFE=		no
-
-WRKSRC=			${WRKDIR}/${DISTNAME}/snes9x
-USE_LANGUAGES=		c c++
+CONFIGURE_DIRS=		unix
+BUILD_DIRS=		unix
 USE_TOOLS+=		gmake
-PTHREAD_OPTS+=		require
-INSTALLATION_DIRS=	bin
-GNU_CONFIGURE=		YES
+GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=	--x-libraries=${X11BASE}/lib --x-includes=${X11BASE}/include
+CONFIGURE_ARGS+=	--enable-netplay
 
-SUBST_CLASSES+=		nodos
-SUBST_STAGE.nodos=	pre-patch
-SUBST_FILES.nodos=	../language.h
-SUBST_FILES.nodos+=	../readme.txt dsp1.h dsp3emu.cpp dsp4emu.cpp
-SUBST_FILTER_CMD.nodos=	env -i ${TR} -d '\r'
+.include "../../mk/oss.buildlink3.mk"
 
-SUBST_CLASSES+=		paircpp
-SUBST_STAGE.paircpp=	pre-patch
-SUBST_FILES.paircpp=	65c816.h sa1.h
-SUBST_SED.paircpp=	-e 's|pair|snes9x_pair|g'
+.if ${OSS_TYPE} != "none"
+SUBST_CLASSES+=		oss
+SUBST_STAGE.oss=	pre-configure
+SUBST_MESSAGE.oss=	Correct path to OSS device.
+SUBST_FILES.oss+=	unix/unix.cpp
+SUBST_SED.oss=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
+
+CONFIGURE_ARGS+=	--enable-sound
+.else
+PKG_SKIP_REASON+=	"No sound support on this platform"
+.endif
+
+INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	share/doc/snes9x
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/snes9x ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/offsets ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/snes9x
-	${INSTALL_MAN} ${WRKSRC}/doc/porting.txt \
-		${DESTDIR}${PREFIX}/share/doc/snes9x
-	${INSTALL_MAN} ${WRKSRC}/changes.txt \
-		${DESTDIR}${PREFIX}/share/doc/snes9x
-	${INSTALL_MAN} ${WRKSRC}/hardware.txt \
-		${DESTDIR}${PREFIX}/share/doc/snes9x
-	${INSTALL_MAN} ${WRKSRC}/problems.txt \
-		${DESTDIR}${PREFIX}/share/doc/snes9x
-	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/readme.txt \
-		${DESTDIR}${PREFIX}/share/doc/snes9x
-	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/readme.unix \
-		${DESTDIR}${PREFIX}/share/doc/snes9x
-
-.include "../../mk/bsd.prefs.mk"
-
-PKG_OPTIONS_VAR=	PKG_OPTIONS.snes9x
-PKG_SUPPORTED_OPTIONS=	# empty
-.if ${MACHINE_ARCH} == "i386"
-BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
-PKG_SUPPORTED_OPTIONS+=	mmx
-.endif
-
-.include "../../mk/bsd.options.mk"
-
-.if ${MACHINE_ARCH} == "i386"
-CONFIGURE_ARGS+=	--with-assembler
-.  if !empty(PKG_OPTIONS:Mmmx)
-CONFIGURE_ARGS+=	--with-mmx
-.  endif
-.  if ${OBJECT_FMT} == "a.out"
-MAKE_ENV+=	FILEFORMAT=aoutb
-MAKE_ENV+=	_ASM_UNDERBARS=1
-.  else
-MAKE_ENV+=	FILEFORMAT=elf
-.  endif
-.endif
-
-.if exists(${X11BASE}/lib/libXxf86dga.a) || ${X11_TYPE} != "native"
-CONFIGURE_ARGS+=	--with-extensions
-.endif
-
-.if exists(/usr/include/usb.h) || exists(/usr/include/usbhid.h)
-MAKE_ENV+=	USBJOY=1
-.  if exists(/usr/include/usbhid.h)
-MAKE_ENV+=	USBHID_H=1
-.  endif
-.endif
-
-BUILDLINK_DEPMETHOD.libXt?=	build
+	${INSTALL_PROGRAM} ${WRKSRC}/unix/snes9x \
+	    ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/docs/changes.txt \
+	    ${DESTDIR}${PREFIX}/share/doc/snes9x
+	${INSTALL_MAN} ${WRKSRC}/docs/control-inputs.txt \
+	    ${DESTDIR}${PREFIX}/share/doc/snes9x
+	${INSTALL_MAN} ${WRKSRC}/docs/controls.txt \
+	    ${DESTDIR}${PREFIX}/share/doc/snes9x
+	${INSTALL_MAN} ${WRKSRC}/docs/porting.html \
+	    ${DESTDIR}${PREFIX}/share/doc/snes9x
+	${INSTALL_MAN} ${WRKSRC}/docs/snapshots.txt \
+	    ${DESTDIR}${PREFIX}/share/doc/snes9x
+	${INSTALL_MAN} ${WRKSRC}/unix/docs/readme_unix.html \
+	    ${DESTDIR}${PREFIX}/share/doc/snes9x
 
 .include "../../mk/libusb.buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/libXxf86dga/buildlink3.mk"
-.include "../../x11/libXxf86vm/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
-.include "../../mk/oss.buildlink3.mk"
+.include "../../x11/libXv/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

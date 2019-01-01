@@ -1,38 +1,45 @@
-# $NetBSD: Makefile,v 1.61 2018/11/14 22:21:26 kleink Exp $
+# $NetBSD: Makefile,v 1.62 2019/01/01 22:16:14 nia Exp $
 
-DISTNAME=	snes9x-1.53-src
-PKGNAME=	snes9x-gtk-1.53.81
-PKGREVISION=	40
-CATEGORIES=	emulators
-MASTER_SITES=	http://snes9x-gtk.googlecode.com/files/
-EXTRACT_SUFX=	.tar.bz2
+.include "../../emulators/snes9x/Makefile.common"
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.snes9x.com/phpbb3/viewtopic.php?p=22874
-COMMENT=	SNES emulator with GTK frontend
-LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
+PKGNAME=	snes9x-gtk-${SNES9X_VERSION}
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/gtk
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++03
-USE_TOOLS+=	intltool msgfmt msgmerge perl pkg-config xgettext
+MAINTAINER=	nia@NetBSD.org
+COMMENT=	Super Nintendo Entertainment System (SNES) emulator (GUI version)
 
-LDFLAGS.SunOS+=	-lsocket -lnsl
+CONFIGURE_DIRS+=	gtk
+BUILD_DIRS+=		gtk
+GNU_CONFIGURE=		yes
 
-.include "options.mk"
+USE_TOOLS+=	autoreconf autoconf automake pkg-config
+USE_TOOLS+=	msgfmt xgettext msgmerge
+USE_TOOLS+=	gawk
 
-.if ${MACHINE_ARCH} == "i386"
-BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
+BUILD_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
+
+.include "../../mk/oss.buildlink3.mk"
+
+.if ${OSS_TYPE} != "none"
+SUBST_CLASSES+=		oss
+SUBST_STAGE.oss=	pre-configure
+SUBST_MESSAGE.oss=	Correct path to OSS device.
+SUBST_FILES.oss+=	gtk/src/gtk_sound_driver_oss.cpp
+SUBST_SED.oss=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 .endif
 
-.include "../../audio/portaudio-devel/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
-.include "../../graphics/gtkglext/buildlink3.mk"
+BUILDLINK_TRANSFORM+=	rm:-ldl
+
+pre-configure:
+	cd ${WRKSRC}/gtk && ./autogen.sh
+
+.include "options.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
-BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.10.0
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/libXtst/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
+.include "../../x11/libXv/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
