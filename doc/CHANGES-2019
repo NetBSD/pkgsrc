@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.9 2019/01/01 18:36:20 nia Exp $
+$NetBSD: CHANGES-2019,v 1.10 2019/01/01 19:58:09 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -11,3 +11,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added graphics/ipe version 7.2.7 [wiz 2019-01-01]
 	Added emulators/dolphin-emu version 5.0 [nia 2019-01-01]
 	Updated emulators/nestopia to 1.49 [nia 2019-01-01]
+	Updated x11/gtk3 to 3.24.2 [leot 2019-01-01]
