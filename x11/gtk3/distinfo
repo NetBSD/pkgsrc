@@ -1,16 +1,14 @@
-$NetBSD: distinfo,v 1.60 2018/11/20 08:13:56 maya Exp $
+$NetBSD: distinfo,v 1.61 2019/01/01 19:57:58 leot Exp $
 
-SHA1 (gtk+-3.24.1.tar.xz) = 0a5ce28ba6065a484308093bdb56ff6056b0db3c
-RMD160 (gtk+-3.24.1.tar.xz) = f1e26685ff6a267ad0a81e0f8dd06112b6a5a5b8
-SHA512 (gtk+-3.24.1.tar.xz) = 13ddb1099a2a0eb44ea53fa4be5054a403e1b27468a33862646ba111577b7bb72b9bbe4f6aea15889c2a2bee1238023bc23524b901cf2dbb3adf0e126eb6ea5d
-Size (gtk+-3.24.1.tar.xz) = 19307612 bytes
+SHA1 (gtk+-3.24.2.tar.xz) = 3c1d2c716cd17ac85554b130f92c22dadb4e04ad
+RMD160 (gtk+-3.24.2.tar.xz) = 8229a1eef276abb01ea3924a7d6c8a1679e94eb0
+SHA512 (gtk+-3.24.2.tar.xz) = da225045cc577fccb4dc5fd2595da812d802b597950e378a678a0be0250815d982cb0b53519a2cdc02755f123164dbdad79a9178c03ecf29c85a45e757c47840
+Size (gtk+-3.24.2.tar.xz) = 21731348 bytes
 SHA1 (patch-aj) = cbfab43f27352f7c6bc57a7c562c2d84c69da07a
 SHA1 (patch-config.h.in) = dc5f8741eed554f88c0b6834cadad95083e4dc8f
 SHA1 (patch-configure) = d531b33e52facf960058f1223b70db680da35300
 SHA1 (patch-configure.ac) = 68793f40752f25ccaecc958c72c23a504670bea5
-SHA1 (patch-gdk_quartz_gdkmonitor-quartz.c) = a35b7ed5de20ae5d4586c1c09dbc39fe50b8c726
-SHA1 (patch-gdk_quartz_gdkmonitor-quartz.h) = 4b54b2a4a2ff5758520b5e25545b277e3ca4b767
-SHA1 (patch-gdk_quartz_gdkscreen-quartz.c) = 4bcbbc0afc7966b8b6c3110cd2af3ab61685a0a0
+SHA1 (patch-docs_tools_shooter.c) = e1fcd9decfaaee45ff4fa9b82bdb0c85e3d176fe
 SHA1 (patch-gdk_x11_gdkscreen-x11.h) = 455d6c3de8421984ba3c99baf51cd31982a3df78
 SHA1 (patch-gdk_x11_gdkwindow-x11.h) = c80f7c9d5a570817e54fd74fa903a53400dc6f64
 SHA1 (patch-gtk_a11y_gtkaccessibility.c) = 13232c85bd570f21ea03153dacde4ca98c7c76a8
