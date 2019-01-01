@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.1 2019/01/01 17:19:58 nia Exp $
+
+SHA1 (dolphin-emu-5.0.tar.gz) = 6553f9fe5281326b86f33fb6b99a93fe6a8820af
+RMD160 (dolphin-emu-5.0.tar.gz) = e8c4cb2c903b78c3e21cb12b0724ab0728c1391a
+SHA512 (dolphin-emu-5.0.tar.gz) = 8de76f811abfb82e19502336734e86ba600c11d9fa95bcf7f70a2a525165d07ead826854c39377602aab7856a057af9ba91bff458cf2dd008712527290489d3a
+Size (dolphin-emu-5.0.tar.gz) = 38246344 bytes
+SHA1 (patch-CMakeLists.txt) = cb1d89570374898bf8cf260a2df8ac2aba3f15fa
+SHA1 (patch-Externals_SFML_include_SFML_Config.hpp) = 75ece2ce86b54b219a80d6ff028ecc80a00454f5
+SHA1 (patch-Source_Core_Common_FileUtil.cpp) = 27b859714e294abbfb3f468928e22b30abfd0099
+SHA1 (patch-Source_Core_Common_MemoryUtil.cpp) = af681a3f43687f7af09c87732a7a2da8e8c58e05
+SHA1 (patch-Source_Core_Common_StringUtil.cpp) = b2b5d5eef849003b460a230d41e51682d98cd67d
+SHA1 (patch-Source_Core_Common_Thread.cpp) = 8356c548c43ad762f4d226cf3d51a854f0a8b7f3
+SHA1 (patch-Source_Core_Core_HW_EXI__DeviceEthernet.h) = 144250d51b78e287a8305e75ee06e24c305c3d75
+SHA1 (patch-Source_Core_Core_IPC__HLE_WII__Socket.h) = 8de6dec95689efb63c3795d3e361b5bd9a8d7768
+SHA1 (patch-Source_Core_Core_MemTools.cpp) = 2316e8103749fe174db7f694f2eeb22035cd135c
+SHA1 (patch-Source_Core_VideoCommon_DriverDetails.cpp) = 227d2ab5835be08b23f13346c9b9252ae3295155
+SHA1 (patch-Source_Core_VideoCommon_DriverDetails.h) = dc3a8f559253ea2a3f75223cfe7eb0a6c2c39ce1
