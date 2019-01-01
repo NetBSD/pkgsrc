@@ -1,0 +1,21 @@
+Ipe is a drawing editor for creating figures in PDF or (encapsulated)
+Postscript format. It supports making small figures for inclusion
+into LaTeX-documents as well as making multi-page PDF presentations
+that can be shown on-line with Acrobat Reader.
+
+Ipe's main features are:
+
+ *  Entry of text as LaTeX source code. This makes it easy to enter
+    mathematical expressions, and to reuse the LaTeX-macros of the
+    main document. In the display text is displayed as it will
+    appear in the figure.
+ *  Produces pure Postscript/PDF, including the text. Ipe converts
+    the LaTeX-source to PDF or Postscript when the file is saved.
+ *  It is easy to align objects with respect to each other (for
+    instance, to place a point on the intersection of two lines,
+    or to draw a circle through three given points) using various
+    snapping modes.
+ *  Users can provide ipelets (Ipe plug-ins) to add functionality
+    to Ipe. This way, Ipe can be extended for each task at hand.
+ *  The text model is based on Unicode, and has been tested with
+    Korean, Chinese, and Japanese.
