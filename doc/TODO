@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18729 2019/01/01 00:55:17 leot Exp $
+$NetBSD: TODO,v 1.18730 2019/01/01 18:36:21 nia Exp $
 
 Suggested new packages
 ======================
@@ -1079,7 +1079,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nautilus-actions-2.30.3 [GNOME 2.30]
 	o ncview-2.1.6
 	o nessus-4.4.1
-	o nestopia-1.46.2 [http://0ldsk00l.ca/nestopia/]
 	o netbt-hcidump-5.37
 	o nethack-3.6
 	o netio-1.32
