@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:20 rillig Exp $
-lib/xchat/plugins/perl.la
-share/doc/xchat/xchat2-perl.html
-share/doc/xchat/xchat2-perldocs.html
-share/examples/xchat/alt_completion.pl
