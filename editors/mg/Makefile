@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2017/09/03 08:53:08 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.12 2019/01/01 20:05:02 wiz Exp $
 
 DISTNAME=	mg-20110905
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	editors
 MASTER_SITES=	https://homepage.boetes.org/software/mg/
 
@@ -14,6 +13,8 @@ HAS_CONFIGURE=	yes
 FAKE_NCURSES=	yes
 USE_TOOLS+=	install
 MAKE_ENV+=	prefix=${PREFIX}
+
+CFLAGS.NetBSD+=	-D_OPENBSD_SOURCE
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
