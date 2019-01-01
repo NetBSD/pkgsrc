@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE.NetBSD,v 1.1 2019/01/01 18:36:09 nia Exp $
+
+Nestopia has several audio API options in its configuration menu.
+
+* SDL seems to stutter badly on NetBSD.
+* libao seems best.
+
+===========================================================================
