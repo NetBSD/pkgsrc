@@ -1,0 +1,16 @@
+# $NetBSD: Makefile.common,v 1.1 2019/01/01 22:16:14 nia Exp $
+
+# used by emulators/libretro-snes9x/Makefile
+# used by emulators/snes9x/Makefile
+# used by emulators/snes9x-gtk/Makefile
+
+SNES9X_VERSION=		1.58
+DISTNAME=		snes9x-${SNES9X_VERSION}
+CATEGORIES=		emulators
+MASTER_SITES=		${MASTER_SITE_GITHUB:=snes9xgit/}
+
+HOMEPAGE=		http://www.snes9x.com/
+LICENSE=		snes9x-license
+
+EXTRACT_USING=		bsdtar
+USE_LANGUAGES=		c c++11
