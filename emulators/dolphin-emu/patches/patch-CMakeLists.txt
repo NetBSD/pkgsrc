@@ -1,0 +1,136 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2019/01/01 17:19:58 nia Exp $
+
+Allow better control over what libraries are detected.
+
+--- CMakeLists.txt.orig	2016-06-24 08:09:07.000000000 +0000
++++ CMakeLists.txt
+@@ -15,6 +15,12 @@ option(ENABLE_PCH "Use PCH to speed up c
+ option(ENABLE_LTO "Enables Link Time Optimization" OFF)
+ option(ENABLE_GENERIC "Enables generic build that should run on any little-endian host" OFF)
+ option(ENABLE_HEADLESS "Enables running Dolphin as a headless variant" OFF)
++option(ENABLE_AO "Enable libao support" OFF)
++option(ENABLE_ALSA "Enable ALSA support" OFF)
++option(ENABLE_OPENAL "Enable OpenAL support" OFF)
++option(ENABLE_PULSEAUDIO "Enable PulseAudio support" OFF)
++option(ENABLE_PORTAUDIO "Enable PortAudio support" OFF)
++option(ENABLE_LLVM "Enable LLVM support (for disassembly)" OFF)
+ 
+ # Maintainers: if you consider blanket disabling this for your users, please
+ # consider the following points:
+@@ -27,7 +33,7 @@ option(ENABLE_ANALYTICS "Enables opt-in 
+ # Name of the Dolphin distributor. If you redistribute Dolphin builds (forks,
+ # unofficial builds) please consider identifying your distribution with a
+ # unique name here.
+-set(DISTRIBUTOR "None" CACHE STRING "Name of the distributor.")
++set(DISTRIBUTOR "pkgsrc" CACHE STRING "Name of the distributor.")
+ 
+ # Enable SDL for default on operating systems that aren't OSX, Android, Linux or Windows.
+ if(NOT APPLE AND NOT ANDROID AND NOT ${CMAKE_SYSTEM_NAME} STREQUAL "Linux" AND NOT MSVC)
+@@ -444,6 +450,7 @@ if (OPENGL_GL)
+ 	include_directories(${OPENGL_INCLUDE_DIR})
+ endif()
+ 
++if(ENABLE_ALSA)
+ include(FindALSA OPTIONAL)
+ if(ALSA_FOUND)
+ 	add_definitions(-DHAVE_ALSA=1)
+@@ -452,7 +459,9 @@ else()
+ 	add_definitions(-DHAVE_ALSA=0)
+ 	message("ALSA NOT found, disabling ALSA sound backend")
+ endif(ALSA_FOUND)
++endif(ENABLE_ALSA)
+ 
++if(ENABLE_AO)
+ check_lib(AO ao ao QUIET)
+ if(AO_FOUND)
+ 	add_definitions(-DHAVE_AO=1)
+@@ -461,6 +470,7 @@ else()
+ 	add_definitions(-DHAVE_AO=0)
+ 	message("ao NOT found, disabling ao sound backend")
+ endif(AO_FOUND)
++endif(ENABLE_AO)
+ 
+ check_lib(BLUEZ bluez bluez QUIET)
+ if(BLUEZ_FOUND)
+@@ -471,6 +481,7 @@ else()
+ 	message("bluez NOT found, disabling bluetooth support")
+ endif(BLUEZ_FOUND)
+ 
++if(ENABLE_PULSEAUDIO)
+ check_lib(PULSEAUDIO libpulse pulse QUIET)
+ if(PULSEAUDIO_FOUND)
+ 	add_definitions(-DHAVE_PULSEAUDIO=1)
+@@ -479,7 +490,9 @@ else()
+ 	add_definitions(-DHAVE_PULSEAUDIO=0)
+ 	message("PulseAudio NOT found, disabling PulseAudio sound backend")
+ endif(PULSEAUDIO_FOUND)
++endif(ENABLE_PULSEAUDIO)
+ 
++if(ENABLE_OPENAL)
+ include(FindOpenAL OPTIONAL)
+ if(OPENAL_FOUND)
+ 	add_definitions(-DHAVE_OPENAL=1)
+@@ -489,7 +502,9 @@ else()
+ 	add_definitions(-DHAVE_OPENAL=0)
+ 	message("OpenAL NOT found, disabling OpenAL sound backend")
+ endif(OPENAL_FOUND)
++endif(ENABLE_OPENAL)
+ 
++if(ENABLE_LLVM)
+ include(FindLLVM OPTIONAL)
+ if (LLVM_FOUND)
+ 	add_definitions(-DHAS_LLVM=1)
+@@ -500,6 +515,7 @@ if (LLVM_FOUND)
+ 
+ 	message(STATUS "Found LLVM ${LLVM_PACKAGE_VERSION}")
+ endif()
++endif(ENABLE_LLVM)
+ 
+ set(USE_X11 0)
+ 
+@@ -547,6 +563,7 @@ if(ENCODE_FRAMEDUMPS)
+ 
+ endif()
+ 
++if(ENABLE_PORTAUDIO)
+ set(CMAKE_REQUIRED_LIBRARIES portaudio)
+ CHECK_CXX_SOURCE_RUNS(
+ 	"#include <portaudio.h>
+@@ -563,6 +580,7 @@ else()
+ 	add_definitions(-DHAVE_PORTAUDIO=0)
+ 	set(PORTAUDIO_FOUND FALSE)
+ endif(PORTAUDIO)
++endif(ENABLE_PORTAUDIO)
+ 
+ if(OPROFILING)
+ 	include(FindOProfile)
+@@ -854,27 +872,8 @@ if(NOT DISABLE_WX)
+ 	endif(wxWidgets_FOUND)
+ 
+ 	if(UNIX AND NOT APPLE)
+-		# There is a bug in the FindGTK module in cmake version 2.8.2 that
+-		# does not find gdk-pixbuf-2.0.  On the other hand some 2.8.3
+-		# users have complained that pkg-config does not find
+-		# gdk-pixbuf-2.0.  On yet another hand, cmake version 2.8.3 in
+-		# Ubuntu Natty does not find the glib libraries correctly.
+-		# Ugly!!!
+-		execute_process(COMMAND lsb_release -c -s
+-			OUTPUT_VARIABLE DIST_NAME
+-			ERROR_QUIET OUTPUT_STRIP_TRAILING_WHITESPACE)
+-		if(${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION}.${CMAKE_PATCH_VERSION}
+-				VERSION_EQUAL 2.8.2 OR "${DIST_NAME}" STREQUAL "natty")
+-			check_lib(GTK2 gtk+-2.0 gtk+-2.0 gtk.h REQUIRED)
+-		else()
+-			include(FindGTK2)
+-			if(GTK2_FOUND)
+-				include_directories(${GTK2_INCLUDE_DIRS})
+-				list(APPEND LIBS ${GTK2_LIBRARIES})
+-			else()
+-				message(FATAL_ERROR "GTK is required to build the WX UI. Please install the GTK development libraries.")
+-			endif()
+-		endif()
++		check_lib(GTK2 gtk+-2.0 gtk+-2.0 gtk.h OPTIONAL)
++		check_lib(GTK3 gtk+-3.0 gtk+-3.0 gtk.h OPTIONAL)
+ 	endif()
+ 
+ 	if(wxWidgets_FOUND)

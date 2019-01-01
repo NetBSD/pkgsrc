@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.289 2018/12/18 15:50:48 nia Exp $
+# $NetBSD: Makefile,v 1.290 2019/01/01 17:19:58 nia Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -51,6 +51,7 @@ SUBDIR+=	darcnes
 SUBDIR+=	darwin_lib
 SUBDIR+=	dega
 SUBDIR+=	dgen
+SUBDIR+=	dolphin-emu
 SUBDIR+=	dosbox
 SUBDIR+=	dynagen
 SUBDIR+=	dynamips
