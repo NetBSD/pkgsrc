@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2018/12/30 19:01:19 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2019/01/01 15:34:54 schmonz Exp $
 
 DISTNAME=		netqmail-1.06
 PKGNAME=		qmail-rejectutils-${RJPATCHVERSION}
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		http://www.qmail.org/
 
@@ -33,9 +34,6 @@ do-install:
 	for i in ${REJECTUTILS}; do					\
 		${INSTALL_PROGRAM} ${WRKSRC}/$$i ${DESTDIR}${PREFIX}/bin/$$i; \
 		${INSTALL_MAN} ${WRKSRC}/$$i.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/$$i.8; \
-	done
-	for i in qmail-qfilter-ofmipd-queue qmail-qfilter-smtpd-queue; do \
-		${INSTALL_PROGRAM} ${WRKSRC}/$$i ${DESTDIR}${PREFIX}/bin/$$i; \
 	done
 
 .include "../../mk/djbware.mk"
