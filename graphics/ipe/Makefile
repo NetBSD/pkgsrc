@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/01/01 16:30:29 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/01/01 19:59:37 wiz Exp $
 
 DISTNAME=	ipe-7.2.7-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -20,7 +20,7 @@ MAKE_ENV+=	DL_LIBS=${DL_LIBS}
 MAKE_ENV+=	MOC=${QTDIR}/bin/moc
 MAKE_ENV+=	IPEMANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-CHECK_INTERPRETER_SKIP=	share/ipe/7.2.7/scripts/*.lua
+CHECK_INTERPRETER_SKIP=	share/ipe/${PKGVERSION_NOREV}/scripts/*.lua
 
 LUA_VERSIONS_ACCEPTED=	53
 
