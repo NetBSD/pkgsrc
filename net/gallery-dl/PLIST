@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2018/11/28 19:56:58 leot Exp $
+@comment $NetBSD: PLIST,v 1.20 2019/01/01 20:09:26 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -168,6 +168,9 @@ ${PYSITELIB}/gallery_dl/extractor/imgth.pyo
 ${PYSITELIB}/gallery_dl/extractor/imgur.py
 ${PYSITELIB}/gallery_dl/extractor/imgur.pyc
 ${PYSITELIB}/gallery_dl/extractor/imgur.pyo
+${PYSITELIB}/gallery_dl/extractor/instagram.py
+${PYSITELIB}/gallery_dl/extractor/instagram.pyc
+${PYSITELIB}/gallery_dl/extractor/instagram.pyo
 ${PYSITELIB}/gallery_dl/extractor/jaiminisbox.py
 ${PYSITELIB}/gallery_dl/extractor/jaiminisbox.pyc
 ${PYSITELIB}/gallery_dl/extractor/jaiminisbox.pyo
