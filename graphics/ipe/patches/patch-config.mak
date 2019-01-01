@@ -1,6 +1,7 @@
-$NetBSD: patch-config.mak,v 1.1 2019/01/01 16:30:29 wiz Exp $
+$NetBSD: patch-config.mak,v 1.2 2019/01/01 16:34:09 wiz Exp $
 
 Allow overriding man page installation directory.
+https://github.com/otfried/ipe-issues/issues/200
 
 --- config.mak.orig	2016-12-09 14:09:08.000000000 +0000
 +++ config.mak
