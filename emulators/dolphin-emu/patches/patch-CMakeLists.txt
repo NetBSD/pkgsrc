@@ -1,6 +1,8 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2019/01/01 17:19:58 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2019/01/02 00:30:01 nia Exp $
 
 Allow better control over what libraries are detected.
+
+Install data unconditionally.
 
 --- CMakeLists.txt.orig	2016-06-24 08:09:07.000000000 +0000
 +++ CMakeLists.txt
@@ -26,7 +28,24 @@ Allow better control over what libraries are detected.
  
  # Enable SDL for default on operating systems that aren't OSX, Android, Linux or Windows.
  if(NOT APPLE AND NOT ANDROID AND NOT ${CMAKE_SYSTEM_NAME} STREQUAL "Linux" AND NOT MSVC)
-@@ -444,6 +450,7 @@ if (OPENGL_GL)
+@@ -82,16 +88,10 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PAT
+ set(LIBS)
+ 
+ # Set up paths
+-if(APPLE)
+-	# The gettext module will install the translations unconditionally.
+-	# Redirect the installation to a build directory where it does no harm.
+-	set(CMAKE_INSTALL_PREFIX ${CMAKE_BINARY_DIR}/install-dummy)
+-else()
+ 	set(bindir  ${CMAKE_INSTALL_PREFIX}/bin               CACHE PATH "bindir")
+ 	set(datadir ${CMAKE_INSTALL_PREFIX}/share/dolphin-emu CACHE PATH "datadir")
+ 	set(mandir  ${CMAKE_INSTALL_PREFIX}/share/man         CACHE PATH "mandir")
+ 	add_definitions(-DDATA_DIR="${datadir}/")
+-endif()
+ 
+ # Set where the binary files will be built.  The program will not execute from
+ # here.  You must run "make install" to install these to the proper location
+@@ -444,6 +444,7 @@ if (OPENGL_GL)
  	include_directories(${OPENGL_INCLUDE_DIR})
  endif()
  
@@ -34,7 +53,7 @@ Allow better control over what libraries are detected.
  include(FindALSA OPTIONAL)
  if(ALSA_FOUND)
  	add_definitions(-DHAVE_ALSA=1)
-@@ -452,7 +459,9 @@ else()
+@@ -452,7 +453,9 @@ else()
  	add_definitions(-DHAVE_ALSA=0)
  	message("ALSA NOT found, disabling ALSA sound backend")
  endif(ALSA_FOUND)
@@ -44,7 +63,7 @@ Allow better control over what libraries are detected.
  check_lib(AO ao ao QUIET)
  if(AO_FOUND)
  	add_definitions(-DHAVE_AO=1)
-@@ -461,6 +470,7 @@ else()
+@@ -461,6 +464,7 @@ else()
  	add_definitions(-DHAVE_AO=0)
  	message("ao NOT found, disabling ao sound backend")
  endif(AO_FOUND)
@@ -52,7 +71,7 @@ Allow better control over what libraries are detected.
  
  check_lib(BLUEZ bluez bluez QUIET)
  if(BLUEZ_FOUND)
-@@ -471,6 +481,7 @@ else()
+@@ -471,6 +475,7 @@ else()
  	message("bluez NOT found, disabling bluetooth support")
  endif(BLUEZ_FOUND)
  
@@ -60,7 +79,7 @@ Allow better control over what libraries are detected.
  check_lib(PULSEAUDIO libpulse pulse QUIET)
  if(PULSEAUDIO_FOUND)
  	add_definitions(-DHAVE_PULSEAUDIO=1)
-@@ -479,7 +490,9 @@ else()
+@@ -479,7 +484,9 @@ else()
  	add_definitions(-DHAVE_PULSEAUDIO=0)
  	message("PulseAudio NOT found, disabling PulseAudio sound backend")
  endif(PULSEAUDIO_FOUND)
@@ -70,7 +89,7 @@ Allow better control over what libraries are detected.
  include(FindOpenAL OPTIONAL)
  if(OPENAL_FOUND)
  	add_definitions(-DHAVE_OPENAL=1)
-@@ -489,7 +502,9 @@ else()
+@@ -489,7 +496,9 @@ else()
  	add_definitions(-DHAVE_OPENAL=0)
  	message("OpenAL NOT found, disabling OpenAL sound backend")
  endif(OPENAL_FOUND)
@@ -80,7 +99,7 @@ Allow better control over what libraries are detected.
  include(FindLLVM OPTIONAL)
  if (LLVM_FOUND)
  	add_definitions(-DHAS_LLVM=1)
-@@ -500,6 +515,7 @@ if (LLVM_FOUND)
+@@ -500,6 +509,7 @@ if (LLVM_FOUND)
  
  	message(STATUS "Found LLVM ${LLVM_PACKAGE_VERSION}")
  endif()
@@ -88,7 +107,7 @@ Allow better control over what libraries are detected.
  
  set(USE_X11 0)
  
-@@ -547,6 +563,7 @@ if(ENCODE_FRAMEDUMPS)
+@@ -547,6 +557,7 @@ if(ENCODE_FRAMEDUMPS)
  
  endif()
  
@@ -96,7 +115,7 @@ Allow better control over what libraries are detected.
  set(CMAKE_REQUIRED_LIBRARIES portaudio)
  CHECK_CXX_SOURCE_RUNS(
  	"#include <portaudio.h>
-@@ -563,6 +580,7 @@ else()
+@@ -563,6 +574,7 @@ else()
  	add_definitions(-DHAVE_PORTAUDIO=0)
  	set(PORTAUDIO_FOUND FALSE)
  endif(PORTAUDIO)
@@ -104,7 +123,7 @@ Allow better control over what libraries are detected.
  
  if(OPROFILING)
  	include(FindOProfile)
-@@ -854,27 +872,8 @@ if(NOT DISABLE_WX)
+@@ -854,27 +866,8 @@ if(NOT DISABLE_WX)
  	endif(wxWidgets_FOUND)
  
  	if(UNIX AND NOT APPLE)
@@ -134,3 +153,30 @@ Allow better control over what libraries are detected.
  	endif()
  
  	if(wxWidgets_FOUND)
+@@ -986,13 +979,8 @@ add_subdirectory(Source)
+ ########################################
+ # Install shared data files
+ #
+-if(NOT APPLE)
+ 	install(DIRECTORY Data/Sys/ DESTINATION ${datadir}/sys PATTERN)
+-endif()
+-if(NOT ${CMAKE_SYSTEM_NAME} MATCHES "Linux|FreeBSD|Darwin")
+ 	install(FILES Data/license.txt DESTINATION ${datadir})
+-endif()
+-if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
+ 	# Install the application icon and menu item
+ 	install(FILES Data/dolphin-emu.svg
+ 		DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/scalable/apps)
+@@ -1002,10 +990,9 @@ if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux"
+ 		DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications)
+ 	# Install manpages
+ 	install(FILES Data/dolphin-emu.6
+-		DESTINATION ${mandir}/man6)
++		DESTINATION ${CMAKE_INSTALL_PREFIX}/${PKGMANDIR}/man6)
+ 	install(FILES Data/dolphin-emu-nogui.6
+-		DESTINATION ${mandir}/man6)
+-endif()
++		DESTINATION ${CMAKE_INSTALL_PREFIX}/${PKGMANDIR}/man6)
+ 
+ # packaging information
+ set(CPACK_PACKAGE_NAME "dolphin-emu")
