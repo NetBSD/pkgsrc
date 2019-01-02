@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/12/09 20:25:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/01/02 15:43:10 adam Exp $
 bin/numba-${PYVERSSUFFIX}
 bin/pycc-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -961,6 +961,7 @@ ${PYSITELIB}/numba/targets/cffiimpl.pyo
 ${PYSITELIB}/numba/targets/cmathimpl.py
 ${PYSITELIB}/numba/targets/cmathimpl.pyc
 ${PYSITELIB}/numba/targets/cmathimpl.pyo
+${PYSITELIB}/numba/targets/cmdlang.gdb
 ${PYSITELIB}/numba/targets/codegen.py
 ${PYSITELIB}/numba/targets/codegen.pyc
 ${PYSITELIB}/numba/targets/codegen.pyo
@@ -979,6 +980,9 @@ ${PYSITELIB}/numba/targets/externals.pyo
 ${PYSITELIB}/numba/targets/fastmathpass.py
 ${PYSITELIB}/numba/targets/fastmathpass.pyc
 ${PYSITELIB}/numba/targets/fastmathpass.pyo
+${PYSITELIB}/numba/targets/gdb_hook.py
+${PYSITELIB}/numba/targets/gdb_hook.pyc
+${PYSITELIB}/numba/targets/gdb_hook.pyo
 ${PYSITELIB}/numba/targets/imputils.py
 ${PYSITELIB}/numba/targets/imputils.pyc
 ${PYSITELIB}/numba/targets/imputils.pyo
@@ -1324,6 +1328,9 @@ ${PYSITELIB}/numba/tests/test_func_interface.pyo
 ${PYSITELIB}/numba/tests/test_func_lifetime.py
 ${PYSITELIB}/numba/tests/test_func_lifetime.pyc
 ${PYSITELIB}/numba/tests/test_func_lifetime.pyo
+${PYSITELIB}/numba/tests/test_gdb.py
+${PYSITELIB}/numba/tests/test_gdb.pyc
+${PYSITELIB}/numba/tests/test_gdb.pyo
 ${PYSITELIB}/numba/tests/test_generators.py
 ${PYSITELIB}/numba/tests/test_generators.pyc
 ${PYSITELIB}/numba/tests/test_generators.pyo
