@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.19 2019/01/02 10:36:32 adam Exp $
+$NetBSD: CHANGES-2019,v 1.20 2019/01/02 12:41:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -22,3 +22,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated editors/kate to 4.14.3nb15 [gutteridge 2019-01-01]
 	Added www/py-soupsieve version 1.6.1 [adam 2019-01-02]
 	Updated www/py-beautifulsoup4 to 4.7.0 [adam 2019-01-02]
+	Updated graphics/py-Pillow to 5.4.0 [adam 2019-01-02]
+	Updated www/py-cheroot to 6.5.4 [adam 2019-01-02]
