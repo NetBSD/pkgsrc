@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/07/30 03:17:50 minskim Exp $
+$NetBSD: distinfo,v 1.3 2019/01/02 19:58:39 jmmv Exp $
 
-SHA1 (viper-1.0.2.tar.gz) = f0a261a4b9c5175cf7a95ffbe4f4e92d1c0d8f2c
-RMD160 (viper-1.0.2.tar.gz) = de8de49ebdbcaea9abe6d5f75d1a66f5f7ebbf52
-SHA512 (viper-1.0.2.tar.gz) = 45dcd49abd8a036cd32b677c7ef583a6dfbd85f781d022499bfca7d1d7aab05279acf1399de2e2c6670382072d0a32e51e04d55ace5d446afc1568dc1a30c696
-Size (viper-1.0.2.tar.gz) = 32018 bytes
+SHA1 (viper-1.3.1.tar.gz) = 65a8ac07ed1baf6fe478989081d4aa557f0af53b
+RMD160 (viper-1.3.1.tar.gz) = b1c468247e807450b7d3b41a258f8660d51cdbc3
+SHA512 (viper-1.3.1.tar.gz) = 5e2c2b7adb61f15b31ebed197e9054680d84115f188b83d46c4943b36ba96fee59283690aa06a443b52298c06eba413300889c305182bb84da60026efe25b487
+Size (viper-1.3.1.tar.gz) = 37683 bytes
