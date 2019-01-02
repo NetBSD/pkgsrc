@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.5 2018/12/09 20:22:55 adam Exp $
+$NetBSD: distinfo,v 1.6 2019/01/02 15:42:17 adam Exp $
 
-SHA1 (llvmlite-0.26.0.tar.gz) = da74db79b19c392253c9a0b80055e215bf0d62c5
-RMD160 (llvmlite-0.26.0.tar.gz) = eb0ccec7d6956ec097fa663a0082ea7a5d269312
-SHA512 (llvmlite-0.26.0.tar.gz) = aa48d2385aea63ab0cf3f75a919574d4f90c1d3665382ea55ba7b7243af1f326fcc4239c60044373e0482d04d088d99d2c428a3559844d7e73e2329ab73e6447
-Size (llvmlite-0.26.0.tar.gz) = 103402 bytes
-SHA1 (patch-ffi_build.py) = 1d3e90c9e1a47a3a7e4964531f70688d48a5c732
-SHA1 (patch-llvmlite_tests_test__binding.py) = 6c493583827c0cafe0aeeadeae1ba74b84af52bd
+SHA1 (llvmlite-0.27.0.tar.gz) = d2a74487f60a0641e51a1827234dc8f5935131bf
+RMD160 (llvmlite-0.27.0.tar.gz) = 976736a885118cec0fe3f93909ad2582d6bb699b
+SHA512 (llvmlite-0.27.0.tar.gz) = 973adba81c761b4a2cf100851aa46be4425056998fa02291476876da8a23675e278d1e665f386c8f519baa2539dc7825e7464eef609da1b8c45b897947f5b949
+Size (llvmlite-0.27.0.tar.gz) = 103752 bytes
+SHA1 (patch-ffi_build.py) = a3241ffc7f208b709053fb04a5225290363ba284
