@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2017/08/25 16:49:14 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2019/01/02 19:58:39 jmmv Exp $
 
 BUILDLINK_TREE+=	go-viper
 
@@ -8,7 +8,7 @@ GO_VIPER_BUILDLINK3_MK:=
 BUILDLINK_CONTENTS_FILTER.go-viper=	${EGREP} gopkg/
 BUILDLINK_DEPMETHOD.go-viper?=		build
 
-BUILDLINK_API_DEPENDS.go-viper+=	go-viper>=0.0
+BUILDLINK_API_DEPENDS.go-viper+=	go-viper>=1.3.1
 BUILDLINK_PKGSRCDIR.go-viper?=		../../devel/go-viper
 
 .include "../../www/go-toml-pelletier/buildlink3.mk"
