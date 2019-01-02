@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2018/02/02 15:34:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.43 2019/01/02 17:18:47 tnn Exp $
 
-DISTNAME=	scons-3.0.1
-PKGREVISION=	1
+DISTNAME=	scons-3.0.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scons/}
 MASTER_SITES+=	${MASTER_SITE_PYPI:=S/SCons/}
@@ -11,14 +11,12 @@ HOMEPAGE=	http://www.scons.org/
 COMMENT=	Python-based, open-source build system
 LICENSE=	mit
 
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+
 REPLACE_PYTHON+=	script/scons
 REPLACE_PYTHON+=	script/scons-configure-cache
 REPLACE_PYTHON+=	script/scons-time
 REPLACE_PYTHON+=	script/sconsign
-
-# scons-3.0.0 works with python-3.x, but not the many packages
-# that have SConstruct files that only work with python-2.x
-PYTHON_VERSIONS_ACCEPTED=	27
 
 SUBST_CLASSES+=		rflag
 SUBST_STAGE.rflag=	pre-configure
