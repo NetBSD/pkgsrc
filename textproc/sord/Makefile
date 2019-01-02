@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/09/16 19:27:21 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/01/02 19:46:10 bsiegert Exp $
 
-DISTNAME=	sord-0.12.2
+DISTNAME=	sord-0.16.2
 CATEGORIES=	textproc
 MASTER_SITES=	http://download.drobilla.net/
 EXTRACT_SUFX=	.tar.bz2
@@ -31,7 +31,7 @@ do-install:
 	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${PYTHONBIN} ./waf install
 
 .include "../../devel/pcre/buildlink3.mk"
-BUILDLINK_API_DEPENDS.serd+=	serd>=0.18.0
+BUILDLINK_API_DEPENDS.serd+=	serd>=0.30.0
 .include "../../textproc/serd/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
