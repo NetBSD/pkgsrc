@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/12/13 19:51:59 adam Exp $
+# $NetBSD: Makefile,v 1.17 2019/01/02 18:40:23 tnn Exp $
 
 DISTNAME=	gpick-gpick-0.2.5
 PKGNAME=	${DISTNAME:S/gpick-//}
@@ -12,21 +12,22 @@ COMMENT=	Advanced color picker
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	c c++03
-
-BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
 USE_TOOLS+=	pkg-config
 
-SCONS=		${PREFIX}/bin/scons
+PYTHON_VERSIONS_INCOMPATIBLE= 34 35 36 37	# as of 0.2.5
+
 SCONS_ARGS+=	DESTDIR=${DESTDIR}${PREFIX}
 SCONS_ARGS+=	PKGMANDIR=${PKGMANDIR}
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONS} ${SCONS_ARGS}
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONSBIN} ${SCONS_ARGS}
 
 do-install:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONS} ${SCONS_ARGS} install
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONSBIN} ${SCONS_ARGS} install
 
 .include "../../devel/boost-libs/buildlink3.mk"
+PYTHON_FOR_BUILD_ONLY?=	yes
+.include "../../devel/scons/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
