@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.30 2019/01/02 20:07:24 nia Exp $
+$NetBSD: CHANGES-2019,v 1.31 2019/01/02 20:24:33 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -34,8 +34,11 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated math/py-numba to 0.42.0 [adam 2019-01-02]
 	Updated devel/scons to 3.0.2 [tnn 2019-01-02]
 	Updated textproc/serd to 0.30.0 [bsiegert 2019-01-02]
+	Updated textproc/sord to 0.16.2 [bsiegert 2019-01-02]
 	Updated emulators/libretro-ppsspp to 1.7.5 [nia 2019-01-02]
 	Updated devel/go-viper to 1.3.1 [jmmv 2019-01-02]
 	Updated devel/go-cobra to 0.0.3nb3 [jmmv 2019-01-02]
 	Updated www/hugo to 0.53 [jmmv 2019-01-02]
 	Updated emulators/libretro-reicast to 20181223 [nia 2019-01-02]
+	Updated audio/lv2 to 1.14.0 [bsiegert 2019-01-02]
+	Updated converters/sratom to 0.6.2 [bsiegert 2019-01-02]
