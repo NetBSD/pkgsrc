@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2018/11/14 22:21:43 kleink Exp $
+# $NetBSD: Makefile,v 1.36 2019/01/02 21:06:23 tnn Exp $
 
 DISTNAME=	mypaint-1.2.1
 PKGREVISION=	2
@@ -16,7 +16,6 @@ LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=	libmypaint-[0-9]*
 
-BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
 USE_LANGUAGES=	c c++
@@ -36,23 +35,26 @@ LDFLAGS+=	-lintl
 
 REPLACE_BASH=			brushes/label-brush-mypaint.sh
 
+SCONS_ARGS+=	enable_profiling=False	\
+		enable_openmp=False	\
+		prefix=${DESTDIR}${PREFIX}
+
 do-build:
 	${LN} -sf ${PREFIX}/bin/swig2.0 \
 		${BUILDLINK_DIR}/bin/swig
 	cd ${WRKSRC} && cd ${BUILD_DIRS} && \
 		${SETENV} ${MAKE_ENV} \
-		${LOCALBASE}/bin/scons \
-			prefix=${DESTDIR}${PREFIX} \
-			enable_profiling=False
+		${SCONSBIN} ${SCONS_ARGS}
 
 do-install:
 	cd ${WRKSRC} && cd ${INSTALL_DIRS} && \
 		${SETENV} ${MAKE_ENV} \
-		${LOCALBASE}/bin/scons prefix=${DESTDIR}${PREFIX} install
+		${SCONSBIN} ${SCONS_ARGS} install
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/scons/buildlink3.mk"
 .include "../../devel/swig2/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
