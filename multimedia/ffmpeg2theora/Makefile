@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/11/23 08:06:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2019/01/02 18:01:00 tnn Exp $
 
 DISTNAME=	ffmpeg2theora-0.30
 PKGREVISION=	6
@@ -12,7 +12,6 @@ COMMENT=	Simple converter to create Ogg Theora files
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=		pkg-config
-BUILD_DEPENDS+=		scons>=1.3.1:../../devel/scons
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
@@ -20,13 +19,12 @@ INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 LDFLAGS.Linux+=	-lm
 LDFLAGS.SunOS+=	-lm
 
-SCONS=		${PREFIX}/bin/scons
 SCONS_ARGS=	-C ${WRKSRC} destdir=${DESTDIR:Q} prefix=${PREFIX:Q}
 SCONS_ARGS+=	APPEND_CCFLAGS=${CFLAGS:Q}
 SCONS_ARGS+=	APPEND_LINKFLAGS=${LDFLAGS:Q}
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONS} ${SCONS_ARGS}
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONSBIN} ${SCONS_ARGS}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ffmpeg2theora ${DESTDIR}${PREFIX}/bin
@@ -35,6 +33,8 @@ do-install:
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
+PYTHON_FOR_BUILD_ONLY?=	yes
+.include "../../devel/scons/buildlink3.mk"
 .include "../../multimedia/ffmpeg3/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
