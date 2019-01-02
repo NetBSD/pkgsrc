@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/11/23 08:06:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2019/01/02 19:52:51 nia Exp $
 
-PKGNAME=	libretro-ppsspp-1.6.3
-PKGREVISION=	1
+PKGNAME=	libretro-ppsspp-1.7.5
 CATEGORIES=	emulators
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -16,9 +15,9 @@ DISTFILES+=	ppsspp-glslang.tar.gz
 DISTFILES+=	ppsspp-spriv.tar.gz
 
 # Submodules
-ARMIPS_TAG=	8b4cadaf62d7de42d374056fc6aafc555f2bc7dc
-GLSLANG_TAG=	2edde6665d9a56ead5ea0e55b4e64d9a803e6164
-SPRIV_TAG=	90966d50f57608587bafd95b4e345b02b814754a
+ARMIPS_TAG=	9efe3367284d2d1eeb14fc302a2c12c36e3e255e
+GLSLANG_TAG=	29619b2312f7bc862221749f3f4d37c3e6a0dee2
+SPRIV_TAG=	be7425ef70231ab82930331959ab487d605d0482
 
 SITES.ppsspp.tar.gz= \
     -https://github.com/hrydgard/ppsspp/archive/v${PKGVERSION_NOREV}.tar.gz
@@ -52,6 +51,10 @@ MAKE_FLAGS+=		TARGET_ARCH=x86_64
 MAKE_FLAGS+=		TARGET_ARCH=x86
 .endif
 
+MAKE_FLAGS+=		GIT_VERSION="${PKGVERSION}-pkgsrc"
+
+LDFLAGS+=		-lexecinfo
+
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
 post-extract:
@@ -64,6 +67,7 @@ do-install:
 	    ${DESTDIR}${PREFIX}/lib/libretro/ppsspp_libretro.so
 
 .include "options.mk"
+.include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
