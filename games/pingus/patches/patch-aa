@@ -1,6 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2015/01/21 15:19:31 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2019/01/02 19:16:21 tnn Exp $
 
 NetBSD config & path fixes
+python 3.x support
 
 --- SConstruct.orig	2010-03-18 13:34:15.000000000 +0000
 +++ SConstruct
@@ -37,7 +38,7 @@ NetBSD config & path fixes
     context.Message('Check how to call iconv...')
  
     for i in ['', 'const']:
-@@ -408,7 +414,7 @@ if ('configure' in COMMAND_LINE_TARGETS)
+@@ -408,20 +414,20 @@ if ('configure' in COMMAND_LINE_TARGETS)
     not (os.path.exists('config.py') and os.path.exists('config.h')) and \
     not GetOption('clean'):
      opts = DefineOptions(None, ARGUMENTS)
@@ -46,8 +47,16 @@ NetBSD config & path fixes
      Help(opts.GenerateHelpText(env))
  
      opts.Update(env)
-@@ -421,7 +427,7 @@ if ('configure' in COMMAND_LINE_TARGETS)
-     if os.environ.has_key('PKG_CONFIG_PATH'):
+ 
+-    if os.environ.has_key('PATH'):
++    if 'PATH' in os.environ:
+         env['ENV']['PATH'] = os.environ['PATH']
+-    if os.environ.has_key('HOME'):
++    if 'HOME' in os.environ:
+        env['ENV']['HOME'] = os.environ['HOME']
+ 
+-    if os.environ.has_key('PKG_CONFIG_PATH'):
++    if 'PKG_CONFIG_PATH' in os.environ:
          env['ENV']['PKG_CONFIG_PATH'] = os.environ['PKG_CONFIG_PATH']
      
 -    env['CPPPATH'] += ['.', 'src/']
@@ -55,7 +64,61 @@ NetBSD config & path fixes
  
      config_h_defines = []      
  
-@@ -535,7 +541,7 @@ if not ('configure' in COMMAND_LINE_TARG
+@@ -496,16 +502,16 @@ if ('configure' in COMMAND_LINE_TARGETS)
+     env = config.Finish()
+     opts.Save("config.py", env)
+ 
+-    print "Reports:"
+-    print reports
++    print("Reports:")
++    print(reports)
+ 
+     if not fatal_error == "":
+-        print "Fatal Errors:"
+-        print fatal_error
++        print("Fatal Errors:")
++        print(fatal_error)
+         if not env['ignore_errors']:
+            Exit(1)
+         else:
+-           print "\nError are being ignored, the build continues"
++           print("\nError are being ignored, the build continues")
+ 
+     config_h = open('config.h', 'w')
+     config_h.write('#define VERSION "0.7.2"\n')
+@@ -515,27 +521,27 @@ if ('configure' in COMMAND_LINE_TARGETS)
+         config_h.write('#define %s %s\n' % (v, k))
+     config_h.close()
+     if ('configure' in COMMAND_LINE_TARGETS):
+-        print "Configuration written to config.h and config.py, run:"
+-        print ""
+-        print "  scons"
+-        print ""
+-        print "To start the compile"
++        print("Configuration written to config.h and config.py, run:")
++        print("")
++        print("  scons")
++        print("")
++        print("To start the compile")
+     else:
+-        print "Configuration written to config.h and config.py"
++        print("Configuration written to config.h and config.py")
+     ARGUMENTS = {}
+ 
+ if not ('configure' in COMMAND_LINE_TARGETS):
+     if ARGUMENTS != {}:
+-        print "Error: You must not supply arguments to the compile step."
+-        print "Use:"
+-        print ""
+-        print "  scons configure [ARGUMENTS]..."
+-        print ""
+-        print "If you want to change the build configuration."
++        print("Error: You must not supply arguments to the compile step.")
++        print("Use:")
++        print("")
++        print("  scons configure [ARGUMENTS]...")
++        print("")
++        print("If you want to change the build configuration.")
          os.sys.exit(1)
          
      opts = DefineOptions("config.py", {})
