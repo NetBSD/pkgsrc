@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2019/01/02 21:06:23 tnn Exp $
+# $NetBSD: Makefile,v 1.37 2019/01/02 23:48:41 tnn Exp $
 
 DISTNAME=	mypaint-1.2.1
 PKGREVISION=	2
@@ -35,9 +35,9 @@ LDFLAGS+=	-lintl
 
 REPLACE_BASH=			brushes/label-brush-mypaint.sh
 
-SCONS_ARGS+=	enable_profiling=False	\
-		enable_openmp=False	\
-		prefix=${DESTDIR}${PREFIX}
+SCONS_ARGS+=	enable_profiling=False
+SCONS_ARGS+=	enable_openmp=False
+SCONS_ARGS+=	prefix=${DESTDIR}${PREFIX}
 
 do-build:
 	${LN} -sf ${PREFIX}/bin/swig2.0 \
