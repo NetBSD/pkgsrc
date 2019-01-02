@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.20 2019/01/02 12:41:52 adam Exp $
+$NetBSD: CHANGES-2019,v 1.21 2019/01/02 13:24:43 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -24,3 +24,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-beautifulsoup4 to 4.7.0 [adam 2019-01-02]
 	Updated graphics/py-Pillow to 5.4.0 [adam 2019-01-02]
 	Updated www/py-cheroot to 6.5.4 [adam 2019-01-02]
+	Added emulators/libretro-mame2010 version 20180417 [nia 2019-01-02]
