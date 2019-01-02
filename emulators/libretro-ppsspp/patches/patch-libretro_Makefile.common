@@ -1,12 +1,28 @@
-$NetBSD: patch-libretro_Makefile.common,v 1.1 2018/08/14 12:55:41 nia Exp $
+$NetBSD: patch-libretro_Makefile.common,v 1.2 2019/01/02 19:52:51 nia Exp $
 
 Fix "Build error: undefined references".
 
 https://github.com/libretro/ppsspp/commit/68634705b9d6b5bc8db2232bc92b6ae06f0b31d8
 
---- libretro/Makefile.common.orig	2018-05-30 17:47:20.000000000 +0000
+--- libretro/Makefile.common.orig	2018-12-04 13:43:39.000000000 +0000
 +++ libretro/Makefile.common
-@@ -452,6 +452,7 @@ SOURCES_CXX += $(NATIVEDIR)/math/datacon
+@@ -229,6 +229,7 @@ SOURCES_CXX += \
+ 	$(EXTDIR)/glslang/glslang/MachineIndependent/ShaderLang.cpp \
+ 	$(EXTDIR)/glslang/glslang/MachineIndependent/SymbolTable.cpp \
+ 	$(EXTDIR)/glslang/glslang/MachineIndependent/Versions.cpp \
++	$(EXTDIR)/glslang/glslang/MachineIndependent/attribute.cpp \
+ 	$(EXTDIR)/glslang/glslang/MachineIndependent/glslang_tab.cpp \
+ 	$(EXTDIR)/glslang/glslang/MachineIndependent/intermOut.cpp \
+ 	$(EXTDIR)/glslang/glslang/MachineIndependent/iomapper.cpp \
+@@ -392,6 +393,7 @@ SOURCES_CXX += $(NATIVEDIR)/math/datacon
+ 	       $(COREDIR)/HLE/sceMpeg.cpp \
+ 	       $(COREDIR)/HLE/sceNet.cpp \
+ 	       $(COREDIR)/HLE/sceNetAdhoc.cpp \
++	       $(COREDIR)/HLE/sceUsbAcc.cpp \
+ 	       $(COREDIR)/HLE/proAdhocServer.cpp \
+ 	       $(COREDIR)/HLE/proAdhoc.cpp \
+ 	       $(COREDIR)/HLE/sceOpenPSID.cpp \
+@@ -454,6 +456,7 @@ SOURCES_CXX += $(NATIVEDIR)/math/datacon
  	       $(COREDIR)/MemMap.cpp \
  	       $(COREDIR)/MemMapFunctions.cpp \
  	       $(COREDIR)/PSPLoaders.cpp \
