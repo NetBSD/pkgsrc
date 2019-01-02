@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/01/01 17:19:58 nia Exp $
+# $NetBSD: Makefile,v 1.2 2019/01/02 00:30:01 nia Exp $
 
 DISTNAME=	dolphin-emu-5.0
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dolphin-emu/}
 GITHUB_PROJECT=	dolphin
@@ -20,6 +21,8 @@ USE_LANGUAGES=	c c++
 # is always used.
 CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_SFML=ON
 
+CMAKE_ARGS+=	-DPKGMANDIR=${PKGMANDIR}
+
 .include "../../mk/bsd.prefs.mk"
 
 ONLY_FOR_PLATFORM=	${LITTLEENDIANPLATFORMS}
@@ -35,18 +38,19 @@ NOT_PAX_MPROTECT_SAFE+=	bin/dolphin-emu
 NOT_PAX_MPROTECT_SAFE+=	bin/dolphin-emu-nogui
 
 .include "options.mk"
-.include "../../archivers/lzo/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../net/miniupnpc/buildlink3.mk"
 .include "../../security/mbedtls/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
+.include "../../archivers/lzo/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .endif
