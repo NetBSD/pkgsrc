@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/11/29 18:34:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/01/02 15:32:41 adam Exp $
 bin/jupyter-bundlerextension-${PYVERSSUFFIX}
 bin/jupyter-nbextension-${PYVERSSUFFIX}
 bin/jupyter-notebook-${PYVERSSUFFIX}
@@ -1054,7 +1054,7 @@ ${PYSITELIB}/notebook/static/components/MathJax/localization/zh-hant/zh-hant.js
 ${PYSITELIB}/notebook/static/components/backbone/backbone-min.js
 ${PYSITELIB}/notebook/static/components/bootstrap-tour/build/css/bootstrap-tour.min.css
 ${PYSITELIB}/notebook/static/components/bootstrap-tour/build/js/bootstrap-tour.min.js
-${PYSITELIB}/notebook/static/components/bootstrap/js/bootstrap.min.js
+${PYSITELIB}/notebook/static/components/bootstrap/dist/js/bootstrap.min.js
 ${PYSITELIB}/notebook/static/components/codemirror/addon/comment/comment.js
 ${PYSITELIB}/notebook/static/components/codemirror/addon/comment/continuecomment.js
 ${PYSITELIB}/notebook/static/components/codemirror/addon/dialog/dialog.css
@@ -1493,6 +1493,7 @@ ${PYSITELIB}/notebook/static/tree/js/sessionlist.js
 ${PYSITELIB}/notebook/static/tree/js/shutdownbutton.js
 ${PYSITELIB}/notebook/static/tree/js/terminallist.js
 ${PYSITELIB}/notebook/templates/404.html
+${PYSITELIB}/notebook/templates/browser-open.html
 ${PYSITELIB}/notebook/templates/edit.html
 ${PYSITELIB}/notebook/templates/error.html
 ${PYSITELIB}/notebook/templates/login.html
