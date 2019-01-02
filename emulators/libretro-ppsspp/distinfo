@@ -1,20 +1,20 @@
-$NetBSD: distinfo,v 1.1 2018/08/14 12:55:41 nia Exp $
+$NetBSD: distinfo,v 1.2 2019/01/02 19:52:51 nia Exp $
 
-SHA1 (ppsspp-1.6.3/ppsspp-armips.tar.gz) = 51e8fcf70e64e64c9c3d04aa3c795dfe6f7f5f26
-RMD160 (ppsspp-1.6.3/ppsspp-armips.tar.gz) = d8c321256c9e58fbfcbf1529f61930274ecc6d15
-SHA512 (ppsspp-1.6.3/ppsspp-armips.tar.gz) = 9ab376b928fadcbff7256ff10d6581e4960e00e48a93f47f7e90b1998022a8d03cadef20880aa020fe6b62e4fa43cf28fc68dc5b10e93b1212fd6788ae493dba
-Size (ppsspp-1.6.3/ppsspp-armips.tar.gz) = 191245 bytes
-SHA1 (ppsspp-1.6.3/ppsspp-glslang.tar.gz) = bc70bf9850f187ecff189adf8d46a39930380928
-RMD160 (ppsspp-1.6.3/ppsspp-glslang.tar.gz) = d1c248f9f01f10b2f3d3bbbf6a5e6a431413702a
-SHA512 (ppsspp-1.6.3/ppsspp-glslang.tar.gz) = 333a93707e067ac1d98c69533c2d206675d75aa54195326accf33e8401ac2fb412d2e2525b0ee1313f141872aa6ea430ae5424e8712483c59f77dc3adbcb4f59
-Size (ppsspp-1.6.3/ppsspp-glslang.tar.gz) = 1944927 bytes
-SHA1 (ppsspp-1.6.3/ppsspp-spriv.tar.gz) = 729bff5fa8a51af90519fb51b64a5781acce03e2
-RMD160 (ppsspp-1.6.3/ppsspp-spriv.tar.gz) = 32346af6c24f9f30ae435381f7c30e6f427c0e39
-SHA512 (ppsspp-1.6.3/ppsspp-spriv.tar.gz) = 5fe2f772b571da0627fb9d9c424bea2b4ea1c0563e36ff455ddaf1b92ea3d5ee636e039a0619e0971478ce10e163b45258e9b03d2610c573f74d1cfd08549bb8
-Size (ppsspp-1.6.3/ppsspp-spriv.tar.gz) = 228943 bytes
-SHA1 (ppsspp-1.6.3/ppsspp.tar.gz) = 5a4ec3f99dcb50840d26a2c738ff1ce4a37e7433
-RMD160 (ppsspp-1.6.3/ppsspp.tar.gz) = 0b0ea6c86aad60a7d9d176332ea62a88d23411fa
-SHA512 (ppsspp-1.6.3/ppsspp.tar.gz) = fe592c81a3b22ba0fff3dbd403ad2f6b9639c39d036db31132147a91a25793acb8698174a1c139b7dced01a9101777b5c53a1e5db6b5da0b7727f480ef597b8e
-Size (ppsspp-1.6.3/ppsspp.tar.gz) = 19477643 bytes
+SHA1 (ppsspp-1.7.5/ppsspp-armips.tar.gz) = bcb620c901b139a9ab28fdce41436d1a88da351d
+RMD160 (ppsspp-1.7.5/ppsspp-armips.tar.gz) = a3b2c9388f4253a069275679d83c8ae9c07fa98a
+SHA512 (ppsspp-1.7.5/ppsspp-armips.tar.gz) = 8934406f95a3d3ba04f9fc1bcab816c644f11987cfbb63c881ea50a8eb8b7b3df1f4ffc41c85fe4a1dcf567d9392bcc48c6e8410672d4d71c15eec598d8e1584
+Size (ppsspp-1.7.5/ppsspp-armips.tar.gz) = 197127 bytes
+SHA1 (ppsspp-1.7.5/ppsspp-glslang.tar.gz) = c995f7501f32ea3b32cfe06f07262e910ef8e8f2
+RMD160 (ppsspp-1.7.5/ppsspp-glslang.tar.gz) = 5911c872d16fe40a12d748f5d32db488e26b4003
+SHA512 (ppsspp-1.7.5/ppsspp-glslang.tar.gz) = d0d5c9faa13aba03f193b25e200ebaabce2345d6fd0dfebb1ea1ac77e3248ab3662553107e84ec16911c8a423bf9d1752f8dc9a553e05835b8e40fbcb7caac03
+Size (ppsspp-1.7.5/ppsspp-glslang.tar.gz) = 2355082 bytes
+SHA1 (ppsspp-1.7.5/ppsspp-spriv.tar.gz) = 2ae884042a1a0eacccfddb4a87b960fdc4dc7929
+RMD160 (ppsspp-1.7.5/ppsspp-spriv.tar.gz) = 3580eb5f6594092b565d53f2f01f5faa2d12f9c2
+SHA512 (ppsspp-1.7.5/ppsspp-spriv.tar.gz) = 9eefacbb6eeb2a010344189ebb2e85e3a69956b3f5f9a5d909d11ffc72030729a532f3db70a5f32cac2a0a3df98d648207ddb052f36e1ab2b53586722ee998e8
+Size (ppsspp-1.7.5/ppsspp-spriv.tar.gz) = 537422 bytes
+SHA1 (ppsspp-1.7.5/ppsspp.tar.gz) = 404e1db43cfe926078b30aefb0c79199cd9c0319
+RMD160 (ppsspp-1.7.5/ppsspp.tar.gz) = 62c542117d39e2d182c2e424d5ec705447afabbb
+SHA512 (ppsspp-1.7.5/ppsspp.tar.gz) = 7e1f93754e8969fee671c2cd8424cdff84b6351b4493f65c71fab4e9b99fc2a7c21c3a41fd051915f5293cda18957625649ba5ea69b88ed3efba9f4128252298
+Size (ppsspp-1.7.5/ppsspp.tar.gz) = 19487276 bytes
 SHA1 (patch-libretro_Makefile) = ff14d98bb21d87b5a27f40b180d73beef7ab2f74
-SHA1 (patch-libretro_Makefile.common) = 5bce7657a4b6703903b71e7d33317dcb284e2759
+SHA1 (patch-libretro_Makefile.common) = eebde48b059d8a0a2ec5ae7805e7a2c083f44c1c
