@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2018/01/25 09:47:35 adam Exp $
-bin/jupyter-kernel${PYVERSSUFFIX}
-bin/jupyter-kernelspec${PYVERSSUFFIX}
-bin/jupyter-run${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.6 2019/01/02 15:18:20 adam Exp $
+bin/jupyter-kernel-${PYVERSSUFFIX}
+bin/jupyter-kernelspec-${PYVERSSUFFIX}
+bin/jupyter-run-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
