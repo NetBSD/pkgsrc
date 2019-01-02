@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2018/12/09 20:25:12 adam Exp $
+# $NetBSD: Makefile,v 1.5 2019/01/02 15:43:10 adam Exp $
 
-DISTNAME=	numba-0.41.0
+DISTNAME=	numba-0.42.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numba/}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://numba.pydata.org/
 COMMENT=	NumPy aware dynamic Python compiler using LLVM
 LICENSE=	2-clause-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-llvmlite>=0.24.0:../../devel/py-llvmlite
+DEPENDS+=	${PYPKGPREFIX}-llvmlite>=0.27.0:../../devel/py-llvmlite
 
 USE_LANGUAGES=	c c++
 
