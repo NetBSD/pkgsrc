@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.146 2018/09/10 12:10:53 leot Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.147 2019/01/02 18:48:21 tnn Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -349,7 +349,7 @@ ACCEPTABLE_LICENSES+=xv-license
 	use the <varname>BUILD_DEPENDS</varname> definition:</para>
 
 <programlisting>
-BUILD_DEPENDS+= scons-[0-9]*:../../devel/scons
+BUILD_DEPENDS+= itstool-[0-9]*:../../textproc/itstool
 </programlisting>
       </listitem>
 
