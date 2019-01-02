@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2018/12/13 19:51:44 adam Exp $
+# $NetBSD: Makefile,v 1.32 2019/01/02 20:25:00 tnn Exp $
 
 DISTNAME=	mongodb-src-r3.4.4
 PKGNAME=	${DISTNAME:S/src-r//:S/-rc/rc/}
@@ -19,9 +19,6 @@ EXTRACT_USING=	bsdtar
 NO_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 
-BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
-
-SCONS_BIN=	${PREFIX}/bin/scons
 SCONS_ARGS=	${_MAKE_JOBS}
 SCONS_ARGS+=	--use-system-boost
 SCONS_ARGS+=	--use-system-pcre
@@ -35,6 +32,11 @@ SCONS_ARGS+=	--release
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet supported as of 3.0.4
 
 .include "../../mk/bsd.prefs.mk"
+
+# XXX this doesn't work for some reason
+#.if !empty(INSTALL_UNSTRIPPED:Uno:M[Yy][Ee][Ss])
+#SCONS_ARGS+=	--nostrip
+#.endif
 
 GCC_REQD+=	5.3.0
 
@@ -111,10 +113,10 @@ post-extract:
 		${WRKSRC}/src/mongo/db/ftdc/ftdc_system_stats_netbsd.cpp
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONS_BIN} ${SCONS_ARGS} core
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONSBIN} ${SCONS_ARGS} core
 
 do-install:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONS_BIN} ${SCONS_ARGS} \
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONSBIN} ${SCONS_ARGS} \
 		--prefix=${DESTDIR}${PREFIX} install
 
 do-test:
@@ -134,6 +136,7 @@ post-install:
 .include "../../devel/py-boost/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/scons/buildlink3.mk"
 .include "../../devel/snappy/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
