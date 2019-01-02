@@ -1,0 +1,55 @@
+$NetBSD: patch-Makefile,v 1.1 2019/01/02 13:24:29 nia Exp $
+
+Avoid overriding build settings.
+
+--- Makefile.orig	2018-04-17 17:16:44.000000000 +0000
++++ Makefile
+@@ -55,14 +55,9 @@ LIBS =
+ #-------------------------------------------------
+ 
+ # start with empties for everything
+-CCOMFLAGS = -DDISABLE_MIDI
+-CONLYFLAGS =
+-COBJFLAGS =
+-CPPONLYFLAGS =
++CCOMFLAGS += -DDISABLE_MIDI
+ # LDFLAGS are used generally; LDFLAGSEMULATOR are additional
+ # flags only used when linking the core emulator
+-LDFLAGS =
+-LDFLAGSEMULATOR =
+ 
+ GIT_VERSION ?= " $(shell git rev-parse --short HEAD || echo unknown)"
+ ifneq ($(GIT_VERSION)," unknown")
+@@ -143,15 +138,6 @@ ifeq ($(VRENDER),opengl)
+    LIBS += -lGL
+ endif
+ LDFLAGS += $(SHARED)
+-   NATIVELD = g++
+-   NATIVELDFLAGS = -Wl,--warn-common -lstdc++
+-   NATIVECC = g++
+-   NATIVECFLAGS = -std=gnu99
+-   CC_AS = gcc 
+-   CC = g++
+-   AR = @ar
+-   LD = g++ 
+-   CCOMFLAGS += $(PLATCFLAGS) -ffast-math  
+    LIBS += -lstdc++ -lpthread 
+ 
+ # Android
+@@ -568,7 +554,7 @@ DEFS += -DFLAC__NO_DLL
+ 
+ # CFLAGS is defined based on C or C++ targets
+ # (remember, expansion only happens when used, so doing it here is ok)
+-CFLAGS = $(CCOMFLAGS) $(CPPONLYFLAGS)
++CFLAGS += $(CCOMFLAGS) $(CPPONLYFLAGS)
+ 
+ # we compile C-only to C89 standard with GNU extensions
+ # we compile C++ code to C++98 standard with GNU extensions
+@@ -588,7 +574,6 @@ ifeq ($(MDEBUG),1)
+ CCOMFLAGS +=  -O0 -g
+ else
+ # add the optimization flag
+-CCOMFLAGS += -O$(OPTIMIZE)
+ endif
+ 
+ # add the error warning flag
