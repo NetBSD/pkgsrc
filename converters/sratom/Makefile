@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2018/11/14 22:21:11 kleink Exp $
+# $NetBSD: Makefile,v 1.11 2019/01/02 20:20:00 bsiegert Exp $
 
-DISTNAME=	sratom-0.4.6
-PKGREVISION=	8
+DISTNAME=	sratom-0.6.2
 CATEGORIES=	converters
 MASTER_SITES=	http://download.drobilla.net/
 EXTRACT_SUFX=	.tar.bz2
@@ -30,11 +29,11 @@ do-build:
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${PYTHONBIN} ./waf install
 
-BUILDLINK_API_DEPENDS.sord+=	sord>=0.12.0
+BUILDLINK_API_DEPENDS.sord+=	sord>=0.14.0
 .include "../../textproc/sord/buildlink3.mk"
-BUILDLINK_API_DEPENDS.serd+=	serd>=0.14.0
+BUILDLINK_API_DEPENDS.serd+=	serd>=0.30.0
 .include "../../textproc/serd/buildlink3.mk"
-BUILDLINK_API_DEPENDS.lv2+=	lv2>=1.8.1
+BUILDLINK_API_DEPENDS.lv2+=	lv2>=1.10.0
 .include "../../audio/lv2/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
