@@ -1,19 +1,19 @@
-$NetBSD: patch-programs_Makefile,v 1.4 2018/10/22 15:28:03 adam Exp $
+$NetBSD: patch-programs_Makefile,v 1.5 2019/01/02 14:27:36 adam Exp $
 
 Use zstd shared library.
 
---- programs/Makefile.orig	2018-10-17 03:58:52.000000000 +0000
+--- programs/Makefile.orig	2018-12-27 12:42:44.000000000 +0000
 +++ programs/Makefile
-@@ -160,7 +160,7 @@ $(ZSTDDECOMP_O): CFLAGS += $(ALIGN_LOOP)
+@@ -165,7 +165,7 @@ $(ZSTDDECOMP_O): CFLAGS += $(ALIGN_LOOP)
  zstd : CPPFLAGS += $(THREAD_CPP) $(ZLIBCPP) $(LZMACPP) $(LZ4CPP)
  zstd : LDFLAGS += $(THREAD_LD) $(ZLIBLD) $(LZMALD) $(LZ4LD) $(DEBUGFLAGS_LD)
  zstd : CPPFLAGS += -DZSTD_LEGACY_SUPPORT=$(ZSTD_LEGACY_SUPPORT)
--zstd : $(ZSTDLIB_FILES) zstdcli.o fileio.o bench.o datagen.o dibio.o
-+zstd : zstdcli.o fileio.o bench.o datagen.o dibio.o
+-zstd : $(ZSTDLIB_FILES) zstdcli.o util.o fileio.o benchfn.o benchzstd.o datagen.o dibio.o
++zstd : zstdcli.o util.o fileio.o benchfn.o benchzstd.o datagen.o dibio.o
  	@echo "$(THREAD_MSG)"
  	@echo "$(ZLIB_MSG)"
  	@echo "$(LZMA_MSG)"
-@@ -168,7 +168,7 @@ zstd : $(ZSTDLIB_FILES) zstdcli.o fileio
+@@ -173,7 +173,7 @@ zstd : $(ZSTDLIB_FILES) zstdcli.o util.o
  ifneq (,$(filter Windows%,$(OS)))
  	windres/generate_res.bat
  endif
