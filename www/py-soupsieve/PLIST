@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2019/01/02 10:34:20 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/soupsieve/__init__.py
+${PYSITELIB}/soupsieve/__init__.pyc
+${PYSITELIB}/soupsieve/__init__.pyo
+${PYSITELIB}/soupsieve/__meta__.py
+${PYSITELIB}/soupsieve/__meta__.pyc
+${PYSITELIB}/soupsieve/__meta__.pyo
+${PYSITELIB}/soupsieve/css_match.py
+${PYSITELIB}/soupsieve/css_match.pyc
+${PYSITELIB}/soupsieve/css_match.pyo
+${PYSITELIB}/soupsieve/css_parser.py
+${PYSITELIB}/soupsieve/css_parser.pyc
+${PYSITELIB}/soupsieve/css_parser.pyo
+${PYSITELIB}/soupsieve/css_types.py
+${PYSITELIB}/soupsieve/css_types.pyc
+${PYSITELIB}/soupsieve/css_types.pyo
+${PYSITELIB}/soupsieve/util.py
+${PYSITELIB}/soupsieve/util.pyc
+${PYSITELIB}/soupsieve/util.pyo
