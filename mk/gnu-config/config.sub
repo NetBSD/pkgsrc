@@ -1033,7 +1033,7 @@ case $cpu-$vendor in
 		cpu=mips64
 		;;
 	ms1-*)
-		cpu=mt
+		pu=mt
 		;;
 	m68knommu-*)
 		cpu=m68k
@@ -1230,7 +1230,7 @@ case $cpu-$vendor in
 			| riscv | riscv32 | riscv64 \
 			| rl78 | romp | rs6000 | rx \
 			| score \
-			| sh | sh[123456789lbe] | sh64 | sh64le \
+			| sh | sh[123456789lbe]* | sh64 | sh64le \
 			| sparc | sparc64 | sparc64b | sparc64v | sparc86x | sparclet \
 			| sparclite \
 			| sparcv8 | sparcv9 | sparcv9b | sparcv9v | sv1 | sx* \
