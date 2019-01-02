@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1355 2018/12/20 07:14:10 jnemeth Exp $
+# $NetBSD: Makefile,v 1.1356 2019/01/02 10:34:20 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -761,6 +761,7 @@ SUBDIR+=	py-scgi
 SUBDIR+=	py-scrapy
 SUBDIR+=	py-selenium
 SUBDIR+=	py-simpletal
+SUBDIR+=	py-soupsieve
 SUBDIR+=	py-sparqlwrapper
 SUBDIR+=	py-static
 SUBDIR+=	py-swiftclient
