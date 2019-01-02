@@ -1,0 +1,9 @@
+Libretro is a simple but powerful development interface that allows for
+the easy creation of emulators, games and multimedia applications that
+can plug straight into any libretro-compatible frontend. This development
+interface is open to others so that they can run these pluggable emulator
+and game cores also in their own programs or devices.
+
+MAME is the Multiple Arcade Machine Emulator. This is a port of MAME
+0.139 to libretro with backported improvements and is compatible with
+MAME 0.139 romsets.
