@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2018/07/03 05:03:01 adam Exp $
+# $NetBSD: Makefile,v 1.42 2019/01/02 18:29:14 tnn Exp $
 
 DISTNAME=		Csound${CSOUND_VERSION}
 PKGNAME=		csound5-${CSOUND_VERSION}
@@ -16,8 +16,6 @@ CSOUND_VERSION=		5.19.01
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison
 CFLAGS+=		-D__PKGSRC_PREFIX__=${PREFIX}/ -DBETA
-BUILD_DEPENDS+=		scons>=0.96:../../devel/scons
-SCONS=			${PREFIX}/bin/scons
 SCONS_ARGS=		-C ${WRKSRC} prefix=${PREFIX}
 SCONS_ARGS+=		buildDSSI=0 buildLoris=0 buildRelease=1
 SCONS_ARGS+=		useALSA=0 useJack=0 useOSC=0 usePortMIDI=0
@@ -26,8 +24,6 @@ SCONS_ARGS+=		buildInterfaces=0
 
 # Has long files our tar doesn't understand.
 EXTRACT_USING=		gtar
-
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 5.01
 
 INSTALLATION_DIRS=	bin
 
@@ -41,7 +37,7 @@ SUBST_SED.strip=	-e 's/--strip-unneeded//g'
 do-build:
 	cd ${WRKSRC} && ${TOOLS_PATH.bison} -d -o frontends/beats/beats.tab.c frontends/beats/beats.y
 	cd ${WRKSRC} && if [ ! -f custom.py ]; then cp custom.py.mkg custom.py; fi
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONS} ${SCONS_ARGS}
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONSBIN} ${SCONS_ARGS}
 
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ${PYTHONBIN} \
@@ -50,9 +46,10 @@ do-install:
 
 .include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
+PYTHON_FOR_BUILD_ONLY=	yes
+.include "../../devel/scons/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../lang/python/application.mk"
 .include "../../x11/fltk/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
