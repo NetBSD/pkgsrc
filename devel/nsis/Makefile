@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2018/09/27 20:01:07 tnn Exp $
+# $NetBSD: Makefile,v 1.20 2019/01/02 21:35:57 tnn Exp $
 #
 
 DISTNAME=	nsis-${NSIS_VER}
-PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nsis/}
 EXTRACT_SUFX=	.zip .tar.bz2
@@ -13,18 +12,17 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://nsis.sourceforge.net/Main_Page
 COMMENT=	Scriptable system to build Windows installers
 
-DEPENDS+=	scons>=0.96.91:../../devel/scons
-
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pax
 
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37	# as of 3.04
+
 NSIS_SRC=	${DISTNAME:=-src}
-NSIS_VER=	2.12
+NSIS_VER=	3.04
 WRKSRC=		${WRKDIR}/${NSIS_SRC}
 NO_CONFIGURE=	yes
 EXTRACT_OPTS_ZIP=	-qo
 
-SCONS_BIN=	${LOCALBASE}/bin/scons
 MAKENSIS_BIN=	${PREFIX}/share/nsis/makensis
 
 INSTALLATION_DIRS=	bin share/nsis
@@ -41,15 +39,16 @@ post-extract:
 
 do-build:
 	cd ${WRKSRC:Q} && ${PKGSRC_SETENV} ${MAKE_ENV}			\
-	    ${SCONS_BIN:Q} SKIPSTUBS=all SKIPPLUGINS=all		\
+	    ${SCONSBIN:Q} SKIPSTUBS=all SKIPPLUGINS=all		\
 	        SKIPUTILS=all SKIPMISC=all VERSION=${NSIS_VER:Q}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/build/release/makensis/makensis	\
+	${INSTALL_PROGRAM} ${WRKSRC:Q}/build/urelease/makensis/makensis	\
 		${DESTDIR}${MAKENSIS_BIN:Q}
 	${INSTALL_SCRIPT} ${WRKSRC:Q}/makensis.sh			\
 		${DESTDIR}${PREFIX:Q}/bin/makensis
 	cd ${WRKDIR:Q}/${DISTNAME:Q} && pax -rw .			\
 		${DESTDIR}${PREFIX:Q}/share/nsis
 
+.include "../../devel/scons/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
