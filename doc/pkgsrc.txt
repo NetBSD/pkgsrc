@@ -5885,7 +5885,7 @@ version numbers recognized by pkg_info(1).
  3. If your package needs binaries from another package to build, use the
     BUILD_DEPENDS definition:
 
-    BUILD_DEPENDS+= scons-[0-9]*:../../devel/scons
+    BUILD_DEPENDS+= itstool-[0-9]*:../../textproc/itstool
 
  4. If your package needs a library with which to link and there is no
     buildlink3.mk file available, create one. Using DEPENDS won't be sufficient
