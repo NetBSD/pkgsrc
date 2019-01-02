@@ -1033,7 +1033,7 @@ case $cpu-$vendor in
 		cpu=mips64
 		;;
 	ms1-*)
-		pu=mt
+		cpu=mt
 		;;
 	m68knommu-*)
 		cpu=m68k
