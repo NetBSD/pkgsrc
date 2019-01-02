@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.24 2019/01/02 15:37:18 tnn Exp $
+$NetBSD: CHANGES-2019,v 1.25 2019/01/02 15:44:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -30,3 +30,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-jupyter_client to 5.2.4 [adam 2019-01-02]
 	Updated www/py-notebook to 5.7.4 [adam 2019-01-02]
 	Updated x11/tint2 to 16.6.1 [tnn 2019-01-02]
+	Updated devel/py-llvmlite to 0.27.0 [adam 2019-01-02]
+	Updated math/py-numba to 0.42.0 [adam 2019-01-02]
