@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2016/06/05 00:43:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2019/01/02 21:30:21 bsiegert Exp $
 
-DISTNAME=	soxr-0.1.2-Source
+DISTNAME=	soxr-0.1.3-Source
 PKGNAME=	lib${DISTNAME:S/-Source//}
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=soxr/}
