@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.46 2018/11/14 22:22:50 kleink Exp $
+# $NetBSD: Makefile,v 1.47 2019/01/02 15:35:12 tnn Exp $
 
-DISTNAME=		tint2-0.14.6
-PKGREVISION=		4
+DISTNAME=		tint2-v16.6.1
+PKGNAME=		${DISTNAME:S/-v/-/}
 CATEGORIES=		x11
-MASTER_SITES=		${MASTER_SITE_GITHUB:=o9000/}
-GITHUB_TAG=		v${PKGVERSION_NOREV}
+MASTER_SITES=		https://gitlab.com/o9000/tint2/-/archive/v16.6.1/
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		fernandotcl@gmail.com
 HOMEPAGE=		https://gitlab.com/o9000/tint2
-COMMENT=		Tint2 is a simple panel/taskbar
+COMMENT=		Lightweight panel/taskbar for Linux and BSD
 LICENSE=		gnu-gpl-v2
 
 USE_LANGUAGES=		c c++ # XXX CMake. pkg does not really need c++
@@ -29,6 +29,7 @@ post-install:
 		${DESTDIR}${PREFIX}/share/examples/tint2
 
 .include "../../devel/cmake/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
@@ -37,6 +38,5 @@ post-install:
 .include "../../x11/libXdamage/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
-.include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
