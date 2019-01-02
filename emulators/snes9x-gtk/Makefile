@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2019/01/01 22:16:14 nia Exp $
+# $NetBSD: Makefile,v 1.63 2019/01/02 09:54:05 nia Exp $
 
 .include "../../emulators/snes9x/Makefile.common"
 
@@ -26,6 +26,8 @@ SUBST_MESSAGE.oss=	Correct path to OSS device.
 SUBST_FILES.oss+=	gtk/src/gtk_sound_driver_oss.cpp
 SUBST_SED.oss=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 .endif
+
+LIBS.SunOS+=		-lsocket -lnsl
 
 BUILDLINK_TRANSFORM+=	rm:-ldl
 
