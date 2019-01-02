@@ -1,13 +1,15 @@
-$NetBSD: patch-aa,v 1.4 2017/07/28 08:42:17 tnn Exp $
+$NetBSD: patch-aa,v 1.5 2019/01/02 15:35:12 tnn Exp $
 
---- CMakeLists.txt.orig	2017-06-11 09:15:36.000000000 +0000
+handle config file
+
+--- CMakeLists.txt.orig	2018-08-05 21:27:23.000000000 +0000
 +++ CMakeLists.txt
-@@ -257,7 +257,7 @@ set_target_properties( tint2 PROPERTIES 
+@@ -289,7 +289,7 @@ set_target_properties( tint2 PROPERTIES 
  install( TARGETS tint2 DESTINATION bin )
  install( FILES tint2.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/icons/hicolor/scalable/apps )
  install( FILES tint2.desktop DESTINATION ${CMAKE_INSTALL_DATADIR}/applications )
--install( FILES themes/tint2rc DESTINATION /etc/xdg/tint2 )
-+#install( FILES themes/tint2rc DESTINATION /etc/xdg/tint2 )
+-install( FILES themes/tint2rc DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/xdg/tint2 )
++#install( FILES themes/tint2rc DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/xdg/tint2 )
  install( FILES default_icon.png DESTINATION ${CMAKE_INSTALL_DATADIR}/tint2 )
  install( FILES AUTHORS ChangeLog README.md doc/tint2.md DESTINATION ${docdir} )
  install( FILES doc/manual.html doc/readme.html DESTINATION ${htmldir} )
