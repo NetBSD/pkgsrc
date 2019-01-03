@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2018/03/08 13:03:11 wiz Exp $
+$NetBSD: distinfo,v 1.13 2019/01/03 12:47:10 wen Exp $
 
-SHA1 (Email-Address-1.909.tar.gz) = 18b44bda75a93511824cf942968e4e191c8dbed4
-RMD160 (Email-Address-1.909.tar.gz) = 574b6b50b4092bf6ca3d3469ecc47a3c7fb2e070
-SHA512 (Email-Address-1.909.tar.gz) = d692c00402c329cbff0bd8ddfb8b406e2b8857586f6a5e6fb4092c4f92a7ef70c6d766b83818e73b8278cf84f6c16a75508b01ffd7f101bc11809845e778e5e5
-Size (Email-Address-1.909.tar.gz) = 41490 bytes
+SHA1 (Email-Address-1.912.tar.gz) = 09435ccc6559572f26835608086a8c00ccb6d21a
+RMD160 (Email-Address-1.912.tar.gz) = 5d4713e6868894d338a5f5bc0f54a11b8a1b4159
+SHA512 (Email-Address-1.912.tar.gz) = fd8a8c09829f725609aa84c79ad89d1e44cbfb70cc44cae6a9f31174589404f56cf60ab3a4186137f7ff9838a3fe34a95a7c584e0eec2e5d1d79c919610f6e1a
+Size (Email-Address-1.912.tar.gz) = 42390 bytes
