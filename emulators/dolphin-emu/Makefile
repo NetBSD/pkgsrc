@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/01/02 00:30:01 nia Exp $
+# $NetBSD: Makefile,v 1.3 2019/01/03 21:40:36 nia Exp $
 
 DISTNAME=	dolphin-emu-5.0
 PKGREVISION=	1
@@ -31,6 +31,9 @@ BROKEN_ON_PLATFORM+=	SunOS-*-*
 .if ${MACHINE_ARCH} != "x86_64" && ${MACHINE_ARCH} != "aarch64"
 CMAKE_ARGS+=		-DENABLE_GENERIC=1
 .endif
+
+# "Couldn't find libevdev and/or libudev.  Can't build evdev controller backend."
+CMAKE_ARGS.Linux+=	-DENABLE_EVDEV=0
 
 BUILDLINK_TRANSFORM+=	rm:-ldl
 
