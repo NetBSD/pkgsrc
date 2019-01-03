@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.38 2019/01/03 12:31:23 wen Exp $
+$NetBSD: CHANGES-2019,v 1.39 2019/01/03 12:37:17 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -50,3 +50,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/py-lxml to 4.2.6 [adam 2019-01-03]
 	Updated databases/py-asyncpg to 0.18.3 [adam 2019-01-03]
 	Updated devel/p5-MooseX-Role-Tempdir to 0.101 [wen 2019-01-03]
+	Updated devel/p5-Package-Stash-XS to 0.29 [wen 2019-01-03]
