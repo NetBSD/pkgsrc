@@ -1,13 +1,15 @@
-@comment $NetBSD: PLIST,v 1.3 2012/10/30 13:24:31 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/01/03 19:35:24 adam Exp $
 bin/tdbbackup
 bin/tdbdump
 bin/tdbrestore
 bin/tdbtool
 include/tdb.h
 lib/libtdb.so
-lib/libtdb.so.1
 lib/libtdb.so.${PKGVERSION}
+lib/libtdb.so.1
 lib/pkgconfig/tdb.pc
+${PYSITELIB}/_tdb_text.py
+${PYSITELIB}/tdb.so
 man/man8/tdbbackup.8
 man/man8/tdbdump.8
 man/man8/tdbrestore.8
