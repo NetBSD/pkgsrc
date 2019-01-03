@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/12/18 16:54:24 nia Exp $
+# $NetBSD: Makefile,v 1.6 2019/01/03 21:51:52 nia Exp $
 
 DISTNAME=	libretro-desmume-20181207
 CATEGORIES=	emulators
@@ -46,5 +46,6 @@ do-install:
 	    ${DESTDIR}${PREFIX}/lib/libretro/desmume_libretro.so
 
 .include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
