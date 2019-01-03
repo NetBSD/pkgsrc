@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/01/25 14:13:22 tnn Exp $
-bin/synergy-core
+@comment $NetBSD: PLIST,v 1.8 2019/01/03 21:53:09 tnn Exp $
 bin/synergyc
 bin/synergys
 man/man1/synergyc.1
