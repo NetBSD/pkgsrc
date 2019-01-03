@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2019/01/03 05:12:49 thorpej Exp $
+
+SHA1 (u-boot-2019.01-rc2.tar.bz2) = 4dd28d21a8bef3103301e4c15c7d4c88cf992a8b
+RMD160 (u-boot-2019.01-rc2.tar.bz2) = 7ae3ff0a892188665f51595e9fe65b53fd2ef8be
+SHA512 (u-boot-2019.01-rc2.tar.bz2) = d1c76fba9935c3bb7bee67219106af3a05f020cbad6ea2bf4865877d2c67d5ef76ba2d5d49ac623fe8db72fd5adfa5f13894ca80a22d1b0bdbc2549ffdab0815
+Size (u-boot-2019.01-rc2.tar.bz2) = 13253583 bytes
+SHA1 (patch-lib_bch.c) = 151e5f311742a7da919359950ccac2521bcfaaff
