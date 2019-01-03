@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/01/02 19:52:51 nia Exp $
+# $NetBSD: Makefile,v 1.4 2019/01/03 21:44:32 nia Exp $
 
 PKGNAME=	libretro-ppsspp-1.7.5
 CATEGORIES=	emulators
@@ -53,7 +53,7 @@ MAKE_FLAGS+=		TARGET_ARCH=x86
 
 MAKE_FLAGS+=		GIT_VERSION="${PKGVERSION}-pkgsrc"
 
-LDFLAGS+=		-lexecinfo
+LDFLAGS+=		${BUILDLINK_LDADD.libexecinfo}
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
