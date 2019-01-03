@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2018/12/22 01:13:52 adam Exp $
+# $NetBSD: Makefile,v 1.58 2019/01/03 19:36:45 adam Exp $
 
 DISTNAME=	samba-4.9.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://download.samba.org/pub/samba/stable/
 
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.samba.org/
 COMMENT=	SMB/CIFS protocol server suite
 LICENSE=	gnu-gpl-v3
 
-CONFLICTS+=	ja-samba-[0-9]* tdb-[0-9]* winbind-[0-9]*
+CONFLICTS+=	ja-samba-[0-9]* winbind-[0-9]*
 
 GCC_REQD+=	4.4
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
@@ -90,7 +90,6 @@ CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--abi-check-disable
 CONFIGURE_ARGS+=	--disable-symbol-versions
 CONFIGURE_ARGS+=	--enable-gnutls
-#CONFIGURE_ARGS+=	--bundled-libraries=!crypto,ldb,ntdb,!talloc,tdb,tevent
 .if defined(MAKE_JOBS) && !empty(MAKE_JOBS) && !(defined(MAKE_JOBS_SAFE) && !empty(MAKE_JOBS_SAFE:M[nN][oO]))
 CONFIGURE_ARGS+=	--jobs=${MAKE_JOBS}
 .else
@@ -222,12 +221,14 @@ PY_PATCHPLIST=	yes
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/lmdb/buildlink3.mk"
+.include "../../databases/tdb/buildlink3.mk"
 .include "../../devel/cmocka/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 BUILDLINK_API_DEPENDS.talloc+=	talloc>=2.1.9
 .include "../../devel/talloc/buildlink3.mk"
+.include "../../devel/tevent/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"

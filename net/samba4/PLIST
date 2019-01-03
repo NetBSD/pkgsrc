@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2018/12/22 01:13:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2019/01/03 19:36:45 adam Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/findsmb
@@ -38,10 +38,6 @@ bin/smbstatus
 bin/smbtar
 bin/smbtorture
 bin/smbtree
-bin/tdbbackup
-bin/tdbdump
-bin/tdbrestore
-bin/tdbtool
 bin/testparm
 bin/wbinfo
 include/charset.h
@@ -230,8 +226,6 @@ lib/pkgconfig/samdb.pc
 lib/pkgconfig/smbclient.pc
 lib/pkgconfig/wbclient.pc
 ${PYSITELIB}/_ldb_text.py
-${PYSITELIB}/_tdb_text.py
-${PYSITELIB}/_tevent.so
 ${PYSITELIB}/ldb.so
 ${PYSITELIB}/samba/__init__.py
 ${PYSITELIB}/samba/_glue.so
@@ -522,8 +516,6 @@ ${PYSITELIB}/samba/werror.so
 ${PYSITELIB}/samba/xattr.py
 ${PYSITELIB}/samba/xattr_native.so
 ${PYSITELIB}/samba/xattr_tdb.so
-${PYSITELIB}/tdb.so
-${PYSITELIB}/tevent.py
 lib/samba/auth/script.${SOEXT}
 lib/samba/bind9/dlz_bind9.${SOEXT}
 lib/samba/bind9/dlz_bind9_10.${SOEXT}
@@ -721,10 +713,6 @@ lib/samba/private/libsocket-blocking-samba4.so
 lib/samba/private/libsys-rw-samba4.so
 lib/samba/private/libtalloc-report-samba4.so
 lib/samba/private/libtdb-wrap-samba4.so
-lib/samba/private/libtdb.so.1
-lib/samba/private/libtdb.so.1.3.16
-lib/samba/private/libtevent.so.0
-lib/samba/private/libtevent.so.0.9.37
 lib/samba/private/libtime-basic-samba4.so
 lib/samba/private/libtorture-samba4.so
 lib/samba/private/libtrusts-util-samba4.so
@@ -864,10 +852,6 @@ man/man8/smbd.8
 man/man8/smbpasswd.8
 man/man8/smbspool.8
 man/man8/smbspool_krb5_wrapper.8
-man/man8/tdbbackup.8
-man/man8/tdbdump.8
-man/man8/tdbrestore.8
-man/man8/tdbtool.8
 man/man8/vfs_acl_tdb.8
 man/man8/vfs_acl_xattr.8
 man/man8/vfs_aio_fork.8
