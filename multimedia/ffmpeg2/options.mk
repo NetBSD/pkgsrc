@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2018/10/09 11:04:10 leot Exp $
+# $NetBSD: options.mk,v 1.15 2019/01/03 11:56:08 bsiegert Exp $
 
 # Global and legacy options
 
@@ -10,7 +10,7 @@ PKG_OPTIONS_GROUP.ssl=		gnutls openssl
 PKG_SUPPORTED_OPTIONS=	ass doc faac fdk-aac fontconfig freetype lame \
 			libvpx opencore-amr rtmp theora vorbis x11 x264 \
 			x265 xcb xvid
-PKG_SUGGESTED_OPTIONS=	lame ass freetype fontconfig libvpx openssl \
+PKG_SUGGESTED_OPTIONS=	lame ass freetype fontconfig libvpx \
 			theora vorbis x11 x264 xvid
 
 PLIST_VARS+=		doc
