@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.202 2018/12/16 08:12:15 ryoon Exp $
+$NetBSD: distinfo,v 1.203 2019/01/03 12:08:55 adam Exp $
 
 SHA1 (thunderbird-60.3.3.source.tar.xz) = 584dafa58bc2560d082f17472e0d07e84a7c16c9
 RMD160 (thunderbird-60.3.3.source.tar.xz) = e0aae75fbb632d4a60f1f4177cb9886bbd69d623
 SHA512 (thunderbird-60.3.3.source.tar.xz) = 30cffd9234d4b0820a4e3b966ebc3646780ebe455d06b6132d312169bd209d298c5e10d6721331645a9de6af646e96c4d75985aad0c09ece0e6c9d25f5555309
 Size (thunderbird-60.3.3.source.tar.xz) = 283847516 bytes
-SHA1 (patch-Makefile.in) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-browser_app_profile_firefox.js) = a939d5d4f0284f66a83bc0062f0fc173e6f75bd2
 SHA1 (patch-build_moz.configure_old.configure) = 6cded37360c0609e780f4fdd19ed5e81d5de43f3
 SHA1 (patch-build_moz.configure_rust.configure) = 98a009b91dc10b741d3fff3103c782d63373ad29
