@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.36 2019/01/03 09:45:47 bsiegert Exp $
+$NetBSD: CHANGES-2019,v 1.37 2019/01/03 10:57:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -47,3 +47,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/nsis to 3.04 [tnn 2019-01-02]
 	Added sysutils/u-boot-bananapi-r2 version 2019.01-rc2 [thorpej 2019-01-02]
 	Updated audio/suil to 0.10.2 [bsiegert 2019-01-03]
+	Updated textproc/py-lxml to 4.2.6 [adam 2019-01-03]
+	Updated databases/py-asyncpg to 0.18.3 [adam 2019-01-03]
