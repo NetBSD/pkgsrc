@@ -1,10 +1,8 @@
-$NetBSD: patch-libavcodec_x86_ac3dsp_init.c,v 1.2 2015/06/11 17:02:35 adam Exp $
+$NetBSD: patch-libavcodec_x86_ac3dsp__init.c,v 1.1 2019/01/03 11:56:09 bsiegert Exp $
 
-Fix from PR pkg/48680
-
---- libavcodec/x86/ac3dsp_init.c.orig  2014-06-02 23:18:54.000000000 +0200
-+++ libavcodec/x86/ac3dsp_init.c       2014-06-14 21:27:55.000000000 +0200
-@@ -84,11 +84,11 @@
+--- libavcodec/x86/ac3dsp_init.c.orig	2018-02-19 00:50:25.000000000 +0000
++++ libavcodec/x86/ac3dsp_init.c
+@@ -83,11 +83,11 @@ void ff_apply_window_int16_ssse3_atom(in
          "shufps     $0, %%xmm6, %%xmm6          \n"             \
          "shufps     $0, %%xmm7, %%xmm7          \n"             \
          "1:                                     \n"             \
@@ -21,7 +19,7 @@ Fix from PR pkg/48680
          "mulps          %%xmm5, %%xmm0          \n"             \
          "mulps          %%xmm6, %%xmm1          \n"             \
          "mulps          %%xmm5, %%xmm2          \n"             \
-@@ -99,8 +99,8 @@
+@@ -98,8 +98,8 @@ void ff_apply_window_int16_ssse3_atom(in
          "addps          %%xmm3, %%xmm0          \n"             \
          "addps          %%xmm4, %%xmm2          \n"             \
     mono("addps          %%xmm2, %%xmm0          \n")            \
@@ -32,7 +30,7 @@ Fix from PR pkg/48680
          "add               $16, %0              \n"             \
          "jl                 1b                  \n"             \
          : "+&r"(i)                                              \
-@@ -120,24 +120,26 @@
+@@ -119,24 +119,26 @@ void ff_apply_window_int16_ssse3_atom(in
          "mov              %5, %2            \n"                 \
          "1:                                 \n"                 \
          "mov -%c7(%6, %2, %c8), %3          \n"                 \
@@ -65,7 +63,7 @@ Fix from PR pkg/48680
          "add             $16, %0            \n"                 \
          "jl               1b                \n"                 \
          : "+&r"(i), "=&r"(j), "=&r"(k), "=&r"(m)                \
-@@ -180,8 +182,8 @@
+@@ -179,8 +181,8 @@ static void ac3_downmix_sse(float **samp
              "movss    4(%2, %0), %%xmm5         \n"
              "shufps          $0, %%xmm4, %%xmm4 \n"
              "shufps          $0, %%xmm5, %%xmm5 \n"
