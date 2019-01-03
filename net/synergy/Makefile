@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2018/12/13 19:52:18 adam Exp $
+# $NetBSD: Makefile,v 1.51 2019/01/03 21:53:09 tnn Exp $
 
-DISTNAME=		synergy-core-2.0.0
+DISTNAME=		synergy-core-1.10.1
 PKGNAME=		${DISTNAME:S/-core//}
-PKGREVISION=		3
 CATEGORIES=		net x11
 MASTER_SITES=		${MASTER_SITE_GITHUB:=symless/}
 GITHUB_PROJECT=		synergy-core
@@ -20,13 +19,14 @@ USE_LANGUAGES=		c c++11
 # configuration mechanisms.
 USE_CMAKE=		yes
 GNU_CONFIGURE=		yes
+CMAKE_ARGS+=		-DSYNERGY_BUILD_LEGACY_GUI=OFF
 
 CONFIG_SUB_OVERRIDE+=	ext/gmock/build-aux/config.sub
 CONFIG_SUB_OVERRIDE+=	ext/gtest/build-aux/config.sub
 CONFIG_GUESS_OVERRIDE+=	ext/gmock/build-aux/config.guess
 CONFIG_GUESS_OVERRIDE+=	ext/gtest/build-aux/config.guess
 
-CONFIGURE_ENV+=		GIT_COMMIT=0bd448d5
+CONFIGURE_ENV+=		GIT_COMMIT=1b4c0761
 
 EXAMPLES=	MacReadme.txt org.synergy-foss.org.synergyc.plist \
 		org.synergy-foss.org.synergys.plist synergy.conf.example \
@@ -51,7 +51,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/${p} ${DESTDIR}${PREFIX}/bin/${p}
 	${INSTALL_MAN} ${WRKSRC}/doc/${p}.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${p}.1
 .endfor
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/synergy-core ${DESTDIR}${PREFIX}/bin/synergy-core
 .for f in ${EXAMPLES}
 	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}
 .endfor
