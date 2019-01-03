@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2018/11/14 22:21:06 kleink Exp $
+# $NetBSD: Makefile,v 1.10 2019/01/03 09:44:45 bsiegert Exp $
 
-DISTNAME=	suil-0.8.2
-PKGREVISION=	7
+DISTNAME=	suil-0.10.2
 CATEGORIES=	audio
 MASTER_SITES=	http://download.drobilla.net/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,17 +10,10 @@ HOMEPAGE=	https://drobilla.net/software/suil/
 COMMENT=	Lightweight C library for loading and wrapping LV2 plugin UIs
 LICENSE=	isc
 
-DISTFILES=	${DEFAULT_DISTFILES} \
-		audacity-minsrc-2.1.2.tar.xz
-SITES.audacity-minsrc-2.1.2.tar.xz=	${MASTER_SITE_LOCAL}
-
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	suil.pc.in
-
-# Use older waf
-PYTHON_VERSIONS_ACCEPTED=	27
 
 WAF_ENV+=	CC=${CC:Q}
 WAF_ENV+=	CFLAGS=${CFLAGS:Q}
@@ -43,10 +35,6 @@ WAF_ENV+=	LC_ALL="en_US.UTF-8"
 
 WAF_ARGS=	--mandir=${PREFIX}/${PKGMANDIR}
 
-pre-configure:
-	${CP} -r ${WRKDIR}/audacity-minsrc-2.1.2/lib-src/lv2/suil/waflib \
-		${WRKSRC}
-
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${WAF_ENV} ./waf ${WAF_ARGS} ${WAF_CONFIGURE_ARGS} configure
 
@@ -56,6 +44,7 @@ do-build:
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${WAF_ENV} ./waf ${WAF_ARGS} install
 
+BUILDLINK_API_DEPENDS.lv2+=	lv2>=1.12.0
 .include "../../audio/lv2/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../x11/gtk2/buildlink3.mk"
