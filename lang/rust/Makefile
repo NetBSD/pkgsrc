@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2018/12/21 23:12:34 he Exp $
+# $NetBSD: Makefile,v 1.71 2019/01/03 01:05:46 tnn Exp $
 
 DISTNAME=	rustc-1.31.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -102,8 +102,6 @@ MAKE_ENV+=		CARGO_BUILD_JOBS=${MAKE_JOBS:U1}
 CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 
 UNLIMIT_RESOURCES+=	cputime
-
-PYTHON_VERSIONS_ACCEPTED=	27
 
 TEST_TARGET=	check
 
