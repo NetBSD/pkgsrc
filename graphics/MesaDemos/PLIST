@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2015/12/30 04:13:07 dholland Exp $
+@comment $NetBSD: PLIST,v 1.18 2019/01/04 01:43:20 tnn Exp $
 bin/arbfplight
 bin/arbfslight
 bin/arbocclude
@@ -22,7 +22,6 @@ bin/clearspd
 bin/convolutions
 bin/copypix
 bin/copytex
-bin/corender
 bin/createwin
 bin/cubemap
 bin/cuberender
@@ -46,6 +45,7 @@ bin/drawelements-large
 bin/drawoverhead
 bin/drawpix
 bin/drawrange
+${PLIST.egl}bin/eglinfo
 bin/engine
 bin/fbo_firecube
 bin/fbobind
@@ -71,6 +71,7 @@ bin/geom-stipple-lines
 bin/geom-wide-lines
 bin/glinfo
 bin/gloss
+bin/glsl-compile-time
 bin/glslstateschange
 bin/glsync
 bin/gltestperf
@@ -246,6 +247,7 @@ bin/tri-stipple
 bin/tri-tex
 bin/tri-tex-1d
 bin/tri-tex-3d
+bin/tri-tex-stipple
 bin/tri-tri
 bin/tri-unfilled
 bin/tri-unfilled-clip
