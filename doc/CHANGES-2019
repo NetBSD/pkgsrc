@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.59 2019/01/04 10:42:23 adam Exp $
+$NetBSD: CHANGES-2019,v 1.60 2019/01/04 13:35:39 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -77,3 +77,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/py-cares to 2.4.0 [adam 2019-01-04]
 	Updated misc/stellarium to 0.18.3 [adam 2019-01-04]
 	Updated www/nginx-devel to 1.15.8 [adam 2019-01-04]
+	Updated emulators/gxemul to 0.6.1 [ryoon 2019-01-04]
