@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2018/12/11 09:45:54 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.12 2019/01/04 08:17:37 wen Exp $
 share/drupal/.csslintrc
 share/drupal/.editorconfig
 share/drupal/.eslintignore
@@ -2947,6 +2947,7 @@ share/drupal/core/modules/block/tests/modules/block_test/src/Plugin/Block/TestAc
 share/drupal/core/modules/block/tests/modules/block_test/src/Plugin/Block/TestBlockInstantiation.php
 share/drupal/core/modules/block/tests/modules/block_test/src/Plugin/Block/TestCacheBlock.php
 share/drupal/core/modules/block/tests/modules/block_test/src/Plugin/Block/TestContextAwareBlock.php
+share/drupal/core/modules/block/tests/modules/block_test/src/Plugin/Block/TestContextAwareNoValidContextOptionsBlock.php
 share/drupal/core/modules/block/tests/modules/block_test/src/Plugin/Block/TestContextAwareUnsatisfiedBlock.php
 share/drupal/core/modules/block/tests/modules/block_test/src/Plugin/Block/TestFormBlock.php
 share/drupal/core/modules/block/tests/modules/block_test/src/Plugin/Block/TestHtmlBlock.php
@@ -4258,6 +4259,7 @@ share/drupal/core/modules/datetime/tests/src/Functional/DateTimeFieldTest.php
 share/drupal/core/modules/datetime/tests/src/Functional/DateTimeTimeAgoFormatterTest.php
 share/drupal/core/modules/datetime/tests/src/Functional/EntityResource/EntityTest/EntityTestDateonlyTest.php
 share/drupal/core/modules/datetime/tests/src/Functional/EntityResource/EntityTest/EntityTestDatetimeTest.php
+share/drupal/core/modules/datetime/tests/src/Functional/Views/FilterDateTest.php
 share/drupal/core/modules/datetime/tests/src/Kernel/DateTimeFormInjectionTest.php
 share/drupal/core/modules/datetime/tests/src/Kernel/DateTimeItemTest.php
 share/drupal/core/modules/datetime/tests/src/Kernel/Views/ArgumentDateTimeTest.php
@@ -6076,6 +6078,7 @@ share/drupal/core/modules/media/tests/src/Functional/MediaSettingsTest.php
 share/drupal/core/modules/media/tests/src/Functional/MediaSourceFileTest.php
 share/drupal/core/modules/media/tests/src/Functional/MediaTemplateSuggestionsTest.php
 share/drupal/core/modules/media/tests/src/Functional/MediaTranslationUITest.php
+share/drupal/core/modules/media/tests/src/Functional/MediaTypeCreationTest.php
 share/drupal/core/modules/media/tests/src/Functional/MediaUiFunctionalTest.php
 share/drupal/core/modules/media/tests/src/Functional/ProviderRepositoryTest.php
 share/drupal/core/modules/media/tests/src/Functional/ResourceFetcherTest.php
@@ -8065,7 +8068,6 @@ share/drupal/core/modules/system/src/Tests/Path/UrlAliasFixtures.php
 share/drupal/core/modules/system/src/Tests/Routing/MockAliasManager.php
 share/drupal/core/modules/system/src/Tests/Routing/MockRouteProvider.php
 share/drupal/core/modules/system/src/Tests/Session/SessionHttpsTest.php
-share/drupal/core/modules/system/src/Tests/System/ErrorHandlerTest.php
 share/drupal/core/modules/system/src/Tests/System/SystemConfigFormTestBase.php
 share/drupal/core/modules/system/src/Tests/Update/DbUpdatesTrait.php
 share/drupal/core/modules/system/src/Tests/Update/UpdatePathTestBase.php
@@ -8539,6 +8541,7 @@ share/drupal/core/modules/system/tests/modules/form_test/src/Form/FormTestDetail
 share/drupal/core/modules/system/tests/modules/form_test/src/Form/FormTestDisabledElementsForm.php
 share/drupal/core/modules/system/tests/modules/form_test/src/Form/FormTestEmailForm.php
 share/drupal/core/modules/system/tests/modules/form_test/src/Form/FormTestEmptySelectForm.php
+share/drupal/core/modules/system/tests/modules/form_test/src/Form/FormTestFileForm.php
 share/drupal/core/modules/system/tests/modules/form_test/src/Form/FormTestFormStateValuesCleanAdvancedForm.php
 share/drupal/core/modules/system/tests/modules/form_test/src/Form/FormTestFormStateValuesCleanForm.php
 share/drupal/core/modules/system/tests/modules/form_test/src/Form/FormTestGetForm.php
@@ -9066,6 +9069,7 @@ share/drupal/core/modules/system/tests/src/Functional/System/DateFormatsLockedTe
 share/drupal/core/modules/system/tests/src/Functional/System/DateFormatsMachineNameTest.php
 share/drupal/core/modules/system/tests/src/Functional/System/DateTimeTest.php
 share/drupal/core/modules/system/tests/src/Functional/System/DefaultMobileMetaTagsTest.php
+share/drupal/core/modules/system/tests/src/Functional/System/ErrorHandlerTest.php
 share/drupal/core/modules/system/tests/src/Functional/System/FrontPageTest.php
 share/drupal/core/modules/system/tests/src/Functional/System/HtaccessTest.php
 share/drupal/core/modules/system/tests/src/Functional/System/IndexPhpTest.php
@@ -9155,6 +9159,7 @@ share/drupal/core/modules/system/tests/src/Kernel/Common/SystemListingTest.php
 share/drupal/core/modules/system/tests/src/Kernel/DateFormatAccessControlHandlerTest.php
 share/drupal/core/modules/system/tests/src/Kernel/Entity/EntityReferenceSelectionReferenceableTest.php
 share/drupal/core/modules/system/tests/src/Kernel/Extension/ModuleHandlerTest.php
+share/drupal/core/modules/system/tests/src/Kernel/Form/FileElementTest.php
 share/drupal/core/modules/system/tests/src/Kernel/Form/FormElementLabelTest.php
 share/drupal/core/modules/system/tests/src/Kernel/Form/FormElementMaxlengthTest.php
 share/drupal/core/modules/system/tests/src/Kernel/Form/FormObjectTest.php
@@ -9917,7 +9922,6 @@ share/drupal/core/modules/user/src/RoleStorageInterface.php
 share/drupal/core/modules/user/src/SharedTempStore.php
 share/drupal/core/modules/user/src/SharedTempStoreFactory.php
 share/drupal/core/modules/user/src/StatusItem.php
-share/drupal/core/modules/user/src/Tests/RestRegisterUserTest.php
 share/drupal/core/modules/user/src/Tests/UserResetEmailTestTrait.php
 share/drupal/core/modules/user/src/Theme/AdminNegotiator.php
 share/drupal/core/modules/user/src/TimeZoneItem.php
@@ -9991,6 +9995,7 @@ share/drupal/core/modules/user/tests/src/Functional/Rest/UserResourceTestBase.ph
 share/drupal/core/modules/user/tests/src/Functional/Rest/UserXmlAnonTest.php
 share/drupal/core/modules/user/tests/src/Functional/Rest/UserXmlBasicAuthTest.php
 share/drupal/core/modules/user/tests/src/Functional/Rest/UserXmlCookieTest.php
+share/drupal/core/modules/user/tests/src/Functional/RestRegisterUserTest.php
 share/drupal/core/modules/user/tests/src/Functional/Update/UserUpdateEmailToken.php
 share/drupal/core/modules/user/tests/src/Functional/Update/UserUpdateOrderPermissionsTest.php
 share/drupal/core/modules/user/tests/src/Functional/UserAccountLinksTest.php
@@ -11363,6 +11368,7 @@ share/drupal/core/profiles/demo_umami/demo_umami.profile
 share/drupal/core/profiles/demo_umami/modules/demo_umami_content/default_content/.htaccess
 share/drupal/core/profiles/demo_umami/modules/demo_umami_content/default_content/LICENCE.txt
 share/drupal/core/profiles/demo_umami/modules/demo_umami_content/default_content/article_body/baking-mishaps-our-troubleshooting-tips.html
+share/drupal/core/profiles/demo_umami/modules/demo_umami_content/default_content/article_body/dairy-free-delicious-milk-chocolate.html
 share/drupal/core/profiles/demo_umami/modules/demo_umami_content/default_content/article_body/give-it-a-go-and-grow-your-own-herbs.html
 share/drupal/core/profiles/demo_umami/modules/demo_umami_content/default_content/article_body/give-your-oatmeal-the-ultimate-makeover.html
 share/drupal/core/profiles/demo_umami/modules/demo_umami_content/default_content/article_body/lets-hear-it-for-carrots.html
@@ -11383,6 +11389,7 @@ share/drupal/core/profiles/demo_umami/modules/demo_umami_content/default_content
 share/drupal/core/profiles/demo_umami/modules/demo_umami_content/default_content/images/supermarket-savvy-umami.jpg
 share/drupal/core/profiles/demo_umami/modules/demo_umami_content/default_content/images/thai-green-curry-umami.jpg
 share/drupal/core/profiles/demo_umami/modules/demo_umami_content/default_content/images/umami-bundle.png
+share/drupal/core/profiles/demo_umami/modules/demo_umami_content/default_content/images/vegan-chocolate.jpg
 share/drupal/core/profiles/demo_umami/modules/demo_umami_content/default_content/images/veggie-pasta-bake-hero-umami.jpg
 share/drupal/core/profiles/demo_umami/modules/demo_umami_content/default_content/images/veggie-pasta-bake-umami.jpg
 share/drupal/core/profiles/demo_umami/modules/demo_umami_content/default_content/images/victoria-sponge-umami.jpg
