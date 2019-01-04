@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2019/01/03 10:53:00 adam Exp $
+# $NetBSD: Makefile,v 1.58 2019/01/04 21:50:31 adam Exp $
 
-DISTNAME=	lxml-4.2.6
+DISTNAME=	lxml-4.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lxml/}
@@ -17,9 +17,9 @@ PYSETUPTESTARGS=	--run-tests
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/egg.mk"
-BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.7.8
+BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.9.2
 .include "../../textproc/libxml2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libxslt+=	libxslt>=1.1.26
+BUILDLINK_API_DEPENDS.libxslt+=	libxslt>=1.1.27
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 # fix for UnicodeEncodeError: 'ascii' codec can't encode characters
