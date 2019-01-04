@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.58 2019/01/04 08:53:29 adam Exp $
+$NetBSD: CHANGES-2019,v 1.59 2019/01/04 10:42:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -75,3 +75,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/p5-HTML-FormFu to 2.07 [wen 2019-01-04]
 	Updated devel/py-bugzilla to 2.2.0 [adam 2019-01-04]
 	Updated net/py-cares to 2.4.0 [adam 2019-01-04]
+	Updated misc/stellarium to 0.18.3 [adam 2019-01-04]
+	Updated www/nginx-devel to 1.15.8 [adam 2019-01-04]
