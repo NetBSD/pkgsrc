@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18736 2019/01/02 20:32:22 bsiegert Exp $
+$NetBSD: TODO,v 1.18737 2019/01/04 03:32:15 tnn Exp $
 
 Suggested new packages
 ======================
@@ -342,7 +342,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ImageMagick-7.0.8.21
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
-	o MesaDemos-8.3.0
 	o MesaLib-18.3.1
 	o OdfConverter-4.0
 	o PACK-0.0.4
@@ -676,7 +675,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glib2-tools-2.58.1
 	o gliv-1.9.7
 	o glom-1.14.2 [GNOME 2.26]
-	o glx-utils-8.3.0
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-3.30.1
@@ -1273,7 +1271,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.7
 	o sarg-2.2.5
-	o sawfish-1.12.0
 	o scew-1.1.7
 	o scilab-5.5.2
 	o scm-5f2
