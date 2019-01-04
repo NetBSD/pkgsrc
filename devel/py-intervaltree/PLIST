@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/03/20 21:59:04 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/01/04 22:56:59 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -6,14 +6,14 @@ ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/intervaltree/__init__.py
-${PYSITELIB}/intervaltree/__init__.pyo
 ${PYSITELIB}/intervaltree/__init__.pyc
-${PYSITELIB}/intervaltree/interval.pyo
-${PYSITELIB}/intervaltree/interval.pyc
-${PYSITELIB}/intervaltree/intervaltree.pyo
-${PYSITELIB}/intervaltree/intervaltree.pyc
-${PYSITELIB}/intervaltree/node.pyo
-${PYSITELIB}/intervaltree/node.pyc
+${PYSITELIB}/intervaltree/__init__.pyo
 ${PYSITELIB}/intervaltree/interval.py
+${PYSITELIB}/intervaltree/interval.pyc
+${PYSITELIB}/intervaltree/interval.pyo
 ${PYSITELIB}/intervaltree/intervaltree.py
+${PYSITELIB}/intervaltree/intervaltree.pyc
+${PYSITELIB}/intervaltree/intervaltree.pyo
 ${PYSITELIB}/intervaltree/node.py
+${PYSITELIB}/intervaltree/node.pyc
+${PYSITELIB}/intervaltree/node.pyo
