@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.57 2019/01/04 08:34:28 wen Exp $
+$NetBSD: CHANGES-2019,v 1.58 2019/01/04 08:53:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -73,3 +73,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/py-netifaces to 0.10.9 [adam 2019-01-04]
 	Updated www/drupal8 to 8.6.5 [wen 2019-01-04]
 	Updated www/p5-HTML-FormFu to 2.07 [wen 2019-01-04]
+	Updated devel/py-bugzilla to 2.2.0 [adam 2019-01-04]
+	Updated net/py-cares to 2.4.0 [adam 2019-01-04]
