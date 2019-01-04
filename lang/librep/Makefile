@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.64 2018/01/28 20:10:53 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2019/01/04 02:06:05 tnn Exp $
 #
 
-DISTNAME=		librep-0.92.3
-PKGREVISION=		1
+DISTNAME=		librep_0.92.7
+PKGNAME=		${DISTNAME:S/_/-/}
 CATEGORIES=		lang devel
 MASTER_SITES=		http://download.tuxfamily.org/librep/
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sawfish.wikia.com/
 COMMENT=		Emacs Lisp-like runtime library, interpreter, compiler and VM
+LICENSE=		gnu-gpl-v2
 
 USE_TOOLS+=		gmake makeinfo gzip
 USE_LIBTOOL=		yes
@@ -24,10 +25,6 @@ CONFIGURE_ARGS+=	--with-gmp
 CONFIGURE_ARGS+=	--enable-static
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${MACHINE_ARCH} == "x86_64"
-CONFIGURE_ARGS+=	--with-stack-direction=-1
-.endif
 
 REPLACE_INTERPRETER+=	rep
 REPLACE.rep.old=	.*/bin/rep
