@@ -1,4 +1,6 @@
-$NetBSD: patch-src_components_cpu_CPUDyntransComponent.cc,v 1.1 2012/11/23 12:33:22 joerg Exp $
+$NetBSD: patch-src_components_cpu_CPUDyntransComponent.cc,v 1.2 2019/01/04 13:35:16 ryoon Exp $
+
+Don't define functions returning functions.
 
 --- src/components/cpu/CPUDyntransComponent.cc.orig	2012-11-19 20:12:27.000000000 +0000
 +++ src/components/cpu/CPUDyntransComponent.cc
