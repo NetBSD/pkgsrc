@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/04/03 14:32:09 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2019/01/04 08:49:33 adam Exp $
 
-VERSION=	2.1.0
-DISTNAME=	python-bugzilla-${VERSION}
-PKGNAME=	${PYPKGPREFIX}-bugzilla-${VERSION}
-CATEGORIES=	devel
+DISTNAME=	python-bugzilla-2.2.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-bugzilla/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,7 +10,24 @@ HOMEPAGE=	https://github.com/python-bugzilla/python-bugzilla
 COMMENT=	Bugzilla XMLRPC access module
 LICENSE=	gnu-gpl-v2
 
+DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
 USE_LANGUAGES=	# none
+
+SUBST_CLASSES+=		mandir
+SUBST_STAGE.mandir=	pre-configure
+SUBST_MESSAGE.mandir=	Setting correct mandir.
+SUBST_FILES.mandir=	setup.py
+SUBST_SED.mandir=	-e 's,share/man,${PKGMANDIR},g'
+
+post-install:
+	cd ${DESTDIR}${PREFIX} && \
+	${MV} bin/bugzilla bin/bugzilla-${PYVERSSUFFIX} && \
+	${MV} ${PKGMANDIR}/man1/bugzilla.1 ${PKGMANDIR}/man1/bugzilla-${PYVERSSUFFIX}.1 || ${TRUE}
+
+do-test:
+	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
