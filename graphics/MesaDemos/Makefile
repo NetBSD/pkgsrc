@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.42 2018/01/03 00:29:23 rillig Exp $
+# $NetBSD: Makefile,v 1.43 2019/01/04 01:43:20 tnn Exp $
 
-DISTNAME=	mesa-demos-8.2.0
+DISTNAME=	mesa-demos-8.4.0
 PKGNAME=	${DISTNAME:S/mesa-demos/MesaDemos/}
-PKGREVISION=	3
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/demos/8.2.0/
+MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/demos/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -25,6 +24,8 @@ SUBST_FILES.bitmap+=	src/xdemos/Makefile.in
 SUBST_SED.bitmap=	-e 's/bitmap$$(EXEEXT)/bitmap_mesademos$$(EXEEXT)/g'
 SUBST_SED.bitmap+=	-e 's/glxgears$$(EXEEXT)/glxgears_mesademos$$(EXEEXT)/g'
 SUBST_SED.bitmap+=	-e 's/glxinfo$$(EXEEXT)/glxinfo_mesademos$$(EXEEXT)/g'
+
+.include "options.mk"
 
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
