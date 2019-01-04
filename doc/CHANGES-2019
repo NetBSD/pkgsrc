@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.48 2019/01/04 01:44:51 tnn Exp $
+$NetBSD: CHANGES-2019,v 1.49 2019/01/04 02:38:26 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -61,3 +61,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/erlang to 21.2.2 [nia 2019-01-04]
 	Updated graphics/glx-utils to 8.4.0 [tnn 2019-01-04]
 	Updated graphics/MesaDemos to 8.4.0 [tnn 2019-01-04]
+	Updated time/p5-DateTime-Calendar-Julian to 0.100 [wen 2019-01-04]
