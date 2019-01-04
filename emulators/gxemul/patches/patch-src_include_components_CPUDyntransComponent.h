@@ -1,6 +1,8 @@
-$NetBSD: patch-src_include_components_CPUDyntransComponent.h,v 1.1 2012/11/23 12:33:22 joerg Exp $
+$NetBSD: patch-src_include_components_CPUDyntransComponent.h,v 1.2 2019/01/04 13:35:16 ryoon Exp $
 
---- src/include/components/CPUDyntransComponent.h.orig	2012-11-19 20:05:03.000000000 +0000
+Don't define functions returning functions.
+
+--- src/include/components/CPUDyntransComponent.h.orig	2018-12-07 06:29:22.000000000 +0000
 +++ src/include/components/CPUDyntransComponent.h
 @@ -47,9 +47,13 @@ class CPUDyntransComponent;
   * f points to a function to be executed.
@@ -21,8 +23,8 @@ $NetBSD: patch-src_include_components_CPUDyntransComponent.h,v 1.1 2012/11/23 12
  protected:
  	// Implemented by specific CPU families:
  	virtual int GetDyntransICshift() const = 0;
--	virtual void (*GetDyntransToBeTranslated())(CPUDyntransComponent* cpu, DyntransIC* ic) const = 0;
-+	virtual DyntransIC_t GetDyntransToBeTranslated() const = 0;
+-	virtual void (*GetDyntransToBeTranslated())(CPUDyntransComponent* cpu, DyntransIC* ic) = 0;
++	virtual DyntransIC_t GetDyntransToBeTranslated() = 0;
  
  	void DyntransToBeTranslatedBegin(struct DyntransIC*);
  	bool DyntransReadInstruction(uint16_t& iword);

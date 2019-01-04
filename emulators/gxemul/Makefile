@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.61 2018/08/08 13:53:48 gson Exp $
+# $NetBSD: Makefile,v 1.62 2019/01/04 13:35:16 ryoon Exp $
 
-DISTNAME=	gxemul-0.6.0.1
-PKGREVISION=	7
+DISTNAME=	gxemul-0.6.1
 CATEGORIES=	emulators
-MASTER_SITES=	http://gxemul.sourceforge.net/src/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gxemul/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gxemul.sourceforge.net/
+HOMEPAGE=	http://gavare.se/gxemul/
 COMMENT=	Framework for full-system computer architecture emulation
 LICENSE=	modified-bsd
 
