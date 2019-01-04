@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.56 2019/01/04 08:18:45 wen Exp $
+$NetBSD: CHANGES-2019,v 1.57 2019/01/04 08:34:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -72,3 +72,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/py-crontab to 2.3.6 [adam 2019-01-04]
 	Updated net/py-netifaces to 0.10.9 [adam 2019-01-04]
 	Updated www/drupal8 to 8.6.5 [wen 2019-01-04]
+	Updated www/p5-HTML-FormFu to 2.07 [wen 2019-01-04]
