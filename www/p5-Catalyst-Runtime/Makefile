@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2018/10/20 13:09:37 wen Exp $
+# $NetBSD: Makefile,v 1.48 2019/01/04 06:20:27 wen Exp $
 
-DISTNAME=	Catalyst-Runtime-5.90120
+DISTNAME=	Catalyst-Runtime-5.90123
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
@@ -49,6 +49,7 @@ DEPENDS+=	p5-Catalyst-DispatchType-Regex>=5.90021:../../www/p5-Catalyst-Dispatch
 DEPENDS+=	p5-Plack-Middleware-FixMissingBodyInRedirect-[0-9]*:../../www/p5-Plack-Middleware-FixMissingBodyInRedirect
 DEPENDS+=	p5-Plack-Middleware-MethodOverride-[0-9]*:../../www/p5-Plack-Middleware-MethodOverride
 DEPENDS+=	p5-Plack-Middleware-RemoveRedundantBody-[0-9]*:../../www/p5-Plack-Middleware-RemoveRedundantBody
+DEPENDS+=	p5-PerlIO-utf8_strict>=0:../../devel/p5-PerlIO-utf8_strict
 
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 #BUILD_DEPENDS+=	p5-Test-MockObject>=1.07:../../devel/p5-Test-MockObject
