@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.53 2019/01/04 06:23:28 wen Exp $
+$NetBSD: CHANGES-2019,v 1.54 2019/01/04 06:27:36 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -68,3 +68,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated time/p5-DateTime-TimeZone to 2.23 [wen 2019-01-04]
 	Updated time/p5-Time-Elapsed to 0.33 [wen 2019-01-04]
 	Updated www/p5-Catalyst-Runtime to 5.90123 [wen 2019-01-04]
+	Updated www/p5-Catalyst-Plugin-Session to 0.41 [wen 2019-01-04]
