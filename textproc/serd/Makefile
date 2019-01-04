@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/01/02 19:39:23 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4 2019/01/04 16:02:21 gson Exp $
 
 DISTNAME=	serd-0.30.0
 CATEGORIES=	textproc
@@ -10,6 +10,7 @@ HOMEPAGE=	http://drobilla.net/software/serd/
 COMMENT=	Lightweight C library for RDF syntax
 LICENSE=	isc
 
+USE_LANGUAGES=	c99
 USE_TOOLS+=	gsed pkg-config
 
 PKGCONFIG_OVERRIDE+=	serd.pc.in
