@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.46 2019/01/04 00:03:29 nia Exp $
+$NetBSD: CHANGES-2019,v 1.47 2019/01/04 01:25:59 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -59,3 +59,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/synergy to 1.10.1 [tnn 2019-01-03]
 	Updated lang/erlang to 21.2 [nia 2019-01-03]
 	Updated lang/erlang to 21.2.2 [nia 2019-01-04]
+	Updated graphics/glx-utils to 8.4.0 [tnn 2019-01-04]
