@@ -1,8 +1,8 @@
-$NetBSD: patch-setup__cares.py,v 1.1 2018/10/22 15:50:28 jperkin Exp $
+$NetBSD: patch-setup__cares.py,v 1.2 2019/01/04 08:53:12 adam Exp $
 
 Fix build on SunOS.
 
---- setup_cares.py.orig	2017-04-25 06:44:35.000000000 +0000
+--- setup_cares.py.orig	2019-01-02 09:16:48.000000000 +0000
 +++ setup_cares.py
 @@ -85,9 +85,10 @@ class cares_build_ext(build_ext):
          elif sys.platform.startswith('openbsd'):
@@ -15,4 +15,4 @@ Fix build on SunOS.
 +            self.compiler.add_library('kstat')
          elif sys.platform == 'win32':
              self.compiler.add_include_dir(os.path.join(self.cares_dir, 'src/config_win32'))
-             self.extensions[0].extra_link_args = ['/NODEFAULTLIB:libcmt']
+             if "mingw" not in self.compiler.compiler_type:
