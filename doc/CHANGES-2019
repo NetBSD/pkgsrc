@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.64 2019/01/04 21:02:32 triaxx Exp $
+$NetBSD: CHANGES-2019,v 1.65 2019/01/04 21:38:46 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -82,3 +82,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/cmake to 3.13.2nb1 [triaxx 2019-01-04]
 	Updated x11/gtk3 to 3.24.2nb1 [leot 2019-01-04]
 	Updated devel/cmake to 3.13.2nb2 [triaxx 2019-01-04]
+	Updated multimedia/transcode to 1.1.7nb33 [triaxx 2019-01-04]
