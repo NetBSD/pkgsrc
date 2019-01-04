@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2018/05/10 07:01:55 adam Exp $
+# $NetBSD: Makefile,v 1.11 2019/01/04 08:00:52 adam Exp $
 
-DISTNAME=	netifaces-0.10.7
+DISTNAME=	netifaces-0.10.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/netifaces/}
