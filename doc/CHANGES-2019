@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.66 2019/01/04 22:08:11 adam Exp $
+$NetBSD: CHANGES-2019,v 1.67 2019/01/04 22:21:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -88,3 +88,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/py-lxml to 4.3.0 [adam 2019-01-04]
 	Updated www/py-django2 to 2.1.5 [adam 2019-01-04]
 	Updated www/py-django to 1.11.18 [adam 2019-01-04]
+	Updated devel/py-xdis to 3.8.9 [adam 2019-01-04]
+	Updated databases/py-barman to 2.5 [adam 2019-01-04]
