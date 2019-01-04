@@ -1,4 +1,4 @@
-$NetBSD: patch-unix_unix.cpp,v 1.1 2019/01/02 11:25:32 nia Exp $
+$NetBSD: patch-unix_unix.cpp,v 1.2 2019/01/04 23:34:36 nia Exp $
 
 Avoid colliding with libc functions.
 
@@ -9,7 +9,7 @@ Avoid colliding with libc functions.
  bool S9xDisplayPollPointer (uint32, int16 *, int16 *);
  
 -static long log2 (long);
-+static long log2l (long);
++static long log2_l (long);
  static void SoundTrigger (void);
  static void InitTimer (void);
  static void NSRTControllerSetup (void);
@@ -18,7 +18,7 @@ Avoid colliding with libc functions.
  }
  
 -static long log2 (long num)
-+static long log2l (long num)
++static long log2_l (long num)
  {
  	long	n = 0;
  
@@ -27,7 +27,7 @@ Avoid colliding with libc functions.
  	}
  
 -	J = log2(unixSettings.SoundFragmentSize) | (3 << 16);
-+	J = log2l(unixSettings.SoundFragmentSize) | (3 << 16);
++	J = log2_l(unixSettings.SoundFragmentSize) | (3 << 16);
  	if (ioctl(so.sound_fd, SNDCTL_DSP_SETFRAGMENT, &J) == -1)
  		return (FALSE);
  
