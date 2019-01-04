@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.51 2019/01/04 02:48:32 wen Exp $
+$NetBSD: CHANGES-2019,v 1.52 2019/01/04 03:31:25 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -61,6 +61,9 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/erlang to 21.2.2 [nia 2019-01-04]
 	Updated graphics/glx-utils to 8.4.0 [tnn 2019-01-04]
 	Updated graphics/MesaDemos to 8.4.0 [tnn 2019-01-04]
+	Updated lang/librep to 0.92.7 [tnn 2019-01-04]
+	Updated x11/rep-gtk2 to 0.90.8.3 [tnn 2019-01-04]
+	Updated wm/sawfish to 1.12.0 [tnn 2019-01-04]
 	Updated time/p5-DateTime-Calendar-Julian to 0.100 [wen 2019-01-04]
 	Updated time/p5-DateTime-TimeZone to 2.23 [wen 2019-01-04]
 	Updated time/p5-Time-Elapsed to 0.33 [wen 2019-01-04]
