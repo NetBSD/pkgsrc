@@ -1,0 +1,25 @@
+$NetBSD: patch-do,v 1.1 2019/01/05 06:16:14 schmonz Exp $
+
+Don't bake build host into anything.
+Show build output.
+
+--- do.orig	2011-02-21 01:49:34.000000000 +0000
++++ do
+@@ -6,7 +6,7 @@
+ 
+ version=`cat version`
+ project=nacl
+-shorthostname=`hostname | sed 's/\..*//' | tr -cd '[a-z][A-Z][0-9]'`
++shorthostname='pkgsrchostname'
+ 
+ top="`pwd`/build/$shorthostname"
+ bin="$top/bin"
+@@ -38,7 +38,7 @@ mkdir -p "$bin"
+ mkdir -p "$lib"
+ mkdir -p "$include"
+ 
+-exec >"$top/log"
++exec | tee "$top/log"
+ exec 2>&1
+ exec 5>"$top/data"
+ exec </dev/null
