@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/07/18 22:55:08 maya Exp $
+# $NetBSD: Makefile,v 1.4 2019/01/05 00:39:13 adam Exp $
 
 GCC_PKGNAME=	gcc7
 .include	"../../lang/${GCC_PKGNAME}/version.mk"
@@ -8,8 +8,8 @@ PKGNAME=	${GCC_PKGNAME}-libs-${GCC7_DIST_VERSION}
 
 ## The PKGREVISION of this package needs to be at least 1 more than the
 ## PKGREVISION of the lang/gcc7 package so that with the dependence pattern
-## '{gcc7,gcc7-libs}>=7.3.*' pkg_add will choose gcc7-libs over gcc7.
-PKGREVISION=	4
+## '{gcc7,gcc7-libs}>=7.4.*' pkg_add will choose gcc7-libs over gcc7.
+PKGREVISION=	1
 
 CATEGORIES=	lang
 MASTER_SITES=	# empty
@@ -43,16 +43,16 @@ SHLIB_EXT=	so
 
 LIBRARY_FILES=	${WRKDIR}/lib_files
 
-GENERATE_PLIST+= ${SED} -e 's,^,${LIBGCC_SUBPREFIX}/${GCC_TARGET_MACHINE}/,' \
+GENERATE_PLIST+=	${SED} -e 's,^,${LIBGCC_SUBPREFIX}/${GCC_TARGET_MACHINE}/,' \
 			${LIBRARY_FILES};
-GENERATE_PLIST+= ${GREP} -q 'lib/' ${LIBRARY_FILES} || \
-	   ${ECHO} '@pkgdir ${LIBGCC_SUBPREFIX}/${GCC_TARGET_MACHINE}/lib' ;
+GENERATE_PLIST+=	${GREP} -q 'lib/' ${LIBRARY_FILES} || \
+			${ECHO} '@pkgdir ${LIBGCC_SUBPREFIX}/${GCC_TARGET_MACHINE}/lib';
 
 ${LIBRARY_FILES}:
-	${PKG_INFO} -qL '${GCC_PKGNAME}-${GCC7_DIST_VERSION}*' |		\
+	${PKG_INFO} -qL '${GCC_PKGNAME}-${GCC7_DIST_VERSION}*' |	\
 	${SED} -n -e's,^${LIBGCC_PREFIX}/,,' -e'/libexec\//d'		\
 		-e'/libgij/d;/libgcj/d;/libjvm/d'			\
-		-e'/lib.*\.${SHLIB_EXT}/p' 		>${LIBRARY_FILES}
+		-e'/lib.*\.${SHLIB_EXT}/p' >${LIBRARY_FILES}
 
 do-install: ${LIBRARY_FILES}
 	${TEST} -d ${DESTDIR}${LIBGCC_PREFIX}/${GCC_TARGET_MACHINE}/lib ||	\
