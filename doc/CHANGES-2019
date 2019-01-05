@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.76 2019/01/05 00:41:10 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.77 2019/01/05 03:02:42 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -106,3 +106,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/gcc7 to 7.4.0 [adam 2019-01-05]
 	Updated lang/gcc7-libs to 7.4.0nb1 [adam 2019-01-05]
 	Updated mail/thunderbird-l10n to 60.4.0 [ryoon 2019-01-05]
+	Updated www/geckodriver to 0.23.0 [tnn 2019-01-05]
