@@ -1,10 +1,10 @@
-$NetBSD: patch-libstdc++-v3_libsupc++_new__opa.cc,v 1.2 2017/05/12 18:10:56 jperkin Exp $
+$NetBSD: patch-libstdc++-v3_libsupc++_new__opa.cc,v 1.3 2019/01/05 00:39:13 adam Exp $
 
 Ensure we can find SunOS std::aligned_alloc if using it.
 
---- libstdc++-v3/libsupc++/new_opa.cc.orig	2017-01-26 14:30:45.000000000 +0000
+--- libstdc++-v3/libsupc++/new_opa.cc.orig	2019-01-04 10:50:16.000000000 +0000
 +++ libstdc++-v3/libsupc++/new_opa.cc
-@@ -31,6 +31,10 @@
+@@ -42,6 +42,10 @@ extern "C" void *memalign(std::size_t bo
  using std::new_handler;
  using std::bad_alloc;
  
@@ -12,6 +12,6 @@ Ensure we can find SunOS std::aligned_alloc if using it.
 +using std::aligned_alloc;
 +#endif
 +
- #if !_GLIBCXX_HAVE_ALIGNED_ALLOC
- #if _GLIBCXX_HAVE__ALIGNED_MALLOC
- #define aligned_alloc(al,sz) _aligned_malloc(sz,al)
+ namespace __gnu_cxx {
+ #if _GLIBCXX_HAVE_ALIGNED_ALLOC
+ using ::aligned_alloc;

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2018/05/02 18:38:30 minskim Exp $
+# $NetBSD: options.mk,v 1.4 2019/01/05 00:39:13 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${GCC_PKGNAME}
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran \
@@ -6,15 +6,8 @@ PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran \
 PKG_SUGGESTED_OPTIONS=	gcc-c++ gcc-fortran gcc-objc gcc-objc++ \
 			gcc-graphite gcc-inplace-math
 
-.if ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "Linux" || ${OPSYS} == "DragonFly" || ${OPSYS} == "Darwin"
 PKG_SUGGESTED_OPTIONS+=	nls
-.elif ${OPSYS} == "Linux"
-PKG_SUGGESTED_OPTIONS+=	nls
-.elif ${OPSYS} == "DragonFly"
-PKG_SUGGESTED_OPTIONS+= nls
-.elif ${OPSYS} == "SunOS"
-PKG_SUGGESTED_OPTIONS+=	gcc-inplace-math
-.else
 .endif
 
 ###
@@ -86,10 +79,11 @@ LIBS.SunOS+=		-lgmp
 ### Graphite Support
 ###
 .if !empty(PKG_OPTIONS:Mgcc-graphite)
-ISL16 = isl-0.16.1
-SITES.${ISL16}.tar.bz2 = ftp://ftp.fu-berlin.de/unix/languages/gcc/infrastructure/
-#SITES.${ISL16}.tar.bz2 = ${MASTER_SITE_GNU:=gcc/infrastructure/}
-DISTFILES += ${ISL16}.tar.bz2
+ISL=			isl-0.18
+DISTFILES+=		${ISL}.tar.bz2
+SITES.${ISL}.tar.bz2=	ftp://ftp.fu-berlin.de/unix/languages/gcc/infrastructure/
+post-extract:
+	${LN} -f -s ${WRKDIR}/${ISL} ${WRKSRC}/isl
 .endif
 
 ###
@@ -97,7 +91,6 @@ DISTFILES += ${ISL16}.tar.bz2
 ### Ada could be added although there is a bootstrapping issue.  See
 ### ../gcc34-ada for guidance
 ###
-
 .if !empty(PKG_OPTIONS:Mgcc-objc++)
 .  if empty(PKG_OPTIONS:Mgcc-c++)
 PKG_OPTIONS+=		gcc-c++
@@ -122,7 +115,6 @@ LANGS+=			fortran
 
 .if !empty(PKG_OPTIONS:Mgcc-c++)
 LANGS+=			c++
-USE_TOOLS+=		perl
 CONFIGURE_ARGS+=	--enable-__cxa_atexit
 CONFIGURE_ARGS+=	--with-gxx-include-dir=${GCC_PREFIX}/include/c++/
 .else
