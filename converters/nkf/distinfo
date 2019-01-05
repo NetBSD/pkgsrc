@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2018/06/19 22:51:46 ryoon Exp $
+$NetBSD: distinfo,v 1.13 2019/01/05 13:45:16 ryoon Exp $
 
-SHA1 (nkf-2.1.4.tar.gz) = 9e981cde5c6a72961af706fd70821fe547039bd3
-RMD160 (nkf-2.1.4.tar.gz) = 792a1b41bc65af3bd2109e6d849810ac5c9497b3
-SHA512 (nkf-2.1.4.tar.gz) = 8667c20a6c5e9c0c6df7ebe2571bcf24090f04dafd306d32f07312acd659ea026a91d31521b4b213f77aba8218159effd73607d0b7236b7287e4a4cde8cc62b9
-Size (nkf-2.1.4.tar.gz) = 232479 bytes
+SHA1 (nkf-2.1.5.tar.gz) = cee8bae6ac1170aa6a5a8ef47d28b4ca73eeffc3
+RMD160 (nkf-2.1.5.tar.gz) = 0c41198eda7361f797439b6e3a590cb767d63498
+SHA512 (nkf-2.1.5.tar.gz) = fa5b683184481b25249872e7902033a72b6a6219b4c63d508a738710029430733e78cfa13b3d69dc281676762765e0452c92244a3855d3acbb5e23aa63214847
+Size (nkf-2.1.5.tar.gz) = 215879 bytes
