@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18740 2019/01/05 13:08:58 ryoon Exp $
+$NetBSD: TODO,v 1.18741 2019/01/05 21:14:04 taca Exp $
 
 Suggested new packages
 ======================
@@ -1258,6 +1258,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.4
+	o ruby-2.6.0
 	o ruby-jquery-rails-4.2.1
 	o ruby-redmine-3.3.7
 	o ruby-redmine-3.4.5
