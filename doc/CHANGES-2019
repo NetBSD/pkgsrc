@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.73 2019/01/05 00:17:41 adam Exp $
+$NetBSD: CHANGES-2019,v 1.74 2019/01/05 00:38:54 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -102,3 +102,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ccache to 3.5.1 [adam 2019-01-04]
 	Updated devel/nasm to 2.14.02 [adam 2019-01-05]
 	Updated www/py-WebOb to 1.8.5 [adam 2019-01-05]
+	Updated mail/thunderbird to 60.4.0 [ryoon 2019-01-05]
