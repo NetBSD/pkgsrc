@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.65 2018/12/21 11:55:48 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.66 2019/01/05 00:38:22 ryoon Exp $
 bin/thunderbird
 lib/thunderbird/application.ini
 lib/thunderbird/blocklist.xml
@@ -2732,6 +2732,7 @@ lib/thunderbird/chrome/messenger/content/messenger/newsError.xhtml
 lib/thunderbird/chrome/messenger/content/messenger/nsContextMenu.js
 lib/thunderbird/chrome/messenger/content/messenger/nsDragAndDrop.js
 lib/thunderbird/chrome/messenger/content/messenger/numberbox.xml
+lib/thunderbird/chrome/messenger/content/messenger/parent/ext-cloudFile.js
 lib/thunderbird/chrome/messenger/content/messenger/parent/ext-mail.js
 lib/thunderbird/chrome/messenger/content/messenger/parent/ext-tabs.js
 lib/thunderbird/chrome/messenger/content/messenger/parent/ext-windows.js
@@ -2802,6 +2803,7 @@ lib/thunderbird/chrome/messenger/content/messenger/sanitize.js
 lib/thunderbird/chrome/messenger/content/messenger/sanitize.xul
 lib/thunderbird/chrome/messenger/content/messenger/sanitizeDialog.css
 lib/thunderbird/chrome/messenger/content/messenger/sanitizeDialog.js
+lib/thunderbird/chrome/messenger/content/messenger/schemas/cloudFile.json
 lib/thunderbird/chrome/messenger/content/messenger/schemas/tabs.json
 lib/thunderbird/chrome/messenger/content/messenger/schemas/windows.json
 lib/thunderbird/chrome/messenger/content/messenger/search.xml
