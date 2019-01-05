@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/11/10 04:24:00 mrg Exp $
+# $NetBSD: Makefile,v 1.22 2019/01/05 00:39:13 adam Exp $
 
 GCC_PKGNAME=		gcc7
 .include		"version.mk"
@@ -8,7 +8,6 @@ PKGNAME=	${GCC_PKGNAME}-${GCC7_DIST_VERSION}
 ## When bumping the PKGREVISION of this package the PKGREVISION of
 ## lang/gcc7-libs needs to be bump to be at least 1 more than the
 ## PKGREVISION of this package!
-PKGREVISION=	4
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC7_DIST_VERSION}/}
 EXTRACT_SUFX=	.tar.xz
@@ -20,12 +19,11 @@ COMMENT=	The GNU Compiler Collection (GCC) - 7.0 Release Series
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
 DISTFILES=		${DEFAULT_DISTFILES}
-EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 
 NOT_FOR_PLATFORM=	Interix-*-*
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake makeinfo sed:run tar:build
+USE_TOOLS+=		gmake makeinfo perl sed:run tar:build
 USE_TOOLS.NetBSD+=	gsed
 
 GNU_CONFIGURE=		yes
@@ -78,14 +76,6 @@ SUBST_SED.fixinc=	-e "s,\./fixinc.sh,-c true,"
 
 .include "options.mk"
 
-## For graphite support.
-.if !empty(PKG_OPTIONS:Mgcc-graphite)
-
-post-extract:
-	${TAR} -jxf ${DISTDIR}/${ISL16}.tar.bz2 -C ${WRKSRC}
-	${MV} ${WRKSRC}/${ISL16} ${WRKSRC}/isl
-.endif
-
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-*)
 # native SSP conflicts with gcc's libssp
 CONFIGURE_ARGS+=	--disable-libssp
@@ -136,7 +126,6 @@ CONFIGURE_ARGS+=	--with-arch=nocona --with-tune=nocona --with-fpmath=sse
 CONFIGURE_ARGS+=	--with-dwarf2
 .endif
 
-
 # ${WRKSRC}/fixincludes/ looks for sed and compiles the path to sed into
 # a binary so we need to make sure we give it the installed sed and not
 # the tool wrapped one.
@@ -175,14 +164,16 @@ pre-configure:
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
 
 TEST_TARGET=	-k check || ${TRUE}
+
 pre-test:
 	${RUN} 							\
 	if runtest --version >/dev/null 2>/dev/null ; then	\
 		: ;						\
 	else							\
-	  ${ECHO} "ERROR: Please install devel/dejagnu in order to run the test suite." ; \
-	  exit 1 ;						\
+	  ${ECHO} "ERROR: Please install devel/dejagnu in order to run the test suite."; \
+	  exit 1;						\
 	fi
+
 post-test:
 	${RUN} cd ${WRKSRC} && cd ${OBJDIR} &&		\
 	${SHELL} ${WRKSRC}/contrib/test_summary >${WRKDIR}/test_summary.log
@@ -197,8 +188,8 @@ post-install:
 .endif
 
 GENERATE_PLIST+= \
-	cd ${DESTDIR}${PREFIX} && 					\
-	${FIND} ${GCC_SUBPREFIX} \( -type f -o -type l \) -print | ${SORT} ;
+	cd ${DESTDIR}${PREFIX} && \
+	${FIND} ${GCC_SUBPREFIX} \( -type f -o -type l \) -print | ${SORT};
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
