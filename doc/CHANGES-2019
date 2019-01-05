@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.81 2019/01/05 13:08:58 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.82 2019/01/05 13:46:22 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -111,3 +111,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Added net/djbdnscurve6 version 33 [schmonz 2019-01-05]
 	Updated audio/musicpd to 0.21.4 [triaxx 2019-01-05]
 	Updated graphics/rawtherapee to 5.5 [ryoon 2019-01-05]
+	Updated converters/nkf to 2.15 [ryoon 2019-01-05]
+	Updated converters/p5-nkf to 2.15 [ryoon 2019-01-05]
