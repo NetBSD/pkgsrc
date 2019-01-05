@@ -1,0 +1,14 @@
+djbdnscurve6 is a fork of djbdns combining
+
+- IPv6 capabilities based on fehQlibs allowing the use of compactified
+  IPv6 and LLU addresses,
+- a CurveDNS secured query/response for dnscache based on NaCl with an
+  adapted Matthew Dempsky patch,
+- including improvements for CNAME caching, and
+- allowing a qualification of DNS Name Servers.
+- rbldns supporting now IPv6 addresses.
+- tinydns using now compactified IPv6 addresses within the tinydns-data
+  data file.
+
+The decrypting djbdnscurve6 stub resolver can be used as standard lib
+for other programs.
