@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1235 2018/12/22 09:13:57 adam Exp $
+# $NetBSD: Makefile,v 1.1236 2019/01/05 06:20:50 schmonz Exp $
 #
 
 COMMENT=	Networking tools
@@ -106,6 +106,7 @@ SUBDIR+=	dhid
 SUBDIR+=	dhisd
 SUBDIR+=	djbdns
 SUBDIR+=	djbdns-run
+SUBDIR+=	djbdnscurve6
 SUBDIR+=	dlint
 SUBDIR+=	dnscap
 SUBDIR+=	dnscheck
