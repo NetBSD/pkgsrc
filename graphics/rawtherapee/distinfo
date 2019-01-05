@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2017/11/10 23:01:02 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2019/01/05 13:08:22 ryoon Exp $
 
-SHA1 (RawTherapee-5.3.tar.gz) = 933f7979998b30645f6e84c2a3d1d1f80ed616f8
-RMD160 (RawTherapee-5.3.tar.gz) = 2875788cbb2af800a93b456a251d85c2a091b26c
-SHA512 (RawTherapee-5.3.tar.gz) = 56e0b24faacf492a0089137ad422a366fa789aae402b943ae6cb8c467a5dbc042ef1b981f09c08004ae71f7c4a29e94c0f4b1b8c8b6b44108790f24987d2d0ca
-Size (RawTherapee-5.3.tar.gz) = 48634633 bytes
+SHA1 (RawTherapee-5.5.tar.gz) = 12a4e61bb1204bca3753ecc0cb10bf96f949707f
+RMD160 (RawTherapee-5.5.tar.gz) = 4bb468359380f3d37a18f138c9225226c14aab00
+SHA512 (RawTherapee-5.5.tar.gz) = 07b8f63e13b56f4fa9fdcf1dadf20988cda1bb31ae09ea1855b7a89669e2e805baa2b1ea4c587c3ebf1d3fa291ae08573e108313310fb70d653c71325c9ceb8f
+Size (RawTherapee-5.5.tar.gz) = 62649541 bytes
 SHA1 (patch-CMakeLists.txt) = 64cd18cf84a8902043938ca5127857a8785b6d80
