@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.50 2018/12/21 23:12:34 he Exp $
+$NetBSD: distinfo,v 1.51 2019/01/05 23:29:40 tnn Exp $
 
 SHA1 (rust-1.30.0-x86_64-sun-solaris.tar.gz) = d1da4a02bdbb9a46587bc64d4b7987bb3f1aaeab
 RMD160 (rust-1.30.0-x86_64-sun-solaris.tar.gz) = 0670575ad4eb63f86d34299104f451463e5fc070
@@ -103,9 +103,11 @@ SHA1 (patch-src_bootstrap_lib.rs) = d86e173b931099730a4f18d044d7977c89f87b91
 SHA1 (patch-src_libbacktrace_configure) = b2c1e9b93a99408aad42ab9f1af27704cc81bdd8
 SHA1 (patch-src_liblibc_src_unix_bsd_netbsdlike_netbsd_mod.rs) = e5b564bb247094cc8e4e6935a02262b3385cb7e6
 SHA1 (patch-src_liblibc_src_unix_solaris_mod.rs) = aeb7c22995e33c700ce3ea4336368a1fd08120e1
+SHA1 (patch-src_librustc__llvm_build.rs) = a56bf5435e40bb012641ada6b20256901a1073fb
 SHA1 (patch-src_libstd_build.rs) = 1edbf87339bd88e3178d4fa2fc408a6e802ed488
 SHA1 (patch-src_libstd_sys_unix_thread.rs) = 46ef46365658e2f895bd3dde9c74f352890e9ccc
 SHA1 (patch-src_libsyntax__pos_span__encoding.rs) = c891cffab8ae47b13b3b391ddd1a6c62ee2b38f3
+SHA1 (patch-src_libunwind_build.rs) = 74e2101f0cd78ca68b0a9d14355e20dcaea66100
 SHA1 (patch-src_llvm_CMakeLists.txt) = ffdf4337fdc84d8314c97c4e492e6b84244a99d1
 SHA1 (patch-src_llvm_cmake_modules_AddLLVM.cmake) = f0620ac62ecfb1d62d2dfa61b4c063d21c29b8f5
 SHA1 (patch-src_llvm_include_llvm-c_DataTypes.h) = 432693204912e79059ee31e815ad1e24f3236374
