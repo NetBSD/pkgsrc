@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/10/25 00:35:22 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2019/01/05 02:58:54 tnn Exp $
 
 GITHUB_PROJECT=	ripgrep
 DISTNAME=	0.8.1
@@ -61,12 +61,13 @@ CARGO_CRATE_DEPENDS+=		\
 	fuchsia-zircon-sys-0.3.3	\
 	bitflags-1.0.1
 
+INSTALLATION_DIRS=	bin
+
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --locked --frozen --release
 
 do-install:
-	cd ${WRKSRC} && ${PREFIX}/bin/cargo install --root ${DESTDIR}${PREFIX}
-	rm ${DESTDIR}${PREFIX}/.crates.toml
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/rg ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
