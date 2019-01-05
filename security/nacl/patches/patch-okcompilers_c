@@ -1,0 +1,18 @@
+$NetBSD: patch-okcompilers_c,v 1.1 2019/01/05 06:16:14 schmonz Exp $
+
+Don't override the system's usual ABI.
+
+--- okcompilers/c.orig	2011-02-21 01:49:34.000000000 +0000
++++ okcompilers/c
+@@ -1,8 +1,5 @@
+-gcc -m64 -O3 -fomit-frame-pointer -funroll-loops
+-gcc -m64 -O -fomit-frame-pointer
+-gcc -m64 -fomit-frame-pointer
+-gcc -m32 -O3 -fomit-frame-pointer -funroll-loops
+-gcc -m32 -O -fomit-frame-pointer
+-gcc -m32 -fomit-frame-pointer
++gcc -O3 -fomit-frame-pointer -funroll-loops
++gcc -O -fomit-frame-pointer
++gcc -fomit-frame-pointer
+ spu-gcc -mstdmain -march=cell -O3 -funroll-loops -fomit-frame-pointer -Drandom=rand -Dsrandom=srand
+ spu-gcc -mstdmain -march=cell -O -fomit-frame-pointer -Drandom=rand -Dsrandom=srand
