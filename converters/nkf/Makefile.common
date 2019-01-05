@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.7 2018/06/19 22:51:46 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.8 2019/01/05 13:45:16 ryoon Exp $
 # used by converters/nkf/Makefile
 # used by converters/p5-nkf/Makefile
 
-DISTNAME=	nkf-2.1.4
-MASTER_SITES=	${MASTER_SITE_OSDN:=nkf/64158/}
+DISTNAME=	nkf-2.1.5
+MASTER_SITES=	${MASTER_SITE_OSDN:=nkf/70406/}
 
 HOMEPAGE=	http://osdn.jp/projects/nkf/
 
