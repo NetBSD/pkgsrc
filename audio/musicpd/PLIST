@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2018/12/11 10:37:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2019/01/05 12:43:46 triaxx Exp $
 bin/mpd
 man/man1/mpd.1
 man/man5/mpd.conf.5
@@ -25,6 +25,7 @@ share/doc/mpd/html/_static/down.png
 share/doc/mpd/html/_static/file.png
 share/doc/mpd/html/_static/jquery-3.2.1.js
 share/doc/mpd/html/_static/jquery.js
+share/doc/mpd/html/_static/language_data.js
 share/doc/mpd/html/_static/minus.png
 share/doc/mpd/html/_static/plus.png
 share/doc/mpd/html/_static/pygments.css
