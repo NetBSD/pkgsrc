@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.47 2016/03/05 11:29:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.48 2019/01/06 16:46:51 tnn Exp $
 
-DISTNAME=		rdesktop-1.8.3
-PKGREVISION=		1
+DISTNAME=		rdesktop-1.8.4
 CATEGORIES=		net
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rdesktop/}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=rdesktop/}
+GITHUB_RELEASE=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.rdesktop.org/
@@ -34,6 +34,7 @@ CONFIGURE_ARGS+=	--with-sound=alsa
 .include "../../audio/alsa-lib/buildlink3.mk"
 .endif
 
+.include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
