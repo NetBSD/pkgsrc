@@ -1,13 +1,18 @@
-$NetBSD: distinfo,v 1.45 2018/10/28 20:53:44 sevan Exp $
+$NetBSD: distinfo,v 1.46 2019/01/06 05:45:29 gutteridge Exp $
 
 SHA1 (m4-1.4.18.tar.gz) = 2f76f8105a45b05c8cfede97b3193cd88b31c657
 RMD160 (m4-1.4.18.tar.gz) = 16396a6ffbb2105cdd0a36c773b44d16854ed740
 SHA512 (m4-1.4.18.tar.gz) = 29254dd4267a093e8d9da3a26df8b02564044cdb4506be539ec1aff4e5d406477bcf32f5e813c840f3aec77293bfe2cdde18f6a21724a7e0bfff646ec88b74ae
 Size (m4-1.4.18.tar.gz) = 2006643 bytes
 SHA1 (patch-isnan.c) = a960f35e5168bed47c5924e36bfb254dc1a44621
-SHA1 (patch-lib_fseeko.c) = d8531a1f7e0a941228deddc1eba522f0263ca783
+SHA1 (patch-lib_fflush.c) = 137acee69f093c4a97c9b35ef683785950af98c1
+SHA1 (patch-lib_fpending.c) = b44147cfc707be434237c6102a95290e3f444ae6
+SHA1 (patch-lib_fpurge.c) = 8c9f83d5f0be42bdddbb57b17b60a1108a6966f8
+SHA1 (patch-lib_freadahead.c) = 112fe7901d0103ab2336bd1a3455603ade99e202
+SHA1 (patch-lib_freading.c) = dd2497aaf6680cdc1fb76182bef193fae00a5333
+SHA1 (patch-lib_fseeko.c) = 6edb69d85da7c709ac952eab67cc14ef1fde7654
 SHA1 (patch-lib_getprogname.c) = 3a8e7c028342ef3a9f86839f1a5ae36571a65f12
-SHA1 (patch-lib_stdio-impl.h) = 8b58d52439a5f9d23043c22c702fd4c41f781fda
+SHA1 (patch-lib_stdio-impl.h) = 918520e029277a12e66b3644740ffca2e9754f38
 SHA1 (patch-lib_stdio.in.h) = 21557ea9d86dbeb36062df4e62cb71735b06480b
 SHA1 (patch-lib_vasnprintf.c) = 2bced6c121efc9bc5894174c7745ba89e8f53033
 SHA1 (patch-lib_xalloc-oversized.h) = 9e74adec2f43770d419f60d5c3e7bdea2424daa6
