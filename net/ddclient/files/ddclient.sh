@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: ddclient.sh,v 1.6 2004/01/16 13:14:01 jlam Exp $
+# $NetBSD: ddclient.sh,v 1.7 2019/01/06 16:52:17 schmonz Exp $
 #
 # Dynamic DNS update client
 #
@@ -13,23 +13,14 @@ fi
 
 name="ddclient"
 rcvar=${name}
-command="@PERL5@"
-daemon="@PREFIX@/sbin/${name}"
-pidfile="/var/run/${name}.pid"
-required_files="${daemon} @PKG_SYSCONFDIR@/${name}.conf"
-start_cmd="ddclient_start"
+command="@PREFIX@/sbin/${name}"
+required_files="@PKG_SYSCONFDIR@/${name}.conf"
 extra_commands="reload"
-
-ddclient_start()
-{
-	@ECHO@ "Starting ${name}."
-	${daemon} ${ddclient_flags} ${command_args}
-}
 
 if [ -f /etc/rc.subr ]; then
 	load_rc_config $name
 	run_rc_command "$1"
 else
-	@ECHO@ -n " ${name}"
-	${daemon} ${ddclient_flags} ${command_args}
+	@ECHO_N@ " ${name}"
+	${command} ${ddclient_flags} ${command_args}
 fi
