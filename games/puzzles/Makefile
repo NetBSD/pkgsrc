@@ -1,34 +1,32 @@
-# $NetBSD: Makefile,v 1.61 2018/11/14 22:21:31 kleink Exp $
+# $NetBSD: Makefile,v 1.62 2019/01/06 20:37:14 rillig Exp $
 
-DISTNAME=	puzzles
-PKGNAME=	puzzles-20160429
-PKGREVISION=	6
+DISTNAME=	puzzles-20181212
+GIT_COMMIT=	ced51ada363d895eee796dd03923042f97f95321
 CATEGORIES=	games
-# distfile changes every day
-MASTER_SITES=	# https://www.chiark.greenend.org.uk/~sgtatham/puzzles/
-DIST_SUBDIR=	${PKGNAME_NOREV}
+MASTER_SITES=	-https://git.tartarus.org/?p=simon/puzzles.git;a=snapshot;h=${GIT_COMMIT};sf=tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.chiark.greenend.org.uk/~sgtatham/puzzles/
 COMMENT=	Collection of small one-player puzzle games by Simon Tatham
 LICENSE=	mit
 
-INSTALLATION_DIRS=	bin share/doc/puzzles
+WRKSRC=		${WRKDIR}/puzzles-${GIT_COMMIT:C,(.......).*,\1,}
+USE_TOOLS+=	gmake pkg-config perl autoreconf autoconf automake
+AUTO_MKDIRS=	yes
 
-WRKSRC=		${WRKDIR}/puzzles-20160429.b31155b
-USE_TOOLS+=	gmake pkg-config
+BUILD_DEPENDS+=		halibut>=1.1:../../textproc/halibut
 
+USE_LANGUAGES=		c99
+GNU_CONFIGURE=		yes
 BUILDLINK_TRANSFORM+=	rm:-Werror
 MAKE_FLAGS=		prefix=${PREFIX}
-MAKE_FLAGS=		gamesdir=${PREFIX}/bin
-MAKE_FILE=		Makefile.gtk
-CFLAGS+=		-DREVISION=${DISTNAME:S/puzzles-r//}
+MAKE_FLAGS+=		gamesdir=${PREFIX}/bin
+CFLAGS+=		-DREVISION=${DISTNAME:S/puzzles-//}
 
-SUBST_CLASSES+=		ldflags
-SUBST_SED.ldflags+=	-e 's/$$(CC)/$$(CC) $$(LDFLAGS)/g'
-SUBST_FILES.ldflags+=	Makefile.gtk
-SUBST_MESSAGE.ldflags=	Honoring LDFLAGS.
-SUBST_STAGE.ldflags=	pre-build
+pre-configure:
+	cd ${WRKSRC} && perl mkfiles.pl
+	cd ${WRKSRC} && ${SH} mkauto.sh
+	cd ${WRKSRC} && gmake -f Makefile.doc puzzles.txt
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/puzzles.txt \
