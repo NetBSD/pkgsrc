@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2018/12/10 14:59:50 leot Exp $
+$NetBSD: distinfo,v 1.23 2019/01/06 08:55:47 markd Exp $
 
 SHA1 (swi-prolog/swipl-7.6.4.tar.gz) = 655acec1abb62a2d09edc85f52a08101a9665379
 RMD160 (swi-prolog/swipl-7.6.4.tar.gz) = 26e4358d277761380298d9e8c189e9aa1147609c
@@ -7,6 +7,7 @@ Size (swi-prolog/swipl-7.6.4.tar.gz) = 16777875 bytes
 SHA1 (patch-ad) = f5e7ec0cce757963e021539a397af387eff5cf8f
 SHA1 (patch-packages_Dialect.defs.in) = 7ef29c29efc62e9162c53e88efc1f3e9ec987198
 SHA1 (patch-packages_clib_sha1_brg_endian.h) = e7bc21953cedafce67e0070b9ec326446bf474fa
+SHA1 (patch-src_configure) = 97a016c8377dd093a03194701c0adb567c275d56
 SHA1 (patch-src_os_pl-files.c) = 222a9a4682808fc62e410b01f38e31c4dcc62f53
 SHA1 (patch-src_pl-funcs.h) = fd821e245ca49a42e595096d05a21ee20d25c41c
 SHA1 (patch-src_pl-rsort.c) = 233430c9ead3e1361f40ae541d0527408a141d6e
