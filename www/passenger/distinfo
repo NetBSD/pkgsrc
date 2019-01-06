@@ -1,12 +1,14 @@
-$NetBSD: distinfo,v 1.9 2018/07/04 14:41:18 fhajny Exp $
+$NetBSD: distinfo,v 1.10 2019/01/06 09:52:50 markd Exp $
 
-SHA1 (passenger-5.3.3.tar.gz) = 5543fefd4992dab20049f27f8d82d91f33728f59
-RMD160 (passenger-5.3.3.tar.gz) = 458f5f8d3ba27f6f018d985a741d83e0519a6cc2
-SHA512 (passenger-5.3.3.tar.gz) = ae0b4a2681e7877c7a57d236139033f17782f3d0d891ac58bbfec211e77e3ada9d36c250c9c9234d853c666d1501ccc0e2d5997c247f10985cad936ad97a741e
-Size (passenger-5.3.3.tar.gz) = 7040055 bytes
+SHA1 (passenger-5.3.7.tar.gz) = 8d665aa9c662bf0e75585ad038d5474398120a8c
+RMD160 (passenger-5.3.7.tar.gz) = 0ec1392becd55903c88ec2a52baa41c130b8fb6b
+SHA512 (passenger-5.3.7.tar.gz) = bbef4881e0e0c698b29b10ff8a7afbc001c31d14fb80ffa27ed6867a92ad23712319733e6162be1f7720ebda421630af2f258f8167fa73c7b5ea594bc8247158
+Size (passenger-5.3.7.tar.gz) = 7195477 bytes
 SHA1 (patch-build_common__library.rb) = fc019cb2774245400e74741d34b43b87b4b8b0c8
 SHA1 (patch-build_packaging.rb) = b50c291c8e3989bbd8d128dab98c06f5e6a30e51
+SHA1 (patch-src_agent_Core_SpawningKit_Exceptions.h) = 2a11497e944f680893662a8cd4bef866dd4e71f8
 SHA1 (patch-src_cxx__supportlib_LoggingKit_Context.h) = ff8dd506a6f5cd110c8e4317ecceab480a8f90c4
+SHA1 (patch-src_cxx__supportlib_SystemTools_ProcessMetricsCollector.h) = 51e91937618fe89c56e9f1cdbce03a76bd59d635
 SHA1 (patch-src_ruby__supportlib_phusion__passenger.rb) = b5bf22b8ef94f9c64e0f02ed97e4c104eddf7cb6
 SHA1 (patch-src_ruby__supportlib_phusion__passenger_packaging.rb) = 74134ef6c360bc65ffb4f74e7ebcc36bf7b6e9f7
 SHA1 (patch-src_ruby__supportlib_phusion__passenger_platform__info_cxx__portability.rb) = a3ad34fe1b5917c1971b49c8831d8aea9dbb090a
