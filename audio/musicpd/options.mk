@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.32 2018/12/14 09:09:59 wiz Exp $
+# $NetBSD: options.mk,v 1.33 2019/01/06 14:47:20 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
-PKG_SUPPORTED_OPTIONS=	adplug audiofile avahi bzip2 curl faad ffmpeg flac fluidsynth game-music-emu id3 inet6 libao lame jack libmms libmpdclient libsoxr libwildmidi mikmod modplug mpg123 musepack musicpd-soundcloud openal opus pulseaudio shine shout sqlite3 tremor twolame vorbis wavpack zziplib
-PKG_SUGGESTED_OPTIONS=	audiofile curl faad flac id3 inet6 libao musepack vorbis
+PKG_SUPPORTED_OPTIONS=	adplug audiofile avahi bzip2 curl faad ffmpeg flac fluidsynth game-music-emu id3 libao lame jack libmms libmpdclient libsoxr libwildmidi mikmod modplug mpg123 musepack musicpd-soundcloud openal opus pulseaudio shine shout sqlite3 tremor twolame vorbis wavpack zziplib
+PKG_SUGGESTED_OPTIONS=	audiofile curl faad flac id3 libao musepack shout vorbis
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	vorbis
 PKG_OPTIONS_GROUP.vorbis=	tremor vorbis
@@ -61,9 +61,6 @@ BUILDLINK_ABI_DEPENDS.flac+=	flac>=1.2
 
 .if !empty(PKG_OPTIONS:Mid3)
 .  include "../../audio/libid3tag/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Minet6)
 .endif
 
 .if !empty(PKG_OPTIONS:Mjack)
