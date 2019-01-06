@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/08/04 21:32:53 minskim Exp $
+# $NetBSD: Makefile,v 1.15 2019/01/06 11:21:06 markd Exp $
 
 .include "../../devel/protobuf/Makefile.common"
 
@@ -9,8 +9,13 @@ CATEGORIES+=	python
 MAINTAINER=	khorben@defora.org
 COMMENT=	Python bindings for protobuf
 
-PYSETUPSUBDIR=	python
+USE_LANGUAGES+=	c c++
 
+PYSETUPSUBDIR=	python
+PYSETUPBUILDARGS=	--cpp_implementation
+PYSETUPINSTALLARGS=	--cpp_implementation
+
+DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9:../../lang/py-six
 
 EGG_NAME=	protobuf-${PKGVERSION_NOREV}
