@@ -1,8 +1,8 @@
-$NetBSD: patch-xf86drm.c,v 1.2 2018/10/05 12:57:20 wiz Exp $
+$NetBSD: patch-xf86drm.c,v 1.3 2019/01/06 02:23:00 tnn Exp $
 
 Implement drmParseSubsystemType, drmParsePciBusInfo for NetBSD
 
---- xf86drm.c.orig	2018-10-04 14:50:03.000000000 +0000
+--- xf86drm.c.orig	2018-10-16 14:49:03.000000000 +0000
 +++ xf86drm.c
 @@ -84,7 +84,10 @@
  #endif
@@ -16,7 +16,7 @@ Implement drmParseSubsystemType, drmParsePciBusInfo for NetBSD
  #endif
  
  #ifdef __OpenBSD__
-@@ -2997,6 +3000,65 @@ static int drmParseSubsystemType(int maj
+@@ -3011,6 +3014,65 @@ static int drmParseSubsystemType(int maj
          return DRM_BUS_VIRTIO;
  
      return -EINVAL;
@@ -82,7 +82,7 @@ Implement drmParseSubsystemType, drmParsePciBusInfo for NetBSD
  #elif defined(__OpenBSD__)
      return DRM_BUS_PCI;
  #else
-@@ -3046,6 +3108,73 @@ static int drmParsePciBusInfo(int maj, i
+@@ -3060,6 +3122,73 @@ static int drmParsePciBusInfo(int maj, i
      info->func = func;
  
      return 0;
@@ -156,7 +156,7 @@ Implement drmParseSubsystemType, drmParsePciBusInfo for NetBSD
  #elif defined(__OpenBSD__)
      struct drm_pciinfo pinfo;
      int fd, type;
-@@ -3213,6 +3342,41 @@ static int drmParsePciDeviceInfo(int maj
+@@ -3227,6 +3356,48 @@ static int drmParsePciDeviceInfo(int maj
          return parse_config_sysfs_file(maj, min, device);
  
      return 0;
@@ -179,22 +179,29 @@ Implement drmParseSubsystemType, drmParsePciBusInfo for NetBSD
 +    if ((pcifd = open(fname, O_RDONLY)) == -1)
 +	return -errno;
 +
++    ret = -1;
 +    /* Read the id and class pci config registers.  */
 +    if (pcibus_conf_read(pcifd, businfo.bus, businfo.dev, businfo.func,
 +	    PCI_ID_REG, &id) == -1)
-+	return -errno;
++	goto out;
 +    if (pcibus_conf_read(pcifd, businfo.bus, businfo.dev, businfo.func,
 +	    PCI_CLASS_REG, &class) == -1)
-+	return -errno;
++	goto out;
 +    if (pcibus_conf_read(pcifd, businfo.bus, businfo.dev, businfo.func,
 +	    PCI_SUBSYS_ID_REG, &subsys) == -1)
-+	return -errno;
++	goto out;
 +
++    ret = 0;
 +    device->vendor_id = PCI_VENDOR(id);
 +    device->device_id = PCI_PRODUCT(id);
 +    device->subvendor_id = PCI_SUBSYS_VENDOR(subsys);
 +    device->subdevice_id = PCI_SUBSYS_ID(subsys);
 +    device->revision_id = PCI_REVISION(class);
++out:
++    if (ret == -1)
++	ret = -errno;
++    close(pcifd);
++    return ret;
  #elif defined(__OpenBSD__)
      struct drm_pciinfo pinfo;
      int fd, type;
