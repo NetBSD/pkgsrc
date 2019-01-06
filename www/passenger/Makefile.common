@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.9 2018/12/15 21:12:24 wiz Exp $
+# $NetBSD: Makefile.common,v 1.10 2019/01/06 09:52:50 markd Exp $
 # used by www/ap2-passenger/Makefile
 # used by www/passenger/Makefile
 
-DISTNAME=		passenger-5.3.3
+DISTNAME=		passenger-5.3.7
 CATEGORIES=		www
 
 MASTER_SITES=		http://s3.amazonaws.com/phusion-passenger/releases/
