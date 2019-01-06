@@ -1,6 +1,7 @@
-$NetBSD: patch-gtk_gtktooltips.c,v 1.1 2013/10/16 10:59:13 jperkin Exp $
+$NetBSD: patch-gtk_gtktooltips.c,v 1.2 2019/01/06 18:58:34 rillig Exp $
 
-Avoid multi-line comments after macros, it can confuse parsers.
+Avoid multi-line comments after macros, they confuse g-ir-scanner from
+gobject-introspection on OSX Snow Leopard.
 
 --- gtk/gtktooltips.c.orig	2011-08-16 02:30:52.000000000 +0000
 +++ gtk/gtktooltips.c
