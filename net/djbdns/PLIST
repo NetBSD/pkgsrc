@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/01/01 22:29:47 rillig Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/01/06 14:40:18 schmonz Exp $
 bin/axfr-get
 bin/axfrdns
 bin/axfrdns-conf
@@ -6,8 +6,6 @@ bin/dnscache
 bin/dnscache-conf
 bin/dnsfilter
 bin/dnsip
-${PLIST.inet6}bin/dnsip6
-${PLIST.inet6}bin/dnsip6q
 bin/dnsipq
 bin/dnsmx
 bin/dnsname
