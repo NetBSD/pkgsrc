@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2019/01/06 01:48:50 gutteridge Exp $
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/isc_dhcp_leases/__init__.py
+${PYSITELIB}/isc_dhcp_leases/__init__.pyc
+${PYSITELIB}/isc_dhcp_leases/__init__.pyo
+${PYSITELIB}/isc_dhcp_leases/iscdhcpleases.py
+${PYSITELIB}/isc_dhcp_leases/iscdhcpleases.pyc
+${PYSITELIB}/isc_dhcp_leases/iscdhcpleases.pyo
+${PYSITELIB}/isc_dhcp_leases/test_iscDhcpLeases.py
+${PYSITELIB}/isc_dhcp_leases/test_iscDhcpLeases.pyc
+${PYSITELIB}/isc_dhcp_leases/test_iscDhcpLeases.pyo
+${PYSITELIB}/isc_dhcp_leases/test_lease.py
+${PYSITELIB}/isc_dhcp_leases/test_lease.pyc
+${PYSITELIB}/isc_dhcp_leases/test_lease.pyo
+${PYSITELIB}/isc_dhcp_leases/test_lease6.py
+${PYSITELIB}/isc_dhcp_leases/test_lease6.pyc
+${PYSITELIB}/isc_dhcp_leases/test_lease6.pyo
