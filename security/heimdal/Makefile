@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2018/12/09 18:52:07 adam Exp $
+# $NetBSD: Makefile,v 1.130 2019/01/06 12:53:56 bsiegert Exp $
 
 DISTNAME=	heimdal-1.5.3
 PKGREVISION=	19
@@ -73,15 +73,21 @@ PLIST.vis=	yes
 PLIST.glob=	yes
 .endif
 
+PLIST_VARS+=		hcrypto
 # Linux does not have include/vis.h and expected include/glob.h.
 .if ${OPSYS} == "Linux"
 PLIST.vis=	yes
 PLIST.glob=	yes
 # Without this I get undefined references to pthread_getspecific
 PTHREAD_AUTO_VARS=	yes
+.if ${OS_VARIANT} == "Microsoft"
+# On Ubuntu hosted via WSL this is needed to avoid a DESTDIR/PLIST
+# conflict error.
+PLIST.hcrypto=	yes
+.endif
 .endif
 
-PLIST_VARS+=		afskauth hcrypto
+PLIST_VARS+=		afskauth
 .if ${OPSYS} == "IRIX"
 PLIST.afskauth=		yes
 .endif
