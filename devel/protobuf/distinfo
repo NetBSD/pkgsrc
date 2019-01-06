@@ -1,12 +1,17 @@
-$NetBSD: distinfo,v 1.20 2018/08/04 21:19:39 minskim Exp $
+$NetBSD: distinfo,v 1.21 2019/01/06 11:21:06 markd Exp $
 
-SHA1 (protobuf-cpp-3.6.0.tar.gz) = d211759135fca52daa2d625f27c386acbe65495f
-RMD160 (protobuf-cpp-3.6.0.tar.gz) = f7bded7812f4740297d297f6bc2550c4aeb63c90
-SHA512 (protobuf-cpp-3.6.0.tar.gz) = 469a85026ca45dc43ccd01221d098905a244e92ca79a6681fae528a3a539184475e14fff9898a0eb82654782fd60c5e4650896b5ce7c7ab3f1baa879251c94b3
-Size (protobuf-cpp-3.6.0.tar.gz) = 4454101 bytes
+SHA1 (protobuf-cpp-3.6.1.tar.gz) = 0595bb8c2447ebd13bec4818f99fa8faa8c8b8c5
+RMD160 (protobuf-cpp-3.6.1.tar.gz) = b8b80a6c7150ead6acde8285b4462957cf2c2cd3
+SHA512 (protobuf-cpp-3.6.1.tar.gz) = 61dd237ff053fa41af661f81dee9b610fc26ea1ace8f644a044c6f1e042075261ebca07c2aa9329dfc5e1dd1daeb345a4c8ff73a7b8c689aa74a11ff71a01f45
+Size (protobuf-cpp-3.6.1.tar.gz) = 4450975 bytes
 SHA1 (patch-configure) = a35883ff62ba1db429a6cbc12b75714e78e28abf
 SHA1 (patch-configure.ac) = 208a5ce72905aa95ad73ee0f751d4a58f0c37f5f
 SHA1 (patch-m4_acx__check__suncc.m4) = faf96ee5d305c08d30e7c7d3578896971983e1dd
+SHA1 (patch-python_google_protobuf_pyext_descriptor.cc) = 32f3ddb90d3b52dd4b6919ec75047dcd2906a218
+SHA1 (patch-python_google_protobuf_pyext_descriptor_containers.cc) = 6aed9e2a5b5803fdecaf0d5a49a48ef219b5ca1f
+SHA1 (patch-python_google_protobuf_pyext_descriptor_pool.cc) = 9fe51dfd39f1e3af202a4cff586947b4ec8475a5
+SHA1 (patch-python_google_protobuf_pyext_extension_dict.cc) = 6fff247e007e7856442480600f98507712c80c69
+SHA1 (patch-python_google_protobuf_pyext_message.cc) = 30faea1052e097d976430e2224c97e98cadb5e75
 SHA1 (patch-src_google_protobuf_message__lite.cc) = 8f2ffe07b2710de5365148153978ad6d9939f522
 SHA1 (patch-third__party_googletest_googlemock_configure) = fe3b812e819130d87d99316144507d2454461cd1
 SHA1 (patch-third__party_googletest_googlemock_configure.ac) = dc06fc7aebaef02df536458e45f77386cc857261
