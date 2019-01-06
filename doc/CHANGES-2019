@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.89 2019/01/06 01:53:06 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.90 2019/01/06 11:28:47 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -120,3 +120,8 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/miredo to 1.2.6 [schmonz 2019-01-05]
 	Updated net/miredo to 1.2.6nb1 [schmonz 2019-01-06]
 	Added textproc/py-isc_dhcp_leases version 0.9.1 [gutteridge 2019-01-06]
+	Updated graphics/inkscape to 0.92.3 [markd 2019-01-06]
+	Updated www/passenger to 5.3.7 [markd 2019-01-06]
+	Updated www/ap2-passenger to 5.3.7 [markd 2019-01-06]
+	Updated devel/protobuf to 3.6.1 [markd 2019-01-06]
+	Updated devel/py-protobuf to 3.6.1 [markd 2019-01-06]
