@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.27 2016/10/05 13:09:38 wiz Exp $
+$NetBSD: distinfo,v 1.28 2019/01/06 20:37:14 rillig Exp $
 
-SHA1 (puzzles-20160429/puzzles.tar.gz) = 3fd39e4d2f658654e3b28c007eae00710ec656c5
-RMD160 (puzzles-20160429/puzzles.tar.gz) = d8736c7358071bd61f3d7d41a1cdd7d4bdefdfd7
-SHA512 (puzzles-20160429/puzzles.tar.gz) = 7bf3d97f0a48bba27070148f6b68b13f01a2baaf48b0bce05ad4e61ca35f0f2d7b9c1996e4eca5e64d84eacb86935468f7ae394c37aaee974d468476108ec2f0
-Size (puzzles-20160429/puzzles.tar.gz) = 2896119 bytes
-SHA1 (patch-aa) = 515d93b8c43bb22646ffa812309e92af8682855d
+SHA1 (puzzles-20181212.tar.gz) = 3bfd4f57c36484e834cdd5bfb9e9b86e45752b39
+RMD160 (puzzles-20181212.tar.gz) = d1417a19ff840f18d2c0bc735f364c13f7a358ac
+SHA512 (puzzles-20181212.tar.gz) = 228534debb8cdefc0844d5660b224776df6f59b17576335eb76813a6f8ac131a640bc6fc1a7d1ea9d9f5997fe62ae938176428f2eb4260de11e2d631b4cd34a5
+Size (puzzles-20181212.tar.gz) = 1184217 bytes
+SHA1 (patch-net.R) = b0a2f41dd8a6cef51908cc2b9eba129ad9881154
