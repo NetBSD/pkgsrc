@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/08/04 21:32:53 minskim Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/01/06 11:21:06 markd Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -48,6 +48,7 @@ ${PYSITELIB}/google/protobuf/field_mask_pb2.pyo
 ${PYSITELIB}/google/protobuf/internal/__init__.py
 ${PYSITELIB}/google/protobuf/internal/__init__.pyc
 ${PYSITELIB}/google/protobuf/internal/__init__.pyo
+${PYSITELIB}/google/protobuf/internal/_api_implementation.so
 ${PYSITELIB}/google/protobuf/internal/_parameterized.py
 ${PYSITELIB}/google/protobuf/internal/_parameterized.pyc
 ${PYSITELIB}/google/protobuf/internal/_parameterized.pyo
@@ -207,6 +208,7 @@ ${PYSITELIB}/google/protobuf/proto_builder.pyo
 ${PYSITELIB}/google/protobuf/pyext/__init__.py
 ${PYSITELIB}/google/protobuf/pyext/__init__.pyc
 ${PYSITELIB}/google/protobuf/pyext/__init__.pyo
+${PYSITELIB}/google/protobuf/pyext/_message.so
 ${PYSITELIB}/google/protobuf/pyext/cpp_message.py
 ${PYSITELIB}/google/protobuf/pyext/cpp_message.pyc
 ${PYSITELIB}/google/protobuf/pyext/cpp_message.pyo
