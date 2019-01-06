@@ -1,28 +1,15 @@
-$NetBSD: patch-src_extension_internal_pdfinput_pdf-input.cpp,v 1.1 2017/09/09 21:48:56 prlw1 Exp $
+$NetBSD: patch-src_extension_internal_pdfinput_pdf-input.cpp,v 1.2 2019/01/06 08:41:01 markd Exp $
 
-Support poppler 0.58
-https://gitlab.com/inkscape/inkscape/commit/9418824967eb4c53371ef8588243fed4cab496e0
+support for poppler 0.72 from upstream by way of linuxfromscratch
 
---- src/extension/internal/pdfinput/pdf-input.cpp.orig	2017-02-13 23:46:57.000000000 +0000
+--- src/extension/internal/pdfinput/pdf-input.cpp.orig	2018-03-11 20:38:09.000000000 +0000
 +++ src/extension/internal/pdfinput/pdf-input.cpp
-@@ -840,14 +840,20 @@ PdfInput::open(::Inkscape::Extension::In
-         }
+@@ -793,7 +793,7 @@ PdfInput::open(::Inkscape::Extension::In
+             dlg->getImportSettings(prefs);
  
-         // Parse the document structure
-+#if defined(POPPLER_NEW_OBJECT_API)
-+        Object obj = page->getContents();
-+#else
-         Object obj;
-         page->getContents(&obj);
-+#endif
-         if (!obj.isNull()) {
-             pdf_parser->parse(&obj);
-         }
+         // Apply crop settings
+-        PDFRectangle *clipToBox = NULL;
++        _POPPLER_CONST PDFRectangle *clipToBox = NULL;
+         double crop_setting;
+         sp_repr_get_double(prefs, "cropTo", &crop_setting);
  
-         // Cleanup
-+#if !defined(POPPLER_NEW_OBJECT_API)
-         obj.free();
-+#endif
-         delete pdf_parser;
-         delete builder;
-         g_free(docname);
