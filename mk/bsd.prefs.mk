@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.402 2018/11/12 14:22:58 jperkin Exp $
+# $NetBSD: bsd.prefs.mk,v 1.403 2019/01/06 12:51:45 bsiegert Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -226,7 +226,11 @@ LOWER_VENDOR?=		chromeos
 LOWER_VENDOR?=          pc
 .  endif
 LOWER_VENDOR?=          unknown
+OS_VARIANT!=		${UNAME} -r
+OS_VARIANT:=		${OS_VARIANT:C/^.*-//}
+.  if ${OS_VARIANT} != "Microsoft"
 OS_VARIANT=		${LOWER_VENDOR}
+.  endif
 .  if !defined(HOST_MACHINE_ARCH)
 HOST_MACHINE_ARCH!=	${UNAME} -m
 MAKEFLAGS+=		HOST_MACHINE_ARCH=${HOST_MACHINE_ARCH:Q}
