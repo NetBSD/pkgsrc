@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.92 2019/01/06 14:59:12 taca Exp $
+$NetBSD: CHANGES-2019,v 1.93 2019/01/06 15:00:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -127,3 +127,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-protobuf to 3.6.1 [markd 2019-01-06]
 	Updated textproc/uriparser to 0.9.1 [bsiegert 2019-01-06]
 	Updated databases/ruby-sequel to 5.16.0 [taca 2019-01-06]
+	Updated devel/ZenTest to 4.11.2 [taca 2019-01-06]
