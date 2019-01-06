@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.87 2019/01/05 21:46:09 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.88 2019/01/06 00:12:44 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -118,3 +118,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/py-weasyprint to 44 [kleink 2019-01-05]
 	Updated sysutils/nnn to 2.2 [bsiegert 2019-01-05]
 	Updated net/miredo to 1.2.6 [schmonz 2019-01-05]
+	Updated net/miredo to 1.2.6nb1 [schmonz 2019-01-06]
