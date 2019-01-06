@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2018/09/03 12:37:45 gdt Exp $
+# $NetBSD: Makefile,v 1.44 2019/01/06 16:52:17 schmonz Exp $
 
 DISTNAME=	ddclient-3.8.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ddclient/}
 EXTRACT_SUFX=	.tar.bz2
