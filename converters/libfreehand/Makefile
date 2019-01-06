@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2018/12/13 19:51:32 adam Exp $
+# $NetBSD: Makefile,v 1.28 2019/01/06 02:42:49 tnn Exp $
 
 DISTNAME=	libfreehand-0.1.1
 PKGREVISION=	20
@@ -19,6 +19,10 @@ USE_TOOLS+=	perl:build pkg-config
 USE_LANGUAGES=	c c++
 
 CONFIGURE_ARGS+=	--without-docs
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CXXFLAGS+=	-Wno-error=deprecated-register
+.endif
 
 PKGCONFIG_OVERRIDE+=	libfreehand.pc.in
 
