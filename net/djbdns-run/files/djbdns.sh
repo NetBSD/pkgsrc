@@ -1,13 +1,9 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: djbdns.sh,v 1.2 2017/08/05 15:16:05 schmonz Exp $
+# $NetBSD: djbdns.sh,v 1.3 2019/01/07 14:01:55 schmonz Exp $
 #
 # @PKGNAME@ master script for administrators to control djbdns
 # services.
-#
-# For Red Hat chkconfig
-# chkconfig: - 55 45
-# description: DJB's collection of DNS tools
 #
 
 # KEYWORD: nostart
@@ -20,13 +16,11 @@ rcd_dir=`@DIRNAME@ $0`
 
 # NOTE: run_rc_command sets $rc_arg
 #
-forward_commands()
-{
+forward_commands() {
 	djbdnsrcd $COMMAND_LIST
 }
 
-reverse_commands()
-{
+reverse_commands() {
 	REVCOMMAND_LIST=
 	for file in $COMMAND_LIST; do
 		REVCOMMAND_LIST="$file $REVCOMMAND_LIST"
@@ -35,8 +29,7 @@ reverse_commands()
 	djbdnsrcd $REVCOMMAND_LIST
 }
 
-djbdnsrcd()
-{
+djbdnsrcd() {
 	# Backward compat with NetBSD <1.6:
 	[ -z "$rc_arg" ] && rc_arg=$_arg
 
