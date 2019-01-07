@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.105 2019/01/07 17:15:01 adam Exp $
+$NetBSD: CHANGES-2019,v 1.106 2019/01/07 17:41:43 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -147,3 +147,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated emulators/mame to 0.205 [wiz 2019-01-07]
 	Updated textproc/py-sphinxcontrib-bibtex to 0.4.2 [adam 2019-01-07]
 	Updated www/py-paste to 3.0.6 [adam 2019-01-07]
+	Updated misc/nyancat to 1.5.2 [leot 2019-01-07]
