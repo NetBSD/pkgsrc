@@ -1,14 +1,14 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.15 2018/12/14 06:49:30 schmonz Exp $
+$NetBSD: MESSAGE,v 1.16 2019/01/07 04:29:46 schmonz Exp $
 
 Assuming NetBSD-style mailwrapper(8) and rc(8), to enable qmail for
 local and outbound delivery:
 
-- Run "/etc/rc.d/postfix stop" and set postfix=NO in /etc/rc.conf.
+- Run "${RCD_SCRIPTS_DIR}/postfix stop" and set postfix=NO in /etc/rc.conf.
 - Replace /etc/mailer.conf with ${PREFIX}/share/examples/qmail-run/mailer.conf.
 - Check configuration in ${PKG_SYSCONFDIR} (especially alias/.qmail-*).
 - Set qmailsend=YES and qmailqread=YES in /etc/rc.conf.
-- Run "/etc/rc.d/qmail start".
+- Run "${RCD_SCRIPTS_DIR}/qmail start".
 
 For SMTP, TLS, and more, please read
 ${PREFIX}/share/doc/qmail-run/README.pkgsrc.
