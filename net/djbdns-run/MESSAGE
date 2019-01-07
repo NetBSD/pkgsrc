@@ -1,26 +1,13 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2005/01/26 07:01:10 schmonz Exp $
+$NetBSD: MESSAGE,v 1.3 2019/01/07 14:01:55 schmonz Exp $
 
-Please read ${PREFIX}/share/doc/djbdns-run/README.pkgsrc.
+Assuming NetBSD-style rc(8), to enable a local DNS caching resolver:
 
-To enable a DNS...
-
-Cache for the local machine:
-- Set dnscache=YES in /etc/rc.conf.
 - Run "echo nameserver 127.0.0.1 > /etc/resolv.conf".
+- Set dnscache=YES in /etc/rc.conf.
+- Run "${RCD_SCRIPTS_DIR}/dnscache start".
 
-UDP name service:
-- Set tinydns=YES in /etc/rc.conf and tinydns_ip to a suitable IP address.
-- Create ${PKG_SYSCONFDIR}/tinydns/data with suitable contents.
-- Run "${RCD_SCRIPTS_DIR}/tinydns cdb".
-
-TCP name service:
-- Enable UDP name service.
-- Set axfrdns=YES in /etc/rc.conf.
-
-RBL name service:
-- Set rbldns=YES in /etc/rc.conf and rbldns_ip to a suitable IP address.
-- Create ${PKG_SYSCONFDIR}/rbldns/data with suitable contents.
-- Run "${RCD_SCRIPTS_DIR}/rbldns cdb".
+For authoritative name service, RBL service, and more, please read
+${PREFIX}/share/doc/djbdns-run/README.pkgsrc.
 
 ===========================================================================
