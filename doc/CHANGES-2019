@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.97 2019/01/07 02:35:02 bacon Exp $
+$NetBSD: CHANGES-2019,v 1.98 2019/01/07 08:44:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -132,3 +132,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/ddclient to 3.8.3nb4 [schmonz 2019-01-06]
 	Updated games/puzzles to 20181212 [rillig 2019-01-06]
 	Added biology/canu version 1.8 [bacon 2019-01-07]
+	Updated devel/py-hypothesis to 3.86.5 [adam 2019-01-07]
+	Updated security/libsodium to 1.0.17 [adam 2019-01-07]
+	Updated devel/py-test to 4.1.0 [adam 2019-01-07]
+	Updated devel/py-test-cov to 2.6.1 [adam 2019-01-07]
