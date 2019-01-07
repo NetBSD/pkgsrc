@@ -1,11 +1,8 @@
-$NetBSD: patch-makefile,v 1.22 2018/12/08 23:18:54 wiz Exp $
+$NetBSD: patch-makefile,v 1.23 2019/01/07 15:51:23 wiz Exp $
 
 Treat all BSDs the same.
 
 Do not set compiler optimization.
-
-Add missing rules for building with clang on FreeBSD and NetBSD.
-https://github.com/mamedev/mame/pull/4383
 
 --- makefile.orig	2018-08-29 00:35:24.000000000 +0000
 +++ makefile
@@ -44,51 +41,3 @@ https://github.com/mamedev/mame/pull/4383
  
  # set the symbols level
  ifdef SYMBOLS
-@@ -1395,6 +1391,23 @@ freebsd_x86: generate $(PROJECTDIR)/$(MA
- 	$(SILENT) $(MAKE) -C $(PROJECTDIR)/$(MAKETYPE)-freebsd config=$(CONFIG)32
- 
- #-------------------------------------------------
-+# gmake-freebsd-clang
-+#-------------------------------------------------
-+
-+$(PROJECTDIR)/$(MAKETYPE)-freebsd-clang/Makefile: makefile $(SCRIPTS) $(GENIE)
-+	$(SILENT) $(GENIE) $(PARAMS) $(TARGET_PARAMS) --gcc=freebsd-clang --gcc_version=$(CLANG_VERSION) $(MAKETYPE)
-+
-+.PHONY: freebsd_x64_clang
-+freebsd_x64_clang: generate $(PROJECTDIR)/$(MAKETYPE)-freebsd-clang/Makefile
-+	$(SILENT) $(MAKE) -C $(PROJECTDIR)/$(MAKETYPE)-freebsd-clang config=$(CONFIG)64 precompile
-+	$(SILENT) $(MAKE) -C $(PROJECTDIR)/$(MAKETYPE)-freebsd-clang config=$(CONFIG)64
-+
-+.PHONY: freebsd_x86_clang
-+freebsd_x86_clang: generate $(PROJECTDIR)/$(MAKETYPE)-freebsd-clang/Makefile
-+	$(SILENT) $(MAKE) -C $(PROJECTDIR)/$(MAKETYPE)-freebsd-clang config=$(CONFIG)32 precompile
-+	$(SILENT) $(MAKE) -C $(PROJECTDIR)/$(MAKETYPE)-freebsd-clang config=$(CONFIG)32
-+
-+#-------------------------------------------------
- # gmake-netbsd
- #-------------------------------------------------
- 
-@@ -1415,6 +1428,23 @@ netbsd_x86: generate $(PROJECTDIR)/$(MAK
- 	$(SILENT) $(MAKE) -C $(PROJECTDIR)/$(MAKETYPE)-netbsd config=$(CONFIG)32
- 
- #-------------------------------------------------
-+# gmake-netbsd-clang
-+#-------------------------------------------------
-+
-+$(PROJECTDIR)/$(MAKETYPE)-netbsd-clang/Makefile: makefile $(SCRIPTS) $(GENIE)
-+	$(SILENT) $(GENIE) $(PARAMS) $(TARGET_PARAMS) --gcc=netbsd-clang --gcc_version=$(CLANG_VERSION) $(MAKETYPE)
-+
-+.PHONY: netbsd_x64_clang
-+netbsd_x64_clang: generate $(PROJECTDIR)/$(MAKETYPE)-netbsd-clang/Makefile
-+	$(SILENT) $(MAKE) -C $(PROJECTDIR)/$(MAKETYPE)-netbsd-clang config=$(CONFIG)64 precompile
-+	$(SILENT) $(MAKE) -C $(PROJECTDIR)/$(MAKETYPE)-netbsd-clang config=$(CONFIG)64
-+
-+.PHONY: netbsd_x86_clang
-+netbsd_x86_clang: generate $(PROJECTDIR)/$(MAKETYPE)-netbsd-clang/Makefile
-+	$(SILENT) $(MAKE) -C $(PROJECTDIR)/$(MAKETYPE)-netbsd-clang config=$(CONFIG)32 precompile
-+	$(SILENT) $(MAKE) -C $(PROJECTDIR)/$(MAKETYPE)-netbsd-clang config=$(CONFIG)32
-+
-+#-------------------------------------------------
- # gmake-openbsd
- #-------------------------------------------------
- 
