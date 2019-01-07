@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2018/12/07 10:32:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.31 2019/01/07 15:51:23 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -316,6 +316,7 @@ share/mame/hash/mo5_flop.xml
 share/mame/hash/mo5_qd.xml
 share/mame/hash/mo6_cass.xml
 share/mame/hash/mo6_flop.xml
+share/mame/hash/monon_color.xml
 share/mame/hash/mpu1000.xml
 share/mame/hash/mpz80.xml
 share/mame/hash/msx.hsi
@@ -340,6 +341,7 @@ share/mame/hash/mz800_cass.xml
 share/mame/hash/n64.xml
 share/mame/hash/n64dd.xml
 share/mame/hash/nascom_flop.xml
+share/mame/hash/nascom_snap.xml
 share/mame/hash/nascom_socket.xml
 share/mame/hash/neocd.xml
 share/mame/hash/neogeo.xml
