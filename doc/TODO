@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18742 2019/01/05 21:46:09 schmonz Exp $
+$NetBSD: TODO,v 1.18743 2019/01/07 00:19:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -339,7 +339,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
-	o ImageMagick-7.0.8.21
+	o ImageMagick-7.0.8.23
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaLib-18.3.1
@@ -611,6 +611,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o filerunner-14.06.18.10
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
+	o fish-3.0.0
 	o flashplayer-0.4.13
 	o flashrom-0.9.8
 	o flite-1.4
@@ -722,7 +723,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnustep-objc-1.8
 	o gob-2.0.19
 	o gobby-0.5.0
-	o gobject-introspection-1.58.2
+	o gobject-introspection-1.58.3
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
 	o goocanvas-2.0.2
@@ -983,6 +984,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libv4l-0.8.5
 	o libvirt-2.3
 	o libxdg-basedir-1.2.0
+	o libxml2-2.9.9
+	o libxslt-1.1.33
 	o libykneomgr-0.1.8
 	o libyubikey-1.13
 	o licq-1.3.8
@@ -1019,9 +1022,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o matchbox-panel-0.9.3
 	o mbedtls1-1.3.22
 	o mbuf-20141227
+	o mc-4.8.22
 	o mcollective-2.3.2
 	o mcsim-5.6.5
 	o mecab-ipadic-2.7.0.20070801
+	o meld-3.20.0
 	o memached-1.5.6
 	o mergeant-0.67
 	o merkaator-0.18.2
@@ -1205,6 +1210,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-hsm-1.1.1
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
+	o py-libxml2-2.9.9
+	o py-libxslt-1.1.33
 	o py-musicbrainz-0.7.4
 	o py-newt-0.52.20
 	o py-omniORBpy-3.7
@@ -1342,6 +1349,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o swfdec-gnome-2.30.1
 	o swt-4.5
 	o sympa-6.2.14
+	o syncthing-1.0.0
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1 [needs polkit|GNOME 2.30]
 	o systrace-1.6e
@@ -1509,6 +1517,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o zkt-1.1.3
 	o zoneminder-1.29.0
 	o zopeedit-0.8
+	o zsh-autosuggestions-0.5.0
 
 Infrastructure problems which need addressing
 =============================================
