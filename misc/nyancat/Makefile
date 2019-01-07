@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2016/09/14 20:53:56 wiedi Exp $
+# $NetBSD: Makefile,v 1.4 2019/01/07 17:41:33 leot Exp $
 
-DISTNAME=	nyancat-1.5.1
+DISTNAME=	nyancat-1.5.2
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=klange/}
 
