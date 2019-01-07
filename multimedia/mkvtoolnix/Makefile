@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.123 2019/01/04 21:18:01 adam Exp $
+# $NetBSD: Makefile,v 1.124 2019/01/07 09:12:40 adam Exp $
 
-DISTNAME=	mkvtoolnix-30.0.0
+DISTNAME=	mkvtoolnix-30.1.0
 CATEGORIES=	multimedia
 MASTER_SITES=	https://mkvtoolnix.download/sources/
 EXTRACT_SUFX=	.tar.xz
@@ -69,5 +69,3 @@ BUILDLINK_ABI_DEPENDS.libebml+= libebml>=1.3.5
 .include "../../textproc/fmtlib/buildlink3.mk"
 .include "../../textproc/pugixml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-# work-around "ArgumentError: invalid byte sequence in US-ASCII"
-MAKE_ENV+=	LC_ALL=en_US.UTF-8
