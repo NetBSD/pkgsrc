@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2018/12/30 19:09:04 schmonz Exp $
+# $NetBSD: Makefile,v 1.69 2019/01/07 04:29:46 schmonz Exp $
 #
 
 DISTNAME=		qmail-run-20181230
@@ -77,11 +77,11 @@ MAKEVARS+=	PKG_SYSCONFDIR.qmail-run
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	mailer.conf
+SUBST_FILES.paths=	mailer.conf README.pkgsrc
 SUBST_FILES.paths+=	greylisting-spp-wrapper ofmipd-with-user-cdb
 SUBST_FILES.paths+=	qmail-isspam-* qmail-procmail qmail-qread-client
 SUBST_FILES.paths+=	rcptchecks ofmipfilters smtpfilters smtpplugins tcprules-*
-SUBST_VARS.paths=	PKGNAME PKG_SYSCONFDIR PREFIX
+SUBST_VARS.paths=	PKGNAME PKG_SYSCONFDIR PREFIX RCD_SCRIPTS_DIR
 SUBST_VARS.paths+=	CAT ECHO GREP SED SH SORT TRUE
 
 post-extract:
