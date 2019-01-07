@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/10/28 10:01:51 wiz Exp $
+$NetBSD: distinfo,v 1.4 2019/01/07 22:32:17 schmonz Exp $
 
-SHA1 (vpnc-script-20160828/vpnc-script) = 4ba9cf71edd12d5cc97925f2f9167f8426503f3f
-RMD160 (vpnc-script-20160828/vpnc-script) = d94ec44c3b2762dc93bfd08e70267e2abcafe3da
-SHA512 (vpnc-script-20160828/vpnc-script) = 5cbc01b90fc81e9b9481e97966f7c226168a3105773f049f1a24942d8b0e1e71a65f59d631a1c81c9266dedf1a9a6c9cf41697dd141f96973f4a51105fe26e4e
-Size (vpnc-script-20160828/vpnc-script) = 24790 bytes
+SHA1 (vpnc-script-20180226/vpnc-script) = 49c5cc53b7d623bf7f6f9a7b2144feabb389d786
+RMD160 (vpnc-script-20180226/vpnc-script) = ddf2f40dee746084c631058038b47bad51cbf579
+SHA512 (vpnc-script-20180226/vpnc-script) = 5e44cb019aba9e5f576cd631ce5e846eff6e1f343480e344416ad1c8b663fbce96cbe255d470d56bfab29d4572a7033af122a30cf50ef1de15921e414c467028
+Size (vpnc-script-20180226/vpnc-script) = 30265 bytes
