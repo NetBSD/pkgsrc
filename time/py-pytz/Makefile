@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2018/10/30 10:10:03 adam Exp $
+# $NetBSD: Makefile,v 1.44 2019/01/07 10:05:42 adam Exp $
 
-DISTNAME=	pytz-2018.7
+DISTNAME=	pytz-2018.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytz/}
@@ -13,6 +13,9 @@ LICENSE=	mit
 USE_LANGUAGES=	# none
 
 REPLACE_PYTHON=	pytz/tzfile.py
+
+do-test:
+	cd ${WRKSRC}/pytz/tests && ${PYTHONBIN} -m unittest discover -v
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
