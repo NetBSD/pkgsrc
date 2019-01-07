@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2018/12/13 21:13:45 adam Exp $
+# $NetBSD: Makefile,v 1.6 2019/01/07 17:00:33 adam Exp $
 
-DISTNAME=	sphinxcontrib-bibtex-0.4.1
+DISTNAME=	sphinxcontrib-bibtex-0.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinxcontrib-bibtex/}
