@@ -1,0 +1,48 @@
+$NetBSD: patch-Makefile,v 1.1 2019/01/07 02:33:17 bacon Exp $
+
+# Template Makefile requires platform-specific defaults for each OS
+# To be sent upstream following commit
+
+--- Makefile.orig	2018-10-22 16:47:31.000000000 +0000
++++ Makefile
+@@ -545,6 +545,40 @@ endif
+ endif
+ 
+ 
++ifeq (${OSTYPE}, NetBSD)
++  CC       ?= gcc
++  CXX      ?= g++
++
++  #  GCC
++  CXXFLAGS  += -pthread -fopenmp -fPIC
++  LDFLAGS   += -pthread -fopenmp -lm -lexecinfo
++
++  #CXXFLAGS  += -Wall -Wextra -Wformat  -Wno-unused   -Wno-parentheses
++  CXXFLAGS  += -Wall -Wextra -Wformat -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-char-subscripts -Wno-write-strings -Wno-sign-compare -Wno-format-truncation
++
++  #  Google Performance Tools malloc and heapchecker (HEAPCHECK=normal)
++  #CXXFLAGS  +=
++  #LDFLAGS   += -ltcmalloc
++
++  #  Google Performance Tools cpu profiler (CPUPROFILE=/path)
++  #CXXFLAGS  +=
++  #LDFLAGS   += -lprofiler
++
++  #  callgrind
++  #CXXFLAGS  += -g3 -Wa,--gstabs -save-temps
++
++  ifeq ($(BUILDOPTIMIZED), 1)
++  else
++    CXXFLAGS += -g3
++  endif
++
++  ifeq ($(BUILDDEBUG), 1)
++  else
++    CXXFLAGS += -O3   -finline-functions -fomit-frame-pointer
++  endif
++endif
++
++
+ ifneq (,$(findstring CYGWIN, ${OSTYPE}))
+   CC        ?= gcc
+   CXX       ?= g++
