@@ -1,8 +1,10 @@
-$NetBSD: patch-gcc_config.gcc,v 1.3 2016/09/28 17:13:16 maya Exp $
+$NetBSD: patch-gcc_config.gcc,v 1.4 2019/01/07 13:46:14 he Exp $
+
+Adjust for target includes and crt make.
 
 --- gcc/config.gcc.orig	2014-11-21 16:04:20.000000000 +0000
 +++ gcc/config.gcc
-@@ -745,10 +745,16 @@ case ${target} in
+@@ -769,10 +769,16 @@ case ${target} in
    target_has_targetcm=yes
    ;;
  *-*-netbsd*)
@@ -20,7 +22,7 @@ $NetBSD: patch-gcc_config.gcc,v 1.3 2016/09/28 17:13:16 maya Exp $
    # NetBSD 2.0 and later get POSIX threads enabled by default.
    # Allow them to be explicitly enabled on any other version.
    case ${enable_threads} in
-@@ -1372,12 +1378,14 @@ x86_64-*-freebsd*)
+@@ -1465,12 +1471,14 @@ x86_64-*-freebsd*)
  	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h ${fbsd_tm_file} i386/x86-64.h i386/freebsd.h i386/freebsd64.h"
  	;;
  i[34567]86-*-netbsdelf*)
@@ -37,3 +39,12 @@ $NetBSD: patch-gcc_config.gcc,v 1.3 2016/09/28 17:13:16 maya Exp $
  	;;
  i[34567]86-*-openbsd2.*|i[34567]86-*openbsd3.[0123])
  	tm_file="i386/i386.h i386/unix.h i386/bsd.h i386/gas.h i386/gstabs.h openbsd-oldgas.h openbsd.h i386/openbsd.h"
+@@ -2358,7 +2366,7 @@ powerpc*-*-freebsd*)
+ 	esac
+ 	;;
+ powerpc-*-netbsd*)
+-	tm_file="${tm_file} dbxelf.h elfos.h netbsd.h netbsd-elf.h freebsd-spec.h rs6000/sysv4.h rs6000/netbsd.h"
++	tm_file="${tm_file} dbxelf.h elfos.h netbsd.h netbsd-elf.h freebsd-spec.h rs6000/sysv4.h rs6000/netbsd.h netbsd-stdint.h"
+ 	extra_options="${extra_options} netbsd.opt netbsd-elf.opt"
+ 	tmake_file="${tmake_file} rs6000/t-netbsd"
+ 	extra_options="${extra_options} rs6000/sysv4.opt"

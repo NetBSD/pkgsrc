@@ -1,15 +1,7 @@
-$NetBSD: distinfo,v 1.13 2018/11/23 19:28:30 abs Exp $
+$NetBSD: distinfo,v 1.14 2019/01/07 13:46:14 he Exp $
 
-SHA1 (gcc-6.5.0.tar.xz) = 368b3f5d294b1a8727b372ac0a77703d8b41968a
-RMD160 (gcc-6.5.0.tar.xz) = 66782b17cff89f22e5e8869fa96bd9a8985f5067
-SHA512 (gcc-6.5.0.tar.xz) = ce046f9a50050fd54b870aab764f7db187fe7ea92eb4aaffb7c3689ca623755604e231f2af97ef795f41c406bb80c797dd69957cfdd51dfa2ba60813f72b7eac
-Size (gcc-6.5.0.tar.xz) = 74355588 bytes
-SHA1 (isl-0.14.tar.bz2) = b09e25df265c97ed54002cd811d227a9a26c5f9c
-RMD160 (isl-0.14.tar.bz2) = 4c69d026b51561bc1948cb7db79331b78a9d2c39
-SHA512 (isl-0.14.tar.bz2) = 117c0c6f31d91a9284a8f54a748df6494ca2ac21507a45611e911403e9610579b9323ce624aea1de0b8089b3194e59d4364f01bdb71ddcf8f6c24c749d11c4b7
-Size (isl-0.14.tar.bz2) = 1399896 bytes
 SHA1 (patch-gcc_Makefile.in) = 41d45e8988b59e6ffa7adb7833290d39fc1fd0e1
-SHA1 (patch-gcc_config.gcc) = 84fedf863c853c40bf81884f5db3617200f0d31d
+SHA1 (patch-gcc_config.gcc) = 6795fc4f852019faef686d6a8a2ede29945b2736
 SHA1 (patch-gcc_config.host) = 5dd1b72be5d520ebc679c79cbe92317eaf66028f
 SHA1 (patch-gcc_config_arm_arm.h) = e69b7f89ba245847f58253675a16749890b9d1ae
 SHA1 (patch-gcc_config_host-netbsd.c) = 765295f07edb8a68f1910e3a9b4dd2a7dcd491a5
