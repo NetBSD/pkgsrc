@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2019/01/07 14:01:55 schmonz Exp $
+# $NetBSD: Makefile,v 1.32 2019/01/07 19:45:48 schmonz Exp $
 #
 
 DISTNAME=		djbdns-run-20190107
@@ -41,9 +41,9 @@ BUILD_DEFS+=		DJBDNS_AXFR_USER DJBDNS_CACHE_USER DJBDNS_LOG_USER
 BUILD_DEFS+=		DJBDNS_RBL_USER DJBDNS_TINY_USER
 BUILD_DEFS+=		DJBDNS_DJBDNS_GROUP
 
-CONF_FILES+=		${PKG_SYSCONFDIR}/dnsroots.global \
+CONF_FILES+=		${PREFIX}/share/examples/${PKGBASE}/dnsroots.global \
 			${PKG_SYSCONFDIR}/dnscache/servers/@
-CONF_FILES+=		${PREFIX}/share/examples/djbdns-run/axfrdns-tcp \
+CONF_FILES+=		${PREFIX}/share/examples/${PKGBASE}/axfrdns-tcp \
 			${PKG_SYSCONFDIR}/axfrdns/tcp
 
 .include "options.mk"
@@ -67,5 +67,6 @@ do-install:
 	${INSTALL_DATA} ${FILESDIR}/README.pkgsrc ${DESTDIR}${PREFIX}/share/doc/djbdns-run
 	${INSTALL_DATA} ${FILESDIR}/axfrdns-tcp ${DESTDIR}${PREFIX}/share/examples/djbdns-run
 	${INSTALL_DATA} ${FILESDIR}/dnscache-ip ${DESTDIR}${PREFIX}/share/examples/djbdns-run
+	${INSTALL_DATA} ${PREFIX}/${DNSROOTS_GLOBAL} ${DESTDIR}${PREFIX}/share/examples/djbdns-run
 
 .include "../../mk/bsd.pkg.mk"
