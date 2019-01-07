@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2017/01/03 00:02:03 khorben Exp $
+# $NetBSD: Makefile,v 1.6 2019/01/07 22:23:52 schmonz Exp $
 
-DISTNAME=	openconnect-7.08
+DISTNAME=	openconnect-8.01
 CATEGORIES=	net security
 MASTER_SITES=	ftp://ftp.infradead.org/pub/openconnect/
 
@@ -19,10 +19,14 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-vpnc-script=${PKG_SYSCONFDIR}/vpnc-script
 CONFIGURE_ARGS+=	--disable-nls
 
+REPLACE_PYTHON=		trojans/tncc-wrapper.py
+PYTHON_VERSIONS_ACCEPTED=27
+
 INSTALLATION_DIRS=	sbin include lib ${PKGMANDIR}/man8
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/libproxy/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
