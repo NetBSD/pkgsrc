@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2019/01/07 14:01:55 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/01/07 19:45:48 schmonz Exp $
 share/doc/djbdns-run/README.pkgsrc
 share/examples/djbdns-run/axfrdns-tcp
 share/examples/djbdns-run/dnscache-ip
+share/examples/djbdns-run/dnsroots.global
