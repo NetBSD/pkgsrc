@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2019/01/07 12:56:22 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/timezone_field/__init__.py
+${PYSITELIB}/timezone_field/__init__.pyc
+${PYSITELIB}/timezone_field/__init__.pyo
+${PYSITELIB}/timezone_field/fields.py
+${PYSITELIB}/timezone_field/fields.pyc
+${PYSITELIB}/timezone_field/fields.pyo
+${PYSITELIB}/timezone_field/forms.py
+${PYSITELIB}/timezone_field/forms.pyc
+${PYSITELIB}/timezone_field/forms.pyo
+${PYSITELIB}/timezone_field/models.py
+${PYSITELIB}/timezone_field/models.pyc
+${PYSITELIB}/timezone_field/models.pyo
+${PYSITELIB}/timezone_field/utils.py
+${PYSITELIB}/timezone_field/utils.pyc
+${PYSITELIB}/timezone_field/utils.pyo
