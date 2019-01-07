@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 03:28:59 agc Exp $
+$NetBSD: distinfo,v 1.7 2019/01/07 15:49:21 wiz Exp $
 
-SHA1 (xcursorgen-1.0.6.tar.bz2) = e6d5cc03ce1829cc7eea39526ca7b8688aac468b
-RMD160 (xcursorgen-1.0.6.tar.bz2) = ed54a6837a071a5d01f98f6c1bfa9cea2c113af8
-SHA512 (xcursorgen-1.0.6.tar.bz2) = 3b464b7be3cec8c6d2bf4538266108bdc09e1dae4053d573f7f38e004929b41be0d996aa54918490fa040655644e2b0d4fab1ec24cca014d77bdb91c41ab1db4
-Size (xcursorgen-1.0.6.tar.bz2) = 124545 bytes
+SHA1 (xcursorgen-1.0.7.tar.bz2) = 109367eb23b0ad52cf5de15f50c02ebe872698ae
+RMD160 (xcursorgen-1.0.7.tar.bz2) = 0aa2611d75c171a3e1680540b4082f971410a2cd
+SHA512 (xcursorgen-1.0.7.tar.bz2) = bd13ad23691d3daa2d5dcdc5902cf62e3dcb97a0289aff362e6cd85866a1d8cafb64f98800a75bfb4cf1f3c76244ca20201847dff594543d136d0abaec7011d2
+Size (xcursorgen-1.0.7.tar.bz2) = 128102 bytes
