@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.121 2018/10/16 00:19:40 gdt Exp $
+# $NetBSD: Makefile,v 1.122 2019/01/07 18:52:23 jaapb Exp $
 
 .include "Makefile.common"
+
+PKGREVISION=		1
 
 CONFIGURE_ENV+=		disable_x11=yes
 
@@ -32,21 +34,22 @@ PLIST.ocaml-stub=	yes
 
 # Optional components built only on certain platforms.
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
-    !empty(MACHINE_ARCH:M*arm*) || \
+    !empty(MACHINE_ARCH:M*arm*) || (${MACHINE_ARCH} == "aarch64") || \
     (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "x86_64")
 BUILD_TARGET+=	opt opt.opt
 PLIST.ocaml-opt=	yes
 .  if empty(MACHINE_PLATFORM:MDarwin-*-powerpc) && \
       empty(MACHINE_PLATFORM:MSunOS-*-i386) && \
-      empty(MACHINE_PLATFORM:MNetBSD-*-arm) && \
-      empty(MACHINE_PLATFORM:MNetBSD-*-sparc)
+      empty(MACHINE_PLATFORM:MNetBSD-*-sparc) && \
+      (${MACHINE_ARCH} != "aarch64")
 PLIST.ocaml-prof=yes
 .  endif
 .endif
 
 # XXX This conditional is not complete.  It should match the
 # conditional in ocaml-x.y.z/configure.
-.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "x86_64")
+.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "x86_64") || \
+    (${MACHINE_ARCH} == "aarch64")
 .  if !empty(MACHINE_PLATFORM:MLinux-*-*) || \
       !empty(MACHINE_PLATFORM:MFreeBSD-*-*) || \
       !empty(MACHINE_PLATFORM:MDragonFly-*-*) || \
@@ -58,7 +61,7 @@ PLIST.ocaml-nat= yes
 .endif
 
 # Spacetime profiling is only available for native code on 64-bit targets.
-.if ${MACHINE_ARCH} == "x86_64"
+.if (${MACHINE_ARCH} == "x86_64") || (${MACHINE_ARCH} == "aarch64")
 PLIST.ocaml-spacetime= yes
 .endif
 
