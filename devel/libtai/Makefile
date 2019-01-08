@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2017/07/26 00:29:53 schmonz Exp $
+# $NetBSD: Makefile,v 1.15 2019/01/08 03:57:11 schmonz Exp $
 #
 
 DISTNAME=		libtai-0.60
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		devel
 MASTER_SITES=		http://cr.yp.to/libtai/
 
@@ -28,6 +28,9 @@ SUBST_SED.paths=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR:Q},g'
 INSTALLATION_DIRS=	bin include lib ${EGDIR}
 INSTALLATION_DIRS+=	${PKGMANDIR}/man3
 
+post-build:
+	cd ${WRKSRC} && ./leapsecs < leapsecs.txt > leapsecs.dat
+
 do-install:
 	set -e; cd ${WRKSRC};						\
 	for f in *.3; do						\
@@ -40,7 +43,7 @@ do-install:
 		${INSTALL_DATA} "$${f}" ${DESTDIR}${PREFIX}/include;	\
 	done;								\
 	for f in libtai.a; do						\
-		${INSTALL_LIB} "$${f}" ${DESTDIR}${PREFIX}/lib;		\
+		${INSTALL_DATA} "$${f}" ${DESTDIR}${PREFIX}/lib;		\
 	done;								\
 	for f in leapsecs.dat leapsecs.txt; do				\
 		${INSTALL_DATA} "$${f}" ${DESTDIR}${PREFIX}/${EGDIR};	\
