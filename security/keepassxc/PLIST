@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/06/23 08:20:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/01/08 16:27:16 ryoon Exp $
 bin/keepassxc
 bin/keepassxc-cli
 lib/keepassxc/libkeepassx-autotype-xcb.so
@@ -273,6 +273,7 @@ share/keepassxc/translations/keepassx_pt_PT.qm
 share/keepassxc/translations/keepassx_ro.qm
 share/keepassxc/translations/keepassx_ru.qm
 share/keepassxc/translations/keepassx_sl_SI.qm
+share/keepassxc/translations/keepassx_sk.qm
 share/keepassxc/translations/keepassx_sr.qm
 share/keepassxc/translations/keepassx_sv.qm
 share/keepassxc/translations/keepassx_th.qm
