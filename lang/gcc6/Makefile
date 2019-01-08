@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/11/28 16:06:58 abs Exp $
+# $NetBSD: Makefile,v 1.20 2019/01/08 16:19:38 abs Exp $
 
 GCC_PKGNAME=		gcc6
 .include		"version.mk"
@@ -93,6 +93,9 @@ CONFIGURE_ARGS+=	--enable-languages=${LANGS:Q}
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-long-long
 CONFIGURE_ARGS+=	--with-local-prefix=${GCC_PREFIX:Q}
+CONFIGURE_ARGS+=	--enable-threads=posix
+CONFIGURE_ARGS+=	--with-boot-ldflags=${BOOT_LDFLAGS:Q}
+
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-*)
 # native SSP conflicts with gcc's libssp
 CONFIGURE_ARGS+=	--disable-libssp
@@ -105,8 +108,6 @@ SUBST_SED.libstdc=	-e 's,libtool_VERSION=6:,libtool_VERSION=7:,g'
 .else
 CONFIGURE_ARGS+=	--enable-libssp
 .endif
-CONFIGURE_ARGS+=	--enable-threads=posix
-CONFIGURE_ARGS+=	--with-boot-ldflags=${BOOT_LDFLAGS:Q}
 
 # multilib on Darwin requires fat-binaries
 CONFIGURE_ARGS.Darwin+=	--disable-multilib
