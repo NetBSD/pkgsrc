@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/08/15 19:00:54 adam Exp $
+$NetBSD: distinfo,v 1.6 2019/01/08 12:08:45 adam Exp $
 
-SHA1 (pyobjc-framework-QTKit-4.2.2.tar.gz) = 05b88afc92a028cfc080fe94a4b3364e1fba9502
-RMD160 (pyobjc-framework-QTKit-4.2.2.tar.gz) = 10f60132606e64e9b3f8cfe3505596e1083fe654
-SHA512 (pyobjc-framework-QTKit-4.2.2.tar.gz) = 9b25b0edb966dc4a51791d36ef6333bc886803f00845a33e2fef5fcc0ce0c0e472c0132872e083f6f2fedb23a7517b042867a19b6b0f9841cc8ad1eddd03644c
-Size (pyobjc-framework-QTKit-4.2.2.tar.gz) = 117862 bytes
+SHA1 (pyobjc-framework-QTKit-5.1.2.tar.gz) = dd94176649e1ada1635922ff760e05babd849c7e
+RMD160 (pyobjc-framework-QTKit-5.1.2.tar.gz) = 8cf7f79095698bbf374bf970f90bd71a2493b220
+SHA512 (pyobjc-framework-QTKit-5.1.2.tar.gz) = 623039efdd96829e87e9dac6ae17e6a85c916dd0db2171bed91278e1cadc92e02719955556b4cf49fb8c154a6292316211cbee0aea17409cb57b715d2c661c22
+Size (pyobjc-framework-QTKit-5.1.2.tar.gz) = 118050 bytes

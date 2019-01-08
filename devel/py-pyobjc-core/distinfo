@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/08/15 19:00:48 adam Exp $
+$NetBSD: distinfo,v 1.6 2019/01/08 12:08:39 adam Exp $
 
-SHA1 (pyobjc-core-4.2.2.tar.gz) = dbc2bb5ac0e87500cc999f681bbc421547abc249
-RMD160 (pyobjc-core-4.2.2.tar.gz) = 6a699532606299eb7c0ea01a809ad04a684ee525
-SHA512 (pyobjc-core-4.2.2.tar.gz) = 6a3647ef5b4ab60f70d979f603f2649c144a6b151302ecda48b65f9e8cdbd3b6a26725b2ed6d8c320e37bf9ea4a050c2a995de64e17bd652b68f594c452409ba
-Size (pyobjc-core-4.2.2.tar.gz) = 776288 bytes
+SHA1 (pyobjc-core-5.1.2.tar.gz) = 3cf33501d284a3b7c8fb10358c18f463f16c574c
+RMD160 (pyobjc-core-5.1.2.tar.gz) = b74806ee8b66a141a6f96303ecc56448808a1ccb
+SHA512 (pyobjc-core-5.1.2.tar.gz) = e73658e79111910ff0aa62daf2734c4d1bcdfef1619324d7721358cc2b71f28c8f9ec517927d5071dccff097054558a025e9446c655479d2f93d7e4573436acd
+Size (pyobjc-core-5.1.2.tar.gz) = 794290 bytes

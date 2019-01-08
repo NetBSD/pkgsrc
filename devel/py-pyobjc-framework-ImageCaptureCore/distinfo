@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2018/08/15 19:00:52 adam Exp $
+$NetBSD: distinfo,v 1.4 2019/01/08 12:08:43 adam Exp $
 
-SHA1 (pyobjc-framework-ImageCaptureCore-4.2.2.tar.gz) = 756bcc09afab11647f6116a745dd9baa60c801d4
-RMD160 (pyobjc-framework-ImageCaptureCore-4.2.2.tar.gz) = fba52ea66d1c3e75deceae4836f52c7aa726cc79
-SHA512 (pyobjc-framework-ImageCaptureCore-4.2.2.tar.gz) = cdadb524b9f24830e7f91228b1610f78b55ac53e738ae06a5dcebf8fc058700ddb215962838c3ceda3d6b585f50e3d18d2b75dc8a8fc36e097227f852cd222ad
-Size (pyobjc-framework-ImageCaptureCore-4.2.2.tar.gz) = 34423 bytes
+SHA1 (pyobjc-framework-ImageCaptureCore-5.1.2.tar.gz) = 21cc5156d126865aa6ec77389766a1585e54e718
+RMD160 (pyobjc-framework-ImageCaptureCore-5.1.2.tar.gz) = 1875311586efc0d31d6dc6257364e749159101e9
+SHA512 (pyobjc-framework-ImageCaptureCore-5.1.2.tar.gz) = a394084ed891cc61230c1ecfbe17790f21e49c916cac41c58523bb3b51b2b8f0581d67ecb2fe0c998484bcbff2c26d9f8279568252fd5a600b3717e0b763208e
+Size (pyobjc-framework-ImageCaptureCore-5.1.2.tar.gz) = 35245 bytes
