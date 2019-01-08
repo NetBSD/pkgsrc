@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.110 2019/01/07 22:32:22 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.111 2019/01/08 03:57:16 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -152,3 +152,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/ocaml to 4.07.1nb1 [jaapb 2019-01-07]
 	Updated net/openconnect to 8.01 [schmonz 2019-01-07]
 	Updated net/vpnc-script to 20180226 [schmonz 2019-01-07]
+	Updated devel/libtai to 0.60nb6 [schmonz 2019-01-08]
