@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2018/08/22 09:45:55 wiz Exp $
+# $NetBSD: Makefile,v 1.125 2019/01/08 19:18:55 adam Exp $
 
 .include "Makefile.common"
 CATEGORIES=	net
@@ -122,6 +122,7 @@ post-extract:
 	ln -s ${WRKSRC}/include/net-snmp/system/darwin13.h ${WRKSRC}/include/net-snmp/system/darwin15.h
 	ln -s ${WRKSRC}/include/net-snmp/system/darwin13.h ${WRKSRC}/include/net-snmp/system/darwin16.h
 	ln -s ${WRKSRC}/include/net-snmp/system/darwin13.h ${WRKSRC}/include/net-snmp/system/darwin17.h
+	ln -s ${WRKSRC}/include/net-snmp/system/darwin13.h ${WRKSRC}/include/net-snmp/system/darwin18.h
 .endif
 
 post-wrapper:
