@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dnscache.sh,v 1.11 2019/01/07 14:01:55 schmonz Exp $
+# $NetBSD: dnscache.sh,v 1.12 2019/01/08 18:19:27 schmonz Exp $
 #
 # @PKGNAME@ script to control dnscache (caching DNS resolver).
 #
@@ -16,7 +16,7 @@ name="dnscache"
 : ${dnscache_ip:="@DNSCACHE_LISTENIP@"}
 : ${dnscache_ipsend:="@DNSCACHE_SENDIP@"}
 : ${dnscache_size:="1000000"}
-: ${dnscache_datalimit:="3000000"}
+: ${dnscache_datalimit:="30000000"}
 : ${dnscache_log:="YES"}
 : ${dnscache_logcmd:="logger -t nbdjbdns/cache -p daemon.info"}
 : ${dnscache_nologcmd:="@PREFIX@/bin/multilog -*"}
