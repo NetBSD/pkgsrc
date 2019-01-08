@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.118 2019/01/08 12:21:15 adam Exp $
+$NetBSD: CHANGES-2019,v 1.119 2019/01/08 14:41:57 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -166,3 +166,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/py-supervisor to 3.3.5 [adam 2019-01-08]
 	Added net/py-prometheus_client version 0.5.0 [markd 2019-01-08]
 	Updated devel/py-pyobjc to 5.1.2 [adam 2019-01-08]
+	Updated net/sniproxy to 0.6.0 [wiedi 2019-01-08]
