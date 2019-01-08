@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2018/12/18 11:48:33 adam Exp $
+# $NetBSD: Makefile,v 1.50 2019/01/08 08:37:59 adam Exp $
 
-DISTNAME=	peewee-3.8.0
+DISTNAME=	peewee-3.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/peewee/}
@@ -11,7 +11,8 @@ COMMENT=	Small, expressive ORM for PostgreSQL, MySQL and SQLite
 LICENSE=	mit
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
-#TEST_DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
+DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
+#DEPENDS+=	sqlite3-[0-9]*
 
 MAKE_FLAGS+=	SPHINXBUILD=sphinx-build${PYVERSSUFFIX}
 
