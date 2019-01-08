@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/01/06 11:21:06 markd Exp $
+# $NetBSD: Makefile,v 1.16 2019/01/08 05:56:19 markd Exp $
 
 .include "../../devel/protobuf/Makefile.common"
 
@@ -9,7 +9,8 @@ CATEGORIES+=	python
 MAINTAINER=	khorben@defora.org
 COMMENT=	Python bindings for protobuf
 
-USE_LANGUAGES+=	c c++
+USE_LANGUAGES+=	c c++11
+CFLAGS+=	-std=c++11	# NetBSD complains without this
 
 PYSETUPSUBDIR=	python
 PYSETUPBUILDARGS=	--cpp_implementation
