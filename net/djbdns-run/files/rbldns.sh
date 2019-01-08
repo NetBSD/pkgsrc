@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: rbldns.sh,v 1.8 2019/01/07 14:01:55 schmonz Exp $
+# $NetBSD: rbldns.sh,v 1.9 2019/01/08 18:29:30 schmonz Exp $
 #
 # @PKGNAME@ script to control rbldns (local RBL service).
 #
@@ -57,8 +57,8 @@ BASE=${rbldns_base} \
 }
 
 rbldns_needcdb() {
-	_src=${axfrdns_tcprules}
-	_dst=${axfrdns_tcprules}.cdb
+	_src=${rbldns_data}
+	_dst=${rbldns_data}.cdb
 	[ -f "${_src}" -a "${_src}" -nt "${_dst}" ] || [ ! -f "${_dst}" ]
 }
 
