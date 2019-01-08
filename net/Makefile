@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1236 2019/01/05 06:20:50 schmonz Exp $
+# $NetBSD: Makefile,v 1.1237 2019/01/08 10:45:02 markd Exp $
 #
 
 COMMENT=	Networking tools
@@ -687,6 +687,7 @@ SUBDIR+=	py-omniORBpy
 SUBDIR+=	py-onionbalance
 SUBDIR+=	py-pcap
 SUBDIR+=	py-portend
+SUBDIR+=	py-prometheus_client
 SUBDIR+=	py-ptt
 SUBDIR+=	py-py3dns
 SUBDIR+=	py-pydns
