@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2015/08/26 21:37:11 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2019/01/08 19:25:57 bsiegert Exp $
 #
 
-DISTNAME=	croscorefonts-1.23.0
+DISTNAME=	croscorefonts-1.31.0
 CATEGORIES=	fonts
 MASTER_SITES=	http://gsdview.appspot.com/chromeos-localmirror/distfiles/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://fedoraproject.org/wiki/Google_Croscore_fonts
@@ -30,7 +31,6 @@ INSTALL_FONTS=	Arimo-Bold.ttf \
 		Cousine-BoldItalic.ttf \
 		Cousine-Italic.ttf \
 		Cousine-Regular.ttf \
-		SymbolNeu.ttf \
 		Tinos-Bold.ttf \
 		Tinos-BoldItalic.ttf \
 		Tinos-Italic.ttf \
