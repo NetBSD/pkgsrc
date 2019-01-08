@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/08/05 10:19:16 adam Exp $
+$NetBSD: distinfo,v 1.3 2019/01/08 09:10:11 adam Exp $
 
-SHA1 (pytest-asyncio-0.9.0.tar.gz) = 7d80b5806bb8eef09da481aeb2bb133d50c9fbd8
-RMD160 (pytest-asyncio-0.9.0.tar.gz) = ef58e3273e873a207f89a761211b020793c80bea
-SHA512 (pytest-asyncio-0.9.0.tar.gz) = 129dc6129a93856eb32a5ca8c90ea71397bd5293f66b5b3682efbfcd7c0444471c98aa2f95bca89e6a34dd1f3571aa4a2b9b7831c4cd0e124eb2f69ad3a7fa73
-Size (pytest-asyncio-0.9.0.tar.gz) = 7220 bytes
+SHA1 (pytest-asyncio-0.10.0.tar.gz) = 197a54291aed1460c5732139e933370558d84196
+RMD160 (pytest-asyncio-0.10.0.tar.gz) = c51eb6e2dc641508a4731b9930cc1076d15280cb
+SHA512 (pytest-asyncio-0.10.0.tar.gz) = 189b8756d4b90a5dce678e41bc285f391fc47fca4250feebf3bcf8d0d617c2d6f4d43455b7876a7fb376a0c0b45f6343e9070b1796aab4b6a3b337df462dc831
+Size (pytest-asyncio-0.10.0.tar.gz) = 11765 bytes
