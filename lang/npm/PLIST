@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2018/09/07 11:51:10 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/01/08 14:53:49 adam Exp $
 bin/npm
 bin/npx
+lib/node_modules/npm/.licensee.json
 lib/node_modules/npm/.mailmap
 lib/node_modules/npm/.npmignore
 lib/node_modules/npm/.travis.yml
@@ -875,6 +876,7 @@ lib/node_modules/npm/node_modules/ci-info/LICENSE
 lib/node_modules/npm/node_modules/ci-info/README.md
 lib/node_modules/npm/node_modules/ci-info/index.js
 lib/node_modules/npm/node_modules/ci-info/package.json
+lib/node_modules/npm/node_modules/ci-info/vendors.json
 lib/node_modules/npm/node_modules/cidr-regex/LICENSE
 lib/node_modules/npm/node_modules/cidr-regex/README.md
 lib/node_modules/npm/node_modules/cidr-regex/index.js
@@ -992,20 +994,10 @@ lib/node_modules/npm/node_modules/concat-stream/LICENSE
 lib/node_modules/npm/node_modules/concat-stream/index.js
 lib/node_modules/npm/node_modules/concat-stream/package.json
 lib/node_modules/npm/node_modules/concat-stream/readme.md
-lib/node_modules/npm/node_modules/config-chain/.npmignore
 lib/node_modules/npm/node_modules/config-chain/LICENCE
 lib/node_modules/npm/node_modules/config-chain/index.js
 lib/node_modules/npm/node_modules/config-chain/package.json
 lib/node_modules/npm/node_modules/config-chain/readme.markdown
-lib/node_modules/npm/node_modules/config-chain/test/broken.js
-lib/node_modules/npm/node_modules/config-chain/test/broken.json
-lib/node_modules/npm/node_modules/config-chain/test/chain-class.js
-lib/node_modules/npm/node_modules/config-chain/test/env.js
-lib/node_modules/npm/node_modules/config-chain/test/find-file.js
-lib/node_modules/npm/node_modules/config-chain/test/get.js
-lib/node_modules/npm/node_modules/config-chain/test/ignore-unfound-file.js
-lib/node_modules/npm/node_modules/config-chain/test/ini.js
-lib/node_modules/npm/node_modules/config-chain/test/save.js
 lib/node_modules/npm/node_modules/configstore/index.js
 lib/node_modules/npm/node_modules/configstore/license
 lib/node_modules/npm/node_modules/configstore/package.json
@@ -1467,7 +1459,7 @@ lib/node_modules/npm/node_modules/got/package.json
 lib/node_modules/npm/node_modules/got/readme.md
 lib/node_modules/npm/node_modules/graceful-fs/LICENSE
 lib/node_modules/npm/node_modules/graceful-fs/README.md
-lib/node_modules/npm/node_modules/graceful-fs/fs.js
+lib/node_modules/npm/node_modules/graceful-fs/clone.js
 lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js
 lib/node_modules/npm/node_modules/graceful-fs/legacy-streams.js
 lib/node_modules/npm/node_modules/graceful-fs/package.json
@@ -3264,6 +3256,14 @@ lib/node_modules/npm/node_modules/tar/lib/update.js
 lib/node_modules/npm/node_modules/tar/lib/warn-mixin.js
 lib/node_modules/npm/node_modules/tar/lib/winchars.js
 lib/node_modules/npm/node_modules/tar/lib/write-entry.js
+lib/node_modules/npm/node_modules/tar/node_modules/chownr/LICENSE
+lib/node_modules/npm/node_modules/tar/node_modules/chownr/README.md
+lib/node_modules/npm/node_modules/tar/node_modules/chownr/chownr.js
+lib/node_modules/npm/node_modules/tar/node_modules/chownr/package.json
+lib/node_modules/npm/node_modules/tar/node_modules/minipass/LICENSE
+lib/node_modules/npm/node_modules/tar/node_modules/minipass/README.md
+lib/node_modules/npm/node_modules/tar/node_modules/minipass/index.js
+lib/node_modules/npm/node_modules/tar/node_modules/minipass/package.json
 lib/node_modules/npm/node_modules/tar/node_modules/yallist/LICENSE
 lib/node_modules/npm/node_modules/tar/node_modules/yallist/README.md
 lib/node_modules/npm/node_modules/tar/node_modules/yallist/iterator.js
