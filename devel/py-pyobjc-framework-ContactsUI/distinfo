@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2018/08/15 19:00:50 adam Exp $
+$NetBSD: distinfo,v 1.4 2019/01/08 12:08:40 adam Exp $
 
-SHA1 (pyobjc-framework-ContactsUI-4.2.2.tar.gz) = a43c941eda3d54a75cd38185fadc11221ce44fc2
-RMD160 (pyobjc-framework-ContactsUI-4.2.2.tar.gz) = b74e316c067b07de90536ba6b999e8d10a8b4831
-SHA512 (pyobjc-framework-ContactsUI-4.2.2.tar.gz) = b0af61aabd926dde19e238571a7ad34a9e25968614bd091a009305b88aba0a506fb80d88c9655f511ed2deac02ea1f15c61052466b6e2c424f50caa47f4a1365
-Size (pyobjc-framework-ContactsUI-4.2.2.tar.gz) = 15096 bytes
+SHA1 (pyobjc-framework-ContactsUI-5.1.2.tar.gz) = 5f52819853ccef676e65bab839fef1e5b1f3b12b
+RMD160 (pyobjc-framework-ContactsUI-5.1.2.tar.gz) = 6e7e5f89d5297a9f06cf93ab35b1a2e8868648bc
+SHA512 (pyobjc-framework-ContactsUI-5.1.2.tar.gz) = 2385924c68e867d10a13be75d9956c6ba442da02825564694d6cd2b7a3d06b38e537069202483c78c5e0c9d0618c2502d3e41c8acad47c965a9a1bf7b31fa3c3
+Size (pyobjc-framework-ContactsUI-5.1.2.tar.gz) = 15902 bytes

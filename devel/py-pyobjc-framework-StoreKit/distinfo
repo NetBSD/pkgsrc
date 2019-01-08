@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/08/15 19:00:55 adam Exp $
+$NetBSD: distinfo,v 1.6 2019/01/08 12:08:46 adam Exp $
 
-SHA1 (pyobjc-framework-StoreKit-4.2.2.tar.gz) = feca1b274706f89015e2cd3f14cdb0968850475b
-RMD160 (pyobjc-framework-StoreKit-4.2.2.tar.gz) = 8ffc46ceadcbe59d161ee4a1f62eb7ac7a2316e3
-SHA512 (pyobjc-framework-StoreKit-4.2.2.tar.gz) = 4c7a73ddd7329ded698d2aa2d967dcc3ff8609d6a62002a1d57a2db281a9655c70ffaa1e71670574ccf7b842b2a5d88a94468ec2c018f431819dc17a1d1d83cb
-Size (pyobjc-framework-StoreKit-4.2.2.tar.gz) = 20974 bytes
+SHA1 (pyobjc-framework-StoreKit-5.1.2.tar.gz) = eaf397a4955cba56f10661890ad6ccbd344ed375
+RMD160 (pyobjc-framework-StoreKit-5.1.2.tar.gz) = a18cd710151f424cd7759a55ef9b420d523d8ab5
+SHA512 (pyobjc-framework-StoreKit-5.1.2.tar.gz) = 01033eac6a4294713d25a0da091d27bc4fe84ce70f136bff5fee11a9f333bbc13baa5e25de5e59f429bd3562fb86b6cd07c55bf9cc7fceb4961e2518fe5526c9
+Size (pyobjc-framework-StoreKit-5.1.2.tar.gz) = 21840 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/08/15 19:00:55 adam Exp $
+$NetBSD: distinfo,v 1.6 2019/01/08 12:08:47 adam Exp $
 
-SHA1 (pyobjc-framework-SystemConfiguration-4.2.2.tar.gz) = 5b2ca71717f177ef9333d1b8aefe908bd05294e3
-RMD160 (pyobjc-framework-SystemConfiguration-4.2.2.tar.gz) = c05aaae86a1632c48e61d8155391555d603746a1
-SHA512 (pyobjc-framework-SystemConfiguration-4.2.2.tar.gz) = 7da9966e6c894e7476ed9b702592b1c6eba3175b9c873db0f2c4b813cc9260a08a261204b2c82e5d361b4055d399a1418c5d4db396691dd09dfd1d42649122ee
-Size (pyobjc-framework-SystemConfiguration-4.2.2.tar.gz) = 85798 bytes
+SHA1 (pyobjc-framework-SystemConfiguration-5.1.2.tar.gz) = 9272cc389903bb86d974a897f8a8c1fe4fde0c5d
+RMD160 (pyobjc-framework-SystemConfiguration-5.1.2.tar.gz) = 5bbbd83841af9ddd548874bffd0177059de9a49a
+SHA512 (pyobjc-framework-SystemConfiguration-5.1.2.tar.gz) = 10030e8c20422b9e5cf7ccc675ba472a6d2ba28236e74318b8a9f0c3f021a8c2adffa8ea48ffbefd0fb4db3a1208ae16efca219b7819fb1a6b01003dc25bfbbe
+Size (pyobjc-framework-SystemConfiguration-5.1.2.tar.gz) = 85988 bytes
