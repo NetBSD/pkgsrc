@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.112 2019/01/08 08:01:28 tron Exp $
+$NetBSD: CHANGES-2019,v 1.113 2019/01/08 08:40:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -154,3 +154,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/vpnc-script to 20180226 [schmonz 2019-01-07]
 	Updated devel/libtai to 0.60nb6 [schmonz 2019-01-08]
 	Updated mail/mutt to 1.11.2 [tron 2019-01-08]
+	Updated databases/py-peewee to 3.8.1 [adam 2019-01-08]
+	Updated net/tor to 0.3.5.7 [adam 2019-01-08]
