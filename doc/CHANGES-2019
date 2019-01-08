@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.126 2019/01/08 19:13:15 adam Exp $
+$NetBSD: CHANGES-2019,v 1.127 2019/01/08 19:26:18 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -177,3 +177,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/djbdns-run to 20190108 [schmonz 2019-01-08]
 	Updated www/py-aiohttp to 3.5.2 [adam 2019-01-08]
 	Updated net/py-smb to 1.1.27 [adam 2019-01-08]
+	Updated fonts/croscorefonts to 1.31.0 [bsiegert 2019-01-08]
