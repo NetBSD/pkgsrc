@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2767 2019/01/03 19:30:47 adam Exp $
+# $NetBSD: Makefile,v 1.2768 2019/01/08 20:29:42 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2174,6 +2174,7 @@ SUBDIR+=	py-pyobjc-framework-CoreBluetooth
 SUBDIR+=	py-pyobjc-framework-CoreData
 SUBDIR+=	py-pyobjc-framework-CoreLocation
 SUBDIR+=	py-pyobjc-framework-CoreML
+SUBDIR+=	py-pyobjc-framework-CoreServices
 SUBDIR+=	py-pyobjc-framework-CoreSpotlight
 SUBDIR+=	py-pyobjc-framework-CoreText
 SUBDIR+=	py-pyobjc-framework-CoreWLAN
