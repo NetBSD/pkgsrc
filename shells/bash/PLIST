@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2016/09/19 09:06:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/01/08 16:24:42 ryoon Exp $
 bin/bash
 bin/bashbug
 include/bash/alias.h
@@ -63,10 +63,12 @@ info/bash.info
 lib/bash/Makefile.inc
 lib/bash/basename
 lib/bash/dirname
+lib/bash/fdflags
 lib/bash/finfo
 lib/bash/head
 lib/bash/id
 lib/bash/ln
+lib/bash/loadables.h
 lib/bash/logname
 lib/bash/mkdir
 lib/bash/mypid
@@ -76,6 +78,7 @@ lib/bash/printenv
 lib/bash/push
 lib/bash/realpath
 lib/bash/rmdir
+lib/bash/seq
 lib/bash/setpgid
 lib/bash/sleep
 lib/bash/strftime
@@ -124,6 +127,7 @@ share/locale/lt/LC_MESSAGES/bash.mo
 share/locale/nb/LC_MESSAGES/bash.mo
 share/locale/nl/LC_MESSAGES/bash.mo
 share/locale/pl/LC_MESSAGES/bash.mo
+share/locale/pt/LC_MESSAGES/bash.mo
 share/locale/pt_BR/LC_MESSAGES/bash.mo
 share/locale/ro/LC_MESSAGES/bash.mo
 share/locale/ru/LC_MESSAGES/bash.mo
