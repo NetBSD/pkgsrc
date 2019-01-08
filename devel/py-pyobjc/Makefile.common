@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2019/01/08 12:08:39 adam Exp $
+# $NetBSD: Makefile.common,v 1.6 2019/01/08 20:29:42 adam Exp $
 # used by devel/py-pyobjc-core/Makefile
 # used by devel/py-pyobjc-framework-AVFoundation/Makefile
 # used by devel/py-pyobjc-framework-AVKit/Makefile
@@ -20,6 +20,7 @@
 # used by devel/py-pyobjc-framework-CoreData/Makefile
 # used by devel/py-pyobjc-framework-CoreLocation/Makefile
 # used by devel/py-pyobjc-framework-CoreML/Makefile
+# used by devel/py-pyobjc-framework-CoreServices/Makefile
 # used by devel/py-pyobjc-framework-CoreSpotlight/Makefile
 # used by devel/py-pyobjc-framework-CoreText/Makefile
 # used by devel/py-pyobjc-framework-CoreWLAN/Makefile
