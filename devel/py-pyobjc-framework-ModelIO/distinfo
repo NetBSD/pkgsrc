@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2018/08/15 19:00:53 adam Exp $
+$NetBSD: distinfo,v 1.4 2019/01/08 12:08:44 adam Exp $
 
-SHA1 (pyobjc-framework-ModelIO-4.2.2.tar.gz) = a3b64798e5b101447fca05f46d1d0d60b65fef1a
-RMD160 (pyobjc-framework-ModelIO-4.2.2.tar.gz) = ad23c5e44e4d35c89b30de490e0c895330fec809
-SHA512 (pyobjc-framework-ModelIO-4.2.2.tar.gz) = 6d115f74616fda8f9c336b3612ebf11524d5d941b521c4c983d4cc9ee10aadc19b9da23b01ba314f6d13bcfe5099b457db14b9a1a64346d0f9095e97abb3d0ab
-Size (pyobjc-framework-ModelIO-4.2.2.tar.gz) = 29194 bytes
+SHA1 (pyobjc-framework-ModelIO-5.1.2.tar.gz) = 1432d2292a8b5f3b237d0c01c2a1aa2ca8520903
+RMD160 (pyobjc-framework-ModelIO-5.1.2.tar.gz) = c411c7421884dbe9e72de24a74b09cb49f64aa63
+SHA512 (pyobjc-framework-ModelIO-5.1.2.tar.gz) = 77b55fcd3bcfc68e01cb418cc19faf8c2ad7cef12cb822f2e5deddee2a39629b7400a64aaa3f605b11a17111ca463ba0fd8d35b7bef4d62da93843e983f0d21c
+Size (pyobjc-framework-ModelIO-5.1.2.tar.gz) = 30037 bytes
