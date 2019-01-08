@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2018/04/18 19:34:11 kamil Exp $
+# $NetBSD: Makefile,v 1.7 2019/01/08 14:41:16 wiedi Exp $
 
-DISTNAME=	sniproxy-0.5.0
+DISTNAME=	sniproxy-0.6.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dlundquist/}
 
