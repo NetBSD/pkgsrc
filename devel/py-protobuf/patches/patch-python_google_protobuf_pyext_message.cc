@@ -1,4 +1,4 @@
-$NetBSD: patch-python_google_protobuf_pyext_message.cc,v 1.1 2019/01/06 11:21:06 markd Exp $
+$NetBSD: patch-python_google_protobuf_pyext_message.cc,v 1.1 2019/01/08 05:56:19 markd Exp $
 
 --- python/google/protobuf/pyext/message.cc.orig	2018-07-30 22:16:10.000000000 +0000
 +++ python/google/protobuf/pyext/message.cc
