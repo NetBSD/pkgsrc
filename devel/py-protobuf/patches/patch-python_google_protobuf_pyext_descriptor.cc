@@ -1,4 +1,4 @@
-$NetBSD: patch-python_google_protobuf_pyext_descriptor.cc,v 1.1 2019/01/06 11:21:06 markd Exp $
+$NetBSD: patch-python_google_protobuf_pyext_descriptor.cc,v 1.1 2019/01/08 05:56:19 markd Exp $
 
 python3.7 fixes
 
