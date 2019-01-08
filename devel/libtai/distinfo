@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2017/07/26 00:29:53 schmonz Exp $
+$NetBSD: distinfo,v 1.9 2019/01/08 03:57:11 schmonz Exp $
 
 SHA1 (libtai-0.60.tar.gz) = f4682fb2a98dd7d434aa0cecd9254a58a0bfd9fb
 RMD160 (libtai-0.60.tar.gz) = 706111781e5e5bd7ae888e3cdc169d1d8d29de6f
@@ -6,5 +6,5 @@ SHA512 (libtai-0.60.tar.gz) = e3e6e3e46f3cb869bcd661b0c87aa63116fb0c795078a4e194
 Size (libtai-0.60.tar.gz) = 17300 bytes
 SHA1 (patch-Makefile) = 738372e27b6391b033c3c90f09bba5be8a0f5dde
 SHA1 (patch-leapsecs.3) = 537c8c8a03a89b0f8af8d2ecc539e60c7cf15560
-SHA1 (patch-leapsecs.txt) = 957c257bf41fcc50fb8ff7f975bcdbf1d07c6fd9
+SHA1 (patch-leapsecs.txt) = 69707a6ada0d40435154241cff6fbf1aeeb0099a
 SHA1 (patch-leapsecs__read.c) = 064ba81ef40d9dd4bd18f9e1064ce2737517f45b
