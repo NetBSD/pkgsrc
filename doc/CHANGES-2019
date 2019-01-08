@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.116 2019/01/08 09:44:07 adam Exp $
+$NetBSD: CHANGES-2019,v 1.117 2019/01/08 10:46:58 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -164,3 +164,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/py-apsw to 3.26.0 [adam 2019-01-08]
 	Updated www/py-soupsieve to 1.6.2 [adam 2019-01-08]
 	Updated sysutils/py-supervisor to 3.3.5 [adam 2019-01-08]
+	Added net/py-prometheus_client version 0.5.0 [markd 2019-01-08]
