@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/02/08 19:54:19 adam Exp $
+# $NetBSD: Makefile,v 1.3 2019/01/08 20:29:42 adam Exp $
 
 META_PACKAGE=	yes
 
@@ -35,6 +35,7 @@ DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-CoreBluetooth>=${PYOBJC_VERS}:../../de
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-CoreData>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-CoreData
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-CoreLocation>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-CoreLocation
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-CoreML>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-CoreML
+DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-CoreServices>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-CoreServices
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-CoreSpotlight>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-CoreSpotlight
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-CoreText>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-CoreText
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-CoreWLAN>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-CoreWLAN
