@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.119 2019/01/08 14:41:57 wiedi Exp $
+$NetBSD: CHANGES-2019,v 1.120 2019/01/08 14:54:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -167,3 +167,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Added net/py-prometheus_client version 0.5.0 [markd 2019-01-08]
 	Updated devel/py-pyobjc to 5.1.2 [adam 2019-01-08]
 	Updated net/sniproxy to 0.6.0 [wiedi 2019-01-08]
+	Updated www/http-parser to 2.9.0 [adam 2019-01-08]
+	Updated lang/nodejs to 10.15.0 [adam 2019-01-08]
+	Updated lang/npm to 6.5.0 [adam 2019-01-08]
