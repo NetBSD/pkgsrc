@@ -1,0 +1,5 @@
+The qmail-server meta-package provides all the ingredients for a typical
+qmail-based mail server.
+
+This package does not contain anything by itself -- it is a
+"meta-package" that pulls in dependencies for various mail services.
