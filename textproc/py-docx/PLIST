@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/09/26 17:52:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/01/09 08:38:40 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -154,6 +154,9 @@ ${PYSITELIB}/docx/oxml/numbering.pyo
 ${PYSITELIB}/docx/oxml/section.py
 ${PYSITELIB}/docx/oxml/section.pyc
 ${PYSITELIB}/docx/oxml/section.pyo
+${PYSITELIB}/docx/oxml/settings.py
+${PYSITELIB}/docx/oxml/settings.pyc
+${PYSITELIB}/docx/oxml/settings.pyo
 ${PYSITELIB}/docx/oxml/shape.py
 ${PYSITELIB}/docx/oxml/shape.pyc
 ${PYSITELIB}/docx/oxml/shape.pyo
@@ -196,6 +199,9 @@ ${PYSITELIB}/docx/parts/__init__.pyo
 ${PYSITELIB}/docx/parts/document.py
 ${PYSITELIB}/docx/parts/document.pyc
 ${PYSITELIB}/docx/parts/document.pyo
+${PYSITELIB}/docx/parts/hdrftr.py
+${PYSITELIB}/docx/parts/hdrftr.pyc
+${PYSITELIB}/docx/parts/hdrftr.pyo
 ${PYSITELIB}/docx/parts/image.py
 ${PYSITELIB}/docx/parts/image.pyc
 ${PYSITELIB}/docx/parts/image.pyo
@@ -205,6 +211,9 @@ ${PYSITELIB}/docx/parts/numbering.pyo
 ${PYSITELIB}/docx/parts/settings.py
 ${PYSITELIB}/docx/parts/settings.pyc
 ${PYSITELIB}/docx/parts/settings.pyo
+${PYSITELIB}/docx/parts/story.py
+${PYSITELIB}/docx/parts/story.pyc
+${PYSITELIB}/docx/parts/story.pyo
 ${PYSITELIB}/docx/parts/styles.py
 ${PYSITELIB}/docx/parts/styles.pyc
 ${PYSITELIB}/docx/parts/styles.pyo
@@ -235,8 +244,9 @@ ${PYSITELIB}/docx/styles/styles.pyo
 ${PYSITELIB}/docx/table.py
 ${PYSITELIB}/docx/table.pyc
 ${PYSITELIB}/docx/table.pyo
+${PYSITELIB}/docx/templates/default-footer.xml
+${PYSITELIB}/docx/templates/default-header.xml
 ${PYSITELIB}/docx/templates/default-settings.xml
-${PYSITELIB}/docx/templates/default-src.docx
 ${PYSITELIB}/docx/templates/default-styles.xml
 ${PYSITELIB}/docx/templates/default.docx
 ${PYSITELIB}/docx/text/__init__.py
