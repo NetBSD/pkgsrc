@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.134 2019/01/09 11:29:16 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.135 2019/01/09 11:56:37 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -188,3 +188,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-xopen to 0.4.0 [adam 2019-01-09]
 	Updated devel/waf to 2.0.14 [adam 2019-01-09]
 	Updated pkgtools/x11-links to 1.13 [jaapb 2019-01-09]
+	Updated www/drupal8 to 8.6.5nb1 [prlw1 2019-01-09]
