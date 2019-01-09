@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.63 2017/11/23 15:48:10 wiz Exp $
+$NetBSD: distinfo,v 1.64 2019/01/09 19:12:14 adam Exp $
 
-SHA1 (libxslt-1.1.32.tar.gz) = c47969f16747a72f9095b6a7a56d3afdd1e6e9ac
-RMD160 (libxslt-1.1.32.tar.gz) = fc65b2730625eca4e9fda62fd9a91210b2bee368
-SHA512 (libxslt-1.1.32.tar.gz) = e1ed3c103cd4c9897e7dd2360a11f63cf30382b7566ce6fcc81117804e203714446b5a62179ce628c3834b0b32ecdeeceecbdfa417507ce9ed5a107a0ebefb39
-Size (libxslt-1.1.32.tar.gz) = 3440715 bytes
-SHA1 (patch-ae) = 40ce3940a93b6a2dc804f62676909d3313e0ea52
+SHA1 (libxslt-1.1.33.tar.gz) = 7dcda921d9d3d3325449dae5cf84dbb102d26928
+RMD160 (libxslt-1.1.33.tar.gz) = e1c3ad9b6f7dbdf069320097e19fce0f11ce5c12
+SHA512 (libxslt-1.1.33.tar.gz) = ebbe438a38bf6355950167d3b580edc22baa46a77068c18c42445c1c9c716d42bed3b30c5cd5bec359ab32d03843224dae458e9e32dc61693e7cf4bab23536e0
+Size (libxslt-1.1.33.tar.gz) = 3444093 bytes
+SHA1 (patch-libexslt_date.c) = 40ce3940a93b6a2dc804f62676909d3313e0ea52
