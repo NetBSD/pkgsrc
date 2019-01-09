@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/12/06 19:25:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/01/09 09:01:08 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -28,6 +28,33 @@ ${PYSITELIB}/aniso8601/interval.pyo
 ${PYSITELIB}/aniso8601/resolution.py
 ${PYSITELIB}/aniso8601/resolution.pyc
 ${PYSITELIB}/aniso8601/resolution.pyo
+${PYSITELIB}/aniso8601/tests/__init__.py
+${PYSITELIB}/aniso8601/tests/__init__.pyc
+${PYSITELIB}/aniso8601/tests/__init__.pyo
+${PYSITELIB}/aniso8601/tests/compat.py
+${PYSITELIB}/aniso8601/tests/compat.pyc
+${PYSITELIB}/aniso8601/tests/compat.pyo
+${PYSITELIB}/aniso8601/tests/test_builder.py
+${PYSITELIB}/aniso8601/tests/test_builder.pyc
+${PYSITELIB}/aniso8601/tests/test_builder.pyo
+${PYSITELIB}/aniso8601/tests/test_date.py
+${PYSITELIB}/aniso8601/tests/test_date.pyc
+${PYSITELIB}/aniso8601/tests/test_date.pyo
+${PYSITELIB}/aniso8601/tests/test_duration.py
+${PYSITELIB}/aniso8601/tests/test_duration.pyc
+${PYSITELIB}/aniso8601/tests/test_duration.pyo
+${PYSITELIB}/aniso8601/tests/test_init.py
+${PYSITELIB}/aniso8601/tests/test_init.pyc
+${PYSITELIB}/aniso8601/tests/test_init.pyo
+${PYSITELIB}/aniso8601/tests/test_interval.py
+${PYSITELIB}/aniso8601/tests/test_interval.pyc
+${PYSITELIB}/aniso8601/tests/test_interval.pyo
+${PYSITELIB}/aniso8601/tests/test_time.py
+${PYSITELIB}/aniso8601/tests/test_time.pyc
+${PYSITELIB}/aniso8601/tests/test_time.pyo
+${PYSITELIB}/aniso8601/tests/test_timezone.py
+${PYSITELIB}/aniso8601/tests/test_timezone.pyc
+${PYSITELIB}/aniso8601/tests/test_timezone.pyo
 ${PYSITELIB}/aniso8601/time.py
 ${PYSITELIB}/aniso8601/time.pyc
 ${PYSITELIB}/aniso8601/time.pyo
