@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2018/07/06 08:02:53 adam Exp $
+$NetBSD: distinfo,v 1.4 2019/01/09 10:49:28 adam Exp $
 
-SHA1 (xopen-0.3.5.tar.gz) = 953a248fe905836f65a6790e19243b5161e19ef1
-RMD160 (xopen-0.3.5.tar.gz) = 8f49eeeedb1919087833b7d257eb342e7ca45c7b
-SHA512 (xopen-0.3.5.tar.gz) = e0bf7c2218bd629f67d0e63b2b16598ed677890d0d12829890742970ce9e1309ea5b3c8f26e88befc77166e146c23fedce6436edd280ee860ef02d00a2025965
-Size (xopen-0.3.5.tar.gz) = 4736 bytes
+SHA1 (xopen-0.4.0.tar.gz) = 1d3f0e1648f3b46bcb7a48ba42e9f285c2e61c7b
+RMD160 (xopen-0.4.0.tar.gz) = ff2236e525cd37fabffb45e79057f1b50dcd2717
+SHA512 (xopen-0.4.0.tar.gz) = b0555b4543229e9f1a4683a9b3a8806eb1444a677b3a347aa225e6ba428974492cdc4bb6e188aafca73762371bcd876a31721c14d82ac802247518ccf15cb9bf
+Size (xopen-0.4.0.tar.gz) = 8881 bytes
+SHA1 (patch-setup.py) = 23184261c8c86975470b2cd82dfbfcb16a536573
