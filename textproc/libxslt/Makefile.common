@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.4 2017/11/23 15:48:10 wiz Exp $
+# $NetBSD: Makefile.common,v 1.5 2019/01/09 19:12:14 adam Exp $
 #
 # used by textproc/libxslt/Makefile
 # used by textproc/py-libxslt/Makefile
 
-DISTNAME=	libxslt-1.1.32
+DISTNAME=	libxslt-1.1.33
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://xmlsoft.org/libxslt/
 MASTER_SITES+=	http://xmlsoft.org/sources/
