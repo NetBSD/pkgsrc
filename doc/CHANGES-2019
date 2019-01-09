@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.130 2019/01/09 08:38:57 adam Exp $
+$NetBSD: CHANGES-2019,v 1.131 2019/01/09 09:04:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -182,3 +182,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated wm/xfce4-wm to 4.13.1nb3 [gutteridge 2019-01-09]
 	Updated devel/py-pkginfo to 1.5.0.1 [adam 2019-01-09]
 	Updated textproc/py-docx to 0.8.10 [adam 2019-01-09]
+	Updated time/py-aniso8601 to 4.1.0 [adam 2019-01-09]
+	Updated time/py-arrow to 0.13.0 [adam 2019-01-09]
