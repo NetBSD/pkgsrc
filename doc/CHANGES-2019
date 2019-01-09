@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.133 2019/01/09 11:08:30 adam Exp $
+$NetBSD: CHANGES-2019,v 1.134 2019/01/09 11:29:16 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -187,3 +187,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added archivers/py-bz2file version 0.98 [adam 2019-01-09]
 	Updated devel/py-xopen to 0.4.0 [adam 2019-01-09]
 	Updated devel/waf to 2.0.14 [adam 2019-01-09]
+	Updated pkgtools/x11-links to 1.13 [jaapb 2019-01-09]
