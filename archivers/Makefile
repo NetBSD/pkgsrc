@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.158 2018/06/18 20:46:49 minskim Exp $
+# $NetBSD: Makefile,v 1.159 2019/01/09 10:28:19 adam Exp $
 #
 
 COMMENT=	Archivers
@@ -88,6 +88,7 @@ SUBDIR+=	pigz
 SUBDIR+=	ppmd
 SUBDIR+=	ppunpack
 SUBDIR+=	py-brotlipy
+SUBDIR+=	py-bz2file
 SUBDIR+=	py-czipfile
 SUBDIR+=	py-lhafile
 SUBDIR+=	py-libarchive-c
