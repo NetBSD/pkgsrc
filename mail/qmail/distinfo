@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.42 2018/12/17 19:15:33 schmonz Exp $
+$NetBSD: distinfo,v 1.43 2019/01/09 19:32:07 schmonz Exp $
 
+SHA1 (netqmail-1.05-TAI-leapsecs.patch) = 2c21cd7e20b241c1a82b79379f2c7ee3da5519f7
+RMD160 (netqmail-1.05-TAI-leapsecs.patch) = 9fd59001be5a07d914c66127236ebe8c33f64675
+SHA512 (netqmail-1.05-TAI-leapsecs.patch) = 2278139b825330a418171ad6dd4667410819591d3828f8b40dda789e1aafe1cefcc638fdc6d9de21a8c0ca6caffb41fbbb44bab2dd80f570e81c6e900c8596f7
+Size (netqmail-1.05-TAI-leapsecs.patch) = 16382 bytes
 SHA1 (netqmail-1.06-destdir-20181217.patch) = b309f99d29af95358301ae6dde6b32c8db6c371a
 RMD160 (netqmail-1.06-destdir-20181217.patch) = e42312b05c6f5dbb6614bfffb17991e25a4518d0
 SHA512 (netqmail-1.06-destdir-20181217.patch) = 1cb02193f69930569c4c340c427d8e0002d1fb67b622ee8fd0fcbb273b5deca356fa2e0b11d44a2473cf2c083fc09d43bb3dfb70f22d284f262f2c2d6cf4221e
