@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2019/01/09 15:52:29 gdt Exp $
+# $NetBSD: Makefile,v 1.40 2019/01/09 19:21:37 gdt Exp $
 
 # 3.13.0.1 is missing *_firmware_burner, and it's not clear that is correct.
 DISTNAME=		uhd-3.11.1.0
+PKGREVISION=		2
 CATEGORIES=		ham
 MASTER_SITES=           ${MASTER_SITE_GITHUB:=EttusResearch/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
