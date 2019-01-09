@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libxcb,v 1.17 2017/09/02 19:17:37 tron Exp $
+# $NetBSD: xorg.libxcb,v 1.18 2019/01/09 11:29:02 jaapb Exp $
 #
 include/xcb/bigreq.h
 include/xcb/composite.h
@@ -237,6 +237,12 @@ lib/libxcb-xinerama.so.0
 lib/libxcb-xinerama.so.0.0
 lib/libxcb-xinerama.so.0.1
 lib/libxcb-xinerama.so.1.0
+lib/libxcb-xinput.a
+lib/libxcb-xinput.so
+lib/libxcb-xinput.so.0
+lib/libxcb-xinput.so.0.1
+lib/libxcb-xinput_p.a
+lib/libxcb-xinput_pic.a
 lib/libxcb-xkb.1.dylib
 lib/libxcb-xkb.a
 lib/libxcb-xkb.dylib
@@ -316,6 +322,7 @@ lib/pkgconfig/xcb-xevie.pc
 lib/pkgconfig/xcb-xf86dri.pc
 lib/pkgconfig/xcb-xfixes.pc
 lib/pkgconfig/xcb-xinerama.pc
+lib/pkgconfig/xcb-xinput.pc
 lib/pkgconfig/xcb-xkb.pc
 lib/pkgconfig/xcb-xprint.pc
 lib/pkgconfig/xcb-xtest.pc
