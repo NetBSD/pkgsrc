@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.60 2018/12/13 05:01:55 schmonz Exp $
+# $NetBSD: options.mk,v 1.61 2019/01/09 19:32:07 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=		eai inet6 pam syncdir tls
@@ -102,6 +102,6 @@ BUILDLINK_TRANSFORM+=		rm:-lcrypto
 .if !empty(PKG_OPTIONS:Minet6)
 DEPENDS+=			ucspi-tcp6-[0-9]*:../../net/ucspi-tcp6
 .else
-DEPENDS+=			ucspi-tcp-[0-9]*:../../net/ucspi-tcp
+DEPENDS+=			{ucspi-tcp6-[0-9]*,ucspi-tcp-[0-9]*}:../../net/ucspi-tcp
 .endif
 .endif
