@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.15 2016/05/24 12:00:08 he Exp $
+$NetBSD: patch-doc_examples_Makefile.in,v 1.1 2019/01/09 19:09:03 adam Exp $
 
 Don't install html files.
 
