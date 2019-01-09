@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.140 2019/01/09 19:32:12 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.141 2019/01/09 22:08:21 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -197,3 +197,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/py-libxml2 to 2.9.9 [adam 2019-01-09]
 	Updated textproc/py-libxslt to 1.1.33 [adam 2019-01-09]
 	Updated mail/qmail to 1.03nb43 [schmonz 2019-01-09]
+	Added meta-pkgs/qmail-server version 1.0 [schmonz 2019-01-09]
