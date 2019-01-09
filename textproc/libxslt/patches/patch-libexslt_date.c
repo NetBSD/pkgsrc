@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.5 2012/09/15 10:26:02 adam Exp $
+$NetBSD: patch-libexslt_date.c,v 1.1 2019/01/09 19:12:14 adam Exp $
 
 --- libexslt/date.c.orig	2012-09-12 05:58:38.000000000 +0000
 +++ libexslt/date.c
