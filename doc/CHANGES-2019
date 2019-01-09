@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.131 2019/01/09 09:04:20 adam Exp $
+$NetBSD: CHANGES-2019,v 1.132 2019/01/09 10:50:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -184,3 +184,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/py-docx to 0.8.10 [adam 2019-01-09]
 	Updated time/py-aniso8601 to 4.1.0 [adam 2019-01-09]
 	Updated time/py-arrow to 0.13.0 [adam 2019-01-09]
+	Added archivers/py-bz2file version 0.98 [adam 2019-01-09]
+	Updated devel/py-xopen to 0.4.0 [adam 2019-01-09]
