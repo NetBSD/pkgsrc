@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.78 2017/11/21 19:16:47 bsiegert Exp $
+# $NetBSD: Linux.mk,v 1.79 2019/01/09 13:19:03 wiz Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -131,7 +131,7 @@ _OPSYS_MAX_CMDLEN_CMD?=	/usr/bin/getconf ARG_MAX
 _OPSYS_SUPPORTS_FORTIFY=yes
 .endif
 
-# Register support for RELRO on supported architectures (with GCC)
+# Register support for RELRO on supported architectures
 .if (${MACHINE_ARCH} == "i386") || \
     (${MACHINE_ARCH} == "x86_64")
 _OPSYS_SUPPORTS_RELRO=	yes
