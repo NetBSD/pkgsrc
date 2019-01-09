@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18749 2019/01/09 11:08:30 adam Exp $
+$NetBSD: TODO,v 1.18750 2019/01/09 17:32:36 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -1056,6 +1056,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mono2-4.0.4.1
 	o monodevelop-5.10.1.6
 	o mopher-0.6.0
+	o moreutils-0.63
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-3.12.0 [wip]
 	o mp3blaster-3.2.6
