@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2018/07/06 08:02:53 adam Exp $
+# $NetBSD: Makefile,v 1.5 2019/01/09 10:49:28 adam Exp $
 
-DISTNAME=	xopen-0.3.5
+DISTNAME=	xopen-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xopen/}
@@ -10,9 +10,18 @@ HOMEPAGE=	https://github.com/marcelm/xopen
 COMMENT=	Open compressed files transparently
 LICENSE=	mit
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+.include "../../lang/python/pyversion.mk"
+.if ${_PYTHON_VERSION} == 27
+DEPENDS+=	${PYPKGPREFIX}-bz2file-[0-9]*:../../archivers/py-bz2file
+.endif
+
 USE_LANGUAGES=	# none
 
-# Python 2.7: requires bz2file
+do-test:
+	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
