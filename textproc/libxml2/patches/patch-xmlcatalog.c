@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.19 2016/05/24 12:00:08 he Exp $
+$NetBSD: patch-xmlcatalog.c,v 1.1 2019/01/09 19:09:03 adam Exp $
 
 Parametrize SGML catalog directory.
 

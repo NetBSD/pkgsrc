@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2012/04/08 20:21:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/01/09 19:09:03 adam Exp $
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/drv_libxml2.py
 ${PYSITELIB}/drv_libxml2.pyc
 ${PYSITELIB}/drv_libxml2.pyo
 ${PYSITELIB}/libxml2.py
 ${PYSITELIB}/libxml2.pyc
 ${PYSITELIB}/libxml2.pyo
-${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/libxml2mod.so
