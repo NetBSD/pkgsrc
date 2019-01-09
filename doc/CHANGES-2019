@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.129 2019/01/09 01:34:42 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.130 2019/01/09 08:38:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -180,3 +180,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated fonts/croscorefonts to 1.31.0 [bsiegert 2019-01-08]
 	Added devel/py-pyobjc-framework-CoreServices version 5.1.2 [adam 2019-01-08]
 	Updated wm/xfce4-wm to 4.13.1nb3 [gutteridge 2019-01-09]
+	Updated devel/py-pkginfo to 1.5.0.1 [adam 2019-01-09]
+	Updated textproc/py-docx to 0.8.10 [adam 2019-01-09]
