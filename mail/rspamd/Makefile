@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2018/12/09 18:52:36 adam Exp $
+# $NetBSD: Makefile,v 1.51 2019/01/09 22:06:16 schmonz Exp $
 
 DISTNAME=	rspamd-1.8.0
 PKGREVISION=	2
@@ -24,6 +24,7 @@ BUILD_DEFS+=	VARBASE
 LUA_VERSIONS_ACCEPTED=	53
 
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__
+BUILDLINK_TRANSFORM.Darwin+=	rm:-lrt
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/rspamd
 TEST_TARGET=	run-test
