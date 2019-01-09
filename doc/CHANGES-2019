@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.132 2019/01/09 10:50:01 adam Exp $
+$NetBSD: CHANGES-2019,v 1.133 2019/01/09 11:08:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -186,3 +186,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated time/py-arrow to 0.13.0 [adam 2019-01-09]
 	Added archivers/py-bz2file version 0.98 [adam 2019-01-09]
 	Updated devel/py-xopen to 0.4.0 [adam 2019-01-09]
+	Updated devel/waf to 2.0.14 [adam 2019-01-09]
