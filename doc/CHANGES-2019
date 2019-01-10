@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.147 2019/01/10 14:58:09 tnn Exp $
+$NetBSD: CHANGES-2019,v 1.148 2019/01/10 14:59:02 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -205,3 +205,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/firefox to 64.0.2 [ryoon 2019-01-10]
 	Updated www/firefox-l10n to 64.0.2 [ryoon 2019-01-10]
 	Added fonts/spleen version 1.0.3 [tnn 2019-01-10]
+	Updated net/pen to 0.34.1 [schmonz 2019-01-10]
