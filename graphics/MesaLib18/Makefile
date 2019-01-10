@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2018/12/03 11:07:57 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/01/10 22:30:10 tnn Exp $
 
-DISTNAME=	mesa-18.2.6
+DISTNAME=	mesa-18.3.1
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
 CATEGORIES=	graphics x11
 MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/
@@ -13,7 +13,7 @@ COMMENT=	The Mesa 3D Graphics Library
 LICENSE=	mit
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	bison pkg-config gmake flex
+USE_TOOLS+=	autoconf automake autoreconf bison pkg-config gmake flex
 USE_LANGUAGES=	c99 c++
 USE_LIBTOOL=	yes
 
@@ -22,6 +22,7 @@ PKGCONFIG_OVERRIDE+=	src/gallium/targets/d3dadapter9/d3d.pc.in
 PKGCONFIG_OVERRIDE+=	src/gallium/targets/osmesa/osmesa.pc.in
 PKGCONFIG_OVERRIDE+=	src/gallium/targets/xa/xatracker.pc.in
 PKGCONFIG_OVERRIDE+=	src/gbm/main/gbm.pc.in
+PKGCONFIG_OVERRIDE+=	src/glx/windows/windowsdriproto.pc.in
 PKGCONFIG_OVERRIDE+=	src/mapi/es1api/glesv1_cm.pc.in
 PKGCONFIG_OVERRIDE+=	src/mapi/es2api/glesv2.pc.in
 PKGCONFIG_OVERRIDE+=	src/mesa/drivers/dri/dri.pc.in
@@ -35,20 +36,24 @@ CONFIGURE_ARGS+=		--enable-shared-glapi
 # archives named libglapi.la but in different directories, bad things happen.
 SUBST_CLASSES+=			wrapper-bug
 SUBST_STAGE.wrapper-bug=	pre-configure
-SUBST_MESSAGE.wrapper-bug=	Renaming glapi-shared/libglapi in Makefiles
-SUBST_FILES.wrapper-bug=	src/gbm/Makefile.in
-SUBST_FILES.wrapper-bug+=	src/glx/Makefile.in
-SUBST_FILES.wrapper-bug+=	src/mapi/Makefile.in
-SUBST_FILES.wrapper-bug+=	src/mesa/drivers/x11/Makefile.in
-SUBST_FILES.wrapper-bug+=	src/mesa/drivers/osmesa/Makefile.in
-SUBST_SED.wrapper-bug=		-e 's,shared-glapi/libglapi.la,shared-glapi/libglapi_tmp_rename.la,g'
-SUBST_SED.wrapper-bug+=		-e 's,libglapi.la,libglapi_impl.la,g'
-SUBST_SED.wrapper-bug+=		-e 's,libglapi_tmp_rename.la,libglapi.la,g'
+SUBST_MESSAGE.wrapper-bug=	Renaming non-shared libglapi.la in Makefiles
+SUBST_FILES.wrapper-bug=	src/gallium/targets/libgl-xlib/Makefile.am
+SUBST_FILES.wrapper-bug+=	src/gallium/targets/osmesa/Makefile.am
+SUBST_FILES.wrapper-bug+=	src/glx/Makefile.am
+SUBST_FILES.wrapper-bug+=	src/mapi/Makefile.am
+SUBST_FILES.wrapper-bug+=	src/mesa/drivers/osmesa/Makefile.am
+SUBST_FILES.wrapper-bug+=	src/mesa/drivers/x11/Makefile.am
+SUBST_SED.wrapper-bug=		-e 's,shared-glapi/libglapi\.la,shared-glapi/libglapi_tmp_rename.la,g'
+SUBST_SED.wrapper-bug+=		-e 's,shared_glapi_libglapi_la,shared_glapi_libglapi_tmp_rename_la,g'
+SUBST_SED.wrapper-bug+=		-e 's,libglapi\.la,libglapi_impl.la,g'
+SUBST_SED.wrapper-bug+=		-e 's,libglapi_la,libglapi_impl_la,g'
+SUBST_SED.wrapper-bug+=		-e 's,libglapi_tmp_rename\.la,libglapi.la,g'
+SUBST_SED.wrapper-bug+=		-e 's,libglapi_tmp_rename_la,libglapi_la,g'
 
-# Replace /etc/drirc with ${PREFIX}/etc/drirc
+# Replace /etc/drirc.d with ${PREFIX}/etc/drirc.d
 SUBST_CLASSES+=			drirc
 SUBST_STAGE.drirc=		pre-configure
-SUBST_MESSAGE.drirc=		Fixing hardcoded /etc/drirc references
+SUBST_MESSAGE.drirc=		Fixing hardcoded /etc/drirc.d references
 SUBST_FILES.drirc+=		src/util/xmlconfig.c
 SUBST_SED.drirc+=		 -e 's|/etc|${PREFIX}/etc|g'
 
@@ -76,19 +81,27 @@ CPPFLAGS+=	-Dexp2\(x\)=exp\(\(x\)\*M_LN2\)
 CPPFLAGS+=	-Dexp2f\(x\)=expf\(\(x\)\*M_LN2\)
 .endif
 
+pre-configure:
+	cd ${WRKSRC} && autoreconf -vif
 # Manual patch for FDO bug 90311. Don't apply if not on Darwin as there could
 # be side effects.
 .if ${OPSYS} == "Darwin"
 pre-configure: ${WRKDIR}/.manual_patch_done
 ${WRKDIR}/.manual_patch_done:
 	cd ${WRKSRC} && ${TOOLS_PATCH} -z .manual -p0 < ${FILESDIR}/patch-manual_fdo90311
+	touch ${WRKSRC}/src/glx/dummy.cpp
 	touch ${.TARGET}
 .endif
 
-INSTALLATION_DIRS+=	share/examples/MesaLib
+DRIRC_DIR=		${PKG_SYSCONFDIR}/drirc.d
+EGDIR=			${PREFIX}/share/examples/mesa
+OWN_DIRS+=		${DRIRC_DIR}
+INSTALLATION_DIRS+=	${EGDIR}
+CONF_FILES+=		${EGDIR}/00-mesa-defaults.conf	\
+	${DRIRC_DIR}/00-mesa-defaults.conf
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/src/util/drirc ${DESTDIR}${PREFIX}/share/examples/MesaLib
+	${INSTALL_DATA} ${WRKSRC}/src/util/00-mesa-defaults.conf ${DESTDIR}${EGDIR}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
