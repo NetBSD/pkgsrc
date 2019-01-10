@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/10/07 23:49:31 ryoon Exp $
-etc/drirc
+@comment $NetBSD: PLIST,v 1.2 2019/01/10 22:30:10 tnn Exp $
 ${PLIST.dri}include/EGL/egl.h
 ${PLIST.dri}include/EGL/eglext.h
 ${PLIST.dri}include/EGL/eglextchromium.h
@@ -97,4 +96,4 @@ ${PLIST.nouveau}${PLIST.vaapi}lib/dri/nouveau_drv_video.so
 ${PLIST.vaapi}lib/dri/r600_drv_video.so
 @comment ${PLIST.vdpau}lib/dri/radeonsi_drv_video.la
 ${PLIST.vaapi}lib/dri/radeonsi_drv_video.so
-share/examples/MesaLib/drirc
+share/examples/mesa/00-mesa-defaults.conf
