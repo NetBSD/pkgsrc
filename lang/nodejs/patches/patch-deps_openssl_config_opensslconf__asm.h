@@ -1,9 +1,18 @@
-$NetBSD: patch-deps_openssl_config_opensslconf__asm.h,v 1.1 2018/05/03 21:19:16 fhajny Exp $
+$NetBSD: patch-deps_openssl_config_opensslconf__asm.h,v 1.2 2019/01/10 13:02:41 ryoon Exp $
 
 Add support for NetBSD.
 
---- deps/openssl/config/opensslconf_asm.h.orig	2018-04-24 14:41:19.000000000 +0000
+--- deps/openssl/config/opensslconf_asm.h.orig	2018-12-10 21:19:03.000000000 +0000
 +++ deps/openssl/config/opensslconf_asm.h
+@@ -96,7 +96,7 @@
+ # include "./archs/linux-x32/asm/include/openssl/opensslconf.h"
+ #elif defined(OPENSSL_LINUX) && defined(__x86_64__)
+ # include "./archs/linux-x86_64/asm/include/openssl/opensslconf.h"
+-#elif defined(OPENSSL_LINUX) && defined(__arm__)
++#elif (defined(OPENSSL_LINUX) || defined(__NetBSD__)) && defined(__arm__)
+ # include "./archs/linux-armv4/asm/include/openssl/opensslconf.h"
+ #elif defined(OPENSSL_LINUX) && defined(__aarch64__)
+ # include "./archs/linux-aarch64/asm/include/openssl/opensslconf.h"
 @@ -108,9 +108,9 @@
  # include "./archs/VC-WIN32/asm/include/openssl/opensslconf.h"
  #elif defined(_WIN32) && defined(_M_X64)
