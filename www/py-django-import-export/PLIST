@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/10/03 10:00:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/01/10 09:26:32 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -78,6 +78,7 @@ ${PYSITELIB}/import_export/signals.py
 ${PYSITELIB}/import_export/signals.pyc
 ${PYSITELIB}/import_export/signals.pyo
 ${PYSITELIB}/import_export/static/import_export/action_formats.js
+${PYSITELIB}/import_export/static/import_export/import.css
 ${PYSITELIB}/import_export/templates/admin/import_export/base.html
 ${PYSITELIB}/import_export/templates/admin/import_export/change_list.html
 ${PYSITELIB}/import_export/templates/admin/import_export/change_list_export.html
