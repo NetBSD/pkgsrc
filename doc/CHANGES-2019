@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.143 2019/01/10 06:49:13 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.144 2019/01/10 09:27:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -200,3 +200,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Added meta-pkgs/qmail-server version 1.0 [schmonz 2019-01-09]
 	Updated devel/libtai to 0.60nb7 [schmonz 2019-01-10]
 	Updated archivers/gzip to 1.10 [gutteridge 2019-01-10]
+	Updated devel/py-xopen to 0.4.1 [adam 2019-01-10]
+	Updated www/py-django-import-export to 1.2.0 [adam 2019-01-10]
