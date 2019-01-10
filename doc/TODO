@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18752 2019/01/10 02:20:03 sevan Exp $
+$NetBSD: TODO,v 1.18753 2019/01/10 06:49:13 gutteridge Exp $
 
 Suggested new packages
 ======================
@@ -758,7 +758,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gworkspace-0.9.4
 	o gxine-0.99.9
 	o gxmessage-3.4.3
-	o gzip-1.8
 	o h323plus-1.24.0 [replaces openh323, from http://www.h323plus.org/]
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o handbrake-1.1.0
