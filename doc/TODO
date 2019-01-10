@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18754 2019/01/10 14:59:02 schmonz Exp $
+$NetBSD: TODO,v 1.18755 2019/01/10 22:37:15 tnn Exp $
 
 Suggested new packages
 ======================
@@ -342,7 +342,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ImageMagick-7.0.8.23
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
-	o MesaLib-18.3.1
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o PAM-0.99.7.1
