@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 00:56:21 agc Exp $
+$NetBSD: distinfo,v 1.10 2019/01/10 06:47:42 gutteridge Exp $
 
-SHA1 (gzip-1.6.tar) = 7d546c77fd49f1dc093c0fb23512bf926ce94a40
-RMD160 (gzip-1.6.tar) = 62a506b3305c0d112410574fbe8ace537b32ae10
-SHA512 (gzip-1.6.tar) = f1a076fae64213a71faf85ec3e26135a5742777a32e613e2df9efedd46033b95dc98fb5622cff242a9e79daaf175ec6bb084ef1e169c113c0210ad9a7bde1f59
-Size (gzip-1.6.tar) = 5048320 bytes
+SHA1 (gzip-1.10.tar) = bde6f92de3bb1f780bb260ff9af719bfd1dbf811
+RMD160 (gzip-1.10.tar) = 66169ae312d98afc79a98d1a2ffe98a091f65ebd
+SHA512 (gzip-1.10.tar) = fc54f62e5b1db56bde178e0019fb831af6bfad73fc346742ae830de9623e5982dbc1e5463a34fbf0b88777b53901ffbbecfba724fb3ae7d9f758c5701bb54098
+Size (gzip-1.10.tar) = 5355520 bytes
 SHA1 (patch-aa) = a08b277aa95df808d055f4daf95fd1462c300290
 SHA1 (patch-ab) = 738d6e5f9300c2718694cc4134b36637b323ea8a
-SHA1 (patch-lib_fflush.c) = 0cefe0da43d9d06afea104a42119c60b572def31
-SHA1 (patch-lib_fseeko.c) = b4b3bd14e237103e1e5b6f6268797e0705462474
+SHA1 (patch-lib_fflush.c) = 4012b674c04f83f2b3bffdef6107a7836ce21d8e
