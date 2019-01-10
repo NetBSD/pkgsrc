@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.142 2019/01/10 03:12:52 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.143 2019/01/10 06:49:13 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -199,3 +199,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/qmail to 1.03nb43 [schmonz 2019-01-09]
 	Added meta-pkgs/qmail-server version 1.0 [schmonz 2019-01-09]
 	Updated devel/libtai to 0.60nb7 [schmonz 2019-01-10]
+	Updated archivers/gzip to 1.10 [gutteridge 2019-01-10]
