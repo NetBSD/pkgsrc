@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.149 2019/01/10 18:12:17 maya Exp $
+$NetBSD: CHANGES-2019,v 1.150 2019/01/10 19:30:39 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -207,3 +207,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added fonts/spleen version 1.0.3 [tnn 2019-01-10]
 	Updated net/pen to 0.34.1 [schmonz 2019-01-10]
 	Updated lang/ghc7 to 7.6.3nb13 [maya 2019-01-10]
+	Updated chat/irssi to 1.1.2 [maya 2019-01-10]
