@@ -740,6 +740,7 @@ sysroot			Allow pkg to accept sysroot option, which changes system root.
 szip			Enable szip compression.
 tacacs-shrubbery-acls-support	Enable ACL support.
 tacacs-shrubbery-drop-root-privileges	Drop root privileges, and run as a non-root user.
+tai-system-clock	Install leapsecs.dat to support /etc/localtime using TAI
 tap			Enable Tom's Audio Processing plugins library support.
 tcl			Enable Tcl scripting support.
 tcpwrappers		Enable tcpwrappers support.
@@ -757,7 +758,6 @@ trn-inn			Use INN as NNTP client.
 trn-nntpclnt		Use nntpclnt as NNTP client.
 tuning			Specify server tuning for large.
 twolame			Enable MP2 support using twolame.
-ucspi-ssl-perl		Enable Perl support in ucspi-ssl.
 ucspi-tcp-nodefaultrbl	Remove the (nonexistent) default RBL from rblsmtpd.
 udev			Enable support for the udev device manager.
 uds			Enable support for Unix domain sockets.
