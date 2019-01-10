@@ -1,0 +1,15 @@
+$NetBSD: patch-src_util_Makefile.am,v 1.1 2019/01/10 22:30:11 tnn Exp $
+
+handled with CONF_FILES
+
+--- src/util/Makefile.am.orig	2018-12-11 21:13:57.000000000 +0000
++++ src/util/Makefile.am
+@@ -75,7 +75,7 @@ libxmlconfig_la_CFLAGS = \
+ libxmlconfig_la_LIBADD = $(EXPAT_LIBS) -lm
+ 
+ drircdir = $(datadir)/drirc.d
+-drirc_DATA = 00-mesa-defaults.conf
++drirc_DATA = # 00-mesa-defaults.conf
+ 
+ u_atomic_test_LDADD = libmesautil.la
+ roundeven_test_LDADD = -lm
