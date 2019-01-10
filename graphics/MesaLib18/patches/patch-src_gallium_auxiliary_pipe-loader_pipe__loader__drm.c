@@ -1,4 +1,4 @@
-$NetBSD: patch-src_gallium_auxiliary_pipe-loader_pipe__loader__drm.c,v 1.1 2018/10/07 23:49:31 ryoon Exp $
+$NetBSD: patch-src_gallium_auxiliary_pipe-loader_pipe__loader__drm.c,v 1.2 2019/01/10 22:30:11 tnn Exp $
 
 * From FreeBSD ports / DragonFly dports graphics/mesa-dri
 
@@ -25,12 +25,12 @@ v2: Clarify the linking topic in the commit message.
 
 * Extended for NetBSD.
 
---- src/gallium/auxiliary/pipe-loader/pipe_loader_drm.c.orig	2017-02-06 13:49:09.000000000 +0000
+--- src/gallium/auxiliary/pipe-loader/pipe_loader_drm.c.orig	2018-12-11 21:13:57.000000000 +0000
 +++ src/gallium/auxiliary/pipe-loader/pipe_loader_drm.c
-@@ -224,6 +224,16 @@ pipe_loader_drm_probe_fd(struct pipe_loa
-    return false;
+@@ -229,6 +229,16 @@ pipe_loader_drm_probe_fd(struct pipe_loa
+    return ret;
  }
-
+ 
 +#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) || defined(__NetBSD__)
 +static int
 +open_drm_minor(int minor)
@@ -44,7 +44,7 @@ v2: Clarify the linking topic in the commit message.
  static int
  open_drm_render_node_minor(int minor)
  {
-@@ -236,7 +246,19 @@ open_drm_render_node_minor(int minor)
+@@ -241,7 +251,19 @@ open_drm_render_node_minor(int minor)
  int
  pipe_loader_drm_probe(struct pipe_loader_device **devs, int ndev)
  {
@@ -64,10 +64,10 @@ v2: Clarify the linking topic in the commit message.
  
     for (i = DRM_RENDER_NODE_MIN_MINOR, j = 0;
          i <= DRM_RENDER_NODE_MAX_MINOR; i++) {
-@@ -251,6 +273,11 @@ pipe_loader_drm_probe(struct pipe_loader
+@@ -256,6 +278,11 @@ pipe_loader_drm_probe(struct pipe_loader
           continue;
        }
-
+ 
 +#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) || defined(__NetBSD__)
 +      render_node_devs[j].vendor_id = dev->u.pci.vendor_id;
 +      render_node_devs[j].chip_id = dev->u.pci.chip_id;
@@ -76,10 +76,10 @@ v2: Clarify the linking topic in the commit message.
        if (j < ndev) {
           devs[j] = dev;
        } else {
-@@ -260,6 +287,48 @@ pipe_loader_drm_probe(struct pipe_loader
+@@ -265,6 +292,48 @@ pipe_loader_drm_probe(struct pipe_loader
        j++;
     }
-
+ 
 +#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__) || defined(__NetBSD__)
 +   num_render_node_devs = j;
 +
