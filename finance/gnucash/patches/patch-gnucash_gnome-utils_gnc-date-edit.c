@@ -1,7 +1,8 @@
-$NetBSD: patch-gnucash_gnome-utils_gnc-date-edit.c,v 1.1 2019/01/11 11:50:55 wiz Exp $
+$NetBSD: patch-gnucash_gnome-utils_gnc-date-edit.c,v 1.2 2019/01/11 12:01:11 wiz Exp $
 
 Fix build with clang
 error: array subscript is of type 'char'
+https://bugs.gnucash.org/show_bug.cgi?id=797039
 
 --- gnucash/gnome-utils/gnc-date-edit.c.orig	2018-12-25 22:43:08.000000000 +0000
 +++ gnucash/gnome-utils/gnc-date-edit.c
