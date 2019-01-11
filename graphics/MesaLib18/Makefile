@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2019/01/10 22:30:10 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2019/01/11 11:30:11 tnn Exp $
 
 DISTNAME=	mesa-18.3.1
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
 CATEGORIES=	graphics x11
 MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/
@@ -80,6 +81,10 @@ CONFIGURE_ENV+=		ac_cv_prog_PYTHON2=${PYTHONBIN}
 CPPFLAGS+=	-Dexp2\(x\)=exp\(\(x\)\*M_LN2\)
 CPPFLAGS+=	-Dexp2f\(x\)=expf\(\(x\)\*M_LN2\)
 .endif
+
+# Work around Xorg segfaulting in radeon driver due to wrong alloca being used
+CFLAGS.NetBSD+=		-Dalloca=__builtin_alloca
+CXXFLAGS.NetBSD+=	-Dalloca=__builtin_alloca
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -vif
