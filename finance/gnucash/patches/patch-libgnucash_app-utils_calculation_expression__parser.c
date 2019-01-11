@@ -1,6 +1,7 @@
-$NetBSD: patch-libgnucash_app-utils_calculation_expression__parser.c,v 1.1 2019/01/11 11:50:55 wiz Exp $
+$NetBSD: patch-libgnucash_app-utils_calculation_expression__parser.c,v 1.2 2019/01/11 12:01:11 wiz Exp $
 
 is* takes a char argument.
+https://bugs.gnucash.org/show_bug.cgi?id=797039
 
 --- libgnucash/app-utils/calculation/expression_parser.c.orig	2018-12-25 22:43:08.000000000 +0000
 +++ libgnucash/app-utils/calculation/expression_parser.c
