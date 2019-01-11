@@ -1,0 +1,15 @@
+$NetBSD: patch-man_sniproxy.8,v 1.1 2019/01/11 23:09:54 schmonz Exp $
+
+Support PKG_SYSCONFDIR.
+
+--- man/sniproxy.8.orig	2018-12-06 04:14:58.000000000 +0000
++++ man/sniproxy.8
+@@ -20,7 +20,7 @@ proxy machine\&.
+ 
+ .TP
+ -c \fIconfig\fR
+-Specify configuration file to use. The default is /etc/sniproxy\&.conf\&.
++Specify configuration file to use. The default is @PKG_SYSCONFDIR@/sniproxy\&.conf\&.
+ 
+ .TP
+ -f
