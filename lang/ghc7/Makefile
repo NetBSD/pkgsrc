@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.31 2018/11/12 14:40:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.31.2.1 2019/01/11 19:45:15 bsiegert Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
 DISTNAME=	ghc-7.6.3-src
 PKGNAME=	${DISTNAME:S/-src$//}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	lang
 MASTER_SITES=	https://www.haskell.org/ghc/dist/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
@@ -79,6 +79,8 @@ CONFIGURE_ENV+= \
 
 NOT_PAX_MPROTECT_SAFE+=	lib/${PKGNAME_NOREV}/ghc
 NOT_PAX_MPROTECT_SAFE+=	lib/${PKGNAME_NOREV}/ghc-pkg
+NOT_PAX_ASLR_SAFE+=	lib/${PKGNAME_NOREV}/ghc
+NOT_PAX_ASLR_SAFE+=	lib/${PKGNAME_NOREV}/ghc-pkg
 
 # -----------------------------------------------------------------------------
 # Build hooks
