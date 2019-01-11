@@ -1,0 +1,20 @@
+$NetBSD: patch-man_sniproxy.conf.5,v 1.1 2019/01/11 23:09:54 schmonz Exp $
+
+Support PKG_SYSCONFDIR.
+
+--- man/sniproxy.conf.5.orig	2018-12-06 04:14:58.000000000 +0000
++++ man/sniproxy.conf.5
+@@ -6,11 +6,11 @@ sniproxy.conf - sniproxy configuration f
+ 
+ .SH SYNOPSIS
+ 
+-/etc/sniproxy.conf
++@PKG_SYSCONFDIR@/sniproxy.conf
+ 
+ .SH DESCRIPTION
+ 
+-/etc/sniproxy.conf is the configuration file for sniproxy. Statements are
++@PKG_SYSCONFDIR@/sniproxy.conf is the configuration file for sniproxy. Statements are
+ separated by either a new line or semi-colon. Lines starting with \&# are
+ comments. The configuration is broken down into stanzas delimited by curly
+ braces. Characters may be escaped using \&\\. Configuration directives may may
