@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.166 2019/01/12 14:27:49 tsutsui Exp $
+$NetBSD: CHANGES-2019,v 1.167 2019/01/12 14:32:00 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -225,3 +225,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated multimedia/adobe-flash-player to 32.0.0.114 [tsutsui 2019-01-12]
 	Updated converters/p5-Unicode-EastAsianWidth to 1.40 [wen 2019-01-12]
 	Updated misc/ruby-mini_portile2 to 2.4.0 [tsutsui 2019-01-12]
+	Updated textproc/ruby-nokogiri to 1.10.0 [tsutsui 2019-01-12]
