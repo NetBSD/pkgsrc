@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2018/05/13 11:56:18 markd Exp $
+# $NetBSD: Makefile,v 1.15 2019/01/12 20:21:31 markd Exp $
 
 DISTNAME=	collection-bibtexextra
-PKGNAME=	texlive-${DISTNAME}-2018pre1
+PKGNAME=	texlive-${DISTNAME}-2018pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	47407
@@ -15,7 +15,7 @@ DEPENDS+=	texlive-collection-latex-[0-9]*:../../meta-pkgs/texlive-collection-lat
 # depend aichej
 # depend ajl
 DEPENDS+=	tex-amsrefs-[0-9]*:../../print/tex-amsrefs
-# depend apacite
+DEPENDS+=	tex-apacite-[0-9]*:../../print/tex-apacite
 # depend apalike2
 # depend archaeologie
 # depend beebe
@@ -46,7 +46,7 @@ DEPENDS+=	tex-biblatex-apa-[0-9]*:../../print/tex-biblatex-apa
 # depend biblatex-gb7714-2015
 # depend biblatex-gost
 # depend biblatex-historian
-# depend biblatex-ieee
+DEPENDS+=	tex-biblatex-ieee-[0-9]*:../../print/tex-biblatex-ieee
 # depend biblatex-ijsra
 # depend biblatex-iso690
 # depend biblatex-juradiss
