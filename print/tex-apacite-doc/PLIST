@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2019/01/12 20:14:10 markd Exp $
+share/texmf-dist/doc/bibtex/apacite/README
+share/texmf-dist/doc/bibtex/apacite/apa5ex.bib
+share/texmf-dist/doc/bibtex/apacite/apacite.pdf
+share/texmf-dist/doc/bibtex/apacite/apacxmpl.tex
