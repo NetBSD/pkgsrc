@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2019/01/12 20:14:10 markd Exp $
+share/texmf-dist/bibtex/bst/apacite/apacann.bst
+share/texmf-dist/bibtex/bst/apacite/apacannx.bst
+share/texmf-dist/bibtex/bst/apacite/apacite.bst
+share/texmf-dist/bibtex/bst/apacite/apacitex.bst
+share/texmf-dist/tex/latex/apacite/apacdoc.sty
+share/texmf-dist/tex/latex/apacite/apacite.sty
+share/texmf-dist/tex/latex/apacite/dutch.apc
+share/texmf-dist/tex/latex/apacite/english.apc
+share/texmf-dist/tex/latex/apacite/finnish.apc
+share/texmf-dist/tex/latex/apacite/french.apc
+share/texmf-dist/tex/latex/apacite/german.apc
+share/texmf-dist/tex/latex/apacite/greek.apc
+share/texmf-dist/tex/latex/apacite/ngerman.apc
+share/texmf-dist/tex/latex/apacite/norsk.apc
+share/texmf-dist/tex/latex/apacite/spanish.apc
+share/texmf-dist/tex/latex/apacite/swedish.apc
