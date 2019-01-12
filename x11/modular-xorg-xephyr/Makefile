@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/08/14 09:35:59 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/01/12 23:11:31 dholland Exp $
 
 DISTNAME=	xorg-server-${XORG_VERSION}
 PKGNAME=	modular-xorg-xephyr-${XORG_VERSION}
@@ -9,7 +9,7 @@ PATCHDIR=		${.CURDIR}/../../x11/modular-xorg-server/patches
 MAINTAINER=	khorben@defora.org
 COMMENT=	Xephyr server based on kdrive from modular X.org
 
-NOT_FOR_PLATFORM+=	Darwin-*-*
+BROKEN_ON_PLATFORM+=	Darwin-*-*
 
 .include "../../x11/modular-xorg-server/Makefile.common"
 
