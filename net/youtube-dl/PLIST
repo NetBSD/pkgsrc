@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.74 2018/12/12 12:55:17 leot Exp $
+@comment $NetBSD: PLIST,v 1.75 2019/01/12 21:18:16 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -719,6 +719,9 @@ ${PYSITELIB}/youtube_dl/extractor/fusion.pyo
 ${PYSITELIB}/youtube_dl/extractor/fxnetworks.py
 ${PYSITELIB}/youtube_dl/extractor/fxnetworks.pyc
 ${PYSITELIB}/youtube_dl/extractor/fxnetworks.pyo
+${PYSITELIB}/youtube_dl/extractor/gaia.py
+${PYSITELIB}/youtube_dl/extractor/gaia.pyc
+${PYSITELIB}/youtube_dl/extractor/gaia.pyo
 ${PYSITELIB}/youtube_dl/extractor/gameinformer.py
 ${PYSITELIB}/youtube_dl/extractor/gameinformer.pyc
 ${PYSITELIB}/youtube_dl/extractor/gameinformer.pyo
@@ -851,6 +854,9 @@ ${PYSITELIB}/youtube_dl/extractor/huajiao.pyo
 ${PYSITELIB}/youtube_dl/extractor/huffpost.py
 ${PYSITELIB}/youtube_dl/extractor/huffpost.pyc
 ${PYSITELIB}/youtube_dl/extractor/huffpost.pyo
+${PYSITELIB}/youtube_dl/extractor/hungama.py
+${PYSITELIB}/youtube_dl/extractor/hungama.pyc
+${PYSITELIB}/youtube_dl/extractor/hungama.pyo
 ${PYSITELIB}/youtube_dl/extractor/hypem.py
 ${PYSITELIB}/youtube_dl/extractor/hypem.pyc
 ${PYSITELIB}/youtube_dl/extractor/hypem.pyo
@@ -1376,6 +1382,9 @@ ${PYSITELIB}/youtube_dl/extractor/ora.pyo
 ${PYSITELIB}/youtube_dl/extractor/orf.py
 ${PYSITELIB}/youtube_dl/extractor/orf.pyc
 ${PYSITELIB}/youtube_dl/extractor/orf.pyo
+${PYSITELIB}/youtube_dl/extractor/outsidetv.py
+${PYSITELIB}/youtube_dl/extractor/outsidetv.pyc
+${PYSITELIB}/youtube_dl/extractor/outsidetv.pyo
 ${PYSITELIB}/youtube_dl/extractor/packtpub.py
 ${PYSITELIB}/youtube_dl/extractor/packtpub.pyc
 ${PYSITELIB}/youtube_dl/extractor/packtpub.pyo
@@ -1433,6 +1442,9 @@ ${PYSITELIB}/youtube_dl/extractor/pladform.pyo
 ${PYSITELIB}/youtube_dl/extractor/playfm.py
 ${PYSITELIB}/youtube_dl/extractor/playfm.pyc
 ${PYSITELIB}/youtube_dl/extractor/playfm.pyo
+${PYSITELIB}/youtube_dl/extractor/playplustv.py
+${PYSITELIB}/youtube_dl/extractor/playplustv.pyc
+${PYSITELIB}/youtube_dl/extractor/playplustv.pyo
 ${PYSITELIB}/youtube_dl/extractor/plays.py
 ${PYSITELIB}/youtube_dl/extractor/plays.pyc
 ${PYSITELIB}/youtube_dl/extractor/plays.pyo
