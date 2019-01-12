@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.167 2019/01/12 14:32:00 tsutsui Exp $
+$NetBSD: CHANGES-2019,v 1.168 2019/01/12 15:02:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -226,3 +226,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated converters/p5-Unicode-EastAsianWidth to 1.40 [wen 2019-01-12]
 	Updated misc/ruby-mini_portile2 to 2.4.0 [tsutsui 2019-01-12]
 	Updated textproc/ruby-nokogiri to 1.10.0 [tsutsui 2019-01-12]
+	Updated lang/php71 to 7.1.26 [taca 2019-01-12]
+	Updated lang/php72 to 7.2.14 [taca 2019-01-12]
+	Updated lang/php73 to 7.3.1 [taca 2019-01-12]
+	Updated lang/php56 to 5.6.40 [taca 2019-01-12]
