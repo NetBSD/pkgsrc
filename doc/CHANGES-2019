@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.157 2019/01/12 04:08:41 wen Exp $
+$NetBSD: CHANGES-2019,v 1.158 2019/01/12 04:24:01 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -216,3 +216,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/megatools to 1.10.2nb2 [leot 2019-01-11]
 	Updated net/sniproxy to 0.6.0nb1 [schmonz 2019-01-11]
 	Updated math/p5-Algorithm-Cluster to 1.57 [wen 2019-01-12]
+	Updated math/p5-Math-BigInt-GMP to 1.6006 [wen 2019-01-12]
