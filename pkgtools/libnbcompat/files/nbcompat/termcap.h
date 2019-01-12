@@ -1,4 +1,4 @@
-/*	$NetBSD: termcap.h,v 1.2 2008/04/29 05:46:08 martin Exp $	*/
+/*	$NetBSD: termcap.h,v 1.3 2019/01/12 07:55:28 dholland Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -41,6 +41,11 @@
  */
 
 #if !HAVE_TERMCAP_H
+# if !HAVE_SYS_CDEFS_H
+#  include <nbcompat/cdefs.h>
+# endif
+# include <stdarg.h>
+
 int	tgetent  __P((char *, const char *));
 char   *tgetstr  __P((const char *, char **));
 int	tgetflag __P((const char *));
