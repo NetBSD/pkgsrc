@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.719 2018/11/26 14:39:05 fox Exp $
+# $NetBSD: Makefile,v 1.720 2019/01/12 20:17:23 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -220,6 +220,8 @@ SUBDIR+=	tex-anysize
 SUBDIR+=	tex-anysize-doc
 SUBDIR+=	tex-apa6
 SUBDIR+=	tex-apa6-doc
+SUBDIR+=	tex-apacite
+SUBDIR+=	tex-apacite-doc
 SUBDIR+=	tex-appendix
 SUBDIR+=	tex-appendix-doc
 SUBDIR+=	tex-arabi
@@ -298,6 +300,8 @@ SUBDIR+=	tex-biblatex
 SUBDIR+=	tex-biblatex-apa
 SUBDIR+=	tex-biblatex-apa-doc
 SUBDIR+=	tex-biblatex-doc
+SUBDIR+=	tex-biblatex-ieee
+SUBDIR+=	tex-biblatex-ieee-doc
 SUBDIR+=	tex-biblatex-nature
 SUBDIR+=	tex-biblatex-nature-doc
 SUBDIR+=	tex-bibleref-german
