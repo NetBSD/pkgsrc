@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/06/06 08:22:45 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2019/01/12 13:57:04 wen Exp $
 
-SHA1 (Unicode-EastAsianWidth-1.33.tar.gz) = 522df78fc80b14fe9190530a5cedf50a78de185b
-RMD160 (Unicode-EastAsianWidth-1.33.tar.gz) = 6ee40d70c0d855835e89d9d690d32a5352772652
-SHA512 (Unicode-EastAsianWidth-1.33.tar.gz) = c21e988f460534b370954d0448daec5bfb0a34ec816459f8422943ebe44ff17b5acb8a423d69daba81599111d7fa4aa33a3598e0ea4614eed25a587c1f5690eb
-Size (Unicode-EastAsianWidth-1.33.tar.gz) = 31498 bytes
-SHA1 (patch-Makefile.PL) = 1edc969602215cf03dcba81d4cca2f10a6cc72b5
+SHA1 (Unicode-EastAsianWidth-1.40.tar.gz) = df1644b4c89c58b079bde873a59c2de18734aa74
+RMD160 (Unicode-EastAsianWidth-1.40.tar.gz) = 496e60992bd926a986fdb9a48b9ffd818c3dd4d2
+SHA512 (Unicode-EastAsianWidth-1.40.tar.gz) = a8eb27605020ef78e8ab281922501a06ba94e275ca705c098810468a737796e73932cb9ae43cf46abd45c1847d33622cbcfa0ff3d86bc5213c14d0b151cf6dc3
+Size (Unicode-EastAsianWidth-1.40.tar.gz) = 43647 bytes
