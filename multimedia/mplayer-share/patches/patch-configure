@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.1 2018/11/10 03:48:51 mrg Exp $
+$NetBSD: patch-configure,v 1.2 2019/01/12 15:26:42 tsutsui Exp $
 
 o Handle properly sh3, evbarm, and arm64 ports on NetBSD.
 o Fix CPU family detection on NetBSD with /proc mounted with "-o linux"
@@ -10,9 +10,9 @@ o Add necessary libs for aalib support even if the aa option is turned on with
 o Add support for dvb capture on NetBSD.
 o Explicitly enable PIE to avoid text relocations on NetBSD/i386 8.x
 
---- configure.orig	2016-02-13 13:05:42.000000000 -0800
-+++ configure	2018-11-09 19:30:35.590280805 -0800
-@@ -1640,7 +1640,7 @@
+--- configure.orig	2016-02-13 21:05:42.000000000 +0000
++++ configure
+@@ -1640,7 +1640,7 @@ else
        cc_name=$cc_name_tmp
        echocheck "$_cc version"
        cc_vendor=gnu
@@ -21,7 +21,7 @@ o Explicitly enable PIE to avoid text relocations on NetBSD/i386 8.x
        case $cc_version in
          2.96*)
            cc_fail=yes
-@@ -1717,8 +1717,13 @@
+@@ -1717,8 +1717,13 @@ if test -z "$_target" ; then
        sun4*|sparc*) host_arch=sparc ;;
        parisc*|hppa*|9000*) host_arch=hppa ;;
        aarch64*) host_arch=aarch64 ;;
@@ -37,7 +37,7 @@ o Explicitly enable PIE to avoid text relocations on NetBSD/i386 8.x
        s390) host_arch=s390 ;;
        s390x) host_arch=s390x ;;
        *mips*) host_arch=mips ;;
-@@ -1930,7 +1935,7 @@
+@@ -1930,7 +1935,7 @@ if x86 ; then
    # gather more CPU information
    pname=$($_cpuinfo | grep 'model name' | cut -d ':' -f 2 | head -n 1)
    pvendor=$($_cpuinfo | grep 'vendor_id' | cut -d ':' -f 2  | cut -d ' ' -f 2 | head -n 1)
@@ -46,7 +46,7 @@ o Explicitly enable PIE to avoid text relocations on NetBSD/i386 8.x
    pmodel=$($_cpuinfo | grep -v 'model name' | grep 'model' | cut -d ':' -f 2 | cut -d ' ' -f 2 | head -n 1)
    pstepping=$($_cpuinfo | grep 'stepping' | cut -d ':' -f 2 | cut -d ' ' -f 2 | head -n 1)
  
-@@ -2446,7 +2451,12 @@
+@@ -2446,7 +2451,12 @@ case "$host_arch" in
      test $_fast_clz = "auto" && _fast_clz=yes
      ;;
  
@@ -60,7 +60,7 @@ o Explicitly enable PIE to avoid text relocations on NetBSD/i386 8.x
      arch='sh4'
      iproc='sh4'
      ;;
-@@ -2806,23 +2816,23 @@
+@@ -2806,23 +2816,23 @@ fi # if darwin && test "$cc_vendor" = "g
  _install_strip="-s"
  if test -z "$CFLAGS" || test "$_profile" != "" || test "$_debug" != ""; then
    if test "$cc_vendor" = "intel" ; then
@@ -90,7 +90,7 @@ o Explicitly enable PIE to avoid text relocations on NetBSD/i386 8.x
      WARNFLAGS="-W -Wall $WARNFLAGS"
      _install_strip=
    fi
-@@ -2830,8 +2840,8 @@
+@@ -2830,8 +2840,8 @@ else
    warn_cflags=yes
  fi
  
@@ -101,7 +101,21 @@ o Explicitly enable PIE to avoid text relocations on NetBSD/i386 8.x
  
  # On glibc, add some more CPPFLAGS for enabling required functionality.
  cpp_condition_check features.h "defined __GLIBC__" &&
-@@ -4615,7 +4625,11 @@
+@@ -2878,10 +2888,11 @@ if test $relocatable = "auto" ; then
+   elif win32 && ! wine ; then
+     relocatable=no
+     res_comment="unnecessary and broken on win32"
+-  elif x86_32 && cflag_check -pie ; then
++  elif x86_32 && cflag_check -fpie -pie ; then
+     extra_ldflags="$extra_ldflags -pie"
++    extra_cflags="$extra_cflags -fpic -fpie"
+     relocatable=yes
+-    res_comment="non-PIC"
++    res_comment="fast PIC"
+   elif x86_64 && cflag_check -fpie -pie ; then
+     extra_ldflags="$extra_ldflags -fpie -pie"
+     extra_cflags="$extra_cflags -fpie"
+@@ -4615,7 +4626,11 @@ if test "$_x11" = auto && test "$_x11_he
             -L/usr/X11/lib -L/usr/lib32 -L/usr/openwin/lib -L/usr/local/lib64 -L/usr/X11R6/lib64 \
             -L/usr/lib ; do
      if netbsd; then
@@ -114,7 +128,7 @@ o Explicitly enable PIE to avoid text relocations on NetBSD/i386 8.x
      else
        ld_tmp="$I -lXext -lX11 $ld_pthread"
      fi
-@@ -5018,6 +5032,8 @@
+@@ -5018,6 +5033,8 @@ if test "$_aa" = yes ; then
    def_aa='#define CONFIG_AA 1'
    if cygwin ; then
      libs_mplayer="$libs_mplayer $(aalib-config --libs | cut -d " " -f 2,5,6)"
@@ -123,7 +137,7 @@ o Explicitly enable PIE to avoid text relocations on NetBSD/i386 8.x
    fi
    vomodules="aa $vomodules"
  else
-@@ -5105,7 +5121,6 @@
+@@ -5105,7 +5122,6 @@ EOF
        extra_cflags="$extra_cflags $inc_tmp" && break
    done
  fi
@@ -131,7 +145,7 @@ o Explicitly enable PIE to avoid text relocations on NetBSD/i386 8.x
  if test "$_dvb" = yes ; then
    _dvbin=yes
    inputmodules="dvb $inputmodules"
-@@ -5114,14 +5129,29 @@
+@@ -5114,14 +5130,29 @@ if test "$_dvb" = yes ; then
    aomodules="mpegpes(dvb) $aomodules"
    vomodules="mpegpes(dvb) $vomodules"
  else
