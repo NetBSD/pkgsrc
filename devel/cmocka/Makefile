@@ -10,6 +10,8 @@ HOMEPAGE=	https://cmocka.org/
 COMMENT=	Unit testing framework for C supporing mock objects
 LICENSE=	apache-2.0
 
+GCC_REQD+=	4.8
+
 USE_CMAKE=	yes
 
 CONFIGURE_DIRS=	${WRKDIR}/build
