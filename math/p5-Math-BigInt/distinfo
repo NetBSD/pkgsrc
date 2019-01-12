@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2018/10/20 14:05:32 wen Exp $
+$NetBSD: distinfo,v 1.9 2019/01/12 04:35:20 wen Exp $
 
-SHA1 (Math-BigInt-1.999815.tar.gz) = 7294261999b6050b4cd2c3c150b4d7fb66666bc1
-RMD160 (Math-BigInt-1.999815.tar.gz) = d47216f229fbb99969ed6e9f4421123292957212
-SHA512 (Math-BigInt-1.999815.tar.gz) = 4fe52b014c1a885e333aae64abdc7cc657f1cb3d0a82b1b9ab2ca0924d2ab0029f202ead4c9a00311787cadb022443489ad9fd03112f0ec3e12e8a86a72d88cc
-Size (Math-BigInt-1.999815.tar.gz) = 3059768 bytes
+SHA1 (Math-BigInt-1.999816.tar.gz) = ba8630213427257795901c019324fb3b2ad6f588
+RMD160 (Math-BigInt-1.999816.tar.gz) = 7ac280f7ef7ca9d86d1f80da3c21bd9e2c9906e2
+SHA512 (Math-BigInt-1.999816.tar.gz) = 2b5fbaa3e5be661514ff44bef049dbb60ee07e278a4c0efa5b5722ec8578ea1c3c672a3ebd04a03651e931b90a8fd40d5a1249ba611dfc59b10d3cdadcdbbbd4
+Size (Math-BigInt-1.999816.tar.gz) = 3068270 bytes
