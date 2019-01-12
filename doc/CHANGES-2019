@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.159 2019/01/12 04:36:39 wen Exp $
+$NetBSD: CHANGES-2019,v 1.160 2019/01/12 12:26:15 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -218,3 +218,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated math/p5-Algorithm-Cluster to 1.57 [wen 2019-01-12]
 	Updated math/p5-Math-BigInt-GMP to 1.6006 [wen 2019-01-12]
 	Updated math/p5-Math-BigInt to 1.999816 [wen 2019-01-12]
+	Updated devel/subversion to 1.10.4 [bsiegert 2019-01-12]
