@@ -1,4 +1,19 @@
-$NetBSD: CHANGES-pkgsrc-2018Q4,v 1.1.2.1 2018/12/30 22:54:51 wiz Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q4,v 1.1.2.2 2019/01/12 09:41:16 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q4 branch:
+
+Pullup ticket #5887 - requested by maya
+mk: SuperH build fix
+
+Pullup ticket #5888 - requested by maya
+lang/ghc7: build fix
+
+Pullup ticket #5889 - requested by simonb
+multimedia/transcode: build fix
+
+Pullup ticket #5890 - requested by maya
+audio/musicpd: require newer gcc
+
+Pullup ticket #5891 - requested by leot
+net/megatools: build fix
 
