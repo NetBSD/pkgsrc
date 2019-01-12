@@ -1,0 +1,8 @@
+This is a BibLaTeX style that implements the bibliography style
+of the IEEE for BibLaTeX. The implementation follows standard
+BibLaTeX conventions, and can be used simply by loading
+BibLaTeX with the appropriate option:
+\usepackage[style=ieee]{biblatex} A demonstration database is
+provided to show how to format input for the style.
+biblatex-ieee requires BibLaTeX 2.7 or later, and works with
+both BibTeX and Biber as the database back-end.
