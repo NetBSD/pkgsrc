@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.178 2018/12/13 19:51:41 adam Exp $
+# $NetBSD: Makefile,v 1.178.2.1 2019/01/12 09:32:09 bsiegert Exp $
 
 DISTNAME=		mpd-0.21.3
 PKGNAME=		${DISTNAME:S/mpd/musicpd/}
@@ -22,7 +22,7 @@ USE_LANGUAGES=		c c++
 MESON_ARGS+=		-Ddocumentation=true
 
 # c++14
-GCC_REQD+=		4.9
+GCC_REQD+=		6.0
 
 CPPFLAGS.SunOS+=	-std=gnu99 -D_XOPEN_SOURCE=600 -D__EXTENSIONS__
 
