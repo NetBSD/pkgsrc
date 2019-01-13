@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.177 2019/01/13 18:22:34 adam Exp $
+$NetBSD: CHANGES-2019,v 1.178 2019/01/13 19:56:29 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -246,3 +246,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-tox to 3.7.0 [adam 2019-01-13]
 	Updated devel/ucommon to 7.0.0 [adam 2019-01-13]
 	Updated net/ccrtp to 2.1.2nb5 [adam 2019-01-13]
+	Updated pkgtools/pkglint to 5.6.11 [rillig 2019-01-13]
