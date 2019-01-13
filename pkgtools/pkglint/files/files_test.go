@@ -47,7 +47,7 @@ func (s *Suite) Test_convertToLogicalLines__continuation_in_last_line(c *check.C
 func (s *Suite) Test_convertToLogicalLines__comments(c *check.C) {
 	t := s.Init(c)
 
-	mklines := t.SetupFileMkLines("comment.mk",
+	mklines := t.SetUpFileMkLines("comment.mk",
 		"# This is a comment",
 		"",
 		"#\\",
@@ -130,7 +130,7 @@ func (s *Suite) Test_convertToLogicalLines__missing_newline_at_eof_in_continuati
 func (s *Suite) Test_convertToLogicalLines__missing_newline_at_eof_with_source(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("-Wall", "--source")
+	t.SetUpCommandLine("-Wall", "--source")
 	rawText := "" +
 		"last line\\"
 

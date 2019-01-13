@@ -5,6 +5,8 @@ import (
 	"os"
 )
 
+var exit = os.Exit
+
 func main() {
-	os.Exit(pkglint.Main())
+	exit(pkglint.Main())
 }

@@ -55,9 +55,9 @@ func (vt *VaralignTester) run(autofix bool) {
 	if vt.ShowSource {
 		cmdline = append(cmdline, "--source")
 	}
-	t.SetupCommandLine(cmdline...)
+	t.SetUpCommandLine(cmdline...)
 
-	mklines := t.SetupFileMkLines("Makefile", vt.input...)
+	mklines := t.SetUpFileMkLines("Makefile", vt.input...)
 
 	var varalign VaralignBlock
 	for _, mkline := range mklines.mklines {

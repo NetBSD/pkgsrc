@@ -47,8 +47,8 @@ func (s *Suite) Test_LicenseChecker_Check(c *check.C) {
 func (s *Suite) Test_LicenseChecker_checkName__LICENSE_FILE(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupPkgsrc()
-	t.SetupPackage("category/package",
+	t.SetUpPkgsrc()
+	t.SetUpPackage("category/package",
 		"LICENSE=\tmy-license",
 		"",
 		"LICENSE_FILE=\tmy-license")
