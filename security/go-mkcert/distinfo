@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/01/13 04:23:54 schmonz Exp $
+
+SHA1 (mkcert-v1.2.0.tar.gz) = 665a204c5e84cac568d44454e7f1a01088baedc9
+RMD160 (mkcert-v1.2.0.tar.gz) = 6fe60e3d7396f4011b8e41dc84c72713275ab6c8
+SHA512 (mkcert-v1.2.0.tar.gz) = db1ad15a675e6bf82e5658b1db4780fdd1e79fabb8895ced30f6c1926d9ccfb70fbc5b7bf1ce02ec9a3fb618c08c69ff1f32d22a404748c65016e8315f670570
+Size (mkcert-v1.2.0.tar.gz) = 374743 bytes
