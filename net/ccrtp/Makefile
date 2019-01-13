@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2018/04/17 22:29:32 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.13 2019/01/13 18:22:10 adam Exp $
 
 DISTNAME=	ccrtp-2.1.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNU:=ccrtp/}
 
@@ -11,13 +10,15 @@ HOMEPAGE=	http://www.gnu.org/software/ccrtp/
 COMMENT=	RTP and RTSP protocol implementation using GNU CommonCpp
 LICENSE=	gnu-gpl-v2
 
-USE_PKGLOCALEDIR=	yes
-USE_LIBTOOL=		yes
-USE_LANGUAGES+=		c c++
-USE_TOOLS+=		pkg-config
 USE_CMAKE=		yes
+USE_LANGUAGES+=		c c++
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE+=	libccrtp.pc.in
 INFO_FILES=		yes
+
+CMAKE_ARGS+=	-DLIB_VERSION=${PKGVERSION_NOREV}
+CMAKE_ARGS+=	-DSOVERSION=2
 
 .include "options.mk"
 

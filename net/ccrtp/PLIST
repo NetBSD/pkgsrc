@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:46 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/01/13 18:22:10 adam Exp $
 include/ccrtp/CryptoContext.h
 include/ccrtp/CryptoContextCtrl.h
 include/ccrtp/base.h
@@ -17,5 +17,6 @@ include/ccrtp/rtppkt.h
 include/ccrtp/sources.h
 info/ccrtp.info
 lib/libccrtp.so
-lib/libccrtp.so.SOVERSION
+lib/libccrtp.so.${PKGVERSION}
+lib/libccrtp.so.2
 lib/pkgconfig/libccrtp.pc
