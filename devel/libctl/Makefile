@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.32 2016/09/15 14:32:40 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2019/01/13 22:06:42 bacon Exp $
 
 DISTNAME=	libctl-3.2.2
 PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://ab-initio.mit.edu/libctl/
 
-MAINTAINER=	jwbacon@tds.net
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://ab-initio.mit.edu/libctl/
 COMMENT=	Guile-based flexible control file library for scientific simulations
 LICENSE=	gnu-gpl-v2
