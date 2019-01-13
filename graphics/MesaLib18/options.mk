@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2018/12/24 02:30:45 sevan Exp $
+# $NetBSD: options.mk,v 1.3 2019/01/13 12:29:28 ryoon Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -171,8 +171,8 @@ DRI_DRIVERS+=		i965
 # ARM drivers
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-*arm*)
 # Qualcomm SnapDragon, libdrm_freedreno.pc
-GALLIUM_DRIVERS+=	freedreno
-PLIST.freedreno=	yes
+#GALLIUM_DRIVERS+=	freedreno
+#PLIST.freedreno=	yes
 
 # Broadcom VideoCore 4
 GALLIUM_DRIVERS+=	vc4
