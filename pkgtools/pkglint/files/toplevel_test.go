@@ -19,7 +19,7 @@ func (s *Suite) Test_CheckdirToplevel(c *check.C) {
 	t.CreateFileLines("bbb/Makefile")
 	t.CreateFileLines("ccc/Makefile")
 	t.CreateFileLines("x11/Makefile")
-	t.SetupVartypes()
+	t.SetUpVartypes()
 
 	CheckdirToplevel(t.File("."))
 

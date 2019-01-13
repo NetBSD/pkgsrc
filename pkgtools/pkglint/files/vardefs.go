@@ -15,7 +15,7 @@ import (
 // See vartypecheck.go for how these types are checked.
 
 // InitVartypes initializes the long list of predefined pkgsrc variables.
-// After this is done, ${PKGNAME}, ${MAKE_ENV} and all the other variables
+// After this is done, PKGNAME, MAKE_ENV and all the other variables
 // can be used in Makefiles without triggering warnings about typos.
 func (src *Pkgsrc) InitVartypes() {
 
@@ -58,20 +58,20 @@ func (src *Pkgsrc) InitVartypes() {
 			"*.mk: append, default, use")
 	}
 
-	// A user-defined or system-defined variable must not be set by any
-	// package file. It also must not be used in buildlink3.mk and
-	// builtin.mk files or at load-time, since the system/user preferences
-	// may not have been loaded when these files are included.
+	// sys declares a user-defined or system-defined variable that must not be modified by packages.
+	//
+	// It also must not be used in buildlink3.mk and builtin.mk files or at load-time,
+	// since the system/user preferences may not have been loaded when these files are included.
 	sys := func(varname string, kindOfList KindOfList, checker *BasicType) {
 		acl(varname, kindOfList, checker, "buildlink3.mk:; *: use")
 	}
 
+	// usr declares a user-defined variable that must not be modified by packages.
 	usr := func(varname string, kindOfList KindOfList, checker *BasicType) {
 		acl(varname, kindOfList, checker, "buildlink3.mk:; *: use-loadtime, use")
 	}
 
-	// sysload defines a system-provided variable that may already be used
-	// at load time.
+	// sysload declares a system-provided variable that may already be used at load time.
 	sysload := func(varname string, kindOfList KindOfList, checker *BasicType) {
 		acl(varname, kindOfList, checker, "*: use-loadtime, use")
 	}
@@ -79,11 +79,12 @@ func (src *Pkgsrc) InitVartypes() {
 	bl3list := func(varname string, kindOfList KindOfList, checker *BasicType) {
 		acl(varname, kindOfList, checker, "buildlink3.mk, builtin.mk: append; *: use")
 	}
+
 	cmdline := func(varname string, kindOfList KindOfList, checker *BasicType) {
 		acl(varname, kindOfList, checker, "buildlink3.mk, builtin.mk:; *: use-loadtime, use")
 	}
 
-	languages := enum(
+	compilerLanguages := enum(
 		func() string {
 			mklines := LoadMk(src.File("mk/compiler.mk"), NotEmpty)
 			languages := make(map[string]bool)
@@ -192,7 +193,7 @@ func (src *Pkgsrc) InitVartypes() {
 		"openjdk8 oracle-jdk8 openjdk7 sun-jdk7 sun-jdk6 jdk16 jdk15 kaffe",
 		"_PKG_JVMS.*")
 
-	// Last synced with mk/defaults/mk.conf revision 1.269
+	// Last synced with mk/defaults/mk.conf revision 1.269 (2017-01-01).
 	usr("USE_CWRAPPERS", lkNone, enum("yes no auto"))
 	usr("ALLOW_VULNERABLE_PACKAGES", lkNone, BtYes)
 	usr("AUDIT_PACKAGES_FLAGS", lkShell, BtShellWord)
@@ -297,6 +298,7 @@ func (src *Pkgsrc) InitVartypes() {
 			"Makefile.*, *.mk: default, set, use, use-loadtime; "+
 			"*: use-loadtime, use")
 	}
+
 	usrpkg("ACROREAD_FONTPATH", lkNone, BtPathlist)
 	usrpkg("AMANDA_USER", lkNone, BtUserGroupName)
 	usrpkg("AMANDA_TMP", lkNone, BtPathname)
@@ -702,7 +704,7 @@ func (src *Pkgsrc) InitVartypes() {
 	pkg("EMUL_PLATFORMS", lkShell, BtEmulPlatform)
 	usr("EMUL_PREFER", lkShell, BtEmulPlatform)
 	pkg("EMUL_REQD", lkShell, BtDependency)
-	usr("EMUL_TYPE.*", lkNone, enum("native builtin suse suse-9.1 suse-9.x suse-10.0 suse-10.x"))
+	usr("EMUL_TYPE.*", lkNone, enum("native builtin suse suse-10.0 suse-12.1 suse-13.1"))
 	sys("ERROR_CAT", lkNone, BtShellCommand)
 	sys("ERROR_MSG", lkNone, BtShellCommand)
 	sys("EXPORT_SYMBOLS_LDFLAGS", lkShell, BtLdFlag)
@@ -851,6 +853,7 @@ func (src *Pkgsrc) InitVartypes() {
 	sys("MANMODE", lkNone, BtFileMode)
 	sys("MANOWN", lkNone, BtUserGroupName)
 	pkglist("MASTER_SITES", lkShell, BtFetchURL)
+	// TODO: Extract the MASTER_SITE_* definitions from mk/fetch/sites.mk instead of listing them here.
 	sys("MASTER_SITE_APACHE", lkShell, BtFetchURL)
 	sys("MASTER_SITE_BACKUP", lkShell, BtFetchURL)
 	sys("MASTER_SITE_CRATESIO", lkShell, BtFetchURL)
@@ -963,7 +966,7 @@ func (src *Pkgsrc) InitVartypes() {
 	acl("PGSQL_VERSIONS_ACCEPTED", lkShell, pgsqlVersions, "")
 	usr("PGSQL_VERSION_DEFAULT", lkNone, BtVersion)
 	sys("PG_LIB_EXT", lkNone, enum("dylib so"))
-	sys("PGSQL_TYPE", lkNone, enum("postgresql81-client postgresql80-client"))
+	sys("PGSQL_TYPE", lkNone, enumFrom("mk/pgsql.buildlink3.mk", "postgresql11-client", "PGSQL_TYPE"))
 	sys("PGPKGSRCDIR", lkNone, BtPathname)
 	sys("PHASE_MSG", lkNone, BtShellCommand)
 	usr("PHP_VERSION_REQD", lkNone, BtVersion)
@@ -1174,7 +1177,7 @@ func (src *Pkgsrc) InitVartypes() {
 	acl("USE_IMAKE", lkNone, BtYes, "Makefile: set")
 	pkg("USE_JAVA", lkNone, enum("run yes build"))
 	pkg("USE_JAVA2", lkNone, enum("YES yes no 1.4 1.5 6 7 8"))
-	acl("USE_LANGUAGES", lkShell, languages, "Makefile, Makefile.common, options.mk: set, append")
+	acl("USE_LANGUAGES", lkShell, compilerLanguages, "Makefile, Makefile.common, options.mk: set, append")
 	pkg("USE_LIBTOOL", lkNone, BtYes)
 	pkg("USE_MAKEINFO", lkNone, BtYes)
 	pkg("USE_MSGFMT_PLURALS", lkNone, BtYes)
@@ -1227,6 +1230,7 @@ func parseACLEntries(varname string, aclEntries string) []ACLEntry {
 	if aclEntries == "" {
 		return nil
 	}
+
 	var result []ACLEntry
 	prevperms := "(first)"
 	for _, arg := range strings.Split(aclEntries, "; ") {
@@ -1271,7 +1275,8 @@ func parseACLEntries(varname string, aclEntries string) []ACLEntry {
 			}
 			for _, prev := range result {
 				matched, err := path.Match(prev.glob, glob)
-				G.Assertf(err == nil && !matched, "Ineffective ACL glob %q for %q.", glob, varname)
+				G.AssertNil(err, "Invalid ACL pattern %q for %q.", glob, varname)
+				G.Assertf(!matched, "Unreachable ACL pattern %q for %q.", glob, varname)
 			}
 			result = append(result, ACLEntry{glob, permissions})
 		}
