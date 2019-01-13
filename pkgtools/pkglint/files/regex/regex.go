@@ -122,7 +122,11 @@ func (r *Registry) ReplaceFirst(s string, re Pattern, replacement string) ([]str
 		replaced := s[:m[0]] + replacement + s[m[1]:]
 		mm := make([]string, len(m)/2)
 		for i := 0; i < len(m); i += 2 {
-			mm[i/2] = s[max0(m[i]):max0(m[i+1])]
+			if m[i] < 0 {
+				mm[i/2] = ""
+			} else {
+				mm[i/2] = s[m[i]:m[i+1]]
+			}
 		}
 		return mm, replaced
 	}
@@ -145,11 +149,4 @@ func (r *Registry) matchn(s string, re Pattern, n int) []string {
 		return m
 	}
 	return nil
-}
-
-func max0(a int) int {
-	if a >= 0 {
-		return a
-	}
-	return 0
 }
