@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.171 2019/01/13 03:11:01 wen Exp $
+$NetBSD: CHANGES-2019,v 1.172 2019/01/13 03:14:39 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -236,3 +236,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added print/tex-biblatex-ieee-doc version 1.2d [markd 2019-01-12]
 	Updated net/youtube-dl to 20190110 [leot 2019-01-12]
 	Updated www/p5-HTTP-DAV to 0.49 [wen 2019-01-13]
+	Updated www/p5-HTTP-OAI to 4.08 [wen 2019-01-13]
