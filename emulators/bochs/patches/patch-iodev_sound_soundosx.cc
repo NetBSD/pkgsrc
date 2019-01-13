@@ -1,9 +1,9 @@
-$NetBSD: patch-iodev_sound_soundosx.cc,v 1.1 2012/10/01 13:40:48 ryoon Exp $
+$NetBSD: patch-iodev_sound_soundosx.cc,v 1.2 2019/01/13 11:59:38 ryoon Exp $
 
---- iodev/sound/soundosx.cc.orig	2012-09-02 11:30:10.000000000 +0000
+--- iodev/sound/soundosx.cc.orig	2017-03-14 18:21:05.000000000 +0000
 +++ iodev/sound/soundosx.cc
-@@ -21,7 +21,7 @@
- // This file (SOUNDOSX.CC) written and donated by Brian Huffman
+@@ -26,7 +26,7 @@
+ #define BX_PLUGGABLE
  
  #ifdef PARANOID
 -#include <MacTypes.h>
