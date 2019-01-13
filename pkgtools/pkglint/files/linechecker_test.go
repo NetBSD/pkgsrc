@@ -7,7 +7,7 @@ import (
 func (s *Suite) Test_LineChecker_CheckAbsolutePathname(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("-Wabsname", "--explain")
+	t.SetUpCommandLine("-Wabsname", "--explain")
 	mklines := t.NewMkLines("Makefile",
 		MkRcsID,
 		"\tbindir=/bin",
@@ -72,7 +72,7 @@ func (s *Suite) Test_LineChecker_CheckAbsolutePathname(c *check.C) {
 func (s *Suite) Test_LineChecker_CheckAbsolutePathname__disabled_by_default(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine( /* none, which means -Wall is suppressed */ )
+	t.SetUpCommandLine( /* none, which means -Wall is suppressed */ )
 	line := t.NewLine("Makefile", 1, "# dummy")
 
 	LineChecker{line}.CheckAbsolutePathname("bindir=/bin")

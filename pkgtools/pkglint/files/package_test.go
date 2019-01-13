@@ -71,7 +71,7 @@ func (s *Suite) Test_Package_pkgnameFromDistname(c *check.C) {
 func (s *Suite) Test_Package_CheckVarorder(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("-Worder")
+	t.SetUpCommandLine("-Worder")
 	pkg := NewPackage(t.File("x11/9term"))
 
 	pkg.CheckVarorder(t.NewMkLines("Makefile",
@@ -105,7 +105,7 @@ func (s *Suite) Test_Package_CheckVarorder(c *check.C) {
 func (s *Suite) Test_Package_CheckVarorder__comments_do_not_crash(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("-Worder")
+	t.SetUpCommandLine("-Worder")
 	pkg := NewPackage(t.File("x11/9term"))
 
 	pkg.CheckVarorder(t.NewMkLines("Makefile",
@@ -128,7 +128,7 @@ func (s *Suite) Test_Package_CheckVarorder__comments_do_not_crash(c *check.C) {
 func (s *Suite) Test_Package_CheckVarorder__comments_are_ignored(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("-Worder")
+	t.SetUpCommandLine("-Worder")
 
 	pkg := NewPackage(t.File("x11/9term"))
 
@@ -149,7 +149,7 @@ func (s *Suite) Test_Package_CheckVarorder__comments_are_ignored(c *check.C) {
 func (s *Suite) Test_Package_CheckVarorder__skip_if_there_are_directives(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("-Worder")
+	t.SetUpCommandLine("-Worder")
 
 	pkg := NewPackage(t.File("category/package"))
 
@@ -174,7 +174,7 @@ func (s *Suite) Test_Package_CheckVarorder__skip_if_there_are_directives(c *chec
 func (s *Suite) Test_Package_CheckVarorder__GITHUB_PROJECT_at_the_top(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("-Worder")
+	t.SetUpCommandLine("-Worder")
 	pkg := NewPackage(t.File("x11/9term"))
 
 	pkg.CheckVarorder(t.NewMkLines("Makefile",
@@ -195,7 +195,7 @@ func (s *Suite) Test_Package_CheckVarorder__GITHUB_PROJECT_at_the_top(c *check.C
 func (s *Suite) Test_Package_CheckVarorder__GITHUB_PROJECT_at_the_bottom(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("-Worder")
+	t.SetUpCommandLine("-Worder")
 	pkg := NewPackage(t.File("x11/9term"))
 
 	pkg.CheckVarorder(t.NewMkLines("Makefile",
@@ -216,7 +216,7 @@ func (s *Suite) Test_Package_CheckVarorder__GITHUB_PROJECT_at_the_bottom(c *chec
 func (s *Suite) Test_Package_CheckVarorder__license(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("-Worder")
+	t.SetUpCommandLine("-Worder")
 
 	t.CreateFileLines("mk/bsd.pkg.mk", "# dummy")
 	t.CreateFileLines("x11/Makefile", MkRcsID)
@@ -232,7 +232,7 @@ func (s *Suite) Test_Package_CheckVarorder__license(c *check.C) {
 		"",
 		".include \"../../mk/bsd.pkg.mk\"")
 
-	t.SetupVartypes()
+	t.SetUpVartypes()
 
 	G.Check(t.File("x11/9term"))
 
@@ -245,7 +245,7 @@ func (s *Suite) Test_Package_CheckVarorder__license(c *check.C) {
 func (s *Suite) Test_Package_CheckVarorder__MASTER_SITES(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("-Worder")
+	t.SetUpCommandLine("-Worder")
 	pkg := NewPackage(t.File("category/package"))
 
 	pkg.CheckVarorder(t.NewMkLines("Makefile",
@@ -266,8 +266,8 @@ func (s *Suite) Test_Package_CheckVarorder__MASTER_SITES(c *check.C) {
 func (s *Suite) Test_Package_CheckVarorder__diagnostics(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("-Worder")
-	t.SetupVartypes()
+	t.SetUpCommandLine("-Worder")
+	t.SetUpVartypes()
 	pkg := NewPackage(t.File("category/package"))
 
 	pkg.CheckVarorder(t.NewMkLines("Makefile",
@@ -353,8 +353,8 @@ func (s *Suite) Test_Package_determineEffectivePkgVars__precedence(c *check.C) {
 func (s *Suite) Test_Package_determineEffectivePkgVars__same(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("-Wall,no-order")
-	pkg := t.SetupPackage("category/package",
+	t.SetUpCommandLine("-Wall,no-order")
+	pkg := t.SetUpPackage("category/package",
 		"DISTNAME=\tdistname-1.0",
 		"PKGNAME=\tdistname-1.0")
 
@@ -368,8 +368,8 @@ func (s *Suite) Test_Package_determineEffectivePkgVars__same(c *check.C) {
 func (s *Suite) Test_Package_determineEffectivePkgVars__invalid_DISTNAME(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("-Wall,no-order")
-	pkg := t.SetupPackage("category/package",
+	t.SetUpCommandLine("-Wall,no-order")
+	pkg := t.SetUpPackage("category/package",
 		"DISTNAME=\tpkgname-version")
 
 	G.Check(pkg)
@@ -406,9 +406,9 @@ func (s *Suite) Test_Package_checkPossibleDowngrade(c *check.C) {
 func (s *Suite) Test_Package_loadPackageMakefile__dump(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("--dumpmakefile")
-	t.SetupVartypes()
-	t.SetupPkgsrc()
+	t.SetUpCommandLine("--dumpmakefile")
+	t.SetUpVartypes()
+	t.SetUpPkgsrc()
 	t.CreateFileLines("category/Makefile")
 	t.CreateFileLines("category/package/PLIST",
 		PlistRcsID,
@@ -445,8 +445,8 @@ func (s *Suite) Test_Package_loadPackageMakefile__dump(c *check.C) {
 func (s *Suite) Test_Package__varuse_at_load_time(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupPkgsrc()
-	t.SetupTool("printf", "", AtRunTime)
+	t.SetUpPkgsrc()
+	t.SetUpTool("printf", "", AtRunTime)
 	t.CreateFileLines("licenses/2-clause-bsd",
 		"# dummy")
 	t.CreateFileLines("misc/Makefile")
@@ -510,7 +510,7 @@ func (s *Suite) Test_Package__varuse_at_load_time(c *check.C) {
 		"",
 		".include \"../../mk/bsd.pkg.mk\"")
 
-	t.SetupCommandLine("-q", "-Wall,no-space")
+	t.SetUpCommandLine("-q", "-Wall,no-space")
 	G.Pkgsrc.LoadInfrastructure()
 	G.Check(t.File("category/pkgbase"))
 
@@ -564,7 +564,7 @@ func (s *Suite) Test_Package_loadPackageMakefile__PECL_VERSION(c *check.C) {
 		".if defined(USE_PHP_EXT_PATCHES)",
 		"PATCHDIR=       ${.CURDIR}/${PHPPKGSRCDIR}/patches",
 		".endif")
-	pkg := t.SetupPackage("category/package",
+	pkg := t.SetUpPackage("category/package",
 		"PECL_VERSION=\t1.1.2",
 		".include \"../../lang/php/ext.mk\"")
 
@@ -574,9 +574,9 @@ func (s *Suite) Test_Package_loadPackageMakefile__PECL_VERSION(c *check.C) {
 func (s *Suite) Test_Package_checkIncludeConditionally__conditional_and_unconditional_include(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupVartypes()
-	t.SetupOption("zlib", "")
-	t.SetupPackage("category/package",
+	t.SetUpVartypes()
+	t.SetUpOption("zlib", "")
+	t.SetUpPackage("category/package",
 		".include \"../../devel/zlib/buildlink3.mk\"",
 		".if ${OPSYS} == \"Linux\"",
 		".include \"../../sysutils/coreutils/buildlink3.mk\"",
@@ -609,8 +609,8 @@ func (s *Suite) Test_Package_checkIncludeConditionally__conditional_and_uncondit
 func (s *Suite) Test_Package__include_without_exists(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupVartypes()
-	t.SetupPackage("category/package",
+	t.SetUpVartypes()
+	t.SetUpPackage("category/package",
 		".include \"options.mk\"")
 
 	G.checkdirPackage(t.File("category/package"))
@@ -623,8 +623,8 @@ func (s *Suite) Test_Package__include_without_exists(c *check.C) {
 func (s *Suite) Test_Package__include_after_exists(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupVartypes()
-	t.SetupPackage("category/package",
+	t.SetUpVartypes()
+	t.SetUpPackage("category/package",
 		".if exists(options.mk)",
 		".  include \"options.mk\"",
 		".endif")
@@ -640,8 +640,8 @@ func (s *Suite) Test_Package__include_after_exists(c *check.C) {
 func (s *Suite) Test_Package_readMakefile__include_other_after_exists(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupVartypes()
-	t.SetupPackage("category/package",
+	t.SetUpVartypes()
+	t.SetUpPackage("category/package",
 		".if exists(options.mk)",
 		".  include \"another.mk\"",
 		".endif")
@@ -656,8 +656,8 @@ func (s *Suite) Test_Package_readMakefile__include_other_after_exists(c *check.C
 func (s *Suite) Test_Package__redundant_master_sites(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupVartypes()
-	t.SetupMasterSite("MASTER_SITE_R_CRAN", "http://cran.r-project.org/src/")
+	t.SetUpVartypes()
+	t.SetUpMasterSite("MASTER_SITE_R_CRAN", "http://cran.r-project.org/src/")
 	t.CreateFileLines("mk/bsd.pkg.mk")
 	t.CreateFileLines("licenses/gnu-gpl-v2",
 		"The licenses for most software are designed to take away ...")
@@ -691,11 +691,11 @@ func (s *Suite) Test_Package__redundant_master_sites(c *check.C) {
 func (s *Suite) Test_Package_checkUpdate(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupPackage("category/pkg1",
+	t.SetUpPackage("category/pkg1",
 		"PKGNAME=                package1-1.0")
-	t.SetupPackage("category/pkg2",
+	t.SetUpPackage("category/pkg2",
 		"PKGNAME=                package2-1.0")
-	t.SetupPackage("category/pkg3",
+	t.SetUpPackage("category/pkg3",
 		"PKGNAME=                package3-5.0")
 	t.CreateFileLines("doc/TODO",
 		"Suggested package updates",
@@ -724,7 +724,7 @@ func (s *Suite) Test_Package_checkUpdate(c *check.C) {
 func (s *Suite) Test_NewPackage(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupPkgsrc()
+	t.SetUpPkgsrc()
 	t.CreateFileLines("category/Makefile",
 		MkRcsID)
 
@@ -742,8 +742,8 @@ func (s *Suite) Test_NewPackage(c *check.C) {
 func (s *Suite) Test__distinfo_from_other_package(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("-Wall,no-space")
-	t.SetupPkgsrc()
+	t.SetUpCommandLine("-Wall,no-space")
+	t.SetUpPkgsrc()
 	t.Chdir(".")
 	t.CreateFileLines("x11/gst-x11/Makefile",
 		MkRcsID,
@@ -772,8 +772,8 @@ func (s *Suite) Test__distinfo_from_other_package(c *check.C) {
 func (s *Suite) Test_Package_checkfilePackageMakefile__GNU_CONFIGURE(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("-Wall,no-space")
-	pkg := t.SetupPackage("category/package",
+	t.SetUpCommandLine("-Wall,no-space")
+	pkg := t.SetUpPackage("category/package",
 		"GNU_CONFIGURE=\tyes",
 		"USE_LANGUAGES=\t#")
 
@@ -788,8 +788,8 @@ func (s *Suite) Test_Package_checkfilePackageMakefile__GNU_CONFIGURE(c *check.C)
 func (s *Suite) Test_Package_checkfilePackageMakefile__GNU_CONFIGURE_ok(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("-Wall,no-space")
-	pkg := t.SetupPackage("category/package",
+	t.SetUpCommandLine("-Wall,no-space")
+	pkg := t.SetUpPackage("category/package",
 		"GNU_CONFIGURE=\tyes",
 		"USE_LANGUAGES=\t# none, really")
 
@@ -801,8 +801,8 @@ func (s *Suite) Test_Package_checkfilePackageMakefile__GNU_CONFIGURE_ok(c *check
 func (s *Suite) Test_Package_checkfilePackageMakefile__REPLACE_PERL(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("-Wall,no-space")
-	pkg := t.SetupPackage("category/package",
+	t.SetUpCommandLine("-Wall,no-space")
+	pkg := t.SetUpPackage("category/package",
 		"REPLACE_PERL=\t*.pl",
 		"NO_CONFIGURE=\tyes")
 
@@ -815,7 +815,7 @@ func (s *Suite) Test_Package_checkfilePackageMakefile__REPLACE_PERL(c *check.C) 
 func (s *Suite) Test_Package_checkfilePackageMakefile__META_PACKAGE_with_distinfo(c *check.C) {
 	t := s.Init(c)
 
-	pkg := t.SetupPackage("category/package",
+	pkg := t.SetUpPackage("category/package",
 		"META_PACKAGE=\tyes")
 
 	G.Check(pkg)
@@ -828,7 +828,7 @@ func (s *Suite) Test_Package_checkfilePackageMakefile__META_PACKAGE_with_distinf
 func (s *Suite) Test_Package_checkfilePackageMakefile__USE_IMAKE_and_USE_X11(c *check.C) {
 	t := s.Init(c)
 
-	pkg := t.SetupPackage("category/package",
+	pkg := t.SetUpPackage("category/package",
 		"USE_X11=\tyes",
 		"USE_IMAKE=\tyes")
 
@@ -841,8 +841,8 @@ func (s *Suite) Test_Package_checkfilePackageMakefile__USE_IMAKE_and_USE_X11(c *
 func (s *Suite) Test_Package_readMakefile__skipping(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("-Wall,no-space")
-	pkg := t.SetupPackage("category/package",
+	t.SetUpCommandLine("-Wall,no-space")
+	pkg := t.SetUpPackage("category/package",
 		".include \"${MYSQL_PKGSRCDIR:S/-client$/-server/}/buildlink3.mk\"")
 
 	t.EnableTracingToLog()
@@ -872,7 +872,7 @@ func (s *Suite) Test_Package_readMakefile__skipping(c *check.C) {
 func (s *Suite) Test_Package_readMakefile__not_found(c *check.C) {
 	t := s.Init(c)
 
-	pkg := t.SetupPackage("category/package",
+	pkg := t.SetUpPackage("category/package",
 		".include \"../../devel/zlib/buildlink3.mk\"")
 	t.CreateFileLines("devel/zlib/buildlink3.mk",
 		".include \"../../enoent/enoent/buildlink3.mk\"")
@@ -888,7 +888,7 @@ func (s *Suite) Test_Package_readMakefile__relative(c *check.C) {
 
 	t.CreateFileLines("category/package/extra.mk",
 		MkRcsID)
-	pkg := t.SetupPackage("category/package",
+	pkg := t.SetUpPackage("category/package",
 		".include \"../package/extra.mk\"")
 
 	G.Check(pkg)
@@ -904,15 +904,15 @@ func (s *Suite) Test_Package_readMakefile__relative(c *check.C) {
 func (s *Suite) Test_Package_checkLocallyModified(c *check.C) {
 	t := s.Init(c)
 
-	// no-order since SetupPackage doesn't place OWNER correctly.
-	t.SetupCommandLine("-Wall,no-order")
+	// no-order since SetUpPackage doesn't place OWNER correctly.
+	t.SetUpCommandLine("-Wall,no-order")
 	G.Username = "example-user"
 	t.CreateFileLines("category/package/CVS/Entries",
 		"/Makefile//modified//")
 
 	// In packages without specific MAINTAINER, everyone may commit changes.
 
-	pkg := t.SetupPackage("category/package",
+	pkg := t.SetUpPackage("category/package",
 		"MAINTAINER=\tpkgsrc-users@NetBSD.org")
 
 	G.Check(pkg)
@@ -921,7 +921,7 @@ func (s *Suite) Test_Package_checkLocallyModified(c *check.C) {
 
 	// A package with a MAINTAINER may be edited with care.
 
-	t.SetupPackage("category/package",
+	t.SetUpPackage("category/package",
 		"MAINTAINER=\tmaintainer@example.org")
 
 	G.Check(pkg)
@@ -932,7 +932,7 @@ func (s *Suite) Test_Package_checkLocallyModified(c *check.C) {
 
 	// A package with an OWNER may NOT be edited by others.
 
-	pkg = t.SetupPackage("category/package",
+	pkg = t.SetUpPackage("category/package",
 		"#MAINTAINER=\t# undefined",
 		"OWNER=\towner@example.org")
 
@@ -944,7 +944,7 @@ func (s *Suite) Test_Package_checkLocallyModified(c *check.C) {
 
 	// In a package with both OWNER and MAINTAINER, OWNER wins.
 
-	pkg = t.SetupPackage("category/package",
+	pkg = t.SetUpPackage("category/package",
 		"MAINTAINER=\tmaintainer@example.org",
 		"OWNER=\towner@example.org")
 

@@ -325,7 +325,7 @@ func (s *Suite) Test_MkParser_VarUse(c *check.C) {
 func (s *Suite) Test_MkParser_VarUse__ambiguous(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("--explain")
+	t.SetUpCommandLine("--explain")
 
 	mkline := t.NewMkLine("module.mk", 123, "\t$Varname $X")
 	p := NewMkParser(mkline.Line, mkline.ShellCommand(), true)
@@ -503,9 +503,9 @@ func (s *Suite) Test_MkParser_MkCond(c *check.C) {
 func (s *Suite) Test_MkParser_VarUse__parentheses_autofix(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("--autofix")
-	t.SetupVartypes()
-	lines := t.SetupFileLines("Makefile",
+	t.SetUpCommandLine("--autofix")
+	t.SetUpVartypes()
+	lines := t.SetUpFileLines("Makefile",
 		MkRcsID,
 		"COMMENT=$(P1) $(P2)) $(P3:Q) ${BRACES} $(A.$(B.$(C)))")
 	mklines := NewMkLines(lines)
@@ -520,6 +520,163 @@ func (s *Suite) Test_MkParser_VarUse__parentheses_autofix(c *check.C) {
 	t.CheckFileLines("Makefile",
 		MkRcsID,
 		"COMMENT=${P1} ${P2}) ${P3:Q} ${BRACES} $(A.$(B.${C}))")
+}
+
+func (s *Suite) Test_MkParser_varUseModifierSubst(c *check.C) {
+	t := s.Init(c)
+
+	varUse := NewMkVarUse
+	test := func(text string, varUse *MkVarUse, rest string) {
+		mkline := t.NewMkLine("Makefile", 20, "\t"+text)
+		p := NewMkParser(mkline.Line, mkline.ShellCommand(), true)
+
+		actual := p.VarUse()
+
+		t.Check(actual, deepEquals, varUse)
+		t.Check(p.Rest(), equals, rest)
+		t.CheckOutputEmpty()
+	}
+
+	test("${VAR:S", nil, "${VAR:S")             // Just for code coverage.
+	test("${VAR:S}", varUse("VAR"), "")         // FIXME: should not consume anything.
+	test("${VAR:S,}", varUse("VAR"), "")        // FIXME: should not consume anything.
+	test("${VAR:S,from,to}", varUse("VAR"), "") // FIXME: should not consume anything.
+	test("${VAR:S,from,to,}", varUse("VAR", "S,from,to,"), "")
+	test("${VAR:S,^from$,to,}", varUse("VAR", "S,^from$,to,"), "")
+	test("${VAR:S,@F@,${F},}", varUse("VAR", "S,@F@,${F},"), "")
+}
+
+func (s *Suite) Test_MkParser_varUseModifierAt(c *check.C) {
+	t := s.Init(c)
+
+	varUse := NewMkVarUse
+	test := func(text string, varUse *MkVarUse, rest string, diagnostics ...string) {
+		mkline := t.NewMkLine("Makefile", 20, "\t"+text)
+		p := NewMkParser(mkline.Line, mkline.ShellCommand(), true)
+
+		actual := p.VarUse()
+
+		t.Check(actual, deepEquals, varUse)
+		t.Check(p.Rest(), equals, rest)
+		if len(diagnostics) > 0 {
+			t.CheckOutputLines(diagnostics...)
+		} else {
+			t.CheckOutputEmpty()
+		}
+	}
+
+	test("${VAR:@", nil, "${VAR:@") // Just for code coverage.
+	test("${VAR:@i@${i}}", varUse("VAR", "@i@${i}"), "",
+		"WARN: Makefile:20: Modifier ${VAR:@i@...@} is missing the final \"@\".")
+	test("${VAR:@i@${i}@}", varUse("VAR", "@i@${i}@"), "")
+}
+
+func (s *Suite) Test_MkParser_PkgbasePattern(c *check.C) {
+
+	testRest := func(pattern, expected, rest string) {
+		parser := NewMkParser(nil, pattern, false)
+		actual := parser.PkgbasePattern()
+		c.Check(actual, equals, expected)
+		c.Check(parser.Rest(), equals, rest)
+	}
+
+	testRest("fltk", "fltk", "")
+	testRest("fltk|", "fltk", "|")
+	testRest("boost-build-1.59.*", "boost-build", "-1.59.*")
+	testRest("${PHP_PKG_PREFIX}-pdo-5.*", "${PHP_PKG_PREFIX}-pdo", "-5.*")
+	testRest("${PYPKGPREFIX}-metakit-[0-9]*", "${PYPKGPREFIX}-metakit", "-[0-9]*")
+
+	// This is a valid dependency pattern, but it's more complicated
+	// than the patterns pkglint can handle as of January 2019.
+	//
+	// This pattern doesn't have a single package base, which means it cannot be parsed at all.
+	testRest("{ssh{,6}-[0-9]*,openssh-[0-9]*}", "", "{ssh{,6}-[0-9]*,openssh-[0-9]*}")
+}
+
+func (s *Suite) Test_MkParser_Dependency(c *check.C) {
+
+	testRest := func(pattern string, expected DependencyPattern, rest string) {
+		parser := NewMkParser(nil, pattern, false)
+		dp := parser.Dependency()
+		if c.Check(dp, check.NotNil) {
+			c.Check(*dp, equals, expected)
+			c.Check(parser.Rest(), equals, rest)
+		}
+	}
+
+	testNil := func(pattern string) {
+		parser := NewMkParser(nil, pattern, false)
+		dp := parser.Dependency()
+		if c.Check(dp, check.IsNil) {
+			c.Check(parser.Rest(), equals, pattern)
+		}
+	}
+
+	test := func(pattern string, expected DependencyPattern) {
+		testRest(pattern, expected, "")
+	}
+
+	test("fltk>=1.1.5rc1<1.3",
+		DependencyPattern{"fltk", ">=", "1.1.5rc1", "<", "1.3", ""})
+
+	test("libwcalc-1.0*",
+		DependencyPattern{"libwcalc", "", "", "", "", "1.0*"})
+
+	test("${PHP_PKG_PREFIX}-pdo-5.*",
+		DependencyPattern{"${PHP_PKG_PREFIX}-pdo", "", "", "", "", "5.*"})
+
+	test("${PYPKGPREFIX}-metakit-[0-9]*",
+		DependencyPattern{"${PYPKGPREFIX}-metakit", "", "", "", "", "[0-9]*"})
+
+	test("boost-build-1.59.*",
+		DependencyPattern{"boost-build", "", "", "", "", "1.59.*"})
+
+	test("${_EMACS_REQD}",
+		DependencyPattern{"${_EMACS_REQD}", "", "", "", "", ""})
+
+	test("{gcc46,gcc46-libs}>=4.6.0",
+		DependencyPattern{"{gcc46,gcc46-libs}", ">=", "4.6.0", "", "", ""})
+
+	test("perl5-*",
+		DependencyPattern{"perl5", "", "", "", "", "*"})
+
+	test("verilog{,-current}-[0-9]*",
+		DependencyPattern{"verilog{,-current}", "", "", "", "", "[0-9]*"})
+
+	test("mpg123{,-esound,-nas}>=0.59.18",
+		DependencyPattern{"mpg123{,-esound,-nas}", ">=", "0.59.18", "", "", ""})
+
+	test("mysql*-{client,server}-[0-9]*",
+		DependencyPattern{"mysql*-{client,server}", "", "", "", "", "[0-9]*"})
+
+	test("postgresql8[0-35-9]-${module}-[0-9]*",
+		DependencyPattern{"postgresql8[0-35-9]-${module}", "", "", "", "", "[0-9]*"})
+
+	test("ncurses-${NC_VERS}{,nb*}",
+		DependencyPattern{"ncurses", "", "", "", "", "${NC_VERS}{,nb*}"})
+
+	test("xulrunner10>=${MOZ_BRANCH}${MOZ_BRANCH_MINOR}",
+		DependencyPattern{"xulrunner10", ">=", "${MOZ_BRANCH}${MOZ_BRANCH_MINOR}", "", "", ""})
+
+	testRest("gnome-control-center>=2.20.1{,nb*}",
+		DependencyPattern{"gnome-control-center", ">=", "2.20.1", "", "", ""}, "{,nb*}")
+
+	testNil(">=2.20.1{,nb*}")
+
+	testNil("pkgbase<=")
+
+	// TODO: support this edge case someday.
+	// "{ssh{,6}-[0-9]*,openssh-[0-9]*}" is not representable using the current data structure
+
+	// TODO: More test cases from current pkgsrc:
+	// R-jsonlite>=0.9.6*
+	//
+	// {ezmlm>=0.53,ezmlm-idx>=0.40}
+	// {samba>=2.0,ja-samba>=2.0}
+	// {mecab-ipadic>=2.7.0,mecab-jumandic>=5.1}
+	//
+	// ${_EMACS_CONFLICTS.${_EMACS_FLAVOR}}
+	// ${DISTNAME:S/gnome-vfs/gnome-vfs2-${GNOME_VFS_NAME}/}
 }
 
 func (s *Suite) Test_MkCondWalker_Walk(c *check.C) {

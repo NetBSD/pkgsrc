@@ -9,7 +9,17 @@ import (
 // MkParser wraps a Parser and provides methods for parsing
 // things related to Makefiles.
 type MkParser struct {
-	*Parser
+	Line         Line
+	lexer        *textproc.Lexer
+	EmitWarnings bool
+}
+
+func (p *MkParser) EOF() bool {
+	return p.lexer.EOF()
+}
+
+func (p *MkParser) Rest() string {
+	return p.lexer.Rest()
 }
 
 // NewMkParser creates a new parser for the given text.
@@ -20,7 +30,7 @@ type MkParser struct {
 // TODO: Remove the emitWarnings argument in order to separate parsing from checking.
 func NewMkParser(line Line, text string, emitWarnings bool) *MkParser {
 	G.Assertf((line != nil) == emitWarnings, "line must be given iff emitWarnings is set")
-	return &MkParser{NewParser(line, text, emitWarnings)}
+	return &MkParser{line, textproc.NewLexer(text), emitWarnings}
 }
 
 // MkTokens splits a text like in the following example:
@@ -253,10 +263,12 @@ loop:
 		}
 
 		lexer.Reset(modifierMark)
+
 		// FIXME: Why skip over unknown modifiers here? This accepts :S,a,b,c,d,e,f but shouldn't.
-		re := G.res.Compile(regex.Pattern(`^([^:$` + string(closing) + `]|\$\$)+`))
+		re := G.res.Compile(regex.Pattern(ifelseStr(closing == '}', `^([^:$}]|\$\$)+`, `^([^:$)]|\$\$)+`)))
 		for p.VarUse() != nil || lexer.SkipRegexp(re) {
 		}
+
 		if suffixSubst := lexer.Since(modifierMark); contains(suffixSubst, "=") {
 			appendModifier(suffixSubst)
 			continue
@@ -265,10 +277,12 @@ loop:
 	return modifiers
 }
 
+// varUseModifierSubst parses a :S,from,to, or a :C,from,to, modifier.
 func (p *MkParser) varUseModifierSubst(lexer *textproc.Lexer, closing byte) bool {
-	lexer.Skip(1)
+	lexer.Skip(1 /* the initial S or C */)
+
 	sep := lexer.PeekByte() // bmake allows _any_ separator, even letters.
-	if sep == -1 {
+	if sep == -1 || byte(sep) == closing {
 		return false
 	}
 
@@ -306,8 +320,11 @@ func (p *MkParser) varUseModifierSubst(lexer *textproc.Lexer, closing byte) bool
 	return true
 }
 
+// varUseModifierAt parses a variable modifier like ":@v@echo ${v};@",
+// which expands the variable value in a loop.
 func (p *MkParser) varUseModifierAt(lexer *textproc.Lexer, closing byte, varname string) bool {
-	lexer.Skip(1)
+	lexer.Skip(1 /* the initial @ */)
+
 	loopVar := lexer.NextBytesSet(AlnumDot)
 	if loopVar == "" || !lexer.SkipByte('@') {
 		return false
@@ -325,6 +342,7 @@ func (p *MkParser) varUseModifierAt(lexer *textproc.Lexer, closing byte, varname
 }
 
 // MkCond parses a condition like ${OPSYS} == "NetBSD".
+//
 // See devel/bmake/files/cond.c.
 func (p *MkParser) MkCond() MkCond {
 	and := p.mkCondAnd()
@@ -513,6 +531,145 @@ func (p *MkParser) Varname() string {
 	for p.VarUse() != nil || lexer.NextBytesSet(VarnameBytes) != "" {
 	}
 	return lexer.Since(mark)
+}
+
+func (p *MkParser) PkgbasePattern() string {
+	lexer := p.lexer
+	start := lexer.Mark()
+
+	for {
+		if p.VarUse() != nil ||
+			lexer.SkipRegexp(G.res.Compile(`^[\w.*+,{}]+`)) ||
+			lexer.SkipRegexp(G.res.Compile(`^\[[\d-]+\]`)) {
+			continue
+		}
+
+		lookahead := lexer.Copy()
+		if !lookahead.SkipByte('-') {
+			break
+		}
+
+		if lookahead.SkipRegexp(G.res.Compile(`^\d`)) ||
+			// TODO: Replace regex with proper VarUse.
+			lookahead.SkipRegexp(G.res.Compile(`^\$\{\w*VER\w*\}`)) ||
+			lookahead.SkipByte('[') {
+
+			// The parser is looking at a hyphen followed by a version number.
+			// This means the pkgbase stops before the hyphen.
+			break
+		}
+
+		lexer.Skip(1 /* the hyphen */)
+	}
+
+	pkgbase := lexer.Since(start)
+	if strings.Count(pkgbase, "{") == strings.Count(pkgbase, "}") {
+		return pkgbase
+	}
+
+	// Unbalanced braces, as in "{ssh{,6}-[0-9]".
+	lexer.Reset(start)
+	return ""
+}
+
+type DependencyPattern struct {
+	Pkgbase  string // "freeciv-client", "{gcc48,gcc48-libs}", "${EMACS_REQD}"
+	LowerOp  string // ">=", ">"
+	Lower    string // "2.5.0", "${PYVER}"
+	UpperOp  string // "<", "<="
+	Upper    string // "3.0", "${PYVER}"
+	Wildcard string // "[0-9]*", "1.5.*", "${PYVER}"
+}
+
+func (p *MkParser) Dependency() *DependencyPattern {
+	lexer := p.lexer
+
+	parseVersion := func() string {
+		mark := lexer.Mark()
+
+		for p.VarUse() != nil {
+		}
+		if lexer.Since(mark) != "" {
+			return lexer.Since(mark)
+		}
+
+		m := lexer.NextRegexp(G.res.Compile(`^\d[\w.]*`))
+		if m != nil {
+			return m[0]
+		}
+
+		return ""
+	}
+
+	var dp DependencyPattern
+	mark := lexer.Mark()
+	dp.Pkgbase = p.PkgbasePattern()
+	if dp.Pkgbase == "" {
+		return nil
+	}
+
+	mark2 := lexer.Mark()
+	op := lexer.NextString(">=")
+	if op == "" {
+		op = lexer.NextString(">")
+	}
+
+	if op != "" {
+		version := parseVersion()
+		if version != "" {
+			dp.LowerOp = op
+			dp.Lower = version
+		} else {
+			lexer.Reset(mark2)
+		}
+	}
+
+	op = lexer.NextString("<=")
+	if op == "" {
+		op = lexer.NextString("<")
+	}
+
+	if op != "" {
+		version := parseVersion()
+		if version != "" {
+			dp.UpperOp = op
+			dp.Upper = version
+		} else {
+			lexer.Reset(mark2)
+		}
+	}
+
+	if dp.LowerOp != "" || dp.UpperOp != "" {
+		return &dp
+	}
+
+	if lexer.SkipByte('-') && lexer.Rest() != "" {
+		versionMark := lexer.Mark()
+
+		// FIXME: Use VarUse.
+		for lexer.SkipRegexp(G.res.Compile(`^(\$\{\w+\}|[\w\[\]*_.\-])`)) {
+		}
+
+		if !lexer.SkipString("{,nb*}") {
+			lexer.SkipString("{,nb[0-9]*}")
+		}
+
+		dp.Wildcard = lexer.Since(versionMark)
+		return &dp
+	}
+
+	if pkgbaseParser := NewMkParser(nil, dp.Pkgbase, false); pkgbaseParser.VarUse() != nil && pkgbaseParser.EOF() {
+		return &dp
+	}
+
+	if hasSuffix(dp.Pkgbase, "-*") {
+		dp.Pkgbase = strings.TrimSuffix(dp.Pkgbase, "-*")
+		dp.Wildcard = "*"
+		return &dp
+	}
+
+	lexer.Reset(mark)
+	return nil
 }
 
 // MkCond is a condition in a Makefile, such as ${OPSYS} == NetBSD.

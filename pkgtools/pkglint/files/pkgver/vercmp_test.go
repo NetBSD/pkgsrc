@@ -13,19 +13,32 @@ func Test(t *testing.T) {
 }
 
 func (s *Suite) Test_newVersion(c *check.C) {
-	c.Check(newVersion("5.0"), check.DeepEquals, &version{[]int{5, 0, 0}, 0})
-	c.Check(newVersion("5.0nb5"), check.DeepEquals, &version{[]int{5, 0, 0}, 5})
-	c.Check(newVersion("0.0.1-SNAPSHOT"), check.DeepEquals, &version{[]int{0, 0, 0, 0, 1, 19, 14, 1, 16, 19, 8, 15, 20}, 0})
-	c.Check(newVersion("1.0alpha3"), check.DeepEquals, &version{[]int{1, 0, 0, -3, 3}, 0})
-	c.Check(newVersion("1_0alpha3"), check.DeepEquals, &version{[]int{1, 0, 0, -3, 3}, 0})
-	c.Check(newVersion("2.5beta"), check.DeepEquals, &version{[]int{2, 0, 5, -2}, 0})
-	c.Check(newVersion("20151110"), check.DeepEquals, &version{[]int{20151110}, 0})
-	c.Check(newVersion("0"), check.DeepEquals, &version{[]int{0}, 0})
-	c.Check(newVersion("nb1"), check.DeepEquals, &version{nil, 1})
-	c.Check(newVersion("1.0.1a"), check.DeepEquals, &version{[]int{1, 0, 0, 0, 1, 1}, 0})
-	c.Check(newVersion("1.0.1z"), check.DeepEquals, &version{[]int{1, 0, 0, 0, 1, 26}, 0})
-	c.Check(newVersion("0pre20160620"), check.DeepEquals, &version{[]int{0, -1, 20160620}, 0})
-	c.Check(newVersion("3.5.DEV1710"), check.DeepEquals, &version{[]int{3, 0, 5, 0, 4, 5, 22, 1710}, 0})
+	c.Check(newVersion("5.0"), check.DeepEquals,
+		&version{[]int{5, 0, 0}, 0})
+	c.Check(newVersion("5.0nb5"), check.DeepEquals,
+		&version{[]int{5, 0, 0}, 5})
+	c.Check(newVersion("0.0.1-SNAPSHOT"), check.DeepEquals,
+		&version{[]int{0, 0, 0, 0, 1, 19, 14, 1, 16, 19, 8, 15, 20}, 0})
+	c.Check(newVersion("1.0alpha3"), check.DeepEquals,
+		&version{[]int{1, 0, 0, -3, 3}, 0})
+	c.Check(newVersion("1_0alpha3"), check.DeepEquals,
+		&version{[]int{1, 0, 0, -3, 3}, 0})
+	c.Check(newVersion("2.5beta"), check.DeepEquals,
+		&version{[]int{2, 0, 5, -2}, 0})
+	c.Check(newVersion("20151110"), check.DeepEquals,
+		&version{[]int{20151110}, 0})
+	c.Check(newVersion("0"), check.DeepEquals,
+		&version{[]int{0}, 0})
+	c.Check(newVersion("nb1"), check.DeepEquals,
+		&version{nil, 1})
+	c.Check(newVersion("1.0.1a"), check.DeepEquals,
+		&version{[]int{1, 0, 0, 0, 1, 1}, 0})
+	c.Check(newVersion("1.0.1z"), check.DeepEquals,
+		&version{[]int{1, 0, 0, 0, 1, 26}, 0})
+	c.Check(newVersion("0pre20160620"), check.DeepEquals,
+		&version{[]int{0, -1, 20160620}, 0})
+	c.Check(newVersion("3.5.DEV1710"), check.DeepEquals,
+		&version{[]int{3, 0, 5, 0, 4, 5, 22, 1710}, 0})
 }
 
 func (s *Suite) Test_Compare(c *check.C) {
@@ -53,23 +66,26 @@ func (s *Suite) Test_Compare(c *check.C) {
 		{"20151110"},
 	}
 
-	checkVersion := func(i int, iversion string, j int, jversion string) {
-		actual := Compare(iversion, jversion)
-		switch {
-		case i < j && !(actual < 0):
-			c.Check([]interface{}{i, iversion, j, jversion, actual}, check.DeepEquals, []interface{}{i, iversion, j, jversion, "<0"})
-		case i == j && !(actual == 0):
-			c.Check([]interface{}{i, iversion, j, jversion, actual}, check.DeepEquals, []interface{}{i, iversion, j, jversion, "==0"})
-		case i > j && !(actual > 0):
-			c.Check([]interface{}{i, iversion, j, jversion, actual}, check.DeepEquals, []interface{}{i, iversion, j, jversion, ">0"})
+	op := func(cmp int) string {
+		return [...]string{"<0", "==0", ">0"}[cmp+1]
+	}
+
+	test := func(i int, iVersion string, j int, jVersion string) {
+		actual := icmp(Compare(iVersion, jVersion), 0)
+		expected := icmp(i, j)
+		if actual != expected {
+			c.Check(
+				[]interface{}{i, iVersion, j, jVersion, op(actual)},
+				check.DeepEquals,
+				[]interface{}{i, iVersion, j, jVersion, op(expected)})
 		}
 	}
 
-	for i, iversions := range versions {
-		for j, jversions := range versions {
-			for _, iversion := range iversions {
-				for _, jversion := range jversions {
-					checkVersion(i, iversion, j, jversion)
+	for i, iVersions := range versions {
+		for j, jVersions := range versions {
+			for _, iVersion := range iVersions {
+				for _, jVersion := range jVersions {
+					test(i, iVersion, j, jVersion)
 				}
 			}
 		}

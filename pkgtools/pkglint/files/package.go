@@ -317,7 +317,9 @@ func (pkg *Package) readMakefile(filename string, mainLines MkLines, allLines Mk
 	//
 	// Disabled for now since it increases the running time by about 20%
 	// and produces many new warnings, which must be evaluated first.
-	if false && path.Base(filename) == "buildlink3.mk" {
+	//
+	// TODO: Remove the G.Testing below.
+	if G.Testing && path.Base(filename) == "buildlink3.mk" {
 		builtin := path.Join(path.Dir(filename), "builtin.mk")
 		if fileExists(builtin) {
 			pkg.readMakefile(builtin, mainLines, allLines, "")
@@ -553,7 +555,7 @@ func (pkg *Package) checkUpdate() {
 		return
 	}
 
-	for _, sugg := range G.Pkgsrc.GetSuggestedPackageUpdates() {
+	for _, sugg := range G.Pkgsrc.SuggestedUpdates() {
 		if pkg.EffectivePkgbase != sugg.Pkgname {
 			continue
 		}

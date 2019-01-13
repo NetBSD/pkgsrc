@@ -114,8 +114,8 @@ func (s *Suite) Test_Logger_Diag__explanation(c *check.C) {
 func (s *Suite) Test_Logger__show_source_separator(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("--source")
-	lines := t.SetupFileLines("DESCR",
+	t.SetUpCommandLine("--source")
+	lines := t.SetUpFileLines("DESCR",
 		"The first line",
 		"The second line",
 		"The third line")
@@ -152,8 +152,8 @@ func (s *Suite) Test_Logger__show_source_separator(c *check.C) {
 func (s *Suite) Test__show_source_separator_show_autofix(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("--source", "--show-autofix")
-	lines := t.SetupFileLines("DESCR",
+	t.SetUpCommandLine("--source", "--show-autofix")
+	lines := t.SetUpFileLines("DESCR",
 		"The first line",
 		"The second line",
 		"The third line")
@@ -190,8 +190,8 @@ func (s *Suite) Test__show_source_separator_show_autofix(c *check.C) {
 func (s *Suite) Test__show_source_separator_autofix(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("--source", "--autofix")
-	lines := t.SetupFileLines("DESCR",
+	t.SetUpCommandLine("--source", "--autofix")
+	lines := t.SetUpFileLines("DESCR",
 		"The first line",
 		"The second line",
 		"The third line")
@@ -221,7 +221,7 @@ func (s *Suite) Test__show_source_separator_autofix(c *check.C) {
 func (s *Suite) Test_Logger_Explain__only(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("--only", "interesting", "--explain")
+	t.SetUpCommandLine("--only", "interesting", "--explain")
 	line := t.NewLine("Makefile", 27, "The old song")
 
 	// Neither the warning nor the corresponding explanation are logged.
@@ -241,7 +241,7 @@ func (s *Suite) Test_Logger_Explain__only(c *check.C) {
 func (s *Suite) Test_Logger_Explain__show_autofix(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("--explain", "--show-autofix")
+	t.SetUpCommandLine("--explain", "--show-autofix")
 	line := t.NewLine("Makefile", 27, "The old song")
 
 	line.Warnf("Warning without fix.")
@@ -268,7 +268,7 @@ func (s *Suite) Test_Logger_Explain__show_autofix(c *check.C) {
 func (s *Suite) Test_Logger_Explain__show_autofix_and_source(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("--explain", "--show-autofix", "--source")
+	t.SetUpCommandLine("--explain", "--show-autofix", "--source")
 	line := t.NewLine("Makefile", 27, "The old song")
 
 	line.Warnf("Warning without fix.")
@@ -299,7 +299,7 @@ func (s *Suite) Test_Logger_Explain__show_autofix_and_source(c *check.C) {
 func (s *Suite) Test_Logger_Explain__autofix_and_source(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("--explain", "--autofix", "--source")
+	t.SetUpCommandLine("--explain", "--autofix", "--source")
 	line := t.NewLine("Makefile", 27, "The old song")
 
 	line.Warnf("Warning without fix.")
@@ -329,7 +329,7 @@ func (s *Suite) Test_Logger_Explain__autofix_and_source(c *check.C) {
 func (s *Suite) Test_Logger_Explain__empty_lines(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("--explain")
+	t.SetUpCommandLine("--explain")
 	line := t.NewLine("Makefile", 27, "The old song")
 
 	line.Warnf("A normal warning.")
@@ -350,7 +350,7 @@ func (s *Suite) Test_Logger_Explain__empty_lines(c *check.C) {
 func (s *Suite) Test_Logger_ShowSummary__explanations_with_only(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("--only", "interesting")
+	t.SetUpCommandLine("--only", "interesting")
 	line := t.NewLine("Makefile", 27, "The old song")
 
 	// Neither the warning nor the corresponding explanation are logged.
@@ -540,7 +540,7 @@ func (s *Suite) Test_Logger_ShowSummary__autofix_available_with_autofix_option(c
 func (s *Suite) Test_Logger_Logf__duplicate_messages(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("--explain")
+	t.SetUpCommandLine("--explain")
 	G.Logger.Opts.LogVerbose = false
 	line := t.NewLine("README.txt", 123, "text")
 
@@ -563,7 +563,7 @@ func (s *Suite) Test_Logger_Logf__duplicate_messages(c *check.C) {
 func (s *Suite) Test_Logger_Logf__duplicate_explanations(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("--explain")
+	t.SetUpCommandLine("--explain")
 	line := t.NewLine("README.txt", 123, "text")
 
 	// In rare cases, different diagnostics may have the same explanation.
@@ -583,7 +583,7 @@ func (s *Suite) Test_Logger_Logf__duplicate_explanations(c *check.C) {
 func (s *Suite) Test_Logger_Logf__gcc_format(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("--gcc-output-format")
+	t.SetUpCommandLine("--gcc-output-format")
 
 	G.Logf(Note, "filename", "123", "Both filename and line number.", "Both filename and line number.")
 	G.Logf(Note, "", "123", "No filename, only line number.", "No filename, only line number.")
@@ -600,7 +600,7 @@ func (s *Suite) Test_Logger_Logf__gcc_format(c *check.C) {
 func (s *Suite) Test_Logger_Logf__traditional_format(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("--gcc-output-format=no")
+	t.SetUpCommandLine("--gcc-output-format=no")
 
 	G.Logf(Note, "filename", "123", "Both filename and line number.", "Both filename and line number.")
 	G.Logf(Note, "", "123", "No filename, only line number.", "No filename, only line number.")
@@ -618,7 +618,7 @@ func (s *Suite) Test_Logger_Logf__traditional_format(c *check.C) {
 func (s *Suite) Test_Logger_Logf__strange_characters(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("--gcc-output-format", "--source", "--explain")
+	t.SetUpCommandLine("--gcc-output-format", "--source", "--explain")
 
 	G.Logf(Note, "filename", "123", "Format.", "Unicode \U0001F645 and ANSI \x1B are never logged.")
 	G.Explain(
@@ -634,7 +634,7 @@ func (s *Suite) Test_Logger_Logf__strange_characters(c *check.C) {
 func (s *Suite) Test_Logger_Diag__show_source(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("--show-autofix", "--source")
+	t.SetUpCommandLine("--show-autofix", "--source")
 	line := t.NewLine("filename", 123, "text")
 
 	fix := line.Autofix()
@@ -655,7 +655,7 @@ func (s *Suite) Test_Logger_Diag__show_source(c *check.C) {
 func (s *Suite) Test_Logger_Diag__show_source_with_whole_file(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("--source")
+	t.SetUpCommandLine("--source")
 	line := NewLineWhole("filename")
 
 	line.Warnf("This line does not have any RawLine attached.")
@@ -669,7 +669,7 @@ func (s *Suite) Test_Logger_Diag__show_source_with_whole_file(c *check.C) {
 func (s *Suite) Test_Logger_Diag__source_duplicates(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupPkgsrc()
+	t.SetUpPkgsrc()
 	t.CreateFileLines("category/dependency/patches/patch-aa",
 		RcsID,
 		"",
@@ -678,9 +678,9 @@ func (s *Suite) Test_Logger_Diag__source_duplicates(c *check.C) {
 		"@@ -1,1 +1,1 @@",
 		"-old line",
 		"+new line")
-	t.SetupPackage("category/package1",
+	t.SetUpPackage("category/package1",
 		"PATCHDIR=\t../../category/dependency/patches")
-	t.SetupPackage("category/package2",
+	t.SetUpPackage("category/package2",
 		"PATCHDIR=\t../../category/dependency/patches")
 
 	G.Main("pkglint", "--source", "-Wall", t.File("category/package1"), t.File("category/package2"))
@@ -702,16 +702,16 @@ func (s *Suite) Test_Logger_Diag__source_duplicates(c *check.C) {
 func (s *Suite) Test_Logger_shallBeLogged(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine( /* none */ )
+	t.SetUpCommandLine( /* none */ )
 
 	c.Check(G.shallBeLogged("Options should not contain whitespace."), equals, true)
 
-	t.SetupCommandLine("--only", "whitespace")
+	t.SetUpCommandLine("--only", "whitespace")
 
 	c.Check(G.shallBeLogged("Options should not contain whitespace."), equals, true)
 	c.Check(G.shallBeLogged("Options should not contain space."), equals, false)
 
-	t.SetupCommandLine( /* none again */ )
+	t.SetUpCommandLine( /* none again */ )
 
 	c.Check(G.shallBeLogged("Options should not contain whitespace."), equals, true)
 	c.Check(G.shallBeLogged("Options should not contain space."), equals, true)
@@ -722,7 +722,7 @@ func (s *Suite) Test_Logger_shallBeLogged(c *check.C) {
 func (s *Suite) Test_Logger_Logf__duplicate_autofix(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("--explain", "--autofix")
+	t.SetUpCommandLine("--explain", "--autofix")
 	G.Logger.Opts.LogVerbose = false // See SetUpTest
 	line := t.NewLine("README.txt", 123, "text")
 

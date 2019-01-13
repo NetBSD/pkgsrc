@@ -88,6 +88,9 @@ const (
 	shqDquotBacktSquot                  // e.g. "`'word'`"
 )
 
+// String returns a very short identifier for the quoting state.
+// In this, d means double quotes, s means single quotes,
+// b means backticks and S means subshell.
 func (q ShQuoting) String() string {
 	return [...]string{
 		"plain",

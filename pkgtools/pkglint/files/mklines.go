@@ -31,7 +31,7 @@ func NewMkLines(lines Lines) MkLines {
 		mklines[i] = NewMkLine(line)
 	}
 
-	tools := NewTools(lines.FileName)
+	tools := NewTools()
 	tools.Fallback(G.Pkgsrc.Tools)
 
 	return &MkLinesImpl{

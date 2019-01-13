@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/12/17 00:15:39 rillig Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/01/13 19:55:52 rillig Exp $
 bin/pkglint
 gopkg/pkg/${GO_PLATFORM}/netbsd.org/pkglint.a
 gopkg/pkg/${GO_PLATFORM}/netbsd.org/pkglint/getopt.a
@@ -19,6 +19,7 @@ gopkg/src/netbsd.org/pkglint/category.go
 gopkg/src/netbsd.org/pkglint/category_test.go
 gopkg/src/netbsd.org/pkglint/check_test.go
 gopkg/src/netbsd.org/pkglint/cmd/pkglint/pkglint.go
+gopkg/src/netbsd.org/pkglint/cmd/pkglint/pkglint_test.go
 gopkg/src/netbsd.org/pkglint/distinfo.go
 gopkg/src/netbsd.org/pkglint/distinfo_test.go
 gopkg/src/netbsd.org/pkglint/expecter.go
@@ -68,8 +69,6 @@ gopkg/src/netbsd.org/pkglint/options.go
 gopkg/src/netbsd.org/pkglint/options_test.go
 gopkg/src/netbsd.org/pkglint/package.go
 gopkg/src/netbsd.org/pkglint/package_test.go
-gopkg/src/netbsd.org/pkglint/parser.go
-gopkg/src/netbsd.org/pkglint/parser_test.go
 gopkg/src/netbsd.org/pkglint/patches.go
 gopkg/src/netbsd.org/pkglint/patches_test.go
 gopkg/src/netbsd.org/pkglint/pkglint.0

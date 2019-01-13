@@ -11,7 +11,7 @@ func (s *Suite) Test_CheckLinesDistinfo(c *check.C) {
 		"patch contents")
 	t.CreateFileLines("patches/patch-ab",
 		"patch contents")
-	lines := t.SetupFileLines("distinfo",
+	lines := t.SetUpFileLines("distinfo",
 		"should be the RCS ID",
 		"should be empty",
 		"MD5 (distfile.tar.gz) = 12345678901234567890123456789012",
@@ -43,9 +43,9 @@ func (s *Suite) Test_CheckLinesDistinfo(c *check.C) {
 func (s *Suite) Test_distinfoLinesChecker_checkGlobalDistfileMismatch(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupPkgsrc()
-	t.SetupPackage("category/package1")
-	t.SetupPackage("category/package2")
+	t.SetUpPkgsrc()
+	t.SetUpPackage("category/package1")
+	t.SetUpPackage("category/package2")
 	t.CreateFileLines("category/package1/distinfo",
 		RcsID,
 		"",
@@ -88,12 +88,12 @@ func (s *Suite) Test_distinfoLinesChecker_checkGlobalDistfileMismatch(c *check.C
 func (s *Suite) Test_CheckLinesDistinfo__uncommitted_patch(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupPackage("category/package")
+	t.SetUpPackage("category/package")
 	t.Chdir("category/package")
 	t.CreateFileDummyPatch("patches/patch-aa")
 	t.CreateFileLines("CVS/Entries",
 		"/distinfo/...")
-	t.SetupFileLines("distinfo",
+	t.SetUpFileLines("distinfo",
 		RcsID,
 		"",
 		"SHA1 (patch-aa) = ebbf34b0641bcb508f17d5a27f2bf2a536d810ac")
@@ -107,12 +107,12 @@ func (s *Suite) Test_CheckLinesDistinfo__uncommitted_patch(c *check.C) {
 func (s *Suite) Test_CheckLinesDistinfo__unrecorded_patches(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupPackage("category/package")
+	t.SetUpPackage("category/package")
 	t.Chdir("category/package")
 	t.CreateFileLines("patches/CVS/Entries")
 	t.CreateFileDummyPatch("patches/patch-aa")
 	t.CreateFileDummyPatch("patches/patch-src-Makefile")
-	t.SetupFileLines("distinfo",
+	t.SetUpFileLines("distinfo",
 		RcsID,
 		"",
 		"SHA1 (distfile.tar.gz) = ...",
@@ -133,14 +133,14 @@ func (s *Suite) Test_CheckLinesDistinfo__unrecorded_patches(c *check.C) {
 func (s *Suite) Test_CheckLinesDistinfo__relative_path_in_distinfo(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupPackage("category/package",
+	t.SetUpPackage("category/package",
 		"DISTINFO_FILE=\t../../other/common/distinfo",
 		"PATCHDIR=\t../../devel/patches/patches")
 	t.Remove("category/package/distinfo")
 	t.CreateFileLines("devel/patches/patches/CVS/Entries")
 	t.CreateFileDummyPatch("devel/patches/patches/patch-aa")
 	t.CreateFileDummyPatch("devel/patches/patches/patch-only-in-patches")
-	t.SetupFileLines("other/common/distinfo",
+	t.SetUpFileLines("other/common/distinfo",
 		RcsID,
 		"",
 		"SHA1 (patch-aa) = ...",
@@ -163,14 +163,14 @@ func (s *Suite) Test_CheckLinesDistinfo__relative_path_in_distinfo(c *check.C) {
 func (s *Suite) Test_CheckLinesDistinfo__distinfo_and_patches_in_separate_directory(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupPackage("category/package",
+	t.SetUpPackage("category/package",
 		"DISTINFO_FILE=\t../../other/common/distinfo",
 		"PATCHDIR=\t../../other/common/patches")
 	t.Remove("category/package/distinfo")
 	t.CreateFileLines("other/common/patches/CVS/Entries")
 	t.CreateFileDummyPatch("other/common/patches/patch-aa")
 	t.CreateFileDummyPatch("other/common/patches/patch-only-in-patches")
-	t.SetupFileLines("other/common/distinfo",
+	t.SetUpFileLines("other/common/distinfo",
 		RcsID,
 		"",
 		"SHA1 (patch-aa) = ...",
@@ -193,7 +193,7 @@ func (s *Suite) Test_CheckLinesDistinfo__manual_patches(c *check.C) {
 
 	t.Chdir("category/package")
 	t.CreateFileLines("patches/manual-libtool.m4")
-	lines := t.SetupFileLines("distinfo",
+	lines := t.SetUpFileLines("distinfo",
 		RcsID,
 		"",
 		"SHA1 (patch-aa) = ...")
@@ -223,8 +223,8 @@ func (s *Suite) Test_CheckLinesDistinfo__manual_patches(c *check.C) {
 func (s *Suite) Test_CheckLinesDistinfo__missing_php_patches(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupPkgsrc()
-	t.SetupCommandLine("-Wall,no-space")
+	t.SetUpPkgsrc()
+	t.SetUpCommandLine("-Wall,no-space")
 	t.CreateFileLines("licenses/unknown-license")
 	t.CreateFileLines("lang/php/ext.mk",
 		MkRcsID,

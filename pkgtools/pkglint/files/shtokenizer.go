@@ -3,14 +3,13 @@ package pkglint
 import "netbsd.org/pkglint/textproc"
 
 type ShTokenizer struct {
-	parser *Parser
-	mkp    *MkParser
+	parser *MkParser
 }
 
 func NewShTokenizer(line Line, text string, emitWarnings bool) *ShTokenizer {
-	p := NewParser(line, text, emitWarnings)
-	mkp := MkParser{p}
-	return &ShTokenizer{p, &mkp}
+	// TODO: Switching to NewMkParser is nontrivial since emitWarnings must equal (line != nil).
+	p := MkParser{line, textproc.NewLexer(text), emitWarnings}
+	return &ShTokenizer{&p}
 }
 
 // ShAtom parses a basic building block of a shell program.
@@ -26,9 +25,11 @@ func (p *ShTokenizer) ShAtom(quoting ShQuoting) *ShAtom {
 	lexer := p.parser.lexer
 	mark := lexer.Mark()
 
-	if varuse := p.mkp.VarUse(); varuse != nil {
+	if varuse := p.parser.VarUse(); varuse != nil {
 		return &ShAtom{shtVaruse, lexer.Since(mark), quoting, varuse}
 	}
+
+	// TODO: Most probably there is a more elegant way than the large switch block below.
 
 	var atom *ShAtom
 	switch quoting {
@@ -60,9 +61,12 @@ func (p *ShTokenizer) ShAtom(quoting ShQuoting) *ShAtom {
 
 	if atom == nil {
 		lexer.Reset(mark)
-		if hasPrefix(lexer.Rest(), "${") {
+		switch {
+		case hasPrefix(lexer.Rest(), "${"):
 			p.parser.Line.Warnf("Unclosed Make variable starting at %q.", shorten(lexer.Rest(), 20))
-		} else {
+		case hasPrefix(lexer.Rest(), "$${"):
+			p.parser.Line.Warnf("Unclosed shell variable starting at %q.", shorten(lexer.Rest(), 20))
+		default:
 			p.parser.Line.Warnf("Internal pkglint error in ShTokenizer.ShAtom at %q (quoting=%s).", lexer.Rest(), quoting)
 		}
 	}
@@ -295,6 +299,10 @@ loop:
 			break
 		case matches(lexer.Rest(), `^\$\$[^!#(*\-0-9?@A-Z_a-z{]`):
 			lexer.NextString("$$")
+		case lexer.Rest() == "$$":
+			lexer.Skip(2)
+		case lexer.Rest() == "$":
+			lexer.Skip(1)
 		default:
 			break loop
 		}
@@ -354,7 +362,7 @@ func (p *ShTokenizer) shOperator(q ShQuoting) *ShAtom {
 	case lexer.SkipString("||"),
 		lexer.SkipString("&&"),
 		lexer.SkipString(";;"),
-		lexer.SkipByte('\n'),
+		lexer.NextBytesFunc(func(b byte) bool { return b == '\n' }) != "",
 		lexer.SkipByte(';'),
 		lexer.SkipByte('('),
 		lexer.SkipByte(')'),
@@ -413,15 +421,17 @@ func (p *ShTokenizer) ShToken() *ShToken {
 		return NewShToken(atom.MkText, atom)
 	}
 
-nextAtom:
-	mark := lexer.Mark()
-	atom := peek()
-	if atom != nil && (atom.Type.IsWord() || atom.Quoting != shqPlain) {
-		skip()
-		atoms = append(atoms, atom)
-		goto nextAtom
+	for {
+		mark := lexer.Mark()
+		atom := peek()
+		if atom != nil && (atom.Type.IsWord() || atom.Quoting != shqPlain) {
+			skip()
+			atoms = append(atoms, atom)
+			continue
+		}
+		lexer.Reset(mark)
+		break
 	}
-	lexer.Reset(mark)
 
 	G.Assertf(len(atoms) > 0, "ShTokenizer.ShToken")
 	return NewShToken(lexer.Since(initialMark), atoms...)
