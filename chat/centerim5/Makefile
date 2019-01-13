@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/11/28 15:12:27 nia Exp $
+# $NetBSD: Makefile,v 1.2 2019/01/13 17:58:47 nia Exp $
 
 DISTNAME=	centerim5-5.0.1
 CATEGORIES=	chat
@@ -30,11 +30,11 @@ SUBST_SED.equals=	-e 's,== True,= True,g'
 pre-configure:
 	cd ${WRKSRC} && ./bootstrap
 
+.include "../../lang/python/application.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/libsigc++/buildlink3.mk"
 .include "../../devel/ncursesw/buildlink3.mk"
 .include "../../chat/libpurple/buildlink3.mk"
-.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
