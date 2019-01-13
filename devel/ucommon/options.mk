@@ -1,9 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2015/04/18 02:43:24 rodent Exp $
+# $NetBSD: options.mk,v 1.3 2019/01/13 18:21:24 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ucommon
-PKG_SUPPORTED_OPTIONS=	gnutls openssl static tests
+PKG_SUPPORTED_OPTIONS=	gnutls openssl tests
 PKG_SUGGESTED_OPTIONS+=	openssl
-PLIST_VARS+=		dynamic static
 
 .include "../../mk/bsd.options.mk"
 
@@ -18,14 +17,6 @@ BUILDLINK_API_DEPENDS.openssl+=	openssl>=1.0.0
 CMAKE_ARGS+=	-DCRYPTO_OPENSSL=ON
 .else
 CMAKE_ARGS+=	-DCRYPTO_OPENSSL=OFF
-.endif
-
-.if !empty(PKG_OPTIONS:Mstatic)
-CMAKE_ARGS+=	-DBUILD_STATIC=ON -DCRYPTO_STATIC=ON
-PLIST.static=	yes
-.else
-CMAKE_ARGS+=	-DBUILD_STATIC=OFF -DCRYPTO_STATIC=OFF
-PLIST.dynamic=	yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mtests)
