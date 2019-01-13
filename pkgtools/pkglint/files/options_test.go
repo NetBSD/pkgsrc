@@ -5,20 +5,20 @@ import "gopkg.in/check.v1"
 func (s *Suite) Test_CheckLinesOptionsMk(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("-Wall,no-space")
-	t.SetupVartypes()
-	t.SetupOption("mc-charset", "")
-	t.SetupOption("mysql", "")
-	t.SetupOption("ncurses", "")
-	t.SetupOption("negative", "Demonstrates negated .if/.else")
-	t.SetupOption("slang", "")
-	t.SetupOption("sqlite", "")
-	t.SetupOption("x11", "")
+	t.SetUpCommandLine("-Wall,no-space")
+	t.SetUpVartypes()
+	t.SetUpOption("mc-charset", "")
+	t.SetUpOption("mysql", "")
+	t.SetUpOption("ncurses", "")
+	t.SetUpOption("negative", "Demonstrates negated .if/.else")
+	t.SetUpOption("slang", "")
+	t.SetUpOption("sqlite", "")
+	t.SetUpOption("x11", "")
 
 	t.CreateFileLines("mk/bsd.options.mk",
 		MkRcsID)
 
-	mklines := t.SetupFileMkLines("category/package/options.mk",
+	mklines := t.SetUpFileMkLines("category/package/options.mk",
 		MkRcsID,
 		"",
 		"PKG_OPTIONS_VAR=                PKG_OPTIONS.mc",
@@ -75,13 +75,13 @@ func (s *Suite) Test_CheckLinesOptionsMk(c *check.C) {
 func (s *Suite) Test_CheckLinesOptionsMk__unexpected_line(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("-Wno-space")
-	t.SetupVartypes()
+	t.SetUpCommandLine("-Wno-space")
+	t.SetUpVartypes()
 
 	t.CreateFileLines("mk/bsd.options.mk",
 		MkRcsID)
 
-	mklines := t.SetupFileMkLines("category/package/options.mk",
+	mklines := t.SetUpFileMkLines("category/package/options.mk",
 		MkRcsID,
 		"",
 		"PKG_OPTIONS_VAR=                PKG_OPTIONS.mc",
@@ -98,17 +98,17 @@ func (s *Suite) Test_CheckLinesOptionsMk__unexpected_line(c *check.C) {
 func (s *Suite) Test_CheckLinesOptionsMk__malformed_condition(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("-Wno-space")
-	t.SetupVartypes()
-	t.SetupOption("mc-charset", "")
-	t.SetupOption("ncurses", "")
-	t.SetupOption("slang", "")
-	t.SetupOption("x11", "")
+	t.SetUpCommandLine("-Wno-space")
+	t.SetUpVartypes()
+	t.SetUpOption("mc-charset", "")
+	t.SetUpOption("ncurses", "")
+	t.SetUpOption("slang", "")
+	t.SetUpOption("x11", "")
 
 	t.CreateFileLines("mk/bsd.options.mk",
 		MkRcsID)
 
-	mklines := t.SetupFileMkLines("category/package/options.mk",
+	mklines := t.SetUpFileMkLines("category/package/options.mk",
 		MkRcsID,
 		"",
 		"PKG_OPTIONS_VAR=                PKG_OPTIONS.mc",

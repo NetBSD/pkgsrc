@@ -7,7 +7,7 @@ import (
 func (s *Suite) Test_Vartype_EffectivePermissions(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupVartypes()
+	t.SetUpVartypes()
 
 	if typ := G.Pkgsrc.vartypes["PREFIX"]; c.Check(typ, check.NotNil) {
 		c.Check(typ.basicType.name, equals, "Pathname")
@@ -23,11 +23,16 @@ func (s *Suite) Test_Vartype_EffectivePermissions(c *check.C) {
 }
 
 func (s *Suite) Test_BasicType_HasEnum(c *check.C) {
-	vc := enum("catinstall middle maninstall")
+	vc := enum("start middle end")
 
-	c.Check(vc.HasEnum("catinstall"), equals, true)
+	c.Check(vc.HasEnum("start"), equals, true)
 	c.Check(vc.HasEnum("middle"), equals, true)
-	c.Check(vc.HasEnum("maninstall"), equals, true)
+	c.Check(vc.HasEnum("end"), equals, true)
+
+	c.Check(vc.HasEnum("star"), equals, false)
+	c.Check(vc.HasEnum("mid"), equals, false)
+	c.Check(vc.HasEnum("nd"), equals, false)
+	c.Check(vc.HasEnum("start middle"), equals, false)
 }
 
 func (s *Suite) Test_ACLPermissions_Contains(c *check.C) {
@@ -59,7 +64,7 @@ func (s *Suite) Test_ACLPermissions_HumanString(c *check.C) {
 func (s *Suite) Test_Vartype_IsConsideredList(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupVartypes()
+	t.SetUpVartypes()
 
 	c.Check(G.Pkgsrc.VariableType("COMMENT").IsConsideredList(), equals, false)
 	c.Check(G.Pkgsrc.VariableType("DEPENDS").IsConsideredList(), equals, true)

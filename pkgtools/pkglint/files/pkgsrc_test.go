@@ -51,7 +51,7 @@ func (s *Suite) Test_Pkgsrc_parseSuggestedUpdates(c *check.C) {
 func (s *Suite) Test_Pkgsrc_checkToplevelUnusedLicenses(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupPkgsrc()
+	t.SetUpPkgsrc()
 	t.CreateFileLines("mk/misc/category.mk")
 	t.CreateFileLines("licenses/2-clause-bsd")
 	t.CreateFileLines("licenses/gnu-gpl-v3")
@@ -68,13 +68,13 @@ func (s *Suite) Test_Pkgsrc_checkToplevelUnusedLicenses(c *check.C) {
 		"",
 		".include \"../mk/misc/category.mk\"")
 
-	t.SetupPackage("category/package",
+	t.SetUpPackage("category/package",
 		"LICENSE=\t2-clause-bsd")
 
 	G.Main("pkglint", "-r", "-Cglobal", t.File("."))
 
 	t.CheckOutputLines(
-		"WARN: ~/licenses/gnu-gpl-v2: This license seems to be unused.", // Added by Tester.SetupPkgsrc
+		"WARN: ~/licenses/gnu-gpl-v2: This license seems to be unused.", // Added by Tester.SetUpPkgsrc
 		"WARN: ~/licenses/gnu-gpl-v3: This license seems to be unused.",
 		"0 errors and 2 warnings found.")
 }
@@ -124,7 +124,7 @@ func (s *Suite) Test_Pkgsrc_loadTools(c *check.C) {
 	t.DisableTracing()
 
 	t.CheckOutputLines(
-		"TRACE: + (*Tools).Trace(\"Pkgsrc\")",
+		"TRACE: + (*Tools).Trace()",
 		"TRACE: 1   tool bzcat:::Nowhere",
 		"TRACE: 1   tool bzip2:::Nowhere",
 		"TRACE: 1   tool chown:CHOWN::Nowhere",
@@ -139,15 +139,15 @@ func (s *Suite) Test_Pkgsrc_loadTools(c *check.C) {
 		"TRACE: 1   tool strip:::Nowhere",
 		"TRACE: 1   tool test:TEST:var:AfterPrefsMk",
 		"TRACE: 1   tool true:TRUE:var:AfterPrefsMk",
-		"TRACE: - (*Tools).Trace(\"Pkgsrc\")")
+		"TRACE: - (*Tools).Trace()")
 }
 
 // As a side-benefit, loadTools also loads the _BUILD_DEFS.
 func (s *Suite) Test_Pkgsrc_loadTools__BUILD_DEFS(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupTool("echo", "ECHO", AtRunTime)
-	pkg := t.SetupPackage("category/package",
+	t.SetUpTool("echo", "ECHO", AtRunTime)
+	pkg := t.SetUpPackage("category/package",
 		"pre-configure:",
 		"\t@${ECHO} ${PKG_SYSCONFDIR} ${VARBASE}")
 	t.CreateFileLines("mk/bsd.pkg.mk",
@@ -184,13 +184,20 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile(c *check.C) {
 	changes := G.Pkgsrc.loadDocChangesFromFile(t.File("doc/CHANGES-2018"))
 
 	c.Assert(len(changes), equals, 7)
-	c.Check(*changes[0], equals, Change{changes[0].Line, "Added", "category/package", "1.0", "author1", "2015-01-01"})
-	c.Check(*changes[1], equals, Change{changes[1].Line, "Updated", "category/package", "1.5", "author2", "2018-01-02"})
-	c.Check(*changes[2], equals, Change{changes[2].Line, "Renamed", "category/package", "", "author3", "2018-01-03"})
-	c.Check(*changes[3], equals, Change{changes[3].Line, "Moved", "category/package", "", "author4", "2018-01-04"})
-	c.Check(*changes[4], equals, Change{changes[4].Line, "Removed", "category/package", "", "author5", "2018-01-09"})
-	c.Check(*changes[5], equals, Change{changes[5].Line, "Removed", "category/package", "", "author6", "2018-01-06"})
-	c.Check(*changes[6], equals, Change{changes[6].Line, "Downgraded", "category/package", "1.2", "author7", "2018-01-07"})
+	c.Check(*changes[0], equals, Change{changes[0].Line,
+		"Added", "category/package", "1.0", "author1", "2015-01-01"})
+	c.Check(*changes[1], equals, Change{changes[1].Line,
+		"Updated", "category/package", "1.5", "author2", "2018-01-02"})
+	c.Check(*changes[2], equals, Change{changes[2].Line,
+		"Renamed", "category/package", "", "author3", "2018-01-03"})
+	c.Check(*changes[3], equals, Change{changes[3].Line,
+		"Moved", "category/package", "", "author4", "2018-01-04"})
+	c.Check(*changes[4], equals, Change{changes[4].Line,
+		"Removed", "category/package", "", "author5", "2018-01-09"})
+	c.Check(*changes[5], equals, Change{changes[5].Line,
+		"Removed", "category/package", "", "author6", "2018-01-06"})
+	c.Check(*changes[6], equals, Change{changes[6].Line,
+		"Downgraded", "category/package", "1.2", "author7", "2018-01-07"})
 
 	t.CheckOutputLines(
 		"WARN: ~/doc/CHANGES-2018:1: Year 2015 for category/package does not match the filename ~/doc/CHANGES-2018.",
@@ -201,7 +208,7 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile(c *check.C) {
 func (s *Suite) Test_Pkgsrc_loadDocChanges__not_found(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupPkgsrc()
+	t.SetUpPkgsrc()
 	t.Remove("doc/CHANGES-2018")
 	t.Remove("doc/TODO")
 	t.Remove("doc")
@@ -222,9 +229,9 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__not_found(c *check.C) {
 func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__wip(c *check.C) {
 	t := s.Init(c)
 
-	pkg := t.SetupPackage("wip/package",
+	pkg := t.SetUpPackage("wip/package",
 		"DISTNAME=\tpackage-1.11",
-		"CATEGORIES=\tlocal")
+		"CATEGORIES=\tlocal") // To avoid "Invalid category wip".
 	t.CreateFileLines("wip/TODO",
 		RcsID,
 		"",
@@ -236,14 +243,15 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__wip(c *check.C) {
 	G.Check(pkg)
 
 	t.CheckOutputLines(
-		"WARN: ~/wip/package/Makefile:3: This package should be updated to 1.13 ([cool new features]).")
+		"WARN: ~/wip/package/Makefile:3: " +
+			"This package should be updated to 1.13 ([cool new features]).")
 }
 
 func (s *Suite) Test_Pkgsrc__deprecated(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupTool("echo", "ECHO", AtRunTime)
-	t.SetupVartypes()
+	t.SetUpTool("echo", "ECHO", AtRunTime)
+	t.SetUpVartypes()
 	G.Pkgsrc.initDeprecatedVars()
 	mklines := t.NewMkLines("Makefile",
 		MkRcsID,
@@ -254,9 +262,12 @@ func (s *Suite) Test_Pkgsrc__deprecated(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"WARN: Makefile:2: Definition of USE_PERL5 is deprecated. Use USE_TOOLS+=perl or USE_TOOLS+=perl:run instead.",
-		"WARN: Makefile:3: Definition of SUBST_POSTCMD.class is deprecated. Has been removed, as it seemed unused.",
-		"WARN: Makefile:4: Use of \"PKG_JVM\" is deprecated. Use PKG_DEFAULT_JVM instead.")
+		"WARN: Makefile:2: Definition of USE_PERL5 is deprecated. "+
+			"Use USE_TOOLS+=perl or USE_TOOLS+=perl:run instead.",
+		"WARN: Makefile:3: Definition of SUBST_POSTCMD.class is deprecated. "+
+			"Has been removed, as it seemed unused.",
+		"WARN: Makefile:4: Use of \"PKG_JVM\" is deprecated. "+
+			"Use PKG_DEFAULT_JVM instead.")
 }
 
 func (s *Suite) Test_Pkgsrc_ListVersions__no_basedir(c *check.C) {
@@ -313,7 +324,7 @@ func (s *Suite) Test_Pkgsrc__caching(c *check.C) {
 	c.Check(cached, equals, "../../lang/python27")
 }
 
-func (s *Suite) Test_Pkgsrc_Latest__multi(c *check.C) {
+func (s *Suite) Test_Pkgsrc_Latest__multiple_candidates(c *check.C) {
 	t := s.Init(c)
 
 	t.CreateFileLines("lang/Makefile")
@@ -417,9 +428,12 @@ func (s *Suite) Test_Pkgsrc_loadPkgOptions(c *check.C) {
 		"===== Merge conflict",
 		">>>>> Merge conflict")
 
-	t.ExpectFatal(
-		G.Pkgsrc.loadPkgOptions,
-		"FATAL: ~/mk/defaults/options.description:2: Unknown line format: <<<<< Merge conflict")
+	G.Pkgsrc.loadPkgOptions()
+
+	t.CheckOutputLines(
+		"ERROR: ~/mk/defaults/options.description:2: Invalid line format: <<<<< Merge conflict",
+		"ERROR: ~/mk/defaults/options.description:3: Invalid line format: ===== Merge conflict",
+		"ERROR: ~/mk/defaults/options.description:4: Invalid line format: >>>>> Merge conflict")
 }
 
 func (s *Suite) Test_Pkgsrc_loadTools__no_tools_found(c *check.C) {
@@ -447,9 +461,9 @@ func (s *Suite) Test_Pkgsrc_loadTools__no_tools_found(c *check.C) {
 func (s *Suite) Test_Pkgsrc_VariableType(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupVartypes()
+	t.SetUpVartypes()
 
-	checkType := func(varname string, vartype string) {
+	test := func(varname string, vartype string) {
 		actualType := G.Pkgsrc.VariableType(varname)
 		if vartype == "" {
 			c.Check(actualType, check.IsNil)
@@ -460,24 +474,24 @@ func (s *Suite) Test_Pkgsrc_VariableType(c *check.C) {
 		}
 	}
 
-	checkType("_PERL5_PACKLIST_AWK_STRIP_DESTDIR", "")
-	checkType("SOME_DIR", "Pathname (guessed)")
-	checkType("SOMEDIR", "Pathname (guessed)")
-	checkType("SEARCHPATHS", "List of Pathname (guessed)")
-	checkType("MYPACKAGE_USER", "UserGroupName (guessed)")
-	checkType("MYPACKAGE_GROUP", "UserGroupName (guessed)")
-	checkType("MY_CMD_ENV", "List of ShellWord (guessed)")
-	checkType("MY_CMD_ARGS", "List of ShellWord (guessed)")
-	checkType("MY_CMD_CFLAGS", "List of CFlag (guessed)")
-	checkType("MY_CMD_LDFLAGS", "List of LdFlag (guessed)")
-	checkType("PLIST.abcde", "Yes")
+	test("_PERL5_PACKLIST_AWK_STRIP_DESTDIR", "")
+	test("SOME_DIR", "Pathname (guessed)")
+	test("SOMEDIR", "Pathname (guessed)")
+	test("SEARCHPATHS", "List of Pathname (guessed)")
+	test("MYPACKAGE_USER", "UserGroupName (guessed)")
+	test("MYPACKAGE_GROUP", "UserGroupName (guessed)")
+	test("MY_CMD_ENV", "List of ShellWord (guessed)")
+	test("MY_CMD_ARGS", "List of ShellWord (guessed)")
+	test("MY_CMD_CFLAGS", "List of CFlag (guessed)")
+	test("MY_CMD_LDFLAGS", "List of LdFlag (guessed)")
+	test("PLIST.abcde", "Yes")
 }
 
 // Guessing the variable type works for both plain and parameterized variable names.
 func (s *Suite) Test_Pkgsrc_VariableType__varparam(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupVartypes()
+	t.SetUpVartypes()
 
 	t1 := G.Pkgsrc.VariableType("FONT_DIRS")
 
@@ -500,7 +514,7 @@ func (s *Suite) Test_Pkgsrc_VariableType__from_mk(c *check.C) {
 	// but it is a known variable since the pkgsrc infrastructure uses
 	// it. But still, its type is unknown.
 
-	t.SetupPkgsrc()
+	t.SetUpPkgsrc()
 	t.CreateFileLines("mk/sys-vars.mk",
 		MkRcsID,
 		"",
@@ -508,7 +522,7 @@ func (s *Suite) Test_Pkgsrc_VariableType__from_mk(c *check.C) {
 		"CPPPATH?=\tcpp",
 		"OSNAME.Linux?=\tLinux")
 
-	pkg := t.SetupPackage("category/package",
+	pkg := t.SetUpPackage("category/package",
 		"PKGSRC_MAKE_ENV+=\tCPP=${CPPPATH:Q}",
 		"PKGSRC_UNKNOWN_ENV+=\tCPP=${ABCPATH:Q}",
 		"OSNAME.SunOS=\t\t${OSNAME.Other}")

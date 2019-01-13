@@ -78,7 +78,7 @@ func NewMkLine(line Line) *MkLineImpl {
 	}
 
 	if m, commented, varname, spaceAfterVarname, op, valueAlign, value, spaceAfterValue, comment := MatchVarassign(text); m {
-		if G.Opts.WarnSpace && spaceAfterVarname != "" {
+		if spaceAfterVarname != "" {
 			switch {
 			case hasSuffix(varname, "+") && op == "=":
 				break
@@ -95,7 +95,7 @@ func NewMkLine(line Line) *MkLineImpl {
 
 		// XXX: This check should be moved somewhere else. NewMkLine should only be concerned with parsing.
 		if comment != "" && value != "" && spaceAfterValue == "" {
-			line.Warnf("The # character starts a comment.")
+			line.Warnf("The # character starts a Makefile comment.")
 			G.Explain(
 				"In a variable assignment, an unescaped # starts a comment that",
 				"continues until the end of the line.",
@@ -143,7 +143,7 @@ func NewMkLine(line Line) *MkLineImpl {
 	}
 
 	// XXX: Replace this regular expression with proper parsing.
-	// There might be a ${VAR:M*.c} in these variables, which currently confuses the "parser".
+	// There might be a ${VAR:M*.c} in these variables, which the below regular expression cannot handle.
 	if m, targets, whitespace, sources := match3(text, `^([^\t :]+(?:[\t ]*[^\t :]+)*)([\t ]*):[\t ]*([^#]*?)(?:[\t ]*#.*)?$`); m {
 		// XXX: This check should be moved somewhere else. NewMkLine should only be concerned with parsing.
 		if whitespace != "" {
@@ -534,7 +534,7 @@ func (mkline *MkLineImpl) ResolveVarsInRelativePath(relativePath string) string 
 		// Relative pkgsrc paths usually only contain two or three levels.
 		// A possible reason for reaching this assertion is:
 		// Tests that access the file system must create their lines
-		// using t.SetupFileMkLines, not using t.NewMkLines.
+		// using t.SetUpFileMkLines, not using t.NewMkLines.
 		G.Assertf(!contains(pkgsrcdir, "../../../../.."),
 			"Relative path %q for %q is too deep below the pkgsrc root %q.",
 			pkgsrcdir, basedir, G.Pkgsrc.File("."))

@@ -110,17 +110,23 @@ func imax(a, b int) int {
 }
 
 func mustMatch(s string, re regex.Pattern) []string {
-	if m := G.res.Match(s, re); m != nil {
-		return m
+	m := G.res.Match(s, re)
+	if m == nil {
+		G.Assertf(false, "mustMatch %q %q", s, re)
 	}
-	panic(sprintf("mustMatch %q %q", s, re))
+	return m
 }
 
 func isEmptyDir(filename string) bool {
-	dirents, err := ioutil.ReadDir(filename)
-	if err != nil || hasSuffix(filename, "/CVS") {
+	if hasSuffix(filename, "/CVS") {
 		return true
 	}
+
+	dirents, err := ioutil.ReadDir(filename)
+	if err != nil {
+		return true
+	}
+
 	for _, dirent := range dirents {
 		name := dirent.Name()
 		if isIgnoredFilename(name) {
@@ -158,9 +164,23 @@ func isIgnoredFilename(filename string) bool {
 	return false
 }
 
+func dirglob(dirname string) []string {
+	infos, err := ioutil.ReadDir(dirname)
+	if err != nil {
+		return nil
+	}
+	var filenames []string
+	for _, info := range infos {
+		if !(isIgnoredFilename(info.Name())) {
+			filenames = append(filenames, cleanpath(dirname+"/"+info.Name()))
+		}
+	}
+	return filenames
+}
+
 // Checks whether a file is already committed to the CVS repository.
 func isCommitted(filename string) bool {
-	lines := loadCvsEntries(filename)
+	lines := G.loadCvsEntries(filename)
 	if lines == nil {
 		return false
 	}
@@ -176,7 +196,7 @@ func isCommitted(filename string) bool {
 func isLocallyModified(filename string) bool {
 	baseName := path.Base(filename)
 
-	lines := loadCvsEntries(filename)
+	lines := G.loadCvsEntries(filename)
 	if lines == nil {
 		return false
 	}
@@ -189,7 +209,7 @@ func isLocallyModified(filename string) bool {
 				return true
 			}
 
-			// According to http://cvsman.com/cvs-1.12.12/cvs_19.php, format both timestamps.
+			// Following http://cvsman.com/cvs-1.12.12/cvs_19.php, format both timestamps.
 			cvsModTime := fields[3]
 			fsModTime := st.ModTime().UTC().Format(time.ANSIC)
 			if trace.Tracing {
@@ -200,21 +220,6 @@ func isLocallyModified(filename string) bool {
 		}
 	}
 	return false
-}
-
-func loadCvsEntries(filename string) Lines {
-	dir := path.Dir(filename)
-	if dir == G.CvsEntriesDir {
-		return G.CvsEntriesLines
-	}
-
-	lines := Load(dir+"/CVS/Entries", 0)
-	if lines == nil {
-		return nil
-	}
-	G.CvsEntriesDir = dir
-	G.CvsEntriesLines = lines
-	return lines
 }
 
 // Returns the number of columns that a string occupies when printed with
@@ -244,12 +249,12 @@ func detab(s string) string {
 }
 
 func shorten(s string, maxChars int) string {
-	chars := 0
+	codePoints := 0
 	for i := range s {
-		if chars >= maxChars {
+		if codePoints >= maxChars {
 			return s[:i] + "..."
 		}
-		chars++
+		codePoints++
 	}
 	return s
 }
@@ -261,6 +266,7 @@ func varnameBase(varname string) string {
 	}
 	return varname
 }
+
 func varnameCanon(varname string) string {
 	dot := strings.IndexByte(varname, '.')
 	if dot > 0 {
@@ -268,6 +274,7 @@ func varnameCanon(varname string) string {
 	}
 	return varname
 }
+
 func varnameParam(varname string) string {
 	dot := strings.IndexByte(varname, '.')
 	if dot > 0 {
@@ -317,25 +324,8 @@ func toInt(s string, def int) int {
 	return def
 }
 
-func dirglob(dirname string) []string {
-	fis, err := ioutil.ReadDir(dirname)
-	if err != nil {
-		return nil
-	}
-	var fnames []string
-	for _, fi := range fis {
-		if !(isIgnoredFilename(fi.Name())) {
-			fnames = append(fnames, cleanpath(dirname+"/"+fi.Name()))
-		}
-	}
-	return fnames
-}
-
-// Emulates make(1)'s :S substitution operator.
+// mkopSubst evaluates make(1)'s :S substitution operator.
 func mkopSubst(s string, left bool, from string, right bool, to string, flags string) string {
-	if trace.Tracing {
-		defer trace.Call(s, left, from, right, to, flags)()
-	}
 	re := regex.Pattern(ifelseStr(left, "^", "") + regexp.QuoteMeta(from) + ifelseStr(right, "$", ""))
 	done := false
 	gflag := contains(flags, "g")
@@ -354,10 +344,11 @@ func relpath(from, to string) string {
 		return path.Clean(to[len(from)+1:])
 	}
 
+	// TODO: avoid these filesystem calls as they require IO.
 	absFrom := abspath(from)
 	absTo := abspath(to)
 	rel, err := filepath.Rel(absFrom, absTo)
-	G.Assertf(err == nil, "relpath %q %q.", from, to)
+	G.AssertNil(err, "relpath %q %q", from, to)
 	result := filepath.ToSlash(rel)
 	if trace.Tracing {
 		trace.Stepf("relpath from %q to %q = %q", from, to, result)
@@ -367,7 +358,7 @@ func relpath(from, to string) string {
 
 func abspath(filename string) string {
 	abs, err := filepath.Abs(filename)
-	G.Assertf(err == nil, "abspath %q.", filename)
+	G.AssertNil(err, "abspath %q", filename)
 	return filepath.ToSlash(abs)
 }
 
@@ -383,14 +374,20 @@ func cleanpath(filename string) string {
 	for !lex.EOF() {
 		part := lex.NextBytesFunc(func(b byte) bool { return b != '/' })
 		parts = append(parts, part)
-		n := len(parts)
-		if n >= 5 && parts[n-1] == ".." && parts[n-2] == ".." && parts[n-3] != ".." && parts[n-4] != ".." {
-			parts = parts[:n-4]
-		}
 		if lex.SkipByte('/') {
 			for lex.SkipByte('/') || lex.SkipString("./") {
 			}
 		}
+	}
+
+	for i := 2; i+3 < len(parts); /* nothing */ {
+		if parts[i] != ".." && parts[i+1] != ".." && parts[i+2] == ".." && parts[i+3] == ".." {
+			if i+4 == len(parts) || parts[i+4] != ".." {
+				parts = append(parts[:i], parts[i+4:]...)
+				continue
+			}
+		}
+		i++
 	}
 
 	if len(parts) == 0 {
@@ -408,7 +405,7 @@ func hasAlnumPrefix(s string) bool { return s != "" && textproc.AlnumU.Contains(
 // Once remembers with which arguments its FirstTime method has been called
 // and only returns true on each first call.
 type Once struct {
-	seen map[uint64]bool
+	seen map[uint64]struct{}
 }
 
 func (o *Once) FirstTime(what string) bool {
@@ -428,9 +425,9 @@ func (o *Once) check(key uint64) bool {
 		return false
 	}
 	if o.seen == nil {
-		o.seen = make(map[uint64]bool)
+		o.seen = make(map[uint64]struct{})
 	}
-	o.seen[key] = true
+	o.seen[key] = struct{}{}
 	return true
 }
 
@@ -438,12 +435,12 @@ func (o *Once) check(key uint64) bool {
 // in a certain scope, such as a package or a file.
 type Scope struct {
 	defined  map[string]MkLine
-	fallback map[string]string
 	used     map[string]MkLine
+	fallback map[string]string
 }
 
 func NewScope() Scope {
-	return Scope{make(map[string]MkLine), make(map[string]string), make(map[string]MkLine)}
+	return Scope{make(map[string]MkLine), make(map[string]MkLine), make(map[string]string)}
 }
 
 // Define marks the variable and its canonicalized form as defined.
@@ -454,6 +451,7 @@ func (s *Scope) Define(varname string, mkline MkLine) {
 			trace.Step2("Defining %q in %s", varname, mkline.String())
 		}
 	}
+
 	varcanon := varnameCanon(varname)
 	if varcanon != varname && s.defined[varcanon] == nil {
 		s.defined[varcanon] = mkline
@@ -475,6 +473,7 @@ func (s *Scope) Use(varname string, line MkLine) {
 			trace.Step2("Using %q in %s", varname, line.String())
 		}
 	}
+
 	varcanon := varnameCanon(varname)
 	if varcanon != varname && s.used[varcanon] == nil {
 		s.used[varcanon] = line
@@ -501,6 +500,7 @@ func (s *Scope) DefinedSimilar(varname string) bool {
 		}
 		return true
 	}
+
 	varcanon := varnameCanon(varname)
 	if s.defined[varcanon] != nil {
 		if trace.Tracing {
@@ -526,6 +526,7 @@ func (s *Scope) UsedSimilar(varname string) bool {
 }
 
 // FirstDefinition returns the line in which the variable has been defined first.
+//
 // Having multiple definitions is typical in the branches of "if" statements.
 func (s *Scope) FirstDefinition(varname string) MkLine {
 	mkline := s.defined[varname]
@@ -649,7 +650,7 @@ func naturalLess(str1, str2 string) bool {
 // but that's deep in the infrastructure and only affects the "nb13" extension.)
 type RedundantScope struct {
 	vars        map[string]*redundantScopeVarinfo
-	dirLevel    int
+	dirLevel    int // The number of enclosing directives (.if, .for).
 	OnIgnore    func(old, new MkLine)
 	OnOverwrite func(old, new MkLine)
 }
@@ -675,8 +676,9 @@ func (s *RedundantScope) Handle(mkline MkLine) {
 		value := mkline.Value()
 		valueNovar := mkline.WithoutMakeVariables(value)
 		if op == opAssignEval && value == valueNovar {
-			op = opAssign // The two operators are effectively the same in this case.
+			op = /* effectively */ opAssign
 		}
+
 		existing, found := s.vars[varname]
 		if !found {
 			if op == opAssignShell || op == opAssignEval {
@@ -687,10 +689,12 @@ func (s *RedundantScope) Handle(mkline MkLine) {
 				}
 				s.vars[varname] = &redundantScopeVarinfo{mkline, value}
 			}
+
 		} else if existing != nil {
 			if op == opAssign && existing.value == value {
-				op = opAssignDefault
+				op = /* effectively */ opAssignDefault
 			}
+
 			switch op {
 			case opAssign:
 				if s.OnOverwrite != nil {
@@ -731,15 +735,6 @@ func IsPrefs(filename string) bool {
 		return true
 	}
 	return false
-}
-
-func isalnum(s string) bool {
-	for _, ch := range []byte(s) {
-		if !textproc.AlnumU.Contains(ch) {
-			return false
-		}
-	}
-	return true
 }
 
 // FileCache reduces the IO load for commonly loaded files by about 50%,

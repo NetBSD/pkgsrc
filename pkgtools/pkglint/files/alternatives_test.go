@@ -5,7 +5,7 @@ import "gopkg.in/check.v1"
 func (s *Suite) Test_CheckFileAlternatives__PLIST(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupPackage("category/package")
+	t.SetUpPackage("category/package")
 	t.Chdir("category/package")
 	t.CreateFileLines("ALTERNATIVES",
 		"sbin/sendmail @PREFIX@/sbin/sendmail.postfix@POSTFIXVER@",
@@ -37,7 +37,7 @@ func (s *Suite) Test_CheckFileAlternatives__PLIST(c *check.C) {
 		"ERROR: ALTERNATIVES:7: Alternative implementation \"@VARBASE@/game/scores\" "+
 			"must appear in the PLIST as \"${VARBASE}/game/scores\".")
 
-	t.SetupCommandLine("--autofix")
+	t.SetUpCommandLine("--autofix")
 
 	G.Check(".")
 
