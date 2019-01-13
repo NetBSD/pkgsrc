@@ -46,7 +46,7 @@ func (st *SubstContextStats) Or(other SubstContextStats) {
 
 func (ctx *SubstContext) Varassign(mkline MkLine) {
 	if trace.Tracing {
-		trace.Stepf("SubstContext.Varassign %#v %v#", ctx.curr, ctx.inAllBranches)
+		trace.Stepf("SubstContext.Varassign curr=%v all=%v", ctx.curr, ctx.inAllBranches)
 	}
 
 	varname := mkline.Varname()
@@ -176,7 +176,7 @@ func (ctx *SubstContext) Directive(mkline MkLine) {
 	}
 
 	if trace.Tracing {
-		trace.Stepf("+ SubstContext.Directive %#v %v#", ctx.curr, ctx.inAllBranches)
+		trace.Stepf("+ SubstContext.Directive %v %v", ctx.curr, ctx.inAllBranches)
 	}
 	dir := mkline.Directive()
 	if dir == "if" {
@@ -195,7 +195,7 @@ func (ctx *SubstContext) Directive(mkline MkLine) {
 		ctx.curr.Or(ctx.inAllBranches)
 	}
 	if trace.Tracing {
-		trace.Stepf("- SubstContext.Directive %#v %v#", ctx.curr, ctx.inAllBranches)
+		trace.Stepf("- SubstContext.Directive %v %v", ctx.curr, ctx.inAllBranches)
 	}
 }
 

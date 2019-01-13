@@ -4,60 +4,18 @@ import (
 	"gopkg.in/check.v1"
 	"io/ioutil"
 	"os"
+	"path"
+	"path/filepath"
 	"strings"
 )
 
 func (s *Suite) Test_Pkglint_Main__help(c *check.C) {
 	t := s.Init(c)
 
-	exitcode := G.Main("pkglint", "-h")
+	exitCode := G.Main("pkglint", "-h")
 
-	c.Check(exitcode, equals, 0)
-	c.Check(t.Output(), check.Matches, `^\Qusage: pkglint [options] dir...\E\n(?s).+`)
-}
-
-func (s *Suite) Test_Pkglint_Main__version(c *check.C) {
-	t := s.Init(c)
-
-	exitcode := G.Main("pkglint", "--version")
-
-	c.Check(exitcode, equals, 0)
+	c.Check(exitCode, equals, 0)
 	t.CheckOutputLines(
-		confVersion)
-}
-
-func (s *Suite) Test_Pkglint_Main__no_args(c *check.C) {
-	t := s.Init(c)
-
-	exitcode := G.Main("pkglint")
-
-	c.Check(exitcode, equals, 1)
-	t.CheckOutputLines(
-		"FATAL: \".\" must be inside a pkgsrc tree.")
-}
-
-func (s *Suite) Test_Pkglint_Main__only(c *check.C) {
-	t := s.Init(c)
-
-	exitcode := G.ParseCommandLine([]string{"pkglint", "-Wall", "-o", ":Q", "--version"})
-
-	if exitcode != -1 {
-		c.Check(exitcode, equals, 0)
-	}
-	c.Check(G.Opts.LogOnly, deepEquals, []string{":Q"})
-	t.CheckOutputLines(
-		confVersion)
-}
-
-func (s *Suite) Test_Pkglint_Main__unknown_option(c *check.C) {
-	t := s.Init(c)
-
-	exitcode := G.Main("pkglint", "--unknown-option")
-
-	c.Check(exitcode, equals, 1)
-	t.CheckOutputLines(
-		"pkglint: unknown option: --unknown-option",
-		"",
 		"usage: pkglint [options] dir...",
 		"",
 		"  -C, --check=check,...       enable or disable specific checks",
@@ -113,10 +71,59 @@ func (s *Suite) Test_Pkglint_Main__unknown_option(c *check.C) {
 		"  (Prefix a flag with \"no-\" to disable it.)")
 }
 
+func (s *Suite) Test_Pkglint_Main__version(c *check.C) {
+	t := s.Init(c)
+
+	exitcode := G.Main("pkglint", "--version")
+
+	c.Check(exitcode, equals, 0)
+	t.CheckOutputLines(
+		confVersion)
+}
+
+func (s *Suite) Test_Pkglint_Main__no_args(c *check.C) {
+	t := s.Init(c)
+
+	exitcode := G.Main("pkglint")
+
+	// The "." from the error message is the implicit argument added in Pkglint.Main.
+	c.Check(exitcode, equals, 1)
+	t.CheckOutputLines(
+		"FATAL: \".\" must be inside a pkgsrc tree.")
+}
+
+func (s *Suite) Test_Pkglint_Main__only(c *check.C) {
+	t := s.Init(c)
+
+	exitcode := G.ParseCommandLine([]string{"pkglint", "-Wall", "--only", ":Q", "--version"})
+
+	if exitcode != -1 {
+		c.Check(exitcode, equals, 0)
+	}
+	c.Check(G.Opts.LogOnly, deepEquals, []string{":Q"})
+	t.CheckOutputLines(
+		confVersion)
+}
+
+func (s *Suite) Test_Pkglint_Main__unknown_option(c *check.C) {
+	t := s.Init(c)
+
+	exitcode := G.Main("pkglint", "--unknown-option")
+
+	c.Check(exitcode, equals, 1)
+	c.Check(t.Output(), check.Matches,
+		`\Qpkglint: unknown option: --unknown-option\E\n`+
+			`\Q\E\n`+
+			`\Qusage: pkglint [options] dir...\E\n`+
+			`(?s).+`)
+	// See Test_Pkglint_Main__help for the complete output.
+}
+
+// This test covers the code path for unexpected panics.
 func (s *Suite) Test_Pkglint_Main__panic(c *check.C) {
 	t := s.Init(c)
 
-	pkg := t.SetupPackage("category/package")
+	pkg := t.SetUpPackage("category/package")
 
 	G.out = nil // Force an error that cannot happen in practice.
 
@@ -127,15 +134,18 @@ func (s *Suite) Test_Pkglint_Main__panic(c *check.C) {
 
 // Demonstrates which infrastructure files are necessary to actually run
 // pkglint in a realistic scenario.
-// For most tests, this setup is too much work, therefore they
-// initialize only those parts of the infrastructure they really
-// need.
 //
 // Especially covers Pkglint.ShowSummary and Pkglint.checkReg.
 func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupPkgsrc()
+	// Since the general infrastructure setup is useful for several tests,
+	// it is available as a separate method.
+	//
+	// In this test, several of the infrastructure files are later
+	// overwritten with more realistic and interesting content.
+	// This is typical of the pkglint tests.
+	t.SetUpPkgsrc()
 
 	// FIXME: pkglint should warn that the latest version in this file
 	// (1.10) doesn't match the current version in the package (1.11).
@@ -154,10 +164,6 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 		"",
 		"\to checkperms-1.13 [supports more file formats]")
 
-	// The LICENSE in the package Makefile is searched here.
-	t.CreateFileLines("licenses/bsd-2",
-		"# dummy")
-
 	// The MASTER_SITES in the package Makefile are searched here.
 	// See Pkgsrc.loadMasterSites.
 	t.CreateFileLines("mk/fetch/sites.mk",
@@ -165,12 +171,20 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 		"",
 		"MASTER_SITE_GITHUB+=\thttps://github.com/")
 
-	// The existence of this file makes the category "sysutils" valid.
+	// After setting up the pkgsrc infrastructure, the files for
+	// a complete pkgsrc package are created individually.
+	//
+	// In this test each file is created manually for demonstration purposes.
+	// Other tests typically call t.SetUpPackage, which does most of the work
+	// shown here while allowing to adjust the package Makefile a little bit.
+
+	// The existence of this file makes the category "sysutils" valid,
+	// so that it can be used in CATEGORIES in the package Makefile.
 	// The category "tools" on the other hand is not valid.
 	t.CreateFileLines("sysutils/Makefile",
 		MkRcsID)
 
-	// The package Makefile is quite simple, containing just the
+	// The package Makefile in this test is quite simple, containing just the
 	// standard variable definitions. The data for checking the variable
 	// values is partly defined in the pkgsrc infrastructure files
 	// (as defined in the previous lines), and partly in the pkglint
@@ -185,7 +199,7 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 		"MAINTAINER=\tpkgsrc-users@NetBSD.org",
 		"HOMEPAGE=\thttps://github.com/rillig/checkperms/",
 		"COMMENT=\tCheck file permissions",
-		"LICENSE=\tbsd-2",
+		"LICENSE=\t2-clause-bsd",
 		"",
 		".include \"../../mk/bsd.pkg.mk\"")
 
@@ -226,15 +240,17 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 		"",
 		"SHA1 (checkperms-1.12.tar.gz) = 34c084b4d06bcd7a8bba922ff57677e651eeced5",
 		"RMD160 (checkperms-1.12.tar.gz) = cd95029aa930b6201e9580b3ab7e36dd30b8f925",
-		"SHA512 (checkperms-1.12.tar.gz) = 43e37b5963c63fdf716acdb470928d7e21a7bdfd"+
-			"dd6c85cf626a11acc7f45fa52a53d4bcd83d543150328fe8cec5587987d2d9a7c5f0aaeb02ac1127ab41f8ae",
+		"SHA512 (checkperms-1.12.tar.gz) = "+
+			"43e37b5963c63fdf716acdb470928d7e21a7bdfddd6c85cf626a11acc7f45fa5"+
+			"2a53d4bcd83d543150328fe8cec5587987d2d9a7c5f0aaeb02ac1127ab41f8ae",
 		"Size (checkperms-1.12.tar.gz) = 6621 bytes",
 		"SHA1 (patch-checkperms.c) = asdfasdf") // Invalid SHA-1 checksum
 
 	G.Main("pkglint", "-Wall", "-Call", t.File("sysutils/checkperms"))
 
 	t.CheckOutputLines(
-		"WARN: ~/sysutils/checkperms/Makefile:3: This package should be updated to 1.13 ([supports more file formats]).",
+		"WARN: ~/sysutils/checkperms/Makefile:3: "+
+			"This package should be updated to 1.13 ([supports more file formats]).",
 		"ERROR: ~/sysutils/checkperms/Makefile:4: Invalid category \"tools\".",
 		"ERROR: ~/sysutils/checkperms/README: Packages in main pkgsrc must not have a README file.",
 		"ERROR: ~/sysutils/checkperms/TODO: Packages in main pkgsrc must not have a TODO file.",
@@ -257,18 +273,19 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 //
 //  go tool cover -html=pkglint.cov -o coverage.html
 //
-// To measure the branch coverage of the pkglint tests:
+// To measure the branch coverage of pkglint checking a complete pkgsrc installation,
+// install https://github.com/rillig/gobco and adjust the following code:
 //
 //  env \
 //  PKGLINT_TESTDIR=C:/Users/rillig/git/pkgsrc \
 //  PKGLINT_TESTCMDLINE="-r -Wall -Call -e" \
-//  gobco -vet=off -test.covermode=count \
+//  gobco -test.covermode=count \
 //      -test.coverprofile=pkglint-pkgsrc.pprof \
-//      -timeout=3600s -check.f '^' \
+//      -timeout=3600s -check.f '^Test_Pkglint__realistic' \
 //      > pkglint-pkgsrc.out
 //
 // See https://github.com/rillig/gobco for the tool to measure the branch coverage.
-func (s *Suite) Test_Pkglint__coverage(c *check.C) {
+func (s *Suite) Test_Pkglint__realistic(c *check.C) {
 
 	if cwd := os.Getenv("PKGLINT_TESTDIR"); cwd != "" {
 		err := os.Chdir(cwd)
@@ -291,6 +308,13 @@ func (s *Suite) Test_Pkglint_Check__outside(c *check.C) {
 
 	G.Check(t.File("."))
 
+	// In a realistic scenario, pkglint will only reach this point
+	// when the first command line argument is valid but a following
+	// argument is outside the pkgsrc tree.
+	//
+	// If the first argument is already outside of any pkgsrc tree,
+	// pkglint will exit with a fatal error message since it doesn't
+	// know where to load the infrastructure files from.
 	t.CheckOutputLines(
 		"ERROR: ~: Cannot determine the pkgsrc root directory for \"~\".")
 }
@@ -298,7 +322,7 @@ func (s *Suite) Test_Pkglint_Check__outside(c *check.C) {
 func (s *Suite) Test_Pkglint_Check__empty_directory(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupPkgsrc()
+	t.SetUpPkgsrc()
 	t.CreateFileLines("category/package/CVS/Entries")
 
 	G.Check(t.File("category/package"))
@@ -310,7 +334,7 @@ func (s *Suite) Test_Pkglint_Check__empty_directory(c *check.C) {
 func (s *Suite) Test_Pkglint_Check__files_directory(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupPkgsrc()
+	t.SetUpPkgsrc()
 	t.CreateFileLines("category/package/files/README.md")
 
 	G.Check(t.File("category/package/files"))
@@ -320,40 +344,80 @@ func (s *Suite) Test_Pkglint_Check__files_directory(c *check.C) {
 		"ERROR: ~/category/package/files: Cannot check directories outside a pkgsrc tree.")
 }
 
+func (s *Suite) Test_Pkglint_Check__patches_directory(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPkgsrc()
+	t.CreateFileDummyPatch("category/package/patches/patch-README.md")
+
+	G.Check(t.File("category/package/patches"))
+
+	// This diagnostic is not really correct, but it's an edge case anyway.
+	t.CheckOutputLines(
+		"ERROR: ~/category/package/patches: Cannot check directories outside a pkgsrc tree.")
+}
+
+// See devel/libtool for an example package that uses manual patches.
 func (s *Suite) Test_Pkglint_Check__manual_patch(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupPkgsrc()
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("category/package/patches/unknown-file")
 	t.CreateFileLines("category/package/patches/manual-configure")
-	t.CreateFileLines("category/package/Makefile",
-		MkRcsID)
 
 	G.Check(t.File("category/package"))
 
+	// Pkglint doesn't inspect the manual patch files, it also doesn't mark them as unknown files.
 	t.CheckOutputLines(
-		"WARN: ~/category/package/Makefile: Neither PLIST nor PLIST.common exist, and PLIST_SRC is unset.",
-		"WARN: ~/category/package/distinfo: File not found. Please run \""+confMake+" makesum\" or define NO_CHECKSUM=yes in the package Makefile.",
-		"ERROR: ~/category/package/Makefile: Each package must define its LICENSE.",
-		"WARN: ~/category/package/Makefile: Each package should define a COMMENT.")
+		"WARN: ~/category/package/patches/unknown-file: Patch files should be named \"patch-\", " +
+			"followed by letters, '-', '_', '.', and digits only.")
 }
 
+func (s *Suite) Test_Pkglint_Check__doc_TODO(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPkgsrc()
+
+	G.Check(G.Pkgsrc.File("doc/TODO"))
+
+	// The file doc/TODO cannot be checked explicitly and individually.
+	// It is loaded as part of the pkgsrc infrastructure and is thus
+	// checked implicitly whenever a package or an individual file is checked.
+	t.CheckOutputLines(
+		"WARN: ~/doc/TODO: Unexpected file found.")
+}
+
+// This test covers the different code paths for deciding whether a directory
+// should be checked as the top-level, a category or a package.
 func (s *Suite) Test_Pkglint_Check(c *check.C) {
 	t := s.Init(c)
 
+	t.SetUpVartypes()
+	t.CreateFileLines("mk/misc/category.mk")
 	t.CreateFileLines("mk/bsd.pkg.mk")
 	t.CreateFileLines("category/package/Makefile")
-	t.CreateFileLines("category/Makefile")
-	t.CreateFileLines("Makefile")
+	t.CreateFileLines("category/Makefile",
+		MkRcsID,
+		"",
+		"COMMENT=\tCategory\u0007",
+		"",
+		"SUBDIR+=\tpackage",
+		"",
+		".include \"../mk/misc/category.mk\"")
+	t.CreateFileLines("Makefile",
+		MkRcsID,
+		"COMMENT=\tToplevel\u0005")
 
 	G.Check(t.File("."))
 
 	t.CheckOutputLines(
-		"ERROR: ~/Makefile: Must not be empty.")
+		"WARN: ~/Makefile:2: Line contains invalid characters (U+0005).")
 
 	G.Check(t.File("category"))
 
 	t.CheckOutputLines(
-		"ERROR: ~/category/Makefile: Must not be empty.")
+		"WARN: ~/category/Makefile:3: Line contains invalid characters (U+0007).",
+		"WARN: ~/category/Makefile:3: COMMENT contains invalid characters (U+0007).")
 
 	G.Check(t.File("category/package"))
 
@@ -366,6 +430,8 @@ func (s *Suite) Test_Pkglint_Check(c *check.C) {
 		"ERROR: ~/category/package/nonexistent: No such file or directory.")
 }
 
+// Pkglint must never be trapped in an endless loop, even when
+// resolving the value of a variable that refers back to itself.
 func (s *Suite) Test_resolveVariableRefs__circular_reference(c *check.C) {
 	t := s.Init(c)
 
@@ -373,6 +439,8 @@ func (s *Suite) Test_resolveVariableRefs__circular_reference(c *check.C) {
 	G.Pkg = NewPackage(t.File("category/pkgbase"))
 	G.Pkg.vars.Define("GCC_VERSION", mkline)
 
+	// TODO: It may be better to define MkLines.Resolve and Package.Resolve,
+	//  to clearly state the scope of the involved variables.
 	resolved := resolveVariableRefs("gcc-${GCC_VERSION}")
 
 	c.Check(resolved, equals, "gcc-${GCC_VERSION}")
@@ -389,6 +457,9 @@ func (s *Suite) Test_resolveVariableRefs__multilevel(c *check.C) {
 	defineVar(mkline2, "SECOND")
 	defineVar(mkline3, "THIRD")
 
+	// TODO: Add a similar test in which some of the variables are defined
+	//  conditionally or with differing values, just to see what pkglint does
+	//  in such a case.
 	resolved := resolveVariableRefs("you ${FIRST}")
 
 	c.Check(resolved, equals, "you got it")
@@ -412,7 +483,7 @@ func (s *Suite) Test_resolveVariableRefs__special_chars(c *check.C) {
 func (s *Suite) Test_CheckLinesDescr(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupVartypes()
+	t.SetUpVartypes()
 	lines := t.NewLines("DESCR",
 		"word "+strings.Repeat("X", 80),
 		strings.Repeat("X", 90), // No warning since there are no spaces.
@@ -469,8 +540,8 @@ func (s *Suite) Test_CheckLinesMessage__malformed(c *check.C) {
 func (s *Suite) Test_CheckLinesMessage__autofix(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("-Wall", "--autofix")
-	lines := t.SetupFileLines("MESSAGE",
+	t.SetUpCommandLine("-Wall", "--autofix")
+	lines := t.SetUpFileLines("MESSAGE",
 		"1",
 		"2",
 		"3",
@@ -480,13 +551,11 @@ func (s *Suite) Test_CheckLinesMessage__autofix(c *check.C) {
 	CheckLinesMessage(lines)
 
 	t.CheckOutputLines(
-		"AUTOFIX: ~/MESSAGE:1: Inserting a line "+
-			"\"===========================================================================\" "+
-			"before this line.",
+		"AUTOFIX: ~/MESSAGE:1: Inserting a line \"=============================="+
+			"=============================================\" before this line.",
 		"AUTOFIX: ~/MESSAGE:1: Inserting a line \"$"+"NetBSD$\" before this line.",
-		"AUTOFIX: ~/MESSAGE:5: Inserting a line "+
-			"\"===========================================================================\" "+
-			"after this line.")
+		"AUTOFIX: ~/MESSAGE:5: Inserting a line \"=============================="+
+			"=============================================\" after this line.")
 	t.CheckFileLines("MESSAGE",
 		"===========================================================================",
 		RcsID,
@@ -503,8 +572,8 @@ func (s *Suite) Test_CheckLinesMessage__autofix(c *check.C) {
 func (s *Suite) Test_Pkglint_checkReg__alternatives(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupPkgsrc()
-	lines := t.SetupFileLines("category/package/ALTERNATIVES",
+	t.SetUpPkgsrc()
+	lines := t.SetUpFileLines("category/package/ALTERNATIVES",
 		"bin/tar bin/gnu-tar")
 
 	G.Main("pkglint", lines.FileName)
@@ -518,12 +587,13 @@ func (s *Suite) Test_Pkglint_checkReg__alternatives(c *check.C) {
 func (s *Suite) Test_Pkglint__profiling(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupPkgsrc()
+	t.SetUpPkgsrc()
 	t.Chdir(".")
 
 	G.Main("pkglint", "--profiling")
 
 	// Pkglint always writes the profiling data into the current directory.
+	// TODO: Make the location of the profiling log a mandatory parameter.
 	c.Check(fileExists("pkglint.pprof"), equals, true)
 
 	err := os.Remove("pkglint.pprof")
@@ -539,37 +609,23 @@ func (s *Suite) Test_Pkglint__profiling(c *check.C) {
 func (s *Suite) Test_Pkglint__profiling_error(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupPkgsrc()
+	t.SetUpPkgsrc()
 	t.Chdir(".")
 	t.CreateFileLines("pkglint.pprof/file")
 
 	exitcode := G.Main("pkglint", "--profiling")
 
 	c.Check(exitcode, equals, 1)
-	c.Check(t.Output(), check.Matches, `^FATAL: Cannot create profiling file: open pkglint\.pprof: .*\n$`)
+	c.Check(t.Output(), check.Matches,
+		`^FATAL: Cannot create profiling file: open pkglint\.pprof: .*\n$`)
 }
 
 func (s *Suite) Test_Pkglint_checkReg__in_current_working_directory(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupPkgsrc()
-	t.SetupVartypes()
-	t.CreateFileLines("licenses/mit")
+	t.SetUpPackage("category/package")
 	t.Chdir("category/package")
 	t.CreateFileLines("log")
-	t.CreateFileLines("Makefile",
-		MkRcsID,
-		"",
-		"NO_CHECKSUM=    yes",
-		"COMMENT=        Useful utilities",
-		"LICENSE=        mit",
-		"",
-		".include \"../../mk/bsd.pkg.mk\"")
-	t.CreateFileLines("PLIST",
-		PlistRcsID,
-		"bin/program")
-	t.CreateFileLines("DESCR",
-		"Package description")
 
 	G.Main("pkglint")
 
@@ -601,21 +657,22 @@ func (s *Suite) Test_Pkglint_Tool__prefer_mk_over_pkgsrc(c *check.C) {
 func (s *Suite) Test_Pkglint_Tool__lookup_by_name_fallback(c *check.C) {
 	t := s.Init(c)
 
-	mkline := t.NewMkLine("dummy.mk", 123, "DUMMY=\tvalue")
 	G.Mk = t.NewMkLines("Makefile", MkRcsID)
-	global := G.Pkgsrc.Tools.Define("tool", "TOOL", mkline)
-
-	global.Validity = Nowhere
+	t.SetUpTool("tool", "", Nowhere)
 
 	loadTimeTool, loadTimeUsable := G.Tool("tool", LoadTime)
 	runTimeTool, runTimeUsable := G.Tool("tool", RunTime)
 
-	c.Check(*loadTimeTool, equals, *global)
+	// The tool is returned even though it may not be used at the moment.
+	// The calling code must explicitly check for usability.
+
+	c.Check(loadTimeTool.String(), equals, "tool:::Nowhere")
 	c.Check(loadTimeUsable, equals, false)
-	c.Check(*runTimeTool, equals, *global)
+	c.Check(runTimeTool.String(), equals, "tool:::Nowhere")
 	c.Check(runTimeUsable, equals, false)
 }
 
+// TODO: Document the purpose of this test.
 func (s *Suite) Test_Pkglint_Tool__lookup_by_varname(c *check.C) {
 	t := s.Init(c)
 
@@ -636,6 +693,7 @@ func (s *Suite) Test_Pkglint_Tool__lookup_by_varname(c *check.C) {
 	c.Check(runTimeUsable, equals, true)
 }
 
+// TODO: Document the purpose of this test.
 func (s *Suite) Test_Pkglint_Tool__lookup_by_varname_fallback(c *check.C) {
 	t := s.Init(c)
 
@@ -651,6 +709,7 @@ func (s *Suite) Test_Pkglint_Tool__lookup_by_varname_fallback(c *check.C) {
 	c.Check(runTimeUsable, equals, false)
 }
 
+// TODO: Document the purpose of this test.
 func (s *Suite) Test_Pkglint_Tool__lookup_by_varname_fallback_runtime(c *check.C) {
 	t := s.Init(c)
 
@@ -689,11 +748,11 @@ func (s *Suite) Test_Pkglint_ToolByVarname(c *check.C) {
 	c.Check(G.ToolByVarname("TOOL").String(), equals, "tool:TOOL::AtRunTime")
 }
 
-func (s *Suite) Test_CheckFileOther(c *check.C) {
+func (s *Suite) Test_Pkglint_checkReg__other(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("-Call", "-Wall,no-space")
-	pkg := t.SetupPackage("category/package")
+	t.SetUpCommandLine("-Call", "-Wall,no-space")
+	pkg := t.SetUpPackage("category/package")
 	t.CreateFileLines("category/package/INSTALL",
 		"#! /bin/sh")
 	t.CreateFileLines("category/package/DEINSTALL",
@@ -707,8 +766,8 @@ func (s *Suite) Test_CheckFileOther(c *check.C) {
 func (s *Suite) Test_Pkglint_Check__invalid_files_before_import(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("-Call", "-Wall,no-space", "--import")
-	pkg := t.SetupPackage("category/package")
+	t.SetUpCommandLine("-Call", "-Wall,no-space", "--import")
+	pkg := t.SetUpPackage("category/package")
 	t.CreateFileLines("category/package/work/log")
 	t.CreateFileLines("category/package/Makefile~")
 	t.CreateFileLines("category/package/Makefile.orig")
@@ -726,8 +785,8 @@ func (s *Suite) Test_Pkglint_Check__invalid_files_before_import(c *check.C) {
 func (s *Suite) Test_Pkglint_checkDirent__errors(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("-Call", "-Wall,no-space")
-	t.SetupPkgsrc()
+	t.SetUpCommandLine("-Call", "-Wall,no-space")
+	t.SetUpPkgsrc()
 	t.CreateFileLines("category/package/files/subdir/file")
 	t.CreateFileLines("category/package/files/subdir/subsub/file")
 	G.Pkgsrc.LoadInfrastructure()
@@ -745,8 +804,8 @@ func (s *Suite) Test_Pkglint_checkDirent__errors(c *check.C) {
 func (s *Suite) Test_Pkglint_checkDirent__file_selection(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("-Call", "-Wall,no-space")
-	t.SetupPkgsrc()
+	t.SetUpCommandLine("-Call", "-Wall,no-space")
+	t.SetUpPkgsrc()
 	t.CreateFileLines("doc/CHANGES-2018",
 		RcsID)
 	t.CreateFileLines("category/package/buildlink3.mk",
@@ -772,16 +831,7 @@ func (s *Suite) Test_Pkglint_checkReg__readme_and_todo(c *check.C) {
 
 	t.CreateFileLines("category/package/files/README",
 		"Extra file that is installed later.")
-	t.CreateFileLines("category/package/patches/patch-README",
-		RcsID,
-		"",
-		"Documentation",
-		"",
-		"--- old",
-		"+++ new",
-		"@@ -1,1 +1,1 @@",
-		"-old",
-		"+new")
+	t.CreateFileDummyPatch("category/package/patches/patch-README")
 	t.CreateFileLines("category/package/Makefile",
 		MkRcsID,
 		"CATEGORIES=category",
@@ -798,18 +848,26 @@ func (s *Suite) Test_Pkglint_checkReg__readme_and_todo(c *check.C) {
 	t.CreateFileLines("category/package/distinfo",
 		RcsID,
 		"",
-		"SHA1 (patch-README) = b9101ebf0bca8ce243ed6433b65555fa6a5ecd52")
+		"SHA1 (patch-README) = ebbf34b0641bcb508f17d5a27f2bf2a536d810ac")
 
 	// Copy category/package/** to wip/package.
-	for _, basename := range []string{"files/README", "patches/patch-README", "Makefile", "PLIST", "README", "TODO", "distinfo"} {
-		src := "category/package/" + basename
-		dst := "wip/package/" + basename
-		text, err := ioutil.ReadFile(t.File(src))
-		c.Check(err, check.IsNil)
-		t.CreateFileLines(dst, strings.TrimSuffix(string(text), "\n"))
-	}
+	err := filepath.Walk(
+		t.File("category/package"),
+		func(pathname string, info os.FileInfo, err error) error {
+			if info.Mode().IsRegular() {
+				src := filepath.ToSlash(pathname)
+				dst := strings.Replace(src, "category/package", "wip/package", 1)
+				text, e := ioutil.ReadFile(src)
+				c.Check(e, check.IsNil)
+				_ = os.MkdirAll(path.Dir(dst), 0700)
+				e = ioutil.WriteFile(dst, []byte(text), 0600)
+				c.Check(e, check.IsNil)
+			}
+			return err
+		})
+	c.Check(err, check.IsNil)
 
-	t.SetupPkgsrc()
+	t.SetUpPkgsrc()
 	G.Pkgsrc.LoadInfrastructure()
 	t.Chdir(".")
 
@@ -870,6 +928,8 @@ func (s *Suite) Test_Pkglint_checkReg__spec(c *check.C) {
 		"WARN: ~/category/package/spec: Only packages in regress/ may have spec files.")
 }
 
+// Since all required information is passed to G.checkDirent via parameters,
+// this test produces the expected results even though none of these files actually exists.
 func (s *Suite) Test_Pkglint_checkDirent__skipped(c *check.C) {
 	t := s.Init(c)
 
@@ -907,8 +967,8 @@ func (s *Suite) Test_Pkglint_checkdirPackage(c *check.C) {
 func (s *Suite) Test_Pkglint_checkdirPackage__PKGDIR(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupVartypes()
-	t.SetupPkgsrc()
+	t.SetUpVartypes()
+	t.SetUpPkgsrc()
 	t.CreateFileLines("category/Makefile")
 	t.CreateFileLines("other/package/Makefile",
 		MkRcsID)
@@ -942,7 +1002,7 @@ func (s *Suite) Test_Pkglint_checkdirPackage__PKGDIR(c *check.C) {
 func (s *Suite) Test_Pkglint_checkdirPackage__patch_without_distinfo(c *check.C) {
 	t := s.Init(c)
 
-	pkg := t.SetupPackage("category/package")
+	pkg := t.SetUpPackage("category/package")
 	t.CreateFileDummyPatch("category/package/patches/patch-aa")
 	t.Remove("category/package/distinfo")
 
@@ -965,7 +1025,7 @@ func (s *Suite) Test_Pkglint_checkdirPackage__meta_package_without_license(c *ch
 		MkRcsID,
 		"",
 		"META_PACKAGE=\tyes")
-	t.SetupVartypes()
+	t.SetUpVartypes()
 
 	G.checkdirPackage(".")
 
@@ -978,7 +1038,7 @@ func (s *Suite) Test_Pkglint_checkdirPackage__meta_package_without_license(c *ch
 func (s *Suite) Test_Pkglint_checkdirPackage__filename_with_variable(c *check.C) {
 	t := s.Init(c)
 
-	pkg := t.SetupPackage("category/package",
+	pkg := t.SetUpPackage("category/package",
 		".include \"../../mk/bsd.prefs.mk\"",
 		"",
 		"RUBY_VERSIONS_ACCEPTED=\t22 23 24 25", // As of 2018.
@@ -989,7 +1049,7 @@ func (s *Suite) Test_Pkglint_checkdirPackage__filename_with_variable(c *check.C)
 		"RUBY_PKGDIR=\t../../lang/ruby-${RUBY_VER}-base",
 		"DISTINFO_FILE=\t${RUBY_PKGDIR}/distinfo")
 
-	// Pkglint cannot currently resolve the location of DISTINFO_FILE completely
+	// As of January 2019, pkglint cannot resolve the location of DISTINFO_FILE completely
 	// because the variable \"rv\" comes from a .for loop.
 	//
 	// TODO: iterate over variables in simple .for loops like the above.
@@ -1002,8 +1062,8 @@ func (s *Suite) Test_Pkglint_checkdirPackage__filename_with_variable(c *check.C)
 func (s *Suite) Test_Pkglint_checkdirPackage__ALTERNATIVES(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("-Wall,no-space")
-	pkg := t.SetupPackage("category/package")
+	t.SetUpCommandLine("-Wall,no-space")
+	pkg := t.SetUpPackage("category/package")
 	t.CreateFileLines("category/package/ALTERNATIVES",
 		"bin/wrapper bin/wrapper-impl")
 
@@ -1014,6 +1074,22 @@ func (s *Suite) Test_Pkglint_checkdirPackage__ALTERNATIVES(c *check.C) {
 			"Alternative implementation \"bin/wrapper-impl\" must appear in the PLIST.",
 		"ERROR: ~/category/package/ALTERNATIVES:1: "+
 			"Alternative implementation \"bin/wrapper-impl\" must be an absolute path.")
+}
+
+func (s *Suite) Test_Pkglint_checkdirPackage__nonexistent_DISTINFO_FILE(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"DISTINFO_FILE=\tnonexistent")
+	G.Pkgsrc.LoadInfrastructure()
+
+	G.Check(t.File("category/package"))
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/nonexistent: File not found. "+
+			"Please run \""+bmake("makesum")+"\" "+
+			"or define NO_CHECKSUM=yes in the package Makefile.",
+		"ERROR: ~/category/package/Makefile:20: Relative path \"nonexistent\" does not exist.")
 }
 
 func (s *Suite) Test_CheckFileMk__enoent(c *check.C) {
@@ -1035,7 +1111,7 @@ func (s *Suite) Test_Pkglint_checkExecutable(c *check.C) {
 	t.CheckOutputLines(
 		"WARN: ~/file.mk: Should not be executable.")
 
-	t.SetupCommandLine("--autofix")
+	t.SetUpCommandLine("--autofix")
 
 	G.checkExecutable(filename, 0555)
 
@@ -1064,7 +1140,7 @@ func (s *Suite) Test_Main(c *check.C) {
 	outProfiling, err := os.Create(t.CreateFileLines("out.profiling"))
 	c.Check(err, check.IsNil)
 
-	t.SetupPackage("category/package")
+	t.SetUpPackage("category/package")
 	t.Chdir("category/package")
 
 	runMain := func(out *os.File, commandLine ...string) {

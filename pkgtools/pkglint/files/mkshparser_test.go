@@ -2,23 +2,54 @@ package pkglint
 
 import (
 	"encoding/json"
+	"fmt"
 	"gopkg.in/check.v1"
-	"strconv"
 )
 
-func (s *Suite) Test_parseShellProgram__parse_error_for_unfinished_shell_variable(c *check.C) {
+func (s *Suite) Test_parseShellProgram__parse_error_for_dollar(c *check.C) {
 	t := s.Init(c)
 
-	mkline := t.NewMkLine("module.mk", 1, "\t$${")
+	test := func(text string, expProgram *MkShList, expError error, expDiagnostics ...string) {
+		shline := t.NewShellLine("module.mk", 123, "\t"+text)
 
-	list, err := parseShellProgram(mkline.Line, mkline.ShellCommand())
+		if len(expDiagnostics) > 0 {
+			defer t.CheckOutputLines(expDiagnostics...)
+		} else {
+			defer t.CheckOutputEmpty()
+		}
 
-	c.Check(list, check.IsNil)
-	// XXX: []string{"$${"} would be an even better error message
-	c.Check(err.Error(), equals, "parse error at []string{\"\"}")
+		program, err := parseShellProgram(shline.mkline.Line, text)
 
-	t.CheckOutputLines(
-		"WARN: module.mk:1: Internal pkglint error in ShTokenizer.ShAtom at \"$${\" (quoting=plain).")
+		if err == nil {
+			c.Check(err, equals, expError)
+		} else {
+			c.Check(err, deepEquals, expError)
+			c.Check(program, deepEquals, expProgram)
+		}
+	}
+
+	test("$$",
+		nil,
+		nil,
+		nil...)
+
+	test(
+		"$${",
+		nil,
+		fmt.Errorf("splitIntoShellTokens couldn't parse \"$${\""),
+		"WARN: module.mk:123: Unclosed shell variable starting at \"$${\".")
+
+	test(
+		"$$;",
+		nil,
+		nil,
+		nil...)
+
+	test(
+		"shell$$;",
+		nil,
+		nil,
+		nil...)
 }
 
 type ShSuite struct {
@@ -602,10 +633,7 @@ func (b *MkShBuilder) SimpleCommand(words ...string) *MkShCommand {
 		if assignments && matches(word, `^[A-Za-z_]\w*=`) {
 			cmd.Assignments = append(cmd.Assignments, b.Token(word))
 		} else if m, fdstr, op, rest := match3(word, `^(\d*)(<<-|<<|<&|>>|>&|>\||<|>)(.*)$`); m {
-			fd, err := strconv.Atoi(fdstr)
-			if err != nil {
-				fd = -1
-			}
+			fd := toInt(fdstr, -1)
 			cmd.Redirections = append(cmd.Redirections, b.Redirection(fd, op, rest))
 		} else {
 			assignments = false

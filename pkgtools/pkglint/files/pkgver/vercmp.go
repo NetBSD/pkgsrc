@@ -31,7 +31,7 @@ func Compare(left, right string) int {
 
 	m := imax(len(lv.v), len(rv.v))
 	for i := 0; i < m; i++ {
-		if c := icmp(lv.Place(i), rv.Place(i)); c != 0 {
+		if c := icmp(lv.Field(i), rv.Field(i)); c != 0 {
 			return c
 		}
 	}
@@ -82,7 +82,7 @@ func (v *version) Add(i int) {
 	v.v = append(v.v, i)
 }
 
-func (v *version) Place(i int) int {
+func (v *version) Field(i int) int {
 	if i < len(v.v) {
 		return v.v[i]
 	}
