@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.176 2019/01/13 18:03:38 adam Exp $
+$NetBSD: CHANGES-2019,v 1.177 2019/01/13 18:22:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -244,3 +244,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-test-forked to 1.0.1 [adam 2019-01-13]
 	Updated devel/py-test-xdist to 1.26.0 [adam 2019-01-13]
 	Updated devel/py-tox to 3.7.0 [adam 2019-01-13]
+	Updated devel/ucommon to 7.0.0 [adam 2019-01-13]
+	Updated net/ccrtp to 2.1.2nb5 [adam 2019-01-13]
