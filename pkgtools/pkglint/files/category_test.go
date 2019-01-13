@@ -5,7 +5,7 @@ import "gopkg.in/check.v1"
 func (s *Suite) Test_CheckdirCategory__totally_broken(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupVartypes()
+	t.SetUpVartypes()
 	t.CreateFileLines("archivers/Makefile",
 		"# $",
 		"SUBDIR+=pkg1",
@@ -39,7 +39,7 @@ func (s *Suite) Test_CheckdirCategory__totally_broken(c *check.C) {
 func (s *Suite) Test_CheckdirCategory__invalid_comment(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupVartypes()
+	t.SetUpVartypes()
 	t.CreateFileLines("archivers/Makefile",
 		MkRcsID,
 		"",
@@ -68,8 +68,8 @@ func (s *Suite) Test_CheckdirCategory__invalid_comment(c *check.C) {
 func (s *Suite) Test_CheckdirCategory__wip(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupPkgsrc()
-	t.SetupVartypes()
+	t.SetUpPkgsrc()
+	t.SetUpVartypes()
 	t.CreateFileLines("mk/misc/category.mk")
 	t.CreateFileLines("wip/package/Makefile")
 	t.CreateFileLines("wip/Makefile",
@@ -93,8 +93,8 @@ func (s *Suite) Test_CheckdirCategory__wip(c *check.C) {
 func (s *Suite) Test_CheckdirCategory__subdirs(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupPkgsrc()
-	t.SetupVartypes()
+	t.SetUpPkgsrc()
+	t.SetUpVartypes()
 	t.CreateFileLines("mk/misc/category.mk")
 	t.CreateFileLines("category/in-wrong-order/Makefile")
 	t.CreateFileLines("category/duplicate/Makefile")
@@ -141,9 +141,9 @@ func (s *Suite) Test_CheckdirCategory__subdirs(c *check.C) {
 func (s *Suite) Test_CheckdirCategory__subdirs_file_system_at_the_bottom(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupCommandLine("-Wall", "--show-autofix")
-	t.SetupPkgsrc()
-	t.SetupVartypes()
+	t.SetUpCommandLine("-Wall", "--show-autofix")
+	t.SetUpPkgsrc()
+	t.SetUpVartypes()
 	t.CreateFileLines("mk/misc/category.mk")
 	t.CreateFileLines("category/mk-and-fs/Makefile")
 	t.CreateFileLines("category/zzz-fs-only/Makefile")
@@ -166,8 +166,8 @@ func (s *Suite) Test_CheckdirCategory__subdirs_file_system_at_the_bottom(c *chec
 func (s *Suite) Test_CheckdirCategory__indentation(c *check.C) {
 	t := s.Init(c)
 
-	t.SetupPkgsrc()
-	t.SetupVartypes()
+	t.SetUpPkgsrc()
+	t.SetUpVartypes()
 	t.CreateFileLines("mk/misc/category.mk")
 	t.CreateFileLines("category/package1/Makefile")
 	t.CreateFileLines("category/package2/Makefile")
@@ -185,4 +185,16 @@ func (s *Suite) Test_CheckdirCategory__indentation(c *check.C) {
 
 	t.CheckOutputLines(
 		"NOTE: ~/category/Makefile:5: This variable value should be aligned with tabs, not spaces, to column 17.")
+}
+
+func (s *Suite) Test_CheckdirCategory__no_Makefile(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPkgsrc()
+	t.CreateFileLines("category/other-file")
+
+	G.Check(t.File("category"))
+
+	t.CheckOutputLines(
+		"ERROR: ~/category/Makefile: Cannot be read.")
 }
