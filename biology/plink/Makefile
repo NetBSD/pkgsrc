@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/01/01 01:18:03 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2019/01/13 22:06:42 bacon Exp $
 
 DISTNAME=	plink-1.07-src
 PKGNAME=	${DISTNAME:-src=}
@@ -6,7 +6,7 @@ CATEGORIES=	biology
 #MASTER_SITES=	http://pngu.mgh.harvard.edu/~purcell/plink/dist/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	jwbacon@tds.net
+MAINTAINER=	bacon@NetBSD.org
 #HOMEPAGE=	http://pngu.mgh.harvard.edu/~purcell/plink/
 COMMENT=	Whole-genome association analysis toolset
 LICENSE=	gnu-gpl-v2
