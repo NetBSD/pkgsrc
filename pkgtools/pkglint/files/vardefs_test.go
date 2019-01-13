@@ -37,20 +37,26 @@ func (s *Suite) Test_Pkgsrc_InitVartypes__enumFrom(c *check.C) {
 		".  if !empty(USE_LANGUAGES:M${_version_})",
 		"USE_LANGUAGES+=         c++",
 		".  endif",
+		".endfor",
+		"",
+		".for _version_", // Just for code coverage.
+		".endfor",
+		"",
+		".for version in c99 c200x", // Just for code coverage.
 		".endfor")
 
-	t.SetupVartypes()
+	t.SetUpVartypes()
 
-	checkEnumValues := func(varname, values string) {
+	test := func(varname, values string) {
 		vartype := G.Pkgsrc.VariableType(varname).String()
 		c.Check(vartype, equals, values)
 	}
 
-	checkEnumValues("EMACS_VERSIONS_ACCEPTED", "List of enum: emacs29 emacs31 ")
-	checkEnumValues("PKG_JVM", "enum: jdk16 openjdk7 openjdk8 oracle-jdk8 sun-jdk6 sun-jdk7 ")
-	checkEnumValues("USE_LANGUAGES", "List of enum: ada c c++ c++03 c++0x c++11 c++14 c99 "+
+	test("EMACS_VERSIONS_ACCEPTED", "List of enum: emacs29 emacs31 ")
+	test("PKG_JVM", "enum: jdk16 openjdk7 openjdk8 oracle-jdk8 sun-jdk6 sun-jdk7 ")
+	test("USE_LANGUAGES", "List of enum: ada c c++ c++03 c++0x c++11 c++14 c99 "+
 		"fortran fortran77 gnu++03 gnu++0x gnu++11 gnu++14 java obj-c++ objc ")
-	checkEnumValues("PKGSRC_COMPILER", "List of enum: ccache distcc f2c g95 gcc ido mipspro-ucode sunpro ")
+	test("PKGSRC_COMPILER", "List of enum: ccache distcc f2c g95 gcc ido mipspro-ucode sunpro ")
 }
 
 func (s *Suite) Test_Pkgsrc_InitVartypes__enumFromDirs(c *check.C) {
@@ -61,14 +67,14 @@ func (s *Suite) Test_Pkgsrc_InitVartypes__enumFromDirs(c *check.C) {
 	t.CreateFileLines("lang/python28/Makefile", MkRcsID)
 	t.CreateFileLines("lang/python33/Makefile", MkRcsID)
 
-	t.SetupVartypes()
+	t.SetUpVartypes()
 
-	checkEnumValues := func(varname, values string) {
+	test := func(varname, values string) {
 		vartype := G.Pkgsrc.VariableType(varname).String()
 		c.Check(vartype, equals, values)
 	}
 
-	checkEnumValues("PYPKGPREFIX", "enum: py28 py33 ")
+	test("PYPKGPREFIX", "enum: py28 py33 ")
 }
 
 func (s *Suite) Test_parseACLEntries(c *check.C) {
@@ -88,18 +94,33 @@ func (s *Suite) Test_parseACLEntries(c *check.C) {
 
 	t.ExpectPanic(
 		func() { parseACLEntries("VARNAME", "*.mk: use; buildlink3.mk: append") },
-		"Pkglint internal error: Ineffective ACL glob \"buildlink3.mk\" for \"VARNAME\".")
+		"Pkglint internal error: Unreachable ACL pattern \"buildlink3.mk\" for \"VARNAME\".")
 }
 
 func (s *Suite) Test_Pkgsrc_InitVartypes__LP64PLATFORMS(c *check.C) {
 	t := s.Init(c)
 
-	pkg := t.SetupPackage("category/package",
+	pkg := t.SetUpPackage("category/package",
 		"BROKEN_ON_PLATFORM=\t${LP64PLATFORMS}")
 
 	G.Check(pkg)
 
 	// No warning about a missing :Q operator.
 	// All PLATFORM variables must be either lkNone or lkSpace.
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Pkgsrc_InitVartypes__no_tracing(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("editors/emacs/modules.mk",
+		MkRcsID,
+		"",
+		"_EMACS_VERSIONS_ALL=    emacs31",
+		"_EMACS_VERSIONS_ALL+=   emacs29")
+	t.DisableTracing()
+
+	t.SetUpVartypes() // Just for code coverage.
+
 	t.CheckOutputEmpty()
 }

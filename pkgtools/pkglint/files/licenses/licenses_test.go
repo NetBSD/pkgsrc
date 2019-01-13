@@ -11,42 +11,43 @@ import (
 type Suite struct{}
 
 func (s *Suite) Test_Parse(c *check.C) {
-	checkParse := func(cond string, expected string) {
+	test := func(cond string, expected string) {
 		c.Check(toJSON(Parse(cond)), check.Equals, expected)
 	}
-	checkParseDeep := func(cond string, expected *Condition) {
+
+	testDeep := func(cond string, expected *Condition) {
 		c.Check(Parse(cond), check.DeepEquals, expected)
 	}
 
-	checkParseDeep("gnu-gpl-v2", NewName("gnu-gpl-v2"))
+	testDeep("gnu-gpl-v2", NewName("gnu-gpl-v2"))
 
-	checkParse("gnu-gpl-v2", "{Name:gnu-gpl-v2}")
+	test("gnu-gpl-v2", "{Name:gnu-gpl-v2}")
 
-	checkParse("a AND b", "{And:true,Children:[{Name:a},{Name:b}]}")
-	checkParse("a OR b", "{Or:true,Children:[{Name:a},{Name:b}]}")
+	test("a AND b", "{And:true,Children:[{Name:a},{Name:b}]}")
+	test("a OR b", "{Or:true,Children:[{Name:a},{Name:b}]}")
 
-	checkParse("a OR (b AND c)", "{Or:true,Children:[{Name:a},{Paren:{And:true,Children:[{Name:b},{Name:c}]}}]}")
-	checkParse("(a OR b) AND c", "{And:true,Children:[{Paren:{Or:true,Children:[{Name:a},{Name:b}]}},{Name:c}]}")
+	test("a OR (b AND c)", "{Or:true,Children:[{Name:a},{Paren:{And:true,Children:[{Name:b},{Name:c}]}}]}")
+	test("(a OR b) AND c", "{And:true,Children:[{Paren:{Or:true,Children:[{Name:a},{Name:b}]}},{Name:c}]}")
 
-	checkParse("a AND b AND c AND d", "{And:true,Children:[{Name:a},{Name:b},{Name:c},{Name:d}]}")
-	checkParseDeep(
+	test("a AND b AND c AND d", "{And:true,Children:[{Name:a},{Name:b},{Name:c},{Name:d}]}")
+	testDeep(
 		"a AND b AND c AND d",
 		NewAnd(NewName("a"), NewName("b"), NewName("c"), NewName("d")))
 
-	checkParse("a OR b OR c OR d", "{Or:true,Children:[{Name:a},{Name:b},{Name:c},{Name:d}]}")
-	checkParseDeep(
+	test("a OR b OR c OR d", "{Or:true,Children:[{Name:a},{Name:b},{Name:c},{Name:d}]}")
+	testDeep(
 		"a OR b OR c OR d",
 		NewOr(NewName("a"), NewName("b"), NewName("c"), NewName("d")))
 
-	checkParse("(a OR b) AND (c AND d)", "{And:true,Children:[{Paren:{Or:true,Children:[{Name:a},{Name:b}]}},{Paren:{And:true,Children:[{Name:c},{Name:d}]}}]}")
-	checkParseDeep(
+	test("(a OR b) AND (c AND d)", "{And:true,Children:[{Paren:{Or:true,Children:[{Name:a},{Name:b}]}},{Paren:{And:true,Children:[{Name:c},{Name:d}]}}]}")
+	testDeep(
 		"(a OR b) AND (c AND d)",
 		NewAnd(
 			NewParen(NewOr(NewName("a"), NewName("b"))),
 			NewParen(NewAnd(NewName("c"), NewName("d")))))
 
-	checkParse("a AND b OR c AND d", "{And:true,Or:true,Children:[{Name:a},{Name:b},{Name:c},{Name:d}]}")
-	checkParse("((a AND (b AND c)))", "{Paren:{Children:[{Paren:{And:true,Children:[{Name:a},{Paren:{And:true,Children:[{Name:b},{Name:c}]}}]}}]}}")
+	test("a AND b OR c AND d", "{And:true,Or:true,Children:[{Name:a},{Name:b},{Name:c},{Name:d}]}")
+	test("((a AND (b AND c)))", "{Paren:{Children:[{Paren:{And:true,Children:[{Name:a},{Paren:{And:true,Children:[{Name:b},{Name:c}]}}]}}]}}")
 
 	c.Check(Parse("a AND b OR c AND d").String(), check.Equals, "a MIXED b MIXED c MIXED d")
 
