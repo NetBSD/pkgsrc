@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/10/31 14:07:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/01/13 18:02:41 adam Exp $
 bin/tox-${PYVERSSUFFIX}
 bin/tox-quickstart-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -22,9 +22,12 @@ ${PYSITELIB}/tox/_quickstart.pyo
 ${PYSITELIB}/tox/cli.py
 ${PYSITELIB}/tox/cli.pyc
 ${PYSITELIB}/tox/cli.pyo
-${PYSITELIB}/tox/config.py
-${PYSITELIB}/tox/config.pyc
-${PYSITELIB}/tox/config.pyo
+${PYSITELIB}/tox/config/__init__.py
+${PYSITELIB}/tox/config/__init__.pyc
+${PYSITELIB}/tox/config/__init__.pyo
+${PYSITELIB}/tox/config/parallel.py
+${PYSITELIB}/tox/config/parallel.pyc
+${PYSITELIB}/tox/config/parallel.pyo
 ${PYSITELIB}/tox/constants.py
 ${PYSITELIB}/tox/constants.pyc
 ${PYSITELIB}/tox/constants.pyo
@@ -58,9 +61,15 @@ ${PYSITELIB}/tox/result.pyo
 ${PYSITELIB}/tox/session.py
 ${PYSITELIB}/tox/session.pyc
 ${PYSITELIB}/tox/session.pyo
-${PYSITELIB}/tox/util.py
-${PYSITELIB}/tox/util.pyc
-${PYSITELIB}/tox/util.pyo
+${PYSITELIB}/tox/util/__init__.py
+${PYSITELIB}/tox/util/__init__.pyc
+${PYSITELIB}/tox/util/__init__.pyo
+${PYSITELIB}/tox/util/graph.py
+${PYSITELIB}/tox/util/graph.pyc
+${PYSITELIB}/tox/util/graph.pyo
+${PYSITELIB}/tox/util/spinner.py
+${PYSITELIB}/tox/util/spinner.pyc
+${PYSITELIB}/tox/util/spinner.pyo
 ${PYSITELIB}/tox/venv.py
 ${PYSITELIB}/tox/venv.pyc
 ${PYSITELIB}/tox/venv.pyo
