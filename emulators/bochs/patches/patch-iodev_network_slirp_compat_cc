@@ -1,14 +1,14 @@
-$NetBSD: patch-iodev_network_slirp_compat_cc,v 1.1 2015/07/01 13:39:17 ryoon Exp $
+$NetBSD: patch-iodev_network_slirp_compat_cc,v 1.2 2019/01/13 11:59:38 ryoon Exp $
 
 (At least NetBSD/amd64 7.99.1 has following problem)
 slirp/compat.cc:141:40: error: 'WIFEXITED' was not declared in this scope
 slirp/compat.cc:144:35: error: 'WEXITSTATUS' was not declared in this scope
 
---- iodev/network/slirp/compat.cc~	2014-04-19 02:14:32.000000000 +0900
-+++ iodev/network/slirp/compat.cc	2014-12-12 01:01:35.000000000 +0900
-@@ -27,6 +27,10 @@
- 
- #include "slirp.h"
+--- iodev/network/slirp/compat.cc.orig	2016-08-12 17:06:14.000000000 +0000
++++ iodev/network/slirp/compat.cc
+@@ -35,6 +35,10 @@
+ # define WIFEXITED(stat_val) (((stat_val) & 255) == 0)
+ #endif
  
 +#ifdef __NetBSD__
 +# include "sys/wait.h"
