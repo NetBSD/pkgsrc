@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.60 2017/09/02 16:18:56 jlam Exp $
+# $NetBSD: Makefile,v 1.61 2019/01/14 10:53:37 jmmv Exp $
 
-DISTNAME=	pkg_comp-2.0
-PKGREVISION=	2
+DISTNAME=	pkg_comp-2.1
 CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_GITHUB:=jmmv/}pkg_comp/releases/download/pkg_comp-2.0/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jmmv/}pkg_comp/releases/download/pkg_comp-2.1/
 
 MAINTAINER=	jmmv@NetBSD.org
 COMMENT=	Automates builds of packages and manages pkgsrc trees
 LICENSE=	modified-bsd
 
-DEPENDS=	sandboxctl>=1.0:../../sysutils/sandboxctl
+DEPENDS=	sandboxctl>=1.1:../../sysutils/sandboxctl
 
 GNU_CONFIGURE=		yes
 TEST_TARGET=		check
