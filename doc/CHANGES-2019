@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.179 2019/01/14 10:54:36 jmmv Exp $
+$NetBSD: CHANGES-2019,v 1.180 2019/01/14 13:15:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -249,3 +249,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated pkgtools/pkglint to 5.6.11 [rillig 2019-01-13]
 	Updated sysutils/sandboxctl to 1.1 [jmmv 2019-01-14]
 	Updated pkgtools/pkg_comp to 2.1 [jmmv 2019-01-14]
+	Removed meta-pkgs/php70-extensions [taca 2019-01-14]
+	Removed lang/php70 [taca 2019-01-14]
