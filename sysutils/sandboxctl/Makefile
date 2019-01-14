@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/02/17 21:23:42 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2019/01/14 10:52:49 jmmv Exp $
 
-DISTNAME=	sandboxctl-1.0
+DISTNAME=	sandboxctl-1.1
 CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_GITHUB:=jmmv/}sandboxctl/releases/download/sandboxctl-1.0/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jmmv/}sandboxctl/releases/download/sandboxctl-1.1/
 
 MAINTAINER=	jmmv@NetBSD.org
 COMMENT=	Manages chroot-based sandboxes
