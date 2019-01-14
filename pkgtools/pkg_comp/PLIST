@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2017/02/17 21:25:46 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/01/14 10:53:37 jmmv Exp $
 man/man5/pkg_comp.conf.5
 man/man8/pkg_comp.8
 man/man8/pkg_comp4cron.8
@@ -14,11 +14,11 @@ share/examples/pkg_comp/extra.mk.conf
 share/examples/pkg_comp/sandbox.conf
 share/pkg_comp/sandbox.conf.post
 share/pkg_comp/sandbox.conf.pre
-share/shtk/pkg_comp_git.subr
-share/shtk/pkg_comp_pkgsrc.subr
+share/pkg_comp/shtk/git.subr
+share/pkg_comp/shtk/pkgsrc.subr
 ${TESTS}tests/pkg_comp/Kyuafile
-${TESTS}tests/pkg_comp/pkg_comp_git_test
-${TESTS}tests/pkg_comp/pkg_comp_inttest
-${TESTS}tests/pkg_comp/pkg_comp_pkgsrc_test
-${TESTS}tests/pkg_comp/pkg_comp_test
+${TESTS}tests/pkg_comp/git_test
 ${TESTS}tests/pkg_comp/pkg_comp4cron_test
+${TESTS}tests/pkg_comp/pkg_comp_inttest
+${TESTS}tests/pkg_comp/pkg_comp_test
+${TESTS}tests/pkg_comp/pkgsrc_test
