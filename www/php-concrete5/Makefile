@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2018/12/16 02:59:43 taca Exp $
+# $NetBSD: Makefile,v 1.19 2019/01/14 13:06:12 taca Exp $
 #
 
 DISTNAME=	concrete5.7.5.13
@@ -30,7 +30,7 @@ BUILD_DEFS+=	APACHE_GROUP APACHE_USER
 C5DIR=			share/concrete5
 INSTALLATION_DIRS=	${C5DIR}
 
-PHP_VERSIONS_ACCEPTED=	56 70 71
+PHP_VERSIONS_ACCEPTED=	56 71
 
 .include "../../lang/php/phpversion.mk"
 
