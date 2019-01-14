@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.273 2019/01/01 11:02:09 wiz Exp $
+# $NetBSD: Makefile,v 1.274 2019/01/14 22:58:02 wiz Exp $
 
 DISTNAME=		gnucash-3.4
 CATEGORIES=		finance
@@ -31,6 +31,8 @@ TEST_TARGET=		check
 
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/gnucash
 CXXFLAGS+=		-Wno-deprecated-declarations
+# https://bugs.gnucash.org/show_bug.cgi?id=797039
+CFLAGS+=		-Wno-char-subscripts
 
 MAKE_ENV+=		GUILE_AUTO_COMPILE=0
 CMAKE_ARGS+=		-DWITH_AQBANKING=OFF
