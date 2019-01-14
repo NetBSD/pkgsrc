@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/11/14 22:21:24 kleink Exp $
+# $NetBSD: Makefile,v 1.13 2019/01/14 20:20:22 leot Exp $
 
 PKGNAME=	vim-gtk3-${VIM_VERSION}.${VIM_PATCHLEVEL}
 PKGREVISION=	2
@@ -40,9 +40,16 @@ post-install:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/gtk3/buildlink3.mk"
+
+# XXX: `--x-libraries' and `--x-includes' are injected to CONFIGURE_ARGS via
+# XXX: mk/x11.buildlink3.mk. Override them by redefining them to NONE in order
+# XXX: to avoid picked up possible undesidered libraries similarly to
+# XXX: PR pkg/53688.
+CONFIGURE_ARGS+=	--x-libraries=NONE
+CONFIGURE_ARGS+=	--x-includes=NONE
 
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
