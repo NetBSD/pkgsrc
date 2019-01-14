@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2019/01/01 20:22:55 nia Exp $
+# $NetBSD: Makefile,v 1.50 2019/01/14 13:19:11 taca Exp $
 
-DISTNAME=	bulk-medium-20190101
+DISTNAME=	bulk-medium-20190114
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -80,10 +80,10 @@ BUILD_DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 BUILD_DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 BUILD_DEPENDS+=	${PYPKGPREFIX}-matplotlib-gtk-[0-9]*:../../graphics/py-matplotlib-gtk2
 BUILD_DEPENDS+=	gawk-[0-9]*:../../lang/gawk
-BUILD_DEPENDS+=	php>=5.6<5.7:../../lang/php56
-BUILD_DEPENDS+=	ruby22-base-[0-9]*:../../lang/ruby22-base
+BUILD_DEPENDS+=	php>=7.1<7.2:../../lang/php71
 BUILD_DEPENDS+=	ruby23-base-[0-9]*:../../lang/ruby23-base
 BUILD_DEPENDS+=	ruby24-base-[0-9]*:../../lang/ruby24-base
+BUILD_DEPENDS+=	ruby25-base-[0-9]*:../../lang/ruby25-base
 BUILD_DEPENDS+=	sun-jdk6-[0-9]*:../../lang/sun-jdk6
 BUILD_DEPENDS+=	sun-jre6-[0-9]*:../../lang/sun-jre6
 BUILD_DEPENDS+=	openjdk7-[0-9]*:../../lang/openjdk7
