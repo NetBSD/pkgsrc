@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.23 2018/09/03 09:39:27 wiz Exp $
+$NetBSD: distinfo,v 1.24 2019/01/15 15:48:17 wiz Exp $
 
-SHA1 (tin-2.4.2.tar.xz) = 675004c453548e926a261a071e0715e23a05c609
-RMD160 (tin-2.4.2.tar.xz) = e691275597cb1886ae9e66343493cf96acbd2bfe
-SHA512 (tin-2.4.2.tar.xz) = 70a9957d5bf5af1bb182a3f4e62795cd5862b7282b7fc0c231c3bd02d83950cdbdd502d8a2cc5eae20b29af584e4f794f03378742b47ed93fc5c61ac5bbb01b6
-Size (tin-2.4.2.tar.xz) = 1491388 bytes
-SHA1 (patch-Makefile) = 5dfed6b037755fd632d71fd5c58b5982b24a598e
-SHA1 (patch-configure) = dd738e58ffe3b39396928ebb881b7b269bf21315
-SHA1 (patch-include_tin.h) = 557a75eeff1114018dca247e15eceddf70af8b91
-SHA1 (patch-src_Makefile.in) = f65cfcc6da2be21edf80317b94a98e1512e086a0
+SHA1 (tin-2.4.3.tar.xz) = f0460e6e9aa555864df8d12986c06e3c0c27f70a
+RMD160 (tin-2.4.3.tar.xz) = ca9404b46705b75b615b79e6d0434c85e009c616
+SHA512 (tin-2.4.3.tar.xz) = 9d4b22ec889cc0b468d9d5488907b6b4a6fc864dcbd18ef2e91a463734e651bc7ff149d6c74805f82cbf0d4f6e7f28b005ba07268966e3c96928b5b20be59eba
+Size (tin-2.4.3.tar.xz) = 1538960 bytes
+SHA1 (patch-Makefile) = 7f9048d31e70d9630ba6511d834db5d0c60a7de1
+SHA1 (patch-configure) = 02f6c943c7e6cbf8552f163c8ff4922413c9c340
+SHA1 (patch-include_tin.h) = 75a933e15128e7e102598c311ff292caf9c49041
+SHA1 (patch-src_Makefile.in) = 412f1cd6b01618e64d6a3f713f3758d5a563e79e
