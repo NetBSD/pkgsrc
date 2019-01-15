@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.204 2019/01/15 23:06:06 adam Exp $
+$NetBSD: CHANGES-2019,v 1.205 2019/01/15 23:36:11 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -293,3 +293,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/syncthing to 1.0.0 [wiz 2019-01-15]
 	Updated security/py-certifi to 2018.11.29 [adam 2019-01-15]
 	Updated www/py-w3lib to 1.20.0 [adam 2019-01-15]
+	Updated www/moodle to 3.6.2 [wen 2019-01-15]
