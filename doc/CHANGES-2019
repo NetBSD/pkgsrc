@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.193 2019/01/15 12:00:17 triaxx Exp $
+$NetBSD: CHANGES-2019,v 1.194 2019/01/15 12:02:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -269,3 +269,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/py-amqp to 2.4.0 [adam 2019-01-15]
 	Updated devel/py-dulwich to 0.19.10 [adam 2019-01-15]
 	Added security/py-certbot-dns-ovh version 0.30.0 [triaxx 2019-01-15]
+	Updated databases/py-sqlalchemy to 1.2.16 [adam 2019-01-15]
+	Updated databases/py-sqlalchemy-utils to 0.33.11 [adam 2019-01-15]
+	Updated databases/py-alembic to 1.0.6 [adam 2019-01-15]
+	Updated devel/py-typing-extensions to 3.7.2 [adam 2019-01-15]
