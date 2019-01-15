@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.197 2019/01/15 15:48:26 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.198 2019/01/15 19:14:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -276,3 +276,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Added security/py-certbot-dns-sakuracloud version 0.30.0 [triaxx 2019-01-15]
 	Added security/py-certbot-nginx version 0.30.0 [triaxx 2019-01-15]
 	Updated news/tin to 2.4.3 [wiz 2019-01-15]
+	Updated devel/py-test-fixture-config to 1.4.0 [adam 2019-01-15]
+	Updated devel/py-test-shutil to 1.4.0 [adam 2019-01-15]
+	Updated devel/py-test-virtualenv to 1.4.0 [adam 2019-01-15]
+	Updated finance/py-stripe to 2.18.0 [adam 2019-01-15]
