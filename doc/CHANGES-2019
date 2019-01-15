@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.182 2019/01/15 01:28:40 bacon Exp $
+$NetBSD: CHANGES-2019,v 1.183 2019/01/15 07:35:57 fox Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -253,3 +253,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed lang/php70 [taca 2019-01-14]
 	Updated meta-pkgs/bulk-medium to 20190114 [taca 2019-01-14]
 	Updated biology/hisat2 to 2.1.0.23 [bacon 2019-01-15]
+	Updated audio/fasttracker2 to 2.130 [fox 2019-01-15]
