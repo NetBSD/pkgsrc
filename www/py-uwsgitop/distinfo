@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/09/30 09:29:44 adam Exp $
+$NetBSD: distinfo,v 1.5 2019/01/15 22:15:37 adam Exp $
 
-SHA1 (uwsgitop-0.10.tar.gz) = ff7166dcb2e23a234805fdfeaac9793617d2c1b8
-RMD160 (uwsgitop-0.10.tar.gz) = 4640541edbadb72a45e22ec3739275db48938972
-SHA512 (uwsgitop-0.10.tar.gz) = b379170ddb304a93a4f762f4f87d5484093b58f908f9cfac9f2447ef7854bb00dc50f639354c2f4172f64445396d16c18852fa035c71651386d53d562580665c
-Size (uwsgitop-0.10.tar.gz) = 5931 bytes
+SHA1 (uwsgitop-0.11.tar.gz) = c051c81539f1fe5b2f244a587d10a75dc088e9b6
+RMD160 (uwsgitop-0.11.tar.gz) = 0ab20c1e1f8e2f439a307c5366796a02da5a158e
+SHA512 (uwsgitop-0.11.tar.gz) = a3e994c6a20c4dc7b4c266fe98b53c062e78adddcf5e225cfe89c90d85a2ae1b7f34f71d1f465031928fd658d7d3c9d67bbf2c0e297a22709fa396864bb8b8a1
+Size (uwsgitop-0.11.tar.gz) = 6052 bytes
