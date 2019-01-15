@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.189 2019/01/15 10:28:32 adam Exp $
+$NetBSD: CHANGES-2019,v 1.190 2019/01/15 11:01:13 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -262,3 +262,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated shells/xonsh to 0.8.8 [nonaka 2019-01-15]
 	Updated devel/py-typed-ast to 1.2.0 [adam 2019-01-15]
 	Updated devel/py-test-flake8 to 1.0.3 [adam 2019-01-15]
+	Updated graphics/lcms2 to 2.9 [markd 2019-01-15]
