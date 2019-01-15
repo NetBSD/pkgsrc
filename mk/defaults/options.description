@@ -744,6 +744,7 @@ tai-system-clock	Install leapsecs.dat to support /etc/localtime using TAI
 tap			Enable Tom's Audio Processing plugins library support.
 tcl			Enable Tcl scripting support.
 tcpwrappers		Enable tcpwrappers support.
+termcap			Enable termcap support.
 terminfo		Use terminfo.
 tests			Build and install tests.
 theora			Use the theora codecs.
