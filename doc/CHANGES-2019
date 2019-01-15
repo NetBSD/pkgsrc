@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.203 2019/01/15 22:33:33 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.204 2019/01/15 23:06:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -291,3 +291,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-aiohttp to 3.5.4 [adam 2019-01-15]
 	Updated www/py-uwsgitop to 0.11 [adam 2019-01-15]
 	Updated net/syncthing to 1.0.0 [wiz 2019-01-15]
+	Updated security/py-certifi to 2018.11.29 [adam 2019-01-15]
+	Updated www/py-w3lib to 1.20.0 [adam 2019-01-15]
