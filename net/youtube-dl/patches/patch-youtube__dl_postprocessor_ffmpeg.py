@@ -1,10 +1,10 @@
-$NetBSD: patch-youtube__dl_postprocessor_ffmpeg.py,v 1.4 2018/07/14 11:27:05 leot Exp $
+$NetBSD: patch-youtube__dl_postprocessor_ffmpeg.py,v 1.5 2019/01/15 21:15:30 leot Exp $
 
-Also look and use ffmpeg[234]/ffproble[234] if possible, preferring
+Also look and use ffmpeg[234]/ffprobe[234] if possible, preferring
 the unversioned one (i.e. selected via alternatives framework)
 or the newest one.
 
---- youtube_dl/postprocessor/ffmpeg.py.orig	2018-07-03 22:29:01.000000000 +0000
+--- youtube_dl/postprocessor/ffmpeg.py.orig	2019-01-15 19:23:14.000000000 +0000
 +++ youtube_dl/postprocessor/ffmpeg.py
 @@ -76,7 +76,7 @@ class FFmpegPostProcessor(PostProcessor)
          return FFmpegPostProcessor(downloader)._versions
@@ -14,8 +14,8 @@ or the newest one.
 +        programs = ['avprobe', 'avconv', 'ffmpeg', 'ffmpeg4', 'ffmpeg3', 'ffmpeg2', 'ffprobe', 'ffprobe4', 'ffprobe3', 'ffprobe2']
          prefer_ffmpeg = True
  
-         self.basename = None
-@@ -104,7 +104,7 @@ class FFmpegPostProcessor(PostProcessor)
+         def get_ffmpeg_version(path):
+@@ -118,7 +118,7 @@ class FFmpegPostProcessor(PostProcessor)
                          self._versions = {}
                          return None
                      location = os.path.dirname(os.path.abspath(location))
@@ -24,7 +24,7 @@ or the newest one.
                          prefer_ffmpeg = True
  
                  self._paths = dict(
-@@ -118,18 +118,18 @@ class FFmpegPostProcessor(PostProcessor)
+@@ -131,18 +131,18 @@ class FFmpegPostProcessor(PostProcessor)
              self._paths = dict((p, p) for p in programs)
  
          if prefer_ffmpeg is False:
