@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2018/12/22 08:55:29 adam Exp $
+# $NetBSD: Makefile,v 1.30 2019/01/15 21:03:10 adam Exp $
 
-DISTNAME=	talloc-2.1.14
-PKGREVISION=	1
+DISTNAME=	talloc-2.1.15
 CATEGORIES=	devel
 MASTER_SITES=	http://www.samba.org/ftp/talloc/
 
@@ -12,6 +11,9 @@ LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+
+# include/talloc.h
+CONFLICTS+=	samba<=4.6.8nb3
 
 USE_TOOLS+=		pkg-config
 HAS_CONFIGURE=		yes
@@ -26,24 +28,15 @@ CONFIGURE_ARGS+=	--jobs=${MAKE_JOBS}
 .else
 CONFIGURE_ARGS+=	--jobs=1
 .endif
-TEST_TARGET=		test
-
 PKGCONFIG_OVERRIDE+=	talloc.pc.in
 PKGCONFIG_OVERRIDE+=	pytalloc-util.pc.in
+TEST_TARGET=		test
 
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 2.1.0
 
-# include/talloc.h
-CONFLICTS+=	samba<=4.6.8nb3
-
+PY_PATCHPLIST=		yes
 REPLACE_PYTHON+=	buildtools/bin/waf
-REPLACE_PYTHON+=	buildtools/wafsamba/__init__.py
-REPLACE_PYTHON+=	buildtools/wafsamba/samba_python.py
-REPLACE_PYTHON+=	buildtools/wafsamba/symbols.py
-REPLACE_PYTHON+=	buildtools/wafsamba/wscript
-REPLACE_PYTHON+=	lib/replace/system/wscript_configure
-REPLACE_PYTHON+=	lib/replace/wscript
-REPLACE_PYTHON+=	wscript
+MAKE_FLAGS+=		WAF_BINARY=${PYTHONBIN}\ ${WRKSRC}/buildtools/bin/waf
 
 SUBST_CLASSES+=		docbook
 SUBST_MESSAGE.docbook=	Fixing docbook URLs.
@@ -52,7 +45,6 @@ SUBST_FILES.docbook+=	buildtools/wafsamba/wafsamba.py
 SUBST_STAGE.docbook=	pre-configure
 SUBST_SED.docbook+=	-e 's,http://docbook.sourceforge.net/release/xsl/current,${PREFIX}/share/xsl/docbook,g'
 
-PY_PATCHPLIST=		yes
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
