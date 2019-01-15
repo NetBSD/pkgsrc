@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2019/01/07 02:34:21 bacon Exp $
+# $NetBSD: Makefile,v 1.52 2019/01/15 01:27:42 bacon Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -23,6 +23,7 @@ SUBDIR+=	glimmer
 SUBDIR+=	gnome-chemistry-utils
 SUBDIR+=	gp
 SUBDIR+=	gromacs
+SUBDIR+=	hisat2
 SUBDIR+=	hmmer
 SUBDIR+=	htslib
 SUBDIR+=	kallisto
