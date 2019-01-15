@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2018/06/18 07:09:37 adam Exp $
+# $NetBSD: Makefile,v 1.18 2019/01/15 11:42:59 adam Exp $
 
-DISTNAME=	amqp-2.3.2
+DISTNAME=	amqp-2.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/amqp/}
@@ -15,7 +15,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-case>=1.3.1:../../devel/py-case
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-sugar>=0.9.1:../../devel/py-test-sugar
 
-USE_LANGUAGES=		# none
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
