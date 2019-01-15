@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.181 2019/01/14 13:19:34 taca Exp $
+$NetBSD: CHANGES-2019,v 1.182 2019/01/15 01:28:40 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -252,3 +252,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed meta-pkgs/php70-extensions [taca 2019-01-14]
 	Removed lang/php70 [taca 2019-01-14]
 	Updated meta-pkgs/bulk-medium to 20190114 [taca 2019-01-14]
+	Updated biology/hisat2 to 2.1.0.23 [bacon 2019-01-15]
