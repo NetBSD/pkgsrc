@@ -1,9 +1,12 @@
-# $NetBSD: Makefile.common,v 1.29 2019/01/15 09:32:11 triaxx Exp $
+# $NetBSD: Makefile.common,v 1.30 2019/01/15 12:07:25 triaxx Exp $
 #
 # used by security/py-acme/Makefile
 # used by security/py-certbot/Makefile
+# used by security/py-certbot-dns-ovh/Makefile
 # used by security/py-certbot-dns-rfc2136/Makefile
 # used by security/py-certbot-dns-route53/Makefile
+# used by security/py-certbot-dns-sakuracloud/Makefile
+# used by security/py-certbot-nginx/Makefile
 
 DISTNAME=	certbot-0.30.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=certbot/}
