@@ -1,1 +1,1 @@
-bin/uwsgitop @PREFIX@/bin/uwsgitop@PYVERSSUFFIX@
+bin/uwsgitop @PREFIX@/bin/uwsgitop-@PYVERSSUFFIX@
