@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.188 2019/01/15 10:21:07 nonaka Exp $
+$NetBSD: CHANGES-2019,v 1.189 2019/01/15 10:28:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -260,3 +260,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/py-acme to 0.30.0 [triaxx 2019-01-15]
 	Added security/py-certbot-dns-route53 version 0.30.0 [triaxx 2019-01-15]
 	Updated shells/xonsh to 0.8.8 [nonaka 2019-01-15]
+	Updated devel/py-typed-ast to 1.2.0 [adam 2019-01-15]
+	Updated devel/py-test-flake8 to 1.0.3 [adam 2019-01-15]
