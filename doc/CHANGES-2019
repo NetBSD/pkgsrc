@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.185 2019/01/15 09:32:42 triaxx Exp $
+$NetBSD: CHANGES-2019,v 1.186 2019/01/15 09:34:32 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -257,3 +257,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/cmake to 3.13.3 [adam 2019-01-15]
 	Updated devel/ccache to 3.6 [adam 2019-01-15]
 	Updated security/py-certbot to 0.30.0 [triaxx 2019-01-15]
+	Updated security/py-acme to 0.30.0 [triaxx 2019-01-15]
