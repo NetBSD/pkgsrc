@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/07/17 07:04:22 adam Exp $
+# $NetBSD: Makefile,v 1.3 2019/01/15 11:40:03 adam Exp $
 
-DISTNAME=	vine-1.1.4
+DISTNAME=	vine-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/vine/}
