@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2019/01/03 19:30:47 adam Exp $
+# $NetBSD: Makefile,v 1.2 2019/01/15 21:03:37 adam Exp $
 
-DISTNAME=	tevent-0.9.37
+DISTNAME=	tevent-0.9.38
 CATEGORIES=	devel
 MASTER_SITES=	http://www.samba.org/ftp/tevent/
 
@@ -34,6 +34,7 @@ PYTHON_VERSIONS_ACCEPTED=	27
 
 PY_PATCHPLIST=		yes
 REPLACE_PYTHON+=	buildtools/bin/waf
+MAKE_FLAGS+=		WAF_BINARY=${PYTHONBIN}\ ${WRKSRC}/buildtools/bin/waf
 
 SUBST_CLASSES+=		docbook
 SUBST_MESSAGE.docbook=	Fixing docbook URLs.
