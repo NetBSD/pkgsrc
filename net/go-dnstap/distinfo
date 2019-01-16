@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/01/16 15:16:55 he Exp $
+
+SHA1 (go-dnstap-0.1.0.tar.gz) = 3f5b87630d42d4c7c1d4d33cedee4d0d2d09b569
+RMD160 (go-dnstap-0.1.0.tar.gz) = d5998348ea760332a3fe9d09bf71ac80b74aeb59
+SHA512 (go-dnstap-0.1.0.tar.gz) = d0c6d251d4dc951f35e5dde3cb88f98289d8438e647c848bd8eff735c348900d9e24bbd497f7c511f64635a765e8d45276a415cdfe570295ce76017c6c53df43
+Size (go-dnstap-0.1.0.tar.gz) = 18366 bytes
