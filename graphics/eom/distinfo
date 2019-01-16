@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2018/05/14 12:42:35 youri Exp $
+$NetBSD: distinfo,v 1.6 2019/01/16 14:57:58 youri Exp $
 
-SHA1 (eom-1.20.0.tar.xz) = ea2cfa16231fe02d5f39e8386e78210de009109a
-RMD160 (eom-1.20.0.tar.xz) = 32ae36b1c064b6a73e740f8a86572f5b415b10ad
-SHA512 (eom-1.20.0.tar.xz) = c83a9e92ff84be244ae86b9aeea57ad5c04d774562ba30795ba296bcd6ed0b7f5f2e387f367f0d1378f0f9b8964d326acb7359f156837e99590ee8d8dcbae8a3
-Size (eom-1.20.0.tar.xz) = 2204444 bytes
+SHA1 (eom-1.21.2.tar.xz) = aef2f670ced470e367064f7fd4f890c7f2d92628
+RMD160 (eom-1.21.2.tar.xz) = 670412ec3e8d6a39f3d77f683d01a1045f08854e
+SHA512 (eom-1.21.2.tar.xz) = 8efe95a01d7cabc59c1bb03279df321aa79b806c546b658f2ae4a1e62ebcc55817660b8f6634dbcf82c3e862dd7d848d1529964ed1e30e8eb557aa8239160fa0
+Size (eom-1.21.2.tar.xz) = 2245072 bytes
 SHA1 (patch-src_eom-exif-util.c) = 13a3d69553564278e9beae5c84adcf83b7591f20
