@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.208 2019/01/16 00:12:01 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.209 2019/01/16 00:34:22 agc Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -295,3 +295,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-w3lib to 1.20.0 [adam 2019-01-15]
 	Updated www/moodle to 3.6.2 [wen 2019-01-15]
 	Updated www/mediawiki to 1.32.0 [wen 2019-01-15]
+	Updated security/netpgpverify to 20190111 [agc 2019-01-15]
+	Updated security/libnetpgpverify to 20190111 [agc 2019-01-15]
