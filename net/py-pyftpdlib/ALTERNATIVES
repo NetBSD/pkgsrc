@@ -1,0 +1,1 @@
+bin/ftpbench @PREFIX@/bin/ftpbench-@PYVERSSUFFIX@
