@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2018/05/14 13:18:13 youri Exp $
+$NetBSD: distinfo,v 1.8 2019/01/16 18:15:35 youri Exp $
 
-SHA1 (mate-system-monitor-1.20.0.tar.xz) = 9eb2d1b5914faf410e643fe1aa01835f164b8711
-RMD160 (mate-system-monitor-1.20.0.tar.xz) = b51e5c8e6ff918993f239fb8a9bc50fd169a93cf
-SHA512 (mate-system-monitor-1.20.0.tar.xz) = 5676740e0d581f3e46540c90f2df6ba37fdf9661df08b32896cac03c6b3282a052bfa3c1f7e61d4a3f1a04b3aedd5162de65b64586950dc1c2841f7bfea0b2be
-Size (mate-system-monitor-1.20.0.tar.xz) = 2149220 bytes
+SHA1 (mate-system-monitor-1.21.1.tar.xz) = 1433c9275f3e3b33e58d4c55468faa2b0a794592
+RMD160 (mate-system-monitor-1.21.1.tar.xz) = 5c66f0066510dad26973559d0814896c1583d9d1
+SHA512 (mate-system-monitor-1.21.1.tar.xz) = 68a8add7e828933d57f20a2afa3e8c350640bccb4485577e244658e0cb0bb41fb6068b8244f2850b5ff8566476706f21abe8560ae9aa93b09a686927e6b0e021
+Size (mate-system-monitor-1.21.1.tar.xz) = 2193192 bytes
