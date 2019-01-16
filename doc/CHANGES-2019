@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.222 2019/01/16 14:50:28 youri Exp $
+$NetBSD: CHANGES-2019,v 1.223 2019/01/16 14:50:47 youri Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -317,3 +317,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added net/fstrm version 0.4.0 [he 2019-01-16]
 	Added misc/sunwait version 0.8 [martin 2019-01-16]
 	Updated print/atril to 1.21.1 [youri 2019-01-15]
+	Updated meta-pkgs/mate to 1.21.0 [youri 2019-01-15]
