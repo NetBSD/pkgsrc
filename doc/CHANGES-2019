@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.247 2019/01/16 18:12:23 youri Exp $
+$NetBSD: CHANGES-2019,v 1.248 2019/01/16 18:13:49 youri Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -344,3 +344,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/mate-power-manager to 1.21.1 [youri 2019-01-15]
 	Updated x11/mate-screensaver to 1.21.0 [youri 2019-01-15]
 	Updated sysutils/mate-sensors-applet to 1.21.1 [youri 2019-01-15]
+	Updated x11/mate-session-manager to 1.21.0 [youri 2019-01-15]
