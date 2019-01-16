@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2018/05/14 12:29:35 youri Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/01/16 14:53:14 youri Exp $
 bin/caja
 bin/caja-autorun-software
 bin/caja-connect-server
 bin/caja-file-management-properties
 include/caja/libcaja-extension/caja-column-provider.h
 include/caja/libcaja-extension/caja-column.h
+include/caja/libcaja-extension/caja-configurable.h
 include/caja/libcaja-extension/caja-extension-types.h
 include/caja/libcaja-extension/caja-file-info.h
 include/caja/libcaja-extension/caja-info-provider.h
@@ -175,6 +176,7 @@ share/locale/ks/LC_MESSAGES/caja.mo
 share/locale/ku/LC_MESSAGES/caja.mo
 share/locale/ku_IQ/LC_MESSAGES/caja.mo
 share/locale/ky/LC_MESSAGES/caja.mo
+share/locale/la/LC_MESSAGES/caja.mo
 share/locale/li/LC_MESSAGES/caja.mo
 share/locale/lt/LC_MESSAGES/caja.mo
 share/locale/lv/LC_MESSAGES/caja.mo
@@ -216,6 +218,7 @@ share/locale/te/LC_MESSAGES/caja.mo
 share/locale/th/LC_MESSAGES/caja.mo
 share/locale/tk/LC_MESSAGES/caja.mo
 share/locale/tr/LC_MESSAGES/caja.mo
+share/locale/tt/LC_MESSAGES/caja.mo
 share/locale/ug/LC_MESSAGES/caja.mo
 share/locale/uk/LC_MESSAGES/caja.mo
 share/locale/ur/LC_MESSAGES/caja.mo
