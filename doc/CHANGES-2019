@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.206 2019/01/15 23:47:10 wen Exp $
+$NetBSD: CHANGES-2019,v 1.207 2019/01/16 00:09:23 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -295,3 +295,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-w3lib to 1.20.0 [adam 2019-01-15]
 	Updated www/moodle to 3.6.2 [wen 2019-01-15]
 	Updated www/mediawiki to 1.32.0 [wen 2019-01-15]
+	Updated graphics/tesseract to 4.0.0nb4 [gutteridge 2019-01-16]
