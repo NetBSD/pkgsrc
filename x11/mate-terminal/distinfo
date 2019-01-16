@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2018/05/14 13:19:24 youri Exp $
+$NetBSD: distinfo,v 1.4 2019/01/16 18:16:29 youri Exp $
 
-SHA1 (mate-terminal-1.20.0.tar.xz) = 1217072acd69b949cb559d0886a70ce178d06e57
-RMD160 (mate-terminal-1.20.0.tar.xz) = 9792cb610cb3738c776aa2e8b84e59754fa4d218
-SHA512 (mate-terminal-1.20.0.tar.xz) = f9283452cac962f8e3891e16d0208936086f1a8b9ae848f282071a6b9479dba02975c4945054074d1642302371149ba3d67c9d60aad6f9d8473f9d6696de8772
-Size (mate-terminal-1.20.0.tar.xz) = 1317068 bytes
+SHA1 (mate-terminal-1.21.1.tar.xz) = 6d903fea96e20179f6cc87ce2cfbef2ad244310f
+RMD160 (mate-terminal-1.21.1.tar.xz) = 8abea095a41384701ca219110dc579c8266140ee
+SHA512 (mate-terminal-1.21.1.tar.xz) = 5796ef42a7cade8dcca6e1f84a6473bc51a5257f35c2331fd1363f5d208aaebf95d424f99ec2a02ff3e318f1a3d764dc0ccc44f3c4b0b8a0e2e3e2beb5310dbd
+Size (mate-terminal-1.21.1.tar.xz) = 1559612 bytes
