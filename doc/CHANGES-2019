@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.250 2019/01/16 18:15:44 youri Exp $
+$NetBSD: CHANGES-2019,v 1.251 2019/01/16 18:16:38 youri Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -347,3 +347,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/mate-session-manager to 1.21.0 [youri 2019-01-15]
 	Updated x11/mate-settings-daemon to 1.21.2 [youri 2019-01-15]
 	Updated sysutils/mate-system-monitor to 1.21.1 [youri 2019-01-15]
+	Updated x11/mate-terminal to 1.21.1 [youri 2019-01-15]
