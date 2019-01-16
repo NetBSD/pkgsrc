@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2018/11/14 22:22:23 kleink Exp $
+# $NetBSD: Makefile,v 1.15 2019/01/16 14:55:04 youri Exp $
 
-PKGREVISION= 2
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	caja-dropbox-${VERSION}
+DISTNAME=	caja-dropbox-1.20.0
 CATEGORIES=	sysutils
 
 COMMENT=	Dropbox Caja extension
