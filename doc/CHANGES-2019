@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.209 2019/01/16 00:34:22 agc Exp $
+$NetBSD: CHANGES-2019,v 1.210 2019/01/16 00:45:12 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -297,3 +297,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/mediawiki to 1.32.0 [wen 2019-01-15]
 	Updated security/netpgpverify to 20190111 [agc 2019-01-15]
 	Updated security/libnetpgpverify to 20190111 [agc 2019-01-15]
+	Updated devel/p5-Type-Tiny to 1.004004 [wen 2019-01-16]
