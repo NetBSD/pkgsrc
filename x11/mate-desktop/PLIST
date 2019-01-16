@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/05/14 12:55:02 youri Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/01/16 15:07:39 youri Exp $
 bin/mate-about
 bin/mate-color-select
 include/mate-desktop-2.0/libmate-desktop/mate-bg-crossfade.h
@@ -12,6 +12,7 @@ include/mate-desktop-2.0/libmate-desktop/mate-desktop-thumbnail.h
 include/mate-desktop-2.0/libmate-desktop/mate-desktop-utils.h
 include/mate-desktop-2.0/libmate-desktop/mate-desktop.h
 include/mate-desktop-2.0/libmate-desktop/mate-gsettings.h
+include/mate-desktop-2.0/libmate-desktop/mate-languages.h
 include/mate-desktop-2.0/libmate-desktop/mate-rr-config.h
 include/mate-desktop-2.0/libmate-desktop/mate-rr-labeler.h
 include/mate-desktop-2.0/libmate-desktop/mate-rr.h
@@ -47,9 +48,11 @@ share/gtk-doc/html/mate-desktop/background.html
 share/gtk-doc/html/mate-desktop/home.png
 share/gtk-doc/html/mate-desktop/index.html
 share/gtk-doc/html/mate-desktop/intro.html
+share/gtk-doc/html/mate-desktop/languages.html
 share/gtk-doc/html/mate-desktop/left-insensitive.png
 share/gtk-doc/html/mate-desktop/left.png
 share/gtk-doc/html/mate-desktop/libmate.html
+share/gtk-doc/html/mate-desktop/mate-desktop-Language-Utilities.html
 share/gtk-doc/html/mate-desktop/mate-desktop-Miscellaneous-Functions.html
 share/gtk-doc/html/mate-desktop/mate-desktop-Miscellaneous-Thumbnail-Functions.html
 share/gtk-doc/html/mate-desktop/mate-desktop-mate-rr-config.html
@@ -177,6 +180,7 @@ share/locale/te/LC_MESSAGES/mate-desktop.mo
 share/locale/th/LC_MESSAGES/mate-desktop.mo
 share/locale/tk/LC_MESSAGES/mate-desktop.mo
 share/locale/tr/LC_MESSAGES/mate-desktop.mo
+share/locale/tt/LC_MESSAGES/mate-desktop.mo
 share/locale/ug/LC_MESSAGES/mate-desktop.mo
 share/locale/uk/LC_MESSAGES/mate-desktop.mo
 share/locale/ur/LC_MESSAGES/mate-desktop.mo
@@ -184,6 +188,7 @@ share/locale/uz/LC_MESSAGES/mate-desktop.mo
 share/locale/vi/LC_MESSAGES/mate-desktop.mo
 share/locale/wa/LC_MESSAGES/mate-desktop.mo
 share/locale/xh/LC_MESSAGES/mate-desktop.mo
+share/locale/yi/LC_MESSAGES/mate-desktop.mo
 share/locale/yo/LC_MESSAGES/mate-desktop.mo
 share/locale/zh_CN/LC_MESSAGES/mate-desktop.mo
 share/locale/zh_HK/LC_MESSAGES/mate-desktop.mo
