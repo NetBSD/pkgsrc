@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.226 2019/01/16 14:56:09 youri Exp $
+$NetBSD: CHANGES-2019,v 1.227 2019/01/16 14:57:02 youri Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -321,3 +321,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added sysutils/arm-trusted-firmware-fiptool version 2.0 [martin 2019-01-16]
 	Updated sysutils/caja to 1.21.3 [youri 2019-01-15]
 	Updated sysutils/caja-extensions to 1.21.0 [youri 2019-01-15]
+	Updated archivers/engrampa to 1.21.0 [youri 2019-01-15]
