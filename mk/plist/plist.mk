@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.51 2018/11/30 18:38:20 rillig Exp $
+# $NetBSD: plist.mk,v 1.52 2019/01/16 04:43:42 gutteridge Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -28,8 +28,8 @@
 #
 #	PLIST.common
 #	PLIST.${OPSYS}			(e.g., PLIST.NetBSD)
-#	PLIST.${MACHINE_ARCH}		(e.g,, PLIST.macppc)
-#	PLIST.${OPSYS}-${MACHINE_ARCH}	(e.g., PLIST.NetBSD-macppc)
+#	PLIST.${MACHINE_ARCH}		(e.g., PLIST.powerpc)
+#	PLIST.${OPSYS}-${MACHINE_ARCH}	(e.g., PLIST.NetBSD-powerpc)
 #	PLIST
 #	PLIST.common_end
 #
