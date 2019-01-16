@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.211 2019/01/16 00:51:05 wen Exp $
+$NetBSD: CHANGES-2019,v 1.212 2019/01/16 00:58:17 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -299,3 +299,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/libnetpgpverify to 20190111 [agc 2019-01-15]
 	Updated devel/p5-Type-Tiny to 1.004004 [wen 2019-01-16]
 	Updated devel/p5-Test2-Suite to 0.000117 [wen 2019-01-16]
+	Updated devel/p5-Test-Simple to 1.302156 [wen 2019-01-16]
