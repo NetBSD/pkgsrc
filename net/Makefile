@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1237 2019/01/08 10:45:02 markd Exp $
+# $NetBSD: Makefile,v 1.1238 2019/01/16 08:31:52 adam Exp $
 #
 
 COMMENT=	Networking tools
@@ -691,7 +691,9 @@ SUBDIR+=	py-prometheus_client
 SUBDIR+=	py-ptt
 SUBDIR+=	py-py3dns
 SUBDIR+=	py-pydns
+SUBDIR+=	py-pyftpdlib
 SUBDIR+=	py-pylint-celery
+SUBDIR+=	py-pysendfile
 SUBDIR+=	py-requestbuilder
 SUBDIR+=	py-responses
 SUBDIR+=	py-rt
