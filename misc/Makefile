@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.503 2018/12/31 17:42:30 leot Exp $
+# $NetBSD: Makefile,v 1.504 2019/01/16 14:44:34 martin Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -335,6 +335,7 @@ SUBDIR+=	splitvt
 SUBDIR+=	starplot
 SUBDIR+=	stellarium
 SUBDIR+=	step
+SUBDIR+=	sunwait
 SUBDIR+=	superkaramba
 SUBDIR+=	sweeper
 SUBDIR+=	sword
