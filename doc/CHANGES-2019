@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.229 2019/01/16 14:59:14 youri Exp $
+$NetBSD: CHANGES-2019,v 1.230 2019/01/16 14:59:54 youri Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -324,3 +324,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated archivers/engrampa to 1.21.0 [youri 2019-01-15]
 	Updated graphics/eom to 1.21.2 [youri 2019-01-15]
 	Updated x11/libmatekbd to 1.21.0 [youri 2019-01-15]
+	Updated audio/libmatemixer to 1.21.0 [youri 2019-01-15]
