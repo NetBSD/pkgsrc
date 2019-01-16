@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.212 2019/01/16 00:58:17 wen Exp $
+$NetBSD: CHANGES-2019,v 1.213 2019/01/16 01:04:53 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -300,3 +300,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-Type-Tiny to 1.004004 [wen 2019-01-16]
 	Updated devel/p5-Test2-Suite to 0.000117 [wen 2019-01-16]
 	Updated devel/p5-Test-Simple to 1.302156 [wen 2019-01-16]
+	Updated devel/p5-Test-CleanNamespaces to 0.24 [wen 2019-01-16]
