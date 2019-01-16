@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.235 2019/01/16 15:06:04 youri Exp $
+$NetBSD: CHANGES-2019,v 1.236 2019/01/16 15:07:48 youri Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -330,3 +330,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/mate-applets to 1.21.1 [youri 2019-01-15]
 	Updated misc/mate-calc to 1.21.0 [youri 2019-01-15]
 	Updated x11/mate-control-center to 1.21.2 [youri 2019-01-15]
+	Updated x11/mate-desktop to 1.21.2 [youri 2019-01-15]
