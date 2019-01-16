@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2018/12/21 15:14:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2019/01/16 09:13:11 adam Exp $
 
-DISTNAME=	awscli-1.16.78
+DISTNAME=	awscli-1.16.89
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/awscli/}
