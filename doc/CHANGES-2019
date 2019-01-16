@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.241 2019/01/16 18:03:10 youri Exp $
+$NetBSD: CHANGES-2019,v 1.242 2019/01/16 18:04:50 youri Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -338,3 +338,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/mate-indicator-applet to 1.20.1 [youri 2019-01-15]
 	Updated multimedia/mate-media to 1.21.0 [youri 2019-01-15]
 	Updated x11/mate-menus to 1.21.0 [youri 2019-01-15]
+	Updated sysutils/mate-notification-daemon to 1.21.0 [youri 2019-01-15]
