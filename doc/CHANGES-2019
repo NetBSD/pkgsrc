@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.214 2019/01/16 01:09:29 wen Exp $
+$NetBSD: CHANGES-2019,v 1.215 2019/01/16 08:21:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -302,3 +302,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-Test-Simple to 1.302156 [wen 2019-01-16]
 	Updated devel/p5-Test-CleanNamespaces to 0.24 [wen 2019-01-16]
 	Updated devel/p5-Test-CheckManifest to 1.38 [wen 2019-01-16]
+	Updated x11/gtk3 to 3.24.3 [adam 2019-01-16]
+	Updated security/libassuan2 to 2.5.2 [adam 2019-01-16]
