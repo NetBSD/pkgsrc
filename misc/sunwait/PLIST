@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2019/01/16 14:43:22 martin Exp $
+bin/sunwait
