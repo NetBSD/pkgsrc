@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.221 2019/01/16 14:45:01 martin Exp $
+$NetBSD: CHANGES-2019,v 1.222 2019/01/16 14:50:28 youri Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -316,3 +316,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/py-requests-oauthlib to 1.2.0 [adam 2019-01-16]
 	Added net/fstrm version 0.4.0 [he 2019-01-16]
 	Added misc/sunwait version 0.8 [martin 2019-01-16]
+	Updated print/atril to 1.21.1 [youri 2019-01-15]
