@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/01/16 13:49:29 he Exp $
+
+SHA1 (fstrm-0.4.0.tar.gz) = 022f3ddcea79de6fe62b06f87026372d3cad2646
+RMD160 (fstrm-0.4.0.tar.gz) = 55060dece27c61ccd478020411448674b5ff78be
+SHA512 (fstrm-0.4.0.tar.gz) = 5412340e0fed79abdcdafc290c18b3cb351c5d04e4e11af2ef78878c4915cc3be6bc7b94397d302cbd721d83be9164482fab0577baa9680c9075848899def1cc
+Size (fstrm-0.4.0.tar.gz) = 194789 bytes
