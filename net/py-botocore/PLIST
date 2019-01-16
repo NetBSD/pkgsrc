@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2018/12/21 15:12:56 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.17 2019/01/16 09:09:11 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -38,6 +38,7 @@ ${PYSITELIB}/botocore/credentials.pyo
 ${PYSITELIB}/botocore/data/_retry.json
 ${PYSITELIB}/botocore/data/acm-pca/2017-08-22/paginators-1.json
 ${PYSITELIB}/botocore/data/acm-pca/2017-08-22/service-2.json
+${PYSITELIB}/botocore/data/acm-pca/2017-08-22/waiters-2.json
 ${PYSITELIB}/botocore/data/acm/2015-12-08/examples-1.json
 ${PYSITELIB}/botocore/data/acm/2015-12-08/paginators-1.json
 ${PYSITELIB}/botocore/data/acm/2015-12-08/service-2.json
@@ -219,6 +220,9 @@ ${PYSITELIB}/botocore/data/dms/2016-01-01/examples-1.json
 ${PYSITELIB}/botocore/data/dms/2016-01-01/paginators-1.json
 ${PYSITELIB}/botocore/data/dms/2016-01-01/service-2.json
 ${PYSITELIB}/botocore/data/dms/2016-01-01/waiters-2.json
+${PYSITELIB}/botocore/data/docdb/2014-10-31/paginators-1.json
+${PYSITELIB}/botocore/data/docdb/2014-10-31/service-2.json
+${PYSITELIB}/botocore/data/docdb/2014-10-31/waiters-2.json
 ${PYSITELIB}/botocore/data/ds/2015-04-16/examples-1.json
 ${PYSITELIB}/botocore/data/ds/2015-04-16/paginators-1.json
 ${PYSITELIB}/botocore/data/ds/2015-04-16/service-2.json
@@ -319,6 +323,7 @@ ${PYSITELIB}/botocore/data/globalaccelerator/2018-08-08/paginators-1.json
 ${PYSITELIB}/botocore/data/globalaccelerator/2018-08-08/service-2.json
 ${PYSITELIB}/botocore/data/glue/2017-03-31/paginators-1.json
 ${PYSITELIB}/botocore/data/glue/2017-03-31/service-2.json
+${PYSITELIB}/botocore/data/greengrass/2017-06-07/paginators-1.json
 ${PYSITELIB}/botocore/data/greengrass/2017-06-07/service-2.json
 ${PYSITELIB}/botocore/data/guardduty/2017-11-28/paginators-1.json
 ${PYSITELIB}/botocore/data/guardduty/2017-11-28/service-2.json
@@ -341,6 +346,7 @@ ${PYSITELIB}/botocore/data/iot-jobs-data/2017-09-29/service-2.json
 ${PYSITELIB}/botocore/data/iot/2015-05-28/examples-1.json
 ${PYSITELIB}/botocore/data/iot/2015-05-28/paginators-1.json
 ${PYSITELIB}/botocore/data/iot/2015-05-28/service-2.json
+${PYSITELIB}/botocore/data/iot1click-devices/2018-05-14/paginators-1.json
 ${PYSITELIB}/botocore/data/iot1click-devices/2018-05-14/service-2.json
 ${PYSITELIB}/botocore/data/iot1click-projects/2018-05-14/paginators-1.json
 ${PYSITELIB}/botocore/data/iot1click-projects/2018-05-14/service-2.json
