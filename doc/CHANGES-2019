@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.227 2019/01/16 14:57:02 youri Exp $
+$NetBSD: CHANGES-2019,v 1.228 2019/01/16 14:58:06 youri Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -322,3 +322,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/caja to 1.21.3 [youri 2019-01-15]
 	Updated sysutils/caja-extensions to 1.21.0 [youri 2019-01-15]
 	Updated archivers/engrampa to 1.21.0 [youri 2019-01-15]
+	Updated graphics/eom to 1.21.2 [youri 2019-01-15]
