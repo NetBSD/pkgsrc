@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2018/12/04 08:16:52 wen Exp $
+$NetBSD: distinfo,v 1.20 2019/01/16 00:49:57 wen Exp $
 
-SHA1 (Test2-Suite-0.000116.tar.gz) = c92a82fc8c0bcd36a00a70945aa14e5e682b161a
-RMD160 (Test2-Suite-0.000116.tar.gz) = 6e1b23a3f06738327bffcadd906417b2d4d60d24
-SHA512 (Test2-Suite-0.000116.tar.gz) = 1f8376c21487d84198c7f29ae28b4e5c38aec7b7e6a9baf74e2f1469d535fff8322b13698863e255a40223317fc017e0d1126de6282f0b9bee985ed60bfbb0c1
-Size (Test2-Suite-0.000116.tar.gz) = 211794 bytes
+SHA1 (Test2-Suite-0.000117.tar.gz) = 1dc3b40900c3e7d0df0732d44dd45ff737b0a758
+RMD160 (Test2-Suite-0.000117.tar.gz) = 83cfaa0d7b6a264011580be53137deeb592d9be4
+SHA512 (Test2-Suite-0.000117.tar.gz) = 0c73c6fb4e4f487fa304a75553fea42ffc2c9379003681657e87c29ebca9dbc84fc8b93e1eceedcc1ed234983b531e44ae97a81fdef60c9e74fc97bbe0834afa
+Size (Test2-Suite-0.000117.tar.gz) = 211682 bytes
