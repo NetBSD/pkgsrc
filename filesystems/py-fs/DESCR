@@ -1,0 +1,6 @@
+PyFilesystem is a Python module that provides a common interface to any
+filesystem.
+
+Think of PyFilesystem FS objects as the next logical step to Python's file
+objects. In the same way that file objects abstract a single file, FS objects
+abstract an entire filesystem.
