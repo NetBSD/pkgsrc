@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.223 2019/01/16 14:50:47 youri Exp $
+$NetBSD: CHANGES-2019,v 1.224 2019/01/16 14:51:51 martin Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -318,3 +318,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added misc/sunwait version 0.8 [martin 2019-01-16]
 	Updated print/atril to 1.21.1 [youri 2019-01-15]
 	Updated meta-pkgs/mate to 1.21.0 [youri 2019-01-15]
+	Added sysutils/arm-trusted-firmware-fiptool version 2.0 [martin 2019-01-16]
