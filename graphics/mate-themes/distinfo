@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2018/05/14 13:26:48 youri Exp $
+$NetBSD: distinfo,v 1.4 2019/01/16 18:21:09 youri Exp $
 
-SHA1 (mate-themes-3.22.16.tar.xz) = a5890eb3100f181d21a14aa55825d8e317eb14e1
-RMD160 (mate-themes-3.22.16.tar.xz) = 86d03fb3d4a661d2a2d3f5057947f84a419643de
-SHA512 (mate-themes-3.22.16.tar.xz) = a6726805da3ed6d5b56b2f52459e4a17683e4ee05cf5b91f7b136ff9b569a2b7544069b32b7679468d96f8a8a335e4c6119a6e31d80767f68d5e54fc216afaf6
-Size (mate-themes-3.22.16.tar.xz) = 5455084 bytes
+SHA1 (mate-themes-3.22.18.tar.xz) = 5698f82a8cd406f675fcd96247c86ed8181eb678
+RMD160 (mate-themes-3.22.18.tar.xz) = a23dd006a810c4c6a185bd2be8f7675d8a329435
+SHA512 (mate-themes-3.22.18.tar.xz) = 0851dee8ddb7495b43cbb7590ca3ecd1b3fa5a474f66806cb644462a70324c8221630d1d555e84beb8fa7025c080edc9524f244e47ac42c9843cc9eccc78dd74
+Size (mate-themes-3.22.18.tar.xz) = 6103368 bytes
