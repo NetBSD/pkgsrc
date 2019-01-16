@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.230 2019/01/16 14:59:54 youri Exp $
+$NetBSD: CHANGES-2019,v 1.231 2019/01/16 15:00:43 youri Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -325,3 +325,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/eom to 1.21.2 [youri 2019-01-15]
 	Updated x11/libmatekbd to 1.21.0 [youri 2019-01-15]
 	Updated audio/libmatemixer to 1.21.0 [youri 2019-01-15]
+	Updated misc/libmateweather to 1.21.0 [youri 2019-01-15]
