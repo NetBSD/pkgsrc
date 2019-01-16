@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.239 2019/01/16 17:58:30 youri Exp $
+$NetBSD: CHANGES-2019,v 1.240 2019/01/16 18:01:35 youri Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -336,3 +336,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added net/go-dnstap version 0.1.0 [he 2019-01-16]
 	Updated graphics/mate-icon-theme to 1.21.1 [youri 2019-01-15]
 	Updated x11/mate-indicator-applet to 1.20.1 [youri 2019-01-15]
+	Updated multimedia/mate-media to 1.21.0 [youri 2019-01-15]
