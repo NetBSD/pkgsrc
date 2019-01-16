@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2017/12/21 09:44:14 adam Exp $
+# $NetBSD: Makefile,v 1.18 2019/01/16 08:21:10 adam Exp $
 
-DISTNAME=	libassuan-2.5.1
+DISTNAME=	libassuan-2.5.2
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/libassuan/
 MASTER_SITES+=	http://mirrors.dotsrc.org/gcrypt/libassuan/
@@ -15,6 +15,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
 INFO_FILES=		yes
+PKGCONFIG_OVERRIDE=	src/libassuan.pc.in
 TEST_TARGET=		check
 
 CONFLICTS=	libassuan-1.*
