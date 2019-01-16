@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.244 2019/01/16 18:08:36 youri Exp $
+$NetBSD: CHANGES-2019,v 1.245 2019/01/16 18:10:01 youri Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -341,3 +341,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/mate-notification-daemon to 1.21.0 [youri 2019-01-15]
 	Updated x11/mate-panel to 1.21.3 [youri 2019-01-15]
 	Updated security/mate-polkit to 1.21.0 [youri 2019-01-15]
+	Updated sysutils/mate-power-manager to 1.21.1 [youri 2019-01-15]
