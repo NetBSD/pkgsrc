@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2018/06/14 21:29:36 youri Exp $
+$NetBSD: distinfo,v 1.5 2019/01/16 18:08:25 youri Exp $
 
-SHA1 (mate-polkit-1.20.0.tar.xz) = 0cf9debfb42d547966e09175d5abe3cb01ddb5f3
-RMD160 (mate-polkit-1.20.0.tar.xz) = 989b026dd28caf11f7aafe0bd81cdcb0c09dbf23
-SHA512 (mate-polkit-1.20.0.tar.xz) = d842937cdb62d441140aed68e879bd6972c4ef7351093575bf1fda399f051ece26fb542834060b21cb53d308717f58e57cbd354521b68b27841809f1fd32cfcb
-Size (mate-polkit-1.20.0.tar.xz) = 325416 bytes
+SHA1 (mate-polkit-1.21.0.tar.xz) = 6888d14852405a26d9f28b607e4f647f7bc9f444
+RMD160 (mate-polkit-1.21.0.tar.xz) = 02e9a72d81b9f4092c0511e117a078113ddfc5b5
+SHA512 (mate-polkit-1.21.0.tar.xz) = 1905545f87f0b79015db8d99b8ee375b48b7c4ea607cedc9ed0c600d23081f3f6fae36d0423ae53fdb1f8b2fdee4522243277a803b212f10e758f63c7487dd56
+Size (mate-polkit-1.21.0.tar.xz) = 301632 bytes
 SHA1 (patch-src_polkit-mate-authentication-agent-1.desktop.in.in) = 8240b7a4a3bf7267ebea2f79549e762d31b5f264
