@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/05/14 12:48:14 youri Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/01/16 15:01:30 youri Exp $
 bin/marco
 bin/marco-message
 bin/marco-theme-viewer
@@ -46,6 +46,7 @@ share/locale/en_CA/LC_MESSAGES/marco.mo
 share/locale/en_GB/LC_MESSAGES/marco.mo
 share/locale/eo/LC_MESSAGES/marco.mo
 share/locale/es/LC_MESSAGES/marco.mo
+share/locale/es_AR/LC_MESSAGES/marco.mo
 share/locale/es_CO/LC_MESSAGES/marco.mo
 share/locale/es_MX/LC_MESSAGES/marco.mo
 share/locale/es_PR/LC_MESSAGES/marco.mo
