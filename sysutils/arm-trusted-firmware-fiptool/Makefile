@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2019/01/16 14:34:04 martin Exp $
+# $NetBSD: Makefile,v 1.2 2019/01/16 14:51:35 martin Exp $
 
-VERSION=	v2.0
+VERSION=	2.0
 GITHUB_PROJECT=	arm-trusted-firmware
 # GITHUB_TAG=	?
 
 PKGNAME=	${GITHUB_PROJECT}-fiptool-${VERSION}
-DISTNAME=	${PKGNAME}
+DISTNAME=	${PKGNAME:S/-${VERSION}$/-v${VERSION}/}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ARM-software/}
 EXTRACT_SUFX=	.zip
@@ -16,7 +16,7 @@ COMMENT=	ARM Trusted Firmware fiptool
 LICENSE=	modified-bsd
 
 USE_TOOLS+=	gmake
-WRKSRC=		${WRKDIR}/${DISTNAME:S:-fiptool-v:-:}/tools/fiptool
+WRKSRC=		${WRKDIR}/${PKGNAME:S:-fiptool::}/tools/fiptool
 	
 do-install:
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
