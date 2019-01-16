@@ -1,20 +1,37 @@
-# $NetBSD: Makefile,v 1.12 2018/12/19 15:47:00 bsiegert Exp $
+# $NetBSD: Makefile,v 1.13 2019/01/16 15:14:23 he Exp $
 
-DISTNAME=	go-dns-0.0.20160614
-PKGREVISION=	10
+DISTNAME=	go-dns-1.1.3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=miekg/}
 GITHUB_PROJECT=	dns
-GITHUB_TAG=	5d001d020961ae1c184f9f8152fdc73810481677
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TYPE=	tag
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/miekg/dns
 COMMENT=	Complete DNS library for Go
 LICENSE=	modified-bsd
 
-WRKSRC=		${WRKDIR}
-GO_DIST_BASE=	${GITHUB_PROJECT}-${GITHUB_TAG}
+GO_DIST_BASE=	${GITHUB_PROJECT}-${GITHUB_TAG:S/v//}
 GO_SRCPATH=	github.com/miekg/dns
+
+PFX=		vendor/golang.org
+
+REPLACE_SH+=	${PFX}/x/sys/plan9/mkall.sh
+REPLACE_SH+=	${PFX}/x/sys/plan9/mkerrors.sh
+REPLACE_SH+=	${PFX}/x/sys/unix/mkall.sh
+REPLACE_SH+=	${PFX}/x/sys/unix/mkerrors.sh
+
+REPLACE_PERL+=	${PFX}/x/sys/plan9/mksyscall.pl
+REPLACE_PERL+=	${PFX}/x/sys/unix/linux/mksysnum.pl
+REPLACE_PERL+=	${PFX}/x/sys/unix/mksyscall.pl
+REPLACE_PERL+=	${PFX}/x/sys/unix/mksyscall_solaris.pl
+REPLACE_PERL+=	${PFX}/x/sys/unix/mksysctl_openbsd.pl
+REPLACE_PERL+=	${PFX}/x/sys/unix/mksysnum_darwin.pl
+REPLACE_PERL+=	${PFX}/x/sys/unix/mksysnum_dragonfly.pl
+REPLACE_PERL+=	${PFX}/x/sys/unix/mksysnum_freebsd.pl
+REPLACE_PERL+=	${PFX}/x/sys/unix/mksysnum_netbsd.pl
+REPLACE_PERL+=	${PFX}/x/sys/unix/mksysnum_openbsd.pl
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
