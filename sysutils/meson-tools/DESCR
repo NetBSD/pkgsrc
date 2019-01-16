@@ -1,0 +1,4 @@
+meson-tools is a collection of tools for use with the Amlogic Meson
+family of ARM based SoCs.
+
+It is used for example when updating u-boot on an Odroid-C2 board.
