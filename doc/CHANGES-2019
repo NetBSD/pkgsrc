@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.216 2019/01/16 08:41:07 adam Exp $
+$NetBSD: CHANGES-2019,v 1.217 2019/01/16 08:58:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -308,3 +308,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added net/py-pyftpdlib version 1.5.4 [adam 2019-01-16]
 	Added filesystems/py-fs version 2.2.1 [adam 2019-01-16]
 	Updated fonts/py-fonttools to 3.35.2 [adam 2019-01-16]
+	Removed filesystems/py-filesystem successor filesystems/py-fs [adam 2019-01-16]
