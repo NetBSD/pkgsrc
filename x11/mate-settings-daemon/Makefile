@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2018/11/29 11:22:00 prlw1 Exp $
+# $NetBSD: Makefile,v 1.19 2019/01/16 18:14:40 youri Exp $
 
-PKGREVISION= 4
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	mate-settings-daemon-${VERSION:R}.1
+DISTNAME=	mate-settings-daemon-${VERSION:R}.2
 CATEGORIES=	x11
 
 COMMENT=	MATE settings daemon
@@ -11,6 +10,10 @@ COMMENT=	MATE settings daemon
 PKGCONFIG_OVERRIDE+=	data/mate-settings-daemon.pc.in
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+.if ${OPSYS} != "Linux"
+CONFIGURE_ARGS+=	--disable-rfkill
+.endif
 
 .include "options.mk"
 
