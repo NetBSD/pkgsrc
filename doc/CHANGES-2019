@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.219 2019/01/16 09:40:09 adam Exp $
+$NetBSD: CHANGES-2019,v 1.220 2019/01/16 13:50:31 he Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -314,3 +314,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/py-awscli to 1.16.89 [adam 2019-01-16]
 	Updated security/py-oauthlib to 3.0.0 [adam 2019-01-16]
 	Updated security/py-requests-oauthlib to 1.2.0 [adam 2019-01-16]
+	Added net/fstrm version 0.4.0 [he 2019-01-16]
