@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.253 2019/01/16 18:19:01 youri Exp $
+$NetBSD: CHANGES-2019,v 1.254 2019/01/16 18:21:21 youri Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -350,3 +350,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/mate-terminal to 1.21.1 [youri 2019-01-15]
 	Updated x11/mozo to 1.21.1 [youri 2019-01-15]
 	Updated editors/pluma to 1.21.2 [youri 2019-01-15]
+	Updated graphics/mate-themes to 3.22.18 [youri 2019-01-15]
