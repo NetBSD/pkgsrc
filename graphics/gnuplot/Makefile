@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.127 2018/12/09 18:52:30 adam Exp $
+# $NetBSD: Makefile,v 1.128 2019/01/16 19:18:26 adam Exp $
 
-DISTNAME=	gnuplot-5.2.5
+DISTNAME=	gnuplot-5.2.6
 CATEGORIES+=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnuplot/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gnuplot.sourceforge.net/
 COMMENT=	Portable interactive, function plotting utility
-PKGREVISION=	1
 #LICENSE=	gnuplot + BSD
 
 API_VERSION=	${PKGVERSION_NOREV:C/([0-9])\.([0-9])\.([0-9])/\1.\2/}
@@ -22,11 +21,12 @@ CONFIGURE_ARGS+=	--without-latex
 CONFIGURE_ARGS+=	--without-tutorial
 CONFIGURE_ARGS+=	ac_cv_prog_EMACS=
 INFO_FILES=		yes
+TEST_TARGET=		check
 
 PLIST_SUBST+=		API_VERSION=${API_VERSION}
 LDFLAGS.SunOS+=		-liconv
 
-# Make this available to patch-ah so the font path can include pkgsrc fonts.
+# Make this available to patch-src_variable.c so the font path can include pkgsrc fonts.
 SUBST_CLASSES+=		fontpath
 SUBST_STAGE.fontpath=	pre-configure
 SUBST_MESSAGE.fontpath=	Fixing font path.
