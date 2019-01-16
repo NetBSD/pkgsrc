@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/01/16 02:00:48 gutteridge Exp $
+# $NetBSD: Makefile,v 1.13 2019/01/16 04:24:28 gutteridge Exp $
 
 DISTNAME=	mozjs-52.7.4
 PKGREVISION=	6
@@ -40,8 +40,7 @@ DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 CXXFLAGS+=		-march=i586
 .elif ${MACHINE_ARCH} == "powerpc"
 # PowerPC doesn't have the necessary hardware-backed atomics, it needs
-# GCC's libatomic. pkgsrc's GCC 6 build fails at present on
-# NetBSD 8.0/powerpc, but others >= 4.8 work; tested with 4.8.5 and 7.3.
+# GCC's libatomic. Tested with GCC 4.8.5 and 7.3 on NetBSD 8.0/powerpc.
 GCC_REQD+=		4.8
 USE_PKGSRC_GCC=		yes
 USE_PKGSRC_GCC_RUNTIME=	yes
