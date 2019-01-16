@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2018/11/14 22:22:33 kleink Exp $
+# $NetBSD: Makefile,v 1.12 2019/01/16 18:03:39 youri Exp $
 
 PKGREVISION= 2
 .include "../../meta-pkgs/mate/Makefile.common"
 
+VERSION=	1.20.1
 DISTNAME=	mate-netbook-${VERSION}
 CATEGORIES=	wm
 
