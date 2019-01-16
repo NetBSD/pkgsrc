@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2018/05/22 16:08:13 youri Exp $
+$NetBSD: distinfo,v 1.7 2019/01/16 19:25:45 youri Exp $
 
-SHA1 (pcmanfm-1.3.0.tar.xz) = 690fb28c0957ad56e28d1b8f5384e63462c118b2
-RMD160 (pcmanfm-1.3.0.tar.xz) = 4ad9b5a3b08d8c31ffd84d280b781b434c6f36e8
-SHA512 (pcmanfm-1.3.0.tar.xz) = 022e6e203a6cbba6531eb3dd21e0dd96687c42992015225f979a8df4539ddb0071f70d8619a7d804c0399424833af20181b8473a35a14b0fa1653e6fdbdfa367
-Size (pcmanfm-1.3.0.tar.xz) = 422836 bytes
+SHA1 (pcmanfm-1.3.1.tar.xz) = 4de1e5cb00fbf837c137f205e7e2327e3b49cb90
+RMD160 (pcmanfm-1.3.1.tar.xz) = e4a95699c596b749f266dbdc10f803ea81240999
+SHA512 (pcmanfm-1.3.1.tar.xz) = 68fbc55b3ffd9da17c861d2cc41590a455ec2c0eb590ba4862f8a0ae01caac34a58645d847d318553ff588df20d355bbcbf1138a792cb45922eb04b047f681c4
+Size (pcmanfm-1.3.1.tar.xz) = 423380 bytes
