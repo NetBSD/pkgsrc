@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/01/16 08:34:53 adam Exp $
+
+SHA1 (fs-2.2.1.tar.gz) = a1bcb98e65e7b80c7ce94a76c52643d83c84cc49
+RMD160 (fs-2.2.1.tar.gz) = 097b817c78fc8ce229e2edafc09a9a5914702868
+SHA512 (fs-2.2.1.tar.gz) = 79d1596df18c0fa51ffb661a115c32c76821e24ee905be0dbc6123d8a66921a26c5ea66a7561d2a10b2bdaf4030ce4a5da6445ff5f2ea882c63a32d4fe711d35
+Size (fs-2.2.1.tar.gz) = 122543 bytes
