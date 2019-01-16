@@ -1,9 +1,8 @@
-This code is a raw OCR engine. It has NO PAGE LAYOUT ANALYSIS, NO
-OUTPUT FORMATTING, and NO UI. It can only process an image of a
-single column and create text from it. It can detect fixed pitch
-vs proportional text.  Having said that, in 1995, this engine was
-in the top 3 in terms of character accuracy, and it compiles and
-runs on both Linux and Windows. Another current limitation is that
-it only recognizes English and its character set is only US-ASCII.
-Training code IS included in the open source release however, and
-will be included in a future release.
+Tesseract provides an OCR engine and a command line program. It
+includes a new neural net (LSTM) based OCR engine which is focused on
+line recognition, but also still provides a legacy OCR engine which
+works by recognizing character patterns. Tesseract has Unicode (UTF-8)
+support, and can recognize more than 100 languages "out of the box".
+Tesseract can be trained to recognize other languages. It supports
+various output formats: plain text, hOCR (HTML), PDF,
+invisible-text-only PDF, and TSV.
