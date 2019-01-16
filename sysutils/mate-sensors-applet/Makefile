@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.11 2018/11/14 22:22:27 kleink Exp $
+# $NetBSD: Makefile,v 1.12 2019/01/16 18:12:13 youri Exp $
 
-PKGREVISION= 2
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	mate-sensors-applet-${VERSION:R}.1
@@ -9,6 +8,12 @@ CATEGORIES=	sysutils
 COMMENT=	MATE Sensors applets
 
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt # for xsltproc
+
+PLIST_VARS+=	netbsd
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	--enable-netbsd
+PLIST.netbsd=	yes
+.endif
 
 .include "../../devel/glib2/schemas.mk"
 
