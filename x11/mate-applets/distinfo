@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2018/05/14 12:50:13 youri Exp $
+$NetBSD: distinfo,v 1.4 2019/01/16 15:02:45 youri Exp $
 
-SHA1 (mate-applets-1.20.1.tar.xz) = 9412db25137f489e0770107aacd5dfa514b84170
-RMD160 (mate-applets-1.20.1.tar.xz) = 51ba2efb23548cd0a95aa3eb1a14b1a2b1fafaa7
-SHA512 (mate-applets-1.20.1.tar.xz) = 4d7c423a48d22de40c4907d9b0e471e6886e03bfd31f9a1eab2687d1683f97b0c44a5301b512af935e3098b8b0ef7efded0674ed84878ae2dc879ef1cc227dc1
-Size (mate-applets-1.20.1.tar.xz) = 7022772 bytes
+SHA1 (mate-applets-1.21.1.tar.xz) = 72aabe0276161c68ea0946d3193eedf6a108e18e
+RMD160 (mate-applets-1.21.1.tar.xz) = a033f599c5518be627e7c4d1db14d7225e75a26b
+SHA512 (mate-applets-1.21.1.tar.xz) = f006e5935354f5dd332b4a977b0a3b1ce9606770f86a48bb7177d32a27aa8d055d4fed384b2e9c330e0352d5cca8fc0cc36ebc60bbb4b21b453f707e1e938ee8
+Size (mate-applets-1.21.1.tar.xz) = 7696012 bytes
