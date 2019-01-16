@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/10/25 12:05:41 leot Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/01/16 18:14:40 youri Exp $
 include/mate-settings-daemon/mate-settings-client.h
 include/mate-settings-daemon/mate-settings-plugin.h
 lib/mate-settings-daemon/a11y-keyboard.mate-settings-plugin
@@ -18,7 +18,7 @@ lib/mate-settings-daemon/libkeyboard.la
 lib/mate-settings-daemon/libmedia-keys.la
 lib/mate-settings-daemon/libmouse.la
 lib/mate-settings-daemon/libmpris.la
-${PLIST.nss}lib/mate-settings-daemon/libsmartcard.la
+lib/mate-settings-daemon/libsmartcard.la
 lib/mate-settings-daemon/libsound.la
 lib/mate-settings-daemon/libtyping-break.la
 lib/mate-settings-daemon/libxrandr.la
@@ -27,7 +27,7 @@ lib/mate-settings-daemon/libxsettings.la
 lib/mate-settings-daemon/media-keys.mate-settings-plugin
 lib/mate-settings-daemon/mouse.mate-settings-plugin
 lib/mate-settings-daemon/mpris.mate-settings-plugin
-${PLIST.nss}lib/mate-settings-daemon/smartcard.mate-settings-plugin
+lib/mate-settings-daemon/smartcard.mate-settings-plugin
 lib/mate-settings-daemon/sound.mate-settings-plugin
 lib/mate-settings-daemon/typing-break.mate-settings-plugin
 lib/mate-settings-daemon/xrandr.mate-settings-plugin
@@ -35,14 +35,14 @@ lib/mate-settings-daemon/xrdb.mate-settings-plugin
 lib/mate-settings-daemon/xsettings.mate-settings-plugin
 lib/pkgconfig/mate-settings-daemon.pc
 libexec/mate-settings-daemon
-${PLIST.polkit}libexec/msd-datetime-mechanism
+libexec/msd-datetime-mechanism
 libexec/msd-locate-pointer
 man/man1/mate-settings-daemon.1
 man/man1/msd-datetime-mechanism.1
 man/man1/msd-locate-pointer.1
 share/dbus-1/services/org.mate.SettingsDaemon.service
-${PLIST.polkit}share/dbus-1/system-services/org.mate.SettingsDaemon.DateTimeMechanism.service
-${PLIST.polkit}share/examples/mate-settings-daemon/dbus-1/system.d/org.mate.SettingsDaemon.DateTimeMechanism.conf
+share/dbus-1/system-services/org.mate.SettingsDaemon.DateTimeMechanism.service
+share/examples/mate-settings-daemon/dbus-1/system.d/org.mate.SettingsDaemon.DateTimeMechanism.conf
 share/examples/mate-settings-daemon/xdg/autostart/mate-settings-daemon.desktop
 share/examples/mate-settings-daemon/xrdb/Editres.ad
 share/examples/mate-settings-daemon/xrdb/Emacs.ad
@@ -62,6 +62,7 @@ share/glib-2.0/schemas/org.mate.SettingsDaemon.plugins.keyboard.gschema.xml
 share/glib-2.0/schemas/org.mate.SettingsDaemon.plugins.media-keys.gschema.xml
 share/glib-2.0/schemas/org.mate.SettingsDaemon.plugins.mouse.gschema.xml
 share/glib-2.0/schemas/org.mate.SettingsDaemon.plugins.mpris.gschema.xml
+share/glib-2.0/schemas/org.mate.SettingsDaemon.plugins.rfkill.gschema.xml
 share/glib-2.0/schemas/org.mate.SettingsDaemon.plugins.smartcard.gschema.xml
 share/glib-2.0/schemas/org.mate.SettingsDaemon.plugins.sound.gschema.xml
 share/glib-2.0/schemas/org.mate.SettingsDaemon.plugins.typing-break.gschema.xml
@@ -77,16 +78,6 @@ share/icons/hicolor/22x22/apps/msd-xrandr.png
 share/icons/hicolor/24x24/apps/msd-xrandr.png
 share/icons/hicolor/32x32/apps/msd-xrandr.png
 share/icons/hicolor/scalable/apps/msd-xrandr.svg
-share/icons/mate/16x16/actions/touchpad-disabled.png
-share/icons/mate/16x16/actions/touchpad-enabled.png
-share/icons/mate/22x22/actions/touchpad-disabled.png
-share/icons/mate/22x22/actions/touchpad-enabled.png
-share/icons/mate/24x24/actions/touchpad-disabled.png
-share/icons/mate/24x24/actions/touchpad-enabled.png
-share/icons/mate/32x32/actions/touchpad-disabled.png
-share/icons/mate/32x32/actions/touchpad-enabled.png
-share/icons/mate/scalable/actions/touchpad-disabled.svg
-share/icons/mate/scalable/actions/touchpad-enabled.svg
 share/locale/af/LC_MESSAGES/mate-settings-daemon.mo
 share/locale/am/LC_MESSAGES/mate-settings-daemon.mo
 share/locale/ar/LC_MESSAGES/mate-settings-daemon.mo
@@ -112,14 +103,31 @@ share/locale/el/LC_MESSAGES/mate-settings-daemon.mo
 share/locale/en_AU/LC_MESSAGES/mate-settings-daemon.mo
 share/locale/en_CA/LC_MESSAGES/mate-settings-daemon.mo
 share/locale/en_GB/LC_MESSAGES/mate-settings-daemon.mo
+share/locale/eo/LC_MESSAGES/mate-settings-daemon.mo
 share/locale/es/LC_MESSAGES/mate-settings-daemon.mo
+share/locale/es_AR/LC_MESSAGES/mate-settings-daemon.mo
+share/locale/es_CL/LC_MESSAGES/mate-settings-daemon.mo
 share/locale/es_CO/LC_MESSAGES/mate-settings-daemon.mo
+share/locale/es_CR/LC_MESSAGES/mate-settings-daemon.mo
+share/locale/es_DO/LC_MESSAGES/mate-settings-daemon.mo
+share/locale/es_EC/LC_MESSAGES/mate-settings-daemon.mo
+share/locale/es_ES/LC_MESSAGES/mate-settings-daemon.mo
+share/locale/es_MX/LC_MESSAGES/mate-settings-daemon.mo
+share/locale/es_NI/LC_MESSAGES/mate-settings-daemon.mo
+share/locale/es_PA/LC_MESSAGES/mate-settings-daemon.mo
+share/locale/es_PE/LC_MESSAGES/mate-settings-daemon.mo
+share/locale/es_PR/LC_MESSAGES/mate-settings-daemon.mo
+share/locale/es_SV/LC_MESSAGES/mate-settings-daemon.mo
+share/locale/es_UY/LC_MESSAGES/mate-settings-daemon.mo
+share/locale/es_VE/LC_MESSAGES/mate-settings-daemon.mo
 share/locale/et/LC_MESSAGES/mate-settings-daemon.mo
 share/locale/eu/LC_MESSAGES/mate-settings-daemon.mo
 share/locale/fa/LC_MESSAGES/mate-settings-daemon.mo
 share/locale/fi/LC_MESSAGES/mate-settings-daemon.mo
 share/locale/fr/LC_MESSAGES/mate-settings-daemon.mo
 share/locale/frp/LC_MESSAGES/mate-settings-daemon.mo
+share/locale/fur/LC_MESSAGES/mate-settings-daemon.mo
+share/locale/fy/LC_MESSAGES/mate-settings-daemon.mo
 share/locale/ga/LC_MESSAGES/mate-settings-daemon.mo
 share/locale/gl/LC_MESSAGES/mate-settings-daemon.mo
 share/locale/gu/LC_MESSAGES/mate-settings-daemon.mo
@@ -159,6 +167,7 @@ share/locale/or/LC_MESSAGES/mate-settings-daemon.mo
 share/locale/pa/LC_MESSAGES/mate-settings-daemon.mo
 share/locale/pl/LC_MESSAGES/mate-settings-daemon.mo
 share/locale/pms/LC_MESSAGES/mate-settings-daemon.mo
+share/locale/ps/LC_MESSAGES/mate-settings-daemon.mo
 share/locale/pt/LC_MESSAGES/mate-settings-daemon.mo
 share/locale/pt_BR/LC_MESSAGES/mate-settings-daemon.mo
 share/locale/ro/LC_MESSAGES/mate-settings-daemon.mo
@@ -175,6 +184,7 @@ share/locale/ta/LC_MESSAGES/mate-settings-daemon.mo
 share/locale/te/LC_MESSAGES/mate-settings-daemon.mo
 share/locale/th/LC_MESSAGES/mate-settings-daemon.mo
 share/locale/tr/LC_MESSAGES/mate-settings-daemon.mo
+share/locale/ug/LC_MESSAGES/mate-settings-daemon.mo
 share/locale/uk/LC_MESSAGES/mate-settings-daemon.mo
 share/locale/ur/LC_MESSAGES/mate-settings-daemon.mo
 share/locale/uz/LC_MESSAGES/mate-settings-daemon.mo
@@ -194,5 +204,5 @@ share/mate-settings-daemon/icons/hicolor/64x64/devices/kbd-numlock-on.png
 share/mate-settings-daemon/icons/hicolor/64x64/devices/kbd-scrolllock-off.png
 share/mate-settings-daemon/icons/hicolor/64x64/devices/kbd-scrolllock-on.png
 share/mate-settings-daemon/msd-a11y-preferences-dialog.ui
-${PLIST.polkit}share/polkit-1/actions/org.mate.settingsdaemon.datetimemechanism.policy
+share/polkit-1/actions/org.mate.settingsdaemon.datetimemechanism.policy
 @pkgdir share/examples/mate-settings-daemon/mate-settings-daemon/xrandr
