@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.217 2019/01/16 08:58:58 adam Exp $
+$NetBSD: CHANGES-2019,v 1.218 2019/01/16 09:13:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -309,3 +309,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Added filesystems/py-fs version 2.2.1 [adam 2019-01-16]
 	Updated fonts/py-fonttools to 3.35.2 [adam 2019-01-16]
 	Removed filesystems/py-filesystem successor filesystems/py-fs [adam 2019-01-16]
+	Updated net/py-botocore to 1.12.79 [adam 2019-01-16]
+	Updated net/py-boto3 to 1.9.79 [adam 2019-01-16]
+	Updated net/py-awscli to 1.16.89 [adam 2019-01-16]
