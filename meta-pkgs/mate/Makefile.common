@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2018/06/01 14:21:40 youri Exp $
+# $NetBSD: Makefile.common,v 1.7 2019/01/16 14:47:01 youri Exp $
 # used by meta-pkgs/mate/Makefile
 # used by print/atril/Makefile
 # used by sysutils/caja/Makefile
@@ -38,7 +38,7 @@
 # used by x11/mozo/Makefile
 # used by editors/pluma/Makefile
 
-VERSION=	1.20.0
+VERSION=	1.21.0
 MASTER_SITES+=	http://pub.mate-desktop.org/releases/${VERSION:R}/
 EXTRACT_SUFX=	.tar.xz
 
