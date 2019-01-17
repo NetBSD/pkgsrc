@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.262 2019/01/17 06:20:48 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.263 2019/01/17 06:32:05 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -362,3 +362,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/lxterminal to 0.3.2 [youri 2019-01-15]
 	Updated sysutils/xfce4-thunar to 1.8.2 [gutteridge 2019-01-17]
 	Updated textproc/xfce4-dict to 0.8.2 [gutteridge 2019-01-17]
+	Updated x11/xfce4-settings to 4.13.5 [gutteridge 2019-01-17]
