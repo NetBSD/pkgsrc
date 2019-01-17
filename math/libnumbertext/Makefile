@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/08/15 14:02:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2019/01/17 15:56:05 khorben Exp $
 
 DISTNAME=	libnumbertext-1.0.3
 CATEGORIES=	math
@@ -15,7 +15,9 @@ LICENSE=	modified-bsd
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
+
+GCC_REQD+=	5.0
 
 PKGCONFIG_OVERRIDE+=	libnumbertext.pc.in
 
