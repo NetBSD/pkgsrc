@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.99 2018/09/04 11:24:34 prlw1 Exp $
+# $NetBSD: Makefile,v 1.100 2019/01/17 13:59:37 prlw1 Exp $
 
-DISTNAME=	nsd-4.1.24
+DISTNAME=	nsd-4.1.26
 CATEGORIES=	net
 MASTER_SITES=	http://www.nlnetlabs.nl/downloads/nsd/
 
@@ -40,6 +40,8 @@ CONFIGURE_ARGS+=--enable-ratelimit
 .else
 CONFIGURE_ARGS+=--disable-ratelimit
 .endif
+
+CONFIGURE_ARGS+=--disable-dnstap
 
 CONFIGURE_ARGS+=--with-pidfile=${VARBASE}/run/nsd/nsd.pid
 CONFIGURE_ARGS+=--with-user=${NSD_USER}
