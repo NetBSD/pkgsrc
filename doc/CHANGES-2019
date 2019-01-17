@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.260 2019/01/16 19:37:18 youri Exp $
+$NetBSD: CHANGES-2019,v 1.261 2019/01/17 05:23:13 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -360,3 +360,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-djangorestframework to 3.9.1 [adam 2019-01-16]
 	Updated security/py-bcrypt to 3.1.6 [adam 2019-01-16]
 	Updated x11/lxterminal to 0.3.2 [youri 2019-01-15]
+	Updated sysutils/xfce4-thunar to 1.8.2 [gutteridge 2019-01-17]
