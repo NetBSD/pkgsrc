@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.61 2019/01/09 19:32:07 schmonz Exp $
+# $NetBSD: options.mk,v 1.62 2019/01/17 22:49:12 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmail
-PKG_SUPPORTED_OPTIONS+=		eai inet6 pam syncdir tls
+PKG_SUPPORTED_OPTIONS+=		eai inet6 pam syncdir tai-system-clock tls
 PKG_SUPPORTED_OPTIONS+=		qmail-customerror qmail-srs
 PKG_SUGGESTED_OPTIONS+=		eai syncdir tls
 PKG_SUGGESTED_OPTIONS+=		qmail-customerror qmail-srs
@@ -76,6 +76,32 @@ SUBST_SED.load+=		-e '$$s|$$| -bind_at_load|'
 SUBST_MESSAGE.load=		Setting linker flags for syncdir.
 .endif
 
+.if !empty(PKG_OPTIONS:Mtai-system-clock)
+QMAILPATCHES+=			taileapsecs:${TAILEAPSECS_PATCH}
+TAILEAPSECS_PATCH=		netqmail-1.05-TAI-leapsecs.patch
+PATCHFILES+=			${TAILEAPSECS_PATCH}
+SITES.${TAILEAPSECS_PATCH}=	https://su.bze.ro/software/
+PATCH_DIST_STRIP.${TAILEAPSECS_PATCH}=-p1
+PATCH_DIST_CAT.${TAILEAPSECS_PATCH}= \
+				${SED} -e 's|"/etc/leapsecs.dat"|"@PKG_SYSCONFDIR@/leapsecs.dat"|' \
+				< ${TAILEAPSECS_PATCH}
+SUBST_CLASSES+=			libtai
+SUBST_STAGE.libtai=		do-configure
+SUBST_FILES.libtai=		leapsecs_read.c
+SUBST_SED.libtai=		-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR.libtai}|g'
+DEPENDS_LIBTAI=			libtai>=0.60nb5:../../devel/libtai
+DEPENDS+=			${DEPENDS_LIBTAI}
+.  if !defined(PKG_SYSCONFDIR.libtai)
+PKG_SYSCONFDIR.libtai!=							\
+	${PKG_INFO} -Q PKG_SYSCONFDIR					\
+		${DEPENDS_LIBTAI:C/:.*$//:Q} 2>/dev/null ||		\
+	${ECHO} "PKG_SYSCONFDIR.libtai_not_set"
+.    if empty(PKG_SYSCONFDIR.libtai:M*not_set)
+MAKEVARS+=	PKG_SYSCONFDIR.libtai
+.    endif
+.  endif
+.endif
+
 PLIST_VARS+=			tls
 .if !empty(PKG_OPTIONS:Mtls)
 PLIST.tls=			yes
@@ -99,9 +125,9 @@ DEPENDS+=			ucspi-ssl-[0-9]*:../../net/ucspi-ssl
 .else
 BUILDLINK_TRANSFORM+=		rm:-lssl
 BUILDLINK_TRANSFORM+=		rm:-lcrypto
-.if !empty(PKG_OPTIONS:Minet6)
+.  if !empty(PKG_OPTIONS:Minet6)
 DEPENDS+=			ucspi-tcp6-[0-9]*:../../net/ucspi-tcp6
-.else
+.  else
 DEPENDS+=			{ucspi-tcp6-[0-9]*,ucspi-tcp-[0-9]*}:../../net/ucspi-tcp
-.endif
+.  endif
 .endif

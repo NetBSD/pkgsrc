@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.108 2019/01/09 19:32:07 schmonz Exp $
+# $NetBSD: Makefile,v 1.109 2019/01/17 22:49:12 schmonz Exp $
 #
 
 DISTNAME=		netqmail-1.06
 PKGNAME=		qmail-1.03
-PKGREVISION=		43
+PKGREVISION=		44
 CATEGORIES=		mail
 MASTER_SITES=		http://qmail.org/
 
@@ -13,8 +13,6 @@ COMMENT=		Secure, reliable, efficient, simple, and fast MTA
 LICENSE=		public-domain
 
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
-DEPENDS_LIBTAI=		libtai>=0.60nb5:../../devel/libtai
-DEPENDS+=		${DEPENDS_LIBTAI}
 
 CONFLICTS+=		courier-maildirmake-[0-9]*
 CONFLICTS+=		courier-mta-[0-9]*
@@ -78,19 +76,6 @@ INSTALLATION_DIRS+=	${EGDIR}/users
 
 .include "../../mk/bsd.prefs.mk"
 
-# Detect the PKG_SYSCONFDIR of the installed libtai, so we can find
-# its leapsecs.dat.
-
-.if !defined(PKG_SYSCONFDIR.libtai)
-PKG_SYSCONFDIR.libtai!=							\
-	${PKG_INFO} -Q PKG_SYSCONFDIR					\
-		${DEPENDS_LIBTAI:C/:.*$//:Q} 2>/dev/null ||		\
-	${ECHO} "PKG_SYSCONFDIR.libtai_not_set"
-.  if empty(PKG_SYSCONFDIR.libtai:M*not_set)
-MAKEVARS+=	PKG_SYSCONFDIR.libtai
-.  endif
-.endif
-
 BUILD_DEFS+=		QMAILDIR QMAILPATCHES QMAIL_QUEUE_DIR QMAIL_QUEUE_EXTRA
 BUILD_DEFS+=		QMAIL_ALIAS_USER QMAIL_DAEMON_USER QMAIL_LOG_USER
 BUILD_DEFS+=		QMAIL_ROOT_USER QMAIL_PASSWD_USER QMAIL_QUEUE_USER
@@ -136,11 +121,6 @@ SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	do-configure
 SUBST_FILES.paths=	README.*
 SUBST_VARS.paths=	PKGNAME PKG_INFO PREFIX GREP
-
-SUBST_CLASSES+=		libtai
-SUBST_STAGE.libtai=	do-configure
-SUBST_FILES.libtai=	leapsecs_read.c
-SUBST_SED.libtai=	-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR.libtai}|g'
 
 SUBST_FILES.djbware+=	cdb_seek.c dns.c
 
@@ -219,15 +199,6 @@ PATCH_DIST_CAT.${SPP_PATCH}=	${TAR} -C ${WRKDIR} -zxf ${SPP_PATCH} ${SPP_PATCHFI
 				| ${SED} -e 's|sppfok \!= 1|sppfok == -1|'
 PATCH_DIST_STRIP.${SPP_PATCH}=	-p1
 LICENSE+=			AND gnu-gpl-v2
-
-QMAILPATCHES+=			taileapsecs:${TAILEAPSECS_PATCH}
-TAILEAPSECS_PATCH=		netqmail-1.05-TAI-leapsecs.patch
-PATCHFILES+=			${TAILEAPSECS_PATCH}
-SITES.${TAILEAPSECS_PATCH}=	https://su.bze.ro/software/
-PATCH_DIST_STRIP.${TAILEAPSECS_PATCH}=-p1
-PATCH_DIST_CAT.${TAILEAPSECS_PATCH}= \
-				${SED} -e 's|"/etc/leapsecs.dat"|"@PKG_SYSCONFDIR@/leapsecs.dat"|' \
-				< ${TAILEAPSECS_PATCH}
 
 post-extract:
 	for i in ${READMES}; do						\
