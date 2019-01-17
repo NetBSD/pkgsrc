@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.sh,v 1.9 2013/01/04 10:51:57 jperkin Exp $
+# $NetBSD: check-portability.sh,v 1.10 2019/01/17 00:11:44 rillig Exp $
 #
 # This program checks all files in the current directory and any
 # subdirectories for portability issues that are likely to result in
@@ -7,7 +7,7 @@
 # The most prominent example is the "==" operator of test(1), which is
 # only implemented by bash and some versions of the ksh.
 #
-# usage: check-portability.sh
+# usage: cd $WRKSRC && [SKIP_FILTER=...] check-portability.sh
 #
 
 set -eu
