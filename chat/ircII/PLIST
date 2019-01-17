@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2015/09/17 07:06:48 tron Exp $
+@comment $NetBSD: PLIST,v 1.28 2019/01/17 05:21:24 mrg Exp $
 bin/irc
 bin/irc-${VERS}
 bin/ircbug
@@ -119,6 +119,7 @@ share/irc/help/exec${GZSUFFIX}
 share/irc/help/exit${GZSUFFIX}
 share/irc/help/expressions${GZSUFFIX}
 share/irc/help/flush${GZSUFFIX}
+share/irc/help/for${GZSUFFIX}
 share/irc/help/foreach${GZSUFFIX}
 share/irc/help/help${GZSUFFIX}
 share/irc/help/history${GZSUFFIX}
@@ -130,7 +131,11 @@ share/irc/help/info${GZSUFFIX}
 share/irc/help/input${GZSUFFIX}
 share/irc/help/intro${GZSUFFIX}
 share/irc/help/invite${GZSUFFIX}
+share/irc/help/ircii/command_line_args${GZSUFFIX}
 share/irc/help/ircii/copyright${GZSUFFIX}
+share/irc/help/ircii/environment_vars${GZSUFFIX}
+share/irc/help/ircii/programming${GZSUFFIX}
+share/irc/help/ircii/server_lists${GZSUFFIX}
 share/irc/help/ison${GZSUFFIX}
 share/irc/help/join${GZSUFFIX}
 share/irc/help/kick${GZSUFFIX}
@@ -290,11 +295,9 @@ share/irc/help/on/send_dcc_chat${GZSUFFIX}
 share/irc/help/on/send_msg${GZSUFFIX}
 share/irc/help/on/send_notice${GZSUFFIX}
 share/irc/help/on/send_public${GZSUFFIX}
-share/irc/help/on/send_talk${GZSUFFIX}
 share/irc/help/on/serial_numbers${GZSUFFIX}
 share/irc/help/on/server_notice${GZSUFFIX}
 share/irc/help/on/signoff${GZSUFFIX}
-share/irc/help/on/talk${GZSUFFIX}
 share/irc/help/on/timer${GZSUFFIX}
 share/irc/help/on/topic${GZSUFFIX}
 share/irc/help/on/wall${GZSUFFIX}
@@ -350,10 +353,6 @@ share/irc/help/set/debug${GZSUFFIX}
 share/irc/help/set/decrypt_program${GZSUFFIX}
 share/irc/help/set/display${GZSUFFIX}
 share/irc/help/set/display_encoding${GZSUFFIX}
-share/irc/help/set/ssl_ca_path${GZSUFFIX}
-share/irc/help/set/ssl_ca_file${GZSUFFIX}
-share/irc/help/set/ssl_ca_chain_file${GZSUFFIX}
-share/irc/help/set/ssl_ca_private_key_file${GZSUFFIX}
 share/irc/help/set/eight_bit_characters${GZSUFFIX}
 share/irc/help/set/encrypt_program${GZSUFFIX}
 share/irc/help/set/exec_protection${GZSUFFIX}
@@ -417,6 +416,10 @@ share/irc/help/set/show_numerics${GZSUFFIX}
 share/irc/help/set/show_stars${GZSUFFIX}
 share/irc/help/set/show_status_all${GZSUFFIX}
 share/irc/help/set/show_who_hopcount${GZSUFFIX}
+share/irc/help/set/ssl_ca_chain_file${GZSUFFIX}
+share/irc/help/set/ssl_ca_file${GZSUFFIX}
+share/irc/help/set/ssl_ca_path${GZSUFFIX}
+share/irc/help/set/ssl_ca_private_key_file${GZSUFFIX}
 share/irc/help/set/star_prefix${GZSUFFIX}
 share/irc/help/set/status_away${GZSUFFIX}
 share/irc/help/set/status_channel${GZSUFFIX}
