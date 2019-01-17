@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/05/15 22:18:03 youri Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/01/17 06:30:26 gutteridge Exp $
 bin/xfce4-accessibility-settings
 bin/xfce4-appearance-settings
 bin/xfce4-display-settings
@@ -25,6 +25,7 @@ share/icons/hicolor/128x128/devices/xfce-display-extend.png
 share/icons/hicolor/128x128/devices/xfce-display-external.png
 share/icons/hicolor/128x128/devices/xfce-display-internal.png
 share/icons/hicolor/128x128/devices/xfce-display-mirror.png
+share/icons/hicolor/128x128/devices/xfce-display-profile.png
 share/locale/am/LC_MESSAGES/xfce4-settings.mo
 share/locale/ar/LC_MESSAGES/xfce4-settings.mo
 share/locale/ast/LC_MESSAGES/xfce4-settings.mo
@@ -68,6 +69,7 @@ share/locale/ru/LC_MESSAGES/xfce4-settings.mo
 share/locale/si/LC_MESSAGES/xfce4-settings.mo
 share/locale/sk/LC_MESSAGES/xfce4-settings.mo
 share/locale/sl/LC_MESSAGES/xfce4-settings.mo
+share/locale/sq/LC_MESSAGES/xfce4-settings.mo
 share/locale/sr/LC_MESSAGES/xfce4-settings.mo
 share/locale/sv/LC_MESSAGES/xfce4-settings.mo
 share/locale/te/LC_MESSAGES/xfce4-settings.mo
