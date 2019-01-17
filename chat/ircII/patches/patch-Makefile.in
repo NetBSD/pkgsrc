@@ -1,0 +1,24 @@
+$NetBSD: patch-Makefile.in,v 1.1 2019/01/17 05:21:24 mrg Exp $
+
+--- Makefile.in.orig	2019-01-16 07:47:45.000000000 +0000
++++ Makefile.in	2019-01-17 04:58:52.733449626 +0000
+@@ -128,8 +128,8 @@
+ CP = cp
+ MV = mv
+ SED = sed
+-INSTALL = $(topdir)/bsdinstall -c -m 755
+-INSTALL_DATA = $(topdir)/bsdinstall -c -m 644
++INSTALL = $(BSD_INSTALL_PROGRAM)
++INSTALL_DATA = $(BSD_INSTALL_DATA)
+ 
+ VERSION = @VERSION@
+ 
+@@ -150,7 +150,7 @@
+ 
+ installirc: irc installdirs
+ 	$(INSTALL) irc $(INSTALL_IRC)-$(VERSION)
+-	$(INSTALL) ircbug $(bindir)/ircbug
++	$(BSD_INSTALL_SCRIPT) ircbug $(bindir)/ircbug
+ 	$(RM) $(INSTALL_IRC)
+ 	$(LN) $(INSTALL_IRC_NAME)-$(VERSION) $(INSTALL_IRC)
+ 
