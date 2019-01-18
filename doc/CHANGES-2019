@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.288 2019/01/18 12:34:02 youri Exp $
+$NetBSD: CHANGES-2019,v 1.289 2019/01/18 12:40:04 youri Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -391,3 +391,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated chat/ircII to 20190117 [adam 2019-01-18]
 	Updated graphics/ristretto to 0.8.3 [youri 2019-01-18]
 	Updated x11/xfce4-notifyd to 0.4.3 [youri 2019-01-18]
+	Updated x11/xfce4-screenshooter to 1.9.3 [youri 2019-01-18]
