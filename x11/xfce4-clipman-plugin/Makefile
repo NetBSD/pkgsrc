@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2018/11/14 22:22:51 kleink Exp $
+# $NetBSD: Makefile,v 1.51 2019/01/18 12:58:40 youri Exp $
 
-PKGREVISION= 3
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	xfce4-clipman-plugin-1.4.2
+DISTNAME=	xfce4-clipman-plugin-1.4.3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://archive.xfce.org/src/panel-plugins/xfce4-clipman-plugin/1.4/
 
