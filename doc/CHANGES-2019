@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.315 2019/01/18 20:14:12 tnn Exp $
+$NetBSD: CHANGES-2019,v 1.316 2019/01/18 21:05:50 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -418,3 +418,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/ucspi-ssl to 0.999.10.7nb2 [schmonz 2019-01-18]
 	Updated mail/qmail-run to 20190118 [schmonz 2019-01-18]
 	Updated security/openssh to 7.9.1 [tnn 2019-01-18]
+	Updated net/hub to 2.7.1 [leot 2019-01-18]
