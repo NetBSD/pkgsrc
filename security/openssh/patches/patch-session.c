@@ -1,10 +1,10 @@
-$NetBSD: patch-session.c,v 1.8 2016/12/30 04:43:16 taca Exp $
+$NetBSD: patch-session.c,v 1.9 2019/01/18 20:13:37 tnn Exp $
 
 * Interix support.
 
---- session.c.orig	2016-12-19 04:59:41.000000000 +0000
+--- session.c.orig	2018-10-17 00:01:20.000000000 +0000
 +++ session.c
-@@ -934,7 +934,7 @@ read_etc_default_login(char ***env, u_in
+@@ -959,7 +959,7 @@ read_etc_default_login(char ***env, u_in
  	if (tmpenv == NULL)
  		return;
  
@@ -13,7 +13,7 @@ $NetBSD: patch-session.c,v 1.8 2016/12/30 04:43:16 taca Exp $
  		var = child_get_env(tmpenv, "SUPATH");
  	else
  		var = child_get_env(tmpenv, "PATH");
-@@ -1042,7 +1042,7 @@ do_setup_env(Session *s, const char *she
+@@ -1077,7 +1077,7 @@ do_setup_env(struct ssh *ssh, Session *s
  #  endif /* HAVE_ETC_DEFAULT_LOGIN */
  	if (path == NULL || *path == '\0') {
  		child_set_env(&env, &envsize, "PATH",
@@ -22,11 +22,10 @@ $NetBSD: patch-session.c,v 1.8 2016/12/30 04:43:16 taca Exp $
  	}
  # endif /* HAVE_CYGWIN */
  #endif /* HAVE_LOGIN_CAP */
-@@ -1154,6 +1154,18 @@ do_setup_env(Session *s, const char *she
- 		    strcmp(pw->pw_dir, "/") ? pw->pw_dir : "");
- 		read_environment_file(&env, &envsize, buf);
- 	}
-+
+@@ -1209,6 +1209,17 @@ do_setup_env(struct ssh *ssh, Session *s
+ 		child_set_env(&env, &envsize, "SSH_ORIGINAL_COMMAND",
+ 		    original_command);
+ 
 +#ifdef HAVE_INTERIX
 +	{
 +		/* copy standard Windows environment, then apply changes */
@@ -41,7 +40,7 @@ $NetBSD: patch-session.c,v 1.8 2016/12/30 04:43:16 taca Exp $
  	if (debug_flag) {
  		/* dump the environment */
  		fprintf(stderr, "Environment:\n");
-@@ -1345,11 +1357,13 @@ do_setusercontext(struct passwd *pw)
+@@ -1400,11 +1411,13 @@ do_setusercontext(struct passwd *pw)
  			perror("setgid");
  			exit(1);
  		}
@@ -55,7 +54,7 @@ $NetBSD: patch-session.c,v 1.8 2016/12/30 04:43:16 taca Exp $
  		endgrent();
  #endif
  
-@@ -2148,7 +2162,7 @@ session_pty_cleanup2(Session *s)
+@@ -2275,7 +2288,7 @@ session_pty_cleanup2(Session *s)
  		record_logout(s->pid, s->tty, s->pw->pw_name);
  
  	/* Release the pseudo-tty. */
