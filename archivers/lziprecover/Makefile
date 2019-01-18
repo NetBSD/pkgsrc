@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2017/08/18 20:45:15 adam Exp $
+# $NetBSD: Makefile,v 1.9 2019/01/18 10:05:39 adam Exp $
 
-DISTNAME=	lziprecover-1.19
+DISTNAME=	lziprecover-1.21
 CATEGORIES=	archivers
 MASTER_SITES=	http://download.savannah.gnu.org/releases/lzip/lziprecover/
 
@@ -15,6 +15,7 @@ CONFIGURE_ARGS=		--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 INFO_FILES=		yes
+TEST_TARGET=		check
 
 MAKE_FLAGS+=		CXX=${CXX:Q}
 MAKE_FLAGS+=		CPPFLAGS=${CPPFLAGS:Q}
