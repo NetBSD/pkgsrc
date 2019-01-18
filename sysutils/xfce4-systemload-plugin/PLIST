@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2016/06/13 23:15:28 youri Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/01/18 13:06:02 youri Exp $
 lib/xfce4/panel/plugins/libsystemload.la
 share/locale/ar/LC_MESSAGES/xfce4-systemload-plugin.mo
 share/locale/ast/LC_MESSAGES/xfce4-systemload-plugin.mo
+share/locale/be/LC_MESSAGES/xfce4-systemload-plugin.mo
 share/locale/bg/LC_MESSAGES/xfce4-systemload-plugin.mo
 share/locale/ca/LC_MESSAGES/xfce4-systemload-plugin.mo
 share/locale/cs/LC_MESSAGES/xfce4-systemload-plugin.mo
