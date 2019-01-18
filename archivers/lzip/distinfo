@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2018/02/25 21:07:53 wiz Exp $
+$NetBSD: distinfo,v 1.12 2019/01/18 10:03:40 adam Exp $
 
-SHA1 (lzip-1.20.tar.gz) = d89e6dd737e6566fbe18e3c247782120a7104bfb
-RMD160 (lzip-1.20.tar.gz) = 72868e3b290a7c5ece0919978f3cf19714dc5f10
-SHA512 (lzip-1.20.tar.gz) = 0349b4c6c0b41e601b7ee381c3254d741397beb3ef9354c08162f346f131f4f48f6613ee0a610cdc6d827530df634f884ecfeee35215b10045a40fee76f8e938
-Size (lzip-1.20.tar.gz) = 103426 bytes
+SHA1 (lzip-1.21.tar.gz) = 08bea2f275d639bfe85fe30887d269b96eac34e1
+RMD160 (lzip-1.21.tar.gz) = 5e37348c9061d14f7776b99ac816ad730c9fade4
+SHA512 (lzip-1.21.tar.gz) = 02e31a8fc9431e88edbb0fd467e9dd0947203e693e6581be1a8d25d96c74d9c3794f1fef9e4c993553ba74330c8f5851cad6315b49f263fe9cf2444225af4362
+Size (lzip-1.21.tar.gz) = 105558 bytes
