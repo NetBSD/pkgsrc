@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/01/10 22:30:10 tnn Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/01/18 14:43:59 tnn Exp $
 ${PLIST.dri}include/EGL/egl.h
 ${PLIST.dri}include/EGL/eglext.h
 ${PLIST.dri}include/EGL/eglextchromium.h
@@ -27,20 +27,21 @@ ${PLIST.glesv2}include/GLES3/gl3ext.h
 ${PLIST.glesv2}include/GLES3/gl3platform.h
 ${PLIST.dri}include/KHR/khrplatform.h
 ${PLIST.gbm}include/gbm.h
+${PLIST.vulkan}include/vulkan/vulkan_intel.h
 ${PLIST.xatracker}include/xa_composite.h
 ${PLIST.xatracker}include/xa_context.h
 ${PLIST.xatracker}include/xa_tracker.h
 @comment ${PLIST.vaapi}lib/dri/gallium_drv_video.la
 @comment ${PLIST.vaapi}lib/dri/gallium_drv_video.so
-${PLIST.i915_dri}lib/dri/i915_dri.so
-${PLIST.i965_dri}lib/dri/i965_dri.so
+${PLIST.i915}lib/dri/i915_dri.so
+${PLIST.i965}lib/dri/i965_dri.so
 @comment ${PLIST.ilo}lib/dri/ilo_dri.so
 ${PLIST.freedreno}lib/dri/kgsl_dri.so
 ${PLIST.swrast}lib/dri/kms_swrast_dri.so
 ${PLIST.freedreno}lib/dri/msm_dri.so
 ${PLIST.nouveau}lib/dri/nouveau_dri.so
 ${PLIST.nouveau_dri}lib/dri/nouveau_vieux_dri.so
-${PLIST.r200_dri}lib/dri/r200_dri.so
+${PLIST.r200}lib/dri/r200_dri.so
 ${PLIST.r300}lib/dri/r300_dri.so
 ${PLIST.r600}lib/dri/r600_dri.so
 ${PLIST.radeon_dri}lib/dri/radeon_dri.so
@@ -96,4 +97,8 @@ ${PLIST.nouveau}${PLIST.vaapi}lib/dri/nouveau_drv_video.so
 ${PLIST.vaapi}lib/dri/r600_drv_video.so
 @comment ${PLIST.vdpau}lib/dri/radeonsi_drv_video.la
 ${PLIST.vaapi}lib/dri/radeonsi_drv_video.so
+${PLIST.vulkan}lib/libvulkan_intel.la
+${PLIST.vulkan}lib/libvulkan_radeon.la
+${PLIST.vulkan}share/vulkan/icd.d/intel_icd.${MACHINE_ARCH}.json
+${PLIST.vulkan}share/vulkan/icd.d/radeon_icd.${MACHINE_ARCH}.json
 share/examples/mesa/00-mesa-defaults.conf
