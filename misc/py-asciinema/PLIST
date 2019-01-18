@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2018/12/31 17:42:02 leot Exp $
-bin/asciinema${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.2 2019/01/18 08:56:41 adam Exp $
+bin/asciinema-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -59,12 +59,19 @@ ${PYSITELIB}/asciinema/http_adapter.pyo
 ${PYSITELIB}/asciinema/player.py
 ${PYSITELIB}/asciinema/player.pyc
 ${PYSITELIB}/asciinema/player.pyo
-${PYSITELIB}/asciinema/pty_recorder.py
-${PYSITELIB}/asciinema/pty_recorder.pyc
-${PYSITELIB}/asciinema/pty_recorder.pyo
+${PYSITELIB}/asciinema/pty.py
+${PYSITELIB}/asciinema/pty.pyc
+${PYSITELIB}/asciinema/pty.pyo
 ${PYSITELIB}/asciinema/term.py
 ${PYSITELIB}/asciinema/term.pyc
 ${PYSITELIB}/asciinema/term.pyo
 ${PYSITELIB}/asciinema/urllib_http_adapter.py
 ${PYSITELIB}/asciinema/urllib_http_adapter.pyc
 ${PYSITELIB}/asciinema/urllib_http_adapter.pyo
+man/man1/asciinema-${PYVERSSUFFIX}.1
+share/doc/asciinema-${PYVERSSUFFIX}/CHANGELOG.md
+share/doc/asciinema-${PYVERSSUFFIX}/CODE_OF_CONDUCT.md
+share/doc/asciinema-${PYVERSSUFFIX}/CONTRIBUTING.md
+share/doc/asciinema-${PYVERSSUFFIX}/README.md
+share/doc/asciinema-${PYVERSSUFFIX}/asciicast-v1.md
+share/doc/asciinema-${PYVERSSUFFIX}/asciicast-v2.md
