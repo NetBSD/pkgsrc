@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailsmtpd.sh,v 1.28 2018/12/16 05:32:07 schmonz Exp $
+# $NetBSD: qmailsmtpd.sh,v 1.29 2019/01/18 18:25:34 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-smtpd (SMTP service).
 #
@@ -20,7 +20,7 @@ name="qmailsmtpd"
 : ${qmailsmtpd_tcpport:="25"}
 : ${qmailsmtpd_tcprules:="@PKG_SYSCONFDIR@/control/tcprules/smtp"}
 : ${qmailsmtpd_autocdb:="YES"}
-: ${qmailsmtpd_presmtpd:="@PREFIX@/bin/greetdelay @PREFIX@/bin/rblsmtpd -r zen.spamhaus.org @PREFIX@/bin/fixsmtpio"}
+: ${qmailsmtpd_presmtpd:="@PREFIX@/bin/greetdelay -- @PREFIX@/bin/rblsmtpd -r zen.spamhaus.org @PREFIX@/bin/fixsmtpio"}
 : ${qmailsmtpd_smtpdcmd:="@PREFIX@/bin/qmail-smtpd"}
 : ${qmailsmtpd_postsmtpd:=""}
 : ${qmailsmtpd_log:="YES"}
@@ -30,6 +30,7 @@ name="qmailsmtpd"
 : ${qmailsmtpd_tls_dhparams:="@PKG_SYSCONFDIR@/control/dh2048.pem"}
 : ${qmailsmtpd_tls_cert:="@PKG_SYSCONFDIR@/control/servercert.pem"}
 : ${qmailsmtpd_tls_key:=""}
+: ${qmailsmtpd_tls_ciphers:=""}
 
 if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
@@ -65,14 +66,17 @@ qmailsmtpd_configure_tls() {
 }
 
 qmailsmtpd_disable_tls() {
-	qmailsmtpd_postenv="${qmailsmtpd_postenv} DISABLETLS=1"
+	qmailsmtpd_postenv="DISABLETLS=1 ${qmailsmtpd_postenv}"
 }
 
 qmailsmtpd_enable_tls() {
-	qmailsmtpd_postenv="${qmailsmtpd_postenv} DHFILE=${qmailsmtpd_tls_dhparams}"
-	qmailsmtpd_postenv="${qmailsmtpd_postenv} CERTFILE=${qmailsmtpd_tls_cert}"
+	qmailsmtpd_postenv="DHFILE=${qmailsmtpd_tls_dhparams} ${qmailsmtpd_postenv}"
+	qmailsmtpd_postenv="CERTFILE=${qmailsmtpd_tls_cert} ${qmailsmtpd_postenv}"
 	if [ -f "${qmailsmtpd_tls_key}" ]; then
-		qmailsmtpd_postenv="${qmailsmtpd_postenv} KEYFILE=${qmailsmtpd_tls_key}"
+		qmailsmtpd_postenv="KEYFILE=${qmailsmtpd_tls_key} ${qmailsmtpd_postenv}"
+	fi
+	if [ -n "${qmailsmtpd_tls_ciphers}" ]; then
+		qmailsmtpd_postenv="CIPHERS=${qmailsmtpd_tls_ciphers} ${qmailsmtpd_postenv}"
 	fi
 }
 
