@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.75 2018/11/14 22:22:52 kleink Exp $
+# $NetBSD: Makefile,v 1.76 2019/01/18 14:07:45 youri Exp $
 
-PKGREVISION= 3
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=		xfce4-panel-4.13.3
+DISTNAME=		xfce4-panel-4.13.4
 CATEGORIES=		x11
 MASTER_SITES+=		http://archive.xfce.org/src/xfce/xfce4-panel/4.13/
 
