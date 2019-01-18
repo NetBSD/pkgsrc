@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.286 2019/01/18 11:51:33 youri Exp $
+$NetBSD: CHANGES-2019,v 1.287 2019/01/18 11:54:43 youri Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -389,4 +389,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated archivers/lzip to 1.21 [adam 2019-01-18]
 	Updated archivers/lziprecover to 1.21 [adam 2019-01-18]
 	Updated chat/ircII to 20190117 [adam 2019-01-18]
-	Updated graphics/ristretto to 0.8.3 [youri 2019-01-16]
+	Updated graphics/ristretto to 0.8.3 [youri 2019-01-18]
