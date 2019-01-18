@@ -1,11 +1,11 @@
-$NetBSD: patch-configure.ac,v 1.6 2017/05/31 09:30:22 jperkin Exp $
+$NetBSD: patch-configure.ac,v 1.7 2019/01/18 20:13:37 tnn Exp $
 
 * Various fixes regarding portability
 * Revive tcp_wrappers support.
 
---- configure.ac.orig	2017-03-20 02:39:27.000000000 +0000
+--- configure.ac.orig	2018-10-17 00:01:20.000000000 +0000
 +++ configure.ac
-@@ -306,6 +306,9 @@ AC_ARG_WITH([rpath],
+@@ -293,6 +293,9 @@ AC_ARG_WITH([rpath],
  	]
  )
  
@@ -15,7 +15,7 @@ $NetBSD: patch-configure.ac,v 1.6 2017/05/31 09:30:22 jperkin Exp $
  # Allow user to specify flags
  AC_ARG_WITH([cflags],
  	[  --with-cflags           Specify additional flags to pass to compiler],
-@@ -379,6 +382,7 @@ AC_CHECK_HEADERS([ \
+@@ -386,6 +389,7 @@ AC_CHECK_HEADERS([ \
  	maillock.h \
  	ndir.h \
  	net/if_tun.h \
@@ -23,7 +23,7 @@ $NetBSD: patch-configure.ac,v 1.6 2017/05/31 09:30:22 jperkin Exp $
  	netdb.h \
  	netgroup.h \
  	pam/pam_appl.h \
-@@ -695,6 +699,15 @@ main() { if (NSVersionOfRunTimeLibrary("
+@@ -736,6 +740,15 @@ main() { if (NSVersionOfRunTimeLibrary("
  		;;
  	esac
  	;;
@@ -39,9 +39,9 @@ $NetBSD: patch-configure.ac,v 1.6 2017/05/31 09:30:22 jperkin Exp $
  *-*-irix5*)
  	PATH="$PATH:/usr/etc"
  	AC_DEFINE([BROKEN_INET_NTOA], [1],
-@@ -1470,6 +1483,62 @@ AC_ARG_WITH([skey],
- 	]
- )
+@@ -1493,6 +1506,62 @@ else
+ 	AC_MSG_RESULT([no])
+ fi
  
 +# Check whether user wants TCP wrappers support
 +TCPW_MSG="no"
@@ -102,7 +102,7 @@ $NetBSD: patch-configure.ac,v 1.6 2017/05/31 09:30:22 jperkin Exp $
  # Check whether user wants to use ldns
  LDNS_MSG="no"
  AC_ARG_WITH(ldns,
-@@ -4979,9 +5048,17 @@ AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[
+@@ -5189,9 +5258,17 @@ AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[
  ])
  if test -z "$conf_wtmpx_location"; then
  	if test x"$system_wtmpx_path" = x"no" ; then
@@ -122,7 +122,7 @@ $NetBSD: patch-configure.ac,v 1.6 2017/05/31 09:30:22 jperkin Exp $
  	AC_DEFINE_UNQUOTED([CONF_WTMPX_FILE], ["$conf_wtmpx_location"],
  		[Define if you want to specify the path to your wtmpx file])
  fi
-@@ -5069,7 +5146,7 @@ echo "OpenSSH has been configured with t
+@@ -5283,7 +5360,7 @@ echo "OpenSSH has been configured with t
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"
@@ -131,10 +131,10 @@ $NetBSD: patch-configure.ac,v 1.6 2017/05/31 09:30:22 jperkin Exp $
  echo "                      Manual pages: $F"
  echo "                          PID file: $G"
  echo "  Privilege separation chroot path: $H"
-@@ -5093,6 +5170,7 @@ echo "                 KerberosV support
+@@ -5305,6 +5382,7 @@ echo "                       PAM support
+ echo "                   OSF SIA support: $SIA_MSG"
+ echo "                 KerberosV support: $KRB5_MSG"
  echo "                   SELinux support: $SELINUX_MSG"
- echo "                 Smartcard support: $SCARD_MSG"
- echo "                     S/KEY support: $SKEY_MSG"
 +echo "              TCP Wrappers support: $TCPW_MSG"
  echo "              MD5 password support: $MD5_MSG"
  echo "                   libedit support: $LIBEDIT_MSG"
