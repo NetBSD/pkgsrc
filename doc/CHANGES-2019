@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.312 2019/01/18 18:08:12 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.313 2019/01/18 18:18:43 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -415,3 +415,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/xfce4-battery-plugin to 1.1.2 [youri 2019-01-18]
 	Updated misc/ansiweather to 1.13.0 [kamil 2019-01-18]
 	Updated textproc/jo to 1.2 [kamil 2019-01-18]
+	Updated net/ucspi-ssl to 0.999.10.7nb2 [schmonz 2019-01-18]
