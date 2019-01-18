@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2019/01/13 12:29:28 ryoon Exp $
+# $NetBSD: options.mk,v 1.4 2019/01/18 13:32:47 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -15,12 +15,7 @@ PKG_SUPPORTED_OPTIONS+=		libelf
 
 # PKG_SUGGESTED_OPTIONS+=		xvmc
 PKG_SUGGESTED_OPTIONS+=		vdpau vaapi
-
-# glesv1 and glesv2 build error on NetBSD
-# due to no table_noop_array for tls patch
-.if ${OPSYS} != "NetBSD"
 PKG_SUGGESTED_OPTIONS+=		glesv1 glesv2
-.endif
 
 PKG_SUGGESTED_OPTIONS+=		xa
 PKG_SUGGESTED_OPTIONS+=		noatexit
@@ -37,15 +32,13 @@ PKG_SUGGESTED_OPTIONS+=		llvm
 	${OPSYS} == "DragonFly" || ${OPSYS} == "Linux" ||	\
 	${OPSYS} == "SunOS" || ${OPSYS} == "NetBSD" ||		\
 	${OPSYS} == "Darwin"
-PKG_SUGGESTED_OPTIONS+=		dri
+# Having DRI3 compiled in by default doesn't hurt, the X server
+# will only use it if it is supported at run time.
+PKG_SUGGESTED_OPTIONS+=		dri dri3
 .endif
 
-.if ${OPSYS} == "Linux"
-PKG_SUGGESTED_OPTIONS+=		dri3
-.endif
 
 # Use Thread Local Storage in GLX where it is supported by Mesa and works.
-# XXX Fixme
 .if \
 	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-i386) ||	\
 	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-x86_64) ||	\
@@ -84,8 +77,7 @@ CONFIGURE_ARGS+=	--enable-dri
 CONFIGURE_ARGS+=	--enable-egl
 
 .if !empty(PKG_OPTIONS:Mdri3)
-# CFLAGS+=		-DHAVE_DRI3
-# CONFIGURE_ARGS+=	--enable-dri3
+CONFIGURE_ARGS+=	--enable-dri3
 .else # !dri3
 CONFIGURE_ARGS+=	--disable-dri3
 .endif # dri3
@@ -261,7 +253,6 @@ PLIST.radeonsi=		yes
 GALLIUM_DRIVERS+=	radeonsi
 CONFIGURE_ARGS+=	--enable-llvm
 CONFIGURE_ARGS+=	--enable-llvm-shared-libs
-# CONFIGURE_ARGS+=	--enable-r600-llvm-compiler
 
 .if !empty(PKG_OPTIONS:Mlibelf)
 .include "../../devel/libelf/buildlink3.mk"
@@ -276,7 +267,6 @@ CONFIGURE_ENV+=		ac_cv_path_ac_pt_LLVM_CONFIG=${LLVM_CONFIG_PATH}
 CONFIGURE_ARGS+=	--disable-xa
 CONFIGURE_ARGS+=	--disable-llvm
 CONFIGURE_ARGS+=	--disable-llvm-shared-libs
-# CONFIGURE_ARGS+=	--disable-r600-llvm-compiler
 .endif # llvm
 
 CONFIGURE_ARGS+=	--with-gallium-drivers=${GALLIUM_DRIVERS:ts,}
