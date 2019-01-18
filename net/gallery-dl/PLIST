@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2019/01/01 20:09:26 leot Exp $
+@comment $NetBSD: PLIST,v 1.21 2019/01/18 13:34:12 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -174,9 +174,6 @@ ${PYSITELIB}/gallery_dl/extractor/instagram.pyo
 ${PYSITELIB}/gallery_dl/extractor/jaiminisbox.py
 ${PYSITELIB}/gallery_dl/extractor/jaiminisbox.pyc
 ${PYSITELIB}/gallery_dl/extractor/jaiminisbox.pyo
-${PYSITELIB}/gallery_dl/extractor/joyreactor.py
-${PYSITELIB}/gallery_dl/extractor/joyreactor.pyc
-${PYSITELIB}/gallery_dl/extractor/joyreactor.pyo
 ${PYSITELIB}/gallery_dl/extractor/khinsider.py
 ${PYSITELIB}/gallery_dl/extractor/khinsider.pyc
 ${PYSITELIB}/gallery_dl/extractor/khinsider.pyo
@@ -255,12 +252,12 @@ ${PYSITELIB}/gallery_dl/extractor/pinterest.pyo
 ${PYSITELIB}/gallery_dl/extractor/pixiv.py
 ${PYSITELIB}/gallery_dl/extractor/pixiv.pyc
 ${PYSITELIB}/gallery_dl/extractor/pixiv.pyo
-${PYSITELIB}/gallery_dl/extractor/pornreactor.py
-${PYSITELIB}/gallery_dl/extractor/pornreactor.pyc
-${PYSITELIB}/gallery_dl/extractor/pornreactor.pyo
 ${PYSITELIB}/gallery_dl/extractor/powermanga.py
 ${PYSITELIB}/gallery_dl/extractor/powermanga.pyc
 ${PYSITELIB}/gallery_dl/extractor/powermanga.pyo
+${PYSITELIB}/gallery_dl/extractor/reactor.py
+${PYSITELIB}/gallery_dl/extractor/reactor.pyc
+${PYSITELIB}/gallery_dl/extractor/reactor.pyo
 ${PYSITELIB}/gallery_dl/extractor/readcomiconline.py
 ${PYSITELIB}/gallery_dl/extractor/readcomiconline.pyc
 ${PYSITELIB}/gallery_dl/extractor/readcomiconline.pyo
@@ -357,6 +354,9 @@ ${PYSITELIB}/gallery_dl/postprocessor/common.pyo
 ${PYSITELIB}/gallery_dl/postprocessor/exec.py
 ${PYSITELIB}/gallery_dl/postprocessor/exec.pyc
 ${PYSITELIB}/gallery_dl/postprocessor/exec.pyo
+${PYSITELIB}/gallery_dl/postprocessor/metadata.py
+${PYSITELIB}/gallery_dl/postprocessor/metadata.pyc
+${PYSITELIB}/gallery_dl/postprocessor/metadata.pyo
 ${PYSITELIB}/gallery_dl/postprocessor/ugoira.py
 ${PYSITELIB}/gallery_dl/postprocessor/ugoira.pyc
 ${PYSITELIB}/gallery_dl/postprocessor/ugoira.pyo
