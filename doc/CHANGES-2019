@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.300 2019/01/18 13:32:09 youri Exp $
+$NetBSD: CHANGES-2019,v 1.301 2019/01/18 13:34:29 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -403,3 +403,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/xfce4-thunar-vcs to 0.2.0 [youri 2019-01-18]
 	Updated x11/xfce4-garcon to 0.6.2 [youri 2019-01-18]
 	Updated x11/libxfce4util to 4.13.2 [youri 2019-01-18]
+	Updated net/gallery-dl to 1.6.3 [leot 2019-01-18]
