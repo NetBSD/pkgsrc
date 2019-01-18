@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/05/19 11:47:11 youri Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/01/18 13:22:58 youri Exp $
 lib/thunarx-3/thunar-vcs-plugin.la
 libexec/tvp-git-helper
 libexec/tvp-svn-helper
@@ -7,6 +7,7 @@ share/icons/hicolor/24x24/apps/subversion.png
 share/icons/hicolor/48x48/apps/git.png
 share/icons/hicolor/48x48/apps/subversion.png
 share/locale/ar/LC_MESSAGES/thunar-vcs-plugin.mo
+share/locale/be/LC_MESSAGES/thunar-vcs-plugin.mo
 share/locale/bg/LC_MESSAGES/thunar-vcs-plugin.mo
 share/locale/ca/LC_MESSAGES/thunar-vcs-plugin.mo
 share/locale/cs/LC_MESSAGES/thunar-vcs-plugin.mo
