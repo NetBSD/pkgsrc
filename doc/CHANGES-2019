@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.316 2019/01/18 21:05:50 leot Exp $
+$NetBSD: CHANGES-2019,v 1.317 2019/01/18 22:29:14 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -419,3 +419,9 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/qmail-run to 20190118 [schmonz 2019-01-18]
 	Updated security/openssh to 7.9.1 [tnn 2019-01-18]
 	Updated net/hub to 2.7.1 [leot 2019-01-18]
+	Updated sysutils/py-borgbackup to 1.1.8 [bsiegert 2019-01-18]
+	Updated devel/acr to 1.7.0 [bsiegert 2019-01-18]
+	Updated archivers/makeself to 2.4.0 [bsiegert 2019-01-18]
+	Updated net/maradns to 2.0.16 [bsiegert 2019-01-18]
+	Updated chat/matterircd to 0.18.4 [bsiegert 2019-01-18]
+	Updated sysutils/mc to 4.8.22 [bsiegert 2019-01-18]
