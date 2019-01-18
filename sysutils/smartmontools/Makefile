@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2019/01/18 00:28:24 tnn Exp $
+# $NetBSD: Makefile,v 1.34 2019/01/18 02:04:43 tnn Exp $
 
 DISTNAME=		smartmontools-7.0
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=smartmontools/}
 
@@ -30,5 +31,8 @@ CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/smartmontools
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
 
 INSTALLATION_DIRS=	${EGDIR}
+
+CFLAGS+=-O0 -ggdb -g3
+CXXFLAGS+=-O0 -ggdb -g3
 
 .include "../../mk/bsd.pkg.mk"
