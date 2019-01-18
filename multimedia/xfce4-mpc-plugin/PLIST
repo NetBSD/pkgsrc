@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2016/06/09 09:27:01 youri Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/01/18 13:03:42 youri Exp $
 lib/xfce4/panel/plugins/libmpc.la
 share/locale/ar/LC_MESSAGES/xfce4-mpc-plugin.mo
 share/locale/ast/LC_MESSAGES/xfce4-mpc-plugin.mo
+share/locale/be/LC_MESSAGES/xfce4-mpc-plugin.mo
 share/locale/bg/LC_MESSAGES/xfce4-mpc-plugin.mo
 share/locale/ca/LC_MESSAGES/xfce4-mpc-plugin.mo
 share/locale/cs/LC_MESSAGES/xfce4-mpc-plugin.mo
