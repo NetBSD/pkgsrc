@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailofmipd.sh,v 1.23 2018/12/16 05:32:07 schmonz Exp $
+# $NetBSD: qmailofmipd.sh,v 1.24 2019/01/18 18:25:34 schmonz Exp $
 #
 # @PKGNAME@ script to control ofmipd (SMTP submission service).
 #
@@ -32,6 +32,7 @@ name="qmailofmipd"
 : ${qmailofmipd_tls_dhparams:="@PKG_SYSCONFDIR@/control/dh2048.pem"}
 : ${qmailofmipd_tls_cert:="@PKG_SYSCONFDIR@/control/servercert.pem"}
 : ${qmailofmipd_tls_key:=""}
+: ${qmailofmipd_tls_ciphers:=""}
 
 if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
@@ -69,14 +70,17 @@ qmailofmipd_configure_tls() {
 }
 
 qmailofmipd_disable_tls() {
-	qmailofmipd_postenv="${qmailofmipd_postenv} DISABLETLS=1"
+	qmailofmipd_postenv="DISABLETLS=1 ${qmailofmipd_postenv}"
 }
 
 qmailofmipd_enable_tls() {
-	qmailofmipd_postenv="${qmailofmipd_postenv} DHFILE=${qmailofmipd_tls_dhparams}"
-	qmailofmipd_postenv="${qmailofmipd_postenv} CERTFILE=${qmailofmipd_tls_cert}"
+	qmailofmipd_postenv="DHFILE=${qmailofmipd_tls_dhparams} ${qmailofmipd_postenv}"
+	qmailofmipd_postenv="CERTFILE=${qmailofmipd_tls_cert} ${qmailofmipd_postenv}"
 	if [ -f "${qmailofmipd_tls_key}" ]; then
-		qmailofmipd_postenv="${qmailofmipd_postenv} KEYFILE=${qmailofmipd_tls_key}"
+		qmailofmipd_postenv="KEYFILE=${qmailofmipd_tls_key} ${qmailofmipd_postenv}"
+	fi
+	if [ -n "${qmailofmipd_tls_ciphers}" ]; then
+		qmailofmipd_postenv="CIPHERS=${qmailofmipd_tls_ciphers} ${qmailofmipd_postenv}"
 	fi
 }
 
@@ -134,7 +138,7 @@ qmailofmipd_needcdb() {
 }
 
 qmailofmipd_cdb() {
-	@ECHO@ "Reloading ${qmailofmipd_tcprules}"
+	@ECHO@ "Reloading ${qmailofmipd_tcprules}."
 	@PREFIX@/bin/tcprules ${qmailofmipd_tcprules}.cdb ${qmailofmipd_tcprules}.tmp < ${qmailofmipd_tcprules}
 	@CHMOD@ 644 ${qmailofmipd_tcprules}.cdb
 }
