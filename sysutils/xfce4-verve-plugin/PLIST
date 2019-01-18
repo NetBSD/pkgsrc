@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/05/17 09:41:44 jperkin Exp $
-bin/verve-focus
+@comment $NetBSD: PLIST,v 1.5 2019/01/18 13:08:01 youri Exp $
 lib/xfce4/panel/plugins/libverve.la
 share/locale/ar/LC_MESSAGES/xfce4-verve-plugin.mo
 share/locale/ast/LC_MESSAGES/xfce4-verve-plugin.mo
