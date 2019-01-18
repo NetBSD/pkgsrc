@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.304 2019/01/18 14:03:45 youri Exp $
+$NetBSD: CHANGES-2019,v 1.305 2019/01/18 14:07:54 youri Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -407,3 +407,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/youtube-dl to 20190117 [leot 2019-01-18]
 	Updated x11/xfce4-tumbler to 0.2.3 [youri 2019-01-18]
 	Updated sysutils/xfce4-appfinder to 4.13.2 [youri 2019-01-18]
+	Updated x11/xfce4-panel to 4.13.4 [youri 2019-01-18]
