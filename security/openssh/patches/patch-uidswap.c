@@ -1,10 +1,10 @@
-$NetBSD: patch-uidswap.c,v 1.5 2016/01/18 12:53:26 jperkin Exp $
+$NetBSD: patch-uidswap.c,v 1.6 2019/01/18 20:13:37 tnn Exp $
 
 Interix support
 
---- uidswap.c.orig	2015-08-21 04:49:03.000000000 +0000
+--- uidswap.c.orig	2018-10-17 00:01:20.000000000 +0000
 +++ uidswap.c
-@@ -67,13 +67,13 @@ temporarily_use_uid(struct passwd *pw)
+@@ -68,13 +68,13 @@ temporarily_use_uid(struct passwd *pw)
  	    (u_int)pw->pw_uid, (u_int)pw->pw_gid,
  	    (u_int)saved_euid, (u_int)saved_egid);
  #ifndef HAVE_CYGWIN
@@ -20,21 +20,22 @@ Interix support
  		privileged = 0;
  		return;
  	}
-@@ -96,9 +96,11 @@ temporarily_use_uid(struct passwd *pw)
+@@ -98,10 +98,11 @@ temporarily_use_uid(struct passwd *pw)
  
  	/* set and save the user's groups */
- 	if (user_groupslen == -1) {
+ 	if (user_groupslen == -1 || user_groups_uid != pw->pw_uid) {
 +#ifndef HAVE_INTERIX
  		if (initgroups(pw->pw_name, pw->pw_gid) < 0)
  			fatal("initgroups: %s: %.100s", pw->pw_name,
  			    strerror(errno));
+-
 +#endif
- 
  		user_groupslen = getgroups(0, NULL);
  		if (user_groupslen < 0)
-@@ -112,9 +114,11 @@ temporarily_use_uid(struct passwd *pw)
- 			free(user_groups);
+ 			fatal("getgroups: %.100s", strerror(errno));
+@@ -116,9 +117,11 @@ temporarily_use_uid(struct passwd *pw)
  		}
+ 		user_groups_uid = pw->pw_uid;
  	}
 +#ifndef HAVE_INTERIX
  	/* Set the effective uid to the given (unprivileged) uid. */
@@ -44,7 +45,7 @@ Interix support
  #ifndef SAVED_IDS_WORK_WITH_SETEUID
  	/* Propagate the privileged gid to all of our gids. */
  	if (setgid(getegid()) < 0)
-@@ -187,8 +191,10 @@ restore_uid(void)
+@@ -166,8 +169,10 @@ restore_uid(void)
  	setgid(getgid());
  #endif /* SAVED_IDS_WORK_WITH_SETEUID */
  
@@ -55,7 +56,7 @@ Interix support
  	temporarily_use_uid_effective = 0;
  }
  
-@@ -211,6 +217,10 @@ permanently_set_uid(struct passwd *pw)
+@@ -190,6 +195,10 @@ permanently_set_uid(struct passwd *pw)
  	debug("permanently_set_uid: %u/%u", (u_int)pw->pw_uid,
  	    (u_int)pw->pw_gid);
  
@@ -66,7 +67,7 @@ Interix support
  	if (setresgid(pw->pw_gid, pw->pw_gid, pw->pw_gid) < 0)
  		fatal("setresgid %u: %.100s", (u_int)pw->pw_gid, strerror(errno));
  
-@@ -247,6 +257,7 @@ permanently_set_uid(struct passwd *pw)
+@@ -226,6 +235,7 @@ permanently_set_uid(struct passwd *pw)
  	    (setuid(old_uid) != -1 || seteuid(old_uid) != -1))
  		fatal("%s: was able to restore old [e]uid", __func__);
  #endif
