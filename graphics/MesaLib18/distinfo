@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2019/01/10 22:30:10 tnn Exp $
+$NetBSD: distinfo,v 1.8 2019/01/18 13:32:47 tnn Exp $
 
-SHA1 (mesa-18.3.1.tar.xz) = 50ba2d37647fea77ea19416e8a6ffed34c313330
-RMD160 (mesa-18.3.1.tar.xz) = 2d6dff2d0357687c164b2b87760301b97fd63653
-SHA512 (mesa-18.3.1.tar.xz) = a68d39158cf1e868d70730d0641a0cfe4c6e5b3cd1bc0c47f54022402aca03503933084f6ddc722bf88c9b6d1281ba5c847ec4fed8092a9b33f90527d08e12db
-Size (mesa-18.3.1.tar.xz) = 11865960 bytes
+SHA1 (mesa-18.3.2.tar.xz) = 8775d7bfac7e07141ac4299888d426d5550949f7
+RMD160 (mesa-18.3.2.tar.xz) = d3662f72a39d009adb21a70bd7b49c28960c0d5c
+SHA512 (mesa-18.3.2.tar.xz) = 34b66520728d720b1f3d3d63f8ba5c255d57b9e8fe427264419e4163b474df662ff6db9ca8b81283866da415e34346a4c39fc37bebe2a0929be14480faf4db45
+Size (mesa-18.3.2.tar.xz) = 11868440 bytes
 SHA1 (patch-configure.ac) = 355b04270d2036fa879215d3f58278d5d32d22da
 SHA1 (patch-include_GL_internal_dri__interface.h) = 146d2f3f3e50fc1947e8941301d9cf9d90a035e2
 SHA1 (patch-src_amd_vulkan_winsys_amdgpu_radv__amdgpu__cs.c) = 1fe81a7b16e36dc9125400c20543271216a33a45
