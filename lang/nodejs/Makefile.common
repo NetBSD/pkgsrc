@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2019/01/10 13:02:41 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.27 2019/01/18 16:24:37 jperkin Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs6/Makefile
 # used by lang/nodejs8/Makefile
@@ -59,6 +59,9 @@ SUBST_FILES.mksnapshot+=	out/deps/v8/src/mksnapshot.target.mk
 SUBST_FILES.mksnapshot+=	out/deps/v8/gypfiles/mksnapshot.target.mk
 SUBST_SED.mksnapshot+=		-e 's|call do_cmd,link)|call do_cmd,link)\${.newline}	${TOOLS_PLATFORM.paxctl} +m $$@|'
 .endif
+
+CFLAGS.SunOS+=		-D_FILE_OFFSET_BITS=64
+CXXFLAGS.SunOS+=	-D_FILE_OFFSET_BITS=64
 
 pre-install:
 	${CHMOD} -R g-w ${WRKSRC}
