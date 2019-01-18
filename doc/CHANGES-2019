@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.289 2019/01/18 12:40:04 youri Exp $
+$NetBSD: CHANGES-2019,v 1.290 2019/01/18 12:56:25 youri Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -392,3 +392,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/ristretto to 0.8.3 [youri 2019-01-18]
 	Updated x11/xfce4-notifyd to 0.4.3 [youri 2019-01-18]
 	Updated x11/xfce4-screenshooter to 1.9.3 [youri 2019-01-18]
+	Updated misc/xfce4-calculator-plugin to 0.6.90 [youri 2019-01-18]
