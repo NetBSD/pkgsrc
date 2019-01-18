@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2019/01/18 13:32:47 tnn Exp $
+# $NetBSD: options.mk,v 1.5 2019/01/18 14:43:59 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -12,6 +12,7 @@ PKG_SUPPORTED_OPTIONS+=		glesv1 glesv2
 PKG_SUPPORTED_OPTIONS+=		xa
 PKG_SUPPORTED_OPTIONS+=		noatexit
 PKG_SUPPORTED_OPTIONS+=		libelf
+PKG_SUPPORTED_OPTIONS+=		vulkan
 
 # PKG_SUGGESTED_OPTIONS+=		xvmc
 PKG_SUGGESTED_OPTIONS+=		vdpau vaapi
@@ -58,10 +59,10 @@ PKG_SUGGESTED_OPTIONS+=		libelf
 .include "../../mk/bsd.options.mk"
 
 # gallium
-PLIST_VARS+=	freedreno ilo i915 i965 nouveau r300 r600 radeonsi	\
-		swrast svga vc4 virgl
+PLIST_VARS+=	freedreno i915 i965 nouveau r300 r600 radeonsi	\
+		swrast svga vc4 virgl vulkan
 # classic DRI
-PLIST_VARS+=	dri swrast_dri i915_dri nouveau_dri i965_dri radeon_dri r200_dri
+PLIST_VARS+=	dri swrast_dri nouveau_dri radeon_dri r200
 # other features
 PLIST_VARS+=	gbm vaapi vdpau wayland xatracker
 PLIST_VARS+=	osmesa xvmc
@@ -130,6 +131,7 @@ BUILDLINK_DEPMETHOD.libpciaccess=	full
 
 DRI_DRIVERS=		#
 GALLIUM_DRIVERS=	#
+VULKAN_DRIVERS=		#
 
 # Software rasterizer
 PLIST.swrast_dri=	yes
@@ -147,17 +149,20 @@ GALLIUM_DRIVERS+=	svga
 
 # Intel chipsets, x86 only
 PLIST.i915=		yes
-# GALLIUM_DRIVERS+=	i915
-PLIST.i915_dri=		yes
+GALLIUM_DRIVERS+=	i915
 DRI_DRIVERS+=		i915
 
-# ilo is being phased out in favor of Vulkan
-# Experimental Intel driver
-# PLIST.ilo=		yes
-# GALLIUM_DRIVERS+=	ilo
-
-PLIST.i965_dri=		yes
+PLIST.i965=		yes
 DRI_DRIVERS+=		i965
+
+.endif
+
+# Vulkan support
+.if !empty(PKG_OPTIONS:Mvulkan)
+VULKAN_DRIVERS+=	intel
+VULKAN_DRIVERS+=	radeon
+PLIST.intel_vulkan=	yes
+PLIST.radeon_vulkan=	yes
 .endif
 
 # ARM drivers
@@ -201,7 +206,7 @@ PLIST.radeon_dri=	yes
 DRI_DRIVERS+=		radeon
 
 # classic DRI r200
-PLIST.r200_dri=		yes
+PLIST.r200=		yes
 DRI_DRIVERS+=		r200
 
 # FreeBSD lacks nouveau support (there are official binaries from Nvidia)
@@ -271,10 +276,12 @@ CONFIGURE_ARGS+=	--disable-llvm-shared-libs
 
 CONFIGURE_ARGS+=	--with-gallium-drivers=${GALLIUM_DRIVERS:ts,}
 CONFIGURE_ARGS+=	--with-dri-drivers=${DRI_DRIVERS:ts,}
+CONFIGURE_ARGS+=	--with-vulkan-drivers=${VULKAN_DRIVERS:ts,}
 
 .else # !dri
 CONFIGURE_ARGS+=	--with-gallium-drivers=
 CONFIGURE_ARGS+=	--with-dri-drivers=
+CONFIGURE_ARGS+=	--with-vulkan-drivers=
 CONFIGURE_ARGS+=	--disable-dri
 CONFIGURE_ARGS+=	--disable-dri3
 CONFIGURE_ARGS+=	--disable-egl
