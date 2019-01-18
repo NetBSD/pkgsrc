@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2015/11/03 03:32:16 agc Exp $
+$NetBSD: distinfo,v 1.18 2019/01/18 03:34:28 mrg Exp $
 
 SHA1 (ex-040103.tar.gz) = 51fa1d613b37a4f3aed1ef2968be691465cdff09
 RMD160 (ex-040103.tar.gz) = 5fc3f222dde5a8d00e1b233281ccf210affdbdf1
@@ -39,7 +39,7 @@ SHA1 (patch-ex__vput_c) = fa0216eb004ae58a297c3f00a610d689c978f273
 SHA1 (patch-ex__vwind_c) = 9ed05094167870f5eb9af28deb39318aa69cf832
 SHA1 (patch-ex_c) = c0c5d5d5fd45da46e2594101a7a3d4350c49ae05
 SHA1 (patch-expreserve_c) = 2c94b4eefa3e72c6abc4aaa2f54750557705c794
-SHA1 (patch-exrecover_c) = 8742a5ba155996632971891cdd4a24b4d97d4376
+SHA1 (patch-exrecover_c) = 00cc72c518773f10bb670fd5742c20773dfad719
 SHA1 (patch-libterm_libterm_h) = 2f552d89726baf1d8b2c3be15ef386db7dffe04d
 SHA1 (patch-libterm_termcap_c) = cbc3ece52b9bbfd286be7953d9cb3bcf6e460b0e
 SHA1 (patch-libterm_tgoto_c) = d4299bdd468f0fff4d0fbbb67f37b8080a334787
