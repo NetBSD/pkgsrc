@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2018/06/17 08:21:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2019/01/18 22:28:38 bsiegert Exp $
 bin/mc
 bin/mcdiff
 bin/mcedit
@@ -283,6 +283,7 @@ share/mc/syntax/m4.syntax
 share/mc/syntax/mail.syntax
 share/mc/syntax/makefile.syntax
 share/mc/syntax/markdown.syntax
+share/mc/syntax/meson.syntax
 share/mc/syntax/ml.syntax
 share/mc/syntax/named.syntax
 share/mc/syntax/nemerle.syntax
