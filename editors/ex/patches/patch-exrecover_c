@@ -1,4 +1,4 @@
-$NetBSD: patch-exrecover_c,v 1.2 2012/12/28 03:03:09 dholland Exp $
+$NetBSD: patch-exrecover_c,v 1.3 2019/01/18 03:34:28 mrg Exp $
 
 - use standard headers
 - don't declare own perror
@@ -9,10 +9,11 @@ $NetBSD: patch-exrecover_c,v 1.2 2012/12/28 03:03:09 dholland Exp $
 - silence warnings about assignments in conditionals
 - return values from non-void functions
 - silence warnings about unused arguments
+- don't declare own vsprintf, not even used anymore
 
---- exrecover.c.orig	2012-12-27 21:58:41.000000000 +0000
-+++ exrecover.c
-@@ -98,6 +98,8 @@ static char sccsid[] UNUSED = "@(#)exrec
+--- exrecover.c.orig	2019-01-17 19:26:42.451474122 -0800
++++ exrecover.c	2019-01-17 19:27:32.144598036 -0800
+@@ -98,6 +98,8 @@
  typedef	int	xFILE;
  #endif
  
@@ -21,7 +22,7 @@ $NetBSD: patch-exrecover_c,v 1.2 2012/12/28 03:03:09 dholland Exp $
  #define	var
  
  #include "ex.h"
-@@ -193,30 +195,30 @@ int	vercnt;			/* Count number of version
+@@ -193,30 +195,27 @@
  #endif
  #endif
  
@@ -52,6 +53,9 @@ $NetBSD: patch-exrecover_c,v 1.2 2012/12/28 03:03:09 dholland Exp $
 -int syserror __P((void));
 -int xvfprintf __P((xFILE *, char *, va_list));
 -int xfprintf __P((xFILE *, char *, ...));
+-#ifdef	__STDC__
+-int vsprintf(char *, const char *, va_list);
+-#endif
 +void scrapbad __P((void));
 +void putfile __P((int));
 +void wrerror __P((void));
@@ -60,15 +64,12 @@ $NetBSD: patch-exrecover_c,v 1.2 2012/12/28 03:03:09 dholland Exp $
 +void syserror __P((void));
 +void xvfprintf __P((xFILE *, const char *, va_list));
 +void xfprintf __P((xFILE *, const char *, ...));
- #ifdef	__STDC__
- int vsprintf(char *, const char *, va_list);
- #endif
  
 +int
  main(argc, argv)
  	int argc;
  	char *argv[];
-@@ -295,7 +297,7 @@ main(argc, argv)
+@@ -295,7 +294,7 @@
  	while (H.Flines > 0) {
  		ignorl(lseek(tfile, (off_t) ((blocks[b] & BLKMSK) * BUFSIZ),
  					SEEK_SET));
@@ -77,7 +78,7 @@ $NetBSD: patch-exrecover_c,v 1.2 2012/12/28 03:03:09 dholland Exp $
  			H.Flines * sizeof (line) : BUFSIZ;
  		if (read(tfile, (char *) dot, i) != i) {
  			perror(nb);
-@@ -350,13 +352,14 @@ main(argc, argv)
+@@ -350,13 +349,14 @@
   * a newline which would screw up the screen.
   */
  /*VARARGS2*/
@@ -94,7 +95,7 @@ $NetBSD: patch-exrecover_c,v 1.2 2012/12/28 03:03:09 dholland Exp $
  {
  	va_list ap;
  #endif
-@@ -384,8 +387,9 @@ error(char *str, ...)
+@@ -384,8 +384,9 @@
  	exit(1);
  }
  
@@ -105,7 +106,7 @@ $NetBSD: patch-exrecover_c,v 1.2 2012/12/28 03:03:09 dholland Exp $
  {
  	register DIR *dir;
  #ifndef	POSIX_1
-@@ -486,9 +490,11 @@ listfiles(dirname)
+@@ -486,9 +487,11 @@
  /*
   * Enter a new file into the saved file information.
   */
@@ -117,7 +118,7 @@ $NetBSD: patch-exrecover_c,v 1.2 2012/12/28 03:03:09 dholland Exp $
  {
  	register char *cp, *cp2;
  	register struct svfile *f, *fl;
-@@ -521,7 +527,7 @@ enter(fp, fname, count)
+@@ -521,7 +524,7 @@
  	fp->sf_time = H.Time;
  	fp->sf_lines = H.Flines;
  	cp2 = fp->sf_name, cp = savedfile;
@@ -126,7 +127,7 @@ $NetBSD: patch-exrecover_c,v 1.2 2012/12/28 03:03:09 dholland Exp $
  	for (cp2 = fp->sf_entry, cp = fname; *cp && cp-fname < 14;)
  		*cp2++ = *cp++;
  	*cp2++ = 0;
-@@ -531,12 +537,13 @@ enter(fp, fname, count)
+@@ -531,12 +534,13 @@
   * Do the qsort compare to sort the entries first by file name,
   * then by modify time.
   */
@@ -141,7 +142,7 @@ $NetBSD: patch-exrecover_c,v 1.2 2012/12/28 03:03:09 dholland Exp $
  		return(t);
  	if (p1->sf_time > p2->sf_time)
  		return(-1);
-@@ -555,8 +562,9 @@ int	bestfd;			/* Keep best file open so 
+@@ -555,8 +559,9 @@
   * (i.e. usually /tmp) and in /usr/preserve.
   * Want to find the newest so we search on and on.
   */
@@ -152,7 +153,7 @@ $NetBSD: patch-exrecover_c,v 1.2 2012/12/28 03:03:09 dholland Exp $
  {
  
  	/*
-@@ -608,8 +616,9 @@ findtmp(dir)
+@@ -608,8 +613,9 @@
   * name of the file we want to unlink is relative, rather than absolute
   * we won't be able to find it again.
   */
@@ -163,7 +164,7 @@ $NetBSD: patch-exrecover_c,v 1.2 2012/12/28 03:03:09 dholland Exp $
  {
  #ifndef	POSIX_1
  	struct direct *dirent;
-@@ -662,8 +671,9 @@ searchdir(dirname)
+@@ -662,8 +668,9 @@
   * if its really an editor temporary and of this
   * user and the file specified.
   */
@@ -174,7 +175,7 @@ $NetBSD: patch-exrecover_c,v 1.2 2012/12/28 03:03:09 dholland Exp $
  {
  
  	tfile = open(name, O_RDWR);
-@@ -688,9 +698,10 @@ nope:
+@@ -688,9 +695,10 @@
  	return (1);
  }
  
@@ -186,7 +187,7 @@ $NetBSD: patch-exrecover_c,v 1.2 2012/12/28 03:03:09 dholland Exp $
  }
  
  /*
-@@ -707,6 +718,7 @@ preserve()
+@@ -707,6 +715,7 @@
   * This only seems to happen on very heavily loaded systems, and
   * not very often.
   */
@@ -194,7 +195,7 @@ $NetBSD: patch-exrecover_c,v 1.2 2012/12/28 03:03:09 dholland Exp $
  scrapbad()
  {
  	register line *ip;
-@@ -791,6 +803,7 @@ null:
+@@ -791,6 +800,7 @@
   * Aw shucks, if we only had a (void) cast.
   */
  #ifdef lint
@@ -202,7 +203,7 @@ $NetBSD: patch-exrecover_c,v 1.2 2012/12/28 03:03:09 dholland Exp $
  Ignorl(a)
  	long a;
  {
-@@ -798,6 +811,7 @@ Ignorl(a)
+@@ -798,6 +808,7 @@
  	a = a;
  }
  
@@ -210,7 +211,7 @@ $NetBSD: patch-exrecover_c,v 1.2 2012/12/28 03:03:09 dholland Exp $
  Ignore(a)
  	char *a;
  {
-@@ -805,13 +819,15 @@ Ignore(a)
+@@ -805,13 +816,15 @@
  	a = a;
  }
  
@@ -227,7 +228,7 @@ $NetBSD: patch-exrecover_c,v 1.2 2012/12/28 03:03:09 dholland Exp $
  ignorl(a)
  	long a;
  {
-@@ -824,12 +840,15 @@ int	cntch, cntln, cntodd, cntnull;
+@@ -824,12 +837,15 @@
  /*
   * Following routines stolen mercilessly from ex.
   */
@@ -244,7 +245,7 @@ $NetBSD: patch-exrecover_c,v 1.2 2012/12/28 03:03:09 dholland Exp $
  	a1 = addr1;
  	clrstats();
  	cntln = addr2 - a1 + 1;
-@@ -861,12 +880,14 @@ putfile(unused)
+@@ -861,12 +877,14 @@
  	cntch += nib;
  }
  
@@ -259,7 +260,7 @@ $NetBSD: patch-exrecover_c,v 1.2 2012/12/28 03:03:09 dholland Exp $
  clrstats()
  {
  
-@@ -880,6 +901,7 @@ clrstats()
+@@ -880,6 +898,7 @@
  #define	READ	0
  #define	WRITE	1
  
@@ -267,7 +268,7 @@ $NetBSD: patch-exrecover_c,v 1.2 2012/12/28 03:03:09 dholland Exp $
  get_line(tl)
  	line tl;
  {
-@@ -890,7 +912,7 @@ get_line(tl)
+@@ -890,7 +909,7 @@
  	bp = getblock(tl, READ);
  	nl = nleft;
  	tl &= ~OFFMSK;
@@ -276,7 +277,7 @@ $NetBSD: patch-exrecover_c,v 1.2 2012/12/28 03:03:09 dholland Exp $
  		if (--nl == 0) {
  			bp = getblock(tl += INCRMT, READ);
  			nl = nleft;
-@@ -934,8 +956,8 @@ getblock(atl, iof)
+@@ -934,8 +953,8 @@
  	return (obuff + off);
  }
  
@@ -286,7 +287,7 @@ $NetBSD: patch-exrecover_c,v 1.2 2012/12/28 03:03:09 dholland Exp $
  blkio(bloc b, char *buf, ssize_t (*iofcn)(int, void *, size_t))
  #else	/* !__STDC__ */
  blkio(b, buf, iofcn)
-@@ -950,6 +972,7 @@ blkio(b, buf, iofcn)
+@@ -950,6 +969,7 @@
  		syserror();
  }
  
@@ -294,7 +295,7 @@ $NetBSD: patch-exrecover_c,v 1.2 2012/12/28 03:03:09 dholland Exp $
  syserror()
  {
  
-@@ -964,10 +987,11 @@ syserror()
+@@ -964,10 +984,11 @@
   * allocation and stdio uses malloc.
   */
  #ifndef	__STDC__
@@ -308,7 +309,7 @@ $NetBSD: patch-exrecover_c,v 1.2 2012/12/28 03:03:09 dholland Exp $
  {
  	char buf[BUFSIZ];
  
-@@ -981,17 +1005,19 @@ xfprintf(fp, fmt, a1, a2, a3, a4, a5)
+@@ -981,17 +1002,19 @@
   * I do not know whether vsprintf() uses malloc() or not.
   * So this may be fail, too.
   */
