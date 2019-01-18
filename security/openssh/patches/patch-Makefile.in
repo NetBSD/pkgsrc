@@ -1,27 +1,31 @@
-$NetBSD: patch-Makefile.in,v 1.5 2016/01/18 12:53:26 jperkin Exp $
+$NetBSD: patch-Makefile.in,v 1.6 2019/01/18 20:13:37 tnn Exp $
 
 Removed install-sysconf as we handle that phase through post-install
 
---- Makefile.in.orig	2015-08-21 04:49:03.000000000 +0000
+--- Makefile.in.orig	2018-10-17 00:01:20.000000000 +0000
 +++ Makefile.in
-@@ -2,5 +2,5 @@
- 
- # uncomment if you run a non bourne compatable shell. Ie. csh
+@@ -1,5 +1,5 @@
+ # uncomment if you run a non bourne compatible shell. Ie. csh
 -#SHELL = @SH@
 +SHELL = @SH@
  
  AUTORECONF=autoreconf
-@@ -23,5 +23,5 @@ DESTDIR=
+ 
+@@ -20,7 +20,7 @@ top_srcdir=@top_srcdir@
+ DESTDIR=
  VPATH=@srcdir@
  SSH_PROGRAM=@bindir@/ssh
 -ASKPASS_PROGRAM=$(libexecdir)/ssh-askpass
 +#ASKPASS_PROGRAM=$(libexecdir)/ssh-askpass
  SFTP_SERVER=$(libexecdir)/sftp-server
  SSH_KEYSIGN=$(libexecdir)/ssh-keysign
-@@ -288,5 +288,5 @@ distprep: catman-do
+ SSH_PKCS11_HELPER=$(libexecdir)/ssh-pkcs11-helper
+@@ -320,7 +320,7 @@ distprep: catman-do depend-check
+ 	-rm -rf autom4te.cache .depend.bak
  
  install: $(CONFIGFILES) $(MANPAGES) $(TARGETS) install-files install-sysconf host-key check-config
 -install-nokeys: $(CONFIGFILES) $(MANPAGES) $(TARGETS) install-files install-sysconf
 +install-nokeys: $(CONFIGFILES) $(MANPAGES) $(TARGETS) install-files
  install-nosysconf: $(CONFIGFILES) $(MANPAGES) $(TARGETS) install-files
  
+ check-config:

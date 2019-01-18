@@ -1,10 +1,15 @@
-$NetBSD: patch-openbsd-compat_port-tun.c,v 1.3 2016/01/18 12:53:26 jperkin Exp $
+$NetBSD: patch-openbsd-compat_port-tun.c,v 1.4 2019/01/18 20:13:37 tnn Exp $
 
 if_tun.h can be found in net/tun
 
---- openbsd-compat/port-tun.c.orig	2015-08-21 04:49:03.000000000 +0000
-+++ openbsd-compat/port-tun.c
-@@ -111,6 +111,10 @@ sys_tun_open(int tun, int mode)
+--- openbsd-compat/port-net.c.orig	2018-10-17 00:01:20.000000000 +0000
++++ openbsd-compat/port-net.c
+@@ -1,3 +1,4 @@
++
+ /*
+  * Copyright (c) 2005 Reyk Floeter <reyk@openbsd.org>
+  *
+@@ -200,6 +201,10 @@ sys_tun_open(int tun, int mode, char **i
  #include <sys/socket.h>
  #include <net/if.h>
  
@@ -15,7 +20,7 @@ if_tun.h can be found in net/tun
  #ifdef HAVE_NET_IF_TUN_H
  #include <net/if_tun.h>
  #endif
-@@ -120,7 +124,10 @@ sys_tun_open(int tun, int mode)
+@@ -209,7 +214,10 @@ sys_tun_open(int tun, int mode, char **i
  {
  	struct ifreq ifr;
  	char name[100];
@@ -26,8 +31,8 @@ if_tun.h can be found in net/tun
 +#endif
  	const char *tunbase = "tun";
  
- 	if (mode == SSH_TUNMODE_ETHERNET) {
-@@ -154,9 +161,9 @@ sys_tun_open(int tun, int mode)
+ 	if (ifname != NULL)
+@@ -246,9 +254,9 @@ sys_tun_open(int tun, int mode, char **i
  		return (-1);
  	}
  

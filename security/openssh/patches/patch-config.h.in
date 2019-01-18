@@ -1,11 +1,11 @@
-$NetBSD: patch-config.h.in,v 1.5 2016/01/18 12:53:26 jperkin Exp $
+$NetBSD: patch-config.h.in,v 1.6 2019/01/18 20:13:37 tnn Exp $
 
 * Added Interix and define new path to if_tun.h.
 * Revive tcp_wrappers support.
 
---- config.h.in.orig	2015-08-21 05:09:20.000000000 +0000
+--- config.h.in.orig	2018-10-19 01:06:33.000000000 +0000
 +++ config.h.in
-@@ -640,6 +640,9 @@
+@@ -741,6 +741,9 @@
  /* define if you have int64_t data type */
  #undef HAVE_INT64_T
  
@@ -15,9 +15,9 @@ $NetBSD: patch-config.h.in,v 1.5 2016/01/18 12:53:26 jperkin Exp $
  /* Define to 1 if the system has the type `intmax_t'. */
  #undef HAVE_INTMAX_T
  
-@@ -799,6 +802,9 @@
- /* Define to 1 if you have the <net/if_tun.h> header file. */
- #undef HAVE_NET_IF_TUN_H
+@@ -910,6 +913,9 @@
+ /* Define to 1 if you have the <net/route.h> header file. */
+ #undef HAVE_NET_ROUTE_H
  
 +/* Define to 1 if you have the <net/tun/if_tun.h> header file. */
 +#undef HAVE_NET_TUN_IF_TUN_H
@@ -25,7 +25,7 @@ $NetBSD: patch-config.h.in,v 1.5 2016/01/18 12:53:26 jperkin Exp $
  /* Define if you are on NeXT */
  #undef HAVE_NEXT
  
-@@ -1394,6 +1400,9 @@
+@@ -1617,6 +1623,9 @@
  /* Define if pututxline updates lastlog too */
  #undef LASTLOG_WRITE_PUTUTXLINE
  
