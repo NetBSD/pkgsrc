@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2018/09/05 11:21:16 khorben Exp $
+# $NetBSD: Makefile,v 1.15 2019/01/18 21:43:28 bsiegert Exp $
 
-DISTNAME=		acr-1.6.2
+DISTNAME=		acr-1.7.0
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=radare/}
 EXTRACT_SUFX=		.zip
