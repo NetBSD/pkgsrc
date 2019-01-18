@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.693 2019/01/15 12:08:46 triaxx Exp $
+# $NetBSD: Makefile,v 1.694 2019/01/18 04:44:28 tpaul Exp $
 #
 
 COMMENT=	Security tools
@@ -538,6 +538,7 @@ SUBDIR+=	ruby-tcpwrap
 SUBDIR+=	ruby-twitter_oauth
 SUBDIR+=	sbd
 SUBDIR+=	scanssh
+SUBDIR+=	scm-blackbox
 SUBDIR+=	scrypt
 SUBDIR+=	seahorse
 SUBDIR+=	seahorse-plugins
