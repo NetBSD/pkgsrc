@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2019/01/18 14:43:59 tnn Exp $
+# $NetBSD: options.mk,v 1.6 2019/01/18 19:35:30 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -6,7 +6,6 @@ PKG_SUGGESTED_OPTIONS=
 
 PKG_SUPPORTED_OPTIONS+=		dri3 glx-tls xvmc debug
 PKG_SUPPORTED_OPTIONS+=		vdpau vaapi
-PKG_SUPPORTED_OPTIONS+=		texture
 PKG_SUPPORTED_OPTIONS+=		osmesa
 PKG_SUPPORTED_OPTIONS+=		glesv1 glesv2
 PKG_SUPPORTED_OPTIONS+=		xa
@@ -67,10 +66,6 @@ PLIST_VARS+=	dri swrast_dri nouveau_dri radeon_dri r200
 PLIST_VARS+=	gbm vaapi vdpau wayland xatracker
 PLIST_VARS+=	osmesa xvmc
 PLIST_VARS+=	glesv1 glesv2
-
-.if !empty(PKG_OPTIONS:Mtexture)
-CONFIGURE_ARGS+=	--enable-texture-float
-.endif
 
 .if !empty(PKG_OPTIONS:Mdri)
 
