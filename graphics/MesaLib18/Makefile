@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/01/18 13:32:47 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2019/01/18 14:43:59 tnn Exp $
 
 DISTNAME=	mesa-18.3.2
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -70,9 +70,10 @@ CONFIGURE_ARGS+=	--enable-glx-read-only-text
 .endif
 
 PYTHON_FOR_BUILD_ONLY=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # as of 11.2.2
 BUILD_DEPENDS+=		${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
-CONFIGURE_ENV+=		ac_cv_prog_PYTHON2=${PYTHONBIN}
+# needed to build vulkan support
+BUILD_DEPENDS+=		${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
+CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
 .include "../../lang/python/tool.mk"
 
 # Handle platforms without exp2
