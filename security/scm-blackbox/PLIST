@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2019/01/18 04:44:28 tpaul Exp $
+bin/_blackbox_common.sh
+bin/_blackbox_common_test.sh
+bin/_stack_lib.sh
+bin/blackbox_addadmin
+bin/blackbox_cat
+bin/blackbox_decrypt_all_files
+bin/blackbox_decrypt_file
+bin/blackbox_deregister_file
+bin/blackbox_diff
+bin/blackbox_edit
+bin/blackbox_edit_end
+bin/blackbox_edit_start
+bin/blackbox_initialize
+bin/blackbox_list_admins
+bin/blackbox_list_files
+bin/blackbox_listadmins
+bin/blackbox_postdeploy
+bin/blackbox_recurse
+bin/blackbox_register_new_file
+bin/blackbox_removeadmin
+bin/blackbox_shred_all_files
+bin/blackbox_update_all_files
+bin/blackbox_view
+bin/blackbox_whatsnew
