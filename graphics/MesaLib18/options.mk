@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2019/01/19 17:47:51 tnn Exp $
+# $NetBSD: options.mk,v 1.8 2019/01/19 18:43:21 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -10,7 +10,6 @@ PKG_SUPPORTED_OPTIONS+=		osmesa
 PKG_SUPPORTED_OPTIONS+=		glesv1 glesv2
 PKG_SUPPORTED_OPTIONS+=		xa
 PKG_SUPPORTED_OPTIONS+=		noatexit
-PKG_SUPPORTED_OPTIONS+=		libelf
 PKG_SUPPORTED_OPTIONS+=		vulkan
 
 # PKG_SUGGESTED_OPTIONS+=		xvmc
@@ -45,12 +44,6 @@ PKG_SUGGESTED_OPTIONS+=		dri
 	!empty(MACHINE_PLATFORM:MFreeBSD-1[0-9].*-x86_64) ||	\
 	!empty(MACHINE_PLATFORM:MDragonFly-*-x86_64)
 PKG_SUGGESTED_OPTIONS+=		glx-tls
-.endif
-
-# segfault starting x on FreeBSD 12 (current) if not using base libelf
-# WebGL demos and mpv not working for radeonsi on NetBSD
-.if ${OPSYS} != "FreeBSD" && ${OPSYS} != "NetBSD"
-PKG_SUGGESTED_OPTIONS+=		libelf
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -248,7 +241,7 @@ GALLIUM_DRIVERS+=	radeonsi
 CONFIGURE_ARGS+=	--enable-llvm
 CONFIGURE_ARGS+=	--enable-llvm-shared-libs
 
-.if !empty(PKG_OPTIONS:Mlibelf)
+.if !exists(/usr/include/libelf.h)
 .include "../../devel/libelf/buildlink3.mk"
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.libelf}/include/libelf
 .endif
