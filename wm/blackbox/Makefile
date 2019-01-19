@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2018/04/01 21:09:32 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2019/01/19 20:53:54 gutteridge Exp $
 
 DISTNAME=	blackbox-0.65.0
 PKGREVISION=	7
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=blackboxwm/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/bradleythughes/blackbox
 COMMENT=	Small and fast X11R6 window manager
+LICENSE=	mit
 
 DEPENDS+=	bsetroot>=0.1nb1:../../wm/bsetroot
 
