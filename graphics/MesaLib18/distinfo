@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2019/01/18 13:32:47 tnn Exp $
+$NetBSD: distinfo,v 1.9 2019/01/19 17:47:51 tnn Exp $
 
 SHA1 (mesa-18.3.2.tar.xz) = 8775d7bfac7e07141ac4299888d426d5550949f7
 RMD160 (mesa-18.3.2.tar.xz) = d3662f72a39d009adb21a70bd7b49c28960c0d5c
@@ -6,6 +6,7 @@ SHA512 (mesa-18.3.2.tar.xz) = 34b66520728d720b1f3d3d63f8ba5c255d57b9e8fe42726441
 Size (mesa-18.3.2.tar.xz) = 11868440 bytes
 SHA1 (patch-configure.ac) = 355b04270d2036fa879215d3f58278d5d32d22da
 SHA1 (patch-include_GL_internal_dri__interface.h) = 146d2f3f3e50fc1947e8941301d9cf9d90a035e2
+SHA1 (patch-src_amd_common_ac__debug.c) = eb73957adc7ed81db99d4edbc507b05231fda218
 SHA1 (patch-src_amd_vulkan_winsys_amdgpu_radv__amdgpu__cs.c) = 1fe81a7b16e36dc9125400c20543271216a33a45
 SHA1 (patch-src_compiler_builtin__type__macros.h) = 857bca0c0f55ec8d7a20b3807c7a5d7bd06bdfbf
 SHA1 (patch-src_compiler_glsl_glsl__parser__extras.cpp) = ef114d6e288e6d212fce9d1c0606f7d454a171c4
@@ -18,6 +19,7 @@ SHA1 (patch-src_gallium_auxiliary_util_u__format__tests.c) = 4d5e4677c2825778c43
 SHA1 (patch-src_gallium_auxiliary_util_u__helpers.c) = 636fb98c4cbf70a5d8a6d94c24e75d2b05968b3c
 SHA1 (patch-src_gallium_drivers_nouveau_nouveau__vp3__video.c) = 04f95784c3270c9bb7e95377982e217962481525
 SHA1 (patch-src_gallium_drivers_nouveau_nv50_nv84__video.c) = 1b4239fe053523835ecac006894bdb0cde0ee626
+SHA1 (patch-src_gallium_drivers_radeonsi_si__state__shaders.c) = d3d01523413506b7d02b0ec1a9b290af2a91dc32
 SHA1 (patch-src_gallium_drivers_vc4_vc4__bufmgr.c) = 1d591d346486fdf58893f69ab92a272e6a31a987
 SHA1 (patch-src_gallium_include_pipe_p__config.h) = f4e38eac66167b619c30076bb0144dd716310967
 SHA1 (patch-src_gallium_state__trackers_clover_llvm_invocation.cpp) = 3053db09fbfffffd82e232b60b244a0a80c8f181

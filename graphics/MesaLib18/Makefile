@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/01/18 14:43:59 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2019/01/19 17:47:51 tnn Exp $
 
 DISTNAME=	mesa-18.3.2
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -103,7 +103,7 @@ EGDIR=			${PREFIX}/share/examples/mesa
 OWN_DIRS+=		${DRIRC_DIR}
 INSTALLATION_DIRS+=	${EGDIR}
 CONF_FILES+=		${EGDIR}/00-mesa-defaults.conf	\
-	${DRIRC_DIR}/00-mesa-defaults.conf
+			  ${DRIRC_DIR}/00-mesa-defaults.conf
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/src/util/00-mesa-defaults.conf ${DESTDIR}${EGDIR}
