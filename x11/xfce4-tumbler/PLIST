@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/05/15 22:22:02 youri Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/01/19 01:51:15 gutteridge Exp $
 include/tumbler-1/tumbler/tumbler-abstract-thumbnailer.h
 include/tumbler-1/tumbler/tumbler-cache-plugin.h
 include/tumbler-1/tumbler/tumbler-cache.h
@@ -22,12 +22,12 @@ lib/tumbler-1/plugins/cache/tumbler-cache-plugin.so
 lib/tumbler-1/plugins/cache/tumbler-xdg-cache.la
 lib/tumbler-1/plugins/tumbler-cover-thumbnailer.la
 lib/tumbler-1/plugins/tumbler-desktop-thumbnailer.la
-lib/tumbler-1/plugins/tumbler-ffmpeg-thumbnailer.la
+${PLIST.ffmpegthumbnailer}lib/tumbler-1/plugins/tumbler-ffmpeg-thumbnailer.la
 lib/tumbler-1/plugins/tumbler-font-thumbnailer.la
-lib/tumbler-1/plugins/tumbler-jpeg-thumbnailer.la
-lib/tumbler-1/plugins/tumbler-odf-thumbnailer.la
+${PLIST.jpeg}lib/tumbler-1/plugins/tumbler-jpeg-thumbnailer.la
+${PLIST.odf}lib/tumbler-1/plugins/tumbler-odf-thumbnailer.la
 lib/tumbler-1/plugins/tumbler-pixbuf-thumbnailer.la
-lib/tumbler-1/plugins/tumbler-poppler-thumbnailer.la
+${PLIST.pdf}lib/tumbler-1/plugins/tumbler-poppler-thumbnailer.la
 lib/tumbler-1/tumblerd
 share/dbus-1/services/org.xfce.Tumbler.Cache1.service
 share/dbus-1/services/org.xfce.Tumbler.Manager1.service
