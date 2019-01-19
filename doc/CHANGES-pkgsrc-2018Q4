@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q4,v 1.1.2.2 2019/01/12 09:41:16 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q4,v 1.1.2.3 2019/01/19 21:58:01 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q4 branch:
 
@@ -16,4 +16,19 @@ audio/musicpd: require newer gcc
 
 Pullup ticket #5891 - requested by leot
 net/megatools: build fix
+
+Pullup ticket #5892 - requested by gdt
+www/nghttp2: build fix (don't require C++14 for the C library)
+
+Pullup ticket #5896 - requested by taca
+lang/php71: security fix
+
+Pullup ticket #5897 - requested by taca
+lang/php72: security fix
+
+Pullup ticket #5898 - requested by taca
+lang/php73: security fix
+
+Pullup ticket #5899 - requested by taca
+lang/php56: security fix
 
