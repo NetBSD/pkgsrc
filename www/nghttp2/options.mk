@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2017/12/21 08:18:38 adam Exp $
+# $NetBSD: options.mk,v 1.5.10.1 2019/01/19 21:09:42 bsiegert Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nghttp2
 PKG_SUPPORTED_OPTIONS=	nghttp2-asio nghttp2-tools
@@ -12,8 +12,9 @@ PLIST_VARS+=	asio tools
 ### Build the ASIO C++ library
 ###
 .if !empty(PKG_OPTIONS:Mnghttp2-asio)
-# Requires emplace() for associative containers, introduced in gcc 4.8.0
-GCC_REQD+=		4.8
+# Upstream documents C++14 and gcc>=6 or clang>=6
+USE_LANGUAGES+=		c++14
+GCC_REQD+=		6
 CONFIGURE_ARGS+=	--enable-asio-lib
 CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-libs}
 CONFIGURE_ARGS+=	--with-boost-asio
@@ -30,8 +31,9 @@ CONFIGURE_ARGS+=	--with-boost=no
 ### Build apps and tools
 ###
 .if !empty(PKG_OPTIONS:Mnghttp2-tools)
-# Requires emplace() for associative containers, introduced in gcc 4.8.0
-GCC_REQD+=		4.8
+# Upstream documents C++14 and gcc>=6 or clang>=6
+USE_LANGUAGES+=		c++14
+GCC_REQD+=		6
 CONFIGURE_ARGS+=	--enable-app
 CONFIGURE_ARGS+=	--enable-hpack-tools
 PLIST.tools=		yes
