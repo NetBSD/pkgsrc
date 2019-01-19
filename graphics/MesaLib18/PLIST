@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/01/18 14:43:59 tnn Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/01/19 17:47:51 tnn Exp $
 ${PLIST.dri}include/EGL/egl.h
 ${PLIST.dri}include/EGL/eglext.h
 ${PLIST.dri}include/EGL/eglextchromium.h
@@ -25,7 +25,7 @@ ${PLIST.glesv2}include/GLES3/gl31.h
 ${PLIST.glesv2}include/GLES3/gl32.h
 ${PLIST.glesv2}include/GLES3/gl3ext.h
 ${PLIST.glesv2}include/GLES3/gl3platform.h
-${PLIST.dri}include/KHR/khrplatform.h
+include/KHR/khrplatform.h
 ${PLIST.gbm}include/gbm.h
 ${PLIST.vulkan}include/vulkan/vulkan_intel.h
 ${PLIST.xatracker}include/xa_composite.h
