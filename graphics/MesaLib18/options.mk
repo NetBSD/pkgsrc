@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2019/01/19 18:45:28 tnn Exp $
+# $NetBSD: options.mk,v 1.10 2019/01/19 21:54:03 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -54,7 +54,7 @@ PLIST_VARS+=	freedreno i915 i965 nouveau r300 r600 radeonsi	\
 # classic DRI
 PLIST_VARS+=	dri swrast_dri nouveau_dri radeon_dri r200
 # other features
-PLIST_VARS+=	gbm vaapi vdpau wayland xatracker
+PLIST_VARS+=	egl gbm vaapi vdpau wayland xatracker
 PLIST_VARS+=	osmesa xvmc
 PLIST_VARS+=	glesv1 glesv2
 
@@ -64,11 +64,14 @@ CONFIGURE_ARGS+=	--enable-dri
 # Having DRI3 and egl compiled in by default doesn't hurt, the X server
 # will only use it if it is supported at run time.
 CONFIGURE_ARGS+=	--enable-dri3
-CONFIGURE_ARGS+=	--enable-egl
-
 .if ${OPSYS} != "Darwin"
+CONFIGURE_ARGS+=	--enable-egl
 CONFIGURE_ARGS+=	--enable-gbm
+PLIST.egl=		yes
 PLIST.gbm=		yes
+.else
+CONFIGURE_ARGS+=	--disable-egl
+CONFIGURE_ARGS+=	--disable-gbm
 .endif
 
 .if !empty(PKG_OPTIONS:Mosmesa)
