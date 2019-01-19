@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.12 2018/12/29 00:29:32 joerg Exp $
+$NetBSD: distinfo,v 1.13 2019/01/19 21:21:04 gutteridge Exp $
 
-SHA1 (blackbox-0.72.tar.gz) = 87e90c7d6da9f94a79100433490b33de4189f194
-RMD160 (blackbox-0.72.tar.gz) = 3991d8512703cceafcd93185978684441d06d7d7
-SHA512 (blackbox-0.72.tar.gz) = 8fffb8857240cfa11876c29dbb61dff3381b8e5b6f1937e14c81202d30b0cbc23135e42c6d8829c6e7ab7cdc821a1a62fee34db59da9b846634175442c5d7c1e
-Size (blackbox-0.72.tar.gz) = 360673 bytes
-SHA1 (patch-autogen.sh) = 28074bddfdfb4df2d78122f6bb8089522028ef23
+SHA1 (blackbox-0.74.tar.gz) = b252f052c590f092ae0e9c381c6c7e823fd83654
+RMD160 (blackbox-0.74.tar.gz) = 5c124739cbf1098341378c3bae1b7a461ec22dd4
+SHA512 (blackbox-0.74.tar.gz) = 7d67fe2fe6c0c2e9cd18d494fbba885ab7ca8c7aadcfe5ceada97c1280633b575f3f47a36dc5393c61ae0baf50eef61e56683899913fa58859148148e5041389
+Size (blackbox-0.74.tar.gz) = 395732 bytes
 SHA1 (patch-doc_fr__FR_Makefile.am) = 77fdac4d552af2ef0e8d43c5f6f8aeb0f8e20862
 SHA1 (patch-doc_ja__JP_Makefile.am) = e5dcdf4da59f805547cbf0cc9eb5d28468685e2b
 SHA1 (patch-doc_nl__NL_Makefile.am) = 951a4babc59a7a237cf662c7c3a2d2b865d9495b
