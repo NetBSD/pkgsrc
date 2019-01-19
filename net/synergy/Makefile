@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2019/01/03 21:53:09 tnn Exp $
+# $NetBSD: Makefile,v 1.52 2019/01/19 20:01:56 tnn Exp $
 
 DISTNAME=		synergy-core-1.10.1
 PKGNAME=		${DISTNAME:S/-core//}
@@ -76,6 +76,8 @@ CFLAGS+=	-DUSYNERGY_LITTLE_ENDIAN
 .if ${OPSYS} != "Linux"
 BUILDLINK_TRANSFORM+=	rm:-ldl
 .endif
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
