@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/01/19 22:19:05 tnn Exp $
+# $NetBSD: Makefile,v 1.15 2019/01/19 23:21:43 tnn Exp $
 
 DISTNAME=	mesa-18.3.2
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -87,6 +87,7 @@ CFLAGS.NetBSD+=		-Dalloca=__builtin_alloca
 CXXFLAGS.NetBSD+=	-Dalloca=__builtin_alloca
 
 pre-configure:
+	touch ${WRKSRC}/src/glx/apple_dummy.cpp
 	cd ${WRKSRC} && autoreconf -vif
 
 DRIRC_DIR=		${PKG_SYSCONFDIR}/drirc.d
