@@ -1,7 +1,13 @@
-$NetBSD: patch-src_glx_Makefile.am,v 1.2 2019/01/19 22:19:05 tnn Exp $
+$NetBSD: patch-src_glx_Makefile.am,v 1.3 2019/01/19 23:21:43 tnn Exp $
 
 - We don't need libmesautil.la here. Those symbols seem to already be
   included in libmesa.la.
+- force libtool to use clang++ to link libGL on OSX.
+  Otherwise we get:
+  Undefined symbols for architecture x86_64:
+  "std::terminate()", referenced from:
+      ___clang_call_terminate in libglx.a(glsl_parser.o)
+      ...
 
 --- src/glx/Makefile.am.orig	2019-01-17 11:26:23.000000000 +0000
 +++ src/glx/Makefile.am
@@ -30,3 +36,14 @@ $NetBSD: patch-src_glx_Makefile.am,v 1.2 2019/01/19 22:19:05 tnn Exp $
  endif
  
  if HAVE_WINDOWSDRI
+@@ -187,6 +194,10 @@ lib@GL_LIB@_la_SOURCES =
+ lib@GL_LIB@_la_LIBADD = $(GL_LIBS)
+ lib@GL_LIB@_la_LDFLAGS = $(GL_LDFLAGS)
+ 
++if HAVE_APPLEDRI
++lib@GL_LIB@_la_SOURCES += apple_dummy.cpp
++endif
++
+ if HAVE_WINDOWSDRI
+ lib@GL_LIB@_la_LDFLAGS += -lgdi32 -lopengl32 -Wl,--disable-stdcall-fixup
+ endif
