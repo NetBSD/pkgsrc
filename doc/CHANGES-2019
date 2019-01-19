@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.317 2019/01/18 22:29:14 bsiegert Exp $
+$NetBSD: CHANGES-2019,v 1.318 2019/01/19 07:30:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -425,3 +425,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/maradns to 2.0.16 [bsiegert 2019-01-18]
 	Updated chat/matterircd to 0.18.4 [bsiegert 2019-01-18]
 	Updated sysutils/mc to 4.8.22 [bsiegert 2019-01-18]
+	Updated www/drupal7 to 7.62 [taca 2019-01-19]
