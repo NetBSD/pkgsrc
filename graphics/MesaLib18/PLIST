@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2019/01/19 17:47:51 tnn Exp $
-${PLIST.dri}include/EGL/egl.h
-${PLIST.dri}include/EGL/eglext.h
-${PLIST.dri}include/EGL/eglextchromium.h
-${PLIST.dri}include/EGL/eglmesaext.h
-${PLIST.dri}include/EGL/eglplatform.h
+@comment $NetBSD: PLIST,v 1.5 2019/01/19 21:54:03 tnn Exp $
+${PLIST.egl}include/EGL/egl.h
+${PLIST.egl}include/EGL/eglext.h
+${PLIST.egl}include/EGL/eglextchromium.h
+${PLIST.egl}include/EGL/eglmesaext.h
+${PLIST.egl}include/EGL/eglplatform.h
 include/GL/gl.h
 include/GL/gl_mangle.h
 include/GL/glcorearb.h
@@ -49,7 +49,7 @@ ${PLIST.radeonsi}lib/dri/radeonsi_dri.so
 ${PLIST.swrast_dri}lib/dri/swrast_dri.so
 ${PLIST.vc4}lib/dri/vc4_dri.so
 ${PLIST.svga}lib/dri/vmwgfx_dri.so
-${PLIST.dri}lib/libEGL.la
+${PLIST.egl}lib/libEGL.la
 lib/libGL.la
 ${PLIST.glesv1}lib/libGLESv1_CM.la
 ${PLIST.glesv2}lib/libGLESv2.la
@@ -67,7 +67,7 @@ lib/libglapi.la
 ${PLIST.wayland}lib/libwayland-egl.la
 ${PLIST.xatracker}lib/libxatracker.la
 ${PLIST.dri}lib/pkgconfig/dri.pc
-${PLIST.dri}lib/pkgconfig/egl.pc
+${PLIST.egl}lib/pkgconfig/egl.pc
 ${PLIST.gbm}lib/pkgconfig/gbm.pc
 ${PLIST.osmesa}lib/pkgconfig/osmesa.pc
 lib/pkgconfig/gl.pc
