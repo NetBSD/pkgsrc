@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2019/01/18 14:00:40 youri Exp $
+# $NetBSD: Makefile,v 1.58 2019/01/19 01:51:15 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -39,7 +39,6 @@ CFLAGS+=		-g
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-.include "../../multimedia/ffmpeg3/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
