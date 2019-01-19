@@ -1,6 +1,5 @@
-$NetBSD: patch-src_glx_Makefile.am,v 1.1 2019/01/19 21:54:03 tnn Exp $
+$NetBSD: patch-src_glx_Makefile.am,v 1.2 2019/01/19 22:19:05 tnn Exp $
 
-- FDO bug 90311
 - We don't need libmesautil.la here. Those symbols seem to already be
   included in libmesa.la.
 
@@ -23,12 +22,11 @@ $NetBSD: patch-src_glx_Makefile.am,v 1.1 2019/01/19 21:54:03 tnn Exp $
  
  if HAVE_DRISW
  libglx_la_SOURCES += \
-@@ -136,6 +142,8 @@ libglx_la_SOURCES += \
+@@ -136,6 +142,7 @@ libglx_la_SOURCES += \
  
  SUBDIRS += apple
  libglx_la_LIBADD += $(builddir)/apple/libappleglx.la
 +libglx_la_LIBADD += $(top_builddir)/src/mesa/libmesa.la
-+libglx_la_SOURCES += dummy.cpp
  endif
  
  if HAVE_WINDOWSDRI
