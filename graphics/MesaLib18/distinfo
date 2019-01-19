@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2019/01/19 18:26:30 tnn Exp $
+$NetBSD: distinfo,v 1.11 2019/01/19 21:54:03 tnn Exp $
 
 SHA1 (mesa-18.3.2.tar.xz) = 8775d7bfac7e07141ac4299888d426d5550949f7
 RMD160 (mesa-18.3.2.tar.xz) = d3662f72a39d009adb21a70bd7b49c28960c0d5c
@@ -26,7 +26,9 @@ SHA1 (patch-src_gallium_state__trackers_clover_llvm_invocation.cpp) = 3053db09fb
 SHA1 (patch-src_gallium_state__trackers_clover_llvm_metadata.hpp) = c97d38098ea03658bc193a50e445b87f1c020839
 SHA1 (patch-src_gallium_state__trackers_clover_util_range.hpp) = cdc78067986c1b92818472c4201c58ef1b42c4f4
 SHA1 (patch-src_gbm_Makefile.am) = 5f3107afbf64b97f7d21ce427cecc4fb78974db3
+SHA1 (patch-src_glx_Makefile.am) = 315d35777550ae7a7ba814b6d74d0c3cefd04630
 SHA1 (patch-src_glx_apple_apple__glapi.c) = c4eea8dabf74eb03d22da4eb834b18ae3384c63b
+SHA1 (patch-src_glx_dri__common.h) = 0274877f8c65a4bb729536a897df4704897a4c6e
 SHA1 (patch-src_glx_dri__glx.c) = 8fd48776e9953b18bd17ba130d90ae2935e67242
 SHA1 (patch-src_glx_glxclient.h) = f0358179ae397bc8677597b0ccb9a471f40f15de
 SHA1 (patch-src_glx_glxcurrent.c) = 8b8e949eded13491c5865601253c6e7d4b06e228
@@ -51,6 +53,7 @@ SHA1 (patch-src_mesa_drivers_dri_i965_brw__performance__query.c) = 1250b3477c4b8
 SHA1 (patch-src_mesa_drivers_dri_i965_intel__screen.c) = 795b17970e95347222514bacc0701aa86fa1ff02
 SHA1 (patch-src_mesa_drivers_dri_i965_intel__tiled__memcpy.c) = 5b940f9a56c694ffaf8a4383c3a2eae25cfd35a6
 SHA1 (patch-src_mesa_drivers_dri_swrast_swrast.c) = 3106f350e590f62c8bd29cd85f24f977639dccdb
+SHA1 (patch-src_mesa_drivers_x11_Makefile.am) = 172a8da11a620edce790f64338a0390cd1e93188
 SHA1 (patch-src_mesa_main_context.c) = 74226013b56ad6c9678f1970458538b35967678f
 SHA1 (patch-src_mesa_main_extensions.c) = 2f48bdb1176c2878bb33bcfab7556172b50a987e
 SHA1 (patch-src_mesa_main_macros.h) = c5dceaa8dc02a58e5b2273d82e3fe1cc12e327d3
