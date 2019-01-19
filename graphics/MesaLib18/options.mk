@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2019/01/19 18:43:21 tnn Exp $
+# $NetBSD: options.mk,v 1.9 2019/01/19 18:45:28 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -243,7 +243,6 @@ CONFIGURE_ARGS+=	--enable-llvm-shared-libs
 
 .if !exists(/usr/include/libelf.h)
 .include "../../devel/libelf/buildlink3.mk"
-CPPFLAGS+=		-I${BUILDLINK_PREFIX.libelf}/include/libelf
 .endif
 
 # XXX update libLLVM to use it instead
