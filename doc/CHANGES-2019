@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.322 2019/01/19 15:33:56 adam Exp $
+$NetBSD: CHANGES-2019,v 1.323 2019/01/19 21:21:40 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -431,3 +431,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/cbindgen to 0.6.8 [ryoon 2019-01-19]
 	Updated www/nghttp2 to 1.36.0 [adam 2019-01-19]
 	Updated devel/libuv to 1.25.0 [adam 2019-01-19]
+	Updated wm/blackbox70 to 0.74 [gutteridge 2019-01-19]
