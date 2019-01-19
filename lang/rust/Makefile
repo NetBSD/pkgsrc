@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.73 2019/01/05 23:29:40 tnn Exp $
+# $NetBSD: Makefile,v 1.74 2019/01/19 12:44:08 ryoon Exp $
 
-DISTNAME=	rustc-1.31.1-src
-PKGREVISION=	1
+DISTNAME=	rustc-1.32.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
 CATEGORIES=	lang
 MASTER_SITES=	http://static.rust-lang.org/dist/
@@ -17,6 +16,8 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		bash ggrep gmake perl:build pkg-config
 # For internal llvm
 BUILD_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
+
+CHECK_PORTABILITY_SKIP+=vendor/openssl-src/openssl/.travis-create-release.sh
 
 HAS_CONFIGURE=		yes
 PYTHON_FOR_BUILD_ONLY=	yes
@@ -131,10 +132,10 @@ BUILDLINK_TRANSFORM.NetBSD+=	rm:-Wl,--enable-new-dtags
 # own bootstrap.  See the stage0-bootstrap below for more details.
 #
 DISTFILES:=		${DEFAULT_DISTFILES}
-RUST_STAGE0_VER=	1.30.1
+RUST_STAGE0_VER=	1.31.1
 #
 .if !empty(MACHINE_PLATFORM:MDarwin-*-i386) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.30.1
+RUST_STAGE0_VER=	1.31.1
 RUST_ARCH:=		i686-apple-darwin
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
@@ -142,7 +143,7 @@ DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 pre-build-fix:
 .endif
 .if !empty(MACHINE_PLATFORM:MDarwin-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.30.1
+RUST_STAGE0_VER=	1.31.1
 RUST_ARCH:=		x86_64-apple-darwin
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
@@ -150,7 +151,7 @@ DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 pre-build-fix:
 .endif
 .if !empty(MACHINE_PLATFORM:MLinux-*-i386) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.30.1
+RUST_STAGE0_VER=	1.31.1
 RUST_ARCH:=		i686-unknown-linux-gnu
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
@@ -158,7 +159,7 @@ DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 pre-build-fix:
 .endif
 .if !empty(MACHINE_PLATFORM:MLinux-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.30.1
+RUST_STAGE0_VER=	1.31.1
 RUST_ARCH:=		x86_64-unknown-linux-gnu
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
@@ -166,7 +167,7 @@ DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 pre-build-fix:
 .endif
 .if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.30.0
+RUST_STAGE0_VER=	1.31.0
 RUST_ARCH:=		x86_64-sun-solaris
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 SITES.${RUST_STAGE0}=	https://us-east.manta.joyent.com/pkgsrc/public/pkg-bootstraps/
@@ -175,7 +176,7 @@ RUST_BOOTSTRAP_PATH?=	${WRKDIR}/rust-${RUST_STAGE0_VER}-${RUST_ARCH}
 pre-build-fix:
 .endif
 .if !empty(MACHINE_PLATFORM:MFreeBSD-*-i386) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.30.1
+RUST_STAGE0_VER=	1.31.1
 RUST_ARCH:=		i686-unknown-freebsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
@@ -183,7 +184,7 @@ DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 pre-build-fix:
 .endif
 .if !empty(MACHINE_PLATFORM:MFreeBSD-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.30.1
+RUST_STAGE0_VER=	1.31.1
 RUST_ARCH:=		x86_64-unknown-freebsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
@@ -191,7 +192,7 @@ DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 pre-build-fix:
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.30.1
+RUST_STAGE0_VER=	1.31.1
 RUST_ARCH=		i686-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
@@ -208,7 +209,7 @@ pre-build-fix:
 	${TOOLS_PLATFORM.paxctl} +am ${WRKDIR}/rust-bootstrap/bin/cargo
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.30.1
+RUST_STAGE0_VER=	1.31.1
 RUST_ARCH=		x86_64-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
@@ -280,16 +281,7 @@ post-extract:
 		${TOOLS_BASH} ./install.sh --prefix=${RUST_BOOTSTRAP_PATH};	\
 	fi
 # patch(1) in NetBSD does not handle .cargo-checksum.json like long width file.
-	cat ${WRKSRC}/src/vendor/libc/.cargo-checksum.json | \
-		${SED} -e 's/9c6af198a2f80da827054784faf70bc404673d9568fb45664b4f73c46245fdbd/c3851969a854d6ccaa8a94369f1288025149d1ebdc74b36f224423f35b18f7a7/' > \
-		${WRKSRC}/src/vendor/libc/.cargo-checksum.json.patched
-	cat ${WRKSRC}/src/vendor/rand/.cargo-checksum.json | \
-		${SED} -e 's/cb94a0b54e47022b2e9b58b45e0196785c61d083760333276226da435cc040d9/bcb195562cf830c9e2078757e6d0976f86ede59816ff305e21a2764a4a4cf43e/' > \
-		${WRKSRC}/src/vendor/rand/.cargo-checksum.json.patched
-	${CP} -f ${WRKSRC}/src/vendor/libc/.cargo-checksum.json.patched \
-		${WRKSRC}/src/vendor/libc/.cargo-checksum.json
-	${CP} -f ${WRKSRC}/src/vendor/rand/.cargo-checksum.json.patched \
-		${WRKSRC}/src/vendor/rand/.cargo-checksum.json
+
 .if ${OPSYS} == "NetBSD"
 	SDIR=${WRKDIR}/scripts; \
 	${MKDIR} $${SDIR}; \
@@ -314,9 +306,6 @@ MAKE_ENV+=		PKGSRC_HAVE_LIBCPP=yes
 .endif
 
 pre-build: pre-build-fix
-#	Requires libssh2 defines only available in master.
-	${CP} -f ${WRKSRC}/src/vendor/libssh2-sys/libssh2/include/libssh2.h \
-		${BUILDLINK_DIR}/include/
 .if ${OPSYS} == "NetBSD" && !empty(PKGSRC_COMPILER:Mclang) && !exists(/lib/libgcc_s.so)
 	cp ${FILESDIR}/libgcc_s.so.1 ${RUST_BOOTSTRAP_PATH}/lib/.
 .endif
