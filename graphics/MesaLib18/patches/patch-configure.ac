@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.4 2019/01/10 22:30:11 tnn Exp $
+$NetBSD: patch-configure.ac,v 1.5 2019/01/20 09:50:28 tnn Exp $
 
 Don't check for pthread stubs anywhere, as we don't provide it.
 
@@ -21,7 +21,7 @@ This change was made to work around a problem in libEGL,
 which fails to fall back to using DRI2 when run on a system
 without DRI3 support.
 
---- configure.ac.orig	2018-12-11 21:13:57.000000000 +0000
+--- configure.ac.orig	2019-01-17 11:26:22.000000000 +0000
 +++ configure.ac
 @@ -726,7 +726,7 @@ dnl
  dnl OSX linker does not support build-id
@@ -41,7 +41,17 @@ without DRI3 support.
                     [AC_CHECK_LIB([rt], [clock_gettime], [CLOCK_LIB=-lrt],
                                   [AC_MSG_ERROR([Could not find clock_gettime])])])
      AC_SUBST([CLOCK_LIB])
-@@ -966,7 +966,7 @@ PTHREAD_LIBS="$PTHREAD_LIBS -pthread"
+@@ -941,6 +941,9 @@ esac
+ dnl See if posix_memalign is available
+ AC_CHECK_FUNC([posix_memalign], [DEFINES="$DEFINES -DHAVE_POSIX_MEMALIGN"])
+ 
++dnl See if open_memstream is available
++AC_CHECK_FUNC([open_memstream], [DEFINES="$DEFINES -DHAVE_OPEN_MEMSTREAM"])
++
+ dnl Check for zlib
+ PKG_CHECK_MODULES([ZLIB], [zlib >= $ZLIB_REQUIRED])
+ DEFINES="$DEFINES -DHAVE_ZLIB"
+@@ -966,7 +969,7 @@ PTHREAD_LIBS="$PTHREAD_LIBS -pthread"
  dnl pthread-stubs is mandatory on some BSD platforms, due to the nature of the
  dnl project. Even then there's a notable issue as described in the project README
  case "$host_os" in
@@ -50,7 +60,7 @@ without DRI3 support.
      pthread_stubs_possible="no"
      ;;
  * )
-@@ -995,7 +995,10 @@ AC_LINK_IFELSE([AC_LANG_SOURCE([[
+@@ -995,7 +998,10 @@ AC_LINK_IFELSE([AC_LANG_SOURCE([[
  LIBS="$save_LIBS"
  
  dnl Check for futex for fast inline simple_mtx_t.
@@ -62,7 +72,7 @@ without DRI3 support.
  
  dnl SELinux awareness.
  AC_ARG_ENABLE([selinux],
-@@ -1278,7 +1281,7 @@ fi
+@@ -1278,7 +1284,7 @@ fi
  AC_SUBST(LIBSENSORS_LIBS)
  
  case "$host_os" in
@@ -71,7 +81,7 @@ without DRI3 support.
      dri3_default=yes
      ;;
  *)
-@@ -1908,7 +1911,7 @@ if test x"$enable_dri3" = xyes; then
+@@ -1908,7 +1914,7 @@ if test x"$enable_dri3" = xyes; then
      dri3_modifier_modules="xcb-dri3 >= $XCBDRI3_MODIFIERS_REQUIRED xcb-present >= $XCBPRESENT_MODIFIERS_REQUIRED"
      PKG_CHECK_MODULES([XCB_DRI3_MODIFIERS], [$dri3_modifier_modules], [have_dri3_modifiers=yes], [have_dri3_modifiers=no])
  
@@ -80,7 +90,7 @@ without DRI3 support.
          DEFINES="$DEFINES -DHAVE_DRI3_MODIFIERS"
      fi
  fi
-@@ -2505,8 +2508,6 @@ if test "x$enable_opencl" = xyes; then
+@@ -2505,8 +2511,6 @@ if test "x$enable_opencl" = xyes; then
          CLANG_LIBDIR=${LLVM_LIBDIR}
      fi
      CLANG_RESOURCE_DIR=$CLANG_LIBDIR/clang/${LLVM_VERSION}
@@ -89,7 +99,7 @@ without DRI3 support.
  fi
  AM_CONDITIONAL(HAVE_CLOVER, test "x$enable_opencl" = xyes)
  AM_CONDITIONAL(HAVE_CLOVER_ICD, test "x$enable_opencl_icd" = xyes)
-@@ -2941,7 +2942,7 @@ if test "x$enable_llvm" = xyes; then
+@@ -2941,7 +2945,7 @@ if test "x$enable_llvm" = xyes; then
      dnl the LLVM library propagated in the Libs.private of the respective .pc
      dnl file which ensures complete dependency information when statically
      dnl linking.
