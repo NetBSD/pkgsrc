@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2018/10/18 14:44:26 taca Exp $
+$NetBSD: distinfo,v 1.13 2019/01/20 14:03:43 taca Exp $
 
-SHA1 (rugged-0.27.5.gem) = 7b6c75f446aab434f236d3c4e1b808f2e69100d9
-RMD160 (rugged-0.27.5.gem) = c807c5cad4d1b8097f4080e2be0cb624cd9afa31
-SHA512 (rugged-0.27.5.gem) = 564bec88d9e58c11170443050157916f2840b2790b20ee1206d1754e082cba96a8161e9fefc8f0f7de3aeddde510ca97f1cf453156c23da5d91e7e40f3b7c20c
-Size (rugged-0.27.5.gem) = 1157120 bytes
+SHA1 (rugged-0.27.7.gem) = 513c78ccd3424dfff0dde02c1fd1ef04eaa145b1
+RMD160 (rugged-0.27.7.gem) = 2c63c841179a0daeb65fef23de0bd8993f68ed54
+SHA512 (rugged-0.27.7.gem) = e9ebe4a24faef05b5e43d4991ce356c82f7d15b6bae856b3a32f0b128659f91cf11d5efce757faa32dd2b7382e515472b3da6196112af74888c22661131b1aac
+Size (rugged-0.27.7.gem) = 1169408 bytes
