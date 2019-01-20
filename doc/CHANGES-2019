@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.336 2019/01/20 13:51:33 taca Exp $
+$NetBSD: CHANGES-2019,v 1.337 2019/01/20 13:52:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -447,3 +447,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ruby-fast_gettext to 2.0.0 [taca 2019-01-20]
 	Updated devel/ruby-ffi to 1.10.0 [taca 2019-01-20]
 	Updated devel/ruby-mocha to 1.8.0 [taca 2019-01-20]
+	Updated devel/ruby-msgpack to 1.2.6 [taca 2019-01-20]
