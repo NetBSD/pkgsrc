@@ -1,13 +1,14 @@
-@comment $NetBSD: PLIST,v 1.3 2017/01/07 22:26:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/01/20 14:10:29 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.codeclimate.yml
-${GEM_LIBDIR}/.github/ISSUE_TEMPLATE
+${GEM_LIBDIR}/.github/issue_template.md
+${GEM_LIBDIR}/.github/pull_request_template.md
 ${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.rubocop.yml
 ${GEM_LIBDIR}/.simplecov
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/Gemfile_ruby2
 ${GEM_LIBDIR}/Guardfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
@@ -34,6 +35,7 @@ ${GEM_LIBDIR}/lib/roo/excelx/comments.rb
 ${GEM_LIBDIR}/lib/roo/excelx/coordinate.rb
 ${GEM_LIBDIR}/lib/roo/excelx/extractor.rb
 ${GEM_LIBDIR}/lib/roo/excelx/format.rb
+${GEM_LIBDIR}/lib/roo/excelx/images.rb
 ${GEM_LIBDIR}/lib/roo/excelx/relationships.rb
 ${GEM_LIBDIR}/lib/roo/excelx/shared.rb
 ${GEM_LIBDIR}/lib/roo/excelx/shared_strings.rb
@@ -47,6 +49,8 @@ ${GEM_LIBDIR}/lib/roo/formatters/csv.rb
 ${GEM_LIBDIR}/lib/roo/formatters/matrix.rb
 ${GEM_LIBDIR}/lib/roo/formatters/xml.rb
 ${GEM_LIBDIR}/lib/roo/formatters/yaml.rb
+${GEM_LIBDIR}/lib/roo/helpers/default_attr_reader.rb
+${GEM_LIBDIR}/lib/roo/helpers/weak_instance_cache.rb
 ${GEM_LIBDIR}/lib/roo/libre_office.rb
 ${GEM_LIBDIR}/lib/roo/link.rb
 ${GEM_LIBDIR}/lib/roo/open_office.rb
@@ -66,9 +70,13 @@ ${GEM_LIBDIR}/spec/lib/roo/excelx_spec.rb
 ${GEM_LIBDIR}/spec/lib/roo/libreoffice_spec.rb
 ${GEM_LIBDIR}/spec/lib/roo/openoffice_spec.rb
 ${GEM_LIBDIR}/spec/lib/roo/spreadsheet_spec.rb
+${GEM_LIBDIR}/spec/lib/roo/strict_spec.rb
 ${GEM_LIBDIR}/spec/lib/roo/utils_spec.rb
+${GEM_LIBDIR}/spec/lib/roo/weak_instance_cache_spec.rb
+${GEM_LIBDIR}/spec/lib/roo_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/test/all_ss.rb
+${GEM_LIBDIR}/test/excelx/cell/test_attr_reader_default.rb
 ${GEM_LIBDIR}/test/excelx/cell/test_base.rb
 ${GEM_LIBDIR}/test/excelx/cell/test_boolean.rb
 ${GEM_LIBDIR}/test/excelx/cell/test_date.rb
@@ -77,6 +85,7 @@ ${GEM_LIBDIR}/test/excelx/cell/test_empty.rb
 ${GEM_LIBDIR}/test/excelx/cell/test_number.rb
 ${GEM_LIBDIR}/test/excelx/cell/test_string.rb
 ${GEM_LIBDIR}/test/excelx/cell/test_time.rb
+${GEM_LIBDIR}/test/excelx/test_coordinate.rb
 ${GEM_LIBDIR}/test/formatters/test_csv.rb
 ${GEM_LIBDIR}/test/formatters/test_matrix.rb
 ${GEM_LIBDIR}/test/formatters/test_xml.rb
