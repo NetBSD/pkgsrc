@@ -1,11 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2017/02/20 05:52:31 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/01/20 13:44:24 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/cucumber-wire.gemspec
+${GEM_LIBDIR}/features/docstring.feature
 ${GEM_LIBDIR}/features/erb_configuration.feature
 ${GEM_LIBDIR}/features/handle_unexpected_response.feature
 ${GEM_LIBDIR}/features/invoke_message.feature
@@ -30,6 +34,7 @@ ${GEM_LIBDIR}/lib/cucumber/wire/protocol.rb
 ${GEM_LIBDIR}/lib/cucumber/wire/protocol/requests.rb
 ${GEM_LIBDIR}/lib/cucumber/wire/request_handler.rb
 ${GEM_LIBDIR}/lib/cucumber/wire/snippet.rb
+${GEM_LIBDIR}/lib/cucumber/wire/step_argument.rb
 ${GEM_LIBDIR}/lib/cucumber/wire/step_definition.rb
 ${GEM_LIBDIR}/lib/cucumber/wire/version
 ${GEM_LIBDIR}/spec/cucumber/wire/configuration_spec.rb
