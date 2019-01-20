@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/09/23 17:00:06 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/01/20 14:59:32 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/Gemfile
@@ -9,6 +9,7 @@ ${GEM_LIBDIR}/lib/selenium/server.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/atoms.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/atoms/getAttribute.js
+${GEM_LIBDIR}/lib/selenium/webdriver/atoms/isDisplayed.js
 ${GEM_LIBDIR}/lib/selenium/webdriver/chrome.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/chrome/bridge.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/chrome/driver.rb
@@ -76,6 +77,7 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/common/zipper.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/edge.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/edge/bridge.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/edge/driver.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/edge/options.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/edge/service.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/firefox.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/firefox/binary.rb
@@ -114,6 +116,7 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/remote/w3c/commands.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/safari.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/safari/bridge.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/safari/driver.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/safari/options.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/safari/service.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/support.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/support/abstract_event_listener.rb
