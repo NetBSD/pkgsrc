@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.347 2019/01/20 14:43:10 taca Exp $
+$NetBSD: CHANGES-2019,v 1.348 2019/01/20 14:47:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -458,3 +458,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated misc/ruby-mimemagic to 0.3.3 [taca 2019-01-20]
 	Updated net/ruby-xdr to 3.0.0 [taca 2019-01-20]
 	Updated print/ruby-pdf-reader to 2.2.0 [taca 2019-01-20]
+	Updated textproc/ruby-erubi to 1.8.0 [taca 2019-01-20]
