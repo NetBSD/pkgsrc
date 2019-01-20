@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2018/09/23 15:13:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2019/01/20 14:03:43 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -73,6 +73,7 @@ ${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindIconv.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindPkgLibraries.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindSecurity.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindStatNsec.cmake
+${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindmbedTLS.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/IdeSplitSources.cmake
 ${GEM_LIBDIR}/vendor/libgit2/deps/http-parser/CMakeLists.txt
 ${GEM_LIBDIR}/vendor/libgit2/deps/http-parser/LICENSE-MIT
@@ -136,6 +137,7 @@ ${GEM_LIBDIR}/vendor/libgit2/include/git2/ignore.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/index.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/indexer.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/inttypes.h
+${GEM_LIBDIR}/vendor/libgit2/include/git2/mailmap.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/merge.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/message.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/net.h
@@ -166,6 +168,7 @@ ${GEM_LIBDIR}/vendor/libgit2/include/git2/status.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/stdint.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/strarray.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/submodule.h
+${GEM_LIBDIR}/vendor/libgit2/include/git2/sys/alloc.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/sys/commit.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/sys/config.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/sys/diff.h
@@ -176,6 +179,7 @@ ${GEM_LIBDIR}/vendor/libgit2/include/git2/sys/mempack.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/sys/merge.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/sys/odb_backend.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/sys/openssl.h
+${GEM_LIBDIR}/vendor/libgit2/include/git2/sys/path.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/sys/refdb_backend.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/sys/reflog.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/sys/refs.h
@@ -193,6 +197,8 @@ ${GEM_LIBDIR}/vendor/libgit2/include/git2/version.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/worktree.h
 ${GEM_LIBDIR}/vendor/libgit2/libgit2.pc.in
 ${GEM_LIBDIR}/vendor/libgit2/src/CMakeLists.txt
+${GEM_LIBDIR}/vendor/libgit2/src/alloc.c
+${GEM_LIBDIR}/vendor/libgit2/src/alloc.h
 ${GEM_LIBDIR}/vendor/libgit2/src/annotated_commit.c
 ${GEM_LIBDIR}/vendor/libgit2/src/annotated_commit.h
 ${GEM_LIBDIR}/vendor/libgit2/src/apply.c
@@ -281,6 +287,8 @@ ${GEM_LIBDIR}/vendor/libgit2/src/hash/hash_collisiondetect.h
 ${GEM_LIBDIR}/vendor/libgit2/src/hash/hash_common_crypto.h
 ${GEM_LIBDIR}/vendor/libgit2/src/hash/hash_generic.c
 ${GEM_LIBDIR}/vendor/libgit2/src/hash/hash_generic.h
+${GEM_LIBDIR}/vendor/libgit2/src/hash/hash_mbedtls.c
+${GEM_LIBDIR}/vendor/libgit2/src/hash/hash_mbedtls.h
 ${GEM_LIBDIR}/vendor/libgit2/src/hash/hash_openssl.h
 ${GEM_LIBDIR}/vendor/libgit2/src/hash/hash_win32.c
 ${GEM_LIBDIR}/vendor/libgit2/src/hash/hash_win32.h
@@ -302,6 +310,8 @@ ${GEM_LIBDIR}/vendor/libgit2/src/integer.h
 ${GEM_LIBDIR}/vendor/libgit2/src/iterator.c
 ${GEM_LIBDIR}/vendor/libgit2/src/iterator.h
 ${GEM_LIBDIR}/vendor/libgit2/src/khash.h
+${GEM_LIBDIR}/vendor/libgit2/src/mailmap.c
+${GEM_LIBDIR}/vendor/libgit2/src/mailmap.h
 ${GEM_LIBDIR}/vendor/libgit2/src/map.h
 ${GEM_LIBDIR}/vendor/libgit2/src/merge.c
 ${GEM_LIBDIR}/vendor/libgit2/src/merge.h
@@ -389,9 +399,13 @@ ${GEM_LIBDIR}/vendor/libgit2/src/sortedcache.h
 ${GEM_LIBDIR}/vendor/libgit2/src/stash.c
 ${GEM_LIBDIR}/vendor/libgit2/src/status.c
 ${GEM_LIBDIR}/vendor/libgit2/src/status.h
+${GEM_LIBDIR}/vendor/libgit2/src/stdalloc.c
+${GEM_LIBDIR}/vendor/libgit2/src/stdalloc.h
 ${GEM_LIBDIR}/vendor/libgit2/src/stream.h
 ${GEM_LIBDIR}/vendor/libgit2/src/streams/curl.c
 ${GEM_LIBDIR}/vendor/libgit2/src/streams/curl.h
+${GEM_LIBDIR}/vendor/libgit2/src/streams/mbedtls.c
+${GEM_LIBDIR}/vendor/libgit2/src/streams/mbedtls.h
 ${GEM_LIBDIR}/vendor/libgit2/src/streams/openssl.c
 ${GEM_LIBDIR}/vendor/libgit2/src/streams/openssl.h
 ${GEM_LIBDIR}/vendor/libgit2/src/streams/socket.c
