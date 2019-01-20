@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.325 2019/01/20 11:58:58 adam Exp $
+$NetBSD: CHANGES-2019,v 1.326 2019/01/20 13:19:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -435,3 +435,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/pinentry-gtk2 to 1.1.0nb5 [wiz 2019-01-19]
 	Updated security/py-cryptodome to 3.7.3 [adam 2019-01-20]
 	Updated devel/py-packaging to 19.0 [adam 2019-01-20]
+	Updated databases/ruby-pg to 1.1.4 [taca 2019-01-20]
