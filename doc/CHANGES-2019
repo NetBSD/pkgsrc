@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.338 2019/01/20 14:04:05 taca Exp $
+$NetBSD: CHANGES-2019,v 1.339 2019/01/20 14:05:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -449,3 +449,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ruby-mocha to 1.8.0 [taca 2019-01-20]
 	Updated devel/ruby-msgpack to 1.2.6 [taca 2019-01-20]
 	Updated devel/ruby-rugged to 0.27.7 [taca 2019-01-20]
+	Updated devel/ruby-stomp to 1.4.8 [taca 2019-01-20]
