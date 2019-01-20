@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.352 2019/01/20 18:23:01 maya Exp $
+$NetBSD: CHANGES-2019,v 1.353 2019/01/20 20:10:32 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -465,3 +465,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/mysql55-client to 5.5.62nb1 [maya 2019-01-21]
 	Updated databases/mysql56-client to 5.6.42nb1 [maya 2019-01-21]
 	Updated databases/mysql57-client to 5.7.24nb2 [maya 2019-01-21]
+	Updated www/links to 2.18 [leot 2019-01-20]
