@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/06 11:55:03 asau Exp $
+# $NetBSD: Makefile,v 1.25 2019/01/20 08:15:00 dholland Exp $
 #
 
 DISTNAME=	xscrabble-1.0
@@ -23,7 +23,7 @@ SUBST_SED.xscrabble+=	-e 's,/usr/local/lib,${PREFIX}/share/games/xscrabble,g'
 MAKE_DIRS=		${VARBASE}/games
 EGDIR=			${PREFIX}/share/games/xscrabble
 
-SETGIDGAME=		yes
+USE_GAMESGROUP=		yes
 CONF_FILES_PERMS=	${EGDIR}/xscrabble.scores.dist \
 			${VARBASE}/games/xscrabble.scores \
 			${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}
