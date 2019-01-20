@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/10/28 15:37:51 taca Exp $
+# $NetBSD: Makefile,v 1.2 2019/01/20 13:36:40 taca Exp $
 
-DISTNAME=	cucumber-messages-1.1.2
+DISTNAME=	cucumber-messages-2.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,7 +10,7 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-google-protobuf>=3.6.1<3.7:../../devel/ruby-google-protobuf
 
-OVERRIDE_GEMSPEC+=	google-protobuf>=3.6.1
+USE_LANGUAGES=	# none
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
