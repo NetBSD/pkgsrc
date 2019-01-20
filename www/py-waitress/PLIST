@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2017/10/16 12:07:24 adam Exp $
-bin/waitress-serve${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.4 2019/01/20 13:20:02 adam Exp $
+bin/waitress-serve-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -119,9 +119,15 @@ ${PYSITELIB}/waitress/tests/test_trigger.pyo
 ${PYSITELIB}/waitress/tests/test_utilities.py
 ${PYSITELIB}/waitress/tests/test_utilities.pyc
 ${PYSITELIB}/waitress/tests/test_utilities.pyo
+${PYSITELIB}/waitress/tests/test_wasyncore.py
+${PYSITELIB}/waitress/tests/test_wasyncore.pyc
+${PYSITELIB}/waitress/tests/test_wasyncore.pyo
 ${PYSITELIB}/waitress/trigger.py
 ${PYSITELIB}/waitress/trigger.pyc
 ${PYSITELIB}/waitress/trigger.pyo
 ${PYSITELIB}/waitress/utilities.py
 ${PYSITELIB}/waitress/utilities.pyc
 ${PYSITELIB}/waitress/utilities.pyo
+${PYSITELIB}/waitress/wasyncore.py
+${PYSITELIB}/waitress/wasyncore.pyc
+${PYSITELIB}/waitress/wasyncore.pyo
