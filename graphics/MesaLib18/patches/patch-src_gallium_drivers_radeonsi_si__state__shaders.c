@@ -1,4 +1,4 @@
-$NetBSD: patch-src_gallium_drivers_radeonsi_si__state__shaders.c,v 1.2 2019/01/19 18:26:30 tnn Exp $
+$NetBSD: patch-src_gallium_drivers_radeonsi_si__state__shaders.c,v 1.3 2019/01/20 09:50:28 tnn Exp $
 
 #if'out some debug code on SunOS. There is no open_memstream(3)
 
@@ -8,7 +8,7 @@ $NetBSD: patch-src_gallium_drivers_radeonsi_si__state__shaders.c,v 1.2 2019/01/1
  	}
  
  	if (shader->compiler_ctx_state.is_debug_context) {
-+#if !defined(__sun)
++#if defined(HAVE_OPEN_MEMSTREAM)
  		FILE *f = open_memstream(&shader->shader_log,
  					 &shader->shader_log_size);
  		if (f) {

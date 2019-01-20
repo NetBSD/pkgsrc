@@ -1,4 +1,6 @@
-$NetBSD: patch-src_util_u__thread.h,v 1.1 2019/01/10 22:30:11 tnn Exp $
+$NetBSD: patch-src_util_u__thread.h,v 1.2 2019/01/20 09:50:28 tnn Exp $
+
+handle NetBSD-style pthread_setaffinity_np(3)
 
 --- src/util/u_thread.h.orig	2018-12-11 21:13:57.000000000 +0000
 +++ src/util/u_thread.h
