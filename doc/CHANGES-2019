@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.340 2019/01/20 14:06:24 taca Exp $
+$NetBSD: CHANGES-2019,v 1.341 2019/01/20 14:07:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -451,3 +451,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ruby-rugged to 0.27.7 [taca 2019-01-20]
 	Updated devel/ruby-stomp to 1.4.8 [taca 2019-01-20]
 	Updated devel/ruby-stream to 0.5.2 [taca 2019-01-20]
+	Updated devel/ruby-term-ansicolor to 1.7.1 [taca 2019-01-20]
