@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.326 2019/01/20 13:19:50 taca Exp $
+$NetBSD: CHANGES-2019,v 1.327 2019/01/20 13:22:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -436,3 +436,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/py-cryptodome to 3.7.3 [adam 2019-01-20]
 	Updated devel/py-packaging to 19.0 [adam 2019-01-20]
 	Updated databases/ruby-pg to 1.1.4 [taca 2019-01-20]
+	Updated devel/ruby-celluloid to 0.17.4 [taca 2019-01-20]
