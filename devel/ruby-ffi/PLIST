@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2018/06/24 15:46:49 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2019/01/20 13:48:30 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/ffi_c.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
@@ -480,11 +480,16 @@ ${GEM_LIBDIR}/lib/ffi/library.rb
 ${GEM_LIBDIR}/lib/ffi/managedstruct.rb
 ${GEM_LIBDIR}/lib/ffi/memorypointer.rb
 ${GEM_LIBDIR}/lib/ffi/platform.rb
+${GEM_LIBDIR}/lib/ffi/platform/aarch64-freebsd/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/aarch64-freebsd12/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/aarch64-linux/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/arm-freebsd/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/arm-freebsd12/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/arm-linux/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/i386-cygwin/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/i386-darwin/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/i386-freebsd/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/i386-freebsd12/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/i386-gnu/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/i386-linux/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/i386-netbsd/types.conf
@@ -513,6 +518,7 @@ ${GEM_LIBDIR}/lib/ffi/platform/sparcv9-solaris/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/x86_64-cygwin/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/x86_64-darwin/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/x86_64-freebsd/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/x86_64-freebsd12/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/x86_64-linux/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/x86_64-netbsd/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/x86_64-openbsd/types.conf
