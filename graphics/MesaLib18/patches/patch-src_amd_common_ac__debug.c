@@ -1,4 +1,4 @@
-$NetBSD: patch-src_amd_common_ac__debug.c,v 1.1 2019/01/19 17:47:51 tnn Exp $
+$NetBSD: patch-src_amd_common_ac__debug.c,v 1.2 2019/01/20 09:50:28 tnn Exp $
 
 #if'out some debug code on SunOS. There is no open_memstream(3)
 
@@ -8,7 +8,7 @@ $NetBSD: patch-src_amd_common_ac__debug.c,v 1.1 2019/01/19 17:47:51 tnn Exp $
  
  	char *out;
  	size_t outsize;
-+#if !defined(__sun)
++#if defined(HAVE_OPEN_MEMSTREAM)
  	FILE *memf = open_memstream(&out, &outsize);
  	ib.f = memf;
  	ac_do_parse_ib(memf, &ib);
