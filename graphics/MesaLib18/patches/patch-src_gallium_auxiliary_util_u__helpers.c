@@ -1,4 +1,6 @@
-$NetBSD: patch-src_gallium_auxiliary_util_u__helpers.c,v 1.1 2019/01/10 22:30:11 tnn Exp $
+$NetBSD: patch-src_gallium_auxiliary_util_u__helpers.c,v 1.2 2019/01/20 09:50:28 tnn Exp $
+
+handle NetBSD-style pthread_setaffinity_np(3)
 
 --- src/gallium/auxiliary/util/u_helpers.c.orig	2018-12-11 21:13:57.000000000 +0000
 +++ src/gallium/auxiliary/util/u_helpers.c
