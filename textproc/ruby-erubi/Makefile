@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/03/13 16:07:49 taca Exp $
+# $NetBSD: Makefile,v 1.2 2019/01/20 14:46:38 taca Exp $
 
-DISTNAME=	erubi-1.7.1
+DISTNAME=	erubi-1.8.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
