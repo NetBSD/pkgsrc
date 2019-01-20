@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2015/08/18 07:31:09 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2019/01/20 08:13:35 dholland Exp $
 
 DISTNAME=	omega-0.90.4-src
 PKGNAME=	omega-0.90.4
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.alcyone.com/max/projects/omega/
 COMMENT=	Complex rogue-like game of exploration with a sense of humor
 
-SETGIDGAME=		yes
+USE_GAMESGROUP=		yes
 
 MAKE_JOBS_SAFE=		no
 
