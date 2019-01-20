@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.31 2018/12/22 17:26:46 taca Exp $
+# $NetBSD: Makefile,v 1.32 2019/01/20 14:15:00 taca Exp $
 
-DISTNAME=	bundler-1.17.2
-PKGREVISION=	2
+DISTNAME=	bundler-1.17.3
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gembundler.com/
+HOMEPAGE=	https://bundler.io/
 COMMENT=	Manage your application's dependencies
 LICENSE=	mit
 
