@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2018/12/17 14:49:15 taca Exp $
+# $NetBSD: Makefile,v 1.27 2019/01/20 13:45:27 taca Exp $
 #
 
-DISTNAME=	curses-1.2.5
+DISTNAME=	curses-1.2.7
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
