@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/12/17 14:52:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/01/20 14:04:54 taca Exp $
 bin/catstomp${RUBY_SUFFIX}
 bin/stompcat${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -45,8 +45,10 @@ ${GEM_LIBDIR}/examples/ssl/uc1/ssl_uc1.rb
 ${GEM_LIBDIR}/examples/ssl/uc1/ssl_uc1_ciphers.rb
 ${GEM_LIBDIR}/examples/ssl/uc2/ssl_uc2.rb
 ${GEM_LIBDIR}/examples/ssl/uc2/ssl_uc2_ciphers.rb
-${GEM_LIBDIR}/examples/ssl/uc3/ssl_uc3.rb
-${GEM_LIBDIR}/examples/ssl/uc3/ssl_uc3_ciphers.rb
+${GEM_LIBDIR}/examples/ssl/uc3/ssl_uc3_from_files.rb
+${GEM_LIBDIR}/examples/ssl/uc3/ssl_uc3_from_files_ciphers.rb
+${GEM_LIBDIR}/examples/ssl/uc3/ssl_uc3_without_files.rb
+${GEM_LIBDIR}/examples/ssl/uc3/ssl_uc3_without_files_ciphers.rb
 ${GEM_LIBDIR}/examples/ssl/uc4/ssl_uc4.rb
 ${GEM_LIBDIR}/examples/ssl/uc4/ssl_uc4_ciphers.rb
 ${GEM_LIBDIR}/examples/stomp_common.rb
