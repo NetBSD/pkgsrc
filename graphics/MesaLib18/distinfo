@@ -1,25 +1,25 @@
-$NetBSD: distinfo,v 1.13 2019/01/19 23:21:43 tnn Exp $
+$NetBSD: distinfo,v 1.14 2019/01/20 09:50:28 tnn Exp $
 
 SHA1 (mesa-18.3.2.tar.xz) = 8775d7bfac7e07141ac4299888d426d5550949f7
 RMD160 (mesa-18.3.2.tar.xz) = d3662f72a39d009adb21a70bd7b49c28960c0d5c
 SHA512 (mesa-18.3.2.tar.xz) = 34b66520728d720b1f3d3d63f8ba5c255d57b9e8fe427264419e4163b474df662ff6db9ca8b81283866da415e34346a4c39fc37bebe2a0929be14480faf4db45
 Size (mesa-18.3.2.tar.xz) = 11868440 bytes
-SHA1 (patch-configure.ac) = 355b04270d2036fa879215d3f58278d5d32d22da
+SHA1 (patch-configure.ac) = 5283215d27410c80f81ffd28b3f7b02506d1c1b8
 SHA1 (patch-include_GL_internal_dri__interface.h) = 146d2f3f3e50fc1947e8941301d9cf9d90a035e2
-SHA1 (patch-src_amd_common_ac__debug.c) = eb73957adc7ed81db99d4edbc507b05231fda218
+SHA1 (patch-src_amd_common_ac__debug.c) = 8233367c3b5bc344442ea8d19488fdd1e3791ae9
 SHA1 (patch-src_amd_vulkan_winsys_amdgpu_radv__amdgpu__cs.c) = 1fe81a7b16e36dc9125400c20543271216a33a45
 SHA1 (patch-src_compiler_builtin__type__macros.h) = 857bca0c0f55ec8d7a20b3807c7a5d7bd06bdfbf
 SHA1 (patch-src_compiler_glsl_glsl__parser__extras.cpp) = ef114d6e288e6d212fce9d1c0606f7d454a171c4
-SHA1 (patch-src_egl_drivers_dri2_platform__drm.c) = 94ec2e969e7cf7c89c3192e60758e5ad14b02629
+SHA1 (patch-src_egl_drivers_dri2_platform__drm.c) = e18e7b1ffbc74b8acf3d9095a92c750f9d005479
 SHA1 (patch-src_egl_drivers_dri2_platform__x11.c) = 49e48c31eacb79d1da357fe70eaffd2926b5280e
 SHA1 (patch-src_egl_main_eglglobals.c) = 0d52014f52e62fc5fa6650336ddb0011ecf331e6
 SHA1 (patch-src_gallium_auxiliary_drivers_trace_tr__dump.c) = 360e1608508a7bbb41acecd58930781038e2309e
 SHA1 (patch-src_gallium_auxiliary_pipe-loader_pipe__loader__drm.c) = f913b779404e6bd8ae707a4fd66eb7c1dca9b311
 SHA1 (patch-src_gallium_auxiliary_util_u__format__tests.c) = 4d5e4677c2825778c43440ab131b8807f6840975
-SHA1 (patch-src_gallium_auxiliary_util_u__helpers.c) = 636fb98c4cbf70a5d8a6d94c24e75d2b05968b3c
+SHA1 (patch-src_gallium_auxiliary_util_u__helpers.c) = a955657951d6d7d84ef349b3b6639a94e44994a5
 SHA1 (patch-src_gallium_drivers_nouveau_nouveau__vp3__video.c) = 04f95784c3270c9bb7e95377982e217962481525
 SHA1 (patch-src_gallium_drivers_nouveau_nv50_nv84__video.c) = 1b4239fe053523835ecac006894bdb0cde0ee626
-SHA1 (patch-src_gallium_drivers_radeonsi_si__state__shaders.c) = 08119700b80ddc99f7f2ec1b7b8212147fabda27
+SHA1 (patch-src_gallium_drivers_radeonsi_si__state__shaders.c) = ed51a57765f2349bc91fd509dc03e709241bd899
 SHA1 (patch-src_gallium_drivers_vc4_vc4__bufmgr.c) = 1d591d346486fdf58893f69ab92a272e6a31a987
 SHA1 (patch-src_gallium_include_pipe_p__config.h) = f4e38eac66167b619c30076bb0144dd716310967
 SHA1 (patch-src_gallium_state__trackers_clover_llvm_invocation.cpp) = 3053db09fbfffffd82e232b60b244a0a80c8f181
@@ -58,7 +58,6 @@ SHA1 (patch-src_mesa_main_context.c) = 74226013b56ad6c9678f1970458538b35967678f
 SHA1 (patch-src_mesa_main_extensions.c) = 2f48bdb1176c2878bb33bcfab7556172b50a987e
 SHA1 (patch-src_mesa_main_macros.h) = c5dceaa8dc02a58e5b2273d82e3fe1cc12e327d3
 SHA1 (patch-src_mesa_main_shader__query.cpp) = 3f9c31645d87855759def11344dee16af23c7be3
-SHA1 (patch-src_mesa_tnl_t__pipeline.c) = e6abcdb24019ca57527d25c5cd86737332db98e3
 SHA1 (patch-src_mesa_x86_common__x86.c) = f8c4b93443ef66d017f6aa114b877565b30f2598
 SHA1 (patch-src_util_Makefile.am) = e390cd47b784ad08987b81fdbce537968ad4a624
 SHA1 (patch-src_util_build__id.c) = 7a9547bbda9d2fb9f0018ccf27b70b59e497aa2c
@@ -68,5 +67,5 @@ SHA1 (patch-src_util_ralloc.c) = d311bfd9ed7e673d72e050668d351c1e6552cdc8
 SHA1 (patch-src_util_strndup.h) = 73f49694ca48ad6b9a9d8346c5b84fddec2463bd
 SHA1 (patch-src_util_u__atomic.h) = 31d4514538ef5ee53012695eb5c66134aaec981e
 SHA1 (patch-src_util_u__queue.c) = ed1ea3f6fc37e9a64894a3e865c48691b6e01b2c
-SHA1 (patch-src_util_u__thread.h) = 57bbf209575da7fd89f7ed6ac56a2ea19aec71d1
+SHA1 (patch-src_util_u__thread.h) = f0453485bb62d0b7c00a1b840cfce2726ebcbfd2
 SHA1 (patch-src_util_xmlconfig.c) = ad5619e067957b120a70c1c63421c92b356e16ac
