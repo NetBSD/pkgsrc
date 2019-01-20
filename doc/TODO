@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18765 2019/01/19 12:49:32 ryoon Exp $
+$NetBSD: TODO,v 1.18766 2019/01/20 18:10:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -456,7 +456,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cal3d-0.11.0
 	o calc-2.11.10.1
 	o calcoo-2.1.0
-	o calibre-3.37.0
+	o calibre-3.38.1
 	o calligra-3.0.1 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-1.1
@@ -972,6 +972,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o libqxp-0.0.2
 	o librsvg-2.44.9 [wip]
+	o librsvg-2.44.11
 	o libsecret-0.18.7
 	o libssh-0.8.6
 	o libstree-0.4.2
@@ -980,11 +981,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libtrace-3.0.22
 	o libv4l-0.8.5
 	o libvirt-2.3
+	o libwebp-1.0.2
 	o libxdg-basedir-1.2.0
 	o libykneomgr-0.1.8
 	o libyubikey-1.13
 	o licq-1.3.8
 	o lincvs-2.1.4 [now called CrossVC]
+	o links-2.18
 	o linpsk-1.2 [ld: cannot find -lqt-mt with qt4]
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
@@ -1197,6 +1200,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-cassa-1.11.0
 	o py-doctor-15.1.0
 	o py-ephem3-3.7.6.0
+	o py-flaky-3.5.3
 	o py-gnome-menus-3.8.0
 	o py-gobject3-3.30.4
 	o py-google-api-python-client-1.7.7
@@ -1204,13 +1208,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-hsm-1.1.1
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
+	o py-mechanize-0.4.0
 	o py-musicbrainz-0.7.4
 	o py-newt-0.52.20
 	o py-omniORBpy-3.7
 	o py-pendrell-0.3.7
 	o py-ptt-1.10.2
 	o py-pycountry-1.20
-	o py-pygit2-0.27.3
+	o py-pygit2-0.27.4
 	o py-simpletal-5.1
 	o py-spf-2.0.12t
 	o py-sybase-0.37
@@ -1312,6 +1317,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sound-juicer-3.16.1
 	o sparse-0.5.0
 	o spcaview-20060501
+	o spice-protocol-0.12.15
 	o spl-1.0pre6
 	o sqlrelay-1.4.0
 	o squeak-5.0
@@ -1470,7 +1476,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xmms-crossfade-0.3.14
 	o xmms-musepack-1.8.0 [http://dl.slik.org/musepack/xmms-musepack-1.8.0.tar.gz]
 	o xnap-2.5r3
-	o xonsh-0.8.8 [pkg/53841]
 	o xorp-1.8.5
 	o xosview-1.19
 	o xpaint-2.9.9
