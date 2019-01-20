@@ -1,7 +1,11 @@
-$NetBSD: patch-CMakeLists.txt,v 1.5 2016/08/04 10:09:08 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.6 2019/01/20 18:04:49 maya Exp $
 
 Split configuration between mysql-client and mysql-server.
 Build with newer DTrace.
+
+Backport of https://github.com/mysql/mysql-server/commit/98ed3d8bc8ad724686d26c7bf98dced3bd1777be
+Avoid disclosure of files from a client to a malicious server, described here:
+https://gwillem.gitlab.io/2019/01/17/adminer-4.6.2-file-disclosure-vulnerability/
 
 --- CMakeLists.txt.orig	2016-07-11 09:19:51.000000000 +0000
 +++ CMakeLists.txt
@@ -13,7 +17,16 @@ Build with newer DTrace.
  OPTION(CYBOZU "" OFF)
  OPTION(BACKUP_TEST "" OFF)
  OPTION(WITHOUT_SERVER OFF)
-@@ -462,7 +463,6 @@ ADD_SUBDIRECTORY(vio)
+@@ -345,7 +346,7 @@ IF(REPRODUCIBLE_BUILD)
+ ENDIF()
+ 
+ OPTION(ENABLED_LOCAL_INFILE
+- "If we should should enable LOAD DATA LOCAL by default" ${IF_WIN})
++"If we should should enable LOAD DATA LOCAL by default" OFF)
+ MARK_AS_ADVANCED(ENABLED_LOCAL_INFILE)
+ 
+ OPTION(WITH_FAST_MUTEXES "Compile with fast mutexes" OFF)
+@@ -495,7 +496,6 @@ ADD_SUBDIRECTORY(vio)
  ADD_SUBDIRECTORY(regex)
  ADD_SUBDIRECTORY(mysys)
  ADD_SUBDIRECTORY(mysys_ssl)
@@ -21,7 +34,7 @@ Build with newer DTrace.
  
  IF(WITH_UNIT_TESTS)
    # Visual Studio 11 needs this extra flag in order to compile gmock.
-@@ -480,16 +480,16 @@ IF(WITH_UNIT_TESTS)
+@@ -513,16 +513,16 @@ IF(WITH_UNIT_TESTS)
  ENDIF()
  
  ADD_SUBDIRECTORY(extra)
@@ -43,7 +56,7 @@ Build with newer DTrace.
    ADD_SUBDIRECTORY(sql)
    OPTION (WITH_EMBEDDED_SERVER "Compile MySQL with embedded server" OFF)
    IF(WITH_EMBEDDED_SERVER) 
-@@ -500,7 +500,6 @@ ENDIF()
+@@ -533,7 +533,6 @@ ENDIF()
  
  # scripts/mysql_config depends on client and server targets loaded above.
  # It is referenced by some of the directories below, so we insert it here.
