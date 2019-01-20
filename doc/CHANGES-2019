@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.334 2019/01/20 13:47:38 taca Exp $
+$NetBSD: CHANGES-2019,v 1.335 2019/01/20 13:48:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -445,3 +445,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ruby-cucumber-wire to 1.0.0 [taca 2019-01-20]
 	Updated devel/ruby-curses to 1.2.7 [taca 2019-01-20]
 	Updated devel/ruby-fast_gettext to 2.0.0 [taca 2019-01-20]
+	Updated devel/ruby-ffi to 1.10.0 [taca 2019-01-20]
