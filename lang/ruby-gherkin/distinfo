@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/09/23 15:31:22 taca Exp $
+$NetBSD: distinfo,v 1.5 2019/01/20 13:40:44 taca Exp $
 
-SHA1 (gherkin-5.1.0.gem) = d87a0fc95c638d431a9043025136f3138d8bea7d
-RMD160 (gherkin-5.1.0.gem) = 25cf318abdb69e711f80be2018c0114e78e25385
-SHA512 (gherkin-5.1.0.gem) = d935ccceaec493736f337a4c3db69909858d15f4c41e93ecfc6ca31a30fc48eec1cecbe71d455265e1062006f49f05461c9860c9b3cc4806bb25f42dec6f504e
-Size (gherkin-5.1.0.gem) = 29696 bytes
+SHA1 (gherkin-6.0.15.gem) = f94a4b6bfc43cec923ea71ec11a519c95becb2d9
+RMD160 (gherkin-6.0.15.gem) = 638d1f7828a0d0eb045b5a6ee749695a0ed36eac
+SHA512 (gherkin-6.0.15.gem) = 48496a31ee8fd590a5e412a3d4967f4168a88371aa45baf738d865659feed60d9941d5ef5b6847e6a8d3b29728f64d8d59016fde9afa36742d6d1c563916d49a
+Size (gherkin-6.0.15.gem) = 43116032 bytes

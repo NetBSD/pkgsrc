@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2018/09/23 15:31:22 taca Exp $
+# $NetBSD: Makefile,v 1.5 2019/01/20 13:40:44 taca Exp $
 
-DISTNAME=	gherkin-5.1.0
+DISTNAME=	gherkin-6.0.15
 CATEGORIES=	lang
 
 MAINTAINER=	minskim@NetBSD.org
@@ -9,6 +9,9 @@ COMMENT=	Parser and compiler for the Gherkin language
 LICENSE=	mit
 
 RUBYGEM_OPTIONS+=	--format-executable
+
+DEPENDS+=	${RUBY_PKGPREFIX}-c21e>=1.1.8<2:../../devel/ruby-c21e
+DEPENDS+=	${RUBY_PKGPREFIX}-cucumber-messages>=2.0.0<2.1:../../devel/ruby-cucumber-messages
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
