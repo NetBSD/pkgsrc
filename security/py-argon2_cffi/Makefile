@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2018/11/14 09:28:26 adam Exp $
+# $NetBSD: Makefile,v 1.4 2019/01/21 13:01:16 adam Exp $
 
-DISTNAME=	argon2_cffi-18.3.0
+DISTNAME=	argon2_cffi-19.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/argon2_cffi/}
