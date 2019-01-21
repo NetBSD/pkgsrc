@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.6 2019/01/21 10:04:45 markd Exp $
+
+Deal with Linux 4.x
+
+--- configure.orig	2015-05-03 06:37:18.754341000 +0000
++++ configure
+@@ -23311,7 +23311,7 @@ $as_echo "$as_me: Linux detected as host
+               PCIDEV_MODULE_MAKE_ALL="all-kernel24"
+               KERNEL_MODULE_SUFFIX="o"
+               ;;
+-            2.6*|3.*)
++            2.6*|3.*|4.*)
+               PCIDEV_MODULE_MAKE_ALL="all-kernel26"
+               KERNEL_MODULE_SUFFIX="ko"
+               ;;
