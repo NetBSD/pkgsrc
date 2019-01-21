@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/12/19 09:42:48 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/01/21 10:12:12 markd Exp $
 bin/texstudio
 share/applications/texstudio.desktop
 share/icons/hicolor/scalable/apps/texstudio.svg
@@ -118,6 +118,7 @@ share/texstudio/texstudio22x22.png
 share/texstudio/texstudio32x32.png
 share/texstudio/texstudio48x48.png
 share/texstudio/texstudio64x64.png
+share/texstudio/texstudio_ar.qm
 share/texstudio/texstudio_cs.qm
 share/texstudio/texstudio_de.qm
 share/texstudio/texstudio_el.qm
@@ -125,8 +126,11 @@ share/texstudio/texstudio_es.qm
 share/texstudio/texstudio_fa.qm
 share/texstudio/texstudio_fr.qm
 share/texstudio/texstudio_hu.qm
+share/texstudio/texstudio_id_ID.qm
 share/texstudio/texstudio_it.qm
 share/texstudio/texstudio_ja.qm
+share/texstudio/texstudio_ko.qm
+share/texstudio/texstudio_ko_KR.qm
 share/texstudio/texstudio_nl.qm
 share/texstudio/texstudio_pl.qm
 share/texstudio/texstudio_pt_BR.qm
