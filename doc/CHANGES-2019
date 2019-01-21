@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.355 2019/01/20 21:29:02 youri Exp $
+$NetBSD: CHANGES-2019,v 1.356 2019/01/21 04:03:54 pgoyette Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -363,6 +363,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/xfce4-thunar to 1.8.2 [gutteridge 2019-01-17]
 	Updated textproc/xfce4-dict to 0.8.2 [gutteridge 2019-01-17]
 	Updated x11/xfce4-settings to 4.13.5 [gutteridge 2019-01-17]
+	Updated sysutils/decode-dimms to 0.0.20190109 [pgoyette 2019-01-17]
 	Updated sysutils/tarsnap-gui to 1.0.2 [wiz 2019-01-17]
 	Updated net/bind912 to 9.12.3pl1nb1 [he 2019-01-17]
 	Updated www/php-nextcloud to 15.0.2 [ryoon 2019-01-17]
