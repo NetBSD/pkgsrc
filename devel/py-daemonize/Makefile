@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2017/09/18 17:35:10 adam Exp $
+# $NetBSD: Makefile,v 1.5 2019/01/21 13:03:24 adam Exp $
 
-DISTNAME=	daemonize-2.4.7
+DISTNAME=	daemonize-2.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/daemonize/}
