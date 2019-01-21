@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/12/09 20:37:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/01/21 10:37:09 adam Exp $
 bin/dmypy-${PYVERSSUFFIX}
 bin/mypy-${PYVERSSUFFIX}
 bin/stubgen-${PYVERSSUFFIX}
@@ -71,9 +71,6 @@ ${PYSITELIB}/mypy/errors.pyo
 ${PYSITELIB}/mypy/expandtype.py
 ${PYSITELIB}/mypy/expandtype.pyc
 ${PYSITELIB}/mypy/expandtype.pyo
-${PYSITELIB}/mypy/experiments.py
-${PYSITELIB}/mypy/experiments.pyc
-${PYSITELIB}/mypy/experiments.pyo
 ${PYSITELIB}/mypy/exprtotype.py
 ${PYSITELIB}/mypy/exprtotype.pyc
 ${PYSITELIB}/mypy/exprtotype.pyo
@@ -119,6 +116,9 @@ ${PYSITELIB}/mypy/join.pyo
 ${PYSITELIB}/mypy/literals.py
 ${PYSITELIB}/mypy/literals.pyc
 ${PYSITELIB}/mypy/literals.pyo
+${PYSITELIB}/mypy/lookup.py
+${PYSITELIB}/mypy/lookup.pyc
+${PYSITELIB}/mypy/lookup.pyo
 ${PYSITELIB}/mypy/main.py
 ${PYSITELIB}/mypy/main.pyc
 ${PYSITELIB}/mypy/main.pyo
@@ -134,12 +134,18 @@ ${PYSITELIB}/mypy/memprofile.pyo
 ${PYSITELIB}/mypy/messages.py
 ${PYSITELIB}/mypy/messages.pyc
 ${PYSITELIB}/mypy/messages.pyo
+${PYSITELIB}/mypy/metastore.py
+${PYSITELIB}/mypy/metastore.pyc
+${PYSITELIB}/mypy/metastore.pyo
 ${PYSITELIB}/mypy/modulefinder.py
 ${PYSITELIB}/mypy/modulefinder.pyc
 ${PYSITELIB}/mypy/modulefinder.pyo
 ${PYSITELIB}/mypy/moduleinfo.py
 ${PYSITELIB}/mypy/moduleinfo.pyc
 ${PYSITELIB}/mypy/moduleinfo.pyo
+${PYSITELIB}/mypy/mro.py
+${PYSITELIB}/mypy/mro.pyc
+${PYSITELIB}/mypy/mro.pyo
 ${PYSITELIB}/mypy/mypyc_hacks.py
 ${PYSITELIB}/mypy/mypyc_hacks.pyc
 ${PYSITELIB}/mypy/mypyc_hacks.pyo
@@ -170,6 +176,12 @@ ${PYSITELIB}/mypy/plugins/ctypes.pyo
 ${PYSITELIB}/mypy/plugins/dataclasses.py
 ${PYSITELIB}/mypy/plugins/dataclasses.pyc
 ${PYSITELIB}/mypy/plugins/dataclasses.pyo
+${PYSITELIB}/mypy/plugins/default.py
+${PYSITELIB}/mypy/plugins/default.pyc
+${PYSITELIB}/mypy/plugins/default.pyo
+${PYSITELIB}/mypy/reachability.py
+${PYSITELIB}/mypy/reachability.pyc
+${PYSITELIB}/mypy/reachability.pyo
 ${PYSITELIB}/mypy/report.py
 ${PYSITELIB}/mypy/report.pyc
 ${PYSITELIB}/mypy/report.pyo
@@ -245,6 +257,9 @@ ${PYSITELIB}/mypy/sitepkgs.pyo
 ${PYSITELIB}/mypy/solve.py
 ${PYSITELIB}/mypy/solve.pyc
 ${PYSITELIB}/mypy/solve.pyo
+${PYSITELIB}/mypy/state.py
+${PYSITELIB}/mypy/state.pyc
+${PYSITELIB}/mypy/state.pyo
 ${PYSITELIB}/mypy/stats.py
 ${PYSITELIB}/mypy/stats.pyc
 ${PYSITELIB}/mypy/stats.pyo
@@ -417,7 +432,6 @@ ${PYSITELIB}/mypy/typeshed/stdlib/2/_warnings.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/abc.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/ast.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/atexit.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/2/builtins.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/cPickle.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/cStringIO.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/collections.pyi
@@ -474,7 +488,6 @@ ${PYSITELIB}/mypy/typeshed/stdlib/2/inspect.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/io.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/itertools.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/json.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/2/macpath.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/markupbase.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/md5.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/mimetools.pyi
@@ -485,7 +498,6 @@ ${PYSITELIB}/mypy/typeshed/stdlib/2/multiprocessing/pool.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/multiprocessing/process.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/multiprocessing/util.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/mutex.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/2/ntpath.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/nturl2path.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/os/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/os/path.pyi
@@ -494,7 +506,6 @@ ${PYSITELIB}/mypy/typeshed/stdlib/2/pipes.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/platform.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/popen2.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/posix.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/2/posixpath.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/pydoc.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/random.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/re.pyi
@@ -549,6 +560,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/2and3/base64.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/binascii.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/binhex.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/bisect.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/2and3/builtins.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/bz2.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/cProfile.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/calendar.pyi
@@ -646,12 +658,14 @@ ${PYSITELIB}/mypy/typeshed/stdlib/2and3/locale.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/logging/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/logging/config.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/logging/handlers.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/2and3/macpath.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/marshal.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/math.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/mimetypes.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/mmap.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/netrc.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/nis.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/2and3/ntpath.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/numbers.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/opcode.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/operator.pyi
@@ -662,6 +676,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/2and3/pickletools.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/pkgutil.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/plistlib.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/poplib.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/2and3/posixpath.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/pprint.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/profile.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/pstats.pyi
@@ -771,7 +786,6 @@ ${PYSITELIB}/mypy/typeshed/stdlib/3/asyncio/subprocess.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/asyncio/tasks.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/asyncio/transports.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/atexit.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/3/builtins.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/collections/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/collections/abc.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/compileall.pyi
@@ -845,7 +859,6 @@ ${PYSITELIB}/mypy/typeshed/stdlib/3/json/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/json/decoder.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/json/encoder.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/lzma.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/3/macpath.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/msvcrt.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/multiprocessing/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/multiprocessing/connection.pyi
@@ -858,7 +871,6 @@ ${PYSITELIB}/mypy/typeshed/stdlib/3/multiprocessing/process.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/multiprocessing/queues.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/multiprocessing/synchronize.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/nntplib.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/3/ntpath.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/nturl2path.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/os/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/os/path.pyi
@@ -866,7 +878,6 @@ ${PYSITELIB}/mypy/typeshed/stdlib/3/pathlib.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/pipes.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/platform.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/posix.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/3/posixpath.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/queue.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/random.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/re.pyi
@@ -1271,6 +1282,7 @@ ${PYSITELIB}/mypy/typeshed/third_party/2and3/simplejson/decoder.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2and3/simplejson/encoder.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2and3/simplejson/scanner.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2and3/singledispatch.pyi
+${PYSITELIB}/mypy/typeshed/third_party/2and3/tabulate.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2and3/termcolor.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2and3/toml.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2and3/typing_extensions.pyi
