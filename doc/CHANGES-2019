@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.361 2019/01/21 10:15:20 markd Exp $
+$NetBSD: CHANGES-2019,v 1.362 2019/01/21 10:38:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -463,16 +463,18 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated time/ruby-hitimes to 1.3.1 [taca 2019-01-20]
 	Updated www/ruby-selenium-webdriver to 3.141.0 [taca 2019-01-20]
 	Updated sysutils/arm-trusted-firmware-fiptool to 2.0nb1 [wiz 2019-01-20]
-	Updated databases/mysql55-client to 5.5.62nb1 [maya 2019-01-21]
-	Updated databases/mysql56-client to 5.6.42nb1 [maya 2019-01-21]
-	Updated databases/mysql57-client to 5.7.24nb2 [maya 2019-01-21]
 	Updated www/links to 2.18 [leot 2019-01-20]
 	Updated www/links-gui to 2.18 [leot 2019-01-20]
 	Updated sysutils/xfce4-taskmanager to 1.2.2 [youri 2019-01-20]
 	Updated security/bearssl to 0.6 [agc 2019-01-20]
+	Updated databases/mysql55-client to 5.5.62nb1 [maya 2019-01-21]
+	Updated databases/mysql56-client to 5.6.42nb1 [maya 2019-01-21]
+	Updated databases/mysql57-client to 5.7.24nb2 [maya 2019-01-21]
 	Updated chat/toxcore to 0.2.7 [maya 2019-01-21]
 	Updated devel/py-daemon to 2.2.3 [adam 2019-01-21]
 	Updated devel/py-flaky to 3.5.3 [adam 2019-01-21]
 	Updated www/py-soupsieve to 1.7.2 [adam 2019-01-21]
 	Updated graphics/py-qrcode to 6.1 [adam 2019-01-21]
 	Updated editors/texstudio to 2.12.14 [markd 2019-01-21]
+	Updated devel/py-wrapt to 1.11.1 [adam 2019-01-21]
+	Updated lang/py-mypy to 0.660 [adam 2019-01-21]
