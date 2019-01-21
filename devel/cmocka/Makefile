@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/12/03 15:16:33 adam Exp $
+# $NetBSD: Makefile,v 1.7 2019/01/21 07:39:48 maya Exp $
 
 DISTNAME=	cmocka-1.1.3
 CATEGORIES=	devel
@@ -14,6 +14,10 @@ USE_CMAKE=	yes
 
 CONFIGURE_DIRS=	${WRKDIR}/build
 CMAKE_ARG_PATH=	${WRKSRC}
+
+# GCC 4.3/4.4 provides wrong warnings:
+# cmocka.c:3281: error: 'setup_name' may be used uninitialized in this function
+CMAKE_ARGS+=	-DWITH_WERROR_UNINITIALIZED_FLAG=0
 
 post-extract:
 	${MKDIR} ${WRKDIR}/build
