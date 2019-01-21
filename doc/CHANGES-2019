@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.363 2019/01/21 12:03:55 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.364 2019/01/21 12:23:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -479,3 +479,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-wrapt to 1.11.1 [adam 2019-01-21]
 	Updated lang/py-mypy to 0.660 [adam 2019-01-21]
 	Updated news/flnews to 0.16 [wiz 2019-01-21]
+	Updated devel/py-cython to 0.29.3 [adam 2019-01-21]
+	Updated www/py-bleach to 3.1.0 [adam 2019-01-21]
