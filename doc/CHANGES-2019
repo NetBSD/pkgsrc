@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.359 2019/01/21 09:36:06 adam Exp $
+$NetBSD: CHANGES-2019,v 1.360 2019/01/21 10:04:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -473,3 +473,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated chat/toxcore to 0.2.7 [maya 2019-01-21]
 	Updated devel/py-daemon to 2.2.3 [adam 2019-01-21]
 	Updated devel/py-flaky to 3.5.3 [adam 2019-01-21]
+	Updated www/py-soupsieve to 1.7.2 [adam 2019-01-21]
+	Updated graphics/py-qrcode to 6.1 [adam 2019-01-21]
