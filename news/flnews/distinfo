@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.1 2018/08/20 12:57:34 wiz Exp $
+$NetBSD: distinfo,v 1.2 2019/01/21 12:03:41 wiz Exp $
 
-SHA1 (flnews-0.15.tar.bz2) = 55e55e3d8462f6b3c7b133d702d5ec0401e31862
-RMD160 (flnews-0.15.tar.bz2) = 2e32faa93754368faebad5c4e8f54928382c114b
-SHA512 (flnews-0.15.tar.bz2) = 68e8fd2479756d35d61c10140b89207049136107bd42a37d862e45211dad0ae27abf7e87160d137a4cf4edc956926966007f6f5d6ca89447b99c8e44bed7d0b2
-Size (flnews-0.15.tar.bz2) = 1052606 bytes
+SHA1 (flnews-0.16.tar.bz2) = efa5ab06d18fe4993551c623aca3a6e61b8ec20e
+RMD160 (flnews-0.16.tar.bz2) = 25ace0387584fa253c065aeeeb946ffc4773c9b7
+SHA512 (flnews-0.16.tar.bz2) = d68615b38d4e4770ea3e404082943ac8efbc8aa6b0075ae437a5806e330e7f2ae987c00c321857b926bfe0007f59e329f1bd38b69e017b1495cd8fedbf316e5c
+Size (flnews-0.16.tar.bz2) = 1068677 bytes
+SHA1 (patch-mkconfig) = 3121cec3b8f01e71989de3f7d2092f71b6f737ba
+SHA1 (patch-src_bsd.c) = 0298c6e17d2e5f7498b6f15546a089f5a44ea70c
+SHA1 (patch-src_doc_templates_header.tex) = f9de1452f48c5e120ca6e9b96ee51f3dbfe99f86
