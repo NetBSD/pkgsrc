@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.365 2019/01/21 13:03:56 adam Exp $
+$NetBSD: CHANGES-2019,v 1.366 2019/01/21 16:57:49 youri Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -483,3 +483,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-bleach to 3.1.0 [adam 2019-01-21]
 	Updated security/py-argon2_cffi to 19.1.0 [adam 2019-01-21]
 	Updated devel/py-daemonize to 2.5.0 [adam 2019-01-21]
+	Added fonts/unicode-ucd version 11.0.0 [youri 2019-01-21]
