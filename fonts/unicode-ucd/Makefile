@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/01/21 16:57:41 youri Exp $
+# $NetBSD: Makefile,v 1.2 2019/01/21 17:13:24 youri Exp $
 #
 
 VERSION=	11.0.0
@@ -13,7 +13,7 @@ EXTRACT_ONLY=	UCD.zip
 MAINTAINER=	youri@NetBSD.org
 HOMEPAGE=	https://www.unicode.org/
 COMMENT=	Unicode Character Database
-#LICENSE=	http://www.unicode.org/copyright.html
+LICENSE=	unicode
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${DISTNAME}
