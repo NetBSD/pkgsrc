@@ -71,7 +71,12 @@ CFG_FORCE_UP=1
 # extension as not available or too old (at least SUSv2 is required)
 # Set this to 1 if your system report no sufficient XSI extension, but you want
 # to try anyway
-CFG_FORCE_XSI=@XSI@
+CFG_FORCE_XSI=@FORCE_XSI@
+
+# Force usage of IPv6 option (IP6) even if system reports it as not available
+# Set this to 1 if your system report no IP6 option, but you want to try anyway
+# (at least POSIX.1-2001 is required)
+CFG_FORCE_IP6=@FORCE_IP6@
 # ==============================================================================
 
 
@@ -120,7 +125,7 @@ CFG_NAME="flnews"
 
 # Version (printable characters from POSIX portable character set only)
 # Must start with major number followed by '.'
-CFG_VERSION="0.15"
+CFG_VERSION="@VERSION@"
 
 # If a modified version should be redistributed, set this to '1' if you want to
 # keep the original program name. This will automatically insert the prominent
@@ -150,6 +155,10 @@ CFG_LICENSE_PATH="$CFG_PREFIX/share/$CFG_NAME"
 # hierarchy below "share" is dedicated to files that are portable between
 # architectures - what our catalogs are not!
 CFG_NLS_PATH="$CFG_PREFIX/lib/$CFG_NAME/nls"
+
+# If you require reproducible builds for a binary package of a distribution,
+# set this to '1'.
+CFG_REPRODUCIBLE=1
 # ==============================================================================
 
 
