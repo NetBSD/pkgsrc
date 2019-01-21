@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.357 2019/01/21 07:01:47 agc Exp $
+$NetBSD: CHANGES-2019,v 1.358 2019/01/21 07:51:17 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -470,3 +470,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/links-gui to 2.18 [leot 2019-01-20]
 	Updated sysutils/xfce4-taskmanager to 1.2.2 [youri 2019-01-20]
 	Updated security/bearssl to 0.6 [agc 2019-01-20]
+	Updated chat/toxcore to 0.2.7 [maya 2019-01-21]
