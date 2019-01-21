@@ -1,11 +1,14 @@
-# $NetBSD: options.mk,v 1.1 2018/08/20 12:57:34 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2019/01/21 12:03:41 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.flnews
 PKG_SUPPORTED_OPTIONS=	inet6 nls xdbe xdg-utils
-PKG_SUGGESTED_OPTIONS=	xdbe xdg-utils
+PKG_SUGGESTED_OPTIONS=	inet6 nls xdbe xdg-utils
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
+
+# POSIX.1c-1996 Threads (THR) extension is required
+PTHREAD_OPTS+=	require
 
 # inet6: Optional support for Internet Protocol Version 6 (IPv6)
 # Requires an OS with POSIX.1-2001 API and IP6 option
