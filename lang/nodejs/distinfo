@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.142 2019/01/10 13:02:41 ryoon Exp $
+$NetBSD: distinfo,v 1.143 2019/01/21 11:00:45 ryoon Exp $
 
 SHA1 (node-v10.15.0.tar.gz) = 82d9507bed032ad5ed07881fbb87db4e5734a996
 RMD160 (node-v10.15.0.tar.gz) = bc81fcc79a316ec00db5dfcfcad0666d51379d5d
@@ -6,7 +6,8 @@ SHA512 (node-v10.15.0.tar.gz) = ad8ecc8957afba8d5ba49bebe5dfb5bd656c492bf9ea7cdd
 Size (node-v10.15.0.tar.gz) = 36300933 bytes
 SHA1 (patch-common.gypi) = de37949f38d9bd39a18b59d59ec74e528bd323ac
 SHA1 (patch-deps_cares_cares.gyp) = 2235eb44bc984fa2e745fdf1786f1ae6de6ef80f
-SHA1 (patch-deps_openssl_config_opensslconf__asm.h) = 62a05829240a504dae3c04b0f4ec1428810d456b
+SHA1 (patch-deps_openssl_config_archs_linux-elf_asm_openssl-cl.gypi) = f92f5547728cf67de5ccfd652f23cc4ab8f5b207
+SHA1 (patch-deps_openssl_config_opensslconf__asm.h) = c43c7732164a107d7a294cac040708970ef0a212
 SHA1 (patch-deps_openssl_config_opensslconf__no-asm.h) = 9fd4acc86deb7da00cb501654713dfa2b26f412e
 SHA1 (patch-deps_openssl_openssl-cl__asm.gypi) = 3254dd37670faa19be8ac51e8195e30cc27ea42f
 SHA1 (patch-deps_openssl_openssl-cl__no__asm.gypi) = 86592025ab1d04dbef23d1d2725196e5d5b6fc4e
