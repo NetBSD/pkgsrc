@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.516 2018/12/16 09:06:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.517 2019/01/22 06:14:58 plunky Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -350,6 +350,7 @@ SUBDIR+=	sendmail-qtool
 SUBDIR+=	sendymail
 SUBDIR+=	serialmail
 SUBDIR+=	sid-milter
+SUBDIR+=	sieve-connect
 SUBDIR+=	sigrot
 SUBDIR+=	sma
 SUBDIR+=	smtp-vilter
