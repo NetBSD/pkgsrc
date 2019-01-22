@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.388 2019/01/22 17:19:31 martin Exp $
+$NetBSD: CHANGES-2019,v 1.389 2019/01/22 18:28:46 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -530,3 +530,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/dhcpcd to 7.1.0 [roy 2019-01-22]
 	Removed fonts/unicode-ucd [youri 2019-01-22]
 	Added sysutils/u-boot-odroid-c2 version 2018.11 [martin 2019-01-22]
+	Updated net/openconnect to 8.02 [schmonz 2019-01-22]
