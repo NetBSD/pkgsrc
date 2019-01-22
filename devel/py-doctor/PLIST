@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2014/02/12 15:17:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/01/22 10:29:46 adam Exp $
 bin/pydoctor
-${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pydoctor/__init__.py
 ${PYSITELIB}/pydoctor/__init__.pyc
 ${PYSITELIB}/pydoctor/__init__.pyo
@@ -28,26 +32,21 @@ ${PYSITELIB}/pydoctor/model.pyo
 ${PYSITELIB}/pydoctor/nevowhtml.py
 ${PYSITELIB}/pydoctor/nevowhtml.pyc
 ${PYSITELIB}/pydoctor/nevowhtml.pyo
-${PYSITELIB}/pydoctor/server.py
-${PYSITELIB}/pydoctor/server.pyc
-${PYSITELIB}/pydoctor/server.pyo
+${PYSITELIB}/pydoctor/sphinx.py
+${PYSITELIB}/pydoctor/sphinx.pyc
+${PYSITELIB}/pydoctor/sphinx.pyo
 ${PYSITELIB}/pydoctor/templates/apidocs.css
 ${PYSITELIB}/pydoctor/templates/attribute-child.html
-${PYSITELIB}/pydoctor/templates/attribute-child.html.~1~
-${PYSITELIB}/pydoctor/templates/base.html~
 ${PYSITELIB}/pydoctor/templates/bigDiff.html
+${PYSITELIB}/pydoctor/templates/bootstrap.min.css
 ${PYSITELIB}/pydoctor/templates/common.html
 ${PYSITELIB}/pydoctor/templates/diff.html
-${PYSITELIB}/pydoctor/templates/edit.html
 ${PYSITELIB}/pydoctor/templates/function-child.html
 ${PYSITELIB}/pydoctor/templates/index.html
-${PYSITELIB}/pydoctor/templates/index.html.~1~
 ${PYSITELIB}/pydoctor/templates/nameIndex.html
 ${PYSITELIB}/pydoctor/templates/problemObjects.html
 ${PYSITELIB}/pydoctor/templates/pydoctor.js
-${PYSITELIB}/pydoctor/templates/sorttable.js
 ${PYSITELIB}/pydoctor/templates/summary.html
-${PYSITELIB}/pydoctor/templates/summary.html.~1~
 ${PYSITELIB}/pydoctor/templates/table.html
 ${PYSITELIB}/pydoctor/templatewriter/__init__.py
 ${PYSITELIB}/pydoctor/templatewriter/__init__.pyc
