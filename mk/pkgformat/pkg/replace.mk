@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.5 2017/08/19 00:30:19 jlam Exp $
+# $NetBSD: replace.mk,v 1.6 2019/01/22 14:29:44 roy Exp $
 #
 
 # _pkgformat-destdir-replace:
@@ -11,7 +11,6 @@
 # to installing the new package, should be one transaction.
 #
 _pkgformat-replace: \
-	replace-names \
 	replace-tarup \
 	replace-preserve-installed-info \
 	replace-preserve-required-by \
@@ -24,7 +23,6 @@ _pkgformat-replace: \
 
 # tarup is omitted for DESTDIR, because the benefits are very small
 _pkgformat-destdir-replace: \
-	replace-names \
 	replace-destdir \
 	.PHONY
 
