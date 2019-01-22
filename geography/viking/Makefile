@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.95 2018/12/13 19:51:58 adam Exp $
+# $NetBSD: Makefile,v 1.96 2019/01/22 15:28:45 gdt Exp $
 #
 
-VERSION=		1.6.2
+VERSION=		1.7
 DISTNAME=		viking-${VERSION}
-PKGREVISION=		22
 CATEGORIES=		geography
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=viking/}${VERSION}/
 EXTRACT_SUFX=		.tar.bz2
@@ -14,46 +13,67 @@ COMMENT=		Viking manages GPS data, supports OpenStreetMap and geocaching
 
 LICENSE=		gnu-gpl-v2
 
-# C++11 is now required.
+# viking says it "will" use c++11, and mapnik (not yet included) needs
+# c++11.
 USE_LANGUAGES=		c c++
+
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 
 GNU_CONFIGURE=		yes
 
 TEST_TARGET=		check
 
+# For each option, "\todo RESOLVE" means: Decide to make default, or
+# to turn off, or to make an option, and explain why.
+
+# \todo RESOLVE
+CONFIGURE_ARGS+=	--disable-geoclue
+
+# \todo RESOLVE
 CONFIGURE_ARGS+=	--disable-magic
+
+# \todo RESOLVE
+CONFIGURE_ARGS+=	--disable-mapnik
+# \todo README says icu is required.  However, it seems to be
+# dependency of mapnik, not necessarily actually used by viking.
+
+# \todo RESOLVE
+CONFIGURE_ARGS+=	--disable-oauth
+
+# \todo RESOLVE
+CONFIGURE_ARGS+=	--disable-zip
+#.include "../../archivers/libzip/buildlink3.mk"
 
 # Perhaps optionize use of gpsd (remove bl3, add this).
 # CONFIGURE_ARGS+=	--disable-realtime-gps-tracking
 
-CONFIGURE_ARGS+=	--disable-mapnik
-
-# Building docs fails because mapnik being optional is not respected.
-# For now, just omit docs until we have mapnik.
+# Building docs fails with a unicode error.
+# old: Building docs fails because mapnik being optional is not respected.
+# \todo Resolve.
 #CONFIGURE_ARGS+=	--enable-gtk-doc
 #.include "../../textproc/gtk-doc/buildlink3.mk"
 
-# According to upstream, gpsbabel is merely recommended.  gpsbabel is
-# about to depend on qt5, and will thus become very large.  Users can
-# install it and use it at runtime, so don't depend on it.
+# According to upstream, gpsbabel is merely recommended.  gpsbabel
+# depends on qt, and is thus really large.  Users can install it and
+# use it at runtime, so don't depend on it at build time.
 #DEPENDS+=		gpsbabel-[0-9]*:../../geography/gpsbabel
-
-DEPENDS+=		p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
-REPLACE_PERL=		viking-remote
-
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 
+.include "../../archivers/bzip2/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/gexiv2/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../geography/gpsd/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
+# Avoids internal MD5, and betterintegration with thumbmail cache.
+.include "../../security/nettle/buildlink3.mk"
+# gnome-doc-utils is needed even if not building documentation
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+# \todo Consider gtk3, perhaps as an option.
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

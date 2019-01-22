@@ -1,6 +1,9 @@
-$NetBSD: patch-src_gpx.c,v 1.1 2015/12/13 20:37:31 wiedi Exp $
+$NetBSD: patch-src_gpx.c,v 1.2 2019/01/22 15:28:45 gdt Exp $
 
-Fix SunOS
+This is a build fix for SunOS.
+\todo Explain why, and if the new __sun way is correct in general.
+\todo File upstream.
+
 --- src/gpx.c.orig	2015-02-03 22:44:42.000000000 +0000
 +++ src/gpx.c
 @@ -30,7 +30,11 @@
