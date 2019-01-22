@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2018/09/27 22:35:14 tnn Exp $
+@comment $NetBSD: PLIST,v 1.21 2019/01/22 14:46:49 ryoon Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -45,6 +45,7 @@ share/tomcat/lib/tomcat-dbcp.jar
 share/tomcat/lib/tomcat-i18n-es.jar
 share/tomcat/lib/tomcat-i18n-fr.jar
 share/tomcat/lib/tomcat-i18n-ja.jar
+share/tomcat/lib/tomcat-i18n-ru.jar
 share/tomcat/lib/tomcat-jdbc.jar
 share/tomcat/lib/tomcat-util.jar
 share/tomcat/lib/tomcat7-websocket.jar
