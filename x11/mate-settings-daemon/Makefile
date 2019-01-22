@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2019/01/16 18:14:40 youri Exp $
+# $NetBSD: Makefile,v 1.20 2019/01/22 18:05:29 youri Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
+PKGREVISION=	1
 DISTNAME=	mate-settings-daemon-${VERSION:R}.2
 CATEGORIES=	x11
 
@@ -24,6 +25,10 @@ OWN_DIRS+=	${PKG_SYSCONFDIR}/mate-settings-daemon/xrandr
 CONF_FILES+=	${PREFIX}/share/examples/mate-settings-daemon/xdg/autostart/mate-settings-daemon.desktop \
 		${PKG_SYSCONFDIR}/xdg/autostart/mate-settings-daemon.desktop
 
+post-install:
+	${MKDIR} ${PKG_SYSCONFDIR}/xrdb
+	touch ${PKG_SYSCONFDIR}/xrdb/General.ad
+
 .include "../../devel/glib2/schemas.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 
@@ -34,6 +39,7 @@ CONF_FILES+=	${PREFIX}/share/examples/mate-settings-daemon/xdg/autostart/mate-se
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/dconf/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
