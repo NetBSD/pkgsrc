@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2018/07/04 13:40:16 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2019/01/22 14:08:47 he Exp $
 #
 
 DISTNAME=	tclreadline-2.1.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tclreadline/}
 
@@ -14,6 +14,9 @@ LICENSE=	modified-bsd
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-tcl=${PREFIX}/lib
+
+# Need real readline; otherwise rl_extend_line_buffer is undefined
+READLINE_DEFAULT=	readline
 
 EGDIR=		${PREFIX}/share/examples/tclreadline
 
