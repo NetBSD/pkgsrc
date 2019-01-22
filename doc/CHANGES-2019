@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.378 2019/01/22 12:46:46 markd Exp $
+$NetBSD: CHANGES-2019,v 1.379 2019/01/22 13:21:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -521,3 +521,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/tex-ifmtarg-doc to 1.2b [markd 2019-01-22]
 	Updated fonts/tex-mathalfa to 1.10 [markd 2019-01-22]
 	Updated fonts/tex-mathalfa-doc to 1.10 [markd 2019-01-22]
+	Updated mail/mutt to 1.11.2nb1 [wiz 2019-01-22]
