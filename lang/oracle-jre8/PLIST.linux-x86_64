@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-x86_64,v 1.10 2018/11/25 12:41:50 ryoon Exp $
+@comment $NetBSD: PLIST.linux-x86_64,v 1.11 2019/01/22 03:51:41 ryoon Exp $
 bin/oracle8-java
 bin/oracle8-javaws
 bin/oracle8-keytool
@@ -57,6 +57,8 @@ java/oracle-8/lib/amd64/libdt_socket.so
 java/oracle-8/lib/amd64/libfontmanager.so
 java/oracle-8/lib/amd64/libfxplugins.so
 java/oracle-8/lib/amd64/libglass.so
+java/oracle-8/lib/amd64/libglassgtk2.so
+java/oracle-8/lib/amd64/libglassgtk3.so
 java/oracle-8/lib/amd64/libglib-lite.so
 java/oracle-8/lib/amd64/libgstreamer-lite.so
 java/oracle-8/lib/amd64/libhprof.so
@@ -82,7 +84,6 @@ java/oracle-8/lib/amd64/libjsdt.so
 java/oracle-8/lib/amd64/libjsig.so
 java/oracle-8/lib/amd64/libjsound.so
 java/oracle-8/lib/amd64/libjsoundalsa.so
-java/oracle-8/lib/amd64/libkcms.so
 java/oracle-8/lib/amd64/liblcms.so
 java/oracle-8/lib/amd64/libmanagement.so
 java/oracle-8/lib/amd64/libmlib_image.so

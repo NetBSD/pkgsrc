@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2018/11/25 12:41:50 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.16 2019/01/22 03:51:41 ryoon Exp $
 # used by lang/oracle-jre8/Makefile
 # used by lang/oracle-jdk8/Makefile
 
@@ -16,7 +16,7 @@ NO_SRC_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 
-EMUL_PLATFORMS=		darwin-x86_64 linux-i386 linux-x86_64 solaris-i386 solaris-x86_64
+EMUL_PLATFORMS=		darwin-x86_64 linux-i386 linux-x86_64 solaris-x86_64
 
 USE_TOOLS+=	pax
 
@@ -27,7 +27,7 @@ CHECK_SSP_SUPPORTED=	no
 CTF_SUPPORTED=		no
 
 # JDK8 Update number
-UPDATE_NUMBER=	191
+UPDATE_NUMBER=	202
 
 .include "../../mk/bsd.prefs.mk"
 
