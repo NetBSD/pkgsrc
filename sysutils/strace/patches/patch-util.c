@@ -1,19 +1,21 @@
-$NetBSD: patch-ba,v 1.1 2007/04/27 19:45:03 christos Exp $
+$NetBSD: patch-util.c,v 1.1 2019/01/22 22:07:33 christos Exp $
 
---- util.c.orig	2005-10-21 18:06:46.000000000 -0400
-+++ util.c	2007-04-27 11:31:51.000000000 -0400
-@@ -36,9 +36,9 @@
+--- util.c.orig	2007-01-11 17:08:38.000000000 -0500
++++ util.c	2019-01-22 16:54:09.288699797 -0500
+@@ -36,9 +36,11 @@
  #include "defs.h"
  
  #include <signal.h>
 +#include <sys/param.h>
  #include <sys/syscall.h>
++#ifndef NETBSD
  #include <sys/user.h>
 -#include <sys/param.h>
++#endif
  #include <fcntl.h>
  #if HAVE_SYS_UIO_H
  #include <sys/uio.h>
-@@ -58,6 +58,9 @@
+@@ -58,6 +60,9 @@
  # include <asm/rse.h>
  #endif
  
@@ -23,7 +25,7 @@ $NetBSD: patch-ba,v 1.1 2007/04/27 19:45:03 christos Exp $
  #ifdef HAVE_SYS_REG_H
  #include <sys/reg.h>
  # define PTRACE_PEEKUSR PTRACE_PEEKUSER
-@@ -96,6 +99,7 @@
+@@ -96,6 +101,7 @@
  # define PTRACE_SETREGS PTRACE_SETREGS64
  #endif /* SPARC64 */
  
@@ -31,7 +33,7 @@ $NetBSD: patch-ba,v 1.1 2007/04/27 19:45:03 christos Exp $
  #if !defined(__GLIBC__)
  
  #include <linux/unistd.h>
-@@ -759,6 +763,20 @@
+@@ -777,6 +783,20 @@
  		return -1;
  #endif /* USE_PROCFS */
  
@@ -52,7 +54,7 @@ $NetBSD: patch-ba,v 1.1 2007/04/27 19:45:03 christos Exp $
  	return 0;
  }
  
-@@ -1079,6 +1097,14 @@
+@@ -1097,6 +1117,14 @@
  	pread(tcp->pfd_reg, &regs, sizeof(regs), 0);
  	return regs.r_eip;
  #endif /* FREEBSD */
