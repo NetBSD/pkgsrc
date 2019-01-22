@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.389 2019/01/22 18:28:46 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.390 2019/01/22 21:50:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -531,3 +531,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed fonts/unicode-ucd [youri 2019-01-22]
 	Added sysutils/u-boot-odroid-c2 version 2018.11 [martin 2019-01-22]
 	Updated net/openconnect to 8.02 [schmonz 2019-01-22]
+	Updated x11/libdrm to 2.4.97 [wiz 2019-01-22]
