@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.367 2019/01/22 00:07:52 nia Exp $
+$NetBSD: CHANGES-2019,v 1.368 2019/01/22 02:29:23 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -485,3 +485,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-daemonize to 2.5.0 [adam 2019-01-21]
 	Added fonts/unicode-ucd version 11.0.0 [youri 2019-01-21]
 	Updated lang/erlang to 21.2.3 [nia 2019-01-22]
+	Updated devel/tradcpp to 0.5.3 [dholland 2019-01-22]
