@@ -1,4 +1,7 @@
-$NetBSD: patch-tclreadline.c,v 1.1 2015/06/08 13:39:35 joerg Exp $
+$NetBSD: patch-tclreadline.c,v 1.2 2019/01/22 14:08:48 he Exp $
+
+Some const'ness.
+Comment out two FREE() calls which now cause crashes...
 
 --- tclreadline.c.orig	2015-06-08 12:42:30.000000000 +0000
 +++ tclreadline.c
@@ -35,7 +38,20 @@ $NetBSD: patch-tclreadline.c,v 1.1 2015/06/08 13:39:35 joerg Exp $
      char* result_c;
      int i, len = strlen(quotechars);
      Tcl_DString result;
-@@ -635,7 +635,7 @@ TclReadlineInitialize(Tcl_Interp* interp
+@@ -544,8 +544,10 @@ TclReadlineLineCompleteHandler(char* ptr
+ 	 * tell the calling routines to terminate.
+ 	 */
+ 	TclReadlineTerminate(LINE_COMPLETE);
+-	FREE(ptr);
+-	FREE(expansion);
++
++	/* These now cause crashes: */
++	/* FREE(ptr); */
++	/* FREE(expansion); */
+     }
+ }
+ 
+@@ -635,7 +637,7 @@ TclReadlineInitialize(Tcl_Interp* interp
       * directory. If this failes, this
       * is *not* an error.
       */
@@ -44,7 +60,7 @@ $NetBSD: patch-tclreadline.c,v 1.1 2015/06/08 13:39:35 joerg Exp $
      if (read_history(historyfile)) {
  	if (write_history(historyfile)) {
  	    Tcl_AppendResult (interp, "warning: `",
-@@ -657,7 +657,7 @@ blank_line(char* str)
+@@ -657,7 +659,7 @@ blank_line(char* str)
  }
  
  static char**
@@ -53,7 +69,7 @@ $NetBSD: patch-tclreadline.c,v 1.1 2015/06/08 13:39:35 joerg Exp $
  {
      char** matches = (char**) NULL;
      int status;
-@@ -752,13 +752,13 @@ TclReadlineCompletion(char* text, int st
+@@ -752,13 +754,13 @@ TclReadlineCompletion(char* text, int st
  }
  
  static char*
@@ -69,7 +85,7 @@ $NetBSD: patch-tclreadline.c,v 1.1 2015/06/08 13:39:35 joerg Exp $
  {
      static int len;
      static cmds_t *cmds = (cmds_t *) NULL, *new;
-@@ -881,6 +881,6 @@ TclReadlineParse(char** args, int maxarg
+@@ -881,6 +883,6 @@ TclReadlineParse(char** args, int maxarg
  	    buf++;
      }
  
