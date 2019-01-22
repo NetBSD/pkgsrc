@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.376 2019/01/22 10:48:37 adam Exp $
+$NetBSD: CHANGES-2019,v 1.377 2019/01/22 11:19:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -504,3 +504,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-logbook to 1.4.3 [adam 2019-01-22]
 	Updated textproc/py-eradicate to 1.0 [adam 2019-01-22]
 	Updated devel/py-entrypoints to 0.3 [adam 2019-01-22]
+	Updated lang/npm to 6.6.0 [adam 2019-01-22]
