@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.18 2016/04/10 15:58:02 joerg Exp $
+# $NetBSD: replace.mk,v 1.19 2019/01/22 14:29:44 roy Exp $
 #
 # Public targets:
 #
@@ -28,6 +28,7 @@ _REPLACE_TARGETS+=	stage-package-create
 _REPLACE_TARGETS+=	package
 .endif
 _REPLACE_TARGETS+=	replace-message
+_REPLACE_TARGETS+=	replace-names
 _REPLACE_TARGETS+=	unprivileged-install-hook
 
 #
