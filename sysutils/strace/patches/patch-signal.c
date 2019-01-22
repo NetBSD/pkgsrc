@@ -1,13 +1,15 @@
-$NetBSD: patch-aq,v 1.4 2011/08/30 10:43:11 christos Exp $
+$NetBSD: patch-signal.c,v 1.1 2019/01/22 22:07:33 christos Exp $
 
---- signal.c.orig	2007-01-12 00:08:38.000000000 +0200
-+++ signal.c	2011-08-30 12:50:29.000000000 +0300
-@@ -36,12 +36,27 @@
+--- signal.c.orig	2007-01-11 17:08:38.000000000 -0500
++++ signal.c	2019-01-22 16:54:46.145801860 -0500
+@@ -36,12 +36,29 @@
  #include "defs.h"
  
  #include <signal.h>
 +#include <sys/param.h>
++#ifndef NETBSD
  #include <sys/user.h>
++#endif
  #include <fcntl.h>
  
 -#ifdef SVR4
@@ -31,7 +33,7 @@ $NetBSD: patch-aq,v 1.4 2011/08/30 10:43:11 christos Exp $
  
  #ifdef HAVE_SYS_REG_H
  # include <sys/reg.h>
-@@ -1056,14 +1071,14 @@
+@@ -1056,14 +1073,14 @@
  	return 0;
  }
  
@@ -48,7 +50,7 @@ $NetBSD: patch-aq,v 1.4 2011/08/30 10:43:11 christos Exp $
  
  #endif /* !SVR4 */
  
-@@ -1165,13 +1180,13 @@
+@@ -1165,13 +1182,13 @@
  		printsignal(tcp->u_arg[0]);
  		tprintf(", ");
  		switch (tcp->u_arg[1]) {
@@ -65,7 +67,7 @@ $NetBSD: patch-aq,v 1.4 2011/08/30 10:43:11 christos Exp $
  #ifndef USE_PROCFS
  			if (tcp->u_arg[0] == SIGTRAP) {
  				tcp->flags |= TCB_SIGTRAPPED;
-@@ -1193,11 +1208,11 @@
+@@ -1193,11 +1210,11 @@
  	}
  	else {
  		switch (tcp->u_rval) {
@@ -80,7 +82,7 @@ $NetBSD: patch-aq,v 1.4 2011/08/30 10:43:11 christos Exp $
  			tcp->auxstr = "SIG_IGN"; break;
  		    default:
  			tcp->auxstr = NULL;
-@@ -1489,7 +1504,7 @@
+@@ -1489,7 +1506,7 @@
  
  #endif /* LINUX */
  
@@ -89,7 +91,7 @@ $NetBSD: patch-aq,v 1.4 2011/08/30 10:43:11 christos Exp $
  
  int
  sys_sigsuspend(tcp)
-@@ -1521,7 +1536,7 @@
+@@ -1521,7 +1538,7 @@
  #endif /* !FREEBSD */
  #endif /* SVR4 || FREEBSD */
  
@@ -98,7 +100,7 @@ $NetBSD: patch-aq,v 1.4 2011/08/30 10:43:11 christos Exp $
  #if defined LINUX && !defined SS_ONSTACK
  #define SS_ONSTACK      1
  #define SS_DISABLE      2
-@@ -1613,7 +1628,7 @@
+@@ -1613,7 +1630,7 @@
  
  #endif /* SVR4 */
  
@@ -107,7 +109,7 @@ $NetBSD: patch-aq,v 1.4 2011/08/30 10:43:11 christos Exp $
  
  static int
  print_stack_t(tcp, addr)
-@@ -1702,14 +1717,14 @@
+@@ -1702,14 +1719,14 @@
  	return 0;
  }
  

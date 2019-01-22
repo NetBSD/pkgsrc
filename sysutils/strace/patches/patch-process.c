@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.4 2009/12/29 22:03:41 spz Exp $
+$NetBSD: patch-process.c,v 1.1 2019/01/22 22:07:33 christos Exp $
 
---- process.c.orig	2007-01-11 23:08:38.000000000 +0100
-+++ process.c	2009-12-29 21:57:56.000000000 +0100
-@@ -40,6 +40,7 @@
+--- process.c.orig	2007-01-11 17:08:38.000000000 -0500
++++ process.c	2019-01-22 16:54:25.476690976 -0500
+@@ -40,19 +40,22 @@
  #include "defs.h"
  
  #include <fcntl.h>
@@ -10,7 +10,14 @@ $NetBSD: patch-ao,v 1.4 2009/12/29 22:03:41 spz Exp $
  #include <sys/stat.h>
  #include <sys/time.h>
  #include <sys/wait.h>
-@@ -52,7 +53,7 @@
+ #include <sys/resource.h>
+ #include <sys/utsname.h>
++#ifndef NETBSD
+ #include <sys/user.h>
++#endif
+ #include <sys/syscall.h>
+ #include <signal.h>
+ #ifdef SUNOS4
  #include <machine/reg.h>
  #endif /* SUNOS4 */
  
@@ -19,7 +26,7 @@ $NetBSD: patch-ao,v 1.4 2009/12/29 22:03:41 spz Exp $
  #include <sys/ptrace.h>
  #endif
  
-@@ -305,7 +306,7 @@
+@@ -305,7 +308,7 @@
  
  #endif /* HAVE_PRCTL */
  
@@ -28,7 +35,7 @@ $NetBSD: patch-ao,v 1.4 2009/12/29 22:03:41 spz Exp $
  int
  sys_gethostid(tcp)
  struct tcb *tcp;
-@@ -314,7 +315,7 @@
+@@ -314,7 +317,7 @@
  		return RVAL_HEX;
  	return 0;
  }
@@ -37,7 +44,7 @@ $NetBSD: patch-ao,v 1.4 2009/12/29 22:03:41 spz Exp $
  
  int
  sys_sethostname(tcp)
-@@ -327,7 +328,7 @@
+@@ -327,7 +330,7 @@
  	return 0;
  }
  
@@ -46,7 +53,7 @@ $NetBSD: patch-ao,v 1.4 2009/12/29 22:03:41 spz Exp $
  int
  sys_gethostname(tcp)
  struct tcb *tcp;
-@@ -341,7 +342,7 @@
+@@ -341,7 +344,7 @@
  	}
  	return 0;
  }
@@ -55,7 +62,7 @@ $NetBSD: patch-ao,v 1.4 2009/12/29 22:03:41 spz Exp $
  
  int
  sys_setdomainname(tcp)
-@@ -1058,7 +1059,7 @@
+@@ -1058,7 +1061,7 @@
  
  #endif /* !USE_PROCFS */
  
@@ -64,7 +71,7 @@ $NetBSD: patch-ao,v 1.4 2009/12/29 22:03:41 spz Exp $
  
  int
  sys_vfork(tcp)
-@@ -1069,7 +1070,7 @@
+@@ -1069,7 +1072,7 @@
  	return 0;
  }
  
@@ -73,7 +80,7 @@ $NetBSD: patch-ao,v 1.4 2009/12/29 22:03:41 spz Exp $
  
  #ifndef LINUX
  
-@@ -2051,7 +2052,7 @@
+@@ -2051,7 +2054,7 @@
  
  #endif /* SVR4 */
  
@@ -82,7 +89,7 @@ $NetBSD: patch-ao,v 1.4 2009/12/29 22:03:41 spz Exp $
  int
  sys_wait(tcp)
  struct tcb *tcp;
-@@ -2070,12 +2071,14 @@
+@@ -2070,12 +2073,14 @@
  }
  #endif
  
@@ -97,7 +104,7 @@ $NetBSD: patch-ao,v 1.4 2009/12/29 22:03:41 spz Exp $
  
  int
  sys_wait4(tcp)
-@@ -2205,7 +2208,7 @@
+@@ -2205,7 +2210,7 @@
  #ifndef SVR4
  
  static const struct xlat ptrace_cmds[] = {
@@ -106,7 +113,7 @@ $NetBSD: patch-ao,v 1.4 2009/12/29 22:03:41 spz Exp $
  	{ PTRACE_TRACEME,	"PTRACE_TRACEME"	},
  	{ PTRACE_PEEKTEXT,	"PTRACE_PEEKTEXT",	},
  	{ PTRACE_PEEKDATA,	"PTRACE_PEEKDATA",	},
-@@ -2271,7 +2274,7 @@
+@@ -2271,7 +2276,7 @@
  #endif /* !I386 */
  	{ PTRACE_GETUCODE,	"PTRACE_GETUCODE"	},
  #endif /* SUNOS4 */
@@ -115,7 +122,7 @@ $NetBSD: patch-ao,v 1.4 2009/12/29 22:03:41 spz Exp $
  	{ PT_TRACE_ME,		"PT_TRACE_ME"		},
  	{ PT_READ_I,		"PT_READ_I"		},
  	{ PT_READ_D,		"PT_READ_D"		},
-@@ -2282,20 +2285,26 @@
+@@ -2282,20 +2287,26 @@
  #endif
  	{ PT_CONTINUE,		"PT_CONTINUE"		},
  	{ PT_KILL,		"PT_KILL"		},
@@ -144,7 +151,7 @@ $NetBSD: patch-ao,v 1.4 2009/12/29 22:03:41 spz Exp $
  #ifndef SUNOS4_KERNEL_ARCH_KLUDGE
  static
  #endif /* !SUNOS4_KERNEL_ARCH_KLUDGE */
-@@ -2982,12 +2991,14 @@
+@@ -2982,12 +2993,14 @@
  sys_ptrace(tcp)
  struct tcb *tcp;
  {
@@ -160,7 +167,7 @@ $NetBSD: patch-ao,v 1.4 2009/12/29 22:03:41 spz Exp $
  			  "PTRACE_???"
  #else
  			  "PT_???"
-@@ -2995,7 +3006,7 @@
+@@ -2995,7 +3008,7 @@
  			);
  		tprintf(", %lu, ", tcp->u_arg[1]);
  		addr = tcp->u_arg[2];
@@ -169,7 +176,7 @@ $NetBSD: patch-ao,v 1.4 2009/12/29 22:03:41 spz Exp $
  		if (tcp->u_arg[0] == PTRACE_PEEKUSER
  			|| tcp->u_arg[0] == PTRACE_POKEUSER) {
  			for (x = struct_user_offsets; x->str; x++) {
-@@ -3057,10 +3068,10 @@
+@@ -3057,10 +3070,10 @@
  		}
  	}
  #endif /* SUNOS4 */
