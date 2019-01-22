@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/01/22 14:54:41 ryoon Exp $
+
+SHA1 (apache-tomcat-9.0.14.tar.gz) = 582092dbdd8a57662e597660abfa397e0c9e9a29
+RMD160 (apache-tomcat-9.0.14.tar.gz) = 5eac8e07d0c4f53b20f69920e71e1c826bd86acd
+SHA512 (apache-tomcat-9.0.14.tar.gz) = 6a06eabacb02eaa2c64772265f8ddb5ddbfbad72b4c5da82e68da739675c3ec7e4692ebb8aa80e1b5512006f60856c939c7c3a5fe4f46f30bd4b575ecd068d54
+Size (apache-tomcat-9.0.14.tar.gz) = 10492627 bytes
