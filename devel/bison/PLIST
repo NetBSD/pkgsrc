@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2015/01/22 04:57:57 mef Exp $
+@comment $NetBSD: PLIST,v 1.29 2019/01/22 03:20:40 ryoon Exp $
 bin/bison
 info/bison.info
 man/man1/bison.1
@@ -41,6 +41,8 @@ share/doc/bison/examples/mfcalc/calc.h
 share/doc/bison/examples/mfcalc/mfcalc.y
 share/doc/bison/examples/rpcalc/rpcalc.y
 share/locale/ast/LC_MESSAGES/bison-runtime.mo
+share/locale/ca/LC_MESSAGES/bison-runtime.mo
+share/locale/ca/LC_MESSAGES/bison.mo
 share/locale/da/LC_MESSAGES/bison-runtime.mo
 share/locale/da/LC_MESSAGES/bison.mo
 share/locale/de/LC_MESSAGES/bison-runtime.mo
