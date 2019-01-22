@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2018/06/17 17:13:40 minskim Exp $
+# $NetBSD: Makefile,v 1.38 2019/01/22 12:00:20 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2018pre3
+PKGNAME=	texlive-${DISTNAME}-2018pre4
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	47224
@@ -372,7 +372,7 @@ DEPENDS+=	tex-esint-[0-9]*:../../fonts/tex-esint
 # depend esint-type1
 # depend etaremune
 # depend etextools
-# depend etoc
+DEPENDS+=	tex-etoc-[0-9]*:../../print/tex-etoc
 # depend eukdate
 # depend eulerpx
 DEPENDS+=	tex-europasscv-[0-9]*:../../print/tex-europasscv
@@ -750,7 +750,7 @@ DEPENDS+=	tex-needspace-[0-9]*:../../print/tex-needspace
 # depend newfile
 DEPENDS+=	tex-newlfm-[0-9]*:../../print/tex-newlfm
 # depend newspaper
-# depend newunicodechar
+DEPENDS+=	tex-newunicodechar-[0-9]*:../../print/tex-newunicodechar
 # depend newvbtm
 # depend newverbs
 DEPENDS+=	tex-nextpage-[0-9]*:../../print/tex-nextpage
@@ -1000,7 +1000,7 @@ DEPENDS+=	tex-srcltx-[0-9]*:../../print/tex-srcltx
 # depend sseq
 # depend sslides
 # depend stack
-# depend stackengine
+DEPENDS+=	tex-stackengine-[0-9]*:../../print/tex-stackengine
 DEPENDS+=	tex-standalone-[0-9]*:../../print/tex-standalone
 # depend statistik
 DEPENDS+=	tex-stdclsdv-[0-9]*:../../print/tex-stdclsdv
