@@ -1,10 +1,10 @@
-$NetBSD: patch-xf86drm.c,v 1.3 2019/01/06 02:23:00 tnn Exp $
+$NetBSD: patch-xf86drm.c,v 1.4 2019/01/22 21:50:47 wiz Exp $
 
 Implement drmParseSubsystemType, drmParsePciBusInfo for NetBSD
 
---- xf86drm.c.orig	2018-10-16 14:49:03.000000000 +0000
+--- xf86drm.c.orig	2019-01-22 16:32:41.000000000 +0000
 +++ xf86drm.c
-@@ -84,7 +84,10 @@
+@@ -86,7 +86,10 @@
  #endif
  
  #ifdef __NetBSD__
@@ -16,10 +16,10 @@ Implement drmParseSubsystemType, drmParsePciBusInfo for NetBSD
  #endif
  
  #ifdef __OpenBSD__
-@@ -3011,6 +3014,65 @@ static int drmParseSubsystemType(int maj
-         return DRM_BUS_VIRTIO;
+@@ -3013,6 +3016,65 @@ static int drmParseSubsystemType(int maj
+             return bus_types[i].bus_type;
+     }
  
-     return -EINVAL;
 +#elif defined(__NetBSD__)
 +    int type, fd;
 +    drmSetVersion sv;
@@ -79,13 +79,13 @@ Implement drmParseSubsystemType, drmParsePciBusInfo for NetBSD
 +
 +    /* Success or not, we're done.  */
 +    return ret;
- #elif defined(__OpenBSD__)
+     return -EINVAL;
+ #elif defined(__OpenBSD__) || defined(__DragonFly__)
      return DRM_BUS_PCI;
- #else
-@@ -3060,6 +3122,73 @@ static int drmParsePciBusInfo(int maj, i
+@@ -3062,6 +3124,73 @@ static int drmParsePciBusInfo(int maj, i
+     info->dev = dev;
      info->func = func;
  
-     return 0;
 +#elif defined(__NetBSD__)
 +    int type, fd;
 +    drmSetVersion sv;
@@ -153,10 +153,10 @@ Implement drmParseSubsystemType, drmParsePciBusInfo for NetBSD
 +
 +    /* Success!  */
 +    return 0;
- #elif defined(__OpenBSD__)
+     return 0;
+ #elif defined(__OpenBSD__) || defined(__DragonFly__)
      struct drm_pciinfo pinfo;
-     int fd, type;
-@@ -3227,6 +3356,48 @@ static int drmParsePciDeviceInfo(int maj
+@@ -3229,6 +3358,48 @@ static int drmParsePciDeviceInfo(int maj
          return parse_config_sysfs_file(maj, min, device);
  
      return 0;
@@ -202,6 +202,6 @@ Implement drmParseSubsystemType, drmParsePciBusInfo for NetBSD
 +	ret = -errno;
 +    close(pcifd);
 +    return ret;
- #elif defined(__OpenBSD__)
+ #elif defined(__OpenBSD__) || defined(__DragonFly__)
      struct drm_pciinfo pinfo;
      int fd, type;
