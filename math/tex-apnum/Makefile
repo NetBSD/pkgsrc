@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2016/06/16 04:01:58 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/01/22 12:22:18 markd Exp $
 
 DISTNAME=	apnum
-PKGNAME=	tex-${DISTNAME}-1.6
-TEXLIVE_REV=	39710
+PKGNAME=	tex-${DISTNAME}-1.7
+TEXLIVE_REV=	47510
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/apnum
