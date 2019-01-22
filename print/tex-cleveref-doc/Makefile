@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2018/05/06 01:44:56 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/01/22 12:09:31 markd Exp $
 
 DISTNAME=	cleveref.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.21.3
-TEXLIVE_REV=	46847
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.21.4
+TEXLIVE_REV=	47525
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/cleveref
