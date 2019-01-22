@@ -1,19 +1,21 @@
-$NetBSD: patch-au,v 1.5 2017/06/27 15:26:05 christos Exp $
+$NetBSD: patch-syscall.c,v 1.1 2019/01/22 22:07:33 christos Exp $
 
 --- syscall.c.orig	2006-12-21 17:13:33.000000000 -0500
-+++ syscall.c	2017-06-27 11:17:20.342117800 -0400
-@@ -38,9 +38,9 @@
++++ syscall.c	2019-01-22 16:53:51.213106690 -0500
+@@ -38,9 +38,11 @@
  #include <signal.h>
  #include <time.h>
  #include <errno.h>
 +#include <sys/param.h>
++#ifndef NETBSD
  #include <sys/user.h>
++#endif
  #include <sys/syscall.h>
 -#include <sys/param.h>
  
  #if HAVE_ASM_REG_H
  #if defined (SPARC) || defined (SPARC64)
-@@ -56,6 +56,10 @@
+@@ -56,6 +58,10 @@
  #endif
  #endif
  
@@ -24,7 +26,46 @@ $NetBSD: patch-au,v 1.5 2017/06/27 15:26:05 christos Exp $
  #ifdef HAVE_SYS_REG_H
  #include <sys/reg.h>
  #ifndef PTRACE_PEEKUSR
-@@ -624,6 +628,7 @@
+@@ -467,16 +473,19 @@
+ 	for (p = strtok(s, ","); p; p = strtok(NULL, ",")) {
+ 		if (opt->bitflag == QUAL_TRACE && (n = lookup_class(p)) > 0) {
+ 			for (i = 0; i < MAX_QUALS; i++) {
+-				if (sysent0[i].sys_flags & n)
++				if (i < __arraycount(sysent0) 
++				    && (sysent0[i].sys_flags & n))
+ 					qualify_one(i, opt, not, 0);
+ 
+ #if SUPPORTED_PERSONALITIES >= 2
+-				if (sysent1[i].sys_flags & n)
++				if (i < __arraycount(sysent1) 
++				    && (sysent1[i].sys_flags & n))
+ 					qualify_one(i, opt, not, 1);
+ #endif /* SUPPORTED_PERSONALITIES >= 2 */
+ 
+ #if SUPPORTED_PERSONALITIES >= 3
+-				if (sysent2[i].sys_flags & n)
++				if (i < __arraycount(sysent2) 
++				    && (sysent2[i].sys_flags & n))
+ 					qualify_one(i, opt, not, 2);
+ #endif /* SUPPORTED_PERSONALITIES >= 3 */
+ 			}
+@@ -580,6 +589,7 @@
+ 
+ #if !(defined(LINUX) && ( defined(ALPHA) || defined(MIPS) ))
+ 
++#if defined (SPARC) || defined (SPARC64)
+ static const int socket_map [] = {
+ 	       /* SYS_SOCKET      */ 97,
+ 	       /* SYS_BIND        */ 104,
+@@ -600,7 +610,6 @@
+ 	       /* SYS_RECVMSG     */ 113
+ };
+ 
+-#if defined (SPARC) || defined (SPARC64)
+ static void
+ sparc_socket_decode (tcp)
+ struct tcb *tcp;
+@@ -624,6 +633,7 @@
  }
  #endif
  
@@ -32,7 +73,7 @@ $NetBSD: patch-au,v 1.5 2017/06/27 15:26:05 christos Exp $
  static void
  decode_subcall(tcp, subcall, nsubcalls, style)
  struct tcb *tcp;
-@@ -709,6 +714,7 @@
+@@ -709,6 +719,7 @@
  #endif /* FREEBSD */
  	}
  }
@@ -40,7 +81,7 @@ $NetBSD: patch-au,v 1.5 2017/06/27 15:26:05 christos Exp $
  #endif
  
  struct tcb *tcp_last = NULL;
-@@ -747,7 +753,7 @@
+@@ -747,7 +758,7 @@
  #endif
  
  	if (   sys_execve == func
@@ -49,7 +90,7 @@ $NetBSD: patch-au,v 1.5 2017/06/27 15:26:05 christos Exp $
  	    || sys_execv == func
  #endif
  #if UNIXWARE > 2
-@@ -756,11 +762,14 @@
+@@ -756,11 +767,14 @@
  	   )
  		return internal_exec(tcp);
  
@@ -67,7 +108,7 @@ $NetBSD: patch-au,v 1.5 2017/06/27 15:26:05 christos Exp $
  #ifdef ALPHA
  	    || sys_osf_wait4 == func
  #endif
-@@ -811,9 +820,9 @@
+@@ -811,9 +825,9 @@
         static long rax;
  #endif
  #endif /* LINUX */
@@ -80,7 +121,7 @@ $NetBSD: patch-au,v 1.5 2017/06/27 15:26:05 christos Exp $
  
  int
  get_scno(tcp)
-@@ -1283,9 +1292,9 @@
+@@ -1283,9 +1297,9 @@
  #ifdef HAVE_PR_SYSCALL
  	scno = tcp->status.PR_SYSCALL;
  #else /* !HAVE_PR_SYSCALL */
@@ -92,7 +133,7 @@ $NetBSD: patch-au,v 1.5 2017/06/27 15:26:05 christos Exp $
  	if (pread(tcp->pfd_reg, &regs, sizeof(regs), 0) < 0) {
  	        perror("pread");
                  return -1;
-@@ -1299,8 +1308,41 @@
+@@ -1299,8 +1313,41 @@
  	        scno = regs.r_eax;
  	        break;
  	}
@@ -135,7 +176,7 @@ $NetBSD: patch-au,v 1.5 2017/06/27 15:26:05 christos Exp $
  #endif /* USE_PROCFS */
  	if (!(tcp->flags & TCB_INSYSCALL))
  		tcp->scno = scno;
-@@ -1325,7 +1367,9 @@
+@@ -1325,7 +1372,9 @@
  struct tcb *tcp;
  {
  #ifndef USE_PROCFS
@@ -145,7 +186,7 @@ $NetBSD: patch-au,v 1.5 2017/06/27 15:26:05 christos Exp $
  #else /* USE_PROCFS */
  	int scno = known_scno(tcp);
  
-@@ -1698,17 +1742,36 @@
+@@ -1698,17 +1747,36 @@
  		}
  #endif /* MIPS */
  #endif /* SVR4 */
@@ -184,7 +225,7 @@ $NetBSD: patch-au,v 1.5 2017/06/27 15:26:05 christos Exp $
  	tcp->u_error = u_error;
  	return 1;
  }
-@@ -1891,6 +1954,32 @@
+@@ -1891,6 +1959,32 @@
                  return -1;
          }
  #endif /* FREEBSD */
@@ -217,7 +258,7 @@ $NetBSD: patch-au,v 1.5 2017/06/27 15:26:05 christos Exp $
  
  	/* All branches reach here on success (only).  */
  	tcp->u_error = error;
-@@ -1903,7 +1992,9 @@
+@@ -1903,7 +1997,9 @@
  struct tcb *tcp;
  {
  #ifndef USE_PROCFS
@@ -227,7 +268,7 @@ $NetBSD: patch-au,v 1.5 2017/06/27 15:26:05 christos Exp $
  #endif /* !USE_PROCFS */
  #ifdef LINUX
  #if defined(S390) || defined(S390X)
-@@ -2201,6 +2292,58 @@
+@@ -2201,6 +2297,58 @@
  	I DONT KNOW WHAT TO DO
  #endif /* !HAVE_PR_SYSCALL */
  #endif /* SVR4 */
@@ -286,7 +327,7 @@ $NetBSD: patch-au,v 1.5 2017/06/27 15:26:05 christos Exp $
  #ifdef FREEBSD
  	if (tcp->scno >= 0 && tcp->scno < nsyscalls &&
  	    sysent[tcp->scno].nargs > tcp->status.val)
-@@ -2570,6 +2713,19 @@
+@@ -2570,6 +2718,19 @@
  	pread(tcp->pfd_reg, &regs, sizeof(regs), 0);
  	val = regs.r_edx;
  #endif
