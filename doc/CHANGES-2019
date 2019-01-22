@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.368 2019/01/22 02:29:23 dholland Exp $
+$NetBSD: CHANGES-2019,v 1.369 2019/01/22 03:21:14 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -486,3 +486,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added fonts/unicode-ucd version 11.0.0 [youri 2019-01-21]
 	Updated lang/erlang to 21.2.3 [nia 2019-01-22]
 	Updated devel/tradcpp to 0.5.3 [dholland 2019-01-22]
+	Updated devel/bison to 3.0.5 [ryoon 2019-01-22]
