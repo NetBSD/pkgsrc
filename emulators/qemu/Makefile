@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.197 2018/12/13 19:51:50 adam Exp $
+# $NetBSD: Makefile,v 1.198 2019/01/22 12:08:14 gson Exp $
 
 DISTNAME=	qemu-3.1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
 EXTRACT_SUFX=	.tar.xz
@@ -51,6 +51,7 @@ NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-aarch64
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-alpha
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-arm
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-cris
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-hppa
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-i386
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-lm32
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-m68k
@@ -61,9 +62,12 @@ NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-mips64
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-mips64el
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-mipsel
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-moxie
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-nios2
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-or1k
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-ppc
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-ppc64
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-riscv32
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-riscv64
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-s390x
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-sh4
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-sh4eb
