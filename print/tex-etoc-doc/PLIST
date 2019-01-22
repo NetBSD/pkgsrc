@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2019/01/22 11:45:37 markd Exp $
+share/texmf-dist/doc/latex/etoc/README.md
+share/texmf-dist/doc/latex/etoc/etoc-DE.pdf
+share/texmf-dist/doc/latex/etoc/etoc.pdf
