@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.386 2019/01/22 15:33:01 roy Exp $
+$NetBSD: CHANGES-2019,v 1.387 2019/01/22 16:58:20 youri Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -528,3 +528,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added www/apache-tomcat9 version 9.0.14 [ryoon 2019-01-22]
 	Updated geography/viking to 1.7 [gdt 2019-01-22]
 	Updated net/dhcpcd to 7.1.0 [roy 2019-01-22]
+	Removed fonts/unicode-ucd [youri 2019-01-22]
