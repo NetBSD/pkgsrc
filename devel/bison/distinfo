@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.48 2019/01/16 00:19:31 gutteridge Exp $
+$NetBSD: distinfo,v 1.49 2019/01/22 03:20:40 ryoon Exp $
 
-SHA1 (bison-3.0.4.tar.xz) = 8270497aad88c7dd4f2c317298c50513fb0c3c8e
-RMD160 (bison-3.0.4.tar.xz) = 414959f3d619d8e4875e241ee02852b2ff13c2cb
-SHA512 (bison-3.0.4.tar.xz) = bbdc23e7772e49da1c7c47e66d4e4efbfbfe9b21dbc59bf3ad9a6e573eecac6c9f52c7f11a64be9897e8deb99ef7ba015164aa8232aa391b901dd7db03632412
-Size (bison-3.0.4.tar.xz) = 1973796 bytes
+SHA1 (bison-3.0.5.tar.xz) = 45e904d04d88c821df95833c4be4414ce5a47a4b
+RMD160 (bison-3.0.5.tar.xz) = f13012d77dfddc8c5ed0c717f9006049ae17b8af
+SHA512 (bison-3.0.5.tar.xz) = 00b448db8abe91b07e32ff5273c6617bc1350d806f92073a9472f4c2f0de5d22c152795674171b74f2eb9eff8d36f8173b82dacb215601bb071ae39404d4a8a2
+Size (bison-3.0.5.tar.xz) = 1954868 bytes
 SHA1 (patch-data_glr.c) = a2e0900ed995e4320e80f8ed05eae8e82be50502
-SHA1 (patch-lib_fseterr.c) = 59dd24cc0612d7a562fa6a0e89f7d6911ad2147e
 SHA1 (patch-lib_isnan.c) = 5b44fc6e2e97e36f91cd784bf3a38ad459fccdab
-SHA1 (patch-lib_stdio.in.h) = bb793f0c8f56c3a838609f8a86cf5afc70420da8
-SHA1 (patch-lib_vasnprintf.c) = 2bced6c121efc9bc5894174c7745ba89e8f53033
