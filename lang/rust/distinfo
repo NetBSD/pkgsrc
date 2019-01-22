@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.52 2019/01/19 12:44:08 ryoon Exp $
+$NetBSD: distinfo,v 1.53 2019/01/22 09:17:15 jperkin Exp $
 
 SHA1 (rust-1.31.0-x86_64-sun-solaris.tar.gz) = 782763ddcfb58df6d522aa8b66286e01451c6cb5
 RMD160 (rust-1.31.0-x86_64-sun-solaris.tar.gz) = ad93cf10e3b21c63989310b49ea6874520062400
@@ -116,3 +116,4 @@ SHA1 (patch-src_tools_cargo_tests_testsuite_build.rs) = 76e77c2c49baf8c951ed8d22
 SHA1 (patch-src_tools_rls_src_cmd.rs) = 754bfb8806e209cb0ef01690b48bf4b145017ab9
 SHA1 (patch-src_tools_rls_src_server_io.rs) = 74b90c1aeb70b0c3a20709145d6568ddf4647877
 SHA1 (patch-src_tools_rust-installer_install-template.sh) = f2ec6dced2be1fa23773d5827503ad07d0913dc2
+SHA1 (patch-vendor_rand_src_rngs_os.rs) = 7a1c6d91d9418e1f8e378c4baca33045cc768f2d
