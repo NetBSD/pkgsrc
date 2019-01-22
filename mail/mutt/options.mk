@@ -1,17 +1,21 @@
-# $NetBSD: options.mk,v 1.30 2017/06/25 14:34:25 joerg Exp $
+# $NetBSD: options.mk,v 1.31 2019/01/22 13:19:44 wiz Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
+PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
 PKG_OPTIONS_GROUP.display=	curses wide-curses slang
-PKG_SUPPORTED_OPTIONS=	debug gpgme idn ssl smime sasl
+PKG_OPTIONS_GROUP.ssl=	gnutls openssl
+PKG_SUPPORTED_OPTIONS=	debug gpgme idn smime sasl
 # TODO: add kyoto cabinet and lmdb backend options for header cache
 PKG_SUPPORTED_OPTIONS+=	mutt-hcache mutt-compressed-mbox tokyocabinet mutt-smtp
 PKG_SUPPORTED_OPTIONS+=	gssapi
-PKG_SUGGESTED_OPTIONS=	curses gpgme mutt-hcache mutt-smtp smime ssl
+PKG_SUGGESTED_OPTIONS=	curses gpgme mutt-hcache mutt-smtp smime openssl
 PKG_SUGGESTED_OPTIONS+= gssapi mutt-compressed-mbox
+# remove after 2019Q1
 PKG_OPTIONS_LEGACY_OPTS+=	ncurses:curses ncursesw:wide-curses
+PKG_OPTIONS_LEGACY_OPTS+=	ssl:openssl
 
 .include "../../mk/bsd.options.mk"
 
@@ -39,6 +43,16 @@ LDFLAGS.SunOS+=			${COMPILER_RPATH_FLAG}/usr/xpg4/lib${LIBABISUFFIX}
 .endif
 
 ###
+### GnuTLS
+###
+.if !empty(PKG_OPTIONS:Mgnutls)
+.  include "../../security/gnutls/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-gnutls=${BUILDLINK_PREFIX.gnutls}
+.else
+CONFIGURE_ARGS+=	--without-gnutls
+.endif
+
+###
 ### Slang
 ###
 .if !empty(PKG_OPTIONS:Mslang)
@@ -57,7 +71,7 @@ CONFIGURE_ARGS+=	--with-sasl=${BUILDLINK_PREFIX.cyrus-sasl}
 ###
 ### SSL
 ###
-.if !empty(PKG_OPTIONS:Mssl)
+.if !empty(PKG_OPTIONS:Mopenssl)
 .  include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE:Q}
 .else
@@ -71,7 +85,9 @@ PLIST_VARS+=		smime
 .if !empty(PKG_OPTIONS:Msmime)
 USE_TOOLS+=		perl:run
 REPLACE_PERL+=		*.pl */*.pl
-.  include "../../security/openssl/buildlink3.mk"
+.if empty(PKG_OPTIONS:Mopenssl) && empty(PKG_OPTIONS:Mgnutls)
+PKG_FAIL_REASON+=	"The smime option requires the openssl or gnutls options."
+.endif
 CONFIGURE_ARGS+=	--enable-smime
 PLIST.smime=		yes
 .else
