@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2019/01/08 14:53:49 adam Exp $
+# $NetBSD: Makefile,v 1.16 2019/01/22 11:19:17 adam Exp $
 
-DISTNAME=	cli-6.5.0
+DISTNAME=	cli-6.6.0
 PKGNAME=	${DISTNAME:S/cli/npm/}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=npm/}
@@ -13,15 +13,15 @@ COMMENT=	Package manager for JavaScript
 LICENSE=	artistic-2.0
 
 # Pre-fetch marked so that man pages can be built offline
-MARKED=			marked-0.4.0
+MARKED=			marked-0.6.0
 DISTFILES+=		${DISTNAME}${EXTRACT_SUFX} ${MARKED}.tar.gz
-SITES.${MARKED}.tar.gz=	-https://github.com/markedjs/marked/archive/${MARKED:S/marked-//}.tar.gz
+SITES.${MARKED}.tar.gz=	-https://github.com/markedjs/marked/archive/v${MARKED:S/marked-//}.tar.gz
 
 DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
 
 USE_TOOLS+=	gmake perl
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # required by gyp scripts included
+PYTHON_VERSIONS_ACCEPTED=	27 # required by gyp scripts included
 
 REPLACE_INTERPRETER+=	node
 REPLACE.node.old=	.*node
