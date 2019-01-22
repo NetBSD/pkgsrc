@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.795 2019/01/17 05:15:57 gutteridge Exp $
+# $NetBSD: Makefile,v 1.796 2019/01/22 17:19:07 martin Exp $
 #
 
 COMMENT=	System utilities
@@ -635,6 +635,7 @@ SUBDIR+=	u-boot-nanopi-m1
 SUBDIR+=	u-boot-nanopi-neo
 SUBDIR+=	u-boot-nanopi-neo-plus2
 SUBDIR+=	u-boot-nanopi-neo2
+SUBDIR+=	u-boot-odroid-c2
 SUBDIR+=	u-boot-odroid-xu3
 SUBDIR+=	u-boot-orangepi-2
 SUBDIR+=	u-boot-orangepi-one
