@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.377 2019/01/22 11:19:34 adam Exp $
+$NetBSD: CHANGES-2019,v 1.378 2019/01/22 12:46:46 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -505,3 +505,19 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/py-eradicate to 1.0 [adam 2019-01-22]
 	Updated devel/py-entrypoints to 0.3 [adam 2019-01-22]
 	Updated lang/npm to 6.6.0 [adam 2019-01-22]
+	Added print/tex-etoc version 1.08p [markd 2019-01-22]
+	Added print/tex-etoc-doc version 1.08p [markd 2019-01-22]
+	Added print/tex-listofitems version 1.6 [markd 2019-01-22]
+	Added print/tex-listofitems-doc version 1.6 [markd 2019-01-22]
+	Added print/tex-newunicodechar version 1.2 [markd 2019-01-22]
+	Added print/tex-newunicodechar-doc version 1.2 [markd 2019-01-22]
+	Added print/tex-stackengine version 4.01 [markd 2019-01-22]
+	Added print/tex-stackengine-doc version 4.01 [markd 2019-01-22]
+	Updated print/tex-cleveref to 0.21.4 [markd 2019-01-22]
+	Updated print/tex-cleveref-doc to 0.21.4 [markd 2019-01-22]
+	Updated math/tex-apnum to 1.7 [markd 2019-01-22]
+	Updated math/tex-apnum-doc to 1.7 [markd 2019-01-22]
+	Updated print/tex-ifmtarg to 1.2b [markd 2019-01-22]
+	Updated print/tex-ifmtarg-doc to 1.2b [markd 2019-01-22]
+	Updated fonts/tex-mathalfa to 1.10 [markd 2019-01-22]
+	Updated fonts/tex-mathalfa-doc to 1.10 [markd 2019-01-22]
