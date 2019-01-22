@@ -1,0 +1,4 @@
+The package provides a versatile way to stack objects
+vertically in a variety of customizable ways. A number of
+useful macros are provided, all of which make use of the
+stackengine core.
