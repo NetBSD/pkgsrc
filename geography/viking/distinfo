@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.26 2016/12/30 00:10:02 gdt Exp $
+$NetBSD: distinfo,v 1.27 2019/01/22 15:28:45 gdt Exp $
 
-SHA1 (viking-1.6.2.tar.bz2) = 362ca955b64c0af0ffb5119d559c1ee7a8ce4c2b
-RMD160 (viking-1.6.2.tar.bz2) = b17f3e641a76b3c72b9dd77d45082170cb886a3d
-SHA512 (viking-1.6.2.tar.bz2) = 91f82aa1c0a7ab80990d501767ff0bf74c1d6153162e6213fc712e6a27fb465f89adf002e389a39fc51033f36f1b2ec5f05d20af328e5342dfc1158b8a9964f8
-Size (viking-1.6.2.tar.bz2) = 3324897 bytes
-SHA1 (patch-aa) = c7db1eb5562132c463b9472fd7a1a7e559af8d9a
-SHA1 (patch-configure) = e80de955f841607d97c45c940db6258ad806123d
-SHA1 (patch-src_gpx.c) = bcc13b87f4fbc9d64abdacbab344e7d5a10549cf
+SHA1 (viking-1.7.tar.bz2) = ac811fd294ac5b73419bda29864923871fbadb53
+RMD160 (viking-1.7.tar.bz2) = 7ba2d64f5ccf2511b3271c16ccf4ffda69aa93de
+SHA512 (viking-1.7.tar.bz2) = ff26cd808b407af5cb7c3cebed4c550e0c28ac1871497c2cedd09f7e1e72bd24ef0048e6e5d587aa9b03cb1860c3d3afcbe62308ade2179dea4b5f9668d05600
+Size (viking-1.7.tar.bz2) = 3438343 bytes
+SHA1 (patch-configure) = d2a6b621c879a1ccbc26d7f915f382f19eec45a3
+SHA1 (patch-src_gpspoint.c) = 968beffb04fae470665b6b97df7d84e0a6bc6346
+SHA1 (patch-src_gpx.c) = 08f3861954c90ee6619c1a9c60a5bf42bf790b74
