@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/11/20 14:09:58 adam Exp $
+# $NetBSD: Makefile,v 1.2 2019/01/22 10:44:10 adam Exp $
 
-DISTNAME=	eradicate-0.2.1
+DISTNAME=	eradicate-1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/eradicate/}
