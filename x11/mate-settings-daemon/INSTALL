@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+
+case ${STAGE} in
+POST-INSTALL)
+	${MKDIR} ${PKG_SYSCONFDIR}/xrdb
+	touch ${PKG_SYSCONFDIR}/xrdb/General.ad
+	;;
+esac
+exit 0
