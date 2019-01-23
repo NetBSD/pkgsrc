@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2018/11/13 11:23:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2019/01/23 12:21:04 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -77,6 +77,9 @@ ${PYSITELIB}/cryptography/hazmat/backends/openssl/utils.pyo
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/x25519.py
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/x25519.pyc
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/x25519.pyo
+${PYSITELIB}/cryptography/hazmat/backends/openssl/x448.py
+${PYSITELIB}/cryptography/hazmat/backends/openssl/x448.pyc
+${PYSITELIB}/cryptography/hazmat/backends/openssl/x448.pyo
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/x509.py
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/x509.pyc
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/x509.pyo
@@ -125,6 +128,9 @@ ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/utils.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/x25519.py
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/x25519.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/x25519.pyo
+${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/x448.py
+${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/x448.pyc
+${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/x448.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/ciphers/__init__.py
 ${PYSITELIB}/cryptography/hazmat/primitives/ciphers/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/ciphers/__init__.pyo
@@ -182,9 +188,18 @@ ${PYSITELIB}/cryptography/hazmat/primitives/mac.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/padding.py
 ${PYSITELIB}/cryptography/hazmat/primitives/padding.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/padding.pyo
-${PYSITELIB}/cryptography/hazmat/primitives/serialization.py
-${PYSITELIB}/cryptography/hazmat/primitives/serialization.pyc
-${PYSITELIB}/cryptography/hazmat/primitives/serialization.pyo
+${PYSITELIB}/cryptography/hazmat/primitives/serialization/__init__.py
+${PYSITELIB}/cryptography/hazmat/primitives/serialization/__init__.pyc
+${PYSITELIB}/cryptography/hazmat/primitives/serialization/__init__.pyo
+${PYSITELIB}/cryptography/hazmat/primitives/serialization/base.py
+${PYSITELIB}/cryptography/hazmat/primitives/serialization/base.pyc
+${PYSITELIB}/cryptography/hazmat/primitives/serialization/base.pyo
+${PYSITELIB}/cryptography/hazmat/primitives/serialization/pkcs12.py
+${PYSITELIB}/cryptography/hazmat/primitives/serialization/pkcs12.pyc
+${PYSITELIB}/cryptography/hazmat/primitives/serialization/pkcs12.pyo
+${PYSITELIB}/cryptography/hazmat/primitives/serialization/ssh.py
+${PYSITELIB}/cryptography/hazmat/primitives/serialization/ssh.pyc
+${PYSITELIB}/cryptography/hazmat/primitives/serialization/ssh.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/twofactor/__init__.py
 ${PYSITELIB}/cryptography/hazmat/primitives/twofactor/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/twofactor/__init__.pyo
