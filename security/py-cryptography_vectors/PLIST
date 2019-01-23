@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2018/11/13 11:23:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/01/23 12:21:04 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -79,6 +79,7 @@ ${PYSITELIB}/cryptography_vectors/asymmetric/DSA/FIPS_186-3/Readme.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/DSA/FIPS_186-3/SigGen.rsp
 ${PYSITELIB}/cryptography_vectors/asymmetric/DSA/FIPS_186-3/SigGen.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/DSA/FIPS_186-3/SigVer.rsp
+${PYSITELIB}/cryptography_vectors/asymmetric/EC/compressed_points.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/ECDH/KASValidityTest_ECCStaticUnified_KDFConcat_NOKC_init.fax
 ${PYSITELIB}/cryptography_vectors/asymmetric/ECDH/KASValidityTest_ECCStaticUnified_KDFConcat_NOKC_resp.fax
 ${PYSITELIB}/cryptography_vectors/asymmetric/ECDH/KASValidityTest_ECCStaticUnified_NOKC_ZZOnly_init.fax
@@ -98,6 +99,7 @@ ${PYSITELIB}/cryptography_vectors/asymmetric/ECDSA/FIPS_186-3/SigGen.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/ECDSA/FIPS_186-3/SigVer.rsp
 ${PYSITELIB}/cryptography_vectors/asymmetric/ECDSA/SECP256K1/SigGen.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/Ed25519/sign.input
+${PYSITELIB}/cryptography_vectors/asymmetric/Ed448/rfc8032.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/PEM_Serialization/README.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/PEM_Serialization/dsa_private_key.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/PEM_Serialization/dsa_public_key.pem
@@ -187,6 +189,19 @@ ${PYSITELIB}/cryptography_vectors/asymmetric/Traditional_OpenSSL_Serialization/k
 ${PYSITELIB}/cryptography_vectors/asymmetric/Traditional_OpenSSL_Serialization/testrsa-encrypted.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/Traditional_OpenSSL_Serialization/testrsa.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/X25519/rfc7748.txt
+${PYSITELIB}/cryptography_vectors/asymmetric/X25519/x25519-pkcs8-enc.der
+${PYSITELIB}/cryptography_vectors/asymmetric/X25519/x25519-pkcs8-enc.pem
+${PYSITELIB}/cryptography_vectors/asymmetric/X25519/x25519-pkcs8.der
+${PYSITELIB}/cryptography_vectors/asymmetric/X25519/x25519-pkcs8.pem
+${PYSITELIB}/cryptography_vectors/asymmetric/X25519/x25519-pub.der
+${PYSITELIB}/cryptography_vectors/asymmetric/X25519/x25519-pub.pem
+${PYSITELIB}/cryptography_vectors/asymmetric/X448/rfc7748.txt
+${PYSITELIB}/cryptography_vectors/asymmetric/X448/x448-pkcs8-enc.der
+${PYSITELIB}/cryptography_vectors/asymmetric/X448/x448-pkcs8-enc.pem
+${PYSITELIB}/cryptography_vectors/asymmetric/X448/x448-pkcs8.der
+${PYSITELIB}/cryptography_vectors/asymmetric/X448/x448-pkcs8.pem
+${PYSITELIB}/cryptography_vectors/asymmetric/X448/x448-pub.der
+${PYSITELIB}/cryptography_vectors/asymmetric/X448/x448-pub.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/public/PKCS1/dsa.pub.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/public/PKCS1/rsa.pub.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/public/PKCS1/rsa.pub.pem
@@ -2182,6 +2197,7 @@ ${PYSITELIB}/cryptography_vectors/x509/ocsp/req-invalid-hash-alg.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/req-multi-sha1.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/req-sha1.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/resp-delegate-unknown-cert.der
+${PYSITELIB}/cryptography_vectors/x509/ocsp/resp-invalid-signature-oid.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/resp-responder-key-hash.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/resp-revoked-no-next-update.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/resp-revoked-reason.der
