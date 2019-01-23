@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/16 18:03:41 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/01/23 09:30:34 markd Exp $
+share/texmf-dist/doc/latex/chngcntr/README.md
 share/texmf-dist/doc/latex/chngcntr/chngcntr.pdf
 share/texmf-dist/doc/latex/chngcntr/chngcntr.tex
