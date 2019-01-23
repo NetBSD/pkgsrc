@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/06/21 07:24:07 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/01/23 11:07:45 markd Exp $
 
 DISTNAME=	ipaex-type1.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.4a
-TEXLIVE_REV=	42403
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.5
+TEXLIVE_REV=	47700
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/ipaex-type1
