@@ -1,0 +1,43 @@
+$NetBSD: patch-cpufreq_src_Makefile.in,v 1.1 2019/01/23 15:25:36 youri Exp $
+
+Hook sysctl file.
+
+--- cpufreq/src/Makefile.in.orig	2018-11-18 07:55:12.000000000 +0000
++++ cpufreq/src/Makefile.in
+@@ -113,7 +113,7 @@ am__mate_cpufreq_applet_SOURCES_DIST = c
+ 	cpufreq-monitor-procfs.h cpufreq-monitor-sysfs.c \
+ 	cpufreq-monitor-sysfs.h cpufreq-monitor-libcpufreq.c \
+ 	cpufreq-monitor-libcpufreq.h cpufreq-monitor-cpuinfo.c \
+-	cpufreq-monitor-cpuinfo.h
++	cpufreq-monitor-cpuinfo.h cpufreq-monitor-sysctl.h cpufreq-monitor-sysctl.c
+ @HAVE_LIBCPUFREQ_TRUE@am__objects_1 =  \
+ @HAVE_LIBCPUFREQ_TRUE@	cpufreq-monitor-libcpufreq.$(OBJEXT)
+ am_mate_cpufreq_applet_OBJECTS = cpufreq-applet.$(OBJEXT) \
+@@ -122,7 +122,8 @@ am_mate_cpufreq_applet_OBJECTS = cpufreq
+ 	cpufreq-monitor.$(OBJEXT) cpufreq-monitor-factory.$(OBJEXT) \
+ 	cpufreq-monitor-procfs.$(OBJEXT) \
+ 	cpufreq-monitor-sysfs.$(OBJEXT) $(am__objects_1) \
+-	cpufreq-monitor-cpuinfo.$(OBJEXT)
++	cpufreq-monitor-cpuinfo.$(OBJEXT) \
++	cpufreq-monitor-sysctl.$(OBJEXT)
+ mate_cpufreq_applet_OBJECTS = $(am_mate_cpufreq_applet_OBJECTS)
+ am__DEPENDENCIES_1 =
+ mate_cpufreq_applet_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+@@ -470,7 +471,8 @@ mate_cpufreq_applet_SOURCES = \
+ 	cpufreq-monitor-procfs.c	cpufreq-monitor-procfs.h	\
+ 	cpufreq-monitor-sysfs.c	        cpufreq-monitor-sysfs.h	        \
+ 	$(cpufreq_files)						\
+-	cpufreq-monitor-cpuinfo.c       cpufreq-monitor-cpuinfo.h
++	cpufreq-monitor-cpuinfo.c       cpufreq-monitor-cpuinfo.h	\
++	cpufreq-monitor-sysctl.c	cpufreq-monitor-sysctl.h
+ 
+ mate_cpufreq_applet_LDADD = \
+ 	$(MATE_APPLETS4_LIBS)   	\
+@@ -573,6 +575,7 @@ distclean-compile:
+ 
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpufreq-applet.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpufreq-monitor-cpuinfo.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpufreq-monitor-sysctl.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpufreq-monitor-factory.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpufreq-monitor-libcpufreq.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpufreq-monitor-procfs.Po@am__quote@
