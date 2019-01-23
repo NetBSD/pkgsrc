@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.354 2019/01/10 13:37:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.355 2019/01/23 15:45:48 jperkin Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		64.0
@@ -41,6 +41,7 @@ ALL_ENV+=		MOZILLA_PKG_NAME=firefox
 # Avoid ld "invalid section index" errors.
 BUILDLINK_TRANSFORM.SunOS+=	rm:-fdata-sections
 BUILDLINK_TRANSFORM.SunOS+=	rm:-ffunction-sections
+BUILDLINK_TRANSFORM.SunOS+=	rm:-pie
 
 SUBST_CLASSES+=			dfly_malloc_h
 SUBST_STAGE.dfly_malloc_h=	pre-configure
