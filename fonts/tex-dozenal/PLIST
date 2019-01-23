@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/01/23 10:46:29 markd Exp $
 share/texmf-dist/fonts/afm/public/dozenal/dozchars10.afm
 share/texmf-dist/fonts/afm/public/dozenal/dozchars12.afm
 share/texmf-dist/fonts/afm/public/dozenal/dozchars17.afm
@@ -83,6 +83,7 @@ share/texmf-dist/fonts/tfm/public/dozenal/dozchsl10.tfm
 share/texmf-dist/fonts/tfm/public/dozenal/dozchsl12.tfm
 share/texmf-dist/fonts/tfm/public/dozenal/dozchsl8.tfm
 share/texmf-dist/fonts/tfm/public/dozenal/dozchsl9.tfm
+share/texmf-dist/fonts/tfm/public/dozenal/gray.tfm
 share/texmf-dist/fonts/type1/public/dozenal/dozchars10.pfb
 share/texmf-dist/fonts/type1/public/dozenal/dozchars12.pfb
 share/texmf-dist/fonts/type1/public/dozenal/dozchars17.pfb
