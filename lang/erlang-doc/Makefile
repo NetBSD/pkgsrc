@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/09/13 09:02:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.14 2019/01/23 12:46:22 nia Exp $
 
 DISTNAME=		otp_doc_html_${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}
 PKGNAME=		${DISTNAME:S/otp_doc_html_/erlang-doc-/}
@@ -27,7 +27,7 @@ DUPLICATE_FILES+=	lib/mnesia_session-${VERSION.mnesia_session}/info
 INSTALLATION_DIRS=	lib/erlang
 
 do-install:
-	cd ${WRKDIR} && pax ${DUPLICATE_FILES:=-s,%,,} -rw doc erts-${VERSION.erts} lib ${DESTDIR}${PREFIX}/lib/erlang/
+	cd ${WRKDIR} && pax ${DUPLICATE_FILES:=-s,%,,} -rw doc erts-* lib ${DESTDIR}${PREFIX}/lib/erlang/
 
 .include "../../lang/erlang/Makefile.versions"
 
