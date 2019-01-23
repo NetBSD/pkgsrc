@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.392 2019/01/23 11:53:44 nia Exp $
+$NetBSD: CHANGES-2019,v 1.393 2019/01/23 12:21:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -553,3 +553,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/tex-tikzsymbols to 4.10a [markd 2019-01-23]
 	Updated graphics/tex-tikzsymbols-doc to 4.10a [markd 2019-01-23]
 	Updated lang/erlang-man to 21.2 [nia 2019-01-23]
+	Updated www/apache24 to 2.4.38 [adam 2019-01-23]
+	Updated security/py-cryptography to 2.5 [adam 2019-01-23]
+	Updated security/py-cryptography_vectors to 2.5 [adam 2019-01-23]
