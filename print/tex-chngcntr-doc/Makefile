@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2016/01/30 03:26:11 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/01/23 09:30:34 markd Exp $
 
 DISTNAME=	chngcntr.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.0a
-TEXLIVE_REV=	17157
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.1a
+TEXLIVE_REV=	47577
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-chngcntr
