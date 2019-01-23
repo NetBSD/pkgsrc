@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2018/12/23 00:11:39 adam Exp $
+# $NetBSD: Makefile,v 1.8 2019/01/23 15:41:38 jperkin Exp $
 
 DISTNAME=	compiler-rt-7.0.1.src
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
@@ -22,8 +23,7 @@ SSP_SUPPORTED=	no
 CONFIGURE_DIRS=	${WRKDIR}/build
 CMAKE_ARG_PATH=	${WRKSRC}
 
-OS_DIR.SunOS-5.11=	solaris2.11
-OS_DIR=		${OS_DIR.${OPSYS}-${OS_VERSION}}
+OS_DIR=		${OPSYS:tl}
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
