@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2018/09/29 15:50:46 tnn Exp $
+@comment $NetBSD: PLIST,v 1.24 2019/01/23 11:51:23 nia Exp $
 lib/erlang/man/man1/cdv.1
 lib/erlang/man/man1/ct_run.1
 lib/erlang/man/man1/diameterc.1
@@ -17,6 +17,7 @@ lib/erlang/man/man3/alarm_handler.3
 lib/erlang/man/man3/application.3
 lib/erlang/man/man3/array.3
 lib/erlang/man/man3/asn1ct.3
+lib/erlang/man/man3/atomics.3
 lib/erlang/man/man3/auth.3
 lib/erlang/man/man3/base64.3
 lib/erlang/man/man3/beam_lib.3
@@ -25,6 +26,7 @@ lib/erlang/man/man3/c.3
 lib/erlang/man/man3/calendar.3
 lib/erlang/man/man3/code.3
 lib/erlang/man/man3/compile.3
+lib/erlang/man/man3/counters.3
 lib/erlang/man/man3/cover.3
 lib/erlang/man/man3/cprof.3
 lib/erlang/man/man3/cpu_sup.3
@@ -203,6 +205,7 @@ lib/erlang/man/man3/os.3
 lib/erlang/man/man3/os_mon_mib.3
 lib/erlang/man/man3/os_sup.3
 lib/erlang/man/man3/otp_mib.3
+lib/erlang/man/man3/persistent_term.3
 lib/erlang/man/man3/pg2.3
 lib/erlang/man/man3/pool.3
 lib/erlang/man/man3/prettypr.3
@@ -264,6 +267,7 @@ lib/erlang/man/man3/ssh.3
 lib/erlang/man/man3/ssh_client_channel.3
 lib/erlang/man/man3/ssh_client_key_api.3
 lib/erlang/man/man3/ssh_connection.3
+lib/erlang/man/man3/ssh_file.3
 lib/erlang/man/man3/ssh_server_channel.3
 lib/erlang/man/man3/ssh_server_key_api.3
 lib/erlang/man/man3/ssh_sftp.3
