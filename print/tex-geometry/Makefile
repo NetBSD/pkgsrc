@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2018/05/06 04:00:15 markd Exp $
+# $NetBSD: Makefile,v 1.7 2019/01/23 10:19:36 markd Exp $
 
 DISTNAME=	geometry
-PKGNAME=	tex-${DISTNAME}-5.7
-TEXLIVE_REV=	47106
+PKGNAME=	tex-${DISTNAME}-5.8
+TEXLIVE_REV=	47638
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/geometry

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/05/06 04:00:15 markd Exp $
+$NetBSD: distinfo,v 1.6 2019/01/23 10:19:36 markd Exp $
 
-SHA1 (tex-geometry-47106/geometry.tar.xz) = 2b82b364f06fa99b279be43c5ebdfb203dc348d6
-RMD160 (tex-geometry-47106/geometry.tar.xz) = 6dd82cae019551075fb2ab79a22ca70e742522eb
-SHA512 (tex-geometry-47106/geometry.tar.xz) = 5e8945b98510e02bafeacb5c77f80108f47415a3bcd4934c3c9a7c7d27b270991d65864d28f7e3172365c93637b96b1a329b76c921f23818362e087a63596609
-Size (tex-geometry-47106/geometry.tar.xz) = 8660 bytes
+SHA1 (tex-geometry-47638/geometry.tar.xz) = 83a7c14aa0f052d1f7c4cc8cd241183449fa60ab
+RMD160 (tex-geometry-47638/geometry.tar.xz) = f27e38504e198511743f7915c4d4d7c68cb3ead8
+SHA512 (tex-geometry-47638/geometry.tar.xz) = c46127522e9f862ae31f6a77a7a64bb1375a02bb2916905aa7b1ce10df7f6680a8959b18f8680bd38e6a21b494c6d69e59df1ae5a42c9a69974bf6a130dde2d2
+Size (tex-geometry-47638/geometry.tar.xz) = 8664 bytes
