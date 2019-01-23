@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.397 2019/01/23 15:44:44 jperkin Exp $
+$NetBSD: CHANGES-2019,v 1.398 2019/01/23 19:34:21 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -560,3 +560,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/gdb to 8.1nb2 [kamil 2019-01-23]
 	Updated lang/compiler-rt to 7.0.1nb1 [jperkin 2019-01-23]
 	Updated lang/clang to 7.0.1nb1 [jperkin 2019-01-23]
+	Updated fonts/tex-cabin to 2018 [markd 2019-01-23]
+	Updated fonts/tex-cabin-doc to 2018 [markd 2019-01-23]
+	Updated print/tex-siunitx to 2.7s [markd 2019-01-23]
+	Updated print/tex-siunitx-doc to 2.7s [markd 2019-01-23]
