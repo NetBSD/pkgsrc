@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.390 2019/01/22 21:50:58 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.391 2019/01/23 11:32:06 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -532,3 +532,23 @@ Changes to the packages collection and infrastructure in 2019:
 	Added sysutils/u-boot-odroid-c2 version 2018.11 [martin 2019-01-22]
 	Updated net/openconnect to 8.02 [schmonz 2019-01-22]
 	Updated x11/libdrm to 2.4.97 [wiz 2019-01-22]
+	Updated print/tex-csquotes to 5.2d [markd 2019-01-23]
+	Updated print/tex-csquotes-doc to 5.2d [markd 2019-01-23]
+	Updated print/tex-chngcntr to 1.1a [markd 2019-01-23]
+	Updated print/tex-chngcntr-doc to 1.1a [markd 2019-01-23]
+	Updated fonts/tex-roboto to 2018 [markd 2019-01-23]
+	Updated fonts/tex-roboto-doc to 2018 [markd 2019-01-23]
+	Updated print/tex-zxjafont to 0.4 [markd 2019-01-23]
+	Updated print/tex-zxjafont-doc to 0.4 [markd 2019-01-23]
+	Updated print/tex-geometry to 5.8 [markd 2019-01-23]
+	Updated print/tex-geometry-doc to 5.8 [markd 2019-01-23]
+	Updated fonts/tex-dozenal to 7.2 [markd 2019-01-23]
+	Updated fonts/tex-dozenal-doc to 7.2 [markd 2019-01-23]
+	Updated print/tex-eso-pic to 2.0h [markd 2019-01-23]
+	Updated print/tex-eso-pic-doc to 2.0h [markd 2019-01-23]
+	Updated fonts/tex-ipaex-type1 to 0.5 [markd 2019-01-23]
+	Updated fonts/tex-ipaex-type1-doc to 0.5 [markd 2019-01-23]
+	Updated print/tex-tracklang to 1.3.6 [markd 2019-01-23]
+	Updated print/tex-tracklang-doc to 1.3.6 [markd 2019-01-23]
+	Updated graphics/tex-tikzsymbols to 4.10a [markd 2019-01-23]
+	Updated graphics/tex-tikzsymbols-doc to 4.10a [markd 2019-01-23]
