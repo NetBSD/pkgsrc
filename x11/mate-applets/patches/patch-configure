@@ -1,0 +1,18 @@
+$NetBSD: patch-configure,v 1.1 2019/01/23 15:25:36 youri Exp $
+
+Allow configure to enable cpufreq.
+
+--- configure.orig	2018-11-18 07:55:11.000000000 +0000
++++ configure
+@@ -16881,9 +16881,9 @@ fi
+ 
+ build_cpufreq_applet=no
+ 
+-if test x$disable_cpufreq = xno; then
++if test x$enable_cpufreq = xyes; then
+    case "${host}" in
+-      *linux*)
++      *linux*|*-*-netbsd*)
+          build_cpufreq_applet=yes
+ 	 ;;
+       *)
