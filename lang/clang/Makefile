@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2018/12/09 20:04:38 adam Exp $
+# $NetBSD: Makefile,v 1.47 2019/01/23 15:44:34 jperkin Exp $
 
 PKGNAME=		${DISTNAME:S/.src//:S/cfe/clang/}
+PKGREVISION=		1
 PYTHON_FOR_BUILD_ONLY=	yes
 
 CMAKE_ARGS+=	-DCLANG_ENABLE_STATIC_ANALYZER=OFF

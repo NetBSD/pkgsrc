@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.56 2018/12/23 00:11:39 adam Exp $
+$NetBSD: distinfo,v 1.57 2019/01/23 15:44:34 jperkin Exp $
 
 SHA1 (cfe-7.0.1.src.tar.xz) = 427e12762836d808583fb4149c033d02de0a8db2
 RMD160 (cfe-7.0.1.src.tar.xz) = 914adafed7c97e5ebab15a437670906c404cb8bd
 SHA512 (cfe-7.0.1.src.tar.xz) = df2f38153ebdc261bcfa6a569567f759bbb1a803192882a9d4eca55a47878166ac9057151a94ad341dc1281136547e4faa783a68070dfde2307b48cacd4b9194
 Size (cfe-7.0.1.src.tar.xz) = 12488668 bytes
 SHA1 (patch-lib_Basic_Targets_OSTargets.h) = 2a00f6de42c67d8c8aca0153339aba1adc455280
-SHA1 (patch-lib_Driver_ToolChains_Solaris.cpp) = 17b6b748135fb051101e926f86910fd3bb55f312
-SHA1 (patch-lib_Driver_ToolChains_Solaris.h) = 07dacb5c341360bdce229f512bdfa95e5d6ef81c
+SHA1 (patch-lib_Driver_ToolChains_Solaris.cpp) = 7e951a4c82f47ec0c9c18054d9622984ffb9f751
+SHA1 (patch-lib_Driver_ToolChains_Solaris.h) = 94968d0de0972ff832727822fbdc02442be74ab8
 SHA1 (patch-lib_Frontend_InitHeaderSearch.cpp) = 497ddbe1eac8726d736bed58557a795dce207d1a

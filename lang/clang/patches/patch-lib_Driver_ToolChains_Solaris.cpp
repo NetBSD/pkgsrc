@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_Driver_ToolChains_Solaris.cpp,v 1.2 2018/12/09 20:04:38 adam Exp $
+$NetBSD: patch-lib_Driver_ToolChains_Solaris.cpp,v 1.3 2019/01/23 15:44:34 jperkin Exp $
 
 Use compiler-rt instead of libgcc.
 Pull in libcxx correctly.
@@ -53,7 +53,7 @@ Test removing -Bdynamic for golang.
      }
  
      // libpthread has been folded into libc since Solaris 10, no need to do
-@@ -88,13 +104,11 @@ void solaris::Linker::ConstructJob(Compi
+@@ -88,21 +104,21 @@ void solaris::Linker::ConstructJob(Compi
    if (!Args.hasArg(options::OPT_nostdlib, options::OPT_nostartfiles)) {
      if (!Args.hasArg(options::OPT_shared))
        CmdArgs.push_back(
@@ -61,16 +61,26 @@ Test removing -Bdynamic for golang.
 +          Args.MakeArgString(SysPath + "crt1.o"));
  
 -    CmdArgs.push_back(Args.MakeArgString(getToolChain().GetFilePath("crti.o")));
--    CmdArgs.push_back(
--        Args.MakeArgString(getToolChain().GetFilePath("values-Xa.o")));
 +    CmdArgs.push_back(Args.MakeArgString(SysPath + "crti.o"));
      CmdArgs.push_back(
+-        Args.MakeArgString(getToolChain().GetFilePath("values-Xa.o")));
+-    CmdArgs.push_back(
 -        Args.MakeArgString(getToolChain().GetFilePath("crtbegin.o")));
 +        Args.MakeArgString(SysPath + "values-Xa.o"));
    }
  
    // Provide __start___sancov_guards.  Solaris ld doesn't automatically create
-@@ -113,21 +127,18 @@ void solaris::Linker::ConstructJob(Compi
+   // __start_SECNAME labels.
++#if 0
+   CmdArgs.push_back("--whole-archive");
+   CmdArgs.push_back(
+       getToolChain().getCompilerRTArgString(Args, "sancov_begin", false));
+   CmdArgs.push_back("--no-whole-archive");
++#endif
+ 
+   getToolChain().AddFilePathLibArgs(Args, CmdArgs);
+ 
+@@ -113,37 +129,32 @@ void solaris::Linker::ConstructJob(Compi
    AddLinkerInputs(getToolChain(), Inputs, Args, CmdArgs, JA);
  
    if (!Args.hasArg(options::OPT_nostdlib, options::OPT_nodefaultlibs)) {
@@ -102,9 +112,15 @@ Test removing -Bdynamic for golang.
      if (NeedsSanitizerDeps)
        linkSanitizerRuntimeDeps(getToolChain(), CmdArgs);
    }
-@@ -139,11 +150,7 @@ void solaris::Linker::ConstructJob(Compi
+ 
+   // Provide __stop___sancov_guards.  Solaris ld doesn't automatically create
+   // __stop_SECNAME labels.
++#if 0
+   CmdArgs.push_back("--whole-archive");
+   CmdArgs.push_back(
        getToolChain().getCompilerRTArgString(Args, "sancov_end", false));
    CmdArgs.push_back("--no-whole-archive");
++#endif
  
 -  if (!Args.hasArg(options::OPT_nostdlib, options::OPT_nostartfiles)) {
 -    CmdArgs.push_back(
@@ -115,7 +131,7 @@ Test removing -Bdynamic for golang.
  
    getToolChain().addProfileRTLibs(Args, CmdArgs);
  
-@@ -172,26 +179,9 @@ Solaris::Solaris(const Driver &D, const 
+@@ -172,26 +183,9 @@ Solaris::Solaris(const Driver &D, const
                   const ArgList &Args)
      : Generic_ELF(D, Triple, Args) {
  
@@ -145,7 +161,7 @@ Test removing -Bdynamic for golang.
  }
  
  SanitizerMask Solaris::getSupportedSanitizers() const {
-@@ -211,6 +201,32 @@ Tool *Solaris::buildAssembler() const {
+@@ -211,6 +205,32 @@ Tool *Solaris::buildAssembler() const {
  
  Tool *Solaris::buildLinker() const { return new tools::solaris::Linker(*this); }
  
@@ -178,3 +194,54 @@ Test removing -Bdynamic for golang.
  void Solaris::AddClangSystemIncludeArgs(const ArgList &DriverArgs,
                                          ArgStringList &CC1Args) const {
    const Driver &D = getDriver();
+@@ -243,40 +263,20 @@ void Solaris::AddClangSystemIncludeArgs(
+     return;
+   }
+ 
+-  // Add include directories specific to the selected multilib set and multilib.
+-  if (GCCInstallation.isValid()) {
+-    const MultilibSet::IncludeDirsFunc &Callback =
+-        Multilibs.includeDirsCallback();
+-    if (Callback) {
+-      for (const auto &Path : Callback(GCCInstallation.getMultilib()))
+-        addExternCSystemIncludeIfExists(
+-            DriverArgs, CC1Args, GCCInstallation.getInstallPath() + Path);
+-    }
+-  }
+-
+   addExternCSystemInclude(DriverArgs, CC1Args, D.SysRoot + "/usr/include");
+ }
+ 
+-void Solaris::addLibStdCxxIncludePaths(
++void Solaris::addLibCxxIncludePaths(
+     const llvm::opt::ArgList &DriverArgs,
+     llvm::opt::ArgStringList &CC1Args) const {
+-  // We need a detected GCC installation on Solaris (similar to Linux)
+-  // to provide libstdc++'s headers.
+-  if (!GCCInstallation.isValid())
+-    return;
++  addSystemInclude(DriverArgs, CC1Args,
++                   llvm::sys::path::parent_path(getDriver().getInstalledDir())
++                   + "/include/c++/v1");
++}
+ 
+-  // By default, look for the C++ headers in an include directory adjacent to
+-  // the lib directory of the GCC installation.
+-  // On Solaris this usually looks like /usr/gcc/X.Y/include/c++/X.Y.Z
+-  StringRef LibDir = GCCInstallation.getParentLibPath();
+-  StringRef TripleStr = GCCInstallation.getTriple().str();
+-  const Multilib &Multilib = GCCInstallation.getMultilib();
+-  const GCCVersion &Version = GCCInstallation.getVersion();
+-
+-  // The primary search for libstdc++ supports multiarch variants.
+-  addLibStdCXXIncludePaths(LibDir.str() + "/../include", "/c++/" + Version.Text,
+-                           TripleStr,
+-                           /*GCCMultiarchTriple*/ "",
+-                           /*TargetMultiarchTriple*/ "",
+-                           Multilib.includeSuffix(), DriverArgs, CC1Args);
++void Solaris::addLibStdCxxIncludePaths(
++    const llvm::opt::ArgList &DriverArgs,
++    llvm::opt::ArgStringList &CC1Args) const {
++  // Location of GCC includes is not reliable so do not support it.
++  return;
+ }
