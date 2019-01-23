@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/10/21 03:42:58 markd Exp $
+$NetBSD: distinfo,v 1.5 2019/01/23 11:29:54 markd Exp $
 
-SHA1 (tex-tikzsymbols-45222/tikzsymbols.tar.xz) = dd9ac73d5487fd7be693e238de8ab52a38458995
-RMD160 (tex-tikzsymbols-45222/tikzsymbols.tar.xz) = 3b3b86f95129ac1905e78853e456bc8e73ddf026
-SHA512 (tex-tikzsymbols-45222/tikzsymbols.tar.xz) = 8f840954b891b05b2fc25e3a14ed3b0b2a552a344e6fd21e8d5ee04816b0c286e483d76c7e39a62905a7609d0be37c867f714fa5ef2d4750e890c7735b61a1fb
-Size (tex-tikzsymbols-45222/tikzsymbols.tar.xz) = 13696 bytes
+SHA1 (tex-tikzsymbols-47730/tikzsymbols.tar.xz) = 5265b68a7c3c8260d9369c33aed902d1dd9758dc
+RMD160 (tex-tikzsymbols-47730/tikzsymbols.tar.xz) = ccd5f4c0bd90093e0e4ff1ece4a5bc390e9a81d9
+SHA512 (tex-tikzsymbols-47730/tikzsymbols.tar.xz) = 64f61bbacc083de9219f75bba96bca9c3e9f3da3c0b549b54e2f9b6e42e67c31c100e93cbc6b2f505809305687c93da90e89487924d9802afe81203b1a1ad0bf
+Size (tex-tikzsymbols-47730/tikzsymbols.tar.xz) = 13992 bytes
