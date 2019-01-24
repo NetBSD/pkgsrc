@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.405 2019/01/24 11:43:07 markd Exp $
+$NetBSD: CHANGES-2019,v 1.406 2019/01/24 13:07:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -598,3 +598,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/tex-mhchem-doc to 4.08 [markd 2019-01-24]
 	Updated fonts/tex-academicons to 1.8.62 [markd 2019-01-24]
 	Updated fonts/tex-academicons-doc to 1.8.62 [markd 2019-01-24]
+	Updated devel/py-configparser to 3.5.1 [adam 2019-01-24]
+	Updated sysutils/py-psutil to 5.5.0 [adam 2019-01-24]
