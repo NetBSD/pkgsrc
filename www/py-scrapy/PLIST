@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2018/01/04 21:31:41 adam Exp $
-bin/scrapy${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.4 2019/01/24 14:11:48 adam Exp $
+bin/scrapy-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
