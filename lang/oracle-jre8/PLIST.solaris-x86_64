@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.solaris-x86_64,v 1.6 2017/12/13 09:34:48 jperkin Exp $
+@comment $NetBSD: PLIST.solaris-x86_64,v 1.7 2019/01/24 09:35:07 jperkin Exp $
 bin/oracle8-java
 bin/oracle8-javaws
 bin/oracle8-keytool
@@ -63,7 +63,6 @@ java/oracle-8/lib/amd64/libjpeg.so
 java/oracle-8/lib/amd64/libjsdt.so
 java/oracle-8/lib/amd64/libjsig.so
 java/oracle-8/lib/amd64/libjsound.so
-java/oracle-8/lib/amd64/libkcms.so
 java/oracle-8/lib/amd64/liblcms.so
 java/oracle-8/lib/amd64/libmanagement.so
 java/oracle-8/lib/amd64/libmlib_image.so
