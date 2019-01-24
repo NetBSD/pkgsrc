@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2019/01/24 10:00:42 bsiegert Exp $
+# $NetBSD: Makefile,v 1.9 2019/01/24 23:34:31 alnsn Exp $
 
-DISTNAME=	obfs4proxy-0.0.7
-PKGREVISION=	7
+DISTNAME=	obfs4proxy-0.0.8
 CATEGORIES=	net security
 MASTER_SITES=	https://people.torproject.org/~yawning/releases/obfs4proxy/
 EXTRACT_SUFX=	.tar.xz
@@ -12,8 +11,8 @@ COMMENT=	Look-like nothing obfuscation protocol
 LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}
-GO_DIST_BASE=	${DISTNAME}
-GO_SRCPATH=	git.torproject.org/pluggable-transports/obfs4.git
+GO_DIST_BASE=	obfs4
+GO_SRCPATH=	gitlab.com/yawning/obfs4.git
 
 .include "../../devel/go-ed25519/buildlink3.mk"
 .include "../../devel/go-goptlib/buildlink3.mk"
