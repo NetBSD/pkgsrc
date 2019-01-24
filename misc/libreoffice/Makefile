@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.179 2018/12/19 12:09:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.180 2019/01/24 17:28:07 tnn Exp $
 
 VERREL=		6.1.4
 VERRC=		2
@@ -230,7 +230,9 @@ MAKE_ENV+=		SHELL=${BASH}
 BUILD_MAKE_FLAGS+=	VERBOSE=true
 #BUILD_MAKE_FLAGS+=	GMAKE_OPTIONS+=-p
 
+.if ${OPSYS} != "Linux"
 BUILDLINK_TRANSFORM+=	rm:-ldl
+.endif
 
 INSTALLATION_DIRS=	bin share/applications
 
