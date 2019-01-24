@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2016/12/17 11:45:18 adam Exp $
-bin/pyflakes${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.5 2019/01/24 09:19:25 adam Exp $
+bin/pyflakes-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -38,6 +38,15 @@ ${PYSITELIB}/pyflakes/test/harness.pyo
 ${PYSITELIB}/pyflakes/test/test_api.py
 ${PYSITELIB}/pyflakes/test/test_api.pyc
 ${PYSITELIB}/pyflakes/test/test_api.pyo
+${PYSITELIB}/pyflakes/test/test_builtin.py
+${PYSITELIB}/pyflakes/test/test_builtin.pyc
+${PYSITELIB}/pyflakes/test/test_builtin.pyo
+${PYSITELIB}/pyflakes/test/test_checker.py
+${PYSITELIB}/pyflakes/test/test_checker.pyc
+${PYSITELIB}/pyflakes/test/test_checker.pyo
+${PYSITELIB}/pyflakes/test/test_code_segment.py
+${PYSITELIB}/pyflakes/test/test_code_segment.pyc
+${PYSITELIB}/pyflakes/test/test_code_segment.pyo
 ${PYSITELIB}/pyflakes/test/test_dict.py
 ${PYSITELIB}/pyflakes/test/test_dict.pyc
 ${PYSITELIB}/pyflakes/test/test_dict.pyo
@@ -47,12 +56,18 @@ ${PYSITELIB}/pyflakes/test/test_doctests.pyo
 ${PYSITELIB}/pyflakes/test/test_imports.py
 ${PYSITELIB}/pyflakes/test/test_imports.pyc
 ${PYSITELIB}/pyflakes/test/test_imports.pyo
+${PYSITELIB}/pyflakes/test/test_is_literal.py
+${PYSITELIB}/pyflakes/test/test_is_literal.pyc
+${PYSITELIB}/pyflakes/test/test_is_literal.pyo
 ${PYSITELIB}/pyflakes/test/test_other.py
 ${PYSITELIB}/pyflakes/test/test_other.pyc
 ${PYSITELIB}/pyflakes/test/test_other.pyo
 ${PYSITELIB}/pyflakes/test/test_return_with_arguments_inside_generator.py
 ${PYSITELIB}/pyflakes/test/test_return_with_arguments_inside_generator.pyc
 ${PYSITELIB}/pyflakes/test/test_return_with_arguments_inside_generator.pyo
+${PYSITELIB}/pyflakes/test/test_type_annotations.py
+${PYSITELIB}/pyflakes/test/test_type_annotations.pyc
+${PYSITELIB}/pyflakes/test/test_type_annotations.pyo
 ${PYSITELIB}/pyflakes/test/test_undefined_names.py
 ${PYSITELIB}/pyflakes/test/test_undefined_names.pyc
 ${PYSITELIB}/pyflakes/test/test_undefined_names.pyo
