@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/09/02 11:06:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/01/24 11:40:25 markd Exp $
 share/texmf-dist/fonts/truetype/public/academicons/academicons.ttf
 share/texmf-dist/tex/latex/academicons/academicons.sty
+share/texmf-dist/tex/latex/academicons/tuacademicons.fd
