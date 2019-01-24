@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 01:01:54 agc Exp $
+$NetBSD: distinfo,v 1.6 2019/01/24 08:47:41 markd Exp $
 
-SHA1 (tex-carlisle-18258/carlisle.tar.xz) = 2f1ac5a211ca8d99ee60d0e4b409732bdc48f94e
-RMD160 (tex-carlisle-18258/carlisle.tar.xz) = 4e5624e004e2a48ce58a5af5b95dcc37e1ff12ef
-SHA512 (tex-carlisle-18258/carlisle.tar.xz) = c19b37c9ec21931e38ef0d24d12edd22d1b8f66739649afcbac05745e11a889b0ad4c897c6d9d20b0b183df8c8ab3d372901ba275f779400add2a28cdd60d611
-Size (tex-carlisle-18258/carlisle.tar.xz) = 11312 bytes
+SHA1 (tex-carlisle-47876/carlisle.tar.xz) = 5c6222455b676bb02a58b75ff004c85761ebb6a2
+RMD160 (tex-carlisle-47876/carlisle.tar.xz) = 013c3495506e5938c1fd2cd06485c85bdbf6df1c
+SHA512 (tex-carlisle-47876/carlisle.tar.xz) = 3734bc331f78e4bd8b85dd2df238b4dbed76c6c1c7bea71768b1e9c7c62ec7d277194e54997b834931221023768af085e1c65c3d7688b77678e8d3d7465c4e1f
+Size (tex-carlisle-47876/carlisle.tar.xz) = 11400 bytes
