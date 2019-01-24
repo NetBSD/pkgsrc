@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/08/24 02:21:17 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/01/24 09:58:54 markd Exp $
 
 DISTNAME=	venndiagram
-PKGNAME=	tex-${DISTNAME}-1.1
-TEXLIVE_REV=	40058
+PKGNAME=	tex-${DISTNAME}-1.2
+TEXLIVE_REV=	47952
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/venndiagram
