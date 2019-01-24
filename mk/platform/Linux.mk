@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.79 2019/01/09 13:19:03 wiz Exp $
+# $NetBSD: Linux.mk,v 1.80 2019/01/24 18:40:56 tnn Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -150,6 +150,12 @@ LIBABISUFFIX?=	64
 
 .if ${MACHINE_ARCH} == "powerpc64le"
 ABI?=		64
+LIBABISUFFIX?=	64
+.endif
+
+.if ${MACHINE_ARCH} == "aarch64"
+# No toolchain multilib support yet?
+# ABI?=		64
 LIBABISUFFIX?=	64
 .endif
 
