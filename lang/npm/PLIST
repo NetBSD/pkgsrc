@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2019/01/22 11:19:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/01/24 08:31:18 adam Exp $
 bin/npm
 bin/npx
 lib/node_modules/npm/.licensee.json
@@ -54,6 +54,7 @@ lib/node_modules/npm/doc/cli/npm-install.md
 lib/node_modules/npm/doc/cli/npm-link.md
 lib/node_modules/npm/doc/cli/npm-logout.md
 lib/node_modules/npm/doc/cli/npm-ls.md
+lib/node_modules/npm/doc/cli/npm-org.md
 lib/node_modules/npm/doc/cli/npm-outdated.md
 lib/node_modules/npm/doc/cli/npm-owner.md
 lib/node_modules/npm/doc/cli/npm-pack.md
@@ -131,6 +132,7 @@ lib/node_modules/npm/html/doc/cli/npm-install.html
 lib/node_modules/npm/html/doc/cli/npm-link.html
 lib/node_modules/npm/html/doc/cli/npm-logout.html
 lib/node_modules/npm/html/doc/cli/npm-ls.html
+lib/node_modules/npm/html/doc/cli/npm-org.html
 lib/node_modules/npm/html/doc/cli/npm-outdated.html
 lib/node_modules/npm/html/doc/cli/npm-owner.html
 lib/node_modules/npm/html/doc/cli/npm-pack.html
@@ -408,6 +410,7 @@ lib/node_modules/npm/man/man1/npm-install.1
 lib/node_modules/npm/man/man1/npm-link.1
 lib/node_modules/npm/man/man1/npm-logout.1
 lib/node_modules/npm/man/man1/npm-ls.1
+lib/node_modules/npm/man/man1/npm-org.1
 lib/node_modules/npm/man/man1/npm-outdated.1
 lib/node_modules/npm/man/man1/npm-owner.1
 lib/node_modules/npm/man/man1/npm-pack.1
@@ -2051,16 +2054,6 @@ lib/node_modules/npm/node_modules/libnpm/log.js
 lib/node_modules/npm/node_modules/libnpm/logical-tree.js
 lib/node_modules/npm/node_modules/libnpm/login.js
 lib/node_modules/npm/node_modules/libnpm/manifest.js
-lib/node_modules/npm/node_modules/libnpm/node_modules/aproba/CHANGELOG.md
-lib/node_modules/npm/node_modules/libnpm/node_modules/aproba/LICENSE
-lib/node_modules/npm/node_modules/libnpm/node_modules/aproba/README.md
-lib/node_modules/npm/node_modules/libnpm/node_modules/aproba/index.js
-lib/node_modules/npm/node_modules/libnpm/node_modules/aproba/package.json
-lib/node_modules/npm/node_modules/libnpm/node_modules/libnpmhook/CHANGELOG.md
-lib/node_modules/npm/node_modules/libnpm/node_modules/libnpmhook/LICENSE.md
-lib/node_modules/npm/node_modules/libnpm/node_modules/libnpmhook/README.md
-lib/node_modules/npm/node_modules/libnpm/node_modules/libnpmhook/index.js
-lib/node_modules/npm/node_modules/libnpm/node_modules/libnpmhook/package.json
 lib/node_modules/npm/node_modules/libnpm/org.js
 lib/node_modules/npm/node_modules/libnpm/package.json
 lib/node_modules/npm/node_modules/libnpm/packument.js
@@ -2149,11 +2142,6 @@ lib/node_modules/npm/node_modules/libnpmpublish/PULL_REQUEST_TEMPLATE
 lib/node_modules/npm/node_modules/libnpmpublish/README.md
 lib/node_modules/npm/node_modules/libnpmpublish/appveyor.yml
 lib/node_modules/npm/node_modules/libnpmpublish/index.js
-lib/node_modules/npm/node_modules/libnpmpublish/node_modules/aproba/CHANGELOG.md
-lib/node_modules/npm/node_modules/libnpmpublish/node_modules/aproba/LICENSE
-lib/node_modules/npm/node_modules/libnpmpublish/node_modules/aproba/README.md
-lib/node_modules/npm/node_modules/libnpmpublish/node_modules/aproba/index.js
-lib/node_modules/npm/node_modules/libnpmpublish/node_modules/aproba/package.json
 lib/node_modules/npm/node_modules/libnpmpublish/package.json
 lib/node_modules/npm/node_modules/libnpmpublish/publish.js
 lib/node_modules/npm/node_modules/libnpmpublish/test/publish.js
@@ -3885,6 +3873,7 @@ lib/node_modules/npm/node_modules/wrappy/LICENSE
 lib/node_modules/npm/node_modules/wrappy/README.md
 lib/node_modules/npm/node_modules/wrappy/package.json
 lib/node_modules/npm/node_modules/wrappy/wrappy.js
+lib/node_modules/npm/node_modules/write-file-atomic/CHANGELOG.md
 lib/node_modules/npm/node_modules/write-file-atomic/LICENSE
 lib/node_modules/npm/node_modules/write-file-atomic/README.md
 lib/node_modules/npm/node_modules/write-file-atomic/index.js
@@ -4005,6 +3994,7 @@ man/man1/npm-install.1
 man/man1/npm-link.1
 man/man1/npm-logout.1
 man/man1/npm-ls.1
+man/man1/npm-org.1
 man/man1/npm-outdated.1
 man/man1/npm-owner.1
 man/man1/npm-pack.1
