@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/08 18:33:51 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/01/24 11:10:42 markd Exp $
 share/texmf-dist/doc/fonts/tex-gyre/GUST-FONT-LICENSE.txt
 share/texmf-dist/doc/fonts/tex-gyre/MANIFEST-TeX-Gyre-Adventor.txt
 share/texmf-dist/doc/fonts/tex-gyre/MANIFEST-TeX-Gyre-Bonum.txt
@@ -19,12 +19,6 @@ share/texmf-dist/doc/fonts/tex-gyre/README-TeX-Gyre-Termes.txt
 share/texmf-dist/doc/fonts/tex-gyre/goadb999.nam
 share/texmf-dist/doc/fonts/tex-gyre/qag-hist.txt
 share/texmf-dist/doc/fonts/tex-gyre/qag-info.pdf
-share/texmf-dist/doc/fonts/tex-gyre/qag-test.pdf
-share/texmf-dist/doc/fonts/tex-gyre/qag-test.tex
-share/texmf-dist/doc/fonts/tex-gyre/qagb.fea
-share/texmf-dist/doc/fonts/tex-gyre/qagbi.fea
-share/texmf-dist/doc/fonts/tex-gyre/qagr.fea
-share/texmf-dist/doc/fonts/tex-gyre/qagri.fea
 share/texmf-dist/doc/fonts/tex-gyre/qbk-hist.txt
 share/texmf-dist/doc/fonts/tex-gyre/qbk-info.pdf
 share/texmf-dist/doc/fonts/tex-gyre/qbk-test.pdf
@@ -63,12 +57,6 @@ share/texmf-dist/doc/fonts/tex-gyre/qhvr.fea
 share/texmf-dist/doc/fonts/tex-gyre/qhvri.fea
 share/texmf-dist/doc/fonts/tex-gyre/qpl-hist.txt
 share/texmf-dist/doc/fonts/tex-gyre/qpl-info.pdf
-share/texmf-dist/doc/fonts/tex-gyre/qpl-test.pdf
-share/texmf-dist/doc/fonts/tex-gyre/qpl-test.tex
-share/texmf-dist/doc/fonts/tex-gyre/qplb.fea
-share/texmf-dist/doc/fonts/tex-gyre/qplbi.fea
-share/texmf-dist/doc/fonts/tex-gyre/qplr.fea
-share/texmf-dist/doc/fonts/tex-gyre/qplri.fea
 share/texmf-dist/doc/fonts/tex-gyre/qtm-hist.txt
 share/texmf-dist/doc/fonts/tex-gyre/qtm-info.pdf
 share/texmf-dist/doc/fonts/tex-gyre/qtm-test.pdf
