@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2019/01/24 13:58:17 adam Exp $
+bin/pepper-${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pepper/__init__.py
+${PYSITELIB}/pepper/__init__.pyc
+${PYSITELIB}/pepper/__init__.pyo
+${PYSITELIB}/pepper/cli.py
+${PYSITELIB}/pepper/cli.pyc
+${PYSITELIB}/pepper/cli.pyo
+${PYSITELIB}/pepper/exceptions.py
+${PYSITELIB}/pepper/exceptions.pyc
+${PYSITELIB}/pepper/exceptions.pyo
+${PYSITELIB}/pepper/libpepper.py
+${PYSITELIB}/pepper/libpepper.pyc
+${PYSITELIB}/pepper/libpepper.pyo
+${PYSITELIB}/pepper/retcode.py
+${PYSITELIB}/pepper/retcode.pyc
+${PYSITELIB}/pepper/retcode.pyo
+${PYSITELIB}/pepper/script.py
+${PYSITELIB}/pepper/script.pyc
+${PYSITELIB}/pepper/script.pyo
