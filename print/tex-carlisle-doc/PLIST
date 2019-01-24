@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/05/10 09:33:24 minskim Exp $
-share/texmf-dist/doc/latex/carlisle/README
+@comment $NetBSD: PLIST,v 1.3 2019/01/24 08:47:41 markd Exp $
+share/texmf-dist/doc/latex/carlisle/README.txt
 share/texmf-dist/doc/latex/carlisle/ltx1.tex
 share/texmf-dist/doc/latex/carlisle/ltxtable.pdf
