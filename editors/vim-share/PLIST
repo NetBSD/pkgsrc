@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2018/11/29 08:55:10 morr Exp $
+@comment $NetBSD: PLIST,v 1.44 2019/01/24 11:17:37 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -233,6 +233,7 @@ share/vim/${VIM_SUBDIR}/doc/tags
 share/vim/${VIM_SUBDIR}/doc/tagsrch.txt
 share/vim/${VIM_SUBDIR}/doc/term.txt
 share/vim/${VIM_SUBDIR}/doc/terminal.txt
+share/vim/${VIM_SUBDIR}/doc/textprop.txt
 share/vim/${VIM_SUBDIR}/doc/tips.txt
 share/vim/${VIM_SUBDIR}/doc/todo.txt
 share/vim/${VIM_SUBDIR}/doc/uganda.txt
@@ -298,6 +299,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/art.vim
 share/vim/${VIM_SUBDIR}/ftplugin/aspvbs.vim
 share/vim/${VIM_SUBDIR}/ftplugin/automake.vim
 share/vim/${VIM_SUBDIR}/ftplugin/awk.vim
+share/vim/${VIM_SUBDIR}/ftplugin/bash.vim
 share/vim/${VIM_SUBDIR}/ftplugin/bdf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/bst.vim
 share/vim/${VIM_SUBDIR}/ftplugin/btm.vim
@@ -305,6 +307,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/bzl.vim
 share/vim/${VIM_SUBDIR}/ftplugin/c.vim
 share/vim/${VIM_SUBDIR}/ftplugin/calendar.vim
 share/vim/${VIM_SUBDIR}/ftplugin/cdrdaoconf.vim
+share/vim/${VIM_SUBDIR}/ftplugin/cfg.vim
 share/vim/${VIM_SUBDIR}/ftplugin/ch.vim
 share/vim/${VIM_SUBDIR}/ftplugin/changelog.vim
 share/vim/${VIM_SUBDIR}/ftplugin/chicken.vim
