@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2018/12/19 15:47:02 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4 2019/01/24 10:00:45 bsiegert Exp $
 
 DISTNAME=	tablewriter-0.0.20180506
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 MASTER_SITES=	${MASTER_SITE_GITHUB:=olekukonko/}
 CATEGORIES=	textproc
 GITHUB_PROJECT=	${PKGBASE:S/^go-//}
