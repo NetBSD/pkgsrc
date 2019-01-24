@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2018/10/07 06:47:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2019/01/24 08:29:39 adam Exp $
 bin/pip${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -675,6 +675,9 @@ ${PYSITELIB}/pip/_vendor/pep517/__init__.pyo
 ${PYSITELIB}/pip/_vendor/pep517/_in_process.py
 ${PYSITELIB}/pip/_vendor/pep517/_in_process.pyc
 ${PYSITELIB}/pip/_vendor/pep517/_in_process.pyo
+${PYSITELIB}/pip/_vendor/pep517/build.py
+${PYSITELIB}/pip/_vendor/pep517/build.pyc
+${PYSITELIB}/pip/_vendor/pep517/build.pyo
 ${PYSITELIB}/pip/_vendor/pep517/check.py
 ${PYSITELIB}/pip/_vendor/pep517/check.pyc
 ${PYSITELIB}/pip/_vendor/pep517/check.pyo
@@ -723,6 +726,12 @@ ${PYSITELIB}/pip/_vendor/pytoml/core.pyo
 ${PYSITELIB}/pip/_vendor/pytoml/parser.py
 ${PYSITELIB}/pip/_vendor/pytoml/parser.pyc
 ${PYSITELIB}/pip/_vendor/pytoml/parser.pyo
+${PYSITELIB}/pip/_vendor/pytoml/test.py
+${PYSITELIB}/pip/_vendor/pytoml/test.pyc
+${PYSITELIB}/pip/_vendor/pytoml/test.pyo
+${PYSITELIB}/pip/_vendor/pytoml/utils.py
+${PYSITELIB}/pip/_vendor/pytoml/utils.pyc
+${PYSITELIB}/pip/_vendor/pytoml/utils.pyo
 ${PYSITELIB}/pip/_vendor/pytoml/writer.py
 ${PYSITELIB}/pip/_vendor/pytoml/writer.pyc
 ${PYSITELIB}/pip/_vendor/pytoml/writer.pyo
@@ -801,6 +810,9 @@ ${PYSITELIB}/pip/_vendor/urllib3/connectionpool.pyo
 ${PYSITELIB}/pip/_vendor/urllib3/contrib/__init__.py
 ${PYSITELIB}/pip/_vendor/urllib3/contrib/__init__.pyc
 ${PYSITELIB}/pip/_vendor/urllib3/contrib/__init__.pyo
+${PYSITELIB}/pip/_vendor/urllib3/contrib/_appengine_environ.py
+${PYSITELIB}/pip/_vendor/urllib3/contrib/_appengine_environ.pyc
+${PYSITELIB}/pip/_vendor/urllib3/contrib/_appengine_environ.pyo
 ${PYSITELIB}/pip/_vendor/urllib3/contrib/_securetransport/__init__.py
 ${PYSITELIB}/pip/_vendor/urllib3/contrib/_securetransport/__init__.pyc
 ${PYSITELIB}/pip/_vendor/urllib3/contrib/_securetransport/__init__.pyo
@@ -843,9 +855,6 @@ ${PYSITELIB}/pip/_vendor/urllib3/packages/backports/__init__.pyo
 ${PYSITELIB}/pip/_vendor/urllib3/packages/backports/makefile.py
 ${PYSITELIB}/pip/_vendor/urllib3/packages/backports/makefile.pyc
 ${PYSITELIB}/pip/_vendor/urllib3/packages/backports/makefile.pyo
-${PYSITELIB}/pip/_vendor/urllib3/packages/ordered_dict.py
-${PYSITELIB}/pip/_vendor/urllib3/packages/ordered_dict.pyc
-${PYSITELIB}/pip/_vendor/urllib3/packages/ordered_dict.pyo
 ${PYSITELIB}/pip/_vendor/urllib3/packages/six.py
 ${PYSITELIB}/pip/_vendor/urllib3/packages/six.pyc
 ${PYSITELIB}/pip/_vendor/urllib3/packages/six.pyo
