@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.180 2019/01/24 17:28:07 tnn Exp $
+# $NetBSD: Makefile,v 1.181 2019/01/24 18:55:29 tnn Exp $
 
 VERREL=		6.1.4
 VERRC=		2
@@ -163,6 +163,7 @@ CONFIGURE_ARGS+=	--disable-epm
 CONFIGURE_ARGS+=	--disable-fetch-external
 CONFIGURE_ARGS+=	--disable-firebird-sdbc
 CONFIGURE_ARGS+=	--disable-odk
+CONFIGURE_ARGS+=	--disable-sdremote-bluetooth
 # Enabling GIO causes error. losessioninstall.component not found.
 CONFIGURE_ARGS+=	--disable-gio
 CONFIGURE_ARGS+=	--disable-pdfium
