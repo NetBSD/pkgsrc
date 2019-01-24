@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.406 2019/01/24 13:07:04 adam Exp $
+$NetBSD: CHANGES-2019,v 1.407 2019/01/24 13:46:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -600,3 +600,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated fonts/tex-academicons-doc to 1.8.62 [markd 2019-01-24]
 	Updated devel/py-configparser to 3.5.1 [adam 2019-01-24]
 	Updated sysutils/py-psutil to 5.5.0 [adam 2019-01-24]
+	Updated textproc/py-parse to 1.11.1 [adam 2019-01-24]
+	Updated devel/py-faker to 1.0.2 [adam 2019-01-24]
