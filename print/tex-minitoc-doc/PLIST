@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2015/08/02 12:21:43 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/01/24 19:51:31 markd Exp $
 share/texmf-dist/doc/latex/minitoc/INSTALL
-share/texmf-dist/doc/latex/minitoc/README
+share/texmf-dist/doc/latex/minitoc/README.md
 share/texmf-dist/doc/latex/minitoc/TODO
 share/texmf-dist/doc/latex/minitoc/boldsc.sty
 share/texmf-dist/doc/latex/minitoc/cmk
