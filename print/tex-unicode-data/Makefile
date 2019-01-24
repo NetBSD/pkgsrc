@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/08/17 02:52:10 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/01/24 10:58:54 markd Exp $
 
 DISTNAME=	unicode-data
-PKGNAME=	tex-${DISTNAME}-1.6
-TEXLIVE_REV=	44711
+PKGNAME=	tex-${DISTNAME}-1.7
+TEXLIVE_REV=	48003
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/unicode-data
