@@ -1,1 +1,1 @@
-bin/pyflakes @PREFIX@/bin/pyflakes@PYVERSSUFFIX@
+bin/pyflakes @PREFIX@/bin/pyflakes-@PYVERSSUFFIX@
