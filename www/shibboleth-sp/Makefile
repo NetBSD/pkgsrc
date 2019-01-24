@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2018/12/13 19:52:26 adam Exp $
+# $NetBSD: Makefile,v 1.30 2019/01/24 16:46:21 perseant Exp $
 #
 
 DISTNAME=	shibboleth-sp-2.5.5
@@ -21,7 +21,7 @@ EGDIR=		${PREFIX}/share/examples/shibboleth
 SHIB_CONFDIR=	${PKG_SYSCONFDIR}/shibboleth
 
 USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 
 CFLAGS.SunOS+=	-fpermissive
 
