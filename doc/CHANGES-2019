@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.402 2019/01/24 10:25:01 morr Exp $
+$NetBSD: CHANGES-2019,v 1.403 2019/01/24 10:34:34 morr Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -570,3 +570,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-flakes to 2.1.0 [adam 2019-01-24]
 	Updated x11/ocaml-lablgtk to 2.18.7 [jaapb 2019-01-24]
 	Updated www/wordpress to 5.0.3 [morr 2019-01-24]
+	Updated net/haproxy to 1.8.17 [morr 2019-01-24]
