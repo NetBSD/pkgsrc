@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2016/07/29 11:25:18 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/01/24 19:32:07 markd Exp $
 
 DISTNAME=	ncctools
-PKGNAME=	tex-${DISTNAME}-3.5
-TEXLIVE_REV=	15878
+PKGNAME=	tex-${DISTNAME}-3.5.2
+TEXLIVE_REV=	48127
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/ncctools
