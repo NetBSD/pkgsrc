@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2018/05/06 01:59:53 markd Exp $
+$NetBSD: distinfo,v 1.4 2019/01/25 20:10:40 markd Exp $
 
-SHA1 (tex-context-filter-47085/context-filter.doc.tar.xz) = 4de00b8ea6621579e7f931191d3c297d0d0558b1
-RMD160 (tex-context-filter-47085/context-filter.doc.tar.xz) = 1de7bcf6f81649eb2e00e186ea7b8da6655de18d
-SHA512 (tex-context-filter-47085/context-filter.doc.tar.xz) = 399439c05093da89aaf4d000ca3b223e560ed97b1ac1abbb2b7ca62dfb0ff65788499f96a141a81a6d03216342e383d620933423758e0aff725685b401cbdfcb
-Size (tex-context-filter-47085/context-filter.doc.tar.xz) = 10060 bytes
+SHA1 (tex-context-filter-48390/context-filter.doc.tar.xz) = 019ba288d92999d85d97774c7f586c955342ec14
+RMD160 (tex-context-filter-48390/context-filter.doc.tar.xz) = ca18b3b1a84052b22b2572bf8af2134484c797c8
+SHA512 (tex-context-filter-48390/context-filter.doc.tar.xz) = 7ef047381612b397507e9b12c96f242570ec974c4e48ed18f61ba68070edda02f1ff99e110d8d16ced58bc6476cb88adbb8b3c37e6ac2fd4b07fdf5a55aba9b1
+Size (tex-context-filter-48390/context-filter.doc.tar.xz) = 10308 bytes
