@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.75 2019/01/12 21:18:16 leot Exp $
+@comment $NetBSD: PLIST,v 1.76 2019/01/25 18:14:50 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -830,6 +830,9 @@ ${PYSITELIB}/youtube_dl/extractor/hitbox.pyo
 ${PYSITELIB}/youtube_dl/extractor/hitrecord.py
 ${PYSITELIB}/youtube_dl/extractor/hitrecord.pyc
 ${PYSITELIB}/youtube_dl/extractor/hitrecord.pyo
+${PYSITELIB}/youtube_dl/extractor/hketv.py
+${PYSITELIB}/youtube_dl/extractor/hketv.pyc
+${PYSITELIB}/youtube_dl/extractor/hketv.pyo
 ${PYSITELIB}/youtube_dl/extractor/hornbunny.py
 ${PYSITELIB}/youtube_dl/extractor/hornbunny.pyc
 ${PYSITELIB}/youtube_dl/extractor/hornbunny.pyo
