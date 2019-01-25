@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2018/05/12 01:14:32 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/01/25 19:26:55 markd Exp $
 man/man1/musixflx.1
 man/man1/musixtex.1
 share/texmf-dist/doc/generic/musixtex/ChangeLog-114.txt
@@ -15,6 +15,8 @@ share/texmf-dist/doc/generic/musixtex/ChangeLog-124.txt
 share/texmf-dist/doc/generic/musixtex/ChangeLog-125.txt
 share/texmf-dist/doc/generic/musixtex/ChangeLog-126.txt
 share/texmf-dist/doc/generic/musixtex/ChangeLog-127.txt
+share/texmf-dist/doc/generic/musixtex/ChangeLog-128.txt
+share/texmf-dist/doc/generic/musixtex/ChangeLog-129.txt
 share/texmf-dist/doc/generic/musixtex/ChangeLog-musixdoc.txt
 share/texmf-dist/doc/generic/musixtex/README
 share/texmf-dist/doc/generic/musixtex/examples/adagio.tex
@@ -113,8 +115,9 @@ share/texmf-dist/doc/generic/musixtex/musixdoc/introduction.tex
 share/texmf-dist/doc/generic/musixtex/musixdoc/layout.tex
 share/texmf-dist/doc/generic/musixtex/musixdoc/lyrics.tex
 share/texmf-dist/doc/generic/musixtex/musixdoc/miscellaneous.tex
+share/texmf-dist/doc/generic/musixtex/musixdoc/musixdoc.ltx
+share/texmf-dist/doc/generic/musixtex/musixdoc/musixdoc.pdf
 share/texmf-dist/doc/generic/musixtex/musixdoc/musixdoc.sty
-share/texmf-dist/doc/generic/musixtex/musixdoc/musixdoc.tex
 share/texmf-dist/doc/generic/musixtex/musixdoc/parameters.tex
 share/texmf-dist/doc/generic/musixtex/musixdoc/preparing.tex
 share/texmf-dist/doc/generic/musixtex/musixdoc/repeats.tex
