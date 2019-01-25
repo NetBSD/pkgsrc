@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.419 2019/01/25 13:35:55 adam Exp $
+$NetBSD: CHANGES-2019,v 1.420 2019/01/25 18:15:05 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -618,3 +618,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/p5-Text-Template to 1.54 [wen 2019-01-25]
 	Updated security/py-trustme to 0.5.0 [adam 2019-01-25]
 	Updated textproc/py-jsonpickle to 1.1 [adam 2019-01-25]
+	Updated net/youtube-dl to 20190124 [leot 2019-01-25]
