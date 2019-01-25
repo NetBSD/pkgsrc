@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2018/10/11 10:42:02 adam Exp $
+# $NetBSD: Makefile,v 1.4 2019/01/25 13:35:39 adam Exp $
 
-DISTNAME=	jsonpickle-1.0
+DISTNAME=	jsonpickle-1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsonpickle/}
