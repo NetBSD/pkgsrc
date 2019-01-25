@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.422 2019/01/25 20:09:19 agc Exp $
+$NetBSD: CHANGES-2019,v 1.423 2019/01/25 20:12:58 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -624,3 +624,19 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/py-jsonpickle to 1.1 [adam 2019-01-25]
 	Updated net/youtube-dl to 20190124 [leot 2019-01-25]
 	Updated pkgtools/mksandbox to 1.8 [agc 2019-01-25]
+	Updated math/tex-unicode-math to 0.8m [markd 2019-01-25]
+	Updated math/tex-unicode-math-doc to 0.8m [markd 2019-01-25]
+	Updated print/tex-subfiles to 1.2 [markd 2019-01-25]
+	Updated print/tex-subfiles-doc to 1.2 [markd 2019-01-25]
+	Updated fonts/tex-alegreya to 2018.48339 [markd 2019-01-25]
+	Updated fonts/tex-alegreya-doc to 2018.48339 [markd 2019-01-25]
+	Updated print/tex-musixtex to 1.29 [markd 2019-01-25]
+	Updated print/tex-musixtex-doc to 1.29 [markd 2019-01-25]
+	Updated print/tex-marginnote to 1.4b [markd 2019-01-25]
+	Updated print/tex-marginnote-doc to 1.4b [markd 2019-01-25]
+	Updated fonts/tex-fontools to 2018.48387 [markd 2019-01-25]
+	Updated fonts/tex-fontools-doc to 2018.48387 [markd 2019-01-25]
+	Updated print/tex-context-vim to 2018.48391 [markd 2019-01-25]
+	Updated print/tex-context-vim-doc to 2018.48391 [markd 2019-01-25]
+	Updated print/tex-context-filter to 2018.48390 [markd 2019-01-25]
+	Updated print/tex-context-filter-doc to 2018.48390 [markd 2019-01-25]
