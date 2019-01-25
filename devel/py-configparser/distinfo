@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/01/24 13:04:50 adam Exp $
+$NetBSD: distinfo,v 1.3 2019/01/25 12:26:20 adam Exp $
 
-SHA1 (configparser-3.5.1.tar.gz) = 8f17a04c7c1b66c9b9f7e7289ff95d482d2cf0c1
-RMD160 (configparser-3.5.1.tar.gz) = 5554f9396d1768e5e5f50222f75e3ae9bf5e280e
-SHA512 (configparser-3.5.1.tar.gz) = ea67d455347598b13a9c4217f8a96bad09d94140577f1ab6b5aa962395df56f796c5069f8dd69b321183dc0c73bfdf14dd9c8b379bb322d32c59a02480f763ad
-Size (configparser-3.5.1.tar.gz) = 42963 bytes
+SHA1 (configparser-3.5.2.tar.gz) = b3dfbcb98e412651788f6458669998a1534dd344
+RMD160 (configparser-3.5.2.tar.gz) = e5149d389bbd7cee96a0ff1555df07204ea03f9a
+SHA512 (configparser-3.5.2.tar.gz) = 60cf61c99c31a2ad329e63d23bbefb7b352417900690aa4b1c43f9f976fc8d26147172d12089b8a25cc875394aa1bc24bf009cda18272022c49e7593e95d428a
+Size (configparser-3.5.2.tar.gz) = 43241 bytes
