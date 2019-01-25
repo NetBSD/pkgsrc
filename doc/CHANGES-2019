@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.412 2019/01/25 09:03:22 adam Exp $
+$NetBSD: CHANGES-2019,v 1.413 2019/01/25 12:29:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -609,3 +609,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/obfs4proxy to 0.0.8 [alnsn 2019-01-24]
 	Updated multimedia/x265 to 3.0 [adam 2019-01-25]
 	Updated finance/py-braintree to 3.51.0 [adam 2019-01-25]
+	Updated devel/py-configparser to 3.5.2 [adam 2019-01-25]
+	Updated security/py-oauthlib to 3.0.1 [adam 2019-01-25]
