@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.417 2019/01/25 12:56:54 wen Exp $
+$NetBSD: CHANGES-2019,v 1.418 2019/01/25 13:01:41 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -615,3 +615,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/p5-Pod-Tree to 1.30 [wen 2019-01-25]
 	Updated textproc/p5-Text-CSV_XS to 1.38 [wen 2019-01-25]
 	Updated textproc/p5-Text-CSV to 1.99 [wen 2019-01-25]
+	Updated textproc/p5-Text-Template to 1.54 [wen 2019-01-25]
