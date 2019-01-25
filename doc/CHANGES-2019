@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.420 2019/01/25 18:15:05 leot Exp $
+$NetBSD: CHANGES-2019,v 1.421 2019/01/25 18:20:31 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -607,6 +607,10 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-scrapy to 1.5.2 [adam 2019-01-24]
 	Updated graphics/papirus-icon-theme to 20190106 [nia 2019-01-24]
 	Updated net/obfs4proxy to 0.0.8 [alnsn 2019-01-24]
+	Updated print/tex-ncctools to 3.5.2 [markd 2019-01-24]
+	Updated print/tex-ncctools-doc to 3.5.2 [markd 2019-01-24]
+	Updated print/tex-minitoc to 62 [markd 2019-01-24]
+	Updated print/tex-minitoc-doc to 62 [markd 2019-01-24]
 	Updated multimedia/x265 to 3.0 [adam 2019-01-25]
 	Updated finance/py-braintree to 3.51.0 [adam 2019-01-25]
 	Updated devel/py-configparser to 3.5.2 [adam 2019-01-25]
