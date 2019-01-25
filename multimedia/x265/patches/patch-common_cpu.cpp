@@ -1,8 +1,8 @@
-$NetBSD: patch-common_cpu.cpp,v 1.1 2018/12/11 17:55:56 jklos Exp $
+$NetBSD: patch-common_cpu.cpp,v 1.2 2019/01/25 09:01:13 adam Exp $
 
 Retire detect512, make enable512 a global.
 
---- common/cpu.cpp.orig	2018-10-05 12:14:40.000000000 +0000
+--- common/cpu.cpp.orig	2019-01-23 09:47:18.000000000 +0000
 +++ common/cpu.cpp
 @@ -58,7 +58,7 @@ static void sigill_handler(int sig)
  #endif // if X265_ARCH_ARM
@@ -21,6 +21,6 @@ Retire detect512, make enable512 a global.
 -{
 -    return(enable512);
 -}
+ 
  uint32_t cpu_detect(bool benableavx512 )
  {
- 
