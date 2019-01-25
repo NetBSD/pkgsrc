@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2018/12/13 07:13:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/01/25 09:03:03 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -293,6 +293,9 @@ ${PYSITELIB}/braintree/payment_method_nonce.pyo
 ${PYSITELIB}/braintree/payment_method_nonce_gateway.py
 ${PYSITELIB}/braintree/payment_method_nonce_gateway.pyc
 ${PYSITELIB}/braintree/payment_method_nonce_gateway.pyo
+${PYSITELIB}/braintree/payment_method_parser.py
+${PYSITELIB}/braintree/payment_method_parser.pyc
+${PYSITELIB}/braintree/payment_method_parser.pyo
 ${PYSITELIB}/braintree/paypal_account.py
 ${PYSITELIB}/braintree/paypal_account.pyc
 ${PYSITELIB}/braintree/paypal_account.pyo
@@ -314,6 +317,9 @@ ${PYSITELIB}/braintree/resource.pyo
 ${PYSITELIB}/braintree/resource_collection.py
 ${PYSITELIB}/braintree/resource_collection.pyc
 ${PYSITELIB}/braintree/resource_collection.pyo
+${PYSITELIB}/braintree/revoked_payment_method_metadata.py
+${PYSITELIB}/braintree/revoked_payment_method_metadata.pyc
+${PYSITELIB}/braintree/revoked_payment_method_metadata.pyo
 ${PYSITELIB}/braintree/risk_data.py
 ${PYSITELIB}/braintree/risk_data.pyc
 ${PYSITELIB}/braintree/risk_data.pyo
