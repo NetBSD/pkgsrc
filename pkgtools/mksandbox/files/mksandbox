@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.14 2018/12/07 12:40:39 sevan Exp $
+# $NetBSD: mksandbox,v 1.15 2019/01/25 20:08:21 agc Exp $
 
 # Copyright (c) 2002,2012 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -246,6 +246,7 @@ if [ "$with_pkgsrc" = "yes" ]; then
 fi
 
 $mkdirprog $sandbox
+sandbox="`(cd $sandbox && pwd)`"
 cat > $sandbox_script <<EOS
 #! /bin/sh -
 mounthost=$mounthost
