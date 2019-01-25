@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2018/12/04 09:03:21 wen Exp $
+# $NetBSD: Makefile,v 1.23 2019/01/25 12:44:59 wen Exp $
 
-DISTNAME=	Pod-Tree-1.29
+DISTNAME=	Pod-Tree-1.30
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Pod/}
