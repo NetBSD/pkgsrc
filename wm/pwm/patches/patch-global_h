@@ -1,0 +1,13 @@
+$NetBSD: patch-global_h,v 1.1 2019/01/26 20:50:50 is Exp $
+
+--- global.h.orig	2006-05-17 06:50:33.000000000 +0000
++++ global.h
+@@ -57,6 +57,8 @@ typedef struct _WGlobal{
+ 	Atom atom_private_ipc;
+ #ifndef CF_NO_MWM_HINTS	
+ 	Atom atom_mwm_hints;
++	Atom atom_net_wm_state, atom_net_wm_state_fs;
++	Atom atom_net_wm_allow, atom_net_wm_allow_fs;
+ #endif
+ 
+ 	WWinObj *current_winobj, *previous_winobj;
