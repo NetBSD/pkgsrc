@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.14 2017/08/29 12:11:35 wiz Exp $
+# $NetBSD: options.mk,v 1.15 2019/01/26 18:23:05 abs Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.spamassassin
-PKG_SUPPORTED_OPTIONS=	inet6 ssl gnupg2
+PKG_SUPPORTED_OPTIONS=	inet6 ssl gnupg1
 
 #
 # Default options
@@ -53,12 +53,12 @@ DEPENDS+=		p5-IO-Socket-INET6-[0-9]*:../../net/p5-IO-Socket-INET6
 #
 # use gnupg2 instead of gnupg1
 #
-.if !empty(PKG_OPTIONS:Mgnupg2)
-DEPENDS+=       gnupg2-[0-9]*:../../security/gnupg2
-GPGPATH=        ${PREFIX}/bin/gpg2
+.if empty(PKG_OPTIONS:Mgnupg1)
+DEPENDS+=	gnupg2-[0-9]*:../../security/gnupg2
+GPGPATH=	${PREFIX}/bin/gpg2
 .else
-DEPENDS+=       gnupg>=1.0.0:../../security/gnupg
-GPGPATH=        ${PREFIX}/bin/gpg
+DEPENDS+=	gnupg>=1.0.0:../../security/gnupg
+GPGPATH=	${PREFIX}/bin/gpg
 .endif
 SUBST_CLASSES+=		gpgpath
 SUBST_STAGE.gpgpath=	pre-configure
