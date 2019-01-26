@@ -229,7 +229,7 @@ func (s *Suite) Test_VarUseContext_String(c *check.C) {
 
 	t.SetUpVartypes()
 	vartype := G.Pkgsrc.VariableType("PKGNAME")
-	vuc := VarUseContext{vartype, vucTimeUnknown, vucQuotBackt, false}
+	vuc := VarUseContext{vartype, vucTimeUnknown, VucQuotBackt, false}
 
 	c.Check(vuc.String(), equals, "(Pkgname time:unknown quoting:backt wordpart:false)")
 }
@@ -320,7 +320,7 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__unknown_rhs(c *check.C) {
 	mkline := t.NewMkLine("filename", 1, "PKGNAME:= ${UNKNOWN}")
 	t.SetUpVartypes()
 
-	vuc := VarUseContext{G.Pkgsrc.VariableType("PKGNAME"), vucTimeParse, vucQuotUnknown, false}
+	vuc := VarUseContext{G.Pkgsrc.VariableType("PKGNAME"), vucTimeParse, VucQuotUnknown, false}
 	nq := mkline.VariableNeedsQuoting("UNKNOWN", nil, &vuc)
 
 	c.Check(nq, equals, unknown)
@@ -333,7 +333,7 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__append_URL_to_list_of_URLs(c *
 	t.SetUpMasterSite("MASTER_SITE_SOURCEFORGE", "http://downloads.sourceforge.net/sourceforge/")
 	mkline := t.NewMkLine("Makefile", 95, "MASTER_SITES=\t${HOMEPAGE}")
 
-	vuc := VarUseContext{G.Pkgsrc.vartypes["MASTER_SITES"], vucTimeRun, vucQuotPlain, false}
+	vuc := VarUseContext{G.Pkgsrc.vartypes["MASTER_SITES"], vucTimeRun, VucQuotPlain, false}
 	nq := mkline.VariableNeedsQuoting("HOMEPAGE", G.Pkgsrc.vartypes["HOMEPAGE"], &vuc)
 
 	c.Check(nq, equals, no)
@@ -804,8 +804,12 @@ func (s *Suite) Test_MkLine_ValueSplit(c *check.C) {
 		c.Check(split, deepEquals, expected)
 	}
 
-	test("#empty",
-		[]string(nil)...)
+	test("Platform-independent C# compiler #5",
+		"Platform-independent C# compiler #5")
+
+	// This warning refers to the #5 since it starts a word, but not to the C#.
+	t.CheckOutputLines(
+		"WARN: Makefile:1: The # character starts a Makefile comment.")
 
 	test("/bin",
 		"/bin")
@@ -1169,6 +1173,35 @@ func (s *Suite) Test_MkLine_DetermineUsedVariables(c *check.C) {
 		"<",
 		"@",
 		"x"})
+}
+
+func (s *Suite) Test_MkLine_UnquoteShell(c *check.C) {
+	t := s.Init(c)
+
+	test := func(input, output string) {
+		unquoted := (*MkLineImpl).UnquoteShell(nil, input)
+		t.Check(unquoted, equals, output)
+	}
+
+	test("", "")
+	test("plain", "plain")
+	test("plain words", "plain words")
+	test("\"dquot\"", "dquot")
+	test("\"dquot \\\"escaped\\\\\"", "dquot \"escaped\\")
+	test("'squot \\\"escaped\\\\'", "squot \\\"escaped\\\\")
+	test("'squot,''squot'", "squot,squot")
+	test("\"dquot,\"'squot'", "dquot,squot")
+	test("\"'\",'\"'", "',\"")
+	test("\\\" \\\\", "\" \\")
+
+	// UnquoteShell does not parse shell variable expansions or even subshells.
+	// It therefore must cope with unexpected input and make the best out of it.
+
+	test("\\", "")
+	test("\"\\", "")
+	test("'", "")
+	test("\"$(\"", "$(")
+	test("`", "`")
 }
 
 func (s *Suite) Test_matchMkDirective(c *check.C) {

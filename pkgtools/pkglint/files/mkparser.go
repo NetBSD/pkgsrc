@@ -25,7 +25,8 @@ func (p *MkParser) Rest() string {
 // NewMkParser creates a new parser for the given text.
 // If emitWarnings is false, line may be nil.
 //
-// TODO: Document what exactly text is. Is it the form taken from the file, or is it after unescaping "\#" to #?
+// The text argument is assumed to be after unescaping the # character,
+// which means the # is a normal character and does not introduce a Makefile comment.
 //
 // TODO: Remove the emitWarnings argument in order to separate parsing from checking.
 func NewMkParser(line Line, text string, emitWarnings bool) *MkParser {
@@ -46,12 +47,6 @@ func (p *MkParser) MkTokens() []*MkToken {
 
 	var tokens []*MkToken
 	for !p.EOF() {
-		// FIXME: Aren't the comments already gone at this stage?
-		if lexer.SkipByte('#') {
-			lexer.Skip(len(lexer.Rest()))
-			continue
-		}
-
 		mark := lexer.Mark()
 		if varuse := p.VarUse(); varuse != nil {
 			tokens = append(tokens, &MkToken{Text: lexer.Since(mark), Varuse: varuse})
@@ -91,23 +86,23 @@ func (p *MkParser) VarUse() *MkVarUse {
 
 		varnameMark := lexer.Mark()
 		varname := p.Varname()
-		if varname != "" {
-			modifiers := p.VarUseModifiers(varname, closing)
-			if lexer.SkipByte(closing) {
-				if usingRoundParen && p.EmitWarnings {
-					parenVaruse := lexer.Since(mark)
-					edit := []byte(parenVaruse)
-					edit[1] = '{'
-					edit[len(edit)-1] = '}'
-					bracesVaruse := string(edit)
 
-					fix := p.Line.Autofix()
-					fix.Warnf("Please use curly braces {} instead of round parentheses () for %s.", varname)
-					fix.Replace(parenVaruse, bracesVaruse)
-					fix.Apply()
-				}
-				return &MkVarUse{varname, modifiers}
+		modifiers := p.VarUseModifiers(varname, closing)
+		if lexer.SkipByte(closing) {
+			if usingRoundParen && p.EmitWarnings {
+				parenVaruse := lexer.Since(mark)
+				edit := []byte(parenVaruse)
+				edit[1] = '{'
+				edit[len(edit)-1] = '}'
+				bracesVaruse := string(edit)
+
+				fix := p.Line.Autofix()
+				fix.Warnf("Please use curly braces {} instead of round parentheses () for %s.", varname)
+				fix.Replace(parenVaruse, bracesVaruse)
+				fix.Apply()
 			}
+
+			return &MkVarUse{varname, modifiers}
 		}
 
 		// This code path parses ${arbitrary text :L} and ${expression :? true-branch : false-branch }.
@@ -175,7 +170,6 @@ func (p *MkParser) VarUseModifiers(varname string, closing byte) []MkVarUseModif
 	// The :S and :C modifiers may be chained without using the : as separator.
 	mayOmitColon := false
 
-loop:
 	for lexer.SkipByte(':') || mayOmitColon {
 		mayOmitColon = false
 		modifierMark := lexer.Mark()
@@ -215,7 +209,7 @@ loop:
 				case lexer.SkipRegexp(G.res.Compile(`^\\\d+`)):
 					break
 				default:
-					break loop
+					continue
 				}
 				appendModifier(lexer.Since(modifierMark))
 				continue
@@ -264,15 +258,21 @@ loop:
 
 		lexer.Reset(modifierMark)
 
-		// FIXME: Why skip over unknown modifiers here? This accepts :S,a,b,c,d,e,f but shouldn't.
 		re := G.res.Compile(regex.Pattern(ifelseStr(closing == '}', `^([^:$}]|\$\$)+`, `^([^:$)]|\$\$)+`)))
 		for p.VarUse() != nil || lexer.SkipRegexp(re) {
 		}
+		modifier := lexer.Since(modifierMark)
 
-		if suffixSubst := lexer.Since(modifierMark); contains(suffixSubst, "=") {
-			appendModifier(suffixSubst)
+		// ${SOURCES:%.c=%.o} or ${:!uname -a:[2]}
+		if contains(modifier, "=") || (hasPrefix(modifier, "!") && hasSuffix(modifier, "!")) {
+			appendModifier(modifier)
 			continue
 		}
+
+		if p.EmitWarnings && modifier != "" {
+			p.Line.Warnf("Invalid variable modifier %q for %q.", modifier, varname)
+		}
+
 	}
 	return modifiers
 }
@@ -315,7 +315,7 @@ func (p *MkParser) varUseModifierSubst(lexer *textproc.Lexer, closing byte) bool
 		return false
 	}
 
-	lexer.SkipRegexp(G.res.Compile(`^[1gW]`)) // FIXME: Multiple modifiers may be mentioned
+	lexer.NextBytesFunc(func(b byte) bool { return b == '1' || b == 'g' || b == 'W' })
 
 	return true
 }
@@ -506,8 +506,8 @@ func (p *MkParser) mkCondFunc() *mkCond {
 		}
 
 		// TODO: Consider suggesting ${VAR} instead of !empty(VAR) since it is shorter and
-		// avoids unnecessary negation, which makes the expression less confusing.
-		// This applies especially to the ${VAR:Mpattern} form.
+		//  avoids unnecessary negation, which makes the expression less confusing.
+		//  This applies especially to the ${VAR:Mpattern} form.
 
 	case "commands", "exists", "make", "target":
 		argMark := lexer.Mark()
@@ -534,6 +534,28 @@ func (p *MkParser) Varname() string {
 }
 
 func (p *MkParser) PkgbasePattern() string {
+
+	// isVersion returns true for "1.2", "[0-9]*", "${PKGVERSION}", "${PKGNAME:C/^.*-//}",
+	// but not for "client", "${PKGNAME}", "[a-z]".
+	isVersion := func(s string) bool {
+		lexer := textproc.NewLexer(s)
+
+		lexer.SkipByte('[')
+		if lexer.NextByteSet(textproc.Digit) != -1 {
+			return true
+		}
+
+		lookaheadParser := NewMkParser(nil, lexer.Rest(), false)
+		varUse := lookaheadParser.VarUse()
+		if varUse != nil {
+			if contains(varUse.varname, "VER") || len(varUse.modifiers) > 0 {
+				return true
+			}
+		}
+
+		return false
+	}
+
 	lexer := p.lexer
 	start := lexer.Mark()
 
@@ -544,18 +566,7 @@ func (p *MkParser) PkgbasePattern() string {
 			continue
 		}
 
-		lookahead := lexer.Copy()
-		if !lookahead.SkipByte('-') {
-			break
-		}
-
-		if lookahead.SkipRegexp(G.res.Compile(`^\d`)) ||
-			// TODO: Replace regex with proper VarUse.
-			lookahead.SkipRegexp(G.res.Compile(`^\$\{\w*VER\w*\}`)) ||
-			lookahead.SkipByte('[') {
-
-			// The parser is looking at a hyphen followed by a version number.
-			// This means the pkgbase stops before the hyphen.
+		if lexer.PeekByte() != '-' || isVersion(lexer.Rest()[1:]) {
 			break
 		}
 
@@ -646,8 +657,7 @@ func (p *MkParser) Dependency() *DependencyPattern {
 	if lexer.SkipByte('-') && lexer.Rest() != "" {
 		versionMark := lexer.Mark()
 
-		// FIXME: Use VarUse.
-		for lexer.SkipRegexp(G.res.Compile(`^(\$\{\w+\}|[\w\[\]*_.\-])`)) {
+		for p.VarUse() != nil || lexer.SkipRegexp(G.res.Compile(`^[\w\[\]*_.\-]+`)) {
 		}
 
 		if !lexer.SkipString("{,nb*}") {

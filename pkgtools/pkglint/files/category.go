@@ -14,13 +14,13 @@ func CheckdirCategory(dir string) {
 
 	mklines.Check()
 
-	exp := NewMkExpecter(mklines)
-	for exp.AdvanceIfPrefix("#") {
+	mlex := NewMkLinesLexer(mklines)
+	for mlex.SkipPrefix("#") {
 	}
-	exp.ExpectEmptyLine()
+	mlex.SkipEmptyOrNote()
 
-	if exp.AdvanceIf(func(mkline MkLine) bool { return mkline.IsVarassign() && mkline.Varname() == "COMMENT" }) {
-		mkline := exp.PreviousMkLine()
+	if mlex.SkipIf(func(mkline MkLine) bool { return mkline.IsVarassign() && mkline.Varname() == "COMMENT" }) {
+		mkline := mlex.PreviousMkLine()
 
 		lex := textproc.NewLexer(mkline.Value())
 		valid := textproc.NewByteSet("--- '(),/0-9A-Za-z")
@@ -40,9 +40,9 @@ func CheckdirCategory(dir string) {
 		}
 
 	} else {
-		exp.CurrentLine().Errorf("COMMENT= line expected.")
+		mlex.CurrentLine().Errorf("COMMENT= line expected.")
 	}
-	exp.ExpectEmptyLine()
+	mlex.SkipEmptyOrNote()
 
 	type subdir struct {
 		name string
@@ -57,11 +57,11 @@ func CheckdirCategory(dir string) {
 	var mSubdirs []subdir
 
 	seen := make(map[string]MkLine)
-	for !exp.EOF() {
-		mkline := exp.CurrentMkLine()
+	for !mlex.EOF() {
+		mkline := mlex.CurrentMkLine()
 
 		if (mkline.IsVarassign() || mkline.IsCommentedVarassign()) && mkline.Varname() == "SUBDIR" {
-			exp.Advance()
+			mlex.Skip()
 
 			name := mkline.Value()
 			if mkline.IsCommentedVarassign() && mkline.VarassignComment() == "" {
@@ -113,7 +113,7 @@ func CheckdirCategory(dir string) {
 				if len(mRest) > 0 {
 					line = mRest[0].line.Line
 				} else {
-					line = exp.CurrentLine()
+					line = mlex.CurrentLine()
 				}
 
 				fix := line.Autofix()
@@ -141,10 +141,10 @@ func CheckdirCategory(dir string) {
 	// the pkgsrc-wip category Makefile defines its own targets for
 	// generating indexes and READMEs. Just skip them.
 	if !G.Wip {
-		exp.ExpectEmptyLine()
-		exp.ExpectText(".include \"../mk/misc/category.mk\"")
-		if !exp.EOF() {
-			exp.CurrentLine().Errorf("The file should end here.")
+		mlex.SkipEmptyOrNote()
+		mlex.SkipContainsOrWarn(".include \"../mk/misc/category.mk\"")
+		if !mlex.EOF() {
+			mlex.CurrentLine().Errorf("The file should end here.")
 		}
 	}
 
