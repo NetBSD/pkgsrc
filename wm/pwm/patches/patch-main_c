@@ -1,0 +1,15 @@
+$NetBSD: patch-main_c,v 1.1 2019/01/26 20:50:50 is Exp $
+
+--- main.c.orig	2006-05-17 06:50:33.000000000 +0000
++++ main.c
+@@ -205,6 +205,10 @@ static bool initialize(const char*displa
+ 	wglobal.atom_private_ipc=XInternAtom(dpy, "_PWM_PRIVATE_IPC", False);
+ #ifndef CF_NO_MWM_HINTS	
+ 	wglobal.atom_mwm_hints=XInternAtom(dpy, "_MOTIF_WM_HINTS", False);
++	wglobal.atom_net_wm_state=XInternAtom(dpy, "_NET_WM_STATE", False);
++	wglobal.atom_net_wm_state_fs=XInternAtom(dpy, "_NET_WM_STATE_FULLSCREEN", False);
++	wglobal.atom_net_wm_allow=XInternAtom(dpy, "_NET_WM_ALLOWED_ACTIONS", False);
++	wglobal.atom_net_wm_allow_fs=XInternAtom(dpy, "_NET_WM_ACTION_FULLSCREEN", False);
+ #endif
+ 	
+ 	init_bindings();
