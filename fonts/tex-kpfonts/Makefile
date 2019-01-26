@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:47 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/01/26 01:52:32 markd Exp $
 
 DISTNAME=	kpfonts
-PKGNAME=	tex-${DISTNAME}-3.31
-TEXLIVE_REV=	29803
+PKGNAME=	tex-${DISTNAME}-3.33
+TEXLIVE_REV=	48470
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/kpfonts
