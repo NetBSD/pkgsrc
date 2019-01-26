@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2018/07/20 13:04:03 wen Exp $
+$NetBSD: distinfo,v 1.17 2019/01/26 10:38:01 wen Exp $
 
-SHA1 (File-Temp-0.2308.tar.gz) = 1ac89b71f31c36fe3bdb7edad49287d8294db0bf
-RMD160 (File-Temp-0.2308.tar.gz) = 8ec606dd43d2f3522f4234831de50d22b894728a
-SHA512 (File-Temp-0.2308.tar.gz) = a85c3b5d7f39cfd64c370d72cead15f2d6d713b995ceca71e8af359cd686ae685e1ac6ca91e49165b7e867b1d635d1f124e788b92b01f2bda0b3970f2ad983db
-Size (File-Temp-0.2308.tar.gz) = 77022 bytes
+SHA1 (File-Temp-0.2309.tar.gz) = 8914bf3be7a387377f6fc1f8a5e1cf8a355f17ea
+RMD160 (File-Temp-0.2309.tar.gz) = c3ae1021c7401d228e7470780ed751716712f0df
+SHA512 (File-Temp-0.2309.tar.gz) = 9812e35d561ccff310262dc5bc50a9612fb3bbf7765a715c8fcad7653de977d08382733e38978586d47f943152b4a9619b76357c2f823c13f78dbf9b4eb4cd65
+Size (File-Temp-0.2309.tar.gz) = 74840 bytes
