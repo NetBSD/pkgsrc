@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2018/05/06 01:48:26 markd Exp $
+# $NetBSD: Makefile,v 1.11 2019/01/26 11:37:11 markd Exp $
 
 DISTNAME=	cm
-PKGNAME=	tex-${DISTNAME}-2018
+PKGNAME=	tex-${DISTNAME}-2018.49028
 CATEGORIES=	fonts
-TEXLIVE_REV=	45811
+TEXLIVE_REV=	49028
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/cm
