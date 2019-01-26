@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2018/05/06 11:42:59 markd Exp $
+$NetBSD: distinfo,v 1.8 2019/01/26 22:26:12 markd Exp $
 
-SHA1 (tex-hyphen-german-47375/hyphen-german.tar.xz) = 9209bed445189acd32ba157c222086061febb528
-RMD160 (tex-hyphen-german-47375/hyphen-german.tar.xz) = 7ae36627ef342dc668e2ab90d0063ccab0e40fcb
-SHA512 (tex-hyphen-german-47375/hyphen-german.tar.xz) = 1572a4e7ac8dea78ba043e69b37e2b844c39c4e9bceda0d2238961b70dbb9208a2116af7d2d1fb6fe8b13e768c3a8821a755e833fd73fca78d4b844f08441562
-Size (tex-hyphen-german-47375/hyphen-german.tar.xz) = 154564 bytes
+SHA1 (tex-hyphen-german-49078/hyphen-german.tar.xz) = 5d3b8824192fe3e3fc913b3901cec4df45ad7015
+RMD160 (tex-hyphen-german-49078/hyphen-german.tar.xz) = f275501cbb3019127a7a6af32faedf2b4ae687ed
+SHA512 (tex-hyphen-german-49078/hyphen-german.tar.xz) = ec33f6411427917dfa1a4262e072b3c871c9804256258a6ad97a6d00ab8b82949ef3b7d5b22fe7ea7122c51b29c964b05c726f22e08211889456327a91e858be
+Size (tex-hyphen-german-49078/hyphen-german.tar.xz) = 109040 bytes
