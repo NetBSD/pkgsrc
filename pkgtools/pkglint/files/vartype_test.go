@@ -55,7 +55,7 @@ func (s *Suite) Test_ACLPermissions_HumanString(c *check.C) {
 		equals, "") // Doesn't happen in practice
 
 	c.Check(aclpAll.HumanString(),
-		equals, "set, given a default value, appended to, used at load time, used")
+		equals, "set, given a default value, appended to, used at load time, or used")
 
 	c.Check(aclpUnknown.HumanString(),
 		equals, "") // Doesn't happen in practice
