@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.443 2019/01/26 10:45:50 wen Exp $
+$NetBSD: CHANGES-2019,v 1.444 2019/01/26 11:52:19 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -683,3 +683,29 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-File-Which to 1.23 [wen 2019-01-26]
 	Updated devel/p5-File-Temp to 0.2309 [wen 2019-01-26]
 	Updated devel/p5-ExtUtils-MakeMaker-CPANfile to 0.09 [wen 2019-01-26]
+	Updated print/tex-babel-french to 3.5c [markd 2019-01-26]
+	Updated print/tex-breqn to 0.98f [markd 2019-01-26]
+	Updated graphics/tex-epstopdf to 2.28 [markd 2019-01-26]
+	Updated graphics/tex-epstopdf-doc to 2.28 [markd 2019-01-26]
+	Updated graphics/tex-tkz-base to 1.16d [markd 2019-01-26]
+	Updated graphics/tex-tkz-base-doc to 1.16d [markd 2019-01-26]
+	Updated print/tex-pdftex to 2018 [markd 2019-01-26]
+	Updated print/tex-pdftex-doc to 2018 [markd 2019-01-26]
+	Updated print/tex-caption to 20181006 [markd 2019-01-26]
+	Updated print/tex-caption-doc to 20181006 [markd 2019-01-26]
+	Added print/tex-colorprofiles version 20181105 [markd 2019-01-26]
+	Added print/tex-colorprofiles-doc version 20181105 [markd 2019-01-26]
+	Updated fonts/tex-xits to 1.200.1 [markd 2019-01-26]
+	Updated fonts/tex-xits-doc to 1.200.1 [markd 2019-01-26]
+	Updated print/tex-europecv to 2018 [markd 2019-01-26]
+	Updated print/tex-europecv-doc to 2018 [markd 2019-01-26]
+	Updated textproc/tex-latexdiff to 1.3.0 [markd 2019-01-26]
+	Updated textproc/tex-latexdiff-doc to 1.3.0 [markd 2019-01-26]
+	Updated graphics/tex-tikzmark to 1.6 [markd 2019-01-26]
+	Updated graphics/tex-tikzmark-doc to 1.6 [markd 2019-01-26]
+	Updated print/tex-biblatex-nature to 1.3c [markd 2019-01-26]
+	Updated print/tex-biblatex-nature-doc to 1.3c [markd 2019-01-26]
+	Updated fonts/tex-cm to 2018.49028 [markd 2019-01-26]
+	Updated fonts/tex-cm-doc to 2018.49028 [markd 2019-01-26]
+	Updated print/tex-pdfcomment to 2.4a [markd 2019-01-26]
+	Updated print/tex-pdfcomment-doc to 2.4a [markd 2019-01-26]
