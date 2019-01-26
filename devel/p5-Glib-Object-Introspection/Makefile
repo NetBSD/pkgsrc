@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2018/11/14 22:21:19 kleink Exp $
+# $NetBSD: Makefile,v 1.21 2019/01/26 10:02:01 wen Exp $
 
-DISTNAME=	Glib-Object-Introspection-0.045
+DISTNAME=	Glib-Object-Introspection-0.046
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk2-perl/}
 MASTER_SITES+=	${MASTER_SITE_PERL_CPAN:=Glib/}
