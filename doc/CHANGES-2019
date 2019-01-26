@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.444 2019/01/26 11:52:19 markd Exp $
+$NetBSD: CHANGES-2019,v 1.445 2019/01/26 16:32:45 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -709,3 +709,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated fonts/tex-cm-doc to 2018.49028 [markd 2019-01-26]
 	Updated print/tex-pdfcomment to 2.4a [markd 2019-01-26]
 	Updated print/tex-pdfcomment-doc to 2.4a [markd 2019-01-26]
+	Updated pkgtools/pkglint to 5.6.12 [rillig 2019-01-26]
