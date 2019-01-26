@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2016/06/16 04:06:09 markd Exp $
+$NetBSD: distinfo,v 1.11 2019/01/26 23:41:07 markd Exp $
 
-SHA1 (tex-hyph-utf8-41189/hyph-utf8.doc.tar.xz) = d274c23366ab6903c7775685b1ab44797f48e1f0
-RMD160 (tex-hyph-utf8-41189/hyph-utf8.doc.tar.xz) = 67eb0b087ce7c2f6eaeba5cd6ab1c42e4c8e0fa0
-SHA512 (tex-hyph-utf8-41189/hyph-utf8.doc.tar.xz) = 4b0e898a05ab7be3712d3561ec3a8f734de8b5be956e7f5f84ce5ad7c57b5e393a7dba3010fa1952ee20e4993e4fa5d339c6fa20d8fed2bcaeb1f5d533f5357e
-Size (tex-hyph-utf8-41189/hyph-utf8.doc.tar.xz) = 268920 bytes
+SHA1 (tex-hyph-utf8-49078/hyph-utf8.doc.tar.xz) = 06a9ed25fdb626093c3ba03d8afdd5a3d916cc4e
+RMD160 (tex-hyph-utf8-49078/hyph-utf8.doc.tar.xz) = 4cd9d01f60887325346c1fd9a21420a129ead7ee
+SHA512 (tex-hyph-utf8-49078/hyph-utf8.doc.tar.xz) = aec63ae1506f9de4bdc7ce5bed6cc64bd78fcb7486eeddc885fa69074576a0c34818ea407e6309f0694c6cdefcdf3bd088878cf90a004701295ee6ee871fda7b
+Size (tex-hyph-utf8-49078/hyph-utf8.doc.tar.xz) = 497964 bytes
