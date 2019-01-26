@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2019/01/19 21:54:03 tnn Exp $
+# $NetBSD: options.mk,v 1.11 2019/01/26 21:28:29 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -248,9 +248,8 @@ CONFIGURE_ARGS+=	--enable-llvm-shared-libs
 .include "../../devel/libelf/buildlink3.mk"
 .endif
 
-# XXX update libLLVM to use it instead
-#BUILDLINK_API_DEPENDS.libLLVM+= libLLVM>=5.0
-.include "../../lang/llvm/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libLLVM+= libLLVM>=7.0
+.include "../../lang/libLLVM/buildlink3.mk"
 CONFIGURE_ENV+=		ac_cv_path_ac_pt_LLVM_CONFIG=${LLVM_CONFIG_PATH}
 .else # !llvm
 CONFIGURE_ARGS+=	--disable-xa
