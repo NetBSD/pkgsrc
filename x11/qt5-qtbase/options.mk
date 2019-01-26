@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.11 2018/12/18 09:57:18 adam Exp $
+# $NetBSD: options.mk,v 1.12 2019/01/26 22:58:04 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qt5
-PKG_SUPPORTED_OPTIONS=	cups eglfs gtk3
+PKG_SUPPORTED_OPTIONS+=	cups eglfs gtk3
 
 .include "../../mk/bsd.options.mk"
 
