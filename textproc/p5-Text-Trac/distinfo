@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/11/10 03:40:18 wen Exp $
+$NetBSD: distinfo,v 1.5 2019/01/26 02:08:02 wen Exp $
 
-SHA1 (Text-Trac-0.19.tar.gz) = fbd93d0ed57a15600b4ce548084c69b243391992
-RMD160 (Text-Trac-0.19.tar.gz) = 8e29c9a0d3c444056514782c672ba63c7a9afa72
-SHA512 (Text-Trac-0.19.tar.gz) = cd7fd1d89a02062cde223b4a94afc1620a0491fc07e1a756edf02fa57618bc7f60ab3136d57efbd340eac2986bfbf1e47c3f8090897a37029e69bc27a3156264
-Size (Text-Trac-0.19.tar.gz) = 113940 bytes
+SHA1 (Text-Trac-0.24.tar.gz) = e3a9a8a9bd57146c598ce437b0c6330145e4b91f
+RMD160 (Text-Trac-0.24.tar.gz) = f58ddea21cf4ea296b12bc6cdb2d77cacb74f934
+SHA512 (Text-Trac-0.24.tar.gz) = 485c11da29f22388c3c900f6c0ae920b236833eec75a7ccc2d3e5c60c18c089b587917ad4d0985aef6f589714c7ecca054c0f776cb8a571c09b8a0d4f0d97440
+Size (Text-Trac-0.24.tar.gz) = 89997 bytes
