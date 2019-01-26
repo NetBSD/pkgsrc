@@ -11,6 +11,7 @@ import (
 	"path"
 	"path/filepath"
 	"runtime"
+	"runtime/debug"
 	"runtime/pprof"
 	"strings"
 )
@@ -38,12 +39,14 @@ type Pkglint struct {
 	loaded    *histogram.Histogram
 	res       regex.Registry
 	fileCache *FileCache
+	interner  StringInterner
 }
 
 func NewPkglint() Pkglint {
 	return Pkglint{
 		res:       regex.NewRegistry(),
-		fileCache: NewFileCache(200)}
+		fileCache: NewFileCache(200),
+		interner:  NewStringInterner()}
 }
 
 type CmdOpts struct {
@@ -73,7 +76,6 @@ type CmdOpts struct {
 	// could be contrasted by a future --ignore option, in order to suppress
 	// individual checks.
 
-	WarnAbsname,
 	WarnDirectcmd,
 	WarnExtra,
 	WarnOrder,
@@ -98,8 +100,8 @@ type CmdOpts struct {
 }
 
 type Hash struct {
-	hash string
-	line Line // TODO: Maybe a Location object would already be enough.
+	hash     []byte
+	location Location
 }
 
 type pkglintFatal struct{}
@@ -147,6 +149,21 @@ func (pkglint *Pkglint) Main(argv ...string) (exitCode int) {
 	}
 
 	if pkglint.Opts.Profiling {
+
+		defer func() {
+			pkglint.fileCache.table = nil
+			pkglint.fileCache.mapping = nil
+			runtime.GC()
+
+			fd, err := os.Create("pkglint.heapdump")
+			G.AssertNil(err, "heapDump.create")
+
+			debug.WriteHeapDump(fd.Fd())
+
+			err = fd.Close()
+			G.AssertNil(err, "heapDump.close")
+		}()
+
 		f, err := os.Create("pkglint.pprof")
 		if err != nil {
 			dummyLine.Fatalf("Cannot create profiling file: %s", err)
@@ -176,20 +193,22 @@ func (pkglint *Pkglint) Main(argv ...string) (exitCode int) {
 		pkglint.Todo = []string{"."}
 	}
 
-	firstArg := pkglint.Todo[0]
-	if fileExists(firstArg) {
-		firstArg = path.Dir(firstArg)
+	firstDir := pkglint.Todo[0]
+	if fileExists(firstDir) {
+		firstDir = path.Dir(firstDir)
 	}
-	relTopdir := findPkgsrcTopdir(firstArg)
+
+	relTopdir := findPkgsrcTopdir(firstDir)
 	if relTopdir == "" {
 		// If the first argument to pkglint is not inside a pkgsrc tree,
 		// pkglint doesn't know where to load the infrastructure files from,
 		// and these are needed for virtually every single check.
 		// Therefore, the only sensible thing to do is to quit immediately.
-		dummyLine.Fatalf("%q must be inside a pkgsrc tree.", firstArg)
+		dummyLine.Fatalf("%q must be inside a pkgsrc tree.", firstDir)
 	}
 
-	pkglint.Pkgsrc = NewPkgsrc(firstArg + "/" + relTopdir)
+	pkglint.Pkgsrc = NewPkgsrc(firstDir + "/" + relTopdir)
+	pkglint.Wip = matches(pkglint.Pkgsrc.ToRel(firstDir), `^wip(/|$)`) // Same as in Pkglint.Check.
 	pkglint.Pkgsrc.LoadInfrastructure()
 
 	currentUser, err := user.Current()
@@ -250,7 +269,6 @@ func (pkglint *Pkglint) ParseCommandLine(args []string) int {
 	check.AddFlagVar("patches", &gopts.CheckPatches, true, "check patches")
 	check.AddFlagVar("PLIST", &gopts.CheckPlist, true, "check PLIST files")
 
-	warn.AddFlagVar("absname", &gopts.WarnAbsname, false, "warn about use of absolute filenames")
 	warn.AddFlagVar("directcmd", &gopts.WarnDirectcmd, true, "warn about use of direct command names instead of Make variables")
 	warn.AddFlagVar("extra", &gopts.WarnExtra, false, "enable some extra warnings")
 	warn.AddFlagVar("order", &gopts.WarnOrder, true, "warn if Makefile entries are unordered")
@@ -490,6 +508,9 @@ func (pkglint *Pkglint) Assertf(cond bool, format string, args ...interface{}) {
 
 // AssertNil ensures that the given error is nil.
 //
+// Contrary to other diagnostics, the format should not end in a period
+// since it is followed by the error.
+//
 // Other than Assertf, this method does not require any comparison operator in the calling code.
 // This makes it possible to get 100% branch coverage for cases that "really can never fail".
 func (pkglint *Pkglint) AssertNil(err error, format string, args ...interface{}) {
@@ -578,13 +599,14 @@ func CheckLinesDescr(lines Lines) {
 			}
 		}
 	}
+
 	CheckLinesTrailingEmptyLines(lines)
 
 	if maxLines := 24; lines.Len() > maxLines {
 		line := lines.Lines[maxLines]
 
 		line.Warnf("File too long (should be no more than %d lines).", maxLines)
-		G.Explain(
+		line.Explain(
 			"The DESCR file should fit on a traditional terminal of 80x25 characters.",
 			"It is also intended to give a _brief_ summary about the package's contents.")
 	}
@@ -763,12 +785,24 @@ func (pkglint *Pkglint) checkReg(filename, basename string, depth int) {
 			NewLineWhole(filename).Warnf("Only packages in regress/ may have spec files.")
 		}
 
+	case pkglint.matchesLicenseFile(basename):
+		break
+
 	default:
 		NewLineWhole(filename).Warnf("Unexpected file found.")
 		if pkglint.Opts.CheckExtra {
 			CheckFileOther(filename)
 		}
 	}
+}
+
+func (pkglint *Pkglint) matchesLicenseFile(basename string) bool {
+	if pkglint.Pkg == nil {
+		return false
+	}
+
+	licenseFile, _ := pkglint.Pkg.vars.Value("LICENSE_FILE")
+	return basename == path.Base(licenseFile)
 }
 
 func (pkglint *Pkglint) checkExecutable(filename string, mode os.FileMode) {

@@ -547,9 +547,53 @@ func (s *Suite) Test_Autofix_Delete__combined_with_insert(c *check.C) {
 		"+\tbelow")
 }
 
+// Demonstrates that without the --show-autofix option, diagnostics are
+// shown even when they cannot be autofixed.
+//
+// This is typical when an autofix is provided for simple scenarios,
+// but the code actually found is a little more complicated.
+func (s *Suite) Test_Autofix__show_unfixable_diagnostics_in_default_mode(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("--source")
+	lines := t.NewLines("Makefile",
+		"line1",
+		"line2",
+		"line3")
+
+	lines.Lines[0].Warnf("This warning is shown since the --show-autofix option is not given.")
+
+	fix := lines.Lines[1].Autofix()
+	fix.Warnf("This warning cannot be fixed and is therefore not shown.")
+	fix.Replace("XXX", "TODO")
+	fix.Apply()
+
+	fix.Warnf("This warning cannot be fixed automatically but should be shown anyway.")
+	fix.Replace("XXX", "TODO")
+	fix.Anyway()
+	fix.Apply()
+
+	// If this warning should ever appear it is probably because fix.anyway is not reset properly.
+	fix.Warnf("This warning cannot be fixed and is therefore not shown.")
+	fix.Replace("XXX", "TODO")
+	fix.Apply()
+
+	lines.Lines[2].Warnf("This warning is also shown.")
+
+	t.CheckOutputLines(
+		">\tline1",
+		"WARN: Makefile:1: This warning is shown since the --show-autofix option is not given.",
+		"",
+		">\tline2",
+		"WARN: Makefile:2: This warning cannot be fixed automatically but should be shown anyway.",
+		"",
+		">\tline3",
+		"WARN: Makefile:3: This warning is also shown.")
+}
+
 // Demonstrates that the --show-autofix option only shows those diagnostics
 // that would be fixed.
-func (s *Suite) Test_Autofix__suppress_unfixable_warnings(c *check.C) {
+func (s *Suite) Test_Autofix__suppress_unfixable_warnings_with_show_autofix(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpCommandLine("--show-autofix", "--source")

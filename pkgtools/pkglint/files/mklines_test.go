@@ -339,8 +339,8 @@ func (s *Suite) Test_MkLines_collectDefinedVariables(c *check.C) {
 		// FIXME: the below warning is wrong; it's ok to have SUBST blocks in all files,
 		// maybe except buildlink3.mk.
 		"WARN: determine-defined-variables.mk:12: The variable SUBST_VARS.subst may not be set " +
-			"(only given a default value, appended to) in this file; " +
-			"it would be ok in Makefile, Makefile.common, options.mk.")
+			"(only given a default value, or appended to) in this file; " +
+			"it would be ok in Makefile, Makefile.common or options.mk.")
 }
 
 func (s *Suite) Test_MkLines_collectDefinedVariables__BUILTIN_FIND_FILES_VAR(c *check.C) {
@@ -952,6 +952,26 @@ func (s *Suite) Test_MkLines_CheckRedundantAssignments__shell_and_eval_literal(c
 	//
 	// TODO: Why not? The evaluation in line 1 is trivial to analyze.
 	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_MkLines_CheckRedundantAssignments__included_OPSYS_variable(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		".include \"../../category/dependency/buildlink3.mk\"",
+		"CONFIGURE_ARGS+=\tone",
+		"CONFIGURE_ARGS=\ttwo",
+		"CONFIGURE_ARGS+=\tthree")
+	t.SetUpPackage("category/dependency")
+	t.CreateFileDummyBuildlink3("category/dependency/buildlink3.mk")
+	t.CreateFileLines("category/dependency/builtin.mk",
+		MkRcsID,
+		"CONFIGURE_ARGS.Darwin+=\tdarwin")
+
+	G.Check(t.File("category/package"))
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/Makefile:21: Variable CONFIGURE_ARGS is overwritten in line 22.")
 }
 
 func (s *Suite) Test_MkLines_Check__PLIST_VARS(c *check.C) {

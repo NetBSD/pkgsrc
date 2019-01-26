@@ -334,27 +334,27 @@ func (mkline *MkLineImpl) SetConditionalVars(varnames []string) {
 	mkline.data = include
 }
 
-// Tokenize extracts variable uses and other text from the string.
+// Tokenize extracts variable uses and other text from the given text.
 //
-// TODO: Check this paragraph for correctness.
-// Either:
-// The given s must have exactly the format from the file, i.e. an escaped
-// comment is written as \#.
-// Or:
-// The given s must have the format after parsing comments, i.e. the trailing
-// comment is already removed, and a # does not introduce another comment.
+// When used in IsVarassign lines, the given text must have the format
+// after stripping the end-of-line comment. Such text is available from
+// Value. A shell comment is therefore marked by a simple #, not an escaped
+// \# like in Makefiles.
+//
+// When used in IsShellCommand lines, # does not mark a Makefile comment
+// and may thus still appear in the text. Therefore, # marks a shell comment.
 //
 // Example:
 //  input:  ${PREFIX}/bin abc
 //  output: [MkToken("${PREFIX}", MkVarUse("PREFIX")), MkToken("/bin abc")]
 //
 // See ValueTokens, which is the tokenized version of Value.
-func (mkline *MkLineImpl) Tokenize(s string, warn bool) []*MkToken {
+func (mkline *MkLineImpl) Tokenize(text string, warn bool) []*MkToken {
 	if trace.Tracing {
-		defer trace.Call(mkline, s)()
+		defer trace.Call(mkline, text)()
 	}
 
-	p := NewMkParser(mkline.Line, s, true)
+	p := NewMkParser(mkline.Line, text, true)
 	tokens := p.MkTokens()
 	if warn && p.Rest() != "" {
 		mkline.Warnf("Internal pkglint error in MkLine.Tokenize at %q.", p.Rest())
@@ -673,15 +673,8 @@ func (mkline *MkLineImpl) VariableNeedsQuoting(varname string, vartype *Vartype,
 		}
 	}
 
-	// In .for loops, the :Q operator is always misplaced, since
-	// the items are broken up at whitespace, not as shell words
-	// like in all other parts of make(1).
-	if vuc.quoting == vucQuotFor {
-		return no
-	}
-
 	// A shell word may appear as part of a shell word, for example COMPILER_RPATH_FLAG.
-	if vuc.IsWordPart && vuc.quoting == vucQuotPlain {
+	if vuc.IsWordPart && vuc.quoting == VucQuotPlain {
 		if vartype.kindOfList == lkNone && vartype.basicType == BtShellWord {
 			return no
 		}
@@ -697,7 +690,7 @@ func (mkline *MkLineImpl) VariableNeedsQuoting(varname string, vartype *Vartype,
 	// Both of these can be correct, depending on the situation:
 	// 1. echo ${PERL5:Q}
 	// 2. xargs ${PERL5}
-	if !vuc.IsWordPart && vuc.quoting == vucQuotPlain {
+	if !vuc.IsWordPart && vuc.quoting == VucQuotPlain {
 		if wantList && haveList {
 			return unknown
 		}
@@ -707,14 +700,14 @@ func (mkline *MkLineImpl) VariableNeedsQuoting(varname string, vartype *Vartype,
 	// special characters, so they can safely be used inside any quotes.
 	if tool := G.ToolByVarname(varname); tool != nil {
 		switch vuc.quoting {
-		case vucQuotPlain:
+		case VucQuotPlain:
 			if !vuc.IsWordPart {
 				return no
 			}
 			// XXX: Should there be a return here? It looks as if it could have been forgotten.
-		case vucQuotBackt:
+		case VucQuotBackt:
 			return no
-		case vucQuotDquot, vucQuotSquot:
+		case VucQuotDquot, VucQuotSquot:
 			return unknown
 		}
 	}
@@ -723,7 +716,7 @@ func (mkline *MkLineImpl) VariableNeedsQuoting(varname string, vartype *Vartype,
 	//
 	// An exception is in the case of backticks, because the whole backticks expression
 	// is parsed as a single shell word by pkglint. (XXX: This comment may be outdated.)
-	if vuc.IsWordPart && vucVartype.IsShell() && vuc.quoting != vucQuotBackt {
+	if vuc.IsWordPart && vucVartype.IsShell() && vuc.quoting != VucQuotBackt {
 		return yes
 	}
 
@@ -815,6 +808,47 @@ func (mkline *MkLineImpl) DetermineUsedVariables() []string {
 	return varnames
 }
 
+func (mkline *MkLineImpl) UnquoteShell(str string) string {
+	var sb strings.Builder
+	n := len(str)
+
+outer:
+	for i := 0; i < n; i++ {
+		switch str[i] {
+		case '"':
+			for i++; i < n; i++ {
+				switch str[i] {
+				case '"':
+					continue outer
+				case '\\':
+					i++
+					if i < n {
+						sb.WriteByte(str[i])
+					}
+				default:
+					sb.WriteByte(str[i])
+				}
+			}
+
+		case '\'':
+			for i++; i < n && str[i] != '\''; i++ {
+				sb.WriteByte(str[i])
+			}
+
+		case '\\':
+			i++
+			if i < n {
+				sb.WriteByte(str[i])
+			}
+
+		default:
+			sb.WriteByte(str[i])
+		}
+	}
+
+	return sb.String()
+}
+
 type MkOperator uint8
 
 const (
@@ -864,7 +898,7 @@ func (op MkOperator) String() string {
 type VarUseContext struct {
 	vartype    *Vartype
 	time       vucTime
-	quoting    vucQuoting
+	quoting    VucQuoting
 	IsWordPart bool // Example: LOCALBASE=${LOCALBASE}
 }
 
@@ -892,29 +926,22 @@ const (
 
 func (t vucTime) String() string { return [...]string{"unknown", "parse", "run"}[t] }
 
-// The quoting context in which the variable is used.
+// VucQuoting describes in what level of quoting the variable is used.
 // Depending on this context, the modifiers :Q or :M can be allowed or not.
 //
 // The shell tokenizer knows multi-level quoting modes (see ShQuoting),
 // but for deciding whether :Q is necessary or not, a single level is enough.
-type vucQuoting uint8
+type VucQuoting uint8
 
 const (
-	vucQuotUnknown vucQuoting = iota
-	vucQuotPlain              // Example: echo LOCALBASE=${LOCALBASE}
-	vucQuotDquot              // Example: echo "The version is ${PKGVERSION}."
-	vucQuotSquot              // Example: echo 'The version is ${PKGVERSION}.'
-	vucQuotBackt              // Example: echo `sed 1q ${WRKSRC}/README`
-
-	// The .for loop in Makefiles. This is the only place where
-	// variables are split on whitespace. Everywhere else (:Q, :M)
-	// they are split like in the shell.
-	//
-	// Example: .for f in ${EXAMPLE_FILES}
-	vucQuotFor
+	VucQuotUnknown VucQuoting = iota
+	VucQuotPlain              // Example: echo LOCALBASE=${LOCALBASE}
+	VucQuotDquot              // Example: echo "The version is ${PKGVERSION}."
+	VucQuotSquot              // Example: echo 'The version is ${PKGVERSION}.'
+	VucQuotBackt              // Example: echo `sed 1q ${WRKSRC}/README`
 )
 
-func (q vucQuoting) String() string {
+func (q VucQuoting) String() string {
 	return [...]string{"unknown", "plain", "dquot", "squot", "backt", "mk-for"}[q]
 }
 

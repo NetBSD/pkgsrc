@@ -44,8 +44,8 @@ func (s *Suite) Test_Pkgsrc_parseSuggestedUpdates(c *check.C) {
 	todo := G.Pkgsrc.parseSuggestedUpdates(lines)
 
 	c.Check(todo, check.DeepEquals, []SuggestedUpdate{
-		{lines.Lines[5], "CSP", "0.34", ""},
-		{lines.Lines[6], "freeciv-client", "2.5.0", "(urgent)"}})
+		{lines.Lines[5].Location, "CSP", "0.34", ""},
+		{lines.Lines[6].Location, "freeciv-client", "2.5.0", "(urgent)"}})
 }
 
 func (s *Suite) Test_Pkgsrc_checkToplevelUnusedLicenses(c *check.C) {
@@ -164,6 +164,19 @@ func (s *Suite) Test_Pkgsrc_loadTools__BUILD_DEFS(c *check.C) {
 	// does not contain anything at mklinechecker.go:/UserDefinedVars/.
 }
 
+func (s *Suite) Test_Pkgsrc_loadDocChanges__not_found(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPkgsrc()
+	t.Remove("doc/CHANGES-2018")
+	t.Remove("doc/TODO")
+	t.Remove("doc")
+
+	t.ExpectFatal(
+		G.Pkgsrc.loadDocChanges,
+		"FATAL: ~/doc: Cannot be read for loading the package changes.")
+}
+
 func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile(c *check.C) {
 	t := s.Init(c)
 
@@ -184,38 +197,25 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile(c *check.C) {
 	changes := G.Pkgsrc.loadDocChangesFromFile(t.File("doc/CHANGES-2018"))
 
 	c.Assert(len(changes), equals, 7)
-	c.Check(*changes[0], equals, Change{changes[0].Line,
+	c.Check(*changes[0], equals, Change{changes[0].Location,
 		"Added", "category/package", "1.0", "author1", "2015-01-01"})
-	c.Check(*changes[1], equals, Change{changes[1].Line,
+	c.Check(*changes[1], equals, Change{changes[1].Location,
 		"Updated", "category/package", "1.5", "author2", "2018-01-02"})
-	c.Check(*changes[2], equals, Change{changes[2].Line,
+	c.Check(*changes[2], equals, Change{changes[2].Location,
 		"Renamed", "category/package", "", "author3", "2018-01-03"})
-	c.Check(*changes[3], equals, Change{changes[3].Line,
+	c.Check(*changes[3], equals, Change{changes[3].Location,
 		"Moved", "category/package", "", "author4", "2018-01-04"})
-	c.Check(*changes[4], equals, Change{changes[4].Line,
+	c.Check(*changes[4], equals, Change{changes[4].Location,
 		"Removed", "category/package", "", "author5", "2018-01-09"})
-	c.Check(*changes[5], equals, Change{changes[5].Line,
+	c.Check(*changes[5], equals, Change{changes[5].Location,
 		"Removed", "category/package", "", "author6", "2018-01-06"})
-	c.Check(*changes[6], equals, Change{changes[6].Line,
+	c.Check(*changes[6], equals, Change{changes[6].Location,
 		"Downgraded", "category/package", "1.2", "author7", "2018-01-07"})
 
 	t.CheckOutputLines(
 		"WARN: ~/doc/CHANGES-2018:1: Year 2015 for category/package does not match the filename ~/doc/CHANGES-2018.",
-		"WARN: ~/doc/CHANGES-2018:6: Date 2018-01-06 for category/package is earlier than 2018-01-09 for category/package.",
+		"WARN: ~/doc/CHANGES-2018:6: Date 2018-01-06 for category/package is earlier than 2018-01-09 in line 5.",
 		"WARN: ~/doc/CHANGES-2018:12: Unknown doc/CHANGES line: \tAdded another [new package]")
-}
-
-func (s *Suite) Test_Pkgsrc_loadDocChanges__not_found(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpPkgsrc()
-	t.Remove("doc/CHANGES-2018")
-	t.Remove("doc/TODO")
-	t.Remove("doc")
-
-	t.ExpectFatal(
-		G.Pkgsrc.loadDocChanges,
-		"FATAL: ~/doc: Cannot be read for loading the package changes.")
 }
 
 func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__not_found(c *check.C) {
@@ -226,12 +226,77 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__not_found(c *check.C) {
 		"FATAL: ~/doc/CHANGES-2018: Cannot be read.")
 }
 
-func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__wip(c *check.C) {
+// Since package authors for pkgsrc-wip cannot necessarily commit to
+// main pkgsrc, don't warn about unsorted doc/CHANGES lines.
+// Only pkgsrc main committers can fix these.
+func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__wip_suppresses_warnings(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("wip/package")
+	t.CreateFileLines("doc/CHANGES-2018",
+		RcsID,
+		"",
+		"Changes to the packages collection and infrastructure in 2018:",
+		"",
+		"\tUpdated sysutils/checkperms to 1.10 [rillig 2018-01-05]",
+		"\tUpdated sysutils/checkperms to 1.11 [rillig 2018-01-01]")
+
+	G.Main("pkglint", t.File("wip/package"))
+
+	t.CheckOutputLines(
+		"Looks fine.")
+}
+
+func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__wrong_indentation(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("doc/CHANGES-2018",
+		RcsID,
+		"",
+		"Changes to the packages collection and infrastructure in 2018:",
+		"",
+		"        Updated sysutils/checkperms to 1.10 [rillig 2018-01-05]",
+		"    \tUpdated sysutils/checkperms to 1.11 [rillig 2018-01-01]")
+
+	G.Main("pkglint", t.File("category/package"))
+
+	t.CheckOutputLines(
+		"WARN: ~/doc/CHANGES-2018:5: Package changes should be indented using a single tab, not \"        \".",
+		"WARN: ~/doc/CHANGES-2018:6: Package changes should be indented using a single tab, not \"    \\t\".",
+		"0 errors and 2 warnings found.",
+		"(Run \"pkglint -e\" to show explanations.)")
+}
+
+// Once or twice in a decade, changes to the pkgsrc infrastructure are also
+// documented in doc/CHANGES. These entries typically span multiple lines.
+func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__infrastructure(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("doc/CHANGES-2018",
+		RcsID,
+		"",
+		"Changes to the packages collection and infrastructure in 2018:",
+		"",
+		"\tmk/bsd.pkg.mk: Added new framework for handling packages",
+		"\t\twith multiple MASTER_SITES while fetching the main",
+		"\t\tdistfile directly from GitHub [rillig 2018-01-01]",
+		"\tmk/bsd.pkg.mk: Another infrastructure change [rillig 2018-01-02]")
+
+	G.Main("pkglint", t.File("category/package"))
+
+	// For pkglint's purpose, the infrastructure entries are simply ignored
+	// since they do not belong to a single package.
+	t.CheckOutputLines(
+		"Looks fine.")
+}
+
+func (s *Suite) Test_Pkgsrc_parseSuggestedUpdates__wip(c *check.C) {
 	t := s.Init(c)
 
 	pkg := t.SetUpPackage("wip/package",
-		"DISTNAME=\tpackage-1.11",
-		"CATEGORIES=\tlocal") // To avoid "Invalid category wip".
+		"DISTNAME=\tpackage-1.11")
 	t.CreateFileLines("wip/TODO",
 		RcsID,
 		"",
