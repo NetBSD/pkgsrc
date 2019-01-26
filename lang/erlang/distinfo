@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.69 2019/01/22 00:07:35 nia Exp $
+$NetBSD: distinfo,v 1.70 2019/01/26 21:08:11 nia Exp $
 
-SHA1 (erlang/OTP-21.2.3.tar.gz) = 64adcc4339c4e0f94ccf51d33b5e06a06f22256b
-RMD160 (erlang/OTP-21.2.3.tar.gz) = fc59b368109a819f8482c73571bbaf3a304c8694
-SHA512 (erlang/OTP-21.2.3.tar.gz) = bdf6322098c4f89b54d572b6843ba8f314c70395a39ae6fdd9996bd68c7b95fc3906bcc08a3aeb8f5d3270fda41733a359e2f2efa47a8d31cdb3967a49b17faf
-Size (erlang/OTP-21.2.3.tar.gz) = 53956308 bytes
+SHA1 (erlang/OTP-21.2.4.tar.gz) = d5a25da2f3fbe4de64406e646e574212e68ee0c3
+RMD160 (erlang/OTP-21.2.4.tar.gz) = e8d5d1f1b7c8b355ada969ac14f118a6ed1dba0d
+SHA512 (erlang/OTP-21.2.4.tar.gz) = 15b5f96a8159be56016124567ce72c72c7e3b727aabcb408dcc054ae4523c15eec79f33e3df2b283e06dc3f6df09da4d154dbf7a278c6e544ef7d2216662b90d
+Size (erlang/OTP-21.2.4.tar.gz) = 53955202 bytes
 SHA1 (patch-ab) = 5f1602f3a49c05fd4c45884a7cd6be8d3f287ac3
 SHA1 (patch-ay) = f5f1accdb11e404ba4779b056228431e3080e4cd
 SHA1 (patch-erts_configure.in) = 2154871858bab389509e908b38ae479a55709b97
