@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2016/06/16 04:06:07 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/01/26 22:04:10 markd Exp $
 
 DISTNAME=	hyphen-indic
-PKGNAME=	tex-${DISTNAME}-2016
-TEXLIVE_REV=	40340
+PKGNAME=	tex-${DISTNAME}-2018
+TEXLIVE_REV=	49078
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Indic hyphenation patterns
@@ -99,6 +99,16 @@ TEX_HYPHEN_LUA+=	['panjabi']={ \
 			  righthyphenmin=1, \
 			  synonyms={}, \
 			  patterns='hyph-pa.pat.txt', \
+			  hyphenation='', \
+			},
+TEX_HYPHEN_DAT+=	pali loadhyph-pi.tex
+TEX_HYPHEN_DEF+=	\\addlanguage{pali}{loadhyph-pi.tex}{}{1}{1}
+TEX_HYPHEN_LUA+=	['pali']={ \
+			  loader='loadhyph-pi.tex', \
+			  lefthyphenmin=1, \
+			  righthyphenmin=1, \
+			  synonyms={}, \
+			  patterns='hyph-pi.pat.txt', \
 			  hyphenation='', \
 			},
 TEX_HYPHEN_DAT+=	tamil loadhyph-ta.tex
