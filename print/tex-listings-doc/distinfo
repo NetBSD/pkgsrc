@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/11/04 01:02:26 agc Exp $
+$NetBSD: distinfo,v 1.8 2019/01/26 03:07:58 markd Exp $
 
-SHA1 (tex-listings-37534/listings.doc.tar.xz) = cad0304397dc054551cc06d7ebc854b8b4697d35
-RMD160 (tex-listings-37534/listings.doc.tar.xz) = 38ac7a0c1722078699716a0ef050503b3124ac4b
-SHA512 (tex-listings-37534/listings.doc.tar.xz) = 1a914296f4bc58aad7ac70e4e0dc000a86801cfc283f98d5fba41ab5147409d10243d6c5ced2efa1b5aec2d1db464ead38980e96b3d8e87c39b4764c343485fa
-Size (tex-listings-37534/listings.doc.tar.xz) = 1215440 bytes
+SHA1 (tex-listings-48566/listings.doc.tar.xz) = 89efef41585b5b1d4ed91b4698394ea0b7563108
+RMD160 (tex-listings-48566/listings.doc.tar.xz) = 779107753a4be3df1b933f40a73025293c9844c0
+SHA512 (tex-listings-48566/listings.doc.tar.xz) = d25ab881310c3d6ddc60bb9e9cb1d9a3cb49a84de011a8e6c08641002f27a6f40bc821fa1ee32dab339ba2f26b937a0e0d076069045ebfe98641b379fe5e063b
+Size (tex-listings-48566/listings.doc.tar.xz) = 2147380 bytes
