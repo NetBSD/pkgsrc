@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.722 2019/01/24 06:43:43 gutteridge Exp $
+# $NetBSD: Makefile,v 1.723 2019/01/26 03:39:45 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -508,6 +508,7 @@ SUBDIR+=	tex-datetime
 SUBDIR+=	tex-datetime-doc
 SUBDIR+=	tex-dblfloatfix
 SUBDIR+=	tex-dblfloatfix-doc
+SUBDIR+=	tex-dehyph
 SUBDIR+=	tex-dehyph-exptl
 SUBDIR+=	tex-dehyph-exptl-doc
 SUBDIR+=	tex-dhua
