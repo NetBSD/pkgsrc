@@ -1,6 +1,9 @@
 package pkglint
 
-import "netbsd.org/pkglint/textproc"
+import (
+	"netbsd.org/pkglint/textproc"
+	"strings"
+)
 
 // SubstContext records the state of a block of variable assignments
 // that make up a SUBST class (see `mk/subst.mk`).
@@ -244,7 +247,7 @@ func (ctx *SubstContext) suggestSubstVars(mkline MkLine) {
 	tokens, _ := splitIntoShellTokens(mkline.Line, mkline.Value())
 	for _, token := range tokens {
 
-		parser := NewMkParser(nil, token, false)
+		parser := NewMkParser(nil, mkline.UnquoteShell(token), false)
 		lexer := parser.lexer
 		if !lexer.SkipByte('s') {
 			continue
@@ -280,11 +283,19 @@ func (ctx *SubstContext) suggestSubstVars(mkline MkLine) {
 			continue
 		}
 
-		mkline.Notef("The substitution command %q can be replaced with \"SUBST_VARS.%s+= %s\".", token, ctx.id, varname)
-		mkline.Explain(
+		fix := mkline.Autofix()
+		fix.Notef("The substitution command %q can be replaced with \"SUBST_VARS.%s+= %s\".", token, ctx.id, varname)
+		fix.Explain(
 			"Replacing @VAR@ with ${VAR} is such a typical pattern that pkgsrc has built-in support for it,",
 			"requiring only the variable name instead of the full sed command.")
+		if mkline.VarassignComment() == "" && len(tokens) == 2 && tokens[0] == "-e" {
+			// TODO: Extract the alignment computation somewhere else, so that it is generally available.
+			alignBefore := tabWidth(mkline.ValueAlign())
+			alignAfter := tabWidth(sprintf("SUBST_VARS.%s+=\t", ctx.id))
+			tabs := strings.Repeat("\t", imax((alignAfter-alignBefore)/8, 0))
+			fix.Replace(mkline.Text, sprintf("SUBST_VARS.%s+=\t%s%s", ctx.id, tabs, varname))
+		}
+		fix.Anyway()
+		fix.Apply()
 	}
-
-	// TODO: Autofix
 }

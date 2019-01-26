@@ -288,8 +288,12 @@ func (s *ShSuite) Test_ShellParser__compound_list(c *check.C) {
 func (s *ShSuite) Test_ShellParser__term(c *check.C) {
 	b := s.init(c)
 
-	// TODO
-	_ = b
+	s.test("echo1 ; echo2 ;",
+		b.List().
+			AddCommand(b.SimpleCommand("echo1")).
+			AddSemicolon().
+			AddCommand(b.SimpleCommand("echo2")).
+			AddSemicolon())
 }
 
 func (s *ShSuite) Test_ShellParser__for_clause(c *check.C) {
@@ -423,8 +427,16 @@ func (s *ShSuite) Test_ShellParser__until_clause(c *check.C) {
 func (s *ShSuite) Test_ShellParser__function_definition(c *check.C) {
 	b := s.init(c)
 
-	// TODO
-	_ = b
+	s.test("fn() { simple-command; }",
+		b.List().AddCommand(b.Function(
+			"fn",
+			b.Brace(b.List().
+				AddCommand(b.SimpleCommand("simple-command")).
+				AddSemicolon()).
+				Compound)))
+
+	// For some reason the POSIX grammar does not allow function bodies that consist of
+	// a single command without braces or parentheses.
 }
 
 func (s *ShSuite) Test_ShellParser__brace_group(c *check.C) {
@@ -522,10 +534,8 @@ func (s *ShSuite) Test_ShellParser__io_redirect(c *check.C) {
 }
 
 func (s *ShSuite) Test_ShellParser__io_here(c *check.C) {
-	b := s.init(c)
-
-	// TODO
-	_ = b
+	// In pkgsrc Makefiles, the IO here-documents cannot be used since all the text
+	// is joined into a single line. Therefore there are no tests here.
 }
 
 func (s *ShSuite) init(c *check.C) *MkShBuilder {
@@ -605,6 +615,48 @@ func (s *ShSuite) Test_ShellLexer_Lex__redirects(c *check.C) {
 	c.Check(llval.Word.MkText, equals, "/dev/stderr")
 
 	c.Check(lexer.Lex(&llval), equals, 0)
+}
+
+func (s *ShSuite) Test_ShellLexer_Lex__keywords(c *check.C) {
+	b := s.init(c)
+
+	testErr := func(program, error, remaining string) {
+		tokens, rest := splitIntoShellTokens(dummyLine, program)
+		s.c.Check(rest, equals, "")
+
+		lexer := ShellLexer{
+			current:        "",
+			remaining:      tokens,
+			atCommandStart: true,
+			error:          ""}
+		parser := shyyParserImpl{}
+
+		succeeded := parser.Parse(&lexer)
+
+		c.Check(succeeded, equals, 1)
+		c.Check(lexer.error, equals, error)
+		c.Check(joinSkipEmpty(" ", append([]string{lexer.current}, lexer.remaining...)...), equals, remaining)
+	}
+
+	s.test(
+		"echo if then elif else fi for in do done while until case esac",
+		b.List().AddCommand(b.SimpleCommand("echo",
+			"if", "then", "elif", "else", "fi",
+			"for", "in", "do", "done", "while", "until", "case", "esac")))
+
+	testErr(
+		"echo ;; remaining",
+		"syntax error",
+		";; remaining")
+
+	testErr(
+		"echo (subshell-command args)",
+		"syntax error",
+		"subshell-command args )")
+
+	testErr("while :; do :; done if cond; then :; fi",
+		"syntax error",
+		"if cond ; then : ; fi")
 }
 
 type MkShBuilder struct {

@@ -7,11 +7,11 @@ func CheckLinesOptionsMk(mklines MkLines) {
 
 	mklines.Check()
 
-	exp := NewMkExpecter(mklines)
-	exp.AdvanceWhile(func(mkline MkLine) bool { return mkline.IsComment() || mkline.IsEmpty() })
+	mlex := NewMkLinesLexer(mklines)
+	mlex.SkipWhile(func(mkline MkLine) bool { return mkline.IsComment() || mkline.IsEmpty() })
 
-	if exp.EOF() || !(exp.CurrentMkLine().IsVarassign() && exp.CurrentMkLine().Varname() == "PKG_OPTIONS_VAR") {
-		exp.CurrentLine().Warnf("Expected definition of PKG_OPTIONS_VAR.")
+	if mlex.EOF() || !(mlex.CurrentMkLine().IsVarassign() && mlex.CurrentMkLine().Varname() == "PKG_OPTIONS_VAR") {
+		mlex.CurrentLine().Warnf("Expected definition of PKG_OPTIONS_VAR.")
 		G.Explain(
 			"The input variables in an options.mk file should always be",
 			"mentioned in the same order: PKG_OPTIONS_VAR,",
@@ -19,15 +19,15 @@ func CheckLinesOptionsMk(mklines MkLines) {
 			"This way, the options.mk files have the same structure and are easy to understand.")
 		return
 	}
-	exp.Advance()
+	mlex.Skip()
 
 	declaredOptions := make(map[string]MkLine)
 	handledOptions := make(map[string]MkLine)
 	var optionsInDeclarationOrder []string
 
 loop:
-	for ; !exp.EOF(); exp.Advance() {
-		mkline := exp.CurrentMkLine()
+	for ; !mlex.EOF(); mlex.Skip() {
+		mkline := mlex.CurrentMkLine()
 		switch {
 		case mkline.IsComment():
 			break
@@ -50,12 +50,12 @@ loop:
 
 		case mkline.IsInclude():
 			if mkline.IncludedFile() == "../../mk/bsd.options.mk" {
-				exp.Advance()
+				mlex.Skip()
 				break loop
 			}
 
 		default:
-			exp.CurrentLine().Warnf("Expected inclusion of \"../../mk/bsd.options.mk\".")
+			mlex.CurrentLine().Warnf("Expected inclusion of \"../../mk/bsd.options.mk\".")
 			G.Explain(
 				"After defining the input variables (PKG_OPTIONS_VAR, etc.),",
 				"bsd.options.mk should be included to do the actual processing.",
@@ -65,8 +65,8 @@ loop:
 		}
 	}
 
-	for ; !exp.EOF(); exp.Advance() {
-		mkline := exp.CurrentMkLine()
+	for ; !mlex.EOF(); mlex.Skip() {
+		mkline := mlex.CurrentMkLine()
 		if mkline.IsDirective() && (mkline.Directive() == "if" || mkline.Directive() == "elif") {
 			cond := mkline.Cond()
 			if cond == nil {
@@ -101,14 +101,14 @@ loop:
 		declared := declaredOptions[option]
 		handled := handledOptions[option]
 
-		if declared != nil && handled == nil {
+		if handled == nil {
 			declared.Warnf("Option %q should be handled below in an .if block.", option)
 			G.Explain(
 				"If an option is not processed in this file, it may either be a",
 				"typo, or the option does not have any effect.")
 		}
 
-		if declared == nil && handled != nil {
+		if declared == nil {
 			handled.Warnf("Option %q is handled but not added to PKG_SUPPORTED_OPTIONS.", option)
 			G.Explain(
 				"This block of code will never be run since PKG_OPTIONS cannot",

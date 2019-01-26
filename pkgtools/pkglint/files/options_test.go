@@ -68,6 +68,69 @@ func (s *Suite) Test_CheckLinesOptionsMk(c *check.C) {
 			"Option \"undeclared\" is handled but not added to PKG_SUPPORTED_OPTIONS.")
 }
 
+// This test is provided for code coverage. Similarities to existing files are purely coincidental.
+func (s *Suite) Test_CheckLinesOptionsMk__edge_cases(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("-Wall,no-space")
+	t.SetUpVartypes()
+	t.SetUpOption("option1", "Description for option1")
+	t.CreateFileLines("mk/compiler.mk",
+		MkRcsID)
+	t.CreateFileLines("mk/bsd.options.mk",
+		MkRcsID)
+	t.DisableTracing()
+
+	mklines := t.SetUpFileMkLines("category/package/options.mk",
+		MkRcsID)
+
+	CheckLinesOptionsMk(mklines)
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/options.mk:EOF: Expected definition of PKG_OPTIONS_VAR.")
+
+	mklines = t.SetUpFileMkLines("category/package/options.mk",
+		MkRcsID,
+		"PKG_SUPPORTED_OPTIONS=\toption1")
+
+	CheckLinesOptionsMk(mklines)
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/options.mk:2: Expected definition of PKG_OPTIONS_VAR.")
+
+	mklines = t.SetUpFileMkLines("category/package/options.mk",
+		MkRcsID,
+		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.pkgbase",
+		"PKG_SUPPORTED_OPTIONS=\toption1",
+		".include \"../../mk/compiler.mk\"")
+
+	CheckLinesOptionsMk(mklines)
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/options.mk:3: " +
+			"Option \"option1\" should be handled below in an .if block.")
+
+	mklines = t.SetUpFileMkLines("category/package/options.mk",
+		MkRcsID,
+		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.pkgbase",
+		"PKG_SUPPORTED_OPTIONS=\toption1",
+		".include \"../../mk/bsd.options.mk\"",
+		"",
+		".if !empty(PKG_OPTIONS:O:u:Moption1) "+
+			"|| !empty(PKG_OPTIONS:Noption1) "+
+			"|| !empty(PKG_OPTIONS:O) "+
+			"|| !empty(X11_TYPE) "+
+			"|| !empty(PKG_OPTIONS:M${X11_TYPE})",
+		".endif")
+
+	CheckLinesOptionsMk(mklines)
+
+	// Although technically this option is handled by the :Noption1 modifier,
+	// this is so unusual that the warning is justified.
+	t.CheckOutputLines(
+		"WARN: ~/category/package/options.mk:3: Option \"option1\" should be handled below in an .if block.")
+}
+
 // If there is no .include line after the declaration of the package-settable
 // variables, the whole analysis stops.
 //

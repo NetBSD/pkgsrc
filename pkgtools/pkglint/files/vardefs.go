@@ -94,7 +94,7 @@ func (src *Pkgsrc) InitVartypes() {
 						words := mkline.ValueFields(mkline.Args())
 						if len(words) > 2 && words[0] == "_version_" {
 							for _, word := range words[2:] {
-								languages[word] = true
+								languages[intern(word)] = true
 							}
 						}
 					}
@@ -130,7 +130,7 @@ func (src *Pkgsrc) InitVartypes() {
 							words, _ := splitIntoMkWords(mkline.Line, mkline.Value())
 							for _, word := range words {
 								if !contains(word, "$") {
-									values[word] = true
+									values[intern(word)] = true
 								}
 							}
 						}
@@ -970,9 +970,14 @@ func (src *Pkgsrc) InitVartypes() {
 	sys("PGPKGSRCDIR", lkNone, BtPathname)
 	sys("PHASE_MSG", lkNone, BtShellCommand)
 	usr("PHP_VERSION_REQD", lkNone, BtVersion)
+	acl("PHP_PKG_PREFIX", lkNone, enumFromDirs("lang", `^php(\d+)$`, "php$1", "php56 php71 php72 php73"), ""+
+		"special:phpversion.mk: set; "+
+		"*: use-loadtime, use")
 	sys("PKGBASE", lkNone, BtIdentifier)
-	acl("PKGCONFIG_FILE.*", lkShell, BtPathname, "builtin.mk: set, append; pkgconfig-builtin.mk: use-loadtime")
-	acl("PKGCONFIG_OVERRIDE", lkShell, BtPathmask, "Makefile: set, append; Makefile.common: append")
+	acl("PKGCONFIG_FILE.*", lkShell, BtPathname,
+		"builtin.mk: set, append; special:pkgconfig-builtin.mk: use-loadtime")
+	acl("PKGCONFIG_OVERRIDE", lkShell, BtPathmask,
+		"Makefile: set, append; Makefile.common: append")
 	pkg("PKGCONFIG_OVERRIDE_STAGE", lkNone, BtStage)
 	pkg("PKGDIR", lkNone, BtRelativePkgDir)
 	sys("PKGDIRMODE", lkNone, BtFileMode)
@@ -1068,7 +1073,7 @@ func (src *Pkgsrc) InitVartypes() {
 	sysload("PTHREAD_TYPE", lkNone, BtIdentifier) // Or "native" or "none".
 	pkg("PY_PATCHPLIST", lkNone, BtYes)
 	acl("PYPKGPREFIX", lkNone, enumFromDirs("lang", `^python(\d+)$`, "py$1", "py27 py36"), ""+
-		"pyversion.mk: set; "+
+		"special:pyversion.mk: set; "+
 		"*: use-loadtime, use")
 	pkg("PYTHON_FOR_BUILD_ONLY", lkNone, enum("yes no test tool YES")) // See lang/python/pyversion.mk
 	pkglist("REPLACE_PYTHON", lkShell, BtPathmask)
@@ -1104,7 +1109,13 @@ func (src *Pkgsrc) InitVartypes() {
 	pkg("RESTRICTED", lkNone, BtMessage)
 	usr("ROOT_USER", lkNone, BtUserGroupName)
 	usr("ROOT_GROUP", lkNone, BtUserGroupName)
+	acl("RUBY_BASE", lkNone, enumFromDirs("lang", `^ruby(\d+)$`, "ruby$1", "ruby22 ruby23 ruby24 ruby25"), ""+
+		"special:rubyversion.mk: set; "+
+		"*: use-loadtime, use")
 	usr("RUBY_VERSION_REQD", lkNone, BtVersion)
+	acl("RUBY_PKGPREFIX", lkNone, enumFromDirs("lang", `^ruby(\d+)$`, "ruby$1", "ruby22 ruby23 ruby24 ruby25"), ""+
+		"special:rubyversion.mk: set, default, use; "+
+		"*: use-loadtime, use")
 	sys("RUN", lkNone, BtShellCommand)
 	sys("RUN_LDCONFIG", lkNone, BtYesNo)
 	acl("SCRIPTS_ENV", lkShell, BtShellWord, "Makefile, Makefile.common: append")
@@ -1268,14 +1279,19 @@ func parseACLEntries(varname string, aclEntries string) []ACLEntry {
 			case "*",
 				"Makefile", "Makefile.common", "Makefile.*",
 				"buildlink3.mk", "builtin.mk", "options.mk", "hacks.mk", "*.mk",
-				"bsd.options.mk", "pkgconfig-builtin.mk", "pyversion.mk":
+				"bsd.options.mk":
 				break
 			default:
-				G.Assertf(false, "Invalid ACL glob %q for %q.", glob, varname)
+				withoutSpecial := strings.TrimPrefix(glob, "special:")
+				if withoutSpecial == glob {
+					G.Assertf(false, "Invalid ACL glob %q for %q.", glob, varname)
+				} else {
+					glob = withoutSpecial
+				}
 			}
 			for _, prev := range result {
 				matched, err := path.Match(prev.glob, glob)
-				G.AssertNil(err, "Invalid ACL pattern %q for %q.", glob, varname)
+				G.AssertNil(err, "Invalid ACL pattern %q for %q", glob, varname)
 				G.Assertf(!matched, "Unreachable ACL pattern %q for %q.", glob, varname)
 			}
 			result = append(result, ACLEntry{glob, permissions})
