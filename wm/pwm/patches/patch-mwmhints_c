@@ -1,0 +1,41 @@
+$NetBSD: patch-mwmhints_c,v 1.1 2019/01/26 20:50:50 is Exp $
+
+--- mwmhints.c.orig	2006-05-17 06:50:33.000000000 +0000
++++ mwmhints.c
+@@ -12,8 +12,29 @@
+ #include "mwmhints.h"
+ #include "frame.h"
+ 
+-
+ #ifndef CF_NO_WILD_WINDOWS
++void get_net_wm_state(Window win, int *flags)
++{
++	Atom *winstate;
++	int n;
++	int i;
++
++	n=do_get_property(wglobal.dpy, win,
++		wglobal.atom_net_wm_state, XA_ATOM,
++		32, (uchar **)&winstate);
++
++	for (i=0;i<n;i++) {
++		if (winstate[i] == wglobal.atom_net_wm_state_fs) {
++			*flags|=CWIN_WILD;
++			goto cleanup;
++		}
++	}
++	*flags&=~CWIN_WILD;
++
++cleanup:
++	XFree((void *)winstate);
++}
++
+ void get_mwm_hints(Window win, int *flags)
+ {
+ 	WMwmHints *hints;
+@@ -36,4 +57,5 @@ void get_mwm_hints(Window win, int *flag
+ 	
+ 	XFree((void*)hints);
+ }
++
+ #endif

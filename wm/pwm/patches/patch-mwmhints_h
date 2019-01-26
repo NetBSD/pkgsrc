@@ -1,0 +1,11 @@
+$NetBSD: patch-mwmhints_h,v 1.1 2019/01/26 20:50:50 is Exp $
+
+--- mwmhints.h.orig	2019-01-25 19:46:53.325613996 +0000
++++ mwmhints.h
+@@ -56,5 +56,6 @@ typedef struct _WMwmHints{
+ 
+ 
+ extern void get_mwm_hints(Window win, int *flags);
++extern void get_net_wm_state(Window win, int *flags);
+ 
+ #endif /* INCLUDED_MWMHINTS_H */

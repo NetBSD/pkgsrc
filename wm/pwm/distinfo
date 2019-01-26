@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2015/11/02 23:42:54 agc Exp $
+$NetBSD: distinfo,v 1.21 2019/01/26 20:50:50 is Exp $
 
 SHA1 (pwm-20060517.tar.gz) = d69dd232e07c20a053d1eec92355ee5134a422b3
 RMD160 (pwm-20060517.tar.gz) = a2df30c1a4b68b569b5c9e3ec3a8c4ff003714ab
@@ -10,3 +10,9 @@ SHA1 (patch-af) = 1f302ae3b78c436bd5170dea55e77e8e00f789d0
 SHA1 (patch-ag) = ed5df2ddc4b4061c66f7599ac1f787a5d78dd778
 SHA1 (patch-ah) = 146a957d385cfc70322ffd2c2ddf10238e2960bc
 SHA1 (patch-ai) = bf0a0aaf07b53220c01b7e4a0e244988353b22e2
+SHA1 (patch-clientwin_c) = c2982bb3610a68108181b6382182bc7da08ca7d8
+SHA1 (patch-event_c) = 1cbf5b12d6b681744baf86277aeaef60c1316d31
+SHA1 (patch-global_h) = 1c548c61ccb0abb6c2d770b75914578d17722d46
+SHA1 (patch-main_c) = 18f15dd7227e8081b124436a60d5d477d09f273e
+SHA1 (patch-mwmhints_c) = f7b148361db646d5b92971b44d7c3663abbad42e
+SHA1 (patch-mwmhints_h) = 4956b982d30354f9361bd2f908754101c9146388
