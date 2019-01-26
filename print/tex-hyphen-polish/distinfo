@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/06/16 04:06:08 markd Exp $
+$NetBSD: distinfo,v 1.6 2019/01/26 21:15:02 markd Exp $
 
-SHA1 (tex-hyphen-polish-41113/hyphen-polish.tar.xz) = fcd0dd5c7e87bc0a93ccd801aa7ecb7ad8bac9a3
-RMD160 (tex-hyphen-polish-41113/hyphen-polish.tar.xz) = 4c351d3662114b968cde6fb493be62fb8f40c68b
-SHA512 (tex-hyphen-polish-41113/hyphen-polish.tar.xz) = 0d0757768f1e8faaf1cbd981f6cfc798b5bfe906eb0ba8088587937d7647a1fa7ddf88671e1465abbc3ea6e0eccce214ee7f39c82775f1f228177bb5a44396a1
-Size (tex-hyphen-polish-41113/hyphen-polish.tar.xz) = 11948 bytes
+SHA1 (tex-hyphen-polish-49078/hyphen-polish.tar.xz) = 4bf2066db8306415fe67612dd9deabcbf190433b
+RMD160 (tex-hyphen-polish-49078/hyphen-polish.tar.xz) = 9a418c5c8f1bbe4bf26503d66503a1d0b4db7876
+SHA512 (tex-hyphen-polish-49078/hyphen-polish.tar.xz) = 026e5dfa3f1135ad5399e45caf0c144309b6115f083564f377540a3b976f2faeca79d0fa91dafd12a16f638c2edd73e133b0a266d74be6ecc9d3dcee3bb97292
+Size (tex-hyphen-polish-49078/hyphen-polish.tar.xz) = 12600 bytes
