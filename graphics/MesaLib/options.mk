@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.63 2018/12/24 13:56:44 sevan Exp $
+# $NetBSD: options.mk,v 1.64 2019/01/26 20:33:39 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -187,8 +187,7 @@ CONFIGURE_ARGS+=	--enable-gallium-llvm
 CONFIGURE_ARGS+=	--enable-r600-llvm-compiler
 .include "../../devel/libelf/buildlink3.mk"
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.libelf}/include/libelf
-BUILDLINK_API_DEPENDS.libLLVM+= libLLVM>=4.0
-.include "../../lang/libLLVM/buildlink3.mk"
+.include "../../lang/libLLVM4/buildlink3.mk"
 CONFIGURE_ENV+=		ac_cv_path_ac_pt_LLVM_CONFIG=${LLVM_CONFIG_PATH}
 .else # !llvm
 CONFIGURE_ARGS+=	--disable-xa
