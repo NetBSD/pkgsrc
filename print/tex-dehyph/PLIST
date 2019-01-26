@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2019/01/26 03:38:39 markd Exp $
+share/texmf-dist/tex/generic/dehyph/README
+share/texmf-dist/tex/generic/dehyph/dehyphn.tex
+share/texmf-dist/tex/generic/dehyph/dehypht.tex
+share/texmf-dist/tex/generic/dehyph/dehyphtex.tex
