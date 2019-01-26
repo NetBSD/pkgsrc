@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.431 2019/01/26 04:21:38 markd Exp $
+$NetBSD: CHANGES-2019,v 1.432 2019/01/26 07:38:54 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -671,3 +671,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/tex-csplain to 2018.48563 [markd 2019-01-26]
 	Added print/tex-dehyph version 2018 [markd 2019-01-26]
 	Updated print/tex-thumbpdf to 3.17 [markd 2019-01-26]
+	Updated devel/p5-Term-Shell to 0.10 [wen 2019-01-26]
