@@ -10,12 +10,12 @@ func (s *Suite) Test_ShTokenizer_ShAtom(c *check.C) {
 
 	// testRest ensures that the given string is parsed to the expected
 	// atoms, and returns the remaining text.
-	testRest := func(s string, expected ...*ShAtom) string {
+	testRest := func(s string, expectedAtoms ...*ShAtom) string {
 		p := NewShTokenizer(dummyLine, s, false)
 		q := shqPlain
-		for _, exp := range expected {
-			c.Check(p.ShAtom(q), deepEquals, exp)
-			q = exp.Quoting
+		for _, expectedAtom := range expectedAtoms {
+			c.Check(p.ShAtom(q), deepEquals, expectedAtom)
+			q = expectedAtom.Quoting
 		}
 		return p.Rest()
 	}

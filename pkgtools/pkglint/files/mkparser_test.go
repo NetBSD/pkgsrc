@@ -66,12 +66,13 @@ func (s *Suite) Test_MkParser_MkTokens(c *check.C) {
 		varuse("MASTER_SITES", "=subdir/")},
 		"")
 
-	// FIXME: Text must match modifiers.
 	testRest("${VAR:S,a,b,c,d,e,f}",
 		[]*MkToken{{
 			Text:   "${VAR:S,a,b,c,d,e,f}",
 			Varuse: NewMkVarUse("VAR", "S,a,b,")}},
 		"")
+	t.CheckOutputLines(
+		"WARN: Test_MkParser_MkTokens.mk:1: Invalid variable modifier \"c,d,e,f\" for \"VAR\".")
 
 	testRest("Text${VAR:Mmodifier}${VAR2}more text${VAR3}", []*MkToken{
 		literal("Text"),
@@ -266,6 +267,16 @@ func (s *Suite) Test_MkParser_VarUse(c *check.C) {
 
 	test("${${PKGBASE} ${PKGVERSION}:L}",
 		varuse("${PKGBASE} ${PKGVERSION}", "L"))
+
+	// The variable name is optional; the variable with the empty name always
+	// evaluates to the empty string. Bmake actively prevents this variable from
+	// ever being defined. Therefore the :U branch is always taken, and this
+	// in turn is used to implement the variables from the .for loops.
+	test("${:U}",
+		varuse("", "U"))
+
+	test("${:Ufixed value}",
+		varuse("", "Ufixed value"))
 
 	// This complicated expression returns the major.minor.patch version
 	// of the package given in ${d}.
@@ -522,11 +533,11 @@ func (s *Suite) Test_MkParser_VarUse__parentheses_autofix(c *check.C) {
 		"COMMENT=${P1} ${P2}) ${P3:Q} ${BRACES} $(A.$(B.${C}))")
 }
 
-func (s *Suite) Test_MkParser_varUseModifierSubst(c *check.C) {
+func (s *Suite) Test_MkParser_VarUseModifiers(c *check.C) {
 	t := s.Init(c)
 
 	varUse := NewMkVarUse
-	test := func(text string, varUse *MkVarUse, rest string) {
+	test := func(text string, varUse *MkVarUse, rest string, diagnostics ...string) {
 		mkline := t.NewMkLine("Makefile", 20, "\t"+text)
 		p := NewMkParser(mkline.Line, mkline.ShellCommand(), true)
 
@@ -534,16 +545,76 @@ func (s *Suite) Test_MkParser_varUseModifierSubst(c *check.C) {
 
 		t.Check(actual, deepEquals, varUse)
 		t.Check(p.Rest(), equals, rest)
-		t.CheckOutputEmpty()
+		if len(diagnostics) > 0 {
+			t.CheckOutputLines(diagnostics...)
+		} else {
+			t.CheckOutputEmpty()
+		}
 	}
 
-	test("${VAR:S", nil, "${VAR:S")             // Just for code coverage.
-	test("${VAR:S}", varUse("VAR"), "")         // FIXME: should not consume anything.
-	test("${VAR:S,}", varUse("VAR"), "")        // FIXME: should not consume anything.
-	test("${VAR:S,from,to}", varUse("VAR"), "") // FIXME: should not consume anything.
+	// The !command! modifier is used so seldom that pkglint does not
+	// check whether the command is actually valid.
+	// At least not while parsing the modifier since at this point it might
+	// be still unknown which of the commands can be used and which cannot.
+	test("${VAR:!command!}", varUse("VAR", "!command!"), "")
+
+	test("${VAR:!command}", varUse("VAR"), "",
+		"WARN: Makefile:20: Invalid variable modifier \"!command\" for \"VAR\".")
+
+	test("${VAR:command!}", varUse("VAR"), "",
+		"WARN: Makefile:20: Invalid variable modifier \"command!\" for \"VAR\".")
+
+	// The :L modifier makes the variable value "echo hello", and the :[1]
+	// modifier extracts the "echo".
+	test("${echo hello:L:[1]}", varUse("echo hello", "L", "[1]"), "")
+
+	// bmake ignores the :[3] modifier, and the :L modifier just returns the
+	// variable name, in this case BUILD_DIRS.
+	test("${BUILD_DIRS:[3]:L}", varUse("BUILD_DIRS", "[3]", "L"), "")
+}
+
+func (s *Suite) Test_MkParser_varUseModifierSubst(c *check.C) {
+	t := s.Init(c)
+
+	varUse := NewMkVarUse
+	test := func(text string, varUse *MkVarUse, rest string, diagnostics ...string) {
+		mkline := t.NewMkLine("Makefile", 20, "\t"+text)
+		p := NewMkParser(mkline.Line, mkline.ShellCommand(), true)
+
+		actual := p.VarUse()
+
+		t.Check(actual, deepEquals, varUse)
+		t.Check(p.Rest(), equals, rest)
+		if len(diagnostics) > 0 {
+			t.CheckOutputLines(diagnostics...)
+		} else {
+			t.CheckOutputEmpty()
+		}
+	}
+
+	test("${VAR:S", nil, "${VAR:S",
+		"WARN: Makefile:20: Invalid variable modifier \"S\" for \"VAR\".")
+
+	test("${VAR:S}", varUse("VAR"), "",
+		"WARN: Makefile:20: Invalid variable modifier \"S\" for \"VAR\".")
+
+	test("${VAR:S,}", varUse("VAR"), "",
+		"WARN: Makefile:20: Invalid variable modifier \"S,\" for \"VAR\".")
+
+	test("${VAR:S,from,to}", varUse("VAR"), "",
+		"WARN: Makefile:20: Invalid variable modifier \"S,from,to\" for \"VAR\".")
+
 	test("${VAR:S,from,to,}", varUse("VAR", "S,from,to,"), "")
+
 	test("${VAR:S,^from$,to,}", varUse("VAR", "S,^from$,to,"), "")
+
 	test("${VAR:S,@F@,${F},}", varUse("VAR", "S,@F@,${F},"), "")
+
+	test("${VAR:S,from,to,1}", varUse("VAR", "S,from,to,1"), "")
+	test("${VAR:S,from,to,g}", varUse("VAR", "S,from,to,g"), "")
+	test("${VAR:S,from,to,W}", varUse("VAR", "S,from,to,W"), "")
+
+	test("${VAR:S,from,to,1gW}", varUse("VAR", "S,from,to,1gW"), "")
 }
 
 func (s *Suite) Test_MkParser_varUseModifierAt(c *check.C) {
@@ -565,9 +636,12 @@ func (s *Suite) Test_MkParser_varUseModifierAt(c *check.C) {
 		}
 	}
 
-	test("${VAR:@", nil, "${VAR:@") // Just for code coverage.
+	test("${VAR:@", nil, "${VAR:@",
+		"WARN: Makefile:20: Invalid variable modifier \"@\" for \"VAR\".")
+
 	test("${VAR:@i@${i}}", varUse("VAR", "@i@${i}"), "",
 		"WARN: Makefile:20: Modifier ${VAR:@i@...@} is missing the final \"@\".")
+
 	test("${VAR:@i@${i}@}", varUse("VAR", "@i@${i}@"), "")
 }
 
@@ -585,6 +659,27 @@ func (s *Suite) Test_MkParser_PkgbasePattern(c *check.C) {
 	testRest("boost-build-1.59.*", "boost-build", "-1.59.*")
 	testRest("${PHP_PKG_PREFIX}-pdo-5.*", "${PHP_PKG_PREFIX}-pdo", "-5.*")
 	testRest("${PYPKGPREFIX}-metakit-[0-9]*", "${PYPKGPREFIX}-metakit", "-[0-9]*")
+
+	testRest("pkgbase-[0-9]*", "pkgbase", "-[0-9]*")
+
+	testRest("pkgbase-client-[0-9]*", "pkgbase-client", "-[0-9]*")
+
+	testRest("pkgbase-${VARIANT}-[0-9]*", "pkgbase-${VARIANT}", "-[0-9]*")
+
+	testRest("pkgbase-${VERSION}-[0-9]*", "pkgbase", "-${VERSION}-[0-9]*")
+
+	// This PKGNAME pattern is the one from bsd.pkg.mk.
+	// The pattern assumes that the version number does not contain a hyphen,
+	// which feels a bit too simple.
+	//
+	// Since variable substitutions are more common for version numbers
+	// than for parts of the package name, pkglint treats the PKGNAME
+	// as a version number.
+	testRest("pkgbase-${PKGNAME:C/^.*-//}-[0-9]*", "pkgbase", "-${PKGNAME:C/^.*-//}-[0-9]*")
+
+	// Using the [a-z] pattern in the package base is not seen in the wild.
+	// Therefore this rather strange parsing result is ok.
+	testRest("pkgbase-[a-z]-1.0", "pkgbase-", "[a-z]-1.0")
 
 	// This is a valid dependency pattern, but it's more complicated
 	// than the patterns pkglint can handle as of January 2019.
