@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.428 2019/01/26 02:17:26 wen Exp $
+$NetBSD: CHANGES-2019,v 1.429 2019/01/26 02:22:19 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -645,3 +645,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/p5-Unicode-LineBreak to 2019.001 [wen 2019-01-26]
 	Updated textproc/p5-Text-Trac to 0.24 [wen 2019-01-26]
 	Updated devel/p5-Test2-Suite to 0.000118 [wen 2019-01-26]
+	Updated devel/p5-Test-Simple to 1.302160 [wen 2019-01-26]
