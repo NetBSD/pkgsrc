@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.445 2019/01/26 16:32:45 rillig Exp $
+$NetBSD: CHANGES-2019,v 1.446 2019/01/26 20:39:34 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -710,3 +710,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/tex-pdfcomment to 2.4a [markd 2019-01-26]
 	Updated print/tex-pdfcomment-doc to 2.4a [markd 2019-01-26]
 	Updated pkgtools/pkglint to 5.6.12 [rillig 2019-01-26]
+	Updated graphics/sxiv to 25 [leot 2019-01-26]
