@@ -30,6 +30,7 @@ type autofixShortTerm struct {
 	diagFormat  string          // Is logged only if it couldn't be fixed automatically
 	diagArgs    []interface{}   //
 	explanation []string        // Is printed together with the diagnostic
+	anyway      bool            // Print the diagnostic even if it cannot be autofixed
 }
 
 type autofixAction struct {
@@ -229,6 +230,12 @@ func (fix *Autofix) Delete() {
 	}
 }
 
+// Anyway has the effect of showing the diagnostic even when nothing can
+// be fixed automatically.
+func (fix *Autofix) Anyway() {
+	fix.anyway = true
+}
+
 // Apply does the actual work.
 // Depending on the pkglint mode, it either:
 //
@@ -255,7 +262,7 @@ func (fix *Autofix) Apply() {
 		fix.autofixShortTerm = autofixShortTerm{}
 	}
 
-	if !G.Logger.Relevant(fix.diagFormat) || len(fix.actions) == 0 {
+	if !G.Logger.Relevant(fix.diagFormat) || !fix.anyway && len(fix.actions) == 0 {
 		reset()
 		return
 	}

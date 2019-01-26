@@ -66,6 +66,15 @@ func replaceAllFunc(s string, re regex.Pattern, repl func(string) string) string
 	return G.res.Compile(re).ReplaceAllStringFunc(s, repl)
 }
 
+// intern returns an independent copy of the given string.
+//
+// It should be called when only a small substring of a large string
+// is needed for the rest of the program's lifetime.
+//
+// All strings allocated here will stay in memory forever,
+// therefore it should only be used for long-lived strings.
+func intern(str string) string { return G.interner.Intern(str) }
+
 // trimHspace returns str, with leading and trailing space (U+0020)
 // and tab (U+0009) removed.
 //
@@ -340,11 +349,22 @@ func mkopSubst(s string, left bool, from string, right bool, to string, flags st
 
 // relpath returns the relative path from `from` to `to`.
 func relpath(from, to string) string {
+
+	// From "dir" to "dir/subdir/...".
 	if hasPrefix(to, from) && len(to) > len(from)+1 && to[len(from)] == '/' {
 		return path.Clean(to[len(from)+1:])
 	}
 
-	// TODO: avoid these filesystem calls as they require IO.
+	// Take a shortcut for the most common variant in a complete pkgsrc scan,
+	// which is to resolve the relative path from a package to the pkgsrc root.
+	// This avoids unnecessary calls to the filesystem API.
+	if to == "." {
+		fromParts := strings.FieldsFunc(from, func(r rune) bool { return r == '/' })
+		if len(fromParts) == 3 && !hasPrefix(fromParts[0], ".") && !hasPrefix(fromParts[1], ".") && fromParts[2] == "." {
+			return "../.."
+		}
+	}
+
 	absFrom := abspath(from)
 	absTo := abspath(to)
 	rel, err := filepath.Rel(absFrom, absTo)
@@ -697,16 +717,12 @@ func (s *RedundantScope) Handle(mkline MkLine) {
 
 			switch op {
 			case opAssign:
-				if s.OnOverwrite != nil {
-					s.OnOverwrite(existing.mkline, mkline)
-				}
+				s.OnOverwrite(existing.mkline, mkline)
 				existing.value = value
 			case opAssignAppend:
 				existing.value += " " + value
 			case opAssignDefault:
-				if s.OnIgnore != nil {
-					s.OnIgnore(existing.mkline, mkline)
-				}
+				s.OnIgnore(existing.mkline, mkline)
 			case opAssignShell, opAssignEval:
 				s.vars[varname] = nil // Won't be checked further.
 			}
@@ -856,17 +872,24 @@ func seeGuide(sectionName, sectionID string) string {
 		sectionName, sectionID)
 }
 
+// wrap performs automatic word wrapping on the given lines.
+//
+// Empty lines, indented lines and lines starting with "*" are kept as-is.
 func wrap(max int, lines ...string) []string {
 	var wrapped []string
-	var buf strings.Builder
+	var sb strings.Builder
 	nonSpace := textproc.Space.Inverse()
 
 	for _, line := range lines {
+
 		if line == "" || isHspace(line[0]) || line[0] == '*' {
-			if buf.Len() > 0 {
-				wrapped = append(wrapped, buf.String())
-				buf.Reset()
+
+			// Finish current paragraph.
+			if sb.Len() > 0 {
+				wrapped = append(wrapped, sb.String())
+				sb.Reset()
 			}
+
 			wrapped = append(wrapped, line)
 			continue
 		}
@@ -877,25 +900,23 @@ func wrap(max int, lines ...string) []string {
 			space := lexer.NextBytesSet(textproc.Space)
 			word := lexer.NextBytesSet(nonSpace)
 
-			if bol && space == "" && buf.Len() > 0 {
+			if bol && sb.Len() > 0 {
 				space = " "
 			}
 
-			if buf.Len() > 0 && buf.Len()+len(space)+len(word) > max {
-				wrapped = append(wrapped, buf.String())
-				buf.Reset()
-				if hasPrefix(space, " ") {
-					space = ""
-				}
+			if sb.Len() > 0 && sb.Len()+len(space)+len(word) > max {
+				wrapped = append(wrapped, sb.String())
+				sb.Reset()
+				space = ""
 			}
 
-			buf.WriteString(space)
-			buf.WriteString(word)
+			sb.WriteString(space)
+			sb.WriteString(word)
 		}
 	}
 
-	if buf.Len() > 0 {
-		wrapped = append(wrapped, buf.String())
+	if sb.Len() > 0 {
+		wrapped = append(wrapped, sb.String())
 	}
 
 	return wrapped
@@ -928,4 +949,97 @@ func escapePrintable(s string) string {
 		}
 	}
 	return escaped.String()
+}
+
+func stringSliceLess(a, b []string) bool {
+	limit := len(a)
+	if len(b) < limit {
+		limit = len(b)
+	}
+
+	for i := 0; i < limit; i++ {
+		if a[i] != b[i] {
+			return a[i] < b[i]
+		}
+	}
+
+	return len(a) < len(b)
+}
+
+func joinSkipEmpty(sep string, elements ...string) string {
+	var nonempty []string
+	for _, element := range elements {
+		if element != "" {
+			nonempty = append(nonempty, element)
+		}
+	}
+	return strings.Join(nonempty, sep)
+}
+
+func joinSkipEmptyCambridge(conn string, elements ...string) string {
+	var nonempty []string
+	for _, element := range elements {
+		if element != "" {
+			nonempty = append(nonempty, element)
+		}
+	}
+
+	var sb strings.Builder
+	for i, element := range nonempty {
+		if i > 0 {
+			if i == len(nonempty)-1 {
+				sb.WriteRune(' ')
+				sb.WriteString(conn)
+				sb.WriteRune(' ')
+			} else {
+				sb.WriteString(", ")
+			}
+		}
+		sb.WriteString(element)
+	}
+
+	return sb.String()
+}
+
+func joinSkipEmptyOxford(conn string, elements ...string) string {
+	var nonempty []string
+	for _, element := range elements {
+		if element != "" {
+			nonempty = append(nonempty, element)
+		}
+	}
+
+	if lastIndex := len(nonempty) - 1; lastIndex >= 1 {
+		nonempty[lastIndex] = conn + " " + nonempty[lastIndex]
+	}
+
+	return strings.Join(nonempty, ", ")
+}
+
+// StringInterner collects commonly used strings to avoid wasting heap memory
+// by duplicated strings.
+type StringInterner struct {
+	strs map[string]string
+}
+
+func NewStringInterner() StringInterner {
+	return StringInterner{make(map[string]string)}
+}
+
+func (si *StringInterner) Intern(str string) string {
+	interned, found := si.strs[str]
+	if found {
+		return interned
+	}
+
+	// Ensure that the original string is never stored directly in the map
+	// since it might be a substring of a very large string. The interned
+	// strings must be completely independent of anything from the outside,
+	// so that the large source string can be freed afterwards.
+	var sb strings.Builder
+	sb.WriteString(str)
+	key := sb.String()
+
+	si.strs[key] = key
+	return key
 }

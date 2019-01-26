@@ -31,8 +31,7 @@ func (s *Suite) Test_Lines_CheckRcsID__wip(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPkgsrc()
-	t.SetUpPackage("wip/package",
-		"CATEGORIES=\tchinese")
+	t.SetUpPackage("wip/package")
 	t.CreateFileLines("wip/package/file1.mk",
 		"# $"+"NetBSD: dummy $")
 	t.CreateFileLines("wip/package/file2.mk",
