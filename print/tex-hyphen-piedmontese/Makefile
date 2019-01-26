@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2016/06/16 04:06:08 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/01/26 21:18:08 markd Exp $
 
 DISTNAME=	hyphen-piedmontese
-PKGNAME=	tex-${DISTNAME}-2016
-TEXLIVE_REV=	40340
+PKGNAME=	tex-${DISTNAME}-2018
+TEXLIVE_REV=	49078
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Piedmontese hyphenation patterns
