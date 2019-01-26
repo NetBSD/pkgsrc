@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:02:52 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/01/26 03:53:39 markd Exp $
 
-SHA1 (tex-thumbpdf-34621/thumbpdf.tar.xz) = 584a9976414240bd491c526b1aef9af514a129e7
-RMD160 (tex-thumbpdf-34621/thumbpdf.tar.xz) = 4071dc0841fe5d9f2f43acb90eda4c9cf04103a9
-SHA512 (tex-thumbpdf-34621/thumbpdf.tar.xz) = e4ec3f02fab3e7290b3693a8753c0a7c43ffc80f97374d92a3f732a372869f264270b5828c1b434d8b0d8b4b0a710491d929bf0cfee75dfd6777806e0765bc0c
-Size (tex-thumbpdf-34621/thumbpdf.tar.xz) = 18692 bytes
+SHA1 (tex-thumbpdf-48625/thumbpdf.tar.xz) = 25d9483cd419d4ab4b27e07af3d1a72b514c792f
+RMD160 (tex-thumbpdf-48625/thumbpdf.tar.xz) = bb16e76aac8059b4bb52a0e625a197d22405d516
+SHA512 (tex-thumbpdf-48625/thumbpdf.tar.xz) = 65a4b13fe25ea01779ff26589fa6d0537d2cced3e622ee1959b3dc8e87c7222f4d33b03be491eb258431730530594288554ebf2306d3b7b2648dd5f5085c13eb
+Size (tex-thumbpdf-48625/thumbpdf.tar.xz) = 18872 bytes
