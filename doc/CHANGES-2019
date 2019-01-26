@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.424 2019/01/26 01:05:29 alnsn Exp $
+$NetBSD: CHANGES-2019,v 1.425 2019/01/26 01:58:58 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -641,3 +641,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/tex-context-filter to 2018.48390 [markd 2019-01-25]
 	Updated print/tex-context-filter-doc to 2018.48390 [markd 2019-01-25]
 	Added devel/lua-cqueues version 20171014 [alnsn 2019-01-25]
+	Updated textproc/p5-YAML-LibYAML to 0.76 [wen 2019-01-26]
