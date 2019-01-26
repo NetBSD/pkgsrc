@@ -31,8 +31,8 @@ func (ls *LinesImpl) Warnf(format string, args ...interface{}) {
 	NewLineWhole(ls.FileName).Warnf(format, args...)
 }
 
-func (ls *LinesImpl) SaveAutofixChanges() {
-	SaveAutofixChanges(ls)
+func (ls *LinesImpl) SaveAutofixChanges() bool {
+	return SaveAutofixChanges(ls)
 }
 
 func (ls *LinesImpl) CheckRcsID(index int, prefixRe regex.Pattern, suggestedPrefix string) bool {
@@ -43,13 +43,13 @@ func (ls *LinesImpl) CheckRcsID(index int, prefixRe regex.Pattern, suggestedPref
 	line := ls.Lines[index]
 	if m, expanded := match1(line.Text, `^`+prefixRe+`\$`+`NetBSD(:[^\$]+)?\$$`); m {
 
-		if G.Wip && expanded != "" {
+		if G.Testing && G.Wip && expanded != "" {
 			fix := line.Autofix()
 			fix.Notef("Expected exactly %q.", suggestedPrefix+"$"+"NetBSD$")
 			fix.Explain(
-				"Several files in pkgsrc must contain the CVS Id, so that their",
+				"Most files in pkgsrc contain the CVS Id, so that their",
 				"current version can be traced back later from a binary package.",
-				"This is to ensure reproducible builds, for example for finding bugs.",
+				"This is to ensure reproducible builds and for reliably locating bugs.",
 				"",
 				"These CVS Ids are specific to the CVS version control system,",
 				"and pkgsrc-wip uses Git instead.",

@@ -284,7 +284,12 @@ func (t *Tester) SetUpCategory(name string) {
 // After calling this method, individual files can be overwritten as necessary.
 // Then, G.Pkgsrc.LoadInfrastructure should be called to load all the files.
 func (t *Tester) SetUpPackage(pkgpath string, makefileLines ...string) string {
+
 	category := path.Dir(pkgpath)
+	if category == "wip" {
+		// To avoid boilerplate CATEGORIES definitions for wip packages.
+		category = "local"
+	}
 
 	t.SetUpPkgsrc()
 	t.SetUpVartypes()
@@ -295,18 +300,22 @@ func (t *Tester) SetUpPackage(pkgpath string, makefileLines ...string) string {
 	t.CreateFileLines(pkgpath+"/PLIST",
 		PlistRcsID,
 		"bin/program")
+
+	// This distinfo file contains dummy hashes since pkglint cannot check the
+	// distfiles hashes anyway. It can only check the hashes for the patches.
 	t.CreateFileLines(pkgpath+"/distinfo",
 		RcsID,
 		"",
-		"SHA1 (distfile-1.0.tar.gz) = 12341234...",
-		"RMD160 (distfile-1.0.tar.gz) = 12341234...",
-		"SHA512 (distfile-1.0.tar.gz) = 12341234...",
+		"SHA1 (distfile-1.0.tar.gz) = 12341234",
+		"RMD160 (distfile-1.0.tar.gz) = 12341234",
+		"SHA512 (distfile-1.0.tar.gz) = 12341234",
 		"Size (distfile-1.0.tar.gz) = 12341234")
 
 	mlines := []string{
 		MkRcsID,
 		"",
 		"DISTNAME=\tdistname-1.0",
+		"#PKGNAME=\tpackage-1.0",
 		"CATEGORIES=\t" + category,
 		"MASTER_SITES=\t# none",
 		"",
@@ -380,7 +389,7 @@ func (t *Tester) CreateFileDummyPatch(relativeFileName string) {
 		"+new")
 }
 
-func (t *Tester) CreateFileDummyBuildlink3(relativeFileName string) {
+func (t *Tester) CreateFileDummyBuildlink3(relativeFileName string, customLines ...string) {
 	dir := path.Dir(relativeFileName)
 	lower := path.Base(dir)
 	upper := strings.ToUpper(lower)
@@ -395,20 +404,27 @@ func (t *Tester) CreateFileDummyBuildlink3(relativeFileName string) {
 		return msg
 	}
 
-	t.CreateFileLines(relativeFileName,
+	var lines []string
+	lines = append(lines,
 		MkRcsID,
-		sprintf(""),
+		"",
 		sprintf("BUILDLINK_TREE+=\t%s", lower),
-		sprintf(""),
+		"",
 		sprintf(".if !defined(%s_BUILDLINK3_MK)", upper),
 		sprintf("%s_BUILDLINK3_MK:=", upper),
-		sprintf(""),
+		"",
 		aligned("BUILDLINK_API_DEPENDS.%s+=", lower)+sprintf("%s>=0", lower),
 		aligned("BUILDLINK_PKGSRCDIR.%s?=", lower)+sprintf("../../%s", dir),
 		aligned("BUILDLINK_DEPMETHOD.%s?=", lower)+"build",
+		"")
+	lines = append(lines, customLines...)
+	lines = append(lines,
+		"",
 		sprintf(".endif # %s_BUILDLINK3_MK", upper),
-		sprintf(""),
+		"",
 		sprintf("BUILDLINK_TREE+=\t-%s", lower))
+
+	t.CreateFileLines(relativeFileName, lines...)
 }
 
 // File returns the absolute path to the given file in the
