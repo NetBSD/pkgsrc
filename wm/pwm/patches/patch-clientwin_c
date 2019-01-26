@@ -1,0 +1,22 @@
+$NetBSD: patch-clientwin_c,v 1.1 2019/01/26 20:50:50 is Exp $
+
+--- clientwin.c.orig	2006-05-17 06:50:33.000000000 +0000
++++ clientwin.c
+@@ -338,6 +338,9 @@ WClientWin* create_clientwin(Window win,
+ 	cwin->event_mask=CLIENT_MASK;
+ 	cwin->transient_for=None;
+ 	cwin->dockpos=INT_MAX;
++
++	(void)XChangeProperty(wglobal.dpy, win, wglobal.atom_net_wm_allow,
++		XA_ATOM, 32, PropModeReplace, (uchar*)&wglobal.atom_net_wm_allow_fs, 1);
+ 	
+ 	/* Unnecessary, done when reparenting */
+ 	/* XSelectInput(wglobal.dpy, win, cwin->event_mask); */
+@@ -386,6 +389,7 @@ static bool add_clientwin(WClientWin *cw
+ #ifndef CF_NO_MWM_HINTS
+ 	get_mwm_hints(win, &(cwin->flags));
+ #endif
++	get_net_wm_state(win, &(cwin->flags));
+ 
+ 	get_initial_winprops(win, &frame_id, &ws, &(cwin->flags));
+ 
