@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/06/16 04:06:06 markd Exp $
+$NetBSD: distinfo,v 1.6 2019/01/26 22:32:12 markd Exp $
 
-SHA1 (tex-hyphen-galician-40340/hyphen-galician.tar.xz) = 3ebe3a343d62fcde184229636b383a57fed31555
-RMD160 (tex-hyphen-galician-40340/hyphen-galician.tar.xz) = ca09fe7e0aab28050be56ab089f108162c3e3426
-SHA512 (tex-hyphen-galician-40340/hyphen-galician.tar.xz) = 6596b349efee66da9def989a5751d995c987c89c18b85a246ecf74a71bd8ad65d35d6783879007774d9c3f860c4483bb2db88ad050b307d8e0dff9b98ca4903d
-Size (tex-hyphen-galician-40340/hyphen-galician.tar.xz) = 10444 bytes
+SHA1 (tex-hyphen-galician-49078/hyphen-galician.tar.xz) = 8b3b85536b4efbbfdec3c292837ad168ea879f52
+RMD160 (tex-hyphen-galician-49078/hyphen-galician.tar.xz) = 0323b490d98e17cf0d280e4a317f76d74e67bcaf
+SHA512 (tex-hyphen-galician-49078/hyphen-galician.tar.xz) = 7dfb6c7b8c6e1164f4f48c537fe03fda8477c5540b628ffce053002e5ec61bc06f7a98b9a57cc6bd3221ee13a8f1ad674c5b2b690d3cf876fb40a44b0af0a4da
+Size (tex-hyphen-galician-49078/hyphen-galician.tar.xz) = 10492 bytes
