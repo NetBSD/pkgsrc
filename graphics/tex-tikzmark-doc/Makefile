@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/06/21 13:25:34 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/01/26 11:06:19 markd Exp $
 
 DISTNAME=	tikzmark.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.3
-TEXLIVE_REV=	44475
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.6
+TEXLIVE_REV=	48929
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/tikzmark
