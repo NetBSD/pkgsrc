@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/06/16 04:06:08 markd Exp $
+$NetBSD: distinfo,v 1.6 2019/01/26 20:51:44 markd Exp $
 
-SHA1 (tex-hyphen-serbian-40340/hyphen-serbian.tar.xz) = 6c1adec7fb67cdaad667c609e0ea7ad5c9921957
-RMD160 (tex-hyphen-serbian-40340/hyphen-serbian.tar.xz) = c14b31ad0dc69eae5ed7c987dea10e5dd7e60b93
-SHA512 (tex-hyphen-serbian-40340/hyphen-serbian.tar.xz) = 8c802a17332fd127231c76c557705d0acfbf4c0357d96445a652a914694019475bdbfae4d4138b14bfe738294d2ac73055cd12d72f160d4bb97014cdb4c3b3fb
-Size (tex-hyphen-serbian-40340/hyphen-serbian.tar.xz) = 26112 bytes
+SHA1 (tex-hyphen-serbian-49078/hyphen-serbian.tar.xz) = 8d1f563919c0cbf99b15e0d24e67082e68d2038f
+RMD160 (tex-hyphen-serbian-49078/hyphen-serbian.tar.xz) = 9c9624aaf0fc95b663d706de98367074b12b0d04
+SHA512 (tex-hyphen-serbian-49078/hyphen-serbian.tar.xz) = 4231cb5e4392d4d396ef6856deb3597521ef1c38e9dd4d1ac5d353c0eaa65534f2cb3f622e80cf6524bca4bfa045cf1653ec19048c478bc48ab76a441d057602
+Size (tex-hyphen-serbian-49078/hyphen-serbian.tar.xz) = 25648 bytes
