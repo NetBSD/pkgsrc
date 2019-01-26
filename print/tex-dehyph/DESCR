@@ -1,0 +1,9 @@
+The package provides older hyphenation patterns for the German
+language. Please note that by default only pdfLaTeX uses these
+patterns (mainly for backwards compatibility). The older
+packages ghyphen and gnhyph are now bundled together with
+dehyph, and are no longer be updated. Both XeLaTeX and LuaLaTeX
+use the current German hyphenation patterns taken from
+Hyphenation patterns in UTF-8, and using the Experimental
+hyphenation patterns for the German language package it is
+possible to make pdfLaTeX use the new German patterns as well.
