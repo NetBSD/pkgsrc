@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/06/21 11:46:00 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/01/26 01:21:31 markd Exp $
 share/texmf-dist/doc/ptex/ptex-base/Changelog_eptex_beforeTL
 share/texmf-dist/doc/ptex/ptex-base/Changelog_ptex
 share/texmf-dist/doc/ptex/ptex-base/LICENSE
@@ -13,11 +13,11 @@ share/texmf-dist/doc/ptex/ptex-base/fam256d.tex
 share/texmf-dist/doc/ptex/ptex-base/fam256p.tex
 share/texmf-dist/doc/ptex/ptex-base/jfm.pdf
 share/texmf-dist/doc/ptex/ptex-base/jfm.tex
-share/texmf-dist/doc/ptex/ptex-base/jtex.pdf
-share/texmf-dist/doc/ptex/ptex-base/jtex.tex
-share/texmf-dist/doc/ptex/ptex-base/jtexdoc.pdf
-share/texmf-dist/doc/ptex/ptex-base/jtexdoc.tex
-share/texmf-dist/doc/ptex/ptex-base/ptexdoc.pdf
-share/texmf-dist/doc/ptex/ptex-base/ptexdoc.tex
-share/texmf-dist/doc/ptex/ptex-base/ptexskip.pdf
-share/texmf-dist/doc/ptex/ptex-base/ptexskip.tex
+share/texmf-dist/doc/ptex/ptex-base/jtex_asciimw.pdf
+share/texmf-dist/doc/ptex/ptex-base/jtex_asciimw.tex
+share/texmf-dist/doc/ptex/ptex-base/jtexdoc_asciimw.pdf
+share/texmf-dist/doc/ptex/ptex-base/jtexdoc_asciimw.tex
+share/texmf-dist/doc/ptex/ptex-base/ptexdoc_asciimw.pdf
+share/texmf-dist/doc/ptex/ptex-base/ptexdoc_asciimw.tex
+share/texmf-dist/doc/ptex/ptex-base/ptexskip_asciimw.pdf
+share/texmf-dist/doc/ptex/ptex-base/ptexskip_asciimw.tex
