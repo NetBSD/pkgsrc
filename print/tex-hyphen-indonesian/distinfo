@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/06/16 04:06:07 markd Exp $
+$NetBSD: distinfo,v 1.6 2019/01/26 21:55:46 markd Exp $
 
-SHA1 (tex-hyphen-indonesian-40340/hyphen-indonesian.tar.xz) = e77c8fa5060cf0d33b03b3dca1ed8fa7f001f0a1
-RMD160 (tex-hyphen-indonesian-40340/hyphen-indonesian.tar.xz) = b325dddbde1c5efb6ea38d75da3b6a3d55ad7e1f
-SHA512 (tex-hyphen-indonesian-40340/hyphen-indonesian.tar.xz) = 9941083e5921a9779e7d048225d085f8708a15e35ab4d1f27afb83ce322ad083037cc84430cec185c4cdaf33b972b7fb1c2578f0696412595c36f1aef7685960
-Size (tex-hyphen-indonesian-40340/hyphen-indonesian.tar.xz) = 2684 bytes
+SHA1 (tex-hyphen-indonesian-49078/hyphen-indonesian.tar.xz) = e0a67ad7c2574e317ff28b428ebea223c6221ca8
+RMD160 (tex-hyphen-indonesian-49078/hyphen-indonesian.tar.xz) = 2a151118201a99ea0d39e885c8ab37ecae7f4066
+SHA512 (tex-hyphen-indonesian-49078/hyphen-indonesian.tar.xz) = dfe94903ed4f1833b092c8082886454fa68c7f88ea7cb5841f57200193b67ff4d3cbafa427d8956ce09bbf43459c6217c38e2dc8f6c928424ff6d6c6786d9f77
+Size (tex-hyphen-indonesian-49078/hyphen-indonesian.tar.xz) = 2472 bytes
