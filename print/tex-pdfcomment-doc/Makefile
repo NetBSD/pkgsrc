@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2016/08/07 09:09:40 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/01/26 11:47:12 markd Exp $
 
 DISTNAME=	pdfcomment.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.4
-TEXLIVE_REV=	41484
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.4a
+TEXLIVE_REV=	49047
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/pdfcomment
