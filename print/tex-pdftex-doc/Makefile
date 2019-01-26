@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2018/08/22 09:46:15 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/01/26 08:39:32 markd Exp $
 
 DISTNAME=	pdftex.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2016
-PKGREVISION=	2
-TEXLIVE_REV=	41149
+PKGNAME=	tex-${DISTNAME:S/./-/}-2018
+TEXLIVE_REV=	48806
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/pdftex
