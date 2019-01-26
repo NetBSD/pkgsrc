@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2018/05/13 11:56:21 markd Exp $
+# $NetBSD: Makefile,v 1.11 2019/01/26 08:18:45 markd Exp $
 
 DISTNAME=	collection-langjapanese
 PKGNAME=	texlive-${DISTNAME}-2018pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	46987
+TEXLIVE_REV=	48752
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -20,7 +20,9 @@ DEPENDS+=	texlive-collection-langcjk-[0-9]*:../../meta-pkgs/texlive-collection-l
 # depend bxjaprnind
 # depend bxjscls
 # depend bxorigcapt
+# depend bxwareki
 # depend convbkmk
+# depend endnotesj
 # depend gentombow
 # depend ifptex
 # depend ifxptex
@@ -37,10 +39,12 @@ DEPENDS+=	tex-pbibtex-base-[0-9]*:../../print/tex-pbibtex-base
 DEPENDS+=	tex-platex-[0-9]*:../../print/tex-platex
 # depend platex-tools
 # platexcheat is documentation only
+# depend plautopatch
 DEPENDS+=	tex-ptex-[0-9]*:../../print/tex-ptex
 DEPENDS+=	tex-ptex-base-[0-9]*:../../print/tex-ptex-base
-DEPENDS+=	tex-ptex-fonts-[0-9]*:../../fonts/tex-ptex-fonts
 DEPENDS+=	tex-ptex-fontmaps-[0-9]*:../../fonts/tex-ptex-fontmaps
+DEPENDS+=	tex-ptex-fonts-[0-9]*:../../fonts/tex-ptex-fonts
+# depend ptex-manual
 # depend ptex2pdf
 # depend pxbase
 # depend pxchfon
