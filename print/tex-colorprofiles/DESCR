@@ -1,0 +1,3 @@
+This package collects free ICC profiles that can be used by
+color profile aware applications/tools like the pdfx package,
+as well as TeX and LaTeX packages to access them.
