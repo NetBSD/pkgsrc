@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.440 2019/01/26 10:02:59 wen Exp $
+$NetBSD: CHANGES-2019,v 1.441 2019/01/26 10:08:23 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -680,3 +680,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-Module-CoreList to 5.20190120 [wen 2019-01-26]
 	Updated devel/p5-InlineX-C2XS to 0.26 [wen 2019-01-26]
 	Updated devel/p5-Glib-Object-Introspection to 0.046 [wen 2019-01-26]
+	Updated devel/p5-File-Which to 1.23 [wen 2019-01-26]
