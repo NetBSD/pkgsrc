@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/12/28 20:28:02 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2019/01/26 21:11:48 dholland Exp $
 #
 
 PKGNAME=		rc.d-boot-20181228
@@ -71,7 +71,7 @@ ONLY_FOR_PLATFORM+=	${OPSYS}-*-*
 # - http://smarden.org/runit/
 # - https://jdebp.eu/Softwares/nosh/
 # - http://upstart.ubuntu.com
-NOT_FOR_PLATFORM+=	${OPSYS}-*-*
+BROKEN_ON_PLATFORM+=	${OPSYS}-*-*
 .endif
 
 BUILD_DEFS+=		RCDBOOT_STYLE RCD_SCRIPTS_DIR
