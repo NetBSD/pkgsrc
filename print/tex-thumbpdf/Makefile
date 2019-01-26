@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2018/08/22 09:46:16 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/01/26 03:53:39 markd Exp $
 
 DISTNAME=	thumbpdf
-PKGNAME=	tex-${DISTNAME}-3.16
-PKGREVISION=	3
-TEXLIVE_REV=	34621
+PKGNAME=	tex-${DISTNAME}-3.17
+TEXLIVE_REV=	48625
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Thumbnails for pdfTeX and dvips/ps2pdf
