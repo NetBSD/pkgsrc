@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/06/16 04:06:04 markd Exp $
+$NetBSD: distinfo,v 1.4 2019/01/26 23:32:42 markd Exp $
 
-SHA1 (tex-hyphen-afrikaans-40340/hyphen-afrikaans.tar.xz) = 010d8a258e1228669df2721363eef6cb1ef1a83e
-RMD160 (tex-hyphen-afrikaans-40340/hyphen-afrikaans.tar.xz) = bdd4fb8ccfd0329bb61dcd952a482c3cf57099f4
-SHA512 (tex-hyphen-afrikaans-40340/hyphen-afrikaans.tar.xz) = bee396f1f373d0297eb7b2941db4d544eb20b95ffa079f76c72dc1f592a28bcbb383c34054b49cb08f9b2d39519b4e0213792403a16b41054a184e1c5204d5a7
-Size (tex-hyphen-afrikaans-40340/hyphen-afrikaans.tar.xz) = 36556 bytes
+SHA1 (tex-hyphen-afrikaans-49078/hyphen-afrikaans.tar.xz) = 371740150873b4a44bc6e1e595339627bf2edbe1
+RMD160 (tex-hyphen-afrikaans-49078/hyphen-afrikaans.tar.xz) = 477cf5a51d7791b4f938accede75031380d9fb05
+SHA512 (tex-hyphen-afrikaans-49078/hyphen-afrikaans.tar.xz) = 95f9aa7e9852cea83082bcd73786071786ed8dc5d1de57c1374f1ce5802dee3b009b9f9f1afca2d6798ebf06f2fd2b8de47bc5526d898e563376dbd2f89f13ef
+Size (tex-hyphen-afrikaans-49078/hyphen-afrikaans.tar.xz) = 36516 bytes
