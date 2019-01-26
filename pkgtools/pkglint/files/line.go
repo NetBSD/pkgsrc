@@ -29,6 +29,29 @@ type RawLine struct {
 
 func (rline *RawLine) String() string { return sprintf("%d:%s", rline.Lineno, rline.textnl) }
 
+type Location struct {
+	Filename  string // uses / as directory separator on all platforms
+	firstLine int32  // zero means the whole file, -1 means EOF
+	lastLine  int32  // usually the same as firstLine, may differ in Makefiles
+}
+
+func NewLocation(filename string, firstLine, lastLine int) Location {
+	return Location{filename, int32(firstLine), int32(lastLine)}
+}
+
+func (loc *Location) Linenos() string {
+	switch {
+	case loc.firstLine == -1:
+		return "EOF"
+	case loc.firstLine == 0:
+		return ""
+	case loc.firstLine == loc.lastLine:
+		return strconv.Itoa(int(loc.firstLine))
+	default:
+		return sprintf("%d--%d", loc.firstLine, loc.lastLine)
+	}
+}
+
 // Line represents a line of text from a file.
 // It aliases a pointer type to reduces the number of *Line occurrences in the code.
 // Using a type alias is more efficient than an interface type, I guess.
@@ -36,14 +59,15 @@ type Line = *LineImpl
 
 type LineImpl struct {
 	// TODO: Consider storing pointers to the Filename and Basename instead of strings to save memory.
-	// But first find out where and why pkglint needs so much memory (200 MB for a full recursive run over pkgsrc + wip).
-	Filename  string // uses / as directory separator on all platforms
-	Basename  string // the last component of the Filename
-	firstLine int32  // zero means the whole file, -1 means EOF
-	lastLine  int32  // usually the same as firstLine, may differ in Makefiles
-	// without the trailing newline character;
-	// in Makefiles, also contains the text from the continuation lines
-	Text    string
+	//  But first find out where and why pkglint needs so much memory (200 MB for a full recursive run over pkgsrc + wip).
+	Location
+	Basename string // the last component of the Filename
+
+	// the text of the line, without the trailing newline character;
+	// in Makefiles, also contains the text from the continuation lines,
+	// joined by single spaces
+	Text string
+
 	raw     []*RawLine // contains the original text including trailing newline
 	autofix *Autofix   // any changes that pkglint would like to apply to the line
 	Once
@@ -58,7 +82,7 @@ func NewLine(filename string, lineno int, text string, rawLine *RawLine) Line {
 
 // NewLineMulti is for logical Makefile lines that end with backslash.
 func NewLineMulti(filename string, firstLine, lastLine int, text string, rawLines []*RawLine) Line {
-	return &LineImpl{filename, path.Base(filename), int32(firstLine), int32(lastLine), text, rawLines, nil, Once{}}
+	return &LineImpl{NewLocation(filename, firstLine, lastLine), path.Base(filename), text, rawLines, nil, Once{}}
 }
 
 // NewLineEOF creates a dummy line for logging, with the "line number" EOF.
@@ -71,22 +95,16 @@ func NewLineWhole(filename string) Line {
 	return NewLineMulti(filename, 0, 0, "", nil)
 }
 
-func (line *LineImpl) Linenos() string {
-	switch {
-	case line.firstLine == -1:
-		return "EOF"
-	case line.firstLine == 0:
-		return ""
-	case line.firstLine == line.lastLine:
-		return strconv.Itoa(int(line.firstLine))
-	default:
-		return sprintf("%d--%d", line.firstLine, line.lastLine)
-	}
-}
-
 // RefTo returns a reference to another line,
 // which can be in the same file or in a different file.
 func (line *LineImpl) RefTo(other Line) string {
+	if line.Filename != other.Filename {
+		return cleanpath(relpath(path.Dir(line.Filename), other.Filename)) + ":" + other.Linenos()
+	}
+	return "line " + other.Linenos()
+}
+
+func (line *LineImpl) RefToLocation(other Location) string {
 	if line.Filename != other.Filename {
 		return cleanpath(relpath(path.Dir(line.Filename), other.Filename)) + ":" + other.Linenos()
 	}
@@ -109,9 +127,12 @@ func (line *LineImpl) showSource(out *SeparatorWriter) {
 		return
 	}
 
-	write := func(prefix, line string) {
+	writeLine := func(prefix, line string) {
 		out.Write(prefix)
 		out.Write(escapePrintable(line))
+		if !hasSuffix(line, "\n") {
+			out.Write("\n")
+		}
 	}
 
 	printDiff := func(rawLines []*RawLine) {
@@ -125,24 +146,24 @@ func (line *LineImpl) showSource(out *SeparatorWriter) {
 		for _, rawLine := range rawLines {
 			if rawLine.textnl != rawLine.orignl {
 				if rawLine.orignl != "" {
-					write("-\t", rawLine.orignl)
+					writeLine("-\t", rawLine.orignl)
 				}
 				if rawLine.textnl != "" {
-					write("+\t", rawLine.textnl)
+					writeLine("+\t", rawLine.textnl)
 				}
 			} else {
-				write(prefix, rawLine.orignl)
+				writeLine(prefix, rawLine.orignl)
 			}
 		}
 	}
 
 	if line.autofix != nil {
 		for _, before := range line.autofix.linesBefore {
-			write("+\t", before)
+			writeLine("+\t", before)
 		}
 		printDiff(line.raw)
 		for _, after := range line.autofix.linesAfter {
-			write("+\t", after)
+			writeLine("+\t", after)
 		}
 	} else {
 		printDiff(line.raw)

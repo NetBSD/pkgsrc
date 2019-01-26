@@ -100,18 +100,18 @@ func (q ShQuoting) String() string {
 	}[q]
 }
 
-func (q ShQuoting) ToVarUseContext() vucQuoting {
+func (q ShQuoting) ToVarUseContext() VucQuoting {
 	switch q {
 	case shqPlain:
-		return vucQuotPlain
+		return VucQuotPlain
 	case shqDquot:
-		return vucQuotDquot
+		return VucQuotDquot
 	case shqSquot:
-		return vucQuotSquot
+		return VucQuotSquot
 	case shqBackt:
-		return vucQuotBackt
+		return VucQuotBackt
 	}
-	return vucQuotUnknown
+	return VucQuotUnknown
 }
 
 // ShToken is an operator or a keyword or some text intermingled with variables.
