@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/06/16 04:06:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/01/26 08:39:32 markd Exp $
 man/man1/pdfetex.1
 share/texmf-dist/doc/pdftex/NEWS
 share/texmf-dist/doc/pdftex/README
@@ -33,6 +33,8 @@ share/texmf-dist/doc/pdftex/tests/01-fake-interword-space/Makefile
 share/texmf-dist/doc/pdftex/tests/01-fake-interword-space/dummy-space.pfb
 share/texmf-dist/doc/pdftex/tests/01-fake-interword-space/dummy-space.tfm
 share/texmf-dist/doc/pdftex/tests/01-fake-interword-space/fake-interword-space.tex
+share/texmf-dist/doc/pdftex/tests/02-pdfmatch/Makefile
+share/texmf-dist/doc/pdftex/tests/02-pdfmatch/test-pdfmatch.tex
 share/texmf-dist/doc/pdftex/tests/03-deterministic-output/Makefile
 share/texmf-dist/doc/pdftex/tests/03-deterministic-output/test-SOURCE_DATE_EPOCH.tex
 share/texmf-dist/doc/pdftex/tests/03-deterministic-output/test-fixed-date-id.tex
@@ -43,4 +45,14 @@ share/texmf-dist/doc/pdftex/tests/04-pdfsuppressptexinfo/abc.tex
 share/texmf-dist/doc/pdftex/tests/04-pdfsuppressptexinfo/test-pdfinfoomitdate.tex
 share/texmf-dist/doc/pdftex/tests/04-pdfsuppressptexinfo/test-pdfsuppressptexinfo.tex
 share/texmf-dist/doc/pdftex/tests/04-pdfsuppressptexinfo/test-pdftrailer.tex
+share/texmf-dist/doc/pdftex/tests/05-mediabox/Makefile
+share/texmf-dist/doc/pdftex/tests/05-mediabox/test-normal.tex
+share/texmf-dist/doc/pdftex/tests/05-mediabox/test-omit-mediabox.tex
+share/texmf-dist/doc/pdftex/tests/06-pkmap/Makefile
+share/texmf-dist/doc/pdftex/tests/06-pkmap/cmb10.72pk
+share/texmf-dist/doc/pdftex/tests/06-pkmap/cmr10.72pk
+share/texmf-dist/doc/pdftex/tests/06-pkmap/prepatch.pdf
+share/texmf-dist/doc/pdftex/tests/06-pkmap/test-pkmap.tex
+share/texmf-dist/doc/pdftex/tests/07-mapwarn/Makefile
+share/texmf-dist/doc/pdftex/tests/07-mapwarn/test-mapwarn.tex
 share/texmf-dist/doc/pdftex/tests/Common.mak
