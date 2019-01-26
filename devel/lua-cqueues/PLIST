@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2019/01/26 00:57:56 alnsn Exp $
+${LUA_CDIR}/_cqueues.so
+${LUA_LDIR}/cqueues.lua
+${LUA_LDIR}/cqueues/auxlib.lua
+${LUA_LDIR}/cqueues/condition.lua
+${LUA_LDIR}/cqueues/dns.lua
+${LUA_LDIR}/cqueues/dns/config.lua
+${LUA_LDIR}/cqueues/dns/hints.lua
+${LUA_LDIR}/cqueues/dns/hosts.lua
+${LUA_LDIR}/cqueues/dns/packet.lua
+${LUA_LDIR}/cqueues/dns/record.lua
+${LUA_LDIR}/cqueues/dns/resolver.lua
+${LUA_LDIR}/cqueues/dns/resolvers.lua
+${LUA_LDIR}/cqueues/errno.lua
+${LUA_LDIR}/cqueues/notify.lua
+${LUA_LDIR}/cqueues/promise.lua
+${LUA_LDIR}/cqueues/signal.lua
+${LUA_LDIR}/cqueues/socket.lua
+${LUA_LDIR}/cqueues/thread.lua
