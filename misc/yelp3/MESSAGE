@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2019/01/26 21:24:30 gutteridge Exp $
+
+In order to access man pages in most non-default paths, e.g. under
+$LOCALBASE/man, you may need to define a MANPATH environment variable
+that explicitly includes all relevant search paths.
+===========================================================================
