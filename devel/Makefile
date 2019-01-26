@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2768 2019/01/08 20:29:42 adam Exp $
+# $NetBSD: Makefile,v 1.2769 2019/01/26 08:10:11 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -1020,6 +1020,7 @@ SUBDIR+=	p5-Curses-UI
 SUBDIR+=	p5-Curses-UI-POE
 SUBDIR+=	p5-Cwd-Guard
 SUBDIR+=	p5-Data-Alias
+SUBDIR+=	p5-Data-Binary
 SUBDIR+=	p5-Data-Buffer
 SUBDIR+=	p5-Data-Compare
 SUBDIR+=	p5-Data-Denter
