@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2016/07/10 10:34:16 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2019/01/26 21:04:09 markd Exp $
 
 DISTNAME=	hyphen-romansh
-PKGNAME=	tex-${DISTNAME}-2016
-PKGREVISION=	1
-TEXLIVE_REV=	40340
+PKGNAME=	tex-${DISTNAME}-2018
+TEXLIVE_REV=	49078
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Romansh hyphenation patterns
