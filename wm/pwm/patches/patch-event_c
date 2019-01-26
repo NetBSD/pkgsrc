@@ -1,0 +1,17 @@
+$NetBSD: patch-event_c,v 1.1 2019/01/26 20:50:50 is Exp $
+
+--- event.c.orig	2006-05-17 06:50:33.000000000 +0000
++++ event.c
+@@ -584,6 +584,12 @@ static void handle_property(const XPrope
+ 			if(frame!=NULL && frame->cwin_count==1)
+ 				frame_set_decor(frame, flags&CWIN_WILD ? WFRAME_NO_DECOR : 0);
+ 		}
++		if(ev->atom==wglobal.atom_net_wm_state){
++			get_net_wm_state(ev->window, &flags);
++			cwin->flags=(cwin->flags&~CWIN_WILD)|flags;
++			if(frame!=NULL && frame->cwin_count==1)
++				frame_set_decor(frame, flags&CWIN_WILD ? WFRAME_NO_DECOR : 0);
++		}
+ 		return;
+ 	}
+ 	
