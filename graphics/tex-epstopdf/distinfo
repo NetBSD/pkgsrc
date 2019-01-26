@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2017/10/23 01:31:30 markd Exp $
+$NetBSD: distinfo,v 1.8 2019/01/26 07:50:00 markd Exp $
 
-SHA1 (tex-epstopdf-45323/epstopdf.tar.xz) = 72193fb6e022cc8ebb79386f7e501bfdeff231ba
-RMD160 (tex-epstopdf-45323/epstopdf.tar.xz) = 65b1cd235eba2aa032b9d5cd385de4bf17bf3485
-SHA512 (tex-epstopdf-45323/epstopdf.tar.xz) = 900ecfcfff1c99b303bf3d7a73afd8ce3f2ec0471f6ac5b398d921f692f6002467688206284b7dddf1458baa9182a473cb3159000f3986c5e8690e394cbfee87
-Size (tex-epstopdf-45323/epstopdf.tar.xz) = 12380 bytes
+SHA1 (tex-epstopdf-48684/epstopdf.tar.xz) = bd4c4162f987c63d2fed5440f7cceb88cf47db04
+RMD160 (tex-epstopdf-48684/epstopdf.tar.xz) = cb6e0b4b764911e51b9888aaf374b7517c1422aa
+SHA512 (tex-epstopdf-48684/epstopdf.tar.xz) = f8555a7997bfe048876cbdebe187167f2624812dda83c4d74045783a8ea3e7d807602e268d0d9fbc653611327fe6c9ed47be801411ee84a5ecb75b446143598d
+Size (tex-epstopdf-48684/epstopdf.tar.xz) = 12452 bytes
 SHA1 (patch-bin_epstopdf) = 04898c48d8dafacd0256c855c05a251983989848
