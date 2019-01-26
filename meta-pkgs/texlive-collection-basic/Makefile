@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2018/05/13 11:56:18 markd Exp $
+# $NetBSD: Makefile,v 1.9 2019/01/26 09:50:34 markd Exp $
 
 DISTNAME=	collection-basic
-PKGNAME=	texlive-${DISTNAME}-2018
+PKGNAME=	texlive-${DISTNAME}-2018.48869
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	45851
+TEXLIVE_REV=	48869
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -14,6 +14,7 @@ DEPENDS+=	tex-texlive.infra>=2013:../../print/tex-texlive.infra
 DEPENDS+=	tex-amsfonts>=3.04:../../fonts/tex-amsfonts
 DEPENDS+=	tex-bibtex>=0.99dnb1:../../print/tex-bibtex
 DEPENDS+=	tex-cm>=2013:../../fonts/tex-cm
+DEPENDS+=	tex-colorprofiles-[0-9]*:../../print/tex-colorprofiles
 DEPENDS+=	tex-dvipdfmx>=2013:../../print/tex-dvipdfmx
 DEPENDS+=	tex-dvips>=2013:../../print/tex-dvips
 DEPENDS+=	tex-enctex>=2013:../../print/tex-enctex
