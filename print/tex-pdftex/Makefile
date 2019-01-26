@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.23 2017/09/06 16:49:42 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2019/01/26 08:39:32 markd Exp $
 
 DISTNAME=	pdftex
-PKGNAME=	tex-${DISTNAME}-2016
-TEXLIVE_REV=	41149
+PKGNAME=	tex-${DISTNAME}-2018
+TEXLIVE_REV=	48752
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/pdftex
 COMMENT=	TeX extension for direct creation of PDF
 LICENSE=	gnu-gpl-v2
 
+DEPENDS+=	tex-dehyph-[0-9]*:../../print/tex-dehyph
 DEPENDS+=	tex-dvips-[0-9]*:../../print/tex-dvips
 DEPENDS+=	tex-etex-[0-9]*:../../print/tex-etex
 DEPENDS+=	tex-hyphen-base-[0-9]*:../../print/tex-hyphen-base
