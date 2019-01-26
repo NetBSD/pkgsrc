@@ -111,10 +111,17 @@ func (s *Suite) Test_cleanpath(c *check.C) {
 // Relpath is called so often that handling the most common calls
 // without file system IO makes sense.
 func (s *Suite) Test_relpath__quick(c *check.C) {
-	c.Check(relpath("some/dir", "some/dir/../.."), equals, "../..")
-	c.Check(relpath("some/dir", "some/dir/./././../.."), equals, "../..")
-	c.Check(relpath("some/dir", "some/dir/"), equals, ".")
-	c.Check(relpath("some/dir", "some/directory"), equals, "../directory")
+
+	test := func(from, to, result string) {
+		c.Check(relpath(from, to), equals, result)
+	}
+
+	test("some/dir", "some/dir/../..", "../..")
+	test("some/dir", "some/dir/./././../..", "../..")
+	test("some/dir", "some/dir/", ".")
+	test("some/dir", "some/directory", "../directory")
+
+	test("category/package/.", ".", "../..")
 }
 
 // This is not really an internal error but won't happen in practice anyway.
@@ -547,7 +554,10 @@ func (s *Suite) Test_wrap(c *check.C) {
 		"with",
 		"linebreaks.",
 		"",
-		"Sentence one.  Sentence two.")
+		"Sentence one.  Sentence two.",
+		"",
+		"A\tB\tC\tD",
+		"E\tveryVeryVeryVeryVeryVeryVeryVeryLong")
 
 	expected := []string{
 		"See the pkgsrc",
@@ -573,7 +583,10 @@ func (s *Suite) Test_wrap(c *check.C) {
 		"linebreaks.",
 		"",
 		"Sentence one.",
-		"Sentence two."}
+		"Sentence two.",
+		"",
+		"A\tB\tC\tD E",
+		"veryVeryVeryVeryVeryVeryVeryVeryLong"}
 
 	c.Check(wrapped, deepEquals, expected)
 }
@@ -584,4 +597,78 @@ func (s *Suite) Test_escapePrintable(c *check.C) {
 	c.Check(escapePrintable("Beep \u0007 control \u001F"), equals, "Beep <U+0007> control <U+001F>")
 	c.Check(escapePrintable("Bad \xFF character"), equals, "Bad <\\xFF> character")
 	c.Check(escapePrintable("Unicode \uFFFD replacement"), equals, "Unicode <U+FFFD> replacement")
+}
+
+func (s *Suite) Test_stringSliceLess(c *check.C) {
+	var elements = [][][]string{
+		{nil, {}},
+		{{"a"}},
+		{{"a", "a"}},
+		{{"a", "b"}},
+		{{"b"}},
+		{{"b", "a"}}}
+
+	test := func(i int, iElement []string, j int, jElement []string) {
+		actual := stringSliceLess(iElement, jElement)
+		expected := i < j
+		if actual != expected {
+			c.Check(
+				[]interface{}{i, iElement, j, jElement, actual},
+				check.DeepEquals,
+				[]interface{}{i, iElement, j, jElement, expected})
+		}
+	}
+
+	for i, iElements := range elements {
+		for j, jElements := range elements {
+			for _, iElement := range iElements {
+				for _, jElement := range jElements {
+					test(i, iElement, j, jElement)
+				}
+			}
+		}
+	}
+}
+
+func (s *Suite) Test_joinSkipEmpty(c *check.C) {
+	t := s.Init(c)
+
+	t.Check(
+		joinSkipEmpty(", ", "", "one", "", "", "two", "", "three"),
+		deepEquals,
+		"one, two, three")
+}
+
+func (s *Suite) Test_joinSkipEmptyCambridge(c *check.C) {
+	t := s.Init(c)
+
+	t.Check(
+		joinSkipEmptyCambridge("and", "", "one", "", "", "two", "", "three"),
+		deepEquals,
+		"one, two and three")
+
+	t.Check(
+		joinSkipEmptyCambridge("and", "", "one", "", ""),
+		deepEquals,
+		"one")
+}
+
+func (s *Suite) Test_joinSkipEmptyOxford(c *check.C) {
+	t := s.Init(c)
+
+	t.Check(
+		joinSkipEmptyOxford("and", "", "one", "", "", "two", "", "three"),
+		deepEquals,
+		"one, two, and three")
+}
+
+func (s *Suite) Test_StringInterner(c *check.C) {
+	t := s.Init(c)
+
+	si := NewStringInterner()
+
+	t.Check(si.Intern(""), equals, "")
+	t.Check(si.Intern("Hello"), equals, "Hello")
+	t.Check(si.Intern("Hello, world"), equals, "Hello, world")
+	t.Check(si.Intern("Hello, world"[0:5]), equals, "Hello")
 }

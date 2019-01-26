@@ -109,7 +109,7 @@ func (pkg *Package) checkPossibleDowngrade() {
 		changeVersion := replaceAll(change.Version, `nb\d+$`, "")
 		if pkgver.Compare(pkgversion, changeVersion) < 0 {
 			mkline.Warnf("The package is being downgraded from %s (see %s) to %s.",
-				change.Version, mkline.Line.RefTo(change.Line), pkgversion)
+				change.Version, mkline.Line.RefToLocation(change.Location), pkgversion)
 			G.Explain(
 				"The files in doc/CHANGES-*, in which all version changes are",
 				"recorded, have a higher version number than what the package says.",
@@ -134,10 +134,10 @@ func (pkg *Package) checkLinesBuildlink3Inclusion(mklines MkLines) {
 	for _, mkline := range mklines.mklines {
 		if mkline.IsInclude() {
 			includedFile := mkline.IncludedFile()
-			if m, bl3 := match1(includedFile, `^\.\./\.\./(.*)/buildlink3\.mk`); m {
-				includedFiles[bl3] = mkline
-				if pkg.bl3[bl3] == nil {
-					mkline.Warnf("%s/buildlink3.mk is included by this file but not by the package.", bl3)
+			if matches(includedFile, `^\.\./\.\./.*/buildlink3\.mk`) {
+				includedFiles[includedFile] = mkline
+				if pkg.bl3[includedFile] == nil {
+					mkline.Warnf("%s is included by this file but not by the package.", includedFile)
 				}
 			}
 		}
@@ -146,7 +146,7 @@ func (pkg *Package) checkLinesBuildlink3Inclusion(mklines MkLines) {
 	if trace.Tracing {
 		for packageBl3 := range pkg.bl3 {
 			if includedFiles[packageBl3] == nil {
-				trace.Step1("%s/buildlink3.mk is included by the package but not by the buildlink3.mk file.", packageBl3)
+				trace.Step1("%s is included by the package but not by the buildlink3.mk file.", packageBl3)
 			}
 		}
 	}
@@ -314,12 +314,7 @@ func (pkg *Package) readMakefile(filename string, mainLines MkLines, allLines Mk
 
 	// For every included buildlink3.mk, include the corresponding builtin.mk
 	// automatically since the pkgsrc infrastructure does the same.
-	//
-	// Disabled for now since it increases the running time by about 20%
-	// and produces many new warnings, which must be evaluated first.
-	//
-	// TODO: Remove the G.Testing below.
-	if G.Testing && path.Base(filename) == "buildlink3.mk" {
+	if path.Base(filename) == "buildlink3.mk" {
 		builtin := path.Join(path.Dir(filename), "builtin.mk")
 		if fileExists(builtin) {
 			pkg.readMakefile(builtin, mainLines, allLines, "")
@@ -364,10 +359,10 @@ func (pkg *Package) findIncludedFile(mkline MkLine, includingFilename string) (i
 
 	if includedFile != "" {
 		if mkline.Basename != "buildlink3.mk" {
-			if m, bl3File := match1(includedFile, `^\.\./\.\./(.*)/buildlink3\.mk$`); m {
-				pkg.bl3[bl3File] = mkline
+			if matches(includedFile, `^\.\./\.\./(.*)/buildlink3\.mk$`) {
+				pkg.bl3[includedFile] = mkline
 				if trace.Tracing {
-					trace.Step1("Buildlink3 file in package: %q", bl3File)
+					trace.Step1("Buildlink3 file in package: %q", includedFile)
 				}
 			}
 		}

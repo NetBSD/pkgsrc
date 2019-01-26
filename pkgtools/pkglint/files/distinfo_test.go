@@ -55,7 +55,8 @@ func (s *Suite) Test_distinfoLinesChecker_checkGlobalDistfileMismatch(c *check.C
 		RcsID,
 		"",
 		"SHA512 (distfile-1.0.tar.gz) = 1234567822222222",
-		"SHA512 (distfile-1.1.tar.gz) = 1111111111111111")
+		"SHA512 (distfile-1.1.tar.gz) = 1111111111111111",
+		"SHA512 (encoding-error.tar.gz) = 12345678abcdefgh")
 	t.CreateFileLines("Makefile",
 		MkRcsID,
 		"",
@@ -75,14 +76,26 @@ func (s *Suite) Test_distinfoLinesChecker_checkGlobalDistfileMismatch(c *check.C
 	G.Main("pkglint", "-r", "-Wall", "-Call", t.File("."))
 
 	t.CheckOutputLines(
-		"ERROR: ~/category/package1/distinfo:4: Expected SHA1, RMD160, SHA512, Size checksums for \"distfile-1.0.tar.gz\", got SHA512.",
-		"ERROR: ~/category/package1/distinfo:EOF: Expected SHA1, RMD160, SHA512, Size checksums for \"distfile-1.1.tar.gz\", got SHA512.",
+		"ERROR: ~/category/package1/distinfo:4: "+
+			"Expected SHA1, RMD160, SHA512, Size checksums for \"distfile-1.0.tar.gz\", got SHA512.",
+		"ERROR: ~/category/package1/distinfo:EOF: "+
+			"Expected SHA1, RMD160, SHA512, Size checksums for \"distfile-1.1.tar.gz\", got SHA512.",
 		"ERROR: ~/category/package2/distinfo:3: The SHA512 hash for distfile-1.0.tar.gz is 1234567822222222, "+
 			"which conflicts with 1234567811111111 in ../package1/distinfo:3.",
-		"ERROR: ~/category/package2/distinfo:4: Expected SHA1, RMD160, SHA512, Size checksums for \"distfile-1.0.tar.gz\", got SHA512.",
-		"ERROR: ~/category/package2/distinfo:EOF: Expected SHA1, RMD160, SHA512, Size checksums for \"distfile-1.1.tar.gz\", got SHA512.",
+		"ERROR: ~/category/package2/distinfo:4: "+
+			"Expected SHA1, RMD160, SHA512, Size checksums for \"distfile-1.0.tar.gz\", got SHA512.",
+		"ERROR: ~/category/package2/distinfo:5: "+
+			"Expected SHA1, RMD160, SHA512, Size checksums for \"distfile-1.1.tar.gz\", got SHA512.",
+		"ERROR: ~/category/package2/distinfo:5: "+
+			"The SHA512 hash for encoding-error.tar.gz contains a non-hex character.",
+		"ERROR: ~/category/package2/distinfo:EOF: "+
+			"Expected SHA1, RMD160, SHA512, Size checksums for \"encoding-error.tar.gz\", got SHA512.",
 		"WARN: ~/licenses/gnu-gpl-v2: This license seems to be unused.",
-		"5 errors and 1 warning found.")
+		"7 errors and 1 warning found.")
+
+	// Ensure that hex.DecodeString does not waste memory here.
+	t.Check(len(G.Pkgsrc.Hashes["SHA512:distfile-1.0.tar.gz"].hash), equals, 8)
+	t.Check(cap(G.Pkgsrc.Hashes["SHA512:distfile-1.0.tar.gz"].hash), equals, 8)
 }
 
 func (s *Suite) Test_CheckLinesDistinfo__uncommitted_patch(c *check.C) {

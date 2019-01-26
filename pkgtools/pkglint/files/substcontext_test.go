@@ -377,7 +377,7 @@ func (s *Suite) Test_SubstContext_suggestSubstVars(c *check.C) {
 		"SUBST_SED.test+=\t-e 's,@SH@,${SH},'",          // Can be replaced, whether in single quotes or not.
 		"SUBST_SED.test+=\t-e \"s,@SH@,${SH},\"",        // Can be replaced, whether in double quotes or not.
 		"SUBST_SED.test+=\t-e s,'@SH@','${SH}',",        // Can be replaced, even when the quoting changes midways.
-		"SUBST_SED.test+=\ts,'@SH@','${SH}',",           // Can be replaced, even when the -e is missing.
+		"SUBST_SED.test+=\ts,'@SH@','${SH}',",           // Can be replaced manually, even when the -e is missing.
 		"SUBST_SED.test+=\t-e s,@SH@,${PKGNAME},",       // Cannot be replaced since the variable name differs.
 		"SUBST_SED.test+=\t-e s,@SH@,'\"'${SH:Q}'\"',g", // Cannot be replaced since the double quotes are added.
 		"SUBST_SED.test+=\t-e s",                        // Just to get 100% code coverage.
@@ -388,15 +388,56 @@ func (s *Suite) Test_SubstContext_suggestSubstVars(c *check.C) {
 
 	t.CheckOutputLines(
 		"WARN: subst.mk:6: Please use ${SH:Q} instead of ${SH}.",
-		"NOTE: subst.mk:6: The substitution command \"s,@SH@,${SH},g\" can be replaced with \"SUBST_VARS.test+= SH\".",
-		"NOTE: subst.mk:7: The substitution command \"s,@SH@,${SH:Q},g\" can be replaced with \"SUBST_VARS.test+= SH\".",
+		"NOTE: subst.mk:6: The substitution command \"s,@SH@,${SH},g\" "+
+			"can be replaced with \"SUBST_VARS.test+= SH\".",
+		"NOTE: subst.mk:7: The substitution command \"s,@SH@,${SH:Q},g\" "+
+			"can be replaced with \"SUBST_VARS.test+= SH\".",
 		"WARN: subst.mk:8: Please use ${SH:T:Q} instead of ${SH:T}.",
 		"WARN: subst.mk:9: Please use ${SH:Q} instead of ${SH}.",
-		"NOTE: subst.mk:9: The substitution command \"s,@SH@,${SH},\" can be replaced with \"SUBST_VARS.test+= SH\".",
-		// TODO: Handle the quotes in line 10
-		// TODO: Handle the quotes in line 11
-		// TODO: Handle the quotes in line 12
-		"NOTE: subst.mk:13: Please always use \"-e\" in sed commands, even if there is only one substitution.")
+		"NOTE: subst.mk:9: The substitution command \"s,@SH@,${SH},\" "+
+			"can be replaced with \"SUBST_VARS.test+= SH\".",
+		"NOTE: subst.mk:10: The substitution command \"'s,@SH@,${SH},'\" "+
+			"can be replaced with \"SUBST_VARS.test+= SH\".",
+		"NOTE: subst.mk:11: The substitution command \"\\\"s,@SH@,${SH},\\\"\" "+
+			"can be replaced with \"SUBST_VARS.test+= SH\".",
+		"NOTE: subst.mk:12: The substitution command \"s,'@SH@','${SH}',\" "+
+			"can be replaced with \"SUBST_VARS.test+= SH\".",
+		"NOTE: subst.mk:13: Please always use \"-e\" in sed commands, "+
+			"even if there is only one substitution.",
+		"NOTE: subst.mk:13: The substitution command \"s,'@SH@','${SH}',\" "+
+			"can be replaced with \"SUBST_VARS.test+= SH\".")
+
+	t.SetUpCommandLine("--show-autofix")
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"NOTE: subst.mk:6: The substitution command \"s,@SH@,${SH},g\" "+
+			"can be replaced with \"SUBST_VARS.test+= SH\".",
+		"AUTOFIX: subst.mk:6: Replacing \"SUBST_SED.test+=\\t-e s,@SH@,${SH},g\" "+
+			"with \"SUBST_VARS.test+=\\tSH\".",
+		"NOTE: subst.mk:7: The substitution command \"s,@SH@,${SH:Q},g\" "+
+			"can be replaced with \"SUBST_VARS.test+= SH\".",
+		"AUTOFIX: subst.mk:7: Replacing \"SUBST_SED.test+=\\t-e s,@SH@,${SH:Q},g\" "+
+			"with \"SUBST_VARS.test+=\\tSH\".",
+		"NOTE: subst.mk:9: The substitution command \"s,@SH@,${SH},\" "+
+			"can be replaced with \"SUBST_VARS.test+= SH\".",
+		"AUTOFIX: subst.mk:9: Replacing \"SUBST_SED.test+=\\t-e s,@SH@,${SH},\" "+
+			"with \"SUBST_VARS.test+=\\tSH\".",
+		"NOTE: subst.mk:10: The substitution command \"'s,@SH@,${SH},'\" "+
+			"can be replaced with \"SUBST_VARS.test+= SH\".",
+		"AUTOFIX: subst.mk:10: Replacing \"SUBST_SED.test+=\\t-e 's,@SH@,${SH},'\" "+
+			"with \"SUBST_VARS.test+=\\tSH\".",
+		"NOTE: subst.mk:11: The substitution command \"\\\"s,@SH@,${SH},\\\"\" "+
+			"can be replaced with \"SUBST_VARS.test+= SH\".",
+		"AUTOFIX: subst.mk:11: Replacing \"SUBST_SED.test+=\\t-e \\\"s,@SH@,${SH},\\\"\" "+
+			"with \"SUBST_VARS.test+=\\tSH\".",
+		"NOTE: subst.mk:12: The substitution command \"s,'@SH@','${SH}',\" "+
+			"can be replaced with \"SUBST_VARS.test+= SH\".",
+		"AUTOFIX: subst.mk:12: Replacing \"SUBST_SED.test+=\\t-e s,'@SH@','${SH}',\" "+
+			"with \"SUBST_VARS.test+=\\tSH\".",
+		"NOTE: subst.mk:13: The substitution command \"s,'@SH@','${SH}',\" "+
+			"can be replaced with \"SUBST_VARS.test+= SH\".")
 }
 
 // simulateSubstLines only tests some of the inner workings of SubstContext.

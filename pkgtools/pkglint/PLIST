@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2019/01/13 19:55:52 rillig Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/01/26 16:31:33 rillig Exp $
 bin/pkglint
 gopkg/pkg/${GO_PLATFORM}/netbsd.org/pkglint.a
 gopkg/pkg/${GO_PLATFORM}/netbsd.org/pkglint/getopt.a
@@ -18,12 +18,10 @@ gopkg/src/netbsd.org/pkglint/buildlink3_test.go
 gopkg/src/netbsd.org/pkglint/category.go
 gopkg/src/netbsd.org/pkglint/category_test.go
 gopkg/src/netbsd.org/pkglint/check_test.go
-gopkg/src/netbsd.org/pkglint/cmd/pkglint/pkglint.go
-gopkg/src/netbsd.org/pkglint/cmd/pkglint/pkglint_test.go
+gopkg/src/netbsd.org/pkglint/cmd/pkglint/main.go
+gopkg/src/netbsd.org/pkglint/cmd/pkglint/main_test.go
 gopkg/src/netbsd.org/pkglint/distinfo.go
 gopkg/src/netbsd.org/pkglint/distinfo_test.go
-gopkg/src/netbsd.org/pkglint/expecter.go
-gopkg/src/netbsd.org/pkglint/expecter_test.go
 gopkg/src/netbsd.org/pkglint/files.go
 gopkg/src/netbsd.org/pkglint/files_test.go
 gopkg/src/netbsd.org/pkglint/fuzzer_test.go
@@ -44,6 +42,8 @@ gopkg/src/netbsd.org/pkglint/line.go
 gopkg/src/netbsd.org/pkglint/line_test.go
 gopkg/src/netbsd.org/pkglint/linechecker.go
 gopkg/src/netbsd.org/pkglint/linechecker_test.go
+gopkg/src/netbsd.org/pkglint/linelexer.go
+gopkg/src/netbsd.org/pkglint/linelexer_test.go
 gopkg/src/netbsd.org/pkglint/lines.go
 gopkg/src/netbsd.org/pkglint/lines_test.go
 gopkg/src/netbsd.org/pkglint/logging.go

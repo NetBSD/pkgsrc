@@ -177,23 +177,23 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 	t.SetUpTool("echo", "", AtRunTime)
 	t.SetUpVartypes()
 
-	test("echo ${PKGNAME:Q}") // vucQuotPlain
+	test("echo ${PKGNAME:Q}") // VucQuotPlain
 
 	t.CheckOutputLines(
 		"WARN: filename:1: PKGNAME may not be used in this file; "+
-			"it would be ok in Makefile, Makefile.*, *.mk.",
+			"it would be ok in Makefile, Makefile.* or *.mk.",
 		"NOTE: filename:1: The :Q operator isn't necessary for ${PKGNAME} here.")
 
-	test("echo \"${CFLAGS:Q}\"") // vucQuotDquot
+	test("echo \"${CFLAGS:Q}\"") // VucQuotDquot
 
 	t.CheckOutputLines(
 		"WARN: filename:1: The :Q modifier should not be used inside double quotes.",
 		"WARN: filename:1: CFLAGS may not be used in this file; "+
-			"it would be ok in Makefile, Makefile.common, options.mk, *.mk.",
+			"it would be ok in Makefile, Makefile.common, options.mk or *.mk.",
 		"WARN: filename:1: Please use ${CFLAGS:M*:Q} instead of ${CFLAGS:Q} "+
 			"and make sure the variable appears outside of any quoting characters.")
 
-	test("echo '${COMMENT:Q}'") // vucQuotSquot
+	test("echo '${COMMENT:Q}'") // VucQuotSquot
 
 	t.CheckOutputLines(
 		"WARN: filename:1: COMMENT may not be used in any file; it is a write-only variable.",
@@ -262,7 +262,8 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 	// TODO: Why is TOOLS_PATH.msgfmt not recognized?
 	//  At least, the warning should be more specific, mentioning USE_TOOLS.
 	t.CheckOutputLines(
-		"WARN: filename:1: WRKSRC may not be used in this file; it would be ok in Makefile, Makefile.*, *.mk.",
+		"WARN: filename:1: WRKSRC may not be used in this file; "+
+			"it would be ok in Makefile, Makefile.* or *.mk.",
 		"WARN: filename:1: Unknown shell command \"[\".",
 		"WARN: filename:1: Unknown shell command \"${TOOLS_PATH.msgfmt}\".")
 
@@ -1032,8 +1033,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommand__cd_inside_if(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"ERROR: Makefile:3: The Solaris /bin/sh cannot handle \"cd\" inside conditionals.",
-		"WARN: Makefile:3: Found absolute pathname: /bin")
+		"ERROR: Makefile:3: The Solaris /bin/sh cannot handle \"cd\" inside conditionals.")
 }
 
 func (s *Suite) Test_ShellLine_CheckShellCommand__negated_pipe(c *check.C) {
@@ -1050,8 +1050,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommand__negated_pipe(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"WARN: Makefile:3: The Solaris /bin/sh does not support negation of shell commands.",
-		"WARN: Makefile:3: Found absolute pathname: /etc/passwd")
+		"WARN: Makefile:3: The Solaris /bin/sh does not support negation of shell commands.")
 }
 
 func (s *Suite) Test_ShellLine_CheckShellCommand__subshell(c *check.C) {

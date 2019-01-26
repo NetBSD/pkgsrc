@@ -12,12 +12,12 @@ func CheckLinesPatch(lines Lines) {
 		defer trace.Call1(lines.FileName)()
 	}
 
-	(&PatchChecker{lines, NewExpecter(lines), false, false}).Check()
+	(&PatchChecker{lines, NewLinesLexer(lines), false, false}).Check()
 }
 
 type PatchChecker struct {
 	lines             Lines
-	exp               *Expecter
+	llex              *LinesLexer
 	seenDocumentation bool
 	previousLineEmpty bool
 }
@@ -34,53 +34,53 @@ func (ck *PatchChecker) Check() {
 	}
 
 	if ck.lines.CheckRcsID(0, ``, "") {
-		ck.exp.Advance()
+		ck.llex.Skip()
 	}
-	if ck.exp.EOF() {
+	if ck.llex.EOF() {
 		ck.lines.Lines[0].Errorf("Patch files must not be empty.")
 		return
 	}
 
-	ck.previousLineEmpty = ck.exp.ExpectEmptyLine()
+	ck.previousLineEmpty = ck.llex.SkipEmptyOrNote()
 
 	patchedFiles := 0
-	for !ck.exp.EOF() {
-		line := ck.exp.CurrentLine()
-		if ck.exp.AdvanceIfMatches(rePatchUniFileDel) {
-			if ck.exp.AdvanceIfMatches(rePatchUniFileAdd) {
+	for !ck.llex.EOF() {
+		line := ck.llex.CurrentLine()
+		if ck.llex.SkipRegexp(rePatchUniFileDel) {
+			if m := ck.llex.NextRegexp(rePatchUniFileAdd); m != nil {
 				ck.checkBeginDiff(line, patchedFiles)
-				ck.checkUnifiedDiff(ck.exp.Group(1))
+				ck.checkUnifiedDiff(m[1])
 				patchedFiles++
 				continue
 			}
 
-			ck.exp.StepBack()
+			ck.llex.Undo()
 		}
 
-		if ck.exp.AdvanceIfMatches(rePatchUniFileAdd) {
-			patchedFile := ck.exp.Group(1)
-			if ck.exp.AdvanceIfMatches(rePatchUniFileDel) {
+		if m := ck.llex.NextRegexp(rePatchUniFileAdd); m != nil {
+			patchedFile := m[1]
+			if ck.llex.SkipRegexp(rePatchUniFileDel) {
 				ck.checkBeginDiff(line, patchedFiles)
-				ck.exp.PreviousLine().Warnf("Unified diff headers should be first ---, then +++.")
+				ck.llex.PreviousLine().Warnf("Unified diff headers should be first ---, then +++.")
 				ck.checkUnifiedDiff(patchedFile)
 				patchedFiles++
 				continue
 			}
 
-			ck.exp.StepBack()
+			ck.llex.Undo()
 		}
 
-		if ck.exp.AdvanceIfMatches(`^\*\*\*[\t ]([^\t ]+)(.*)$`) {
-			if ck.exp.AdvanceIfMatches(`^---[\t ]([^\t ]+)(.*)$`) {
+		if ck.llex.SkipRegexp(`^\*\*\*[\t ]([^\t ]+)(.*)$`) {
+			if ck.llex.SkipRegexp(`^---[\t ]([^\t ]+)(.*)$`) {
 				ck.checkBeginDiff(line, patchedFiles)
 				line.Warnf("Please use unified diffs (diff -u) for patches.")
 				return
 			}
 
-			ck.exp.StepBack()
+			ck.llex.Undo()
 		}
 
-		ck.exp.Advance()
+		ck.llex.Skip()
 		ck.previousLineEmpty = ck.isEmptyLine(line.Text)
 		if !ck.previousLineEmpty {
 			ck.seenDocumentation = true
@@ -115,20 +115,26 @@ func (ck *PatchChecker) checkUnifiedDiff(patchedFile string) {
 	}
 
 	hasHunks := false
-	for ck.exp.AdvanceIfMatches(rePatchUniHunk) {
-		text := ck.exp.m[0]
+	for {
+		m := ck.llex.NextRegexp(rePatchUniHunk)
+		if m == nil {
+			break
+		}
+
+		text := m[0]
 		hasHunks = true
-		linesToDel := toInt(ck.exp.Group(2), 1)
-		linesToAdd := toInt(ck.exp.Group(4), 1)
+		linesToDel := toInt(m[2], 1)
+		linesToAdd := toInt(m[4], 1)
 		if trace.Tracing {
 			trace.Stepf("hunk -%d +%d", linesToDel, linesToAdd)
 		}
+
 		ck.checktextUniHunkCr()
 		ck.checktextRcsid(text)
 
-		for !ck.exp.EOF() && (linesToDel > 0 || linesToAdd > 0 || hasPrefix(ck.exp.CurrentLine().Text, "\\")) {
-			line := ck.exp.CurrentLine()
-			ck.exp.Advance()
+		for !ck.llex.EOF() && (linesToDel > 0 || linesToAdd > 0 || hasPrefix(ck.llex.CurrentLine().Text, "\\")) {
+			line := ck.llex.CurrentLine()
+			ck.llex.Skip()
 
 			text := line.Text
 			switch {
@@ -150,6 +156,7 @@ func (ck *PatchChecker) checkUnifiedDiff(patchedFile string) {
 
 			case hasPrefix(text, "+"):
 				linesToAdd--
+				ck.checktextRcsid(text)
 				ck.checklineAdded(text[1:], patchedFileType)
 
 			case hasPrefix(text, "\\"):
@@ -166,18 +173,18 @@ func (ck *PatchChecker) checkUnifiedDiff(patchedFile string) {
 		// been lost during transmission. There is no way to detect
 		// this by looking only at the patch file.
 		if linesToAdd != linesToDel {
-			line := ck.exp.PreviousLine()
+			line := ck.llex.PreviousLine()
 			line.Warnf("Premature end of patch hunk (expected %d lines to be deleted and %d lines to be added).",
 				linesToDel, linesToAdd)
 		}
 	}
 
 	if !hasHunks {
-		ck.exp.CurrentLine().Errorf("No patch hunks for %q.", patchedFile)
+		ck.llex.CurrentLine().Errorf("No patch hunks for %q.", patchedFile)
 	}
 
-	if !ck.exp.EOF() {
-		line := ck.exp.CurrentLine()
+	if !ck.llex.EOF() {
+		line := ck.llex.CurrentLine()
 		if !ck.isEmptyLine(line.Text) && !matches(line.Text, rePatchUniFileDel) {
 			line.Warnf("Empty line or end of file expected.")
 			G.Explain(
@@ -228,10 +235,10 @@ func (ck *PatchChecker) checklineContext(text string, patchedFileType FileType) 
 		defer trace.Call2(text, patchedFileType.String())()
 	}
 
+	ck.checktextRcsid(text)
+
 	if G.Opts.WarnExtra {
 		ck.checklineAdded(text, patchedFileType)
-	} else {
-		ck.checktextRcsid(text)
 	}
 }
 
@@ -240,16 +247,8 @@ func (ck *PatchChecker) checklineAdded(addedText string, patchedFileType FileTyp
 		defer trace.Call2(addedText, patchedFileType.String())()
 	}
 
-	ck.checktextRcsid(addedText)
-
-	line := ck.exp.PreviousLine()
+	line := ck.llex.PreviousLine()
 	switch patchedFileType {
-	case ftShell, ftIgnore:
-		break
-	case ftMakefile:
-		ck.checklineOtherAbsolutePathname(line, addedText)
-	case ftSource:
-		ck.checklineSourceAbsolutePathname(line, addedText)
 	case ftConfigure:
 		if hasSuffix(addedText, ": Avoid regenerating within pkgsrc") {
 			line.Errorf("This code must not be included in patches.")
@@ -259,8 +258,6 @@ func (ck *PatchChecker) checklineAdded(addedText string, patchedFileType FileTyp
 				"For more details, look for \"configure-scripts-override\" in",
 				"mk/configure/gnu-configure.mk.")
 		}
-	default:
-		ck.checklineOtherAbsolutePathname(line, addedText)
 	}
 }
 
@@ -269,7 +266,7 @@ func (ck *PatchChecker) checktextUniHunkCr() {
 		defer trace.Call0()()
 	}
 
-	line := ck.exp.PreviousLine()
+	line := ck.llex.PreviousLine()
 	if hasSuffix(line.Text, "\r") {
 		// This code has been introduced around 2006.
 		// As of 2018, this might be fixed by now.
@@ -288,9 +285,9 @@ func (ck *PatchChecker) checktextRcsid(text string) {
 	}
 	if m, tagname := match1(text, `\$(Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State|NetBSD)(?::[^\$]*)?\$`); m {
 		if matches(text, rePatchUniHunk) {
-			ck.exp.PreviousLine().Warnf("Found RCS tag \"$%s$\". Please remove it.", tagname)
+			ck.llex.PreviousLine().Warnf("Found RCS tag \"$%s$\". Please remove it.", tagname)
 		} else {
-			ck.exp.PreviousLine().Warnf("Found RCS tag \"$%s$\". Please remove it by reducing the number of context lines using pkgdiff or \"diff -U[210]\".", tagname)
+			ck.llex.PreviousLine().Warnf("Found RCS tag \"$%s$\". Please remove it by reducing the number of context lines using pkgdiff or \"diff -U[210]\".", tagname)
 		}
 	}
 }
@@ -308,27 +305,14 @@ func (ck *PatchChecker) isEmptyLine(text string) bool {
 
 type FileType uint8
 
-// TODO: Is this type really useful? It is mainly used for warning about absolute filenames,
-// and that check is questionable in itself.
-
 const (
-	ftSource FileType = iota
-	ftShell
-	ftMakefile
-	ftText
-	ftConfigure
-	ftIgnore
+	ftConfigure FileType = iota
 	ftUnknown
 )
 
 func (ft FileType) String() string {
 	return [...]string{
-		"source code",
-		"shell code",
-		"Makefile",
-		"text file",
 		"configure file",
-		"ignored",
 		"unknown",
 	}[ft]
 }
@@ -341,82 +325,10 @@ func guessFileType(filename string) (fileType FileType) {
 
 	basename := path.Base(filename)
 	basename = strings.TrimSuffix(basename, ".in") // doesn't influence the content type
-	ext := strings.ToLower(strings.TrimLeft(path.Ext(basename), "."))
 
 	switch {
-	case matches(basename, `^I?[Mm]akefile|\.ma?k$`):
-		return ftMakefile
 	case basename == "configure" || basename == "configure.ac":
 		return ftConfigure
 	}
-
-	switch ext {
-	case "m4", "sh":
-		return ftShell
-	case "c", "cc", "cpp", "cxx", "el", "h", "hh", "hpp", "l", "pl", "pm", "py", "s", "t", "y":
-		return ftSource
-	case "conf", "html", "info", "man", "po", "tex", "texi", "texinfo", "txt", "xml":
-		return ftText
-	case "":
-		return ftUnknown
-	}
-
-	if trace.Tracing {
-		trace.Step1("Unknown file type for %q", filename)
-	}
 	return ftUnknown
-}
-
-// Looks for strings like "/dev/cd0" appearing in source code
-func (ck *PatchChecker) checklineSourceAbsolutePathname(line Line, text string) {
-	if !strings.ContainsAny(text, "\"'") {
-		return
-	}
-	if matched, before, _, str := match3(text, `^(.*)(["'])(/\w[^"']*)["']`); matched {
-		if trace.Tracing {
-			trace.Step2("checklineSourceAbsolutePathname: before=%q, str=%q", before, str)
-		}
-
-		switch {
-		case matches(before, `[A-Z_][\t ]*$`):
-			// ok; C example: const char *echo_cmd = PREFIX "/bin/echo";
-
-		case matches(before, `\+[\t ]*$`):
-			// ok; Python example: libdir = prefix + '/lib'
-
-		default:
-			LineChecker{line}.CheckWordAbsolutePathname(str)
-		}
-	}
-}
-
-func (ck *PatchChecker) checklineOtherAbsolutePathname(line Line, text string) {
-	if trace.Tracing {
-		defer trace.Call1(text)()
-	}
-
-	if hasPrefix(text, "#") && !hasPrefix(text, "#!") {
-		// Don't warn for absolute pathnames in comments, except for shell interpreters.
-
-	} else if m, before, dir, _ := match3(text, `^(.*?)((?:/[\w.]+)*/(?:bin|dev|etc|home|lib|mnt|opt|proc|sbin|tmp|usr|var)\b[\w./\-]*)(.*)$`); m {
-		switch {
-		case matches(before, `[\w).@}]$`) && !matches(before, `DESTDIR.$`):
-			// Example: $prefix/bin
-			// Example: $(prefix)/bin
-			// Example: ../bin
-			// Example: @prefix@/bin
-			// Example: ${prefix}/bin
-
-		case matches(before, `\+[\t ]*["']$`):
-			// Example: prefix + '/lib'
-
-		// XXX new: case matches(before, `\bs.$`): // Example: sed -e s,/usr,@PREFIX@,
-
-		default:
-			if trace.Tracing {
-				trace.Step1("before=%q", before)
-			}
-			LineChecker{line}.CheckWordAbsolutePathname(dir)
-		}
-	}
 }

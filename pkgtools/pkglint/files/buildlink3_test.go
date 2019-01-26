@@ -2,6 +2,32 @@ package pkglint
 
 import "gopkg.in/check.v1"
 
+// This test ensures that CheckLinesBuildlink3Mk really checks for
+// buildlink3.mk files that are included by the buildlink3.mk file
+// but not by the package.
+func (s *Suite) Test_CheckLinesBuildlink3Mk__package(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("category/dependency1/buildlink3.mk",
+		MkRcsID)
+	t.CreateFileLines("category/dependency2/buildlink3.mk",
+		MkRcsID)
+	t.SetUpPackage("category/package",
+		"PKGNAME=\tpackage-1.0",
+		"",
+		".include \"../../category/dependency1/buildlink3.mk\"")
+
+	t.CreateFileDummyBuildlink3("category/package/buildlink3.mk",
+		".include \"../../category/dependency2/buildlink3.mk\"")
+
+	G.Check(t.File("category/package"))
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/buildlink3.mk:12: " +
+			"../../category/dependency2/buildlink3.mk is included " +
+			"by this file but not by the package.")
+}
+
 func (s *Suite) Test_CheckLinesBuildlink3Mk__unfinished_url2pkg(c *check.C) {
 	t := s.Init(c)
 
@@ -355,7 +381,21 @@ func (s *Suite) Test_CheckLinesBuildlink3Mk__PKGBASE_with_variable(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpVartypes()
-	mklines := t.NewMkLines("buildlink3.mk",
+	mklinesPhp := t.NewMkLines("x11/php-wxwidgets/buildlink3.mk",
+		MkRcsID,
+		"",
+		"BUILDLINK_TREE+=\t${PHP_PKG_PREFIX}-wxWidgets",
+		"",
+		".if !defined(PHP_WXWIDGETS_BUILDLINK3_MK)",
+		"PHP_WXWIDGETS_BUILDLINK3_MK:=",
+		"",
+		"BUILDLINK_API_DEPENDS.${PHP_PKG_PREFIX}-wxWidgets+=\t${PHP_PKG_PREFIX}-wxWidgets>=2.6.1.0",
+		"BUILDLINK_ABI_DEPENDS.${PHP_PKG_PREFIX}-wxWidgets+=\t${PHP_PKG_PREFIX}-wxWidgets>=2.8.10.1nb26",
+		"",
+		".endif",
+		"",
+		"BUILDLINK_TREE+=\t-${PHP_PKG_PREFIX}-wxWidgets")
+	mklinesPy := t.NewMkLines("x11/py-wxwidgets/buildlink3.mk",
 		MkRcsID,
 		"",
 		"BUILDLINK_TREE+=\t${PYPKGPREFIX}-wxWidgets",
@@ -369,11 +409,45 @@ func (s *Suite) Test_CheckLinesBuildlink3Mk__PKGBASE_with_variable(c *check.C) {
 		".endif",
 		"",
 		"BUILDLINK_TREE+=\t-${PYPKGPREFIX}-wxWidgets")
+	mklinesRuby1 := t.NewMkLines("x11/ruby1-wxwidgets/buildlink3.mk",
+		MkRcsID,
+		"",
+		"BUILDLINK_TREE+=\t${RUBY_BASE}-wxWidgets",
+		"",
+		".if !defined(RUBY_WXWIDGETS_BUILDLINK3_MK)",
+		"RUBY_WXWIDGETS_BUILDLINK3_MK:=",
+		"",
+		"BUILDLINK_API_DEPENDS.${RUBY_BASE}-wxWidgets+=\t${RUBY_BASE}-wxWidgets>=2.6.1.0",
+		"BUILDLINK_ABI_DEPENDS.${RUBY_BASE}-wxWidgets+=\t${RUBY_BASE}-wxWidgets>=2.8.10.1nb26",
+		"",
+		".endif",
+		"",
+		"BUILDLINK_TREE+=\t-${RUBY_BASE}-wxWidgets")
+	mklinesRuby2 := t.NewMkLines("x11/ruby2-wxwidgets/buildlink3.mk",
+		MkRcsID,
+		"",
+		"BUILDLINK_TREE+=\t${RUBY_PKGPREFIX}-wxWidgets",
+		"",
+		".if !defined(RUBY_WXWIDGETS_BUILDLINK3_MK)",
+		"RUBY_WXWIDGETS_BUILDLINK3_MK:=",
+		"",
+		"BUILDLINK_API_DEPENDS.${RUBY_PKGPREFIX}-wxWidgets+=\t${RUBY_PKGPREFIX}-wxWidgets>=2.6.1.0",
+		"BUILDLINK_ABI_DEPENDS.${RUBY_PKGPREFIX}-wxWidgets+=\t${RUBY_PKGPREFIX}-wxWidgets>=2.8.10.1nb26",
+		"",
+		".endif",
+		"",
+		"BUILDLINK_TREE+=\t-${RUBY_PKGPREFIX}-wxWidgets")
 
-	CheckLinesBuildlink3Mk(mklines)
+	CheckLinesBuildlink3Mk(mklinesPhp)
+	CheckLinesBuildlink3Mk(mklinesPy)
+	CheckLinesBuildlink3Mk(mklinesRuby1)
+	CheckLinesBuildlink3Mk(mklinesRuby2)
 
 	t.CheckOutputLines(
-		"WARN: buildlink3.mk:3: Please use \"py\" instead of \"${PYPKGPREFIX}\" (also in other variables in this file).")
+		"WARN: x11/php-wxwidgets/buildlink3.mk:3: Please use \"php\" instead of \"${PHP_PKG_PREFIX}\" (also in other variables in this file).",
+		"WARN: x11/py-wxwidgets/buildlink3.mk:3: Please use \"py\" instead of \"${PYPKGPREFIX}\" (also in other variables in this file).",
+		"WARN: x11/ruby1-wxwidgets/buildlink3.mk:3: Please use \"ruby\" instead of \"${RUBY_BASE}\" (also in other variables in this file).",
+		"WARN: x11/ruby2-wxwidgets/buildlink3.mk:3: Please use \"ruby\" instead of \"${RUBY_PKGPREFIX}\" (also in other variables in this file).")
 }
 
 func (s *Suite) Test_CheckLinesBuildlink3Mk__PKGBASE_with_unknown_variable(c *check.C) {
@@ -399,30 +473,22 @@ func (s *Suite) Test_CheckLinesBuildlink3Mk__PKGBASE_with_unknown_variable(c *ch
 
 	t.CheckOutputLines(
 		"WARN: buildlink3.mk:3: LICENSE may not be used in any file; it is a write-only variable.",
-		// FIXME: License is not a list type, although it can be appended to.
-		"WARN: buildlink3.mk:3: The list variable LICENSE should not be embedded in a word.",
+		"WARN: buildlink3.mk:3: The variable LICENSE should be quoted as part of a shell word.",
 
 		"WARN: buildlink3.mk:8: LICENSE should not be evaluated at load time.",
 		"WARN: buildlink3.mk:8: LICENSE may not be used in any file; it is a write-only variable.",
-		// FIXME: License is not a list type, although it can be appended to.
-		"WARN: buildlink3.mk:8: The list variable LICENSE should not be embedded in a word.",
 		"WARN: buildlink3.mk:8: LICENSE should not be evaluated indirectly at load time.",
 		"WARN: buildlink3.mk:8: LICENSE may not be used in any file; it is a write-only variable.",
-		// FIXME: License is not a list type, although it can be appended to.
-		"WARN: buildlink3.mk:8: The list variable LICENSE should not be embedded in a word.",
+		"WARN: buildlink3.mk:8: The variable LICENSE should be quoted as part of a shell word.",
 
 		"WARN: buildlink3.mk:9: LICENSE should not be evaluated at load time.",
 		"WARN: buildlink3.mk:9: LICENSE may not be used in any file; it is a write-only variable.",
-		// FIXME: License is not a list type, although it can be appended to.
-		"WARN: buildlink3.mk:9: The list variable LICENSE should not be embedded in a word.",
 		"WARN: buildlink3.mk:9: LICENSE should not be evaluated indirectly at load time.",
 		"WARN: buildlink3.mk:9: LICENSE may not be used in any file; it is a write-only variable.",
-		// FIXME: License is not a list type, although it can be appended to.
-		"WARN: buildlink3.mk:9: The list variable LICENSE should not be embedded in a word.",
+		"WARN: buildlink3.mk:9: The variable LICENSE should be quoted as part of a shell word.",
 
 		"WARN: buildlink3.mk:13: LICENSE may not be used in any file; it is a write-only variable.",
-		// FIXME: License is not a list type, although it can be appended to.
-		"WARN: buildlink3.mk:13: The list variable LICENSE should not be embedded in a word.",
+		"WARN: buildlink3.mk:13: The variable LICENSE should be quoted as part of a shell word.",
 
 		"WARN: buildlink3.mk:3: Please replace \"${LICENSE}\" with a simple string (also in other variables in this file).")
 }

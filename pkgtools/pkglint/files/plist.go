@@ -44,8 +44,8 @@ type PlistChecker struct {
 
 type PlistLine struct {
 	Line
-	condition string // e.g. PLIST.docs
-	text      string // Line.Text without any conditions of the form ${PLIST.cond}
+	conditions []string // e.g. PLIST.docs
+	text       string   // Line.Text without any conditions of the form ${PLIST.cond}
 }
 
 func (ck *PlistChecker) Check(plainLines Lines) {
@@ -79,14 +79,19 @@ func (ck *PlistChecker) Check(plainLines Lines) {
 func (ck *PlistChecker) NewLines(lines Lines) []*PlistLine {
 	plines := make([]*PlistLine, lines.Len())
 	for i, line := range lines.Lines {
-		condition, text := "", line.Text
-		if hasPrefix(text, "${PLIST.") {
-			if m, cond, rest := match2(text, `^(?:\$\{(PLIST\.[\w-.]+)\})+(.*)`); m {
-				condition, text = cond, rest
+		var conditions []string
+		text := line.Text
+
+		for hasPrefix(text, "${PLIST.") /* just for performance */ {
+			if m, cond, rest := match2(text, `^(?:\$\{(PLIST\.[\w-.]+)\})(.*)`); m {
+				conditions = append(conditions, cond)
+				text = rest
+			} else {
+				break
 			}
-			// TODO: Support multiple conditions per line.
 		}
-		plines[i] = &PlistLine{line, condition, text}
+
+		plines[i] = &PlistLine{line, conditions, text}
 	}
 	return plines
 }
@@ -94,12 +99,13 @@ func (ck *PlistChecker) NewLines(lines Lines) []*PlistLine {
 var plistLineStart = textproc.NewByteSet("$0-9A-Za-z")
 
 func (ck *PlistChecker) collectFilesAndDirs(plines []*PlistLine) {
+
 	for _, pline := range plines {
 		if text := pline.text; len(text) > 0 {
 			first := text[0]
 			switch {
 			case plistLineStart.Contains(first):
-				if prev := ck.allFiles[text]; prev == nil || pline.condition < prev.condition {
+				if prev := ck.allFiles[text]; prev == nil || stringSliceLess(pline.conditions, prev.conditions) {
 					ck.allFiles[text] = pline
 				}
 				for dir := path.Dir(text); dir != "."; dir = path.Dir(dir) {
@@ -224,7 +230,7 @@ func (ck *PlistChecker) checkDuplicate(pline *PlistLine) {
 	}
 
 	prev := ck.allFiles[text]
-	if prev == pline || prev.condition != "" {
+	if prev == pline || len(prev.conditions) > 0 {
 		return
 	}
 
@@ -510,8 +516,8 @@ func (s *plistLineSorter) Sort() {
 	sort.SliceStable(s.middle, func(i, j int) bool {
 		mi := s.middle[i]
 		mj := s.middle[j]
-		less := mi.text < mj.text || (mi.text == mj.text &&
-			mi.condition < mj.condition)
+		less := mi.text < mj.text ||
+			(mi.text == mj.text && stringSliceLess(mi.conditions, mj.conditions))
 		if (i < j) != less {
 			s.changed = true
 		}

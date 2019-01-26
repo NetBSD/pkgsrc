@@ -40,6 +40,10 @@ type Pkgsrc struct {
 	Deprecated map[string]string   //
 	vartypes   map[string]*Vartype // varcanon => type
 
+	// TODO: The Hashes and UsedLicenses are modified after the initialization.
+	//  This contradicts the expectation that all pkgsrc data is constant.
+	//  These two fields should probably be moved to the Pkglint type.
+
 	Hashes       map[string]*Hash // Maps "alg:filename" => hash (inter-package check).
 	UsedLicenses map[string]bool  // Maps "license name" => true (inter-package check).
 }
@@ -416,7 +420,7 @@ func (src *Pkgsrc) parseSuggestedUpdates(lines Lines) []SuggestedUpdate {
 		if state == 3 {
 			if m, pkgname, comment := match2(text, `^\to[\t ]([^\t ]+)(?:[\t ]*(.+))?$`); m {
 				if m, pkgbase, pkgversion := match2(pkgname, rePkgname); m {
-					updates = append(updates, SuggestedUpdate{line, pkgbase, pkgversion, comment})
+					updates = append(updates, SuggestedUpdate{line.Location, intern(pkgbase), intern(pkgversion), intern(comment)})
 				} else {
 					line.Warnf("Invalid package name %q.", pkgname)
 				}
@@ -435,13 +439,29 @@ func (src *Pkgsrc) loadSuggestedUpdates() {
 
 func (src *Pkgsrc) loadDocChangesFromFile(filename string) []*Change {
 
+	warn := !G.Wip
+
 	parseChange := func(line Line) *Change {
-		text := line.Text
-		if !hasPrefix(text, "\t") {
+		lex := textproc.NewLexer(line.Text)
+
+		space := lex.NextHspace()
+		if space == "" {
 			return nil
 		}
 
-		f := strings.Fields(text)
+		if space != "\t" {
+			if warn {
+				line.Warnf("Package changes should be indented using a single tab, not %q.", space)
+				line.Explain(
+					"To avoid this formatting mistake in the future, just run",
+					sprintf("%q", bmake("cce")),
+					"after committing the update to the package.")
+			}
+
+			return nil
+		}
+
+		f := strings.Fields(lex.Rest())
 		n := len(f)
 		if n != 4 && n != 6 {
 			return nil
@@ -453,53 +473,97 @@ func (src *Pkgsrc) loadDocChangesFromFile(filename string) []*Change {
 		}
 		author, date = author[1:], date[:len(date)-1]
 
+		newChange := func(version string) *Change {
+			return &Change{
+				Location: line.Location,
+				Action:   intern(action),
+				Pkgpath:  intern(pkgpath),
+				Version:  intern(version),
+				Author:   intern(author),
+				Date:     intern(date),
+			}
+		}
+
 		switch {
 		case action == "Added" && f[2] == "version" && n == 6:
-			return &Change{line, action, pkgpath, f[3], author, date}
+			return newChange(f[3])
+
 		case (action == "Updated" || action == "Downgraded") && f[2] == "to" && n == 6:
-			return &Change{line, action, pkgpath, f[3], author, date}
+			return newChange(f[3])
+
 		case action == "Removed" && (n == 6 && f[2] == "successor" || n == 4):
-			return &Change{line, action, pkgpath, "", author, date}
+			return newChange("")
+
 		case (action == "Renamed" || action == "Moved") && f[2] == "to" && n == 6:
-			return &Change{line, action, pkgpath, "", author, date}
+			return newChange("")
 		}
+
+		line.Warnf("Unknown doc/CHANGES line: %s", line.Text)
+		line.Explain(
+			"See mk/misc/developer.mk for the rules.")
+
 		return nil
 	}
 
+	// Each date in the file should be from the same year as the filename says.
+	// This check has been added in 2018.
+	// For years earlier than 2018 pkglint doesn't care because it's not a big issue anyway.
 	year := ""
-	if m, yyyy := match1(filename, `-(\d+)$`); m && yyyy >= "2018" { // TODO: Why 2018?
+	if m, yyyy := match1(filename, `-(\d+)$`); m && yyyy >= "2018" {
 		year = yyyy
 	}
 
+	infra := false
 	lines := Load(filename, MustSucceed|NotEmpty)
 	var changes []*Change
 	for _, line := range lines.Lines {
-		if change := parseChange(line); change != nil {
-			changes = append(changes, change)
-			if year != "" && change.Date[0:4] != year {
-				line.Warnf("Year %s for %s does not match the filename %s.", change.Date[0:4], change.Pkgpath, filename)
+
+		if hasPrefix(line.Text, "\tmk/") {
+			infra = true
+		}
+		if infra {
+			if hasSuffix(line.Text, "]") {
+				infra = false
 			}
-			if len(changes) >= 2 && year != "" {
-				if prev := changes[len(changes)-2]; change.Date < prev.Date {
-					line.Warnf("Date %s for %s is earlier than %s for %s.", change.Date, change.Pkgpath, prev.Date, prev.Pkgpath)
-					G.Explain(
-						"The entries in doc/CHANGES should be in chronological order, and",
-						"all dates are assumed to be in the UTC timezone, to prevent time",
-						"warps.",
-						"",
-						"To fix this, determine which of the involved dates are correct",
-						"and which aren't.",
-						"",
-						"To prevent this kind of mistakes in the future, make sure that",
-						sprintf("your system time is correct and run %q to commit", bmake("cce")),
-						"the changes entry.")
-				}
+			continue
+		}
+
+		change := parseChange(line)
+		if change == nil {
+			continue
+		}
+
+		changes = append(changes, change)
+
+		if !warn {
+			continue
+		}
+
+		if year != "" && change.Date[0:4] != year {
+			line.Warnf("Year %s for %s does not match the filename %s.",
+				change.Date[0:4], change.Pkgpath, filename)
+		}
+
+		if len(changes) >= 2 && year != "" {
+			if prev := changes[len(changes)-2]; change.Date < prev.Date {
+				line.Warnf("Date %s for %s is earlier than %s in %s.",
+					change.Date, change.Pkgpath, prev.Date, line.RefToLocation(prev.Location))
+				line.Explain(
+					"The entries in doc/CHANGES should be in chronological order, and",
+					"all dates are assumed to be in the UTC timezone, to prevent time",
+					"warps.",
+					"",
+					"To fix this, determine which of the involved dates are correct",
+					"and which aren't.",
+					"",
+					"To prevent this kind of mistakes in the future,",
+					"make sure that your system time is correct and run",
+					sprintf("%q", bmake("cce")),
+					"to commit the changes entry.")
 			}
-		} else if lex := textproc.NewLexer(line.Text); lex.SkipByte('\t') && lex.TestByteSet(textproc.Upper) {
-			line.Warnf("Unknown doc/CHANGES line: %s", line.Text)
-			G.Explain("See mk/misc/developer.mk for the rules.")
 		}
 	}
+
 	return changes
 }
 
@@ -916,17 +980,17 @@ func (src *Pkgsrc) guessVariableType(varname string) (vartype *Vartype) {
 
 // Change describes a modification to a single package, from the doc/CHANGES-* files.
 type Change struct {
-	Line    Line
-	Action  string
-	Pkgpath string
-	Version string
-	Author  string
-	Date    string
+	Location Location
+	Action   string
+	Pkgpath  string
+	Version  string
+	Author   string
+	Date     string
 }
 
 // SuggestedUpdate describes a desired package update, from the doc/TODO file.
 type SuggestedUpdate struct {
-	Line    Line
+	Line    Location
 	Pkgname string
 	Version string
 	Comment string

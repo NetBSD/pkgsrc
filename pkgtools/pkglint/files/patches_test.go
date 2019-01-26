@@ -145,50 +145,6 @@ func (s *Suite) Test_CheckLinesPatch__git_without_comment(c *check.C) {
 		"ERROR: patch-aa:5: Each patch must be documented.")
 }
 
-func (s *Suite) Test_PatchChecker_checklineSourceAbsolutePathname(c *check.C) {
-	t := s.Init(c)
-
-	lines := t.NewLines("patch-aa",
-		RcsID,
-		"",
-		"Documentation",
-		"",
-		"--- code.c.orig",
-		"+++ code.c",
-		"@@ -0,0 +1,3 @@",
-		"+const char abspath[] = PREFIX \"/bin/program\";",
-		"+val abspath = libdir + \"/libiconv.so.1.0\"",
-		"+const char abspath[] = \"/dev/scd0\";")
-
-	CheckLinesPatch(lines)
-
-	t.CheckOutputLines(
-		"WARN: patch-aa:10: Found absolute pathname: /dev/scd0")
-}
-
-func (s *Suite) Test_PatchChecker_checklineOtherAbsolutePathname(c *check.C) {
-	t := s.Init(c)
-
-	lines := t.NewLines("patch-aa",
-		RcsID,
-		"",
-		"Documentation",
-		"",
-		"--- file.unknown.orig",
-		"+++ file.unknown",
-		"@@ -0,0 +1,5 @@",
-		"+abspath=\"@prefix@/bin/program\"",
-		"+abspath=\"${DESTDIR}/bin/\"",
-		"+abspath=\"${PREFIX}/bin/\"",
-		"+abspath = $prefix + '/bin/program'",
-		"+abspath=\"$prefix/bin/program\"")
-
-	CheckLinesPatch(lines)
-
-	t.CheckOutputLines(
-		"WARN: patch-aa:9: Found absolute pathname: /bin/")
-}
-
 // The output of BSD Make typically contains "*** Error code".
 // In some really good patches, this output is included in the patch comment,
 // to document why the patch is necessary.
@@ -349,49 +305,6 @@ func (s *Suite) Test_CheckLinesPatch__only_context_header_but_no_content(c *chec
 	// adding extra code for checking them thoroughly.
 	t.CheckOutputLines(
 		"WARN: patch-context:5: Please use unified diffs (diff -u) for patches.")
-}
-
-// TODO: Maybe this should only be checked if the patch changes
-// an absolute path to a relative one, because otherwise these
-// absolute paths may be intentional.
-func (s *Suite) Test_CheckLinesPatch__Makefile_with_absolute_pathnames(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpCommandLine("-Wabsname", "-Wno-extra")
-	lines := t.NewLines("patch-unified",
-		RcsID,
-		"",
-		"Documentation for the patch",
-		"",
-		"--- Makefile.orig",
-		"+++ Makefile",
-		"@@ -1,3 +1,7 @@",
-		" \t/bin/cp context before",
-		"-\t/bin/cp deleted",
-		"+\t/bin/cp added",
-		"+#\t/bin/cp added comment",
-		"+# added comment",
-		"+\t${DESTDIR}/bin/cp added",
-		"+\t${prefix}/bin/cp added",
-		" \t/bin/cp context after")
-
-	CheckLinesPatch(lines)
-
-	t.CheckOutputLines(
-		"WARN: patch-unified:10: Found absolute pathname: /bin/cp",
-		"WARN: patch-unified:13: Found absolute pathname: /bin/cp")
-
-	// With extra warnings turned on, absolute paths in the context lines
-	// are also checked, to detect absolute paths that might be overlooked.
-	G.Opts.WarnExtra = true
-
-	CheckLinesPatch(lines)
-
-	t.CheckOutputLines(
-		"WARN: patch-unified:8: Found absolute pathname: /bin/cp",
-		"WARN: patch-unified:10: Found absolute pathname: /bin/cp",
-		"WARN: patch-unified:13: Found absolute pathname: /bin/cp",
-		"WARN: patch-unified:15: Found absolute pathname: /bin/cp")
 }
 
 func (s *Suite) Test_CheckLinesPatch__no_newline_with_text_following(c *check.C) {

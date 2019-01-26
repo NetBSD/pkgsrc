@@ -188,6 +188,11 @@ func (s *Suite) Test_PlistChecker_checkLine(c *check.C) {
 		"${PLIST.empty}",
 		"",
 		"$prefix/bin",
+
+		// This line does not count as a PLIST condition since it has
+		// a :Q modifier, which does not work in PLISTs. Therefore the
+		// ${PLIST.man:Q} is considered part of the filename.
+		"${PLIST.man:Q}man/cat3/strlcpy.3",
 		"<<<<<<<<< merge conflict")
 
 	CheckLinesPlist(lines)
@@ -197,7 +202,7 @@ func (s *Suite) Test_PlistChecker_checkLine(c *check.C) {
 		"WARN: PLIST:4: \"bin/arm-linux-only\" should be sorted before \"bin/conditional-program\".",
 		"WARN: PLIST:10: PLISTs should not contain empty lines.",
 		"WARN: PLIST:11: PLISTs should not contain empty lines.",
-		"WARN: PLIST:13: Invalid line type: <<<<<<<<< merge conflict")
+		"WARN: PLIST:14: Invalid line type: <<<<<<<<< merge conflict")
 }
 
 func (s *Suite) Test_PlistChecker_checkPathMan__gz(c *check.C) {
