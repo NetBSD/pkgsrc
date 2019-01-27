@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2018/05/03 12:27:51 markd Exp $
+# $NetBSD: Makefile,v 1.12 2019/01/27 01:06:00 markd Exp $
 
 DISTNAME=	babel
-PKGNAME=	tex-${DISTNAME}-3.18
-TEXLIVE_REV=	46640
+PKGNAME=	tex-${DISTNAME}-3.27
+TEXLIVE_REV=	49149
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/babel
