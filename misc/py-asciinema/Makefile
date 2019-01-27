@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/01/18 08:56:41 adam Exp $
+# $NetBSD: Makefile,v 1.3 2019/01/27 10:37:33 leot Exp $
 
 DISTNAME=	asciinema-2.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,7 +23,9 @@ SUBST_SED.fix-path+=	-e 's,share/man/man1,${PKGMANDIR}/man1,g'
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} asciinema asciinema-${PYVERSSUFFIX} || ${TRUE}
+	   ${MV} asciinema asciinema-${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 && \
+	   ${MV} asciinema.1 asciinema-${PYVERSSUFFIX}.1 || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
