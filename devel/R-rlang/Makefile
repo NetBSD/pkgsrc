@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/07/28 14:40:43 brook Exp $
+# $NetBSD: Makefile,v 1.4 2019/01/27 14:59:18 wen Exp $
 
 CATEGORIES=	devel
 
@@ -8,7 +8,7 @@ COMMENT=	Functions for base types, core R and Tidyverse features
 LICENSE=	gnu-gpl-v3
 
 R_PKGNAME=	rlang
-R_PKGVER=	0.2.1
+R_PKGVER=	0.3.1
 
 USE_LANGUAGES=	c
 
