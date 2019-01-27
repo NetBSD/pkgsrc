@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2016/04/23 22:32:02 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/01/27 01:17:05 markd Exp $
 
 DISTNAME=	tikz-cd
-PKGNAME=	tex-${DISTNAME}-0.9e
+PKGNAME=	tex-${DISTNAME}-0.9f
 CATEGORIES=	graphics math print
-TEXLIVE_REV=	35485
+TEXLIVE_REV=	49201
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.ctan.org/tex-archive/graphics/pgf/contrib/tikz-cd
