@@ -15,8 +15,8 @@ allowing link-time, run-time, and offline transformations.
 
 A compiler infrastructure - LLVM is also a collection of source code that
 implements the language and compilation strategy. The primary components of the
-LLVM infrastructure are a GCC-based C & C++ front-end, a link-time optimization
+LLVM infrastructure are the C & C++ front-end, a link-time optimization
 framework with a growing set of global and interprocedural analyses and
 transformations, static back-ends for the X86, X86-64, PowerPC 32/64, ARM,
-Thumb, IA-64, Alpha and SPARC architectures, a back-end which emits portable C
+Thumb, IA-64 and SPARC architectures, a back-end which emits portable C
 code, and a Just-In-Time compiler for X86, X86-64, PowerPC 32/64 processors.
