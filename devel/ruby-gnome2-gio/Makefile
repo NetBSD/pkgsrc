@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2018/02/21 16:59:59 jperkin Exp $
+# $NetBSD: Makefile,v 1.23 2019/01/27 02:23:39 tsutsui Exp $
 #
 
 DISTNAME=		gio2-${VERSION}
@@ -8,7 +8,6 @@ CATEGORIES=		devel
 
 MAINTAINER=		tsutsui@NetBSD.org
 
-DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-glib>=${VERSION}:../../devel/ruby-gnome2-glib
 DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-gobject-introspection>=${VERSION}:../../devel/ruby-gnome2-gobject-introspection
 
 .include "../../devel/glib2/buildlink3.mk"
