@@ -1,13 +1,14 @@
-$NetBSD: distinfo,v 1.9 2016/09/05 12:08:53 richard Exp $
+$NetBSD: distinfo,v 1.10 2019/01/27 11:54:57 tnn Exp $
 
 SHA1 (xf86-video-ati-6.14.6.tar.bz2) = b30383c7e5487c1df403a3af19fce8626d617a8d
 RMD160 (xf86-video-ati-6.14.6.tar.bz2) = e285bff97a23f6e6f8553f1c010c840e6df882a8
 SHA512 (xf86-video-ati-6.14.6.tar.bz2) = 7ed64bb3596703f7c575aec37a6918bac251819fe638acc66a29aab7648d8a81dedd8d416f970faa1f757fa8e9e3ccdc43e4499d06271cc2751288040d1d957e
 Size (xf86-video-ati-6.14.6.tar.bz2) = 1139495 bytes
-SHA1 (patch-configure.ac) = a7a99e75acc2f6f962fe7cfed084c7451a89c45c
+SHA1 (patch-configure.ac) = 4558ecd87af3ed7c8c13c66340ccb6c4de835140
 SHA1 (patch-src_AtomBios_CD__Operations.c) = bf368936c44dd3f8daf0d79348783268ad9701e0
 SHA1 (patch-src_atombios__crtc.c) = e6ec24fdc63e3744db9442ab5e12ffe6949eef19
 SHA1 (patch-src_atombios__output.c) = ce3720c1d1cfd1f65023cea2745259af30a59add
+SHA1 (patch-src_compat-api.h) = e01560f8421254acf5fb150872827de7ed0dc08f
 SHA1 (patch-src_legacy__crtc.c) = 6be802fa29797265efeceaadec9607de334dbfc8
 SHA1 (patch-src_r600__exa.c) = 009ff3a42b95c1b1c825c54825316ab31e4fe43c
 SHA1 (patch-src_r600__textured__videofuncs.c) = ec8eca51e27d4f3899d9a5e040f313b92c87d1d0
