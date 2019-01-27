@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2018/08/12 14:25:09 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/01/27 17:04:16 nia Exp $
 include/mgba/flags.h
 lib/libretro/mgba_libretro.so
 share/doc/mGBA/CHANGES
+share/doc/mGBA/LICENSE
 share/doc/mGBA/README.md
+share/doc/mGBA/README_DE.md
+share/doc/mGBA/licenses/blip_buf.txt
+share/doc/mGBA/licenses/inih.txt
