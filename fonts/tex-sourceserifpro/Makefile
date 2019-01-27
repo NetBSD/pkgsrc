@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2016/06/16 03:57:31 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/01/27 00:59:48 markd Exp $
 
 DISTNAME=	sourceserifpro
-PKGNAME=	tex-${DISTNAME}-1.2
-TEXLIVE_REV=	40598
+PKGNAME=	tex-${DISTNAME}-1.4
+TEXLIVE_REV=	49120
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/sourceserifpro
 COMMENT=	Use SourceSerifPro with TeX(-alike) systems
-LICENSE=	ofl-v1.1
+LICENSE=	ofl-v1.1 AND lppl-1.3c
 
 TEX_MAP_FILES+=	SourceSerifPro.map
 
