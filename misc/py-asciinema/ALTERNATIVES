@@ -1,2 +1,1 @@
 bin/asciinema @PREFIX@/bin/asciinema-@PYVERSSUFFIX@
-man/man1/asciinema.1 @PREFIX@/@PKGMANDIR@/man/asciinema-@PYVERSSUFFIX@.1
