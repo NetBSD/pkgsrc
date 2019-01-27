@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.723 2019/01/26 03:39:45 markd Exp $
+# $NetBSD: Makefile,v 1.724 2019/01/27 13:25:38 jperkin Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -400,6 +400,8 @@ SUBDIR+=	tex-cnbwp
 SUBDIR+=	tex-cnbwp-doc
 SUBDIR+=	tex-collectbox
 SUBDIR+=	tex-collectbox-doc
+SUBDIR+=	tex-colorprofiles
+SUBDIR+=	tex-colorprofiles-doc
 SUBDIR+=	tex-colortbl
 SUBDIR+=	tex-colortbl-doc
 SUBDIR+=	tex-comment
