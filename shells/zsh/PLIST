@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2018/09/14 03:36:51 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.41 2019/01/27 14:42:25 wen Exp $
 bin/zsh
 bin/${PKGNAME}
 info/zsh.info
@@ -17,6 +17,7 @@ ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/files.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/langinfo.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/mapfile.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/mathfunc.so
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/nearcolor.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/net/socket.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/net/tcp.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/newuser.so
@@ -131,6 +132,8 @@ share/zsh/${PKGVERSION}/functions/_arguments
 share/zsh/${PKGVERSION}/functions/_arp
 share/zsh/${PKGVERSION}/functions/_arping
 share/zsh/${PKGVERSION}/functions/_arrays
+share/zsh/${PKGVERSION}/functions/_asciidoctor
+share/zsh/${PKGVERSION}/functions/_asciinema
 share/zsh/${PKGVERSION}/functions/_assign
 share/zsh/${PKGVERSION}/functions/_at
 share/zsh/${PKGVERSION}/functions/_attr
@@ -211,6 +214,7 @@ share/zsh/${PKGVERSION}/functions/_complete_help
 share/zsh/${PKGVERSION}/functions/_complete_help_generic
 share/zsh/${PKGVERSION}/functions/_complete_tag
 share/zsh/${PKGVERSION}/functions/_completers
+share/zsh/${PKGVERSION}/functions/_composer
 share/zsh/${PKGVERSION}/functions/_compress
 share/zsh/${PKGVERSION}/functions/_condition
 share/zsh/${PKGVERSION}/functions/_configure
@@ -331,6 +335,7 @@ share/zsh/${PKGVERSION}/functions/_espeak
 share/zsh/${PKGVERSION}/functions/_etags
 share/zsh/${PKGVERSION}/functions/_ethtool
 share/zsh/${PKGVERSION}/functions/_evince
+share/zsh/${PKGVERSION}/functions/_exec
 share/zsh/${PKGVERSION}/functions/_expand
 share/zsh/${PKGVERSION}/functions/_expand_alias
 share/zsh/${PKGVERSION}/functions/_expand_word
@@ -426,6 +431,7 @@ share/zsh/${PKGVERSION}/functions/_hg
 share/zsh/${PKGVERSION}/functions/_history
 share/zsh/${PKGVERSION}/functions/_history_complete_word
 share/zsh/${PKGVERSION}/functions/_history_modifiers
+share/zsh/${PKGVERSION}/functions/_host
 share/zsh/${PKGVERSION}/functions/_hostname
 share/zsh/${PKGVERSION}/functions/_hosts
 share/zsh/${PKGVERSION}/functions/_htop
@@ -447,6 +453,7 @@ share/zsh/${PKGVERSION}/functions/_ionice
 share/zsh/${PKGVERSION}/functions/_iostat
 share/zsh/${PKGVERSION}/functions/_ip
 share/zsh/${PKGVERSION}/functions/_ipadm
+share/zsh/${PKGVERSION}/functions/_ipsec
 share/zsh/${PKGVERSION}/functions/_ipset
 share/zsh/${PKGVERSION}/functions/_iptables
 share/zsh/${PKGVERSION}/functions/_irssi
@@ -545,6 +552,8 @@ share/zsh/${PKGVERSION}/functions/_mii-tool
 share/zsh/${PKGVERSION}/functions/_mime_types
 share/zsh/${PKGVERSION}/functions/_mixerctl
 share/zsh/${PKGVERSION}/functions/_mkdir
+share/zsh/${PKGVERSION}/functions/_mkfifo
+share/zsh/${PKGVERSION}/functions/_mknod
 share/zsh/${PKGVERSION}/functions/_mkshortcut
 share/zsh/${PKGVERSION}/functions/_mktemp
 share/zsh/${PKGVERSION}/functions/_mkzsh
@@ -751,11 +760,13 @@ share/zsh/${PKGVERSION}/functions/_set
 share/zsh/${PKGVERSION}/functions/_set_command
 share/zsh/${PKGVERSION}/functions/_setfacl
 share/zsh/${PKGVERSION}/functions/_setopt
+share/zsh/${PKGVERSION}/functions/_setsid
 share/zsh/${PKGVERSION}/functions/_setup
 share/zsh/${PKGVERSION}/functions/_setxkbmap
 share/zsh/${PKGVERSION}/functions/_sh
 share/zsh/${PKGVERSION}/functions/_shasum
 share/zsh/${PKGVERSION}/functions/_showmount
+share/zsh/${PKGVERSION}/functions/_shred
 share/zsh/${PKGVERSION}/functions/_shuf
 share/zsh/${PKGVERSION}/functions/_shutdown
 share/zsh/${PKGVERSION}/functions/_signals
@@ -803,6 +814,7 @@ share/zsh/${PKGVERSION}/functions/_svcs_fmri
 share/zsh/${PKGVERSION}/functions/_svn-buildpackage
 share/zsh/${PKGVERSION}/functions/_sw_vers
 share/zsh/${PKGVERSION}/functions/_swaks
+share/zsh/${PKGVERSION}/functions/_swanctl
 share/zsh/${PKGVERSION}/functions/_swift
 share/zsh/${PKGVERSION}/functions/_sys_calls
 share/zsh/${PKGVERSION}/functions/_sysctl
@@ -849,6 +861,7 @@ share/zsh/${PKGVERSION}/functions/_tracepath
 share/zsh/${PKGVERSION}/functions/_trap
 share/zsh/${PKGVERSION}/functions/_tree
 share/zsh/${PKGVERSION}/functions/_truss
+share/zsh/${PKGVERSION}/functions/_tty
 share/zsh/${PKGVERSION}/functions/_ttyctl
 share/zsh/${PKGVERSION}/functions/_ttys
 share/zsh/${PKGVERSION}/functions/_tune2fs
@@ -887,6 +900,7 @@ share/zsh/${PKGVERSION}/functions/_vars
 share/zsh/${PKGVERSION}/functions/_vcsh
 share/zsh/${PKGVERSION}/functions/_vim
 share/zsh/${PKGVERSION}/functions/_vim-addons
+share/zsh/${PKGVERSION}/functions/_visudo
 share/zsh/${PKGVERSION}/functions/_vmctl
 share/zsh/${PKGVERSION}/functions/_vmstat
 share/zsh/${PKGVERSION}/functions/_vnc
@@ -938,6 +952,7 @@ share/zsh/${PKGVERSION}/functions/_xargs
 share/zsh/${PKGVERSION}/functions/_xauth
 share/zsh/${PKGVERSION}/functions/_xautolock
 share/zsh/${PKGVERSION}/functions/_xclip
+share/zsh/${PKGVERSION}/functions/_xcode-select
 share/zsh/${PKGVERSION}/functions/_xdvi
 share/zsh/${PKGVERSION}/functions/_xfig
 share/zsh/${PKGVERSION}/functions/_xft_fonts
@@ -1237,9 +1252,9 @@ share/zsh/${PKGVERSION}/help/getopts
 share/zsh/${PKGVERSION}/help/hash
 share/zsh/${PKGVERSION}/help/history
 share/zsh/${PKGVERSION}/help/integer
-share/zsh/${PKGVERSION}/help/let
 share/zsh/${PKGVERSION}/help/jobs
 share/zsh/${PKGVERSION}/help/kill
+share/zsh/${PKGVERSION}/help/let
 share/zsh/${PKGVERSION}/help/limit
 share/zsh/${PKGVERSION}/help/local
 share/zsh/${PKGVERSION}/help/log
@@ -1273,17 +1288,17 @@ share/zsh/${PKGVERSION}/help/type
 share/zsh/${PKGVERSION}/help/typeset
 share/zsh/${PKGVERSION}/help/ulimit
 share/zsh/${PKGVERSION}/help/umask
-share/zsh/${PKGVERSION}/help/unlimit
 share/zsh/${PKGVERSION}/help/unalias
 share/zsh/${PKGVERSION}/help/unfunction
 share/zsh/${PKGVERSION}/help/unhash
+share/zsh/${PKGVERSION}/help/unlimit
 share/zsh/${PKGVERSION}/help/unset
 share/zsh/${PKGVERSION}/help/unsetopt
 share/zsh/${PKGVERSION}/help/vared
 share/zsh/${PKGVERSION}/help/wait
+share/zsh/${PKGVERSION}/help/whence
 share/zsh/${PKGVERSION}/help/where
 share/zsh/${PKGVERSION}/help/which
-share/zsh/${PKGVERSION}/help/whence
 share/zsh/${PKGVERSION}/help/zcompile
 share/zsh/${PKGVERSION}/help/zformat
 share/zsh/${PKGVERSION}/help/zftp
