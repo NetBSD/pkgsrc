@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.76 2019/01/25 18:14:50 leot Exp $
+@comment $NetBSD: PLIST,v 1.77 2019/01/27 15:42:00 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -2261,6 +2261,9 @@ ${PYSITELIB}/youtube_dl/extractor/vyborymos.pyo
 ${PYSITELIB}/youtube_dl/extractor/vzaar.py
 ${PYSITELIB}/youtube_dl/extractor/vzaar.pyc
 ${PYSITELIB}/youtube_dl/extractor/vzaar.pyo
+${PYSITELIB}/youtube_dl/extractor/wakanim.py
+${PYSITELIB}/youtube_dl/extractor/wakanim.pyc
+${PYSITELIB}/youtube_dl/extractor/wakanim.pyo
 ${PYSITELIB}/youtube_dl/extractor/walla.py
 ${PYSITELIB}/youtube_dl/extractor/walla.pyc
 ${PYSITELIB}/youtube_dl/extractor/walla.pyo
