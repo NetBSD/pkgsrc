@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.459 2019/01/27 12:33:24 wen Exp $
+$NetBSD: CHANGES-2019,v 1.460 2019/01/27 12:37:36 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -816,3 +816,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/tex-cweb to 3.70.49278 [markd 2019-01-27]
 	Updated print/tex-cweb-doc to 3.70.49278 [markd 2019-01-27]
 	Updated devel/p5-Alien-Build to 1.51 [wen 2019-01-27]
+	Updated devel/p5-Alien-Base-ModuleBuild to 1.06 [wen 2019-01-27]
