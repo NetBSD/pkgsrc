@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.481 2019/01/27 15:42:13 leot Exp $
+$NetBSD: CHANGES-2019,v 1.482 2019/01/27 16:10:10 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -839,3 +839,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/R-jsonlite to 1.6 [wen 2019-01-27]
 	Updated devel/R-repr to 0.19.1 [wen 2019-01-27]
 	Updated net/youtube-dl to 20190127 [leot 2019-01-27]
+	Updated net/hub to 2.8.3 [leot 2019-01-27]
