@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2018/05/13 11:56:23 markd Exp $
+# $NetBSD: Makefile,v 1.20 2019/01/27 00:50:00 markd Exp $
 
 DISTNAME=	collection-pictures
 PKGNAME=	texlive-${DISTNAME}-2018pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	47088
+TEXLIVE_REV=	49113
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -40,6 +40,7 @@ DEPENDS+=	tex-circuitikz-[0-9]*:../../graphics/tex-circuitikz
 DEPENDS+=	tex-curves-[0-9]*:../../print/tex-curves
 # depend dcpic
 # depend diagmac2
+# depend ditaa
 # depend doc-pictex
 # depend dottex
 # depend dot2texi
@@ -87,15 +88,18 @@ DEPENDS+=	tex-here-[0-9]*:../../print/tex-here
 # depend maker
 # depend makeshape
 # depend mathspic
+# depend milsymb
 # depend miniplot
 # depend mkpic
 # depend modiagram
 # depend neuralnetwork
 # depend numericplots
 DEPENDS+=	tex-pb-diagram-[0-9]*:../../print/tex-pb-diagram
+# depend penrose
 # depend petri-nets
 DEPENDS+=	tex-pgf-[0-9]*:../../print/tex-pgf
 # depend pgf-blur
+# depend pgf-cmykshadings
 # depend pgf-soroban
 # depend pgf-spectra
 # depend pgf-umlcd
@@ -113,10 +117,12 @@ DEPENDS+=	tex-pictex-[0-9]*:../../graphics/tex-pictex
 # depend pinlabel
 # depend pixelart
 # depend pmgraph
+# depend postage
 # depend prerex
 # depend productbox
 # depend pxpgfmark
 # depend qcircuit
+# depend quantikz
 # depend qrcode
 # depend randbild
 # depend randomwalk
@@ -148,6 +154,8 @@ DEPENDS+=	tex-tikz-cd-[0-9]*:../../graphics/tex-tikz-cd
 # depend tikz-karnaugh
 # depend tikz-ladder
 # depend tikz-layers
+# depend tikz-nef
+# depend tikz-network
 # depend tikz-opm
 # depend tikz-optics
 # depend tikz-page
@@ -159,7 +167,9 @@ DEPENDS+=	tex-tikz-cd-[0-9]*:../../graphics/tex-tikz-cd
 # depend tikzcodeblocks
 # depend tikzducks
 DEPENDS+=	tex-tikzinclude-[0-9]*:../../graphics/tex-tikzinclude
+# depend tikzlings
 DEPENDS+=	tex-tikzmark-[0-9]*:../../graphics/tex-tikzmark
+# depend tikzmarmots
 DEPENDS+=	tex-tikzorbital-[0-9]*:../../graphics/tex-tikzorbital
 DEPENDS+=	tex-tikzpagenodes-[0-9]*:../../graphics/tex-tikzpagenodes
 DEPENDS+=	tex-tikzpfeile-[0-9]*:../../graphics/tex-tikzpfeile
