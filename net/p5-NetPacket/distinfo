@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2017/09/17 21:00:02 wiz Exp $
+$NetBSD: distinfo,v 1.9 2019/01/27 13:33:04 wen Exp $
 
-SHA1 (NetPacket-1.6.0.tar.gz) = 7c8b931730c87b5538d98d4b5d717f1025ab60f7
-RMD160 (NetPacket-1.6.0.tar.gz) = 5c692e123812d584f03d182b6fbaa2dcb6804b4a
-SHA512 (NetPacket-1.6.0.tar.gz) = 9482b35294177fbf0c67474f0b14c87b3d8fb61497cef2c65fb942ff9472dc527d24a68fa8656ca71a0ddd73edb4a02240341177a36c4ed0e9b832b20b120349
-Size (NetPacket-1.6.0.tar.gz) = 36685 bytes
+SHA1 (NetPacket-1.7.0.tar.gz) = af5878058d0c785ccf5d8a684d79e955b1965fd2
+RMD160 (NetPacket-1.7.0.tar.gz) = 01326848dfab73180f08eb1dbb9750b19310c2b1
+SHA512 (NetPacket-1.7.0.tar.gz) = 6629206f4e80e8d1ca5120e403fc66358e9fa834f00a6773fc76ba0a7ea3b492a3bdfab0c6a8ab4ec6a9238074e533729cda3a5f13b6f49d1454fb8f59ec432c
+Size (NetPacket-1.7.0.tar.gz) = 47342 bytes
