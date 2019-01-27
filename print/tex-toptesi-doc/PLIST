@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2018/05/13 11:17:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/01/27 04:46:41 markd Exp $
 share/texmf-dist/doc/latex/toptesi/FrontespiziAssemblati.pdf
 share/texmf-dist/doc/latex/toptesi/FrontespiziAssemblati1.pdf
 share/texmf-dist/doc/latex/toptesi/FrontespiziAssemblati2.pdf
 share/texmf-dist/doc/latex/toptesi/Frontespizio-sss.pdf
 share/texmf-dist/doc/latex/toptesi/FrontespizioLandscape.pdf
 share/texmf-dist/doc/latex/toptesi/FrontespizioScudo.pdf
-share/texmf-dist/doc/latex/toptesi/LPPL.tex
 share/texmf-dist/doc/latex/toptesi/Logodue.pdf
 share/texmf-dist/doc/latex/toptesi/Logoquattro.pdf
 share/texmf-dist/doc/latex/toptesi/Logotre.pdf
@@ -17,7 +16,8 @@ share/texmf-dist/doc/latex/toptesi/Toptesi-con-topfront.pdf
 share/texmf-dist/doc/latex/toptesi/Toptesi-con-topfront.tex
 share/texmf-dist/doc/latex/toptesi/Toptesi-example-topfront.pdf
 share/texmf-dist/doc/latex/toptesi/Toptesi-example-topfront.tex
-share/texmf-dist/doc/latex/toptesi/VeraPDFinitial.png
+share/texmf-dist/doc/latex/toptesi/VeraPDFinitial.pdf
+share/texmf-dist/doc/latex/toptesi/lppl.tex
 share/texmf-dist/doc/latex/toptesi/manifest.txt
 share/texmf-dist/doc/latex/toptesi/topfront-example.pdf
 share/texmf-dist/doc/latex/toptesi/topfront-example.tex
@@ -33,6 +33,8 @@ share/texmf-dist/doc/latex/toptesi/toptesi-example-sss.pdf
 share/texmf-dist/doc/latex/toptesi/toptesi-example-sss.tex
 share/texmf-dist/doc/latex/toptesi/toptesi-example-triennale.pdf
 share/texmf-dist/doc/latex/toptesi/toptesi-example-triennale.tex
+share/texmf-dist/doc/latex/toptesi/toptesi-example-xetex.pdf
+share/texmf-dist/doc/latex/toptesi/toptesi-example-xetex.tex
 share/texmf-dist/doc/latex/toptesi/toptesi-example.cfg
 share/texmf-dist/doc/latex/toptesi/toptesi-example.pdf
 share/texmf-dist/doc/latex/toptesi/toptesi-example.tex
