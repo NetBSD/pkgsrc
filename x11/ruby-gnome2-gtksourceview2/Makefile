@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2018/11/14 22:22:50 kleink Exp $
+# $NetBSD: Makefile,v 1.60 2019/01/27 02:23:41 tsutsui Exp $
 #
 
 DISTNAME=		gtksourceview2-${VERSION}
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-${DISTNAME}
-PKGREVISION=		2
 COMMENT=		Ruby binding of gtksourceview2
 CATEGORIES=		x11
 

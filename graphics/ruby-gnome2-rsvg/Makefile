@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.72 2018/11/14 22:21:46 kleink Exp $
+# $NetBSD: Makefile,v 1.73 2019/01/27 02:23:40 tsutsui Exp $
 #
 
 DISTNAME=		rsvg2-${VERSION}
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-rsvg-${VERSION}
-PKGREVISION=		2
 COMMENT=		Ruby binding of librsvg
 CATEGORIES=		graphics
 
