@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/05/03 12:40:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/01/27 00:31:30 markd Exp $
 share/texmf-dist/bibtex/bib/biblatex/biblatex/biblatex-examples.bib
 share/texmf-dist/bibtex/bst/biblatex/biblatex.bst
 share/texmf-dist/tex/latex/biblatex/bbx/alphabetic-verb.bbx
@@ -85,9 +85,11 @@ share/texmf-dist/tex/latex/biblatex/lbx/french.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/galician.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/german.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/greek.lbx
+share/texmf-dist/tex/latex/biblatex/lbx/hungarian.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/icelandic.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/italian.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/latvian.lbx
+share/texmf-dist/tex/latex/biblatex/lbx/magyar.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/naustrian.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/newzealand.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/ngerman.lbx
