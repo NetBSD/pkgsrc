@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2019/01/24 10:00:42 bsiegert Exp $
+# $NetBSD: Makefile,v 1.18 2019/01/27 16:09:58 leot Exp $
 
-DISTNAME=	hub-2.7.1
-PKGREVISION=	1
+DISTNAME=	hub-2.8.3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=github/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -19,7 +18,7 @@ DEPENDS+=		git-base>=1.7.3:../../devel/git-base
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure
 SUBST_MESSAGE.man=	Fix hub name in hub(1) man page
-SUBST_FILES.man=	share/man/man1/hub.1
+SUBST_FILES.man=	share/man/man1/hub.1.md
 SUBST_SED.man+=		-e 's/\$$ git/$$ hub/'
 SUBST_SED.man+=		-e '/\$$ GITHUB_HOST=/ s/ git clone / hub clone /'
 
@@ -27,10 +26,13 @@ INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 CHECK_RELRO_SKIP+=	bin/hub
 
-# XXX: To avoid to (tool_)depends on devel/ruby-ronn, we (manually) generate
-# XXX: it via `ronn' and copy it to FILESDIR.
-pre-patch:
-	${CP} ${FILESDIR}/hub.1 ${WRKSRC}/share/man/man1
+# Generate hub(1) man page
+pre-install:
+	cd ${WRKDIR} && \
+	    ./bin/md2roff-bin --manual="hub manual" \
+		--version=${PKGVERSION_NOREV} \
+		--template=src/github.com/github/hub/man-template.html \
+		src/github.com/github/hub/share/man/man1/hub.1.md
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/bin/hub ${DESTDIR}${PREFIX}/bin
