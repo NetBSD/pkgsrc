@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.456 2019/01/27 10:02:51 wen Exp $
+$NetBSD: CHANGES-2019,v 1.457 2019/01/27 10:08:02 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -806,3 +806,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/p5-DBD-mysql to 4.050 [wen 2019-01-27]
 	Updated databases/p5-DBD-SQLite to 1.62 [wen 2019-01-27]
 	Updated databases/p5-DBD-SQLite2 to 0.38 [wen 2019-01-27]
+	Updated devel/p5-Algorithm-Dependency to 1.111 [wen 2019-01-27]
