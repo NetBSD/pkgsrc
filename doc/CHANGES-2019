@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.478 2019/01/27 15:00:23 wen Exp $
+$NetBSD: CHANGES-2019,v 1.479 2019/01/27 15:07:05 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -836,3 +836,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated shells/zsh to 5.7 [wen 2019-01-27]
 	Updated devel/R-pkgconfig to 2.0.2 [wen 2019-01-27]
 	Updated devel/R-rlang to 0.3.1 [wen 2019-01-27]
+	Updated textproc/R-jsonlite to 1.6 [wen 2019-01-27]
