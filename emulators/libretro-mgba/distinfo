@@ -1,14 +1,13 @@
-$NetBSD: distinfo,v 1.2 2018/09/07 18:54:02 nia Exp $
+$NetBSD: distinfo,v 1.3 2019/01/27 17:04:16 nia Exp $
 
-SHA1 (libretro-mgba-0.6.3.tar.gz) = b90d59af4ef43d0faf98f48f66514a51aa677296
-RMD160 (libretro-mgba-0.6.3.tar.gz) = a9d5cbc4f77a6ca1883707bef92313d77cf2a824
-SHA512 (libretro-mgba-0.6.3.tar.gz) = d646af7869dbcf8df671a75ecfd8c270950c013b826b23b94bacae43a77243786f198725e1b9bf17827d1ffcf6a8eef70091d53ea878bfb2450472485f42f233
-Size (libretro-mgba-0.6.3.tar.gz) = 7442154 bytes
-SHA1 (patch-CMakeLists.txt) = ec56af8fed90cd6486d797fd18fd69ac6eb00d3d
-SHA1 (patch-include_mgba-util_common.h) = 4d1ff026d759ede6341c1195b60903ce566145d5
+SHA1 (libretro-mgba-0.7.0.tar.gz) = d39ff87381ebb5152e9b1a3822d5a0670b659293
+RMD160 (libretro-mgba-0.7.0.tar.gz) = 87577c5d61667fe9ebe1ac0144c4f7d6e968bc31
+SHA512 (libretro-mgba-0.7.0.tar.gz) = 68eac18f6e411c60ef6c6dded0f2b293cb4831c4c6f15c4cf3bb7f8dc6a5de65000d7d904ff5bec52aef8714fae3a77d7ed7b43cbccba528cc05b56546802010
+Size (libretro-mgba-0.7.0.tar.gz) = 10767992 bytes
+SHA1 (patch-CMakeLists.txt) = 55165a347984ebac37f8d75ca180618f08b0386c
 SHA1 (patch-include_mgba-util_math.h) = 448ca1bb3bbe2812e7d9482917c488ddcf3b48f0
 SHA1 (patch-include_mgba-util_vfs.h) = 5e02a5d53623dfa5f1531d2d3269cc4e88e4530c
 SHA1 (patch-src_util_vfs_vfs-fd.c) = f544787d17d95fb234f9844f0c3eef17805a798d
 SHA1 (patch-src_util_vfs_vfs-fifo.c) = 94240338a440e3da9b41e37e8c934113aacd5904
 SHA1 (patch-src_util_vfs_vfs-mem.c) = 7b55448fa616b078eac62e80867ef6894d3be8ed
-SHA1 (patch-version.cmake) = 973e3b397b807be1c228e96d559f98a4d1091bae
+SHA1 (patch-version.cmake) = 7d6d44febe7bb0ff2231452f037def7cb3782e21
