@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/01/20 21:43:58 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/01/27 08:55:41 markd Exp $
 share/texmf-dist/doc/latex/abntex2/README
 share/texmf-dist/doc/latex/abntex2/abntex2-doc-abnt-10520.bib
 share/texmf-dist/doc/latex/abntex2/abntex2-doc-abnt-6023.bib
@@ -18,9 +18,6 @@ share/texmf-dist/doc/latex/abntex2/examples/abntex2-modelo-glossarios.tex
 share/texmf-dist/doc/latex/abntex2/examples/abntex2-modelo-img-grafico.pdf
 share/texmf-dist/doc/latex/abntex2/examples/abntex2-modelo-img-marca.pdf
 share/texmf-dist/doc/latex/abntex2/examples/abntex2-modelo-include-comandos.tex
-share/texmf-dist/doc/latex/abntex2/examples/abntex2-modelo-livro-bandeirinha.jpg
-share/texmf-dist/doc/latex/abntex2/examples/abntex2-modelo-livro-pintassilgo.jpg
-share/texmf-dist/doc/latex/abntex2/examples/abntex2-modelo-livro-saira-amarela.jpg
 share/texmf-dist/doc/latex/abntex2/examples/abntex2-modelo-livro.pdf
 share/texmf-dist/doc/latex/abntex2/examples/abntex2-modelo-livro.tex
 share/texmf-dist/doc/latex/abntex2/examples/abntex2-modelo-projeto-pesquisa.pdf

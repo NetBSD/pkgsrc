@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/01/20 21:43:58 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/01/27 08:55:41 markd Exp $
 
 DISTNAME=	abntex2.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.9.6
-TEXLIVE_REV=	39913
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.9.7
+TEXLIVE_REV=	49248
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/abntex2
