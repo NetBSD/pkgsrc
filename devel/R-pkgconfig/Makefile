@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/07/28 14:40:43 brook Exp $
+# $NetBSD: Makefile,v 1.3 2019/01/27 14:49:39 wen Exp $
 
 CATEGORIES=	devel
 
@@ -8,7 +8,7 @@ COMMENT=	Private Configuration for 'R' Packages
 LICENSE=	mit
 
 R_PKGNAME=	pkgconfig
-R_PKGVER=	2.0.1
+R_PKGVER=	2.0.2
 
 USE_LANGUAGES=	# none
 
