@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/05/03 12:27:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/01/27 01:06:00 markd Exp $
 share/texmf-dist/makeindex/babel/bbglo.ist
 share/texmf-dist/makeindex/babel/bbind.ist
 share/texmf-dist/tex/generic/babel/UKenglish.sty
@@ -8,6 +8,7 @@ share/texmf-dist/tex/generic/babel/albanian.sty
 share/texmf-dist/tex/generic/babel/american.sty
 share/texmf-dist/tex/generic/babel/austrian.sty
 share/texmf-dist/tex/generic/babel/babel-bidi-basic-r.lua
+share/texmf-dist/tex/generic/babel/babel-bidi-basic.lua
 share/texmf-dist/tex/generic/babel/babel-bidi.lua
 share/texmf-dist/tex/generic/babel/babel.def
 share/texmf-dist/tex/generic/babel/babel.sty
@@ -39,7 +40,6 @@ share/texmf-dist/tex/generic/babel/interlingua.sty
 share/texmf-dist/tex/generic/babel/irish.sty
 share/texmf-dist/tex/generic/babel/italian.sty
 share/texmf-dist/tex/generic/babel/latin.sty
-share/texmf-dist/tex/generic/babel/locale/README-locale
 share/texmf-dist/tex/generic/babel/locale/af/babel-af.ini
 share/texmf-dist/tex/generic/babel/locale/af/babel-afrikaans.tex
 share/texmf-dist/tex/generic/babel/locale/agq/babel-aghem.tex
@@ -438,6 +438,26 @@ share/texmf-dist/tex/generic/babel/locale/rw/babel-kinyarwanda.tex
 share/texmf-dist/tex/generic/babel/locale/rw/babel-rw.ini
 share/texmf-dist/tex/generic/babel/locale/rwk/babel-rwa.tex
 share/texmf-dist/tex/generic/babel/locale/rwk/babel-rwk.ini
+share/texmf-dist/tex/generic/babel/locale/sa/babel-sa-Beng.ini
+share/texmf-dist/tex/generic/babel/locale/sa/babel-sa-Deva.ini
+share/texmf-dist/tex/generic/babel/locale/sa/babel-sa-Gujr.ini
+share/texmf-dist/tex/generic/babel/locale/sa/babel-sa-Knda.ini
+share/texmf-dist/tex/generic/babel/locale/sa/babel-sa-Mlym.ini
+share/texmf-dist/tex/generic/babel/locale/sa/babel-sa-Telu.ini
+share/texmf-dist/tex/generic/babel/locale/sa/babel-sa.ini
+share/texmf-dist/tex/generic/babel/locale/sa/babel-sanskrit-beng.tex
+share/texmf-dist/tex/generic/babel/locale/sa/babel-sanskrit-bengali.tex
+share/texmf-dist/tex/generic/babel/locale/sa/babel-sanskrit-deva.tex
+share/texmf-dist/tex/generic/babel/locale/sa/babel-sanskrit-devanagari.tex
+share/texmf-dist/tex/generic/babel/locale/sa/babel-sanskrit-gujarati.tex
+share/texmf-dist/tex/generic/babel/locale/sa/babel-sanskrit-gujr.tex
+share/texmf-dist/tex/generic/babel/locale/sa/babel-sanskrit-kannada.tex
+share/texmf-dist/tex/generic/babel/locale/sa/babel-sanskrit-knda.tex
+share/texmf-dist/tex/generic/babel/locale/sa/babel-sanskrit-malayalam.tex
+share/texmf-dist/tex/generic/babel/locale/sa/babel-sanskrit-mlym.tex
+share/texmf-dist/tex/generic/babel/locale/sa/babel-sanskrit-telu.tex
+share/texmf-dist/tex/generic/babel/locale/sa/babel-sanskrit-telugu.tex
+share/texmf-dist/tex/generic/babel/locale/sa/babel-sanskrit.tex
 share/texmf-dist/tex/generic/babel/locale/sah/babel-sah.ini
 share/texmf-dist/tex/generic/babel/locale/sah/babel-sakha.tex
 share/texmf-dist/tex/generic/babel/locale/saq/babel-samburu.tex
