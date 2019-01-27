@@ -1,4 +1,6 @@
-$NetBSD: patch-configure.ac,v 1.1 2015/04/02 22:16:46 tnn Exp $
+$NetBSD: patch-configure.ac,v 1.2 2019/01/27 11:54:57 tnn Exp $
+
+Remove duplicate bswap definitions, like x11/xf86-video-ati
 
 --- configure.ac.orig	2012-06-29 13:46:11.000000000 +0000
 +++ configure.ac
@@ -31,3 +33,16 @@ $NetBSD: patch-configure.ac,v 1.1 2015/04/02 22:16:46 tnn Exp $
  
  # Properly handle EXA.
  AC_MSG_CHECKING([whether to enable EXA support])
+@@ -309,12 +329,6 @@ b = bswap16(a);
+ 	if test "$USE_SYS_ENDIAN_H" = "yes" ; then
+ 	    AC_DEFINE([USE_SYS_ENDIAN_H], 1, 
+ 		[Define to use byteswap macros from <sys/endian.h>])
+-	    AC_DEFINE_UNQUOTED([bswap_16], ${BSWAP}16, 
+-			[Define to 16-bit byteswap macro])
+-	    AC_DEFINE_UNQUOTED([bswap_32], ${BSWAP}32, 
+-			[Define to 32-bit byteswap macro])
+-	    AC_DEFINE_UNQUOTED([bswap_64], ${BSWAP}64, 
+-			[Define to 64-bit byteswap macro])
+ 	fi
+ fi
+ 
