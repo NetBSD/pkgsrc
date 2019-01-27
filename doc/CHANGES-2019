@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.453 2019/01/27 05:58:14 wen Exp $
+$NetBSD: CHANGES-2019,v 1.454 2019/01/27 07:33:02 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -803,3 +803,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/p5-URI to 1.76 [wen 2019-01-27]
 	Updated www/p5-WWW-Mechanize to 1.91 [wen 2019-01-27]
 	Updated www/p5-Test-WWW-Mechanize to 1.52 [wen 2019-01-27]
+	Updated databases/p5-DBD-mysql to 4.050 [wen 2019-01-27]
