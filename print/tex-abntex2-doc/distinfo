@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/01/20 21:43:58 markd Exp $
+$NetBSD: distinfo,v 1.2 2019/01/27 08:55:41 markd Exp $
 
-SHA1 (tex-abntex2-39913/abntex2.doc.tar.xz) = e4d33a8c1ed17cbae23ad20673d0b85292f7cdf5
-RMD160 (tex-abntex2-39913/abntex2.doc.tar.xz) = d3dc26d121557fbe7ec5aa0ada7687cd193ab5ac
-SHA512 (tex-abntex2-39913/abntex2.doc.tar.xz) = 98d7521f6dc47703a71643990994e59ef8f02a319f8bb9b5b82e9de1c06ee1603af90cc704b9a9bd21bb88b86a752f76507387a7e54901cc16a7d788197833a9
-Size (tex-abntex2-39913/abntex2.doc.tar.xz) = 4531744 bytes
+SHA1 (tex-abntex2-49248/abntex2.doc.tar.xz) = 0a4c29ff3d532cd11a113dd104eb55680f316de1
+RMD160 (tex-abntex2-49248/abntex2.doc.tar.xz) = b79bbff5c54d0634d3ad0615ff9af097ae1a1ec9
+SHA512 (tex-abntex2-49248/abntex2.doc.tar.xz) = 990300186779bff7a8582e778cbbb3890d0d506263234b8462b0976fc8479f7fdc854017fc4fd3c3d3139edfed961f12efe0f0010ef114145f511aa127fc73ee
+Size (tex-abntex2-49248/abntex2.doc.tar.xz) = 4585444 bytes
