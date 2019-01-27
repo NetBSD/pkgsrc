@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2018/12/09 20:04:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/01/27 06:43:21 maya Exp $
 bin/FileCheck
 bin/bugpoint
 bin/count
@@ -1381,6 +1381,12 @@ lib/libLLVMMCDisassembler.a
 lib/libLLVMMCJIT.a
 lib/libLLVMMCParser.a
 lib/libLLVMMIRParser.a
+${PLIST.Lanai}lib/libLLVMLanaiAsmParser.a
+${PLIST.Lanai}lib/libLLVMLanaiAsmPrinter.a
+${PLIST.Lanai}lib/libLLVMLanaiCodeGen.a
+${PLIST.Lanai}lib/libLLVMLanaiDesc.a
+${PLIST.Lanai}lib/libLLVMLanaiDisassembler.a
+${PLIST.Lanai}lib/libLLVMLanaiInfo.a
 ${PLIST.MSP430}lib/libLLVMMSP430AsmPrinter.a
 ${PLIST.MSP430}lib/libLLVMMSP430CodeGen.a
 ${PLIST.MSP430}lib/libLLVMMSP430Desc.a
