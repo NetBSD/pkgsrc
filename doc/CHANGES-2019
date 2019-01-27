@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.467 2019/01/27 13:31:15 wen Exp $
+$NetBSD: CHANGES-2019,v 1.468 2019/01/27 13:33:46 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -824,3 +824,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated converters/p5-JSON to 4.01 [wen 2019-01-27]
 	Updated converters/p5-Unicode-Normalize to 1.26 [wen 2019-01-27]
 	Updated net/p5-Net-FTPSSL to 0.41 [wen 2019-01-27]
+	Updated net/p5-NetPacket to 1.7.0 [wen 2019-01-27]
