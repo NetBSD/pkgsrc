@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/10/23 09:08:18 markd Exp $
+$NetBSD: distinfo,v 1.5 2019/01/27 00:41:13 markd Exp $
 
-SHA1 (tex-fonts-tlwg-45469/fonts-tlwg.tar.xz) = 9303c00fad9ac4b13b92a1840d9e6bb693de87d8
-RMD160 (tex-fonts-tlwg-45469/fonts-tlwg.tar.xz) = 5aa76bea40fe9e73d9179a8c75fc1a65b69df244
-SHA512 (tex-fonts-tlwg-45469/fonts-tlwg.tar.xz) = 46a5c8bb5b2abb6acfd43ed9555c165a7f7359c28ce284e87e028f9a10e36b8b23c472a45e369391e5e74c5b74468efe0dc9fb1cb9938653c55e5283103c1663
-Size (tex-fonts-tlwg-45469/fonts-tlwg.tar.xz) = 3738252 bytes
+SHA1 (tex-fonts-tlwg-49085/fonts-tlwg.tar.xz) = 3d61ee3e4245374f4673f101e2e40838f9f8902b
+RMD160 (tex-fonts-tlwg-49085/fonts-tlwg.tar.xz) = de2f4b13b2440fc0d425ba31bc8d08f42a9bd72b
+SHA512 (tex-fonts-tlwg-49085/fonts-tlwg.tar.xz) = 2cbe177b590d3502592755983f19e8026aa2098a2a552ac121cffbf122d5858e6d69056f5f0eebe4946618ed348fbd4b924002974eb341e19b423d100e69f06f
+Size (tex-fonts-tlwg-49085/fonts-tlwg.tar.xz) = 5008320 bytes
