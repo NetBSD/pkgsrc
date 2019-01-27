@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.470 2019/01/27 13:51:24 tnn Exp $
+$NetBSD: CHANGES-2019,v 1.471 2019/01/27 14:02:15 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -828,3 +828,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/p5-Net-FTPSSL to 0.41 [wen 2019-01-27]
 	Updated net/p5-NetPacket to 1.7.0 [wen 2019-01-27]
 	Updated www/p5-Hijk to 0.28 [wen 2019-01-27]
+	Updated security/p5-Net-DNS-SEC to 1.11 [wen 2019-01-27]
