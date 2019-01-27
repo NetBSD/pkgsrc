@@ -1,8 +1,9 @@
-$NetBSD: patch-cmake_modules_AddLLVM.cmake,v 1.7 2019/01/26 21:17:20 tnn Exp $
+$NetBSD: patch-cmake_modules_AddLLVM.cmake,v 1.8 2019/01/27 00:07:32 tnn Exp $
 
 Disable library install rules. Handled manually.
 Make sure llvm-config goes in libexec/libLLVM to avoid conflict.
 Don't use non-portable -z discard-unused on SunOS.
+Don't use relative @rpath in llvm-config on Darwin.
 
 --- cmake/modules/AddLLVM.cmake.orig	2018-08-01 07:51:55.000000000 +0000
 +++ cmake/modules/AddLLVM.cmake
@@ -48,3 +49,12 @@ Don't use non-portable -z discard-unused on SunOS.
                COMPONENT ${name})
  
        if (NOT CMAKE_CONFIGURATION_TYPES)
+@@ -1632,7 +1620,7 @@ function(llvm_setup_rpath name)
+   endif()
+ 
+   if (APPLE)
+-    set(_install_name_dir INSTALL_NAME_DIR "@rpath")
++    set(_install_name_dir INSTALL_NAME_DIR "${CMAKE_INSTALL_PREFIX}/lib/libLLVM")
+     set(_install_rpath "@loader_path/../lib" ${extra_libdir})
+   elseif(UNIX)
+     set(_install_rpath "\$ORIGIN/../lib${LLVM_LIBDIR_SUFFIX}" ${extra_libdir})
