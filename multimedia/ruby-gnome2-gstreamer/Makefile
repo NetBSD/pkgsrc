@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2018/02/21 17:00:00 jperkin Exp $
+# $NetBSD: Makefile,v 1.27 2019/01/27 02:23:40 tsutsui Exp $
 #
 
 DISTNAME=		gstreamer-${VERSION}
@@ -8,7 +8,6 @@ CATEGORIES=		multimedia
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 
-DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-glib>=${VERSION}:../../devel/ruby-gnome2-glib
 DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-gobject-introspection>=${VERSION}:../../devel/ruby-gnome2-gobject-introspection
 DEPENDS+=		gst-plugins1-base-[0-9]*:../../multimedia/gst-plugins1-base
 
