@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/09/07 18:54:02 nia Exp $
+# $NetBSD: Makefile,v 1.3 2019/01/27 17:04:16 nia Exp $
 
-DISTNAME=	libretro-mgba-0.6.3
+DISTNAME=	libretro-mgba-0.7.0
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mgba-emu/}
 GITHUB_PROJECT=	mgba
@@ -40,5 +40,6 @@ CMAKE_ARGS+=	-DLIBRETRO_LIBDIR=${PREFIX}/lib/libretro
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
+.include "../../devel/libelf/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
