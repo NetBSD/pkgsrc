@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/07/28 14:40:52 brook Exp $
+# $NetBSD: Makefile,v 1.3 2019/01/27 15:04:51 wen Exp $
 
 CATEGORIES=	textproc
 
@@ -8,7 +8,7 @@ COMMENT=	Robust, high performance JSON parser and generator
 LICENSE=	mit
 
 R_PKGNAME=	jsonlite
-R_PKGVER=	1.5
+R_PKGVER=	1.6
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
