@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/05/03 12:40:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/01/27 00:31:30 markd Exp $
 share/texmf-dist/doc/latex/biblatex/CHANGES.md
 share/texmf-dist/doc/latex/biblatex/README
 share/texmf-dist/doc/latex/biblatex/biber/bltxml/biblatex-examples.bltxml
@@ -156,5 +156,8 @@ share/texmf-dist/doc/latex/biblatex/examples/95-customlists.dbx
 share/texmf-dist/doc/latex/biblatex/examples/95-customlists.tex
 share/texmf-dist/doc/latex/biblatex/examples/96-dates-biber.pdf
 share/texmf-dist/doc/latex/biblatex/examples/96-dates.tex
+share/texmf-dist/doc/latex/biblatex/examples/97-annotations-biber.pdf
+share/texmf-dist/doc/latex/biblatex/examples/97-annotations.bib
+share/texmf-dist/doc/latex/biblatex/examples/97-annotations.tex
 share/texmf-dist/doc/latex/biblatex/examples/biblatex-examples.bib
 share/texmf-dist/doc/latex/biblatex/examples/biblatex-examples.bltxml
