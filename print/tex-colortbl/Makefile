@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2016/01/30 03:26:11 markd Exp $
+# $NetBSD: Makefile,v 1.7 2019/01/28 11:41:16 markd Exp $
 
 DISTNAME=	colortbl
-PKGNAME=	tex-${DISTNAME}-1.0a
-TEXLIVE_REV=	29803
+PKGNAME=	tex-${DISTNAME}-1.0d
+TEXLIVE_REV=	49404
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Add colour to LaTeX tables
