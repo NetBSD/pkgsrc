@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2016/08/07 09:09:38 markd Exp $
-share/texmf-dist/doc/latex/hyperref/ChangeLog
-share/texmf-dist/doc/latex/hyperref/ChangeLog.pdf
-share/texmf-dist/doc/latex/hyperref/README
-share/texmf-dist/doc/latex/hyperref/README.pdf
+@comment $NetBSD: PLIST,v 1.4 2019/01/28 08:41:15 markd Exp $
+share/texmf-dist/doc/latex/hyperref/ChangeLog.txt
+share/texmf-dist/doc/latex/hyperref/README.md
 share/texmf-dist/doc/latex/hyperref/backref.pdf
 share/texmf-dist/doc/latex/hyperref/cmmi10-22.gif
 share/texmf-dist/doc/latex/hyperref/cmsy10-21.gif
