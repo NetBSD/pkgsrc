@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2018/05/12 03:21:30 markd Exp $
+$NetBSD: distinfo,v 1.14 2019/01/28 10:58:05 markd Exp $
 
-SHA1 (tex-latex-47500/latex.doc.tar.xz) = 22f3c16a3fb98e927697f3e3530ae6ae159ebaaf
-RMD160 (tex-latex-47500/latex.doc.tar.xz) = 90a0d4459399966c75a1a29663a0d957487832e1
-SHA512 (tex-latex-47500/latex.doc.tar.xz) = a956cd96a729d616713343109337cdf2eb536a24bd072b1a05ad33f8719e8181baa2d54d7daa950b5eb985d790f849d44389bc1283fd30b8e31249e1f946cc75
-Size (tex-latex-47500/latex.doc.tar.xz) = 14412108 bytes
+SHA1 (tex-latex-49390/latex.doc.tar.xz) = f409c23a7aaa7a3d7de3b029ed20743f9ee8d2bd
+RMD160 (tex-latex-49390/latex.doc.tar.xz) = c76d2bf9ca8e404fbe6a03521f850c7e0da21d82
+SHA512 (tex-latex-49390/latex.doc.tar.xz) = 3b1fdbd4951ace07edf8c43c8cac1ae657c7853d3cc232bc35c75be4a19a9883148374025d661101e4d4a87d7c163f78f4d2fb4670b2581f0a9a49f59a947cf2
+Size (tex-latex-49390/latex.doc.tar.xz) = 13653776 bytes

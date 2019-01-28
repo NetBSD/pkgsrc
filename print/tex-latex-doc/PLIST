@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2018/05/12 03:21:30 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/01/28 10:58:05 markd Exp $
 share/texmf-dist/doc/latex/base/README.txt
-share/texmf-dist/doc/latex/base/a4.pdf
+share/texmf-dist/doc/latex/base/TEMPLATE-IncludeInRelease.txt
 share/texmf-dist/doc/latex/base/alltt.pdf
 share/texmf-dist/doc/latex/base/bugs.txt
 share/texmf-dist/doc/latex/base/cfgguide.pdf
@@ -22,6 +22,10 @@ share/texmf-dist/doc/latex/base/exscale.pdf
 share/texmf-dist/doc/latex/base/fix-cm.pdf
 share/texmf-dist/doc/latex/base/fntguide.pdf
 share/texmf-dist/doc/latex/base/fntguide.tex
+share/texmf-dist/doc/latex/base/fontdef.pdf
+share/texmf-dist/doc/latex/base/github-0049.pdf
+share/texmf-dist/doc/latex/base/github-0081.pdf
+share/texmf-dist/doc/latex/base/github-0081b.pdf
 share/texmf-dist/doc/latex/base/graphpap.pdf
 share/texmf-dist/doc/latex/base/ifthen.pdf
 share/texmf-dist/doc/latex/base/inputenc.pdf
@@ -42,13 +46,9 @@ share/texmf-dist/doc/latex/base/lppl.pdf
 share/texmf-dist/doc/latex/base/lppl.tex
 share/texmf-dist/doc/latex/base/lppl.txt
 share/texmf-dist/doc/latex/base/ltclass.pdf
-share/texmf-dist/doc/latex/base/ltcounts.pdf
-share/texmf-dist/doc/latex/base/ltdirchk.pdf
-share/texmf-dist/doc/latex/base/ltfssbas.pdf
 share/texmf-dist/doc/latex/base/ltluatex.pdf
 share/texmf-dist/doc/latex/base/ltnews.pdf
 share/texmf-dist/doc/latex/base/ltnews.tex
-share/texmf-dist/doc/latex/base/ltoutenc.pdf
 share/texmf-dist/doc/latex/base/ltx3info.pdf
 share/texmf-dist/doc/latex/base/ltx3info.tex
 share/texmf-dist/doc/latex/base/ltxdoc.pdf
@@ -67,12 +67,10 @@ share/texmf-dist/doc/latex/base/source2e.tex
 share/texmf-dist/doc/latex/base/syntonly.pdf
 share/texmf-dist/doc/latex/base/tex2.txt
 share/texmf-dist/doc/latex/base/texpert.txt
-share/texmf-dist/doc/latex/base/tlb-utf8-bom.pdf
-share/texmf-dist/doc/latex/base/tlb-utf8-dec-utf8-2017.pdf
+share/texmf-dist/doc/latex/base/tlb1144.pdf
 share/texmf-dist/doc/latex/base/tlc2.err
 share/texmf-dist/doc/latex/base/tlc2.pdf
 share/texmf-dist/doc/latex/base/tulm.pdf
-share/texmf-dist/doc/latex/base/us.pdf
 share/texmf-dist/doc/latex/base/usrguide.pdf
 share/texmf-dist/doc/latex/base/usrguide.tex
 share/texmf-dist/doc/latex/base/utf8ienc.pdf
