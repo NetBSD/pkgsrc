@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2015/09/01 21:17:54 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/01/28 10:45:26 markd Exp $
 share/texmf-dist/doc/generic/xstring/README
-share/texmf-dist/doc/generic/xstring/xstring_doc_en.pdf
-share/texmf-dist/doc/generic/xstring/xstring_doc_en.tex
-share/texmf-dist/doc/generic/xstring/xstring_doc_fr.pdf
-share/texmf-dist/doc/generic/xstring/xstring_doc_fr.tex
+share/texmf-dist/doc/generic/xstring/test_etex.pdf
+share/texmf-dist/doc/generic/xstring/test_etex.tex
+share/texmf-dist/doc/generic/xstring/test_latex.pdf
+share/texmf-dist/doc/generic/xstring/test_latex.tex
+share/texmf-dist/doc/generic/xstring/xstring-en.pdf
+share/texmf-dist/doc/generic/xstring/xstring-en.tex
+share/texmf-dist/doc/generic/xstring/xstring-fr.pdf
+share/texmf-dist/doc/generic/xstring/xstring-fr.tex

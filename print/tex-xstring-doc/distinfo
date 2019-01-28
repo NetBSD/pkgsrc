@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:03:00 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/01/28 10:45:26 markd Exp $
 
-SHA1 (tex-xstring-31900/xstring.doc.tar.xz) = e5638bbe9efa6d97a6eb32e69cf85a46198e2cc5
-RMD160 (tex-xstring-31900/xstring.doc.tar.xz) = 4056d412a2c4ebd2dc2022a4a68f2f97b3c5ee43
-SHA512 (tex-xstring-31900/xstring.doc.tar.xz) = 048018376740aaf22bf541ae417f912f4f219427847d2b457776bf81160726d31424e4b61bc0fc719de356319af02d814ae5d14643ce6513b9df0a1546ed44fe
-Size (tex-xstring-31900/xstring.doc.tar.xz) = 481068 bytes
+SHA1 (tex-xstring-49363/xstring.doc.tar.xz) = a954241f02ee498a90f3168e5a91d58787373994
+RMD160 (tex-xstring-49363/xstring.doc.tar.xz) = 250a94b709c62aef2adafcc3d2261bde80a000d3
+SHA512 (tex-xstring-49363/xstring.doc.tar.xz) = f06771d3c52e9bc548290846a5c3624f3fe0e77f623f966ce82c8e20a27f587c244083bd6b142c7343bb880bdb60a1fe240d36e2dd71d337b31a5166a8a75bdc
+Size (tex-xstring-49363/xstring.doc.tar.xz) = 1291892 bytes
