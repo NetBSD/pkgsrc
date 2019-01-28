@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2018/05/12 01:03:12 markd Exp $
+$NetBSD: distinfo,v 1.12 2019/01/28 11:27:57 markd Exp $
 
-SHA1 (tex-memoir-47305/memoir.doc.tar.xz) = 38942bc53179eb959411ead256d30ad5a9cd9df2
-RMD160 (tex-memoir-47305/memoir.doc.tar.xz) = c881e133659880bb35404de960cdb76a9d150f3f
-SHA512 (tex-memoir-47305/memoir.doc.tar.xz) = 5143c30bd7622a5696b1bb47515071694d39131bcd777b524a1b0d7d4aac8245581c28e498dad3f3c96d33a777b0a9c89a900b87eccf882d68ebc1698b72c319
-Size (tex-memoir-47305/memoir.doc.tar.xz) = 3054456 bytes
+SHA1 (tex-memoir-49394/memoir.doc.tar.xz) = c44e95e27738db3d08e3f6c8b471a7d2c89bd502
+RMD160 (tex-memoir-49394/memoir.doc.tar.xz) = d919d53fa1ddec93b2e10befd0b1c28606e50e0b
+SHA512 (tex-memoir-49394/memoir.doc.tar.xz) = d40dc3468d334ab7619eb1be0212601a830f9371dc8d69ca30f46a21426368b95515fc1698acd308598b1ba7d1c4d7c98c58b05202ffb3f08b23f263ba625c6c
+Size (tex-memoir-49394/memoir.doc.tar.xz) = 3110540 bytes
