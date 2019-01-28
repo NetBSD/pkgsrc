@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.486 2019/01/28 08:42:20 adam Exp $
+$NetBSD: CHANGES-2019,v 1.487 2019/01/28 09:14:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -848,3 +848,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-test-virtualenv to 1.4.0nb1 [adam 2019-01-28]
 	Updated devel/py-test-shutil to 1.4.0nb1 [adam 2019-01-28]
 	Updated devel/py-test-fixture-config to 1.4.0nb1 [adam 2019-01-28]
+	Updated devel/py-prompt_toolkit2 to 2.0.8 [adam 2019-01-28]
+	Updated security/py-asn1-modules to 0.2.4 [adam 2019-01-28]
