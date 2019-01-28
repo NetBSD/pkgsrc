@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2019/01/04 21:44:13 adam Exp $
+# $NetBSD: Makefile,v 1.43 2019/01/28 08:39:23 adam Exp $
 
-DISTNAME=	virtualenv-16.2.0
+DISTNAME=	virtualenv-16.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/virtualenv/}
@@ -23,9 +23,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 USE_LANGUAGES=	# none
 
 REPLACE_PYTHON=	virtualenv.py
-
-post-extract:
-	cd ${WRKSRC}/tests && ${RM} -r __pycache__ activation/__pycache__
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
