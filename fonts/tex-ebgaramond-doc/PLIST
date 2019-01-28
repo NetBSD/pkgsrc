@@ -1,12 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:39 wiz Exp $
-share/texmf-dist/doc/fonts/ebgaramond/COPYING
-share/texmf-dist/doc/fonts/ebgaramond/Changes
+@comment $NetBSD: PLIST,v 1.2 2019/01/28 10:03:41 markd Exp $
+share/texmf-dist/doc/fonts/ebgaramond/AUTHORS.txt
+share/texmf-dist/doc/fonts/ebgaramond/CONTRIBUTORS.txt
 share/texmf-dist/doc/fonts/ebgaramond/EBGaramond-Initials-Glyphs.pdf
-share/texmf-dist/doc/fonts/ebgaramond/EBGaramond12-Italic-Glyphs.pdf
-share/texmf-dist/doc/fonts/ebgaramond/EBGaramond12-Regular-Glyphs.pdf
+share/texmf-dist/doc/fonts/ebgaramond/EBGaramond-Regular-Glyphs.pdf
+share/texmf-dist/doc/fonts/ebgaramond/OFL.txt
 share/texmf-dist/doc/fonts/ebgaramond/README
-share/texmf-dist/doc/fonts/ebgaramond/README.xelualatex
-share/texmf-dist/doc/fonts/ebgaramond/Specimen.pdf
-share/texmf-dist/doc/fonts/ebgaramond/Specimen.tex
-share/texmf-dist/doc/fonts/ebgaramond/samples.pdf
-share/texmf-dist/doc/fonts/ebgaramond/samples.tex
+share/texmf-dist/doc/fonts/ebgaramond/ebgaramond-samples.pdf
+share/texmf-dist/doc/fonts/ebgaramond/ebgaramond-samples.tex
