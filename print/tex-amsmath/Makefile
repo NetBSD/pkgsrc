@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2018/05/02 11:51:11 markd Exp $
+# $NetBSD: Makefile,v 1.14 2019/01/28 11:19:19 markd Exp $
 
 DISTNAME=	amsmath
-PKGNAME=	tex-${DISTNAME}-2.17a.47349
-TEXLIVE_REV=	47349
+PKGNAME=	tex-${DISTNAME}-2.17a.49390
+TEXLIVE_REV=	49390
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/latex-amsmath
