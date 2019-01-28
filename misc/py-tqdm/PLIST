@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2018/05/21 23:45:59 minskim Exp $
-bin/tqdm${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.2 2019/01/28 14:13:50 adam Exp $
+bin/tqdm-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/tqdm/__init__.py
 ${PYSITELIB}/tqdm/__init__.pyc
@@ -35,4 +36,10 @@ ${PYSITELIB}/tqdm/_utils.pyo
 ${PYSITELIB}/tqdm/_version.py
 ${PYSITELIB}/tqdm/_version.pyc
 ${PYSITELIB}/tqdm/_version.pyo
-man/man1/tqdm.1
+${PYSITELIB}/tqdm/auto/__init__.py
+${PYSITELIB}/tqdm/auto/__init__.pyc
+${PYSITELIB}/tqdm/auto/__init__.pyo
+${PYSITELIB}/tqdm/autonotebook/__init__.py
+${PYSITELIB}/tqdm/autonotebook/__init__.pyc
+${PYSITELIB}/tqdm/autonotebook/__init__.pyo
+man/man1/tqdm-${PYVERSSUFFIX}.1
