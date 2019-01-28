@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2018/05/12 01:22:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/01/28 08:52:44 markd Exp $
+man/man1/platex.1
 share/texmf-dist/doc/platex/base/Changes_asciimw.txt
 share/texmf-dist/doc/platex/base/LICENSE
 share/texmf-dist/doc/platex/base/README.md
-share/texmf-dist/doc/platex/base/README2_asciimw.txt
-share/texmf-dist/doc/platex/base/README_asciimw.txt
 share/texmf-dist/doc/platex/base/exppl2e.pdf
 share/texmf-dist/doc/platex/base/platex-en.pdf
 share/texmf-dist/doc/platex/base/platex.pdf
