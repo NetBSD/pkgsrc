@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/11/21 17:26:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/01/28 09:12:28 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -52,6 +52,9 @@ ${PYSITELIB}/prompt_toolkit/completion/base.pyo
 ${PYSITELIB}/prompt_toolkit/completion/filesystem.py
 ${PYSITELIB}/prompt_toolkit/completion/filesystem.pyc
 ${PYSITELIB}/prompt_toolkit/completion/filesystem.pyo
+${PYSITELIB}/prompt_toolkit/completion/fuzzy_completer.py
+${PYSITELIB}/prompt_toolkit/completion/fuzzy_completer.pyc
+${PYSITELIB}/prompt_toolkit/completion/fuzzy_completer.pyo
 ${PYSITELIB}/prompt_toolkit/completion/word_completer.py
 ${PYSITELIB}/prompt_toolkit/completion/word_completer.pyc
 ${PYSITELIB}/prompt_toolkit/completion/word_completer.pyo
