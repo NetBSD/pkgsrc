@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2019/01/12 20:21:31 markd Exp $
+# $NetBSD: Makefile,v 1.16 2019/01/28 10:31:23 markd Exp $
 
 DISTNAME=	collection-bibtexextra
 PKGNAME=	texlive-${DISTNAME}-2018pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	47407
+TEXLIVE_REV=	49351
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -32,6 +32,7 @@ DEPENDS+=	tex-biblatex-[0-9]*:../../print/tex-biblatex
 DEPENDS+=	tex-biblatex-apa-[0-9]*:../../print/tex-biblatex-apa
 # depend biblatex-archaeology
 # depend biblatex-arthistory-bonn
+# depend biblatex-bath
 # depend biblatex-bookinarticle
 # depend biblatex-bookinother
 # depend biblatex-bwl
@@ -69,6 +70,7 @@ DEPENDS+=	tex-biblatex-nature-[0-9]*:../../print/tex-biblatex-nature
 # depend biblatex-sbl
 # depend biblatex-science
 # depend biblatex-shortfields
+# depend biblatex-socialscienceshuberlin
 # depend biblatex-source-division
 # depend biblatex-subseries
 # depend biblatex-swiss-legal
@@ -99,6 +101,7 @@ DEPENDS+=	tex-custom-bib-[0-9]*:../../print/tex-custom-bib
 DEPENDS+=	tex-dk-bib-[0-9]*:../../print/tex-dk-bib
 # depend doipubmed
 # depend ecobiblatex
+# depend econ-bst
 # depend economic
 # depend fbs
 # depend figbib
