@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2019/01/15 19:04:18 adam Exp $
+$NetBSD: distinfo,v 1.4 2019/01/28 08:41:12 adam Exp $
 
 SHA1 (pytest-shutil-1.4.0.tar.gz) = 45440a16f488c730221bdc1076ed14c1376bb794
 RMD160 (pytest-shutil-1.4.0.tar.gz) = b8986635806e2be41e0ac801c320d57a39592f0d
 SHA512 (pytest-shutil-1.4.0.tar.gz) = 778924d0081ff64859d167b10a580c1a922ac09124db2f23f6ef37bfde617032811da6450666fd8e67c610864351f7a7115cc580e8158ab145ccebe943f5c60b
 Size (pytest-shutil-1.4.0.tar.gz) = 21793 bytes
 SHA1 (patch-common_setup.py) = 5cb1d52a64e86043fc26e7e898b6411b7ad69b41
+SHA1 (patch-setup.py) = 572d5d3c84891701bbe5eb1d7285a1658449795a
