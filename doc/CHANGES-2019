@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.490 2019/01/28 14:17:37 adam Exp $
+$NetBSD: CHANGES-2019,v 1.491 2019/01/28 22:39:58 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -880,3 +880,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/tex-colortbl-doc to 1.0d [markd 2019-01-28]
 	Updated misc/py-tqdm to 4.30.0 [adam 2019-01-28]
 	Updated textproc/py-tabulate to 0.8.3 [adam 2019-01-28]
+	Updated www/lighttpd to 1.4.53 [schmonz 2019-01-28]
