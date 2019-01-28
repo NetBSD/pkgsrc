@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2018/05/13 11:56:23 markd Exp $
+# $NetBSD: Makefile,v 1.11 2019/01/28 09:45:00 markd Exp $
 
 DISTNAME=	collection-pstricks
 PKGNAME=	texlive-${DISTNAME}-2018pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	46643
+TEXLIVE_REV=	49316
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -39,6 +39,7 @@ DEPENDS+=	tex-pst-blur-[0-9]*:../../graphics/tex-pst-blur
 # depend pst-cie
 DEPENDS+=	tex-pst-circ-[0-9]*:../../graphics/tex-pst-circ
 DEPENDS+=	tex-pst-coil-[0-9]*:../../graphics/tex-pst-coil
+# depend pst-contourplot
 # depend pst-cox
 # depend pst-dart
 # depend pst-dbicons
@@ -47,6 +48,7 @@ DEPENDS+=	tex-pst-coil-[0-9]*:../../graphics/tex-pst-coil
 DEPENDS+=	tex-pst-eps-[0-9]*:../../graphics/tex-pst-eps
 # depend pst-eucl
 # depend pst-exa
+# depend pst-feyn
 DEPENDS+=	tex-pst-fill-[0-9]*:../../graphics/tex-pst-fill
 # depend pst-fit
 # depend pst-fr3d
@@ -68,9 +70,12 @@ DEPENDS+=	tex-pst-grad-[0-9]*:../../graphics/tex-pst-grad
 # depend pst-layout
 DEPENDS+=	tex-pst-lens-[0-9]*:../../graphics/tex-pst-lens
 # depend pst-light3d
+# depend pst-lsystem
 # depend pst-magneticfield
+# depend pst-marble
 DEPENDS+=	tex-pst-math-[0-9]*:../../graphics/tex-pst-math
 # depend pst-mirror
+# depend pst-moire
 DEPENDS+=	tex-pst-node-[0-9]*:../../graphics/tex-pst-node
 # depend pst-ob3d
 # depend pst-ode
@@ -110,6 +115,7 @@ DEPENDS+=	tex-pst-uml-[0-9]*:../../devel/tex-pst-uml
 # depend pst-uml
 # depend pst-vectorian
 # depend pst-vehicle
+# depend pst-venn
 # depend pst-vowel
 DEPENDS+=	tex-pst-vue3d-[0-9]*:../../graphics/tex-pst-vue3d
 # depend pst2pdf
