@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2018/05/13 11:56:18 markd Exp $
+# $NetBSD: Makefile,v 1.14 2019/01/28 09:39:53 markd Exp $
 
 DISTNAME=	collection-binextra
 PKGNAME=	texlive-${DISTNAME}-2018pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	47421
+TEXLIVE_REV=	49312
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -22,8 +22,10 @@ DEPENDS+=	tex-bibtex8-[0-9]*:../../print/tex-bibtex8
 # depend bundledoc
 # depend checklistings
 DEPENDS+=	chktex-[0-9]*:../../print/chktex
+# depend cluttex
 # depend ctan-o-mat
 # depend ctan_chk
+# depend ctanbib
 # depend ctanify
 # depend ctanupload
 # ctie entirely included in web2c
@@ -69,6 +71,7 @@ DEPENDS+=	tex-make4ht-[0-9]*:../../print/tex-make4ht
 DEPENDS+=	tex-pdfcrop-[0-9]*:../../graphics/tex-pdfcrop
 DEPENDS+=	pdfjam-[0-9]*:../../print/pdfjam
 # depend pdflatexpicscale
+# depend pdftex-quiet
 DEPENDS+=	tex-pdftools-[0-9]*:../../print/tex-pdftools
 # depend pdfxup
 # depend pfarrei
@@ -86,6 +89,7 @@ DEPENDS+=	tex-tex4ebook-[0-9]*:../../print/tex-tex4ebook
 # depend texdiff
 # depend texdirflatten
 DEPENDS+=	tex-texdoc-[0-9]*:../../print/tex-texdoc
+# depend texdoctk
 # depend texfot
 # depend texliveonfly
 # depend texloganalyser
@@ -97,6 +101,7 @@ DEPENDS+=	tex-texdoc-[0-9]*:../../print/tex-texdoc
 # depend tpic2pdftex
 # depend typeoutfileinfo
 # web entirely included in web2c
+# depend xindex
 DEPENDS+=	tex-xindy-[0-9]*:../../textproc/tex-xindy
 
 META_PACKAGE=	yes
