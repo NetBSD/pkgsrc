@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2018/05/03 12:32:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/01/28 09:14:06 markd Exp $
 share/texmf-dist/doc/latex/beamer/AUTHORS.md
+share/texmf-dist/doc/latex/beamer/CHANGELOG.md
 share/texmf-dist/doc/latex/beamer/LICENSE.md
 share/texmf-dist/doc/latex/beamer/README.md
 share/texmf-dist/doc/latex/beamer/beamercolorthemeexample.tex
