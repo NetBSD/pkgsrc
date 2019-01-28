@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/06/30 03:17:52 taca Exp $
+# $NetBSD: Makefile,v 1.4 2019/01/28 14:33:52 schmonz Exp $
 #
 
 DISTNAME=	z-push-${ZPUSH_VERSION}
@@ -23,7 +23,7 @@ ZPUSHLOGDIR=	${VARBASE}/log/z-push
 BUILD_DEFS=	APACHE_USER APACHE_GROUP VARBASE
 USE_TOOLS=	pax
 
-INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} bin
+INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} bin ${ZPUSHDIR}
 
 .include "../../lang/php/phpversion.mk"
 
@@ -48,9 +48,9 @@ OWN_DIRS_PERMS+=	${ZPUSHLOGDIR}		\
 			${APACHE_USER} ${APACHE_GROUP} 0750
 
 CONF_FILES_PERMS+=	${EGDIR}/config.php ${PKG_SYSCONFDIR}/config.php   \
-			${ROOT_USER} ${APACHE_GROUP} 0640
+			${REAL_ROOT_USER} ${APACHE_GROUP} 0640
 CONF_FILES_PERMS+=	${EGDIR}/z-push.conf ${PKG_SYSCONFDIR}/z-push.conf \
-			${ROOT_USER} ${APACHE_GROUP} 0640
+			${REAL_ROOT_USER} ${APACHE_GROUP} 0640
 
 REPLACE_INTERPRETER+=	php
 REPLACE.php.old=	.*php
