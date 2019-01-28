@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/09/01 21:17:54 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/01/28 10:45:26 markd Exp $
 
 DISTNAME=	xstring.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.7c
-TEXLIVE_REV=	31900
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.81
+TEXLIVE_REV=	49363
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/xstring
