@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2017/11/24 15:00:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2019/01/28 04:10:14 gutteridge Exp $
 bin/geany
 include/geany/app.h
 include/geany/build.h
@@ -217,6 +217,7 @@ share/locale/be/LC_MESSAGES/geany.mo
 share/locale/bg/LC_MESSAGES/geany.mo
 share/locale/ca/LC_MESSAGES/geany.mo
 share/locale/cs/LC_MESSAGES/geany.mo
+share/locale/da/LC_MESSAGES/geany.mo
 share/locale/de/LC_MESSAGES/geany.mo
 share/locale/el/LC_MESSAGES/geany.mo
 share/locale/en_GB/LC_MESSAGES/geany.mo
