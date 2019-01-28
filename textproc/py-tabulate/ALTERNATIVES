@@ -1,1 +1,1 @@
-bin/tabulate @PREFIX@/bin/tabulate@PYVERSSUFFIX@
+bin/tabulate @PREFIX@/bin/tabulate-@PYVERSSUFFIX@
