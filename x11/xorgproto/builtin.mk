@@ -1,8 +1,8 @@
-# $NetBSD: builtin.mk,v 1.5 2018/03/31 17:13:30 maya Exp $
+# $NetBSD: builtin.mk,v 1.6 2019/01/28 12:25:35 kamil Exp $
 
 BUILTIN_PKG:=	xorgproto
 
-PRE_XORGPROTO_LIST_MISSING = \
+PRE_XORGPROTO_LIST_MISSING= \
 	applewmproto \
 	dmxproto \
 	lg3dproto \
@@ -10,7 +10,7 @@ PRE_XORGPROTO_LIST_MISSING = \
 	windowswmproto \
 	xcalibrateproto \
 	xf86rushproto
-PRE_XORGPROTO_LIST = \
+PRE_XORGPROTO_LIST= \
 	bigreqsproto \
 	compositeproto \
 	damageproto \
@@ -42,7 +42,7 @@ PRE_XORGPROTO_LIST = \
 	xproxymngproto
 
 # Make xproto last, for the version matching.
-PRE_XORGPROTO_LIST += \
+PRE_XORGPROTO_LIST+= \
 	xproto
 
 # NetBSD-current (with modern xorgproto) has 7.0.32.
