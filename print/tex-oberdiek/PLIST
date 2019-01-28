@@ -1,12 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2018/05/08 10:59:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/01/28 08:21:09 markd Exp $
 bin/pdfatfi
 share/texmf-dist/bibtex/bib/oberdiek/oberdiek-bundle.bib
 share/texmf-dist/bibtex/bib/oberdiek/oberdiek-source.bib
-share/texmf-dist/scripts/oberdiek/luacolor-pre065.lua
 share/texmf-dist/scripts/oberdiek/luacolor.lua
 share/texmf-dist/scripts/oberdiek/magicnum.lua
-share/texmf-dist/scripts/oberdiek/oberdiek.luacolor-pre065.lua
-share/texmf-dist/scripts/oberdiek/oberdiek.luacolor.lua
 share/texmf-dist/scripts/oberdiek/oberdiek.luatex.lua
 share/texmf-dist/scripts/oberdiek/oberdiek.magicnum.lua
 share/texmf-dist/scripts/oberdiek/oberdiek.pdftexcmds.lua
