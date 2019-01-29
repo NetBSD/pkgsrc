@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/06/16 04:06:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/01/29 19:54:29 markd Exp $
 share/texmf-dist/tex/context/third/pgf/basiclayer/t-pgf.tex
 share/texmf-dist/tex/context/third/pgf/basiclayer/t-pgfbim.tex
 share/texmf-dist/tex/context/third/pgf/basiclayer/t-pgfbla.tex
@@ -29,6 +29,7 @@ share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
 share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
 share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
 share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
@@ -51,6 +52,7 @@ share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/graphs/tikzlibrary
 share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzexternalshared.code.tex
 share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary3d.code.tex
 share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryangles.code.tex
+share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryanimations.code.tex
 share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
 share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryautomata.code.tex
 share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybabel.code.tex
@@ -85,6 +87,7 @@ share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplothan
 share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex
 share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryquotes.code.tex
+share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryrdf.code.tex
 share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryscopes.code.tex
 share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshadings.code.tex
 share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshadows.code.tex
@@ -104,6 +107,7 @@ share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarythrough
 share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytrees.code.tex
 share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryturtle.code.tex
+share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryviews.code.tex
 share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 share/texmf-dist/tex/generic/pgf/graphdrawing/lua/LUA_CODING_STYLE
 share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf.lua
@@ -190,10 +194,19 @@ share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/examples/SimpleEdgeDemo
 share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/examples/SimpleHuffman.lua
 share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/examples/example_graph_for_ascii_displayer.txt
 share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/examples/library.lua
+share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/experimental/evolving/GraphAnimationCoordination.lua
+share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/experimental/evolving/GreedyTemporalCycleRemoval.lua
+share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/experimental/evolving/Skambath2016.lua
+share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/experimental/evolving/Supergraph.lua
+share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/experimental/evolving/SupergraphVertexSplitOptimization.lua
+share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/experimental/evolving/TimeSpec.lua
+share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/experimental/evolving/doc.lua
+share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/experimental/evolving/layered.lua
+share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/experimental/evolving/library.lua
 share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/force.lua
 share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/force/CoarseGraph.lua
-share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/force/Control.lua
 share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/force/ControlCoarsening.lua
+share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/force/ControlDeclare.lua
 share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/force/ControlElectric.lua
 share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/force/ControlIteration.lua
 share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/force/ControlSprings.lua
@@ -289,6 +302,16 @@ share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/phylogenetics/Maeusle20
 share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/phylogenetics/PhylogeneticTree.lua
 share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/phylogenetics/SokalMichener1958.lua
 share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/phylogenetics/library.lua
+share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/planar.lua
+share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/planar/BoyerMyrvold2004.lua
+share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/planar/Embedding.lua
+share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/planar/LinkedList.lua
+share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/planar/List.lua
+share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/planar/PDP.lua
+share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/planar/PlanarLayout.lua
+share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/planar/ShiftMethod.lua
+share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/planar/library.lua
+share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/planar/parameters.lua
 share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/routing.lua
 share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/routing/Hints.lua
 share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/routing/NecklaceRouting.lua
@@ -300,6 +323,7 @@ share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/trees/ReingoldTilford19
 share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/trees/SpanningTreeComputation.lua
 share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/trees/doc.lua
 share/texmf-dist/tex/generic/pgf/graphdrawing/lua/pgf/gd/trees/library.lua
+share/texmf-dist/tex/generic/pgf/graphdrawing/tex/experimental/tikzlibrarygraphdrawing.evolving.code.tex
 share/texmf-dist/tex/generic/pgf/graphdrawing/tex/pgflibrarygraphdrawing.circular.code.tex
 share/texmf-dist/tex/generic/pgf/graphdrawing/tex/pgflibrarygraphdrawing.code.tex
 share/texmf-dist/tex/generic/pgf/graphdrawing/tex/pgflibrarygraphdrawing.examples.code.tex
@@ -337,6 +361,7 @@ share/texmf-dist/tex/generic/pgf/libraries/pgflibraryprofiler.code.tex
 share/texmf-dist/tex/generic/pgf/libraries/pgflibraryshadings.code.tex
 share/texmf-dist/tex/generic/pgf/libraries/pgflibrarysnakes.code.tex
 share/texmf-dist/tex/generic/pgf/libraries/pgflibrarysvg.path.code.tex
+share/texmf-dist/tex/generic/pgf/libraries/pgflibrarytimelines.code.tex
 share/texmf-dist/tex/generic/pgf/libraries/shapes/circuits/pgflibraryshapes.gates.ee.IEC.code.tex
 share/texmf-dist/tex/generic/pgf/libraries/shapes/circuits/pgflibraryshapes.gates.ee.code.tex
 share/texmf-dist/tex/generic/pgf/libraries/shapes/circuits/pgflibraryshapes.gates.logic.IEC.code.tex
@@ -366,6 +391,7 @@ share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex
 share/texmf-dist/tex/generic/pgf/math/pgfmathode.code.tex
 share/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 share/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex
+share/texmf-dist/tex/generic/pgf/modules/pgfmoduleanimations.code.tex
 share/texmf-dist/tex/generic/pgf/modules/pgfmodulebending.code.tex
 share/texmf-dist/tex/generic/pgf/modules/pgfmoduledatavisualization.code.tex
 share/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
@@ -377,6 +403,7 @@ share/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 share/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 share/texmf-dist/tex/generic/pgf/modules/pgfmodulesnakes.code.tex
 share/texmf-dist/tex/generic/pgf/modules/pgfmodulesorting.code.tex
+share/texmf-dist/tex/generic/pgf/pgf.revision.tex
 share/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf-via-dvi.def
 share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
@@ -394,6 +421,7 @@ share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-textures.def
 share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-vtex.def
 share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.def
 share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+share/texmf-dist/tex/generic/pgf/systemlayer/pgfsysanimations.code.tex
 share/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 share/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 share/texmf-dist/tex/generic/pgf/utilities/pgfcalendar.code.tex
