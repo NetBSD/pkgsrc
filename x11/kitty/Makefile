@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/12/18 16:06:37 nia Exp $
+# $NetBSD: Makefile,v 1.5 2019/01/29 04:42:57 gutteridge Exp $
 
 DISTNAME=	kitty-0.12.3
 CATEGORIES=	x11
@@ -14,6 +14,8 @@ LICENSE=	gnu-gpl-v3
 EXTRACT_USING=	bsdtar
 USE_TOOLS+=	gmake pkg-config
 BUILD_TARGET=	app
+
+.include "../../mk/bsd.prefs.mk"
 
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-build
@@ -41,8 +43,6 @@ do-install:
 	    --prefix ${DESTDIR}${PREFIX}
 	${INSTALL_DATA} ${WRKSRC}/man/man1/kitty.1 \
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/kitty.1
-
-.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} != "Darwin"
 .include "../../graphics/freetype2/buildlink3.mk"
