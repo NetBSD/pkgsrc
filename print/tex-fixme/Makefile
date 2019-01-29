@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2017/06/21 06:13:16 markd Exp $
+# $NetBSD: Makefile,v 1.9 2019/01/29 10:10:18 markd Exp $
 
 DISTNAME=	fixme
-PKGNAME=	tex-${DISTNAME}-4.4
-TEXLIVE_REV=	43413
+PKGNAME=	tex-${DISTNAME}-4.5
+TEXLIVE_REV=	49591
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/fixme
