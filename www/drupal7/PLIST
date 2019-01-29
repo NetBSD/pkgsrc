@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2018/10/03 10:58:15 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.19.2.1 2019/01/29 12:44:16 bsiegert Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/COPYRIGHT.txt
 share/doc/drupal/INSTALL.mysql.txt
@@ -46,6 +46,7 @@ share/drupal/includes/entity.inc
 share/drupal/includes/errors.inc
 share/drupal/includes/file.inc
 share/drupal/includes/file.mimetypes.inc
+share/drupal/includes/file.phar.inc
 share/drupal/includes/filetransfer/filetransfer.inc
 share/drupal/includes/filetransfer/ftp.inc
 share/drupal/includes/filetransfer/local.inc
@@ -150,6 +151,17 @@ share/drupal/misc/throbber.gif
 share/drupal/misc/timezone.js
 share/drupal/misc/tree-bottom.png
 share/drupal/misc/tree.png
+share/drupal/misc/typo3/drupal-security/PharExtensionInterceptor.php
+share/drupal/misc/typo3/phar-stream-wrapper/LICENSE
+share/drupal/misc/typo3/phar-stream-wrapper/README.md
+share/drupal/misc/typo3/phar-stream-wrapper/composer.json
+share/drupal/misc/typo3/phar-stream-wrapper/src/Assertable.php
+share/drupal/misc/typo3/phar-stream-wrapper/src/Behavior.php
+share/drupal/misc/typo3/phar-stream-wrapper/src/Exception.php
+share/drupal/misc/typo3/phar-stream-wrapper/src/Helper.php
+share/drupal/misc/typo3/phar-stream-wrapper/src/Interceptor/PharExtensionInterceptor.php
+share/drupal/misc/typo3/phar-stream-wrapper/src/Manager.php
+share/drupal/misc/typo3/phar-stream-wrapper/src/PharStreamWrapper.php
 share/drupal/misc/ui/images/ui-bg_flat_0_aaaaaa_40x100.png
 share/drupal/misc/ui/images/ui-bg_flat_75_ffffff_40x100.png
 share/drupal/misc/ui/images/ui-bg_glass_55_fbf9ee_1x400.png
@@ -611,6 +623,7 @@ share/drupal/modules/simpletest/files/image-test.jpg
 share/drupal/modules/simpletest/files/image-test.png
 share/drupal/modules/simpletest/files/javascript-1.txt
 share/drupal/modules/simpletest/files/javascript-2.script
+share/drupal/modules/simpletest/files/phar-1.phar
 share/drupal/modules/simpletest/files/php-1.txt
 share/drupal/modules/simpletest/files/php-2.php
 share/drupal/modules/simpletest/files/sql-1.txt
