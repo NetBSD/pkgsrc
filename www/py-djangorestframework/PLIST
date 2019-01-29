@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2018/10/23 07:57:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2019/01/29 08:34:06 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -191,8 +191,10 @@ ${PYSITELIB}/rest_framework/serializers.pyo
 ${PYSITELIB}/rest_framework/settings.py
 ${PYSITELIB}/rest_framework/settings.pyc
 ${PYSITELIB}/rest_framework/settings.pyo
+${PYSITELIB}/rest_framework/static/rest_framework/css/bootstrap-theme.css
 ${PYSITELIB}/rest_framework/static/rest_framework/css/bootstrap-theme.min.css
 ${PYSITELIB}/rest_framework/static/rest_framework/css/bootstrap-tweaks.css
+${PYSITELIB}/rest_framework/static/rest_framework/css/bootstrap.css
 ${PYSITELIB}/rest_framework/static/rest_framework/css/bootstrap.min.css
 ${PYSITELIB}/rest_framework/static/rest_framework/css/default.css
 ${PYSITELIB}/rest_framework/static/rest_framework/css/font-awesome-4.0.3.css
@@ -218,6 +220,7 @@ ${PYSITELIB}/rest_framework/static/rest_framework/img/glyphicons-halflings-white
 ${PYSITELIB}/rest_framework/static/rest_framework/img/glyphicons-halflings.png
 ${PYSITELIB}/rest_framework/static/rest_framework/img/grid.png
 ${PYSITELIB}/rest_framework/static/rest_framework/js/ajax-form.js
+${PYSITELIB}/rest_framework/static/rest_framework/js/bootstrap.js
 ${PYSITELIB}/rest_framework/static/rest_framework/js/bootstrap.min.js
 ${PYSITELIB}/rest_framework/static/rest_framework/js/coreapi-0.1.1.js
 ${PYSITELIB}/rest_framework/static/rest_framework/js/csrf.js
