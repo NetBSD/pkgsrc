@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2769 2019/01/26 08:10:11 wen Exp $
+# $NetBSD: Makefile,v 1.2770 2019/01/29 14:21:43 jaapb Exp $
 #
 
 COMMENT=	Development utilities
@@ -828,6 +828,7 @@ SUBDIR+=	ocaml-ppxlib
 SUBDIR+=	ocaml-re
 SUBDIR+=	ocaml-react
 SUBDIR+=	ocaml-reactiveData
+SUBDIR+=	ocaml-resource-pooling
 SUBDIR+=	ocaml-result
 SUBDIR+=	ocaml-sexplib
 SUBDIR+=	ocaml-sexplib0
