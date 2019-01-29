@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2016/06/16 04:06:18 markd Exp $
+# $NetBSD: Makefile,v 1.6 2019/01/29 08:29:49 markd Exp $
 
 DISTNAME=	xltxtra
-PKGNAME=	tex-${DISTNAME}-0.6
-TEXLIVE_REV=	39453
+PKGNAME=	tex-${DISTNAME}-0.7
+TEXLIVE_REV=	49555
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/xltxtra
 COMMENT=	Extras files for LaTeX users of XeTeX
 LICENSE=	lppl-1.3c
 
