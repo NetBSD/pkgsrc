@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/11/29 11:21:46 prlw1 Exp $
+# $NetBSD: Makefile,v 1.21 2019/01/29 22:33:58 tnn Exp $
 
 MOZ_BRANCH=		45.9
 MOZ_BRANCH_MINOR=	.0esr
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${MOZ_VER}/source/}
 #MASTER_SITES+=		${MASTER_SITE_MOZILLA:=firefox/releases/${MOZ_VER}/source/}
 EXTRACT_SUFX=		.tar.xz
 
-PKGNAME=	xulrunner45-${MOZ_BRANCH}${MOZ_BRANCH_MINOR:S/esr//:S/b/beta/}
+PKGNAME=	xulrunner${MOZ_BRANCH:C/\..*$//}-${MOZ_BRANCH}${MOZ_BRANCH_MINOR:S/esr//:S/b/beta/}
 PKGREVISION=	7
 CATEGORIES=	devel www
 
@@ -38,18 +38,18 @@ PKGCONFIG_OVERRIDE+=	xulrunner45/installer/mozilla-plugin.pc.in
 CONFIGURE_ARGS+=	--enable-application=xulrunner
 CONFIGURE_ARGS+=	--enable-libxul
 
-ALL_ENV+=		MOZILLA_PKG_NAME=xulrunner45
+ALL_ENV+=		MOZILLA_PKG_NAME=${PKGBASE}
 
 MAKE_ENV+=		FREEBL_NO_DEPEND=0
 
-# workround for link of xulrunner-bin etc.
-LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/xulrunner45 ${COMPILER_RPATH_FLAG}${PREFIX}/lib
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/${PKGBASE}
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib
 LDFLAGS.SunOS+=		-lm
 
-CHECK_INTERPRETER_SKIP+=lib/xulrunner45/sdk/bin/header.py
-CHECK_INTERPRETER_SKIP+=lib/xulrunner45/sdk/bin/typelib.py
-CHECK_INTERPRETER_SKIP+=lib/xulrunner45/sdk/bin/xpidl.py
-CHECK_INTERPRETER_SKIP+=lib/xulrunner45/sdk/bin/xpt.py
+CHECK_INTERPRETER_SKIP+=lib/${PKGBASE}/sdk/bin/header.py
+CHECK_INTERPRETER_SKIP+=lib/${PKGBASE}/sdk/bin/typelib.py
+CHECK_INTERPRETER_SKIP+=lib/${PKGBASE}/sdk/bin/xpidl.py
+CHECK_INTERPRETER_SKIP+=lib/${PKGBASE}/sdk/bin/xpt.py
 
 .include "../../www/firefox45/mozilla-common.mk"
 .include "../../www/firefox45/options.mk"
