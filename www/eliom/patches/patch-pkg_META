@@ -1,16 +1,16 @@
-$NetBSD: patch-pkg_META,v 1.4 2018/11/29 12:04:23 jaapb Exp $
+$NetBSD: patch-pkg_META,v 1.5 2019/01/29 13:33:00 jaapb Exp $
 
-Remove deprecated tyxml.syntax (patch from upstream)
---- pkg/META.orig	2018-02-08 14:30:46.000000000 +0000
+Remove camlp4 support (no longer in js_of_ocaml)
+--- pkg/META.orig	2018-12-19 14:15:17.000000000 +0000
 +++ pkg/META
 @@ -98,8 +98,8 @@ package "syntax" (
      description = "Syntax extension: predefined commonly use syntaxes"
      version = "[distributed with Eliom]"
  
--    requires(syntax, preprocessor) = "js_of_ocaml.syntax,js_of_ocaml-camlp4.deriving,lwt.syntax,tyxml.syntax"
--    requires(syntax, toploop) = "js_of_ocaml.syntax,js_of_ocaml-camlp4.deriving,lwt.syntax,tyxml.syntax"
-+    requires(syntax, preprocessor) = "js_of_ocaml.syntax,js_of_ocaml-camlp4.deriving,lwt_camlp4"
-+    requires(syntax, toploop) = "js_of_ocaml.syntax,js_of_ocaml-camlp4.deriving,lwt_camlp4"
+-    requires(syntax, preprocessor) = "js_of_ocaml-camlp4,js_of_ocaml-camlp4.deriving,lwt_camlp4"
+-    requires(syntax, toploop) = "js_of_ocaml-camlp4,js_of_ocaml-camlp4.deriving,lwt_camlp4"
++    requires(syntax, preprocessor) = "lwt_camlp4"
++    requires(syntax, toploop) = "lwt_camlp4"
      archive(syntax, preprocessor) = "-ignore dummy"
    )
  
