@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/06/16 04:06:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/01/29 19:54:29 markd Exp $
 share/texmf-dist/doc/generic/pgf/AUTHORS
 share/texmf-dist/doc/generic/pgf/ChangeLog
 share/texmf-dist/doc/generic/pgf/FILES
@@ -25,6 +25,7 @@ share/texmf-dist/doc/generic/pgf/licenses/manifest-documentation.txt
 share/texmf-dist/doc/generic/pgf/macros/pgfmanual-en-macros.tex
 share/texmf-dist/doc/generic/pgf/pgfmanual.pdf
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-base-actions.tex
+share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-base-animations.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-base-arrows.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-base-decorations.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-base-design.tex
@@ -100,6 +101,7 @@ share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-library-petri.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-library-plot-handlers.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-library-plot-marks.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-library-profiler.tex
+share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-library-rdf.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-library-shadings.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-library-shadows.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-library-shapes.tex
@@ -108,6 +110,7 @@ share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-library-svg-path.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-library-through.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-library-trees.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-library-turtle.tex
+share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-library-views.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-license.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-main-body.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-main-preamble.tex
@@ -124,11 +127,13 @@ share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-pgfcalendar.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-pgffor.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-pgfkeys.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-pgfkeysfiltered.tex
+share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-pgfsys-animations.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-pgfsys-commands.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-pgfsys-overview.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-pgfsys-paths.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-pgfsys-protocol.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-tikz-actions.tex
+share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-tikz-animations.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-tikz-arrows.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-tikz-coordinates.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-tikz-decorations.tex
@@ -173,8 +178,24 @@ share/texmf-dist/doc/generic/pgf/version-for-dvipdfmx/en/pgfmanual-test.tex
 share/texmf-dist/doc/generic/pgf/version-for-dvipdfmx/en/pgfmanual.tex
 share/texmf-dist/doc/generic/pgf/version-for-dvipdfmx/pgfmanual-dvipdfmx.cfg
 share/texmf-dist/doc/generic/pgf/version-for-dvips/en/Makefile
+share/texmf-dist/doc/generic/pgf/version-for-dvips/en/pgfmanual-test.tex
 share/texmf-dist/doc/generic/pgf/version-for-dvips/en/pgfmanual.tex
 share/texmf-dist/doc/generic/pgf/version-for-dvips/pgfmanual-dvips.cfg
+share/texmf-dist/doc/generic/pgf/version-for-dvisvgm/en/Makefile
+share/texmf-dist/doc/generic/pgf/version-for-dvisvgm/en/color.cfg
+share/texmf-dist/doc/generic/pgf/version-for-dvisvgm/en/pgfmanual-test.html
+share/texmf-dist/doc/generic/pgf/version-for-dvisvgm/en/pgfmanual-test.tex
+share/texmf-dist/doc/generic/pgf/version-for-dvisvgm/en/pgfmanual.html
+share/texmf-dist/doc/generic/pgf/version-for-dvisvgm/en/pgfmanual.tex
+share/texmf-dist/doc/generic/pgf/version-for-dvisvgm/en/plots/pgf-asymptotic-example.table
+share/texmf-dist/doc/generic/pgf/version-for-dvisvgm/en/plots/pgf-exp.table
+share/texmf-dist/doc/generic/pgf/version-for-dvisvgm/en/plots/pgf-parametric-example.table
+share/texmf-dist/doc/generic/pgf/version-for-dvisvgm/en/plots/pgf-sin.table
+share/texmf-dist/doc/generic/pgf/version-for-dvisvgm/en/plots/pgf-tan-example.table
+share/texmf-dist/doc/generic/pgf/version-for-dvisvgm/en/plots/pgf-x.table
+share/texmf-dist/doc/generic/pgf/version-for-dvisvgm/en/plots/pgfmanual-sine.table
+share/texmf-dist/doc/generic/pgf/version-for-dvisvgm/en/plots/pgfplotgnuplot-example.table
+share/texmf-dist/doc/generic/pgf/version-for-dvisvgm/pgfmanual-dvisvgm.cfg
 share/texmf-dist/doc/generic/pgf/version-for-luatex/en/Makefile
 share/texmf-dist/doc/generic/pgf/version-for-luatex/en/pgfmanual-test.tex
 share/texmf-dist/doc/generic/pgf/version-for-luatex/en/pgfmanual.tex
