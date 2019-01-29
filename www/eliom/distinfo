@@ -1,20 +1,8 @@
-$NetBSD: distinfo,v 1.12 2018/11/29 12:04:23 jaapb Exp $
+$NetBSD: distinfo,v 1.13 2019/01/29 13:33:00 jaapb Exp $
 
-SHA1 (eliom-6.3.0.tar.gz) = dcb78ec42965d626f6891c5f01249a2afa29a820
-RMD160 (eliom-6.3.0.tar.gz) = 98e8c64beb41a130d2e38959986285a074a04f79
-SHA512 (eliom-6.3.0.tar.gz) = d597e7c432dbafb8c4b8f36bf3c8ad43867cfdb4b6d9138358e3aff2e67bdf7c50dc4676cdf03b42da5f66749db3b2e3a9357bc4df9a0754c775480785e96f41
-Size (eliom-6.3.0.tar.gz) = 728342 bytes
-SHA1 (patch-pkg_META) = 3bc8da3cf9039e7d9aae9c4f6747002a8e7ec002
+SHA1 (eliom-6.6.0.tar.gz) = abd19c15f98ee9a7773132822440000e191757bf
+RMD160 (eliom-6.6.0.tar.gz) = 768a016251425b02b7995fb223b7714cb1a1c434
+SHA512 (eliom-6.6.0.tar.gz) = fef515c36c0663e553d83e14f0a38e2af84c7bc5707a39d23a107d69287dfdebc63145f6c97e5a3d86ea2d762af98c501725b71d4e28bff8ae4af83b928c59e6
+Size (eliom-6.6.0.tar.gz) = 653174 bytes
+SHA1 (patch-pkg_META) = 8fea0fe537cdc68d7a2e1a9cabc017ab2383d470
 SHA1 (patch-pkg_build.ml) = 8597e17fc869b7a8e93ee30f551a92c694617dbc
-SHA1 (patch-src__tags) = 30b01766674fbb8361792983f3b92fdd081c909a
-SHA1 (patch-src_lib_client_eliom__client.js) = 9b12dcd6dae9f554c6c81cefc4e548fbbd163978
-SHA1 (patch-src_lib_eliom__client.client.ml) = e66600dcf8011d3833756ea25f7e1884fd090815
-SHA1 (patch-src_lib_eliom__config.server.mli) = 1279df3d3514a64d2aa4a9276a672fe5aeeee14b
-SHA1 (patch-src_lib_eliom__content__core.client.mk) = 4177935bfb544c4365cff84b982933779d1ed857
-SHA1 (patch-src_lib_eliom__content__core.client.mli) = 2d265a4aac7bbd1fa0a5723fc5aa07b0d799d6ad
-SHA1 (patch-src_lib_eliom__content__core.server.ml) = ffb3b1f8dcffeb906d903d66592bbf8bc935da05
-SHA1 (patch-src_lib_eliom__content__core.server.mli) = 4298ca16ef2cc02273da3b0c696a469c4d8aee8b
-SHA1 (patch-src_lib_eliom__runtime.shared.ml) = e56788b4ff5ccdecd3a4925a83deea636c14275b
-SHA1 (patch-src_lib_eliom__runtime.shared.mli) = 07f43bad1362d9e6252ccc2bb76c656cfb3f42ec
-SHA1 (patch-src_lib_eliom__shared__content.eliom) = d6627d04b28000571b81c46f3eb6525131612a4f
-SHA1 (patch-src_lib_server_eliommod.ml) = 28f66e505b12e18ff63e45db80dd6e02bb92ec28
