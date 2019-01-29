@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2018/11/29 11:21:53 prlw1 Exp $
+# $NetBSD: Makefile,v 1.12 2019/01/29 22:33:57 tnn Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
-PKGNAME=	thunderbird45-${TB_VER}
+PKGNAME=	thunderbird${TB_VER:C/\..*$//}-${TB_VER}
 PKGREVISION=	9
 TB_VER=		45.8.0
 CATEGORIES=	mail
@@ -24,10 +24,11 @@ CONFIGURE_ARGS+=	--enable-application=mail
 # Disable WebRTC support for Thunderbird unconditionally.
 CONFIGURE_ARGS+=	--disable-webrtc
 
-NOT_PAX_MPROTECT_SAFE+=	lib/thunderbird45/thunderbird
-NOT_PAX_MPROTECT_SAFE+=	lib/thunderbird45/thunderbird-bin
+NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/thunderbird
+NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/thunderbird-bin
 
-ALL_ENV+=		MOZILLA_PKG_NAME=thunderbird45
+ALL_ENV+=		MOZILLA_PKG_NAME=${PKGBASE}
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/${PKGBASE}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -61,8 +62,8 @@ do-build:
 # XXX for some reason it doesn't work unless -j is explicitly specified
 	cd ${WRKSRC}/${OBJDIR} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} -j${MAKE_JOBS:U1}
 
-MOZILLA=thunderbird45
-MOZILLA_NAME=thunderbird45
+MOZILLA=	${PKGBASE}
+MOZILLA_NAME=	${PKGBASE}
 post-build:
 	${SED} -e 's|@MOZILLA@|${MOZILLA}|g'				\
 	  -e 's|@MOZILLA_NAME@|${MOZILLA_NAME}|g'			\
@@ -70,7 +71,7 @@ post-build:
 	  < ${FILESDIR}/desktop.in					\
 	  > ${WRKDIR}/desktop
 
-INSTALLATION_DIRS+=	lib/${MOZILLA}/extensions
+INSTALLATION_DIRS+=	lib/${PKGBASE}/extensions
 INSTALLATION_DIRS+=	share/applications share/pixmaps
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/desktop				\
