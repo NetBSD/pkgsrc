@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2017/10/23 06:46:58 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/01/29 09:32:37 markd Exp $
 share/texmf-dist/doc/latex/ocgx2/ChangeLog
-share/texmf-dist/doc/latex/ocgx2/README
+share/texmf-dist/doc/latex/ocgx2/README.txt
