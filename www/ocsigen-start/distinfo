@@ -1,12 +1,8 @@
-$NetBSD: distinfo,v 1.3 2018/06/06 10:50:51 jaapb Exp $
+$NetBSD: distinfo,v 1.4 2019/01/29 14:23:07 jaapb Exp $
 
-SHA1 (ocsigen-start-1.1.0.tar.gz) = 17227ab765b6a7a794938353415d226cbfcfc885
-RMD160 (ocsigen-start-1.1.0.tar.gz) = bc5a6814054a4abf6d40a5c70c6b26293a81668e
-SHA512 (ocsigen-start-1.1.0.tar.gz) = 0e55c602dac8e24df03b462d9c4924fab0a0151a8877aafe44ad3ef0f17338ee758b5803dbebc911ed9818cba97751d6cea2623ffb3dd3887a1d79f1dd8d6f0a
-Size (ocsigen-start-1.1.0.tar.gz) = 1034520 bytes
-SHA1 (patch-Makefile.options) = 0291679dc7250c0abac1f2cd7a960c77202fd96e
+SHA1 (ocsigen-start-1.5.0.tar.gz) = 7f1af6856dd3c77725634c89a60389a72e86bb63
+RMD160 (ocsigen-start-1.5.0.tar.gz) = 6e4801f3e2daa33e700171c9a7c2677a7ba58a92
+SHA512 (ocsigen-start-1.5.0.tar.gz) = 10cf41e98a025a448c32835c2d1e76a44db853d575c2df2d61a6989ae00d4f8ae10fdf6a21a4d10bb3c3a3e3fb31885b8b1ff743d1518516cdf860430b09d183
+Size (ocsigen-start-1.5.0.tar.gz) = 1035174 bytes
 SHA1 (patch-template.distillery_Makefile.db) = fd3ffe0453f1dd68270435c3176be7a489f3c04b
-SHA1 (patch-template.distillery_Makefile.mobile) = 50e2f2b28881a100ac94982de5187c230e0bb95e
-SHA1 (patch-template.distillery_Makefile.options) = c9604909a345f47b7cf7429919c6921cf6821591
-SHA1 (patch-template.distillery_Makefile.style) = a3b449916340ab339abcd02e85892f08c6c4093f
-SHA1 (patch-template.distillery_PROJECT__NAME.eliom) = 59ed67268ce9f2a6756bb564762d54a38e803810
+SHA1 (patch-template.distillery_Makefile.style) = f6834831e0a167cfe7def779f801d315d5e7df9a
