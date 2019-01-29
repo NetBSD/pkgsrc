@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2018/11/12 16:10:29 jaapb Exp $
+# $NetBSD: Makefile,v 1.6 2019/01/29 14:23:07 jaapb Exp $
 
 GITHUB_PROJECT=	ocsigen-start
-DISTNAME=	${GITHUB_PROJECT}-1.1.0
-PKGREVISION=	4
+DISTNAME=	${GITHUB_PROJECT}-1.5.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
@@ -26,7 +25,7 @@ MAKE_ENV+=	NATIVE=no
 
 DEPENDS+=	eliom>=6.3:../../www/eliom
 
-SUBST_CLASSES+=	fix-settings fix-md5
+SUBST_CLASSES+=	fix-settings
 SUBST_STAGE.fix-settings=	pre-configure
 SUBST_FILES.fix-settings= template.distillery/Makefile.db
 SUBST_FILES.fix-settings+=	template.distillery/Makefile.options
@@ -35,6 +34,7 @@ SUBST_SED.fix-settings+=	-e 's,$$(shell $$(OPAM) config var share),${PREFIX}/sha
 SUBST_SED.fix-settings+=	-e '/USE_SASS/s,yes,no,'
 SUBST_SED.fix-settings+=	-e '/USE_NPM/s,yes,no,'
 
+SUBST_CLASSES+=	fix-md5
 SUBST_STAGE.fix-md5=	pre-configure
 SUBST_FILES.fix-md5=	template.distillery/Makefile.mobile
 SUBST_FILES.fix-md5+=	template.distillery/Makefile.os
@@ -47,6 +47,7 @@ pre-configure:
 .include "../../databases/ocaml-macaque/buildlink3.mk"
 .include "../../devel/ocaml-lwt_camlp4/buildlink3.mk"
 .include "../../devel/ocaml-lwt_log/buildlink3.mk"
+.include "../../devel/ocaml-resource-pooling/buildlink3.mk"
 .include "../../devel/ocaml-yojson/buildlink3.mk"
 .include "../../security/ocaml-safepass/buildlink3.mk"
 .include "../../www/ocsigen-i18n/buildlink3.mk"
