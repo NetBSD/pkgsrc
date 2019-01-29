@@ -1,3 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/29 23:43:13 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/01/29 08:03:36 markd Exp $
+share/texmf-dist/doc/latex/nomencl/Makefile
 share/texmf-dist/doc/latex/nomencl/README
 share/texmf-dist/doc/latex/nomencl/nomencl.pdf
+share/texmf-dist/doc/latex/nomencl/sample01.pdf
+share/texmf-dist/doc/latex/nomencl/sample01.tex
+share/texmf-dist/doc/latex/nomencl/sample02.pdf
+share/texmf-dist/doc/latex/nomencl/sample02.tex
+share/texmf-dist/doc/latex/nomencl/sample03.pdf
+share/texmf-dist/doc/latex/nomencl/sample03.tex
+share/texmf-dist/doc/latex/nomencl/sample04.cfg
+share/texmf-dist/doc/latex/nomencl/sample04.pdf
+share/texmf-dist/doc/latex/nomencl/sample04.tex
+share/texmf-dist/doc/latex/nomencl/sample05.cfg
+share/texmf-dist/doc/latex/nomencl/sample05.pdf
+share/texmf-dist/doc/latex/nomencl/sample05.tex
+share/texmf-dist/doc/latex/nomencl/sample06.cfg
