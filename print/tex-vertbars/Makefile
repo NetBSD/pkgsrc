@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2016/01/26 10:32:14 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/01/29 05:43:25 markd Exp $
 
 DISTNAME=	vertbars
-PKGNAME=	tex-${DISTNAME}-1.0b
-TEXLIVE_REV=	20589
+PKGNAME=	tex-${DISTNAME}-1.0c
+TEXLIVE_REV=	49429
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Mark vertical rules in margin of text
