@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/06/05 16:10:43 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/01/29 13:34:57 jaapb Exp $
 ${OCAML_SITELIB}/ocsigen-toolkit/META
 ${OCAML_SITELIB}/ocsigen-toolkit/client/ot_buttons.cmi
 ${OCAML_SITELIB}/ocsigen-toolkit/client/ot_buttons.cmo
@@ -40,6 +40,8 @@ ${OCAML_SITELIB}/ocsigen-toolkit/client/ot_swipe.cmi
 ${OCAML_SITELIB}/ocsigen-toolkit/client/ot_swipe.cmo
 ${OCAML_SITELIB}/ocsigen-toolkit/client/ot_time_picker.cmi
 ${OCAML_SITELIB}/ocsigen-toolkit/client/ot_time_picker.cmo
+${OCAML_SITELIB}/ocsigen-toolkit/client/ot_tip.cmi
+${OCAML_SITELIB}/ocsigen-toolkit/client/ot_tip.cmo
 ${OCAML_SITELIB}/ocsigen-toolkit/client/ot_toggle.cmi
 ${OCAML_SITELIB}/ocsigen-toolkit/client/ot_toggle.cmo
 ${OCAML_SITELIB}/ocsigen-toolkit/server/ocsigen-toolkit.server.cma
@@ -85,6 +87,8 @@ ${OCAML_SITELIB}/ocsigen-toolkit/server/ot_swipe.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-toolkit/server/ot_swipe.cmx
 ${OCAML_SITELIB}/ocsigen-toolkit/server/ot_time_picker.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-toolkit/server/ot_time_picker.cmx
+${OCAML_SITELIB}/ocsigen-toolkit/server/ot_tip.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-toolkit/server/ot_tip.cmx
 ${OCAML_SITELIB}/ocsigen-toolkit/server/ot_toggle.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-toolkit/server/ot_toggle.cmx
 share/ocsigen-toolkit/css/ot_buttons.css
