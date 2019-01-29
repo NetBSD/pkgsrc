@@ -1,18 +1,18 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: nsd.sh,v 1.4 2015/03/09 11:34:26 pettai Exp $
+# $NetBSD: nlnsd.sh,v 1.1 2019/01/29 14:54:03 ryoon Exp $
 #
-# PROVIDE: nsd
+# PROVIDE: nlnsd
 # REQUIRE: DAEMON
 #
 
 . /etc/rc.subr
 
-name="nsd"
+name="nlnsd"
 rcvar=${name}
 
-command=@PREFIX@/sbin/${name}
-pidfile=/var/run/${name}/${name}.pid
+command=@PREFIX@/sbin/nsd
+pidfile=/var/run/nsd/nsd.pid
 required_files="@PKG_SYSCONFDIR@/nsd.conf"
 start_precmd="nsd_precmd"
 
