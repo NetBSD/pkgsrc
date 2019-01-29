@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/01/20 13:20:02 adam Exp $
+$NetBSD: distinfo,v 1.6 2019/01/29 14:30:03 adam Exp $
 
-SHA1 (waitress-1.2.0.tar.gz) = 9dd4498bdd3569c5c090aa9d269772faea50776b
-RMD160 (waitress-1.2.0.tar.gz) = da5f203000c12af71c52dbef3d71a72625cd8c0f
-SHA512 (waitress-1.2.0.tar.gz) = 1c3094aef5bf6f438f23eb2ff6c79e2dc16350f11ca52487ab803b615124c682426ce25b8525d2a711c9a2e44d7dd938fc5ccac07fe9fc9edaaf6ac05288dd4a
-Size (waitress-1.2.0.tar.gz) = 161902 bytes
+SHA1 (waitress-1.2.1.tar.gz) = a51df67a6755cb37e5a7ba88b9c52c299dd22dd4
+RMD160 (waitress-1.2.1.tar.gz) = 890dd9a44e133b770591fcb25eb396ac57f3762d
+SHA512 (waitress-1.2.1.tar.gz) = 6c06fb799aa277a5e53fc085de3e284c558327f3df7fd2f06771e87f741bdf911a8e0ed2f13f7aa115ab13d4364da27b54984592db6ce3a4326723a7d4c7f7c3
+Size (waitress-1.2.1.tar.gz) = 162588 bytes
