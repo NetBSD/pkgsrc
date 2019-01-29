@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.20 2018/10/09 22:55:48 maya Exp $
+$NetBSD: README,v 1.21 2019/01/29 03:11:03 gutteridge Exp $
 
 pkgsrc is a framework for building software on UNIX-like systems.
 
@@ -12,7 +12,7 @@ build packages, use:
 
 Where $PREFIX is where you've chosen to install packages (typically /usr/pkg)
 
-Bugs and patches can be filed in the follow link (use category 'pkg'):
+Bugs and patches can be filed in the following link (use category 'pkg'):
 https://www.netbsd.org/cgi-bin/sendpr.cgi?gndb=netbsd
 
 To fetch the main CVS repository:
