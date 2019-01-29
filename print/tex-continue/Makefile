@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/06/22 10:53:01 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/01/29 06:06:14 markd Exp $
 
 DISTNAME=	continue
-PKGNAME=	tex-${DISTNAME}-0.1
-TEXLIVE_REV=	39308
+PKGNAME=	tex-${DISTNAME}-0.2
+TEXLIVE_REV=	49449
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/continue
