@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2018/05/13 11:56:18 markd Exp $
+# $NetBSD: Makefile,v 1.13 2019/01/29 07:05:31 markd Exp $
 
 DISTNAME=	collection-fontsextra
 PKGNAME=	texlive-${DISTNAME}-2018pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	46869
+TEXLIVE_REV=	49478
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -89,6 +89,7 @@ DEPENDS+=	tex-cookingsymbols-[0-9]*:../../fonts/tex-cookingsymbols
 DEPENDS+=	tex-countriesofeurope-[0-9]*:../../fonts/tex-countriesofeurope
 DEPENDS+=	tex-courier-scaled-[0-9]*:../../fonts/tex-courier-scaled
 # depend crimson
+# depend crimsonpro
 DEPENDS+=	tex-cryst-[0-9]*:../../fonts/tex-cryst
 DEPENDS+=	tex-cyklop-[0-9]*:../../fonts/tex-cyklop
 DEPENDS+=	tex-dancers-[0-9]*:../../fonts/tex-dancers
@@ -102,6 +103,7 @@ DEPENDS+=	tex-doublestroke-[0-9]*:../../fonts/tex-doublestroke
 DEPENDS+=	tex-dozenal-[0-9]*:../../fonts/tex-dozenal
 DEPENDS+=	tex-drm-[0-9]*:../../fonts/tex-drm
 DEPENDS+=	tex-droid-[0-9]*:../../fonts/tex-droid
+# depend dsserif
 DEPENDS+=	tex-duerer-[0-9]*:../../fonts/tex-duerer
 DEPENDS+=	tex-duerer-latex-[0-9]*:../../fonts/tex-duerer-latex
 DEPENDS+=	tex-dutchcal-[0-9]*:../../fonts/tex-dutchcal
@@ -128,6 +130,8 @@ DEPENDS+=	tex-fetamont-[0-9]*:../../fonts/tex-fetamont
 DEPENDS+=	tex-feyn-[0-9]*:../../fonts/tex-feyn
 DEPENDS+=	tex-fge-[0-9]*:../../fonts/tex-fge
 DEPENDS+=	tex-fira-[0-9]*:../../fonts/tex-fira
+# depend firamath
+# depend firamath-otf
 DEPENDS+=	tex-foekfont-[0-9]*:../../fonts/tex-foekfont
 DEPENDS+=	tex-fonetika-[0-9]*:../../fonts/tex-fonetika
 DEPENDS+=	tex-fontawesome-[0-9]*:../../fonts/tex-fontawesome
@@ -176,6 +180,9 @@ DEPENDS+=	tex-lfb-[0-9]*:../../fonts/tex-lfb
 DEPENDS+=	tex-libertine-[0-9]*:../../fonts/tex-libertine
 # depend libertinegc
 # depend libertinus
+# depend libertinus-fonts
+# depend libertinus-otf
+# depend libertinus-type1
 # depend libertinust1math
 DEPENDS+=	tex-librebaskerville-[0-9]*:../../fonts/tex-librebaskerville
 # depend librebodoni
@@ -251,7 +258,10 @@ DEPENDS+=	tex-sourcesanspro-[0-9]*:../../fonts/tex-sourcesanspro
 DEPENDS+=	tex-sourceserifpro-[0-9]*:../../fonts/tex-sourceserifpro
 DEPENDS+=	tex-starfont-[0-9]*:../../fonts/tex-starfont
 DEPENDS+=	tex-staves-[0-9]*:../../fonts/tex-staves
+# depend stickstoo
 DEPENDS+=	tex-stix-[0-9]*:../../fonts/tex-stix
+# depend stix2-otf
+# depend stix2-type1
 DEPENDS+=	tex-superiors-[0-9]*:../../fonts/tex-superiors
 # depend svrsymbols
 DEPENDS+=	tex-tapir-[0-9]*:../../fonts/tex-tapir
