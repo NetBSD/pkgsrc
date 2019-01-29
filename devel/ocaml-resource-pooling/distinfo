@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/01/29 14:20:26 jaapb Exp $
+
+SHA1 (resource-pooling-0.6.tar.gz) = 3955118519a90634dfb0e467f482c9c44b3874cc
+RMD160 (resource-pooling-0.6.tar.gz) = 0d5c347c3d6adb4e0e3e3b59309e08e306170e98
+SHA512 (resource-pooling-0.6.tar.gz) = 2da07942c1adc09f60f493330ea67b6577c8bea13a9a70ac90f0ff29041bc3a88a9ea261e87864c6b1348076ba046b989ce39f59aa6d725395634b326e85e26d
+Size (resource-pooling-0.6.tar.gz) = 65912 bytes
