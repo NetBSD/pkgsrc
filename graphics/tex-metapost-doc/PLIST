@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:29:38 rillig Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/01/29 06:45:25 markd Exp $
+share/texmf-dist/doc/metapost/base/CHANGES
 share/texmf-dist/doc/metapost/base/grdemo-doc.pdf
 share/texmf-dist/doc/metapost/base/grdemo.pdf
-share/texmf-dist/doc/metapost/base/index.html
 share/texmf-dist/doc/metapost/base/mpboxes.pdf
 share/texmf-dist/doc/metapost/base/mpgraph.pdf
 share/texmf-dist/doc/metapost/base/mpintro.pdf
