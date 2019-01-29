@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2017/06/21 08:28:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2019/01/29 09:58:32 markd Exp $
 share/texmf-dist/doc/latex/koma-script/INSTALL.txt
 share/texmf-dist/doc/latex/koma-script/INSTALLD.txt
 share/texmf-dist/doc/latex/koma-script/README
@@ -20,7 +20,7 @@ share/texmf-dist/doc/latex/koma-script/scrguide.pdf
 share/texmf-dist/doc/latex/koma-script/scrguien.html
 share/texmf-dist/doc/latex/koma-script/scrguien.pdf
 share/texmf-dist/doc/latex/koma-script/scrhack.html
-share/texmf-dist/doc/latex/koma-script/scrhack.pdf
+share/texmf-dist/doc/latex/koma-script/scrlayer-fancyhdr.pdf
 share/texmf-dist/doc/latex/koma-script/scrlayer-notecolumn.html
 share/texmf-dist/doc/latex/koma-script/scrlayer-scrpage.html
 share/texmf-dist/doc/latex/koma-script/scrlayer.html
@@ -204,6 +204,7 @@ share/texmf-dist/source/latex/koma-script/scrkernel-tocstyle.dtx
 share/texmf-dist/source/latex/koma-script/scrkernel-typearea.dtx
 share/texmf-dist/source/latex/koma-script/scrkernel-variables.dtx
 share/texmf-dist/source/latex/koma-script/scrkernel-version.dtx
+share/texmf-dist/source/latex/koma-script/scrlayer-fancyhdr.dtx
 share/texmf-dist/source/latex/koma-script/scrlayer-notecolumn.dtx
 share/texmf-dist/source/latex/koma-script/scrlayer-scrpage.dtx
 share/texmf-dist/source/latex/koma-script/scrlayer.dtx
@@ -249,6 +250,7 @@ share/texmf-dist/tex/latex/koma-script/scrfontsizes.sty
 share/texmf-dist/tex/latex/koma-script/scrhack.sty
 share/texmf-dist/tex/latex/koma-script/scrjura.sty
 share/texmf-dist/tex/latex/koma-script/scrkbase.sty
+share/texmf-dist/tex/latex/koma-script/scrlayer-fancyhdr.sty
 share/texmf-dist/tex/latex/koma-script/scrlayer-notecolumn.sty
 share/texmf-dist/tex/latex/koma-script/scrlayer-scrpage.sty
 share/texmf-dist/tex/latex/koma-script/scrlayer.sty
