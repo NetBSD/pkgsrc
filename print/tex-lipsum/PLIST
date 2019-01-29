@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/01/08 04:41:57 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/01/29 19:47:39 markd Exp $
+share/texmf-dist/tex/latex/lipsum/cicero.ltd.tex
+share/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex
 share/texmf-dist/tex/latex/lipsum/lipsum.sty
