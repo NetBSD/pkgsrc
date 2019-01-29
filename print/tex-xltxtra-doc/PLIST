@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2011/01/21 18:00:52 minskim Exp $
-share/texmf-dist/doc/latex/xltxtra/README
-share/texmf-dist/doc/latex/xltxtra/xltxtra.pdf
+@comment $NetBSD: PLIST,v 1.3 2019/01/29 08:29:49 markd Exp $
+share/texmf-dist/doc/xelatex/xltxtra/README.md
+share/texmf-dist/doc/xelatex/xltxtra/xltxtra.pdf
