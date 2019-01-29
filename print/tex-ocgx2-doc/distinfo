@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2018/05/08 11:02:37 markd Exp $
+$NetBSD: distinfo,v 1.4 2019/01/29 09:32:37 markd Exp $
 
-SHA1 (tex-ocgx2-47334/ocgx2.doc.tar.xz) = 91a2307555b97396c9c54a75ff5cfc44bfdb41c2
-RMD160 (tex-ocgx2-47334/ocgx2.doc.tar.xz) = 148883d33ef852a044682b5f425d8ad945cde512
-SHA512 (tex-ocgx2-47334/ocgx2.doc.tar.xz) = 8211c1aa4db1fc93f6d66cfdba1a57092f05f46937b655989842cc95d7fc4c5a82babde6b91fc0df892094e7ed01f08be34e2513818bed28eb150400e5223116
-Size (tex-ocgx2-47334/ocgx2.doc.tar.xz) = 3964 bytes
+SHA1 (tex-ocgx2-49580/ocgx2.doc.tar.xz) = 46a598f9c1e68d6ac148f5cea89bacbf963118d2
+RMD160 (tex-ocgx2-49580/ocgx2.doc.tar.xz) = cf77ed5aca7d7bf5ff8544ec9ab605270237b4af
+SHA512 (tex-ocgx2-49580/ocgx2.doc.tar.xz) = 921489000e09deea03520c0e1db25ed5ec69bf333b682134d8a2bb50ccefc9c2e022f90b53cd80275f7b4a3fe7f8a5bae08ead6db0d1e2d0fec5004a01a03fbd
+Size (tex-ocgx2-49580/ocgx2.doc.tar.xz) = 4556 bytes
