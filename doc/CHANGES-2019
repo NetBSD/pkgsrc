@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.497 2019/01/29 10:39:53 markd Exp $
+$NetBSD: CHANGES-2019,v 1.498 2019/01/29 12:44:06 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -928,3 +928,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/tex-mcf2graph-doc to 4.35 [markd 2019-01-29]
 	Updated fonts/tex-fpl to 1.003 [markd 2019-01-29]
 	Updated fonts/tex-fpl-doc to 1.003 [markd 2019-01-29]
+	Updated devel/js_of_ocaml to 3.3.0 [jaapb 2019-01-29]
