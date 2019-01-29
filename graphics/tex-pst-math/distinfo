@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 21:34:29 agc Exp $
+$NetBSD: distinfo,v 1.4 2019/01/29 05:50:36 markd Exp $
 
-SHA1 (tex-pst-math-34786/pst-math.tar.xz) = 45c440af5fc6d88272376ec6f12224a4171a7d0a
-RMD160 (tex-pst-math-34786/pst-math.tar.xz) = a7997ddd06cc361ea29a42eaec169b46143b5269
-SHA512 (tex-pst-math-34786/pst-math.tar.xz) = 251ded07fdc6a65e344af6af421efe22cdd739d8241800f8c7b255db97bcc6ed7acceea4fd274be16e67db8d591936fb04c5a8e1b6a10784dc9d6748104bdfbe
-Size (tex-pst-math-34786/pst-math.tar.xz) = 4452 bytes
+SHA1 (tex-pst-math-49425/pst-math.tar.xz) = ed002b136ff36506b0f02290241d6c4f0fa05c2f
+RMD160 (tex-pst-math-49425/pst-math.tar.xz) = 5190610729feb1d4ba070e8c9c1ab80468151e15
+SHA512 (tex-pst-math-49425/pst-math.tar.xz) = 591a228bb7e3b9704ab79dfe10e9ead94abadf0e50e8934d6da4cbac1332e4bf3aa56e66dd0e81d001f3b888b537a1ee3376183b714172e46dc386c6e35bcba4
+Size (tex-pst-math-49425/pst-math.tar.xz) = 5172 bytes
