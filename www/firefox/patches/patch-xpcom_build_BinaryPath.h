@@ -1,11 +1,11 @@
-$NetBSD: patch-xpcom_build_BinaryPath.h,v 1.6 2018/11/04 04:46:57 ryoon Exp $
+$NetBSD: patch-xpcom_build_BinaryPath.h,v 1.7 2019/01/29 16:28:22 ryoon Exp $
 
 * Fix build under netbsd-7, PR pkg/52956
 
---- xpcom/build/BinaryPath.h.orig	2018-10-18 20:06:16.000000000 +0000
+--- xpcom/build/BinaryPath.h.orig	2019-01-18 00:21:31.000000000 +0000
 +++ xpcom/build/BinaryPath.h
-@@ -22,7 +22,8 @@
-     defined(__OpenBSD__)
+@@ -21,7 +21,8 @@
+     defined(__FreeBSD_kernel__) || defined(__NetBSD__) || defined(__OpenBSD__)
  #include <sys/sysctl.h>
  #endif
 -#if defined(__OpenBSD__)
@@ -14,17 +14,17 @@ $NetBSD: patch-xpcom_build_BinaryPath.h,v 1.6 2018/11/04 04:46:57 ryoon Exp $
  #include <sys/stat.h>
  #endif
  #include "mozilla/UniquePtr.h"
-@@ -172,7 +173,8 @@ private:
+@@ -164,7 +165,8 @@ class BinaryPath {
    }
  
  #elif defined(__FreeBSD__) || defined(__DragonFly__) || \
--      defined(__FreeBSD_kernel__) || defined(__NetBSD__)
+-    defined(__FreeBSD_kernel__) || defined(__NetBSD__)
 +      defined(__FreeBSD_kernel__) || \
 +      (defined(__NetBSD__) && defined(KERN_PROC_PATHNAME))
-   static nsresult Get(char aResult[MAXPATHLEN])
-   {
+   static nsresult Get(char aResult[MAXPATHLEN]) {
      int mib[4];
-@@ -257,6 +259,13 @@ private:
+     mib[0] = CTL_KERN;
+@@ -246,6 +248,13 @@ class BinaryPath {
      return NS_ERROR_FAILURE;
    }
  
