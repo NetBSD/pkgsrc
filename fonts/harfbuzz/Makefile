@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2018/12/09 18:52:28 adam Exp $
+# $NetBSD: Makefile,v 1.105.2.1 2019/01/29 14:01:28 bsiegert Exp $
 
 DISTNAME=	harfbuzz-2.2.0
 PKGREVISION=	1
@@ -17,6 +17,7 @@ USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-cairo=no
 CONFIGURE_ARGS+=	--with-graphite2=no
+GCC_REQD+=		4.9
 
 PKGCONFIG_OVERRIDE+=	src/harfbuzz.pc.in
 PKGCONFIG_OVERRIDE+=	src/harfbuzz-icu.pc.in
