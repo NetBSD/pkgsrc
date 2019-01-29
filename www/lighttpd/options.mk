@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.19 2018/04/17 20:11:15 triaxx Exp $
+# $NetBSD: options.mk,v 1.20 2019/01/29 12:31:46 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lighttpd
 PKG_SUPPORTED_OPTIONS=	bzip2 fam gdbm inet6 ldap lua mysql ssl memcached geoip gssapi webdav
@@ -6,6 +6,8 @@ PKG_OPTIONS_LEGACY_OPTS+=	memcache:memcached
 PKG_SUGGESTED_OPTIONS=	inet6 ssl
 
 .include "../../mk/bsd.options.mk"
+
+PLIST_VARS+=		gdbm geoip gssapi ldap lua memcached mysql ssl
 
 ###
 ### Allow using bzip2 as a compression method in the "compress" module.
