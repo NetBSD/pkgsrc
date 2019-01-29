@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/09 02:14:49 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/01/29 06:28:46 markd Exp $
 share/texmf-dist/doc/latex/animate/ChangeLog
-share/texmf-dist/doc/latex/animate/README
+share/texmf-dist/doc/latex/animate/README.txt
 share/texmf-dist/doc/latex/animate/animate.pdf
