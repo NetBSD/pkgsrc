@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/06/05 16:17:10 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/01/29 14:23:07 jaapb Exp $
 ${OCAML_SITELIB}/eliom/templates/os.pgocaml/.eliomignore
 ${OCAML_SITELIB}/eliom/templates/os.pgocaml/.eliomreserve
 ${OCAML_SITELIB}/eliom/templates/os.pgocaml/.eliomverbatim
@@ -136,6 +136,8 @@ ${OCAML_SITELIB}/ocsigen-start/server/os_comet.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-start/server/os_comet.cmx
 ${OCAML_SITELIB}/ocsigen-start/server/os_connect_phone.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-start/server/os_connect_phone.cmx
+${OCAML_SITELIB}/ocsigen-start/server/os_core_db.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-start/server/os_core_db.cmx
 ${OCAML_SITELIB}/ocsigen-start/server/os_current_user.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-start/server/os_current_user.cmx
 ${OCAML_SITELIB}/ocsigen-start/server/os_date.cmi
