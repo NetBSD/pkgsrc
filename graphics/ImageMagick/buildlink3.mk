@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.68 2018/11/14 22:21:34 kleink Exp $
+# $NetBSD: buildlink3.mk,v 1.69 2019/01/29 09:52:27 leot Exp $
 
 BUILDLINK_TREE+=	ImageMagick
 
@@ -35,6 +35,7 @@ pkgbase := ImageMagick
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
