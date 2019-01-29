@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.186 2018/12/09 18:52:50 adam Exp $
+# $NetBSD: Makefile,v 1.187 2019/01/29 22:33:58 tnn Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
@@ -18,8 +18,8 @@ PLIST_SRC+=	${PLIST_SRC_DFLT}
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	unzip pax
 
-NOT_PAX_MPROTECT_SAFE+=	lib/seamonkey/seamonkey
-NOT_PAX_MPROTECT_SAFE+=	lib/seamonkey/seamonkey-bin
+NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/seamonkey
+NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/seamonkey-bin
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
@@ -33,7 +33,9 @@ CONFIG_SUB_OVERRIDE+=	ldap/sdks/c-sdk/config/autoconf/config.sub
 
 CONFIGURE_ARGS+=	--enable-application=suite
 
-ALL_ENV+=		MOZILLA_PKG_NAME=seamonkey
+ALL_ENV+=		MOZILLA_PKG_NAME=${PKGBASE}
+
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/${PKGBASE}
 
 .include "../../mk/bsd.prefs.mk"
 
