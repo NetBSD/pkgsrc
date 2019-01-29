@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/06/16 04:06:15 markd Exp $
+$NetBSD: distinfo,v 1.4 2019/01/29 19:36:00 markd Exp $
 
-SHA1 (tex-schwalbe-chess-39318/schwalbe-chess.doc.tar.xz) = a9c474c48dc2de28b7251554361b4c4aabe74e78
-RMD160 (tex-schwalbe-chess-39318/schwalbe-chess.doc.tar.xz) = d15a302a84fa23d1f63a5ff8f870ab18254bf2fa
-SHA512 (tex-schwalbe-chess-39318/schwalbe-chess.doc.tar.xz) = 9eadfe6bc4ef6ef57ed90126c2c9276f6fe1391ea2c5b61c9b271ca7db687b6ed04bf6ac0ed98787879758ed3565509c18ad697245ef0b009fdca3b802911a0e
-Size (tex-schwalbe-chess-39318/schwalbe-chess.doc.tar.xz) = 169416 bytes
+SHA1 (tex-schwalbe-chess-49602/schwalbe-chess.doc.tar.xz) = c3af6ba076ddaf767b61cb1a3b93f9c5fcda725d
+RMD160 (tex-schwalbe-chess-49602/schwalbe-chess.doc.tar.xz) = 5669a66371f8d16368c707f8ea1688adb8c89f5e
+SHA512 (tex-schwalbe-chess-49602/schwalbe-chess.doc.tar.xz) = f19a0e129ad0a338f8e5600797cc89e15a79b999ddc8136200fae35ffbdcd06e0e2a2e606343865575c0d11701a3924d70a24082774cb87ab3de1a14fbce0c19
+Size (tex-schwalbe-chess-49602/schwalbe-chess.doc.tar.xz) = 183676 bytes

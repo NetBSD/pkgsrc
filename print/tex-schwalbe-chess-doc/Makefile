@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2016/06/16 04:06:15 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/01/29 19:36:00 markd Exp $
 
 DISTNAME=	schwalbe-chess.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.1
-TEXLIVE_REV=	39318
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.3
+TEXLIVE_REV=	49602
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/schwalbe-chess
