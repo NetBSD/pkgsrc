@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.505 2019/01/29 14:34:15 adam Exp $
+$NetBSD: CHANGES-2019,v 1.506 2019/01/29 14:56:50 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -937,3 +937,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/ocsigen-start to 1.5.0 [jaapb 2019-01-29]
 	Updated www/py-waitress to 1.2.1 [adam 2019-01-29]
 	Updated textproc/py-regex to 2019.01.24 [adam 2019-01-29]
+	Updated net/nsd to 4.1.26nb1 [ryoon 2019-01-29]
