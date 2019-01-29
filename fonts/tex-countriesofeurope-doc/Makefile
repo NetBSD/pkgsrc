@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:36 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/01/29 07:41:33 markd Exp $
 
 DISTNAME=	countriesofeurope.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.21
-TEXLIVE_REV=	26042
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.22
+TEXLIVE_REV=	49525
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/countriesofeurope
