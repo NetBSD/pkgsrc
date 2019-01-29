@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 21:34:26 agc Exp $
+$NetBSD: distinfo,v 1.6 2019/01/29 06:45:25 markd Exp $
 
-SHA1 (tex-metapost-34194/metapost.tar.xz) = de1abf7b7dcc0a113b9a984100068929242afd59
-RMD160 (tex-metapost-34194/metapost.tar.xz) = c9c288b8790120dcb7eea587db2f32a6c0c613bc
-SHA512 (tex-metapost-34194/metapost.tar.xz) = a2a3810029ab41791b7086843e6bf35c7bdfce72b40d1bddcba2ef47815f38f0b43b9a3b7fe33bab5e4a010816869efe42409e2eff2887fce56f610da0918867
-Size (tex-metapost-34194/metapost.tar.xz) = 73644 bytes
+SHA1 (tex-metapost-49482/metapost.tar.xz) = e1899040a68e521e67850b22b600fb98e901b806
+RMD160 (tex-metapost-49482/metapost.tar.xz) = 294466bb7bc94f30862f42e935ec0224970298aa
+SHA512 (tex-metapost-49482/metapost.tar.xz) = 8a532d1931e2d1f870918cd604f336ed5fac19da33168a4e275b05e8e97903c3eccdae461a5b575153c5cbb5c7f762244b2cb2d36b472ad7ec8c525203d7495f
+Size (tex-metapost-49482/metapost.tar.xz) = 73720 bytes
