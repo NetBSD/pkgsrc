@@ -1,11 +1,15 @@
-$NetBSD: patch-CMakeLists.txt,v 1.6 2014/11/29 10:01:29 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.6.36.1 2019/01/29 13:01:45 bsiegert Exp $
 
 Split configuration between mysql-client and mysql-server.
 Build with newer DTrace.
 
+Backport of https://github.com/mysql/mysql-server/commit/98ed3d8bc8ad724686d26c7bf98dced3bd1777be
+Avoid disclosure of files from a client to a malicious server, described here:
+https://gwillem.gitlab.io/2019/01/17/adminer-4.6.2-file-disclosure-vulnerability/
+
 --- CMakeLists.txt.orig	2014-11-04 07:49:52.000000000 +0000
 +++ CMakeLists.txt
-@@ -165,6 +165,7 @@ IF(DISABLE_SHARED)
+@@ -168,6 +168,7 @@ IF(DISABLE_SHARED)
    SET(WITHOUT_DYNAMIC_PLUGINS 1)
  ENDIF()
  OPTION(ENABLED_PROFILING "Enable profiling" ON)
@@ -13,7 +17,16 @@ Build with newer DTrace.
  OPTION(CYBOZU "" OFF)
  OPTION(BACKUP_TEST "" OFF)
  OPTION(WITHOUT_SERVER OFF)
-@@ -375,7 +376,6 @@ ADD_SUBDIRECTORY(strings)
+@@ -294,7 +295,7 @@ IF(REPRODUCIBLE_BUILD)
+ ENDIF()
+ 
+ OPTION(ENABLED_LOCAL_INFILE
+- "If we should should enable LOAD DATA LOCAL by default" ${IF_WIN})
++"If we should should enable LOAD DATA LOCAL by default" OFF)
+ MARK_AS_ADVANCED(ENABLED_LOCAL_INFILE)
+ 
+ OPTION(WITH_FAST_MUTEXES "Compile with fast mutexes" OFF)
+@@ -418,7 +419,6 @@ ADD_SUBDIRECTORY(strings)
  ADD_SUBDIRECTORY(vio)
  ADD_SUBDIRECTORY(regex)
  ADD_SUBDIRECTORY(mysys)
@@ -21,7 +34,7 @@ Build with newer DTrace.
  
  IF(WITH_UNIT_TESTS)
   ENABLE_TESTING()
-@@ -387,9 +387,13 @@ IF(WITH_UNIT_TESTS)
+@@ -430,9 +430,13 @@ IF(WITH_UNIT_TESTS)
  ENDIF()
  
  ADD_SUBDIRECTORY(extra)
@@ -37,7 +50,7 @@ Build with newer DTrace.
    ADD_SUBDIRECTORY(sql)
    ADD_SUBDIRECTORY(sql/share)
    ADD_SUBDIRECTORY(libservices)
-@@ -402,11 +406,7 @@ IF(NOT WITHOUT_SERVER)
+@@ -445,11 +449,7 @@ IF(NOT WITHOUT_SERVER)
    ADD_SUBDIRECTORY(mysql-test)
    ADD_SUBDIRECTORY(mysql-test/lib/My/SafeProcess)
    ADD_SUBDIRECTORY(support-files)
