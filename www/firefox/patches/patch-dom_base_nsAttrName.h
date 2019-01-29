@@ -1,9 +1,9 @@
-$NetBSD: patch-dom_base_nsAttrName.h,v 1.1 2018/11/04 09:10:40 maya Exp $
+$NetBSD: patch-dom_base_nsAttrName.h,v 1.2 2019/01/29 16:28:22 ryoon Exp $
 
 cbindgen gets confused by NetBSD's types being macros too
 https://mail-index.netbsd.org/tech-pkg/2018/10/25/msg020395.html
 
---- dom/base/nsAttrName.h.orig	2018-10-31 00:08:05.000000000 +0000
+--- dom/base/nsAttrName.h.orig	2019-01-18 00:20:23.000000000 +0000
 +++ dom/base/nsAttrName.h
 @@ -16,6 +16,10 @@
  #include "mozilla/dom/NodeInfo.h"
@@ -15,4 +15,4 @@ https://mail-index.netbsd.org/tech-pkg/2018/10/25/msg020395.html
 +#endif
  
  #define NS_ATTRNAME_NODEINFO_BIT 1
- class nsAttrName
+ class nsAttrName {

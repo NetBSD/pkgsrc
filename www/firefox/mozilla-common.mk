@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.122 2018/12/23 01:11:26 gutteridge Exp $
+# $NetBSD: mozilla-common.mk,v 1.123 2019/01/29 16:28:22 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -34,9 +34,6 @@ TOOL_DEPENDS+=		nodejs-[0-9]*:../../lang/nodejs
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 BUILD_DEPENDS+=		yasm>=1.1:../../devel/yasm
-
-# Enable Google widevine CDM. This requires external libwidevinecdm.so.
-#CONFIGURE_ARGS+=	--enable-eme=widevine
 .endif
 
 # For rustc/cargo detection
