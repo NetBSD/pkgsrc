@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2018/12/16 08:29:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2019/01/29 22:33:57 tnn Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
-PKGNAME=	thunderbird52-${TB_VER}
+PKGNAME=	thunderbird${TB_VER:C/\..*$//}-${TB_VER}
 PKGREVISION=	3
 TB_VER=		52.9.1
 CATEGORIES=	mail
@@ -17,8 +17,6 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/.source//}
 MOZILLA_DIR=	mozilla/
 PLIST_SRC+=	${PLIST_SRC_DFLT}
 
-MOZILLA_PKG_NAME=	thunderbird52
-
 CONFIG_GUESS_OVERRIDE+=	ldap/sdks/c-sdk/config/autoconf/config.guess
 CONFIG_SUB_OVERRIDE+=	ldap/sdks/c-sdk/config/autoconf/config.sub
 
@@ -26,10 +24,12 @@ CONFIGURE_ARGS+=	--enable-application=mail
 # Disable WebRTC support for Thunderbird unconditionally.
 CONFIGURE_ARGS+=	--disable-webrtc
 
-NOT_PAX_MPROTECT_SAFE+=	lib/${MOZILLA_PKG_NAME}/thunderbird
-NOT_PAX_MPROTECT_SAFE+=	lib/${MOZILLA_PKG_NAME}/thunderbird-bin
+NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/thunderbird
+NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/thunderbird-bin
 
-ALL_ENV+=		MOZILLA_PKG_NAME=${MOZILLA_PKG_NAME}
+ALL_ENV+=		MOZILLA_PKG_NAME=${PKGBASE}
+
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/${PKGBASE}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -47,7 +47,7 @@ SUBST_MESSAGE.sys-dic=	Reference to system hunspell dictionaries.
 SUBST_FILES.sys-dic=	mozilla/extensions/spellcheck/hunspell/glue/mozHunspell.cpp
 SUBST_VARS.sys-dic=	LOCALBASE
 
-CHECK_WRKREF_SKIP+=lib/${MOZILLA_PKG_NAME}/chrome/toolkit/content/global/buildconfig.html
+CHECK_WRKREF_SKIP+=lib/${PKGBASE}/chrome/toolkit/content/global/buildconfig.html
 
 post-extract:
 	mv ${WRKSRC}/mozilla/gfx/ycbcr/yuv_row_arm.s \
@@ -64,8 +64,8 @@ do-build:
 # XXX for some reason it doesn't work unless -j is explicitly specified
 	cd ${WRKSRC}/${OBJDIR} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} -j${MAKE_JOBS:U1}
 
-MOZILLA=${MOZILLA_PKG_NAME}
-MOZILLA_NAME=${MOZILLA_PKG_NAME}
+MOZILLA=	${PKGBASE}
+MOZILLA_NAME=	${PKGBASE}
 post-build:
 	${SED} -e 's|@MOZILLA@|${MOZILLA}|g'				\
 	  -e 's|@MOZILLA_NAME@|${MOZILLA_NAME}|g'			\
@@ -73,7 +73,7 @@ post-build:
 	  < ${FILESDIR}/desktop.in					\
 	  > ${WRKDIR}/desktop
 
-INSTALLATION_DIRS+=	lib/${MOZILLA}/extensions
+INSTALLATION_DIRS+=	lib/${PKGBASE}/extensions
 INSTALLATION_DIRS+=	share/applications share/pixmaps
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/desktop				\
