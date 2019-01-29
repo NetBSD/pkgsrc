@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.254 2018/12/10 08:51:16 wiz Exp $
+# $NetBSD: Makefile,v 1.255 2019/01/29 09:52:27 leot Exp $
 
 .include "Makefile.common"
 
@@ -13,6 +13,7 @@ USE_LANGUAGES=		c c++ c99
 USE_TOOLS+=		gmake pkg-config:run
 CONFIGURE_ARGS+=	--disable-assert
 CONFIGURE_ARGS+=	--with-fontconfig
+CONFIGURE_ARGS+=	--with-jpeg
 CONFIGURE_ARGS+=	--with-ltdl-include=${BUILDLINK_PREFIX.libltdl}/include
 CONFIGURE_ARGS+=	--with-ltdl-lib=${BUILDLINK_PREFIX.libltdl}/lib
 CONFIGURE_ARGS+=	--with-xml=yes
@@ -91,6 +92,7 @@ CTF_FILES_SKIP+=	lib/libMagickWand-7.Q16HDRI.so.4.0.0
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
