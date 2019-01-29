@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2019/01/29 14:20:26 jaapb Exp $
+${OCAML_SITELIB}/resource-pooling/META
+${PLIST.ocaml-opt}${OCAML_SITELIB}/resource-pooling/resource-pooling.a
+${OCAML_SITELIB}/resource-pooling/resource-pooling.cma
+${PLIST.ocaml-opt}${OCAML_SITELIB}/resource-pooling/resource-pooling.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/resource-pooling/resource-pooling.cmxs
+${OCAML_SITELIB}/resource-pooling/resource_pool.annot
+${OCAML_SITELIB}/resource-pooling/resource_pool.cmi
+${OCAML_SITELIB}/resource-pooling/resource_pool.cmt
+${OCAML_SITELIB}/resource-pooling/resource_pool.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/resource-pooling/resource_pool.cmx
+${OCAML_SITELIB}/resource-pooling/resource_pool.mli
+${OCAML_SITELIB}/resource-pooling/server_pool.annot
+${OCAML_SITELIB}/resource-pooling/server_pool.cmi
+${OCAML_SITELIB}/resource-pooling/server_pool.cmt
+${OCAML_SITELIB}/resource-pooling/server_pool.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/resource-pooling/server_pool.cmx
+${OCAML_SITELIB}/resource-pooling/server_pool.mli
