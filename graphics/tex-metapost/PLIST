@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/12/15 22:34:40 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/01/29 06:45:25 markd Exp $
 share/texmf-dist/fonts/afm/metapost/freeeuro.afm
 share/texmf-dist/fonts/afm/metapost/psyrgo.afm
 share/texmf-dist/fonts/afm/metapost/zpzdr-reversed.afm
@@ -50,11 +50,13 @@ share/texmf-dist/metapost/base/marith.mp
 share/texmf-dist/metapost/base/mfplain.mp
 share/texmf-dist/metapost/base/mpost.mp
 share/texmf-dist/metapost/base/plain.mp
+share/texmf-dist/metapost/base/pmpost.mp
 share/texmf-dist/metapost/base/rboxes.mp
 share/texmf-dist/metapost/base/sarith.mp
 share/texmf-dist/metapost/base/string.mp
 share/texmf-dist/metapost/base/texnum.mp
 share/texmf-dist/metapost/base/troffnum.mp
+share/texmf-dist/metapost/base/upmpost.mp
 share/texmf-dist/metapost/config/mfplain.ini
 share/texmf-dist/metapost/misc/null.mp
 share/texmf-dist/metapost/support/charlib/12
