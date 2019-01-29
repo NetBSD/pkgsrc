@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.37 2018/12/09 18:52:49 adam Exp $
+# $NetBSD: Makefile,v 1.38 2019/01/29 22:33:58 tnn Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		52.9
 MOZ_BRANCH_MINOR=	.0esr
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
-PKGNAME=	firefox52-${MOZ_BRANCH}${MOZ_BRANCH_MINOR:S/b/beta/:S/esr//}
+PKGNAME=	firefox${MOZ_BRANCH:C/\..*$//}-${MOZ_BRANCH}${MOZ_BRANCH_MINOR:S/b/beta/:S/esr//}
 PKGREVISION=	12
 CATEGORIES=	www
 MASTER_SITES+=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
@@ -24,15 +24,18 @@ MOZILLA_DIR=	# empty
 # Note: when updating remember to conditionalise about-background.png in PLIST
 CONFIGURE_ARGS+=	--enable-application=browser
 
-# workround for link of libxul.so etc.
-LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/firefox52 ${COMPILER_RPATH_FLAG}${PREFIX}/lib
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/${PKGBASE}
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib
+LDFLAGS.DragonFly+=	-lplc4 -lnspr4
+LDFLAGS.FreeBSD+=	-lplc4 -lnspr4
+LDFLAGS.Linux+=		-lnspr4
 LDFLAGS.SunOS+=		-lm
 
-NOT_PAX_MPROTECT_SAFE+=	lib/firefox52/firefox
-NOT_PAX_MPROTECT_SAFE+=	lib/firefox52/firefox-bin
-NOT_PAX_MPROTECT_SAFE+=	lib/firefox52/plugin-container
+NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/firefox
+NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/firefox-bin
+NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/plugin-container
 
-ALL_ENV+=		MOZILLA_PKG_NAME=firefox52
+ALL_ENV+=		MOZILLA_PKG_NAME=${PKGBASE}
 
 # Avoid ld "invalid section index" errors.
 BUILDLINK_TRANSFORM.SunOS+=	rm:-fdata-sections
@@ -45,10 +48,6 @@ SUBST_SED.dfly_malloc_h=	-e 's,HAVE_MALLOC_H,HAVE_MALLOC_H \&\& !defined(__Drago
 SUBST_FILES.dfly_malloc_h=	media/libav/libavutil/mem.c
 SUBST_FILES.dfly_malloc_h+=	media/ffvpx/libavutil/mem.c
 
-LDFLAGS.DragonFly=	-lplc4 -lnspr4
-LDFLAGS.FreeBSD=	-lplc4 -lnspr4
-LDFLAGS.Linux=		-lnspr4
-
 .include "mozilla-common.mk"
 .include "options.mk"
 
@@ -57,9 +56,9 @@ CHECK_INTERPRETER_SKIP+=lib/firefox-sdk/sdk/bin/typelib.py
 CHECK_INTERPRETER_SKIP+=lib/firefox-sdk/sdk/bin/xpidl.py
 CHECK_INTERPRETER_SKIP+=lib/firefox-sdk/sdk/bin/xpt.py
 
-CHECK_WRKREF_SKIP+=lib/firefox52/chrome/toolkit/content/global/buildconfig.html
+CHECK_WRKREF_SKIP+=lib/${PKGBASE}/chrome/toolkit/content/global/buildconfig.html
 
-MOZILLA=firefox52
+MOZILLA=	${PKGBASE}
 MOZILLA_ICON=	${WRKSRC}/${OBJDIR}/dist/firefox/browser/chrome/icons/default/default48.png
 .if !empty(PKG_OPTIONS:Mofficial-mozilla-branding)
 MOZILLA_NAME=	Firefox
