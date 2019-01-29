@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.508 2019/01/29 16:01:49 martin Exp $
+$NetBSD: CHANGES-2019,v 1.509 2019/01/29 16:29:03 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -940,3 +940,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/nsd to 4.1.26nb1 [ryoon 2019-01-29]
 	Updated net/knot to 2.7.6 [ryoon 2019-01-29]
 	Updated emulators/qemu to 3.1.0nb3 [martin 2019-01-29]
+	Updated www/firefox to 65.0 [ryoon 2019-01-29]
