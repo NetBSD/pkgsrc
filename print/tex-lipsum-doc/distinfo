@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 01:02:26 agc Exp $
+$NetBSD: distinfo,v 1.4 2019/01/29 19:47:40 markd Exp $
 
-SHA1 (tex-lipsum-34800/lipsum.doc.tar.xz) = 156353699bcef9949b18c31fa9ea909564bea33b
-RMD160 (tex-lipsum-34800/lipsum.doc.tar.xz) = e460e71a90c6eb9e7023a5439e620777f4bdb2c6
-SHA512 (tex-lipsum-34800/lipsum.doc.tar.xz) = b2eb669061c65d6d896117a80ba403f6fef4036b42f631ece2f7f532030cf8ea62995bd116108bcc52c3e30125a49ff07cf4e2d4d8f0195daee0f15ae0ee6c8f
-Size (tex-lipsum-34800/lipsum.doc.tar.xz) = 425476 bytes
+SHA1 (tex-lipsum-49610/lipsum.doc.tar.xz) = 705bee46dbaf2907bb05cd672ebfbaf8fe61e8ce
+RMD160 (tex-lipsum-49610/lipsum.doc.tar.xz) = 4699ac3a66f6e0c1fa2a19da2546fa8aa7932a6f
+SHA512 (tex-lipsum-49610/lipsum.doc.tar.xz) = caec67a64cd245cbcc625d05c9b354c9a0e41c4968f6af60f7d8bdb3ecc4c5ea10fb3df325429d2d9a841c4b2abc1143d206fedadee94542a4cd281ca784f7a2
+Size (tex-lipsum-49610/lipsum.doc.tar.xz) = 802516 bytes
