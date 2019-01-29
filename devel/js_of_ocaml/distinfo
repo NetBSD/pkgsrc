@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.18 2018/11/29 11:59:21 jaapb Exp $
+$NetBSD: distinfo,v 1.19 2019/01/29 12:43:53 jaapb Exp $
 
-SHA1 (js_of_ocaml-3.2.1.tar.gz) = 168c3c50eca387fa5b7f0d079c3d00ad7d883526
-RMD160 (js_of_ocaml-3.2.1.tar.gz) = efd4c9de4f2971628da4a409139a89d0170d6878
-SHA512 (js_of_ocaml-3.2.1.tar.gz) = 55faf40f70f21a14b2ae6e9b6f920d649dfa101bb0e4ea3e24c3254ca6a2669b7e09b86c64b931d7d32beb280a61e7000e9508fb77c2512896fba36c5db33705
-Size (js_of_ocaml-3.2.1.tar.gz) = 1441397 bytes
-SHA1 (patch-lib_tyxml_tyxml__js.ml) = 4b44f20b26387f90ec0ec7ec1398754bfed683bd
+SHA1 (js_of_ocaml-3.3.0.tar.gz) = fabc84175f2ba42e5fc34125139ef3b88c5fb507
+RMD160 (js_of_ocaml-3.3.0.tar.gz) = 8d1c9443eb0de6a4e148320878b8abb10e3250e3
+SHA512 (js_of_ocaml-3.3.0.tar.gz) = 4869b3f337119127dbf71feafa5ecf7a507e0c19c5e59d49793b718207556ccf0a796c4de4526bfd3c982240f6b2dda70d299d27b0300223aca42067deb612a8
+Size (js_of_ocaml-3.3.0.tar.gz) = 1433314 bytes
