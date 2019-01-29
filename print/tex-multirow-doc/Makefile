@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2017/09/06 16:49:41 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/01/29 09:02:14 markd Exp $
 
 DISTNAME=	multirow.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.2
-TEXLIVE_REV=	42588
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.4
+TEXLIVE_REV=	49572
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/multirow
