@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:45:01 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/01/29 10:34:56 markd Exp $
 
-SHA1 (tex-fpl-15878/fpl.doc.tar.xz) = 940e24805a49092afa60e227a03bb6b667c62127
-RMD160 (tex-fpl-15878/fpl.doc.tar.xz) = 59e0e433586b79ad9443580a1a85bf27624c56c5
-SHA512 (tex-fpl-15878/fpl.doc.tar.xz) = 1fcf0bb728c8c39e6bb04cdd050a4cce84bf7e534c883bbe860229247940b7311fa89d4ac92a526c4fec182bb64605ab9154172b5a8c1587d82b35f88d800755
-Size (tex-fpl-15878/fpl.doc.tar.xz) = 7784 bytes
+SHA1 (tex-fpl-49603/fpl.doc.tar.xz) = fc5066276478287d62f8bcb7e724dccf88a86c66
+RMD160 (tex-fpl-49603/fpl.doc.tar.xz) = ad3963289d2449ee9b397949ae7ed2c70f7c69c9
+SHA512 (tex-fpl-49603/fpl.doc.tar.xz) = 31e37d3d7469736f3b3300711e507e16a9ae399ac922ee2bc5ba7328c5c993a21db4bb88e8470515e55c30b649ba07754e7f0a995e8cd75898b3a4ee69b667be
+Size (tex-fpl-49603/fpl.doc.tar.xz) = 7968 bytes
