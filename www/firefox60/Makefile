@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2018/12/16 07:38:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2019/01/29 22:33:58 tnn Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		60.4
 MOZ_BRANCH_MINOR=	.0esr
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
-PKGNAME=	${DISTNAME:S/firefox-/firefox60-/:S/.source//:S/b/beta/:S/esr//}
+PKGNAME=	firefox${MOZ_BRANCH:C/\..*$//}-${MOZ_BRANCH}${MOZ_BRANCH_MINOR:S/b/beta/:S/esr//}
 CATEGORIES=	www
 MASTER_SITES+=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
@@ -24,13 +24,16 @@ CONFIGURE_ARGS+=	--enable-application=browser
 
 CFLAGS+=	-I${PREFIX}/include/nspr
 
-# workround for link of libxul.so etc.
-LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/firefox60 ${COMPILER_RPATH_FLAG}${PREFIX}/lib
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/${PKGBASE}
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib
 LDFLAGS.SunOS+=		-lm
+LDFLAGS.DragonFly+=	-lplc4 -lnspr4
+LDFLAGS.FreeBSD+=	-lplc4 -lnspr4
+LDFLAGS.Linux+=		-lnspr4
 
-NOT_PAX_MPROTECT_SAFE+=	lib/firefox60/firefox60
-NOT_PAX_MPROTECT_SAFE+=	lib/firefox60/firefox60-bin
-NOT_PAX_MPROTECT_SAFE+=	lib/firefox60/plugin-container
+NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/firefox60
+NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/firefox60-bin
+NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/plugin-container
 
 ALL_ENV+=		MOZ_APP_NAME=firefox60
 
@@ -45,10 +48,6 @@ SUBST_SED.dfly_malloc_h=	-e 's,HAVE_MALLOC_H,HAVE_MALLOC_H \&\& !defined(__Drago
 SUBST_FILES.dfly_malloc_h=	media/libav/libavutil/mem.c
 SUBST_FILES.dfly_malloc_h+=	media/ffvpx/libavutil/mem.c
 
-LDFLAGS.DragonFly=	-lplc4 -lnspr4
-LDFLAGS.FreeBSD=	-lplc4 -lnspr4
-LDFLAGS.Linux=		-lnspr4
-
 .include "mozilla-common.mk"
 .include "options.mk"
 
@@ -57,9 +56,9 @@ CHECK_INTERPRETER_SKIP+=lib/firefox-sdk/sdk/bin/typelib.py
 CHECK_INTERPRETER_SKIP+=lib/firefox-sdk/sdk/bin/xpidl.py
 CHECK_INTERPRETER_SKIP+=lib/firefox-sdk/sdk/bin/xpt.py
 
-CHECK_WRKREF_SKIP+=lib/firefox60/chrome/toolkit/content/global/buildconfig.html
+CHECK_WRKREF_SKIP+=lib/${PKGBASE}/chrome/toolkit/content/global/buildconfig.html
 
-MOZILLA=firefox60
+MOZILLA=	${PKGBASE}
 MOZILLA_ICON=	${WRKSRC}/${OBJDIR}/dist/firefox60/browser/chrome/icons/default/default48.png
 .if !empty(PKG_OPTIONS:Mofficial-mozilla-branding)
 MOZILLA_NAME=	Firefox
