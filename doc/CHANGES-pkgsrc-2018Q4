@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q4,v 1.1.2.3 2019/01/19 21:58:01 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q4,v 1.1.2.4 2019/01/29 14:17:43 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q4 branch:
 
@@ -31,4 +31,31 @@ lang/php73: security fix
 
 Pullup ticket #5899 - requested by taca
 lang/php56: security fix
+
+Pullup ticket #5893 - requested by taca
+textproc/uriparser: security fix
+
+Pullup ticket #5894 - requested by taca
+www/drupal7: security fix
+
+Pullup ticket #5895 - requested by taca
+www/drupal8: security fix
+
+Pullup ticket #5900 - requested by maya
+databases/mysql55-client: security fix
+databases/mysql56-client: security fix
+databases/mysql57-client: security fix
+
+Pullup ticket #5901 - requested by taca
+security/py-acme: update (stop using TLS-SNI-01)
+security/py-certbot: update (stop using TLS-SNI-01)
+
+Pullup ticket #5903 - requested by taca
+www/apache24: security fix
+
+Pullup ticket #5904 - requested by he
+fonts/harfbuzz: NetBSD-7 build fix
+
+Pullup ticket #5902 - requested by markd
+x11/qt5-qtxmlpatterns: build fix
 
