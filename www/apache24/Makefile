@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.75 2018/12/13 19:52:25 adam Exp $
+# $NetBSD: Makefile,v 1.75.2.1 2019/01/29 13:58:59 bsiegert Exp $
 #
 # When updating this package, make sure that no strings like
 # "PR 12345" are in the commit message. Upstream likes
 # to reference their own PRs this way, but this ends up
 # in NetBSD GNATS.
 
-DISTNAME=	httpd-2.4.37
+DISTNAME=	httpd-2.4.38
 PKGNAME=	${DISTNAME:S/httpd/apache/}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_APACHE:=httpd/}
 MASTER_SITES+=	http://archive.apache.org/dist/httpd/
@@ -82,7 +81,7 @@ PKG_GROUPS_VARS=	APACHE_GROUP
 PKG_USERS_VARS=		APACHE_USER
 
 PKG_SYSCONFVAR=		apache
-PKG_SYSCONFSUBDIR?=	httpd
+PKG_SYSCONFSUBDIR=	httpd
 EGDIR=			${PREFIX}/share/examples/httpd
 SBINDIR=		${PREFIX}/sbin
 CONF_FILES+=		${EGDIR}/httpd.conf ${PKG_SYSCONFDIR}/httpd.conf
@@ -172,7 +171,7 @@ INSTALL_TARGET=		install-conf install
 INSTALL_MAKE_FLAGS+=	sysconfdir="${EGDIR}"
 
 post-install:
-	${LN} -sf ${LOCALBASE}/libexec/apr/libtool ${DESTDIR}${PREFIX}/share/httpd/build
+	${LN} -sf ${PREFIX}/libexec/apr/libtool ${DESTDIR}${PREFIX}/share/httpd/build
 	${LN} -sf ${SBINDIR}/envvars-std ${DESTDIR}${SBINDIR}/envvars
 
 	${INSTALL_SCRIPT} ${WRKDIR}/mkcert ${DESTDIR}${PREFIX}/bin
