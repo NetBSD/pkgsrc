@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/06/22 10:53:01 markd Exp $
+$NetBSD: distinfo,v 1.2 2019/01/29 06:06:14 markd Exp $
 
-SHA1 (tex-continue-39308/continue.tar.xz) = 4f91703a23f292fdf38c8be8c3deef7cc9de2545
-RMD160 (tex-continue-39308/continue.tar.xz) = 89636c4fc045dd6003793175b25de3248951373c
-SHA512 (tex-continue-39308/continue.tar.xz) = bf666a4705bdf374f89d166fc76189f281f0423a7df564e4c3261e2e75d068f294c3c7ac79154264618930450ed8d55a21ecefd06e2ae5623c9a26efa0a9acba
-Size (tex-continue-39308/continue.tar.xz) = 2840 bytes
+SHA1 (tex-continue-49449/continue.tar.xz) = 266b22330141b68643a5f75d1246ce5a22ad1eb9
+RMD160 (tex-continue-49449/continue.tar.xz) = 041ab1e89f7a8e1a9a514f2b67ecd2a0805537eb
+SHA512 (tex-continue-49449/continue.tar.xz) = 107c987403a5954c9ccc03e59f4d5cd22bb1c5eaa43922633300f007b673725a6fc7426b002b218eb93802dd8f3e09a6f28030fbe3465fa6dda77b29a4070838
+Size (tex-continue-49449/continue.tar.xz) = 2956 bytes
