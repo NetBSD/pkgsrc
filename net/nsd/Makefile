@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.100 2019/01/17 13:59:37 prlw1 Exp $
+# $NetBSD: Makefile,v 1.101 2019/01/29 14:54:03 ryoon Exp $
 
 DISTNAME=	nsd-4.1.26
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.nlnetlabs.nl/downloads/nsd/
 
@@ -55,7 +56,7 @@ CONFIGURE_ARGS+=--with-ssl=${BUILDLINK_PREFIX.openssl}
 CPPFLAGS+=	-D_OPENBSD_SOURCE
 .endif
 
-RCD_SCRIPTS=	nsd
+RCD_SCRIPTS=	nlnsd
 
 NSD_USER?=	nsd
 NSD_GROUP?=	nsd
