@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.502 2019/01/29 13:35:19 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.503 2019/01/29 14:20:47 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -933,3 +933,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/nss to 3.42 [ryoon 2019-01-29]
 	Updated www/eliom to 6.6.0 [jaapb 2019-01-29]
 	Updated www/ocsigen-toolkit to 2.0.0 [jaapb 2019-01-29]
+	Added devel/ocaml-resource-pooling version 0.6 [jaapb 2019-01-29]
