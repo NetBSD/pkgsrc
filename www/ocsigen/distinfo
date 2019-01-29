@@ -1,37 +1,10 @@
-$NetBSD: distinfo,v 1.12 2018/11/29 10:54:14 jaapb Exp $
+$NetBSD: distinfo,v 1.13 2019/01/29 12:47:02 jaapb Exp $
 
-SHA1 (ocsigenserver-2.9.tar.gz) = 1b4d50c9b6fff3ab78c8aef3ebbde1f8ddcc594e
-RMD160 (ocsigenserver-2.9.tar.gz) = f5114a7bda3327e279f57f40336a7c23e19b66ce
-SHA512 (ocsigenserver-2.9.tar.gz) = b3c5a86785feac18bac677ebb3736705f5d015a8692d2811bf22009dc319636e8b7bbb54dfd0223b2040a8f8bdef5ca3336d903b5ecd7eb260e8c0d48946ee46
-Size (ocsigenserver-2.9.tar.gz) = 1265175 bytes
+SHA1 (ocsigenserver-2.11.0.tar.gz) = 6c8e5c5bae9fe52e62ef3c7d7333c3196f191ede
+RMD160 (ocsigenserver-2.11.0.tar.gz) = c4d9380cd4f49ebab9e7abfb0ac2dec0881b6810
+SHA512 (ocsigenserver-2.11.0.tar.gz) = 18b9f4dff8214487dc3cd111c8ce2a06835ffec8062fae46ebafde97b1c3267f37f6b1c620d6c07320172c33a75568220c298cc96b789e907e72870a1ae7c70b
+Size (ocsigenserver-2.11.0.tar.gz) = 1265753 bytes
 SHA1 (patch-Makefile) = 637a45aacd7c8afaeb73be624eb7732b21e78b4d
-SHA1 (patch-Makefile.options) = 3e88ca4a0d04e01a4cb61e88aaec1b013ff0de5e
-SHA1 (patch-configure) = ed7a047081dfd233b95d4c25cb5832cb65bbcb11
 SHA1 (patch-src_baselib_Makefile) = e2fd5e5bd933d4ec844713c8f574efd5fa8426cf
-SHA1 (patch-src_baselib_ocsigen__stream.ml) = 6907fd8f7e0295f5147a0f2322cb1bec28f73953
-SHA1 (patch-src_extensions_Makefile) = 1dc200d1bd7a55424830acc5e79140e5e996c762
-SHA1 (patch-src_extensions_accesscontrol.ml) = a02101ea97747bb139f72413eb4f4a9ee738692e
-SHA1 (patch-src_extensions_accesscontrol.mli) = 19a67e7e43a9411616d8893d2886e4f048a107d8
-SHA1 (patch-src_extensions_authbasic.ml) = 8179c77352d52965d17c98d0ea3454cb3ff6e090
-SHA1 (patch-src_extensions_authbasic.mli) = 718c05392e48579a72b251a5966933b39bb7eff2
-SHA1 (patch-src_extensions_cgimod.ml) = ba572df1ab27f3e090bc1a1e032c1430113995ed
-SHA1 (patch-src_extensions_deflatemod.ml) = 16a4bb7a048930053120636f474297ff3c78d471
-SHA1 (patch-src_extensions_extendconfiguration.ml) = beb1a298427ea0d4c19326f29503eee7bd6b3dcb
-SHA1 (patch-src_extensions_extensiontemplate.ml) = 805bf033a8fc7a1ecd3532411b2defdb82eeaad4
-SHA1 (patch-src_extensions_ocsipersist-dbm_Makefile) = 2b73b0fa5594bc0542393e005d2979737a28d9bc
-SHA1 (patch-src_extensions_ocsipersist-dbm_ocsipersist.ml) = f747c7e54f23cf29fabbe972e6f5e43c952ce1d1
-SHA1 (patch-src_extensions_ocsipersist-pgsql_Makefile) = e3fa0e4691aa098826b93e67503a9116b28e5efb
-SHA1 (patch-src_extensions_ocsipersist-pgsql_ocsipersist.ml) = 3984d34c71965a2e0d02bf5da547b437911d7f38
-SHA1 (patch-src_extensions_ocsipersist-sqlite_Makefile) = 30bf60665d816ddb5cf1320ae5fdb51d7a50cb86
-SHA1 (patch-src_extensions_ocsipersist-sqlite_ocsipersist.ml) = 8a227e10de4fd5cec0f2f1b8b8aa88578d69056e
-SHA1 (patch-src_extensions_revproxy.ml) = e834ef862baed57310e3fe710905904298a3ac1d
-SHA1 (patch-src_extensions_rewritemod.ml) = cac9b8d6fa815bc2098de9eb5c6346c8d4a795f4
-SHA1 (patch-src_extensions_userconf.ml) = 8d62d77f760ee1027794698f88fc4e4da2de3eeb
-SHA1 (patch-src_http_Makefile) = 1bcfe69470fe53a8fc9b197fd95d21889646909d
-SHA1 (patch-src_http_ocsigen__http__com.mli) = f1760bf423e8aae763992e57c13408aa01c6316f
+SHA1 (patch-src_extensions_cgimod.ml) = 06630606179f07e1c9ffcec05e8e0f41cf73fc7c
 SHA1 (patch-src_server_Makefile) = 0f315fb0533d3d0b8f8cf1f3a61e11b013571b05
-SHA1 (patch-src_server_ocsigen__extensions.ml) = 7da60f1c1fc2c2370eac93829380cb108f40b2db
-SHA1 (patch-src_server_ocsigen__extensions.mli) = c2c426d96446292dd850b23b7feb9d93d1b5590a
-SHA1 (patch-src_server_ocsigen__parseconfig.ml) = b4a088c5cd3addb70dc4fa9a023878056fc9d1d1
-SHA1 (patch-src_server_ocsigen__parseconfig.mli) = 2b4b091a91efa1bf99e861c82d7d971845947bf9
-SHA1 (patch-src_server_ocsigen__server.ml) = 93c4dac4be34e68c65cf0814eb58954abcc31b1b
