@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2017/06/21 10:14:19 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/01/29 10:25:08 markd Exp $
 share/texmf-dist/doc/metapost/mcf2graph/CHANGELOG
 share/texmf-dist/doc/metapost/mcf2graph/README
 share/texmf-dist/doc/metapost/mcf2graph/mcf_exa_soc.mf
 share/texmf-dist/doc/metapost/mcf2graph/mcf_example.pdf
 share/texmf-dist/doc/metapost/mcf2graph/mcf_example.tex
-share/texmf-dist/doc/metapost/mcf2graph/mcf_man_soc-064.eps
+share/texmf-dist/doc/metapost/mcf2graph/mcf_man_soc-064.mps
 share/texmf-dist/doc/metapost/mcf2graph/mcf_man_soc.mf
 share/texmf-dist/doc/metapost/mcf2graph/mcf_manual.pdf
 share/texmf-dist/doc/metapost/mcf2graph/mcf_manual.tex
