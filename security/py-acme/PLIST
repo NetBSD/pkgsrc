@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2018/07/17 16:32:16 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.10.4.1 2019/01/29 13:53:37 bsiegert Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -27,6 +27,8 @@ ${PYSITELIB}/acme/fields.pyo
 ${PYSITELIB}/acme/fields.pyc
 ${PYSITELIB}/acme/fields_test.pyo
 ${PYSITELIB}/acme/fields_test.pyc
+${PYSITELIB}/acme/jose_test.pyo
+${PYSITELIB}/acme/jose_test.pyc
 ${PYSITELIB}/acme/jws.pyo
 ${PYSITELIB}/acme/jws.pyc
 ${PYSITELIB}/acme/jws_test.pyo
@@ -59,6 +61,7 @@ ${PYSITELIB}/acme/errors.py
 ${PYSITELIB}/acme/errors_test.py
 ${PYSITELIB}/acme/fields.py
 ${PYSITELIB}/acme/fields_test.py
+${PYSITELIB}/acme/jose_test.py
 ${PYSITELIB}/acme/jws.py
 ${PYSITELIB}/acme/jws_test.py
 ${PYSITELIB}/acme/magic_typing.py

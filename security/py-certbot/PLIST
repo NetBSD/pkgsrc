@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2018/07/17 16:32:16 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.13.4.1 2019/01/29 13:53:37 bsiegert Exp $
 bin/certbot${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -21,6 +21,8 @@ ${PYSITELIB}/certbot/cli.pyo
 ${PYSITELIB}/certbot/cli.pyc
 ${PYSITELIB}/certbot/client.pyo
 ${PYSITELIB}/certbot/client.pyc
+${PYSITELIB}/certbot/compat.pyo
+${PYSITELIB}/certbot/compat.pyc
 ${PYSITELIB}/certbot/configuration.pyo
 ${PYSITELIB}/certbot/configuration.pyc
 ${PYSITELIB}/certbot/constants.pyo
@@ -65,6 +67,7 @@ ${PYSITELIB}/certbot/auth_handler.py
 ${PYSITELIB}/certbot/cert_manager.py
 ${PYSITELIB}/certbot/cli.py
 ${PYSITELIB}/certbot/client.py
+${PYSITELIB}/certbot/compat.py
 ${PYSITELIB}/certbot/configuration.py
 ${PYSITELIB}/certbot/constants.py
 ${PYSITELIB}/certbot/crypto_util.py
@@ -197,6 +200,8 @@ ${PYSITELIB}/certbot/tests/cli_test.pyo
 ${PYSITELIB}/certbot/tests/cli_test.pyc
 ${PYSITELIB}/certbot/tests/client_test.pyo
 ${PYSITELIB}/certbot/tests/client_test.pyc
+${PYSITELIB}/certbot/tests/compat_test.pyo
+${PYSITELIB}/certbot/tests/compat_test.pyc
 ${PYSITELIB}/certbot/tests/configuration_test.pyo
 ${PYSITELIB}/certbot/tests/configuration_test.pyc
 ${PYSITELIB}/certbot/tests/crypto_util_test.pyo
@@ -239,6 +244,7 @@ ${PYSITELIB}/certbot/tests/auth_handler_test.py
 ${PYSITELIB}/certbot/tests/cert_manager_test.py
 ${PYSITELIB}/certbot/tests/cli_test.py
 ${PYSITELIB}/certbot/tests/client_test.py
+${PYSITELIB}/certbot/tests/compat_test.py
 ${PYSITELIB}/certbot/tests/configuration_test.py
 ${PYSITELIB}/certbot/tests/crypto_util_test.py
 ${PYSITELIB}/certbot/tests/display/__init__.py
