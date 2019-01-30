@@ -1,0 +1,80 @@
+$NetBSD: patch-src_Makefile,v 1.1 2019/01/30 12:58:24 leot Exp $
+
+- Fix install permissions
+  https://github.com/andmarti1424/sc-im/pull/305
+- Make libdl and curses flags overridable
+- Make color support opt in so we can control it
+
+--- src/Makefile
++++ src/Makefile
+@@ -29,8 +29,8 @@ CFLAGS += -DLIBDIR=\"$(LIBDIR)\"
+ CFLAGS += -DDFLT_PAGER=\"less\"
+ # Sets default editor. Its use in case EDITOR env variable is not set
+ CFLAGS += -DDFLT_EDITOR=\"vim\"
+-# Comment out to disable color support
+-CFLAGS += -DUSECOLORS
++# Uncomment to enable color support
++#CFLAGS += -DUSECOLORS
+ # Command history file, relative to home directory. Comment out to disable commandline history
+ CFLAGS += -DHISTORY_FILE=\".$(name)info\"
+ # Input mode history. Same as previous, but for insert mode commands
+@@ -89,25 +89,27 @@ endif
+ 
+ # dynamic linking (should not be used in FreeBSD
+ ifneq ($(shell uname -s),FreeBSD)
+-  LDLIBS += -ldl
++  LDLIBS_DL ?= -ldl
+ endif
+ 
++LDLIBS += $(LDLIBS_DL)
++
+ ifneq (, $(shell which pkg-config))
+   # Any system with pkg-config
+ 
+   # NOTE: ncursesw (required)
+   ifeq ($(shell uname -s),Darwin)
+     # macOS' ncurses is built with wide-char support
+-    LDFLAGS += -lncurses
++    LDLIBS_CURSES ?= -lncurses
+   else ifneq ($(shell pkg-config --exists ncursesw || echo 'no'),no)
+-    CFLAGS += $(shell pkg-config --cflags ncursesw)
+-    LDLIBS += $(shell pkg-config --libs ncursesw)
++    CFLAGS_CURSES ?= $(shell pkg-config --cflags ncursesw)
++    LDLIBS_CURSES ?= $(shell pkg-config --libs ncursesw)
+   else ifneq ($(shell pkg-config --exists ncurses || echo 'no'),no)
+     # hopefully this includes wide character support then
+-    CFLAGS += $(shell pkg-config --cflags ncurses)
+-    LDLIBS += $(shell pkg-config --libs ncurses)
++    CFLAGS_CURSES ?= $(shell pkg-config --cflags ncurses)
++    LDLIBS_CURSES ?= $(shell pkg-config --libs ncurses)
+   else
+-    LDLIBS += -lncursesw
++    LDLIBS_CURSES ?= -lncursesw
+   endif
+ 
+   # NOTE: libxml and libzip are required for xlsx file import support
+@@ -128,9 +130,12 @@ else ifeq ($(shell uname -s),Darwin)
+   # macOS without pkg-config
+ 
+   # macOS' ncurses is built with wide-char support
+-  LDFLAGS += -lncurses
++  LDLIBS_CURSES += -lncurses
+ endif
+ 
++CFLAGS += $(CFLAGS_CURSES)
++LDLIBS += $(LDLIBS_CURSES)
++
+ OBJS = $(patsubst %.c, %.o, $(wildcard *.c) $(wildcard utils/*.c)) gram.o
+ 
+ .PHONY : all clean install docs man_install man_uninstall
+@@ -141,8 +146,8 @@ install :
+ 	install -d $(DESTDIR)$(prefix)/bin
+ 	install $(name) $(DESTDIR)$(prefix)/bin/$(name)
+ 	install -d $(DESTDIR)$(HELPDIR)
+-	install doc $(DESTDIR)$(HELPDIR)/$(name)_help
+-	install plot_* $(DESTDIR)$(HELPDIR)/
++	install -m 644 doc $(DESTDIR)$(HELPDIR)/$(name)_help
++	install -m 644 plot_* $(DESTDIR)$(HELPDIR)/
+ 	install -d $(DESTDIR)$(MANDIR)/
+ 	install -m 644 sc-im.1 $(DESTDIR)$(MANDIR)/$(name).1
+ 
