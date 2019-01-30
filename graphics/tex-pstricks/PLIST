@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.10 2018/05/12 01:47:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2019/01/30 07:30:11 markd Exp $
 share/texmf-dist/dvips/pstricks/pst-algparser.pro
 share/texmf-dist/dvips/pstricks/pst-dots.pro
 share/texmf-dist/dvips/pstricks/pst-dots97.pro
+share/texmf-dist/dvips/pstricks/pstricks-fonts-lm.pro
+share/texmf-dist/dvips/pstricks/pstricks-fonts-ps.pro
+share/texmf-dist/dvips/pstricks/pstricks-fonts-urw.pro
 share/texmf-dist/dvips/pstricks/pstricks.pro
 share/texmf-dist/dvips/pstricks/pstricks97.pro
 share/texmf-dist/tex/generic/pstricks/config/README.cfg
@@ -15,11 +18,14 @@ share/texmf-dist/tex/generic/pstricks/config/xdvipdfmx.cfg
 share/texmf-dist/tex/generic/pstricks/pst-fp.tex
 share/texmf-dist/tex/generic/pstricks/pst-key.tex
 share/texmf-dist/tex/generic/pstricks/pstricks-tex.def
+share/texmf-dist/tex/generic/pstricks/pstricks-xetex.def
 share/texmf-dist/tex/generic/pstricks/pstricks.con
 share/texmf-dist/tex/generic/pstricks/pstricks.tex
 share/texmf-dist/tex/generic/pstricks/pstricks97.tex
 share/texmf-dist/tex/latex/pstricks/pst-all.sty
 share/texmf-dist/tex/latex/pstricks/pst-doc.cls
 share/texmf-dist/tex/latex/pstricks/pst-key.sty
+share/texmf-dist/tex/latex/pstricks/pst-platform.sty
 share/texmf-dist/tex/latex/pstricks/pstcol.sty
+share/texmf-dist/tex/latex/pstricks/pstricks-pdf.sty
 share/texmf-dist/tex/latex/pstricks/pstricks.sty
