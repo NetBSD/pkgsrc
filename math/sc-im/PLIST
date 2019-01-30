@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2019/01/30 12:58:24 leot Exp $
+bin/sc-im
+man/man1/sc-im.1
+share/sc-im/plot_bar
+share/sc-im/plot_line
+share/sc-im/plot_pie
+share/sc-im/plot_scatter
+share/sc-im/sc-im_help
