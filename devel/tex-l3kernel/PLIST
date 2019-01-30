@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/05/12 03:15:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/01/30 05:44:27 markd Exp $
 share/texmf-dist/tex/latex/l3kernel/expl3-code.tex
 share/texmf-dist/tex/latex/l3kernel/expl3-generic.tex
 share/texmf-dist/tex/latex/l3kernel/expl3.lua
@@ -9,9 +9,4 @@ share/texmf-dist/tex/latex/l3kernel/l3dvipdfmx.def
 share/texmf-dist/tex/latex/l3kernel/l3dvips.def
 share/texmf-dist/tex/latex/l3kernel/l3dvisvgm.def
 share/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
-share/texmf-dist/tex/latex/l3kernel/l3regex.sty
-share/texmf-dist/tex/latex/l3kernel/l3sort.sty
-share/texmf-dist/tex/latex/l3kernel/l3str.sty
-share/texmf-dist/tex/latex/l3kernel/l3tl-analysis.sty
-share/texmf-dist/tex/latex/l3kernel/l3tl-build.sty
 share/texmf-dist/tex/latex/l3kernel/l3xdvipdfmx.def
