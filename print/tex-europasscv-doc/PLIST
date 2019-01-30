@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2017/06/21 06:13:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/01/30 08:24:32 markd Exp $
 share/texmf-dist/doc/latex/europasscv/CHANGELOG.md
 share/texmf-dist/doc/latex/europasscv/README.md
 share/texmf-dist/doc/latex/europasscv/europasscv.pdf
 share/texmf-dist/doc/latex/europasscv/europasscv.tex
+share/texmf-dist/doc/latex/europasscv/example/europasscv_bib_en.pdf
+share/texmf-dist/doc/latex/europasscv/example/europasscv_bib_en.tex
 share/texmf-dist/doc/latex/europasscv/example/europasscv_en.pdf
 share/texmf-dist/doc/latex/europasscv/example/europasscv_en.tex
+share/texmf-dist/doc/latex/europasscv/example/europasscv_example.bib
