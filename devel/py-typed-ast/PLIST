@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2018/05/21 23:14:46 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/01/30 22:42:45 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/_ast27.so
-${PYSITELIB}/_ast3.so
 ${PYSITELIB}/typed_ast/__init__.py
 ${PYSITELIB}/typed_ast/__init__.pyc
 ${PYSITELIB}/typed_ast/__init__.pyo
+${PYSITELIB}/typed_ast/_ast27.so
+${PYSITELIB}/typed_ast/_ast3.so
 ${PYSITELIB}/typed_ast/ast27.py
 ${PYSITELIB}/typed_ast/ast27.pyc
 ${PYSITELIB}/typed_ast/ast27.pyo
