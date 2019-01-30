@@ -1,0 +1,2 @@
+'SC Improved', a curses-based spreadsheet program based on sc.  New features
+include undo and redo, colors, sorting, plotting and XLS[X] support.
