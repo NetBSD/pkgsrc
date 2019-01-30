@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/04 12:41:29 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/01/30 08:07:26 markd Exp $
 share/texmf-dist/tex/generic/babel-serbianc/serbianc.ldf
-share/texmf-dist/tex/generic/babel-serbianc/serbianc.sty
