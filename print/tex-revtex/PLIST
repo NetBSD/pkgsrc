@@ -1,18 +1,33 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/03 10:29:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/01/30 10:55:26 markd Exp $
+share/texmf-dist/bibtex/bst/revtex/aapmrev4-2.bst
 share/texmf-dist/bibtex/bst/revtex/aipauth4-1.bst
+share/texmf-dist/bibtex/bst/revtex/aipauth4-2.bst
 share/texmf-dist/bibtex/bst/revtex/aipnum4-1.bst
+share/texmf-dist/bibtex/bst/revtex/aipnum4-2.bst
 share/texmf-dist/bibtex/bst/revtex/apsrev4-1.bst
+share/texmf-dist/bibtex/bst/revtex/apsrev4-2.bst
 share/texmf-dist/bibtex/bst/revtex/apsrmp4-1.bst
+share/texmf-dist/bibtex/bst/revtex/apsrmp4-2.bst
+share/texmf-dist/tex/latex/revtex/aapm4-2.rtx
 share/texmf-dist/tex/latex/revtex/aip4-1.rtx
+share/texmf-dist/tex/latex/revtex/aip4-2.rtx
 share/texmf-dist/tex/latex/revtex/aps10pt4-1.rtx
+share/texmf-dist/tex/latex/revtex/aps10pt4-2.rtx
 share/texmf-dist/tex/latex/revtex/aps11pt4-1.rtx
+share/texmf-dist/tex/latex/revtex/aps11pt4-2.rtx
 share/texmf-dist/tex/latex/revtex/aps12pt4-1.rtx
+share/texmf-dist/tex/latex/revtex/aps12pt4-2.rtx
 share/texmf-dist/tex/latex/revtex/aps4-1.rtx
+share/texmf-dist/tex/latex/revtex/aps4-2.rtx
 share/texmf-dist/tex/latex/revtex/apsrmp4-1.rtx
+share/texmf-dist/tex/latex/revtex/apsrmp4-2.rtx
 share/texmf-dist/tex/latex/revtex/ltxdocext.sty
 share/texmf-dist/tex/latex/revtex/ltxfront.sty
 share/texmf-dist/tex/latex/revtex/ltxgrid.sty
 share/texmf-dist/tex/latex/revtex/ltxutil.sty
-share/texmf-dist/tex/latex/revtex/reftest4-1.tex
+share/texmf-dist/tex/latex/revtex/reftest4-2.tex
 share/texmf-dist/tex/latex/revtex/revsymb4-1.sty
+share/texmf-dist/tex/latex/revtex/revsymb4-2.sty
 share/texmf-dist/tex/latex/revtex/revtex4-1.cls
+share/texmf-dist/tex/latex/revtex/revtex4-2.cls
+share/texmf-dist/tex/latex/revtex/sor4-2.rtx
