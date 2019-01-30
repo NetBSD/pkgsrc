@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2017/09/06 16:49:28 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/01/30 08:47:04 markd Exp $
 
 DISTNAME=	fp
-PKGNAME=	tex-${DISTNAME}-2010
-TEXLIVE_REV=	15878
+PKGNAME=	tex-${DISTNAME}-2.1d
+TEXLIVE_REV=	49719
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/fp
 COMMENT=	Fixed point arithmetic
 LICENSE=	lppl-1.3c
 
