@@ -1,13 +1,17 @@
-@comment $NetBSD: PLIST,v 1.2 2010/05/10 23:12:09 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/01/30 09:38:18 markd Exp $
+share/texmf-dist/doc/latex/elsarticle/1pseperateaug.pdf
+share/texmf-dist/doc/latex/elsarticle/1psingleauthorgroup.pdf
 share/texmf-dist/doc/latex/elsarticle/README
-share/texmf-dist/doc/latex/elsarticle/els-1p.pdf
-share/texmf-dist/doc/latex/elsarticle/els-3pd.pdf
-share/texmf-dist/doc/latex/elsarticle/els1.pdf
-share/texmf-dist/doc/latex/elsarticle/els2.pdf
 share/texmf-dist/doc/latex/elsarticle/elsarticle-template-harv.tex
+share/texmf-dist/doc/latex/elsarticle/elsarticle-template-num-names.tex
 share/texmf-dist/doc/latex/elsarticle/elsarticle-template-num.tex
 share/texmf-dist/doc/latex/elsarticle/elsdoc.pdf
 share/texmf-dist/doc/latex/elsarticle/elsdoc.tex
+share/texmf-dist/doc/latex/elsarticle/elstest-1p.pdf
+share/texmf-dist/doc/latex/elsarticle/elstest-1pdoubleblind.pdf
+share/texmf-dist/doc/latex/elsarticle/elstest-3p.pdf
+share/texmf-dist/doc/latex/elsarticle/elstest-3pd.pdf
+share/texmf-dist/doc/latex/elsarticle/elstest-5p.pdf
 share/texmf-dist/doc/latex/elsarticle/jfigs.pdf
 share/texmf-dist/doc/latex/elsarticle/makefile
 share/texmf-dist/doc/latex/elsarticle/manifest.txt
