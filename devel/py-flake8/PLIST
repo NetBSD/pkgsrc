@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/11/28 12:45:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/01/30 22:53:11 adam Exp $
 bin/flake8-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -78,15 +78,9 @@ ${PYSITELIB}/flake8/options/manager.pyo
 ${PYSITELIB}/flake8/plugins/__init__.py
 ${PYSITELIB}/flake8/plugins/__init__.pyc
 ${PYSITELIB}/flake8/plugins/__init__.pyo
-${PYSITELIB}/flake8/plugins/_trie.py
-${PYSITELIB}/flake8/plugins/_trie.pyc
-${PYSITELIB}/flake8/plugins/_trie.pyo
 ${PYSITELIB}/flake8/plugins/manager.py
 ${PYSITELIB}/flake8/plugins/manager.pyc
 ${PYSITELIB}/flake8/plugins/manager.pyo
-${PYSITELIB}/flake8/plugins/notifier.py
-${PYSITELIB}/flake8/plugins/notifier.pyc
-${PYSITELIB}/flake8/plugins/notifier.pyo
 ${PYSITELIB}/flake8/plugins/pyflakes.py
 ${PYSITELIB}/flake8/plugins/pyflakes.pyc
 ${PYSITELIB}/flake8/plugins/pyflakes.pyo
