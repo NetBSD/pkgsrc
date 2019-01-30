@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 23:33:44 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/01/30 08:47:04 markd Exp $
 
-SHA1 (tex-fp-15878/fp.doc.tar.xz) = 45be033f58b6dfdface0e6fd12a04d7b8df479d0
-RMD160 (tex-fp-15878/fp.doc.tar.xz) = 6346090eecd73a2a4683d9af893dace166e7ea27
-SHA512 (tex-fp-15878/fp.doc.tar.xz) = 6003aa4a759b7d0c8a74ad58457aa3d99d8e9dabfc4e3ea81be575ae8d2dd32b6c860c4bd1e4d40d8708df2319de1940e062f0da5a167abf0143accff7baa279
-Size (tex-fp-15878/fp.doc.tar.xz) = 6072 bytes
+SHA1 (tex-fp-49719/fp.doc.tar.xz) = b205abffbc6a79203de498e9501ac7c55ae7e032
+RMD160 (tex-fp-49719/fp.doc.tar.xz) = fc0f1da453dcb4f396fb8deb0a4dee6574a43a34
+SHA512 (tex-fp-49719/fp.doc.tar.xz) = 8d41d11a282d47d77c0fd004650115a5dcb00f06a4387bc694cb15b30b852f2a66638f39c7f7cc72ce1d9e0cce9d840380f959a99a3fd73cff799d90ce420b57
+Size (tex-fp-49719/fp.doc.tar.xz) = 218960 bytes
