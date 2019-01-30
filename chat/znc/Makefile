@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2018/12/16 14:08:03 nia Exp $
+# $NetBSD: Makefile,v 1.4 2019/01/30 17:08:55 nia Exp $
 
-DISTNAME=	znc-1.7.1
-PKGREVISION=	1
+DISTNAME=	znc-1.7.2
 CATEGORIES=	net
 MASTER_SITES=	https://znc.in/releases/archive/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://znc.in/
 COMMENT=	Advanced IRC bouncer with IPv6 and SSL support
 LICENSE=	gnu-gpl-v2
