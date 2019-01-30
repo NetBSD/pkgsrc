@@ -1,14 +1,14 @@
-$NetBSD: patch-src_Makefile.am,v 1.1 2018/12/10 20:33:06 fox Exp $
+$NetBSD: patch-src_Makefile.am,v 1.2 2019/01/30 01:03:47 fox Exp $
 
-Now it only links the library (ALSA / JACK) selected during build time.
+Removed tcl8.6 flags, this is now handled in the pkgsrc script.
 
---- src/Makefile.am.orig	2018-10-22 17:17:28.000000000 +0000
+--- src/Makefile.am.orig	2019-01-29 00:14:29.000000000 +0000
 +++ src/Makefile.am
 @@ -1,5 +1,5 @@
--AM_CXXFLAGS = -I ../include -I /usr/include/tcl8.6 -Wall -D __GPL20__ -D_THREAD_SAFE -DHAVE_OPENGL -D__LICENSED__ -D __SVG__ -DPREFIX=\"@prefix@\"
+-AM_CXXFLAGS = -I ../include -I /usr/include/tcl8.6 -Wall -D_THREAD_SAFE -DHAVE_OPENGL -D__LICENSED__ -D __SVG__ -D __GPL20__ -DPREFIX=\"@prefix@\"
 -LIBS +=  -ltcl8.6 -lSDL -lGL -lpthread -lasound -ljack
-+AM_CXXFLAGS = -I ../include -Wall -D __GPL20__ -D_THREAD_SAFE -DHAVE_OPENGL -D__LICENSED__ -D __SVG__ -DPREFIX=\"@prefix@\"
-+LIBS += -lSDL -lGL -lpthread -lasound -ljack
++AM_CXXFLAGS = -I ../include -Wall -D_THREAD_SAFE -DHAVE_OPENGL -D__LICENSED__ -D __SVG__ -D __GPL20__ -DPREFIX=\"@prefix@\"
++LIBS +=  -lSDL -lGL -lpthread -lasound -ljack
  
  AM_CFLAGS = -I ../include
  bin_PROGRAMS = din
