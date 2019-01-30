@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2018/05/06 02:43:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/01/30 08:24:32 markd Exp $
 share/texmf-dist/tex/latex/europasscv/address_europass_icon.pdf
+share/texmf-dist/tex/latex/europasscv/europasscv-bibliography.sty
 share/texmf-dist/tex/latex/europasscv/europasscv.cls
+share/texmf-dist/tex/latex/europasscv/europasscv_ca.def
 share/texmf-dist/tex/latex/europasscv/europasscv_cs.def
 share/texmf-dist/tex/latex/europasscv/europasscv_da.def
 share/texmf-dist/tex/latex/europasscv/europasscv_de.def
@@ -10,16 +12,19 @@ share/texmf-dist/tex/latex/europasscv/europasscv_es.def
 share/texmf-dist/tex/latex/europasscv/europasscv_fr.def
 share/texmf-dist/tex/latex/europasscv/europasscv_hu.def
 share/texmf-dist/tex/latex/europasscv/europasscv_it.def
+share/texmf-dist/tex/latex/europasscv/europasscv_nb.def
 share/texmf-dist/tex/latex/europasscv/europasscv_pl.def
 share/texmf-dist/tex/latex/europasscv/europasscv_pt.def
 share/texmf-dist/tex/latex/europasscv/europasscv_sl.def
 share/texmf-dist/tex/latex/europasscv/europasscv_sv.def
 share/texmf-dist/tex/latex/europasscv/europasslogo2013.pdf
 share/texmf-dist/tex/latex/europasscv/github_europass_icon.pdf
+share/texmf-dist/tex/latex/europasscv/gitlab_europass_icon.pdf
 share/texmf-dist/tex/latex/europasscv/im_europass_icon.pdf
 share/texmf-dist/tex/latex/europasscv/linkedin_europass_icon.pdf
 share/texmf-dist/tex/latex/europasscv/mail_europass_icon.pdf
 share/texmf-dist/tex/latex/europasscv/mobile_europass_icon.pdf
+share/texmf-dist/tex/latex/europasscv/orcid_europass_icon.pdf
 share/texmf-dist/tex/latex/europasscv/telephone_europass_icon.pdf
 share/texmf-dist/tex/latex/europasscv/website_europass_icon.pdf
 share/texmf-dist/tex/latex/europasscv/work_europass_icon.pdf
