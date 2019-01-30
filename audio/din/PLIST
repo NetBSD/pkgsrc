@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/12/10 20:33:06 fox Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/01/30 01:03:47 fox Exp $
 bin/din
 share/applications/din.desktop
 share/din/factory/2600
@@ -6,6 +6,7 @@ share/din/factory/2600.help.tcl
 share/din/factory/2600.patch.tcl
 share/din/factory/Makefile.am
 share/din/factory/Sine_Mixer
+share/din/factory/all_notes
 share/din/factory/am.crv
 share/din/factory/attack.crv
 share/din/factory/attack.ed
@@ -18,6 +19,7 @@ share/din/factory/binaural_drones
 share/din/factory/blues
 share/din/factory/blues.drone
 share/din/factory/blues.intervals
+share/din/factory/blues.ranges
 share/din/factory/changer.help.tcl
 share/din/factory/changer.patch.tcl
 share/din/factory/chord.help.tcl
@@ -400,6 +402,7 @@ share/din/factory/p_Lissajous
 share/din/factory/p_Morpher
 share/din/factory/p_Number
 share/din/factory/p_Rose_Milker
+share/din/factory/p_Sine_Mixer
 share/din/factory/p_Spiraler
 share/din/factory/p_Starrer
 share/din/factory/p_Superformula
