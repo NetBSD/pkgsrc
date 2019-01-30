@@ -1,6 +1,16 @@
-@comment $NetBSD: PLIST,v 1.7 2018/05/13 10:54:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/01/30 10:44:57 markd Exp $
+share/texmf-dist/scripts/tex4ht/ht.sh
+share/texmf-dist/scripts/tex4ht/htcontext.sh
 share/texmf-dist/scripts/tex4ht/htcopy.pl
+share/texmf-dist/scripts/tex4ht/htlatex.sh
+share/texmf-dist/scripts/tex4ht/htmex.sh
 share/texmf-dist/scripts/tex4ht/htmove.pl
+share/texmf-dist/scripts/tex4ht/httex.sh
+share/texmf-dist/scripts/tex4ht/httexi.sh
+share/texmf-dist/scripts/tex4ht/htxelatex.sh
+share/texmf-dist/scripts/tex4ht/htxetex.sh
+share/texmf-dist/scripts/tex4ht/mk4ht.pl
+share/texmf-dist/scripts/tex4ht/xhlatex.sh
 share/texmf-dist/tex/generic/tex4ht/2up.4ht
 share/texmf-dist/tex/generic/tex4ht/8859-6.4ht
 share/texmf-dist/tex/generic/tex4ht/CJK.4ht
@@ -52,6 +62,7 @@ share/texmf-dist/tex/generic/tex4ht/beamer.4ht
 share/texmf-dist/tex/generic/tex4ht/beamerbasefont.4ht
 share/texmf-dist/tex/generic/tex4ht/beamerbasetoc.4ht
 share/texmf-dist/tex/generic/tex4ht/beton.4ht
+share/texmf-dist/tex/generic/tex4ht/biblatex-chicago.4ht
 share/texmf-dist/tex/generic/tex4ht/biblatex.4ht
 share/texmf-dist/tex/generic/tex4ht/bibtex.4ht
 share/texmf-dist/tex/generic/tex4ht/bibtex2.4ht
@@ -67,6 +78,7 @@ share/texmf-dist/tex/generic/tex4ht/catalan.4ht
 share/texmf-dist/tex/generic/tex4ht/cgloss4e.4ht
 share/texmf-dist/tex/generic/tex4ht/chapterbib.4ht
 share/texmf-dist/tex/generic/tex4ht/chicago.4ht
+share/texmf-dist/tex/generic/tex4ht/cleveref.4ht
 share/texmf-dist/tex/generic/tex4ht/color.4ht
 share/texmf-dist/tex/generic/tex4ht/colortbl.4ht
 share/texmf-dist/tex/generic/tex4ht/combine.4ht
@@ -228,9 +240,11 @@ share/texmf-dist/tex/generic/tex4ht/ltugproc-a.4ht
 share/texmf-dist/tex/generic/tex4ht/ltugproc.4ht
 share/texmf-dist/tex/generic/tex4ht/ltxguide.4ht
 share/texmf-dist/tex/generic/tex4ht/m-tex4ht.tex
+share/texmf-dist/tex/generic/tex4ht/magyar.4ht
 share/texmf-dist/tex/generic/tex4ht/makeidx.4ht
 share/texmf-dist/tex/generic/tex4ht/manju.4ht
 share/texmf-dist/tex/generic/tex4ht/manmac.4ht
+share/texmf-dist/tex/generic/tex4ht/mathjax-latex-4ht.4ht
 share/texmf-dist/tex/generic/tex4ht/mathltx.4ht
 share/texmf-dist/tex/generic/tex4ht/mathml.4ht
 share/texmf-dist/tex/generic/tex4ht/mathplayer.4ht
@@ -311,6 +325,7 @@ share/texmf-dist/tex/generic/tex4ht/russianb.4ht
 share/texmf-dist/tex/generic/tex4ht/scottish.4ht
 share/texmf-dist/tex/generic/tex4ht/scrartcl.4ht
 share/texmf-dist/tex/generic/tex4ht/scrbook.4ht
+share/texmf-dist/tex/generic/tex4ht/scrjura.4ht
 share/texmf-dist/tex/generic/tex4ht/scrreprt.4ht
 share/texmf-dist/tex/generic/tex4ht/sectionbreak.4ht
 share/texmf-dist/tex/generic/tex4ht/seminar-a.4ht
@@ -333,11 +348,13 @@ share/texmf-dist/tex/generic/tex4ht/subfigure.4ht
 share/texmf-dist/tex/generic/tex4ht/subscript.4ht
 share/texmf-dist/tex/generic/tex4ht/supertabular.4ht
 share/texmf-dist/tex/generic/tex4ht/sverb.4ht
+share/texmf-dist/tex/generic/tex4ht/svg-option.4ht
 share/texmf-dist/tex/generic/tex4ht/svg.4ht
 share/texmf-dist/tex/generic/tex4ht/svgnam.4ht
 share/texmf-dist/tex/generic/tex4ht/swedish.4ht
 share/texmf-dist/tex/generic/tex4ht/syntax.4ht
 share/texmf-dist/tex/generic/tex4ht/t2benc.4ht
+share/texmf-dist/tex/generic/tex4ht/tabu.4ht
 share/texmf-dist/tex/generic/tex4ht/tabularx.4ht
 share/texmf-dist/tex/generic/tex4ht/tabulary-a.4ht
 share/texmf-dist/tex/generic/tex4ht/tabulary.4ht
@@ -356,6 +373,7 @@ share/texmf-dist/tex/generic/tex4ht/theorem.4ht
 share/texmf-dist/tex/generic/tex4ht/titlesec.4ht
 share/texmf-dist/tex/generic/tex4ht/tocloft.4ht
 share/texmf-dist/tex/generic/tex4ht/tuenc-luatex.4ht
+share/texmf-dist/tex/generic/tex4ht/tuenc-xetex-input.4ht
 share/texmf-dist/tex/generic/tex4ht/tuenc-xetex.4ht
 share/texmf-dist/tex/generic/tex4ht/tugboat.4ht
 share/texmf-dist/tex/generic/tex4ht/turkish.4ht
