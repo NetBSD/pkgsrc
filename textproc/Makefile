@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1019 2019/01/06 01:50:25 gutteridge Exp $
+# $NetBSD: Makefile,v 1.1020 2019/01/30 12:56:14 leot Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -378,6 +378,7 @@ SUBDIR+=	libpinyin
 SUBDIR+=	libplist
 SUBDIR+=	libunicode
 SUBDIR+=	libunistring
+SUBDIR+=	libxlsxwriter
 SUBDIR+=	libxml
 SUBDIR+=	libxml++
 SUBDIR+=	libxml++1
