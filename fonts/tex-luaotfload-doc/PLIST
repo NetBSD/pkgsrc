@@ -1,10 +1,16 @@
-@comment $NetBSD: PLIST,v 1.2 2015/04/25 08:04:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/01/30 11:09:34 markd Exp $
 man/man1/luaotfload-tool.1
 man/man5/luaotfload.conf.5
 share/texmf-dist/doc/luatex/luaotfload/COPYING
 share/texmf-dist/doc/luatex/luaotfload/NEWS
-share/texmf-dist/doc/luatex/luaotfload/README
+share/texmf-dist/doc/luatex/luaotfload/README.md
 share/texmf-dist/doc/luatex/luaotfload/filegraph.pdf
+share/texmf-dist/doc/luatex/luaotfload/filegraph.tex
+share/texmf-dist/doc/luatex/luaotfload/luaotfload-conf.pdf
+share/texmf-dist/doc/luatex/luaotfload/luaotfload-latex.pdf
+share/texmf-dist/doc/luatex/luaotfload/luaotfload-latex.tex
+share/texmf-dist/doc/luatex/luaotfload/luaotfload-main.tex
+share/texmf-dist/doc/luatex/luaotfload/luaotfload-tool.pdf
+share/texmf-dist/doc/luatex/luaotfload/luaotfload-tool.rst
 share/texmf-dist/doc/luatex/luaotfload/luaotfload.conf.example
-share/texmf-dist/doc/luatex/luaotfload/luaotfload.pdf
-share/texmf-dist/doc/luatex/luaotfload/valgrind-kpse-suppression.sup
+share/texmf-dist/doc/luatex/luaotfload/luaotfload.conf.rst
