@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.512 2019/01/29 19:56:41 markd Exp $
+$NetBSD: CHANGES-2019,v 1.513 2019/01/30 01:08:11 fox Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -951,3 +951,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/tex-lipsum-doc to 2.2 [markd 2019-01-29]
 	Updated print/tex-pgf to 3.1 [markd 2019-01-29]
 	Updated print/tex-pgf-doc to 3.1 [markd 2019-01-29]
+	Updated audio/din to 39.0.1 [fox 2019-01-30]
