@@ -1,14 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2018/05/12 00:48:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/01/30 07:43:06 markd Exp $
 share/texmf-dist/doc/support/make4ht/README
 share/texmf-dist/doc/support/make4ht/changelog.tex
-share/texmf-dist/doc/support/make4ht/extensions/common_domfilters.lua
-share/texmf-dist/doc/support/make4ht/extensions/common_filters.lua
-share/texmf-dist/doc/support/make4ht/extensions/latexmk.lua
-share/texmf-dist/doc/support/make4ht/extensions/mathjaxnode.lua
-share/texmf-dist/doc/support/make4ht/extensions/tidy.lua
-share/texmf-dist/doc/support/make4ht/formats/html5.lua
-share/texmf-dist/doc/support/make4ht/formats/odt.lua
-share/texmf-dist/doc/support/make4ht/formats/xhtml.lua
 share/texmf-dist/doc/support/make4ht/make4ht-doc.pdf
 share/texmf-dist/doc/support/make4ht/make4ht-doc.tex
 share/texmf-dist/doc/support/make4ht/readme.tex
