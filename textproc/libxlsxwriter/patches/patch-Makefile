@@ -1,0 +1,27 @@
+$NetBSD: patch-Makefile,v 1.1 2019/01/30 12:55:13 leot Exp $
+
+Make the py.test name configurable.
+
+Upstream pull request:
+https://github.com/jmcnamara/libxlsxwriter/pull/206
+
+--- Makefile.orig	2018-12-11 10:35:42.411978337 +0100
++++ Makefile	2018-12-11 10:36:14.841058290 +0100
+@@ -11,6 +11,8 @@
+ Q=
+ endif
+ 
++PYTEST ?= py.test
++
+ INSTALL_DIR ?= /usr/local
+ 
+ .PHONY: docs tags examples
+@@ -58,7 +60,7 @@
+ # Run the functional tests.
+ test_functional : all
+ 	$(Q)$(MAKE) -C test/functional/src
+-	$(Q)py.test test/functional -v
++	$(Q)$(PYTEST) test/functional -v
+ 
+ # Run all tests.
+ test_unit :
