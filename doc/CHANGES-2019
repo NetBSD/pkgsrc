@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.521 2019/01/30 17:09:09 nia Exp $
+$NetBSD: CHANGES-2019,v 1.522 2019/01/30 17:54:09 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1008,3 +1008,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added math/sc-im version 0.7.0 [leot 2019-01-30]
 	Updated devel/p5-Ouch to 0.0501 [schmonz 2019-01-30]
 	Updated chat/znc to 1.7.2 [nia 2019-01-30]
+	Updated chat/py-nbxmpp to 0.6.9 [nia 2019-01-30]
