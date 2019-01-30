@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2019/01/30 12:58:24 leot Exp $
+
+SHA1 (sc-im-0.7.0.tar.gz) = 1e8e2ad2f9042c304f57fefb320bb18e76edd398
+RMD160 (sc-im-0.7.0.tar.gz) = 6b13e1dfd46b57dd84d4458fb8bdb509b07d1f1e
+SHA512 (sc-im-0.7.0.tar.gz) = 47bc02d4b698c30a3144733216cfdf57daafb4115e5d49774104c4fedbd22f1ab7e491e1fc16683273c8c5e8820f6caf2389223c4789b9e3f777d57528b76f1b
+Size (sc-im-0.7.0.tar.gz) = 1109887 bytes
+SHA1 (patch-src_Makefile) = 2a7e56779350af57002ecddd8bec13e1b10f7ea4
