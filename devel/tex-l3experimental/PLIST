@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2018/05/12 03:12:53 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/01/30 05:47:29 markd Exp $
+share/texmf-dist/tex/latex/l3experimental/l3benchmark/l3benchmark.sty
+share/texmf-dist/tex/latex/l3experimental/l3cctab/l3cctab.sty
 share/texmf-dist/tex/latex/l3experimental/l3color/l3color.sty
 share/texmf-dist/tex/latex/l3experimental/l3draw/l3draw.sty
 share/texmf-dist/tex/latex/l3experimental/l3str/l3str-convert.sty
@@ -25,6 +27,7 @@ share/texmf-dist/tex/latex/l3experimental/l3str/l3str-esc-name.def
 share/texmf-dist/tex/latex/l3experimental/l3str/l3str-esc-string.def
 share/texmf-dist/tex/latex/l3experimental/l3str/l3str-esc-url.def
 share/texmf-dist/tex/latex/l3experimental/l3str/l3str-format.sty
+share/texmf-dist/tex/latex/l3experimental/l3sys-shell/l3sys-shell.sty
 share/texmf-dist/tex/latex/l3experimental/xcoffins/xcoffins.sty
 share/texmf-dist/tex/latex/l3experimental/xgalley/l3galley.sty
 share/texmf-dist/tex/latex/l3experimental/xgalley/xgalley.sty
