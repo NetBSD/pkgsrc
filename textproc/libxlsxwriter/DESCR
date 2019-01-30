@@ -1,0 +1,5 @@
+C library that can be used to write text, numbers, formulas and hyperlinks to
+multiple worksheets in a Microsoft Excel 2007+ XLSX file.
+
+It supports features such as full formatting support, merged cells, defined
+names, autofilters and charts.
