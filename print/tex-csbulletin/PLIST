@@ -1,3 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/28 11:55:19 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/01/30 08:01:16 markd Exp $
 share/texmf-dist/tex/latex/csbulletin/csbulacronym.sty
 share/texmf-dist/tex/latex/csbulletin/csbulletin.cls
+share/texmf-dist/tex/latex/csbulletin/csbulobalka.cls
+share/texmf-dist/tex/latex/csbulletin/csbulobalka.sty
+share/texmf-dist/tex/latex/csbulletin/csbulv1.cls
