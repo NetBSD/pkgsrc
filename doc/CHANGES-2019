@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.517 2019/01/30 11:56:20 markd Exp $
+$NetBSD: CHANGES-2019,v 1.518 2019/01/30 12:56:35 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1004,3 +1004,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/tex-revtex-doc to 4.2c [markd 2019-01-30]
 	Updated fonts/tex-luaotfload to 2.94 [markd 2019-01-30]
 	Updated fonts/tex-luaotfload-doc to 2.94 [markd 2019-01-30]
+	Added textproc/libxlsxwriter version 0.8.4 [leot 2019-01-30]
