@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2016/01/27 10:53:20 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/01/30 09:38:18 markd Exp $
 
 DISTNAME=	elsarticle
-PKGNAME=	tex-${DISTNAME}-1.20
-TEXLIVE_REV=	15878
+PKGNAME=	tex-${DISTNAME}-3.1
+TEXLIVE_REV=	49714
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/elsarticle
 COMMENT=	Class for articles for submission to Elsevier journals
 LICENSE=	lppl-1.2
 
