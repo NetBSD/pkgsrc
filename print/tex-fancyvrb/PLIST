@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/02 19:17:51 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/01/30 09:03:12 markd Exp $
+share/texmf-dist/tex/latex/fancyvrb/fancyvrb-ex.sty
 share/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
-share/texmf-dist/tex/latex/fancyvrb/fvrb-ex.sty
 share/texmf-dist/tex/latex/fancyvrb/hbaw.sty
 share/texmf-dist/tex/latex/fancyvrb/hcolor.sty
