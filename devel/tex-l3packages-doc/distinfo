@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2018/05/12 03:18:20 markd Exp $
+$NetBSD: distinfo,v 1.10 2019/01/30 05:35:01 markd Exp $
 
-SHA1 (tex-l3packages-46712/l3packages.doc.tar.xz) = a1cd80cc162decd44b2fd2005a2e683af326614b
-RMD160 (tex-l3packages-46712/l3packages.doc.tar.xz) = b1512adcc5ec2f3a1a3bfd9a6908b3f686bd0612
-SHA512 (tex-l3packages-46712/l3packages.doc.tar.xz) = 1c42fe0cfede171ef9971aa4f633da03ab0d0f0773d774a6c09235e0b8f7a60d97aa5075a4a58f367140dfa4f8f61a0b25cc7ddb657ebb08c06ac5e0ee0fc8d4
-Size (tex-l3packages-46712/l3packages.doc.tar.xz) = 1732272 bytes
+SHA1 (tex-l3packages-48935/l3packages.doc.tar.xz) = 8faa389532dee44592c6d4979e80910eb143990a
+RMD160 (tex-l3packages-48935/l3packages.doc.tar.xz) = 208f861f3a42e7e2d779b43c985c751cb18f07e4
+SHA512 (tex-l3packages-48935/l3packages.doc.tar.xz) = 6ad04ae0234566144188a399eb3ba047ae64175de219af300443a4c0fa2ec1afc8273739e03180ff880d6cd7fe39dc2ebe15917a9f69b86792f8c5b4cfe214d2
+Size (tex-l3packages-48935/l3packages.doc.tar.xz) = 1754828 bytes
