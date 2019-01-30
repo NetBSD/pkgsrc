@@ -1,16 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2019/01/30 10:44:57 markd Exp $
-share/texmf-dist/scripts/tex4ht/ht.sh
-share/texmf-dist/scripts/tex4ht/htcontext.sh
+@comment $NetBSD: PLIST,v 1.9 2019/01/30 19:34:48 markd Exp $
 share/texmf-dist/scripts/tex4ht/htcopy.pl
-share/texmf-dist/scripts/tex4ht/htlatex.sh
-share/texmf-dist/scripts/tex4ht/htmex.sh
 share/texmf-dist/scripts/tex4ht/htmove.pl
-share/texmf-dist/scripts/tex4ht/httex.sh
-share/texmf-dist/scripts/tex4ht/httexi.sh
-share/texmf-dist/scripts/tex4ht/htxelatex.sh
-share/texmf-dist/scripts/tex4ht/htxetex.sh
-share/texmf-dist/scripts/tex4ht/mk4ht.pl
-share/texmf-dist/scripts/tex4ht/xhlatex.sh
 share/texmf-dist/tex/generic/tex4ht/2up.4ht
 share/texmf-dist/tex/generic/tex4ht/8859-6.4ht
 share/texmf-dist/tex/generic/tex4ht/CJK.4ht
