@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2018/05/12 02:03:46 markd Exp $
+# $NetBSD: Makefile,v 1.7 2019/01/30 05:59:13 markd Exp $
 
 DISTNAME=	updmap-map
-PKGNAME=	tex-${DISTNAME}-2018
-TEXLIVE_REV=	46957
+PKGNAME=	tex-${DISTNAME}-2018.49586
+TEXLIVE_REV=	49586
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://ctan.org/pkg/updmap-map
