@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/05/13 10:49:24 markd Exp $
+$NetBSD: distinfo,v 1.3 2019/01/30 07:20:37 markd Exp $
 
-SHA1 (tex-tex4ebook-47414/tex4ebook.tar.xz) = 1358293bd869c5887b58ea95254c3fe83ba64842
-RMD160 (tex-tex4ebook-47414/tex4ebook.tar.xz) = c1403f7131c272b3d745c43c9cfc5e05e61b77f0
-SHA512 (tex-tex4ebook-47414/tex4ebook.tar.xz) = 2fa8442af6d5b58c1970adb9183dc71edc6c4abff005243d2bb29a99e730530015e4259cea380bcddec5e8c98ca93066fb02e77a518ea69ceff6424a5d7d0525
-Size (tex-tex4ebook-47414/tex4ebook.tar.xz) = 14956 bytes
+SHA1 (tex-tex4ebook-49665/tex4ebook.tar.xz) = 2442f9a8060948f35b4eef6108888fb0aad34c30
+RMD160 (tex-tex4ebook-49665/tex4ebook.tar.xz) = 8a19f24543a4c990c20a6fe0ac443a00d51fd469
+SHA512 (tex-tex4ebook-49665/tex4ebook.tar.xz) = e3970563fff843703ef169c1377bd7221036c070fbd047e01db4436ef37eb05c106ee43092686b8164de64f3d49d159c9bcf18378d486a6a7f5c0e2489d77d31
+Size (tex-tex4ebook-49665/tex4ebook.tar.xz) = 15648 bytes
