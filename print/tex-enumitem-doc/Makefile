@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2017/09/06 16:49:33 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/01/30 08:32:29 markd Exp $
 
 DISTNAME=	enumitem.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-3.5.2
-TEXLIVE_REV=	24146
+PKGNAME=	tex-${DISTNAME:S/./-/}-3.7
+TEXLIVE_REV=	49702
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/enumitem
 COMMENT=	Documentation for tex-enumitem
-LICENSE=	lppl-1.3c
+LICENSE=	mit
 
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
