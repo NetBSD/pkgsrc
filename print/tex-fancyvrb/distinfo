@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:02:07 agc Exp $
+$NetBSD: distinfo,v 1.5 2019/01/30 09:03:12 markd Exp $
 
-SHA1 (tex-fancyvrb-18492/fancyvrb.tar.xz) = b2d4fe46894f04c9327a3ae7526f8040c2f46c01
-RMD160 (tex-fancyvrb-18492/fancyvrb.tar.xz) = 04e0080c378f957f6f4065d7c711bb57a681acdc
-SHA512 (tex-fancyvrb-18492/fancyvrb.tar.xz) = 90e52117a4fd79c9e268888dc2d237ed06679820b66f8dc29b17f6be3b13e02dd48a801325e12e04333fc3fc02a45bc3d387dacf307d788b8d1d62f6517fea36
-Size (tex-fancyvrb-18492/fancyvrb.tar.xz) = 12160 bytes
+SHA1 (tex-fancyvrb-49717/fancyvrb.tar.xz) = ef8b64295f8fe3e17e4fd09b704e506142cc115a
+RMD160 (tex-fancyvrb-49717/fancyvrb.tar.xz) = d97495f6e6eda00986d195321d09a4597f7d602c
+SHA512 (tex-fancyvrb-49717/fancyvrb.tar.xz) = 429d9c6cdf15e39b996bdb0cd5fbf923155f9045564b60caf1fabda0d00ab8b1aa9990368d8aa817391946e9e534fcd57ae1efd87511f35b7b2c648738705d18
+Size (tex-fancyvrb-49717/fancyvrb.tar.xz) = 11972 bytes
