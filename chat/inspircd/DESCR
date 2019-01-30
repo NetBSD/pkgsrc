@@ -1,0 +1,6 @@
+InspIRCd is a modular Internet Relay Chat (IRC) server.
+
+It was created from scratch to be stable, modern and lightweight.
+It avoids a number of design flaws and performance issues that
+plague other more established projects, such as UnrealIRCd, while
+providing the same level of feature parity.
