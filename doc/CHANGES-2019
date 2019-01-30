@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.523 2019/01/30 17:57:01 nia Exp $
+$NetBSD: CHANGES-2019,v 1.524 2019/01/30 17:57:26 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1010,3 +1010,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated chat/znc to 1.7.2 [nia 2019-01-30]
 	Updated chat/py-nbxmpp to 0.6.9 [nia 2019-01-30]
 	Updated chat/gajim to 1.1.2 [nia 2019-01-30]
+	Updated chat/gajim-plugin-omemo to 2.6.26 [nia 2019-01-30]
