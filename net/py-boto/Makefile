@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2018/12/22 17:30:08 taca Exp $
+# $NetBSD: Makefile,v 1.33 2019/01/30 16:07:07 leot Exp $
 
 DISTNAME=	boto-2.49.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net python www
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/boto/}
 
