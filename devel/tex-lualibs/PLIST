@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2017/06/21 08:28:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/01/30 10:23:19 markd Exp $
+share/texmf-dist/tex/luatex/lualibs/lualibs-basic-merged.lua
 share/texmf-dist/tex/luatex/lualibs/lualibs-basic.lua
 share/texmf-dist/tex/luatex/lualibs/lualibs-boolean.lua
 share/texmf-dist/tex/luatex/lualibs/lualibs-compat.lua
 share/texmf-dist/tex/luatex/lualibs/lualibs-dir.lua
+share/texmf-dist/tex/luatex/lualibs/lualibs-extended-merged.lua
 share/texmf-dist/tex/luatex/lualibs/lualibs-extended.lua
 share/texmf-dist/tex/luatex/lualibs/lualibs-file.lua
 share/texmf-dist/tex/luatex/lualibs/lualibs-function.lua
