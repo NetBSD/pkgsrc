@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2018/05/22 21:16:28 markd Exp $
+# $NetBSD: Makefile,v 1.8 2019/01/30 09:54:20 markd Exp $
 
 DISTNAME=	collection-mathscience
 PKGNAME=	texlive-${DISTNAME}-2018pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	47351
+TEXLIVE_REV=	49722
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -38,6 +38,7 @@ DEPENDS+=	tex-amstex-[0-9]*:../../print/tex-amstex
 # depend bropd
 # depend bytefield
 # depend calculation
+# depend cascade
 DEPENDS+=	tex-ccfonts-[0-9]*:../../fonts/tex-ccfonts
 DEPENDS+=	tex-chemarrow-[0-9]*:../../print/tex-chemarrow
 # depend chemcompounds
@@ -61,8 +62,8 @@ DEPENDS+=	tex-concrete-[0-9]*:../../fonts/tex-concrete
 # depend correctmathalign
 # depend cryptocode
 # depend delim
-# depend delimset
 # depend delimseasy
+# depend delimset
 # depend diffcoeff
 # depend digiconfigs
 # depend dijkstra
@@ -75,11 +76,13 @@ DEPENDS+=	tex-ebproof-[0-9]*:../../print/tex-ebproof
 # depend emf
 # depend endiagram
 # depend engtlc
+# depend eqexpl
 # depend eqnarray
 # depend eqnnumwarn
 # depend extarrows
 # depend extpfeil
 # depend faktor
+# depend fascicules
 # depend fnspe
 # depend fouridx
 # depend functan
@@ -95,6 +98,7 @@ DEPENDS+=	tex-ebproof-[0-9]*:../../print/tex-ebproof
 # depend hepparticles
 # depend hepthesis
 # depend hepunits
+# depend includernw
 # depend interval
 # depend ionumbers
 # depend isomath
@@ -102,17 +106,19 @@ DEPENDS+=	tex-ebproof-[0-9]*:../../print/tex-ebproof
 # depend karnaugh
 # depend karnaugh-map
 # depend karnaughmap
+# depend kvmap
 # depend logicproof
 # depend longdivision
 # depend lpform
 # depend lplfitch
 # depend lstbayes
 DEPENDS+=	tex-mathcomp-[0-9]*:../../print/tex-mathcomp
+# depend mathfixs
 DEPENDS+=	tex-mathpartir-[0-9]*:../../math/tex-mathpartir
 # depend mathpunctspace
-# depend mathfixs
 # depend matlab-prettifier
 # depend mattens
+# depend memorygraphs
 # depend mgltex
 DEPENDS+=	tex-mhchem-[0-9]*:../../print/tex-mhchem
 # depend mhequ
@@ -137,6 +143,8 @@ DEPENDS+=	tex-oubraces-[0-9]*:../../print/tex-oubraces
 # depend prooftrees
 # depend pseudocode
 # depend pythonhighlight
+# depend qsharp
+# depend rank-2-roots
 # depend rec-thy
 # depend revquantum
 # depend ribbonproofs
@@ -156,6 +164,8 @@ DEPENDS+=	tex-siunitx-[0-9]*:../../print/tex-siunitx
 # depend stanli
 DEPENDS+=	tex-statex-[0-9]*:../../print/tex-statex
 # depend statex2
+# depend statistics
+# depend statistik
 # depend statmath
 # depend steinmetz
 DEPENDS+=	tex-stmaryrd-[0-9]*:../../fonts/tex-stmaryrd
