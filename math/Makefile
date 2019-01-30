@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.403 2018/12/21 10:38:46 wen Exp $
+# $NetBSD: Makefile,v 1.404 2019/01/30 12:58:55 leot Exp $
 
 COMMENT=	Mathematics
 
@@ -336,6 +336,7 @@ SUBDIR+=	ruby-narray
 SUBDIR+=	ruby-roo
 SUBDIR+=	ruby-spreadsheet
 SUBDIR+=	sc
+SUBDIR+=	sc-im
 SUBDIR+=	scilab
 SUBDIR+=	slatec
 SUBDIR+=	snns
