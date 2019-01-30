@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:01:48 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/01/30 06:09:03 markd Exp $
 
-SHA1 (tex-babel-italian-36645/babel-italian.tar.xz) = d399ee7370da9df5679c8b223477ecb20c355e5b
-RMD160 (tex-babel-italian-36645/babel-italian.tar.xz) = 99bb0a149c0cc4033e9eb9dccd7a966726aac551
-SHA512 (tex-babel-italian-36645/babel-italian.tar.xz) = a18ac309cf0cc54051a868d17b38cf8608c675bd9942a3b0d5b0063c07c7915b2a96cf2cc8b408f6c71621ac7d9d578f952261c7b2cc800430c1f62dc4272855
-Size (tex-babel-italian-36645/babel-italian.tar.xz) = 3820 bytes
+SHA1 (tex-babel-italian-49606/babel-italian.tar.xz) = d46bec1fe952b680f46fda518a390f36535de87f
+RMD160 (tex-babel-italian-49606/babel-italian.tar.xz) = e607812917b20fd109c049ddafb65fca0865acab
+SHA512 (tex-babel-italian-49606/babel-italian.tar.xz) = dec4816f281b559971c47d638fc188898d6c66ef9aee1de91c42326246f6f27a941c1aa09cb65d0d3387ef8ae65d757f052642fea1a81414078a2a49b0d01b4b
+Size (tex-babel-italian-49606/babel-italian.tar.xz) = 3760 bytes
