@@ -1,9 +1,8 @@
-# $NetBSD: options.mk,v 1.11 2016/06/06 13:41:11 wiz Exp $
-#
+# $NetBSD: options.mk,v 1.12 2019/01/31 14:15:55 wiz Exp $
+
 PKG_OPTIONS_VAR=	PKG_OPTIONS.doxygen
-# XXX does not build as of 1.8.11, re-enable when it does
-PKG_SUPPORTED_OPTIONS=	# latex
-PKG_SUGGESTED_OPTIONS=	# latex
+PKG_SUPPORTED_OPTIONS=	latex
+PKG_SUGGESTED_OPTIONS=	latex
 
 .include "../../mk/bsd.options.mk"
 
@@ -31,23 +30,35 @@ DEPENDS+=	tex-rsfs-[0-9]*:../../fonts/tex-rsfs
 #
 # Styles used by Doxygen output.
 #
+DEPENDS+=	tex-adjustbox-[0-9]*:../../print/tex-adjustbox
 DEPENDS+=	tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
+DEPENDS+=	tex-appendix-[0-9]*:../../print/tex-appendix
 DEPENDS+=	tex-colortbl-[0-9]*:../../print/tex-colortbl
+DEPENDS+=	tex-etoc-[0-9]*:../../print/tex-etoc
+DEPENDS+=	tex-etoolbox-[0-9]*:../../devel/tex-etoolbox
 DEPENDS+=	tex-fancyhdr-[0-9]*:../../print/tex-fancyhdr
 DEPENDS+=	tex-float-[0-9]*:../../print/tex-float
 DEPENDS+=	tex-geometry-[0-9]*:../../print/tex-geometry
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
+DEPENDS+=	tex-hanging-[0-9]*:../../print/tex-hanging
 DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
+DEPENDS+=	tex-import-[0-9]*:../../print/tex-import
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-listings-[0-9]*:../../print/tex-listings
+DEPENDS+=	tex-listofitems-[0-9]*:../../print/tex-listofitems
 DEPENDS+=	tex-multirow-[0-9]*:../../print/tex-multirow
+DEPENDS+=	tex-newunicodechar-[0-9]*:../../print/tex-newunicodechar
 DEPENDS+=	tex-natbib-[0-9]*:../../print/tex-natbib
 DEPENDS+=	tex-oberdiek-[0-9]*:../../print/tex-oberdiek
+DEPENDS+=	tex-pgf-[0-9]*:../../print/tex-pgf
 DEPENDS+=	tex-psnfss>=9.2anb2:../../fonts/tex-psnfss
 DEPENDS+=	tex-pspicture-[0-9]*:../../print/tex-pspicture
 DEPENDS+=	tex-sectsty-[0-9]*:../../print/tex-sectsty
+DEPENDS+=	tex-stackengine-[0-9]*:../../print/tex-stackengine
+DEPENDS+=	tex-tabu-[0-9]*:../../print/tex-tabu
 DEPENDS+=	tex-tocloft-[0-9]*:../../print/tex-tocloft
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
+DEPENDS+=	tex-ulem-[0-9]*:../../print/tex-ulem
 DEPENDS+=	tex-wasysym-[0-9]*:../../fonts/tex-wasysym
 DEPENDS+=	tex-xcolor-[0-9]*:../../print/tex-xcolor
 DEPENDS+=	tex-xtab-[0-9]*:../../print/tex-xtab
