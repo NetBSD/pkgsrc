@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2018/12/31 11:26:03 adam Exp $
+$NetBSD: distinfo,v 1.10 2019/01/31 11:02:14 leot Exp $
 
 SHA1 (ldap3-2.5.2.tar.gz) = c5b6d80c274c358270db102f9a9b6c8284d7aa48
 RMD160 (ldap3-2.5.2.tar.gz) = afe5b19bce9acf7438a3fc42b71951f875f81c4f
 SHA512 (ldap3-2.5.2.tar.gz) = 2889fbf917b828eaa54a935b2cc9c4909b3e2eb5c5c50cc38f6c561335d5341837f8a16d3aa135144c8ac12cd6fefdd9c3421c8de36a9573aed1aaa6a3051afa
 Size (ldap3-2.5.2.tar.gz) = 352903 bytes
+SHA1 (patch-ldap3_protocol_sasl_digestMd5.py) = 315e38d20362b30c7a3f7930c9fbb1f994d1207d
