@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2019/01/30 10:16:47 nia Exp $
+# $NetBSD: Makefile,v 1.61 2019/01/31 14:28:37 nia Exp $
 
 DISTNAME=	inspircd-2.0.27
 CATEGORIES=	chat
@@ -11,7 +11,7 @@ COMMENT=	Modular Internet Relay Chat (IRC) server
 LICENSE=	gnu-gpl-v2
 
 EXTRACT_USING=	bsdtar
-USE_TOOLS+=	perl
+USE_TOOLS+=	perl pkg-config
 USE_LANGUAGES=	c c++
 HAS_CONFIGURE=	yes
 MAKE_FILE=	BSDmakefile
