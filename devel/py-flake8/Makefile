@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2019/01/30 22:53:11 adam Exp $
+# $NetBSD: Makefile,v 1.22 2019/01/31 08:10:41 adam Exp $
 
-DISTNAME=	flake8-3.7.1
+DISTNAME=	flake8-3.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flake8/}
