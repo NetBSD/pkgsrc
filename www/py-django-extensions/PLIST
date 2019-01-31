@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/08/28 06:35:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/01/31 08:16:03 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -336,6 +336,9 @@ ${PYSITELIB}/django_extensions/templates/django_extensions/widgets/foreignkey_se
 ${PYSITELIB}/django_extensions/templatetags/__init__.py
 ${PYSITELIB}/django_extensions/templatetags/__init__.pyc
 ${PYSITELIB}/django_extensions/templatetags/__init__.pyo
+${PYSITELIB}/django_extensions/templatetags/debugger_tags.py
+${PYSITELIB}/django_extensions/templatetags/debugger_tags.pyc
+${PYSITELIB}/django_extensions/templatetags/debugger_tags.pyo
 ${PYSITELIB}/django_extensions/templatetags/highlighting.py
 ${PYSITELIB}/django_extensions/templatetags/highlighting.pyc
 ${PYSITELIB}/django_extensions/templatetags/highlighting.pyo
