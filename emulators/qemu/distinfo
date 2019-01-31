@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.140 2019/01/29 16:01:29 martin Exp $
+$NetBSD: distinfo,v 1.141 2019/01/31 13:39:10 martin Exp $
 
 SHA1 (qemu-3.1.0.tar.xz) = 3ed63c0c05abc8c8ec075dac2688c229f139a5da
 RMD160 (qemu-3.1.0.tar.xz) = 7650d76b8578ee2c31cef048c7929b30c607b83d
@@ -16,5 +16,6 @@ SHA1 (patch-hw_display_omap__dss.c) = 6b13242f28e32346bc70548c216c578d98fd3420
 SHA1 (patch-hw_net_etraxfs__eth.c) = e5dd1661d60dbcd27b332403e0843500ba9544bc
 SHA1 (patch-hw_net_xilinx__axienet.c) = ebcd2676d64ce6f31e4a8c976d4fdf530ad5e8b7
 SHA1 (patch-hw_usb_dev-mtp.c) = 66543b5559d92f8e2fa9a6eb85e5dfe7c1ad3339
-SHA1 (patch-target_arm_cpu.h) = 74b8b52c0d6fd34b5755ef60a459d6d07630dc3b
+SHA1 (patch-target_arm_cpu.h) = 0f70a35900c7cc3124dc11969643e0eef6ad6af5
+SHA1 (patch-target_arm_helper.c) = 08f9425422080442a2c90bb252423bab38651ae4
 SHA1 (patch-tests_Makefile.include) = 42345d697cb2e324dccf1d68bd8d61e8001c6162
