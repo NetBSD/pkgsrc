@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.527 2019/01/31 09:08:05 adam Exp $
+$NetBSD: CHANGES-2019,v 1.528 2019/01/31 10:03:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1020,3 +1020,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-anytree to 2.5.0 [adam 2019-01-31]
 	Updated lang/nodejs to 10.15.1 [adam 2019-01-31]
 	Updated www/py-scrapy to 1.6.0 [adam 2019-01-31]
+	Updated archivers/unrar to 5.7.1 [adam 2019-01-31]
+	Updated devel/py-cachetools to 3.1.0 [adam 2019-01-31]
