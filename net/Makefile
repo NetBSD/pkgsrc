@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1239 2019/01/16 15:18:46 he Exp $
+# $NetBSD: Makefile,v 1.1240 2019/01/31 09:14:20 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -166,6 +166,7 @@ SUBDIR+=	freeradius-unixodbc
 SUBDIR+=	freeradius-yubikey
 SUBDIR+=	freeradius2
 SUBDIR+=	freerdp
+SUBDIR+=	fstrm
 SUBDIR+=	ftplibpp
 SUBDIR+=	ftpproxy
 SUBDIR+=	fwknop
