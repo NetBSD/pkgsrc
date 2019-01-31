@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.134 2018/08/22 09:43:29 wiz Exp $
+# $NetBSD: Makefile,v 1.135 2019/01/31 14:15:55 wiz Exp $
 
-DISTNAME=	doxygen-1.8.13.src
+DISTNAME=	doxygen-1.8.15.src
 PKGNAME=	${DISTNAME:S/.src//}
-PKGREVISION=	3
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.stack.nl/pub/users/dimitri/
-MASTER_SITES+=	http://ftp.stack.nl/pub/users/dimitri/
+MASTER_SITES=	http://doxygen.nl/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.doxygen.org/
@@ -20,15 +18,15 @@ UNLIMIT_RESOURCES+=	datasize
 FLEX_REQD=		2.5.35
 USE_TOOLS+=		gmake gs:run perl:run bison flex
 USE_CMAKE=		yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 MAKE_ENV+=		PKGSRC_CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=		MAN1DIR=${PKGMANDIR}/man1
 
+CMAKE_ARGS+=		-DDOC_INSTALL_DIR:STRING=share/doc/doxygen
+TEST_TARGET=		tests
+
 # Case Insensitive or Case Sensitive File System
 PLIST_VARS+=		ci cs
-
-# pangocairo: basic ps/pdf support via PKG_BUILD_OPTIONS.graphviz
-PLIST_VARS+=		pangocairo nopangocairo
 
 SUBST_CLASSES+=		perlbin
 SUBST_STAGE.perlbin=	pre-configure
@@ -39,9 +37,19 @@ SUBST_SED.perlbin=	-e 's,^PERL_PATH.*,PERL_PATH = ${PERL5},'
 SUBST_CLASSES+=		epstopdf
 SUBST_STAGE.epstopdf=	pre-configure
 SUBST_MESSAGE.epstopdf=	Fixing path to epstopdf
-SUBST_FILES.epstopdf=	src/diagram.cpp src/docparser.cpp src/dot.cpp \
-			src/msc.cpp
+SUBST_FILES.epstopdf=	src/diagram.cpp src/docparser.cpp src/msc.cpp
 SUBST_SED.epstopdf=	-e 's,"epstopdf","${PREFIX}/bin/epstopdf",g'
+
+# Fixing $PWD / $(PWD) / $(HOME) for documentation
+# The dollar sign should be inserted literally in the documentation
+# doxygen always inserted the path => Completely remove dollar sign
+SUBST_CLASSES+=		changelog
+SUBST_STAGE.changelog=	pre-configure
+SUBST_MESSAGE.changelog=Fixing dollar sign for documentation
+SUBST_FILES.changelog=	doc/changelog.doc
+SUBST_SED.changelog=	-e 's,$$PWD,PWD,g'
+SUBST_SED.changelog+=	-e 's,$$(PWD,(PWD,g'
+SUBST_SED.changelog+=	-e 's,$$(HOME,(HOME,g'
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -55,15 +63,15 @@ CONFIGURE_ARGS.DragonFly+=	-platform freebsd-g++
 
 LDFLAGS+=		${BUILDLINK_LDADD.iconv}
 
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/doxyindexer.1
+	${RM} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/doxysearch.1
+	${RM} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/doxywizard.1
+
 .include "options.mk"
+
 .include "../../converters/libiconv/buildlink3.mk"
 BUILDLINK_API_DEPENDS.graphviz+=	graphviz>=2.12nb1
 .include "../../graphics/graphviz/buildlink3.mk"
-
-.if !empty(PKG_BUILD_OPTIONS.graphviz:Mpangocairo)
-PLIST.pangocairo=	yes
-.else
-PLIST.nopangocairo=	yes
-.endif
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
