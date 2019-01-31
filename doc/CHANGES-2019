@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.530 2019/01/31 13:39:24 martin Exp $
+$NetBSD: CHANGES-2019,v 1.531 2019/01/31 14:16:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1024,3 +1024,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-cachetools to 3.1.0 [adam 2019-01-31]
 	Updated databases/py-ldap3 to 2.5.2nb1 [leot 2019-01-31]
 	Updated emulators/qemu to 3.1.0nb4 [martin 2019-01-31]
+	Updated devel/doxygen to 1.8.15 [wiz 2019-01-31]
