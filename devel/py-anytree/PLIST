@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/09/04 12:44:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/01/31 08:21:09 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -79,6 +79,9 @@ ${PYSITELIB}/anytree/resolver.pyo
 ${PYSITELIB}/anytree/search.py
 ${PYSITELIB}/anytree/search.pyc
 ${PYSITELIB}/anytree/search.pyo
+${PYSITELIB}/anytree/util/__init__.py
+${PYSITELIB}/anytree/util/__init__.pyc
+${PYSITELIB}/anytree/util/__init__.pyo
 ${PYSITELIB}/anytree/walker.py
 ${PYSITELIB}/anytree/walker.pyc
 ${PYSITELIB}/anytree/walker.pyo
