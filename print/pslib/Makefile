@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/08/22 09:46:15 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/01/31 16:33:15 plunky Exp $
 #
 
 DISTNAME=		pslib-0.4.5
@@ -21,10 +21,10 @@ USE_TOOLS+=		msgfmt perl gmake
 
 # share/locale/de/LC_MESSAGES/pslib.mo is missing without these
 post-build:
-	(cd ${WRKSRC}/po; ${GMAKE})
+	cd ${WRKSRC}/po && ${GMAKE}
 
 post-install:
-	(cd ${WRKSRC}/po; ${GMAKE} install)
+	cd ${WRKSRC}/po && ${GMAKE} install
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
