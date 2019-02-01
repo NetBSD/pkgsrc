@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2019/02/01 23:35:50 markd Exp $
+bin/texdoctk
+share/texmf-dist/texdoctk/texdocrc-win32.defaults
+share/texmf-dist/texdoctk/texdocrc.defaults
+share/texmf-dist/texdoctk/texdoctk.dat

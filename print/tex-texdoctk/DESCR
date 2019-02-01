@@ -1,0 +1,11 @@
+A Perl/Tk-based GUI for easy access to package documentation
+for TeX on Unix platforms; the databases it uses are based on
+the texmf/doc subtrees of teTeX, but database files for local
+configurations with modified/extended directories can be
+derived from them. Note that texdoctk is not a viewer itself,
+but an interface for finding documentation files and opening
+them with the appropriate viewer; so it relies on appropriate
+programs to be installed on the system. However, the choice of
+these programs can be configured by the sysadmin or user. Now
+only distributed as part of TeX Live, which includes a Windows
+executable.
