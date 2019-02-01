@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.539 2019/02/01 15:32:40 kleink Exp $
+$NetBSD: CHANGES-2019,v 1.540 2019/02/01 16:34:15 mgorny Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1038,3 +1038,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/MesaLib18 to 18.3.3 [tnn 2019-02-01]
 	Updated www/drupal7 to 7.63 [prlw1 2019-02-01]
 	Added www/py-flask-restplus version 0.12.1 [kleink 2019-02-01]
+	Added devel/lld version 7.0.1 [mgorny 2019-02-01]
+	Added devel/lld version 7.0.1 [mgorny 2019-02-01]
