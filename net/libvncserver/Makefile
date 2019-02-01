@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2018/07/18 17:55:54 bouyer Exp $
+# $NetBSD: Makefile,v 1.26 2019/02/01 12:45:21 tnn Exp $
 #
 
-DISTNAME=		libvncserver-LibVNCServer-0.9.11
-PKGNAME=		libVNCServer-0.9.11
-PKGREVISION=		2
+DISTNAME=		libvncserver-LibVNCServer-0.9.12
+PKGNAME=		libVNCServer-0.9.12
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=LibVNC/}
 GITHUB_PROJECT=		libvncserver
@@ -14,29 +13,31 @@ HOMEPAGE=		https://libvnc.github.io/
 COMMENT=		Easy API to write one's own vnc server
 LICENSE=		gnu-gpl-v2
 
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		automake
+# XXX doesn't really use c++ but cmake is being uncooperative
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config
+USE_CMAKE=		yes
 
-PKGCONFIG_OVERRIDE+=	libvncserver.pc.in
-PKGCONFIG_OVERRIDE+=	libvncclient.pc.in
+PKGCONFIG_OVERRIDE+=	libvncserver.pc.cmakein
+PKGCONFIG_OVERRIDE+=	libvncclient.pc.cmakein
 
-CONFIGURE_ARGS+=	--without-x
-CONFIGURE_ARGS+=	--without-sdl-config
-CONFIGURE_ARGS+=	--without-x11vnc
+CMAKE_ARGS+=		-DWITH_FFMPEG=OFF
+CMAKE_ARGS+=		-DWITH_SDL=OFF
+CMAKE_ARGS+=		-DWITH_SYSTEMD=OFF
 
-PTHREAD_AUTO_VARS=	yes
-SUBST_CLASSES+=		pthread
-SUBST_STAGE.pthread=	pre-configure
-SUBST_FILES.pthread=	configure.ac
-SUBST_SED.pthread=	-e 's|-lpthread||g'
+CMAKE_ARGS+=		-DWITH_THREADS=ON
+CMAKE_ARGS+=		-DWITH_TIGHTVNC_FILETRANSFER=ON
+CMAKE_ARGS+=		-DWITH_WEBSOCKETS=ON
+CMAKE_ARGS+=		-DWITH_24BPP=ON
+CMAKE_ARGS+=		-DWITH_SASL=ON
+CMAKE_ARGS+=		-DWITH_LZO=ON
+CMAKE_ARGS+=		-DWITH_ZLIB=ON
+CMAKE_ARGS+=		-DWITH_JPEG=ON
+CMAKE_ARGS+=		-DWITH_PNG=ON
 
 .include "options.mk"
 
-pre-configure:
-	set -e; cd ${WRKSRC}; \
-	libtoolize; aclocal; autoheader; automake -a --foreign -i; autoconf
-
+.include "../../archivers/lzo/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
