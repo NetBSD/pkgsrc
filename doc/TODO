@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18778 2019/01/30 10:17:09 nia Exp $
+$NetBSD: TODO,v 1.18779 2019/02/01 14:04:08 tnn Exp $
 
 Suggested new packages
 ======================
@@ -341,7 +341,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o Gorm-1.2.22
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
-	o MesaLib-18.3.2
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o PAM-0.99.7.1
