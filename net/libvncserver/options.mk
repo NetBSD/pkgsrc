@@ -1,33 +1,36 @@
-# $NetBSD: options.mk,v 1.1 2011/04/04 09:13:44 obache Exp $
+# $NetBSD: options.mk,v 1.2 2019/02/01 12:45:21 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libVNCServer
-PKG_SUPPORTED_OPTIONS=	gnutls inet6 libgcrypt
+PKG_SUPPORTED_OPTIONS=	gnutls inet6 libgcrypt openssl
 PKG_SUGGESTED_OPTIONS=	gnutls inet6 libgcrypt
+PKG_OPTIONS_OPTIONAL_GROUPS+=	ssl
+PKG_OPTIONS_GROUP.ssl=		gnutls openssl
 
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mgnutls)
 .include "../../security/gnutls/buildlink3.mk"
-USE_TOOLS+=	pkg-config
-CONFIGURE_ARGS+=	--with-gnutls
-CONFIGURE_ARGS+=	--with-client-tls
+CMAKE_ARGS+=	-DWITH_GNUTLS=ON
 .else
-CONFIGURE_ARGS+=	--without-gnutls
-CONFIGURE_ARGS+=	--without-client-tls
+CMAKE_ARGS+=	-DWITH_GNUTLS=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Minet6)
-CONFIGURE_ARGS+=	--with-ipv6
+CMAKE_ARGS+=	-DWITH_IPv6=ON
 .else
-CONFIGURE_ARGS+=	--without-ipv6
+CMAKE_ARGS+=	-DWITH_IPv6=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibgcrypt)
 .include "../../security/libgcrypt/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-gcrypt
-CONFIGURE_ARGS+=	--with-client-gcrypt
-CONFIGURE_ARGS+=	--with-libgcrypt-prefix=${BUILDLINK_PREFIX.libgcrypt}
+CMAKE_ARGS+=		-DWITH_GCRYPT=ON
 .else
-CONFIGURE_ARGS+=	--without-gcrypt
-CONFIGURE_ARGS+=	--without-client-gcrypt
+CMAKE_ARGS+=		-DWITH_GCRYPT=OFF
+.endif
+
+.if !empty(PKG_OPTIONS:Mopenssl)
+.include "../../security/openssl/buildlink3.mk"
+CMAKE_ARGS+=	-DWITH_OPENSSL=ON
+.else
+CMAKE_ARGS+=	-DWITH_OPENSSL=OFF
 .endif
