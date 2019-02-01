@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2019/01/30 10:44:57 markd Exp $
+$NetBSD: distinfo,v 1.11 2019/02/01 22:42:55 markd Exp $
 
-SHA1 (tex-tex4ht-49753/tex4ht.doc.tar.xz) = c4c253221a2f9181df9e78acb050532d6d5ba2f6
-RMD160 (tex-tex4ht-49753/tex4ht.doc.tar.xz) = 44c11af39643eae7609f444cb619a9c5e9fd4d6b
-SHA512 (tex-tex4ht-49753/tex4ht.doc.tar.xz) = 4bbf8930678cfc6963f58aeb64294e8df676a934954288a351e1c2ef940b149af3e6d248d426f3613be59e2113559547ad5da397345f352c37ab9c08834cc04a
-Size (tex-tex4ht-49753/tex4ht.doc.tar.xz) = 61192 bytes
+SHA1 (tex-tex4ht-49879/tex4ht.doc.tar.xz) = 6ee81c690052c3f9bc2aca937335bf38f4baee31
+RMD160 (tex-tex4ht-49879/tex4ht.doc.tar.xz) = 2bb843948df48f9077b8a4a3155a495d222d7f53
+SHA512 (tex-tex4ht-49879/tex4ht.doc.tar.xz) = a6ede7bf3440d6f8cf5bc3b192e0e0a61719442ac539504782c2fdd9d23cafe1039978480d6dc3512c58b5b0ef60127e5ca885d219479772bfd0e470c1666449
+Size (tex-tex4ht-49879/tex4ht.doc.tar.xz) = 61192 bytes
