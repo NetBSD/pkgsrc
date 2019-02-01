@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.543 2019/02/01 16:50:26 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.544 2019/02/01 17:04:35 abs Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1041,3 +1041,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/lld version 7.0.1 [mgorny 2019-02-01]
 	Updated www/firefox to 65.0nb1 [ryoon 2019-02-01]
 	Updated www/firefox-l10n to 65.0 [ryoon 2019-02-01]
+	Updated net/restclient-ui to 3.7.1 [abs 2019-02-01]
