@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.546 2019/02/01 22:01:44 tron Exp $
+$NetBSD: CHANGES-2019,v 1.547 2019/02/01 22:54:48 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1044,3 +1044,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/restclient-ui to 3.7.1 [abs 2019-02-01]
 	Added www/gnurl version 7.63.0 [gdt 2019-02-01]
 	Updated mail/mutt to 1.11.3 [tron 2019-02-01]
+	Updated net/ucspi-tcp6 to 1.10.2 [schmonz 2019-02-01]
