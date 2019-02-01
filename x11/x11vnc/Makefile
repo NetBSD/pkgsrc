@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2018/12/18 15:53:46 tnn Exp $
+# $NetBSD: Makefile,v 1.77 2019/02/01 11:24:10 tnn Exp $
 #
 
-DISTNAME=	x11vnc-0.9.15
+DISTNAME=	x11vnc-0.9.16
 CATEGORIES=	x11 net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=LibVNC/}
 GITHUB_PROJECT=	x11vnc
