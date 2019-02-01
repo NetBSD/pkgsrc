@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2017/09/06 16:49:31 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2019/02/01 22:08:23 markd Exp $
 
 DISTNAME=	bezos
-PKGNAME=	tex-${DISTNAME}-25507
-TEXLIVE_REV=	25507
+PKGNAME=	tex-${DISTNAME}-49850
+TEXLIVE_REV=	49850
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/bezos
 COMMENT=	Packages by Javier Bezos
-LICENSE=	lppl-1.3c
+LICENSE=	mit
 
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
 
