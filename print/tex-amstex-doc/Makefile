@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/16 10:30:14 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/02/01 21:41:27 markd Exp $
 
 DISTNAME=	amstex.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.2
-TEXLIVE_REV=	33736
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.2.49810
+TEXLIVE_REV=	49810
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/amstex

@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2015/05/31 02:54:48 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/02/01 21:41:27 markd Exp $
 man/man1/amstex.1
 share/texmf-dist/doc/amstex/base/README
 share/texmf-dist/doc/amstex/base/amsguide.pdf
 share/texmf-dist/doc/amstex/base/amsguide.tex
 share/texmf-dist/doc/amstex/base/amsppt.doc
 share/texmf-dist/doc/amstex/base/amsppt.faq
-share/texmf-dist/doc/amstex/base/amstinst.ps.gz
+share/texmf-dist/doc/amstex/base/amsppt.txt
+share/texmf-dist/doc/amstex/base/amstex.txt
+share/texmf-dist/doc/amstex/base/amstinst.pdf
 share/texmf-dist/doc/amstex/base/amstinst.tex
-share/texmf-dist/doc/amstex/base/joyerr.tex
 share/texmf-dist/doc/amstex/base/joyerr2.tex
