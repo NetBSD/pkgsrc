@@ -1,0 +1,7 @@
+libgnurl is a fork of libcurl. The goal for libgnurl is to support
+only HTTP and HTTPS (and only HTTP 1.x) with a single crypto backend
+(GnuTLS) to ensure a small footprint and uniform experience for
+developers regardless of how libcurl was compiled.
+This software is mainly used by GNUnet. The modifications to curl
+are kept to the bare minimum, intended to track upstream closely.
+gnurl is not a replacement for curl, so different paths are used.
