@@ -1,9 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2018/04/14 07:05:14 ryoon Exp $
+$NetBSD: MESSAGE,v 1.6 2019/02/01 16:49:40 ryoon Exp $
 
 To change the language in Firefox automatically
 1) Enable language packs in Tools->Add-ons->Languages
-2) Your Firefox UI reflects your LANG/LC_MESAGE environmental variables.
+2) Your Firefox UI reflects your LANG/LC_MESSAGE environmental variables.
 
 To specify the language
 1) Enable language packs in Tools->Add-ons->Languages
