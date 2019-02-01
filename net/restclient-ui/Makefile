@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2016/12/13 10:57:59 abs Exp $
+# $NetBSD: Makefile,v 1.3 2019/02/01 16:49:07 abs Exp $
 
-DISTNAME=	restclient-ui-fat-3.6.1
-PKGNAME=	restclient-ui-3.6.1
+DISTNAME=	restclient-ui-fat-3.7.1
+PKGNAME=	restclient-ui-3.7.1
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GITHUB:=wiztools/}rest-client/releases/download/3.6.1/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=wiztools/}rest-client/releases/download/3.7.1/
 EXTRACT_SUFX=	.jar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
