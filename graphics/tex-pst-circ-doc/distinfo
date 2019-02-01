@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2018/05/12 01:28:20 markd Exp $
+$NetBSD: distinfo,v 1.7 2019/02/01 21:25:24 markd Exp $
 
-SHA1 (tex-pst-circ-45829/pst-circ.doc.tar.xz) = 0144e50fdcbb0a0db4a52fbaf932d2b9b545c49b
-RMD160 (tex-pst-circ-45829/pst-circ.doc.tar.xz) = 96eceb1e54631b53ae9e2c7a182ce2ea15f8d008
-SHA512 (tex-pst-circ-45829/pst-circ.doc.tar.xz) = 64fde0d7e0f005988a464e4db018274e57b8b508fbbb9011895aa7e9a25023a35d7c7cb4b47ab8fa603b1d5ebe1f637ebb4d5e9f57e43509ae76461c6f4b534a
-Size (tex-pst-circ-45829/pst-circ.doc.tar.xz) = 499356 bytes
+SHA1 (tex-pst-circ-49791/pst-circ.doc.tar.xz) = 96011e31d133c64db861ca653e3ea9c6d168d8f6
+RMD160 (tex-pst-circ-49791/pst-circ.doc.tar.xz) = d99124d8ced09ed99f339ea4a2c4fff61f88533c
+SHA512 (tex-pst-circ-49791/pst-circ.doc.tar.xz) = 64a053ff43ee252f10255f8006fe9014c5c376fbd7b065114d8db59b6ceaa41134da2a68f2b602311511672a990ba5a8be560d3915580adeea1497f6672fe295
+Size (tex-pst-circ-49791/pst-circ.doc.tar.xz) = 498540 bytes
