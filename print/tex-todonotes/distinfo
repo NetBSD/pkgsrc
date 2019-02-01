@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/01/27 05:23:59 markd Exp $
+$NetBSD: distinfo,v 1.5 2019/02/01 21:46:29 markd Exp $
 
-SHA1 (tex-todonotes-49233/todonotes.tar.xz) = 89fc2d826a7fcac1f6e593dd7ab8568da36e19a9
-RMD160 (tex-todonotes-49233/todonotes.tar.xz) = af9966f1c8113bfb9ffdc0f86856020cfe2fc750
-SHA512 (tex-todonotes-49233/todonotes.tar.xz) = 0171e424b862d9d1067bceead847e42736b22c2c286216b8d399d9703827069e32eb78466cd3468b2ada6b0b1dab5165d759588dc6630cc1893950390a30e970
-Size (tex-todonotes-49233/todonotes.tar.xz) = 4576 bytes
+SHA1 (tex-todonotes-49820/todonotes.tar.xz) = 217dba91c049b024ca1466370c2a789f12e46290
+RMD160 (tex-todonotes-49820/todonotes.tar.xz) = ee3949581cde3a64a781c095ee6c61b2e30961f8
+SHA512 (tex-todonotes-49820/todonotes.tar.xz) = fa838358aa75383249d78f2f65042e720e3763aaecfdedaa4bc291ec7112001c8c82bdf2e2205f01128360250423a728cf5a85096e966f14bbb8dc81a5509d01
+Size (tex-todonotes-49820/todonotes.tar.xz) = 4640 bytes
