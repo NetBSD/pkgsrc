@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.205 2018/12/13 19:51:38 adam Exp $
+# $NetBSD: Makefile,v 1.206 2019/02/01 18:10:21 gdt Exp $
 
 DISTNAME=	curl-7.63.0
 PKGREVISION=	1
@@ -12,7 +12,6 @@ COMMENT=	Client that groks URLs
 # not completely, but near enough
 LICENSE=	mit
 
-# list it into IPv6-ready packages
 BUILD_DEFS+=	IPV6_READY
 
 USE_TOOLS+=		nroff perl
