@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.22 2018/12/18 15:53:46 tnn Exp $
+$NetBSD: distinfo,v 1.23 2019/02/01 11:24:10 tnn Exp $
 
-SHA1 (x11vnc-0.9.15.tar.gz) = 7ff05cd501a276a14535a3e64898ff2573d3a458
-RMD160 (x11vnc-0.9.15.tar.gz) = ad543e22c69adc0ebcf71f52e20e243901188732
-SHA512 (x11vnc-0.9.15.tar.gz) = d5db90f87ba4b9801e8f6bb2c0821657c6388ce2c64e1565aeeabe41edf63b56ad72dc7be4cf874b817dacd7de5988eddd466df5b9396c13d69340ac90a1ca4d
-Size (x11vnc-0.9.15.tar.gz) = 1701821 bytes
+SHA1 (x11vnc-0.9.16.tar.gz) = c0efa873fa4873e9e69bdfa229cd9e21c5a8963e
+RMD160 (x11vnc-0.9.16.tar.gz) = df5b5873ebceb5cc00ba8ba9d9cf0fed873f53e8
+SHA512 (x11vnc-0.9.16.tar.gz) = 69f65ee312f8dede6051b401304987502a213c6c28c7f41e855734f11de1fae14d5d493dc9c28b2e4b7c0be55f8dbd3b35dd2610aae910183772c3e626736fec
+Size (x11vnc-0.9.16.tar.gz) = 1708009 bytes
 SHA1 (patch-configure.ac) = 8ec2a6c8727614aacec4fb18340b16a215902ca5
 SHA1 (patch-x11vnc_unixpw.c) = bb611f4b307a54ef2898de635acde59da9102074
