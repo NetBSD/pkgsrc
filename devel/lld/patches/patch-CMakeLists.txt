@@ -1,0 +1,16 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2019/02/01 16:30:00 mgorny Exp $
+
+LLD 7.0.1 is incompatible with gtest version in pkgsrc.  Remove
+the condition that prevents it from building its own copy when system
+version is installed.
+
+--- CMakeLists.txt.orig	2017-11-17 18:14:09.000000000 +0000
++++ CMakeLists.txt
+@@ -86,7 +86,6 @@ Please install Python or specify the PYT
+       endif()
+       set(UNITTEST_DIR ${LLVM_MAIN_SRC_DIR}/utils/unittest)
+       if(EXISTS ${UNITTEST_DIR}/googletest/include/gtest/gtest.h
+-          AND NOT EXISTS ${LLVM_LIBRARY_DIR}/${CMAKE_STATIC_LIBRARY_PREFIX}gtest${CMAKE_STATIC_LIBRARY_SUFFIX}
+           AND EXISTS ${UNITTEST_DIR}/CMakeLists.txt)
+         add_subdirectory(${UNITTEST_DIR} utils/unittest)
+       endif()
