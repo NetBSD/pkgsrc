@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2016/06/16 03:57:29 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/02/01 22:16:43 markd Exp $
 
 DISTNAME=	gothic
-PKGNAME=	tex-${DISTNAME}-2016
-TEXLIVE_REV=	38263
+PKGNAME=	tex-${DISTNAME}-2018
+TEXLIVE_REV=	49869
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/gothic
