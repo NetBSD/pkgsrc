@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.123 2019/01/29 16:28:22 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.124 2019/02/01 16:47:59 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -25,7 +25,7 @@ USE_TOOLS+=		pkg-config perl gmake autoconf213 unzip zip
 USE_LANGUAGES+=		c99 gnu++14
 UNLIMIT_RESOURCES+=	datasize
 
-TOOL_DEPENDS+=		cbindgen-[0-9]*:../../devel/cbindgen
+TOOL_DEPENDS+=		cbindgen>=0.6.8:../../devel/cbindgen
 .if ${MACHINE_ARCH} == "sparc64"
 CONFIGURE_ARGS+=	--disable-nodejs
 .else
@@ -97,6 +97,7 @@ CONFIGURE_ARGS+=	--disable-crashreporter
 CONFIGURE_ARGS+=	--disable-necko-wifi
 CONFIGURE_ARGS+=	--enable-chrome-format=flat
 CONFIGURE_ARGS+=	--disable-libjpeg-turbo
+CONFIGURE_ARGS+=	--with-system-webp
 
 CONFIGURE_ARGS+=	--disable-gconf
 #CONFIGURE_ARGS+=	--enable-readline
@@ -189,6 +190,8 @@ create-rm-wrapper:
 # The configure test for __thread succeeds, but later we end up with:
 # dist/bin/libxul.so: undefined reference to `__tls_get_addr'
 CONFIGURE_ENV.NetBSD+=	ac_cv_thread_keyword=no
+# In unspecified case, clock_gettime(CLOCK_MONOTONIC, ...) fails.
+CONFIGURE_ENV.NetBSD+=	ac_cv_clock_monotonic=
 
 .if ${OPSYS} == "SunOS"
 # native libbz2.so hides BZ2_crc32Table
@@ -217,6 +220,7 @@ BUILDLINK_API_DEPENDS.nss+=	nss>=3.40.1
 .include "../../graphics/MesaLib/buildlink3.mk"
 #BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.10.2nb4
 #.include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/libwebp/buildlink3.mk"
 BUILDLINK_DEPMETHOD.clang=	build
 BUILDLINK_API_DEPENDS.clang+=	clang>=6.0.1nb1
 .include "../../lang/clang/buildlink3.mk"
