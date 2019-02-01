@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/02/01 23:35:50 markd Exp $
+
+SHA1 (tex-texdoctk-47978/texdoctk.tar.xz) = ad372ed6b9a719f89140878d91a8ea32944ab12f
+RMD160 (tex-texdoctk-47978/texdoctk.tar.xz) = 5116acf112f8dc53d190f9c9232a74575bf370dd
+SHA512 (tex-texdoctk-47978/texdoctk.tar.xz) = 2200e4d874e5b48d75339395330c06e4193181dad19e7f4bd27fe2970baaac680c19682b8512596883e1f71510f872b6c699bbfc036ecd04fef5ddc281b1a164
+Size (tex-texdoctk-47978/texdoctk.tar.xz) = 26572 bytes
