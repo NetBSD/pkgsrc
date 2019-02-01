@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2019/01/15 10:27:33 adam Exp $
+# $NetBSD: Makefile,v 1.7 2019/02/01 09:22:33 adam Exp $
 
-DISTNAME=	pytest-flake8-1.0.3
+DISTNAME=	pytest-flake8-1.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-flake8/}
