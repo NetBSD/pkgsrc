@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/01/29 22:33:57 tnn Exp $
+# $NetBSD: Makefile,v 1.13 2019/02/01 16:54:12 ryoon Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird${TB_VER:C/\..*$//}-${TB_VER}
@@ -11,6 +11,7 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mozillamessaging.com/en-US/thunderbird/
 COMMENT=	Organize, secure and customize your mail
+LICENSE=	mpl-1.1
 
 USE_TOOLS+=	unzip pax
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV:C/thunderbird45/thunderbird/}
