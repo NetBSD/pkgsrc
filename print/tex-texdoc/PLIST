@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2017/06/21 13:25:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/02/01 23:31:07 markd Exp $
 bin/texdoc
-${PLIST.x11}bin/texdoctk
-share/texmf-dist/scripts/texdoc/Data.tlpdb.lua
 share/texmf-dist/scripts/texdoc/alias.tlu
 share/texmf-dist/scripts/texdoc/config.tlu
 share/texmf-dist/scripts/texdoc/constants.tlu
@@ -12,6 +10,3 @@ share/texmf-dist/scripts/texdoc/search.tlu
 share/texmf-dist/scripts/texdoc/texdoclib.tlu
 share/texmf-dist/scripts/texdoc/view.tlu
 share/texmf-dist/texdoc/texdoc.cnf
-share/texmf-dist/texdoctk/texdocrc-win32.defaults
-share/texmf-dist/texdoctk/texdocrc.defaults
-share/texmf-dist/texdoctk/texdoctk.dat
