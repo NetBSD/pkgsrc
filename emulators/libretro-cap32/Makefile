@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2018/10/15 01:49:33 nia Exp $
+# $NetBSD: Makefile,v 1.3 2019/02/01 10:11:03 nia Exp $
 
-DISTNAME=	libretro-cap32-20180827
+DISTNAME=	libretro-cap32-20190128
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
-GITHUB_TAG=	ac8608b149e96b5b48ad07909edfb423481f365a
+GITHUB_TAG=	1a8bcf4d68b633bb8e92e20da460ac7618e8b950
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://docs.libretro.com/library/caprice32/
