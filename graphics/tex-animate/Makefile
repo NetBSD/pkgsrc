@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2019/01/29 06:28:46 markd Exp $
+# $NetBSD: Makefile,v 1.9 2019/02/01 21:32:21 markd Exp $
 
 DISTNAME=	animate
-PKGNAME=	tex-${DISTNAME}-20181219
-TEXLIVE_REV=	49461
+PKGNAME=	tex-${DISTNAME}-20190123
+TEXLIVE_REV=	49800
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/animate
