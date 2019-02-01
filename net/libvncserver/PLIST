@@ -1,12 +1,15 @@
-@comment $NetBSD: PLIST,v 1.5 2017/01/09 07:55:15 ryoon Exp $
-bin/libvncserver-config
+@comment $NetBSD: PLIST,v 1.6 2019/02/01 12:45:21 tnn Exp $
 include/rfb/keysym.h
 include/rfb/rfb.h
 include/rfb/rfbclient.h
 include/rfb/rfbconfig.h
 include/rfb/rfbproto.h
 include/rfb/rfbregion.h
-lib/libvncclient.la
-lib/libvncserver.la
+lib/libvncclient.so
+lib/libvncclient.so.${PKGVERSION}
+lib/libvncclient.so.1
+lib/libvncserver.so
+lib/libvncserver.so.${PKGVERSION}
+lib/libvncserver.so.1
 lib/pkgconfig/libvncclient.pc
 lib/pkgconfig/libvncserver.pc

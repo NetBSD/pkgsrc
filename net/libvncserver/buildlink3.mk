@@ -1,15 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.18 2018/04/17 22:29:33 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2019/02/01 12:45:21 tnn Exp $
 
 BUILDLINK_TREE+=	libVNCServer
 
 .if !defined(LIBVNCSERVER_BUILDLINK3_MK)
 LIBVNCSERVER_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libVNCServer+=	libVNCServer>=0.9.11
-BUILDLINK_ABI_DEPENDS.libVNCServer+=	libVNCServer>=0.9.11nb1
+BUILDLINK_API_DEPENDS.libVNCServer+=	libVNCServer>=0.9.12
+BUILDLINK_ABI_DEPENDS.libVNCServer+=	libVNCServer>=0.9.12
 BUILDLINK_PKGSRCDIR.libVNCServer?=	../../net/libvncserver
 
+.include "../../archivers/lzo/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 
 pkgbase := libVNCServer
@@ -21,6 +23,10 @@ pkgbase := libVNCServer
 
 .if !empty(PKG_BUILD_OPTIONS.libVNCServer:Mlibgcrypt)
 .include "../../security/libgcrypt/buildlink3.mk"
+.endif
+
+.if !empty(PKG_BUILD_OPTIONS.libVNCServer:Mopenssl)
+.include "../../security/openssl/buildlink3.mk"
 .endif
 
 .endif # LIBVNCSERVER_BUILDLINK3_MK
