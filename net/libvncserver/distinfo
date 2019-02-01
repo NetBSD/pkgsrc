@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.15 2018/07/18 17:55:54 bouyer Exp $
+$NetBSD: distinfo,v 1.16 2019/02/01 12:45:21 tnn Exp $
 
-SHA1 (libvncserver-LibVNCServer-0.9.11.tar.gz) = d844a2c9e69465d104a8468dce515a49e4db9585
-RMD160 (libvncserver-LibVNCServer-0.9.11.tar.gz) = a26da5e88d6571d112dfc48ef94a527b19760a36
-SHA512 (libvncserver-LibVNCServer-0.9.11.tar.gz) = e473c081b68dd3cdd96a1756b4f4945ece79d3c8e4cef62140be1699671555fc16d3080e81d764197a14ea83203ffcd0e18c3cc182e012d036e3faae943003fb
-Size (libvncserver-LibVNCServer-0.9.11.tar.gz) = 1413739 bytes
+SHA1 (libvncserver-LibVNCServer-0.9.12.tar.gz) = f2111a7d7e96d7101e7ff3834abd5b0c71c1ed5f
+RMD160 (libvncserver-LibVNCServer-0.9.12.tar.gz) = 62e65f56221e7274a4fb1b7f42cca00f7c5f2926
+SHA512 (libvncserver-LibVNCServer-0.9.12.tar.gz) = 60ff1cc93a937d6f8f97449bc58b763095846207112f7b1b3c43eb2d74448b595d6da949903a764bd484ee54e38ff6277e882adbe965dd6d26ba15ef6ff6fcb8
+Size (libvncserver-LibVNCServer-0.9.12.tar.gz) = 2237447 bytes
 SHA1 (patch-libvncserver_websockets.c) = eb4e50f8fcb8442dae54d1360e6950e2ebd4778b
 SHA1 (patch-rfb_rfbproto.h) = 6dcc68a90d444f88ab696616b1aee3eb66708877
