@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2019/01/30 05:59:13 markd Exp $
+$NetBSD: distinfo,v 1.7 2019/02/01 22:57:36 markd Exp $
 
-SHA1 (tex-updmap-map-49586/updmap-map.tar.xz) = 9ef7fd5ea1023d86598bd5bc6db347d4f36f4433
-RMD160 (tex-updmap-map-49586/updmap-map.tar.xz) = 5b63db30e66a014445c1c611b6ed66ea0eca1be1
-SHA512 (tex-updmap-map-49586/updmap-map.tar.xz) = c77afe058111f4ca8d7c3b66190d862e8d0fed5a27cba0e13e3bbe88146a69cd9f29b3ba3b5e6656af78930162908e3ac22a93b5c4c61651de885dcaa5155b5f
-Size (tex-updmap-map-49586/updmap-map.tar.xz) = 206568 bytes
+SHA1 (tex-updmap-map-49829/updmap-map.tar.xz) = 22777227088968533ab5c6926b2c3d23ae3e3486
+RMD160 (tex-updmap-map-49829/updmap-map.tar.xz) = 1f48a120b842d7194a6d897ff30785d02db96174
+SHA512 (tex-updmap-map-49829/updmap-map.tar.xz) = 9b9f5561e003d6cd2f0883c6ffe52aa206d888aa8983836763573ce7b41fcb8b0624f436708b3adaa27eeda70520880f8edc6092ed407a72c2dd94acefe8543e
+Size (tex-updmap-map-49829/updmap-map.tar.xz) = 210508 bytes
