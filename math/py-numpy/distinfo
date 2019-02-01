@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.40 2019/01/24 22:27:10 maya Exp $
+$NetBSD: distinfo,v 1.41 2019/02/01 09:24:24 adam Exp $
 
-SHA1 (numpy-1.16.0.zip) = 1a0f1faf9dea25c45ac691482051a3f81d094bd8
-RMD160 (numpy-1.16.0.zip) = fae6dfa563045508d509d26510f3d9d9772aad45
-SHA512 (numpy-1.16.0.zip) = a252748c54b349319c8b8b69aae8f58853ac698a9ad0fb04fd1150db543910f25bc88bb3ca73d3d51d0658ab9379756870bc7b24bbaf58ffb8717d80366a4c52
-Size (numpy-1.16.0.zip) = 5052439 bytes
-SHA1 (patch-aa) = e783263f1e3743aa79edd0b983e292a8646ef22e
-SHA1 (patch-ab) = b421455fdbb666c8075d8bffbeb59533434d23e6
+SHA1 (numpy-1.16.1.zip) = 49787ce8e31aff103a7b182749abc3c0249b7f72
+RMD160 (numpy-1.16.1.zip) = dd59773e393c7a41c7286b2ca93e13a415c830ec
+SHA512 (numpy-1.16.1.zip) = e4adce4f40a3cb6ac482f82db9fcd079179b03b0e878920cfc7d98b9f622adab997c68af892b209f417d5f31b4123a1c5ff5c07cf5b0aaa496d8be6c8354bde8
+Size (numpy-1.16.1.zip) = 5070040 bytes
+SHA1 (patch-numpy_distutils_fcompiler_____init____.py) = 49d070da5b48bd9818b37ac3254341fa68503c53
 SHA1 (patch-numpy_distutils_fcompiler_g95.py) = be73b64a3e551df998b6a904d6db762bf28a98ed
 SHA1 (patch-numpy_distutils_fcompiler_gnu.py) = db8d3238c618ecd5900650a2150efb9459e94e96
 SHA1 (patch-numpy_distutils_system__info.py) = dfd88a140b65a66c222a95ea4be6f20a33702e3b
+SHA1 (patch-numpy_linalg_lapack__litemodule.c) = b421455fdbb666c8075d8bffbeb59533434d23e6

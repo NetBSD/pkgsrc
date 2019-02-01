@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2016/07/24 15:25:22 kamil Exp $
+$NetBSD: patch-numpy_linalg_lapack__litemodule.c,v 1.1 2019/02/01 09:24:25 adam Exp $
 
 Add function definition for FNAME(MAIN_).
 

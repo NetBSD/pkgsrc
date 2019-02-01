@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2019/01/15 21:36:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2019/02/01 09:24:24 adam Exp $
 bin/f2py${PYVERSSUFFIX}
 ${PLIST.py2x}bin/f2py2
 ${PLIST.py3x}bin/f2py3
@@ -63,6 +63,7 @@ ${PYSITELIB}/numpy/core/_internal.pyo
 ${PYSITELIB}/numpy/core/_methods.py
 ${PYSITELIB}/numpy/core/_methods.pyc
 ${PYSITELIB}/numpy/core/_methods.pyo
+${PYSITELIB}/numpy/core/_multiarray_module_test.so
 ${PYSITELIB}/numpy/core/_multiarray_tests.so
 ${PYSITELIB}/numpy/core/_multiarray_umath.so
 ${PYSITELIB}/numpy/core/_operand_flag_tests.so
