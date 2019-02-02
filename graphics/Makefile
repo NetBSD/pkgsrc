@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.811 2019/01/01 16:31:55 wiz Exp $
+# $NetBSD: Makefile,v 1.812 2019/02/02 00:37:34 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -606,6 +606,8 @@ SUBDIR+=	tex-metaobj-doc
 SUBDIR+=	tex-metaplot
 SUBDIR+=	tex-metaplot-doc
 SUBDIR+=	tex-metapost
+SUBDIR+=	tex-metapost-colorbrewer
+SUBDIR+=	tex-metapost-colorbrewer-doc
 SUBDIR+=	tex-metapost-doc
 SUBDIR+=	tex-metauml
 SUBDIR+=	tex-metauml-doc
