@@ -1,0 +1,9 @@
+This package provides two MetaPost include files that define
+all the colorbrewer2.org colours: colorbrewer-cmyk.mp
+colorbrewer-rgb.mp The first defines all the colours as CMYK,
+the second as RGB. Use whichever one you prefer. For an example
+of what you can do, and a list of all the names, have a look at
+colorbrewer-sampler.mp. You can also see the names on
+http://colorbrewer2.org. The package also includes the Python
+script used to generate the MP source from the colorbrewer
+project.
