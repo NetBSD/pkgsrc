@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.548 2019/02/01 23:39:50 markd Exp $
+$NetBSD: CHANGES-2019,v 1.549 2019/02/02 02:54:58 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1078,3 +1078,18 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/tex-texdoc-doc to 2018.47946 [markd 2019-02-01]
 	Added print/tex-texdoctk version 0.6.0 [markd 2019-02-01]
 	Added print/tex-texdoctk-doc version 0.6.0 [markd 2019-02-01]
+	Added graphics/tex-metapost-colorbrewer version 2018 [markd 2019-02-02]
+	Added graphics/tex-metapost-colorbrewer-doc version 2018 [markd 2019-02-02]
+	Updated print/tex-texlive-scripts to 2018.49884 [markd 2019-02-02]
+	Updated print/tex-texlive.infra to 2018.49228 [markd 2019-02-02]
+	Updated print/tex-tetex to 3.0.49829 [markd 2019-02-02]
+	Updated print/tex-tetex-doc to 3.0.49829 [markd 2019-02-02]
+	Updated pkgtools/texlive2pkg to 1.4 [markd 2019-02-02]
+	Added graphics/tex-pgf-umlsd version 0.7 [markd 2019-02-02]
+	Added graphics/tex-pgf-umlsd-doc version 0.7 [markd 2019-02-02]
+	Added print/tex-bigfoot version 2.1 [markd 2019-02-02]
+	Added print/tex-bigfoot-doc version 2.1 [markd 2019-02-02]
+	Added print/tex-keycommand version 3.1415 [markd 2019-02-02]
+	Added print/tex-keycommand-doc version 3.1415 [markd 2019-02-02]
+	Added print/tex-semantic version 2.0 [markd 2019-02-02]
+	Added print/tex-semantic-doc version 2.0 [markd 2019-02-02]
