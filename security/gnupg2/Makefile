@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.97 2018/12/20 19:33:27 adam Exp $
+# $NetBSD: Makefile,v 1.98 2019/02/02 03:38:30 markd Exp $
 
 DISTNAME=	gnupg-2.2.12
 PKGNAME=	${DISTNAME:S/gnupg-/gnupg2-/}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gnupg/
 EXTRACT_SUFX=	.tar.bz2
@@ -24,6 +25,8 @@ INFO_FILES=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-g13
 CONFIGURE_ARGS+=	--enable-gpg-is-gpg2
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
 TEST_TARGET=		check
 
