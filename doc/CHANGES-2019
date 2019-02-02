@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.552 2019/02/02 14:36:05 tnn Exp $
+$NetBSD: CHANGES-2019,v 1.553 2019/02/02 16:59:48 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1096,3 +1096,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated ham/hackrf to 2018.01.1 [tnn 2019-02-02]
 	Removed sysutils/memtest86 successor sysutils/memtestplus [gdt 2019-02-02]
 	Updated ham/rtl-sdr to 0.6.0 [tnn 2019-02-02]
+	Updated databases/p5-App-Sqitch to 0.9999 [schmonz 2019-02-02]
