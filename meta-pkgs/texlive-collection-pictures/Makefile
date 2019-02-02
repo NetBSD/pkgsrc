@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2019/01/27 00:50:00 markd Exp $
+# $NetBSD: Makefile,v 1.21 2019/02/02 00:15:01 markd Exp $
 
 DISTNAME=	collection-pictures
 PKGNAME=	texlive-${DISTNAME}-2018pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	49113
+TEXLIVE_REV=	49864
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -149,6 +149,7 @@ DEPENDS+=	tex-tikz-cd-[0-9]*:../../graphics/tex-tikz-cd
 # depend tikz-dimline
 # depend tikz-feynhand
 # depend tikz-feynman
+# depend tikz-imagelabels
 # depend tikz-inet
 # depend tikz-kalender
 # depend tikz-karnaugh
