@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2019/02/02 02:46:55 markd Exp $
+share/texmf-dist/tex/latex/semantic/infernce.sty
+share/texmf-dist/tex/latex/semantic/ligature.sty
+share/texmf-dist/tex/latex/semantic/reserved.sty
+share/texmf-dist/tex/latex/semantic/semantic.sty
+share/texmf-dist/tex/latex/semantic/shrthand.sty
+share/texmf-dist/tex/latex/semantic/tdiagram.sty
