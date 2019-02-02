@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2018/05/13 10:41:47 markd Exp $
+$NetBSD: distinfo,v 1.21 2019/02/02 01:48:54 markd Exp $
 
-SHA1 (tex-tetex-47198/tetex.doc.tar.xz) = cdd9f77affa8aaf7e2e3d9b894e4d19e95273697
-RMD160 (tex-tetex-47198/tetex.doc.tar.xz) = 870506e06e27d43bb6bdd21ffceba2da133a0438
-SHA512 (tex-tetex-47198/tetex.doc.tar.xz) = db698b29cbb1e503f4e49a853c105cf9c39574446ec5eee4cd79d67e8591c59c7322421cd7aa90f514091a0b372083048f18a24a7f26129cbebd6d462ca1e431
-Size (tex-tetex-47198/tetex.doc.tar.xz) = 525292 bytes
+SHA1 (tex-tetex-49829/tetex.doc.tar.xz) = 5f579e76818db513a8cbe3f89666c6157ca8e793
+RMD160 (tex-tetex-49829/tetex.doc.tar.xz) = 078fb24b3627ea4293a331080aefd1aea682426f
+SHA512 (tex-tetex-49829/tetex.doc.tar.xz) = 488d7d7cb59f2ca2cb4b213b31ee4e1c5e86a5f883b992ad47c23215b4a4ea2246ac29985ce47f02f1539353c54300df064a5da9bc3d9da0e067ea6fbaa5eaf2
+Size (tex-tetex-49829/tetex.doc.tar.xz) = 525344 bytes
