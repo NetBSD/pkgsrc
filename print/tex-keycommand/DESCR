@@ -1,0 +1,6 @@
+The package (which requires e-TeX) provides a natural way to
+define commands with optional keys. The package provides
+\newkeycommand, \renewkeycommand, \providekeycommand,
+\newkeyenvironment and \renewkeyenvironment, together with
+\keycmd for a more advanced interface. The package is based on
+kvsetkeys by Heiko Oberdiek.
