@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.18 2018/05/13 11:04:43 markd Exp $
+$NetBSD: distinfo,v 1.19 2019/02/02 01:11:17 markd Exp $
 
-SHA1 (tex-texlive-scripts-47481/texlive-scripts.tar.xz) = a8ab216ecd679dac91159b80e324c285723cdf6d
-RMD160 (tex-texlive-scripts-47481/texlive-scripts.tar.xz) = 1e28deb0eed2c5ecbf1d214fa40dd8d71269cf56
-SHA512 (tex-texlive-scripts-47481/texlive-scripts.tar.xz) = e4c4f73640a7e00516e502c3b605a3f19a51f7fe22f8b5f64e2e259d46faa3f1ecf6ee0050f6e7a98ce869e087baf74e5d0389c4f3cf8c3b47a74db68b33f1f5
-Size (tex-texlive-scripts-47481/texlive-scripts.tar.xz) = 67112 bytes
+SHA1 (tex-texlive-scripts-49884/texlive-scripts.tar.xz) = 93d1ec3310d027172328fc271c7c223fd8e27aae
+RMD160 (tex-texlive-scripts-49884/texlive-scripts.tar.xz) = 6e73267a646319fc6dfdcadaf9c3c38dee7ec563
+SHA512 (tex-texlive-scripts-49884/texlive-scripts.tar.xz) = 6f0f55a2ce1572bf9d16293c92566b5d7ae2aba4e987fcd24b2663a6f5a2aea3da491df23e67fd88d744b303c983b373c3bcbe17b64675970398f048a32e6d2d
+Size (tex-texlive-scripts-49884/texlive-scripts.tar.xz) = 4006680 bytes
 SHA1 (patch-bin_rungs) = 4ebc7760b5bfda526f137c1fbe9240d3c27799fa

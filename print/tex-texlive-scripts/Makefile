@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2018/05/13 11:04:43 markd Exp $
+# $NetBSD: Makefile,v 1.17 2019/02/02 01:11:17 markd Exp $
 
 DISTNAME=	texlive-scripts
-PKGNAME=	tex-${DISTNAME}-2018
-TEXLIVE_REV=	47481
+PKGNAME=	tex-${DISTNAME}-2018.49884
+TEXLIVE_REV=	49884
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	TeX Live infrastructure programs
