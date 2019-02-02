@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2019/01/29 07:05:31 markd Exp $
+# $NetBSD: Makefile,v 1.14 2019/02/02 00:12:51 markd Exp $
 
 DISTNAME=	collection-fontsextra
 PKGNAME=	texlive-${DISTNAME}-2018pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	49478
+TEXLIVE_REV=	49835
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -142,6 +142,7 @@ DEPENDS+=	tex-fourier-[0-9]*:../../fonts/tex-fourier
 DEPENDS+=	tex-fouriernc-[0-9]*:../../fonts/tex-fouriernc
 DEPENDS+=	tex-frcursive-[0-9]*:../../fonts/tex-frcursive
 # depend frederika2016
+# depend garamond-math
 DEPENDS+=	tex-genealogy-[0-9]*:../../fonts/tex-genealogy
 DEPENDS+=	tex-gentium-tug-[0-9]*:../../fonts/tex-gentium-tug
 DEPENDS+=	tex-gfsartemisia-[0-9]*:../../fonts/tex-gfsartemisia
@@ -167,6 +168,7 @@ DEPENDS+=	tex-ifsym-[0-9]*:../../fonts/tex-ifsym
 # depend imfellenglish
 DEPENDS+=	tex-inconsolata-[0-9]*:../../fonts/tex-inconsolata
 DEPENDS+=	tex-initials-[0-9]*:../../fonts/tex-initials
+# depend inriafonts
 DEPENDS+=	tex-ipaex-type1-[0-9]*:../../fonts/tex-ipaex-type1
 DEPENDS+=	tex-iwona-[0-9]*:../../fonts/tex-iwona
 DEPENDS+=	tex-jablantile-[0-9]*:../../fonts/tex-jablantile
