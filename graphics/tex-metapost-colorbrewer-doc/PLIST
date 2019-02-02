@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2019/02/02 00:35:39 markd Exp $
+share/texmf-dist/doc/metapost/metapost-colorbrewer/README.md
+share/texmf-dist/doc/metapost/metapost-colorbrewer/colorbrewer-sampler.mp
+share/texmf-dist/doc/metapost/metapost-colorbrewer/colorbrewer-sampler.pdf
+share/texmf-dist/doc/metapost/metapost-colorbrewer/colorbrewer-sampler.png
+share/texmf-dist/doc/metapost/metapost-colorbrewer/make_mp_colorbrewer.py
