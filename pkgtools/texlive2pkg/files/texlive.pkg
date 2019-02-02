@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: texlive.pkg,v 1.4 2018/06/03 01:38:32 markd Exp $
+# $NetBSD: texlive.pkg,v 1.5 2019/02/02 01:55:52 markd Exp $
 
 $version = "2018";
 $pkgname = $shortdesc = $revision = $license = $longdesc = $depend = $homepage = "";
@@ -46,12 +46,14 @@ $license = "lppl-1.3c" if ($license eq "lppl");
 $license = "lppl-1.3c" if ($license eq "lppl1.3");
 $license = "lppl-1.3c" if ($license eq "lppl1.3c");
 $license = "ofl-v1.1 AND lppl-1.3c" if ($license eq "ofllppl1.3");
+$license = "ofl-v1.1 AND lppl-1.3c" if ($license eq "ofllppl");
 $license = "gnu-gpl-v2 AND ofl-v1.1 AND lppl-1.3c" if ($license eq "gplofllppl");
 $license = "gnu-gpl-v2 AND lppl-1.3c" if ($license eq "lpplgpl");
 $license = "modified-bsd" if ($license eq "bsd");
 $license = "modified-bsd" if ($license eq "bsd3");
 $license = "2-clause-bsd" if ($license eq "bsd2");
 $license = "ofl-v1.1" if ($license eq "ofl");
+$license = "gfsl" if ($license eq "gfl");
 $license = "public-domain" if ($license eq "pd");
 
 $extras = "";
