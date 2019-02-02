@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2018/05/13 10:41:47 markd Exp $
+# $NetBSD: Makefile,v 1.21 2019/02/02 01:48:54 markd Exp $
 
 DISTNAME=	tetex.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-3.0.47198
-TEXLIVE_REV=	47198
+PKGNAME=	tex-${DISTNAME:S/./-/}-3.0.49829
+TEXLIVE_REV=	49829
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-tetex
