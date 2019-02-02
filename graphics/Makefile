@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.812 2019/02/02 00:37:34 markd Exp $
+# $NetBSD: Makefile,v 1.813 2019/02/02 02:12:55 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -631,6 +631,8 @@ SUBDIR+=	tex-mptrees
 SUBDIR+=	tex-mptrees-doc
 SUBDIR+=	tex-pdfcrop
 SUBDIR+=	tex-pdfcrop-doc
+SUBDIR+=	tex-pgf-umlsd
+SUBDIR+=	tex-pgf-umlsd-doc
 SUBDIR+=	tex-pgfgantt
 SUBDIR+=	tex-pgfgantt-doc
 SUBDIR+=	tex-pictex
