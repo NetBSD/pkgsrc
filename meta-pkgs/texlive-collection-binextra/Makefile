@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2019/01/28 09:39:53 markd Exp $
+# $NetBSD: Makefile,v 1.15 2019/02/02 00:08:33 markd Exp $
 
 DISTNAME=	collection-binextra
-PKGNAME=	texlive-${DISTNAME}-2018pre1
+PKGNAME=	texlive-${DISTNAME}-2018pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	49312
@@ -89,7 +89,7 @@ DEPENDS+=	tex-tex4ebook-[0-9]*:../../print/tex-tex4ebook
 # depend texdiff
 # depend texdirflatten
 DEPENDS+=	tex-texdoc-[0-9]*:../../print/tex-texdoc
-# depend texdoctk
+DEPENDS+=	tex-texdoctk-[0-9]*:../../print/tex-texdoctk
 # depend texfot
 # depend texliveonfly
 # depend texloganalyser
