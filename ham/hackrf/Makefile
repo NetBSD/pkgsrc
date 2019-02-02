@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2015/12/19 22:38:32 mef Exp $
+# $NetBSD: Makefile,v 1.4 2019/02/02 08:44:44 tnn Exp $
 
-DISTNAME=		hackrf-2015.07.2
+DISTNAME=		hackrf-2018.01.1
 CATEGORIES=		ham
 MASTER_SITES=           ${MASTER_SITE_GITHUB:=mossmann/}
 GITHUB_RELEASE=		v${PKGVERSION_NOREV}
@@ -13,7 +13,6 @@ COMMENT=		HackRF, an open source SDR hardware platform
 LICENSE=		gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
-USE_TOOLS=		cmake tar
 USE_CMAKE=		yes
 
 # Suppress warning for developer
@@ -38,6 +37,7 @@ post-install:
 	COPYING  RELEASENOTES Readme.md TRADEMARK doc firmware firmware-bin hardware |\
 	(cd ${DESTDIR}${PREFIX}/share/hackerRF ; tar xf - ) )
 
-.include	"../../lang/python/application.mk"
-.include	"../../devel/libusb1/buildlink3.mk"
-.include	"../../mk/bsd.pkg.mk"
+.include "../../lang/python/application.mk"
+.include "../../devel/libusb1/buildlink3.mk"
+.include "../../math/fftwf/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
