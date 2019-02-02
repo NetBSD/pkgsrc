@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2019/02/02 00:18:16 markd Exp $
+# $NetBSD: Makefile,v 1.41 2019/02/02 02:52:09 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2018pre4
+PKGNAME=	texlive-${DISTNAME}-2018pre5
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	49867
@@ -94,7 +94,7 @@ DEPENDS+=	tex-beton-[0-9]*:../../print/tex-beton
 DEPENDS+=	tex-bezos-[0-9]*:../../print/tex-bezos
 # depend bhcexam
 # depend bibletext
-# depend bigfoot
+DEPENDS+=	tex-bigfoot-[0-9]*:../../print/tex-bigfoot
 # depend bigints
 # depend biochemistry-colors
 # depend bizcard
@@ -602,7 +602,7 @@ DEPENDS+=	tex-incgraph-[0-9]*:../../graphics/tex-incgraph
 # depend kalendarium
 # depend kantlipsum
 # depend kerntest
-# depend keycommand
+DEPENDS+=	tex-keycommand-[0-9]*:../../print/tex-keycommand
 # depend keyfloat
 # depend keyreader
 # depend keystroke
@@ -984,7 +984,7 @@ DEPENDS+=	tex-secdot-[0-9]*:../../print/tex-secdot
 DEPENDS+=	tex-sectsty-[0-9]*:../../print/tex-sectsty
 # depend seealso
 DEPENDS+=	tex-selectp-[0-9]*:../../print/tex-selectp
-# depend semantic
+DEPENDS+=	tex-semantic-[0-9]*:../../print/tex-semantic
 # depend semantic-markup
 # depend semioneside
 # depend semproc
