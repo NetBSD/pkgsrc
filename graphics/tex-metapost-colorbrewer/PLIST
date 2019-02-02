@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2019/02/02 00:35:39 markd Exp $
+share/texmf-dist/metapost/metapost-colorbrewer/colorbrewer-cmyk.mp
+share/texmf-dist/metapost/metapost-colorbrewer/colorbrewer-rgb.mp
