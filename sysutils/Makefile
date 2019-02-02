@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.797 2019/01/24 13:58:17 adam Exp $
+# $NetBSD: Makefile,v 1.798 2019/02/02 13:59:22 gdt Exp $
 #
 
 COMMENT=	System utilities
@@ -362,7 +362,6 @@ SUBDIR+=	mc46
 SUBDIR+=	mcollective
 SUBDIR+=	mdf2iso
 SUBDIR+=	memconf
-SUBDIR+=	memtest86
 SUBDIR+=	memtester
 SUBDIR+=	memtestplus
 SUBDIR+=	mencvcd

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.9 2015/11/04 01:32:21 agc Exp $
-
-SHA1 (memtest86-4.0.tar.gz) = 1cf38d24c7a9f9560459534687e26d3c4eeb07cc
-RMD160 (memtest86-4.0.tar.gz) = 84cc12957741950ff8d26b8847875b77eeceb6ae
-SHA512 (memtest86-4.0.tar.gz) = 50ad4f5c3f75a4fd8113648cfd06e2e44a4218d37ec5c5d1e6fd23112a0804d9d2fb0fba5004904e0a479f23c98239429971f3d74d101514d0ab3bfab0cef1bb
-Size (memtest86-4.0.tar.gz) = 134766 bytes
