@@ -1,6 +1,0 @@
-Memtest86 is a thorough, stand alone memory test for i386 architecture
-systems.  BIOS-based memory tests are only a quick check and often miss
-failures that are detected by Memtest86.
-
-This program is no longer maintained upstream as free software.  See
-memtestplus for the current free-software fork.
