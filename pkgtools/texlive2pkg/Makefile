@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2018/08/22 09:46:12 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/02/02 01:55:52 markd Exp $
 #
 
-PKGNAME=	texlive2pkg-1.3
-PKGREVISION=	1
+PKGNAME=	texlive2pkg-1.4
 CATEGORIES=	pkgtools
 
 MAINTAINER=	markd@NetBSD.org
