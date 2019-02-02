@@ -1,0 +1,26 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2019/02/02 08:48:06 brook Exp $
+
+Icons and application resources should be installed on all unix platforms.
+
+See upstream commit 21d8800ce613775c995212f61d7e95c2189f6da6.
+
+--- CMakeLists.txt.orig	2015-12-26 12:10:05.000000000 +0000
++++ CMakeLists.txt
+@@ -301,7 +301,7 @@ if(ENABLE_TESTING)
+ 	add_subdirectory(src/tests)
+ endif()
+ 
+-if(UNIX AND NOT APPLE)
++if(UNIX)
+ 	install(FILES src/icons/${PROJECT_NAME}.png
+ 		DESTINATION share/icons/hicolor/256x256/apps/)
+ 	
+@@ -310,7 +310,7 @@ if(UNIX AND NOT APPLE)
+ 
+ 	install(FILES distri/${PROJECT_NAME}.desktop.appdata.xml
+ 		DESTINATION share/appdata/)
+-endif(UNIX AND NOT APPLE)
++endif(UNIX)
+ 
+ if(WIN32 AND MSVC)
+ 	set(QT5_BIN_PATH ${QT5_PATH}/bin)
