@@ -1,0 +1,11 @@
+The package aims to provide a 'one-stop' solution to
+requirements for footnotes. It offers: Multiple footnote
+apparatus superior to that of manyfoot Footnotes can be
+formatted in separate paragraphs, or be run into a single
+paragraph (this choice may be selected per footnote series);
+Things you might have expected (such as \verb-like material in
+footnotes, and colour selections over page breaks) now work.
+Note that the majority of the bigfoot package's interface is
+identical to that of manyfoot; users should seek information
+from that package's documentation. The bigfoot bundle also
+provides the perpage and suffix packages.
