@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 21:28:47 joerg Exp $
-mdec/memtest
-mdec/memtest.bin
-share/doc/memtest/README
