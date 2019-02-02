@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2016/03/05 07:45:21 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2019/02/02 08:48:06 brook Exp $
 
 SHA1 (sqlitebrowser-3.8.0.tar.gz) = 466ef6692c569e2e95158fcb6ac8a4f6ea38fc6f
 RMD160 (sqlitebrowser-3.8.0.tar.gz) = a4af8ecc97a02b042552f539ef67c907042f2c60
 SHA512 (sqlitebrowser-3.8.0.tar.gz) = 6e262e3bd3b26a1574a69cc9f306774cc9fe69f87c3253aba6b40c35f2491bc0636b6d5e705526e039ee9d8ed27d21a4529a624d62e8879a3917cfb502a65589
 Size (sqlitebrowser-3.8.0.tar.gz) = 1538043 bytes
+SHA1 (patch-CMakeLists.txt) = 303617c11c807241cc13a2f664fe667282ce7bda
