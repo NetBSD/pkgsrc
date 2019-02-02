@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.550 2019/02/02 09:00:39 tnn Exp $
+$NetBSD: CHANGES-2019,v 1.551 2019/02/02 14:00:51 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1094,3 +1094,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added print/tex-semantic version 2.0 [markd 2019-02-02]
 	Added print/tex-semantic-doc version 2.0 [markd 2019-02-02]
 	Updated ham/hackrf to 2018.01.1 [tnn 2019-02-02]
+	Removed sysutils/memtest86 successor sysutils/memtestplus [gdt 2019-02-02]
