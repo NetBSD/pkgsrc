@@ -1,25 +1,21 @@
-# $NetBSD: Makefile,v 1.7 2018/09/29 21:33:47 wiedi Exp $
+# $NetBSD: Makefile,v 1.8 2019/02/02 17:53:41 leot Exp $
 
-DISTNAME=	moreutils_0.62.orig
-PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
-PKGREVISION=	2
+DISTNAME=	moreutils-0.63
 CATEGORIES=	misc
-MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/m/moreutils/}
-EXTRACT_SUFX=	.tar.xz
+MASTER_SITES=	https://git.joeyh.name/index.cgi/moreutils.git/snapshot/
 
 MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://joeyh.name/code/moreutils/
 COMMENT=	Additional Unix utilities
 LICENSE=	gnu-gpl-v2
 
+USE_TOOLS+=	gmake pod2man perl:run
+
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 BUILD_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
 DEPENDS+=	p5-IPC-Run-[0-9]*:../../devel/p5-IPC-Run
-
-USE_TOOLS+=	gmake pod2man perl:run
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 USE_LANGUAGES=	c99
 
