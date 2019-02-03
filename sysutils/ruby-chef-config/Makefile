@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2018/09/23 16:31:58 taca Exp $
+# $NetBSD: Makefile,v 1.5 2019/02/03 16:10:44 taca Exp $
 
-DISTNAME=	chef-config-14.5.27
+DISTNAME=	chef-config-14.10.9
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,6 +13,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-shellout>=2.0<3:../../devel/ruby-mixlib-shell
 DEPENDS+=	${RUBY_PKGPREFIX}-fuzzyurl>=0:../../textproc/ruby-fuzzyurl
 DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=0:../../net/ruby-addressable
 DEPENDS+=	${RUBY_PKGPREFIX}-tomlrb>=1.2<2:../../devel/ruby-tomlrb
+
+USE_LANGUAGES=	# none
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
