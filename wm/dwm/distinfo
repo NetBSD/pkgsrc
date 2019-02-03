@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2015/11/11 16:12:10 leot Exp $
+$NetBSD: distinfo,v 1.16 2019/02/03 22:03:41 leot Exp $
 
-SHA1 (dwm-6.1.tar.gz) = 3f41d930d46b6705a76d860d12bf3feffc614581
-RMD160 (dwm-6.1.tar.gz) = 63f1cee521608362e41c346fb2f8544dfa4f936b
-SHA512 (dwm-6.1.tar.gz) = 875644bbc246088f2c87e50debbadd4bc179444b396b1b327149087e8bc5303325ebc9103a7e3c864266ee1ac683ea3cd8f0a08285c8e46fc4389d5b83a555f1
-Size (dwm-6.1.tar.gz) = 25887 bytes
+SHA1 (dwm-6.2.tar.gz) = 3b73a7830b060f46cb9165ea951be7c08f6eae33
+RMD160 (dwm-6.2.tar.gz) = 4b105f6a032f6e5db916b876c421f16e5f5ab6dc
+SHA512 (dwm-6.2.tar.gz) = 01abcab954e5b7c20d011e6fd9c28025271fea2e85610c928812f7c6a09f99d7f9e93d11ffc2d6a7aca894b3fa7e507c6c2fe5f26ff5ddcfc650a9bbaaa41e06
+Size (dwm-6.2.tar.gz) = 25273 bytes
