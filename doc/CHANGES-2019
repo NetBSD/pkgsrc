@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.580 2019/02/03 16:15:47 taca Exp $
+$NetBSD: CHANGES-2019,v 1.581 2019/02/03 16:17:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1147,3 +1147,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/ruby-chef to 14.10.9 [taca 2019-02-03]
 	Updated sysutils/ruby-chef-config to 14.10.9 [taca 2019-02-03]
 	Updated misc/ruby-ohai to 14.8.10 [taca 2019-02-03]
+	Updated sysutils/ruby-chef-zero to 14.0.11 [taca 2019-02-03]
