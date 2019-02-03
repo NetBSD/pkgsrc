@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.578 2019/02/03 15:57:50 taca Exp $
+$NetBSD: CHANGES-2019,v 1.579 2019/02/03 16:11:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1144,3 +1144,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/ruby-rack to 2.0.6 [taca 2019-02-03]
 	Updated www/ruby-rack16 to 1.6.11 [taca 2019-02-03]
 	Updated www/ruby-rack-contrib to 2.1.0 [taca 2019-02-03]
+	Updated sysutils/ruby-chef to 14.10.9 [taca 2019-02-03]
+	Updated sysutils/ruby-chef-config to 14.10.9 [taca 2019-02-03]
