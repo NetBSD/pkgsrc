@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/09/27 23:15:31 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2019/02/03 13:45:06 taca Exp $
 
 DISTNAME=	chef-zero-14.0.6
 CATEGORIES=	sysutils
@@ -14,7 +14,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-uuidtools>=2.1<3:../../devel/ruby-uuidtools
 DEPENDS+=	${RUBY_PKGPREFIX}-hashie>=2.0.5<4.0:../../misc/ruby-hashie
 DEPENDS+=	${RUBY_PKGPREFIX}-rack>=2.0<3:../../www/ruby-rack
 
-RUBY_VERSIONS_ACCEPTED=	24 25	# www/ruby-rack
+RUBY_VERSIONS_ACCEPTED=	24 25 26	# www/ruby-rack
 RUBYGEM_OPTIONS+=	--format-executable
 
 pre-configure:
