@@ -1,0 +1,162 @@
+$NetBSD: patch-configure,v 1.1 2019/02/03 13:41:33 taca Exp $
+
+* Adding Interix support.
+* Ignore doxygen.
+* Ignore VCS.
+* Handle SSP in pkgsrc.
+* Put -std= in CFLAGS not CPPFLAGS.
+* Fix argument for pthread_self() on NetBSD.
+
+--- configure.orig	2018-12-25 06:28:23.000000000 +0000
++++ configure
+@@ -6048,7 +6048,7 @@ else
+     if test x"$target_alias" = x; then :
+ 
+ 	case "$target_os" in #(
+-  darwin*) :
++  nodarwin*) :
+ 
+ 	    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for real target cpu" >&5
+ $as_echo_n "checking for real target cpu... " >&6; }
+@@ -8393,6 +8393,7 @@ fi
+ 	stack_protector=no
+      ;; #(
+   *) :
++	stack_protector=no
+      ;;
+ esac
+     if test -z "${stack_protector+set}"; then :
+@@ -10239,6 +10240,10 @@ esac
+ 
+ 			ac_cv_func___builtin_setjmp=no
+ 		 ;; #(
++  interix*) :
++	LIBS="-lm $LIBS"
++	ac_cv_func_getpgrp_void=yes
++		 ;; #(
+   *) :
+      ;;
+ esac
+@@ -21598,6 +21603,8 @@ else
+ # ifdef _MSC_VER
+ #  include <malloc.h>
+ #  define alloca _alloca
++# elif defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__) || defined(__OpenBSD__)
++#   include <stdlib.h>
+ # else
+ #  ifdef HAVE_ALLOCA_H
+ #   include <alloca.h>
+@@ -26149,11 +26156,11 @@ if ${rb_cv_func_pthread_setname_np_argum
+ else
+   rb_cv_func_pthread_setname_np_arguments=
+ 	    # Linux,AIX,  (pthread_self(), name)
+-	    # NetBSD (pthread_self(), name, \"%s\")
++	    # NetBSD (pthread_self(), \"%s\", name)
+ 	    # Darwin (name)
+ 	    for mac in \
+ 		"(pthread_self(), name)" \
+-		"(pthread_self(), name, \"%s\")" \
++		"(pthread_self(), \"%s\", name)" \
+ 		"(name)" \
+ 		; do
+ 		cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+@@ -26747,7 +26754,9 @@ fi
+   interix*) :
+     	: ${LDSHARED='$(CC) -shared'}
+ 			XLDFLAGS="$XLDFLAGS -Wl,-E"
++			DLDFLAGS="$DLDFLAGS "'-Wl,-h,$(.TARGET) -Wl,--image-base,$$(($$RANDOM %4096/2*262144+1342177280))'
+ 			LIBPATHFLAG=" -L%1\$-s"
++			RPATHFLAG=' -Wl,-R%1$-s'
+ 			rb_cv_dlopen=yes ;; #(
+   freebsd*|dragonfly*) :
+ 
+@@ -27989,7 +27998,7 @@ fi
+ 	 ;; #(
+   freebsd*|dragonfly*) :
+ 
+-	LIBRUBY_SO='lib$(RUBY_SO_NAME).$(SOEXT).$(MAJOR)$(MINOR)'
++	LIBRUBY_SO='lib$(RUBY_SO_NAME).$(SOEXT).$(MAJOR)$(MINOR)$(TEENY)'
+ 	LIBRUBY_SONAME='$(LIBRUBY_SO)'
+ 	if test "$rb_cv_binary_elf" != "yes" ; then :
+ 
+@@ -28068,6 +28077,7 @@ esac
+ 	 ;; #(
+   darwin*) :
+ 
++	RUBY_SO_NAME="${RUBY_SO_NAME}"'.$(RUBY_PROGRAM_VERSION)'
+ 	LIBRUBY_SO='lib$(RUBY_SO_NAME).$(SOEXT)'
+ 	LIBRUBY_SONAME='$(LIBRUBY_SO)'
+ 	LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).$(SOEXT)'
+@@ -28091,7 +28101,12 @@ fi
+ 	 ;; #(
+   interix*) :
+ 
+-	LIBRUBYARG_SHARED='-L. -L${libdir} -l$(RUBY_SO_NAME)'
++	SOLIBS='$(LIBS)'
++	LIBRUBY_SO='lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR).$(TEENY)'
++	# link explicitly to 0x48000000
++	LIBRUBY_DLDFLAGS='-Wl,-h,lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR) -Wl,--image-base,1207959552'
++	LIBRUBYARG_SHARED='-Wl,-R -Wl,${PREFIX}/lib} -L${libdir} -L. -l$(RUBY_SO_NAME)'
++	LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR) lib$(RUBY_SO_NAME).so'
+ 	 ;; #(
+   mingw*|cygwin*|mswin*) :
+ 
+@@ -28273,7 +28288,7 @@ if test "$enable_rpath" = yes; then :
+ esac
+     rpathflag=`IFS="$PATH_SEPARATOR"
+         echo x "$rpathflag" |
+-        sed "s/^x *//;s${IFS}"'%1\\$-s'"${IFS}${libprefix}${IFS}g;s${IFS}%s${IFS}${libprefix}${IFS}g"
++        sed "s/^x *//;s${IFS}"'%1\\$-s'"${IFS}${libprefix}${IFS}g;s${IFS}%s${IFS}${PREFIX}/lib${IFS}g"
+     `
+     LIBRUBY_RPATHFLAGS="$LIBRUBY_RPATHFLAGS${rpathflag}"
+     LIBRUBYARG_SHARED="$LIBRUBY_RPATHFLAGS $LIBRUBYARG_SHARED"
+@@ -28815,15 +28830,7 @@ fi
+ 
+ if test "$install_doc" != no; then :
+ 
+-    if test "$install_rdoc" != no; then :
+-
+-	RDOCTARGET="rdoc"
+-
+-else
+-
+-	RDOCTARGET="nodoc"
+-
+-fi
++    RDOCTARGET="nodoc"
+     if test "$install_capi" != no -a -n "$DOXYGEN"; then :
+ 
+ 	CAPITARGET="capi"
+@@ -30977,31 +30984,7 @@ which seems to be undefined.  Please mak
+     "Makefile":F)
+     tmpmk=confmk$$.tmp
+     {
+-	if test ${VCS+set}; then :
+-
+-	    :
+-
+-elif svn info "$srcdir" > /dev/null 2>&1; then :
+-
+-	    VCS='svn'
+-
+-elif git_dir=`$GIT --work-tree="$srcdir" --git-dir="$srcdir/.git" rev-parse --git-dir 2>/dev/null`; then :
+-
+-	    if test -d "$git_dir/svn"; then :
+-
+-		VCS='$(GIT) svn'
+-
+-else
+-
+-		VCS='$(GIT)'
+-
+-fi
+-
+-else
+-
+-	    VCS='echo cannot'
+-
+-fi
++        VCS='echo cannot'
+ 	case "$VCS" in #(
+   svn) :
+     VCSUP='$(VCS) up $(SVNUPOPTIONS)' ;; #(
