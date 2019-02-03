@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2019/01/07 15:51:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.32 2019/02/03 23:10:19 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -112,6 +112,7 @@ share/mame/hash/apollo_ctape.xml
 share/mame/hash/apple1.xml
 share/mame/hash/apple2.xml
 share/mame/hash/apple2_cass.xml
+share/mame/hash/apple2_flop_orig.xml
 share/mame/hash/apple2gs.xml
 share/mame/hash/apple3.xml
 share/mame/hash/apricot_flop.xml
@@ -172,6 +173,7 @@ share/mame/hash/cgenie_cass.xml
 share/mame/hash/cgenie_flop_rom.xml
 share/mame/hash/channelf.xml
 share/mame/hash/chessmstdm.xml
+share/mame/hash/clickstart_cart.xml
 share/mame/hash/coco_cart.xml
 share/mame/hash/coco_flop.xml
 share/mame/hash/coleco.xml
@@ -199,7 +201,17 @@ share/mame/hash/dragon_os9.xml
 share/mame/hash/e01_flop.xml
 share/mame/hash/ec1841.xml
 share/mame/hash/einstein.xml
-share/mame/hash/ekara.xml
+share/mame/hash/ekara_japan.xml
+share/mame/hash/ekara_japan_d.xml
+share/mame/hash/ekara_japan_en.xml
+share/mame/hash/ekara_japan_g.xml
+share/mame/hash/ekara_japan_m.xml
+share/mame/hash/ekara_japan_p.xml
+share/mame/hash/ekara_japan_s.xml
+share/mame/hash/ekara_japan_sp.xml
+share/mame/hash/ekara_japan_web.xml
+share/mame/hash/ekara_pal.xml
+share/mame/hash/ekara_us.xml
 share/mame/hash/electron_cart.xml
 share/mame/hash/electron_cass.xml
 share/mame/hash/electron_flop.xml
@@ -269,6 +281,9 @@ share/mame/hash/iq128.xml
 share/mame/hash/iq151_cart.xml
 share/mame/hash/iq151_flop.xml
 share/mame/hash/jaguar.xml
+share/mame/hash/jakks_gamekey_dy.xml
+share/mame/hash/jakks_gamekey_nk.xml
+share/mame/hash/jakks_gamekey_sw.xml
 share/mame/hash/juicebox.xml
 share/mame/hash/jupace_cass.xml
 share/mame/hash/k28m2.xml
@@ -544,11 +559,11 @@ share/mame/hash/vii.xml
 share/mame/hash/vip.xml
 share/mame/hash/visicom.xml
 share/mame/hash/vixen.xml
-share/mame/hash/vreader.xml
 share/mame/hash/vsmile_cart.xml
 share/mame/hash/vsmile_cd.xml
 share/mame/hash/vsmileb_cart.xml
 share/mame/hash/vsmilem_cart.xml
+share/mame/hash/vtech_storio_cart.xml
 share/mame/hash/vz_cass.xml
 share/mame/hash/wangpc.xml
 share/mame/hash/waveterm.xml
