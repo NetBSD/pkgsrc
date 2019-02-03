@@ -1,0 +1,21 @@
+$NetBSD: distinfo,v 1.1 2019/02/03 13:41:33 taca Exp $
+
+SHA1 (ruby-2.6.1.tar.xz) = ba5f4338bb642e3836dd80b73a9df0d1b6e079ae
+RMD160 (ruby-2.6.1.tar.xz) = adccca8036dfc34d00ea71d5a59a2a968de5187b
+SHA512 (ruby-2.6.1.tar.xz) = fb36289a955f0596c683cdadf1e4a9a9fd35222b1e1c6160c2e7cd82e5befd40a7aa4361e55f7a8f83c06ee899ec493821c7db34a60c4ac3bca0e874d33ef1a9
+Size (ruby-2.6.1.tar.xz) = 11872964 bytes
+SHA1 (patch-configure) = 428084d430a1dd0368ec457cad48333ca7d6975b
+SHA1 (patch-ext_dbm_extconf.rb) = c998f8735db54b1ae2bc8b6caa359ce88bc7a45b
+SHA1 (patch-lib_mkmf.rb) = 75d2261a8282a00cd5f811a5e629302d1667207e
+SHA1 (patch-lib_rdoc_encoding.rb) = 0e82d2942d9bfcb67dc7c994889d7bc5ec2ae85a
+SHA1 (patch-lib_rdoc_ri_driver.rb) = f4d3e59e35b608acd4edc17916142c7f033e6198
+SHA1 (patch-lib_rubygems.rb) = b38f58a852e920bed77a4be281d3703d26515ad0
+SHA1 (patch-lib_rubygems_commands_build__command.rb) = be967c5335c7ce6b4e6466f93b4ef2e423fe9058
+SHA1 (patch-lib_rubygems_commands_setup__command.rb) = 181bb7554d760182588b0e1b0aafb84c317f41ad
+SHA1 (patch-lib_rubygems_defaults.rb) = 79cc5bb308d5ad4ee88f4fbcbb6f40663c05c05d
+SHA1 (patch-lib_rubygems_dependency__installer.rb) = 1776508907f17547ffe93f637d6f18d335061d76
+SHA1 (patch-lib_rubygems_install__update__options.rb) = 1e953b5a517a805fd7184e359fbc06e67a5ff9b3
+SHA1 (patch-lib_rubygems_installer.rb) = bce2fe5bcc88ba15352c1e3017bdf97e19d0cbfa
+SHA1 (patch-lib_rubygems_platform.rb) = 8608f9e29728101789a990d73b4a6780054dd278
+SHA1 (patch-test_rubygems_test__gem.rb) = 80d646b95df81bacca6d277d2801dba16df291f5
+SHA1 (patch-thread__pthread.c) = ce3dfbc7e953cdd04522bcc8e443b60e541845ce
