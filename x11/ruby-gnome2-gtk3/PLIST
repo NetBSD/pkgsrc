@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2018/06/09 03:36:09 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.15 2019/02/03 07:18:50 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/gtk3.${RUBY_DLEXT}
@@ -46,6 +46,7 @@ ${GEM_LIBDIR}/lib/gtk3/entry.rb
 ${GEM_LIBDIR}/lib/gtk3/file-chooser-dialog.rb
 ${GEM_LIBDIR}/lib/gtk3/font-chooser-dialog.rb
 ${GEM_LIBDIR}/lib/gtk3/gdk-drag-context.rb
+${GEM_LIBDIR}/lib/gtk3/gdk-screen.rb
 ${GEM_LIBDIR}/lib/gtk3/gesture-multi-press.rb
 ${GEM_LIBDIR}/lib/gtk3/icon-size.rb
 ${GEM_LIBDIR}/lib/gtk3/icon-theme.rb
