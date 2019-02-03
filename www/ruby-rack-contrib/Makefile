@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2018/03/21 12:20:58 taca Exp $
+# $NetBSD: Makefile,v 1.10 2019/02/03 15:57:27 taca Exp $
 
-DISTNAME=	rack-contrib-2.0.1
+DISTNAME=	rack-contrib-2.1.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,6 +9,8 @@ COMMENT=	Contributed Rack Middleware and Utilities
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-rack>=2.0:../../www/ruby-rack
+
+USE_LANGAUGES=	# none
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
