@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2019/02/01 11:52:22 adam Exp $
+# $NetBSD: Makefile,v 1.72 2019/02/03 11:07:39 leot Exp $
 
 DISTNAME=	pytest-4.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -32,8 +32,6 @@ DEPENDS+=	${PYPKGPREFIX}-pathlib2>=2.2.0:../../devel/py-pathlib2
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	bash:build
-
-REPLACE_PYTHON+=	_pytest/standalonetemplate.py
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
