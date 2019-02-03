@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/09/28 16:00:39 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2019/02/03 13:45:07 taca Exp $
 
 DISTNAME=	jekyll-seo-tag-2.5.0
 CATEGORIES=	www
@@ -10,7 +10,7 @@ LICENSE=	mit
 
 #DEPENDS+=	${RUBY_PKGPREFIX}-jekyll>=3.3<4:../../www/ruby-jekyll
 
-RUBY_VERSIONS_ACCEPTED=	23 24 25
+RUBY_VERSIONS_ACCEPTED=	23 24 25 26
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
