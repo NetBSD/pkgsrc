@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.38 2019/01/03 05:19:03 taca Exp $
+# $NetBSD: Makefile.common,v 1.39 2019/02/03 13:34:23 taca Exp $
 #
 # Ruby base distribution common definition
 # used by databases/ruby-gdbm/Makefile
@@ -44,6 +44,7 @@ RUBY_HOMEPAGE=		http://www.ruby-lang.org/en/
 RUBY_WRKSRC?=		${WRKDIR}/${RUBY_DISTNAME}
 EXTRACT_SUFX=		.tar.xz
 STRIP?=			strip
+EXTRACT_USING=		gtar
 
 #
 # substitutions
