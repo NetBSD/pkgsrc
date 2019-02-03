@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.575 2019/02/03 15:35:11 taca Exp $
+$NetBSD: CHANGES-2019,v 1.576 2019/02/03 15:52:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1141,3 +1141,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated time/ruby-tzinfo to 2.0.0 [taca 2019-02-03]
 	Updated time/ruby-tzinfo-data to 1.2018.9 [taca 2019-02-03]
 	Updated mail/ruby-mail to 2.7.1 [taca 2019-02-03]
+	Updated www/ruby-rack to 2.0.6 [taca 2019-02-03]
