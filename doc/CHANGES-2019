@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.560 2019/02/03 14:07:21 taca Exp $
+$NetBSD: CHANGES-2019,v 1.561 2019/02/03 14:10:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1126,3 +1126,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added lang/ruby26-base version 2.6.1 [taca 2019-02-03]
 	Added lang/ruby26 version 2.6.1 [taca 2019-02-03]
 	Updated lang/pear to 1.10.7nb1 [taca 2019-02-03]
+	Updated mail/fml to 7.99.1 [taca 2019-02-03]
