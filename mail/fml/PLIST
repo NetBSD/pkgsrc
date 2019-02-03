@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/01/29 15:51:06 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/02/03 14:09:27 taca Exp $
 bin/fml
 bin/fmladdr
 bin/fmlalias
@@ -299,6 +299,7 @@ lib/fml/${FML_STAMP}/FML/User/DB.pm
 lib/fml/${FML_STAMP}/FML/User/Info.pm
 lib/fml/${FML_STAMP}/File/MMagic.pm
 lib/fml/${FML_STAMP}/File/Spec.pm
+lib/fml/${FML_STAMP}/File/Spec/AmigaOS.pm
 lib/fml/${FML_STAMP}/File/Spec/Cygwin.pm
 lib/fml/${FML_STAMP}/File/Spec/Epoc.pm
 lib/fml/${FML_STAMP}/File/Spec/Functions.pm
@@ -380,8 +381,12 @@ lib/fml/${FML_STAMP}/MIME/Lite.pm
 lib/fml/${FML_STAMP}/MIME/Lite/HTML.pm
 lib/fml/${FML_STAMP}/MIME/QuotedPrint/Perl.pm
 lib/fml/${FML_STAMP}/MIME/Type.pm
+lib/fml/${FML_STAMP}/MIME/Type.pod
 lib/fml/${FML_STAMP}/MIME/Types.pm
+lib/fml/${FML_STAMP}/MIME/Types.pod
+lib/fml/${FML_STAMP}/MIME/types.db
 lib/fml/${FML_STAMP}/Mail/Address.pm
+lib/fml/${FML_STAMP}/Mail/Address.pod
 lib/fml/${FML_STAMP}/Mail/Bounce.pm
 lib/fml/${FML_STAMP}/Mail/Bounce/00_PARSE.ja.txt
 lib/fml/${FML_STAMP}/Mail/Bounce/DSN.pm
@@ -399,6 +404,7 @@ lib/fml/${FML_STAMP}/Mail/Bounce/Smtpfeed.pm
 lib/fml/${FML_STAMP}/Mail/Bounce/TODO.ja.txt
 lib/fml/${FML_STAMP}/Mail/Bounce/rfc1894.txt
 lib/fml/${FML_STAMP}/Mail/Cap.pm
+lib/fml/${FML_STAMP}/Mail/Cap.pod
 lib/fml/${FML_STAMP}/Mail/Delivery.pm
 lib/fml/${FML_STAMP}/Mail/Delivery/Base.pm
 lib/fml/${FML_STAMP}/Mail/Delivery/ESMTP.pm
@@ -408,18 +414,29 @@ lib/fml/${FML_STAMP}/Mail/Delivery/Protocol.pm
 lib/fml/${FML_STAMP}/Mail/Delivery/Queue.pm
 lib/fml/${FML_STAMP}/Mail/Delivery/SMTP.pm
 lib/fml/${FML_STAMP}/Mail/Field.pm
+lib/fml/${FML_STAMP}/Mail/Field.pod
 lib/fml/${FML_STAMP}/Mail/Field/AddrList.pm
+lib/fml/${FML_STAMP}/Mail/Field/AddrList.pod
 lib/fml/${FML_STAMP}/Mail/Field/Date.pm
+lib/fml/${FML_STAMP}/Mail/Field/Date.pod
+lib/fml/${FML_STAMP}/Mail/Field/Generic.pm
+lib/fml/${FML_STAMP}/Mail/Field/Generic.pod
 lib/fml/${FML_STAMP}/Mail/Filter.pm
+lib/fml/${FML_STAMP}/Mail/Filter.pod
 lib/fml/${FML_STAMP}/Mail/Header.pm
+lib/fml/${FML_STAMP}/Mail/Header.pod
 lib/fml/${FML_STAMP}/Mail/Internet.pm
+lib/fml/${FML_STAMP}/Mail/Internet.pod
 lib/fml/${FML_STAMP}/Mail/Mailer.pm
+lib/fml/${FML_STAMP}/Mail/Mailer.pod
 lib/fml/${FML_STAMP}/Mail/Mailer/mail.pm
 lib/fml/${FML_STAMP}/Mail/Mailer/qmail.pm
 lib/fml/${FML_STAMP}/Mail/Mailer/rfc822.pm
 lib/fml/${FML_STAMP}/Mail/Mailer/sendmail.pm
 lib/fml/${FML_STAMP}/Mail/Mailer/smtp.pm
+lib/fml/${FML_STAMP}/Mail/Mailer/smtps.pm
 lib/fml/${FML_STAMP}/Mail/Mailer/test.pm
+lib/fml/${FML_STAMP}/Mail/Mailer/testfile.pm
 lib/fml/${FML_STAMP}/Mail/Message.pm
 lib/fml/${FML_STAMP}/Mail/Message/Address.pm
 lib/fml/${FML_STAMP}/Mail/Message/Charset.pm
@@ -428,6 +445,8 @@ lib/fml/${FML_STAMP}/Mail/Message/Compose.pm
 lib/fml/${FML_STAMP}/Mail/Message/DB.pm
 lib/fml/${FML_STAMP}/Mail/Message/Date.pm
 lib/fml/${FML_STAMP}/Mail/Message/Encode.pm
+lib/fml/${FML_STAMP}/Mail/Message/Encode/Obsolete.pm
+lib/fml/${FML_STAMP}/Mail/Message/Encode/Perl.pm
 lib/fml/${FML_STAMP}/Mail/Message/HISTORY
 lib/fml/${FML_STAMP}/Mail/Message/IMPLEMENTATION
 lib/fml/${FML_STAMP}/Mail/Message/Language.pm
@@ -445,7 +464,13 @@ lib/fml/${FML_STAMP}/Mail/Message/Thread.pm
 lib/fml/${FML_STAMP}/Mail/Message/ToHTML.pm
 lib/fml/${FML_STAMP}/Mail/Message/Utils.pm
 lib/fml/${FML_STAMP}/Mail/Send.pm
+lib/fml/${FML_STAMP}/Mail/Send.pod
 lib/fml/${FML_STAMP}/Mail/Util.pm
+lib/fml/${FML_STAMP}/Mail/Util.pod
+lib/fml/${FML_STAMP}/MailTools.pm
+lib/fml/${FML_STAMP}/MailTools.pod
+lib/fml/${FML_STAMP}/MojoX/MIME/Types.pm
+lib/fml/${FML_STAMP}/MojoX/MIME/Types.pod
 lib/fml/${FML_STAMP}/Tie/JournaledDir.pm
 lib/fml/${FML_STAMP}/Tie/JournaledFile.pm
 lib/fml/${FML_STAMP}/Time/CTime.pm
@@ -453,7 +478,9 @@ lib/fml/${FML_STAMP}/Time/DaysInMonth.pm
 lib/fml/${FML_STAMP}/Time/JulianDay.pm
 lib/fml/${FML_STAMP}/Time/ParseDate.pm
 lib/fml/${FML_STAMP}/Time/Timezone.pm
+lib/fml/${FML_STAMP}/Unicode/Japanese.mlpod
 lib/fml/${FML_STAMP}/Unicode/Japanese.pm
+lib/fml/${FML_STAMP}/Unicode/Japanese/JA.pod
 lib/fml/${FML_STAMP}/patch
 libexec/fml/${FML_STAMP}/.cvsignore
 libexec/fml/${FML_STAMP}/Makefile
