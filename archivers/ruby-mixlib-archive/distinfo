@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/09/23 13:42:51 taca Exp $
+$NetBSD: distinfo,v 1.3 2019/02/03 16:20:52 taca Exp $
 
-SHA1 (mixlib-archive-0.4.16.gem) = 51cf17d81d290597d2f14d159e667e467c013cc7
-RMD160 (mixlib-archive-0.4.16.gem) = 7b2351cfaa671a874152ef6b6b2e21a766e4326c
-SHA512 (mixlib-archive-0.4.16.gem) = ef2a665d586da575d794aaf287b140a7cef5b3863a2855dc3c20db56572951afcf43d3d1d5bf35c3e488a7505b20cf74052621abb4246de4b8f5f6fa650ba8ba
-Size (mixlib-archive-0.4.16.gem) = 1692672 bytes
+SHA1 (mixlib-archive-1.0.1.gem) = fa969d665aa1e9a9678dac2e423f7dc7f08d79f9
+RMD160 (mixlib-archive-1.0.1.gem) = a4d2f9d6a518cd0bf24467469b339f71ad26475c
+SHA512 (mixlib-archive-1.0.1.gem) = d4c325e7c7969f781f483c04e2e4743860a45447972e3bda99f28f01e0647603c71e0f161edb81a2f938aecf696bf27163f903b0ffae02c6f30e8b4553810f0c
+Size (mixlib-archive-1.0.1.gem) = 11264 bytes
