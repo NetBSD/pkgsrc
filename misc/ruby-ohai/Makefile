@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2019/02/03 13:45:06 taca Exp $
+# $NetBSD: Makefile,v 1.25 2019/02/03 16:15:26 taca Exp $
 
-DISTNAME=	ohai-14.5.4
+DISTNAME=	ohai-14.8.10
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,7 +11,7 @@ LICENSE=	apache-2.0
 DEPENDS+=	${RUBY_PKGPREFIX}-systemu>=2.6.4<2.7:../../misc/ruby-systemu
 DEPENDS+=	${RUBY_PKGPREFIX}-ffi>=1.9<2:../../devel/ruby-ffi
 DEPENDS+=	${RUBY_PKGPREFIX}-ffi-yajl>=2.2<3:../../devel/ruby-ffi-yajl
-DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-cli>=1.5.0:../../devel/ruby-mixlib-cli
+DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-cli>=1.7.0:../../devel/ruby-mixlib-cli
 DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-config>=2.0<3:../../devel/ruby-mixlib-config
 DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-log>=2.0.1:../../devel/ruby-mixlib-log
 DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-shellout>=2.0<3:../../devel/ruby-mixlib-shellout
@@ -19,6 +19,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-plist>=3.1<4:../../textproc/ruby-plist
 DEPENDS+=	${RUBY_PKGPREFIX}-ipaddress>=0.8.0:../../net/ruby-ipaddress
 DEPENDS+=	${RUBY_PKGPREFIX}-wmi-lite>=1.0<2:../../devel/ruby-wmi-lite
 DEPENDS+=	${RUBY_PKGPREFIX}-chef-config<15:../../sysutils/ruby-chef-config
+
+USE_LANGUAGES=	# none
 
 RUBY_VERSIONS_ACCEPTED=	23 24 25 26
 
