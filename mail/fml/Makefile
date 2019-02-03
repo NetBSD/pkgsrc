@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2018/08/22 09:45:25 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/02/03 14:09:27 taca Exp $
 #
 
-DISTNAME=	fml-7.98.18-${FML_STAMP}
-PKGNAME=	${DISTNAME:S/-${FML_STAMP}/.${FML_STAMP}/}
-PKGREVISION=	1
+DISTNAME=	fml-7.99.1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.fml.org/pub/fml8/
 
@@ -14,8 +12,7 @@ LICENSE=	gnu-gpl-v2 OR artistic
 
 USERGROUP_PHASE=	pre-install
 
-# development version
-FML_STAMP=	20121230
+FML_STAMP=	7.99.1
 
 GNU_CONFIGURE=	yes
 USE_TOOLS=	perl:run
@@ -56,7 +53,9 @@ CONFIGURE_ENV+=		ac_cv_path_GZCAT=${GZCAT:Q} \
 MAKE_ENV+=		install_root=${DESTDIR} PERL=${PERL5}
 
 
-PRINT_PLIST_AWK+=	/${FML_STAMP}/ \
+PRINT_PLIST_AWK+=	/share\/examples\/fml/ \
+			{ gsub(/share\/examples\/fml/, "$${EGDIR}"); } \
+			/${FML_STAMP}/ \
 			{ gsub(/${FML_STAMP}/, "$${FML_STAMP}"); }
 
 CHECK_INTERPRETER_SKIP+= lib/fml/${FML_STAMP}/* \
