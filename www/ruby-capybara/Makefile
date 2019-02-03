@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/12/17 15:12:50 taca Exp $
+# $NetBSD: Makefile,v 1.20 2019/02/03 13:45:07 taca Exp $
 
 DISTNAME=	capybara-3.12.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -18,7 +18,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=0:../../net/ruby-addressable
 
 USE_LANGUAGES=	# none
 
-RUBY_VERSIONS_ACCEPTED=	23 24 25
+RUBY_VERSIONS_ACCEPTED=	23 24 25 26
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
