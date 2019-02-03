@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2018/09/29 10:34:33 tnn Exp $
+# $NetBSD: Makefile,v 1.32 2019/02/03 13:45:07 taca Exp $
 
 DISTNAME=	jekyll-3.8.4
 CATEGORIES=	www
@@ -26,7 +26,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-jekyll-minima>=2.1.1:../../www/ruby-jekyll-minima
 DEPENDS+=	${RUBY_PKGPREFIX}-jekyll-feed>=0.9.2:../../www/ruby-jekyll-feed
 DEPENDS+=       ${RUBY_PKGPREFIX}-bundler>=1.7:../../misc/ruby-bundler
 
-RUBY_VERSIONS_ACCEPTED=	23 24 25
+RUBY_VERSIONS_ACCEPTED=	23 24 25 26
 
 RUBYGEM_OPTIONS+=	--format-executable
 
