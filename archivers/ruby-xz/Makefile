@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/09/27 23:58:21 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2019/02/03 13:45:06 taca Exp $
 
 DISTNAME=	ruby-xz-1.0.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
@@ -11,7 +11,7 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_NAME}-fiddle>=${RUBY_VERSION}:../../devel/ruby-fiddle
 
-RUBY_VERSIONS_ACCEPTED=	23 24 25
+RUBY_VERSIONS_ACCEPTED=	23 24 25 26
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
