@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.569 2019/02/03 15:07:58 taca Exp $
+$NetBSD: CHANGES-2019,v 1.570 2019/02/03 15:09:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1135,3 +1135,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/ruby-i18n12 version 1.2.0 [taca 2019-02-03]
 	Updated devel/ruby-activesupport32 to 3.2.22.5nb3 [taca 2019-02-03]
 	Added time/ruby-tzinfo1 version 1.2.5 [taca 2019-02-03]
+	Updated devel/ruby-activesupport42 to 4.2.11nb2 [taca 2019-02-03]
