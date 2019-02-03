@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.563 2019/02/03 14:32:36 taca Exp $
+$NetBSD: CHANGES-2019,v 1.564 2019/02/03 14:36:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1129,3 +1129,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/fml to 7.99.1 [taca 2019-02-03]
 	Updated databases/ruby-sequel to 5.17.0 [taca 2019-02-03]
 	Updated devel/ruby-facade to 1.1.0 [taca 2019-02-03]
+	Updated devel/ruby-globalid to 0.4.2 [taca 2019-02-03]
