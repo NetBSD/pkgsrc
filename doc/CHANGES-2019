@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.559 2019/02/03 13:43:44 taca Exp $
+$NetBSD: CHANGES-2019,v 1.560 2019/02/03 14:07:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1125,3 +1125,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/ruby-gnome2-vte to 3.3.2 [tsutsui 2019-02-03]
 	Added lang/ruby26-base version 2.6.1 [taca 2019-02-03]
 	Added lang/ruby26 version 2.6.1 [taca 2019-02-03]
+	Updated lang/pear to 1.10.7nb1 [taca 2019-02-03]
