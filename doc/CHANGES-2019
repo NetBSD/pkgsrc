@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.582 2019/02/03 16:21:14 taca Exp $
+$NetBSD: CHANGES-2019,v 1.583 2019/02/03 21:54:17 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1149,3 +1149,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated misc/ruby-ohai to 14.8.10 [taca 2019-02-03]
 	Updated sysutils/ruby-chef-zero to 14.0.11 [taca 2019-02-03]
 	Updated archivers/ruby-mixlib-archive to 1.0.1 [taca 2019-02-03]
+	Updated x11/dmenu to 4.9 [leot 2019-02-03]
