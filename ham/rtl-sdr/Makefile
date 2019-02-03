@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/02/02 14:35:15 tnn Exp $
+# $NetBSD: Makefile,v 1.14 2019/02/03 10:48:17 tnn Exp $
 
 DISTNAME=		rtl-sdr-0.6.0
 CATEGORIES=		ham
@@ -18,12 +18,6 @@ USE_CMAKE=		yes
 CONFIGURE_DIRS=build
 BUILD_DIRS=${CONFIGURE_DIRS}
 CMAKE_ARG_PATH=..
-
-SUBST_CLASSES+=			fix-inline
-SUBST_STAGE.fix-inline=		pre-configure
-SUBST_MESSAGE.fix-inline=	Fixing inline calls
-SUBST_FILES.fix-inline=		src/rtl_adsb.c src/rtl_power.c
-SUBST_SED.fix-inline=		-e 's,inline,static inline,g'
 
 PKGCONFIG_OVERRIDE+=     librtlsdr.pc.in
 
