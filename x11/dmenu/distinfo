@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2018/03/15 10:58:24 leot Exp $
+$NetBSD: distinfo,v 1.12 2019/02/03 21:54:01 leot Exp $
 
-SHA1 (dmenu-4.8.tar.gz) = 29d63aeb4fcb7a0b2891d122fdde324cda02feda
-RMD160 (dmenu-4.8.tar.gz) = 305f79176a876f2dc6fd31fac6ce4ea65e1a2a88
-SHA512 (dmenu-4.8.tar.gz) = fa2700018cfb912a21f867ef3ca771a58a25c2cb8e1fb37acef046bb15d8d8b92dcc5bfce486befae0f143495d0283910988e181a9eb143be3bb1b5be9738d77
-Size (dmenu-4.8.tar.gz) = 15658 bytes
+SHA1 (dmenu-4.9.tar.gz) = 73d1a9a844e8f285fc315ea4ee5b95da2b0bc8f4
+RMD160 (dmenu-4.9.tar.gz) = fbaf4597df4596e0e7b1bf85adac5aa222e60469
+SHA512 (dmenu-4.9.tar.gz) = c2779209fe012de8ca1cdd72923da6d594f4a8368c85c3c0e0afd4ae489a95fe0e6f05a947d115b6b389aa7170ab14c2c645a2031353b0a08f38327ab461fe65
+Size (dmenu-4.9.tar.gz) = 15972 bytes
