@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2018/07/15 15:21:28 mef Exp $
+# $NetBSD: options.mk,v 1.4 2019/02/04 10:38:53 tron Exp $
 
 ### Set options
 PKG_OPTIONS_VAR=			PKG_OPTIONS.emacs
@@ -17,8 +17,8 @@ PKG_SUGGESTED_OPTIONS.Darwin=		nextstep
 # gtk in next line implies gtk2, xaw = athena = lucid
 PKG_OPTIONS_GROUP.toolkit=		gtk gtk2 gtk3 motif xaw lucid
 # gtk2 and gtk has the same effect
-# gtk is default in the logic below (even not included in SUGGESTED_=
-# gconf, gtk and xft2 will be ignored for nextstep even shown as selected.
+# gtk3 is default in the logic below (even not included in SUGGESTED_=
+# gconf, gtk* and xft2 will be ignored for nextstep even shown as selected.
 
 PKG_SUGGESTED_OPTIONS=	dbus gconf gnutls gtk3 svg xaw3d xft2 xml x11
 
@@ -113,7 +113,9 @@ CONFIGURE_ARGS+=	--without-xft --without-libotf --without-m17n-flt
 ###
 ### Toolkit selection
 ###
-.  if (empty(PKG_OPTIONS:Mxaw) && empty(PKG_OPTIONS:Mlucid) &&  empty(PKG_OPTIONS:Mmotif))
+.  if (empty(PKG_OPTIONS:Mxaw) && empty(PKG_OPTIONS:Mlucid) && \
+       empty(PKG_OPTIONS:Mgtk) && empty(PKG_OPTIONS:Mgtk2) && \
+       empty(PKG_OPTIONS:Mmotif))
 # defaults to gtk3
 USE_TOOLS+=		pkg-config
 .include "../../x11/gtk3/buildlink3.mk"
