@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/11/28 19:28:37 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/02/04 01:11:15 gutteridge Exp $
 bin/kitty
 lib/kitty/__main__.py
 lib/kitty/__main__.pyo
@@ -159,10 +159,8 @@ lib/kitty/logo/kitty.rgba
 lib/kitty/terminfo/x/xterm-kitty
 man/man1/kitty.1
 share/applications/kitty.desktop
-share/doc/kitty/html/.buildinfo
-share/doc/kitty/html/.nojekyll
-share/doc/kitty/html/_downloads/7cb11c46fdfc0ef332e693a52d23cc9d/diff.conf
-share/doc/kitty/html/_downloads/b7aa12c1e980d68be9bc7488795e5d36/kitty.conf
+share/doc/kitty/html/_downloads/diff.conf
+share/doc/kitty/html/_downloads/kitty.conf
 share/doc/kitty/html/_images/diff.png
 share/doc/kitty/html/_images/hints_mode.png
 share/doc/kitty/html/_images/panel.png
@@ -185,6 +183,7 @@ share/doc/kitty/html/_sources/kittens/icat.rst.txt
 share/doc/kitty/html/_sources/kittens/panel.rst.txt
 share/doc/kitty/html/_sources/kittens/unicode-input.rst.txt
 share/doc/kitty/html/_sources/performance.rst.txt
+share/doc/kitty/html/_sources/pipe.rst.txt
 share/doc/kitty/html/_sources/protocol-extensions.rst.txt
 share/doc/kitty/html/_sources/remote-control.rst.txt
 share/doc/kitty/html/_sources/support.rst.txt
@@ -229,8 +228,8 @@ share/doc/kitty/html/kittens/hints.html
 share/doc/kitty/html/kittens/icat.html
 share/doc/kitty/html/kittens/panel.html
 share/doc/kitty/html/kittens/unicode-input.html
-share/doc/kitty/html/objects.inv
 share/doc/kitty/html/performance.html
+share/doc/kitty/html/pipe.html
 share/doc/kitty/html/protocol-extensions.html
 share/doc/kitty/html/remote-control.html
 share/doc/kitty/html/search.html
