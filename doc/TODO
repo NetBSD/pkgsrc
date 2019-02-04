@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18783 2019/02/04 09:38:19 wiz Exp $
+$NetBSD: TODO,v 1.18784 2019/02/04 14:25:19 taca Exp $
 
 Suggested new packages
 ======================
@@ -1033,7 +1033,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o munin-server-1.4.6
 	o muse-0.9.2
 	o myodbc-5.3.4
-	o mysql-server-8.0.13
+	o mysql-server-5.6.43
+	o mysql-server-5.7.25
+	o mysql-server-8.0.14
 	o mysql-workbench-6.3
 	o nant-0.92
 	o nap-1.5.3
@@ -1226,10 +1228,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.4
-	o ruby-2.6.0
 	o ruby-jquery-rails-4.2.1
-	o ruby-redmine-3.3.7
-	o ruby-redmine-3.4.5
+	o ruby-redmine-3.3.9
+	o ruby-redmine-3.4.8
+	o ruby-redmine-4.0.1
 	o ruby-review-1.4.0 [wip]
 	o rump-20131213
 	o sabayon-2.30.1 [GNOME 2.30]
