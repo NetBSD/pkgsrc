@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.585 2019/02/03 23:10:31 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.586 2019/02/04 01:12:34 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1152,3 +1152,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/dmenu to 4.9 [leot 2019-02-03]
 	Updated wm/dwm to 6.2 [leot 2019-02-03]
 	Updated emulators/mame to 0.206 [wiz 2019-02-03]
+	Updated x11/kitty to 0.13.3 [gutteridge 2019-02-04]
