@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.161 2019/01/14 09:46:58 tnn Exp $
+# $NetBSD: sites.mk,v 1.162 2019/02/04 09:36:41 wiz Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -9,7 +9,6 @@
 MASTER_SITE_XCONTRIB+=  \
 	ftp://ftp.gwdg.de/pub/x11/x.org/contrib/ \
 	ftp://sunsite.icm.edu.pl/pub/X11/contrib/ \
-	ftp://mirror.switch.ch/mirror/X11/contrib/ \
 	ftp://ftp.x.org/contrib/
 
 MASTER_SITE_GNU+=       \
@@ -153,8 +152,6 @@ MASTER_SITE_MYSQL+=	\
 	ftp://ftp.heanet.ie/mirrors/www.mysql.com/Downloads/ \
 	http://na.mirror.garr.it/mirrors/MySQL/Downloads/ \
 	http://mirrors.xservers.ro/mysql/Downloads/ \
-	http://mirror.switch.ch/ftp/mirror/mysql/Downloads/ \
-	ftp://mirror.switch.ch/mirror/mysql/Downloads/ \
 	http://mysql.infocom.ua/Downloads/ \
 	http://mirrors.dedipower.com/www.mysql.com/Downloads/ \
 	http://www.mirrorservice.org/sites/ftp.mysql.com/Downloads/ \
@@ -230,7 +227,6 @@ MASTER_SITE_GENTOO+= \
 	http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/ \
 	http://ftp.heanet.ie/pub/gentoo/ \
 	http://mirror.bytemark.co.uk/gentoo/ \
-	http://mirror.switch.ch/ftp/mirror/gentoo/ \
 	http://gentoo.mirror.dkm.cz/pub/gentoo/ \
 	http://ftp.ds.karen.hj.se/gentoo/ \
 	ftp://ftp.free.fr/mirrors/ftp.gentoo.org/ \
@@ -246,8 +242,7 @@ MASTER_SITE_GENTOO+= \
 
 MASTER_SITE_XORG+= \
 	http://xorg.freedesktop.org/releases/individual/ \
-	ftp://ftp.x.org/pub/individual/ \
-	ftp://mirror.switch.ch/mirror/X11/pub/individual/
+	ftp://ftp.x.org/pub/individual/
 
 MASTER_SITE_FREEBSD+= \
 	http://distcache.FreeBSD.org/ports-distfiles/
