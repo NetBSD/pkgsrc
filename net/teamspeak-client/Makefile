@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2013/04/08 11:17:19 rodent Exp $
+# $NetBSD: Makefile,v 1.13 2019/02/04 09:34:49 wiz Exp $
 
 PKGNAME=		teamspeak-client-2.0.32.60
 DISTNAME=		ts2_client_rc2_2032
 CATEGORIES=		net audio
-MASTER_SITES=		ftp://ftp.freenet.de/pub/4players/teamspeak.org/releases/
+MASTER_SITES=		#
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		abs@NetBSD.org
