@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18784 2019/02/04 14:25:19 taca Exp $
+$NetBSD: TODO,v 1.18785 2019/02/04 19:37:27 leot Exp $
 
 Suggested new packages
 ======================
@@ -459,6 +459,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o catdoc-1.1
 	o catdoc-tk-1.1
 	o cbindgen-0.7.1
+	o cc65-2.17
 	o cddbd-1.5.2
 	o cdk-5.0.20120323
 	o cdrkit-1.1.10
