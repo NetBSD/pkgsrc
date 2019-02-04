@@ -1,10 +1,10 @@
-$NetBSD: patch-setup.py,v 1.1 2018/11/28 18:48:58 nia Exp $
+$NetBSD: patch-setup.py,v 1.2 2019/02/04 01:11:15 gutteridge Exp $
 
 Use PKGMANDIR and sort out (C|CPP|LD)FLAGS.
 
---- setup.py.orig	2018-09-29 03:45:40.000000000 +0000
+--- setup.py.orig	2019-01-19 08:36:53.000000000 +0000
 +++ setup.py
-@@ -179,41 +179,14 @@ def init_env(
+@@ -180,41 +180,14 @@ def init_env(
          df += ' -Og'
      optimize = df if debug or sanitize else '-O3'
      sanitize_args = get_sanitize_args(cc, ccver) if sanitize else set()
@@ -18,7 +18,7 @@ Use PKGMANDIR and sort out (C|CPP|LD)FLAGS.
 -    cppflags = shlex.split(cppflags)
 -    cflags = os.environ.get(
 -        'OVERRIDE_CFLAGS', (
--            '-Wextra -Wno-missing-field-initializers -Wall -std=c99'
+-            '-Wextra -Wno-missing-field-initializers -Wall -std=c11'
 -            ' -pedantic-errors -Werror {} {} -fwrapv {} {} -pipe {} -fvisibility=hidden'
 -        ).format(
 -            optimize,
@@ -53,7 +53,7 @@ Use PKGMANDIR and sort out (C|CPP|LD)FLAGS.
  
      if profile:
          cppflags.append('-DWITH_PROFILER')
-@@ -508,14 +481,12 @@ def build_asan_launcher(args):
+@@ -518,14 +491,12 @@ def build_asan_launcher(args):
  
  
  def build_linux_launcher(args, launcher_dir='.', for_bundle=False, sh_launcher=False, for_freeze=False):
@@ -71,7 +71,7 @@ Use PKGMANDIR and sort out (C|CPP|LD)FLAGS.
      if for_bundle or for_freeze:
          cppflags.append('-DFOR_BUNDLE')
          cppflags.append('-DPYVER="{}"'.format(sysconfig.get_python_version()))
-@@ -524,8 +495,6 @@ def build_linux_launcher(args, launcher_
+@@ -534,8 +505,6 @@ def build_linux_launcher(args, launcher_
      cppflags.append('-DLIB_DIR_NAME="{}"'.format(args.libdir_name.strip('/')))
      pylib = get_python_flags(cflags)
      exe = 'kitty-profile' if args.profile else 'kitty'
@@ -80,7 +80,7 @@ Use PKGMANDIR and sort out (C|CPP|LD)FLAGS.
      ldflags = shlex.split(os.environ.get('LDFLAGS', ''))
      if for_freeze:
          ldflags += ['-Wl,-rpath,$ORIGIN/../lib']
-@@ -540,7 +509,7 @@ def build_linux_launcher(args, launcher_
+@@ -550,7 +519,7 @@ def build_linux_launcher(args, launcher_
  
  
  def copy_man_pages(ddir):
