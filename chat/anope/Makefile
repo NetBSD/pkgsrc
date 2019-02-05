@@ -1,88 +1,110 @@
-# $NetBSD: Makefile,v 1.21 2018/08/22 09:43:00 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2019/02/05 19:10:50 nia Exp $
 
-DISTNAME=	anope-1.7.21
-PKGREVISION=	9
+PKGNAME=	anope-2.0.6
+DISTNAME=	${PKGNAME}-source
 CATEGORIES=	chat
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=anope/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=anope/}
+GITHUB_PROJECT=	anope
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.anope.org/
-COMMENT=	Set of Services for IRC networks
+MAINTAINER=	nia@NetBSD.org
+HOMEPAGE=	https://www.anope.org/
+COMMENT=	Modular set of IRC services
+LICENSE=	gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	destdir
+USE_LANGUAGES=	c c++
+USE_CMAKE=	yes
 
-GNU_CONFIGURE=	YES
-PTHREAD_OPTS+=	require
-USE_TOOLS+=	gmake perl:run
-ANOPE_USER=	anope
-ANOPE_GROUP=	anope
-RCD_SCRIPTS=	anope
-FILES_SUBST+=	ANOPE_USER=${ANOPE_USER}
-FILES_SUBST+=	ANOPE_GROUP=${ANOPE_GROUP}
+CMAKE_ARGS+=	-DPROGRAM_NAME=anope
 
-USERGROUP_PHASE=	pre-install
-PKG_USERS_VARS+=	ANOPE_USER
-PKG_GROUPS_VARS+=	ANOPE_GROUP
+CMAKE_ARGS+=	-DDISABLE_TOOLS=ON
+
+CMAKE_ARGS+=	-DDB_DIR=anope/data
+CMAKE_ARGS+=	-DCONF_DIR=${PKG_SYSCONFDIR}/anope
+CMAKE_ARGS+=	-DLIB_DIR=lib/anope
+CMAKE_ARGS+=	-DLOCALE_DIR=${PKGLOCALEDIR}/locale
+CMAKE_ARGS+=	-DLOGS_DIR=anope/logs
 
 .include "../../mk/bsd.prefs.mk"
 
-PKG_USERS=	${ANOPE_USER}:${ANOPE_GROUP}
-PKG_HOME.${ANOPE_USER}=		${PREFIX}/lib/anope
-PKG_GROUPS=	${ANOPE_GROUP}
-MAKE_ENV+=	RUNGROUP=${ANOPE_GROUP}
-OWN_DIRS_PERMS+=	${PREFIX}/lib/anope/logs \
-			${ANOPE_USER} ${ANOPE_GROUP} 2755
-OWN_DIRS_PERMS+=	${PREFIX}/lib/anope/modules/runtime \
-			${ANOPE_USER} ${ANOPE_GROUP} 2755
+ANOPE_USER?=		anope
+ANOPE_GROUP?=		anope
+PKG_GROUPS=		${ANOPE_GROUP}
+PKG_USERS=		${ANOPE_USER}:${ANOPE_GROUP}
+PKG_GROUPS_VARS=	ANOPE_USER
+PKG_USERS_VARS=		ANOPE_GROUP
 
-CONF_FILES_PERMS+=	${PREFIX}/share/examples/anope/example.conf \
-			${PREFIX}/lib/anope/services.conf \
-			${ANOPE_USER} ${ANOPE_GROUP} 0640
+OWN_DIRS_PERMS+=	${PREFIX}/anope ${ANOPE_USER} ${ANOPE_GROUP} 0755
+OWN_DIRS_PERMS+=	${PREFIX}/anope/data ${ANOPE_USER} ${ANOPE_GROUP} 0755
+OWN_DIRS_PERMS+=	${PREFIX}/anope/logs ${ANOPE_USER} ${ANOPE_GROUP} 0755
 
-CONFIGURE_ARGS+=	--with-permissions=077
-CONFIGURE_ARGS+=	--with-bindir=${PREFIX}/lib/anope
-CONFIGURE_ARGS+=	--with-datadir=${PREFIX}/lib/anope
-CONFIGURE_ARGS+=	--with-rungroup=${ANOPE_GROUP}
+FILES_SUBST+=		ANOPE_GROUP=${ANOPE_GROUP:Q}
+FILES_SUBST+=		ANOPE_USER=${ANOPE_USER:Q}
+FILES_SUBST+=		PKGLOCALEDIR=${PKGLOCALEDIR}
+
+SUBST_CLASSES+=		conf
+SUBST_STAGE.conf=	pre-configure
+SUBST_MESSAGE.conf=	Set variables in configuration file.
+SUBST_FILES.conf+=	data/example.conf
+SUBST_SED.conf+=	-e "s,@PREFIX@,${PREFIX},g"
+SUBST_SED.conf+=	-e "s,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g"
+SUBST_SED.conf+=	-e "s,@PKGLOCALEDIR@,${PKGLOCALEDIR},g"
+
+RCD_SCRIPTS=	anope
+
+EGDIR=		${PREFIX}/share/examples/anope
+DOCDIR=		${PREFIX}/share/doc/anope
+
+USE_PKGLOCALEDIR=	yes
+
+INSTALLATION_DIRS+=	${EGDIR}
+INSTALLATION_DIRS+=	${DOCDIR}
+
+CONF_FILES+=	${EGDIR}/botserv.conf ${PKG_SYSCONFDIR}/anope/botserv.conf
+CONF_FILES+=	${EGDIR}/chanserv.conf ${PKG_SYSCONFDIR}/anope/chanserv.conf
+CONF_FILES+=	${EGDIR}/chanstats.conf ${PKG_SYSCONFDIR}/anope/chanstats.conf
+CONF_FILES+=	${EGDIR}/services.conf ${PKG_SYSCONFDIR}/anope/services.conf
+CONF_FILES+=	${EGDIR}/global.conf ${PKG_SYSCONFDIR}/anope/global.conf
+CONF_FILES+=	${EGDIR}/hostserv.conf ${PKG_SYSCONFDIR}/anope/hostserv.conf
+CONF_FILES+=	${EGDIR}/irc2sql.conf ${PKG_SYSCONFDIR}/anope/irc2sql.conf
+CONF_FILES+=	${EGDIR}/memoserv.conf ${PKG_SYSCONFDIR}/anope/memoserv.conf
+CONF_FILES+=	${EGDIR}/modules.conf ${PKG_SYSCONFDIR}/anope/modules.conf
+CONF_FILES+=	${EGDIR}/nickserv.conf ${PKG_SYSCONFDIR}/anope/nickserv.conf
+CONF_FILES+=	${EGDIR}/operserv.conf ${PKG_SYSCONFDIR}/anope/operserv.conf
 
 .include "options.mk"
 
-SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	data/example.chk data/example.conf
-SUBST_SED.paths=	-e "s|/home/ircd/services|${PREFIX}/lib/anope|g"
-SUBST_SED.paths+=	-e "s|/usr/local/lib/services|${PREFIX}/lib/anope|g"
-SUBST_SED.paths+=	-e "s|/home/username/services|${PREFIX}/lib/anope|g"
-SUBST_MESSAGE.paths=	Fixing hardcoded paths.
-
-SUBST_CLASSES+=		utils
-SUBST_STAGE.utils=	pre-configure
-SUBST_FILES.utils=	src/Makefile
-SUBST_SED.utils=	-e "s|find|${FIND}|g"
-SUBST_SED.utils+=	-e "s|chgrp|${CHGRP}|g"
-SUBST_SED.utils+=	-e "s|chmod|${CHMOD}|g"
-SUBST_SED.utils+=	-e "s|ln|${LN}|g"
-SUBST_MESSAGE.utils=	Fixing hardcoded utilities.
-
-.include "../../mk/pthread.buildlink3.mk"
-
-# for backtrace
-.if ${OPSYS} == "NetBSD" && exists(/usr/include/execinfo.h)
-LDFLAGS+=  -lexecinfo
-.endif
-
-INSTALLATION_DIRS+=	share/doc/anope share/examples/anope lib/anope/modules
+pre-configure:
+.for srcfile in ${ANOPE_EXTRAS}
+	${LN} -sf ${WRKSRC}/modules/extra/${srcfile} ${WRKSRC}/modules/${srcfile}
+.endfor
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/docs/* ${DESTDIR}${PREFIX}/share/doc/anope
-	${CHMOD} ${BINMODE} ${DESTDIR}${PREFIX}/lib/anope/anoperc
-	${CHMOD} ${BINMODE} ${DESTDIR}${PREFIX}/lib/anope/listchans
-	${CHMOD} ${BINMODE} ${DESTDIR}${PREFIX}/lib/anope/listnicks
-	${CHMOD} ${BINMODE} ${DESTDIR}${PREFIX}/lib/anope/services
-	${CHMOD} ${BINMODE} ${DESTDIR}${PREFIX}/lib/anope/modules/*.so
-	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/lib/anope/languages/*
-	${CHOWN} ${ANOPE_USER} ${DESTDIR}${PREFIX}/lib/anope
-	${CHOWN} ${ANOPE_USER} ${DESTDIR}${PREFIX}/lib/anope/backups
-	${CHOWN} ${ANOPE_USER} ${DESTDIR}${PREFIX}/lib/anope/logs
-	${INSTALL_DATA} ${WRKSRC}/data/* ${DESTDIR}${PREFIX}/share/examples/anope
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/anope/botserv.example.conf \
+		${DESTDIR}${EGDIR}/botserv.conf
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/anope/chanserv.example.conf \
+		${DESTDIR}${EGDIR}/chanserv.conf
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/anope/chanstats.example.conf \
+		${DESTDIR}${EGDIR}/chanstats.conf
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/anope/example.conf \
+		${DESTDIR}${EGDIR}/services.conf
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/anope/global.example.conf \
+		${DESTDIR}${EGDIR}/global.conf
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/anope/hostserv.example.conf \
+		${DESTDIR}${EGDIR}/hostserv.conf
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/anope/irc2sql.example.conf \
+		${DESTDIR}${EGDIR}/irc2sql.conf
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/anope/memoserv.example.conf \
+		${DESTDIR}${EGDIR}/memoserv.conf
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/anope/modules.example.conf \
+		${DESTDIR}${EGDIR}/modules.conf
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/anope/nickserv.example.conf \
+		${DESTDIR}${EGDIR}/nickserv.conf
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/anope/operserv.example.conf \
+		${DESTDIR}${EGDIR}/operserv.conf
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/anope/example.chk \
+		${DESTDIR}${DOCDIR}/example.chk
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/anope/stats.standalone.example.conf \
+		${DESTDIR}${DOCDIR}/stats.standalone.example.conf
 
 .include "../../mk/bsd.pkg.mk"
