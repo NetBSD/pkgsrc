@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2019/02/05 11:14:59 jmcneill Exp $
+# $NetBSD: Makefile,v 1.80 2019/02/05 11:38:26 jmcneill Exp $
 
 DISTNAME=	mpv-0.29.1
 PKGREVISION=	5
@@ -54,6 +54,7 @@ post-install:
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "Darwin"
 .include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../x11/libdrm/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
@@ -72,6 +73,5 @@ post-install:
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/libdrm/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
