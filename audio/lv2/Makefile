@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2019/01/02 20:11:33 bsiegert Exp $
+# $NetBSD: Makefile,v 1.13 2019/02/05 19:12:06 bsiegert Exp $
 
-DISTNAME=	lv2-1.14.0
+DISTNAME=	lv2-1.16.0
 CATEGORIES=	audio
 MASTER_SITES=	http://lv2plug.in/spec/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,8 +17,6 @@ PKGCONFIG_OVERRIDE+=	lv2.pc.in
 
 PYTHON_SELF_CONFLICT=	yes
 REPLACE_PYTHON+=	lv2specgen/lv2specgen.py
-
-PYTHON_VERSIONS_INCOMPATIBLE= 37
 
 .include "options.mk"
 
