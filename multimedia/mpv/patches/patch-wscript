@@ -1,0 +1,27 @@
+$NetBSD: patch-wscript,v 1.1 2019/02/05 11:14:59 jmcneill Exp $
+
+--- wscript.orig	2018-10-02 19:03:41.000000000 +0000
++++ wscript
+@@ -276,6 +276,11 @@ iconv support use --disable-iconv.",
+         'func': check_statement(['sys/vt.h', 'sys/ioctl.h'],
+                                 'int m; ioctl(0, VT_GETMODE, &m)'),
+     }, {
++        'name': 'wsdisplay_usl_io.h',
++        'desc': 'wsdisplay_usl_io.h',
++        'func': check_statement(['sys/types.h', 'dev/wscons/wsdisplay_usl_io.h', 'sys/ioctl.h'],
++                                'int m; ioctl(0, VT_GETMODE, &m)'),
++    }, {
+         'name': 'gbm.h',
+         'desc': 'gbm.h',
+         'func': check_cc(header_name=['stdio.h', 'gbm.h']),
+@@ -550,8 +555,8 @@ video_output_features = [
+     }, {
+         'name': '--drm',
+         'desc': 'DRM',
+-        'deps': 'vt.h',
+-        'func': check_pkg_config('libdrm'),
++        'deps': 'vt.h || wsdisplay_usl_io.h',
++        'func': check_pkg_config('libdrm')
+     }, {
+         'name': '--drmprime',
+         'desc': 'DRM Prime ffmpeg support',
