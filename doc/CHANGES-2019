@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.594 2019/02/05 19:12:31 bsiegert Exp $
+$NetBSD: CHANGES-2019,v 1.595 2019/02/05 20:20:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1165,3 +1165,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/php-apcu to 5.1.16 [bsiegert 2019-02-05]
 	Updated chat/anope to 2.0.6 [nia 2019-02-05]
 	Updated audio/lv2 to 1.16.0 [bsiegert 2019-02-05]
+	Updated databases/mysql56-client to 5.6.43 [adam 2019-02-05]
+	Updated databases/mysql56-server to 5.6.43 [adam 2019-02-05]
+	Updated databases/mysql57-client to 5.7.25 [adam 2019-02-05]
+	Updated databases/mysql57-server to 5.7.25 [adam 2019-02-05]
