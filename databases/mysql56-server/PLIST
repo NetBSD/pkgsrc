@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2018/11/22 11:53:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.33 2019/02/05 20:06:06 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -6609,6 +6609,7 @@ share/mysql/test/suite/rpl/r/rpl_read_only.result
 share/mysql/test/suite/rpl/r/rpl_recovery_empty_sqlthd_pos.result
 share/mysql/test/suite/rpl/r/rpl_recovery_replicate_same_server_id.result
 share/mysql/test/suite/rpl/r/rpl_relay_log_recovery_positions.result
+share/mysql/test/suite/rpl/r/rpl_relay_log_space_synchronization.result
 share/mysql/test/suite/rpl/r/rpl_relay_space_innodb.result
 share/mysql/test/suite/rpl/r/rpl_relay_space_myisam.result
 share/mysql/test/suite/rpl/r/rpl_relayrotate.result
@@ -7237,6 +7238,7 @@ share/mysql/test/suite/rpl/t/rpl_recovery_empty_sqlthd_pos.test
 share/mysql/test/suite/rpl/t/rpl_recovery_replicate_same_server_id-slave.opt
 share/mysql/test/suite/rpl/t/rpl_recovery_replicate_same_server_id.test
 share/mysql/test/suite/rpl/t/rpl_relay_log_recovery_positions.test
+share/mysql/test/suite/rpl/t/rpl_relay_log_space_synchronization.test
 share/mysql/test/suite/rpl/t/rpl_relay_space_innodb.test
 share/mysql/test/suite/rpl/t/rpl_relay_space_myisam.test
 share/mysql/test/suite/rpl/t/rpl_relayrotate-slave.opt
@@ -8048,6 +8050,7 @@ share/mysql/test/suite/sys_vars/r/myisam_stats_method_basic.result
 share/mysql/test/suite/sys_vars/r/myisam_stats_method_func.result
 share/mysql/test/suite/sys_vars/r/myisam_use_mmap_basic.result
 share/mysql/test/suite/sys_vars/r/named_pipe_basic.result
+share/mysql/test/suite/sys_vars/r/named_pipe_full_access_group_basic.result
 share/mysql/test/suite/sys_vars/r/net_buffer_length_basic.result
 share/mysql/test/suite/sys_vars/r/net_read_timeout_basic.result
 share/mysql/test/suite/sys_vars/r/net_retry_count_basic_32.result
@@ -8670,6 +8673,7 @@ share/mysql/test/suite/sys_vars/t/myisam_stats_method_basic.test
 share/mysql/test/suite/sys_vars/t/myisam_stats_method_func.test
 share/mysql/test/suite/sys_vars/t/myisam_use_mmap_basic.test
 share/mysql/test/suite/sys_vars/t/named_pipe_basic.test
+share/mysql/test/suite/sys_vars/t/named_pipe_full_access_group_basic.test
 share/mysql/test/suite/sys_vars/t/net_buffer_length_basic.test
 share/mysql/test/suite/sys_vars/t/net_read_timeout_basic.test
 share/mysql/test/suite/sys_vars/t/net_retry_count_basic_32.test
