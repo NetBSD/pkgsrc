@@ -1,3 +1,5 @@
-Anope is a set of Services for IRC networks that allows users to
-manage their nicks and channels in a secure and efficient way, and
-administrators to manage their network with powerful tools.
+Anope is an open source set of IRC Services. It is highly modular,
+with a vast number of configurable parameters, and is the most used
+IRC services package. There are also many modules on the modsite
+to add additional features. It supports many modern IRCds, including
+InspIRCd, UnrealIRCd, and ircd-hybrid.
