@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.592 2019/02/05 18:58:20 bsiegert Exp $
+$NetBSD: CHANGES-2019,v 1.593 2019/02/05 19:11:09 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1163,3 +1163,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-atomicwrites to 1.3.0 [adam 2019-02-05]
 	Updated textproc/py-sphinx to 1.8.4 [adam 2019-02-05]
 	Updated www/php-apcu to 5.1.16 [bsiegert 2019-02-05]
+	Updated chat/anope to 2.0.6 [nia 2019-02-05]
