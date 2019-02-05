@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2018/11/26 12:24:47 abs Exp $
+# $NetBSD: Makefile,v 1.79 2019/02/05 11:14:59 jmcneill Exp $
 
 DISTNAME=	mpv-0.29.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mpv-player/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -72,5 +72,6 @@ post-install:
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/libdrm/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
