@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2017/04/11 20:49:15 adam Exp $
+# $NetBSD: options.mk,v 1.3 2019/02/05 20:19:55 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mysql5
 
@@ -22,7 +22,6 @@ PLIST_VARS+=		memcached
 PLIST.memcached=	yes
 CMAKE_ARGS+=		-DWITH_INNODB_MEMCACHED=ON
 CMAKE_ARGS+=		-DWITH_BUNDLED_MEMCACHED=ON
-.include "../../devel/libevent/buildlink3.mk"
 .else
 CMAKE_ARGS+=		-DWITH_INNODB_MEMCACHED=OFF
 .endif

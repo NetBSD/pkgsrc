@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2016/10/02 19:21:30 fhajny Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2019/02/05 20:19:55 adam Exp $
 
 BUILDLINK_TREE+=	mysql-client
 
@@ -11,6 +11,7 @@ BUILDLINK_PKGSRCDIR.mysql-client?=	../../databases/mysql57-client
 BUILDLINK_INCDIRS.mysql-client?=	include/mysql
 BUILDLINK_LIBDIRS.mysql-client?=	lib
 
+.include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .endif # MYSQL_CLIENT_BUILDLINK3_MK

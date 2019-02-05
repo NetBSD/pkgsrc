@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2018/12/13 19:51:45 adam Exp $
+# $NetBSD: Makefile,v 1.20 2019/02/05 20:19:55 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
-PKGREVISION=	1
 COMMENT=	MySQL 5, a free SQL database (server)
 
 CONFLICTS=	mysql3-server-[0-9]*
@@ -66,7 +65,7 @@ REPLACE_SH+=		mysql-test/t/long_tmpdir-master.sh
 REPLACE_SH+=		mysql-test/t/lowercase_mixed_tmpdir-master.sh
 REPLACE_SH+=		mysql-test/t/lowercase_mixed_tmpdir_innodb-master.sh
 
-CHECK_INTERPRETER_SKIP+=share/mysql/test/std_data/dtrace.d
+CHECK_INTERPRETER_SKIP+=	share/mysql/test/std_data/dtrace.d
 
 SUBST_CLASSES+=		perlpath
 SUBST_STAGE.perlpath=	pre-configure

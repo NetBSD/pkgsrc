@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.14 2018/11/25 18:30:03 maya Exp $
+# $NetBSD: Makefile.common,v 1.15 2019/02/05 20:19:55 adam Exp $
 #
 # used by databases/mysql57-client/Makefile
 # used by databases/mysql57-server/Makefile
 
-DISTNAME=	mysql-5.7.24
+DISTNAME=	mysql-5.7.25
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_MYSQL:=MySQL-5.7/}
 
@@ -66,13 +66,13 @@ CMAKE_ARGS+=		-DWITH_BOOST="system"
 CMAKE_ARGS+=		-DWITH_LZ4="system"
 CMAKE_ARGS+=		-DWITH_SSL="system"
 CMAKE_ARGS+=		-DWITH_ZLIB="system"
-CMAKE_ARGS+=		-DDEFAULT_CHARSET=${MYSQL_CHARSET:Q}
-CMAKE_ARGS+=		-DDEFAULT_COLLATION=${MYSQL_COLLATION:Q}
-CMAKE_ARGS+=		-DWITH_EXTRA_CHARSETS=${MYSQL_EXTRA_CHARSET:Q}
+CMAKE_ARGS+=		-DDEFAULT_CHARSET=${MYSQL_CHARSET}
+CMAKE_ARGS+=		-DDEFAULT_COLLATION=${MYSQL_COLLATION}
+CMAKE_ARGS+=		-DWITH_EXTRA_CHARSETS=${MYSQL_EXTRA_CHARSET}
 
 
 # we need atomic builtins
-.if ${OPSYS} == "NetBSD" && !empty(MACHINE_ARCH:Mi386)
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "i386"
 GNU_ARCH.i386=		i586
 CFLAGS+=		-march=i586
 .endif
