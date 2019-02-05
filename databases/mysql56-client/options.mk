@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2016/08/04 10:09:08 adam Exp $
+# $NetBSD: options.mk,v 1.13 2019/02/05 20:06:06 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mysql5
 
@@ -11,7 +11,7 @@ PKG_SUGGESTED_OPTIONS+=	embedded-server ssl
 
 # Enable OpenSSL support
 .if !empty(PKG_OPTIONS:Mssl)
-.	include "../../security/openssl/buildlink3.mk"
+.  include "../../security/openssl/buildlink3.mk"
 CMAKE_ARGS+=		-DWITH_SSL=system
 .else
 CMAKE_ARGS+=		-DWITH_SSL=no
