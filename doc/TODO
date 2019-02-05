@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18785 2019/02/04 19:37:27 leot Exp $
+$NetBSD: TODO,v 1.18786 2019/02/05 19:11:09 nia Exp $
 
 Suggested new packages
 ======================
@@ -380,7 +380,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ampache-3.8.2
 	o angband-3.2
 	o anjuta-3.16.0
-	o anope-1.8.7
 	o ansifilter-2.9
 	o ant-contrib-1.0b3
 	o antiright-8.6
