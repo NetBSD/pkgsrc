@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/05/12 08:07:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/02/06 10:09:49 adam Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/pytzdata/__init__.py
 ${PYSITELIB}/pytzdata/__init__.pyc
@@ -328,6 +328,7 @@ ${PYSITELIB}/pytzdata/zoneinfo/Asia/Phnom_Penh
 ${PYSITELIB}/pytzdata/zoneinfo/Asia/Pontianak
 ${PYSITELIB}/pytzdata/zoneinfo/Asia/Pyongyang
 ${PYSITELIB}/pytzdata/zoneinfo/Asia/Qatar
+${PYSITELIB}/pytzdata/zoneinfo/Asia/Qostanay
 ${PYSITELIB}/pytzdata/zoneinfo/Asia/Qyzylorda
 ${PYSITELIB}/pytzdata/zoneinfo/Asia/Rangoon
 ${PYSITELIB}/pytzdata/zoneinfo/Asia/Riyadh
