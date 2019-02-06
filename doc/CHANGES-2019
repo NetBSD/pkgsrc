@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.618 2019/02/06 15:17:23 taca Exp $
+$NetBSD: CHANGES-2019,v 1.619 2019/02/06 15:30:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1210,3 +1210,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ruby-rspec-expectations to 3.8.2 [taca 2019-02-06]
 	Updated devel/ruby-rspec to 3.8.0 [taca 2019-02-06]
 	Updated devel/ruby-rspec-rails to 3.8.2 [taca 2019-02-06]
+	Updated math/ruby-spreadsheet to 1.1.9 [taca 2019-02-06]
