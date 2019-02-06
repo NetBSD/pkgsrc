@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/07/24 19:27:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/02/06 11:09:21 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -31,6 +31,9 @@ ${PYSITELIB}/requests_toolbelt/adapters/source.pyo
 ${PYSITELIB}/requests_toolbelt/adapters/ssl.py
 ${PYSITELIB}/requests_toolbelt/adapters/ssl.pyc
 ${PYSITELIB}/requests_toolbelt/adapters/ssl.pyo
+${PYSITELIB}/requests_toolbelt/adapters/x509.py
+${PYSITELIB}/requests_toolbelt/adapters/x509.pyc
+${PYSITELIB}/requests_toolbelt/adapters/x509.pyo
 ${PYSITELIB}/requests_toolbelt/auth/__init__.py
 ${PYSITELIB}/requests_toolbelt/auth/__init__.pyc
 ${PYSITELIB}/requests_toolbelt/auth/__init__.pyo
