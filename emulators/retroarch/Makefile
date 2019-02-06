@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2018/12/09 18:52:27 adam Exp $
+# $NetBSD: Makefile,v 1.18 2019/02/06 11:18:44 nia Exp $
 
 PKGNAME=	retroarch-${RETROARCH_VERSION}
-PKGREVISION=	3
 DISTNAME=	RetroArch-${RETROARCH_VERSION}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/RetroArch/releases/download/v${RETROARCH_VERSION}/}
@@ -21,6 +20,7 @@ HAS_CONFIGURE=	yes
 # Needed for certain cores, e.g. Dolphin, Reicast.
 NOT_PAX_MPROTECT_SAFE+=	bin/retroarch
 
+CONFIGURE_ARGS+=	--disable-builtinmbedtls
 CONFIGURE_ARGS+=	--disable-builtinminiupnpc
 CONFIGURE_ARGS+=	--disable-builtinzlib
 CONFIGURE_ARGS+=	--disable-builtinflac
@@ -36,7 +36,6 @@ MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 
 DEPENDS+=	libretro-core-info>=${RETROARCH_VERSION}:../../emulators/libretro-core-info
 DEPENDS+=	libretro-database>=0:../../emulators/libretro-database
-DEPENDS+=	libretro-glsl-shaders>=0:../../emulators/libretro-glsl-shaders
 
 CPPFLAGS+=	-DPREFIX=\"${PREFIX}\"
 LDFLAGS.SunOS+=	-lsocket -lnsl
@@ -56,6 +55,7 @@ CONFIGURE_ARGS+=	--disable-thread_storage
 .include "../../audio/flac/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/miniupnpc/buildlink3.mk"
+.include "../../security/mbedtls/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
