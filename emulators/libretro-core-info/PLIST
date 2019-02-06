@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/09/06 07:50:20 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/02/06 11:18:43 nia Exp $
 share/libretro/info/00_example_libretro.info
 share/libretro/info/2048_libretro.info
 share/libretro/info/3dengine_libretro.info
@@ -31,6 +31,7 @@ share/libretro/info/dinothawr_libretro.info
 share/libretro/info/dolphin_launcher_libretro.info
 share/libretro/info/dolphin_libretro.info
 share/libretro/info/dosbox_libretro.info
+share/libretro/info/dosbox_svn_glide_libretro.info
 share/libretro/info/dosbox_svn_libretro.info
 share/libretro/info/easyrpg_libretro.info
 share/libretro/info/emux_chip8_libretro.info
@@ -48,6 +49,7 @@ share/libretro/info/ffmpeg_libretro.info
 share/libretro/info/fixgb_libretro.info
 share/libretro/info/fixnes_libretro.info
 share/libretro/info/fmsx_libretro.info
+share/libretro/info/freechaf_libretro.info
 share/libretro/info/freeintv_libretro.info
 share/libretro/info/freej2me_libretro.info
 share/libretro/info/frodo_libretro.info
@@ -66,6 +68,7 @@ share/libretro/info/higan_sfc_balanced_libretro.info
 share/libretro/info/higan_sfc_libretro.info
 share/libretro/info/imageviewer_libretro.info
 share/libretro/info/ishiiruka_libretro.info
+share/libretro/info/kronos_libretro.info
 share/libretro/info/lutro_libretro.info
 share/libretro/info/mame2000_libretro.info
 share/libretro/info/mame2003_libretro.info
@@ -73,7 +76,7 @@ share/libretro/info/mame2003_midway_libretro.info
 share/libretro/info/mame2003_plus_libretro.info
 share/libretro/info/mame2009_libretro.info
 share/libretro/info/mame2010_libretro.info
-share/libretro/info/mame2014_libretro.info
+share/libretro/info/mame2015_libretro.info
 share/libretro/info/mame2016_libretro.info
 share/libretro/info/mame_libretro.info
 share/libretro/info/mednafen_gba_libretro.info
@@ -95,13 +98,16 @@ share/libretro/info/meteor_libretro.info
 share/libretro/info/mgba_libretro.info
 share/libretro/info/mpv_libretro.info
 share/libretro/info/mrboom_libretro.info
+share/libretro/info/mu_libretro.info
 share/libretro/info/mupen64plus_gles3_libretro.info
 share/libretro/info/mupen64plus_libretro.info
+share/libretro/info/mupen64plus_next_libretro.info
 share/libretro/info/nekop2_libretro.info
 share/libretro/info/nestopia_libretro.info
 share/libretro/info/np2kai_libretro.info
 share/libretro/info/nxengine_libretro.info
 share/libretro/info/o2em_libretro.info
+share/libretro/info/oberon_libretro.info
 share/libretro/info/openlara_libretro.info
 share/libretro/info/opentyrian_libretro.info
 share/libretro/info/parallel_n64_debug_libretro.info
@@ -123,12 +129,12 @@ share/libretro/info/px68k_libretro.info
 share/libretro/info/quicknes_libretro.info
 share/libretro/info/redream_libretro.info
 share/libretro/info/reicast_libretro.info
-share/libretro/info/reicast_oit_libretro.info
 share/libretro/info/reminiscence_libretro.info
 share/libretro/info/remotejoy_libretro.info
 share/libretro/info/rustation_libretro.info
 share/libretro/info/sameboy_libretro.info
 share/libretro/info/scummvm_libretro.info
+share/libretro/info/simcp_libretro.info
 share/libretro/info/snes9x2002_libretro.info
 share/libretro/info/snes9x2005_libretro.info
 share/libretro/info/snes9x2005_plus_libretro.info
