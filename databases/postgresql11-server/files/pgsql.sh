@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pgsql.sh,v 1.2 2019/02/06 18:45:55 schmonz Exp $
+# $NetBSD: pgsql.sh,v 1.3 2019/02/06 22:33:43 schmonz Exp $
 #
 # PostgreSQL database rc.d control script
 #
@@ -45,7 +45,7 @@ elif [ -f /etc/rc.conf ]; then
 	. /etc/rc.conf
 fi
 
-cd "${pgsql_home}"
+cd /
 
 command_args="-w -s -D ${pgsql_home}/data -m fast -l ${pgsql_home}/errlog"
 if [ -n "${pgsql_flags}" ]; then
