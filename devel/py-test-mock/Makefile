@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2018/05/02 07:33:45 adam Exp $
+# $NetBSD: Makefile,v 1.11 2019/02/06 08:54:09 adam Exp $
 
-DISTNAME=	pytest-mock-1.10.0
+DISTNAME=	pytest-mock-1.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-mock/}
@@ -14,8 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-test>=2.7:../../devel/py-test
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 
 .include "../../lang/python/pyversion.mk"
-
-.if ${PYVERSSUFFIX} == "2.7"
+.if ${_PYTHON_VERSION} == 27
 DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 .endif
 
