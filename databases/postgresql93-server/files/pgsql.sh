@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pgsql.sh,v 1.1 2013/09/10 15:32:33 adam Exp $
+# $NetBSD: pgsql.sh,v 1.2 2019/02/06 18:45:55 schmonz Exp $
 #
 # PostgreSQL database rc.d control script
 #
@@ -44,6 +44,8 @@ if [ -f /etc/rc.subr -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
 elif [ -f /etc/rc.conf ]; then
 	. /etc/rc.conf
 fi
+
+cd "${pgsql_home}"
 
 command_args="-w -s -D ${pgsql_home}/data -m fast -l ${pgsql_home}/errlog"
 if [ -n "${pgsql_flags}" ]; then
