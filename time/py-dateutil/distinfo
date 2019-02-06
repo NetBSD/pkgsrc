@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2018/10/29 11:10:07 adam Exp $
+$NetBSD: distinfo,v 1.16 2019/02/06 10:07:46 adam Exp $
 
-SHA1 (python-dateutil-2.7.5.tar.gz) = c99d3a05d0ac220bc736e5e6c169be0ab4a75298
-RMD160 (python-dateutil-2.7.5.tar.gz) = 50fbd5d6bfc873b2b1d020b3bc78b3307da0938b
-SHA512 (python-dateutil-2.7.5.tar.gz) = 762752191d584a3995b55bbcfadc829261a263e0e6515a52db2fc32157bf0b3f96f787107c49bbd77cab9ce7e3f692ab3e8f392260fc18e6456b74eb190b44d3
-Size (python-dateutil-2.7.5.tar.gz) = 316043 bytes
+SHA1 (python-dateutil-2.8.0.tar.gz) = 140cbe261ba86ff30970bd8ca3326f543de91e4d
+RMD160 (python-dateutil-2.8.0.tar.gz) = 2fda28c33329be5ccee005ca6cce55bd9500f0df
+SHA512 (python-dateutil-2.8.0.tar.gz) = ec7da86203572582f883a4686acf8a732a2de4f396d809057eb51b2c60dbca5623a7fa90c2c0618c281a2282c60841739bd837731a51cc876f4ff369297f2f81
+Size (python-dateutil-2.8.0.tar.gz) = 327134 bytes
