@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/03/20 16:17:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/02/06 15:03:08 taca Exp $
 bin/padrino${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
@@ -92,6 +92,11 @@ ${GEM_LIBDIR}/test/fixtures/dependencies/circular/g.rb
 ${GEM_LIBDIR}/test/fixtures/dependencies/d.rb
 ${GEM_LIBDIR}/test/fixtures/dependencies/linear/h.rb
 ${GEM_LIBDIR}/test/fixtures/dependencies/linear/i.rb
+${GEM_LIBDIR}/test/fixtures/dependencies/nested/j.rb
+${GEM_LIBDIR}/test/fixtures/dependencies/nested/k.rb
+${GEM_LIBDIR}/test/fixtures/dependencies/nested/l.rb
+${GEM_LIBDIR}/test/fixtures/dependencies/nested/m.rb
+${GEM_LIBDIR}/test/fixtures/dependencies/nested/n.rb
 ${GEM_LIBDIR}/test/fixtures/reloadable_apps/external/app/app.rb
 ${GEM_LIBDIR}/test/fixtures/reloadable_apps/external/app/controllers/base.rb
 ${GEM_LIBDIR}/test/fixtures/reloadable_apps/main/app.rb
