@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.615 2019/02/06 15:12:33 taca Exp $
+$NetBSD: CHANGES-2019,v 1.616 2019/02/06 15:13:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1207,3 +1207,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/ruby-padrino to 0.14.4 [taca 2019-02-06]
 	Updated devel/ruby-rspec-support to 3.8.0 [taca 2019-02-06]
 	Updated devel/ruby-rspec-core to 3.8.0 [taca 2019-02-06]
+	Updated devel/ruby-rspec-expectations to 3.8.2 [taca 2019-02-06]
