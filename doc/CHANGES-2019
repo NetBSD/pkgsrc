@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.608 2019/02/06 11:31:46 martin Exp $
+$NetBSD: CHANGES-2019,v 1.609 2019/02/06 13:45:38 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1192,3 +1192,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-xopen to 0.5.0 [adam 2019-02-06]
 	Updated devel/gobject-introspection to 1.56.1nb1 [martin 2019-02-06]
 	Updated devel/xfce4-conf to 4.13.6nb1 [martin 2019-02-06]
+	Updated graphics/papirus-icon-theme to 20190203 [nia 2019-02-06]
