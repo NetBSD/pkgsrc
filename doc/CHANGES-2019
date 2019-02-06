@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.596 2019/02/05 21:18:16 leot Exp $
+$NetBSD: CHANGES-2019,v 1.597 2019/02/06 01:43:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1170,3 +1170,9 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/mysql57-client to 5.7.25 [adam 2019-02-05]
 	Updated databases/mysql57-server to 5.7.25 [adam 2019-02-05]
 	Updated net/gallery-dl to 1.7.0 [leot 2019-02-05]
+	Updated mail/dovecot2 to 2.3.4.1 [taca 2019-02-06]
+	Updated mail/dovecot2-gssapi to 2.3.4.1 [taca 2019-02-06]
+	Updated mail/dovecot2-ldap to 2.3.4.1 [taca 2019-02-06]
+	Updated mail/dovecot2-mysql to 2.3.4.1 [taca 2019-02-06]
+	Updated mail/dovecot2-pgsql to 2.3.4.1 [taca 2019-02-06]
+	Updated mail/dovecot2-sqlite to 2.3.4.1nb1 [taca 2019-02-06]
