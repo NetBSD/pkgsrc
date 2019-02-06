@@ -1,11 +1,11 @@
-# $NetBSD: license.mk,v 1.95 2018/12/10 15:50:10 gdt Exp $
+# $NetBSD: license.mk,v 1.96 2019/02/06 14:38:02 wiz Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
 #
 # XXX There should be one place to set the default list and for users
 # to set the ACCEPTABLE_LICENSES list, used by both source builds and
-# binary installs#
+# binary installs.
 #
 # XXX: Some of this content arguably belongs in the pkgsrc guide
 # instead.
@@ -79,17 +79,11 @@
 #	acceptability must be inferred from inclusion in main.
 #
 #	The board of The NetBSD Foundation is the final arbiter of
-#	which licenses may be in DEFAULT_ACCEPTABLE_LICENSES.  As an
-#	exception to the above policy on treating Free, Open Source,
-#	and DFSG licenses as acceptable, the board has decided that
-#	licenses that trigger obligations from use (rather than
-#	redistribution), such as the Affero GPL, should not be in
-#	DEFAULT_ACCEPTABLE_LICENSES.
+#	which licenses may be in DEFAULT_ACCEPTABLE_LICENSES.
 #
 #	Licenses not formally approved as Free or Open Source may be
-#	added if they have terms that would 1) obviously be approved
-#	by FSF or OSI if the effort were made and 2) obviously not
-#	trigger the above issue with AGPL-type licenses.  Such license
+#	added if they have terms that would obviously be approved
+#	by FSF or OSI if the effort were made.  Such license
 #	names will be in an additional section and have a comment near
 #	them in the assignment to DEFAULT_ACCEPTABLE_LICENSES.
 #
@@ -128,6 +122,7 @@ DEFAULT_ACCEPTABLE_LICENSES= \
 	epl-v1.0 \
 	eupl-v1.1 \
 	gfsl \
+	gnu-agpl-v3 \
 	gnu-fdl-v1.1 gnu-fdl-v1.2 gnu-fdl-v1.3 \
 	gnu-gpl-v1 \
 	gnu-gpl-v2 gnu-lgpl-v2 gnu-lgpl-v2.1 \
