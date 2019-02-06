@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2018/07/03 05:03:15 adam Exp $
+# $NetBSD: Makefile,v 1.48 2019/02/06 17:51:01 tnn Exp $
 
 DISTNAME=	hatari-2.0.0
 CATEGORIES=	emulators
@@ -41,4 +41,6 @@ INSTALLATION_DIRS+=	share/doc/hatari
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
