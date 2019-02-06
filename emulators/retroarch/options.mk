@@ -1,10 +1,9 @@
-# $NetBSD: options.mk,v 1.7 2018/10/06 23:44:28 nia Exp $
+# $NetBSD: options.mk,v 1.8 2019/02/06 11:18:44 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.retroarch
 
 PKG_SUPPORTED_OPTIONS+=		sdl2 ffmpeg freetype qt5 x11 caca
-PKG_SUPPORTED_OPTIONS+=		alsa jack openal pulseaudio libusb-1
-PKG_SUPPORTED_OPTIONS+=		libxml2 # Deprecated
+PKG_SUPPORTED_OPTIONS+=		alsa jack openal pulseaudio
 PKG_SUGGESTED_OPTIONS+=		sdl2 freetype x11
 
 .if ${OPSYS} == "Linux"
@@ -46,6 +45,7 @@ CONFIGURE_ARGS+=	--enable-x11
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXv/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
 .else
@@ -141,8 +141,11 @@ CONFIGURE_ARGS+=	--disable-pulse
 .endif
 
 .if !empty(PKG_OPTIONS:Mqt5)
-CONFIGURE_ARGS+=	--enable-qt
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+# error: "You must build your code with position independent code if Qt was built with -reduce-relocations."
+CFLAGS+=		-fPIC
+CONFIGURE_ENV+=		MOC=${QTDIR}/bin/moc
+CONFIGURE_ARGS+=	--enable-qt
 .else
 CONFIGURE_ARGS+=	--disable-qt
 .endif
@@ -152,18 +155,4 @@ CONFIGURE_ARGS+=	--enable-caca
 .include "../../graphics/libcaca/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-caca
-.endif
-
-.if !empty(PKG_OPTIONS:Mlibxml2)
-CONFIGURE_ARGS+=	--enable-libxml2
-.include "../../textproc/libxml2/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-libxml2
-.endif
-
-.if !empty(PKG_OPTIONS:Mlibusb-1)
-CONFIGURE_ARGS+=	--enable-libusb
-.include "../../devel/libusb1/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-libusb
 .endif
