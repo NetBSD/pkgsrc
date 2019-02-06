@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2018/09/06 09:33:38 nia Exp $
-
-SHA1 (libretro-glsl-shaders-20180828-a52c8b6798c7a10fd72971ef8e8b135e0f7a9ca0.tar.gz) = 6908bbf45e0ac56e59e8f75c8cd47ac8a9742ad8
-RMD160 (libretro-glsl-shaders-20180828-a52c8b6798c7a10fd72971ef8e8b135e0f7a9ca0.tar.gz) = f1bf70211e7a41496a1870b25804161127e83bda
-SHA512 (libretro-glsl-shaders-20180828-a52c8b6798c7a10fd72971ef8e8b135e0f7a9ca0.tar.gz) = e97e8d934400053112fec45e44d13eb48f1c28fc8917f0732aeea01078a72eac0af69f7c8cdff3083772e69116cc4f8a7aa1644eeabe5932fd9dc239d47938fc
-Size (libretro-glsl-shaders-20180828-a52c8b6798c7a10fd72971ef8e8b135e0f7a9ca0.tar.gz) = 24537044 bytes
