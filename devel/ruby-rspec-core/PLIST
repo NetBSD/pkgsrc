@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2017/06/05 14:05:15 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2019/02/06 15:12:13 taca Exp $
 bin/rspec${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
@@ -12,8 +12,11 @@ ${GEM_LIBDIR}/lib/rspec/core.rb
 ${GEM_LIBDIR}/lib/rspec/core/backtrace_formatter.rb
 ${GEM_LIBDIR}/lib/rspec/core/bisect/coordinator.rb
 ${GEM_LIBDIR}/lib/rspec/core/bisect/example_minimizer.rb
-${GEM_LIBDIR}/lib/rspec/core/bisect/runner.rb
+${GEM_LIBDIR}/lib/rspec/core/bisect/fork_runner.rb
 ${GEM_LIBDIR}/lib/rspec/core/bisect/server.rb
+${GEM_LIBDIR}/lib/rspec/core/bisect/shell_command.rb
+${GEM_LIBDIR}/lib/rspec/core/bisect/shell_runner.rb
+${GEM_LIBDIR}/lib/rspec/core/bisect/utilities.rb
 ${GEM_LIBDIR}/lib/rspec/core/configuration.rb
 ${GEM_LIBDIR}/lib/rspec/core/configuration_options.rb
 ${GEM_LIBDIR}/lib/rspec/core/drb.rb
@@ -24,9 +27,10 @@ ${GEM_LIBDIR}/lib/rspec/core/example_status_persister.rb
 ${GEM_LIBDIR}/lib/rspec/core/filter_manager.rb
 ${GEM_LIBDIR}/lib/rspec/core/flat_map.rb
 ${GEM_LIBDIR}/lib/rspec/core/formatters.rb
+${GEM_LIBDIR}/lib/rspec/core/formatters/base_bisect_formatter.rb
 ${GEM_LIBDIR}/lib/rspec/core/formatters/base_formatter.rb
 ${GEM_LIBDIR}/lib/rspec/core/formatters/base_text_formatter.rb
-${GEM_LIBDIR}/lib/rspec/core/formatters/bisect_formatter.rb
+${GEM_LIBDIR}/lib/rspec/core/formatters/bisect_drb_formatter.rb
 ${GEM_LIBDIR}/lib/rspec/core/formatters/bisect_progress_formatter.rb
 ${GEM_LIBDIR}/lib/rspec/core/formatters/console_codes.rb
 ${GEM_LIBDIR}/lib/rspec/core/formatters/deprecation_formatter.rb
