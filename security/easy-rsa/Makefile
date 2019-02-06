@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2018/10/11 09:13:30 adam Exp $
+# $NetBSD: Makefile,v 1.9 2019/02/06 08:07:59 adam Exp $
 
-DISTNAME=	EasyRSA-nix-3.0.5
-PKGNAME=	${DISTNAME:S/EasyRSA-nix/easy-rsa/}
+DISTNAME=	EasyRSA-unix-v3.0.6
+PKGNAME=	${DISTNAME:S/EasyRSA-unix-v/easy-rsa-/}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenVPN/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/OpenVPN/easy-rsa
 COMMENT=	CLI utility to build and manage a PKI CA
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/${DISTNAME:S/-nix//}
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-unix//}
 
 USE_LANGUAGES=	# none
 NO_CONFIGURE=	yes
