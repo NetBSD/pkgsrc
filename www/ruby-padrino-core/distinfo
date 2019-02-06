@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2018/03/17 14:39:09 taca Exp $
+$NetBSD: distinfo,v 1.15 2019/02/06 15:03:08 taca Exp $
 
-SHA1 (padrino-core-0.14.3.gem) = 8c846aba764f456b2af42ccc92bff0bc2e5ac6da
-RMD160 (padrino-core-0.14.3.gem) = 846cf38f229c1f6f5f0d349fe76fca35e4d30cf2
-SHA512 (padrino-core-0.14.3.gem) = 2e2fda61a4629b6322b462c047c5438223a5a6d93f4a38108e641bd455f6c287dec37786e858753b944d2111b81463675385308ad94344372cd521afd15399f7
-Size (padrino-core-0.14.3.gem) = 139264 bytes
+SHA1 (padrino-core-0.14.4.gem) = 53c6394f1b7e9647b16a95a40c79a96d17c46ae5
+RMD160 (padrino-core-0.14.4.gem) = c352049d3a9e3f725ca4bc9dee36a1518fe9978d
+SHA512 (padrino-core-0.14.4.gem) = ab07b28cde36a3952d62a1579bc5822e3b7dc0e4b82b305e35c8cc8c841498cc6bdb498f0f74891ec3bdb6666b526ddfee246dffaaa13970cac7cd930346ba47
+Size (padrino-core-0.14.4.gem) = 139776 bytes
