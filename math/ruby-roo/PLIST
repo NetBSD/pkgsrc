@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/01/20 14:10:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/02/06 15:30:56 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.codeclimate.yml
 ${GEM_LIBDIR}/.github/issue_template.md
@@ -66,6 +66,8 @@ ${GEM_LIBDIR}/spec/helpers.rb
 ${GEM_LIBDIR}/spec/lib/roo/base_spec.rb
 ${GEM_LIBDIR}/spec/lib/roo/csv_spec.rb
 ${GEM_LIBDIR}/spec/lib/roo/excelx/format_spec.rb
+${GEM_LIBDIR}/spec/lib/roo/excelx/relationships_spec.rb
+${GEM_LIBDIR}/spec/lib/roo/excelx/sheet_doc_spec.rb
 ${GEM_LIBDIR}/spec/lib/roo/excelx_spec.rb
 ${GEM_LIBDIR}/spec/lib/roo/libreoffice_spec.rb
 ${GEM_LIBDIR}/spec/lib/roo/openoffice_spec.rb
