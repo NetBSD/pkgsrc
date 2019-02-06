@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.611 2019/02/06 14:52:09 taca Exp $
+$NetBSD: CHANGES-2019,v 1.612 2019/02/06 14:56:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1195,3 +1195,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/papirus-icon-theme to 20190203 [nia 2019-02-06]
 	Updated print/ghostscript to 9.26 [wiz 2019-02-06]
 	Updated www/ruby-jekyll to 3.8.5 [taca 2019-02-06]
+	Updated www/ruby-sinatra to 2.0.5 [taca 2019-02-06]
+	Updated www/ruby-sinatra-contrib to 2.0.5 [taca 2019-02-06]
