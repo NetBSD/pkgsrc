@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2019/01/06 12:53:56 bsiegert Exp $
+# $NetBSD: Makefile,v 1.131 2019/02/06 11:36:38 tnn Exp $
 
 DISTNAME=	heimdal-1.5.3
 PKGREVISION=	19
@@ -67,27 +67,13 @@ CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.editlinereadline}
 CONFIGURE_ARGS+=	--with-libedit=${BUILDLINK_PREFIX.editlinereadline}
 .endif
 
-PLIST_VARS+=		glob vis
+PLIST_VARS+=		glob vis hcrypto afskauth
+
 .if ${OPSYS} == "SunOS"
 PLIST.vis=	yes
 PLIST.glob=	yes
 .endif
 
-PLIST_VARS+=		hcrypto
-# Linux does not have include/vis.h and expected include/glob.h.
-.if ${OPSYS} == "Linux"
-PLIST.vis=	yes
-PLIST.glob=	yes
-# Without this I get undefined references to pthread_getspecific
-PTHREAD_AUTO_VARS=	yes
-.if ${OS_VARIANT} == "Microsoft"
-# On Ubuntu hosted via WSL this is needed to avoid a DESTDIR/PLIST
-# conflict error.
-PLIST.hcrypto=	yes
-.endif
-.endif
-
-PLIST_VARS+=		afskauth
 .if ${OPSYS} == "IRIX"
 PLIST.afskauth=		yes
 .endif
@@ -119,6 +105,18 @@ CHECK_BUILTIN.openssl:=no
     (${OPSYS} == "SunOS" && !empty(USE_BUILTIN.openssl:Myes) &&	\
 		!empty(BUILTIN_LIB_FOUND.crypto:M[Nn][Oo]))
 PLIST.hcrypto=		yes
+.endif
+
+# Linux does not have include/vis.h and expected include/glob.h.
+.if ${OPSYS} == "Linux"
+PLIST.vis=	yes
+PLIST.glob=	yes
+# Without this I get undefined references to pthread_getspecific
+PTHREAD_AUTO_VARS=	yes
+.if !empty(USE_BUILTIN.openssl:Myes) && \
+	empty(BUILTIN_VERSION.openssl:M1.0*)
+PLIST.hcrypto=		yes
+.endif
 .endif
 
 .if ${OPSYS} == "MirBSD"
