@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2019/01/28 04:10:14 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.15 2019/02/06 01:49:32 gutteridge Exp $
 bin/geany
 include/geany/app.h
 include/geany/build.h
@@ -152,8 +152,11 @@ share/geany/filedefs/filetypes.xml
 share/geany/filedefs/filetypes.yaml
 share/geany/filedefs/filetypes.zephir
 share/geany/filetype_extensions.conf
+${PLIST.gtk3}share/geany/geany-3.0.css
+${PLIST.gtk3}share/geany/geany-3.20.css
+${PLIST.gtk3}share/geany/geany.css
 share/geany/geany.glade
-share/geany/geany.gtkrc
+${PLIST.gtk2}share/geany/geany.gtkrc
 share/geany/snippets.conf
 share/geany/tags/entities.html.tags
 share/geany/tags/std.pas.tags
