@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.260 2018/11/15 22:08:30 sevan Exp $
+# $NetBSD: bootstrap,v 1.261 2019/02/06 17:38:54 triaxx Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -974,8 +974,10 @@ if [ "$compiler" = "" ] && [ x"$check_compiler" = x"yes" ]; then
 	# Clang pretends to be GCC, so we have to check it first.
 	if [ $compiler_is_clang -gt 0 ]; then
 		compiler="clang"
+		test -n "$CC" || CC=clang
 	elif [ $compiler_is_gnu -gt 0 ]; then
 		compiler="gcc"
+		test -n "$CC" || CC=gcc
 	else
 		case "$opsys" in
 		IRIX)
