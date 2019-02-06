@@ -1,4 +1,4 @@
-/*	$NetBSD: license.c,v 1.52 2018/08/14 13:21:07 leot Exp $	*/
+/*	$NetBSD: license.c,v 1.53 2019/02/06 14:38:02 wiz Exp $	*/
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -60,6 +60,7 @@ const char *default_acceptable_licenses =
     "epl-v1.0 "
     "eupl-v1.1 "
     "gfsl "
+    "gnu-agpl-v3 "
     "gnu-fdl-v1.1 gnu-fdl-v1.2 gnu-fdl-v1.3 "
     "gnu-gpl-v1 "
     "gnu-gpl-v2 gnu-lgpl-v2 gnu-lgpl-v2.1 "
