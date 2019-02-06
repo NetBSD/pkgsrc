@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.612 2019/02/06 14:56:34 taca Exp $
+$NetBSD: CHANGES-2019,v 1.613 2019/02/06 15:05:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1197,3 +1197,11 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/ruby-jekyll to 3.8.5 [taca 2019-02-06]
 	Updated www/ruby-sinatra to 2.0.5 [taca 2019-02-06]
 	Updated www/ruby-sinatra-contrib to 2.0.5 [taca 2019-02-06]
+	Updated www/ruby-padrino-support to 0.14.4 [taca 2019-02-06]
+	Updated www/ruby-padrino-helpers to 0.14.4 [taca 2019-02-06]
+	Updated www/ruby-padrino-core to 0.14.4 [taca 2019-02-06]
+	Updated www/ruby-padrino-admin to 0.14.4 [taca 2019-02-06]
+	Updated www/ruby-padrino-cache to 0.14.4 [taca 2019-02-06]
+	Updated www/ruby-padrino-gen to 0.14.4 [taca 2019-02-06]
+	Updated www/ruby-padrino-mailer to 0.14.4 [taca 2019-02-06]
+	Updated www/ruby-padrino to 0.14.4 [taca 2019-02-06]
