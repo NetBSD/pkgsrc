@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.600 2019/02/06 08:54:28 adam Exp $
+$NetBSD: CHANGES-2019,v 1.601 2019/02/06 10:10:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1181,3 +1181,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/easy-rsa to 3.0.6 [adam 2019-02-06]
 	Updated www/py-test-django to 3.4.7 [adam 2019-02-06]
 	Updated devel/py-test-mock to 1.10.1 [adam 2019-02-06]
+	Updated time/py-dateutil to 2.8.0 [adam 2019-02-06]
+	Updated time/py-tzdata to 2018.9 [adam 2019-02-06]
