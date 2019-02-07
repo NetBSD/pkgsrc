@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.1 2019/02/06 01:49:32 gutteridge Exp $
+# $NetBSD: options.mk,v 1.2 2019/02/07 05:10:11 gutteridge Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.geany
 PKG_OPTIONS_REQUIRED_GROUPS+=	toolkit
 PKG_OPTIONS_GROUP.toolkit=	gtk2 gtk3
-PKG_SUGGESTED_OPTIONS=		gtk2
+PKG_SUGGESTED_OPTIONS=		gtk3
 
 PLIST_VARS+=	gtk2 gtk3
 
