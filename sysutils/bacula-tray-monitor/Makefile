@@ -1,23 +1,28 @@
-# $NetBSD: Makefile,v 1.44 2018/11/14 22:22:22 kleink Exp $
+# $NetBSD: Makefile,v 1.45 2019/02/07 11:29:31 markd Exp $
 
 PKGNAME=	${DISTNAME:S/-/-tray-monitor-/}
-PKGREVISION=	10
 COMMENT=	System tray monitor for Bacula - The Network Backup Solution
 
 DISTINFO_FILE=		${.CURDIR}/../../sysutils/bacula/distinfo
 PATCHDIR=		${.CURDIR}/../../sysutils/bacula/patches
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		gmake pkg-config
 CONFIGURE_ARGS+=	--enable-client-only
-CONFIGURE_ARGS+=	--enable-tray-monitor
+CONFIGURE_ARGS+=	--enable-bat
 
-BUILD_DIRS=		src/lib
-BUILD_DIRS+=		src/tray-monitor
-INSTALL_DIRS=		src/tray-monitor
+BUILDLINK_TRANSFORM+=	opt:-std=c++98:-std=gnu++98 # typeof
 
-INSTALLATION_DIRS=	sbin share/examples/bacula
+BUILD_DIRS=		src/qt-console/tray-monitor
+
+INSTALLATION_DIRS=	bin share/examples/bacula
+
+CONF_FILES+=		${EXAMPLESDIR}/tray-monitor.conf ${PKG_SYSCONFDIR}/tray-monitor.conf
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/src/qt-console/tray-monitor/tray-monitor.conf ${DESTDIR}${EXAMPLESDIR}
 
 .include "../../sysutils/bacula/Makefile.common"
 .include "../../sysutils/bacula/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

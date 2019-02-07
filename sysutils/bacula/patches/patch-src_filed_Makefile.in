@@ -1,28 +1,35 @@
-$NetBSD: patch-src_filed_Makefile.in,v 1.1 2012/10/06 17:54:53 christos Exp $
+$NetBSD: patch-src_filed_Makefile.in,v 1.2 2019/02/07 11:29:31 markd Exp $
 
 - use %%EXAMPLESDIR%% instead of sysconfdir
 - use the .la files for linking
 
---- src/filed/Makefile.in.orig	2012-09-13 04:51:19.000000000 -0400
-+++ src/filed/Makefile.in	2012-10-05 11:15:25.000000000 -0400
-@@ -96,12 +96,12 @@
- bacula-fd:  Makefile $(SVROBJS) ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE) ../lib/libbacpy$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) @WIN32@
+--- src/filed/Makefile.in.orig	2018-12-21 08:40:51.000000000 +0000
++++ src/filed/Makefile.in
+@@ -103,18 +103,18 @@ win32:	$(WIN32OBJS)
+ bacula-fd:  Makefile $(SVROBJS) ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) @WIN32@
  	@echo "Linking $@ ..."
  	$(LIBTOOL_LINK) $(CXX) $(WLDFLAGS) $(LDFLAGS) -L../lib -L../findlib -o $@ $(SVROBJS) \
--	  $(WIN32LIBS) $(FDLIBS) $(ZLIBS) -lbacfind -lbacpy -lbaccfg -lbac -lm $(PYTHON_LIBS) $(LIBS) \
-+	  $(WIN32LIBS) $(FDLIBS) $(ZLIBS) ../findlib/libbacfind.la ../lib/libbacpy.la ../lib/libbaccfg.la ../lib/libbac.la -lm $(PYTHON_LIBS) $(LIBS) \
- 	  $(DLIB) $(WRAPLIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS) $(CAP_LIBS) $(AFS_LIBS) $(LZOLIBS)
+-	  $(WIN32LIBS) $(FDLIBS) $(ZLIBS) -lbacfind -lbaccfg -lbac -lm $(LIBS) \
++	  $(WIN32LIBS) $(FDLIBS) $(ZLIBS) ../findlib/libbacfind.la ../lib/libbaccfg.la ../lib/libbac.la -lm $(LIBS) \
+ 	  $(DLIB) $(WRAPLIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS) $(CAP_LIBS) $(AFS_LIBS) $(LZO_LIBS)
  
- static-bacula-fd: Makefile $(SVROBJS) ../findlib/libbacfind.a ../lib/libbacpy$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) @WIN32@
+ bfdjson:  Makefile $(JSONOBJS) ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) @WIN32@
+ 	@echo "Linking $@ ..."
+ 	$(LIBTOOL_LINK) $(CXX) $(WLDFLAGS) $(LDFLAGS) -L../lib -L../findlib -o $@ $(JSONOBJS) \
+-	  $(WIN32LIBS) $(FDLIBS) $(ZLIBS) -lbacfind -lbaccfg -lbac -lm $(LIBS) \
++	  $(WIN32LIBS) $(FDLIBS) $(ZLIBS) ../findlib/libbacfind.la ../lib/libbaccfg.la ../lib/libbac.la -lm $(LIBS) \
+ 	  $(DLIB) $(WRAPLIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS) $(CAP_LIBS) $(AFS_LIBS) $(LZO_LIBS)
+ 
+ static-bacula-fd: Makefile $(SVROBJS) ../findlib/libbacfind.a ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) @WIN32@
  	$(LIBTOOL_LINK) $(CXX) $(WLDFLAGS) $(LDFLAGS) -static -L../lib -L../findlib -o $@ $(SVROBJS) \
--	   $(WIN32LIBS) $(FDLIBS) $(ZLIBS) -lbacfind -lbacpy -lbaccfg -lbac -lm $(PYTHON_LIBS) $(LIBS) \
-+	  $(WIN32LIBS) $(FDLIBS) $(ZLIBS) ../findlib/libbacfind.la ../lib/libbacpy.la ../lib/libbaccfg.la ../lib/libbac.la -lm $(PYTHON_LIBS) $(LIBS) \
- 	   $(DLIB) $(WRAPLIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS) $(CAP_LIBS) $(AFS_LIBS) $(LZOLIBS)
+-	   $(WIN32LIBS) $(FDLIBS) $(ZLIBS) -lbacfind -lbaccfg -lbac -lm $(LIBS) \
++	   $(WIN32LIBS) $(FDLIBS) $(ZLIBS) ../findlib/libbacfind.la ../lib/libbaccfg.la ../lib/libbac.la -lm $(LIBS) \
+ 	   $(DLIB) $(WRAPLIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS) $(CAP_LIBS) $(AFS_LIBS) $(LZO_LIBS)
  	strip $@
  
-@@ -139,16 +139,16 @@
- install: all
- 	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) bacula-fd $(DESTDIR)$(sbindir)/bacula-fd 
+@@ -153,16 +153,16 @@ install: all
+ 	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) bacula-fd $(DESTDIR)$(sbindir)/bacula-fd
+ 	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) bfdjson $(DESTDIR)$(sbindir)/bfdjson
  	@srcconf=bacula-fd.conf; \
 -	if  test -f ${DESTDIR}${sysconfdir}/$$srcconf; then \
 +	if  test -f ${DESTDIR}%%EXAMPLESDIR%%/$$srcconf; then \
@@ -35,7 +42,7 @@ $NetBSD: patch-src_filed_Makefile.in,v 1.1 2012/10/06 17:54:53 christos Exp $
 -	${INSTALL_CONFIG} $$srcconf ${DESTDIR}${sysconfdir}/$$destconf
 +	echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}%%EXAMPLESDIR%%/$$destconf"; \
 +	${INSTALL_CONFIG} $$srcconf ${DESTDIR}%%EXAMPLESDIR%%/$$destconf
- 	@if test "x${fd_group}" != "x"; then \
+ 	@if test "x${fd_group}" != "x" -a "x${DESTDIR}" = "x" ; then \
 -	   chgrp -f ${fd_group} ${DESTDIR}${sysconfdir}/$$destconf ; \
 +	   chgrp -f ${fd_group} ${DESTDIR}%%EXAMPLESDIR%%/$$destconf ; \
  	fi

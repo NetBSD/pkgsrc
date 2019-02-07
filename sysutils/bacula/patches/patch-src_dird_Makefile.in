@@ -1,33 +1,41 @@
-$NetBSD: patch-src_dird_Makefile.in,v 1.1 2012/10/06 17:54:53 christos Exp $
+$NetBSD: patch-src_dird_Makefile.in,v 1.2 2019/02/07 11:29:31 markd Exp $
 
 - use %%EXAMPLESDIR%% instead of sysconfdir
 - use the .la files for linking
 
---- src/dird/Makefile.in.orig	2012-09-13 04:51:19.000000000 -0400
-+++ src/dird/Makefile.in	2012-10-05 11:02:06.000000000 -0400
-@@ -69,14 +69,14 @@
+--- src/dird/Makefile.in.orig	2018-12-21 08:40:51.000000000 +0000
++++ src/dird/Makefile.in
+@@ -70,21 +70,21 @@ bacula-dir: Makefile $(SVROBJS) ../lib/l
  	    ../cats/libbaccats$(DEFAULT_ARCHIVE_TYPE) ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE)
  	@echo "Linking $@ ..."
- 	$(LIBTOOL_LINK) $(CXX) $(WLDFLAGS) $(LDFLAGS) -L../lib -L../cats -L../findlib -o $@ $(SVROBJS) \
--	      -lbacfind -lbacsql -lbaccats -lbacpy -lbaccfg -lbac -lm $(PYTHON_LIBS) $(DLIB) $(DB_LIBS) $(LIBS) \
-+	      ../findlib/libbacfind.la ../cats/libbacsql.la ../cats/libbaccats.la ../lib/libbacpy.la ../lib/libbaccfg.la ../lib/libbac.la -lm $(PYTHON_LIBS) $(DLIB) $(DB_LIBS) $(LIBS) \
+ 	$(LIBTOOL_LINK) $(CXX) $(WLDFLAGS) $(LDFLAGS) -L../lib -L../cats -L../findlib -o $@ $(SVROBJS) $(ZLIBS) \
+-	      -lbacfind -lbacsql -lbaccats -lbaccfg -lbac -lm $(DLIB) $(DB_LIBS) $(LIBS) \
++	      ../findlib/libbacfind.la ../cats/libbacsql.la ../cats/libbaccats.la ../lib/libbaccfg.la ../lib/libbac.la -lm $(DLIB) $(DB_LIBS) $(LIBS) \
  	      $(WRAPLIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS) $(CAP_LIBS)
  
  static-bacula-dir:  Makefile $(SVROBJS) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) \
- 		   ../lib/libbacpy$(DEFAULT_ARCHIVE_TYPE) ../cats/libbacsql$(DEFAULT_ARCHIVE_TYPE) \
+ 		   ../cats/libbacsql$(DEFAULT_ARCHIVE_TYPE) \
  		   ../cats/libbaccats$(DEFAULT_ARCHIVE_TYPE) ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE)
- 	$(LIBTOOL_LINK) $(CXX) $(WLDFLAGS) $(LDFLAGS) -static -L../lib -L../cats -L../findlib -o $@ $(SVROBJS) \
--	      -lbacfind -lbacsql -lbaccats -lbacpy -lbaccfg -lbac -lm $(PYTHON_LIBS) $(DLIB) $(DB_LIBS) $(LIBS) \
-+	      ../findlib/libbacfind.la ../cats/libbacsql.la ../cats/libbaccats.la ../lib/libbacpy.la ../lib/libbaccfg.la ../lib/libbac.la -lm $(PYTHON_LIBS) $(DLIB) $(DB_LIBS) $(LIBS) \
+ 	$(LIBTOOL_LINK) $(CXX) $(WLDFLAGS) $(LDFLAGS) -static -L../lib -L../cats -L../findlib -o $@ $(SVROBJS) $(ZLIBS) \
+-	      -lbacfind -lbacsql -lbaccats -lbaccfg -lbac -lm $(DLIB) $(DB_LIBS) $(LIBS) \
++	      ../findlib/libbacfind.la ../cats/libbacsql.la ../cats/libbaccats.la ../lib/libbaccfg.la ../lib/libbac.la -lm $(DLIB) $(DB_LIBS) $(LIBS) \
  	      $(WRAPLIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS) $(CAP_LIBS)
  	strip $@
  
-@@ -105,16 +105,16 @@
- install: all
+ bdirjson: Makefile $(JSONOBJS) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE)
+ 	@echo "Linking $@ ..."
+ 	$(LIBTOOL_LINK) $(CXX) $(WLDFLAGS) $(LDFLAGS) -L../lib	-o $@ $(JSONOBJS) \
+-	      -lbaccfg -lbac -lm $(DLIB) $(DB_LIBS) $(LIBS) \
++	      ../lib/libbaccfg.la ../lib/libbac.la -lm $(DLIB) $(DB_LIBS) $(LIBS) \
+ 	      $(WRAPLIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS) $(CAP_LIBS)
+ 
+ Makefile: $(srcdir)/Makefile.in $(topdir)/config.status
+@@ -113,16 +113,16 @@ install: all
  	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) bacula-dir $(DESTDIR)$(sbindir)/bacula-dir
+ 	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) bdirjson $(DESTDIR)$(sbindir)/bdirjson
  	@srcconf=bacula-dir.conf; \
--	   if  test -f ${DESTDIR}${sysconfdir}/$$srcconf; then \
-+	   if  test -f ${DESTDIR}%%EXAMPLESDIR%%/$$srcconf; then \
+-	   if test -f ${DESTDIR}${sysconfdir}/$$srcconf; then \
++	   if test -f ${DESTDIR}%%EXAMPLESDIR%%/$$srcconf; then \
  	      destconf=$$srcconf.new; \
  	      echo "  ==> Found existing $$srcconf, installing new conf file as $$destconf"; \
  	   else \
@@ -37,16 +45,16 @@ $NetBSD: patch-src_dird_Makefile.in,v 1.1 2012/10/06 17:54:53 christos Exp $
 -	   ${INSTALL_CONFIG} $$srcconf ${DESTDIR}${sysconfdir}/$$destconf
 +	   echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}%%EXAMPLESDIR%%/$$destconf"; \
 +	   ${INSTALL_CONFIG} $$srcconf ${DESTDIR}%%EXAMPLESDIR%%/$$destconf
- 	   @if test "x${dir_group}" != "x"; then \
+ 	   @if test "x${dir_group}" != "x" -a "x${DESTDIR}" = "x" ; then \
 -	      chgrp -f ${dir_group} ${DESTDIR}${sysconfdir}/$$destconf ; \
 +	      chgrp -f ${dir_group} ${DESTDIR}%%EXAMPLESDIR%%/$$destconf ; \
  	   fi
- 	@if  test -f ${DESTDIR}${scriptdir}/query.sql; then \
+ 	@if test -f ${DESTDIR}${scriptdir}/query.sql; then \
  	   echo "  ==> Saving existing query.sql to query.sql.old"; \
-@@ -128,7 +128,7 @@
+@@ -136,7 +136,7 @@ install: all
  
  uninstall:
- 	(cd $(DESTDIR)$(sbindir); $(RMF) bacula-dir)
+ 	(cd $(DESTDIR)$(sbindir); $(RMF) bacula-dir bdirjson)
 -	(cd $(DESTDIR)$(sysconfdir); $(RMF) bacula-dir.conf bacula-dir.conf.new)
 +	(cd $(DESTDIR)%%EXAMPLESDIR%%; $(RMF) bacula-dir.conf bacula-dir.conf.new)
  	(cd $(DESTDIR)$(scriptdir); $(RMF) query.sql)
