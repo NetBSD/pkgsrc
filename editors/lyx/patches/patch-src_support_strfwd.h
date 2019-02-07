@@ -1,8 +1,8 @@
-$NetBSD: patch-src_support_strfwd.h,v 1.2 2015/01/10 18:13:22 rumko Exp $
+$NetBSD: patch-src_support_strfwd.h,v 1.3 2019/02/07 10:42:48 markd Exp $
 
---- src/support/strfwd.h.orig	2014-11-15 18:11:26.000000000 +0000
+--- src/support/strfwd.h.orig	2018-12-09 20:04:52.000000000 +0000
 +++ src/support/strfwd.h
-@@ -41,28 +41,8 @@ namespace lyx { typedef boost::uint32_t 
+@@ -42,28 +42,8 @@ namespace lyx { typedef boost::uint32_t 
  #include <string>
  #else
  
@@ -27,7 +27,7 @@ $NetBSD: patch-src_support_strfwd.h,v 1.2 2015/01/10 18:13:22 rumko Exp $
 -typedef basic_ostream<char, char_traits<char> > ostream;
 -typedef basic_ostringstream<char, char_traits<char>, allocator<char> > ostringstream;
 -
--} // namepace std
+-} // namespace std
 +#include <string>
 +#include <iostream>
  

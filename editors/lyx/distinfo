@@ -1,13 +1,10 @@
-$NetBSD: distinfo,v 1.16 2016/12/02 19:07:16 maya Exp $
+$NetBSD: distinfo,v 1.17 2019/02/07 10:42:48 markd Exp $
 
-SHA1 (lyx-2.2.2.tar.xz) = 30f6f24f81a8990261b1dfd9a6196dfe1459abda
-RMD160 (lyx-2.2.2.tar.xz) = c3e4d309038aebb8225b62e7cf1e6cf04258f5ff
-SHA512 (lyx-2.2.2.tar.xz) = 5057a06f0c37cb2beadb92414eec495ba0619f6c8a9fb5372a9feb90fe0d8bf850de5c94bbf618c8e27bd64404ae6687c48ee24aa6e1bd35580eb3b77d71d45e
-Size (lyx-2.2.2.tar.xz) = 15490148 bytes
+SHA1 (lyx-2.3.2.tar.xz) = 6bbc0b43cdd52b818aa96788f7ade31843a4f0ad
+RMD160 (lyx-2.3.2.tar.xz) = 369d5f0be707436ccafe0d454db95de0a4744449
+SHA512 (lyx-2.3.2.tar.xz) = c1d660f9fbf20ba67fd07e15cc7e37934bde82e6f07b4a2c0da33f3a783bc6d88482f12df7a2824aa57970b4c0bd7631f934ccecce9ed2757be8427d3e67c951
+Size (lyx-2.3.2.tar.xz) = 15791748 bytes
 SHA1 (patch-configure) = d68e3329353f2fa0ffdf9633ff0b31649f0114c7
 SHA1 (patch-development_MacOSX_Makefile.in) = 086dddfcd7b2ca498e87b0d3e90a211aca2f64fe
-SHA1 (patch-src_WordList.cpp) = d747efcd6ca4d7015a5c6860a8844ac79a65672a
-SHA1 (patch-src_mathed_InsetMath.h) = c178b1436c7a969e29b328dde1a800e9ccb7af0e
-SHA1 (patch-src_mathed_MathData.h) = fcd51f36aa2aae29f75e041d7adb1d88baa370a5
-SHA1 (patch-src_support_strfwd.h) = 39bebff1a10e4509c5499f60bc2028ab5e66a671
-SHA1 (patch-src_support_unicode.cpp) = 71bdc1b929a3c90bed84d6de5aa0734e548c67de
+SHA1 (patch-src_support_FileName.cpp) = f940c9e526c3ef34a6d3b1099aec8d41543529ef
+SHA1 (patch-src_support_strfwd.h) = 3ebd71772539d6a2cd327c1127fa9ef66cb15b41
