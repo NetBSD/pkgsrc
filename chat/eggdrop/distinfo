@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.18 2018/02/27 19:08:48 fhajny Exp $
+$NetBSD: distinfo,v 1.19 2019/02/07 15:14:01 nia Exp $
 
-SHA1 (eggdrop-1.8.3.tar.gz) = fbdb187bc3989102bd3f5890ee27533c93132b1b
-RMD160 (eggdrop-1.8.3.tar.gz) = 3ebf6c6260dfb21f8684b7dfe26be03f167cab21
-SHA512 (eggdrop-1.8.3.tar.gz) = ad3b93d18aaa05d0eb00f1089b68d1f077f316042e64fff511ad1bbac06d35105adcb503490faaac4c9fe720dd45a9f350115b6c5d0f41fe198f228213a7a3a3
-Size (eggdrop-1.8.3.tar.gz) = 1756536 bytes
+SHA1 (eggdrop-1.8.4.tar.gz) = c942fe7b518fc59c1196199247f686faf83078ee
+RMD160 (eggdrop-1.8.4.tar.gz) = 456716cddaaeb14ed43ab9dba77bea931859464a
+SHA512 (eggdrop-1.8.4.tar.gz) = d08af09dc83045bf89eae957e7817591f16456f83ba3efe6b361fd421a3d4068348543275c26b27b006f09f06344c04cdf58ee4231f1aee0e7537ec39bc24b49
+Size (eggdrop-1.8.4.tar.gz) = 1784738 bytes
 SHA1 (patch-Makefile.in) = c2c51e1a57889feab043fad4c4d17850fe11449e
 SHA1 (patch-src_eggdrop.h) = de7a4ee2f51a325542e22ebdf69cc75295b0b8de
