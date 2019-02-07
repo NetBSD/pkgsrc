@@ -1,11 +1,12 @@
-# $NetBSD: Makefile.common,v 1.67 2016/02/26 10:24:10 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.68 2019/02/07 11:29:31 markd Exp $
 #
 # used by sysutils/bacula-clientonly/Makefile
 # used by sysutils/bacula-tray-monitor/Makefile
-# used by sysutils/bacula-wx-console/Makefile
+# used by sysutils/bacula-tray-monitor-qt5/Makefile
 # used by sysutils/bacula-qt-console/Makefile
+# used by sysutils/bacula-qt5-console/Makefile
 
-DISTNAME=	bacula-5.2.13
+DISTNAME=	bacula-9.4.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bacula/}
 
@@ -51,9 +52,6 @@ SUBST_FILES.egdir=	src/dird/Makefile.in
 SUBST_FILES.egdir+=	src/console/Makefile.in
 SUBST_FILES.egdir+=	src/filed/Makefile.in
 SUBST_FILES.egdir+=	src/stored/Makefile.in
-SUBST_FILES.egdir+=	src/gnome2-console/Makefile.in
-SUBST_FILES.egdir+=	src/wx-console/Makefile.in
-SUBST_FILES.egdir+=	src/tray-monitor/Makefile.in
 SUBST_SED.egdir=	-e 's,%%EXAMPLESDIR%%,${EXAMPLESDIR},g'
 
 SUBST_CLASSES+=		fixwrap
@@ -79,5 +77,6 @@ EXAMPLESDIR=		${PREFIX}/share/examples/bacula
 INSTALLATION_DIRS+=	${EXAMPLESDIR}
 
 .include "../../mk/readline.buildlink3.mk"
+.include "../../archivers/lzo/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
