@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.77 2019/01/27 15:42:00 leot Exp $
+@comment $NetBSD: PLIST,v 1.78 2019/02/07 23:08:53 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -1079,6 +1079,9 @@ ${PYSITELIB}/youtube_dl/extractor/mailru.pyo
 ${PYSITELIB}/youtube_dl/extractor/makertv.py
 ${PYSITELIB}/youtube_dl/extractor/makertv.pyc
 ${PYSITELIB}/youtube_dl/extractor/makertv.pyo
+${PYSITELIB}/youtube_dl/extractor/malltv.py
+${PYSITELIB}/youtube_dl/extractor/malltv.pyc
+${PYSITELIB}/youtube_dl/extractor/malltv.pyo
 ${PYSITELIB}/youtube_dl/extractor/mangomolo.py
 ${PYSITELIB}/youtube_dl/extractor/mangomolo.pyc
 ${PYSITELIB}/youtube_dl/extractor/mangomolo.pyo
@@ -2231,9 +2234,6 @@ ${PYSITELIB}/youtube_dl/extractor/voot.pyo
 ${PYSITELIB}/youtube_dl/extractor/voxmedia.py
 ${PYSITELIB}/youtube_dl/extractor/voxmedia.pyc
 ${PYSITELIB}/youtube_dl/extractor/voxmedia.pyo
-${PYSITELIB}/youtube_dl/extractor/vporn.py
-${PYSITELIB}/youtube_dl/extractor/vporn.pyc
-${PYSITELIB}/youtube_dl/extractor/vporn.pyo
 ${PYSITELIB}/youtube_dl/extractor/vrak.py
 ${PYSITELIB}/youtube_dl/extractor/vrak.pyc
 ${PYSITELIB}/youtube_dl/extractor/vrak.pyo
