@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.626 2019/02/07 12:59:05 nia Exp $
+$NetBSD: CHANGES-2019,v 1.627 2019/02/07 14:05:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1230,3 +1230,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed sysutils/bacula-wx-console [markd 2019-02-07]
 	Updated sysutils/zabbix to 4.0.4 [he 2019-02-07]
 	Updated chat/cgiirc to 0.5.12 [nia 2019-02-07]
+	Updated lang/php72 to 7.2.15 [taca 2019-02-07]
