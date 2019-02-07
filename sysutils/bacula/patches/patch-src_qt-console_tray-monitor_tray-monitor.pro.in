@@ -1,0 +1,27 @@
+$NetBSD: patch-src_qt-console_tray-monitor_tray-monitor.pro.in,v 1.1 2019/02/07 11:29:31 markd Exp $
+
+- comment out the confs paths and command
+- use just the compiler not libtool for QMAKE_LINK
+
+--- src/qt-console/tray-monitor/tray-monitor.pro.in.orig	2018-12-21 08:40:51.000000000 +0000
++++ src/qt-console/tray-monitor/tray-monitor.pro.in
+@@ -27,8 +27,8 @@ cross-win32 {
+ 
+ bins.path = /$(DESTDIR)@sbindir@
+ bins.files = bacula-tray-monitor
+-confs.path = /$(DESTDIR)@sysconfdir@
+-confs.commands = ./install_conf_file
++#confs.path = /$(DESTDIR)@sysconfdir@
++#confs.commands = ./install_conf_file
+ 
+ TEMPLATE     = app
+ TARGET       = bacula-tray-monitor
+@@ -37,7 +37,7 @@ DEPENDPATH  += .
+ INCLUDEPATH += ../.. . 
+ LIBTOOL_LINK = @QMAKE_LIBTOOL@ --silent --tag=CXX --mode=link
+ LIBTOOL_INSTALL = @QMAKE_LIBTOOL@ --silent --mode=install
+-QMAKE_LINK   = $${LIBTOOL_LINK} $(CXX)
++QMAKE_LINK   = $(CXX)
+ QMAKE_INSTALL_PROGRAM = $${LIBTOOL_INSTALL} install -m @SBINPERM@ -p
+ QMAKE_CLEAN += obj/* .libs/* bacula-tray-monitor release/bacula-tray-monitor
+ QMAKE_CXXFLAGS += -DTRAY_MONITOR

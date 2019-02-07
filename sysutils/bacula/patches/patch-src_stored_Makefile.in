@@ -1,73 +1,67 @@
-$NetBSD: patch-src_stored_Makefile.in,v 1.1 2012/10/06 17:54:53 christos Exp $
+$NetBSD: patch-src_stored_Makefile.in,v 1.2 2019/02/07 11:29:31 markd Exp $
 
 - use %%EXAMPLESDIR%% instead of sysconfdir
 - use the .la files for linking
 
---- src/stored/Makefile.in.orig	2012-09-13 04:51:19.000000000 -0400
-+++ src/stored/Makefile.in	2012-10-05 11:07:09.000000000 -0400
-@@ -96,12 +96,12 @@
- bacula-sd: Makefile $(SDOBJS) ../lib/libbacpy$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)
+--- src/stored/Makefile.in.orig	2018-12-21 08:40:51.000000000 +0000
++++ src/stored/Makefile.in
+@@ -94,7 +94,7 @@ ZLIBS=@ZLIBS@
+ LZO_LIBS= @LZO_LIBS@
+ LZO_INC= @LZO_INC@
+ 
+-SD_LIBS = -lbacsd -lbaccfg -lbac
++SD_LIBS = libbacsd.la ../lib/libbaccfg.la ../lib/libbac.la
+ 
+ 
+ .SUFFIXES:	.c .o .lo
+@@ -154,7 +154,7 @@ bacula-sd-aligned-driver.la: Makefile $(
+ bsdjson: Makefile $(JSONOBJS) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)
  	@echo "Linking $@ ..."
- 	$(LIBTOOL_LINK) $(CXX) $(WLDFLAGS) $(LDFLAGS) -L../lib -o $@ $(SDOBJS) $(ZLIBS) \
--	   -lbacpy -lbaccfg -lbac -lm $(PYTHON_LIBS) $(DLIB) $(LIBS) $(WRAPLIBS) \
-+	   ../lib/libbacpy.la ../lib/libbaccfg.la ../lib/libbac.la -lm $(PYTHON_LIBS) $(DLIB) $(LIBS) $(WRAPLIBS) \
- 	$(GETTEXT_LIBS) $(OPENSSL_LIBS) $(CAP_LIBS)
+ 	$(LIBTOOL_LINK) $(CXX) $(WLDFLAGS) $(LDFLAGS) -L../lib -o $@ $(JSONOBJS) $(ZLIBS) \
+-	   -lbaccfg -lbac -lm $(DLIB) $(LIBS) $(WRAPLIBS) \
++	   ../lib/libbaccfg.la ../lib/libbac.la -lm $(DLIB) $(LIBS) $(WRAPLIBS) \
+ 	   $(GETTEXT_LIBS) $(OPENSSL_LIBS) $(CAP_LIBS)
  
- static-bacula-sd: Makefile $(SDOBJS) ../lib/libbacpy$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)
- 	$(LIBTOOL_LINK) $(CXX) $(WLDFLAGS) $(LDFLAGS) -static -L../lib -o $@ $(SDOBJS) $(ZLIBS) \
--	   -lbacpy -lbaccfg -lbac -lm $(PYTHON_LIBS) $(DLIB) $(LIBS) $(WRAPLIBS) \
-+	   ../lib/libbacpy.la ../lib/libbaccfg.la ../lib/libbac.la -lm $(PYTHON_LIBS) $(DLIB) $(LIBS) $(WRAPLIBS) \
- 	$(GETTEXT_LIBS) $(OPENSSL_LIBS) $(CAP_LIBS)
- 	strip $@
- 
-@@ -112,7 +112,7 @@
- 
- btape: Makefile  $(TAPEOBJS) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE)
- 	$(LIBTOOL_LINK) $(CXX) $(TTOOL_LDFLAGS) $(LDFLAGS) -L../lib -o $@ $(TAPEOBJS) \
--	   -lbaccfg -lbac $(DLIB) -lm $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
-+	   ../lib/libbaccfg.la ../lib/libbac.la $(DLIB) -lm $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
- 
- bls.o:	bls.c
- 	@echo "Compiling $<"
-@@ -122,7 +122,7 @@
- bls:	Makefile $(BLSOBJS) ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)
+ static-bacula-sd: Makefile $(SDOBJS) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)
+@@ -190,7 +190,7 @@ bls.o:	bls.c
+ bls:	Makefile $(BLSOBJS) libbacsd.la drivers  ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)
  	@echo "Compiling $<"
  	$(LIBTOOL_LINK) $(CXX) $(TTOOL_LDFLAGS) $(LDFLAGS) -L../lib -L../findlib -o $@ $(BLSOBJS) $(DLIB) \
--	   -lbacfind -lbaccfg -lbac -lm $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
-+	   ../findlib/libbacfind.la ../lib/libbaccfg.la ../lib/libbac.la -lm $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
+-	   $(SD_LIBS) -lbacfind -lm $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
++	   $(SD_LIBS) ../findlib/libbacfind.la -lm $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
  
  bextract.o: bextract.c
  	@echo "Compiling $<"
-@@ -132,7 +132,7 @@
- bextract: Makefile $(BEXTOBJS) ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)
+@@ -200,7 +200,7 @@ bextract.o: bextract.c
+ bextract: Makefile $(BEXTOBJS) libbacsd.la drivers ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)
  	@echo "Compiling $<"
- 	$(LIBTOOL_LINK) $(CXX) $(TTOOL_LDFLAGS) $(LDFLAGS) -L../lib -L../findlib -o $@ $(BEXTOBJS) $(DLIB) $(ZLIBS) $(LZOLIBS) \
--	   -lbacfind -lbaccfg -lbac -lm $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
-+	   ../findlib/libbacfind.la ../lib/libbaccfg.la ../lib/libbac.la -lm $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
+ 	$(LIBTOOL_LINK) $(CXX) $(TTOOL_LDFLAGS) $(LDFLAGS) -L../lib -L../findlib -o $@ $(BEXTOBJS) $(DLIB) $(ZLIBS) $(LZO_LIBS) \
+-	   $(SD_LIBS) -lbacfind -lm $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
++	   $(SD_LIBS) ../findlib/libbacfind.la -lm $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
  
  bscan.o: bscan.c
  	@echo "Compiling $<"
-@@ -142,7 +142,7 @@
- bscan:	Makefile $(SCNOBJS) ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) \
+@@ -210,7 +210,7 @@ bscan.o: bscan.c
+ bscan:	Makefile $(SCNOBJS) libbacsd.la drivers ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) \
  	../cats/libbacsql$(DEFAULT_ARCHIVE_TYPE) ../cats/libbaccats$(DEFAULT_ARCHIVE_TYPE)
  	$(LIBTOOL_LINK) $(CXX) $(TTOOL_LDFLAGS) $(LDFLAGS) -L../lib -L../cats -L../findlib -o $@ $(SCNOBJS) \
--	   -lbacsql -lbaccats $(DB_LIBS) $(ZLIBS) -lbacfind -lbaccfg -lbac -lm $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
-+	   ../cats/libbacsql.la ../cats/libbaccats.la $(DB_LIBS) $(ZLIBS) ../findlib/libbacfind.la ../lib/libbaccfg.la ../lib/libbac.la -lm $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
+-	   $(SD_LIBS) -lbacsql -lbaccats $(DB_LIBS) $(ZLIBS) -lbacfind -lbaccfg -lbac -lm $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
++	   $(SD_LIBS) ../cats/libbacsql.la ../cats/libbaccats.la $(DB_LIBS) $(ZLIBS) ../findlib/libbacfind.la ../lib/libbaccfg.la ../lib/libbac.la -lm $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
  
  bcopy.o: bcopy.c
  	@echo "Compiling $<"
-@@ -151,7 +151,7 @@
+@@ -224,7 +224,7 @@ bcopy:	Makefile $(COPYOBJS) libbacsd.la 
+ cloud_parts_test: Makefile cloud_parts.c
+ 	$(RMF) cloud_parts.o
+ 	$(CXX) -DTEST_PROGRAM $(DEFS) $(DEBUG) -c $(CPPFLAGS) -I$(srcdir) -I$(basedir) $(DINCLUDE)  $(CFLAGS) cloud_parts.c
+-	$(LIBTOOL_LINK) $(CXX) $(LDFLAGS) -L../lib -o $@ cloud_parts.o $(DLIB) -lbac -lm $(LIBS) $(OPENSSL_LIBS)
++	$(LIBTOOL_LINK) $(CXX) $(LDFLAGS) -L../lib -o $@ cloud_parts.o $(DLIB) ../lib/libbac.la -lm $(LIBS) $(OPENSSL_LIBS)
+ 	rm -f cloud_parts.o
+ 	$(CXX) $(DEFS) $(DEBUG) -c $(CPPFLAGS) -I$(srcdir) -I$(basedir) $(DINCLUDE) $(CFLAGS) cloud_parts.c
  
- bcopy:	Makefile $(COPYOBJS) ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)
- 	$(LIBTOOL_LINK) $(CXX) $(TTOOL_LDFLAGS) $(LDFLAGS) -L../lib -o $@ $(COPYOBJS) \
--	   -lbaccfg -lbac -lm $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
-+	   ../lib/libbaccfg.la ../lib/libbac.la -lm $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
- 
- Makefile: $(srcdir)/Makefile.in $(topdir)/config.status
- 	cd $(topdir) \
-@@ -165,16 +165,16 @@
- 	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) bscan $(DESTDIR)$(sbindir)/bscan
- 	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) btape $(DESTDIR)$(sbindir)/btape
+@@ -253,16 +253,16 @@ install: all @LIBTOOL_INSTALL_TARGET@
+ 	   $(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) static-bacula-sd $(DESTDIR)$(sbindir)/static-bacula-sd; \
+ 	fi
  	@srcconf=bacula-sd.conf; \
 -	if  test -f ${DESTDIR}${sysconfdir}/$$srcconf; then \
 +	if  test -f ${DESTDIR}%%EXAMPLESDIR%%/$$srcconf; then \
@@ -80,9 +74,9 @@ $NetBSD: patch-src_stored_Makefile.in,v 1.1 2012/10/06 17:54:53 christos Exp $
 -	${INSTALL_CONFIG} $$srcconf ${DESTDIR}${sysconfdir}/$$destconf
 +	echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}%%EXAMPLESDIR%%/$$destconf"; \
 +	${INSTALL_CONFIG} $$srcconf ${DESTDIR}%%EXAMPLESDIR%%/$$destconf
- 	@if test "x${sd_group}" != "x"; then \
+ 	@if test "x${sd_group}" != "x" -a "x${DESTDIR}" = "x" ; then \
 -	   chgrp -f ${sd_group} ${DESTDIR}${sysconfdir}/$$destconf; \
 +	   chgrp -f ${sd_group} ${DESTDIR}%%EXAMPLESDIR%%/$$destconf; \
  	fi
- 	@if test -f static-bacula-sd; then \
- 	   $(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) static-bacula-sd $(DESTDIR)$(sbindir)/static-bacula-sd; \
+ 
+ install-cloud: bacula-sd-cloud-driver.la
