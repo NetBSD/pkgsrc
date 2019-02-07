@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 01:20:17 agc Exp $
+$NetBSD: distinfo,v 1.4 2019/02/07 14:29:20 nia Exp $
 
-SHA1 (atheme-services-3.0.4.tbz2) = 1ba73fa07377f3ec31d03b0ac588141e10ad35b3
-RMD160 (atheme-services-3.0.4.tbz2) = cca06369a1fd6989178b760efdbf745de28c9b60
-SHA512 (atheme-services-3.0.4.tbz2) = 549587f7f47b3911978ae3f231020d7278f5b3274347c4b33a8ed02770d36b9051f4754f405e4c593308e7446a313b37b1bc53cbcf6dffa2e966ba458f37904f
-Size (atheme-services-3.0.4.tbz2) = 580786 bytes
-SHA1 (patch-aa) = ea2122cbe3dc1f7ddbc62aa9bcc695a384dc575e
-SHA1 (patch-ab) = 49c72c026c24f0e2b5054a2297d80256ca37ed1d
-SHA1 (patch-include_common.h) = ee4ab38b65f954d8a545e7f6d58f41b964b301e5
-SHA1 (patch-include_stdinc.h) = a7d2898581addaf7730270003b0f0eb30a455de9
+SHA1 (atheme-7.2.9.tar.bz2) = 629ee6241324722792124a1abddc2e03f28eee30
+RMD160 (atheme-7.2.9.tar.bz2) = 2445974e12aa249d818cb7a34e6669f68740a0ce
+SHA512 (atheme-7.2.9.tar.bz2) = 8852bcf4746ad3b8814e2e7ae8b435c538b442f26f6cf8479087d115c0c4d6877ea864f9e19ccaa9ae93ea8a116cfa53d1f22846fffb783f78bfad8e95fd26f7
+Size (atheme-7.2.9.tar.bz2) = 1179582 bytes
