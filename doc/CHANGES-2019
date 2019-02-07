@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.627 2019/02/07 14:05:45 taca Exp $
+$NetBSD: CHANGES-2019,v 1.628 2019/02/07 14:07:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1231,3 +1231,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/zabbix to 4.0.4 [he 2019-02-07]
 	Updated chat/cgiirc to 0.5.12 [nia 2019-02-07]
 	Updated lang/php72 to 7.2.15 [taca 2019-02-07]
+	Updated lang/php73 to 7.3.2 [taca 2019-02-07]
