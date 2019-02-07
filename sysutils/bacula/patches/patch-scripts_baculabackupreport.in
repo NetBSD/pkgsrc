@@ -1,0 +1,84 @@
+$NetBSD: patch-scripts_baculabackupreport.in,v 1.1 2019/02/07 11:29:31 markd Exp $
+
+fixup "test =="
+
+--- scripts/baculabackupreport.in.orig	2018-12-21 08:40:51.000000000 +0000
++++ scripts/baculabackupreport.in
+@@ -544,7 +544,7 @@ numbadjobs=$?
+ 
+ # Do we email the job summaries?
+ # ------------------------------
+-if [ ${emailsummaries} == "yes" ]; then
++if [ ${emailsummaries} = "yes" ]; then
+         # Get all of the jobids from the query results, but
+         # skip any running jobs because they will not have
+         # a summary in the DB until the job has terminated
+@@ -560,7 +560,7 @@ if [ ${emailsummaries} == "yes" ]; then
+                 # Generate the header
+                 # -------------------
+                 msg="${msg}"$(
+-                if [ ${html} == "yes" ]; then
++                if [ ${html} = "yes" ]; then
+                         echo "<pre>====================================="
+                                 else
+                                         echo -e "\n\n\n====================================="
+@@ -581,7 +581,7 @@ if [ ${emailsummaries} == "yes" ]; then
+                                 echo "======================================================================"
+                         )
+                 done
+-                if [ ${html} == "yes" ]; then
++                if [ ${html} = "yes" ]; then
+                         msg=${msg}$(echo "</pre>")
+                 fi
+         fi
+@@ -590,7 +590,7 @@ fi
+ 
+ # Do we email the bad job logs with the report?
+ # ---------------------------------------------
+-if [ ${emailbadlogs} == "yes" ]; then
++if [ ${emailbadlogs} = "yes" ]; then
+         # Get the badjobs, or the good jobs with
+         # JobErrors != 0 from the query results
+         # --------------------------------------
+@@ -605,7 +605,7 @@ if [ ${emailbadlogs} == "yes" ]; then
+                 # Generate the header
+                 # -------------------
+                 msg="${msg}"$(
+-                if [ ${html} == "yes" ]; then
++                if [ ${html} = "yes" ]; then
+                         echo "<pre>=========================================================="
+                                 else
+                                         echo -e "\n\n\n=========================================================="
+@@ -626,7 +626,7 @@ if [ ${emailbadlogs} == "yes" ]; then
+                                 echo "======================================================================"
+                         )
+                 done
+-                if [ ${html} == "yes" ]; then
++                if [ ${html} = "yes" ]; then
+                         msg=${msg}$(echo "</pre>")
+                 fi
+         fi
+@@ -635,7 +635,7 @@ fi
+ 
+ # Prepend the header to the $msg output
+ # -------------------------------------
+-if [ ${html} == "yes" ]; then
++if [ ${html} = "yes" ]; then
+         msg="<html>
+         <head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">
+                 <style>
+@@ -711,12 +711,12 @@ fi
+ (
+ echo "To: ${admin}"
+ echo "From: ${admin}"
+-if [ ${addsubjecticon} == "yes" ]; then
++if [ ${addsubjecticon} = "yes" ]; then
+         echo "Subject: ${subjecticon} ${server} - ${status} in the Past ${hist} ${hour}"
+                 else
+                         echo "Subject: ${server} - ${status} in the Past ${hist} ${hour}"
+ fi
+-if [ ${html} == "yes" ]  &&  [ ${results} -ne 0 ]; then
++if [ ${html} = "yes" ]  &&  [ ${results} -ne 0 ]; then
+  echo "Content-Type: text/html"
+  echo "MIME-Version: 1.0"
+ fi

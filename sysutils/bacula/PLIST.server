@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST.server,v 1.13 2014/03/11 14:05:14 jperkin Exp $
+@comment $NetBSD: PLIST.server,v 1.14 2019/02/07 11:29:31 markd Exp $
 lib/libbaccats.la
 lib/libbaccats-${BACULA_DB}.la
+lib/libbacsd.la
 lib/libbacsql.la
 libexec/bacula/chio-changer
 libexec/bacula/create_${BACULA_DB}_database
@@ -21,10 +22,12 @@ libexec/bacula/update_bacula_tables
 sbin/bacula-dir
 sbin/bacula-sd
 sbin/bcopy
+sbin/bdirjson
 sbin/bextract
 sbin/bls
 sbin/bregex
 sbin/bscan
+sbin/bsdjson
 sbin/bsmtp
 sbin/btape
 sbin/bwild
