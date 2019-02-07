@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.634 2019/02/07 22:23:18 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.635 2019/02/07 23:09:08 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1239,3 +1239,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/ikiwiki to 3.20190207 [schmonz 2019-02-07]
 	Updated net/dhcpcd to 7.1.1 [roy 2019-02-07]
 	Updated mail/getmail to 5.9 [schmonz 2019-02-07]
+	Updated net/youtube-dl to 20190208 [leot 2019-02-07]
