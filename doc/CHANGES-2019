@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.625 2019/02/07 12:36:57 he Exp $
+$NetBSD: CHANGES-2019,v 1.626 2019/02/07 12:59:05 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1229,3 +1229,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added sysutils/bacula-tray-monitor-qt5 version 9.4.1 [markd 2019-02-07]
 	Removed sysutils/bacula-wx-console [markd 2019-02-07]
 	Updated sysutils/zabbix to 4.0.4 [he 2019-02-07]
+	Updated chat/cgiirc to 0.5.12 [nia 2019-02-07]
