@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18789 2019/02/06 14:52:48 taca Exp $
+$NetBSD: TODO,v 1.18790 2019/02/07 11:36:54 markd Exp $
 
 Suggested new packages
 ======================
@@ -969,7 +969,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o lua-sql-mysql-2.3.5
 	o lv2-5.4
 	o lwm-1.2.4
-	o lyx-2.3.2
 	o lzma-9.18
 	o mDNSResponder-878.30.4
 	o mDNSResponder-nss-576.30.4
