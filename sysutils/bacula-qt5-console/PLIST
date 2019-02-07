@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2019/02/07 11:29:31 markd Exp $
+sbin/bat
+share/doc/bacula/clients.html
+share/doc/bacula/console.html
+share/doc/bacula/filesets.html
+share/doc/bacula/index.html
+share/doc/bacula/joblist.html
+share/doc/bacula/jobplot.html
+share/doc/bacula/jobs.html
+share/doc/bacula/mail-message-new.png
+share/doc/bacula/media.html
+share/doc/bacula/restore.html
+share/doc/bacula/status.png
+share/doc/bacula/storage.html
+share/examples/bacula/bat.conf
