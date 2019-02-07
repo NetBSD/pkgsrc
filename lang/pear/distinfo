@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2019/02/03 14:06:58 taca Exp $
+$NetBSD: distinfo,v 1.33 2019/02/07 13:40:57 taca Exp $
 
 SHA1 (pear20151210/Archive_Tar-1.4.5.tgz) = 1697a5baa9666174b64c48fcdd1b9c4d311100fa
 RMD160 (pear20151210/Archive_Tar-1.4.5.tgz) = c2a81c901a4b38f46d7035f3b169296f9969b592
@@ -20,3 +20,4 @@ SHA1 (pear20151210/XML_Util-1.4.3.tgz) = 95e07febe0b6c843c51bfd0157e61fd1ba1e562
 RMD160 (pear20151210/XML_Util-1.4.3.tgz) = 55308486e8a32d7bcb775c286d487b1db4a3f00b
 SHA512 (pear20151210/XML_Util-1.4.3.tgz) = c21a7cef90743e124c4bc8e0453b634de8f6a6b0aac060acc1a17f481a2eb8757d322b05c69151280b7651cea927b2c64b7d49b9fd815dcdc606d0472d967310
 Size (pear20151210/XML_Util-1.4.3.tgz) = 18842 bytes
+SHA1 (patch-.._Archive__Tar-1.4.5_Archive_Tar.php) = fa693b0c8d89b550952fc4a43a7319b87053c821
