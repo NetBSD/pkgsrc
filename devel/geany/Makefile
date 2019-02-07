@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2019/02/06 01:49:32 gutteridge Exp $
+# $NetBSD: Makefile,v 1.59 2019/02/07 05:10:11 gutteridge Exp $
 
 DISTNAME=	geany-1.34.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://download.geany.org/
 EXTRACT_SUFX=	.tar.bz2
@@ -37,5 +37,6 @@ BUILDLINK_TRANSFORM+=	rm:-lstdc++
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
