@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1361 2019/02/01 15:31:58 kleink Exp $
+# $NetBSD: Makefile,v 1.1362 2019/02/07 05:09:35 jnemeth Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -114,6 +114,7 @@ SUBDIR+=	ganglia-webfrontend
 SUBDIR+=	geckodriver
 SUBDIR+=	geeklog
 SUBDIR+=	gitweb
+SUBDIR+=	gnurl
 SUBDIR+=	go-ace
 SUBDIR+=	go-cssmin
 SUBDIR+=	go-gogs-client
@@ -131,7 +132,6 @@ SUBDIR+=	goaccess
 SUBDIR+=	grafana
 SUBDIR+=	gtkasp2php
 SUBDIR+=	gtkhtml314
-SUBDIR+=	gnurl
 SUBDIR+=	gwt
 SUBDIR+=	h2o
 SUBDIR+=	haskell-cgi
