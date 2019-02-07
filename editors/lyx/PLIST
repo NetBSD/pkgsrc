@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2018/06/03 02:28:07 youri Exp $
+@comment $NetBSD: PLIST,v 1.13 2019/02/07 10:42:48 markd Exp $
 ${BIN_DIR}/lyx
 ${BIN_DIR}/lyxclient
 ${BIN_DIR}/tex2lyx
@@ -9,9 +9,7 @@ ${PLIST.x11}share/applications/lyx.desktop
 ${PLIST.x11}share/icons/hicolor/48x48/apps/lyx.png
 ${PLIST.x11}share/icons/hicolor/scalable/apps/lyx.svg
 share/locale/ar/LC_MESSAGES/${LYX}.mo
-share/locale/ca/LC_MESSAGES/${LYX}.mo
 share/locale/cs/LC_MESSAGES/${LYX}.mo
-share/locale/da/LC_MESSAGES/${LYX}.mo
 share/locale/de/LC_MESSAGES/${LYX}.mo
 share/locale/el/LC_MESSAGES/${LYX}.mo
 share/locale/en/LC_MESSAGES/${LYX}.mo
@@ -19,7 +17,6 @@ share/locale/es/LC_MESSAGES/${LYX}.mo
 share/locale/eu/LC_MESSAGES/${LYX}.mo
 share/locale/fi/LC_MESSAGES/${LYX}.mo
 share/locale/fr/LC_MESSAGES/${LYX}.mo
-share/locale/gl/LC_MESSAGES/${LYX}.mo
 share/locale/he/LC_MESSAGES/${LYX}.mo
 share/locale/hu/LC_MESSAGES/${LYX}.mo
 share/locale/ia/LC_MESSAGES/${LYX}.mo
@@ -27,15 +24,12 @@ share/locale/id/LC_MESSAGES/${LYX}.mo
 share/locale/it/LC_MESSAGES/${LYX}.mo
 share/locale/ja/LC_MESSAGES/${LYX}.mo
 share/locale/nb/LC_MESSAGES/${LYX}.mo
-share/locale/nl/LC_MESSAGES/${LYX}.mo
 share/locale/nn/LC_MESSAGES/${LYX}.mo
 share/locale/pl/LC_MESSAGES/${LYX}.mo
 share/locale/pt_BR/LC_MESSAGES/${LYX}.mo
 share/locale/pt_PT/LC_MESSAGES/${LYX}.mo
-share/locale/ro/LC_MESSAGES/${LYX}.mo
 share/locale/ru/LC_MESSAGES/${LYX}.mo
 share/locale/sk/LC_MESSAGES/${LYX}.mo
-share/locale/sr/LC_MESSAGES/${LYX}.mo
 share/locale/sv/LC_MESSAGES/${LYX}.mo
 share/locale/tr/LC_MESSAGES/${LYX}.mo
 share/locale/uk/LC_MESSAGES/${LYX}.mo
@@ -60,6 +54,11 @@ ${SHARE_DIR}/bind/sciword.bind
 ${SHARE_DIR}/bind/site.bind
 ${SHARE_DIR}/bind/xemacs.bind
 ${SHARE_DIR}/chkconfig.ltx
+${SHARE_DIR}/citeengines/basic.citeengine
+${SHARE_DIR}/citeengines/biblatex-natbib.citeengine
+${SHARE_DIR}/citeengines/biblatex.citeengine
+${SHARE_DIR}/citeengines/jurabib.citeengine
+${SHARE_DIR}/citeengines/natbib.citeengine
 ${SHARE_DIR}/commands/default.def
 ${SHARE_DIR}/configure.py
 ${SHARE_DIR}/doc/Additional.lyx
@@ -78,9 +77,14 @@ ${SHARE_DIR}/doc/Shortcuts.lyx
 ${SHARE_DIR}/doc/SpecialParagraphShape.tex
 ${SHARE_DIR}/doc/Tutorial.lyx
 ${SHARE_DIR}/doc/UserGuide.lyx
+${SHARE_DIR}/doc/ar/Intro.lyx
+${SHARE_DIR}/doc/ar/Shortcuts.lyx
+${SHARE_DIR}/doc/ar/Tutorial.lyx
 ${SHARE_DIR}/doc/biblio/LyXDocs.bib
 ${SHARE_DIR}/doc/biblio/alphadin.bst
 ${SHARE_DIR}/doc/ca/Intro.lyx
+${SHARE_DIR}/doc/clipart/2D-intensity-plot.pdf
+${SHARE_DIR}/doc/clipart/3D-structure-distort.pdf
 ${SHARE_DIR}/doc/clipart/Abstract.pdf
 ${SHARE_DIR}/doc/clipart/BoxInsetDefault.png
 ${SHARE_DIR}/doc/clipart/ChangesToolbar.png
@@ -95,6 +99,7 @@ ${SHARE_DIR}/doc/clipart/MacroToolbar.png
 ${SHARE_DIR}/doc/clipart/SVG-Drawing.svg
 ${SHARE_DIR}/doc/clipart/SpaceMarker.png
 ${SHARE_DIR}/doc/clipart/StandardToolbar.png
+${SHARE_DIR}/doc/clipart/Star-structure.pdf
 ${SHARE_DIR}/doc/clipart/ToolbarEnvBox.png
 ${SHARE_DIR}/doc/clipart/ViewToolbar.png
 ${SHARE_DIR}/doc/clipart/endnotes.pdf
@@ -109,6 +114,7 @@ ${SHARE_DIR}/doc/clipart/platypus.eps
 ${SHARE_DIR}/doc/clipart/reference.png
 ${SHARE_DIR}/doc/clipart/with_fntright.pdf
 ${SHARE_DIR}/doc/clipart/without_fntright.pdf
+${SHARE_DIR}/doc/clipart/workaround.png
 ${SHARE_DIR}/doc/cs/Tutorial.lyx
 ${SHARE_DIR}/doc/da/Intro.lyx
 ${SHARE_DIR}/doc/de/Additional.lyx
@@ -133,7 +139,6 @@ ${SHARE_DIR}/doc/de/clipart/LyXNotiz.png
 ${SHARE_DIR}/doc/de/clipart/Marke.png
 ${SHARE_DIR}/doc/de/clipart/Querverweis.png
 ${SHARE_DIR}/doc/de/clipart/StandardBox.png
-${SHARE_DIR}/doc/de/clipart/Unterdokument.png
 ${SHARE_DIR}/doc/de/clipart/Zusammenfassung.pdf
 ${SHARE_DIR}/doc/el/Intro.lyx
 ${SHARE_DIR}/doc/es/Additional.lyx
@@ -206,6 +211,7 @@ ${SHARE_DIR}/doc/ja/Additional.lyx
 ${SHARE_DIR}/doc/ja/Customization.lyx
 ${SHARE_DIR}/doc/ja/DummyDocument1.lyx
 ${SHARE_DIR}/doc/ja/DummyDocument2.lyx
+${SHARE_DIR}/doc/ja/DummyTextDocument.txt
 ${SHARE_DIR}/doc/ja/EmbeddedObjects.lyx
 ${SHARE_DIR}/doc/ja/Formula-numbering.lyx
 ${SHARE_DIR}/doc/ja/Intro.lyx
@@ -239,6 +245,7 @@ ${SHARE_DIR}/doc/pt/Tutorial.lyx
 ${SHARE_DIR}/doc/ro/Intro.lyx
 ${SHARE_DIR}/doc/ru/Intro.lyx
 ${SHARE_DIR}/doc/ru/Tutorial.lyx
+${SHARE_DIR}/doc/ru/clipart/ToolbarEnvBox.png
 ${SHARE_DIR}/doc/sk/Intro.lyx
 ${SHARE_DIR}/doc/sk/Tutorial.lyx
 ${SHARE_DIR}/doc/sl/Intro.lyx
@@ -247,7 +254,7 @@ ${SHARE_DIR}/doc/sv/Intro.lyx
 ${SHARE_DIR}/doc/sv/Shortcuts.lyx
 ${SHARE_DIR}/doc/sv/Tutorial.lyx
 ${SHARE_DIR}/doc/uk/Intro.lyx
-${SHARE_DIR}/doc/uk/clipart/Footnote.png
+${SHARE_DIR}/doc/uk/clipart/footnote.png
 ${SHARE_DIR}/doc/zh_CN/Intro.lyx
 ${SHARE_DIR}/doc/zh_CN/Tutorial.lyx
 ${SHARE_DIR}/encodings
@@ -262,13 +269,13 @@ ${SHARE_DIR}/examples/Literate.lyx
 ${SHARE_DIR}/examples/MultilingualCaptions.lyx
 ${SHARE_DIR}/examples/PDF-comment.lyx
 ${SHARE_DIR}/examples/PDF-form.lyx
-${SHARE_DIR}/examples/R-S-statements.lyx
 ${SHARE_DIR}/examples/aa_sample.lyx
 ${SHARE_DIR}/examples/aas_sample.lyx
 ${SHARE_DIR}/examples/achemso.lyx
 ${SHARE_DIR}/examples/addressExample.adr
 ${SHARE_DIR}/examples/amsart-test.lyx
 ${SHARE_DIR}/examples/amsbook-test.lyx
+${SHARE_DIR}/examples/ar/splash.lyx
 ${SHARE_DIR}/examples/beamer-article.lyx
 ${SHARE_DIR}/examples/beamer-g4-mask.jpg
 ${SHARE_DIR}/examples/beamer-g4.jpg
@@ -286,7 +293,6 @@ ${SHARE_DIR}/examples/beamerlyxexample1.lyx
 ${SHARE_DIR}/examples/beamerposter.lyx
 ${SHARE_DIR}/examples/biblioExample.bib
 ${SHARE_DIR}/examples/ca/ItemizeBullets.lyx
-${SHARE_DIR}/examples/ca/mathed.lyx
 ${SHARE_DIR}/examples/ca/splash.lyx
 ${SHARE_DIR}/examples/chess-article.lyx
 ${SHARE_DIR}/examples/chessgame.lyx
@@ -302,6 +308,7 @@ ${SHARE_DIR}/examples/de/ItemizeBullets.lyx
 ${SHARE_DIR}/examples/de/Lebenslauf.lyx
 ${SHARE_DIR}/examples/de/MultilingualCaptions.lyx
 ${SHARE_DIR}/examples/de/PDF-comment.lyx
+${SHARE_DIR}/examples/de/PDF-form.lyx
 ${SHARE_DIR}/examples/de/beamer-article.lyx
 ${SHARE_DIR}/examples/de/beamer.lyx
 ${SHARE_DIR}/examples/de/beispiel_gelyxt.lyx
@@ -342,18 +349,21 @@ ${SHARE_DIR}/examples/fr/MultilingualCaptions.lyx
 ${SHARE_DIR}/examples/fr/PDF-comment.lyx
 ${SHARE_DIR}/examples/fr/beamer-article.lyx
 ${SHARE_DIR}/examples/fr/beamer.lyx
-${SHARE_DIR}/examples/fr/exemple-powerdot.lyx
 ${SHARE_DIR}/examples/fr/exemple_brut.lyx
 ${SHARE_DIR}/examples/fr/exemple_lyxifie.lyx
 ${SHARE_DIR}/examples/fr/linguistics.lyx
+${SHARE_DIR}/examples/fr/powerdot.lyx
 ${SHARE_DIR}/examples/fr/seminar.lyx
 ${SHARE_DIR}/examples/fr/simplecv.lyx
 ${SHARE_DIR}/examples/fr/splash.lyx
+${SHARE_DIR}/examples/fr/xyfigure.lyx
 ${SHARE_DIR}/examples/fr/xyfigure.png
 ${SHARE_DIR}/examples/fr/xypic.lyx
 ${SHARE_DIR}/examples/gl/exemplo_bruto.lyx
 ${SHARE_DIR}/examples/gl/exemplo_lyxificado.lyx
 ${SHARE_DIR}/examples/gl/splash.lyx
+${SHARE_DIR}/examples/gnuplot-example.gp
+${SHARE_DIR}/examples/gnuplot.lyx
 ${SHARE_DIR}/examples/he/example_lyxified.lyx
 ${SHARE_DIR}/examples/he/example_raw.lyx
 ${SHARE_DIR}/examples/he/splash.lyx
@@ -370,7 +380,6 @@ ${SHARE_DIR}/examples/it/splash.lyx
 ${SHARE_DIR}/examples/ja/Braille.lyx
 ${SHARE_DIR}/examples/ja/FeynmanDiagrams.lyx
 ${SHARE_DIR}/examples/ja/MultilingualCaptions.lyx
-${SHARE_DIR}/examples/ja/R-S-statements.lyx
 ${SHARE_DIR}/examples/ja/beamer.lyx
 ${SHARE_DIR}/examples/ja/knitr.lyx
 ${SHARE_DIR}/examples/ja/lilypond.lyx
@@ -387,6 +396,8 @@ ${SHARE_DIR}/examples/linguistics.lyx
 ${SHARE_DIR}/examples/listerrors.lyx
 ${SHARE_DIR}/examples/localization_test.lyx
 ${SHARE_DIR}/examples/longsheet.gnumeric
+${SHARE_DIR}/examples/minted-filelisting.lyx
+${SHARE_DIR}/examples/minted-listings.lyx
 ${SHARE_DIR}/examples/modernCV.lyx
 ${SHARE_DIR}/examples/nb/eksempel_lyxet.lyx
 ${SHARE_DIR}/examples/nb/eksempel_txt.lyx
@@ -398,11 +409,13 @@ ${SHARE_DIR}/examples/nl/voorbeeld_verlyxt.lyx
 ${SHARE_DIR}/examples/noweb2lyx.lyx
 ${SHARE_DIR}/examples/paralist.lyx
 ${SHARE_DIR}/examples/pl/splash.lyx
-${SHARE_DIR}/examples/powerdot-example.lyx
+${SHARE_DIR}/examples/powerdot.lyx
 ${SHARE_DIR}/examples/pt_BR/splash.lyx
 ${SHARE_DIR}/examples/pt_PT/splash.lyx
 ${SHARE_DIR}/examples/recipebook.lyx
 ${SHARE_DIR}/examples/ro/splash.lyx
+${SHARE_DIR}/examples/ru/example_lyxified.lyx
+${SHARE_DIR}/examples/ru/example_raw.lyx
 ${SHARE_DIR}/examples/ru/splash.lyx
 ${SHARE_DIR}/examples/script_form.lyx
 ${SHARE_DIR}/examples/seminar.lyx
@@ -462,7 +475,6 @@ ${SHARE_DIR}/examples/varwidth-floats-side-by-side.lyx
 ${SHARE_DIR}/examples/xyfigure.lyx
 ${SHARE_DIR}/examples/xyfigure.png
 ${SHARE_DIR}/examples/xypic.lyx
-${SHARE_DIR}/external_templates
 ${SHARE_DIR}/fonts/BaKoMaFontLicense.txt
 ${SHARE_DIR}/fonts/ReadmeBaKoMa4LyX.txt
 ${SHARE_DIR}/fonts/cmex10.ttf
@@ -684,6 +696,7 @@ ${SHARE_DIR}/images/classic/textstyle-apply.png
 ${SHARE_DIR}/images/classic/thesaurus-entry.png
 ${SHARE_DIR}/images/classic/toolbar-toggle_math.png
 ${SHARE_DIR}/images/classic/toolbar-toggle_math_panels.png
+${SHARE_DIR}/images/classic/toolbar-toggle_review.png
 ${SHARE_DIR}/images/classic/toolbar-toggle_table.png
 ${SHARE_DIR}/images/classic/undo.png
 ${SHARE_DIR}/images/classic/unknown.png
@@ -723,6 +736,7 @@ ${SHARE_DIR}/images/dialog-toggle_toc.svgz
 ${SHARE_DIR}/images/down.svgz
 ${SHARE_DIR}/images/editclear.svgz
 ${SHARE_DIR}/images/emblem-readonly.svgz
+${SHARE_DIR}/images/emblem-shellescape.svgz
 ${SHARE_DIR}/images/ert-insert.svgz
 ${SHARE_DIR}/images/file-open.svgz
 ${SHARE_DIR}/images/float-insert_figure.svgz
@@ -1404,6 +1418,7 @@ ${SHARE_DIR}/images/math/mathbb_Q.svgz
 ${SHARE_DIR}/images/math/mathbb_R.svgz
 ${SHARE_DIR}/images/math/mathbb_Z.svgz
 ${SHARE_DIR}/images/math/mathbf.svgz
+${SHARE_DIR}/images/math/mathbin.svgz
 ${SHARE_DIR}/images/math/mathcal.svgz
 ${SHARE_DIR}/images/math/mathcal_F.svgz
 ${SHARE_DIR}/images/math/mathcal_H.svgz
@@ -1415,7 +1430,10 @@ ${SHARE_DIR}/images/math/mathdollar.svgz
 ${SHARE_DIR}/images/math/mathfrak.svgz
 ${SHARE_DIR}/images/math/mathit.svgz
 ${SHARE_DIR}/images/math/mathllap.svgz
+${SHARE_DIR}/images/math/mathop.svgz
+${SHARE_DIR}/images/math/mathord.svgz
 ${SHARE_DIR}/images/math/mathparagraph.svgz
+${SHARE_DIR}/images/math/mathrel.svgz
 ${SHARE_DIR}/images/math/mathring.svgz
 ${SHARE_DIR}/images/math/mathrlap.svgz
 ${SHARE_DIR}/images/math/mathrm.svgz
@@ -2006,6 +2024,7 @@ ${SHARE_DIR}/images/oxygen/textstyle-apply.svgz
 ${SHARE_DIR}/images/oxygen/thesaurus-entry.svgz
 ${SHARE_DIR}/images/oxygen/toolbar-toggle_math.svgz
 ${SHARE_DIR}/images/oxygen/toolbar-toggle_math_panels.svgz
+${SHARE_DIR}/images/oxygen/toolbar-toggle_review.svgz
 ${SHARE_DIR}/images/oxygen/toolbar-toggle_table.svgz
 ${SHARE_DIR}/images/oxygen/undo.svgz
 ${SHARE_DIR}/images/oxygen/unknown.svgz
@@ -2074,6 +2093,7 @@ ${SHARE_DIR}/images/textstyle-apply.svgz
 ${SHARE_DIR}/images/thesaurus-entry.svgz
 ${SHARE_DIR}/images/toolbar-toggle_math.svgz
 ${SHARE_DIR}/images/toolbar-toggle_math_panels.svgz
+${SHARE_DIR}/images/toolbar-toggle_review.svgz
 ${SHARE_DIR}/images/toolbar-toggle_table.svgz
 ${SHARE_DIR}/images/undo.svgz
 ${SHARE_DIR}/images/unknown.svgz
@@ -2148,6 +2168,7 @@ ${SHARE_DIR}/layouts/achemso.layout
 ${SHARE_DIR}/layouts/acm-sigs-alt.layout
 ${SHARE_DIR}/layouts/acm-sigs.inc
 ${SHARE_DIR}/layouts/acm-sigs.layout
+${SHARE_DIR}/layouts/acmart.layout
 ${SHARE_DIR}/layouts/acmsiggraph-0-92.layout
 ${SHARE_DIR}/layouts/acmsiggraph.layout
 ${SHARE_DIR}/layouts/agu-dtd.layout
@@ -2168,13 +2189,16 @@ ${SHARE_DIR}/layouts/apa6.layout
 ${SHARE_DIR}/layouts/arab-article.layout
 ${SHARE_DIR}/layouts/article-beamer.layout
 ${SHARE_DIR}/layouts/article.layout
-${SHARE_DIR}/layouts/basic.module
 ${SHARE_DIR}/layouts/beamer.layout
 ${SHARE_DIR}/layouts/beamerposter.layout
 ${SHARE_DIR}/layouts/bicaption.module
 ${SHARE_DIR}/layouts/book.layout
 ${SHARE_DIR}/layouts/braille.module
 ${SHARE_DIR}/layouts/broadway.layout
+${SHARE_DIR}/layouts/bxjsarticle.layout
+${SHARE_DIR}/layouts/bxjsbook.layout
+${SHARE_DIR}/layouts/bxjsreport.layout
+${SHARE_DIR}/layouts/bxjsslide.layout
 ${SHARE_DIR}/layouts/changebars.module
 ${SHARE_DIR}/layouts/chess.layout
 ${SHARE_DIR}/layouts/cl2emult.layout
@@ -2242,7 +2266,6 @@ ${SHARE_DIR}/layouts/jreport.layout
 ${SHARE_DIR}/layouts/jsarticle.layout
 ${SHARE_DIR}/layouts/jsbook.layout
 ${SHARE_DIR}/layouts/jss.layout
-${SHARE_DIR}/layouts/jurabib.module
 ${SHARE_DIR}/layouts/kluwer.layout
 ${SHARE_DIR}/layouts/knitr.module
 ${SHARE_DIR}/layouts/latex8.layout
@@ -2262,7 +2285,6 @@ ${SHARE_DIR}/layouts/multicol.module
 ${SHARE_DIR}/layouts/mwart.layout
 ${SHARE_DIR}/layouts/mwbk.layout
 ${SHARE_DIR}/layouts/mwrep.layout
-${SHARE_DIR}/layouts/natbib.module
 ${SHARE_DIR}/layouts/natbibapa.module
 ${SHARE_DIR}/layouts/noweb.module
 ${SHARE_DIR}/layouts/numarticle.inc
@@ -2302,6 +2324,7 @@ ${SHARE_DIR}/layouts/stdciteformats.inc
 ${SHARE_DIR}/layouts/stdclass.inc
 ${SHARE_DIR}/layouts/stdcounters.inc
 ${SHARE_DIR}/layouts/stdcustom.inc
+${SHARE_DIR}/layouts/stdfloatnames.inc
 ${SHARE_DIR}/layouts/stdfloats.inc
 ${SHARE_DIR}/layouts/stdinsets.inc
 ${SHARE_DIR}/layouts/stdlayouts.inc
@@ -2313,6 +2336,7 @@ ${SHARE_DIR}/layouts/stdsections.inc
 ${SHARE_DIR}/layouts/stdstarsections.inc
 ${SHARE_DIR}/layouts/stdstruct.inc
 ${SHARE_DIR}/layouts/stdtitle.inc
+${SHARE_DIR}/layouts/subequations.module
 ${SHARE_DIR}/layouts/svcommon.inc
 ${SHARE_DIR}/layouts/svglobal.layout
 ${SHARE_DIR}/layouts/svglobal3.layout
@@ -2327,7 +2351,10 @@ ${SHARE_DIR}/layouts/tbook.layout
 ${SHARE_DIR}/layouts/tcolorbox.module
 ${SHARE_DIR}/layouts/theorems-ams-bytype.inc
 ${SHARE_DIR}/layouts/theorems-ams-bytype.module
+${SHARE_DIR}/layouts/theorems-ams-chap-bytype.inc
+${SHARE_DIR}/layouts/theorems-ams-chap-bytype.module
 ${SHARE_DIR}/layouts/theorems-ams-extended-bytype.module
+${SHARE_DIR}/layouts/theorems-ams-extended-chap-bytype.module
 ${SHARE_DIR}/layouts/theorems-ams-extended.module
 ${SHARE_DIR}/layouts/theorems-ams.inc
 ${SHARE_DIR}/layouts/theorems-ams.module
@@ -2422,6 +2449,9 @@ ${SHARE_DIR}/lyx2lyx/lyx_2_1.pyo
 ${SHARE_DIR}/lyx2lyx/lyx_2_2.py
 ${SHARE_DIR}/lyx2lyx/lyx_2_2.pyc
 ${SHARE_DIR}/lyx2lyx/lyx_2_2.pyo
+${SHARE_DIR}/lyx2lyx/lyx_2_3.py
+${SHARE_DIR}/lyx2lyx/lyx_2_3.pyc
+${SHARE_DIR}/lyx2lyx/lyx_2_3.pyo
 ${SHARE_DIR}/lyx2lyx/parser_tools.py
 ${SHARE_DIR}/lyx2lyx/parser_tools.pyc
 ${SHARE_DIR}/lyx2lyx/parser_tools.pyo
@@ -2440,12 +2470,12 @@ ${SHARE_DIR}/scripts/clean_dvi.py
 ${SHARE_DIR}/scripts/convertDefault.py
 ${SHARE_DIR}/scripts/convert_pdf.py
 ${SHARE_DIR}/scripts/csv2lyx.py
-${SHARE_DIR}/scripts/date.py
 ${SHARE_DIR}/scripts/ext_copy.py
 ${SHARE_DIR}/scripts/fen2ascii.py
 ${SHARE_DIR}/scripts/fig2pdftex.py
 ${SHARE_DIR}/scripts/fig2pstex.py
 ${SHARE_DIR}/scripts/fig_copy.py
+${SHARE_DIR}/scripts/gnuplot2pdf.py
 ${SHARE_DIR}/scripts/html2latexwrapper.py
 ${SHARE_DIR}/scripts/include_bib.py
 ${SHARE_DIR}/scripts/layout2layout.py
@@ -2457,17 +2487,16 @@ ${SHARE_DIR}/scripts/lyxpreview2bitmap.py
 ${SHARE_DIR}/scripts/lyxpreview_tools.py
 ${SHARE_DIR}/scripts/lyxstangle.R
 ${SHARE_DIR}/scripts/lyxsweave.R
+${SHARE_DIR}/scripts/prefTest.pl.in
 ${SHARE_DIR}/scripts/prefs2prefs.py
 ${SHARE_DIR}/scripts/prefs2prefs_lfuns.py
 ${SHARE_DIR}/scripts/prefs2prefs_prefs.py
+${SHARE_DIR}/scripts/svg2pdftex.py
+${SHARE_DIR}/scripts/svg2pstex.py
 ${SHARE_DIR}/scripts/tex_copy.py
 ${SHARE_DIR}/symbols
 ${SHARE_DIR}/syntax.default
-${SHARE_DIR}/templates/ACM-SIGS.lyx
-${SHARE_DIR}/templates/ACM-siggraph.lyx
-${SHARE_DIR}/templates/ACM-sigplan.lyx
 ${SHARE_DIR}/templates/AEA.lyx
-${SHARE_DIR}/templates/AGUTeX.lyx
 ${SHARE_DIR}/templates/APA.lyx
 ${SHARE_DIR}/templates/APA6.lyx
 ${SHARE_DIR}/templates/DocBook_article.lyx
@@ -2487,6 +2516,7 @@ ${SHARE_DIR}/templates/README.new_templates
 ${SHARE_DIR}/templates/RJournal.lyx
 ${SHARE_DIR}/templates/aa.lyx
 ${SHARE_DIR}/templates/aastex6.lyx
+${SHARE_DIR}/templates/acmart.lyx
 ${SHARE_DIR}/templates/beamer-conference-ornate-20min.lyx
 ${SHARE_DIR}/templates/ctex.lyx
 ${SHARE_DIR}/templates/de_beamer-conference-ornate-20min.lyx
@@ -2496,8 +2526,6 @@ ${SHARE_DIR}/templates/elsarticle.lyx
 ${SHARE_DIR}/templates/es_beamer-conference-ornate-20min.lyx
 ${SHARE_DIR}/templates/fr_beamer-conference-ornate-20min.lyx
 ${SHARE_DIR}/templates/frletter.lyx
-${SHARE_DIR}/templates/g-brief-de.lyx
-${SHARE_DIR}/templates/g-brief-en.lyx
 ${SHARE_DIR}/templates/g-brief2.lyx
 ${SHARE_DIR}/templates/hollywood.lyx
 ${SHARE_DIR}/templates/ja_beamer-conference-ornate-20min.lyx
@@ -2505,6 +2533,12 @@ ${SHARE_DIR}/templates/kluwer.lyx
 ${SHARE_DIR}/templates/koma-letter2.lyx
 ${SHARE_DIR}/templates/letter.lyx
 ${SHARE_DIR}/templates/lettre.lyx
+${SHARE_DIR}/templates/obsolete/ACM-SIGS.lyx
+${SHARE_DIR}/templates/obsolete/ACM-siggraph.lyx
+${SHARE_DIR}/templates/obsolete/ACM-sigplan.lyx
+${SHARE_DIR}/templates/obsolete/AGUTeX.lyx
+${SHARE_DIR}/templates/obsolete/g-brief-de.lyx
+${SHARE_DIR}/templates/obsolete/g-brief-en.lyx
 ${SHARE_DIR}/templates/poster-a0poster-colored.lyx
 ${SHARE_DIR}/templates/poster-a0poster-simple.lyx
 ${SHARE_DIR}/templates/poster-beamerposter.lyx
@@ -2523,3 +2557,12 @@ ${SHARE_DIR}/ui/stdcontext.inc
 ${SHARE_DIR}/ui/stdmenus.inc
 ${SHARE_DIR}/ui/stdtoolbars.inc
 ${SHARE_DIR}/unicodesymbols
+${SHARE_DIR}/xtemplates/chess.xtemplate
+${SHARE_DIR}/xtemplates/dia.xtemplate
+${SHARE_DIR}/xtemplates/gnumeric.xtemplate
+${SHARE_DIR}/xtemplates/inkscape.xtemplate
+${SHARE_DIR}/xtemplates/lilypond.xtemplate
+${SHARE_DIR}/xtemplates/pdfpages.xtemplate
+${SHARE_DIR}/xtemplates/raster_image.xtemplate
+${SHARE_DIR}/xtemplates/vector_graphics.xtemplate
+${SHARE_DIR}/xtemplates/xfig.xtemplate
