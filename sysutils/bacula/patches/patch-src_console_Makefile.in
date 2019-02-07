@@ -1,0 +1,47 @@
+$NetBSD: patch-src_console_Makefile.in,v 1.1 2019/02/07 11:29:31 markd Exp $
+
+- use %%EXAMPLESDIR%% instead of sysconfdir
+- use the .la files for linking
+
+--- src/console/Makefile.in.orig	2018-12-21 08:40:51.000000000 +0000
++++ src/console/Makefile.in
+@@ -50,12 +50,12 @@ all: Makefile bconsole @STATIC_CONS@ bbc
+ 
+ bconsole: Makefile $(CONSOBJS) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE)
+ 	$(LIBTOOL_LINK) $(CXX) $(LDFLAGS) $(CONS_LDFLAGS) -L../lib -L../cats -o $@ $(CONSOBJS) \
+-	      $(DLIB) $(CONS_LIBS) -lbaccfg -lbac -lm $(LIBS) $(GETTEXT_LIBS) \
++	      $(DLIB) $(CONS_LIBS) ../lib/libbaccfg.la ../lib/libbac.la -lm $(LIBS) $(GETTEXT_LIBS) \
+ 	      $(OPENSSL_LIBS)
+ 
+ bbconsjson: Makefile $(JSONOBJS) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE)
+ 	$(LIBTOOL_LINK) $(CXX) $(LDFLAGS) $(CONS_LDFLAGS) -L../lib -L../cats -o $@ $(JSONOBJS) \
+-	      $(DLIB) $(CONS_LIBS) -lbaccfg -lbac -lm $(LIBS) $(GETTEXT_LIBS) \
++	      $(DLIB) $(CONS_LIBS) ../lib/libbaccfg.la ../lib/libbac.la -lm $(LIBS) $(GETTEXT_LIBS) \
+ 	      $(OPENSSL_LIBS)
+ 
+ static-bconsole: Makefile $(CONSOBJS) ../lib/libbac.a ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE)
+@@ -98,19 +98,19 @@ install: all
+ 	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM_ALL) bconsole $(DESTDIR)$(sbindir)/bconsole
+ 	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) bbconsjson $(DESTDIR)$(sbindir)/bbconsjson
+ 	@srcconf=bconsole.conf; \
+-	if  test -f ${DESTDIR}${sysconfdir}/$$srcconf; then \
++	if  test -f ${DESTDIR}%%EXAMPLESDIR%%/$$srcconf; then \
+ 	   destconf=$$srcconf.new; \
+ 	   echo "  ==> Found existing $$srcconf, installing new conf file as $$destconf"; \
+ 	else \
+ 	   destconf=$$srcconf; \
+-	   if  test -f ${DESTDIR}${sysconfdir}/console.conf; then \
++	   if  test -f ${DESTDIR}%%EXAMPLESDIR%%/console.conf; then \
+ 	      echo "Existing console.conf moved to bconsole.conf"; \
+-	      @$(MV) ${DESTDIR}${sysconfdir}/console.conf ${DESTDIR}${sysconfdir}/bconsole.conf; \
++	      @$(MV) ${DESTDIR}%%EXAMPLESDIR%%/console.conf ${DESTDIR}%%EXAMPLESDIR%%/bconsole.conf; \
+ 	      destconf=$$srcconf.new; \
+ 	   fi; \
+ 	fi; \
+-	echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}${sysconfdir}/$$destconf"; \
+-	${INSTALL_CONFIG} $$srcconf ${DESTDIR}${sysconfdir}/$$destconf
++	echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}%%EXAMPLESDIR%%/$$destconf"; \
++	${INSTALL_CONFIG} $$srcconf ${DESTDIR}%%EXAMPLESDIR%%/$$destconf
+ 	if test -f static-bconsole; then \
+ 	   $(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) static-bconsole $(DESTDIR)$(sbindir)/static-bconsole; \
+ 	fi
