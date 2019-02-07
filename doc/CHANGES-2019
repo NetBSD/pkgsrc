@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.630 2019/02/07 14:29:43 nia Exp $
+$NetBSD: CHANGES-2019,v 1.631 2019/02/07 15:14:16 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1235,3 +1235,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added ham/kalibrate-hackrf version 20160704 [tnn 2019-02-07]
 	Added ham/kalibrate-rtl version 20131215 [tnn 2019-02-07]
 	Updated chat/atheme to 7.2.9 [nia 2019-02-07]
+	Updated chat/eggdrop to 1.8.4 [nia 2019-02-07]
