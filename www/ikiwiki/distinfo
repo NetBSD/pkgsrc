@@ -1,10 +1,7 @@
-$NetBSD: distinfo,v 1.130 2018/10/22 04:33:25 schmonz Exp $
+$NetBSD: distinfo,v 1.131 2019/02/07 15:47:32 schmonz Exp $
 
-SHA1 (ikiwiki_3.20180311.orig.tar.xz) = 9c567bb9f46e8a86a41ddc2358d0426248934e33
-RMD160 (ikiwiki_3.20180311.orig.tar.xz) = 22a2f1963e73fae82a7a6a29c84488c898c7c4fa
-SHA512 (ikiwiki_3.20180311.orig.tar.xz) = 12042d90217995eb43d47df1e81cbced825fc2b2262893680447448abac88ef5279bcddd6c438613b41c4f35308a4f1e8d23157e018bb99d883bc0941af1d469
-Size (ikiwiki_3.20180311.orig.tar.xz) = 2639052 bytes
-SHA1 (patch-IkiWiki_Plugin_graphviz.pm) = 7fb033dfa46a3cdffd591fcf6af338399107572b
-SHA1 (patch-IkiWiki_Wrapper.pm) = 68a9c4c64b5e95bbb6dec721ea95dc27cecb1bc9
-SHA1 (patch-doc_ikiwiki_directive_graph.mdwn) = 78e3a7e2151ab122fe770b3a0d75759a00e978a2
+SHA1 (ikiwiki_3.20190207.orig.tar.xz) = 3caa33eebec59eca406159b9862eae8f5cb77aa6
+RMD160 (ikiwiki_3.20190207.orig.tar.xz) = 5ac30ade28070a53413554e95de5e68e886fce05
+SHA512 (ikiwiki_3.20190207.orig.tar.xz) = f5b6961a4efe11d0911d96bfa7cc28643cbeaa1654f12c63053eb8ac070bc7f622942386b3b2a150f09bffd66a572a96e981fa111f3bdffa6844124feb91c32a
+Size (ikiwiki_3.20190207.orig.tar.xz) = 2668840 bytes
 SHA1 (patch-ikiwiki-mass-rebuild) = b8d5785d77736508de9cfc0f059cc36e0e607bce
