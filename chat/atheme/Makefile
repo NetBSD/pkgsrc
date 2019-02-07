@@ -1,26 +1,26 @@
-# $NetBSD: Makefile,v 1.15 2017/08/01 17:40:09 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2019/02/07 14:29:20 nia Exp $
 #
 
-DISTNAME=	atheme-services-3.0.4
-PKGNAME=	${DISTNAME:S/-services//}
-PKGREVISION=	5
+DISTNAME=	atheme-7.2.9
 CATEGORIES=	chat
-# Gives 401
-#MASTER_SITES=	http://distfiles.atheme.org/
-EXTRACT_SUFX=	.tbz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=atheme/}
+EXTRACT_SUFX=	.tar.bz2
+GITHUB_PROJECT=	atheme
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://www.atheme.org/
+HOMEPAGE=	https://atheme.github.io/atheme.html
 COMMENT=	Flexible IRC services system with proven scalability
+LICENSE=	isc
 
 .include "../../mk/bsd.prefs.mk"
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		gmake pkg-config msgfmt msgmerge xgettext
 BUILD_DEFS+=		VARBASE
 PKG_SYSCONFSUBDIR=	atheme
 EGDIR=			${PREFIX}/share/examples/atheme
-DOC_FILES=		INSTALL README
+DOC_FILES=		INSTALL README.md
 MAKE_JOBS_SAFE=		NO
 ATHEME_USER?=		atheme
 ATHEME_GROUP?=		atheme
@@ -48,11 +48,11 @@ PLIST.posixcrypt=	yes
 
 CFLAGS.SunOS+=		-Dfaultcode_t=foo_faultcode_t -Dboolean_t=foo_boolean_t
 
+CONFIGURE_ARGS+=	--with-libmowgli=no # use internal libmowgli
+CONFIGURE_ARGS+=	--enable-reproducible-builds
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--enable-fhs-paths
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-
-PKGCONFIG_OVERRIDE+=	libmowgli/libmowgli.pc.in
 
 CONF_FILES_PERMS=	${EGDIR}/atheme.conf.example \
 			${PKG_SYSCONFDIR}/atheme.conf \
@@ -62,6 +62,9 @@ CONF_FILES_PERMS+=	${EGDIR}/atheme.cron.example \
 			${ATHEME_USER} ${ATHEME_GROUP} 0660
 CONF_FILES_PERMS+=	${EGDIR}/atheme.motd.example \
 			${PKG_SYSCONFDIR}/atheme.motd \
+			${ATHEME_USER} ${ATHEME_GROUP} 0660
+CONF_FILES_PERMS+=	${EGDIR}/atheme.conf.operserv-example \
+			${PKG_SYSCONFDIR}/atheme.conf.operserv \
 			${ATHEME_USER} ${ATHEME_GROUP} 0660
 CONF_FILES_PERMS+=	${EGDIR}/atheme.conf.userserv-example \
 			${PKG_SYSCONFDIR}/atheme.conf.userserv \
@@ -77,17 +80,29 @@ MAKE_DIRS_PERMS+=	${VARBASE}/run/atheme \
 INSTALLATION_DIRS+=	${EGDIR}
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/dist/atheme.conf.example \
+	${MV} ${DESTDIR}${PREFIX}/bin/dbverify \
+	    ${DESTDIR}${PREFIX}/bin/atheme-dbverify
+	${MV} ${DESTDIR}${PREFIX}/bin/ecdsakeygen \
+	    ${DESTDIR}${PREFIX}/bin/atheme-ecdsakeygen
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/atheme.conf.example \
 	    ${DESTDIR}${EGDIR}/atheme.conf.example
-	${INSTALL_DATA} ${WRKSRC}/dist/atheme.conf.userserv-example \
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/atheme.conf.operserv-example \
+	    ${DESTDIR}${EGDIR}/atheme.conf.operserv-example
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/atheme.conf.userserv-example \
 	    ${DESTDIR}${EGDIR}/atheme.conf.userserv-example
-	${INSTALL_DATA} ${WRKSRC}/dist/atheme.cron.example \
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/atheme.cron.example \
 	    ${DESTDIR}${EGDIR}/atheme.cron.example
-	${INSTALL_DATA} ${WRKSRC}/dist/atheme.motd.example \
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/atheme.motd.example \
 	    ${DESTDIR}${EGDIR}/atheme.motd.example
-.	for i in ${DOC_FILES}
-		${INSTALL_DATA} ${WRKSRC}/${i} ${DESTDIR}${PREFIX}/share/doc/atheme/
-.	endfor
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/atheme.motd \
+	    ${DESTDIR}${EGDIR}/atheme.motd
+.for i in ${DOC_FILES}
+	${INSTALL_DATA} ${WRKSRC}/${i} ${DESTDIR}${PREFIX}/share/doc/atheme/
+.endfor
 
-.include "../../devel/libmowgli/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../converters/qrencode/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
