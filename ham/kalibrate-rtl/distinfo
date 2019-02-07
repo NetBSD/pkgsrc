@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2019/02/07 14:03:50 tnn Exp $
+
+SHA1 (kalibrate-rtl-20131215-aae11c8a8dc79692a94ccfee39ba01e8c8c05d38.tar.gz) = eb3a199c307dc6f09aa7e17da2cc03e346e71305
+RMD160 (kalibrate-rtl-20131215-aae11c8a8dc79692a94ccfee39ba01e8c8c05d38.tar.gz) = 853deb328250dc1a162cb8cc5f4ddd4903ef880d
+SHA512 (kalibrate-rtl-20131215-aae11c8a8dc79692a94ccfee39ba01e8c8c05d38.tar.gz) = 616cd296028e3010be6bfa21f95b51a95f6a38d51311472d17bad2ff0f45da18519e23c101c558793532a8b4f2628355c7e6347f26a6dddc044518f9fb378537
+Size (kalibrate-rtl-20131215-aae11c8a8dc79692a94ccfee39ba01e8c8c05d38.tar.gz) = 17229 bytes
+SHA1 (patch-src_kal.cc) = c4d8ffc72ea0d30eff21bab361ed9f2f8ba906c5
