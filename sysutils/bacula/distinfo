@@ -1,25 +1,25 @@
-$NetBSD: distinfo,v 1.52 2015/11/04 01:32:06 agc Exp $
+$NetBSD: distinfo,v 1.53 2019/02/07 11:29:31 markd Exp $
 
-SHA1 (bacula-5.2.13.tar.gz) = 30b1eb2efb515138807163d046f675eaa29fad1c
-RMD160 (bacula-5.2.13.tar.gz) = bcc168143c0eec5cb5e983f765935534379f4fcf
-SHA512 (bacula-5.2.13.tar.gz) = dfdff353f5b6ed4d85013dc292526706bbd67066f7057a114012172926c819c8df1eb8779166d5a90db3a49a5584f0a8daf7566cc93cf4fa3f1bdda245b55cf0
-Size (bacula-5.2.13.tar.gz) = 4243395 bytes
-SHA1 (patch-ac) = 4ba89bcf49ce82b527edc789e2b17a781cb8622e
+SHA1 (bacula-9.4.1.tar.gz) = a8094933d081b63cf8d9781c930d70200375fc04
+RMD160 (bacula-9.4.1.tar.gz) = 64851aada491ea13e4e1b6a08466a6360621a95c
+SHA512 (bacula-9.4.1.tar.gz) = 5e05a939c5f457a121879a6108ce2ac6403dde556b415af4e5013e4f100cf4d878f3d468fd680fa1633a4c8d6ce3d7a6ed351a1600ef780166cd4be9b70191ee
+Size (bacula-9.4.1.tar.gz) = 4162956 bytes
 SHA1 (patch-ad) = ce6bc29858d13dff1a0301db95f9bfedf3e66b01
-SHA1 (patch-ah) = 06452df1449ed6f06af00ed2cf9d736c40044dfb
-SHA1 (patch-ai) = 388e075e7ec54fb377ee9dbe8338c667efb256ee
 SHA1 (patch-aj) = 125d1503406474fec32e737068328cdfa718f5c2
-SHA1 (patch-am) = 28536d3f0de81940773749c3704ad7aca86d374d
-SHA1 (patch-configure) = 710d6e4370099a5d6d23d1297864af01abcdae83
+SHA1 (patch-configure) = 94e6714a6d19ae07c1141c59702b546e595e0bb1
+SHA1 (patch-scripts_baculabackupreport.in) = 58047124ad82dd5d0f2aa786251ba012ae7f07b0
 SHA1 (patch-src_bacula.h) = 74fed45f9d441a132f113fdfd783b8f5bb077885
-SHA1 (patch-src_console_conio.c) = bfec27296d145ab94c305cc5ffca7f892c14303e
-SHA1 (patch-src_dird_Makefile.in) = fdce18aca972f26f16af90283756cd5bf5ad5831
-SHA1 (patch-src_filed_Makefile.in) = c88ee648ef33c3f7c3a02b77b1d3fc3da8da088d
-SHA1 (patch-src_findlib_attribs.c) = a0917e500d7e937164cf59917cabd992512acd1d
+SHA1 (patch-src_console_Makefile.in) = f997b8f8bc8c7cca5b06a8f046558951caa14094
+SHA1 (patch-src_console_conio.c) = 92445b01e2ad17de5215315df916f1f1bd45108b
+SHA1 (patch-src_dird_Makefile.in) = 0f088f3af4bcacb260fb50124723babd69f5caee
+SHA1 (patch-src_filed_Makefile.in) = 237c8ccf0750ef33223664e316a0533fc260371a
+SHA1 (patch-src_filed_bxattr.c) = 2689b8bb6f5ddf14d7253e45353c5a40e5e9867e
+SHA1 (patch-src_filed_bxattr__netbsd.c) = bc2a0417c852b76ddc4324c39ae5f6ec0387ab30
+SHA1 (patch-src_filed_bxattr__netbsd.h) = 791a2da696da049a6091c4c460aec0bd00dfa5ff
+SHA1 (patch-src_findlib_attribs.c) = f3665a012e3a0cc06ff2c9ab922324b1df3b2819
 SHA1 (patch-src_lib_attr.c) = 287851ff2ce2a0868d597cf1d7471a6766f6f7c1
-SHA1 (patch-src_lib_md5.c) = a359bb9988538f02d5a14bf3ddac23f7ea64bea6
 SHA1 (patch-src_plugins_fd_Makefile.in) = f1316cdbb66d9bc55d8adbd4b0bbde01443ccd2e
-SHA1 (patch-src_plugins_fd_fd__common.h) = 7c8419d4fa7f1fe8a07e2bc2720a4903ff324135
 SHA1 (patch-src_qt-console_bat.pro.in) = 8df9381c0b35b5a3dcd237f8c017ae21d88c79ad
-SHA1 (patch-src_stored_Makefile.in) = 5bee8ea8a7c288a1e4baf372ef79da34c9e35284
-SHA1 (patch-src_tools_Makefile.in) = dca0472c31ced76b8d5a357ef968ddc3f93faf5b
+SHA1 (patch-src_qt-console_tray-monitor_tray-monitor.pro.in) = 83b48b321de88aa766aa2fc082c95a3a8665981d
+SHA1 (patch-src_stored_Makefile.in) = 2c1a2b095593f88649bd0dc21f03cfbd24894fb5
+SHA1 (patch-src_tools_Makefile.in) = f53379b99b11b673ac1d0b8ed7ff64614def49b5
