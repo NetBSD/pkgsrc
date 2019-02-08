@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.27 2015/11/03 01:20:23 agc Exp $
+$NetBSD: distinfo,v 1.28 2019/02/08 14:56:01 nia Exp $
 
-SHA1 (psi-0.15/psi-0.15.tar.bz2) = 4801866d4fa2af43a9b3f431e2c9d633a97276db
-RMD160 (psi-0.15/psi-0.15.tar.bz2) = 0c5d461fb2b7e7b25850f19f79bcc23c1e87efb3
-SHA512 (psi-0.15/psi-0.15.tar.bz2) = 17e972adc8dfc541977e3717c21eb694f4e1268e4719e97432f260682867290d7034b98a345b6efd73026f98a425493e9159fef9c0e0af4c83b02e07d29a704a
-Size (psi-0.15/psi-0.15.tar.bz2) = 1984777 bytes
-SHA1 (patch-ad) = 3ee21a1cb17637ed650b6b58e5575c8fa246a4f0
-SHA1 (patch-ah) = 1c50b81daf5c4e9a4fcefc102ba5780ae90cf44e
-SHA1 (patch-ak) = f3870be31be769ac51a3f26a1fc6f6e14564e685
-SHA1 (patch-al) = 44d17e5ca70061c13164cadf69b8a5f84648c177
-SHA1 (patch-src_src.pro) = d35d1f22b91b8ca14692c4b5bfb13d11f1d06c34
+SHA1 (psi-1.4/psi-1.4.tar.xz) = 55c61cc0c1e3990f5a97619dc79fbe320f778770
+RMD160 (psi-1.4/psi-1.4.tar.xz) = 2f047baa0e2af16c949f6bb33667124253e231e4
+SHA512 (psi-1.4/psi-1.4.tar.xz) = 9bb8da58809270e5387e024f5ea031e28441e66cde53cde219beebe7b46bfa5c41d0a86110d1936d0ac2e15483ffb947f8998cbeeb415f72553cb78b67c57ed1
+Size (psi-1.4/psi-1.4.tar.xz) = 2119840 bytes
+SHA1 (patch-src_accountmanagedlg.cpp) = ca40ab15b01121a327b4774fb9f6284341f055bd
+SHA1 (patch-src_options_opt__application.cpp) = b0ddccbd3ffec0d89daa85e92f0ef06bc2d7fe68
