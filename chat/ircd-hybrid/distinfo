@@ -1,20 +1,8 @@
-$NetBSD: distinfo,v 1.16 2015/11/03 01:20:20 agc Exp $
+$NetBSD: distinfo,v 1.17 2019/02/08 13:09:35 fox Exp $
 
-SHA1 (ircd-hybrid-7.2.3.tgz) = f8a61e5500d28a4b4cded5f096c3627c2e5f01a0
-RMD160 (ircd-hybrid-7.2.3.tgz) = 58bec65da2492480b9a4e86777c6c19a4b568408
-SHA512 (ircd-hybrid-7.2.3.tgz) = 2375789515718e30894a9998e63075b94dab44f04b5b9de6a29ab126ef1681713bfdd6b5b0040ee9f13f271a7e613a04047b556f15efa3fc824032898d6a8078
-Size (ircd-hybrid-7.2.3.tgz) = 1010625 bytes
-SHA1 (patch-aa) = 05d1b2a8372650d5eefb92cc674c3b985b945ace
-SHA1 (patch-ab) = fde28c63ac049475ce1c4035958d430ac3b6934c
-SHA1 (patch-ac) = 09bab43df924da90cc6c19bbdbf9431d444475cf
-SHA1 (patch-ad) = 04cb6e2339f2ac0be734510a9040985a3d57ba54
-SHA1 (patch-ae) = 888cfb10f3637daac29f7e9a71865a5d2ed93024
-SHA1 (patch-af) = 98f8e425e935f468de1ae3b29e4a81e8188f90a8
-SHA1 (patch-ag) = 34e4e1d6af0398f893916b8daef666103cb4d005
-SHA1 (patch-ah) = 398bff5e39ce04eccd959b612c84282c26e02224
-SHA1 (patch-ai) = 85e2f0650e22d8b948f65f66c6f35a9465f07b53
-SHA1 (patch-include_memory_h) = dbfa0d3987716e70464054d4f67facd42f3b1973
-SHA1 (patch-include_tools.h) = 1381a32a05095d9e40fcc929db5fa8f2fb7e048d
-SHA1 (patch-servlink_makefile_in) = d8f3b2d5877b0851a9e10fb1ebb201f9cfcfb162
-SHA1 (patch-src_hostmask.c) = e9fba90ea737c0b13ec92db5014d696beebdac43
-SHA1 (patch-src_makefile_in) = d92326eb9bcc9db84add691561a2319881e118b3
+SHA1 (ircd-hybrid-8.2.24.tgz) = 756df9c5b37f6a888cdc20c93df5969f5e57ba67
+RMD160 (ircd-hybrid-8.2.24.tgz) = a3021dd95927f7d162de95f47944ec15b1aa6614
+SHA512 (ircd-hybrid-8.2.24.tgz) = 48f68bf1fdb50b446387a310ff45d3cdf2a068d7eca97afa1e30c2486f1ae94fdf2af1db28b1627754ad94b3052edfc9d37255082d7bbdc46893518f2bad6b8c
+Size (ircd-hybrid-8.2.24.tgz) = 1210753 bytes
+SHA1 (patch-doc_Makefile.in) = 787cb151da51cd947a384e33ae35c58df1d17e19
+SHA1 (patch-src_ircd.c) = 473c6b04bf2ca6f6800b681f5bb3af4a7eef465a

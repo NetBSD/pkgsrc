@@ -1,11 +1,18 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2006/01/03 13:09:25 adrianp Exp $
+$NetBSD: MESSAGE,v 1.6 2019/02/08 13:09:35 fox Exp $
 
 ircd-hybrid is now installed.  Do note some programs have changed
 names to more readily reflect their ircd-hybrid function;
 make sure to prefix them with "ircd-hybrid":
 
     mkpasswd -> ircd-hybrid-mkpasswd
+
+To run ircd-hybrid you will need to create:
+
+    ${PREFIX}/etc/ircd-hybrid/ircd.conf
+
+An example configuration can be found at
+${PREFIX}/share/doc/ircd-hybrid/doc/reference.conf
 
 The documentation can be found at ${PREFIX}/share/doc/ircd-hybrid.
 
