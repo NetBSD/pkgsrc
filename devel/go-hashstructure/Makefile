@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2018/12/19 15:47:09 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2.2.1 2019/02/08 12:03:10 spz Exp $
 
 DISTNAME=	hashstructure-1.0.0
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mitchellh/}
 CATEGORIES=	devel
 GITHUB_PROJECT=	hashstructure
