@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q4,v 1.1.2.5 2019/02/08 20:39:08 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q4,v 1.1.2.6 2019/02/08 22:39:37 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q4 branch:
 
@@ -64,4 +64,7 @@ lang/go110: security update
 
 Pullup ticket #5906 - requested by bsiegert
 lang/go111: security update
+
+Pullup ticket #5907 - requested by khorben
+finance/bitcoin: security update
 
