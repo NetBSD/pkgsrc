@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2018/12/19 15:47:01 bsiegert Exp $
+# $NetBSD: Makefile,v 1.7.2.1 2019/02/08 12:03:16 spz Exp $
 
 DISTNAME=	obfs4proxy-0.0.7
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	net security
 MASTER_SITES=	https://people.torproject.org/~yawning/releases/obfs4proxy/
 EXTRACT_SUFX=	.tar.xz
