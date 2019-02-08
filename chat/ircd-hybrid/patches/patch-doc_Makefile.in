@@ -1,0 +1,34 @@
+$NetBSD: patch-doc_Makefile.in,v 1.1 2019/02/08 13:09:35 fox Exp $
+
+Do not install files in $(sysconfdir), configuration files are
+handled via CONF_FILES*.
+
+--- doc/Makefile.in.orig	2018-04-04 22:33:34.000000000 +0000
++++ doc/Makefile.in
+@@ -458,7 +458,7 @@ check-am: all-am
+ check: check-am
+ all-am: Makefile $(MANS) $(DATA)
+ installdirs:
+-	for dir in "$(DESTDIR)$(man8dir)" "$(DESTDIR)$(sysconfdir)"; do \
++	for dir in "$(DESTDIR)$(man8dir)"; do \
+ 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
+ 	done
+ install: install-am
+@@ -517,7 +517,7 @@ install-dvi: install-dvi-am
+ 
+ install-dvi-am:
+ 
+-install-exec-am: install-dist_sysconfDATA
++install-exec-am:
+ 
+ install-html: install-html-am
+ 
+@@ -565,7 +565,7 @@ uninstall-man: uninstall-man8
+ 	cscopelist-am ctags-am distclean distclean-generic \
+ 	distclean-libtool distdir dvi dvi-am html html-am info info-am \
+ 	install install-am install-data install-data-am \
+-	install-dist_sysconfDATA install-dvi install-dvi-am \
++	install-dvi install-dvi-am \
+ 	install-exec install-exec-am install-html install-html-am \
+ 	install-info install-info-am install-man install-man8 \
+ 	install-pdf install-pdf-am install-ps install-ps-am \
