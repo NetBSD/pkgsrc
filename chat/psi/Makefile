@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2019/02/08 14:56:00 nia Exp $
+# $NetBSD: Makefile,v 1.88 2019/02/08 20:04:19 nia Exp $
 
 DISTNAME=	psi-1.4
 CATEGORIES=	chat
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=psi/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	schnoebe@NetBSD.org
-HOMEPAGE=	http://psi-im.org/
+HOMEPAGE=	https://psi-im.org/
 COMMENT=	Psi XMPP/Jabber Client
 LICENSE=	gnu-gpl-v2
 
