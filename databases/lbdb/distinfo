@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.13 2015/11/03 01:56:13 agc Exp $
+$NetBSD: distinfo,v 1.14 2019/02/08 22:25:32 tonio Exp $
 
-SHA1 (lbdb_0.35.1.tar.gz) = 33c7767b248cc4289894e0a4b07ed55142484ecc
-RMD160 (lbdb_0.35.1.tar.gz) = 1c202c532db93f3dec066b762f75a28e37d01d1a
-SHA512 (lbdb_0.35.1.tar.gz) = 36788000977004fde45b9193c06a53eac88593de3a0817eb00b635ee9a980eebd29d5f2a23e083fda9c9e2e9db6ccc00d0abb8977f4e51a5955cda53c744c539
-Size (lbdb_0.35.1.tar.gz) = 108502 bytes
-SHA1 (patch-aa) = c74a4d95037e9d5e5cc0742e5f05ef80a35db5e6
-SHA1 (patch-ab) = 7120edcd8588f2195b5c1afbb127245b182eb533
-SHA1 (patch-mutt__ldap__query.pl.in) = f7e4fd16edac8dab9971af453caf14414d39493c
+SHA1 (lbdb_0.48.1.tar.gz) = ae81fee4c46d3680aa6ad5434efcc4db371c3165
+RMD160 (lbdb_0.48.1.tar.gz) = 4e458585c22826b962089412d55ddf0005eb9160
+SHA512 (lbdb_0.48.1.tar.gz) = 47d35caa88634f0f98e08e58d9920a44012ee51203dd765a716147b717e76b95cc1a07cd149b569800d5f97e78a7367f35a4e6298fc2bf33fa2f2988db87771e
+Size (lbdb_0.48.1.tar.gz) = 183538 bytes
+SHA1 (patch-aa) = f8adad394d424f99558de35e83f5c2b216799ebb
+SHA1 (patch-ab) = 6bb9767cab2c4291e64da8a7ab9b07048b50ce99
