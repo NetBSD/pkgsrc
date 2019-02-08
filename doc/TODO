@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18790 2019/02/07 11:36:54 markd Exp $
+$NetBSD: TODO,v 1.18791 2019/02/08 22:26:40 tonio Exp $
 
 Suggested new packages
 ======================
@@ -894,7 +894,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kstart-4.2
 	o ktorrent3-3.3.4
 	o labelnation-1.218
-	o lbdb-0.40
 	o lcc-4.2
 	o ldapsdk-6.0.7
 	o leafpad-0.8.18.1
