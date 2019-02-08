@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.635 2019/02/07 23:09:08 leot Exp $
+$NetBSD: CHANGES-2019,v 1.636 2019/02/08 10:52:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1240,3 +1240,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/dhcpcd to 7.1.1 [roy 2019-02-07]
 	Updated mail/getmail to 5.9 [schmonz 2019-02-07]
 	Updated net/youtube-dl to 20190208 [leot 2019-02-07]
+	Updated textproc/py-openpyxl to 2.6.0 [adam 2019-02-08]
+	Updated textproc/py-natsort to 6.0.0 [adam 2019-02-08]
