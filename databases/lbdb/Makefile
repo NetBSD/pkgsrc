@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.33 2018/08/22 09:43:11 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2019/02/08 22:25:32 tonio Exp $
 
-DISTNAME=		lbdb_0.35.1
+DISTNAME=		lbdb_0.48.1
 PKGNAME=		${DISTNAME:S/_/-/}
-PKGREVISION=		6
 CATEGORIES=		databases
-MASTER_SITES=		http://www.spinnaker.de/debian/
+MASTER_SITES=		http://www.spinnaker.de/lbdb/download/
 
 MAINTAINER=		tonio@NetBSD.org
 HOMEPAGE=		http://www.spinnaker.de/lbdb/
 COMMENT=		The little brother's database
+LICENSE=		gnu-gpl-v2
 
 DEPENDS+=		p5-perl-ldap>=0.20:../../databases/p5-perl-ldap
 
@@ -16,15 +16,15 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake perl:run
 
 GNU_CONFIGURE_LIBSUBDIR=../libexec/lbdb
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--enable-lbdb_dotlock
 CONFIGURE_ARGS+=	--without-getent
 CONFIGURE_ARGS+=	--without-evolution-addressbook-export
 CONFIGURE_ARGS+=	--without-pgp
 CONFIGURE_ARGS+=	--without-pgpk
 
-CONFIGURE_ENV+=		SH=${TOOLS_SH:Q}
-CONFIGURE_ENV+=		AWK=${TOOLS_AWK:Q}
+CONFIGURE_ENV+=		SH=${TOOLS_SH}
+CONFIGURE_ENV+=		AWK=${TOOLS_AWK}
 CONFIGURE_ENV+=		ac_cv_path_TAC=NONE
 
 .include "options.mk"
@@ -41,7 +41,7 @@ PLIST.finger=		yes
 .endif
 
 PLIST_VARS+=		yp
-.if ${OPSYS} != "Interix"
+.if ${OPSYS} != "Interix" && exists(/usr/bin/yppasswd)
 PLIST.yp=		yes
 .endif
 
