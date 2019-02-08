@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.86 2018/07/18 00:06:11 joerg Exp $
+# $NetBSD: Makefile,v 1.87 2019/02/08 14:56:00 nia Exp $
 
-DISTNAME=	psi-0.15
-PKGREVISION=	10
+DISTNAME=	psi-1.4
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=psi/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	schnoebe@NetBSD.org
 HOMEPAGE=	http://psi-im.org/
 COMMENT=	Psi XMPP/Jabber Client
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	qca2-ossl>=2.0.0beta3:../../security/qca2-ossl
+DEPENDS+=	qca2-qt5-ossl>=2.0.0beta3:../../security/qca2-qt5-ossl
 
 DIST_SUBDIR=	${DISTNAME}
 DISTFILES=	${DEFAULT_DISTFILES}
@@ -23,12 +22,13 @@ HAS_CONFIGURE=	yes
 
 CONFIG_SHELL=	${SH}
 
+CONFIGURE_ARGS+=	--qtselect=5
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--qtdir=${QTDIR}
 CONFIGURE_ARGS+=	--with-zlib-inc=${BUILDLINK_PREFIX.zlib}/include
 CONFIGURE_ARGS+=	--with-zlib-lib=${BUILDLINK_PREFIX.zlib}/lib
-CONFIGURE_ARGS+=	--with-qca-lib=${BUILDLINK_PREFIX.qca2}/lib
-CONFIGURE_ARGS+=	--with-qca-inc=${BUILDLINK_PREFIX.qca2}/include
+CONFIGURE_ARGS+=	--with-qca-lib=${BUILDLINK_PREFIX.qca2-qt5}/lib
+CONFIGURE_ARGS+=	--with-qca-inc=${BUILDLINK_PREFIX.qca2-qt5}/include
 
 #
 # a group of scripts that aren't to be installed, and aren't used
@@ -74,7 +74,8 @@ post-install:
 
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../security/qca2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.qt4-libs+=	qt4-libs>=4.7.0
-.include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../security/qca2-qt5/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtmultimedia/buildlink3.mk"
+.include "../../x11/qt5-qtx11extras/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
