@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2008/04/12 22:42:59 jlam Exp $
+# $NetBSD: options.mk,v 1.4 2019/02/08 22:25:32 tonio Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lbdb
 PKG_SUPPORTED_OPTIONS=	osx-addressbook gnupg abook
-PKG_SUGGESTED_OPTIONS= gnupg abook
+PKG_SUGGESTED_OPTIONS=	gnupg abook
 
 .include "../../mk/bsd.options.mk"
 

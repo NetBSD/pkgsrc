@@ -1,11 +1,18 @@
-$NetBSD: patch-ab,v 1.4 2005/11/12 18:06:43 tonio Exp $
+$NetBSD: patch-ab,v 1.5 2019/02/08 22:25:32 tonio Exp $
+Adjust configure script to use provided awk, set options properly for
+with_osx_addressbook, and eliminate vcard format.
 
---- configure.orig	2005-10-29 14:49:48.000000000 +0200
+--- configure.orig	2019-01-07 18:30:29.000000000 +0000
 +++ configure
-@@ -3294,18 +3294,7 @@ if test "x$AWK" != "xNONE" ; then
- 	AWK="$AWK"
+@@ -4858,22 +4858,7 @@ $as_echo "no" >&6; }
  fi
  
+ 
+-
+-if test "x$AWK" != "xNONE" ; then
+-	AWK="$AWK"
+-fi
+-
 -if test "x$NAWK" != "xNONE" ; then
 -	AWK="$NAWK"
 -fi
@@ -17,39 +24,37 @@ $NetBSD: patch-ab,v 1.4 2005/11/12 18:06:43 tonio Exp $
 -if test "x$MAWK" != "xNONE" ; then
 -	AWK="$MAWK"
 -fi
--
 +#use the supplied awk
  
  
- # Extract the first word of "tac", so it can be a program name with args.
-@@ -4604,6 +4593,12 @@ if test "x$PERL" != xno ; then
+ 
+@@ -6501,6 +6486,11 @@ if test "x$PERL" != xno ; then
  
  fi
  
 +# Check whether --with-osx-addressbook or --without-osx-addressbook was given.
 +if test "${with_osx_addressbook+set}" = set; then
 +  withval="$with_osx_addressbook"
-+
 +fi;
-+    if test x$withval = xyes; then
++if test x$withval = xyes; then
  # m_osx_addressbook requires xcode (10.3) or projectbuilder (<10.3)
  # Extract the first word of "xcodebuild", so it can be a program name with args.
  set dummy xcodebuild; ac_word=$2
-@@ -4694,6 +4689,11 @@ fi
+@@ -6593,6 +6583,11 @@ fi
  
  	fi
  fi
 +else
-+  PBXBUILD="no"
-+  XCODEBUILD="no"
++	PBXBUILD="no"
++	XCODEBUILD="no"
 +fi
 +withval=""
  
  VFORMAT="no"
- if test "${ac_cv_header_vf_iface_h+set}" = set; then
-@@ -4899,8 +4899,8 @@ echo "$as_me:$LINENO: result: $ac_cv_lib
- echo "${ECHO_T}$ac_cv_lib_vformat_vf_read_file" >&6
- if test $ac_cv_lib_vformat_vf_read_file = yes; then
+ ac_fn_c_check_header_mongrel "$LINENO" "vf_iface.h" "ac_cv_header_vf_iface_h" "$ac_includes_default"
+@@ -6636,8 +6631,8 @@ fi
+ $as_echo "$ac_cv_lib_vformat_vf_read_file" >&6; }
+ if test "x$ac_cv_lib_vformat_vf_read_file" = xyes; then :
  
 -    MODULES="$MODULES m_vcf"
 -    VFORMAT="yes"

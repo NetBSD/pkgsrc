@@ -1,16 +1,17 @@
-$NetBSD: patch-aa,v 1.4 2005/11/12 17:43:42 tonio Exp $
+$NetBSD: patch-aa,v 1.5 2019/02/08 22:25:32 tonio Exp $
+Adjust the Makefile to use the example directory.
 
---- Makefile.in.orig	2005-10-29 16:48:08.000000000 +0200
+--- Makefile.in.orig	2019-01-07 18:30:29.000000000 +0000
 +++ Makefile.in
-@@ -39,6 +39,7 @@ srcdir=@srcdir@
+@@ -38,6 +38,7 @@ srcdir=@srcdir@
  libdir=@libdir@
  mandir=@mandir@
  sysconfdir=@sysconfdir@
 +egdir=@prefix@/share/examples/lbdb
  
- ALL=lbdbq lbdb_lib lbdb-fetchaddr lbdb-munge fetchaddr qpto8bit munge \
- 	munge-keeporder	nodelist2lbdb palm_lsaddr mutt_ldap_query lbdbq.man \
-@@ -50,7 +51,7 @@ all: Makefile $(ALL)
+ SUBDIRS=tests
+ 
+@@ -62,7 +63,7 @@ test_perl:
  install: all
  	$(srcdir)/mkinstalldirs $(install_prefix)$(bindir)
  	$(srcdir)/mkinstalldirs $(install_prefix)$(libdir)
@@ -19,7 +20,7 @@ $NetBSD: patch-aa,v 1.4 2005/11/12 17:43:42 tonio Exp $
  	$(srcdir)/mkinstalldirs $(install_prefix)$(mandir)
  	$(srcdir)/mkinstalldirs $(install_prefix)$(mandir)/man1
  	$(INSTALL) -m 755 fetchaddr $(install_prefix)$(libdir)
-@@ -71,7 +72,7 @@ install: all
+@@ -82,7 +83,7 @@ install: all
  		$(INSTALL) -m 644 mutt_ldap_query.man \
  			$(install_prefix)$(mandir)/man1/mutt_ldap_query.1; \
  		$(INSTALL) -m 644 lbdb_ldap.rc \
@@ -27,8 +28,8 @@ $NetBSD: patch-aa,v 1.4 2005/11/12 17:43:42 tonio Exp $
 +			$(install_prefix)$(egdir)/lbdb_ldap.rc; \
  	fi
  	if [ "$(XCODEBUILD)" != "no" -o "$(PBXBUILD)" != "no" ]; then \
- 		$(INSTALL) -m 755 ABQuery/sym/ABQuery $(install_prefix)$(libdir); \
-@@ -85,7 +86,7 @@ install: all
+ 		$(INSTALL) -m 755 ABQuery $(install_prefix)$(libdir); \
+@@ -96,7 +97,7 @@ install: all
  	$(INSTALL) -m 644 lbdbq.man $(install_prefix)$(mandir)/man1/lbdbq.1
  	$(INSTALL) -m 644 lbdb-fetchaddr.man \
  		$(install_prefix)$(mandir)/man1/lbdb-fetchaddr.1
