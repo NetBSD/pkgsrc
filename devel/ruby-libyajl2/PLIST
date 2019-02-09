@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2015/03/08 16:42:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/02/09 13:46:32 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
-${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
-${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bootstrap.sh
 ${GEM_LIBDIR}/ext/libyajl2/api/yajl_common.h
@@ -203,6 +201,7 @@ ${GEM_LIBDIR}/ext/libyajl2/yajl_parser.h
 ${GEM_LIBDIR}/ext/libyajl2/yajl_tree.c
 ${GEM_LIBDIR}/ext/libyajl2/yajl_version.c
 ${GEM_LIBDIR}/lib/libyajl2.rb
+${GEM_LIBDIR}/lib/libyajl2/vendored-libyajl2/lib/libyajl.bundle
 ${GEM_LIBDIR}/lib/libyajl2/version.rb
 ${GEM_LIBDIR}/libyajl2.gemspec
 ${GEM_LIBDIR}/spec/ffi_spec.rb
