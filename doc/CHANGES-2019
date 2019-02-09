@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.660 2019/02/09 17:20:44 adam Exp $
+$NetBSD: CHANGES-2019,v 1.661 2019/02/09 19:51:43 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1269,3 +1269,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-pip to 19.0.2 [adam 2019-02-09]
 	Updated textproc/py-lxml to 4.3.1 [adam 2019-02-09]
 	Updated devel/py-cython to 0.29.5 [adam 2019-02-09]
+	Updated net/dante to 1.4.2nb1 [rhialto 2019-02-09]
