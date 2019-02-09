@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/02/09 07:58:03 wen Exp $
+
+SHA1 (Regexp-Trie-0.02.tar.gz) = 8b3f51fe809fa608cfdfe643bf711d894cbb3dc5
+RMD160 (Regexp-Trie-0.02.tar.gz) = 328aaa147de2c1a44b45b4dfe6005e25fc9bb6c3
+SHA512 (Regexp-Trie-0.02.tar.gz) = 49aac4f9d49f71a2cf7111e549da0f3dfa77679d313080095188e8172e5fea0fdb256b8d784949716813d51c03fe9fdfe097e394bba34016fa61bd82c4c20995
+Size (Regexp-Trie-0.02.tar.gz) = 3365 bytes
