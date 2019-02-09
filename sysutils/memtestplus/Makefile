@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2018/02/07 00:59:18 maya Exp $
+# $NetBSD: Makefile,v 1.27 2019/02/09 09:13:24 maya Exp $
 #
 
 # Note -- version number also in the do-install rule
@@ -7,7 +7,7 @@ MINVER=01
 
 DISTNAME=		memtest86+-${MAJVER}.${MINVER}
 PKGNAME=		memtestplus-${MAJVER}.${MINVER}
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.memtest.org/download/${MAJVER}.${MINVER}/
 
@@ -22,11 +22,6 @@ FORTIFY_SUPPORTED=	no
 SSP_SUPPORTED=		no
 
 .include "../../mk/bsd.prefs.mk"
-.if !empty(MACHINE_PLATFORM:MNetBSD-5.*)
-GCC_REQD+=		4.6
-.else
-GCC_REQD+=		4.5
-.endif
 
 USE_TOOLS+=		gmake
 SUBST_CLASSES+=		delcr
@@ -38,10 +33,6 @@ SUBST_SED.delcr=	-e 's/.$$//g'
 .include "options.mk"
 
 .include "../../mk/compiler.mk"
-
-.if !empty(CC_VERSION:Mgcc-3.*)
-BUILDLINK_TRANSFORM+=	rm:-fno-stack-protector
-.endif
 
 .if !empty(PKGSRC_COMPILER:Mclang)
 BROKEN+=	${PKGNAME} does not produce a working binary with clang

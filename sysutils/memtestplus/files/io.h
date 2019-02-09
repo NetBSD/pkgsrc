@@ -18,12 +18,12 @@ static inline void slow_down_io(void)
 }
 
 
-void __outb(char value, int port) {
+static inline void __outb(char value, int port) {
 	asm volatile("outb" " %b" "0, %w1"
 		     : : "a"(value), "Nd"(port));
 }
 
-unsigned char __inb(int port)
+static inline unsigned char __inb(int port)
 {
 	unsigned char value;
 	asm volatile("inb" " %w1, %b" "0"
@@ -31,12 +31,12 @@ unsigned char __inb(int port)
 	return value;
 }
 
-void __outw(short value, int port) {
+static inline void __outw(short value, int port) {
 	asm volatile("outw" " %w" "0, %w1"
 		     : : "a"(value), "Nd"(port));
 }
 
-unsigned short __inw(int port)
+static inline unsigned short __inw(int port)
 {
 	unsigned short value;
 	asm volatile("inw" " %w1, %w" "0"
@@ -44,12 +44,12 @@ unsigned short __inw(int port)
 	return value;
 }
 
-void __outl(int value, int port) {
+static inline void __outl(int value, int port) {
 	asm volatile("outl" " %" "0, %w1"
 		     : : "a"(value), "Nd"(port));
 }
 
-unsigned int __inl(int port)
+static inline unsigned int __inl(int port)
 {
 	unsigned int value;
 	asm volatile("inl" " %w1, %" "0"
