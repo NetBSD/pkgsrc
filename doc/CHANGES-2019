@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.651 2019/02/09 08:27:07 wen Exp $
+$NetBSD: CHANGES-2019,v 1.652 2019/02/09 08:36:57 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1257,3 +1257,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/p5-Regexp-Trie version 0.02 [wen 2019-02-09]
 	Added devel/p5-Perl-PrereqScanner-NotQuiteLite version 0.9904 [wen 2019-02-09]
 	Updated devel/p5-Module-CPANTS-Analyse to 1.00 [wen 2019-02-09]
+	Updated devel/p5-Test-Kwalitee to 1.28 [wen 2019-02-09]
