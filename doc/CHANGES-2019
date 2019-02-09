@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.645 2019/02/09 00:36:33 wen Exp $
+$NetBSD: CHANGES-2019,v 1.646 2019/02/09 00:42:53 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1251,3 +1251,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/p5-Data-Table to 1.77 [wen 2019-02-09]
 	Updated databases/p5-DBD-ODBC to 1.60 [wen 2019-02-09]
 	Updated devel/p5-File-ChangeNotify to 0.31 [wen 2019-02-09]
+	Updated devel/p5-glib2 to 1.329 [wen 2019-02-09]
