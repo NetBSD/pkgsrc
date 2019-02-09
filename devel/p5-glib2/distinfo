@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.28 2018/12/01 07:49:41 wen Exp $
+$NetBSD: distinfo,v 1.29 2019/02/09 00:42:09 wen Exp $
 
-SHA1 (Glib-1.328.tar.gz) = 72f0e38ac2bd18c4720d4385930545f888cdbf94
-RMD160 (Glib-1.328.tar.gz) = 1435c293705d9c243cfd294d05b72a9b6a0da5b2
-SHA512 (Glib-1.328.tar.gz) = ad6a4ceba82d4e29d55d45c4975f49717b2366167cb70ec0f0ac53eb188cc071a1ef55bcb6d675a8fab13514d44a9782ee194ada8f1af224877ad7cf8ad390f0
-Size (Glib-1.328.tar.gz) = 301694 bytes
+SHA1 (Glib-1.329.tar.gz) = 3b448b18e58fca06c0829f0186f859d2019cec29
+RMD160 (Glib-1.329.tar.gz) = 21758851a5a6c5b5639c85ca138da2a956e07960
+SHA512 (Glib-1.329.tar.gz) = 32418fe07b3162253bc29f3b7e9273067c1ac03d7f85ac1019401a28247db6901c25e1bcea6c024f377a89816f2dbdc2a1a70623981f4777f0f42ba48bb6305a
+Size (Glib-1.329.tar.gz) = 301794 bytes
 SHA1 (patch-Makefile.PL) = 55400eef8f24b5d636ce49ad63c7d492b4b52594
 SHA1 (patch-apidoc.pl) = 9f43715a0b01e0b87bd20dd1dcde3ee6330b0f87
 SHA1 (patch-lib_Glib_GenPod.pm) = f014c271f5aad140592d810c1d407988f33ab54b
