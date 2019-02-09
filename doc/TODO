@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18792 2019/02/09 13:06:59 wen Exp $
+$NetBSD: TODO,v 1.18793 2019/02/09 15:23:28 nia Exp $
 
 Suggested new packages
 ======================
@@ -1363,7 +1363,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o unicap-0.9.8
 	o unison-2.48.15v4
 	o units-2.12
-	o unrealircd-4.0.6
 	o urlgrabber-3.10.1
 	o userppp-030706
 	o userspace-rcu-0.9.1
