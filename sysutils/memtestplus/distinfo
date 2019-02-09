@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2019/02/09 09:13:24 maya Exp $
+$NetBSD: distinfo,v 1.17 2019/02/09 11:39:25 maya Exp $
 
 SHA1 (memtest86+-5.01.tar.gz) = eb4b6d70114db3c9ed320785da44c0ba8349c10c
 RMD160 (memtest86+-5.01.tar.gz) = 756b57d8f8a3b7408aba0b2fc0cadcdc1df966df
@@ -11,6 +11,6 @@ SHA1 (patch-ad) = ab31fec30052fdd3c473ee885ba00d7e3676384f
 SHA1 (patch-controller.c) = 8509599b72f1f11115dc58605b0f438ddfca9b4a
 SHA1 (patch-main.c) = 7f199aa47f429c21ceee127e19120b51a300feac
 SHA1 (patch-makeiso.sh) = 939056a96a1384e4d27772bf5612a755deca8145
-SHA1 (patch-memtest__shared.lds) = 977ef9f2d6e7f875471157e72a1e4f0b2f39ea58
+SHA1 (patch-memtest__shared.lds) = 07fa5b2eceee6cc4d707ebe42c5721e8eb59cf60
 SHA1 (patch-nbstart.S) = d97a6e9c25a57d0f5510c3acf4dccf0f0c0c31b0
 SHA1 (patch-reboot.c) = 8103cb52d1a6e2cdb9099ad3535115617746ed26
