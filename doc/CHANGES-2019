@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.647 2019/02/09 00:47:49 wen Exp $
+$NetBSD: CHANGES-2019,v 1.648 2019/02/09 02:02:25 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1253,3 +1253,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-File-ChangeNotify to 0.31 [wen 2019-02-09]
 	Updated devel/p5-glib2 to 1.329 [wen 2019-02-09]
 	Updated devel/p5-Inline to 0.81 [wen 2019-02-09]
+	Updated print/p5-biblatex-biber to 2.12 [markd 2019-02-09]
