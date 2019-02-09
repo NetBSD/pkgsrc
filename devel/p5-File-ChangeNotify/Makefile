@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2018/10/31 13:03:46 wen Exp $
+# $NetBSD: Makefile,v 1.32 2019/02/09 00:35:48 wen Exp $
 
-DISTNAME=	File-ChangeNotify-0.29
+DISTNAME=	File-ChangeNotify-0.31
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}
