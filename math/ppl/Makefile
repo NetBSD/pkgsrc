@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2018/08/22 09:45:41 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/02/09 13:05:16 wen Exp $
 
-DISTNAME=	ppl-1.1
-PKGREVISION=	5
+DISTNAME=	ppl-1.2
 CATEGORIES=	math
-#MASTER_SITES=	ftp://gcc.gnu.org/pub/gcc/infrastructure/
-MASTER_SITES=	ftp://ftp.cs.unipr.it/pub/ppl/releases/1.1/
+MASTER_SITES=	ftp://ftp.cs.unipr.it/pub/ppl/releases/1.2/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cs.unipr.it/ppl/
@@ -25,7 +23,7 @@ CONFIGURE_ARGS+=	--with-gmp-prefix=${PREFIX}
 do-build:
 	set -e; cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${GMAKE}
 
-TEST_TARGET=	-k check
+TEST_TARGET=	check
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
