@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.6 2018/12/27 15:03:53 joerg Exp $
+$NetBSD: distinfo,v 1.7 2019/02/09 14:13:25 khorben Exp $
 
-SHA1 (diffoscope-94.tar.gz) = 2dca48b577383377d4bb43d9472ecd9ae5112739
-RMD160 (diffoscope-94.tar.gz) = 78261a206f3c232c2b5e386eb3b5b6d825a79d56
-SHA512 (diffoscope-94.tar.gz) = a68fda09a8340b1b36683b0bda4c854cb04afb189b0464185b6de655c7fe2e122215612a0154738a1174ca1594bab3598359b10425a2375f692eb0bd089d89f1
-Size (diffoscope-94.tar.gz) = 9405785 bytes
-SHA1 (patch-diffoscope_comparators_json.py) = 6f148f9847f8d0b24007feaeed76265dfb47b8e9
-SHA1 (patch-diffoscope_presenters_formats.py) = f42ba00bcdf7347ed82c7b6aaff3af17b662b246
+SHA1 (diffoscope-110.tar.gz) = 1fa63304933f030327b7ae27bb9469a476fa7661
+RMD160 (diffoscope-110.tar.gz) = 6c650bd38a449f07f38bf8172cd30319590893e5
+SHA512 (diffoscope-110.tar.gz) = 1d309022734ca36329d0293cb3dd2887fac811f4669477ff22fee443a8042d0b69d9272babcb9c5eaa084c5b39ebf481cd6bf0f171051d3323fe8745550c91b7
+Size (diffoscope-110.tar.gz) = 9991513 bytes
