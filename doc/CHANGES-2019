@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.641 2019/02/09 00:11:10 wen Exp $
+$NetBSD: CHANGES-2019,v 1.642 2019/02/09 00:16:49 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1247,3 +1247,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/lbdb to 0.48.1 [tonio 2019-02-08]
 	Updated www/p5-HTML-Restrict to 2.5.0 [wen 2019-02-08]
 	Updated www/drupal8 to 8.6.9 [wen 2019-02-09]
+	Updated www/drupal7 to 7.64 [wen 2019-02-09]
