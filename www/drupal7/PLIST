@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2019/01/19 07:30:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.21 2019/02/09 00:15:53 wen Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/COPYRIGHT.txt
 share/doc/drupal/INSTALL.mysql.txt
@@ -409,6 +409,9 @@ share/drupal/modules/file/icons/x-office-spreadsheet.png
 share/drupal/modules/file/tests/file.test
 share/drupal/modules/file/tests/file_module_test.info
 share/drupal/modules/file/tests/file_module_test.module
+share/drupal/modules/file/tests/fixtures/file_scan_ignore/a.txt
+share/drupal/modules/file/tests/fixtures/file_scan_ignore/frontend_framework/b.txt
+share/drupal/modules/file/tests/fixtures/file_scan_ignore/frontend_framework/c.txt
 share/drupal/modules/filter/filter.admin.inc
 share/drupal/modules/filter/filter.admin.js
 share/drupal/modules/filter/filter.api.php
