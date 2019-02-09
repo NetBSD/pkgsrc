@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/01/26 08:19:53 wen Exp $
+$NetBSD: distinfo,v 1.8 2019/02/09 08:26:09 wen Exp $
 
-SHA1 (Module-CPANTS-Analyse-0.99.tar.gz) = fdf2d5f71537110be3c773adf5f96a8193eaebc9
-RMD160 (Module-CPANTS-Analyse-0.99.tar.gz) = 8f675b8023ad0c31465fd4d29489718e30ce99fc
-SHA512 (Module-CPANTS-Analyse-0.99.tar.gz) = 52588e82bf52a6c4db60dbdcc2fbeaf7e145ba7b94751640bb1bf4b2b0cd502620b1a41c5712e79d54bef4bd4f3867e7fa93ac215fd89466f2d2d9e3025fcc7c
-Size (Module-CPANTS-Analyse-0.99.tar.gz) = 45803 bytes
+SHA1 (Module-CPANTS-Analyse-1.00.tar.gz) = fcb9191a4a3eb99618e8e989acc639e2e5c00d0a
+RMD160 (Module-CPANTS-Analyse-1.00.tar.gz) = a5e8132f3734c92252055c7954e0ae56646bf5ba
+SHA512 (Module-CPANTS-Analyse-1.00.tar.gz) = d1097cad93a94038464569a4912897bae583771af65d61ca2385c8107ee63674742601d6faf3e9dd4f70b66bceac1db5a63e7326c0507b8d4ab4457f76a30caf
+Size (Module-CPANTS-Analyse-1.00.tar.gz) = 38350 bytes
