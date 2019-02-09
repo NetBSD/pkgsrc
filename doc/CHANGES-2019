@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.649 2019/02/09 08:02:33 wen Exp $
+$NetBSD: CHANGES-2019,v 1.650 2019/02/09 08:21:46 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1255,3 +1255,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-Inline to 0.81 [wen 2019-02-09]
 	Updated print/p5-biblatex-biber to 2.12 [markd 2019-02-09]
 	Added devel/p5-Regexp-Trie version 0.02 [wen 2019-02-09]
+	Added devel/p5-Perl-PrereqScanner-NotQuiteLite version 0.9904 [wen 2019-02-09]
