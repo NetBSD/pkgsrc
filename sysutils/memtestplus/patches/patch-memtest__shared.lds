@@ -1,4 +1,10 @@
-$NetBSD: patch-memtest__shared.lds,v 1.1 2019/02/09 09:13:24 maya Exp $
+$NetBSD: patch-memtest__shared.lds,v 1.2 2019/02/09 11:39:25 maya Exp $
+
+Compensate for a local patch in netbsd's binutils.
+https://mail-index.netbsd.org/tech-toolchain/2019/02/09/msg003405.html
+
+NetBSD creates another program header and thus we need more space for
+headers.
 
 --- memtest_shared.lds.orig	2013-08-10 02:01:58.000000000 +0000
 +++ memtest_shared.lds
