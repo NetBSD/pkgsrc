@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.657 2019/02/09 13:06:59 wen Exp $
+$NetBSD: CHANGES-2019,v 1.658 2019/02/09 14:14:55 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1263,3 +1263,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/webkit-gtk to 2.22.6 [leot 2019-02-09]
 	Updated x11/st-term to 0.8.2 [leot 2019-02-09]
 	Updated math/ppl to 1.2 [wen 2019-02-09]
+	Updated sysutils/py-diffoscope to 110 [khorben 2019-02-09]
