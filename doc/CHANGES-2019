@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.655 2019/02/09 11:29:58 leot Exp $
+$NetBSD: CHANGES-2019,v 1.656 2019/02/09 12:15:10 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1261,3 +1261,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/p5-Encode to 3.00 [wen 2019-02-09]
 	Updated sysutils/memtestplus to 5.01nb6 [maya 2019-02-09]
 	Updated www/webkit-gtk to 2.22.6 [leot 2019-02-09]
+	Updated x11/st-term to 0.8.2 [leot 2019-02-09]
