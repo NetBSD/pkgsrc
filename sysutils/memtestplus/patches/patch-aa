@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2018/01/29 14:23:26 maya Exp $
+$NetBSD: patch-aa,v 1.8 2019/02/09 09:13:24 maya Exp $
 
 --- Makefile.orig	2013-08-10 02:01:58.000000000 +0000
 +++ Makefile
@@ -17,7 +17,7 @@ $NetBSD: patch-aa,v 1.7 2018/01/29 14:23:26 maya Exp $
  	-ffreestanding -fPIC $(SMP_FL) -fno-stack-protector 
  	
  OBJS= head.o reloc.o main.o test.o init.o lib.o patn.o screen_buffer.o \
-@@ -20,22 +20,24 @@ OBJS= head.o reloc.o main.o test.o init.
+@@ -20,8 +20,7 @@ OBJS= head.o reloc.o main.o test.o init.
        smp.o vmem.o random.o
        
  
@@ -27,14 +27,7 @@ $NetBSD: patch-aa,v 1.7 2018/01/29 14:23:26 maya Exp $
  
  # Link it statically once so I know I don't have undefined
  # symbols and then link it dynamically so I have full
- # relocation information
- memtest_shared: $(OBJS) memtest_shared.lds Makefile
--	$(LD) --warn-constructors --warn-common -static -T memtest_shared.lds \
-+	$(LD) --allow-multiple-definition --warn-constructors --warn-common -static -T memtest_shared.lds \
- 	 -o $@ $(OBJS) && \
--	$(LD) -shared -Bsymbolic -T memtest_shared.lds -o $@ $(OBJS)
-+	$(LD) --allow-multiple-definition -shared -Bsymbolic -T memtest_shared.lds -o $@ $(OBJS)
- 
+@@ -34,8 +33,11 @@ memtest_shared: $(OBJS) memtest_shared.l
  memtest_shared.bin: memtest_shared
  	objcopy -O binary $< memtest_shared.bin
  
