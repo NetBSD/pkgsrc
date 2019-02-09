@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.38 2017/05/30 16:02:25 taca Exp $
+# $NetBSD: gem.mk,v 1.39 2019/02/09 15:22:46 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -224,7 +224,7 @@ do-build: _gem-pre-build gem-build
 
 _gem-pre-build:
 .if !empty(OVERRIDE_GEMSPEC)
-	@${STEP_MSG} Override gemspec dependency
+	@${STEP_MSG} Override gemspec
 	@${RUBY} ${.CURDIR}/${UPDATE_GEMSPEC} ${WRKDIR}/${GEM_NAME}.gemspec \
 		${OVERRIDE_GEMSPEC:Q}
 .endif
