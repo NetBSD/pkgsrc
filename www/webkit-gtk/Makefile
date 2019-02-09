@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.155 2018/12/14 15:51:13 leot Exp $
+# $NetBSD: Makefile,v 1.156 2019/02/09 11:29:44 leot Exp $
 
-DISTNAME=	webkitgtk-2.22.5
+DISTNAME=	webkitgtk-2.22.6
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://www.webkitgtk.org/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -24,7 +23,8 @@ USE_TOOLS+=	automake bison flex gmake perl pkg-config msgfmt
 # Enabling -gdwarf-2 hits GNU ar limits on file size.
 CTF_SUPPORTED=	no
 
-GCC_REQD+=	6
+GCC_REQD+=		6
+USE_GCC_RUNTIME=	yes
 
 # Using ld.gold subverts Pkgsrc wrappers, and this package also crashes buggy
 # versions of ld.gold.
