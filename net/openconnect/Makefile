@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/01/22 18:28:40 schmonz Exp $
+# $NetBSD: Makefile,v 1.8 2019/02/09 06:13:50 mef Exp $
 
 DISTNAME=	openconnect-8.02
 CATEGORIES=	net security
@@ -20,6 +20,9 @@ CONFIGURE_ARGS+=	--with-vpnc-script=${PKG_SYSCONFDIR}/vpnc-script
 CONFIGURE_ARGS+=	--disable-nls
 
 REPLACE_PYTHON=		trojans/tncc-wrapper.py
+REPLACE_BASH=		trojans/csd-post.sh
+REPLACE_BASH+=		trojans/csd-wrapper.sh
+	
 PYTHON_VERSIONS_ACCEPTED=27
 
 INSTALLATION_DIRS=	sbin include lib ${PKGMANDIR}/man8
