@@ -1,17 +1,9 @@
-$NetBSD: distinfo,v 1.19 2015/11/26 16:36:00 jperkin Exp $
+$NetBSD: distinfo,v 1.20 2019/02/09 15:23:15 nia Exp $
 
-SHA1 (Unreal3.2.10.5.tar.gz) = 3a8823e79c8c89ac8339e105c6c0b6a2a76f6097
-RMD160 (Unreal3.2.10.5.tar.gz) = 4acf7edbadeca5679a22a09d16e08873f1e61e8b
-SHA512 (Unreal3.2.10.5.tar.gz) = 98c71a958f3b620ff4c9d83279c508e13bdd76cc9d191ac021c4ef57eaf6a549345c0b2c1f8c550f29c2d79f8f257a176ae73e73dcbab839715462aa4b80565e
-Size (Unreal3.2.10.5.tar.gz) = 3538121 bytes
-SHA1 (patch-ab) = 3c36478f05d9acffa0c0b51ca0c4a4d313252687
-SHA1 (patch-ac) = f0d882e6caae52527f6ad9cc2bb5657d0288d852
-SHA1 (patch-ae) = 0a3a072871295f5108d439770609e8e4c4036d7b
-SHA1 (patch-af) = a00efce16f294aa1675cc8cc4fb5b5ada3c7146e
-SHA1 (patch-src_modules_m__cycle.c) = 05944483d7b7584e03f883bd3dcd30fdaec0526f
-SHA1 (patch-src_modules_m__rping.c) = 799e8d26b4916fdf7a251bae49da594fc19f8612
-SHA1 (patch-src_modules_m__svsjoin.c) = 6af54f4e141674d8a207213a0de28289cbbe8ba1
-SHA1 (patch-src_modules_m__svspart.c) = 898ef5c57238071aa796fef4226e70156b0d29ff
-SHA1 (patch-src_modules_m__svssilence.c) = 5e3bb9eae6557196069fba081828d90e107226e2
-SHA1 (patch-src_modules_m__svswatch.c) = 2be4f2218edd263ccdef4f8fd8c6f5c06d78166f
-SHA1 (patch-src_modules_m__vhost.c) = 080b1c827e575d7fbdab760b05bfdd10b9413b88
+SHA1 (unrealircd-4.2.1.1.tar.gz) = be65901ab7e7823060cc54a9d1dce7ae47817608
+RMD160 (unrealircd-4.2.1.1.tar.gz) = 407ce52a28799dc44c68e1061a35353eb57a9ebb
+SHA512 (unrealircd-4.2.1.1.tar.gz) = e1c4a071fe47893d6cbe924cf6eece1939ca0c9531c6f2fd0b421d9a9b8850ca8fa407033409aa1f08e8257a8a4d73e8632db54dbe9f0365544b48d92db728fe
+Size (unrealircd-4.2.1.1.tar.gz) = 6039863 bytes
+SHA1 (patch-Makefile.in) = f42dbe01865c99f16db227bec251a0d78bdddd2c
+SHA1 (patch-ac) = 644990fd93c6754778d4c0a8b3a2aab34a1bcbb3
+SHA1 (patch-ae) = 14499974009921e55fbf2c1719f7588b17f1315c

@@ -1,12 +1,12 @@
-$NetBSD: patch-ae,v 1.3 2015/11/26 16:36:00 jperkin Exp $
+$NetBSD: patch-ae,v 1.4 2019/02/09 15:23:16 nia Exp $
 
 Don't declare own errno.
 
---- src/socket.c.orig	2015-11-09 16:16:59.000000000 +0000
+--- src/socket.c.orig	2019-01-03 08:00:11.000000000 +0000
 +++ src/socket.c
-@@ -24,9 +24,6 @@
- #include "h.h"
+@@ -25,9 +25,6 @@
  #include <signal.h>
+ #include <string.h>
  #include "inet.h"
 -#ifndef _WIN32
 -extern int errno;		/* ...seems that errno.h doesn't define this everywhere */
