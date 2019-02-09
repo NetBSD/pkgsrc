@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/02/07 14:29:20 nia Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/02/09 20:13:02 nia Exp $
 bin/atheme-dbverify
 bin/atheme-ecdsakeygen
 bin/atheme-services
@@ -120,7 +120,7 @@ include/libmowgli-2/thread/thread.h
 include/libmowgli-2/vio/vio.h
 lib/atheme/modules/alis/main.so
 lib/atheme/modules/auth/dummy.so
-lib/atheme/modules/auth/ldap.so
+${PLIST.ldap}lib/atheme/modules/auth/ldap.so
 lib/atheme/modules/backend/corestorage.so
 lib/atheme/modules/backend/flatfile.so
 lib/atheme/modules/backend/opensex.so
