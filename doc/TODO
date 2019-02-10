@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18794 2019/02/10 12:39:49 nia Exp $
+$NetBSD: TODO,v 1.18795 2019/02/10 17:14:54 nia Exp $
 
 Suggested new packages
 ======================
@@ -411,7 +411,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o aubio-0.4.2
 	o audacious-3.7.1
 	o audacious-plugins-3.7.1
-	o audacity-2.2.1
 	o autoconvert-0.3.16
 	o avant-window-navigator-0.4.2
 	o avidemux-2.6.16
