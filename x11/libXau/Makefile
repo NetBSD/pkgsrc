@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2018/11/28 14:08:47 sevan Exp $
+# $NetBSD: Makefile,v 1.16 2019/02/10 23:31:37 wiz Exp $
 
-DISTNAME=		libXau-1.0.8
-PKGREVISION=		1
+DISTNAME=		libXau-1.0.9
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
