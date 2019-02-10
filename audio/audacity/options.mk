@@ -1,31 +1,16 @@
-# $NetBSD: options.mk,v 1.2 2015/04/21 03:34:22 rodent Exp $
+# $NetBSD: options.mk,v 1.3 2019/02/10 17:14:42 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.audacity
-PKG_SUPPORTED_OPTIONS=		alsa debug jack ladspa nls
-PKG_SUGGESTED_OPTIONS+=		gtk2 ladspa nls
-PKG_OPTIONS_OPTIONAL_GROUPS+=	gui
-PKG_OPTIONS_GROUP.gui=		gtk2 gtk3
+PKG_SUPPORTED_OPTIONS=		debug jack ladspa nls
+PKG_SUGGESTED_OPTIONS+=		ladspa nls
 PLIST_VARS+=			nls
 
 .include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Malsa)
-.include "../../audio/alsa-lib/buildlink3.mk"
-BROKEN=				error: 'ESTRPIPE' undeclared
-.endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=		--enable-debug=yes
 .else
 CONFIGURE_ARGS+=		--enable-debug=no
-.endif
-
-.if !empty(PKG_OPTIONS:Mgtk2)
-.include "../../x11/gtk2/buildlink3.mk"
-.elif !empty(PKG_OPTIONS:Mgtk3)
-.include "../../x11/gtk3/buildlink3.mk"
-CONFIGURE_ARGS+=		--enable-gtk3
-BROKEN=				gtk3 option needs work
 .endif
 
 .if !empty(PKG_OPTIONS:Mjack)
