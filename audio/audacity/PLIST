@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.13 2016/06/05 01:02:38 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.14 2019/02/10 17:14:42 nia Exp $
 bin/audacity
+lib/libFileDialog.so.0
 man/man1/audacity.1
 share/appdata/audacity.appdata.xml
 share/applications/audacity.desktop
@@ -62,7 +63,6 @@ share/audacity/plug-ins/SpectralEditShelves.ny
 share/audacity/plug-ins/StudioFadeOut.ny
 share/audacity/plug-ins/adjustable-fade.ny
 share/audacity/plug-ins/beat.ny
-share/audacity/plug-ins/clicktrack.ny
 share/audacity/plug-ins/clipfix.ny
 share/audacity/plug-ins/crossfadeclips.ny
 share/audacity/plug-ins/crossfadetracks.ny
@@ -73,8 +73,10 @@ share/audacity/plug-ins/limiter.ny
 share/audacity/plug-ins/lowpass.ny
 share/audacity/plug-ins/notch.ny
 share/audacity/plug-ins/pluck.ny
+share/audacity/plug-ins/rhythmtrack.ny
 share/audacity/plug-ins/rissetdrum.ny
 share/audacity/plug-ins/sample-data-export.ny
+share/audacity/plug-ins/sample-data-import.ny
 share/audacity/plug-ins/tremolo.ny
 share/audacity/plug-ins/vocalrediso.ny
 share/audacity/plug-ins/vocalremover.ny
@@ -102,6 +104,7 @@ ${PLIST.nls}share/locale/de/LC_MESSAGES/audacity.mo
 ${PLIST.nls}share/locale/el/LC_MESSAGES/audacity.mo
 ${PLIST.nls}share/locale/es/LC_MESSAGES/audacity.mo
 ${PLIST.nls}share/locale/eu/LC_MESSAGES/audacity.mo
+${PLIST.nls}share/locale/eu_ES/LC_MESSAGES/audacity.mo
 ${PLIST.nls}share/locale/fa/LC_MESSAGES/audacity.mo
 ${PLIST.nls}share/locale/fi/LC_MESSAGES/audacity.mo
 ${PLIST.nls}share/locale/fr/LC_MESSAGES/audacity.mo
