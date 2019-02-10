@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2018/05/20 07:32:50 wiz Exp $
+$NetBSD: distinfo,v 1.11 2019/02/10 23:28:35 wiz Exp $
 
-SHA1 (xf86-video-s3virge-1.10.7.tar.bz2) = d670f02ec4372e4a4ed299d7f29b5bd6e2fa9e83
-RMD160 (xf86-video-s3virge-1.10.7.tar.bz2) = c2adf8f566d61724a57b7b807cfa9602c2a221eb
-SHA512 (xf86-video-s3virge-1.10.7.tar.bz2) = bbeb3af1558eeb25768ec86e14687d442d54046913af6f4f4eb49c0b9641377b0d6f0e85629b16e46db07adb2358053cbfbe7b366d0cb9a817a011a1c7703e57
-Size (xf86-video-s3virge-1.10.7.tar.bz2) = 374129 bytes
+SHA1 (xf86-video-s3virge-1.11.0.tar.bz2) = b81abd4cbe14de272c6169b1c549df4293da81a1
+RMD160 (xf86-video-s3virge-1.11.0.tar.bz2) = 7841bd49d9aed8b9c8c79a79f2fc7fd7bb747c58
+SHA512 (xf86-video-s3virge-1.11.0.tar.bz2) = 43ec2b4d910a5f659dd19fd623ef615f3ba7dcb282f61b95438cb279c6e0de75419b381adb70c92a084e375a04435cbb20fa0fe30ac23b2c8f4ed26d762d418e
+Size (xf86-video-s3virge-1.11.0.tar.bz2) = 380321 bytes
 SHA1 (patch-src_s3v__driver.c) = be708042982dd9630e935cce0670266f9d482c8a
