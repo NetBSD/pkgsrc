@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18793 2019/02/09 15:23:28 nia Exp $
+$NetBSD: TODO,v 1.18794 2019/02/10 12:39:49 nia Exp $
 
 Suggested new packages
 ======================
@@ -324,7 +324,7 @@ Suggested new packages
 	libretro-81
 	Video game system emulators: libretro-citra, libretro-beetle-pcfx,
 	libretro-beetle-lynx (or Handy, too buggy?), libretro-kronos
-	Standalone games: libretro-2048, libretro-dinothawr, libretro-mrboom,
+	Standalone games: libretro-dinothawr, libretro-mrboom,
 	libretro-thepowdertoy, libretro-openlara, libretro-gw,
 	libretro-tyrquake (wip), libretro-prboom (wip), libretro-easyrpg,
 	libretro-scummvm, libretro-stonesoup, libretro-cannonball,
