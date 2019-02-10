@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.662 2019/02/10 12:39:26 nia Exp $
+$NetBSD: CHANGES-2019,v 1.663 2019/02/10 17:14:54 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1271,3 +1271,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-cython to 0.29.5 [adam 2019-02-09]
 	Updated net/dante to 1.4.2nb1 [rhialto 2019-02-09]
 	Added games/libretro-2048 version 20181229 [nia 2019-02-10]
+	Updated audio/audacity to 2.2.2 [nia 2019-02-10]
