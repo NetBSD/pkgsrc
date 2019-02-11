@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.667 2019/02/10 23:31:46 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.668 2019/02/11 08:23:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1276,3 +1276,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/xf86-video-s3virge to 1.11.0 [wiz 2019-02-10]
 	Updated x11/bitmap to 1.0.9 [wiz 2019-02-10]
 	Updated x11/libXau to 1.0.9 [wiz 2019-02-10]
+	Updated multimedia/mkvtoolnix to 31.0.0 [adam 2019-02-11]
+	Updated databases/rrdtool to 1.7.1 [adam 2019-02-11]
+	Updated databases/py-rrdtool to 1.7.1 [adam 2019-02-11]
+	Updated databases/ruby-rrdtool to 1.7.1 [adam 2019-02-11]
