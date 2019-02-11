@@ -1,0 +1,2 @@
+C library to extract cell data and some metadata from legacy Microsoft Excel
+files.  Also includes an 'xls2csv' tool.
