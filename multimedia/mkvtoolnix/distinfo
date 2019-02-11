@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.61 2019/01/07 09:12:40 adam Exp $
+$NetBSD: distinfo,v 1.62 2019/02/11 08:18:07 adam Exp $
 
-SHA1 (mkvtoolnix-30.1.0.tar.xz) = a3929c3e6cc78fd6a24f6912bc037443cfc21865
-RMD160 (mkvtoolnix-30.1.0.tar.xz) = 7e60883259bdc72e1d39e171d92d9d82878999f1
-SHA512 (mkvtoolnix-30.1.0.tar.xz) = 0c29a7a246b7e7ddccbb7ec51d7dd45d06530e01d7f1c8fa901b1a94dc6c7d9db0890009f200c3bebee572e24c826f7c05a53c16e8d11cfac2c68a3d13b96a53
-Size (mkvtoolnix-30.1.0.tar.xz) = 7274296 bytes
+SHA1 (mkvtoolnix-31.0.0.tar.xz) = 0a7dd9b4e90e222450dc3cc83560f1d77e54deac
+RMD160 (mkvtoolnix-31.0.0.tar.xz) = 32cef0bce6f968b45f7fa200eab5899557ea7581
+SHA512 (mkvtoolnix-31.0.0.tar.xz) = 085bc7d5a2b2e692d584bef5f31aab8dc25883cc93d9f2b2c35ea6356d64536763b6e9f7cef2dbaf1b789e73c05cb5f9e76ce76c54f034aa9d46c30983d1a5b7
+Size (mkvtoolnix-31.0.0.tar.xz) = 7282492 bytes
 SHA1 (patch-Rakefile) = bac8a1e581725e329079ab0acccd83795d707594
 SHA1 (patch-build-config.in) = a9072de691ee3e011b472280dd276a67f1799fac
 SHA1 (patch-src_common_locale.cpp) = 46ba293fb0dee8af0e6e6fbe17c725a509101109
