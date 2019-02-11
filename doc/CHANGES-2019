@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.669 2019/02/11 09:24:54 adam Exp $
+$NetBSD: CHANGES-2019,v 1.670 2019/02/11 10:07:48 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1282,3 +1282,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/ruby-rrdtool to 1.7.1 [adam 2019-02-11]
 	Updated multimedia/ffmpeg4 to 4.1.1 [adam 2019-02-11]
 	Updated multimedia/ffplay4 to 4.1.1 [adam 2019-02-11]
+	Updated audio/cmus to 2.8.0 [nia 2019-02-11]
