@@ -1,13 +1,13 @@
-# $NetBSD: options.mk,v 1.19 2018/05/11 04:12:47 maya Exp $
+# $NetBSD: options.mk,v 1.20 2019/02/11 10:07:37 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.cmus
-PKG_SUPPORTED_OPTIONS=		flac mad vorbis libao musepack faad wavpack pulseaudio
-PKG_SUPPORTED_OPTIONS+=		ffmpeg opus jack
+PKG_SUPPORTED_OPTIONS=		flac mad vorbis libao musepack faad wavpack \
+				ffmpeg opus jack pulseaudio
 PKG_OPTIONS_OPTIONAL_GROUPS=	mod
 PKG_OPTIONS_GROUP.mod=		modplug mikmod
 PKG_SUGGESTED_OPTIONS=		faad flac libao mad modplug opus vorbis
-PKG_OPTIONS_LEGACY_OPTS=	ao:libao
-PKG_OPTIONS_LEGACY_OPTS=	mpcdec:musepack
+PKG_OPTIONS_LEGACY_OPTS+=	ao:libao
+PKG_OPTIONS_LEGACY_OPTS+=	mpcdec:musepack
 
 .include "../../mk/bsd.options.mk"
 
@@ -49,10 +49,13 @@ CONFIGURE_ARGS+=	CONFIG_PULSE=n
 #
 .if !empty(PKG_OPTIONS:Mjack)
 .include "../../audio/jack/buildlink3.mk"
+.include "../../audio/libsamplerate/buildlink3.mk"
 CONFIGURE_ARGS+=	CONFIG_JACK=y
+CONFIGURE_ARGS+=	CONFIG_SAMPLERATE=y
 PLIST.jack=		yes
 .else
 CONFIGURE_ARGS+=	CONFIG_JACK=n
+CONFIGURE_ARGS+=	CONFIG_SAMPLERATE=n
 .endif
 
 ###
@@ -112,7 +115,7 @@ CONFIGURE_ARGS+=	CONFIG_WAVPACK=n
 # FFMPEG support
 #
 .if !empty(PKG_OPTIONS:Mffmpeg)
-.include "../../multimedia/ffmpeg1/buildlink3.mk"
+.include "../../multimedia/ffmpeg4/buildlink3.mk"
 CONFIGURE_ARGS+=	CONFIG_FFMPEG=y
 PLIST.ffmpeg=		yes
 .else

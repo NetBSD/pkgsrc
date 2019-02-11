@@ -1,9 +1,9 @@
-$NetBSD: patch-sun.c,v 1.2 2014/04/21 09:49:49 wiz Exp $
+$NetBSD: patch-op_sun.c,v 1.1 2019/02/11 10:07:37 nia Exp $
 
 Fix build on SunOS.
 
---- sun.c.orig	2011-11-30 09:57:20.000000000 +0100
-+++ sun.c	2012-02-15 21:12:09.658462551 +0100
+--- op/sun.c.orig	2011-11-30 09:57:20.000000000 +0100
++++ op/sun.c	2012-02-15 21:12:09.658462551 +0100
 @@ -32,6 +32,26 @@
  #include "sf.h"
  #include "xmalloc.h"

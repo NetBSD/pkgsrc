@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.15 2018/01/01 22:29:16 rillig Exp $
+@comment $NetBSD: PLIST,v 1.16 2019/02/11 10:07:37 nia Exp $
 bin/cmus
 bin/cmus-remote
 ${PLIST.faad}lib/cmus/ip/aac.so
+lib/cmus/ip/cue.so
 ${PLIST.ffmpeg}lib/cmus/ip/ffmpeg.so
 ${PLIST.flac}lib/cmus/ip/flac.so
 ${PLIST.mad}lib/cmus/ip/mad.so
@@ -23,9 +24,13 @@ man/man1/cmus.1
 man/man7/cmus-tutorial.7
 share/cmus/cyan.theme
 share/cmus/default.theme
+share/cmus/dracula.theme
 share/cmus/gray-88.theme
 share/cmus/green-mono-88.theme
 share/cmus/green.theme
+share/cmus/gruvbox-alt.theme
+share/cmus/gruvbox.theme
+share/cmus/jellybeans.theme
 share/cmus/night.theme
 share/cmus/rc
 share/cmus/solarized-dark.theme
