@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/11/27 16:21:15 adam Exp $
+$NetBSD: distinfo,v 1.5 2019/02/11 10:58:41 adam Exp $
 
-SHA1 (pytest-testmon-0.9.14.tar.gz) = 682e22d7309165283a276bff06cfd95d3527376e
-RMD160 (pytest-testmon-0.9.14.tar.gz) = 3fd4814db87732ea0a906f40a82eeb988ae91200
-SHA512 (pytest-testmon-0.9.14.tar.gz) = 0b545b4f6b9a27cb7e336d73e222ad6cd93ff7df5d994a8002f4c9fb7b29bb82f445e5523b4e8e2c18e5918ffccf77693d5c39d5dbdf7b9106ce4a302a97cbfa
-Size (pytest-testmon-0.9.14.tar.gz) = 30020 bytes
+SHA1 (pytest-testmon-0.9.15.tar.gz) = eee1b2bad66edc085866186b1fbc0158cb7e9d27
+RMD160 (pytest-testmon-0.9.15.tar.gz) = 32b650132b991e100adceba7af33e58c10b0dd5c
+SHA512 (pytest-testmon-0.9.15.tar.gz) = fb414c492188f59e34a5f940e9f378cc841dd9de311738a0238980318261f51b869c30e1218e3219dabf8c438f28bcb9b10f751c07240b533ead537f4b6d8d4e
+Size (pytest-testmon-0.9.15.tar.gz) = 32468 bytes
