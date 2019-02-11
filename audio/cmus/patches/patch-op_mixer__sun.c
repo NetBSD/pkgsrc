@@ -1,9 +1,9 @@
-$NetBSD: patch-mixer__sun.c,v 1.2 2014/04/21 09:49:49 wiz Exp $
+$NetBSD: patch-op_mixer__sun.c,v 1.1 2019/02/11 10:07:37 nia Exp $
 
 Fix build on SunOS.
 
---- mixer_sun.c.orig	2011-11-30 09:57:20.000000000 +0100
-+++ mixer_sun.c	2012-02-15 21:12:05.691072986 +0100
+--- op/mixer_sun.c.orig	2011-11-30 09:57:20.000000000 +0100
++++ op/mixer_sun.c	2012-02-15 21:12:05.691072986 +0100
 @@ -55,6 +55,7 @@ static int sun_mixer_get_option(int, cha
  
  static int mixer_open(const char *dev)
