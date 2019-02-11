@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2018/07/07 04:45:10 minskim Exp $
+# $NetBSD: options.mk,v 1.7 2019/02/11 08:22:44 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rrdtool
 PKG_SUPPORTED_OPTIONS=	lua tcl
@@ -20,13 +20,13 @@ REPLACE_FILES.tclsh=	bindings/tcl/ifOctets.tcl.in
 
 PLIST.tcl=		yes
 
-.if ${OPSYS} == "Darwin"
+.  if ${OPSYS} == "Darwin"
 .PHONY: fix-darwin-install-name
 post-install: fix-darwin-install-name
 fix-darwin-install-name:
 	install_name_tool -id ${PREFIX}/lib/tclrrd${PKGVERSION_NOREV}.dylib \
 		${DESTDIR}${PREFIX}/lib/tclrrd${PKGVERSION_NOREV}.dylib
-.endif
+.  endif
 
 .include "../../lang/tcl/buildlink3.mk"
 
