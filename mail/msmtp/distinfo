@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.37 2019/01/17 18:39:54 leot Exp $
+$NetBSD: distinfo,v 1.38 2019/02/11 20:44:46 leot Exp $
 
-SHA1 (msmtp-1.8.2.tar.xz) = 4527ea8c7197706a30f25b6a5f8d226619480a72
-RMD160 (msmtp-1.8.2.tar.xz) = c7851e06ec48ff7e688b6bc05700ee4da07bfe91
-SHA512 (msmtp-1.8.2.tar.xz) = 1f37be6f6bb01ddb3ba202673d7ba6457e6e9d8cfb718fdb5e9c19162b85e08c1487f160011775e626df0e37c414dcfbb20380d14084fbe80c46287eec15f5e6
-Size (msmtp-1.8.2.tar.xz) = 335760 bytes
+SHA1 (msmtp-1.8.3.tar.xz) = 556de9d951d860a40ab35627006c0c28ad14429b
+RMD160 (msmtp-1.8.3.tar.xz) = 38a289c636a4b98e291a989bce6f1da9a16d6613
+SHA512 (msmtp-1.8.3.tar.xz) = c265991c0925d79b28a664ee6832316350d59d546f252989dafb8a517a8be1c496fcc85981325e5b381801a7bcb77e38dabdc12fc5be1bf49b9886a409a21819
+Size (msmtp-1.8.3.tar.xz) = 336120 bytes
