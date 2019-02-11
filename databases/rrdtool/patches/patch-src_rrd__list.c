@@ -1,13 +1,13 @@
-$NetBSD: patch-src_rrd__list.c,v 1.1 2017/08/02 03:13:54 maya Exp $
+$NetBSD: patch-src_rrd__list.c,v 1.2 2019/02/11 08:22:45 adam Exp $
 
 Need limits.h for PATH_MAX
 
---- src/rrd_list.c.orig	2017-05-16 12:26:46.000000000 +0000
+--- src/rrd_list.c.orig	2019-02-04 17:42:30.000000000 +0000
 +++ src/rrd_list.c
-@@ -3,6 +3,7 @@
- #include <string.h>
- #include <glob.h>
+@@ -14,6 +14,7 @@
+ #endif
  #include <dirent.h>
+ #endif
 +#include <limits.h>
  #include <sys/types.h>
  
