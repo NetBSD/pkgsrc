@@ -1,11 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2018/11/14 22:21:12 kleink Exp $
+# $NetBSD: Makefile,v 1.6 2019/02/11 08:22:45 adam Exp $
 
-PKGREVISION= 4
 .include "../../databases/rrdtool/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=0.8:../../devel/py-setuptools
 
 EGG_NAME=	rrdtool-0.1.10
 
@@ -14,7 +11,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/bindings/python
 MAKE_ENV+=		ABS_TOP_BUILDDIR=${WRKDIR}/${DISTNAME}
 
 pre-configure:
-	rm ${WRKDIR}/${DISTNAME}/src/rrd_config.h
+	${RM} ${WRKDIR}/${DISTNAME}/src/rrd_config.h
 
 .include "../../databases/rrdtool/buildlink3.mk"
 .include "../../lang/python/egg.mk"

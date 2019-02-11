@@ -1,0 +1,15 @@
+$NetBSD: patch-doc_Makefile.in,v 1.1 2019/02/11 08:22:45 adam Exp $
+
+Remove non-portable -Wbreak option.
+
+--- doc/Makefile.in.orig	2019-02-09 18:02:06.000000000 +0000
++++ doc/Makefile.in
+@@ -698,7 +698,7 @@ all-local: link man txt html-local
+ 	$(AM_V_GEN)@POD2MAN@ --release=$(VERSION) --center=rrdtool --section=3 $< > $@
+ 
+ .1.txt .3.txt:
+-	$(AM_V_GEN)GROFF_NO_SGR=1 @NROFF@ -man -Tlp -Wbreak $< > $@
++	$(AM_V_GEN)GROFF_NO_SGR=1 @NROFF@ -man -Tlp $< > $@
+ 
+ .1.pdf .3.pdf:
+ 	$(AM_V_GEN)@TROFF@ -man $< | ps2pdf - $@
