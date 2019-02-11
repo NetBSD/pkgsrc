@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.673 2019/02/11 15:07:23 gdt Exp $
+$NetBSD: CHANGES-2019,v 1.674 2019/02/11 18:31:00 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1288,3 +1288,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-test-testmon to 0.9.15 [adam 2019-02-11]
 	Updated devel/py-configargparse to 0.14.0 [adam 2019-02-11]
 	Updated devel/libextractor to 1.8 [gdt 2019-02-11]
+	Updated textproc/libxlsxwriter to 0.8.5 [leot 2019-02-11]
