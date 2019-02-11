@@ -1,11 +1,6 @@
-$NetBSD: distinfo,v 1.24 2015/11/03 03:27:40 agc Exp $
+$NetBSD: distinfo,v 1.25 2019/02/11 15:06:54 gdt Exp $
 
-SHA1 (libextractor-0.5.20c.tar.gz) = 6b89c104a1c9e0bb4c8b949563b8ec8433c879d0
-RMD160 (libextractor-0.5.20c.tar.gz) = dfdd25f674d5304ab5a5906e6be0af8837dc6f92
-SHA512 (libextractor-0.5.20c.tar.gz) = 8c066a3fdc3199408644d63c4f90b432126c3553f5ff9c6fac1740023ae739029e3f5300e6c1bd73cf2c70b306e1c1571ccfc68e89066ba04157415c53284c4e
-Size (libextractor-0.5.20c.tar.gz) = 8181604 bytes
-SHA1 (patch-aa) = f0923e6cba8e6bb327a7959a3d7679bb78a530b2
-SHA1 (patch-ab) = e45d1a5cbca514d096c64979fed442494544fc95
-SHA1 (patch-ac) = b04266851b39581b0956fbfe94f2670c2e196c94
-SHA1 (patch-ad) = 35b00f0fb7d5b4c512d4a4b36f5cc0298ed42eae
-SHA1 (patch-ae) = e1c07a6005cc5638099c8a0ab3f0b62c7526ceb6
+SHA1 (libextractor-1.8.tar.gz) = 32877c1291bf7d15ad33d50e752d7f42a1e349d3
+RMD160 (libextractor-1.8.tar.gz) = d64462fe62702b2fe6935883ee55df9730967dc8
+SHA512 (libextractor-1.8.tar.gz) = 770a0f1711964657ffb570c0509996b0a109886bfa0652c3a9ca63aa645f495fe5919215cf17da68e8a81a09de54bc937b61c82ec03c9e3998149c780f93451a
+Size (libextractor-1.8.tar.gz) = 8315688 bytes
