@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2016/08/03 10:22:10 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2019/02/11 15:06:54 gdt Exp $
 
 BUILDLINK_TREE+=	libextractor
 
