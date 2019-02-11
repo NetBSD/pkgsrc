@@ -837,6 +837,7 @@ xinerama		Enable Xinerama support.
 xjdic-locale		Honor LOCALE env var, instead of requiring ISO-2022-JP.
 xlockmore-allow-root	Allow root to get access.
 xlockmore-dpms		Use DPMS.
+xls			Enable XLS support.
 xlsx			Enable XLSX support.
 xml			Enable XML support.
 xmlrpc			Enable XMLRPC support.
