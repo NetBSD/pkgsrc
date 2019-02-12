@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.680 2019/02/12 08:58:34 adam Exp $
+$NetBSD: CHANGES-2019,v 1.681 2019/02/12 09:12:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1296,3 +1296,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated chat/irssi to 1.2.0 [maya 2019-02-12]
 	Updated time/py-rfc3339 to 1.1 [adam 2019-02-12]
 	Updated fonts/py-fonttools to 3.37.3 [adam 2019-02-12]
+	Added textproc/py-manuel version 1.10.1 [adam 2019-02-12]
+	Updated devel/py-ZopeConfiguration to 4.3.1 [adam 2019-02-12]
