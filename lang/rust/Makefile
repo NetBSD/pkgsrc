@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2019/01/22 09:17:15 jperkin Exp $
+# $NetBSD: Makefile,v 1.77 2019/02/12 11:49:15 tnn Exp $
 
 DISTNAME=	rustc-1.32.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -80,7 +80,7 @@ BUILD_TARGET=		build
 # Getting RPATH with $ORIGIN into bootstrap may be troublesome, so
 # uncommenting the LD_LIBRARY_PATH setting may be required to run
 # the bootstrap
-MAKE_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/rust-bootstrap/lib
+PKGSRC_MAKE_ENV+=	LD_LIBRARY_PATH=${RUST_BOOTSTRAP_PATH:Q}/lib
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc)
 # Bootstrapping on NetBSD/powerpc requires no debug-info from rustc
@@ -260,9 +260,6 @@ RUST_BOOTSTRAP_PATH?=	${WRKDIR}/rust-bootstrap
 BUILD_DEPENDS+=		coreutils>=0:../../sysutils/coreutils
 TOOLS_CREATE+=		md5sum
 TOOLS_PATH.md5sum=	${PREFIX}/bin/gmd5sum
-.else
-LD_LIBRARY_PATH=	${RUST_BOOTSTRAP_PATH}/lib
-PKGSRC_MAKE_ENV+=	LD_LIBRARY_PATH=${LD_LIBRARY_PATH:Q}
 .endif
 
 SUBST_CLASSES+=		rpath
