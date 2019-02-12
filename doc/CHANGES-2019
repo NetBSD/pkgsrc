@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.678 2019/02/11 22:01:31 leot Exp $
+$NetBSD: CHANGES-2019,v 1.679 2019/02/12 04:44:27 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1293,3 +1293,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/msmtp to 1.8.3 [leot 2019-02-11]
 	Added textproc/libxls version 1.5.0 [leot 2019-02-11]
 	Updated math/sc-im to 0.7.0nb1 [leot 2019-02-11]
+	Updated chat/irssi to 1.2.0 [maya 2019-02-12]
