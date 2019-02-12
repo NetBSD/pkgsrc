@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.682 2019/02/12 10:53:05 he Exp $
+$NetBSD: CHANGES-2019,v 1.683 2019/02/12 11:01:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1299,3 +1299,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Added textproc/py-manuel version 1.10.1 [adam 2019-02-12]
 	Updated devel/py-ZopeConfiguration to 4.3.1 [adam 2019-02-12]
 	Updated net/unbound to 1.9.0nb1 [he 2019-02-12]
+	Updated net/py-botocore to 1.12.92 [adam 2019-02-12]
+	Updated net/py-s3transfer to 0.2.0 [adam 2019-02-12]
+	Updated net/py-boto3 to 1.9.92 [adam 2019-02-12]
+	Updated net/py-awscli to 1.16.102 [adam 2019-02-12]
