@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.681 2019/02/12 09:12:33 adam Exp $
+$NetBSD: CHANGES-2019,v 1.682 2019/02/12 10:53:05 he Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1298,3 +1298,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated fonts/py-fonttools to 3.37.3 [adam 2019-02-12]
 	Added textproc/py-manuel version 1.10.1 [adam 2019-02-12]
 	Updated devel/py-ZopeConfiguration to 4.3.1 [adam 2019-02-12]
+	Updated net/unbound to 1.9.0nb1 [he 2019-02-12]
