@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2018/07/18 00:06:23 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2019/02/12 16:49:31 maya Exp $
 
-DISTNAME=		fish-2.7.1
+DISTNAME=		fish-3.0.0
 CATEGORIES=		shells
 MASTER_SITES=		${MASTER_SITE_GITHUB:=fish-shell/}
 GITHUB_PROJECT=		fish-shell
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--without-xsel
 USE_TOOLS+=		gmake autoreconf autoconf automake
 
-EGDIR=			${PREFIX}/share/examples/fish
+EGDIR=			${PREFIX}/share/examples
 INSTALL_ENV+=		EGDIR=${EGDIR}
 
 PKG_SHELL=		bin/fish
@@ -49,7 +49,7 @@ PLIST.open=	yes
 pre-configure:
 	${RUN} cd ${WRKSRC} && autoreconf -fiv
 
-BUILD_DEPENDS+=doxygen-[0-9]*:../../devel/doxygen
+.include "options.mk"
 
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
