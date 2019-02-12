@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.679 2019/02/12 04:44:27 maya Exp $
+$NetBSD: CHANGES-2019,v 1.680 2019/02/12 08:58:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1294,3 +1294,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Added textproc/libxls version 1.5.0 [leot 2019-02-11]
 	Updated math/sc-im to 0.7.0nb1 [leot 2019-02-11]
 	Updated chat/irssi to 1.2.0 [maya 2019-02-12]
+	Updated time/py-rfc3339 to 1.1 [adam 2019-02-12]
+	Updated fonts/py-fonttools to 3.37.3 [adam 2019-02-12]
