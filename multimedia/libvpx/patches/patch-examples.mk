@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.5 2015/11/18 14:09:25 ryoon Exp $
+$NetBSD: patch-examples.mk,v 1.1 2019/02/12 20:47:14 adam Exp $
 
 --- examples.mk.orig	2015-11-09 22:12:38.000000000 +0000
 +++ examples.mk

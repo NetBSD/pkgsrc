@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.36 2018/01/30 22:56:39 jperkin Exp $
+$NetBSD: distinfo,v 1.37 2019/02/12 20:47:14 adam Exp $
 
-SHA1 (libvpx-1.7.0.tar.gz) = fb3d4b80596d1e3b1a7f53757d63e7d2b3eeb7c9
-RMD160 (libvpx-1.7.0.tar.gz) = 3af78fbfad1c3a2398054c6cf6df626216b67160
-SHA512 (libvpx-1.7.0.tar.gz) = 8b3b766b550f8d86907628d7ed88035f9a2612aac21542e0fd5ad35b905eb82cbe1be02a1a24afce7a3bcc4766f62611971f72724761996b392136c40a1e7ff0
-Size (libvpx-1.7.0.tar.gz) = 2679797 bytes
-SHA1 (patch-aa) = 0025e7eff1efbd44069f797d1c37c5efa19fb183
-SHA1 (patch-ab) = 53c166f48d0b83dc653b99b53b7ad5c2575ca81c
-SHA1 (patch-ac) = 17410f43ff9952d616be3211ca697f37c107610a
-SHA1 (patch-ad) = fd9985ee0b5bd4e62987a9ef6f3efc0eba1432e8
+SHA1 (libvpx-1.8.0.tar.gz) = 0a5ff6d36e592b404fae4435adc76a68e3d96afe
+RMD160 (libvpx-1.8.0.tar.gz) = 61337d9901ab0a2eb9d91163d11bfdeb3f3c1a40
+SHA512 (libvpx-1.8.0.tar.gz) = 77477ec7059de1d90f048c10783b4adce463a84c9c828f125686e533f5bc8c9eeab8a1747df5c928e0869ccf855a9af5608199c8c376a75d35659f719ee870ef
+Size (libvpx-1.8.0.tar.gz) = 2879302 bytes
+SHA1 (patch-build_make_Makefile) = 0025e7eff1efbd44069f797d1c37c5efa19fb183
+SHA1 (patch-build_make_configure.sh) = 6ef2a73aceeec910d1edce592f944cb46016010e
 SHA1 (patch-build_make_gen_asm_deps.sh) = c55bd4d0e12176b73ba62c3c4741b58de77923e6
-SHA1 (patch-configure) = 38136c386f2df5f28430776558cf7d79b2776854
+SHA1 (patch-configure) = 738871dc9ffa44a809e594849915a875a97ac40b
+SHA1 (patch-examples.mk) = 17410f43ff9952d616be3211ca697f37c107610a
+SHA1 (patch-libs.mk) = b718d5b18369a6af9e9dd92ddcc40082b0a98fa5
