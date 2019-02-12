@@ -1,14 +1,14 @@
-$NetBSD: patch-Rakefile,v 1.1 2018/12/02 17:13:41 adam Exp $
+$NetBSD: patch-Rakefile,v 1.2 2019/02/12 23:46:23 adam Exp $
 
-Fix linking on macOS.
+Fix buildling on macOS.
 
---- Rakefile.orig	2018-12-02 17:00:02.000000000 +0000
+--- Rakefile.orig	2019-02-12 23:14:10.000000000 +0000
 +++ Rakefile
-@@ -1111,6 +1111,7 @@ if $build_mkvtoolnix_gui
-     libraries($common_libs, :qt).
-     libraries("-mwindows", :powrprof, :if => $building_for[:windows]).
-     libraries("-framework IOKit", :if => $building_for[:macos]).
-+    libraries("-framework CoreFoundation", :if => $building_for[:macos]).
-     libraries($custom_libs).
-     create
- end
+@@ -145,7 +145,6 @@ def setup_globals
+   cxxflags                 = "#{cflags_common} #{c(:STD_CXX)}"
+   cxxflags                += " -Woverloaded-virtual" if c(:COMPILER_TYPE) != "gcc" # too many false positives in EbmlElement.h on g++ 8
+   cxxflags                += " -Wnon-virtual-dtor -Wextra -Wno-missing-field-initializers #{c(:WSHADOW_COMPATIBLE_LOCAL)} #{c(:WNO_MAYBE_UNINITIALIZED)}"
+-  cxxflags                += " -fvisibility=hidden -fvisibility-inlines-hidden" if $building_for[:macos]
+   cxxflags                += " #{c(:QT_CFLAGS)} #{c(:BOOST_CPPFLAGS)} #{c(:USER_CXXFLAGS)}"
+ 
+   ldflags                  = ""
