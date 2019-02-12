@@ -1,13 +1,12 @@
-$NetBSD: patch-ad,v 1.23 2018/01/28 16:04:11 wiz Exp $
+$NetBSD: patch-build_make_configure.sh,v 1.1 2019/02/12 20:47:14 adam Exp $
 
 *BSD and qnx are identified as linux.
 Add another SDK path on Mac OS X.
 All sparc cpus can not do unaligned access.
 Detect NetBSD ARMv7 hardfloat toolchain.
 Recognize powerpc as a target ISA, so we don't end up with generic-gnu
-and possibly no libm reference...
 
---- build/make/configure.sh.orig	2018-01-24 22:25:44.000000000 +0000
+--- build/make/configure.sh.orig	2019-02-04 17:02:33.000000000 +0000
 +++ build/make/configure.sh
 @@ -1,4 +1,4 @@
 -#!/bin/sh
@@ -15,7 +14,7 @@ and possibly no libm reference...
  ##
  ##  configure.sh
  ##
-@@ -696,7 +696,7 @@ process_common_toolchain() {
+@@ -740,7 +740,7 @@ process_common_toolchain() {
        aarch64*)
          tgt_isa=arm64
          ;;
@@ -24,7 +23,7 @@ and possibly no libm reference...
          tgt_isa=armv7
          float_abi=hard
          ;;
-@@ -725,6 +725,9 @@ process_common_toolchain() {
+@@ -766,6 +766,9 @@ process_common_toolchain() {
        *mips32el*)
          tgt_isa=mips32
          ;;
@@ -34,7 +33,7 @@ and possibly no libm reference...
      esac
  
      # detect tgt_os
-@@ -767,7 +770,7 @@ process_common_toolchain() {
+@@ -812,7 +815,7 @@ process_common_toolchain() {
          [ -z "$tgt_isa" ] && tgt_isa=x86
          tgt_os=win32
          ;;
@@ -43,7 +42,7 @@ and possibly no libm reference...
          tgt_os=linux
          ;;
        *solaris2.10)
-@@ -813,6 +816,9 @@ process_common_toolchain() {
+@@ -858,6 +861,9 @@ process_common_toolchain() {
      ppc*)
        enable_feature ppc
        ;;
@@ -53,7 +52,7 @@ and possibly no libm reference...
    esac
  
    # PIC is probably what we want when building shared libs
-@@ -1449,7 +1455,7 @@ EOF
+@@ -1530,7 +1536,7 @@ EOF
    check_cc <<EOF
  unsigned int e = 'O'<<24 | '2'<<16 | 'B'<<8 | 'E';
  EOF
@@ -62,38 +61,12 @@ and possibly no libm reference...
          grep '4f *32 *42 *45' >/dev/null 2>&1 && enable_feature big_endian
  
      # Try to find which inline keywords are supported
-@@ -1466,11 +1472,33 @@ EOF
+@@ -1547,7 +1553,7 @@ EOF
          # bionic includes basic pthread functionality, obviating -lpthread.
          ;;
        *)
--        check_header pthread.h && add_extralibs -lpthread
-+        check_header pthread.h && add_extralibs ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
-         ;;
-     esac
-   fi
- 
-+  case ${tgt_os} in
-+  darwin*)
-+     add_extralibs -lm
-+     ;;
-+  solaris*)
-+     add_extralibs -lm -lrt
-+     ;;
-+  linux*)
-+     case ${gcctarget} in
-+     *qnx6*)
-+         add_extralibs -lm
-+         ;;
-+     *openbsd*)
-+         add_extralibs -lm
-+         ;;
-+     *)
-+         add_extralibs -lm -lrt
-+         ;;
-+     esac
-+     ;;
-+  esac
-+
-   # only for MIPS platforms
-   case ${toolchain} in
-     mips*)
+-        check_header pthread.h && check_lib -lpthread <<EOF && add_extralibs -lpthread || disable_feature pthread_h
++        check_header pthread.h && check_lib ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} <<EOF && add_extralibs ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} || disable_feature pthread_h
+ #include <pthread.h>
+ #include <stddef.h>
+ int main(void) { return pthread_create(NULL, NULL, NULL, NULL); }
