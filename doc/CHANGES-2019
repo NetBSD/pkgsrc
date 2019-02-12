@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.686 2019/02/12 12:42:49 kleink Exp $
+$NetBSD: CHANGES-2019,v 1.687 2019/02/12 12:58:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1307,3 +1307,11 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/augeas to 1.11.0 [adam 2019-02-12]
 	Updated sysutils/py-augeas to 1.0.3 [adam 2019-02-12]
 	Updated print/py-weasyprint to 44nb2 [kleink 2019-02-12]
+	Updated security/py-acme to 0.31.0 [adam 2019-02-12]
+	Updated security/py-certbot to 0.31.0 [adam 2019-02-12]
+	Updated security/py-certbot-dns-ovh to 0.31.0 [adam 2019-02-12]
+	Updated security/py-certbot-dns-rfc2136 to 0.31.0 [adam 2019-02-12]
+	Updated security/py-certbot-dns-route53 to 0.31.0 [adam 2019-02-12]
+	Updated security/py-certbot-dns-sakuracloud to 0.31.0 [adam 2019-02-12]
+	Updated security/py-certbot-nginx to 0.31.0 [adam 2019-02-12]
+	Added security/py-certbot-apache version 0.31.0 [adam 2019-02-12]
