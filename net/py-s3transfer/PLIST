@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/11/30 11:11:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/02/12 10:54:52 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -13,6 +13,9 @@ ${PYSITELIB}/s3transfer/bandwidth.pyo
 ${PYSITELIB}/s3transfer/compat.py
 ${PYSITELIB}/s3transfer/compat.pyc
 ${PYSITELIB}/s3transfer/compat.pyo
+${PYSITELIB}/s3transfer/constants.py
+${PYSITELIB}/s3transfer/constants.pyc
+${PYSITELIB}/s3transfer/constants.pyo
 ${PYSITELIB}/s3transfer/copies.py
 ${PYSITELIB}/s3transfer/copies.pyc
 ${PYSITELIB}/s3transfer/copies.pyo
@@ -31,6 +34,9 @@ ${PYSITELIB}/s3transfer/futures.pyo
 ${PYSITELIB}/s3transfer/manager.py
 ${PYSITELIB}/s3transfer/manager.pyc
 ${PYSITELIB}/s3transfer/manager.pyo
+${PYSITELIB}/s3transfer/processpool.py
+${PYSITELIB}/s3transfer/processpool.pyc
+${PYSITELIB}/s3transfer/processpool.pyo
 ${PYSITELIB}/s3transfer/subscribers.py
 ${PYSITELIB}/s3transfer/subscribers.pyc
 ${PYSITELIB}/s3transfer/subscribers.pyo
