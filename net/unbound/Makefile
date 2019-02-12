@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2019/02/05 09:44:57 he Exp $
+# $NetBSD: Makefile,v 1.64 2019/02/12 10:52:28 he Exp $
 
 DISTNAME=	unbound-1.9.0
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.nlnetlabs.nl/downloads/unbound/
 
