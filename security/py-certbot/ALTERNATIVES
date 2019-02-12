@@ -1,1 +1,1 @@
-bin/certbot @PREFIX@/bin/certbot@PYVERSSUFFIX@
+bin/certbot @PREFIX@/bin/certbot-@PYVERSSUFFIX@
