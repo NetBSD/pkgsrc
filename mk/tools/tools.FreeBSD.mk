@@ -1,4 +1,4 @@
-# $NetBSD: tools.FreeBSD.mk,v 1.47 2018/11/12 14:22:58 jperkin Exp $
+# $NetBSD: tools.FreeBSD.mk,v 1.48 2019/02/12 18:40:16 triaxx Exp $
 #
 # System-supplied tools for the FreeBSD operating system.
 
@@ -38,7 +38,9 @@ TOOLS_PLATFORM.gegrep?=		/usr/bin/egrep
 TOOLS_PLATFORM.gfgrep?=		/usr/bin/fgrep
 TOOLS_PLATFORM.ggrep?=		/usr/bin/grep
 TOOLS_PLATFORM.grep?=		/usr/bin/grep
+.if exists(/usr/bin/groff)
 TOOLS_PLATFORM.groff?=		/usr/bin/groff
+.endif
 TOOLS_PLATFORM.gstrip?=		/usr/bin/strip
 TOOLS_PLATFORM.gunzip?=		/usr/bin/gunzip -f
 TOOLS_PLATFORM.gzcat?=		/usr/bin/gzcat
