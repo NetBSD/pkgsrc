@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.3 2018/08/01 13:40:41 gdt Exp $
+# $NetBSD: Makefile,v 1.4 2019/02/12 09:43:40 adam Exp $
 
 DISTNAME=	configobj-5.0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/configobj/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://www.voidspace.org.uk/python/configobj.html
-COMMENT=	Simple but powerful config file reader and write
+HOMEPAGE=	https://github.com/DiffSK/configobj
+COMMENT=	Config file reading, writing and validation
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=	# none
-
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
