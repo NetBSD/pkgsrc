@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.685 2019/02/12 12:21:22 adam Exp $
+$NetBSD: CHANGES-2019,v 1.686 2019/02/12 12:42:49 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1306,3 +1306,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/py-weasyprint to 44nb1 [kleink 2019-02-12]
 	Updated sysutils/augeas to 1.11.0 [adam 2019-02-12]
 	Updated sysutils/py-augeas to 1.0.3 [adam 2019-02-12]
+	Updated print/py-weasyprint to 44nb2 [kleink 2019-02-12]
