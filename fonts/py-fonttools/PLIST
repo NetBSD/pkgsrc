@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2018/12/16 14:09:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2019/02/12 08:58:14 adam Exp $
 bin/fonttools-${PYVERSSUFFIX}
 bin/pyftinspect-${PYVERSSUFFIX}
 bin/pyftmerge-${PYVERSSUFFIX}
@@ -250,6 +250,9 @@ ${PYSITELIB}/fontTools/svgLib/__init__.pyo
 ${PYSITELIB}/fontTools/svgLib/path/__init__.py
 ${PYSITELIB}/fontTools/svgLib/path/__init__.pyc
 ${PYSITELIB}/fontTools/svgLib/path/__init__.pyo
+${PYSITELIB}/fontTools/svgLib/path/arc.py
+${PYSITELIB}/fontTools/svgLib/path/arc.pyc
+${PYSITELIB}/fontTools/svgLib/path/arc.pyo
 ${PYSITELIB}/fontTools/svgLib/path/parser.py
 ${PYSITELIB}/fontTools/svgLib/path/parser.pyc
 ${PYSITELIB}/fontTools/svgLib/path/parser.pyo
