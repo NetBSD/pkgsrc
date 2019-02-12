@@ -1,13 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2017/11/03 11:05:42 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/02/12 12:21:00 adam Exp $
+bin/augmatch
 bin/augparse
 bin/augtool
-bin/dump
 bin/fadot
 include/augeas.h
 include/fa.h
 lib/libaugeas.la
 lib/libfa.la
 lib/pkgconfig/augeas.pc
+man/man1/augmatch.1
 man/man1/augparse.1
 man/man1/augtool.1
 share/vim/vimfiles/ftdetect/augeas.vim

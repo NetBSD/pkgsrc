@@ -1,5 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2014/12/30 17:04:15 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/02/12 12:21:00 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/augeas.py
 ${PYSITELIB}/augeas.pyc
 ${PYSITELIB}/augeas.pyo
-${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/augeas/__init__.py
+${PYSITELIB}/augeas/__init__.pyc
+${PYSITELIB}/augeas/__init__.pyo
+${PYSITELIB}/augeas/ffi.py
+${PYSITELIB}/augeas/ffi.pyc
+${PYSITELIB}/augeas/ffi.pyo
