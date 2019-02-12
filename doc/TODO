@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18800 2019/02/12 16:51:00 maya Exp $
+$NetBSD: TODO,v 1.18801 2019/02/12 20:48:21 adam Exp $
 
 Suggested new packages
 ======================
@@ -950,7 +950,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libtrace-3.0.22
 	o libv4l-0.8.5
 	o libvirt-2.3
-	o libvpx-1.8.0
 	o libxdg-basedir-1.2.0
 	o libxkbcommon-0.8.3
 	o libykneomgr-0.1.8
