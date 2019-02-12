@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.37 2018/09/15 22:47:41 wiz Exp $
+# $NetBSD: Makefile.common,v 1.38 2019/02/12 20:11:22 triaxx Exp $
 #
 # used by devel/ncurses/Makefile
 # used by devel/ncursesw/Makefile
@@ -54,7 +54,8 @@ CONFIGURE_ENV+=		ac_cv_path_TIC_PATH=${LOCALBASE}/bin/tic
 # otherwise we get a circular dependency problem.
 # Additionally, Interix is special, see ../../mk/curses.buildlink3.mk
 .  if !(exists(/usr/include/curses.h) || exists(/usr/include/ncurses.h)) || \
-	${OPSYS} == "Interix"
+	${OPSYS} == "Interix" || \
+	(${OPSYS} == "FreeBSD" && ${OS_VERSION} >= 12)
 # None was available, so disable use of tbl(1)
 USE_TOOLS:=		${USE_TOOLS:Ntbl}
 CONFIGURE_ARGS+=	--without-manpage-tbl
