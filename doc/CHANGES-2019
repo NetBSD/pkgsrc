@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.727 2019/02/13 20:32:12 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.728 2019/02/13 21:15:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1368,3 +1368,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/libpaper to 1.1.26 [wiz 2019-02-13]
 	Updated net/gssdp to 1.0.3 [wiz 2019-02-13]
 	Updated devel/boehm-gc to 8.0.2 [wiz 2019-02-13]
+	Updated converters/libetonyek to 0.1.9 [wiz 2019-02-13]
