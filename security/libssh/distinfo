@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.14 2018/12/03 15:19:51 adam Exp $
+$NetBSD: distinfo,v 1.15 2019/02/13 20:07:29 wiz Exp $
 
-SHA1 (libssh-0.8.5.tar.xz) = b5564774f986e396a7288a593595455bf10d9ce8
-RMD160 (libssh-0.8.5.tar.xz) = a118e08705257814531ce6c01d2d48cf0d6e59ce
-SHA512 (libssh-0.8.5.tar.xz) = f1e90a5046e006d44a48ab36675167761d8e308ada7a1d7a1f7ba2825d222a2fab7e19dbc78b1371fee9ba74d9c55d9856a623f97842c9b9ad4c79215e344124
-Size (libssh-0.8.5.tar.xz) = 427372 bytes
+SHA1 (libssh-0.8.6.tar.xz) = 2cb2775dcf2780520421a669eebfe5862ba51d29
+RMD160 (libssh-0.8.6.tar.xz) = 7f83581296ec7eee3165bb37a8a79a4cd906de22
+SHA512 (libssh-0.8.6.tar.xz) = e91d1f4c1343aa232ade0fe4b5e9a92ca65e3716f4ebe2ec25b04def4fae5a3774349f05a6919836551f66fb0288ed6a3e19e0ab786c081616218be973356522
+Size (libssh-0.8.6.tar.xz) = 433680 bytes
 SHA1 (patch-CompilerChecks.cmake) = 86de41ab778d25368691c1b0b9ecfa653f24cc5d
