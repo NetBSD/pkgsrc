@@ -1,6 +1,7 @@
-# $NetBSD: Makefile.common,v 1.12 2018/01/10 12:29:38 wiz Exp $
+# $NetBSD: Makefile.common,v 1.13 2019/02/13 17:42:07 wiz Exp $
 # -*- Makefile -*-
 # used by security/pinentry/Makefile
+# used by security/pinentry-fltk/Makefile
 # used by security/pinentry-gtk2/Makefile
 # used by security/pinentry-qt4/Makefile
 
