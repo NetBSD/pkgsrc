@@ -1,11 +1,11 @@
-$NetBSD: patch-examples_Makefile.in,v 1.4 2016/11/20 01:14:21 dholland Exp $
+$NetBSD: patch-examples_Makefile.in,v 1.5 2019/02/13 22:49:02 wiz Exp $
 
 Patch to link correctly against libtool built libs.
 
 Note: to make the patch smaller this uses "CC" to link and "REALCC"
 to compile. There's only one compile line and many link lines.
 
---- examples/Makefile.in.orig	2016-04-26 13:50:18.000000000 +0000
+--- examples/Makefile.in.orig	2018-09-18 16:11:14.000000000 +0000
 +++ examples/Makefile.in
 @@ -46,7 +46,8 @@ OBJEXT = @OBJEXT@
  DESTDIR =
@@ -17,9 +17,9 @@ to compile. There's only one compile line and many link lines.
  CFLAGS = @CFLAGS@
  LOCAL_CFLAGS = @LOCAL_CFLAGS@ -DREADLINE_LIBRARY -DRL_LIBRARY_VERSION='"$(RL_LIBRARY_VERSION)"'
  CPPFLAGS = @CPPFLAGS@
-@@ -56,14 +57,14 @@ INCLUDES = -I$(srcdir) -I$(top_srcdir) -
- CCFLAGS  = $(DEFS) $(LOCAL_CFLAGS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
- LDFLAGS = -g -L.. @LDFLAGS@
+@@ -60,14 +61,14 @@ LDFLAGS = -g -L.. @LDFLAGS@ $(ASAN_LDFLA
+ ASAN_XCFLAGS = -fsanitize=address -fno-omit-frame-pointer
+ ASAN_XLDFLAGS = -fsanitize=address
  
 -READLINE_LIB = ../libreadline.a
 -HISTORY_LIB = ../libhistory.a

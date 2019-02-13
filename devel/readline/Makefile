@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.67 2017/12/24 10:15:21 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2019/02/13 22:49:02 wiz Exp $
 
-READLINE_VERSION=	7.0
+READLINE_VERSION=	8.0
 
 DISTNAME=       readline-${READLINE_VERSION}
 CATEGORIES=	devel
