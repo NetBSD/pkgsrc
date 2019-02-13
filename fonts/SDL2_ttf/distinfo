@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/05/10 21:48:15 wiz Exp $
+$NetBSD: distinfo,v 1.6 2019/02/13 19:44:49 wiz Exp $
 
-SHA1 (SDL2_ttf-2.0.14.tar.gz) = 34c5fdc8508c7e14356579477f9ca2b0d6c06ffc
-RMD160 (SDL2_ttf-2.0.14.tar.gz) = a3cfa00535220c8dc9034bc94dce064fb22c4b85
-SHA512 (SDL2_ttf-2.0.14.tar.gz) = 4db817573fd216e26180f4c401cc869ce407589a461032fd7167dc612d35e038cca1ab67be7909b6b49c741581a68125ab46362ad8e3c0a2cdd39624ad847099
-Size (SDL2_ttf-2.0.14.tar.gz) = 4147462 bytes
-SHA1 (patch-configure) = 6a207d14e3f3ff2aac0bf15e31f4ddf07ad13a25
+SHA1 (SDL2_ttf-2.0.15.tar.gz) = 1453c5f72f986024c5271c76d74cc232aa57dd79
+RMD160 (SDL2_ttf-2.0.15.tar.gz) = a651ca843f4fee0b439f76ba308f047e52d699c1
+SHA512 (SDL2_ttf-2.0.15.tar.gz) = 30d685932c3dd6f2c94e2778357a5c502f0421374293d7102a64d92f9c7861229bf36bedf51c1a698b296a58c858ca442d97afb908b7df1592fc8d4f8ae8ddfd
+Size (SDL2_ttf-2.0.15.tar.gz) = 4479718 bytes
