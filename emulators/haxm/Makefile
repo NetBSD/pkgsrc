@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/02/13 16:08:50 kamil Exp $
+# $NetBSD: Makefile,v 1.3 2019/02/13 16:48:58 kamil Exp $
 
 GITHUB_PROJECT=	haxm
 GITHUB_TAG=	c072ad9b68e1d558a9fb791511468d10a1a9b319
@@ -35,6 +35,8 @@ KMODULEDIR=	stand/${MACHINE}/${OS_VERSION}/modules
 
 INSTALLATION_DIRS+=	sbin		# auxiliary scripts
 INSTALLATION_DIRS+=	${KMODULEDIR}
+
+INSTALL_UNSTRIPPED=	yes # Kernel linker needs unstripped module
 
 PLIST_SUBST+=	MACHINE=${MACHINE}
 
