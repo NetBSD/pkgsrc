@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.292 2019/02/06 11:18:43 nia Exp $
+# $NetBSD: Makefile,v 1.293 2019/02/13 05:22:22 kamil Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -82,6 +82,7 @@ SUBDIR+=	gpsp-rpi
 SUBDIR+=	gxemul
 SUBDIR+=	handy_sdl
 SUBDIR+=	hatari
+SUBDIR+=	haxm
 SUBDIR+=	hercules
 SUBDIR+=	hercules-images
 SUBDIR+=	ia64sim
