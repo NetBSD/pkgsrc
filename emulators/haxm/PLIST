@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2019/02/13 05:20:15 kamil Exp $
+sbin/haxm-mknod
+sbin/haxm-modload
+sbin/haxm-modunload
+stand/${MACHINE}/${OS_VERSION}/modules/haxm.kmod
