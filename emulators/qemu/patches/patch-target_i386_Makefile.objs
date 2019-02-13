@@ -1,0 +1,20 @@
+$NetBSD: patch-target_i386_Makefile.objs,v 1.1 2019/02/13 05:16:12 kamil Exp $
+
+Cherry-pick:
+ - hax: Support for Linux hosts [modified for pkgsrc]
+   b65cc8dec07fec77dbda7bc5daf1defcb7c411d9
+
+--- target/i386/Makefile.objs.orig	2018-12-11 17:44:34.000000000 +0000
++++ target/i386/Makefile.objs
+@@ -12,8 +12,10 @@ obj-$(call lnot,$(CONFIG_HYPERV)) += hyp
+ ifeq ($(CONFIG_WIN32),y)
+ obj-$(CONFIG_HAX) += hax-all.o hax-mem.o hax-windows.o
+ endif
+-ifeq ($(CONFIG_DARWIN),y)
++ifeq ($(CONFIG_POSIX),y)
+ obj-$(CONFIG_HAX) += hax-all.o hax-mem.o hax-darwin.o
++endif
++ifeq ($(CONFIG_DARWIN),y)
+ obj-$(CONFIG_HVF) += hvf/
+ endif
+ obj-$(CONFIG_WHPX) += whpx-all.o
