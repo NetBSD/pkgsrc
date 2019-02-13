@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.105 2019/01/22 03:20:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.106 2019/02/13 20:05:14 wiz Exp $
 
-DISTNAME=	bison-3.0.5
+DISTNAME=	bison-3.2.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=bison/}
 EXTRACT_SUFX=	.tar.xz

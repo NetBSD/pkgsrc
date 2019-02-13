@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2019/01/22 03:20:40 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.30 2019/02/13 20:05:14 wiz Exp $
 bin/bison
 info/bison.info
 man/man1/bison.1
@@ -32,11 +32,19 @@ share/doc/bison/NEWS
 share/doc/bison/README
 share/doc/bison/THANKS
 share/doc/bison/TODO
-share/doc/bison/examples/calc++/calc++-driver.cc
-share/doc/bison/examples/calc++/calc++-driver.hh
-share/doc/bison/examples/calc++/calc++-parser.yy
-share/doc/bison/examples/calc++/calc++-scanner.ll
+share/doc/bison/examples/README
+share/doc/bison/examples/c++/Makefile
+share/doc/bison/examples/c++/README
+share/doc/bison/examples/c++/simple.yy
+share/doc/bison/examples/c++/variant-11.yy
+share/doc/bison/examples/c++/variant.yy
+share/doc/bison/examples/calc++/Makefile
+share/doc/bison/examples/calc++/README
 share/doc/bison/examples/calc++/calc++.cc
+share/doc/bison/examples/calc++/driver.cc
+share/doc/bison/examples/calc++/driver.hh
+share/doc/bison/examples/calc++/parser.yy
+share/doc/bison/examples/calc++/scanner.ll
 share/doc/bison/examples/mfcalc/calc.h
 share/doc/bison/examples/mfcalc/mfcalc.y
 share/doc/bison/examples/rpcalc/rpcalc.y
