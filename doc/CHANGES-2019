@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.703 2019/02/13 11:54:30 nia Exp $
+$NetBSD: CHANGES-2019,v 1.704 2019/02/13 12:54:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1337,3 +1337,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Added emulators/haxm version 0.c072ad9b68e1d558a9fb791511468d10a1a9b319 [kamil 2019-02-13]
 	Updated mail/fdm to 2.0 [leot 2019-02-13]
 	Updated lang/erlang to 21.2.5 [nia 2019-02-13]
+	Updated devel/py-anytree to 2.6.0 [adam 2019-02-13]
+	Updated devel/py-uvloop to 0.12.1 [adam 2019-02-13]
+	Updated textproc/py-sphinx-rtd-theme to 0.4.3 [adam 2019-02-13]
+	Updated time/py-dateparser to 0.7.1 [adam 2019-02-13]
