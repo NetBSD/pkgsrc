@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.117 2018/03/12 11:18:00 wiz Exp $
+# $NetBSD: Makefile,v 1.118 2019/02/13 11:41:32 wiz Exp $
 
 DISTNAME=	xterm-330
 PKGREVISION=	1
 CATEGORIES=	x11
-MASTER_SITES=	ftp://invisible-island.net/xterm/
+MASTER_SITES=	ftp://ftp.invisible-island.net/xterm/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://dickey.his.com/xterm/xterm.html
+HOMEPAGE=	http://invisible-island.net/xterm/xterm.html
 COMMENT=	Latest terminal emulator for the X Window System
 LICENSE=	x11
 
