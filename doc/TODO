@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18810 2019/02/13 20:05:23 wiz Exp $
+$NetBSD: TODO,v 1.18811 2019/02/13 20:07:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -935,7 +935,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libqxp-0.0.2
 	o librsvg-2.44.9 [wip]
 	o librsvg-2.44.12
-	o libssh-0.8.6
 	o libstree-0.4.2
 	o libtcl-nothread-8.5.1
 	o libtecla-1.6.3

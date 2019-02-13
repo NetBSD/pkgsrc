@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.721 2019/02/13 20:05:23 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.722 2019/02/13 20:07:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1362,3 +1362,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/libgsf to 1.14.45 [wiz 2019-02-13]
 	Updated audio/abcde to 2.9.3 [wiz 2019-02-13]
 	Updated devel/bison to 3.2.4 [wiz 2019-02-13]
+	Updated security/libssh to 0.86 [wiz 2019-02-13]
