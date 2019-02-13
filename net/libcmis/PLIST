@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2018/01/01 18:33:33 rillig Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/02/13 22:12:17 wiz Exp $
 bin/cmis-client
 include/libcmis-0.5/libcmis/allowable-actions.hxx
 include/libcmis-0.5/libcmis/document.hxx
 include/libcmis-0.5/libcmis/exception.hxx
 include/libcmis-0.5/libcmis/folder.hxx
+include/libcmis-0.5/libcmis/libcmis-api.h
 include/libcmis-0.5/libcmis/libcmis.hxx
 include/libcmis-0.5/libcmis/oauth2-data.hxx
 include/libcmis-0.5/libcmis/object-type.hxx
@@ -20,6 +21,7 @@ include/libcmis-c-0.5/libcmis-c/allowable-actions.h
 include/libcmis-c-0.5/libcmis-c/document.h
 include/libcmis-c-0.5/libcmis-c/error.h
 include/libcmis-c-0.5/libcmis-c/folder.h
+include/libcmis-c-0.5/libcmis-c/libcmis-c-api.h
 include/libcmis-c-0.5/libcmis-c/libcmis-c.h
 include/libcmis-c-0.5/libcmis-c/oauth2-data.h
 include/libcmis-c-0.5/libcmis-c/object-type.h
@@ -36,4 +38,3 @@ lib/libcmis-0.5.la
 lib/libcmis-c-0.5.la
 lib/pkgconfig/libcmis-0.5.pc
 lib/pkgconfig/libcmis-c-0.5.pc
-man/manx/cmis-client.xml
