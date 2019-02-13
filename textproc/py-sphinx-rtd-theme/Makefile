@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2018/10/07 07:25:53 adam Exp $
+# $NetBSD: Makefile,v 1.9 2019/02/13 12:50:40 adam Exp $
 
-DISTNAME=	sphinx_rtd_theme-0.4.2
+DISTNAME=	sphinx_rtd_theme-0.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinx_rtd_theme/}
