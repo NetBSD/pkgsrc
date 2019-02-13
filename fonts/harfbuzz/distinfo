@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.84 2019/01/30 19:21:22 jperkin Exp $
+$NetBSD: distinfo,v 1.85 2019/02/13 20:12:10 wiz Exp $
 
-SHA1 (harfbuzz-2.3.0.tar.bz2) = 68486b8902c5748c8cf0920e288f83fbf126a86c
-RMD160 (harfbuzz-2.3.0.tar.bz2) = c2a6c2a16cac38e150bd05c881de933fa33e1782
-SHA512 (harfbuzz-2.3.0.tar.bz2) = 830c5b96384554fb6d2502713e9b2eff384dbe6aa3feb08830226944bcb07c8fb55237f389e1e6416d0942e3efba8b1ed54a49ff8c4762fec230f2404095e85a
-Size (harfbuzz-2.3.0.tar.bz2) = 17909479 bytes
+SHA1 (harfbuzz-2.3.1.tar.bz2) = eb8d4257ea3b533fcc7a9207a92cd018108a2fdf
+RMD160 (harfbuzz-2.3.1.tar.bz2) = 6c2500882f1f67635e59908efb1f2264e2c00aaa
+SHA512 (harfbuzz-2.3.1.tar.bz2) = 78a8f05bfcc95cfe3fc0f1a595bdc7298c9c1456db6c7ef70914051fda43f37aaff15eac75aa6922eca82d2291baeb8385e02e6aacb44ca05b4873c311a662ac
+Size (harfbuzz-2.3.1.tar.bz2) = 17942960 bytes
 SHA1 (patch-src_hb-dsalgs.hh) = f39a705dd8f12733be9edbc1ba12008723b56db0
-SHA1 (patch-src_hb.hh) = bb56d18e9303d597e485c86b413e4cbc28aa7c70

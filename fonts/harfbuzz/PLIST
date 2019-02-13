@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2019/01/29 18:54:03 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.32 2019/02/13 20:12:10 wiz Exp $
 bin/hb-ot-shape-closure
 bin/hb-shape
 bin/hb-subset
@@ -153,3 +153,4 @@ share/gtk-doc/html/harfbuzz/what-harfbuzz-doesnt-do.html
 share/gtk-doc/html/harfbuzz/what-is-harfbuzz.html
 share/gtk-doc/html/harfbuzz/why-do-i-need-a-shaping-engine.html
 share/gtk-doc/html/harfbuzz/why-is-it-called-harfbuzz.html
+share/gtk-doc/html/harfbuzz/working-with-harfbuzz-clusters.html
