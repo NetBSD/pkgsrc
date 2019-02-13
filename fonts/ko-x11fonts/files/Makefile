@@ -10,9 +10,11 @@ PCFALL!=find . -type f -a -name \*.pcf -print
 
 all: ${PCF}
 
+# Hard-link or copy the files; for some reason as of 2019 bdftopcf refuses
+# to open symlinks. sigh
 prepare::
 	for i in ${BDF0}; do \
-		ln -s $$i; \
+		ln $$i . || cp $$i .; \
 	done
 
 install::
