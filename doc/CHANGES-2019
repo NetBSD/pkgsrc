@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.699 2019/02/12 23:25:28 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.700 2019/02/13 05:16:31 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1333,3 +1333,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/p5-highlight to 3.49 [schmonz 2019-02-12]
 	Updated multimedia/libvpx to 1.8.0 [adam 2019-02-12]
 	Updated mail/getmail to 5.10 [schmonz 2019-02-12]
+	Updated emulators/qemu to 3.1.0nb5 [kamil 2019-02-13]
