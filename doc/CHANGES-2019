@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.701 2019/02/13 05:23:23 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.702 2019/02/13 11:08:16 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1335,3 +1335,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/getmail to 5.10 [schmonz 2019-02-12]
 	Updated emulators/qemu to 3.1.0nb5 [kamil 2019-02-13]
 	Added emulators/haxm version 0.c072ad9b68e1d558a9fb791511468d10a1a9b319 [kamil 2019-02-13]
+	Updated mail/fdm to 2.0 [leot 2019-02-13]
