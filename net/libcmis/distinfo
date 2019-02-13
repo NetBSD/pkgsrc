@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/08/17 17:21:24 wiz Exp $
+$NetBSD: distinfo,v 1.6 2019/02/13 22:12:17 wiz Exp $
 
-SHA1 (libcmis-0.5.1.tar.gz) = 94c00715ae8a31bc8e5a6a699e36c22d0020649e
-RMD160 (libcmis-0.5.1.tar.gz) = 62a26c5885a5cfb478b919f2515975506bdc1d9f
-SHA512 (libcmis-0.5.1.tar.gz) = da1e66a7604f90644ad6ee691a5c06df36debec20db361e166ee64c9f8ce85be48623e38367ea2799107c10041ed5f8c3a8011a80d6eaca800c29084fb4fe0f6
-Size (libcmis-0.5.1.tar.gz) = 767701 bytes
-SHA1 (patch-src_libcmis_xml-utils.cxx) = 2ed2ac480c62230810ad48fce4ac4f00b13dfc72
+SHA1 (libcmis-0.5.2.tar.gz) = 26e64cdd9028fa39e76fe7c2cc739ade8a91535f
+RMD160 (libcmis-0.5.2.tar.gz) = 647500ebcda8693af90ac92b9a193e41b5e695bc
+SHA512 (libcmis-0.5.2.tar.gz) = 3dac0eed31d1dd3ac4670e501e0677196811f7875e6d1c253c8d874d6903691cbe4f1c27c8468af07bfd7f79b0d6ec4f933b28cb3bb37dcbea18bc2dd8f6e374
+Size (libcmis-0.5.2.tar.gz) = 808619 bytes
