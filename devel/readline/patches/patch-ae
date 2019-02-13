@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.18 2016/11/20 01:14:21 dholland Exp $
+$NetBSD: patch-ae,v 1.19 2019/02/13 22:49:02 wiz Exp $
 
 Libtoolify.
 Pass -no-undefined to libtool for building shared library.
@@ -6,7 +6,7 @@ Don't ignore failures during installation.
 Don't ignore failures building the examples.
 Fix race condition so the examples are built *after* the library.
 
---- Makefile.in.orig	2015-08-26 14:15:59.000000000 +0000
+--- Makefile.in.orig	2018-05-24 19:37:27.000000000 +0000
 +++ Makefile.in
 @@ -18,6 +18,9 @@
  RL_LIBRARY_VERSION = @LIBVERSION@
@@ -18,7 +18,7 @@ Fix race condition so the examples are built *after* the library.
  PACKAGE = @PACKAGE_NAME@
  VERSION = @PACKAGE_VERSION@
  
-@@ -76,6 +79,7 @@ CTAGS = ctags -tw
+@@ -77,6 +80,7 @@ CTAGS = ctags -tw
  CFLAGS = @CFLAGS@
  LOCAL_CFLAGS = @LOCAL_CFLAGS@ -DRL_LIBRARY_VERSION='"$(RL_LIBRARY_VERSION)"'
  CPPFLAGS = @CPPFLAGS@
@@ -26,7 +26,7 @@ Fix race condition so the examples are built *after* the library.
  
  DEFS = @DEFS@ @CROSS_COMPILE@
  LOCAL_DEFS = @LOCAL_DEFS@
-@@ -98,9 +102,15 @@ GCC_LINT_CFLAGS = $(XCCFLAGS) $(GCC_LINT
+@@ -104,9 +108,15 @@ install_examples = @EXAMPLES_INSTALL_TAR
  	${RM} $@
  	$(CC) -c $(CCFLAGS) $<
  
@@ -42,7 +42,7 @@ Fix race condition so the examples are built *after* the library.
  
  # The C code source files for this library.
  CSOURCES = $(srcdir)/readline.c $(srcdir)/funmap.c $(srcdir)/keymaps.c \
-@@ -157,8 +167,10 @@ TARGETS = @STATIC_TARGET@ @SHARED_TARGET
+@@ -163,8 +173,10 @@ TARGETS = @STATIC_TARGET@ @SHARED_TARGET
  INSTALL_TARGETS = @STATIC_INSTALL_TARGET@ @SHARED_INSTALL_TARGET@
  
  all: $(TARGETS)
@@ -52,9 +52,9 @@ Fix race condition so the examples are built *after* the library.
 +everything: all .WAIT examples
 +everything-libtool: all-libtool .WAIT examples
  
- static: $(STATIC_LIBS)
- 
-@@ -167,17 +179,33 @@ libreadline.a: $(OBJECTS)
+ asan:
+ 	${MAKE} ${MFLAGS} ASAN_CFLAGS='${ASAN_XCFLAGS}' ASAN_LDFLAGS='${ASAN_XLDFLAGS}' everything
+@@ -176,17 +188,33 @@ libreadline.a: $(OBJECTS)
  	$(AR) $(ARFLAGS) $@ $(OBJECTS)
  	-test -n "$(RANLIB)" && $(RANLIB) $@
  
@@ -88,7 +88,7 @@ Fix race condition so the examples are built *after* the library.
  readline: $(OBJECTS) readline.h rldefs.h chardefs.h ./libreadline.a
  	$(CC) $(CCFLAGS) -DREADLINE_LIBRARY -o $@ $(top_srcdir)/examples/rl.c ./libreadline.a ${TERMCAP_LIB}
  
-@@ -214,8 +242,7 @@ documentation: force
+@@ -223,8 +251,7 @@ documentation: force
  	-( cd doc && $(MAKE) $(MFLAGS) )
  
  examples: force
@@ -98,7 +98,7 @@ Fix race condition so the examples are built *after* the library.
  
  force:
  
-@@ -262,6 +289,12 @@ install-examples: installdirs install-he
+@@ -281,6 +308,12 @@ install-examples: installdirs install-he
  uninstall-examples: maybe-uninstall-headers
  	-( cd examples; ${MAKE} ${MFLAGS} DESTDIR=${DESTDIR} uninstall )
  
