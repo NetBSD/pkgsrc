@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.739 2019/02/13 22:26:58 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.740 2019/02/13 22:49:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1380,3 +1380,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/libopenmpt to 0.4.3 [wiz 2019-02-13]
 	Updated x11/libxkbcommon to 0.8.3 [wiz 2019-02-13]
 	Updated math/mpfr to 4.0.2 [wiz 2019-02-13]
+	Updated devel/readline to 8.0 [wiz 2019-02-13]
