@@ -1,15 +1,15 @@
-$NetBSD: patch-Makefile.am,v 1.2 2018/05/04 15:33:22 leot Exp $
+$NetBSD: patch-Makefile.am,v 1.3 2019/02/13 11:08:02 leot Exp $
 
 Fix race conditions.
 
---- Makefile.am.orig	2015-11-06 14:11:58.000000000 +0000
+--- Makefile.am.orig	2019-02-12 22:08:26.000000000 +0000
 +++ Makefile.am
-@@ -109,6 +109,8 @@ dist_fdm_SOURCES = \
+@@ -110,6 +110,8 @@ dist_fdm_SOURCES = \
  	parse.y \
  	lex.c
  
 +lex.o: parse.c
 +
  nodist_fdm_SOURCES =
- if NO_STRLCAT
- nodist_fdm_SOURCES += compat/strlcat.c
+ if NO_B64_NTOP
+ nodist_fdm_SOURCES += compat/base64.c
