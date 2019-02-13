@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18805 2019/02/13 19:52:17 wiz Exp $
+$NetBSD: TODO,v 1.18806 2019/02/13 19:54:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -737,7 +737,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o grilo-0.2.12
 	o grilo-plugins-0.2.14
 	o gromacs-5.1.2
-	o gsed-4.7
 	o gss-1.0.3
 	o gssdp-1.0.3
 	o gst-plugins1-omx-1.10.0
