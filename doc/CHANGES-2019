@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.731 2019/02/13 21:31:23 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.732 2019/02/13 21:36:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1372,3 +1372,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/xkeyboard-config to 2.26 [wiz 2019-02-13]
 	Updated x11/xf86-video-nouveau to 1.0.16 [wiz 2019-02-13]
 	Updated mail/notmuch to 0.28.1 [wiz 2019-02-13]
+	Updated converters/libqxp to 0.0.2 [wiz 2019-02-13]
