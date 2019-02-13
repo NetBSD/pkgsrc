@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.54 2019/02/13 08:29:52 he Exp $
+$NetBSD: distinfo,v 1.55 2019/02/13 13:33:43 he Exp $
 
 SHA1 (rust-1.31.0-x86_64-sun-solaris.tar.gz) = 782763ddcfb58df6d522aa8b66286e01451c6cb5
 RMD160 (rust-1.31.0-x86_64-sun-solaris.tar.gz) = ad93cf10e3b21c63989310b49ea6874520062400
@@ -24,10 +24,6 @@ SHA1 (rust-1.31.1-i686-unknown-netbsd.tar.gz) = f7d37b14e75180187b7213683c11addb
 RMD160 (rust-1.31.1-i686-unknown-netbsd.tar.gz) = 0d7136de4d376044fab53a0e3449ba91f156e5f8
 SHA512 (rust-1.31.1-i686-unknown-netbsd.tar.gz) = 4fd7f2e7bed92c535e811b71a21a1292c912c1fa8d8dcf29ef586b762fcb2957008a40ff75a05edd3935bc0a1b823052f6375f5a021016f6b28a969d4d5c249e
 Size (rust-1.31.1-i686-unknown-netbsd.tar.gz) = 216108720 bytes
-SHA1 (rust-1.31.1-sparc64-unknown-netbsd.tar.gz) = 1930e26264d000538aeb65f478e986ce840a3519
-RMD160 (rust-1.31.1-sparc64-unknown-netbsd.tar.gz) = 51c94ee6daee468dae1fa130c45c1a604234222e
-SHA512 (rust-1.31.1-sparc64-unknown-netbsd.tar.gz) = ec7df6e0e5069c6d5f5e5545c7ebca16430826c9eacc4e23d3b0036de37860d32f970fdfcd4a46d81ccef5d06ee8f8e3ae2e328c2b1c4e81a6bcfb8c7e9cf04d
-Size (rust-1.31.1-sparc64-unknown-netbsd.tar.gz) = 215736328 bytes
 SHA1 (rust-1.31.1-x86_64-apple-darwin.tar.gz) = fabc4be533738609b70d5ba045a62ded7452a2c7
 RMD160 (rust-1.31.1-x86_64-apple-darwin.tar.gz) = 88633cd8e6914d09ce6a7df21dc6b951d9c1b301
 SHA512 (rust-1.31.1-x86_64-apple-darwin.tar.gz) = cc5bbdb15575364d035e88cdbcc6d20e2ab631c49162e63054cc996f1afd145ef88c6f7f47f31c9f4453c702a2e681ed46cd66ba3982bb06f766633af91aacab
@@ -72,10 +68,6 @@ SHA1 (rust-std-1.31.1-i686-unknown-netbsd.tar.gz) = d861a5fa70b8c6bea3f2624c2337
 RMD160 (rust-std-1.31.1-i686-unknown-netbsd.tar.gz) = 230b9c5838a6d980f06da0b459fee60dc5a46e77
 SHA512 (rust-std-1.31.1-i686-unknown-netbsd.tar.gz) = f20116e6bb1f17350c8a10ca9edffab325bac35c6b29d4cdaacce35f4ec27b36281f37043cedf1dfe097dc0f9620b55911b45ca85c95732ab57b47059de0af49
 Size (rust-std-1.31.1-i686-unknown-netbsd.tar.gz) = 71783116 bytes
-SHA1 (rust-std-1.31.1-sparc64-unknown-netbsd.tar.gz) = d20f6df638543f59771a7cd825c5945cbab20c4f
-RMD160 (rust-std-1.31.1-sparc64-unknown-netbsd.tar.gz) = 85f1b171abc07d624b44ae2ba6b6b3e4fe1cf27b
-SHA512 (rust-std-1.31.1-sparc64-unknown-netbsd.tar.gz) = 06083d8a0cb7bbde28362edd7b47f6b3253529733bd03ca45b5f4e9856a8850a7fe890db42d7c2898512c2466abc53c7b8ca48b84327a8e24604717179eefaa9
-Size (rust-std-1.31.1-sparc64-unknown-netbsd.tar.gz) = 71836855 bytes
 SHA1 (rust-std-1.31.1-x86_64-apple-darwin.tar.gz) = e2152a2124462b564ba874d69af4673cf3cc7489
 RMD160 (rust-std-1.31.1-x86_64-apple-darwin.tar.gz) = 3720e893daa003532a3df322f4c206a3368efc7f
 SHA512 (rust-std-1.31.1-x86_64-apple-darwin.tar.gz) = ad55f03fce5b4eed03ea606c43f44d683895173efa1c4a1e818b7eb4fe5ec2de022ddd8d6e8e0b65485d105713cd49b766f92df11a023e0e2e42342837c658cf
@@ -125,3 +117,11 @@ SHA1 (patch-src_tools_rls_src_cmd.rs) = 754bfb8806e209cb0ef01690b48bf4b145017ab9
 SHA1 (patch-src_tools_rls_src_server_io.rs) = 74b90c1aeb70b0c3a20709145d6568ddf4647877
 SHA1 (patch-src_tools_rust-installer_install-template.sh) = f2ec6dced2be1fa23773d5827503ad07d0913dc2
 SHA1 (patch-vendor_rand_src_rngs_os.rs) = 7a1c6d91d9418e1f8e378c4baca33045cc768f2d
+SHA1 (rust-1.32.0-sparc64-unknown-netbsd.tar.gz) = 65dd086a2d81a6e38300ab1f99b2dc6dbf7715c6
+RMD160 (rust-1.32.0-sparc64-unknown-netbsd.tar.gz) = d3cb8207b7d4e8eb484836f9a8958bc34c418464
+SHA512 (rust-1.32.0-sparc64-unknown-netbsd.tar.gz) = 1f6999d29bbab7e0b206ae7d50d36445b890767842578f77d3e5b7f95aed3b5903488e5b93ea2daa62308925428dabf6a627de30c3aa2dcfe34313e88ac9deea
+Size (rust-1.32.0-sparc64-unknown-netbsd.tar.gz) = 217393464 bytes
+SHA1 (rust-std-1.32.0-sparc64-unknown-netbsd.tar.gz) = ee11e922e8db3e06c486d73f13f0cebc87a8608c
+RMD160 (rust-std-1.32.0-sparc64-unknown-netbsd.tar.gz) = bcd4c04ab115a9f6ee9ee9c338de2833ed9cff6b
+SHA512 (rust-std-1.32.0-sparc64-unknown-netbsd.tar.gz) = 9382ffd0f82b84181fd4c3efbab81e3241f6b1b43fe77bdcee6c185b728f6ffa238c13f98eafb1139169d9dd4aee831bea0b5d00c887e517c04c99ae1c162ca2
+Size (rust-std-1.32.0-sparc64-unknown-netbsd.tar.gz) = 71612611 bytes
