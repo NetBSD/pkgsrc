@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.64 2018/12/20 23:55:24 wiz Exp $
+$NetBSD: distinfo,v 1.65 2019/02/13 20:32:03 wiz Exp $
 
-SHA1 (gc-8.0.0.tar.gz) = bfb22367b95c796f2248b41405d37388027fe382
-RMD160 (gc-8.0.0.tar.gz) = 3c2e3a5b8b706d8f359528208bf95e4177b50ce6
-SHA512 (gc-8.0.0.tar.gz) = 133b3b96014c20736c5d89fd85f3a94c59a335238d55e1a03db47debee91b5118ede6bd4260c31fe0dde623b7fd3da29d1b8fb86b5de6048183eca6c269d32da
-Size (gc-8.0.0.tar.gz) = 1138310 bytes
-SHA1 (patch-os__dep.c) = 9d7b4ce081bf16ff51212176f291a4e1b2119308
+SHA1 (gc-8.0.2.tar.gz) = 570750e6854d5be87e85f965735932d24f75ab39
+RMD160 (gc-8.0.2.tar.gz) = f0fcc3c6136bb148127d569554766a6f2fdc41b2
+SHA512 (gc-8.0.2.tar.gz) = b1401abb2e82b143b9a2a9013f5b2efa4015b256e7ea8ef2c897ef3c0d2d41fc893413bf6a49efc1845018e8ab823adb485fb3358eb47715982259ace9ffd7c6
+Size (gc-8.0.2.tar.gz) = 1159207 bytes
