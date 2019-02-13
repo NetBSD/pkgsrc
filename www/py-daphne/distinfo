@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2018/12/16 18:22:59 adam Exp $
+$NetBSD: distinfo,v 1.11 2019/02/13 15:55:41 adam Exp $
 
-SHA1 (daphne-2.2.4.tar.gz) = 23f5655d26a0cda895a4aadb12249b6b4b8613eb
-RMD160 (daphne-2.2.4.tar.gz) = 0bac23d317b0c14f57e5be2c8536d8a594022bc7
-SHA512 (daphne-2.2.4.tar.gz) = 009496141f38527c96125c8a8c0f3949faabca6addf2c7aeab4e1aa51682911c57c3145372ffed761729cd1c2ae76bcb3142745d12de55e1037733363c3ced64
-Size (daphne-2.2.4.tar.gz) = 23066 bytes
+SHA1 (daphne-2.2.5.tar.gz) = 9d4c59e568f11f1a416c36898677a6778d4054fb
+RMD160 (daphne-2.2.5.tar.gz) = cf45ce0d23d5dbd37e4315054353e761b831679b
+SHA512 (daphne-2.2.5.tar.gz) = ab81517ac3a066bc2afee11e7c7c11cd515b31042952d79e449d15652122fcd8678d9be09775389f778972207c1f369061386ad239f37df01ce507711a084b9e
+Size (daphne-2.2.5.tar.gz) = 23177 bytes
