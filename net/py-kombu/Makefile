@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2018/12/16 14:38:18 adam Exp $
+# $NetBSD: Makefile,v 1.20 2019/02/13 16:24:15 adam Exp $
 
-DISTNAME=	kombu-4.2.2
+DISTNAME=	kombu-4.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/kombu/}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://kombu.readthedocs.org/
 COMMENT=	Messaging framework for Python
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-amqp>=2.1.4:../../net/py-amqp
+DEPENDS+=	${PYPKGPREFIX}-amqp>=2.4.0:../../net/py-amqp
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-Pyro-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-case>=1.5.2:../../devel/py-case
