@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2019/02/13 17:39:36 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/02/13 17:40:53 wiz Exp $
 
 PKGNAME=		${DISTNAME:S/pinentry-/pinentry-fltk-/}
 COMMENT=		Applications for entering PINs or Passphrases, FLTK enabled
 
 .include		"../../security/pinentry/Makefile.common"
 
+DISTINFO_FILE=		${.CURDIR}/distinfo
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		pkg-config
 
