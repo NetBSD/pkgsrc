@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.711 2019/02/13 17:36:13 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.712 2019/02/13 17:43:56 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1352,3 +1352,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/py-kombu to 4.3.0 [adam 2019-02-13]
 	Updated news/libcanlock to 3.1.0 [wiz 2019-02-13]
 	Updated news/canlock-hp to 3.1.0 [wiz 2019-02-13]
+	Updated emulators/haxm to 0.c072ad9b68e1d558a9fb791511468d10a1a9b319nb1 [kamil 2019-02-13]
