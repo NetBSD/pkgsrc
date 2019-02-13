@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/02/13 05:20:15 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2019/02/13 16:08:50 kamil Exp $
 
 GITHUB_PROJECT=	haxm
 GITHUB_TAG=	c072ad9b68e1d558a9fb791511468d10a1a9b319
@@ -15,6 +15,8 @@ WRKSRC=		${WRKDIR}/haxm-${GITHUB_TAG}
 
 ONLY_FOR_PLATFORM=	NetBSD-*-x86_64
 OSVERSION_SPECIFIC=	YES
+
+BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 
 BUILD_DIRS=	platforms/netbsd
 
