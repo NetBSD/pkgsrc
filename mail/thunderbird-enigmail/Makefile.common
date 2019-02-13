@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.20 2018/07/03 05:03:23 adam Exp $
+# $NetBSD: Makefile.common,v 1.21 2019/02/13 21:59:31 wiz Exp $
 #
 # used by mail/thunderbird-enigmail/Makefile
 # used by mail/seamonkey-enigmail/Makefile
 
-DISTNAME=	enigmail-1.9.9
+DISTNAME=	enigmail-2.0.9
 CATEGORIES=	mail security
 MASTER_SITES=	http://www.enigmail.net/download/source/
 
@@ -36,7 +36,9 @@ REPLACE_PYTHON+=	util/xpt.py
 WRKSRC=		${WRKDIR}/enigmail
 GNU_CONFIGURE=	yes
 
-ENIGMAILXPI=	enigmail-${PKGVERSION_NOREV}.xpi
+#ENIGMAILXPI=	enigmail-${PKGVERSION_NOREV}.xpi
+# XXX: old version in 2.0.9 release
+ENIGMAILXPI=	enigmail-2.0.8.xpi
 XPIFILE=	${WRKSRC}/build/${ENIGMAILXPI}
 
 # Build instructions: https://www.enigmail.net/download/build_instructions.php
