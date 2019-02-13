@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.716 2019/02/13 19:52:17 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.717 2019/02/13 19:54:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1357,3 +1357,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated fonts/SDL2_ttf to 2.0.15 [wiz 2019-02-13]
 	Updated devel/meld to 3.20.0 [wiz 2019-02-13]
 	Updated security/libsecret to 0.18.7 [wiz 2019-02-13]
+	Updated textproc/gsed to 4.7 [wiz 2019-02-13]
