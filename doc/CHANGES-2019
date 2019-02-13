@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.719 2019/02/13 19:59:13 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.720 2019/02/13 20:00:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1360,3 +1360,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/gsed to 4.7 [wiz 2019-02-13]
 	Updated security/caff to 2.8 [wiz 2019-02-13]
 	Updated devel/libgsf to 1.14.45 [wiz 2019-02-13]
+	Updated audio/abcde to 2.9.3 [wiz 2019-02-13]
