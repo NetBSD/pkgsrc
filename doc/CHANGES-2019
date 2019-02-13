@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.712 2019/02/13 17:43:56 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.713 2019/02/13 19:39:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1353,3 +1353,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated news/libcanlock to 3.1.0 [wiz 2019-02-13]
 	Updated news/canlock-hp to 3.1.0 [wiz 2019-02-13]
 	Updated emulators/haxm to 0.c072ad9b68e1d558a9fb791511468d10a1a9b319nb1 [kamil 2019-02-13]
+	Updated misc/khard to 0.13.0 [wiz 2019-02-13]
