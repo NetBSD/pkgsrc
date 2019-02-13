@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.735 2019/02/13 22:08:22 maya Exp $
+$NetBSD: CHANGES-2019,v 1.736 2019/02/13 22:12:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1376,3 +1376,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/thunderbird-enigmail to 2.0.9 [wiz 2019-02-13]
 	Updated converters/libcdr to 0.1.5 [wiz 2019-02-13]
 	Updated shells/fish to 3.0.0nb1 [maya 2019-02-13]
+	Updated net/libcmis to 0.5.2 [wiz 2019-02-13]
