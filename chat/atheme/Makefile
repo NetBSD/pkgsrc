@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2019/02/07 14:29:20 nia Exp $
+# $NetBSD: Makefile,v 1.17 2019/02/13 15:20:27 tnn Exp $
 #
 
 DISTNAME=	atheme-7.2.9
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=atheme/}
 EXTRACT_SUFX=	.tar.bz2
