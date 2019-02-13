@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.724 2019/02/13 20:19:14 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.725 2019/02/13 20:21:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1365,3 +1365,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/libssh to 0.86 [wiz 2019-02-13]
 	Updated fonts/harfbuzz to 2.3.1 [wiz 2019-02-13]
 	Updated www/py-mechanize to 0.4.0 [wiz 2019-02-13]
+	Updated print/libpaper to 1.1.26 [wiz 2019-02-13]
