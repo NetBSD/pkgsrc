@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2019/02/13 17:40:53 wiz Exp $
+
+SHA1 (pinentry-1.1.0.tar.bz2) = 693bdf9f48dfb3e040d92f50b1bb464e268b9fb0
+RMD160 (pinentry-1.1.0.tar.bz2) = 33b1f9ae44172a0bba37ad4b7d264822e040fe9e
+SHA512 (pinentry-1.1.0.tar.bz2) = 5012672925bcb5f683358c259e55e4b87c67cf063ad52c759308933733025c33f7ce08e5b8019ffc101cbf7ef30499040ef2fd34a7611698e65e1593f80948cd
+Size (pinentry-1.1.0.tar.bz2) = 467702 bytes
+SHA1 (patch-fltk_main.cxx) = f74f3eb14f16e632386c46f5febea158700447fb
