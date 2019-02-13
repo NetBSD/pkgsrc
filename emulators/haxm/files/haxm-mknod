@@ -1,0 +1,25 @@
+#!/bin/sh
+
+if [ -e /dev/HAX ]; then
+	echo "ERR: HAXM devices have been already created"
+	exit 1
+fi
+
+echo "*** Creating HAX devices ***"
+mknod /dev/HAX c 220 0
+mkdir /dev/hax_vm
+for i in `seq 0 7`; do mkdir /dev/hax_vm0$i; done
+for i in `seq 0 7`; do mknod /dev/hax_vm/vm0$i c 222 $i; done
+
+echo "*** Creating VCPU Nodes ***"
+i=0
+while [ $i -lt 128 ]; do
+        vm=$(echo "$i/16"|bc)
+        vcpu=$(echo "$i%16"|bc)
+        echo "i=$i vm=$vm vcpu=$vcpu"
+        cmd=$(printf "mknod /dev/hax_vm%02d/vcpu%02d c 221 %d" $vm $vcpu $i)
+        $cmd
+        let "i+=1"
+done
+
+echo "*** Done ****"
