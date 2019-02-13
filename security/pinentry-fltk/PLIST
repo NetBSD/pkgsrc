@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2019/02/13 17:39:36 wiz Exp $
+bin/pinentry-fltk

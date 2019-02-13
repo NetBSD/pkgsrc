@@ -1,0 +1,6 @@
+This is a collection of simple PIN or passphrase entry dialogs which
+utilize the Assuan protocol as described by the aegypten project.
+It provides programs for several graphical toolkits, such as FLTK,
+GTK+ and QT, as well as for the console, using curses.
+
+This package contains the FLTK frontend.
