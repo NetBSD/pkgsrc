@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2019/02/12 11:49:15 tnn Exp $
+# $NetBSD: Makefile,v 1.78 2019/02/13 08:29:52 he Exp $
 
 DISTNAME=	rustc-1.32.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -51,12 +51,14 @@ BUILD_TARGET=		build
 #CROSS_ROOT=		/u/evbarm-armv7hf
 #CROSS_ROOT=		/u/sparc64
 #CROSS_ROOT=		/u/macppc
+#CROSS_ROOT=		/u/evbarm64
 #MAKE_ENV+=		CROSS_ROOT=${CROSS_ROOT}
 
 # The GNU cross target designation
 #GNU_CROSS_TARGET=	armv7--netbsdelf-eabihf
 #GNU_CROSS_TARGET=	sparc64--netbsd
 #GNU_CROSS_TARGET=	powerpc--netbsd
+#GNU_CROSS_TARGET=	aarch64--netbsd
 #MAKE_ENV+=		GNU_CROSS_TARGET=${GNU_CROSS_TARGET}
 
 # To cross-build rust, you need to specify
@@ -66,12 +68,19 @@ BUILD_TARGET=		build
 #TARGET= 		armv7-unknown-netbsd-eabihf
 #TARGET= 	 	sparc64-unknown-netbsd
 #TARGET= 		powerpc-unknown-netbsd
+#TARGET= 		aarch64-unknown-netbsd
 #SCRIPTS=		${WRKDIR}/scripts
 #CONFIGURE_ARGS+=	--host=${TARGET}
 #CONFIGURE_ARGS+=	--target=${TARGET}
+# for gcc as target compiler:
 #CONFIGURE_ARGS+=	--set=target.${TARGET}.cc=${SCRIPTS}/gcc-wrap
 #CONFIGURE_ARGS+=	--set=target.${TARGET}.cxx=${SCRIPTS}/c++-wrap
 #CONFIGURE_ARGS+=	--set=target.${TARGET}.linker=${SCRIPTS}/gcc-wrap
+# for clang as target compiler:
+#CONFIGURE_ARGS+=	--set=target.${TARGET}.cc=${SCRIPTS}/clang-wrap
+#CONFIGURE_ARGS+=	--set=target.${TARGET}.cxx=${SCRIPTS}/clang++-wrap
+#CONFIGURE_ARGS+=	--set=target.${TARGET}.linker=${SCRIPTS}/clang-wrap
+# common:
 #CONFIGURE_ARGS+=	--set=target.${TARGET}.ar=${CROSS_ROOT}/tools/bin/${GNU_CROSS_TARGET}-ar
 
 # May be required when cross-building on NetBSD
@@ -195,9 +204,9 @@ RUST_STAGE0_VER=	1.31.1
 RUST_ARCH=		i686-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
-# Do not trust ryoon@.
-SITES.${RUST_STAGE0}=	https://www.ryoon.net/pub/rust/
-SITES.${RUST_STD_STAGE0}=	https://www.ryoon.net/pub/rust/
+# Do not trust he@.
+SITES.${RUST_STAGE0}=	ftp://golden-delicious.urc.uninett.no/pub/rust/
+SITES.${RUST_STD_STAGE0}=	ftp://golden-delicious.urc.uninett.no/pub/rust/
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 # Setting this changes it for every distfile, which doesn't match what is
 # currently in distinfo.
@@ -216,8 +225,19 @@ DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 pre-build-fix:
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.31.1
+RUST_STAGE0_VER=	1.32.0
 RUST_ARCH=		powerpc-unknown-netbsd
+RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
+RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
+DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
+# Do not trust he@.
+SITES.${RUST_STAGE0}=	ftp://golden-delicious.urc.uninett.no/pub/rust/
+SITES.${RUST_STD_STAGE0}=	ftp://golden-delicious.urc.uninett.no/pub/rust/
+pre-build-fix:
+.endif
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || make(distinfo) || make (makesum) || make(mdi)
+RUST_STAGE0_VER=	1.32.0
+RUST_ARCH=		aarch64-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
