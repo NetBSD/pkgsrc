@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.756 2019/02/14 18:19:51 leot Exp $
+$NetBSD: CHANGES-2019,v 1.757 2019/02/14 23:18:06 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1400,3 +1400,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/zeromq to 4.3.1 [adam 2019-02-14]
 	Updated databases/db4 to 4.8.30nb1 [thorpej 2019-02-14]
 	Updated net/hub to 2.9.0 [leot 2019-02-14]
+	Updated emulators/haxm to 1.20190214.3bdfd1a39021df9b4dfe69e05a277e4e6456494a [kamil 2019-02-14]
