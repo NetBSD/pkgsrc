@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/01/08 14:19:06 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/02/14 06:03:50 taca Exp $
 bin/erb${RUBY_SUFFIX}
 bin/gem${RUBY_SUFFIX}
 bin/irb${RUBY_SUFFIX}
@@ -1218,6 +1218,7 @@ ${RUBY_DOC}/ChangeLog-2.1.0
 ${RUBY_DOC}/ChangeLog-2.2.0
 ${RUBY_DOC}/ChangeLog-2.3.0
 ${RUBY_DOC}/ChangeLog-2.4.0
+${RUBY_DOC}/ChangeLog-2016
 ${RUBY_DOC}/ChangeLog-YARV
 ${RUBY_DOC}/LEGAL
 ${RUBY_DOC}/NEWS
@@ -1229,6 +1230,7 @@ ${RUBY_DOC}/NEWS-2.0.0
 ${RUBY_DOC}/NEWS-2.1.0
 ${RUBY_DOC}/NEWS-2.2.0
 ${RUBY_DOC}/NEWS-2.3.0
+${RUBY_DOC}/NEWS-2.4.0
 ${RUBY_DOC}/README.EXT
 ${RUBY_DOC}/README.EXT.ja
 ${RUBY_DOC}/README.ja.md

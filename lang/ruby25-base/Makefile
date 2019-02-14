@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2018/07/17 10:56:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2019/02/14 06:03:50 taca Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -34,9 +35,10 @@ CONFIGURE_ENV.Darwin+=	ac_cv_prog_dsymutil=
 DOCS=	BSDL COPYING COPYING.ja ChangeLog LEGAL NEWS README.EXT README.EXT.ja \
 	README.ja.md README.md doc/ChangeLog-1.8.0 doc/ChangeLog-1.9.3 \
 	doc/ChangeLog-2.0.0 doc/ChangeLog-2.1.0 doc/ChangeLog-2.2.0 \
-	doc/ChangeLog-2.3.0 doc/ChangeLog-2.4.0 doc/ChangeLog-YARV \
-	doc/NEWS-1.8.7 doc/NEWS-1.9.1 doc/NEWS-1.9.2 doc/NEWS-1.9.3 \
-	doc/NEWS-2.0.0 doc/NEWS-2.1.0 doc/NEWS-2.2.0 doc/NEWS-2.3.0 \
+	doc/ChangeLog-2.3.0 doc/ChangeLog-2.4.0 doc/ChangeLog-2016 \
+	doc/ChangeLog-YARV doc/NEWS-1.8.7 doc/NEWS-1.9.1 doc/NEWS-1.9.2 \
+	doc/NEWS-1.9.3 doc/NEWS-2.0.0 doc/NEWS-2.1.0 doc/NEWS-2.2.0 \
+	doc/NEWS-2.3.0 doc/NEWS-2.4.0 \
 	doc/contributing.rdoc doc/contributors.rdoc doc/dtrace_probes.rdoc \
 	doc/etc.rd.ja doc/forwardable.rd.ja doc/globals.rdoc \
 	doc/images/boottime-classes.png doc/irb/irb-tools.rd.ja \
@@ -71,8 +73,6 @@ pre-configure:
 	${RM} -f ${WRKSRC}/ext/gdbm/extconf.rb
 	${RM} -f ${WRKSRC}/ext/fiddle/extconf.rb
 	${RM} -f ${WRKSRC}/ext/readline/extconf.rb
-	${RM} -f ${WRKSRC}/ext/tk/extconf.rb
-	${RM} -f ${WRKSRC}/ext/tk/tkutil/extconf.rb
 	${TOUCH} ${WRKSRC}/prelude.c
 
 pre-install:
