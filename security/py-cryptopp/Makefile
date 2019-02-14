@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2018/07/03 05:03:31 adam Exp $
+# $NetBSD: Makefile,v 1.18 2019/02/14 12:56:38 adam Exp $
 
-VERSION=	0.6.0
-VERSION_EXCESSIVE=	1206569328141510525648634803928199668821045408958
-DISTNAME=	pycryptopp-${VERSION}.${VERSION_EXCESSIVE}
+VERSION=	0.7.1
+VERSION_HASH=	869544967005693312591928092448767568728501330214
+DISTNAME=	pycryptopp-${VERSION}.${VERSION_HASH}
 PKGNAME=	${PYPKGPREFIX}-cryptopp-${VERSION}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycryptopp/}
@@ -10,17 +10,12 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycryptopp/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://tahoe-lafs.org/trac/pycryptopp
 COMMENT=	Python wrapper for (and copy of parts of) crypto++
-# GPL v2 or later.
-# or Transitive Grace Period Public Licence, version 1.0 or later.
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v2 OR mit
+# or Transitive Grace Period Public Licence, version 1.0 or later
 
 USE_LANGUAGES=	c c++
 
-REPLACE_PYTHON=		pycryptopp/test/*.py
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # not yet ported as of 0.6.0.120...
-
-# It would be nice if egg.mk had support for this.
-#TEST_TARGET=	@python@ setup.py test
+PYTHON_VERSIONS_ACCEPTED=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
