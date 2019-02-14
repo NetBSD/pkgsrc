@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.27 2018/07/14 18:19:16 adam Exp $
+$NetBSD: distinfo,v 1.28 2019/02/14 13:04:37 adam Exp $
 
-SHA1 (zeromq-4.2.5.tar.gz) = 1132f839d703486c4ee1cf22f056585dfbb329c2
-RMD160 (zeromq-4.2.5.tar.gz) = 3b1348e904f2055becc833a9c7b3a12a455e5443
-SHA512 (zeromq-4.2.5.tar.gz) = 4556cb50d05a6d133015a0ba804d6d951a47479a33fa29561eaeecb93d48b7bb6477365d0986c38b779f500cadaf08522c4a7aa13f5510303bd923f794d37036
-Size (zeromq-4.2.5.tar.gz) = 1409447 bytes
-SHA1 (patch-configure) = c6b5ab95dc022525b8af92756c5c1ee9dc3656e0
+SHA1 (zeromq-4.3.1.tar.gz) = 6cce22d830eaf95feff7cab00744df13ad7ab7f3
+RMD160 (zeromq-4.3.1.tar.gz) = 43e14ed3c0ca6f7de39cbc74f206e700bb469c39
+SHA512 (zeromq-4.3.1.tar.gz) = b80388a3703993425cdd73054139a8e2895aedb9992ea68d6eadb4ea39b9af576ea14f306dfb432e4c24535feb6b293f82fac5679b655d258f0f921f2b71e772
+Size (zeromq-4.3.1.tar.gz) = 1490122 bytes
+SHA1 (patch-configure) = b0e3d865b3eddf93461aff6674a64c7cc9fc1f01
 SHA1 (patch-src_ipc__listener.cpp) = fdaa86b9c13b5c3f7e9dff3934085a4138fac279
-SHA1 (patch-src_tcp__listener.cpp) = d91f06b69a650f74084bb4a0106d7fc0a8387107
+SHA1 (patch-src_tcp__listener.cpp) = e09f1df0f1c117a317a8a731404daf84f2996700

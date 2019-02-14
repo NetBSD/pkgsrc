@@ -1,10 +1,10 @@
-$NetBSD: patch-configure,v 1.6 2018/01/13 18:22:42 adam Exp $
+$NetBSD: patch-configure,v 1.7 2019/02/14 13:04:37 adam Exp $
 
 Portability fixes.
 
---- configure.orig	2017-12-13 13:37:25.000000000 +0000
+--- configure.orig	2019-01-12 16:18:01.000000000 +0000
 +++ configure
-@@ -19007,7 +19007,7 @@ if test "${enable_address_sanitizer+set}
+@@ -19450,7 +19450,7 @@ if test "${enable_address_sanitizer+set}
  fi
  
  
@@ -13,7 +13,7 @@ Portability fixes.
      CFLAGS="${CFLAGS} -fsanitize=address"
      CXXFLAGS="${CXXFLAGS} -fsanitize=address"
  
-@@ -20448,12 +20448,12 @@ if test "${with_poller+set}" = set; then
+@@ -20853,12 +20853,12 @@ if test "${with_api_poller+set}" = set; 
  fi
  
  
@@ -28,3 +28,37 @@ Portability fixes.
          # We search for pollers in this order
          pollers="kqueue epoll devpoll pollset poll select"
      fi
+@@ -21297,13 +21297,13 @@ $as_echo "#define ZMQ_IOTHREAD_POLLER_US
+     if test $poller_found -eq 0; then
+         as_fn_error $? "None of '$pollers' are valid pollers on this platform" "$LINENO" 5
+     fi
+-    if test "x$with_api_poller" == "x"; then
++    if test "x$with_api_poller" = "x"; then
+         with_api_poller=auto
+     fi
+-	if test "x$with_api_poller" == "xauto"; then
+-		if test $poller == "select"; then
++	if test "x$with_api_poller" = "xauto"; then
++		if test $poller = "select"; then
+ 			api_poller=select
+-		elif test $poller == "wepoll"; then
++		elif test $poller = "wepoll"; then
+ 			api_poller=select
+ 		else
+ 			api_poller=poll
+@@ -21311,13 +21311,13 @@ $as_echo "#define ZMQ_IOTHREAD_POLLER_US
+ 	else
+ 		api_poller=$with_api_poller
+ 	fi
+-	if test "$api_poller" == "select"; then
++	if test "$api_poller" = "select"; then
+ 		{ $as_echo "$as_me:${as_lineno-$LINENO}: Using 'select' zmq_poll(er)_* API polling system" >&5
+ $as_echo "$as_me: Using 'select' zmq_poll(er)_* API polling system" >&6;}
+ 
+ $as_echo "#define ZMQ_POLL_BASED_ON_SELECT 1" >>confdefs.h
+ 
+-	elif test "$api_poller" == "poll"; then
++	elif test "$api_poller" = "poll"; then
+ 		{ $as_echo "$as_me:${as_lineno-$LINENO}: Using 'poll' zmq_poll(er)_* API polling system" >&5
+ $as_echo "$as_me: Using 'poll' zmq_poll(er)_* API polling system" >&6;}
+ 
