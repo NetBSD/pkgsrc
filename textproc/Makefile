@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1022 2019/02/12 09:10:31 adam Exp $
+# $NetBSD: Makefile,v 1.1023 2019/02/14 11:58:03 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -754,6 +754,7 @@ SUBDIR+=	py-color
 SUBDIR+=	py-colored
 SUBDIR+=	py-colour
 SUBDIR+=	py-creole
+SUBDIR+=	py-css-parser
 SUBDIR+=	py-cssselect
 SUBDIR+=	py-cssselect2
 SUBDIR+=	py-cssutils
