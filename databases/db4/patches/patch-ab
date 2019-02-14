@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.25 2014/06/07 08:19:14 obache Exp $
+$NetBSD: patch-ab,v 1.26 2019/02/14 14:36:06 thorpej Exp $
 
 --- dist/configure.orig	2010-04-12 20:25:23.000000000 +0000
 +++ dist/configure
@@ -173,3 +173,46 @@ $NetBSD: patch-ab,v 1.25 2014/06/07 08:19:14 obache Exp $
  	hp*)		_JNI_INC_SUBDIRS="hp-ux";;
  	linux*)		_JNI_INC_SUBDIRS="linux genunix";;
  	osf*)		_JNI_INC_SUBDIRS="alpha";;
+@@ -19567,6 +19609,31 @@ fi
+ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+ fi
+ 
++# AARCH64/gcc: Linux
++if test "$db_cv_mutex" = no; then
++cat confdefs.h - <<_ACEOF >conftest.$ac_ext
++/* end confdefs.h.  */
++
++int
++main ()
++{
++
++#if defined(__aarch64__) && defined(__GNUC__)
++	exit(0);
++#else
++	FAIL TO COMPILE/LINK
++#endif
++
++  ;
++  return 0;
++}
++_ACEOF
++if ac_fn_c_try_compile "$LINENO"; then :
++  db_cv_mutex=AARCH64/gcc-assembly
++fi
++rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
++fi
++
+ # MIPS/gcc: Linux
+ if test "$db_cv_mutex" = no; then
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+@@ -19862,6 +19929,10 @@ ARM/gcc-assembly)	ADDITIONAL_OBJS="mut_t
+ 			$as_echo "#define HAVE_MUTEX_ARM_GCC_ASSEMBLY 1" >>confdefs.h
+ 
+ 			;;
++AARCH64/gcc-assembly)	ADDITIONAL_OBJS="mut_tas${o} $ADDITIONAL_OBJS"
++			$as_echo "#define HAVE_MUTEX_AARCH64_GCC_ASSEMBLY 1" >>confdefs.h
++
++			;;
+ HP/msem_init)		ADDITIONAL_OBJS="mut_tas${o} $ADDITIONAL_OBJS"
+ 			$as_echo "#define HAVE_MUTEX_HPPA_MSEM_INIT 1" >>confdefs.h
+ 
