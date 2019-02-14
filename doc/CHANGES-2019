@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.741 2019/02/14 03:21:50 fox Exp $
+$NetBSD: CHANGES-2019,v 1.742 2019/02/14 06:04:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1382,3 +1382,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated math/mpfr to 4.0.2 [wiz 2019-02-13]
 	Updated devel/readline to 8.0 [wiz 2019-02-13]
 	Updated audio/fasttracker2 to 2.135 [fox 2019-02-14]
+	Updated lang/ruby25-base to 2.5.3nb1 [taca 2019-02-14]
