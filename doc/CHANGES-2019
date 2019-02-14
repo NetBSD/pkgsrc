@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.746 2019/02/14 09:51:45 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.747 2019/02/14 09:53:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1388,3 +1388,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-decorator to 4.3.2 [adam 2019-02-14]
 	Updated devel/py-joblib to 0.13.2 [adam 2019-02-14]
 	Updated net/libnice to 0.1.15 [wiz 2019-02-14]
+	Updated devel/py-mercurial to 4.9 [wiz 2019-02-14]
