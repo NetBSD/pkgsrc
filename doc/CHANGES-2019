@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.754 2019/02/14 13:05:00 adam Exp $
+$NetBSD: CHANGES-2019,v 1.755 2019/02/14 14:32:41 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1398,3 +1398,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated misc/calibre to 3.39.1 [wiz 2019-02-14]
 	Updated security/py-cryptopp to 0.7.1 [adam 2019-02-14]
 	Updated net/zeromq to 4.3.1 [adam 2019-02-14]
+	Updated databases/db4 to 4.8.30nb1 [thorpej 2019-02-14]
