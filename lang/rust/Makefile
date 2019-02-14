@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2019/02/14 09:14:06 he Exp $
+# $NetBSD: Makefile,v 1.82 2019/02/14 16:24:23 he Exp $
 
 DISTNAME=	rustc-1.32.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -259,7 +259,7 @@ pre-build-fix:
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv7hf) || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH=		armv7-unknown-netbsd-eabihf
-RUST_STAGE0_VER=	1.31.1
+RUST_STAGE0_VER=	1.32.0
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
