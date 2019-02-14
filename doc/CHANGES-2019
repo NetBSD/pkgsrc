@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.748 2019/02/14 10:03:52 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.749 2019/02/14 10:15:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1390,3 +1390,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/libnice to 0.1.15 [wiz 2019-02-14]
 	Updated devel/py-mercurial to 4.9 [wiz 2019-02-14]
 	Updated graphics/ImageMagick to 7.0.8.27 [wiz 2019-02-14]
+	Updated net/filezilla to 3.40.0 [wiz 2019-02-14]
