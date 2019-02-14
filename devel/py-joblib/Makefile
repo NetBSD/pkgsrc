@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2018/11/30 12:20:44 adam Exp $
+# $NetBSD: Makefile,v 1.4 2019/02/14 09:01:45 adam Exp $
 
-DISTNAME=	joblib-0.13.0
+DISTNAME=	joblib-0.13.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/joblib/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://pythonhosted.org/joblib/
+HOMEPAGE=	https://joblib.readthedocs.io/
 COMMENT=	Set of tools to provide lightweight pipelining
 LICENSE=	modified-bsd
 
