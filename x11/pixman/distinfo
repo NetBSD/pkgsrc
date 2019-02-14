@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.59 2016/04/21 21:39:36 he Exp $
+$NetBSD: distinfo,v 1.60 2019/02/14 07:22:19 wiz Exp $
 
-SHA1 (pixman-0.34.0.tar.bz2) = 367698744e74d6d4f363041482965b9ea7fbe4a5
-RMD160 (pixman-0.34.0.tar.bz2) = 2e4b79160bc913dc0043f9c1710f91801bcb8734
-SHA512 (pixman-0.34.0.tar.bz2) = 755a3f5596e7bd9710abc8e5bfd341adaf2177f5b21f7aaae7f85b8fb57580ea48df586ad32bf6adef6ce0430e7cadaa57754a2fa466bc4b15bf70ee64cd1418
-Size (pixman-0.34.0.tar.bz2) = 739656 bytes
+SHA1 (pixman-0.38.0.tar.bz2) = 06587395f4a3538bafc0845ac225ea4c6472e550
+RMD160 (pixman-0.38.0.tar.bz2) = 85045d35b5109c58fcdf577df36b61b32107fd99
+SHA512 (pixman-0.38.0.tar.bz2) = f2279a30947df0c75064fdc36c3e0b735d9392d516191d99a9a66c9bae86778c538a552f1bf9eb75cdbd141891e3addb4836b37ef1553bc6d55285f214311b78
+Size (pixman-0.38.0.tar.bz2) = 747654 bytes
 SHA1 (patch-ba) = 9bd8a7fd0cfbd280df06d69838d3d10ab1b51e23
 SHA1 (patch-bb) = d47b1857771b8addb6897d45782ba2735a7aacbd
 SHA1 (patch-bc) = 3e23e6c482ea193885f3f762af355ef2f692132b
 SHA1 (patch-bd) = 1b1432f4a88d5486afdb4c0cad0808d3748fa522
-SHA1 (patch-pixman_Makefile.in) = 7dabdc0e2c8c73780c4b005ef6f5055a550b9651
 SHA1 (patch-pixman_pixman-vmx.c) = d96dad41d94bf8dfb956afda00a5a175a9c1f6fc
