@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/03/16 00:12:35 gdt Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/02/14 12:56:38 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -13,6 +13,24 @@ ${PYSITELIB}/pycryptopp/_pycryptopp.so
 ${PYSITELIB}/pycryptopp/_version.py
 ${PYSITELIB}/pycryptopp/_version.pyc
 ${PYSITELIB}/pycryptopp/_version.pyo
+${PYSITELIB}/pycryptopp/bench/__init__.py
+${PYSITELIB}/pycryptopp/bench/__init__.pyc
+${PYSITELIB}/pycryptopp/bench/__init__.pyo
+${PYSITELIB}/pycryptopp/bench/bench_algs.py
+${PYSITELIB}/pycryptopp/bench/bench_algs.pyc
+${PYSITELIB}/pycryptopp/bench/bench_algs.pyo
+${PYSITELIB}/pycryptopp/bench/bench_ciphers.py
+${PYSITELIB}/pycryptopp/bench/bench_ciphers.pyc
+${PYSITELIB}/pycryptopp/bench/bench_ciphers.pyo
+${PYSITELIB}/pycryptopp/bench/bench_hashes.py
+${PYSITELIB}/pycryptopp/bench/bench_hashes.pyc
+${PYSITELIB}/pycryptopp/bench/bench_hashes.pyo
+${PYSITELIB}/pycryptopp/bench/bench_sigs.py
+${PYSITELIB}/pycryptopp/bench/bench_sigs.pyc
+${PYSITELIB}/pycryptopp/bench/bench_sigs.pyo
+${PYSITELIB}/pycryptopp/bench/common.py
+${PYSITELIB}/pycryptopp/bench/common.pyc
+${PYSITELIB}/pycryptopp/bench/common.pyo
 ${PYSITELIB}/pycryptopp/cipher/__init__.py
 ${PYSITELIB}/pycryptopp/cipher/__init__.pyc
 ${PYSITELIB}/pycryptopp/cipher/__init__.pyo
@@ -89,5 +107,7 @@ ${PYSITELIB}/pycryptopp/testvectors/kat-ed25519-short.txt
 ${PYSITELIB}/pycryptopp/testvectors/kat-ed25519.txt
 ${PYSITELIB}/pycryptopp/testvectors/xsalsa20.txt
 share/doc/pycryptopp/COPYING.GPL
-share/doc/pycryptopp/COPYING.TGPPL.html
+share/doc/pycryptopp/COPYING.MIT.txt
+share/doc/pycryptopp/COPYING.SPL.txt
+share/doc/pycryptopp/COPYING.TGPPL.rst
 share/doc/pycryptopp/README.rst
