@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2019/02/14 08:57:44 he Exp $
+# $NetBSD: Makefile,v 1.81 2019/02/14 09:14:06 he Exp $
 
 DISTNAME=	rustc-1.32.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -217,7 +217,7 @@ pre-build-fix:
 	${TOOLS_PLATFORM.paxctl} +am ${WRKDIR}/rust-bootstrap/bin/cargo
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.31.1
+RUST_STAGE0_VER=	1.32.0
 RUST_ARCH=		x86_64-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
