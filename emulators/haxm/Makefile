@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/02/13 17:42:57 kamil Exp $
+# $NetBSD: Makefile,v 1.5 2019/02/14 20:54:17 nia Exp $
 
 GITHUB_PROJECT=	haxm
 GITHUB_TAG=	c072ad9b68e1d558a9fb791511468d10a1a9b319
@@ -22,7 +22,11 @@ BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 
 BUILD_DIRS=	platforms/netbsd
 
+.include "../../mk/bsd.prefs.mk"
+
 BUILDLINK_PASSTHRU_DIRS+=	${BSDSRCDIR}/sys
+
+MAKE_FLAGS+=	S=${BSDSRCDIR}/sys
 
 BUILD_DEFS+=	BSDSRCDIR
 
