@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1 2019/02/14 07:32:19 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- configure.orig	2018-12-27 22:46:49.000000000 +0000
++++ configure
+@@ -15627,7 +15627,7 @@ fi
+ 	echo "$GNUTLS_PKG_ERRORS" >&5
+ 
+ 
+-		if test "$with_crypto_library" == "gnutls"; then :
++		if test "$with_crypto_library" = "gnutls"; then :
+ 
+ 			as_fn_error $? "Neither GnuTLS is not available" "$LINENO" 5
+ 
+@@ -15639,7 +15639,7 @@ elif test $pkg_failed = untried; then
+      	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+ $as_echo "no" >&6; }
+ 
+-		if test "$with_crypto_library" == "gnutls"; then :
++		if test "$with_crypto_library" = "gnutls"; then :
+ 
+ 			as_fn_error $? "Neither GnuTLS is not available" "$LINENO" 5
+ 
