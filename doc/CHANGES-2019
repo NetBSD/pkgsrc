@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.743 2019/02/14 07:22:28 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.744 2019/02/14 07:32:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1384,3 +1384,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/fasttracker2 to 2.135 [fox 2019-02-14]
 	Updated lang/ruby25-base to 2.5.3nb1 [taca 2019-02-14]
 	Updated x11/pixman to 0.38.0 [wiz 2019-02-14]
+	Updated net/gst-plugins1-libnice to 0.1.15 [wiz 2019-02-14]
