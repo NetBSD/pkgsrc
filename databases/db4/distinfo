@@ -1,13 +1,14 @@
-$NetBSD: distinfo,v 1.46 2016/09/08 16:10:24 jperkin Exp $
+$NetBSD: distinfo,v 1.47 2019/02/14 14:36:06 thorpej Exp $
 
 SHA1 (db-4.8.30.tar.gz) = ab36c170dda5b2ceaad3915ced96e41c6b7e493c
 RMD160 (db-4.8.30.tar.gz) = dd2fcd4c9b857a91e2f491fd4fadb0c51b993a9c
 SHA512 (db-4.8.30.tar.gz) = d1a3c52b0ab54ae3fd6792e6396c9f74d25f36b2eb9e853b67ef9c872508a58c784c7818108d06d184f59601b70cc877916e67dfea6f0ee1ca2b07468c1041f1
 Size (db-4.8.30.tar.gz) = 22887305 bytes
 SHA1 (patch-aa) = 1004feec022eefbf3fd57b6d9af99edc5a2bf17a
-SHA1 (patch-ab) = 961c4ef5ad84739bd7eae57f407b89f42864b66e
+SHA1 (patch-ab) = 397dcb7e7bd0cb0f266cd460b9d76c8339118bc5
 SHA1 (patch-ac) = 045a3b83b9c6c164382ec546b06ae248620552cf
-SHA1 (patch-ae) = 43e574154de93dba60392b09d6ebddbca1036849
+SHA1 (patch-ae) = e47582c71470386a5226408e4d1db31adccadc29
+SHA1 (patch-af) = d9706895e538468f3b442fde3e8d6c9caceaaf4f
 SHA1 (patch-db__sql_sqlite_sqliteInt.h) = 7e5579d6c55c8163e35718bdecbce079b1efde3e
 SHA1 (patch-dbinc_atomic.h) = d68db1b7e07b35ec070a18f0195b9f3b386114dd
 SHA1 (patch-dist_s__sig) = d891a6fabd27a07776bdaa21843563638ecb89f2
