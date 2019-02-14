@@ -1,9 +1,6 @@
-@comment $NetBSD: PLIST,v 1.11 2017/04/19 13:28:05 wiz Exp $
-bin/sdp-example
-bin/simple-example
+@comment $NetBSD: PLIST,v 1.12 2019/02/14 07:32:19 wiz Exp $
 bin/stunbdc
 bin/stund
-bin/threaded-example
 include/nice/address.h
 include/nice/agent.h
 include/nice/candidate.h
@@ -36,17 +33,6 @@ share/gtk-doc/html/libnice/ch04.html
 share/gtk-doc/html/libnice/ch05.html
 share/gtk-doc/html/libnice/home.png
 share/gtk-doc/html/libnice/index.html
-share/gtk-doc/html/libnice/ix03.html
-share/gtk-doc/html/libnice/ix04.html
-share/gtk-doc/html/libnice/ix05.html
-share/gtk-doc/html/libnice/ix06.html
-share/gtk-doc/html/libnice/ix07.html
-share/gtk-doc/html/libnice/ix08.html
-share/gtk-doc/html/libnice/ix09.html
-share/gtk-doc/html/libnice/ix10.html
-share/gtk-doc/html/libnice/ix11.html
-share/gtk-doc/html/libnice/ix12.html
-share/gtk-doc/html/libnice/ix13.html
 share/gtk-doc/html/libnice/left-insensitive.png
 share/gtk-doc/html/libnice/left.png
 share/gtk-doc/html/libnice/libnice-Bind.html

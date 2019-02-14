@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.3 2017/08/16 20:21:13 wiz Exp $
+# $NetBSD: Makefile.common,v 1.4 2019/02/14 07:32:19 wiz Exp $
 #
 # used by net/libnice/Makefile
 # used by net/gst-plugins1-libnice/Makefile
 
-DISTNAME=	libnice-0.1.14
+DISTNAME=	libnice-0.1.15
 CATEGORIES=	net devel
 MASTER_SITES=	http://nice.freedesktop.org/releases/
 
