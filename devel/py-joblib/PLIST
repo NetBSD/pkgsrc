@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/11/30 12:20:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/02/14 09:01:45 adam Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/joblib/__init__.py
 ${PYSITELIB}/joblib/__init__.pyc
@@ -257,6 +257,9 @@ ${PYSITELIB}/joblib/test/test_func_inspect_special_encoding.pyo
 ${PYSITELIB}/joblib/test/test_hashing.py
 ${PYSITELIB}/joblib/test/test_hashing.pyc
 ${PYSITELIB}/joblib/test/test_hashing.pyo
+${PYSITELIB}/joblib/test/test_init.py
+${PYSITELIB}/joblib/test/test_init.pyc
+${PYSITELIB}/joblib/test/test_init.pyo
 ${PYSITELIB}/joblib/test/test_logger.py
 ${PYSITELIB}/joblib/test/test_logger.pyc
 ${PYSITELIB}/joblib/test/test_logger.pyo
