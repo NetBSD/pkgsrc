@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.750 2019/02/14 10:25:16 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.751 2019/02/14 10:43:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1392,3 +1392,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/ImageMagick to 7.0.8.27 [wiz 2019-02-14]
 	Updated net/filezilla to 3.40.0 [wiz 2019-02-14]
 	Updated www/py-google-api-python-client to 1.7.8 [wiz 2019-02-14]
+	Updated lang/npm to 6.8.0 [adam 2019-02-14]
+	Updated x11/gtk3 to 3.24.5 [adam 2019-02-14]
