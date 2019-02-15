@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 03:27:47 agc Exp $
+$NetBSD: distinfo,v 1.4 2019/02/15 20:13:07 cheusov Exp $
 
-SHA1 (lua-alt-getopt-0.7.0.tar.gz) = 431b590002f5fdced78e0745a9a283aefdd1dfa0
-RMD160 (lua-alt-getopt-0.7.0.tar.gz) = 665d2510caa5daacc3a20c2d3f2a72df0d3f413f
-SHA512 (lua-alt-getopt-0.7.0.tar.gz) = 379db696180e2bbb6e472ebe56e921c9736ee89ad673b296d0e580f100617a10dd5b44fdd665298ac87a44bbf8b5c330696653ec6d62ccaebc22120debf3c91f
-Size (lua-alt-getopt-0.7.0.tar.gz) = 4720 bytes
+SHA1 (lua-alt-getopt-0.8.0.tar.gz) = f91a61eec59880b23110ebf838de22b8602668f7
+RMD160 (lua-alt-getopt-0.8.0.tar.gz) = 5ecf276ce4f3b1174409e709c5e6e9f56f357874
+SHA512 (lua-alt-getopt-0.8.0.tar.gz) = e70abc7709031ac0d73b7ad730dd710664238a36840f4d45e8c9e67d8688c933ca7cd9a3af6f999e60b63db65b8c449669b948ed2d64d4f7de01e2f619eb8c26
+Size (lua-alt-getopt-0.8.0.tar.gz) = 4496 bytes
