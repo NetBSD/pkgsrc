@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 03:27:20 agc Exp $
+$NetBSD: distinfo,v 1.6 2019/02/15 19:49:15 wiz Exp $
 
-SHA1 (cproto-4.7m.tgz) = 2b896dfe2e18d22d495c619189987b47aa45396a
-RMD160 (cproto-4.7m.tgz) = f0285e389d28bd155f895c6ef8845d58b0e95133
-SHA512 (cproto-4.7m.tgz) = b7810ec88d0395d1e8db73492c65e2d0069417d37e45ad2b5b63236162a4cc6b23ee8d0d6c9d325c081f6f73cbc81a54066358ca120e235cab59996c3782eceb
-Size (cproto-4.7m.tgz) = 167884 bytes
+SHA1 (cproto-4.7o.tgz) = 61ed589d1163b924b330c88d174aa1a9945f6b8b
+RMD160 (cproto-4.7o.tgz) = 34af3676d9b2575ee389071959992df3ac572e20
+SHA512 (cproto-4.7o.tgz) = 9a731be8bfa3f0da9c8a7c04a1c9bcf5ca52897325fa868306c35d818fc54348f83d93e2b2d792a2f682f935fb42d928d2828b1ff7fe3287a1806852e180a9f3
+Size (cproto-4.7o.tgz) = 168915 bytes
