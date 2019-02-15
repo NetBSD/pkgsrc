@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2018/08/19 20:16:41 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/02/15 19:55:12 wiz Exp $
 
-DISTNAME=	vttest-20140305
+DISTNAME=	vttest-20190105
 CATEGORIES=	misc benchmarks
-MASTER_SITES=	ftp://dickey.his.com/vttest/
+MASTER_SITES=	ftp://ftp.invisible-island.net/vttest/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
