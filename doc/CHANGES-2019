@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.758 2019/02/15 00:49:25 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.759 2019/02/15 08:53:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1402,3 +1402,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/hub to 2.9.0 [leot 2019-02-14]
 	Updated emulators/haxm to 1.20190214.3bdfd1a39021df9b4dfe69e05a277e4e6456494a [kamil 2019-02-14]
 	Updated emulators/haxm to 1.20190214.3bdfd1a39021df9b4dfe69e05a277e4e6456494anb1 [kamil 2019-02-15]
+	Updated devel/py-test-forked to 1.0.2 [adam 2019-02-15]
+	Updated devel/py-test-runner to 4.4 [adam 2019-02-15]
