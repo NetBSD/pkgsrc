@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/02/27 23:56:08 khorben Exp $
+# $NetBSD: Makefile,v 1.12 2019/02/15 15:38:32 tnn Exp $
 
 DISTNAME=	libhid-0.2.16
 PKGREVISION=	2
@@ -21,6 +21,8 @@ CONFIGURE_ENV+=	PYTHON_LDFLAGS="-L${PREFIX}/lib -lpython${PYVERSSUFFIX}"
 PY_PATCHPLIST=	yes
 
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.2.16
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/libusb.buildlink3.mk"
