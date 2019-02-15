@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2019/01/13 17:50:22 adam Exp $
+# $NetBSD: Makefile,v 1.4 2019/02/15 08:50:14 adam Exp $
 
-DISTNAME=	pytest-forked-1.0.1
+DISTNAME=	pytest-forked-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-forked/}
