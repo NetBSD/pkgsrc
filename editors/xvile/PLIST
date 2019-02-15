@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.10 2018/01/01 22:29:26 rillig Exp $
+@comment $NetBSD: PLIST,v 1.11 2019/02/15 19:50:52 wiz Exp $
 bin/lxvile
 bin/lxvile-fonts
 bin/uxvile
 bin/xshell.sh
 bin/xvile
+bin/xvile-libdir-path
 bin/xvile-pager
+bin/xvile-to-html
 bin/xvileget
 lib/X11/app-defaults/UXVile
 lib/X11/app-defaults/XVile
@@ -29,6 +31,7 @@ libexec/xvile/vile-dcl-filt
 libexec/xvile/vile-def-filt
 libexec/xvile/vile-diff-filt
 libexec/xvile/vile-ecl-filt
+libexec/xvile/vile-erl-filt
 libexec/xvile/vile-esql-filt
 libexec/xvile/vile-est-filt
 libexec/xvile/vile-fdl-filt
@@ -38,6 +41,7 @@ libexec/xvile/vile-imake-filt
 libexec/xvile/vile-info-filt
 libexec/xvile/vile-ini-filt
 libexec/xvile/vile-iss-filt
+libexec/xvile/vile-json-filt
 libexec/xvile/vile-key-filt
 libexec/xvile/vile-latex-filt
 libexec/xvile/vile-lex-filt
@@ -57,6 +61,7 @@ libexec/xvile/vile-perl-filt
 libexec/xvile/vile-php-filt
 libexec/xvile/vile-pot-filt
 libexec/xvile/vile-ps-filt
+libexec/xvile/vile-ps1-filt
 libexec/xvile/vile-py-filt
 libexec/xvile/vile-rc-filt
 libexec/xvile/vile-rcs-filt
@@ -64,6 +69,7 @@ libexec/xvile/vile-rexx-filt
 libexec/xvile/vile-rpm-filt
 libexec/xvile/vile-rtf-filt
 libexec/xvile/vile-ruby-filt
+libexec/xvile/vile-rust-filt
 libexec/xvile/vile-sccs-filt
 libexec/xvile/vile-scheme-filt
 libexec/xvile/vile-sed-filt
@@ -86,6 +92,10 @@ libexec/xvile/vile-xq-filt
 libexec/xvile/vile-xres-filt
 libexec/xvile/vile-xs-filt
 libexec/xvile/vile-yacc-filt
+libexec/xvile/vile-yaml-filt
+man/man1/xvile-libdir-path.1
+man/man1/xvile-pager.1
+man/man1/xvile-to-html.1
 man/man1/xvile.1
 share/examples/xvile/digraphs.rc
 share/examples/xvile/filters.rc
@@ -93,7 +103,6 @@ share/examples/xvile/manpage.rc
 share/examples/xvile/pictmode.rc
 share/examples/xvile/spell.rc
 share/examples/xvile/visvile.rc
-share/pixmaps/vile.xpm
 share/xvile/ada.keywords
 share/xvile/ant.keywords
 share/xvile/as.keywords
@@ -101,11 +110,13 @@ share/xvile/as386.keywords
 share/xvile/asm.keywords
 share/xvile/au3.keywords
 share/xvile/awk.keywords
+share/xvile/bash.keywords
 share/xvile/basic.keywords
 share/xvile/bat.keywords
 share/xvile/bnf.keywords
 share/xvile/c.keywords
 share/xvile/color-ls.rc
+share/xvile/complete.rc
 share/xvile/cpp.keywords
 share/xvile/cs.keywords
 share/xvile/csh.keywords
@@ -114,6 +125,7 @@ share/xvile/cweb.keywords
 share/xvile/dates.rc
 share/xvile/dcl.keywords
 share/xvile/def.keywords
+share/xvile/delphi.keywords
 share/xvile/diff.keywords
 share/xvile/digraphs.rc
 share/xvile/doc/Vileserv.doc
@@ -128,6 +140,7 @@ share/xvile/doc/perl.doc
 share/xvile/doc/visvile.doc
 share/xvile/docbook.keywords
 share/xvile/ecl.keywords
+share/xvile/erl.keywords
 share/xvile/esql.keywords
 share/xvile/est.keywords
 share/xvile/fdl.keywords
@@ -140,6 +153,8 @@ share/xvile/ini.keywords
 share/xvile/iss.keywords
 share/xvile/java.keywords
 share/xvile/js.keywords
+share/xvile/json.keywords
+share/xvile/ksh.keywords
 share/xvile/latex.keywords
 share/xvile/lex.keywords
 share/xvile/lisp.keywords
@@ -186,9 +201,11 @@ share/xvile/perl/spell.pm
 share/xvile/perl/winops.pm
 share/xvile/php.keywords
 share/xvile/pictmode.rc
+share/xvile/pixmaps/vile.xpm
 share/xvile/pot.keywords
 share/xvile/prolog.keywords
 share/xvile/ps.keywords
+share/xvile/ps1.keywords
 share/xvile/py.keywords
 share/xvile/rb.keywords
 share/xvile/rc.keywords
@@ -196,6 +213,8 @@ share/xvile/rcs.keywords
 share/xvile/rexx.keywords
 share/xvile/rpm.keywords
 share/xvile/rtf.keywords
+share/xvile/ruby.keywords
+share/xvile/rust.keywords
 share/xvile/sccs.keywords
 share/xvile/scheme.keywords
 share/xvile/search.rc
@@ -216,6 +235,8 @@ share/xvile/ti.keywords
 share/xvile/vb.keywords
 share/xvile/vb6.keywords
 share/xvile/vbs.keywords
+share/xvile/vcproj.keywords
+share/xvile/vcxproj.keywords
 share/xvile/vile.hlp
 share/xvile/vile.keywords
 share/xvile/vileinit.rc
@@ -231,3 +252,5 @@ share/xvile/xres.keywords
 share/xvile/xs.keywords
 share/xvile/xsl.keywords
 share/xvile/yacc.keywords
+share/xvile/yaml.keywords
+share/xvile/zsh.keywords
