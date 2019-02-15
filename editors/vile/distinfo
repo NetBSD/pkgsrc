@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.14 2015/11/03 03:32:23 agc Exp $
+$NetBSD: distinfo,v 1.15 2019/02/15 19:50:27 wiz Exp $
 
-SHA1 (vile-9.8.tgz) = d99f41479fa9726147301193a0e10e4282e4779c
-RMD160 (vile-9.8.tgz) = 83a0a76be2e2914a193de9c61b7f1a7d159068df
-SHA512 (vile-9.8.tgz) = daaaa33e79b970d753c5c0c4972f4e8f91aa8a26c813dc8755bb7eff60cefaf4766b08a77e210d1c8fabd39ecf7093b5ea819f35cc1f3ea8122b48d4b5e2dfe8
-Size (vile-9.8.tgz) = 2109000 bytes
-SHA1 (patch-filters_filters.h) = b960ebd709e0808837ab5a17af6cc05cf4675d96
+SHA1 (vile-9.8t.tgz) = 9e181852cdc3ff72756ace4873bcf3eddd071cf5
+RMD160 (vile-9.8t.tgz) = 73357094c3950296e77dd3ea372413fa5955a935
+SHA512 (vile-9.8t.tgz) = 4be4e37c7231395cae9236796073c2c3e428f1945283785a931c5d4cce94e0f970efa6634b0f9053679a00f4b4577704ea38ded2129e444b26ee9935a1c3d229
+Size (vile-9.8t.tgz) = 2352119 bytes
 SHA1 (patch-filters_makefile.in) = c2127de2f65ee09bce3ee0fd9163be95bf686c61
-SHA1 (patch-makefile.in) = 758c8864da18c4929a2287a9fe7ebbedd45352fe
+SHA1 (patch-makefile.in) = 18ef317849cb2426aebf4523bda0369efbfdf1fb
