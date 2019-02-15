@@ -1,4 +1,4 @@
-$NetBSD: patch-makefile.in,v 1.1 2012/07/20 14:38:51 marino Exp $
+$NetBSD: patch-makefile.in,v 1.2 2019/02/15 19:50:27 wiz Exp $
 
 Carryover from vile 0.97, patch-aa (updated)
 
@@ -7,7 +7,7 @@ Carryover from vile 0.97, patch-aa (updated)
 @@ -62,8 +62,8 @@ PROGRAM		= $(TARGET)$x
  AWK		= @AWK@
  PERL		= @PERL@
- PERLLIB		= @PERLLIB@
+ PERL_XSUBPP	= @PERL_XSUBPP@
 -INSTALL_PL_EXE	= $(SHELL) $(srcdir)/sinstall.sh $(PERL) $(INSTALL_PROGRAM)
 -INSTALL_MODULE	= $(SHELL) $(srcdir)/sinstall.sh $(PERL) $(INSTALL_DATA)
 +INSTALL_PL_EXE	= ${BSD_INSTALL_SCRIPT}
