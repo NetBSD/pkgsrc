@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.68 2018/08/22 09:45:03 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2019/02/15 19:50:27 wiz Exp $
 
-DISTNAME=		vile-9.8
-PKGREVISION=		9
+DISTNAME=		vile-9.8t
 CATEGORIES=		editors
-MASTER_SITES=		ftp://invisible-island.net/vile/
+MASTER_SITES=		ftp://ftp.invisible-island.net/vile/current/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
