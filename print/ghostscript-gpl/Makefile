@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2018/11/14 22:22:17 kleink Exp $
+# $NetBSD: Makefile,v 1.46 2019/02/15 02:02:33 gdt Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-gpl/}
@@ -106,11 +106,11 @@ post-extract:
 	${RM} -rf ${WRKSRC}/tiff
 	${RM} -rf ${WRKSRC}/zlib
 	${RM} -rf ${WRKSRC}/freetype
-#
+
 #  To allow outside customization, rename cidfmap
 #	 (if you look at inside of the file, it is logically empty)
 .if !empty(PKG_OPTIONS:Mdisable-compile-inits)
-	(cd  ${WRKSRC}/Resource/Init/; ${MV} cidfmap cidfmap.dist)
+	(cd ${WRKSRC}/Resource/Init/; ${MV} cidfmap cidfmap.dist)
 .endif
 
 post-install:
