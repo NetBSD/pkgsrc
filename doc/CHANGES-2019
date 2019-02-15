@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.763 2019/02/15 13:24:16 adam Exp $
+$NetBSD: CHANGES-2019,v 1.764 2019/02/15 19:28:24 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1410,3 +1410,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-WebTest to 2.0.33 [adam 2019-02-15]
 	Updated textproc/py-xlsxwriter to 1.1.4 [adam 2019-02-15]
 	Updated lang/py-mypy to 0.670 [adam 2019-02-15]
+	Updated lang/runawk to 1.6.1 [cheusov 2019-02-15]
