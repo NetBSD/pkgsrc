@@ -1,4 +1,4 @@
-$NetBSD: patch-core_plugin_photo__support_photo__support.rb,v 1.6 2018/10/28 06:47:31 tsutsui Exp $
+$NetBSD: patch-core_plugin_photo__support_photo__support.rb,v 1.7 2019/02/15 22:23:53 tsutsui Exp $
 
 - temporary workaround to skip totorijp gems (sorry, @toshi_a)
 
@@ -10,9 +10,9 @@ $NetBSD: patch-core_plugin_photo__support_photo__support.rb,v 1.6 2018/10/28 06:
  require 'httpclient'
 -require 'totoridipjp'
 +#require 'totoridipjp'
+ require 'json'
  
  module Plugin::PhotoSupport
-   SUPPORTED_IMAGE_FORMATS = GdkPixbuf::Pixbuf.formats.flat_map{|f| f.extensions }.freeze
 @@ -172,9 +172,14 @@ Plugin.create :photo_support do
  
    # totori.dip.jp
