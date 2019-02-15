@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.762 2019/02/15 13:01:39 adam Exp $
+$NetBSD: CHANGES-2019,v 1.763 2019/02/15 13:24:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1408,3 +1408,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated meta-pkgs/modular-xorg-apps to 1.14.1.8 [wiz 2019-02-15]
 	Updated devel/py-wheel to 0.33.0 [adam 2019-02-15]
 	Updated www/py-WebTest to 2.0.33 [adam 2019-02-15]
+	Updated textproc/py-xlsxwriter to 1.1.4 [adam 2019-02-15]
+	Updated lang/py-mypy to 0.670 [adam 2019-02-15]
