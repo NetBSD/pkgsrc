@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.776 2019/02/15 20:13:21 cheusov Exp $
+$NetBSD: CHANGES-2019,v 1.777 2019/02/15 20:38:56 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1423,3 +1423,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/luit to 2.0.20190106 [wiz 2019-02-15]
 	Updated x11/xterm to 344 [wiz 2019-02-15]
 	Updated devel/lua-alt-getopt to 0.8.0 [cheusov 2019-02-15]
+	Updated sysutils/smartmontools to 7.0nb2 [triaxx 2019-02-15]
