@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/10/03 11:33:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/02/15 12:55:38 adam Exp $
 bin/wheel-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -22,9 +22,6 @@ ${PYSITELIB}/wheel/cli/__init__.pyo
 ${PYSITELIB}/wheel/cli/convert.py
 ${PYSITELIB}/wheel/cli/convert.pyc
 ${PYSITELIB}/wheel/cli/convert.pyo
-${PYSITELIB}/wheel/cli/install.py
-${PYSITELIB}/wheel/cli/install.pyc
-${PYSITELIB}/wheel/cli/install.pyo
 ${PYSITELIB}/wheel/cli/pack.py
 ${PYSITELIB}/wheel/cli/pack.pyc
 ${PYSITELIB}/wheel/cli/pack.pyo
