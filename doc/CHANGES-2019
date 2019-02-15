@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.760 2019/02/15 09:42:51 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.761 2019/02/15 09:44:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1405,3 +1405,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-test-forked to 1.0.2 [adam 2019-02-15]
 	Updated devel/py-test-runner to 4.4 [adam 2019-02-15]
 	Added x11/xcursor-themes version 1.0.6 [wiz 2019-02-15]
+	Updated meta-pkgs/modular-xorg-apps to 1.14.1.8 [wiz 2019-02-15]
