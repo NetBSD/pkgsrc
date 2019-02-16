@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/12/03 08:25:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/02/16 13:19:38 wiz Exp $
 include/poppler/qt5/poppler-annotation.h
 include/poppler/qt5/poppler-export.h
 include/poppler/qt5/poppler-form.h
@@ -7,7 +7,8 @@ include/poppler/qt5/poppler-media.h
 include/poppler/qt5/poppler-optcontent.h
 include/poppler/qt5/poppler-page-transition.h
 include/poppler/qt5/poppler-qt5.h
+include/poppler/qt5/poppler-version.h
 lib/libpoppler-qt5.so
 lib/libpoppler-qt5.so.1
-lib/libpoppler-qt5.so.1.17.0
+lib/libpoppler-qt5.so.1.19.0
 lib/pkgconfig/poppler-qt5.pc
