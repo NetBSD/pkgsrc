@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2019/02/01 11:50:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2019/02/16 23:36:02 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -117,9 +117,6 @@ ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/floats.pyo
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/integer.py
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/integer.pyc
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/integer.pyo
-${PYSITELIB}/hypothesis/internal/conjecture/shrinking/length.py
-${PYSITELIB}/hypothesis/internal/conjecture/shrinking/length.pyc
-${PYSITELIB}/hypothesis/internal/conjecture/shrinking/length.pyo
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/lexical.py
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/lexical.pyc
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/lexical.pyo
