@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/10/08 16:54:28 maya Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/02/16 19:32:12 bsiegert Exp $
 bin/moar
 include/moar/6model/6model.h
 include/moar/6model/bootstrap.h
@@ -114,13 +114,13 @@ include/moar/io/syncsocket.h
 include/moar/io/timers.h
 include/moar/jit/compile.h
 include/moar/jit/core_templates.h
+include/moar/jit/dump.h
 include/moar/jit/expr.h
 include/moar/jit/expr_ops.h
 include/moar/jit/graph.h
 include/moar/jit/interface.h
 include/moar/jit/internal.h
 include/moar/jit/label.h
-include/moar/jit/log.h
 include/moar/jit/register.h
 include/moar/jit/tile.h
 include/moar/mast/compiler.h
@@ -131,6 +131,7 @@ include/moar/math/grisu.h
 include/moar/math/num.h
 include/moar/memdebug.h
 include/moar/moar.h
+include/moar/platform/fork.h
 include/moar/platform/inttypes.h
 include/moar/platform/io.h
 include/moar/platform/memmem.h
@@ -152,10 +153,12 @@ include/moar/spesh/args.h
 include/moar/spesh/candidate.h
 include/moar/spesh/codegen.h
 include/moar/spesh/dead_bb_elimination.h
+include/moar/spesh/dead_ins_elimination.h
 include/moar/spesh/debug.h
 include/moar/spesh/deopt.h
 include/moar/spesh/dump.h
 include/moar/spesh/facts.h
+include/moar/spesh/frame_walker.h
 include/moar/spesh/graph.h
 include/moar/spesh/inline.h
 include/moar/spesh/iterator.h
@@ -168,6 +171,7 @@ include/moar/spesh/plan.h
 include/moar/spesh/plugin.h
 include/moar/spesh/stats.h
 include/moar/spesh/threshold.h
+include/moar/spesh/usages.h
 include/moar/spesh/worker.h
 include/moar/strings/ascii.h
 include/moar/strings/decode_stream.h
@@ -179,6 +183,7 @@ include/moar/strings/ops.h
 include/moar/strings/parse_num.h
 include/moar/strings/shiftjis.h
 include/moar/strings/shiftjis_codeindex.h
+include/moar/strings/siphash/csiphash.h
 include/moar/strings/unicode.h
 include/moar/strings/unicode_gen.h
 include/moar/strings/unicode_ops.h
@@ -187,10 +192,10 @@ include/moar/strings/utf16.h
 include/moar/strings/utf8.h
 include/moar/strings/utf8_c8.h
 include/moar/strings/uthash.h
+include/moar/strings/uthash_types.h
 include/moar/strings/windows1252.h
 include/moar/types.h
 lib/libmoar.so
 share/nqp/lib/MAST/Nodes.nqp
 share/nqp/lib/MAST/Ops.nqp
 share/pkgconfig/moar.pc
-
