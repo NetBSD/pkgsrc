@@ -1,4 +1,0 @@
-Vultr CLI is a command line tool for using the Vultr API. It allows you to
-create and manage your virtual machines, SSH public keys, snapshots and startup
-scripts on your Vultr account. You can also use it to directly SSH into a Vultr
-virtual machine through the vultr ssh command.
