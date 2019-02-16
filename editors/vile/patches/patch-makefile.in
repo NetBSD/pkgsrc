@@ -1,4 +1,4 @@
-$NetBSD: patch-makefile.in,v 1.2 2019/02/15 19:50:27 wiz Exp $
+$NetBSD: patch-makefile.in,v 1.3 2019/02/16 00:52:06 wiz Exp $
 
 Carryover from vile 0.97, patch-aa (updated)
 
@@ -24,11 +24,3 @@ Carryover from vile 0.97, patch-aa (updated)
  docdir		= $(datadir)/doc
  htmldir		= $(datadir)/html
  perldir		= $(datadir)/perl
-@@ -428,7 +428,6 @@ INSTALL_MACRO_FILES = \
- 
- INSTALL_PERL_DIRS = $(PERLDIR) $(PERLDIR)/Vile
- INSTALL_PERL_FILES = \
--	$(BINDIR)/vileget \
- 	$(PERLDIR)/Breadcrumbs.pm \
- 	$(PERLDIR)/CaptHook.pm \
- 	$(PERLDIR)/Glob2re.pm \
