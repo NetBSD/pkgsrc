@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2019/02/15 19:50:27 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2019/02/16 00:52:06 wiz Exp $
 
 DISTNAME=		vile-9.8t
 CATEGORIES=		editors
@@ -30,8 +30,6 @@ FILTERDIR=		${PREFIX}/libexec/vile
 EGDIR=			${PREFIX}/share/examples/vile
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/perl/vileget			\
-		${DESTDIR}${PREFIX}/bin/vileget
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	set -e;								\
 	for f in filters/spell.rc filters/filters.rc			\
