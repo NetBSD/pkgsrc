@@ -1,0 +1,3 @@
+Run applications under pseudo-terminal (PTY) sessions and replace
+TCL/Expect with a simple tool under your favorite shell (sh, bash,
+csh, tcsh, ksh, zsh, etc.).
