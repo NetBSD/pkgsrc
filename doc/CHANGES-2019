@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.783 2019/02/16 19:22:18 bsiegert Exp $
+$NetBSD: CHANGES-2019,v 1.784 2019/02/16 19:32:35 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1431,3 +1431,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/xf86-video-chips to 1.4.0 [wiz 2019-02-16]
 	Updated x11/xf86-video-tdfx to 1.5.0 [wiz 2019-02-16]
 	Updated www/caddy to 0.11.4 [bsiegert 2019-02-16]
+	Updated devel/MoarVM to 2018.12 [bsiegert 2019-02-16]
