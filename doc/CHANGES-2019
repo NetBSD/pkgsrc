@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.778 2019/02/16 06:23:19 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.779 2019/02/16 13:19:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1425,3 +1425,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/lua-alt-getopt to 0.8.0 [cheusov 2019-02-15]
 	Updated sysutils/smartmontools to 7.0nb2 [triaxx 2019-02-15]
 	Updated mail/getmail to 5.11 [schmonz 2019-02-16]
+	Updated print/poppler to 0.74.0 [wiz 2019-02-16]
