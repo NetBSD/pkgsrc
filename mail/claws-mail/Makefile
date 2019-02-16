@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2018/12/13 19:52:05 adam Exp $
+# $NetBSD: Makefile,v 1.98 2019/02/16 16:27:19 bsiegert Exp $
 
 INSTALLATION_DIRS+=	${EGDIR}
 INSTALLATION_DIRS+=	share/claws-mail
@@ -78,7 +78,9 @@ PLIST_SRC+=	PLIST.shred
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.if "${OPSYS}" != "Darwin"
 .include "../../x11/startup-notification/buildlink3.mk"
+.endif
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bdb.buildlink3.mk"
