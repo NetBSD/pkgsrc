@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2019/02/16 16:34:09 bsiegert Exp $
+
+SHA1 (empty-0.6.20b.tgz) = 584ef81a2c16f9602a7552a39be55a0c49f185eb
+RMD160 (empty-0.6.20b.tgz) = 092ed244e0b856ff5bb923798f9fa0142dd533b0
+SHA512 (empty-0.6.20b.tgz) = bdeda29ecde0bc7ee0432656f0497154e04dbad26aba62a0fe76ded394ddeefe2bfd921594a2dae44459b62ab4767d3b12a7a86216dfda56b6d77035a8b05c3d
+Size (empty-0.6.20b.tgz) = 16269 bytes
+SHA1 (patch-Makefile) = c15f37504340e500e9fad8755029ad3773c43ed4
