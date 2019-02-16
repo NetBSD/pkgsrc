@@ -1,0 +1,31 @@
+$NetBSD: patch-Makefile,v 1.1 2019/02/16 16:34:09 bsiegert Exp $
+
+Do not set PREFIX to allow unprivileged use, and respect DESTDIR.
+
+--- Makefile.orig	2015-08-10 08:21:35.000000000 +0000
++++ Makefile
+@@ -13,8 +13,6 @@
+ CC =	cc
+ LIBS =	-lutil
+ 
+-PREFIX = /usr/local
+-
+ all:
+ 	${CC} ${CFLAGS} -Wall ${LIBS} -o empty empty.c
+ 
+@@ -41,11 +39,11 @@ SunOS-gcc:
+ 
+ install:
+ 	[ -f `which strip` ] && strip empty
+-	[ -d ${PREFIX}/bin ] && cp empty ${PREFIX}/bin || mkdir -p ${PREFIX}/bin && cp empty ${PREFIX}/bin
+-	[ -d ${PREFIX}/man/man1 ] && cp empty.1 ${PREFIX}/man/man1 || mkdir -p ${PREFIX}/man/man1 && cp empty.1 ${PREFIX}/man/man1
++	[ -d ${DESTDIR}${PREFIX}/bin ] && cp empty ${DESTDIR}${PREFIX}/bin || mkdir -p ${DESTDIR}${PREFIX}/bin && cp empty ${DESTDIR}${PREFIX}/bin
++	[ -d ${DESTDIR}${PREFIX}/man/man1 ] && cp empty.1 ${DESTDIR}${PREFIX}/man/man1 || mkdir -p ${DESTDIR}${PREFIX}/man/man1 && cp empty.1 ${DESTDIR}${PREFIX}/man/man1
+ deinstall:
+-	rm ${PREFIX}/bin/empty
+-	rm ${PREFIX}/man/man1/empty.1
++	rm ${DESTDIR}${PREFIX}/bin/empty
++	rm ${DESTDIR}${PREFIX}/man/man1/empty.1
+ uninstall:	deinstall
+ 
+ clean:
