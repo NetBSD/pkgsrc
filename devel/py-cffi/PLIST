@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/09/30 13:09:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/02/16 23:37:23 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -41,6 +41,9 @@ ${PYSITELIB}/cffi/model.py
 ${PYSITELIB}/cffi/model.pyc
 ${PYSITELIB}/cffi/model.pyo
 ${PYSITELIB}/cffi/parse_c_type.h
+${PYSITELIB}/cffi/pkgconfig.py
+${PYSITELIB}/cffi/pkgconfig.pyc
+${PYSITELIB}/cffi/pkgconfig.pyo
 ${PYSITELIB}/cffi/recompiler.py
 ${PYSITELIB}/cffi/recompiler.pyc
 ${PYSITELIB}/cffi/recompiler.pyo
