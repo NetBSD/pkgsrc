@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2018/12/03 13:06:36 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.18 2019/02/16 13:19:38 wiz Exp $
 include/poppler/Annot.h
 include/poppler/Array.h
 include/poppler/BuiltinFont.h
@@ -6,6 +6,7 @@ include/poppler/BuiltinFontTables.h
 include/poppler/CMap.h
 include/poppler/CachedFile.h
 include/poppler/Catalog.h
+include/poppler/CertificateInfo.h
 include/poppler/CharCodeToUnicode.h
 include/poppler/CharTypes.h
 include/poppler/CompactFontTables.h
@@ -99,7 +100,6 @@ include/poppler/goo/gfile.h
 include/poppler/goo/gmem.h
 include/poppler/goo/grandom.h
 include/poppler/goo/gstrtod.h
-include/poppler/goo/gtypes.h
 include/poppler/poppler-config.h
 include/poppler/splash/Splash.h
 include/poppler/splash/SplashBitmap.h
