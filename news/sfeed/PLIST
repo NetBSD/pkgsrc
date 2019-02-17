@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/09/08 13:23:38 leot Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/02/17 21:19:53 leot Exp $
 bin/sfeed
 bin/sfeed_frames
 bin/sfeed_gph
@@ -27,7 +27,7 @@ man/man1/sfeed_web.1
 man/man1/sfeed_xmlenc.1
 man/man5/sfeed.5
 man/man5/sfeedrc.5
-share/sfeed/README
-share/sfeed/README.xml
-share/sfeed/sfeedrc.example
-share/sfeed/style.css
+share/doc/sfeed/README
+share/doc/sfeed/README.xml
+share/doc/sfeed/sfeedrc.example
+share/doc/sfeed/style.css
