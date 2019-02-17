@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.794 2019/02/17 15:59:03 youri Exp $
+$NetBSD: CHANGES-2019,v 1.795 2019/02/17 16:08:02 youri Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1454,3 +1454,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ninja-build to 1.9.0 [wiz 2019-02-17]
 	Added lang/zig version 0.3.0.20190217 [maya 2019-02-17]
 	Updated sysutils/xfce4-thunar to 1.8.4 [youri 2019-02-17]
+	Updated x11/xfce4-exo to 0.12.4 [youri 2019-02-17]
