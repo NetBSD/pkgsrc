@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2017/07/30 22:47:56 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/02/17 19:23:20 triaxx Exp $
 
-DISTNAME=	yelp-xsl-3.20.1
+DISTNAME=	yelp-xsl-3.31.90
 CATEGORIES=	textproc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/yelp-xsl/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
