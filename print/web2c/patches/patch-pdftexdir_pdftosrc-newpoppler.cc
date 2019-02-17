@@ -1,4 +1,4 @@
-$NetBSD: patch-pdftexdir_pdftosrc-newpoppler.cc,v 1.3 2018/12/11 13:59:04 ryoon Exp $
+$NetBSD: patch-pdftexdir_pdftosrc-newpoppler.cc,v 1.4 2019/02/17 11:44:38 tnn Exp $
 
 --- pdftexdir/pdftosrc-newpoppler.cc.orig	2017-10-17 21:52:13.000000000 +0000
 +++ pdftexdir/pdftosrc-newpoppler.cc
@@ -38,6 +38,15 @@ $NetBSD: patch-pdftexdir_pdftosrc-newpoppler.cc,v 1.3 2018/12/11 13:59:04 ryoon 
          if ((p = strrchr(buf, '.')) == 0)
              p = strchr(buf, 0);
          sprintf(p, ".xref");
+@@ -161,7 +161,7 @@ int main(int argc, char *argv[])
+                 Object objStr, obj1, obj2;
+                 int nObjects, first, n;
+                 int localOffset = 0;
+-                Guint firstOffset;
++                unsigned int firstOffset;
+ 
+                 objStr = xref->fetch(e->offset, 0);
+                 assert(objStr.isStream());
 @@ -173,9 +173,9 @@ int main(int argc, char *argv[])
  
                  // parse the header: object numbers and offsets
