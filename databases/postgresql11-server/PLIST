@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/10/23 16:02:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/02/17 08:26:12 adam Exp $
 bin/postgres
 bin/postmaster
 include/postgresql/server/plpgsql.h
@@ -350,6 +350,7 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/optimizer/prep/prepunion.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/optimizer/util/clauses.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/optimizer/util/joininfo.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/optimizer/util/orclauses.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/optimizer/util/paramassign.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/optimizer/util/pathnode.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/optimizer/util/placeholder.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/optimizer/util/plancat.bc
@@ -1027,6 +1028,7 @@ share/postgresql/timezone/Asia/Phnom_Penh
 share/postgresql/timezone/Asia/Pontianak
 share/postgresql/timezone/Asia/Pyongyang
 share/postgresql/timezone/Asia/Qatar
+share/postgresql/timezone/Asia/Qostanay
 share/postgresql/timezone/Asia/Qyzylorda
 share/postgresql/timezone/Asia/Rangoon
 share/postgresql/timezone/Asia/Riyadh
