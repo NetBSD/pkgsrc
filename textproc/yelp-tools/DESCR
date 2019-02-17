@@ -1,0 +1,2 @@
+A set of command-line tools to build and check your documentation,
+as well as an M4 file to use in your autotools-based build chain
