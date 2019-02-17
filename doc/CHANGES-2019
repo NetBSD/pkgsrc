@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.785 2019/02/16 23:44:57 adam Exp $
+$NetBSD: CHANGES-2019,v 1.786 2019/02/17 06:44:07 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1434,3 +1434,9 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/MoarVM to 2018.12 [bsiegert 2019-02-16]
 	Updated devel/py-hypothesis to 4.5.11 [adam 2019-02-16]
 	Updated devel/py-cffi to 1.12.1 [adam 2019-02-16]
+	Updated sysutils/caja to 1.21.4 [gutteridge 2019-02-17]
+	Updated graphics/mate-backgrounds to 1.21.0 [gutteridge 2019-02-17]
+	Updated devel/mate-common to 1.21.0 [gutteridge 2019-02-17]
+	Updated x11/mate-indicator-applet to 1.21.0 [gutteridge 2019-02-17]
+	Updated wm/mate-netbook to 1.21.0 [gutteridge 2019-02-17]
+	Updated net/mate-user-share to 1.21.0 [gutteridge 2019-02-17]
