@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/01/16 14:53:14 youri Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/02/17 05:54:36 gutteridge Exp $
 bin/caja
 bin/caja-autorun-software
 bin/caja-connect-server
@@ -21,7 +21,6 @@ man/man1/caja-autorun-software.1
 man/man1/caja-connect-server.1
 man/man1/caja-file-management-properties.1
 man/man1/caja.1
-share/appdata/caja.appdata.xml
 share/applications/caja-autorun-software.desktop
 share/applications/caja-browser.desktop
 share/applications/caja-computer.desktop
@@ -102,14 +101,9 @@ share/gtk-doc/html/libcaja-extension/right.png
 share/gtk-doc/html/libcaja-extension/style.css
 share/gtk-doc/html/libcaja-extension/up-insensitive.png
 share/gtk-doc/html/libcaja-extension/up.png
-share/icons/hicolor/16x16/apps/caja.png
 share/icons/hicolor/16x16/emblems/emblem-note.png
-share/icons/hicolor/22x22/apps/caja.png
-share/icons/hicolor/24x24/apps/caja.png
 share/icons/hicolor/24x24/emblems/emblem-note.png
-share/icons/hicolor/32x32/apps/caja.png
 share/icons/hicolor/48x48/emblems/emblem-note.png
-share/icons/hicolor/scalable/apps/caja.svg
 share/locale/af/LC_MESSAGES/caja.mo
 share/locale/am/LC_MESSAGES/caja.mo
 share/locale/ar/LC_MESSAGES/caja.mo
@@ -232,6 +226,7 @@ share/locale/zh_CN/LC_MESSAGES/caja.mo
 share/locale/zh_HK/LC_MESSAGES/caja.mo
 share/locale/zh_TW/LC_MESSAGES/caja.mo
 share/locale/zu/LC_MESSAGES/caja.mo
+share/metainfo/caja.appdata.xml
 share/mime/packages/caja.xml
 share/pixmaps/caja/audio.svg
 share/pixmaps/caja/backgrounds.png
