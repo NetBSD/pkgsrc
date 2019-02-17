@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.788 2019/02/17 08:38:43 adam Exp $
+$NetBSD: CHANGES-2019,v 1.789 2019/02/17 09:00:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1447,3 +1447,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/postgresql11 to 11.2 [adam 2019-02-17]
 	Updated devel/py-fakefs to 3.5.7 [adam 2019-02-17]
 	Updated sysutils/py-psutil to 5.5.1 [adam 2019-02-17]
+	Updated devel/py-rope to 0.12.0 [adam 2019-02-17]
+	Updated www/py-httplib2 to 0.12.1 [adam 2019-02-17]
