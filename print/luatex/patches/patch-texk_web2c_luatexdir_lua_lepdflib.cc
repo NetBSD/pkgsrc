@@ -1,4 +1,4 @@
-$NetBSD: patch-texk_web2c_luatexdir_lua_lepdflib.cc,v 1.7 2018/12/11 13:35:12 ryoon Exp $
+$NetBSD: patch-texk_web2c_luatexdir_lua_lepdflib.cc,v 1.8 2019/02/17 11:17:37 tnn Exp $
 
 --- texk/web2c/luatexdir/lua/lepdflib.cc.orig	2018-02-14 14:44:38.000000000 +0000
 +++ texk/web2c/luatexdir/lua/lepdflib.cc
@@ -191,6 +191,21 @@ $NetBSD: patch-texk_web2c_luatexdir_lua_lepdflib.cc,v 1.7 2018/12/11 13:35:12 ry
          uout->pc = uin->pc;
          uout->pd = uin->pd;
      } else
+@@ -3024,12 +3026,12 @@ m_poppler_get_GUINT(Attribute,getRevisio
+ 
+ static int m_Attribute_setRevision(lua_State * L)
+ {
+-    Guint i;
++    unsigned int i;
+     udstruct *uin;
+     uin = (udstruct *) luaL_checkudata(L, 1, M_Attribute);
+     if (uin->pd != NULL && uin->pd->pc != uin->pc)
+         pdfdoc_changed_error(L);
+-    i = (Guint) luaL_checkint(L, 2);
++    i = (unsigned int) luaL_checkint(L, 2);
+     ((Attribute *) uin->d)->setRevision(i);
+     return 0;
+ }
 @@ -3038,12 +3040,12 @@ m_poppler_get_BOOL(Attribute, isHidden);
  
  static int m_Attribute_setHidden(lua_State * L)
@@ -215,7 +230,21 @@ $NetBSD: patch-texk_web2c_luatexdir_lua_lepdflib.cc,v 1.7 2018/12/11 13:35:12 ry
      Ref *r;
      udstruct *uin, *uout;
      uin = (udstruct *) luaL_checkudata(L, 1, M_StructElement);
-@@ -3226,16 +3228,16 @@ static int m_StructElement_setRevision(l
+@@ -3214,28 +3216,28 @@ static int m_StructElement_getTypeName(l
+ 
+ static int m_StructElement_setRevision(lua_State * L)
+ {
+-    Guint i;
++    unsigned int i;
+     udstruct *uin;
+     uin = (udstruct *) luaL_checkudata(L, 1, M_StructElement);
+     if (uin->pd != NULL && uin->pd->pc != uin->pc)
+         pdfdoc_changed_error(L);
+-    i = (Guint) luaL_checkint(L, 2);
++    i = (unsigned int) luaL_checkint(L, 2);
+     ((StructElement *) uin->d)->setRevision(i);
+     return 0;
+ }
  
  static int m_StructElement_getText(lua_State * L)
  {
