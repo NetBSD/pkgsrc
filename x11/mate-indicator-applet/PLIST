@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/01/16 17:58:20 youri Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/02/17 06:15:37 gutteridge Exp $
 libexec/mate-indicator-applet
 libexec/mate-indicator-applet-appmenu
 libexec/mate-indicator-applet-complete
@@ -83,6 +83,7 @@ share/locale/ks/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/ku/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/ku_IQ/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/ky/LC_MESSAGES/mate-indicator-applet.mo
+share/locale/la/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/lb/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/li/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/lt/LC_MESSAGES/mate-indicator-applet.mo
@@ -138,6 +139,7 @@ share/locale/xh/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/yo/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/zh_CN/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/zh_HK/LC_MESSAGES/mate-indicator-applet.mo
+share/locale/zh-Hans/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/zh_TW/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/zu/LC_MESSAGES/mate-indicator-applet.mo
 share/mate-panel/applets/org.ayatana.panel.IndicatorApplet.mate-panel-applet
