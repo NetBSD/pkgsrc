@@ -1,0 +1,10 @@
+Zig is an open-source programming language designed for robustness,
+optimality, and clarity.
+
+* Robust - behavior is correct even for edge cases such as out
+  of memory.
+* Optimal - write programs the best way they can
+  behave and perform.
+* Clear - precisely communicate your intent
+  to the compiler and other programmers. The language imposes a
+  low overhead to reading code.
