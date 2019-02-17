@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/08/10 11:56:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/02/17 08:26:11 adam Exp $
 bin/clusterdb
 bin/createdb
 bin/createuser
@@ -393,6 +393,7 @@ include/postgresql/server/optimizer/geqo_recombination.h
 include/postgresql/server/optimizer/geqo_selection.h
 include/postgresql/server/optimizer/joininfo.h
 include/postgresql/server/optimizer/orclauses.h
+include/postgresql/server/optimizer/paramassign.h
 include/postgresql/server/optimizer/pathnode.h
 include/postgresql/server/optimizer/paths.h
 include/postgresql/server/optimizer/placeholder.h
