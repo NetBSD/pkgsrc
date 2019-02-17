@@ -1,0 +1,17 @@
+Quassel IRC is a modern, cross-platform, distributed IRC client
+based on the Qt framework.
+
+Distributed means that one (or multiple) client(s) can attach to
+and detach from a central core that stays permanently online --
+much like the popular combination of screen and a text-based IRC
+client such as WeeChat, and similar to (but much more featureful
+than) so-called BNCs.  Re-attaching your client will show your IRC
+session in the same state as you left it in (plus whatever happened
+while you were gone), and this even when you re-attach from a
+different location.
+
+In addition, Quassel IRC can be used like a traditional client,
+with providing both client and core functionality in one binary.
+This so-called "Monolithic Client" completely hides the distributed
+nature, so for a purely local installation, Quassel IRC can be
+setup very easily.
