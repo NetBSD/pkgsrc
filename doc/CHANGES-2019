@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.787 2019/02/17 08:29:10 adam Exp $
+$NetBSD: CHANGES-2019,v 1.788 2019/02/17 08:38:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1445,3 +1445,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/postgresql96 to 9.6.12 [adam 2019-02-17]
 	Updated databases/postgresql10 to 10.7 [adam 2019-02-17]
 	Updated databases/postgresql11 to 11.2 [adam 2019-02-17]
+	Updated devel/py-fakefs to 3.5.7 [adam 2019-02-17]
+	Updated sysutils/py-psutil to 5.5.1 [adam 2019-02-17]
