@@ -1,7 +1,27 @@
-$NetBSD: patch-sdext_source_pdfimport_xpdfwrapper_pdfioutdev__gpl.cxx,v 1.7 2018/12/11 12:59:49 ryoon Exp $
+$NetBSD: patch-sdext_source_pdfimport_xpdfwrapper_pdfioutdev__gpl.cxx,v 1.8 2019/02/17 15:27:41 tnn Exp $
 
---- sdext/source/pdfimport/xpdfwrapper/pdfioutdev_gpl.cxx.orig	2018-10-29 19:55:29.000000000 +0000
+poppler compatibility
+
+--- sdext/source/pdfimport/xpdfwrapper/pdfioutdev_gpl.cxx.orig	2018-12-12 21:59:14.000000000 +0000
 +++ sdext/source/pdfimport/xpdfwrapper/pdfioutdev_gpl.cxx
+@@ -298,7 +298,7 @@ void writePpm_( OutputBuffer&     o_rOut
+     o_rOutputBuf.resize(header_size);
+ 
+     // initialize stream
+-    Guchar *p;
++    unsigned char *p;
+     GfxRGB rgb;
+     std::unique_ptr<ImageStream> imgStr(
+         new ImageStream(str,
+@@ -401,7 +401,7 @@ void writeImage_( OutputBuffer&     o_rO
+                 oneColor = { byteToCol( 0xff ), byteToCol( 0xff ), byteToCol( 0xff ) };
+         if( colorMap->getColorSpace()->getMode() == csIndexed || colorMap->getColorSpace()->getMode() == csDeviceGray )
+         {
+-            Guchar nIndex = 0;
++            unsigned char nIndex = 0;
+             colorMap->getRGB( &nIndex, &zeroColor );
+             nIndex = 1;
+             colorMap->getRGB( &nIndex, &oneColor );
 @@ -514,7 +514,7 @@ void PDFOutDev::printPath( GfxPath* pPat
  PDFOutDev::PDFOutDev( PDFDoc* pDoc ) :
      m_pDoc( pDoc ),
