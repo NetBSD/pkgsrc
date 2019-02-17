@@ -1,10 +1,13 @@
-$NetBSD: patch-texk_web2c_luatexdir_image_pdftoepdf.w,v 1.7 2018/12/11 13:35:12 ryoon Exp $
+$NetBSD: patch-texk_web2c_luatexdir_image_pdftoepdf.w,v 1.8 2019/02/17 11:17:37 tnn Exp $
 
 --- texk/web2c/luatexdir/image/pdftoepdf.w.orig	2018-01-17 18:00:12.000000000 +0000
 +++ texk/web2c/luatexdir/image/pdftoepdf.w
-@@ -35,7 +35,7 @@
+@@ -33,9 +33,9 @@
  
- extern void md5(Guchar *msg, int msgLen, Guchar *digest);
+ */
+ 
+-extern void md5(Guchar *msg, int msgLen, Guchar *digest);
++extern void md5(unsigned char *msg, int msgLen, unsigned char *digest);
  
 -static GBool isInit = gFalse;
 +static bool isInit = false;
