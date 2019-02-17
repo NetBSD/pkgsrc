@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2019/01/16 18:17:26 youri Exp $
+# $NetBSD: Makefile,v 1.15 2019/02/17 06:22:37 gutteridge Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
-VERSION=	1.20.1
 DISTNAME=	mate-user-share-${VERSION}
 CATEGORIES=	net
 
