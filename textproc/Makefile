@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1023 2019/02/14 11:58:03 wiz Exp $
+# $NetBSD: Makefile,v 1.1024 2019/02/17 19:04:47 triaxx Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1055,6 +1055,7 @@ SUBDIR+=	xxdiff-scripts
 SUBDIR+=	yamcha
 SUBDIR+=	yaml-cpp
 SUBDIR+=	yaml-cpp03
+SUBDIR+=	yelp-tools
 SUBDIR+=	yelp-xsl
 SUBDIR+=	yodl
 SUBDIR+=	zoem
