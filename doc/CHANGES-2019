@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.799 2019/02/17 21:20:57 leot Exp $
+$NetBSD: CHANGES-2019,v 1.800 2019/02/17 23:09:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1459,3 +1459,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added textproc/yelp-tools version 3.31.90 [triaxx 2019-02-17]
 	Updated textproc/yelp-xsl to 3.31.90 [triaxx 2019-02-17]
 	Updated news/sfeed to 0.9.8 [leot 2019-02-17]
+	Updated x11/xcalc to 1.0.7 [wiz 2019-02-17]
