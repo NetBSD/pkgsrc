@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.793 2019/02/17 12:34:40 maya Exp $
+$NetBSD: CHANGES-2019,v 1.794 2019/02/17 15:59:03 youri Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1453,3 +1453,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated finance/ledger to 3.1.2 [wiz 2019-02-17]
 	Updated devel/ninja-build to 1.9.0 [wiz 2019-02-17]
 	Added lang/zig version 0.3.0.20190217 [maya 2019-02-17]
+	Updated sysutils/xfce4-thunar to 1.8.4 [youri 2019-02-17]
