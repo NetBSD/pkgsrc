@@ -1,6 +1,8 @@
-$NetBSD: patch-sdext_source_pdfimport_xpdfwrapper_pdfioutdev__gpl.hxx,v 1.3 2018/12/04 12:56:49 ryoon Exp $
+$NetBSD: patch-sdext_source_pdfimport_xpdfwrapper_pdfioutdev__gpl.hxx,v 1.4 2019/02/17 15:27:41 tnn Exp $
 
---- sdext/source/pdfimport/xpdfwrapper/pdfioutdev_gpl.hxx.orig	2018-10-29 19:55:29.000000000 +0000
+poppler compatibility
+
+--- sdext/source/pdfimport/xpdfwrapper/pdfioutdev_gpl.hxx.orig	2018-12-12 21:59:14.000000000 +0000
 +++ sdext/source/pdfimport/xpdfwrapper/pdfioutdev_gpl.hxx
 @@ -151,22 +151,22 @@ namespace pdfi
  
@@ -81,3 +83,12 @@ $NetBSD: patch-sdext_source_pdfimport_xpdfwrapper_pdfioutdev__gpl.hxx,v 1.3 2018
  #endif
                                          ) override;
  
+@@ -279,7 +279,7 @@ extern FILE* g_binary_out;
+ 
+ // note: if you ever change Output_t, please keep in mind that the current code
+ // relies on it being of 8 bit size
+-typedef Guchar Output_t;
++typedef unsigned char Output_t;
+ typedef std::vector< Output_t > OutputBuffer;
+ 
+ #endif // INCLUDED_SDEXT_SOURCE_PDFIMPORT_XPDFWRAPPER_PDFIOUTDEV_GPL_HXX

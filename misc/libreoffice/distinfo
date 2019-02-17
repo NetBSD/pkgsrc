@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.70 2018/12/19 12:09:55 ryoon Exp $
+$NetBSD: distinfo,v 1.71 2019/02/17 15:27:41 tnn Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -237,8 +237,9 @@ SHA1 (patch-i18nutil_source_utility_unicode.cxx) = b2c48cafe10cf4fd45604c8e501bb
 SHA1 (patch-lotuswordpro_source_filter_localtime.cxx) = 8db23e81f54b5a71e331dfccb57cceb8aab92d2a
 SHA1 (patch-mysqlc_Library__mysqlc.mk) = c5560b4739cf54b8207c7d9dfa2a22ffeeee8cfd
 SHA1 (patch-opencl_source_openclconfig.cxx) = 2178f73aa08148cfd54d9a8c79eb29bf535f2e6b
-SHA1 (patch-sdext_source_pdfimport_xpdfwrapper_pdfioutdev__gpl.cxx) = 1910ebf571181b2f6a973e2f6537baf67edbcb4a
-SHA1 (patch-sdext_source_pdfimport_xpdfwrapper_pdfioutdev__gpl.hxx) = 15a5d9708a5349f6584231dcf787537618371cb0
+SHA1 (patch-sdext_source_pdfimport_xpdfwrapper_pdfioutdev__gpl.cxx) = 9fd6c51371a70373a0375a23851339af2cb8b639
+SHA1 (patch-sdext_source_pdfimport_xpdfwrapper_pdfioutdev__gpl.hxx) = b0df1d01d1aa69943681c020e4964fb5ea654699
+SHA1 (patch-sdext_source_pdfimport_xpdfwrapper_pnghelper.cxx) = 31733d663e2255b3d9a082d3897a1c7aa663d1ea
 SHA1 (patch-sdext_source_pdfimport_xpdfwrapper_wrapper__gpl.cxx) = f2ecf16e731bebc88639598c5e63b05998317f8a
 SHA1 (patch-sfx2_source_appl_shutdownicon.cxx) = 111d4ca26c55cf2ab192c1fcec40e9e3f3017e57
 SHA1 (patch-solenv_gbuild_Module.mk) = cbd6ca3acae187458e49fe76d973e6475ed5fe1d
