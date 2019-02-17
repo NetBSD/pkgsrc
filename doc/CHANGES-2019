@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.797 2019/02/17 19:07:24 triaxx Exp $
+$NetBSD: CHANGES-2019,v 1.798 2019/02/17 19:23:49 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1457,3 +1457,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/xfce4-exo to 0.12.4 [youri 2019-02-17]
 	Updated x11/xfce4-whiskermenu-plugin to 2.3.1 [youri 2019-02-17]
 	Added textproc/yelp-tools version 3.31.90 [triaxx 2019-02-17]
+	Updated textproc/yelp-xsl to 3.31.90 [triaxx 2019-02-17]
