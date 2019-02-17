@@ -1,18 +1,18 @@
-$NetBSD: patch-src_system.hh.in,v 1.1 2017/02/18 05:48:52 riastradh Exp $
+$NetBSD: patch-src_main.cc,v 1.1 2019/02/17 11:55:03 wiz Exp $
 
 Canonicalize pkgsrc readline.h filename.  This is seen both by
 consumers of devel/readline and by consumers of devel/editline, via
 buildlink3 magic.  The only reason editline/readline.h may exist is to
 allow both devel/readline and devel/editline to coexist.
 
---- src/system.hh.in.orig	2016-01-11 15:59:38.000000000 +0000
-+++ src/system.hh.in
-@@ -168,7 +168,7 @@ typedef std::ostream::pos_type ostream_p
- #include "utf8.h"
+--- src/main.cc.orig	2019-02-05 13:30:45.000000000 +0000
++++ src/main.cc
+@@ -36,7 +36,7 @@
+ #include "session.h"
  
- #if HAVE_EDIT
+ #ifdef HAVE_EDIT
 -#include <editline/readline.h>
 +#include <readline/readline.h>
  #endif
  
- #include <boost/algorithm/string.hpp>
+ using namespace ledger;
