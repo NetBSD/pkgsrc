@@ -1,10 +1,7 @@
-$NetBSD: distinfo,v 1.4 2018/08/20 20:45:25 wiz Exp $
+$NetBSD: distinfo,v 1.5 2019/02/17 11:55:03 wiz Exp $
 
-SHA1 (ledger-3.1.1.tar.gz) = 77ad24ce4947e2f130e58d8e8bc4c5b6920a0222
-RMD160 (ledger-3.1.1.tar.gz) = 07645c8d798e386eb4ed0a5a9e3dcf6fe0a184f8
-SHA512 (ledger-3.1.1.tar.gz) = 3f81b98a414cdfc0e272de4e958770149fb1acc8bda880d270e1459ce35294a220c52820bb9af49a751ac3a80b878f81fc7799ba41e0a1be43eba72081351bf5
-Size (ledger-3.1.1.tar.gz) = 842364 bytes
-SHA1 (patch-CMakeLists.txt) = 14160d9d0fad56665fe7c6ffd5fec89541d62fb2
-SHA1 (patch-src_item.h) = 994e1e87fdf7510bcac364fb554d2ec012ba84d3
-SHA1 (patch-src_system.hh.in) = c9f5830aaf77681d93eedb78d06fa91f47a7b478
-SHA1 (patch-src_utils.h) = 0dcff070c9088e9e6bea7cc41cdec3701eae3ac9
+SHA1 (ledger-3.1.2.tar.gz) = fd4b6db8cc4b611a7b1d246e9d88a40dda9ace0b
+RMD160 (ledger-3.1.2.tar.gz) = af1d9114953f46abd1ec702169a102f0815fac0d
+SHA512 (ledger-3.1.2.tar.gz) = 445d9a9c70aa3e59718f8fb75e4110c73f2f476436149fdd456b5fe7b9cee9333c09647080049989599dfac491e5bdd0d143717e58e15989db0fcaad4e5a958d
+Size (ledger-3.1.2.tar.gz) = 801112 bytes
+SHA1 (patch-src_main.cc) = d887e39e2a68fe594c93819e95eed9a4f469844d
