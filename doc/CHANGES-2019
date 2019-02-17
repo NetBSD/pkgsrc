@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.786 2019/02/17 06:44:07 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.787 2019/02/17 08:29:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1440,3 +1440,8 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/mate-indicator-applet to 1.21.0 [gutteridge 2019-02-17]
 	Updated wm/mate-netbook to 1.21.0 [gutteridge 2019-02-17]
 	Updated net/mate-user-share to 1.21.0 [gutteridge 2019-02-17]
+	Updated databases/postgresql94 to 9.4.21 [adam 2019-02-17]
+	Updated databases/postgresql95 to 9.5.16 [adam 2019-02-17]
+	Updated databases/postgresql96 to 9.6.12 [adam 2019-02-17]
+	Updated databases/postgresql10 to 10.7 [adam 2019-02-17]
+	Updated databases/postgresql11 to 11.2 [adam 2019-02-17]
