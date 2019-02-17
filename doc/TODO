@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18839 2019/02/16 13:19:28 wiz Exp $
+$NetBSD: TODO,v 1.18840 2019/02/17 10:16:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -451,7 +451,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-1.1
 	o catdoc-tk-1.1
-	o cbindgen-0.7.1
+	o cbindgen-0.8.0
 	o cc65-2.17
 	o cddbd-1.5.2
 	o cdk-5.0.20120323
@@ -815,6 +815,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o icbirc-2.0
 	o icc11-13.0
 	o icdprog-0.5
+	o icecast-2.4.4
 	o icedtea-web-1.6.2
 	o ices-mp3-2.0.2
 	o icinga-base-2.4.1
@@ -886,6 +887,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o lcc-4.2
 	o ldapsdk-6.0.7
 	o leafpad-0.8.18.1
+	o ledger-3.1.2
 	o lgeneral-1.3.1
 	o libarchive-3.3.2
 	o libbpg-0.9.6
@@ -898,7 +900,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libgee-0.20.0
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
-	o libgit2-0.27.8
+	o libgit2-0.28.1
 	o libgnomedb-3.1.2
 	o libgnomekbd-3.4.0.2
 	o libgphoto2-2.5.16
@@ -921,6 +923,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libpreludedb-3.1.0
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o librsvg-2.44.12 [wip]
+	o librsvg-2.44.13
 	o libstree-0.4.2
 	o libtcl-nothread-8.5.1
 	o libtecla-1.6.3
@@ -1149,6 +1152,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-simpletal-5.1
 	o py-spf-2.0.12t
 	o py-sybase-0.37
+	o py-test-httpbin-1.0.0
 	o py-wxWidgets-4.0.0
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
