@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2018/10/08 16:54:28 maya Exp $
+# $NetBSD: Makefile,v 1.5 2019/02/18 14:16:52 bsiegert Exp $
 
-DISTNAME=	rakudo-2018.06
+DISTNAME=	rakudo-2018.12
 CATEGORIES=	lang perl6
 MASTER_SITES=	http://rakudo.org/downloads/rakudo/
 
@@ -21,12 +21,7 @@ CONFIG_SHELL=		${PERL5}
 CONFIGURE_SCRIPT=	Configure.pl
 CONFIGURE_ARGS=		--prefix=${PREFIX} --backends=moar
 
-SUBST_CLASSES+=		interp
-SUBST_STAGE.interp=	pre-configure
-SUBST_MESSAGE.interp=	Fixing interpreter line.
-SUBST_FILES.interp=	src/core/CompUnit/Repository/Installation.pm
-SUBST_FILES.interp+=	tools/install-dist.pl
-SUBST_SED.interp=	-e 's,/usr/bin/env ,${PREFIX}/bin/,'
+REPLACE_PERL6=		tools/install-dist.p6
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -38,7 +33,7 @@ PLIST_SUBST+=	EXT=so
 
 post-install:
 	${RM} -rf ${DESTDIR}${PREFIX}/share/perl6/precomp/*
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/install-dist.pl ${DESTDIR}${PREFIX}/share/perl6/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/install-dist.p6 ${DESTDIR}${PREFIX}/share/perl6/bin
 
 .include "../../devel/MoarVM/buildlink3.mk"
 .include "../../lang/nqp/buildlink3.mk"
