@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.801 2019/02/18 09:42:07 adam Exp $
+$NetBSD: CHANGES-2019,v 1.802 2019/02/18 11:47:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1462,3 +1462,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/xcalc to 1.0.7 [wiz 2019-02-17]
 	Updated textproc/py-dominate to 2.3.5 [adam 2019-02-18]
 	Updated devel/py-dulwich to 0.19.11 [adam 2019-02-18]
+	Updated databases/py-redis to 3.2.0 [adam 2019-02-18]
+	Updated www/py-raven to 6.10.0 [adam 2019-02-18]
+	Updated www/py-test-httpbin to 1.0.0 [adam 2019-02-18]
