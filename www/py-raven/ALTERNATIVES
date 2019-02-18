@@ -1,1 +1,1 @@
-bin/raven @PREFIX@/bin/raven@PYVERSSUFFIX@
+bin/raven @PREFIX@/bin/raven-@PYVERSSUFFIX@
