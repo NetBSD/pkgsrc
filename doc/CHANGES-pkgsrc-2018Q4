@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q4,v 1.1.2.7 2019/02/16 15:59:32 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q4,v 1.1.2.8 2019/02/18 19:23:34 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q4 branch:
 
@@ -76,4 +76,19 @@ textproc/icu: security fix
 
 Pullup ticket #5910 - requested by mlelstv
 www/curl: security fix
+
+Pullup ticket #5911 - requested by taca
+textproc/libxml2, textproc/py-libxml2: security fix
+
+Pullup ticket #5912 - requested by taca
+lang/pear: security fix
+
+Pullup ticket #5913 - requested by taca
+www/ruby-rack: security fix
+
+Pullup ticket #5914 - requested by taca
+www/ruby-rack16: security fix
+
+Pullup ticket #5915 - requested by taca
+mail-dovecot2: security fix
 
