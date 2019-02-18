@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2018/12/23 00:11:39 adam Exp $
+# $NetBSD: Makefile,v 1.37 2019/02/18 16:56:40 minskim Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -21,6 +21,7 @@
 
 DISTNAME=	llvm-7.0.1.src
 PKGNAME=	${DISTNAME:S/.src//}
+PKGREVISION=	1
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
