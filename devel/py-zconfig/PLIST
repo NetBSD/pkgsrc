@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/10/23 09:46:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/02/18 12:48:58 adam Exp $
 bin/zconfig-${PYVERSSUFFIX}
 bin/zconfig_schema2html-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -53,6 +53,9 @@ ${PYSITELIB}/ZConfig/components/logger/eventlog.xml
 ${PYSITELIB}/ZConfig/components/logger/factory.py
 ${PYSITELIB}/ZConfig/components/logger/factory.pyc
 ${PYSITELIB}/ZConfig/components/logger/factory.pyo
+${PYSITELIB}/ZConfig/components/logger/formatter.py
+${PYSITELIB}/ZConfig/components/logger/formatter.pyc
+${PYSITELIB}/ZConfig/components/logger/formatter.pyo
 ${PYSITELIB}/ZConfig/components/logger/handlers.py
 ${PYSITELIB}/ZConfig/components/logger/handlers.pyc
 ${PYSITELIB}/ZConfig/components/logger/handlers.pyo
@@ -67,6 +70,12 @@ ${PYSITELIB}/ZConfig/components/logger/loghandler.pyo
 ${PYSITELIB}/ZConfig/components/logger/tests/__init__.py
 ${PYSITELIB}/ZConfig/components/logger/tests/__init__.pyc
 ${PYSITELIB}/ZConfig/components/logger/tests/__init__.pyo
+${PYSITELIB}/ZConfig/components/logger/tests/support.py
+${PYSITELIB}/ZConfig/components/logger/tests/support.pyc
+${PYSITELIB}/ZConfig/components/logger/tests/support.pyo
+${PYSITELIB}/ZConfig/components/logger/tests/test_formatter.py
+${PYSITELIB}/ZConfig/components/logger/tests/test_formatter.pyc
+${PYSITELIB}/ZConfig/components/logger/tests/test_formatter.pyo
 ${PYSITELIB}/ZConfig/components/logger/tests/test_logger.py
 ${PYSITELIB}/ZConfig/components/logger/tests/test_logger.pyc
 ${PYSITELIB}/ZConfig/components/logger/tests/test_logger.pyo
