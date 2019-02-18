@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/03/26 16:30:10 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/02/18 12:57:21 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -253,6 +253,18 @@ ${PYSITELIB}/js2py/prototypes/jstypedarray.pyo
 ${PYSITELIB}/js2py/py_node_modules/__init__.py
 ${PYSITELIB}/js2py/py_node_modules/__init__.pyc
 ${PYSITELIB}/js2py/py_node_modules/__init__.pyo
+${PYSITELIB}/js2py/py_node_modules/chalk.py
+${PYSITELIB}/js2py/py_node_modules/chalk.pyc
+${PYSITELIB}/js2py/py_node_modules/chalk.pyo
+${PYSITELIB}/js2py/py_node_modules/crypto_js.py
+${PYSITELIB}/js2py/py_node_modules/crypto_js.pyc
+${PYSITELIB}/js2py/py_node_modules/crypto_js.pyo
+${PYSITELIB}/js2py/py_node_modules/escodegen.py
+${PYSITELIB}/js2py/py_node_modules/escodegen.pyc
+${PYSITELIB}/js2py/py_node_modules/escodegen.pyo
+${PYSITELIB}/js2py/py_node_modules/esprima.py
+${PYSITELIB}/js2py/py_node_modules/esprima.pyc
+${PYSITELIB}/js2py/py_node_modules/esprima.pyo
 ${PYSITELIB}/js2py/pyjs.py
 ${PYSITELIB}/js2py/pyjs.pyc
 ${PYSITELIB}/js2py/pyjs.pyo
