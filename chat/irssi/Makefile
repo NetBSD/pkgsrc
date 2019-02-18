@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2019/02/12 04:43:52 maya Exp $
+# $NetBSD: Makefile,v 1.92 2019/02/18 16:30:26 schmonz Exp $
 
 DISTNAME=		${IRSSI_DISTNAME}
 CATEGORIES=		chat
@@ -22,6 +22,11 @@ CONFIGURE_ARGS+=	--with-proxy \
 
 EGDIR=		${PREFIX}/share/examples/irssi
 CONF_FILES=	${EGDIR}/irssi.conf ${PKG_SYSCONFDIR}/irssi.conf
+
+OPSYSVARS+=		MODULEEXT
+MODULEEXT.Darwin=	bundle
+MODULEEXT.*=		so
+PLIST_SUBST+=		MODULEEXT=${MODULEEXT}
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
 

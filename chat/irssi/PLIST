@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2019/02/12 04:43:52 maya Exp $
+@comment $NetBSD: PLIST,v 1.18 2019/02/18 16:30:26 schmonz Exp $
 bin/irssi
 include/irssi/irssi-config.h
 include/irssi/irssi-version.h
@@ -139,12 +139,12 @@ ${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/Irssi/TextUI.pm
 ${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/Irssi/UI.pm
 ${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/Irssi/.packlist
 ${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/Irssi/Irc/.packlist
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/Irssi/Irc/Irc.so
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/Irssi/Irssi.so
+${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/Irssi/Irc/Irc.${MODULEEXT}
+${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/Irssi/Irssi.${MODULEEXT}
 ${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/Irssi/TextUI/.packlist
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/Irssi/TextUI/TextUI.so
+${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/Irssi/TextUI/TextUI.${MODULEEXT}
 ${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/Irssi/UI/.packlist
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/Irssi/UI/UI.so
+${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/Irssi/UI/UI.${MODULEEXT}
 man/man1/irssi.1
 share/doc/irssi/capsicum.txt
 share/doc/irssi/design.html
