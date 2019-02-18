@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/02/26 16:12:32 adam Exp $
+$NetBSD: distinfo,v 1.6 2019/02/18 12:57:21 adam Exp $
 
-SHA1 (Js2Py-0.59.tar.gz) = 828ee742021299ee7cecccb52502288b7a4fc5fe
-RMD160 (Js2Py-0.59.tar.gz) = 208f6492385d5a777b124f49bacfdae67c652e64
-SHA512 (Js2Py-0.59.tar.gz) = fd6c59259af431436eb99794492a9dbee03e68458f5e72aa67f5ead04e0dc7913fa45b9261ed756c235de4fbe45c1de61a49bc8c37be522ec4e063857d3a9e42
-Size (Js2Py-0.59.tar.gz) = 556467 bytes
+SHA1 (Js2Py-0.60.tar.gz) = d134e40b14c6637b11b98a295068ff95bf1b9992
+RMD160 (Js2Py-0.60.tar.gz) = 3946330f91b453b25361764f54948ef9216114e2
+SHA512 (Js2Py-0.60.tar.gz) = adca62e8313db18b5cfce15ae8d40d45d65a3e5ea02fbe77f91a5e1e0ab90aa664cb852859cad935e63781e48df63dbbbf0cd5f87633d5d01e286179b539b023
+Size (Js2Py-0.60.tar.gz) = 833612 bytes
