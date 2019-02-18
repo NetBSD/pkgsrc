@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/10/23 15:22:29 adam Exp $
+# $NetBSD: Makefile,v 1.2 2019/02/18 09:13:34 adam Exp $
 
-DISTNAME=	dominate-2.3.1
+DISTNAME=	dominate-2.3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dominate/}
