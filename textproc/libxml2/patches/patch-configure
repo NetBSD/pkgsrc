@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.31 2017/11/06 16:16:53 prlw1 Exp $
+$NetBSD: patch-configure,v 1.1.2.2 2019/02/18 14:05:52 bsiegert Exp $
 
 Various configure fixes:
  * Add run-path to XML_LIBDIR
