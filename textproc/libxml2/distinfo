@@ -1,19 +1,16 @@
-$NetBSD: distinfo,v 1.128 2018/11/09 15:31:46 leot Exp $
+$NetBSD: distinfo,v 1.128.2.1 2019/02/18 14:05:52 bsiegert Exp $
 
-SHA1 (libxml2-2.9.8.tar.gz) = 66bcefd98a6b7573427cf66f9d3841b59eb5b8c3
-RMD160 (libxml2-2.9.8.tar.gz) = a3bf30ed652cfa2e06c64ae62c95a5ebd889c7a7
-SHA512 (libxml2-2.9.8.tar.gz) = 28903282c7672206effa1362fd564cbe4cf5be44264b083a7d14e383f73bccd1b81bcafb5f4f2f56f5e7e05914c660e27668c9ce91b1b9f256ef5358d55ba917
-Size (libxml2-2.9.8.tar.gz) = 5469097 bytes
-SHA1 (patch-aa) = e687eaa9805b855b0c8a944ec5c597bd34954472
-SHA1 (patch-ab) = a0df60b1a8609c185ed7d45a015eafdbfb6d6b41
-SHA1 (patch-ac) = 34afe787f6012b460a85be993048e133907a1621
-SHA1 (patch-ad) = d65b7e3be9694147e96ce4bb70a1739e2279ba81
-SHA1 (patch-ae) = 4eede9719724f94402e850ee6d6043a74aaf62b2
+SHA1 (libxml2-2.9.9.tar.gz) = 96686d1dd9fddf3b35a28b1e2e4bbacac889add3
+RMD160 (libxml2-2.9.9.tar.gz) = a7d5f9ca4a24db329108f4bfb6bd4eed0f61ab21
+SHA512 (libxml2-2.9.9.tar.gz) = cb7784ba4e72e942614e12e4f83f4ceb275f3d738b30e3b5c1f25edf8e9fa6789e854685974eed95b362049dbf6c8e7357e0327d64c681ed390534ac154e6810
+Size (libxml2-2.9.9.tar.gz) = 5476717 bytes
+SHA1 (patch-Makefile.in) = e687eaa9805b855b0c8a944ec5c597bd34954472
+SHA1 (patch-catalog.c) = 34afe787f6012b460a85be993048e133907a1621
+SHA1 (patch-configure) = a0df60b1a8609c185ed7d45a015eafdbfb6d6b41
+SHA1 (patch-doc_examples_Makefile.in) = 4eede9719724f94402e850ee6d6043a74aaf62b2
 SHA1 (patch-encoding.c) = 6cf0a7d421828b9f40a4079ee85adb791c54d096
-SHA1 (patch-parser.c) = ea27ffe37b8a47d08a2e2a0220ec5592c9980190
+SHA1 (patch-python_libxml.c) = cfa07b4f3dfddb501c2ba210bb32b8ee14e3df9d
 SHA1 (patch-python_libxml.py) = 869a72ae5ba2e27e6d46552878890acb22337675
 SHA1 (patch-python_libxml2.py) = 209d105b0f3aedb834091390a7c6819705108e34
 SHA1 (patch-python_setup.py) = 7771fd02ee6779463f1d3321f099d7e6d19cd1b1
-SHA1 (patch-result_errors_759573.xml.err) = b6fc7ac6fa72e6a3b927f5938917c74a1258600c
-SHA1 (patch-xpath.c) = 9b9832e36e947598d8f5dade80181e82bff54a5c
-SHA1 (patch-xzlib.c) = a9b4de24d844b9fee30988ae4dbdee950797fd0d
+SHA1 (patch-xmlcatalog.c) = d65b7e3be9694147e96ce4bb70a1739e2279ba81
