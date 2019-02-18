@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/02/16 22:16:08 kamil Exp $
+# $NetBSD: Makefile,v 1.9 2019/02/18 01:34:12 kamil Exp $
 
 GITHUB_PROJECT=	haxm
 GITHUB_TAG=	3bdfd1a39021df9b4dfe69e05a277e4e6456494a
@@ -30,8 +30,8 @@ MAKE_FLAGS+=	S=${BSDSRCDIR}/sys
 
 BUILD_DEFS+=	BSDSRCDIR
 
-.if !exists(${BSDSRCDIR}/src)
-PKG_FAIL_REASON+=	"BSDSRCDIR/src specifies non-existing directory ${BSDSRCDIR}/src"
+.if !exists(${BSDSRCDIR}/sys)
+PKG_FAIL_REASON+=	"BSDSRCDIR/sys specifies non-existing directory ${BSDSRCDIR}/sys"
 .endif
 
 .include "../../mk/compiler.mk"
