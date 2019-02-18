@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/06/04 14:17:27 taca Exp $
+# $NetBSD: Makefile,v 1.1.16.1 2019/02/18 14:20:59 bsiegert Exp $
 
-DISTNAME=	rack-1.6.8
+DISTNAME=	rack-1.6.11
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/rack/rack16/}
 CATEGORIES=	www
 
@@ -8,6 +8,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://rack.github.io/
 COMMENT=	Modular Ruby webserver interface
 LICENSE=	mit
+
+USE_LANGUAGES=	# none
 
 OVERRIDE_GEMSPEC=	:executables rackup=rackup16 \
 			:files bin/rackup=bin/rackup16
