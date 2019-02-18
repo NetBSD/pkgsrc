@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2018/09/06 13:48:37 adam Exp $
+# $NetBSD: Makefile,v 1.8 2019/02/18 11:44:22 adam Exp $
 
-DISTNAME=	raven-6.9.0
+DISTNAME=	raven-6.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/raven/}
@@ -10,23 +10,25 @@ HOMEPAGE=	https://github.com/getsentry/raven-python
 COMMENT=	Client for Sentry
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-blinker-[0-9]*:../../devel/py-blinker
+DEPENDS+=	${PYPKGPREFIX}-blinker>=1.1:../../devel/py-blinker
 DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask
 TEST_DEPENDS+=	${PYPKGPREFIX}-WebOb-[0-9]*:../../www/py-WebOb
 TEST_DEPENDS+=	${PYPKGPREFIX}-WebTest-[0-9]*:../../www/py-WebTest
+TEST_DEPENDS+=	${PYPKGPREFIX}-aiohttp-[0-9]*:../../www/py-aiohttp
 TEST_DEPENDS+=	${PYPKGPREFIX}-anyjson-[0-9]*:../../textproc/py-anyjson
 TEST_DEPENDS+=	${PYPKGPREFIX}-bottle-[0-9]*:../../www/py-bottle
 TEST_DEPENDS+=	${PYPKGPREFIX}-celery>=2.5:../../net/py-celery
 TEST_DEPENDS+=	${PYPKGPREFIX}-codestyle-[0-9]*:../../devel/py-codestyle
 TEST_DEPENDS+=	${PYPKGPREFIX}-exam>=0.5.2:../../devel/py-exam
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8>=3.5.0:../../devel/py-flake8
-TEST_DEPENDS+=	${PYPKGPREFIX}-flask-login-[0-9]*:../../www/py-flask-login
+TEST_DEPENDS+=	${PYPKGPREFIX}-flask-login>=0.2.0:../../www/py-flask-login
 TEST_DEPENDS+=	${PYPKGPREFIX}-logbook-[0-9]*:../../devel/py-logbook
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 # avoid circular dependency
 #TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
+TEST_DEPENDS+=	${PYPKGPREFIX}-sanic>=0.7.0:../../www/py-sanic
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.2.0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.5.1:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8>=1.0.0:../../devel/py-test-flake8
@@ -41,18 +43,15 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-zconfig-[0-9]*:../../devel/py-zconfig
 
 .include "../../lang/python/pyversion.mk"
-
-.if "${PYPKGPREFIX}" == "py27"
+.if ${_PYTHON_VERSION} == 27
 DEPENDS+=	${PYPKGPREFIX}-contextlib2-[0-9]*:../../devel/py-contextlib2
 .endif
 
 USE_LANGUAGES=	# none
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} raven raven${PYVERSSUFFIX} || ${TRUE}
-
-pre-test:
-	cd ${WRKSRC} && mkdir -p static # && pytest-${PYVERSSUFFIX}
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} raven raven-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
