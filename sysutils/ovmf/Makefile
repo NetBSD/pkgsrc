@@ -1,24 +1,37 @@
-# $NetBSD: Makefile,v 1.4 2018/04/20 15:34:36 maya Exp $
+# $NetBSD: Makefile,v 1.5 2019/02/19 16:45:45 ryoon Exp $
 
-GITHUB_PROJECT=	edk2
-PKGNAME=	OVMF-0.0.2017624
-DISTNAME=	vUDK2017
+PKGNAME=	OVMF-0.0.20181116
+DISTNAME=	edk2-20181116
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_GITHUB:=tianocore/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
-GITHUB_TAG=	${DISTNAME}
+# Require openssl submodule
+#DISTNAME=	edk2-${GITHUB_TAG}
+#MASTER_SITES=	${MASTER_SITE_GITHUB:=tianocore/}
+#GITHUB_PROJECT=	edk2
+#GITHUB_TAG=	edk2-stable201811
+#MASTER_SITES=	${MASTER_SITE_GITHUB:=tianocore/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/tianocore/edk2/
 COMMENT=	Sample UEFI firmware for virtual machines
 LICENSE=	modified-bsd
 
-WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
+SSP_SUPPORTED=		no
+
+.include "../../mk/bsd.prefs.mk"
+ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
+
+PLIST_VARS+=	x64
+
+.if !empty(MACHINE_PLATFORM:M*-*-i386)
+TARGET_ARCHS=	IA32
+.elif !empty(MACHINE_PLATFORM:M*-*-x86_64)
+TARGET_ARCHS=	IA32 X64
+PLIST.x64=	yes
+.endif
 
 USE_TOOLS+=	gmake bash
 USE_LANGUAGES=	c c++
-
-SSP_SUPPORTED=	no
 
 PYTHON_VERSIONS_ACCEPTED=	27
 SUBST_CLASSES+=			python
@@ -29,12 +42,16 @@ SUBST_FILES.python+=		BaseTools/BinWrappers/PosixLike/*
 SUBST_SED.python=		-e 's,python2,${PYTHONBIN},g'
 
 do-build:
+.for ARCH in ${TARGET_ARCHS}
 	cd ${WRKSRC}/OvmfPkg && \
-	${SETENV} ${MAKE_ENV} ./build.sh
+	${SETENV} ${MAKE_ENV} ./build.sh -a ${ARCH}
+	${CP} ${WRKSRC}/Build/Ovmf${ARCH:S/IA/Ia/}/*/FV/OVMF.fd \
+		${WRKSRC}/OVMF${ARCH}.fd
+.endfor
 
-INSTALLATION_DIRS+=	share
+INSTALLATION_DIRS+=	share/ovmf
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/Build/Ovmf*/*/FV/OVMF.fd ${DESTDIR}${PREFIX}/share/OVMF.fd
+	${INSTALL_DATA} ${WRKSRC}/OVMF*.fd ${DESTDIR}${PREFIX}/share/ovmf/
 
 BUILD_DEPENDS+=	acpica-utils-[0-9]*:../../sysutils/acpica-utils
 BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
