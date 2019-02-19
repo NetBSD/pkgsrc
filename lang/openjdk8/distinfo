@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.65 2018/12/15 20:27:45 jperkin Exp $
+$NetBSD: distinfo,v 1.66 2019/02/19 17:00:17 ryoon Exp $
 
 SHA1 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 7408f52d3bbe35c2b14bbd3215cbf60f1335d334
 RMD160 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 24f1577b5fc86d137f070aedb4610c8c89e45815
@@ -52,7 +52,7 @@ SHA1 (openjdk7/openjdk-1.8.192-20181209.tar.xz) = eec0c783cf835f33d701f02bc468c6
 RMD160 (openjdk7/openjdk-1.8.192-20181209.tar.xz) = 2a8dea4258c58d510fab9152f6acb8bf7713a30f
 SHA512 (openjdk7/openjdk-1.8.192-20181209.tar.xz) = 1453ee1f99b1f8c7a7f279769e48e14eca80f7649b09b518ca47b2fa742f1bfff0b23646639acd4fe33fc0c93c3fe9c7931a87964ba52f609330a536f24008c3
 Size (openjdk7/openjdk-1.8.192-20181209.tar.xz) = 55795332 bytes
-SHA1 (patch-aa) = b3834c8a8d12a417638e0c5b886abea4767fb7f5
+SHA1 (patch-aa) = 37b2d569fac98c2a66433f2c27a462c6d565000c
 SHA1 (patch-al) = f65f739805c2ef471a4de10d6da42e86c5561b8c
 SHA1 (patch-an) = fce4da00762770c1c0592bd225bf73e875252178
 SHA1 (patch-ap) = 89114a9ee048b92d897509feb283cf9aeeac9fc5
@@ -91,6 +91,7 @@ SHA1 (patch-hotspot_src_os__cpu_solaris__x86_vm_atomic__solaris__x86.inline.hpp)
 SHA1 (patch-hotspot_src_os__cpu_solaris__x86_vm_orderAccess__solaris__x86.inline.hpp) = 82818bc8d8fee46403b88cf52a7c978b5ea0005c
 SHA1 (patch-hotspot_src_os__cpu_solaris__x86_vm_os__solaris__x86.cpp) = 6a6b719a52408e88b27d3f2a5a41789dc15ef39d
 SHA1 (patch-hotspot_src_os__cpu_solaris__x86_vm_prefetch__solaris__x86.inline.hpp) = 92377183e9b9f232dfd7161bf37a8856441f3977
+SHA1 (patch-hotspot_src_os_bsd_vm_jsig.c) = 55f9f232f886ee57cd327639768c91c69d0c12c2
 SHA1 (patch-hotspot_src_os_bsd_vm_osThread__bsd.cpp) = b56cfc0abb53f9ec79005d9169566aadeecc51e7
 SHA1 (patch-hotspot_src_os_posix_vm_os__posix.cpp) = bb1d9b46b43b61e29e9bdf1e4311a486a81dc6f4
 SHA1 (patch-hotspot_src_os_solaris_dtrace_jhelper.d) = e4321382dc95fe9e363abc8c8a740e9f3f23c170
