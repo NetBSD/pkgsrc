@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2018/11/21 17:31:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2019/02/19 08:29:56 adam Exp $
 bin/iptest-${PYVERSSUFFIX}
 bin/ipython-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}
@@ -149,6 +149,9 @@ ${PYSITELIB}/IPython/core/magics/namespace.pyo
 ${PYSITELIB}/IPython/core/magics/osm.py
 ${PYSITELIB}/IPython/core/magics/osm.pyc
 ${PYSITELIB}/IPython/core/magics/osm.pyo
+${PYSITELIB}/IPython/core/magics/packaging.py
+${PYSITELIB}/IPython/core/magics/packaging.pyc
+${PYSITELIB}/IPython/core/magics/packaging.pyo
 ${PYSITELIB}/IPython/core/magics/pylab.py
 ${PYSITELIB}/IPython/core/magics/pylab.pyc
 ${PYSITELIB}/IPython/core/magics/pylab.pyo
