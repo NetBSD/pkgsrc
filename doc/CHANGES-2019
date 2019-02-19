@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.806 2019/02/19 08:30:20 adam Exp $
+$NetBSD: CHANGES-2019,v 1.807 2019/02/19 09:48:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1473,3 +1473,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-test to 4.3.0 [adam 2019-02-19]
 	Updated devel/py-flake8 to 3.7.6 [adam 2019-02-19]
 	Updated devel/py-ipython to 7.3.0 [adam 2019-02-19]
+	Updated www/py-soupsieve to 1.8 [adam 2019-02-19]
+	Updated time/py-arrow to 0.13.1 [adam 2019-02-19]
