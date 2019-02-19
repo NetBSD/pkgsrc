@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2018/09/15 03:22:50 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.31 2019/02/19 16:28:03 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -9,17 +9,28 @@ bin/loimpress
 bin/lomath
 bin/loweb
 bin/lowriter
-bin/oobase
-bin/oocalc
-bin/oodraw
-bin/ooffice
-bin/oofromtemplate
-bin/ooimpress
-bin/oomath
-bin/ooweb
-bin/oowriter
-bin/soffice
-bin/unopkg
+bin/libreoffice
+${PKGNAME}/bin/libreoffice
+${PKGNAME}/bin/lobase
+${PKGNAME}/bin/localc
+${PKGNAME}/bin/lodraw
+${PKGNAME}/bin/loffice
+${PKGNAME}/bin/lofromtemplate
+${PKGNAME}/bin/loimpress
+${PKGNAME}/bin/lomath
+${PKGNAME}/bin/loweb
+${PKGNAME}/bin/lowriter
+${PKGNAME}/bin/oobase
+${PKGNAME}/bin/oocalc
+${PKGNAME}/bin/oodraw
+${PKGNAME}/bin/ooffice
+${PKGNAME}/bin/oofromtemplate
+${PKGNAME}/bin/ooimpress
+${PKGNAME}/bin/oomath
+${PKGNAME}/bin/ooweb
+${PKGNAME}/bin/oowriter
+${PKGNAME}/bin/soffice
+${PKGNAME}/bin/unopkg
 ${PKGNAME}/lib/libreoffice/CREDITS.fodt
 ${PKGNAME}/lib/libreoffice/LICENSE
 ${PKGNAME}/lib/libreoffice/LICENSE.fodt
@@ -73,7 +84,6 @@ ${PKGNAME}/lib/libreoffice/program/libcanvasfactorylo.so
 ${PKGNAME}/lib/libreoffice/program/libcanvastoolslo.so
 ${PKGNAME}/lib/libreoffice/program/libchartcontrollerlo.so
 ${PKGNAME}/lib/libreoffice/program/libchartcorelo.so
-${PKGNAME}/lib/libreoffice/program/libchartopengllo.so
 ${PKGNAME}/lib/libreoffice/program/libclewlo.so
 ${PKGNAME}/lib/libreoffice/program/libcmdmaillo.so
 ${PKGNAME}/lib/libreoffice/program/libcollator_data.so
@@ -160,7 +170,7 @@ ${PKGNAME}/lib/libreoffice/program/libmsfilterlo.so
 ${PKGNAME}/lib/libreoffice/program/libmsformslo.so
 ${PKGNAME}/lib/libreoffice/program/libmswordlo.so
 ${PKGNAME}/lib/libreoffice/program/libmtfrendererlo.so
-${PKGNAME}/lib/libreoffice/program/libmysqllo.so
+${PKGNAME}/lib/libreoffice/program/libmysqlclo.so
 ${PKGNAME}/lib/libreoffice/program/libnamingservicelo.so
 ${PKGNAME}/lib/libreoffice/program/libnumbertextlo.so
 ${PKGNAME}/lib/libreoffice/program/libodbclo.so
@@ -294,8 +304,6 @@ ${PKGNAME}/lib/libreoffice/program/opencl/cl-test.ods
 ${PKGNAME}/lib/libreoffice/program/opengl/areaHashCRC64TFragmentShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/areaScaleFastFragmentShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/areaScaleFragmentShader.glsl
-${PKGNAME}/lib/libreoffice/program/opengl/backgroundFragmentShader.glsl
-${PKGNAME}/lib/libreoffice/program/opengl/backgroundVertexShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/basicFragmentShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/basicVertexShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/blendedTextureFragmentShader.glsl
@@ -304,11 +312,7 @@ ${PKGNAME}/lib/libreoffice/program/opengl/combinedFragmentShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/combinedTextureFragmentShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/combinedTextureVertexShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/combinedVertexShader.glsl
-${PKGNAME}/lib/libreoffice/program/opengl/commonFragmentShader.glsl
-${PKGNAME}/lib/libreoffice/program/opengl/commonVertexShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/convolutionFragmentShader.glsl
-${PKGNAME}/lib/libreoffice/program/opengl/debugFragmentShader.glsl
-${PKGNAME}/lib/libreoffice/program/opengl/debugVertexShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/diffTextureFragmentShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/dissolveFragmentShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/dumbVertexShader.glsl
@@ -330,8 +334,6 @@ ${PKGNAME}/lib/libreoffice/program/opengl/linearTwoColorGradientFragmentShader.g
 ${PKGNAME}/lib/libreoffice/program/opengl/maskFragmentShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/maskedTextureFragmentShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/maskedTextureVertexShader.glsl
-${PKGNAME}/lib/libreoffice/program/opengl/pickingFragmentShader.glsl
-${PKGNAME}/lib/libreoffice/program/opengl/pickingVertexShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/radialGradientFragmentShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/radialMultiColorGradientFragmentShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/radialTwoColorGradientFragmentShader.glsl
@@ -339,28 +341,10 @@ ${PKGNAME}/lib/libreoffice/program/opengl/rectangularMultiColorGradientFragmentS
 ${PKGNAME}/lib/libreoffice/program/opengl/rectangularTwoColorGradientFragmentShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/reflectionFragmentShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/reflectionVertexShader.glsl
-${PKGNAME}/lib/libreoffice/program/opengl/renderTextureFragmentShader.glsl
-${PKGNAME}/lib/libreoffice/program/opengl/renderTextureVertexShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/replaceColorFragmentShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/rippleFragmentShader.glsl
-${PKGNAME}/lib/libreoffice/program/opengl/screenTextFragmentShader.glsl
-${PKGNAME}/lib/libreoffice/program/opengl/screenTextVertexShader.glsl
-${PKGNAME}/lib/libreoffice/program/opengl/shape3DFragmentShader.glsl
-${PKGNAME}/lib/libreoffice/program/opengl/shape3DFragmentShaderBatch.glsl
-${PKGNAME}/lib/libreoffice/program/opengl/shape3DFragmentShaderBatchScroll.glsl
-${PKGNAME}/lib/libreoffice/program/opengl/shape3DFragmentShaderV300.glsl
-${PKGNAME}/lib/libreoffice/program/opengl/shape3DVertexShader.glsl
-${PKGNAME}/lib/libreoffice/program/opengl/shape3DVertexShaderBatch.glsl
-${PKGNAME}/lib/libreoffice/program/opengl/shape3DVertexShaderBatchScroll.glsl
-${PKGNAME}/lib/libreoffice/program/opengl/shape3DVertexShaderV300.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/solidFragmentShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/staticFragmentShader.glsl
-${PKGNAME}/lib/libreoffice/program/opengl/symbolFragmentShader.glsl
-${PKGNAME}/lib/libreoffice/program/opengl/symbolVertexShader.glsl
-${PKGNAME}/lib/libreoffice/program/opengl/textFragmentShader.glsl
-${PKGNAME}/lib/libreoffice/program/opengl/textFragmentShaderBatch.glsl
-${PKGNAME}/lib/libreoffice/program/opengl/textVertexShader.glsl
-${PKGNAME}/lib/libreoffice/program/opengl/textVertexShaderBatch.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/textureFragmentShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/textureVertexShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/transformedTextureVertexShader.glsl
@@ -1020,6 +1004,38 @@ ${PKGNAME}/lib/libreoffice/program/resource/dgo/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/dgo/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/dgo/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/dgo/LC_MESSAGES/xsc.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/acc.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/avmedia.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/basctl.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/chart.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/cnr.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/cui.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/dba.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/dkt.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/editeng.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/flt.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/for.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/fps.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/frm.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/fwk.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/pcr.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/rpt.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/sb.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/sc.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/sca.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/scc.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/sd.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/sfx.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/sm.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/svl.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/svt.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/svx.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/sw.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/uui.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/vcl.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/wiz.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/wpt.mo
+${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/xsc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/dz/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/dz/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/dz/LC_MESSAGES/basctl.mo
@@ -4154,6 +4170,7 @@ ${PKGNAME}/lib/libreoffice/readmes/README_cy
 ${PKGNAME}/lib/libreoffice/readmes/README_da
 ${PKGNAME}/lib/libreoffice/readmes/README_de
 ${PKGNAME}/lib/libreoffice/readmes/README_dgo
+${PKGNAME}/lib/libreoffice/readmes/README_dsb
 ${PKGNAME}/lib/libreoffice/readmes/README_dz
 ${PKGNAME}/lib/libreoffice/readmes/README_el
 ${PKGNAME}/lib/libreoffice/readmes/README_en-GB
@@ -4272,6 +4289,7 @@ ${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_cy.propertie
 ${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_da.properties
 ${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_de.properties
 ${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_dgo.properties
+${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_dsb.properties
 ${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_dz.properties
 ${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_el.properties
 ${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_en_GB.properties
@@ -4394,6 +4412,7 @@ ${PKGNAME}/lib/libreoffice/share/autocorr/acor_ca-ES.dat
 ${PKGNAME}/lib/libreoffice/share/autocorr/acor_cs-CZ.dat
 ${PKGNAME}/lib/libreoffice/share/autocorr/acor_da-DK.dat
 ${PKGNAME}/lib/libreoffice/share/autocorr/acor_de.dat
+${PKGNAME}/lib/libreoffice/share/autocorr/acor_dsb.dat
 ${PKGNAME}/lib/libreoffice/share/autocorr/acor_el-GR.dat
 ${PKGNAME}/lib/libreoffice/share/autocorr/acor_en-AU.dat
 ${PKGNAME}/lib/libreoffice/share/autocorr/acor_en-GB.dat
@@ -4405,6 +4424,7 @@ ${PKGNAME}/lib/libreoffice/share/autocorr/acor_fi-FI.dat
 ${PKGNAME}/lib/libreoffice/share/autocorr/acor_fr.dat
 ${PKGNAME}/lib/libreoffice/share/autocorr/acor_ga-IE.dat
 ${PKGNAME}/lib/libreoffice/share/autocorr/acor_hr-HR.dat
+${PKGNAME}/lib/libreoffice/share/autocorr/acor_hsb.dat
 ${PKGNAME}/lib/libreoffice/share/autocorr/acor_hu-HU.dat
 ${PKGNAME}/lib/libreoffice/share/autocorr/acor_is-IS.dat
 ${PKGNAME}/lib/libreoffice/share/autocorr/acor_it.dat
@@ -4656,8 +4676,11 @@ ${PKGNAME}/lib/libreoffice/share/classification/example_pt-BR.xml
 ${PKGNAME}/lib/libreoffice/share/classification/example_sl-SI.xml
 ${PKGNAME}/lib/libreoffice/share/config/images_breeze.zip
 ${PKGNAME}/lib/libreoffice/share/config/images_breeze_dark.zip
+${PKGNAME}/lib/libreoffice/share/config/images_breeze_svg.zip
 ${PKGNAME}/lib/libreoffice/share/config/images_colibre.zip
+${PKGNAME}/lib/libreoffice/share/config/images_colibre_svg.zip
 ${PKGNAME}/lib/libreoffice/share/config/images_elementary.zip
+${PKGNAME}/lib/libreoffice/share/config/images_elementary_svg.zip
 ${PKGNAME}/lib/libreoffice/share/config/images_karasa_jaga.zip
 ${PKGNAME}/lib/libreoffice/share/config/images_sifr.zip
 ${PKGNAME}/lib/libreoffice/share/config/images_sifr_dark.zip
@@ -4712,6 +4735,8 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/eventassigndialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/eventassignpage.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/eventsconfigpage.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/fmsearchdialog.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/fontfeaturesdialog.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/fontfragment.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/formatcellsdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/formatnumberdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/galleryapplyprogress.ui
@@ -5061,7 +5086,6 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/popupmenu/anch
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/popupmenu/audit.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/popupmenu/cell.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/popupmenu/celledit.xml
-${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/popupmenu/chart.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/popupmenu/colheader.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/popupmenu/column_operations.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/popupmenu/conditional.xml
@@ -5121,6 +5145,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/toolbar/textob
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/toolbar/toolbar.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/toolbar/viewerbar.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/advancedfilterdialog.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/aggregatefunctionentry.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/allheaderfooterdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/analysisofvariancedialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/autoformattable.ui
@@ -5149,6 +5174,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/dataprovide
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/dataproviderdlg.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/dataproviderentry.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/datastreams.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/datetimetransformationentry.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/definedatabaserangedialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/definename.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/deletecells.ui
@@ -5192,9 +5218,11 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/namerangesd
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/navigatorpanel.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/nosolutiondialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/notebookbar.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/notebookbar_compact.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/notebookbar_groupedbar_compact.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/notebookbar_groupedbar_full.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/notebookbar_groups.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/numbertransformationentry.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/optcalculatepage.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/optchangespage.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/optcompatibilitypage.ui
@@ -5218,6 +5246,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/queryrunstr
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/randomnumbergenerator.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/recalcquerydialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/regressiondialog.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/replacenulltransformationentry.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/retypepassdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/retypepassworddialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/rightfooterdialog.ui
@@ -5251,6 +5280,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/sortcriteri
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/sortdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/sortkey.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/sortoptionspage.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/sorttransformationentry.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/sortwarning.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/splitcolumnentry.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/standardfilterdialog.ui
@@ -5261,6 +5291,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/subtotalopt
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/tabcolordialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/textimportcsv.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/textimportoptions.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/texttransformationentry.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/tpviewpage.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/ttestdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/ungroupdialog.ui
@@ -5341,7 +5372,6 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/popupmenu/medi
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/popupmenu/multiselect.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/popupmenu/notebookbar.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/popupmenu/oleobject.xml
-${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/popupmenu/outlinetext.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/popupmenu/page.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/popupmenu/pagepane.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/popupmenu/pagepanemaster.xml
@@ -5384,6 +5414,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/toolbar/linesb
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/toolbar/masterviewtoolbar.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/toolbar/mediaobjectbar.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/toolbar/moreformcontrols.xml
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/toolbar/notebookbarshortcuts.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/toolbar/optimizetablebar.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/toolbar/optionsbar.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/toolbar/positionbar.xml
@@ -5492,7 +5523,6 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/popupmenu/m
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/popupmenu/notebookbar.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/popupmenu/oleobject.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/popupmenu/outline.xml
-${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/popupmenu/outlinetext.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/popupmenu/page.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/popupmenu/pagepane.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/popupmenu/pagepanemaster.xml
@@ -5559,6 +5589,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/ui/annotati
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/ui/annotationtagmenu.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/ui/currentmastermenu.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/ui/customanimationeffecttab.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/ui/customanimationfragment.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/ui/customanimationproperties.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/ui/customanimationspanel.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/ui/customanimationspanelhorizontal.ui
@@ -5873,6 +5904,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/charurlpa
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/columndialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/columnpage.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/columnwidth.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/comboboxfragment.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/conditionpage.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/converttexttable.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/createaddresslist.ui
@@ -5996,7 +6028,6 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/querydefa
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/queryredlinedialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/queryrotateintostandarddialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/querysavelabeldialog.ui
-${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/queryshowchangesdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/readonlymenu.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/renameautotextdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/renameentrydialog.ui
@@ -6158,6 +6189,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svt/ui/fileviewmenu.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svt/ui/graphicexport.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svt/ui/inputbox.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svt/ui/javadisableddialog.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svt/ui/linewindow.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svt/ui/placeedit.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svt/ui/printersetupdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svt/ui/querydeletedialog.ui
@@ -6528,6 +6560,7 @@ ${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_cy.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_da.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_de.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_dgo.properties
+${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_dsb.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_dz.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_el.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_en_GB.properties
@@ -6764,6 +6797,7 @@ ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_cy.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_da.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_de.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_dgo.properties
+${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_dsb.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_dz.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_el.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_en_GB.properties
@@ -7070,6 +7104,7 @@ ${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_cy.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_da.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_de.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_dgo.properties
+${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_dsb.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_dz.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_el.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_en_GB.properties
@@ -7274,129 +7309,6 @@ ${PKGNAME}/lib/libreoffice/share/extensions/dict-zu/META-INF/manifest.xml
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-zu/description.xml
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-zu/dictionaries.xcu
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-zu/hyph_zu_ZA.dic
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/META-INF/manifest.xml
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/components.rdb
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-af.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-am.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-ar.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-as.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-ast.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-be.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-bg.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-bn-IN.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-bn.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-bo.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-br.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-brx.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-bs.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-ca-valencia.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-ca.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-cs.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-cy.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-da.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-de.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-dgo.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-dz.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-el.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-en-GB.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-en-US.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-en-ZA.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-eo.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-es.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-et.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-eu.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-fa.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-fi.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-fr.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-fy.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-ga.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-gd.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-gl.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-gu.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-gug.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-he.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-hi.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-hr.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-hsb.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-hu.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-id.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-is.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-it.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-ja.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-ka.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-kab.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-kk.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-km.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-kmr-Latn.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-kn.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-ko.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-kok.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-ks.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-lb.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-lo.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-lt.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-lv.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-mai.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-mk.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-ml.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-mn.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-mni.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-mr.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-my.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-nb.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-ne.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-nl.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-nn.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-nr.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-nso.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-oc.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-om.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-or.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-pa-IN.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-pl.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-pt-BR.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-pt.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-ro.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-ru.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-rw.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-sa-IN.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-sat.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-sd.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-si.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-sid.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-sk.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-sl.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-sq.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-sr-Latn.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-sr.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-ss.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-st.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-sv.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-sw-TZ.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-ta.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-te.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-tg.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-th.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-tn.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-tr.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-ts.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-tt.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-ug.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-uk.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-uz.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-ve.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-vec.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-vi.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-xh.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-zh-CN.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-zh-TW.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-zu.txt
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description.xml
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/images/extension_32.png
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/libmysqlcppconn.so
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/mysqlc.uno.so
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/registration/LICENSE
-${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/registry/data/org/openoffice/Office/DataAccess/Drivers.xcu
 ${PKGNAME}/lib/libreoffice/share/extensions/package.txt
 ${PKGNAME}/lib/libreoffice/share/filter/oox-drawingml-adj-names
 ${PKGNAME}/lib/libreoffice/share/filter/oox-drawingml-cs-presets
@@ -7580,6 +7492,18 @@ ${PKGNAME}/lib/libreoffice/share/fonts/truetype/SourceSansPro-LightIt.ttf
 ${PKGNAME}/lib/libreoffice/share/fonts/truetype/SourceSansPro-Regular.ttf
 ${PKGNAME}/lib/libreoffice/share/fonts/truetype/SourceSansPro-Semibold.ttf
 ${PKGNAME}/lib/libreoffice/share/fonts/truetype/SourceSansPro-SemiboldIt.ttf
+${PKGNAME}/lib/libreoffice/share/fonts/truetype/SourceSerifPro-Black.ttf
+${PKGNAME}/lib/libreoffice/share/fonts/truetype/SourceSerifPro-BlackIt.ttf
+${PKGNAME}/lib/libreoffice/share/fonts/truetype/SourceSerifPro-Bold.ttf
+${PKGNAME}/lib/libreoffice/share/fonts/truetype/SourceSerifPro-BoldIt.ttf
+${PKGNAME}/lib/libreoffice/share/fonts/truetype/SourceSerifPro-ExtraLight.ttf
+${PKGNAME}/lib/libreoffice/share/fonts/truetype/SourceSerifPro-ExtraLightIt.ttf
+${PKGNAME}/lib/libreoffice/share/fonts/truetype/SourceSerifPro-It.ttf
+${PKGNAME}/lib/libreoffice/share/fonts/truetype/SourceSerifPro-Light.ttf
+${PKGNAME}/lib/libreoffice/share/fonts/truetype/SourceSerifPro-LightIt.ttf
+${PKGNAME}/lib/libreoffice/share/fonts/truetype/SourceSerifPro-Regular.ttf
+${PKGNAME}/lib/libreoffice/share/fonts/truetype/SourceSerifPro-Semibold.ttf
+${PKGNAME}/lib/libreoffice/share/fonts/truetype/SourceSerifPro-SemiboldIt.ttf
 ${PKGNAME}/lib/libreoffice/share/fonts/truetype/fc_local.conf
 ${PKGNAME}/lib/libreoffice/share/fonts/truetype/opens___.ttf
 ${PKGNAME}/lib/libreoffice/share/gallery/apples.gif
@@ -8080,6 +8004,25 @@ ${PKGNAME}/lib/libreoffice/share/gallery/people/Tourist-Female1.png
 ${PKGNAME}/lib/libreoffice/share/gallery/people/Tourist-Female2.png
 ${PKGNAME}/lib/libreoffice/share/gallery/people/Tourist-Male1.png
 ${PKGNAME}/lib/libreoffice/share/gallery/people/Tourist-Male2.png
+${PKGNAME}/lib/libreoffice/share/gallery/personas/dark/footer.png
+${PKGNAME}/lib/libreoffice/share/gallery/personas/dark/header.png
+${PKGNAME}/lib/libreoffice/share/gallery/personas/dark/preview.png
+${PKGNAME}/lib/libreoffice/share/gallery/personas/gray/footer.png
+${PKGNAME}/lib/libreoffice/share/gallery/personas/gray/header.png
+${PKGNAME}/lib/libreoffice/share/gallery/personas/gray/preview.png
+${PKGNAME}/lib/libreoffice/share/gallery/personas/green/footer.png
+${PKGNAME}/lib/libreoffice/share/gallery/personas/green/header.png
+${PKGNAME}/lib/libreoffice/share/gallery/personas/green/preview.png
+${PKGNAME}/lib/libreoffice/share/gallery/personas/personas_list.txt
+${PKGNAME}/lib/libreoffice/share/gallery/personas/pink/footer.png
+${PKGNAME}/lib/libreoffice/share/gallery/personas/pink/header.png
+${PKGNAME}/lib/libreoffice/share/gallery/personas/pink/preview.png
+${PKGNAME}/lib/libreoffice/share/gallery/personas/sand/footer.png
+${PKGNAME}/lib/libreoffice/share/gallery/personas/sand/header.png
+${PKGNAME}/lib/libreoffice/share/gallery/personas/sand/preview.png
+${PKGNAME}/lib/libreoffice/share/gallery/personas/white/footer.png
+${PKGNAME}/lib/libreoffice/share/gallery/personas/white/header.png
+${PKGNAME}/lib/libreoffice/share/gallery/personas/white/preview.png
 ${PKGNAME}/lib/libreoffice/share/gallery/sg1.sdg
 ${PKGNAME}/lib/libreoffice/share/gallery/sg1.sdv
 ${PKGNAME}/lib/libreoffice/share/gallery/sg1.thm
@@ -8423,6 +8366,7 @@ ${PKGNAME}/lib/libreoffice/share/registry/Langpack-cy.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/Langpack-da.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/Langpack-de.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/Langpack-dgo.xcd
+${PKGNAME}/lib/libreoffice/share/registry/Langpack-dsb.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/Langpack-dz.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/Langpack-el.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/Langpack-en-GB.xcd
@@ -8575,6 +8519,7 @@ ${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_cy.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_da.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_de.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_dgo.xcd
+${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_dsb.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_dz.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_el.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_en-GB.xcd
@@ -8690,6 +8635,7 @@ ${PKGNAME}/lib/libreoffice/share/registry/res/registry_cy.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/registry_da.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/registry_de.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/registry_dgo.xcd
+${PKGNAME}/lib/libreoffice/share/registry/res/registry_dsb.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/registry_dz.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/registry_el.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/registry_en-GB.xcd
@@ -8951,6 +8897,7 @@ ${PKGNAME}/lib/libreoffice/share/wizards/resources_cy.properties
 ${PKGNAME}/lib/libreoffice/share/wizards/resources_da.properties
 ${PKGNAME}/lib/libreoffice/share/wizards/resources_de.properties
 ${PKGNAME}/lib/libreoffice/share/wizards/resources_dgo.properties
+${PKGNAME}/lib/libreoffice/share/wizards/resources_dsb.properties
 ${PKGNAME}/lib/libreoffice/share/wizards/resources_dz.properties
 ${PKGNAME}/lib/libreoffice/share/wizards/resources_el.properties
 ${PKGNAME}/lib/libreoffice/share/wizards/resources_en_GB.properties
@@ -10091,149 +10038,125 @@ share/icons/hicolor/scalable/mimetypes/libreoffice-oasis-spreadsheet.svg
 share/icons/hicolor/scalable/mimetypes/libreoffice-oasis-text.svg
 share/icons/hicolor/scalable/mimetypes/libreoffice-oasis-web.svg
 share/icons/locolor/16x16/apps/libreoffice-base.png
+share/icons/locolor/16x16/apps/libreoffice-base.svg
 share/icons/locolor/16x16/apps/libreoffice-calc.png
+share/icons/locolor/16x16/apps/libreoffice-calc.svg
+share/icons/locolor/16x16/apps/libreoffice-chart.png
+share/icons/locolor/16x16/apps/libreoffice-chart.svg
 share/icons/locolor/16x16/apps/libreoffice-draw.png
+share/icons/locolor/16x16/apps/libreoffice-draw.svg
 share/icons/locolor/16x16/apps/libreoffice-impress.png
+share/icons/locolor/16x16/apps/libreoffice-impress.svg
+share/icons/locolor/16x16/apps/libreoffice-main.png
+share/icons/locolor/16x16/apps/libreoffice-main.svg
 share/icons/locolor/16x16/apps/libreoffice-math.png
+share/icons/locolor/16x16/apps/libreoffice-math.svg
 share/icons/locolor/16x16/apps/libreoffice-startcenter.png
+share/icons/locolor/16x16/apps/libreoffice-startcenter.svg
 share/icons/locolor/16x16/apps/libreoffice-writer.png
-share/icons/locolor/16x16/mimetypes/libreoffice-database.png
-share/icons/locolor/16x16/mimetypes/libreoffice-drawing-template.png
-share/icons/locolor/16x16/mimetypes/libreoffice-drawing.png
+share/icons/locolor/16x16/apps/libreoffice-writer.svg
 share/icons/locolor/16x16/mimetypes/libreoffice-extension.png
-share/icons/locolor/16x16/mimetypes/libreoffice-formula.png
-share/icons/locolor/16x16/mimetypes/libreoffice-master-document.png
+share/icons/locolor/16x16/mimetypes/libreoffice-extension.svg
 share/icons/locolor/16x16/mimetypes/libreoffice-oasis-database.png
+share/icons/locolor/16x16/mimetypes/libreoffice-oasis-database.svg
 share/icons/locolor/16x16/mimetypes/libreoffice-oasis-drawing-template.png
+share/icons/locolor/16x16/mimetypes/libreoffice-oasis-drawing-template.svg
 share/icons/locolor/16x16/mimetypes/libreoffice-oasis-drawing.png
+share/icons/locolor/16x16/mimetypes/libreoffice-oasis-drawing.svg
+share/icons/locolor/16x16/mimetypes/libreoffice-oasis-empty.png
+share/icons/locolor/16x16/mimetypes/libreoffice-oasis-empty.svg
 share/icons/locolor/16x16/mimetypes/libreoffice-oasis-formula.png
+share/icons/locolor/16x16/mimetypes/libreoffice-oasis-formula.svg
 share/icons/locolor/16x16/mimetypes/libreoffice-oasis-master-document.png
+share/icons/locolor/16x16/mimetypes/libreoffice-oasis-master-document.svg
 share/icons/locolor/16x16/mimetypes/libreoffice-oasis-presentation-template.png
+share/icons/locolor/16x16/mimetypes/libreoffice-oasis-presentation-template.svg
 share/icons/locolor/16x16/mimetypes/libreoffice-oasis-presentation.png
+share/icons/locolor/16x16/mimetypes/libreoffice-oasis-presentation.svg
 share/icons/locolor/16x16/mimetypes/libreoffice-oasis-spreadsheet-template.png
+share/icons/locolor/16x16/mimetypes/libreoffice-oasis-spreadsheet-template.svg
 share/icons/locolor/16x16/mimetypes/libreoffice-oasis-spreadsheet.png
+share/icons/locolor/16x16/mimetypes/libreoffice-oasis-spreadsheet.svg
 share/icons/locolor/16x16/mimetypes/libreoffice-oasis-text-template.png
+share/icons/locolor/16x16/mimetypes/libreoffice-oasis-text-template.svg
 share/icons/locolor/16x16/mimetypes/libreoffice-oasis-text.png
+share/icons/locolor/16x16/mimetypes/libreoffice-oasis-text.svg
 share/icons/locolor/16x16/mimetypes/libreoffice-oasis-web-template.png
+share/icons/locolor/16x16/mimetypes/libreoffice-oasis-web-template.svg
+share/icons/locolor/16x16/mimetypes/libreoffice-oasis-web.png
+share/icons/locolor/16x16/mimetypes/libreoffice-oasis-web.svg
 share/icons/locolor/16x16/mimetypes/libreoffice-presentation-template.png
+share/icons/locolor/16x16/mimetypes/libreoffice-presentation-template.svg
 share/icons/locolor/16x16/mimetypes/libreoffice-presentation.png
+share/icons/locolor/16x16/mimetypes/libreoffice-presentation.svg
 share/icons/locolor/16x16/mimetypes/libreoffice-spreadsheet-template.png
+share/icons/locolor/16x16/mimetypes/libreoffice-spreadsheet-template.svg
 share/icons/locolor/16x16/mimetypes/libreoffice-spreadsheet.png
+share/icons/locolor/16x16/mimetypes/libreoffice-spreadsheet.svg
 share/icons/locolor/16x16/mimetypes/libreoffice-text-template.png
+share/icons/locolor/16x16/mimetypes/libreoffice-text-template.svg
 share/icons/locolor/16x16/mimetypes/libreoffice-text.png
+share/icons/locolor/16x16/mimetypes/libreoffice-text.svg
 share/icons/locolor/32x32/apps/libreoffice-base.png
+share/icons/locolor/32x32/apps/libreoffice-base.svg
 share/icons/locolor/32x32/apps/libreoffice-calc.png
+share/icons/locolor/32x32/apps/libreoffice-calc.svg
+share/icons/locolor/32x32/apps/libreoffice-chart.png
+share/icons/locolor/32x32/apps/libreoffice-chart.svg
 share/icons/locolor/32x32/apps/libreoffice-draw.png
+share/icons/locolor/32x32/apps/libreoffice-draw.svg
 share/icons/locolor/32x32/apps/libreoffice-impress.png
+share/icons/locolor/32x32/apps/libreoffice-impress.svg
+share/icons/locolor/32x32/apps/libreoffice-main.png
+share/icons/locolor/32x32/apps/libreoffice-main.svg
 share/icons/locolor/32x32/apps/libreoffice-math.png
+share/icons/locolor/32x32/apps/libreoffice-math.svg
 share/icons/locolor/32x32/apps/libreoffice-startcenter.png
+share/icons/locolor/32x32/apps/libreoffice-startcenter.svg
 share/icons/locolor/32x32/apps/libreoffice-writer.png
-share/icons/locolor/32x32/mimetypes/libreoffice-database.png
-share/icons/locolor/32x32/mimetypes/libreoffice-drawing-template.png
-share/icons/locolor/32x32/mimetypes/libreoffice-drawing.png
+share/icons/locolor/32x32/apps/libreoffice-writer.svg
 share/icons/locolor/32x32/mimetypes/libreoffice-extension.png
+share/icons/locolor/32x32/mimetypes/libreoffice-extension.svg
 share/icons/locolor/32x32/mimetypes/libreoffice-formula.png
-share/icons/locolor/32x32/mimetypes/libreoffice-master-document.png
+share/icons/locolor/32x32/mimetypes/libreoffice-formula.svg
 share/icons/locolor/32x32/mimetypes/libreoffice-oasis-database.png
+share/icons/locolor/32x32/mimetypes/libreoffice-oasis-database.svg
 share/icons/locolor/32x32/mimetypes/libreoffice-oasis-drawing-template.png
+share/icons/locolor/32x32/mimetypes/libreoffice-oasis-drawing-template.svg
 share/icons/locolor/32x32/mimetypes/libreoffice-oasis-drawing.png
+share/icons/locolor/32x32/mimetypes/libreoffice-oasis-drawing.svg
+share/icons/locolor/32x32/mimetypes/libreoffice-oasis-empty.png
+share/icons/locolor/32x32/mimetypes/libreoffice-oasis-empty.svg
 share/icons/locolor/32x32/mimetypes/libreoffice-oasis-formula.png
-share/icons/locolor/32x32/mimetypes/libreoffice-oasis-master-document.png
+share/icons/locolor/32x32/mimetypes/libreoffice-oasis-formula.svg
 share/icons/locolor/32x32/mimetypes/libreoffice-oasis-presentation-template.png
+share/icons/locolor/32x32/mimetypes/libreoffice-oasis-presentation-template.svg
 share/icons/locolor/32x32/mimetypes/libreoffice-oasis-presentation.png
+share/icons/locolor/32x32/mimetypes/libreoffice-oasis-presentation.svg
 share/icons/locolor/32x32/mimetypes/libreoffice-oasis-spreadsheet-template.png
+share/icons/locolor/32x32/mimetypes/libreoffice-oasis-spreadsheet-template.svg
 share/icons/locolor/32x32/mimetypes/libreoffice-oasis-spreadsheet.png
+share/icons/locolor/32x32/mimetypes/libreoffice-oasis-spreadsheet.svg
 share/icons/locolor/32x32/mimetypes/libreoffice-oasis-text-template.png
+share/icons/locolor/32x32/mimetypes/libreoffice-oasis-text-template.svg
 share/icons/locolor/32x32/mimetypes/libreoffice-oasis-text.png
+share/icons/locolor/32x32/mimetypes/libreoffice-oasis-text.svg
 share/icons/locolor/32x32/mimetypes/libreoffice-oasis-web-template.png
+share/icons/locolor/32x32/mimetypes/libreoffice-oasis-web-template.svg
+share/icons/locolor/32x32/mimetypes/libreoffice-oasis-web.png
+share/icons/locolor/32x32/mimetypes/libreoffice-oasis-web.svg
 share/icons/locolor/32x32/mimetypes/libreoffice-presentation-template.png
+share/icons/locolor/32x32/mimetypes/libreoffice-presentation-template.svg
 share/icons/locolor/32x32/mimetypes/libreoffice-presentation.png
+share/icons/locolor/32x32/mimetypes/libreoffice-presentation.svg
 share/icons/locolor/32x32/mimetypes/libreoffice-spreadsheet-template.png
+share/icons/locolor/32x32/mimetypes/libreoffice-spreadsheet-template.svg
 share/icons/locolor/32x32/mimetypes/libreoffice-spreadsheet.png
+share/icons/locolor/32x32/mimetypes/libreoffice-spreadsheet.svg
 share/icons/locolor/32x32/mimetypes/libreoffice-text-template.png
+share/icons/locolor/32x32/mimetypes/libreoffice-text-template.svg
 share/icons/locolor/32x32/mimetypes/libreoffice-text.png
+share/icons/locolor/32x32/mimetypes/libreoffice-text.svg
 share/mime-info/libreoffice.keys
 share/mime-info/libreoffice.mime
 share/mime/packages/libreoffice.xml
-@pkgdir ${PKGNAME}/lib/libreoffice/share/uno_packages/cache/uno_packages
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/zu
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/xh
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/vec
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/ve
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/uz
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/uk
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/ug
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/tt
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/ts
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/tn
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/th
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/tg
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/te
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/ta
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/sw-TZ
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/st
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/ss
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/sr-Latn
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/sr
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/sq
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/sid
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/si
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/sd
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/sat
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/sa-IN
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/rw
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/pa-IN
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/or
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/om
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/oc
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/nso
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/nr
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/nn
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/ne
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/nb
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/my
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/mr
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/mni
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/ml
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/mk
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/mai
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/lv
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/lo
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/lb
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/ks
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/kok
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/kn
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/kmr-Latn
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/kk
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/kab
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/ka
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/id
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/hsb
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/hi
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/he
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/gug
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/gu
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/gl
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/gd
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/ga
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/fy
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/eu
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/et
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/eo
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/el
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/dz
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/dgo
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/cy
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/ca-valencia
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/bs
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/brx
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/br
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/bo
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/bn-IN
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/bn
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/be
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/ast
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/as
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/ar
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/am
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/af
