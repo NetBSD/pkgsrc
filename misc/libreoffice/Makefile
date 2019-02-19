@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.182 2019/02/16 13:26:49 wiz Exp $
+# $NetBSD: Makefile,v 1.183 2019/02/19 16:28:03 ryoon Exp $
 
-VERREL=		6.1.4
-VERRC=		2
+VERREL=		6.2.0
+VERRC=		3
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -56,10 +55,12 @@ EXTRACT_ONLY+=		libreoffice-${component}-${VER}.tar.xz
 MORE_DISTFILES= \
 	breakpad.zip \
 	0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz \
-	134d8262145fc793c6af494dcace3e71-liberation-fonts-ttf-1.07.4.tar.gz \
-	5c781723a0d9ed6188960defba8e91cf-liberation-fonts-ttf-2.00.1.tar.gz \
+	liberation-narrow-fonts-ttf-1.07.6.tar.gz \
+	liberation-fonts-ttf-2.00.4.tar.gz \
 	907d6e99f241876695c19ff3db0b8923-source-code-pro-2.030R-ro-1.050R-it.tar.gz \
-	xmlsec1-1.2.25.tar.gz \
+	edc4d741888bc0d38e32dbaa17149596-source-sans-pro-2.010R-ro-1.065R-it.tar.gz \
+	source-serif-font-2.007R.tar.gz \
+	xmlsec1-1.2.27.tar.gz \
 	3404ab6b1792ae5f16bbd603bd1e1d03-libformula-1.1.7.zip \
 	35c94d2df8893241173de1d16b6034c0-swingExSrc.zip \
 	39bb3fcea1514f1369fcfc87542390fd-sacjava-1.3.zip \
@@ -82,17 +83,14 @@ MORE_DISTFILES= \
 	a233181e03d3c307668b4c722d881661-mariadb_client-2.0.0-src.tar.gz \
 	798b2ffdc8bcfe7bca2cf92b62caf685-rhino1_5R5.zip \
 	368f114c078f94214a308a74c7e991bc-crosextrafonts-20130214.tar.gz \
-	language-subtag-registry-2017-12-14.tar.bz2 \
+	language-subtag-registry-2018-04-23.tar.bz2 \
 	libeot-0.01.tar.bz2 \
-	7239a4430efd4d0189c4f24df67f08e5-mysql-connector-c++-1.1.4.tar.gz \
-	c0b4799ea9850eae3ead14f0a60e9418-postgresql-9.2.1.tar.bz2 \
-	edc4d741888bc0d38e32dbaa17149596-source-sans-pro-2.010R-ro-1.065R-it.tar.gz \
+	postgresql-9.2.24.tar.bz2 \
 	graphite2-minimal-1.3.10.tgz \
 	1725634df4bb3dcb1b2c91a6175f8789-GentiumBasic_1102.zip \
 	EmojiOneColor-SVGinOT-1.3.tar.gz \
 	libjpeg-turbo-1.5.2.tar.gz \
 	alef-1.001.tar.gz \
-	amiri-0.109.zip \
 	c74b7223abe75949b4af367942d96c7a-crosextrafonts-carlito-20130920.tar.gz \
 	culmus-0.131.tar.gz \
 	ttf-kacst_2.01+mry.tar.gz \
@@ -103,14 +101,16 @@ MORE_DISTFILES= \
 	Amiri-0.111.zip \
 	ReemKufi-0.7.zip
 
-MORE_DISTFILES+=		harfbuzz-2.2.0.tar.bz2
-
 .for md in ${MORE_DISTFILES}
 DISTFILES+=		${md}
 SITES.${md}=		https://dev-www.libreoffice.org/src/
 .endfor
 
-SITES.harfbuzz-2.2.0.tar.bz2=	https://www.freedesktop.org/software/harfbuzz/release/
+MORE_DISTFILES+=		49a64f3bcf20a7909ba2751349231d6652ded9cd2840e961b5164d09de3ffa63-opens___.ttf
+SITES.49a64f3bcf20a7909ba2751349231d6652ded9cd2840e961b5164d09de3ffa63-opens___.ttf=	https://dev-www.libreoffice.org/extern/
+
+MORE_DISTFILES+=		harfbuzz-2.3.1.tar.bz2
+SITES.harfbuzz-2.3.1.tar.bz2=	https://www.freedesktop.org/software/harfbuzz/release/
 
 .include "options.mk"
 
@@ -173,14 +173,10 @@ CONFIGURE_ARGS+=	--enable-python=system
 #CONFIGURE_ARGS+=	--enable-release-build
 CONFIGURE_ARGS+=	--enable-ext-wiki-publisher
 CONFIGURE_ARGS+=	--enable-ext-nlpsolver
-CONFIGURE_ARGS+=	--enable-ext-mariadb-connector
 CONFIGURE_ARGS+=	--with-system-gpgmepp
 CONFIGURE_ARGS+=	--without-system-jpeg
-CONFIGURE_ARGS+=	--without-system-mysql-cppconn
 CONFIGURE_ARGS+=	--without-system-postgresql
-CONFIGURE_ARGS+=	--without-system-mariadb
 CONFIGURE_ARGS+=	--without-system-xmlsec
-CONFIGURE_ARGS+=	--with-alloc=system
 CONFIGURE_ARGS+=	--with-compat-oowrappers
 CONFIGURE_ARGS+=	--with-external-tar=${WRKSRC}/src
 CONFIGURE_ARGS+=	--with-fonts
@@ -190,6 +186,7 @@ CONFIGURE_ARGS+=	--with-boost-libdir=${BUILDLINK_PREFIX.boost-libs}/lib
 CONFIGURE_ARGS+=	--with-system-libs
 CONFIGURE_ARGS+=	--with-system-dicts
 CONFIGURE_ARGS+=	--with-vendor="pkgsrc"
+CONFIGURE_ARGS+=	--with-tls="nss"
 CONFIGURE_ARGS+=	--without-doxygen
 CONFIGURE_ARGS+=	--without-junit
 CONFIGURE_ARGS+=	--without-krb5
@@ -214,7 +211,8 @@ REPLACE_PERL+=	sd/res/webview/savepic.pl
 REPLACE_PERL+=	sd/res/webview/show.pl
 REPLACE_PERL+=	sd/res/webview/webcast.pl
 
-LO_PROGRAMS=		sbase scalc sdraw simpress smath soffice swriter
+LO_PROGRAMS=		libreoffice lobase localc lodraw loffice
+LO_PROGRAMS+=		lofromtemplate loimpress lomath loweb lowriter
 # Base depends on java, we don't install the icon
 LO_DESKTOP_FILES=	calc.desktop draw.desktop impress.desktop math.desktop \
 			startcenter.desktop writer.desktop
@@ -271,10 +269,10 @@ UNO_PATH=${PREFIX}/${PKGNAME}/lib/libreoffice/program
 BUILD_DEFS+=   UNO_PATH
 BUILD_DEFS+=   PYTHONBIN
 
-#post-install:
-#.for f in ${LO_PROGRAMS}
-#	cd ${DESTDIR}${PREFIX}/bin && ${LN} -s ../${PKGNAME_NOREV}/program/${f}
-#.endfor
+post-install:
+.for f in ${LO_PROGRAMS}
+	cd ${DESTDIR}${PREFIX}/bin && ${LN} -s ../${PKGNAME_NOREV}/bin/${f}
+.endfor
 #	${LN} -s ${DESTDIR}${PREFIX}/bin/soffice ${DESTDIR}${PREFIX}/bin/libreoffice
 #.for f in ${LO_DESKTOP_FILES}
 #	cd ${DESTDIR}${PREFIX}/share/applications && ${LN} -s ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}/share/xdg/${f}
@@ -301,6 +299,7 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.2
 .include "../../converters/libzmf/buildlink3.mk"
 .include "../../converters/orcus/buildlink3.mk"
 .include "../../databases/db4/buildlink3.mk"
+.include "../../databases/mysql57-client/buildlink3.mk"
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../databases/unixodbc/buildlink3.mk"
@@ -311,7 +310,7 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.2
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/liblangtag/buildlink3.mk"
-.include "../../devel/mdds1.2/buildlink3.mk"
+.include "../../devel/mdds/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
