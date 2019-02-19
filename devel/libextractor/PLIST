@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2019/02/11 15:06:54 gdt Exp $
+@comment $NetBSD: PLIST,v 1.15 2019/02/19 00:03:45 gdt Exp $
 bin/extract
 include/extractor.h
 info/libextractor.info
@@ -6,8 +6,13 @@ lib/libextractor.la
 lib/libextractor/libextractor_archive.la
 lib/libextractor/libextractor_deb.la
 lib/libextractor/libextractor_dvi.la
+lib/libextractor/libextractor_exiv2.la
+lib/libextractor/libextractor_flac.la
+lib/libextractor/libextractor_html.la
 lib/libextractor/libextractor_it.la
+lib/libextractor/libextractor_jpeg.la
 lib/libextractor/libextractor_man.la
+lib/libextractor/libextractor_midi.la
 lib/libextractor/libextractor_mime.la
 lib/libextractor/libextractor_mpeg.la
 lib/libextractor/libextractor_nsf.la
@@ -22,6 +27,7 @@ lib/libextractor/libextractor_riff.la
 lib/libextractor/libextractor_s3m.la
 lib/libextractor/libextractor_sid.la
 lib/libextractor/libextractor_thumbnailgtk.la
+lib/libextractor/libextractor_tiff.la
 lib/libextractor/libextractor_wav.la
 lib/libextractor/libextractor_xm.la
 lib/libextractor/libextractor_zip.la
