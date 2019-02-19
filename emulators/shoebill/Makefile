@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2018/08/22 09:45:05 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2019/02/19 15:59:36 hauke Exp $
 
 DISTNAME=	shoebill-0.0.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pruten/}
 
@@ -35,4 +35,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sdl-gui/shoebill ${DESTDIR}${PREFIX}/bin
 
 .include "../../devel/SDL2/buildlink3.mk"
+.include "../../devel/libuuid/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
