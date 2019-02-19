@@ -1,0 +1,33 @@
+$NetBSD: patch-configure,v 1.1 2019/02/19 15:45:30 ryoon Exp $
+
+* POSIX shell portability
+
+--- configure.orig	2018-10-31 00:58:03.000000000 +0000
++++ configure
+@@ -2496,7 +2496,7 @@ if test "${enable_debug_stdcxx+set}" = s
+ fi
+ 
+ 
+-if test x"$debug_stdcxx" == "xyes"; then :
++if test x"$debug_stdcxx" = "xyes"; then :
+ 
+   CXXFLAGS="$CXXFLAGS -D_GLIBCXX_DEBUG"
+ 
+@@ -2508,7 +2508,7 @@ if test "${enable_release_tests+set}" = 
+ fi
+ 
+ 
+-if test x"$release_tests" == "xyes"; then :
++if test x"$release_tests" = "xyes"; then :
+ 
+   CXXFLAGS="$CXXFLAGS -DNDEBUG"
+ 
+@@ -3395,7 +3395,7 @@ else
+ 
+ fi
+ 
+-if test x"$enable_werror" == "xyes"; then :
++if test x"$enable_werror" = "xyes"; then :
+ 
+ 	CXXFLAGS="$CXXFLAGS -Werror"
+ 
