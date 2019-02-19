@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.815 2019/02/19 16:28:13 taca Exp $
+$NetBSD: CHANGES-2019,v 1.816 2019/02/19 16:29:10 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1484,3 +1484,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated math/libixion to 0.14.1 [ryoon 2019-02-19]
 	Updated converters/orcus to 0.14.1 [ryoon 2019-02-19]
 	Updated devel/transifex-client to 0.13.6 [taca 2019-02-19]
+	Updated misc/libreoffice to 6.2.0.3 [ryoon 2019-02-19]
