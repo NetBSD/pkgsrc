@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2018/12/28 14:18:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/02/19 12:31:55 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/parso/__init__.py
 ${PYSITELIB}/parso/__init__.pyc
@@ -46,6 +47,7 @@ ${PYSITELIB}/parso/python/grammar34.txt
 ${PYSITELIB}/parso/python/grammar35.txt
 ${PYSITELIB}/parso/python/grammar36.txt
 ${PYSITELIB}/parso/python/grammar37.txt
+${PYSITELIB}/parso/python/grammar38.txt
 ${PYSITELIB}/parso/python/parser.py
 ${PYSITELIB}/parso/python/parser.pyc
 ${PYSITELIB}/parso/python/parser.pyo
