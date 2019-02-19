@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.73 2019/02/13 15:40:53 adam Exp $
+# $NetBSD: Makefile,v 1.74 2019/02/19 08:25:49 adam Exp $
 
-DISTNAME=	pytest-4.2.1
+DISTNAME=	pytest-4.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest/}
@@ -16,10 +16,12 @@ DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=	${PYPKGPREFIX}-more-itertools>=4.0.0:../../devel/py-more-itertools
 DEPENDS+=	${PYPKGPREFIX}-pluggy>=0.7:../../devel/py-pluggy
 DEPENDS+=	${PYPKGPREFIX}-py>=1.5.0:../../devel/py-py
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=3.56:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} == 27
