@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.12 2018/04/30 04:39:41 ryoon Exp $
+$NetBSD: distinfo,v 1.13 2019/02/19 16:06:34 ryoon Exp $
 
-SHA1 (liborcus-0.13.4.tar.xz) = 14e2e1e1a1b03a85df5dcac4d883611cc6f79b91
-RMD160 (liborcus-0.13.4.tar.xz) = 185a7deb787f81d2e6415143a6b74f66fa957909
-SHA512 (liborcus-0.13.4.tar.xz) = f00b49c41eb1898c37d8d42e59f9004f46b5f849b9d60ac9c5033232d1e5065ff3de160e79f5a88983bf64f86e283b6d1d406a24e776aa6ff7b8acec324ccd4b
-Size (liborcus-0.13.4.tar.xz) = 1816340 bytes
+SHA1 (liborcus-0.14.1.tar.xz) = 5494eae7df0bdcaad76ddecc265d02738475a1c9
+RMD160 (liborcus-0.14.1.tar.xz) = 0f10f3f9ff86a82dd1c9c2951e2ea5490a49d62c
+SHA512 (liborcus-0.14.1.tar.xz) = a32dc5a652ce99cff37273c38fb9460e13e7bfb562f40c8d0c79b65c33e340daaeeb2c796308ca700b85bfc13cc8215641563b9e9f6d44b7d61adb8e8a3c950f
+Size (liborcus-0.14.1.tar.xz) = 1894680 bytes
 SHA1 (patch-configure) = e5c68af9939a198cc63ec9bf5e6acf2aad4f893a
-SHA1 (patch-src_spreadsheet_sheet.cpp) = 67e9612107d8bf417173740bc7a437560f5cab35
