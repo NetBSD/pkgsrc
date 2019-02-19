@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2018/09/14 15:53:46 tnn Exp $
+$NetBSD: patch-aa,v 1.7 2019/02/19 17:00:17 ryoon Exp $
 
 DragonFly support.
 Add workaround for missing  sem_timedwait() in NetBSD < 6.99.4
@@ -137,3 +137,15 @@ Add workaround for missing  sem_timedwait() in NetBSD < 6.99.4
    *priority_ptr = pthread_getprio(thread->osthread()->pthread_id());
  #elif defined(__APPLE__) || defined(__NetBSD__)
    int policy;
+@@ -3585,7 +3619,11 @@
+   struct sigaction act;
+   if (os_sigaction == NULL) {
+     // only trust the default sigaction, in case it has been interposed
++#if defined(__NetBSD__)
++    os_sigaction = (os_sigaction_t)dlsym(RTLD_DEFAULT, "__sigaction14");
++#else
+     os_sigaction = (os_sigaction_t)dlsym(RTLD_DEFAULT, "sigaction");
++#endif
+     if (os_sigaction == NULL) return;
+   }
+ 
