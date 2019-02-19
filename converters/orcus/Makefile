@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2018/12/13 19:51:44 adam Exp $
+# $NetBSD: Makefile,v 1.26 2019/02/19 16:06:34 ryoon Exp $
 
-DISTNAME=	liborcus-0.13.4
+DISTNAME=	liborcus-0.14.1
 PKGNAME=	${DISTNAME:S/liborcus/orcus/}
-PKGREVISION=	2
 CATEGORIES=	converters
 MASTER_SITES=	http://kohei.us/files/orcus/src/
 EXTRACT_SUFX=	.tar.xz
@@ -26,7 +25,7 @@ PKGCONFIG_OVERRIDE+=	liborcus-spreadsheet-model.pc.in
 PTHREAD_AUTO_VARS=	yes
 
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../devel/mdds1.2/buildlink3.mk"
+.include "../../devel/mdds/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../math/libixion/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
