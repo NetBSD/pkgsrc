@@ -1,6 +1,12 @@
-$NetBSD: patch-ab,v 1.7 2016/08/26 12:40:25 richard Exp $
+$NetBSD: patch-ab,v 1.8 2019/02/19 15:18:19 hauke Exp $
 
---- dist/configure.orig	2012-05-11 17:57:48.000000000 +0000
+Fix bashisms.
+
+FreeBSD 10 is not FreeBSD 1.
+
+Add support for mutexes on aarch64 with GCC.
+
+--- dist/configure.orig	2013-09-09 15:35:02.000000000 +0000
 +++ dist/configure
 @@ -5112,7 +5112,7 @@ bsdi3*)	CC=${CC-"shlicc2"}
  	LIBSO_LIBS="$LIBSO_LIBS -lipc";;
@@ -101,3 +107,46 @@ $NetBSD: patch-ab,v 1.7 2016/08/26 12:40:25 richard Exp $
  			LIBS="$LIBS -lpthread"
  
  if test "$cross_compiling" = yes; then :
+@@ -21796,6 +21796,31 @@ fi
+ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+ fi
+ 
++# AARCH64/gcc: Linux
++if test "$db_cv_mutex" = no; then
++cat confdefs.h - <<_ACEOF >conftest.$ac_ext
++/* end confdefs.h.  */
++
++int
++main ()
++{
++
++#if defined(__aarch64__) && defined(__GNUC__)
++	exit(0);
++#else
++	FAIL TO COMPILE/LINK
++#endif
++
++  ;
++  return 0;
++}
++_ACEOF
++if ac_fn_c_try_compile "$LINENO"; then :
++  db_cv_mutex=AARCH64/gcc-assembly
++fi
++rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
++fi
++
+ # MIPS/gcc: Linux
+ if test "$db_cv_mutex" = no; then
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+@@ -22124,6 +22149,10 @@ ARM/gcc-assembly)	ADDITIONAL_OBJS="mut_t
+ 			$as_echo "#define HAVE_MUTEX_ARM_GCC_ASSEMBLY 1" >>confdefs.h
+ 
+ 			;;
++AARCH64/gcc-assembly)	ADDITIONAL_OBJS="mut_tas${o} $ADDITIONAL_OBJS"
++			$as_echo "#define HAVE_MUTEX_AARCH64_GCC_ASSEMBLY 1" >>confdefs.h
++
++			;;
+ HP/msem_init)		ADDITIONAL_OBJS="mut_tas${o} $ADDITIONAL_OBJS"
+ 			$as_echo "#define HAVE_MUTEX_HPPA_MSEM_INIT 1" >>confdefs.h
+ 
