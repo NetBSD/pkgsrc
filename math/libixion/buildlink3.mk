@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2018/02/03 00:26:13 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2019/02/19 15:55:47 ryoon Exp $
 
 BUILDLINK_TREE+=	libixion
 
@@ -8,7 +8,7 @@ LIBIXION_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.libixion+=	libixion>=0.13.0
 BUILDLINK_PKGSRCDIR.libixion?=		../../math/libixion
 
-.include "../../devel/mdds1.2/buildlink3.mk"
+.include "../../devel/mdds/buildlink3.mk"
 .endif	# LIBIXION_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libixion
