@@ -1,0 +1,16 @@
+$NetBSD: patch-dist_config.bin,v 1.1 2019/02/19 15:18:19 hauke Exp $
+
+Add support for mutexes on aarch64 with GCC.
+
+--- dist/config.hin.orig	2010-04-12 20:25:23.000000000 +0000
++++ dist/config.hin
+@@ -212,6 +212,9 @@
+ /* Define to 1 to use the GCC compiler and ARM assembly language mutexes. */
+ #undef HAVE_MUTEX_ARM_GCC_ASSEMBLY
+ 
++/* Define to 1 to use the GCC compiler and AARCH64 assembly language mutexes. */
++#undef HAVE_MUTEX_AARCH64_GCC_ASSEMBLY
++
+ /* Define to 1 to use the Apple/Darwin _spin_lock_try mutexes. */
+ #undef HAVE_MUTEX_DARWIN_SPIN_LOCK_TRY
+ 
