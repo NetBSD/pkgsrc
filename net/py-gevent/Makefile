@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2018/10/23 07:01:01 adam Exp $
+# $NetBSD: Makefile,v 1.14 2019/02/19 12:26:13 adam Exp $
 
-DISTNAME=	gevent-1.3.7
+DISTNAME=	gevent-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gevent/}
@@ -36,10 +36,6 @@ MAKE_ENV.SunOS+=	ac_cv_header_sys_inotify_h=no
 .if !empty(PKGSRC_COMPILER:Mclang) || !empty(CC_VERSION:Mgcc-[6-9]*)
 BUILDLINK_TRANSFORM.SunOS+=	opt:-D_XOPEN_SOURCE=500:-D_XOPEN_SOURCE=600
 .endif
-
-do-test:
-	cd ${WRKSRC}/src/greentest && \
-		${PYTHONBIN} testrunner.py --config known_failures.py
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../devel/libev/buildlink3.mk"
