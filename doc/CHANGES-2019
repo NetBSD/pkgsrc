@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.818 2019/02/19 17:32:28 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.819 2019/02/19 18:06:37 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1487,3 +1487,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated misc/libreoffice to 6.2.0.3 [ryoon 2019-02-19]
 	Updated sysutils/ovmf to 0.0.20181116 [ryoon 2019-02-19]
 	Updated www/hugo to 0.54.0 [ryoon 2019-02-19]
+	Updated net/youtube-dl to 20190218 [leot 2019-02-19]
