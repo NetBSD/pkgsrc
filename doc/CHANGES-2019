@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.805 2019/02/19 00:09:29 gdt Exp $
+$NetBSD: CHANGES-2019,v 1.806 2019/02/19 08:30:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1470,3 +1470,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/py-js2py to 0.60 [adam 2019-02-18]
 	Updated lang/rakudo to 2018.12 [bsiegert 2019-02-18]
 	Updated devel/libextractor to 1.9 [gdt 2019-02-19]
+	Updated devel/py-test to 4.3.0 [adam 2019-02-19]
+	Updated devel/py-flake8 to 3.7.6 [adam 2019-02-19]
+	Updated devel/py-ipython to 7.3.0 [adam 2019-02-19]
