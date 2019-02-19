@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2017/09/03 08:36:51 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2019/02/19 15:18:38 hauke Exp $
 #
 # NOTE:
 # When updating this package, a change in the minor (5.n -> 5.(n+1))
@@ -8,7 +8,7 @@
 
 DISTNAME=	db-5.3.28
 PKGNAME=	${DISTNAME:S/db/db5/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	http://download.oracle.com/berkeley-db/
 MASTER_SITES+=	http://download-uk.oracle.com/berkeley-db/
