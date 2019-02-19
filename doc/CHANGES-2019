@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.820 2019/02/19 20:36:45 leot Exp $
+$NetBSD: CHANGES-2019,v 1.821 2019/02/19 22:24:47 he Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1489,3 +1489,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/hugo to 0.54.0 [ryoon 2019-02-19]
 	Updated net/youtube-dl to 20190218 [leot 2019-02-19]
 	Updated misc/dtach to 0.9 [leot 2019-02-19]
+	Updated devel/cbindgen to 0.8.0 [he 2019-02-19]
