@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2012/10/08 09:57:20 asau Exp $
+# $NetBSD: Makefile,v 1.8 2019/02/19 20:36:06 leot Exp $
 
-DISTNAME=	dtach-0.8
+DISTNAME=	dtach-0.9
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dtach/}
 
 MAINTAINER=	fgudin@nerim.net
 HOMEPAGE=	http://dtach.sourceforge.net/
 COMMENT=	Small program that emulates the detach feature of screen
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 BUILD_TARGET=	dtach
