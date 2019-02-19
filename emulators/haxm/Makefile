@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/02/18 01:34:12 kamil Exp $
+# $NetBSD: Makefile,v 1.10 2019/02/19 13:49:14 kamil Exp $
 
 GITHUB_PROJECT=	haxm
 GITHUB_TAG=	3bdfd1a39021df9b4dfe69e05a277e4e6456494a
@@ -6,7 +6,7 @@ DISTNAME=	haxm-1.20190214.${GITHUB_TAG}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=intel/}
 
-PKGREVISION=	1
+PKGREVISION=	2
 
 MAINTAINER=	kamil@NetBSD.org
 HOMEPAGE=	https://github.com/intel/haxm/
