@@ -1,15 +1,17 @@
-$NetBSD: distinfo,v 1.15 2016/08/26 17:23:16 joerg Exp $
+$NetBSD: distinfo,v 1.16 2019/02/19 15:18:38 hauke Exp $
 
 SHA1 (db-5.3.28.tar.gz) = fa3f8a41ad5101f43d08bc0efb6241c9b6fc1ae9
 RMD160 (db-5.3.28.tar.gz) = a4898908ef6dccb137df02e43843f7d3cfab6a3c
 SHA512 (db-5.3.28.tar.gz) = e91bbe550fc147a8be7e69ade86fdb7066453814971b2b0223f7d17712bd029a8eff5b2b6b238042ff6ec1ffa6879d44cb95c5645a922fee305c26c3eeaee090
 Size (db-5.3.28.tar.gz) = 35090431 bytes
 SHA1 (patch-aa) = 9450e95f46787ddc1d661beaa239ea0ff4673f20
-SHA1 (patch-ab) = b09fac68d7d847c5660078de90a16f27268e9858
+SHA1 (patch-ab) = 0bf2bb3270b6fa334f0d4b93e4a28c44e254b935
 SHA1 (patch-ac) = 0a243583ae2b66290fb83b112c539001bf3feef2
 SHA1 (patch-dist_aclocal_libtool.m4) = 2d56b318b4f0d14a9352f6c1eb14a4c2b8315fc0
+SHA1 (patch-dist_config.bin) = e58a4637c079a8e2e7334100b9096dba5f0d6600
 SHA1 (patch-src_dbinc_atomic.h) = c4fbe421d2c8ba68dc81aeeda1cad09a2c68fbe5
 SHA1 (patch-src_dbinc_db.in) = d20a8c474485811b2e28d54fa5cf2d340d417992
+SHA1 (patch-src_dbinc_mutex_int.h) = 36f7fd31f5f79fe2c121e8f835c342ec24bda89b
 SHA1 (patch-src_mp_mp__fget.c) = c5050193279db979d51d47f5e2c8d7c5cace0fa7
 SHA1 (patch-src_mp_mp__mvcc.c) = 2e8b4e5ff7a7534681597261ba82ca08e9231567
 SHA1 (patch-src_mp_mp__region.c) = 1c33dc783660515ff24ba018d1ef99cedf9eb3f8
