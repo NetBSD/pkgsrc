@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.12 2018/11/10 21:35:07 mrg Exp $
+$NetBSD: patch-configure.ac,v 1.13 2019/02/19 16:28:03 ryoon Exp $
 
 add arm64 support.
 
@@ -7,9 +7,9 @@ fix __cxa_exception check.
 fix wrong default paths.
 
 
---- configure.ac.orig	2018-09-20 09:44:38.000000000 +0000
-+++ configure.ac	2018-11-10 09:32:15.242164059 +0000
-@@ -4286,6 +4286,11 @@
+--- configure.ac.orig	2019-01-23 19:35:25.000000000 +0000
++++ configure.ac
+@@ -4314,6 +4314,11 @@ linux-android*)
      P_SEP=:
  
      case "$host_cpu" in
@@ -21,7 +21,7 @@ fix wrong default paths.
      i*86)
          CPUNAME=INTEL
          RTL_ARCH=x86
-@@ -6013,14 +6018,14 @@
+@@ -6015,14 +6020,14 @@ if test "$GCC" = "yes" -o "$COM_IS_CLANG
          ], [AC_MSG_RESULT([no])])
      AC_LANG_POP([C++])
  
@@ -39,7 +39,7 @@ fix wrong default paths.
              AC_MSG_RESULT([yes])
          ], [AC_MSG_RESULT([no])])
      AC_LANG_POP([C++])
-@@ -7612,7 +7617,7 @@
+@@ -7782,7 +7787,7 @@ else
      if test "$COM" = "MSC"; then
          LIBJPEG_LIBS="${WORKDIR}/UnpackedTarball/libjpeg-turbo/.libs/libjpeg.lib"
      else
@@ -48,7 +48,7 @@ fix wrong default paths.
      fi
  
      case "$host_cpu" in
-@@ -9208,11 +9213,11 @@
+@@ -9333,11 +9338,11 @@ dnl HarfBuzz
  dnl ===================================================================
  libo_CHECK_SYSTEM_MODULE([graphite],[GRAPHITE],[graphite2 >= 0.9.3],
                           ["-I${WORKDIR}/UnpackedTarball/graphite/include -DGRAPHITE2_STATIC"],
@@ -62,16 +62,16 @@ fix wrong default paths.
  
  if test "$COM" = "MSC"; then # override the above
      GRAPHITE_LIBS="${WORKDIR}/LinkTarget/StaticLibrary/graphite.lib"
-@@ -10410,7 +10415,7 @@
- elif test "$enable_mpl_subset" = "yes"; then
-     AC_MSG_CHECKING([whether gpgmepp should be disabled due to building just MPL])
+@@ -10554,7 +10559,7 @@ elif test "$enable_mpl_subset" = "yes"; 
+ elif test "$enable_fuzzers" = "yes"; then
+     AC_MSG_CHECKING([whether gpgmepp should be disabled due to oss-fuzz])
      AC_MSG_RESULT([yes])
 -elif test "$_os" = "Linux" -o "$_os" = "Darwin" -o "$_os" = "WINNT" ; then
 +elif test "$_os" = "Linux" -o "$_os" = "Darwin" -o "$_os" = "WINNT" -o "$_os" = "NetBSD" ; then
      dnl ===================================================================
      dnl Check for system gpgme
      dnl ===================================================================
-@@ -10420,7 +10425,7 @@
+@@ -10564,7 +10569,7 @@ elif test "$_os" = "Linux" -o "$_os" = "
          SYSTEM_GPGMEPP=TRUE
  
          # C++ library doesn't come with fancy gpgmepp-config, check for headers the old-fashioned way
@@ -80,7 +80,7 @@ fix wrong default paths.
              [AC_MSG_ERROR([gpgmepp headers not found, install gpgmepp development package])], [])
          # progress_callback is the only func with plain C linkage
          # checking for it also filters out older, KDE-dependent libgpgmepp versions
-@@ -11753,8 +11758,8 @@
+@@ -11897,8 +11902,8 @@ EOF
      dnl Checking for ant.jar
      if test "$ANT_HOME" != "NO_ANT_HOME"; then
          AC_MSG_CHECKING([Ant lib directory])
