@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2018/02/03 00:26:13 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2019/02/19 15:55:47 ryoon Exp $
 
-SHA1 (libixion-0.13.0.tar.xz) = af11e23b3b11fa5791f8888a32621c6ecc931056
-RMD160 (libixion-0.13.0.tar.xz) = c756514b561d2a383cdf888bc9eb4f90b671c3e3
-SHA512 (libixion-0.13.0.tar.xz) = 15784e947164d106e677c59ece53b3cd401d4f9433cc5331a35d3be8332ae4f20a469ca73b30b253433c86da4afde886dfb4ac23e46ed46376a7349e0276c3a0
-Size (libixion-0.13.0.tar.xz) = 413756 bytes
+SHA1 (libixion-0.14.1.tar.xz) = 8c8f17550177f11f26343c18c6e18cfa260df0e6
+RMD160 (libixion-0.14.1.tar.xz) = ff80ec9b91c64a89c5ae459f749031304148ee57
+SHA512 (libixion-0.14.1.tar.xz) = e4ae6348833d2178c1dc76916937bcc9d7821dc6570fe13093c441ca22e0301a1ca6a4cf85d9814b83534733dba98f4c4a372791f93bc57173317657675b9ae3
+Size (libixion-0.14.1.tar.xz) = 360568 bytes
