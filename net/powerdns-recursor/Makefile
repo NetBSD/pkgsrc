@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2018/11/30 12:57:41 adam Exp $
+# $NetBSD: Makefile,v 1.32 2019/02/20 12:19:44 adam Exp $
 
-DISTNAME=	pdns-recursor-4.1.8
+DISTNAME=	pdns-recursor-4.1.11
+PKGNAME=	${DISTNAME:S/pdns/powerdns/}
 CATEGORIES=	net
 MASTER_SITES=	http://downloads.powerdns.com/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -14,6 +15,8 @@ USE_LANGUAGES=		c c++11
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-net-snmp
+# currently not portable
+CONFIGURE_ENV.NetBSD+=	ac_cv_search_pthread_setaffinity_np=no
 
 RCD_SCRIPTS+=		pdns_recursor
 
