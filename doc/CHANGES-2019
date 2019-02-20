@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.823 2019/02/20 12:21:27 adam Exp $
+$NetBSD: CHANGES-2019,v 1.824 2019/02/20 15:20:09 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1494,3 +1494,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-wheel to 0.33.1 [adam 2019-02-20]
 	Updated net/powerdns-recursor to 4.1.11 [adam 2019-02-20]
 	Updated net/powerdns to 4.1.6 [adam 2019-02-20]
+	Updated www/php-nextcloud to 15.0.4 [ryoon 2019-02-20]
