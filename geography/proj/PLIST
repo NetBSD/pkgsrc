@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/06/01 23:41:31 gdt Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/02/20 17:33:59 gdt Exp $
 bin/cct
 bin/cs2cs
 bin/geod
@@ -39,6 +39,8 @@ share/proj/egm96_15.gtx
 share/proj/epsg
 share/proj/esri
 share/proj/esri.extra
+share/proj/gvr2000.gtx
+share/proj/gvr2016.gtx
 share/proj/hawaii
 share/proj/nad.lst
 share/proj/nad27
@@ -53,4 +55,7 @@ share/proj/prvi
 share/proj/stgeorge
 share/proj/stlrnc
 share/proj/stpaul
+share/proj/vertconc.gtx
+share/proj/vertcone.gtx
+share/proj/vertconw.gtx
 share/proj/world
