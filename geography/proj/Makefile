@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2019/02/20 17:42:00 gdt Exp $
+# $NetBSD: Makefile,v 1.15 2019/02/20 17:47:29 gdt Exp $
 
 VERSION_BASE=	5.2.0
 VERSION_RC=	
 VERSION=	${VERSION_BASE}${VERSION_RC}
-PKGREVISION=	1
+PKGREVISION=	2
 # proj RCs have names like 5.1.0RC1 but unpack to 5.1.0
 WRKFINAL=	proj-${VERSION_BASE}
 WRKSRC=		${WRKDIR}/${WRKFINAL}
@@ -22,7 +22,7 @@ LICENSE=	mit
 
 PREV_PKGPATH=		misc/proj
 
-USE_LANGUAGES=		c99 c++
+USE_LANGUAGES=		c99 c++11
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
