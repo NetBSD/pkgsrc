@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2018/05/26 17:29:44 jmcneill Exp $
+$NetBSD: distinfo,v 1.5 2019/02/20 17:04:13 martin Exp $
 
 SHA1 (arm-trusted-firmware-sun50iw1p1-20180210-c9f55c023164a6c8c49f70f7ac6c68c626839d6f.zip) = 5d4fd8aa57420cfaaab9a04054cebf89c9f8c69a
 RMD160 (arm-trusted-firmware-sun50iw1p1-20180210-c9f55c023164a6c8c49f70f7ac6c68c626839d6f.zip) = bb206350589ecb556b20629728018cf79a0d35bd
 SHA512 (arm-trusted-firmware-sun50iw1p1-20180210-c9f55c023164a6c8c49f70f7ac6c68c626839d6f.zip) = 477983b7fa7dd11b74edd12b7b6d20d573cfc86c08912c60967a0c66808432223a013e2049999b177ac740baf7a18f9fae151f418c03a7ab17f5d46075c7eaf1
 Size (arm-trusted-firmware-sun50iw1p1-20180210-c9f55c023164a6c8c49f70f7ac6c68c626839d6f.zip) = 1067184 bytes
 SHA1 (patch-Makefile) = f16622a17a4f6aa3f0c339c35e87f8d889c6d7aa
+SHA1 (patch-plat_sun50iw1p1_sunxi__power.c) = 3952b12726a9d6c4c62abdd7ba6d3c91b29770ec
