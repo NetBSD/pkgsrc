@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.824 2019/02/20 15:20:09 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.825 2019/02/20 15:58:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1495,3 +1495,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/powerdns-recursor to 4.1.11 [adam 2019-02-20]
 	Updated net/powerdns to 4.1.6 [adam 2019-02-20]
 	Updated www/php-nextcloud to 15.0.4 [ryoon 2019-02-20]
+	Updated databases/py-sqlalchemy to 1.2.18 [adam 2019-02-20]
+	Updated databases/py-sqlalchemy-migrate to 0.12.0 [adam 2019-02-20]
