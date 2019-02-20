@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.822 2019/02/20 07:57:50 adam Exp $
+$NetBSD: CHANGES-2019,v 1.823 2019/02/20 12:21:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1492,3 +1492,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/cbindgen to 0.8.0 [he 2019-02-19]
 	Updated devel/py-prompt_toolkit2 to 2.0.9 [adam 2019-02-20]
 	Updated devel/py-wheel to 0.33.1 [adam 2019-02-20]
+	Updated net/powerdns-recursor to 4.1.11 [adam 2019-02-20]
+	Updated net/powerdns to 4.1.6 [adam 2019-02-20]
