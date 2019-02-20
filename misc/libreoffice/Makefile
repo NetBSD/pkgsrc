@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.183 2019/02/19 16:28:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.184 2019/02/20 11:52:52 ryoon Exp $
 
 VERREL=		6.2.0
 VERRC=		3
@@ -111,6 +111,9 @@ SITES.49a64f3bcf20a7909ba2751349231d6652ded9cd2840e961b5164d09de3ffa63-opens___.
 
 MORE_DISTFILES+=		harfbuzz-2.3.1.tar.bz2
 SITES.harfbuzz-2.3.1.tar.bz2=	https://www.freedesktop.org/software/harfbuzz/release/
+
+DISTFILES+=	49a64f3bcf20a7909ba2751349231d6652ded9cd2840e961b5164d09de3ffa63-opens___.ttf
+DISTFILES+=	harfbuzz-2.3.1.tar.bz2
 
 .include "options.mk"
 

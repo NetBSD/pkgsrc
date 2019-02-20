@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.72 2019/02/19 16:28:03 ryoon Exp $
+$NetBSD: distinfo,v 1.73 2019/02/20 11:52:52 ryoon Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -32,6 +32,10 @@ SHA1 (libreoffice/3bdf40c0d199af31923e900d082ca2dd-libfonts-1.1.6.zip) = e393bee
 RMD160 (libreoffice/3bdf40c0d199af31923e900d082ca2dd-libfonts-1.1.6.zip) = 229deeb4c533422466c16eaf490c08103be21fc8
 SHA512 (libreoffice/3bdf40c0d199af31923e900d082ca2dd-libfonts-1.1.6.zip) = 8eaa9eed3bff16a16483d0754756c181089eb705ea34ded7f9f6db90a591cbce3f0551f28d097bd2f44de813cb818720c430e79e516939e0398b72bf4614f4cd
 Size (libreoffice/3bdf40c0d199af31923e900d082ca2dd-libfonts-1.1.6.zip) = 5750610 bytes
+SHA1 (libreoffice/49a64f3bcf20a7909ba2751349231d6652ded9cd2840e961b5164d09de3ffa63-opens___.ttf) = ad0f4351a484ac9b5422beae749719299bdfcfb8
+RMD160 (libreoffice/49a64f3bcf20a7909ba2751349231d6652ded9cd2840e961b5164d09de3ffa63-opens___.ttf) = 1aa8f75e4e85030ea3c080946b1d39b577a97064
+SHA512 (libreoffice/49a64f3bcf20a7909ba2751349231d6652ded9cd2840e961b5164d09de3ffa63-opens___.ttf) = 359ba0314a0e5094aa2a10067e5613b10cb9044dca04d49bae68afd8a49d88e070b9a5321b77fd15ef5685109f664409ae1af24d40edd7b462f1366a1967b0e2
+Size (libreoffice/49a64f3bcf20a7909ba2751349231d6652ded9cd2840e961b5164d09de3ffa63-opens___.ttf) = 207400 bytes
 SHA1 (libreoffice/798b2ffdc8bcfe7bca2cf92b62caf685-rhino1_5R5.zip) = 8a90669029e107b61953b90ba11545fef586c2ca
 RMD160 (libreoffice/798b2ffdc8bcfe7bca2cf92b62caf685-rhino1_5R5.zip) = 68e248ec03675458f0536282ef250efa42c4c154
 SHA512 (libreoffice/798b2ffdc8bcfe7bca2cf92b62caf685-rhino1_5R5.zip) = ec5ae23c8fe2f5efc377f7a9665039afadf28b4d8f2791379296766a5fbc9a3bf7548f9b0e3b3b07762229ec733a92ccbb69791ee0318c9c6f78f8e847253d3f
@@ -140,6 +144,10 @@ SHA1 (libreoffice/graphite2-minimal-1.3.10.tgz) = a2dac9614ab6b11ba5529f9043467d
 RMD160 (libreoffice/graphite2-minimal-1.3.10.tgz) = 508f69ef2f6c4e8e3843d4a367aea8e1c00439e3
 SHA512 (libreoffice/graphite2-minimal-1.3.10.tgz) = 0bbf2b586d3b9f09aa6f8e68575482d63ea4ebc712bd2103ba678074b581ac0e5593fdb6d26be60a74fea0261da2797d4c0db7d384d75837fbf93dd4ac3579a2
 Size (libreoffice/graphite2-minimal-1.3.10.tgz) = 155690 bytes
+SHA1 (libreoffice/harfbuzz-2.3.1.tar.bz2) = eb8d4257ea3b533fcc7a9207a92cd018108a2fdf
+RMD160 (libreoffice/harfbuzz-2.3.1.tar.bz2) = 6c2500882f1f67635e59908efb1f2264e2c00aaa
+SHA512 (libreoffice/harfbuzz-2.3.1.tar.bz2) = 78a8f05bfcc95cfe3fc0f1a595bdc7298c9c1456db6c7ef70914051fda43f37aaff15eac75aa6922eca82d2291baeb8385e02e6aacb44ca05b4873c311a662ac
+Size (libreoffice/harfbuzz-2.3.1.tar.bz2) = 17942960 bytes
 SHA1 (libreoffice/language-subtag-registry-2018-04-23.tar.bz2) = 9414d32c4898e2c424dce590bab6e925df151a17
 RMD160 (libreoffice/language-subtag-registry-2018-04-23.tar.bz2) = 8b10fc6ec25128a79274a67e84c2585aad540ee8
 SHA512 (libreoffice/language-subtag-registry-2018-04-23.tar.bz2) = 94972420f4227933c27789b5a808071d11e9ee53f5184a47452772ac235ed17c1ac02c8a8d24a3f3c1067f75161d524fb587097e348c144ae50ee539b4e78cd7
