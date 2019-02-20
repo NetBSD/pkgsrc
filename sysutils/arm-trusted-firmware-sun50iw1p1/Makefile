@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2018/05/26 17:29:44 jmcneill Exp $
+# $NetBSD: Makefile,v 1.4 2019/02/20 17:04:13 martin Exp $
 
 VERSION=	20180210
 GITHUB_PROJECT=	arm-trusted-firmware
 GITHUB_TAG=	c9f55c023164a6c8c49f70f7ac6c68c626839d6f
+PKGREVISION=	1
 
 PKGNAME=	${GITHUB_PROJECT}-sun50iw1p1-${VERSION}
 DISTNAME=	${PKGNAME}
