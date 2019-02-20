@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2017/07/16 20:42:05 adam Exp $
+# $NetBSD: Makefile,v 1.17 2019/02/20 15:58:24 adam Exp $
 
-DISTNAME=	sqlalchemy-migrate-0.11.0
+DISTNAME=	sqlalchemy-migrate-0.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sqlalchemy-migrate/}
@@ -48,8 +48,9 @@ REPLACE_PYTHON+=	migrate/versioning/util/keyedinstance.py
 REPLACE_PYTHON+=	migrate/versioning/version.py
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} migrate migrate${PYVERSSUFFIX} && \
-		${MV} migrate-repository migrate-repository${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} migrate migrate-${PYVERSSUFFIX} && \
+	${MV} migrate-repository migrate-repository-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
