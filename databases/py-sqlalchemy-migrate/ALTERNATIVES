@@ -1,2 +1,2 @@
-bin/migrate @PREFIX@/bin/migrate@PYVERSSUFFIX@
-bin/migrate-repository @PREFIX@/bin/migrate-repository@PYVERSSUFFIX@
+bin/migrate @PREFIX@/bin/migrate-@PYVERSSUFFIX@
+bin/migrate-repository @PREFIX@/bin/migrate-repository-@PYVERSSUFFIX@
