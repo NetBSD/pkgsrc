@@ -17,6 +17,20 @@ func (s *Suite) Test_NewMkLine__varassign(c *check.C) {
 	c.Check(mkline.VarassignComment(), equals, "# varassign comment")
 }
 
+func (s *Suite) Test_NewMkLine__varassign_space_around_operator(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("--show-autofix", "--source")
+	t.NewMkLine("test.mk", 101,
+		"pkgbase = package")
+
+	t.CheckOutputLines(
+		"NOTE: test.mk:101: Unnecessary space after variable name \"pkgbase\".",
+		"AUTOFIX: test.mk:101: Replacing \"pkgbase =\" with \"pkgbase=\".",
+		"-\tpkgbase = package",
+		"+\tpkgbase= package")
+}
+
 func (s *Suite) Test_NewMkLine__shellcmd(c *check.C) {
 	t := s.Init(c)
 
@@ -453,6 +467,25 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__URL_as_part_of_word_in_list(c 
 	t.CheckOutputEmpty() // Don't suggest to use ${HOMEPAGE:Q}.
 }
 
+func (s *Suite) Test_MkLine_VariableNeedsQuoting__MASTER_SITES_and_HOMEPAGE(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+	mklines := t.NewMkLines("Makefile",
+		MkRcsID,
+		"MASTER_SITES=\t${HOMEPAGE}",
+		"MASTER_SITES=\t${PATH}", // Some nonsense just for branch coverage.
+		"HOMEPAGE=\t${MASTER_SITES}",
+		"HOMEPAGE=\t${BUILD_DIRS}") // Some nonsense just for branch coverage.
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"WARN: Makefile:3: Please use ${PATH:Q} instead of ${PATH}.",
+		"WARN: Makefile:4: HOMEPAGE should not be defined in terms of MASTER_SITEs.",
+		"WARN: Makefile:5: Please use ${BUILD_DIRS:Q} instead of ${BUILD_DIRS}.")
+}
+
 // Before November 2018, pkglint did not parse $$(subshell) commands very well.
 // As a side effect, it sometimes issued wrong warnings about the :Q modifier.
 //
@@ -743,6 +776,13 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__uncovered_cases(c *check.C) {
 		"WARN: ~/Makefile:6: The variable PATH may not be set by any package.",
 		"WARN: ~/Makefile:6: PREFIX should not be evaluated at load time.",
 		"WARN: ~/Makefile:6: PATH should not be evaluated at load time.")
+
+	// Just for branch coverage.
+	trace.Tracing = false
+	MkLineChecker{mklines.mklines[2]}.Check()
+
+	t.CheckOutputLines(
+		"WARN: ~/Makefile:3: GO_SRCPATH is defined but not used.")
 }
 
 func (s *Suite) Test_MkLine__shell_varuse_in_backt_dquot(c *check.C) {
@@ -832,6 +872,17 @@ func (s *Suite) Test_MkLine_ValueSplit(c *check.C) {
 		"",
 		"${VAR2}two",
 		"words")
+
+}
+
+func (s *Suite) Test_MkLine_ValueSplit__invalid_argument(c *check.C) {
+	t := s.Init(c)
+
+	mkline := t.NewMkLine("filename.mk", 123, "VAR=\tvalue")
+
+	t.ExpectPanic(
+		func() { mkline.ValueSplit("value", "") },
+		"Pkglint internal error: Separator must not be empty; use ValueFields to split on whitespace")
 }
 
 func (s *Suite) Test_MkLine_Fields__varassign(c *check.C) {
@@ -934,8 +985,8 @@ func (s *Suite) Test_MkLine_ValueTokens(c *check.C) {
 
 	testTokens := func(value string, expected ...*MkToken) {
 		mkline := t.NewMkLine("Makefile", 1, "PATH=\t"+value)
-		split := mkline.ValueTokens()
-		c.Check(split, deepEquals, expected)
+		tokens, _ := mkline.ValueTokens()
+		c.Check(tokens, deepEquals, expected)
 	}
 
 	testTokens("#empty",
@@ -957,14 +1008,46 @@ func (s *Suite) Test_MkLine_ValueTokens__caching(c *check.C) {
 	t := s.Init(c)
 
 	mkline := t.NewMkLine("Makefile", 1, "PATH=\tvalue ${UNFINISHED")
-	split := mkline.ValueTokens()
+	tokens, rest := mkline.ValueTokens()
 
-	c.Check(split, deepEquals, []*MkToken{{"value ", nil}})
+	c.Check(tokens, deepEquals, []*MkToken{{"value ", nil}})
+	c.Check(rest, equals, "${UNFINISHED")
 
-	split2 := mkline.ValueTokens() // This time the slice is taken from the cache.
+	tokens2, rest2 := mkline.ValueTokens() // This time the slice is taken from the cache.
 
 	// In Go, it's not possible to compare slices for reference equality.
-	c.Check(split2, deepEquals, split)
+	c.Check(tokens2, deepEquals, tokens)
+	c.Check(rest2, equals, rest)
+}
+
+func (s *Suite) Test_MkLine_ValueTokens__caching_parse_error(c *check.C) {
+	t := s.Init(c)
+
+	mkline := t.NewMkLine("Makefile", 1, "PATH=\t${UNFINISHED")
+	tokens, rest := mkline.ValueTokens()
+
+	c.Check(tokens, check.IsNil)
+	c.Check(rest, equals, "${UNFINISHED")
+
+	tokens2, rest2 := mkline.ValueTokens() // This time the slice is taken from the cache.
+
+	// In Go, it's not possible to compare slices for reference equality.
+	c.Check(tokens2, deepEquals, tokens)
+	c.Check(rest2, equals, rest)
+}
+
+func (s *Suite) Test_MkLine_ValueTokens__warnings(c *check.C) {
+	t := s.Init(c)
+
+	mklines := t.NewMkLines("Makefile",
+		MkRcsID,
+		"ROUND=\t$(ROUND)")
+
+	mklines.mklines[1].ValueTokens()
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"WARN: Makefile:2: Please use curly braces {} instead of round parentheses () for ROUND.")
 }
 
 func (s *Suite) Test_MkLine_ResolveVarsInRelativePath(c *check.C) {
@@ -983,6 +1066,7 @@ func (s *Suite) Test_MkLine_ResolveVarsInRelativePath(c *check.C) {
 	}
 
 	test("", ".")
+	test("${PKGSRCDIR}", ".")
 	test("${LUA_PKGSRCDIR}", "../../lang/lua53")
 	test("${PHPPKGSRCDIR}", "../../lang/php72")
 	test("${SUSE_DIR_PREFIX}", "suse100")
@@ -995,6 +1079,10 @@ func (s *Suite) Test_MkLine_ResolveVarsInRelativePath(c *check.C) {
 
 	test("${FILESDIR}", "files")
 	test("${PKGDIR}", ".")
+
+	// Just for branch coverage.
+	G.Testing = false
+	test("${PKGSRCDIR}", "../..")
 }
 
 func (s *Suite) Test_MkLine_ResolveVarsInRelativePath__directory_depth(c *check.C) {
@@ -1128,6 +1216,44 @@ func (s *Suite) Test_Indentation_RememberUsedVariables(c *check.C) {
 	c.Check(ind.Varnames(), deepEquals, []string{"PKGREVISION"})
 }
 
+func (s *Suite) Test_Indentation_TrackAfter__checked_files(c *check.C) {
+	t := s.Init(c)
+
+	mklines := t.NewMkLines("file.mk",
+		MkRcsID,
+		"",
+		".if make(other.mk)",
+		".  include \"other.mk\"",
+		".endif",
+		"",
+		".if exists(checked.mk)",
+		".  include \"checked.mk\"",
+		".elif exists(other-checked.mk)",
+		".  include \"other-checked.mk\"",
+		".endif")
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"ERROR: file.mk:4: Relative path \"other.mk\" does not exist.")
+}
+
+func (s *Suite) Test_Indentation_TrackAfter__lonely_else(c *check.C) {
+	t := s.Init(c)
+
+	mklines := t.NewMkLines("file.mk",
+		MkRcsID,
+		"",
+		".else")
+
+	mklines.Check()
+
+	// Surprisingly, pkglint doesn't report an error about this trivial bug.
+	// This will be caught by bmake, though. Therefore the only purpose of
+	// this test is the branch coverage in the "top.mkline != nil" case.
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_MkLine_DetermineUsedVariables(c *check.C) {
 	t := s.Init(c)
 
@@ -1214,8 +1340,58 @@ func (s *Suite) Test_matchMkDirective(c *check.C) {
 			[]interface{}{true, expectedIndent, expectedDirective, expectedArgs, expectedComment})
 	}
 
-	test(".if ${VAR} == value", "", "if", "${VAR} == value", "")
-	test(".\tendif # comment", "\t", "endif", "", "comment")
-	test(".if ${VAR} == \"#\"", "", "if", "${VAR} == \"", "\"")
-	test(".if ${VAR:[#]}", "", "if", "${VAR:[#]}", "")
+	test(".if ${VAR} == value",
+		"", "if", "${VAR} == value", "")
+
+	test(".\tendif # comment",
+		"\t", "endif", "", "comment")
+
+	test(".if ${VAR} == \"#\"",
+		"", "if", "${VAR} == \"", "\"")
+
+	test(".if ${VAR:[#]}",
+		"", "if", "${VAR:[#]}", "")
+
+	test(".if ${VAR} == \\",
+		"", "if", "${VAR} == \\", "")
+}
+
+func (s *Suite) Test_MatchMkInclude(c *check.C) {
+	t := s.Init(c)
+
+	test := func(input, expectedIndent, expectedDirective, expectedFilename string) {
+		m, indent, directive, args := MatchMkInclude(input)
+		c.Check(
+			[]interface{}{m, indent, directive, args},
+			deepEquals,
+			[]interface{}{true, expectedIndent, expectedDirective, expectedFilename})
+	}
+
+	testFail := func(input string) {
+		m, _, _, _ := MatchMkInclude(input)
+		if m {
+			c.Errorf("Text %q unexpectedly matched.", input)
+		}
+	}
+
+	testFail("")
+	testFail(".")
+	testFail(".include")
+	testFail(".include \"")
+	testFail(".include \"other.mk")
+	testFail(".include \"other.mk\" \"")
+
+	test(".include \"other.mk\"",
+		"", "include", "other.mk")
+
+	test(".include \"other.mk\"\t",
+		"", "include", "other.mk")
+
+	test(".include \"other.mk\"\t#",
+		"", "include", "other.mk")
+
+	test(".include \"other.mk\"\t# comment",
+		"", "include", "other.mk")
+
+	t.CheckOutputEmpty()
 }
