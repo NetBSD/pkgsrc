@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:59:32 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/02/21 14:32:32 tsutsui Exp $
 bin/bggen
 bin/vdcomp
 bin/xcmap
 bin/xv
 bin/xvpictoppm
 lib/X11/xv_mgcsfx.sample
-${IMAKE_MAN_DIR}/xv.${IMAKE_MANNEWSUFFIX}
-${IMAKE_MAN_DIR}/bggen.${IMAKE_MANNEWSUFFIX}
-${IMAKE_MAN_DIR}/vdcomp.${IMAKE_MANNEWSUFFIX}
-${IMAKE_MAN_DIR}/xcmap.${IMAKE_MANNEWSUFFIX}
-${IMAKE_MAN_DIR}/xvpictoppm.${IMAKE_MANNEWSUFFIX}
+${IMAKE_MAN_DIR}/xv.${IMAKE_MAN_SUFFIX}
+${IMAKE_MAN_DIR}/bggen.${IMAKE_MAN_SUFFIX}
+${IMAKE_MAN_DIR}/vdcomp.${IMAKE_MAN_SUFFIX}
+${IMAKE_MAN_DIR}/xcmap.${IMAKE_MAN_SUFFIX}
+${IMAKE_MAN_DIR}/xvpictoppm.${IMAKE_MAN_SUFFIX}
 share/doc/xv/README
 share/doc/xv/xvdocs.ps
