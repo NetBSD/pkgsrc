@@ -1,1 +1,2 @@
-This provides the fontenc Library from the modular X.org X11 project.
+The libfontenc library is used by the Xorg server and other X font
+tools for handling fonts with different character set encodings.
