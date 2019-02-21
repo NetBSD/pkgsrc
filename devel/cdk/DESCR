@@ -1,5 +1,4 @@
-CDK is a widget set developed on top of the basic curses
-library. It contains 21 ready to use widgets. Some which
-are a text entry field, a scrolling list, a selection list,
-a alphalist, pull-down menu, radio list, viewer widget,
-dialog box, and many more.
+CDK is a widget set developed on top of the basic curses library.  It
+contains a large number of ready to use widgets, including a text entry
+field, a scrolling list, a selection list, a alphalist, pull-down menu,
+radio list, viewer widget, dialog box.
