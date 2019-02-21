@@ -1,22 +1,19 @@
-# $NetBSD: Makefile,v 1.38 2017/08/01 17:40:09 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.39 2019/02/21 09:59:30 wiz Exp $
 
-DISTNAME=		latestCDK
-PKGNAME=		cdk-4.9.9
-PKGREVISION=		5
+DISTNAME=		cdk-5.0-20180306
+PKGNAME=		${DISTNAME:S/5.0-/5.0./}
 CATEGORIES=		devel
-MASTER_SITES=		http://www.vexus.ca/release/
+MASTER_SITES=		ftp://ftp.invisible-island.net/cdk/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-#HOMEPAGE=		http://www.vexus.ca/products/CDK/
+HOMEPAGE=		http://invisible-island.net/cdk/
 COMMENT=		Curses Development Kit
 
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+WRKSRC=			${WRKDIR}/${DISTNAME}
 USE_NCURSES=		yes # uses ncurses internals
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		autoconf213
 
 BUILD_TARGET=		default
 
@@ -24,8 +21,8 @@ INSTALL_MAKE_FLAGS+=	INSTALL_DIR=${DESTDIR}${PREFIX} \
 			MAN_DIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
 INSTALLATION_DIRS=	share/examples/cdk
 
-pre-configure:
-	cd ${WRKSRC}; autoconf
+# put Cdk's include-directory at the front to avoid conflict with menu.h
+CFLAGS+=		-I./include
 
 post-install:
 	for file in ${WRKSRC}/examples/*.c ${WRKSRC}/examples/Makefile; do \
