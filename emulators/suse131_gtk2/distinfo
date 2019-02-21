@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2016/06/17 17:21:38 tsutsui Exp $
+$NetBSD: distinfo,v 1.10 2019/02/21 01:54:56 tsutsui Exp $
 
 SHA1 (suse131/gdk-pixbuf-query-loaders-2.30.1-20.1.i586.rpm) = 7b0ba199a95aba9648be1f08bbaa66d39aa1ae67
 RMD160 (suse131/gdk-pixbuf-query-loaders-2.30.1-20.1.i586.rpm) = a6f7fc419dc7655689c25be5c24c697321f3f614
@@ -8,6 +8,14 @@ SHA1 (suse131/gdk-pixbuf-query-loaders-2.30.1-20.1.x86_64.rpm) = ebb97983014d6ed
 RMD160 (suse131/gdk-pixbuf-query-loaders-2.30.1-20.1.x86_64.rpm) = 0581c36a91209278b2f675bf4f7f077ecdcfdd53
 SHA512 (suse131/gdk-pixbuf-query-loaders-2.30.1-20.1.x86_64.rpm) = 8eeb9b2ce9715e196e46adb215fb1cfea2c7da92dd3870d28023a9b5544c0943c2ebbd463af5b1908c5820b4b89ae0b66d92e814bb5207cae9c4f5b6bbcd6c02
 Size (suse131/gdk-pixbuf-query-loaders-2.30.1-20.1.x86_64.rpm) = 19970 bytes
+SHA1 (suse131/gtk2-immodule-xim-2.24.23-7.1.i586.rpm) = 2c5ab378dba2f4a3a272e68bd3cd4220babb5fbe
+RMD160 (suse131/gtk2-immodule-xim-2.24.23-7.1.i586.rpm) = cb1f81c699d5b98ab0a2eaf10a0dd999e6655f78
+SHA512 (suse131/gtk2-immodule-xim-2.24.23-7.1.i586.rpm) = acd9a48a1f3854615a2d96e8f272a00fc9ec1fe5acb6fa398d7ba2435554ccd10990dfde27d739616e9fb30200048989bd4d5780501b4a47f0bd651829f98895
+Size (suse131/gtk2-immodule-xim-2.24.23-7.1.i586.rpm) = 78163 bytes
+SHA1 (suse131/gtk2-immodule-xim-2.24.23-7.1.x86_64.rpm) = 5515b8758c975fc838c786c1bbf2bf298633b561
+RMD160 (suse131/gtk2-immodule-xim-2.24.23-7.1.x86_64.rpm) = c5a58c7495fcf2a870146c02f8b15fda40269c56
+SHA512 (suse131/gtk2-immodule-xim-2.24.23-7.1.x86_64.rpm) = 1f93f7fc65260e12b9af2c97ae46ac332f592a80683351adf677b2f92cab313115479171306cca084a2644657c99dabccc9d0ab87ef0417fddbccb8ac7393216
+Size (suse131/gtk2-immodule-xim-2.24.23-7.1.x86_64.rpm) = 78076 bytes
 SHA1 (suse131/gtk2-tools-2.24.23-7.1.i586.rpm) = f47cc37d1fcde8a19d7ab83d473c0971f340e184
 RMD160 (suse131/gtk2-tools-2.24.23-7.1.i586.rpm) = 849548219dd2f1d5f2fe68c09f2770ed88818368
 SHA512 (suse131/gtk2-tools-2.24.23-7.1.i586.rpm) = 42689b2a4e079977c51beea5bbfb945ea61bfe3e903fd05c5215bc64977fdc0ad0cca3535ea6c3b2697f4b784af9c58716713db485ab5b8dd6e5147e90ff5450
