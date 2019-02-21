@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.843 2019/02/21 09:59:39 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.844 2019/02/21 10:29:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1516,3 +1516,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/xvinfo to 1.1.4 [wiz 2019-02-21]
 	Updated fonts/libfontenc to 1.1.4 [wiz 2019-02-21]
 	Updated devel/cdk to 5.0.20180306 [wiz 2019-02-21]
+	Updated misc/py-tqdm to 4.31.1 [adam 2019-02-21]
+	Updated devel/py-Pyro to 4.75 [adam 2019-02-21]
