@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 03:29:12 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/02/21 09:47:24 wiz Exp $
 
-SHA1 (xstdcmap-1.0.3.tar.bz2) = b7fcc50ae6100d2ba91d6847969fd9d2b6784a90
-RMD160 (xstdcmap-1.0.3.tar.bz2) = 139d801a9f90648fd1ab3b11af07925bea6dd578
-SHA512 (xstdcmap-1.0.3.tar.bz2) = 8037ddb9c6b8f3a65d35637a1fca2b1b6c7e76afce5c13b1947cf72c3ca87679aa2ed05caf308d90549432b7fe029a522a99f32701bd0087c140bf4fafdb4d49
-Size (xstdcmap-1.0.3.tar.bz2) = 117491 bytes
+SHA1 (xstdcmap-1.0.4.tar.bz2) = a5eff72ba31625e5b11506add800140019a39636
+RMD160 (xstdcmap-1.0.4.tar.bz2) = 38bcc606abf24411722ce599f447a4c28d85781d
+SHA512 (xstdcmap-1.0.4.tar.bz2) = 2adbb0aec1766341e04090efa962241ff6c9e32c612851b7221cec0ee16852107d406a08ec5251070f39df882c13e3c8c9edcd88f278187a9f373e1727643a8f
+Size (xstdcmap-1.0.4.tar.bz2) = 126269 bytes
