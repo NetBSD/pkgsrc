@@ -73,18 +73,20 @@ loop:
 				continue
 			}
 
-			cond.Walk(&MkCondCallback{
-				Empty: func(varuse *MkVarUse) {
-					if varuse.varname == "PKG_OPTIONS" && len(varuse.modifiers) == 1 {
-						if m, positive, pattern := varuse.modifiers[0].MatchMatch(); m && positive {
-							option := pattern
-							if !containsVarRef(option) {
-								handledOptions[option] = mkline
-								optionsInDeclarationOrder = append(optionsInDeclarationOrder, option)
-							}
+			recordUsedOption := func(varuse *MkVarUse) {
+				if varuse.varname == "PKG_OPTIONS" && len(varuse.modifiers) == 1 {
+					if m, positive, pattern := varuse.modifiers[0].MatchMatch(); m && positive {
+						option := pattern
+						if !containsVarRef(option) {
+							handledOptions[option] = mkline
+							optionsInDeclarationOrder = append(optionsInDeclarationOrder, option)
 						}
 					}
-				}})
+				}
+			}
+			cond.Walk(&MkCondCallback{
+				Empty: recordUsedOption,
+				Var:   recordUsedOption})
 
 			if cond.Empty != nil && mkline.HasElseBranch() {
 				mkline.Notef("The positive branch of the .if/.else should be the one where the option is set.")
@@ -101,14 +103,14 @@ loop:
 		declared := declaredOptions[option]
 		handled := handledOptions[option]
 
-		if handled == nil {
+		switch {
+		case handled == nil:
 			declared.Warnf("Option %q should be handled below in an .if block.", option)
 			G.Explain(
 				"If an option is not processed in this file, it may either be a",
 				"typo, or the option does not have any effect.")
-		}
 
-		if declared == nil {
+		case declared == nil:
 			handled.Warnf("Option %q is handled but not added to PKG_SUPPORTED_OPTIONS.", option)
 			G.Explain(
 				"This block of code will never be run since PKG_OPTIONS cannot",
@@ -117,5 +119,5 @@ loop:
 		}
 	}
 
-	SaveAutofixChanges(mklines.lines)
+	mklines.SaveAutofixChanges()
 }
