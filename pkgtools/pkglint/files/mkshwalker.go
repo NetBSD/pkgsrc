@@ -52,7 +52,7 @@ type MkShWalkerPathElement struct {
 	// arguments individually, arg1 will have index 0 and arg2 will have index 1.
 	//
 	// TODO: It might be worth defining negative indexes to correspond
-	// to the fields "Cond", "Action", "Else", etc.
+	//  to the fields "Cond", "Action", "Else", etc.
 	Index int
 
 	Element interface{}

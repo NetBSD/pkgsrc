@@ -761,7 +761,7 @@ func (mkline *MkLineImpl) VariableNeedsQuoting(varname string, vartype *Vartype,
 
 func (mkline *MkLineImpl) DetermineUsedVariables() []string {
 	// TODO: It would be good to have these variables as MkVarUse objects
-	// including the context in which they are used.
+	//  including the context in which they are used.
 
 	var varnames []string
 

@@ -796,7 +796,7 @@ func (s *Suite) Test_MkCondWalker_Walk(c *check.C) {
 	}
 
 	// TODO: Add callbacks for And, Or, Not if needed.
-	// Especially Not(Empty(VARNAME)) should be an interesting case.
+	//  Especially Not(Empty(VARNAME)) should be an interesting case.
 
 	mkline.Cond().Walk(&MkCondCallback{
 		Defined: func(varname string) {

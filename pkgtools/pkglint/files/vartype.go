@@ -105,8 +105,8 @@ func (vt *Vartype) AllowedFiles(perms ACLPermissions) string {
 // IsConsideredList returns whether the type is considered a list.
 //
 // FIXME: Explain why this method is necessary. IsList is clear, and MayBeAppendedTo also,
-// but this in-between state needs a decent explanation.
-// Probably MkLineChecker.checkVartype needs to be revisited completely.
+//  but this in-between state needs a decent explanation.
+//  Probably MkLineChecker.checkVartype needs to be revisited completely.
 func (vt *Vartype) IsConsideredList() bool {
 	if vt.kindOfList == lkShell {
 		return true
