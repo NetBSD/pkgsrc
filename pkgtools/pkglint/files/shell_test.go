@@ -568,7 +568,7 @@ func (s *Suite) Test_ShellLine_CheckWord__squot_dollar(c *check.C) {
 	shline.CheckWord(shline.mkline.ShellCommand(), false, RunTime)
 
 	// FIXME: Should be parsed correctly. Make passes the dollar through (probably),
-	// and the shell parser should complain about the unfinished string literal.
+	//  and the shell parser should complain about the unfinished string literal.
 	t.CheckOutputLines(
 		"WARN: filename:1: Internal pkglint error in ShTokenizer.ShAtom at \"$\" (quoting=s).",
 		"WARN: filename:1: Internal pkglint error in ShellLine.CheckWord at \"'$\" (quoting=s), rest: $")
@@ -916,7 +916,6 @@ func (s *Suite) Test_ShellLine_checkWordQuoting(c *check.C) {
 
 	test(108, "$$$$")
 
-	// TODO: The $ variable in line 108 doesn't need quoting.
 	t.CheckOutputLines(
 		"WARN: module.mk:102: Unquoted shell variable \"from\".",
 		"WARN: module.mk:102: Unquoted shell variable \"to\".",

@@ -610,8 +610,8 @@ func (cv *VartypeCheck) Identifier() {
 	}
 
 	if cv.Value != cv.ValueNoVar {
-		// TODO: Activate this warning again, or document why it is not useful.
-		//line.logWarning("Identifiers should be given directly.")
+		// TODO: Activate this warning again, or document why that is not useful.
+		//  line.logWarning("Identifiers should be given directly.")
 	}
 
 	switch {

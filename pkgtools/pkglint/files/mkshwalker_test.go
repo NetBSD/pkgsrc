@@ -49,7 +49,7 @@ func (s *Suite) Test_MkShWalker_Walk(c *check.C) {
 		walker.Walk(list)
 
 		// TODO: Provide a reduced AST that omits all "AndOr with 1 pipelines", etc.
-		// It should look like this:
+		//  It should look like this:
 		//
 		//  List with 5 andOrs (or generic Commands?)
 		//    If with 1 then-branch(es)
