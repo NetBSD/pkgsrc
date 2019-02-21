@@ -1,2 +1,3 @@
-The xmodmap tool is used to modify keymaps and pointer button mappings in X.
-This is from modular Xorg.
+The xmodmap program is used to edit and display the keyboard modifier
+map and keymap table that are used by client applications to convert
+event keycodes into keysyms.
