@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.5 2018/06/21 22:36:36 tez Exp $
+$NetBSD: patch-xvpng.c,v 1.1 2019/02/21 14:32:32 tsutsui Exp $
 
 Fix build with libpng 1.5.
 Fix CVE-2017-18215 from https://bugzilla.suse.com/show_bug.cgi?id=1043479
