@@ -1,4 +1,2 @@
-This package provides xvinfo, a program to query the capability of the
-video adaptor accessible through the X-Video extension.
-
-This is from the modular X.org X11 project.
+xvinfo prints out the capabilities of any video adaptors associated
+with the display that are accessible through the X-Video extension.
