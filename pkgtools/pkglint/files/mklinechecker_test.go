@@ -778,9 +778,9 @@ func (s *Suite) Test_MkLineChecker_Check__varuse_modifier_L(c *check.C) {
 	// name of another variable, and that variable is not known. Only XKBBASE is known.
 	//
 	// FIXME: The below warnings are wrong because the MkParser does not recognize the
-	// slash as part of a variable name. Because of that, parsing stops before the $.
-	// The warning "Unclosed Make variable" wrongly assumes that any parse error from
-	// a variable use is because of unclosed braces, which it isn't in this case.h
+	//  slash as part of a variable name. Because of that, parsing stops before the $.
+	//  The warning "Unclosed Make variable" wrongly assumes that any parse error from
+	//  a variable use is because of unclosed braces, which it isn't in this case.
 	t.CheckOutputLines(
 		"WARN: x11/xkeyboard-config/Makefile:2: Unclosed Make variable starting at \"${${XKBBASE}/xkbcomp...\".",
 		"WARN: x11/xkeyboard-config/Makefile:2: Unclosed Make variable starting at \"${${XKBBASE}/xkbcomp...\".")
@@ -810,7 +810,7 @@ func (s *Suite) Test_MkLineChecker_checkDirectiveCondEmpty(c *check.C) {
 	ck := MkLineChecker{mkline}
 
 	// FIXME: checkDirectiveCondEmpty cannot know whether it is empty(...) or !empty(...).
-	// It must know that to generate the proper diagnostics.
+	//  It must know that to generate the proper diagnostics.
 
 	ck.checkDirectiveCondEmpty(NewMkVarUse("PKGPATH", "Mpattern"))
 

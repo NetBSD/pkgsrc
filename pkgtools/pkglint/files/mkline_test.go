@@ -709,7 +709,7 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__only_remove_known(c *check.C) 
 }
 
 // TODO: COMPILER_RPATH_FLAG and LINKER_RPATH_FLAG have different types
-// defined in vardefs.go; examine why.
+//  defined in vardefs.go; examine why.
 func (s *Suite) Test_MkLine_VariableNeedsQuoting__shellword_part(c *check.C) {
 	t := s.Init(c)
 
