@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2018/03/07 11:57:48 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2019/02/21 09:47:24 wiz Exp $
 
-DISTNAME=	xstdcmap-1.0.3
-PKGREVISION=	1
+DISTNAME=	xstdcmap-1.0.4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
