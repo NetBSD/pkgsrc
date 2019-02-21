@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/01/14 10:16:29 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/02/21 05:56:57 tsutsui Exp $
 
 DISTNAME=		libreoffice5-bin	# overridden below
 PKGNAME=		libreoffice5-bin-${OO_RELEASE}
@@ -21,9 +21,9 @@ CONFLICTS+=		libreoffice3-bin-[0-9]*
 CONFLICTS+=		libreoffice4-bin-[0-9]*
 
 OO_VER=			5
-OO_BASEVER=		${OO_VER}.1
-OO_RELEASE=		${OO_BASEVER}.0
-OO_RELEASEV=		${OO_RELEASE}.3
+OO_BASEVER=		${OO_VER}.4
+OO_RELEASE=		${OO_BASEVER}.7
+OO_RELEASEV=		${OO_RELEASE}.2
 PLIST_SUBST+=		VER=${OO_VER:Q} BASEVER=${OO_BASEVER:Q}
 MESSAGE_SUBST+=		VER=${OO_VER:Q}
 FILES_SUBST+=		VER=${OO_VER:Q}
@@ -38,8 +38,8 @@ PLIST_SRC+=		${PKGDIR}/PLIST.dirs
 
 EMUL_PLATFORMS=		linux-i386 linux-x86_64
 #EMUL_PLATFORMS+=	solaris-i386 solaris-sparc
-EMUL_MODULES.linux=	freetype2 x11 locale png fontconfig cups gtk2 krb5
-EMUL_MODULES.linux+=	dbus dbus-glib glx
+EMUL_MODULES.linux=	cups dbus dbus-glib fontconfig freetype2 glx
+EMUL_MODULES.linux+=	gstreamer gtk2 krb5 locale png x11
 EMUL_REQD=		suse>=11.3
 
 EMUL_PKG_FMT=		rpm
@@ -54,13 +54,13 @@ USE_TOOLS+=	patch uniq
 .include "../../mk/bsd.prefs.mk"
 
 .if ${EMUL_PLATFORM} == "linux-i386"
-DISTNAME=		LibreOffice_${OO_RELEASE}_Linux_x86_rpm
+DISTNAME=		LibreOffice_${OO_RELEASEV}_Linux_x86_rpm
 WRKSRC=			${WRKDIR}/LibreOffice_${OO_RELEASEV}_Linux_x86_rpm
-MASTER_SITES=		http://download.documentfoundation.org/libreoffice/stable/${OO_RELEASE}/rpm/x86/
+MASTER_SITES=		https://downloadarchive.documentfoundation.org/libreoffice/old/${OO_RELEASEV}/rpm/x86/
 .elif ${EMUL_PLATFORM} == "linux-x86_64"
-DISTNAME=		LibreOffice_${OO_RELEASE}_Linux_x86-64_rpm
+DISTNAME=		LibreOffice_${OO_RELEASEV}_Linux_x86-64_rpm
 WRKSRC=			${WRKDIR}/LibreOffice_${OO_RELEASEV}_Linux_x86-64_rpm
-MASTER_SITES=		http://download.documentfoundation.org/libreoffice/stable/${OO_RELEASE}/rpm/x86_64/
+MASTER_SITES=		https://downloadarchive.documentfoundation.org/libreoffice/old/${OO_RELEASEV}/rpm/x86_64/
 .endif
 
 .include "options.mk"
