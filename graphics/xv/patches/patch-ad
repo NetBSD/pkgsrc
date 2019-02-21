@@ -1,7 +1,10 @@
-$NetBSD: patch-ad,v 1.11 2009/05/03 22:58:31 abs Exp $
+$NetBSD: patch-ad,v 1.12 2019/02/21 01:37:14 tsutsui Exp $
+
+- use jpeg, png, tiff, and zlib from pkgsrc
+- make ghostscript support optional
 
 diff -u Imakefile Imakefile
---- Imakefile.orig
+--- Imakefile.orig	2019-02-17 16:07:37.119347259 +0000
 +++ Imakefile
 @@ -6,13 +6,15 @@
  /* if, for whatever reason, you're unable to get the JPEG library to compile
@@ -21,17 +24,18 @@ diff -u Imakefile Imakefile
  
  
  /* if, for whatever reason, you're unable to get the PDS/VICAR support
-@@ -21,6 +23,9 @@
+@@ -21,6 +23,10 @@
  #define HavePDS
  
  
++/* #define UseInstalledGhostScript */
 +#define UseInstalledPng
 +#define UseInstalledZlib
 +
  /*
   * if you are running on a SysV-based machine, such as HP, Silicon Graphics,
   * etc, uncomment one of the following lines to get you *most* of the way
-@@ -124,20 +129,62 @@
+@@ -124,20 +130,66 @@ MGCSFX = -DMGCSFXDIR=\"$(MGCSFXDIR)\"
  JPEG = -DDOJPEG
  JPEGDIR = jpeg
  LIBJPEG = $(JPEGDIR)/libjpeg.a
@@ -63,6 +67,10 @@ diff -u Imakefile Imakefile
  PDS = -DDOPDS
  #endif
  
++#ifdef UseInstalledGhostScript
++GS = -DDOGS
++#endif
++
 +/*
 +###
 +### if, for whatever reason, you're unable to get the PNG library to compile
@@ -94,7 +102,7 @@ diff -u Imakefile Imakefile
  
  #if defined(SCOArchitecture)
  SCO= -Dsco -DPOSIX -DNO_RANDOM 
-@@ -149,14 +196,14 @@
+@@ -149,14 +201,14 @@ SYS_LIBRARIES=        -lm
  #endif
  
  
@@ -105,7 +113,7 @@ diff -u Imakefile Imakefile
  
  DEFINES= $(SCO) $(UNIX) $(NODIRENT) $(VPRINTF) $(TIMERS) \
 -	$(HPUX7) $(JPEG) $(TIFF) $(PDS) $(DXWM) $(RAND) \
-+	$(HPUX7) $(JPEG) $(TIFF) $(PNG) $(PDS) $(DXWM) $(RAND) \
++	$(HPUX7) $(JPEG) $(TIFF) $(GS) $(PNG) $(PDS) $(DXWM) $(RAND) \
  	$(BACKING_STORE) $(BSDTYPES) $(SGI) $(MGCSFX)
  
 -INCLUDES = $(JPEGINCLUDE) $(TIFFINCLUDE)
