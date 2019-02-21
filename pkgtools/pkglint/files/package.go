@@ -166,9 +166,9 @@ func (pkg *Package) loadPackageMakefile() MkLines {
 	}
 
 	// TODO: Is this still necessary? This code is 20 years old and was introduced
-	// when pkglint loaded the package Makefile including all included files into
-	// a single string. Maybe it makes sense to print the file inclusion hierarchy
-	// to quickly see files that cannot be included because of unresolved variables.
+	//  when pkglint loaded the package Makefile including all included files into
+	//  a single string. Maybe it makes sense to print the file inclusion hierarchy
+	//  to quickly see files that cannot be included because of unresolved variables.
 	if G.Opts.DumpMakefile {
 		G.out.WriteLine("Whole Makefile (with all included files) follows:")
 		for _, line := range allLines.lines.Lines {
@@ -885,9 +885,9 @@ func (pkg *Package) checkIncludeConditionally(mkline MkLine, indentation *Indent
 		}
 
 		// TODO: Check whether the conditional variables are the same on both places.
-		// Ideally they should match, but there may be some differences in internal
-		// variables, which need to be filtered out before comparing them, like it is
-		// already done with *_MK variables.
+		//  Ideally they should match, but there may be some differences in internal
+		//  variables, which need to be filtered out before comparing them, like it is
+		//  already done with *_MK variables.
 	}
 }
 
