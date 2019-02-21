@@ -34,3 +34,18 @@ func (s *Suite) Test_LinesLexer_SkipEmptyOrNote__end_of_file(c *check.C) {
 	t.CheckOutputLines(
 		"NOTE: file.txt:2: Empty line expected after this line.")
 }
+
+func (s *Suite) Test_LinesLexer_SkipPrefix(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.NewLines("file.txt",
+		"line 1",
+		"line 2")
+	llex := NewLinesLexer(lines)
+
+	t.Check(llex.SkipPrefix("line 1"), equals, true)
+	t.Check(llex.SkipPrefix("line 1"), equals, false)
+	t.Check(llex.SkipPrefix("line 2"), equals, true)
+	t.Check(llex.SkipPrefix("line 2"), equals, false)
+	t.Check(llex.SkipPrefix(""), equals, false)
+}
