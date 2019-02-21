@@ -1,7 +1,7 @@
-PKGLINT(1)              NetBSD General Commands Manual              PKGLINT(1)
+PKGLINT(1)                  General Commands Manual                 PKGLINT(1)
 
 NNAAMMEE
-     ppkkgglliinntt -- static analyzer for pkgsrc packages
+     ppkkgglliinntt - static analyzer for pkgsrc packages
 
 SSYYNNOOPPSSIISS
      ppkkgglliinntt [--ooppttiioonnss] [_d_i_r _._._.]
@@ -9,6 +9,7 @@ SSYYNNOOPPSSIISS
 DDEESSCCRRIIPPTTIIOONN
      ppkkgglliinntt attempts to detect features of the named pkgsrc packages that are
      likely to be bugs, or that are simply deprecated.
+
 
    OOppttiioonnss
      --CC{{[[nnoo--]]cchheecckk,,......}}  Enable or disable specific checks.  For a list of
@@ -62,78 +63,39 @@ DDEESSCCRRIIPPTTIIOONN
 
      nnoonnee                Disable all checks.
 
-     [[nnoo--]]AALLTTEERRNNAATTIIVVEESS   Check the alternatives file.
-
-     [[nnoo--]]DDEESSCCRR          Check the DESCR file.
-
-     [[nnoo--]]IINNSSTTAALLLL        Check the INSTALL and DEINSTALL scripts.
-
-     [[nnoo--]]MMaakkeeffiillee       Check the package Makefile, including all included
-                         files.
-
-     [[nnoo--]]MMEESSSSAAGGEE        Check MESSAGE files.
-
-     [[nnoo--]]PPLLIISSTT          Check PLIST files.
-
-     [[nnoo--]]bbll33            Check buildlink3 Makefiles.
-
-     [[nnoo--]]ddiissttiinnffoo       Check the distinfo file.
-
      [[nnoo--]]eexxttrraa          Check remaining files in the package directory.
 
-     [[nnoo--]]mmkk             Check Makefile fragments besides buildlink3.
-
-     [[nnoo--]]ppaattcchheess        Check the pkgsrc specific patch files.
+     [[nnoo--]]gglloobbaall         Check inter-package consistency for distfile hashes
+                         and used licenses.
 
    WWaarrnniinnggss
      aallll                 Enable all warnings.
 
      nnoonnee                Disable all warnings.
 
-     [[nnoo--]]aabbssnnaammee        Warn if a file contains an absolute pathname.
-
-     [[nnoo--]]ddiirreeccttccmmdd      Warn if a system command name is used instead of a
-                         variable (e.g. sed instead of ${SED}).
-
      [[nnoo--]]eexxttrraa          Emit some additional warnings that are not enabled by
                          default.
-
-     [[nnoo--]]oorrddeerr          Warn if Makefile variables are not in the preferred
-                         order.
 
      [[nnoo--]]ppeerrmm           Warn if a variable is used or modified outside its
                          specified scope.
 
-     [[nnoo--]]pplliisstt--ddeepprr     Warn if deprecated pathnames are used in _P_L_I_S_T files.
-                         This warning is disabled by default.
-
-     [[nnoo--]]pplliisstt--ssoorrtt     Warn if items of a PLIST file are not sorted alpha-
-                         betically.  This warning is disabled by default.
-
      [[nnoo--]]qquuoottiinngg        Warn for possibly invalid quoting of make variables
                          in shell programs and shell variables themselves.
 
-     [[nnoo--]]ssppaaccee          Emit notes for inconsistent use of white-space.
+     [[nnoo--]]ssppaaccee          Emit notes for inconsistent use of whitespace.
 
      [[nnoo--]]ssttyyllee          Warn for stylistic issues that don't affect the build
                          process.
 
-     [[nnoo--]]ttyyppeess          Warn for some _M_a_k_e_f_i_l_e variables if their assigned
-                         values do not match their type.
-
-     [[nnoo--]]vvaarroorrddeerr       Warn if the variables in a package _M_a_k_e_f_i_l_es are not
-                         ordered in the way it is described the pkgsrc guide.
-
    OOtthheerr aarrgguummeennttss
-           _d_i_r _._._.             The pkgsrc directories to be checked.  If omit-
-                               ted, the current directory is checked.
+           _d_i_r _._._.             The pkgsrc directories to be checked.  If
+                               omitted, the current directory is checked.
 
 FFIILLEESS
-     pkgsrc/mk/*  Files from the pkgsrc infrastructure.
+     _p_k_g_s_r_c_/_m_k_/_*  Files from the pkgsrc infrastructure.
 
 EEXXAAMMPPLLEESS
-     ppkkgglliinntt --CCnnoonnee,,ppaattcchheess ..
-                 Checks the patches of the package in the current directory.
+     ppkkgglliinntt ..   Checks the package in the current directory.
 
      ppkkgglliinntt --WWaallll //uussrr//ppkkggssrrcc//ddeevveell
                  Checks the category Makefile and reports any warnings it can
@@ -155,4 +117,4 @@ BBUUGGSS
      If you don't understand the messages, feel free to ask the author or on
      the <pkgsrc-users@pkgsrc.org> mailing list.
 
-NetBSD 7.0.2                   January 14, 2018                   NetBSD 7.0.2
+NetBSD 8.0                     January 14, 2018                     NetBSD 8.0
