@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2019/02/20 17:47:29 gdt Exp $
+# $NetBSD: Makefile,v 1.16 2019/02/21 00:55:04 gdt Exp $
 
 VERSION_BASE=	5.2.0
 VERSION_RC=	
 VERSION=	${VERSION_BASE}${VERSION_RC}
-PKGREVISION=	2
+PKGREVISION=	3
 # proj RCs have names like 5.1.0RC1 but unpack to 5.1.0
 WRKFINAL=	proj-${VERSION_BASE}
 WRKSRC=		${WRKDIR}/${WRKFINAL}
@@ -12,12 +12,18 @@ CATEGORIES=	geography
 MASTER_SITES=	https://download.osgeo.org/proj/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 		proj-datumgrid-1.8${EXTRACT_SUFX} \
-		proj-datumgrid-north-america-1.1${EXTRACT_SUFX}
+		proj-datumgrid-europe-1.1${EXTRACT_SUFX} \
+		proj-datumgrid-north-america-1.1${EXTRACT_SUFX} \
+		proj-datumgrid-oceania-1.0${EXTRACT_SUFX}
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://proj4.org/
 COMMENT=	Cartographic projection software
 
+# Grid files also have the following "cc-by ish" licenses:
+# cc-by, 2-clause-bsd,  License Ouverte, cc0 (eu)
+# open-government, cc-by, public-domain (na)
+# cc-by (oceania)
 LICENSE=	mit
 
 PREV_PKGPATH=		misc/proj
