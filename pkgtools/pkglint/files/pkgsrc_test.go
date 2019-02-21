@@ -161,7 +161,7 @@ func (s *Suite) Test_Pkgsrc_loadTools__BUILD_DEFS(c *check.C) {
 	c.Check(G.Pkgsrc.IsBuildDef("VARBASE"), equals, false)
 
 	// FIXME: There should be a warning for VARBASE, but G.Pkgsrc.UserDefinedVars
-	// does not contain anything at mklinechecker.go:/UserDefinedVars/.
+	//  does not contain anything at mklinechecker.go:/UserDefinedVars/.
 }
 
 func (s *Suite) Test_Pkgsrc_loadDocChanges__not_found(c *check.C) {
