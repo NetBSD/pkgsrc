@@ -1,10 +1,15 @@
-$NetBSD: patch-ac,v 1.10 2009/05/03 22:58:31 abs Exp $
+$NetBSD: patch-ac,v 1.11 2019/02/21 01:37:14 tsutsui Exp $
 
---- config.h.orig	2007-06-08 07:29:49.000000000 +0000
+- make ghostscript support optional
+- use pkgsrc ${PREFIX} for ghostscript files
+
+--- config.h.orig	2019-02-17 16:07:37.145241693 +0000
 +++ config.h
-@@ -113,9 +113,9 @@
+@@ -112,10 +112,12 @@
+  * should not need to be changed
   */
  
++#ifdef DOGS
  /* #define GS_PATH "/usr/local/bin/gs" */
 -#define GS_PATH "gs"
 -/* #define GS_LIB  "."                 */
@@ -12,6 +17,7 @@ $NetBSD: patch-ac,v 1.10 2009/05/03 22:58:31 abs Exp $
 +#define GS_PATH "@PREFIX@/bin/gs"
 +#define GS_LIB "@PREFIX@/share/ghostscript"
 +#define GS_DEV "ppmraw"
++#endif
  
  
  /***************************************************************************
