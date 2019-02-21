@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.115 2019/02/09 11:29:44 leot Exp $
+$NetBSD: distinfo,v 1.116 2019/02/21 18:52:15 maya Exp $
 
 SHA1 (webkitgtk-2.22.6.tar.xz) = 26a8f8951da03aa4dfc2c25257b6899ea3c2558f
 RMD160 (webkitgtk-2.22.6.tar.xz) = 4ddd00a0eed1e8122a71e070f1f6f5f49f59ca75
@@ -8,6 +8,7 @@ SHA1 (patch-CMakeLists.txt) = 93466370f447c6be9008512aa1fc2dc0bd2b843b
 SHA1 (patch-Source_JavaScriptCore_assembler_ARM64Assembler.h) = a41e02c7a1f9bfb91a2af36ec0410e1bf2b9a745
 SHA1 (patch-Source_JavaScriptCore_assembler_ARMAssembler.h) = bae08310572c2e23c69cbf6aa9760a67345dcfe3
 SHA1 (patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp) = ab75ef8714e5071fcd094735717a2f5d0321c747
+SHA1 (patch-Source_JavaScriptCore_dfg_DFGDoesGC.cpp) = 802d83a69975d0754dfb6198488aacc7e3f04d83
 SHA1 (patch-Source_JavaScriptCore_heap_MarkedSpace.cpp) = e6a23d5ef22bddd0a9606fb0e472960e4cf5673e
 SHA1 (patch-Source_JavaScriptCore_jit_ExecutableAllocator.cpp) = 36d29a5db03c2413ae93224ac391f3ff248983e8
 SHA1 (patch-Source_JavaScriptCore_offlineasm_arm64.rb) = 784baf6f3baba2986fbcb7aa10e7abed8f8c6336
