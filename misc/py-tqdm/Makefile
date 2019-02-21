@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2019/01/28 14:13:50 adam Exp $
+# $NetBSD: Makefile,v 1.4 2019/02/21 10:23:39 adam Exp $
 
-DISTNAME=	tqdm-4.30.0
+DISTNAME=	tqdm-4.31.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tqdm/}
@@ -15,10 +15,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_LANGUAGES=	# none
-
-# for UTF-8 in README.md
-#ALL_ENV+=	LC_CTYPE=en_US.UTF-8
-#ALL_ENV+=	LC_ALL=en_US.UTF-8
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
