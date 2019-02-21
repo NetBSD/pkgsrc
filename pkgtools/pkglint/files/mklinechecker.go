@@ -422,7 +422,7 @@ func (ck MkLineChecker) CheckVaruse(varuse *MkVarUse, vuc *VarUseContext) {
 
 	if G.Opts.WarnQuoting && vuc.quoting != VucQuotUnknown && needsQuoting != unknown {
 		// FIXME: Why "Shellword" when there's no indication that this is actually a shell type?
-		// It's for splitting the value into tokens, taking "double" and 'single' quotes into account.
+		//  It's for splitting the value into tokens, taking "double" and 'single' quotes into account.
 		ck.CheckVaruseShellword(varname, vartype, vuc, varuse.Mod(), needsQuoting)
 	}
 
@@ -587,11 +587,11 @@ func (ck MkLineChecker) checkVarusePermissions(varname string, vartype *Vartype,
 // may not be used at load time.
 func (ck MkLineChecker) warnVaruseToolLoadTime(varname string, tool *Tool) {
 	// TODO: While using a tool by its variable name may be ok at load time,
-	// doing the same with the plain name of a tool is never ok.
-	// "VAR!= cat" is never guaranteed to call the correct cat.
-	// Even for shell builtins like echo and printf, bmake may decide
-	// to skip the shell and execute the commands via execve, which
-	// means that even echo is not a shell-builtin anymore.
+	//  doing the same with the plain name of a tool is never ok.
+	//  "VAR!= cat" is never guaranteed to call the correct cat.
+	//  Even for shell builtins like echo and printf, bmake may decide
+	//  to skip the shell and execute the commands via execve, which
+	//  means that even echo is not a shell-builtin anymore.
 
 	// TODO: Replace "parse time" with "load time" everywhere.
 
