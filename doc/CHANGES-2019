@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.838 2019/02/21 09:44:58 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.839 2019/02/21 09:46:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1511,3 +1511,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/xhost to 1.0.8 [wiz 2019-02-21]
 	Updated x11/xlsatoms to 1.1.3 [wiz 2019-02-21]
 	Updated x11/xmodmap to 1.0.10 [wiz 2019-02-21]
+	Updated x11/xrdb to 1.2.0 [wiz 2019-02-21]
