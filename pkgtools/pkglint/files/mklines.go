@@ -50,7 +50,7 @@ func NewMkLines(lines Lines) MkLines {
 }
 
 // TODO: Consider defining an interface MkLinesChecker (different name, though, since this one confuses even me)
-// that checks a single topic, like:
+//  that checks a single topic, like:
 //
 //  * PlistVars
 //  * ForLoops
