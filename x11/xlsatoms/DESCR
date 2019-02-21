@@ -1,3 +1,1 @@
-xlsatoms lists the interned atoms defined on an X11 server. Version 1.1 and
-later of xlsatoms use (and require) libxcb instead of libX11, for less latency
-when communicating with the X server.
+xlsatoms lists the interned atoms defined on an X11 server.
