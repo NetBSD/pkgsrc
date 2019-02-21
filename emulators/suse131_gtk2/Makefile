@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2016/06/17 17:21:38 tsutsui Exp $
+# $NetBSD: Makefile,v 1.13 2019/02/21 01:54:56 tsutsui Exp $
 
 PKGNAME=	suse_gtk2-${SUSE_VERSION}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	emulators
 RPMUPDPKGS+=	gdk-pixbuf-query-loaders-2.30.1-20.1.${SUSE_ARCH}
 RPMUPDPKGS+=	gtk2-tools-2.24.23-7.1.${SUSE_ARCH}
+RPMUPDPKGS+=	gtk2-immodule-xim-2.24.23-7.1.${SUSE_ARCH}
 RPMPKGS+=	libIDL-2-0-0.8.14-18.1.3.${SUSE_ARCH}
 RPMPKGS+=	libatk-1_0-0-2.10.0-1.1.${SUSE_ARCH}
 RPMUPDPKGS+=	libcairo2-1.12.16-3.4.1.${SUSE_ARCH}
