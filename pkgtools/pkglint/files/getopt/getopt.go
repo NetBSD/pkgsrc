@@ -34,18 +34,55 @@ func (o *Options) AddFlagGroup(shortName rune, longName, argsName, description s
 	return grp
 }
 
+// AddFlagVar adds a boolean flag to the options.
+//
+// Example:
+//  var verbose bool
+//
+//  opts := NewOptions()
+//  opts.AddFlagVar('v', "verbose", &verbose, false, "Enable verbose output")
+//
+// This option can be used in the following ways:
+//  -v
+//  --verbose
+//  --verbose=on    (or yes, 1, true, enabled)
+//  --verbose=off   (or no, 0, false, disabled)
 func (o *Options) AddFlagVar(shortName rune, longName string, pflag *bool, defval bool, description string) {
 	*pflag = defval
 	opt := option{shortName, longName, "", description, pflag}
 	o.options = append(o.options, &opt)
 }
 
+// AddStrVar adds a string option to the options.
+//
+// Example:
+//  var outputFilename string
+//
+//  opts := NewOptions()
+//  opts.AddStrVar('o', "output", &outputFilename, "", "Write the output to the given file")
+//
+// This option can be used in the following ways:
+//  -o output.txt
+//  --output output.txt
+//  --output=output.txt
 func (o *Options) AddStrVar(shortName rune, longName string, pstr *string, defval string, description string) {
 	*pstr = defval
 	opt := option{shortName, longName, "", description, pstr}
 	o.options = append(o.options, &opt)
 }
 
+// AddStrList adds a string option to the options that can be used multiple times.
+//
+// Example:
+//  var includes []string
+//
+//  opts := NewOptions()
+//  opts.AddStrList('i', "include", &includes, nil, "Include the files matching the pattern")
+//
+// This option can be used in the following ways:
+//  -i "*.txt" -i "*.docx"
+//  --include "*.txt" --include "*.md"
+//  --include="*.txt" --include="*.md"
 func (o *Options) AddStrList(shortName rune, longName string, plist *[]string, description string) {
 	*plist = []string{}
 	opt := option{shortName, longName, "", description, plist}
