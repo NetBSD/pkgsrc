@@ -34,18 +34,15 @@ type Pkgsrc struct {
 	LastChange          map[string]*Change  //
 	listVersions        map[string][]string // See ListVersions
 
-	// Variables that may be overridden by the pkgsrc user. Used for checking BUILD_DEFS.
+	// Variables that may be overridden by the pkgsrc user.
+	// They are typically defined in mk/defaults/mk.conf.
+	//
+	// Whenever a package uses such a variable, it must add the variable name
+	// to BUILD_DEFS.
 	UserDefinedVars Scope
 
 	Deprecated map[string]string   //
 	vartypes   map[string]*Vartype // varcanon => type
-
-	// TODO: The Hashes and UsedLicenses are modified after the initialization.
-	//  This contradicts the expectation that all pkgsrc data is constant.
-	//  These two fields should probably be moved to the Pkglint type.
-
-	Hashes       map[string]*Hash // Maps "alg:filename" => hash (inter-package check).
-	UsedLicenses map[string]bool  // Maps "license name" => true (inter-package check).
 }
 
 func NewPkgsrc(dir string) *Pkgsrc {
@@ -62,9 +59,7 @@ func NewPkgsrc(dir string) *Pkgsrc {
 		make(map[string][]string),
 		NewScope(),
 		make(map[string]string),
-		make(map[string]*Vartype),
-		nil, // Only initialized when pkglint is run for a whole pkgsrc installation
-		nil}
+		make(map[string]*Vartype)}
 
 	return &src
 }
@@ -222,7 +217,7 @@ func (src *Pkgsrc) ListVersions(category string, re regex.Pattern, repl string, 
 	// written without dots, which leads to ambiguities:
 	//
 	// databases/postgresql: 94 < 95 < 96 < 10 < 11
-	// lang/go: go19 < go110 < go111 < go2
+	// lang/go: 19 < 110 < 111 < 2
 	keys := make(map[string]int)
 	for _, name := range names {
 		if m, pkgbase, versionStr := match2(name, `^(\D+)(\d+)$`); m {
@@ -240,9 +235,7 @@ func (src *Pkgsrc) ListVersions(category string, re regex.Pattern, repl string, 
 	}
 
 	sort.SliceStable(names, func(i, j int) bool {
-		// TODO: Check if this Less implementation is really transitive.
-		//  examples: ps ps5 ps10 ps96 pq px
-		if keyI, keyJ := keys[names[i]], keys[names[j]]; keyI != 0 && keyJ != 0 {
+		if keyI, keyJ := keys[names[i]], keys[names[j]]; keyI != keyJ {
 			return keyI < keyJ
 		}
 		return naturalLess(names[i], names[j])
@@ -258,7 +251,7 @@ func (src *Pkgsrc) ListVersions(category string, re regex.Pattern, repl string, 
 }
 
 func (src *Pkgsrc) checkToplevelUnusedLicenses() {
-	usedLicenses := src.UsedLicenses
+	usedLicenses := G.UsedLicenses
 	if usedLicenses == nil {
 		return
 	}
@@ -827,6 +820,9 @@ func (src *Pkgsrc) addBuildDefs(varnames ...string) {
 	}
 }
 
+// IsBuildDef returns whether the given variable is automatically added
+// to BUILD_DEFS by the pkgsrc infrastructure. In such a case, the
+// package doesn't need to add the variable to BUILD_DEFS itself.
 func (src *Pkgsrc) IsBuildDef(varname string) bool {
 	return src.buildDefs[varname]
 }

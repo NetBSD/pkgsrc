@@ -102,7 +102,7 @@ func nextLogicalLine(filename string, rawLines []*RawLine, index int) (Line, int
 func matchContinuationLine(textnl string) (leadingWhitespace, text, trailingWhitespace, cont string) {
 	j := len(textnl)
 
-	if j > 0 && textnl[j-1] == '\n' {
+	if textnl[j-1] == '\n' {
 		j--
 	}
 

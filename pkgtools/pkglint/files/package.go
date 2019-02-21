@@ -185,10 +185,10 @@ func (pkg *Package) loadPackageMakefile() MkLines {
 	allLines.collectUsedVariables()
 	allLines.CheckRedundantAssignments()
 
-	pkg.Pkgdir, _ = pkg.vars.Value("PKGDIR")
-	pkg.DistinfoFile, _ = pkg.vars.Value("DISTINFO_FILE")
-	pkg.Filesdir, _ = pkg.vars.Value("FILESDIR")
-	pkg.Patchdir, _ = pkg.vars.Value("PATCHDIR")
+	pkg.Pkgdir = pkg.vars.LastValue("PKGDIR")
+	pkg.DistinfoFile = pkg.vars.LastValue("DISTINFO_FILE")
+	pkg.Filesdir = pkg.vars.LastValue("FILESDIR")
+	pkg.Patchdir = pkg.vars.LastValue("PATCHDIR")
 
 	// See lang/php/ext.mk
 	if varIsDefinedSimilar("PHPEXT_MK") {
@@ -438,6 +438,11 @@ func (pkg *Package) checkGnuConfigureUseLanguages() {
 	vars := pkg.vars
 
 	if gnuLine := vars.FirstDefinition("GNU_CONFIGURE"); gnuLine != nil {
+
+		// FIXME: Instead of using the first definition here, a better approach
+		//  is probably to use all the definitions except those from mk/compiler.mk.
+		//  In real pkgsrc, the last definition is typically from mk/compiler.mk
+		//  and only contains c++.
 		if useLine := vars.FirstDefinition("USE_LANGUAGES"); useLine != nil {
 
 			if matches(useLine.VarassignComment(), `(?-i)\b(?:c|empty|none)\b`) {
@@ -460,7 +465,7 @@ func (pkg *Package) checkGnuConfigureUseLanguages() {
 // It is only used inside pkgsrc to mark changes that are
 // independent from the upstream package.
 func (pkg *Package) nbPart() string {
-	pkgrevision, _ := pkg.vars.Value("PKGREVISION")
+	pkgrevision := pkg.vars.LastValue("PKGREVISION")
 	if rev, err := strconv.Atoi(pkgrevision); err == nil {
 		return "nb" + strconv.Itoa(rev)
 	}
@@ -591,7 +596,7 @@ func (pkg *Package) CheckVarorder(mklines MkLines) {
 		defer trace.Call0()()
 	}
 
-	if !G.Opts.WarnOrder || pkg.seenMakefileCommon {
+	if pkg.seenMakefileCommon {
 		return
 	}
 
@@ -666,12 +671,10 @@ func (pkg *Package) CheckVarorder(mklines MkLines) {
 			variable("TOOL_DEPENDS", many),
 			variable("DEPENDS", many))}
 
-	firstRelevant := -1
-	lastRelevant := -1
+	relevantLines := (func() []MkLine {
+		firstRelevant := -1
+		lastRelevant := -1
 
-	// TODO: understand and explain this code.
-	//  It is much longer and much more complicated than it should be.
-	skip := func() bool {
 		relevantVars := make(map[string]bool)
 		for _, section := range sections {
 			for _, variable := range section.vars {
@@ -693,7 +696,7 @@ func (pkg *Package) CheckVarorder(mklines MkLines) {
 							trace.Stepf("Skipping varorder because of line %s.",
 								mklines.mklines[firstIrrelevant].Linenos())
 						}
-						return true
+						return nil
 					}
 					lastRelevant = i
 				} else {
@@ -713,9 +716,13 @@ func (pkg *Package) CheckVarorder(mklines MkLines) {
 		}
 
 		if firstRelevant == -1 {
-			return true
+			return nil
 		}
-		interesting := mklines.mklines[firstRelevant : lastRelevant+1]
+		return mklines.mklines[firstRelevant : lastRelevant+1]
+	})()
+
+	skip := func() bool {
+		interesting := relevantLines
 
 		varcanon := func() string {
 			for len(interesting) > 0 && interesting[0].IsComment() {
@@ -760,7 +767,7 @@ func (pkg *Package) CheckVarorder(mklines MkLines) {
 		return len(interesting) == 0
 	}
 
-	if skip() {
+	if len(relevantLines) == 0 || skip() {
 		return
 	}
 
@@ -768,7 +775,7 @@ func (pkg *Package) CheckVarorder(mklines MkLines) {
 	for _, section := range sections {
 		for _, variable := range section.vars {
 			found := false
-			for _, mkline := range mklines.mklines[firstRelevant : lastRelevant+1] {
+			for _, mkline := range relevantLines {
 				if mkline.IsVarassign() || mkline.IsCommentedVarassign() {
 					if mkline.Varcanon() == variable.varname {
 						canonical = append(canonical, mkline.Varname())
@@ -791,7 +798,7 @@ func (pkg *Package) CheckVarorder(mklines MkLines) {
 	// TODO: This leads to very long and complicated warnings.
 	//  Those parts that are correct should not be mentioned,
 	//  except if they are helpful for locating the mistakes.
-	mkline := mklines.mklines[firstRelevant]
+	mkline := relevantLines[0]
 	mkline.Warnf("The canonical order of the variables is %s.", strings.Join(canonical, ", "))
 	G.Explain(
 		"In simple package Makefiles, some common variables should be",
@@ -812,8 +819,8 @@ func (pkg *Package) checkLocallyModified(filename string) {
 		defer trace.Call(filename)()
 	}
 
-	owner, _ := pkg.vars.Value("OWNER")
-	maintainer, _ := pkg.vars.Value("MAINTAINER")
+	owner := pkg.vars.LastValue("OWNER")
+	maintainer := pkg.vars.LastValue("MAINTAINER")
 	if maintainer == "pkgsrc-users@NetBSD.org" {
 		maintainer = ""
 	}
@@ -895,6 +902,19 @@ func (pkg *Package) loadPlistDirs(plistFilename string) {
 				pkg.Plist.Dirs[dir] = true
 			}
 		}
+	}
+}
+
+func (pkg *Package) AutofixDistinfo(oldSha1, newSha1 string) {
+	distinfoFilename := pkg.File(pkg.DistinfoFile)
+	if lines := Load(distinfoFilename, NotEmpty|LogErrors); lines != nil {
+		for _, line := range lines.Lines {
+			fix := line.Autofix()
+			fix.Warnf(SilentAutofixFormat)
+			fix.Replace(oldSha1, newSha1)
+			fix.Apply()
+		}
+		lines.SaveAutofixChanges()
 	}
 }
 
