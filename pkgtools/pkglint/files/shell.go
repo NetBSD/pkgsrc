@@ -351,7 +351,7 @@ func (shline *ShellLine) CheckShellCommand(shellcmd string, pSetE *bool, time To
 	}
 	walker.Callback.Word = func(word *ShToken) {
 		// TODO: Try to replace false with true here; it had been set to false
-		// TODO: in 2016 for no apparent reason.
+		//  in 2016 for no apparent reason.
 		spc.shline.CheckWord(word.MkText, false, time)
 	}
 
