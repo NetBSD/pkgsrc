@@ -133,9 +133,8 @@ func (vu *MkVarUse) Mod() string {
 	return mod.String()
 }
 
-// IsExpression returns whether the varname is interpreted as a variable
-// name (the usual case) or as an expression (rare, only the modifiers
-// "?:" and "L" do this).
+// IsExpression returns whether the varname is interpreted as an expression
+// instead of a variable name (rare, only the modifiers :? and :L do this).
 func (vu *MkVarUse) IsExpression() bool {
 	if len(vu.modifiers) == 0 {
 		return false

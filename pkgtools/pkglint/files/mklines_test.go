@@ -511,43 +511,6 @@ func (s *Suite) Test_MkLines_Check__indentation_include(c *check.C) {
 		"NOTE: ~/module.mk:7: This directive should be indented by 2 spaces.")
 }
 
-func (s *Suite) Test_MkLines_Check__endif_comment(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpVartypes()
-	mklines := t.NewMkLines("opsys.mk",
-		MkRcsID,
-		"",
-		".for i in 1 2 3 4 5",
-		".  if ${OPSYS} == NetBSD",
-		".    if ${MACHINE_ARCH} == x86_64",
-		".      if ${OS_VERSION:M8.*}",
-		".      endif # MACHINE_ARCH", // Wrong, should be OS_VERSION.
-		".    endif # OS_VERSION",     // Wrong, should be MACHINE_ARCH.
-		".  endif # OPSYS",            // Correct.
-		".endfor # j",                 // Wrong, should be i.
-		"",
-		".if ${PKG_OPTIONS:Moption}",
-		".endif # option", // Correct.
-		"",
-		".if ${PKG_OPTIONS:Moption}",
-		".endif # opti", // This typo goes unnoticed since "opti" is a substring of the condition.
-		"",
-		".if ${OPSYS} == NetBSD",
-		".elif ${OPSYS} == FreeBSD",
-		".endif # NetBSD") // Wrong, should be FreeBSD from the .elif.
-
-	// See MkLineChecker.checkDirective
-	mklines.Check()
-
-	t.CheckOutputLines(
-		"WARN: opsys.mk:7: Comment \"MACHINE_ARCH\" does not match condition \"${OS_VERSION:M8.*}\".",
-		"WARN: opsys.mk:8: Comment \"OS_VERSION\" does not match condition \"${MACHINE_ARCH} == x86_64\".",
-		"WARN: opsys.mk:10: Comment \"j\" does not match loop \"i in 1 2 3 4 5\".",
-		"WARN: opsys.mk:12: Unknown option \"option\".",
-		"WARN: opsys.mk:20: Comment \"NetBSD\" does not match condition \"${OPSYS} == FreeBSD\".")
-}
-
 func (s *Suite) Test_MkLines_Check__unfinished_directives(c *check.C) {
 	t := s.Init(c)
 
@@ -747,25 +710,22 @@ func (s *Suite) Test_MkLines_CheckRedundantAssignments__override_in_mk(c *check.
 		"OVERRIDE=\tprevious value",
 		"REDUNDANT=\tredundant")
 	including := t.NewMkLines("including.mk",
+		".include \"included.mk\"",
 		"OVERRIDE=\toverridden value",
 		"REDUNDANT=\tredundant")
 
 	var allLines []Line
+	allLines = append(allLines, including.lines.Lines[:1]...)
 	allLines = append(allLines, included.lines.Lines...)
-	allLines = append(allLines, including.lines.Lines...)
+	allLines = append(allLines, including.lines.Lines[1:]...)
 	mklines := NewMkLines(NewLines(included.lines.FileName, allLines))
 
 	// XXX: The warnings from here are not in the same order as the other warnings.
 	// XXX: There may be some warnings for the same file separated by warnings for other files.
 	mklines.CheckRedundantAssignments()
 
-	// No warning for VAR=... in Makefile since it makes sense to have common files
-	// with default values for variables, overriding some of them in each package.
 	t.CheckOutputLines(
-		// FIXME: The below warning is wrong because overwriting in a different file is ok.
-		"WARN: included.mk:1: Variable OVERRIDE is overwritten in including.mk:1.",
-		// FIXME: It's the other way round: including.mk:2 is redundant because of included.mk:2.
-		"NOTE: included.mk:2: Definition of REDUNDANT is redundant because of including.mk:2.")
+		"NOTE: including.mk:3: Definition of REDUNDANT is redundant because of included.mk:2.")
 }
 
 func (s *Suite) Test_MkLines_CheckRedundantAssignments__override_in_Makefile(c *check.C) {
@@ -774,13 +734,15 @@ func (s *Suite) Test_MkLines_CheckRedundantAssignments__override_in_Makefile(c *
 		"VAR=\tvalue ${OTHER}",
 		"VAR?=\tvalue ${OTHER}",
 		"VAR=\tnew value")
-	makefile := t.NewMkLines("Makefile",
+	including := t.NewMkLines("Makefile",
+		".include \"module.mk\"",
 		"VAR=\tthe package may overwrite variables from other files")
 
 	var allLines []Line
+	allLines = append(allLines, including.lines.Lines[:1]...)
 	allLines = append(allLines, included.lines.Lines...)
-	allLines = append(allLines, makefile.lines.Lines...)
-	mklines := NewMkLines(NewLines(included.lines.FileName, allLines))
+	allLines = append(allLines, including.lines.Lines[1:]...)
+	mklines := NewMkLines(NewLines(including.lines.FileName, allLines))
 
 	// XXX: The warnings from here are not in the same order as the other warnings.
 	// XXX: There may be some warnings for the same file separated by warnings for other files.
@@ -789,7 +751,7 @@ func (s *Suite) Test_MkLines_CheckRedundantAssignments__override_in_Makefile(c *
 	// No warning for VAR=... in Makefile since it makes sense to have common files
 	// with default values for variables, overriding some of them in each package.
 	t.CheckOutputLines(
-		"NOTE: module.mk:1: Definition of VAR is redundant because of line 2.",
+		"NOTE: module.mk:2: Definition of VAR is redundant because of line 1.",
 		"WARN: module.mk:1: Variable VAR is overwritten in line 3.")
 }
 
@@ -826,7 +788,7 @@ func (s *Suite) Test_MkLines_CheckRedundantAssignments__overwrite_same_value(c *
 	mklines.CheckRedundantAssignments()
 
 	t.CheckOutputLines(
-		"NOTE: module.mk:1: Definition of VAR is redundant because of line 2.")
+		"NOTE: module.mk:2: Definition of VAR is redundant because of line 1.")
 }
 
 func (s *Suite) Test_MkLines_CheckRedundantAssignments__conditional_overwrite(c *check.C) {
@@ -869,7 +831,7 @@ func (s *Suite) Test_MkLines_CheckRedundantAssignments__overwrite_same_variable_
 
 	t.CheckOutputLines(
 		"WARN: module.mk:1: Variable OTHER is overwritten in line 3.",
-		"NOTE: module.mk:2: Definition of VAR is redundant because of line 4.")
+		"NOTE: module.mk:4: Definition of VAR is redundant because of line 2.")
 }
 
 func (s *Suite) Test_MkLines_CheckRedundantAssignments__overwrite_different_value_used_between(c *check.C) {
@@ -894,8 +856,7 @@ func (s *Suite) Test_MkLines_CheckRedundantAssignments__overwrite_different_valu
 
 	t.CheckOutputLines(
 		"WARN: module.mk:1: Variable OTHER is overwritten in line 4.",
-		// FIXME: It's the other way round: line 6 is redundant because of line 2.
-		"NOTE: module.mk:2: Definition of VAR is redundant because of line 6.")
+		"NOTE: module.mk:6: Definition of VAR is redundant because of line 2.")
 }
 
 func (s *Suite) Test_MkLines_CheckRedundantAssignments__procedure_call(c *check.C) {

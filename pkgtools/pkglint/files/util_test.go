@@ -322,6 +322,24 @@ func (s *Suite) Test_isLocallyModified(c *check.C) {
 	c.Check(isLocallyModified(t.File("unmodified")), equals, false)
 }
 
+func (s *Suite) Test_Scope_Define(c *check.C) {
+	t := s.Init(c)
+
+	scope := NewScope()
+	scope.Define("BUILD_DIRS", t.NewMkLine("file.mk", 121, "BUILD_DIRS=\tone two three"))
+
+	c.Check(scope.LastValue("BUILD_DIRS"), equals, "one two three")
+
+	scope.Define("BUILD_DIRS", t.NewMkLine("file.mk", 123, "BUILD_DIRS+=\tfour"))
+
+	c.Check(scope.LastValue("BUILD_DIRS"), equals, "one two three four")
+
+	// Later default assignments do not have an effect.
+	scope.Define("BUILD_DIRS", t.NewMkLine("file.mk", 123, "BUILD_DIRS?=\tdefault"))
+
+	c.Check(scope.LastValue("BUILD_DIRS"), equals, "one two three four")
+}
+
 func (s *Suite) Test_Scope_Defined(c *check.C) {
 	t := s.Init(c)
 
@@ -360,7 +378,8 @@ func (s *Suite) Test_Scope_DefineAll(c *check.C) {
 	dst := NewScope()
 	dst.DefineAll(src)
 
-	c.Check(dst.defined, check.HasLen, 0)
+	c.Check(dst.firstDef, check.HasLen, 0)
+	c.Check(dst.lastDef, check.HasLen, 0)
 	c.Check(dst.used, check.HasLen, 0)
 
 	src.Define("VAR", t.NewMkLine("file.mk", 1, "VAR=value"))
@@ -373,7 +392,7 @@ func (s *Suite) Test_Scope_FirstDefinition(c *check.C) {
 	t := s.Init(c)
 
 	mkline1 := t.NewMkLine("fname.mk", 3, "VAR=\tvalue")
-	mkline2 := t.NewMkLine("fname.mk", 3, ".if ${VAR::=value}")
+	mkline2 := t.NewMkLine("fname.mk", 3, ".if ${SNEAKY::=value}")
 
 	scope := NewScope()
 	scope.Define("VAR", mkline1)
@@ -386,6 +405,25 @@ func (s *Suite) Test_Scope_FirstDefinition(c *check.C) {
 	// These sneaky variables with implicit definition are an edge
 	// case that only few people actually know. It's better that way.
 	t.Check(scope.FirstDefinition("SNEAKY"), check.IsNil)
+}
+
+func (s *Suite) Test_Scope_LastValue(c *check.C) {
+	t := s.Init(c)
+
+	mklines := t.NewMkLines("file.mk",
+		MkRcsID,
+		"VAR=\tfirst",
+		"VAR=\tsecond",
+		".if 1",
+		"VAR=\tthird (conditional)",
+		".endif")
+
+	mklines.Check()
+
+	t.Check(mklines.vars.LastValue("VAR"), equals, "third (conditional)")
+
+	t.CheckOutputLines(
+		"WARN: file.mk:2: VAR is defined but not used.")
 }
 
 func (s *Suite) Test_Scope__no_tracing(c *check.C) {
@@ -671,4 +709,29 @@ func (s *Suite) Test_StringInterner(c *check.C) {
 	t.Check(si.Intern("Hello"), equals, "Hello")
 	t.Check(si.Intern("Hello, world"), equals, "Hello, world")
 	t.Check(si.Intern("Hello, world"[0:5]), equals, "Hello")
+}
+
+func (s *Suite) Test_includePath_includes(c *check.C) {
+	t := s.Init(c)
+
+	path := func(locations ...string) includePath {
+		return includePath{locations}
+	}
+
+	var (
+		m   = path("Makefile")
+		mc  = path("Makefile", "Makefile.common")
+		mco = path("Makefile", "Makefile.common", "other.mk")
+		mo  = path("Makefile", "other.mk")
+	)
+
+	t.Check(m.includes(m), equals, false)
+
+	t.Check(m.includes(mc), equals, true)
+	t.Check(m.includes(mco), equals, true)
+	t.Check(mc.includes(mco), equals, true)
+
+	t.Check(mc.includes(m), equals, false)
+	t.Check(mc.includes(mo), equals, false)
+	t.Check(mo.includes(mc), equals, false)
 }

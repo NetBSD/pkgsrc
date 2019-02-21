@@ -301,6 +301,15 @@ func (t *Tester) SetUpPackage(pkgpath string, makefileLines ...string) string {
 		PlistRcsID,
 		"bin/program")
 
+	// Because the package Makefile includes this file, the check for the
+	// correct ordering of variables is skipped. As of February 2019, the
+	// SetupPackage function does not insert the custom variables in the
+	// correct position. To prevent the tests from having to mention the
+	// unrelated warnings about the variable order, that check is suppressed
+	// here.
+	t.CreateFileLines(pkgpath+"/suppress-varorder.mk",
+		MkRcsID)
+
 	// This distinfo file contains dummy hashes since pkglint cannot check the
 	// distfiles hashes anyway. It can only check the hashes for the patches.
 	t.CreateFileLines(pkgpath+"/distinfo",
@@ -323,7 +332,8 @@ func (t *Tester) SetUpPackage(pkgpath string, makefileLines ...string) string {
 		"HOMEPAGE=\t# none",
 		"COMMENT=\tDummy package",
 		"LICENSE=\t2-clause-bsd",
-		""}
+		"",
+		".include \"suppress-varorder.mk\""}
 	for len(mlines) < 19 {
 		mlines = append(mlines, "# empty")
 	}
@@ -665,9 +675,6 @@ func (t *Tester) CheckOutputLines(expectedLines ...string) {
 //
 // This is useful when stepping through the code, especially
 // in combination with SetUpCommandLine("--debug").
-//
-// In JetBrains GoLand, the tracing output is suppressed after the first
-// failed check, see https://youtrack.jetbrains.com/issue/GO-6154.
 func (t *Tester) EnableTracing() {
 	G.out = NewSeparatorWriter(io.MultiWriter(os.Stdout, &t.stdout))
 	trace.Out = os.Stdout
@@ -677,8 +684,9 @@ func (t *Tester) EnableTracing() {
 // EnableTracingToLog enables the tracing and writes the tracing output
 // to the test log that can be examined with Tester.Output.
 func (t *Tester) EnableTracingToLog() {
-	t.EnableTracing()
+	G.out = NewSeparatorWriter(&t.stdout)
 	trace.Out = &t.stdout
+	trace.Tracing = true
 }
 
 // EnableSilentTracing enables tracing mode but discards any tracing output.

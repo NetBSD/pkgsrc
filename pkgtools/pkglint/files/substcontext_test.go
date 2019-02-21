@@ -370,18 +370,19 @@ func (s *Suite) Test_SubstContext_suggestSubstVars(c *check.C) {
 		"SUBST_CLASSES+=\t\ttest",
 		"SUBST_STAGE.test=\tpre-configure",
 		"SUBST_FILES.test=\tfilename",
-		"SUBST_SED.test+=\t-e s,@SH@,${SH},g",           // Can be replaced.
-		"SUBST_SED.test+=\t-e s,@SH@,${SH:Q},g",         // Can be replaced, with or without the :Q modifier.
-		"SUBST_SED.test+=\t-e s,@SH@,${SH:T},g",         // Cannot be replaced because of the :T modifier.
-		"SUBST_SED.test+=\t-e s,@SH@,${SH},",            // Can be replaced, even without the g option.
-		"SUBST_SED.test+=\t-e 's,@SH@,${SH},'",          // Can be replaced, whether in single quotes or not.
-		"SUBST_SED.test+=\t-e \"s,@SH@,${SH},\"",        // Can be replaced, whether in double quotes or not.
-		"SUBST_SED.test+=\t-e s,'@SH@','${SH}',",        // Can be replaced, even when the quoting changes midways.
-		"SUBST_SED.test+=\ts,'@SH@','${SH}',",           // Can be replaced manually, even when the -e is missing.
-		"SUBST_SED.test+=\t-e s,@SH@,${PKGNAME},",       // Cannot be replaced since the variable name differs.
-		"SUBST_SED.test+=\t-e s,@SH@,'\"'${SH:Q}'\"',g", // Cannot be replaced since the double quotes are added.
-		"SUBST_SED.test+=\t-e s",                        // Just to get 100% code coverage.
-		"SUBST_SED.test+=\t-e s,@SH@,${SH:Q}",           // Just to get 100% code coverage.
+		"SUBST_SED.test+=\t-e s,@SH@,${SH},g",            // Can be replaced.
+		"SUBST_SED.test+=\t-e s,@SH@,${SH:Q},g",          // Can be replaced, with or without the :Q modifier.
+		"SUBST_SED.test+=\t-e s,@SH@,${SH:T},g",          // Cannot be replaced because of the :T modifier.
+		"SUBST_SED.test+=\t-e s,@SH@,${SH},",             // Can be replaced, even without the g option.
+		"SUBST_SED.test+=\t-e 's,@SH@,${SH},'",           // Can be replaced, whether in single quotes or not.
+		"SUBST_SED.test+=\t-e \"s,@SH@,${SH},\"",         // Can be replaced, whether in double quotes or not.
+		"SUBST_SED.test+=\t-e s,'@SH@','${SH}',",         // Can be replaced, even when the quoting changes midways.
+		"SUBST_SED.test+=\ts,'@SH@','${SH}',",            // Can be replaced manually, even when the -e is missing.
+		"SUBST_SED.test+=\t-e s,@SH@,${PKGNAME},",        // Cannot be replaced since the variable name differs.
+		"SUBST_SED.test+=\t-e s,@SH@,'\"'${SH:Q}'\"',g",  // Cannot be replaced since the double quotes are added.
+		"SUBST_SED.test+=\t-e s",                         // Just to get 100% code coverage.
+		"SUBST_SED.test+=\t-e s,@SH@,${SH:Q}",            // Just to get 100% code coverage.
+		"SUBST_SED.test+=\t-e s,@SH@,${SH:Q}, # comment", // This is not fixed automatically.
 		"# end")
 
 	mklines.Check()
@@ -405,6 +406,8 @@ func (s *Suite) Test_SubstContext_suggestSubstVars(c *check.C) {
 		"NOTE: subst.mk:13: Please always use \"-e\" in sed commands, "+
 			"even if there is only one substitution.",
 		"NOTE: subst.mk:13: The substitution command \"s,'@SH@','${SH}',\" "+
+			"can be replaced with \"SUBST_VARS.test+= SH\".",
+		"NOTE: subst.mk:18: The substitution command \"s,@SH@,${SH:Q},\" "+
 			"can be replaced with \"SUBST_VARS.test+= SH\".")
 
 	t.SetUpCommandLine("--show-autofix")
@@ -435,9 +438,7 @@ func (s *Suite) Test_SubstContext_suggestSubstVars(c *check.C) {
 		"NOTE: subst.mk:12: The substitution command \"s,'@SH@','${SH}',\" "+
 			"can be replaced with \"SUBST_VARS.test+= SH\".",
 		"AUTOFIX: subst.mk:12: Replacing \"SUBST_SED.test+=\\t-e s,'@SH@','${SH}',\" "+
-			"with \"SUBST_VARS.test+=\\tSH\".",
-		"NOTE: subst.mk:13: The substitution command \"s,'@SH@','${SH}',\" "+
-			"can be replaced with \"SUBST_VARS.test+= SH\".")
+			"with \"SUBST_VARS.test+=\\tSH\".")
 }
 
 // simulateSubstLines only tests some of the inner workings of SubstContext.

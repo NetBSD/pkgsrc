@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"io"
 	"netbsd.org/pkglint/histogram"
+	"netbsd.org/pkglint/textproc"
 	"path"
 )
 
@@ -51,6 +52,7 @@ var (
 
 var dummyLine = NewLineMulti("", 0, 0, "", nil)
 
+// IsAutofix returns whether one of the --show-autofix or --autofix options is active.
 func (l *Logger) IsAutofix() bool { return l.Opts.Autofix || l.Opts.ShowAutofix }
 
 // Relevant decides and remembers whether the given diagnostic is relevant and should be logged.
@@ -186,8 +188,17 @@ func (l *Logger) Logf(level *LogLevel, filename, lineno, format, msg string) {
 		return
 	}
 
-	if G.Testing && format != AutofixFormat && !hasSuffix(format, ": %s") && !hasSuffix(format, ". %s") {
-		G.Assertf(hasSuffix(format, "."), "Diagnostic format %q must end in a period.", format)
+	if G.Testing && format != AutofixFormat {
+		if textproc.Alpha.Contains(format[0]) {
+			G.Assertf(
+				textproc.Upper.Contains(format[0]),
+				"Diagnostic %q must start with an uppercase letter.",
+				format)
+		}
+
+		if !hasSuffix(format, ": %s") && !hasSuffix(format, ". %s") {
+			G.Assertf(hasSuffix(format, "."), "Diagnostic format %q must end in a period.", format)
+		}
 	}
 
 	if filename != "" {

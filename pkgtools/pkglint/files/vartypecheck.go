@@ -232,14 +232,6 @@ func (cv *VartypeCheck) Comment() {
 		cv.Warnf("COMMENT should not begin with %q.", first)
 	}
 
-	if m, isA := match1(value, `\b(is an?)\b`); m {
-		cv.Warnf("COMMENT should not contain %q.", isA)
-		G.Explain(
-			"The words \"package is a\" are redundant.",
-			"Since every package comment could start with them,",
-			"it is better to remove this redundancy in all cases.")
-	}
-
 	if G.Pkg != nil && G.Pkg.EffectivePkgbase != "" {
 		pkgbase := G.Pkg.EffectivePkgbase
 		if hasPrefix(strings.ToLower(value), strings.ToLower(pkgbase+" ")) {
@@ -253,6 +245,14 @@ func (cv *VartypeCheck) Comment() {
 
 	if matches(value, `^[a-z]`) && cv.Op == opAssign {
 		cv.Warnf("COMMENT should start with a capital letter.")
+	}
+
+	if m, isA := match1(value, `\b(is an?)\b`); m {
+		cv.Warnf("COMMENT should not contain %q.", isA)
+		G.Explain(
+			"The words \"package is a\" are redundant.",
+			"Since every package comment could start with them,",
+			"it is better to remove this redundancy in all cases.")
 	}
 
 	if hasSuffix(value, ".") {

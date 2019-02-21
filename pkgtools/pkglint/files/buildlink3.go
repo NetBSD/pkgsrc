@@ -205,7 +205,8 @@ func (ck *Buildlink3Checker) checkVarassign(mlex *MkLinesLexer, mkline MkLine, p
 }
 
 func (ck *Buildlink3Checker) checkVaruseInPkgbase(pkgbase string, pkgbaseLine MkLine) {
-	for _, token := range pkgbaseLine.ValueTokens() {
+	tokens, _ := pkgbaseLine.ValueTokens()
+	for _, token := range tokens {
 		if token.Varuse == nil {
 			continue
 		}
