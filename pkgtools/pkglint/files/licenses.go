@@ -31,8 +31,8 @@ func (lc *LicenseChecker) checkName(license string) {
 	}
 	if licenseFile == "" {
 		licenseFile = G.Pkgsrc.File("licenses/" + license)
-		if G.Pkgsrc.UsedLicenses != nil {
-			G.Pkgsrc.UsedLicenses[intern(license)] = true
+		if G.UsedLicenses != nil {
+			G.UsedLicenses[intern(license)] = true
 		}
 	}
 

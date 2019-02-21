@@ -347,7 +347,8 @@ func mkopSubst(s string, left bool, from string, right bool, to string, flags st
 	})
 }
 
-// relpath returns the relative path from `from` to `to`.
+// relpath returns the relative path from the directory "from"
+// to the filesystem entry "to".
 func relpath(from, to string) string {
 
 	// From "dir" to "dir/subdir/...".
@@ -454,30 +455,56 @@ func (o *Once) check(key uint64) bool {
 // Scope remembers which variables are defined and which are used
 // in a certain scope, such as a package or a file.
 type Scope struct {
-	defined  map[string]MkLine
+	firstDef map[string]MkLine // TODO: Can this be removed?
+	lastDef  map[string]MkLine
+	value    map[string]string
 	used     map[string]MkLine
 	fallback map[string]string
 }
 
 func NewScope() Scope {
-	return Scope{make(map[string]MkLine), make(map[string]MkLine), make(map[string]string)}
+	return Scope{
+		make(map[string]MkLine),
+		make(map[string]MkLine),
+		make(map[string]string),
+		make(map[string]MkLine),
+		make(map[string]string)}
 }
 
 // Define marks the variable and its canonicalized form as defined.
 func (s *Scope) Define(varname string, mkline MkLine) {
-	if s.defined[varname] == nil {
-		s.defined[varname] = mkline
-		if trace.Tracing {
-			trace.Step2("Defining %q in %s", varname, mkline.String())
+	def := func(name string) {
+		if s.firstDef[name] == nil {
+			s.firstDef[name] = mkline
+			if trace.Tracing {
+				trace.Step2("Defining %q for the first time in %s", name, mkline.String())
+			}
+		} else if trace.Tracing {
+			trace.Step2("Defining %q in %s", name, mkline.String())
+		}
+
+		s.lastDef[name] = mkline
+
+		// In most cases the defining lines are indeed variable assignments.
+		// Exceptions are comments that only document the variable but still mark
+		// it as defined so that it doesn't produce the "used but not defined" warning.
+		if mkline.IsVarassign() || mkline.IsCommentedVarassign() {
+
+			switch mkline.Op() {
+			case opAssign, opAssignEval, opAssignShell:
+				s.value[name] = mkline.Value()
+			case opAssignAppend:
+				s.value[name] += " " + mkline.Value()
+			case opAssignDefault:
+				// No change to the value.
+			}
 		}
 	}
 
+	def(varname)
 	varcanon := varnameCanon(varname)
-	if varcanon != varname && s.defined[varcanon] == nil {
-		s.defined[varcanon] = mkline
-		if trace.Tracing {
-			trace.Step2("Defining %q in %s", varcanon, mkline.String())
-		}
+	if varcanon != varname {
+		def(varcanon)
 	}
 }
 
@@ -509,12 +536,12 @@ func (s *Scope) Use(varname string, line MkLine) {
 // Even if Defined returns true, FirstDefinition doesn't necessarily return true
 // since the latter ignores the default definitions from vardefs.go, keyword dummyVardefMkline.
 func (s *Scope) Defined(varname string) bool {
-	return s.defined[varname] != nil
+	return s.firstDef[varname] != nil
 }
 
 // DefinedSimilar tests whether the variable or its canonicalized form is defined.
 func (s *Scope) DefinedSimilar(varname string) bool {
-	if s.defined[varname] != nil {
+	if s.firstDef[varname] != nil {
 		if trace.Tracing {
 			trace.Step1("Variable %q is defined", varname)
 		}
@@ -522,7 +549,7 @@ func (s *Scope) DefinedSimilar(varname string) bool {
 	}
 
 	varcanon := varnameCanon(varname)
-	if s.defined[varcanon] != nil {
+	if s.firstDef[varcanon] != nil {
 		if trace.Tracing {
 			trace.Step2("Variable %q (similar to %q) is defined", varcanon, varname)
 		}
@@ -549,7 +576,25 @@ func (s *Scope) UsedSimilar(varname string) bool {
 //
 // Having multiple definitions is typical in the branches of "if" statements.
 func (s *Scope) FirstDefinition(varname string) MkLine {
-	mkline := s.defined[varname]
+	mkline := s.firstDef[varname]
+	if mkline != nil && mkline.IsVarassign() {
+		lastLine := s.LastDefinition(varname)
+		if lastLine != mkline {
+			mkline.Notef("FirstDefinition differs from LastDefinition in %s.", mkline.RefTo(lastLine))
+		}
+		return mkline
+	}
+	return nil // See NewPackage and G.Pkgsrc.UserDefinedVars
+}
+
+// LastDefinition returns the line in which the variable has been defined last.
+//
+// Having multiple definitions is typical in the branches of "if" statements.
+//
+// Another typical case involves two files: the included file defines a default
+// value, and the including file later overrides that value.
+func (s *Scope) LastDefinition(varname string) MkLine {
+	mkline := s.lastDef[varname]
 	if mkline != nil && mkline.IsVarassign() {
 		return mkline
 	}
@@ -560,8 +605,23 @@ func (s *Scope) FirstUse(varname string) MkLine {
 	return s.used[varname]
 }
 
-func (s *Scope) Value(varname string) (value string, found bool) {
-	mkline := s.FirstDefinition(varname)
+// LastValue returns the value from the last variable definition.
+//
+// If an empty string is returned this can mean either that the
+// variable value is indeed the empty string or that the variable
+// was not found. To distinguish these cases, call LastValueFound instead.
+func (s *Scope) LastValue(varname string) string {
+	value, _ := s.LastValueFound(varname)
+	return value
+}
+
+func (s *Scope) LastValueFound(varname string) (value string, found bool) {
+	value, found = s.value[varname]
+	if found {
+		return
+	}
+
+	mkline := s.LastDefinition(varname)
 	if mkline != nil {
 		return mkline.Value(), true
 	}
@@ -573,13 +633,14 @@ func (s *Scope) Value(varname string) (value string, found bool) {
 
 func (s *Scope) DefineAll(other Scope) {
 	var varnames []string
-	for varname := range other.defined {
+	for varname := range other.firstDef {
 		varnames = append(varnames, varname)
 	}
 	sort.Strings(varnames)
 
 	for _, varname := range varnames {
-		s.Define(varname, other.defined[varname])
+		s.Define(varname, other.firstDef[varname])
+		s.Define(varname, other.lastDef[varname])
 	}
 }
 
@@ -661,22 +722,26 @@ func naturalLess(str1, str2 string) bool {
 	return len1 < len2
 }
 
-// RedundantScope checks for redundant variable definitions and accidentally
-// overwriting variables. It tries to be as correct as possible by not flagging
-// anything that is defined conditionally. There may be some edge cases though
-// like defining PKGNAME, then evaluating it using :=, then defining it again.
-// This pattern is so error-prone that it should not appear in pkgsrc at all,
-// thus pkglint doesn't even expect it. (Well, except for the PKGNAME case,
-// but that's deep in the infrastructure and only affects the "nb13" extension.)
+// RedundantScope checks for redundant variable definitions and for variables
+// that are accidentally overwritten. It tries to be as correct as possible
+// by not flagging anything that is defined conditionally.
+//
+// There may be some edge cases though like defining PKGNAME, then evaluating
+// it using :=, then defining it again. This pattern is so error-prone that
+// it should not appear in pkgsrc at all, thus pkglint doesn't even expect it.
+// (Well, except for the PKGNAME case, but that's deep in the infrastructure
+// and only affects the "nb13" extension.)
 type RedundantScope struct {
 	vars        map[string]*redundantScopeVarinfo
 	dirLevel    int // The number of enclosing directives (.if, .for).
-	OnIgnore    func(old, new MkLine)
+	includePath includePath
+	OnRedundant func(old, new MkLine)
 	OnOverwrite func(old, new MkLine)
 }
 type redundantScopeVarinfo struct {
-	mkline MkLine
-	value  string
+	mkline      MkLine
+	includePath includePath
+	value       string
 }
 
 func NewRedundantScope() *RedundantScope {
@@ -684,10 +749,19 @@ func NewRedundantScope() *RedundantScope {
 }
 
 func (s *RedundantScope) Handle(mkline MkLine) {
+	if mkline.firstLine == 1 {
+		s.includePath.push(mkline.Location.Filename)
+	} else {
+		s.includePath.popUntil(mkline.Location.Filename)
+	}
+
 	switch {
 	case mkline.IsVarassign():
 		varname := mkline.Varname()
 		if s.dirLevel != 0 {
+			// Since the variable is defined or assigned conditionally,
+			// it becomes too complicated for pkglint to check all possible
+			// code paths. Therefore ignore the variable from now on.
 			s.vars[varname] = nil
 			break
 		}
@@ -707,7 +781,7 @@ func (s *RedundantScope) Handle(mkline MkLine) {
 				if op == opAssignAppend {
 					value = " " + value
 				}
-				s.vars[varname] = &redundantScopeVarinfo{mkline, value}
+				s.vars[varname] = &redundantScopeVarinfo{mkline, s.includePath.copy(), value}
 			}
 
 		} else if existing != nil {
@@ -717,12 +791,24 @@ func (s *RedundantScope) Handle(mkline MkLine) {
 
 			switch op {
 			case opAssign:
-				s.OnOverwrite(existing.mkline, mkline)
+				if s.includePath.includes(existing.includePath) {
+					// This is the usual pattern of including a file and
+					// then overwriting some of them. Although technically
+					// this overwrites the previous definition, it is not
+					// worth a warning since this is used a lot and
+					// intentionally.
+				} else {
+					s.OnOverwrite(existing.mkline, mkline)
+				}
 				existing.value = value
 			case opAssignAppend:
 				existing.value += " " + value
 			case opAssignDefault:
-				s.OnIgnore(existing.mkline, mkline)
+				if existing.includePath.includes(s.includePath) {
+					s.OnRedundant(mkline, existing.mkline)
+				} else if s.includePath.includes(existing.includePath) || s.includePath.equals(existing.includePath) {
+					s.OnRedundant(existing.mkline, mkline)
+				}
 			case opAssignShell, opAssignEval:
 				s.vars[varname] = nil // Won't be checked further.
 			}
@@ -736,6 +822,46 @@ func (s *RedundantScope) Handle(mkline MkLine) {
 			s.dirLevel--
 		}
 	}
+}
+
+type includePath struct {
+	files []string
+}
+
+func (p *includePath) push(filename string) {
+	p.files = append(p.files, filename)
+}
+
+func (p *includePath) popUntil(filename string) {
+	for p.files[len(p.files)-1] != filename {
+		p.files = p.files[:len(p.files)-1]
+	}
+}
+
+func (p *includePath) includes(other includePath) bool {
+	for i, filename := range p.files {
+		if i < len(other.files) && other.files[i] == filename {
+			continue
+		}
+		return false
+	}
+	return len(p.files) < len(other.files)
+}
+
+func (p *includePath) equals(other includePath) bool {
+	if len(p.files) != len(other.files) {
+		return false
+	}
+	for i, filename := range p.files {
+		if other.files[i] != filename {
+			return false
+		}
+	}
+	return true
+}
+
+func (p *includePath) copy() includePath {
+	return includePath{append([]string(nil), p.files...)}
 }
 
 // IsPrefs returns whether the given file, when included, loads the user

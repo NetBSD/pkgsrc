@@ -4,6 +4,7 @@ import (
 	"netbsd.org/pkglint/regex"
 	"os"
 	"path"
+	"path/filepath"
 	"strconv"
 	"strings"
 )
@@ -298,9 +299,6 @@ func (ck MkLineChecker) checkVarassignLeftPermissions() {
 	op := mkline.Op()
 	vartype := G.Pkgsrc.VariableType(varname)
 	if vartype == nil {
-		if trace.Tracing {
-			trace.Step1("No type definition found for %q.", varname)
-		}
 		return
 	}
 
@@ -308,7 +306,7 @@ func (ck MkLineChecker) checkVarassignLeftPermissions() {
 
 	// E.g. USE_TOOLS:= ${USE_TOOLS:Nunwanted-tool}
 	if op == opAssignEval && perms&aclpAppend != 0 {
-		tokens := mkline.ValueTokens()
+		tokens, _ := mkline.ValueTokens()
 		if len(tokens) == 1 && tokens[0].Varuse != nil && tokens[0].Varuse.varname == varname {
 			return
 		}
@@ -563,15 +561,8 @@ func (ck MkLineChecker) checkVarusePermissions(varname string, vartype *Vartype,
 			if !tool.UsableAtLoadTime(G.Mk.Tools.SeenPrefs) {
 				ck.warnVaruseToolLoadTime(varname, tool)
 			}
-
 		} else {
-			// Might the variable be used indirectly at load time, for example
-			// by assigning it to another variable which then gets evaluated?
-			isIndirect := vuc.time != vucTimeParse && // Otherwise it would be directly.
-				// The context might be used at load time somewhere.
-				vuc.vartype != nil && vuc.vartype.Union().Contains(aclpUseLoadtime)
-
-			ck.warnVaruseLoadTime(varname, isIndirect)
+			ck.warnVaruseLoadTime(varname, indirectly)
 		}
 	}
 
@@ -1051,10 +1042,6 @@ func (ck MkLineChecker) checkVartype(varname string, op MkOperator, value, comme
 		defer trace.Call(varname, op, value, comment)()
 	}
 
-	if !G.Opts.WarnTypes {
-		return
-	}
-
 	mkline := ck.MkLine
 	vartype := G.Pkgsrc.VariableType(varname)
 
@@ -1191,6 +1178,7 @@ func (ck MkLineChecker) checkDirectiveCond() {
 
 	cond.Walk(&MkCondCallback{
 		Empty:         ck.checkDirectiveCondEmpty,
+		Var:           ck.checkDirectiveCondEmpty,
 		CompareVarStr: checkCompareVarStr,
 		VarUse:        checkVarUse})
 }
@@ -1298,11 +1286,11 @@ func (ck MkLineChecker) CheckRelativePath(relativePath string, mustExist bool) {
 	}
 
 	abs := resolvedPath
-	if !hasPrefix(abs, "/") {
+	if !filepath.IsAbs(abs) {
 		abs = path.Dir(mkline.Filename) + "/" + abs
 	}
 	if _, err := os.Stat(abs); err != nil {
-		if mustExist {
+		if mustExist && !(G.Mk != nil && G.Mk.indentation.IsCheckedFile(resolvedPath)) {
 			mkline.Errorf("Relative path %q does not exist.", resolvedPath)
 		}
 		return

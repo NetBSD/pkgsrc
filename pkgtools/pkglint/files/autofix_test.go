@@ -210,6 +210,35 @@ func (s *Suite) Test_Autofix_ReplaceRegex__show_autofix_and_source(c *check.C) {
 		"+\tYXXXX")
 }
 
+// When an autofix replaces text, it does not touch those
+// lines that have been inserted before since these are
+// usually already correct.
+func (s *Suite) Test_Autofix_ReplaceAfter__after_inserting_a_line(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("--show-autofix")
+	line := t.NewLine("filename", 5, "initial text")
+
+	fix := line.Autofix()
+	fix.Notef("Inserting a line.")
+	fix.InsertBefore("line before")
+	fix.InsertAfter("line after")
+	fix.Apply()
+
+	fix.Notef("Replacing text.")
+	fix.Replace("l", "L")
+	fix.ReplaceRegex(`i`, "I", 1)
+	fix.Apply()
+
+	t.CheckOutputLines(
+		"NOTE: filename:5: Inserting a line.",
+		"AUTOFIX: filename:5: Inserting a line \"line before\" before this line.",
+		"AUTOFIX: filename:5: Inserting a line \"line after\" after this line.",
+		"NOTE: filename:5: Replacing text.",
+		"AUTOFIX: filename:5: Replacing \"l\" with \"L\".",
+		"AUTOFIX: filename:5: Replacing \"i\" with \"I\".")
+}
+
 func (s *Suite) Test_SaveAutofixChanges(c *check.C) {
 	t := s.Init(c)
 
@@ -627,6 +656,35 @@ func (s *Suite) Test_Autofix__suppress_unfixable_warnings_with_show_autofix(c *c
 		"+\tTODO")
 }
 
+// With the default command line options, this warning is printed.
+// With the --show-autofix option this warning is NOT printed since it
+// cannot be fixed automatically.
+func (s *Suite) Test_Autofix_Anyway__options(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("--show-autofix")
+
+	line := t.NewLine("filename", 3, "")
+	fix := line.Autofix()
+
+	fix.Warnf("This autofix doesn't match.")
+	fix.Replace("doesn't match", "")
+	fix.Anyway()
+	fix.Apply()
+
+	t.CheckOutputEmpty()
+
+	t.SetUpCommandLine()
+
+	fix.Warnf("This autofix doesn't match.")
+	fix.Replace("doesn't match", "")
+	fix.Anyway()
+	fix.Apply()
+
+	t.CheckOutputLines(
+		"WARN: filename:3: This autofix doesn't match.")
+}
+
 // If an Autofix doesn't do anything, it must not log any diagnostics.
 func (s *Suite) Test_Autofix__noop_replace(c *check.C) {
 	t := s.Init(c)
@@ -807,6 +865,210 @@ func (s *Suite) Test_Autofix_Apply__explanation_followed_by_note(c *check.C) {
 		"",
 		">\ttext",
 		"NOTE: README.txt:123: A note without fix.")
+}
+
+func (s *Suite) Test_Autofix_Anyway__autofix_option(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("--autofix")
+	line := t.NewLine("filename", 5, "text")
+
+	fix := line.Autofix()
+	fix.Notef("This line is quite short.")
+	fix.Replace("not found", "needle")
+	fix.Anyway()
+	fix.Apply()
+
+	// The replacement text is not found, therefore the note should not be logged.
+	// Because of fix.Anyway, the note should be logged anyway.
+	// But because of the --autofix option, the note should not be logged.
+	// Therefore, in the end nothing is shown in this case.
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Autofix_Anyway__autofix_and_show_autofix_options(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("--autofix", "--show-autofix")
+	line := t.NewLine("filename", 5, "text")
+
+	fix := line.Autofix()
+	fix.Notef("This line is quite short.")
+	fix.Replace("not found", "needle")
+	fix.Anyway()
+	fix.Apply()
+
+	// The replacement text is not found, therefore the note should not be logged.
+	// Because of fix.Anyway, the note should be logged anyway.
+	// But because of the --autofix option, the note should not be logged.
+	// Even if the --show-autofix option is explicitly given, the note should not be logged.
+	// Therefore, in the end nothing is shown in this case.
+	t.CheckOutputEmpty()
+}
+
+// The --autofix option normally suppresses the diagnostics and just logs
+// the actual fixes. Adding the --show-autofix option logs both.
+func (s *Suite) Test_Autofix_Apply__autofix_and_show_autofix_options(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("--autofix", "--show-autofix")
+	line := t.NewLine("filename", 5, "text")
+
+	fix := line.Autofix()
+	fix.Notef("This line is quite short.")
+	fix.Replace("text", "replacement")
+	fix.Apply()
+
+	t.CheckOutputLines(
+		"NOTE: filename:5: This line is quite short.",
+		"AUTOFIX: filename:5: Replacing \"text\" with \"replacement\".")
+}
+
+// Ensures that without explanations, the separator between the individual
+// diagnostics are generated.
+func (s *Suite) Test_Autofix_Apply__source_without_explain(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("--source", "--explain", "--show-autofix")
+	line := t.NewLine("filename", 5, "text")
+
+	fix := line.Autofix()
+	fix.Notef("This line is quite short.")
+	fix.Replace("text", "replacement")
+	fix.Apply()
+
+	fix.Warnf("Follow-up warning, separated.")
+	fix.Replace("replacement", "text again")
+	fix.Apply()
+
+	t.CheckOutputLines(
+		"NOTE: filename:5: This line is quite short.",
+		"AUTOFIX: filename:5: Replacing \"text\" with \"replacement\".",
+		"-\ttext",
+		"+\treplacement",
+		"",
+		"WARN: filename:5: Follow-up warning, separated.",
+		"AUTOFIX: filename:5: Replacing \"replacement\" with \"text again\".",
+		"-\ttext",
+		"+\ttext again")
+}
+
+func (s *Suite) Test_Autofix_Realign__wrong_line_type(c *check.C) {
+	t := s.Init(c)
+
+	mklines := t.NewMkLines("file.mk",
+		MkRcsID,
+		".if \\",
+		"${PKGSRC_RUN_TESTS}")
+
+	mkline := mklines.mklines[1]
+	fix := mkline.Autofix()
+
+	t.ExpectPanic(
+		func() { fix.Realign(mkline, 16) },
+		"Pkglint internal error: Line must be a variable assignment.")
+}
+
+func (s *Suite) Test_Autofix_Realign__short_continuation_line(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("--autofix")
+	mklines := t.SetUpFileMkLines("file.mk",
+		MkRcsID,
+		"BUILD_DIRS= \\",
+		"\tdir \\",
+		"")
+	mkline := mklines.mklines[1]
+	fix := mkline.Autofix()
+	fix.Warnf("Line should be realigned.")
+
+	// In this case realigning has no effect since the oldWidth == 8,
+	// which counts as "sufficiently intentional not to be modified".
+	fix.Realign(mkline, 16)
+
+	mklines.SaveAutofixChanges()
+
+	t.CheckOutputEmpty()
+	t.CheckFileLines("file.mk",
+		MkRcsID,
+		"BUILD_DIRS= \\",
+		"\tdir \\",
+		"")
+}
+
+func (s *Suite) Test_Autofix_Realign__multiline_indented_with_spaces(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("--autofix")
+	mklines := t.SetUpFileMkLines("file.mk",
+		MkRcsID,
+		"BUILD_DIRS= \\",
+		"\t        dir1 \\",
+		"\t\tdir2 \\",
+		"  ") // Trailing whitespace is not fixed by Autofix.Realign.
+
+	mkline := mklines.mklines[1]
+
+	fix := mkline.Autofix()
+	fix.Warnf("Warning.")
+	fix.Realign(mkline, 16)
+	fix.Apply()
+
+	mklines.SaveAutofixChanges()
+
+	t.CheckOutputLines(
+		"AUTOFIX: ~/file.mk:3: Replacing indentation \"\\t        \" with \"\\t\\t\".")
+	t.CheckFileLines("file.mk",
+		MkRcsID,
+		"BUILD_DIRS= \\",
+		"\t\tdir1 \\",
+		"\t\tdir2 \\",
+		"  ")
+}
+
+// Just for branch coverage.
+func (s *Suite) Test_Autofix_setDiag__no_testing_mode(c *check.C) {
+	t := s.Init(c)
+
+	line := t.NewLine("file.mk", 123, "text")
+
+	G.Testing = false
+
+	fix := line.Autofix()
+	fix.Notef("Note.")
+	fix.Replace("from", "to")
+	fix.Apply()
+
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Autofix_setDiag__bad_call_sequence(c *check.C) {
+	t := s.Init(c)
+
+	line := t.NewLine("file.mk", 123, "text")
+	fix := line.Autofix()
+	fix.Notef("Note.")
+
+	t.ExpectPanic(
+		func() { fix.Notef("Note 2.") },
+		"Pkglint internal error: Autofix can only have a single diagnostic.")
+
+	fix.level = nil // To cover the second assertion.
+	t.ExpectPanic(
+		func() { fix.Notef("Note 2.") },
+		"Pkglint internal error: Autofix can only have a single diagnostic.")
+}
+
+func (s *Suite) Test_Autofix_assertRealLine(c *check.C) {
+	t := s.Init(c)
+
+	line := NewLineEOF("filename.mk")
+	fix := line.Autofix()
+	fix.Warnf("Warning.")
+
+	t.ExpectPanic(
+		func() { fix.Replace("from", "to") },
+		"Pkglint internal error: Cannot autofix this line since it is not a real line.")
 }
 
 func (s *Suite) Test_SaveAutofixChanges__file_removed(c *check.C) {
