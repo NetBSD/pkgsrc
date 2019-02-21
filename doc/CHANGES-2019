@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.834 2019/02/21 09:32:42 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.835 2019/02/21 09:37:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1507,3 +1507,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-pip to 19.0.3 [adam 2019-02-21]
 	Updated devel/py-pbr to 5.1.2 [adam 2019-02-21]
 	Updated x11/xev to 1.2.3 [wiz 2019-02-21]
+	Updated x11/xfsinfo to 1.0.6 [wiz 2019-02-21]
