@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2015/05/01 08:46:12 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2019/02/21 09:48:20 wiz Exp $
 
-DISTNAME=		xvinfo-1.1.3
+DISTNAME=		xvinfo-1.1.4
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
