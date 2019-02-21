@@ -354,10 +354,18 @@ func (mkline *MkLineImpl) Tokenize(text string, warn bool) []*MkToken {
 		defer trace.Call(mkline, text)()
 	}
 
-	p := NewMkParser(mkline.Line, text, true)
-	tokens := p.MkTokens()
-	if warn && p.Rest() != "" {
-		mkline.Warnf("Internal pkglint error in MkLine.Tokenize at %q.", p.Rest())
+	var tokens []*MkToken
+	var rest string
+	if (mkline.IsVarassign() || mkline.IsCommentedVarassign()) && text == mkline.Value() {
+		tokens, rest = mkline.ValueTokens()
+	} else {
+		p := NewMkParser(mkline.Line, text, true)
+		tokens = p.MkTokens()
+		rest = p.Rest()
+	}
+
+	if warn && rest != "" {
+		mkline.Warnf("Internal pkglint error in MkLine.Tokenize at %q.", rest)
 	}
 	return tokens
 }
@@ -458,21 +466,21 @@ func (mkline *MkLineImpl) ValueFields(value string) []string {
 	return split
 }
 
-func (mkline *MkLineImpl) ValueTokens() []*MkToken {
+func (mkline *MkLineImpl) ValueTokens() ([]*MkToken, string) {
 	value := mkline.Value()
 	if value == "" {
-		return nil
+		return nil, ""
 	}
 
 	assign := mkline.data.(mkLineAssign)
 	if assign.valueMk != nil || assign.valueMkRest != "" {
-		return assign.valueMk
+		return assign.valueMk, assign.valueMkRest
 	}
 
 	p := NewMkParser(mkline.Line, value, true)
 	assign.valueMk = p.MkTokens()
 	assign.valueMkRest = p.Rest()
-	return assign.valueMk
+	return assign.valueMk, assign.valueMkRest
 }
 
 // Fields applies to variable assignments and .for loops.
@@ -528,22 +536,23 @@ func (mkline *MkLineImpl) ResolveVarsInRelativePath(relativePath string) string 
 	} else {
 		basedir = path.Dir(mkline.Filename)
 	}
-	pkgsrcdir := relpath(basedir, G.Pkgsrc.File("."))
-
-	if G.Testing {
-		// Relative pkgsrc paths usually only contain two or three levels.
-		// A possible reason for reaching this assertion is:
-		// Tests that access the file system must create their lines
-		// using t.SetUpFileMkLines, not using t.NewMkLines.
-		G.Assertf(!contains(pkgsrcdir, "../../../../.."),
-			"Relative path %q for %q is too deep below the pkgsrc root %q.",
-			pkgsrcdir, basedir, G.Pkgsrc.File("."))
-	}
 
 	tmp := relativePath
-	tmp = strings.Replace(tmp, "${PKGSRCDIR}", pkgsrcdir, -1)
-	tmp = strings.Replace(tmp, "${.CURDIR}", ".", -1)
-	tmp = strings.Replace(tmp, "${.PARSEDIR}", ".", -1)
+	if contains(tmp, "PKGSRCDIR") {
+		pkgsrcdir := relpath(basedir, G.Pkgsrc.File("."))
+
+		if G.Testing {
+			// Relative pkgsrc paths usually only contain two or three levels.
+			// A possible reason for reaching this assertion is a pkglint unit test
+			// that uses t.NewMkLines instead of the correct t.SetUpFileMkLines.
+			G.Assertf(!contains(pkgsrcdir, "../../../../.."),
+				"Relative path %q for %q is too deep below the pkgsrc root %q.",
+				pkgsrcdir, basedir, G.Pkgsrc.File("."))
+		}
+		tmp = strings.Replace(tmp, "${PKGSRCDIR}", pkgsrcdir, -1)
+	}
+	tmp = strings.Replace(tmp, "${.CURDIR}", ".", -1)   // TODO: Replace with the "typical" os.Getwd().
+	tmp = strings.Replace(tmp, "${.PARSEDIR}", ".", -1) // FIXME
 
 	replaceLatest := func(varuse, category string, pattern regex.Pattern, replacement string) {
 		if contains(tmp, varuse) {
@@ -551,11 +560,16 @@ func (mkline *MkLineImpl) ResolveVarsInRelativePath(relativePath string) string 
 			tmp = strings.Replace(tmp, varuse, latest, -1)
 		}
 	}
+
+	// These variables are only used in pkgsrc packages, therefore they
+	// are replaced with the fixed "../.." regardless of where the text appears.
 	replaceLatest("${LUA_PKGSRCDIR}", "lang", `^lua[0-9]+$`, "../../lang/$0")
 	replaceLatest("${PHPPKGSRCDIR}", "lang", `^php[0-9]+$`, "../../lang/$0")
-	replaceLatest("${SUSE_DIR_PREFIX}", "emulators", `^(suse[0-9]+)_base$`, "$1")
 	replaceLatest("${PYPKGSRCDIR}", "lang", `^python[0-9]+$`, "../../lang/$0")
+
 	replaceLatest("${PYPACKAGE}", "lang", `^python[0-9]+$`, "$0")
+	replaceLatest("${SUSE_DIR_PREFIX}", "emulators", `^(suse[0-9]+)_base$`, "$1")
+
 	if G.Pkg != nil {
 		// XXX: Even if these variables are defined indirectly,
 		// pkglint should be able to resolve them properly.
@@ -668,7 +682,7 @@ func (mkline *MkLineImpl) VariableNeedsQuoting(varname string, vartype *Vartype,
 			}
 			return no
 		}
-		if vartype.kindOfList == lkShell && !vuc.IsWordPart {
+		if !vuc.IsWordPart {
 			return no
 		}
 	}
@@ -690,10 +704,8 @@ func (mkline *MkLineImpl) VariableNeedsQuoting(varname string, vartype *Vartype,
 	// Both of these can be correct, depending on the situation:
 	// 1. echo ${PERL5:Q}
 	// 2. xargs ${PERL5}
-	if !vuc.IsWordPart && vuc.quoting == VucQuotPlain {
-		if wantList && haveList {
-			return unknown
-		}
+	if !vuc.IsWordPart && wantList && haveList {
+		return unknown
 	}
 
 	// Pkglint assumes that the tool definitions don't include very
@@ -737,7 +749,7 @@ func (mkline *MkLineImpl) VariableNeedsQuoting(varname string, vartype *Vartype,
 
 	// Bad: LDADD+= -l${LIBS}
 	// Good: LDADD+= ${LIBS:S,^,-l,}
-	if wantList && haveList && vuc.IsWordPart {
+	if wantList {
 		return yes
 	}
 
@@ -1139,17 +1151,6 @@ func (ind *Indentation) TrackAfter(mkline MkLine) {
 			ind.top().depth += 2
 		}
 
-		if cond != nil {
-			ind.RememberUsedVariables(cond)
-
-			cond.Walk(&MkCondCallback{
-				Call: func(name string, arg string) {
-					if name == "exists" {
-						ind.AddCheckedFile(arg)
-					}
-				}})
-		}
-
 	case "for", "ifdef", "ifndef":
 		ind.top().depth += 2
 
@@ -1167,6 +1168,23 @@ func (ind *Indentation) TrackAfter(mkline MkLine) {
 		if ind.Len() > 1 { // Can only be false in unbalanced files.
 			ind.Pop()
 		}
+	}
+
+	switch directive {
+	case "if", "elif":
+		cond := mkline.Cond()
+		if cond == nil {
+			break
+		}
+
+		ind.RememberUsedVariables(cond)
+
+		cond.Walk(&MkCondCallback{
+			Call: func(name string, arg string) {
+				if name == "exists" {
+					ind.AddCheckedFile(arg)
+				}
+			}})
 	}
 
 	if trace.Tracing {

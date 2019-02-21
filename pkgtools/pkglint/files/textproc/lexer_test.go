@@ -391,6 +391,18 @@ func (s *Suite) Test__XPrint(c *check.C) {
 	c.Check(set.Contains(0xA0), equals, false)
 }
 
+func (s *Suite) Test__Alpha(c *check.C) {
+	set := Alpha
+
+	c.Check(set.Contains(0x00), equals, false)
+	c.Check(set.Contains('@'), equals, false)
+	c.Check(set.Contains('A'), equals, true)
+	c.Check(set.Contains('Z'), equals, true)
+	c.Check(set.Contains('`'), equals, false)
+	c.Check(set.Contains('a'), equals, true)
+	c.Check(set.Contains('z'), equals, true)
+}
+
 func (s *Suite) Test__test_names(c *check.C) {
 	ck := intqa.NewTestNameChecker(c)
 	ck.AllowCamelCaseDescriptions(

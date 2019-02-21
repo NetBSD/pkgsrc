@@ -192,3 +192,44 @@ func (s *Suite) Test_CheckLinesOptionsMk__malformed_condition(c *check.C) {
 	t.CheckOutputLines(
 		"WARN: ~/category/package/options.mk:13: Invalid condition, unrecognized part: \"${OPSYS} == 'Darwin'\".")
 }
+
+func (s *Suite) Test_CheckLinesOptionsMk__PLIST_VARS_based_on_PKG_SUPPORTED_OPTIONS(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpOption("one", "")
+	t.SetUpOption("two", "")
+	t.SetUpOption("three", "")
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("mk/bsd.options.mk")
+	t.SetUpFileMkLines("category/package/options.mk",
+		MkRcsID,
+		"",
+		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.package",
+		"PKG_SUPPORTED_OPTIONS+=\tone",
+		"PKG_SUPPORTED_OPTIONS+=\ttwo",
+		"PKG_SUPPORTED_OPTIONS+=\tthree",
+		"",
+		".include \"../../mk/bsd.options.mk\"",
+		"",
+		"PLIST_VARS+=\t${PKG_SUPPORTED_OPTIONS}",
+		"",
+		".if ${PKG_OPTIONS:Mone}",
+		"PLIST.one=\tyes",
+		".endif",
+		"",
+		".if ${PKG_OPTIONS:Mthree}",
+		"PLIST.three=\tyes",
+		".endif")
+	t.Chdir("category/package")
+
+	G.Check(".")
+
+	// Even though PLIST_VARS is defined indirectly by referencing
+	// PKG_SUPPORTED_OPTIONS and that variable is defined in several
+	// lines, pkglint gets all the facts correct and knows that
+	// only PLIST.two is missing.
+	t.CheckOutputLines(
+		"WARN: options.mk:10: "+
+			"\"two\" is added to PLIST_VARS, but PLIST.two is not defined in this file.",
+		"WARN: options.mk:5: Option \"two\" should be handled below in an .if block.")
+}

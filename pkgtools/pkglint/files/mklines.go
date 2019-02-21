@@ -405,18 +405,15 @@ func (mklines *MkLinesImpl) CheckRedundantAssignments() {
 	scope := NewRedundantScope()
 
 	isRelevant := func(old, new MkLine) bool {
-		if old.Basename != "Makefile" && new.Basename == "Makefile" {
-			return false
-		}
 		if new.Op() == opAssignEval {
 			return false
 		}
 		return true
 	}
 
-	scope.OnIgnore = func(old, new MkLine) {
+	scope.OnRedundant = func(old, new MkLine) {
 		if isRelevant(old, new) && old.Value() == new.Value() {
-			old.Notef("Definition of %s is redundant because of %s.", new.Varname(), old.RefTo(new))
+			new.Notef("Definition of %s is redundant because of %s.", old.Varname(), new.RefTo(old))
 		}
 	}
 

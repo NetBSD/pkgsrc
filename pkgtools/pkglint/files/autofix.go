@@ -96,15 +96,13 @@ func (fix *Autofix) ReplaceAfter(prefix, from string, to string) {
 	}
 
 	for _, rawLine := range fix.line.raw {
-		if rawLine.Lineno != 0 {
-			replaced := strings.Replace(rawLine.textnl, prefix+from, prefix+to, 1)
-			if replaced != rawLine.textnl {
-				if G.Logger.IsAutofix() {
-					rawLine.textnl = replaced
-				}
-				fix.Describef(rawLine.Lineno, "Replacing %q with %q.", from, to)
-				return
+		replaced := strings.Replace(rawLine.textnl, prefix+from, prefix+to, 1)
+		if replaced != rawLine.textnl {
+			if G.Logger.IsAutofix() {
+				rawLine.textnl = replaced
 			}
+			fix.Describef(rawLine.Lineno, "Replacing %q with %q.", from, to)
+			return
 		}
 	}
 }
@@ -122,26 +120,24 @@ func (fix *Autofix) ReplaceRegex(from regex.Pattern, toText string, howOften int
 
 	done := 0
 	for _, rawLine := range fix.line.raw {
-		if rawLine.Lineno != 0 {
-			var froms []string // The strings that have actually changed
+		var froms []string // The strings that have actually changed
 
-			replace := func(fromText string) string {
-				if howOften >= 0 && done >= howOften {
-					return fromText
-				}
-				froms = append(froms, fromText)
-				done++
-				return toText
+		replace := func(fromText string) string {
+			if howOften >= 0 && done >= howOften {
+				return fromText
 			}
+			froms = append(froms, fromText)
+			done++
+			return toText
+		}
 
-			replaced := replaceAllFunc(rawLine.textnl, from, replace)
-			if replaced != rawLine.textnl {
-				if G.Logger.IsAutofix() {
-					rawLine.textnl = replaced
-				}
-				for _, fromText := range froms {
-					fix.Describef(rawLine.Lineno, "Replacing %q with %q.", fromText, toText)
-				}
+		replaced := replaceAllFunc(rawLine.textnl, from, replace)
+		if replaced != rawLine.textnl {
+			if G.Logger.IsAutofix() {
+				rawLine.textnl = replaced
+			}
+			for _, fromText := range froms {
+				fix.Describef(rawLine.Lineno, "Replacing %q with %q.", fromText, toText)
 			}
 		}
 	}
@@ -231,9 +227,10 @@ func (fix *Autofix) Delete() {
 }
 
 // Anyway has the effect of showing the diagnostic even when nothing can
-// be fixed automatically.
+// be fixed automatically, but only if neither --show-autofix nor
+// --autofix mode is given.
 func (fix *Autofix) Anyway() {
-	fix.anyway = true
+	fix.anyway = !G.Logger.IsAutofix()
 }
 
 // Apply does the actual work.
@@ -262,21 +259,25 @@ func (fix *Autofix) Apply() {
 		fix.autofixShortTerm = autofixShortTerm{}
 	}
 
-	if !G.Logger.Relevant(fix.diagFormat) || !fix.anyway && len(fix.actions) == 0 {
+	if !(G.Logger.Relevant(fix.diagFormat) && (len(fix.actions) > 0 || fix.anyway)) {
 		reset()
 		return
 	}
 
-	logDiagnostic := (G.Logger.Opts.ShowAutofix || !G.Logger.Opts.Autofix) &&
-		fix.diagFormat != SilentAutofixFormat
+	logDiagnostic := true
+	switch {
+	case fix.diagFormat == SilentAutofixFormat:
+		logDiagnostic = false
+	case G.Logger.Opts.Autofix && !G.Logger.Opts.ShowAutofix:
+		logDiagnostic = false
+	}
+
 	logFix := G.Logger.IsAutofix()
 
 	if logDiagnostic {
 		msg := sprintf(fix.diagFormat, fix.diagArgs...)
-		if !logFix {
-			if fix.diagFormat == AutofixFormat || G.Logger.FirstTime(line.Filename, line.Linenos(), msg) {
-				line.showSource(G.out)
-			}
+		if !logFix && G.Logger.FirstTime(line.Filename, line.Linenos(), msg) {
+			line.showSource(G.out)
 		}
 		G.Logf(fix.level, line.Filename, line.Linenos(), fix.diagFormat, msg)
 	}
@@ -299,7 +300,7 @@ func (fix *Autofix) Apply() {
 			G.Explain(fix.explanation...)
 		}
 		if G.Logger.Opts.ShowSource {
-			if !G.Logger.Opts.Explain || !logDiagnostic || len(fix.explanation) == 0 {
+			if !(G.Logger.Opts.Explain && logDiagnostic && len(fix.explanation) > 0) {
 				G.out.Separate()
 			}
 		}
@@ -327,8 +328,8 @@ func (fix *Autofix) Realign(mkline MkLine, newWidth int) {
 	{
 		// Parsing the continuation marker as variable value is cheating but works well.
 		text := strings.TrimSuffix(mkline.raw[0].orignl, "\n")
-		m, _, _, _, _, valueAlign, value, _, _ := MatchVarassign(text)
-		if m && value != "\\" {
+		_, _, _, _, _, valueAlign, value, _, _ := MatchVarassign(text)
+		if value != "\\" {
 			oldWidth = tabWidth(valueAlign)
 		}
 	}
@@ -336,7 +337,7 @@ func (fix *Autofix) Realign(mkline MkLine, newWidth int) {
 	for _, rawLine := range fix.line.raw[1:] {
 		_, comment, space := match2(rawLine.textnl, `^(#?)([ \t]*)`)
 		width := tabWidth(comment + space)
-		if (oldWidth == 0 || width < oldWidth) && width >= 8 && rawLine.textnl != "\n" {
+		if (oldWidth == 0 || width < oldWidth) && width >= 8 {
 			oldWidth = width
 		}
 		if !matches(space, `^\t* {0,7}$`) {

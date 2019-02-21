@@ -375,12 +375,8 @@ func (s *Suite) Test_MkParser_MkCond(c *check.C) {
 	}
 	varuse := NewMkVarUse
 
-	// TODO: Add tests for &&, ||, !.
-
-	// TODO: Add test for !empty(VAR:M}).
-
 	test("${OPSYS:MNetBSD}",
-		&mkCond{Not: &mkCond{Empty: varuse("OPSYS", "MNetBSD")}})
+		&mkCond{Var: varuse("OPSYS", "MNetBSD")})
 
 	test("defined(VARNAME)",
 		&mkCond{Defined: "VARNAME"})
@@ -443,8 +439,8 @@ func (s *Suite) Test_MkParser_MkCond(c *check.C) {
 
 	test("${MACHINE_ARCH:Mi386} || ${MACHINE_OPSYS:MNetBSD}",
 		&mkCond{Or: []*mkCond{
-			{Not: &mkCond{Empty: varuse("MACHINE_ARCH", "Mi386")}},
-			{Not: &mkCond{Empty: varuse("MACHINE_OPSYS", "MNetBSD")}}}})
+			{Var: varuse("MACHINE_ARCH", "Mi386")},
+			{Var: varuse("MACHINE_OPSYS", "MNetBSD")}}})
 
 	// Exotic cases
 
@@ -485,7 +481,7 @@ func (s *Suite) Test_MkParser_MkCond(c *check.C) {
 		&mkCond{Defined: "VARNAME"})
 
 	test("${\"${PKG_OPTIONS:Moption}\":?--enable-option:--disable-option}",
-		&mkCond{Not: &mkCond{Empty: varuse("\"${PKG_OPTIONS:Moption}\"", "?--enable-option:--disable-option")}})
+		&mkCond{Var: varuse("\"${PKG_OPTIONS:Moption}\"", "?--enable-option:--disable-option")})
 
 	// Errors
 
@@ -494,7 +490,7 @@ func (s *Suite) Test_MkParser_MkCond(c *check.C) {
 		"|| defined(PKG_OPTIONS:Msamplerate)")
 
 	testRest("${LEFT} &&",
-		&mkCond{Not: &mkCond{Empty: varuse("LEFT")}},
+		&mkCond{Var: varuse("LEFT")},
 		"&&")
 
 	testRest("\"unfinished string literal",
@@ -821,6 +817,9 @@ func (s *Suite) Test_MkCondWalker_Walk(c *check.C) {
 		Call: func(name string, arg string) {
 			addEvent("call", name, arg)
 		},
+		Var: func(varuse *MkVarUse) {
+			addEvent("var", varuseStr(varuse))
+		},
 		VarUse: func(varuse *MkVarUse) {
 			addEvent("varUse", varuseStr(varuse))
 		}})
@@ -836,6 +835,6 @@ func (s *Suite) Test_MkCondWalker_Walk(c *check.C) {
 		"       defined  VAR",
 		"        varUse  VAR",
 		"          call  exists, file.mk",
-		"         empty  NONEMPTY",
+		"           var  NONEMPTY",
 		"        varUse  NONEMPTY"})
 }

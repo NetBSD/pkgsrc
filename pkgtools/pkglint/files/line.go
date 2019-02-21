@@ -19,9 +19,16 @@ import (
 )
 
 type RawLine struct {
-	Lineno int    // Counting starts at 1; 0 means inserted by Autofix
-	orignl string // The line as read in from the file, including newline
-	textnl string // The line as modified by Autofix, including newline
+	Lineno int // Counting starts at 1
+
+	// The line as read in from the file, including newline;
+	// can never be empty. Only in the very last line of each file,
+	// the trailing newline might be missing.
+	orignl string
+
+	// The line as modified by Autofix, including newline;
+	// empty string for deleted lines.
+	textnl string
 
 	// XXX: Since only Autofix needs to distinguish between orignl and textnl,
 	// one of these fields should probably be moved there.
@@ -145,9 +152,7 @@ func (line *LineImpl) showSource(out *SeparatorWriter) {
 
 		for _, rawLine := range rawLines {
 			if rawLine.textnl != rawLine.orignl {
-				if rawLine.orignl != "" {
-					writeLine("-\t", rawLine.orignl)
-				}
+				writeLine("-\t", rawLine.orignl)
 				if rawLine.textnl != "" {
 					writeLine("+\t", rawLine.textnl)
 				}

@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkglint.1,v 1.52 2018/01/13 23:56:14 rillig Exp $
+.\"	$NetBSD: pkglint.1,v 1.53 2019/02/21 22:49:03 rillig Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
@@ -6,7 +6,7 @@
 .\"
 .\" Roland Illig <roland.illig@gmx.de>, 2004, 2005.
 .\" Thomas Klausner <wiz@NetBSD.org>, 2012.
-.\" Roland Illig <rillig@NetBSD.org>, 2015-2018.
+.\" Roland Illig <rillig@NetBSD.org>, 2015-2019.
 .\"
 .Dd January 14, 2018
 .Dt PKGLINT 1
@@ -88,28 +88,10 @@ For a list of warnings, see below.
 Enable all checks.
 .It Cm none
 Disable all checks.
-.It Cm [no-]ALTERNATIVES
-Check the alternatives file.
-.It Cm [no-]DESCR
-Check the DESCR file.
-.It Cm [no-]INSTALL
-Check the INSTALL and DEINSTALL scripts.
-.It Cm [no-]Makefile
-Check the package Makefile, including all included files.
-.It Cm [no-]MESSAGE
-Check MESSAGE files.
-.It Cm [no-]PLIST
-Check PLIST files.
-.It Cm [no-]bl3
-Check buildlink3 Makefiles.
-.It Cm [no-]distinfo
-Check the distinfo file.
 .It Cm [no-]extra
 Check remaining files in the package directory.
-.It Cm [no-]mk
-Check Makefile fragments besides buildlink3.
-.It Cm [no-]patches
-Check the pkgsrc specific patch files.
+.It Cm [no-]global
+Check inter-package consistency for distfile hashes and used licenses.
 .El
 .\" =======================================================================
 .Ss Warnings
@@ -118,41 +100,17 @@ Check the pkgsrc specific patch files.
 Enable all warnings.
 .It Cm none
 Disable all warnings.
-.It Cm [no-]absname
-Warn if a file contains an absolute pathname.
-.It Cm [no-]directcmd
-Warn if a system command name is used instead of a variable (e.g. sed
-instead of ${SED}).
 .It Cm [no-]extra
 Emit some additional warnings that are not enabled by default.
-.It Cm [no-]order
-Warn if Makefile variables are not in the preferred order.
 .It Cm [no-]perm
 Warn if a variable is used or modified outside its specified scope.
-.It Cm [no-]plist-depr
-Warn if deprecated pathnames are used in
-.Pa PLIST
-files.
-This warning is disabled by default.
-.It Cm [no-]plist-sort
-Warn if items of a PLIST file are not sorted alphabetically.
-This warning is disabled by default.
 .It Cm [no-]quoting
 Warn for possibly invalid quoting of make variables in shell programs
 and shell variables themselves.
 .It Cm [no-]space
-Emit notes for inconsistent use of white-space.
+Emit notes for inconsistent use of whitespace.
 .It Cm [no-]style
 Warn for stylistic issues that don't affect the build process.
-.It Cm [no-]types
-Warn for some
-.Pa Makefile
-variables if their assigned values do not match
-their type.
-.It Cm [no-]varorder
-Warn if the variables in a package
-.Pa Makefile Ns
-s are not ordered in the way it is described the pkgsrc guide.
 .El
 .\" =======================================================================
 .Ss Other arguments
@@ -168,8 +126,8 @@ Files from the pkgsrc infrastructure.
 .El
 .Sh EXAMPLES
 .Bl -tag -width Fl
-.It Ic pkglint \-Cnone,patches \&.
-Checks the patches of the package in the current directory.
+.It Ic pkglint \&.
+Checks the package in the current directory.
 .It Ic pkglint \-Wall /usr/pkgsrc/devel
 Checks the category Makefile and reports any warnings it can find.
 .El

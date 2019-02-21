@@ -12,6 +12,23 @@ func (s *Suite) Test_RawLine_String(c *check.C) {
 	c.Check(line.raw[0].String(), equals, "123:text\n")
 }
 
+func (s *Suite) Test_NewLine__assertion(c *check.C) {
+	t := s.Init(c)
+
+	t.ExpectPanic(
+		func() { NewLine("filename", 123, "text", nil) },
+		"Pkglint internal error: use NewLineMulti for creating a Line with no RawLine attached to it")
+}
+
+func (s *Suite) Test_Line_IsMultiline(c *check.C) {
+	t := s.Init(c)
+
+	t.Check(t.NewLine("filename", 123, "text").IsMultiline(), equals, false)
+	t.Check(NewLineEOF("filename").IsMultiline(), equals, false)
+
+	t.Check(NewLineMulti("filename", 123, 125, "text", nil).IsMultiline(), equals, true)
+}
+
 // In case of a fatal error, pkglint quits in a controlled manner,
 // and the trace log shows where the fatal error happened.
 func (s *Suite) Test_Line_Fatalf__trace(c *check.C) {

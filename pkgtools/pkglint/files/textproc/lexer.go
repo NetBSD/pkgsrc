@@ -264,6 +264,7 @@ func (bs *ByteSet) Contains(b byte) bool { return bs.bits[b] }
 var (
 	Alnum  = NewByteSet("A-Za-z0-9")  // Alphanumerical, without underscore
 	AlnumU = NewByteSet("A-Za-z0-9_") // Alphanumerical, including underscore
+	Alpha  = NewByteSet("A-Za-z")     // Alphabetical, without underscore
 	Digit  = NewByteSet("0-9")        // The digits zero to nine
 	Upper  = NewByteSet("A-Z")        // The uppercase letters from A to Z
 	Lower  = NewByteSet("a-z")        // The lowercase letters from a to z
