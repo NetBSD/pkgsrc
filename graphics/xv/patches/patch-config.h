@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.11 2019/02/21 01:37:14 tsutsui Exp $
+$NetBSD: patch-config.h,v 1.1 2019/02/21 14:32:32 tsutsui Exp $
 
 - make ghostscript support optional
 - use pkgsrc ${PREFIX} for ghostscript files
 
---- config.h.orig	2019-02-17 16:07:37.145241693 +0000
+--- config.h.orig	2019-02-21 14:07:37.592173395 +0000
 +++ config.h
 @@ -112,10 +112,12 @@
   * should not need to be changed

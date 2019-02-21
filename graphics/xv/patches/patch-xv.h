@@ -1,13 +1,12 @@
-$NetBSD: patch-af,v 1.9 2011/02/14 20:37:40 wiz Exp $
+$NetBSD: patch-xv.h,v 1.1 2019/02/21 14:32:32 tsutsui Exp $
 
-Config fixups.
-  - don't declare errno and sys_errlist
-  - use strerror
-  - use getcwd, not getwd
+- don't declare errno and sys_errlist
+- use strerror
+- use getcwd, not getwd
 
---- xv.h.orig	2011-01-23 23:25:49.000000000 +0000
+--- xv.h.orig	2019-02-21 14:07:38.801848956 +0000
 +++ xv.h
-@@ -138,9 +138,7 @@
+@@ -139,9 +139,7 @@
  #endif
  
  
@@ -18,7 +17,7 @@ Config fixups.
  
  
  /* include files */
-@@ -159,7 +157,7 @@
+@@ -160,7 +158,7 @@
  #ifndef VMS
  #  include <errno.h>
  #  ifndef __NetBSD__
@@ -27,7 +26,7 @@ Config fixups.
         extern int   errno;         /* SHOULD be in errno.h, but often isn't */
         extern char *sys_errlist[]; /* this too... */
  #    endif
-@@ -171,7 +169,7 @@
+@@ -172,7 +170,7 @@
  #ifdef VMS
  #  define ERRSTR(x) strerror(x, vaxc$errno)
  #else
@@ -36,7 +35,7 @@ Config fixups.
  #    define ERRSTR(x) strerror(x)
  #  else
  #    define ERRSTR(x) sys_errlist[x]
-@@ -207,7 +205,9 @@
+@@ -208,7 +206,9 @@
  #  if defined(hp300) || defined(hp800) || defined(NeXT)
  #    include <sys/malloc.h>    /* it's in "sys" on HPs and NeXT */
  #  else
@@ -47,7 +46,7 @@ Config fixups.
  #  endif
  #endif
  
-@@ -391,7 +391,7 @@
+@@ -392,7 +392,7 @@
  #  endif
  #endif
  
