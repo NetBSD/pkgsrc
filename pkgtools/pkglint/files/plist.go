@@ -65,13 +65,9 @@ func (ck *PlistChecker) Check(plainLines Lines) {
 	}
 	CheckLinesTrailingEmptyLines(plainLines)
 
-	if G.Opts.WarnPlistSort {
-		sorter := NewPlistLineSorter(plines)
-		sorter.Sort()
-		if !sorter.autofixed {
-			SaveAutofixChanges(plainLines)
-		}
-	} else {
+	sorter := NewPlistLineSorter(plines)
+	sorter.Sort()
+	if !sorter.autofixed {
 		SaveAutofixChanges(plainLines)
 	}
 }
@@ -112,8 +108,6 @@ func (ck *PlistChecker) collectFilesAndDirs(plines []*PlistLine) {
 					ck.allDirs[dir] = pline
 				}
 			case first == '@':
-				// TODO: Check if this directive is still used,
-				//  or if it has been removed during a pkg_install re-implementation.
 				if m, dirname := match1(text, `^@exec \$\{MKDIR\} %D/(.*)$`); m {
 					for dir := dirname; dir != "."; dir = path.Dir(dir) {
 						ck.allDirs[dir] = pline
@@ -199,7 +193,7 @@ func (ck *PlistChecker) checkPath(pline *PlistLine) {
 		pline.Warnf(".orig files should not be in the PLIST.")
 	}
 	if hasSuffix(text, "/perllocal.pod") {
-		pline.Warnf("perllocal.pod files should not be in the PLIST.")
+		pline.Warnf("The perllocal.pod file should not be in the PLIST.")
 		G.Explain(
 			"This file is handled automatically by the INSTALL/DEINSTALL scripts",
 			"since its contents depends on more than one package.")
@@ -210,7 +204,7 @@ func (ck *PlistChecker) checkPath(pline *PlistLine) {
 }
 
 func (ck *PlistChecker) checkSorted(pline *PlistLine) {
-	if text := pline.text; G.Opts.WarnPlistSort && hasAlnumPrefix(text) && !containsVarRef(text) {
+	if text := pline.text; hasAlnumPrefix(text) && !containsVarRef(text) {
 		if ck.lastFname != "" {
 			if ck.lastFname > text && !G.Logger.Opts.Autofix {
 				pline.Warnf("%q should be sorted before %q.", text, ck.lastFname)
@@ -292,7 +286,7 @@ func (ck *PlistChecker) checkPathLib(pline *PlistLine, dirname, basename string)
 
 	switch ext := path.Ext(basename); ext {
 	case ".la":
-		if G.Pkg != nil && !G.Pkg.vars.Defined("USE_LIBTOOL") {
+		if G.Pkg != nil && !G.Pkg.vars.Defined("USE_LIBTOOL") && ck.once.FirstTime("USE_LIBTOOL") {
 			pline.Warnf("Packages that install libtool libraries should define USE_LIBTOOL.")
 		}
 	}
@@ -378,9 +372,7 @@ func (ck *PlistChecker) checkPathShare(pline *PlistLine) {
 		}
 
 	case hasPrefix(text, "share/doc/html/"):
-		if G.Opts.WarnPlistDepr {
-			pline.Warnf("Use of \"share/doc/html\" is deprecated. Use \"share/doc/${PKGBASE}\" instead.")
-		}
+		pline.Warnf("Use of \"share/doc/html\" is deprecated. Use \"share/doc/${PKGBASE}\" instead.")
 
 	case G.Pkg != nil && G.Pkg.EffectivePkgbase != "" && (hasPrefix(text, "share/doc/"+G.Pkg.EffectivePkgbase+"/") ||
 		hasPrefix(text, "share/examples/"+G.Pkg.EffectivePkgbase+"/")):
@@ -398,7 +390,7 @@ func (ck *PlistChecker) checkPathShare(pline *PlistLine) {
 
 func (pline *PlistLine) CheckTrailingWhitespace() {
 	if hasSuffix(pline.text, " ") || hasSuffix(pline.text, "\t") {
-		pline.Errorf("pkgsrc does not support filenames ending in whitespace.")
+		pline.Errorf("Pkgsrc does not support filenames ending in whitespace.")
 		G.Explain(
 			"Each character in the PLIST is relevant, even trailing whitespace.")
 	}
@@ -420,7 +412,7 @@ func (pline *PlistLine) CheckDirective(cmd, arg string) {
 	case "exec", "unexec":
 		switch {
 		case contains(arg, "ldconfig") && !contains(arg, "/usr/bin/true"):
-			pline.Errorf("ldconfig must be used with \"||/usr/bin/true\".")
+			pline.Errorf("The ldconfig command must be used with \"||/usr/bin/true\".")
 		}
 
 	case "comment":
