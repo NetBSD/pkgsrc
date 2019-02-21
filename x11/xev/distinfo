@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/11/04 03:29:00 agc Exp $
+$NetBSD: distinfo,v 1.8 2019/02/21 09:32:34 wiz Exp $
 
-SHA1 (xev-1.2.2.tar.bz2) = e737bc46c58b9bb10f0af9883dce203bbed708aa
-RMD160 (xev-1.2.2.tar.bz2) = 09cc057d9547ba345210898c10dea765601793cc
-SHA512 (xev-1.2.2.tar.bz2) = 453fc18072e4d4fd088a1b2e918f3772aaa2c56b36c082deb41ec4d434d1579de75f447fc4e0507086c170152e02d6db8b60dc7fd87ae18a2e817448bd628fca
-Size (xev-1.2.2.tar.bz2) = 132596 bytes
+SHA1 (xev-1.2.3.tar.bz2) = 3a294934b9e150abc3cccc4182a40ed9b5ea9871
+RMD160 (xev-1.2.3.tar.bz2) = a23e65013b0ba3ed6df4fb1c2a5756c7cbe6fbd4
+SHA512 (xev-1.2.3.tar.bz2) = 47cc7ac096e77cfa4e687914d767263cf3e1dca5bffd0f68c7ba0fe751b248c8a16525bd2da4d6efa0ea8d637831c893d41c9687cace4aaa9c0909a45ef1943e
+Size (xev-1.2.3.tar.bz2) = 134866 bytes
