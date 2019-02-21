@@ -1,3 +1,2 @@
-xrdb is a program to query a modify the resource database of a X server.
-
-This is from the modular X.org X11 project.
+xrdb is a command line utility to manage the X server resource database
+for the current session.
