@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.92 2018/06/21 22:36:36 tez Exp $
+# $NetBSD: Makefile,v 1.93 2019/02/21 01:37:14 tsutsui Exp $
 
 DISTNAME=	xv-3.10a
-PKGREVISION=	24
+PKGREVISION=	25
 CATEGORIES=	graphics x11
 MASTER_SITES=	ftp://ftp.cis.upenn.edu/pub/xv/
 DISTFILES=	${DEFAULT_DISTFILES} ${JUMBO_PATCHES}
@@ -14,14 +14,15 @@ SITES.${JUMBO_PATCHES}=	${MASTER_SITE_SOURCEFORGE:=png-mng/}
 PATCHFILES+=	xv-3.10a-enhancements.20070520-20081216.diff
 PATCH_SITES=	http://www.gregroelofs.com/code/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	tsutsui@NetBSD.org
 HOMEPAGE=	http://www.trilon.com/xv/
 # and...	http://www.sonic.net/~roelofs/greg_xv.html
 COMMENT=	X11 program that displays images of various formats
 LICENSE=	xv-license
 
 USE_IMAKE=	YES
-USE_TOOLS+=	gs:run
+
+.include "options.mk"
 
 # See the end of README in work/xv-3.10a for details.
 RESTRICTED=	Distribution of modified copies and commercial distribution is not permitted.
