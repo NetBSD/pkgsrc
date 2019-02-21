@@ -1,9 +1,8 @@
-$NetBSD: patch-ag,v 1.5 2011/01/23 23:58:01 dholland Exp $
+$NetBSD: patch-xvinfo.c,v 1.1 2019/02/21 14:32:32 tsutsui Exp $
 
-Avoid truncating warning messages; some from libpng are more than 80
-characters long.
+- fix a small string buffer that was truncating some libpng messages
 
---- xvinfo.c.orig	2011-01-23 23:25:49.000000000 +0000
+--- xvinfo.c.orig	2019-02-21 14:07:38.372613477 +0000
 +++ xvinfo.c
 @@ -26,7 +26,7 @@
  #define INFOHIGH 270

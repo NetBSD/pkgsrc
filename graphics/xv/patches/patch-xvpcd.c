@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2007/07/08 10:50:24 wiz Exp $
+$NetBSD: patch-xvpcd.c,v 1.1 2019/02/21 14:32:32 tsutsui Exp $
+
+- remove obsolete alloca check
 
 --- xvpcd.c.orig	2007-05-14 01:02:13.000000000 +0000
 +++ xvpcd.c

@@ -1,6 +1,8 @@
-$NetBSD: patch-ab,v 1.10 2007/07/27 23:42:17 joerg Exp $
+$NetBSD: patch-vdcomp.c,v 1.1 2019/02/21 14:32:32 tsutsui Exp $
 
---- vdcomp.c.orig	2007-07-27 23:20:04.000000000 +0000
+- don't use malloc.h
+
+--- vdcomp.c.orig	2019-02-21 14:07:37.726880361 +0000
 +++ vdcomp.c
 @@ -96,41 +96,6 @@
  #include <stdio.h>

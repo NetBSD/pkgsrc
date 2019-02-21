@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2019/02/21 06:00:22 tsutsui Exp $
+# $NetBSD: options.mk,v 1.2 2019/02/21 14:32:32 tsutsui Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xv
 PKG_SUPPORTED_OPTIONS=	ghostscript
-PKG_SUGGESTED_OPTIONS=	
+PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
 

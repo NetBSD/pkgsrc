@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2019/02/21 01:37:14 tsutsui Exp $
+$NetBSD: distinfo,v 1.23 2019/02/21 14:32:32 tsutsui Exp $
 
 SHA1 (xv-3.10a-enhancements.20070520-20081216.diff) = 40bfb0889b820e0f9d3bd7d771144ec3458acc66
 RMD160 (xv-3.10a-enhancements.20070520-20081216.diff) = dbd4ab25b5b62fb543befcf655d928db3a77e005
@@ -12,10 +12,10 @@ SHA1 (xv-3.10a.tar.gz) = 9e6372f154be9e9e355972cbeb91d98d9c342474
 RMD160 (xv-3.10a.tar.gz) = 7d545e0c0e5b0120a7d026ea549cba19a53fbc0d
 SHA512 (xv-3.10a.tar.gz) = 5b8c5890503e2796638921cabae8967e458c73e332acea8561b1025ed13c771bc44c0e309b4592852e33726eeaa9784f933d1312073b0ba2e0b8c0cedabcaa3f
 Size (xv-3.10a.tar.gz) = 2259124 bytes
-SHA1 (patch-aa) = bd6ef51bf962e1994e2e47ba5197c9729ec5221a
-SHA1 (patch-ab) = 5bfc8ae09b029e4661b27d94bba46540c7f320fb
-SHA1 (patch-ac) = 66430e80d9a17f772abefd14d00af0b5a0f88100
-SHA1 (patch-ad) = 9447ae45ac67f2f9ef7eead8a6a21902f0c7922e
-SHA1 (patch-ae) = 2bda08bae67fcf127c49b9ed780b7a247579c088
-SHA1 (patch-af) = 7f6e771788e04577d8db17bfe8fbcce8dca4a600
-SHA1 (patch-ag) = 120d589f728fd32ea267fd46bcc16f27d9f08116
+SHA1 (patch-Imakefile) = e27d7d2f110d4edbce9a5d236e45a556714b5be0
+SHA1 (patch-config.h) = fd0ef6bbf774a57dd0bb94676927dcc6eeef1014
+SHA1 (patch-vdcomp.c) = 4c603cdc2c01925fed283b2aa6030d1933cdaddc
+SHA1 (patch-xv.h) = 894c5a9d4e1cb5fb18a9914c75408b67f1e6e5d4
+SHA1 (patch-xvinfo.c) = 33b2392de259f1380e5be180f8e7293a9551fc52
+SHA1 (patch-xvpcd.c) = 1825015f441b9af91916f9a62e8d1dee6ddfdef9
+SHA1 (patch-xvpng.c) = 2bda08bae67fcf127c49b9ed780b7a247579c088
