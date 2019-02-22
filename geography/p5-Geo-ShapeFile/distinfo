@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2017/07/10 12:17:34 wen Exp $
+$NetBSD: distinfo,v 1.6 2019/02/22 14:07:38 wen Exp $
 
-SHA1 (Geo-ShapeFile-2.64.tar.gz) = 01b78d25e984a702618fca3f6577d31c095f05d2
-RMD160 (Geo-ShapeFile-2.64.tar.gz) = 0421289b5a033b4defad3181b0194ea8407561b4
-SHA512 (Geo-ShapeFile-2.64.tar.gz) = fab04f94e8a9c003856427f98f9e173788fbe3f27c127ef9f16d8a513441362fe0955de40fbc2c373c3f93d0c0ee923431f54f405f0d760574e03234dc61e1f4
-Size (Geo-ShapeFile-2.64.tar.gz) = 333254 bytes
+SHA1 (Geo-ShapeFile-2.66.tar.gz) = b952c6fea3c8f033a8aee80e57e9f2cc3419be3f
+RMD160 (Geo-ShapeFile-2.66.tar.gz) = 85561ce67690de8571028397c1b116608fcc4c70
+SHA512 (Geo-ShapeFile-2.66.tar.gz) = d5e808317a6c69d937f4f44e5d9866438f21bfe4542b061bc4f2185490d66aeade90a43e7efe8c26b791f773084ffcf51a59dc6beaecf12f6d7f6e02b987f239
+Size (Geo-ShapeFile-2.66.tar.gz) = 333574 bytes
 SHA1 (patch-t_main__tests.t) = a750d7cad89c1f4100ed83219e956b1b81787e9f
