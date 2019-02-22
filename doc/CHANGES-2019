@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.854 2019/02/22 14:09:05 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.855 2019/02/22 14:15:56 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1530,3 +1530,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/fasttracker2 to 2.137 [fox 2019-02-22]
 	Updated geography/p5-Geo-ShapeFile to 2.66 [wen 2019-02-22]
 	Updated devel/doxygen to 1.8.15nb1 [wiz 2019-02-22]
+	Updated mail/p5-Email-Address-List to 0.06 [wen 2019-02-22]
