@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2018/12/27 15:05:27 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2019/02/22 08:59:49 adam Exp $
 
-DISTNAME=	apache-libcloud-2.2.1
+DISTNAME=	apache-libcloud-2.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/apache-libcloud/}
 
@@ -14,9 +13,9 @@ LICENSE=	apache-2.0
 USE_LANGUAGES=	# none
 
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
-BUILD_DEPENDS+=	${PYPKGPREFIX}-requests-mock-[0-9]*:../../devel/py-requests-mock
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TEST_DEPENDS+=	${PYPKGPREFIX}-requests-mock-[0-9]*:../../devel/py-requests-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 pre-install:
 	${RM} ${WRKSRC}/libcloud/compute/drivers/azure.py.orig
