@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2018/11/14 22:21:42 kleink Exp $
+# $NetBSD: Makefile,v 1.103 2019/02/22 20:50:54 tnn Exp $
 
 DISTNAME=	librsvg-2.40.20
 PKGREVISION=	4
@@ -12,7 +12,6 @@ COMMENT=	SVG library for GNOME
 LICENSE=	gnu-lgpl-v2
 
 CONFLICTS+=	librsvg2-gtk-[0-9]* librsvg2-[0-9]*
-MAKE_JOBS_SAFE=	NO
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config gmake
