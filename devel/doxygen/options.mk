@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.12 2019/01/31 14:15:55 wiz Exp $
+# $NetBSD: options.mk,v 1.13 2019/02/22 14:08:56 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.doxygen
 PKG_SUPPORTED_OPTIONS=	latex
-PKG_SUGGESTED_OPTIONS=	latex
+#PKG_SUGGESTED_OPTIONS=	latex
 
 .include "../../mk/bsd.options.mk"
 
