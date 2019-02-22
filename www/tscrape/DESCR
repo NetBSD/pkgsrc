@@ -1,0 +1,2 @@
+tscrape reads the Twitter HTML page and scrapes the data into a
+TAB-separated format to stdout.
