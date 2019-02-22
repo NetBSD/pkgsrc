@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.850 2019/02/22 01:24:48 taca Exp $
+$NetBSD: CHANGES-2019,v 1.851 2019/02/22 09:00:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1525,3 +1525,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated pkgtools/pkglint to 5.7.1 [rillig 2019-02-21]
 	Updated net/bind911 to 9.11.5pl4 [taca 2019-02-22]
 	Updated net/bind912 to 9.12.3pl4 [taca 2019-02-22]
+	Updated net/tor to 0.3.5.8 [adam 2019-02-22]
+	Updated net/py-apache-libcloud to 2.4.0 [adam 2019-02-22]
