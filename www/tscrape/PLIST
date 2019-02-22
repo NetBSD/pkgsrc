@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2019/02/22 21:23:29 leot Exp $
+bin/tscrape
+bin/tscrape_html
+bin/tscrape_plain
+bin/tscrape_update
+man/man1/tscrape.1
+share/doc/tscrape/README
+share/doc/tscrape/style.css
+share/doc/tscrape/tscraperc.example
