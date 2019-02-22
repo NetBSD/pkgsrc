@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.90 2018/11/12 14:22:58 jperkin Exp $
+# $NetBSD: compiler.mk,v 1.91 2019/02/22 00:06:46 rillig Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -40,7 +40,6 @@
 # The following variables may be set by a package:
 #
 # USE_LANGUAGES
-
 #	Declares the languages used in the source code of the package.
 #	This is used to determine the correct compilers to make
 #	visible to the build environment, installing them if
@@ -51,7 +50,7 @@
 #
 #       The above is partly aspirational.  As an example c++11 does
 #       not force a new enough version of gcc.
-
+#
 # The following variables are defined, and available for testing in
 # package Makefiles:
 #
