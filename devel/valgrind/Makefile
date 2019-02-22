@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2018/09/30 11:57:58 wiedi Exp $
+# $NetBSD: Makefile,v 1.29 2019/02/22 23:47:50 alnsn Exp $
 #
 
 DISTNAME=		valgrind-3.13.0
@@ -7,7 +7,7 @@ CATEGORIES=		devel
 MASTER_SITES=		ftp://sourceware.org/pub/valgrind/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		alnsn@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://valgrind.org/
 COMMENT=		Debugging and profiling tools
 LICENSE=		gnu-gpl-v2
