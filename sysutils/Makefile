@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.799 2019/02/07 11:31:38 markd Exp $
+# $NetBSD: Makefile,v 1.800 2019/02/23 06:20:52 martin Exp $
 #
 
 COMMENT=	System utilities
@@ -23,6 +23,7 @@ SUBDIR+=	ansible
 SUBDIR+=	ansible2
 SUBDIR+=	apcupsd
 SUBDIR+=	arm-trusted-firmware-fiptool
+SUBDIR+=	arm-trusted-firmware-sun50i_a64
 SUBDIR+=	arm-trusted-firmware-sun50i-h6
 SUBDIR+=	arm-trusted-firmware-sun50iw1p1
 SUBDIR+=	asapm
