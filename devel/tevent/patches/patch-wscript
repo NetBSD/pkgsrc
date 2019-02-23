@@ -1,0 +1,15 @@
+$NetBSD: patch-wscript,v 1.1 2019/02/23 21:28:33 jperkin Exp $
+
+Disable epoll on SunOS.
+
+--- wscript.orig	2019-01-15 10:46:33.000000000 +0000
++++ wscript
+@@ -40,7 +40,7 @@ def configure(conf):
+                 conf.CHECK_BUNDLED_SYSTEM_PYTHON('pytevent', 'tevent', minversion=VERSION):
+                 conf.define('USING_SYSTEM_PYTEVENT', 1)
+ 
+-    if conf.CHECK_FUNCS('epoll_create', headers='sys/epoll.h'):
++    if not sys.platform.startswith('sunos') and conf.CHECK_FUNCS('epoll_create', headers='sys/epoll.h'):
+         conf.DEFINE('HAVE_EPOLL', 1)
+ 
+     tevent_num_signals = 64
