@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/02/23 06:20:12 martin Exp $
+# $NetBSD: Makefile,v 1.2 2019/02/23 06:24:37 martin Exp $
 
 VERSION=	2.0
 GITHUB_PROJECT=	arm-trusted-firmware
@@ -27,9 +27,9 @@ BUILD_TARGET=	bl31
 BUILD_DEPENDS+=	cross-aarch64-none-elf-gcc-[0-9]*:../../cross/aarch64-none-elf-gcc
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/arm-trusted-firmware-${PLATFORM}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/arm-trusted-firmware/${PLATFORM}
 	${INSTALL_DATA} ${WRKSRC}/build/${PLATFORM}/debug/bl31.bin \
-	    ${DESTDIR}${PREFIX}/share/arm-trusted-firmware-${PLATFORM}/
+	    ${DESTDIR}${PREFIX}/share/arm-trusted-firmware/${PLATFORM}/
 
 
 # XXX kludge. pkgsrc passes down run path flags in LDFLAGS but the
