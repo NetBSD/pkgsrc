@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/08/22 09:45:26 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/02/23 19:43:08 wiz Exp $
 
-DISTNAME=	mblaze-0.4
-PKGREVISION=	1
+DISTNAME=	mblaze-0.5
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=chneukirchen/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,12 +11,9 @@ COMMENT=	Set of Maildir utilities
 LICENSE=	public-domain
 
 NO_CONFIGURE=	yes
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake perl:test
 MAKE_FILE=	GNUmakefile
 MAKE_FLAGS+=	PREFIX=${PREFIX:Q} BINDIR=${PREFIX:Q}/bin MANDIR=${PREFIX:Q}/${PKGMANDIR}
-
-# Needs prove
-TEST_DEPENDS+=	perl-[0-9]*:../../lang/perl5
 
 TEST_TARGET=	check
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/08/17 11:04:11 leot Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/02/23 19:43:08 wiz Exp $
 bin/maddr
 bin/magrep
 bin/mbnc
@@ -18,9 +18,7 @@ bin/mless
 bin/mlist
 bin/mmime
 bin/mmkdir
-bin/mnext
 bin/mpick
-bin/mprev
 bin/mquote
 bin/mrefile
 bin/mrep
