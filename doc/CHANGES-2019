@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.858 2019/02/22 21:24:47 leot Exp $
+$NetBSD: CHANGES-2019,v 1.859 2019/02/23 04:07:03 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1534,3 +1534,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/getmail to 5.12 [schmonz 2019-02-22]
 	Updated graphics/MesaLib18 to 18.3.4 [tnn 2019-02-22]
 	Added www/tscrape version 0.1 [leot 2019-02-22]
+	Updated mail/getmail to 5.13 [schmonz 2019-02-23]
