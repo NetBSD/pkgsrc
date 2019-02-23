@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.863 2019/02/23 07:31:36 mef Exp $
+$NetBSD: CHANGES-2019,v 1.864 2019/02/23 11:30:56 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1539,3 +1539,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/mikutter to 3.8.6 [tsutsui 2019-02-23]
 	Added sysutils/arm-trusted-firmware-sun50i_a64 version 2.0 [martin 2019-02-23]
 	Updated ham/xlog to 2.0.17 [mef 2019-02-23]
+	Updated ham/fldigi to 4.1.01 [mef 2019-02-23]
