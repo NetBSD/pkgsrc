@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2018/12/09 18:52:45 adam Exp $
+# $NetBSD: Makefile,v 1.36 2019/02/23 18:58:48 wiz Exp $
 
 TORBVER=	6.0.8
 
@@ -7,7 +7,7 @@ PKGNAME=	tor-browser-${TORBVER}
 PKGREVISION=	19
 CATEGORIES=	www
 # Use OpenBSD distfile
-MASTER_SITES=	${MASTER_SITE_OPENBSD:=distfiles/tor-browser/}
+#MASTER_SITES=	${MASTER_SITE_OPENBSD:=distfiles/tor-browser/}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://www.torproject.org/projects/torbrowser.html.en
