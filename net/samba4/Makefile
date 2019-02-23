@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2019/01/03 19:36:45 adam Exp $
+# $NetBSD: Makefile,v 1.59 2019/02/23 21:29:29 jperkin Exp $
 
 DISTNAME=	samba-4.9.4
 PKGREVISION=	2
@@ -110,6 +110,7 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${SMB_PRIVATELIB}
 CFLAGS.SunOS+=		-DHAVE_SOLARIS_GETGRENT_R
 # workaround https://bugzilla.samba.org/show_bug.cgi?id=12502 for now
 CFLAGS.SunOS+=		-DMSG_NOSIGNAL=0
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .include "options.mk"
 
