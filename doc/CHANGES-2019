@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.860 2019/02/23 05:30:22 mef Exp $
+$NetBSD: CHANGES-2019,v 1.861 2019/02/23 05:54:35 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1536,3 +1536,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added www/tscrape version 0.1 [leot 2019-02-22]
 	Updated mail/getmail to 5.13 [schmonz 2019-02-23]
 	Updated cad/gtkwave to 3.3.99 [mef 2019-02-23]
+	Updated net/mikutter to 3.8.6 [tsutsui 2019-02-23]
