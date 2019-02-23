@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/02/04 01:11:15 gutteridge Exp $
+# $NetBSD: Makefile,v 1.7 2019/02/23 21:50:46 gutteridge Exp $
 
 DISTNAME=	kitty-0.13.3
 CATEGORIES=	x11
@@ -11,6 +11,7 @@ HOMEPAGE=	https://sw.kovidgoyal.net/kitty/index.html
 COMMENT=	GPU based terminal emulator
 LICENSE=	gnu-gpl-v3
 
+USE_LANGUAGES=	c99
 EXTRACT_USING=	bsdtar
 USE_TOOLS+=	gmake pkg-config
 BUILD_TARGET=	app
