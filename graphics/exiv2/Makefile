@@ -1,7 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2018/12/09 03:04:34 sevan Exp $
-
-# Race condition between exiv2.cpp and creation of exv_conf.h
-MAKE_JOBS_SAFE=	no
+# $NetBSD: Makefile,v 1.40 2019/02/23 09:00:25 tnn Exp $
 
 .include "Makefile.common"
 
