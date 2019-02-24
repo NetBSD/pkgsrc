@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.882 2019/02/24 12:01:52 nia Exp $
+$NetBSD: CHANGES-2019,v 1.883 2019/02/24 12:22:41 rin Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1558,3 +1558,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed mail/p5-Mail-Box-IMPAP4 [wen 2019-02-24]
 	Added mail/p5-Mail-Box-IMAP4 version 3.003 [wen 2019-02-24]
 	Updated emulators/mednafen to 1.22.1 [nia 2019-02-24]
+	Updated lang/nodejs to 10.15.1nb1 [rin 2019-02-24]
