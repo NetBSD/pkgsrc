@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.164 2018/12/09 18:52:35 adam Exp $
+# $NetBSD: Makefile,v 1.165 2019/02/24 20:31:00 adam Exp $
 
-DISTNAME=	exim-4.91
-PKGREVISION=	3
+DISTNAME=	exim-4.92
 CATEGORIES=	mail net
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/
 MASTER_SITES+=	https://ftp.exim.org/pub/exim/exim4/
@@ -104,7 +103,7 @@ pre-configure:
 .if !empty(EXIM_MAX_INCLUDE_SIZE)
 	${ECHO} MAX_INCLUDE_SIZE=${EXIM_MAX_INCLUDE_SIZE} >> ${WRKSRC}/Local/Makefile
 .endif
-	sed -e 's:@PREFIX@:${PREFIX}:' \
+	sed	-e 's:@PREFIX@:${PREFIX}:' \
 		-e 's:@PKG_SYSCONFDIR@:${PKG_SYSCONFDIR}:' \
 	    < ${WRKSRC}/Local/eximon.conf.pkgsrc \
 	    > ${WRKSRC}/Local/eximon.conf
