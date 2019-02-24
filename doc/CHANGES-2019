@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.879 2019/02/24 10:45:49 wen Exp $
+$NetBSD: CHANGES-2019,v 1.880 2019/02/24 11:34:50 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1555,3 +1555,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/icecast to 2.4.4 [wiz 2019-02-24]
 	Updated mail/notmuch to 0.28.2 [wiz 2019-02-24]
 	Updated time/p5-Time-HiRes to 1.9760 [wen 2019-02-24]
+	Removed mail/p5-Mail-Box-IMPAP4 [wen 2019-02-24]
