@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.877 2019/02/24 10:38:22 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.878 2019/02/24 10:42:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1553,3 +1553,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/libgit2 to 0.28.1 [wiz 2019-02-24]
 	Updated sysutils/spice-protocol to 0.12.15 [wiz 2019-02-24]
 	Updated audio/icecast to 2.4.4 [wiz 2019-02-24]
+	Updated mail/notmuch to 0.28.2 [wiz 2019-02-24]
