@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.doxygen,v 1.8 2018/03/11 06:23:54 mef Exp $
+@comment $NetBSD: PLIST.doxygen,v 1.9 2019/02/24 21:41:11 mef Exp $
 share/doc/uhd/doxygen/html/algorithm_8hpp.html
 share/doc/uhd/doxygen/html/algorithm_8hpp.js
 share/doc/uhd/doxygen/html/algorithm_8hpp_source.html
@@ -357,7 +357,6 @@ share/doc/uhd/doxygen/html/dict_8hpp_source.html
 share/doc/uhd/doxygen/html/dict_8ipp.html
 share/doc/uhd/doxygen/html/dict_8ipp.js
 share/doc/uhd/doxygen/html/dir_000000.html
-share/doc/uhd/doxygen/html/dir_000000.js
 share/doc/uhd/doxygen/html/dir_000001.html
 share/doc/uhd/doxygen/html/dir_000001.js
 share/doc/uhd/doxygen/html/dir_000002.html
@@ -393,7 +392,6 @@ share/doc/uhd/doxygen/html/fe__connection_8hpp.html
 share/doc/uhd/doxygen/html/fe__connection_8hpp.js
 share/doc/uhd/doxygen/html/fe__connection_8hpp_source.html
 share/doc/uhd/doxygen/html/files.html
-share/doc/uhd/doxygen/html/files.js
 share/doc/uhd/doxygen/html/filters_8hpp.html
 share/doc/uhd/doxygen/html/filters_8hpp.js
 share/doc/uhd/doxygen/html/filters_8hpp_source.html
@@ -402,7 +400,6 @@ share/doc/uhd/doxygen/html/fp__compare__delta_8ipp.js
 share/doc/uhd/doxygen/html/fp__compare__epsilon_8ipp.html
 share/doc/uhd/doxygen/html/fp__compare__epsilon_8ipp.js
 share/doc/uhd/doxygen/html/functions.html
-share/doc/uhd/doxygen/html/functions_0x7e.html
 share/doc/uhd/doxygen/html/functions_a.html
 share/doc/uhd/doxygen/html/functions_b.html
 share/doc/uhd/doxygen/html/functions_c.html
@@ -414,7 +411,6 @@ share/doc/uhd/doxygen/html/functions_eval.html
 share/doc/uhd/doxygen/html/functions_f.html
 share/doc/uhd/doxygen/html/functions_func.html
 share/doc/uhd/doxygen/html/functions_func.js
-share/doc/uhd/doxygen/html/functions_func_0x7e.html
 share/doc/uhd/doxygen/html/functions_func_a.html
 share/doc/uhd/doxygen/html/functions_func_b.html
 share/doc/uhd/doxygen/html/functions_func_c.html
@@ -540,7 +536,6 @@ share/doc/uhd/doxygen/html/namespacemembers_eval.html
 share/doc/uhd/doxygen/html/namespacemembers_func.html
 share/doc/uhd/doxygen/html/namespacemembers_type.html
 share/doc/uhd/doxygen/html/namespaces.html
-share/doc/uhd/doxygen/html/namespaces.js
 share/doc/uhd/doxygen/html/namespaceuhd.html
 share/doc/uhd/doxygen/html/namespaceuhd.js
 share/doc/uhd/doxygen/html/namespaceuhd_1_1build__info.html
