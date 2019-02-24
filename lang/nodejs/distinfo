@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.144 2019/01/31 08:46:37 adam Exp $
+$NetBSD: distinfo,v 1.145 2019/02/24 12:18:55 rin Exp $
 
 SHA1 (node-v10.15.1.tar.gz) = ff5b314bf02dd8ca021567e033b480edc9baebe6
 RMD160 (node-v10.15.1.tar.gz) = 5ed37484dacf23c7850012ff06e18c9bd4b9070c
@@ -7,12 +7,16 @@ Size (node-v10.15.1.tar.gz) = 36328287 bytes
 SHA1 (patch-common.gypi) = de37949f38d9bd39a18b59d59ec74e528bd323ac
 SHA1 (patch-deps_cares_cares.gyp) = 2235eb44bc984fa2e745fdf1786f1ae6de6ef80f
 SHA1 (patch-deps_openssl_config_archs_linux-elf_asm_openssl-cl.gypi) = f92f5547728cf67de5ccfd652f23cc4ab8f5b207
-SHA1 (patch-deps_openssl_config_opensslconf__asm.h) = c43c7732164a107d7a294cac040708970ef0a212
-SHA1 (patch-deps_openssl_config_opensslconf__no-asm.h) = 9fd4acc86deb7da00cb501654713dfa2b26f412e
-SHA1 (patch-deps_openssl_openssl-cl__asm.gypi) = 3254dd37670faa19be8ac51e8195e30cc27ea42f
-SHA1 (patch-deps_openssl_openssl-cl__no__asm.gypi) = 86592025ab1d04dbef23d1d2725196e5d5b6fc4e
-SHA1 (patch-deps_openssl_openssl__asm.gypi) = 8d58f6177cc7b5b58f8ed1a69121da2685195d78
-SHA1 (patch-deps_openssl_openssl__no__asm.gypi) = 588d5943c1ef24cafd0be182e080d67747a941d2
+SHA1 (patch-deps_openssl_config_bn__conf__asm.h) = a4cf4f0771c96fb09a00b76b25d35000d65ef92f
+SHA1 (patch-deps_openssl_config_bn__conf__no-asm.h) = 5b90403407f09f6d28729e2cff8fccc361145d0d
+SHA1 (patch-deps_openssl_config_dso__conf__asm.h) = ae8285306fd165dc881fd8c6783cf0977d73371a
+SHA1 (patch-deps_openssl_config_dso__conf__no-asm.h) = 7ea313e8f9ba74e9de4ea559f6fc993cc0454882
+SHA1 (patch-deps_openssl_config_opensslconf__asm.h) = e9bb26b66431595d13d4173d3ed5f3e583bd009f
+SHA1 (patch-deps_openssl_config_opensslconf__no-asm.h) = 062f0227014df2d6cc45c84c9f348494c2f644e2
+SHA1 (patch-deps_openssl_openssl-cl__asm.gypi) = addb5837ea7b8ea2732cd2f5aaa8a24289b1199f
+SHA1 (patch-deps_openssl_openssl-cl__no__asm.gypi) = 73368f336dbe500e45f0ba6bbb7656416a27b294
+SHA1 (patch-deps_openssl_openssl__asm.gypi) = b85e1f5a9f862d469afcb36ff6e1ad202bea704a
+SHA1 (patch-deps_openssl_openssl__no__asm.gypi) = b549ea34f51e26669a41a64da0db10e92f0d0a99
 SHA1 (patch-deps_uv_common.gypi) = d38a9c8d9e3522f15812aec2f5b1e1e636d4bab3
 SHA1 (patch-deps_uv_src_unix_netbsd.c) = c19ff4024f828018364793d9dea013c991cfb93f
 SHA1 (patch-deps_v8_src_arm_assembler-arm-inl.h) = 56a5d6539d31e19673ef61cc91f003109c69dc29
