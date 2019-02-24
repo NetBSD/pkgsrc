@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.874 2019/02/24 05:15:29 mef Exp $
+$NetBSD: CHANGES-2019,v 1.875 2019/02/24 10:15:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1550,3 +1550,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added mail/p5-Mail-Box-IMPAP4 version 3.003 [wen 2019-02-24]
 	Added mail/p5-Mail-Box-POP3 version 3.004 [wen 2019-02-24]
 	Updated graphics/p5-GD-SecurityImage to 1.75 [mef 2019-02-24]
+	Updated devel/libgit2 to 0.28.1 [wiz 2019-02-24]
