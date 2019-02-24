@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2019/01/25 12:26:20 adam Exp $
+# $NetBSD: Makefile,v 1.6 2019/02/24 20:25:49 adam Exp $
 
-DISTNAME=	configparser-3.5.2
+DISTNAME=	configparser-3.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/configparser/}
@@ -18,6 +18,9 @@ PYTHON_VERSIONS_ACCEPTED=	27
 
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/backports/__init__.py*
+
+do-test:
+	cd ${WRKSRC}/src && ${PYTHONBIN} -m unittest discover -v
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
