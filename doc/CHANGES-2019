@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.884 2019/02/24 13:14:54 leot Exp $
+$NetBSD: CHANGES-2019,v 1.885 2019/02/24 14:49:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1560,3 +1560,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated emulators/mednafen to 1.22.1 [nia 2019-02-24]
 	Updated lang/nodejs to 10.15.1nb1 [rin 2019-02-24]
 	Updated net/hub to 2.10.0 [leot 2019-02-24]
+	Updated shells/zsh-autosuggestions to 0.5.0 [wiz 2019-02-24]
