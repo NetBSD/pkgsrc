@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2018/04/23 07:28:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2019/02/24 20:31:00 adam Exp $
 share/doc/exim/html/spec_html/ch-access_control_lists.html
 share/doc/exim/html/spec_html/ch-adding_a_local_scan_function_to_exim.html
 share/doc/exim/html/spec_html/ch-adding_new_drivers_or_lookup_types.html
@@ -47,7 +47,7 @@ share/doc/exim/html/spec_html/ch-the_dnslookup_router.html
 share/doc/exim/html/spec_html/ch-the_dovecot_authenticator.html
 share/doc/exim/html/spec_html/ch-the_exim_command_line.html
 share/doc/exim/html/spec_html/ch-the_exim_monitor.html
-share/doc/exim/html/spec_html/ch-the_exim_run_time_configuration_file.html
+share/doc/exim/html/spec_html/ch-the_exim_runtime_configuration_file.html
 share/doc/exim/html/spec_html/ch-the_gsasl_authenticator.html
 share/doc/exim/html/spec_html/ch-the_heimdalgssapi_authenticator.html
 share/doc/exim/html/spec_html/ch-the_ipliteral_router.html
@@ -148,4 +148,7 @@ share/doc/exim/html/static/doc/index.css
 share/doc/exim/html/static/doc/index.js
 share/doc/exim/html/static/doc/minus-12x12.png
 share/doc/exim/html/static/doc/plus-12x12.png
+share/doc/exim/html/static/doc/security/CVE-2016-1531.txt
+share/doc/exim/html/static/doc/security/CVE-2016-9963.txt
+share/doc/exim/html/static/doc/security/CVE-2018-6789.txt
 share/doc/exim/html/static/js/common.js
