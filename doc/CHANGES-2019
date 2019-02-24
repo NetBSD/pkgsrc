@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.897 2019/02/24 16:23:01 taca Exp $
+$NetBSD: CHANGES-2019,v 1.898 2019/02/24 16:25:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1573,3 +1573,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added www/ruby-sass34 version 3.4.24 [taca 2019-02-24]
 	Updated www/ruby-sass to 3.7.3 [taca 2019-02-24]
 	Updated www/ruby-sass34 to 3.4.25 [taca 2019-02-24]
+	Updated www/ruby-compass-core to 1.0.3nb1 [taca 2019-02-24]
