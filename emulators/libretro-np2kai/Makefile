@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/08/14 16:44:07 nia Exp $
+# $NetBSD: Makefile,v 1.2 2019/02/24 15:26:50 nia Exp $
 
-NP2KAI_REV=	17
+NP2KAI_REV=	18
 DISTNAME=	libretro-np2kai-0.86.${NP2KAI_REV}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AZO234/}
