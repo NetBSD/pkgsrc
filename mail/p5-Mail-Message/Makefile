@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2018/09/05 05:54:42 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/02/24 02:26:20 wen Exp $
 
-DISTNAME=	Mail-Message-3.007
+DISTNAME=	Mail-Message-3.008
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
@@ -17,7 +17,7 @@ DEPENDS+=	p5-PathTools>=3.5:../../devel/p5-PathTools
 DEPENDS+=	p5-MIME-Types>=2.1:../../mail/p5-MIME-Types
 DEPENDS+=	p5-MailTools>=2.1:../../mail/p5-MailTools
 DEPENDS+=	p5-TimeDate>=2.3:../../time/p5-TimeDate
-DEPENDS+=	p5-User-Identity>=0.9:../../mail/p5-User-Identity
+DEPENDS+=	p5-User-Identity>=0.94:../../mail/p5-User-Identity
 
 PERL5_PACKLIST=	auto/Mail/Message/.packlist
 
