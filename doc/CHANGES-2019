@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.872 2019/02/24 04:25:44 wen Exp $
+$NetBSD: CHANGES-2019,v 1.873 2019/02/24 04:32:59 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1548,3 +1548,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/p5-Mail-Box to 3.006 [wen 2019-02-24]
 	Added mail/p5-Mail-Transport version 3.003 [wen 2019-02-24]
 	Added mail/p5-Mail-Box-IMPAP4 version 3.003 [wen 2019-02-24]
+	Added mail/p5-Mail-Box-POP3 version 3.004 [wen 2019-02-24]
