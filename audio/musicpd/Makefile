@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.179 2019/01/05 12:43:46 triaxx Exp $
+# $NetBSD: Makefile,v 1.180 2019/02/24 15:32:06 wiz Exp $
 
-DISTNAME=		mpd-0.21.4
+DISTNAME=		mpd-0.21.5
 PKGNAME=		${DISTNAME:S/mpd/musicpd/}
 CATEGORIES=		audio
 MASTER_SITES=		http://www.musicpd.org/download/mpd/0.21/
@@ -37,7 +37,7 @@ SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	mpd.conf
 SUBST_MESSAGE.paths=	Fixing path to sound device in example config.
-SUBST_SED.paths=	-e 's,@DEVOSSAUDIO@,${DEVOSSAUDIO},'
+SUBST_VARS.paths+=	DEVOSSAUDIO
 
 SUBST_CLASSES+=		sphinx
 SUBST_STAGE.sphinx=	pre-configure
