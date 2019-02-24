@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 01:12:32 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/02/24 02:32:19 rillig Exp $
 
 SHA1 (freeswitch/freeswitch-sounds-music-16000-1.0.8.tar.gz) = b4df2bab432deefb52ec83731243490190efb156
 RMD160 (freeswitch/freeswitch-sounds-music-16000-1.0.8.tar.gz) = 1fb87961e860e98ad657d5739a1e8de7729c4f55
@@ -6,9 +6,11 @@ SHA512 (freeswitch/freeswitch-sounds-music-16000-1.0.8.tar.gz) = 2cc1ea60173f054
 Size (freeswitch/freeswitch-sounds-music-16000-1.0.8.tar.gz) = 27233654 bytes
 SHA1 (freeswitch/freeswitch-sounds-music-32000-1.0.8.tar.gz) = 877b7ce4a6dd19e93befd9e13ec52003b674ced6
 RMD160 (freeswitch/freeswitch-sounds-music-32000-1.0.8.tar.gz) = 09234fd86fe8b9df9a6bc130b7fa68820ae084fa
+SHA512 (freeswitch/freeswitch-sounds-music-32000-1.0.8.tar.gz) = b860ce3585a36406d1488e8ec58c8a7cb3b8432592b6efd6cce2b5878df5ab4068f4666c2481c0c778b0967dc8c49ad91578bbec6db3a9c9cade14cf878d6316
 Size (freeswitch/freeswitch-sounds-music-32000-1.0.8.tar.gz) = 52284585 bytes
 SHA1 (freeswitch/freeswitch-sounds-music-48000-1.0.8.tar.gz) = 8eab4abab14322ce84940f86f0e921c053b19081
 RMD160 (freeswitch/freeswitch-sounds-music-48000-1.0.8.tar.gz) = 510e16c8366a27f6a3d0d02409350968a098339d
+SHA512 (freeswitch/freeswitch-sounds-music-48000-1.0.8.tar.gz) = f64eada782d0f18ff9bea1d717116689523a00611d550ce60c49d46ad6298e97274a98b0e5520127d94247375fa312e300e016c256bb5dff988a87e6ea8009ae
 Size (freeswitch/freeswitch-sounds-music-48000-1.0.8.tar.gz) = 75215628 bytes
 SHA1 (freeswitch/freeswitch-sounds-music-8000-1.0.8.tar.gz) = eaf2b05ca1583234169afde35b1a790b8cdf42eb
 RMD160 (freeswitch/freeswitch-sounds-music-8000-1.0.8.tar.gz) = c126cdf62bc9d7b3037b556c6bc69fd0124dd710
