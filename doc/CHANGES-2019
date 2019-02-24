@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.901 2019/02/24 20:31:36 adam Exp $
+$NetBSD: CHANGES-2019,v 1.902 2019/02/24 20:36:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1580,3 +1580,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/py-xlsxwriter to 1.1.5 [adam 2019-02-24]
 	Updated mail/exim to 4.92 [adam 2019-02-24]
 	Updated mail/exim-html to 4.92 [adam 2019-02-24]
+	Updated devel/py-pluggy to 0.9.0 [adam 2019-02-24]
+	Updated www/py-django-extensions to 2.1.6 [adam 2019-02-24]
