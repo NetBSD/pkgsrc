@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2018/08/22 09:45:30 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2019/02/24 02:49:20 wen Exp $
 
-DISTNAME=	Mail-Box-3.005
+DISTNAME=	Mail-Box-3.006
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 
@@ -22,7 +21,7 @@ DEPENDS+=	p5-MailTools>=2.01:../../mail/p5-MailTools
 DEPENDS+=	p5-MIME-tools-[0-9]*:../../mail/p5-MIME-tools
 DEPENDS+=	p5-Digest-HMAC-[0-9]*:../../security/p5-Digest-HMAC
 DEPENDS+=	p5-File-Remove-[0-9]*:../../sysutils/p5-File-Remove
-DEPENDS+=	p5-Mail-Message-[0-9]*:../../mail/p5-Mail-Message
+DEPENDS+=	p5-Mail-Message>=3.008:../../mail/p5-Mail-Message
 
 PERL5_PACKLIST=	auto/Mail/Box/.packlist
 
