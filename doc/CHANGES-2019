@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.891 2019/02/24 15:41:11 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.892 2019/02/24 15:47:31 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1567,3 +1567,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated emulators/libretro-np2kai to 0.86.18 [nia 2019-02-24]
 	Updated audio/musicpd to 0.21.5 [wiz 2019-02-24]
 	Updated graphics/ImageMagick to 7.0.8.28 [wiz 2019-02-24]
+	Updated chat/weechat to 2.4 [nia 2019-02-24]
