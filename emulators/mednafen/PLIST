@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2018/12/18 17:08:20 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/02/24 12:01:42 nia Exp $
 bin/mednafen
+share/doc/mednafen/apple2.html
 share/doc/mednafen/cdplay.html
 share/doc/mednafen/cheat.html
 share/doc/mednafen/debugger.html
