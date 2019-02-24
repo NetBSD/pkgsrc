@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/02/24 04:15:35 wen Exp $
+
+SHA1 (Mail-Transport-3.003.tar.gz) = 444ab4117dc23ccb035f2479340ded094c82d1b9
+RMD160 (Mail-Transport-3.003.tar.gz) = 11cd12afe8c657b2f393dc3e793f3fe055907773
+SHA512 (Mail-Transport-3.003.tar.gz) = 69a909fa43b38b3aff59d15d329807cc12569e4b5da5eae47aa51e81071657b8c034efd41b6d95fc82e8755d6b23393a459647d593541539bfcad958ff189507
+Size (Mail-Transport-3.003.tar.gz) = 16234 bytes
