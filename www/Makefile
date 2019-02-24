@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1364 2019/02/24 15:51:52 taca Exp $
+# $NetBSD: Makefile,v 1.1365 2019/02/24 16:04:12 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -897,6 +897,7 @@ SUBDIR+=	ruby-robots
 SUBDIR+=	ruby-rouge
 SUBDIR+=	ruby-sass
 SUBDIR+=	ruby-sass-listen
+SUBDIR+=	ruby-sass-rails
 SUBDIR+=	ruby-sass-rails32
 SUBDIR+=	ruby-sawyer
 SUBDIR+=	ruby-selenium-webdriver
