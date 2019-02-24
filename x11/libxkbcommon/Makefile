@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2019/02/13 22:24:57 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/02/24 14:59:07 wiz Exp $
 
-DISTNAME=	libxkbcommon-0.8.3
+DISTNAME=	libxkbcommon-0.8.4
 CATEGORIES=	x11
 MASTER_SITES=	https://xkbcommon.org/download/
 EXTRACT_SUFX=	.tar.xz
