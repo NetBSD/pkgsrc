@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2019/01/17 16:43:36 schmonz Exp $
+# $NetBSD: Makefile,v 1.95 2019/02/24 15:18:45 wiz Exp $
 
 .include "../../archivers/gtar/Makefile.common"
 
@@ -32,7 +32,7 @@ CONFIGURE_ENV+=		ac_cv_have_decl_strtoimax=no
 LDFLAGS.SCO_SV+=	-lsocket
 .endif
 
-PLIST_VARS+=		gtar rmt
+PLIST_VARS+=		rmt
 
 TEST_TARGET=		check
 
