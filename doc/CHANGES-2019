@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.869 2019/02/24 02:29:21 wen Exp $
+$NetBSD: CHANGES-2019,v 1.870 2019/02/24 02:50:07 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1545,3 +1545,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added security/py-certbot-dns-luadns version 0.31.0 [triaxx 2019-02-23]
 	Updated graphics/p5-GD to 2.71 [mef 2019-02-24]
 	Updated mail/p5-Mail-Message to 3.008 [wen 2019-02-24]
+	Updated mail/p5-Mail-Box to 3.006 [wen 2019-02-24]
