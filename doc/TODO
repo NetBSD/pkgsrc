@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18849 2019/02/24 10:31:53 wiz Exp $
+$NetBSD: TODO,v 1.18850 2019/02/24 10:35:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1244,7 +1244,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sound-juicer-3.16.1
 	o sparse-0.5.0
 	o spcaview-20060501
-	o spice-protocol-0.12.15
 	o spl-1.0pre6
 	o sqlrelay-1.4.0
 	o squeak-5.0
