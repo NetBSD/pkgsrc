@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.92 2018/12/16 00:24:07 nia Exp $
+# $NetBSD: Makefile,v 1.93 2019/02/24 15:47:20 nia Exp $
 
-DISTNAME=	weechat-2.3
+DISTNAME=	weechat-2.4
 CATEGORIES=	chat
 MASTER_SITES=	https://www.weechat.org/files/src/
 EXTRACT_SUFX=	.tar.bz2
