@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/02/24 16:11:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/02/24 16:22:26 taca Exp $
 bin/sass34${RUBY_SUFFIX}
 bin/sass-convert34${RUBY_SUFFIX}
 bin/scss34${RUBY_SUFFIX}
@@ -13,8 +13,8 @@ ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/VERSION
 ${GEM_LIBDIR}/VERSION_DATE
 ${GEM_LIBDIR}/VERSION_NAME
-${GEM_LIBDIR}/bin/sass34
 ${GEM_LIBDIR}/bin/sass-convert34
+${GEM_LIBDIR}/bin/sass34
 ${GEM_LIBDIR}/bin/scss34
 ${GEM_LIBDIR}/extra/sass-spec-ref.sh
 ${GEM_LIBDIR}/extra/update_watch.rb
@@ -28,6 +28,7 @@ ${GEM_LIBDIR}/lib/sass/cache_stores/memory.rb
 ${GEM_LIBDIR}/lib/sass/cache_stores/null.rb
 ${GEM_LIBDIR}/lib/sass/callbacks.rb
 ${GEM_LIBDIR}/lib/sass/css.rb
+${GEM_LIBDIR}/lib/sass/deprecation.rb
 ${GEM_LIBDIR}/lib/sass/engine.rb
 ${GEM_LIBDIR}/lib/sass/environment.rb
 ${GEM_LIBDIR}/lib/sass/error.rb
