@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/09/05 05:54:42 wiz Exp $
+$NetBSD: distinfo,v 1.6 2019/02/24 02:26:20 wen Exp $
 
-SHA1 (Mail-Message-3.007.tar.gz) = 19a2f122550fb4a2e2ab019f90cb605731c2a661
-RMD160 (Mail-Message-3.007.tar.gz) = cd3ddc13156b91a32e32447446be9ad34a63a41f
-SHA512 (Mail-Message-3.007.tar.gz) = cd4a7fdd72ea94f50f147a68a589aff9c8e015e01f2ad8bd9d76d977da3501479fa8a6f6993d17f5ab9a7efb44071e9f2258d76f870726b1c55b67708c752c2a
-Size (Mail-Message-3.007.tar.gz) = 257554 bytes
+SHA1 (Mail-Message-3.008.tar.gz) = 92bbd1b430d169916daab6f8f07dbcf07df9586f
+RMD160 (Mail-Message-3.008.tar.gz) = ce722ac19d577d67da99ac0c547921fa296015d8
+SHA512 (Mail-Message-3.008.tar.gz) = 4fd4d0d82e3bef47942509b8988a62ff027a9377cf87e6ca5d4c50880d16bdcdb5671cd3cb860043cb736efe52f31a1be300014788b0137f1fab4568b90e4002
+Size (Mail-Message-3.008.tar.gz) = 257743 bytes
