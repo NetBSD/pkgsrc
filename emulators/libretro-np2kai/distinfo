@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2018/08/14 16:44:07 nia Exp $
+$NetBSD: distinfo,v 1.2 2019/02/24 15:26:50 nia Exp $
 
-SHA1 (libretro-np2kai-0.86.17.tar.gz) = 0b55ecdac28dfc4124ba05669913f036d16547f8
-RMD160 (libretro-np2kai-0.86.17.tar.gz) = 0e443aa091498d1b1345422ef10b4b29b27e1e66
-SHA512 (libretro-np2kai-0.86.17.tar.gz) = 0102ff49c0fa3f9440fc998ef2a8062724d539279fcc1fd9b216de07e80db14535980401fec3e9d052eb338dfc47894ee64f4802daeabd6e89c14a92d0c9d617
-Size (libretro-np2kai-0.86.17.tar.gz) = 2449112 bytes
+SHA1 (libretro-np2kai-0.86.18.tar.gz) = de096eea5f3bae2e8c0e3bca520df3babc16233a
+RMD160 (libretro-np2kai-0.86.18.tar.gz) = 9cf5bbfc786c01c62942d9fe6f0f83627fe9af20
+SHA512 (libretro-np2kai-0.86.18.tar.gz) = ac03feea576fd3db1502f7d508a503c600fdeed58aab9ee71c43d2df2748df0a1f8ee9dfe0eaf6d74c2b7b1c581d5ea51c0a614a179cd20f951c38dd678c5043
+Size (libretro-np2kai-0.86.18.tar.gz) = 2540446 bytes
 SHA1 (patch-sdl2_Makefile.libretro) = 7c670340b4e552dc67ba025c85f49105eb4200c9
 SHA1 (patch-sound_mame_driver.h) = 7378846e2c15c445f56fd144077d48a5bd69327c
