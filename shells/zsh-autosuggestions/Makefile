@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/05/27 12:21:47 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/02/24 14:49:06 wiz Exp $
 
-DISTNAME=	zsh-autosuggestions-0.4.3
+DISTNAME=	zsh-autosuggestions-0.5.0
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=zsh-users/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
