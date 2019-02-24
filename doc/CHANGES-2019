@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.881 2019/02/24 11:42:06 wen Exp $
+$NetBSD: CHANGES-2019,v 1.882 2019/02/24 12:01:52 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1557,3 +1557,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated time/p5-Time-HiRes to 1.9760 [wen 2019-02-24]
 	Removed mail/p5-Mail-Box-IMPAP4 [wen 2019-02-24]
 	Added mail/p5-Mail-Box-IMAP4 version 3.003 [wen 2019-02-24]
+	Updated emulators/mednafen to 1.22.1 [nia 2019-02-24]
