@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.900 2019/02/24 16:32:06 taca Exp $
+$NetBSD: CHANGES-2019,v 1.901 2019/02/24 20:31:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1576,3 +1576,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/ruby-compass-core to 1.0.3nb1 [taca 2019-02-24]
 	Updated www/ruby-compass-import-once to 1.0.5nb1 [taca 2019-02-24]
 	Updated www/drupal8 to 8.6.10 [taca 2019-02-24]
+	Updated devel/py-configparser to 3.7.3 [adam 2019-02-24]
+	Updated textproc/py-xlsxwriter to 1.1.5 [adam 2019-02-24]
+	Updated mail/exim to 4.92 [adam 2019-02-24]
+	Updated mail/exim-html to 4.92 [adam 2019-02-24]
