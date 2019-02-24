@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/02/24 15:50:25 taca Exp $
+
+SHA1 (sass-listen-4.0.0.gem) = 9c69611007c679c7d48e1f20e03580c99c6b4d6f
+RMD160 (sass-listen-4.0.0.gem) = 445af828a06451e6536275d60fd40cb161fdfe11
+SHA512 (sass-listen-4.0.0.gem) = a165d1cb0efbb7acea01679591b9d28554648335025a7e062c2319289c01a7b345b0408946e2b565daf0950e8d7b6cf5fce936a821a4e30ac33c5f5436b0db20
+Size (sass-listen-4.0.0.gem) = 27136 bytes
