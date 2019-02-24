@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2019/02/09 00:09:53 wen Exp $
+@comment $NetBSD: PLIST,v 1.15 2019/02/24 16:31:39 taca Exp $
 share/drupal/.csslintrc
 share/drupal/.editorconfig
 share/drupal/.eslintignore
@@ -7324,7 +7324,6 @@ share/drupal/core/modules/rest/tests/modules/rest_test_views/test_views/views.vi
 share/drupal/core/modules/rest/tests/modules/rest_test_views/test_views/views.view.test_serializer_shared_path.yml
 share/drupal/core/modules/rest/tests/src/Functional/AnonResourceTestTrait.php
 share/drupal/core/modules/rest/tests/src/Functional/BasicAuthResourceTestTrait.php
-share/drupal/core/modules/rest/tests/src/Functional/BasicAuthResourceWithInterfaceTranslationTestTrait.php
 share/drupal/core/modules/rest/tests/src/Functional/BcTimestampNormalizerUnixTestTrait.php
 share/drupal/core/modules/rest/tests/src/Functional/CookieResourceTestTrait.php
 share/drupal/core/modules/rest/tests/src/Functional/EntityResource/Action/ActionResourceTestBase.php
@@ -7560,6 +7559,7 @@ share/drupal/core/modules/serialization/src/Normalizer/MarkupNormalizer.php
 share/drupal/core/modules/serialization/src/Normalizer/NormalizerBase.php
 share/drupal/core/modules/serialization/src/Normalizer/NullNormalizer.php
 share/drupal/core/modules/serialization/src/Normalizer/PrimitiveDataNormalizer.php
+share/drupal/core/modules/serialization/src/Normalizer/SerializedColumnNormalizerTrait.php
 share/drupal/core/modules/serialization/src/Normalizer/TimeStampItemNormalizerTrait.php
 share/drupal/core/modules/serialization/src/Normalizer/TimestampItemNormalizer.php
 share/drupal/core/modules/serialization/src/Normalizer/TypedDataNormalizer.php
