@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.889 2019/02/24 15:27:00 nia Exp $
+$NetBSD: CHANGES-2019,v 1.890 2019/02/24 15:32:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1565,3 +1565,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/libxkbcommon to 0.8.4 [wiz 2019-02-24]
 	Updated archivers/gtar to 1.32 [wiz 2019-02-24]
 	Updated emulators/libretro-np2kai to 0.86.18 [nia 2019-02-24]
+	Updated audio/musicpd to 0.21.5 [wiz 2019-02-24]
