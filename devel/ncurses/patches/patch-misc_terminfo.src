@@ -1,0 +1,17 @@
+$NetBSD: patch-misc_terminfo.src,v 1.1 2019/02/25 11:54:05 jperkin Exp $
+
+Many terminal emulators still do not support the "rep" capability, so
+avoid it for maximum portability.  Patch from OmniOS, see also
+http://invisible-island.net/ncurses/ncurses.faq.html#xterm_generic
+
+--- misc/terminfo.src.orig	2018-01-27 15:14:08.000000000 +0000
++++ misc/terminfo.src
+@@ -4328,7 +4328,7 @@ xterm-xfree86|xterm terminal emulator (X
+ xterm-new|modern xterm terminal emulator,
+ 	npc,
+ 	indn=\E[%p1%dS, kb2=\EOE, kcbt=\E[Z, kent=\EOM,
+-	rin=\E[%p1%dT, use=ansi+rep, use=ecma+strikeout,
++	rin=\E[%p1%dT, use=ecma+strikeout,
+ 	use=xterm+sm+1006, use=xterm+pcfkeys, use=xterm+tmux,
+ 	use=xterm-basic,
+ 
