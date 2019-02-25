@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.912 2019/02/25 14:16:25 taca Exp $
+$NetBSD: CHANGES-2019,v 1.913 2019/02/25 14:45:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1594,3 +1594,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/pdfgrep to 2.1.2 [ryoon 2019-02-25]
 	Updated databases/ruby-activeldap to 5.2.3 [taca 2019-02-25]
 	Updated databases/ruby-sqlite3 to 1.4.0 [taca 2019-02-25]
+	Updated devel/ruby-byebug to 11.0.0 [taca 2019-02-25]
