@@ -1,50 +1,46 @@
-# $NetBSD: Makefile,v 1.5 2018/12/10 14:59:50 leot Exp $
+# $NetBSD: Makefile,v 1.6 2019/02/25 15:20:44 leot Exp $
 
 .include "../../lang/swi-prolog-lite/Makefile.common"
 
 PKGNAME=		swi-prolog-jpl-${SWIPLVERS}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-COMMENT=		jpl package for SWI Prolog
+COMMENT=		Packages for SWI Prolog
 
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config
-MAKE_JOBS_SAFE=		no
+USE_TOOLS+=		pkg-config
+
+CMAKE_ARGS+=		-DSWIPL_PACKAGES_JAVA=ON
+CMAKE_ARGS+=		-DINSTALL_PACKAGES=OFF
+CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF
+
+# Part of swi-prolog-lite
+CMAKE_ARGS+=		-DSWIPL_PACKAGES_ARCHIVE=OFF
+CMAKE_ARGS+=		-DSWIPL_PACKAGES_BASIC=OFF
+CMAKE_ARGS+=		-DSWIPL_PACKAGES_SSL=OFF
+CMAKE_ARGS+=		-DSWIPL_PACKAGES_TERM=OFF
+
+# Part of swi-prolog-packages
+CMAKE_ARGS+=		-DSWIPL_PACKAGES_X=OFF
+
+SWIPL_PACKAGES_COMPONENTS+=	Java_interface
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ENV+=		PL=swi-prolog
-CONFIGURE_ENV+=		PLARCH=${MACHINE_GNU_PLATFORM}	# make PLIST consistent
-CONFIGURE_ENV+=		PKG=jpl
-CONFIGURE_ENV+=		JAVAC=${PKG_JAVA_HOME}/bin/javac
-
-CONFIGURE_DIRS+=	. packages
-BUILD_DIRS+=		packages/jpl
-INSTALL_DIRS+=		packages/jpl
-BUILD_TARGET=		libjpl.so jpl.jar
-
-INSTALLATION_DIRS=	lib/swi-prolog-${PKGVERSION_NOREV}/bin/${MACHINE_GNU_PLATFORM}
+CPPFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
 
 TEST_TARGET=	check
 
-pre-configure:
-	${LN} -sf ${LOCALBASE}/bin/plld       ${WRKSRC}/src
-	${LN} -sf ${LOCALBASE}/bin/swi-prolog ${WRKSRC}/src
-
-post-configure:
-	${LN} -sf ${LOCALBASE}/bin/plld       ${WRKSRC}/src
-	${LN} -sf ${LOCALBASE}/bin/swi-prolog ${WRKSRC}/src
-	cd ${WRKSRC}/packages; \
-	${SETENV} \
-		CPP=${CPP:Q} \
-		${GMAKE} PKG=jpl configure
-	mkdir ${WRKSRC}/include
-	${LN} -sf ${WRKSRC}/src/SWI-Prolog.h ${WRKSRC}/include
-	${LN} -sf ${WRKSRC}/src/os/SWI-Stream.h ${WRKSRC}/include
-
+do-install:
+.for component in ${SWIPL_PACKAGES_COMPONENTS}
+	cd ${WRKSRC}/build &&						\
+	${PKGSRC_SETENV} ${INSTALL_ENV} ${MAKE_ENV}			\
+		${CMAKE} -DCMAKE_INSTALL_COMPONENT=${component:Q}	\
+			-P cmake_install.cmake
+.endfor
 
 .include "../../lang/swi-prolog-lite/buildlink3.mk"
 .include "../../mk/java-vm.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
