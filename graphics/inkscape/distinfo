@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.67 2019/01/06 08:41:40 markd Exp $
+$NetBSD: distinfo,v 1.68 2019/02/25 18:57:03 maya Exp $
 
 SHA1 (inkscape-0.92.3.tar.bz2) = e1886317f8e6d4fb340f6a783fe410aaff9f28a7
 RMD160 (inkscape-0.92.3.tar.bz2) = 95648c6b491e09920662e03a51f2278a0ff10392
@@ -18,7 +18,7 @@ SHA1 (patch-src_extension_internal_metafile-print.cpp) = 798a2f15986cd81d13bf576
 SHA1 (patch-src_extension_internal_pdfinput_pdf-input.cpp) = 8bee946274725c12a3c743e8dec3e235c1402fcc
 SHA1 (patch-src_extension_internal_pdfinput_pdf-input.h) = d437b4994d66099ac2c1eaf6bac5d29bd83f9a76
 SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.cpp) = 6ce050246963f762dd97992bfb96f3af5989ccae
-SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.h) = c8cd6386635f602ba4f4047b2986043f88519801
+SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.h) = 93d0758b279b179c574a1a42483b02e80f680198
 SHA1 (patch-src_extension_internal_pdfinput_poppler-transition-api.h) = 2a1fc9ceee5d9bcb6138950661c61d6bd70fdd3d
 SHA1 (patch-src_extension_internal_pdfinput_svg-builder.cpp) = dd3f5b8678fbfaf9829fa5d33c8ff8882d337196
 SHA1 (patch-src_extension_internal_pdfinput_svg-builder.h) = ac05f9bed662705dcdfca8b791a348fb5350873c
