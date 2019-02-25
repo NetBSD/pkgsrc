@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.35 2018/10/18 19:42:49 leot Exp $
+$NetBSD: distinfo,v 1.36 2019/02/25 11:54:05 jperkin Exp $
 
 SHA1 (ncurses-6.1.tar.gz) = 57acf6bc24cacd651d82541929f726f4def780cc
 RMD160 (ncurses-6.1.tar.gz) = 938235f3922f9c6ef0f1081d643ecb2da1347a17
@@ -11,5 +11,6 @@ SHA1 (patch-aclocal.m4) = efb1a966687d2c35fc3e3e1d5345e80aaf2822f6
 SHA1 (patch-c++_Makefile.in) = 68ff81c719ec4aa13beb962cb66d7cd6749d7af5
 SHA1 (patch-configure.in) = 48a705b3f4de3a65c0c1c3648f5a24c5310ed3fa
 SHA1 (patch-misc_ncurses-config.in) = 43e4dc8abe85804513da1189aeffa5c7746ffcca
+SHA1 (patch-misc_terminfo.src) = 3423a09b0b6aac1139ab21f514c631ee8c36c2f7
 SHA1 (patch-ncurses_base_MKlib__gen.sh) = f8ce67fbd273529e4161a2820677d05a623fd527
 SHA1 (patch-ncurses_tinfo_parse__entry.c) = 06d2b52e84595f8acd47ad36ded7b7d5bec95b8a
