@@ -1,10 +1,11 @@
-$NetBSD: patch-media_libcubeb_src_moz.build,v 1.2 2017/01/22 12:27:22 ryoon Exp $
+$NetBSD: patch-media_libcubeb_src_moz.build,v 1.3 2019/02/25 15:32:24 wiz Exp $
 
-Don't assume cocoa toolkit just because OS_TARGET is Darwin.
+* Add OSS audio support
+* Support system library
 
---- media/libcubeb/src/moz.build.orig	2016-02-25 23:01:58.000000000 +0000
+--- media/libcubeb/src/moz.build.orig	2018-05-03 16:58:30.000000000 +0000
 +++ media/libcubeb/src/moz.build
-@@ -17,6 +17,12 @@ if CONFIG['MOZ_ALSA']:
+@@ -22,6 +22,12 @@ if CONFIG['MOZ_ALSA']:
      ]
      DEFINES['USE_ALSA'] = True
  
@@ -14,32 +15,14 @@ Don't assume cocoa toolkit just because OS_TARGET is Darwin.
 +    ]
 +    DEFINES['USE_OSS'] = True
 +
- if CONFIG['MOZ_PULSEAUDIO']:
+ if CONFIG['MOZ_PULSEAUDIO'] or CONFIG['MOZ_JACK']:
      SOURCES += [
-         'cubeb_pulse.c',
-@@ -31,7 +37,7 @@ if CONFIG['OS_ARCH'] == 'OpenBSD':
-     ]
-     DEFINES['USE_SNDIO'] = True
- 
--if CONFIG['OS_TARGET'] == 'Darwin':
-+if CONFIG['MOZ_WIDGET_TOOLKIT'] == 'cocoa':
-     SOURCES += [
-         'cubeb_audiounit.c',
-     ]
-@@ -64,6 +70,9 @@ if CONFIG['OS_TARGET'] == 'Android':
- 
+         'cubeb_resampler.cpp',
+@@ -87,6 +93,7 @@ if CONFIG['OS_TARGET'] == 'Android':
  FINAL_LIBRARY = 'gkmedias'
  
-+if CONFIG['MOZ_NATIVE_SPEEX']:
-+    SOURCES['cubeb_resampler.cpp'].flags += CONFIG['MOZ_SPEEX_CFLAGS']
-+
- if CONFIG['MOZ_WIDGET_TOOLKIT'] == 'gonk':
-     if CONFIG['ANDROID_VERSION'] >= '17':
-         LOCAL_INCLUDES += [
-@@ -74,5 +83,6 @@ if CONFIG['MOZ_WIDGET_TOOLKIT'] == 'gonk
-             '%' + '%s/system/media/wilhelm/include' % CONFIG['ANDROID_SOURCE'],
-         ]
- 
-+CFLAGS += CONFIG['MOZ_OSS_CFLAGS']
  CFLAGS += CONFIG['MOZ_ALSA_CFLAGS']
++CFLAGS += CONFIG['MOZ_OSS_CFLAGS']
  CFLAGS += CONFIG['MOZ_PULSEAUDIO_CFLAGS']
+ 
+ # We allow warnings for third-party code that can be updated from upstream.

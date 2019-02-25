@@ -1,4 +1,4 @@
-$NetBSD: patch-xpcom_reflect_xptcall_md_unix_xptcinvoke__sparc64__netbsd.cpp,v 1.2 2017/01/22 12:27:22 ryoon Exp $
+$NetBSD: patch-xpcom_reflect_xptcall_md_unix_xptcinvoke__sparc64__netbsd.cpp,v 1.3 2019/02/25 15:32:24 wiz Exp $
 
 --- xpcom/reflect/xptcall/md/unix/xptcinvoke_sparc64_netbsd.cpp.orig	2014-10-14 18:49:14.000000000 +0000
 +++ xpcom/reflect/xptcall/md/unix/xptcinvoke_sparc64_netbsd.cpp
