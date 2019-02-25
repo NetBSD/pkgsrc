@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2019/02/25 01:00:39 manu Exp $
+
+SHA1 (ltfs-backends/v0.1.tar.gz) = c6dbfa95afefe8a11ea56a321f78c67b39a107f6
+RMD160 (ltfs-backends/v0.1.tar.gz) = 1337919ec2fe9b0ce83b8ba60e81bc9eda78cf7d
+SHA512 (ltfs-backends/v0.1.tar.gz) = 464e4456178e4fe6895fb954a5c7eec7d9ad84e2c0a8887a135e93aaa5807ec493430497ccc56a499f25e02cabf226a4be8574948f97affb3733188af6d8371a
+Size (ltfs-backends/v0.1.tar.gz) = 47827 bytes
+SHA1 (patch-Makefile.am) = d9087041b9d88a23a64f2419cf9c5c60e66b575a
