@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.16 2015/10/12 15:33:08 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2019/02/25 14:16:04 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/sqlite3/sqlite3_native.${RUBY_DLEXT}
+${GEM_LIBDIR}/.gemtest
+${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/API_CHANGES.rdoc
 ${GEM_LIBDIR}/CHANGELOG.rdoc
 ${GEM_LIBDIR}/ChangeLog.cvs
@@ -10,6 +12,9 @@ ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/appveyor.yml
+${GEM_LIBDIR}/ext/sqlite3/aggregator.c
+${GEM_LIBDIR}/ext/sqlite3/aggregator.h
 ${GEM_LIBDIR}/ext/sqlite3/backup.c
 ${GEM_LIBDIR}/ext/sqlite3/backup.h
 ${GEM_LIBDIR}/ext/sqlite3/database.c
@@ -34,19 +39,22 @@ ${GEM_LIBDIR}/lib/sqlite3/statement.rb
 ${GEM_LIBDIR}/lib/sqlite3/translator.rb
 ${GEM_LIBDIR}/lib/sqlite3/value.rb
 ${GEM_LIBDIR}/lib/sqlite3/version.rb
+${GEM_LIBDIR}/rakelib/faq.rake
+${GEM_LIBDIR}/rakelib/gem.rake
+${GEM_LIBDIR}/rakelib/native.rake
+${GEM_LIBDIR}/rakelib/vendor_sqlite3.rake
 ${GEM_LIBDIR}/setup.rb
-${GEM_LIBDIR}/tasks/faq.rake
-${GEM_LIBDIR}/tasks/gem.rake
-${GEM_LIBDIR}/tasks/native.rake
-${GEM_LIBDIR}/tasks/vendor_sqlite3.rake
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/test_backup.rb
 ${GEM_LIBDIR}/test/test_collation.rb
 ${GEM_LIBDIR}/test/test_database.rb
+${GEM_LIBDIR}/test/test_database_flags.rb
 ${GEM_LIBDIR}/test/test_database_readonly.rb
+${GEM_LIBDIR}/test/test_database_readwrite.rb
 ${GEM_LIBDIR}/test/test_deprecated.rb
 ${GEM_LIBDIR}/test/test_encoding.rb
 ${GEM_LIBDIR}/test/test_integration.rb
+${GEM_LIBDIR}/test/test_integration_aggregate.rb
 ${GEM_LIBDIR}/test/test_integration_open_close.rb
 ${GEM_LIBDIR}/test/test_integration_pending.rb
 ${GEM_LIBDIR}/test/test_integration_resultset.rb
