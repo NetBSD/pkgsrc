@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.915 2019/02/25 14:53:30 taca Exp $
+$NetBSD: CHANGES-2019,v 1.916 2019/02/25 15:21:02 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1597,3 +1597,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ruby-byebug to 11.0.0 [taca 2019-02-25]
 	Updated devel/ruby-test-unit to 3.3.0 [taca 2019-02-25]
 	Updated devel/ruby-mustache to 1.1.0 [taca 2019-02-25]
+	Updated lang/swi-prolog-lite to 8.0.1 [leot 2019-02-25]
