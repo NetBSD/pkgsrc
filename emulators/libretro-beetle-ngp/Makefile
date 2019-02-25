@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2018/10/03 12:21:54 nia Exp $
+# $NetBSD: Makefile,v 1.4 2019/02/25 21:37:41 nia Exp $
 
-DISTNAME=	libretro-beetle-ngp-20180720
+DISTNAME=	libretro-beetle-ngp-20190203
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	beetle-ngp-libretro
-GITHUB_TAG=	69293c940ca27008ab2a1e37cc3077c677b36d1e
+GITHUB_TAG=	78eb883d0e9efbb8a66be20f3938f1616453cea6
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://docs.libretro.com/library/beetle_neopop/
