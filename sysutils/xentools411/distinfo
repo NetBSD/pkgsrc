@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2018/07/24 13:40:11 bouyer Exp $
+$NetBSD: distinfo,v 1.2 2019/02/25 08:19:22 gutteridge Exp $
 
 SHA1 (xen411/ipxe-git-356f6c1b64d7a97746d1816cef8ca22bdd8d0b5d.tar.gz) = 272b8c904dc0127690eca2c5c20c67479e40da34
 RMD160 (xen411/ipxe-git-356f6c1b64d7a97746d1816cef8ca22bdd8d0b5d.tar.gz) = cfcb4a314c15da19b36132b27126f3bd9699d0e5
@@ -71,6 +71,7 @@ SHA1 (patch-tools_qemu-xen_audio_audio.c) = a7f47ff0350900bcb99b5515eeee162144a9
 SHA1 (patch-tools_qemu-xen_configure) = a658cb80bad09f61a6b39a65f4a1bde04105e661
 SHA1 (patch-tools_qemu-xen_qemu-doc.texi) = e72d480ec29829055f01226eaf020d4cbd100d5d
 SHA1 (patch-tools_xenpaging_xenpaging.c) = 0a154b97f1f452a5f80f7c9a835a1f216f12f7e1
+SHA1 (patch-tools_xenpmd_xenpmd.c) = 851ce7a295e2f41ffcd966850d8003c82670c751
 SHA1 (patch-tools_xenstore_xc.c) = cf49b65cba064667e13bb041d1f0099c76ab6a40
 SHA1 (patch-tools_xenstore_xs_lib.c) = e3a8f6e3b149c3ab0f4ec8dcfa455983f94e6c16
 SHA1 (patch-tools_xentrace_xentrace.c) = f964c7555f454358a39f28a2e75db8ee100a4243
