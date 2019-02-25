@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2018/02/02 11:51:07 adam Exp $
-bin/isort${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.4 2019/02/25 09:00:35 adam Exp $
+bin/isort-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -12,6 +12,9 @@ ${PYSITELIB}/isort/__init__.pyo
 ${PYSITELIB}/isort/__main__.py
 ${PYSITELIB}/isort/__main__.pyc
 ${PYSITELIB}/isort/__main__.pyo
+${PYSITELIB}/isort/finders.py
+${PYSITELIB}/isort/finders.pyc
+${PYSITELIB}/isort/finders.pyo
 ${PYSITELIB}/isort/hooks.py
 ${PYSITELIB}/isort/hooks.pyc
 ${PYSITELIB}/isort/hooks.pyo
@@ -33,3 +36,6 @@ ${PYSITELIB}/isort/pylama_isort.pyo
 ${PYSITELIB}/isort/settings.py
 ${PYSITELIB}/isort/settings.pyc
 ${PYSITELIB}/isort/settings.pyo
+${PYSITELIB}/isort/utils.py
+${PYSITELIB}/isort/utils.pyc
+${PYSITELIB}/isort/utils.pyo
