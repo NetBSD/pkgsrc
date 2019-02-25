@@ -1,3 +1,5 @@
+$NetBSD: DESCR,v 1.4 2019/02/25 00:52:07 manu Exp $
+
 perfuse brings full FUSE support to NetBSD It has two components:
 - a daemon that creates a /dev/fuse socket and that performs PUFFS
 relay to FUSE.
