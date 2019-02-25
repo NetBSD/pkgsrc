@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/02/20 12:21:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.28 2019/02/25 09:48:26 jperkin Exp $
 #
 
 DISTNAME=		libvncserver-LibVNCServer-0.9.12
@@ -33,6 +33,8 @@ CMAKE_ARGS+=		-DWITH_LZO=ON
 CMAKE_ARGS+=		-DWITH_ZLIB=ON
 CMAKE_ARGS+=		-DWITH_JPEG=ON
 CMAKE_ARGS+=		-DWITH_PNG=ON
+
+LDFLAGS.SunOS+=		-lsocket
 
 .include "options.mk"
 
