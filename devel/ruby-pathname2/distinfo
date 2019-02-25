@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2016/10/09 14:31:16 taca Exp $
+$NetBSD: distinfo,v 1.9 2019/02/25 16:41:12 taca Exp $
 
-SHA1 (pathname2-1.8.0.gem) = 32659979d4d414d04642174e7d92b1ce6e0b62ab
-RMD160 (pathname2-1.8.0.gem) = 1475e086c2d9d93235252daebfdfe396ae4f6eaf
-SHA512 (pathname2-1.8.0.gem) = 6b588d9f2e24e47a87d260ba213a91d72583a67a12604be9dc3efad96c145b2bdc1d7cc9801ff7fd656061fd9f723f1f30743a962ac00109ade379fa5bfb21a4
-Size (pathname2-1.8.0.gem) = 32256 bytes
+SHA1 (pathname2-1.8.1.gem) = 46019958cf99bfbb42e9d5785ad7bc3d3e1663a4
+RMD160 (pathname2-1.8.1.gem) = 0b5771ee7f429993afe3e641810f63c39b90a657
+SHA512 (pathname2-1.8.1.gem) = 885b609ff2a2df9da770737663811a561bc08450c70bbde157c1662087fd6be8d0d6a54f3f72304c7f39557844477adf9fd89224e60d9bce8b76b0970a4279e0
+Size (pathname2-1.8.1.gem) = 33280 bytes
