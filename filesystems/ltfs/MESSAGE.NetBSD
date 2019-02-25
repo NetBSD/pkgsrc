@@ -1,0 +1,20 @@
+===========================================================================
+$NetBSD: MESSAGE.NetBSD,v 1.1 2019/02/25 01:00:39 manu Exp $
+
+LTFS requires fixes to base-system libperfuse that have made been available
+at the dates below:
+                NetBSD-current:        Sat, Feb 9th 2019
+                NetBSD-8 branch:       Sun, Feb 10th 2019
+                NetBSD-7-1 branch:     not available
+                NetBSD-7-0 branch:     not available
+
+Releases after NetBSD 8.0 will contain the fix. For other releases, you
+may either:
+
+- upgrade sources for src/lib/libperfuse and rebuild it. The patch with
+  the relevant fix can be obtained by:
+  cvs rdiff -u -r1.85 -r1.86 src/lib/libperfuse/ops.c
+
+- use libperfuse from pkgsrc by setting PREFER_PKGSRC=perfuse in mk.conf,
+  and rebuild filesystems/fuse
+===========================================================================
