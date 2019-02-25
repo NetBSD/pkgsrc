@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.13 2018/09/21 12:10:07 adam Exp $
+$NetBSD: distinfo,v 1.14 2019/02/25 18:08:42 adam Exp $
 
-SHA1 (fping-4.1.tar.gz) = 4eda89e12b81d2d0f95919c303286fe1b3667ffe
-RMD160 (fping-4.1.tar.gz) = c58f6441245c3e289ecb4c39caa83f14c887c546
-SHA512 (fping-4.1.tar.gz) = cd31ea336985f8d727b0db3c70213b827f0282b0c382694e10c72a89c425f2f7383d07f8f2febdc23aa246ebbf65ac9751b2404be405088963a682945edc80ba
-Size (fping-4.1.tar.gz) = 170851 bytes
+SHA1 (fping-4.2.tar.gz) = 0a2bef2663d8db112f9787d962d7584e91177d49
+RMD160 (fping-4.2.tar.gz) = 9f28dead5ca7a2f34994e1e72e8540de3454ed45
+SHA512 (fping-4.2.tar.gz) = 2bab34dae539d942eb5e436802e6f74d57c04aa4b782f9adbd6c27830209fdb47707131f20ed966012bcec3d253c9bb3df9033a60b55bfe560af6bb1f572ee8a
+Size (fping-4.2.tar.gz) = 171409 bytes
 SHA1 (patch-src_fping.c) = c8047e60ed9693c2ad9d7f016854ca76933ea4c7
