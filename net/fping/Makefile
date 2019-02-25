@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2018/09/21 12:10:07 adam Exp $
+# $NetBSD: Makefile,v 1.20 2019/02/25 18:08:42 adam Exp $
 
-DISTNAME=	fping-4.1
+DISTNAME=	fping-4.2
 CATEGORIES=	net
 MASTER_SITES=	http://fping.org/dist/
 
