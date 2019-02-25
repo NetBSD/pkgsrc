@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2017/07/03 21:06:47 adam Exp $
-bin/jp${PYVERSSUFFIX}.py
+@comment $NetBSD: PLIST,v 1.2 2019/02/25 09:04:55 adam Exp $
+bin/jp-${PYVERSSUFFIX}.py
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/jmespath/__init__.py
 ${PYSITELIB}/jmespath/__init__.pyc
