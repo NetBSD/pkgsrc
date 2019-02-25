@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.917 2019/02/25 15:21:12 leot Exp $
+$NetBSD: CHANGES-2019,v 1.918 2019/02/25 15:21:37 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1599,3 +1599,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ruby-mustache to 1.1.0 [taca 2019-02-25]
 	Updated lang/swi-prolog-lite to 8.0.1 [leot 2019-02-25]
 	Updated lang/swi-prolog-packages to 8.0.1 [leot 2019-02-25]
+	Updated lang/swi-prolog-jpl to 8.0.1 [leot 2019-02-25]
+	Updated lang/swi-prolog to 8.0.1 [leot 2019-02-25]
