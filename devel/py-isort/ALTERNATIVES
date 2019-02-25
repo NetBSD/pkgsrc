@@ -1,1 +1,1 @@
-bin/isort @PREFIX@/bin/isort@PYVERSSUFFIX@
+bin/isort @PREFIX@/bin/isort-@PYVERSSUFFIX@
