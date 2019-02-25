@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.15 2018/12/10 14:59:50 leot Exp $
+# $NetBSD: Makefile.common,v 1.16 2019/02/25 15:20:44 leot Exp $
 #
 # used by lang/swi-prolog/Makefile
 # used by lang/swi-prolog-packages/Makefile
 # used by lang/swi-prolog-jpl/Makefile
 
-SWIPLVERS=		7.6.4
+SWIPLVERS=		8.0.1
 DISTNAME=		swipl-${SWIPLVERS}
 CATEGORIES=		lang
 MASTER_SITES=		http://www.swi-prolog.org/download/stable/src/
@@ -17,5 +17,33 @@ DIST_SUBDIR=		swi-prolog
 DISTINFO_FILE=		${.CURDIR}/../../lang/swi-prolog-lite/distinfo
 PATCHDIR=		${.CURDIR}/../../lang/swi-prolog-lite/patches
 
-CONFIGURE_ENV+=		CMFLAGS="-fPIC"
-CONFIGURE_ENV+=		COFLAGS=${CFLAGS:M*:Q}
+USE_CMAKE=		yes
+CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
+CMAKE_ARGS+=		-DSWIPL_ARCH=${MACHINE_GNU_PLATFORM}
+
+# XXX: Explicitly disable all not wanted packages to avoid possible build
+# XXX: failures. For a complete list please see:
+# XXX:  ${WRKSRC}/cmake/PackageSelection.cmake
+CMAKE_ARGS+=		-DSWIPL_PACKAGES_ODBC=OFF
+CMAKE_ARGS+=		-DSWIPL_PACKAGES_BDB=OFF
+CMAKE_ARGS+=		-DSWIPL_PACKAGES_PCRE=OFF
+CMAKE_ARGS+=		-DSWIPL_PACKAGES_YAML=OFF
+CMAKE_ARGS+=		-DSWIPL_PACKAGES_TIPC=OFF
+CMAKE_ARGS+=		-DSWIPL_PACKAGES_QT=OFF
+
+USE_LANGUAGES=		c c++
+
+# XXX: That's kludgy, can it be avoided?
+MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/build/src
+
+# XXX: Can this be addressed differently without appending to the LDFLAGS?
+# XXX: (i.e. it should just work(TM))
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/swipl/lib/${MACHINE_GNU_PLATFORM}
+
+CONFIGURE_DIRS=		build
+CMAKE_ARG_PATH=		..
+
+PRINT_PLIST_AWK+=	{ sub("${MACHINE_GNU_PLATFORM}", "$${MACHINE_GNU_PLATFORM}") }
+
+pre-configure:
+	cd ${WRKSRC} && ${MKDIR} build
