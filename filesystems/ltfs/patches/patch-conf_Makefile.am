@@ -1,0 +1,30 @@
+$NetBSD: patch-conf_Makefile.am,v 1.1 2019/02/25 01:00:39 manu Exp $
+
+Do not install confguration file so that we can copy them in
+/usr/pkg/share/examples/ltfs instead.
+
+--- conf/Makefile.am.orig	2019-02-20 06:22:33.000000000 +0100
++++ conf/Makefile.am	2019-02-24 03:15:52.062219251 +0100
+@@ -1,5 +1,5 @@
+-dist_sysconf_DATA = ltfs.conf
++noinst_DATA = ltfs.conf
+ 
+ PLAT_OPT =
+ 
+ if PLATFORM_LINUX
+@@ -31,11 +31,11 @@
+ 	mv ltfs.conf ltfs.conf.tmp
+ 	${SED} -e "s!__CONFDIR__!@sysconfdir@!" ltfs.conf.tmp >ltfs.conf
+ 	rm ltfs.conf.tmp
+ 
+-install-data-local:
+-	if [ ! -f "$(DESTDIR)$(sysconfdir)/ltfs.conf.local" ]; then \
+-		cp ltfs.conf.local "$(DESTDIR)$(sysconfdir)/ltfs.conf.local"; \
+-	fi
++#install-data-local:
++#	if [ ! -f "$(DESTDIR)$(sysconfdir)/ltfs.conf.local" ]; then \
++#		cp ltfs.conf.local "$(DESTDIR)$(sysconfdir)/ltfs.conf.local"; \
++#	fi
+ 
+ clean-local:
+ 	rm -f ltfs.conf
