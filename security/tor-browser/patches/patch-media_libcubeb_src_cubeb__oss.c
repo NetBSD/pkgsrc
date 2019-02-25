@@ -1,8 +1,10 @@
-$NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.2 2017/01/22 12:27:22 ryoon Exp $
+$NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.3 2019/02/25 15:32:24 wiz Exp $
 
---- media/libcubeb/src/cubeb_oss.c.orig	2015-02-20 05:47:26.000000000 +0000
+* Restore OSS audio support code
+
+--- media/libcubeb/src/cubeb_oss.c.orig	2018-05-09 10:25:44.118207555 +0000
 +++ media/libcubeb/src/cubeb_oss.c
-@@ -0,0 +1,402 @@
+@@ -0,0 +1,454 @@
 +/*
 + * Copyright © 2014 Mozilla Foundation
 + *
@@ -23,6 +25,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.2 2017/01/22 12:27:22 ryoon E
 +#include <errno.h>
 +#include <pthread.h>
 +#include <stdio.h>
++#include <assert.h>
 +
 +#include "cubeb/cubeb.h"
 +#include "cubeb-internal.h"
@@ -38,11 +41,13 @@ $NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.2 2017/01/22 12:27:22 ryoon E
 +};
 +
 +struct cubeb_stream {
++  /* Note: Must match cubeb_stream layout in cubeb.c. */
 +  cubeb * context;
++  void * user_ptr;
++  /**/
 +
 +  cubeb_data_callback data_callback;
 +  cubeb_state_callback state_callback;
-+  void * user_ptr;
 +  float volume;
 +  float panning;
 +
@@ -93,10 +98,11 @@ $NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.2 2017/01/22 12:27:22 ryoon E
 +}
 +
 +static int oss_get_min_latency(cubeb * context, cubeb_stream_params params,
-+                               uint32_t * latency_ms)
++                               uint32_t * latency_frames)
 +{
++  (void)context;
 +  /* 40ms is a big enough number to work ok */
-+  *latency_ms = 40;
++  *latency_frames = 40 * params.rate / 1000;
 +  return CUBEB_OK;
 +}
 +
@@ -121,15 +127,15 @@ $NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.2 2017/01/22 12:27:22 ryoon E
 +  pthread_mutex_lock(&stream->state_mutex);
 +  if (stream->data_callback && stream->running && !stream->stopped) {
 +    pthread_mutex_unlock(&stream->state_mutex);
-+    got = stream->data_callback(stream, stream->user_ptr, buffer, nframes);
++    got = stream->data_callback(stream, stream->user_ptr, NULL, buffer, nframes);
 +  } else {
 +    pthread_mutex_unlock(&stream->state_mutex);
 +  }
 +  return got;
 +}
 +
-+static void apply_volume(int16_t* buffer, unsigned int n,
-+                         float volume, float panning)
++static void apply_volume_int(int16_t* buffer, unsigned int n,
++                             float volume, float panning)
 +{
 +  float left = volume;
 +  float right = volume;
@@ -146,6 +152,26 @@ $NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.2 2017/01/22 12:27:22 ryoon E
 +    buffer[i] = ((int)buffer[i])*pan[i%2]/128;
 +  }
 +}
++
++static void apply_volume_float(float* buffer, unsigned int n,
++                               float volume, float panning)
++{
++  float left = volume;
++  float right = volume;
++  unsigned int i;
++  float pan[2];
++  if (panning<0) {
++    right *= (1+panning);
++  } else {
++    left *= (1-panning);
++  }
++  pan[0] = left;
++  pan[1] = right;
++  for(i=0; i<n; i++){
++    buffer[i] = buffer[i]*pan[i%2];
++  }
++}
++
 +
 +static void *writer(void *stm)
 +{
@@ -171,15 +197,25 @@ $NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.2 2017/01/22 12:27:22 ryoon E
 +    if (stream->floating) {
 +      got = run_data_callback(stream, f_buffer,
 +                              OSS_BUFFER_SIZE/stream->params.channels);
++      apply_volume_float(f_buffer, got*stream->params.channels,
++                                   stream->volume, stream->panning);
 +      for (i=0; i<((unsigned long)got)*stream->params.channels; i++) {
-+          buffer[i] = f_buffer[i]*32767.0;
++        /* Clipping is prefered to overflow */
++	if(f_buffer[i]>=1.0){
++	  f_buffer[i]=1.0;
++	}
++        if(f_buffer[i]<=-1.0){
++	  f_buffer[i]=-1.0;
++	}
++        /* One might think that multipling by 32767.0 is logical but results in clipping */
++        buffer[i] = f_buffer[i]*32767.0;
 +      }
 +    } else {
 +      got = run_data_callback(stream, buffer,
 +                              OSS_BUFFER_SIZE/stream->params.channels);
++      apply_volume_int(buffer, got*stream->params.channels,
++                               stream->volume, stream->panning);
 +    }
-+    apply_volume(buffer, got*stream->params.channels,
-+                         stream->volume, stream->panning);
 +    if (got<0) {
 +      run_state_callback(stream, CUBEB_STATE_ERROR);
 +      break;
@@ -209,8 +245,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.2 2017/01/22 12:27:22 ryoon E
 +  unsigned int latency_bytes, n_frag;
 +  int frag;
 +  /* fragment size of 1024 is a good choice with good chances to be accepted */
-+  unsigned int frag_size=1024;
-+  unsigned int frag_log=10; /* 2^frag_log = frag_size */
++  unsigned int frag_log=10; /* 2^frag_log = fragment size */
 +  latency_bytes =
 +    latency*stream->params.rate*stream->params.channels*sizeof(uint16_t)/1000;
 +  n_frag = latency_bytes>>frag_log;
@@ -221,7 +256,10 @@ $NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.2 2017/01/22 12:27:22 ryoon E
 +
 +static int oss_stream_init(cubeb * context, cubeb_stream ** stm,
 +                           char const * stream_name,
-+                           cubeb_stream_params stream_params,
++                           cubeb_devid input_device,
++                           cubeb_stream_params * input_stream_params,
++                           cubeb_devid output_device,
++                           cubeb_stream_params * output_stream_params,
 +                           unsigned int latency,
 +                           cubeb_data_callback data_callback,
 +                           cubeb_state_callback state_callback, void * user_ptr)
@@ -231,6 +269,17 @@ $NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.2 2017/01/22 12:27:22 ryoon E
 +  stream->data_callback = data_callback;
 +  stream->state_callback = state_callback;
 +  stream->user_ptr = user_ptr;
++
++  assert(!input_stream_params && "not supported.");
++  if (input_device || output_device) {
++    /* Device selection not yet implemented. */
++    return CUBEB_ERROR_DEVICE_UNAVAILABLE;
++  }
++
++  if ((input_stream_params && input_stream_params->prefs & CUBEB_STREAM_PREF_LOOPBACK) ||
++      (output_stream_params && output_stream_params->prefs & CUBEB_STREAM_PREF_LOOPBACK)) {
++    return CUBEB_ERROR_NOT_SUPPORTED;
++  }
 +
 +  if ((stream->fd = open(CUBEB_OSS_DEFAULT_OUTPUT, O_WRONLY)) == -1) {
 +    free(stream);
@@ -243,16 +292,16 @@ $NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.2 2017/01/22 12:27:22 ryoon E
 +      free(stream); \
 +      return CUBEB_ERROR_INVALID_FORMAT; } } while (0)
 +
-+  stream->params = stream_params;
++  stream->params = *output_stream_params;
 +  stream->volume = 1.0;
 +  stream->panning = 0.0;
 +
 +  oss_try_set_latency(stream, latency); 
 +
 +  stream->floating = 0;
-+  SET(SNDCTL_DSP_CHANNELS, stream_params.channels);
-+  SET(SNDCTL_DSP_SPEED, stream_params.rate);
-+  switch (stream_params.format) {
++  SET(SNDCTL_DSP_CHANNELS, stream->params.channels);
++  SET(SNDCTL_DSP_SPEED, stream->params.rate);
++  switch (stream->params.format) {
 +    case CUBEB_SAMPLE_S16LE:
 +      SET(SNDCTL_DSP_SETFMT, AFMT_S16_LE);
 +    break;
@@ -392,16 +441,21 @@ $NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.2 2017/01/22 12:27:22 ryoon E
 +  .get_max_channel_count = oss_get_max_channel_count,
 +  .get_min_latency = oss_get_min_latency,
 +  .get_preferred_sample_rate = oss_get_preferred_sample_rate,
++  .get_preferred_channel_layout = NULL,
++  .enumerate_devices = NULL,
++  .device_collection_destroy = NULL,
 +  .destroy = oss_destroy,
 +  .stream_init = oss_stream_init,
 +  .stream_destroy = oss_stream_destroy,
 +  .stream_start = oss_stream_start,
 +  .stream_stop = oss_stream_stop,
++  .stream_reset_default_device = NULL,
 +  .stream_get_position = oss_stream_get_position,
 +  .stream_get_latency = oss_stream_get_latency,
 +  .stream_set_volume = oss_stream_set_volume,
 +  .stream_set_panning = oss_stream_set_panning,
 +  .stream_get_current_device = NULL,
 +  .stream_device_destroy = NULL,
-+  .stream_register_device_changed_callback = NULL
++  .stream_register_device_changed_callback = NULL,
++  .register_device_collection_changed = NULL
 +};
