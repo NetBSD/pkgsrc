@@ -1,4 +1,4 @@
-$NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.h,v 1.4 2019/01/06 08:41:01 markd Exp $
+$NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.h,v 1.5 2019/02/25 18:57:03 maya Exp $
 
 Explicitly include poppler/Object.h; otherwise Python's Object.h gets included.
 Support for poppler 0.72 from upstream by way of linuxfromscratch 
@@ -13,12 +13,12 @@ Support for poppler 0.72 from upstream by way of linuxfromscratch
  
  #ifdef USE_GCC_PRAGMAS
  #pragma interface
-@@ -25,8 +26,9 @@ namespace Inkscape {
+@@ -25,8 +26,8 @@ namespace Inkscape {
  // TODO clean up and remove using:
  using Inkscape::Extension::Internal::SvgBuilder;
  
 +#include "glib/poppler-features.h"
- #include "goo/gtypes.h"
+-#include "goo/gtypes.h"
 -#include "Object.h"
 +#include "poppler/Object.h"
  
