@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.926 2019/02/25 18:09:07 adam Exp $
+$NetBSD: CHANGES-2019,v 1.927 2019/02/25 21:37:54 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1610,3 +1610,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated math/ruby-spreadsheet to 1.2.0 [taca 2019-02-25]
 	Updated databases/sqlite3 to 3.27.2 [adam 2019-02-25]
 	Updated net/fping to 4.2 [adam 2019-02-25]
+	Updated emulators/libretro-beetle-ngp to 20190203 [nia 2019-02-25]
