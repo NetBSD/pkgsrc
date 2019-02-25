@@ -1,0 +1,14 @@
+$NetBSD: patch-Makefile.am,v 1.1 2019/02/25 01:00:39 manu Exp $
+
+Make sure config.h is not copied at install time, we do not need it.
+
+--- Makefile.am.orig	2019-02-24 06:56:41.830962689 +0000
++++ Makefile.am	2019-02-24 06:56:46.505946016 +0000
+@@ -1,6 +1,6 @@
+ ACLOCAL_AMFLAGS = -I m4
+ 
+-nobase_pkginclude_HEADERS = config.h
++#nobase_pkginclude_HEADERS = config.h
+ 
+ SUBDIRS = messages src/tape_drivers/netbsd/ltotape
+ 

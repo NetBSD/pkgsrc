@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.902 2019/02/24 20:36:04 adam Exp $
+$NetBSD: CHANGES-2019,v 1.903 2019/02/25 01:00:38 manu Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1582,3 +1582,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/exim-html to 4.92 [adam 2019-02-24]
 	Updated devel/py-pluggy to 0.9.0 [adam 2019-02-24]
 	Updated www/py-django-extensions to 2.1.6 [adam 2019-02-24]
+	Added filesytems/ltfs version 2.4.2.0.0 [manu 21019-02-25]
+	Added filesytems/ltfs-ltotape version 0.1 [manu 21019-02-25]
