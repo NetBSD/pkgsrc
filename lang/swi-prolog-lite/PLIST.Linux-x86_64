@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST.Linux-x86_64,v 1.2 2019/01/06 08:55:47 markd Exp $
-lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_GNU_PLATFORM}/libswipl.so
-lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_GNU_PLATFORM}/libswipl.so.7.6
-lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_GNU_PLATFORM}/libswipl.so.${PKGVERSION}
