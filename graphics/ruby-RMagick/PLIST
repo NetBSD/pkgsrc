@@ -1,12 +1,16 @@
-@comment $NetBSD: PLIST,v 1.27 2016/10/10 14:56:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.28 2019/02/25 16:48:58 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/RMagick2.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
+${GEM_LIBDIR}/.appveyor.yml
+${GEM_LIBDIR}/.circleci/config.yml
 ${GEM_LIBDIR}/.editorconfig
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.hound.yml
 ${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/.rubocop.yml
+${GEM_LIBDIR}/.rubocop_todo.yml
+${GEM_LIBDIR}/.ruby-version
 ${GEM_LIBDIR}/.simplecov
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGELOG.md
@@ -344,6 +348,7 @@ ${GEM_LIBDIR}/ext/RMagick/rmfill.c
 ${GEM_LIBDIR}/ext/RMagick/rmilist.c
 ${GEM_LIBDIR}/ext/RMagick/rmimage.c
 ${GEM_LIBDIR}/ext/RMagick/rminfo.c
+${GEM_LIBDIR}/ext/RMagick/rmkinfo.c
 ${GEM_LIBDIR}/ext/RMagick/rmmain.c
 ${GEM_LIBDIR}/ext/RMagick/rmmontage.c
 ${GEM_LIBDIR}/ext/RMagick/rmpixel.c
@@ -371,13 +376,16 @@ ${GEM_LIBDIR}/rmagick.gemspec
 ${GEM_LIBDIR}/spec/rmagick/ImageList1_spec.rb
 ${GEM_LIBDIR}/spec/rmagick/draw_spec.rb
 ${GEM_LIBDIR}/spec/rmagick/image/blue_shift_spec.rb
+${GEM_LIBDIR}/spec/rmagick/image/channel_entropy_spec.rb
 ${GEM_LIBDIR}/spec/rmagick/image/composite_spec.rb
 ${GEM_LIBDIR}/spec/rmagick/image/constitute_spec.rb
 ${GEM_LIBDIR}/spec/rmagick/image/dispatch_spec.rb
 ${GEM_LIBDIR}/spec/rmagick/image/from_blob_spec.rb
 ${GEM_LIBDIR}/spec/rmagick/image/ping_spec.rb
 ${GEM_LIBDIR}/spec/rmagick/image/properties_spec.rb
+${GEM_LIBDIR}/spec/rmagick/image/read_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/support/issue_200/app.rb
 ${GEM_LIBDIR}/test/Image1.rb
 ${GEM_LIBDIR}/test/Image2.rb
 ${GEM_LIBDIR}/test/Image3.rb
