@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2018/10/24 16:58:38 minskim Exp $
+# $NetBSD: Makefile,v 1.19 2019/02/25 11:54:05 jperkin Exp $
 
 .include "../../devel/ncurses/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/ncurses/ncursesw/}
 COMMENT=	Wide character CRT screen handling and optimization package
-PKGREVISION=	2
+PKGREVISION=	3
 
 PATCHDIR=	${.CURDIR}/../../devel/ncurses/patches
 DISTINFO_FILE=	${.CURDIR}/../../devel/ncurses/distinfo
