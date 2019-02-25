@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/02/24 15:50:25 taca Exp $
+# $NetBSD: Makefile,v 1.2 2019/02/25 09:20:53 jperkin Exp $
 #
 
 DISTNAME=	sass-listen-4.0.0
@@ -9,7 +9,7 @@ HOMEPAGE=	https://github.com/sass/listen
 COMMENT=	listens to file modifications and notifies
 
 DEPENDS+=	${RUBY_PKGPREFIX}-rb-fsevent>=0.9.4:../../devel/ruby-rb-fsevent
-DEPENDS+=	${RUBY_PKGPREFIX}-rb-inotify>=0.9.7:../../devel/ruby-rb-inotify
+DEPENDS+=	${RUBY_PKGPREFIX}-rb-inotify>=0.9.7:../../sysutils/ruby-rb-inotify
 
 USE_LANGUAGES=	# none
 
