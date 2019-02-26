@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.933 2019/02/26 11:28:01 adam Exp $
+$NetBSD: CHANGES-2019,v 1.934 2019/02/26 11:33:24 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1620,3 +1620,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/firefox60-l10n to 60.5.2 [ryoon 2019-02-26]
 	Updated textproc/fmtlib to 5.3.0 [adam 2019-02-26]
 	Updated www/py-WSGIProxy2 to 0.4.6 [adam 2019-02-26]
+	Updated mail/thunderbird to 60.5.1 [ryoon 2019-02-26]
