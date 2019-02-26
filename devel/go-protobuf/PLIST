@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/09/11 18:27:08 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/02/26 22:09:50 he Exp $
 bin/protoc-gen-go
 gopkg/pkg/${GO_PLATFORM}/github.com/golang/protobuf/descriptor.a
 gopkg/pkg/${GO_PLATFORM}/github.com/golang/protobuf/jsonpb.a
@@ -32,6 +32,8 @@ gopkg/src/github.com/golang/protobuf/conformance/internal/conformance_proto/conf
 gopkg/src/github.com/golang/protobuf/conformance/test.sh
 gopkg/src/github.com/golang/protobuf/descriptor/descriptor.go
 gopkg/src/github.com/golang/protobuf/descriptor/descriptor_test.go
+gopkg/src/github.com/golang/protobuf/go.mod
+gopkg/src/github.com/golang/protobuf/go.sum
 gopkg/src/github.com/golang/protobuf/jsonpb/jsonpb.go
 gopkg/src/github.com/golang/protobuf/jsonpb/jsonpb_test.go
 gopkg/src/github.com/golang/protobuf/jsonpb/jsonpb_test_proto/more_test_objects.pb.go
@@ -44,6 +46,7 @@ gopkg/src/github.com/golang/protobuf/proto/clone.go
 gopkg/src/github.com/golang/protobuf/proto/clone_test.go
 gopkg/src/github.com/golang/protobuf/proto/decode.go
 gopkg/src/github.com/golang/protobuf/proto/decode_test.go
+gopkg/src/github.com/golang/protobuf/proto/deprecated.go
 gopkg/src/github.com/golang/protobuf/proto/discard.go
 gopkg/src/github.com/golang/protobuf/proto/discard_test.go
 gopkg/src/github.com/golang/protobuf/proto/encode.go
@@ -102,6 +105,8 @@ gopkg/src/github.com/golang/protobuf/protoc-gen-go/testdata/import_public/a.pb.g
 gopkg/src/github.com/golang/protobuf/protoc-gen-go/testdata/import_public/a.proto
 gopkg/src/github.com/golang/protobuf/protoc-gen-go/testdata/import_public/b.pb.go
 gopkg/src/github.com/golang/protobuf/protoc-gen-go/testdata/import_public/b.proto
+gopkg/src/github.com/golang/protobuf/protoc-gen-go/testdata/import_public/importing/importing.pb.go
+gopkg/src/github.com/golang/protobuf/protoc-gen-go/testdata/import_public/importing/importing.proto
 gopkg/src/github.com/golang/protobuf/protoc-gen-go/testdata/import_public/sub/a.pb.go
 gopkg/src/github.com/golang/protobuf/protoc-gen-go/testdata/import_public/sub/a.proto
 gopkg/src/github.com/golang/protobuf/protoc-gen-go/testdata/import_public/sub/b.pb.go
@@ -127,6 +132,8 @@ gopkg/src/github.com/golang/protobuf/protoc-gen-go/testdata/imports/test_import_
 gopkg/src/github.com/golang/protobuf/protoc-gen-go/testdata/imports/test_import_a1m2.proto
 gopkg/src/github.com/golang/protobuf/protoc-gen-go/testdata/imports/test_import_all.pb.go
 gopkg/src/github.com/golang/protobuf/protoc-gen-go/testdata/imports/test_import_all.proto
+gopkg/src/github.com/golang/protobuf/protoc-gen-go/testdata/issue780_oneof_conflict/test.pb.go
+gopkg/src/github.com/golang/protobuf/protoc-gen-go/testdata/issue780_oneof_conflict/test.proto
 gopkg/src/github.com/golang/protobuf/protoc-gen-go/testdata/main_test.go
 gopkg/src/github.com/golang/protobuf/protoc-gen-go/testdata/multi/multi1.pb.go
 gopkg/src/github.com/golang/protobuf/protoc-gen-go/testdata/multi/multi1.proto

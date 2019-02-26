@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/09/11 18:27:08 minskim Exp $
+$NetBSD: distinfo,v 1.3 2019/02/26 22:09:50 he Exp $
 
-SHA1 (go-protobuf-1.2.0.tar.gz) = ec7e07d7e4d2e3ed7f66a9e04b50810090d9d20a
-RMD160 (go-protobuf-1.2.0.tar.gz) = fdacc40a0c7463d46d088ab46dfc81ee99226ebf
-SHA512 (go-protobuf-1.2.0.tar.gz) = a0f596ee96f7501ee47da75ea234c1e29c0abb2c3fda731acd601a55880502ae90d70f6d3da9c9a35e493fd1bcb69971c062e16b1e49a0996137950dac2effac
-Size (go-protobuf-1.2.0.tar.gz) = 332565 bytes
+SHA1 (go-protobuf-1.3.0.tar.gz) = ac82cc5785707985e320d09e807226566c959476
+RMD160 (go-protobuf-1.3.0.tar.gz) = 20e71e3b34427cd02d7264a278479f1c48ea5913
+SHA512 (go-protobuf-1.3.0.tar.gz) = 520bb73601df0d331803f85a8076ec2828e768e03c21741a09ff49b0594460c7c7a7a6da64c6b08ff2f8ba56c6ae8433b5a4360f2212edad0bad2917804db3cc
+Size (go-protobuf-1.3.0.tar.gz) = 329112 bytes
