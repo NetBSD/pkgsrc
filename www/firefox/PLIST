@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.136 2019/01/29 16:28:22 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.137 2019/02/26 12:14:12 rin Exp $
 bin/firefox
 lib/firefox/actors/AudibleAutoplayChild.jsm
 lib/firefox/actors/AudioPlaybackChild.jsm
@@ -4938,8 +4938,8 @@ lib/firefox/hyphenation/hyph_sv.dic
 lib/firefox/hyphenation/hyph_tr.dic
 lib/firefox/hyphenation/hyph_uk.dic
 lib/firefox/liblgpllibs.so
-${PLIST.avx86}lib/firefox/libmozavcodec.so
-${PLIST.avx86}lib/firefox/libmozavutil.so
+${PLIST.ffvpx}lib/firefox/libmozavcodec.so
+${PLIST.ffvpx}lib/firefox/libmozavutil.so
 lib/firefox/libmozgtk.so
 lib/firefox/libmozsqlite3.so
 lib/firefox/libxul.so

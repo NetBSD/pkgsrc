@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.338 2019/02/19 15:23:53 ryoon Exp $
+$NetBSD: distinfo,v 1.339 2019/02/26 12:14:12 rin Exp $
 
 SHA1 (firefox-65.0.1.source.tar.xz) = 5b3a64d5c843f4e23cb3220a3211077bc58cba34
 RMD160 (firefox-65.0.1.source.tar.xz) = 397345aa64b18771f7f82c41c146ee19d4865343
@@ -30,6 +30,8 @@ SHA1 (patch-media_libcubeb_update.sh) = cddb5849fa2972e961e4891bc8a79a650df06d8d
 SHA1 (patch-media_libpng_pngpriv.h) = c8084332560017cd7c9b519b61d125fa28af0dbc
 SHA1 (patch-python_mozbuild_mozbuild_action_check__binary.py) = 8103ca9f95fe98a4461c97abcd4cafd5ae5294f0
 SHA1 (patch-servo_components_style_build__gecko.rs) = dacdcb69de1c8409bda20b11afbfa49624005c72
+SHA1 (patch-third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs) = bacab47c65bd9d3f5686426f1026edccda66942f
+SHA1 (patch-third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_other_mod.rs) = 7af37abb3bf0674591192146476ea46ca180b5ab
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = 082aa7830b33cb91c2606fb06059d544c70a7e62
 SHA1 (patch-toolkit_library_moz.build) = 102e3713552c26f76e8b4e473846bb8fbc44b278
 SHA1 (patch-toolkit_moz.configure) = 40ee147cc1d2c62dd6c83b3f67ce9e61f758ea57
