@@ -1,4 +1,4 @@
-<!-- $NetBSD: ftp-layout.xml,v 1.13 2009/10/11 20:50:48 rillig Exp $ -->
+<!-- $NetBSD: ftp-layout.xml,v 1.14 2019/02/26 12:11:49 leot Exp $ -->
 
 <appendix id="ftp-layout">
 <title>Directory layout of the pkgsrc FTP server</title>
@@ -98,6 +98,7 @@
 </sect1>
 <sect1 id="ftp-source">
 <title><filename>current</filename>,
+<filename>stable</filename>,
 <filename>pkgsrc-20<replaceable>xx</replaceable>Q<replaceable>y</replaceable></filename>:
 source packages</title>
 
@@ -114,6 +115,9 @@ source packages</title>
 	additional file called
 	<filename>pkgsrc-20<replaceable>xx</replaceable>Q<replaceable>y</replaceable>.tar.gz</filename>,
 	which contains the state of pkgsrc when it was branched.</para>
+
+	<para><filename>stable</filename> directory points to the latest
+	quarterly branch.</para>
 
 </sect1>
 </appendix>
