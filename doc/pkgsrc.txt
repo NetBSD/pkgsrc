@@ -423,7 +423,7 @@ C. Directory layout of the pkgsrc FTP server
     C.2. misc: Miscellaneous things
     C.3. packages: Binary packages
     C.4. reports: Bulk build reports
-    C.5. current, pkgsrc-20xxQy: source packages
+    C.5. current, stable, pkgsrc-20xxQy: source packages
 
 D. Editing guidelines for the pkgsrc guide
 
@@ -8371,7 +8371,7 @@ C.1. distfiles: The distributed source files
 C.2. misc: Miscellaneous things
 C.3. packages: Binary packages
 C.4. reports: Bulk build reports
-C.5. current, pkgsrc-20xxQy: source packages
+C.5. current, stable, pkgsrc-20xxQy: source packages
 
 As in other big projects, the directory layout of pkgsrc is quite complex for
 newbies. This chapter explains where you find things on the FTP server. The
@@ -8435,7 +8435,7 @@ Here are the reports from bulk builds, for those who want to fix packages that
 didn't build on some of the platforms. The structure of subdirectories should
 look like the one in Section C.3, "packages: Binary packages".
 
-C.5. current, pkgsrc-20xxQy: source packages
+C.5. current, stable, pkgsrc-20xxQy: source packages
 
 These directories contain the "real" pkgsrc, that is the files that define how
 to create binary packages from source archives.
@@ -8447,6 +8447,8 @@ ready to be downloaded as a whole.
 In the directories for the quarterly branches, there is an additional file
 called pkgsrc-20xxQy.tar.gz, which contains the state of pkgsrc when it was
 branched.
+
+stable directory points to the latest quarterly branch.
 
 Appendix D. Editing guidelines for the pkgsrc guide
 
