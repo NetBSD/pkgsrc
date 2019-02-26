@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.62 2018/12/16 12:05:26 adam Exp $
+# $NetBSD: Makefile,v 1.63 2019/02/26 11:36:59 adam Exp $
 
 .include "../../devel/git/Makefile.common"
 
 PKGNAME=	git-base-${GIT_VERSION}
 COMMENT=	GIT Tree History Storage Tool (base package)
 
-CONFLICTS+=		scmgit-base-[0-9]*
-SUPERSEDES+=		scmgit-base-[0-9]*
+CONFLICTS+=	scmgit-base-[0-9]*
+SUPERSEDES+=	scmgit-base-[0-9]*
 
-DEPENDS+=		p5-Error>=0.17015:../../devel/p5-Error
-DEPENDS+=		p5-Email-Valid>=0.190:../../mail/p5-Email-Valid
-DEPENDS+=		p5-MailTools>=2.11:../../mail/p5-MailTools
-DEPENDS+=		p5-Net-SMTP-SSL>=1.01:../../mail/p5-Net-SMTP-SSL
-DEPENDS+=		p5-Authen-SASL>=1.0:../../security/p5-Authen-SASL
+DEPENDS+=	p5-Error>=0.17015:../../devel/p5-Error
+DEPENDS+=	p5-Email-Valid>=0.190:../../mail/p5-Email-Valid
+DEPENDS+=	p5-MailTools>=2.11:../../mail/p5-MailTools
+DEPENDS+=	p5-Net-SMTP-SSL>=1.01:../../mail/p5-Net-SMTP-SSL
+DEPENDS+=	p5-Authen-SASL>=1.0:../../security/p5-Authen-SASL
 
 USE_LANGUAGES=		c99
 USE_TOOLS+=		perl:run sh:run msgfmt
@@ -57,8 +57,8 @@ MAKE_DIRS+=		${GIT_CORE_TEMPLATEDIR}/hooks
 MAKE_DIRS+=		${GIT_CORE_TEMPLATEDIR}/info
 
 REQD_FILES+=		${GIT_TEMPLATES:@.t.@\
-				${EGDIR}/${GIT_TEMPLATEDIR}/${.t.}\
-				${PREFIX}/${GIT_CORE_TEMPLATEDIR}/${.t.}\
+			${EGDIR}/${GIT_TEMPLATEDIR}/${.t.}\
+			${PREFIX}/${GIT_CORE_TEMPLATEDIR}/${.t.}\
 			@:M*}
 
 CONFIGURE_ENV+=		HOME=${PREFIX}
