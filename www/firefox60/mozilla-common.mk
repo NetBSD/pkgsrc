@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.2 2018/10/23 12:33:04 jperkin Exp $
+# $NetBSD: mozilla-common.mk,v 1.3 2019/02/26 11:23:53 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -66,14 +66,14 @@ CONFIGURE_ARGS+=	--enable-system-ffi
 CONFIGURE_ARGS+=	--with-system-icu
 CONFIGURE_ARGS+=	--with-system-nss
 CONFIGURE_ARGS+=	--with-system-nspr
-CONFIGURE_ARGS+=	--with-system-jpeg
+#CONFIGURE_ARGS+=	--with-system-jpeg
 CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--with-system-bz2
 CONFIGURE_ARGS+=	--with-system-libevent=${BUILDLINK_PREFIX.libevent}
 CONFIGURE_ARGS+=	--disable-crashreporter
 CONFIGURE_ARGS+=	--disable-necko-wifi
 CONFIGURE_ARGS+=	--enable-chrome-format=flat
-CONFIGURE_ARGS+=	--disable-libjpeg-turbo
+#CONFIGURE_ARGS+=	--disable-libjpeg-turbo
 
 CONFIGURE_ARGS+=	--disable-gconf
 #CONFIGURE_ARGS+=	--enable-readline
@@ -196,7 +196,7 @@ BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.18
 BUILDLINK_API_DEPENDS.nss+=	nss>=3.35
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
+#.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 #BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.10.2nb4
 #.include "../../graphics/cairo/buildlink3.mk"
