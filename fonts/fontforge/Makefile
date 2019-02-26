@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2018/11/14 22:21:27 kleink Exp $
+# $NetBSD: Makefile,v 1.107 2019/02/26 12:03:07 jperkin Exp $
 
 DISTNAME=	fontforge-dist-20170731
 PKGNAME=	${DISTNAME:S/-dist-/-/}
@@ -38,7 +38,7 @@ PY_PATCHPLIST=		yes
 
 # Requires GNU date features
 .if ${OPSYS} == "SunOS"
-TOOLS_PLATFORM.date=
+_TOOLS_USE_PKGSRC.date=	yes
 .endif
 
 .include "options.mk"
