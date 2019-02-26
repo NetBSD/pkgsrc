@@ -1,8 +1,8 @@
-$NetBSD: patch-comm_mail_installer_removed-files.in,v 1.1 2018/12/16 08:12:15 ryoon Exp $
+$NetBSD: patch-comm_mail_installer_removed-files.in,v 1.2 2019/02/26 11:32:13 ryoon Exp $
 
---- comm/mail/installer/removed-files.in.orig	2018-12-04 23:12:16.000000000 +0000
+--- comm/mail/installer/removed-files.in.orig	2019-02-13 14:19:59.000000000 +0000
 +++ comm/mail/installer/removed-files.in
-@@ -186,51 +186,15 @@
+@@ -75,7 +75,7 @@
  @DIR_RESOURCES@extensions/
  @DIR_RESOURCES@extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/*
  #else
@@ -13,47 +13,3 @@ $NetBSD: patch-comm_mail_installer_removed-files.in,v 1.1 2018/12/16 08:12:15 ry
 +@DIR_RESOURCES@bin/distribution/extensions/
 +@DIR_RESOURCES@bin/distribution/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/*
  #endif
- 
- @DIR_MACOS@greprefs/all.js
- @DIR_MACOS@greprefs/security-prefs.js
- @DIR_MACOS@greprefs/xpinstall.js
- @DIR_MACOS@greprefs/
--@DIR_MACOS@hyphenation/
--@DIR_MACOS@hyphenation/hyph_af.dic
--@DIR_MACOS@hyphenation/hyph_bg.dic
--@DIR_MACOS@hyphenation/hyph_ca.dic
--@DIR_MACOS@hyphenation/hyph_cy.dic
--@DIR_MACOS@hyphenation/hyph_da.dic
--@DIR_MACOS@hyphenation/hyph_de-1901.dic
--@DIR_MACOS@hyphenation/hyph_de-1996.dic
--@DIR_MACOS@hyphenation/hyph_de-CH.dic
--@DIR_MACOS@hyphenation/hyph_en_US.dic
--@DIR_MACOS@hyphenation/hyph_eo.dic
--@DIR_MACOS@hyphenation/hyph_es.dic
--@DIR_MACOS@hyphenation/hyph_et.dic
--@DIR_MACOS@hyphenation/hyph_fi.dic
--@DIR_MACOS@hyphenation/hyph_fr.dic
--@DIR_MACOS@hyphenation/hyph_gl.dic
--@DIR_MACOS@hyphenation/hyph_hr.dic
--@DIR_MACOS@hyphenation/hyph_hsb.dic
--@DIR_MACOS@hyphenation/hyph_hu.dic
--@DIR_MACOS@hyphenation/hyph_ia.dic
--@DIR_MACOS@hyphenation/hyph_is.dic
--@DIR_MACOS@hyphenation/hyph_it.dic
--@DIR_MACOS@hyphenation/hyph_kmr.dic
--@DIR_MACOS@hyphenation/hyph_la.dic
--@DIR_MACOS@hyphenation/hyph_lt.dic
--@DIR_MACOS@hyphenation/hyph_mn.dic
--@DIR_MACOS@hyphenation/hyph_nb.dic
--@DIR_MACOS@hyphenation/hyph_nl.dic
--@DIR_MACOS@hyphenation/hyph_nn.dic
--@DIR_MACOS@hyphenation/hyph_pt.dic
--@DIR_MACOS@hyphenation/hyph_ru.dic
--@DIR_MACOS@hyphenation/hyph_sh.dic
--@DIR_MACOS@hyphenation/hyph_sl.dic
--@DIR_MACOS@hyphenation/hyph_sv.dic
--@DIR_MACOS@hyphenation/hyph_tr.dic
--@DIR_MACOS@hyphenation/hyph_uk.dic
- 
- #ifdef MOZ_WIDGET_GTK
-   icons/mozicon128.png
