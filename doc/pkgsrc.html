@@ -437,6 +437,7 @@ builds)</a></span></dt>
 <dt><span class="sect1"><a href="#ftp-packages">C.3. <code class="filename">packages</code>: Binary packages</a></span></dt>
 <dt><span class="sect1"><a href="#ftp-reports">C.4. <code class="filename">reports</code>: Bulk build reports</a></span></dt>
 <dt><span class="sect1"><a href="#ftp-source">C.5. <code class="filename">current</code>,
+<code class="filename">stable</code>,
 <code class="filename">pkgsrc-20<em class="replaceable"><code>xx</code></em>Q<em class="replaceable"><code>y</code></em></code>:
 source packages</a></span></dt>
 </dl></dd>
@@ -8840,7 +8841,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm81394584"></a><dl>
+<a name="idm79121616"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -8885,7 +8886,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm81394200"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm79121232"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -8901,7 +8902,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm81390232"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="idm79108944"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -8919,7 +8920,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm81385752"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm79104592"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -8937,7 +8938,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm81381656"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm79100368"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -8950,7 +8951,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm81379480"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm79098192"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -8966,7 +8967,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm81376280"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm79078608"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="code">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -8990,7 +8991,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm81369368"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm79071824"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9015,7 +9016,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm81365656"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm79067984"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9063,7 +9064,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm81359128"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm79061456"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
@@ -10191,6 +10192,7 @@ Registering depends:.
 <dt><span class="sect1"><a href="#ftp-packages">C.3. <code class="filename">packages</code>: Binary packages</a></span></dt>
 <dt><span class="sect1"><a href="#ftp-reports">C.4. <code class="filename">reports</code>: Bulk build reports</a></span></dt>
 <dt><span class="sect1"><a href="#ftp-source">C.5. <code class="filename">current</code>,
+<code class="filename">stable</code>,
 <code class="filename">pkgsrc-20<em class="replaceable"><code>xx</code></em>Q<em class="replaceable"><code>y</code></em></code>:
 source packages</a></span></dt>
 </dl>
@@ -10273,6 +10275,7 @@ source packages</a></span></dt>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="ftp-source"></a>C.5. <code class="filename">current</code>,
+<code class="filename">stable</code>,
 <code class="filename">pkgsrc-20<em class="replaceable"><code>xx</code></em>Q<em class="replaceable"><code>y</code></em></code>:
 source packages</h2></div></div></div>
 <p>These directories contain the <span class="quote">&#8220;<span class="quote">real</span>&#8221;</span> pkgsrc,
@@ -10286,6 +10289,8 @@ source packages</h2></div></div></div>
 	additional file called
 	<code class="filename">pkgsrc-20<em class="replaceable"><code>xx</code></em>Q<em class="replaceable"><code>y</code></em>.tar.gz</code>,
 	which contains the state of pkgsrc when it was branched.</p>
+<p><code class="filename">stable</code> directory points to the latest
+	quarterly branch.</p>
 </div>
 </div>
 <div class="appendix">
