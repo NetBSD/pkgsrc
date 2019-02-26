@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2018/10/15 08:55:49 leot Exp $
+# $NetBSD: Makefile,v 1.6 2019/02/26 18:31:46 leot Exp $
 
-DISTNAME=	hangups-0.4.6
+DISTNAME=	hangups-0.4.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hangups/}
@@ -11,7 +11,7 @@ COMMENT=	Third-party instant messaging client for Google Hangouts
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-MechanicalSoup>=0.6.0:../../www/py-MechanicalSoup
-DEPENDS+=	${PYPKGPREFIX}-aiohttp>=1.3:../../www/py-aiohttp
+DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.3:../../www/py-aiohttp
 DEPENDS+=	${PYPKGPREFIX}-appdirs>=1.4.0:../../devel/py-appdirs
 DEPENDS+=	${PYPKGPREFIX}-async-timeout>=2:../../devel/py-async-timeout
 DEPENDS+=	${PYPKGPREFIX}-configargparse>=0.11.0:../../devel/py-configargparse
