@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2018/12/04 10:05:22 jperkin Exp $
+$NetBSD: distinfo,v 1.3 2019/02/26 10:58:25 adam Exp $
 
-SHA1 (fmt-5.2.1.tar.gz) = 8b38f1ecdf137e8ca24e9b66145c1b94fa5f921d
-RMD160 (fmt-5.2.1.tar.gz) = 35cec2d51a003bdb35282897e0d1400d0b2f9db2
-SHA512 (fmt-5.2.1.tar.gz) = 2b63a741df4df9c3cbf04098c6548bb3d0f9836fe912325542298df57c888f43e72159469fb87685b423694e43e4418545377d5ee6393f2709955be2c13780a8
-Size (fmt-5.2.1.tar.gz) = 648668 bytes
+SHA1 (fmt-5.3.0.tar.gz) = 787a568322e08cebb1e164b3c9766e27ca18b2c8
+RMD160 (fmt-5.3.0.tar.gz) = db698a683c6be3bb2423965f00ca661e849308c1
+SHA512 (fmt-5.3.0.tar.gz) = 9ef0f3d328681253c1e1776576d54d67dec49c19fd7fc422ae63c3610b01a3f05f6e83cdf5e913dfd09bac42e52fe35c38ebe1ea91f4207d226a32aaf69eb4a8
+Size (fmt-5.3.0.tar.gz) = 662493 bytes
+SHA1 (patch-CMakeLists.txt) = 122c1694b7772e4f444ec550a3d1fb9b6b8d0690
 SHA1 (patch-include_fmt_posix.h) = 083c19a7f1fc02e04f355e3d45781b47364baca1
