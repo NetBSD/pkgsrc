@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.936 2019/02/26 11:37:50 adam Exp $
+$NetBSD: CHANGES-2019,v 1.937 2019/02/26 12:20:10 rin Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1623,3 +1623,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/thunderbird to 60.5.1 [ryoon 2019-02-26]
 	Updated mail/thunderbird-l10n to 60.5.1 [ryoon 2019-02-26]
 	Updated devel/git to 2.21.0 [adam 2019-02-26]
+	Updated www/firefox to 65.0.1nb1 [rin 2019-02-26]
