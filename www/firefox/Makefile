@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.359 2019/02/19 15:23:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.360 2019/02/26 12:14:12 rin Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		65.0
 MOZ_BRANCH_MINOR=	.1
+PKGREVISION=		1
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	${DISTNAME:S/.source//:S/b/beta/:S/esr//}
@@ -75,6 +76,17 @@ SUBST_VARS.sys-dic=	PREFIX
 
 post-extract:
 	mv ${WRKSRC}/gfx/ycbcr/yuv_row_arm.s ${WRKSRC}/gfx/ycbcr/yuv_row_arm.S
+# XXX Hack taken from lang/rust.
+# patch(1) in NetBSD does not handle .cargo-checksum.json like long width file.
+# Replace checksum fields for following patches:
+# patch-third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.1
+# patch-third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_other_mod.rs,v 1.1
+	${CP} ${WRKSRC}/third_party/rust/libc/.cargo-checksum.json \
+	      ${WRKSRC}/third_party/rust/libc/.cargo-checksum.json.orig
+	${CAT} ${WRKSRC}/third_party/rust/libc/.cargo-checksum.json.orig | \
+		${SED} -e 's/4d9f7091af8e166943ac6f42ce85558909e5b6e61325039bff7adfbcf4b90212/7f3da734d5e2e9426051da4f406e46d9e9bed43ed2d7d048e8afc8af7ed44795/' | \
+		${SED} -e 's/1cd66ed5967c788562d4ad626cfbeb1544f4b9267111de5f6790379b8327f28e/6ae549dd21581748b2f1d82880eaca3445c11e3354965e5b49b20342075a3e52/' \
+		> ${WRKSRC}/third_party/rust/libc/.cargo-checksum.json
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
