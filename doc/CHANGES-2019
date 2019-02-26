@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.930 2019/02/26 10:55:01 adam Exp $
+$NetBSD: CHANGES-2019,v 1.931 2019/02/26 11:24:24 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1616,3 +1616,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-isort to 4.3.9 [adam 2019-02-26]
 	Updated www/py-websocket-client to 0.55.0 [adam 2019-02-26]
 	Updated devel/py-flake8 to 3.7.7 [adam 2019-02-26]
+	Updated www/firefox60 to 60.5.2 [ryoon 2019-02-26]
