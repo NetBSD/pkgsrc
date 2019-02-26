@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2018/11/04 22:12:03 adam Exp $
+# $NetBSD: Makefile,v 1.9 2019/02/26 06:42:27 adam Exp $
 
-DISTNAME=	zstandard-0.10.2
+DISTNAME=	zstandard-0.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zstandard/}
