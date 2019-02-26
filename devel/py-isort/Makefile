@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2019/02/25 09:00:35 adam Exp $
+# $NetBSD: Makefile,v 1.7 2019/02/26 06:45:48 adam Exp $
 
-DISTNAME=	isort-4.3.6
+DISTNAME=	isort-4.3.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/isort/}
