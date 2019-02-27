@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2019/02/21 00:55:04 gdt Exp $
+# $NetBSD: Makefile,v 1.17 2019/02/27 14:29:58 gdt Exp $
 
+# I have an update to 6 ready, but it is on hold pending an assessment
+# of projects.h removal fallout - gdt.
 VERSION_BASE=	5.2.0
 VERSION_RC=	
 VERSION=	${VERSION_BASE}${VERSION_RC}
