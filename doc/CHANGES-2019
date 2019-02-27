@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.941 2019/02/27 06:25:46 martin Exp $
+$NetBSD: CHANGES-2019,v 1.942 2019/02/27 10:46:36 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1628,3 +1628,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/go-protobuf to 1.3.0 [he 2019-02-26]
 	Updated sysutils/arm-trusted-firmware-sun50i_a64 to 2.0.20190222 [martin 2019-02-27]
 	Updated sysutils/u-boot-pinebook to 2018.11rc3nb2 [martin 2019-02-27]
+	Updated lang/zig to 0.3.0.20190227 [maya 2019-02-27]
