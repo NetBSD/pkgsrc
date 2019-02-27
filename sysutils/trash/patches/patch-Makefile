@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2019/02/27 15:28:13 wiz Exp $
+
+Do not build i386 executable, fails on 10.14.
+
+--- Makefile.orig	2018-07-12 07:49:49.000000000 +0000
++++ Makefile
+@@ -10,7 +10,7 @@ trash: $(SOURCE_FILES)
+ 	@echo
+ 	@echo ---- Compiling:
+ 	@echo ======================================
+-	$(CC) -O2 -Wall -Wextra -Wpartial-availability -Wno-unguarded-availability -force_cpusubtype_ALL -mmacosx-version-min=10.7 -arch i386 -arch x86_64 -framework AppKit -framework ScriptingBridge -o $@ $(SOURCE_FILES)
++	$(CC) -O2 -Wall -Wextra -Wpartial-availability -Wno-unguarded-availability -force_cpusubtype_ALL -mmacosx-version-min=10.7 -arch x86_64 -framework AppKit -framework ScriptingBridge -o $@ $(SOURCE_FILES)
+ 
+ analyze:
+ 	@echo
