@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2018/03/02 16:14:46 joerg Exp $
-lib/httpd/mod_proxy_uwsgi.so
