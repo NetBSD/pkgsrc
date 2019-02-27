@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2019/02/24 21:41:11 mef Exp $
+# $NetBSD: Makefile,v 1.42 2019/02/27 00:35:25 gdt Exp $
 
 # 3.13.0.1 is missing *_firmware_burner, and it's not clear that is correct.
 DISTNAME=		uhd-3.11.1.0
@@ -21,7 +21,12 @@ PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-cheetah
 CMAKE_ARGS+=		-DRST2HTML_EXECUTABLE=${PREFIX}/bin/rst2html-${PYVERSSUFFIX}.py
 CMAKE_ARGS+=		-Wno-dev
 
-USE_LANGUAGES=		c c++
+# Upstream says C++11 is required, even though it is not documented.
+# It is documented that gcc 4.8 is required, when using gcc.
+# https://github.com/EttusResearch/uhd/issues/236
+USE_LANGUAGES=		c c++11
+# c++11
+GCC_REQD+=		4.8
 USE_TOOLS=		cmake pkg-config
 USE_CMAKE=		yes
 # extra pax_global_header exists, and to avoid that:
