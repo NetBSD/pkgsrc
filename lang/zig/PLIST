@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/02/17 12:33:40 maya Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/02/27 10:46:16 maya Exp $
 bin/zig
 lib/zig/include/__clang_cuda_builtin_vars.h
 lib/zig/include/__clang_cuda_cmath.h
@@ -130,6 +130,7 @@ lib/zig/std/buf_map.zig
 lib/zig/std/buf_set.zig
 lib/zig/std/buffer.zig
 lib/zig/std/build.zig
+lib/zig/std/build/fmt.zig
 lib/zig/std/c/darwin.zig
 lib/zig/std/c/freebsd.zig
 lib/zig/std/c/index.zig
@@ -291,6 +292,7 @@ lib/zig/std/os/windows/tls.zig
 lib/zig/std/os/windows/util.zig
 lib/zig/std/os/zen.zig
 lib/zig/std/pdb.zig
+lib/zig/std/priority_queue.zig
 lib/zig/std/rand/index.zig
 lib/zig/std/rand/ziggurat.zig
 lib/zig/std/segmented_list.zig
