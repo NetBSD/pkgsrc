@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2019/02/27 15:28:13 wiz Exp $
+bin/trash
+man/man1/trash.1
