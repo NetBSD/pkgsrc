@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.800 2019/02/23 06:20:52 martin Exp $
+# $NetBSD: Makefile,v 1.801 2019/02/27 15:28:27 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -612,6 +612,7 @@ SUBDIR+=	torsmo
 SUBDIR+=	toshutils
 SUBDIR+=	tpb
 SUBDIR+=	tphdisk
+SUBDIR+=	trash
 SUBDIR+=	tree
 SUBDIR+=	ts
 SUBDIR+=	tsm8
