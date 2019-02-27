@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2019/01/20 14:03:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2019/02/27 16:33:50 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -8,6 +8,7 @@ ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/ext/rugged/extconf.rb
 ${GEM_LIBDIR}/ext/rugged/rugged.c
 ${GEM_LIBDIR}/ext/rugged/rugged.h
+${GEM_LIBDIR}/ext/rugged/rugged_allocator.c
 ${GEM_LIBDIR}/ext/rugged/rugged_backend.c
 ${GEM_LIBDIR}/ext/rugged/rugged_blame.c
 ${GEM_LIBDIR}/ext/rugged/rugged_blob.c
@@ -65,6 +66,8 @@ ${GEM_LIBDIR}/vendor/libgit2/AUTHORS
 ${GEM_LIBDIR}/vendor/libgit2/CMakeLists.txt
 ${GEM_LIBDIR}/vendor/libgit2/COPYING
 ${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/AddCFlagIfSupported.cmake
+${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/CheckPrototypeDefinition.c.in
+${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/CheckPrototypeDefinition.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/EnableWarnings.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindCoreFoundation.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindGSSAPI.cmake
@@ -76,10 +79,11 @@ ${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindStatNsec.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindmbedTLS.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/IdeSplitSources.cmake
 ${GEM_LIBDIR}/vendor/libgit2/deps/http-parser/CMakeLists.txt
-${GEM_LIBDIR}/vendor/libgit2/deps/http-parser/LICENSE-MIT
+${GEM_LIBDIR}/vendor/libgit2/deps/http-parser/COPYING
 ${GEM_LIBDIR}/vendor/libgit2/deps/http-parser/http_parser.c
 ${GEM_LIBDIR}/vendor/libgit2/deps/http-parser/http_parser.h
 ${GEM_LIBDIR}/vendor/libgit2/deps/regex/CMakeLists.txt
+${GEM_LIBDIR}/vendor/libgit2/deps/regex/COPYING
 ${GEM_LIBDIR}/vendor/libgit2/deps/regex/config.h
 ${GEM_LIBDIR}/vendor/libgit2/deps/regex/regcomp.c
 ${GEM_LIBDIR}/vendor/libgit2/deps/regex/regex.c
@@ -88,11 +92,14 @@ ${GEM_LIBDIR}/vendor/libgit2/deps/regex/regex_internal.c
 ${GEM_LIBDIR}/vendor/libgit2/deps/regex/regex_internal.h
 ${GEM_LIBDIR}/vendor/libgit2/deps/regex/regexec.c
 ${GEM_LIBDIR}/vendor/libgit2/deps/winhttp/CMakeLists.txt
+${GEM_LIBDIR}/vendor/libgit2/deps/winhttp/COPYING.GPL
+${GEM_LIBDIR}/vendor/libgit2/deps/winhttp/COPYING.LGPL
 ${GEM_LIBDIR}/vendor/libgit2/deps/winhttp/urlmon.h
 ${GEM_LIBDIR}/vendor/libgit2/deps/winhttp/winhttp.def
 ${GEM_LIBDIR}/vendor/libgit2/deps/winhttp/winhttp.h
 ${GEM_LIBDIR}/vendor/libgit2/deps/winhttp/winhttp64.def
 ${GEM_LIBDIR}/vendor/libgit2/deps/zlib/CMakeLists.txt
+${GEM_LIBDIR}/vendor/libgit2/deps/zlib/COPYING
 ${GEM_LIBDIR}/vendor/libgit2/deps/zlib/adler32.c
 ${GEM_LIBDIR}/vendor/libgit2/deps/zlib/crc32.c
 ${GEM_LIBDIR}/vendor/libgit2/deps/zlib/crc32.h
@@ -115,6 +122,7 @@ ${GEM_LIBDIR}/vendor/libgit2/deps/zlib/zutil.c
 ${GEM_LIBDIR}/vendor/libgit2/deps/zlib/zutil.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/annotated_commit.h
+${GEM_LIBDIR}/vendor/libgit2/include/git2/apply.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/attr.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/blame.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/blob.h
@@ -127,6 +135,7 @@ ${GEM_LIBDIR}/vendor/libgit2/include/git2/commit.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/common.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/config.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/cred_helpers.h
+${GEM_LIBDIR}/vendor/libgit2/include/git2/deprecated.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/describe.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/diff.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/errors.h
@@ -238,9 +247,12 @@ ${GEM_LIBDIR}/vendor/libgit2/src/commit_list.h
 ${GEM_LIBDIR}/vendor/libgit2/src/common.h
 ${GEM_LIBDIR}/vendor/libgit2/src/config.c
 ${GEM_LIBDIR}/vendor/libgit2/src/config.h
+${GEM_LIBDIR}/vendor/libgit2/src/config_backend.h
 ${GEM_LIBDIR}/vendor/libgit2/src/config_cache.c
+${GEM_LIBDIR}/vendor/libgit2/src/config_entries.c
+${GEM_LIBDIR}/vendor/libgit2/src/config_entries.h
 ${GEM_LIBDIR}/vendor/libgit2/src/config_file.c
-${GEM_LIBDIR}/vendor/libgit2/src/config_file.h
+${GEM_LIBDIR}/vendor/libgit2/src/config_mem.c
 ${GEM_LIBDIR}/vendor/libgit2/src/config_parse.c
 ${GEM_LIBDIR}/vendor/libgit2/src/config_parse.h
 ${GEM_LIBDIR}/vendor/libgit2/src/crlf.c
@@ -368,6 +380,8 @@ ${GEM_LIBDIR}/vendor/libgit2/src/proxy.c
 ${GEM_LIBDIR}/vendor/libgit2/src/proxy.h
 ${GEM_LIBDIR}/vendor/libgit2/src/push.c
 ${GEM_LIBDIR}/vendor/libgit2/src/push.h
+${GEM_LIBDIR}/vendor/libgit2/src/reader.c
+${GEM_LIBDIR}/vendor/libgit2/src/reader.h
 ${GEM_LIBDIR}/vendor/libgit2/src/rebase.c
 ${GEM_LIBDIR}/vendor/libgit2/src/refdb.c
 ${GEM_LIBDIR}/vendor/libgit2/src/refdb.h
@@ -402,12 +416,12 @@ ${GEM_LIBDIR}/vendor/libgit2/src/status.h
 ${GEM_LIBDIR}/vendor/libgit2/src/stdalloc.c
 ${GEM_LIBDIR}/vendor/libgit2/src/stdalloc.h
 ${GEM_LIBDIR}/vendor/libgit2/src/stream.h
-${GEM_LIBDIR}/vendor/libgit2/src/streams/curl.c
-${GEM_LIBDIR}/vendor/libgit2/src/streams/curl.h
 ${GEM_LIBDIR}/vendor/libgit2/src/streams/mbedtls.c
 ${GEM_LIBDIR}/vendor/libgit2/src/streams/mbedtls.h
 ${GEM_LIBDIR}/vendor/libgit2/src/streams/openssl.c
 ${GEM_LIBDIR}/vendor/libgit2/src/streams/openssl.h
+${GEM_LIBDIR}/vendor/libgit2/src/streams/registry.c
+${GEM_LIBDIR}/vendor/libgit2/src/streams/registry.h
 ${GEM_LIBDIR}/vendor/libgit2/src/streams/socket.c
 ${GEM_LIBDIR}/vendor/libgit2/src/streams/socket.h
 ${GEM_LIBDIR}/vendor/libgit2/src/streams/stransport.c
