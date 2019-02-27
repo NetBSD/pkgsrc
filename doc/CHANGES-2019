@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.945 2019/02/27 13:35:23 adam Exp $
+$NetBSD: CHANGES-2019,v 1.946 2019/02/27 15:28:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1634,3 +1634,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-uwsgi to 2.0.18 [adam 2019-02-27]
 	Removed www/ap-uwsgi successor www/apache24 [adam 2019-02-27]
 	Updated security/py-keyring to 18.0.0 [adam 2019-02-27]
+	Added sysutils/trash version 0.9.2 [wiz 2019-02-27]
