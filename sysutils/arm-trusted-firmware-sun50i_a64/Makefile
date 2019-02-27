@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2019/02/23 06:24:37 martin Exp $
+# $NetBSD: Makefile,v 1.3 2019/02/27 06:23:39 martin Exp $
 
-VERSION=	2.0
+VERSION=	2.0.20190222	# v2.0 is too old
 GITHUB_PROJECT=	arm-trusted-firmware
-GITHUB_TAG=	v${VERSION}
+# GITHUB_TAG=	v${VERSION}	# only for real releases
+GITHUB_TAG=	ab3d22473df279c61ed4d4873d26b072dcf887e8
 
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 PLATFORM=	sun50i_a64
@@ -21,6 +22,7 @@ USE_TOOLS+=	gmake
 MAKE_FLAGS+=	CROSS_COMPILE=${PREFIX}/cross-aarch64-none-elf/bin/aarch64-none-elf-
 MAKE_FLAGS+=	PLAT=${PLATFORM}
 MAKE_FLAGS+=	DEBUG=1
+# MAKE_FLAGS+=	V=1
 MAKE_FLAGS+=	BUILD_STRING=${GITHUB_TAG}
 BUILD_TARGET=	bl31
 
@@ -32,10 +34,8 @@ do-install:
 	    ${DESTDIR}${PREFIX}/share/arm-trusted-firmware/${PLATFORM}/
 
 
-# XXX kludge. pkgsrc passes down run path flags in LDFLAGS but the
-# cross ld(1) doesn't understand -R. If we pass down -L instead it
-# will be safely ignored.
-COMPILER_RPATH_FLAG=-L
-
+# XXX kludge. pkgsrc passes down run path flags in LDFLAGS assuming
+# gcc is used for linking, but here we call the linker directly.
+COMPILER_RPATH_FLAG=-R
 
 .include "../../mk/bsd.pkg.mk"
