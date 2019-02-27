@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/02/23 06:20:12 martin Exp $
+$NetBSD: distinfo,v 1.2 2019/02/27 06:23:39 martin Exp $
 
-SHA1 (arm-trusted-firmware-2.0.zip) = d789e7aac0e987d8524a11587cc598bf5d894581
-RMD160 (arm-trusted-firmware-2.0.zip) = a7a49da9b0e27c45df867ea1de4809cb89d9b8cc
-SHA512 (arm-trusted-firmware-2.0.zip) = 39180d12be7532b742949f162759793e97c0a6ac835d66aaf857bd3c1d9c0ab10b7ccd5e6a47831ad909a92b4727e181c82a74c90b5d941e469f3a5cf66b0e7c
-Size (arm-trusted-firmware-2.0.zip) = 3949049 bytes
+SHA1 (arm-trusted-firmware-2.0.20190222-ab3d22473df279c61ed4d4873d26b072dcf887e8.zip) = 1f69ac8f78d69d90b8058aab57e8ac353cf511c4
+RMD160 (arm-trusted-firmware-2.0.20190222-ab3d22473df279c61ed4d4873d26b072dcf887e8.zip) = 6bd065014ddbd12a17b3ab261f81a3fa3710ea96
+SHA512 (arm-trusted-firmware-2.0.20190222-ab3d22473df279c61ed4d4873d26b072dcf887e8.zip) = 6f0a9ed7d1eb694015507dc3b618dcc017192f1963dfdd4fb00ba1a18b42539be29b10513bfb7a8535e77b631ccdaa10944900bd984617f19bef0845a61e6d5d
+Size (arm-trusted-firmware-2.0.20190222-ab3d22473df279c61ed4d4873d26b072dcf887e8.zip) = 4924422 bytes
