@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.943 2019/02/27 12:07:59 adam Exp $
+$NetBSD: CHANGES-2019,v 1.944 2019/02/27 12:17:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1631,3 +1631,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/zig to 0.3.0.20190227 [maya 2019-02-27]
 	Updated fonts/py-fonttools to 3.38.0 [adam 2019-02-27]
 	Updated www/py-test-django to 3.4.8 [adam 2019-02-27]
+	Updated www/py-uwsgi to 2.0.18 [adam 2019-02-27]
+	Removed www/ap-uwsgi successor www/apache24 [adam 2019-02-27]
