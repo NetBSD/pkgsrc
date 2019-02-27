@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2017/10/18 07:22:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/02/27 13:27:22 adam Exp $
 bin/keyring-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/keyring/__init__.py
@@ -31,12 +30,18 @@ ${PYSITELIB}/keyring/backends/_OS_X_API.pyo
 ${PYSITELIB}/keyring/backends/__init__.py
 ${PYSITELIB}/keyring/backends/__init__.pyc
 ${PYSITELIB}/keyring/backends/__init__.pyo
+${PYSITELIB}/keyring/backends/chainer.py
+${PYSITELIB}/keyring/backends/chainer.pyc
+${PYSITELIB}/keyring/backends/chainer.pyo
 ${PYSITELIB}/keyring/backends/fail.py
 ${PYSITELIB}/keyring/backends/fail.pyc
 ${PYSITELIB}/keyring/backends/fail.pyo
 ${PYSITELIB}/keyring/backends/kwallet.py
 ${PYSITELIB}/keyring/backends/kwallet.pyc
 ${PYSITELIB}/keyring/backends/kwallet.pyo
+${PYSITELIB}/keyring/backends/null.py
+${PYSITELIB}/keyring/backends/null.pyc
+${PYSITELIB}/keyring/backends/null.pyo
 ${PYSITELIB}/keyring/cli.py
 ${PYSITELIB}/keyring/cli.pyc
 ${PYSITELIB}/keyring/cli.pyo
@@ -52,15 +57,15 @@ ${PYSITELIB}/keyring/devpi_client.pyo
 ${PYSITELIB}/keyring/errors.py
 ${PYSITELIB}/keyring/errors.pyc
 ${PYSITELIB}/keyring/errors.pyo
-${PYSITELIB}/keyring/getpassbackend.py
-${PYSITELIB}/keyring/getpassbackend.pyc
-${PYSITELIB}/keyring/getpassbackend.pyo
 ${PYSITELIB}/keyring/http.py
 ${PYSITELIB}/keyring/http.pyc
 ${PYSITELIB}/keyring/http.pyo
 ${PYSITELIB}/keyring/py27compat.py
 ${PYSITELIB}/keyring/py27compat.pyc
 ${PYSITELIB}/keyring/py27compat.pyo
+${PYSITELIB}/keyring/py32compat.py
+${PYSITELIB}/keyring/py32compat.pyc
+${PYSITELIB}/keyring/py32compat.pyo
 ${PYSITELIB}/keyring/py33compat.py
 ${PYSITELIB}/keyring/py33compat.pyc
 ${PYSITELIB}/keyring/py33compat.pyo
@@ -79,6 +84,9 @@ ${PYSITELIB}/keyring/tests/backends/test_SecretService.pyo
 ${PYSITELIB}/keyring/tests/backends/test_Windows.py
 ${PYSITELIB}/keyring/tests/backends/test_Windows.pyc
 ${PYSITELIB}/keyring/tests/backends/test_Windows.pyo
+${PYSITELIB}/keyring/tests/backends/test_chainer.py
+${PYSITELIB}/keyring/tests/backends/test_chainer.pyc
+${PYSITELIB}/keyring/tests/backends/test_chainer.pyo
 ${PYSITELIB}/keyring/tests/backends/test_kwallet.py
 ${PYSITELIB}/keyring/tests/backends/test_kwallet.pyc
 ${PYSITELIB}/keyring/tests/backends/test_kwallet.pyo
@@ -91,9 +99,6 @@ ${PYSITELIB}/keyring/tests/util.pyo
 ${PYSITELIB}/keyring/util/__init__.py
 ${PYSITELIB}/keyring/util/__init__.pyc
 ${PYSITELIB}/keyring/util/__init__.pyo
-${PYSITELIB}/keyring/util/escape.py
-${PYSITELIB}/keyring/util/escape.pyc
-${PYSITELIB}/keyring/util/escape.pyo
 ${PYSITELIB}/keyring/util/platform_.py
 ${PYSITELIB}/keyring/util/platform_.pyc
 ${PYSITELIB}/keyring/util/platform_.pyo
