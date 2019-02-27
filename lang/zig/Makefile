@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/02/17 12:33:40 maya Exp $
+# $NetBSD: Makefile,v 1.2 2019/02/27 10:46:16 maya Exp $
 
-DISTNAME=	zig-0.3.0+8d2a9029
-PKGNAME=	zig-0.3.0.20190217
+DISTNAME=	zig-0.3.0+c59ce046
+PKGNAME=	zig-0.3.0.20190227
 CATEGORIES=	lang
 MASTER_SITES=	https://ziglang.org/builds/
 EXTRACT_SUFX=	.tar.xz
@@ -17,13 +17,8 @@ USE_LANGUAGES=	c c++
 CHECK_PORTABILITY_SKIP+=	ci/azure/macos_script
 BUILDLINK_TRANSFORM+=		rm:-Werror
 
-post-patch:
-	${CP} ${FILESDIR}/std_c_netbsd.zig ${WRKSRC}/std/c/netbsd.zig
-	${MKDIR} ${WRKSRC}/std/os/netbsd
-	${CP} ${FILESDIR}/std_os_netbsd_index.zig ${WRKSRC}/std/os/netbsd/index.zig
-	${CP} ${FILESDIR}/std_os_netbsd_errno.zig ${WRKSRC}/std/os/netbsd/errno.zig
-
 .include "../../lang/clang/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"
-.include "../../devel/lld/buildlink3.mk"
+# Using builtin lld
+#.include "../../devel/lld/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
