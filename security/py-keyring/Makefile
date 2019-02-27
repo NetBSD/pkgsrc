@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2017/12/21 14:06:32 adam Exp $
+# $NetBSD: Makefile,v 1.22 2019/02/27 13:27:22 adam Exp $
 
-DISTNAME=	keyring-10.5.1
+DISTNAME=	keyring-18.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/keyring/}
@@ -11,15 +11,17 @@ COMMENT=	Store and access your passwords safely
 LICENSE=	python-software-foundation
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=1.15.0:../../devel/py-setuptools_scm
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test>=2.8:../../devel/py-test
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-sugar-[0-9]*:../../devel/py-test-sugar
+DEPENDS+=	${PYPKGPREFIX}-entrypoints-[0-9]*:../../devel/py-entrypoints
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.5:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
 
 USE_LANGUAGES=	# none
 
 REPLACE_PYTHON+=	keyring/cli.py
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} keyring keyring-${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} keyring keyring-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
