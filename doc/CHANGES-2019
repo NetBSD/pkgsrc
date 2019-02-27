@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.947 2019/02/27 16:33:07 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.948 2019/02/27 16:34:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1636,3 +1636,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/py-keyring to 18.0.0 [adam 2019-02-27]
 	Added sysutils/trash version 0.9.2 [wiz 2019-02-27]
 	Updated x11/modular-xorg-server to 1.20.4 [wiz 2019-02-27]
+	Updated devel/ruby-rugged to 0.28.0 [taca 2019-02-27]
