@@ -1,25 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/02/17 12:33:40 maya Exp $
+$NetBSD: distinfo,v 1.2 2019/02/27 10:46:16 maya Exp $
 
-SHA1 (zig-0.3.0+8d2a9029.tar.xz) = feb0fa613fe2618f3821c6da34a22f922eab320e
-RMD160 (zig-0.3.0+8d2a9029.tar.xz) = 7389eba74fc0d4e22c62e6bb66d94124e96539f4
-SHA512 (zig-0.3.0+8d2a9029.tar.xz) = 036f0499bbff5f0e55c27c151a1b0e028f895cd52683c664e227ff9875cf5989dbb6d0ea754744a47715a601cb9a9b06912bca911dc02e4195944f386e331995
-Size (zig-0.3.0+8d2a9029.tar.xz) = 2407768 bytes
-SHA1 (patch-CMakeLists.txt) = 550474426ed0db48da88331aab746b2c445010b9
-SHA1 (patch-src-self-hosted_libc__installation.zig) = c38b2b0f5dfe879c660f1f148a0a9f765f0faa3f
-SHA1 (patch-src_analyze.cpp) = 217f0f97e8f87cbc82800926b333bdd8b464a037
-SHA1 (patch-src_codegen.cpp) = a931d048856fdd88bc874d488d06546d8c0b9ed5
-SHA1 (patch-src_link.cpp) = 86c03aa8b51c3d2e3db2e894819ad9be063d57bc
-SHA1 (patch-src_os.cpp) = 6cf8da29be026f2f27284366e22861a87e26941e
-SHA1 (patch-src_os.hpp) = 0b79d1ec64b3d7c38a9b2a11ec109c0221e59871
-SHA1 (patch-src_target.cpp) = ff482758b378e0be8060d3b61e94420609de41ac
-SHA1 (patch-std_c_index.zig) = f9de821e37c0e8ae0393c6ac1570c74c4ac6faac
-SHA1 (patch-std_debug_index.zig) = 0abd1b5c7cc6bdfed7afc2cf6b30fa45856af566
-SHA1 (patch-std_event_fs.zig) = 2e00bc3091414620813ef980ce0e4ffd15fd19c3
-SHA1 (patch-std_event_loop.zig) = 93cb9faddf3235d1a521e6691231bbca0d9a9c47
-SHA1 (patch-std_heap.zig) = 3fc05b17612b7d54e1bdfdfcaecff87756bde74d
-SHA1 (patch-std_os_file.zig) = e24a5bc859dfe570ee1113670877384eb2826225
-SHA1 (patch-std_os_get__app__data__dir.zig) = 0da532e6d1d6d8c832c3b7e5f996df7923079f28
-SHA1 (patch-std_os_get__user__id.zig) = 432dc624afca19932138bf4a2c9234749dd48423
-SHA1 (patch-std_os_index.zig) = 84eb9d8ec5c85865a8ad86c0e1891866bfbe4173
-SHA1 (patch-std_os_path.zig) = 63616b927b611f0e26e157e4c51630e7155977ba
-SHA1 (patch-std_os_time.zig) = c13daf2e8e0f5a6c1a68a9cabe098de673df21a3
+SHA1 (zig-0.3.0+c59ce046.tar.xz) = c1a5a262fef10ed12fec379ef209f55bfbd8bde7
+RMD160 (zig-0.3.0+c59ce046.tar.xz) = cc2dbc20e860484eab291a722715db017c49a8be
+SHA512 (zig-0.3.0+c59ce046.tar.xz) = 285d14ac073b9b054170b9e58cd532d4e56741c3bf25e86615bacf333e5050b3f9f46b967e7742c61e79fe867ef2e7466445450acd8da78f522c1c59b1966607
+Size (zig-0.3.0+c59ce046.tar.xz) = 2433064 bytes
