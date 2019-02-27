@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/06/24 11:19:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/02/27 12:07:14 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -11,9 +11,6 @@ ${PYSITELIB}/pytest_django/__init__.pyo
 ${PYSITELIB}/pytest_django/compat.py
 ${PYSITELIB}/pytest_django/compat.pyc
 ${PYSITELIB}/pytest_django/compat.pyo
-${PYSITELIB}/pytest_django/db_reuse.py
-${PYSITELIB}/pytest_django/db_reuse.pyc
-${PYSITELIB}/pytest_django/db_reuse.pyo
 ${PYSITELIB}/pytest_django/django_compat.py
 ${PYSITELIB}/pytest_django/django_compat.pyc
 ${PYSITELIB}/pytest_django/django_compat.pyo
