@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1366 2019/02/24 16:12:36 taca Exp $
+# $NetBSD: Makefile,v 1.1367 2019/02/27 12:15:54 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -19,7 +19,6 @@ SUBDIR+=	ap-authnz-crowd
 SUBDIR+=	ap-mono
 SUBDIR+=	ap-php
 SUBDIR+=	ap-rpaf
-SUBDIR+=	ap-uwsgi
 SUBDIR+=	ap2-auth-mellon
 SUBDIR+=	ap2-encoding
 SUBDIR+=	ap2-fcgid

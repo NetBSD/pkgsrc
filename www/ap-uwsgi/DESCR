@@ -1,2 +1,0 @@
-This package provides mod_proxy_uwsgi. It provides uwsgi-transport
-support for the Apache server.
