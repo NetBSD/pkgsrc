@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2018/02/22 10:03:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2019/02/28 13:49:10 adam Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/zmq/__init__.py
 ${PYSITELIB}/zmq/__init__.pyc
@@ -67,6 +67,7 @@ ${PYSITELIB}/zmq/backend/cython/__init__.pyc
 ${PYSITELIB}/zmq/backend/cython/__init__.pyo
 ${PYSITELIB}/zmq/backend/cython/_device.so
 ${PYSITELIB}/zmq/backend/cython/_poll.so
+${PYSITELIB}/zmq/backend/cython/_proxy_steerable.so
 ${PYSITELIB}/zmq/backend/cython/_version.so
 ${PYSITELIB}/zmq/backend/cython/checkrc.pxd
 ${PYSITELIB}/zmq/backend/cython/constant_enums.pxi
@@ -104,6 +105,9 @@ ${PYSITELIB}/zmq/devices/monitoredqueuedevice.pyo
 ${PYSITELIB}/zmq/devices/proxydevice.py
 ${PYSITELIB}/zmq/devices/proxydevice.pyc
 ${PYSITELIB}/zmq/devices/proxydevice.pyo
+${PYSITELIB}/zmq/devices/proxysteerabledevice.py
+${PYSITELIB}/zmq/devices/proxysteerabledevice.pyc
+${PYSITELIB}/zmq/devices/proxysteerabledevice.pyo
 ${PYSITELIB}/zmq/error.py
 ${PYSITELIB}/zmq/error.pyc
 ${PYSITELIB}/zmq/error.pyo
@@ -296,6 +300,9 @@ ${PYSITELIB}/zmq/tests/test_pair.pyo
 ${PYSITELIB}/zmq/tests/test_poll.py
 ${PYSITELIB}/zmq/tests/test_poll.pyc
 ${PYSITELIB}/zmq/tests/test_poll.pyo
+${PYSITELIB}/zmq/tests/test_proxy_steerable.py
+${PYSITELIB}/zmq/tests/test_proxy_steerable.pyc
+${PYSITELIB}/zmq/tests/test_proxy_steerable.pyo
 ${PYSITELIB}/zmq/tests/test_pubsub.py
 ${PYSITELIB}/zmq/tests/test_pubsub.pyc
 ${PYSITELIB}/zmq/tests/test_pubsub.pyo
