@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2019/02/03 23:10:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.33 2019/02/28 22:43:29 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -110,13 +110,15 @@ share/mame/hash/apfm1000.xml
 share/mame/hash/apogee.xml
 share/mame/hash/apollo_ctape.xml
 share/mame/hash/apple1.xml
-share/mame/hash/apple2.xml
 share/mame/hash/apple2_cass.xml
+share/mame/hash/apple2_flop_clcracked.xml
+share/mame/hash/apple2_flop_misc.xml
 share/mame/hash/apple2_flop_orig.xml
 share/mame/hash/apple2gs.xml
 share/mame/hash/apple3.xml
 share/mame/hash/apricot_flop.xml
 share/mame/hash/aquarius.xml
+share/mame/hash/arb.xml
 share/mame/hash/arcadia.xml
 share/mame/hash/archimedes.xml
 share/mame/hash/astrocde.xml
@@ -154,6 +156,7 @@ share/mame/hash/bx256hp_flop.xml
 share/mame/hash/c128_cart.xml
 share/mame/hash/c128_flop.xml
 share/mame/hash/c128_rom.xml
+share/mame/hash/c2color_cart.xml
 share/mame/hash/c64_cart.xml
 share/mame/hash/c64_cass.xml
 share/mame/hash/c64_flop.xml
@@ -202,9 +205,12 @@ share/mame/hash/e01_flop.xml
 share/mame/hash/ec1841.xml
 share/mame/hash/einstein.xml
 share/mame/hash/ekara_japan.xml
+share/mame/hash/ekara_japan_a.xml
+share/mame/hash/ekara_japan_bh.xml
 share/mame/hash/ekara_japan_d.xml
 share/mame/hash/ekara_japan_en.xml
 share/mame/hash/ekara_japan_g.xml
+share/mame/hash/ekara_japan_gk.xml
 share/mame/hash/ekara_japan_m.xml
 share/mame/hash/ekara_japan_p.xml
 share/mame/hash/ekara_japan_s.xml
@@ -224,6 +230,7 @@ share/mame/hash/ews286_flop.xml
 share/mame/hash/exl100.xml
 share/mame/hash/famicom_cass.xml
 share/mame/hash/famicom_flop.xml
+share/mame/hash/fidel_sc6.xml
 share/mame/hash/fidel_scc.xml
 share/mame/hash/fm77av.xml
 share/mame/hash/fm7_cass.xml
@@ -272,6 +279,8 @@ share/mame/hash/ibm5170_cdrom.xml
 share/mame/hash/ibm6580.xml
 share/mame/hash/ibmpcjr_cart.xml
 share/mame/hash/ibmpcjr_flop.xml
+share/mame/hash/icanguit.xml
+share/mame/hash/intellect02.xml
 share/mame/hash/interact.xml
 share/mame/hash/interpro.xml
 share/mame/hash/intv.hsi
@@ -281,9 +290,13 @@ share/mame/hash/iq128.xml
 share/mame/hash/iq151_cart.xml
 share/mame/hash/iq151_flop.xml
 share/mame/hash/jaguar.xml
+share/mame/hash/jakks_gamekey_dp.xml
 share/mame/hash/jakks_gamekey_dy.xml
+share/mame/hash/jakks_gamekey_mv.xml
 share/mame/hash/jakks_gamekey_nk.xml
+share/mame/hash/jakks_gamekey_nm.xml
 share/mame/hash/jakks_gamekey_sw.xml
+share/mame/hash/jpopira_jp.xml
 share/mame/hash/juicebox.xml
 share/mame/hash/jupace_cass.xml
 share/mame/hash/k28m2.xml
@@ -295,6 +308,8 @@ share/mame/hash/kim1_cass.xml
 share/mame/hash/korvet_flop.xml
 share/mame/hash/lantutor.xml
 share/mame/hash/laser2001_cart.xml
+share/mame/hash/leapfrog_leappad_cart.xml
+share/mame/hash/leapfrog_mfleappad_cart.xml
 share/mame/hash/leapster.xml
 share/mame/hash/lisa.xml
 share/mame/hash/lisa2.xml
@@ -402,6 +417,7 @@ share/mame/hash/pcecd.xml
 share/mame/hash/pcfx.xml
 share/mame/hash/pcw.xml
 share/mame/hash/pcw16.xml
+share/mame/hash/pcx_flop.xml
 share/mame/hash/pecom_cass.xml
 share/mame/hash/pegasus_cart.xml
 share/mame/hash/pencil2.xml
@@ -464,6 +480,7 @@ share/mame/hash/sawatte.xml
 share/mame/hash/sc3000_cart.xml
 share/mame/hash/sc3000_cass.xml
 share/mame/hash/scv.xml
+share/mame/hash/sega_beena_cart.xml
 share/mame/hash/segacd.xml
 share/mame/hash/sf7000.xml
 share/mame/hash/sg1000.xml
