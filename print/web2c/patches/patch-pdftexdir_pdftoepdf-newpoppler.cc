@@ -1,4 +1,4 @@
-$NetBSD: patch-pdftexdir_pdftoepdf-newpoppler.cc,v 1.3 2018/12/11 13:59:04 ryoon Exp $
+$NetBSD: patch-pdftexdir_pdftoepdf-newpoppler.cc,v 1.4 2019/02/28 19:34:50 markd Exp $
 
 --- pdftexdir/pdftoepdf-newpoppler.cc.orig	2018-04-04 04:08:11.000000000 +0000
 +++ pdftexdir/pdftoepdf-newpoppler.cc
@@ -119,7 +119,7 @@ $NetBSD: patch-pdftexdir_pdftoepdf-newpoppler.cc,v 1.3 2018/12/11 13:59:04 ryoon
          pdftex_fail("PDF inclusion: unknown value of pagebox spec (%i)",
                      (int) pagebox_spec);
 -    return page->getMediaBox(); // to make the compiler happy
-+    ret = page->getMediaBox(); // to make the compiler happy
++    // ret = page->getMediaBox(); // to make the compiler happy
 +
 +    return const_cast<PDFRectangle*>(ret);
  }
