@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.952 2019/02/28 09:06:47 adam Exp $
+$NetBSD: CHANGES-2019,v 1.953 2019/02/28 09:22:11 he Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1644,3 +1644,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-cython to 0.29.6 [adam 2019-02-28]
 	Updated security/py-cryptography_vectors to 2.6.1 [adam 2019-02-28]
 	Updated security/py-cryptography to 2.6.1 [adam 2019-02-28]
+	Updated sysutils/zabbix to 4.0.5 [he 2019-02-28]
