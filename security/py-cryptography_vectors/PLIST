@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2019/01/23 12:21:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2019/02/28 09:06:08 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -98,7 +98,19 @@ ${PYSITELIB}/cryptography_vectors/asymmetric/ECDSA/FIPS_186-3/SigGen.rsp
 ${PYSITELIB}/cryptography_vectors/asymmetric/ECDSA/FIPS_186-3/SigGen.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/ECDSA/FIPS_186-3/SigVer.rsp
 ${PYSITELIB}/cryptography_vectors/asymmetric/ECDSA/SECP256K1/SigGen.txt
+${PYSITELIB}/cryptography_vectors/asymmetric/Ed25519/ed25519-pkcs8-enc.der
+${PYSITELIB}/cryptography_vectors/asymmetric/Ed25519/ed25519-pkcs8-enc.pem
+${PYSITELIB}/cryptography_vectors/asymmetric/Ed25519/ed25519-pkcs8.der
+${PYSITELIB}/cryptography_vectors/asymmetric/Ed25519/ed25519-pkcs8.pem
+${PYSITELIB}/cryptography_vectors/asymmetric/Ed25519/ed25519-pub.der
+${PYSITELIB}/cryptography_vectors/asymmetric/Ed25519/ed25519-pub.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/Ed25519/sign.input
+${PYSITELIB}/cryptography_vectors/asymmetric/Ed448/ed448-pkcs8-enc.der
+${PYSITELIB}/cryptography_vectors/asymmetric/Ed448/ed448-pkcs8-enc.pem
+${PYSITELIB}/cryptography_vectors/asymmetric/Ed448/ed448-pkcs8.der
+${PYSITELIB}/cryptography_vectors/asymmetric/Ed448/ed448-pkcs8.pem
+${PYSITELIB}/cryptography_vectors/asymmetric/Ed448/ed448-pub.der
+${PYSITELIB}/cryptography_vectors/asymmetric/Ed448/ed448-pub.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/Ed448/rfc8032.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/PEM_Serialization/README.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/PEM_Serialization/dsa_private_key.pem
