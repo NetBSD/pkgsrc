@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/11/26 09:00:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/02/28 09:17:41 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -52,6 +52,9 @@ ${PYSITELIB}/astroid/brain/brain_gi.pyo
 ${PYSITELIB}/astroid/brain/brain_hashlib.py
 ${PYSITELIB}/astroid/brain/brain_hashlib.pyc
 ${PYSITELIB}/astroid/brain/brain_hashlib.pyo
+${PYSITELIB}/astroid/brain/brain_http.py
+${PYSITELIB}/astroid/brain/brain_http.pyc
+${PYSITELIB}/astroid/brain/brain_http.pyo
 ${PYSITELIB}/astroid/brain/brain_io.py
 ${PYSITELIB}/astroid/brain/brain_io.pyc
 ${PYSITELIB}/astroid/brain/brain_io.pyo
