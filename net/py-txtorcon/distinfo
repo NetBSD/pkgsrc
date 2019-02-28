@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/10/23 03:17:22 riastradh Exp $
+$NetBSD: distinfo,v 1.2 2019/02/28 06:31:57 wiz Exp $
 
-SHA1 (txtorcon-18.3.0.tar.gz) = 58b409aa442202675fd9619f82aeae2086356d0e
-RMD160 (txtorcon-18.3.0.tar.gz) = fcda362f665b2c889bc5d73c7d8c6269566016de
-SHA512 (txtorcon-18.3.0.tar.gz) = 937423c05059b8c8847f12275b4b22cc4982cd32710fa50a0893b180a55716547f6ae37f38c46cbe62513b0463360900a1202fc3e5189cf023abcd637cb5022e
-Size (txtorcon-18.3.0.tar.gz) = 385335 bytes
+SHA1 (txtorcon-19.0.0.tar.gz) = a4cdef41e60e065ee226a095d6775c5d11aba871
+RMD160 (txtorcon-19.0.0.tar.gz) = 6b1fafc75efc2f3e3f43feb9371a78cc56b4225f
+SHA512 (txtorcon-19.0.0.tar.gz) = 5eda79379b2a0adf20a4a1515519ba651e759014073a8cc78587d5d796ce2a60ccf87e49239991a48922365fb43449519659ce18679c0dad4a109f44dd6be64c
+Size (txtorcon-19.0.0.tar.gz) = 387177 bytes
