@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/10/23 01:42:34 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2019/02/28 06:22:28 wiz Exp $
 
-DISTNAME=	stem-1.7.0
+DISTNAME=	stem-1.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/stem/}
