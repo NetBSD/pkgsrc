@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2018/03/07 11:57:31 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/02/28 22:46:41 wiz Exp $
 
-DISTNAME=	libvdpau-1.1.1
-PKGREVISION=	2
+DISTNAME=	libvdpau-1.2
 CATEGORIES=	multimedia
-MASTER_SITES=	http://people.freedesktop.org/~aplattner/vdpau/
+MASTER_SITES=	https://gitlab.freedesktop.org/vdpau/libvdpau/uploads/14b620084c027d546fa0b3f083b800c6/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	cheusov@NetBSD.org
