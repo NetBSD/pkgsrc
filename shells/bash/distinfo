@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.52 2019/01/21 09:03:44 leot Exp $
+$NetBSD: distinfo,v 1.53 2019/02/28 07:20:57 maya Exp $
 
 SHA1 (bash-5.0.tar.gz) = d116b469b9e6ea5264a74661d3a4c797da7f997b
 RMD160 (bash-5.0.tar.gz) = a081428a896d617855499376b670eca3433a27c1
@@ -9,6 +9,7 @@ SHA1 (patch-ag) = cd3b151e3bb045d2bb609c0a03d7d3df2c871f47
 SHA1 (patch-aj) = 2e4c15afd9b50d44967ee8e1f85bdc908c0eeeb0
 SHA1 (patch-builtins_ulimit.def) = 1390069344607204eb3abbd6ddeb148ff590c55e
 SHA1 (patch-configure) = c4e1ab53a1ee85f3e6121047f0aca8ceb85e6e5d
+SHA1 (patch-examples_loadables_fdflags.c) = 92a63c8f4c94ccf9cf782e934a0806930d172654
 SHA1 (patch-examples_loadables_push.c) = 57a3c7de9ea0a75c373db678d9500954bcf40ff4
 SHA1 (patch-shell.c) = daa07914d4c318cd72463f80344f4f7c364809cd
 SHA1 (patch-support_shobj-conf) = 8750c104549ea8a4a722bd21a684a9fe13e05fe5
