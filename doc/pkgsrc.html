@@ -8841,7 +8841,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm79121616"></a><dl>
+<a name="idm79191248"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -8886,7 +8886,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm79121232"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm79190864"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -8902,7 +8902,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm79108944"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="idm79170384"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -8920,7 +8920,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm79104592"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm79166032"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -8938,7 +8938,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm79100368"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm79161808"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -8951,7 +8951,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm79098192"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm79159632"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -8967,7 +8967,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm79078608"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm79148240"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="code">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -8991,7 +8991,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm79071824"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm79141456"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9016,7 +9016,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm79067984"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm79137616"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9064,7 +9064,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm79061456"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm79131088"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
@@ -10281,16 +10281,35 @@ source packages</h2></div></div></div>
 <p>These directories contain the <span class="quote">&#8220;<span class="quote">real</span>&#8221;</span> pkgsrc,
 	that is the files that define how to create binary packages from
 	source archives.</p>
+<p>Each of the <code class="filename">current</code>,
+	<code class="filename">stable</code> and
+	<code class="filename">pkgsrc-20<em class="replaceable"><code>xx</code></em>Q<em class="replaceable"><code>y</code></em></code>
+	directories share the same structure.  They each contain a
+	<code class="filename">pkgsrc</code> directory and
+	<code class="filename">pkgsrc.tar.{bz,gz,xz}</code> file.</p>
 <p>The directory <code class="filename">pkgsrc</code> contains a
 	snapshot of the CVS repository, which is updated regularly. The
-	file <code class="filename">pkgsrc.tar.gz</code> contains the same as the
-	directory, ready to be downloaded as a whole.</p>
-<p>In the directories for the quarterly branches, there is an
-	additional file called
-	<code class="filename">pkgsrc-20<em class="replaceable"><code>xx</code></em>Q<em class="replaceable"><code>y</code></em>.tar.gz</code>,
+	file <code class="filename">pkgsrc.tar.{bz,gz,xz}</code> contains the same
+	as the directory, ready to be downloaded as a whole.</p>
+<p>The <code class="filename">current</code> directory contains files
+	related to the HEAD branch of the CVS repository.
+	In this directory there is an additional file called
+	<code class="filename">pkgsrc-readmes.tar.{bz,gz,xz}</code> that contains
+	all pkgsrc <code class="filename">README</code>s with information about
+	categories and packages.
+	</p>
+<p>The <code class="filename">stable</code> directory is a symlink to
+	the latest 
+	<code class="filename">pkgsrc-20<em class="replaceable"><code>xx</code></em>Q<em class="replaceable"><code>y</code></em></code>.
+	</p>
+<p>The
+	<code class="filename">pkgsrc-20<em class="replaceable"><code>xx</code></em>Q<em class="replaceable"><code>y</code></em></code>.
+	directories contain files related to the 
+	<code class="filename">-20<em class="replaceable"><code>xx</code></em>Q<em class="replaceable"><code>y</code></em></code>
+	stable branch of the CVS repository. In these directories there is
+	an additional file called
+	<code class="filename">pkgsrc-20<em class="replaceable"><code>xx</code></em>Q<em class="replaceable"><code>y</code></em>.tar.{bz,gz,xz}</code>,
 	which contains the state of pkgsrc when it was branched.</p>
-<p><code class="filename">stable</code> directory points to the latest
-	quarterly branch.</p>
 </div>
 </div>
 <div class="appendix">
