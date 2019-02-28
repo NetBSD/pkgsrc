@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2019/01/23 12:21:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2019/02/28 09:06:08 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -56,6 +56,12 @@ ${PYSITELIB}/cryptography/hazmat/backends/openssl/dsa.pyo
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/ec.py
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/ec.pyc
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/ec.pyo
+${PYSITELIB}/cryptography/hazmat/backends/openssl/ed25519.py
+${PYSITELIB}/cryptography/hazmat/backends/openssl/ed25519.pyc
+${PYSITELIB}/cryptography/hazmat/backends/openssl/ed25519.pyo
+${PYSITELIB}/cryptography/hazmat/backends/openssl/ed448.py
+${PYSITELIB}/cryptography/hazmat/backends/openssl/ed448.pyc
+${PYSITELIB}/cryptography/hazmat/backends/openssl/ed448.pyo
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/encode_asn1.py
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/encode_asn1.pyc
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/encode_asn1.pyo
@@ -116,6 +122,12 @@ ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/dsa.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/ec.py
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/ec.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/ec.pyo
+${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/ed25519.py
+${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/ed25519.pyc
+${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/ed25519.pyo
+${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/ed448.py
+${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/ed448.pyc
+${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/ed448.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/padding.py
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/padding.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/padding.pyo
