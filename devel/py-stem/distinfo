@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/10/23 01:42:34 riastradh Exp $
+$NetBSD: distinfo,v 1.2 2019/02/28 06:22:28 wiz Exp $
 
-SHA1 (stem-1.7.0.tar.gz) = 1d075b54ebd32cf15e470c8f09a596cf8829a172
-RMD160 (stem-1.7.0.tar.gz) = 3f007f598864326a7debfb3b51c50be123f8a111
-SHA512 (stem-1.7.0.tar.gz) = 10750266860f4f90df5d4a3bf24ec68e28d12c84c136c35d2f168f767f4facae3d02cc62dc972a08666689695ea17337a7a6b80ec1c5ed8b9e5035d7417b07f5
-Size (stem-1.7.0.tar.gz) = 2196759 bytes
+SHA1 (stem-1.7.1.tar.gz) = e096c44dd6d2a119935df61e5f189af27a6e97a6
+RMD160 (stem-1.7.1.tar.gz) = 8d355a11d357d0d9581ea2d1cb2da83220211973
+SHA512 (stem-1.7.1.tar.gz) = a275f59bba650cb5bb151cf53fb1dd820334f9abbeae1a25e64502adc854c7f54c51bc3d6c1656b595d142fc0695ffad53aab3c57bc285421c1f4f10c9c3db4c
+Size (stem-1.7.1.tar.gz) = 2196854 bytes
