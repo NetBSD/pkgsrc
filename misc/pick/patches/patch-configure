@@ -1,0 +1,28 @@
+$NetBSD: patch-configure,v 1.1 2019/02/28 19:27:43 leot Exp $
+
+Add support for INSTALL_MAN in order to avoid installing man pages with
+executable bit set.
+
+--- configure.orig	2019-02-27 19:07:35.000000000 +0000
++++ configure
+@@ -135,10 +135,12 @@ CC=$(makevar CC)
+ CFLAGS=$(makevar CFLAGS)
+ CFLAGS="${CFLAGS} ${DEBUG} -Wall -Wextra -MD -MP"
+ INSTALL=$(makevar INSTALL)
++INSTALL_MAN=$(makevar INSTALL_MAN)
+ 
+ : "${CPPFLAGS:=}"
+ : "${DEBUG:=}"
+ : "${INSTALL:=install}"
++: "${INSTALL_MAN:=install -m 444}"
+ : "${LDFLAGS:=}"
+ 
+ exec 3>&1 4>&2
+@@ -222,6 +224,7 @@ CFLAGS=		$(echo $CFLAGS)
+ CPPFLAGS=	$(echo $CPPFLAGS)
+ DEBUG=		$(echo $DEBUG)
+ INSTALL=	$(echo $INSTALL)
++INSTALL_MAN=	$(echo $INSTALL_MAN)
+ LDFLAGS=	$(echo $LDFLAGS)
+ MALLOC_OPTIONS=	$(echo $MALLOC_OPTIONS)
+ EOF
