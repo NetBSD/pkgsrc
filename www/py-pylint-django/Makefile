@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2018/12/18 11:50:34 adam Exp $
+# $NetBSD: Makefile,v 1.16 2019/02/28 09:24:59 adam Exp $
 
-DISTNAME=	pylint-django-2.0.5
+DISTNAME=	pylint-django-2.0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylint-django/}
@@ -11,7 +11,7 @@ COMMENT=	Pylint plugin to aid Pylint in recognising the Django framework
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-pylint>=2.0.0:../../devel/py-pylint
-DEPENDS+=	${PYPKGPREFIX}-pylint-plugin-utils>=0.2.1:../../devel/py-pylint-plugin-utils
+DEPENDS+=	${PYPKGPREFIX}-pylint-plugin-utils>=0.5:../../devel/py-pylint-plugin-utils
 
 USE_LANGUAGES=	# none
 
