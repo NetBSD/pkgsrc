@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.1 2018/05/09 15:26:05 leot Exp $
+$NetBSD: distinfo,v 1.2 2019/02/28 19:27:43 leot Exp $
 
-SHA1 (pick-2.0.2.tar.gz) = 6cc08e999f044defff085efa9182678cf25ff132
-RMD160 (pick-2.0.2.tar.gz) = 0d5b69ca295511ac7e32b3a8fea24c590ed089e3
-SHA512 (pick-2.0.2.tar.gz) = 92d74fa62f6c829117c6c3faf6ec39fc5dd66465516be396d21d7b0a92ee10761a1d3f43aa4a454f8d19790ac02a4a1af145139d488344c97a511805c5d6965b
-Size (pick-2.0.2.tar.gz) = 132174 bytes
+SHA1 (pick-3.0.0.tar.gz) = ecbf2a41c95dbc6112b111237fa832cc8abeb4c5
+RMD160 (pick-3.0.0.tar.gz) = 3c2d0fd0e0143e2956ffc62a9cdb7941bcc3be9c
+SHA512 (pick-3.0.0.tar.gz) = fa6bdc491e6a04f330d8e9258562d030dc40245d8ae2b7d552eb2ede0d08548cd0de061dc66a24d7a05ba9f6ca984e59807248bfc848048e36bf86cf7c56fea4
+Size (pick-3.0.0.tar.gz) = 29736 bytes
+SHA1 (patch-Makefile) = f4a878ddc62a41bcc8037045103bbd51cf5dd654
+SHA1 (patch-configure) = 939d1c5b7aa22127b0adbcbd2f7838d46a8ea599
 SHA1 (patch-pick.c) = cdce675828e0187cc9567aeec93893c9dbd14087
