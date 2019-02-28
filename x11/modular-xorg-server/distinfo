@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.93 2019/02/27 16:32:58 wiz Exp $
+$NetBSD: distinfo,v 1.94 2019/02/28 12:32:39 tnn Exp $
 
 SHA1 (xorg-server-1.20.4.tar.bz2) = 1a79da92122124cb782a4eebfd83fd33d5c0d7d4
 RMD160 (xorg-server-1.20.4.tar.bz2) = cad624e1d1ada0b46a76a1e5de6b12446f7c6dda
@@ -16,3 +16,4 @@ SHA1 (patch-hw_xfree86_os-support_bus_Sbus.c) = 0035b970bdae1bab51b8ca6bfeed060e
 SHA1 (patch-hw_xfree86_os-support_solaris_solaris-amd64.S) = 088a3118deb7567194e08dd46e34cb6edba38400
 SHA1 (patch-hw_xfree86_os-support_xf86_OSproc.h) = e1c049857893d2f050d5fb297a3e8ef86f0b1d7e
 SHA1 (patch-hw_xfree86_os_support_bus_xf86Sbus.h) = 0e0a243b737f8f762c9f8f24a2265d1b6aefb544
+SHA1 (patch-test_xtest.c) = 77622ef481e91e64b3a6dd64b8579404f33ec88f
