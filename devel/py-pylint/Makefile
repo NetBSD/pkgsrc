@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2018/11/28 14:37:03 adam Exp $
+# $NetBSD: Makefile,v 1.34 2019/02/28 09:20:07 adam Exp $
 
-DISTNAME=	pylint-2.2.2
+DISTNAME=	pylint-2.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylint/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://www.pylint.org/
 COMMENT=	Python source code analyzer
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-astroid>=2.0.1:../../devel/py-astroid
+DEPENDS+=	${PYPKGPREFIX}-astroid>=2.2.0:../../devel/py-astroid
 DEPENDS+=	${PYPKGPREFIX}-isort>=4.2.5:../../devel/py-isort
 DEPENDS+=	${PYPKGPREFIX}-mccabe-[0-9]*:../../devel/py-mccabe
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
@@ -27,7 +27,7 @@ REPLACE_PYTHON+=	pylint/test/data/ascript
 post-install:
 .for file in epylint pylint pyreverse symilar
 	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} ${file} ${file}-${PYVERSSUFFIX} || ${TRUE}
+	${MV} ${file} ${file}-${PYVERSSUFFIX} || ${TRUE}
 	${INSTALL_DATA} ${WRKSRC}/man/${file}.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${file}-${PYVERSSUFFIX}.1
 .endfor
