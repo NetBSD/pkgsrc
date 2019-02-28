@@ -8440,15 +8440,24 @@ C.5. current, stable, pkgsrc-20xxQy: source packages
 These directories contain the "real" pkgsrc, that is the files that define how
 to create binary packages from source archives.
 
+Each of the current, stable and pkgsrc-20xxQy directories share the same
+structure. They each contain a pkgsrc directory and pkgsrc.tar.{bz,gz,xz} file.
+
 The directory pkgsrc contains a snapshot of the CVS repository, which is
-updated regularly. The file pkgsrc.tar.gz contains the same as the directory,
-ready to be downloaded as a whole.
+updated regularly. The file pkgsrc.tar.{bz,gz,xz} contains the same as the
+directory, ready to be downloaded as a whole.
 
-In the directories for the quarterly branches, there is an additional file
-called pkgsrc-20xxQy.tar.gz, which contains the state of pkgsrc when it was
-branched.
+The current directory contains files related to the HEAD branch of the CVS
+repository. In this directory there is an additional file called
+pkgsrc-readmes.tar.{bz,gz,xz} that contains all pkgsrc READMEs with information
+about categories and packages.
 
-stable directory points to the latest quarterly branch.
+The stable directory is a symlink to the latest pkgsrc-20xxQy.
+
+The pkgsrc-20xxQy. directories contain files related to the -20xxQy stable
+branch of the CVS repository. In these directories there is an additional file
+called pkgsrc-20xxQy.tar.{bz,gz,xz}, which contains the state of pkgsrc when it
+was branched.
 
 Appendix D. Editing guidelines for the pkgsrc guide
 
