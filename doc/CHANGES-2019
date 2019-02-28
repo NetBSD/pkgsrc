@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.958 2019/02/28 22:00:55 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.959 2019/02/28 22:17:24 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1655,3 +1655,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-test-randomly to 2.0.0 [adam 2019-02-28]
 	Updated misc/pick to 3.0.0 [leot 2019-02-28]
 	Updated www/ikiwiki to 3.20190228 [schmonz 2019-02-28]
+	Updated net/youtube-dl to 20190301 [leot 2019-02-28]
