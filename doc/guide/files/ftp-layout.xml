@@ -1,4 +1,4 @@
-<!-- $NetBSD: ftp-layout.xml,v 1.14 2019/02/26 12:11:49 leot Exp $ -->
+<!-- $NetBSD: ftp-layout.xml,v 1.15 2019/02/28 10:54:31 leot Exp $ -->
 
 <appendix id="ftp-layout">
 <title>Directory layout of the pkgsrc FTP server</title>
@@ -106,18 +106,39 @@ source packages</title>
 	that is the files that define how to create binary packages from
 	source archives.</para>
 
+	<para>Each of the <filename>current</filename>,
+	<filename>stable</filename> and
+	<filename>pkgsrc-20<replaceable>xx</replaceable>Q<replaceable>y</replaceable></filename>
+	directories share the same structure.  They each contain a
+	<filename>pkgsrc</filename> directory and
+	<filename>pkgsrc.tar.{bz,gz,xz}</filename> file.</para>
+
 	<para>The directory <filename>pkgsrc</filename> contains a
 	snapshot of the CVS repository, which is updated regularly. The
-	file <filename>pkgsrc.tar.gz</filename> contains the same as the
-	directory, ready to be downloaded as a whole.</para>
+	file <filename>pkgsrc.tar.{bz,gz,xz}</filename> contains the same
+	as the directory, ready to be downloaded as a whole.</para>
 
-	<para>In the directories for the quarterly branches, there is an
-	additional file called
-	<filename>pkgsrc-20<replaceable>xx</replaceable>Q<replaceable>y</replaceable>.tar.gz</filename>,
+	<para>The <filename>current</filename> directory contains files
+	related to the HEAD branch of the CVS repository.
+	In this directory there is an additional file called
+	<filename>pkgsrc-readmes.tar.{bz,gz,xz}</filename> that contains
+	all pkgsrc <filename>README</filename>s with information about
+	categories and packages.
+	</para>
+
+	<para>The <filename>stable</filename> directory is a symlink to
+	the latest 
+	<filename>pkgsrc-20<replaceable>xx</replaceable>Q<replaceable>y</replaceable></filename>.
+	</para>
+
+	<para>The
+	<filename>pkgsrc-20<replaceable>xx</replaceable>Q<replaceable>y</replaceable></filename>.
+	directories contain files related to the 
+	<filename>-20<replaceable>xx</replaceable>Q<replaceable>y</replaceable></filename>
+	stable branch of the CVS repository. In these directories there is
+	an additional file called
+	<filename>pkgsrc-20<replaceable>xx</replaceable>Q<replaceable>y</replaceable>.tar.{bz,gz,xz}</filename>,
 	which contains the state of pkgsrc when it was branched.</para>
-
-	<para><filename>stable</filename> directory points to the latest
-	quarterly branch.</para>
 
 </sect1>
 </appendix>
