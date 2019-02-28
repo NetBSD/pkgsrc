@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.950 2019/02/28 06:22:37 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.951 2019/02/28 06:32:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1639,3 +1639,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ruby-rugged to 0.28.0 [taca 2019-02-27]
 	Updated net/py-nyx to 2.1.0 [wiz 2019-02-28]
 	Updated devel/py-stem to 1.7.1 [wiz 2019-02-28]
+	Updated net/py-txtorcon to 19.0.0 [wiz 2019-02-28]
