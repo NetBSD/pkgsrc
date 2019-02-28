@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.954 2019/02/28 09:34:03 adam Exp $
+$NetBSD: CHANGES-2019,v 1.955 2019/02/28 10:22:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1649,3 +1649,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-pylint to 2.3.0 [adam 2019-02-28]
 	Updated devel/py-pylint-plugin-utils to 0.5 [adam 2019-02-28]
 	Updated www/py-pylint-django to 2.0.6 [adam 2019-02-28]
+	Updated sysutils/salt to 2019.2.0 [adam 2019-02-28]
+	Updated sysutils/salt-docs to 2019.2.0 [adam 2019-02-28]
