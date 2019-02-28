@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2018/08/13 08:00:30 adam Exp $
+# $NetBSD: Makefile,v 1.23 2019/02/28 13:49:10 adam Exp $
 
-DISTNAME=	pyzmq-17.1.2
+DISTNAME=	pyzmq-18.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyzmq/}
