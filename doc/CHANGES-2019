@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.974 2019/03/01 22:14:03 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.975 2019/03/01 23:06:45 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1673,3 +1673,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/webkit-gtk to 2.22.7 [leot 2019-03-01]
 	Updated devel/libgee to 0.20.1 [youri 2019-03-01]
 	Added textproc/py-markups version 3.0.0 [gutteridge 2019-03-01]
+	Updated textproc/cldr-emoji-annotation to 34.0.0.0 [tsutsui 2019-03-01]
