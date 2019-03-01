@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.963 2019/03/01 04:30:38 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.964 2019/03/01 08:47:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1659,3 +1659,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated emulators/mame to 0.207 [wiz 2019-02-28]
 	Updated multimedia/libvdpau to 1.2 [wiz 2019-02-28]
 	Added textproc/py-markdown-math version 0.6 [gutteridge 2019-03-01]
+	Updated textproc/py-lxml to 4.3.2 [adam 2019-03-01]
+	Updated lang/nodejs to 10.15.2 [adam 2019-03-01]
