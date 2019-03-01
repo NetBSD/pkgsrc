@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2019/01/24 09:19:25 adam Exp $
+$NetBSD: distinfo,v 1.12 2019/03/01 08:49:40 adam Exp $
 
-SHA1 (pyflakes-2.1.0.tar.gz) = 4ad976d9703a65ffbb652cb2a4d1f54138c80046
-RMD160 (pyflakes-2.1.0.tar.gz) = a783340743f58d57f9d8e3fdf6cb828cd836bae9
-SHA512 (pyflakes-2.1.0.tar.gz) = 4212ac3d0c08c9db96d16dfe41ac39b4f3bc1f51bd9a7af07a7a69101a9a6a01db398656068c2729f716cb93b584d88adc2a66659a94388196d9c91a4c7948a2
-Size (pyflakes-2.1.0.tar.gz) = 56588 bytes
+SHA1 (pyflakes-2.1.1.tar.gz) = 3f176cca6809b2b45b40d203d3b8d5962e040991
+RMD160 (pyflakes-2.1.1.tar.gz) = 0b2ba1d94c7777d42d0b698fb9933751afef8f64
+SHA512 (pyflakes-2.1.1.tar.gz) = 7ebf5843b38146305c1063e070480fea8ec3b47fa1be546b1fafaeb242a688a5a001f978e7257fd71d5905b9a338b466ef17c7330725191587e9c40ba632c3f8
+Size (pyflakes-2.1.1.tar.gz) = 58072 bytes
