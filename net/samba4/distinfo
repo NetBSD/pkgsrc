@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2018/12/22 01:13:52 adam Exp $
+$NetBSD: distinfo,v 1.23 2019/03/01 20:03:24 roy Exp $
 
 SHA1 (samba-4.9.4.tar.gz) = 7f8e15709e03e52d14bd9c85dd717366c106993f
 RMD160 (samba-4.9.4.tar.gz) = d0a43b85b85906f860de12b0b0abb1fcc5643b7a
@@ -14,6 +14,7 @@ SHA1 (patch-lib_param_loadparm.h) = 0216b69d33d1e17260a446e11bee764116c52b18
 SHA1 (patch-lib_replace_wscript) = b6a042c2c13c0be78d7b64c0ce2efdaf4bbb1f3b
 SHA1 (patch-lib_tevent_wscript) = fbbe2024096b57d651d90064f53489a974db9d7a
 SHA1 (patch-nsswitch_wscript__build) = e8a6251e031ffa13d6347fade8891f7afd65d3eb
+SHA1 (patch-source3_auth_token_util.c) = fbe67b501fa4325c9fb3e37c51bc424847f5e908
 SHA1 (patch-source4_heimdal__build_roken.h) = ee535f8e7cc46a3487d95bc859438c476a88fe60
 SHA1 (patch-source4_scripting_wsript_build) = bd4feddcaadf1c3d2d25eb7914e7b5843e4e9511
 SHA1 (patch-source4_torture_local_nss__tests.c) = 8c878a8ed771ba996a7a325a1ad41bd13016c70c
