@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libxcb,v 1.18 2019/01/09 11:29:02 jaapb Exp $
+# $NetBSD: xorg.libxcb,v 1.19 2019/03/01 15:42:25 youri Exp $
 #
 include/xcb/bigreq.h
 include/xcb/composite.h
@@ -102,6 +102,14 @@ lib/libxcb-glx.so.0.0
 lib/libxcb-glx.so.0.1
 lib/libxcb-glx.so.0.2
 lib/libxcb-glx.so.1.0
+lib/libxcb-present.0.0.0.dylib
+lib/libxcb-present.0.dylib
+lib/libxcb-present.a
+lib/libxcb-present.dylib
+lib/libxcb-present.la
+lib/libxcb-present.so
+lib/libxcb-present.so.0
+lib/libxcb-present.so.0.0.0
 lib/libxcb-randr.0.0.0.dylib
 lib/libxcb-randr.0.1.0.dylib
 lib/libxcb-randr.0.dylib
@@ -309,6 +317,7 @@ lib/pkgconfig/xcb-damage.pc
 lib/pkgconfig/xcb-dpms.pc
 lib/pkgconfig/xcb-dri2.pc
 lib/pkgconfig/xcb-glx.pc
+lib/pkgconfig/xcb-present.pc
 lib/pkgconfig/xcb-randr.pc
 lib/pkgconfig/xcb-record.pc
 lib/pkgconfig/xcb-render.pc
