@@ -1,0 +1,25 @@
+$NetBSD: patch-make_variant_netbsd.defs,v 1.1 2019/03/01 23:51:48 ryoon Exp $
+
+* Basic definitions for NetBSD
+
+--- make/variant/netbsd.defs.orig	2019-03-01 13:37:26.511529480 +0000
++++ make/variant/netbsd.defs
+@@ -0,0 +1,18 @@
++# LOCALBASE is where NetBSD packages are installed. default is '/usr/pkg'.
++LOCALBASE  ?= /usr/pkg
++
++TARGET.dylib.ext = .so
++
++GCC.D       = LIBICONV_PLUG
++
++GCC.args.dylib = -shared
++GCC.args.pic   = 1
++
++GCC.args.g.none = -g0
++GCC.args.g.min  = -g1
++GCC.args.g.std  = -g2
++GCC.args.g.max  = -g3
++
++GCC.MAJOR_VERSION = $(shell $(GCC.gcc) -dumpversion | cut -f 1 -d .)
++GCC.LDFLAGS = 
++LDFLAGS += $(if $(findstring gcc, $(GCC.gcc)), $(GCC.LDFLAGS), )
