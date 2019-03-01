@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2015/11/25 12:50:00 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2019/03/01 13:04:49 ryoon Exp $
 #
 
-DISTNAME=	OmegaT_3.5_01_Beta_Source
-PKGNAME=	${DISTNAME:S/OmegaT_/OmegaT-/:S/_Source//:S/_Beta//:S/_/./g}
+DISTNAME=	OmegaT_4.1.5_03_Beta_Without_JRE
+PKGNAME=	${DISTNAME:S/OmegaT_/OmegaT-/:S/_Without_JRE//:S/_Beta//:S/_/./g}
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=omegat/}
 EXTRACT_SUFX=	.zip
@@ -12,12 +12,11 @@ HOMEPAGE=	http://www.omegat.org/
 COMMENT=	The translation memory (TM) application written in Java
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
 USE_JAVA=	yes
 USE_JAVA2=	yes
 
-BUILD_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
+NO_BUILD=	yes
 
 USE_TOOLS+=	pax
 
@@ -28,6 +27,8 @@ SUBST_FILES.fix-omegat=		OmegaT
 SUBST_SED.fix-omegat=		-e 's,@OMEGATDIR@,${PREFIX}/${OMEGATDIR}/,g'
 SUBST_SED.fix-omegat+=		-e 's,@JAVA_HOME@,${PKG_JAVA_HOME}/,g'
 
+REPLACE_SH=	OmegaT
+
 OMEGATDIR=	share/OmegaT
 OMEGATDOCDIR=	share/doc/OmegaT
 
@@ -36,33 +37,23 @@ INSTALLATION_DIRS=	bin \
 			${OMEGATDIR}/lib \
 			${OMEGATDOCDIR} \
 			${OMEGATDOCDIR}/images
-
 pre-patch:
 	${INSTALL_DATA} ${FILESDIR}/OmegaT.in ${WRKSRC}/OmegaT
-	for f in ${WRKSRC}/build.xml; do		\
-		${TR} -d '\r' < $${f} > $${f}.new;	\
-		${MV} $${f}.new $${f};			\
-	done
-
-do-build:
-	cd ${WRKSRC} \
-	&& env ${MAKE_ENV} \
-		${LOCALBASE}/bin/ant jar release
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/dist/*txt \
+	${INSTALL_DATA} ${WRKSRC}/*txt \
 		${DESTDIR}${PREFIX}/${OMEGATDOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/dist/*html \
+	${INSTALL_DATA} ${WRKSRC}/*html \
 		${DESTDIR}${PREFIX}/${OMEGATDOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/dist/OmegaT.jar \
+	${INSTALL_DATA} ${WRKSRC}/OmegaT.jar \
 		${DESTDIR}${PREFIX}/${OMEGATDIR}
-	cd ${WRKSRC}/dist/docs && pax -rw -pmp * \
+	cd ${WRKSRC}/docs && pax -rw -pmp * \
 		${DESTDIR}${PREFIX}/${OMEGATDOCDIR}
-	cd ${WRKSRC}/dist/images && pax -rw -pmp * \
+	cd ${WRKSRC}/images && pax -rw -pmp * \
 		${DESTDIR}${PREFIX}/${OMEGATDOCDIR}/images
-	${INSTALL_DATA} ${WRKSRC}/dist/lib/*.txt \
+	${INSTALL_DATA} ${WRKSRC}/lib/*.txt \
 		${DESTDIR}${PREFIX}/${OMEGATDIR}/lib
-	${INSTALL_DATA} ${WRKSRC}/dist/lib/*.jar \
+	${INSTALL_DATA} ${WRKSRC}/lib/*.jar \
 		${DESTDIR}${PREFIX}/${OMEGATDIR}/lib
 	${INSTALL_DATA} ${FILESDIR}/omegat.prefs \
 		${DESTDIR}${PREFIX}/${OMEGATDIR}
