@@ -1,0 +1,16 @@
+$NetBSD: patch-libhb_module.defs,v 1.1 2019/03/01 23:51:48 ryoon Exp $
+
+* Use includes from pkgsrc
+
+--- libhb/module.defs.orig	2019-02-22 16:23:51.000000000 +0000
++++ libhb/module.defs
+@@ -51,6 +51,9 @@ LIBHB.GCC.I += $(LIBHB.build/) $(CONTRIB
+ ifeq ($(BUILD.system),freebsd)
+     LIBHB.GCC.I += $(LOCALBASE)/include
+     LIBHB.GCC.I += $(LOCALBASE)/include/libxml2
++else ifeq ($(BUILD.system),netbsd)
++    LIBHB.GCC.I += $(LOCALBASE)/include
++    LIBHB.GCC.I += $(LOCALBASE)/include/libxml2
+ else ifneq (,$(filter $(BUILD.system),darwin cygwin mingw))
+     LIBHB.GCC.I += $(CONTRIB.build/)include/libxml2
+ else
