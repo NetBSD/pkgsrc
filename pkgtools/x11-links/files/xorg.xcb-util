@@ -1,4 +1,4 @@
-# $NetBSD: xorg.xcb-util,v 1.7 2015/12/27 18:56:33 sevan Exp $
+# $NetBSD: xorg.xcb-util,v 1.8 2019/03/01 17:23:47 youri Exp $
 include/xcb/xcb_atom.h
 include/xcb/xcb_aux.h
 include/xcb/xcb_bitops.h
@@ -69,11 +69,6 @@ lib/libxcb-keysyms.so.1
 lib/libxcb-keysyms.so.1.0
 lib/libxcb-keysyms.so.2.0
 lib/libxcb-keysyms.so.3.0
-lib/libxcb-present.a
-lib/libxcb-present.so
-lib/libxcb-present.so.0
-lib/libxcb-present.so.0.0
-lib/libxcb-present.so.0.1
 lib/libxcb-property.1.0.0.dylib
 lib/libxcb-property.1.dylib
 lib/libxcb-property.a
@@ -111,7 +106,6 @@ lib/pkgconfig/xcb-event.pc
 lib/pkgconfig/xcb-icccm.pc
 lib/pkgconfig/xcb-image.pc
 lib/pkgconfig/xcb-keysyms.pc
-lib/pkgconfig/xcb-present.pc
 lib/pkgconfig/xcb-property.pc
 lib/pkgconfig/xcb-renderutil.pc
 lib/pkgconfig/xcb-reply.pc
