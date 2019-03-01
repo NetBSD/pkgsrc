@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.10 2016/07/05 01:26:59 dholland Exp $
+# $NetBSD: options.mk,v 1.11 2019/03/01 13:30:52 leot Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ecl
-PKG_SUPPORTED_OPTIONS+=		debug threads unicode ffi clx
-PKG_SUGGESTED_OPTIONS+=		unicode ffi clx
+PKG_SUPPORTED_OPTIONS+=		debug threads unicode ffi
+PKG_SUGGESTED_OPTIONS+=		unicode ffi
 # Unicode support proved to break Axioms.
 # Threads are off, since threaded ECL requires threads support
 # in Boehm GC (off by default).
@@ -44,24 +44,13 @@ CONFIGURE_ARGS+=	--disable-unicode
 CONFIGURE_ARGS+=	--with-dffi=no
 .endif
 
-.if !empty(PKG_OPTIONS:Mclx)
-CONFIGURE_ARGS+=	--with-clx
+PLIST_VARS+=		unicode
+
+.if !empty(PKG_OPTIONS:Municode)
+PLIST.unicode=	yes
 .endif
-
-PLIST_VARS+=		clx unicode
-
-.for option in clx unicode
-.  if !empty(PKG_OPTIONS:M${option})
-PLIST.${option}=	yes
-.  endif
-.endfor
 
 # Help generating PLIST:
-.if !empty(PKG_OPTIONS:Mclx)
-PRINT_PLIST_AWK+=	{if ($$0 ~ /lib\/.*\/libclx.a$$/) {$$0 = "$${PLIST.clx}" $$0;}}
-PRINT_PLIST_AWK+=	{if ($$0 ~ /lib\/.*\/clx.(asd|fas)$$/) {$$0 = "$${PLIST.clx}" $$0;}}
-.endif
-
 .if !empty(PKG_OPTIONS:Municode)
 PRINT_PLIST_AWK+=	{if ($$0 ~ /lib\/.*\/encodings\//) {$$0 = "$${PLIST.unicode}" $$0;}}
 .endif
