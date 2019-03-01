@@ -1,0 +1,18 @@
+$NetBSD: patch-make_include_main.defs,v 1.1 2019/03/01 23:51:48 ryoon Exp $
+
+* Build GUI on NetBSD
+
+--- make/include/main.defs.orig	2019-02-22 16:23:51.000000000 +0000
++++ make/include/main.defs
+@@ -135,6 +135,11 @@ ifeq (1-gnu,$(FEATURE.gtk)-$(BUILD.syste
+     MODULES += gtk
+ endif
+ 
++ifeq (1-netbsd,$(FEATURE.gtk)-$(BUILD.system))
++    ## build gtk when gtk+netbsd
++    MODULES += gtk
++endif
++
+ ###############################################################################
+ 
+ MODULES += pkg
