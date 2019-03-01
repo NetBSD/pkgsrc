@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.970 2019/03/01 18:07:52 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.971 2019/03/01 18:11:18 youri Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1669,3 +1669,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/ecl to 16.1.3 [leot 2019-03-01]
 	Updated x11/compton to 5.1 [youri 2019-03-01]
 	Updated www/nginx-devel to 1.15.9 [ryoon 2019-03-01]
+	Updated graphics/ImageMagick to 7.0.8.29 [youri 2019-03-01]
