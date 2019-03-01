@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2019/01/18 09:30:05 adam Exp $
+# $NetBSD: Makefile,v 1.9 2019/03/01 12:47:22 adam Exp $
 
-DISTNAME=	libcerf-1.11
+DISTNAME=	libcerf-1.13
 CATEGORIES=	devel math
 MASTER_SITES=	http://apps.jcns.fz-juelich.de/src/libcerf/
 EXTRACT_SUFX=	.tgz
