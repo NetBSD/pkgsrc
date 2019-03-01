@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.972 2019/03/01 18:53:29 leot Exp $
+$NetBSD: CHANGES-2019,v 1.973 2019/03/01 20:10:21 youri Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1671,3 +1671,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/nginx-devel to 1.15.9 [ryoon 2019-03-01]
 	Updated graphics/ImageMagick to 7.0.8.29 [youri 2019-03-01]
 	Updated www/webkit-gtk to 2.22.7 [leot 2019-03-01]
+	Updated devel/libgee to 0.20.1 [youri 2019-03-01]
