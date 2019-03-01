@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.12 2016/03/11 20:32:30 asau Exp $
+@comment $NetBSD: PLIST,v 1.13 2019/03/01 13:30:52 leot Exp $
 bin/ecl
 bin/ecl-config
 include/ecl/bytecodes.h
 include/ecl/cache.h
+include/ecl/config-internal.h
 include/ecl/config.h
+include/ecl/configpre-int.h
 include/ecl/configpre.h
 include/ecl/cons.h
 include/ecl/cs.h
@@ -21,13 +23,11 @@ include/ecl/number.h
 include/ecl/object.h
 include/ecl/page.h
 include/ecl/stacks.h
-include/ecl/unify.h
-lib/${PKGNAME}/LGPL
+lib/${PKGNAME}/COPYING
+lib/${PKGNAME}/LICENSE
 lib/${PKGNAME}/TAGS
 lib/${PKGNAME}/asdf.fas
 lib/${PKGNAME}/build-stamp
-${PLIST.clx}lib/${PKGNAME}/clx.asd
-${PLIST.clx}lib/${PKGNAME}/clx.fas
 lib/${PKGNAME}/cmp.asd
 lib/${PKGNAME}/cmp.fas
 lib/${PKGNAME}/deflate.asd
@@ -200,7 +200,6 @@ ${PLIST.unicode}lib/${PKGNAME}/encodings/windows-cp949.bin
 ${PLIST.unicode}lib/${PKGNAME}/encodings/windows-cp950.bin
 lib/${PKGNAME}/help.doc
 lib/${PKGNAME}/libasdf.a
-${PLIST.clx}lib/${PKGNAME}/libclx.a
 lib/${PKGNAME}/libcmp.a
 lib/${PKGNAME}/libdeflate.a
 lib/${PKGNAME}/libdefsystem.a
@@ -208,12 +207,15 @@ lib/${PKGNAME}/libecl-cdb.a
 lib/${PKGNAME}/libecl-curl.a
 lib/${PKGNAME}/libecl-help.a
 lib/${PKGNAME}/libecl-quicklisp.a
+lib/${PKGNAME}/libpackage-locks.a
 lib/${PKGNAME}/libprofile.a
 lib/${PKGNAME}/libql-minitar.a
 lib/${PKGNAME}/librt.a
 lib/${PKGNAME}/libsb-bsd-sockets.a
 lib/${PKGNAME}/libserve-event.a
 lib/${PKGNAME}/libsockets.a
+lib/${PKGNAME}/package-locks.asd
+lib/${PKGNAME}/package-locks.fas
 lib/${PKGNAME}/prebuilt-asdf.asd
 lib/${PKGNAME}/profile.asd
 lib/${PKGNAME}/profile.fas
@@ -233,3 +235,4 @@ lib/libecl.so.${PKGVERSION_MAJOR_MINOR}
 lib/libecl.so.${PKGVERSION}
 man/man1/ecl-config.1
 man/man1/ecl.1
+@pkgdir include/ecl/gc/private
