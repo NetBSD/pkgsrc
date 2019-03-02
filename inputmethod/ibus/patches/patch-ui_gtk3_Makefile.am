@@ -1,26 +1,16 @@
-$NetBSD: patch-ui_gtk3_Makefile.am,v 1.1 2018/08/12 10:45:03 tsutsui Exp $
+$NetBSD: patch-ui_gtk3_Makefile.am,v 1.2 2019/03/02 02:16:32 tsutsui Exp $
 
-- pull upstream wayland fix:
- https://github.com/ibus/ibus/commit/aa0f4252ff965729b871c91b4ed089bf98963c0b
+- workaround upstream issue #2082
+ https://github.com/ibus/ibus/issues/2082
 
---- ui/gtk3/Makefile.am.orig	2018-08-08 08:29:14.000000000 +0000
+--- ui/gtk3/Makefile.am.orig	2019-03-01 11:43:45.000000000 +0000
 +++ ui/gtk3/Makefile.am
-@@ -78,7 +78,6 @@ AM_VALAFLAGS = \
- 	--pkg=ibus-1.0 \
- 	--pkg=config \
- 	--pkg=xi \
--	--pkg=gdk-wayland \
- 	--target-glib="$(VALA_TARGET_GLIB_VERSION)" \
+@@ -229,7 +229,7 @@ extension.o: $(srcdir)/extension.c
+ 	$(AM_V_CC_no)$(COMPILE) -c -o $@ $<
  	$(NULL)
- 
-@@ -105,6 +104,10 @@ if ENABLE_APPINDICATOR_ENGINE_ICON
- AM_VALAFLAGS += --define=INDICATOR_ENGINE_ICON
- endif
- 
-+if ENABLE_GDK3_WAYLAND
-+AM_VALAFLAGS += --pkg=gdk-wayland --define=USE_GDK_WAYLAND
-+endif
-+
- libexec_PROGRAMS = ibus-ui-gtk3
- 
- ibus_ui_gtk3_SOURCES = \
+ # of emojier.c: emojier.vala
+-panelbinding.c: $(ibus_extension_gtk3_VALASOURCES)
++panelbinding.c: $(ibus_extension_gtk3_VALASOURCES) Makefile
+ 	$(AM_V_VALAC)$(am__cd) $(srcdir) && $(VALAC) $(AM_VALAFLAGS) \
+ $(VALAFLAGS) -C $(ibus_extension_gtk3_VALASOURCES)
+ 	$(NULL)
