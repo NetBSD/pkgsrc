@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2018/12/07 12:25:58 morr Exp $
+@comment $NetBSD: PLIST,v 1.39 2019/03/02 14:30:14 wen Exp $
 share/doc/wordpress/license.txt
 share/doc/wordpress/readme.html
 share/examples/wordpress/wordpress.conf
@@ -1200,13 +1200,15 @@ share/wordpress/wp-includes/js/api-request.js
 share/wordpress/wp-includes/js/api-request.min.js
 share/wordpress/wp-includes/js/autosave.js
 share/wordpress/wp-includes/js/autosave.min.js
+share/wordpress/wp-includes/js/backbone.js
 share/wordpress/wp-includes/js/backbone.min.js
 share/wordpress/wp-includes/js/codemirror/codemirror.min.css
 share/wordpress/wp-includes/js/codemirror/codemirror.min.js
 share/wordpress/wp-includes/js/codemirror/csslint.js
+share/wordpress/wp-includes/js/codemirror/esprima.js
+share/wordpress/wp-includes/js/codemirror/fakejshint.js
 share/wordpress/wp-includes/js/codemirror/htmlhint-kses.js
 share/wordpress/wp-includes/js/codemirror/htmlhint.js
-share/wordpress/wp-includes/js/codemirror/jshint.js
 share/wordpress/wp-includes/js/codemirror/jsonlint.js
 share/wordpress/wp-includes/js/colorpicker.js
 share/wordpress/wp-includes/js/colorpicker.min.js
@@ -1534,12 +1536,13 @@ share/wordpress/wp-includes/js/tinymce/utils/editable_selects.js
 share/wordpress/wp-includes/js/tinymce/utils/form_utils.js
 share/wordpress/wp-includes/js/tinymce/utils/mctabs.js
 share/wordpress/wp-includes/js/tinymce/utils/validate.js
-share/wordpress/wp-includes/js/tinymce/wp-tinymce.js.gz
+share/wordpress/wp-includes/js/tinymce/wp-tinymce.js
 share/wordpress/wp-includes/js/tinymce/wp-tinymce.php
 share/wordpress/wp-includes/js/tw-sack.js
 share/wordpress/wp-includes/js/tw-sack.min.js
 share/wordpress/wp-includes/js/twemoji.js
 share/wordpress/wp-includes/js/twemoji.min.js
+share/wordpress/wp-includes/js/underscore.js
 share/wordpress/wp-includes/js/underscore.min.js
 share/wordpress/wp-includes/js/utils.js
 share/wordpress/wp-includes/js/utils.min.js
@@ -1596,7 +1599,9 @@ share/wordpress/wp-includes/ms-deprecated.php
 share/wordpress/wp-includes/ms-files.php
 share/wordpress/wp-includes/ms-functions.php
 share/wordpress/wp-includes/ms-load.php
+share/wordpress/wp-includes/ms-network.php
 share/wordpress/wp-includes/ms-settings.php
+share/wordpress/wp-includes/ms-site.php
 share/wordpress/wp-includes/nav-menu-template.php
 share/wordpress/wp-includes/nav-menu.php
 share/wordpress/wp-includes/option.php
@@ -1623,7 +1628,6 @@ share/wordpress/wp-includes/random_compat/random_bytes_dev_urandom.php
 share/wordpress/wp-includes/random_compat/random_bytes_libsodium.php
 share/wordpress/wp-includes/random_compat/random_bytes_libsodium_legacy.php
 share/wordpress/wp-includes/random_compat/random_bytes_mcrypt.php
-share/wordpress/wp-includes/random_compat/random_bytes_openssl.php
 share/wordpress/wp-includes/random_compat/random_int.php
 share/wordpress/wp-includes/registration-functions.php
 share/wordpress/wp-includes/registration.php
