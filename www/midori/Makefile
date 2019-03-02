@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.115 2018/12/11 12:40:18 bsiegert Exp $
+# $NetBSD: Makefile,v 1.116 2019/03/02 11:01:55 leot Exp $
 
-DISTNAME=	midori-v7.0
+DISTNAME=	midori-v8.0
 PKGNAME=	${DISTNAME:S/v//}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=midori-browser/}
 GITHUB_PROJECT=	core
-GITHUB_RELEASE=	v7
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://midori-browser.org/
@@ -19,6 +19,7 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 
 CONFIGURE_ENV+=	VALAC=${VALAC}
 
+.include "../../archivers/libarchive/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libpeas/buildlink3.mk"
@@ -26,6 +27,7 @@ CONFIGURE_ENV+=	VALAC=${VALAC}
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../textproc/json-glib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
