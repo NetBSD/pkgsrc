@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2019/01/15 21:04:02 adam Exp $
+# $NetBSD: Makefile,v 1.36 2019/03/02 14:06:52 adam Exp $
 
-DISTNAME=	tdb-1.3.17
+DISTNAME=	tdb-1.3.18
 CATEGORIES=	databases
 MASTER_SITES=	http://www.samba.org/ftp/tdb/
 
@@ -32,8 +32,6 @@ PKGCONFIG_OVERRIDE=	tdb.pc.in
 TEST_TARGET=		test
 
 USE_GCC_RUNTIME=	yes
-
-PYTHON_VERSIONS_ACCEPTED=	27
 
 PY_PATCHPLIST=		yes
 REPLACE_PYTHON+=	buildtools/bin/waf
