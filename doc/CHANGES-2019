@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.987 2019/03/02 14:12:49 adam Exp $
+$NetBSD: CHANGES-2019,v 1.988 2019/03/02 14:31:26 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1694,3 +1694,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated archivers/unrar to 5.7.3 [adam 2019-03-02]
 	Updated devel/py-astroid to 2.2.2 [adam 2019-03-02]
 	Updated devel/py-pylint to 2.3.1 [adam 2019-03-02]
+	Updated www/wordpress to 5.1 [wen 2019-03-02]
