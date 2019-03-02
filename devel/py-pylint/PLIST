@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2019/02/28 09:20:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2019/03/02 14:12:28 adam Exp $
 bin/epylint-${PYVERSSUFFIX}
 bin/pylint-${PYVERSSUFFIX}
 bin/pyreverse-${PYVERSSUFFIX}
@@ -1179,6 +1179,7 @@ ${PYSITELIB}/pylint/test/regrtest_data/special_attr_scope_lookup_crash.py
 ${PYSITELIB}/pylint/test/regrtest_data/syntax_error.py
 ${PYSITELIB}/pylint/test/regrtest_data/test_pylintrc_comments.py
 ${PYSITELIB}/pylint/test/regrtest_data/try_finally_disable_msg_crash.py
+${PYSITELIB}/pylint/test/regrtest_data/unused_variable.py
 ${PYSITELIB}/pylint/test/regrtest_data/wildcard.py
 ${PYSITELIB}/pylint/test/regrtest_data/wrong_import_position.py
 ${PYSITELIB}/pylint/test/test_func.py
