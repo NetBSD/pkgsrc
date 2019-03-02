@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2019/01/15 21:03:37 adam Exp $
+# $NetBSD: Makefile,v 1.3 2019/03/02 14:06:03 adam Exp $
 
-DISTNAME=	tevent-0.9.38
+DISTNAME=	tevent-0.9.39
 CATEGORIES=	devel
 MASTER_SITES=	http://www.samba.org/ftp/tevent/
 
@@ -29,8 +29,6 @@ CONFIGURE_ARGS+=	--jobs=1
 .endif
 PKGCONFIG_OVERRIDE+=	tevent.pc.in
 TEST_TARGET=		test
-
-PYTHON_VERSIONS_ACCEPTED=	27
 
 PY_PATCHPLIST=		yes
 REPLACE_PYTHON+=	buildtools/bin/waf
