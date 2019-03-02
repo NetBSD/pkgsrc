@@ -1,11 +1,22 @@
-$NetBSD: patch-Lib_ctypes_util.py,v 1.1 2018/06/17 19:21:22 adam Exp $
+$NetBSD: patch-Lib_ctypes_util.py,v 1.2 2019/03/02 13:23:36 adam Exp $
+
+Fallback to clang.
 
 Find libraries using 'ld' (taken from Python 3.7).
 Note: /usr/local will get replaced by SUBST.
 
---- Lib/ctypes/util.py.orig	2018-05-14 15:07:31.000000000 +0000
+--- Lib/ctypes/util.py.orig	2018-08-02 09:19:12.000000000 +0000
 +++ Lib/ctypes/util.py
-@@ -285,8 +285,32 @@ elif os.name == "posix":
+@@ -103,6 +103,8 @@ elif os.name == "posix":
+ 
+         c_compiler = shutil.which('gcc')
+         if not c_compiler:
++            c_compiler = shutil.which('clang')
++        if not c_compiler:
+             c_compiler = shutil.which('cc')
+         if not c_compiler:
+             # No C compiler available, give up
+@@ -285,8 +287,32 @@ elif os.name == "posix":
              except OSError:
                  pass
  
