@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.993 2019/03/02 15:44:50 nia Exp $
+$NetBSD: CHANGES-2019,v 1.994 2019/03/02 20:52:56 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1704,3 +1704,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/libatomic_ops to 7.6.10 [adam 2019-03-02]
 	Updated devel/py-test-randomly to 2.1.0 [adam 2019-03-02]
 	Updated chat/unrealircd to 4.2.2 [nia 2019-03-02]
+	Added editors/retext version 7.0.4 [gutteridge 2019-03-02]
