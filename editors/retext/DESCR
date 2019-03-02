@@ -1,0 +1,5 @@
+ReText is a text editor for various markup languages (such as Markdown
+and reStructuredText). It gives you the power to control all output
+formatting. The files it works with are plain text files, however it
+can export to PDF, HTML and other formats, and can display content in
+WYSIWYG form.
