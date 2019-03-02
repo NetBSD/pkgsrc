@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.186 2018/06/20 11:15:44 mef Exp $
+# $NetBSD: Makefile,v 1.187 2019/03/02 20:50:33 gutteridge Exp $
 #
 
 COMMENT=	Editors
@@ -114,6 +114,7 @@ SUBDIR+=	pluma
 SUBDIR+=	poedit
 SUBDIR+=	py-editor
 SUBDIR+=	py-jedi
+SUBDIR+=	retext
 SUBDIR+=	rox-edit
 SUBDIR+=	sam
 SUBDIR+=	sandy
