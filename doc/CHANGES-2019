@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.990 2019/03/02 14:35:19 wen Exp $
+$NetBSD: CHANGES-2019,v 1.991 2019/03/02 14:42:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1699,3 +1699,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/py-pyrsistent version 0.14.11 [adam 2019-03-02]
 	Updated textproc/py-jsonschema to 3.0.1 [adam 2019-03-02]
 	Updated textproc/p5-Text-Template to 1.55 [wen 2019-03-02]
+	Updated devel/py-ddt to 1.2.1 [adam 2019-03-02]
+	Updated textproc/py-jsbeautifier to 1.9.0 [adam 2019-03-02]
