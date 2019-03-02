@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.984 2019/03/02 11:02:07 leot Exp $
+$NetBSD: CHANGES-2019,v 1.985 2019/03/02 13:25:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1684,3 +1684,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-Test-Differences to 0.66 [wen 2019-03-02]
 	Updated textproc/p5-Pod-Tree to 1.31 [wen 2019-03-02]
 	Updated www/midori to 8.0 [leot 2019-03-02]
+	Updated lang/python34 to 3.4.9nb1 [adam 2019-03-02]
+	Updated lang/python35 to 3.5.6nb1 [adam 2019-03-02]
+	Updated lang/python36 to 3.6.8nb1 [adam 2019-03-02]
+	Updated lang/python37 to 3.7.2nb1 [adam 2019-03-02]
