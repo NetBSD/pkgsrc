@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.60 2018/11/14 22:21:49 kleink Exp $
+# $NetBSD: Makefile,v 1.61 2019/03/02 02:16:32 tsutsui Exp $
 
 .include "Makefile.common"
-
-PKGREVISION=	3
 
 COMMENT=	Intelligent Input Bus
 
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
-BUILD_DEPENDS+=	cldr-emoji-annotation>=33.1.0.0:../../textproc/cldr-emoji-annotation
+BUILD_DEPENDS+=	cldr-emoji-annotation>=34.0.0.0:../../textproc/cldr-emoji-annotation
 BUILD_DEPENDS+=	unicode-character-database-[0-9]*:../../textproc/unicode-character-database
 BUILD_DEPENDS+=	unicode-emoji-[0-9]*:../../textproc/unicode-emoji
 
@@ -56,8 +54,6 @@ CONF_FILES+=		${PREFIX}/share/examples/ibus/dconf/profile/ibus \
 BUILDLINK_TRANSFORM+=	rm:-Wno-unused-but-set-variable
 .endif
 
-BUILDLINK_API_DEPENDS.GConf+=		GConf>=2.12
-.include "../../devel/GConf/schemas.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/dconf/database.mk"
 .include "../../devel/dconf/buildlink3.mk"

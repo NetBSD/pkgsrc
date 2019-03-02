@@ -1,56 +1,16 @@
-$NetBSD: patch-ui_gtk3_Makefile.in,v 1.1 2018/08/12 10:45:03 tsutsui Exp $
+$NetBSD: patch-ui_gtk3_Makefile.in,v 1.2 2019/03/02 02:16:32 tsutsui Exp $
 
-- pull upstream wayland fix:
- https://github.com/ibus/ibus/commit/aa0f4252ff965729b871c91b4ed089bf98963c0b
+- workaround upstream issue #2082
+ https://github.com/ibus/ibus/issues/2082
 
---- ui/gtk3/Makefile.in.orig	2018-08-08 08:31:04.000000000 +0000
+--- ui/gtk3/Makefile.in.orig	2019-03-01 11:52:50.000000000 +0000
 +++ ui/gtk3/Makefile.in
-@@ -127,12 +127,13 @@ host_triplet = @host@
- 
- @ENABLE_APPINDICATOR_TRUE@am__append_4 = --define=INDICATOR
- @ENABLE_APPINDICATOR_ENGINE_ICON_TRUE@am__append_5 = --define=INDICATOR_ENGINE_ICON
-+@ENABLE_GDK3_WAYLAND_TRUE@am__append_6 = --pkg=gdk-wayland --define=USE_GDK_WAYLAND
- libexec_PROGRAMS = ibus-ui-gtk3$(EXEEXT) $(am__EXEEXT_1)
--@ENABLE_EMOJI_DICT_TRUE@am__append_6 = --define=EMOJI_DICT
--@ENABLE_EMOJI_DICT_TRUE@am__append_7 = ibus-ui-emojier \
-+@ENABLE_EMOJI_DICT_TRUE@am__append_7 = --define=EMOJI_DICT
-+@ENABLE_EMOJI_DICT_TRUE@am__append_8 = ibus-ui-emojier \
- @ENABLE_EMOJI_DICT_TRUE@	ibus-extension-gtk3
--@ENABLE_EMOJI_DICT_TRUE@am__append_8 = gtkextension.xml
--@ENABLE_EMOJI_DICT_TRUE@am__append_9 = gtkextension.xml \
-+@ENABLE_EMOJI_DICT_TRUE@am__append_9 = gtkextension.xml
-+@ENABLE_EMOJI_DICT_TRUE@am__append_10 = gtkextension.xml \
- @ENABLE_EMOJI_DICT_TRUE@	$(desktop_DATA) $(desktop_in_files) \
- @ENABLE_EMOJI_DICT_TRUE@	$(man_seven_DATA) $(man_seven_files) \
+@@ -1330,7 +1330,7 @@ gen-%.xml.c: %.xml
+ @ENABLE_EMOJI_DICT_TRUE@	$(AM_V_CC_no)$(COMPILE) -c -o $@ $<
  @ENABLE_EMOJI_DICT_TRUE@	$(NULL)
-@@ -577,7 +578,7 @@ top_builddir = @top_builddir@
- top_srcdir = @top_srcdir@
- NULL = 
- libibus = $(top_builddir)/src/libibus-@IBUS_API_VERSION@.la
--component_DATA = gtkpanel.xml $(NULL) $(am__append_8)
-+component_DATA = gtkpanel.xml $(NULL) $(am__append_9)
- componentdir = $(pkgdatadir)/component
- 
- # force include config.h before gi18n.h.
-@@ -598,10 +599,9 @@ AM_LDADD = @GOBJECT2_LIBS@ @GLIB2_LIBS@ 
- AM_VALAFLAGS = --vapidir=$(top_builddir)/bindings/vala \
- 	--vapidir=$(top_srcdir)/bindings/vala --pkg=posix \
- 	--pkg=gtk+-3.0 --pkg=gdk-x11-3.0 --pkg=ibus-1.0 --pkg=config \
--	--pkg=xi --pkg=gdk-wayland \
--	--target-glib="$(VALA_TARGET_GLIB_VERSION)" $(NULL) \
-+	--pkg=xi --target-glib="$(VALA_TARGET_GLIB_VERSION)" $(NULL) \
- 	$(am__append_3) $(am__append_4) $(am__append_5) \
--	$(am__append_6)
-+	$(am__append_6) $(am__append_7)
- ibus_ui_gtk3_SOURCES = \
- 	application.vala \
- 	bindingcommon.vala \
-@@ -627,7 +627,7 @@ ibus_ui_gtk3_LDADD = \
- 	$(AM_LDADD) \
- 	$(NULL)
- 
--CLEANFILES = gtkpanel.xml $(NULL) $(am__append_9)
-+CLEANFILES = gtkpanel.xml $(NULL) $(am__append_10)
- emoji_headers = \
-     ibusemojidialog.h   \
-     $(NULL)
+ # of emojier.c: emojier.vala
+-@ENABLE_EMOJI_DICT_TRUE@panelbinding.c: $(ibus_extension_gtk3_VALASOURCES)
++@ENABLE_EMOJI_DICT_TRUE@panelbinding.c: $(ibus_extension_gtk3_VALASOURCES) Makefile
+ @ENABLE_EMOJI_DICT_TRUE@	$(AM_V_VALAC)$(am__cd) $(srcdir) && $(VALAC) $(AM_VALAFLAGS) \
+ @ENABLE_EMOJI_DICT_TRUE@$(VALAFLAGS) -C $(ibus_extension_gtk3_VALASOURCES)
+ @ENABLE_EMOJI_DICT_TRUE@	$(NULL)
