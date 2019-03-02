@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2018/09/29 12:08:46 tnn Exp $
+@comment $NetBSD: PLIST,v 1.14 2019/03/02 02:16:32 tsutsui Exp $
 bin/ibus
 bin/ibus-daemon
 bin/ibus-setup
@@ -50,7 +50,6 @@ lib/pkgconfig/ibus-1.0.pc
 libexec/ibus-dconf
 libexec/ibus-engine-simple
 libexec/ibus-extension-gtk3
-libexec/ibus-gconf
 libexec/ibus-portal
 libexec/ibus-ui-emojier
 libexec/ibus-ui-gtk3
@@ -62,15 +61,14 @@ man/man5/00-upstream-settings.5
 man/man5/ibus.5
 man/man7/ibus-emoji.7
 share/GConf/gsettings/ibus.convert
-share/applications/ibus-setup.desktop
 share/applications/org.freedesktop.IBus.Panel.Emojier.desktop
 share/applications/org.freedesktop.IBus.Panel.Extension.Gtk3.desktop
+share/applications/org.freedesktop.IBus.Setup.desktop
 share/bash-completion/completions/ibus.bash
 share/dbus-1/services/org.freedesktop.IBus.service
 share/dbus-1/services/org.freedesktop.portal.IBus.service
 share/examples/ibus/dconf/db/ibus.d/00-upstream-settings
 share/examples/ibus/dconf/profile/ibus
-share/gconf/schemas/ibus.schemas
 share/gir-1.0/IBus-1.0.gir
 share/glib-2.0/schemas/org.freedesktop.ibus.gschema.xml
 share/gtk-doc/html/ibus/IBusAttrList.html
@@ -126,13 +124,13 @@ share/gtk-doc/html/ibus/style.css
 share/gtk-doc/html/ibus/up-insensitive.png
 share/gtk-doc/html/ibus/up.png
 share/ibus/component/dconf.xml
-share/ibus/component/gconf.xml
 share/ibus/component/gtkextension.xml
 share/ibus/component/gtkpanel.xml
 share/ibus/component/simple.xml
 share/ibus/dicts/emoji-af.dict
 share/ibus/dicts/emoji-am.dict
 share/ibus/dicts/emoji-ar.dict
+share/ibus/dicts/emoji-ar_SA.dict
 share/ibus/dicts/emoji-as.dict
 share/ibus/dicts/emoji-ast.dict
 share/ibus/dicts/emoji-az.dict
@@ -176,6 +174,7 @@ share/ibus/dicts/emoji-hi.dict
 share/ibus/dicts/emoji-hr.dict
 share/ibus/dicts/emoji-hu.dict
 share/ibus/dicts/emoji-hy.dict
+share/ibus/dicts/emoji-ia.dict
 share/ibus/dicts/emoji-id.dict
 share/ibus/dicts/emoji-is.dict
 share/ibus/dicts/emoji-it.dict
@@ -186,6 +185,7 @@ share/ibus/dicts/emoji-kk.dict
 share/ibus/dicts/emoji-km.dict
 share/ibus/dicts/emoji-kn.dict
 share/ibus/dicts/emoji-ko.dict
+share/ibus/dicts/emoji-ku.dict
 share/ibus/dicts/emoji-ky.dict
 share/ibus/dicts/emoji-lo.dict
 share/ibus/dicts/emoji-lt.dict
@@ -206,6 +206,7 @@ share/ibus/dicts/emoji-pl.dict
 share/ibus/dicts/emoji-ps.dict
 share/ibus/dicts/emoji-pt.dict
 share/ibus/dicts/emoji-pt_PT.dict
+share/ibus/dicts/emoji-qu.dict
 share/ibus/dicts/emoji-ro.dict
 share/ibus/dicts/emoji-root.dict
 share/ibus/dicts/emoji-ru.dict
@@ -217,6 +218,7 @@ share/ibus/dicts/emoji-sq.dict
 share/ibus/dicts/emoji-sr.dict
 share/ibus/dicts/emoji-sr_Cyrl_BA.dict
 share/ibus/dicts/emoji-sr_Latn.dict
+share/ibus/dicts/emoji-sr_Latn_BA.dict
 share/ibus/dicts/emoji-sv.dict
 share/ibus/dicts/emoji-sw.dict
 share/ibus/dicts/emoji-ta.dict
