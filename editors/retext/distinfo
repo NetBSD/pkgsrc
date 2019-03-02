@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/03/02 20:49:10 gutteridge Exp $
+
+SHA1 (ReText-7.0.4.tar.gz) = c50eef7ac7b7dc314e2913daadc4686e53eed8fe
+RMD160 (ReText-7.0.4.tar.gz) = 1f62ecfd43916b64d5117b7051d0c9b20c9086ee
+SHA512 (ReText-7.0.4.tar.gz) = cb12666b15414f4bf83f3b07c94d3bcba13dd3e6c3832c66520bfe8caafeeb87cc083a1e74530d98d6e00a00363add55fdf873e6de385e637876454130deebb3
+Size (ReText-7.0.4.tar.gz) = 402934 bytes
