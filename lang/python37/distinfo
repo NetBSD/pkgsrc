@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2019/03/02 13:23:36 adam Exp $
+$NetBSD: distinfo,v 1.6 2019/03/02 15:59:37 ryoon Exp $
 
 SHA1 (Python-3.7.2.tar.xz) = c3dc6928516bcb934cf4740461044c79c7c35494
 RMD160 (Python-3.7.2.tar.xz) = 4117feee6360078efea9a09c154b753570154445
@@ -16,6 +16,6 @@ SHA1 (patch-Modules_nismodule.c) = 1bafe9b06359586d027a77011b103877590d947d
 SHA1 (patch-Modules_socketmodule.c) = c0bdb256bccc176c2406feec4080cd91fcb693b2
 SHA1 (patch-Modules_socketmodule.h) = 13a3290eb72078067060d3e71b7baa08f3eb591c
 SHA1 (patch-Python_thread__pthread.h) = fb81eaa604b4ed7c1b64c3f4731d58a8aee257be
-SHA1 (patch-configure) = a96f9e82523a8a02642ad293668d7111cf9e2a99
+SHA1 (patch-configure) = 7945fe47fe894a33aceea06918c4740197e4135a
 SHA1 (patch-pyconfig.h.in) = 58e2c03489f9b6e4d88f144d8c09773f92eacd61
 SHA1 (patch-setup.py) = 3edd2ab894f453be19dc4af06f3e78f49e5e2c34
