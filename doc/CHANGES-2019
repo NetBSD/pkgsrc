@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.977 2019/03/02 02:19:04 tsutsui Exp $
+$NetBSD: CHANGES-2019,v 1.978 2019/03/02 03:54:30 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1677,3 +1677,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated multimedia/handbrake to 1.2.2 [ryoon 2019-03-01]
 	Updated inputmethod/ibus to 1.5.20 [tsutsui 2019-03-02]
 	Updated inputmethod/ibus-python to 1.5.20 [tsutsui 2019-03-02]
+	Updated converters/p5-JSON-XS to 4.01 [wen 2019-03-02]
