@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2018/11/13 11:54:06 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/03/02 13:23:36 adam Exp $
 
 .include "dist.mk"
 
 PKGNAME=	python37-${PY_DISTVERSION}
+PKGREVISION=	1
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,7 +13,7 @@ LICENSE=	python-software-foundation
 
 CONFLICTS+=	python-[0-9]*
 
-PLIST_AWK+=		-f ${PKGSRCDIR}/lang/python/plist-python.awk
+PLIST_AWK=		-f ${PKGSRCDIR}/lang/python/plist-python.awk
 PLIST_AWK_ENV+=		PYVERS=37
 PRINT_PLIST_AWK+=	/^[^@]/ && /[^\/]+\.pyc$$/ {
 PRINT_PLIST_AWK+=	sub(/__pycache__\//, "")
@@ -151,23 +152,16 @@ REPLACE_FILES.py37+=	Lib/turtledemo/yinyang.py
 REPLACE_FILES.py37+=	Lib/uu.py
 REPLACE_FILES.py37+=	Lib/webbrowser.py
 
-SUBST_CLASSES+=		findlib
-SUBST_MESSAGE.findlib=	Fixing find_library_file on Darwin.
-SUBST_STAGE.findlib=	pre-configure
-SUBST_FILES.findlib=	Lib/distutils/unixccompiler.py
-SUBST_SED.findlib=	-e 's,/usr/local,${PREFIX},'
-
 # XXX: It might be needed to add manually more paths like ${PREFIX}/qt5/lib
-# Testing:
-# >>> from ctypes.util import find_library
-# >>> find_library("m")
-# 'libm.so.0'
-
-SUBST_CLASSES+=		pfindlib
-SUBST_MESSAGE.pfindlib=	Fixing find_library() on POSIX-like (excluding Darwin) systems.
-SUBST_STAGE.pfindlib=	pre-configure
-SUBST_FILES.pfindlib=	Lib/ctypes/util.py
-SUBST_SED.pfindlib=	-e 's!\(-Wl,-t -o\)!${COMPILER_RPATH_FLAG}${PREFIX}/lib -L${PREFIX}/lib \1!'
+# Test: python -c 'from ctypes.util import find_library; print(find_library("ffi"));'
+SUBST_CLASSES+=		findlib
+SUBST_MESSAGE.findlib=	Fixing find_library().
+SUBST_STAGE.findlib=	pre-configure
+SUBST_FILES.findlib=	Lib/ctypes/macholib/dyld.py
+SUBST_FILES.findlib+=	Lib/ctypes/util.py
+SUBST_FILES.findlib+=	Lib/distutils/unixccompiler.py
+SUBST_SED.findlib=	-e 's,/usr/local,${PREFIX},'
+SUBST_SED.findlib+=	-e "s!\('-Wl,-t'\)!'${COMPILER_RPATH_FLAG}${PREFIX}/lib', '-L${PREFIX}/lib', \1!"
 
 .include "options.mk"
 
