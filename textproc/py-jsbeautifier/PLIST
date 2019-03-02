@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/09/12 10:25:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/03/02 14:41:25 adam Exp $
 bin/js-beautify-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -27,6 +27,12 @@ ${PYSITELIB}/jsbeautifier/core/options.pyo
 ${PYSITELIB}/jsbeautifier/core/output.py
 ${PYSITELIB}/jsbeautifier/core/output.pyc
 ${PYSITELIB}/jsbeautifier/core/output.pyo
+${PYSITELIB}/jsbeautifier/core/pattern.py
+${PYSITELIB}/jsbeautifier/core/pattern.pyc
+${PYSITELIB}/jsbeautifier/core/pattern.pyo
+${PYSITELIB}/jsbeautifier/core/templatablepattern.py
+${PYSITELIB}/jsbeautifier/core/templatablepattern.pyc
+${PYSITELIB}/jsbeautifier/core/templatablepattern.pyo
 ${PYSITELIB}/jsbeautifier/core/token.py
 ${PYSITELIB}/jsbeautifier/core/token.pyc
 ${PYSITELIB}/jsbeautifier/core/token.pyo
@@ -36,6 +42,9 @@ ${PYSITELIB}/jsbeautifier/core/tokenizer.pyo
 ${PYSITELIB}/jsbeautifier/core/tokenstream.py
 ${PYSITELIB}/jsbeautifier/core/tokenstream.pyc
 ${PYSITELIB}/jsbeautifier/core/tokenstream.pyo
+${PYSITELIB}/jsbeautifier/core/whitespacepattern.py
+${PYSITELIB}/jsbeautifier/core/whitespacepattern.pyc
+${PYSITELIB}/jsbeautifier/core/whitespacepattern.pyo
 ${PYSITELIB}/jsbeautifier/javascript/__init__.py
 ${PYSITELIB}/jsbeautifier/javascript/__init__.pyc
 ${PYSITELIB}/jsbeautifier/javascript/__init__.pyo
