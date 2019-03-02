@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.981 2019/03/02 10:32:58 wen Exp $
+$NetBSD: CHANGES-2019,v 1.982 2019/03/02 10:36:21 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1681,3 +1681,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated converters/p5-JSON-PP to 4.02 [wen 2019-03-02]
 	Updated converters/p5-JSON to 4.02 [wen 2019-03-02]
 	Updated devel/p5-Proc-ProcessTable to 0.56 [wen 2019-03-02]
+	Updated devel/p5-Test-Differences to 0.66 [wen 2019-03-02]
