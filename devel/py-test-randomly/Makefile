@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2019/02/28 13:53:15 adam Exp $
+# $NetBSD: Makefile,v 1.3 2019/03/02 14:55:27 adam Exp $
 
-DISTNAME=	pytest-randomly-2.0.0
+DISTNAME=	pytest-randomly-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-randomly/}
@@ -15,9 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-do-test:
-	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
