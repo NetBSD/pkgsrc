@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.22 2019/01/29 23:40:37 jperkin Exp $
+$NetBSD: distinfo,v 1.23 2019/03/02 14:05:04 adam Exp $
 
-SHA1 (talloc-2.1.15.tar.gz) = 17c74ab8612f17ae1ed65751da1335a5a2d93704
-RMD160 (talloc-2.1.15.tar.gz) = 805fea7f529c8fb1f0488b54c28e6d4b50c7c182
-SHA512 (talloc-2.1.15.tar.gz) = 41896f8877e9a52e70b9881c41667dc52d7c1b03c3b248020fd909b794a4c5a4addee3eb944aa80ecfa3b03e6e5e1f67a62b5f3a5dcdc412b3e975352057ff40
-Size (talloc-2.1.15.tar.gz) = 634092 bytes
-SHA1 (patch-buildtools_wafsamba_samba__conftests.py) = d53847b1006b7a87add2303f170bb5f23d5f738c
+SHA1 (talloc-2.1.16.tar.gz) = 69fe815888eddcbe2fb6fc3270ff9e977461000d
+RMD160 (talloc-2.1.16.tar.gz) = 60e5df7e46e39555d7fbeb8b4529a46c53c1f24c
+SHA512 (talloc-2.1.16.tar.gz) = a1affe4ad2a4cf19d4494017e0e6e37cdf9f8e6a98839c9e4e5c02758a7da7ea0040518de9b26707a60eb0a0eab29f939c6823e5840096dc124d351993e05c74
+Size (talloc-2.1.16.tar.gz) = 634906 bytes
+SHA1 (patch-buildtools_wafsamba_samba__conftests.py) = 50ff76f5b085f770751ca8bb93c8544cfdcd40d9
 SHA1 (patch-buildtools_wafsamba_samba__install.py) = d801340617da325e3bb70a90350e45cc8e383c2d
