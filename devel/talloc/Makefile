@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2019/01/15 21:03:10 adam Exp $
+# $NetBSD: Makefile,v 1.31 2019/03/02 14:05:04 adam Exp $
 
-DISTNAME=	talloc-2.1.15
+DISTNAME=	talloc-2.1.16
 CATEGORIES=	devel
 MASTER_SITES=	http://www.samba.org/ftp/talloc/
 
@@ -31,8 +31,6 @@ CONFIGURE_ARGS+=	--jobs=1
 PKGCONFIG_OVERRIDE+=	talloc.pc.in
 PKGCONFIG_OVERRIDE+=	pytalloc-util.pc.in
 TEST_TARGET=		test
-
-PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 2.1.0
 
 PY_PATCHPLIST=		yes
 REPLACE_PYTHON+=	buildtools/bin/waf
