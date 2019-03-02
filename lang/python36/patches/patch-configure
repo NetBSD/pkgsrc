@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.11 2018/06/02 23:31:48 youri Exp $
+$NetBSD: patch-configure,v 1.12 2019/03/02 13:23:36 adam Exp $
 
 Simplify _sysconfigdata to include only platform name.
 
@@ -7,15 +7,15 @@ http://bugs.python.org/issue21458
 
 Changes for consistency across pkgsrc platforms.
 
-Fix linking on Darwin. -stack_size is not yet supported.
+Fix linking on Darwin; don't use -stack_size.
 
 Use gnu99 instead of c99 to avoid "alloca() undefined" problems on macppc.
 
 detect netcan/can.h on NetBSD
 
---- configure.orig	2018-03-28 09:19:31.000000000 +0000
+--- configure.orig	2018-12-23 21:37:14.000000000 +0000
 +++ configure
-@@ -2926,7 +2926,7 @@ $as_echo_n "checking for python interpre
+@@ -2932,7 +2932,7 @@ $as_echo_n "checking for python interpre
  	fi
          { $as_echo "$as_me:${as_lineno-$LINENO}: result: $interp" >&5
  $as_echo "$interp" >&6; }
@@ -24,7 +24,7 @@ detect netcan/can.h on NetBSD
      fi
  elif test "$cross_compiling" = maybe; then
      as_fn_error $? "Cross compiling required --host=HOST-TUPLE and --build=ARCH" "$LINENO" 5
-@@ -3318,7 +3318,7 @@ case $ac_sys_system/$ac_sys_release in
+@@ -3324,7 +3324,7 @@ case $ac_sys_system/$ac_sys_release in
    # Reconfirmed for OpenBSD 3.3 by Zachary Hamm, for 3.4 by Jason Ish.
    # In addition, Stefan Krah confirms that issue #1244610 exists through
    # OpenBSD 4.6, but is fixed in 4.7.
@@ -33,7 +33,7 @@ detect netcan/can.h on NetBSD
      define_xopen_source=no
      # OpenBSD undoes our definition of __BSD_VISIBLE if _XOPEN_SOURCE is
      # also defined. This can be overridden by defining _BSD_SOURCE
-@@ -5963,7 +5963,7 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
+@@ -5969,7 +5969,7 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
  	      PY3LIBRARY=libpython3.so
  	  fi
            ;;
@@ -42,7 +42,7 @@ detect netcan/can.h on NetBSD
  	  LDLIBRARY='libpython$(LDVERSION).so'
  	  BLDLIBRARY='-L. -lpython$(LDVERSION)'
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-@@ -6938,7 +6938,7 @@ UNIVERSAL_ARCH_FLAGS=
+@@ -6977,7 +6977,7 @@ UNIVERSAL_ARCH_FLAGS=
  # tweak BASECFLAGS based on compiler and platform
  case $GCC in
  yes)
@@ -51,7 +51,7 @@ detect netcan/can.h on NetBSD
  
      { $as_echo "$as_me:${as_lineno-$LINENO}: checking for -Wextra" >&5
  $as_echo_n "checking for -Wextra... " >&6; }
-@@ -8121,7 +8121,7 @@ done
+@@ -8242,7 +8242,7 @@ done
  
  
  # On Linux, can.h and can/raw.h require sys/socket.h
@@ -60,7 +60,7 @@ detect netcan/can.h on NetBSD
  do :
    as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
  ac_fn_c_check_header_compile "$LINENO" "$ac_header" "$as_ac_Header" "
-@@ -9237,8 +9237,8 @@ then
+@@ -9358,8 +9358,8 @@ then
  			LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  		else
  			# No framework, use the Python app as bundle-loader
@@ -71,7 +71,7 @@ detect netcan/can.h on NetBSD
  			LDCXXSHARED="$LDCXXSHARED "'-bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
  		fi ;;
  	Darwin/*)
-@@ -9262,9 +9262,9 @@ then
+@@ -9383,9 +9383,9 @@ then
  				LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  			else
  				# No framework, use the Python app as bundle-loader
@@ -84,7 +84,7 @@ detect netcan/can.h on NetBSD
  			fi
  		else
  			# building for OS X 10.3 and later
-@@ -9303,6 +9303,9 @@ then
+@@ -9424,6 +9424,9 @@ then
  				   ;;
  				esac
  		fi;;
@@ -94,7 +94,7 @@ detect netcan/can.h on NetBSD
  	NetBSD*|DragonFly*)
  		LDSHARED='$(CC) -shared'
  		LDCXXSHARED='$(CXX) -shared';;
-@@ -9347,7 +9350,7 @@ then
+@@ -9468,7 +9471,7 @@ then
  	Linux-android*) ;;
  	Linux*|GNU*) CCSHARED="-fPIC";;
  	BSD/OS*/4*) CCSHARED="-fpic";;
@@ -103,16 +103,15 @@ detect netcan/can.h on NetBSD
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then CCSHARED="-fPIC"
-@@ -9387,7 +9390,7 @@ then
+@@ -9508,7 +9511,6 @@ then
  		# Issue #18075: the default maximum stack size (8MBytes) is too
  		# small for the default recursion limit. Increase the stack size
  		# to ensure that tests don't crash
 -		LINKFORSHARED="-Wl,-stack_size,1000000 $LINKFORSHARED"
-+		#LINKFORSHARED="-Wl,-stack_size,1000000 $LINKFORSHARED"
  
  		if test "$enable_framework"
  		then
-@@ -9397,7 +9400,7 @@ then
+@@ -9518,7 +9520,7 @@ then
  	OpenUNIX*|UnixWare*) LINKFORSHARED="-Wl,-Bexport";;
  	SCO_SV*) LINKFORSHARED="-Wl,-Bexport";;
  	ReliantUNIX*) LINKFORSHARED="-W1 -Blargedynsym";;
@@ -121,7 +120,7 @@ detect netcan/can.h on NetBSD
  		if [ "`$CC -dM -E - </dev/null | grep __ELF__`" != "" ]
  		then
  			LINKFORSHARED="-Wl,--export-dynamic"
-@@ -11174,7 +11177,7 @@ if ${ac_cv_dtrace_link+:} false; then :
+@@ -11333,7 +11335,7 @@ if ${ac_cv_dtrace_link+:} false; then :
    $as_echo_n "(cached) " >&6
  else
                ac_cv_dtrace_link=no
@@ -130,7 +129,7 @@ detect netcan/can.h on NetBSD
              "$DTRACE" -G -s conftest.d -o conftest.o > /dev/null 2>&1 && \
                  ac_cv_dtrace_link=yes
  
-@@ -15001,8 +15004,6 @@ $as_echo "$SOABI" >&6; }
+@@ -15177,8 +15179,6 @@ $as_echo "$SOABI" >&6; }
  
  
  case $ac_sys_system in
@@ -139,7 +138,7 @@ detect netcan/can.h on NetBSD
      *)
  	EXT_SUFFIX=${SHLIB_SUFFIX};;
  esac
-@@ -15014,11 +15015,7 @@ LDVERSION='$(VERSION)$(ABIFLAGS)'
+@@ -15190,11 +15190,7 @@ LDVERSION='$(VERSION)$(ABIFLAGS)'
  $as_echo "$LDVERSION" >&6; }
  
  
