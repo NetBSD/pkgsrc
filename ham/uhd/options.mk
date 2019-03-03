@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2017/07/24 07:30:07 dbj Exp $
+# $NetBSD: options.mk,v 1.6 2019/03/03 10:36:14 mef Exp $
 ### Set options
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uhd
 PKG_SUPPORTED_OPTIONS=	doxygen manual
@@ -16,5 +16,7 @@ CMAKE_ARGS+=     	-DENABLE_DOXYGEN:BOOL=OFF
 
 .if !empty(PKG_OPTIONS:Mmanual)
 BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
-#PLIST_SRC+=		${PKGDIR}/PLIST.manual
+PLIST_SRC+=		${PKGDIR}/PLIST.manual
+.else
+PLIST_SRC+=		${PKGDIR}/PLIST.manual-nogz
 .endif
