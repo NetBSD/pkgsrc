@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.698 2019/02/23 20:33:16 triaxx Exp $
+# $NetBSD: Makefile,v 1.699 2019/03/03 15:21:03 taca Exp $
 #
 
 COMMENT=	Security tools
@@ -81,10 +81,6 @@ SUBDIR+=	erlang-epam
 SUBDIR+=	erlang-fast_tls
 SUBDIR+=	erlang-jose
 SUBDIR+=	erlang-p1_oauth2
-#SUBDIR+=	f-prot-antivirus6		# only contains shared files
-SUBDIR+=	f-prot-antivirus6-fs-bin
-SUBDIR+=	f-prot-antivirus6-ms-bin
-SUBDIR+=	f-prot-antivirus6-ws-bin
 SUBDIR+=	fail2ban
 SUBDIR+=	flawfinder
 SUBDIR+=	fprint-demo
