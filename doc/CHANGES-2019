@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1016 2019/03/03 16:35:57 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1017 2019/03/03 16:45:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1750,3 +1750,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed www/ruby-journey [taca 2019-03-03]
 	Added devel/intellij-ce-bin version 2018.3.5 [youri 2019-03-03]
 	Updated www/ruby-jquery-rails to 4.3.3 [taca 2019-03-03]
+	Updated www/ruby-rack-test to 1.1.0 [taca 2019-03-03]
