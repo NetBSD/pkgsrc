@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 02:47:37 agc Exp $
-
-SHA1 (sass-rails-3.2.6.gem) = f787121ac6ecc02310a38bbe8a7c4fd2efb4dce9
-RMD160 (sass-rails-3.2.6.gem) = 9ef199d01ba736b86c9e6205b9bb7f8fbf3b4a65
-SHA512 (sass-rails-3.2.6.gem) = ebbc9b3901176871dce8cdce3f3896fe726bfa7a826420ec6e313d6573119585a70d10cc008aec5e58888f60bc4794c08327c3e2743b11cfe3cd6305cf6e942e
-Size (sass-rails-3.2.6.gem) = 88576 bytes
