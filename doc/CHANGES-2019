@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1019 2019/03/03 17:36:27 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1020 2019/03/03 17:42:56 youri Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1753,3 +1753,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/ruby-rack-test to 1.1.0 [taca 2019-03-03]
 	Removed www/ruby-rack15 [taca 2019-03-03]
 	Updated www/ruby-sinatra-contrib to 2.0.5nb1 [taca 2019-03-03]
+	Added devel/clion-bin version 2018.3.4 [youri 2019-03-03]
