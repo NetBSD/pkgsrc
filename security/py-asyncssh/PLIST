@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/07/04 03:38:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/03/03 12:32:12 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -49,9 +49,6 @@ ${PYSITELIB}/asyncssh/crypto/chacha.pyo
 ${PYSITELIB}/asyncssh/crypto/cipher.py
 ${PYSITELIB}/asyncssh/crypto/cipher.pyc
 ${PYSITELIB}/asyncssh/crypto/cipher.pyo
-${PYSITELIB}/asyncssh/crypto/curve25519.py
-${PYSITELIB}/asyncssh/crypto/curve25519.pyc
-${PYSITELIB}/asyncssh/crypto/curve25519.pyo
 ${PYSITELIB}/asyncssh/crypto/dsa.py
 ${PYSITELIB}/asyncssh/crypto/dsa.pyc
 ${PYSITELIB}/asyncssh/crypto/dsa.pyo
@@ -61,6 +58,9 @@ ${PYSITELIB}/asyncssh/crypto/ec.pyo
 ${PYSITELIB}/asyncssh/crypto/ec_params.py
 ${PYSITELIB}/asyncssh/crypto/ec_params.pyc
 ${PYSITELIB}/asyncssh/crypto/ec_params.pyo
+${PYSITELIB}/asyncssh/crypto/ed.py
+${PYSITELIB}/asyncssh/crypto/ed.pyc
+${PYSITELIB}/asyncssh/crypto/ed.pyo
 ${PYSITELIB}/asyncssh/crypto/kdf.py
 ${PYSITELIB}/asyncssh/crypto/kdf.pyc
 ${PYSITELIB}/asyncssh/crypto/kdf.pyo
@@ -82,9 +82,9 @@ ${PYSITELIB}/asyncssh/dsa.pyo
 ${PYSITELIB}/asyncssh/ecdsa.py
 ${PYSITELIB}/asyncssh/ecdsa.pyc
 ${PYSITELIB}/asyncssh/ecdsa.pyo
-${PYSITELIB}/asyncssh/ed25519.py
-${PYSITELIB}/asyncssh/ed25519.pyc
-${PYSITELIB}/asyncssh/ed25519.pyo
+${PYSITELIB}/asyncssh/eddsa.py
+${PYSITELIB}/asyncssh/eddsa.pyc
+${PYSITELIB}/asyncssh/eddsa.pyo
 ${PYSITELIB}/asyncssh/editor.py
 ${PYSITELIB}/asyncssh/editor.pyc
 ${PYSITELIB}/asyncssh/editor.pyo
@@ -172,6 +172,9 @@ ${PYSITELIB}/asyncssh/socks.pyo
 ${PYSITELIB}/asyncssh/stream.py
 ${PYSITELIB}/asyncssh/stream.pyc
 ${PYSITELIB}/asyncssh/stream.pyo
+${PYSITELIB}/asyncssh/subprocess.py
+${PYSITELIB}/asyncssh/subprocess.pyc
+${PYSITELIB}/asyncssh/subprocess.pyo
 ${PYSITELIB}/asyncssh/version.py
 ${PYSITELIB}/asyncssh/version.pyc
 ${PYSITELIB}/asyncssh/version.pyo
