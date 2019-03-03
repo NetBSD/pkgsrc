@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.manual,v 1.1 2014/09/08 07:12:05 mef Exp $
+@comment $NetBSD: PLIST.manual,v 1.2 2019/03/03 10:36:14 mef Exp $
 share/doc/uhd/manual/html/build.html
 share/doc/uhd/manual/html/calibration.html
 share/doc/uhd/manual/html/coding.html
@@ -46,3 +46,15 @@ share/doc/uhd/manual/rst/usrp_b200.rst
 share/doc/uhd/manual/rst/usrp_e1x0.rst
 share/doc/uhd/manual/rst/usrp_x3x0.rst
 share/doc/uhd/manual/rst/usrp_x3x0_config.rst
+man/man1/octoclock_firmware_burner.1.gz
+man/man1/uhd_cal_rx_iq_balance.1.gz
+man/man1/uhd_cal_tx_dc_offset.1.gz
+man/man1/uhd_cal_tx_iq_balance.1.gz
+man/man1/uhd_config_info.1.gz
+man/man1/uhd_find_devices.1.gz
+man/man1/uhd_image_loader.1.gz
+man/man1/uhd_images_downloader.1.gz
+man/man1/uhd_usrp_probe.1.gz
+man/man1/usrp2_card_burner.1.gz
+man/man1/usrp_n2xx_simple_net_burner.1.gz
+man/man1/usrp_x3xx_fpga_burner.1.gz
