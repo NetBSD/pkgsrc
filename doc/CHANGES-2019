@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.996 2019/03/03 00:58:56 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.997 2019/03/03 09:16:59 he Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1707,3 +1707,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added editors/retext version 7.0.4 [gutteridge 2019-03-02]
 	Updated www/firefox to 65.0.2 [ryoon 2019-03-03]
 	Updated www/firefox-l10n to 65.0.2 [ryoon 2019-03-03]
+	Updated lang/rust to 1.33.0 [he 2019-03-03]
