@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 02:47:33 agc Exp $
-
-SHA1 (coffee-rails-3.2.2.gem) = f625d436e6f5253bf1127a1bbe93eb7bf1db7627
-RMD160 (coffee-rails-3.2.2.gem) = 016ab3b1f4cfa2a2d7a321b5a02a9430cd13e19f
-SHA512 (coffee-rails-3.2.2.gem) = b4c6a6d0658f50fcd7632260bbddb25e619a9dfb45c0bab8fd60cbfaf32480875fc4b90bd0e77eef5cf25b84b1de08b1bf335454b2c828340ea20a0986373244
-Size (coffee-rails-3.2.2.gem) = 7168 bytes
