@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1013 2019/03/03 16:24:42 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1014 2019/03/03 16:27:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1747,3 +1747,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed databases/ruby-arel30 [taca 2019-03-03]
 	Removed mail/ruby-mail25 [taca 2019-03-03]
 	Removed misc/ruby-sprockets22 [taca 2019-03-03]
+	Removed www/ruby-journey [taca 2019-03-03]
