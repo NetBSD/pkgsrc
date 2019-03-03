@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.7 2017/03/23 14:36:20 taca Exp $
-
-SHA1 (fp-NetBSD.x86.32-ms-6.2.3.tar.gz) = e703c332f1961109151e60762446684077812955
-RMD160 (fp-NetBSD.x86.32-ms-6.2.3.tar.gz) = ebfa5c41a5bccff889aad788b3d2ec6a663552e0
-SHA512 (fp-NetBSD.x86.32-ms-6.2.3.tar.gz) = 26f70fe6c810c7d5db9c8fdf90fb636f5a9f56340fcce8a3e09145c5693199fd935808542e0d2fd2150efa9e9c7ce01e22d39d5fced54229d5d67ea06fa0da13
-Size (fp-NetBSD.x86.32-ms-6.2.3.tar.gz) = 31872002 bytes
-SHA1 (patch-aa) = 3a66281eb9e1a053572cc8926184ecd2ff114bd7
-SHA1 (patch-ab) = d13debeb745de1f081309fd8154d2b0b09231c10
-SHA1 (patch-ac) = 5b0db7bd037e8411992ed39e7bae23fbe5998be0
