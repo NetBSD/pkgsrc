@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.31 2018/07/22 06:45:31 rillig Exp $
+# $NetBSD: help.awk,v 1.32 2019/03/03 16:47:58 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -67,7 +67,8 @@ function end_of_topic() {
 	cleanup();
 }
 
-function sorted_keys(array, separator,   elem, list, listlen, i, j, tmp, joined) {
+# Returns the sorted keys of the array, each prefixed by the prefix.
+function sorted_keys(array, prefix,   elem, list, listlen, i, j, tmp, result) {
 	listlen = 0;
 	for (elem in array)
 		list[listlen++] = elem;
@@ -82,11 +83,11 @@ function sorted_keys(array, separator,   elem, list, listlen, i, j, tmp, joined)
 		}
 	}
 
-	joined = "";
+	result = "";
 	for (i = 0; i < listlen; i++) {
-		joined = joined separator list[i];
+		result = result prefix list[i];
 	}
-	return joined;
+	return result;
 }
 
 function cleanup() {
@@ -219,7 +220,6 @@ END {
 	end_of_topic();
 	if (print_index) {
 		print "Available help topics:";
-		print "";
 		print sorted_keys(all_keywords, "\n");
 	} else if (!found_anything) {
 		appearances = sorted_keys(all_appearances, "\n");
