@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Type=Application
+Name=RubyMine
+GenericName=RubyMine
+Comment=Ruby IDE
+Icon=@@IDEA_HOME@@/bin/rubymine.png
+Exec=@@IDEA_HOME@@/bin/rubymine.sh
+Terminal=false
+StartupNotify=true
+Categories=Application;Development;
