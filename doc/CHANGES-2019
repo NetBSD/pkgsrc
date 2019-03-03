@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1023 2019/03/03 18:46:01 youri Exp $
+$NetBSD: CHANGES-2019,v 1.1024 2019/03/03 19:06:38 youri Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1757,3 +1757,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/intellij-ue-bin version 2018.3.5 [youri 2019-03-03]
 	Added devel/pycharm-bin version 2018.3.5 [youri 2019-03-03]
 	Added devel/rubymine-bin version 2018.3.5 [youri 2019-03-03]
+	Added devel/phpstorm-bin version 2018.3.4 [youri 2019-03-03]
