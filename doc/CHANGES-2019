@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1006 2019/03/03 15:34:01 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1007 2019/03/03 15:46:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1733,3 +1733,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/ruby-sequel to 5.18.0 [taca 2019-03-03]
 	Removed databases/ruby-dm-active_model [taca 2019-03-03]
 	Removed databases/ruby-dm-rails [taca 2019-03-03]
+	Added www/ruby-coffee-rails version 4.2.2 [taca 2019-03-03]
