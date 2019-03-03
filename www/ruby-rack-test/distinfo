@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 02:47:37 agc Exp $
+$NetBSD: distinfo,v 1.7 2019/03/03 16:45:21 taca Exp $
 
-SHA1 (rack-test-0.6.3.gem) = 6fd5a7f881a65ef93b66e21556ef67fbe08a2fcc
-RMD160 (rack-test-0.6.3.gem) = faed6fa9f4f9e3650a07deb6706e1a0da31c949e
-SHA512 (rack-test-0.6.3.gem) = a5ad0f20130eedc153515127d2483cb1322c230ab772307943ec6eb295706f3aab26c8599cba69323b3cdc5692b284ba0609d8db957ade7085a95d94ccdf8b41
-Size (rack-test-0.6.3.gem) = 23552 bytes
+SHA1 (rack-test-1.1.0.gem) = b80bc5ca38a885e747271675ba91dd3d02136bf1
+RMD160 (rack-test-1.1.0.gem) = fb2c8fc3c40ac11607d708d099a17ada8ac730b4
+SHA512 (rack-test-1.1.0.gem) = 16e291fa5a88b6866e8057b4bf1aae4ffe17dd9b0300c1ee36632c5b21ff2075cb4356f6f78437dd84ea76047a5d3abe3dda087a2c154f5e5712e62d7e57fdc9
+Size (rack-test-1.1.0.gem) = 17920 bytes
