@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2019/03/03 16:34:27 youri Exp $
+
+SHA1 (ideaIC-2018.3.5-no-jdk.tar.gz) = 9e4e3a949623ebc0c25fa4163d9435fac0ebd53f
+RMD160 (ideaIC-2018.3.5-no-jdk.tar.gz) = 0d2927985b89943e5383bc4d544d90f0fc3520af
+SHA512 (ideaIC-2018.3.5-no-jdk.tar.gz) = 9e6a2fa45f1306bdd52c3e3439c2d326c703a221f555336fd2a05f37c6b5c0a8ec71c93a5e96d3fefcf9aae1b8541117b3fbe8a2b696e6baf6cc7a08636ad3e5
+Size (ideaIC-2018.3.5-no-jdk.tar.gz) = 461492560 bytes
+SHA1 (patch-bin_idea.sh) = 5d00f879376af911f092df4408357f95092294c8
