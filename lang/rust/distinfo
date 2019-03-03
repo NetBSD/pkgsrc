@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.59 2019/03/03 09:16:21 he Exp $
+$NetBSD: distinfo,v 1.60 2019/03/03 09:50:46 he Exp $
 
 SHA1 (rust-1.32.0-aarch64-unknown-netbsd.tar.gz) = 054d3c92036c50bf52dda5785e5f2b789160c844
 RMD160 (rust-1.32.0-aarch64-unknown-netbsd.tar.gz) = ece72548e6339cd184816823c649e83a3e0f10e1
@@ -106,13 +106,11 @@ SHA512 (rustc-1.33.0-src.tar.gz) = 65ae2615f4639ccea146fc431aca62e6f0793aa5e584e
 Size (rustc-1.33.0-src.tar.gz) = 159251963 bytes
 SHA1 (patch-src_bootstrap_bin_rustc.rs) = 5e6b0cb25401db4fef6e74f73764e69f3c09569c
 SHA1 (patch-src_bootstrap_bootstrap.py) = 5b886b95857bf019c2e37cb380e6905cb444b756
-SHA1 (patch-src_bootstrap_builder.rs) = e02356401417f8e8296a5fe27c68072f698f0190
+SHA1 (patch-src_bootstrap_builder.rs) = 7e23348dc5555fdb3833a7f8734cfe687c6e533c
 SHA1 (patch-src_bootstrap_lib.rs) = bc23743f1b9c4ad3d7557b4fdf8a55976ca7f417
-SHA1 (patch-src_libbacktrace_configure) = b2c1e9b93a99408aad42ab9f1af27704cc81bdd8
-SHA1 (patch-src_liblibc_src_unix_solaris_mod.rs) = aeb7c22995e33c700ce3ea4336368a1fd08120e1
-SHA1 (patch-src_librustc__llvm_build.rs) = a56bf5435e40bb012641ada6b20256901a1073fb
+SHA1 (patch-src_librustc__llvm_build.rs) = 9b0b9e82192bc8615cb816052087ffab73df3c9a
 SHA1 (patch-src_libstd_build.rs) = 2334879e4b730014de08bb2dfff1a643292a630e
-SHA1 (patch-src_libstd_sys_unix_thread.rs) = 46ef46365658e2f895bd3dde9c74f352890e9ccc
+SHA1 (patch-src_libstd_sys_unix_thread.rs) = 2554f1a42afaa0ddce5053860f4dabecdf6c527a
 SHA1 (patch-src_libsyntax__pos_span__encoding.rs) = c891cffab8ae47b13b3b391ddd1a6c62ee2b38f3
 SHA1 (patch-src_libunwind_build.rs) = 74e2101f0cd78ca68b0a9d14355e20dcaea66100
 SHA1 (patch-src_llvm_CMakeLists.txt) = ffdf4337fdc84d8314c97c4e492e6b84244a99d1
