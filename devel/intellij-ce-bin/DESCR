@@ -1,0 +1,20 @@
+IntelliJ IDEA Community Edition is the open source version of IntelliJ
+IDEA, a premier IDE (Integrated Development Environment) for Java,
+Groovy and other programming languages such as Scala or Clojure.
+
+The Community Edition includes:
+
+    An Intelligent code editor that has all the smarts for
+    understanding Java, XML and Groovy code
+
+    Refactorings, code inspections and intentions, super-fast
+    navigation and search
+
+    Testing frameworks integration: JUnit and TestNG
+
+    Build tools support: Ant and Maven
+
+    Popular version control systems integration: CVS, Subversion
+    and Git
+
+    Swing UI designer
