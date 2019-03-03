@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2019/03/03 17:42:40 youri Exp $
+
+SHA1 (CLion-2018.3.4.tar.gz) = 913e6c963049cc9c3d7e5371438205e3ba71b2e6
+RMD160 (CLion-2018.3.4.tar.gz) = 920978275d50c304866b3cc84dbabef9ffa68914
+SHA512 (CLion-2018.3.4.tar.gz) = ffe594b2df390cb41cd2c5629a1b8f9a80cf8463c05d22d43af2da3a8db73e9d52ebd70c15771b813c049299ce4b3a3765a4bd6f65fe59cbd904b3536f182d75
+Size (CLion-2018.3.4.tar.gz) = 454682485 bytes
+SHA1 (patch-bin_clion.sh) = 39563d59f2cab854ffcf1d5e5825082165bd4581
