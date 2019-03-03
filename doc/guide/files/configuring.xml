@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.53 2018/09/18 03:17:27 maya Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.54 2019/03/03 21:36:11 leot Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -125,7 +125,7 @@ spelling mistakes) takes place.</para>
     <itemizedlist>
 	    <listitem><para><varname>PKGSRC_KEEP_BIN_PKGSRC</varname>:
                 By default, binary packages of built packages are
-                preserved in <varname>PACKAGES</varname>/All. Setting
+                preserved in <filename>${PACKAGES}/All</filename>. Setting
 		this variable to "no" prevents this.</para>
             </listitem>
     </itemizedlist>
