@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2019/02/08 14:56:01 nia Exp $
+# $NetBSD: options.mk,v 1.4 2019/03/03 21:05:57 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.psi
 PKG_SUPPORTED_OPTIONS+=	aspell enchant whiteboard xscreensaver
@@ -38,7 +38,7 @@ CONFIGURE_ARGS+=	--disable-aspell
 
 # enable enchant
 .if !empty(PKG_OPTIONS:Menchant)
-.include "../../textproc/enchant/buildlink3.mk"
+.include "../../textproc/enchant2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-enchant
 .endif
