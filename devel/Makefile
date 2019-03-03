@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2783 2019/03/03 16:04:18 taca Exp $
+# $NetBSD: Makefile,v 1.2784 2019/03/03 19:24:44 youri Exp $
 #
 
 COMMENT=	Development utilities
@@ -150,6 +150,7 @@ SUBDIR+=	check
 SUBDIR+=	chmlib
 SUBDIR+=	chrpath
 SUBDIR+=	clib
+SUBDIR+=	clion-bin
 SUBDIR+=	clisp-pcre
 SUBDIR+=	clisp-syscalls
 SUBDIR+=	clisp-wildcard
@@ -496,7 +497,9 @@ SUBDIR+=	imake
 SUBDIR+=	include-what-you-use
 SUBDIR+=	iniparser
 SUBDIR+=	intel2gas
+SUBDIR+=	intellij-ce-bin
 SUBDIR+=	intellij-idea-ce
+SUBDIR+=	intellij-ue-bin
 SUBDIR+=	isect
 SUBDIR+=	ivykis
 SUBDIR+=	jam
@@ -1869,6 +1872,7 @@ SUBDIR+=	php-sysvsem
 SUBDIR+=	php-sysvshm
 SUBDIR+=	php-xcache
 SUBDIR+=	php-xdebug
+SUBDIR+=	phpstorm-bin
 SUBDIR+=	physfs
 SUBDIR+=	picasm
 SUBDIR+=	picopb
@@ -2365,6 +2369,7 @@ SUBDIR+=	py-zope.deprecation
 SUBDIR+=	py-zope.exceptions
 SUBDIR+=	py-zope.hookable
 SUBDIR+=	py-zope.testing
+SUBDIR+=	pycharm-bin
 SUBDIR+=	python-mode
 SUBDIR+=	pythontidy
 SUBDIR+=	qbzr
@@ -2603,6 +2608,7 @@ SUBDIR+=	ruby-validatable
 SUBDIR+=	ruby-wmi-lite
 SUBDIR+=	ruby-zookeeper
 SUBDIR+=	ruby2ruby
+SUBDIR+=	rubymine-bin
 SUBDIR+=	rudiments
 SUBDIR+=	rvm
 SUBDIR+=	rx
