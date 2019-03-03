@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1011 2019/03/03 16:14:48 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1012 2019/03/03 16:22:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1745,3 +1745,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed devel/ruby-activemodel32 [taca 2019-03-03]
 	Removed devel/ruby-activesupport32 [taca 2019-03-03]
 	Removed databases/ruby-arel30 [taca 2019-03-03]
+	Removed mail/ruby-mail25 [taca 2019-03-03]
