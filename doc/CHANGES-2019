@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1009 2019/03/03 15:51:08 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1010 2019/03/03 16:06:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1736,3 +1736,11 @@ Changes to the packages collection and infrastructure in 2019:
 	Added www/ruby-coffee-rails version 4.2.2 [taca 2019-03-03]
 	Removed www/ruby-coffee-rails32 [taca 2019-03-03]
 	Removed www/ruby-sass-rails32 [taca 2019-03-03]
+	Removed www/ruby-rails32 [taca 2019-03-03]
+	Removed devel/ruby-railties32 [taca 2019-03-03]
+	Removed mail/ruby-actionmailer32 [taca 2019-03-03]
+	Removed www/ruby-actionpack32 [taca 2019-03-03]
+	Removed www/ruby-activeresource32 [taca 2019-03-03]
+	Removed databases/ruby-activerecord32 [taca 2019-03-03]
+	Removed devel/ruby-activemodel32 [taca 2019-03-03]
+	Removed devel/ruby-activesupport32 [taca 2019-03-03]
