@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2016/11/19 14:47:22 taca Exp $
-
-SHA1 (journey-1.0.4.gem) = d1fda8327c22e0923020f838a89b93beeb8465e1
-RMD160 (journey-1.0.4.gem) = 28fc04068001dbb7efb9a63dde128e53488e68be
-SHA512 (journey-1.0.4.gem) = 9e6a06da8b77f6efb9941c58f53254e8cf3a1ebb6f8261a66ef3fed9c21ff4e4a90567fee88507b8e2c1fecc0fbdf204a9d3c8473b671bbb4b8c6b9faa6f2a07
-Size (journey-1.0.4.gem) = 28672 bytes
