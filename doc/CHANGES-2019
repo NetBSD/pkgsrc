@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1015 2019/03/03 16:34:43 youri Exp $
+$NetBSD: CHANGES-2019,v 1.1016 2019/03/03 16:35:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1749,3 +1749,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed misc/ruby-sprockets22 [taca 2019-03-03]
 	Removed www/ruby-journey [taca 2019-03-03]
 	Added devel/intellij-ce-bin version 2018.3.5 [youri 2019-03-03]
+	Updated www/ruby-jquery-rails to 4.3.3 [taca 2019-03-03]
