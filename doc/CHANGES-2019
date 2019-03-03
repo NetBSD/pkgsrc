@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1005 2019/03/03 15:24:31 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1006 2019/03/03 15:34:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1731,3 +1731,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed security/f-prot-antivirus6-fs-bin [taca 2019-03-03]
 	Removed security/f-prot-antivirus6-ws-bin [taca 2019-03-03]
 	Updated databases/ruby-sequel to 5.18.0 [taca 2019-03-03]
+	Removed databases/ruby-dm-active_model [taca 2019-03-03]
+	Removed databases/ruby-dm-rails [taca 2019-03-03]
