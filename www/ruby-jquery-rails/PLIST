@@ -1,23 +1,30 @@
-@comment $NetBSD: PLIST,v 1.4 2013/09/15 17:22:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/03/03 16:35:33 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/VERSIONS.md
 ${GEM_LIBDIR}/jquery-rails.gemspec
-${GEM_LIBDIR}/lib/generators/jquery/install/install_generator.rb
 ${GEM_LIBDIR}/lib/jquery-rails.rb
 ${GEM_LIBDIR}/lib/jquery/assert_select.rb
 ${GEM_LIBDIR}/lib/jquery/rails.rb
 ${GEM_LIBDIR}/lib/jquery/rails/engine.rb
-${GEM_LIBDIR}/lib/jquery/rails/railtie.rb
 ${GEM_LIBDIR}/lib/jquery/rails/version.rb
+${GEM_LIBDIR}/test/assert_select_jquery_test.rb
+${GEM_LIBDIR}/test/test_helper.rb
 ${GEM_LIBDIR}/vendor/assets/javascripts/jquery.js
 ${GEM_LIBDIR}/vendor/assets/javascripts/jquery.min.js
 ${GEM_LIBDIR}/vendor/assets/javascripts/jquery.min.map
+${GEM_LIBDIR}/vendor/assets/javascripts/jquery2.js
+${GEM_LIBDIR}/vendor/assets/javascripts/jquery2.min.js
+${GEM_LIBDIR}/vendor/assets/javascripts/jquery2.min.map
+${GEM_LIBDIR}/vendor/assets/javascripts/jquery3.js
+${GEM_LIBDIR}/vendor/assets/javascripts/jquery3.min.js
+${GEM_LIBDIR}/vendor/assets/javascripts/jquery3.min.map
 ${GEM_LIBDIR}/vendor/assets/javascripts/jquery_ujs.js
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
