@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1002 2019/03/03 15:04:58 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1003 2019/03/03 15:11:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1726,3 +1726,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added mail/ruby-actionmailer52 version 5.2.2 [taca 2019-03-03]
 	Added devel/ruby-railties52 version 5.2.2 [taca 2019-03-03]
 	Added www/ruby-rails52 version 5.2.2 [taca 2019-03-03]
+	Updated databases/freetds to 1.00.111 [taca 2019-03-03]
