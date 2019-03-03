@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2019/03/03 19:06:31 youri Exp $
+
+SHA1 (PhpStorm-2018.3.4.tar.gz) = 551c39a1398df3f371af550e6f8eec77ba8bfea0
+RMD160 (PhpStorm-2018.3.4.tar.gz) = 7d47d37db071fd00b68d1df3f9a3ded0d51f4c22
+SHA512 (PhpStorm-2018.3.4.tar.gz) = 804011211843c20fe0feb58d0041dfac9f955a7ce954f6119b96bf6dbd387e097718cb4f061ab3ad21ed8d565cf2e00cd56e5baa19720ba313605333091be19f
+Size (PhpStorm-2018.3.4.tar.gz) = 311609093 bytes
+SHA1 (patch-bin_phpstorm.sh) = 16030841f6f21ab57ff964489f077be3ffc6b79b
