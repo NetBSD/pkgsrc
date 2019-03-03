@@ -1425,7 +1425,7 @@ mk.conf, together with some comments that describe each variable's intent.
 5.3. Variables affecting the installation process
 
   * PKGSRC_KEEP_BIN_PKGSRC: By default, binary packages of built packages are
-    preserved in PACKAGES/All. Setting this variable to "no" prevents this.
+    preserved in ${PACKAGES}/All. Setting this variable to "no" prevents this.
 
 Packages have to support installation into a subdirectory of WRKDIR. This
 allows a package to be built, before the actual filesystem is touched. DESTDIR
