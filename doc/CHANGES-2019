@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.998 2019/03/03 12:17:41 adam Exp $
+$NetBSD: CHANGES-2019,v 1.999 2019/03/03 12:32:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1710,3 +1710,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/rust to 1.33.0 [he 2019-03-03]
 	Updated devel/py-isort to 4.3.10 [adam 2019-03-03]
 	Updated devel/py-attrs to 19.1.0 [adam 2019-03-03]
+	Updated devel/py-parameterized to 0.7.0 [adam 2019-03-03]
+	Updated security/py-asyncssh to 1.16.0 [adam 2019-03-03]
