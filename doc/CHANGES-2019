@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1020 2019/03/03 17:42:56 youri Exp $
+$NetBSD: CHANGES-2019,v 1.1021 2019/03/03 17:43:21 youri Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1754,3 +1754,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed www/ruby-rack15 [taca 2019-03-03]
 	Updated www/ruby-sinatra-contrib to 2.0.5nb1 [taca 2019-03-03]
 	Added devel/clion-bin version 2018.3.4 [youri 2019-03-03]
+	Added devel/intellij-ue-bin version 2018.3.5 [youri 2019-03-03]
