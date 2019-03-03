@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2019/03/03 18:02:47 youri Exp $
+
+SHA1 (pycharm-community-2018.3.5.tar.gz) = a4293518804014051140a5205c9bd865710d6d00
+RMD160 (pycharm-community-2018.3.5.tar.gz) = 500e4746e470dcdafc053f9694631bd679e2ea36
+SHA512 (pycharm-community-2018.3.5.tar.gz) = a81c95397388b243a5b548e2b4bc54f1be3fdedd191c33a90f57a53002d90eb462d5fbc69b2fa88ccb35d8521cd1224e4491928e4c1810a2e7429a6ba6050d36
+Size (pycharm-community-2018.3.5.tar.gz) = 311914955 bytes
+SHA1 (patch-bin_pycharm.sh) = 9a210e61e8f66ddba82c9f23c9b4ecec2c65c055
