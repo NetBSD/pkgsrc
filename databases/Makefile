@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.570 2019/03/03 14:55:53 taca Exp $
+# $NetBSD: Makefile,v 1.571 2019/03/03 15:30:56 taca Exp $
 
 COMMENT=	Databases
 
@@ -422,7 +422,6 @@ SUBDIR+=	ruby-dbd-pg
 SUBDIR+=	ruby-dbd-sqlite
 SUBDIR+=	ruby-dbd-sqlite3
 SUBDIR+=	ruby-dbi
-SUBDIR+=	ruby-dm-active_model
 SUBDIR+=	ruby-dm-adjust
 SUBDIR+=	ruby-dm-aggregates
 SUBDIR+=	ruby-dm-ar-finders
@@ -442,7 +441,6 @@ SUBDIR+=	ruby-dm-migrations
 SUBDIR+=	ruby-dm-mysql-adapter
 SUBDIR+=	ruby-dm-observer
 SUBDIR+=	ruby-dm-postgres-adapter
-SUBDIR+=	ruby-dm-rails
 SUBDIR+=	ruby-dm-rest-adapter
 SUBDIR+=	ruby-dm-serializer
 SUBDIR+=	ruby-dm-sqlite-adapter
