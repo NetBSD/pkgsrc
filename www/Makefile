@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1373 2019/03/03 15:50:16 taca Exp $
+# $NetBSD: Makefile,v 1.1374 2019/03/03 15:59:23 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -806,14 +806,12 @@ SUBDIR+=	ramaze
 SUBDIR+=	rekonq
 SUBDIR+=	ruby-actioncable51
 SUBDIR+=	ruby-actioncable52
-SUBDIR+=	ruby-actionpack32
 SUBDIR+=	ruby-actionpack42
 SUBDIR+=	ruby-actionpack51
 SUBDIR+=	ruby-actionpack52
 SUBDIR+=	ruby-actionview42
 SUBDIR+=	ruby-actionview51
 SUBDIR+=	ruby-actionview52
-SUBDIR+=	ruby-activeresource32
 SUBDIR+=	ruby-borges
 SUBDIR+=	ruby-capybara
 SUBDIR+=	ruby-clearsilver
