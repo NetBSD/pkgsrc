@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2019/03/03 18:45:05 youri Exp $
+
+SHA1 (RubyMine-2018.3.5.tar.gz) = 9429b6087fb271784c23955a5d18c33a3c5570ba
+RMD160 (RubyMine-2018.3.5.tar.gz) = ecff516a07ab5af86948c843bb8afd6b864e7e6a
+SHA512 (RubyMine-2018.3.5.tar.gz) = 640d835c043c494b7334bddba108355ce436be561ee165eec44433334613249b23f4a01cc036e7b10606f31380255525b3886e4eecc428bb3375ebc2127fdf0d
+Size (RubyMine-2018.3.5.tar.gz) = 307446277 bytes
+SHA1 (patch-bin_rubymine.sh) = 55d24c7d358b182f49b5b193818dd1d2ac6d348a
