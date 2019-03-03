@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.55 2019/01/04 13:35:16 ryoon Exp $
+$NetBSD: distinfo,v 1.56 2019/03/03 10:41:28 gson Exp $
 
 SHA1 (gxemul-0.6.1.tar.gz) = 150e495e91a968a49ffc7fe2390c3edff100508d
 RMD160 (gxemul-0.6.1.tar.gz) = 0434bff07970d8828531d222cc8b95c64c2d62f1
@@ -18,3 +18,4 @@ SHA1 (patch-src_include_components_MIPS__CPUComponent.h) = 48bc9ea9dacbe7afd9734
 SHA1 (patch-src_include_mips_cpu_types.h) = 04fff50fad3e619e7e0eeb8bf17a79edd18b2147
 SHA1 (patch-src_include_refcount__ptr.h) = 6c8742b199801c1db906d4856f6f5f01a0f25fe0
 SHA1 (patch-src_machines_machine__pmax.cc) = ed3fba7eacb593cbba082a6d8d8ec823bf90162f
+SHA1 (patch-src_old__main_timer.cc) = a6234d80f28611a5be18b917a4249b8530b433bc
