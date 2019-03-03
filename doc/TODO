@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18861 2019/03/01 23:52:21 ryoon Exp $
+$NetBSD: TODO,v 1.18862 2019/03/03 17:38:22 taca Exp $
 
 Suggested new packages
 ======================
@@ -352,7 +352,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o R-mapproj-3
 	o R-maps-3.1.0
 	o R-ncdf-1.6.8
-	o SOPE-3.0.2
+	o SOGo-4.0.7
+	o SOPE-4.0.7
 	o TiffIO-140a
 	o YoSucker-81
 	o abcmidi-20170416
@@ -1100,6 +1101,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o policyd-weight-0.1.15.2
 	o polsms-2.1.0
 	o poppass-4.0.14
+	o postfix-3.4.0
 	o postal-0.72
 	o pound-2.8a
 	o povray-3.7.0.0
@@ -1238,7 +1240,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sqlrelay-1.4.0
 	o squeak-5.0
 	o squeak-vm-4.10.2.2765
-	o squid-4.3
+	o squid-4.6
 	o squidview-0.81
 	o sqwebmail-5.8.2
 	o srp_client-1.7.5
