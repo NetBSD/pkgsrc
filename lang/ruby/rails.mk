@@ -1,4 +1,4 @@
-# $NetBSD: rails.mk,v 1.69 2018/11/29 14:12:40 taca Exp $
+# $NetBSD: rails.mk,v 1.70 2019/03/03 14:41:21 taca Exp $
 
 .if !defined(_RUBY_RAILS_MK)
 _RUBY_RAILS_MK=	# defined
@@ -9,7 +9,7 @@ _RUBY_RAILS_MK=	# defined
 # RUBY_RAILS_DEFAULT
 #	Select default Ruby on Rails version.
 #
-#	Possible values: 32 42 51
+#	Possible values: 32 42 51 52
 #	Default: 32
 #
 #
@@ -27,7 +27,7 @@ _RUBY_RAILS_MK=	# defined
 # RUBY_RAILS_ACCEPTED
 #	The Ruby on Rails versions that are acceptable for the package.
 #
-#	Possible values: 32 42 51
+#	Possible values: 32 42 51 52
 #	Default: (empty)
 #
 # RUBY_RAILS_STRICT_DEP
@@ -41,7 +41,7 @@ _RUBY_RAILS_MK=	# defined
 # RUBY_RAILS
 #	Selected Ruby on Rails version.
 #
-#	Possible values: 32 42 51
+#	Possible values: 32 42 51 52
 #
 
 #
@@ -50,13 +50,14 @@ _RUBY_RAILS_MK=	# defined
 RUBY_RAILS32_VERSION?=	3.2.22.5
 RUBY_RAILS42_VERSION?=	4.2.11
 RUBY_RAILS51_VERSION?=	5.1.6.1
+RUBY_RAILS52_VERSION?=	5.2.2
 
 RUBY_RAILS_ACCEPTED?=	# defined
 RUBY_RAILS_DEFAULT?=	32
 
 RUBY_RAILS_STRICT_DEP?=	no
 
-RUBY_RAILS_SUPPORTED=	32 42 51
+RUBY_RAILS_SUPPORTED=	32 42 51 52
 
 .if empty(RUBY_RAILS_SUPPORTED:M${RUBY_RAILS_DEFAULT})
 .error Unsupported RUBY_RAILS_DEFAULT: ${RUBY_RAILS_DEFAULT}
@@ -89,7 +90,9 @@ RUBY_RAILS?=	${rr}
 
 RUBY_RAILS?=	${RUBY_RAILS_SUPPORTED}
 
-.if ${RUBY_RAILS} == "51"
+.if ${RUBY_RAILS} == "52"
+RAILS_VERSION:=	${RUBY_RAILS52_VERSION}
+.elif ${RUBY_RAILS} == "51"
 RAILS_VERSION:=	${RUBY_RAILS51_VERSION}
 .elif ${RUBY_RAILS} == "42"
 RAILS_VERSION:=	${RUBY_RAILS42_VERSION}
@@ -129,7 +132,7 @@ RUBY_ACTIVESUPPORT_DEPENDS= \
 	${RUBY_PKGPREFIX}-activesupport${_RAILS_DEP}:../../devel/ruby-activesupport${RUBY_RAILS}
 RUBY_ACTIVEMODEL_DEPENDS= \
 	${RUBY_PKGPREFIX}-activemodel${_RAILS_DEP}:../../devel/ruby-activemodel${RUBY_RAILS}
-.if ${RUBY_RAILS} != "51"
+.if ${RUBY_RAILS} >= 51
 RUBY_ACTIONPACK_DEPENDS= \
 	${RUBY_PKGPREFIX}-actionpack${_RAILS_DEP}:../../www/ruby-actionpack${RUBY_RAILS}
 .endif
@@ -142,18 +145,21 @@ RUBY_RAILTIES_DEPENDS= \
 RUBY_RAILS_DEPENDS= \
 	${RUBY_PKGPREFIX}-rails${_RAILS_DEP}:../../www/ruby-rails${RUBY_RAILS}
 
-.if ${RUBY_RAILS} == "32"
+.if ${RUBY_RAILS} < 42
 RUBY_ACTIVERESOURCE_DEPENDS= \
 	${RUBY_PKGPREFIX}-activeresource${_RAILS_DEP}:../../www/ruby-activeresource${RUBY_RAILS}
-.elif ${RUBY_RAILS} == "42" || ${RUBY_RAILS} == "51"
+.elif ${RUBY_RAILS} >= 42
 RUBY_ACTIONVIEW_DEPENDS= \
 	${RUBY_PKGPREFIX}-actionview${_RAILS_DEP}:../../www/ruby-actionview${RUBY_RAILS}
 RUBY_ACTIVEJOB_DEPENDS= \
 	${RUBY_PKGPREFIX}-activejob${_RAILS_DEP}:../../devel/ruby-activejob${RUBY_RAILS}
 .endif
-.if ${RUBY_RAILS} == "51"
+.if ${RUBY_RAILS} >= 51
 RUBY_ACTIONCABLE_DEPENDS= \
 	${RUBY_PKGPREFIX}-actioncable${_RAILS_DEP}:../../www/ruby-actioncable${RUBY_RAILS}
 .endif
-
+.if ${RUBY_RAILS} >= 51
+RUBY_ACTIVESTORAGE_DEPENDS= \
+	${RUBY_PKGPREFIX}-activestorage${_RAILS_DEP}:../../devel/ruby-activestorage${RUBY_RAILS}
+.endif
 .endif
