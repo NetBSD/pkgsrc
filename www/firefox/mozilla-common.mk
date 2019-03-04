@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.126 2019/02/26 12:14:12 rin Exp $
+# $NetBSD: mozilla-common.mk,v 1.127 2019/03/04 15:53:06 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -76,15 +76,15 @@ CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}browser/extensions/loop/run-all-loop-tests
 
 CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk3
 CONFIGURE_ARGS+=	--enable-release
-CONFIGURE_ARGS+=	--enable-rust-simd
+# Disable Rust SIMD option to fix build with lang/rust-1.33.0
+# This should be enabled later again.
+#CONFIGURE_ARGS+=	--enable-rust-simd
 CONFIGURE_ARGS+=	--enable-webrender=build
 CONFIGURE_ARGS+=	--disable-tests
 # Mozilla Bug 1432751
 #CONFIGURE_ARGS+=	--enable-system-cairo
 CONFIGURE_ARGS+=	--enable-system-pixman
 CONFIGURE_ARGS+=	--with-system-libvpx
-# textproc/hunspell 1.3 is too old
-#CONFIGURE_ARGS+=	--enable-system-hunspell
 CONFIGURE_ARGS+=	--enable-system-ffi
 CONFIGURE_ARGS+=	--with-system-icu
 CONFIGURE_ARGS+=	--with-system-nss
