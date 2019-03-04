@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/11/09 18:12:24 adam Exp $
+# $NetBSD: Makefile,v 1.4 2019/03/04 07:21:55 markd Exp $
 
 PKGNAME=	${DISTNAME:C/-/10-contrib-/}
 COMMENT=	Contrib subtree of tools and plug-ins
@@ -63,7 +63,7 @@ BUILD_DIRS+=		contrib/uuid-ossp
 BUILD_MAKE_FLAGS+=	PG_CPPFLAGS="-DHAVE_UUID_H -DHAVE_UUID_BSD -DSHA1_RESULTLEN=20"
 CONFIGURE_ARGS+=	--with-uuid=bsd
 .  elif ${OPSYS} == "Linux"
-BUILD_MAKE_FLAGS+=	PG_CPPFLAGS="-DHAVE_UUID_UUID_H -DHAVE_UUID_E2FS"
+BUILD_MAKE_FLAGS+=	PG_CPPFLAGS="-DHAVE_UUID_UUID_H -DHAVE_UUID_E2FS -I${WRKSRC}/contrib/pgcrypto"
 CONFIGURE_ARGS+=	--with-uuid=e2fs
 .  elif ${OPSYS} == "SunOS"
 BUILD_MAKE_FLAGS+=	PG_CPPFLAGS="-DHAVE_UUID_H -DHAVE_UUID_OSSP"
