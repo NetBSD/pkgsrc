@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1028 2019/03/04 09:10:18 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1029 2019/03/04 10:45:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1763,3 +1763,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-djangorestframework to 3.9.2 [adam 2019-03-04]
 	Updated sysutils/py-structlog to 19.1.0 [adam 2019-03-04]
 	Updated math/py-numpy to 1.16.2 [adam 2019-03-04]
+	Updated x11/xditview to 1.0.5 [wiz 2019-03-04]
