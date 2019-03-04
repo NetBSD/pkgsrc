@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1042 2019/03/04 18:42:08 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1043 2019/03/04 18:51:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1779,3 +1779,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/thunderbird to 60.5.2nb1 [ryoon 2019-03-04]
 	Updated textproc/py-regex to 2019.02.21 [adam 2019-03-04]
 	Updated security/py-m2crypto to 0.32.0 [adam 2019-03-04]
+	Updated devel/py-astroid to 2.2.3 [adam 2019-03-04]
+	Updated textproc/py-openpyxl to 2.6.1 [adam 2019-03-04]
