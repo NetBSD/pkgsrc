@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1036 2019/03/04 12:08:26 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1037 2019/03/04 13:10:11 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1772,3 +1772,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed fonts/mkfontdir successor fonts/mkfontscale [wiz 2019-03-04]
 	Updated www/py-genshi to 0.7.1 [adam 2019-03-04]
 	Updated textproc/py-relatorio to 0.8.1 [adam 2019-03-04]
+	Updated devel/rgbds to 0.3.8 [nia 2019-03-04]
