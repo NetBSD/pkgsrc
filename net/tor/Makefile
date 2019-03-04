@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.135 2018/11/06 19:32:30 adam Exp $
+# $NetBSD: Makefile,v 1.135.2.1 2019/03/04 17:11:05 bsiegert Exp $
 
-DISTNAME=	tor-0.3.4.9
+DISTNAME=	tor-0.3.5.8
 CATEGORIES=	net security
 MASTER_SITES=	https://dist.torproject.org/
 
@@ -11,6 +11,7 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=		c99
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		perl:test
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
@@ -38,8 +39,8 @@ USER_GROUP=		${TOR_USER} ${TOR_GROUP}
 
 OWN_DIRS_PERMS+=	${PKG_HOME.${TOR_USER}} ${USER_GROUP} 0700
 
-CONF_FILES+=		${PREFIX}/share/examples/tor/torrc.sample 	\
-				${PKG_SYSCONFDIR}/torrc
+CONF_FILES+=		${PREFIX}/share/examples/tor/torrc.sample \
+			${PKG_SYSCONFDIR}/torrc
 
 PRINT_PLIST_AWK+=	/^man\/man/ { $$0 = "$${PLIST.doc}" $$0 }
 PRINT_PLIST_AWK+=	/^share\/doc/ { $$0 = "$${PLIST.doc}" $$0 }
@@ -65,7 +66,6 @@ BUILDLINK_API_DEPENDS.openssl+=	openssl>=1.0
 .include "../../mk/pthread.buildlink3.mk"
 
 ## We include this after other b3.mk files since we use PTHREAD_TYPE.
-##
 .include "options.mk"
 
 .include "../../mk/bsd.pkg.mk"
