@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2019/02/01 09:24:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2019/03/04 09:09:46 adam Exp $
 bin/f2py${PYVERSSUFFIX}
 ${PLIST.py2x}bin/f2py2
 ${PLIST.py3x}bin/f2py3
@@ -63,7 +63,6 @@ ${PYSITELIB}/numpy/core/_internal.pyo
 ${PYSITELIB}/numpy/core/_methods.py
 ${PYSITELIB}/numpy/core/_methods.pyc
 ${PYSITELIB}/numpy/core/_methods.pyo
-${PYSITELIB}/numpy/core/_multiarray_module_test.so
 ${PYSITELIB}/numpy/core/_multiarray_tests.so
 ${PYSITELIB}/numpy/core/_multiarray_umath.so
 ${PYSITELIB}/numpy/core/_operand_flag_tests.so
@@ -222,6 +221,9 @@ ${PYSITELIB}/numpy/distutils/__init__.pyo
 ${PYSITELIB}/numpy/distutils/__version__.py
 ${PYSITELIB}/numpy/distutils/__version__.pyc
 ${PYSITELIB}/numpy/distutils/__version__.pyo
+${PYSITELIB}/numpy/distutils/_shell_utils.py
+${PYSITELIB}/numpy/distutils/_shell_utils.pyc
+${PYSITELIB}/numpy/distutils/_shell_utils.pyo
 ${PYSITELIB}/numpy/distutils/ccompiler.py
 ${PYSITELIB}/numpy/distutils/ccompiler.pyc
 ${PYSITELIB}/numpy/distutils/ccompiler.pyo
@@ -403,6 +405,7 @@ ${PYSITELIB}/numpy/distutils/tests/test_fcompiler_nagfor.py
 ${PYSITELIB}/numpy/distutils/tests/test_from_template.py
 ${PYSITELIB}/numpy/distutils/tests/test_misc_util.py
 ${PYSITELIB}/numpy/distutils/tests/test_npy_pkg_config.py
+${PYSITELIB}/numpy/distutils/tests/test_shell_utils.py
 ${PYSITELIB}/numpy/distutils/tests/test_system_info.py
 ${PYSITELIB}/numpy/distutils/unixccompiler.py
 ${PYSITELIB}/numpy/distutils/unixccompiler.pyc
