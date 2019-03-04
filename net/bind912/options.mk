@@ -1,13 +1,13 @@
-# $NetBSD: options.mk,v 1.2 2018/10/24 11:10:31 jperkin Exp $
+# $NetBSD: options.mk,v 1.2.2.1 2019/03/04 16:51:40 bsiegert Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bind912
 PKG_SUPPORTED_OPTIONS=	bind-dig-sigchase bind-xml-statistics-server
 PKG_SUPPORTED_OPTIONS+=	bind-json-statistics-server
 PKG_SUPPORTED_OPTIONS+=	inet6 threads readline mysql pgsql ldap dlz-filesystem
-PKG_SUPPORTED_OPTIONS+=	fetchlimit geoip pkcs11 sit tuning
+PKG_SUPPORTED_OPTIONS+=	fetchlimit geoip pkcs11 sit tuning dnstap
 PKG_SUGGESTED_OPTIONS+=	readline
 
-PLIST_VARS+=	inet6 pkcs11
+PLIST_VARS+=	inet6 pkcs11 dnstap
 
 PTHREAD_OPTS+=		native
 .include "../../mk/pthread.buildlink3.mk"
@@ -80,6 +80,14 @@ CONFIGURE_ARGS+=	--enable-sit
 
 .if !empty(PKG_OPTIONS:Mtuning)
 CONFIGURE_ARGS+=	--with-tuning=large
+.endif
+
+.if !empty(PKG_OPTIONS:Mdnstap)
+CONFIGURE_ARGS+=	--enable-dnstap
+PLIST.dnstap=		yes
+.include "../../net/fstrm/buildlink3.mk"
+.include "../../devel/protobuf/buildlink3.mk"
+.include "../../devel/protobuf-c/buildlink3.mk"
 .endif
 
 ###
