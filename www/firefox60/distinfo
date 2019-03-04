@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2019/02/26 13:47:39 ryoon Exp $
+$NetBSD: distinfo,v 1.7 2019/03/04 15:55:18 ryoon Exp $
 
 SHA1 (firefox-60.5.2esr.source.tar.xz) = a6fd649d5a9e3943fb3e67a5e45f856a154b0483
 RMD160 (firefox-60.5.2esr.source.tar.xz) = ba8bb525e8a307c97f4ec4b1e20ab14781a83097
@@ -32,7 +32,9 @@ SHA1 (patch-media_webrtc_trunk_webrtc_modules_audio__device_linux_audio__device_
 SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info__linux.cc) = 0141dd1372c13ea1fce6e2f5ffb65e0cb0f3a13e
 SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_video__capture__linux.cc) = a69bc7b7096b410582e725f9dbec57fee90d6686
 SHA1 (patch-modules_pdfium_update.sh) = b0bf091325c9322c54880de067871354cd689038
+SHA1 (patch-servo_components_style__traits_lib.rs) = b07dfc91bae3f94b7da0c5dab523a6901b9b1bf7
 SHA1 (patch-servo_components_style_build__gecko.rs) = fca2260a70b496fc010f165ff4d68788b7e28632
+SHA1 (patch-servo_components_style_lib.rs) = 1df2f6580da3c4a2fadd7ddcead000fa3c8a6a14
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = 5b6d2e5c9f685d32894898d3ef3aec09a1a1e5ce
 SHA1 (patch-toolkit_library_moz.build) = ecb6125e996d5496335c58ecd3433ad3214f29f0
 SHA1 (patch-toolkit_moz.configure) = 40ee147cc1d2c62dd6c83b3f67ce9e61f758ea57
