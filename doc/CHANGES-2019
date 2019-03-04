@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1038 2019/03/04 13:57:20 tnn Exp $
+$NetBSD: CHANGES-2019,v 1.1039 2019/03/04 15:55:54 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1774,3 +1774,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/py-relatorio to 0.8.1 [adam 2019-03-04]
 	Updated devel/rgbds to 0.3.8 [nia 2019-03-04]
 	Updated security/hitch to 1.5.0 [tnn 2019-03-04]
+	Updated www/firefox to 65.0.2nb1 [ryoon 2019-03-04]
