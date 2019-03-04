@@ -1,2 +1,2 @@
-This package provides xinit and startx, utilities for starting the
-X Window System server. This is from the modular X.org.
+The xinit program is used to start the X Window System server and a first
+client program on systems that are not using a display manager such as xdm.
