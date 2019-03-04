@@ -1,13 +1,16 @@
-@comment $NetBSD: PLIST,v 1.13 2017/05/13 20:25:44 alnsn Exp $
+@comment $NetBSD: PLIST,v 1.13.16.1 2019/03/04 17:11:05 bsiegert Exp $
 bin/tor
 bin/tor-gencert
+bin/tor-print-ed-signing-cert
 bin/tor-resolve
 bin/torify
 ${PLIST.doc}man/man1/tor-gencert.1
+${PLIST.doc}man/man1/tor-print-ed-signing-cert.1
 ${PLIST.doc}man/man1/tor-resolve.1
 ${PLIST.doc}man/man1/tor.1
 ${PLIST.doc}man/man1/torify.1
 ${PLIST.doc}share/doc/tor/tor-gencert.html
+${PLIST.doc}share/doc/tor/tor-print-ed-signing-cert.html
 ${PLIST.doc}share/doc/tor/tor-resolve.html
 ${PLIST.doc}share/doc/tor/tor.html
 ${PLIST.doc}share/doc/tor/torify.html
