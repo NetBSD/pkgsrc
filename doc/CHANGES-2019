@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1024 2019/03/03 19:06:38 youri Exp $
+$NetBSD: CHANGES-2019,v 1.1025 2019/03/04 01:38:06 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1758,3 +1758,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/pycharm-bin version 2018.3.5 [youri 2019-03-03]
 	Added devel/rubymine-bin version 2018.3.5 [youri 2019-03-03]
 	Added devel/phpstorm-bin version 2018.3.4 [youri 2019-03-03]
+	Updated textproc/xapian to 1.4.11 [schmonz 2019-03-04]
