@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2019/02/08 10:48:38 adam Exp $
+# $NetBSD: Makefile,v 1.22 2019/03/04 18:50:37 adam Exp $
 
-DISTNAME=	openpyxl-2.6.0
+DISTNAME=	openpyxl-2.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/openpyxl/}
