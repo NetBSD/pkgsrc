@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/01/16 13:49:29 he Exp $
+# $NetBSD: Makefile,v 1.2 2019/03/04 14:14:15 he Exp $
 
 DISTNAME=	fstrm-0.4.0
 CATEGORIES=	net
@@ -18,6 +18,8 @@ USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 USE_LANGUAGES+=	c
+
+BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0
 
 pre-configure:
 	cd ${WRKSRC} && sh ./autogen.sh
