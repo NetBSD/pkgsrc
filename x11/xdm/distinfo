@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 03:28:59 agc Exp $
+$NetBSD: distinfo,v 1.7 2019/03/04 11:43:50 wiz Exp $
 
-SHA1 (xdm-1.1.11.tar.bz2) = 8195a8e17d71d18cb89813d04b69a3750e9e818e
-RMD160 (xdm-1.1.11.tar.bz2) = 574b5bda0b46a43d0df474279d03e49fa93c9a92
-SHA512 (xdm-1.1.11.tar.bz2) = fe6f2b7817c0f7f07a1f5f497edcdfa15b93986fd87f314daa472dac8625327ef46ebbf40d27fe8d4a8a2f8d5af8a01c4438a29356740e0eb350f2bd0c7ec0d5
-Size (xdm-1.1.11.tar.bz2) = 446612 bytes
+SHA1 (xdm-1.1.12.tar.bz2) = 5cc5590e40837949b1a63cb030878f8ceebd4d85
+RMD160 (xdm-1.1.12.tar.bz2) = 63bf363980062847a6546225cf9ef74377d4bce7
+SHA512 (xdm-1.1.12.tar.bz2) = 1a4be0a070ced5db8fda6fc74794c9f9ed0cb37fa440fda6a3a7652aff62dfc3d7ba68b9facf054671ebf0f4db2a0eec29d0aa3716e3407ccd5529bac3553bdb
+Size (xdm-1.1.12.tar.bz2) = 512074 bytes
