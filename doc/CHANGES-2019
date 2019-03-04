@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1039 2019/03/04 15:55:54 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.1040 2019/03/04 15:56:26 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1775,3 +1775,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/rgbds to 0.3.8 [nia 2019-03-04]
 	Updated security/hitch to 1.5.0 [tnn 2019-03-04]
 	Updated www/firefox to 65.0.2nb1 [ryoon 2019-03-04]
+	Updated www/firefox60 to 60.5.2nb1 [ryoon 2019-03-04]
