@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1033 2019/03/04 11:44:04 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1034 2019/03/04 11:47:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1768,3 +1768,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/xlogo to 1.0.5 [wiz 2019-03-04]
 	Updated x11/xmore to 1.0.3 [wiz 2019-03-04]
 	Updated x11/xdm to 1.1.12 [wiz 2019-03-04]
+	Updated fonts/mkfontscale to 1.2.0 [wiz 2019-03-04]
