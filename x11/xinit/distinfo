@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2018/03/10 08:04:22 wiz Exp $
+$NetBSD: distinfo,v 1.16 2019/03/04 10:53:56 wiz Exp $
 
-SHA1 (xinit-1.4.0.tar.bz2) = fcdca692b09a45f546016fff78718d1cf7e7852f
-RMD160 (xinit-1.4.0.tar.bz2) = 183488b2fcc421d786069c01c6a75991c06b84ca
-SHA512 (xinit-1.4.0.tar.bz2) = 53a29081130c1e195eb441ee77ccaa044b18b4cca3d2d5da3a6d67aa421dfd9718fa18b6be6232a41e40cf260c8190064c4d8d9ab771177bd5cd12e77a8fa79e
-Size (xinit-1.4.0.tar.bz2) = 174491 bytes
+SHA1 (xinit-1.4.1.tar.bz2) = d874a2eecf2c30291e327851b151fdab8183260c
+RMD160 (xinit-1.4.1.tar.bz2) = e393a9a41f9582b955a7f174f3b1b10ece0fa92b
+SHA512 (xinit-1.4.1.tar.bz2) = 6cbc5d025a891c419f3f4493381b2fca57a67d78df866d2f16a83426f86bad6eca7f240fac12b25cbcc63df0fec41f625407184e044898602d66483715315340
+Size (xinit-1.4.1.tar.bz2) = 176206 bytes
