@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.205 2019/02/26 11:32:12 ryoon Exp $
+$NetBSD: distinfo,v 1.206 2019/03/04 15:59:06 ryoon Exp $
 
-SHA1 (thunderbird-60.5.1.source.tar.xz) = 6c4b6e550d553ac16298403f9de22354ed30bf5d
-RMD160 (thunderbird-60.5.1.source.tar.xz) = 8ed8447ea1d7a9ca3f227f1050969a68c8ed9ef6
-SHA512 (thunderbird-60.5.1.source.tar.xz) = dafb7c81568b96285aa367fdac3db65aa0972a8224385714b14b67abdd5b17df963aec63608538a566f20c655cf0eb6784ba2b304151b2cc9b9dc3fdd9a48c7c
-Size (thunderbird-60.5.1.source.tar.xz) = 285211052 bytes
+SHA1 (thunderbird-60.5.2.source.tar.xz) = ec7bca4bb6ba1808c1269c5a9080742134d4daad
+RMD160 (thunderbird-60.5.2.source.tar.xz) = 371dd39d9b61a3ff76bb4117bd497c015bde0645
+SHA512 (thunderbird-60.5.2.source.tar.xz) = a53c59114523b7554a09a84b1dca4b89f624acc4ffa7453dab417c7e11fd5aab6cb6739e26b804e0c30019edec757d86dabb336256a76e02b673cfef4b2678f0
+Size (thunderbird-60.5.2.source.tar.xz) = 284520208 bytes
 SHA1 (patch-browser_app_profile_firefox.js) = a939d5d4f0284f66a83bc0062f0fc173e6f75bd2
 SHA1 (patch-build_moz.configure_old.configure) = 6cded37360c0609e780f4fdd19ed5e81d5de43f3
 SHA1 (patch-build_moz.configure_rust.configure) = 98a009b91dc10b741d3fff3103c782d63373ad29
@@ -39,7 +39,9 @@ SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info_
 SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_video__capture__linux.cc) = b950dc99c51af7aa51f485457a0653aa9d17f5a4
 SHA1 (patch-modules_pdfium_update.sh) = 2aecc41e917781da55edfeb1c3a540548d2244aa
 SHA1 (patch-old-configure.in) = 8e90c04b1eefaff1822a89f5940a0e335c2c0b5e
+SHA1 (patch-servo_components_style__traits_lib.rs) = b07dfc91bae3f94b7da0c5dab523a6901b9b1bf7
 SHA1 (patch-servo_components_style_build__gecko.rs) = 3fd66ec7c6af23a3e2b3299b68c48777ab62b48b
+SHA1 (patch-servo_components_style_lib.rs) = 1df2f6580da3c4a2fadd7ddcead000fa3c8a6a14
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = 11201c556ceb111ccf028df10fdda335e8fdb0c3
 SHA1 (patch-toolkit_library_moz.build) = 429745ec028ce71d8ba2457679b715ac14b6e2d3
 SHA1 (patch-toolkit_moz.configure) = 994c8ff526984482b0e5fa26176ed6c20380a97d
