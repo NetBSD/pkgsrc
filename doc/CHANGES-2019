@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1031 2019/03/04 10:56:09 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1032 2019/03/04 10:58:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1766,3 +1766,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/xditview to 1.0.5 [wiz 2019-03-04]
 	Updated x11/xinit to 1.4.1 [wiz 2019-03-04]
 	Updated x11/xlogo to 1.0.5 [wiz 2019-03-04]
+	Updated x11/xmore to 1.0.3 [wiz 2019-03-04]
