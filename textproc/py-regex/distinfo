@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2019/01/29 14:33:07 adam Exp $
+$NetBSD: distinfo,v 1.16 2019/03/04 18:29:47 adam Exp $
 
-SHA1 (regex-2019.01.24.tar.gz) = 2e92a3bcead352b4d69251db480311de8c97f3c4
-RMD160 (regex-2019.01.24.tar.gz) = f316b10936e90b7b11ebce48db7419a560f176a1
-SHA512 (regex-2019.01.24.tar.gz) = 14027c0f912fc7b562a9da6f4ba188c6b0399fdfa59eb7599cf066e0d5f7a652ba6e27d96f8aff4c75e1cb8b22a09852e7f4d7bc75bbc4c6b95d26074fb7e127
-Size (regex-2019.01.24.tar.gz) = 647536 bytes
+SHA1 (regex-2019.02.21.tar.gz) = 0a4cb49375b89be9f69022556befd074aa32f349
+RMD160 (regex-2019.02.21.tar.gz) = 1682c1cb04f7470bbdfd3deee355da8dc6c3690a
+SHA512 (regex-2019.02.21.tar.gz) = ff4448e70da7d0712a93578e8058b208bc742b3d878cb9887c33dc65733eb4a599e356d488dcc85dc8f4b945c70ed4ccec75b943f6b05db9e519bf6d301f07e7
+Size (regex-2019.02.21.tar.gz) = 643014 bytes
