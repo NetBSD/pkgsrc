@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/03/11 14:05:19 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/03/04 11:43:50 wiz Exp $
 bin/xdm
 bin/xdmshell
 lib/X11/app-defaults/Chooser
@@ -13,8 +13,8 @@ lib/X11/xdm/chooser
 lib/X11/xdm/libXdmGreet.la
 lib/X11/xdm/pixmaps/xorg-bw.xpm
 lib/X11/xdm/pixmaps/xorg.xpm
-man/man1/xdm.1
-man/man1/xdmshell.1
+man/man8/xdm.8
+man/man8/xdmshell.8
 share/examples/xdm/Xaccess
 share/examples/xdm/Xresources
 share/examples/xdm/Xservers

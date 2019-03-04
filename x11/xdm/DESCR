@@ -1,6 +1,4 @@
-Xdm  manages a collection of X displays, which may be on the local host
-or remote servers.  The design of xdm was guided by the needs of X ter-
-minals  as well as The Open Group standard XDMCP, the X Display Manager
-Control Protocol.  Xdm provides services similar to those  provided  by
-init,  getty and login on character terminals: prompting for login name
-and password, authenticating the user, and running a ``session.''
+xdm is the classic X11 Display Manager, using the Athena Widgets
+toolkit.  While it lacks in support for accessibility,
+internationalization, or other modern features, it is still used
+in some sites for historical reasons.
