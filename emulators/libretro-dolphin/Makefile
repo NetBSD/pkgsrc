@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/12/13 19:51:50 adam Exp $
+# $NetBSD: Makefile,v 1.4 2019/03/04 23:20:27 nia Exp $
 
 DISTNAME=	libretro-dolphin-20180827
 PKGREVISION=	1
@@ -13,6 +13,7 @@ COMMENT=	Libretro core based on the Dolphin GameCube/Wii emulator
 LICENSE=	gnu-gpl-v2
 
 EXTRACT_USING=	bsdtar
+USE_TOOLS+=	pkg-config
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++14
 GCC_REQD+=	6
