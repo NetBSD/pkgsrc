@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1107 2019/03/05 19:38:59 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.1108 2019/03/05 20:00:26 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1849,3 +1849,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/scons to 3.0.4 [adam 2019-03-05]
 	Updated databases/mongodb to 4.0.6 [adam 2019-03-05]
 	Updated security/ocaml-safepass to 3.0nb3 [jaapb 2019-03-05]
+	Updated pkgtools/x11-links to 1.13 [jaapb 2019-01-09]
