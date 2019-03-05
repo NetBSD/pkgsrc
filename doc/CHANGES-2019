@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1048 2019/03/05 07:51:26 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1049 2019/03/05 07:52:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1786,3 +1786,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added misc/ruby-bundler1 version 1.17.3 [taca 2019-03-05]
 	Updated www/ruby-rails42 to 4.2.11nb1 [taca 2019-03-05]
 	Updated www/ruby-rails51 to 5.1.6.1nb1 [taca 2019-03-05]
+	Updated www/ruby-padrino-gen to 0.14.4nb1 [taca 2019-03-05]
