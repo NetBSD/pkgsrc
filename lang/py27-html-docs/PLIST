@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2018/05/19 08:57:18 leot Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/03/05 15:20:32 leot Exp $
 share/doc/python2.7/.buildinfo
 share/doc/python2.7/_images/logging_flow.png
-share/doc/python2.7/_images/python-video-icon.png
 share/doc/python2.7/_sources/about.rst.txt
 share/doc/python2.7/_sources/bugs.rst.txt
 share/doc/python2.7/_sources/c-api/abstract.rst.txt
@@ -205,7 +204,7 @@ share/doc/python2.7/_sources/library/email.message.rst.txt
 share/doc/python2.7/_sources/library/email.mime.rst.txt
 share/doc/python2.7/_sources/library/email.parser.rst.txt
 share/doc/python2.7/_sources/library/email.rst.txt
-share/doc/python2.7/_sources/library/email.util.rst.txt
+share/doc/python2.7/_sources/library/email.utils.rst.txt
 share/doc/python2.7/_sources/library/ensurepip.rst.txt
 share/doc/python2.7/_sources/library/errno.rst.txt
 share/doc/python2.7/_sources/library/exceptions.rst.txt
@@ -490,10 +489,11 @@ share/doc/python2.7/_static/comment.png
 share/doc/python2.7/_static/copybutton.js
 share/doc/python2.7/_static/default.css
 share/doc/python2.7/_static/doctools.js
+share/doc/python2.7/_static/documentation_options.js
 share/doc/python2.7/_static/down-pressed.png
 share/doc/python2.7/_static/down.png
 share/doc/python2.7/_static/file.png
-share/doc/python2.7/_static/jquery-3.1.0.js
+share/doc/python2.7/_static/jquery-3.2.1.js
 share/doc/python2.7/_static/jquery.js
 share/doc/python2.7/_static/minus.png
 share/doc/python2.7/_static/opensearch.xml
@@ -743,7 +743,7 @@ share/doc/python2.7/library/email.iterators.html
 share/doc/python2.7/library/email.message.html
 share/doc/python2.7/library/email.mime.html
 share/doc/python2.7/library/email.parser.html
-share/doc/python2.7/library/email.util.html
+share/doc/python2.7/library/email.utils.html
 share/doc/python2.7/library/ensurepip.html
 share/doc/python2.7/library/errno.html
 share/doc/python2.7/library/exceptions.html
