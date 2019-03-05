@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2018/08/16 13:11:48 maya Exp $
+@comment $NetBSD: PLIST,v 1.33 2019/03/05 11:11:12 ryoon Exp $
 bin/mkoctfile
 bin/mkoctfile-${PKGVERSION}
 bin/octave
@@ -133,7 +133,6 @@ include/${PKGNAME}/octave/graphics-handle.h
 include/${PKGNAME}/octave/graphics-props.cc
 include/${PKGNAME}/octave/graphics-toolkit.h
 include/${PKGNAME}/octave/graphics.h
-include/${PKGNAME}/octave/gripes.h
 include/${PKGNAME}/octave/gsvd.h
 include/${PKGNAME}/octave/gtk-manager.h
 include/${PKGNAME}/octave/help.h
@@ -157,11 +156,9 @@ include/${PKGNAME}/octave/liboctinterp-build-info.h
 include/${PKGNAME}/octave/lo-amos-proto.h
 include/${PKGNAME}/octave/lo-arpack-proto.h
 include/${PKGNAME}/octave/lo-array-errwarn.h
-include/${PKGNAME}/octave/lo-array-gripes.h
 include/${PKGNAME}/octave/lo-blas-proto.h
 include/${PKGNAME}/octave/lo-cutils.h
 include/${PKGNAME}/octave/lo-error.h
-include/${PKGNAME}/octave/lo-fftpack-proto.h
 include/${PKGNAME}/octave/lo-hash.h
 include/${PKGNAME}/octave/lo-ieee.h
 include/${PKGNAME}/octave/lo-lapack-proto.h
@@ -634,6 +631,7 @@ include/${PKGNAME}/octave/pr-output.h
 include/${PKGNAME}/octave/procstream.h
 include/${PKGNAME}/octave/profiler.h
 include/${PKGNAME}/octave/pt-all.h
+include/${PKGNAME}/octave/pt-anon-scopes.h
 include/${PKGNAME}/octave/pt-arg-list.h
 include/${PKGNAME}/octave/pt-array-list.h
 include/${PKGNAME}/octave/pt-assign.h
@@ -673,6 +671,7 @@ include/${PKGNAME}/octave/randgamma.h
 include/${PKGNAME}/octave/randmtzig.h
 include/${PKGNAME}/octave/randpoisson.h
 include/${PKGNAME}/octave/schur.h
+include/${PKGNAME}/octave/settings.h
 include/${PKGNAME}/octave/sighandlers.h
 include/${PKGNAME}/octave/singleton-cleanup.h
 include/${PKGNAME}/octave/smx-bm-sbm.h
@@ -702,10 +701,12 @@ include/${PKGNAME}/octave/sparse-xdiv.h
 include/${PKGNAME}/octave/sparse-xpow.h
 include/${PKGNAME}/octave/str-vec.h
 include/${PKGNAME}/octave/svd.h
+include/${PKGNAME}/octave/syminfo.h
 include/${PKGNAME}/octave/symrec.h
 include/${PKGNAME}/octave/symscope.h
 include/${PKGNAME}/octave/symtab.h
 include/${PKGNAME}/octave/sysdep.h
+include/${PKGNAME}/octave/text-engine.h
 include/${PKGNAME}/octave/text-renderer.h
 include/${PKGNAME}/octave/token.h
 include/${PKGNAME}/octave/toplev.h
@@ -755,8 +756,8 @@ lib/octave/${PKGVERSION}/__fltk_uigetfile__.a
 lib/octave/${PKGVERSION}/__glpk__.a
 lib/octave/${PKGVERSION}/__init_fltk__.a
 lib/octave/${PKGVERSION}/__init_gnuplot__.a
+lib/octave/${PKGVERSION}/__init_qt__.a
 lib/octave/${PKGVERSION}/__ode15__.a
-lib/octave/${PKGVERSION}/__osmesa_print__.a
 lib/octave/${PKGVERSION}/__voronoi__.a
 lib/octave/${PKGVERSION}/amd.a
 lib/octave/${PKGVERSION}/audiodevinfo.a
@@ -778,8 +779,8 @@ lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__fltk_uigetfile__.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__glpk__.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__init_fltk__.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__init_gnuplot__.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__init_qt__.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__ode15__.oct
-lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__osmesa_print__.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__voronoi__.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/amd.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/audiodevinfo.oct
@@ -797,7 +798,10 @@ lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/symrcm.oct
 lib/octave/${PKGVERSION}/qr.a
 lib/octave/${PKGVERSION}/symbfact.a
 lib/octave/${PKGVERSION}/symrcm.a
+lib/pkgconfig/octave.pc
+lib/pkgconfig/octinterp.pc
 libexec/octave/${PKGVERSION}/exec/${MACHINE_GNU_PLATFORM}/octave-gui
+libexec/octave/${PKGVERSION}/exec/${MACHINE_GNU_PLATFORM}/octave-svgconvert
 share/applications/org.octave.Octave.desktop
 share/icons/hicolor/128x128/apps/octave.png
 share/icons/hicolor/16x16/apps/octave.png
@@ -872,9 +876,13 @@ share/octave/${PKGVERSION}/etc/tests/fixed/bug-41723/bug-41723.tst
 share/octave/${PKGVERSION}/etc/tests/fixed/bug-41723/class_bug41723.m
 share/octave/${PKGVERSION}/etc/tests/fixed/bug-44940/bug-44940.tst
 share/octave/${PKGVERSION}/etc/tests/fixed/bug-44940/class_bug44940.m
+share/octave/${PKGVERSION}/etc/tests/fixed/bug-45969.tst
+share/octave/${PKGVERSION}/etc/tests/fixed/bug-45972.tst
 share/octave/${PKGVERSION}/etc/tests/fixed/bug-46330.tst
 share/octave/${PKGVERSION}/etc/tests/fixed/bug-46660/bug-46660.tst
 share/octave/${PKGVERSION}/etc/tests/fixed/bug-46660/class_bug46660.m
+share/octave/${PKGVERSION}/etc/tests/fixed/bug-49379/bug-49379.tst
+share/octave/${PKGVERSION}/etc/tests/fixed/bug-49379/class_bug49379.m
 share/octave/${PKGVERSION}/etc/tests/fixed/bug-49904.tst
 share/octave/${PKGVERSION}/etc/tests/fixed/bug-50014/bug-50014.tst
 share/octave/${PKGVERSION}/etc/tests/fixed/bug-50014/duplicate_nested_function.m
@@ -913,8 +921,19 @@ share/octave/${PKGVERSION}/etc/tests/fixed/bug-53027/gtest53027.m
 share/octave/${PKGVERSION}/etc/tests/fixed/bug-53027/ntest53027a.m
 share/octave/${PKGVERSION}/etc/tests/fixed/bug-53027/ntest53027b.m
 share/octave/${PKGVERSION}/etc/tests/fixed/bug-53027/ntest53027c.m
+share/octave/${PKGVERSION}/etc/tests/fixed/bug-53468/bug-53468.tst
+share/octave/${PKGVERSION}/etc/tests/fixed/bug-53468/ofig403.ofig
+share/octave/${PKGVERSION}/etc/tests/fixed/bug-53468/ofig421.ofig
+share/octave/${PKGVERSION}/etc/tests/fixed/bug-53468/ofig51.ofig
 share/octave/${PKGVERSION}/etc/tests/fixed/bug-53579.tst
 share/octave/${PKGVERSION}/etc/tests/fixed/bug-53599.tst
+share/octave/${PKGVERSION}/etc/tests/fixed/bug-54490.tst
+share/octave/${PKGVERSION}/etc/tests/fixed/bug-54995/@testclass54995/subsref.m
+share/octave/${PKGVERSION}/etc/tests/fixed/bug-54995/@testclass54995/testclass54995.m
+share/octave/${PKGVERSION}/etc/tests/fixed/bug-54995/bug-54995.tst
+share/octave/${PKGVERSION}/etc/tests/fixed/bug-55308.tst
+share/octave/${PKGVERSION}/etc/tests/fixed/bug-55321.tst
+share/octave/${PKGVERSION}/etc/tests/fixed/bug-55322.tst
 share/octave/${PKGVERSION}/etc/tests/fixed/class-concat/@foo/foo.m
 share/octave/${PKGVERSION}/etc/tests/fixed/class-concat/class-concat.tst
 share/octave/${PKGVERSION}/etc/tests/fixed/classdef-multiple-inheritance/base_1.m
@@ -925,6 +944,7 @@ share/octave/${PKGVERSION}/etc/tests/fixed/classdef-multiple-inheritance/classde
 share/octave/${PKGVERSION}/etc/tests/fixed/classdef/classdef.tst
 share/octave/${PKGVERSION}/etc/tests/fixed/classdef/foo_method_changes_property_size.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classdef/foo_static_method_constant_property.m
+share/octave/${PKGVERSION}/etc/tests/fixed/classdef/foo_subsref_subsasgn.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classdef/foo_value_class.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classdef/plist_t1.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classdef/plist_t2.m
@@ -936,10 +956,16 @@ share/octave/${PKGVERSION}/etc/tests/fixed/classes/@Blork/display.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classes/@Blork/get.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classes/@Blork/set.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classes/@CPrecedenceTester1/CPrecedenceTester1.m
+share/octave/${PKGVERSION}/etc/tests/fixed/classes/@CPrecedenceTester1/double.m
+share/octave/${PKGVERSION}/etc/tests/fixed/classes/@CPrecedenceTester1/plus.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classes/@CPrecedenceTester1/tattack.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classes/@CPrecedenceTester2/CPrecedenceTester2.m
+share/octave/${PKGVERSION}/etc/tests/fixed/classes/@CPrecedenceTester2/double.m
+share/octave/${PKGVERSION}/etc/tests/fixed/classes/@CPrecedenceTester2/plus.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classes/@CPrecedenceTester2/tattack.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classes/@CPrecedenceTester3/CPrecedenceTester3.m
+share/octave/${PKGVERSION}/etc/tests/fixed/classes/@CPrecedenceTester3/double.m
+share/octave/${PKGVERSION}/etc/tests/fixed/classes/@CPrecedenceTester3/plus.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classes/@CPrecedenceTester3/tattack.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classes/@Cork/Cork.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classes/@Cork/click.m
@@ -1050,6 +1076,7 @@ share/octave/${PKGVERSION}/etc/tests/fixed/func.tst
 share/octave/${PKGVERSION}/etc/tests/fixed/global.tst
 share/octave/${PKGVERSION}/etc/tests/fixed/if.tst
 share/octave/${PKGVERSION}/etc/tests/fixed/index.tst
+share/octave/${PKGVERSION}/etc/tests/fixed/integer.tst
 share/octave/${PKGVERSION}/etc/tests/fixed/io.tst
 share/octave/${PKGVERSION}/etc/tests/fixed/jit.tst
 share/octave/${PKGVERSION}/etc/tests/fixed/leftdiv.tst
@@ -1076,6 +1103,17 @@ share/octave/${PKGVERSION}/etc/tests/fixed/nest/varg_nest.m
 share/octave/${PKGVERSION}/etc/tests/fixed/nest/varg_nest2.m
 share/octave/${PKGVERSION}/etc/tests/fixed/null-assign.tst
 share/octave/${PKGVERSION}/etc/tests/fixed/parser.tst
+share/octave/${PKGVERSION}/etc/tests/fixed/pkg/mfile_basic_test/COPYING
+share/octave/${PKGVERSION}/etc/tests/fixed/pkg/mfile_basic_test/DESCRIPTION
+share/octave/${PKGVERSION}/etc/tests/fixed/pkg/mfile_basic_test/INDEX
+share/octave/${PKGVERSION}/etc/tests/fixed/pkg/mfile_basic_test/NEWS
+share/octave/${PKGVERSION}/etc/tests/fixed/pkg/mfile_basic_test/doc/example-package.txi
+share/octave/${PKGVERSION}/etc/tests/fixed/pkg/mfile_basic_test/doc/macros.texi
+share/octave/${PKGVERSION}/etc/tests/fixed/pkg/mfile_basic_test/inst/example_mfile.m
+share/octave/${PKGVERSION}/etc/tests/fixed/pkg/mfile_minimal_test/COPYING
+share/octave/${PKGVERSION}/etc/tests/fixed/pkg/mfile_minimal_test/DESCRIPTION
+share/octave/${PKGVERSION}/etc/tests/fixed/pkg/mfile_minimal_test/inst/example_mfile.m
+share/octave/${PKGVERSION}/etc/tests/fixed/pkg/pkg.tst
 share/octave/${PKGVERSION}/etc/tests/fixed/prefer.tst
 share/octave/${PKGVERSION}/etc/tests/fixed/publish/publish.tst
 share/octave/${PKGVERSION}/etc/tests/fixed/publish/test_script.m
@@ -1166,9 +1204,9 @@ share/octave/${PKGVERSION}/etc/tests/libinterp/corefcn/regexp.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/corefcn/schur.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/corefcn/sighandlers.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/corefcn/sparse-xpow.cc-tst
+share/octave/${PKGVERSION}/etc/tests/libinterp/corefcn/sparse.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/corefcn/spparms.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/corefcn/sqrtm.cc-tst
-share/octave/${PKGVERSION}/etc/tests/libinterp/corefcn/str2double.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/corefcn/strfind.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/corefcn/strfns.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/corefcn/sub2ind.cc-tst
@@ -1190,12 +1228,12 @@ share/octave/${PKGVERSION}/etc/tests/libinterp/dldfcn/__fltk_uigetfile__.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/dldfcn/__glpk__.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/dldfcn/__init_fltk__.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/dldfcn/__init_gnuplot__.cc-tst
-share/octave/${PKGVERSION}/etc/tests/libinterp/dldfcn/__osmesa_print__.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/dldfcn/__voronoi__.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/dldfcn/amd.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/dldfcn/audiodevinfo.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/dldfcn/audioread.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/dldfcn/chol.cc-tst
+share/octave/${PKGVERSION}/etc/tests/libinterp/dldfcn/colamd.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/dldfcn/convhulln.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/dldfcn/dmperm.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/dldfcn/fftw.cc-tst
@@ -1219,12 +1257,12 @@ share/octave/${PKGVERSION}/etc/tests/libinterp/octave-value/ov-usr-fcn.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/octave-value/ov.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/octave.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/parse-tree/lex.ll-tst
-share/octave/${PKGVERSION}/etc/tests/libinterp/parse-tree/oct-parse.in.yy-tst
+share/octave/${PKGVERSION}/etc/tests/libinterp/parse-tree/oct-parse.yy-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/parse-tree/pt-assign.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/parse-tree/pt-eval.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/parse-tree/pt-fcn-handle.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/parse-tree/pt-idx.cc-tst
-share/octave/${PKGVERSION}/etc/tests/libinterp/parse-tree/pt-mat.cc-tst
+share/octave/${PKGVERSION}/etc/tests/libinterp/parse-tree/pt-tm-const.cc-tst
 share/octave/${PKGVERSION}/etc/tests/liboctave/array/Array.cc-tst
 share/octave/${PKGVERSION}/etc/tests/liboctave/array/CMatrix.cc-tst
 share/octave/${PKGVERSION}/etc/tests/liboctave/array/CSparse.cc-tst
@@ -1252,6 +1290,7 @@ share/octave/${PKGVERSION}/locale/eu_ES.qm
 share/octave/${PKGVERSION}/locale/fr_FR.qm
 share/octave/${PKGVERSION}/locale/it_IT.qm
 share/octave/${PKGVERSION}/locale/ja_JP.qm
+share/octave/${PKGVERSION}/locale/lt_LT.qm
 share/octave/${PKGVERSION}/locale/nl_NL.qm
 share/octave/${PKGVERSION}/locale/pt_BR.qm
 share/octave/${PKGVERSION}/locale/pt_PT.qm
@@ -1259,6 +1298,8 @@ share/octave/${PKGVERSION}/locale/ru_RU.qm
 share/octave/${PKGVERSION}/locale/uk_UA.qm
 share/octave/${PKGVERSION}/locale/zh_CN.qm
 share/octave/${PKGVERSION}/m/+containers/Map.m
+share/octave/${PKGVERSION}/m/+matlab/+lang/makeUniqueStrings.m
+share/octave/${PKGVERSION}/m/+matlab/+lang/makeValidName.m
 share/octave/${PKGVERSION}/m/@ftp/ascii.m
 share/octave/${PKGVERSION}/m/@ftp/binary.m
 share/octave/${PKGVERSION}/m/@ftp/cd.m
@@ -1308,25 +1349,15 @@ share/octave/${PKGVERSION}/m/audio/mu2lin.m
 share/octave/${PKGVERSION}/m/audio/record.m
 share/octave/${PKGVERSION}/m/audio/sound.m
 share/octave/${PKGVERSION}/m/audio/soundsc.m
-share/octave/${PKGVERSION}/m/deprecated/bitmax.m
 share/octave/${PKGVERSION}/m/deprecated/chop.m
 share/octave/${PKGVERSION}/m/deprecated/comma.m
 share/octave/${PKGVERSION}/m/deprecated/desktop.m
-share/octave/${PKGVERSION}/m/deprecated/isstr.m
 share/octave/${PKGVERSION}/m/deprecated/java2mat.m
-share/octave/${PKGVERSION}/m/deprecated/mahalanobis.m
-share/octave/${PKGVERSION}/m/deprecated/md5sum.m
-share/octave/${PKGVERSION}/m/deprecated/octave_config_info.m
-share/octave/${PKGVERSION}/m/deprecated/onenormest.m
+share/octave/${PKGVERSION}/m/deprecated/output_max_field_width.m
 share/octave/${PKGVERSION}/m/deprecated/paren.m
 share/octave/${PKGVERSION}/m/deprecated/semicolon.m
-share/octave/${PKGVERSION}/m/deprecated/setstr.m
-share/octave/${PKGVERSION}/m/deprecated/sleep.m
 share/octave/${PKGVERSION}/m/deprecated/tmpnam.m
 share/octave/${PKGVERSION}/m/deprecated/toascii.m
-share/octave/${PKGVERSION}/m/deprecated/usleep.m
-share/octave/${PKGVERSION}/m/deprecated/wavread.m
-share/octave/${PKGVERSION}/m/deprecated/wavwrite.m
 share/octave/${PKGVERSION}/m/elfun/acosd.m
 share/octave/${PKGVERSION}/m/elfun/acot.m
 share/octave/${PKGVERSION}/m/elfun/acotd.m
@@ -1374,7 +1405,6 @@ share/octave/${PKGVERSION}/m/general/deg2rad.m
 share/octave/${PKGVERSION}/m/general/del2.m
 share/octave/${PKGVERSION}/m/general/divergence.m
 share/octave/${PKGVERSION}/m/general/flip.m
-share/octave/${PKGVERSION}/m/general/flipdim.m
 share/octave/${PKGVERSION}/m/general/fliplr.m
 share/octave/${PKGVERSION}/m/general/flipud.m
 share/octave/${PKGVERSION}/m/general/gradient.m
@@ -1440,6 +1470,7 @@ share/octave/${PKGVERSION}/m/gui/helpdlg.m
 share/octave/${PKGVERSION}/m/gui/inputdlg.m
 share/octave/${PKGVERSION}/m/gui/isappdata.m
 share/octave/${PKGVERSION}/m/gui/listdlg.m
+share/octave/${PKGVERSION}/m/gui/movegui.m
 share/octave/${PKGVERSION}/m/gui/msgbox.m
 share/octave/${PKGVERSION}/m/gui/private/__file_filter__.m
 share/octave/${PKGVERSION}/m/gui/private/__fltk_file_filter__.m
@@ -1462,6 +1493,7 @@ share/octave/${PKGVERSION}/m/gui/uipanel.m
 share/octave/${PKGVERSION}/m/gui/uipushtool.m
 share/octave/${PKGVERSION}/m/gui/uiputfile.m
 share/octave/${PKGVERSION}/m/gui/uiresume.m
+share/octave/${PKGVERSION}/m/gui/uitable.m
 share/octave/${PKGVERSION}/m/gui/uitoggletool.m
 share/octave/${PKGVERSION}/m/gui/uitoolbar.m
 share/octave/${PKGVERSION}/m/gui/uiwait.m
@@ -1520,6 +1552,7 @@ share/octave/${PKGVERSION}/m/image/ind2rgb.m
 share/octave/${PKGVERSION}/m/image/iscolormap.m
 share/octave/${PKGVERSION}/m/image/jet.m
 share/octave/${PKGVERSION}/m/image/lines.m
+share/octave/${PKGVERSION}/m/image/movie.m
 share/octave/${PKGVERSION}/m/image/ocean.m
 share/octave/${PKGVERSION}/m/image/pink.m
 share/octave/${PKGVERSION}/m/image/prism.m
@@ -1549,8 +1582,6 @@ share/octave/${PKGVERSION}/m/io/dlmwrite.m
 share/octave/${PKGVERSION}/m/io/fileread.m
 share/octave/${PKGVERSION}/m/io/importdata.m
 share/octave/${PKGVERSION}/m/io/is_valid_file_id.m
-share/octave/${PKGVERSION}/m/io/strread.m
-share/octave/${PKGVERSION}/m/io/textread.m
 share/octave/${PKGVERSION}/m/java/javaArray.m
 share/octave/${PKGVERSION}/m/java/java_get.m
 share/octave/${PKGVERSION}/m/java/java_set.m
@@ -1560,6 +1591,16 @@ share/octave/${PKGVERSION}/m/java/javaclasspath.m
 share/octave/${PKGVERSION}/m/java/javamem.m
 share/octave/${PKGVERSION}/m/java/javarmpath.m
 share/octave/${PKGVERSION}/m/java/usejava.m
+share/octave/${PKGVERSION}/m/legacy/findstr.m
+share/octave/${PKGVERSION}/m/legacy/flipdim.m
+share/octave/${PKGVERSION}/m/legacy/genvarname.m
+share/octave/${PKGVERSION}/m/legacy/isdir.m
+share/octave/${PKGVERSION}/m/legacy/isequalwithequalnans.m
+share/octave/${PKGVERSION}/m/legacy/isstr.m
+share/octave/${PKGVERSION}/m/legacy/setstr.m
+share/octave/${PKGVERSION}/m/legacy/strmatch.m
+share/octave/${PKGVERSION}/m/legacy/strread.m
+share/octave/${PKGVERSION}/m/legacy/textread.m
 share/octave/${PKGVERSION}/m/linear-algebra/bandwidth.m
 share/octave/${PKGVERSION}/m/linear-algebra/commutation_matrix.m
 share/octave/${PKGVERSION}/m/linear-algebra/cond.m
@@ -1585,6 +1626,7 @@ share/octave/${PKGVERSION}/m/linear-algebra/normest.m
 share/octave/${PKGVERSION}/m/linear-algebra/normest1.m
 share/octave/${PKGVERSION}/m/linear-algebra/null.m
 share/octave/${PKGVERSION}/m/linear-algebra/ols.m
+share/octave/${PKGVERSION}/m/linear-algebra/ordeig.m
 share/octave/${PKGVERSION}/m/linear-algebra/orth.m
 share/octave/${PKGVERSION}/m/linear-algebra/planerot.m
 share/octave/${PKGVERSION}/m/linear-algebra/qzhess.m
@@ -1598,6 +1640,7 @@ share/octave/${PKGVERSION}/m/miscellaneous/bug_report.m
 share/octave/${PKGVERSION}/m/miscellaneous/bunzip2.m
 share/octave/${PKGVERSION}/m/miscellaneous/cast.m
 share/octave/${PKGVERSION}/m/miscellaneous/citation.m
+share/octave/${PKGVERSION}/m/miscellaneous/clearvars.m
 share/octave/${PKGVERSION}/m/miscellaneous/compare_versions.m
 share/octave/${PKGVERSION}/m/miscellaneous/computer.m
 share/octave/${PKGVERSION}/m/miscellaneous/copyfile.m
@@ -1610,7 +1653,6 @@ share/octave/${PKGVERSION}/m/miscellaneous/fieldnames.m
 share/octave/${PKGVERSION}/m/miscellaneous/fileattrib.m
 share/octave/${PKGVERSION}/m/miscellaneous/fileparts.m
 share/octave/${PKGVERSION}/m/miscellaneous/fullfile.m
-share/octave/${PKGVERSION}/m/miscellaneous/genvarname.m
 share/octave/${PKGVERSION}/m/miscellaneous/getfield.m
 share/octave/${PKGVERSION}/m/miscellaneous/grabcode.m
 share/octave/${PKGVERSION}/m/miscellaneous/gunzip.m
@@ -1618,7 +1660,8 @@ share/octave/${PKGVERSION}/m/miscellaneous/info.m
 share/octave/${PKGVERSION}/m/miscellaneous/inputParser.m
 share/octave/${PKGVERSION}/m/miscellaneous/inputname.m
 share/octave/${PKGVERSION}/m/miscellaneous/isdeployed.m
-share/octave/${PKGVERSION}/m/miscellaneous/isdir.m
+share/octave/${PKGVERSION}/m/miscellaneous/isfile.m
+share/octave/${PKGVERSION}/m/miscellaneous/isfolder.m
 share/octave/${PKGVERSION}/m/miscellaneous/ismac.m
 share/octave/${PKGVERSION}/m/miscellaneous/ispc.m
 share/octave/${PKGVERSION}/m/miscellaneous/isunix.m
@@ -1924,6 +1967,7 @@ share/octave/${PKGVERSION}/m/plot/util/linkprop.m
 share/octave/${PKGVERSION}/m/plot/util/meshgrid.m
 share/octave/${PKGVERSION}/m/plot/util/ndgrid.m
 share/octave/${PKGVERSION}/m/plot/util/newplot.m
+share/octave/${PKGVERSION}/m/plot/util/openfig.m
 share/octave/${PKGVERSION}/m/plot/util/pan.m
 share/octave/${PKGVERSION}/m/plot/util/print.m
 share/octave/${PKGVERSION}/m/plot/util/printd.m
@@ -1946,6 +1990,7 @@ share/octave/${PKGVERSION}/m/plot/util/refreshdata.m
 share/octave/${PKGVERSION}/m/plot/util/rotate.m
 share/octave/${PKGVERSION}/m/plot/util/rotate3d.m
 share/octave/${PKGVERSION}/m/plot/util/saveas.m
+share/octave/${PKGVERSION}/m/plot/util/savefig.m
 share/octave/${PKGVERSION}/m/plot/util/shg.m
 share/octave/${PKGVERSION}/m/plot/util/struct2hdl.m
 share/octave/${PKGVERSION}/m/plot/util/subplot.m
@@ -2000,6 +2045,7 @@ share/octave/${PKGVERSION}/m/set/setdiff.m
 share/octave/${PKGVERSION}/m/set/setxor.m
 share/octave/${PKGVERSION}/m/set/union.m
 share/octave/${PKGVERSION}/m/set/unique.m
+share/octave/${PKGVERSION}/m/signal/__parse_movargs__.m
 share/octave/${PKGVERSION}/m/signal/arch_fit.m
 share/octave/${PKGVERSION}/m/signal/arch_rnd.m
 share/octave/${PKGVERSION}/m/signal/arch_test.m
@@ -2021,6 +2067,8 @@ share/octave/${PKGVERSION}/m/signal/hamming.m
 share/octave/${PKGVERSION}/m/signal/hanning.m
 share/octave/${PKGVERSION}/m/signal/hurst.m
 share/octave/${PKGVERSION}/m/signal/ifftshift.m
+share/octave/${PKGVERSION}/m/signal/movfun.m
+share/octave/${PKGVERSION}/m/signal/movslice.m
 share/octave/${PKGVERSION}/m/signal/periodogram.m
 share/octave/${PKGVERSION}/m/signal/private/rectangle_lw.m
 share/octave/${PKGVERSION}/m/signal/private/rectangle_sw.m
@@ -2128,6 +2176,15 @@ share/octave/${PKGVERSION}/m/statistics/meansq.m
 share/octave/${PKGVERSION}/m/statistics/median.m
 share/octave/${PKGVERSION}/m/statistics/mode.m
 share/octave/${PKGVERSION}/m/statistics/moment.m
+share/octave/${PKGVERSION}/m/statistics/movmad.m
+share/octave/${PKGVERSION}/m/statistics/movmax.m
+share/octave/${PKGVERSION}/m/statistics/movmean.m
+share/octave/${PKGVERSION}/m/statistics/movmedian.m
+share/octave/${PKGVERSION}/m/statistics/movmin.m
+share/octave/${PKGVERSION}/m/statistics/movprod.m
+share/octave/${PKGVERSION}/m/statistics/movstd.m
+share/octave/${PKGVERSION}/m/statistics/movsum.m
+share/octave/${PKGVERSION}/m/statistics/movvar.m
 share/octave/${PKGVERSION}/m/statistics/prctile.m
 share/octave/${PKGVERSION}/m/statistics/quantile.m
 share/octave/${PKGVERSION}/m/statistics/range.m
@@ -2149,7 +2206,6 @@ share/octave/${PKGVERSION}/m/strings/dec2base.m
 share/octave/${PKGVERSION}/m/strings/dec2bin.m
 share/octave/${PKGVERSION}/m/strings/dec2hex.m
 share/octave/${PKGVERSION}/m/strings/erase.m
-share/octave/${PKGVERSION}/m/strings/findstr.m
 share/octave/${PKGVERSION}/m/strings/hex2dec.m
 share/octave/${PKGVERSION}/m/strings/index.m
 share/octave/${PKGVERSION}/m/strings/isletter.m
@@ -2165,7 +2221,6 @@ share/octave/${PKGVERSION}/m/strings/strcat.m
 share/octave/${PKGVERSION}/m/strings/strchr.m
 share/octave/${PKGVERSION}/m/strings/strjoin.m
 share/octave/${PKGVERSION}/m/strings/strjust.m
-share/octave/${PKGVERSION}/m/strings/strmatch.m
 share/octave/${PKGVERSION}/m/strings/strsplit.m
 share/octave/${PKGVERSION}/m/strings/strtok.m
 share/octave/${PKGVERSION}/m/strings/strtrim.m
@@ -2205,11 +2260,11 @@ share/octave/${PKGVERSION}/m/time/is_leap_year.m
 share/octave/${PKGVERSION}/m/time/now.m
 share/octave/${PKGVERSION}/m/time/weekday.m
 share/octave/site/m/startup/octaverc
-@pkgdir share/octave/site/api-v52/m
+@pkgdir share/octave/site/api-v53/m
 @pkgdir share/octave/${PKGVERSION}/site/m
 @pkgdir libexec/octave/site/exec/${MACHINE_GNU_PLATFORM}
-@pkgdir libexec/octave/api-v52/site/exec/${MACHINE_GNU_PLATFORM}
+@pkgdir libexec/octave/api-v53/site/exec/${MACHINE_GNU_PLATFORM}
 @pkgdir libexec/octave/${PKGVERSION}/site/exec/${MACHINE_GNU_PLATFORM}
 @pkgdir lib/octave/site/oct/${MACHINE_GNU_PLATFORM}
-@pkgdir lib/octave/site/oct/api-v52/${MACHINE_GNU_PLATFORM}
+@pkgdir lib/octave/site/oct/api-v53/${MACHINE_GNU_PLATFORM}
 @pkgdir lib/octave/${PKGVERSION}/site/oct/${MACHINE_GNU_PLATFORM}

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.184 2018/12/26 10:45:46 adam Exp $
+# $NetBSD: Makefile,v 1.185 2019/03/05 11:11:12 ryoon Exp $
 
-DISTNAME=	octave-4.4.1
-PKGREVISION=	6
+DISTNAME=	octave-5.1.0
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GNU:=octave/}
 
@@ -89,6 +88,11 @@ CFLAGS+=	-fPIC
 .endif
 
 PREPEND_PATH+=			${QTDIR}/bin
+
+CHECK_WRKREF_SKIP+=		lib/octave/5.1.0/liboctinterp.so*
+
+pre-configure:
+	 cd ${WRKSRC} && autoconf
 
 post-install:
 .for f in ${OCTAVE_DOC}
