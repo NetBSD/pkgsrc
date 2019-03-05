@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2018/05/09 15:08:38 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/03/05 18:09:51 jaapb Exp $
 ${OCAML_SITELIB}/ppx_optcomp/META
 ${OCAML_SITELIB}/ppx_optcomp/cparser.ml
+${OCAML_SITELIB}/ppx_optcomp/dune-package
 ${OCAML_SITELIB}/ppx_optcomp/interpreter.ml
 ${OCAML_SITELIB}/ppx_optcomp/opam
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_optcomp/ppx_optcomp.a
@@ -10,12 +11,11 @@ ${OCAML_SITELIB}/ppx_optcomp/ppx_optcomp.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_optcomp/ppx_optcomp.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_optcomp/ppx_optcomp.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_optcomp/ppx_optcomp.cmxs
-${OCAML_SITELIB}/ppx_optcomp/ppx_optcomp.dune
 ${OCAML_SITELIB}/ppx_optcomp/ppx_optcomp.ml
 ${OCAML_SITELIB}/ppx_optcomp/ppx_optcomp__.cmi
 ${OCAML_SITELIB}/ppx_optcomp/ppx_optcomp__.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_optcomp/ppx_optcomp__.cmx
-${OCAML_SITELIB}/ppx_optcomp/ppx_optcomp__.ml-gen
+${OCAML_SITELIB}/ppx_optcomp/ppx_optcomp__.ml
 ${OCAML_SITELIB}/ppx_optcomp/ppx_optcomp__Cparser.cmi
 ${OCAML_SITELIB}/ppx_optcomp/ppx_optcomp__Cparser.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_optcomp/ppx_optcomp__Cparser.cmx
@@ -27,5 +27,5 @@ ${OCAML_SITELIB}/ppx_optcomp/ppx_optcomp__Token.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_optcomp/ppx_optcomp__Token.cmx
 ${OCAML_SITELIB}/ppx_optcomp/token.ml
 share/doc/ppx_optcomp/CHANGES.md
-share/doc/ppx_optcomp/LICENSE.txt
+share/doc/ppx_optcomp/LICENSE.md
 share/doc/ppx_optcomp/README.md
