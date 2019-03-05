@@ -1,2 +1,0 @@
-Data adapter for Cassandra databases, providing consistent behaviour to
-ActiveRecord.
