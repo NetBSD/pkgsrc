@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1073 2019/03/05 16:27:53 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.1074 2019/03/05 16:30:37 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1814,3 +1814,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ocaml-configurator to 0.11.0nb4 [jaapb 2019-03-05]
 	Updated databases/ocaml-sqlite3 to 4.4.1nb2 [jaapb 2019-03-05]
 	Updated devel/ocaml-result to 1.3nb4 [jaapb 2019-03-05]
+	Updated devel/py-meson to 0.49.2 [prlw1 2019-03-05]
