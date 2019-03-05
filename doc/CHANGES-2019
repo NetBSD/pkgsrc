@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1070 2019/03/05 16:21:44 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.1071 2019/03/05 16:23:56 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1811,3 +1811,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ocaml-sexplib0 to 0.12.0 [jaapb 2019-03-05]
 	Updated devel/ocaml-base to 0.12.0 [jaapb 2019-03-05]
 	Updated devel/ocaml-stdio to 0.12.0 [jaapb 2019-03-05]
+	Updated devel/ocaml-configurator to 0.11.0nb4 [jaapb 2019-03-05]
