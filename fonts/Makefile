@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.323 2019/03/04 11:56:44 wiz Exp $
+# $NetBSD: Makefile,v 1.324 2019/03/05 21:02:50 maya Exp $
 #
 
 COMMENT=	Fonts
@@ -184,6 +184,7 @@ SUBDIR+=	noto-ttf
 SUBDIR+=	ohruri-ttf
 SUBDIR+=	otf2bdf
 SUBDIR+=	oto
+SUBDIR+=	overpass
 SUBDIR+=	oxygen-fonts
 SUBDIR+=	p5-Font-AFM
 SUBDIR+=	p5-Font-FreeType
