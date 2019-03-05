@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2018/11/27 23:07:04 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2019/03/05 17:48:09 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml-lwt_ssl
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ocaml-lwt_ssl
 OCAML_LWT_SSL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-lwt_ssl+=	ocaml-lwt_ssl>=1.1.0
-BUILDLINK_ABI_DEPENDS.ocaml-lwt_ssl?=	ocaml-lwt_ssl>=1.1.2nb3
+BUILDLINK_ABI_DEPENDS.ocaml-lwt_ssl?=	ocaml-lwt_ssl>=1.1.2nb4
 BUILDLINK_PKGSRCDIR.ocaml-lwt_ssl?=	../../devel/ocaml-lwt_ssl
 
 .include "../../devel/ocaml-lwt/buildlink3.mk"
