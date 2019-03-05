@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2018/11/27 19:03:09 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/03/05 17:44:50 jaapb Exp $
 ${OCAML_SITELIB}/ssl/META
+${OCAML_SITELIB}/ssl/dune-package
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ssl/libssl_stubs.a
 ${OCAML_SITELIB}/ssl/opam
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ssl/ssl.a
@@ -10,7 +11,6 @@ ${OCAML_SITELIB}/ssl/ssl.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ssl/ssl.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ssl/ssl.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ssl/ssl.cmxs
-${OCAML_SITELIB}/ssl/ssl.dune
 ${OCAML_SITELIB}/ssl/ssl.ml
 ${OCAML_SITELIB}/ssl/ssl.mli
 ${OCAML_SITELIB}/ssl/ssl_threads.cmi
