@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2019/01/01 22:16:14 nia Exp $
+# $NetBSD: options.mk,v 1.3 2019/03/05 12:12:31 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.snes9x-gtk
 PKG_SUPPORTED_OPTIONS=		alsa opengl pulseaudio
@@ -12,31 +12,33 @@ PKG_SUGGESTED_OPTIONS.Linux+=	alsa
 .if !empty(PKG_OPTIONS:Malsa)
 .include "../../audio/alsa-lib/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	--without-alsa
+MESON_ARGS+=	-Dalsa=false
 .endif
 
 .if !empty(PKG_OPTIONS:Mgtk2)
 .include "../../x11/gtk2/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-gtk2
+MESON_ARGS+=	-Dgtk2=true
 .else
-CONFIGURE_ARGS+=	--without-gtk2
+MESON_ARGS+=	-Dgtk2=false
 .endif
 
 .if !empty(PKG_OPTIONS:Mgtk3)
 .include "../../x11/gtk3/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-gtk3
+MESON_ARGS+=	-Dgtk3=true
 .else
-CONFIGURE_ARGS+=	--without-gtk3
+MESON_ARGS+=	-Dgtk3=false
 .endif
 
 .if !empty(PKG_OPTIONS:Mopengl)
 .include "../../graphics/MesaLib/buildlink3.mk"
+MESON_ARGS+=	-Dopengl=true
 .else
-CONFIGURE_ARGS+=	--without-opengl
+MESON_ARGS+=	-Dopengl=false
 .endif
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
 .include "../../audio/pulseaudio/buildlink3.mk"
+MESON_ARGS+=	-Dpulseaudio=true
 .else
-CONFIGURE_ARGS+=	--without-pulseaudio
+MESON_ARGS+=	-Dpulseaudio=false
 .endif
