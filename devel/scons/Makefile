@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.43 2019/01/02 17:18:47 tnn Exp $
+# $NetBSD: Makefile,v 1.44 2019/03/05 19:30:01 adam Exp $
 
-DISTNAME=	scons-3.0.2
+DISTNAME=	scons-3.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scons/}
-MASTER_SITES+=	${MASTER_SITE_PYPI:=S/SCons/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/scons/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.scons.org/
 COMMENT=	Python-based, open-source build system
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+USE_LANGUAGES=	# none
+
+PYTHON_SELF_CONFLICT=	yes
 
 REPLACE_PYTHON+=	script/scons
 REPLACE_PYTHON+=	script/scons-configure-cache
