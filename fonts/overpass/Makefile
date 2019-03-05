@@ -1,18 +1,14 @@
-# $NetBSD: Makefile,v 1.1 2019/03/05 21:02:03 maya Exp $
+# $NetBSD: Makefile,v 1.2 2019/03/05 21:17:17 tnn Exp $
 
-GITHUB_PROJECT=	Overpass
-DISTNAME=	3.0.3
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
+DISTNAME=	Overpass-3.0.3
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=RedHatBrand/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	maya@NetBSD.org
 HOMEPAGE=	https://github.com/RedHatBrand/Overpass/
 COMMENT=	Font family inspired by Highway Gothic
 LICENSE=	ofl-v1.1 AND gnu-lgpl-v2.1
 
-WRKSRC=		${WRKDIR}/Overpass-3.0.3
 USE_LANGUAGES=	# none
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
