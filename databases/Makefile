@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.574 2019/03/05 15:52:13 taca Exp $
+# $NetBSD: Makefile,v 1.575 2019/03/05 15:55:13 taca Exp $
 
 COMMENT=	Databases
 
@@ -410,7 +410,6 @@ SUBDIR+=	ruby-arel-helpers
 SUBDIR+=	ruby-arel60
 SUBDIR+=	ruby-arel80
 SUBDIR+=	ruby-awesome_nested_set
-SUBDIR+=	ruby-cassandra
 SUBDIR+=	ruby-data_objects
 SUBDIR+=	ruby-datamapper
 SUBDIR+=	ruby-dbd-mysql
