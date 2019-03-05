@@ -1,4 +1,6 @@
-$NetBSD: patch-src_third__party_IntelRDFPMathLib20U1_LIBRARY_float128_op__system.h,v 1.1 2017/05/29 14:44:47 ryoon Exp $
+$NetBSD: patch-src_third__party_IntelRDFPMathLib20U1_LIBRARY_float128_op__system.h,v 1.2 2019/03/05 19:35:58 adam Exp $
+
+Support NetBSD.
 
 --- src/third_party/IntelRDFPMathLib20U1/LIBRARY/float128/op_system.h.orig	2017-04-20 21:43:42.000000000 +0000
 +++ src/third_party/IntelRDFPMathLib20U1/LIBRARY/float128/op_system.h
