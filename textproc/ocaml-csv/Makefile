@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2018/11/27 19:49:45 jaapb Exp $
+# $NetBSD: Makefile,v 1.22 2019/03/05 19:40:33 jaapb Exp $
 
 VERSION=	2.2
 GITHUB_PROJECT=	ocaml-csv
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Chris00/}
 
