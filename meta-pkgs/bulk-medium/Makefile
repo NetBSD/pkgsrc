@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2019/01/14 13:19:11 taca Exp $
+# $NetBSD: Makefile,v 1.51 2019/03/05 08:55:43 taca Exp $
 
-DISTNAME=	bulk-medium-20190114
+DISTNAME=	bulk-medium-20190305
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -84,6 +84,7 @@ BUILD_DEPENDS+=	php>=7.1<7.2:../../lang/php71
 BUILD_DEPENDS+=	ruby23-base-[0-9]*:../../lang/ruby23-base
 BUILD_DEPENDS+=	ruby24-base-[0-9]*:../../lang/ruby24-base
 BUILD_DEPENDS+=	ruby25-base-[0-9]*:../../lang/ruby25-base
+BUILD_DEPENDS+=	ruby26-base-[0-9]*:../../lang/ruby26-base
 BUILD_DEPENDS+=	sun-jdk6-[0-9]*:../../lang/sun-jdk6
 BUILD_DEPENDS+=	sun-jre6-[0-9]*:../../lang/sun-jre6
 BUILD_DEPENDS+=	openjdk7-[0-9]*:../../lang/openjdk7
