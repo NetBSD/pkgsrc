@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1050 2019/03/05 08:54:40 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1051 2019/03/05 08:56:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1788,3 +1788,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/ruby-rails51 to 5.1.6.1nb1 [taca 2019-03-05]
 	Updated www/ruby-padrino-gen to 0.14.4nb1 [taca 2019-03-05]
 	Updated meta-pkgs/bulk-large to 20190305 [taca 2019-03-05]
+	Updated meta-pkgs/bulk-medium to 20190305 [taca 2019-03-05]
