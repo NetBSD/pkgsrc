@@ -1,10 +1,10 @@
-$NetBSD: patch-mesonbuild_minstall.py,v 1.1 2018/09/03 09:30:25 wiz Exp $
+$NetBSD: patch-mesonbuild_minstall.py,v 1.2 2019/03/05 16:30:18 prlw1 Exp $
 
 Don't touch rpath.
 
---- mesonbuild/minstall.py.orig	2018-06-22 11:50:56.000000000 +0000
+--- mesonbuild/minstall.py.orig	2019-01-23 16:46:09.000000000 +0000
 +++ mesonbuild/minstall.py
-@@ -436,15 +436,6 @@ class Installer:
+@@ -476,15 +476,6 @@ class Installer:
                          print("Symlink creation does not work on this platform. "
                                "Skipping all symlinking.")
                          printed_symlink_error = True
@@ -18,5 +18,5 @@ Don't touch rpath.
 -                    else:
 -                        raise
  
- def run(args):
-     parser = buildparser()
+ def run(opts):
+     datafilename = 'meson-private/install.dat'
