@@ -1,0 +1,14 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2019/03/05 11:19:24 ryoon Exp $
+
+* Do not handle user manual to avoid additional download
+
+--- CMakeLists.txt.orig	2018-12-24 09:31:27.000000000 +0000
++++ CMakeLists.txt
+@@ -538,7 +538,6 @@ set(CMAKE_INSTALL_DEFAULT_COMPONENT_NAME
+ include(data/supported_extensions.cmake) # this file needs to be included first as it gets amended in src/
+ add_subdirectory(src) # src/ needs to be before data/ so that the correct CSS file gets installed
+ add_subdirectory(data)
+-add_subdirectory(doc)
+ add_subdirectory(tools)
+ 
+ # This contains fixup_bundle

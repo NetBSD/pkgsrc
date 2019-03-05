@@ -1,20 +1,11 @@
-$NetBSD: distinfo,v 1.30 2018/06/26 10:49:10 jperkin Exp $
+$NetBSD: distinfo,v 1.31 2019/03/05 11:19:24 ryoon Exp $
 
-SHA1 (darktable-2.2.5.tar.xz) = f60ab3f9118e96c311f286a87102ad0d647cb111
-RMD160 (darktable-2.2.5.tar.xz) = 1a66797ca24dc7ef06fc5bb2fbed98724d50c0f8
-SHA512 (darktable-2.2.5.tar.xz) = fbc79398660b51e580d22dbdfc9a74d213f69335d6058e2844ef397951a1e840264b6d03d1b52b424319fb647a274ac14ff23ee9a9c60071f71497988bdf989b
-Size (darktable-2.2.5.tar.xz) = 3092540 bytes
+SHA1 (darktable-2.6.0.tar.xz) = 3b4fdf6f1db287ee04cd1d8c5a05f0dfa2647128
+RMD160 (darktable-2.6.0.tar.xz) = 56e4b383b02fbb9aa7d28b9eb17e72909cb1220e
+SHA512 (darktable-2.6.0.tar.xz) = 066a8766edf3d961b2995bd681c9be65ae118f650a34da3c87c9096b76586c4a949b4c620993bcba3e7cd29f255c19dad9c2e205ed413c309398b4bc606eb73b
+Size (darktable-2.6.0.tar.xz) = 3358508 bytes
+SHA1 (patch-CMakeLists.txt) = 2b2c6c0733af56e61e5be598a59644b40e8f26a6
+SHA1 (patch-cmake_compiler-warnings.cmake) = b65fbb5222cca791088137e823402df6b9423121
 SHA1 (patch-src_CMakeLists.txt) = 4535599cf1d0f6aae1909bd4dc09281311e23e0c
 SHA1 (patch-src_common_system__signal__handling.c) = 296f5618c618a9b16af2ca5a1d9ff408c437c220
-SHA1 (patch-src_external_rawspeed_RawSpeed_AriDecoder.cpp) = c1c7f8b03f63295361138ec1d6dbd1d323fa69ba
-SHA1 (patch-src_external_rawspeed_RawSpeed_ArwDecoder.cpp) = 435e99db5d512f6568048a8e6382f6def6e7430f
-SHA1 (patch-src_external_rawspeed_RawSpeed_ColorFilterArray.cpp) = 3abfbca5078d1ed068199e96e16b8eaea4eb662d
-SHA1 (patch-src_external_rawspeed_RawSpeed_ColorFilterArray.h) = 952924510be16009083b2bdbdeeda84770321c79
-SHA1 (patch-src_external_rawspeed_RawSpeed_Cr2Decoder.cpp) = ba539af74fb071b5a826702a085e5c03e4f2b763
-SHA1 (patch-src_external_rawspeed_RawSpeed_CrwDecoder.cpp) = c3a7445a0e978d615171b5ffa363be74ffafe93e
-SHA1 (patch-src_external_rawspeed_RawSpeed_NefDecoder.cpp) = 1eb97b59d1110334d67200e4b9e26b411a5bbd8b
-SHA1 (patch-src_external_rawspeed_RawSpeed_OrfDecoder.cpp) = a2e9162e6242633690ada9939bff8b459da18fb6
-SHA1 (patch-src_external_rawspeed_RawSpeed_PefDecoder.cpp) = 3f4b15e56c2e6e77ed18f8479f6e4f3cf5effa23
-SHA1 (patch-src_external_rawspeed_RawSpeed_Rw2Decoder.cpp) = 26870733cb6399095f56ca6caa820990a8572c0a
-SHA1 (patch-src_external_rawspeed_RawSpeed_ThreefrDecoder.cpp) = 6d81b0e758a1a7b84b8f510ff670dfb948881f78
 SHA1 (patch-tools_noise_benchmark.sh) = 1e26ebbbc73e44ec41c092297d681f33fb55155d
