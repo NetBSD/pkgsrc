@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2018/12/21 16:57:35 nia Exp $
+# $NetBSD: options.mk,v 1.2 2019/03/05 10:45:38 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.easyrpg-player
 PKG_SUPPORTED_OPTIONS=	freetype mpg123 libwildmidi vorbis opus sndfile speex
@@ -59,8 +59,8 @@ CONFIGURE_ARGS+=	--without-libsndfile
 .endif
 
 .if !empty(PKG_OPTIONS:Mspeex)
-CONFIGURE_ARGS+=	--with-speex
+CONFIGURE_ARGS+=	--with-libspeexdsp
 .include "../../audio/speexdsp/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	--without-speex
+CONFIGURE_ARGS+=	--without-libspeexdsp
 .endif
