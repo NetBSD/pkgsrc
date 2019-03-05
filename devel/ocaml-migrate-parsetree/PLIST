@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/05/09 14:39:58 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/03/05 16:33:41 jaapb Exp $
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/META
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/ast_402.cmi
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/ast_402.cmt
@@ -24,6 +24,7 @@ ${OCAML_SITELIB}/ocaml-migrate-parsetree/ast_407.cmi
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/ast_407.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-migrate-parsetree/ast_407.cmx
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/ast_407.ml
+${OCAML_SITELIB}/ocaml-migrate-parsetree/dune-package
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-migrate-parsetree/driver-main/migrate_parsetree_driver_main.a
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/driver-main/migrate_parsetree_driver_main.cma
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/driver-main/migrate_parsetree_driver_main.cmi
@@ -32,7 +33,6 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-migrate-parsetree/driver-main/migrate_p
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-migrate-parsetree/driver-main/migrate_parsetree_driver_main.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-migrate-parsetree/driver-main/migrate_parsetree_driver_main.cmxs
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/driver-main/migrate_parsetree_driver_main.ml
-${OCAML_SITELIB}/ocaml-migrate-parsetree/driver-main/ocaml-migrate-parsetree.driver-main.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree.a
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree.cma
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree.cmi
@@ -155,7 +155,6 @@ ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_versions.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_versions.cmx
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_versions.ml
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_versions.mli
-${OCAML_SITELIB}/ocaml-migrate-parsetree/ocaml-migrate-parsetree.dune
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/opam
 share/doc/ocaml-migrate-parsetree/CHANGES.md
 share/doc/ocaml-migrate-parsetree/LICENSE.md
