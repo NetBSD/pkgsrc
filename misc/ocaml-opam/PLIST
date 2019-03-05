@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2018/01/10 16:33:23 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/03/05 18:36:24 jaapb Exp $
 bin/opam
 bin/opam-installer
 ${OCAML_SITELIB}/opam-installer/META
+${OCAML_SITELIB}/opam-installer/dune-package
 ${OCAML_SITELIB}/opam-installer/opam
 ${OCAML_SITELIB}/opam/META
+${OCAML_SITELIB}/opam/dune-package
 ${OCAML_SITELIB}/opam/opam
 share/doc/opam-installer/CHANGES
 share/doc/opam-installer/LICENSE
