@@ -1,9 +1,10 @@
-$NetBSD: patch-src_mongo_base_initializer.h,v 1.1 2015/05/02 08:10:33 ryoon Exp $
+$NetBSD: patch-src_mongo_base_initializer.h,v 1.2 2019/03/05 19:35:58 adam Exp $
 
 Fixes at least SunOS.
---- src/mongo/base/initializer.h.orig	2014-04-07 00:36:57.000000000 +0000
+
+--- src/mongo/base/initializer.h.orig	2019-01-30 14:26:33.000000000 +0000
 +++ src/mongo/base/initializer.h
-@@ -17,6 +17,7 @@
+@@ -32,6 +32,7 @@
  
  #include <string>
  #include <vector>

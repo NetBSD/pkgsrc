@@ -1,6 +1,6 @@
-$NetBSD: patch-src_third__party_wiredtiger_SConscript,v 1.5 2017/10/08 22:17:06 tnn Exp $
+$NetBSD: patch-src_third__party_wiredtiger_SConscript,v 1.6 2019/03/05 19:35:58 adam Exp $
 
-* Add NetBSD case.
+Support NetBSD and Dragonfly.
 
 --- src/third_party/wiredtiger/SConscript.orig	2017-04-20 21:43:42.000000000 +0000
 +++ src/third_party/wiredtiger/SConscript
@@ -17,12 +17,3 @@ $NetBSD: patch-src_third__party_wiredtiger_SConscript,v 1.5 2017/10/08 22:17:06 
  elif env.TargetOSIs('openbsd'):
      env.Append(CPPPATH=["build_openbsd"])
  elif env.TargetOSIs('linux'):
-@@ -93,7 +97,7 @@ if (VERSION_MAJOR == None or
-     VERSION_MINOR == None or
-     VERSION_PATCH == None or
-     VERSION_STRING == None):
--    print "Failed to find version variables in " + version_file
-+    print("Failed to find version variables in " + version_file)
-     Exit(1)
- 
- wiredtiger_includes = """

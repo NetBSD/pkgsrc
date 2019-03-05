@@ -1,13 +1,15 @@
-$NetBSD: patch-src_third__party_IntelRDFPMathLib20U1_LIBRARY_src_bid__functions.h,v 1.1 2017/05/29 14:44:47 ryoon Exp $
+$NetBSD: patch-src_third__party_IntelRDFPMathLib20U1_LIBRARY_src_bid__functions.h,v 1.2 2019/03/05 19:35:58 adam Exp $
 
---- src/third_party/IntelRDFPMathLib20U1/LIBRARY/src/bid_functions.h.orig	2017-04-20 21:43:42.000000000 +0000
+Fix buidling.
+
+--- src/third_party/IntelRDFPMathLib20U1/LIBRARY/src/bid_functions.h.orig	2019-01-30 14:26:33.000000000 +0000
 +++ src/third_party/IntelRDFPMathLib20U1/LIBRARY/src/bid_functions.h
-@@ -159,7 +159,7 @@ typedef unsigned    long fexcept_t;
+@@ -164,7 +164,7 @@ typedef unsigned    long fexcept_t;
  typedef unsigned bid__int64 fexcept_t;
  #endif
  #else
--#ifdef __QNX__
-+#if defined(__QNX__) || defined(__NetBSD__)
+-#if defined(__QNX__) || defined(__OpenBSD__)
++#if defined(__QNX__) || defined(__NetBSD__) || defined(__OpenBSD__)
  #include <fenv.h>
  #else
  typedef unsigned short int fexcept_t;
