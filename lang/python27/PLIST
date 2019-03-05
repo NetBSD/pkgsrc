@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/06/17 19:21:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/03/05 12:43:40 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1437,8 +1437,8 @@ lib/python${PY_VER_SUFFIX}/ensurepip/__init__.pyo
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.py
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyo
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-9.0.3-py2.py3-none-any.whl
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-39.0.1-py2.py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-18.1-py2.py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-40.6.2-py2.py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyo
@@ -1998,6 +1998,9 @@ lib/python${PY_VER_SUFFIX}/lib-tk/test/test_tkinter/test_images.pyo
 lib/python${PY_VER_SUFFIX}/lib-tk/test/test_tkinter/test_loadtk.py
 lib/python${PY_VER_SUFFIX}/lib-tk/test/test_tkinter/test_loadtk.pyc
 lib/python${PY_VER_SUFFIX}/lib-tk/test/test_tkinter/test_loadtk.pyo
+lib/python${PY_VER_SUFFIX}/lib-tk/test/test_tkinter/test_misc.py
+lib/python${PY_VER_SUFFIX}/lib-tk/test/test_tkinter/test_misc.pyc
+lib/python${PY_VER_SUFFIX}/lib-tk/test/test_tkinter/test_misc.pyo
 lib/python${PY_VER_SUFFIX}/lib-tk/test/test_tkinter/test_text.py
 lib/python${PY_VER_SUFFIX}/lib-tk/test/test_tkinter/test_text.pyc
 lib/python${PY_VER_SUFFIX}/lib-tk/test/test_tkinter/test_text.pyo
@@ -2721,9 +2724,9 @@ lib/python${PY_VER_SUFFIX}/test/badsyntax_future7.py
 lib/python${PY_VER_SUFFIX}/test/badsyntax_future8.py
 lib/python${PY_VER_SUFFIX}/test/badsyntax_future9.py
 lib/python${PY_VER_SUFFIX}/test/badsyntax_nocaret.py
-lib/python${PY_VER_SUFFIX}/test/bisect.py
-lib/python${PY_VER_SUFFIX}/test/bisect.pyc
-lib/python${PY_VER_SUFFIX}/test/bisect.pyo
+lib/python${PY_VER_SUFFIX}/test/bisect_cmd.py
+lib/python${PY_VER_SUFFIX}/test/bisect_cmd.pyc
+lib/python${PY_VER_SUFFIX}/test/bisect_cmd.pyo
 lib/python${PY_VER_SUFFIX}/test/capath/0e4015b9.0
 lib/python${PY_VER_SUFFIX}/test/capath/4e1295a3.0
 lib/python${PY_VER_SUFFIX}/test/capath/5ed36f99.0
@@ -2909,7 +2912,6 @@ lib/python${PY_VER_SUFFIX}/test/decimaltestdata/testall.decTest
 lib/python${PY_VER_SUFFIX}/test/decimaltestdata/tointegral.decTest
 lib/python${PY_VER_SUFFIX}/test/decimaltestdata/tointegralx.decTest
 lib/python${PY_VER_SUFFIX}/test/decimaltestdata/xor.decTest
-lib/python${PY_VER_SUFFIX}/test/dh1024.pem
 lib/python${PY_VER_SUFFIX}/test/doctest_aliases.py
 lib/python${PY_VER_SUFFIX}/test/doctest_aliases.pyc
 lib/python${PY_VER_SUFFIX}/test/doctest_aliases.pyo
@@ -2918,6 +2920,7 @@ lib/python${PY_VER_SUFFIX}/test/double_const.pyc
 lib/python${PY_VER_SUFFIX}/test/double_const.pyo
 lib/python${PY_VER_SUFFIX}/test/empty.vbs
 lib/python${PY_VER_SUFFIX}/test/exception_hierarchy.txt
+lib/python${PY_VER_SUFFIX}/test/ffdh3072.pem
 lib/python${PY_VER_SUFFIX}/test/floating_points.txt
 lib/python${PY_VER_SUFFIX}/test/fork_wait.py
 lib/python${PY_VER_SUFFIX}/test/fork_wait.pyc
@@ -3060,6 +3063,7 @@ lib/python${PY_VER_SUFFIX}/test/support/script_helper.pyo
 lib/python${PY_VER_SUFFIX}/test/symlink_support.py
 lib/python${PY_VER_SUFFIX}/test/symlink_support.pyc
 lib/python${PY_VER_SUFFIX}/test/symlink_support.pyo
+lib/python${PY_VER_SUFFIX}/test/talos-2019-0758.pem
 lib/python${PY_VER_SUFFIX}/test/test_MimeWriter.py
 lib/python${PY_VER_SUFFIX}/test/test_MimeWriter.pyc
 lib/python${PY_VER_SUFFIX}/test/test_MimeWriter.pyo
@@ -3135,6 +3139,9 @@ lib/python${PY_VER_SUFFIX}/test/test_base64.pyo
 lib/python${PY_VER_SUFFIX}/test/test_bastion.py
 lib/python${PY_VER_SUFFIX}/test/test_bastion.pyc
 lib/python${PY_VER_SUFFIX}/test/test_bastion.pyo
+lib/python${PY_VER_SUFFIX}/test/test_bdb.py
+lib/python${PY_VER_SUFFIX}/test/test_bdb.pyc
+lib/python${PY_VER_SUFFIX}/test/test_bdb.pyo
 lib/python${PY_VER_SUFFIX}/test/test_bigaddrspace.py
 lib/python${PY_VER_SUFFIX}/test/test_bigaddrspace.pyc
 lib/python${PY_VER_SUFFIX}/test/test_bigaddrspace.pyo
@@ -4315,7 +4322,6 @@ lib/python${PY_VER_SUFFIX}/test/warning_tests.pyo
 lib/python${PY_VER_SUFFIX}/test/win_console_handler.py
 lib/python${PY_VER_SUFFIX}/test/win_console_handler.pyc
 lib/python${PY_VER_SUFFIX}/test/win_console_handler.pyo
-lib/python${PY_VER_SUFFIX}/test/wrongcert.pem
 lib/python${PY_VER_SUFFIX}/test/xmltestdata/expat224_utf8_bug.xml
 lib/python${PY_VER_SUFFIX}/test/xmltestdata/simple-ns.xml
 lib/python${PY_VER_SUFFIX}/test/xmltestdata/simple.xml
