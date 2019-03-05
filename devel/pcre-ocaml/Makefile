@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2018/11/27 19:08:14 jaapb Exp $
+# $NetBSD: Makefile,v 1.36 2019/03/05 18:23:31 jaapb Exp $
 
-VERSION=		7.3.5
+VERSION=		7.4.1
 DISTNAME=		pcre-${VERSION}
 PKGNAME=		pcre-ocaml-${VERSION}
 CATEGORIES=		devel
