@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2018/04/04 19:38:22 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/03/05 17:59:40 jaapb Exp $
 ${OCAML_SITELIB}/ppx_compare/META
-${OCAML_SITELIB}/ppx_compare/expander/ppx_compare.expander.dune
+${OCAML_SITELIB}/ppx_compare/dune-package
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_compare/expander/ppx_compare_expander.a
 ${OCAML_SITELIB}/ppx_compare/expander/ppx_compare_expander.cma
 ${OCAML_SITELIB}/ppx_compare/expander/ppx_compare_expander.cmi
@@ -11,6 +11,14 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_compare/expander/ppx_compare_expander.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_compare/expander/ppx_compare_expander.cmxs
 ${OCAML_SITELIB}/ppx_compare/expander/ppx_compare_expander.ml
 ${OCAML_SITELIB}/ppx_compare/expander/ppx_compare_expander.mli
+${OCAML_SITELIB}/ppx_compare/expander/ppx_compare_expander__.cmi
+${OCAML_SITELIB}/ppx_compare/expander/ppx_compare_expander__.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_compare/expander/ppx_compare_expander__.cmx
+${OCAML_SITELIB}/ppx_compare/expander/ppx_compare_expander__.ml
+${OCAML_SITELIB}/ppx_compare/expander/ppx_compare_expander__Ppx_compare_expander_intf.cmi
+${OCAML_SITELIB}/ppx_compare/expander/ppx_compare_expander__Ppx_compare_expander_intf.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_compare/expander/ppx_compare_expander__Ppx_compare_expander_intf.cmx
+${OCAML_SITELIB}/ppx_compare/expander/ppx_compare_expander_intf.ml
 ${OCAML_SITELIB}/ppx_compare/opam
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_compare/ppx_compare.a
 ${OCAML_SITELIB}/ppx_compare/ppx_compare.cma
@@ -20,10 +28,8 @@ ${OCAML_SITELIB}/ppx_compare/ppx_compare.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_compare/ppx_compare.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_compare/ppx_compare.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_compare/ppx_compare.cmxs
-${OCAML_SITELIB}/ppx_compare/ppx_compare.dune
 ${OCAML_SITELIB}/ppx_compare/ppx_compare.ml
 ${OCAML_SITELIB}/ppx_compare/ppx_compare.mli
-${OCAML_SITELIB}/ppx_compare/runtime-lib/ppx_compare.runtime-lib.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_compare/runtime-lib/ppx_compare_lib.a
 ${OCAML_SITELIB}/ppx_compare/runtime-lib/ppx_compare_lib.cma
 ${OCAML_SITELIB}/ppx_compare/runtime-lib/ppx_compare_lib.cmi
@@ -33,5 +39,5 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_compare/runtime-lib/ppx_compare_lib.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_compare/runtime-lib/ppx_compare_lib.cmxs
 ${OCAML_SITELIB}/ppx_compare/runtime-lib/ppx_compare_lib.ml
 share/doc/ppx_compare/CHANGES.md
-share/doc/ppx_compare/LICENSE.txt
+share/doc/ppx_compare/LICENSE.md
 share/doc/ppx_compare/README.md
