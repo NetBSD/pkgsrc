@@ -1,17 +1,16 @@
-@comment $NetBSD: PLIST,v 1.5 2018/11/27 23:33:40 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/03/05 18:21:04 jaapb Exp $
 ${PLIST.ocaml-opt}bin/ydump
 ${OCAML_SITELIB}/yojson/META
+${OCAML_SITELIB}/yojson/dune-package
 ${OCAML_SITELIB}/yojson/opam
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/yojson/yojson.a
 ${OCAML_SITELIB}/yojson/yojson.cma
 ${OCAML_SITELIB}/yojson/yojson.cmi
 ${OCAML_SITELIB}/yojson/yojson.cmt
 ${OCAML_SITELIB}/yojson/yojson.cmti
-${OCAML_SITELIB}/yojson/yojson.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/yojson/yojson.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/yojson/yojson.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/yojson/yojson.cmxs
-${OCAML_SITELIB}/yojson/yojson.dune
 ${OCAML_SITELIB}/yojson/yojson.ml
 ${OCAML_SITELIB}/yojson/yojson.mli
 ${OCAML_SITELIB}/yojson/yojson_biniou.cmi
@@ -20,5 +19,6 @@ ${OCAML_SITELIB}/yojson/yojson_biniou.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/yojson/yojson_biniou.cmx
 ${OCAML_SITELIB}/yojson/yojson_biniou.ml
 ${OCAML_SITELIB}/yojson/yojson_biniou.mli
-share/doc/yojson/LICENSE
+share/doc/yojson/CHANGES.md
+share/doc/yojson/LICENSE.md
 share/doc/yojson/README.md
