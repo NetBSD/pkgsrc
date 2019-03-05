@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1103 2019/03/05 18:30:53 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.1104 2019/03/05 18:36:37 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1844,3 +1844,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ocaml-yojson to 1.7.0 [jaapb 2019-03-05]
 	Updated devel/pcre-ocaml to 7.4.1 [jaapb 2019-03-05]
 	Updated devel/ocaml-extlib to 1.7.6 [jaapb 2019-03-05]
+	Updated misc/ocaml-opam to 2.0.3 [jaapb 2019-03-05]
