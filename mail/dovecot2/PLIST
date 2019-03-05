@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.63 2018/11/30 18:43:09 adam Exp $
-@pkgdir etc/dovecot
+@comment $NetBSD: PLIST,v 1.64 2019/03/05 16:51:03 hauke Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -181,6 +180,7 @@ include/dovecot/imap-common.h
 include/dovecot/imap-date.h
 include/dovecot/imap-envelope.h
 include/dovecot/imap-expunge.h
+include/dovecot/imap-feature.h
 include/dovecot/imap-fetch.h
 include/dovecot/imap-id.h
 include/dovecot/imap-keepalive.h
@@ -249,6 +249,7 @@ include/dovecot/iostream-pump.h
 include/dovecot/iostream-rawlog-private.h
 include/dovecot/iostream-rawlog.h
 include/dovecot/iostream-ssl-private.h
+include/dovecot/iostream-ssl-test.h
 include/dovecot/iostream-ssl.h
 include/dovecot/iostream-temp.h
 include/dovecot/iostream.h
@@ -555,6 +556,13 @@ include/dovecot/str.h
 include/dovecot/strescape.h
 include/dovecot/strfuncs.h
 include/dovecot/strnum.h
+include/dovecot/submission-backend-relay.h
+include/dovecot/submission-backend.h
+include/dovecot/submission-client.h
+include/dovecot/submission-commands.h
+include/dovecot/submission-common.h
+include/dovecot/submission-recipient.h
+include/dovecot/submission-settings.h
 include/dovecot/subscription-file.h
 include/dovecot/syslog-util.h
 include/dovecot/test-common.h
