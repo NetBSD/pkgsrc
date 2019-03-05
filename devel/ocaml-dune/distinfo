@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/11/27 14:27:39 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2019/03/05 16:11:03 jaapb Exp $
 
-SHA1 (dune-1.5.1.tar.gz) = 95e196645967873f92e5e96f47539ad953b85458
-RMD160 (dune-1.5.1.tar.gz) = ffcf6f08f6fc58f0cce939bade769f7a71294eec
-SHA512 (dune-1.5.1.tar.gz) = 198eca05e6a1d1c5ff1871b7d2dcc0043778ed7c26b9ac7aee45a9f579f843bbda23d0fd26673ade9f241288dbb9a2ec3ace5adb5ae0d1949cf23a64869025a3
-Size (dune-1.5.1.tar.gz) = 579639 bytes
+SHA1 (dune-1.7.3.tar.gz) = c72138fab77dc267947d34e0b36f489a9bdd9e9a
+RMD160 (dune-1.7.3.tar.gz) = 450d2cea64b244716d2d02d22ffdde159c6c3533
+SHA512 (dune-1.7.3.tar.gz) = 744ff584acc1695f3720b142a5bc00a26901d488531629fe386f4f3b02f13b86b74e7ba5801d468f4b8ebfcee9bd15017e6dd0d0c2ae242eaef40aa99668a39d
+Size (dune-1.7.3.tar.gz) = 666850 bytes
