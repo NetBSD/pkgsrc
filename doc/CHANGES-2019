@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1061 2019/03/05 12:13:38 nia Exp $
+$NetBSD: CHANGES-2019,v 1.1062 2019/03/05 12:48:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1799,3 +1799,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated emulators/snes9x to 1.59.2 [nia 2019-03-05]
 	Updated emulators/snes9x-gtk to 1.59.2 [nia 2019-03-05]
 	Updated emulators/libretro-snes9x to 1.59.2 [nia 2019-03-05]
+	Updated lang/python27 to 2.7.16 [adam 2019-03-05]
+	Updated devel/py-flake8-import-order to 0.18.1 [adam 2019-03-05]
