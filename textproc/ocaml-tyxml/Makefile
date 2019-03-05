@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.22 2018/11/29 12:00:45 jaapb Exp $
+# $NetBSD: Makefile,v 1.23 2019/03/05 17:10:04 jaapb Exp $
 #
 
 VERSION=	4.3.0
 GITHUB_PROJECT=	tyxml
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 PKGNAME=	ocaml-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 

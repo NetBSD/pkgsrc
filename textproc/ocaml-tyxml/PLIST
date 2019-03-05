@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2018/11/29 12:00:45 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/03/05 17:10:04 jaapb Exp $
 ${OCAML_SITELIB}/tyxml/META
+${OCAML_SITELIB}/tyxml/dune-package
 ${OCAML_SITELIB}/tyxml/functor/html_f.cmi
 ${OCAML_SITELIB}/tyxml/functor/html_f.cmt
 ${OCAML_SITELIB}/tyxml/functor/html_f.cmti
@@ -24,7 +25,6 @@ ${OCAML_SITELIB}/tyxml/functor/svg_sigs.mli
 ${OCAML_SITELIB}/tyxml/functor/svg_types.cmi
 ${OCAML_SITELIB}/tyxml/functor/svg_types.cmti
 ${OCAML_SITELIB}/tyxml/functor/svg_types.mli
-${OCAML_SITELIB}/tyxml/functor/tyxml.functor.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/tyxml/functor/tyxml_f.a
 ${OCAML_SITELIB}/tyxml/functor/tyxml_f.cma
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/tyxml/functor/tyxml_f.cmxa
@@ -57,7 +57,6 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/tyxml/functor/xml_wrap.cmx
 ${OCAML_SITELIB}/tyxml/functor/xml_wrap.ml
 ${OCAML_SITELIB}/tyxml/functor/xml_wrap.mli
 ${OCAML_SITELIB}/tyxml/opam
-${OCAML_SITELIB}/tyxml/tools/tyxml.tools.dune
 ${OCAML_SITELIB}/tyxml/tools/tyxml_name.cmi
 ${OCAML_SITELIB}/tyxml/tools/tyxml_name.cmt
 ${OCAML_SITELIB}/tyxml/tools/tyxml_name.cmti
@@ -68,7 +67,6 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/tyxml/tools/tyxml_tools.a
 ${OCAML_SITELIB}/tyxml/tools/tyxml_tools.cma
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/tyxml/tools/tyxml_tools.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/tyxml/tools/tyxml_tools.cmxs
-${OCAML_SITELIB}/tyxml/top/tyxml.top.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/tyxml/top/tyxml_top.a
 ${OCAML_SITELIB}/tyxml/top/tyxml_top.cma
 ${OCAML_SITELIB}/tyxml/top/tyxml_top.cmi
@@ -84,7 +82,6 @@ ${OCAML_SITELIB}/tyxml/tyxml.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/tyxml/tyxml.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/tyxml/tyxml.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/tyxml/tyxml.cmxs
-${OCAML_SITELIB}/tyxml/tyxml.dune
 ${OCAML_SITELIB}/tyxml/tyxml.ml
 ${OCAML_SITELIB}/tyxml/tyxml_html.cmi
 ${OCAML_SITELIB}/tyxml/tyxml_html.cmt
