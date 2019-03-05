@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2019/02/06 15:03:08 taca Exp $
+# $NetBSD: Makefile,v 1.4 2019/03/05 07:52:19 taca Exp $
 
 DISTNAME=	padrino-gen-${RUBY_PADRINO_VERS}
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,6 +16,6 @@ RUBYGEM_OPTIONS+=	--format-executable
 .include "../../www/ruby-padrino/Makefile.common"
 .include "../../lang/ruby/gem.mk"
 .if ${RUBY_VER} != 26
-DEPENDS+=	${RUBY_PKGPREFIX}-bundler>=1.0<2:../../misc/ruby-bundler
+DEPENDS+=	${RUBY_PKGPREFIX}-bundler1>=1.0<2:../../misc/ruby-bundler1
 .endif
 .include "../../mk/bsd.pkg.mk"
