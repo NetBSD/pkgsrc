@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/11/27 18:57:00 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/03/05 17:57:36 jaapb Exp $
 ${OCAML_SITELIB}/ppxlib/META
 ${OCAML_SITELIB}/ppxlib/ast/ast.ml
 ${OCAML_SITELIB}/ppxlib/ast/ast_helper.ml
@@ -14,7 +14,6 @@ ${OCAML_SITELIB}/ppxlib/ast/parser.ml
 ${OCAML_SITELIB}/ppxlib/ast/parser.mli
 ${OCAML_SITELIB}/ppxlib/ast/pprintast.ml
 ${OCAML_SITELIB}/ppxlib/ast/pprintast.mli
-${OCAML_SITELIB}/ppxlib/ast/ppxlib.ast.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppxlib/ast/ppxlib_ast.a
 ${OCAML_SITELIB}/ppxlib/ast/ppxlib_ast.cma
 ${OCAML_SITELIB}/ppxlib/ast/ppxlib_ast.cmi
@@ -95,6 +94,7 @@ ${OCAML_SITELIB}/ppxlib/deriving.ml
 ${OCAML_SITELIB}/ppxlib/deriving.mli
 ${OCAML_SITELIB}/ppxlib/driver.ml
 ${OCAML_SITELIB}/ppxlib/driver.mli
+${OCAML_SITELIB}/ppxlib/dune-package
 ${OCAML_SITELIB}/ppxlib/extension.ml
 ${OCAML_SITELIB}/ppxlib/extension.mli
 ${OCAML_SITELIB}/ppxlib/file_path.ml
@@ -111,7 +111,6 @@ ${OCAML_SITELIB}/ppxlib/longident.mli
 ${OCAML_SITELIB}/ppxlib/merlin_helpers.ml
 ${OCAML_SITELIB}/ppxlib/merlin_helpers.mli
 ${OCAML_SITELIB}/ppxlib/metaquot/ppx.exe
-${OCAML_SITELIB}/ppxlib/metaquot/ppxlib.metaquot.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppxlib/metaquot/ppxlib_metaquot.a
 ${OCAML_SITELIB}/ppxlib/metaquot/ppxlib_metaquot.cma
 ${OCAML_SITELIB}/ppxlib/metaquot/ppxlib_metaquot.cmi
@@ -120,7 +119,6 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppxlib/metaquot/ppxlib_metaquot.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppxlib/metaquot/ppxlib_metaquot.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppxlib/metaquot/ppxlib_metaquot.cmxs
 ${OCAML_SITELIB}/ppxlib/metaquot/ppxlib_metaquot.ml
-${OCAML_SITELIB}/ppxlib/metaquot_lifters/ppxlib.metaquot_lifters.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppxlib/metaquot_lifters/ppxlib_metaquot_lifters.a
 ${OCAML_SITELIB}/ppxlib/metaquot_lifters/ppxlib_metaquot_lifters.cma
 ${OCAML_SITELIB}/ppxlib/metaquot_lifters/ppxlib_metaquot_lifters.cmi
@@ -140,7 +138,6 @@ ${OCAML_SITELIB}/ppxlib/ppxlib.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppxlib/ppxlib.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppxlib/ppxlib.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppxlib/ppxlib.cmxs
-${OCAML_SITELIB}/ppxlib/ppxlib.dune
 ${OCAML_SITELIB}/ppxlib/ppxlib.ml
 ${OCAML_SITELIB}/ppxlib/ppxlib__.cmi
 ${OCAML_SITELIB}/ppxlib/ppxlib__.cmt
@@ -248,7 +245,6 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppxlib/ppxlib__Spellcheck.cmx
 ${OCAML_SITELIB}/ppxlib/ppxlib__Utils.cmi
 ${OCAML_SITELIB}/ppxlib/ppxlib__Utils.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppxlib/ppxlib__Utils.cmx
-${OCAML_SITELIB}/ppxlib/print_diff/ppxlib.print_diff.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppxlib/print_diff/ppxlib_print_diff.a
 ${OCAML_SITELIB}/ppxlib/print_diff/ppxlib_print_diff.cma
 ${OCAML_SITELIB}/ppxlib/print_diff/ppxlib_print_diff.cmi
@@ -262,7 +258,6 @@ ${OCAML_SITELIB}/ppxlib/print_diff/ppxlib_print_diff.mli
 ${OCAML_SITELIB}/ppxlib/reconcile.ml
 ${OCAML_SITELIB}/ppxlib/reconcile.mli
 ${OCAML_SITELIB}/ppxlib/runner/ppx_driver_runner.ml
-${OCAML_SITELIB}/ppxlib/runner/ppxlib.runner.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppxlib/runner/ppxlib_runner.a
 ${OCAML_SITELIB}/ppxlib/runner/ppxlib_runner.cma
 ${OCAML_SITELIB}/ppxlib/runner/ppxlib_runner.cmi
@@ -275,7 +270,6 @@ ${OCAML_SITELIB}/ppxlib/runner/ppxlib_runner__Ppx_driver_runner.cmi
 ${OCAML_SITELIB}/ppxlib/runner/ppxlib_runner__Ppx_driver_runner.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppxlib/runner/ppxlib_runner__Ppx_driver_runner.cmx
 ${OCAML_SITELIB}/ppxlib/runner_as_ppx/ppx_driver_runner_as_ppx.ml
-${OCAML_SITELIB}/ppxlib/runner_as_ppx/ppxlib.runner_as_ppx.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppxlib/runner_as_ppx/ppxlib_runner_as_ppx.a
 ${OCAML_SITELIB}/ppxlib/runner_as_ppx/ppxlib_runner_as_ppx.cma
 ${OCAML_SITELIB}/ppxlib/runner_as_ppx/ppxlib_runner_as_ppx.cmi
@@ -289,7 +283,6 @@ ${OCAML_SITELIB}/ppxlib/runner_as_ppx/ppxlib_runner_as_ppx__Ppx_driver_runner_as
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppxlib/runner_as_ppx/ppxlib_runner_as_ppx__Ppx_driver_runner_as_ppx.cmx
 ${OCAML_SITELIB}/ppxlib/spellcheck.ml
 ${OCAML_SITELIB}/ppxlib/traverse/ppx.exe
-${OCAML_SITELIB}/ppxlib/traverse/ppxlib.traverse.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppxlib/traverse/ppxlib_traverse.a
 ${OCAML_SITELIB}/ppxlib/traverse/ppxlib_traverse.cma
 ${OCAML_SITELIB}/ppxlib/traverse/ppxlib_traverse.cmi
@@ -298,7 +291,6 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppxlib/traverse/ppxlib_traverse.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppxlib/traverse/ppxlib_traverse.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppxlib/traverse/ppxlib_traverse.cmxs
 ${OCAML_SITELIB}/ppxlib/traverse/ppxlib_traverse.ml
-${OCAML_SITELIB}/ppxlib/traverse_builtins/ppxlib.traverse_builtins.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppxlib/traverse_builtins/ppxlib_traverse_builtins.a
 ${OCAML_SITELIB}/ppxlib/traverse_builtins/ppxlib_traverse_builtins.cma
 ${OCAML_SITELIB}/ppxlib/traverse_builtins/ppxlib_traverse_builtins.cmi
