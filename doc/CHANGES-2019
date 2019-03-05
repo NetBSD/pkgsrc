@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1096 2019/03/05 17:59:50 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.1097 2019/03/05 18:03:52 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1837,3 +1837,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ocaml-parsexp to 0.12.0 [jaapb 2019-03-05]
 	Updated devel/ocaml-ppxlib to 0.5.0 [jaapb 2019-03-05]
 	Updated devel/ocaml-ppx_compare to 0.12.0 [jaapb 2019-03-05]
+	Updated devel/ocaml-ppx_enumerate to 0.12.0 [jaapb 2019-03-05]
