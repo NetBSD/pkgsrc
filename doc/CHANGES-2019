@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1060 2019/03/05 12:13:27 nia Exp $
+$NetBSD: CHANGES-2019,v 1.1061 2019/03/05 12:13:38 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1798,3 +1798,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/pycharm-bin to 2018.3.5nb1 [ryoon 2019-03-05]
 	Updated emulators/snes9x to 1.59.2 [nia 2019-03-05]
 	Updated emulators/snes9x-gtk to 1.59.2 [nia 2019-03-05]
+	Updated emulators/libretro-snes9x to 1.59.2 [nia 2019-03-05]
