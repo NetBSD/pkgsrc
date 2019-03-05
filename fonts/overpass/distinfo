@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/03/05 21:02:03 maya Exp $
+$NetBSD: distinfo,v 1.2 2019/03/05 21:17:17 tnn Exp $
 
-SHA1 (Overpass/3.0.3.tar.gz) = 429e705d4c24bb97966bb399a28ec5cdac699b64
-RMD160 (Overpass/3.0.3.tar.gz) = 2bce42c8e45f7324e4d78a1673428d3095fbc6bb
-SHA512 (Overpass/3.0.3.tar.gz) = d2a3284f6f82e80e46af23064a374da2926a3563ee668683aa1a8db7a9163cc80c4fa8a3077876dc552a36e9d621c45218df44485b7b6a6adc3fc6df62c448d0
-Size (Overpass/3.0.3.tar.gz) = 6532060 bytes
+SHA1 (Overpass-3.0.3.tar.gz) = 429e705d4c24bb97966bb399a28ec5cdac699b64
+RMD160 (Overpass-3.0.3.tar.gz) = 2bce42c8e45f7324e4d78a1673428d3095fbc6bb
+SHA512 (Overpass-3.0.3.tar.gz) = d2a3284f6f82e80e46af23064a374da2926a3563ee668683aa1a8db7a9163cc80c4fa8a3077876dc552a36e9d621c45218df44485b7b6a6adc3fc6df62c448d0
+Size (Overpass-3.0.3.tar.gz) = 6532060 bytes
