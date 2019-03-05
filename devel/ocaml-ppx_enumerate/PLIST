@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2018/04/04 19:39:43 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/03/05 18:03:41 jaapb Exp $
 ${OCAML_SITELIB}/ppx_enumerate/META
+${OCAML_SITELIB}/ppx_enumerate/dune-package
 ${OCAML_SITELIB}/ppx_enumerate/opam
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_enumerate/ppx_enumerate.a
 ${OCAML_SITELIB}/ppx_enumerate/ppx_enumerate.cma
@@ -9,9 +10,16 @@ ${OCAML_SITELIB}/ppx_enumerate/ppx_enumerate.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_enumerate/ppx_enumerate.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_enumerate/ppx_enumerate.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_enumerate/ppx_enumerate.cmxs
-${OCAML_SITELIB}/ppx_enumerate/ppx_enumerate.dune
 ${OCAML_SITELIB}/ppx_enumerate/ppx_enumerate.ml
 ${OCAML_SITELIB}/ppx_enumerate/ppx_enumerate.mli
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_enumerate/runtime-lib/ppx_enumerate_lib.a
+${OCAML_SITELIB}/ppx_enumerate/runtime-lib/ppx_enumerate_lib.cma
+${OCAML_SITELIB}/ppx_enumerate/runtime-lib/ppx_enumerate_lib.cmi
+${OCAML_SITELIB}/ppx_enumerate/runtime-lib/ppx_enumerate_lib.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_enumerate/runtime-lib/ppx_enumerate_lib.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_enumerate/runtime-lib/ppx_enumerate_lib.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_enumerate/runtime-lib/ppx_enumerate_lib.cmxs
+${OCAML_SITELIB}/ppx_enumerate/runtime-lib/ppx_enumerate_lib.ml
 share/doc/ppx_enumerate/CHANGES.md
-share/doc/ppx_enumerate/LICENSE.txt
+share/doc/ppx_enumerate/LICENSE.md
 share/doc/ppx_enumerate/README.md
