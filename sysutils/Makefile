@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.802 2019/02/28 03:24:52 gutteridge Exp $
+# $NetBSD: Makefile,v 1.803 2019/03/05 11:25:24 ryoon Exp $
 #
 
 COMMENT=	System utilities
@@ -299,6 +299,7 @@ SUBDIR+=	iat
 SUBDIR+=	idesk
 SUBDIR+=	install-sh
 SUBDIR+=	intel-microcode-netbsd
+SUBDIR+=	intellij-fsnotifier
 SUBDIR+=	ioping
 SUBDIR+=	ipa
 SUBDIR+=	ipmitool
