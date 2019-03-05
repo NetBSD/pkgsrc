@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2018/07/19 14:15:23 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/03/05 17:42:36 jaapb Exp $
 ${OCAML_SITELIB}/lwt_ppx/META
-${OCAML_SITELIB}/lwt_ppx/lwt_ppx.dune
+${OCAML_SITELIB}/lwt_ppx/dune-package
 ${OCAML_SITELIB}/lwt_ppx/opam
 ${OCAML_SITELIB}/lwt_ppx/ppx.exe
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt_ppx/ppx_lwt.a
