@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/05/09 14:56:43 jaapb Exp $
+$NetBSD: distinfo,v 1.3 2019/03/05 18:08:00 jaapb Exp $
 
-SHA1 (ppx_hash-0.11.1.tar.gz) = a30cca5bc5d8cd768da0984a55888c3961c01183
-RMD160 (ppx_hash-0.11.1.tar.gz) = 3d6e8c94d5676ab7dbb31b78beac55b62f555edb
-SHA512 (ppx_hash-0.11.1.tar.gz) = 6d268f0d4ebd19047ba71fe029be8649a3714d7b05d373ca12add92f99372904ef7b31a52077e7071bce7470d40de0c041216dde12f0094ebe69168805bf6079
-Size (ppx_hash-0.11.1.tar.gz) = 29389 bytes
+SHA1 (ppx_hash-0.12.0.tar.gz) = ffd9f433891e74ca14a7a31b70238bb8fb8fcd87
+RMD160 (ppx_hash-0.12.0.tar.gz) = 131a4daa0efd68bf42039f41bd2d171df425cd5b
+SHA512 (ppx_hash-0.12.0.tar.gz) = bc703cb88ec2ecfc3af8890bc231c3e93ae68caadb6917d2bc7b7f30ca210bfda559d94cd562d5ecaf8ac7178d9219499ffbdb1042d1c83d68646106546ef0ec
+Size (ppx_hash-0.12.0.tar.gz) = 27221 bytes
