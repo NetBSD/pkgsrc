@@ -1,11 +1,9 @@
-$NetBSD: distinfo,v 1.13 2018/09/05 14:39:13 jperkin Exp $
+$NetBSD: distinfo,v 1.14 2019/03/05 16:30:18 prlw1 Exp $
 
-SHA1 (meson-0.47.2.tar.gz) = 58278fa1e65d4e9197b8e3ca8c3ca2bc4d8283d2
-RMD160 (meson-0.47.2.tar.gz) = 6941232c36102c9d5b7ebd4b42e38aca7d3a67d2
-SHA512 (meson-0.47.2.tar.gz) = 9d7cea6151b99dff0c34d72b63473aecf7565636ba2b48d9fe86ce25372d1c71a834654f4745ae29e0fcacffcad806a1f6d937bcf5fe88cd9b16b72bf2d62112
-Size (meson-0.47.2.tar.gz) = 1267957 bytes
-SHA1 (patch-mesonbuild_compilers_____init____.py) = b893759a6fa135f2da606ea487848701dbba037d
-SHA1 (patch-mesonbuild_compilers_c.py) = 2ff2b4b715b3fa233ae158fcf9ccff75c1dcd42b
-SHA1 (patch-mesonbuild_compilers_compilers.py) = ab44b1672b2d1cc6258b74590ac6bbf0fe502066
-SHA1 (patch-mesonbuild_environment.py) = 08957ccc7ee55f9d5b7f965309bbe5ad38aa23ce
-SHA1 (patch-mesonbuild_minstall.py) = e312e881db36dcee9fca6eadc10a7c6eab475f2b
+SHA1 (meson-0.49.2.tar.gz) = 9c16f7a72ea15669efdcbc7ac01cf3e00ffb55c8
+RMD160 (meson-0.49.2.tar.gz) = 6ce4677fedba1bff8e4174a16c4361d1364b0abd
+SHA512 (meson-0.49.2.tar.gz) = 4aca4c273e7c23034c1ed76aa48c914aef34ca4be9df9d5810b8dd3dac9f5f67aa577a682490aa3d81c0503b5a5a8ac1e2452b2f2fdd7a5c7db2aa504047b87d
+Size (meson-0.49.2.tar.gz) = 1340730 bytes
+SHA1 (patch-mesonbuild_compilers_compilers.py) = 7141c7ca2acb093ff94e11e3ee452df379564fb5
+SHA1 (patch-mesonbuild_environment.py) = f599ec7c708037002da5d9ee4ca0ccfb31b2e307
+SHA1 (patch-mesonbuild_minstall.py) = 64bcbdac0d37cabd114349de34646820893bb212
