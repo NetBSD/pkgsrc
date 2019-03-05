@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1067 2019/03/05 16:11:13 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.1068 2019/03/05 16:13:37 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1808,3 +1808,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed databases/ruby-activerecord-cassandra [taca 2019-03-05]
 	Removed databases/ruby-cassandra [taca 2019-03-05]
 	Updated devel/ocaml-dune to 1.7.3 [jaapb 2019-03-05]
+	Updated devel/ocaml-sexplib0 to 0.12.0 [jaapb 2019-03-05]
