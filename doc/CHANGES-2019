@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1062 2019/03/05 12:48:46 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1063 2019/03/05 14:27:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1801,3 +1801,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated emulators/libretro-snes9x to 1.59.2 [nia 2019-03-05]
 	Updated lang/python27 to 2.7.16 [adam 2019-03-05]
 	Updated devel/py-flake8-import-order to 0.18.1 [adam 2019-03-05]
+	Updated databases/mongo-c-driver to 1.14.0 [adam 2019-03-05]
+	Removed devel/libbson successor databases/mongo-c-driver [adam 2019-03-05]
+	Updated databases/php-mongodb to 1.5.3 [adam 2019-03-05]
