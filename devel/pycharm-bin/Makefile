@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2019/03/03 18:02:47 youri Exp $
+# $NetBSD: Makefile,v 1.2 2019/03/05 11:28:33 ryoon Exp $
 
 
 VERSION=	2018.3.5
 DISTNAME=	pycharm-community-${VERSION}
 PKGNAME=	pycharm-bin-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://download.jetbrains.com/python/
 
@@ -11,6 +12,8 @@ MAINTAINER=	youri@NetBSD.org
 HOMEPAGE=	http://www.jetbrains.org/
 COMMENT=	JetBrain\'s python IDE
 LICENSE=	apache-2.0
+
+DEPENDS+=	intellij-fsnotifier-[0-9]*:../../sysutils/intellij-fsnotifier
 
 WRKSRC=		${WRKDIR}/pycharm-community-${VERSION}
 USE_JAVA=	yes
@@ -51,10 +54,10 @@ do-install:
 	helpers/pydev/pydevd_attach_to_process/attach_linux_amd64.so \
 	helpers/pydev/pydevd_attach_to_process/attach_linux_x86.so && \
 	${ECHO} "idea.filewatcher.disabled=true" >> bin/idea.properties && \
-	${SED} -e "s|@@IDEA_HOME@@|${PREFIX}/${PKGNAME}|g" \
+	${SED} -e "s|@@IDEA_HOME@@|${PREFIX}/${PKGNAME_NOREV}|g" \
 	${FILESDIR}/pycharm.desktop > \
 	${DESTDIR}${PREFIX}/share/applications/pycharm.desktop && \
-	pax -rw -pm * ${DESTDIR}${PREFIX}/${PKGNAME}
+	pax -rw -pm * ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}
 
 .include "../../lang/python/application.mk"
 .include "../../mk/java-vm.mk"
