@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2018/12/06 09:37:17 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/03/05 17:08:08 jaapb Exp $
 ${PLIST.lwt}${OCAML_SITELIB}/markup-lwt/META
-${PLIST.lwt}${OCAML_SITELIB}/markup-lwt/markup-lwt.dune
+${PLIST.lwt}${OCAML_SITELIB}/markup-lwt/dune-package
 ${PLIST.lwt}${PLIST.ocaml-opt}${OCAML_SITELIB}/markup-lwt/markup_lwt.a
 ${PLIST.lwt}${OCAML_SITELIB}/markup-lwt/markup_lwt.cma
 ${PLIST.lwt}${OCAML_SITELIB}/markup-lwt/markup_lwt.cmi
@@ -12,7 +12,6 @@ ${PLIST.lwt}${PLIST.ocaml-opt}${OCAML_SITELIB}/markup-lwt/markup_lwt.cmxs
 ${PLIST.lwt}${OCAML_SITELIB}/markup-lwt/markup_lwt.ml
 ${PLIST.lwt}${OCAML_SITELIB}/markup-lwt/markup_lwt.mli
 ${PLIST.lwt}${OCAML_SITELIB}/markup-lwt/opam
-${PLIST.lwt}${OCAML_SITELIB}/markup-lwt/unix/markup-lwt.unix.dune
 ${PLIST.lwt}${OCAML_SITELIB}/markup-lwt/unix/markup_lwt_unix.a
 ${PLIST.lwt}${PLIST.ocaml-opt}${OCAML_SITELIB}/markup-lwt/unix/markup_lwt_unix.cma
 ${PLIST.lwt}${OCAML_SITELIB}/markup-lwt/unix/markup_lwt_unix.cmi
@@ -27,6 +26,7 @@ ${OCAML_SITELIB}/markup/META
 ${OCAML_SITELIB}/markup/common.ml
 ${OCAML_SITELIB}/markup/detect.ml
 ${OCAML_SITELIB}/markup/detect.mli
+${OCAML_SITELIB}/markup/dune-package
 ${OCAML_SITELIB}/markup/encoding.ml
 ${OCAML_SITELIB}/markup/entities.ml
 ${OCAML_SITELIB}/markup/error.ml
@@ -48,7 +48,6 @@ ${OCAML_SITELIB}/markup/markup.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup.cmxs
-${OCAML_SITELIB}/markup/markup.dune
 ${OCAML_SITELIB}/markup/markup.ml
 ${OCAML_SITELIB}/markup/markup.mli
 ${OCAML_SITELIB}/markup/markup__.cmi
