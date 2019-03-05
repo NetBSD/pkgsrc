@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2018/11/27 15:37:45 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2019/03/05 16:27:42 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml-result
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ocaml-result
 OCAML_RESULT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-result+=	ocaml-result>=1.2
-BUILDLINK_ABI_DEPENDS.ocaml-result+=	ocaml-result>=1.3nb3
+BUILDLINK_ABI_DEPENDS.ocaml-result+=	ocaml-result>=1.3nb4
 BUILDLINK_PKGSRCDIR.ocaml-result?=	../../devel/ocaml-result
 .endif	# OCAML_RESULT_BUILDLINK3_MK
 
