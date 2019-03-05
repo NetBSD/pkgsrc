@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/11/27 16:07:28 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/03/05 16:50:45 jaapb Exp $
 ${OCAML_SITELIB}/re/META
 ${OCAML_SITELIB}/re/automata.ml
 ${OCAML_SITELIB}/re/automata.mli
@@ -8,9 +8,9 @@ ${OCAML_SITELIB}/re/core.ml
 ${OCAML_SITELIB}/re/core.mli
 ${OCAML_SITELIB}/re/cset.ml
 ${OCAML_SITELIB}/re/cset.mli
+${OCAML_SITELIB}/re/dune-package
 ${OCAML_SITELIB}/re/emacs.ml
 ${OCAML_SITELIB}/re/emacs.mli
-${OCAML_SITELIB}/re/emacs/re.emacs.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/re/emacs/re_emacs.a
 ${OCAML_SITELIB}/re/emacs/re_emacs.cma
 ${OCAML_SITELIB}/re/emacs/re_emacs.cmi
@@ -22,7 +22,6 @@ ${OCAML_SITELIB}/re/emacs/re_emacs.ml
 ${OCAML_SITELIB}/re/fmt.ml
 ${OCAML_SITELIB}/re/glob.ml
 ${OCAML_SITELIB}/re/glob.mli
-${OCAML_SITELIB}/re/glob/re.glob.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/re/glob/re_glob.a
 ${OCAML_SITELIB}/re/glob/re_glob.cma
 ${OCAML_SITELIB}/re/glob/re_glob.cmi
@@ -34,7 +33,6 @@ ${OCAML_SITELIB}/re/glob/re_glob.ml
 ${OCAML_SITELIB}/re/opam
 ${OCAML_SITELIB}/re/pcre.ml
 ${OCAML_SITELIB}/re/pcre.mli
-${OCAML_SITELIB}/re/pcre/re.pcre.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/re/pcre/re_pcre.a
 ${OCAML_SITELIB}/re/pcre/re_pcre.cma
 ${OCAML_SITELIB}/re/pcre/re_pcre.cmi
@@ -45,7 +43,6 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/re/pcre/re_pcre.cmxs
 ${OCAML_SITELIB}/re/pcre/re_pcre.ml
 ${OCAML_SITELIB}/re/perl.ml
 ${OCAML_SITELIB}/re/perl.mli
-${OCAML_SITELIB}/re/perl/re.perl.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/re/perl/re_perl.a
 ${OCAML_SITELIB}/re/perl/re_perl.cma
 ${OCAML_SITELIB}/re/perl/re_perl.cmi
@@ -58,7 +55,6 @@ ${OCAML_SITELIB}/re/pmark.ml
 ${OCAML_SITELIB}/re/pmark.mli
 ${OCAML_SITELIB}/re/posix.ml
 ${OCAML_SITELIB}/re/posix.mli
-${OCAML_SITELIB}/re/posix/re.posix.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/re/posix/re_posix.a
 ${OCAML_SITELIB}/re/posix/re_posix.cma
 ${OCAML_SITELIB}/re/posix/re_posix.cmi
@@ -74,7 +70,6 @@ ${OCAML_SITELIB}/re/re.cmt
 ${PLIST.ocaml-opt}${PLIST.ocaml-opt}${OCAML_SITELIB}/re/re.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/re/re.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/re/re.cmxs
-${OCAML_SITELIB}/re/re.dune
 ${OCAML_SITELIB}/re/re.ml
 ${OCAML_SITELIB}/re/re__.cmi
 ${OCAML_SITELIB}/re/re__.cmt
@@ -129,7 +124,6 @@ ${OCAML_SITELIB}/re/re__Str.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/re/re__Str.cmx
 ${OCAML_SITELIB}/re/str.ml
 ${OCAML_SITELIB}/re/str.mli
-${OCAML_SITELIB}/re/str/re.str.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/re/str/re_str.a
 ${OCAML_SITELIB}/re/str/re_str.cma
 ${OCAML_SITELIB}/re/str/re_str.cmi
