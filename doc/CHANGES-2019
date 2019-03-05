@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1094 2019/03/05 17:51:54 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.1095 2019/03/05 17:57:46 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1835,3 +1835,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ocaml-lwt_camlp4 to 20180325nb4 [jaapb 2019-03-05]
 	Updated devel/ocaml-lwt_ssl to 1.1.2nb4 [jaapb 2019-03-05]
 	Updated devel/ocaml-parsexp to 0.12.0 [jaapb 2019-03-05]
+	Updated devel/ocaml-ppxlib to 0.5.0 [jaapb 2019-03-05]
