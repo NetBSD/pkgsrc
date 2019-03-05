@@ -1,29 +1,26 @@
-# $NetBSD: options.mk,v 1.1 2014/05/07 15:47:00 fhajny Exp $
+# $NetBSD: options.mk,v 1.2 2019/03/05 14:24:13 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mongo-c-driver
+PKG_SUPPORTED_OPTIONS=	sasl ssl
+PKG_SUGGESTED_OPTIONS=	ssl
 
-PKG_SUPPORTED_OPTIONS+=	sasl ssl
-PKG_SUGGESTED_OPTIONS+=	#
+PLIST_VARS+=	ssl
 
 .include "../../mk/bsd.options.mk"
 
 # Enable SASL support
 .if !empty(PKG_OPTIONS:Msasl)
 .  include "../../security/cyrus-sasl/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-sasl=yes
-CONFIGURE_ENV+=		SASL_CFLAGS=""
-CONFIGURE_ENV+=		SASL_LIBS="-lsasl2"
+CMAKE_ARGS+=	-DENABLE_SASL=CYRUS
 .else
-CONFIGURE_ARGS+=	--enable-sasl=no
+CMAKE_ARGS+=	-DENABLE_SASL=OFF
 .endif
-
-PLIST_VARS+=	ssl
 
 # Enable OpenSSL support
 .if !empty(PKG_OPTIONS:Mssl)
 .  include "../../security/openssl/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-ssl=yes
-PLIST.ssl=		yes
+CMAKE_ARGS+=	-DENABLE_SSL=OPENSSL
+PLIST.ssl=	yes
 .else
-CONFIGURE_ARGS+=	--enable-ssl=no
+CMAKE_ARGS+=	-DENABLE_SSL=OFF
 .endif
