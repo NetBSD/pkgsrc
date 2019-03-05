@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2019/01/29 12:43:53 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.22 2019/03/05 17:31:04 jaapb Exp $
 bin/js_of_ocaml
 bin/jsoo_link
 bin/jsoo_minify
@@ -19,10 +19,10 @@ ${OCAML_SITELIB}/js_of_ocaml-compiler/dgraph.ml
 ${OCAML_SITELIB}/js_of_ocaml-compiler/dgraph.mli
 ${OCAML_SITELIB}/js_of_ocaml-compiler/driver.ml
 ${OCAML_SITELIB}/js_of_ocaml-compiler/driver.mli
+${OCAML_SITELIB}/js_of_ocaml-compiler/dune-package
 ${OCAML_SITELIB}/js_of_ocaml-compiler/dynlink.js
 ${OCAML_SITELIB}/js_of_ocaml-compiler/eval.ml
 ${OCAML_SITELIB}/js_of_ocaml-compiler/eval.mli
-${OCAML_SITELIB}/js_of_ocaml-compiler/findlib-support/js_of_ocaml-compiler.findlib-support.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-compiler/findlib-support/jsoo_findlib_support.a
 ${OCAML_SITELIB}/js_of_ocaml-compiler/findlib-support/jsoo_findlib_support.cma
 ${OCAML_SITELIB}/js_of_ocaml-compiler/findlib-support/jsoo_findlib_support.cmi
@@ -60,7 +60,6 @@ ${OCAML_SITELIB}/js_of_ocaml-compiler/js_assign.ml
 ${OCAML_SITELIB}/js_of_ocaml-compiler/js_assign.mli
 ${OCAML_SITELIB}/js_of_ocaml-compiler/js_lexer.ml
 ${OCAML_SITELIB}/js_of_ocaml-compiler/js_lexer.mli
-${OCAML_SITELIB}/js_of_ocaml-compiler/js_of_ocaml-compiler.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-compiler/js_of_ocaml_compiler.a
 ${OCAML_SITELIB}/js_of_ocaml-compiler/js_of_ocaml_compiler.cma
 ${OCAML_SITELIB}/js_of_ocaml-compiler/js_of_ocaml_compiler.cmi
@@ -321,7 +320,7 @@ ${OCAML_SITELIB}/js_of_ocaml-compiler/vlq64.ml
 ${OCAML_SITELIB}/js_of_ocaml-compiler/vlq64.mli
 ${OCAML_SITELIB}/js_of_ocaml-compiler/weak.js
 ${OCAML_SITELIB}/js_of_ocaml-lwt/META
-${OCAML_SITELIB}/js_of_ocaml-lwt/js_of_ocaml-lwt.dune
+${OCAML_SITELIB}/js_of_ocaml-lwt/dune-package
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-lwt/js_of_ocaml_lwt.a
 ${OCAML_SITELIB}/js_of_ocaml-lwt/js_of_ocaml_lwt.cma
 ${OCAML_SITELIB}/js_of_ocaml-lwt/js_of_ocaml_lwt.cmi
@@ -330,7 +329,6 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-lwt/js_of_ocaml_lwt.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-lwt/js_of_ocaml_lwt.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-lwt/js_of_ocaml_lwt.cmxs
 ${OCAML_SITELIB}/js_of_ocaml-lwt/js_of_ocaml_lwt.ml
-${OCAML_SITELIB}/js_of_ocaml-lwt/logger/js_of_ocaml-lwt.logger.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-lwt/logger/lwt_log_js.a
 ${OCAML_SITELIB}/js_of_ocaml-lwt/logger/lwt_log_js.cma
 ${OCAML_SITELIB}/js_of_ocaml-lwt/logger/lwt_log_js.cmi
@@ -373,7 +371,7 @@ ${OCAML_SITELIB}/js_of_ocaml-lwt/lwt_xmlHttpRequest.ml
 ${OCAML_SITELIB}/js_of_ocaml-lwt/lwt_xmlHttpRequest.mli
 ${OCAML_SITELIB}/js_of_ocaml-lwt/opam
 ${OCAML_SITELIB}/js_of_ocaml-ocamlbuild/META
-${OCAML_SITELIB}/js_of_ocaml-ocamlbuild/js_of_ocaml-ocamlbuild.dune
+${OCAML_SITELIB}/js_of_ocaml-ocamlbuild/dune-package
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-ocamlbuild/ocamlbuild_js_of_ocaml.a
 ${OCAML_SITELIB}/js_of_ocaml-ocamlbuild/ocamlbuild_js_of_ocaml.cma
 ${OCAML_SITELIB}/js_of_ocaml-ocamlbuild/ocamlbuild_js_of_ocaml.cmi
@@ -386,7 +384,7 @@ ${OCAML_SITELIB}/js_of_ocaml-ocamlbuild/ocamlbuild_js_of_ocaml.ml
 ${OCAML_SITELIB}/js_of_ocaml-ocamlbuild/ocamlbuild_js_of_ocaml.mli
 ${OCAML_SITELIB}/js_of_ocaml-ocamlbuild/opam
 ${OCAML_SITELIB}/js_of_ocaml-ppx/META
-${OCAML_SITELIB}/js_of_ocaml-ppx/js_of_ocaml-ppx.dune
+${OCAML_SITELIB}/js_of_ocaml-ppx/dune-package
 ${OCAML_SITELIB}/js_of_ocaml-ppx/opam
 ${OCAML_SITELIB}/js_of_ocaml-ppx/ppx.exe
 ${OCAML_SITELIB}/js_of_ocaml-ppx/ppx_js
@@ -409,7 +407,7 @@ ${OCAML_SITELIB}/js_of_ocaml-ppx/ppx_js__Ppx_js_internal.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-ppx/ppx_js__Ppx_js_internal.cmx
 ${OCAML_SITELIB}/js_of_ocaml-ppx/ppx_js_internal.ml
 ${OCAML_SITELIB}/js_of_ocaml-ppx_deriving_json/META
-${OCAML_SITELIB}/js_of_ocaml-ppx_deriving_json/js_of_ocaml-ppx_deriving_json.dune
+${OCAML_SITELIB}/js_of_ocaml-ppx_deriving_json/dune-package
 ${OCAML_SITELIB}/js_of_ocaml-ppx_deriving_json/opam
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-ppx_deriving_json/ppx_deriving_json.a
 ${OCAML_SITELIB}/js_of_ocaml-ppx_deriving_json/ppx_deriving_json.cma
@@ -420,7 +418,7 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-ppx_deriving_json/ppx_deriving_js
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-ppx_deriving_json/ppx_deriving_json.cmxs
 ${OCAML_SITELIB}/js_of_ocaml-ppx_deriving_json/ppx_deriving_json.ml
 ${PLIST.tyxml}${OCAML_SITELIB}/js_of_ocaml-tyxml/META
-${PLIST.tyxml}${OCAML_SITELIB}/js_of_ocaml-tyxml/js_of_ocaml-tyxml.dune
+${PLIST.tyxml}${OCAML_SITELIB}/js_of_ocaml-tyxml/dune-package
 ${PLIST.tyxml}${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-tyxml/js_of_ocaml_tyxml.a
 ${PLIST.tyxml}${OCAML_SITELIB}/js_of_ocaml-tyxml/js_of_ocaml_tyxml.cma
 ${PLIST.tyxml}${OCAML_SITELIB}/js_of_ocaml-tyxml/js_of_ocaml_tyxml.cmi
@@ -490,7 +488,6 @@ ${OCAML_SITELIB}/js_of_ocaml/deriving/deriving_Json_lexer.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml/deriving/deriving_Json_lexer.cmx
 ${OCAML_SITELIB}/js_of_ocaml/deriving/deriving_Json_lexer.ml
 ${OCAML_SITELIB}/js_of_ocaml/deriving/deriving_Json_lexer.mli
-${OCAML_SITELIB}/js_of_ocaml/deriving/js_of_ocaml.deriving.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml/deriving/js_of_ocaml_deriving.a
 ${OCAML_SITELIB}/js_of_ocaml/deriving/js_of_ocaml_deriving.cma
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml/deriving/js_of_ocaml_deriving.cmxa
@@ -515,6 +512,7 @@ ${OCAML_SITELIB}/js_of_ocaml/dom_svg.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml/dom_svg.cmx
 ${OCAML_SITELIB}/js_of_ocaml/dom_svg.ml
 ${OCAML_SITELIB}/js_of_ocaml/dom_svg.mli
+${OCAML_SITELIB}/js_of_ocaml/dune-package
 ${OCAML_SITELIB}/js_of_ocaml/eventSource.cmi
 ${OCAML_SITELIB}/js_of_ocaml/eventSource.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml/eventSource.cmx
@@ -557,7 +555,6 @@ ${OCAML_SITELIB}/js_of_ocaml/js_of_ocaml.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml/js_of_ocaml.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml/js_of_ocaml.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml/js_of_ocaml.cmxs
-${OCAML_SITELIB}/js_of_ocaml/js_of_ocaml.dune
 ${OCAML_SITELIB}/js_of_ocaml/js_of_ocaml.ml
 ${OCAML_SITELIB}/js_of_ocaml/js_of_ocaml__.cmi
 ${OCAML_SITELIB}/js_of_ocaml/js_of_ocaml__.cmt
