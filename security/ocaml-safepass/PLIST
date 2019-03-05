@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/10/15 11:26:59 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/03/05 19:38:49 jaapb Exp $
 ${OCAML_SITELIB}/safepass/META
 ${OCAML_SITELIB}/safepass/bcrypt.cmi
 ${OCAML_SITELIB}/safepass/bcrypt.cmt
@@ -6,13 +6,13 @@ ${OCAML_SITELIB}/safepass/bcrypt.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/safepass/bcrypt.cmx
 ${OCAML_SITELIB}/safepass/bcrypt.ml
 ${OCAML_SITELIB}/safepass/bcrypt.mli
+${OCAML_SITELIB}/safepass/dune-package
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/safepass/libsafepass_stubs.a
 ${OCAML_SITELIB}/safepass/opam
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/safepass/safepass.a
 ${OCAML_SITELIB}/safepass/safepass.cma
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/safepass/safepass.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/safepass/safepass.cmxs
-${OCAML_SITELIB}/safepass/safepass.dune
 ${OCAML_SITELIB}/stublibs/dllsafepass_stubs.so
 share/doc/safepass/CHANGES.md
 share/doc/safepass/LICENSE
