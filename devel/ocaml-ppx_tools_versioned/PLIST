@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/07/19 13:01:34 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/03/05 16:35:29 jaapb Exp $
 ${OCAML_SITELIB}/ppx_tools_versioned/META
 ${OCAML_SITELIB}/ppx_tools_versioned/ast_convenience_402.cmi
 ${OCAML_SITELIB}/ppx_tools_versioned/ast_convenience_402.cmt
@@ -80,12 +80,12 @@ ${OCAML_SITELIB}/ppx_tools_versioned/ast_mapper_class_406.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_tools_versioned/ast_mapper_class_406.cmx
 ${OCAML_SITELIB}/ppx_tools_versioned/ast_mapper_class_406.ml
 ${OCAML_SITELIB}/ppx_tools_versioned/ast_mapper_class_406.mli
+${OCAML_SITELIB}/ppx_tools_versioned/dune-package
 ${OCAML_SITELIB}/ppx_tools_versioned/metaquot_402/ppx.exe
 ${OCAML_SITELIB}/ppx_tools_versioned/metaquot_402/ppx_metaquot_402.cmi
 ${OCAML_SITELIB}/ppx_tools_versioned/metaquot_402/ppx_metaquot_402.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_tools_versioned/metaquot_402/ppx_metaquot_402.cmx
 ${OCAML_SITELIB}/ppx_tools_versioned/metaquot_402/ppx_metaquot_402.ml
-${OCAML_SITELIB}/ppx_tools_versioned/metaquot_402/ppx_tools_versioned.metaquot_402.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_tools_versioned/metaquot_402/ppx_tools_versioned_metaquot_402.a
 ${OCAML_SITELIB}/ppx_tools_versioned/metaquot_402/ppx_tools_versioned_metaquot_402.cma
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_tools_versioned/metaquot_402/ppx_tools_versioned_metaquot_402.cmxa
@@ -95,7 +95,6 @@ ${OCAML_SITELIB}/ppx_tools_versioned/metaquot_403/ppx_metaquot_403.cmi
 ${OCAML_SITELIB}/ppx_tools_versioned/metaquot_403/ppx_metaquot_403.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_tools_versioned/metaquot_403/ppx_metaquot_403.cmx
 ${OCAML_SITELIB}/ppx_tools_versioned/metaquot_403/ppx_metaquot_403.ml
-${OCAML_SITELIB}/ppx_tools_versioned/metaquot_403/ppx_tools_versioned.metaquot_403.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_tools_versioned/metaquot_403/ppx_tools_versioned_metaquot_403.a
 ${OCAML_SITELIB}/ppx_tools_versioned/metaquot_403/ppx_tools_versioned_metaquot_403.cma
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_tools_versioned/metaquot_403/ppx_tools_versioned_metaquot_403.cmxa
@@ -105,7 +104,6 @@ ${OCAML_SITELIB}/ppx_tools_versioned/metaquot_404/ppx_metaquot_404.cmi
 ${OCAML_SITELIB}/ppx_tools_versioned/metaquot_404/ppx_metaquot_404.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_tools_versioned/metaquot_404/ppx_metaquot_404.cmx
 ${OCAML_SITELIB}/ppx_tools_versioned/metaquot_404/ppx_metaquot_404.ml
-${OCAML_SITELIB}/ppx_tools_versioned/metaquot_404/ppx_tools_versioned.metaquot_404.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_tools_versioned/metaquot_404/ppx_tools_versioned_metaquot_404.a
 ${OCAML_SITELIB}/ppx_tools_versioned/metaquot_404/ppx_tools_versioned_metaquot_404.cma
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_tools_versioned/metaquot_404/ppx_tools_versioned_metaquot_404.cmxa
@@ -115,7 +113,6 @@ ${OCAML_SITELIB}/ppx_tools_versioned/metaquot_405/ppx_metaquot_405.cmi
 ${OCAML_SITELIB}/ppx_tools_versioned/metaquot_405/ppx_metaquot_405.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_tools_versioned/metaquot_405/ppx_metaquot_405.cmx
 ${OCAML_SITELIB}/ppx_tools_versioned/metaquot_405/ppx_metaquot_405.ml
-${OCAML_SITELIB}/ppx_tools_versioned/metaquot_405/ppx_tools_versioned.metaquot_405.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_tools_versioned/metaquot_405/ppx_tools_versioned_metaquot_405.a
 ${OCAML_SITELIB}/ppx_tools_versioned/metaquot_405/ppx_tools_versioned_metaquot_405.cma
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_tools_versioned/metaquot_405/ppx_tools_versioned_metaquot_405.cmxa
@@ -125,7 +122,6 @@ ${OCAML_SITELIB}/ppx_tools_versioned/metaquot_406/ppx_metaquot_406.cmi
 ${OCAML_SITELIB}/ppx_tools_versioned/metaquot_406/ppx_metaquot_406.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_tools_versioned/metaquot_406/ppx_metaquot_406.cmx
 ${OCAML_SITELIB}/ppx_tools_versioned/metaquot_406/ppx_metaquot_406.ml
-${OCAML_SITELIB}/ppx_tools_versioned/metaquot_406/ppx_tools_versioned.metaquot_406.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_tools_versioned/metaquot_406/ppx_tools_versioned_metaquot_406.a
 ${OCAML_SITELIB}/ppx_tools_versioned/metaquot_406/ppx_tools_versioned_metaquot_406.cma
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_tools_versioned/metaquot_406/ppx_tools_versioned_metaquot_406.cmxa
@@ -155,6 +151,5 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_tools_versioned/ppx_tools_versioned.a
 ${OCAML_SITELIB}/ppx_tools_versioned/ppx_tools_versioned.cma
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_tools_versioned/ppx_tools_versioned.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_tools_versioned/ppx_tools_versioned.cmxs
-${OCAML_SITELIB}/ppx_tools_versioned/ppx_tools_versioned.dune
 share/doc/ppx_tools_versioned/LICENSE
 share/doc/ppx_tools_versioned/README.md
