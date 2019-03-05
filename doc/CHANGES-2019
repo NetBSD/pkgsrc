@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1065 2019/03/05 15:52:38 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1066 2019/03/05 15:56:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1806,3 +1806,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/php-mongodb to 1.5.3 [adam 2019-03-05]
 	Updated lang/py27-html-docs to 2.7.16 [leot 2019-03-05]
 	Removed databases/ruby-activerecord-cassandra [taca 2019-03-05]
+	Removed databases/ruby-cassandra [taca 2019-03-05]
