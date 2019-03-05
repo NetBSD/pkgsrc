@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1079 2019/03/05 16:51:27 hauke Exp $
+$NetBSD: CHANGES-2019,v 1.1080 2019/03/05 16:54:03 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1820,3 +1820,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ocaml-ppx_tools_versioned to 5.2.1nb1 [jaapb 2019-03-05]
 	Updated devel/ocaml-re to 1.8.0nb1 [jaapb 2019-03-05]
 	Updated mail/dovecot2 to 2.3.5 [hauke 2019-03-05]
+	Updated devel/ocaml-cppo to 1.6.5nb1 [jaapb 2019-03-05]
