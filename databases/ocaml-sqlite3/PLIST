@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2018/04/04 19:49:32 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/03/05 16:25:25 jaapb Exp $
 ${OCAML_SITELIB}/sqlite3/META
+${OCAML_SITELIB}/sqlite3/dune-package
 ${OCAML_SITELIB}/sqlite3/opam
 ${OCAML_SITELIB}/sqlite3/libsqlite3_stubs.a
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/sqlite3/sqlite3.a
@@ -10,7 +11,6 @@ ${OCAML_SITELIB}/sqlite3/sqlite3.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/sqlite3/sqlite3.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/sqlite3/sqlite3.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/sqlite3/sqlite3.cmxs
-${OCAML_SITELIB}/sqlite3/sqlite3.dune
 ${OCAML_SITELIB}/sqlite3/sqlite3.ml
 ${OCAML_SITELIB}/sqlite3/sqlite3.mli
 ${OCAML_SITELIB}/stublibs/dllsqlite3_stubs.so
