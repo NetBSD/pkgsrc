@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1084 2019/03/05 17:10:17 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.1085 2019/03/05 17:15:08 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1825,3 +1825,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/ocaml-uutf to 1.0.2 [jaapb 2019-03-05]
 	Updated textproc/ocaml-markup to 0.8.0nb1 [jaapb 2019-03-05]
 	Updated textproc/ocaml-tyxml to 4.3.0nb1 [jaapb 2019-03-05]
+	Updated devel/ocaml-reactiveData to 0.2.2 [jaapb 2019-03-05]
