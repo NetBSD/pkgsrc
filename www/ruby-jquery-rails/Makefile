@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/03/03 16:35:33 taca Exp $
+# $NetBSD: Makefile,v 1.13 2019/03/05 22:35:31 taca Exp $
 
 DISTNAME=	jquery-rails-4.3.3
 CATEGORIES=	www
@@ -15,8 +15,8 @@ RUBY_RAILS_ACCEPTED=
 
 .include "../../lang/ruby/gem.mk"
 .if ${RUBY_RAILS} >= 51
-DEPENDS+=	${RUBY_PKGPREFIX}-rails-dom-testing:../../textproc/ruby-rails-dom-testing
+DEPENDS+=	${RUBY_PKGPREFIX}-rails-dom-testing>=2.0:../../textproc/ruby-rails-dom-testing
 .else
-DEPENDS+=	${RUBY_PKGPREFIX}-rails-dom-testing1:../../textproc/ruby-rails-dom-testing1
+DEPENDS+=	${RUBY_PKGPREFIX}-rails-dom-testing1>=1.0:../../textproc/ruby-rails-dom-testing1
 .endif
 .include "../../mk/bsd.pkg.mk"
