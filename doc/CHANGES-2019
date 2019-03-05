@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1045 2019/03/05 03:33:10 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.1046 2019/03/05 07:48:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1783,3 +1783,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/py-openpyxl to 2.6.1 [adam 2019-03-04]
 	Updated www/gnurl to 7.64.0 [gdt 2019-03-05]
 	Updated mail/thunderbird-l10n to 60.5.2 [ryoon 2019-03-05]
+	Added misc/ruby-bundler1 version 1.17.3 [taca 2019-03-05]
