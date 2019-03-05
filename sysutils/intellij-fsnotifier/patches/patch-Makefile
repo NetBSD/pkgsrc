@@ -1,0 +1,29 @@
+$NetBSD: patch-Makefile,v 1.1 2019/03/05 11:24:01 ryoon Exp $
+
+* Fix build on NetBSD
+
+--- Makefile.orig	2016-11-18 15:38:37.000000000 +0000
++++ Makefile
+@@ -2,16 +2,20 @@ PROG=	fsnotifier
+ SRCS=	inotify.c main.c util.c
+ MAN=
+ CSTD=	c99
++PREFIX?=	/usr/local
+ 
+ CFLAGS+=	-Wall -Wextra -D_DEFAULT_SOURCE
+ 
+-CFLAGS+=	-std=${CSTD} -I/usr/local/include${INOTIFY}
+-LDFLAGS+=	-L/usr/local/lib${INOTIFY} -Wl,-rpath=/usr/local/lib${INOTIFY}
++CFLAGS+=	-std=${CSTD} -I${PREFIX}/include${INOTIFY}
++LDFLAGS+=	-L${PREFIX}/lib${INOTIFY} -Wl,-rpath=${PREFIX}/lib${INOTIFY}
+ LDFLAGS+=	-pthread
+ 
+ OS!=	uname -s
+ .if ${OS} == "OpenBSD"
+ INOTIFY?=	/inotify
++.elif ${OS} == "NetBSD"
++PREFIX=		/usr/pkg
++CFLAGS+=	-D_NETBSD_SOURCE
+ .endif
+ 
+ .if defined(STATIC_INOTIFY)
