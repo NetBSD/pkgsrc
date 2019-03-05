@@ -1,4 +1,4 @@
-# $NetBSD: ocaml.mk,v 1.22 2018/11/27 15:03:28 jaapb Exp $
+# $NetBSD: ocaml.mk,v 1.23 2019/03/05 16:14:35 jaapb Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
 #
@@ -56,6 +56,7 @@ _PKG_VARS.ocaml=	\
 	OCAML_USE_TOPKG \
 	OCAML_TOPKG_NAME \
 	OCAML_TOPKG_DOCDIR \
+	OCAML_TOPKG_FLAGS \
 	OCAML_TOPKG_TARGETS \
 	OCAML_TOPKG_OPTIONAL_TARGETS \
 	OCAML_USE_JBUILDER \
@@ -93,9 +94,7 @@ OCAML_USE_DUNE?=	no
 
 OCAML_TOPKG_NAME?=	${PKGBASE:S/^ocaml-//}
 OCAML_TOPKG_DOCDIR?=	${PREFIX}/share/doc
-
-OCAML_TOPKG_NAME?=	${PKGBASE:S/^ocaml-//}
-
+OCAML_TOPKG_FLAGS?=	# empty
 OCAML_TOPKG_TARGETS?=	# empty
 OCAML_TOPKG_OPTIONAL_TARGETS?=	# empty
 OCAML_TOPKG_NATIVE_TARGETS?=	# empty
@@ -235,7 +234,7 @@ do-install:
 
 do-build:
 	${RUN} ${_ULIMIT_CMD} cd ${WRKSRC} && \
-		${SETENV} ${MAKE_ENV} ocaml pkg/pkg.ml build
+		${SETENV} ${MAKE_ENV} ocaml pkg/pkg.ml build ${OCAML_TOPKG_FLAGS}
 
 .endif # topkg
 
