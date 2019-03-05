@@ -1,20 +1,13 @@
-@comment $NetBSD: PLIST,v 1.7 2018/11/27 15:24:09 jaapb Exp $
-share/doc/sexplib/CHANGES.md
-share/doc/sexplib/CHANGES.txt
-share/doc/sexplib/LICENSE-Tywith.txt
-share/doc/sexplib/LICENSE.txt
-share/doc/sexplib/README.org
+@comment $NetBSD: PLIST,v 1.8 2019/03/05 18:17:19 jaapb Exp $
 ${OCAML_SITELIB}/sexplib/META
 ${OCAML_SITELIB}/sexplib/conv.ml
 ${OCAML_SITELIB}/sexplib/conv.mli
 ${OCAML_SITELIB}/sexplib/conv_error.ml
+${OCAML_SITELIB}/sexplib/dune-package
 ${OCAML_SITELIB}/sexplib/exn_magic.ml
 ${OCAML_SITELIB}/sexplib/exn_magic.mli
 ${OCAML_SITELIB}/sexplib/lexer.ml
 ${OCAML_SITELIB}/sexplib/lexer.mli
-${OCAML_SITELIB}/sexplib/macro.ml
-${OCAML_SITELIB}/sexplib/macro.mli
-${OCAML_SITELIB}/sexplib/num/sexplib.num.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/sexplib/num/sexplib_num.a
 ${OCAML_SITELIB}/sexplib/num/sexplib_num.cma
 ${OCAML_SITELIB}/sexplib/num/sexplib_num.cmi
@@ -52,7 +45,6 @@ ${OCAML_SITELIB}/sexplib/sexplib.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/sexplib/sexplib.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/sexplib/sexplib.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/sexplib/sexplib.cmxs
-${OCAML_SITELIB}/sexplib/sexplib.dune
 ${OCAML_SITELIB}/sexplib/sexplib.ml
 ${OCAML_SITELIB}/sexplib/sexplib__Conv.cmi
 ${OCAML_SITELIB}/sexplib/sexplib__Conv.cmt
@@ -69,10 +61,6 @@ ${OCAML_SITELIB}/sexplib/sexplib__Lexer.cmi
 ${OCAML_SITELIB}/sexplib/sexplib__Lexer.cmt
 ${OCAML_SITELIB}/sexplib/sexplib__Lexer.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/sexplib/sexplib__Lexer.cmx
-${OCAML_SITELIB}/sexplib/sexplib__Macro.cmi
-${OCAML_SITELIB}/sexplib/sexplib__Macro.cmt
-${OCAML_SITELIB}/sexplib/sexplib__Macro.cmti
-${PLIST.ocaml-opt}${OCAML_SITELIB}/sexplib/sexplib__Macro.cmx
 ${OCAML_SITELIB}/sexplib/sexplib__Parser.cmi
 ${OCAML_SITELIB}/sexplib/sexplib__Parser.cmt
 ${OCAML_SITELIB}/sexplib/sexplib__Parser.cmti
@@ -118,7 +106,6 @@ ${OCAML_SITELIB}/sexplib/std.ml
 ${OCAML_SITELIB}/sexplib/type.ml
 ${OCAML_SITELIB}/sexplib/type_with_layout.ml
 ${OCAML_SITELIB}/sexplib/type_with_layout.mli
-${OCAML_SITELIB}/sexplib/unix/sexplib.unix.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/sexplib/unix/sexplib_unix.a
 ${OCAML_SITELIB}/sexplib/unix/sexplib_unix.cma
 ${OCAML_SITELIB}/sexplib/unix/sexplib_unix.cmi
@@ -131,3 +118,8 @@ ${OCAML_SITELIB}/sexplib/unix/sexplib_unix__Sexplib_unix_conv.cmi
 ${OCAML_SITELIB}/sexplib/unix/sexplib_unix__Sexplib_unix_conv.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/sexplib/unix/sexplib_unix__Sexplib_unix_conv.cmx
 ${OCAML_SITELIB}/sexplib/unix/sexplib_unix_conv.ml
+share/doc/sexplib/CHANGES.md
+share/doc/sexplib/CHANGES.txt
+share/doc/sexplib/LICENSE-Tywith.txt
+share/doc/sexplib/LICENSE.md
+share/doc/sexplib/README.org
