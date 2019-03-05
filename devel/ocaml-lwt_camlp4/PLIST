@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2018/06/05 15:48:36 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/03/05 17:41:04 jaapb Exp $
 ${OCAML_SITELIB}/lwt_camlp4/META
-${OCAML_SITELIB}/lwt_camlp4/log/lwt_camlp4.log.dune
+${OCAML_SITELIB}/lwt_camlp4/dune-package
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt_camlp4/log/lwt_camlp4_log.a
 ${OCAML_SITELIB}/lwt_camlp4/log/lwt_camlp4_log.cma
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt_camlp4/log/lwt_camlp4_log.cmxa
@@ -15,9 +15,7 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt_camlp4/lwt_camlp4.a
 ${OCAML_SITELIB}/lwt_camlp4/lwt_camlp4.cma
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt_camlp4/lwt_camlp4.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt_camlp4/lwt_camlp4.cmxs
-${OCAML_SITELIB}/lwt_camlp4/lwt_camlp4.dune
 ${OCAML_SITELIB}/lwt_camlp4/opam
-${OCAML_SITELIB}/lwt_camlp4/options/lwt_camlp4.options.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt_camlp4/options/lwt_camlp4_options.a
 ${OCAML_SITELIB}/lwt_camlp4/options/lwt_camlp4_options.cma
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt_camlp4/options/lwt_camlp4_options.cmxa
