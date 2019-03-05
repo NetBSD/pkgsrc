@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2019/01/01 22:16:14 nia Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/03/05 12:12:31 nia Exp $
 bin/snes9x-gtk
-share/applications/snes9x.desktop
+share/applications/snes9x-gtk.desktop
 share/icons/hicolor/128x128/apps/snes9x.png
 share/icons/hicolor/16x16/apps/snes9x.png
 share/icons/hicolor/24x24/apps/snes9x.png
