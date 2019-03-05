@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1063 2019/03/05 14:27:11 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1064 2019/03/05 15:20:47 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1804,3 +1804,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/mongo-c-driver to 1.14.0 [adam 2019-03-05]
 	Removed devel/libbson successor databases/mongo-c-driver [adam 2019-03-05]
 	Updated databases/php-mongodb to 1.5.3 [adam 2019-03-05]
+	Updated lang/py27-html-docs to 2.7.16 [leot 2019-03-05]
