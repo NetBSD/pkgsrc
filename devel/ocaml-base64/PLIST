@@ -1,17 +1,27 @@
-@comment $NetBSD: PLIST,v 1.3 2018/09/29 13:45:33 tnn Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/03/05 17:34:16 jaapb Exp $
 ${OCAML_SITELIB}/base64/META
-${OCAML_SITELIB}/base64/b64.cmi
-${OCAML_SITELIB}/base64/b64.cmt
-${OCAML_SITELIB}/base64/b64.cmti
-${PLIST.ocaml-opt}${OCAML_SITELIB}/base64/b64.cmx
-${OCAML_SITELIB}/base64/b64.ml
-${OCAML_SITELIB}/base64/b64.mli
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/base64/base64.a
 ${OCAML_SITELIB}/base64/base64.cma
+${OCAML_SITELIB}/base64/base64.cmi
+${OCAML_SITELIB}/base64/base64.cmt
+${OCAML_SITELIB}/base64/base64.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base64/base64.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/base64/base64.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/base64/base64.cmxs
-${OCAML_SITELIB}/base64/base64.dune
+${OCAML_SITELIB}/base64/base64.ml
+${OCAML_SITELIB}/base64/base64.mli
+${OCAML_SITELIB}/base64/dune-package
 ${OCAML_SITELIB}/base64/opam
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base64/rfc2045/base64_rfc2045.a
+${OCAML_SITELIB}/base64/rfc2045/base64_rfc2045.cma
+${OCAML_SITELIB}/base64/rfc2045/base64_rfc2045.cmi
+${OCAML_SITELIB}/base64/rfc2045/base64_rfc2045.cmt
+${OCAML_SITELIB}/base64/rfc2045/base64_rfc2045.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base64/rfc2045/base64_rfc2045.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base64/rfc2045/base64_rfc2045.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base64/rfc2045/base64_rfc2045.cmxs
+${OCAML_SITELIB}/base64/rfc2045/base64_rfc2045.ml
+${OCAML_SITELIB}/base64/rfc2045/base64_rfc2045.mli
 share/doc/base64/CHANGES.md
 share/doc/base64/LICENSE.md
 share/doc/base64/README.md
