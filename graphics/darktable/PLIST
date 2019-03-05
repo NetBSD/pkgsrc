@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2017/07/14 10:02:28 hauke Exp $
+@comment $NetBSD: PLIST,v 1.14 2019/03/05 11:19:24 ryoon Exp $
 bin/darktable
 bin/darktable-chart
 bin/darktable-cli
@@ -8,6 +8,7 @@ bin/darktable-rs-identify
 lib/darktable/libdarktable.so
 lib/darktable/plugins/imageio/format/libcopy.so
 lib/darktable/plugins/imageio/format/libexr.so
+lib/darktable/plugins/imageio/format/libj2k.so
 lib/darktable/plugins/imageio/format/libjpeg.so
 lib/darktable/plugins/imageio/format/libpdf.so
 lib/darktable/plugins/imageio/format/libpfm.so
@@ -50,12 +51,14 @@ lib/darktable/plugins/libdenoiseprofile.so
 lib/darktable/plugins/libdither.so
 lib/darktable/plugins/libequalizer.so
 lib/darktable/plugins/libexposure.so
+lib/darktable/plugins/libfilmic.so
 lib/darktable/plugins/libfinalscale.so
 lib/darktable/plugins/libflip.so
 lib/darktable/plugins/libgamma.so
 lib/darktable/plugins/libglobaltonemap.so
 lib/darktable/plugins/libgraduatednd.so
 lib/darktable/plugins/libgrain.so
+lib/darktable/plugins/libhazeremoval.so
 lib/darktable/plugins/libhighlights.so
 lib/darktable/plugins/libhighpass.so
 lib/darktable/plugins/libhotpixels.so
@@ -73,6 +76,7 @@ lib/darktable/plugins/librawdenoise.so
 lib/darktable/plugins/librawoverexposed.so
 lib/darktable/plugins/librawprepare.so
 lib/darktable/plugins/librelight.so
+lib/darktable/plugins/libretouch.so
 lib/darktable/plugins/librotatepixels.so
 lib/darktable/plugins/libscalepixels.so
 lib/darktable/plugins/libshadhi.so
@@ -95,6 +99,7 @@ lib/darktable/plugins/lighttable/libcolorlabels.so
 lib/darktable/plugins/lighttable/libcolorpicker.so
 lib/darktable/plugins/lighttable/libcopy_history.so
 lib/darktable/plugins/lighttable/libdarktable_label.so
+lib/darktable/plugins/lighttable/libduplicate.so
 lib/darktable/plugins/lighttable/libexport.so
 lib/darktable/plugins/lighttable/libfilmstrip.so
 lib/darktable/plugins/lighttable/libfilter.so
@@ -130,11 +135,6 @@ lib/darktable/views/liblighttable.so
 lib/darktable/views/libprint.so
 lib/darktable/views/libslideshow.so
 lib/darktable/views/libtethering.so
-man/man1/darktable-cli.1
-man/man1/darktable-cltest.1
-man/man1/darktable-cmstest.1
-man/man1/darktable-generate-cache.1
-man/man1/darktable.1
 share/appdata/darktable.appdata.xml
 share/applications/darktable.desktop
 share/darktable/darktable.css
@@ -142,21 +142,6 @@ share/darktable/darktablerc
 share/darktable/gdb_commands
 share/darktable/latex/photobook.cls
 share/darktable/lua/darktable/debug.lua
-share/darktable/lua/darktable/external/pygy_require/.gitignore
-share/darktable/lua/darktable/external/pygy_require/README.md
-share/darktable/lua/darktable/external/pygy_require/require.lua
-share/darktable/lua/darktable/external/pygy_require/rockspecs/require-0.1.1-1.rockspec
-share/darktable/lua/darktable/external/pygy_require/rockspecs/require-0.1.2-1.rockspec
-share/darktable/lua/darktable/external/pygy_require/rockspecs/require-0.1.3-1.rockspec
-share/darktable/lua/darktable/external/pygy_require/rockspecs/require-0.1.4-1.rockspec
-share/darktable/lua/darktable/external/pygy_require/rockspecs/require-0.1.4-2.rockspec
-share/darktable/lua/darktable/external/pygy_require/rockspecs/require-0.1.4-3.rockspec
-share/darktable/lua/darktable/external/pygy_require/rockspecs/require-0.1.4-4.rockspec
-share/darktable/lua/darktable/external/pygy_require/rockspecs/require-0.1.4-5.rockspec
-share/darktable/lua/darktable/external/pygy_require/rockspecs/require-0.1.5-1.rockspec
-share/darktable/lua/darktable/external/pygy_require/rockspecs/require-0.1.6-1.rockspec
-share/darktable/lua/darktable/external/pygy_require/rockspecs/require-0.1.7-1.rockspec
-share/darktable/lua/darktable/external/pygy_require/rockspecs/require-0.1.7-2.rockspec
 share/darktable/luarc
 share/darktable/noiseprofiles.json
 share/darktable/pixmaps/dt_logo_128x128.png
@@ -216,6 +201,8 @@ share/darktable/pixmaps/plugins/darkroom/graduatednd.png
 share/darktable/pixmaps/plugins/darkroom/graduatednd.svg
 share/darktable/pixmaps/plugins/darkroom/grain.png
 share/darktable/pixmaps/plugins/darkroom/grain.svg
+share/darktable/pixmaps/plugins/darkroom/hazeremoval.png
+share/darktable/pixmaps/plugins/darkroom/hazeremoval.svg
 share/darktable/pixmaps/plugins/darkroom/highlights.png
 share/darktable/pixmaps/plugins/darkroom/highlights.svg
 share/darktable/pixmaps/plugins/darkroom/highpass.png
@@ -305,11 +292,6 @@ share/darktable/watermarks/darktable.svg
 share/darktable/watermarks/hasselblad.svg
 share/darktable/watermarks/promo.svg
 share/darktable/watermarks/simple-text.svg
-share/doc/darktable/AUTHORS
-share/doc/darktable/LICENSE
-share/doc/darktable/README
-share/doc/darktable/TRANSLATORS
-share/doc/darktable/darktablerc.html
 share/icons/hicolor/16x16/apps/darktable.png
 share/icons/hicolor/22x22/apps/darktable.png
 share/icons/hicolor/24x24/apps/darktable.png
@@ -322,19 +304,13 @@ share/icons/hicolor/scalable/apps/darktable-2.svg
 share/icons/hicolor/scalable/apps/darktable-3.svg
 share/icons/hicolor/scalable/apps/darktable.svg
 share/locale/ca/LC_MESSAGES/darktable.mo
-share/locale/cs/LC_MESSAGES/darktable.mo
-share/locale/da/LC_MESSAGES/darktable.mo
 share/locale/de/LC_MESSAGES/darktable.mo
-share/locale/es/LC_MESSAGES/darktable.mo
+share/locale/fi/LC_MESSAGES/darktable.mo
 share/locale/fr/LC_MESSAGES/darktable.mo
-share/locale/he/LC_MESSAGES/darktable.mo
 share/locale/hu/LC_MESSAGES/darktable.mo
-share/locale/it/LC_MESSAGES/darktable.mo
 share/locale/ja/LC_MESSAGES/darktable.mo
+share/locale/nb/LC_MESSAGES/darktable.mo
 share/locale/nl/LC_MESSAGES/darktable.mo
-share/locale/pl/LC_MESSAGES/darktable.mo
+share/locale/pt_BR/LC_MESSAGES/darktable.mo
 share/locale/ru/LC_MESSAGES/darktable.mo
-share/locale/sk/LC_MESSAGES/darktable.mo
 share/locale/sl/LC_MESSAGES/darktable.mo
-share/locale/sv/LC_MESSAGES/darktable.mo
-share/locale/uk/LC_MESSAGES/darktable.mo
