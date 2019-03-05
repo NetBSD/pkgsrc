@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2019/03/03 16:34:27 youri Exp $
+# $NetBSD: Makefile,v 1.2 2019/03/05 11:27:52 ryoon Exp $
 #
 # TODO Import intellij-fsnotifier with inotify support from FreeBSD.
 
 VERSION=	2018.3.5
 DISTNAME=	ideaIC-${VERSION:S/.0.0//}-no-jdk
 PKGNAME=	intellij-ce-bin-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://download.jetbrains.com/idea/
 
@@ -13,11 +14,13 @@ HOMEPAGE=	http://www.jetbrains.org/
 COMMENT=	JetBrain\'s Java IDE
 LICENSE=	apache-2.0
 
+DEPENDS+=	intellij-fsnotifier-[0-9]*:../../sysutils/intellij-fsnotifier
+
 WRKSRC=		${WRKDIR}/idea-IC-183.5912.21
 USE_JAVA=	yes
 USE_JAVA2=	8
 
-USE_TOOLS+=	pax sed
+USE_TOOLS+=	bash pax sed
 
 REPLACE_PYTHON=	bin/printenv.py \
 		bin/restart.py  \
@@ -50,9 +53,9 @@ do-install:
 	plugins/android/lib/libwebp/linux/libwebp_jni.so	\
 	plugins/android/lib/libwebp/linux/libwebp_jni64.so &&	\
 	${ECHO} "idea.filewatcher.disabled=true" >> bin/idea.properties && \
-	${SED} -e "s|@@IDEA_HOME@@|${PREFIX}/${PKGNAME}|g" \
+	${SED} -e "s|@@IDEA_HOME@@|${PREFIX}/${PKGNAME_NOREV}|g" \
 	${FILESDIR}/idea.desktop > ${DESTDIR}${PREFIX}/share/applications/idea.desktop && \
-	pax -rw -pm * ${DESTDIR}${PREFIX}/${PKGNAME}
+	pax -rw -pm * ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}
 
 .include "../../lang/python/application.mk"
 .include "../../mk/java-vm.mk"
