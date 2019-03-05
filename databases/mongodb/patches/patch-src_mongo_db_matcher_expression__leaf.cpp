@@ -1,8 +1,10 @@
-$NetBSD: patch-src_mongo_db_matcher_expression__leaf.cpp,v 1.1 2017/07/11 19:35:51 joerg Exp $
+$NetBSD: patch-src_mongo_db_matcher_expression__leaf.cpp,v 1.2 2019/03/05 19:35:58 adam Exp $
 
---- src/mongo/db/matcher/expression_leaf.cpp.orig	2017-07-11 17:17:17.311043545 +0000
+Fix building.
+
+--- src/mongo/db/matcher/expression_leaf.cpp.orig	2019-01-30 14:26:33.000000000 +0000
 +++ src/mongo/db/matcher/expression_leaf.cpp
-@@ -31,6 +31,7 @@
+@@ -33,6 +33,7 @@
  #include "mongo/db/matcher/expression_leaf.h"
  
  #include <cmath>
@@ -10,11 +12,11 @@ $NetBSD: patch-src_mongo_db_matcher_expression__leaf.cpp,v 1.1 2017/07/11 19:35:
  #include <pcrecpp.h>
  
  #include "mongo/bson/bsonelement_comparator.h"
-@@ -45,6 +46,7 @@
+@@ -48,6 +49,7 @@
  #include "mongo/util/mongoutils/str.h"
  
  namespace mongo {
 +using std::string;
  
- Status LeafMatchExpression::setPath(StringData path) {
-     _path = path;
+ ComparisonMatchExpressionBase::ComparisonMatchExpressionBase(
+     MatchType type,

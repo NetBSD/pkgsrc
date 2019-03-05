@@ -1,17 +1,18 @@
-$NetBSD: patch-src_mongo_shell_linenoise__utf8.h,v 1.3 2016/02/12 03:37:24 ryoon Exp $
+$NetBSD: patch-src_mongo_shell_linenoise__utf8.h,v 1.4 2019/03/05 19:35:58 adam Exp $
 
 Use Boost swap instead of std. Fixes build on SunOS.
---- src/mongo/shell/linenoise_utf8.h.orig	2016-01-05 18:31:44.000000000 +0000
+
+--- src/mongo/shell/linenoise_utf8.h.orig	2019-01-30 14:26:33.000000000 +0000
 +++ src/mongo/shell/linenoise_utf8.h
-@@ -27,6 +27,7 @@
-  *    then also delete it in the license file.
+@@ -29,6 +29,7 @@
+  *    it in the license file.
   */
  
 +#include <boost/core/swap.hpp>
  #include <algorithm>
  #include <memory>
  #include <string.h>
-@@ -178,9 +179,9 @@ struct UtfStringMixin {
+@@ -176,9 +177,9 @@ struct UtfStringMixin {
      }
  
      void swap(UtfStringMixin& other) {
