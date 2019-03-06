@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1140 2019/03/06 08:01:04 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.1141 2019/03/06 08:03:35 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1882,3 +1882,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/mate-user-share to 1.22.0 [gutteridge 2019-03-06]
 	Updated misc/mate-utils to 1.22.0 [gutteridge 2019-03-06]
 	Updated x11/mozo to 1.22.0 [gutteridge 2019-03-06]
+	Updated editors/pluma to 1.22.0 [gutteridge 2019-03-06]
