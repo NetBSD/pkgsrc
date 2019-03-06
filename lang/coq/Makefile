@@ -1,23 +1,22 @@
-# $NetBSD: Makefile,v 1.117 2018/12/09 18:52:33 adam Exp $
+# $NetBSD: Makefile,v 1.118 2019/03/06 09:28:23 jaapb Exp $
 #
 
-DISTNAME=	coq-8.8.1
-PKGREVISION=	5
+DISTNAME=	coq-8.9.0
 CATEGORIES=	lang math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coq/}
-GITHUB_TAG=	V${PKGVERSION_NOREV}
+GITHUB_TAG=	V${PKGVERSION_NOREV:S/_/+/}
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	http://coq.inria.fr/
 COMMENT=	Theorem prover which extracts programs from proofs
 LICENSE=	gnu-lgpl-v2.1
 
-WRKSRC=		${WRKDIR}/${DISTNAME}
+WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${PKGVERSION_NOREV:S/_/-/}
 
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	-prefix ${PREFIX}
-CONFIGURE_ARGS+=	-emacslib ${PREFIX}/share/emacs/site-lisp
+#CONFIGURE_ARGS+=	-emacslib ${PREFIX}/share/emacs/site-lisp
 CONFIGURE_ARGS+=	-mandir ${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	-configdir ${PKG_SYSCONFDIR}/xdg/coq
 CONFIGURE_ARGS+=	-docdir ${PREFIX}/share/doc/coq
@@ -55,14 +54,11 @@ PLIST.natdynlink=	yes
 .include "../../lang/python/pyversion.mk"
 
 REPLACE_SH=	configure install.sh
-REPLACE_INTERPRETER+=	python2 python
+REPLACE_INTERPRETER=	python
 REPLACE.python.old=	python
 REPLACE.python.new=	${PYTHONBIN}
-REPLACE_FILES.python=	tools/TimeFileMaker.py
-
-REPLACE.python2.old=	python2
-REPLACE.python2.new=	${PYTHONBIN}
-REPLACE_FILES.python2=	tools/make-both-single-timing-files.py \
+REPLACE_FILES.python=	tools/TimeFileMaker.py \
+	tools/make-both-single-timing-files.py \
 	tools/make-both-time-files.py \
 	tools/make-one-time-file.py
 
