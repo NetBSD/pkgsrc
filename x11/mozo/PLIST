@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/01/16 18:18:03 youri Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/03/06 08:00:47 gutteridge Exp $
 bin/mozo
 ${PYSITELIB}/Mozo/MainWindow.py
 ${PYSITELIB}/Mozo/MenuEditor.py
@@ -68,6 +68,7 @@ share/locale/frp/LC_MESSAGES/mozo.mo
 share/locale/fur/LC_MESSAGES/mozo.mo
 share/locale/fy/LC_MESSAGES/mozo.mo
 share/locale/ga/LC_MESSAGES/mozo.mo
+share/locale/gd/LC_MESSAGES/mozo.mo
 share/locale/gl/LC_MESSAGES/mozo.mo
 share/locale/gu/LC_MESSAGES/mozo.mo
 share/locale/ha/LC_MESSAGES/mozo.mo
