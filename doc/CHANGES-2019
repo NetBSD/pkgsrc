@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1153 2019/03/06 18:44:31 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1154 2019/03/06 21:13:13 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1901,3 +1901,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-astroid to 2.2.4 [adam 2019-03-06]
 	Updated net/py-amqp to 2.4.2 [adam 2019-03-06]
 	Updated net/py-kombu to 4.4.0 [adam 2019-03-06]
+	Updated net/vpnc-script to 20190116 [schmonz 2019-03-06]
