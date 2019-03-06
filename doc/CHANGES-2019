@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1146 2019/03/06 10:38:31 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.1147 2019/03/06 12:17:53 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1889,3 +1889,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/ocaml-ppx_base to 0.12.0 [jaapb 2019-03-06]
 	Updated lang/npm to 6.8.0nb1 [maya 2019-03-06]
 	Updated misc/ocaml-opaline to 0.3.2 [jaapb 2019-03-06]
+	Updated mail/offlineimap to 7.2.3 [ryoon 2019-03-06]
