@@ -1,1 +1,1 @@
-bin/tldextract @PREFIX@/bin/tldextract@PYVERSSUFFIX@
+bin/tldextract @PREFIX@/bin/tldextract-@PYVERSSUFFIX@
