@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2019/02/13 16:24:15 adam Exp $
+# $NetBSD: Makefile,v 1.21 2019/03/06 18:43:55 adam Exp $
 
-DISTNAME=	kombu-4.3.0
+DISTNAME=	kombu-4.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/kombu/}
