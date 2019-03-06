@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2019/01/21 13:12:32 youri Exp $
+# $NetBSD: Makefile,v 1.15 2019/03/06 07:29:46 gutteridge Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	mate-power-manager-${VERSION:R}.1
-PKGREVISION=	1
+DISTNAME=	mate-power-manager-${VERSION}
 CATEGORIES=	sysutils
 
 COMMENT=	Power manager for MATE
