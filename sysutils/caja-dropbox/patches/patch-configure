@@ -1,0 +1,33 @@
+$NetBSD: patch-configure,v 1.1 2019/03/06 06:24:17 gutteridge Exp $
+
+Handle hard-coded "python3" references.
+
+--- configure.orig	2019-02-25 12:46:26.000000000 +0000
++++ configure
+@@ -12380,7 +12380,7 @@ done
+   done
+ IFS=$as_save_IFS
+ 
+-  test -z "$ac_cv_path_RST2MAN" && ac_cv_path_RST2MAN="python3 rst2man.py"
++  test -z "$ac_cv_path_RST2MAN" && ac_cv_path_RST2MAN="$PYTHON3 rst2man.py"
+   ;;
+ esac
+ fi
+@@ -12403,7 +12403,7 @@ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for docutils on python3" >&5
+ $as_echo_n "checking for docutils on python3... " >&6; }
+ 
+-cat <<EOF | python3
++cat <<EOF | $PYTHON3
+ try:
+  import docutils
+ except:
+@@ -12425,7 +12425,7 @@ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for gi on python3" >&5
+ $as_echo_n "checking for gi on python3... " >&6; }
+ 
+-cat <<EOF | python3
++cat <<EOF | $PYTHON3
+ try:
+  import gi
+ except:
