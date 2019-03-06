@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1144 2019/03/06 09:37:41 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.1145 2019/03/06 09:42:27 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1887,3 +1887,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/py-tldextract to 2.2.1 [adam 2019-03-06]
 	Updated lang/coq to 8.9.0 [jaapb 2019-03-06]
 	Updated devel/ocaml-ppx_base to 0.12.0 [jaapb 2019-03-06]
+	Updated lang/npm to 6.8.0nb1 [maya 2019-03-06]
