@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2017/05/12 10:07:41 fhajny Exp $
+# $NetBSD: Makefile,v 1.32 2019/03/06 12:17:25 ryoon Exp $
 
 
-DISTNAME=	offlineimap-7.1.0
+DISTNAME=	offlineimap-7.2.3
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OfflineIMAP/}
 
