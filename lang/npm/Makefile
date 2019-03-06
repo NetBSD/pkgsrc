@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2019/02/14 10:36:40 adam Exp $
+# $NetBSD: Makefile,v 1.19 2019/03/06 09:42:09 maya Exp $
 
 DISTNAME=	cli-6.8.0
 PKGNAME=	${DISTNAME:S/cli/npm/}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=npm/}
 GITHUB_PROJECT=	cli
@@ -35,6 +36,13 @@ SUBST_FILES.python=	node_modules/node-gyp/lib/configure.js
 SUBST_MESSAGE.python=	Fixing path to Python
 SUBST_VARS.python=	PYTHONBIN
 
+SUBST_CLASSES+=			man-directory
+SUBST_STAGE.man-directory=	pre-configure
+SUBST_FILES.man-directory=	node_modules/bin-links/index.js
+SUBST_MESSAGE.man-directory=	Changing installation to PREFIX/man
+SUBST_VARS.man-directory=	PKGMANDIR
+
+
 CHECK_INTERPRETER_SKIP+=	lib/node_modules/npm/*
 
 .include "../../mk/bsd.prefs.mk"
@@ -48,10 +56,12 @@ do-install:
 		bin/npm-cli.js pack
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ${PREFIX}/bin/node \
 		bin/npm-cli.js install -g -f ${PKGNAME_NOREV}.tgz
-.if ${PKGMANDIR} != "share/man"
-	${RM} -f -r ${DESTDIR}${PREFIX}/${PKGMANDIR}
-	${MV} ${DESTDIR}${PREFIX}/share/man ${DESTDIR}${PREFIX}/${PKGMANDIR}
-.endif
+
+# These are relative symlinks, and they're broken from this command
+#.if ${PKGMANDIR} != "share/man"
+#	${RM} -f -r ${DESTDIR}${PREFIX}/${PKGMANDIR}
+#	${MV} ${DESTDIR}${PREFIX}/share/man ${DESTDIR}${PREFIX}/${PKGMANDIR}
+#.endif
 
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
