@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/03/06 09:42:09 maya Exp $
+# $NetBSD: Makefile,v 1.20 2019/03/06 10:07:35 maya Exp $
 
 DISTNAME=	cli-6.8.0
 PKGNAME=	${DISTNAME:S/cli/npm/}
@@ -56,12 +56,6 @@ do-install:
 		bin/npm-cli.js pack
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ${PREFIX}/bin/node \
 		bin/npm-cli.js install -g -f ${PKGNAME_NOREV}.tgz
-
-# These are relative symlinks, and they're broken from this command
-#.if ${PKGMANDIR} != "share/man"
-#	${RM} -f -r ${DESTDIR}${PREFIX}/${PKGMANDIR}
-#	${MV} ${DESTDIR}${PREFIX}/share/man ${DESTDIR}${PREFIX}/${PKGMANDIR}
-#.endif
 
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
