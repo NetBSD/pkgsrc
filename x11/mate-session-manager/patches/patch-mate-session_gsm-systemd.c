@@ -1,4 +1,4 @@
-$NetBSD: patch-mate-session_gsm-systemd.c,v 1.1 2019/03/06 07:37:51 gutteridge Exp $
+$NetBSD: patch-mate-session_gsm-systemd.c,v 1.2 2019/03/06 08:12:36 gutteridge Exp $
 
 Deal with systemd-only function calls.
 
@@ -16,7 +16,7 @@ Deal with systemd-only function calls.
 +#endif
 +
 +        if (session == NULL)
-+            return;
++            return FALSE;
  
          if (ret != 0) {
                  return FALSE;
@@ -27,7 +27,7 @@ Deal with systemd-only function calls.
 +#endif
 +
 +        if (sessions == NULL)
-+            return;
++            return FALSE;
  
          if (ret <= 0) {
                  free (session);
