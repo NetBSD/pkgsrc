@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.14 2019/01/16 18:27:59 youri Exp $
+# $NetBSD: Makefile,v 1.15 2019/03/06 07:58:24 gutteridge Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	mate-utils-${VERSION:R}.1
+DISTNAME=	mate-utils-${VERSION}
 CATEGORIES=	misc
 
 COMMENT=	Utiltiles for MATE Desktop
 
 USE_LANGUAGES=	c c++
 
-TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
+# itstool 2.0.4 was failing to parse a specific .po file
+TOOL_DEPENDS+=	itstool>=2.0.5:../../textproc/itstool
 TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 
 PKGCONFIG_OVERRIDE+=	mate-dictionary/libgdict/mate-dict.pc.in
