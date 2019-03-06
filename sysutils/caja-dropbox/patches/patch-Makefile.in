@@ -1,0 +1,20 @@
+$NetBSD: patch-Makefile.in,v 1.1 2019/03/06 06:24:17 gutteridge Exp $
+
+Handle hard-coded "python3" references.
+
+--- Makefile.in.orig	2019-02-25 12:46:27.000000000 +0000
++++ Makefile.in
+@@ -941,11 +941,11 @@ uninstall-man: uninstall-man1
+ 
+ 
+ caja-dropbox: $(top_srcdir)/caja-dropbox.in $(top_srcdir)/serializeimages.py
+-	python3 $(top_srcdir)/serializeimages.py $(PACKAGE_VERSION) $(datadir)/applications < $(top_srcdir)/caja-dropbox.in > caja-dropbox
++	$(PYTHON3) $(top_srcdir)/serializeimages.py $(PACKAGE_VERSION) $(datadir)/applications < $(top_srcdir)/caja-dropbox.in > caja-dropbox
+ 	chmod +x caja-dropbox
+ 
+ caja-dropbox.1: $(top_srcdir)/caja-dropbox.txt.in caja-dropbox $(top_srcdir)/docgen.py
+-	python3 $(top_srcdir)/docgen.py $(PACKAGE_VERSION) $(top_srcdir)/caja-dropbox.txt.in caja-dropbox.txt
++	$(PYTHON3) $(top_srcdir)/docgen.py $(PACKAGE_VERSION) $(top_srcdir)/caja-dropbox.txt.in caja-dropbox.txt
+ 	$(RST2MAN) caja-dropbox.txt > caja-dropbox.1
+ 
+ # Build ChangeLog from GIT  history
