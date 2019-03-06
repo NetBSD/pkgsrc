@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/01/16 18:18:53 youri Exp $
+# $NetBSD: Makefile,v 1.19 2019/03/06 08:03:22 gutteridge Exp $
 
 # XXX: meta-pkgs/mate/Makefile.common includes pyversion.mk which sets the
 # python version too early and clashes with PYTHON_VERSIONS_INCOMPATIBLE
@@ -7,7 +7,7 @@
 .include "../../devel/libpeas/buildlink3.mk"
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	pluma-${VERSION:R}.2
+DISTNAME=	pluma-${VERSION}
 CATEGORIES=	editors
 
 COMMENT=	Small and lightweight UTF-8 text editor for MATE
