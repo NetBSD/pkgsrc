@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/10/04 19:08:46 leot Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/03/06 17:02:20 leot Exp $
 bin/zathura
 include/zathura/document.h
 include/zathura/links.h
@@ -13,7 +13,7 @@ man/man5/zathurarc.5
 share/applications/org.pwmt.zathura.desktop
 share/bash-completion/completions/zathura
 share/dbus-1/interfaces/org.pwmt.zathura.xml
-share/icons/hicolor/128x128/apps/org.pwmt.zathura.png
+share/icons/scalable/apps/org.pwmt.zathura.svg
 share/locale/ca/LC_MESSAGES/zathura.mo
 share/locale/cs/LC_MESSAGES/zathura.mo
 share/locale/de/LC_MESSAGES/zathura.mo
@@ -33,6 +33,7 @@ share/locale/no/LC_MESSAGES/zathura.mo
 share/locale/pl/LC_MESSAGES/zathura.mo
 share/locale/pt_BR/LC_MESSAGES/zathura.mo
 share/locale/ru/LC_MESSAGES/zathura.mo
+share/locale/sv/LC_MESSAGES/zathura.mo
 share/locale/ta_IN/LC_MESSAGES/zathura.mo
 share/locale/tr/LC_MESSAGES/zathura.mo
 share/locale/uk_UA/LC_MESSAGES/zathura.mo
