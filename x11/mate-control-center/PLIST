@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/01/16 15:05:54 youri Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/03/06 06:59:44 gutteridge Exp $
 bin/mate-about-me
 bin/mate-appearance-properties
 bin/mate-at-properties
@@ -1835,6 +1835,7 @@ share/locale/it/LC_MESSAGES/mate-control-center.mo
 share/locale/ja/LC_MESSAGES/mate-control-center.mo
 share/locale/jv/LC_MESSAGES/mate-control-center.mo
 share/locale/ka/LC_MESSAGES/mate-control-center.mo
+share/locale/kab/LC_MESSAGES/mate-control-center.mo
 share/locale/kk/LC_MESSAGES/mate-control-center.mo
 share/locale/km/LC_MESSAGES/mate-control-center.mo
 share/locale/kn/LC_MESSAGES/mate-control-center.mo
@@ -1912,9 +1913,9 @@ share/mate-control-center/pixmaps/bar-disabled.png
 share/mate-control-center/pixmaps/bar-green.png
 share/mate-control-center/pixmaps/bar-red.png
 share/mate-control-center/pixmaps/bar.png
-share/mate-control-center/pixmaps/double-click-maybe.png
-share/mate-control-center/pixmaps/double-click-off.png
-share/mate-control-center/pixmaps/double-click-on.png
+share/mate-control-center/pixmaps/double-click-maybe.svg
+share/mate-control-center/pixmaps/double-click-off.svg
+share/mate-control-center/pixmaps/double-click-on.svg
 share/mate-control-center/pixmaps/gtk-theme-thumbnailing.png
 share/mate-control-center/pixmaps/icon-theme-thumbnailing.png
 share/mate-control-center/pixmaps/left-index-finger.png
