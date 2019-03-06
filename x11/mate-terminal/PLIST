@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2019/01/16 18:16:29 youri Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/03/06 07:51:05 gutteridge Exp $
 bin/mate-terminal
 bin/mate-terminal.wrapper
 man/man1/mate-terminal.1
-share/appdata/mate-terminal.appdata.xml
 share/applications/mate-terminal.desktop
 share/glib-2.0/schemas/org.mate.terminal.gschema.xml
 share/help/C/mate-terminal/figures/mate-terminal-default.png
@@ -565,3 +564,4 @@ share/mate-terminal/profile-preferences.ui
 share/mate-terminal/skey-challenge.ui
 share/mate-terminal/terminal.about
 share/mate-terminal/terminal.xml
+share/metainfo/mate-terminal.appdata.xml
