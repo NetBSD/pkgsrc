@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/07/07 08:15:41 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/03/06 13:11:56 joerg Exp $
 ${PYSITELIB}/hgext3rd/evolve/__init__.py
 ${PYSITELIB}/hgext3rd/evolve/__init__.pyc
 ${PYSITELIB}/hgext3rd/evolve/__init__.pyo
@@ -8,6 +8,9 @@ ${PYSITELIB}/hgext3rd/evolve/cmdrewrite.pyo
 ${PYSITELIB}/hgext3rd/evolve/compat.py
 ${PYSITELIB}/hgext3rd/evolve/compat.pyc
 ${PYSITELIB}/hgext3rd/evolve/compat.pyo
+${PYSITELIB}/hgext3rd/evolve/dagutil.py
+${PYSITELIB}/hgext3rd/evolve/dagutil.pyc
+${PYSITELIB}/hgext3rd/evolve/dagutil.pyo
 ${PYSITELIB}/hgext3rd/evolve/debugcmd.py
 ${PYSITELIB}/hgext3rd/evolve/debugcmd.pyc
 ${PYSITELIB}/hgext3rd/evolve/debugcmd.pyo
@@ -44,6 +47,9 @@ ${PYSITELIB}/hgext3rd/evolve/obsexchange.pyo
 ${PYSITELIB}/hgext3rd/evolve/obshistory.py
 ${PYSITELIB}/hgext3rd/evolve/obshistory.pyc
 ${PYSITELIB}/hgext3rd/evolve/obshistory.pyo
+${PYSITELIB}/hgext3rd/evolve/rewind.py
+${PYSITELIB}/hgext3rd/evolve/rewind.pyc
+${PYSITELIB}/hgext3rd/evolve/rewind.pyo
 ${PYSITELIB}/hgext3rd/evolve/rewriteutil.py
 ${PYSITELIB}/hgext3rd/evolve/rewriteutil.pyc
 ${PYSITELIB}/hgext3rd/evolve/rewriteutil.pyo
@@ -77,6 +83,9 @@ ${PYSITELIB}/hgext3rd/evolve/thirdparty/cbor.pyo
 ${PYSITELIB}/hgext3rd/evolve/utility.py
 ${PYSITELIB}/hgext3rd/evolve/utility.pyc
 ${PYSITELIB}/hgext3rd/evolve/utility.pyo
+${PYSITELIB}/hgext3rd/pullbundle.py
+${PYSITELIB}/hgext3rd/pullbundle.pyc
+${PYSITELIB}/hgext3rd/pullbundle.pyo
 ${PYSITELIB}/hgext3rd/serverminitopic.py
 ${PYSITELIB}/hgext3rd/serverminitopic.pyc
 ${PYSITELIB}/hgext3rd/serverminitopic.pyo
