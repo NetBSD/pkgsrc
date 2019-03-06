@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2019/03/06 05:48:55 gutteridge Exp $
+# $NetBSD: Makefile,v 1.39 2019/03/06 06:08:16 gutteridge Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
@@ -13,8 +13,6 @@ TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 PKGCONFIG_OVERRIDE+=	atril-document.pc.in
 PKGCONFIG_OVERRIDE+=	atril-view.pc.in
-
-CONFIGURE_ARGS+=	--disable-introspection
 
 .include "options.mk"
 
