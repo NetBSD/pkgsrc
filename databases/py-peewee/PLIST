@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2018/12/18 11:48:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2019/03/06 08:37:57 adam Exp $
 bin/pwiz-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -11,7 +11,6 @@ ${PYSITELIB}/peewee.pyo
 ${PYSITELIB}/playhouse/__init__.py
 ${PYSITELIB}/playhouse/__init__.pyc
 ${PYSITELIB}/playhouse/__init__.pyo
-${PYSITELIB}/playhouse/_speedups.so
 ${PYSITELIB}/playhouse/_sqlite_ext.so
 ${PYSITELIB}/playhouse/_sqlite_udf.so
 ${PYSITELIB}/playhouse/apsw_ext.py
