@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/12/16 14:38:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/03/06 18:43:55 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -86,6 +86,9 @@ ${PYSITELIB}/kombu/five.pyo
 ${PYSITELIB}/kombu/log.py
 ${PYSITELIB}/kombu/log.pyc
 ${PYSITELIB}/kombu/log.pyo
+${PYSITELIB}/kombu/matcher.py
+${PYSITELIB}/kombu/matcher.pyc
+${PYSITELIB}/kombu/matcher.pyo
 ${PYSITELIB}/kombu/message.py
 ${PYSITELIB}/kombu/message.pyc
 ${PYSITELIB}/kombu/message.pyo

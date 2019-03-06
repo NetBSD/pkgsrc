@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2019/02/13 16:24:15 adam Exp $
+$NetBSD: distinfo,v 1.18 2019/03/06 18:43:55 adam Exp $
 
-SHA1 (kombu-4.3.0.tar.gz) = 45bb35b627da4d80d380283974fb166ab518ce93
-RMD160 (kombu-4.3.0.tar.gz) = 2e437a54129ee0eea85491cb370c2e760620397a
-SHA512 (kombu-4.3.0.tar.gz) = dba44dc802907b0eac8b9dbce427691fc285ee9c343f484ad37ffca564d6c07275bea5c2a4b7e763d441c10c7289a91680e4e310f5b55b8d744448045014b477
-Size (kombu-4.3.0.tar.gz) = 429400 bytes
+SHA1 (kombu-4.4.0.tar.gz) = 17139c7ccf8ed65fe2a7226f3de9954f5cf77063
+RMD160 (kombu-4.4.0.tar.gz) = 25520991adf84425dd47ca8d06ed4689c057c7ae
+SHA512 (kombu-4.4.0.tar.gz) = 2f7bd71f848c7bba0643e47c43af79ae09373597bed86786e3a90f2acd69414583021e7f5544e47bf01f760b1fd9788e89e88a32cd22a3d74a34845b7917e10b
+Size (kombu-4.4.0.tar.gz) = 435287 bytes
