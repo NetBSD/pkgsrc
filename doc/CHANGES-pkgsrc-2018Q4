@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q4,v 1.1.2.8 2019/02/18 19:23:34 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q4,v 1.1.2.9 2019/03/06 15:08:14 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q4 branch:
 
@@ -91,4 +91,22 @@ www/ruby-rack16: security fix
 
 Pullup ticket #5915 - requested by taca
 mail-dovecot2: security fix
+
+Pullup ticket #5917 - requested by taca
+net/bind911: security fix
+
+Pullup ticket #5918 - requested by taca
+net/bind912: security fix
+
+Pullup ticket #5919 - requested by leot
+net/tor: security fix
+
+Pullup ticket #5920 - requested by taca
+www/drupal8: security fix (remote code execution)
+
+Pullup ticket #5916 - requested by maya
+www/webkit-gtk: security fix (remote code execution)
+
+Pullup ticket #5922 - requested by schmonz
+www/ikiwiki: security fix
 
