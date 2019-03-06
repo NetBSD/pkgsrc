@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2014/11/23 16:10:50 gdt Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/03/06 14:35:49 gdt Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/03/06 14:35:49 gdt Exp $
 bin/applygeo
 bin/geotifcp
 bin/listgeo
-bin/makegeo
 include/cpl_serv.h
 include/epsg_datum.inc
 include/epsg_ellipse.inc
@@ -27,6 +27,8 @@ include/geotiffio.h
 include/geovalues.h
 include/xtiffio.h
 lib/libgeotiff.la
+man/man1/applygeo.1
+man/man1/geotifcp.1
 man/man1/listgeo.1
 share/epsg_csv/alias.csv
 share/epsg_csv/area.csv
