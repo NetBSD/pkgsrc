@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2019/01/16 14:49:43 youri Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/03/06 05:48:55 gutteridge Exp $
 bin/atril
 bin/atril-previewer
 bin/atril-thumbnailer
@@ -52,31 +52,30 @@ include/atril/1.5.0/libview/ev-view-type-builtins.h
 include/atril/1.5.0/libview/ev-view.h
 include/atril/1.5.0/libview/ev-web-view.h
 lib/atril/3/backends/comicsdocument.atril-backend
-lib/atril/3/backends/djvudocument.atril-backend
-lib/atril/3/backends/dvidocument.atril-backend
+${PLIST.djvu}lib/atril/3/backends/djvudocument.atril-backend
+${PLIST.dvi}lib/atril/3/backends/dvidocument.atril-backend
 lib/atril/3/backends/libcomicsdocument.la
-lib/atril/3/backends/libdjvudocument.la
-lib/atril/3/backends/libdvidocument.la
-lib/atril/3/backends/libpdfdocument.la
-lib/atril/3/backends/libpixbufdocument.la
-lib/atril/3/backends/libpsdocument.la
-lib/atril/3/backends/libtiffdocument.la
-lib/atril/3/backends/libxpsdocument.la
-lib/atril/3/backends/pdfdocument.atril-backend
-lib/atril/3/backends/pixbufdocument.atril-backend
-lib/atril/3/backends/psdocument.atril-backend
-lib/atril/3/backends/tiffdocument.atril-backend
-lib/atril/3/backends/xpsdocument.atril-backend
+${PLIST.djvu}lib/atril/3/backends/libdjvudocument.la
+${PLIST.dvi}lib/atril/3/backends/libdvidocument.la
+${PLIST.pdf}lib/atril/3/backends/libpdfdocument.la
+${PLIST.pixbuf}lib/atril/3/backends/libpixbufdocument.la
+${PLIST.ps}lib/atril/3/backends/libpsdocument.la
+${PLIST.tiff}lib/atril/3/backends/libtiffdocument.la
+${PLIST.xps}lib/atril/3/backends/libxpsdocument.la
+${PLIST.pdf}lib/atril/3/backends/pdfdocument.atril-backend
+${PLIST.pixbuf}lib/atril/3/backends/pixbufdocument.atril-backend
+${PLIST.ps}lib/atril/3/backends/psdocument.atril-backend
+${PLIST.tiff}lib/atril/3/backends/tiffdocument.atril-backend
+${PLIST.xps}lib/atril/3/backends/xpsdocument.atril-backend
 lib/caja/extensions-2.0/libatril-properties-page.la
 lib/libatrildocument.la
 lib/libatrilview.la
 lib/pkgconfig/atril-document-1.5.0.pc
 lib/pkgconfig/atril-view-1.5.0.pc
-libexec/atrild
+${PLIST.dbus}libexec/atrild
 man/man1/atril-previewer.1
 man/man1/atril-thumbnailer.1
 man/man1/atril.1
-share/appdata/atril.appdata.xml
 share/applications/atril.desktop
 share/atril/hand-open.png
 share/atril/icons/hicolor/16x16/actions/object-rotate-left.png
@@ -119,7 +118,7 @@ share/atril/icons/hicolor/scalable/actions/object-rotate-left.svg
 share/atril/icons/hicolor/scalable/actions/object-rotate-right.svg
 share/atril/icons/hicolor/scalable/mimetypes/x-office-presentation.svg
 share/caja/extensions/libatril-properties-page.caja-extension
-share/dbus-1/services/org.mate.atril.Daemon.service
+${PLIST.dbus}share/dbus-1/services/org.mate.atril.Daemon.service
 share/glib-2.0/schemas/org.mate.Atril.gschema.xml
 share/gtk-doc/html/atril/EggFindBar.html
 share/gtk-doc/html/atril/EvFileMonitor.html
@@ -708,4 +707,5 @@ share/locale/zh_CN/LC_MESSAGES/atril.mo
 share/locale/zh_HK/LC_MESSAGES/atril.mo
 share/locale/zh_TW/LC_MESSAGES/atril.mo
 share/locale/zu/LC_MESSAGES/atril.mo
+share/metainfo/atril.appdata.xml
 share/thumbnailers/atril.thumbnailer
