@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/02/17 06:22:37 gutteridge Exp $
+$NetBSD: distinfo,v 1.6 2019/03/06 07:55:01 gutteridge Exp $
 
-SHA1 (mate-user-share-1.21.0.tar.xz) = 57a3e090f5bc452e157ded30b815f26a7cb71178
-RMD160 (mate-user-share-1.21.0.tar.xz) = 8756dbe84c2165f6e6a3d440450ee9f49c56dc29
-SHA512 (mate-user-share-1.21.0.tar.xz) = bc6430f98b998033c496b7565e0fb62ce361d132ae391a0936b9b5b99ea6b117993f7d0e18d00646c4b006c5362a8d2f8731d021addcb97958201a88513b9e49
-Size (mate-user-share-1.21.0.tar.xz) = 927116 bytes
+SHA1 (mate-user-share-1.22.0.tar.xz) = 4d73ac2c4ea54caea7c98bc6ef97950c91cd2cba
+RMD160 (mate-user-share-1.22.0.tar.xz) = 56b88b6f7c9e75b1257642b0f0a8e331c2c5cf48
+SHA512 (mate-user-share-1.22.0.tar.xz) = 151532ebe031a973e8825d86c9a315697f5930f89d78960946da3ba135238e3130c59018d04cf9dc8d343ff1613e51254701bbf8e23a9881733ecbb7e6fb9f18
+Size (mate-user-share-1.22.0.tar.xz) = 927068 bytes
