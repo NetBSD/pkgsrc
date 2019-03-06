@@ -1,11 +1,11 @@
-$NetBSD: patch-zathura_database-plain.c,v 1.1 2016/02/17 09:43:24 leot Exp $
+$NetBSD: patch-zathura_database-plain.c,v 1.2 2019/03/06 17:02:20 leot Exp $
 
 Correctly define _POSIX_SOURCE and bump _XOPEN_SOURCE.
 
---- zathura/database-plain.c.orig	2015-12-21 10:19:18.000000000 +0000
+--- zathura/database-plain.c.orig	2018-12-22 15:33:23.000000000 +0000
 +++ zathura/database-plain.c
 @@ -1,7 +1,7 @@
- /* See LICENSE file for license and copyright information */
+ /* SPDX-License-Identifier: Zlib */
  
 -#define _POSIX_SOURCE
 -#define _XOPEN_SOURCE 500
