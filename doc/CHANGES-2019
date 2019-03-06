@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1115 2019/03/06 06:34:36 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.1116 2019/03/06 06:37:58 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1857,3 +1857,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/caja-dropbox to 1.22.0 [gutteridge 2019-03-06]
 	Updated archivers/engrampa to 1.22.0 [gutteridge 2019-03-06]
 	Updated graphics/eom to 1.22.0 [gutteridge 2019-03-06]
+	Updated x11/libmatekbd to 1.22.0 [gutteridge 2019-03-06]
