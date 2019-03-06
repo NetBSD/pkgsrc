@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/01/16 18:01:26 youri Exp $
+$NetBSD: distinfo,v 1.5 2019/03/06 07:14:56 gutteridge Exp $
 
-SHA1 (mate-media-1.21.0.tar.xz) = 2943fb2cc5c995724f9a915d4eac02f1da23efbb
-RMD160 (mate-media-1.21.0.tar.xz) = 3b40f27fcf481147457131b93e884d3eaf340a35
-SHA512 (mate-media-1.21.0.tar.xz) = eff1eaaae05b445f6800532a2285f7f902df6bc3775cc289618f6e7cb611bfe111bc62169adaf7546a00393960cf7e20f1b9023d74cec08c53487c6c2bf7f6ad
-Size (mate-media-1.21.0.tar.xz) = 498616 bytes
+SHA1 (mate-media-1.22.0.tar.xz) = 73c6b0e840fd4d2c5d89a66c4d0643d8b93f657f
+RMD160 (mate-media-1.22.0.tar.xz) = 1079a42a6823c50d7c9920919c7329915a831a48
+SHA512 (mate-media-1.22.0.tar.xz) = 1c1751ebb0c848cece0e2fc10240832dff317dfcc08aa6721fe00feaf2cff907c700f5e0debd5a236078a199b9d65d59124ffca7a04f61d425d16b1adb02fc1f
+Size (mate-media-1.22.0.tar.xz) = 504312 bytes
