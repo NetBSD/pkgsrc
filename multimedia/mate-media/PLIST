@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/01/16 18:01:26 youri Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/03/06 07:14:56 gutteridge Exp $
 bin/mate-volume-control
 bin/mate-volume-control-applet
 man/man1/mate-volume-control-applet.1
@@ -58,6 +58,7 @@ share/locale/frp/LC_MESSAGES/mate-media.mo
 share/locale/fur/LC_MESSAGES/mate-media.mo
 share/locale/fy/LC_MESSAGES/mate-media.mo
 share/locale/ga/LC_MESSAGES/mate-media.mo
+share/locale/gd/LC_MESSAGES/mate-media.mo
 share/locale/gl/LC_MESSAGES/mate-media.mo
 share/locale/gu/LC_MESSAGES/mate-media.mo
 share/locale/ha/LC_MESSAGES/mate-media.mo
@@ -74,6 +75,7 @@ share/locale/it/LC_MESSAGES/mate-media.mo
 share/locale/ja/LC_MESSAGES/mate-media.mo
 share/locale/jv/LC_MESSAGES/mate-media.mo
 share/locale/ka/LC_MESSAGES/mate-media.mo
+share/locale/kab/LC_MESSAGES/mate-media.mo
 share/locale/kk/LC_MESSAGES/mate-media.mo
 share/locale/kn/LC_MESSAGES/mate-media.mo
 share/locale/ko/LC_MESSAGES/mate-media.mo
