@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.65 2019/03/04 15:37:54 he Exp $
+$NetBSD: distinfo,v 1.66 2019/03/06 16:51:53 rin Exp $
 
 SHA1 (rust-1.32.0-i686-apple-darwin.tar.gz) = 53b4b0c4a05a4fb3fa5f601151df166dd488f911
 RMD160 (rust-1.32.0-i686-apple-darwin.tar.gz) = 91949e77519a8a1b0330d69faf06817a6d8ba856
@@ -122,6 +122,7 @@ SHA1 (patch-src_tools_cargo_tests_testsuite_build.rs) = e9185994af936e0a4f000a03
 SHA1 (patch-src_tools_rls_src_cmd.rs) = 754bfb8806e209cb0ef01690b48bf4b145017ab9
 SHA1 (patch-src_tools_rls_src_server_io.rs) = 74b90c1aeb70b0c3a20709145d6568ddf4647877
 SHA1 (patch-src_tools_rust-installer_install-template.sh) = f2ec6dced2be1fa23773d5827503ad07d0913dc2
+SHA1 (patch-src_tools_tidy_src_features.rs) = 229be34bb91ce50ceeb69bee3833bba77600afda
 SHA1 (patch-vendor_backtrace-sys_src_libbacktrace_configure) = 90e54f66edce65ebe23fbf2480deb193ca926733
 SHA1 (patch-vendor_libc_src_unix_solaris_mod.rs) = 1fd66c000eeae9b61e5e05c46604c574d2b2106c
 SHA1 (patch-vendor_rand_src_rngs_os.rs) = 7a1c6d91d9418e1f8e378c4baca33045cc768f2d
