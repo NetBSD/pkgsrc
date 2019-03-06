@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.813 2019/02/02 02:12:55 markd Exp $
+# $NetBSD: Makefile,v 1.814 2019/03/06 13:00:28 joerg Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -260,6 +260,7 @@ SUBDIR+=	ipe
 SUBDIR+=	ivtools
 SUBDIR+=	jasper
 SUBDIR+=	jbig2dec
+SUBDIR+=	jbig2enc
 SUBDIR+=	jbigkit
 SUBDIR+=	jhead
 SUBDIR+=	jpeg
