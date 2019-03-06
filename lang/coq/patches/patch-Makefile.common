@@ -1,15 +1,15 @@
-$NetBSD: patch-Makefile.common,v 1.4 2017/11/03 11:20:28 jaapb Exp $
+$NetBSD: patch-Makefile.common,v 1.5 2019/03/06 09:28:23 jaapb Exp $
 
 Use BSD_INSTALL_*
---- Makefile.common.orig	2017-10-16 08:53:18.000000000 +0000
+--- Makefile.common.orig	2018-10-31 12:53:51.000000000 +0000
 +++ Makefile.common
-@@ -69,8 +69,8 @@ DYNOBJ:=.cmo
+@@ -83,8 +83,8 @@ DYNOBJ:=.cmo
  DYNLIB:=.cma
  endif
  
 -INSTALLBIN:=install
 -INSTALLLIB:=install -m 644
-+INSTALLBIN:=${BSD_INSTALL_PROGRAM}
++INSTALLBIN:=${BSD_INSTALL_SCRIPT}
 +INSTALLLIB:=${BSD_INSTALL_LIB}
  INSTALLSH:=./install.sh
  MKDIR:=install -d
