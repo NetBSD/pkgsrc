@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2019/02/17 06:15:37 gutteridge Exp $
+$NetBSD: distinfo,v 1.9 2019/03/06 07:13:00 gutteridge Exp $
 
-SHA1 (mate-indicator-applet-1.21.0.tar.xz) = b2e50858549063df32e34749b4d19deb59f7ac0f
-RMD160 (mate-indicator-applet-1.21.0.tar.xz) = 9d28dc5f269e85e4d659aab1e6641b1ea0588add
-SHA512 (mate-indicator-applet-1.21.0.tar.xz) = 4dded148e595ec6dfb662774cde4aa705d96296b664e547f071fdd67d4fa66e12032a09f0634480ac8b81a5e51252c560f4aa378b080408f45a66a7501d4de87
-Size (mate-indicator-applet-1.21.0.tar.xz) = 339392 bytes
+SHA1 (mate-indicator-applet-1.22.0.tar.xz) = 3125bd6c7da4132a91b83eee1d7311dd34d2ced9
+RMD160 (mate-indicator-applet-1.22.0.tar.xz) = b6152cb24192aa95bd8f07fc9627ae6633b779f0
+SHA512 (mate-indicator-applet-1.22.0.tar.xz) = 6e1dd133a521f247ecb648b3ffa542e326f504fd3b0719a74099e83ac1dfa9fd4d7676af284f89f69d6684e5640f240930bb0fb43bcf7d59472786adf4c3200c
+Size (mate-indicator-applet-1.22.0.tar.xz) = 339564 bytes
 SHA1 (patch-configure) = 0320c192cd52900458144544145ef21149ca3d8a
