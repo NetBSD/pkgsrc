@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2019/03/06 06:02:25 gutteridge Exp $
+
+Fix non-POSIX compliant test expression.
+
+--- configure.orig	2019-02-24 15:28:13.000000000 +0000
++++ configure
+@@ -16139,7 +16139,7 @@ if test "${enable_self_check+set}" = set
+ fi
+ 
+ msg_self_check=yes
+-if test "x$enable_self_check" == "xno"; then
++if test "x$enable_self_check" = "xno"; then
+     msg_self_check=no
+ 
+ $as_echo "#define EEL_OMIT_SELF_CHECK 1" >>confdefs.h
