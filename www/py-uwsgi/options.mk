@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.4 2018/03/19 09:28:04 adam Exp $
+# $NetBSD: options.mk,v 1.5 2019/03/06 13:07:58 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-uwsgi
-PKG_SUPPORTED_OPTIONS=	debug openssl pcre uuid yaml
+PKG_SUPPORTED_OPTIONS=	debug openssl pcre uuid uwsgi-sse_offload yaml
 PKG_SUGGESTED_OPTIONS+=	libxml2 openssl pcre
 
 PKG_OPTIONS_OPTIONAL_GROUPS+=	json xml
@@ -48,6 +48,19 @@ UWSGI_SSL=                     ssl=false
 UWSGI_PCRE=                    pcre=true
 .else
 UWSGI_PCRE=                    pcre=false
+.endif
+
+.if !empty(PKG_OPTIONS:Muwsgi-sse_offload)
+SSE_REVISION=			8253573a0db1c7d7b9d968d55669e70e40355bed
+SSE_DISTNAME=			${SSE_REVISION}.zip
+SITES.${SSE_DISTNAME}=		https://github.com/unbit/uwsgi-sse-offload/archive/
+DISTFILES+=			${SSE_DISTNAME}
+UWSGI_SSE=			sse_offload=true
+INSTALL_ENV+=			UWSGI_EMBED_PLUGINS=sse_offload
+
+post-extract: post-extract-sse
+post-extract-sse:
+	mv ${WRKDIR}/uwsgi-sse-offload-${SSE_REVISION} ${WRKSRC}/plugins/sse_offload
 .endif
 
 .if !empty(PKG_OPTIONS:Muuid)
