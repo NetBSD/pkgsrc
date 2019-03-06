@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/01/16 18:27:59 youri Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/03/06 07:58:24 gutteridge Exp $
 bin/mate-dictionary
 bin/mate-disk-usage-analyzer
 bin/mate-panel-screenshot
@@ -27,10 +27,6 @@ man/man1/mate-panel-screenshot.1
 man/man1/mate-screenshot.1
 man/man1/mate-search-tool.1
 man/man1/mate-system-log.1
-share/appdata/mate-dictionary.appdata.xml
-share/appdata/mate-disk-usage-analyzer.appdata.xml
-share/appdata/mate-screenshot.appdata.xml
-share/appdata/mate-search-tool.appdata.xml
 share/applications/mate-dictionary.desktop
 share/applications/mate-disk-usage-analyzer.desktop
 share/applications/mate-screenshot.desktop
@@ -461,6 +457,9 @@ share/help/ca@valencia/mate-disk-usage-analyzer/figures/baobab_treemaps.png
 share/help/ca@valencia/mate-disk-usage-analyzer/figures/baobab_window.png
 share/help/ca@valencia/mate-disk-usage-analyzer/index.docbook
 share/help/ca@valencia/mate-disk-usage-analyzer/legal.xml
+share/help/ca@valencia/mate-search-tool/figures/mate-search-tool_window.png
+share/help/ca@valencia/mate-search-tool/index.docbook
+share/help/ca@valencia/mate-search-tool/legal.xml
 share/help/ca@valencia/mate-system-log/figures/syslog_window.png
 share/help/ca@valencia/mate-system-log/index.docbook
 share/help/ca@valencia/mate-system-log/legal.xml
@@ -3131,6 +3130,7 @@ share/locale/frp/LC_MESSAGES/mate-utils.mo
 share/locale/fur/LC_MESSAGES/mate-utils.mo
 share/locale/fy/LC_MESSAGES/mate-utils.mo
 share/locale/ga/LC_MESSAGES/mate-utils.mo
+share/locale/gd/LC_MESSAGES/mate-utils.mo
 share/locale/gl/LC_MESSAGES/mate-utils.mo
 share/locale/gu/LC_MESSAGES/mate-utils.mo
 share/locale/ha/LC_MESSAGES/mate-utils.mo
@@ -3222,4 +3222,8 @@ share/mate-panel/applets/org.mate.DictionaryApplet.mate-panel-applet
 share/mate-screenshot/mate-screenshot.ui
 share/mate-utils/logview-filter.ui
 share/mate-utils/logview-toolbar.xml
+share/metainfo/mate-dictionary.appdata.xml
+share/metainfo/mate-disk-usage-analyzer.appdata.xml
+share/metainfo/mate-screenshot.appdata.xml
+share/metainfo/mate-search-tool.appdata.xml
 share/pixmaps/mate-search-tool/thumbnail_frame.png
