@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1126 2019/03/06 07:15:11 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.1127 2019/03/06 07:18:25 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1868,3 +1868,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/mate-icon-theme to 1.22.0 [gutteridge 2019-03-06]
 	Updated x11/mate-indicator-applet to 1.22.0 [gutteridge 2019-03-06]
 	Updated multimedia/mate-media to 1.22.0 [gutteridge 2019-03-06]
+	Updated x11/mate-menus to 1.22.0 [gutteridge 2019-03-06]
