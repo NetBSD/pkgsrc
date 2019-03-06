@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1148 2019/03/06 13:12:26 joerg Exp $
+$NetBSD: CHANGES-2019,v 1.1149 2019/03/06 14:00:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1892,3 +1892,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/offlineimap to 7.2.3 [ryoon 2019-03-06]
 	Added graphics/jbig2enc version 0.29pre [joerg 2019-03-06]
 	Updated devel/py-hg-evolve to 8.4.0 [joerg 2019-03-06]
+	Updated x11/xf86-video-amdgpu to 19.0.0 [wiz 2019-03-06]
