@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1132 2019/03/06 07:31:55 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.1133 2019/03/06 07:34:22 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1874,3 +1874,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/mate-polkit to 1.22.0 [gutteridge 2019-03-06]
 	Updated sysutils/mate-power-manager to 1.22.0 [gutteridge 2019-03-06]
 	Updated x11/mate-screensaver to 1.22.0 [gutteridge 2019-03-06]
+	Updated sysutils/mate-sensors-applet to 1.22.0 [gutteridge 2019-03-06]
