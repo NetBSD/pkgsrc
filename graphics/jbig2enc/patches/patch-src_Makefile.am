@@ -1,0 +1,15 @@
+$NetBSD: patch-src_Makefile.am,v 1.1 2019/03/06 13:00:03 joerg Exp $
+
+Install missing main header.
+
+--- src/Makefile.am.orig	2016-08-09 14:34:10.312725761 +0000
++++ src/Makefile.am
+@@ -7,7 +7,7 @@ endif
+ lib_LTLIBRARIES = libjbig2enc.la
+ libjbig2enc_la_SOURCES = jbig2enc.cc jbig2arith.cc jbig2sym.cc jbig2comparator.cc
+ libjbig2enc_la_LDFLAGS = -no-undefined -version-info $(GENERIC_LIBRARY_VERSION)
+-include_HEADERS = jbig2arith.h jbig2sym.h jbig2structs.h jbig2segments.h jbig2comparator.h
++include_HEADERS = jbig2arith.h jbig2enc.h jbig2sym.h jbig2structs.h jbig2segments.h jbig2comparator.h
+ 
+ bin_PROGRAMS = jbig2
+ jbig2_SOURCES = jbig2.cc
