@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1117 2019/03/06 06:40:31 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.1118 2019/03/06 06:48:36 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1859,3 +1859,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/eom to 1.22.0 [gutteridge 2019-03-06]
 	Updated x11/libmatekbd to 1.22.0 [gutteridge 2019-03-06]
 	Updated misc/libmateweather to 1.22.0 [gutteridge 2019-03-06]
+	Updated x11/mate-applets to 1.22.0 [gutteridge 2019-03-06]
