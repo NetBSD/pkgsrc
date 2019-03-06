@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1149 2019/03/06 14:00:40 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1150 2019/03/06 14:35:56 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1893,3 +1893,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added graphics/jbig2enc version 0.29pre [joerg 2019-03-06]
 	Updated devel/py-hg-evolve to 8.4.0 [joerg 2019-03-06]
 	Updated x11/xf86-video-amdgpu to 19.0.0 [wiz 2019-03-06]
+	Updated geography/libgeotiff to 1.4.3 [gdt 2019-03-06]
