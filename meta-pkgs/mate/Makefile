@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/02/18 06:08:19 gutteridge Exp $
+# $NetBSD: Makefile,v 1.20 2019/03/06 05:47:42 gutteridge Exp $
 
 PKGNAME=	mate-${VERSION}
 CATEGORIES=	meta-pkgs
@@ -11,7 +11,7 @@ META_PACKAGE=	yes
 
 DEPENDS+=	atril>=${VERSION}:../../print/atril
 DEPENDS+=	caja>=${VERSION}:../../sysutils/caja
-DEPENDS+=	caja-dropbox>=1.20.0:../../sysutils/caja-dropbox
+DEPENDS+=	caja-dropbox>=${VERSION}:../../sysutils/caja-dropbox
 DEPENDS+=	caja-extensions>=${VERSION}:../../sysutils/caja-extensions
 DEPENDS+=	engrampa>=${VERSION}:../../archivers/engrampa
 DEPENDS+=	eom>=${VERSION}:../../graphics/eom
