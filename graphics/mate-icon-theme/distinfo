@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/01/16 17:53:37 youri Exp $
+$NetBSD: distinfo,v 1.5 2019/03/06 07:10:48 gutteridge Exp $
 
-SHA1 (mate-icon-theme-1.21.1.tar.xz) = 20f0d02203a2f571705972b19cb8b3859a156b4e
-RMD160 (mate-icon-theme-1.21.1.tar.xz) = 5864404fbb382e251184bed4c2ebcd28fafe83bb
-SHA512 (mate-icon-theme-1.21.1.tar.xz) = b195fefe548bc791203cf2bb78b75303f45f6dbd1b6dd64add7a37619c4a3259eb038dc8874e4414e467153acff0e1634ea8b76280a04864186ce1b91aaa22f6
-Size (mate-icon-theme-1.21.1.tar.xz) = 20555696 bytes
+SHA1 (mate-icon-theme-1.22.0.tar.xz) = 04889d9ccc6dbcc1e588126112b6eaba8fb26b1c
+RMD160 (mate-icon-theme-1.22.0.tar.xz) = 67a01c6fafed266bb1d12213f5f58997b41d19b6
+SHA512 (mate-icon-theme-1.22.0.tar.xz) = b4f0b5040e412bcbe818c14f101556cd643cc9dfce02aa676edc790f17de7da2272754235f8d9ad000551e7d92a5974cec3336712074747fcf669c0a729f8a5e
+Size (mate-icon-theme-1.22.0.tar.xz) = 20313164 bytes
