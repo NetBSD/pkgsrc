@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1154 2019/03/06 21:13:13 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.1155 2019/03/07 09:23:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1902,3 +1902,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/py-amqp to 2.4.2 [adam 2019-03-06]
 	Updated net/py-kombu to 4.4.0 [adam 2019-03-06]
 	Updated net/vpnc-script to 20190116 [schmonz 2019-03-06]
+	Updated lang/nodejs to 10.15.3 [adam 2019-03-07]
+	Updated lang/npm to 6.9.0 [adam 2019-03-07]
