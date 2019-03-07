@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2019/03/04 15:37:54 he Exp $
+# $NetBSD: Makefile,v 1.89 2019/03/07 20:19:11 jperkin Exp $
 
 DISTNAME=	rustc-1.33.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -297,6 +297,9 @@ post-extract:
 		${TOOLS_BASH} ./install.sh --prefix=${RUST_BOOTSTRAP_PATH};	\
 	fi
 # patch(1) in NetBSD does not handle .cargo-checksum.json like long width file.
+	${CP} ${WRKSRC}/vendor/rand-0.5.5/.cargo-checksum.json \
+		${WRKSRC}/vendor/rand-0.5.5/.cargo-checksum.json.orig
+	${SED} -e 's/cb94a0b54e47022b2e9b58b45e0196785c61d083760333276226da435cc040d9/bcb195562cf830c9e2078757e6d0976f86ede59816ff305e21a2764a4a4cf43e/' ${WRKSRC}/vendor/rand-0.5.5/.cargo-checksum.json.orig > ${WRKSRC}/vendor/rand-0.5.5/.cargo-checksum.json
 	${CP} ${WRKSRC}/vendor/rand/.cargo-checksum.json \
 	      ${WRKSRC}/vendor/rand/.cargo-checksum.json.orig
 	${SED} -e 's/1e732c2e3b4bd1561f11e0979bf9d20669a96eae7afe0deff9dfbb980ee47bf1/55abd8100db14a076dedbf84ce0f2db08158e1bd33ff1d4978bd3c4ad978f281/' ${WRKSRC}/vendor/rand/.cargo-checksum.json.orig > ${WRKSRC}/vendor/rand/.cargo-checksum.json
