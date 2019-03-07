@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2018/11/28 14:00:49 bouyer Exp $
+# $NetBSD: Makefile,v 1.4 2019/03/07 11:13:26 bouyer Exp $
 
-VERSION=	4.11.0
+VERSION=	4.11.1
 PKGREVISION=	1
 DISTNAME=	xen-${VERSION}
 PKGNAME=	xenkernel411-${VERSION}
