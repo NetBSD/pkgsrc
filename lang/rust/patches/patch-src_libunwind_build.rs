@@ -1,4 +1,4 @@
-$NetBSD: patch-src_libunwind_build.rs,v 1.1 2019/01/05 23:29:40 tnn Exp $
+$NetBSD: patch-src_libunwind_build.rs,v 1.2 2019/03/07 20:19:11 jperkin Exp $
 
 fix build on NetBSD HEAD-llvm. XXX there is probably a better way to do this.
 
@@ -9,7 +9,7 @@ fix build on NetBSD HEAD-llvm. XXX there is probably a better way to do this.
          println!("cargo:rustc-link-lib=unwind");
      } else if target.contains("netbsd") {
 -        println!("cargo:rustc-link-lib=gcc_s");
-+	if !env::var_os("PKGSRC_HAVE_LIBCPP").is_some() {
++        if !env::var_os("PKGSRC_HAVE_LIBCPP").is_some() {
 +            println!("cargo:rustc-link-lib=gcc_s");
 +        }
      } else if target.contains("openbsd") {
