@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2018/11/12 16:10:26 jaapb Exp $
+# $NetBSD: Makefile,v 1.5 2019/03/07 12:04:20 bouyer Exp $
 #
-VERSION=	4.11.0
+VERSION=	4.11.1
 VERSION_IPXE=	356f6c1b64d7a97746d1816cef8ca22bdd8d0b5d
 DIST_IPXE=	ipxe-git-${VERSION_IPXE}.tar.gz
 
 DIST_SUBDIR=		xen411
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools411-${VERSION}
-PKGREVISION=		2
+#PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		https://downloads.xenproject.org/release/xen/${VERSION}/
 
@@ -202,12 +202,6 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man8 share/doc/xen
 
 BUILD_DEFS+=		VARBASE
 
-.if (${OPSYS} == "NetBSD")
-TARGET_CC=	${PREFIX}/gcc48/bin/gcc
-.else
-TARGET_CC=	gcc
-.endif
-
 do-build:
 	cd ${WRKSRC} && ${BUILD_MAKE_CMD} build-tools
 
@@ -276,9 +270,6 @@ MAKE_ENV+=	EXTRA_HOSTCFLAGS=${EXTRA_HOSTCFLAGS:Q} EXTRA_CFLAGS=${EXTRA_CFLAGS:M*
 .include "../../devel/argp/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
-.if (${OPSYS} == "NetBSD")
-.include "../../lang/gcc48/buildlink3.mk"
-.endif
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
