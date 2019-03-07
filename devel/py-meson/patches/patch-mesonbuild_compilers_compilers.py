@@ -1,4 +1,4 @@
-$NetBSD: patch-mesonbuild_compilers_compilers.py,v 1.3 2019/03/05 16:30:18 prlw1 Exp $
+$NetBSD: patch-mesonbuild_compilers_compilers.py,v 1.4 2019/03/07 13:48:17 prlw1 Exp $
 
 Support SunOS-specific GCC behaviour.
 Limit GNU ld options correctly.
@@ -9,13 +9,13 @@ Limit GNU ld options correctly.
                                 'custom': [],
                                 }
  
-+sunos_buildtype_args = {'plain': [],
-+                       'debug': [],
-+                       'debugoptimized': [],
-+                       'release': [],
-+                       'minsize': [],
-+                       'custom': [],
-+                       }
++sunos_buildtype_linker_args = {'plain': [],
++                               'debug': [],
++                               'debugoptimized': [],
++                               'release': [],
++                               'minsize': [],
++                               'custom': [],
++                               }
 +
  gnulike_buildtype_linker_args = {'plain': [],
                                   'debug': [],
