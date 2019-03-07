@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.macosx-x86_64,v 1.2 2017/12/15 17:51:46 minskim Exp $
+@comment $NetBSD: PLIST.macosx-x86_64,v 1.3 2019/03/07 18:45:44 jperkin Exp $
 bin/oracle8-java
 bin/oracle8-javaws
 bin/oracle8-keytool
@@ -109,13 +109,11 @@ java/oracle-8/lib/libjdwp.dylib
 java/oracle-8/lib/libjfr.dylib
 java/oracle-8/lib/libjfxmedia.dylib
 java/oracle-8/lib/libjfxmedia_avf.dylib
-java/oracle-8/lib/libjfxmedia_qtkit.dylib
 java/oracle-8/lib/libjfxwebkit.dylib
 java/oracle-8/lib/libjpeg.dylib
 java/oracle-8/lib/libjsdt.dylib
 java/oracle-8/lib/libjsig.dylib
 java/oracle-8/lib/libjsound.dylib
-java/oracle-8/lib/libkcms.dylib
 java/oracle-8/lib/liblcms.dylib
 java/oracle-8/lib/libmanagement.dylib
 java/oracle-8/lib/libmlib_image.dylib
