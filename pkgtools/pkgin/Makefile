@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.86 2018/12/09 18:52:43 adam Exp $
+# $NetBSD: Makefile,v 1.87 2019/03/07 11:08:38 jperkin Exp $
 
-DISTNAME=		pkgin-0.11.6
-PKGREVISION=		1
+DISTNAME=		pkgin-0.11.7
 CATEGORIES=		pkgtools
-MASTER_SITES=		${MASTER_SITE_GITHUB:=joyent/}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=NetBSDfr/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		jperkin@joyent.com
