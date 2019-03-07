@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/01/16 14:59:45 youri Exp $
+$NetBSD: distinfo,v 1.5 2019/03/07 21:40:09 jmcneill Exp $
 
-SHA1 (libmatemixer-1.21.0.tar.xz) = 20adcd2598ac49b6d5719ecd2a62114d62c5379f
-RMD160 (libmatemixer-1.21.0.tar.xz) = 4b82a991d9c74f19148226bbe24d9e59fe4c3749
-SHA512 (libmatemixer-1.21.0.tar.xz) = f1a19d016c2cefabe8cfbe148e7c40e50d3e47eb3ebb307b36e78d92b8fb72ed96535718eed68803f8f81d11da317fbb31bfad2a35ac356cc42782c08253065c
-Size (libmatemixer-1.21.0.tar.xz) = 430204 bytes
+SHA1 (libmatemixer-1.22.0.tar.xz) = 5de47ba121492eba4ea3236a3e2f98b8c637ef63
+RMD160 (libmatemixer-1.22.0.tar.xz) = c6bc65d3fe106353f1ca51b308a3676ec7c76b76
+SHA512 (libmatemixer-1.22.0.tar.xz) = 6eaa006142601c077ac70739e637273288a4b9713dfc4179341c4832ae4e3b362e92104e150132ee274224d6c5dc057d812b7e1814e49a7690581de6d81e0db8
+Size (libmatemixer-1.22.0.tar.xz) = 432592 bytes
