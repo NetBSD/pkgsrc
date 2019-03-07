@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2019/03/06 10:07:35 maya Exp $
+# $NetBSD: Makefile,v 1.21 2019/03/07 09:22:48 adam Exp $
 
-DISTNAME=	cli-6.8.0
+DISTNAME=	cli-6.9.0
 PKGNAME=	${DISTNAME:S/cli/npm/}
-PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=npm/}
 GITHUB_PROJECT=	cli
@@ -14,7 +13,7 @@ COMMENT=	Package manager for JavaScript
 LICENSE=	artistic-2.0
 
 # Pre-fetch marked so that man pages can be built offline
-MARKED=			marked-0.6.0
+MARKED=			marked-0.6.1
 DISTFILES+=		${DISTNAME}${EXTRACT_SUFX} ${MARKED}.tar.gz
 SITES.${MARKED}.tar.gz=	-https://github.com/markedjs/marked/archive/v${MARKED:S/marked-//}.tar.gz
 
@@ -42,13 +41,13 @@ SUBST_FILES.man-directory=	node_modules/bin-links/index.js
 SUBST_MESSAGE.man-directory=	Changing installation to PREFIX/man
 SUBST_VARS.man-directory=	PKGMANDIR
 
-
 CHECK_INTERPRETER_SKIP+=	lib/node_modules/npm/*
 
 .include "../../mk/bsd.prefs.mk"
 
 pre-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} node bin/npm-cli.js install ${WRKDIR}/${MARKED} --no-global --no-timing --no-save
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} node bin/npm-cli.js install \
+		${WRKDIR}/${MARKED} --no-global --no-timing --no-save
 
 do-install:
 	${FIND} ${WRKSRC} -type f -name '*.orig' -delete
