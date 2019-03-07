@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/01/16 18:07:18 youri Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/03/07 21:35:35 jmcneill Exp $
 bin/mate-desktop-item-edit
 bin/mate-panel
 bin/mate-panel-test-applets
@@ -806,6 +806,9 @@ share/help/zh_CN/mate-clock/legal.xml
 share/help/zh_CN/mate-fish/figures/fish_applet.png
 share/help/zh_CN/mate-fish/index.docbook
 share/help/zh_CN/mate-fish/legal.xml
+share/help/zh-Hans/mate-fish/figures/fish_applet.png
+share/help/zh-Hans/mate-fish/index.docbook
+share/help/zh-Hans/mate-fish/legal.xml
 share/help/zh_HK/mate-clock/figures/clock_applet.png
 share/help/zh_HK/mate-clock/index.docbook
 share/help/zh_HK/mate-clock/legal.xml
