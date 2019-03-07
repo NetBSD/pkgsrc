@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/12/03 19:28:02 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/03/07 18:02:16 jperkin Exp $
 
 DISTNAME=	texlive-20180414-source
 PKGNAME=	xindy-2.5.1
@@ -32,7 +32,7 @@ INSTALLATION_DIRS+=	bin
 post-install:
 	cd ${WRKSRC}; ${PKGSRC_SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
                 ${MAKE_PROGRAM} install-exec-hook
-	rm -rf ${DESTDIR}${PREFIX}/man
+	rm -rf ${DESTDIR}${PREFIX}/${PKGMANDIR}
 
 BUILDLINK_DEPMETHOD.clisp=	build
 .include "../../lang/clisp/buildlink3.mk"
