@@ -1,18 +1,18 @@
-$NetBSD: patch-src_app_app.cc,v 1.3 2018/06/21 09:34:50 jperkin Exp $
+$NetBSD: patch-src_app_app.cc,v 1.4 2019/03/07 21:36:07 jmcneill Exp $
 
 Fix NetBSD build.
 
---- src/app/app.cc.orig	2018-05-21 19:31:53.000000000 +0000
+--- src/app/app.cc.orig	2018-12-10 21:32:12.000000000 +0000
 +++ src/app/app.cc
-@@ -22,6 +22,7 @@
- #include <locale.h>
+@@ -23,6 +23,7 @@
  #include <unistd.h>
  #include <sys/types.h>
+ #include <sys/wait.h>
 +#include <errno.h>
  
  #include <glib.h>
  #include <glib/gprintf.h>
-@@ -306,7 +307,7 @@ public:
+@@ -308,7 +309,7 @@ public:
                  else
                          alpha = get_alpha();
  
@@ -21,7 +21,7 @@ Fix NetBSD build.
                  color.alpha = alpha;
                  return color;
          }
-@@ -1257,7 +1258,7 @@ vteapp_window_fork(VteappWindow* window,
+@@ -1292,7 +1293,7 @@ vteapp_window_fork(VteappWindow* window,
          auto pid = fork();
          switch (pid) {
          case -1: /* error */

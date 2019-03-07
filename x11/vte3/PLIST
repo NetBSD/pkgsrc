@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/06/12 23:00:34 youri Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/03/07 21:36:06 jmcneill Exp $
 bin/vte-2.91
 etc/profile.d/vte.sh
 include/vte-2.91/vte/vte.h
@@ -22,6 +22,7 @@ share/gtk-doc/html/vte-2.91/api-index-0-46.html
 share/gtk-doc/html/vte-2.91/api-index-0-48.html
 share/gtk-doc/html/vte-2.91/api-index-0-50.html
 share/gtk-doc/html/vte-2.91/api-index-0-52.html
+share/gtk-doc/html/vte-2.91/api-index-0-54.html
 share/gtk-doc/html/vte-2.91/api-index-deprecated.html
 share/gtk-doc/html/vte-2.91/api-index-full.html
 share/gtk-doc/html/vte-2.91/ch01.html
