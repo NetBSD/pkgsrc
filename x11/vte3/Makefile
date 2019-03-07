@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2018/11/14 22:22:51 kleink Exp $
+# $NetBSD: Makefile,v 1.18 2019/03/07 21:36:06 jmcneill Exp $
 
-DISTNAME=	vte-0.52.2
+DISTNAME=	vte-0.54.3
 PKGNAME=	${DISTNAME:S/vte/vte3/}
-PKGREVISION=	3
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vte/0.52/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vte/0.54/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -18,6 +17,8 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config bash
 USE_LANGUAGES=		c c++
+
+BUILDLINK_TRANSFORM+=	rm:-Werror=format=2
 
 .include "../../mk/bsd.prefs.mk"
 

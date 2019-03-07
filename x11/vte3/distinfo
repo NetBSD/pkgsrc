@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.8 2018/06/22 14:34:43 jperkin Exp $
+$NetBSD: distinfo,v 1.9 2019/03/07 21:36:06 jmcneill Exp $
 
-SHA1 (vte-0.52.2.tar.xz) = be8de64f8584ada23461db8e0a4dce2e650de5ce
-RMD160 (vte-0.52.2.tar.xz) = 3707a2a4a0ca7bbc562dbf2d570e7e4a4a15afef
-SHA512 (vte-0.52.2.tar.xz) = fc760973efa1eb1f100447cdf0d9b944b74f5ba7e3ae1ae1d0acadaebd540fff19f7edc741685ba944147c151223942a80f8f3dad3602469f1aff5c44f6cc846
-Size (vte-0.52.2.tar.xz) = 1011696 bytes
+SHA1 (vte-0.54.3.tar.xz) = ea498d334e341738ef03d4d2d2c99b8bb1c1570e
+RMD160 (vte-0.54.3.tar.xz) = 3275821836e06d134288738b3e6ecec449e80d16
+SHA512 (vte-0.54.3.tar.xz) = dd7d2ac361ed9ac0550599bb3164a3bd6ba95535275c9b559c81ce0af1bbf4b3d150a7489f987b2e626b32d4a8adc82d1ff78e8c8640e5b1c036fe4076c5d8ce
+Size (vte-0.54.3.tar.xz) = 1087424 bytes
 SHA1 (patch-configure) = 9a570f27c0ec4e4680d517a8c2498b37728d52ae
-SHA1 (patch-src_app_app.cc) = 99fa242665d799205df305af5c0b15938db92c7c
+SHA1 (patch-src_app_app.cc) = ff76c74840342195a4d318418474f69e385f6571
 SHA1 (patch-src_pty.cc) = 4bcd447b214d59da69ea8c0bc5100cce27623f63
 SHA1 (patch-src_vte.cc) = 9886ae82daa8c4ad55ce85e2dec3216d3e46221a
 SHA1 (patch-src_vtedraw.cc) = 1deab7738ae7c7bbb53e5b951df4d8a6ad9312f9
