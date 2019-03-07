@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1159 2019/03/07 13:48:45 prlw1 Exp $
+$NetBSD: CHANGES-2019,v 1.1160 2019/03/07 16:43:27 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1909,3 +1909,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/xenkernel411 to 4.11.1nb1 [bouyer 2019-03-07]
 	Updated sysutils/xentools411 to 4.11.1 [bouyer 2019-03-07]
 	Updated devel/py-meson to 0.49.2nb1 [prlw1 2019-03-07]
+	Updated comms/py-gammu to 2.12 [leot 2019-03-07]
