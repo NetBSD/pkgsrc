@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1155 2019/03/07 09:23:18 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1156 2019/03/07 10:46:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1904,3 +1904,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/vpnc-script to 20190116 [schmonz 2019-03-06]
 	Updated lang/nodejs to 10.15.3 [adam 2019-03-07]
 	Updated lang/npm to 6.9.0 [adam 2019-03-07]
+	Updated net/wireshark to 2.6.7 [adam 2019-03-07]
