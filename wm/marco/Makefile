@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2019/01/16 15:01:30 youri Exp $
+# $NetBSD: Makefile,v 1.15 2019/03/07 21:35:05 jmcneill Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	marco-${VERSION:R}.1
+DISTNAME=	marco-${VERSION:R}.0
 CATEGORIES=	wm
 
 COMMENT=	Fork of GNOME Metacity
