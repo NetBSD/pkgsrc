@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1157 2019/03/07 11:08:49 jperkin Exp $
+$NetBSD: CHANGES-2019,v 1.1158 2019/03/07 12:05:42 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1906,3 +1906,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/npm to 6.9.0 [adam 2019-03-07]
 	Updated net/wireshark to 2.6.7 [adam 2019-03-07]
 	Updated pkgtools/pkgin to 0.11.7 [jperkin 2019-03-07]
+	Updated sysutils/xenkernel411 to 4.11.1nb1 [bouyer 2019-03-07]
+	Updated sysutils/xentools411 to 4.11.1 [bouyer 2019-03-07]
