@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2019/03/05 16:30:18 prlw1 Exp $
+# $NetBSD: Makefile,v 1.16 2019/03/07 13:48:17 prlw1 Exp $
 
 DISTNAME=	meson-0.49.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/meson/}
 
