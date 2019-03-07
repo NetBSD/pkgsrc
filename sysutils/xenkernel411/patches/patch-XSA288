@@ -1,0 +1,310 @@
+$NetBSD: patch-XSA288,v 1.1 2019/03/07 11:13:27 bouyer Exp $
+
+From 5d3a02e320f88747b75e3794c2e694284ae64c3e Mon Sep 17 00:00:00 2001
+From: George Dunlap <george.dunlap@citrix.com>
+Date: Wed, 23 Jan 2019 11:57:46 +0000
+Subject: [PATCH] xen: Make coherent PV IOMMU discipline
+
+In order for a PV domain to set up DMA from a passed-through device to
+one of its pages, the page must be mapped in the IOMMU.  On the other
+hand, before a PV page may be used as a "special" page type (such as a
+pagetable or descriptor table), it _must not_ be writable in the IOMMU
+(otherwise a malicious guest could DMA arbitrary page tables into the
+memory, bypassing Xen's safety checks); and Xen's current rule is to
+have such pages not in the IOMMU at all.
+
+At the moment, in order to accomplish this, the code borrows HVM
+domain's "physmap" concept: When a page is assigned to a guest,
+guess_physmap_add_entry() is called, which for PV guests, will create
+a writable IOMMU mapping; and when a page is removed,
+guest_physmap_remove_entry() is called, which will remove the mapping.
+
+Additionally, when a page gains the PGT_writable page type, the page
+will be added into the IOMMU; and when the page changes away from a
+PGT_writable type, the page will be removed from the IOMMU.
+
+Unfortunately, borrowing the "physmap" concept from HVM domains is
+problematic.  HVM domains have a lock on their p2m tables, ensuring
+synchronization between modifications to the p2m; and all hypercall
+parameters must first be translated through the p2m before being used.
+
+Trying to mix this locked-and-gated approach with PV's lock-free
+approach leads to several races and inconsistencies:
+
+* A race between a page being assigned and it being put into the
+  physmap; for example:
+  - P1: call populate_physmap() { A = allocate_domheap_pages() }
+  - P2: Guess page A's mfn, and call decrease_reservation(A).  A is owned by the domain,
+        and so Xen will clear the PGC_allocated bit and free the page
+  - P1: finishes populate_physmap() { guest_physmap_add_entry() }
+
+  Now the domain has a writable IOMMU mapping to a page it no longer owns.
+
+* Pages start out as type PGT_none, but with a writable IOMMU mapping.
+  If a guest uses a page as a page table without ever having created a
+  writable mapping, the IOMMU mapping will not be removed; the guest
+  will have a writable IOMMU mapping to a page it is currently using
+  as a page table.
+
+* A newly-allocated page can be DMA'd into with no special actions on
+  the part of the guest; However, if a page is promoted to a
+  non-writable type, the page must be mapped with a writable type before
+  DMA'ing to it again, or the transaction will fail.
+
+To fix this, do away with the "PV physmap" concept entirely, and
+replace it with the following IOMMU discipline for PV guests:
+ - (type == PGT_writable) <=> in iommu (even if type_count == 0)
+ - Upon a final put_page(), check to see if type is PGT_writable; if so,
+   iommu_unmap.
+
+In order to achieve that:
+
+- Remove PV IOMMU related code from guest_physmap_*
+
+- Repurpose cleanup_page_cacheattr() into a general
+  cleanup_page_mappings() function, which will both fix up Xen
+  mappings for pages with special cache attributes, and also check for
+  a PGT_writable type and remove pages if appropriate.
+
+- For compatibility with current guests, grab-and-release a
+  PGT_writable_page type for PV guests in guest_physmap_add_entry().
+  This will cause most "normal" guest pages to start out life with
+  PGT_writable_page type (and thus an IOMMU mapping), but no type
+  count (so that they can be used as special cases at will).
+
+Also, note that there is one exception to to the "PGT_writable => in
+iommu" rule: xenheap pages shared with guests may be given a
+PGT_writable type with one type reference.  This reference prevents
+the type from changing, which in turn prevents page from gaining an
+IOMMU mapping in get_page_type().  It's not clear whether this was
+intentional or not, but it's not something to change in a security
+update.
+
+This is XSA-288.
+
+Reported-by: Paul Durrant <paul.durrant@citrix.com>
+Signed-off-by: George Dunlap <george.dunlap@citrix.com>
+Signed-off-by: Jan Beulich <jbeulich@suse.com>
+---
+ xen/arch/x86/mm.c     | 95 +++++++++++++++++++++++++++++++++++++++----
+ xen/arch/x86/mm/p2m.c | 57 ++++++++++++--------------
+ 2 files changed, 111 insertions(+), 41 deletions(-)
+
+diff --git a/xen/arch/x86/mm.c b/xen/arch/x86/mm.c
+index d8ff58c901..ad8aacad68 100644
+--- xen/arch/x86/mm.c.orig
++++ xen/arch/x86/mm.c
+@@ -81,6 +81,22 @@
+  * OS's, which will generally use the WP bit to simplify copy-on-write
+  * implementation (in that case, OS wants a fault when it writes to
+  * an application-supplied buffer).
++ *
++ * PV domUs and IOMMUs:
++ * --------------------
++ * For a guest to be able to DMA into a page, that page must be in the
++ * domain's IOMMU.  However, we *must not* allow DMA into 'special'
++ * pages (such as page table pages, descriptor tables, &c); and we
++ * must also ensure that mappings are removed from the IOMMU when the
++ * page is freed.  Finally, it is inherently racy to make any changes
++ * based on a page with a non-zero type count.
++ *
++ * To that end, we put the page in the IOMMU only when a page gains
++ * the PGT_writeable type; and we remove the page when it loses the
++ * PGT_writeable type (not when the type count goes to zero).  This
++ * effectively protects the IOMMU status update with the type count we
++ * have just acquired.  We must also check for PGT_writable type when
++ * doing the final put_page(), and remove it from the iommu if so.
+  */
+ 
+ #include <xen/init.h>
+@@ -2275,19 +2291,79 @@ static int mod_l4_entry(l4_pgentry_t *pl4e,
+     return rc;
+ }
+ 
+-static int cleanup_page_cacheattr(struct page_info *page)
++/*
++ * In the course of a page's use, it may have caused other secondary
++ * mappings to have changed:
++ * - Xen's mappings may have been changed to accomodate the requested
++ *   cache attibutes
++ * - A page may have been put into the IOMMU of a PV guest when it
++ *   gained a writable mapping.
++ *
++ * Now that the page is being freed, clean up these mappings if
++ * appropriate.  NB that at this point the page is still "allocated",
++ * but not "live" (i.e., its refcount is 0), so it's safe to read the
++ * count_info, owner, and type_info without synchronization.
++ */
++static int cleanup_page_mappings(struct page_info *page)
+ {
+     unsigned int cacheattr =
+         (page->count_info & PGC_cacheattr_mask) >> PGC_cacheattr_base;
++    int rc = 0;
++    unsigned long mfn = mfn_x(page_to_mfn(page));
+ 
+-    if ( likely(cacheattr == 0) )
+-        return 0;
++    /*
++     * If we've modified xen mappings as a result of guest cache
++     * attributes, restore them to the "normal" state.
++     */
++    if ( unlikely(cacheattr) )
++    {
++        page->count_info &= ~PGC_cacheattr_mask;
+ 
+-    page->count_info &= ~PGC_cacheattr_mask;
++        BUG_ON(is_xen_heap_page(page));
+ 
+-    BUG_ON(is_xen_heap_page(page));
++        rc = update_xen_mappings(mfn, 0);
++    }
+ 
+-    return update_xen_mappings(mfn_x(page_to_mfn(page)), 0);
++    /*
++     * If this may be in a PV domain's IOMMU, remove it.
++     *
++     * NB that writable xenheap pages have their type set and cleared by
++     * implementation-specific code, rather than by get_page_type().  As such:
++     * - They aren't expected to have an IOMMU mapping, and
++     * - We don't necessarily expect the type count to be zero when the final
++     * put_page happens.
++     *
++     * Go ahead and attemp to call iommu_unmap() on xenheap pages anyway, just
++     * in case; but only ASSERT() that the type count is zero and remove the
++     * PGT_writable type for non-xenheap pages.
++     */
++    if ( (page->u.inuse.type_info & PGT_type_mask) == PGT_writable_page )
++    {
++        struct domain *d = page_get_owner(page);
++
++        if ( d && is_pv_domain(d) && unlikely(need_iommu(d)) )
++        {
++            int rc2 = iommu_unmap_page(d, mfn);
++
++            if ( !rc )
++                rc = rc2;
++        }
++
++        if ( likely(!is_xen_heap_page(page)) )
++        {
++            ASSERT((page->u.inuse.type_info &
++                    (PGT_type_mask | PGT_count_mask)) == PGT_writable_page);
++            /*
++             * Clear the type to record the fact that all writable mappings
++             * have been removed.  But if either operation failed, leave
++             * type_info alone.
++             */
++            if ( likely(!rc) )
++                page->u.inuse.type_info &= ~(PGT_type_mask | PGT_count_mask);
++        }
++    }
++
++    return rc;
+ }
+ 
+ void put_page(struct page_info *page)
+@@ -2303,7 +2379,7 @@ void put_page(struct page_info *page)
+ 
+     if ( unlikely((nx & PGC_count_mask) == 0) )
+     {
+-        if ( cleanup_page_cacheattr(page) == 0 )
++        if ( !cleanup_page_mappings(page) )
+             free_domheap_page(page);
+         else
+             gdprintk(XENLOG_WARNING,
+@@ -4020,9 +4096,10 @@ int steal_page(
+      * NB this is safe even if the page ends up being given back to
+      * the domain, because the count is zero: subsequent mappings will
+      * cause the cache attributes to be re-instated inside
+-     * get_page_from_l1e().
++     * get_page_from_l1e(), or the page to be added back to the IOMMU
++     * upon the type changing to PGT_writeable, as appropriate.
+      */
+-    if ( (rc = cleanup_page_cacheattr(page)) )
++    if ( (rc = cleanup_page_mappings(page)) )
+     {
+         /*
+          * Couldn't fixup Xen's mappings; put things the way we found
+diff --git a/xen/arch/x86/mm/p2m.c b/xen/arch/x86/mm/p2m.c
+index c53cab44d9..2b62bc61dd 100644
+--- xen/arch/x86/mm/p2m.c.orig
++++ xen/arch/x86/mm/p2m.c
+@@ -708,23 +708,9 @@ p2m_remove_page(struct p2m_domain *p2m, unsigned long gfn_l, unsigned long mfn,
+     p2m_type_t t;
+     p2m_access_t a;
+ 
++    /* IOMMU for PV guests is handled in get_page_type() and put_page(). */
+     if ( !paging_mode_translate(p2m->domain) )
+-    {
+-        int rc = 0;
+-
+-        if ( need_iommu(p2m->domain) )
+-        {
+-            for ( i = 0; i < (1 << page_order); i++ )
+-            {
+-                int ret = iommu_unmap_page(p2m->domain, mfn + i);
+-
+-                if ( !rc )
+-                    rc = ret;
+-            }
+-        }
+-
+-        return rc;
+-    }
++        return 0;
+ 
+     ASSERT(gfn_locked_by_me(p2m, gfn));
+     P2M_DEBUG("removing gfn=%#lx mfn=%#lx\n", gfn_l, mfn);
+@@ -769,26 +755,33 @@ guest_physmap_add_entry(struct domain *d, gfn_t gfn, mfn_t mfn,
+     int pod_count = 0;
+     int rc = 0;
+ 
++    /* IOMMU for PV guests is handled in get_page_type() and put_page(). */
+     if ( !paging_mode_translate(d) )
+     {
+-        if ( need_iommu(d) && t == p2m_ram_rw )
+-        {
+-            for ( i = 0; i < (1 << page_order); i++ )
+-            {
+-                rc = iommu_map_page(d, mfn_x(mfn_add(mfn, i)),
+-                                    mfn_x(mfn_add(mfn, i)),
+-                                    IOMMUF_readable|IOMMUF_writable);
+-                if ( rc != 0 )
+-                {
+-                    while ( i-- > 0 )
+-                        /* If statement to satisfy __must_check. */
+-                        if ( iommu_unmap_page(d, mfn_x(mfn_add(mfn, i))) )
+-                            continue;
++        struct page_info *page = mfn_to_page(mfn);
+ 
+-                    return rc;
+-                }
+-            }
++        /*
++         * Our interface for PV guests wrt IOMMU entries hasn't been very
++         * clear; but historically, pages have started out with IOMMU mappings,
++         * and only lose them when changed to a different page type.
++         *
++         * Retain this property by grabbing a writable type ref and then
++         * dropping it immediately.  The result will be pages that have a
++         * writable type (and an IOMMU entry), but a count of 0 (such that
++         * any guest-requested type changes succeed and remove the IOMMU
++         * entry).
++         */
++        if ( !need_iommu(d) || t != p2m_ram_rw )
++            return 0;
++
++        for ( i = 0; i < (1UL << page_order); ++i, ++page )
++        {
++            if ( get_page_and_type(page, d, PGT_writable_page) )
++                put_page_and_type(page);
++            else
++                return -EINVAL;
+         }
++
+         return 0;
+     }
+ 
+-- 
+2.20.1
+
