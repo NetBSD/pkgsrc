@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.117 2019/01/15 22:09:36 adam Exp $
+$NetBSD: distinfo,v 1.118 2019/03/07 10:39:52 adam Exp $
 
-SHA1 (wireshark-2.6.6.tar.xz) = d3d2f45a85e6f43a69c745b5c733e70dbc8cc535
-RMD160 (wireshark-2.6.6.tar.xz) = 5c5750e277e647a58916229f19d883a99e31046a
-SHA512 (wireshark-2.6.6.tar.xz) = b781c3b34dc76a3d8e60dc2b9b4e46a11994440b8df7b56134521ea9a77b27b0719a600db60d7f3d65f15972a5db2a7e85a8bf60d7217fce498fb5668de8fe56
-Size (wireshark-2.6.6.tar.xz) = 28407404 bytes
+SHA1 (wireshark-2.6.7.tar.xz) = 6d601a140b369618e5ac3acab736a1b8de8d5432
+RMD160 (wireshark-2.6.7.tar.xz) = 4d27f7d67a9b8d11270c6fcf135eb5ad7648d462
+SHA512 (wireshark-2.6.7.tar.xz) = bd0f87debd8bd8947f386aaec9fc843148e3cdfbffc28ba499526c4053732becea606061deae6799da0cf52458fba840ba0ff8e4a034a671fa876b8a0ff25677
+Size (wireshark-2.6.7.tar.xz) = 28420060 bytes
