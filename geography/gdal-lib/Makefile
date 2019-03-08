@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.108 2018/12/13 19:51:34 adam Exp $
+# $NetBSD: Makefile,v 1.109 2019/03/08 20:23:23 gdt Exp $
 
-PKGREVISION=	8
+PKGREVISION=	9
 .include "../../geography/gdal-lib/Makefile.common"
 PKGNAME=	${DISTNAME:S/gdal/gdal-lib/}
 
@@ -16,6 +16,8 @@ LICENSE=	mit
 # Therefore this package needs revbumping on every geos update.
 
 CONFIGURE_ARGS+=	--without-python
+
+CONFIGURE_ARGS+=	--with-static-proj4
 
 MAKE_FILE=		GNUmakefile
 
