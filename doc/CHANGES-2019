@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1165 2019/03/08 08:44:02 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1166 2019/03/08 11:35:12 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1917,3 +1917,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/fasttracker2 to 2.139 [fox 2019-03-08]
 	Updated graphics/tkpiechart to 5.4nb2 [wiz 2019-03-08]
 	Removed devel/stooop successor devel/tcllib [wiz 2019-03-08]
+	Updated devel/py-meson to 0.49.2nb2 [prlw1 2019-03-08]
