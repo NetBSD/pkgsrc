@@ -1,4 +1,4 @@
-$NetBSD: patch-mesonbuild_compilers_compilers.py,v 1.4 2019/03/07 13:48:17 prlw1 Exp $
+$NetBSD: patch-mesonbuild_compilers_compilers.py,v 1.5 2019/03/08 11:34:49 prlw1 Exp $
 
 Support SunOS-specific GCC behaviour.
 Limit GNU ld options correctly.
@@ -48,6 +48,15 @@ Limit GNU ld options correctly.
      def is_windows_compiler(self):
          return self.name in ('GCC_MINGW', 'GCC_CYGWIN', 'CLANG_MINGW', 'ICC_WIN', 'ARM_WIN', 'CCRX_WIN')
  
+@@ -1330,7 +1343,7 @@ def get_macos_dylib_install_name(prefix,
+     return '@rpath/' + install_name
+ 
+ def get_gcc_soname_args(compiler_type, prefix, shlib_name, suffix, soversion, darwin_versions, is_shared_module):
+-    if compiler_type.is_standard_compiler:
++    if compiler_type.is_standard_compiler or compiler_type.is_sunos_compiler:
+         sostr = '' if soversion is None else '.' + soversion
+         return ['-Wl,-soname,%s%s.%s%s' % (prefix, shlib_name, suffix, sostr)]
+     elif compiler_type.is_windows_compiler:
 @@ -1359,6 +1372,7 @@ def get_compiler_uses_gnuld(c):
          CompilerType.GCC_STANDARD,
          CompilerType.GCC_MINGW,
