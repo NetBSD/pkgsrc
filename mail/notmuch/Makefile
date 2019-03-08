@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2019/02/24 10:42:15 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2019/03/08 18:27:31 ryoon Exp $
 
 DISTNAME=	notmuch-0.28.2
 CATEGORIES=	mail
@@ -17,6 +17,8 @@ USE_TOOLS+=	bash gmake makeinfo pkg-config
 MAKE_FLAGS+=	PYTHON=${PYTHONBIN}
 INFO_FILES=	yes
 #TEST_TARGET=	check
+
+REPLACE_BASH+=	emacs/notmuch-emacs-mua
 
 .include "options.mk"
 
