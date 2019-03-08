@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.12 2018/12/01 11:38:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2019/03/08 18:27:31 ryoon Exp $
 bin/notmuch
+${PLIST.emacs}bin/notmuch-emacs-mua
 include/notmuch.h
 info/notmuch-address.info
 info/notmuch-compact.info
@@ -46,8 +47,14 @@ ${PLIST.emacs}share/emacs/site-lisp/coolj.el
 ${PLIST.emacs}share/emacs/site-lisp/coolj.elc
 ${PLIST.emacs}share/emacs/site-lisp/notmuch-address.el
 ${PLIST.emacs}share/emacs/site-lisp/notmuch-address.elc
+${PLIST.emacs}share/emacs/site-lisp/notmuch-company.el
+${PLIST.emacs}share/emacs/site-lisp/notmuch-company.elc
+${PLIST.emacs}share/emacs/site-lisp/notmuch-compat.el
+${PLIST.emacs}share/emacs/site-lisp/notmuch-compat.elc
 ${PLIST.emacs}share/emacs/site-lisp/notmuch-crypto.el
 ${PLIST.emacs}share/emacs/site-lisp/notmuch-crypto.elc
+${PLIST.emacs}share/emacs/site-lisp/notmuch-draft.el
+${PLIST.emacs}share/emacs/site-lisp/notmuch-draft.elc
 ${PLIST.emacs}share/emacs/site-lisp/notmuch-hello.el
 ${PLIST.emacs}share/emacs/site-lisp/notmuch-hello.elc
 ${PLIST.emacs}share/emacs/site-lisp/notmuch-jump.el
@@ -79,5 +86,7 @@ ${PLIST.emacs}share/emacs/site-lisp/notmuch-wash.el
 ${PLIST.emacs}share/emacs/site-lisp/notmuch-wash.elc
 ${PLIST.emacs}share/emacs/site-lisp/notmuch.el
 ${PLIST.emacs}share/emacs/site-lisp/notmuch.elc
+${PLIST.emacs}share/applications/mimeinfo.cache
+${PLIST.emacs}share/applications/notmuch-emacs-mua.desktop
 share/zsh/functions/Completion/Unix/_notmuch
 share/zsh/functions/Completion/Unix/_email-notmuch
