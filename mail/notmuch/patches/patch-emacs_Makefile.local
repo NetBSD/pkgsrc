@@ -1,0 +1,15 @@
+$NetBSD: patch-emacs_Makefile.local,v 1.1 2019/03/08 18:27:31 ryoon Exp $
+
+* Do not replace bash with buildlinked one. This is pkgsrc-specific.
+
+--- emacs/Makefile.local.orig	2019-02-17 11:32:59.000000000 +0000
++++ emacs/Makefile.local
+@@ -111,7 +111,7 @@ endif
+ 	install -m0644 $(emacs_images) "$(DESTDIR)$(emacsetcdir)"
+ 	mkdir -p "$(DESTDIR)$(prefix)/bin/"
+ ifeq ($(HAVE_BASH),1)
+-	sed "1s|^#!.*|#! $(BASH_ABSOLUTE)|" < $(emacs_mua) > $(DESTDIR)$(prefix)/bin/notmuch-emacs-mua
++	${BSD_INSTALL_SCRIPT} $(emacs_mua) $(DESTDIR)$(prefix)/bin/notmuch-emacs-mua
+ 	chmod 755 $(DESTDIR)$(prefix)/bin/notmuch-emacs-mua
+ endif
+ ifeq ($(WITH_DESKTOP),1)
