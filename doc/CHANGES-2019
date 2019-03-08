@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1164 2019/03/08 08:42:18 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1165 2019/03/08 08:44:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1916,3 +1916,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/xf86-video-ati to 19.0.0 [wiz 2019-03-07]
 	Updated audio/fasttracker2 to 2.139 [fox 2019-03-08]
 	Updated graphics/tkpiechart to 5.4nb2 [wiz 2019-03-08]
+	Removed devel/stooop successor devel/tcllib [wiz 2019-03-08]
