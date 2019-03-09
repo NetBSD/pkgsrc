@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.56 2019/03/09 09:29:30 bsiegert Exp $
+# $NetBSD: version.mk,v 1.57 2019/03/09 10:00:44 bsiegert Exp $
 
 CTF_SUPPORTED=		no
 SSP_SUPPORTED=		no
@@ -17,7 +17,7 @@ GO_VERSION=	${GO110_VERSION}
 # 1.9 is the last Go version to support NetBSD 6
 GO_VERSION_DEFAULT?=	19
 .else
-GO_VERSION_DEFAULT?=	111
+GO_VERSION_DEFAULT?=	112
 .endif
 
 .if !empty(GO_VERSION_DEFAULT)
