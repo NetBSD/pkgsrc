@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1183 2019/03/09 19:34:01 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.1184 2019/03/09 19:38:57 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1956,3 +1956,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated geography/gdal-lib to 2.4.0 [gdt 2019-03-09]
 	Updated geography/py-gdal to 2.4.0 [gdt 2019-03-09]
 	Updated x11/xfce4-desktop to 4.13.3 [gutteridge 2019-03-09]
+	Updated misc/xfce4-calculator-plugin to 0.7.0 [gutteridge 2019-03-09]
