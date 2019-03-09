@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1181 2019/03/09 17:39:09 gdt Exp $
+$NetBSD: CHANGES-2019,v 1.1182 2019/03/09 17:39:16 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1954,3 +1954,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/ruby-gnome2-vte to 3.3.4 [tsutsui 2019-03-09]
 	Updated math/eigen3 to 3.3.7 [wen 2019-03-09]
 	Updated geography/gdal-lib to 2.4.0 [gdt 2019-03-09]
+	Updated geography/py-gdal to 2.4.0 [gdt 2019-03-09]
