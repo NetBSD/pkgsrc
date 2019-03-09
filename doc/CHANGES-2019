@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1176 2019/03/09 11:20:25 bsiegert Exp $
+$NetBSD: CHANGES-2019,v 1.1177 2019/03/09 13:13:18 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1928,3 +1928,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added lang/go112 version 1.12 [bsiegert 2019-03-09]
 	Updated emulators/haxm to 1.20190301.7cb307c4e7ff066b51a503c76f72d7dfefc78760 [kamil 2019-03-09]
 	Updated devel/go-sys to 0.0.20190308 [bsiegert 2019-03-09]
+	Updated devel/ruby-pkg-config to 1.3.6 [tsutsui 2019-03-09]
