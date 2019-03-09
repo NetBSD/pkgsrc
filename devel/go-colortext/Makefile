@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2019/01/24 10:00:39 bsiegert Exp $
+# $NetBSD: Makefile,v 1.5 2019/03/09 10:05:02 bsiegert Exp $
 
 DISTNAME=	go-colortext-1.0.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=daviddengcn/}
 
