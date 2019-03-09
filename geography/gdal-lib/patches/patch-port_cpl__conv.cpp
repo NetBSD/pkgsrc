@@ -1,6 +1,8 @@
-$NetBSD: patch-port_cpl__conv.cpp,v 1.1 2018/02/19 12:05:17 ryoon Exp $
+$NetBSD: patch-port_cpl__conv.cpp,v 1.2 2019/03/09 01:54:59 gdt Exp $
 
-* Fix build under NetBSD
+Fix build under NetBSD
+\todo Explain what is wrong.
+\todo File ticket and get this fixed upstream.
 
 --- port/cpl_conv.cpp.orig	2017-11-20 10:45:32.000000000 +0000
 +++ port/cpl_conv.cpp
