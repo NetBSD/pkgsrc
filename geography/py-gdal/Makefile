@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2018/12/13 19:51:58 adam Exp $
+# $NetBSD: Makefile,v 1.10 2019/03/09 01:54:59 gdt Exp $
 
-PKGREVISION=	5
+#PKGREVISION=	0
 .include "../../geography/gdal-lib/Makefile.common"
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 
@@ -19,7 +19,7 @@ INSTALLATION_DIRS=	bin
 
 .include "../../mk/bsd.prefs.mk"
 
-EGG_NAME?=		GDAL-2.2.4
+EGG_NAME?=		GDAL-${VERSION}
 EGG_INFODIR?=		${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
 PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
 PLIST_SUBST+=		EGG_NAME=${EGG_NAME}-py${PYVERSSUFFIX}
