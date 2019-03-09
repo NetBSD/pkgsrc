@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1185 2019/03/09 19:45:26 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.1186 2019/03/09 23:24:59 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1958,3 +1958,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/xfce4-desktop to 4.13.3 [gutteridge 2019-03-09]
 	Updated misc/xfce4-calculator-plugin to 0.7.0 [gutteridge 2019-03-09]
 	Updated net/filezilla to 3.41.1 [gutteridge 2019-03-09]
+	Updated x11/xfce4-screenshooter to 1.9.4 [gutteridge 2019-03-09]
