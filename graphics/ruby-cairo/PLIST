@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/09/08 15:56:25 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/03/09 13:50:22 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/cairo.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
@@ -71,6 +71,7 @@ ${GEM_LIBDIR}/samples/text2.rb
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/run-test.rb
 ${GEM_LIBDIR}/test/test_color.rb
+${GEM_LIBDIR}/test/test_colors.rb
 ${GEM_LIBDIR}/test/test_constants.rb
 ${GEM_LIBDIR}/test/test_context.rb
 ${GEM_LIBDIR}/test/test_exception.rb
