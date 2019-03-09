@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1174 2019/03/09 09:30:56 bsiegert Exp $
+$NetBSD: CHANGES-2019,v 1.1175 2019/03/09 10:57:48 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1926,3 +1926,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated geography/gdal-lib to 2.3.3 [gdt 2019-03-09]
 	Updated geography/py-gdal to 2.3.3 [gdt 2019-03-09]
 	Added lang/go112 version 1.12 [bsiegert 2019-03-09]
+	Updated emulators/haxm to 1.20190301.7cb307c4e7ff066b51a503c76f72d7dfefc78760 [kamil 2019-03-09]
