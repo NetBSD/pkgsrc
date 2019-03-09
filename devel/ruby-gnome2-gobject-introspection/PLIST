@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/06/09 03:36:07 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/03/09 14:08:43 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/gobject_introspection.${RUBY_DLEXT}
@@ -55,8 +55,10 @@ ${GEM_LIBDIR}/lib/gobject-introspection/collection-reader.rb
 ${GEM_LIBDIR}/lib/gobject-introspection/interface-info.rb
 ${GEM_LIBDIR}/lib/gobject-introspection/loader.rb
 ${GEM_LIBDIR}/lib/gobject-introspection/object-info.rb
+${GEM_LIBDIR}/lib/gobject-introspection/registered-type-info.rb
 ${GEM_LIBDIR}/lib/gobject-introspection/repository.rb
 ${GEM_LIBDIR}/lib/gobject-introspection/struct-info.rb
+${GEM_LIBDIR}/lib/gobject-introspection/type-info.rb
 ${GEM_LIBDIR}/lib/gobject-introspection/union-info.rb
 ${GEM_LIBDIR}/lib/gobject-introspection/version.rb
 ${GEM_LIBDIR}/lib/gobject_introspection.${RUBY_DLEXT}
