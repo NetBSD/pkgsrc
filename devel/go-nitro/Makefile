@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2019/01/24 10:00:37 bsiegert Exp $
+# $NetBSD: Makefile,v 1.10 2019/03/09 10:05:06 bsiegert Exp $
 
 DISTNAME=	nitro-0.0.20131003
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 MASTER_SITES=	${MASTER_SITE_GITHUB:=spf13/}
 CATEGORIES=	devel
 GITHUB_TAG=	24d7ef30a12da0bdc5e2eb370a79c659ddccf0e8
