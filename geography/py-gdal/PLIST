@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/02/19 12:09:18 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/03/09 17:39:01 gdt Exp $
 bin/epsg_tr.py
 bin/esri2wkt.py
 bin/gcps2vec.py
@@ -35,8 +35,6 @@ ${PYSITELIB}/gdalconst.py
 ${PYSITELIB}/gdalconst.pyc
 ${PYSITELIB}/gdalnumeric.py
 ${PYSITELIB}/gdalnumeric.pyc
-${PYSITELIB}/gnm.py
-${PYSITELIB}/gnm.pyc
 ${PYSITELIB}/ogr.py
 ${PYSITELIB}/ogr.pyc
 ${PYSITELIB}/osgeo/__init__.py
