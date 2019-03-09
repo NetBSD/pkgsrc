@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1182 2019/03/09 17:39:16 gdt Exp $
+$NetBSD: CHANGES-2019,v 1.1183 2019/03/09 19:34:01 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1955,3 +1955,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated math/eigen3 to 3.3.7 [wen 2019-03-09]
 	Updated geography/gdal-lib to 2.4.0 [gdt 2019-03-09]
 	Updated geography/py-gdal to 2.4.0 [gdt 2019-03-09]
+	Updated x11/xfce4-desktop to 4.13.3 [gutteridge 2019-03-09]
