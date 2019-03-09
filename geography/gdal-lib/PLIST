@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.15 2019/03/09 01:54:59 gdt Exp $
+@comment $NetBSD: PLIST,v 1.16 2019/03/09 17:39:01 gdt Exp $
+@comment $NetBSD: PLIST,v 1.16 2019/03/09 17:39:01 gdt Exp $
 bin/gdal-config
 bin/gdal_contour
 bin/gdal_grid
@@ -25,6 +26,7 @@ bin/ogrlineref
 bin/ogrtindex
 bin/testepsg
 include/cpl_atomic_ops.h
+include/cpl_auto_close.h
 include/cpl_config.h
 include/cpl_config_extras.h
 include/cpl_conv.h
@@ -94,12 +96,14 @@ share/gdal/GDALLogoBW.svg
 share/gdal/GDALLogoColor.svg
 share/gdal/GDALLogoGS.svg
 share/gdal/LICENSE.TXT
+share/gdal/bag_template.xml
 share/gdal/compdcs.csv
 share/gdal/coordinate_axis.csv
 share/gdal/cubewerx_extra.wkt
 share/gdal/datum_shift.csv
 share/gdal/default.rsc
 share/gdal/ecw_cs.wkt
+share/gdal/eedaconf.json
 share/gdal/ellipsoid.csv
 share/gdal/epsg.wkt
 share/gdal/esri_StatePlane_extra.wkt
