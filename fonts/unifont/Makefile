@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2018/12/09 21:50:36 leot Exp $
+# $NetBSD: Makefile,v 1.13 2019/03/10 10:51:15 leot Exp $
 
-DISTNAME=	unifont-11.0.03
+DISTNAME=	unifont-12.0.01
 CATEGORIES=	fonts
 MASTER_SITES=	http://unifoundry.com/pub/unifont/${DISTNAME}/
 
@@ -33,6 +33,7 @@ REPLACE_PERL+=	src/unifont-viewer
 REPLACE_PERL+=	src/unifontchojung
 REPLACE_PERL+=	src/unifontksx
 REPLACE_PERL+=	src/unihex2png
+REPLACE_PERL+=	src/unihexrotate
 REPLACE_PERL+=	src/unipng2hex
 
 .include "../../mk/bsd.pkg.mk"
