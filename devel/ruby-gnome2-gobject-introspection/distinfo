@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2019/03/09 14:08:43 tsutsui Exp $
+$NetBSD: distinfo,v 1.21 2019/03/10 01:12:00 tsutsui Exp $
 
-SHA1 (gobject-introspection-3.3.4.gem) = 85a905fc1b5b16dbce4fe5470c71ec482c64f7be
-RMD160 (gobject-introspection-3.3.4.gem) = 35adfaf4080405415ac42584882abdc996667ca2
-SHA512 (gobject-introspection-3.3.4.gem) = a08c95316432ec34bfaa74508f9709903db3f22d7efafcbcb12019f739d8ce5ff10516e8a061529c145a5f4b757c55a6effa2359192d93345cb0afc94988df96
-Size (gobject-introspection-3.3.4.gem) = 66560 bytes
+SHA1 (gobject-introspection-3.3.5.gem) = 531d96f7be7a58904b98a6c4cb3808c901ce0a67
+RMD160 (gobject-introspection-3.3.5.gem) = 426dea4b93bb50bf2a6af00d401a71ab2c98e4a4
+SHA512 (gobject-introspection-3.3.5.gem) = 8930592d6f96af5926ae5ef71b40400b61de1759ae0981374a32f52db74e09080feaf4a1e2b701b43d3a35c44a70fbf52dda0056e5b68819411a1c8892bab169
+Size (gobject-introspection-3.3.5.gem) = 66560 bytes
