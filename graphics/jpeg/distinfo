@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2018/04/07 06:27:13 wiz Exp $
+$NetBSD: distinfo,v 1.24 2019/03/10 11:22:43 spz Exp $
 
 SHA1 (jpeg-9c-v2/jpegsrc.v9c.tar.gz) = 2ce111c8c0ac828a44b13ad28c265e954a342d07
 RMD160 (jpeg-9c-v2/jpegsrc.v9c.tar.gz) = c181cc66d03d96ffcca85724938551bb089fd519
@@ -8,3 +8,4 @@ SHA1 (patch-af) = 925604706574009aacd452dab2d736039b0654e9
 SHA1 (patch-ag) = 46164c00386d1968356f1b61d144bc9168410654
 SHA1 (patch-jmorecfg.h) = c00f81ba94e2ad6b55ca9892553eedbe4eca3ad1
 SHA1 (patch-jpeglib.h) = 635453c5a2b1223ef5af729edcbfcfa3ed78a8b5
+SHA1 (patch-rdtarga.c) = eaec399d67ffb5d33b32131d01a052132bb5bae2
