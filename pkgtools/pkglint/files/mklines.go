@@ -115,7 +115,6 @@ func (mklines *MkLinesImpl) checkAll() {
 		"pre-install": true, "do-install": true, "post-install": true,
 		"pre-package": true, "do-package": true, "post-package": true,
 		"pre-clean": true, "do-clean": true, "post-clean": true}
-	G.Assertf(len(allowedTargets) == 33, "Error in allowedTargets initialization")
 
 	mklines.lines.CheckRcsID(0, `#[\t ]+`, "# ")
 
@@ -378,7 +377,13 @@ func (mklines *MkLinesImpl) collectDocumentedVariables() {
 
 			parser := NewMkParser(nil, words[1], false)
 			varname := parser.Varname()
-			if hasSuffix(varname, ".") && parser.lexer.SkipRegexp(G.res.Compile(`^<\w+>`)) {
+			if len(varname) < 3 {
+				break
+			}
+			if hasSuffix(varname, ".") {
+				if !parser.lexer.SkipRegexp(G.res.Compile(`^<\w+>`)) {
+					break
+				}
 				varname += "*"
 			}
 			parser.lexer.SkipByte(':')
@@ -389,7 +394,7 @@ func (mklines *MkLinesImpl) collectDocumentedVariables() {
 				scope.Use(varcanon, mkline)
 			}
 
-			if 1 < len(words) && words[1] == "Copyright" {
+			if words[1] == "Copyright" {
 				relevant = false
 			}
 
@@ -399,37 +404,6 @@ func (mklines *MkLinesImpl) collectDocumentedVariables() {
 	}
 
 	finish()
-}
-
-func (mklines *MkLinesImpl) CheckRedundantAssignments() {
-	scope := NewRedundantScope()
-
-	isRelevant := func(old, new MkLine) bool {
-		if new.Op() == opAssignEval {
-			return false
-		}
-		return true
-	}
-
-	scope.OnRedundant = func(old, new MkLine) {
-		if isRelevant(old, new) && old.Value() == new.Value() {
-			new.Notef("Definition of %s is redundant because of %s.", old.Varname(), new.RefTo(old))
-		}
-	}
-
-	scope.OnOverwrite = func(old, new MkLine) {
-		if isRelevant(old, new) {
-			old.Warnf("Variable %s is overwritten in %s.", new.Varname(), old.RefTo(new))
-			G.Explain(
-				"The variable definition in this line does not have an effect since",
-				"it is overwritten elsewhere.",
-				"This typically happens because of a typo (writing = instead of +=)",
-				"or because the line that overwrites",
-				"is in another file that is used by several packages.")
-		}
-	}
-
-	mklines.ForEach(scope.Handle)
 }
 
 // CheckForUsedComment checks that this file (a Makefile.common) has the given
@@ -550,8 +524,8 @@ func (va *VaralignBlock) processVarassign(mkline MkLine) {
 	if mkline.IsMultiline() {
 		// Parsing the continuation marker as variable value is cheating but works well.
 		text := strings.TrimSuffix(mkline.raw[0].orignl, "\n")
-		m, _, _, _, _, _, value, _, _ := MatchVarassign(text)
-		continuation = m && value == "\\"
+		m, a := MatchVarassign(text)
+		continuation = m && a.value == "\\"
 	}
 
 	valueAlign := mkline.ValueAlign()

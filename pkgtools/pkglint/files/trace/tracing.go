@@ -131,6 +131,8 @@ func (t *Tracer) traceCall(args ...interface{}) func() {
 }
 
 // Result marks an argument as a result and is only logged when the function returns.
+//
+// Usage: defer trace.Call(arg1, arg2, tracing.Result(&result1), tracing.Result(&result2))()
 func (t *Tracer) Result(rv interface{}) Result {
 	if reflect.ValueOf(rv).Kind() != reflect.Ptr {
 		panic(fmt.Sprintf("Result must be called with a pointer to the result, not %#v.", rv))

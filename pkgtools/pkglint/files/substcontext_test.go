@@ -31,7 +31,7 @@ func (s *Suite) Test_SubstContext__incomplete(c *check.C) {
 
 	t.CheckOutputLines(
 		"NOTE: Makefile:13: The substitution command \"s,@PREFIX@,${PREFIX},g\" "+
-			"can be replaced with \"SUBST_VARS.interp+= PREFIX\".",
+			"can be replaced with \"SUBST_VARS.interp= PREFIX\".",
 		"WARN: Makefile:14: Incomplete SUBST block: SUBST_STAGE.interp missing.")
 }
 
@@ -56,7 +56,7 @@ func (s *Suite) Test_SubstContext__complete(c *check.C) {
 
 	t.CheckOutputLines(
 		"NOTE: Makefile:13: The substitution command \"s,@PREFIX@,${PREFIX},g\" " +
-			"can be replaced with \"SUBST_VARS.p+= PREFIX\".")
+			"can be replaced with \"SUBST_VARS.p= PREFIX\".")
 }
 
 func (s *Suite) Test_SubstContext__OPSYSVARS(c *check.C) {
@@ -78,7 +78,7 @@ func (s *Suite) Test_SubstContext__OPSYSVARS(c *check.C) {
 
 	t.CheckOutputLines(
 		"NOTE: Makefile:14: The substitution command \"s,@PREFIX@,${PREFIX},g\" " +
-			"can be replaced with \"SUBST_VARS.prefix+= PREFIX\".")
+			"can be replaced with \"SUBST_VARS.prefix= PREFIX\".")
 }
 
 func (s *Suite) Test_SubstContext__no_class(c *check.C) {
@@ -390,7 +390,7 @@ func (s *Suite) Test_SubstContext_suggestSubstVars(c *check.C) {
 	t.CheckOutputLines(
 		"WARN: subst.mk:6: Please use ${SH:Q} instead of ${SH}.",
 		"NOTE: subst.mk:6: The substitution command \"s,@SH@,${SH},g\" "+
-			"can be replaced with \"SUBST_VARS.test+= SH\".",
+			"can be replaced with \"SUBST_VARS.test= SH\".",
 		"NOTE: subst.mk:7: The substitution command \"s,@SH@,${SH:Q},g\" "+
 			"can be replaced with \"SUBST_VARS.test+= SH\".",
 		"WARN: subst.mk:8: Please use ${SH:T:Q} instead of ${SH:T}.",
@@ -416,9 +416,9 @@ func (s *Suite) Test_SubstContext_suggestSubstVars(c *check.C) {
 
 	t.CheckOutputLines(
 		"NOTE: subst.mk:6: The substitution command \"s,@SH@,${SH},g\" "+
-			"can be replaced with \"SUBST_VARS.test+= SH\".",
+			"can be replaced with \"SUBST_VARS.test= SH\".",
 		"AUTOFIX: subst.mk:6: Replacing \"SUBST_SED.test+=\\t-e s,@SH@,${SH},g\" "+
-			"with \"SUBST_VARS.test+=\\tSH\".",
+			"with \"SUBST_VARS.test=\\tSH\".",
 		"NOTE: subst.mk:7: The substitution command \"s,@SH@,${SH:Q},g\" "+
 			"can be replaced with \"SUBST_VARS.test+= SH\".",
 		"AUTOFIX: subst.mk:7: Replacing \"SUBST_SED.test+=\\t-e s,@SH@,${SH:Q},g\" "+
@@ -439,6 +439,46 @@ func (s *Suite) Test_SubstContext_suggestSubstVars(c *check.C) {
 			"can be replaced with \"SUBST_VARS.test+= SH\".",
 		"AUTOFIX: subst.mk:12: Replacing \"SUBST_SED.test+=\\t-e s,'@SH@','${SH}',\" "+
 			"with \"SUBST_VARS.test+=\\tSH\".")
+}
+
+// If the SUBST_CLASS identifier ends with a plus, the generated code must
+// use the correct assignment operator and be nicely formatted.
+func (s *Suite) Test_SubstContext_suggestSubstVars__plus(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+	t.SetUpTool("sh", "SH", AtRunTime)
+
+	mklines := t.NewMkLines("subst.mk",
+		MkRcsID,
+		"",
+		"SUBST_CLASSES+=\t\tgtk+",
+		"SUBST_STAGE.gtk+ =\tpre-configure",
+		"SUBST_FILES.gtk+ =\tfilename",
+		"SUBST_SED.gtk+ +=\t-e s,@SH@,${SH:Q},g",
+		"SUBST_SED.gtk+ +=\t-e s,@SH@,${SH:Q},g")
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"NOTE: subst.mk:6: The substitution command \"s,@SH@,${SH:Q},g\" "+
+			"can be replaced with \"SUBST_VARS.gtk+ = SH\".",
+		"NOTE: subst.mk:7: The substitution command \"s,@SH@,${SH:Q},g\" "+
+			"can be replaced with \"SUBST_VARS.gtk+ += SH\".")
+
+	t.SetUpCommandLine("--show-autofix")
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"NOTE: subst.mk:6: The substitution command \"s,@SH@,${SH:Q},g\" "+
+			"can be replaced with \"SUBST_VARS.gtk+ = SH\".",
+		"AUTOFIX: subst.mk:6: Replacing \"SUBST_SED.gtk+ +=\\t-e s,@SH@,${SH:Q},g\" "+
+			"with \"SUBST_VARS.gtk+ =\\tSH\".",
+		"NOTE: subst.mk:7: The substitution command \"s,@SH@,${SH:Q},g\" "+
+			"can be replaced with \"SUBST_VARS.gtk+ += SH\".",
+		"AUTOFIX: subst.mk:7: Replacing \"SUBST_SED.gtk+ +=\\t-e s,@SH@,${SH:Q},g\" "+
+			"with \"SUBST_VARS.gtk+ +=\\tSH\".")
 }
 
 // simulateSubstLines only tests some of the inner workings of SubstContext.

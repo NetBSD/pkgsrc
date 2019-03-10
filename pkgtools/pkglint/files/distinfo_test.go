@@ -2,7 +2,7 @@ package pkglint
 
 import "gopkg.in/check.v1"
 
-func (s *Suite) Test_CheckLinesDistinfo(c *check.C) {
+func (s *Suite) Test_CheckLinesDistinfo__parse_errors(c *check.C) {
 	t := s.Init(c)
 
 	t.Chdir("category/package")
@@ -27,14 +27,16 @@ func (s *Suite) Test_CheckLinesDistinfo(c *check.C) {
 
 	t.CheckOutputLines(
 		"ERROR: distinfo:1: Expected \"$"+"NetBSD$\".",
-		"NOTE: distinfo:2: Empty line expected.",
-		"ERROR: distinfo:5: Expected SHA1, RMD160, SHA512, Size checksums for \"distfile.tar.gz\", got MD5, SHA1.",
-		"ERROR: distinfo:7: Expected SHA1 hash for patch-aa, got SHA1, Size.",
+		"NOTE: distinfo:1: Empty line expected before this line.",
+		"ERROR: distinfo:1: Invalid line: should be the RCS ID",
+		"ERROR: distinfo:2: Invalid line: should be empty",
 		"ERROR: distinfo:8: Invalid line: Another invalid line",
+		"ERROR: distinfo:3: Expected SHA1, RMD160, SHA512, Size checksums for \"distfile.tar.gz\", got MD5, SHA1.",
+		"ERROR: distinfo:5: Expected SHA1 hash for patch-aa, got SHA1, Size.",
 		"WARN: distinfo:9: Patch file \"patch-nonexistent\" does not exist in directory \"patches\".")
 }
 
-func (s *Suite) Test_CheckLinesDistinfo__nonexistent_distfile_called_patch(c *check.C) {
+func (s *Suite) Test_distinfoLinesChecker_checkAlgorithms__nonexistent_distfile_called_patch(c *check.C) {
 	t := s.Init(c)
 
 	t.Chdir("category/package")
@@ -51,11 +53,11 @@ func (s *Suite) Test_CheckLinesDistinfo__nonexistent_distfile_called_patch(c *ch
 	// a patch, it is a normal distfile because it has other hash algorithms
 	// than exactly SHA1.
 	t.CheckOutputLines(
-		"ERROR: distinfo:EOF: Expected SHA1, RMD160, SHA512, Size checksums " +
+		"ERROR: distinfo:3: Expected SHA1, RMD160, SHA512, Size checksums " +
 			"for \"patch-5.3.tar.gz\", got MD5, SHA1.")
 }
 
-func (s *Suite) Test_CheckLinesDistinfo__wrong_distfile_algorithms(c *check.C) {
+func (s *Suite) Test_distinfoLinesChecker_checkAlgorithms__wrong_distfile_algorithms(c *check.C) {
 	t := s.Init(c)
 
 	t.Chdir("category/package")
@@ -68,11 +70,39 @@ func (s *Suite) Test_CheckLinesDistinfo__wrong_distfile_algorithms(c *check.C) {
 	CheckLinesDistinfo(lines)
 
 	t.CheckOutputLines(
-		"ERROR: distinfo:EOF: Expected SHA1, RMD160, SHA512, Size checksums " +
+		"ERROR: distinfo:3: Expected SHA1, RMD160, SHA512, Size checksums " +
 			"for \"distfile.tar.gz\", got MD5, SHA1.")
 }
 
-func (s *Suite) Test_CheckLinesDistinfo__wrong_patch_algorithms(c *check.C) {
+// This case only happens when a distinfo file is checked on its own,
+// without any reference to a pkgsrc package. Additionally the distfile
+// must start with the patch- prefix and the algorithms must be wrong
+// for both distfile or patch.
+//
+// This test only demonstrates the edge case.
+func (s *Suite) Test_distinfoLinesChecker_checkAlgorithms__ambiguous_distfile(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("--explain")
+	t.Chdir("category/package")
+	lines := t.SetUpFileLines("distinfo",
+		RcsID,
+		"",
+		"MD5 (patch-4.2.tar.gz) = 12345678901234567890123456789012")
+
+	CheckLinesDistinfo(lines)
+
+	t.CheckOutputLines(
+		"ERROR: distinfo:3: Wrong checksum algorithms MD5 for patch-4.2.tar.gz.",
+		"",
+		"\tDistfiles that are downloaded from external sources must have the",
+		"\tchecksum algorithms SHA1, RMD160, SHA512, Size.",
+		"",
+		"\tPatch files from pkgsrc must have only the SHA1 hash.",
+		"")
+}
+
+func (s *Suite) Test_distinfoLinesChecker_checkAlgorithms__wrong_patch_algorithms(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPackage("category/package")
@@ -87,10 +117,23 @@ func (s *Suite) Test_CheckLinesDistinfo__wrong_patch_algorithms(c *check.C) {
 	G.Check(".")
 
 	t.CheckOutputLines(
+		"ERROR: distinfo:3: Expected SHA1 hash for patch-aa, got MD5, SHA1.",
 		"ERROR: distinfo:4: SHA1 hash of patches/patch-aa differs "+
 			"(distinfo has 1234567890123456789012345678901234567890, "+
-			"patch file has ebbf34b0641bcb508f17d5a27f2bf2a536d810ac).",
-		"ERROR: distinfo:EOF: Expected SHA1 hash for patch-aa, got MD5, SHA1.")
+			"patch file has ebbf34b0641bcb508f17d5a27f2bf2a536d810ac).")
+}
+
+func (s *Suite) Test_distinfoLinesChecker_parse__empty(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.SetUpFileLines("distinfo",
+		RcsID,
+		"")
+
+	CheckLinesDistinfo(lines)
+
+	t.CheckOutputLines(
+		"NOTE: ~/distinfo:2: Trailing empty lines.")
 }
 
 // When checking the complete pkgsrc tree, pkglint has all information it needs
@@ -109,7 +152,8 @@ func (s *Suite) Test_distinfoLinesChecker_checkGlobalDistfileMismatch(c *check.C
 		RcsID,
 		"",
 		"SHA512 (distfile-1.0.tar.gz) = 1234567811111111",
-		"SHA512 (distfile-1.1.tar.gz) = 1111111111111111")
+		"SHA512 (distfile-1.1.tar.gz) = 1111111111111111",
+		"SHA512 (patch-4.2.tar.gz) = 1234567812345678")
 	t.CreateFileLines("category/package2/distinfo",
 		RcsID,
 		"",
@@ -135,29 +179,104 @@ func (s *Suite) Test_distinfoLinesChecker_checkGlobalDistfileMismatch(c *check.C
 	G.Main("pkglint", "-r", "-Wall", "-Call", t.File("."))
 
 	t.CheckOutputLines(
+		"ERROR: ~/category/package1/distinfo:3: "+
+			"Expected SHA1, RMD160, SHA512, Size checksums for \"distfile-1.0.tar.gz\", got SHA512.",
 		"ERROR: ~/category/package1/distinfo:4: "+
-			"Expected SHA1, RMD160, SHA512, Size checksums for \"distfile-1.0.tar.gz\", got SHA512.",
-		"ERROR: ~/category/package1/distinfo:EOF: "+
 			"Expected SHA1, RMD160, SHA512, Size checksums for \"distfile-1.1.tar.gz\", got SHA512.",
-		"ERROR: ~/category/package2/distinfo:3: The SHA512 hash for distfile-1.0.tar.gz is 1234567822222222, "+
-			"which conflicts with 1234567811111111 in ../package1/distinfo:3.",
+		"ERROR: ~/category/package1/distinfo:5: "+
+			"Expected SHA1, RMD160, SHA512, Size checksums for \"patch-4.2.tar.gz\", got SHA512.",
+
+		"ERROR: ~/category/package2/distinfo:3: "+
+			"Expected SHA1, RMD160, SHA512, Size checksums for \"distfile-1.0.tar.gz\", got SHA512.",
+		"ERROR: ~/category/package2/distinfo:3: "+
+			"The SHA512 hash for distfile-1.0.tar.gz is 1234567822222222, "+
+			"which conflicts with 1234567811111111 in ../../category/package1/distinfo:3.",
 		"ERROR: ~/category/package2/distinfo:4: "+
-			"Expected SHA1, RMD160, SHA512, Size checksums for \"distfile-1.0.tar.gz\", got SHA512.",
-		"ERROR: ~/category/package2/distinfo:5: "+
 			"Expected SHA1, RMD160, SHA512, Size checksums for \"distfile-1.1.tar.gz\", got SHA512.",
+		"ERROR: ~/category/package2/distinfo:5: "+
+			"Expected SHA1, RMD160, SHA512, Size checksums for \"encoding-error.tar.gz\", got SHA512.",
 		"ERROR: ~/category/package2/distinfo:5: "+
 			"The SHA512 hash for encoding-error.tar.gz contains a non-hex character.",
-		"ERROR: ~/category/package2/distinfo:EOF: "+
-			"Expected SHA1, RMD160, SHA512, Size checksums for \"encoding-error.tar.gz\", got SHA512.",
+
 		"WARN: ~/licenses/gnu-gpl-v2: This license seems to be unused.",
-		"7 errors and 1 warning found.")
+		"8 errors and 1 warning found.",
+		"(Run \"pkglint -e\" to show explanations.)")
 
 	// Ensure that hex.DecodeString does not waste memory here.
 	t.Check(len(G.Hashes["SHA512:distfile-1.0.tar.gz"].hash), equals, 8)
 	t.Check(cap(G.Hashes["SHA512:distfile-1.0.tar.gz"].hash), equals, 8)
 }
 
-func (s *Suite) Test_CheckLinesDistinfo__uncommitted_patch(c *check.C) {
+func (s *Suite) Test_distinfoLinesChecker_checkAlgorithms__missing_patch_with_distfile_checksums(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.SetUpFileLines("distinfo",
+		RcsID,
+		"",
+		"SHA1 (patch-aa) = ...",
+		"RMD160 (patch-aa) = ...",
+		"SHA512 (patch-aa) = ...",
+		"Size (patch-aa) = ... bytes")
+
+	CheckLinesDistinfo(lines)
+
+	// The file name certainly looks like a pkgsrc patch, but there
+	// is no corresponding file in the file system, and there is no
+	// current package to correctly determine the PATCHDIR. Therefore
+	// pkglint doesn't know whether this is a distfile or a missing
+	// patch file and doesn't warn at all.
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_distinfoLinesChecker_checkAlgorithms__existing_patch_with_distfile_checksums(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("category/package/distinfo",
+		RcsID,
+		"",
+		"SHA1 (patch-aa) = ...",
+		"RMD160 (patch-aa) = ...",
+		"SHA512 (patch-aa) = ...",
+		"Size (patch-aa) = ... bytes")
+	t.CreateFileDummyPatch("category/package/patches/patch-aa")
+
+	G.Check(t.File("category/package"))
+
+	// Even though the checksums in the distinfo file look as if they
+	// refer to a distfile, there is a patch file in the file system
+	// that matches the distinfo lines. When checking a pkgsrc package
+	// (as opposed to checking a distinfo file on its own), this means
+	// that the distinfo lines clearly refer to that patch file and not
+	// to a distfile.
+	t.CheckOutputLines(
+		"ERROR: ~/category/package/distinfo:3: "+
+			"Expected SHA1 hash for patch-aa, got SHA1, RMD160, SHA512, Size.",
+		"ERROR: ~/category/package/distinfo:3: "+
+			"SHA1 hash of patches/patch-aa differs (distinfo has ..., "+
+			"patch file has ebbf34b0641bcb508f17d5a27f2bf2a536d810ac).")
+}
+
+func (s *Suite) Test_distinfoLinesChecker_checkAlgorithms__missing_patch_with_wrong_algorithms(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.SetUpFileLines("category/package/distinfo",
+		RcsID,
+		"",
+		"RMD160 (patch-aa) = ...")
+
+	G.Check(t.File("category/package"))
+
+	// Patch files usually have the SHA1 hash or none at all if they are fresh.
+	// In all other cases pkglint assumes that the file is a distfile,
+	// therefore it requires the usual distfile checksum algorithms here.
+	t.CheckOutputLines(
+		"ERROR: ~/category/package/distinfo:3: " +
+			"Expected SHA1, RMD160, SHA512, Size checksums for \"patch-aa\", got RMD160.")
+}
+
+func (s *Suite) Test_distinfoLinesChecker_checkUncommittedPatch__bad(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPackage("category/package")
@@ -176,7 +295,27 @@ func (s *Suite) Test_CheckLinesDistinfo__uncommitted_patch(c *check.C) {
 		"WARN: distinfo:3: patches/patch-aa is registered in distinfo but not added to CVS.")
 }
 
-func (s *Suite) Test_CheckLinesDistinfo__unrecorded_patches(c *check.C) {
+func (s *Suite) Test_distinfoLinesChecker_checkUncommittedPatch__good(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.Chdir("category/package")
+	t.CreateFileDummyPatch("patches/patch-aa")
+	t.CreateFileLines("CVS/Entries",
+		"/distinfo/...")
+	t.CreateFileLines("patches/CVS/Entries",
+		"/patch-aa/...")
+	t.SetUpFileLines("distinfo",
+		RcsID,
+		"",
+		"SHA1 (patch-aa) = ebbf34b0641bcb508f17d5a27f2bf2a536d810ac")
+
+	G.checkdirPackage(".")
+
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_distinfoLinesChecker_checkUnrecordedPatches(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPackage("category/package")
@@ -202,7 +341,7 @@ func (s *Suite) Test_CheckLinesDistinfo__unrecorded_patches(c *check.C) {
 // The distinfo file and the patches are usually placed in the package
 // directory. By defining PATCHDIR or DISTINFO_FILE, a package can define
 // that they are somewhere else in pkgsrc.
-func (s *Suite) Test_CheckLinesDistinfo__relative_path_in_distinfo(c *check.C) {
+func (s *Suite) Test_distinfoLinesChecker_checkPatchSha1__relative_path_in_distinfo(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPackage("category/package",
@@ -340,26 +479,6 @@ func (s *Suite) Test_CheckLinesDistinfo__missing_php_patches(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_distinfoLinesChecker_checkUncommittedPatch(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpPackage("category/package")
-	t.Chdir("category/package")
-	t.CreateFileDummyPatch("patches/patch-aa")
-	t.CreateFileLines("CVS/Entries",
-		"/distinfo/...")
-	t.CreateFileLines("patches/CVS/Entries",
-		"/patch-aa/...")
-	t.SetUpFileLines("distinfo",
-		RcsID,
-		"",
-		"SHA1 (patch-aa) = ebbf34b0641bcb508f17d5a27f2bf2a536d810ac")
-
-	G.checkdirPackage(".")
-
-	t.CheckOutputEmpty()
-}
-
 func (s *Suite) Test_distinfoLinesChecker_checkPatchSha1(c *check.C) {
 	t := s.Init(c)
 
@@ -371,4 +490,240 @@ func (s *Suite) Test_distinfoLinesChecker_checkPatchSha1(c *check.C) {
 
 	t.CheckOutputLines(
 		"ERROR: ~/category/package/distinfo:5: Patch patch-nonexistent does not exist.")
+}
+
+// When there is at least one correct hash for a distfile, running
+// pkglint --autofix adds the missing hashes, provided the distfile has been
+// downloaded to pkgsrc/distfiles, which is the standard distfiles location.
+func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__add_missing_hashes(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("-Wall", "--explain")
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("category/package/distinfo",
+		RcsID,
+		"",
+		"RMD160 (package-1.0.txt) = 1a88147a0344137404c63f3b695366eab869a98a",
+		"Size (package-1.0.txt) = 13 bytes",
+		"CRC32 (package-1.0.txt) = asdf")
+	t.CreateFileLines("distfiles/package-1.0.txt",
+		"hello, world")
+	G.Pkgsrc.LoadInfrastructure()
+
+	// This run is only used to verify that the RMD160 hash is correct, and if
+	// it should ever differ, the correct hash will appear in an error message.
+	G.Check(t.File("category/package"))
+
+	t.CheckOutputLines(
+		"ERROR: ~/category/package/distinfo:3: "+
+			"Expected SHA1, RMD160, SHA512, Size checksums for \"package-1.0.txt\", "+
+			"got RMD160, Size, CRC32.",
+		"",
+		"\tTo add the missing lines to the distinfo file, run",
+		"\t\t"+confMake+" distinfo",
+		"\tfor each variant of the package until all distfiles are downloaded",
+		"\tto \"${PKGSRCDIR}/distfiles\".",
+		"",
+		"\tThe variants are typically selected by setting EMUL_PLATFORM or",
+		"\tsimilar variables in the command line.",
+		"",
+		"\tAfter that, run \"cvs update -C distinfo\" to revert the distinfo file",
+		"\tto the previous state, since the above commands have removed some of",
+		"\tthe entries.",
+		"",
+		"\tAfter downloading all possible distfiles, run \"pkglint --autofix\",",
+		"\twhich will find the downloaded distfiles and add the missing hashes",
+		"\tto the distinfo file.",
+		"",
+		"ERROR: ~/category/package/distinfo:3: Missing SHA1 hash for package-1.0.txt.",
+		"ERROR: ~/category/package/distinfo:3: Missing SHA512 hash for package-1.0.txt.")
+
+	t.SetUpCommandLine("-Wall", "--autofix", "--show-autofix", "--source")
+
+	G.Check(t.File("category/package"))
+
+	// Since the file exists in the distfiles directory, pkglint checks the
+	// hash right away. It also adds the missing hashes since this file is
+	// not a patch file.
+	t.CheckOutputLines(
+		"ERROR: ~/category/package/distinfo:3: Missing SHA1 hash for package-1.0.txt.",
+		"AUTOFIX: ~/category/package/distinfo:3: "+
+			"Inserting a line \"SHA1 (package-1.0.txt) "+
+			"= cd50d19784897085a8d0e3e413f8612b097c03f1\" "+
+			"before this line.",
+		"+\tSHA1 (package-1.0.txt) = cd50d19784897085a8d0e3e413f8612b097c03f1",
+		">\tRMD160 (package-1.0.txt) = 1a88147a0344137404c63f3b695366eab869a98a",
+		"",
+		"ERROR: ~/category/package/distinfo:3: Missing SHA512 hash for package-1.0.txt.",
+		"AUTOFIX: ~/category/package/distinfo:3: "+
+			"Inserting a line \"SHA512 (package-1.0.txt) "+
+			"= f65f341b35981fda842b09b2c8af9bcdb7602a4c2e6fa1f7d41f0974d3e3122f"+
+			"268fc79d5a4af66358f5133885cd1c165c916f80ab25e5d8d95db46f803c782c\" after this line.",
+		"+\tSHA1 (package-1.0.txt) = cd50d19784897085a8d0e3e413f8612b097c03f1",
+		">\tRMD160 (package-1.0.txt) = 1a88147a0344137404c63f3b695366eab869a98a",
+		"+\tSHA512 (package-1.0.txt) = f65f341b35981fda842b09b2c8af9bcdb7602a4c2e6fa1f7d41f0974d3e3122f"+
+			"268fc79d5a4af66358f5133885cd1c165c916f80ab25e5d8d95db46f803c782c")
+
+	t.SetUpCommandLine("-Wall")
+
+	G.Check(t.File("category/package"))
+
+	t.CheckOutputLines(
+		"ERROR: ~/category/package/distinfo:3: " +
+			"Expected SHA1, RMD160, SHA512, Size checksums for \"package-1.0.txt\", " +
+			"got SHA1, RMD160, SHA512, Size, CRC32.")
+}
+
+func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__wrong_distfile_hash(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("category/package/distinfo",
+		RcsID,
+		"",
+		"RMD160 (package-1.0.txt) = 1234wrongHash1234")
+	t.CreateFileLines("distfiles/package-1.0.txt",
+		"hello, world")
+	G.Pkgsrc.LoadInfrastructure()
+
+	G.Check(t.File("category/package"))
+
+	t.CheckOutputLines(
+		"ERROR: ~/category/package/distinfo:3: "+
+			"Expected SHA1, RMD160, SHA512, Size checksums for \"package-1.0.txt\", "+
+			"got RMD160.",
+		"ERROR: ~/category/package/distinfo:3: "+
+			"The RMD160 checksum for \"package-1.0.txt\" is 1234wrongHash1234 in distinfo, "+
+			"1a88147a0344137404c63f3b695366eab869a98a in ../../distfiles/package-1.0.txt.")
+}
+
+func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__no_usual_algorithm(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("category/package/distinfo",
+		RcsID,
+		"",
+		"MD5 (package-1.0.txt) = 1234wrongHash1234")
+	t.CreateFileLines("distfiles/package-1.0.txt",
+		"hello, world")
+	G.Pkgsrc.LoadInfrastructure()
+
+	G.Check(t.File("category/package"))
+
+	t.CheckOutputLines(
+		"ERROR: ~/category/package/distinfo:3: " +
+			"Expected SHA1, RMD160, SHA512, Size checksums for \"package-1.0.txt\", " +
+			"got MD5.")
+}
+
+func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__top_algorithms_missing(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("category/package/distinfo",
+		RcsID,
+		"",
+		"SHA512 (package-1.0.txt) = f65f341b35981fda842b09b2c8af9bcdb7602a4c2e6fa1f7"+
+			"d41f0974d3e3122f268fc79d5a4af66358f5133885cd1c165c916f80ab25e5d8d95db46f803c782c",
+		"Size (package-1.0.txt) = 13 bytes")
+	t.CreateFileLines("distfiles/package-1.0.txt",
+		"hello, world")
+	G.Pkgsrc.LoadInfrastructure()
+
+	G.Check(t.File("category/package"))
+
+	t.CheckOutputLines(
+		"ERROR: ~/category/package/distinfo:3: "+
+			"Expected SHA1, RMD160, SHA512, Size checksums for \"package-1.0.txt\", "+
+			"got SHA512, Size.",
+		"ERROR: ~/category/package/distinfo:3: Missing SHA1 hash for package-1.0.txt.",
+		"ERROR: ~/category/package/distinfo:3: Missing RMD160 hash for package-1.0.txt.")
+}
+
+func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__bottom_algorithms_missing(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("category/package/distinfo",
+		RcsID,
+		"",
+		"SHA1 (package-1.0.txt) = cd50d19784897085a8d0e3e413f8612b097c03f1",
+		"RMD160 (package-1.0.txt) = 1a88147a0344137404c63f3b695366eab869a98a")
+	t.CreateFileLines("distfiles/package-1.0.txt",
+		"hello, world")
+	G.Pkgsrc.LoadInfrastructure()
+
+	G.Check(t.File("category/package"))
+
+	t.CheckOutputLines(
+		"ERROR: ~/category/package/distinfo:3: "+
+			"Expected SHA1, RMD160, SHA512, Size checksums for \"package-1.0.txt\", "+
+			"got SHA1, RMD160.",
+		"ERROR: ~/category/package/distinfo:4: Missing SHA512 hash for package-1.0.txt.",
+		"ERROR: ~/category/package/distinfo:4: Missing Size hash for package-1.0.txt.")
+
+	t.SetUpCommandLine("-Wall", "--autofix")
+
+	G.Check(t.File("category/package"))
+
+	t.CheckOutputLines(
+		"AUTOFIX: ~/category/package/distinfo:4: "+
+			"Inserting a line \"SHA512 (package-1.0.txt) = f65f341b35981fda842b"+
+			"09b2c8af9bcdb7602a4c2e6fa1f7d41f0974d3e3122f268fc79d5a4af66358f513"+
+			"3885cd1c165c916f80ab25e5d8d95db46f803c782c\" after this line.",
+		"AUTOFIX: ~/category/package/distinfo:4: "+
+			"Inserting a line \"Size (package-1.0.txt) = 13 bytes\" after this line.")
+}
+
+func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__algorithms_in_wrong_order(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("category/package/distinfo",
+		RcsID,
+		"",
+		"RMD160 (package-1.0.txt) = 1a88147a0344137404c63f3b695366eab869a98a",
+		"SHA1 (package-1.0.txt) = cd50d19784897085a8d0e3e413f8612b097c03f1",
+		"Size (package-1.0.txt) = 13 bytes",
+		"SHA512 (package-1.0.txt) = f65f341b35981fda842b09b2c8af9bcdb7602a4c2e6fa1f7"+
+			"d41f0974d3e3122f268fc79d5a4af66358f5133885cd1c165c916f80ab25e5d8d95db46f803c782c")
+
+	t.CreateFileLines("distfiles/package-1.0.txt",
+		"hello, world")
+	G.Pkgsrc.LoadInfrastructure()
+
+	G.Check(t.File("category/package"))
+
+	// This case doesn't happen in practice, therefore there's no autofix for it.
+	t.CheckOutputLines(
+		"ERROR: ~/category/package/distinfo:3: " +
+			"Expected SHA1, RMD160, SHA512, Size checksums for \"package-1.0.txt\", " +
+			"got RMD160, SHA1, Size, SHA512.")
+}
+
+func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__some_algorithms_in_wrong_order(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("category/package/distinfo",
+		RcsID,
+		"",
+		"RMD160 (package-1.0.txt) = 1a88147a0344137404c63f3b695366eab869a98a",
+		"Size (package-1.0.txt) = 13 bytes",
+		"SHA512 (package-1.0.txt) = f65f341b35981fda842b09b2c8af9bcdb7602a4c2e6fa1f7"+
+			"d41f0974d3e3122f268fc79d5a4af66358f5133885cd1c165c916f80ab25e5d8d95db46f803c782c")
+
+	t.CreateFileLines("distfiles/package-1.0.txt",
+		"hello, world")
+	G.Pkgsrc.LoadInfrastructure()
+
+	G.Check(t.File("category/package"))
+
+	// This case doesn't happen in practice, therefore there's no autofix for it.
+	t.CheckOutputLines(
+		"ERROR: ~/category/package/distinfo:3: "+
+			"Expected SHA1, RMD160, SHA512, Size checksums for \"package-1.0.txt\", "+
+			"got RMD160, Size, SHA512.",
+		"ERROR: ~/category/package/distinfo:3: Missing SHA1 hash for package-1.0.txt.")
 }
