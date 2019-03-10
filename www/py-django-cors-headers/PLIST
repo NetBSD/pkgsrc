@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2018/01/11 13:37:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/03/10 15:27:07 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/corsheaders/__init__.py
 ${PYSITELIB}/corsheaders/__init__.pyc
@@ -9,9 +10,6 @@ ${PYSITELIB}/corsheaders/__init__.pyo
 ${PYSITELIB}/corsheaders/checks.py
 ${PYSITELIB}/corsheaders/checks.pyc
 ${PYSITELIB}/corsheaders/checks.pyo
-${PYSITELIB}/corsheaders/compat.py
-${PYSITELIB}/corsheaders/compat.pyc
-${PYSITELIB}/corsheaders/compat.pyo
 ${PYSITELIB}/corsheaders/conf.py
 ${PYSITELIB}/corsheaders/conf.pyc
 ${PYSITELIB}/corsheaders/conf.pyo
