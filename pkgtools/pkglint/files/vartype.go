@@ -38,6 +38,10 @@ const (
 	aclpAppend                                 // VAR += value
 	aclpUseLoadtime                            // OTHER := ${VAR}, OTHER != ${VAR}
 	aclpUse                                    // OTHER = ${VAR}
+
+	// TODO: Try what happens if this constant is removed.
+	//  All variables should have proper permission definitions for all files.
+	//  Missing permission definitions could also count as "none".
 	aclpUnknown
 	aclpAllWrite   = aclpSet | aclpSetDefault | aclpAppend
 	aclpAllRead    = aclpUseLoadtime | aclpUse
