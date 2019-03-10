@@ -165,23 +165,19 @@ func (s *Suite) Test_NewMkLine__autofix_space_after_varname(c *check.C) {
 	CheckFileMk(filename)
 
 	t.CheckOutputLines(
-		"NOTE: ~/Makefile:2: Unnecessary space after variable name \"VARNAME\".",
-		// FIXME: Don't say anything here because the spaced form is clearer that the compressed form.
-		"NOTE: ~/Makefile:4: Unnecessary space after variable name \"VARNAME+\".")
+		"NOTE: ~/Makefile:2: Unnecessary space after variable name \"VARNAME\".")
 
 	t.SetUpCommandLine("-Wspace", "--autofix")
 
 	CheckFileMk(filename)
 
 	t.CheckOutputLines(
-		"AUTOFIX: ~/Makefile:2: Replacing \"VARNAME +=\" with \"VARNAME+=\".",
-		// FIXME: Don't fix anything here because the spaced form is clearer that the compressed form.
-		"AUTOFIX: ~/Makefile:4: Replacing \"VARNAME+ +=\" with \"VARNAME++=\".")
+		"AUTOFIX: ~/Makefile:2: Replacing \"VARNAME +=\" with \"VARNAME+=\".")
 	t.CheckFileLines("Makefile",
 		MkRcsID+"",
 		"VARNAME+=\t${VARNAME}",
 		"VARNAME+ =\t${VARNAME+}",
-		"VARNAME++=\t${VARNAME+}",
+		"VARNAME+ +=\t${VARNAME+}",
 		"pkgbase := pkglint")
 }
 
@@ -193,14 +189,45 @@ func (s *Suite) Test_NewMkLine__varname_with_hash(c *check.C) {
 	// Parse error because the # starts a comment.
 	c.Check(mkline.IsVarassign(), equals, false)
 
-	mkline2 := t.NewMkLine("Makefile", 123, "VARNAME.\\#=\tvalue")
+	mkline2 := t.NewMkLine("Makefile", 124, "VARNAME.\\#=\tvalue")
 
-	// FIXME: Varname() should be "VARNAME.#".
-	c.Check(mkline2.IsVarassign(), equals, false)
+	c.Check(mkline2.IsVarassign(), equals, true)
+	c.Check(mkline2.Varname(), equals, "VARNAME.#")
 
 	t.CheckOutputLines(
-		"ERROR: Makefile:123: Unknown Makefile line format: \"VARNAME.#=\\tvalue\".",
-		"ERROR: Makefile:123: Unknown Makefile line format: \"VARNAME.\\\\#=\\tvalue\".")
+		"ERROR: Makefile:123: Unknown Makefile line format: \"VARNAME.#=\\tvalue\".")
+}
+
+// Ensures that pkglint parses escaped # characters in the same way as bmake.
+//
+// To check that bmake parses them the same, set a breakpoint after the t.NewMkLines
+// and look in t.tmpdir for the location of the file. Then run bmake with that file.
+func (s *Suite) Test_NewMkLine__escaped_hash_in_value(c *check.C) {
+	t := s.Init(c)
+
+	mklines := t.SetUpFileMkLines("Makefile",
+		"VAR0=\tvalue#",
+		"VAR1=\tvalue\\#",
+		"VAR2=\tvalue\\\\#",
+		"VAR3=\tvalue\\\\\\#",
+		"VAR4=\tvalue\\\\\\\\#",
+		"",
+		"all:",
+		".for var in VAR0 VAR1 VAR2 VAR3 VAR4",
+		"\t@printf '%s\\n' ${${var}}''",
+		".endfor")
+	parsed := mklines.mklines
+
+	c.Check(parsed[0].Value(), equals, "value")
+	c.Check(parsed[1].Value(), equals, "value#")
+	c.Check(parsed[2].Value(), equals, "value\\\\")
+	c.Check(parsed[3].Value(), equals, "value\\\\#")
+	c.Check(parsed[4].Value(), equals, "value\\\\\\\\")
+
+	t.CheckOutputLines(
+		"WARN: ~/Makefile:1: The # character starts a Makefile comment.",
+		"WARN: ~/Makefile:3: The # character starts a Makefile comment.",
+		"WARN: ~/Makefile:5: The # character starts a Makefile comment.")
 }
 
 func (s *Suite) Test_MkLine_Varparam(c *check.C) {
@@ -254,26 +281,26 @@ func (s *Suite) Test_VarUseContext_String(c *check.C) {
 func (s *Suite) Test_NewMkLine__number_sign(c *check.C) {
 	t := s.Init(c)
 
-	mklineVarassignEscaped := t.NewMkLine("filename", 1, "SED_CMD=\t's,\\#,hash,g'")
+	mklineVarassignEscaped := t.NewMkLine("filename.mk", 1, "SED_CMD=\t's,\\#,hash,g'")
 
 	c.Check(mklineVarassignEscaped.Varname(), equals, "SED_CMD")
 	c.Check(mklineVarassignEscaped.Value(), equals, "'s,#,hash,g'")
 
-	mklineCommandEscaped := t.NewMkLine("filename", 1, "\tsed -e 's,\\#,hash,g'")
+	mklineCommandEscaped := t.NewMkLine("filename.mk", 1, "\tsed -e 's,\\#,hash,g'")
 
 	c.Check(mklineCommandEscaped.ShellCommand(), equals, "sed -e 's,\\#,hash,g'")
 
 	// From shells/zsh/Makefile.common, rev. 1.78
-	mklineCommandUnescaped := t.NewMkLine("filename", 1, "\t# $ sha1 patches/patch-ac")
+	mklineCommandUnescaped := t.NewMkLine("filename.mk", 1, "\t# $ sha1 patches/patch-ac")
 
 	c.Check(mklineCommandUnescaped.ShellCommand(), equals, "# $ sha1 patches/patch-ac")
 	t.CheckOutputEmpty() // No warning about parsing the lonely dollar sign.
 
-	mklineVarassignUnescaped := t.NewMkLine("filename", 1, "SED_CMD=\t's,#,hash,'")
+	mklineVarassignUnescaped := t.NewMkLine("filename.mk", 1, "SED_CMD=\t's,#,hash,'")
 
 	c.Check(mklineVarassignUnescaped.Value(), equals, "'s,")
 	t.CheckOutputLines(
-		"WARN: filename:1: The # character starts a Makefile comment.")
+		"WARN: filename.mk:1: The # character starts a Makefile comment.")
 }
 
 func (s *Suite) Test_NewMkLine__varassign_leading_space(c *check.C) {
@@ -331,7 +358,7 @@ func (s *Suite) Test_NewMkLine__infrastructure(c *check.C) {
 func (s *Suite) Test_MkLine_VariableNeedsQuoting__unknown_rhs(c *check.C) {
 	t := s.Init(c)
 
-	mkline := t.NewMkLine("filename", 1, "PKGNAME:= ${UNKNOWN}")
+	mkline := t.NewMkLine("filename.mk", 1, "PKGNAME:= ${UNKNOWN}")
 	t.SetUpVartypes()
 
 	vuc := VarUseContext{G.Pkgsrc.VariableType("PKGNAME"), vucTimeParse, VucQuotUnknown, false}
@@ -728,7 +755,7 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__shellword_part(c *check.C) {
 
 	t.CheckOutputLines(
 		"NOTE: ~/Makefile:6: The substitution command \"s:@LINKER_RPATH_FLAG@:${LINKER_RPATH_FLAG}:g\" " +
-			"can be replaced with \"SUBST_VARS.class+= LINKER_RPATH_FLAG\".")
+			"can be replaced with \"SUBST_VARS.class= LINKER_RPATH_FLAG\".")
 }
 
 // Tools, when used in a shell command, must not be quoted.
@@ -1050,6 +1077,14 @@ func (s *Suite) Test_MkLine_ValueTokens__warnings(c *check.C) {
 		"WARN: Makefile:2: Please use curly braces {} instead of round parentheses () for ROUND.")
 }
 
+func (s *Suite) Test_MkLine_Tokenize__commented_varassign(c *check.C) {
+	t := s.Init(c)
+
+	mkline := t.NewMkLine("filename.mk", 123, "#VAR=\tvalue ${VAR} suffix text")
+
+	t.Check(mkline.Tokenize(mkline.Value(), false), check.HasLen, 3)
+}
+
 func (s *Suite) Test_MkLine_ResolveVarsInRelativePath(c *check.C) {
 	t := s.Init(c)
 
@@ -1103,25 +1138,32 @@ func (s *Suite) Test_MatchVarassign(c *check.C) {
 	s.Init(c)
 
 	test := func(text string, commented bool, varname, spaceAfterVarname, op, align, value, spaceAfterValue, comment string) {
-		type VarAssign struct {
-			commented                  bool
-			varname, spaceAfterVarname string
-			op, align                  string
-			value, spaceAfterValue     string
-			comment                    string
-		}
-		expected := VarAssign{commented, varname, spaceAfterVarname, op, align, value, spaceAfterValue, comment}
-		am, acommented, avarname, aspaceAfterVarname, aop, aalign, avalue, aspaceAfterValue, acomment := MatchVarassign(text)
-		if !am {
+		m, actual := MatchVarassign(text)
+		if !m {
 			c.Errorf("Text %q doesn't match variable assignment", text)
 			return
 		}
-		actual := VarAssign{acommented, avarname, aspaceAfterVarname, aop, aalign, avalue, aspaceAfterValue, acomment}
-		c.Check(actual, equals, expected)
+
+		expected := mkLineAssignImpl{
+			commented:         commented,
+			varname:           varname,
+			varcanon:          varnameCanon(varname),
+			varparam:          varnameParam(varname),
+			spaceAfterVarname: spaceAfterVarname,
+			op:                NewMkOperator(op),
+			valueAlign:        align,
+			value:             value,
+			valueMk:           nil,
+			valueMkRest:       "",
+			fields:            nil,
+			spaceAfterValue:   spaceAfterValue,
+			comment:           comment,
+		}
+		c.Check(*actual, deepEquals, expected)
 	}
 
 	testInvalid := func(text string) {
-		m, _, _, _, _, _, _, _, _ := MatchVarassign(text)
+		m, _ := MatchVarassign(text)
 		if m {
 			c.Errorf("Text %q matches variable assignment but shouldn't.", text)
 		}
@@ -1151,6 +1193,69 @@ func (s *Suite) Test_MatchVarassign(c *check.C) {
 	// A single space is typically used for writing documentation, not for commenting out code.
 	// Therefore this line doesn't count as commented variable assignment.
 	testInvalid("# VAR=value")
+
+	// Ensure that the alignment for the variable value is correct.
+	test("BUILD_DIRS=\tdir1 dir2",
+		false,
+		"BUILD_DIRS",
+		"",
+		"=",
+		"BUILD_DIRS=\t",
+		"dir1 dir2",
+		"",
+		"")
+
+	// Ensure that the alignment for the variable value is correct,
+	// even if the whole line is commented.
+	test("#BUILD_DIRS=\tdir1 dir2",
+		true,
+		"BUILD_DIRS",
+		"",
+		"=",
+		"#BUILD_DIRS=\t",
+		"dir1 dir2",
+		"",
+		"")
+
+	test("MASTER_SITES=\t#none",
+		false,
+		"MASTER_SITES",
+		"",
+		"=",
+		"MASTER_SITES=\t",
+		"",
+		"",
+		"#none")
+
+	test("MASTER_SITES=\t# none",
+		false,
+		"MASTER_SITES",
+		"",
+		"=",
+		"MASTER_SITES=\t",
+		"",
+		"",
+		"# none")
+
+	test("EGDIRS=\t${EGDIR/apparmor.d ${EGDIR/dbus-1/system.d ${EGDIR/pam.d",
+		false,
+		"EGDIRS",
+		"",
+		"=",
+		"EGDIRS=\t",
+		"${EGDIR/apparmor.d ${EGDIR/dbus-1/system.d ${EGDIR/pam.d",
+		"",
+		"")
+
+	test("VAR:=\t${VAR:M-*:[\\#]}",
+		false,
+		"VAR",
+		"",
+		":=",
+		"VAR:=\t",
+		"${VAR:M-*:[#]}",
+		"",
+		"")
 }
 
 func (s *Suite) Test_NewMkOperator(c *check.C) {
@@ -1254,6 +1359,32 @@ func (s *Suite) Test_Indentation_TrackAfter__lonely_else(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
+func (s *Suite) Test_Indentation_Varnames__repetition(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+	t.SetUpPackage("category/other")
+	t.CreateFileDummyBuildlink3("category/other/buildlink3.mk")
+	t.SetUpPackage("category/package",
+		"DISTNAME=\tpackage-1.0",
+		".include \"../../category/other/buildlink3.mk\"")
+	t.CreateFileDummyBuildlink3("category/package/buildlink3.mk",
+		".if ${OPSYS} == NetBSD || ${OPSYS} == FreeBSD",
+		".  if ${OPSYS} == NetBSD",
+		".    include \"../../category/other/buildlink3.mk\"",
+		".  endif",
+		".endif")
+
+	G.Check(t.File("category/package"))
+
+	// TODO: It feels wrong that OPSYS is mentioned twice here.
+	//  Why only twice and not three times?
+	t.CheckOutputLines(
+		"WARN: ~/category/package/buildlink3.mk:14: " +
+			"\"../../category/other/buildlink3.mk\" is included conditionally here " +
+			"(depending on OPSYS, OPSYS) and unconditionally in Makefile:20.")
+}
+
 func (s *Suite) Test_MkLine_DetermineUsedVariables(c *check.C) {
 	t := s.Init(c)
 
@@ -1330,6 +1461,362 @@ func (s *Suite) Test_MkLine_UnquoteShell(c *check.C) {
 	test("`", "`")
 }
 
+func (s *Suite) Test_unescapeMkComment(c *check.C) {
+	t := s.Init(c)
+
+	test := func(text string, main, comment string) {
+		aMain, aComment := unescapeMkComment(text)
+		t.Check(
+			[]interface{}{text, aMain, aComment},
+			deepEquals,
+			[]interface{}{text, main, comment})
+	}
+
+	test("",
+		"",
+		"")
+	test("text",
+		"text",
+		"")
+
+	// The leading space from the comment is preserved to make parsing as exact
+	// as possible.
+	//
+	// The difference between "#defined" and "# defined" is relevant in a few
+	// cases, such as the API documentation of the infrastructure files.
+	test("# comment",
+		"",
+		"# comment")
+	test("#\tcomment",
+		"",
+		"#\tcomment")
+	test("#   comment",
+		"",
+		"#   comment")
+
+	// Other than in the shell, # also starts a comment in the middle of a word.
+	test("COMMENT=\tThe C# compiler",
+		"COMMENT=\tThe C",
+		"# compiler")
+	test("COMMENT=\tThe C\\# compiler",
+		"COMMENT=\tThe C# compiler",
+		"")
+
+	test("${TARGET}: ${SOURCES} # comment",
+		"${TARGET}: ${SOURCES} ",
+		"# comment")
+
+	// A # starts a comment, except if it immediately follows a [.
+	// This is done so that the length modifier :[#] can be written without
+	// escaping the #.
+	test("VAR=\t${OTHER:[#]} # comment",
+		"VAR=\t${OTHER:[#]} ",
+		"# comment")
+
+	// The # in the :[#] modifier may be escaped or not. Both forms are equivalent.
+	test("VAR:=\t${VAR:M-*:[\\#]}",
+		"VAR:=\t${VAR:M-*:[#]}",
+		"")
+
+	// The character [ prevents the following # from starting a comment, even
+	// outside of variable modifiers.
+	test("COMMENT=\t[#] $$\\# $$# comment",
+		"COMMENT=\t[#] $$# $$",
+		"# comment")
+
+	// A backslash always escapes the next character, be it a # for a comment
+	// or something else. This makes it difficult to write a literal \# in a
+	// Makefile, but that's an edge case anyway.
+	test("VAR0=\t#comment",
+		"VAR0=\t",
+		"#comment")
+	test("VAR1=\t\\#no-comment",
+		"VAR1=\t#no-comment",
+		"")
+	test("VAR2=\t\\\\#comment",
+		"VAR2=\t\\\\",
+		"#comment")
+
+	// The backslash is only removed when it escapes a comment.
+	// In particular, it cannot be used to escape a dollar that starts a
+	// variable use.
+	test("VAR0=\t$T",
+		"VAR0=\t$T",
+		"")
+	test("VAR1=\t\\$T",
+		"VAR1=\t\\$T",
+		"")
+	test("VAR2=\t\\\\$T",
+		"VAR2=\t\\\\$T",
+		"")
+
+	// To escape a dollar, write it twice.
+	test("$$shellvar $${shellvar} \\${MKVAR} [] \\x",
+		"$$shellvar $${shellvar} \\${MKVAR} [] \\x",
+		"")
+
+	// Parse errors are recorded in the rest return value.
+	test("${UNCLOSED",
+		"${UNCLOSED",
+		"")
+
+	// In this early phase of parsing, unfinished variable uses are not
+	// interpreted and do not influence the detection of the comment start.
+	test("text before ${UNCLOSED # comment",
+		"text before ${UNCLOSED ",
+		"# comment")
+
+	// The dollar-space refers to a normal Make variable named " ".
+	// The lonely dollar at the very end refers to the variable named "",
+	// which is specially protected in bmake to always contain the empty string.
+	// It is heavily used in .for loops in the form ${:Uvalue}.
+	test("Lonely $ character $",
+		"Lonely $ character $",
+		"")
+
+	// An even number of backslashes does not escape the #.
+	// Therefore it starts a comment here.
+	test("VAR2=\t\\\\#comment",
+		"VAR2=\t\\\\",
+		"#comment")
+}
+
+func (s *Suite) Test_splitMkLine(c *check.C) {
+	t := s.Init(c)
+
+	varuse := func(varname string, modifiers ...string) *MkToken {
+		text := "${" + varname
+		for _, modifier := range modifiers {
+			text += ":" + modifier
+		}
+		text += "}"
+		return &MkToken{Text: text, Varuse: NewMkVarUse(varname, modifiers...)}
+	}
+	varuseText := func(text, varname string, modifiers ...string) *MkToken {
+		return &MkToken{Text: text, Varuse: NewMkVarUse(varname, modifiers...)}
+	}
+	text := func(text string) *MkToken {
+		return &MkToken{text, nil}
+	}
+	tokens := func(tokens ...*MkToken) []*MkToken {
+		return tokens
+	}
+	_, _, _, _ = text, varuse, varuseText, tokens
+
+	test := func(text string, main string, tokens []*MkToken, rest string, spaceBeforeComment string, hasComment bool, comment string) {
+		aMain, aTokens, aRest, aSpaceBeforeComment, aHasComment, aComment := splitMkLine(text)
+		t.Check(
+			[]interface{}{text, aTokens, aMain, aRest, aSpaceBeforeComment, aHasComment, aComment},
+			deepEquals,
+			[]interface{}{text, tokens, main, rest, spaceBeforeComment, hasComment, comment})
+	}
+
+	test("",
+		"",
+		tokens(),
+		"",
+		"",
+		false,
+		"")
+	test("text",
+		"text",
+		tokens(text("text")),
+		"",
+		"",
+		false,
+		"")
+
+	// The leading space from the comment is preserved to make parsing as exact
+	// as possible.
+	//
+	// The difference between "#defined" and "# defined" is relevant in a few
+	// cases, such as the API documentation of the infrastructure files.
+	test("# comment",
+		"",
+		tokens(),
+		"",
+		"",
+		true,
+		" comment")
+	test("#\tcomment",
+		"",
+		tokens(),
+		"",
+		"",
+		true,
+		"\tcomment")
+	test("#   comment",
+		"",
+		tokens(),
+		"",
+		"",
+		true,
+		"   comment")
+
+	// Other than in the shell, # also starts a comment in the middle of a word.
+	test("COMMENT=\tThe C# compiler",
+		"COMMENT=\tThe C",
+		tokens(text("COMMENT=\tThe C")),
+		"",
+		"",
+		true,
+		" compiler")
+	test("COMMENT=\tThe C\\# compiler",
+		"COMMENT=\tThe C# compiler",
+		tokens(text("COMMENT=\tThe C# compiler")),
+		"",
+		"",
+		false,
+		"")
+
+	test("${TARGET}: ${SOURCES} # comment",
+		"${TARGET}: ${SOURCES}",
+		tokens(varuse("TARGET"), text(": "), varuse("SOURCES"), text(" ")),
+		"",
+		" ",
+		true,
+		" comment")
+
+	// A # starts a comment, except if it immediately follows a [.
+	// This is done so that the length modifier :[#] can be written without
+	// escaping the #.
+	test("VAR=\t${OTHER:[#]} # comment",
+		"VAR=\t${OTHER:[#]}",
+		tokens(text("VAR=\t"), varuse("OTHER", "[#]"), text(" ")),
+		"",
+		" ",
+		true,
+		" comment")
+
+	// The # in the :[#] modifier may be escaped or not. Both forms are equivalent.
+	test("VAR:=\t${VAR:M-*:[\\#]}",
+		"VAR:=\t${VAR:M-*:[#]}",
+		tokens(text("VAR:=\t"), varuse("VAR", "M-*", "[#]")),
+		"",
+		"",
+		false,
+		"")
+
+	// A backslash always escapes the next character, be it a # for a comment
+	// or something else. This makes it difficult to write a literal \# in a
+	// Makefile, but that's an edge case anyway.
+	test("VAR0=\t#comment",
+		"VAR0=",
+		tokens(text("VAR0=\t")),
+		"",
+		// Later, when converting this result into a proper variable assignment,
+		// this "space before comment" is reclassified as "space before the value",
+		// in order to align the "#comment" with the other variable values.
+		"\t",
+		true,
+		"comment")
+	test("VAR1=\t\\#no-comment",
+		"VAR1=\t#no-comment",
+		tokens(text("VAR1=\t#no-comment")),
+		"",
+		"",
+		false,
+		"")
+	test("VAR2=\t\\\\#comment",
+		"VAR2=\t\\\\",
+		tokens(text("VAR2=\t\\\\")),
+		"",
+		"",
+		true,
+		"comment")
+
+	// The backslash is only removed when it escapes a comment.
+	// In particular, it cannot be used to escape a dollar that starts a
+	// variable use.
+	test("VAR0=\t$T",
+		"VAR0=\t$T",
+		tokens(text("VAR0=\t"), varuseText("$T", "T")),
+		"",
+		"",
+		false,
+		"")
+	test("VAR1=\t\\$T",
+		"VAR1=\t\\$T",
+		tokens(text("VAR1=\t\\"), varuseText("$T", "T")),
+		"",
+		"",
+		false,
+		"")
+	test("VAR2=\t\\\\$T",
+		"VAR2=\t\\\\$T",
+		tokens(text("VAR2=\t\\\\"), varuseText("$T", "T")),
+		"",
+		"",
+		false,
+		"")
+
+	// To escape a dollar, write it twice.
+	test("$$shellvar $${shellvar} \\${MKVAR} [] \\x",
+		"$$shellvar $${shellvar} \\${MKVAR} [] \\x",
+		tokens(text("$$shellvar $${shellvar} \\"), varuse("MKVAR"), text(" [] \\x")),
+		"",
+		"",
+		false,
+		"")
+
+	// Parse errors are recorded in the rest return value.
+	test("${UNCLOSED",
+		"",
+		tokens(),
+		"${UNCLOSED",
+		"",
+		false,
+		"")
+
+	// When a parse error occurs, the comment is not parsed and the main text
+	// is not trimmed to the right, to keep as much original information as
+	// possible.
+	test("text before ${UNCLOSED # comment",
+		"text before ",
+		tokens(text("text before ")),
+		"${UNCLOSED ", // FIXME: put the space into spaceBeforeComment
+		"",            // FIXME: the space is missing here
+		true,
+		" comment")
+
+	// The dollar-space refers to a normal Make variable named " ".
+	// The lonely dollar at the very end refers to the variable named "",
+	// which is specially protected in bmake to always contain the empty string.
+	// It is heavily used in .for loops in the form ${:Uvalue}.
+	//
+	// TODO: The rest of pkglint assumes that the empty string is not a valid
+	//  variable name, mainly because the empty variable name is not visible
+	//  outside of the bmake debugging mode.
+	test("Lonely $ character $",
+		"Lonely $ character ",
+		tokens(
+			text("Lonely "),
+			varuseText("$ " /* instead of "${ }" */, " "),
+			text("character ")),
+		"$",
+		"",
+		false,
+		"")
+
+	// The character [ prevents the following # from starting a comment, even
+	// outside of variable modifiers.
+	test("COMMENT=\t[#] $$\\# $$# comment",
+		"COMMENT=\t[#] $$# $$",
+		tokens(text("COMMENT=\t[#] $$# $$")),
+		"",
+		"",
+		true,
+		" comment")
+
+	test("VAR2=\t\\\\#comment",
+		"VAR2=\t\\\\",
+		tokens(text("VAR2=\t\\\\")),
+		"",
+		"",
+		true,
+		"comment")
+}
+
 func (s *Suite) Test_matchMkDirective(c *check.C) {
 
 	test := func(input, expectedIndent, expectedDirective, expectedArgs, expectedComment string) {
@@ -1340,11 +1827,19 @@ func (s *Suite) Test_matchMkDirective(c *check.C) {
 			[]interface{}{true, expectedIndent, expectedDirective, expectedArgs, expectedComment})
 	}
 
+	testFail := func(input string) {
+		m, indent, directive, args, comment := matchMkDirective(input)
+		if m {
+			c.Errorf("The line %q could be parsed as directive (%q, %q, %q, %q) but shouldn't.",
+				indent, directive, args, comment)
+		}
+	}
+
 	test(".if ${VAR} == value",
 		"", "if", "${VAR} == value", "")
 
 	test(".\tendif # comment",
-		"\t", "endif", "", "comment")
+		"\t", "endif", "", " comment")
 
 	test(".if ${VAR} == \"#\"",
 		"", "if", "${VAR} == \"", "\"")
@@ -1354,6 +1849,9 @@ func (s *Suite) Test_matchMkDirective(c *check.C) {
 
 	test(".if ${VAR} == \\",
 		"", "if", "${VAR} == \\", "")
+
+	// Unclosed variable
+	testFail(".if ${VAR")
 }
 
 func (s *Suite) Test_MatchMkInclude(c *check.C) {

@@ -28,7 +28,8 @@ func (s *Suite) Test_Package_checkLinesBuildlink3Inclusion__package_but_not_file
 
 	t.CreateFileLines("category/dependency/buildlink3.mk")
 	G.Pkg = NewPackage(t.File("category/package"))
-	G.Pkg.bl3["../../category/dependency/buildlink3.mk"] = t.NewMkLine("filename", 1, "")
+	G.Pkg.bl3["../../category/dependency/buildlink3.mk"] =
+		t.NewMkLine("../../category/dependency/buildlink3.mk", 1, "")
 	mklines := t.NewMkLines("category/package/buildlink3.mk",
 		MkRcsID)
 
@@ -212,7 +213,6 @@ func (s *Suite) Test_Package_CheckVarorder__license(c *check.C) {
 	t.CreateFileLines("mk/bsd.pkg.mk", "# dummy")
 	t.CreateFileLines("x11/Makefile", MkRcsID)
 	t.CreateFileLines("x11/9term/PLIST", PlistRcsID, "bin/9term")
-	t.CreateFileLines("x11/9term/distinfo", RcsID)
 	t.CreateFileLines("x11/9term/Makefile",
 		MkRcsID,
 		"",
@@ -221,6 +221,8 @@ func (s *Suite) Test_Package_CheckVarorder__license(c *check.C) {
 		"",
 		"COMMENT=\tTerminal",
 		"",
+		"NO_CHECKSUM=\tyes",
+		"",
 		".include \"../../mk/bsd.pkg.mk\"")
 
 	t.SetUpVartypes()
@@ -228,6 +230,7 @@ func (s *Suite) Test_Package_CheckVarorder__license(c *check.C) {
 	G.Check(t.File("x11/9term"))
 
 	// Since the error is grave enough, the warning about the correct position is suppressed.
+	// TODO: Knowing the correct position helps, though.
 	t.CheckOutputLines(
 		"ERROR: ~/x11/9term/Makefile: Each package must define its LICENSE.")
 }
@@ -524,13 +527,39 @@ func (s *Suite) Test_Package_loadPackageMakefile(c *check.C) {
 
 	// Including a package Makefile directly is an error (in the last line),
 	// but that is checked later.
-	// A file including itself does not lead to an endless loop while parsing
-	// but may still produce unexpected warnings, such as redundant definitions.
+	// This test demonstrates that a file including itself does not lead to an
+	// endless loop while parsing. It might trigger an error in the future.
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Package__relative_included_filenames_in_same_directory(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"PKGNAME=\tpkgname-1.67",
+		"DISTNAME=\tdistfile_1_67",
+		".include \"../../category/package/other.mk\"")
+	t.CreateFileLines("category/package/other.mk",
+		MkRcsID,
+		"PKGNAME=\tpkgname-1.67",
+		"DISTNAME=\tdistfile_1_67",
+		".include \"../../category/package/other.mk\"")
+	G.Pkgsrc.LoadInfrastructure()
+
+	G.Check(t.File("category/package"))
+
+	// TODO: Since other.mk is referenced via "../../category/package",
+	//  it would be nice if this relative path would be reflected in the output
+	//  instead of referring just to "other.mk".
+	//  This needs to be fixed somewhere near relpath.
+	//
+	// The notes are in reverse order because they are produced when checking
+	// other.mk, and there the relative order is correct (line 2 before line 3).
 	t.CheckOutputLines(
-		"NOTE: ~/category/package/Makefile:3: "+
-			"Definition of PKGNAME is redundant because of ../../category/package/Makefile:3.",
 		"NOTE: ~/category/package/Makefile:4: "+
-			"Definition of DISTNAME is redundant because of ../../category/package/Makefile:4.")
+			"Definition of PKGNAME is redundant because of other.mk:2.",
+		"NOTE: ~/category/package/Makefile:3: "+
+			"Definition of DISTNAME is redundant because of other.mk:3.")
 }
 
 func (s *Suite) Test_Package_loadPackageMakefile__PECL_VERSION(c *check.C) {
@@ -668,14 +697,16 @@ func (s *Suite) Test_Package__redundant_master_sites(c *check.C) {
 	G.checkdirPackage(t.File("math/R-date"))
 
 	// The definition in Makefile:6 is redundant because the same definition
-	// occurs later in Makefile.extension:4. Usually the later definition gets
-	// the note. In this case though, it would be wrong to mark the
-	// definition in Makefile.extension as redundant because that definition is
-	// probably used by other packages as well. Therefore in this case the roles
-	// of the two lines are swapped; see RedundantScope.Handle, the ".includes" line.
+	// occurs later in Makefile.extension:4.
+	//
+	// When a file includes another file, it's always the including file that
+	// is marked as redundant since the included file typically provides the
+	// generally useful value for several packages;
+	// see RedundantScope.handleVarassign, keyword includePath.
 	t.CheckOutputLines(
 		"NOTE: ~/math/R-date/Makefile:6: " +
-			"Definition of MASTER_SITES is redundant because of ../../math/R/Makefile.extension:4.")
+			"Definition of MASTER_SITES is redundant " +
+			"because of ../../math/R/Makefile.extension:4.")
 }
 
 func (s *Suite) Test_Package_checkUpdate(c *check.C) {
@@ -828,6 +859,131 @@ func (s *Suite) Test_Package_checkfilePackageMakefile__USE_IMAKE_and_USE_X11(c *
 		"NOTE: ~/category/package/Makefile:21: USE_IMAKE makes USE_X11 in line 20 redundant.")
 }
 
+func (s *Suite) Test_Package_checkGnuConfigureUseLanguages__no_C(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"USE_LANGUAGES=\tfortran77",
+		"USE_LANGUAGES+=\tc++14",
+		"USE_LANGUAGES+=\tada",
+		"GNU_CONFIGURE=\tyes")
+	G.Pkgsrc.LoadInfrastructure()
+
+	G.Check(t.File("category/package"))
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/Makefile:23: "+
+			"GNU_CONFIGURE almost always needs a C compiler, "+
+			"but \"c\" is not added to USE_LANGUAGES in line 20.",
+		"WARN: ~/category/package/Makefile:23: "+
+			"GNU_CONFIGURE almost always needs a C compiler, "+
+			"but \"c\" is not added to USE_LANGUAGES in line 21.",
+		"WARN: ~/category/package/Makefile:23: "+
+			"GNU_CONFIGURE almost always needs a C compiler, "+
+			"but \"c\" is not added to USE_LANGUAGES in line 22.")
+}
+
+func (s *Suite) Test_Package_checkGnuConfigureUseLanguages__C_in_the_middle(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"USE_LANGUAGES=\tfortran77",
+		"USE_LANGUAGES+=\tc99",
+		"USE_LANGUAGES+=\tada",
+		"GNU_CONFIGURE=\tyes")
+	G.Pkgsrc.LoadInfrastructure()
+
+	G.Check(t.File("category/package"))
+
+	// Until March 2019 pkglint wrongly warned that USE_LANGUAGES would not
+	// include c or c99, although c99 was added.
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Package_checkGnuConfigureUseLanguages__realistic_compiler_mk(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"USE_LANGUAGES=\tfortran77",
+		"USE_LANGUAGES+=\tc++",
+		"USE_LANGUAGES+=\tada",
+		"GNU_CONFIGURE=\tyes",
+		"",
+		".include \"../../mk/compiler.mk\"")
+	t.CreateFileLines("mk/compiler.mk",
+		MkRcsID,
+		".include \"bsd.prefs.mk\"",
+		"",
+		"USE_LANGUAGES?=\tc",
+		"USE_LANGUAGES+=\tc",
+		"USE_LANGUAGES+=\tc++")
+	G.Pkgsrc.LoadInfrastructure()
+
+	G.Check(t.File("category/package"))
+
+	// The package defines several languages it needs, but C is not one of them.
+	// When the package is loaded, the included files are read in recursively, even
+	// when they come from the pkgsrc infrastructure.
+	//
+	// Up to March 2019, the USE_LANGUAGES definitions from mk/compiler.mk were
+	// loaded as if they were defined by the package, without taking the conditionals
+	// into account. Thereby "c" was added unconditionally to USE_LANGUAGES.
+	//
+	// Since March 2019 the infrastructure files are ignored when determining the value
+	// of USE_LANGUAGES.
+	t.CheckOutputLines(
+		"WARN: ~/category/package/Makefile:23: "+
+			"GNU_CONFIGURE almost always needs a C compiler, "+
+			"but \"c\" is not added to USE_LANGUAGES in line 20.",
+		"WARN: ~/category/package/Makefile:23: "+
+			"GNU_CONFIGURE almost always needs a C compiler, "+
+			"but \"c\" is not added to USE_LANGUAGES in line 21.",
+		"WARN: ~/category/package/Makefile:23: "+
+			"GNU_CONFIGURE almost always needs a C compiler, "+
+			"but \"c\" is not added to USE_LANGUAGES in line 22.")
+}
+
+func (s *Suite) Test_Package_checkGnuConfigureUseLanguages__only_GNU_CONFIGURE(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"GNU_CONFIGURE=\tyes")
+	G.Pkgsrc.LoadInfrastructure()
+
+	G.Check(t.File("category/package"))
+
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Package_checkGnuConfigureUseLanguages__ok(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"GNU_CONFIGURE=\tyes",
+		"USE_LANGUAGES=\tc++ objc")
+	G.Pkgsrc.LoadInfrastructure()
+
+	G.Check(t.File("category/package"))
+
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Package__USE_LANGUAGES_too_late(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		".include \"../../mk/compiler.mk\"",
+		"USE_LANGUAGES=\tc c99 fortran ada c++14")
+	t.CreateFileLines("mk/compiler.mk",
+		MkRcsID)
+	G.Pkgsrc.LoadInfrastructure()
+
+	G.Check(t.File("category/package"))
+
+	// FIXME: There must be a warning "USE_LANGUAGES must be added before including compiler.mk."
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_Package_readMakefile__skipping(c *check.C) {
 	t := s.Init(c)
 
@@ -912,6 +1068,43 @@ func (s *Suite) Test_Package_readMakefile__builtin_mk(c *check.C) {
 
 	t.CheckOutputLines(
 		"WARN: ~/category/package/Makefile:23: OTHER_VAR is used but not defined.")
+}
+
+// Ensures that the paths in Package.included are indeed relative to the
+// package directory. This hadn't been the case until March 2019.
+func (s *Suite) Test_Package_readMakefile__included(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		".include \"../../devel/library/buildlink3.mk\"",
+		".include \"../../lang/language/module.mk\"")
+	t.SetUpPackage("devel/library")
+	t.CreateFileDummyBuildlink3("devel/library/buildlink3.mk")
+	t.CreateFileLines("devel/library/builtin.mk",
+		MkRcsID)
+	t.CreateFileLines("lang/language/module.mk",
+		MkRcsID,
+		".include \"version.mk\"")
+	t.CreateFileLines("lang/language/version.mk",
+		MkRcsID)
+	pkg := NewPackage(t.File("category/package"))
+
+	pkg.loadPackageMakefile()
+
+	expected := []string{
+		"../../devel/library/buildlink3.mk",
+		"../../devel/library/builtin.mk",
+		"../../lang/language/module.mk",
+		"../../lang/language/version.mk",
+		"suppress-varorder.mk"}
+
+	seen := pkg.included
+	for _, filename := range expected {
+		if !seen.Seen(filename) {
+			c.Errorf("File %q is not seen.", filename)
+		}
+	}
+	t.Check(seen.seen, check.HasLen, 5)
 }
 
 func (s *Suite) Test_Package_checkLocallyModified(c *check.C) {
@@ -1039,4 +1232,62 @@ func (s *Suite) Test_Package__redundant_variable_in_unrelated_files(c *check.C) 
 	// Since egg.mk and Makefile.common are unrelated, the definition of
 	// PY_PATCHPLIST is not redundant in these files.
 	t.CheckOutputEmpty()
+}
+
+// Pkglint loads some files from the pkgsrc infrastructure and skips others.
+//
+// When a buildlink3.mk file from the infrastructure is included, it should
+// be allowed to include its corresponding builtin.mk file in turn.
+//
+// This is necessary to load the correct variable assignments for the
+// redundancy check, in particular variable assignments that serve as
+// arguments to "procedure calls", such as mk/find-files.mk.
+func (s *Suite) Test_Package_readMakefile__include_infrastructure(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("--dumpmakefile")
+	t.SetUpPackage("category/package",
+		".include \"../../mk/dlopen.buildlink3.mk\"",
+		".include \"../../mk/pthread.buildlink3.mk\"")
+	t.CreateFileLines("mk/dlopen.buildlink3.mk",
+		".include \"dlopen.builtin.mk\"")
+	t.CreateFileLines("mk/dlopen.builtin.mk",
+		".include \"pthread.builtin.mk\"")
+	t.CreateFileLines("mk/pthread.buildlink3.mk",
+		".include \"pthread.builtin.mk\"")
+	t.CreateFileLines("mk/pthread.builtin.mk",
+		"# This should be included by pthread.buildlink3.mk")
+
+	G.Check(t.File("category/package"))
+
+	t.CheckOutputLines(
+		"Whole Makefile (with all included files) follows:",
+		"~/category/package/Makefile:1: "+MkRcsID,
+		"~/category/package/Makefile:2: ",
+		"~/category/package/Makefile:3: DISTNAME=\tdistname-1.0",
+		"~/category/package/Makefile:4: #PKGNAME=\tpackage-1.0",
+		"~/category/package/Makefile:5: CATEGORIES=\tcategory",
+		"~/category/package/Makefile:6: MASTER_SITES=\t# none",
+		"~/category/package/Makefile:7: ",
+		"~/category/package/Makefile:8: MAINTAINER=\tpkgsrc-users@NetBSD.org",
+		"~/category/package/Makefile:9: HOMEPAGE=\t# none",
+		"~/category/package/Makefile:10: COMMENT=\tDummy package",
+		"~/category/package/Makefile:11: LICENSE=\t2-clause-bsd",
+		"~/category/package/Makefile:12: ",
+		"~/category/package/Makefile:13: .include \"suppress-varorder.mk\"",
+		"~/category/package/suppress-varorder.mk:1: "+MkRcsID,
+		"~/category/package/Makefile:14: # empty",
+		"~/category/package/Makefile:15: # empty",
+		"~/category/package/Makefile:16: # empty",
+		"~/category/package/Makefile:17: # empty",
+		"~/category/package/Makefile:18: # empty",
+		"~/category/package/Makefile:19: # empty",
+		"~/category/package/Makefile:20: .include \"../../mk/dlopen.buildlink3.mk\"",
+		"~/category/package/../../mk/dlopen.buildlink3.mk:1: .include \"dlopen.builtin.mk\"",
+		"~/mk/dlopen.builtin.mk:1: .include \"pthread.builtin.mk\"",
+		"~/category/package/Makefile:21: .include \"../../mk/pthread.buildlink3.mk\"",
+		"~/category/package/../../mk/pthread.buildlink3.mk:1: .include \"pthread.builtin.mk\"",
+		"~/mk/pthread.builtin.mk:1: # This should be included by pthread.buildlink3.mk",
+		"~/category/package/Makefile:22: ",
+		"~/category/package/Makefile:23: .include \"../../mk/bsd.pkg.mk\"")
 }

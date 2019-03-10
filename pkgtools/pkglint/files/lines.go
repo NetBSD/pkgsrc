@@ -35,6 +35,7 @@ func (ls *LinesImpl) SaveAutofixChanges() bool {
 	return SaveAutofixChanges(ls)
 }
 
+// CheckRcsID returns true if the expected RCS Id was found.
 func (ls *LinesImpl) CheckRcsID(index int, prefixRe regex.Pattern, suggestedPrefix string) bool {
 	if trace.Tracing {
 		defer trace.Call(prefixRe, suggestedPrefix)()
