@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2018/03/12 11:18:00 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/03/10 08:07:52 wiz Exp $
 
-DISTNAME=	xfd-1.1.2
-PKGREVISION=	1
+DISTNAME=	xfd-1.1.3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
@@ -20,6 +19,7 @@ MAKE_FLAGS+=		appdefaultdir=${PREFIX}/lib/X11/app-defaults
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
