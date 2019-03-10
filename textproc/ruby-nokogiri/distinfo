@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.31 2019/01/12 14:31:38 tsutsui Exp $
+$NetBSD: distinfo,v 1.32 2019/03/10 11:24:17 tsutsui Exp $
 
-SHA1 (nokogiri-1.10.0.gem) = 6f0f4b0cd55dde2a11fb77d5647a029905e087ec
-RMD160 (nokogiri-1.10.0.gem) = b5ff6890cd9a62ae18a985b0d15eb5a1285cee0b
-SHA512 (nokogiri-1.10.0.gem) = 00a9307e5073a2246d51df4ad0567e503ed6064d45a125eedb09803012c7ff77c2068429a549fe42088f0155f711cd1a13081e4b9170ddfb24176ea8ae5d1544
-Size (nokogiri-1.10.0.gem) = 8979968 bytes
+SHA1 (nokogiri-1.10.1.gem) = 175d49e45af21f1913a08b4377a1983cc9b2b781
+RMD160 (nokogiri-1.10.1.gem) = b4b15d81e6266daf7407d1d3271c87e2b54fc97d
+SHA512 (nokogiri-1.10.1.gem) = 3087558eae289c3c25c7a539e7a1a516ad7397128cf59393913dfe95476ea230b3868d0e0ed34e601aad630ccbe359cde548b8560d0216ac7ff69a4818cb011c
+Size (nokogiri-1.10.1.gem) = 8980480 bytes
