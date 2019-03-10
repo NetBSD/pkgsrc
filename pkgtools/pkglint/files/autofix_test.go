@@ -161,7 +161,6 @@ func (s *Suite) Test_Autofix_ReplaceRegex__autofix(c *check.C) {
 	fix.Apply()
 
 	t.CheckOutputLines(
-		"",
 		"AUTOFIX: ~/Makefile:2: Replacing \"X\" with \"Y\".",
 		"-\tline2",
 		"+\tYXXe2")
