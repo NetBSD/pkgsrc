@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2019/02/12 12:56:31 adam Exp $
+# $NetBSD: Makefile,v 1.15 2019/03/10 15:23:50 adam Exp $
 
-DISTNAME=	acme-0.31.0
+DISTNAME=	acme-0.32.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/acme/}
@@ -10,10 +10,10 @@ HOMEPAGE=	https://github.com/certbot/certbot
 COMMENT=	ACME protocol implementation in Python
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-cryptography>=1.2.3:../../security/py-cryptography
-DEPENDS+=	${PYPKGPREFIX}-josepy>=1.0.0:../../security/py-josepy
-DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.15:../../security/py-OpenSSL
+DEPENDS+=	${PYPKGPREFIX}-cryptography>=1.2.3:../../security/py-cryptography
+DEPENDS+=	${PYPKGPREFIX}-josepy>=1.1.0:../../security/py-josepy
+DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-requests>2.10:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=0.3.0:../../devel/py-requests-toolbelt
