@@ -878,7 +878,7 @@ func (cv *VartypeCheck) PkgOptionsVar() {
 //
 // Despite its name, it is more similar to RelativePkgDir than to RelativePkgPath.
 func (cv *VartypeCheck) PkgPath() {
-	pkgsrcdir := relpath(path.Dir(cv.MkLine.Filename), G.Pkgsrc.File("."))
+	pkgsrcdir := cv.MkLine.PathToFile(G.Pkgsrc.File("."))
 	MkLineChecker{cv.MkLine}.CheckRelativePkgdir(pkgsrcdir + "/" + cv.Value)
 }
 

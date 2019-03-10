@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.569 2019/03/09 10:05:10 bsiegert Exp $
+# $NetBSD: Makefile,v 1.570 2019/03/10 19:01:50 rillig Exp $
 
-PKGNAME=	pkglint-5.7.1
-PKGREVISION=	1
+PKGNAME=	pkglint-5.7.2
 CATEGORIES=	pkgtools
 DISTNAME=	tools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=golang/}
@@ -80,4 +79,5 @@ do-install-man: .PHONY
 BUILDLINK_DEPMETHOD.go-check=	full
 
 .include "../../devel/go-check/buildlink3.mk"
+.include "../../security/go-crypto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

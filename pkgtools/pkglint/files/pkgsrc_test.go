@@ -659,3 +659,26 @@ func (s *Suite) Test_Pkgsrc_VariableType__from_mk(c *check.C) {
 		"WARN: ~/category/package/Makefile:21: ABCPATH is used but not defined.",
 		"0 errors and 2 warnings found.")
 }
+
+func (s *Suite) Test_Pkgsrc_guessVariableType__SKIP(c *check.C) {
+	t := s.Init(c)
+
+	mklines := t.NewMkLines("filename.mk",
+		MkRcsID,
+		"MY_CHECK_SKIP=\t*.c \"bad*pathname\"",
+		"MY_CHECK_SKIP+=\t*.cpp",
+		".if ${MY_CHECK_SKIP}",
+		".endif")
+
+	mklines.Check()
+
+	// FIXME: The permissions in guessVariableType say allRuntime, which excludes
+	//  aclpUseLoadtime. Therefore there should be a warning about the VarUse in
+	//  the .if line.
+	//  The check in MkLineChecker.checkVarusePermissions is disabled for guessed types.
+	//
+	// There is no warning for the += operator in line 3 since the variable type
+	// (although guessed) is a list of things, and lists may be appended to.
+	t.CheckOutputLines(
+		"WARN: filename.mk:2: \"\\\"bad*pathname\\\"\" is not a valid pathname mask.")
+}

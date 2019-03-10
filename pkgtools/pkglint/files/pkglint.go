@@ -380,7 +380,7 @@ func (pkglint *Pkglint) checkdirPackage(dir string) {
 
 	// Load the package Makefile and all included files,
 	// to collect all used and defined variables and similar data.
-	mklines := pkg.loadPackageMakefile()
+	mklines, allLines := pkg.loadPackageMakefile()
 	if mklines == nil {
 		return
 	}
@@ -437,7 +437,7 @@ func (pkglint *Pkglint) checkdirPackage(dir string) {
 
 		case path.Base(filename) == "Makefile":
 			pkglint.checkExecutable(filename, st.Mode())
-			pkg.checkfilePackageMakefile(filename, mklines)
+			pkg.checkfilePackageMakefile(filename, mklines, allLines)
 
 		default:
 			pkglint.checkDirent(filename, st.Mode())

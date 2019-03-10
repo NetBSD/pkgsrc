@@ -419,7 +419,7 @@ func (s *Suite) Test_Pkglint_Check(c *check.C) {
 func (s *Suite) Test_resolveVariableRefs__circular_reference(c *check.C) {
 	t := s.Init(c)
 
-	mkline := t.NewMkLine("filename", 1, "GCC_VERSION=${GCC_VERSION}")
+	mkline := t.NewMkLine("filename.mk", 1, "GCC_VERSION=${GCC_VERSION}")
 	G.Pkg = NewPackage(t.File("category/pkgbase"))
 	G.Pkg.vars.Define("GCC_VERSION", mkline)
 
@@ -433,9 +433,9 @@ func (s *Suite) Test_resolveVariableRefs__circular_reference(c *check.C) {
 func (s *Suite) Test_resolveVariableRefs__multilevel(c *check.C) {
 	t := s.Init(c)
 
-	mkline1 := t.NewMkLine("filename", 10, "FIRST=\t${SECOND}")
-	mkline2 := t.NewMkLine("filename", 11, "SECOND=\t${THIRD}")
-	mkline3 := t.NewMkLine("filename", 12, "THIRD=\tgot it")
+	mkline1 := t.NewMkLine("filename.mk", 10, "FIRST=\t${SECOND}")
+	mkline2 := t.NewMkLine("filename.mk", 11, "SECOND=\t${THIRD}")
+	mkline3 := t.NewMkLine("filename.mk", 12, "THIRD=\tgot it")
 	G.Pkg = NewPackage(t.File("category/pkgbase"))
 	defineVar(mkline1, "FIRST")
 	defineVar(mkline2, "SECOND")
@@ -455,7 +455,7 @@ func (s *Suite) Test_resolveVariableRefs__multilevel(c *check.C) {
 func (s *Suite) Test_resolveVariableRefs__special_chars(c *check.C) {
 	t := s.Init(c)
 
-	mkline := t.NewMkLine("filename", 10, "_=x11")
+	mkline := t.NewMkLine("filename.mk", 10, "_=x11")
 	G.Pkg = NewPackage(t.File("category/pkg"))
 	G.Pkg.vars.Define("GST_PLUGINS0.10_TYPE", mkline)
 
@@ -549,6 +549,15 @@ func (s *Suite) Test_CheckLinesMessage__autofix(c *check.C) {
 		"4",
 		"5",
 		"===========================================================================")
+}
+
+func (s *Suite) Test_CheckLinesMessage__common(c *check.C) {
+	t := s.Init(c)
+
+	// FIXME: If there is a MESSAGE.common, it is combined with MESSAGE.
+	//  See meta-pkgs/ruby-redmine-plugins for an example.
+
+	t.CheckOutputEmpty()
 }
 
 // Demonstrates that an ALTERNATIVES file can be tested individually,

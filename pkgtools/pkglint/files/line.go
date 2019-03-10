@@ -105,15 +105,12 @@ func NewLineWhole(filename string) Line {
 // RefTo returns a reference to another line,
 // which can be in the same file or in a different file.
 func (line *LineImpl) RefTo(other Line) string {
-	if line.Filename != other.Filename {
-		return cleanpath(relpath(path.Dir(line.Filename), other.Filename)) + ":" + other.Linenos()
-	}
-	return "line " + other.Linenos()
+	return line.RefToLocation(other.Location)
 }
 
 func (line *LineImpl) RefToLocation(other Location) string {
 	if line.Filename != other.Filename {
-		return cleanpath(relpath(path.Dir(line.Filename), other.Filename)) + ":" + other.Linenos()
+		return line.PathToFile(other.Filename) + ":" + other.Linenos()
 	}
 	return "line " + other.Linenos()
 }

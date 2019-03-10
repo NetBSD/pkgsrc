@@ -749,7 +749,7 @@ func (s *Suite) Test_Logger_Diag__source_duplicates(c *check.C) {
 
 	t.CheckOutputLines(
 		"ERROR: ~/category/package1/distinfo: "+
-			"Patch \"../dependency/patches/patch-aa\" is not recorded. "+
+			"Patch \"../../category/dependency/patches/patch-aa\" is not recorded. "+
 			"Run \""+confMake+" makepatchsum\".",
 		"",
 		">\t--- old file",
@@ -757,7 +757,7 @@ func (s *Suite) Test_Logger_Diag__source_duplicates(c *check.C) {
 			"Each patch must be documented.",
 		"",
 		"ERROR: ~/category/package2/distinfo: "+
-			"Patch \"../dependency/patches/patch-aa\" is not recorded. "+
+			"Patch \"../../category/dependency/patches/patch-aa\" is not recorded. "+
 			"Run \""+confMake+" makepatchsum\".",
 		"",
 		"3 errors and 0 warnings found.",

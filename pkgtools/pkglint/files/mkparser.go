@@ -27,6 +27,7 @@ func (p *MkParser) Rest() string {
 //
 // The text argument is assumed to be after unescaping the # character,
 // which means the # is a normal character and does not introduce a Makefile comment.
+// For VarUse, this distinction is irrelevant.
 func NewMkParser(line Line, text string, emitWarnings bool) *MkParser {
 	G.Assertf((line != nil) == emitWarnings, "line must be given iff emitWarnings is set")
 	return &MkParser{line, textproc.NewLexer(text), emitWarnings}
@@ -120,13 +121,7 @@ func (p *MkParser) VarUse() *MkVarUse {
 		}
 
 		lexer.Reset(mark)
-	}
-
-	if lexer.SkipByte('@') {
-		return &MkVarUse{"@", nil}
-	}
-	if lexer.SkipByte('<') {
-		return &MkVarUse{"<", nil}
+		return nil
 	}
 
 	varname := lexer.NextByteSet(textproc.AlnumU)
@@ -150,6 +145,26 @@ func (p *MkParser) VarUse() *MkVarUse {
 		}
 
 		return &MkVarUse{sprintf("%c", varname), nil}
+	}
+
+	if !lexer.EOF() {
+		symbol := lexer.Rest()[:1]
+		switch symbol {
+		case "$":
+			// This is an escaped dollar character and not a variable use.
+
+		case "@", "<", " ":
+			// These variable names are known to exist.
+			//
+			// Many others are also possible but not used in practice.
+			// In particular, when parsing the :C or :S modifier,
+			// the $ must not be interpreted as a variable name,
+			// even when it looks like $/ could refer to the "/" variable.
+			//
+			// TODO: Find out whether $" is a variable use when it appears in the :M modifier.
+			lexer.Skip(1)
+			return &MkVarUse{symbol, nil}
+		}
 	}
 
 	lexer.Reset(mark)
@@ -466,6 +481,29 @@ func (p *MkParser) mkCondAtom() MkCond {
 					}
 				}
 				lexer.Reset(mark)
+
+				lexer.Skip(1)
+				var rhsText strings.Builder
+			loop:
+				for {
+					m := lexer.Mark()
+					switch {
+					case p.VarUse() != nil,
+						lexer.NextBytesSet(textproc.Alnum) != "",
+						lexer.NextBytesFunc(func(b byte) bool { return b != '"' && b != '\\' }) != "":
+						rhsText.WriteString(lexer.Since(m))
+
+					case lexer.SkipString("\\\""),
+						lexer.SkipString("\\\\"):
+						rhsText.WriteByte(lexer.Since(m)[1])
+
+					case lexer.SkipByte('"'):
+						return &mkCond{CompareVarStr: &MkCondCompareVarStr{lhs, op, rhsText.String()}}
+					default:
+						break loop
+					}
+				}
+				lexer.Reset(mark)
 			}
 		}
 
@@ -524,9 +562,14 @@ func (p *MkParser) mkCondFunc() *mkCond {
 func (p *MkParser) Varname() string {
 	lexer := p.lexer
 
+	// TODO: duplicated code in MatchVarassign
 	mark := lexer.Mark()
 	lexer.SkipByte('.')
-	for p.VarUse() != nil || lexer.NextBytesSet(VarnameBytes) != "" {
+	for lexer.NextBytesSet(VarbaseBytes) != "" || p.VarUse() != nil {
+	}
+	if lexer.SkipByte('.') || hasPrefix(lexer.Since(mark), "SITES_") {
+		for lexer.NextBytesSet(VarparamBytes) != "" || p.VarUse() != nil {
+		}
 	}
 	return lexer.Since(mark)
 }
@@ -799,6 +842,7 @@ func (w *MkCondWalker) Walk(cond MkCond, callback *MkCondCallback) {
 		if callback.VarUse != nil {
 			callback.VarUse(cond.CompareVarStr.Var)
 		}
+		w.walkStr(cond.CompareVarStr.Str, callback)
 
 	case cond.CompareVarNum != nil:
 		if callback.CompareVarNum != nil {
@@ -813,6 +857,18 @@ func (w *MkCondWalker) Walk(cond MkCond, callback *MkCondCallback) {
 		if callback.Call != nil {
 			call := cond.Call
 			callback.Call(call.Name, call.Arg)
+		}
+		w.walkStr(cond.Call.Arg, callback)
+	}
+}
+
+func (w *MkCondWalker) walkStr(str string, callback *MkCondCallback) {
+	if callback.VarUse != nil {
+		tokens := NewMkParser(nil, str, false).MkTokens()
+		for _, token := range tokens {
+			if token.Varuse != nil {
+				callback.VarUse(token.Varuse)
+			}
 		}
 	}
 }

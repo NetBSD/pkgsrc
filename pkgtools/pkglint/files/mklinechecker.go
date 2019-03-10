@@ -423,7 +423,7 @@ func (ck MkLineChecker) CheckVaruse(varuse *MkVarUse, vuc *VarUseContext) {
 	if G.Opts.WarnQuoting && vuc.quoting != VucQuotUnknown && needsQuoting != unknown {
 		// FIXME: Why "Shellword" when there's no indication that this is actually a shell type?
 		//  It's for splitting the value into tokens, taking "double" and 'single' quotes into account.
-		ck.CheckVaruseShellword(varname, vartype, vuc, varuse.Mod(), needsQuoting)
+		ck.CheckVaruseShellword(varname, vartype, vuc, varuse.Mod(), needsQuoting == yes)
 	}
 
 	if G.Pkgsrc.UserDefinedVars.Defined(varname) && !G.Pkgsrc.IsBuildDef(varname) {
@@ -544,17 +544,16 @@ func (ck MkLineChecker) checkVarusePermissions(varname string, vartype *Vartype,
 
 	mkline := ck.MkLine
 	effPerms := vartype.EffectivePermissions(mkline.Basename)
+	if effPerms == aclpUnknown {
+		return
+	}
+	if effPerms.Contains(aclpUseLoadtime) {
+		return
+	}
 
 	// Is the variable used at load time although that is not allowed?
-	directly := false
-	indirectly := false
-	if !effPerms.Contains(aclpUseLoadtime) { // May not be used at load time.
-		if vuc.time == vucTimeParse {
-			directly = true
-		} else if vuc.vartype != nil && vuc.vartype.Union().Contains(aclpUseLoadtime) {
-			indirectly = true
-		}
-	}
+	directly := vuc.time == vucTimeParse
+	indirectly := !directly && vuc.vartype != nil && vuc.vartype.Union().Contains(aclpUseLoadtime)
 
 	if (directly || indirectly) && !vartype.guessed {
 		if tool := G.ToolByVarname(varname); tool != nil {
@@ -566,17 +565,21 @@ func (ck MkLineChecker) checkVarusePermissions(varname string, vartype *Vartype,
 		}
 	}
 
-	if !effPerms.Contains(aclpUseLoadtime) && !effPerms.Contains(aclpUse) {
+	if !effPerms.Contains(aclpUse) {
 		needed := aclpUse
 		if directly || indirectly {
 			needed = aclpUseLoadtime
 		}
 		alternativeFiles := vartype.AllowedFiles(needed)
 		if alternativeFiles != "" {
-			mkline.Warnf("%s may not be used in this file; it would be ok in %s.",
-				varname, alternativeFiles)
+			if G.Mk == nil || G.Mk.FirstTimeSlice("don't-use", varname, mkline.Filename) {
+				mkline.Warnf("%s may not be used in this file; it would be ok in %s.",
+					varname, alternativeFiles)
+			}
 		} else {
-			mkline.Warnf("%s may not be used in any file; it is a write-only variable.", varname)
+			if G.Mk == nil || G.Mk.FirstTimeSlice("write-only", varname) {
+				mkline.Warnf("%s may not be used in any file; it is a write-only variable.", varname)
+			}
 		}
 
 		ck.explainPermissions(varname, vartype)
@@ -654,7 +657,7 @@ func (ck MkLineChecker) warnVaruseLoadTime(varname string, isIndirect bool) {
 
 // CheckVaruseShellword checks whether a variable use of the form ${VAR}
 // or ${VAR:modifiers} is allowed in a certain context.
-func (ck MkLineChecker) CheckVaruseShellword(varname string, vartype *Vartype, vuc *VarUseContext, mod string, needsQuoting YesNoUnknown) {
+func (ck MkLineChecker) CheckVaruseShellword(varname string, vartype *Vartype, vuc *VarUseContext, mod string, needsQuoting bool) {
 	if trace.Tracing {
 		defer trace.Call(varname, vartype, vuc, mod, needsQuoting)()
 	}
@@ -672,7 +675,7 @@ func (ck MkLineChecker) CheckVaruseShellword(varname string, vartype *Vartype, v
 	if mod == ":M*:Q" && !needMstar {
 		mkline.Notef("The :M* modifier is not needed here.")
 
-	} else if needsQuoting == yes {
+	} else if needsQuoting {
 		modNoQ := strings.TrimSuffix(mod, ":Q")
 		modNoM := strings.TrimSuffix(modNoQ, ":M*")
 		correctMod := modNoM + ifelseStr(needMstar, ":M*:Q", ":Q")
@@ -744,14 +747,12 @@ func (ck MkLineChecker) CheckVaruseShellword(varname string, vartype *Vartype, v
 		}
 	}
 
-	if hasSuffix(mod, ":Q") && needsQuoting != yes {
+	if hasSuffix(mod, ":Q") && !needsQuoting {
 		bad := "${" + varname + mod + "}"
 		good := "${" + varname + strings.TrimSuffix(mod, ":Q") + "}"
 
 		fix := mkline.Line.Autofix()
-		if needsQuoting == no {
-			fix.Notef("The :Q operator isn't necessary for ${%s} here.", varname)
-		}
+		fix.Notef("The :Q operator isn't necessary for ${%s} here.", varname)
 		fix.Explain(
 			"Many variables in pkgsrc do not need the :Q operator since they",
 			"are not expected to contain whitespace or other special characters.",
@@ -780,17 +781,13 @@ func (ck MkLineChecker) checkVaruseDeprecated(varuse *MkVarUse) {
 }
 
 func (ck MkLineChecker) checkVarassignDecreasingVersions() {
-	if trace.Tracing {
-		defer trace.Call0()()
-	}
-
 	mkline := ck.MkLine
 	strVersions := mkline.Fields()
 	intVersions := make([]int, len(strVersions))
 	for i, strVersion := range strVersions {
 		iver, err := strconv.Atoi(strVersion)
 		if err != nil || !(iver > 0) {
-			mkline.Errorf("All values for %s must be positive integers.", mkline.Varname())
+			mkline.Errorf("Value %q for %s must be a positive integer.", strVersion, mkline.Varname())
 			return
 		}
 		intVersions[i] = iver
@@ -798,7 +795,8 @@ func (ck MkLineChecker) checkVarassignDecreasingVersions() {
 
 	for i, ver := range intVersions {
 		if i > 0 && ver >= intVersions[i-1] {
-			mkline.Warnf("The values for %s should be in decreasing order.", mkline.Varname())
+			mkline.Warnf("The values for %s should be in decreasing order (%d before %d).",
+				mkline.Varname(), ver, intVersions[i-1])
 			G.Explain(
 				"If they aren't, it may be possible that needless versions of",
 				"packages are installed.")
@@ -858,27 +856,37 @@ func (ck MkLineChecker) checkVarassignLeftDeprecated() {
 	}
 }
 
+// checkVarassignLeftNotUsed checks whether the left-hand side of a variable
+// assignment is not used. If it is unused and also doesn't have a predefined
+// data type, it may be a spelling mistake.
 func (ck MkLineChecker) checkVarassignLeftNotUsed() {
 	varname := ck.MkLine.Varname()
 	varcanon := varnameCanon(varname)
 
-	// If the variable is not used and is untyped, it may be a spelling mistake.
 	if ck.MkLine.Op() == opAssignEval && varname == strings.ToLower(varname) {
 		if trace.Tracing {
 			trace.Step1("%s might be unused unless it is an argument to a procedure file.", varname)
 		}
-
-	} else if !varIsUsedSimilar(varname) {
-		if vartypes := G.Pkgsrc.vartypes; vartypes[varname] != nil || vartypes[varcanon] != nil {
-			// Ok
-		} else if deprecated := G.Pkgsrc.Deprecated; deprecated[varname] != "" || deprecated[varcanon] != "" {
-			// Ok
-		} else if G.Mk != nil && !G.Mk.FirstTimeSlice("defined but not used: ", varname) {
-			// Skip
-		} else {
-			ck.MkLine.Warnf("%s is defined but not used.", varname)
-		}
+		return
 	}
+
+	if varIsUsedSimilar(varname) {
+		return
+	}
+
+	if vartypes := G.Pkgsrc.vartypes; vartypes[varname] != nil || vartypes[varcanon] != nil {
+		return
+	}
+
+	if deprecated := G.Pkgsrc.Deprecated; deprecated[varname] != "" || deprecated[varcanon] != "" {
+		return
+	}
+
+	if G.Mk != nil && !G.Mk.FirstTimeSlice("defined but not used: ", varname) {
+		return
+	}
+
+	ck.MkLine.Warnf("%s is defined but not used.", varname)
 }
 
 // checkVarassignRightVaruse checks that in a variable assignment,
@@ -1070,7 +1078,7 @@ func (ck MkLineChecker) checkVartype(varname string, op MkOperator, value, comme
 	case value == "":
 		break
 
-	case vartype.kindOfList == lkShell:
+	default:
 		words, _ := splitIntoMkWords(mkline.Line, value)
 		for _, word := range words {
 			ck.CheckVartypeBasic(varname, vartype.basicType, op, word, comment, vartype.guessed)
@@ -1146,26 +1154,34 @@ func (ck MkLineChecker) checkDirectiveCond() {
 		return
 	}
 
-	checkCompareVarStr := func(varuse *MkVarUse, op string, value string) {
+	checkCompareVarStr := func(varuse *MkVarUse, op string, str string) {
 		varname := varuse.varname
 		varmods := varuse.modifiers
 		switch len(varmods) {
 		case 0:
-			ck.checkCompareVarStr(varname, op, value)
+			ck.checkCompareVarStr(varname, op, str)
 
 		case 1:
-			if m, _, _ := varmods[0].MatchMatch(); m && value != "" {
-				ck.checkVartype(varname, opUseMatch, value, "")
+			if m, _, pattern := varmods[0].MatchMatch(); m {
+				ck.checkVartype(varname, opUseMatch, pattern, "")
+
+				// After applying the :M or :N modifier, every expression may end up empty,
+				// regardless of its data type. Therefore there's no point in type-checking that case.
+				if str != "" {
+					ck.checkVartype(varname, opUseCompare, str, "")
+				}
 			}
 
 		default:
 			// This case covers ${VAR:Mfilter:O:u} or similar uses in conditions.
-			// To check these properly, pkglint first needs to know the most common modifiers and how they interact.
-			// As of November 2018, the modifiers are not modeled.
+			// To check these properly, pkglint first needs to know the most common
+			// modifiers and how they interact.
+			// As of March 2019, the modifiers are not modeled.
 			// The following tracing statement makes it easy to discover these cases,
 			// in order to decide whether checking them is worthwhile.
 			if trace.Tracing {
-				trace.Stepf("checkCompareVarStr ${%s%s} %s %s", varuse.varname, varuse.Mod(), op, value)
+				trace.Stepf("checkCompareVarStr ${%s%s} %s %s",
+					varuse.varname, varuse.Mod(), op, str)
 			}
 		}
 	}
@@ -1285,10 +1301,12 @@ func (ck MkLineChecker) CheckRelativePath(relativePath string, mustExist bool) {
 		return
 	}
 
-	abs := resolvedPath
-	if !filepath.IsAbs(abs) {
-		abs = path.Dir(mkline.Filename) + "/" + abs
+	if filepath.IsAbs(resolvedPath) {
+		mkline.Errorf("The path %q must be relative.", resolvedPath)
+		return
 	}
+
+	abs := path.Dir(mkline.Filename) + "/" + resolvedPath
 	if _, err := os.Stat(abs); err != nil {
 		if mustExist && !(G.Mk != nil && G.Mk.indentation.IsCheckedFile(resolvedPath)) {
 			mkline.Errorf("Relative path %q does not exist.", resolvedPath)
@@ -1305,6 +1323,7 @@ func (ck MkLineChecker) CheckRelativePath(relativePath string, mustExist bool) {
 		// From a package to another package.
 	case hasPrefix(relativePath, "../mk/") && relpath(path.Dir(mkline.Filename), G.Pkgsrc.File(".")) == "..":
 		// For category Makefiles.
+		// TODO: Or from a pkgsrc wip package to wip/mk.
 	default:
 		mkline.Warnf("Invalid relative path %q.", relativePath)
 		// TODO: Explain this warning.
