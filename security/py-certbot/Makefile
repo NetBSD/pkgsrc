@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2019/02/12 12:56:31 adam Exp $
+# $NetBSD: Makefile,v 1.11 2019/03/10 15:23:50 adam Exp $
 
-DISTNAME=	certbot-0.31.0
+DISTNAME=	certbot-0.32.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/certbot/}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-acme>=0.29.0:../../security/py-acme
 DEPENDS+=	${PYPKGPREFIX}-configargparse>=0.9.3:../../devel/py-configargparse
 DEPENDS+=	${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=1.2.3:../../security/py-cryptography
-DEPENDS+=	${PYPKGPREFIX}-josepy-[0-9]*:../../security/py-josepy
+DEPENDS+=	${PYPKGPREFIX}-josepy>=1.1.0:../../security/py-josepy
 DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 DEPENDS+=	${PYPKGPREFIX}-parsedatetime>=2.0:../../time/py-parsedatetime
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
