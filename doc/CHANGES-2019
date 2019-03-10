@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1198 2019/03/10 14:20:16 bsiegert Exp $
+$NetBSD: CHANGES-2019,v 1.1199 2019/03/10 15:24:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1994,3 +1994,13 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-xdis to 3.8.10 [adam 2019-03-10]
 	Updated www/py-paste to 3.0.8 [adam 2019-03-10]
 	Updated shells/mksh to 57 [bsiegert 2019-03-10]
+	Updated security/py-acme to 0.32.0 [adam 2019-03-10]
+	Updated security/py-certbot to 0.32.0 [adam 2019-03-10]
+	Updated security/py-certbot-apache to 0.32.0 [adam 2019-03-10]
+	Updated security/py-certbot-dns-luadns to 0.32.0 [adam 2019-03-10]
+	Updated security/py-certbot-dns-nsone to 0.32.0 [adam 2019-03-10]
+	Updated security/py-certbot-dns-ovh to 0.32.0 [adam 2019-03-10]
+	Updated security/py-certbot-dns-rfc2136 to 0.32.0 [adam 2019-03-10]
+	Updated security/py-certbot-dns-route53 to 0.32.0 [adam 2019-03-10]
+	Updated security/py-certbot-dns-sakuracloud to 0.32.0 [adam 2019-03-10]
+	Updated security/py-certbot-nginx to 0.32.0 [adam 2019-03-10]
