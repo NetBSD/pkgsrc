@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2019/01/24 11:17:37 morr Exp $
+@comment $NetBSD: PLIST,v 1.45 2019/03/10 18:45:45 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -286,6 +286,7 @@ share/vim/${VIM_SUBDIR}/evim.vim
 share/vim/${VIM_SUBDIR}/filetype.vim
 share/vim/${VIM_SUBDIR}/ftoff.vim
 share/vim/${VIM_SUBDIR}/ftplugin.vim
+share/vim/${VIM_SUBDIR}/ftplugin/8th.vim
 share/vim/${VIM_SUBDIR}/ftplugin/README.txt
 share/vim/${VIM_SUBDIR}/ftplugin/a2ps.vim
 share/vim/${VIM_SUBDIR}/ftplugin/aap.vim
@@ -406,6 +407,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/manconf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/markdown.vim
 share/vim/${VIM_SUBDIR}/ftplugin/matlab.vim
 share/vim/${VIM_SUBDIR}/ftplugin/mf.vim
+share/vim/${VIM_SUBDIR}/ftplugin/mma.vim
 share/vim/${VIM_SUBDIR}/ftplugin/modconf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/mp.vim
 share/vim/${VIM_SUBDIR}/ftplugin/mplayerconf.vim
@@ -668,6 +670,7 @@ share/vim/${VIM_SUBDIR}/pack/dist/opt/dvorak/dvorak/enable.vim
 share/vim/${VIM_SUBDIR}/pack/dist/opt/dvorak/plugin/dvorak.vim
 share/vim/${VIM_SUBDIR}/pack/dist/opt/editexisting/plugin/editexisting.vim
 share/vim/${VIM_SUBDIR}/pack/dist/opt/justify/plugin/justify.vim
+share/vim/${VIM_SUBDIR}/pack/dist/opt/matchit/autoload/matchit.vim
 share/vim/${VIM_SUBDIR}/pack/dist/opt/matchit/doc/matchit.txt
 share/vim/${VIM_SUBDIR}/pack/dist/opt/matchit/doc/tags
 share/vim/${VIM_SUBDIR}/pack/dist/opt/matchit/plugin/matchit.vim
@@ -736,6 +739,7 @@ share/vim/${VIM_SUBDIR}/spell/spell.vim
 share/vim/${VIM_SUBDIR}/spell/yi.vim
 share/vim/${VIM_SUBDIR}/synmenu.vim
 share/vim/${VIM_SUBDIR}/syntax/2html.vim
+share/vim/${VIM_SUBDIR}/syntax/8th.vim
 share/vim/${VIM_SUBDIR}/syntax/README.txt
 share/vim/${VIM_SUBDIR}/syntax/a2ps.vim
 share/vim/${VIM_SUBDIR}/syntax/a65.vim
