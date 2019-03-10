@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/07/27 06:49:25 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2019/03/10 02:33:05 wen Exp $
 
-DISTNAME=	stan-math-2.17.1
+DISTNAME=	stan-math-2.18.1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=stan-dev/}
 GITHUB_PROJECT=	math
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	boost-headers>=1.66.0:../../devel/boost-headers
 DEPENDS+=	eigen3>=3.3.3:../../math/eigen3
-DEPENDS+=	sundials>=3.1.1:../../math/sundials
+DEPENDS+=	sundials>=4.1.0:../../math/sundials
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
