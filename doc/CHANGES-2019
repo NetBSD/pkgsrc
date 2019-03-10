@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1195 2019/03/10 12:41:20 fox Exp $
+$NetBSD: CHANGES-2019,v 1.1196 2019/03/10 13:38:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -1989,3 +1989,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/ruby-nokogiri to 1.10.1 [tsutsui 2019-03-10]
 	Updated textproc/mandoc to 1.14.5 [wiz 2019-03-10]
 	Updated audio/fasttracker2 to 2.140 [fox 2019-03-10]
+	Updated textproc/py-sphinx to 1.8.5 [adam 2019-03-10]
+	Updated devel/py-isort to 4.3.14 [adam 2019-03-10]
