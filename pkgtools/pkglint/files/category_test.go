@@ -290,8 +290,11 @@ func (s *Suite) Test_CheckdirCategory__comment_at_the_top(c *check.C) {
 
 	CheckdirCategory(t.File("category"))
 
-	// FIXME: Wow. These are quite a few warnings and errors, just because there is
-	//  an additional comment above the COMMENT definition.
+	// These are quite a few warnings and errors, just because there is
+	// an additional comment above the COMMENT definition.
+	// On the other hand, the category Makefiles are so simple and their
+	// structure has been fixed for at least 20 years, therefore this case
+	// is rather exotic anyway.
 	t.CheckOutputLines(
 		"ERROR: ~/category/Makefile:3: COMMENT= line expected.",
 		"NOTE: ~/category/Makefile:2: Empty line expected after this line.",

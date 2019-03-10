@@ -92,7 +92,6 @@ func (s *Suite) TearDownTest(c *check.C) {
 		_, _ = fmt.Fprintf(os.Stderr, "Cannot chdir back to previous dir: %s", err)
 	}
 
-	G = Pkglint{} // unusable because of missing Logger.out and Logger.err
 	if out := t.Output(); out != "" {
 		var msg strings.Builder
 		msg.WriteString("\n")
@@ -106,8 +105,11 @@ func (s *Suite) TearDownTest(c *check.C) {
 		_, _ = fmt.Fprintf(&msg, "\n")
 		_, _ = os.Stderr.WriteString(msg.String())
 	}
+
 	t.tmpdir = ""
 	t.DisableTracing()
+
+	G = Pkglint{} // unusable because of missing Logger.out and Logger.err
 }
 
 var _ = check.Suite(new(Suite))
@@ -196,6 +198,36 @@ func (t *Tester) SetUpFileMkLines(relativeFileName string, lines ...string) MkLi
 	return LoadMk(filename, MustSucceed)
 }
 
+// LoadMkInclude loads the given Makefile fragment and all the files it includes,
+// merging all the lines into a single MkLines object.
+//
+// This is useful for testing code related to Package.readMakefile.
+func (t *Tester) LoadMkInclude(relativeFileName string) MkLines {
+	var lines []Line
+
+	// TODO: Include files with multiple-inclusion guard only once.
+	// TODO: Include files without multiple-inclusion guard as often as needed.
+	// TODO: Set an upper limit, to prevent denial of service.
+
+	var load func(filename string)
+	load = func(filename string) {
+		for _, mkline := range NewMkLines(Load(filename, MustSucceed)).mklines {
+			lines = append(lines, mkline.Line)
+
+			if mkline.IsInclude() {
+				included := cleanpath(path.Dir(filename) + "/" + mkline.IncludedFile())
+				load(included)
+			}
+		}
+	}
+
+	load(t.File(relativeFileName))
+
+	// This assumes that the test files do not contain parse errors.
+	// Otherwise the diagnostics would appear twice.
+	return NewMkLines(NewLines(t.File(relativeFileName), lines))
+}
+
 // SetUpPkgsrc sets up a minimal but complete pkgsrc installation in the
 // temporary folder, so that pkglint runs without any errors.
 // Individual files may be overwritten by calling other SetUp* methods.
@@ -256,6 +288,8 @@ func (t *Tester) SetUpPkgsrc() {
 	// Those tools that are added to USE_TOOLS in bsd.prefs.mk may be
 	// used at load time by packages.
 	t.CreateFileLines("mk/bsd.prefs.mk",
+		MkRcsID)
+	t.CreateFileLines("mk/bsd.fast.prefs.mk",
 		MkRcsID)
 
 	// Category Makefiles require this file for the common definitions.
@@ -486,6 +520,69 @@ func (t *Tester) Remove(relativeFileName string) {
 	G.fileCache.Evict(filename)
 }
 
+// SetUpHierarchy provides a function for creating hierarchies of MkLines
+// that include each other.
+// The hierarchy is created only in memory, nothing is written to disk.
+//
+//  include, get := t.SetUpHierarchy()
+//
+//  include("including.mk",
+//      include("other.mk",
+//          "VAR= other"),
+//      include("module.mk",
+//          "VAR= module",
+//          include("version.mk",
+//              "VAR= version"),
+//          include("env.mk",
+//              "VAR= env")))
+//
+//  mklines := get("including.mk")
+//  module := get("module.mk")
+func (t *Tester) SetUpHierarchy() (
+	include func(filename string, args ...interface{}) MkLines,
+	get func(string) MkLines) {
+
+	files := map[string]MkLines{}
+
+	// FIXME: Define where the filename is relative to: to the file, or to the current directory.
+	include = func(filename string, args ...interface{}) MkLines {
+		var lines []Line
+		lineno := 1
+
+		addLine := func(text string) {
+			lines = append(lines, t.NewLine(filename, lineno, text))
+			lineno++
+		}
+
+		for _, arg := range args {
+			switch arg := arg.(type) {
+			case string:
+				addLine(arg)
+			case MkLines:
+				text := sprintf(".include %q", arg.lines.FileName)
+				addLine(text)
+				lines = append(lines, arg.lines.Lines...)
+			default:
+				panic("invalid type")
+			}
+		}
+
+		mklines := NewMkLines(NewLines(filename, lines))
+		// FIXME: This filename must be relative to the including file.
+		G.Assertf(files[filename] == nil, "MkLines with name %q already exist.", filename)
+		// FIXME: This filename must be relative to the base directory.
+		files[filename] = mklines
+		return mklines
+	}
+
+	get = func(filename string) MkLines {
+		G.Assertf(files[filename] != nil, "MkLines with name %q doesn't exist.", filename)
+		return files[filename]
+	}
+
+	return
+}
+
 // Check delegates a check to the check.Check function.
 // Thereby, there is no need to distinguish between c.Check and t.Check
 // in the test code.
@@ -584,6 +681,11 @@ func (t *Tester) NewLine(filename string, lineno int, text string) Line {
 
 // NewMkLine creates an in-memory line in the Makefile format with the given text.
 func (t *Tester) NewMkLine(filename string, lineno int, text string) MkLine {
+	basename := path.Base(filename)
+	G.Assertf(
+		hasSuffix(basename, ".mk") || basename == "Makefile" || hasPrefix(basename, "Makefile."),
+		"filename %q must be realistic, otherwise the variable permissions are wrong", filename)
+
 	return NewMkLine(t.NewLine(filename, lineno, text))
 }
 
@@ -616,6 +718,11 @@ func (t *Tester) NewLinesAt(filename string, firstLine int, texts ...string) Lin
 // No actual file is created for the lines;
 // see SetUpFileMkLines for loading Makefile fragments with line continuations.
 func (t *Tester) NewMkLines(filename string, lines ...string) MkLines {
+	basename := path.Base(filename)
+	G.Assertf(
+		hasSuffix(basename, ".mk") || basename == "Makefile" || hasPrefix(basename, "Makefile."),
+		"filename %q must be realistic, otherwise the variable permissions are wrong", filename)
+
 	var rawText strings.Builder
 	for _, line := range lines {
 		rawText.WriteString(line)
@@ -633,13 +740,18 @@ func (t *Tester) Output() string {
 	t.stdout.Reset()
 	t.stderr.Reset()
 	G.Logger.logged = Once{}
-
-	output := stdout + stderr
-	if t.tmpdir != "" {
-		output = strings.Replace(output, t.tmpdir, "~", -1)
-	} else {
-		panic("asdfgsfas")
+	if G.Logger.out != nil { // Necessary because Main resets the G variable.
+		G.Logger.out.state = 0 // Prevent an empty line at the beginning of the next output.
+		G.Logger.err.state = 0
 	}
+
+	G.Assertf(t.tmpdir != "", "Tester must be initialized before checking the output.")
+	output := stdout + stderr
+	// TODO: The explanations are wrapped. Because of this it can happen
+	//  that t.tmpdir is spread among multiple lines if that directory
+	//  name contains spaces, which is common on Windows. A temporary
+	//  workaround is to set TMP=/path/without/spaces.
+	output = strings.Replace(output, t.tmpdir, "~", -1)
 	return output
 }
 

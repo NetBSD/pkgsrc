@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2019/01/26 16:31:33 rillig Exp $
+@comment $NetBSD: PLIST,v 1.11 2019/03/10 19:01:50 rillig Exp $
 bin/pkglint
 gopkg/pkg/${GO_PLATFORM}/netbsd.org/pkglint.a
 gopkg/pkg/${GO_PLATFORM}/netbsd.org/pkglint/getopt.a
@@ -63,6 +63,8 @@ gopkg/src/netbsd.org/pkglint/mkshtypes.go
 gopkg/src/netbsd.org/pkglint/mkshtypes_test.go
 gopkg/src/netbsd.org/pkglint/mkshwalker.go
 gopkg/src/netbsd.org/pkglint/mkshwalker_test.go
+gopkg/src/netbsd.org/pkglint/mktokenslexer.go
+gopkg/src/netbsd.org/pkglint/mktokenslexer_test.go
 gopkg/src/netbsd.org/pkglint/mktypes.go
 gopkg/src/netbsd.org/pkglint/mktypes_test.go
 gopkg/src/netbsd.org/pkglint/options.go
@@ -81,6 +83,8 @@ gopkg/src/netbsd.org/pkglint/pkgver/vercmp.go
 gopkg/src/netbsd.org/pkglint/pkgver/vercmp_test.go
 gopkg/src/netbsd.org/pkglint/plist.go
 gopkg/src/netbsd.org/pkglint/plist_test.go
+gopkg/src/netbsd.org/pkglint/redundantscope.go
+gopkg/src/netbsd.org/pkglint/redundantscope_test.go
 gopkg/src/netbsd.org/pkglint/regex/regex.go
 gopkg/src/netbsd.org/pkglint/shell.go
 gopkg/src/netbsd.org/pkglint/shell.y
