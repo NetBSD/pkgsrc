@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2018/10/01 15:53:58 nia Exp $
+# $NetBSD: Makefile,v 1.37 2019/03/10 19:16:46 wiz Exp $
 
 DISTNAME=	chrony-3.4
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://download.tuxfamily.org/chrony/
 
@@ -27,8 +28,8 @@ RCD_SCRIPTS=		chronyd
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${EGFILES:S/^/examples\//} conf.c
-SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
-SUBST_SED.paths+=	-e 's,@VARBASE@,${VARBASE},g'
+SUBST_VARS.paths+=	PKG_SYSCONFDIR
+SUBST_VARS.paths+=	VARBASE
 SUBST_STAGE.paths=	pre-configure
 
 post-install:
@@ -36,6 +37,8 @@ post-install:
 	    "${DESTDIR}${EGDIR}/chrony.conf.example";
 	${INSTALL_DATA} "${WRKSRC}/examples/chrony.keys.example" \
 	    "${DESTDIR}${EGDIR}/chrony.keys.example";
+
+.include "options.mk"
 
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
