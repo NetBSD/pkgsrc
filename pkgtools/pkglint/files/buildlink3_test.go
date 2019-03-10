@@ -474,22 +474,13 @@ func (s *Suite) Test_CheckLinesBuildlink3Mk__PKGBASE_with_unknown_variable(c *ch
 	t.CheckOutputLines(
 		"WARN: buildlink3.mk:3: LICENSE may not be used in any file; it is a write-only variable.",
 		"WARN: buildlink3.mk:3: The variable LICENSE should be quoted as part of a shell word.",
-
 		"WARN: buildlink3.mk:8: LICENSE should not be evaluated at load time.",
-		"WARN: buildlink3.mk:8: LICENSE may not be used in any file; it is a write-only variable.",
 		"WARN: buildlink3.mk:8: LICENSE should not be evaluated indirectly at load time.",
-		"WARN: buildlink3.mk:8: LICENSE may not be used in any file; it is a write-only variable.",
 		"WARN: buildlink3.mk:8: The variable LICENSE should be quoted as part of a shell word.",
-
 		"WARN: buildlink3.mk:9: LICENSE should not be evaluated at load time.",
-		"WARN: buildlink3.mk:9: LICENSE may not be used in any file; it is a write-only variable.",
 		"WARN: buildlink3.mk:9: LICENSE should not be evaluated indirectly at load time.",
-		"WARN: buildlink3.mk:9: LICENSE may not be used in any file; it is a write-only variable.",
 		"WARN: buildlink3.mk:9: The variable LICENSE should be quoted as part of a shell word.",
-
-		"WARN: buildlink3.mk:13: LICENSE may not be used in any file; it is a write-only variable.",
 		"WARN: buildlink3.mk:13: The variable LICENSE should be quoted as part of a shell word.",
-
 		"WARN: buildlink3.mk:3: Please replace \"${LICENSE}\" with a simple string (also in other variables in this file).")
 }
 
@@ -640,13 +631,9 @@ func (s *Suite) Test_Buildlink3Checker_checkVarassign__other_variables(c *check.
 
 	G.Check(t.File("category/package"))
 
-	// FIXME: Why is appending to LDFLAGS forbidden? It sounds useful.
 	t.CheckOutputLines(
-		"WARN: ~/category/package/buildlink3.mk:14: "+
-			"The variable LDFLAGS.NetBSD may not be appended to in this file; "+
-			"it would be ok in Makefile, Makefile.common, options.mk or *.mk.",
-		"WARN: ~/category/package/buildlink3.mk:16: "+
-			"Only buildlink variables for \"package\", "+
+		"WARN: ~/category/package/buildlink3.mk:16: " +
+			"Only buildlink variables for \"package\", " +
 			"not \"other\" may be set in this file.")
 }
 

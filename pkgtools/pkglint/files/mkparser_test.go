@@ -192,6 +192,11 @@ func (s *Suite) Test_MkParser_VarUse(c *check.C) {
 	test("${PKGNAME:C/-[0-9].*$/-[0-9]*/}",
 		varuse("PKGNAME", "C/-[0-9].*$/-[0-9]*/"))
 
+	// TODO: Does the $@ refer to ${.TARGET}, or is it just an unmatchable
+	//  regular expression?
+	test("${PKGNAME:C/$@/target?/}",
+		varuse("PKGNAME", "C/$@/target?/"))
+
 	test("${PKGNAME:S/py${_PYTHON_VERSION}/py${i}/:C/-[0-9].*$/-[0-9]*/}",
 		varuse("PKGNAME", "S/py${_PYTHON_VERSION}/py${i}/", "C/-[0-9].*$/-[0-9]*/"))
 
@@ -331,6 +336,12 @@ func (s *Suite) Test_MkParser_VarUse(c *check.C) {
 
 	t.CheckOutputLines(
 		"WARN: Test_MkParser_VarUse.mk:1: Modifier ${PLIST_SUBST_VARS:@var@...@} is missing the final \"@\".")
+
+	// Unfinished variable use
+	testRest("${", nil, "${")
+
+	// Unfinished nested variable use
+	testRest("${${", nil, "${${")
 }
 
 func (s *Suite) Test_MkParser_VarUse__ambiguous(c *check.C) {
@@ -411,6 +422,13 @@ func (s *Suite) Test_MkParser_MkCond(c *check.C) {
 
 	test("\"${pkg}\" == \"${name}\"",
 		&mkCond{CompareVarVar: &MkCondCompareVarVar{varuse("pkg"), "==", varuse("name")}})
+
+	// The right-hand side is not analyzed further to keep the data types simple.
+	test("${ABC} == \"${A}B${C}\"",
+		&mkCond{CompareVarStr: &MkCondCompareVarStr{varuse("ABC"), "==", "${A}B${C}"}})
+
+	test("${ABC} == \"${A}\\\"${B}\\\\${C}$${shellvar}${D}\"",
+		&mkCond{CompareVarStr: &MkCondCompareVarStr{varuse("ABC"), "==", "${A}\"${B}\\${C}$${shellvar}${D}"}})
 
 	test("exists(/etc/hosts)",
 		&mkCond{Call: &MkCondCall{"exists", "/etc/hosts"}})
@@ -776,9 +794,11 @@ func (s *Suite) Test_MkCondWalker_Walk(c *check.C) {
 	mkline := t.NewMkLine("Makefile", 4, ""+
 		".if ${VAR:Mmatch} == ${OTHER} || "+
 		"${STR} == Str || "+
+		"${VAR} == \"${PRE}text${POST}\" || "+
 		"${NUM} == 3 && "+
 		"defined(VAR) && "+
 		"!exists(file.mk) && "+
+		"exists(${FILE}) && "+
 		"(((${NONEMPTY})))")
 	var events []string
 
@@ -830,11 +850,17 @@ func (s *Suite) Test_MkCondWalker_Walk(c *check.C) {
 		"        varUse  OTHER",
 		" compareVarStr  STR, Str",
 		"        varUse  STR",
+		" compareVarStr  VAR, ${PRE}text${POST}",
+		"        varUse  VAR",
+		"        varUse  PRE",
+		"        varUse  POST",
 		" compareVarNum  NUM, 3",
 		"        varUse  NUM",
 		"       defined  VAR",
 		"        varUse  VAR",
 		"          call  exists, file.mk",
+		"          call  exists, ${FILE}",
+		"        varUse  FILE",
 		"           var  NONEMPTY",
 		"        varUse  NONEMPTY"})
 }

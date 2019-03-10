@@ -37,7 +37,7 @@ func (src *Pkgsrc) InitVartypes() {
 	pkg := func(varname string, kindOfList KindOfList, checker *BasicType) {
 		acl(varname, kindOfList, checker, ""+
 			"Makefile: set, use; "+
-			"buildlink3.mk, builtin.mk:; "+
+			"buildlink3.mk, builtin.mk: none; "+
 			"Makefile.*, *.mk: default, set, use")
 	}
 
@@ -45,7 +45,7 @@ func (src *Pkgsrc) InitVartypes() {
 	pkgload := func(varname string, kindOfList KindOfList, checker *BasicType) {
 		acl(varname, kindOfList, checker, ""+
 			"Makefile: set, use, use-loadtime; "+
-			"buildlink3.mk, builtin.mk:; "+
+			"buildlink3.mk, builtin.mk: none; "+
 			"Makefile.*, *.mk: default, set, use, use-loadtime")
 	}
 
@@ -54,8 +54,16 @@ func (src *Pkgsrc) InitVartypes() {
 	pkglist := func(varname string, kindOfList KindOfList, checker *BasicType) {
 		acl(varname, kindOfList, checker, ""+
 			"Makefile, Makefile.common, options.mk: append, default, set, use; "+
-			"buildlink3.mk, builtin.mk:; "+
+			"buildlink3.mk, builtin.mk: none; "+
 			"*.mk: append, default, use")
+	}
+
+	// Some package-defined lists may also be appended in buildlink3.mk files,
+	// for example platform-specific CFLAGS and LDFLAGS.
+	pkglistbl3 := func(varname string, kindOfList KindOfList, checker *BasicType) {
+		acl(varname, kindOfList, checker, ""+
+			"Makefile, Makefile.common, options.mk: append, default, set, use; "+
+			"buildlink3.mk, builtin.mk, *.mk: append, default, use")
 	}
 
 	// sys declares a user-defined or system-defined variable that must not be modified by packages.
@@ -63,12 +71,12 @@ func (src *Pkgsrc) InitVartypes() {
 	// It also must not be used in buildlink3.mk and builtin.mk files or at load-time,
 	// since the system/user preferences may not have been loaded when these files are included.
 	sys := func(varname string, kindOfList KindOfList, checker *BasicType) {
-		acl(varname, kindOfList, checker, "buildlink3.mk:; *: use")
+		acl(varname, kindOfList, checker, "buildlink3.mk: none; *: use")
 	}
 
 	// usr declares a user-defined variable that must not be modified by packages.
 	usr := func(varname string, kindOfList KindOfList, checker *BasicType) {
-		acl(varname, kindOfList, checker, "buildlink3.mk:; *: use-loadtime, use")
+		acl(varname, kindOfList, checker, "buildlink3.mk: none; *: use-loadtime, use")
 	}
 
 	// sysload declares a system-provided variable that may already be used at load time.
@@ -81,7 +89,7 @@ func (src *Pkgsrc) InitVartypes() {
 	}
 
 	cmdline := func(varname string, kindOfList KindOfList, checker *BasicType) {
-		acl(varname, kindOfList, checker, "buildlink3.mk, builtin.mk:; *: use-loadtime, use")
+		acl(varname, kindOfList, checker, "buildlink3.mk, builtin.mk: none; *: use-loadtime, use")
 	}
 
 	compilerLanguages := enum(
@@ -100,7 +108,10 @@ func (src *Pkgsrc) InitVartypes() {
 					}
 				}
 			}
-			for _, language := range [...]string{"ada", "c", "c99", "c++", "c++11", "fortran", "fortran77", "java", "objc", "obj-c++"} {
+			alwaysAvailable := [...]string{
+				"ada", "c", "c99", "c++", "c++11", "c++14",
+				"fortran", "fortran77", "java", "objc", "obj-c++"}
+			for _, language := range alwaysAvailable {
 				languages[language] = true
 			}
 
@@ -153,8 +164,8 @@ func (src *Pkgsrc) InitVartypes() {
 		return enum(defval)
 	}
 
-	// enumFromDirs reads the directories from category, takes all
-	// that have a single number in them and ranks them from earliest
+	// enumFromDirs reads the directories from category, takes all that have
+	// a single number in them (such as php72) and ranks them from earliest
 	// to latest.
 	//
 	// If the directories cannot be found, the allowed values are taken
@@ -232,7 +243,7 @@ func (src *Pkgsrc) InitVartypes() {
 	usr("CROSSBASE", lkNone, BtPathname)
 	usr("VARBASE", lkNone, BtPathname)
 	acl("X11_TYPE", lkNone, enum("modular native"), "*: use-loadtime, use")
-	usr("X11BASE", lkNone, BtPathname)
+	acl("X11BASE", lkNone, BtPathname, "*: use-loadtime, use")
 	usr("MOTIFBASE", lkNone, BtPathname)
 	usr("PKGINFODIR", lkNone, BtPathname)
 	usr("PKGMANDIR", lkNone, BtPathname)
@@ -294,7 +305,7 @@ func (src *Pkgsrc) InitVartypes() {
 	usrpkg := func(varname string, kindOfList KindOfList, checker *BasicType) {
 		acl(varname, kindOfList, checker, ""+
 			"Makefile: default, set, use, use-loadtime; "+
-			"buildlink3.mk, builtin.mk:; "+
+			"buildlink3.mk, builtin.mk: none; "+
 			"Makefile.*, *.mk: default, set, use, use-loadtime; "+
 			"*: use-loadtime, use")
 	}
@@ -488,10 +499,10 @@ func (src *Pkgsrc) InitVartypes() {
 
 	// some other variables, sorted alphabetically
 
-	acl(".CURDIR", lkNone, BtPathname, "buildlink3.mk:; *: use, use-loadtime")
-	acl(".IMPSRC", lkShell, BtPathname, "buildlink3.mk:; *: use, use-loadtime")
-	acl(".TARGET", lkNone, BtPathname, "buildlink3.mk:; *: use, use-loadtime")
-	acl("@", lkNone, BtPathname, "buildlink3.mk:; *: use, use-loadtime")
+	acl(".CURDIR", lkNone, BtPathname, "buildlink3.mk: none; *: use, use-loadtime")
+	acl(".IMPSRC", lkShell, BtPathname, "buildlink3.mk: none; *: use, use-loadtime")
+	acl(".TARGET", lkNone, BtPathname, "buildlink3.mk: none; *: use, use-loadtime")
+	acl("@", lkNone, BtPathname, "buildlink3.mk: none; *: use, use-loadtime")
 	acl("ALL_ENV", lkShell, BtShellWord, "")
 	acl("ALTERNATIVES_FILE", lkNone, BtFileName, "")
 	acl("ALTERNATIVES_SRC", lkShell, BtPathname, "")
@@ -578,8 +589,8 @@ func (src *Pkgsrc) InitVartypes() {
 	acl("CATEGORIES", lkShell, BtCategory, "Makefile: set, append; Makefile.common: set, default, append")
 	sysload("CC_VERSION", lkNone, BtMessage)
 	sysload("CC", lkNone, BtShellCommand)
-	pkglist("CFLAGS", lkShell, BtCFlag)   // may also be changed by the user
-	pkglist("CFLAGS.*", lkShell, BtCFlag) // may also be changed by the user
+	pkglistbl3("CFLAGS", lkShell, BtCFlag)   // may also be changed by the user
+	pkglistbl3("CFLAGS.*", lkShell, BtCFlag) // may also be changed by the user
 	acl("CHECK_BUILTIN", lkNone, BtYesNo, "builtin.mk: default; Makefile: set")
 	acl("CHECK_BUILTIN.*", lkNone, BtYesNo, "Makefile, options.mk, buildlink3.mk: set; builtin.mk: default, use-loadtime; *: use-loadtime")
 	acl("CHECK_FILES_SKIP", lkShell, BtBasicRegularExpression, "Makefile, Makefile.common: append")
@@ -751,7 +762,7 @@ func (src *Pkgsrc) InitVartypes() {
 	pkg("GITHUB_TYPE", lkNone, enum("tag release"))
 	pkg("GMAKE_REQD", lkNone, BtVersion)
 	acl("GNU_ARCH", lkNone, enum("mips"), "")
-	acl("GNU_ARCH.*", lkNone, BtIdentifier, "buildlink3.mk:; *: set, use")
+	acl("GNU_ARCH.*", lkNone, BtIdentifier, "buildlink3.mk: none; *: set, use")
 	acl("GNU_CONFIGURE", lkNone, BtYes, "Makefile, Makefile.common: set")
 	acl("GNU_CONFIGURE_INFODIR", lkNone, BtPathname, "Makefile, Makefile.common: set")
 	acl("GNU_CONFIGURE_LIBDIR", lkNone, BtPathname, "Makefile, Makefile.common: set")
@@ -807,8 +818,8 @@ func (src *Pkgsrc) InitVartypes() {
 	usr("KRB5_DEFAULT", lkNone, enum("heimdal mit-krb5"))
 	sys("KRB5_TYPE", lkNone, BtIdentifier)
 	sys("LD", lkNone, BtShellCommand)
-	pkglist("LDFLAGS", lkShell, BtLdFlag)
-	pkglist("LDFLAGS.*", lkShell, BtLdFlag)
+	pkglistbl3("LDFLAGS", lkShell, BtLdFlag)      // May also be changed by the user.
+	pkglistbl3("LDFLAGS.*", lkShell, BtLdFlag)    // May also be changed by the user.
 	sysload("LIBABISUFFIX", lkNone, BtIdentifier) // Can also be empty.
 	sys("LIBGRP", lkNone, BtUserGroupName)
 	sys("LIBMODE", lkNone, BtFileMode)
@@ -819,8 +830,8 @@ func (src *Pkgsrc) InitVartypes() {
 	sys("LIBTOOL", lkNone, BtShellCommand)
 	acl("LIBTOOL_OVERRIDE", lkShell, BtPathmask, "Makefile: set, append")
 	pkglist("LIBTOOL_REQD", lkShell, BtVersion)
-	acl("LICENCE", lkNone, BtLicense, "Makefile, Makefile.common, options.mk: set, append")
-	acl("LICENSE", lkNone, BtLicense, "Makefile, Makefile.common, options.mk: set, append")
+	acl("LICENCE", lkNone, BtLicense, "buildlink3.mk, builtin.mk: none; Makefile: set, append; *: default, set, append")
+	acl("LICENSE", lkNone, BtLicense, "buildlink3.mk, builtin.mk: none; Makefile: set, append; *: default, set, append")
 	pkg("LICENSE_FILE", lkNone, BtPathname)
 	sys("LINK.*", lkNone, BtShellCommand)
 	sys("LINKER_RPATH_FLAG", lkNone, BtShellWord)
@@ -937,7 +948,7 @@ func (src *Pkgsrc) InitVartypes() {
 	acl("PATCH_ARGS", lkShell, BtShellWord, "")
 	acl("PATCH_DIST_ARGS", lkShell, BtShellWord, "Makefile: set, append")
 	acl("PATCH_DIST_CAT", lkNone, BtShellCommand, "")
-	acl("PATCH_DIST_STRIP*", lkNone, BtShellWord, "buildlink3.mk, builtin.mk:; Makefile, Makefile.common, *.mk: set")
+	acl("PATCH_DIST_STRIP*", lkNone, BtShellWord, "buildlink3.mk, builtin.mk: none; Makefile, Makefile.common, *.mk: set")
 	acl("PATCH_SITES", lkShell, BtFetchURL, "Makefile, Makefile.common, options.mk: set")
 	acl("PATCH_STRIP", lkNone, BtShellWord, "")
 	sys("PATH", lkNone, BtPathlist)       // From the PATH environment variable.
@@ -986,7 +997,7 @@ func (src *Pkgsrc) InitVartypes() {
 	sys("PKGNAME_NOREV", lkNone, BtPkgName)
 	sysload("PKGPATH", lkNone, BtPathname)
 	acl("PKGREPOSITORY", lkNone, BtUnknown, "")
-	acl("PKGREVISION", lkNone, BtPkgRevision, "Makefile: set")
+	acl("PKGREVISION", lkNone, BtPkgRevision, "Makefile: set; *: none")
 	sys("PKGSRCDIR", lkNone, BtPathname)
 	acl("PKGSRCTOP", lkNone, BtYes, "Makefile: set")
 	sys("PKGSRC_SETENV", lkNone, BtShellCommand)
@@ -1109,6 +1120,7 @@ func (src *Pkgsrc) InitVartypes() {
 	pkg("RESTRICTED", lkNone, BtMessage)
 	usr("ROOT_USER", lkNone, BtUserGroupName)
 	usr("ROOT_GROUP", lkNone, BtUserGroupName)
+	pkglist("RPMIGNOREPATH", lkShell, BtPathmask)
 	acl("RUBY_BASE", lkNone, enumFromDirs("lang", `^ruby(\d+)$`, "ruby$1", "ruby22 ruby23 ruby24 ruby25"), ""+
 		"special:rubyversion.mk: set; "+
 		"*: use-loadtime, use")
@@ -1142,15 +1154,15 @@ func (src *Pkgsrc) InitVartypes() {
 	pkglist("SPECIAL_PERMS", lkShell, BtPerms)
 	sys("STEP_MSG", lkNone, BtShellCommand)
 	sys("STRIP", lkNone, BtShellCommand) // see mk/tools/strip.mk
-	acl("SUBDIR", lkShell, BtFileName, "Makefile: append; *:")
+	acl("SUBDIR", lkShell, BtFileName, "Makefile: append; *: none")
 	acl("SUBST_CLASSES", lkShell, BtIdentifier, "Makefile: set, append; *: append")
-	acl("SUBST_CLASSES.*", lkShell, BtIdentifier, "Makefile: set, append; *: append")
+	acl("SUBST_CLASSES.*", lkShell, BtIdentifier, "Makefile: set, append; *: append") // OPSYS-specific
 	acl("SUBST_FILES.*", lkShell, BtPathmask, "Makefile, Makefile.*, *.mk: set, append")
 	acl("SUBST_FILTER_CMD.*", lkNone, BtShellCommand, "Makefile, Makefile.*, *.mk: set")
 	acl("SUBST_MESSAGE.*", lkNone, BtMessage, "Makefile, Makefile.*, *.mk: set")
 	acl("SUBST_SED.*", lkNone, BtSedCommands, "Makefile, Makefile.*, *.mk: set, append")
 	pkg("SUBST_STAGE.*", lkNone, BtStage)
-	pkglist("SUBST_VARS.*", lkShell, BtVariableName)
+	acl("SUBST_VARS.*", lkShell, BtVariableName, "Makefile, Makefile.*, *.mk: set, append")
 	pkglist("SUPERSEDES", lkShell, BtDependency)
 	acl("TEST_DEPENDS", lkShell, BtDependencyWithPath, "Makefile, Makefile.common, *.mk: append")
 	pkglist("TEST_DIRS", lkShell, BtWrksrcSubdirectory)
@@ -1162,7 +1174,7 @@ func (src *Pkgsrc) InitVartypes() {
 	sys("TOOLS_BROKEN", lkShell, BtTool)
 	sys("TOOLS_CMD.*", lkNone, BtPathname)
 	acl("TOOLS_CREATE", lkShell, BtTool, "Makefile, Makefile.common, options.mk: append")
-	acl("TOOLS_DEPENDS.*", lkShell, BtDependencyWithPath, "buildlink3.mk:; Makefile, Makefile.*: set, default; *: use")
+	acl("TOOLS_DEPENDS.*", lkShell, BtDependencyWithPath, "buildlink3.mk: none; Makefile, Makefile.*: set, default; *: use")
 	sys("TOOLS_GNU_MISSING", lkShell, BtTool)
 	sys("TOOLS_NOOP", lkShell, BtTool)
 	sys("TOOLS_PATH.*", lkNone, BtPathname)
@@ -1181,7 +1193,7 @@ func (src *Pkgsrc) InitVartypes() {
 	pkg("USE_CMAKE", lkNone, BtYes)
 	usr("USE_DESTDIR", lkNone, BtYes)
 	pkglist("USE_FEATURES", lkShell, BtIdentifier)
-	acl("USE_GAMESGROUP", lkNone, BtYesNo, "buildlink3.mk, builtin.mk:; *: set, default, use")
+	acl("USE_GAMESGROUP", lkNone, BtYesNo, "buildlink3.mk, builtin.mk: none; *: set, default, use")
 	pkg("USE_GCC_RUNTIME", lkNone, BtYesNo)
 	pkg("USE_GNU_CONFIGURE_HOST", lkNone, BtYesNo)
 	acl("USE_GNU_ICONV", lkNone, BtYes, "Makefile, Makefile.common, options.mk: set")
@@ -1245,12 +1257,10 @@ func parseACLEntries(varname string, aclEntries string) []ACLEntry {
 	var result []ACLEntry
 	prevperms := "(first)"
 	for _, arg := range strings.Split(aclEntries, "; ") {
-		var globs, perms string
-		if fields := strings.SplitN(arg, ": ", 2); len(fields) == 2 {
-			globs, perms = fields[0], fields[1]
-		} else {
-			globs = strings.TrimSuffix(arg, ":")
-		}
+		fields := strings.SplitN(arg, ": ", 2)
+		G.Assertf(len(fields) == 2, "Invalid ACL entry %q", arg)
+		globs, perms := fields[0], ifelseStr(fields[1] == "none", "", fields[1])
+
 		G.Assertf(perms != prevperms, "Repeated permissions %q for %q.", perms, varname)
 		prevperms = perms
 

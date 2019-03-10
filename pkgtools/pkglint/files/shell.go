@@ -530,14 +530,6 @@ func (scc *SimpleCommandChecker) handleCommandVariable() bool {
 	if varuse := parser.VarUse(); varuse != nil && parser.EOF() {
 		varname := varuse.varname
 
-		if tool := G.ToolByVarname(varname); tool != nil {
-			if tool.Validity == Nowhere {
-				scc.shline.mkline.Warnf("The %q tool is used but not added to USE_TOOLS.", tool.Name)
-			}
-			scc.shline.checkInstallCommand(shellword)
-			return true
-		}
-
 		if vartype := G.Pkgsrc.VariableType(varname); vartype != nil && vartype.basicType.name == "ShellCommand" {
 			scc.shline.checkInstallCommand(shellword)
 			return true

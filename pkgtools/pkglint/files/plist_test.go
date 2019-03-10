@@ -566,6 +566,34 @@ func (s *Suite) Test_PlistChecker_checkPathShare(c *check.C) {
 		"WARN: ~/PLIST:6: Man pages should be installed into man/, not share/man/.")
 }
 
+func (s *Suite) Test_PlistChecker_checkPathShare__gnome_icon_theme(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileDummyBuildlink3("graphics/gnome-icon-theme/buildlink3.mk")
+	t.SetUpPackage("graphics/gnome-icon-theme-extras",
+		"ICON_THEMES=\tyes",
+		".include \"../../graphics/gnome-icon-theme/buildlink3.mk\"")
+	t.CreateFileLines("graphics/gnome-icon-theme-extras/PLIST",
+		PlistRcsID,
+		"share/icons/gnome/16x16/devices/media-optical-cd-audio.png",
+		"share/icons/gnome/16x16/devices/media-optical-dvd.png")
+	G.Pkgsrc.LoadInfrastructure()
+	t.Chdir(".")
+
+	// This variant is typically run interactively.
+	G.Check("graphics/gnome-icon-theme-extras")
+
+	t.CheckOutputEmpty()
+
+	// Note the leading "./".
+	// This variant is typical for recursive runs of pkglint.
+	G.Check("./graphics/gnome-icon-theme-extras")
+
+	// Up to March 2019, a bug in relpath produced different behavior
+	// depending on the leading dot.
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_PlistLine_CheckTrailingWhitespace(c *check.C) {
 	t := s.Init(c)
 

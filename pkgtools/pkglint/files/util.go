@@ -349,32 +349,68 @@ func mkopSubst(s string, left bool, from string, right bool, to string, flags st
 
 // relpath returns the relative path from the directory "from"
 // to the filesystem entry "to".
-func relpath(from, to string) string {
+//
+// The relative path is built by going from the "from" directory via the
+// pkgsrc root to the "to" filename. This produces the form
+// "../../category/package" that is found in DEPENDS and .include lines.
+//
+// Both from and to are interpreted relative to the current working directory,
+// unless they are absolute paths.
+//
+// This function should only be used if the relative path from one file to
+// another cannot be computed in another way. The preferred way is to take
+// the relative filenames directly from the .include or exists() where they
+// appear.
+//
+// TODO: Invent data types for all kinds of relative paths that occur in pkgsrc
+//  and pkglint. Make sure that these paths cannot be accidentally mixed.
+func relpath(from, to string) (result string) {
 
-	// From "dir" to "dir/subdir/...".
-	if hasPrefix(to, from) && len(to) > len(from)+1 && to[len(from)] == '/' {
-		return path.Clean(to[len(from)+1:])
+	if trace.Tracing {
+		defer trace.Call(from, to, trace.Result(&result))()
 	}
 
-	// Take a shortcut for the most common variant in a complete pkgsrc scan,
-	// which is to resolve the relative path from a package to the pkgsrc root.
-	// This avoids unnecessary calls to the filesystem API.
-	if to == "." {
-		fromParts := strings.FieldsFunc(from, func(r rune) bool { return r == '/' })
-		if len(fromParts) == 3 && !hasPrefix(fromParts[0], ".") && !hasPrefix(fromParts[1], ".") && fromParts[2] == "." {
+	cfrom := cleanpath(from)
+	cto := cleanpath(to)
+
+	if cfrom == cto {
+		return "."
+	}
+
+	// Take a shortcut for the common case from "dir" to "dir/subdir/...".
+	if hasPrefix(cto, cfrom) && len(cto) > len(cfrom)+1 && cto[len(cfrom)] == '/' {
+		return cleanpath(cto[len(cfrom)+1:])
+	}
+
+	// Take a shortcut for the common case from "category/package" to ".".
+	// This is the most common variant in a complete pkgsrc scan.
+	if cto == "." {
+		fromParts := strings.FieldsFunc(cfrom, func(r rune) bool { return r == '/' })
+		if len(fromParts) == 2 && !hasPrefix(fromParts[0], ".") && !hasPrefix(fromParts[1], ".") {
 			return "../.."
 		}
 	}
 
-	absFrom := abspath(from)
-	absTo := abspath(to)
-	rel, err := filepath.Rel(absFrom, absTo)
-	G.AssertNil(err, "relpath %q %q", from, to)
-	result := filepath.ToSlash(rel)
-	if trace.Tracing {
-		trace.Stepf("relpath from %q to %q = %q", from, to, result)
+	if cfrom == "." && !filepath.IsAbs(cto) {
+		return path.Clean(cto)
 	}
-	return result
+
+	absFrom := abspath(cfrom)
+	absTopdir := abspath(G.Pkgsrc.topdir)
+	absTo := abspath(cto)
+
+	toTop, err := filepath.Rel(absFrom, absTopdir)
+	G.AssertNil(err, "relpath from %q to topdir %q", absFrom, absTopdir)
+
+	fromTop, err := filepath.Rel(absTopdir, absTo)
+	G.AssertNil(err, "relpath from topdir %q to %q", absTopdir, absTo)
+
+	result = cleanpath(filepath.ToSlash(toTop) + "/" + filepath.ToSlash(fromTop))
+
+	if trace.Tracing {
+		trace.Stepf("relpath from %q to %q = %q", cfrom, cto, result)
+	}
+	return
 }
 
 func abspath(filename string) string {
@@ -399,6 +435,10 @@ func cleanpath(filename string) string {
 			for lex.SkipByte('/') || lex.SkipString("./") {
 			}
 		}
+	}
+
+	for len(parts) > 1 && parts[len(parts)-1] == "." {
+		parts = parts[:len(parts)-1]
 	}
 
 	for i := 2; i+3 < len(parts); /* nothing */ {
@@ -441,6 +481,11 @@ func (o *Once) FirstTimeSlice(whats ...string) bool {
 	return o.check(crc.Sum64())
 }
 
+func (o *Once) Seen(what string) bool {
+	_, seen := o.seen[crc64.Checksum([]byte(what), crc64.MakeTable(crc64.ECMA))]
+	return seen
+}
+
 func (o *Once) check(key uint64) bool {
 	if _, ok := o.seen[key]; ok {
 		return false
@@ -454,6 +499,13 @@ func (o *Once) check(key uint64) bool {
 
 // Scope remembers which variables are defined and which are used
 // in a certain scope, such as a package or a file.
+//
+// TODO: Decide whether the scope should consider variable assignments
+//  from the pkgsrc infrastructure. For Package.checkGnuConfigureUseLanguages
+//  it would be better to ignore them completely.
+//
+// TODO: Merge this code with Var, which defines essentially the
+//  same features.
 type Scope struct {
 	firstDef map[string]MkLine // TODO: Can this be removed?
 	lastDef  map[string]MkLine
@@ -579,8 +631,9 @@ func (s *Scope) FirstDefinition(varname string) MkLine {
 	mkline := s.firstDef[varname]
 	if mkline != nil && mkline.IsVarassign() {
 		lastLine := s.LastDefinition(varname)
-		if lastLine != mkline {
-			//mkline.Notef("FirstDefinition differs from LastDefinition in %s.", mkline.RefTo(lastLine))
+		if trace.Tracing && lastLine != mkline {
+			trace.Stepf("%s: FirstDefinition differs from LastDefinition in %s.",
+				mkline.String(), mkline.RefTo(lastLine))
 		}
 		return mkline
 	}
@@ -720,148 +773,6 @@ func naturalLess(str1, str2 string) bool {
 	// So far they are identical. At least one is ended. If the other continues,
 	// it sorts last.
 	return len1 < len2
-}
-
-// RedundantScope checks for redundant variable definitions and for variables
-// that are accidentally overwritten. It tries to be as correct as possible
-// by not flagging anything that is defined conditionally.
-//
-// There may be some edge cases though like defining PKGNAME, then evaluating
-// it using :=, then defining it again. This pattern is so error-prone that
-// it should not appear in pkgsrc at all, thus pkglint doesn't even expect it.
-// (Well, except for the PKGNAME case, but that's deep in the infrastructure
-// and only affects the "nb13" extension.)
-type RedundantScope struct {
-	vars        map[string]*redundantScopeVarinfo
-	dirLevel    int // The number of enclosing directives (.if, .for).
-	includePath includePath
-	OnRedundant func(old, new MkLine)
-	OnOverwrite func(old, new MkLine)
-}
-type redundantScopeVarinfo struct {
-	mkline      MkLine
-	includePath includePath
-	value       string
-}
-
-func NewRedundantScope() *RedundantScope {
-	return &RedundantScope{vars: make(map[string]*redundantScopeVarinfo)}
-}
-
-func (s *RedundantScope) Handle(mkline MkLine) {
-	if mkline.firstLine == 1 {
-		s.includePath.push(mkline.Location.Filename)
-	} else {
-		s.includePath.popUntil(mkline.Location.Filename)
-	}
-
-	switch {
-	case mkline.IsVarassign():
-		varname := mkline.Varname()
-		if s.dirLevel != 0 {
-			// Since the variable is defined or assigned conditionally,
-			// it becomes too complicated for pkglint to check all possible
-			// code paths. Therefore ignore the variable from now on.
-			s.vars[varname] = nil
-			break
-		}
-
-		op := mkline.Op()
-		value := mkline.Value()
-		valueNovar := mkline.WithoutMakeVariables(value)
-		if op == opAssignEval && value == valueNovar {
-			op = /* effectively */ opAssign
-		}
-
-		existing, found := s.vars[varname]
-		if !found {
-			if op == opAssignShell || op == opAssignEval {
-				s.vars[varname] = nil // Won't be checked further.
-			} else {
-				if op == opAssignAppend {
-					value = " " + value
-				}
-				s.vars[varname] = &redundantScopeVarinfo{mkline, s.includePath.copy(), value}
-			}
-
-		} else if existing != nil {
-			if op == opAssign && existing.value == value {
-				op = /* effectively */ opAssignDefault
-			}
-
-			switch op {
-			case opAssign:
-				if s.includePath.includes(existing.includePath) {
-					// This is the usual pattern of including a file and
-					// then overwriting some of them. Although technically
-					// this overwrites the previous definition, it is not
-					// worth a warning since this is used a lot and
-					// intentionally.
-				} else {
-					s.OnOverwrite(existing.mkline, mkline)
-				}
-				existing.value = value
-			case opAssignAppend:
-				existing.value += " " + value
-			case opAssignDefault:
-				if existing.includePath.includes(s.includePath) {
-					s.OnRedundant(mkline, existing.mkline)
-				} else if s.includePath.includes(existing.includePath) || s.includePath.equals(existing.includePath) {
-					s.OnRedundant(existing.mkline, mkline)
-				}
-			case opAssignShell, opAssignEval:
-				s.vars[varname] = nil // Won't be checked further.
-			}
-		}
-
-	case mkline.IsDirective():
-		switch mkline.Directive() {
-		case "for", "if", "ifdef", "ifndef":
-			s.dirLevel++
-		case "endfor", "endif":
-			s.dirLevel--
-		}
-	}
-}
-
-type includePath struct {
-	files []string
-}
-
-func (p *includePath) push(filename string) {
-	p.files = append(p.files, filename)
-}
-
-func (p *includePath) popUntil(filename string) {
-	for p.files[len(p.files)-1] != filename {
-		p.files = p.files[:len(p.files)-1]
-	}
-}
-
-func (p *includePath) includes(other includePath) bool {
-	for i, filename := range p.files {
-		if i < len(other.files) && other.files[i] == filename {
-			continue
-		}
-		return false
-	}
-	return len(p.files) < len(other.files)
-}
-
-func (p *includePath) equals(other includePath) bool {
-	if len(p.files) != len(other.files) {
-		return false
-	}
-	for i, filename := range p.files {
-		if other.files[i] != filename {
-			return false
-		}
-	}
-	return true
-}
-
-func (p *includePath) copy() includePath {
-	return includePath{append([]string(nil), p.files...)}
 }
 
 // IsPrefs returns whether the given file, when included, loads the user
@@ -1004,7 +915,6 @@ func seeGuide(sectionName, sectionID string) string {
 func wrap(max int, lines ...string) []string {
 	var wrapped []string
 	var sb strings.Builder
-	nonSpace := textproc.Space.Inverse()
 
 	for _, line := range lines {
 
@@ -1024,7 +934,7 @@ func wrap(max int, lines ...string) []string {
 		for !lexer.EOF() {
 			bol := len(lexer.Rest()) == len(line)
 			space := lexer.NextBytesSet(textproc.Space)
-			word := lexer.NextBytesSet(nonSpace)
+			word := lexer.NextBytesSet(notSpace)
 
 			if bol && sb.Len() > 0 {
 				space = " "
@@ -1168,4 +1078,27 @@ func (si *StringInterner) Intern(str string) string {
 
 	si.strs[key] = key
 	return key
+}
+
+// StringSets stores unique strings in insertion order.
+type StringSet struct {
+	Elements []string
+	seen     map[string]struct{}
+}
+
+func NewStringSet() StringSet {
+	return StringSet{nil, make(map[string]struct{})}
+}
+
+func (s *StringSet) Add(element string) {
+	if _, found := s.seen[element]; !found {
+		s.seen[element] = struct{}{}
+		s.Elements = append(s.Elements, element)
+	}
+}
+
+func (s *StringSet) AddAll(elements []string) {
+	for _, element := range elements {
+		s.Add(element)
+	}
 }
