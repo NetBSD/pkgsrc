@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2019/03/06 18:37:58 adam Exp $
+$NetBSD: distinfo,v 1.10 2019/03/10 13:38:32 adam Exp $
 
-SHA1 (isort-4.3.12.tar.gz) = 2890c62d2e711f08b3e863851e9de9fc31e192aa
-RMD160 (isort-4.3.12.tar.gz) = b9866f203e3bd19b4bc19c122a7af4da85410366
-SHA512 (isort-4.3.12.tar.gz) = 287a9e4b076d45d6b356a7c11071ed11fa2253661bcb25a2beddb77e53936eb6560d44503b5782ed6fff3245adc50803e6055bc86999e333b32ea6fe8d9de244
-Size (isort-4.3.12.tar.gz) = 69432 bytes
+SHA1 (isort-4.3.14.tar.gz) = 15f4223651c47dda0bf7e5964f31b8895e69719a
+RMD160 (isort-4.3.14.tar.gz) = 7b7bec5080bc5352722758afb94b75d67aa42f70
+SHA512 (isort-4.3.14.tar.gz) = f433804bb3ba7ebf6bc8a703b38bcddd0b53a6911f8d7fee579a708493a058f5259ac87d72a2e449aec9985497ca9828118cbac55594e0361692b1ebbd670028
+Size (isort-4.3.14.tar.gz) = 67801 bytes
