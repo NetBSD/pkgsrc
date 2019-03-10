@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2019/02/12 12:56:31 adam Exp $
+# $NetBSD: Makefile,v 1.4 2019/03/10 15:23:51 adam Exp $
 
-DISTNAME=	certbot-dns-rfc2136-0.31.0
+DISTNAME=	certbot-dns-rfc2136-0.32.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/certbot-dns-rfc2136/}
