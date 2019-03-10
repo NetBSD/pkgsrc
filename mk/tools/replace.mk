@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.287 2019/03/04 11:56:05 wiz Exp $
+# $NetBSD: replace.mk,v 1.288 2019/03/10 19:52:18 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1105,8 +1105,7 @@ MAKEVARS+=			TOOLS_DEPENDS.ghostscript
 
 .for _t_ in ${_TOOLS.ghostscript}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
-.    if !empty(PKGPATH:Mprint/ghostscript) || \
-        !empty(PKGPATH:Mprint/ghostscript-esp)
+.    if !empty(PKGPATH:Mprint/ghostscript)
 MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_DEPENDS.${_t_}?=	${TOOLS_DEPENDS.ghostscript}
