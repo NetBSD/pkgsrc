@@ -1,3 +1,2 @@
-This package provides xprop, a property displayer for X.
-
-This is from the modular X.org X11 project.
+xprop is a command line tool to display and/or set window and font
+properties of an X server.
