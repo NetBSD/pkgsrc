@@ -154,7 +154,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 	t.SetUpTool("unzip", "UNZIP_CMD", AtRunTime)
 
 	test := func(shellCommand string) {
-		G.Mk = t.NewMkLines("filename",
+		G.Mk = t.NewMkLines("filename.mk",
 			"\t"+shellCommand)
 		shline := NewShellLine(G.Mk.mklines[0])
 
@@ -170,8 +170,8 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 	test("uname=`uname`; echo $$uname; echo; ${PREFIX}/bin/command")
 
 	t.CheckOutputLines(
-		"WARN: filename:1: Unknown shell command \"uname\".",
-		"WARN: filename:1: Please switch to \"set -e\" mode "+
+		"WARN: filename.mk:1: Unknown shell command \"uname\".",
+		"WARN: filename.mk:1: Please switch to \"set -e\" mode "+
 			"before using a semicolon (after \"uname=`uname`\") to separate commands.")
 
 	t.SetUpTool("echo", "", AtRunTime)
@@ -180,35 +180,30 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 	test("echo ${PKGNAME:Q}") // VucQuotPlain
 
 	t.CheckOutputLines(
-		"WARN: filename:1: PKGNAME may not be used in this file; "+
-			"it would be ok in Makefile, Makefile.* or *.mk.",
-		"NOTE: filename:1: The :Q operator isn't necessary for ${PKGNAME} here.")
+		"NOTE: filename.mk:1: The :Q operator isn't necessary for ${PKGNAME} here.")
 
 	test("echo \"${CFLAGS:Q}\"") // VucQuotDquot
 
 	t.CheckOutputLines(
-		"WARN: filename:1: The :Q modifier should not be used inside double quotes.",
-		"WARN: filename:1: CFLAGS may not be used in this file; "+
-			"it would be ok in Makefile, Makefile.common, options.mk or *.mk.",
-		"WARN: filename:1: Please use ${CFLAGS:M*:Q} instead of ${CFLAGS:Q} "+
+		"WARN: filename.mk:1: The :Q modifier should not be used inside double quotes.",
+		"WARN: filename.mk:1: Please use ${CFLAGS:M*:Q} instead of ${CFLAGS:Q} "+
 			"and make sure the variable appears outside of any quoting characters.")
 
 	test("echo '${COMMENT:Q}'") // VucQuotSquot
 
 	t.CheckOutputLines(
-		"WARN: filename:1: COMMENT may not be used in any file; it is a write-only variable.",
-		"WARN: filename:1: Please move ${COMMENT:Q} outside of any quoting characters.")
+		"WARN: filename.mk:1: Please move ${COMMENT:Q} outside of any quoting characters.")
 
 	test("echo target=$@ exitcode=$$? '$$' \"\\$$\"")
 
 	t.CheckOutputLines(
-		"WARN: filename:1: Please use \"${.TARGET}\" instead of \"$@\".",
-		"WARN: filename:1: The $? shell variable is often not available in \"set -e\" mode.")
+		"WARN: filename.mk:1: Please use \"${.TARGET}\" instead of \"$@\".",
+		"WARN: filename.mk:1: The $? shell variable is often not available in \"set -e\" mode.")
 
 	test("echo $$@")
 
 	t.CheckOutputLines(
-		"WARN: filename:1: The $@ shell variable should only be used in double quotes.")
+		"WARN: filename.mk:1: The $@ shell variable should only be used in double quotes.")
 
 	test("echo \"$$\"") // As seen by make(1); the shell sees: echo "$"
 
@@ -233,8 +228,8 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 	test("${RUN} subdir=\"`unzip -c \"$$e\" install.rdf | awk '/re/ { print \"hello\" }'`\"")
 
 	t.CheckOutputLines(
-		"WARN: filename:1: Double quotes inside backticks inside double quotes are error prone.",
-		"WARN: filename:1: The exitcode of \"unzip\" at the left of the | operator is ignored.")
+		"WARN: filename.mk:1: Double quotes inside backticks inside double quotes are error prone.",
+		"WARN: filename.mk:1: The exitcode of \"unzip\" at the left of the | operator is ignored.")
 
 	// From mail/thunderbird/Makefile, rev. 1.159
 	test("" +
@@ -247,9 +242,9 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 		"done")
 
 	t.CheckOutputLines(
-		"WARN: filename:1: XPI_FILES is used but not defined.",
-		"WARN: filename:1: Double quotes inside backticks inside double quotes are error prone.",
-		"WARN: filename:1: The exitcode of \"${UNZIP_CMD}\" at the left of the | operator is ignored.")
+		"WARN: filename.mk:1: XPI_FILES is used but not defined.",
+		"WARN: filename.mk:1: Double quotes inside backticks inside double quotes are error prone.",
+		"WARN: filename.mk:1: The exitcode of \"${UNZIP_CMD}\" at the left of the | operator is ignored.")
 
 	// From x11/wxGTK28/Makefile
 	test("" +
@@ -262,25 +257,23 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 	// TODO: Why is TOOLS_PATH.msgfmt not recognized?
 	//  At least, the warning should be more specific, mentioning USE_TOOLS.
 	t.CheckOutputLines(
-		"WARN: filename:1: WRKSRC may not be used in this file; "+
-			"it would be ok in Makefile, Makefile.* or *.mk.",
-		"WARN: filename:1: Unknown shell command \"[\".",
-		"WARN: filename:1: Unknown shell command \"${TOOLS_PATH.msgfmt}\".")
+		"WARN: filename.mk:1: Unknown shell command \"[\".",
+		"WARN: filename.mk:1: Unknown shell command \"${TOOLS_PATH.msgfmt}\".")
 
 	test("@cp from to")
 
 	t.CheckOutputLines(
-		"WARN: filename:1: The shell command \"cp\" should not be hidden.")
+		"WARN: filename.mk:1: The shell command \"cp\" should not be hidden.")
 
 	test("-cp from to")
 
 	t.CheckOutputLines(
-		"WARN: filename:1: Using a leading \"-\" to suppress errors is deprecated.")
+		"WARN: filename.mk:1: Using a leading \"-\" to suppress errors is deprecated.")
 
 	test("-${MKDIR} deeply/nested/subdir")
 
 	t.CheckOutputLines(
-		"WARN: filename:1: Using a leading \"-\" to suppress errors is deprecated.")
+		"WARN: filename.mk:1: Using a leading \"-\" to suppress errors is deprecated.")
 
 	G.Pkg = NewPackage(t.File("category/pkgbase"))
 	G.Pkg.Plist.Dirs["share/pkgbase"] = true
@@ -292,15 +285,15 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 	//  the note should not appear then.
 
 	t.CheckOutputLines(
-		"NOTE: filename:1: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= share/pkgbase\" "+
+		"NOTE: filename.mk:1: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= share/pkgbase\" "+
 			"instead of \"${INSTALL_DATA_DIR}\".",
-		"WARN: filename:1: The INSTALL_*_DIR commands can only handle one directory at a time.")
+		"WARN: filename.mk:1: The INSTALL_*_DIR commands can only handle one directory at a time.")
 
 	// A directory that is not found in the PLIST.
 	test("${RUN} ${INSTALL_DATA_DIR} ${PREFIX}/share/other")
 
 	t.CheckOutputLines(
-		"NOTE: filename:1: You can use \"INSTALLATION_DIRS+= share/other\" instead of \"${INSTALL_DATA_DIR}\".")
+		"NOTE: filename.mk:1: You can use \"INSTALLATION_DIRS+= share/other\" instead of \"${INSTALL_DATA_DIR}\".")
 
 	G.Pkg = nil
 
@@ -315,7 +308,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__strip(c *check.C) {
 	t := s.Init(c)
 
 	test := func(shellCommand string) {
-		G.Mk = t.NewMkLines("filename",
+		G.Mk = t.NewMkLines("filename.mk",
 			"\t"+shellCommand)
 
 		G.Mk.ForEach(func(mkline MkLine) {
@@ -327,8 +320,8 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__strip(c *check.C) {
 	test("${STRIP} executable")
 
 	t.CheckOutputLines(
-		"WARN: filename:1: Unknown shell command \"${STRIP}\".",
-		"WARN: filename:1: STRIP is used but not defined.")
+		"WARN: filename.mk:1: Unknown shell command \"${STRIP}\".",
+		"WARN: filename.mk:1: STRIP is used but not defined.")
 
 	t.SetUpVartypes()
 
@@ -430,7 +423,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__implementation(c *check.C)
 	t := s.Init(c)
 
 	t.SetUpVartypes()
-	G.Mk = t.NewMkLines("filename",
+	G.Mk = t.NewMkLines("filename.mk",
 		"# dummy")
 	shline := NewShellLine(G.Mk.mklines[0])
 
@@ -445,13 +438,13 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__implementation(c *check.C)
 	G.Mk.ForEach(func(mkline MkLine) { shline.CheckWord(text, false, RunTime) })
 
 	t.CheckOutputLines(
-		"WARN: filename:1: Unknown shell command \"echo\".")
+		"WARN: filename.mk:1: Unknown shell command \"echo\".")
 
 	G.Mk.ForEach(func(mkline MkLine) { shline.CheckShellCommandLine(text) })
 
 	// No parse errors
 	t.CheckOutputLines(
-		"WARN: filename:1: Unknown shell command \"echo\".")
+		"WARN: filename.mk:1: Unknown shell command \"echo\".")
 }
 
 func (s *Suite) Test_ShellLine_CheckShellCommandLine__dollar_without_variable(c *check.C) {
@@ -459,7 +452,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__dollar_without_variable(c 
 
 	t.SetUpVartypes()
 	t.SetUpTool("pax", "", AtRunTime)
-	G.Mk = t.NewMkLines("filename",
+	G.Mk = t.NewMkLines("filename.mk",
 		"# dummy")
 	shline := NewShellLine(G.Mk.mklines[0])
 
@@ -516,8 +509,7 @@ func (s *Suite) Test_ShellLine_CheckWord(c *check.C) {
 
 	test("${COMMENT:Q}", true)
 
-	t.CheckOutputLines(
-		"WARN: dummy.mk:1: COMMENT may not be used in any file; it is a write-only variable.")
+	t.CheckOutputEmpty()
 
 	test("\"${DISTINFO_FILE:Q}\"", true)
 
@@ -541,7 +533,7 @@ func (s *Suite) Test_ShellLine_CheckWord(c *check.C) {
 func (s *Suite) Test_ShellLine_CheckWord__dollar_without_variable(c *check.C) {
 	t := s.Init(c)
 
-	shline := t.NewShellLine("filename", 1, "# dummy")
+	shline := t.NewShellLine("filename.mk", 1, "# dummy")
 
 	shline.CheckWord("/.*~$$//g", false, RunTime) // Typical argument to pax(1).
 
@@ -552,7 +544,7 @@ func (s *Suite) Test_ShellLine_CheckWord__backslash_plus(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpTool("find", "FIND", AtRunTime)
-	shline := t.NewShellLine("filename", 1, "\tfind . -exec rm -rf {} \\+")
+	shline := t.NewShellLine("filename.mk", 1, "\tfind . -exec rm -rf {} \\+")
 
 	shline.CheckShellCommandLine(shline.mkline.ShellCommand())
 
@@ -563,21 +555,21 @@ func (s *Suite) Test_ShellLine_CheckWord__backslash_plus(c *check.C) {
 func (s *Suite) Test_ShellLine_CheckWord__squot_dollar(c *check.C) {
 	t := s.Init(c)
 
-	shline := t.NewShellLine("filename", 1, "\t'$")
+	shline := t.NewShellLine("filename.mk", 1, "\t'$")
 
 	shline.CheckWord(shline.mkline.ShellCommand(), false, RunTime)
 
 	// FIXME: Should be parsed correctly. Make passes the dollar through (probably),
 	//  and the shell parser should complain about the unfinished string literal.
 	t.CheckOutputLines(
-		"WARN: filename:1: Internal pkglint error in ShTokenizer.ShAtom at \"$\" (quoting=s).",
-		"WARN: filename:1: Internal pkglint error in ShellLine.CheckWord at \"'$\" (quoting=s), rest: $")
+		"WARN: filename.mk:1: Internal pkglint error in ShTokenizer.ShAtom at \"$\" (quoting=s).",
+		"WARN: filename.mk:1: Internal pkglint error in ShellLine.CheckWord at \"'$\" (quoting=s), rest: $")
 }
 
 func (s *Suite) Test_ShellLine_CheckWord__dquot_dollar(c *check.C) {
 	t := s.Init(c)
 
-	shline := t.NewShellLine("filename", 1, "\t\"$")
+	shline := t.NewShellLine("filename.mk", 1, "\t\"$")
 
 	shline.CheckWord(shline.mkline.ShellCommand(), false, RunTime)
 
@@ -589,12 +581,12 @@ func (s *Suite) Test_ShellLine_CheckWord__dquot_dollar(c *check.C) {
 func (s *Suite) Test_ShellLine_CheckWord__dollar_subshell(c *check.C) {
 	t := s.Init(c)
 
-	shline := t.NewShellLine("filename", 1, "\t$$(echo output)")
+	shline := t.NewShellLine("filename.mk", 1, "\t$$(echo output)")
 
 	shline.CheckWord(shline.mkline.ShellCommand(), false, RunTime)
 
 	t.CheckOutputLines(
-		"WARN: filename:1: Invoking subshells via $(...) is not portable enough.")
+		"WARN: filename.mk:1: Invoking subshells via $(...) is not portable enough.")
 }
 
 func (s *Suite) Test_ShellLine_CheckWord__PKGMANDIR(c *check.C) {
@@ -709,9 +701,9 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__echo(c *check.C) {
 
 	echo := t.SetUpTool("echo", "ECHO", AtRunTime)
 	echo.MustUseVarForm = true
-	G.Mk = t.NewMkLines("filename",
+	G.Mk = t.NewMkLines("filename.mk",
 		"# dummy")
-	mkline := t.NewMkLine("filename", 3, "# dummy")
+	mkline := t.NewMkLine("filename.mk", 3, "# dummy")
 
 	MkLineChecker{mkline}.checkText("echo \"hello, world\"")
 
@@ -720,7 +712,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__echo(c *check.C) {
 	NewShellLine(mkline).CheckShellCommandLine("echo \"hello, world\"")
 
 	t.CheckOutputLines(
-		"WARN: filename:3: Please use \"${ECHO}\" instead of \"echo\".")
+		"WARN: filename.mk:3: Please use \"${ECHO}\" instead of \"echo\".")
 }
 
 func (s *Suite) Test_ShellLine_CheckShellCommandLine__shell_variables(c *check.C) {
@@ -762,21 +754,21 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__shell_variables(c *check.C
 func (s *Suite) Test_ShellLine_checkInstallCommand(c *check.C) {
 	t := s.Init(c)
 
-	G.Mk = t.NewMkLines("filename",
+	G.Mk = t.NewMkLines("filename.mk",
 		"# dummy")
 	G.Mk.target = "do-install"
 
-	shline := t.NewShellLine("filename", 1, "\tdummy")
+	shline := t.NewShellLine("filename.mk", 1, "\tdummy")
 
 	shline.checkInstallCommand("sed")
 
 	t.CheckOutputLines(
-		"WARN: filename:1: The shell command \"sed\" should not be used in the install phase.")
+		"WARN: filename.mk:1: The shell command \"sed\" should not be used in the install phase.")
 
 	shline.checkInstallCommand("cp")
 
 	t.CheckOutputLines(
-		"WARN: filename:1: ${CP} should not be used to install files.")
+		"WARN: filename.mk:1: ${CP} should not be used to install files.")
 }
 
 func (s *Suite) Test_splitIntoMkWords(c *check.C) {
