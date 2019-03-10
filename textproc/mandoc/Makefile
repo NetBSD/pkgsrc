@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2019/03/07 23:29:01 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/03/10 11:52:56 wiz Exp $
 
-DISTNAME=	mandoc-1.14.4
-PKGREVISION=	2
+DISTNAME=	mandoc-1.14.5
 CATEGORIES=	textproc devel
 MASTER_SITES=	http://mandoc.bsd.lv/snapshots/
 
@@ -18,10 +17,9 @@ SUBST_FILES.roff=	mandoc.1 mandoc.3
 SUBST_FILES.roff+=	eqn.7 man.7 mdoc.7 tbl.7
 SUBST_SED.roff=		-e 's,Xr roff,Xr mandoc-roff,g'
 
-CFLAGS.NetBSD+=	-D_OPENBSD_SOURCE
+#CFLAGS.NetBSD+=	-D_OPENBSD_SOURCE
 
-# test needs perl
-USE_TOOLS+=	perl:build
+USE_TOOLS+=	perl:test
 TEST_TARGET=	regress
 
 .include "../../mk/bsd.fast.prefs.mk"
