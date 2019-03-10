@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1205 2019/03/10 21:46:44 leot Exp $
+$NetBSD: CHANGES-2019,v 1.1206 2019/03/10 21:47:00 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2011,3 +2011,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/chrony to 3.4nb1 [wiz 2019-03-10]
 	Updated lang/swi-prolog-lite to 8.0.2 [leot 2019-03-10]
 	Updated lang/swi-prolog-packages to 8.0.2 [leot 2019-03-10]
+	Updated lang/swi-prolog to 8.0.2 [leot 2019-03-10]
