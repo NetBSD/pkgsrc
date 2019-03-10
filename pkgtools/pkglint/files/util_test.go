@@ -73,39 +73,84 @@ func (s *Suite) Test_tabWidth(c *check.C) {
 }
 
 func (s *Suite) Test_cleanpath(c *check.C) {
-	c.Check(cleanpath("simple/path"), equals, "simple/path")
-	c.Check(cleanpath("/absolute/path"), equals, "/absolute/path")
+	test := func(from, to string) {
+		c.Check(cleanpath(from), equals, to)
+	}
+
+	test("simple/path", "simple/path")
+	test("/absolute/path", "/absolute/path")
 
 	// Single dot components are removed, unless it's the only component of the path.
-	c.Check(cleanpath("./././."), equals, ".")
-	c.Check(cleanpath("./././"), equals, ".")
-	c.Check(cleanpath("dir/multi/././/file"), equals, "dir/multi/file")
-	c.Check(cleanpath("dir/"), equals, "dir")
+	test("./././.", ".")
+	test("./././", ".")
+	test("dir/multi/././/file", "dir/multi/file")
+	test("dir/", "dir")
+
+	test("dir/", "dir")
 
 	// Components like aa/bb/../.. are removed, but not in the initial part of the path,
 	// and only if they are not followed by another "..".
-	c.Check(cleanpath("dir/../dir/../dir/../dir/subdir/../../Makefile"), equals, "dir/../dir/../dir/../Makefile")
-	c.Check(cleanpath("111/222/../../333/444/../../555/666/../../777/888/9"), equals, "111/222/../../777/888/9")
-	c.Check(cleanpath("1/2/3/../../4/5/6/../../7/8/9/../../../../10"), equals, "1/2/3/../../4/7/8/9/../../../../10")
-	c.Check(cleanpath("cat/pkg.v1/../../cat/pkg.v2/Makefile"), equals, "cat/pkg.v1/../../cat/pkg.v2/Makefile")
-	c.Check(cleanpath("aa/../../../../../a/b/c/d"), equals, "aa/../../../../../a/b/c/d")
-	c.Check(cleanpath("aa/bb/../../../../a/b/c/d"), equals, "aa/bb/../../../../a/b/c/d")
-	c.Check(cleanpath("aa/bb/cc/../../../a/b/c/d"), equals, "aa/bb/cc/../../../a/b/c/d")
-	c.Check(cleanpath("aa/bb/cc/dd/../../a/b/c/d"), equals, "aa/bb/a/b/c/d")
-	c.Check(cleanpath("aa/bb/cc/dd/ee/../a/b/c/d"), equals, "aa/bb/cc/dd/ee/../a/b/c/d")
-	c.Check(cleanpath("../../../../../a/b/c/d"), equals, "../../../../../a/b/c/d")
-	c.Check(cleanpath("aa/../../../../a/b/c/d"), equals, "aa/../../../../a/b/c/d")
-	c.Check(cleanpath("aa/bb/../../../a/b/c/d"), equals, "aa/bb/../../../a/b/c/d")
-	c.Check(cleanpath("aa/bb/cc/../../a/b/c/d"), equals, "aa/bb/cc/../../a/b/c/d")
-	c.Check(cleanpath("aa/bb/cc/dd/../a/b/c/d"), equals, "aa/bb/cc/dd/../a/b/c/d")
-	c.Check(cleanpath("aa/../cc/../../a/b/c/d"), equals, "aa/../cc/../../a/b/c/d")
+	test("dir/../dir/../dir/../dir/subdir/../../Makefile", "dir/../dir/../dir/../Makefile")
+	test("111/222/../../333/444/../../555/666/../../777/888/9", "111/222/../../777/888/9")
+	test("1/2/3/../../4/5/6/../../7/8/9/../../../../10", "1/2/3/../../4/7/8/9/../../../../10")
+	test("cat/pkg.v1/../../cat/pkg.v2/Makefile", "cat/pkg.v1/../../cat/pkg.v2/Makefile")
+	test("aa/../../../../../a/b/c/d", "aa/../../../../../a/b/c/d")
+	test("aa/bb/../../../../a/b/c/d", "aa/bb/../../../../a/b/c/d")
+	test("aa/bb/cc/../../../a/b/c/d", "aa/bb/cc/../../../a/b/c/d")
+	test("aa/bb/cc/dd/../../a/b/c/d", "aa/bb/a/b/c/d")
+	test("aa/bb/cc/dd/ee/../a/b/c/d", "aa/bb/cc/dd/ee/../a/b/c/d")
+	test("../../../../../a/b/c/d", "../../../../../a/b/c/d")
+	test("aa/../../../../a/b/c/d", "aa/../../../../a/b/c/d")
+	test("aa/bb/../../../a/b/c/d", "aa/bb/../../../a/b/c/d")
+	test("aa/bb/cc/../../a/b/c/d", "aa/bb/cc/../../a/b/c/d")
+	test("aa/bb/cc/dd/../a/b/c/d", "aa/bb/cc/dd/../a/b/c/d")
+	test("aa/../cc/../../a/b/c/d", "aa/../cc/../../a/b/c/d")
 
 	// The initial 2 components of the path are typically category/package, when
 	// pkglint is called from the pkgsrc top-level directory.
 	// This path serves as the context and therefore is always kept.
-	c.Check(cleanpath("aa/bb/../../cc/dd/../../ee/ff"), equals, "aa/bb/../../ee/ff")
-	c.Check(cleanpath("aa/bb/../../cc/dd/../.."), equals, "aa/bb/../..")
-	c.Check(cleanpath("aa/bb/cc/dd/../.."), equals, "aa/bb")
+	test("aa/bb/../../cc/dd/../../ee/ff", "aa/bb/../../ee/ff")
+	test("aa/bb/../../cc/dd/../..", "aa/bb/../..")
+	test("aa/bb/cc/dd/../..", "aa/bb")
+	test("aa/bb/../../cc/dd/../../ee/ff/buildlink3.mk", "aa/bb/../../ee/ff/buildlink3.mk")
+	test("./aa/bb/../../cc/dd/../../ee/ff/buildlink3.mk", "aa/bb/../../ee/ff/buildlink3.mk")
+
+	test("../.", "..")
+	test("../././././././.", "..")
+	test(".././././././././", "..")
+}
+
+func (s *Suite) Test_relpath(c *check.C) {
+	t := s.Init(c)
+
+	t.Chdir(".")
+	t.Check(G.Pkgsrc.topdir, equals, t.tmpdir)
+
+	test := func(from, to, result string) {
+		c.Check(relpath(from, to), equals, result)
+	}
+
+	test("some/dir", "some/directory", "../../some/directory")
+
+	test("category/package/.", ".", "../..")
+
+	// This case is handled by one of the shortcuts that avoid file system access.
+	test(
+		"./.",
+		"x11/frameworkintegration/../../meta-pkgs/kde/kf5.mk",
+		"meta-pkgs/kde/kf5.mk")
+
+	// This happens when "pkglint -r x11" is run.
+	G.Pkgsrc.topdir = "x11/.."
+
+	test(
+		"./.",
+		"x11/frameworkintegration/../../meta-pkgs/kde/kf5.mk",
+		"meta-pkgs/kde/kf5.mk")
+	test(
+		"x11/..",
+		"x11/frameworkintegration/../../meta-pkgs/kde/kf5.mk",
+		"meta-pkgs/kde/kf5.mk")
 }
 
 // Relpath is called so often that handling the most common calls
@@ -119,9 +164,9 @@ func (s *Suite) Test_relpath__quick(c *check.C) {
 	test("some/dir", "some/dir/../..", "../..")
 	test("some/dir", "some/dir/./././../..", "../..")
 	test("some/dir", "some/dir/", ".")
-	test("some/dir", "some/directory", "../directory")
 
-	test("category/package/.", ".", "../..")
+	test("some/dir", ".", "../..")
+	test("some/dir/.", ".", "../..")
 }
 
 // This is not really an internal error but won't happen in practice anyway.
@@ -129,10 +174,14 @@ func (s *Suite) Test_relpath__quick(c *check.C) {
 func (s *Suite) Test_relpath__failure_on_Windows(c *check.C) {
 	t := s.Init(c)
 
-	if runtime.GOOS == "windows" {
+	if runtime.GOOS == "windows" && hasPrefix(t.tmpdir, "C:/") {
 		t.ExpectPanic(
 			func() { relpath("c:/", "d:/") },
-			"Pkglint internal error: relpath \"c:/\" \"d:/\": Rel: can't make d:/ relative to c:/")
+			sprintf(
+				"Pkglint internal error: "+
+					"relpath from topdir %q to %q: "+
+					"Rel: can't make %s relative to %s",
+				t.tmpdir, "D:/", "D:/", t.tmpdir))
 	}
 }
 
@@ -709,29 +758,4 @@ func (s *Suite) Test_StringInterner(c *check.C) {
 	t.Check(si.Intern("Hello"), equals, "Hello")
 	t.Check(si.Intern("Hello, world"), equals, "Hello, world")
 	t.Check(si.Intern("Hello, world"[0:5]), equals, "Hello")
-}
-
-func (s *Suite) Test_includePath_includes(c *check.C) {
-	t := s.Init(c)
-
-	path := func(locations ...string) includePath {
-		return includePath{locations}
-	}
-
-	var (
-		m   = path("Makefile")
-		mc  = path("Makefile", "Makefile.common")
-		mco = path("Makefile", "Makefile.common", "other.mk")
-		mo  = path("Makefile", "other.mk")
-	)
-
-	t.Check(m.includes(m), equals, false)
-
-	t.Check(m.includes(mc), equals, true)
-	t.Check(m.includes(mco), equals, true)
-	t.Check(mc.includes(mco), equals, true)
-
-	t.Check(mc.includes(m), equals, false)
-	t.Check(mc.includes(mo), equals, false)
-	t.Check(mo.includes(mc), equals, false)
 }
