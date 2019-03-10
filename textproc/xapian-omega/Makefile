@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2018/08/26 13:26:12 schmonz Exp $
+# $NetBSD: Makefile,v 1.40 2019/03/10 13:21:05 schmonz Exp $
 
 .include "../../textproc/xapian/Makefile.common"
 
@@ -17,7 +17,7 @@ REPLACE_PERL=		dbi2omega htdig2omega mbox2omega
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	do-configure
 SUBST_FILES.files=	omega.conf
-SUBST_SED.files=	-e "s|@VARBASE@|${VARBASE}|g"
+SUBST_VARS.files=	VARBASE
 SUBST_MESSAGE.files=	Fixing configuration files.
 
 OWN_DIRS+=		${VARBASE}/log/${PKGBASE}
