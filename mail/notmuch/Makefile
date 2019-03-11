@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2019/03/08 18:27:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.45 2019/03/11 14:41:05 ryoon Exp $
 
-DISTNAME=	notmuch-0.28.2
+DISTNAME=	notmuch-0.28.3
 CATEGORIES=	mail
 MASTER_SITES=	https://notmuchmail.org/releases/
 
