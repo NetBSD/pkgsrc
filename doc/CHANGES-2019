@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1208 2019/03/11 06:51:12 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1209 2019/03/11 06:54:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2014,3 +2014,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/swi-prolog to 8.0.2 [leot 2019-03-10]
 	Updated lang/swi-prolog-jpl to 8.0.2 [leot 2019-03-10]
 	Updated x11/libFS to 1.0.8 [wiz 2019-03-11]
+	Updated x11/libXcomposite to 0.4.5 [wiz 2019-03-11]
