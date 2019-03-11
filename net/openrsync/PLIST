@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2019/03/11 16:27:03 kamil Exp $
+bin/openrsync
+man/man1/openrsync.1
+man/man5/rsync.5
+man/man5/rsyncd.5
