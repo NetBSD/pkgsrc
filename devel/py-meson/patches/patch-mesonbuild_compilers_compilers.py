@@ -1,4 +1,4 @@
-$NetBSD: patch-mesonbuild_compilers_compilers.py,v 1.5 2019/03/08 11:34:49 prlw1 Exp $
+$NetBSD: patch-mesonbuild_compilers_compilers.py,v 1.6 2019/03/11 12:08:19 jperkin Exp $
 
 Support SunOS-specific GCC behaviour.
 Limit GNU ld options correctly.
@@ -57,15 +57,7 @@ Limit GNU ld options correctly.
          sostr = '' if soversion is None else '.' + soversion
          return ['-Wl,-soname,%s%s.%s%s' % (prefix, shlib_name, suffix, sostr)]
      elif compiler_type.is_windows_compiler:
-@@ -1359,6 +1372,7 @@ def get_compiler_uses_gnuld(c):
-         CompilerType.GCC_STANDARD,
-         CompilerType.GCC_MINGW,
-         CompilerType.GCC_CYGWIN,
-+        CompilerType.GCC_SUNOS,
-         CompilerType.CLANG_STANDARD,
-         CompilerType.CLANG_MINGW,
-         CompilerType.ICC_STANDARD,
-@@ -1474,6 +1488,8 @@ class GnuLikeCompiler(abc.ABC):
+@@ -1474,6 +1487,8 @@ class GnuLikeCompiler(abc.ABC):
      def get_buildtype_linker_args(self, buildtype):
          if self.compiler_type.is_osx_compiler:
              return apple_buildtype_linker_args[buildtype]
@@ -74,7 +66,7 @@ Limit GNU ld options correctly.
          return gnulike_buildtype_linker_args[buildtype]
  
      @abc.abstractmethod
-@@ -1538,6 +1554,8 @@ class GnuLikeCompiler(abc.ABC):
+@@ -1538,6 +1553,8 @@ class GnuLikeCompiler(abc.ABC):
          if self.compiler_type.is_osx_compiler:
              # Apple ld
              return ['-Wl,-undefined,dynamic_lookup']
