@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1218 2019/03/11 14:21:23 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.1219 2019/03/11 14:41:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2025,3 +2025,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated misc/py-stdnum to 1.11 [adam 2019-03-11]
 	Updated devel/nspr to 4.21 [ryoon 2019-03-11]
 	Updated devel/pkgconf to 1.6.0 [ryoon 2019-03-11]
+	Updated mail/notmuch to 0.28.3 [ryoon 2019-03-11]
