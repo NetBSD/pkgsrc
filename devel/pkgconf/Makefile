@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2018/01/30 10:43:20 jperkin Exp $
+# $NetBSD: Makefile,v 1.14 2019/03/11 14:21:01 ryoon Exp $
 
-DISTNAME=	pkgconf-1.4.1
-PKGREVISION=	1
+DISTNAME=	pkgconf-1.6.0
 CATEGORIES=	devel
 MASTER_SITES=	https://distfiles.dereferenced.org/pkgconf/
 
