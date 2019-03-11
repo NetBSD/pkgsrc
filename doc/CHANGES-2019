@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1211 2019/03/11 07:14:13 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1212 2019/03/11 07:56:45 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2017,3 +2017,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/libXcomposite to 0.4.5 [wiz 2019-03-11]
 	Updated x11/libXcursor to 1.2.0 [wiz 2019-03-11]
 	Updated x11/libXdamage to 1.1.5 [wiz 2019-03-11]
+	Updated www/moodle to 3.6.3 [wen 2019-03-11]
