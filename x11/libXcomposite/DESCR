@@ -1,2 +1,3 @@
-This package contains the library and header files for the X Composite
-Library. This is from the modular X.org project.
+This package contains the library and header files for the X
+Composite Library, a client library for the Composite extension to
+the X11 protocol. This is from the modular X.org project.
