@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/10/23 14:17:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/03/11 14:00:08 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -22,6 +22,9 @@ ${PYSITELIB}/stdnum/ar/cbu.pyo
 ${PYSITELIB}/stdnum/ar/cuit.py
 ${PYSITELIB}/stdnum/ar/cuit.pyc
 ${PYSITELIB}/stdnum/ar/cuit.pyo
+${PYSITELIB}/stdnum/ar/dni.py
+${PYSITELIB}/stdnum/ar/dni.pyc
+${PYSITELIB}/stdnum/ar/dni.pyo
 ${PYSITELIB}/stdnum/at/__init__.py
 ${PYSITELIB}/stdnum/at/__init__.pyc
 ${PYSITELIB}/stdnum/at/__init__.pyo
@@ -39,6 +42,9 @@ ${PYSITELIB}/stdnum/at/tin.pyo
 ${PYSITELIB}/stdnum/at/uid.py
 ${PYSITELIB}/stdnum/at/uid.pyc
 ${PYSITELIB}/stdnum/at/uid.pyo
+${PYSITELIB}/stdnum/at/vnr.py
+${PYSITELIB}/stdnum/at/vnr.pyc
+${PYSITELIB}/stdnum/at/vnr.pyo
 ${PYSITELIB}/stdnum/au/__init__.py
 ${PYSITELIB}/stdnum/au/__init__.pyc
 ${PYSITELIB}/stdnum/au/__init__.pyo
@@ -131,6 +137,12 @@ ${PYSITELIB}/stdnum/co/__init__.pyo
 ${PYSITELIB}/stdnum/co/nit.py
 ${PYSITELIB}/stdnum/co/nit.pyc
 ${PYSITELIB}/stdnum/co/nit.pyo
+${PYSITELIB}/stdnum/cu/__init__.py
+${PYSITELIB}/stdnum/cu/__init__.pyc
+${PYSITELIB}/stdnum/cu/__init__.pyo
+${PYSITELIB}/stdnum/cu/ni.py
+${PYSITELIB}/stdnum/cu/ni.pyc
+${PYSITELIB}/stdnum/cu/ni.pyo
 ${PYSITELIB}/stdnum/cusip.py
 ${PYSITELIB}/stdnum/cusip.pyc
 ${PYSITELIB}/stdnum/cusip.pyo
@@ -321,6 +333,9 @@ ${PYSITELIB}/stdnum/gb/vat.pyo
 ${PYSITELIB}/stdnum/gr/__init__.py
 ${PYSITELIB}/stdnum/gr/__init__.pyc
 ${PYSITELIB}/stdnum/gr/__init__.pyo
+${PYSITELIB}/stdnum/gr/amka.py
+${PYSITELIB}/stdnum/gr/amka.pyc
+${PYSITELIB}/stdnum/gr/amka.pyo
 ${PYSITELIB}/stdnum/gr/vat.py
 ${PYSITELIB}/stdnum/gr/vat.pyc
 ${PYSITELIB}/stdnum/gr/vat.pyo
@@ -442,6 +457,9 @@ ${PYSITELIB}/stdnum/lei.pyo
 ${PYSITELIB}/stdnum/lt/__init__.py
 ${PYSITELIB}/stdnum/lt/__init__.pyc
 ${PYSITELIB}/stdnum/lt/__init__.pyo
+${PYSITELIB}/stdnum/lt/asmens.py
+${PYSITELIB}/stdnum/lt/asmens.pyc
+${PYSITELIB}/stdnum/lt/asmens.pyo
 ${PYSITELIB}/stdnum/lt/pvm.py
 ${PYSITELIB}/stdnum/lt/pvm.pyc
 ${PYSITELIB}/stdnum/lt/pvm.pyo
@@ -460,12 +478,21 @@ ${PYSITELIB}/stdnum/lv/__init__.pyo
 ${PYSITELIB}/stdnum/lv/pvn.py
 ${PYSITELIB}/stdnum/lv/pvn.pyc
 ${PYSITELIB}/stdnum/lv/pvn.pyo
+${PYSITELIB}/stdnum/mac.py
+${PYSITELIB}/stdnum/mac.pyc
+${PYSITELIB}/stdnum/mac.pyo
 ${PYSITELIB}/stdnum/mc/__init__.py
 ${PYSITELIB}/stdnum/mc/__init__.pyc
 ${PYSITELIB}/stdnum/mc/__init__.pyo
 ${PYSITELIB}/stdnum/mc/tva.py
 ${PYSITELIB}/stdnum/mc/tva.pyc
 ${PYSITELIB}/stdnum/mc/tva.pyo
+${PYSITELIB}/stdnum/md/__init__.py
+${PYSITELIB}/stdnum/md/__init__.pyc
+${PYSITELIB}/stdnum/md/__init__.pyo
+${PYSITELIB}/stdnum/md/idno.py
+${PYSITELIB}/stdnum/md/idno.pyc
+${PYSITELIB}/stdnum/md/idno.pyo
 ${PYSITELIB}/stdnum/me/__init__.py
 ${PYSITELIB}/stdnum/me/__init__.pyc
 ${PYSITELIB}/stdnum/me/__init__.pyo
@@ -490,6 +517,9 @@ ${PYSITELIB}/stdnum/mu/nid.pyo
 ${PYSITELIB}/stdnum/mx/__init__.py
 ${PYSITELIB}/stdnum/mx/__init__.pyc
 ${PYSITELIB}/stdnum/mx/__init__.pyo
+${PYSITELIB}/stdnum/mx/curp.py
+${PYSITELIB}/stdnum/mx/curp.pyc
+${PYSITELIB}/stdnum/mx/curp.pyo
 ${PYSITELIB}/stdnum/mx/rfc.py
 ${PYSITELIB}/stdnum/mx/rfc.pyc
 ${PYSITELIB}/stdnum/mx/rfc.pyo
@@ -521,6 +551,9 @@ ${PYSITELIB}/stdnum/nl/postcode.pyo
 ${PYSITELIB}/stdnum/no/__init__.py
 ${PYSITELIB}/stdnum/no/__init__.pyc
 ${PYSITELIB}/stdnum/no/__init__.pyo
+${PYSITELIB}/stdnum/no/fodselsnummer.py
+${PYSITELIB}/stdnum/no/fodselsnummer.pyc
+${PYSITELIB}/stdnum/no/fodselsnummer.pyo
 ${PYSITELIB}/stdnum/no/iban.py
 ${PYSITELIB}/stdnum/no/iban.pyc
 ${PYSITELIB}/stdnum/no/iban.pyo
@@ -536,6 +569,14 @@ ${PYSITELIB}/stdnum/no/orgnr.pyo
 ${PYSITELIB}/stdnum/numdb.py
 ${PYSITELIB}/stdnum/numdb.pyc
 ${PYSITELIB}/stdnum/numdb.pyo
+${PYSITELIB}/stdnum/nz/__init__.py
+${PYSITELIB}/stdnum/nz/__init__.pyc
+${PYSITELIB}/stdnum/nz/__init__.pyo
+${PYSITELIB}/stdnum/nz/bankaccount.py
+${PYSITELIB}/stdnum/nz/bankaccount.pyc
+${PYSITELIB}/stdnum/nz/bankaccount.pyo
+${PYSITELIB}/stdnum/nz/banks.dat
+${PYSITELIB}/stdnum/oui.dat
 ${PYSITELIB}/stdnum/pl/__init__.py
 ${PYSITELIB}/stdnum/pl/__init__.pyc
 ${PYSITELIB}/stdnum/pl/__init__.pyo
@@ -581,6 +622,9 @@ ${PYSITELIB}/stdnum/se/__init__.pyo
 ${PYSITELIB}/stdnum/se/orgnr.py
 ${PYSITELIB}/stdnum/se/orgnr.pyc
 ${PYSITELIB}/stdnum/se/orgnr.pyo
+${PYSITELIB}/stdnum/se/personnummer.py
+${PYSITELIB}/stdnum/se/personnummer.pyc
+${PYSITELIB}/stdnum/se/personnummer.pyo
 ${PYSITELIB}/stdnum/se/vat.py
 ${PYSITELIB}/stdnum/se/vat.pyc
 ${PYSITELIB}/stdnum/se/vat.pyo
