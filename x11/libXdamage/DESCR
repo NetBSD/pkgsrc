@@ -1,1 +1,2 @@
-This package contains the Xdamage extension.
+This package contains the Xlib-based library for the X Damage
+extension.
