@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1213 2019/03/11 12:08:27 jperkin Exp $
+$NetBSD: CHANGES-2019,v 1.1214 2019/03/11 13:43:31 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2019,3 +2019,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/libXdamage to 1.1.5 [wiz 2019-03-11]
 	Updated www/moodle to 3.6.3 [wen 2019-03-11]
 	Updated devel/py-meson to 0.49.2nb3 [jperkin 2019-03-11]
+	Updated lang/php72 to 7.2.15nb1 [jperkin 2019-03-11]
