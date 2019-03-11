@@ -1,8 +1,8 @@
-# $NetBSD: buildlink3.mk,v 1.5 2018/03/07 11:57:35 wiz Exp $
-
-.include "../../mk/bsd.fast.prefs.mk"
+# $NetBSD: buildlink3.mk,v 1.6 2019/03/11 06:54:09 wiz Exp $
 
 BUILDLINK_TREE+=	libXcomposite
+
+.include "../../mk/bsd.fast.prefs.mk"
 
 .if !defined(LIBXCOMPOSITE_BUILDLINK3_MK)
 LIBXCOMPOSITE_BUILDLINK3_MK:=
