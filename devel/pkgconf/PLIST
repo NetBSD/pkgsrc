@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/01/24 17:00:09 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/03/11 14:21:01 ryoon Exp $
 bin/pkg-config
 bin/pkgconf
 include/pkgconf/libpkgconf/bsdstubs.h
@@ -10,6 +10,7 @@ lib/libpkgconf.la
 lib/pkgconfig/libpkgconf.pc
 man/man1/pkgconf.1
 man/man5/pc.5
+man/man5/pkgconf-personality.5
 man/man7/pkg.m4.7
 share/aclocal/pkg.m4
 share/doc/pkgconf/AUTHORS
