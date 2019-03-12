@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.159 2019/01/09 10:28:19 adam Exp $
+# $NetBSD: Makefile,v 1.160 2019/03/12 18:02:08 jaapb Exp $
 #
 
 COMMENT=	Archivers
@@ -66,6 +66,7 @@ SUBDIR+=	mscompress
 SUBDIR+=	nomarch
 SUBDIR+=	nulib2
 SUBDIR+=	ocaml-bz2
+SUBDIR+=	ocaml-decompress
 SUBDIR+=	ocaml-zip
 SUBDIR+=	p5-Archive-Any
 SUBDIR+=	p5-Archive-Any-Lite
