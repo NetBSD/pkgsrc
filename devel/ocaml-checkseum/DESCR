@@ -1,0 +1,2 @@
+Chekseum is a library which implements the ADLER-32 and CRC32C Cyclic Redundancy
+Checks. It provides 2 implementations, the first in C and the second in OCaml.
