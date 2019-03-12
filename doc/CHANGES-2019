@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1236 2019/03/12 18:00:11 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.1237 2019/03/12 18:05:09 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2045,3 +2045,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/ocaml-rresult version 0.6.0 [jaapb 2019-03-12]
 	Added devel/ocaml-checkseum version 0.0.3 [jaapb 2019-03-12]
 	Added archivers/ocaml-decompress version 0.8.1 [jaapb 2019-03-12]
+	Added devel/ocaml-astring version 0.8.3 [jaapb 2019-03-12]
