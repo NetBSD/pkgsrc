@@ -1,4 +1,4 @@
-/* $NetBSD: event.c,v 1.8 2017/02/25 21:21:53 joerg Exp $ */
+/* $NetBSD: event.c,v 1.9 2019/03/12 15:37:51 wiz Exp $ */
 
 /*-
  * Copyright (c) 2007, 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -50,6 +50,8 @@
 #include <signal.h>
 
 #include "pbulk.h"
+
+static struct event *poll_loop_next = NULL;
 
 struct deferred_read_arg {
 	void *cb_arg;
@@ -206,6 +208,9 @@ event_add(struct event *ev, int fd, int do_write, int is_persistent,
 void
 event_del(struct event *ev)
 {
+	if (ev == poll_loop_next) {
+		poll_loop_next = LIST_NEXT(ev, ev_link);
+	}
 	LIST_REMOVE(ev, ev_link);
 	--active_events;
 }
@@ -303,7 +308,7 @@ void
 event_dispatch(void)
 {
 	struct timeval now;
-	struct event *ev, *next;
+	struct event *ev;
 	struct pollfd *iter, *last_iter;
 	int ret, timeout;
 
@@ -345,8 +350,8 @@ loop:
 	if (ret > 0) {
 		iter = poll_list;
 		for (ev = LIST_FIRST(&all_events);
-		    iter < last_iter && ev && (next = LIST_NEXT(ev, ev_link), 1);
-		    ev = next, ++iter) {
+		    iter < last_iter && ev && (poll_loop_next = LIST_NEXT(ev, ev_link), 1);
+		    ev = poll_loop_next, ++iter) {
 			if (iter->revents) {
 				if (!ev->ev_persistent) {
 					--active_events;
@@ -356,6 +361,7 @@ loop:
 				--ret;
 			}
 		}
+		poll_loop_next = NULL;
 	}
 	goto loop;
 }
