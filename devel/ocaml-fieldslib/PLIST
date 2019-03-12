@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2019/03/12 18:16:18 jaapb Exp $
+${OCAML_SITELIB}/fieldslib/META
+${OCAML_SITELIB}/fieldslib/dune-package
+${PLIST.ocaml-opt}${OCAML_SITELIB}/fieldslib/fieldslib.a
+${OCAML_SITELIB}/fieldslib/fieldslib.cma
+${OCAML_SITELIB}/fieldslib/fieldslib.cmi
+${OCAML_SITELIB}/fieldslib/fieldslib.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/fieldslib/fieldslib.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/fieldslib/fieldslib.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/fieldslib/fieldslib.cmxs
+${OCAML_SITELIB}/fieldslib/fieldslib.ml
+${OCAML_SITELIB}/fieldslib/opam
+share/doc/fieldslib/CHANGES.md
+share/doc/fieldslib/LICENSE.md
