@@ -1,0 +1,5 @@
+Fmt exposes combinators to devise OCaml Format pretty-printing functions.
+
+The optional Fmt_tty library allows to setup formatters for terminal color
+output.
+The optional Fmt_cli library provides command line support for Fmt.
