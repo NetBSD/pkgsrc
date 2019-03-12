@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1249 2019/03/12 19:03:00 leot Exp $
+$NetBSD: CHANGES-2019,v 1.1250 2019/03/12 23:58:50 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2058,3 +2058,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/ocaml-splittable_random version 0.12.0 [jaapb 2019-03-12]
 	Added devel/ocaml-base_quickcheck version 0.12.0 [jaapb 2019-03-12]
 	Updated misc/pick to 3.0.1 [leot 2019-03-12]
+	Updated devel/py-lupa to 1.8 [alnsn 2019-03-12]
