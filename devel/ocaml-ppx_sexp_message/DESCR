@@ -1,0 +1,5 @@
+The aim of ppx_sexp_message is to ease the creation of s-expressions in OCaml.
+
+This is mainly motivated by writing error and debugging messages, where one
+needs to construct a s-expression based on various element of the context such
+as function arguments.
