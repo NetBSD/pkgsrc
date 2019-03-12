@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2019/03/12 18:04:58 jaapb Exp $
+${OCAML_SITELIB}/astring/META
+${PLIST.ocaml-opt}${OCAML_SITELIB}/astring/astring.a
+${OCAML_SITELIB}/astring/astring.cma
+${OCAML_SITELIB}/astring/astring.cmi
+${OCAML_SITELIB}/astring/astring.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/astring/astring.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/astring/astring.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/astring/astring.cmxs
+${OCAML_SITELIB}/astring/astring.mli
+${PLIST.ocaml-opt}${OCAML_SITELIB}/astring/astring_base.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/astring/astring_char.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/astring/astring_escape.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/astring/astring_string.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/astring/astring_sub.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/astring/astring_top.a
+${OCAML_SITELIB}/astring/astring_top.cma
+${PLIST.ocaml-opt}${OCAML_SITELIB}/astring/astring_top.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/astring/astring_top.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/astring/astring_top.cmxs
+${OCAML_SITELIB}/astring/astring_top_init.ml
+${PLIST.ocaml-opt}${OCAML_SITELIB}/astring/astring_unsafe.cmx
+${OCAML_SITELIB}/astring/opam
+share/doc/astring/CHANGES.md
+share/doc/astring/LICENSE.md
+share/doc/astring/README.md
+share/doc/astring/examples.ml
