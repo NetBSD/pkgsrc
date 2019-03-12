@@ -1,0 +1,2 @@
+Decompress is a pure OCaml implementation of zlib (in other words, it does not
+use C bindings).
