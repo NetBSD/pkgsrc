@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1221 2019/03/12 00:18:35 gdt Exp $
+$NetBSD: CHANGES-2019,v 1.1222 2019/03/12 04:16:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2028,3 +2028,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/notmuch to 0.28.3 [ryoon 2019-03-11]
 	Added net/openrsync version 0.20190221 [kamil 2019-03-11]
 	Updated databases/postgresql-postgis2 to 2.5.2 [gdt 2019-03-12]
+	Updated lang/php71 to 7.1.27 [taca 2019-03-12]
+	Updated lang/php72 to 7.2.16 [taca 2019-03-12]
+	Updated lang/php73 to 7.3.3 [taca 2019-03-12]
