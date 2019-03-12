@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2019/03/12 17:49:59 jaapb Exp $
+${OCAML_SITELIB}/rresult/META
+${OCAML_SITELIB}/rresult/opam
+${PLIST.ocaml-opt}${OCAML_SITELIB}/rresult/rresult.a
+${OCAML_SITELIB}/rresult/rresult.cma
+${OCAML_SITELIB}/rresult/rresult.cmi
+${OCAML_SITELIB}/rresult/rresult.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/rresult/rresult.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/rresult/rresult.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/rresult/rresult.cmxs
+${OCAML_SITELIB}/rresult/rresult.mli
+${PLIST.ocaml-opt}${OCAML_SITELIB}/rresult/rresult_top.a
+${OCAML_SITELIB}/rresult/rresult_top.cma
+${PLIST.ocaml-opt}${OCAML_SITELIB}/rresult/rresult_top.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/rresult/rresult_top.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/rresult/rresult_top.cmxs
+${OCAML_SITELIB}/rresult/rresult_top_init.ml
+share/doc/rresult/CHANGES.md
+share/doc/rresult/LICENSE.md
+share/doc/rresult/README.md
