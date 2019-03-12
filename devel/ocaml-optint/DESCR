@@ -1,0 +1,4 @@
+This library provides a module that uses different integer types
+on different architectures, for performance optimisation
+purposes. It is really unsafe and ignores some details like the
+sign bit for any cast.
