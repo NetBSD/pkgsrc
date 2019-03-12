@@ -1,0 +1,3 @@
+Base_quickcheck provides randomized testing in the style of Haskell's
+Quickcheck library, with support for built-in types as well as types provided
+by Base.

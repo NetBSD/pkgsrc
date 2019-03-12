@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/03/12 18:59:16 jaapb Exp $
+
+SHA1 (base_quickcheck-0.12.0.tar.gz) = a44cb358990148ec323f2e39d91544a06a7196dd
+RMD160 (base_quickcheck-0.12.0.tar.gz) = f64dd5c1e94ff2a6bfbbe1ee42e03bc7ea7f2db4
+SHA512 (base_quickcheck-0.12.0.tar.gz) = 3627c543456afcffbe1f010b2457ff8fcf97bcfc558ca3503834b5aad935641e70d78fac8e2f1c7f9bc2edd4fe4e8fab1490861b2672625c7807662d011cf436
+Size (base_quickcheck-0.12.0.tar.gz) = 56861 bytes
