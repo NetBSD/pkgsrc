@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1224 2019/03/12 04:22:55 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1225 2019/03/12 04:25:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2033,3 +2033,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/php73 to 7.3.3 [taca 2019-03-12]
 	Updated lang/ruby26-base to 2.6.1nb1 [taca 2019-03-12]
 	Updated lang/ruby25-base to 2.5.3nb2 [taca 2019-03-12]
+	Updated lang/ruby24-base to 2.4.5nb1 [taca 2019-03-12]
