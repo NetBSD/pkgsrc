@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2787 2019/03/12 17:42:31 jaapb Exp $
+# $NetBSD: Makefile,v 1.2788 2019/03/12 17:47:36 jaapb Exp $
 #
 
 COMMENT=	Development utilities
@@ -819,6 +819,7 @@ SUBDIR+=	ocaml-lwt_ssl
 SUBDIR+=	ocaml-migrate-parsetree
 SUBDIR+=	ocaml-oasis
 SUBDIR+=	ocaml-optcomp
+SUBDIR+=	ocaml-optint
 SUBDIR+=	ocaml-parsexp
 SUBDIR+=	ocaml-ppx_base
 SUBDIR+=	ocaml-ppx_compare
