@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1225 2019/03/12 04:25:13 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1226 2019/03/12 04:32:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2034,3 +2034,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/ruby26-base to 2.6.1nb1 [taca 2019-03-12]
 	Updated lang/ruby25-base to 2.5.3nb2 [taca 2019-03-12]
 	Updated lang/ruby24-base to 2.4.5nb1 [taca 2019-03-12]
+	Updated mail/dovecot2-pigeonhole to 0.5.5 [taca 2019-03-12]
