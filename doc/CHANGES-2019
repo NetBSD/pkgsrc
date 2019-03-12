@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1238 2019/03/12 18:09:37 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.1239 2019/03/12 18:16:27 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2047,3 +2047,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added archivers/ocaml-decompress version 0.8.1 [jaapb 2019-03-12]
 	Added devel/ocaml-astring version 0.8.3 [jaapb 2019-03-12]
 	Added devel/ocaml-bigstringaf version 0.4.0 [jaapb 2019-03-12]
+	Added devel/ocaml-fieldslib version 0.12.0 [jaapb 2019-03-12]
