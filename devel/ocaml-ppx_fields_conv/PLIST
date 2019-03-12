@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2019/03/12 18:18:40 jaapb Exp $
+${OCAML_SITELIB}/ppx_fields_conv/META
+${OCAML_SITELIB}/ppx_fields_conv/dune-package
+${OCAML_SITELIB}/ppx_fields_conv/opam
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_fields_conv/ppx_fields_conv.a
+${OCAML_SITELIB}/ppx_fields_conv/ppx_fields_conv.cma
+${OCAML_SITELIB}/ppx_fields_conv/ppx_fields_conv.cmi
+${OCAML_SITELIB}/ppx_fields_conv/ppx_fields_conv.cmt
+${OCAML_SITELIB}/ppx_fields_conv/ppx_fields_conv.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_fields_conv/ppx_fields_conv.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_fields_conv/ppx_fields_conv.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_fields_conv/ppx_fields_conv.cmxs
+${OCAML_SITELIB}/ppx_fields_conv/ppx_fields_conv.ml
+${OCAML_SITELIB}/ppx_fields_conv/ppx_fields_conv.mli
+share/doc/ppx_fields_conv/CHANGES.md
+share/doc/ppx_fields_conv/LICENSE.md
+share/doc/ppx_fields_conv/README.md
