@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/03/12 18:55:23 jaapb Exp $
+
+SHA1 (splittable_random-0.12.0.tar.gz) = b002cbb1bfe8e5fdb50ddf7de4984c02a9be888f
+RMD160 (splittable_random-0.12.0.tar.gz) = 2cd5afe99a8f1e06d53e7554100abfdfef571b78
+SHA512 (splittable_random-0.12.0.tar.gz) = 47f2db600fed68e18b744f1e11ad166c8a12a3f23e1cfae52f59f7f727d4813ffada91d752aa28c91c84d62d3c5ea134c6338136bd9214950d30e4ceb2c8797a
+Size (splittable_random-0.12.0.tar.gz) = 9943 bytes
