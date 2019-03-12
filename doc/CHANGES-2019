@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1234 2019/03/12 17:50:18 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.1235 2019/03/12 17:57:21 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2043,3 +2043,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/ocaml-fmt version 0.8.5 [jaapb 2019-03-12]
 	Added devel/ocaml-optint version 0.0.2 [jaapb 2019-03-12]
 	Added devel/ocaml-rresult version 0.6.0 [jaapb 2019-03-12]
+	Added devel/ocaml-checkseum version 0.0.3 [jaapb 2019-03-12]
