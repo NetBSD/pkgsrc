@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2019/03/12 18:38:53 jaapb Exp $
+${OCAML_SITELIB}/ppx_sexp_message/META
+${OCAML_SITELIB}/ppx_sexp_message/dune-package
+${OCAML_SITELIB}/ppx_sexp_message/opam
+${OCAML_SITELIB}/ppx_sexp_message/ppx.exe
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_sexp_message/ppx_sexp_message.a
+${OCAML_SITELIB}/ppx_sexp_message/ppx_sexp_message.cma
+${OCAML_SITELIB}/ppx_sexp_message/ppx_sexp_message.cmi
+${OCAML_SITELIB}/ppx_sexp_message/ppx_sexp_message.cmt
+${OCAML_SITELIB}/ppx_sexp_message/ppx_sexp_message.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_sexp_message/ppx_sexp_message.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_sexp_message/ppx_sexp_message.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_sexp_message/ppx_sexp_message.cmxs
+${OCAML_SITELIB}/ppx_sexp_message/ppx_sexp_message.ml
+${OCAML_SITELIB}/ppx_sexp_message/ppx_sexp_message.mli
+share/doc/ppx_sexp_message/CHANGES.md
+share/doc/ppx_sexp_message/LICENSE.md
+share/doc/ppx_sexp_message/README.md
