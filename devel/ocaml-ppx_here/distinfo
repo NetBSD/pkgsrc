@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/03/12 18:34:12 jaapb Exp $
+
+SHA1 (ppx_here-0.12.0.tar.gz) = ac988a0d7641f05971b663f1ddf6e31bfa0708e4
+RMD160 (ppx_here-0.12.0.tar.gz) = 0f6ef89665668e292014858d991fa1a75a61a73f
+SHA512 (ppx_here-0.12.0.tar.gz) = 978a8af50a8b8848c7020c082e32c8e38841219320ec23c4adfec920cdd0ea0faa77ea90fd3470d24277d319ffb1a643557557a1755931c44201319370cfa5c6
+Size (ppx_here-0.12.0.tar.gz) = 4833 bytes
