@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1227 2019/03/12 08:54:02 he Exp $
+$NetBSD: CHANGES-2019,v 1.1228 2019/03/12 12:13:39 he Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2036,3 +2036,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/ruby24-base to 2.4.5nb1 [taca 2019-03-12]
 	Updated mail/dovecot2-pigeonhole to 0.5.5 [taca 2019-03-12]
 	Updated net/fstrm to 0.5.0 [he 2019-03-12]
+	Updated net/unbound to 1.9.1 [he 2019-03-12]
