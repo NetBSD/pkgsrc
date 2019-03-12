@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2019/03/12 18:55:23 jaapb Exp $
+${OCAML_SITELIB}/splittable_random/META
+${OCAML_SITELIB}/splittable_random/dune-package
+${OCAML_SITELIB}/splittable_random/opam
+${PLIST.ocaml-opt}${OCAML_SITELIB}/splittable_random/splittable_random.a
+${OCAML_SITELIB}/splittable_random/splittable_random.cma
+${OCAML_SITELIB}/splittable_random/splittable_random.cmi
+${OCAML_SITELIB}/splittable_random/splittable_random.cmt
+${OCAML_SITELIB}/splittable_random/splittable_random.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/splittable_random/splittable_random.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/splittable_random/splittable_random.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/splittable_random/splittable_random.cmxs
+${OCAML_SITELIB}/splittable_random/splittable_random.ml
+${OCAML_SITELIB}/splittable_random/splittable_random.mli
+share/doc/splittable_random/CHANGES.md
+share/doc/splittable_random/LICENSE.md
+share/doc/splittable_random/README.md
