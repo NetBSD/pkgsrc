@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2018/08/22 09:42:53 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2019/03/12 13:20:51 wiz Exp $
 
-DISTNAME=		libzip-1.5.1
-PKGREVISION=		2
+DISTNAME=		libzip-1.5.2
 CATEGORIES=		archivers devel
 MASTER_SITES=		https://libzip.org/download/
 EXTRACT_SUFX=		.tar.xz
