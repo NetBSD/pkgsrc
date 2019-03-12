@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/03/12 17:57:08 jaapb Exp $
+
+SHA1 (checkseum-0.0.3.tar.gz) = 0606244cc1ef021d5367843fbefcda5add00a707
+RMD160 (checkseum-0.0.3.tar.gz) = 70d7edec315ebef7a62af2d8cc718a9b42d24904
+SHA512 (checkseum-0.0.3.tar.gz) = ebf91c71e0d1be87202bc826e7c187b94f7bcf4d065bed71b02a2150648aa5f87b507f907822a013eb346b40dcaa4d1fee901db2ef9c67743e7124c636352524
+Size (checkseum-0.0.3.tar.gz) = 31345 bytes
