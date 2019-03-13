@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1258 2019/03/13 11:19:24 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.1259 2019/03/13 11:24:59 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2070,3 +2070,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/ocaml-bin_prot version 0.12.0 [jaapb 2019-03-13]
 	Added devel/ocaml-ppx_bin_prot version 0.12.0 [jaapb 2019-03-13]
 	Added devel/ocaml-ppx_expect version 0.12.0 [jaapb 2019-03-13]
+	Added devel/ocaml-ppx_fail version 0.12.0 [jaapb 2019-03-13]
