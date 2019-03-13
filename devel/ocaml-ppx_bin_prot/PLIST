@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2019/03/13 11:15:45 jaapb Exp $
+${OCAML_SITELIB}/ppx_bin_prot/META
+${OCAML_SITELIB}/ppx_bin_prot/dune-package
+${OCAML_SITELIB}/ppx_bin_prot/opam
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_bin_prot/ppx_bin_prot.a
+${OCAML_SITELIB}/ppx_bin_prot/ppx_bin_prot.cma
+${OCAML_SITELIB}/ppx_bin_prot/ppx_bin_prot.cmi
+${OCAML_SITELIB}/ppx_bin_prot/ppx_bin_prot.cmt
+${OCAML_SITELIB}/ppx_bin_prot/ppx_bin_prot.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_bin_prot/ppx_bin_prot.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_bin_prot/ppx_bin_prot.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_bin_prot/ppx_bin_prot.cmxs
+${OCAML_SITELIB}/ppx_bin_prot/ppx_bin_prot.ml
+${OCAML_SITELIB}/ppx_bin_prot/ppx_bin_prot.mli
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_bin_prot/shape-expander/bin_shape_expand.a
+${OCAML_SITELIB}/ppx_bin_prot/shape-expander/bin_shape_expand.cma
+${OCAML_SITELIB}/ppx_bin_prot/shape-expander/bin_shape_expand.cmi
+${OCAML_SITELIB}/ppx_bin_prot/shape-expander/bin_shape_expand.cmt
+${OCAML_SITELIB}/ppx_bin_prot/shape-expander/bin_shape_expand.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_bin_prot/shape-expander/bin_shape_expand.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_bin_prot/shape-expander/bin_shape_expand.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_bin_prot/shape-expander/bin_shape_expand.cmxs
+${OCAML_SITELIB}/ppx_bin_prot/shape-expander/bin_shape_expand.ml
+${OCAML_SITELIB}/ppx_bin_prot/shape-expander/bin_shape_expand.mli
+share/doc/ppx_bin_prot/CHANGES.md
+share/doc/ppx_bin_prot/LICENSE.md
+share/doc/ppx_bin_prot/README.md
