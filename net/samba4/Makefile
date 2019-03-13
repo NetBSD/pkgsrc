@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2019/03/01 20:03:24 roy Exp $
+# $NetBSD: Makefile,v 1.61 2019/03/13 18:02:31 adam Exp $
 
-DISTNAME=	samba-4.9.4
-PKGREVISION=	3
+DISTNAME=	samba-4.9.5
 CATEGORIES=	net
 MASTER_SITES=	http://download.samba.org/pub/samba/stable/
 
@@ -210,7 +209,7 @@ REPLACE_PYTHON+=	buildtools/bin/waf
 REPLACE_PYTHON+=	source4/setup/wscript_build
 REPLACE_PYTHON+=	source4/scripting/bin/*
 
-PYTHON_VERSIONS_ACCEPTED=	27 # as of 4.3.2
+PYTHON_VERSIONS_ACCEPTED=	27
 
 PY_PATCHPLIST=	yes
 .include "../../lang/python/application.mk"

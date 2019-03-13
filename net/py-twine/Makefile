@@ -1,0 +1,31 @@
+# $NetBSD: Makefile,v 1.1 2019/03/13 18:02:31 adam Exp $
+
+DISTNAME=	twine-1.13.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	net python
+MASTER_SITES=	${MASTER_SITE_PYPI:=t/twine/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://twine.readthedocs.io/
+COMMENT=	Collection of utilities for publishing packages on PyPI
+LICENSE=	apache-2.0
+
+DEPENDS+=	${PYPKGPREFIX}-pkginfo>=1.4.2:../../devel/py-pkginfo
+DEPENDS+=	${PYPKGPREFIX}-readme_renderer>=21.0:../../textproc/py-readme_renderer
+DEPENDS+=	${PYPKGPREFIX}-requests>=2.17:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=0.9.1:../../devel/py-requests-toolbelt
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=0.7.0:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-tqdm>=4.14:../../misc/py-tqdm
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+USE_LANGUAGES=	# none
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} twine twine-${PYVERSSUFFIX} || ${TRUE}
+
+do-test:
+	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} tests
+
+.include "../../lang/python/egg.mk"
+.include "../../mk/bsd.pkg.mk"
