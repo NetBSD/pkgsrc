@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1242 2019/03/11 16:28:58 kamil Exp $
+# $NetBSD: Makefile,v 1.1243 2019/03/13 18:02:31 adam Exp $
 #
 
 COMMENT=	Networking tools
@@ -716,6 +716,7 @@ SUBDIR+=	py-softlayer_messaging
 SUBDIR+=	py-subunit
 SUBDIR+=	py-tldextract
 SUBDIR+=	py-tweepy
+SUBDIR+=	py-twine
 SUBDIR+=	py-twisted
 SUBDIR+=	py-twisted-docs
 SUBDIR+=	py-twython
