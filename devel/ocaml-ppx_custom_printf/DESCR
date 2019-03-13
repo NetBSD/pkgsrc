@@ -1,0 +1,5 @@
+ppx_custom_printf is a ppx rewriter that allows the use of user-defined string
+conversion functions in format strings (that is, strings passed to printf,
+sprintf, etc.).
+
+No new syntax is introduced.
