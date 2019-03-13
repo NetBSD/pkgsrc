@@ -1,21 +1,19 @@
-$NetBSD: patch-Source_WTF_wtf_RAMSize.cpp,v 1.1 2018/10/25 09:58:18 leot Exp $
+$NetBSD: patch-Source_WTF_wtf_RAMSize.cpp,v 1.2 2019/03/13 20:49:40 leot Exp $
 
 Add support for NetBSD.
 
---- Source/WTF/wtf/RAMSize.cpp.orig	2017-08-03 11:00:07.000000000 +0000
+--- Source/WTF/wtf/RAMSize.cpp.orig	2019-02-12 11:21:17.000000000 +0000
 +++ Source/WTF/wtf/RAMSize.cpp
-@@ -32,7 +32,9 @@
- #if OS(WINDOWS)
- #include <windows.h>
- #elif defined(USE_SYSTEM_MALLOC) && USE_SYSTEM_MALLOC
--#if OS(UNIX)
+@@ -35,13 +35,16 @@
+ #if OS(LINUX)
+ #include <sys/sysinfo.h>
+ #endif // OS(LINUX)
 +#if OS(NETBSD)
 +#include <sys/sysctl.h>
-+#elif OS(UNIX)
- #include <sys/sysinfo.h>
- #endif // OS(UNIX)
++#endif // OS(NETBSD)
  #else
-@@ -41,7 +43,7 @@
+ #include <bmalloc/bmalloc.h>
+ #endif
  
  namespace WTF {
  
@@ -24,12 +22,11 @@ Add support for NetBSD.
  static const size_t ramSizeGuess = 512 * MB;
  #endif
  
-@@ -55,13 +57,22 @@ static size_t computeRAMSize()
-         return ramSizeGuess;
-     return status.ullTotalPhys;
- #elif defined(USE_SYSTEM_MALLOC) && USE_SYSTEM_MALLOC
--#if OS(UNIX)
-+#if OS(NETBSD)
+@@ -59,9 +62,18 @@ static size_t computeRAMSize()
+     struct sysinfo si;
+     sysinfo(&si);
+     return si.totalram * si.mem_unit;
++#elif OS(NETBSD)
 +    int mib[2];
 +    size_t len, totalram;
 +    mib[0] = CTL_HW;
@@ -38,13 +35,9 @@ Add support for NetBSD.
 +    if (sysctl(mib, 2, &totalram, &len, NULL, 0))
 +        return ramSizeGuess;
 +    return totalram;
-+#elif OS(UNIX)
-     struct sysinfo si;
-     sysinfo(&si);
-     return si.totalram * si.mem_unit;
  #else
  #error "Missing a platform specific way of determining the available RAM"
--#endif // OS(UNIX)
+-#endif // OS(LINUX)
 +#endif // USE_SYSTEM_MALLOC
  #else
      return bmalloc::api::availableMemory();
