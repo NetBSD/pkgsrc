@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/03/13 11:03:16 jaapb Exp $
+
+SHA1 (ppx_variants_conv-0.12.0.tar.gz) = 6ce1987af2c31109f3d85822c647eac66a95655b
+RMD160 (ppx_variants_conv-0.12.0.tar.gz) = 095adf3452ca9784d98757046af49969e843cb85
+SHA512 (ppx_variants_conv-0.12.0.tar.gz) = 4ec3f91bc18699b6825d7a4942c92786cabdfe44a67e14ef14329cbaa3b7b2ee7076b26acfd322f8048fe49f5f9ae029d194b181b2f1b00643fb0c4fc5f4b40d
+Size (ppx_variants_conv-0.12.0.tar.gz) = 9351 bytes
