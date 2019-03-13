@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2019/03/13 11:39:36 jaapb Exp $
+${OCAML_SITELIB}/jst-config/META
+${OCAML_SITELIB}/jst-config/config.h
+${PLIST.ocaml-opt}${OCAML_SITELIB}/jst-config/config_h.a
+${OCAML_SITELIB}/jst-config/config_h.cma
+${OCAML_SITELIB}/jst-config/config_h.cmi
+${OCAML_SITELIB}/jst-config/config_h.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/jst-config/config_h.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/jst-config/config_h.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/jst-config/config_h.cmxs
+${OCAML_SITELIB}/jst-config/config_h.ml
+${OCAML_SITELIB}/jst-config/dune-package
+${OCAML_SITELIB}/jst-config/opam
+${OCAML_SITELIB}/jst-config/rt-flags
+${OCAML_SITELIB}/jst-config/thread_id.h
+share/doc/jst-config/LICENSE.md
