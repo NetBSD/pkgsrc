@@ -1,12 +1,12 @@
-$NetBSD: patch-Source_WebKit_NetworkProcess_cache_NetworkCacheFileSystem.cpp,v 1.2 2018/10/24 18:31:07 leot Exp $
+$NetBSD: patch-Source_WebKit_NetworkProcess_cache_NetworkCacheFileSystem.cpp,v 1.3 2019/03/13 20:49:41 leot Exp $
 
 SunOS does not support DT_{DIR,REG}
 
---- Source/WebKit/NetworkProcess/cache/NetworkCacheFileSystem.cpp.orig	2018-07-25 11:56:32.000000000 +0000
+--- Source/WebKit/NetworkProcess/cache/NetworkCacheFileSystem.cpp.orig	2019-02-12 11:21:18.000000000 +0000
 +++ Source/WebKit/NetworkProcess/cache/NetworkCacheFileSystem.cpp
-@@ -54,6 +54,12 @@ namespace NetworkCache {
- static DirectoryEntryType directoryEntryType(uint8_t dtype)
- {
+@@ -52,6 +52,12 @@ namespace WebKit {
+ namespace NetworkCache {
+ 
  #if !OS(WINDOWS)
 +#ifndef DT_DIR
 +#define DT_DIR	S_IFDIR
@@ -14,17 +14,18 @@ SunOS does not support DT_{DIR,REG}
 +#ifndef DT_REG
 +#define DT_REG	S_IFREG
 +#endif
+ static DirectoryEntryType directoryEntryType(uint8_t dtype)
+ {
      switch (dtype) {
-     case DT_DIR:
-         return DirectoryEntryType::Directory;
-@@ -71,12 +77,20 @@ static DirectoryEntryType directoryEntry
+@@ -69,13 +75,21 @@ static DirectoryEntryType directoryEntry
+ 
  void traverseDirectory(const String& path, const Function<void (const String&, DirectoryEntryType)>& function)
  {
- #if !OS(WINDOWS)
 +#if OS(SOLARIS)
 +    struct stat s;
 +#endif
-     DIR* dir = opendir(WebCore::FileSystem::fileSystemRepresentation(path).data());
+ #if !OS(WINDOWS)
+     DIR* dir = opendir(FileSystem::fileSystemRepresentation(path).data());
      if (!dir)
          return;
      dirent* dp;
@@ -38,7 +39,7 @@ SunOS does not support DT_{DIR,REG}
              continue;
          const char* name = dp->d_name;
          if (!strcmp(name, ".") || !strcmp(name, ".."))
-@@ -84,7 +98,11 @@ void traverseDirectory(const String& pat
+@@ -83,7 +97,11 @@ void traverseDirectory(const String& pat
          auto nameString = String::fromUTF8(name);
          if (nameString.isNull())
              continue;
