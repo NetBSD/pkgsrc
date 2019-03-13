@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2019/03/13 11:24:49 jaapb Exp $
+${OCAML_SITELIB}/ppx_fail/META
+${OCAML_SITELIB}/ppx_fail/dune-package
+${OCAML_SITELIB}/ppx_fail/opam
+${OCAML_SITELIB}/ppx_fail/ppx.exe
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_fail/ppx_fail.a
+${OCAML_SITELIB}/ppx_fail/ppx_fail.cma
+${OCAML_SITELIB}/ppx_fail/ppx_fail.cmi
+${OCAML_SITELIB}/ppx_fail/ppx_fail.cmt
+${OCAML_SITELIB}/ppx_fail/ppx_fail.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_fail/ppx_fail.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_fail/ppx_fail.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_fail/ppx_fail.cmxs
+${OCAML_SITELIB}/ppx_fail/ppx_fail.ml
+${OCAML_SITELIB}/ppx_fail/ppx_fail.mli
+share/doc/ppx_fail/CHANGES.md
+share/doc/ppx_fail/LICENSE.md
+share/doc/ppx_fail/README.md
