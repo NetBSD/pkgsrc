@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1264 2019/03/13 12:51:36 prlw1 Exp $
+$NetBSD: CHANGES-2019,v 1.1265 2019/03/13 15:43:56 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2076,3 +2076,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added time/ocaml-time_now version 0.12.0 [jaapb 2019-03-13]
 	Added devel/ocaml-ppx_module_timer version 0.12.0 [jaapb 2019-03-13]
 	Updated devel/py-meson to 0.50.0 [prlw1 2019-03-13]
+	Updated math/R to 3.5.3 [wen 2019-03-13]
