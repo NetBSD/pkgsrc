@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/09 09:29:30 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/03/13 10:40:19 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go112/AUTHORS
@@ -1510,7 +1510,7 @@ go112/pkg/${GO_PLATFORM}/internal/x/net/http2/hpack.a
 go112/pkg/${GO_PLATFORM}/internal/x/net/idna.a
 go112/pkg/${GO_PLATFORM}/internal/x/net/internal/nettest.a
 go112/pkg/${GO_PLATFORM}/internal/x/net/nettest.a
-go112/pkg/${GO_PLATFORM}/internal/x/net/route.a
+${PLIST.route}go112/pkg/${GO_PLATFORM}/internal/x/net/route.a
 go112/pkg/${GO_PLATFORM}/internal/x/text/secure.a
 go112/pkg/${GO_PLATFORM}/internal/x/text/secure/bidirule.a
 go112/pkg/${GO_PLATFORM}/internal/x/text/transform.a
@@ -8918,9 +8918,6 @@ go112/test/fixedbugs/issue27695b.go
 go112/test/fixedbugs/issue27695c.go
 go112/test/fixedbugs/issue27718.go
 go112/test/fixedbugs/issue27829.go
-go112/test/fixedbugs/issue27836.dir/Äfoo.go
-go112/test/fixedbugs/issue27836.dir/Ämain.go
-go112/test/fixedbugs/issue27836.go
 go112/test/fixedbugs/issue27938.go
 go112/test/fixedbugs/issue27961.go
 go112/test/fixedbugs/issue28055.go
