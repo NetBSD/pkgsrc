@@ -1,0 +1,3 @@
+ppx_variants_conv is a ppx rewriter that can be used to define first class
+values representing variant constructors, and additional routines to fold,
+iterate and map over all constructors of a variant type.
