@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/03/05 16:30:18 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/03/13 12:51:13 prlw1 Exp $
 bin/meson
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -8,9 +8,24 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/mesonbuild/__init__.py
 ${PYSITELIB}/mesonbuild/__init__.pyc
 ${PYSITELIB}/mesonbuild/__init__.pyo
-${PYSITELIB}/mesonbuild/astinterpreter.py
-${PYSITELIB}/mesonbuild/astinterpreter.pyc
-${PYSITELIB}/mesonbuild/astinterpreter.pyo
+${PYSITELIB}/mesonbuild/ast/__init__.py
+${PYSITELIB}/mesonbuild/ast/__init__.pyc
+${PYSITELIB}/mesonbuild/ast/__init__.pyo
+${PYSITELIB}/mesonbuild/ast/interpreter.py
+${PYSITELIB}/mesonbuild/ast/interpreter.pyc
+${PYSITELIB}/mesonbuild/ast/interpreter.pyo
+${PYSITELIB}/mesonbuild/ast/introspection.py
+${PYSITELIB}/mesonbuild/ast/introspection.pyc
+${PYSITELIB}/mesonbuild/ast/introspection.pyo
+${PYSITELIB}/mesonbuild/ast/postprocess.py
+${PYSITELIB}/mesonbuild/ast/postprocess.pyc
+${PYSITELIB}/mesonbuild/ast/postprocess.pyo
+${PYSITELIB}/mesonbuild/ast/printer.py
+${PYSITELIB}/mesonbuild/ast/printer.pyc
+${PYSITELIB}/mesonbuild/ast/printer.pyo
+${PYSITELIB}/mesonbuild/ast/visitor.py
+${PYSITELIB}/mesonbuild/ast/visitor.pyc
+${PYSITELIB}/mesonbuild/ast/visitor.pyo
 ${PYSITELIB}/mesonbuild/backend/__init__.py
 ${PYSITELIB}/mesonbuild/backend/__init__.pyc
 ${PYSITELIB}/mesonbuild/backend/__init__.pyo
@@ -53,6 +68,9 @@ ${PYSITELIB}/mesonbuild/compilers/cpp.pyo
 ${PYSITELIB}/mesonbuild/compilers/cs.py
 ${PYSITELIB}/mesonbuild/compilers/cs.pyc
 ${PYSITELIB}/mesonbuild/compilers/cs.pyo
+${PYSITELIB}/mesonbuild/compilers/cuda.py
+${PYSITELIB}/mesonbuild/compilers/cuda.pyc
+${PYSITELIB}/mesonbuild/compilers/cuda.pyo
 ${PYSITELIB}/mesonbuild/compilers/d.py
 ${PYSITELIB}/mesonbuild/compilers/d.pyc
 ${PYSITELIB}/mesonbuild/compilers/d.pyo
@@ -90,6 +108,7 @@ ${PYSITELIB}/mesonbuild/dependencies/boost.py
 ${PYSITELIB}/mesonbuild/dependencies/boost.pyc
 ${PYSITELIB}/mesonbuild/dependencies/boost.pyo
 ${PYSITELIB}/mesonbuild/dependencies/data/CMakeLists.txt
+${PYSITELIB}/mesonbuild/dependencies/data/CMakePathInfo.txt
 ${PYSITELIB}/mesonbuild/dependencies/dev.py
 ${PYSITELIB}/mesonbuild/dependencies/dev.pyc
 ${PYSITELIB}/mesonbuild/dependencies/dev.pyo
@@ -102,6 +121,9 @@ ${PYSITELIB}/mesonbuild/dependencies/platform.pyo
 ${PYSITELIB}/mesonbuild/dependencies/ui.py
 ${PYSITELIB}/mesonbuild/dependencies/ui.pyc
 ${PYSITELIB}/mesonbuild/dependencies/ui.pyo
+${PYSITELIB}/mesonbuild/envconfig.py
+${PYSITELIB}/mesonbuild/envconfig.pyc
+${PYSITELIB}/mesonbuild/envconfig.pyo
 ${PYSITELIB}/mesonbuild/environment.py
 ${PYSITELIB}/mesonbuild/environment.pyc
 ${PYSITELIB}/mesonbuild/environment.pyo
@@ -138,6 +160,9 @@ ${PYSITELIB}/mesonbuild/mlog.pyo
 ${PYSITELIB}/mesonbuild/modules/__init__.py
 ${PYSITELIB}/mesonbuild/modules/__init__.pyc
 ${PYSITELIB}/mesonbuild/modules/__init__.pyo
+${PYSITELIB}/mesonbuild/modules/cmake.py
+${PYSITELIB}/mesonbuild/modules/cmake.pyc
+${PYSITELIB}/mesonbuild/modules/cmake.pyo
 ${PYSITELIB}/mesonbuild/modules/dlang.py
 ${PYSITELIB}/mesonbuild/modules/dlang.pyc
 ${PYSITELIB}/mesonbuild/modules/dlang.pyo
@@ -174,6 +199,9 @@ ${PYSITELIB}/mesonbuild/modules/qt5.pyo
 ${PYSITELIB}/mesonbuild/modules/rpm.py
 ${PYSITELIB}/mesonbuild/modules/rpm.pyc
 ${PYSITELIB}/mesonbuild/modules/rpm.pyo
+${PYSITELIB}/mesonbuild/modules/unstable_cuda.py
+${PYSITELIB}/mesonbuild/modules/unstable_cuda.pyc
+${PYSITELIB}/mesonbuild/modules/unstable_cuda.pyo
 ${PYSITELIB}/mesonbuild/modules/unstable_icestorm.py
 ${PYSITELIB}/mesonbuild/modules/unstable_icestorm.pyc
 ${PYSITELIB}/mesonbuild/modules/unstable_icestorm.pyo
@@ -195,6 +223,9 @@ ${PYSITELIB}/mesonbuild/msubprojects.pyo
 ${PYSITELIB}/mesonbuild/mtest.py
 ${PYSITELIB}/mesonbuild/mtest.pyc
 ${PYSITELIB}/mesonbuild/mtest.pyo
+${PYSITELIB}/mesonbuild/munstable_coredata.py
+${PYSITELIB}/mesonbuild/munstable_coredata.pyc
+${PYSITELIB}/mesonbuild/munstable_coredata.pyo
 ${PYSITELIB}/mesonbuild/optinterpreter.py
 ${PYSITELIB}/mesonbuild/optinterpreter.pyc
 ${PYSITELIB}/mesonbuild/optinterpreter.pyo
@@ -204,6 +235,9 @@ ${PYSITELIB}/mesonbuild/rewriter.pyo
 ${PYSITELIB}/mesonbuild/scripts/__init__.py
 ${PYSITELIB}/mesonbuild/scripts/__init__.pyc
 ${PYSITELIB}/mesonbuild/scripts/__init__.pyo
+${PYSITELIB}/mesonbuild/scripts/clangformat.py
+${PYSITELIB}/mesonbuild/scripts/clangformat.pyc
+${PYSITELIB}/mesonbuild/scripts/clangformat.pyo
 ${PYSITELIB}/mesonbuild/scripts/cleantrees.py
 ${PYSITELIB}/mesonbuild/scripts/cleantrees.pyc
 ${PYSITELIB}/mesonbuild/scripts/cleantrees.pyo
