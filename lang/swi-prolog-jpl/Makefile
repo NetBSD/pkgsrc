@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2019/02/25 15:20:44 leot Exp $
+# $NetBSD: Makefile,v 1.7 2019/03/13 14:02:51 leot Exp $
 
 .include "../../lang/swi-prolog-lite/Makefile.common"
 
 PKGNAME=		swi-prolog-jpl-${SWIPLVERS}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-COMMENT=		Packages for SWI Prolog
+COMMENT=		JPL package for SWI Prolog
 
 USE_TOOLS+=		pkg-config
 
