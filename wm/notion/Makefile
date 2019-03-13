@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2017/05/07 16:10:35 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2019/03/13 21:16:15 wiz Exp $
 
 DISTNAME=	notion-3-2017050501
 PKGNAME=	${DISTNAME:S/3-/3./}
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=raboof/}
 GITHUB_TAG=	${DISTNAME:S/notion-//}
