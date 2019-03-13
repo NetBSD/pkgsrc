@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1272 2019/03/13 19:33:40 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1273 2019/03/13 20:49:59 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2094,3 +2094,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-autobahn to 19.2.1 [adam 2019-03-13]
 	Updated devel/py-py to 1.8.0 [adam 2019-03-13]
 	Updated x11/rofi to 1.5.2 [wiz 2019-03-13]
+	Updated www/webkit-gtk to 2.24.0 [leot 2019-03-13]
