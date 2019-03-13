@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1274 2019/03/13 21:16:28 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1275 2019/03/13 23:09:40 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2096,3 +2096,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/rofi to 1.5.2 [wiz 2019-03-13]
 	Updated www/webkit-gtk to 2.24.0 [leot 2019-03-13]
 	Updated wm/notion to 3.2017050501nb1 [wiz 2019-03-13]
+	Updated graphics/mate-themes to 3.22.19 [gutteridge 2019-03-13]
