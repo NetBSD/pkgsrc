@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.82 2018/12/21 02:55:06 wen Exp $
+$NetBSD: distinfo,v 1.83 2019/03/13 15:42:41 wen Exp $
 
-SHA1 (R-3.5.2.tar.gz) = 057ea91daed3e68a12b2a473ee1283cf26f360e2
-RMD160 (R-3.5.2.tar.gz) = c1cee244f1ae0cf7466b2af69a70bb7eee1321ed
-SHA512 (R-3.5.2.tar.gz) = 53e94f01ecee6c90cecfa07ee9950d62130a331010c0b23baaf88ab5009007856c9352ce97916404ff35d19632495902d41cb655a5fd116a7d2f5d6767d7b447
-Size (R-3.5.2.tar.gz) = 30186438 bytes
+SHA1 (R-3.5.3.tar.gz) = 986b1d80632e6f489e9b50ce36a4c67ecb987b4d
+RMD160 (R-3.5.3.tar.gz) = 2d7493c708a882bac0b1c20d09fcb0fe750f439c
+SHA512 (R-3.5.3.tar.gz) = 077cbd4bc9f19a3a2485afbd4d8e08e0754ddcb9a10164cbc8478f239d5ed0ffaf6796929f154cce1c8aea549c32d460049fc036dc326174d1dbb0a1ddb5f5ef
+Size (R-3.5.3.tar.gz) = 30205979 bytes
 SHA1 (patch-ad) = a43b4875a2ee4677b5f762abf3f9a623fd12cbb5
 SHA1 (patch-configure.ac) = f4829c37304e81485e13b4ed8beaeac7edd16189
 SHA1 (patch-m4_R.m4) = 704d5514e10adf0b5217bb71b06f44a612eca6e0
