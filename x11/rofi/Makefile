@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2018/11/14 22:22:49 kleink Exp $
+# $NetBSD: Makefile,v 1.12 2019/03/13 19:33:27 wiz Exp $
 
-DISTNAME=	rofi-1.0.1
-PKGREVISION=	6
+DISTNAME=	rofi-1.5.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=DaveDavenport/}
 # We need to specify this way to get submodules fetched
@@ -12,18 +11,23 @@ HOMEPAGE=	https://github.com/DaveDavenport/rofi
 COMMENT=	Window switcher, run dialog and dmenu replacement
 LICENSE=	x11
 
-USE_TOOLS+=	pkg-config bash
+USE_TOOLS+=	pkg-config bash bison
 
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=	YACC='bison -y'
 
 REPLACE_BASH+=	script/rofi-sensible-terminal
+REPLACE_BASH+=	script/rofi-theme-selector
 
 .include "options.mk"
 
-.include "../../x11/startup-notification/buildlink3.mk"
-.include "../../devel/pango/buildlink3.mk"
-.include "../../x11/libxkbcommon/buildlink3.mk"
-.include "../../x11/xcb-util/buildlink3.mk"
-.include "../../x11/xcb-util-wm/buildlink3.mk"
+.include "../../devel/check/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
+.include "../../graphics/librsvg/buildlink3.mk"
+.include "../../x11/libxkbcommon/buildlink3.mk"
+.include "../../x11/startup-notification/buildlink3.mk"
+.include "../../x11/xcb-util-wm/buildlink3.mk"
+.include "../../x11/xcb-util-xrm/buildlink3.mk"
+.include "../../x11/xcb-util/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
