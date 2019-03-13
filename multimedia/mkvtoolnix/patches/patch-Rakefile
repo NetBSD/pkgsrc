@@ -1,14 +1,15 @@
-$NetBSD: patch-Rakefile,v 1.2 2019/02/12 23:46:23 adam Exp $
+$NetBSD: patch-Rakefile,v 1.3 2019/03/13 17:36:26 adam Exp $
 
-Fix buildling on macOS.
+Leave pkgsrc to handle security features.
 
---- Rakefile.orig	2019-02-12 23:14:10.000000000 +0000
+--- Rakefile.orig	2019-03-12 21:12:17.000000000 +0000
 +++ Rakefile
-@@ -145,7 +145,6 @@ def setup_globals
-   cxxflags                 = "#{cflags_common} #{c(:STD_CXX)}"
-   cxxflags                += " -Woverloaded-virtual" if c(:COMPILER_TYPE) != "gcc" # too many false positives in EbmlElement.h on g++ 8
-   cxxflags                += " -Wnon-virtual-dtor -Wextra -Wno-missing-field-initializers #{c(:WSHADOW_COMPATIBLE_LOCAL)} #{c(:WNO_MAYBE_UNINITIALIZED)}"
--  cxxflags                += " -fvisibility=hidden -fvisibility-inlines-hidden" if $building_for[:macos]
+@@ -151,8 +151,6 @@ def setup_globals
+   cxxflags                += " -Wno-inconsistent-missing-override -Wno-potentially-evaluated-expression" if is_clang?
+   cxxflags                += " -Wmisleading-indentation -Wduplicated-cond"                               if check_compiler_version("gcc", "6.0.0")
+   cxxflags                += " -Wshadow-compatible-local -Wduplicated-branches"                          if check_compiler_version("gcc", "7.0.0")
+-  cxxflags                += " -fstack-protector"                                                        if is_gcc? && !check_compiler_version("gcc", "4.9.0")
+-  cxxflags                += " -fstack-protector-strong"                                                 if check_compiler_version("gcc", "4.9.0") && check_compiler_version("clang", "3.5.0")
    cxxflags                += " #{c(:QT_CFLAGS)} #{c(:BOOST_CPPFLAGS)} #{c(:USER_CXXFLAGS)}"
  
    ldflags                  = ""
