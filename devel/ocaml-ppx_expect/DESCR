@@ -1,0 +1,4 @@
+Expect-test is a framework for writing tests in OCaml, similar to Cram.
+Expect-tests mimic the existing inline tests framework. The body of an
+expect-test can contain output-generating code, interleaved with %expect
+extension expressions to denote the expected output.
