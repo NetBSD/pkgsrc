@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2019/03/13 11:35:47 jaapb Exp $
+${OCAML_SITELIB}/jane-street-headers/META
+${OCAML_SITELIB}/jane-street-headers/core_params.h
+${OCAML_SITELIB}/jane-street-headers/dune-package
+${OCAML_SITELIB}/jane-street-headers/jane_common.h
+${PLIST.ocaml-opt}${OCAML_SITELIB}/jane-street-headers/jane_street_headers.a
+${OCAML_SITELIB}/jane-street-headers/jane_street_headers.cma
+${OCAML_SITELIB}/jane-street-headers/jane_street_headers.cmi
+${OCAML_SITELIB}/jane-street-headers/jane_street_headers.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/jane-street-headers/jane_street_headers.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/jane-street-headers/jane_street_headers.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/jane-street-headers/jane_street_headers.cmxs
+${OCAML_SITELIB}/jane-street-headers/jane_street_headers.ml
+${OCAML_SITELIB}/jane-street-headers/ocaml_utils.h
+${OCAML_SITELIB}/jane-street-headers/opam
+${OCAML_SITELIB}/jane-street-headers/unix_utils.h
+share/doc/jane-street-headers/LICENSE.md
+share/doc/jane-street-headers/README.org
