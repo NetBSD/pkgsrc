@@ -1,0 +1,16 @@
+Backported, durable, and portable selectors designed to replace the standard
+library selectors module.
+
+Features
+* Support for all major platforms. (Linux, Mac OS, Windows)
+* Support many different selectors
+  - select.kqueue (BSD, Mac OS)
+  - select.devpoll (Solaris)
+  - select.epoll (Linux 2.5.44+)
+  - select.poll (Linux, Mac OS)
+  - select.select - (Linux, Mac OS, Windows)
+* Support for PEP 475 (Retries system calls on interrupt)
+* Support for modules which monkey-patch the standard library after import
+  (like greenlet, gevent)
+* Support for systems which define a selector being available but don't
+  actually implement it.
