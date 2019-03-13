@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1270 2019/03/13 18:56:50 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1271 2019/03/13 19:23:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2089,3 +2089,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/samba4 to 4.9.5 [adam 2019-03-13]
 	Added devel/py-selectors2 version 2.0.1 [adam 2019-03-13]
 	Updated net/py-ncclient to 0.6.3 [adam 2019-03-13]
+	Updated net/py-zeep to 3.3.1 [adam 2019-03-13]
+	Updated devel/py-astroid to 2.2.5 [adam 2019-03-13]
+	Updated www/py-autobahn to 19.2.1 [adam 2019-03-13]
+	Updated devel/py-py to 1.8.0 [adam 2019-03-13]
