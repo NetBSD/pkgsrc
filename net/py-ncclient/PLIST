@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/07/14 19:14:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/03/13 18:02:31 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,6 +7,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/ncclient/__init__.py
 ${PYSITELIB}/ncclient/__init__.pyc
 ${PYSITELIB}/ncclient/__init__.pyo
+${PYSITELIB}/ncclient/_version.py
+${PYSITELIB}/ncclient/_version.pyc
+${PYSITELIB}/ncclient/_version.pyo
 ${PYSITELIB}/ncclient/capabilities.py
 ${PYSITELIB}/ncclient/capabilities.pyc
 ${PYSITELIB}/ncclient/capabilities.pyo
@@ -34,6 +37,9 @@ ${PYSITELIB}/ncclient/devices/hpcomware.pyo
 ${PYSITELIB}/ncclient/devices/huawei.py
 ${PYSITELIB}/ncclient/devices/huawei.pyc
 ${PYSITELIB}/ncclient/devices/huawei.pyo
+${PYSITELIB}/ncclient/devices/huaweiyang.py
+${PYSITELIB}/ncclient/devices/huaweiyang.pyc
+${PYSITELIB}/ncclient/devices/huaweiyang.pyo
 ${PYSITELIB}/ncclient/devices/iosxe.py
 ${PYSITELIB}/ncclient/devices/iosxe.pyc
 ${PYSITELIB}/ncclient/devices/iosxe.pyo
@@ -46,6 +52,9 @@ ${PYSITELIB}/ncclient/devices/junos.pyo
 ${PYSITELIB}/ncclient/devices/nexus.py
 ${PYSITELIB}/ncclient/devices/nexus.pyc
 ${PYSITELIB}/ncclient/devices/nexus.pyo
+${PYSITELIB}/ncclient/logging_.py
+${PYSITELIB}/ncclient/logging_.pyc
+${PYSITELIB}/ncclient/logging_.pyo
 ${PYSITELIB}/ncclient/manager.py
 ${PYSITELIB}/ncclient/manager.pyc
 ${PYSITELIB}/ncclient/manager.pyo

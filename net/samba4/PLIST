@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2019/01/03 19:36:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2019/03/13 18:02:31 adam Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/findsmb
@@ -226,6 +226,8 @@ lib/pkgconfig/samdb.pc
 lib/pkgconfig/smbclient.pc
 lib/pkgconfig/wbclient.pc
 ${PYSITELIB}/_ldb_text.py
+${PYSITELIB}/_tdb_text.py
+${PYSITELIB}/_tevent.so
 ${PYSITELIB}/ldb.so
 ${PYSITELIB}/samba/__init__.py
 ${PYSITELIB}/samba/_glue.so
@@ -516,6 +518,8 @@ ${PYSITELIB}/samba/werror.so
 ${PYSITELIB}/samba/xattr.py
 ${PYSITELIB}/samba/xattr_native.so
 ${PYSITELIB}/samba/xattr_tdb.so
+${PYSITELIB}/tdb.so
+${PYSITELIB}/tevent.py
 lib/samba/auth/script.${SOEXT}
 lib/samba/bind9/dlz_bind9.${SOEXT}
 lib/samba/bind9/dlz_bind9_10.${SOEXT}
@@ -659,7 +663,7 @@ lib/samba/private/libldb-cmdline-samba4.so
 lib/samba/private/libldb-key-value-samba4.so
 ${PLIST.64bit}lib/samba/private/libldb-mdb-int-samba4.so
 lib/samba/private/libldb.so.1
-lib/samba/private/libldb.so.1.4.3
+lib/samba/private/libldb.so.1.4.6
 lib/samba/private/libldbsamba-samba4.so
 lib/samba/private/liblibcli-lsa3-samba4.so
 lib/samba/private/liblibcli-netlogon3-samba4.so
@@ -682,7 +686,7 @@ lib/samba/private/libposix-eadb-samba4.so
 lib/samba/private/libprinting-migrate-samba4.so
 lib/samba/private/libprocess-model-samba4.so
 lib/samba/private/libpyldb-util.so.1
-lib/samba/private/libpyldb-util.so.1.4.3
+lib/samba/private/libpyldb-util.so.1.4.6
 lib/samba/private/libregistry-samba4.so
 lib/samba/private/libreplace-samba4.so
 lib/samba/private/libroken-samba4.so.19
@@ -757,6 +761,7 @@ lib/samba/vfs/extd_audit.${SOEXT}
 lib/samba/vfs/fake_perms.${SOEXT}
 lib/samba/vfs/fruit.${SOEXT}
 lib/samba/vfs/full_audit.${SOEXT}
+lib/samba/vfs/glusterfs_fuse.${SOEXT}
 lib/samba/vfs/linux_xfs_sgid.${SOEXT}
 lib/samba/vfs/media_harmony.${SOEXT}
 lib/samba/vfs/netatalk.${SOEXT}
@@ -872,6 +877,7 @@ man/man8/vfs_fileid.8
 man/man8/vfs_fruit.8
 man/man8/vfs_full_audit.8
 man/man8/vfs_glusterfs.8
+man/man8/vfs_glusterfs_fuse.8
 man/man8/vfs_gpfs.8
 man/man8/vfs_linux_xfs_sgid.8
 man/man8/vfs_media_harmony.8
