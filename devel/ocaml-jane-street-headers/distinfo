@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/03/13 11:35:47 jaapb Exp $
+
+SHA1 (jane-street-headers-0.12.0.tar.gz) = 7a3cf3c42d32f9c25908cb57f00c8eba7fc6a39a
+RMD160 (jane-street-headers-0.12.0.tar.gz) = 3bdae9c387a851fa7f160efbbe6ede9d0237f706
+SHA512 (jane-street-headers-0.12.0.tar.gz) = 218b05547067c3d736d11e94904f87032f0c6afeadbc17a2f5829170eed9e92630895ecdb04942483f3cd0f8ddbf6faeab61038166ca0a36eee0c980af636062
+Size (jane-street-headers-0.12.0.tar.gz) = 4662 bytes
