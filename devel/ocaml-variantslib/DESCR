@@ -1,0 +1,3 @@
+Syntax extension to define first class values representing variant types.
+
+Part of Jane Street's alternative standard library for OCaml.
