@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1269 2019/03/13 18:33:41 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1270 2019/03/13 18:56:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2087,3 +2087,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Added net/py-twine version 1.13.0 [adam 2019-03-13]
 	Updated net/py-foolscap to 0.13.1 [adam 2019-03-13]
 	Updated net/samba4 to 4.9.5 [adam 2019-03-13]
+	Added devel/py-selectors2 version 2.0.1 [adam 2019-03-13]
+	Updated net/py-ncclient to 0.6.3 [adam 2019-03-13]
