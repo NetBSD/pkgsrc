@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.74 2019/02/19 08:25:49 adam Exp $
+# $NetBSD: Makefile,v 1.75 2019/03/13 08:54:21 adam Exp $
 
-DISTNAME=	pytest-4.3.0
+DISTNAME=	pytest-4.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest/}
