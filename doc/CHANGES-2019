@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1261 2019/03/13 11:39:44 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.1262 2019/03/13 11:50:34 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2073,3 +2073,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/ocaml-ppx_fail version 0.12.0 [jaapb 2019-03-13]
 	Added devel/ocaml-jane-street-headers version 0.12.0 [jaapb 2019-03-13]
 	Added devel/ocaml-jst-config version 0.12.0 [jaapb 2019-03-13]
+	Added time/ocaml-time_now version 0.12.0 [jaapb 2019-03-13]
