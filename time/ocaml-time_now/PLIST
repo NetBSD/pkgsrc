@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2019/03/13 11:50:24 jaapb Exp $
+${OCAML_SITELIB}/stublibs/dlltime_now_stubs.so
+${OCAML_SITELIB}/time_now/META
+${OCAML_SITELIB}/time_now/dune-package
+${OCAML_SITELIB}/time_now/libtime_now_stubs.a
+${OCAML_SITELIB}/time_now/opam
+${OCAML_SITELIB}/time_now/runtime.js
+${PLIST.ocaml-opt}${OCAML_SITELIB}/time_now/time_now.a
+${OCAML_SITELIB}/time_now/time_now.cma
+${OCAML_SITELIB}/time_now/time_now.cmi
+${OCAML_SITELIB}/time_now/time_now.cmt
+${OCAML_SITELIB}/time_now/time_now.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/time_now/time_now.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/time_now/time_now.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/time_now/time_now.cmxs
+${OCAML_SITELIB}/time_now/time_now.ml
+${OCAML_SITELIB}/time_now/time_now.mli
+share/doc/time_now/LICENSE.md

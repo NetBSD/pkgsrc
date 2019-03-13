@@ -1,0 +1,2 @@
+Provides a single function to report the current time in nanoseconds
+since the start of the Unix epoch.
