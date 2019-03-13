@@ -1,0 +1,4 @@
+Defines compile-time constants used in Jane Street libraries.
+
+This package has an unstable interface; we do not recommend using this package
+directly.
