@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.1 2019/03/09 09:29:30 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2019/03/13 10:40:19 bsiegert Exp $
 
 .include "../../lang/go/version.mk"
 
 DISTNAME=	go${GO112_VERSION}.src
 PKGNAME=	go112-${GO112_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://storage.googleapis.com/golang/
-EXTRACT_USING=	bsdtar
+EXTRACT_USING=	gtar
 
 MAINTAINER=	bsiegert@NetBSD.org
 HOMEPAGE=	http://golang.org/
@@ -99,6 +100,9 @@ PLIST.pty=	yes
 .if ${OPSYS} != "Linux" && ${OPSYS} != "SunOS"
 PLIST.route=	yes
 .endif
+
+post-extract:
+	${RM} -r -f ${WRKSRC}/test/fixedbugs/issue27836*
 
 do-build:
 	cd ${WRKSRC}/src && env GOROOT_BOOTSTRAP=${GOROOT_BOOTSTRAP:Q} GOROOT_FINAL=${GOROOT_FINAL:Q} ${GOOPT} ${BASH} ./make.bash
