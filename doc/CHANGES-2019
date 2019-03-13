@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1271 2019/03/13 19:23:10 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1272 2019/03/13 19:33:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2093,3 +2093,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-astroid to 2.2.5 [adam 2019-03-13]
 	Updated www/py-autobahn to 19.2.1 [adam 2019-03-13]
 	Updated devel/py-py to 1.8.0 [adam 2019-03-13]
+	Updated x11/rofi to 1.5.2 [wiz 2019-03-13]
