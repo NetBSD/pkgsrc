@@ -2,7 +2,7 @@
 #
 
 MODNAME=		xdebug
-PECL_VERSION=		2.6.1
+PECL_VERSION=		2.7.0
 CATEGORIES=		devel
 MASTER_SITES=		http://xdebug.org/files/
 EXTRACT_SUFX=		.tgz
@@ -14,7 +14,7 @@ LICENSE=		php
 
 PHP_ZEND_EXTENSION=	yes
 
-PHP_VERSIONS_ACCEPTED=  71 72
+PHP_VERSIONS_ACCEPTED=  71 72 73
 
 .include "../../lang/php/ext.mk"
 .include "../../mk/bsd.pkg.mk"
