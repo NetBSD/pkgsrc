@@ -1,28 +1,28 @@
-$NetBSD: patch-Source_ThirdParty_gtest_include_gtest_internal_gtest-port.h,v 1.3 2014/08/03 22:30:05 wiz Exp $
+$NetBSD: patch-Source_ThirdParty_gtest_include_gtest_internal_gtest-port.h,v 1.4 2019/03/13 20:49:40 leot Exp $
 
---- Source/ThirdParty/gtest/include/gtest/internal/gtest-port.h.orig	2013-09-09 09:20:59.000000000 +0000
+--- Source/ThirdParty/gtest/include/gtest/internal/gtest-port.h.orig	2019-02-12 11:21:03.000000000 +0000
 +++ Source/ThirdParty/gtest/include/gtest/internal/gtest-port.h
-@@ -35,6 +35,7 @@
+@@ -42,6 +42,7 @@
  
  #ifndef GTEST_INCLUDE_GTEST_INTERNAL_GTEST_PORT_H_
  #define GTEST_INCLUDE_GTEST_INTERNAL_GTEST_PORT_H_
 +#include <ciso646>
  
- // The user can define the following macros in the build script to
- // control Google Test's behavior.  If the user doesn't define a macro
-@@ -175,6 +176,7 @@
+ // Environment-describing macros
+ // -----------------------------
+@@ -268,6 +269,7 @@
  #include <stdlib.h>
  #include <stdio.h>
  #include <string.h>
 +#include <unistd.h>
  #ifndef _WIN32_WCE
- #include <sys/stat.h>
- #endif  // !_WIN32_WCE
-@@ -448,7 +450,14 @@
+ # include <sys/types.h>
+ # include <sys/stat.h>
+@@ -755,7 +757,14 @@ typedef struct _RTL_CRITICAL_SECTION GTE
  // GCC 4.0+ implements tr1/tuple in the <tr1/tuple> header.  This does
  // not conform to the TR1 spec, which requires the header to be <tuple>.
  
--#if !GTEST_HAS_RTTI && GTEST_GCC_VER_ < 40302
+-#  if !GTEST_HAS_RTTI && GTEST_GCC_VER_ < 40302
 +#if defined(_LIBCPP_VERSION)
 +#include <tuple>
 +namespace std {
