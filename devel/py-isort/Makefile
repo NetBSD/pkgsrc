@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2019/03/10 13:38:32 adam Exp $
+# $NetBSD: Makefile,v 1.11 2019/03/13 08:56:47 adam Exp $
 
-DISTNAME=	isort-4.3.14
+DISTNAME=	isort-4.3.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/isort/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/timothycrosley/isort/
+HOMEPAGE=	https://github.com/timothycrosley/isort
 COMMENT=	Python utility / library to sort imports
 LICENSE=	mit
 
