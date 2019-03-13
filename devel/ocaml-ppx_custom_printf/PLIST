@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2019/03/13 10:40:28 jaapb Exp $
+${OCAML_SITELIB}/ppx_custom_printf/META
+${OCAML_SITELIB}/ppx_custom_printf/dune-package
+${OCAML_SITELIB}/ppx_custom_printf/format_lifter.ml
+${OCAML_SITELIB}/ppx_custom_printf/opam
+${OCAML_SITELIB}/ppx_custom_printf/ppx.exe
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_custom_printf/ppx_custom_printf.a
+${OCAML_SITELIB}/ppx_custom_printf/ppx_custom_printf.cma
+${OCAML_SITELIB}/ppx_custom_printf/ppx_custom_printf.cmi
+${OCAML_SITELIB}/ppx_custom_printf/ppx_custom_printf.cmt
+${OCAML_SITELIB}/ppx_custom_printf/ppx_custom_printf.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_custom_printf/ppx_custom_printf.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_custom_printf/ppx_custom_printf.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_custom_printf/ppx_custom_printf.cmxs
+${OCAML_SITELIB}/ppx_custom_printf/ppx_custom_printf.ml
+${OCAML_SITELIB}/ppx_custom_printf/ppx_custom_printf.mli
+${OCAML_SITELIB}/ppx_custom_printf/ppx_custom_printf__.cmi
+${OCAML_SITELIB}/ppx_custom_printf/ppx_custom_printf__.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_custom_printf/ppx_custom_printf__.cmx
+${OCAML_SITELIB}/ppx_custom_printf/ppx_custom_printf__.ml
+${OCAML_SITELIB}/ppx_custom_printf/ppx_custom_printf__Format_lifter.cmi
+${OCAML_SITELIB}/ppx_custom_printf/ppx_custom_printf__Format_lifter.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_custom_printf/ppx_custom_printf__Format_lifter.cmx
+share/doc/ppx_custom_printf/CHANGES.md
+share/doc/ppx_custom_printf/LICENSE.md
+share/doc/ppx_custom_printf/README.md
