@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2019/03/13 11:53:56 jaapb Exp $
+${OCAML_SITELIB}/ppx_module_timer/META
+${OCAML_SITELIB}/ppx_module_timer/dune-package
+${OCAML_SITELIB}/ppx_module_timer/opam
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_module_timer/ppx_module_timer.a
+${OCAML_SITELIB}/ppx_module_timer/ppx_module_timer.cma
+${OCAML_SITELIB}/ppx_module_timer/ppx_module_timer.cmi
+${OCAML_SITELIB}/ppx_module_timer/ppx_module_timer.cmt
+${OCAML_SITELIB}/ppx_module_timer/ppx_module_timer.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_module_timer/ppx_module_timer.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_module_timer/ppx_module_timer.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_module_timer/ppx_module_timer.cmxs
+${OCAML_SITELIB}/ppx_module_timer/ppx_module_timer.ml
+${OCAML_SITELIB}/ppx_module_timer/ppx_module_timer.mli
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_module_timer/runtime/ppx_module_timer_runtime.a
+${OCAML_SITELIB}/ppx_module_timer/runtime/ppx_module_timer_runtime.cma
+${OCAML_SITELIB}/ppx_module_timer/runtime/ppx_module_timer_runtime.cmi
+${OCAML_SITELIB}/ppx_module_timer/runtime/ppx_module_timer_runtime.cmt
+${OCAML_SITELIB}/ppx_module_timer/runtime/ppx_module_timer_runtime.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_module_timer/runtime/ppx_module_timer_runtime.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_module_timer/runtime/ppx_module_timer_runtime.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_module_timer/runtime/ppx_module_timer_runtime.cmxs
+${OCAML_SITELIB}/ppx_module_timer/runtime/ppx_module_timer_runtime.ml
+${OCAML_SITELIB}/ppx_module_timer/runtime/ppx_module_timer_runtime.mli
+share/doc/ppx_module_timer/LICENSE.md
+share/doc/ppx_module_timer/README.md
