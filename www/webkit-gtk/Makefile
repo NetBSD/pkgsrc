@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.158 2019/03/01 18:53:17 leot Exp $
+# $NetBSD: Makefile,v 1.159 2019/03/13 20:49:40 leot Exp $
 
-DISTNAME=	webkitgtk-2.22.7
+DISTNAME=	webkitgtk-2.24.0
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
 CATEGORIES=	www
 MASTER_SITES=	https://www.webkitgtk.org/releases/
@@ -41,6 +41,7 @@ CMAKE_ARGS+=		-DENABLE_MINIBROWSER=ON
 CMAKE_ARGS+=		-DENABLE_GEOLOCATION=OFF
 CMAKE_ARGS+=		-DUSE_GSTREAMER_GL=OFF
 CMAKE_ARGS+=		-DUSE_LIBHYPHEN=OFF
+CMAKE_ARGS+=		-DUSE_OPENJPEG=OFF
 
 REPLACE_PERL+=	Source/JavaScriptCore/create_hash_table
 REPLACE_PERL+=	Source/WebCore/bindings/scripts/*.pl
