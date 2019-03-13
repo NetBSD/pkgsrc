@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2019/03/13 18:02:31 adam Exp $
+# $NetBSD: Makefile,v 1.8 2019/03/13 19:17:25 adam Exp $
 
-DISTNAME=	zeep-3.1.0
+DISTNAME=	zeep-3.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zeep/}
@@ -20,28 +20,29 @@ DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.7.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=0.7.1:../../devel/py-requests-toolbelt
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
-TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun>=0.3.8:../../devel/py-freezegun
-#mock==2.0.0
-#pretend==1.0.8
-#pytest-cov==2.5.1
-#pytest==3.1.3
-#requests_mock>=0.7.0
-#pytest-tornado==0.4.5
-#isort==4.2.15
-#flake8==3.3.0
-#flake8-blind-except==0.1.1
-#flake8-debugger==1.4.0
-#flake8-imports==0.1.1
-#aioresponses>=0.4.1
+#TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun>=0.3.8:../../devel/py-freezegun
+#TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=2.0.0:../../devel/py-mock
+#TEST_DEPENDS+=	${PYPKGPREFIX}-pretend>=1.0.8:../../devel/py-pretend
+#TEST_DEPENDS+=	${PYPKGPREFIX}-requests-mock>=0.7.0:../../devel/py-requests-mock
+#TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.1.3:../../devel/py-test
+#TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.5.1:../../devel/py-test-cov
+#TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+# TEST_DEPENDS not packaged: pytest-tornado, aioresponses
 
 .include "../../lang/python/pyversion.mk"
 PLIST_VARS+=	aio
-.if "${PYPKGPREFIX}" != "py27" && "${PYPKGPREFIX}" != "py34"
+.if ${_PYTHON_VERSION} != 27 && ${_PYTHON_VERSION} != 34
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=1.0:../../www/py-aiohttp
 PLIST.aio=	yes
 .endif
 
 USE_LANGUAGES=	# none
+
+PYSETUPTESTTARGET=	pytest
+
+# tests are not compatible with the latest py-test
+do-test:
+	${DO_NADA}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
