@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2019/03/13 11:03:16 jaapb Exp $
+${OCAML_SITELIB}/ppx_variants_conv/META
+${OCAML_SITELIB}/ppx_variants_conv/dune-package
+${OCAML_SITELIB}/ppx_variants_conv/opam
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_variants_conv/ppx_variants_conv.a
+${OCAML_SITELIB}/ppx_variants_conv/ppx_variants_conv.cma
+${OCAML_SITELIB}/ppx_variants_conv/ppx_variants_conv.cmi
+${OCAML_SITELIB}/ppx_variants_conv/ppx_variants_conv.cmt
+${OCAML_SITELIB}/ppx_variants_conv/ppx_variants_conv.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_variants_conv/ppx_variants_conv.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_variants_conv/ppx_variants_conv.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_variants_conv/ppx_variants_conv.cmxs
+${OCAML_SITELIB}/ppx_variants_conv/ppx_variants_conv.ml
+${OCAML_SITELIB}/ppx_variants_conv/ppx_variants_conv.mli
+share/doc/ppx_variants_conv/CHANGES.md
+share/doc/ppx_variants_conv/LICENSE.md
+share/doc/ppx_variants_conv/README.md
