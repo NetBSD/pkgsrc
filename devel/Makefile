@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2803 2019/03/13 10:41:12 jaapb Exp $
+# $NetBSD: Makefile,v 1.2804 2019/03/13 11:01:28 jaapb Exp $
 #
 
 COMMENT=	Development utilities
@@ -856,6 +856,7 @@ SUBDIR+=	ocaml-sexplib0
 SUBDIR+=	ocaml-splittable_random
 SUBDIR+=	ocaml-stdio
 SUBDIR+=	ocaml-type_conv
+SUBDIR+=	ocaml-variantslib
 SUBDIR+=	ocaml-yojson
 SUBDIR+=	ocamlbuild
 SUBDIR+=	ocamlgraph
