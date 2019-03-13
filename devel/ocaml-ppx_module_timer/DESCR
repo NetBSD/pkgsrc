@@ -1,0 +1,4 @@
+A ppx extension to record module startup times.
+
+Modules using ppx_module_timer now have instrumentation to record their startup
+time.
