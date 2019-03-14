@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/12/04 03:57:03 nia Exp $
+$NetBSD: distinfo,v 1.5 2019/03/14 18:13:19 nia Exp $
 
-SHA1 (FlightGear-2018.2.2-data.tar.bz2) = 4244106a93841e8fe27422134ec7cdcd91c03658
-RMD160 (FlightGear-2018.2.2-data.tar.bz2) = 6941b1a041210c06acb5a2d5e250d71aba3044ba
-SHA512 (FlightGear-2018.2.2-data.tar.bz2) = 611a864f94eff328817b4eef3ddbf8c47c201071ab647a9322899b0d28b32a43c0af477e53a1a41fa3083503c080674c269f3f7535cbf62286a885512af3abe6
-Size (FlightGear-2018.2.2-data.tar.bz2) = 1624681801 bytes
+SHA1 (FlightGear-2018.3.2-data.tar.bz2) = fd8545cecdfd805fae7b94510100219961c81fc9
+RMD160 (FlightGear-2018.3.2-data.tar.bz2) = 93e969ad72368ca064ff6b0d7d8633e0fa1983ea
+SHA512 (FlightGear-2018.3.2-data.tar.bz2) = 64baa8a42d6a6e930cc2a14e62f6f3488f08cb3121973aece8818275b8f4934a94539e24b95646d7c5bb8bd5eef65ff91d63013c07dabf79f452908b749640bb
+Size (FlightGear-2018.3.2-data.tar.bz2) = 1744998558 bytes
