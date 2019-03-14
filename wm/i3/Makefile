@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2018/11/14 22:22:33 kleink Exp $
+# $NetBSD: Makefile,v 1.28 2019/03/14 11:07:17 wiz Exp $
 
-DISTNAME=	i3-4.15
-PKGREVISION=	2
+DISTNAME=	i3-4.16.1
 CATEGORIES=	wm
 MASTER_SITES=	https://i3wm.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
