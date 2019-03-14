@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.1 2016/06/14 06:39:37 kamil Exp $
+$NetBSD: distinfo,v 1.2 2019/03/14 11:55:29 wiz Exp $
 
-SHA1 (i3status-2.10.tar.bz2) = b0bfcac24c9e57958eefd9c3b00aed4b73b2c708
-RMD160 (i3status-2.10.tar.bz2) = 78a2d26aea8d59e8b8e9f7a302e28688bd9ae516
-SHA512 (i3status-2.10.tar.bz2) = a514331d83458de15b548686d423b38a7a9198a7a31ca3001f3f136e4b873617c397a0073bb10b44fa8613bc12ed4fa4e384d099d31122a8afbd0df5de2e9c85
-Size (i3status-2.10.tar.bz2) = 53684 bytes
-SHA1 (patch-Makefile) = 2ca0cf79670e189a7e70e14247b1cd4aafb81ffd
-SHA1 (patch-src_print__disk__info.c) = e0662f65b21402e60a643374898707f5807077f2
-SHA1 (patch-src_print__wireless__info.c) = 4632c9eabd5b5d73bc67e541bf7dc93e883339d1
+SHA1 (i3status-2.12.tar.bz2) = cb397987a1d931b600731e5ad033fe2f371d02b1
+RMD160 (i3status-2.12.tar.bz2) = d0cfd5dd51b0460c4052c81923b2ca4394ed8840
+SHA512 (i3status-2.12.tar.bz2) = 687a880a65cb8df46f5e9d2256b59724ba3424c502e9a0fb3ca71b070875df5f4008ee501c554bc716f2d728a5cf813a36d22d7377d42c3c46b14381d385bab3
+Size (i3status-2.12.tar.bz2) = 57162 bytes
+SHA1 (patch-Makefile) = 3e6358c173b74f24d82995a0019f36854237e135
+SHA1 (patch-src_print__wireless__info.c) = 0b51f34f95cb3731c2df033df503b0e58e91ad2a
