@@ -1,10 +1,10 @@
-$NetBSD: patch-Makefile,v 1.1 2016/06/14 06:39:37 kamil Exp $
+$NetBSD: patch-Makefile,v 1.2 2019/03/14 11:55:29 wiz Exp $
 
 Adjust paths and install LICENSE.
 
---- Makefile.orig	2016-01-01 18:51:19.000000000 +0000
+--- Makefile.orig	2018-05-11 09:10:46.000000000 +0000
 +++ Makefile
-@@ -11,6 +11,9 @@ ifndef SYSCONFDIR
+@@ -13,6 +13,9 @@ ifndef SYSCONFDIR
      SYSCONFDIR=$(PREFIX)/etc
    endif
  endif
@@ -12,9 +12,9 @@ Adjust paths and install LICENSE.
 +  MANDIR=$(MANDIR)
 +endif
  
+ PKG_CONFIG ?= pkg-config
  CFLAGS+=-Wall -Wshadow -Wpointer-arith -Wcast-qual -Wsign-compare
- CFLAGS+=-g
-@@ -100,13 +103,15 @@ manpage:
+@@ -110,13 +113,15 @@ manpage:
  
  install:
  	install -m 755 -d $(DESTDIR)$(PREFIX)/bin

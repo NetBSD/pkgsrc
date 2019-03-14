@@ -1,18 +1,19 @@
-$NetBSD: patch-src_print__wireless__info.c,v 1.1 2016/06/14 06:39:37 kamil Exp $
+$NetBSD: patch-src_print__wireless__info.c,v 1.2 2019/03/14 11:55:29 wiz Exp $
 
-Add support for NetBSD.
+Add includes for AF_INET & AF_INET6, and for free().
 
---- src/print_wireless_info.c.orig	2016-01-01 18:51:19.000000000 +0000
+--- src/print_wireless_info.c.orig	2018-05-11 09:10:46.000000000 +0000
 +++ src/print_wireless_info.c
-@@ -52,6 +52,12 @@
- #include <net80211/ieee80211_ioctl.h>
+@@ -60,10 +60,13 @@
+ 
+ #ifdef __NetBSD__
+ #include <sys/types.h>
++#include <sys/socket.h>
+ #include <net80211/ieee80211.h>
+ #define IW_ESSID_MAX_SIZE IEEE80211_NWID_LEN
  #endif
  
-+#ifdef __NetBSD__
-+#include <unistd.h>
-+#include <net80211/ieee80211.h>
-+#define IW_ESSID_MAX_SIZE IEEE80211_NWID_LEN
-+#endif
++#include <stdlib.h>
 +
  #include "i3status.h"
  
