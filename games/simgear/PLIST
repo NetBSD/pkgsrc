@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/08/04 04:04:28 nia Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/03/14 18:13:18 nia Exp $
 include/simgear/bucket/newbucket.hxx
 include/simgear/bvh/BVHBoundingBoxVisitor.hxx
 include/simgear/bvh/BVHGroup.hxx
@@ -55,6 +55,7 @@ include/simgear/canvas/layout/SpacerItem.hxx
 include/simgear/compiler.h
 include/simgear/constants.h
 include/simgear/debug/BufferedLogCallback.hxx
+include/simgear/debug/OsgIoCapture.hxx
 include/simgear/debug/debug_types.h
 include/simgear/debug/logstream.hxx
 include/simgear/embedded_resources/EmbeddedResource.hxx
