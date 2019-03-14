@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1278 2019/03/14 11:44:02 fox Exp $
+$NetBSD: CHANGES-2019,v 1.1279 2019/03/14 11:55:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2100,3 +2100,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/mutt to 1.11.4 [tron 2019-03-14]
 	Updated wm/i3 to 4.16.1 [wiz 2019-03-14]
 	Updated audio/fasttracker2 to 2.141 [fox 2019-03-14]
+	Updated sysutils/i3status to 2.12 [wiz 2019-03-14]
