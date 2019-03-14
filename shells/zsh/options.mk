@@ -1,9 +1,19 @@
-# $NetBSD: options.mk,v 1.2 2017/10/13 09:35:19 jperkin Exp $
+# $NetBSD: options.mk,v 1.3 2019/03/14 09:45:25 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.zsh
-PKG_SUPPORTED_OPTIONS=		static
+PKG_SUPPORTED_OPTIONS=		debug static
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mdebug)
+CONFIGURE_ARGS+=	--enable-zsh-debug
+CONFIGURE_ARGS+=	--enable-zsh-hash-debug
+CONFIGURE_ARGS+=	--enable-zsh-heap-debug
+CONFIGURE_ARGS+=	--enable-zsh-mem
+CONFIGURE_ARGS+=	--enable-zsh-mem-debug
+CONFIGURE_ARGS+=	--enable-zsh-mem-warning
+CONFIGURE_ARGS+=	--enable-zsh-secure-free
+.endif
 
 PLIST_VARS+=		dynamic
 .if !empty(PKG_OPTIONS:Mstatic)
