@@ -1,9 +1,9 @@
-$NetBSD: patch-src_polkitbackend_polkitbackendjsauthority.cpp,v 1.1 2018/05/14 09:30:35 jperkin Exp $
+$NetBSD: patch-src_polkitbackend_polkitbackendjsauthority.cpp,v 1.2 2019/03/14 10:15:19 jperkin Exp $
 
 Provide getgrouplist for SunOS.  This is available in newer Solaris,
 so if that becomes a problem we'll need to add a configure test.
 
---- src/polkitbackend/polkitbackendjsauthority.cpp.orig	2018-04-03 18:16:49.000000000 +0000
+--- src/polkitbackend/polkitbackendjsauthority.cpp.orig	2018-04-03 20:57:57.000000000 +0000
 +++ src/polkitbackend/polkitbackendjsauthority.cpp
 @@ -55,6 +55,46 @@
  #error "This code is not safe in SpiderMonkey exact stack rooting configurations"
@@ -52,3 +52,15 @@ so if that becomes a problem we'll need to add a configure test.
  /**
   * SECTION:polkitbackendjsauthority
   * @title: PolkitBackendJsAuthority
+@@ -813,7 +853,11 @@ subject_to_jsval (PolkitBackendJsAuthori
+ 
+       if (getgrouplist (passwd->pw_name,
+                         passwd->pw_gid,
++#ifdef __APPLE__
++                        (int *)gids,
++#else
+                         gids,
++#endif
+                         &num_gids) < 0)
+         {
+           g_warning ("Error looking up groups for uid %d: %m", (gint) uid);
