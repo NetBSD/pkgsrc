@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.83 2019/02/16 13:26:48 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2019/03/14 18:13:18 nia Exp $
 
-DISTNAME=	simgear-2018.2.2
-PKGREVISION=	10
+DISTNAME=	simgear-2018.3.2
 CATEGORIES=	games devel
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=flightgear/release-2018.2/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=flightgear/release-2018.3/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,7 +14,15 @@ USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_CMAKE=		yes
 
+CONFIGURE_DIRS=		sgbuild
+BUILD_DIRS=		sgbuild
+CMAKE_ARG_PATH=		..
+
 LDFLAGS.SunOS+=		-lsocket -lnsl
+
+# The cmake script warns against building in the source directory.
+pre-configure:
+	cd ${WRKSRC} && ${MKDIR} sgbuild
 
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
