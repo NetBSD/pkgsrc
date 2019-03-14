@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1283 2019/03/14 18:13:45 nia Exp $
+$NetBSD: CHANGES-2019,v 1.1284 2019/03/14 18:14:14 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2106,3 +2106,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated multimedia/adobe-flash-player to 32.0.0.156 [tsutsui 2019-03-14]
 	Updated games/simgear to 2018.3.2 [nia 2019-03-14]
 	Updated games/flightgear to 2018.3.2 [nia 2019-03-14]
+	Updated games/flightgear-data to 2018.3.2 [nia 2019-03-14]
