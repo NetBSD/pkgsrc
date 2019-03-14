@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.71 2019/02/01 22:01:16 tron Exp $
+$NetBSD: distinfo,v 1.72 2019/03/14 08:15:13 tron Exp $
 
-SHA1 (mutt-1.11.3.tar.gz) = 296637c217dd6e326380e8b29f2bd30ca76cd8f6
-RMD160 (mutt-1.11.3.tar.gz) = 59a307d02b3a9a34b89ae24db323c388f7fba8aa
-SHA512 (mutt-1.11.3.tar.gz) = 381079254f01cdd85b9e556a10bb1ddf0b49d96b54fe21d70dd735199dcbbfd46956ad85201fe8a4e8cdf7bdb121664c7b4edc0659da6b14dc8eaf6adf9827df
-Size (mutt-1.11.3.tar.gz) = 4581196 bytes
+SHA1 (mutt-1.11.4.tar.gz) = 969d099ff31c42d63768e5011698ad4a0dffc840
+RMD160 (mutt-1.11.4.tar.gz) = b1443cf6c8596ea5fb593e144e3e2c7852e4c1c7
+SHA512 (mutt-1.11.4.tar.gz) = 18c5bfa5c45ef70b3307afccf28f613a36de035f1b5c493f84f0571f7ba297cd0b25e01be9102a028c51c28c459c4bc62281da88926e16ce58c3c1407609e0eb
+Size (mutt-1.11.4.tar.gz) = 4582417 bytes
 SHA1 (patch-aa) = 59d89dce24110be2927c8a1ea1fa5b780d644372
 SHA1 (patch-ab) = 3d094b6bdb2b2ffac8ce6a1d3a306714c9f01835
 SHA1 (patch-ac) = 40d119b7efed1a4622c42badc9ee97349b504044
