@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1281 2019/03/14 15:32:03 tsutsui Exp $
+$NetBSD: CHANGES-2019,v 1.1282 2019/03/14 18:13:33 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2104,3 +2104,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-llvmlite to 0.28.0 [adam 2019-03-14]
 	Updated math/py-numba to 0.43.0 [adam 2019-03-14]
 	Updated multimedia/adobe-flash-player to 32.0.0.156 [tsutsui 2019-03-14]
+	Updated games/simgear to 2018.3.2 [nia 2019-03-14]
