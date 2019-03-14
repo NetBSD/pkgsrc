@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/01/02 15:43:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/03/14 13:04:17 adam Exp $
 bin/numba-${PYVERSSUFFIX}
 bin/pycc-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -10,6 +10,8 @@ ${PYSITELIB}/numba/__init__.py
 ${PYSITELIB}/numba/__init__.pyc
 ${PYSITELIB}/numba/__init__.pyo
 ${PYSITELIB}/numba/_arraystruct.h
+${PYSITELIB}/numba/_dictobject.c
+${PYSITELIB}/numba/_dictobject.h
 ${PYSITELIB}/numba/_dispatcher.c
 ${PYSITELIB}/numba/_dispatcher.h
 ${PYSITELIB}/numba/_dispatcher.so
@@ -265,6 +267,9 @@ ${PYSITELIB}/numba/cuda/tests/cudadrv/test_cuda_devicerecord.pyo
 ${PYSITELIB}/numba/cuda/tests/cudadrv/test_cuda_driver.py
 ${PYSITELIB}/numba/cuda/tests/cudadrv/test_cuda_driver.pyc
 ${PYSITELIB}/numba/cuda/tests/cudadrv/test_cuda_driver.pyo
+${PYSITELIB}/numba/cuda/tests/cudadrv/test_cuda_libraries.py
+${PYSITELIB}/numba/cuda/tests/cudadrv/test_cuda_libraries.pyc
+${PYSITELIB}/numba/cuda/tests/cudadrv/test_cuda_libraries.pyo
 ${PYSITELIB}/numba/cuda/tests/cudadrv/test_cuda_memory.py
 ${PYSITELIB}/numba/cuda/tests/cudadrv/test_cuda_memory.pyc
 ${PYSITELIB}/numba/cuda/tests/cudadrv/test_cuda_memory.pyo
@@ -553,6 +558,9 @@ ${PYSITELIB}/numba/debuginfo.pyo
 ${PYSITELIB}/numba/decorators.py
 ${PYSITELIB}/numba/decorators.pyc
 ${PYSITELIB}/numba/decorators.pyo
+${PYSITELIB}/numba/dictobject.py
+${PYSITELIB}/numba/dictobject.pyc
+${PYSITELIB}/numba/dictobject.pyo
 ${PYSITELIB}/numba/dispatcher.py
 ${PYSITELIB}/numba/dispatcher.pyc
 ${PYSITELIB}/numba/dispatcher.pyo
@@ -983,6 +991,12 @@ ${PYSITELIB}/numba/targets/fastmathpass.pyo
 ${PYSITELIB}/numba/targets/gdb_hook.py
 ${PYSITELIB}/numba/targets/gdb_hook.pyc
 ${PYSITELIB}/numba/targets/gdb_hook.pyo
+${PYSITELIB}/numba/targets/hashing.py
+${PYSITELIB}/numba/targets/hashing.pyc
+${PYSITELIB}/numba/targets/hashing.pyo
+${PYSITELIB}/numba/targets/heapq.py
+${PYSITELIB}/numba/targets/heapq.pyc
+${PYSITELIB}/numba/targets/heapq.pyo
 ${PYSITELIB}/numba/targets/imputils.py
 ${PYSITELIB}/numba/targets/imputils.pyc
 ${PYSITELIB}/numba/targets/imputils.pyo
@@ -1145,6 +1159,9 @@ ${PYSITELIB}/numba/tests/npyufunc/test_ufuncbuilding.pyo
 ${PYSITELIB}/numba/tests/npyufunc/test_vectorize_decor.py
 ${PYSITELIB}/numba/tests/npyufunc/test_vectorize_decor.pyc
 ${PYSITELIB}/numba/tests/npyufunc/test_vectorize_decor.pyo
+${PYSITELIB}/numba/tests/overload_usecases.py
+${PYSITELIB}/numba/tests/overload_usecases.pyc
+${PYSITELIB}/numba/tests/overload_usecases.pyo
 ${PYSITELIB}/numba/tests/pdlike_usecase.py
 ${PYSITELIB}/numba/tests/pdlike_usecase.pyc
 ${PYSITELIB}/numba/tests/pdlike_usecase.pyo
@@ -1169,6 +1186,9 @@ ${PYSITELIB}/numba/tests/support.pyo
 ${PYSITELIB}/numba/tests/test_alignment.py
 ${PYSITELIB}/numba/tests/test_alignment.pyc
 ${PYSITELIB}/numba/tests/test_alignment.pyo
+${PYSITELIB}/numba/tests/test_analysis.py
+${PYSITELIB}/numba/tests/test_analysis.pyc
+${PYSITELIB}/numba/tests/test_analysis.pyo
 ${PYSITELIB}/numba/tests/test_annotations.py
 ${PYSITELIB}/numba/tests/test_annotations.pyc
 ${PYSITELIB}/numba/tests/test_annotations.pyo
@@ -1277,6 +1297,12 @@ ${PYSITELIB}/numba/tests/test_del.pyo
 ${PYSITELIB}/numba/tests/test_deprecations.py
 ${PYSITELIB}/numba/tests/test_deprecations.pyc
 ${PYSITELIB}/numba/tests/test_deprecations.pyo
+${PYSITELIB}/numba/tests/test_dictimpl.py
+${PYSITELIB}/numba/tests/test_dictimpl.pyc
+${PYSITELIB}/numba/tests/test_dictimpl.pyo
+${PYSITELIB}/numba/tests/test_dictobject.py
+${PYSITELIB}/numba/tests/test_dictobject.pyc
+${PYSITELIB}/numba/tests/test_dictobject.pyo
 ${PYSITELIB}/numba/tests/test_dicts.py
 ${PYSITELIB}/numba/tests/test_dicts.pyc
 ${PYSITELIB}/numba/tests/test_dicts.pyo
@@ -1343,6 +1369,9 @@ ${PYSITELIB}/numba/tests/test_globals.pyo
 ${PYSITELIB}/numba/tests/test_hashing.py
 ${PYSITELIB}/numba/tests/test_hashing.pyc
 ${PYSITELIB}/numba/tests/test_hashing.pyo
+${PYSITELIB}/numba/tests/test_heapq.py
+${PYSITELIB}/numba/tests/test_heapq.pyc
+${PYSITELIB}/numba/tests/test_heapq.pyo
 ${PYSITELIB}/numba/tests/test_import.py
 ${PYSITELIB}/numba/tests/test_import.pyc
 ${PYSITELIB}/numba/tests/test_import.pyo
@@ -1629,6 +1658,12 @@ ${PYSITELIB}/numba/typeconv/rules.pyo
 ${PYSITELIB}/numba/typeconv/typeconv.py
 ${PYSITELIB}/numba/typeconv/typeconv.pyc
 ${PYSITELIB}/numba/typeconv/typeconv.pyo
+${PYSITELIB}/numba/typed/__init__.py
+${PYSITELIB}/numba/typed/__init__.pyc
+${PYSITELIB}/numba/typed/__init__.pyo
+${PYSITELIB}/numba/typed/typeddict.py
+${PYSITELIB}/numba/typed/typeddict.pyc
+${PYSITELIB}/numba/typed/typeddict.pyo
 ${PYSITELIB}/numba/typeinfer.py
 ${PYSITELIB}/numba/typeinfer.pyc
 ${PYSITELIB}/numba/typeinfer.pyo
@@ -1722,9 +1757,15 @@ ${PYSITELIB}/numba/unittest_support.pyo
 ${PYSITELIB}/numba/unsafe/__init__.py
 ${PYSITELIB}/numba/unsafe/__init__.pyc
 ${PYSITELIB}/numba/unsafe/__init__.pyo
+${PYSITELIB}/numba/unsafe/bytes.py
+${PYSITELIB}/numba/unsafe/bytes.pyc
+${PYSITELIB}/numba/unsafe/bytes.pyo
 ${PYSITELIB}/numba/unsafe/ndarray.py
 ${PYSITELIB}/numba/unsafe/ndarray.pyc
 ${PYSITELIB}/numba/unsafe/ndarray.pyo
+${PYSITELIB}/numba/unsafe/refcount.py
+${PYSITELIB}/numba/unsafe/refcount.pyc
+${PYSITELIB}/numba/unsafe/refcount.pyo
 ${PYSITELIB}/numba/unsafe/tuple.py
 ${PYSITELIB}/numba/unsafe/tuple.pyc
 ${PYSITELIB}/numba/unsafe/tuple.pyo
