@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.1 2019/02/03 13:41:33 taca Exp $
+$NetBSD: patch-configure,v 1.2 2019/03/14 09:57:54 jperkin Exp $
 
 * Adding Interix support.
 * Ignore doxygen.
@@ -7,7 +7,7 @@ $NetBSD: patch-configure,v 1.1 2019/02/03 13:41:33 taca Exp $
 * Put -std= in CFLAGS not CPPFLAGS.
 * Fix argument for pthread_self() on NetBSD.
 
---- configure.orig	2018-12-25 06:28:23.000000000 +0000
+--- configure.orig	2019-01-30 10:41:14.000000000 +0000
 +++ configure
 @@ -6048,7 +6048,7 @@ else
      if test x"$target_alias" = x; then :
@@ -37,7 +37,7 @@ $NetBSD: patch-configure,v 1.1 2019/02/03 13:41:33 taca Exp $
    *) :
       ;;
  esac
-@@ -21598,6 +21603,8 @@ else
+@@ -21600,6 +21605,8 @@ else
  # ifdef _MSC_VER
  #  include <malloc.h>
  #  define alloca _alloca
@@ -46,7 +46,7 @@ $NetBSD: patch-configure,v 1.1 2019/02/03 13:41:33 taca Exp $
  # else
  #  ifdef HAVE_ALLOCA_H
  #   include <alloca.h>
-@@ -26149,11 +26156,11 @@ if ${rb_cv_func_pthread_setname_np_argum
+@@ -26151,11 +26158,11 @@ if ${rb_cv_func_pthread_setname_np_argum
  else
    rb_cv_func_pthread_setname_np_arguments=
  	    # Linux,AIX,  (pthread_self(), name)
@@ -60,7 +60,7 @@ $NetBSD: patch-configure,v 1.1 2019/02/03 13:41:33 taca Exp $
  		"(name)" \
  		; do
  		cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-@@ -26747,7 +26754,9 @@ fi
+@@ -26749,7 +26756,9 @@ fi
    interix*) :
      	: ${LDSHARED='$(CC) -shared'}
  			XLDFLAGS="$XLDFLAGS -Wl,-E"
@@ -70,7 +70,7 @@ $NetBSD: patch-configure,v 1.1 2019/02/03 13:41:33 taca Exp $
  			rb_cv_dlopen=yes ;; #(
    freebsd*|dragonfly*) :
  
-@@ -27989,7 +27998,7 @@ fi
+@@ -27991,7 +28000,7 @@ fi
  	 ;; #(
    freebsd*|dragonfly*) :
  
@@ -79,15 +79,20 @@ $NetBSD: patch-configure,v 1.1 2019/02/03 13:41:33 taca Exp $
  	LIBRUBY_SONAME='$(LIBRUBY_SO)'
  	if test "$rb_cv_binary_elf" != "yes" ; then :
  
-@@ -28068,6 +28077,7 @@ esac
+@@ -28070,9 +28079,10 @@ esac
  	 ;; #(
    darwin*) :
  
 +	RUBY_SO_NAME="${RUBY_SO_NAME}"'.$(RUBY_PROGRAM_VERSION)'
  	LIBRUBY_SO='lib$(RUBY_SO_NAME).$(SOEXT)'
- 	LIBRUBY_SONAME='$(LIBRUBY_SO)'
- 	LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).$(SOEXT)'
-@@ -28091,7 +28101,12 @@ fi
+-	LIBRUBY_SONAME='$(LIBRUBY_SO)'
+-	LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).$(SOEXT)'
++	LIBRUBY_SONAME='lib$(RUBY_BASE_NAME).$(RUBY_API_VERSION).$(SOEXT)'
++	LIBRUBY_ALIASES='$(LIBRUBY_SONAME) lib$(RUBY_INSTALL_NAME).$(SOEXT)'
+ 	if test "$load_relative" = yes; then :
+ 
+ 	    libprefix="@executable_path/../${libdir_basename}"
+@@ -28093,7 +28103,12 @@ fi
  	 ;; #(
    interix*) :
  
@@ -101,7 +106,7 @@ $NetBSD: patch-configure,v 1.1 2019/02/03 13:41:33 taca Exp $
  	 ;; #(
    mingw*|cygwin*|mswin*) :
  
-@@ -28273,7 +28288,7 @@ if test "$enable_rpath" = yes; then :
+@@ -28275,7 +28290,7 @@ if test "$enable_rpath" = yes; then :
  esac
      rpathflag=`IFS="$PATH_SEPARATOR"
          echo x "$rpathflag" |
@@ -110,7 +115,7 @@ $NetBSD: patch-configure,v 1.1 2019/02/03 13:41:33 taca Exp $
      `
      LIBRUBY_RPATHFLAGS="$LIBRUBY_RPATHFLAGS${rpathflag}"
      LIBRUBYARG_SHARED="$LIBRUBY_RPATHFLAGS $LIBRUBYARG_SHARED"
-@@ -28815,15 +28830,7 @@ fi
+@@ -28817,15 +28832,7 @@ fi
  
  if test "$install_doc" != no; then :
  
@@ -127,7 +132,7 @@ $NetBSD: patch-configure,v 1.1 2019/02/03 13:41:33 taca Exp $
      if test "$install_capi" != no -a -n "$DOXYGEN"; then :
  
  	CAPITARGET="capi"
-@@ -30977,31 +30984,7 @@ which seems to be undefined.  Please mak
+@@ -30979,31 +30988,7 @@ which seems to be undefined.  Please mak
      "Makefile":F)
      tmpmk=confmk$$.tmp
      {
