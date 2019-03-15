@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/02/25 15:32:23 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2019/03/15 11:51:26 wiz Exp $
 
 DISTNAME=	tor-browser-60.5.1esr-8.5-1-build2
 PKGNAME=	tor-browser-8.5
@@ -46,9 +46,6 @@ CONFIGURE_ARGS+=	--enable-tor-browser-data-outside-app-dir
 CFLAGS+=		-DTOR_BROWSER_DATA_IN_HOME_DIR=1
 CFLAGS+=		-DTOR_BROWSER_DATA_OUTSIDE_APP_DIR=1
 CFLAGS+=		-fPIC
-
-# Avoid build failure from security/manager/ssl/src/nsNSSCallbacks.cpp:601
-CFLAGS+=	-fpermissive
 
 # workaround for link of libxul.so etc.
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/${PKGBASE}
