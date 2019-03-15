@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.89 2019/01/27 14:42:25 wen Exp $
+# $NetBSD: Makefile,v 1.90 2019/03/15 12:44:13 ryoon Exp $
 
-DISTNAME=	zsh-5.7
+DISTNAME=	zsh-5.7.1
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zsh/}
 EXTRACT_SUFX=	.tar.xz
@@ -18,6 +18,8 @@ TEXINFO_REQD=		4.0
 
 CONFIGURE_ARGS+=	--disable-gdbm
 CONFIGURE_ARGS+=	--enable-etcdir=${PKG_SYSCONFDIR:Q}
+# Stabilize zsh without jemalloc in libc
+CONFIGURE_ARGS+=	--enable-zsh-mem
 
 # Ensure we can find initscr(3) otherwise the curses module will not be built.
 CONFIGURE_ARGS+=        --with-term-lib="${BUILDLINK_LIBNAME.curses} ${BUILDLINK_LIBNAME.terminfo}"
