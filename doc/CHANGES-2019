@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1299 2019/03/15 15:03:34 he Exp $
+$NetBSD: CHANGES-2019,v 1.1300 2019/03/15 16:32:42 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2123,3 +2123,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed sysutils/arm-trusted-firmware-sun50iw1p1 [martin 2019-03-15]
 	Updated net/gallery-dl to 1.8.0 [leot 2019-03-15]
 	Updated sysutils/beats to 6.6.2 [he 2019-03-15]
+	Updated www/php-glpi to 9.4.1.1 [hauke 2019-03-15]
