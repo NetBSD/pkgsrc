@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.2 2018/12/31 15:06:47 jmcneill Exp $
+# $NetBSD: Makefile,v 1.3 2019/03/15 14:01:00 martin Exp $
 
 UBOOT_TARGET=		sopine-baseboard
 UBOOT_CONFIG=		sopine_baseboard_defconfig
 UBOOT_BIN=		u-boot-sunxi-with-spl.bin
 UBOOT_ENV+=		DEVICE_TREE=sun50i-a64-sopine-baseboard
 
-PKGREVISION=		1
+PKGREVISION=		2
 
 # Switch to EL1 before booting kernel (required for 32-bit support)
 PKG_DEFAULT_OPTIONS+=	el1
 
 post-extract:
-	${CP} ${PREFIX}/share/arm-trusted-firmware/sun50iw1p1/bl31.bin ${WRKSRC}
+	${CP} ${PREFIX}/share/arm-trusted-firmware/sun50i_a64/bl31.bin ${WRKSRC}
 	${CP} ${WRKSRC}/arch/arm/dts/sun50i-a64-pine64-plus.dts \
 	    ${WRKSRC}/arch/arm/dts/sun50i-a64-sopine-baseboard.dts
 	${CAT} ${WRKSRC}/configs/${UBOOT_CONFIG} | \
@@ -22,5 +22,5 @@ post-extract:
 post-build:
 	${CAT} ${WRKSRC}/spl/sunxi-spl.bin ${WRKSRC}/u-boot.itb > ${WRKSRC}/u-boot-sunxi-with-spl.bin
 
-.include "../../sysutils/arm-trusted-firmware-sun50iw1p1/buildlink3.mk"
+.include "../../sysutils/arm-trusted-firmware-sun50i_a64/buildlink3.mk"
 .include "../../sysutils/u-boot/u-boot-arm64.mk"
