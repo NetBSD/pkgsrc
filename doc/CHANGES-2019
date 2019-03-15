@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1292 2019/03/15 13:59:14 martin Exp $
+$NetBSD: CHANGES-2019,v 1.1293 2019/03/15 13:59:47 martin Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2116,3 +2116,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/firefox to 65.0.2nb2 [ryoon 2019-03-15]
 	Updated devel/cbindgen to 0.8.2 [ryoon 2019-03-15]
 	Updated sysutils/u-boot-nanopi-neo-plus2 to 2018.11nb2 [martin 2019-03-15]
+	Updated sysutils/u-boot-nanopi-neo2 to 2018.11nb2 [martin 2019-03-15]
