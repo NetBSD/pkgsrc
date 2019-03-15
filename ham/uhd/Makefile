@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2019/02/27 00:35:25 gdt Exp $
+# $NetBSD: Makefile,v 1.43 2019/03/15 00:49:01 mef Exp $
 
 # 3.13.0.1 is missing *_firmware_burner, and it's not clear that is correct.
 DISTNAME=		uhd-3.11.1.0
@@ -13,7 +13,8 @@ COMMENT=		USRP (Universal Software Radio Peripheral) Hardware Drivers
 LICENSE=		gnu-gpl-v2
 
 BUILD_DEPENDS+=		${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah
-BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
+# moved to options.mk
+#UILD_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 BUILD_DEPENDS+=		${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-cheetah
