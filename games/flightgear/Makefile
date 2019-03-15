@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2019/03/14 18:13:18 nia Exp $
+# $NetBSD: Makefile,v 1.84 2019/03/15 13:59:35 nia Exp $
 
 DISTNAME=	flightgear-2018.3.2
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=flightgear/release-2018.3/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,6 +19,9 @@ LDFLAGS.NetBSD+=	-lexecinfo
 CONFIGURE_DIRS=		fgbuild
 BUILD_DIRS=		fgbuild
 CMAKE_ARG_PATH=		..
+
+CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
+CMAKE_ARGS+=		-DFG_BUILD_TYPE=Release
 
 BUILDLINK_TRANSFORM+=	l:glut:freeglut
 
