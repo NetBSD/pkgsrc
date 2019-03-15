@@ -1,8 +1,7 @@
-# $NetBSD: options.mk,v 1.7 2019/03/14 21:17:51 mef Exp $
+# $NetBSD: options.mk,v 1.8 2019/03/15 00:49:01 mef Exp $
 ### Set options
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uhd
 PKG_SUPPORTED_OPTIONS=	doxygen manual
-PKG_SUGGESTED_OPTIONS=	doxygen manual
 
 .include	"../../mk/bsd.options.mk"
 
