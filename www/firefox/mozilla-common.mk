@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.127 2019/03/04 15:53:06 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.128 2019/03/15 12:52:42 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -84,7 +84,8 @@ CONFIGURE_ARGS+=	--disable-tests
 # Mozilla Bug 1432751
 #CONFIGURE_ARGS+=	--enable-system-cairo
 CONFIGURE_ARGS+=	--enable-system-pixman
-CONFIGURE_ARGS+=	--with-system-libvpx
+# webrtc option requires internal libvpx
+#CONFIGURE_ARGS+=	--with-system-libvpx
 CONFIGURE_ARGS+=	--enable-system-ffi
 CONFIGURE_ARGS+=	--with-system-icu
 CONFIGURE_ARGS+=	--with-system-nss
@@ -231,8 +232,9 @@ BUILDLINK_API_DEPENDS.clang+=	clang>=6.0.1nb1
 BUILDLINK_DEPMETHOD.rust=	build
 BUILDLINK_API_DEPENDS.rust+=	rust>=1.24.0
 .include "../../lang/rust/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libvpx+=	libvpx>=1.3.0
-.include "../../multimedia/libvpx/buildlink3.mk"
+# webrtc option requires internal libvpx
+#BUILDLINK_API_DEPENDS.libvpx+=	libvpx>=1.3.0
+#.include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
 # textproc/hunspell 1.3 is too old
 #.include "../../textproc/hunspell/buildlink3.mk"
