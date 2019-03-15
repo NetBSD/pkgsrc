@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2019/01/27 14:42:25 wen Exp $
+@comment $NetBSD: PLIST,v 1.42 2019/03/15 12:44:13 ryoon Exp $
 bin/zsh
 bin/${PKGNAME}
 info/zsh.info
@@ -298,6 +298,7 @@ share/zsh/${PKGVERSION}/functions/_dnf
 share/zsh/${PKGVERSION}/functions/_dns_types
 share/zsh/${PKGVERSION}/functions/_doas
 share/zsh/${PKGVERSION}/functions/_domains
+share/zsh/${PKGVERSION}/functions/_dos2unix
 share/zsh/${PKGVERSION}/functions/_dpatch-edit-patch
 share/zsh/${PKGVERSION}/functions/_dpkg
 share/zsh/${PKGVERSION}/functions/_dpkg-buildpackage
