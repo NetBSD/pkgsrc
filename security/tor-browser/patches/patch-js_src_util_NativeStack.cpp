@@ -1,4 +1,4 @@
-$NetBSD: patch-js_src_util_NativeStack.cpp,v 1.1 2019/02/25 15:32:24 wiz Exp $
+$NetBSD: patch-js_src_util_NativeStack.cpp,v 1.2 2019/03/15 11:51:26 wiz Exp $
 
 Support SunOS.
 
@@ -13,11 +13,11 @@ Support SunOS.
  
  JS_STATIC_ASSERT(JS_STACK_GROWTH_DIRECTION < 0);
  
-@@ -86,6 +86,7 @@ void* js::GetNativeStackBaseImpl() {
-     return stackBase;
-   }
- 
-+#  elif defined(__sun)
-   // Non-main threads have the required info stored in memory, so no filesystem
-   // calls are made.
-   pthread_t thread = pthread_self();
+@@ -128,6 +128,7 @@ void* js::GetNativeStackBaseImpl() {
+ #elif defined(PTHREAD_NP_H) || defined(_PTHREAD_NP_H_) || defined(NETBSD)
+   /* e.g. on FreeBSD 4.8 or newer, neundorf@kde.org */
+   pthread_attr_get_np(thread, &sattr);
++#elif defined(__sun)
+ #else
+   /*
+    * FIXME: this function is non-portable;
