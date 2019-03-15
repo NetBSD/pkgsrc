@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.84 2019/03/14 18:13:18 nia Exp $
+# $NetBSD: Makefile,v 1.85 2019/03/15 13:59:05 nia Exp $
 
 DISTNAME=	simgear-2018.3.2
+PKGREVISION=	1
 CATEGORIES=	games devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=flightgear/release-2018.3/}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,6 +18,8 @@ USE_CMAKE=		yes
 CONFIGURE_DIRS=		sgbuild
 BUILD_DIRS=		sgbuild
 CMAKE_ARG_PATH=		..
+
+CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
