@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1297 2019/03/15 14:02:17 martin Exp $
+$NetBSD: CHANGES-2019,v 1.1298 2019/03/15 14:42:54 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2121,3 +2121,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/u-boot-pine64 to 2018.11nb2 [martin 2019-03-15]
 	Updated sysutils/u-boot-sopine-baseboard to 2018.11nb2 [martin 2019-03-15]
 	Removed sysutils/arm-trusted-firmware-sun50iw1p1 [martin 2019-03-15]
+	Updated net/gallery-dl to 1.8.0 [leot 2019-03-15]
