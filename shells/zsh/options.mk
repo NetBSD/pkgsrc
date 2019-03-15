@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2019/03/14 09:45:25 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2019/03/15 12:44:13 ryoon Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.zsh
 PKG_SUPPORTED_OPTIONS=		debug static
@@ -9,7 +9,6 @@ PKG_SUPPORTED_OPTIONS=		debug static
 CONFIGURE_ARGS+=	--enable-zsh-debug
 CONFIGURE_ARGS+=	--enable-zsh-hash-debug
 CONFIGURE_ARGS+=	--enable-zsh-heap-debug
-CONFIGURE_ARGS+=	--enable-zsh-mem
 CONFIGURE_ARGS+=	--enable-zsh-mem-debug
 CONFIGURE_ARGS+=	--enable-zsh-mem-warning
 CONFIGURE_ARGS+=	--enable-zsh-secure-free
