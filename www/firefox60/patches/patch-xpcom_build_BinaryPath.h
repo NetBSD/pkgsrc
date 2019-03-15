@@ -1,4 +1,4 @@
-$NetBSD: patch-xpcom_build_BinaryPath.h,v 1.2 2019/02/26 11:23:53 ryoon Exp $
+$NetBSD: patch-xpcom_build_BinaryPath.h,v 1.3 2019/03/15 09:59:26 wiz Exp $
 
 --- xpcom/build/BinaryPath.h.orig	2019-02-13 14:19:45.000000000 +0000
 +++ xpcom/build/BinaryPath.h
@@ -26,7 +26,7 @@ $NetBSD: patch-xpcom_build_BinaryPath.h,v 1.2 2019/02/26 11:23:53 ryoon Exp $
      return NS_ERROR_FAILURE;
    }
  
-++#elif (defined(__NetBSD__) && !defined(KERN_PROC_PATHNAME))
++#elif (defined(__NetBSD__) && !defined(KERN_PROC_PATHNAME))
 +  static nsresult Get(char aResult[MAXPATHLEN])
 +  {
 +    char path[] = "@PREFIX@/lib/firefox60/firefox60";
