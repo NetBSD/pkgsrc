@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1294 2019/03/15 14:00:07 martin Exp $
+$NetBSD: CHANGES-2019,v 1.1295 2019/03/15 14:00:45 martin Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2118,3 +2118,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/u-boot-nanopi-neo-plus2 to 2018.11nb2 [martin 2019-03-15]
 	Updated sysutils/u-boot-nanopi-neo2 to 2018.11nb2 [martin 2019-03-15]
 	Updated sysutils/u-boot-orangepi-zero-plus to 2018.11nb2 [martin 2019-03-15]
+	Updated sysutils/u-boot-pine64 to 2018.11nb2 [martin 2019-03-15]
