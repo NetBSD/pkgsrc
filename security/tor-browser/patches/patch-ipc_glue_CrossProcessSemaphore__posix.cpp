@@ -1,4 +1,4 @@
-$NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.1 2019/02/25 15:32:24 wiz Exp $
+$NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.2 2019/03/15 11:51:26 wiz Exp $
 
 - avoid use of sem_t on NetBSD
   http://mail-index.netbsd.org/pkgsrc-bugs/2017/06/23/msg062225.html
@@ -101,7 +101,7 @@ $NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.1 2019/02/25 15:32:
 +#else
 +    : mSemaphore(nullptr)
 +#endif
-+     , mRefCount(nullptr) {
++    , mRefCount(nullptr) {
    MOZ_COUNT_CTOR(CrossProcessSemaphore);
  }
  
