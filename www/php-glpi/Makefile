@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2018/04/27 14:19:29 hauke Exp $
+# $NetBSD: Makefile,v 1.6 2019/03/15 16:32:13 hauke Exp $
 
 DISTNAME=	glpi-${GLPI_VERSION}
-GLPI_VERSION=	9.2.3
+GLPI_VERSION=	9.4.1.1
 CATEGORIES=	www
 
 MASTER_SITES=	https://github.com/glpi-project/glpi/releases/download/${GLPI_VERSION}/
@@ -17,6 +17,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.4:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-ldap>=5.4:../../databases/php-ldap
 DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=5.4:../../databases/php-mysqli
 DEPENDS+=	${PHP_PKG_PREFIX}-opcache>=5.4:../../devel/php-opcache
+DEPENDS+=	${PHP_PKG_PREFIX}-exif>=5.4:../../graphics/php-exif
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.4:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-imap>=5.4:../../mail/php-imap
 DEPENDS+=	${PHP_PKG_PREFIX}-xmlrpc>=5.4:../../net/php-xmlrpc
@@ -45,7 +46,7 @@ PKG_SYSCONFDIR_PERMS=	${APACHE_USER} ${APACHE_GROUP} 0700
 EGDIR=		share/examples/glpi
 GLPI_DIR=	share/glpi
 
-.for ddd in config_path.php
+.for ddd in local_define.php
 CONF_FILES+=	${EGDIR}/${ddd} ${PKG_SYSCONFDIR}/${ddd}
 .endfor
 
@@ -62,7 +63,8 @@ SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-configure
 SUBST_MESSAGE.path=	Fixing paths.
 SUBST_VARS.path=	PREFIX VARBASE PKG_SYSCONFDIR APACHE_USER
-SUBST_FILES.path=	config/config_path.php
+SUBST_FILES.path=	config/local_define.php
+SUBST_FILES.path+=	inc/downstream.php
 SUBST_FILES.path+=	config/crontab.sample
 SUBST_FILES.path+=	config/httpd-glpi.conf
 
@@ -70,6 +72,7 @@ REPLACE_INTERPRETER+=	php
 REPLACE.php.old=	.*php
 REPLACE.php.new=	${PREFIX}/bin/php
 REPLACE_FILES.php=	vendor/tecnickcom/tcpdf/tools/tcpdf_addfont.php
+REPLACE_FILES.php+=	bin/console
 .for ddd in  bench.php fetch_windows_zones.php generate_vcards \
 	     generateicalendardata.php vobject
 REPLACE_FILES.php+=      vendor/sabre/vobject/bin/${ddd}
@@ -86,10 +89,11 @@ DEPENDS+=	${PHP_PKG_PREFIX}-apcu_bc>=1.0:../../www/php-apcu_bc
 .endif
 
 post-extract:
-	for ddd in config_path.php crontab.sample httpd-glpi.conf ; do \
+	for ddd in local_define.php crontab.sample httpd-glpi.conf ; do \
 		${CP} ${FILESDIR}/$${ddd} ${WRKSRC}/config ; \
 	done
-	for ddd in ajax front lib locales pics vendor ; do \
+	${CP} ${FILESDIR}/downstream.php ${WRKSRC}/inc
+	for ddd in ajax css front inc lib locales pics vendor ; do \
 		find ${WRKSRC}/$${ddd} -type f -exec ${CHMOD} ugo-x \{\} \; ; \
 	done
 	cd ${WRKSRC}/install && ${MV} install.php install.php.disabled
