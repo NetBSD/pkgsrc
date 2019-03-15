@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/03/04 15:55:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.16 2019/03/15 09:59:19 wiz Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		60.5
@@ -27,10 +27,10 @@ CFLAGS+=	-I${PREFIX}/include/nspr
 
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/${PKGBASE}
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib
-LDFLAGS.SunOS+=		-lm
 LDFLAGS.DragonFly+=	-lplc4 -lnspr4
 LDFLAGS.FreeBSD+=	-lplc4 -lnspr4
 LDFLAGS.Linux+=		-lnspr4
+LDFLAGS.SunOS+=		-lm
 
 NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/firefox60
 NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/firefox60-bin
@@ -57,7 +57,7 @@ CHECK_INTERPRETER_SKIP+=lib/firefox-sdk/sdk/bin/typelib.py
 CHECK_INTERPRETER_SKIP+=lib/firefox-sdk/sdk/bin/xpidl.py
 CHECK_INTERPRETER_SKIP+=lib/firefox-sdk/sdk/bin/xpt.py
 
-CHECK_WRKREF_SKIP+=lib/${PKGBASE}/chrome/toolkit/content/global/buildconfig.html
+CHECK_WRKREF_SKIP+=	lib/${PKGBASE}/chrome/toolkit/content/global/buildconfig.html
 
 MOZILLA=	${PKGBASE}
 MOZILLA_ICON=	${WRKSRC}/${OBJDIR}/dist/firefox60/browser/chrome/icons/default/default48.png
