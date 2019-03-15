@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2016/02/26 09:41:07 jperkin Exp $
+# $NetBSD: options.mk,v 1.3 2019/03/15 11:51:26 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tor-browser
 PKG_SUPPORTED_OPTIONS+=	alsa debug debug-info mozilla-jemalloc pulseaudio
@@ -17,7 +17,6 @@ CONFIGURE_ARGS+=	--disable-alsa
 .endif
 
 .if !empty(PKG_OPTIONS:Mmozilla-jemalloc)
-PLIST.jemalloc=		yes
 CONFIGURE_ARGS+=	--enable-jemalloc
 .else
 CONFIGURE_ARGS+=	--disable-jemalloc
@@ -54,4 +53,3 @@ CONFIGURE_ARGS+=	--enable-pulseaudio
 .else
 CONFIGURE_ARGS+=	--disable-pulseaudio
 .endif
-# XXX end
