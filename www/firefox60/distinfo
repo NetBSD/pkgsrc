@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2019/03/04 15:55:18 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2019/03/15 09:59:26 wiz Exp $
 
 SHA1 (firefox-60.5.2esr.source.tar.xz) = a6fd649d5a9e3943fb3e67a5e45f856a154b0483
 RMD160 (firefox-60.5.2esr.source.tar.xz) = ba8bb525e8a307c97f4ec4b1e20ab14781a83097
@@ -41,5 +41,5 @@ SHA1 (patch-toolkit_moz.configure) = 40ee147cc1d2c62dd6c83b3f67ce9e61f758ea57
 SHA1 (patch-toolkit_mozapps_installer_packager.mk) = 6f557fb732f0b9dabf059ffac0400d3db4e79e47
 SHA1 (patch-toolkit_xre_glxtest.cpp) = e02b1073fe1a6f36872b10883455c8be59ff81e9
 SHA1 (patch-xpcom_base_nscore.h) = 3f131370b9665a0af55cab7f8f54723ebbc389fa
-SHA1 (patch-xpcom_build_BinaryPath.h) = fcaca939aca30a4ae07414cd5e6b1497ac3a1178
+SHA1 (patch-xpcom_build_BinaryPath.h) = 595569235ddcd1a1caaaa0c94796dd3b9535d391
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcinvoke__sparc64__netbsd.cpp) = 0792c2c626d906e71c5183994cb32bf8cdb3e239
