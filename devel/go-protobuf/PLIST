@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/02/26 22:09:50 he Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/03/15 09:05:37 he Exp $
 bin/protoc-gen-go
 gopkg/pkg/${GO_PLATFORM}/github.com/golang/protobuf/descriptor.a
 gopkg/pkg/${GO_PLATFORM}/github.com/golang/protobuf/jsonpb.a
@@ -23,13 +23,6 @@ gopkg/src/github.com/golang/protobuf/CONTRIBUTORS
 gopkg/src/github.com/golang/protobuf/LICENSE
 gopkg/src/github.com/golang/protobuf/Makefile
 gopkg/src/github.com/golang/protobuf/README.md
-gopkg/src/github.com/golang/protobuf/conformance/Makefile
-gopkg/src/github.com/golang/protobuf/conformance/conformance.go
-gopkg/src/github.com/golang/protobuf/conformance/conformance.sh
-gopkg/src/github.com/golang/protobuf/conformance/failure_list_go.txt
-gopkg/src/github.com/golang/protobuf/conformance/internal/conformance_proto/conformance.pb.go
-gopkg/src/github.com/golang/protobuf/conformance/internal/conformance_proto/conformance.proto
-gopkg/src/github.com/golang/protobuf/conformance/test.sh
 gopkg/src/github.com/golang/protobuf/descriptor/descriptor.go
 gopkg/src/github.com/golang/protobuf/descriptor/descriptor_test.go
 gopkg/src/github.com/golang/protobuf/go.mod
