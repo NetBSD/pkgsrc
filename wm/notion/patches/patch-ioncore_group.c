@@ -1,6 +1,7 @@
-$NetBSD: patch-ioncore_group.c,v 1.1 2019/03/13 21:16:15 wiz Exp $
+$NetBSD: patch-ioncore_group.c,v 1.2 2019/03/16 11:06:39 wiz Exp $
 
 Xutf8TextListToTextProperty needs a NULL terminated list of pointers.
+https://github.com/raboof/notion/pull/70
 
 --- ioncore/group.c.orig	2017-05-05 14:55:07.000000000 +0000
 +++ ioncore/group.c
