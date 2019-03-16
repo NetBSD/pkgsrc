@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2019/03/15 12:44:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.91 2019/03/16 13:29:30 ryoon Exp $
 
 DISTNAME=	zsh-5.7.1
 CATEGORIES=	shells
@@ -19,6 +19,7 @@ TEXINFO_REQD=		4.0
 CONFIGURE_ARGS+=	--disable-gdbm
 CONFIGURE_ARGS+=	--enable-etcdir=${PKG_SYSCONFDIR:Q}
 # Stabilize zsh without jemalloc in libc
+# XXX Remove this and enable it in debug option. jemalloc in libc is stable now.
 CONFIGURE_ARGS+=	--enable-zsh-mem
 
 # Ensure we can find initscr(3) otherwise the curses module will not be built.

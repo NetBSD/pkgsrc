@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2019/03/15 12:44:13 ryoon Exp $
+# $NetBSD: options.mk,v 1.5 2019/03/16 13:29:30 ryoon Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.zsh
 PKG_SUPPORTED_OPTIONS=		debug static
@@ -12,6 +12,8 @@ CONFIGURE_ARGS+=	--enable-zsh-heap-debug
 CONFIGURE_ARGS+=	--enable-zsh-mem-debug
 CONFIGURE_ARGS+=	--enable-zsh-mem-warning
 CONFIGURE_ARGS+=	--enable-zsh-secure-free
+# XXX Enable this and remove it in debug option. jemalloc in libc is stable now.
+#CONFIGURE_ARGS+=	--enable-zsh-mem
 .endif
 
 PLIST_VARS+=		dynamic
