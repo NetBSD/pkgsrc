@@ -1,4 +1,5 @@
-$NetBSD: patch-src_fsmagic.c,v 1.1 2015/03/27 18:57:43 bsiegert Exp $
+$NetBSD: patch-src_fsmagic.c,v 1.2 2019/03/16 10:50:31 leot Exp $
+
 Explicitly convert mode_t to unsigned int for formatted output
 
 --- src/fsmagic.c.orig	2014-12-04 15:56:46.000000000 +0000
