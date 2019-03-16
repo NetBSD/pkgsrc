@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/03/13 10:40:19 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/03/16 08:27:56 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go112/AUTHORS
@@ -421,6 +421,9 @@ go112/misc/cgo/test/sigprocmask.go
 go112/misc/cgo/test/test22906.go
 go112/misc/cgo/test/test26213.go
 go112/misc/cgo/test/test27660.go
+go112/misc/cgo/test/testdata/issue30527.go
+go112/misc/cgo/test/testdata/issue30527/a.go
+go112/misc/cgo/test/testdata/issue30527/b.go
 go112/misc/cgo/test/twoargs.go
 go112/misc/cgo/testasan/main.go
 go112/misc/cgo/testcarchive/carchive_test.go
@@ -2530,6 +2533,7 @@ go112/src/cmd/go/testdata/script/cache_unix.txt
 go112/src/cmd/go/testdata/script/cgo_syso_issue29253.txt
 go112/src/cmd/go/testdata/script/clean_testcache.txt
 go112/src/cmd/go/testdata/script/cover_atomic_pkgall.txt
+go112/src/cmd/go/testdata/script/cover_pkgall_multiple_mains.txt
 go112/src/cmd/go/testdata/script/cover_pkgall_runtime.txt
 go112/src/cmd/go/testdata/script/cpu_profile_twice.txt
 go112/src/cmd/go/testdata/script/fileline.txt
@@ -8963,6 +8967,9 @@ go112/test/fixedbugs/issue29919.go
 go112/test/fixedbugs/issue29943.go
 go112/test/fixedbugs/issue30041.go
 go112/test/fixedbugs/issue30061.go
+go112/test/fixedbugs/issue30476.go
+go112/test/fixedbugs/issue30566a.go
+go112/test/fixedbugs/issue30566b.go
 go112/test/fixedbugs/issue3552.dir/one.go
 go112/test/fixedbugs/issue3552.dir/two.go
 go112/test/fixedbugs/issue3552.go
