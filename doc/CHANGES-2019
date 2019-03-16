@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1318 2019/03/16 17:57:09 jklos Exp $
+$NetBSD: CHANGES-2019,v 1.1319 2019/03/16 23:14:22 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2147,3 +2147,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/ruby26-base to 2.6.2 [taca 2019-03-16]
 	Updated lang/ruby26 to 2.6.2 [taca 2019-03-16]
 	Updated www/wordpress to 5.1.1 [jklos 2019-03-16]
+	Updated geography/py-obspy to 1.1.1 [wen 2019-03-16]
