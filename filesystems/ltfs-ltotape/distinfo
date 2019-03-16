@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2019/02/25 01:00:39 manu Exp $
+$NetBSD: distinfo,v 1.2 2019/03/16 00:44:22 manu Exp $
 
-SHA1 (ltfs-backends/v0.1.tar.gz) = c6dbfa95afefe8a11ea56a321f78c67b39a107f6
-RMD160 (ltfs-backends/v0.1.tar.gz) = 1337919ec2fe9b0ce83b8ba60e81bc9eda78cf7d
-SHA512 (ltfs-backends/v0.1.tar.gz) = 464e4456178e4fe6895fb954a5c7eec7d9ad84e2c0a8887a135e93aaa5807ec493430497ccc56a499f25e02cabf226a4be8574948f97affb3733188af6d8371a
-Size (ltfs-backends/v0.1.tar.gz) = 47827 bytes
-SHA1 (patch-Makefile.am) = d9087041b9d88a23a64f2419cf9c5c60e66b575a
+SHA1 (ltfs-backends/v0.2.tar.gz) = b91bd72a39f7e4ef13f353a91ad9a2ed8d32b0bc
+RMD160 (ltfs-backends/v0.2.tar.gz) = 905f30d738991484c29d672a4c29d896815670a2
+SHA512 (ltfs-backends/v0.2.tar.gz) = 2c4966ac5902a22bd282e0b73540289e09cf919d420af70a1c5d7e34190cd80bc4dccbaf03239bf727e18420984b5a644cb3d17c8b1c68a384b27bc59efe320f
+Size (ltfs-backends/v0.2.tar.gz) = 129136 bytes
+SHA1 (patch-Makefile.am) = a0e6ab0fa0b247dc42c9a8a08c0007db9049d52f
