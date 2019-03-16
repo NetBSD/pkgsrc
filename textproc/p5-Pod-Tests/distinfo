@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2017/06/07 14:46:58 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2019/03/16 11:14:08 wen Exp $
 
-SHA1 (Pod-Tests-1.19.tar.gz) = 53ed2833ed06e8132ca0158a0038701ec72c29d2
-RMD160 (Pod-Tests-1.19.tar.gz) = aeb4d5c44ccf8a99ab4f622aa30f450600ac79bf
-SHA512 (Pod-Tests-1.19.tar.gz) = fb48e912f33bc36b782eaf71797732358288840148bdf69ce3381038c47de31e2e111d16d47351c75169016a8a45dcfdfa6e290f61acc8d130fd6c4d0c7dfb9c
-Size (Pod-Tests-1.19.tar.gz) = 30157 bytes
+SHA1 (Pod-Tests-1.20.tar.gz) = e01a360d0daa71f5f96072c3c52d71958e0a91ed
+RMD160 (Pod-Tests-1.20.tar.gz) = 1235d25962ec9517072862adfde9c8922e58475b
+SHA512 (Pod-Tests-1.20.tar.gz) = 2be444cfdce172d9f82f8df5235aca966b1e1af4324f6e3bd02bbbf7c3940a6c2329bcaacf8281b8ae58563b82703fc5c3af333dc2d6bced76b9ddd4c3458bf6
+Size (Pod-Tests-1.20.tar.gz) = 31109 bytes
 SHA1 (patch-Makefile.PL) = d66a106ec6c69e0d4abebfb0f113045309626066
