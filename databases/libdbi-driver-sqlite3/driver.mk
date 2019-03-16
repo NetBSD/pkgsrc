@@ -1,5 +1,6 @@
-# $NetBSD: Makefile_drivers,v 1.4 2016/08/21 19:16:58 fhajny Exp $
+# $NetBSD: driver.mk,v 1.1 2019/03/16 14:06:22 rillig Exp $
 #
+# Common definitions for the individual DBI drivers (not only SQLite3).
 
 DISTNAME=	libdbi-drivers-0.9.0
 PKGNAME=	${DISTNAME:S/libdbi-drivers/libdbi-driver-${DRIVER}/:S/-1/.1/:S/-2/.2/}
