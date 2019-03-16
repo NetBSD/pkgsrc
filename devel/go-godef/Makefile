@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2019/03/09 10:05:04 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6 2019/03/16 08:35:46 bsiegert Exp $
 
 DISTNAME=	godef-0.0.20170920
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rogpeppe/}
 GITHUB_PROJECT=	godef
