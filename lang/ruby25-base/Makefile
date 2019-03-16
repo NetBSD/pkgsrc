@@ -1,14 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2019/03/12 04:22:34 taca Exp $
+# $NetBSD: Makefile,v 1.9 2019/03/16 14:34:56 taca Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION}
-PKGREVISION=	2
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
-
-# announced patch is failed to apply, so use local version.
-PATCHFILES=	ruby-2.5.3-rubygems.patch-20190311
-PATCH_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	${RUBY_HOMEPAGE}
