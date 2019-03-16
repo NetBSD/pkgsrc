@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1315 2019/03/16 14:20:22 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1316 2019/03/16 14:35:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2142,3 +2142,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/ruby-listen to 3.1.5nb2 [taca 2019-03-16]
 	Updated www/ruby-sass-listen to 4.0.0nb1 [taca 2019-03-16]
 	Updated www/ruby-compass to 1.0.3nb1 [taca 2019-03-16]
+	Updated lang/ruby25-base to 2.5.5 [taca 2019-03-16]
+	Updated lang/ruby25 to 2.5.5 [taca 2019-03-16]
