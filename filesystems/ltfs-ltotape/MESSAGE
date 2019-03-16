@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2019/02/25 01:00:39 manu Exp $
+$NetBSD: MESSAGE,v 1.2 2019/03/16 00:44:22 manu Exp $
 
 Enable ltotape by setting the following in ${PKG_SYSCONFDIR}/ltfs.conf
 default tape ltotape
