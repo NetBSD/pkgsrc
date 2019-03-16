@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2019/03/09 10:05:08 bsiegert Exp $
+# $NetBSD: Makefile,v 1.5 2019/03/16 08:35:49 bsiegert Exp $
 
 DISTNAME=	imaging-1.5.0
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 MASTER_SITES=	${MASTER_SITE_GITHUB:=disintegration/}
 CATEGORIES=	graphics
 GITHUB_PROJECT=	imaging
