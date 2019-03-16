@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/12/19 15:27:03 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/03/16 08:19:00 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go111/AUTHORS
@@ -6488,8 +6488,6 @@ go111/src/runtime/testdata/testprog/crash.go
 go111/src/runtime/testdata/testprog/deadlock.go
 go111/src/runtime/testdata/testprog/empty.s
 go111/src/runtime/testdata/testprog/gc.go
-go111/src/runtime/testdata/testprog/gettid.go
-go111/src/runtime/testdata/testprog/gettid_none.go
 go111/src/runtime/testdata/testprog/lockosthread.go
 go111/src/runtime/testdata/testprog/main.go
 go111/src/runtime/testdata/testprog/map.go
@@ -6500,6 +6498,9 @@ go111/src/runtime/testdata/testprog/panicrace.go
 go111/src/runtime/testdata/testprog/signal.go
 go111/src/runtime/testdata/testprog/stringconcat.go
 go111/src/runtime/testdata/testprog/syscall_windows.go
+go111/src/runtime/testdata/testprog/syscalls.go
+go111/src/runtime/testdata/testprog/syscalls_linux.go
+go111/src/runtime/testdata/testprog/syscalls_none.go
 go111/src/runtime/testdata/testprog/timeprof.go
 go111/src/runtime/testdata/testprog/traceback_ancestors.go
 go111/src/runtime/testdata/testprogcgo/aprof.go
@@ -8486,6 +8487,10 @@ go111/test/fixedbugs/issue27961.go
 go111/test/fixedbugs/issue28616.go
 go111/test/fixedbugs/issue28688.go
 go111/test/fixedbugs/issue28797.go
+go111/test/fixedbugs/issue29304.go
+go111/test/fixedbugs/issue29362.go
+go111/test/fixedbugs/issue29362b.go
+go111/test/fixedbugs/issue29402.go
 go111/test/fixedbugs/issue3552.dir/one.go
 go111/test/fixedbugs/issue3552.dir/two.go
 go111/test/fixedbugs/issue3552.go
