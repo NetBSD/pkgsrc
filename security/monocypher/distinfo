@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2019/03/16 09:17:09 maya Exp $
+
+SHA1 (monocypher-2.0.5.tar.gz) = b409cc5a69c96d38d47c07affd550bd33d6861f2
+RMD160 (monocypher-2.0.5.tar.gz) = 755440680f64195cea6c969ca49cb9b0d794f3f4
+SHA512 (monocypher-2.0.5.tar.gz) = 634dfaa981decb48043161f733702f7b55c1057bbb4cd8c202c8d8c1dd6fadcfbce881328f5df95213931eeea160d74330d18992d83fd60c76390e53023078f9
+Size (monocypher-2.0.5.tar.gz) = 988921 bytes
+SHA1 (patch-makefile) = 756eaeb7d11a013c0ebc81a47e7a1cf00b7d4fb8

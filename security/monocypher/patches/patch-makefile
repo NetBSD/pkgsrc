@@ -1,0 +1,21 @@
+$NetBSD: patch-makefile,v 1.1 2019/03/16 09:17:09 maya Exp $
+
+Allow overriding CC, DESTDIR and PREFIX
+Use the more standard MANDIR (that we override)
+
+--- makefile.orig	2018-06-27 09:11:23.000000000 +0000
++++ makefile
+@@ -1,9 +1,9 @@
+-CC=gcc -std=gnu99 # speed tests don't work with -std=cxx, they need the POSIX extensions
++CC?=gcc -std=gnu99 # speed tests don't work with -std=cxx, they need the POSIX extensions
+ CFLAGS= -pedantic -Wall -Wextra -O3 -march=native
+-DESTDIR=
+-PREFIX=usr/local
++DESTDIR?=
++PREFIX?=usr/local
+ PKGCONFIG=$(DESTDIR)/$(PREFIX)/lib/pkgconfig
+-MAN_DIR=$(DESTDIR)/$(PREFIX)/share/man/man3
++MANDIR?=$(DESTDIR)/$(PREFIX)/share/man/man3
+ 
+ TARBALL_VERSION=$$(cat VERSION.md)
+ TARBALL_DIR=.
