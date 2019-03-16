@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1307 2019/03/16 11:15:01 wen Exp $
+$NetBSD: CHANGES-2019,v 1.1308 2019/03/16 13:16:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2132,3 +2132,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added security/monocypher version 2.0.5 [maya 2019-03-16]
 	Updated sysutils/file to 5.36 [leot 2019-03-16]
 	Updated textproc/p5-Pod-Tests to 1.20 [wen 2019-03-16]
+	Updated www/drupal8 to 8.6.12 [wen 2019-03-16]
