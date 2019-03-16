@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1304 2019/03/16 08:36:49 bsiegert Exp $
+$NetBSD: CHANGES-2019,v 1.1305 2019/03/16 09:17:36 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2129,3 +2129,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added textproc/cjose version 0.6.1 [bsiegert 2019-03-16]
 	Updated lang/go111 to 1.11.6 [bsiegert 2019-03-16]
 	Updated lang/go112 to 1.12.1nb1 [bsiegert 2019-03-16]
+	Added security/monocypher version 2.0.5 [maya 2019-03-16]
