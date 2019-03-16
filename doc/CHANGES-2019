@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1313 2019/03/16 14:09:31 taca Exp $
+$NetBSD: CHANGES-2019,v 1.1314 2019/03/16 14:11:44 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2138,3 +2138,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated shells/zsh to 5.7.1nb1 [wiz 2019-03-16]
 	Updated devel/p5-CPAN-Perl-Releases to 3.90 [wen 2019-03-16]
 	Moved sysutils/ruby-rb-inotify to devel/ruby-rb-inotify [taca 2019-03-16]
+	Updated devel/p5-CPAN to 2.25 [wen 2019-03-16]
