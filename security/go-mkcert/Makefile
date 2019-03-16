@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2019/03/09 10:05:11 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4 2019/03/16 08:35:41 bsiegert Exp $
 
 DISTNAME=		mkcert-${GITHUB_TAG}
 PKGNAME=		go-mkcert-${VERSION}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_GITHUB:=FiloSottile/}
 GITHUB_PROJECT=		mkcert
