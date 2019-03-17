@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2018/03/07 11:57:36 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2019/03/17 08:06:55 wiz Exp $
 
-DISTNAME=		libXext-1.3.3
-PKGREVISION=		1
+DISTNAME=		libXext-1.3.4
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
