@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2019/02/21 04:27:29 tsutsui Exp $
+# $NetBSD: Makefile,v 1.7 2019/03/17 01:14:52 tsutsui Exp $
 
 DISTNAME=	suse-${SUSE_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	emulators meta-pkgs
 MASTER_SITES=	# empty
 
@@ -10,6 +10,7 @@ COMMENT=	SUSE-based Linux binary emulation environment
 
 EMUL_MODULES.linux=	alsa
 EMUL_MODULES.linux+=	aspell
+EMUL_MODULES.linux+=	avahi
 EMUL_MODULES.linux+=	base
 EMUL_MODULES.linux+=	binutils
 EMUL_MODULES.linux+=	compat
