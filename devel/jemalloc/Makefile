@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2018/08/22 09:43:31 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/03/17 13:28:22 rin Exp $
 
 DISTNAME=	jemalloc-5.1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jemalloc/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -28,5 +28,7 @@ REPLACE_PERL=		bin/jeprof.in
 BUILD_TARGET=		all dist
 TEST_TARGET=		check
 TEST_ENV=		LD_LIBRARY_PATH=${WRKSRC}/lib
+
+.include "options.mk"
 
 .include "../../mk/bsd.pkg.mk"
