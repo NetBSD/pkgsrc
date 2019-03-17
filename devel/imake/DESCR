@@ -1,11 +1,14 @@
-The imake package contains the imake utility for generating Makefiles,
-plus the following support programs:
+The imake package contains the imake utility, plus a number of
+support programs, such as mkdirhier, revpath, and xmkmf.
 
-   - ccmakedep
-   - cleanlinks
-   - makeg
-   - mergelib
-   - mkdirhier
-   - mkhtmlindex
-   - revpath
-   - xmkmf
+The X Window System used imake extensively up through the X11R6.9
+release, for both full builds within the source tree and external
+software.  X moved to GNU autoconf and automake for its build system
+in 2005 for X11R7.0 and later releases, but still provides imake
+for building existing external software programs that have not yet
+converted, though they are not actively maintaining it for new OS
+or platform releases.
+
+Anyone shipping software still using imake to build should be
+working on moving to something that is still adding support for
+new platforms and runtimes.
