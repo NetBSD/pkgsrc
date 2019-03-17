@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/03/17 11:28:13 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2019/03/17 12:01:14 rillig Exp $
 #
 
 DISTNAME=	subst-19.03
@@ -18,7 +18,8 @@ SUBST_FILES.vars=	vars.after
 SUBST_VARS.vars=	PLAIN DQUOT SQUOT DELIM PRINTABLE
 SUBST_VARS.vars+=	UNDEFINED
 SUBST_VARS.vars+=	BETWEEN_SPACE BETWEEN_TAB BETWEEN_NL
-SUBST_VARS.vars+=	BACKSLASHES VAR...... VAR.abcde
+SUBST_VARS.vars+=	BACKSLASHES
+SUBST_VARS.vars+=	VAR...... VAR.abcde VAR.<>
 
 PLAIN=		hello_world
 DQUOT=		"hello   world"
@@ -31,14 +32,14 @@ PRINTABLE=	!"\#$$%&'()*+,-./09:;<=>?@AZ[\]^_`az{|}
 # Ensure that leading and trailing whitespace is preserved.
 BETWEEN_SPACE=	${:U }between spaces${:U }
 BETWEEN_TAB=	${:U	}between tabs${:U	}
-# TODO: currently fails; needs to be fixed in subst.mk
-#BETWEEN_NL=	${.newline}between newlines${.newline}
+BETWEEN_NL=	${.newline}between newlines${.newline}
 
 BACKSLASHES=	\" \, \\, \" \' \0\000 \x40 \089 \a \$$
 
 # Ensure that special regex characters may appear in variable names.
 VAR......=	dots
 VAR.abcde=	letters
+VAR.<>=		angle brackets
 
 do-extract:
 	${RUN} ${SED} -e /^\#/d -e /^$$/d ${FILESDIR}/expected \
