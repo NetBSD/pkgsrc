@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2019/02/15 02:02:33 gdt Exp $
+# $NetBSD: Makefile,v 1.47 2019/03/17 18:20:14 gdt Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-gpl/}
@@ -9,7 +9,7 @@ MASTER_SITES+=	https://ghostscript.com/releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ghostscript.sourceforge.net/
+HOMEPAGE=	https://ghostscript.com/
 COMMENT=	Postscript interpreter
 
 # Plus adobe verbatim for Resources/CMap.
@@ -26,15 +26,19 @@ CONFLICTS+=		ghostscript-esp-nox11-[0-9]*
 CONFLICTS+=		ghostscript-gnu-x11-[0-9]*
 CONFLICTS+=		ghostscript-gnu-nox11-[0-9]*
 
-USE_TOOLS+=		gmake perl:run lex pkg-config
 USE_LANGUAGES+=		c c++
+USE_TOOLS+=		gmake perl:run lex pkg-config
 GNU_CONFIGURE=		yes
 UNLIMIT_RESOURCES+=	datasize	# gsromfs1.c
 
 BUILD_TARGET=		so
 INSTALL_TARGET=		soinstall
+
 CONFIGURE_ARGS+=	--with-omni=no	# otherwise pulls in libstdc++
 CONFIGURE_ARGS+=	--with-system-libtiff
+CONFIGURE_ENV+=		LPLIBDIR=${PREFIX}/lib
+CONFIGURE_ENV+=		ZLIB_DIR=${BUILDLINK_PREFIX.zlib}/lib
+CONFIGURE_ENV.HPUX+=	ac_cv_func_fopen64=no
 
 REPLACE_PERL+=		toolbin/localcluster/clusterpush.pl
 REPLACE_PERL+=		toolbin/checkdeps.pl
@@ -55,7 +59,9 @@ CPPFLAGS+=		-Ijpeg
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
 
+# \todo Remove "a4" as that is not valid according to pkglint.
 .if defined(PAPERSIZE) && (${PAPERSIZE} == "A4" || ${PAPERSIZE} == "a4")
+BUILD_DEFS+=		PAPERSIZE
 CFLAGS+=		-DA4
 .endif
 
@@ -66,8 +72,6 @@ SUBST_STAGE.resdir=	post-extract
 SUBST_MESSAGE.resdir=	Fixing resource directory path
 SUBST_FILES.resdir=	Resource/Init/gs_res.ps
 SUBST_SED.resdir=	-e "s|/Resource/|${GS_RESOURCEDIR}/|g"
-
-CONFIGURE_ENV.HPUX+=	ac_cv_func_fopen64=no
 
 # On Linux-*-x86_64, there was an error message:
 # gp_unix.o: relocation R_X86_64_32 against `a local symbol' can not be
@@ -85,9 +89,6 @@ CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600 -D__EXTENSIONS__
 # require linking against libiconv when it should do so.
 BUILDLINK_TRANSFORM.IRIX+=	l:fontconfig:fontconfig:iconv
 
-CONFIGURE_ENV+=		LPLIBDIR=${PREFIX}/lib
-CONFIGURE_ENV+=		ZLIB_DIR=${BUILDLINK_PREFIX.zlib}/lib
-
 # On OpenBSD 5.3, libxcb is required libXt.
 LDFLAGS.OpenBSD+=	-lxcb
 
@@ -101,11 +102,11 @@ CONFIGURE_ENV+=		ac_cv_header_windows_h=no
 post-extract:
 	${MKDIR} ${WRKSRC}/bin
 	${MKDIR} ${WRKSRC}/obj
+	${RM} -rf ${WRKSRC}/freetype
 #	${RM} -rf ${WRKSRC}/jasper
 	${RM} -rf ${WRKSRC}/libpng
 	${RM} -rf ${WRKSRC}/tiff
 	${RM} -rf ${WRKSRC}/zlib
-	${RM} -rf ${WRKSRC}/freetype
 
 #  To allow outside customization, rename cidfmap
 #	 (if you look at inside of the file, it is logically empty)
@@ -116,11 +117,11 @@ post-extract:
 post-install:
 	${LN} -sf gsc ${DESTDIR}${PREFIX}/bin/gs
 
-.include "../../print/libpaper/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/tiff/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 # pkgsrc jasper is too new
 #.include "../../graphics/jasper/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../print/libpaper/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
