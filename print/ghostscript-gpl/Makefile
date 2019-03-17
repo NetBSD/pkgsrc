@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2019/03/17 18:20:14 gdt Exp $
+# $NetBSD: Makefile,v 1.48 2019/03/17 18:29:40 gdt Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-gpl/}
@@ -18,13 +18,6 @@ LICENSE=	gnu-gpl-v3
 .include	"Makefile.common"
 
 DEPENDS+=		ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
-
-CONFLICTS+=		ghostscript-afpl-[0-9]*
-# To avoid flag from pkglint
-CONFLICTS+=		ghostscript-esp-[0-9]*
-CONFLICTS+=		ghostscript-esp-nox11-[0-9]*
-CONFLICTS+=		ghostscript-gnu-x11-[0-9]*
-CONFLICTS+=		ghostscript-gnu-nox11-[0-9]*
 
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		gmake perl:run lex pkg-config
