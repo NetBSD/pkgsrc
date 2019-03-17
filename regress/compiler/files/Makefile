@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/03/08 14:31:06 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2019/03/17 12:20:09 rillig Exp $
 #
 
 all: \
@@ -9,10 +9,8 @@ all: \
 test-preprocessor:
 	# Test whether CPP is a C preprocessor.
 	${CPP} language.c | grep Cplain
-.if defined(CXXCPP)
 	# Test whether CXXCPP is a C++ preprocessor.
-	${CXXCPP} language.cc | grep Cplus
-.endif
+	${CXXCPP:U${CXX} -E} language.cc | grep Cplus
 
 test-wrapper:
 	# Test whether white-space is preserved in macro definitions.
