@@ -1,3 +1,5 @@
-Network API translation layer to insulate X applications and
-libraries from OS network vageries. This is from the modular
-X.org X11 project.
+xtrans is a library of code that is shared (but is *not* a shared
+library) among various X packages to handle network protocol
+transport in a modular fashion, allowing a single place to add new
+transport types.  It is used by the X server, libX11, libICE, the
+X font server, and related components.
