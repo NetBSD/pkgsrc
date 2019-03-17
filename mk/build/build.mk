@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.24 2018/11/30 18:38:19 rillig Exp $
+# $NetBSD: build.mk,v 1.25 2019/03/17 03:59:11 dholland Exp $
 #
 # This file defines what happens in the build phase, excluding the
 # self-test, which is defined in test.mk.
@@ -55,6 +55,8 @@ BUILD_MAKE_CMD= \
 
 .if defined(MAKE_JOBS_SAFE) && !empty(MAKE_JOBS_SAFE:M[nN][oO])
 _MAKE_JOBS=	# nothing
+.elif defined(MAKE_JOBS.${PKGPATH})
+_MAKE_JOBS=	-j${MAKE_JOBS.${PKGPATH}}
 .elif defined(MAKE_JOBS)
 _MAKE_JOBS=	-j${MAKE_JOBS}
 .endif
