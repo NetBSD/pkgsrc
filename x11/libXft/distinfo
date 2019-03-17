@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2015/11/04 03:28:45 agc Exp $
+$NetBSD: distinfo,v 1.12 2019/03/17 08:09:42 wiz Exp $
 
-SHA1 (libXft-2.3.2.tar.bz2) = e025d790a7b6c4d283a78d8df06615cb10278e2d
-RMD160 (libXft-2.3.2.tar.bz2) = 538536c5b10e2ae7696a2183a25bc3b59b5442b3
-SHA512 (libXft-2.3.2.tar.bz2) = eb2e0c46b4434198690a3ca2b613df14ad599c860b47d10a1e8efe3b4e812a78460f9f414eaf89db21d605613a4e18324dcb8a22928609c6bc15178330a05398
-Size (libXft-2.3.2.tar.bz2) = 335495 bytes
+SHA1 (libXft-2.3.3.tar.bz2) = 48f543fe495f545df1794fa36a0a708558ae298c
+RMD160 (libXft-2.3.3.tar.bz2) = af10a7ef7752a81431ff2f408952f1df87f14df4
+SHA512 (libXft-2.3.3.tar.bz2) = 28fdaf3baa3b156a4a7fdd6e39c4d8026d7d21eaa9be27c9797c8d329dab691a1bc82ea6042f9d4729a9343d93787536fb7e4b606f722f33cbe608b2e79910e8
+Size (libXft-2.3.3.tar.bz2) = 353465 bytes
