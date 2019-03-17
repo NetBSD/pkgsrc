@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/04/09 00:47:12 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2019/03/17 10:19:36 rillig Exp $
 #
 
 DISTNAME=	subst-1.0
@@ -16,7 +16,7 @@ SUBST_STAGE.vars=	do-build
 SUBST_FILES.vars=	vars
 SUBST_VARS.vars=	PLAIN DQUOT SQUOT DELIM EVIL1
 
-.include "${.PARSEDIR}/vars.mk"
+.include "vars.mk"
 
 pre-build:
 	for v in ${SUBST_VARS.vars}; do echo "$$v=@$$v@"; done > ${WRKSRC}/vars
@@ -25,6 +25,6 @@ do-build:
 	@${DO_NADA}
 
 post-build:
-	diff vars.mk ${WRKSRC}/vars
+	diff -u vars.mk ${WRKSRC}/vars
 
 .include "../../mk/bsd.pkg.mk"
