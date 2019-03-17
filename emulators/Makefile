@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.293 2019/02/13 05:22:22 kamil Exp $
+# $NetBSD: Makefile,v 1.294 2019/03/17 01:12:21 tsutsui Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -324,6 +324,7 @@ SUBDIR+=	suse131_32_slang
 SUBDIR+=	suse131_32_sqlite3
 SUBDIR+=	suse131_32_x11
 SUBDIR+=	suse131_alsa
+SUBDIR+=	suse131_avahi
 SUBDIR+=	suse131_aspell
 SUBDIR+=	suse131_base
 SUBDIR+=	suse131_binutils
