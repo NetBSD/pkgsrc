@@ -1,4 +1,4 @@
-# $NetBSD: linux.mk,v 1.31 2019/02/21 04:12:25 tsutsui Exp $
+# $NetBSD: linux.mk,v 1.32 2019/03/17 01:13:21 tsutsui Exp $
 #
 # Linux binary emulation framework
 #
@@ -63,6 +63,7 @@ _EMUL_TYPE?=		${EMUL_TYPE.linux}
 
 _EMUL_MODULES=		alsa
 _EMUL_MODULES+=		aspell
+_EMUL_MODULES+=		avahi
 _EMUL_MODULES+=		base
 _EMUL_MODULES+=		binutils
 _EMUL_MODULES+=		compat
