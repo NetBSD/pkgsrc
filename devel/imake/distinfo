@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.15 2016/09/17 17:49:36 richard Exp $
+$NetBSD: distinfo,v 1.16 2019/03/17 11:15:21 wiz Exp $
 
-SHA1 (imake-1.0.7.tar.bz2) = 52e236776133f217d438622034b8603d201a6ec5
-RMD160 (imake-1.0.7.tar.bz2) = 7a8d7b830463c1c429a8ad8349324e607ea255fb
-SHA512 (imake-1.0.7.tar.bz2) = b3527c8fead25c6e093e1fe4a39e60ff210212dcd323e206505b9e872a3f36d9db85f85cab5a6f0fa914fa5c558ef54b499b2b13ccd66739223e4e72ef805d08
-Size (imake-1.0.7.tar.bz2) = 156543 bytes
+SHA1 (imake-1.0.8.tar.bz2) = 2f70696d64119416c26d88d50d74b29185f27663
+RMD160 (imake-1.0.8.tar.bz2) = e7208565e48a23ec85deb2154cb58b067f692fdf
+SHA512 (imake-1.0.8.tar.bz2) = 5352b0148664506c8eb7ba80f95fced146d150398673547ba0b2c7c966a382bc21de43dfb8e0d74e38a0a563f16ddbec48bf8c8e6daa1a0899a95403579d7728
+Size (imake-1.0.8.tar.bz2) = 159398 bytes
 SHA1 (patch-imake.c) = b5a2b60288de82aab7db0ef6ab218c42490bc10f
-SHA1 (patch-imakemdep.h) = c41c80360c5ea91a19d1b5e6c32dfebd5ec66ff6
+SHA1 (patch-imakemdep.h) = 12b05670954812197d18008c0209112e77d79826
