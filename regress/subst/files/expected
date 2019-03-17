@@ -1,0 +1,23 @@
+# $NetBSD: expected,v 1.1 2019/03/17 11:28:13 rillig Exp $
+#
+# The expected output from the SUBST_VARS test.
+# Each substituted value is enclosed in <angle brackets> to clearly
+# show where it begins and ends.
+
+PLAIN: <hello_world>
+DQUOT: <"hello   world">
+SQUOT: <'hello     world'>
+DELIM: <hello,  world>
+PRINTABLE: <!"#$%&'()*+,-./09:;<=>?@AZ[\]^_`az{|}>
+
+UNDEFINED: <>
+
+BETWEEN_SPACE: < between spaces >
+BETWEEN_TAB: <	between tabs	>
+BETWEEN_NL: <>
+
+BACKSLASHES: <\" \, \\, \" \' \0\000 \x40 \089 \a \$>
+
+VAR......: <dots>
+# FIXME: must be <letters> instead of <dots>
+VAR.abcde: <dots>
