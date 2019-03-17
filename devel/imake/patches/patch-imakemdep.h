@@ -1,4 +1,4 @@
-$NetBSD: patch-imakemdep.h,v 1.6 2016/09/17 17:49:36 richard Exp $
+$NetBSD: patch-imakemdep.h,v 1.7 2019/03/17 11:15:21 wiz Exp $
 
  - Configure for pkgsrc: never set FIXUP_CPP_WHITESPACE as pkgsrc now
 always uses a whitespace-preserving cpp and fixing it twice causes
@@ -14,13 +14,13 @@ reasonable thing to do.
 
  - Add support for __aarch64__
 
---- imakemdep.h.orig	2013-08-17 10:11:06.000000000 +0000
+--- imakemdep.h.orig	2019-03-16 23:26:24.000000000 +0000
 +++ imakemdep.h
 @@ -229,7 +229,7 @@ in this Software without prior written a
   *     all colons).  One way to tell if you need this is to see whether or not
   *     your Makefiles have no tabs in them and lots of @@ strings.
   */
--#  if defined(sun) || defined(SYSV) || defined(SVR4) || defined(hcx) || defined(WIN32) || defined(__SCO__) || (defined(AMOEBA) && defined(CROSS_COMPILE)) || defined(__QNX__) || defined(__sgi) || defined(__UNIXWARE__)
+-#  if defined(sun) || defined(SYSV) || defined(SVR4) || defined(hcx) || defined(WIN32) || defined(__SCO__) || (defined(AMOEBA) && defined(CROSS_COMPILE)) || defined(__QNX__) || defined(__sgi) || defined(__UNIXWARE__) || defined(__LCC__)
 +#  if 0
  #   define FIXUP_CPP_WHITESPACE
  #  endif
