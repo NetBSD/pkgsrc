@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1342 2019/03/17 14:02:33 wen Exp $
+$NetBSD: CHANGES-2019,v 1.1343 2019/03/17 14:09:56 rin Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2169,5 +2169,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/imake to 1.0.8 [wiz 2019-03-17]
 	Updated devel/makedepend to 1.0.6 [wiz 2019-03-17]
 	Added databases/prometheus version 2.8.0 [tm 2019-03-17]
+	Updated devel/jemalloc to 5.1.0nb2 [rin 2019-03-17]
 	Updated devel/p5-Test2-Suite to 0.000119 [wen 2019-03-17]
 	Updated devel/p5-Log-Dispatchouli to 2.017 [wen 2019-03-17]
