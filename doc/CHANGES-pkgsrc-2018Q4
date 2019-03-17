@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q4,v 1.1.2.9 2019/03/06 15:08:14 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q4,v 1.1.2.10 2019/03/17 15:46:03 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q4 branch:
 
@@ -109,4 +109,7 @@ www/webkit-gtk: security fix (remote code execution)
 
 Pullup ticket #5922 - requested by schmonz
 www/ikiwiki: security fix
+
+Pullup ticket #5924 - requested by bouyer
+sysutils/syslog-ng: NetBSD bugfix
 
