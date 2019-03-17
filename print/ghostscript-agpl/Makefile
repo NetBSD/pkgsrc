@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2019/03/17 16:03:56 gdt Exp $
+# $NetBSD: Makefile,v 1.37 2019/03/17 16:38:49 leot Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-agpl/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ArtifexSoftware/}
 GITHUB_PROJECT=	ghostpdl-downloads
@@ -22,6 +22,7 @@ DEPENDS+=		ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl:run lex pkg-config
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-openjpeg
 CONFIGURE_ARGS+=	--with-system-libtiff
 CONFIGURE_ENV+=		LPLIBDIR=${PREFIX}/lib
 CONFIGURE_ENV.HPUX+=	ac_cv_func_fopen64=no
@@ -87,6 +88,7 @@ post-extract:
 	${RM} -rf ${WRKSRC}/jpeg
 	${RM} -rf ${WRKSRC}/lcms2
 	${RM} -rf ${WRKSRC}/libpng
+	${RM} -rf ${WRKSRC}/openjpeg
 	${RM} -rf ${WRKSRC}/tiff
 	${RM} -rf ${WRKSRC}/zlib
 
@@ -104,8 +106,7 @@ post-install:
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/jbig2dec/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
-# \todo Explain why this is present and commented out.
-#.include "../../graphics/openjpeg15/buildlink3.mk"
+.include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../print/libpaper/buildlink3.mk"
