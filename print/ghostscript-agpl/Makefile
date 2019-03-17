@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/03/17 16:38:49 leot Exp $
+# $NetBSD: Makefile,v 1.38 2019/03/17 18:27:01 gdt Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-agpl/}
@@ -12,24 +12,26 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ghostscript.com/
 COMMENT=	Postscript interpreter
+
 # Plus adobe verbatim for Resources/CMap.
 LICENSE=	gnu-agpl-v3
 
+.include	"Makefile.common"
+
 DEPENDS+=		ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
 
-.include "Makefile.common"
-
-USE_LANGUAGES=		c c++
+USE_LANGUAGES+=		c c++
 USE_TOOLS+=		gmake perl:run lex pkg-config
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-openjpeg
-CONFIGURE_ARGS+=	--with-system-libtiff
-CONFIGURE_ENV+=		LPLIBDIR=${PREFIX}/lib
-CONFIGURE_ENV.HPUX+=	ac_cv_func_fopen64=no
 UNLIMIT_RESOURCES+=	datasize	# gsromfs1.c
 
 BUILD_TARGET=		so
 INSTALL_TARGET=		soinstall
+
+CONFIGURE_ARGS+=	--enable-openjpeg
+CONFIGURE_ARGS+=	--with-system-libtiff
+CONFIGURE_ENV+=		LPLIBDIR=${PREFIX}/lib
+CONFIGURE_ENV.HPUX+=	ac_cv_func_fopen64=no
 
 REPLACE_PERL+=		toolbin/localcluster/clusterpush.pl
 REPLACE_PERL+=		toolbin/checkdeps.pl
