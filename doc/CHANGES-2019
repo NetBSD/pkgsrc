@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1333 2019/03/17 08:18:54 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1334 2019/03/17 08:22:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2162,3 +2162,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/libxkbfile to 1.1.0 [wiz 2019-03-17]
 	Updated x11/libXmu to 1.1.3 [wiz 2019-03-17]
 	Updated x11/libXrandr to 1.5.2 [wiz 2019-03-17]
+	Updated x11/xtrans to 1.4.0 [wiz 2019-03-17]
