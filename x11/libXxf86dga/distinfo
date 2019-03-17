@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/11/04 03:28:47 agc Exp $
+$NetBSD: distinfo,v 1.9 2019/03/17 08:39:29 wiz Exp $
 
-SHA1 (libXxf86dga-1.1.4.tar.bz2) = 51f2fc8d5d5fb398cf3c66735789feadb9aaeba9
-RMD160 (libXxf86dga-1.1.4.tar.bz2) = e34a3a3c1e15d2de2eb8e698fc5c244718b08700
-SHA512 (libXxf86dga-1.1.4.tar.bz2) = 58d81a7850275fc8382018bcc56dbc65b4200828b1f1379dcee3da1878f12a83ee681a9d474bcd564d99bf93bedfeb7b243370e0ebb89177652b37cee158a3f2
-Size (libXxf86dga-1.1.4.tar.bz2) = 280216 bytes
+SHA1 (libXxf86dga-1.1.5.tar.bz2) = 332ba80d1b3d06473f7bbfe1612e7c5b58fbdf69
+RMD160 (libXxf86dga-1.1.5.tar.bz2) = d094de57dd5a4994bf6f86553d479c9d3075d722
+SHA512 (libXxf86dga-1.1.5.tar.bz2) = 0e77c4003aeba737b10c17d55aeefa935fc57c4ba9e8f79a834f3f8c690d6a1d98f69ad707eded784346c1cf40c41829719d257283b5eae3207147fb4c79ed89
+Size (libXxf86dga-1.1.5.tar.bz2) = 301685 bytes
