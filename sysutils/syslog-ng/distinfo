@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2018/08/15 13:08:21 fhajny Exp $
+$NetBSD: distinfo,v 1.15.4.1 2019/03/17 15:45:44 bsiegert Exp $
 
 SHA1 (syslog-ng-3.17.2.tar.gz) = 75d7881d2cf258017c3b98fd37ceb3322c1855ad
 RMD160 (syslog-ng-3.17.2.tar.gz) = 6464dd3fd20662e69e3056d090bcce470be90e93
@@ -6,4 +6,5 @@ SHA512 (syslog-ng-3.17.2.tar.gz) = 2b82ea047bab125d35ab0a90e933b8a282852c6b4a9a8
 Size (syslog-ng-3.17.2.tar.gz) = 9119227 bytes
 SHA1 (patch-ac) = 7d48f689b6ff69c68697baf729fba8be9aec5ce8
 SHA1 (patch-configure) = 2d8ef2285de44de016f44e51be47cd4c1178dfdb
+SHA1 (patch-lib_signal-handler.c) = dd59ad8dba34139da6233aa65ded757f3268ac5c
 SHA1 (patch-modules_system-source_system-source.c) = 14c2bb4b6681766da1330b43965da9547cf73b12
