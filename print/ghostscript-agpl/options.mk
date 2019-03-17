@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2013/12/27 16:42:46 gdt Exp $
+# $NetBSD: options.mk,v 1.4 2019/03/17 15:54:16 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ghostscript
-PKG_SUPPORTED_OPTIONS=	x11 debug fontconfig disable-compile-inits
+PKG_SUPPORTED_OPTIONS=	x11 cups debug fontconfig disable-compile-inits
 PKG_SUGGESTED_OPTIONS=	x11 fontconfig
 
 .include "../../mk/bsd.options.mk"
@@ -17,6 +17,22 @@ CONFIGURE_ARGS+=	--with-x
 .include "../../x11/libXext/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-x
+.endif
+
+.if !empty(PKG_OPTIONS:Mcups)
+CONFIGURE_ARGS+=	--enable-cups
+
+# Because nothing is installed, this is not necessary.  It remains in
+# case a later version does install something.
+SUBST_CLASSES+=		cupsetc
+SUBST_STAGE.cupsetc=	post-extract
+SUBST_MESSAGE.cupsetc=	Fixing CUPS etc directory path to install as example
+SUBST_FILES.cupsetc=	cups/cups.mak
+SUBST_SED.cupsetc=	-e 's|$$(CUPSSERVERROOT)|${CUPS_EGDIR}|g'
+
+.include "../../print/cups-base/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-cups
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
