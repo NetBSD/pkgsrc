@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.58 2018/11/30 18:38:19 rillig Exp $
+# $NetBSD: subst.mk,v 1.59 2019/03/17 12:01:14 rillig Exp $
 #
 # This Makefile fragment implements a general text replacement facility.
 # Package makefiles define a ``class'', for each of which a particular
@@ -84,7 +84,7 @@ SUBST_FILTER_CMD.${_class_}?=	${SED} ${SUBST_SED.${_class_}}
 SUBST_VARS.${_class_}?=		# none
 SUBST_MESSAGE.${_class_}?=	Substituting "${_class_}" in ${SUBST_FILES.${_class_}}
 .  for v in ${SUBST_VARS.${_class_}}
-SUBST_FILTER_CMD.${_class_}+=	-e s,@${v}@,${${v}:S|\\|\\\\|gW:S|,|\\,|gW:S|&|\\\&|gW:Q},g
+SUBST_FILTER_CMD.${_class_}+=	-e s,@${v:C|[^A-Za-z0-9_]|\\\\&|gW:Q}@,${${v}:S|\\|\\\\|gW:S|,|\\,|gW:S|&|\\\&|gW:S|${.newline}|\\${.newline}|gW:Q},g
 .  endfor
 .  if !empty(SUBST_SHOW_DIFF.${_class_}:Uno:M[Yy][Ee][Ss])
 _SUBST_KEEP.${_class_}?=	${DIFF} -u "$$file" "$$tmpfile" || true
