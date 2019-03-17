@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1335 2019/03/17 08:36:21 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1336 2019/03/17 08:39:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2164,3 +2164,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/libXrandr to 1.5.2 [wiz 2019-03-17]
 	Updated x11/xtrans to 1.4.0 [wiz 2019-03-17]
 	Updated x11/libXvMC to 1.0.11 [wiz 2019-03-17]
+	Updated x11/libXxf86dga to 1.1.5 [wiz 2019-03-17]
