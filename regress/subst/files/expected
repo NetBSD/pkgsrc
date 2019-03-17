@@ -1,4 +1,4 @@
-# $NetBSD: expected,v 1.1 2019/03/17 11:28:13 rillig Exp $
+# $NetBSD: expected,v 1.2 2019/03/17 12:01:14 rillig Exp $
 #
 # The expected output from the SUBST_VARS test.
 # Each substituted value is enclosed in <angle brackets> to clearly
@@ -14,10 +14,12 @@ UNDEFINED: <>
 
 BETWEEN_SPACE: < between spaces >
 BETWEEN_TAB: <	between tabs	>
-BETWEEN_NL: <>
+BETWEEN_NL: <
+between newlines
+>
 
 BACKSLASHES: <\" \, \\, \" \' \0\000 \x40 \089 \a \$>
 
 VAR......: <dots>
-# FIXME: must be <letters> instead of <dots>
-VAR.abcde: <dots>
+VAR.abcde: <letters>
+VAR.<>: <angle brackets>
