@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2019/02/25 15:20:44 leot Exp $
+@comment $NetBSD: PLIST,v 1.15 2019/03/17 15:05:49 leot Exp $
 bin/swipl
 bin/swipl-ld
 lib/swipl/LICENSE
@@ -355,7 +355,6 @@ lib/swipl/doc/packages/examples/ssl/https.pl
 lib/swipl/doc/packages/examples/ssl/server.pl
 lib/swipl/doc/packages/http.html
 lib/swipl/doc/packages/index.html
-lib/swipl/doc/packages/libedit.html
 lib/swipl/doc/packages/nlp.html
 lib/swipl/doc/packages/paxos.html
 lib/swipl/doc/packages/penarch.png

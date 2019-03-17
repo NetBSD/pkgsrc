@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2019/02/25 15:20:44 leot Exp $
+# $NetBSD: Makefile,v 1.30 2019/03/17 15:05:49 leot Exp $
 
 .include "Makefile.common"
 
 PKGNAME=		swi-prolog-lite-${SWIPLVERS}
+PKGREVISION=		1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		ISO/Edinburgh-style Prolog compiler
@@ -39,6 +40,7 @@ REPLACE_FILES.swipl+=	library/dialect/sicstus/swipl-lfr.pl
 # XXX: editline bindings seems limited and does not support completion, remove
 # XXX: them in order to always use readline.pl.
 post-install:
+	${RM} ${DESTDIR}${PREFIX}/lib/swipl/doc/packages/libedit.html || ${TRUE}
 	${RM} ${DESTDIR}${PREFIX}/lib/swipl/lib/${MACHINE_GNU_PLATFORM}/libedit4pl.so || ${TRUE}
 	${RM} ${DESTDIR}${PREFIX}/lib/swipl/library/editline.pl || ${TRUE}
 
