@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2019/03/17 21:33:03 leot Exp $
+# $NetBSD: Makefile,v 1.14 2019/03/18 10:53:40 leot Exp $
 
 DISTNAME=	fdm-2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nicm/}
 
@@ -16,9 +16,6 @@ USE_TOOLS+=	aclocal autoconf automake yacc pax
 INSTALLATION_DIRS+=	${EGDIR} ${DOCDIR}
 EGDIR=			${PREFIX}/share/examples/fdm
 DOCDIR=			${PREFIX}/share/doc/fdm
-
-# Avoid mremap(2) due flags not available on NetBSD
-CONFIGURE_ENV.NetBSD+=	ac_cv_func_mremap=no	
 
 CFLAGS.NetBSD+=		-D_OPENBSD_SOURCE	# needed for strtonum(3)
 
