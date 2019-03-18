@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2018/11/14 22:21:59 kleink Exp $
+# $NetBSD: Makefile,v 1.25 2019/03/18 16:17:49 gdt Exp $
 #
 
-PKGREVISION=		17
+PKGREVISION=		18
 CATEGORIES=		math
 
 MAINTAINER=		mchittur@cs.nmsu.edu
