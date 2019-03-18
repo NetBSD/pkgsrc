@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.25 2019/03/15 15:03:02 he Exp $
+$NetBSD: distinfo,v 1.26 2019/03/18 12:36:42 he Exp $
 
 SHA1 (beats-6.6.2.tar.gz) = ca8b05fa23d383e90b5d8357224491b8d3f38c10
 RMD160 (beats-6.6.2.tar.gz) = cdb95337644c09a40a2eb556b76e9cff6e93bde7
 SHA512 (beats-6.6.2.tar.gz) = 1bc16fdd4525a197e4deeedb29fbc77ec44418c5eb371be95fa09555c1344a2e423aab83207c8313ac6cd33ce7fe91fe7ca06837302917465b5e1803dbf7f66d
 Size (beats-6.6.2.tar.gz) = 29119533 bytes
-SHA1 (patch-vendor_github.com_insomniacslk_dhcp_dhcpv4_client.go) = bad4afc5985be96705cc12defb26349646b92a6a
+SHA1 (patch-vendor_github.com_insomniacslk_dhcp_dhcpv4_client.go) = 4588ee4feba431bdc1c8250d58fa9ac66f733bb3
 SHA1 (patch-vendor_github.com_tsg_gopacket_pcap_pcap.go) = 2ef13f84cbf2e1da428e7b08625ffa6111ebcdf5
-SHA1 (patch-vendor_golang.org_x_crypto_blake2b_blake2bAVX2__amd64.go) = 0c4a21e7d73c4e4a91965af6d87e70ed164a6d32
-SHA1 (patch-vendor_golang.org_x_crypto_blake2b_blake2bAVX2__amd64.s) = e9cbc76f1ac5f27666a54b4541bab8f15665fc7d
+SHA1 (patch-vendor_golang.org_x_crypto_blake2b_blake2bAVX2__amd64.go) = 2ee9c516c6f0da5789b97b498f5db7c7eae106cd
+SHA1 (patch-vendor_golang.org_x_crypto_blake2b_blake2bAVX2__amd64.s) = b6aabeda2abad29d9f5d4032f57ea66eb4231688
