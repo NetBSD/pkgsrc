@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1347 2019/03/18 12:39:37 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1348 2019/03/18 13:02:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2179,3 +2179,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/youtube-dl to 20190318 [leot 2019-03-18]
 	Updated www/py-django-cors-headers to 2.5.2 [adam 2019-03-18]
 	Updated www/py-django-countries to 5.3.3 [adam 2019-03-18]
+	Updated sysutils/py-psutil to 5.6.1 [adam 2019-03-18]
+	Updated net/py-responses to 0.10.6 [adam 2019-03-18]
