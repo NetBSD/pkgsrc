@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1346 2019/03/18 11:30:50 leot Exp $
+$NetBSD: CHANGES-2019,v 1.1347 2019/03/18 12:39:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2177,3 +2177,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/cmake to 3.14.0 [adam 2019-03-18]
 	Updated devel/yarn to 1.15.2 [adam 2019-03-18]
 	Updated net/youtube-dl to 20190318 [leot 2019-03-18]
+	Updated www/py-django-cors-headers to 2.5.2 [adam 2019-03-18]
+	Updated www/py-django-countries to 5.3.3 [adam 2019-03-18]
