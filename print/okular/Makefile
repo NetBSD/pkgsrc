@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.80 2018/12/13 19:52:19 adam Exp $
+# $NetBSD: Makefile,v 1.81 2019/03/18 16:17:51 gdt Exp $
 
 DISTNAME=	okular-16.08.0
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	print
 COMMENT=	KDE universal document viewer
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/16.08.0/src/}
