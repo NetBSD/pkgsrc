@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1349 2019/03/18 20:19:36 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.1350 2019/03/18 21:47:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2182,3 +2182,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/py-psutil to 5.6.1 [adam 2019-03-18]
 	Updated net/py-responses to 0.10.6 [adam 2019-03-18]
 	Updated net/djbdnscurve6 to 34 [schmonz 2019-03-18]
+	Updated games/wesnoth to 1.14.6 [adam 2019-03-18]
