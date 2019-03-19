@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1387 2019/03/19 23:44:25 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1388 2019/03/19 23:46:04 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2223,3 +2223,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/firefox-l10n to 66.0 [ryoon 2019-03-19]
 	Updated sysutils/nnn to 2.4 [leot 2019-03-19]
 	Updated devel/py-pygit2 to 0.28.0 [wiz 2019-03-19]
+	Updated net/filezilla to 3.41.2 [gutteridge 2019-03-19]
