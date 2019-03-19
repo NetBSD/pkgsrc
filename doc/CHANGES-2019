@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1385 2019/03/19 16:27:34 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.1386 2019/03/19 22:43:54 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2221,3 +2221,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/ocaml-git version 2.0.0 [jaapb 2019-03-19]
 	Updated www/firefox to 66.0 [ryoon 2019-03-19]
 	Updated www/firefox-l10n to 66.0 [ryoon 2019-03-19]
+	Updated sysutils/nnn to 2.4 [leot 2019-03-19]
