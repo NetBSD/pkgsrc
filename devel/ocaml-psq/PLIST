@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2019/03/19 14:19:47 jaapb Exp $
+${OCAML_SITELIB}/psq/META
+${OCAML_SITELIB}/psq/opam
+${PLIST.ocaml-opt}${OCAML_SITELIB}/psq/psq.a
+${OCAML_SITELIB}/psq/psq.cma
+${OCAML_SITELIB}/psq/psq.cmi
+${OCAML_SITELIB}/psq/psq.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/psq/psq.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/psq/psq.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/psq/psq.cmxs
+${OCAML_SITELIB}/psq/psq.mli
+share/doc/psq/CHANGES.md
+share/doc/psq/LICENSE.md
+share/doc/psq/README.md
