@@ -1,0 +1,2 @@
+This is an OCaml implementation of the RFC3986 specification for parsing
+URI or URLs.
