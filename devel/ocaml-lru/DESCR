@@ -1,0 +1,2 @@
+ocaml-lru provides LRU caches for OCaml. These are size-bounded finite maps that
+remove the least-recently-used (LRU) bindings to maintain their size constraint.
