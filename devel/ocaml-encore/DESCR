@@ -1,0 +1,2 @@
+Encore is a little library to provide an interface to generate an Angstrom's
+decoder and a internal encoder from a shared description.

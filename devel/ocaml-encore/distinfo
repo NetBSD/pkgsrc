@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/03/19 11:38:06 jaapb Exp $
+
+SHA1 (encore-0.2.tar.gz) = be1fbb2ed32890e0de67f7368a610eb890f53e3d
+RMD160 (encore-0.2.tar.gz) = 2d4fa48c2d22831ac57923873e18be7696bce9a0
+SHA512 (encore-0.2.tar.gz) = 8549ca999284f73a720103f8b2f68cdb95c917f9e751e207ca6457c9d3843e44e073f609f51759b43c577a8f0d4b75de14cb42225f28fa7fdb5ccf5e73b3b586
+Size (encore-0.2.tar.gz) = 16911 bytes
