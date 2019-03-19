@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2019/02/15 09:44:40 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2019/03/19 09:50:28 wiz Exp $
 
 DISTNAME=	# empty
-PKGNAME=	modular-xorg-apps-1.14.1.8
+PKGNAME=	modular-xorg-apps-1.14.1.9
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 DISTFILES=	# empty
@@ -32,8 +32,6 @@ DEPENDS+=	mkcomposecache-[0-9]*:../../x11/mkcomposecache
 DEPENDS+=	modular-xorg-xephyr-[0-9]*:../../x11/modular-xorg-xephyr
 .endif
 DEPENDS+=	oclock-[0-9]*:../../time/oclock
-DEPENDS+=	lbxproxy-[0-9]*:../../x11/lbxproxy
-DEPENDS+=	proxymngr-[0-9]*:../../x11/proxymngr
 DEPENDS+=	rstart-[0-9]*:../../x11/rstart
 DEPENDS+=	setxkbmap-[0-9]*:../../x11/setxkbmap
 DEPENDS+=	transset-[0-9]*:../../x11/transset
