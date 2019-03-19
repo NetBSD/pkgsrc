@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2019/03/19 11:19:17 jaapb Exp $
+${OCAML_SITELIB}/fpath/META
+${PLIST.ocaml-opt}${OCAML_SITELIB}/fpath/fpath.a
+${OCAML_SITELIB}/fpath/fpath.cma
+${OCAML_SITELIB}/fpath/fpath.cmi
+${OCAML_SITELIB}/fpath/fpath.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/fpath/fpath.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/fpath/fpath.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/fpath/fpath.cmxs
+${OCAML_SITELIB}/fpath/fpath.mli
+${PLIST.ocaml-opt}${OCAML_SITELIB}/fpath/fpath_top.a
+${OCAML_SITELIB}/fpath/fpath_top.cma
+${PLIST.ocaml-opt}${OCAML_SITELIB}/fpath/fpath_top.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/fpath/fpath_top.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/fpath/fpath_top.cmxs
+${OCAML_SITELIB}/fpath/fpath_top_init.ml
+${OCAML_SITELIB}/fpath/opam
+share/doc/fpath/CHANGES.md
+share/doc/fpath/LICENSE.md
+share/doc/fpath/README.md
