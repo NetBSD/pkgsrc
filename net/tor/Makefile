@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.137 2019/02/22 08:47:51 adam Exp $
+# $NetBSD: Makefile,v 1.138 2019/03/19 15:44:19 wiz Exp $
 
 DISTNAME=	tor-0.3.5.8
+PKGREVISION=	1
 CATEGORIES=	net security
 MASTER_SITES=	https://dist.torproject.org/
 
@@ -11,7 +12,7 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=		c99
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		perl:test
+USE_TOOLS+=		perl:test pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
@@ -58,6 +59,7 @@ CHECK_PORTABILITY_SKIP+=contrib/*
 CFLAGS+=		-c99
 .endif
 
+.include "../../archivers/zstd/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libevent+= libevent>=2.0
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
