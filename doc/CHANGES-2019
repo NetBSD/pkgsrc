@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1350 2019/03/18 21:47:02 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1351 2019/03/19 03:54:11 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2183,3 +2183,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/py-responses to 0.10.6 [adam 2019-03-18]
 	Updated net/djbdnscurve6 to 34 [schmonz 2019-03-18]
 	Updated games/wesnoth to 1.14.6 [adam 2019-03-18]
+	Updated textproc/py-libxslt to 1.1.33nb1 [dholland 2019-03-19]
