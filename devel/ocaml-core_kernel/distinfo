@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.1 2019/03/19 10:07:47 jaapb Exp $
+
+SHA1 (core_kernel-0.12.0.tar.gz) = 0a59c7bbeebc989cdf27a008dedc4c36e3bc8e20
+RMD160 (core_kernel-0.12.0.tar.gz) = 6df1da75542c54ed23e8ad395789cb6a856b80ab
+SHA512 (core_kernel-0.12.0.tar.gz) = 5ebc2920fa414ab18d3809293795269d8aab3014ed3c352459fae417f483d0da7f1b6f345c352de9fb32e4b73463675b0deddeaa75eea4e5f031ead7531f3475
+Size (core_kernel-0.12.0.tar.gz) = 610557 bytes
+SHA1 (patch-balanced__reducer_src_dune) = 5065641884813a984f85f67594fbf60ea5faeeaa
+SHA1 (patch-binary__packing_src_dune) = 2b7fb6be2bac5ba28043cb338c970b8fa1983084
+SHA1 (patch-int__set_src_dune) = a96d6689a50ff2aef5079264287b6f58ab88da78
+SHA1 (patch-moption_src_dune) = 3c860d1cf58417121a71e029dcab44a396b2c713
+SHA1 (patch-src_dune) = 74e8df33879d6820ae9c88757fd9f7afa122c056
+SHA1 (patch-thread__pool__cpu__affinity_src_dune) = f914f6b933ef512e35c25777e73da239084986ca
+SHA1 (patch-thread__safe__queue_src_dune) = 69faa705502a7e21695e33acbfebf498d84f1e15
+SHA1 (patch-unpack__buffer_src_dune) = 5c0f6a76952c8c7f6b995a635212f446b55d5931
+SHA1 (patch-uopt_src_dune) = 51752b2d0fecdd6d19b253187066cc17e91fde29
