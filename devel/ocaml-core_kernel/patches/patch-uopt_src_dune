@@ -1,0 +1,10 @@
+$NetBSD: patch-uopt_src_dune,v 1.1 2019/03/19 10:07:47 jaapb Exp $
+
+Remove unknown argument
+--- uopt/src/dune.orig	2019-02-19 14:45:16.000000000 +0000
++++ uopt/src/dune
+@@ -1,2 +1,2 @@
+ (library (name uopt) (public_name core_kernel.uopt) (libraries core_kernel)
+- (preprocess (pps ppx_jane -check-doc-comments)))
+\ No newline at end of file
++ (preprocess (pps ppx_jane)))
