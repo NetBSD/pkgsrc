@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2018/11/10 19:49:47 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2019/03/19 14:19:45 wiz Exp $
 # used by archivers/star/Makefile
 # used by devel/smake/Makefile
 # used by shells/bosh/Makefile
@@ -32,9 +32,6 @@ pre-configure:
 	done ;								\
 	r="$$r i386-freebsd-gcc.rul@x86_64-freebsd-gcc.rul" ;		\
 	r="$$r i386-freebsd-cc.rul@x86_64-freebsd-cc.rul" ;		\
-	${SED} -e 's/cc-gcc.rul/cc-$$(C_ARCH).rul/'			\
-		 i386-netbsd-gcc.rul >pkgsrc_i386-netbsd-clang.rul ;	\
-	r="$$r pkgsrc_i386-netbsd-clang.rul@i386-netbsd-clang.rul" ;	\
 	for i in netbsd-clang.rul netbsd-cc.rul netbsd-gcc.rul ;	\
 	do								\
 		r="$$r i386-$$i@${MACHINE}-$$i" ;			\

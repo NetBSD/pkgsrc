@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2018/11/10 19:49:47 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/03/19 14:19:45 wiz Exp $
 
-DISTNAME=	schily-2018-10-30
+DISTNAME=	schily-2019-03-11
 PKGNAME=	smake-1.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=schilytools/}
 EXTRACT_SUFX=	.tar.bz2
@@ -22,7 +22,7 @@ MAKE_FLAGS+=	CPPOPTX=${CPPFLAGS:Q} COPTX=${CFLAGS:Q} LDOPTX=${LDFLAGS:Q}
 .include "../../mk/bsd.prefs.mk"
 
 # Platform specific code (for sharing with other packages based on schilytools)
-.include "../../devel/smake/Makefile.common"
+.include "Makefile.common"
 
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure
