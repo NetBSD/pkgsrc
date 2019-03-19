@@ -1,0 +1,5 @@
+Async is a library for asynchronous programming, i.e., programming where some
+part of the program must wait for things that happen at times determined by some
+external entity (like a human or another program). This includes pretty much any
+program that uses blocking calls (e.g., networking code, disk access), timeouts,
+or event loops (e.g., GUIs).
