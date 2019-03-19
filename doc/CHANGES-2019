@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1380 2019/03/19 14:24:47 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.1381 2019/03/19 14:25:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2216,3 +2216,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/ocaml-lru version 0.2.0 [jaapb 2019-03-19]
 	Updated shells/bosh to 20190311 [wiz 2019-03-19]
 	Added devel/ocaml-stringext version 1.5.0 [jaapb 2019-03-19]
+	Updated shells/pbosh to 20190311 [wiz 2019-03-19]
