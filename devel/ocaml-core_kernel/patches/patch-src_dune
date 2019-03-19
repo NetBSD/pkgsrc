@@ -1,0 +1,18 @@
+$NetBSD: patch-src_dune,v 1.1 2019/03/19 10:07:47 jaapb Exp $
+
+Remove unknown argument
+--- src/dune.orig	2019-02-19 14:45:16.000000000 +0000
++++ src/dune
+@@ -11,9 +11,9 @@
+  (c_library_flags (:include rt-flags))
+  (c_names bigstring_stubs md5_stubs array_stubs gc_stubs time_ns_stubs
+   version_util_fallback_stubs heap_block_stubs)
+- (preprocess (pps ppx_jane -check-doc-comments)) (preprocessor_deps config.h)
++ (preprocess (pps ppx_jane)) (preprocessor_deps config.h)
+  (js_of_ocaml (javascript_files strftime.js runtime.js)))
+ 
+ (rule (targets explicit_dependencies.ml explicit_dependencies.mli)
+  (deps %{workspace_root}/bin/gen-explicit-dependencies.sh)
+- (action (bash "%{deps} jane_street_headers")))
+\ No newline at end of file
++ (action (bash "%{deps} jane_street_headers")))
