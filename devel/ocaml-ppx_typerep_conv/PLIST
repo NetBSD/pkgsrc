@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2019/03/19 10:32:11 jaapb Exp $
+${OCAML_SITELIB}/ppx_typerep_conv/META
+${OCAML_SITELIB}/ppx_typerep_conv/dune-package
+${OCAML_SITELIB}/ppx_typerep_conv/opam
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_typerep_conv/ppx_typerep_conv.a
+${OCAML_SITELIB}/ppx_typerep_conv/ppx_typerep_conv.cma
+${OCAML_SITELIB}/ppx_typerep_conv/ppx_typerep_conv.cmi
+${OCAML_SITELIB}/ppx_typerep_conv/ppx_typerep_conv.cmt
+${OCAML_SITELIB}/ppx_typerep_conv/ppx_typerep_conv.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_typerep_conv/ppx_typerep_conv.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_typerep_conv/ppx_typerep_conv.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_typerep_conv/ppx_typerep_conv.cmxs
+${OCAML_SITELIB}/ppx_typerep_conv/ppx_typerep_conv.ml
+${OCAML_SITELIB}/ppx_typerep_conv/ppx_typerep_conv.mli
+share/doc/ppx_typerep_conv/CHANGES.md
+share/doc/ppx_typerep_conv/LICENSE.md
+share/doc/ppx_typerep_conv/README.md
