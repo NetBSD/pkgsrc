@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2822 2019/03/19 10:41:03 jaapb Exp $
+# $NetBSD: Makefile,v 1.2823 2019/03/19 10:44:04 jaapb Exp $
 #
 
 COMMENT=	Development utilities
@@ -796,6 +796,7 @@ SUBDIR+=	nss
 SUBDIR+=	objfw
 SUBDIR+=	ocaml-astring
 SUBDIR+=	ocaml-async_kernel
+SUBDIR+=	ocaml-async_rpc_kernel
 SUBDIR+=	ocaml-base
 SUBDIR+=	ocaml-base64
 SUBDIR+=	ocaml-base_quickcheck
