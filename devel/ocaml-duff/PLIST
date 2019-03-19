@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2019/03/19 11:31:30 jaapb Exp $
+bin/xduff
+${OCAML_SITELIB}/duff/META
+${PLIST.ocaml-opt}${OCAML_SITELIB}/duff/duff.a
+${OCAML_SITELIB}/duff/duff.cma
+${OCAML_SITELIB}/duff/duff.cmi
+${OCAML_SITELIB}/duff/duff.cmt
+${OCAML_SITELIB}/duff/duff.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/duff/duff.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/duff/duff.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/duff/duff.cmxs
+${OCAML_SITELIB}/duff/duff.ml
+${OCAML_SITELIB}/duff/duff.mli
+${OCAML_SITELIB}/duff/dune-package
+${OCAML_SITELIB}/duff/opam
+share/doc/duff/CHANGES.md
+share/doc/duff/LICENSE.md
+share/doc/duff/README.md
