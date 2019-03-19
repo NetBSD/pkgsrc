@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1353 2019/03/19 09:56:46 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.1354 2019/03/19 10:07:56 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2188,3 +2188,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed x11/proxymngr [wiz 2019-03-19]
 	Removed x11/lbxproxy [wiz 2019-03-19]
 	Added devel/ocaml-typerep version 0.12.0 [jaapb 2019-03-19]
+	Added devel/ocaml-core_kernel version 0.12.0 [jaapb 2019-03-19]
