@@ -1,0 +1,12 @@
+Digestif is a toolbox which implements hashes:
+
+* MD5
+* SHA1
+* SHA224
+* SHA256
+* SHA384
+* SHA512
+* WHIRLPOOL
+* BLAKE2B
+* BLAKE2S
+* RIPEMD160
