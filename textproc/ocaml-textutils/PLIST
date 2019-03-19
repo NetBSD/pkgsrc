@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2019/03/19 10:56:03 jaapb Exp $
+${OCAML_SITELIB}/textutils/META
+${PLIST.ocaml-opt}${OCAML_SITELIB}/textutils/ascii_table/ascii_table.a
+${OCAML_SITELIB}/textutils/ascii_table/ascii_table.cma
+${OCAML_SITELIB}/textutils/ascii_table/ascii_table.cmi
+${OCAML_SITELIB}/textutils/ascii_table/ascii_table.cmt
+${OCAML_SITELIB}/textutils/ascii_table/ascii_table.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/textutils/ascii_table/ascii_table.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/textutils/ascii_table/ascii_table.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/textutils/ascii_table/ascii_table.cmxs
+${OCAML_SITELIB}/textutils/ascii_table/ascii_table.ml
+${OCAML_SITELIB}/textutils/ascii_table/ascii_table.mli
+${PLIST.ocaml-opt}${OCAML_SITELIB}/textutils/console/console.a
+${OCAML_SITELIB}/textutils/console/console.cma
+${OCAML_SITELIB}/textutils/console/console.cmi
+${OCAML_SITELIB}/textutils/console/console.cmt
+${OCAML_SITELIB}/textutils/console/console.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/textutils/console/console.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/textutils/console/console.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/textutils/console/console.cmxs
+${OCAML_SITELIB}/textutils/console/console.ml
+${OCAML_SITELIB}/textutils/console/console.mli
+${OCAML_SITELIB}/textutils/dune-package
+${OCAML_SITELIB}/textutils/opam
+share/doc/textutils/CHANGES.md
+share/doc/textutils/LICENSE.md
