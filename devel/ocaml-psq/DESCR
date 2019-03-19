@@ -1,0 +1,5 @@
+psq provides a functional priority search queue for OCaml. This structure
+behaves both as a finite map, and a priority queue over p.
+
+It provides efficient access along more than one axis: to any binding by k, and
+to the binding(s) with the least p.
