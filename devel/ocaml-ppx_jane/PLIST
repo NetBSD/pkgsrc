@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2019/03/19 10:37:30 jaapb Exp $
+bin/ppx-jane
+${OCAML_SITELIB}/ppx_jane/META
+${OCAML_SITELIB}/ppx_jane/dune-package
+${OCAML_SITELIB}/ppx_jane/kernel/ppx.exe
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_jane/kernel/ppx_jane_kernel.a
+${OCAML_SITELIB}/ppx_jane/kernel/ppx_jane_kernel.cma
+${OCAML_SITELIB}/ppx_jane/kernel/ppx_jane_kernel.cmi
+${OCAML_SITELIB}/ppx_jane/kernel/ppx_jane_kernel.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_jane/kernel/ppx_jane_kernel.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_jane/kernel/ppx_jane_kernel.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_jane/kernel/ppx_jane_kernel.cmxs
+${OCAML_SITELIB}/ppx_jane/kernel/ppx_jane_kernel.ml
+${OCAML_SITELIB}/ppx_jane/opam
+${OCAML_SITELIB}/ppx_jane/ppx.exe
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_jane/ppx_jane.a
+${OCAML_SITELIB}/ppx_jane/ppx_jane.cma
+${OCAML_SITELIB}/ppx_jane/ppx_jane.cmi
+${OCAML_SITELIB}/ppx_jane/ppx_jane.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_jane/ppx_jane.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_jane/ppx_jane.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_jane/ppx_jane.cmxs
+${OCAML_SITELIB}/ppx_jane/ppx_jane.ml
+share/doc/ppx_jane/CHANGES.md
+share/doc/ppx_jane/LICENSE.md
+share/doc/ppx_jane/README.md
