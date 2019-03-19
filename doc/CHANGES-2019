@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1383 2019/03/19 14:29:02 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.1384 2019/03/19 16:26:17 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2219,3 +2219,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated shells/pbosh to 20190311 [wiz 2019-03-19]
 	Added www/ocaml-uri version 2.2.0 [jaapb 2019-03-19]
 	Added devel/ocaml-git version 2.0.0 [jaapb 2019-03-19]
+	Updated www/firefox to 66.0 [ryoon 2019-03-19]
