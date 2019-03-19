@@ -1,0 +1,3 @@
+Fpath is an OCaml module for handling file system paths with POSIX and Windows
+conventions. Fpath processes paths without accessing the file system and is
+independent from any system library.
