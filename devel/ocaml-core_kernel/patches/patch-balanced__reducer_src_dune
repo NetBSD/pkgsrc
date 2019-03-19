@@ -1,0 +1,10 @@
+$NetBSD: patch-balanced__reducer_src_dune,v 1.1 2019/03/19 10:07:47 jaapb Exp $
+
+Remove unknown argument
+--- balanced_reducer/src/dune.orig	2019-02-19 14:45:16.000000000 +0000
++++ balanced_reducer/src/dune
+@@ -1,2 +1,2 @@
+ (library (name balanced_reducer) (public_name core_kernel.balanced_reducer)
+- (libraries base) (preprocess (pps ppx_jane -check-doc-comments)))
+\ No newline at end of file
++ (libraries base) (preprocess (pps ppx_jane)))
