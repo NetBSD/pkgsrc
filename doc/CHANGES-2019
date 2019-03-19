@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1376 2019/03/19 14:19:56 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.1377 2019/03/19 14:21:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2210,4 +2210,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/ocaml-ocplib-endian version 1.0 [jaapb 2019-03-19]
 	Added devel/ocaml-encore version 0.2 [jaapb 2019-03-19]
 	Added devel/ocaml-hex version 1.3.0 [jaapb 2019-03-19]
+	Updated devel/smake to 1.3nb3 [wiz 2019-03-19]
 	Added devel/ocaml-psq version 0.1.0 [jaapb 2019-03-19]
+	Updated archivers/star to 1.6 [wiz 2019-03-19]
