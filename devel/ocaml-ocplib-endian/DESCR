@@ -1,0 +1,11 @@
+Optimised functions to read and write int16/32/64 from strings, bytes and
+bigarrays, based on primitives added in version 4.01.
+
+The library implements three modules:
+
+* EndianString works directly on strings, and provides submodules BigEndian and
+  LittleEndian, with their unsafe counter-parts;
+* EndianBytes works directly on bytes, and provides submodules BigEndian and
+  LittleEndian, with their unsafe counter-parts;
+* EndianBigstring works on bigstrings (Bigarrays of chars), and provides
+  submodules BigEndian and LittleEndian, with their unsafe counter-parts.
