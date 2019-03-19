@@ -1,0 +1,1 @@
+A ppx rewriter that inlines reverse application operators |> and |!.
