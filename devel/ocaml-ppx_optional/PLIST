@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2019/03/19 10:12:39 jaapb Exp $
+${OCAML_SITELIB}/ppx_optional/META
+${OCAML_SITELIB}/ppx_optional/dune-package
+${OCAML_SITELIB}/ppx_optional/opam
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_optional/ppx_optional.a
+${OCAML_SITELIB}/ppx_optional/ppx_optional.cma
+${OCAML_SITELIB}/ppx_optional/ppx_optional.cmi
+${OCAML_SITELIB}/ppx_optional/ppx_optional.cmt
+${OCAML_SITELIB}/ppx_optional/ppx_optional.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_optional/ppx_optional.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_optional/ppx_optional.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_optional/ppx_optional.cmxs
+${OCAML_SITELIB}/ppx_optional/ppx_optional.ml
+${OCAML_SITELIB}/ppx_optional/ppx_optional.mli
+share/doc/ppx_optional/CHANGES.md
+share/doc/ppx_optional/LICENSE.md
+share/doc/ppx_optional/README.md
