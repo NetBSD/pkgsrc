@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.14 2019/03/06 14:00:30 wiz Exp $
+$NetBSD: distinfo,v 1.15 2019/03/19 23:48:58 wiz Exp $
 
-SHA1 (xf86-video-amdgpu-19.0.0.tar.bz2) = 7a9c6f08ec7c0a8cc665079c8f49716febc73729
-RMD160 (xf86-video-amdgpu-19.0.0.tar.bz2) = c9eae4f204214b385dcaa6da9050593fb12affa7
-SHA512 (xf86-video-amdgpu-19.0.0.tar.bz2) = 6a30fc03185816307f16693cd6b07f13694ca1b6b1327c58a951bccc8082f112bb768ab610229dc1040617eef860fc1ab17a7e6bf635c5a4e454e252f3addca8
-Size (xf86-video-amdgpu-19.0.0.tar.bz2) = 439773 bytes
+SHA1 (xf86-video-amdgpu-19.0.1.tar.bz2) = 2952d2a4e25a6e27cfbd49c11727400eb80f7fe0
+RMD160 (xf86-video-amdgpu-19.0.1.tar.bz2) = 8d304b9fd4e45ff84b4ff2226d5d4da8bca14baa
+SHA512 (xf86-video-amdgpu-19.0.1.tar.bz2) = dda04e3ccee140354f59e04895cf50cd7dc06a105c40ce35069613c5b5fbe083cab6833fd293d96334f64dde1a0c4af6154d473594a144f37404188ae7f37dd5
+Size (xf86-video-amdgpu-19.0.1.tar.bz2) = 440534 bytes
 SHA1 (patch-configure) = 0434336e8b6fd83ebaa7b0a69f1fc5fbd2b89bf7
