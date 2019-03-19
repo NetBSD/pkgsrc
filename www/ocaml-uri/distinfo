@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/03/19 14:26:38 jaapb Exp $
+
+SHA1 (ocaml-uri-2.2.0.tar.gz) = 1d218e737ad9787d4bbaf7338af62590e7c028c0
+RMD160 (ocaml-uri-2.2.0.tar.gz) = 4f73dffaaf72d7c8619be92f828a9439702ecf37
+SHA512 (ocaml-uri-2.2.0.tar.gz) = f032c9624752527d05b440ad182f36e0bf44ca1ee34a8100b9303fc39e9b6384913ddb0420171807b1d35ea522a2a01db2419a4e2d7b33fd85b05d64e0396f79
+Size (ocaml-uri-2.2.0.tar.gz) = 216253 bytes
