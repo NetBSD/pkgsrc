@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.60 2018/11/12 12:50:52 jperkin Exp $
+$NetBSD: patch-aa,v 1.61 2019/03/19 16:11:28 ryoon Exp $
 
 * Add OSS audio support
 * Disable libav-fft on SunOS (relocation errors)
 
---- old-configure.in.orig	2018-10-31 00:08:10.000000000 +0000
+--- old-configure.in.orig	2019-03-07 16:53:39.000000000 +0000
 +++ old-configure.in
-@@ -2543,6 +2543,67 @@ MOZ_WEBM_ENCODER=1
+@@ -2130,6 +2130,67 @@ MOZ_WEBM_ENCODER=1
  AC_DEFINE(MOZ_WEBM_ENCODER)
  AC_SUBST(MOZ_WEBM_ENCODER)
  
@@ -73,11 +73,3 @@ $NetBSD: patch-aa,v 1.60 2018/11/12 12:50:52 jperkin Exp $
  dnl ========================================================
  dnl NegotiateAuth
  dnl ========================================================
-@@ -2860,6 +2921,7 @@ case "$OS_ARCH:$CPU_ARCH" in
-   WINNT:x86)
-       MOZ_LIBAV_FFT=1
-   ;;
-+  SunOS:*) : ;;
-   *:x86_64)
-       MOZ_LIBAV_FFT=1
-   ;;
