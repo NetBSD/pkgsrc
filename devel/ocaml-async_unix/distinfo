@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2019/03/19 10:48:15 jaapb Exp $
+
+SHA1 (async_unix-0.12.0.tar.gz) = a0fd135289dee62e929999c71795f008f1fdea7f
+RMD160 (async_unix-0.12.0.tar.gz) = b0e3f953e6167872dde188679e0b79527aa14ce5
+SHA512 (async_unix-0.12.0.tar.gz) = f1b427476295d7beec4e282ffac53dea8e003cc906d6e521280f0269c9057c822b517c551c40956a057c9adc630df0ae9c43932f0a76a756841be0953561e218
+Size (async_unix-0.12.0.tar.gz) = 161822 bytes
+SHA1 (patch-src_dune) = e2ad2651f4ceb6aec6f69bf79eb86cedf0aab65e
+SHA1 (patch-thread__pool_src_dune) = 680a475e3a747075ffa02de2e0978dc5e102759b
+SHA1 (patch-thread__safe__ivar_src_dune) = bea3776929788436cb5d30640070d4dbd874da44
+SHA1 (patch-thread__safe__pipe_src_dune) = 5d7971eb41581507b6af67d2ca49330d3effdbeb
