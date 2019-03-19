@@ -1,0 +1,3 @@
+Logs provides a logging infrastructure for OCaml. Logging is performed on
+sources whose reporting level can be set independently. Log message report is
+decoupled from logging and is handled by a reporter.
