@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.52 2019/01/09 19:12:14 adam Exp $
+# $NetBSD: Makefile,v 1.53 2019/03/19 03:53:45 dholland Exp $
 
 .include "../../textproc/libxslt/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 
 MAINTAINER=	minskim@NetBSD.org
@@ -33,6 +34,9 @@ post-extract: setuppy
 .PHONY: setuppy
 setuppy:
 	${CP} ${FILESDIR}/setup.py ${WRKSRC}/python
+
+# this must come before py-libxml2's bl3 or the direct dependence is lost
+.include "../../lang/python/pyversion.mk"
 
 .include "../../textproc/py-libxml2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libxslt+=	libxslt>=${PKGVERSION}
