@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2019/03/19 12:56:46 jaapb Exp $
+${OCAML_SITELIB}/hex/META
+${OCAML_SITELIB}/hex/dune-package
+${PLIST.ocaml-opt}${OCAML_SITELIB}/hex/hex.a
+${OCAML_SITELIB}/hex/hex.cma
+${OCAML_SITELIB}/hex/hex.cmi
+${OCAML_SITELIB}/hex/hex.cmt
+${OCAML_SITELIB}/hex/hex.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/hex/hex.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/hex/hex.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/hex/hex.cmxs
+${OCAML_SITELIB}/hex/hex.ml
+${OCAML_SITELIB}/hex/hex.mli
+${OCAML_SITELIB}/hex/opam
+share/doc/hex/CHANGES.md
+share/doc/hex/LICENSE.md
+share/doc/hex/README.md
