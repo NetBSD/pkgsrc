@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1360 2019/03/19 10:40:34 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.1361 2019/03/19 10:43:32 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2195,3 +2195,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/ocaml-ppx_typerep_conv version 0.12.0 [jaapb 2019-03-19]
 	Added devel/ocaml-ppx_jane version 0.12.0 [jaapb 2019-03-19]
 	Added devel/ocaml-async_kernel version 0.12.0 [jaapb 2019-03-19]
+	Added devel/ocaml-async_rpc_kernel version 0.12.0 [jaapb 2019-03-19]
