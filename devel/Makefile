@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2831 2019/03/19 11:26:14 jaapb Exp $
+# $NetBSD: Makefile,v 1.2832 2019/03/19 11:36:18 jaapb Exp $
 #
 
 COMMENT=	Development utilities
@@ -837,6 +837,7 @@ SUBDIR+=	ocaml-lwt_react
 SUBDIR+=	ocaml-lwt_ssl
 SUBDIR+=	ocaml-migrate-parsetree
 SUBDIR+=	ocaml-oasis
+SUBDIR+=	ocaml-ocplib-endian
 SUBDIR+=	ocaml-optcomp
 SUBDIR+=	ocaml-optint
 SUBDIR+=	ocaml-parsexp
