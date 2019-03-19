@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1388 2019/03/19 23:46:04 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.1389 2019/03/19 23:49:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2224,3 +2224,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/nnn to 2.4 [leot 2019-03-19]
 	Updated devel/py-pygit2 to 0.28.0 [wiz 2019-03-19]
 	Updated net/filezilla to 3.41.2 [gutteridge 2019-03-19]
+	Updated x11/xf86-video-amdgpu to 19.0.1 [wiz 2019-03-19]
