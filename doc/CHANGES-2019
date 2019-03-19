@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1363 2019/03/19 10:51:12 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.1364 2019/03/19 10:56:11 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2198,3 +2198,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/ocaml-async_rpc_kernel version 0.12.0 [jaapb 2019-03-19]
 	Added devel/ocaml-async_unix version 0.12.0 [jaapb 2019-03-19]
 	Added devel/ocaml-async_extra version 0.12.0 [jaapb 2019-03-19]
+	Added textproc/ocaml-textutils version 0.12.0 [jaapb 2019-03-19]
