@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1028 2019/03/16 08:05:02 bsiegert Exp $
+# $NetBSD: Makefile,v 1.1029 2019/03/19 10:56:39 jaapb Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -428,6 +428,7 @@ SUBDIR+=	ocaml-expat
 SUBDIR+=	ocaml-jsonm
 SUBDIR+=	ocaml-markup
 SUBDIR+=	ocaml-text
+SUBDIR+=	ocaml-textutils
 SUBDIR+=	ocaml-tyxml
 SUBDIR+=	ocaml-uchar
 SUBDIR+=	ocaml-uutf
