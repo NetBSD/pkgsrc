@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.832 2019/02/15 09:42:39 wiz Exp $
+# $NetBSD: Makefile,v 1.833 2019/03/19 09:53:07 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -211,7 +211,6 @@ SUBDIR+=	kwindowsystem
 SUBDIR+=	kxmlgui
 SUBDIR+=	lablgtk1
 SUBDIR+=	labltk
-SUBDIR+=	lbxproxy
 SUBDIR+=	lesstif
 SUBDIR+=	libFS
 SUBDIR+=	libICE
@@ -328,7 +327,6 @@ SUBDIR+=	paragui
 SUBDIR+=	pixman
 SUBDIR+=	plasma-framework
 SUBDIR+=	printproto
-SUBDIR+=	proxymngr
 SUBDIR+=	py-Pmw
 SUBDIR+=	py-Pmw2
 SUBDIR+=	py-Tk
