@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1367 2019/03/19 11:11:40 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.1368 2019/03/19 11:15:21 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2202,3 +2202,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/ocaml-async version 0.12.0 [jaapb 2019-03-19]
 	Added devel/ocaml-angstrom version 0.11.1 [jaapb 2019-03-19]
 	Added devel/ocaml-cstruct version 3.7.0 [jaapb 2019-03-19]
+	Added devel/ocaml-digestif version 0.7.1 [jaapb 2019-03-19]
