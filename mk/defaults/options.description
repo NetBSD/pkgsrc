@@ -92,6 +92,7 @@ clang-static-analyzer	Install the clang static analyzer.
 claws-mail-jpilot	Add jpilot support.
 clisp			Common/C Lisp.
 clutter			Use Clutter for graphics support.
+cmdliner			Enable cmdliner support.
 cmxs			Produce CMXS files.
 color			Enable color support.
 compface		Enable compface support.
@@ -207,6 +208,7 @@ flac			Enable FLAC support.
 flambda			Enable Flambda optimisation passes
 floppyd			Use floppyd to access floppy device.
 fluidsynth		Enable MIDI support using fluidsynth.
+fmt		Enable ocaml-fmt support.
 fontconfig		Enable FONTCONFIG (fonts/fontconfig) support.
 fossil-system-sqlite	Use pkgsrc sqlite for fossil instead of built-in.
 fossil-th1-hooks	Add support for TH1 scripts in fossil.
