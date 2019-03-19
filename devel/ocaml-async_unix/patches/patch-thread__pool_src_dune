@@ -1,0 +1,12 @@
+$NetBSD: patch-thread__pool_src_dune,v 1.1 2019/03/19 10:48:15 jaapb Exp $
+
+Removed unknown parameters
+--- thread_pool/src/dune.orig	2019-02-13 10:33:20.000000000 +0000
++++ thread_pool/src/dune
+@@ -1,4 +1,4 @@
+ (library (name thread_pool) (public_name async_unix.thread_pool)
+  (libraries core core.nano_mutex core.squeue
+   core_kernel.thread_pool_cpu_affinity thread_safe_ivar)
+- (preprocess (pps ppx_jane -annotated-ignores -check-doc-comments)))
+\ No newline at end of file
++ (preprocess (pps ppx_jane)))
