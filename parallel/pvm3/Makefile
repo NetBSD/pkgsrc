@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.64 2018/02/25 16:12:52 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2019/03/20 10:55:21 wiz Exp $
 
 DISTNAME=	pvm3.4.6
 PKGNAME=	pvm-3.4.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_NETLIB:=pvm3/}
 EXTRACT_SUFX=	.tgz
@@ -109,5 +109,4 @@ do-install:
 	${LN} -s ${PREFIX}/${PKGMANDIR}/man1/pvm_intro.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/PVM.1
 
 .include "../../x11/libXaw/buildlink3.mk"
-.include "../../x11/libXp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
