@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2015/03/04 17:01:02 tnn Exp $
+# $NetBSD: options.mk,v 1.4 2019/03/20 11:10:25 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openjdk8
 PKG_OPTIONS_OPTIONAL_GROUPS=	variant
@@ -46,8 +46,6 @@ DEPENDS+=		dejavu-ttf-[0-9]*:../../fonts/dejavu-ttf
 #DEPENDS+=		baekmuk-ttf-[0-9]*:../../fonts/baekmuk-ttf
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
-BUILDLINK_DEPMETHOD.libXp?=	build
-.include "../../x11/libXp/buildlink3.mk"
 BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
