@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2018/07/04 06:46:49 adam Exp $
-bin/pt2to3${PYVERSSUFFIX}
-bin/ptdump${PYVERSSUFFIX}
-bin/ptrepack${PYVERSSUFFIX}
-bin/pttree${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.2 2019/03/20 16:08:06 adam Exp $
+bin/pt2to3-${PYVERSSUFFIX}
+bin/ptdump-${PYVERSSUFFIX}
+bin/ptrepack-${PYVERSSUFFIX}
+bin/pttree-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
