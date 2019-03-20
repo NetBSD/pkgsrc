@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2018/12/13 19:51:33 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2019/03/20 12:13:21 wiz Exp $
 
 BUILDLINK_TREE+=	ecore
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ecore
 ECORE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ecore+=	ecore>=1.7.7
-BUILDLINK_ABI_DEPENDS.ecore?=	ecore>=1.7.7nb11
+BUILDLINK_ABI_DEPENDS.ecore?=	ecore>=1.7.7nb12
 BUILDLINK_PKGSRCDIR.ecore?=	../../devel/ecore
 
 .include "../../converters/libiconv/buildlink3.mk"
@@ -21,7 +21,6 @@ BUILDLINK_PKGSRCDIR.ecore?=	../../devel/ecore
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
-.include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
