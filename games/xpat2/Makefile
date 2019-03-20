@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2018/01/14 15:26:49 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2019/03/20 12:19:38 wiz Exp $
 
 DISTNAME=	xpat2-1.07
 PKGREVISION=	4
@@ -22,6 +22,5 @@ MAKE_DIRS=		/var/games
 
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
-#.include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
