@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.576 2019/03/17 12:55:13 tm Exp $
+# $NetBSD: Makefile,v 1.577 2019/03/20 19:06:17 adam Exp $
 
 COMMENT=	Databases
 
@@ -62,6 +62,7 @@ SUBDIR+=	jdbc-postgresql94
 SUBDIR+=	kyotocabinet
 SUBDIR+=	lbdb
 SUBDIR+=	ldapvi
+SUBDIR+=	ldb
 SUBDIR+=	leveldb
 SUBDIR+=	libcassandra
 SUBDIR+=	libdbh2
