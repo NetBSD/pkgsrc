@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2018/12/13 19:51:33 adam Exp $
-#
+# $NetBSD: Makefile,v 1.15 2019/03/20 10:49:39 wiz Exp $
 
 DISTNAME=	eio-1.7.7
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	devel
 MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -43,7 +42,6 @@ post-install:
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
-.include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
