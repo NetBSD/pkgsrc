@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2018/12/13 19:51:58 adam Exp $
+# $NetBSD: Makefile,v 1.55 2019/03/20 12:19:38 wiz Exp $
 
 DISTNAME=	GMT4.1.4
 PKGNAME=	GMT-4.1.4
@@ -59,5 +59,4 @@ post-install:
 
 .include "../../devel/netcdf/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
-#.include "../../x11/libXp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
