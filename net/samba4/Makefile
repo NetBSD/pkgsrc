@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2019/03/13 18:02:31 adam Exp $
+# $NetBSD: Makefile,v 1.62 2019/03/20 19:09:10 adam Exp $
 
-DISTNAME=	samba-4.9.5
+DISTNAME=	samba-4.10.0
 CATEGORIES=	net
 MASTER_SITES=	http://download.samba.org/pub/samba/stable/
 
@@ -99,6 +99,9 @@ CONFIGURE_ARGS+=	--without-gpgme
 # Depends on ncurses, explicitly disable for now.
 CONFIGURE_ARGS+=	--without-regedit
 
+PY_PATCHPLIST=		yes
+MAKE_FLAGS+=		WAF_BINARY=${PYTHONBIN}\ ${WRKSRC}/buildtools/bin/waf
+
 # for winbind option build.
 .if "${OPSYS}" != "Darwin" && "${OPSYS}" != "SunOS"
 LDFLAGS+=		-Wl,--allow-shlib-undefined
@@ -115,10 +118,8 @@ LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .if ${SHLIB_TYPE} == "dylib"
 PLIST_SUBST+=	SOEXT=dylib
-SAMBA_LIBEXT=	dylib
 .else
 PLIST_SUBST+=	SOEXT=so
-SAMBA_LIBEXT=	so
 .endif
 
 .if !defined(PWD_MKDB)
@@ -128,14 +129,6 @@ MAKEFLAGS+=	PWD_MKDB=${PWD_MKDB:Q}
 .endif
 FILES_SUBST+=	MKTEMP=${MKTEMP:Q}
 FILES_SUBST+=	PWD_MKDB=${PWD_MKDB:Q}
-
-PLIST_VARS+=	64bit
-.if !empty(LP64PLATFORMS:@.PLAT.@${MACHINE_PLATFORM:M${.PLAT.}}@) || \
-	(defined(ABI) && ${ABI} == "64")
-PLIST.64bit=		yes
-.else
-CONFIGURE_ARGS+=	--without-ldb-lmdb
-.endif
 
 INSTALLATION_DIRS+=	${DOCDIR} ${EGDIR}
 
@@ -149,6 +142,7 @@ SUBST_CLASSES+=		docbook
 SUBST_MESSAGE.docbook=	Fixing docbook URLs.
 SUBST_FILES.docbook+=	buildtools/wafsamba/wafsamba.py
 SUBST_FILES.docbook+=	ctdb/doc/*.xml
+SUBST_FILES.docbook+=	docs-xml/build/DTD/samba-doc
 SUBST_FILES.docbook+=	docs-xml/xslt/*.xsl
 SUBST_FILES.docbook+=	lib/ldb/docs/builddocs.sh
 SUBST_FILES.docbook+=	librpc/tools/*.xml
@@ -209,19 +203,12 @@ REPLACE_PYTHON+=	buildtools/bin/waf
 REPLACE_PYTHON+=	source4/setup/wscript_build
 REPLACE_PYTHON+=	source4/scripting/bin/*
 
-PYTHON_VERSIONS_ACCEPTED=	27
-
-PY_PATCHPLIST=	yes
-.include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
-
 .if "${OPSYS}" == "Linux"
 .include "../../devel/libuuid/buildlink3.mk"
 .endif
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../databases/lmdb/buildlink3.mk"
-.include "../../databases/tdb/buildlink3.mk"
+.include "../../databases/ldb/buildlink3.mk"
 .include "../../devel/cmocka/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
@@ -230,6 +217,8 @@ BUILDLINK_API_DEPENDS.talloc+=	talloc>=2.1.9
 .include "../../devel/talloc/buildlink3.mk"
 .include "../../devel/tevent/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/python/application.mk"
+.include "../../lang/python/extension.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../textproc/jansson/buildlink3.mk"
