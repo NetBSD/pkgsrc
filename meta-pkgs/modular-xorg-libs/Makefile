@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2018/03/12 11:17:04 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/03/20 12:16:19 wiz Exp $
 
 DISTNAME=	# empty
-PKGNAME=	modular-xorg-libs-1.5
-PKGREVISION=	1
+PKGNAME=	modular-xorg-libs-1.6
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 DISTFILES=	# empty
@@ -19,6 +18,7 @@ META_PACKAGE=	yes
 .if ${OPSYS} == "Darwin"
 .include "../../wm/libAppleWM/buildlink3.mk"
 .endif
+.include "../../x11/libdmx/buildlink3.mk"
 .include "../../x11/libFS/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
@@ -41,10 +41,7 @@ META_PACKAGE=	yes
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
-.include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
-.include "../../x11/libXprintAppUtil/buildlink3.mk"
-.include "../../x11/libXprintUtil/buildlink3.mk"
 .include "../../x11/libXpresent/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
@@ -60,7 +57,6 @@ META_PACKAGE=	yes
     || ${OPSYS} == "OpenBSD" || ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
 .include "../../x11/libdrm/buildlink3.mk"
 .endif
-.include "../../x11/liblbxutil/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../x11/libxkbui/buildlink3.mk"
 
