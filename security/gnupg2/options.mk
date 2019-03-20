@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.13 2018/05/16 10:22:22 tm Exp $
+# $NetBSD: options.mk,v 1.14 2019/03/20 06:39:52 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnupg2
-PKG_SUPPORTED_OPTIONS=	bzip2 ldap libusb-1 zlib
-PKG_SUGGESTED_OPTIONS=	bzip2 libusb-1 zlib
+PKG_SUPPORTED_OPTIONS=	bzip2 gnutls ldap libusb-1 zlib
+PKG_SUGGESTED_OPTIONS=	bzip2 gnutls libusb-1 zlib
 
 .include "../../mk/bsd.options.mk"
 
@@ -11,6 +11,12 @@ CONFIGURE_ARGS+=       --with-bzip2=${BUILDLINK_PREFIX.bzip2}
 .include "../../archivers/bzip2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=       --disable-bzip2
+.endif
+
+.if !empty(PKG_OPTIONS:Mgnutls)
+.include "../../security/gnutls/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=       --disable-gnutls
 .endif
 
 PLIST_VARS+=		ldap
