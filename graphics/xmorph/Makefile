@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2014/12/10 23:19:50 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2019/03/20 10:53:07 wiz Exp $
 
 DISTNAME=	xmorph_20060817
 PKGNAME=	xmorph-20060817
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmorph/}
 
@@ -24,5 +24,4 @@ LDFLAGS+=	${COMPILER_RPATH_FLAG}${X11BASE}/lib -L${X11BASE}/lib
 .include "../../math/fftw/buildlink3.mk"
 .include "../../x11/xbitmaps/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
-.include "../../x11/libXp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
