@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2018/12/13 19:51:33 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2019/03/20 10:49:39 wiz Exp $
 
 BUILDLINK_TREE+=	eio
 
@@ -18,7 +18,6 @@ BUILDLINK_PKGSRCDIR.eio?=	../../devel/eio
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
-.include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
