@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2017/03/06 12:59:53 fhajny Exp $
+# $NetBSD: Makefile,v 1.17 2019/03/20 10:34:10 he Exp $
 
-DISTNAME=		logrotate-3.11.0
-PKGREVISION=		1
+DISTNAME=		logrotate-3.15.0
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=logrotate/}
 
@@ -29,7 +28,7 @@ MESSAGE_SUBST+=		EGDIR=${EGDIR}
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-build
 SUBST_MESSAGE.paths=	Substituting paths variables.
-SUBST_FILES.paths=	examples/logrotate-default
+SUBST_FILES.paths=	examples/logrotate.conf
 SUBST_FILES.paths+=	examples/logrotate.cron
 SUBST_VARS.paths=	PREFIX PKG_SYSCONFDIR
 
@@ -41,7 +40,7 @@ EGDIR=			share/examples/logrotate
 INSTALLATION_DIRS+=	${EGDIR}
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/examples/logrotate-default \
+	${INSTALL_DATA} ${WRKSRC}/examples/logrotate.conf \
 		${DESTDIR}${PREFIX}/${EGDIR}/logrotate.conf
 	${INSTALL_DATA} ${WRKSRC}/examples/logrotate.cron \
 		${DESTDIR}${PREFIX}/${EGDIR}
