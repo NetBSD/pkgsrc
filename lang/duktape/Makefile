@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/10/29 22:26:56 leot Exp $
+# $NetBSD: Makefile,v 1.3 2019/03/20 18:29:20 agc Exp $
 
-DISTNAME=	duktape-2.2.0
+DISTNAME=	duktape-2.3.0
 CATEGORIES=	devel
 MASTER_SITES=	http://duktape.org/
 EXTRACT_SUFX=	.tar.xz
@@ -10,10 +10,8 @@ HOMEPAGE=	http://duktape.org/
 COMMENT=	Embeddable Javascript engine
 LICENSE=	mit
 
-do-build:
-	(cd ${WRKSRC} && \
-		${CC} ${CFLAGS} examples/cmdline/duk_cmdline.c \
-		-Wl,-R${PREFIX}/lib -L${PREFIX}/lib -lduktape -lm -o duk)
+MAKE_FILE=	Makefile.cmdline
+BUILD_TARGET=	duk
 
 do-install:
 	mkdir -p ${DESTDIR}${PREFIX}/bin
