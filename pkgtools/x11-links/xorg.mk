@@ -1,4 +1,4 @@
-# $NetBSD: xorg.mk,v 1.31 2018/03/07 11:57:32 wiz Exp $
+# $NetBSD: xorg.mk,v 1.32 2019/03/20 21:06:39 wiz Exp $
 #
 # This is for X.org, but use "xfree" files also.
 
@@ -35,7 +35,6 @@ FILES_LIST=	${FILESDIR}/xorg
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXpresent/buildlink3.mk"
-.include "../../x11/libXprintUtil/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libXres/buildlink3.mk"
