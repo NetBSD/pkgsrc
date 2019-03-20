@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.200 2019/03/01 18:11:10 youri Exp $
+$NetBSD: distinfo,v 1.201 2019/03/20 15:56:33 wiz Exp $
 
-SHA1 (ImageMagick-7.0.8-29.tar.xz) = a2ca8b5fa227b00edceb7778cc8857f89b990be9
-RMD160 (ImageMagick-7.0.8-29.tar.xz) = da83511bf5c8f27f4bbcee794563870c2421a814
-SHA512 (ImageMagick-7.0.8-29.tar.xz) = 5ea9c511355841ec1ffaccfc84b3f636be224df00faa7e379dd790af01d73b3c0b37f32150f2b4a1fd914a6256bc2eda5366d33eba5dd5cd6350eed8423d2c8f
-Size (ImageMagick-7.0.8-29.tar.xz) = 9429436 bytes
+SHA1 (ImageMagick-7.0.8-34.tar.xz) = 394e01e7e35a5bff3d2b581d81acc9f6b5ca0c04
+RMD160 (ImageMagick-7.0.8-34.tar.xz) = 9e8a8b9a47067c34cb45b6b5995ff7dc5be32f98
+SHA512 (ImageMagick-7.0.8-34.tar.xz) = b5f15b61c862e634da68f96c635aaccc7d8f144b7ac6a3b02313c31a7389d32d9bfdd5ef70537d4b5bd189582215a4a68aa10bd4ad65e1d86437f1dae2d9db45
+Size (ImageMagick-7.0.8-34.tar.xz) = 9436304 bytes
 SHA1 (patch-config_policy.xml) = 2c446a00fc00f85ab33eae0691d4d8989a46289f
