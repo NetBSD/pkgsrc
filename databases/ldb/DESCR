@@ -1,0 +1,22 @@
+ldb is a LDAP-like embedded database. It is not at all LDAP standards
+compliant, so if you want a standards compliant database then please see the
+excellent OpenLDAP project.
+
+What ldb does is provide a fast database with an LDAP-like API designed to be
+used within an application. In some ways it can be seen as a intermediate
+solution between key-value pair databases and a real LDAP database.
+
+ldb is the database engine used in Samba4.
+
+Features:
+* The main features that separate ldb from other solutions are:
+* Safe multi-reader, multi-writer, using byte range locking
+* LDAP-like API
+* fast operation
+* choice of local tdb or remote LDAP backends
+* integration with talloc
+* schema-less operation, for trivial setup
+* modules for extensions (such as schema support)
+* easy setup of indexes and attribute properties
+* LDIF for import/export
+* ldbedit tool for database (via LDIF) editing (reminiscent of 'vipw')
