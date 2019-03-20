@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1390 2019/03/19 23:52:00 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1391 2019/03/20 06:40:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2226,3 +2226,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/filezilla to 3.41.2 [gutteridge 2019-03-19]
 	Updated x11/xf86-video-amdgpu to 19.0.1 [wiz 2019-03-19]
 	Updated x11/xf86-video-ati to 19.0.1 [wiz 2019-03-19]
+	Updated devel/waf to 2.0.15 [adam 2019-03-20]
+	Updated security/libgpg-error to 1.36 [adam 2019-03-20]
+	Updated security/gnutls to 3.6.6 [adam 2019-03-20]
+	Updated security/gnupg2 to 2.2.14 [adam 2019-03-20]
