@@ -1,0 +1,4 @@
+bin/pt2to3 @PREFIX@/bin/pt2to3-@PYVERSSUFFIX@
+bin/ptdump @PREFIX@/bin/ptdump-@PYVERSSUFFIX@
+bin/ptrepack @PREFIX@/bin/ptrepack-@PYVERSSUFFIX@
+bin/pttree @PREFIX@/bin/pttree-@PYVERSSUFFIX@
