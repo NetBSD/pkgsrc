@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.835 2019/03/20 12:16:43 wiz Exp $
+# $NetBSD: Makefile,v 1.836 2019/03/20 12:18:48 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -234,11 +234,8 @@ SUBDIR+=	libXft
 SUBDIR+=	libXi
 SUBDIR+=	libXinerama
 SUBDIR+=	libXmu
-SUBDIR+=	libXp
 SUBDIR+=	libXpm
 SUBDIR+=	libXpresent
-SUBDIR+=	libXprintAppUtil
-SUBDIR+=	libXprintUtil
 SUBDIR+=	libXrandr
 SUBDIR+=	libXrender
 SUBDIR+=	libXres
@@ -326,7 +323,6 @@ SUBDIR+=	p5-gtk2
 SUBDIR+=	paragui
 SUBDIR+=	pixman
 SUBDIR+=	plasma-framework
-SUBDIR+=	printproto
 SUBDIR+=	py-Pmw
 SUBDIR+=	py-Pmw2
 SUBDIR+=	py-Tk
@@ -651,13 +647,11 @@ SUBDIR+=	xpaste
 SUBDIR+=	xpenguins
 SUBDIR+=	xphoon
 SUBDIR+=	xplanet
-SUBDIR+=	xplsprinters
 SUBDIR+=	xpmicons
 SUBDIR+=	xpmroot
 SUBDIR+=	xpns
 SUBDIR+=	xpostit
 SUBDIR+=	xpr
-SUBDIR+=	xprehashprinterlist
 SUBDIR+=	xprop
 SUBDIR+=	xrandr
 SUBDIR+=	xrdb
