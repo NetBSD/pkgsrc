@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.129 2019/03/20 00:30:07 gutteridge Exp $
+# $NetBSD: mozilla-common.mk,v 1.130 2019/03/20 14:38:17 tsutsui Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -224,7 +224,7 @@ BUILDLINK_API_DEPENDS.nss+=	nss>=3.40.1
 .include "../../graphics/MesaLib/buildlink3.mk"
 #BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.10.2nb4
 #.include "../../graphics/cairo/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libwebp+=	libwebp>=1.0.1
+BUILDLINK_API_DEPENDS.libwebp+=	libwebp>=1.0.2
 .include "../../graphics/libwebp/buildlink3.mk"
 BUILDLINK_DEPMETHOD.clang=	build
 BUILDLINK_API_DEPENDS.clang+=	clang>=6.0.1nb1
