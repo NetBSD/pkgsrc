@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2016/10/10 02:14:15 mef Exp $
+# $NetBSD: Makefile,v 1.12 2019/03/20 10:38:54 wiz Exp $
 
 DISTNAME=	PDCurses-3.4
 PKGNAME=	${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	devel x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pdcurses/}
 
@@ -46,7 +47,6 @@ post-install:
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
-.include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

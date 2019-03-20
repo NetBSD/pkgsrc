@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2018/01/07 13:04:09 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2019/03/20 10:38:54 wiz Exp $
 
 BUILDLINK_TREE+=	pdcurses
 
@@ -28,7 +28,6 @@ BUILDLINK_TRANSFORM+=		l:curses:XCurses
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
-.include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .endif # PDCURSES_BUILDLINK3_MK
 
