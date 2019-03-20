@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2019/01/04 00:03:21 nia Exp $
+# $NetBSD: Makefile,v 1.93 2019/03/20 01:25:48 gutteridge Exp $
 
 DISTNAME=		OTP-${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}${!empty(DIST_VERSION_PATCH):?.:}${DIST_VERSION_PATCH}
 PKGNAME=		${DISTNAME:S/OTP-/erlang-/}
@@ -94,7 +94,7 @@ pre-build:
 	${RUN} ${RM} -f ${WRKSRC}/lib/stdlib/ebin/dets_v9.beam
 
 ###
-### Generata list of module versions.
+### Generate a list of module versions.
 ###
 .PHONY: versions
 versions: do-extract
