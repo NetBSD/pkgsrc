@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/02/25 01:00:39 manu Exp $
+# $NetBSD: Makefile,v 1.2 2019/03/20 00:48:35 manu Exp $
 
 GITHUB_PROJECT=	ltfs
 DISTNAME=	v2.4.2.0-pre0
@@ -42,5 +42,5 @@ LDFLAGS+=               -L${PREFIX}/${PERL5_SUB_INSTALLARCHLIB}/CORE
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../net/net-snmp/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
-.include "../../mk/fuse.buildlink3.mk"
+.include "../../filesystems/fuse/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
