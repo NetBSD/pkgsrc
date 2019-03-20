@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.834 2019/03/20 12:05:27 wiz Exp $
+# $NetBSD: Makefile,v 1.835 2019/03/20 12:16:43 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -256,7 +256,6 @@ SUBDIR+=	libfakekey
 SUBDIR+=	libgnomekbd
 SUBDIR+=	libgnomekbd2
 SUBDIR+=	libkactivities4
-SUBDIR+=	liblbxutil
 SUBDIR+=	libmatekbd
 SUBDIR+=	liboldXrandr
 SUBDIR+=	libunique
