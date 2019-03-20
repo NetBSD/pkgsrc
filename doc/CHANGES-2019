@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1410 2019/03/20 16:00:40 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1411 2019/03/20 16:08:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2254,3 +2254,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/caff to 2.9 [wiz 2019-03-20]
 	Updated graphics/ImageMagick to 7.0.8.34 [wiz 2019-03-20]
 	Updated security/libssh to 0.87 [wiz 2019-03-20]
+	Updated converters/help2man to 1.47.9 [adam 2019-03-20]
+	Updated math/py-tables to 3.5.1 [adam 2019-03-20]
