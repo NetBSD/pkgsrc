@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/01/05 15:20:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/03/20 16:25:02 wiz Exp $
 bin/markdown_py${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -11,15 +11,15 @@ ${PYSITELIB}/markdown/__init__.pyo
 ${PYSITELIB}/markdown/__main__.py
 ${PYSITELIB}/markdown/__main__.pyc
 ${PYSITELIB}/markdown/__main__.pyo
-${PYSITELIB}/markdown/__version__.py
-${PYSITELIB}/markdown/__version__.pyc
-${PYSITELIB}/markdown/__version__.pyo
 ${PYSITELIB}/markdown/blockparser.py
 ${PYSITELIB}/markdown/blockparser.pyc
 ${PYSITELIB}/markdown/blockparser.pyo
 ${PYSITELIB}/markdown/blockprocessors.py
 ${PYSITELIB}/markdown/blockprocessors.pyc
 ${PYSITELIB}/markdown/blockprocessors.pyo
+${PYSITELIB}/markdown/core.py
+${PYSITELIB}/markdown/core.pyc
+${PYSITELIB}/markdown/core.pyo
 ${PYSITELIB}/markdown/extensions/__init__.py
 ${PYSITELIB}/markdown/extensions/__init__.pyc
 ${PYSITELIB}/markdown/extensions/__init__.pyo
@@ -47,9 +47,12 @@ ${PYSITELIB}/markdown/extensions/fenced_code.pyo
 ${PYSITELIB}/markdown/extensions/footnotes.py
 ${PYSITELIB}/markdown/extensions/footnotes.pyc
 ${PYSITELIB}/markdown/extensions/footnotes.pyo
-${PYSITELIB}/markdown/extensions/headerid.py
-${PYSITELIB}/markdown/extensions/headerid.pyc
-${PYSITELIB}/markdown/extensions/headerid.pyo
+${PYSITELIB}/markdown/extensions/legacy_attrs.py
+${PYSITELIB}/markdown/extensions/legacy_attrs.pyc
+${PYSITELIB}/markdown/extensions/legacy_attrs.pyo
+${PYSITELIB}/markdown/extensions/legacy_em.py
+${PYSITELIB}/markdown/extensions/legacy_em.pyc
+${PYSITELIB}/markdown/extensions/legacy_em.pyo
 ${PYSITELIB}/markdown/extensions/meta.py
 ${PYSITELIB}/markdown/extensions/meta.pyc
 ${PYSITELIB}/markdown/extensions/meta.pyo
@@ -59,9 +62,6 @@ ${PYSITELIB}/markdown/extensions/nl2br.pyo
 ${PYSITELIB}/markdown/extensions/sane_lists.py
 ${PYSITELIB}/markdown/extensions/sane_lists.pyc
 ${PYSITELIB}/markdown/extensions/sane_lists.pyo
-${PYSITELIB}/markdown/extensions/smart_strong.py
-${PYSITELIB}/markdown/extensions/smart_strong.pyc
-${PYSITELIB}/markdown/extensions/smart_strong.pyo
 ${PYSITELIB}/markdown/extensions/smarty.py
 ${PYSITELIB}/markdown/extensions/smarty.pyc
 ${PYSITELIB}/markdown/extensions/smarty.pyo
@@ -77,9 +77,6 @@ ${PYSITELIB}/markdown/extensions/wikilinks.pyo
 ${PYSITELIB}/markdown/inlinepatterns.py
 ${PYSITELIB}/markdown/inlinepatterns.pyc
 ${PYSITELIB}/markdown/inlinepatterns.pyo
-${PYSITELIB}/markdown/odict.py
-${PYSITELIB}/markdown/odict.pyc
-${PYSITELIB}/markdown/odict.pyo
 ${PYSITELIB}/markdown/postprocessors.py
 ${PYSITELIB}/markdown/postprocessors.pyc
 ${PYSITELIB}/markdown/postprocessors.pyo
@@ -89,6 +86,9 @@ ${PYSITELIB}/markdown/preprocessors.pyo
 ${PYSITELIB}/markdown/serializers.py
 ${PYSITELIB}/markdown/serializers.pyc
 ${PYSITELIB}/markdown/serializers.pyo
+${PYSITELIB}/markdown/test_tools.py
+${PYSITELIB}/markdown/test_tools.pyc
+${PYSITELIB}/markdown/test_tools.pyo
 ${PYSITELIB}/markdown/treeprocessors.py
 ${PYSITELIB}/markdown/treeprocessors.pyc
 ${PYSITELIB}/markdown/treeprocessors.pyo
