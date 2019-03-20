@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1393 2019/03/20 10:02:53 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1394 2019/03/20 10:34:50 he Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2232,3 +2232,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/gnupg2 to 2.2.14 [adam 2019-03-20]
 	Updated www/php-owncloud to 10.1.0 [mef 2019-03-20]
 	Removed www/nvu [wiz 2019-03-20]
+	Updated sysutils/logrotate to 3.15.0 [he 2019-03-20]
