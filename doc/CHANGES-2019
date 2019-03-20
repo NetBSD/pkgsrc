@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1414 2019/03/20 19:09:51 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1415 2019/03/20 19:29:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2260,3 +2260,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated fonts/spleen to 1.0.4 [tnn 2019-03-20]
 	Added databases/ldb version 1.5.4 [adam 2019-03-20]
 	Updated net/samba4 to 4.10.0 [adam 2019-03-20]
+	Updated lang/python35 to 3.5.7 [adam 2019-03-20]
+	Updated lang/python34 to 3.4.10 [adam 2019-03-20]
