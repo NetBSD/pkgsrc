@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2008/11/04 08:36:34 adam Exp $
+# $NetBSD: options.mk,v 1.2 2019/03/20 11:05:04 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.crossfire-server
 PKG_SUPPORTED_OPTIONS=	x11
@@ -11,7 +11,6 @@ PLIST_VARS+=	x11
 .if !empty(PKG_OPTIONS:Mx11)
 PLIST.x11=	yes
 .include "../../x11/libXaw/buildlink3.mk"
-.include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .else
