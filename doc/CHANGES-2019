@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1407 2019/03/20 12:18:47 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1408 2019/03/20 15:45:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2251,3 +2251,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed x11/printproto [wiz 2019-03-20]
 	Removed x11/xplsprinters [wiz 2019-03-20]
 	Removed x11/xprehashprinterlist [wiz 2019-03-20]
+	Updated security/caff to 2.9 [wiz 2019-03-20]
