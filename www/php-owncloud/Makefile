@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.71 2018/12/09 21:05:37 adam Exp $
+# $NetBSD: Makefile,v 1.72 2019/03/20 07:16:06 mef Exp $
 #
 
-DISTNAME=	owncloud-10.0.9
+DISTNAME=	owncloud-10.1.0
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	http://download.owncloud.org/community/
@@ -63,4 +63,5 @@ do-install:
 
 .include "../../lang/php/phpversion.mk"
 .include "../../lang/python/application.mk"
+
 .include "../../mk/bsd.pkg.mk"
