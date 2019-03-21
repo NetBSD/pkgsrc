@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2839 2019/03/21 10:18:28 he Exp $
+# $NetBSD: Makefile,v 1.2840 2019/03/21 13:16:47 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -808,6 +808,7 @@ SUBDIR+=	ocaml-batteries
 SUBDIR+=	ocaml-bigstringaf
 SUBDIR+=	ocaml-bin_prot
 SUBDIR+=	ocaml-biniou
+SUBDIR+=	ocaml-bos
 SUBDIR+=	ocaml-checkseum
 SUBDIR+=	ocaml-cmdliner
 SUBDIR+=	ocaml-compiler-libs
@@ -817,6 +818,7 @@ SUBDIR+=	ocaml-cppo
 SUBDIR+=	ocaml-cstruct
 SUBDIR+=	ocaml-deriving-ocsigen
 SUBDIR+=	ocaml-digestif
+SUBDIR+=	ocaml-duff
 SUBDIR+=	ocaml-dune
 SUBDIR+=	ocaml-encore
 SUBDIR+=	ocaml-extlib
@@ -860,6 +862,7 @@ SUBDIR+=	ocaml-ppx_fields_conv
 SUBDIR+=	ocaml-ppx_hash
 SUBDIR+=	ocaml-ppx_here
 SUBDIR+=	ocaml-ppx_inline_test
+SUBDIR+=	ocaml-ppx_jane
 SUBDIR+=	ocaml-ppx_let
 SUBDIR+=	ocaml-ppx_module_timer
 SUBDIR+=	ocaml-ppx_optcomp
