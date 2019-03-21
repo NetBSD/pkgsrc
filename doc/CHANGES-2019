@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1416 2019/03/21 08:44:51 tsutsui Exp $
+$NetBSD: CHANGES-2019,v 1.1417 2019/03/21 09:51:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2284,3 +2284,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/ruby-gnome2-gtksourceview2 to 3.3.6 [tsutsui 2019-03-21]
 	Updated x11/ruby-gnome2-gtksourceview3 to 3.3.6 [tsutsui 2019-03-21]
 	Updated x11/ruby-gnome2-vte to 3.3.6 [tsutsui 2019-03-21]
+	Updated fonts/mkfontscale to 1.2.1 [wiz 2019-03-21]
