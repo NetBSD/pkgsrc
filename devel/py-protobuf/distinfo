@@ -1,17 +1,6 @@
-$NetBSD: distinfo,v 1.15 2019/01/06 11:21:06 markd Exp $
+$NetBSD: distinfo,v 1.16 2019/03/21 21:29:08 adam Exp $
 
-SHA1 (protobuf-python-3.6.1.tar.gz) = 9170df4cde3ddb94bae7247d209e1cda4432967b
-RMD160 (protobuf-python-3.6.1.tar.gz) = ee9f8344a688f636cee409227b36a5161fa88c44
-SHA512 (protobuf-python-3.6.1.tar.gz) = 9cf80401fca3b58d41c7aa95988bf3763680c5a82009b90f85671762641c7a5a7fd1af691ab258d57fa43f790a9162fdfd96f29f63e888626083b2abe84bafff
-Size (protobuf-python-3.6.1.tar.gz) = 4748789 bytes
-SHA1 (patch-configure) = a35883ff62ba1db429a6cbc12b75714e78e28abf
-SHA1 (patch-configure.ac) = 208a5ce72905aa95ad73ee0f751d4a58f0c37f5f
-SHA1 (patch-m4_acx__check__suncc.m4) = faf96ee5d305c08d30e7c7d3578896971983e1dd
-SHA1 (patch-python_google_protobuf_pyext_descriptor.cc) = 32f3ddb90d3b52dd4b6919ec75047dcd2906a218
-SHA1 (patch-python_google_protobuf_pyext_descriptor_containers.cc) = 6aed9e2a5b5803fdecaf0d5a49a48ef219b5ca1f
-SHA1 (patch-python_google_protobuf_pyext_descriptor_pool.cc) = 9fe51dfd39f1e3af202a4cff586947b4ec8475a5
-SHA1 (patch-python_google_protobuf_pyext_extension_dict.cc) = 6fff247e007e7856442480600f98507712c80c69
-SHA1 (patch-python_google_protobuf_pyext_message.cc) = 30faea1052e097d976430e2224c97e98cadb5e75
-SHA1 (patch-src_google_protobuf_message__lite.cc) = 8f2ffe07b2710de5365148153978ad6d9939f522
-SHA1 (patch-third__party_googletest_googlemock_configure) = fe3b812e819130d87d99316144507d2454461cd1
-SHA1 (patch-third__party_googletest_googlemock_configure.ac) = dc06fc7aebaef02df536458e45f77386cc857261
+SHA1 (protobuf-3.7.0.tar.gz) = c3250d0cc74fadeffdbb0a01f0fe1512f923ef99
+RMD160 (protobuf-3.7.0.tar.gz) = 02a3188d33bb62463b2e6b5f85dfd50915142e33
+SHA512 (protobuf-3.7.0.tar.gz) = 03ab744215694eaa4bfe40ab0b3ebd39065ac865a7dd48c1b2c038c21a091a2f4ea02f8c21b888f96d0454f01e6fa5e5e0026c9cb5643e7df490a7cbedf98c6f
+Size (protobuf-3.7.0.tar.gz) = 255287 bytes
