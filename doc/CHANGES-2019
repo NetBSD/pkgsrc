@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1426 2019/03/21 11:55:34 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.1427 2019/03/21 12:19:06 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2303,3 +2303,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/drupal8 to 8.6.13 [prlw1 2019-03-21]
 	Updated www/drupal7 to 7.65 [prlw1 2019-03-21]
 	Updated devel/ocamlbuild to 0.14.0 [jaapb 2019-03-21]
+	Updated devel/menhir to 20181113 [jaapb 2019-03-21]
