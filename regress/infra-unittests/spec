@@ -1,0 +1,12 @@
+# $NetBSD: spec,v 1.1 2019/03/21 21:45:30 rillig Exp $
+#
+# Unit tests for the pkgsrc infrastructure.
+
+do_test() {
+	sh ./mocked-include.sh || TEST_EXITSTATUS=$?
+	sh ./tools-bison.sh || TEST_EXITSTATUS=$?
+}
+
+check_result() {
+	exit_status 0
+}
