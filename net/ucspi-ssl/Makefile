@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2019/01/18 18:18:38 schmonz Exp $
+# $NetBSD: Makefile,v 1.29 2019/03/21 15:16:45 schmonz Exp $
 #
 
-DISTNAME=		ucspi-ssl-0.10.7
+DISTNAME=		ucspi-ssl-0.10.8
 PKGNAME=		${DISTNAME:S/-0./-0.999./}
-PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		https://www.fehcom.de/ipnet/ucspi-ssl/
 EXTRACT_SUFX=		.tgz
@@ -20,18 +19,6 @@ SSL_SCRIPTS=		https@ sslcat sslconnect
 SSL_PROGRAMS=		sslclient sslserver
 SSL_MAN1PAGES=		${SSL_SCRIPTS:S/$/.1/g} ${SSL_PROGRAMS:S/$/.1/g}
 SSL_MAN2PAGES=		ucspi-tls.2
-
-SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	do-configure
-SUBST_FILES.prefix=	${SSL_SCRIPTS:S/^/src\//g:S/$/.sh/g}
-SUBST_SED.prefix=	-e 's|HOME/command/|${PREFIX}/bin/|g'
-SUBST_MESSAGE.prefix=	Fixing prefix.
-
-SUBST_CLASSES+=		etc
-SUBST_STAGE.etc=	do-configure
-SUBST_FILES.etc=	src/dns_rcrw.c
-SUBST_SED.etc=		-e 's|/etc/dnsrewrite|${PKG_SYSCONFBASE}/dnsrewrite|g'
-SUBST_MESSAGE.etc=	Fixing prefix.
 
 PKG_USERS_VARS+=	UCSPI_SSL_USER
 PKG_GROUPS_VARS+=	UCSPI_SSL_GROUP
