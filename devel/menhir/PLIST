@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/11/12 17:13:37 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/03/21 12:18:56 jaapb Exp $
 bin/menhir
 ${OCAML_SITELIB}/menhirLib/META
 ${OCAML_SITELIB}/menhirLib/menhirLib.cmi
@@ -23,6 +23,15 @@ share/doc/menhir/demos/calc-alias/README
 share/doc/menhir/demos/calc-alias/calc.ml
 share/doc/menhir/demos/calc-alias/lexer.mll
 share/doc/menhir/demos/calc-alias/parser.mly
+share/doc/menhir/demos/calc-ast-dune/.gitignore
+share/doc/menhir/demos/calc-ast-dune/Makefile
+share/doc/menhir/demos/calc-ast-dune/README.md
+share/doc/menhir/demos/calc-ast-dune/calc.ml
+share/doc/menhir/demos/calc-ast-dune/dune
+share/doc/menhir/demos/calc-ast-dune/dune-project
+share/doc/menhir/demos/calc-ast-dune/lexer.mll
+share/doc/menhir/demos/calc-ast-dune/parser.mly
+share/doc/menhir/demos/calc-ast-dune/syntax.ml
 share/doc/menhir/demos/calc-dune/.gitignore
 share/doc/menhir/demos/calc-dune/Makefile
 share/doc/menhir/demos/calc-dune/README.md
@@ -31,6 +40,14 @@ share/doc/menhir/demos/calc-dune/dune
 share/doc/menhir/demos/calc-dune/dune-project
 share/doc/menhir/demos/calc-dune/lexer.mll
 share/doc/menhir/demos/calc-dune/parser.mly
+share/doc/menhir/demos/calc-new-syntax-dune/.gitignore
+share/doc/menhir/demos/calc-new-syntax-dune/Makefile
+share/doc/menhir/demos/calc-new-syntax-dune/README.md
+share/doc/menhir/demos/calc-new-syntax-dune/calc.ml
+share/doc/menhir/demos/calc-new-syntax-dune/dune
+share/doc/menhir/demos/calc-new-syntax-dune/dune-project
+share/doc/menhir/demos/calc-new-syntax-dune/lexer.mll
+share/doc/menhir/demos/calc-new-syntax-dune/parser.mly
 share/doc/menhir/demos/calc-incremental-dune/.gitignore
 share/doc/menhir/demos/calc-incremental-dune/Makefile
 share/doc/menhir/demos/calc-incremental-dune/README.md
