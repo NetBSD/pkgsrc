@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2016/11/21 18:20:30 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/03/21 22:16:25 adam Exp $
 include/benchmark/benchmark.h
-include/benchmark/benchmark_api.h
-include/benchmark/macros.h
-include/benchmark/reporter.h
+lib/cmake/benchmark/benchmarkConfig.cmake
+lib/cmake/benchmark/benchmarkConfigVersion.cmake
+lib/cmake/benchmark/benchmarkTargets-release.cmake
+lib/cmake/benchmark/benchmarkTargets.cmake
 lib/libbenchmark.a
+lib/libbenchmark_main.a
+lib/pkgconfig/benchmark.pc

@@ -1,22 +1,22 @@
-# $NetBSD: Makefile,v 1.2 2017/03/24 11:41:58 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2019/03/21 22:16:25 adam Exp $
 
-DISTNAME=	benchmark-1.1.0
+DISTNAME=	benchmark-1.4.1
 PKGNAME=	google-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	benchmarks
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 GITHUB_PROJECT=	benchmark
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	https://github.com/google/benchmark/
+HOMEPAGE=	https://github.com/google/benchmark
 COMMENT=	Microbenchmark support library
 LICENSE=	apache-2.0
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
-
-CMAKE_ARGS=	-DCMAKE_BUILD_TYPE=Release
+CMAKE_ARGS+=	-DBENCHMARK_ENABLE_GTEST_TESTS=OFF
+CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+TEST_TARGET=	test
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
