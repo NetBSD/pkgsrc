@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.12 2018/12/14 22:52:45 schmonz Exp $
+$NetBSD: distinfo,v 1.13 2019/03/21 15:16:45 schmonz Exp $
 
-SHA1 (ucspi-ssl-0.10.7.tgz) = 7d4a274636a6fa9c80cc04d2f7256d58fc916d4b
-RMD160 (ucspi-ssl-0.10.7.tgz) = 5be93900322d8701821d161f870890379db8eab2
-SHA512 (ucspi-ssl-0.10.7.tgz) = 9551d5a7a13b4cecd3eea4165e95dda642d4c174ea66c9b6a797ac7b0ee4ebcac3d6765331b30f6d14ba99ead6c3e61357c685fddce345934a3fbf437e1f3ffd
-Size (ucspi-ssl-0.10.7.tgz) = 71680 bytes
+SHA1 (ucspi-ssl-0.10.8.tgz) = d41ed8999c9bbb6c3dfe735c15e763996bc7717f
+RMD160 (ucspi-ssl-0.10.8.tgz) = 51278e810440e74c74ea2b1a1df6c43f9996377f
+SHA512 (ucspi-ssl-0.10.8.tgz) = 0c1bec403e8d244cb00794fd730ebf17678e2d033a808e146913ffbec61f8680557624825ab8487b18ec09ca2e7a4cc4848198e74b5ab7b5b9c3648b51a7b78e
+Size (ucspi-ssl-0.10.8.tgz) = 81920 bytes
 SHA1 (patch-src_print-dl.sh) = 456ae878c5116bbdfab1e9b4c049f6e4e80bc2b1
 SHA1 (patch-src_print-ld.sh) = f05f316eb6b95a3a9cb5726c9e7bb2d27dfc1b7b
 SHA1 (patch-src_ucspissl.h) = a73b19d3b5e70450c8dc0382836aa6ccc8e79a6e
