@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailofmipd.sh,v 1.24 2019/01/18 18:25:34 schmonz Exp $
+# $NetBSD: qmailofmipd.sh,v 1.25 2019/03/21 15:33:06 schmonz Exp $
 #
 # @PKGNAME@ script to control ofmipd (SMTP submission service).
 #
@@ -11,12 +11,12 @@
 name="qmailofmipd"
 
 # User-settable rc.conf variables and their default values:
-: ${qmailofmipd_postenv:="SSL_UID=$(@ID@ -u @UCSPI_SSL_USER@) SSL_GID=$(@ID@ -g @UCSPI_SSL_GROUP@)"}
+: ${qmailofmipd_postenv:=""}
 : ${qmailofmipd_datalimit:="360000000"}
 : ${qmailofmipd_pretcpserver:=""}
 : ${qmailofmipd_tcpserver:="@PREFIX@/bin/sslserver"}
 : ${qmailofmipd_tcpflags:="-ne -vRl0"}
-: ${qmailofmipd_tcphost:="0"}
+: ${qmailofmipd_tcphost:=":0"}
 : ${qmailofmipd_tcpport:="587"}
 : ${qmailofmipd_tcprules:="@PKG_SYSCONFDIR@/control/tcprules/ofmip"}
 : ${qmailofmipd_autocdb:="YES"}
@@ -74,6 +74,8 @@ qmailofmipd_disable_tls() {
 }
 
 qmailofmipd_enable_tls() {
+	qmailofmipd_postenv="SSL_UID=$(@ID@ -u @UCSPI_SSL_USER@) ${qmailofmipd_postenv}"
+	qmailofmipd_postenv="SSL_GID=$(@ID@ -g @UCSPI_SSL_GROUP@) ${qmailofmipd_postenv}"
 	qmailofmipd_postenv="DHFILE=${qmailofmipd_tls_dhparams} ${qmailofmipd_postenv}"
 	qmailofmipd_postenv="CERTFILE=${qmailofmipd_tls_cert} ${qmailofmipd_postenv}"
 	if [ -f "${qmailofmipd_tls_key}" ]; then
