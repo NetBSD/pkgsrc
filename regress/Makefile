@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/11/10 10:40:55 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2019/03/21 21:45:30 rillig Exp $
 #
 # See https://www.netbsd.org/docs/pkgsrc/regression.html for more
 # information about these tests.
@@ -15,6 +15,7 @@ SUBDIR+=	check-portability
 SUBDIR+=	compiler
 SUBDIR+=	env-vars
 SUBDIR+=	ignore-tools
+SUBDIR+=	infra-unittests
 SUBDIR+=	make-env-phases
 SUBDIR+=	make-quoting
 SUBDIR+=	pkg-options
