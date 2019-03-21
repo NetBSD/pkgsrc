@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1243 2019/03/13 18:02:31 adam Exp $
+# $NetBSD: Makefile,v 1.1244 2019/03/21 10:21:33 he Exp $
 #
 
 COMMENT=	Networking tools
@@ -542,6 +542,7 @@ SUBDIR+=	p5-Net-Telnet
 SUBDIR+=	p5-Net-Telnet-Cisco
 SUBDIR+=	p5-Net-Trac
 SUBDIR+=	p5-Net-Twitter
+SUBDIR+=	p5-Net-Works
 SUBDIR+=	p5-Net-Write
 SUBDIR+=	p5-Net-XMPP
 SUBDIR+=	p5-Net-XWhois
