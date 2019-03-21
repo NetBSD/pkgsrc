@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1433 2019/03/21 21:49:32 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1434 2019/03/21 22:16:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2313,3 +2313,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-protobuf to 3.7.0 [adam 2019-03-21]
 	Updated textproc/py-regex to 2019.03.12 [adam 2019-03-21]
 	Updated devel/py-extratools to 0.8.2.1 [adam 2019-03-21]
+	Updated devel/gflags to 2.2.2 [adam 2019-03-21]
+	Updated benchmarks/google-benchmark to 1.4.1 [adam 2019-03-21]
