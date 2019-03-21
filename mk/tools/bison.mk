@@ -1,4 +1,4 @@
-# $NetBSD: bison.mk,v 1.2 2018/08/22 20:48:37 maya Exp $
+# $NetBSD: bison.mk,v 1.3 2019/03/21 21:47:29 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -43,10 +43,10 @@ _TOOLS_VERSION.bison!=							\
 	${SED} -n -e 's/^bison.* \([0-9]\..*\)/\1/p'
 _TOOLS_PKG.bison=		bison-${_TOOLS_VERSION.bison}
 _TOOLS_USE_PKGSRC.bison=	no
-.    for _dep_ in bison>=${BISON_REQD}
+.    for reqd in ${BISON_REQD}
 .      if !empty(_TOOLS_USE_PKGSRC.bison:M[nN][oO])
 _TOOLS_USE_PKGSRC.bison!=						\
-	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${_TOOLS_PKG.bison:Q}; then \
+	if ${PKG_ADMIN} pmatch bison\>=${reqd:Q} ${_TOOLS_PKG.bison:Q}; then \
 		${ECHO} no;						\
 	else								\
 		${ECHO} yes;						\
