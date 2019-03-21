@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2838 2019/03/19 14:29:35 jaapb Exp $
+# $NetBSD: Makefile,v 1.2839 2019/03/21 10:18:28 he Exp $
 #
 
 COMMENT=	Development utilities
@@ -1086,6 +1086,7 @@ SUBDIR+=	p5-Data-Dumper-Concise
 SUBDIR+=	p5-Data-Dumper-Names
 SUBDIR+=	p5-Data-GUID
 SUBDIR+=	p5-Data-Hierarchy
+SUBDIR+=	p5-Data-IEEE754
 SUBDIR+=	p5-Data-Integer
 SUBDIR+=	p5-Data-MessagePack
 SUBDIR+=	p5-Data-Munge
@@ -1110,6 +1111,7 @@ SUBDIR+=	p5-Data-TemporaryBag
 SUBDIR+=	p5-Data-UUID
 SUBDIR+=	p5-Data-UUID-Base64URLSafe
 SUBDIR+=	p5-Data-Uniqid
+SUBDIR+=	p5-Data-Validate-IP
 SUBDIR+=	p5-Data-Visitor
 SUBDIR+=	p5-Date-Business
 SUBDIR+=	p5-Date-Calc
