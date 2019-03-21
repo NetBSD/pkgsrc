@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2019/02/09 00:15:53 wen Exp $
+# $NetBSD: Makefile,v 1.57 2019/03/21 11:47:16 prlw1 Exp $
 
-DISTNAME=	drupal-7.64
+DISTNAME=	drupal-7.65
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	https://ftp.drupal.org/files/projects/
@@ -50,8 +50,7 @@ REPLACE_FILES.php+=	scripts/generate-d6-content.sh
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-install
 SUBST_FILES.conf=	drupal.conf
-SUBST_SED.conf=		-e "s|@DRUPAL@|${DRUPAL}|g"
-SUBST_SED.conf+=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_VARS.conf=	DRUPAL PREFIX
 SUBST_MESSAGE.conf=	Fixing configuration files.
 
 INSTALLATION_DIRS+=	${DRUPAL}/files ${DRUPAL}/sites \
