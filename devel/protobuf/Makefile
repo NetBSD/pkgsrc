@@ -1,34 +1,36 @@
-# $NetBSD: Makefile,v 1.17 2018/12/23 23:51:26 tsutsui Exp $
+# $NetBSD: Makefile,v 1.18 2019/03/21 21:26:23 adam Exp $
 
-.include "Makefile.common"
-
-DISTNAME=	protobuf-cpp-${PROTOBUFVER}
+DISTNAME=	protobuf-cpp-3.7.0
 PKGNAME=	${DISTNAME:S/-cpp//}
+CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
+GITHUB_PROJECT=	protobuf
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/protocolbuffers/protobuf
 COMMENT=	Google protocol buffers
+LICENSE=	modified-bsd
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_LANGUAGES=	c++11 c
-USE_TOOLS+=	autoreconf automake autoconf gmake
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-cpp//}
 
-SET_LIBDIR=	yes
-
+USE_LANGUAGES=		c c++11
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake
+GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	protobuf-lite.pc.in
 PKGCONFIG_OVERRIDE+=	protobuf.pc.in
+TEST_TARGET=		check
 
-TEST_TARGET=	check
+SET_LIBDIR=	yes
 
 .if ${MACHINE_ARCH} == "i386"
 # 64 bit atomic ops are required
 CXXFLAGS+=	-march=i586
 .endif
 
-pre-configure:
-	${RUN} cd ${WRKSRC} && ./autogen.sh
-
-.include "../../devel/googletest/buildlink3.mk"
+# included in third_party
+#.include "../../devel/googletest/buildlink3.mk"
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.0.4
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
