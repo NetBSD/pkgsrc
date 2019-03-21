@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1422 2019/03/21 11:01:26 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.1423 2019/03/21 11:05:12 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2299,3 +2299,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-test-xdist to 1.27.0 [adam 2019-03-21]
 	Updated www/py-cfscrape to 1.9.7 [adam 2019-03-21]
 	Updated net/unison2.51 to 2.51.2nb9 [jaapb 2019-03-21]
+	Updated net/unison to 2.48.15v4 [jaapb 2019-03-21]
