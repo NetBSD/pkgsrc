@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.699 2019/03/03 15:21:03 taca Exp $
+# $NetBSD: Makefile,v 1.700 2019/03/21 13:33:41 leot Exp $
 #
 
 COMMENT=	Security tools
@@ -202,6 +202,7 @@ SUBDIR+=	mirrordir
 SUBDIR+=	mit-krb5
 SUBDIR+=	mit-krb5-appl
 SUBDIR+=	mixminion
+SUBDIR+=	monocypher
 SUBDIR+=	mozilla-rootcerts
 SUBDIR+=	mozilla-rootcerts-openssl
 SUBDIR+=	msu
