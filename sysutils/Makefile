@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.804 2019/03/16 14:10:35 taca Exp $
+# $NetBSD: Makefile,v 1.805 2019/03/21 13:35:24 leot Exp $
 #
 
 COMMENT=	System utilities
@@ -25,7 +25,6 @@ SUBDIR+=	apcupsd
 SUBDIR+=	arm-trusted-firmware-fiptool
 SUBDIR+=	arm-trusted-firmware-sun50i-h6
 SUBDIR+=	arm-trusted-firmware-sun50i_a64
-SUBDIR+=	arm-trusted-firmware-sun50iw1p1
 SUBDIR+=	asapm
 SUBDIR+=	atitvout
 SUBDIR+=	attr
