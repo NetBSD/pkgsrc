@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1423 2019/03/21 11:05:12 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.1424 2019/03/21 11:42:36 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2300,3 +2300,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-cfscrape to 1.9.7 [adam 2019-03-21]
 	Updated net/unison2.51 to 2.51.2nb9 [jaapb 2019-03-21]
 	Updated net/unison to 2.48.15v4 [jaapb 2019-03-21]
+	Updated www/drupal8 to 8.6.13 [prlw1 2019-03-21]
