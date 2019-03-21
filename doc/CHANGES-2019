@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1420 2019/03/21 10:25:33 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1421 2019/03/21 10:33:59 he Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2288,6 +2288,12 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated fonts/mkfontscale to 1.2.1 [wiz 2019-03-21]
 	Added devel/p5-Data-IEEE754 version 0.02 [he 2019-03-21]
 	Updated audio/fasttracker2 to 2.142 [fox 2019-03-21]
+	Added devel/p5-Data-Validate-IP version 0.27 [he 2019-03-21]
+	Added math/p5-Math-Int128 version 0.22 [he 2019-03-21]
+	Added net/p5-Net-Works version 0.22 [he 2019-03-21]
+	Added net/p5-MaxMind-DB-Common version 0.040001 [he 2019-03-21]
+	Added net/p5-MaxMind-DB-Reader version 1.000013 [he 2019-03-21]
+	Added net/p5-MaxMind-DB-Writer version 0.300003 [he 2019-03-21]
 	Updated devel/py-uvloop to 0.12.2 [adam 2019-03-21]
 	Updated www/py-websocket-client to 0.56.0 [adam 2019-03-21]
 	Updated devel/py-test-xdist to 1.27.0 [adam 2019-03-21]
