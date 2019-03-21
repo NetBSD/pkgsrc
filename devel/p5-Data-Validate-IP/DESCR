@@ -1,0 +1,4 @@
+This module provides a number IP address validation subs that both validate
+and untaint their input. This includes both basic validation (is_ipv4() and
+is_ipv6()) and special cases like checking whether an address belongs to a
+specific network or whether an address is public or private (reserved).
