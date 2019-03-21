@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1429 2019/03/21 15:16:42 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.1430 2019/03/21 15:16:50 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2307,3 +2307,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-mako to 1.0.8 [adam 2019-03-21]
 	Updated databases/py-apsw to 3.27.2 [adam 2019-03-21]
 	Updated net/ucspi-tcp6 to 1.10.3 [schmonz 2019-03-21]
+	Updated net/ucspi-ssl to 0.999.10.8 [schmonz 2019-03-21]
