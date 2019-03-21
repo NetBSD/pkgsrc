@@ -1,12 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2018/05/25 16:01:06 minskim Exp $
-bin/extratools-flatten${PYVERSSUFFIX}
-bin/extratools-remap${PYVERSSUFFIX}
-bin/extratools-teststats${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.2 2019/03/21 21:49:00 adam Exp $
+bin/extratools-flatten-${PYVERSSUFFIX}
+bin/extratools-remap-${PYVERSSUFFIX}
+bin/extratools-teststats-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/extratools/__common.py
+${PYSITELIB}/extratools/__common.pyc
+${PYSITELIB}/extratools/__common.pyo
 ${PYSITELIB}/extratools/__init__.py
 ${PYSITELIB}/extratools/__init__.pyc
 ${PYSITELIB}/extratools/__init__.pyo
@@ -25,6 +28,16 @@ ${PYSITELIB}/extratools/dicttools.pyo
 ${PYSITELIB}/extratools/disjointsets.py
 ${PYSITELIB}/extratools/disjointsets.pyc
 ${PYSITELIB}/extratools/disjointsets.pyo
+${PYSITELIB}/extratools/gittools.py
+${PYSITELIB}/extratools/gittools.pyc
+${PYSITELIB}/extratools/gittools.pyo
+${PYSITELIB}/extratools/graphtools.py
+${PYSITELIB}/extratools/graphtools.pyc
+${PYSITELIB}/extratools/graphtools.pyo
+${PYSITELIB}/extratools/htmltools.py
+${PYSITELIB}/extratools/htmltools.pyc
+${PYSITELIB}/extratools/htmltools.pyo
+${PYSITELIB}/extratools/htmltools/emmet.js
 ${PYSITELIB}/extratools/jsontools.py
 ${PYSITELIB}/extratools/jsontools.pyc
 ${PYSITELIB}/extratools/jsontools.pyo
