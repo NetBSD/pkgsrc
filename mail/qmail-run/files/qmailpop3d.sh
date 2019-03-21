@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailpop3d.sh,v 1.32 2019/01/18 18:25:34 schmonz Exp $
+# $NetBSD: qmailpop3d.sh,v 1.33 2019/03/21 15:33:06 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-pop3d (POP3 server for Maildirs).
 #
@@ -10,12 +10,12 @@
 name="qmailpop3d"
 
 # User-settable rc.conf variables and their default values:
-: ${qmailpop3d_postenv:="SSL_UID=$(@ID@ -u @UCSPI_SSL_USER@) SSL_GID=$(@ID@ -g @UCSPI_SSL_GROUP@)"}
+: ${qmailpop3d_postenv:=""}
 : ${qmailpop3d_datalimit:="180000000"}
 : ${qmailpop3d_pretcpserver:=""}
 : ${qmailpop3d_tcpserver:="@PREFIX@/bin/sslserver"}
 : ${qmailpop3d_tcpflags:="-ne -vRl0"}
-: ${qmailpop3d_tcphost:="0"}
+: ${qmailpop3d_tcphost:=":0"}
 : ${qmailpop3d_tcpport:="110"}
 : ${qmailpop3d_tcprules:="@PKG_SYSCONFDIR@/control/tcprules/pop3"}
 : ${qmailpop3d_autocdb:="YES"}
@@ -71,6 +71,8 @@ qmailpop3d_disable_tls() {
 }
 
 qmailpop3d_enable_tls() {
+	qmailpop3d_postenv="SSL_UID=$(@ID@ -u @UCSPI_SSL_USER@) ${qmailpop3d_postenv}"
+	qmailpop3d_postenv="SSL_GID=$(@ID@ -g @UCSPI_SSL_GROUP@) ${qmailpop3d_postenv}"
 	qmailpop3d_postenv="DHFILE=${qmailpop3d_tls_dhparams} ${qmailpop3d_postenv}"
 	qmailpop3d_postenv="CERTFILE=${qmailpop3d_tls_cert} ${qmailpop3d_postenv}"
 	if [ -f "${qmailpop3d_tls_key}" ]; then
