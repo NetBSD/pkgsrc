@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1415 2019/03/20 19:29:31 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1416 2019/03/21 08:44:51 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2262,3 +2262,25 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/samba4 to 4.10.0 [adam 2019-03-20]
 	Updated lang/python35 to 3.5.7 [adam 2019-03-20]
 	Updated lang/python34 to 3.4.10 [adam 2019-03-20]
+	Updated devel/ruby-gnome2-atk to 3.3.6 [tsutsui 2019-03-21]
+	Updated devel/ruby-gnome2-gio to 3.3.6 [tsutsui 2019-03-21]
+	Updated devel/ruby-gnome2-glib to 3.3.6 [tsutsui 2019-03-21]
+	Updated devel/ruby-gnome2-gobject-introspection to 3.3.6 [tsutsui 2019-03-21]
+	Updated devel/ruby-gnome2-pango to 3.3.6 [tsutsui 2019-03-21]
+	Updated graphics/ruby-gnome2-cairo-gobject to 3.3.6 [tsutsui 2019-03-21]
+	Updated graphics/ruby-gnome2-clutter to 3.3.6 [tsutsui 2019-03-21]
+	Updated graphics/ruby-gnome2-clutter-gdk to 3.3.6 [tsutsui 2019-03-21]
+	Updated graphics/ruby-gnome2-clutter-gtk to 3.3.6 [tsutsui 2019-03-21]
+	Updated graphics/ruby-gnome2-gdk3 to 3.3.6 [tsutsui 2019-03-21]
+	Updated graphics/ruby-gnome2-gdkpixbuf to 3.3.6 [tsutsui 2019-03-21]
+	Updated graphics/ruby-gnome2-rsvg to 3.3.6 [tsutsui 2019-03-21]
+	Updated multimedia/ruby-gnome2-clutter-gstreamer to 3.3.6 [tsutsui 2019-03-21]
+	Updated multimedia/ruby-gnome2-gstreamer to 3.3.6 [tsutsui 2019-03-21]
+	Updated print/ruby-gnome2-poppler to 3.3.6 [tsutsui 2019-03-21]
+	Updated www/ruby-gnome2-webkit-gtk to 3.3.6 [tsutsui 2019-03-21]
+	Updated www/ruby-gnome2-webkit-gtk2 to 3.3.6 [tsutsui 2019-03-21]
+	Updated x11/ruby-gnome2-gtk to 3.3.6 [tsutsui 2019-03-21]
+	Updated x11/ruby-gnome2-gtk3 to 3.3.6 [tsutsui 2019-03-21]
+	Updated x11/ruby-gnome2-gtksourceview2 to 3.3.6 [tsutsui 2019-03-21]
+	Updated x11/ruby-gnome2-gtksourceview3 to 3.3.6 [tsutsui 2019-03-21]
+	Updated x11/ruby-gnome2-vte to 3.3.6 [tsutsui 2019-03-21]
