@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailsmtpd.sh,v 1.29 2019/01/18 18:25:34 schmonz Exp $
+# $NetBSD: qmailsmtpd.sh,v 1.30 2019/03/21 15:33:06 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-smtpd (SMTP service).
 #
@@ -11,12 +11,12 @@
 name="qmailsmtpd"
 
 # User-settable rc.conf variables and their default values:
-: ${qmailsmtpd_postenv:="SSL_UID=$(@ID@ -u @UCSPI_SSL_USER@) SSL_GID=$(@ID@ -g @UCSPI_SSL_GROUP@)"}
+: ${qmailsmtpd_postenv:=""}
 : ${qmailsmtpd_datalimit:="540000000"}
 : ${qmailsmtpd_pretcpserver:=""}
 : ${qmailsmtpd_tcpserver:="@PREFIX@/bin/sslserver"}
 : ${qmailsmtpd_tcpflags:="-ne -vRl0"}
-: ${qmailsmtpd_tcphost:="0"}
+: ${qmailsmtpd_tcphost:=":0"}
 : ${qmailsmtpd_tcpport:="25"}
 : ${qmailsmtpd_tcprules:="@PKG_SYSCONFDIR@/control/tcprules/smtp"}
 : ${qmailsmtpd_autocdb:="YES"}
@@ -70,6 +70,8 @@ qmailsmtpd_disable_tls() {
 }
 
 qmailsmtpd_enable_tls() {
+	qmailsmtpd_postenv="SSL_UID=$(@ID@ -u @UCSPI_SSL_USER@) ${qmailsmtpd_postenv}"
+	qmailsmtpd_postenv="SSL_GID=$(@ID@ -g @UCSPI_SSL_GROUP@) ${qmailsmtpd_postenv}"
 	qmailsmtpd_postenv="DHFILE=${qmailsmtpd_tls_dhparams} ${qmailsmtpd_postenv}"
 	qmailsmtpd_postenv="CERTFILE=${qmailsmtpd_tls_cert} ${qmailsmtpd_postenv}"
 	if [ -f "${qmailsmtpd_tls_key}" ]; then
