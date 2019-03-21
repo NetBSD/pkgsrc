@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1244 2019/03/21 10:21:33 he Exp $
+# $NetBSD: Makefile,v 1.1245 2019/03/21 10:24:22 he Exp $
 #
 
 COMMENT=	Networking tools
@@ -478,6 +478,7 @@ SUBDIR+=	p5-IO-Socket-INET6
 SUBDIR+=	p5-IO-Socket-Multicast
 SUBDIR+=	p5-IO-Socket-Timeout
 SUBDIR+=	p5-IP-Country
+SUBDIR+=	p5-MaxMind-DB-Common
 SUBDIR+=	p5-Net
 SUBDIR+=	p5-Net-AMQP
 SUBDIR+=	p5-Net-Akismet
