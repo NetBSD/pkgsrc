@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/03/22 20:56:16 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2019/03/22 22:41:06 rillig Exp $
 #
 
 DISTNAME=	# not applicable
@@ -17,6 +17,21 @@ PLIST_SRC=	# none
 REGRESS_TESTS+=	logging
 REGRESS_TESTS+=	awk sed sh sort tar tr
 USE_TOOLS+=	awk sed sh sort tar tr
+
+TOOLS_CREATE+=	script-dquot
+TOOLS_SCRIPT.script-dquot= \
+		echo "hello; world"
+
+TOOLS_CREATE+=	script-backslash
+TOOLS_SCRIPT.script-backslash= \
+		echo hello\;\ world
+
+# If both of the above tools are properly quoted during logging, the
+# semicolon in "hello; world" is never interpreted as a shell command
+# delimiter, and this tool is never run.
+TOOLS_CREATE+=	world
+TOOLS_SCRIPT.world= \
+		echo oops
 
 do-build:
 .for t in ${REGRESS_TESTS}
