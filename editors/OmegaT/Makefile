@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2019/03/01 13:04:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2019/03/22 23:42:33 ryoon Exp $
 #
 
-DISTNAME=	OmegaT_4.1.5_03_Beta_Without_JRE
+DISTNAME=	OmegaT_4.1.5_04_Beta_Without_JRE
 PKGNAME=	${DISTNAME:S/OmegaT_/OmegaT-/:S/_Without_JRE//:S/_Beta//:S/_/./g}
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=omegat/}
@@ -24,8 +24,8 @@ SUBST_CLASSES+=			fix-omegat
 SUBST_STAGE.fix-omegat=		pre-configure
 SUBST_MESSAGE.fix-omegat=	fixing pathes
 SUBST_FILES.fix-omegat=		OmegaT
-SUBST_SED.fix-omegat=		-e 's,@OMEGATDIR@,${PREFIX}/${OMEGATDIR}/,g'
-SUBST_SED.fix-omegat+=		-e 's,@JAVA_HOME@,${PKG_JAVA_HOME}/,g'
+SUBST_SED.fix-omegat=		-e 's,@OMEGATDIR@,${PREFIX}/${OMEGATDIR},g'
+SUBST_SED.fix-omegat+=		-e 's,@JAVA_HOME@,${PKG_JAVA_HOME},g'
 
 REPLACE_SH=	OmegaT
 

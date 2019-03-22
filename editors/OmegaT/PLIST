@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2019/03/01 13:04:49 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.15 2019/03/22 23:42:33 ryoon Exp $
 bin/OmegaT
 share/OmegaT/OmegaT.jar
 share/OmegaT/lib/ANTLR_3_License.txt
@@ -25,7 +25,7 @@ share/OmegaT/lib/commons-lang-2.6.jar
 share/OmegaT/lib/commons-logging-1.2.jar
 share/OmegaT/lib/dictzip-lib-0.8.2.jar
 share/OmegaT/lib/diffutils-1.2.1.jar
-share/OmegaT/lib/fontbox-2.0.11.jar
+share/OmegaT/lib/fontbox-2.0.12.jar
 share/OmegaT/lib/gnudiff4j-1.15.jar
 share/OmegaT/lib/gpl-1.txt
 share/OmegaT/lib/gpl-2.0.txt
@@ -54,7 +54,7 @@ share/OmegaT/lib/jsch.agentproxy.usocket-nc-0.0.9.jar
 share/OmegaT/lib/jsch_License.txt
 share/OmegaT/lib/jsonic-1.2.11.jar
 share/OmegaT/lib/junit-3.8.1.jar
-share/OmegaT/lib/juniversalchardet-2.1.0.jar
+share/OmegaT/lib/juniversalchardet-2.2.0.jar
 share/OmegaT/lib/jwordsplitter-4.1.jar
 share/OmegaT/lib/language-all-3.5.jar
 share/OmegaT/lib/language-ast-3.5.jar
@@ -115,7 +115,7 @@ share/OmegaT/lib/opennlp-tokenize-models-1.5.jar
 share/OmegaT/lib/opennlp-tools-1.6.0.jar
 share/OmegaT/lib/openregex-1.1.1.jar
 share/OmegaT/lib/org.eclipse.jgit-4.8.0.201706111038-r.jar
-share/OmegaT/lib/pdfbox-2.0.11.jar
+share/OmegaT/lib/pdfbox-2.0.12.jar
 share/OmegaT/lib/regex-weburl.js-license.txt
 share/OmegaT/lib/rstaui-2.5.7.jar
 share/OmegaT/lib/rsyntaxtextarea-2.5.8.jar
