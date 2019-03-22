@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/11/23 05:30:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2019/03/22 13:02:25 tnn Exp $
 
 DISTNAME=		gcc-8.2.0
 PKGNAME=		cross-aarch64-none-elf-${DISTNAME}
@@ -38,8 +38,6 @@ GNU_CONFIGURE=		yes
 
 GNU_CONFIGURE_PREFIX=	${AARCH64ELF_PREFIX}
 
-HOSTDIR=		build-${MACHINE_ARCH}--${LOWER_OPSYS}
-
 CONFIGURE_ARGS+=	--target=aarch64-none-elf
 CONFIGURE_ARGS+=	--enable-languages=c,c++
 CONFIGURE_ARGS+=	--with-newlib
@@ -47,8 +45,6 @@ CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 
 INFO_FILES=		yes
-
-.include "../../mk/compiler.mk"
 
 post-extract:
 	${LN} -s ${WRKDIR}/newlib-${NEWLIBVER}/newlib ${WRKSRC}/newlib
