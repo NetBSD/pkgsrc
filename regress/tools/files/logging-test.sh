@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: logging-test.sh,v 1.2 2019/03/22 22:13:21 rillig Exp $
+# $NetBSD: logging-test.sh,v 1.3 2019/03/22 22:41:06 rillig Exp $
 
 # Up to March 2019, the command logging for the wrapped tools didn't properly
 # quote the command line arguments. This meant the logging did not reflect
@@ -31,6 +31,8 @@ export TOOLS_WRAPPER_LOG
 (exec echo "squot" "'" "end")
 (exec echo "five" '\\\\\' "end")
 (exec mkdir "directory with spaces")
+(exec script-dquot)
+(exec script-backslash)
 
 unset TOOLS_WRAPPER_LOG
 
@@ -63,4 +65,18 @@ assert_file_equals "$nopath_log" <<'EOF'
 <.> echo  five \\\\\ end
 [*] WRKDIR/.tools/bin/mkdir directory with spaces
 <.> BINDIR/mkdir -p directory with spaces
+[*] WRKDIR/.tools/bin/script-dquot 
+[*] WRKDIR/.tools/bin/world 
+<.> echo oops
+oops
+[*] WRKDIR/.tools/bin/script-backslash 
+<.> echo hello\;\ world
 EOF
+
+# FIXME: The tool wrapper log must contain [*] and <.> equally often.
+# Explanation:
+# In WRKDIR/.tools/bin/script-dquot, the shell quoting is obviously wrong.
+# This results in "hello" being echoed to stdout instead of the log file.
+# This also results in the "hello" tool to be run.
+# The output of that tool is appended to the log file, as can be seen in
+# the tool wrapper script.
