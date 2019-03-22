@@ -1,4 +1,4 @@
-# $NetBSD: create.mk,v 1.8 2018/08/22 20:48:37 maya Exp $
+# $NetBSD: create.mk,v 1.9 2019/03/22 22:13:21 rillig Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -137,6 +137,8 @@ TOOLS_CMD.${_t_}?=		${TOOLS_DIR}/bin/${_t_}
 TOOLS_PATH.${_t_}?=		${FALSE}
 TOOLS_SCRIPT_DFLT.${_t_}=	\
 	${TOOLS_PATH.${_t_}} ${TOOLS_ARGS.${_t_}} "$$@"
+_TOOLS_LOGSCRIPT_DFLT.${_t_}=	\
+	${TOOLS_PATH.${_t_}} ${TOOLS_ARGS.${_t_}} $$*
 
 override-tools: ${TOOLS_CMD.${_t_}}
 
@@ -149,15 +151,18 @@ ${TOOLS_CMD.${_t_}}:
 	if ${TEST} -n ${TOOLS_SCRIPT.${_t_}:Q}""; then			\
 		create=wrapper;						\
 		script=${TOOLS_SCRIPT.${_t_}:Q};			\
+		logscript="$$script";					\
 	elif ${TEST} -n ${TOOLS_PATH.${_t_}:Q}""; then			\
 		if ${TEST} -n ${TOOLS_ARGS.${_t_}:Q}""; then		\
 			create=wrapper;					\
 			script=${TOOLS_SCRIPT_DFLT.${_t_}:Q};		\
+			logscript=${_TOOLS_LOGSCRIPT_DFLT.${_t_}:Q};	\
 		else							\
 			case ${TOOLS_PATH.${_t_}:Q}"" in		\
 			/*)	create=symlink ;;			\
 			*)	create=wrapper;				\
 				script=${TOOLS_SCRIPT_DFLT.${_t_}:Q};	\
+				logscript=${_TOOLS_LOGSCRIPT_DFLT.${_t_}:Q}; \
 			esac;						\
 		fi;							\
 	else								\
@@ -167,8 +172,8 @@ ${TOOLS_CMD.${_t_}}:
 	wrapper)							\
 		{ ${ECHO} '#!'${TOOLS_SHELL:Q};				\
 		  ${ECHO} 'wrapperlog="$${TOOLS_WRAPPER_LOG-'${_TOOLS_WRAP_LOG:Q}'}"'; \
-		  ${ECHO} '${ECHO} "[*] "'${.TARGET:Q}'" $$@" >> $$wrapperlog'; \
-		  ${ECHO} "${ECHO} \"<.> $$script\" >> \$$wrapperlog";	\
+		  ${ECHO} '${ECHO} "[*] "'${.TARGET:Q}'" $$*" >> $$wrapperlog'; \
+		  ${ECHO} "${ECHO} \"<.> $$logscript\" >> \$$wrapperlog"; \
 		  ${ECHO} "$$script";					\
 		} > ${.TARGET:Q};					\
 		${CHMOD} +x ${.TARGET:Q};				\
