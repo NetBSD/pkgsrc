@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/07/18 00:06:12 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2019/03/22 13:16:33 tnn Exp $
 
 DISTNAME=		gcc-6.2.0
 PKGNAME=		cross-h8300-elf-${DISTNAME}
@@ -14,7 +14,7 @@ HOMEPAGE=		#empty
 COMMENT=		GCC compiler for h8300-elf
 
 NEWLIBVER=		2.4.0
-SITES.newlib-${NEWLIBVER}.tar.gz=	ftp://sources.redhat.com/pub/newlib/
+SITES.newlib-${NEWLIBVER}.tar.gz=	https://www.sourceware.org/pub/newlib/
 
 DEPENDS+=	cross-h8300-elf-binutils-[0-9]*:../../cross/h8300-elf-binutils
 
