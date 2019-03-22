@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2018/12/16 14:20:22 adam Exp $
+# $NetBSD: Makefile,v 1.16 2019/03/22 08:23:04 adam Exp $
 
-DISTNAME=	leptonica-1.77.0
+DISTNAME=	leptonica-1.78.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=danbloomberg/}
 
