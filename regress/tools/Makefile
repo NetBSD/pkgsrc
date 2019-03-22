@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/06/11 11:36:14 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2019/03/22 20:56:16 rillig Exp $
 #
 
 DISTNAME=	# not applicable
@@ -14,7 +14,8 @@ LICENSE=	2-clause-bsd
 WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
 PLIST_SRC=	# none
-REGRESS_TESTS=	awk sed sh sort tar tr
+REGRESS_TESTS+=	logging
+REGRESS_TESTS+=	awk sed sh sort tar tr
 USE_TOOLS+=	awk sed sh sort tar tr
 
 do-build:

@@ -1,4 +1,4 @@
-# $NetBSD: tests.subr,v 1.2 2005/11/24 19:20:18 rillig Exp $
+# $NetBSD: tests.subr,v 1.3 2019/03/22 20:56:16 rillig Exp $
 #
 
 # usage: testcase_start <testname>
@@ -8,9 +8,7 @@ testcase_start() {
 
 # usage: assert_equal <testname> <expected> <got>
 assert_equal() {
-	case $2 in
-	"$3")	;;
-	*)	echo "[assert_equal:$1] expected \"$2\", got \"$3\"." 1>&2
-		return 1;;
-	esac
+	[ "x$2" = "x$3" ] && return 0
+	printf "error: assert_equal failed for %s:\nexpected: %s\nbut got:  %s\n" "$1" "$2" "$3" 1>&2
+	return 1
 }
