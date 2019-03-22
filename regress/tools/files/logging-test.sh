@@ -1,9 +1,14 @@
 #! /bin/sh
-# $NetBSD: logging-test.sh,v 1.1 2019/03/22 20:56:16 rillig Exp $
+# $NetBSD: logging-test.sh,v 1.2 2019/03/22 22:13:21 rillig Exp $
 
 # Up to March 2019, the command logging for the wrapped tools didn't properly
 # quote the command line arguments. This meant the logging did not reflect
 # the actual tool command line.
+#
+# As of March 2019 the logging has been fixed for tool wrappers that consist
+# only of a TOOLS_PATH.${tool} and TOOLS_ARGS.${tool}. For tools with custom
+# TOOLS_SCRIPTS it's much more difficult to do the quoting properly. See the
+# wrapper for makeinfo for a good example.
 
 set -eu
 
@@ -18,9 +23,14 @@ rm -f "$tools_log" "$nopath_log"
 TOOLS_WRAPPER_LOG="$tools_log"
 export TOOLS_WRAPPER_LOG
 
-# Forcibly call the echo from the tools directory. This tool is wrapped and
-# logged.
+# Forcibly call the tools from the tools directory, not the shell builtins.
+# The echo tool is a wrapped tool without additional arguments.
+# The mkdir tool is a wrapped tool that always gets the -p option.
 (exec echo "begin" "*" "*" "*" "end")
+(exec echo "dquot" "\"" "end")
+(exec echo "squot" "'" "end")
+(exec echo "five" '\\\\\' "end")
+(exec mkdir "directory with spaces")
 
 unset TOOLS_WRAPPER_LOG
 
@@ -31,11 +41,26 @@ assert_file_equals() {
 	assert_equal "$1" "$expected" "$actual"
 }
 
-sed 's,/.*/\.tools/,WRKDIR/.tools/,' < "$tools_log" > "$nopath_log"
+# Replace the variable parts from the output with placeholders.
+sed < "$tools_log" > "$nopath_log"		\
+	-e 's,/.*/\.tools/,WRKDIR/.tools/,'	\
+	-e 's,^<.> /[^ ]*/,<.> BINDIR/,'
 
-assert_file_equals "$nopath_log" <<EOF
+# The double space in the "echo  begin" below is because the echo command
+# doesn't get any additional arguments by the tool wrapper (TOOLS_ARGS.echo).
+#
+# The log doesn't show delimiters for the arguments, which makes the call to
+# mkdir ambiguous. Doing proper shell quoting would require code similar to
+# shquote from mk/scripts/shell-lib. This may make the tools wrapper slower.
+assert_file_equals "$nopath_log" <<'EOF'
 [*] WRKDIR/.tools/bin/echo begin * * * end
-<.> echo  begin tools.log tools.log tools.log end
+<.> echo  begin * * * end
+[*] WRKDIR/.tools/bin/echo dquot " end
+<.> echo  dquot " end
+[*] WRKDIR/.tools/bin/echo squot ' end
+<.> echo  squot ' end
+[*] WRKDIR/.tools/bin/echo five \\\\\ end
+<.> echo  five \\\\\ end
+[*] WRKDIR/.tools/bin/mkdir directory with spaces
+<.> BINDIR/mkdir -p directory with spaces
 EOF
-# FIXME: the above output is not quoted correctly.
-# The tools.log should not appear there.
