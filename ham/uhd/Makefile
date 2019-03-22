@@ -1,63 +1,55 @@
-# $NetBSD: Makefile,v 1.43 2019/03/15 00:49:01 mef Exp $
+# $NetBSD: Makefile,v 1.44 2019/03/22 17:58:27 adam Exp $
 
-# 3.13.0.1 is missing *_firmware_burner, and it's not clear that is correct.
-DISTNAME=		uhd-3.11.1.0
-PKGREVISION=		3
-CATEGORIES=		ham
-MASTER_SITES=           ${MASTER_SITE_GITHUB:=EttusResearch/}
-GITHUB_TAG=		v${PKGVERSION_NOREV}
+DISTNAME=	uhd-3.13.1.0
+CATEGORIES=	ham
+MASTER_SITES=	${MASTER_SITE_GITHUB:=EttusResearch/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-#HOMEPAGE=		http://code.ettus.com/redmine/ettus/projects/uhd/wiki
-COMMENT=		USRP (Universal Software Radio Peripheral) Hardware Drivers
-LICENSE=		gnu-gpl-v2
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/EttusResearch/uhd
+COMMENT=	USRP (Universal Software Radio Peripheral) Hardware Drivers
+LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=		${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah
-# moved to options.mk
-#UILD_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
-BUILD_DEPENDS+=		${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
+DEPENDS+=	${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
+DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-cheetah
-
-CMAKE_ARGS+=		-DRST2HTML_EXECUTABLE=${PREFIX}/bin/rst2html-${PYVERSSUFFIX}.py
-CMAKE_ARGS+=		-Wno-dev
+CMAKE_ARGS+=	-DRST2HTML_EXECUTABLE=${PREFIX}/bin/rst2html-${PYVERSSUFFIX}.py
+CMAKE_ARGS+=	-Wno-dev
+.include "../../lang/python/pyversion.mk"
+CMAKE_ARGS+=	-DPYTHON_EXECUTABLE=${PYTHONBIN}
+.if !empty(_PYTHON_VERSION:M3*)
+CMAKE_ARGS+=	-DENABLE_PYTHON3=ON
+.endif
 
 # Upstream says C++11 is required, even though it is not documented.
 # It is documented that gcc 4.8 is required, when using gcc.
 # https://github.com/EttusResearch/uhd/issues/236
-USE_LANGUAGES=		c c++11
-# c++11
-GCC_REQD+=		4.8
-USE_TOOLS=		cmake pkg-config
 USE_CMAKE=		yes
-# extra pax_global_header exists, and to avoid that:
+USE_LANGUAGES=		c c++11
+USE_TOOLS+=		pkg-config
+GCC_REQD+=		4.8
+# to avoid extra pax_global_header
 EXTRACT_USING=		gtar
-#EXTRACT_ELEMENTS=	uhd-${GITHUB_TAG}
-
-# Please note distribution has many stuff under uhd/, but build itself
-# needs under host/ only.  Those uhd/ stuff will be handled post-{patch,install}:
-WRKSRC=			${WRKDIR}/uhd-${PKGVERSION_NOREV}/host
+WRKSRC=			${WRKDIR}/${DISTNAME}/host
 
 # The files with their name uhd-xxxx, are moved down from uhd/xxxx for this process.
-REPLACE_PYTHON=	\
-	utils/latency/graph.py \
-	utils/latency/run_tests.py \
-	utils/uhd_images_downloader.py.in \
-	utils/usrp2_card_burner.py \
-	utils/usrp2_card_burner_gui.py \
-	utils/usrp_n2xx_net_burner.py \
-	utils/usrp_n2xx_net_burner_gui.py \
-	tests/devtest/benchmark_rate_test.py \
-	tests/devtest/run_testsuite.py \
-	tests/devtest/rx_samples_to_file_test.py \
-	tests/devtest/test_messages_test.py \
-	tests/devtest/test_pps_test.py \
-	tests/devtest/tx_bursts_test.py \
-	tests/devtest/uhd_test_base.py \
-	tests/devtest/usrp_probe.py \
-	tests/devtest/usrp_probe_test.py \
-	utils/converter_benchmark.py \
-
+REPLACE_PYTHON+=	utils/converter_benchmark.py
+REPLACE_PYTHON+=	utils/latency/graph.py
+REPLACE_PYTHON+=	utils/latency/run_tests.py
+REPLACE_PYTHON+=	utils/uhd_images_downloader.py.in
+REPLACE_PYTHON+=	utils/usrp2_card_burner.py
+REPLACE_PYTHON+=	utils/usrp2_card_burner_gui.py
+REPLACE_PYTHON+=	tests/devtest/benchmark_rate_test.py
+REPLACE_PYTHON+=	tests/devtest/multi_usrp_test.py
+REPLACE_PYTHON+=	tests/devtest/python_api_test.py
+REPLACE_PYTHON+=	tests/devtest/run_testsuite.py
+REPLACE_PYTHON+=	tests/devtest/rx_samples_to_file_test.py
+REPLACE_PYTHON+=	tests/devtest/test_messages_test.py
+REPLACE_PYTHON+=	tests/devtest/test_pps_test.py
+REPLACE_PYTHON+=	tests/devtest/tx_bursts_test.py
+REPLACE_PYTHON+=	tests/devtest/uhd_test_base.py
+REPLACE_PYTHON+=	tests/devtest/usrp_probe.py
+REPLACE_PYTHON+=	tests/devtest/usrp_probe_test.py
 
 INSTALLATION_DIRS+=	share/uhd
 INSTALLATION_DIRS+=	share/uhd/firmware
@@ -71,13 +63,11 @@ SUBST_FILES.man=	docs/CMakeLists.txt
 SUBST_SED.man=		-e '/UHD_INSTALL/s,$${PKG_MAN_DIR},${PREFIX}/${PKGMANDIR}/man1,'
 # UHD_INSTALL(FILES ${gzfile} DESTINATION ${PKG_MAN_DIR} COMPONENT manpages)
 
-# is it default ? and redundent ?
-PLIST_SRC=	${PKGDIR}/PLIST
 .include "options.mk"
 
-.include "../../lang/python/application.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/orc/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
