@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1436 2019/03/22 11:21:07 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1437 2019/03/22 14:01:01 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2319,3 +2319,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/grpc to 1.19.1 [adam 2019-03-22]
 	Updated devel/py-ipython to 7.4.0 [adam 2019-03-22]
 	Updated www/py-nbconvert to 5.4.1 [adam 2019-03-22]
+	Updated geography/gdal-lib to 2.4.1 [gdt 2019-03-22]
