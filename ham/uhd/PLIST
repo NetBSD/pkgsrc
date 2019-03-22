@@ -1,5 +1,4 @@
-@comment
-bin/octoclock_firmware_burner
+@comment $NetBSD: PLIST,v 1.13 2019/03/22 17:58:27 adam Exp $
 bin/uhd_cal_rx_iq_balance
 bin/uhd_cal_tx_dc_offset
 bin/uhd_cal_tx_iq_balance
@@ -7,8 +6,6 @@ bin/uhd_config_info
 bin/uhd_find_devices
 bin/uhd_image_loader
 bin/uhd_usrp_probe
-bin/usrp_n2xx_simple_net_burner
-bin/usrp_x3xx_fpga_burner
 include/uhd.h
 include/uhd/build_info.hpp
 include/uhd/cal/container.hpp
@@ -87,7 +84,6 @@ include/uhd/usrp_clock/usrp_clock.h
 include/uhd/utils/algorithm.hpp
 include/uhd/utils/assert_has.hpp
 include/uhd/utils/assert_has.ipp
-include/uhd/utils/atomic.hpp
 include/uhd/utils/byteswap.hpp
 include/uhd/utils/byteswap.ipp
 include/uhd/utils/cast.hpp
@@ -114,8 +110,7 @@ include/uhd/version.hpp
 lib/cmake/uhd/UHDConfig.cmake
 lib/cmake/uhd/UHDConfigVersion.cmake
 lib/libuhd.so
-lib/libuhd.so.3
-lib/libuhd.so.3.11
+lib/libuhd.so.3.13.1
 lib/pkgconfig/uhd.pc
 lib/uhd/examples/benchmark_rate
 lib/uhd/examples/gpio
@@ -153,11 +148,14 @@ lib/uhd/tests/convert_test
 lib/uhd/tests/devtest/benchmark_rate_test.py
 lib/uhd/tests/devtest/bitbang_test.py
 lib/uhd/tests/devtest/devtest_b2xx.py
+lib/uhd/tests/devtest/devtest_e320.py
 lib/uhd/tests/devtest/devtest_e3xx.py
 lib/uhd/tests/devtest/devtest_n3x0.py
 lib/uhd/tests/devtest/devtest_x3x0.py
 lib/uhd/tests/devtest/gpio_test.py
 lib/uhd/tests/devtest/list_sensors_test.py
+lib/uhd/tests/devtest/multi_usrp_test.py
+lib/uhd/tests/devtest/python_api_test.py
 lib/uhd/tests/devtest/run_testsuite.py
 lib/uhd/tests/devtest/rx_samples_to_file_test.py
 lib/uhd/tests/devtest/test_messages_test.py
@@ -168,6 +166,7 @@ lib/uhd/tests/devtest/usrp_probe.py
 lib/uhd/tests/devtest/usrp_probe_test.py
 lib/uhd/tests/dict_test
 lib/uhd/tests/eeprom_c_test
+lib/uhd/tests/eeprom_utils_test
 lib/uhd/tests/error_c_test
 lib/uhd/tests/error_test
 lib/uhd/tests/expert_test
@@ -188,6 +187,7 @@ lib/uhd/tests/ranges_test
 lib/uhd/tests/sensors_c_test
 lib/uhd/tests/sensors_test
 lib/uhd/tests/sid_t_test
+lib/uhd/tests/soft_reg_test
 lib/uhd/tests/sph_recv_test
 lib/uhd/tests/sph_send_test
 lib/uhd/tests/string_vector_c_test
@@ -209,9 +209,18 @@ lib/uhd/utils/uhd_images_downloader.py
 lib/uhd/utils/usrp2_card_burner.py
 lib/uhd/utils/usrp_burn_db_eeprom
 lib/uhd/utils/usrp_burn_mb_eeprom
-lib/uhd/utils/usrp_n2xx_net_burner.py
-lib/uhd/utils/usrp_n2xx_simple_net_burner
-lib/uhd/utils/usrp_x3xx_fpga_burner
+man/man1/octoclock_firmware_burner.1
+man/man1/uhd_cal_rx_iq_balance.1
+man/man1/uhd_cal_tx_dc_offset.1
+man/man1/uhd_cal_tx_iq_balance.1
+man/man1/uhd_config_info.1
+man/man1/uhd_find_devices.1
+man/man1/uhd_image_loader.1
+man/man1/uhd_images_downloader.1
+man/man1/uhd_usrp_probe.1
+man/man1/usrp2_card_burner.1
+man/man1/usrp_n2xx_simple_net_burner.1
+man/man1/usrp_x3xx_fpga_burner.1
 share/doc/uhd/LICENSE
 share/doc/uhd/README.md
 share/uhd/rfnoc/blocks/addsub.xml
@@ -219,6 +228,8 @@ share/uhd/rfnoc/blocks/block.xml
 share/uhd/rfnoc/blocks/ddc.xml
 share/uhd/rfnoc/blocks/ddc_eiscat.xml
 share/uhd/rfnoc/blocks/ddc_single.xml
+share/uhd/rfnoc/blocks/debug.xml
+share/uhd/rfnoc/blocks/digital_gain.xml
 share/uhd/rfnoc/blocks/dma_fifo.xml
 share/uhd/rfnoc/blocks/dma_fifo_x4.xml
 share/uhd/rfnoc/blocks/duc.xml
@@ -229,11 +240,18 @@ share/uhd/rfnoc/blocks/fir.xml
 share/uhd/rfnoc/blocks/fosphor.xml
 share/uhd/rfnoc/blocks/keep_one_in_n.xml
 share/uhd/rfnoc/blocks/logpwr.xml
+share/uhd/rfnoc/blocks/moving_avg.xml
 share/uhd/rfnoc/blocks/nullblock.xml
 share/uhd/rfnoc/blocks/ofdmeq.xml
 share/uhd/rfnoc/blocks/packetresizer.xml
+share/uhd/rfnoc/blocks/radio_e3xx.xml
 share/uhd/rfnoc/blocks/radio_eiscat.xml
 share/uhd/rfnoc/blocks/radio_magnesium.xml
+share/uhd/rfnoc/blocks/radio_neon.xml
 share/uhd/rfnoc/blocks/radio_x300.xml
+share/uhd/rfnoc/blocks/schmidlcox.xml
+share/uhd/rfnoc/blocks/serialdemod.xml
 share/uhd/rfnoc/blocks/siggen.xml
+share/uhd/rfnoc/blocks/splitstream.xml
+share/uhd/rfnoc/blocks/vector_iir.xml
 share/uhd/rfnoc/blocks/window.xml

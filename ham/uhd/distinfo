@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.18 2019/03/14 21:17:51 mef Exp $
+$NetBSD: distinfo,v 1.19 2019/03/22 17:58:27 adam Exp $
 
-SHA1 (uhd-3.11.1.0.tar.gz) = 11556dbec1a5d0ddd83906773a206d573ce6d849
-RMD160 (uhd-3.11.1.0.tar.gz) = 054a29ed977162557525e8b90d1a25fc31a2465c
-SHA512 (uhd-3.11.1.0.tar.gz) = a7cd5a3e94b4a71e2e3b26922810c0c11a4c790bd9d279e38d3c7f4c2a39efbf65ea47bff08c9b2720eec3cb42d54fd63f2e3502d5ee500cee4870c7828e2a7e
-Size (uhd-3.11.1.0.tar.gz) = 9300386 bytes
-SHA1 (patch-host_CMakeLists.txt) = 8d76bb150cbea380227a8a82a94daedb5dd619c2
+SHA1 (uhd-3.13.1.0.tar.gz) = 8211ee4aa782054488606a3dc1a3f6695c45c6cf
+RMD160 (uhd-3.13.1.0.tar.gz) = 325316973eea77a8336ea80ca1cd8c1860b7f459
+SHA512 (uhd-3.13.1.0.tar.gz) = 3ef85e0b166879456fba49ab2a2ffd7ce670130700833fb4ac20376b69bd85354632ee9f320760f94d275449f10a36fdc8c106683a060e02924304fc9bc50bf8
+Size (uhd-3.13.1.0.tar.gz) = 11587157 bytes
 SHA1 (patch-lib_include_uhdlib_experts_expert__nodes.hpp) = b741980f6a1bbeef07903a23de13474abc982f9e
