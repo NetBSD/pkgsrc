@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST.python,v 1.3 2018/02/19 12:51:56 ryoon Exp $
+@comment $NetBSD: PLIST.python,v 1.4 2019/03/22 23:51:18 ryoon Exp $
 lib/libqgispython.so
 lib/libqgispython.so.${PKGVERSION}
+lib/qgis/plugins/libarcgisfeatureserverprovider.so
+lib/qgis/plugins/libarcgismapserverprovider.so
 share/qgis/python/_dummy_thread/__init__.py
 share/qgis/python/_markupbase/__init__.py
 share/qgis/python/_thread/__init__.py
@@ -977,7 +979,7 @@ share/qgis/python/plugins/processing/algs/grass7/description/r.li.shape.ascii.tx
 share/qgis/python/plugins/processing/algs/grass7/description/r.li.shape.txt
 share/qgis/python/plugins/processing/algs/grass7/description/r.li.simpson.ascii.txt
 share/qgis/python/plugins/processing/algs/grass7/description/r.li.simpson.txt
-share/qgis/python/plugins/processing/algs/grass7/description/r.mapcalc.txt
+share/qgis/python/plugins/processing/algs/grass7/description/r.mapcalc.simple.txt
 share/qgis/python/plugins/processing/algs/grass7/description/r.mask.rast.txt
 share/qgis/python/plugins/processing/algs/grass7/description/r.mask.vect.txt
 share/qgis/python/plugins/processing/algs/grass7/description/r.median.txt
@@ -1080,6 +1082,7 @@ share/qgis/python/plugins/processing/algs/grass7/description/v.delaunay.txt
 share/qgis/python/plugins/processing/algs/grass7/description/v.dissolve.txt
 share/qgis/python/plugins/processing/algs/grass7/description/v.distance.txt
 share/qgis/python/plugins/processing/algs/grass7/description/v.drape.txt
+share/qgis/python/plugins/processing/algs/grass7/description/v.drape.where.txt
 share/qgis/python/plugins/processing/algs/grass7/description/v.edit.txt
 share/qgis/python/plugins/processing/algs/grass7/description/v.extract.txt
 share/qgis/python/plugins/processing/algs/grass7/description/v.extrude.txt

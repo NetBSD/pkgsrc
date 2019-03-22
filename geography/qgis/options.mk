@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2018/02/19 12:51:56 ryoon Exp $
+# $NetBSD: options.mk,v 1.10 2019/03/22 23:51:18 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qgis
 PKG_SUPPORTED_OPTIONS=	python
@@ -6,7 +6,7 @@ PKG_SUPPORTED_OPTIONS=	python
 # supported by gdal-lib and as a result we get a
 # warning when qgis is launched.
 # XXX fix gdal-lib and reenable this.
-#PKG_SUGGESTED_OPTIONS+= python
+PKG_SUGGESTED_OPTIONS+= python
 
 .include "../../mk/bsd.options.mk"
 
