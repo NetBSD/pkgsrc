@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1441 2019/03/22 17:58:52 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1442 2019/03/22 23:32:55 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2327,3 +2327,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/py-prometheus_client to 0.6.0 [adam 2019-03-22]
 	Updated www/py-notebook to 5.7.6 [adam 2019-03-22]
 	Updated ham/uhd to 3.13.1.0 [adam 2019-03-22]
+	Updated misc/libreoffice to 6.2.2.2 [ryoon 2019-03-22]
