@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/08/13 07:28:39 adam Exp $
+$NetBSD: distinfo,v 1.6 2019/03/22 17:48:49 adam Exp $
 
-SHA1 (nose2-0.8.0.tar.gz) = 14d74755ec452eefd2a73820c47667ace1d1cfa4
-RMD160 (nose2-0.8.0.tar.gz) = 761cd91316a245fda65b9e62648a1e209d9941fe
-SHA512 (nose2-0.8.0.tar.gz) = db9b95a28f9b497bf14bbf1d3e5f26254f4c6b313690fed26cdacfeaeaed65ffc88df3368698cf05a5b13c7a574beb80381f7da971bf720388dd77742a1d309a
-Size (nose2-0.8.0.tar.gz) = 142142 bytes
+SHA1 (nose2-0.9.0.tar.gz) = 1191626d9129e7afce946b3ea2d3df4475890b6e
+RMD160 (nose2-0.9.0.tar.gz) = 542766046bd865c1bc04991b0b1cdcd090ffbb35
+SHA512 (nose2-0.9.0.tar.gz) = 4d732494cd09573bd9dab300dc16e0cf481db0cf189aefe4bb04e8934fcef6a54f7b1c9f44ce8331463ab45c8fd265dd88a3f8e0fe4e93b43f392e78eacff35f
+Size (nose2-0.9.0.tar.gz) = 150059 bytes

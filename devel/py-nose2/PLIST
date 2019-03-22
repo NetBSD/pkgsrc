@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/08/13 07:28:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/03/22 17:48:49 adam Exp $
 bin/nose2-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -105,6 +105,9 @@ ${PYSITELIB}/nose2/plugins/mp.pyo
 ${PYSITELIB}/nose2/plugins/outcomes.py
 ${PYSITELIB}/nose2/plugins/outcomes.pyc
 ${PYSITELIB}/nose2/plugins/outcomes.pyo
+${PYSITELIB}/nose2/plugins/prettyassert.py
+${PYSITELIB}/nose2/plugins/prettyassert.pyc
+${PYSITELIB}/nose2/plugins/prettyassert.pyo
 ${PYSITELIB}/nose2/plugins/printhooks.py
 ${PYSITELIB}/nose2/plugins/printhooks.pyc
 ${PYSITELIB}/nose2/plugins/printhooks.pyo
@@ -189,6 +192,9 @@ ${PYSITELIB}/nose2/tests/functional/test_main.pyo
 ${PYSITELIB}/nose2/tests/functional/test_mp_plugin.py
 ${PYSITELIB}/nose2/tests/functional/test_mp_plugin.pyc
 ${PYSITELIB}/nose2/tests/functional/test_mp_plugin.pyo
+${PYSITELIB}/nose2/tests/functional/test_prettyassert.py
+${PYSITELIB}/nose2/tests/functional/test_prettyassert.pyc
+${PYSITELIB}/nose2/tests/functional/test_prettyassert.pyo
 ${PYSITELIB}/nose2/tests/functional/test_printhooks_plugin.py
 ${PYSITELIB}/nose2/tests/functional/test_printhooks_plugin.pyc
 ${PYSITELIB}/nose2/tests/functional/test_printhooks_plugin.pyo
@@ -201,6 +207,9 @@ ${PYSITELIB}/nose2/tests/functional/test_such_dsl.pyo
 ${PYSITELIB}/nose2/tests/functional/test_util.py
 ${PYSITELIB}/nose2/tests/functional/test_util.pyc
 ${PYSITELIB}/nose2/tests/functional/test_util.pyo
+${PYSITELIB}/nose2/tests/functional/test_verbosity.py
+${PYSITELIB}/nose2/tests/functional/test_verbosity.pyc
+${PYSITELIB}/nose2/tests/functional/test_verbosity.pyo
 ${PYSITELIB}/nose2/tests/unit/__init__.py
 ${PYSITELIB}/nose2/tests/unit/__init__.pyc
 ${PYSITELIB}/nose2/tests/unit/__init__.pyo
