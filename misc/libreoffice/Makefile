@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.184 2019/02/20 11:52:52 ryoon Exp $
+# $NetBSD: Makefile,v 1.185 2019/03/22 23:32:24 ryoon Exp $
 
-VERREL=		6.2.0
-VERRC=		3
+VERREL=		6.2.2
+VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
 CATEGORIES=	misc
@@ -89,7 +89,7 @@ MORE_DISTFILES= \
 	graphite2-minimal-1.3.10.tgz \
 	1725634df4bb3dcb1b2c91a6175f8789-GentiumBasic_1102.zip \
 	EmojiOneColor-SVGinOT-1.3.tar.gz \
-	libjpeg-turbo-1.5.2.tar.gz \
+	libjpeg-turbo-1.5.3.tar.gz \
 	alef-1.001.tar.gz \
 	c74b7223abe75949b4af367942d96c7a-crosextrafonts-carlito-20130920.tar.gz \
 	culmus-0.131.tar.gz \
