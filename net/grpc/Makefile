@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2018/08/04 21:25:58 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2019/03/22 08:25:51 adam Exp $
 
-DISTNAME=	grpc-1.13.1
+DISTNAME=	grpc-1.19.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grpc/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -21,12 +21,6 @@ CMAKE_ARGS+=	-DgRPC_GFLAGS_PROVIDER=package
 CMAKE_ARGS+=	-DgRPC_PROTOBUF_PROVIDER=package
 CMAKE_ARGS+=	-DgRPC_SSL_PROVIDER=package
 CMAKE_ARGS+=	-DgRPC_ZLIB_PROVIDER=package
-
-SUBST_CLASSES+=			fix-include
-SUBST_STAGE.fix-include=	pre-configure
-SUBST_MESSAGE.fix-include=	Fixing include paths.
-SUBST_FILES.fix-include=	CMakeLists.txt
-SUBST_SED.fix-include=		-e 's, /usr/local/, ${PREFIX}/,g'
 
 .include "../../benchmarks/google-benchmark/buildlink3.mk"
 .include "../../devel/gflags/buildlink3.mk"
