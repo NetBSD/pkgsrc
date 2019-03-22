@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2019/01/08 16:27:16 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2019/03/22 15:56:41 ryoon Exp $
 
-SHA1 (keepassxc-2.3.4.tar.gz) = 78cf952407fb8fcffb738291b7e08d94a3e0c9a7
-RMD160 (keepassxc-2.3.4.tar.gz) = dfc9f40dd7d233c9e91ebac6a653d92b5797f6c4
-SHA512 (keepassxc-2.3.4.tar.gz) = 630d4d1f77c44c27f3d27a1908c80a94265af9aae8774d80726f86f635eee6a10d8a426b0157ad03efe9f5111d7d67f5c785962ec3715c8374b9f38788fab863
-Size (keepassxc-2.3.4.tar.gz) = 5154621 bytes
-SHA1 (patch-src_gui_entry_EditEntryWidget.cpp) = 02970a3499a1041f60455886155539827f3427e2
+SHA1 (keepassxc-2.4.0-src.tar.xz) = 61242176a727b0c51ffcfa61ede2c2cfecc8801c
+RMD160 (keepassxc-2.4.0-src.tar.xz) = 46e4485aaef4823b80b92f4d708fa131a3fe1673
+SHA512 (keepassxc-2.4.0-src.tar.xz) = b7295f5983237606efd236955dc73d477992d944e547eeb2c3a267d846e70ce6f83e489f58e3bd9b5bb21decabd9052a4ea7b98bd98e8283abbb678ae19e5559
+Size (keepassxc-2.4.0-src.tar.xz) = 3252104 bytes
+SHA1 (patch-src_gui_DatabaseWidget.cpp) = 9bbd72c77cda0c3cbd1e0be2ea781b9d78a32481
