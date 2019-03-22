@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/01/08 16:27:16 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/03/22 15:56:41 ryoon Exp $
 bin/keepassxc
 bin/keepassxc-cli
 lib/keepassxc/libkeepassx-autotype-xcb.so
@@ -37,15 +37,16 @@ share/icons/hicolor/64x64/apps/keepassxc-locked.png
 share/icons/hicolor/64x64/apps/keepassxc-unlocked.png
 share/icons/hicolor/64x64/apps/keepassxc.png
 share/icons/hicolor/64x64/mimetypes/application-x-keepassxc.png
-share/icons/hicolor/scalable/apps/keepassxc-dark.svgz
-share/icons/hicolor/scalable/apps/keepassxc-locked.svgz
-share/icons/hicolor/scalable/apps/keepassxc-unlocked.svgz
-share/icons/hicolor/scalable/apps/keepassxc.svgz
-share/icons/hicolor/scalable/mimetypes/application-x-keepassxc.svgz
+share/icons/hicolor/scalable/apps/keepassxc-dark.svg
+share/icons/hicolor/scalable/apps/keepassxc-locked.svg
+share/icons/hicolor/scalable/apps/keepassxc-unlocked.svg
+share/icons/hicolor/scalable/apps/keepassxc.svg
+share/icons/hicolor/scalable/mimetypes/application-x-keepassxc.svg
 share/keepassxc/icons/application/128x128/apps/keepassxc-dark.png
 share/keepassxc/icons/application/128x128/apps/keepassxc-locked.png
 share/keepassxc/icons/application/128x128/apps/keepassxc-unlocked.png
 share/keepassxc/icons/application/128x128/apps/keepassxc.png
+share/keepassxc/icons/application/128x128/apps/preferences-system-network-sharing.png
 share/keepassxc/icons/application/128x128/mimetypes/application-x-keepassxc.png
 share/keepassxc/icons/application/16x16/actions/application-exit.png
 share/keepassxc/icons/application/16x16/actions/auto-type.png
@@ -64,6 +65,7 @@ share/keepassxc/icons/application/16x16/actions/entry-clone.png
 share/keepassxc/icons/application/16x16/actions/entry-delete.png
 share/keepassxc/icons/application/16x16/actions/entry-edit.png
 share/keepassxc/icons/application/16x16/actions/entry-new.png
+share/keepassxc/icons/application/16x16/actions/favicon-download.png
 share/keepassxc/icons/application/16x16/actions/group-delete.png
 share/keepassxc/icons/application/16x16/actions/group-edit.png
 share/keepassxc/icons/application/16x16/actions/group-empty-trash.png
@@ -76,6 +78,7 @@ share/keepassxc/icons/application/16x16/actions/password-generate.png
 share/keepassxc/icons/application/16x16/actions/password-generator.png
 share/keepassxc/icons/application/16x16/actions/password-show-off.png
 share/keepassxc/icons/application/16x16/actions/password-show-on.png
+share/keepassxc/icons/application/16x16/actions/system-help.png
 share/keepassxc/icons/application/16x16/actions/system-search.png
 share/keepassxc/icons/application/16x16/actions/url-copy.png
 share/keepassxc/icons/application/16x16/actions/username-copy.png
@@ -97,6 +100,7 @@ share/keepassxc/icons/application/22x22/actions/entry-clone.png
 share/keepassxc/icons/application/22x22/actions/entry-delete.png
 share/keepassxc/icons/application/22x22/actions/entry-edit.png
 share/keepassxc/icons/application/22x22/actions/entry-new.png
+share/keepassxc/icons/application/22x22/actions/favicon-download.png
 share/keepassxc/icons/application/22x22/actions/group-empty-trash.png
 share/keepassxc/icons/application/22x22/actions/help-about.png
 share/keepassxc/icons/application/22x22/actions/message-close.png
@@ -104,6 +108,7 @@ share/keepassxc/icons/application/22x22/actions/paperclip.png
 share/keepassxc/icons/application/22x22/actions/password-copy.png
 share/keepassxc/icons/application/22x22/actions/password-generate.png
 share/keepassxc/icons/application/22x22/actions/password-generator.png
+share/keepassxc/icons/application/22x22/actions/system-help.png
 share/keepassxc/icons/application/22x22/actions/system-search.png
 share/keepassxc/icons/application/22x22/actions/url-copy.png
 share/keepassxc/icons/application/22x22/actions/username-copy.png
@@ -139,6 +144,7 @@ share/keepassxc/icons/application/32x32/actions/entry-clone.png
 share/keepassxc/icons/application/32x32/actions/entry-delete.png
 share/keepassxc/icons/application/32x32/actions/entry-edit.png
 share/keepassxc/icons/application/32x32/actions/entry-new.png
+share/keepassxc/icons/application/32x32/actions/favicon-download.png
 share/keepassxc/icons/application/32x32/actions/group-empty-trash.png
 share/keepassxc/icons/application/32x32/actions/help-about.png
 share/keepassxc/icons/application/32x32/actions/key-enter.png
@@ -148,6 +154,7 @@ share/keepassxc/icons/application/32x32/actions/password-generate.png
 share/keepassxc/icons/application/32x32/actions/password-generator.png
 share/keepassxc/icons/application/32x32/actions/password-show-off.png
 share/keepassxc/icons/application/32x32/actions/password-show-on.png
+share/keepassxc/icons/application/32x32/actions/system-help.png
 share/keepassxc/icons/application/32x32/actions/system-search.png
 share/keepassxc/icons/application/32x32/actions/url-copy.png
 share/keepassxc/icons/application/32x32/actions/username-copy.png
@@ -171,11 +178,11 @@ share/keepassxc/icons/application/64x64/apps/keepassxc-locked.png
 share/keepassxc/icons/application/64x64/apps/keepassxc-unlocked.png
 share/keepassxc/icons/application/64x64/apps/keepassxc.png
 share/keepassxc/icons/application/64x64/mimetypes/application-x-keepassxc.png
-share/keepassxc/icons/application/scalable/apps/keepassxc-dark.svgz
-share/keepassxc/icons/application/scalable/apps/keepassxc-locked.svgz
-share/keepassxc/icons/application/scalable/apps/keepassxc-unlocked.svgz
-share/keepassxc/icons/application/scalable/apps/keepassxc.svgz
-share/keepassxc/icons/application/scalable/mimetypes/application-x-keepassxc.svgz
+share/keepassxc/icons/application/scalable/apps/keepassxc-dark.svg
+share/keepassxc/icons/application/scalable/apps/keepassxc-locked.svg
+share/keepassxc/icons/application/scalable/apps/keepassxc-unlocked.svg
+share/keepassxc/icons/application/scalable/apps/keepassxc.svg
+share/keepassxc/icons/application/scalable/mimetypes/application-x-keepassxc.svg
 share/keepassxc/icons/database/C00_Password.png
 share/keepassxc/icons/database/C01_Package_Network.png
 share/keepassxc/icons/database/C02_MessageBox_Warning.png
@@ -258,22 +265,28 @@ share/keepassxc/translations/keepassx_es.qm
 share/keepassxc/translations/keepassx_eu.qm
 share/keepassxc/translations/keepassx_fi.qm
 share/keepassxc/translations/keepassx_fr.qm
+share/keepassxc/translations/keepassx_he.qm
+share/keepassxc/translations/keepassx_hr_HR.qm
 share/keepassxc/translations/keepassx_hu.qm
 share/keepassxc/translations/keepassx_id.qm
+share/keepassxc/translations/keepassx_is_IS.qm
 share/keepassxc/translations/keepassx_it.qm
 share/keepassxc/translations/keepassx_ja.qm
 share/keepassxc/translations/keepassx_kk.qm
 share/keepassxc/translations/keepassx_ko.qm
+share/keepassxc/translations/keepassx_la.qm
 share/keepassxc/translations/keepassx_lt.qm
+share/keepassxc/translations/keepassx_lv.qm
 share/keepassxc/translations/keepassx_nb.qm
 share/keepassxc/translations/keepassx_nl_NL.qm
 share/keepassxc/translations/keepassx_pl.qm
+share/keepassxc/translations/keepassx_pt.qm
 share/keepassxc/translations/keepassx_pt_BR.qm
 share/keepassxc/translations/keepassx_pt_PT.qm
 share/keepassxc/translations/keepassx_ro.qm
 share/keepassxc/translations/keepassx_ru.qm
-share/keepassxc/translations/keepassx_sl_SI.qm
 share/keepassxc/translations/keepassx_sk.qm
+share/keepassxc/translations/keepassx_sl_SI.qm
 share/keepassxc/translations/keepassx_sr.qm
 share/keepassxc/translations/keepassx_sv.qm
 share/keepassxc/translations/keepassx_th.qm
@@ -281,6 +294,7 @@ share/keepassxc/translations/keepassx_tr.qm
 share/keepassxc/translations/keepassx_uk.qm
 share/keepassxc/translations/keepassx_zh_CN.qm
 share/keepassxc/translations/keepassx_zh_TW.qm
+share/keepassxc/wizard/background-pixmap.png
 share/keepassxc/wordlists/eff_large.wordlist
 share/metainfo/org.keepassxc.KeePassXC.appdata.xml
 share/mime/packages/keepassxc.xml
