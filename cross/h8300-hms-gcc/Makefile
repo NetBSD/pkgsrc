@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/12/19 08:49:37 obache Exp $
+# $NetBSD: Makefile,v 1.30 2019/03/22 13:16:33 tnn Exp $
 
 DISTNAME=		gcc-core-3.1
 PKGNAME=		cross-h8300-hms-gcc-3.1
@@ -9,7 +9,7 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			${DISTNAME:S/-core-/-g++-/}${EXTRACT_SUFX} \
 			newlib-1.10.0.tar.gz
 
-SITES.newlib-1.10.0.tar.gz=	ftp://sources.redhat.com/pub/newlib/
+SITES.newlib-1.10.0.tar.gz=	https://www.sourceware.org/pub/newlib/
 PATCH_SITES=		${MASTER_SITE_SOURCEFORGE:=h8300-hms/}
 PATCHFILES=		h8300-hms-gcc-3.1-1.patch
 PATCH_DIST_ARGS=	-d ${SRCDIR} -E -p1
