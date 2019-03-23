@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.506 2019/03/05 07:47:31 taca Exp $
+# $NetBSD: Makefile,v 1.507 2019/03/23 10:55:06 tsutsui Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -166,6 +166,7 @@ SUBDIR+=	libmateweather
 SUBDIR+=	libquantum
 SUBDIR+=	libreoffice
 SUBDIR+=	libreoffice5-bin
+SUBDIR+=	libreoffice6-bin
 SUBDIR+=	libutf
 SUBDIR+=	lile
 SUBDIR+=	linux-words
