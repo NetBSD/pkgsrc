@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST.proglinks,v 1.1 2019/03/23 10:52:09 tsutsui Exp $
+bin/sbase
+bin/scalc
+bin/sdraw
+bin/simpress
+bin/smath
+bin/soffice
+bin/swriter
+share/applications/libreoffice-bin-base.desktop
+share/applications/libreoffice-bin-calc.desktop
+share/applications/libreoffice-bin-draw.desktop
+share/applications/libreoffice-bin-impress.desktop
+share/applications/libreoffice-bin-math.desktop
+share/applications/libreoffice-bin-writer.desktop
