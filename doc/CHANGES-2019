@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1448 2019/03/23 14:25:12 tsutsui Exp $
+$NetBSD: CHANGES-2019,v 1.1449 2019/03/23 17:20:38 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2334,3 +2334,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/ap2-auth-mellon to 0.14.2 [manu 2019-03-23]
 	Added misc/libreoffice6-bin version 6.2.2 [tsutsui 2019-03-23]
 	Updated emulators/PC6001VX to 3.1.2 [tsutsui 2019-03-23]
+	Updated pkgtools/pkg_rolling-replace to 0.24.5 [gdt 2019-03-23]
