@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.33 2015/11/03 21:33:55 agc Exp $
+$NetBSD: distinfo,v 1.34 2019/03/23 18:12:32 gutteridge Exp $
 
 SHA1 (dia-0.97.3.tar.xz) = 316393951daebd186ba387e1cd6e34160a458c39
 RMD160 (dia-0.97.3.tar.xz) = a984efa1663cc154f4394060af37fab146f99175
 SHA512 (dia-0.97.3.tar.xz) = 34298980be930b87cb4a636344e4cb2a7e43eedc00b0969a5e446cee9b74b616fdc8c798efcb9a5832b98741f2e20632a44037b2bcb436f59591d531ef441efa
 Size (dia-0.97.3.tar.xz) = 5548500 bytes
 SHA1 (patch-aa) = bad171ff4f379030f05c613b362e669a53d7f6da
-SHA1 (patch-app_load_save.c) = ee6c58a9db031fc89c61939a6c3fce90dae75a8d
+SHA1 (patch-app_load_save.c) = 2956f9ad67b8270cd84a8421abbb676af29338f2
 SHA1 (patch-be) = 08db7c440eea343895cced29522dd487f11d4773
 SHA1 (patch-ca) = 8737f3ff19244e2f87ffb571da21159bc2248648
 SHA1 (patch-cb) = 02210139cbf38e91a61ad1e090f63f5635bb26ef
