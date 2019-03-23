@@ -1,8 +1,8 @@
-$NetBSD: patch-app_load_save.c,v 1.1 2015/06/09 08:55:23 wiz Exp $
+$NetBSD: patch-app_load_save.c,v 1.2 2019/03/23 18:12:32 gutteridge Exp $
 
 Allow NetBSD and OpenBSD to compile by exposing the fchmod() prototype.
 This has been reported upstream as:
-https://bugzilla.gnome.org/show_bug.cgi?id=750536
+https://gitlab.gnome.org/GNOME/dia/issues/356
 
 --- app/load_save.c.orig    2014-08-24 11:46:01.000000000 -0400
 +++ app/load_save.c
