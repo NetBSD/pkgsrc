@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/03/23 11:58:05 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2019/03/23 14:16:11 tnn Exp $
 
 DISTNAME=		gcc-8.2.0
 PKGNAME=		cross-aarch64-none-elf-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${PKGVERSION_NOREV}/}
 NEWLIBVER=              3.0.0
 SITES.newlib-${NEWLIBVER}.tar.gz=https://www.sourceware.org/pub/newlib/
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
+DISTFILES=		${DEFAULT_DISTFILES} \
 			newlib-${NEWLIBVER}.tar.gz
 EXTRACT_USING=		bsdtar
 
@@ -27,7 +27,7 @@ USE_LANGUAGES+=		c c++
 AARCH64ELF_PREFIX=	${PREFIX}/cross-aarch64-none-elf
 OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
-CONFIGURE_SCRIPT=	../${DISTNAME}/configure
+CONFIGURE_SCRIPT=	${WRKSRC}/configure
 
 CONFIG_SHELL=		${TOOLS_PATH.bash}
 WRAPPER_SHELL=		${TOOLS_PATH.bash}

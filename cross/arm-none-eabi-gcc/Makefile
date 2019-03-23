@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/03/22 13:16:33 tnn Exp $
+# $NetBSD: Makefile,v 1.24 2019/03/23 14:16:11 tnn Exp $
 
 DISTNAME=		gcc-8.2.0
 PKGNAME=		cross-arm-none-eabi-${DISTNAME}
@@ -29,7 +29,7 @@ USE_LANGUAGES+=		c c++
 ARMELF_PREFIX=		${PREFIX}/cross-arm-none-eabi
 OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
-CONFIGURE_SCRIPT=	../${DISTNAME}/configure
+CONFIGURE_SCRIPT=	${WRKSRC}/configure
 
 CONFIG_SHELL=		${TOOLS_PATH.bash}
 WRAPPER_SHELL=		${TOOLS_PATH.bash}
