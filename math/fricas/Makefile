@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2017/04/13 14:35:31 asau Exp $
+# $NetBSD: Makefile,v 1.27 2019/03/23 00:20:45 ryoon Exp $
 
-PKGNAME=		fricas-1.3.1
+PKGNAME=		fricas-1.3.5
 DISTNAME=		${PKGNAME_NOREV}-full
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fricas/}
