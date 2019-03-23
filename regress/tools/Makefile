@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/03/22 22:41:06 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2019/03/23 22:59:11 rillig Exp $
 #
 
 DISTNAME=	# not applicable
@@ -32,6 +32,16 @@ TOOLS_SCRIPT.script-backslash= \
 TOOLS_CREATE+=	world
 TOOLS_SCRIPT.world= \
 		echo oops
+
+# The script for this example tool contains single quotes, double quotes
+# and backslashes to demonstrate that these are properly logged.
+TOOLS_CREATE+=	for-loop
+TOOLS_SCRIPT.for-loop= \
+	printf '%s' "$$0"; \
+	for arg in "$$@"; do \
+		printf ' <%s>' "$$arg"; \
+	done; \
+	printf '\n'
 
 do-build:
 .for t in ${REGRESS_TESTS}
