@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/03/22 13:16:33 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2019/03/23 11:58:05 tnn Exp $
 
 DISTNAME=		gcc-8.2.0
 PKGNAME=		cross-aarch64-none-elf-${DISTNAME}
@@ -31,9 +31,7 @@ CONFIGURE_SCRIPT=	../${DISTNAME}/configure
 
 CONFIG_SHELL=		${TOOLS_PATH.bash}
 WRAPPER_SHELL=		${TOOLS_PATH.bash}
-USE_TOOLS+=		bash perl
-
-USE_TOOLS+=		gmake makeinfo
+USE_TOOLS+=		bash gmake makeinfo perl
 GNU_CONFIGURE=		yes
 
 GNU_CONFIGURE_PREFIX=	${AARCH64ELF_PREFIX}
