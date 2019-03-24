@@ -53,7 +53,11 @@ func (s *Suite) Test_Package_pkgnameFromDistname(c *check.C) {
 	pkg.vars.Define("PKGNAME", t.NewMkLine("Makefile", 5, "PKGNAME=dummy"))
 
 	test := func(pkgname, distname, expectedPkgname string) {
-		c.Check(pkg.pkgnameFromDistname(pkgname, distname), equals, expectedPkgname)
+		merged, ok := pkg.pkgnameFromDistname(pkgname, distname)
+		if !ok {
+			merged = ""
+		}
+		c.Check(merged, equals, expectedPkgname)
 	}
 
 	test("pkgname-1.0", "whatever", "pkgname-1.0")
@@ -63,11 +67,15 @@ func (s *Suite) Test_Package_pkgnameFromDistname(c *check.C) {
 	test("${DISTNAME:S|^lib||}", "libncurses", "ncurses")
 	test("${DISTNAME:S|^lib||}", "mylib", "mylib")
 	test("${DISTNAME:tl:S/-/./g:S/he/-/1}", "SaxonHE9-5-0-1J", "saxon-9.5.0.1j")
-	test("${DISTNAME:C/beta/.0./}", "fspanel-0.8beta1", "${DISTNAME:C/beta/.0./}")
+	test("${DISTNAME:C/beta/.0./}", "fspanel-0.8beta1", "fspanel-0.8.0.1")
+	test("${DISTNAME:C/Gtk2/p5-gtk2/}", "Gtk2-1.0", "p5-gtk2-1.0")
 	test("${DISTNAME:S/-0$/.0/1}", "aspell-af-0.50-0", "aspell-af-0.50.0")
+	test("${DISTNAME:M*.tar.gz:C,\\..*,,}", "aspell-af-0.50-0", "")
 
 	// FIXME: Should produce a parse error since the :S modifier is malformed; see Test_MkParser_MkTokens.
 	test("${DISTNAME:S,a,b,c,d}", "aspell-af-0.50-0", "bspell-af-0.50-0")
+
+	test("${DISTFILE:C,\\..*,,}", "aspell-af-0.50-0", "")
 }
 
 func (s *Suite) Test_Package_CheckVarorder(c *check.C) {
@@ -356,6 +364,20 @@ func (s *Suite) Test_Package_determineEffectivePkgVars__same(c *check.C) {
 			"This assignment is probably redundant since PKGNAME is ${DISTNAME} by default.")
 }
 
+func (s *Suite) Test_Package_determineEffectivePkgVars__simple_reference(c *check.C) {
+	t := s.Init(c)
+
+	pkg := t.SetUpPackage("category/package",
+		"DISTNAME=\tdistname-1.0",
+		"PKGNAME=\t${DISTNAME}")
+
+	G.Check(pkg)
+
+	t.CheckOutputLines(
+		"NOTE: ~/category/package/Makefile:4: " +
+			"This assignment is probably redundant since PKGNAME is ${DISTNAME} by default.")
+}
+
 func (s *Suite) Test_Package_determineEffectivePkgVars__invalid_DISTNAME(c *check.C) {
 	t := s.Init(c)
 
@@ -367,6 +389,39 @@ func (s *Suite) Test_Package_determineEffectivePkgVars__invalid_DISTNAME(c *chec
 	t.CheckOutputLines(
 		"WARN: ~/category/package/Makefile:3: " +
 			"As DISTNAME is not a valid package name, please define the PKGNAME explicitly.")
+}
+
+func (s *Suite) Test_Package_determineEffectivePkgVars__C_modifier(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("x11/p5-gtk2",
+		"DISTNAME=\tGtk2-1.0",
+		"PKGNAME=\t${DISTNAME:C:Gtk2:p5-gtk2:}")
+	pkg := NewPackage(t.File("x11/p5-gtk2"))
+
+	files, mklines, allLines := pkg.load()
+	pkg.check(files, mklines, allLines)
+
+	t.Check(pkg.EffectivePkgname, equals, "p5-gtk2-1.0")
+}
+
+// In some cases the PKGNAME is derived from DISTNAME, and it seems as
+// if the :C modifier would not affect anything. This may nevertheless
+// be on purpose since the modifier may apply to future versions and
+// do things like replacing a "-1" with a ".1".
+func (s *Suite) Test_Package_determineEffectivePkgVars__ineffective_C_modifier(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"DISTNAME=\tdistname-1.0",
+		"PKGNAME=\t${DISTNAME:C:does_not_match:replacement:}")
+	pkg := NewPackage(t.File("category/package"))
+
+	files, mklines, allLines := pkg.load()
+	pkg.check(files, mklines, allLines)
+
+	t.Check(pkg.EffectivePkgname, equals, "distname-1.0")
+	t.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_Package_checkPossibleDowngrade(c *check.C) {
@@ -507,9 +562,10 @@ func (s *Suite) Test_Package__varuse_at_load_time(c *check.C) {
 	t.CheckOutputLines(
 		"WARN: ~/category/pkgbase/Makefile:14: To use the tool ${FALSE} at load time, bsd.prefs.mk has to be included before.",
 		// TODO: "before including bsd.prefs.mk in line ###".
-		"WARN: ~/category/pkgbase/Makefile:15: To use the tool ${NICE} at load time, it has to be added to USE_TOOLS before including bsd.prefs.mk.",
+		// TODO: ${NICE} could be used at load time if it were added to USE_TOOLS earlier.
+		"WARN: ~/category/pkgbase/Makefile:15: The tool ${NICE} cannot be used at load time.",
 		"WARN: ~/category/pkgbase/Makefile:16: To use the tool ${TRUE} at load time, bsd.prefs.mk has to be included before.",
-		"WARN: ~/category/pkgbase/Makefile:25: To use the tool ${NICE} at load time, it has to be added to USE_TOOLS before including bsd.prefs.mk.")
+		"WARN: ~/category/pkgbase/Makefile:25: The tool ${NICE} cannot be used at load time.")
 }
 
 func (s *Suite) Test_Package_loadPackageMakefile(c *check.C) {
@@ -1167,6 +1223,34 @@ func (s *Suite) Test_Package_checkLocallyModified(c *check.C) {
 	G.Check(pkg)
 
 	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Package_checkLocallyModified__directory(c *check.C) {
+	t := s.Init(c)
+
+	G.Username = "example-user"
+	t.CreateFileLines("category/package/CVS/Entries",
+		"/Makefile//modified//",
+		"D/patches////")
+	t.CreateFileDummyPatch("category/package/patches/patch-aa")
+
+	pkg := t.SetUpPackage("category/package",
+		"MAINTAINER=\tmaintainer@example.org")
+	t.CreateFileLines("category/package/distinfo",
+		RcsID,
+		"",
+		"SHA1 (patch-aa) = ebbf34b0641bcb508f17d5a27f2bf2a536d810ac")
+
+	G.Check(pkg)
+
+	t.CheckOutputLines(
+		"NOTE: ~/category/package/Makefile: "+
+			"Please only commit changes that "+
+			"maintainer@example.org would approve.",
+		// FIXME: There must be no warning for directories.
+		"NOTE: ~/category/package/patches: "+
+			"Please only commit changes that "+
+			"maintainer@example.org would approve.")
 }
 
 // In practice the distinfo file can always be autofixed since it has
