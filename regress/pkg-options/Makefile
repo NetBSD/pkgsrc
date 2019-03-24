@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/03/04 11:02:25 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2019/03/24 20:57:59 rillig Exp $
 #
 
 DISTNAME=	regress-pkg-options-1.0
@@ -16,7 +16,7 @@ do-test:
 	@${_PKG_SILENT}${_PKG_DEBUG}					\
 	${ECHO_MSG} "Running testcase "${t:Q};				\
 	${MAKE} ${MAKEFLAGS} -s -f ${FILESDIR:Q}/${t:Q}.mk test		\
-	| diff - ${FILESDIR:Q}/${t:Q}.out
+	| diff -u ${FILESDIR:Q}/${t:Q}.out -
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
