@@ -244,7 +244,7 @@ func (mklines *MkLinesImpl) collectDefinedVariables() {
 			continue
 		}
 
-		defineVar(mkline, mkline.Varname())
+		defineVar(G.Pkg, mklines, mkline, mkline.Varname())
 
 		varcanon := mkline.Varcanon()
 		switch varcanon {
@@ -291,7 +291,7 @@ func (mklines *MkLinesImpl) collectDefinedVariables() {
 		case "OPSYSVARS":
 			for _, opsysVar := range mkline.Fields() {
 				mklines.UseVar(mkline, opsysVar+".*")
-				defineVar(mkline, opsysVar)
+				defineVar(G.Pkg, mklines, mkline, opsysVar)
 			}
 		}
 	}
@@ -352,6 +352,8 @@ func (mklines *MkLinesImpl) collectDocumentedVariables() {
 	//  "list of" and other types.
 
 	finish := func() {
+		// The commentLines include the the line containing the variable name,
+		// leaving 2 of these 3 lines for the actual documentation.
 		if commentLines >= 3 && relevant {
 			for varname, mkline := range scope.used {
 				mklines.vars.Define(varname, mkline)

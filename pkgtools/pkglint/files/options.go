@@ -88,13 +88,24 @@ loop:
 				Empty: recordUsedOption,
 				Var:   recordUsedOption})
 
+			// FIXME: Is this note also issued for the following lines?
+			//  .if empty(ANY_OTHER_VARIABLE)
+			//  .else
+			//  .endif
 			if cond.Empty != nil && mkline.HasElseBranch() {
 				mkline.Notef("The positive branch of the .if/.else should be the one where the option is set.")
 				G.Explain(
 					"For consistency among packages, the upper branch of this",
 					".if/.else statement should always handle the case where the",
 					"option is activated.",
-					"A missing exclamation mark at this point can easily be overlooked.")
+					"A missing exclamation mark at this point can easily be overlooked.",
+					"",
+					"If that seems too much to type and the exclamation mark",
+					"seems wrong for a positive test, switch the blocks nevertheless",
+					"and write the condition like this, which has the same effect",
+					"as the !empty(...).",
+					"",
+					"\t.if ${PKG_OPTIONS.packagename:Moption}")
 			}
 		}
 	}

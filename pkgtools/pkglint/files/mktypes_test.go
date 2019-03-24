@@ -51,3 +51,25 @@ func (s *Suite) Test_MkVarUseModifier_MatchSubst__backslash(c *check.C) {
 	c.Check(to, equals, "\\:")
 	c.Check(options, equals, "")
 }
+
+// As of 2019-03-24, pkglint doesn't know how to handle complicated
+// :C modifiers.
+func (s *Suite) Test_MkVarUseModifier_Subst__regexp(c *check.C) {
+	mod := MkVarUseModifier{"C,.*,,"}
+
+	empty, ok := mod.Subst("anything")
+
+	c.Check(ok, equals, false)
+	c.Check(empty, equals, "")
+}
+
+// When given a modifier that is not actually a :S or :C, Subst
+// doesn't do anything.
+func (s *Suite) Test_MkVarUseModifier_Subst__invalid_argument(c *check.C) {
+	mod := MkVarUseModifier{"Mpattern"}
+
+	empty, ok := mod.Subst("anything")
+
+	c.Check(ok, equals, false)
+	c.Check(empty, equals, "")
+}

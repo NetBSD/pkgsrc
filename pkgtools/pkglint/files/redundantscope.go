@@ -29,19 +29,15 @@ func NewRedundantScope() *RedundantScope {
 
 func (s *RedundantScope) Check(mklines MkLines) {
 	mklines.ForEach(func(mkline MkLine) {
-		s.Handle(mkline, mklines.indentation)
+		s.updateIncludePath(mkline)
+
+		switch {
+		case mkline.IsVarassign():
+			s.handleVarassign(mkline, mklines.indentation)
+		}
+
+		s.handleVarUse(mkline)
 	})
-}
-
-func (s *RedundantScope) Handle(mkline MkLine, ind *Indentation) {
-	s.updateIncludePath(mkline)
-
-	switch {
-	case mkline.IsVarassign():
-		s.handleVarassign(mkline, ind)
-	}
-
-	s.handleVarUse(mkline)
 }
 
 func (s *RedundantScope) updateIncludePath(mkline MkLine) {
@@ -156,7 +152,7 @@ func (s *RedundantScope) handleVarassign(mkline MkLine, ind *Indentation) {
 
 func (s *RedundantScope) handleVarUse(mkline MkLine) {
 	switch {
-	case mkline.IsVarassign(), mkline.IsCommentedVarassign():
+	case mkline.IsVarassign():
 		for _, varname := range mkline.DetermineUsedVariables() {
 			info := s.get(varname)
 			info.vari.Read(mkline)

@@ -1,7 +1,5 @@
 package pkglint
 
-// Checks concerning single lines in Makefiles.
-
 import (
 	"fmt"
 	"netbsd.org/pkglint/regex"

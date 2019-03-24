@@ -44,5 +44,5 @@ func (s *Suite) Test_main(c *check.C) {
 	output, err := ioutil.ReadFile(out.Name())
 	c.Assert(err, check.IsNil)
 
-	c.Check(string(output), check.Matches, `^(@VERSION@|\d+(\.\d+)+)\n$`)
+	c.Check(string(output), check.Matches, `^(@VERSION@|\d+(\.\d+)+(nb\d+)?)\n$`)
 }
