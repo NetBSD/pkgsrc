@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1462 2019/03/24 15:47:04 nia Exp $
+$NetBSD: CHANGES-2019,v 1.1463 2019/03/24 15:58:06 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2351,3 +2351,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/firefox60-l10n to 60.6.1 [ryoon 2019-03-24]
 	Updated pkgtools/pkglint to 5.7.3 [rillig 2019-03-24]
 	Updated net/dnscrypt-proxy2 to 2.0.21 [nia 2019-03-24]
+	Added graphics/materia-gtk-theme version 20190315 [nia 2019-03-24]
