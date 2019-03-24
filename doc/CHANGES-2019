@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1455 2019/03/24 10:41:28 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1456 2019/03/24 12:03:47 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2343,3 +2343,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/log4cplus to 2.0.3 [sno 2019-03-24]
 	Updated databases/py-peewee to 3.9.3 [adam 2019-03-24]
 	Updated security/py-cryptodome to 3.8.0 [adam 2019-03-24]
+	Added cross/xtensa-esp32-elf-binutils version 2.32 [tnn 2019-03-24]
+	Added cross/xtensa-esp32-elf-gcc version 8.2.0 [tnn 2019-03-24]
