@@ -1,4 +1,4 @@
-# $NetBSD: create.mk,v 1.10 2019/03/24 08:40:07 rillig Exp $
+# $NetBSD: create.mk,v 1.11 2019/03/24 11:29:19 rillig Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -149,7 +149,7 @@ ${TOOLS_CMD.${_t_}}:
 	if ${TEST} -n ${TOOLS_SCRIPT.${_t_}:Q}""; then			\
 		create=wrapper;						\
 		script=${TOOLS_SCRIPT.${_t_}:Q};			\
-		logprefix='"set args "$$@"; shift; "';			\
+		logprefix='"set args$$shquoted_args; shift; "';		\
 		logmain=${TOOLS_SCRIPT.${_t_}:Q:Q};			\
 		logsuffix='';						\
 	elif ${TEST} -n ${TOOLS_PATH.${_t_}:Q}""; then			\
@@ -158,7 +158,7 @@ ${TOOLS_CMD.${_t_}}:
 			script=${TOOLS_SCRIPT_DFLT.${_t_}:Q};		\
 			logprefix='';					\
 			logmain=${TOOLS_PATH.${_t_}:Q:Q}\"\ \"${TOOLS_ARGS.${_t_}:Q:Q}; \
-			logsuffix=' "$$*"';				\
+			logsuffix='$$shquoted_args';			\
 		else							\
 			case ${TOOLS_PATH.${_t_}:Q}"" in		\
 			/*)	create=symlink ;;			\
@@ -166,7 +166,7 @@ ${TOOLS_CMD.${_t_}}:
 				script=${TOOLS_SCRIPT_DFLT.${_t_}:Q};	\
 				logprefix='';				\
 				logmain=${TOOLS_PATH.${_t_}:Q:Q}\"\ \"; \
-				logsuffix=' "$$*"';			\
+				logsuffix='$$shquoted_args';		\
 			esac;						\
 		fi;							\
 	else								\
@@ -175,11 +175,14 @@ ${TOOLS_CMD.${_t_}}:
 	case "$$create" in						\
 	wrapper)							\
 		{ ${ECHO} '#!'${TOOLS_SHELL:Q};				\
+		  ${ECHO} 'tools_wrapper_sed='${SED:Q:Q};		\
+		  ${SED} -e '/^$$/d' -e '/^\#/d' ${PKGSRCDIR}/mk/tools/shquote.sh; \
 		  ${ECHO} 'wrapperlog="$${TOOLS_WRAPPER_LOG-'${_TOOLS_WRAP_LOG:Q}'}"'; \
-		  ${ECHO} '${ECHO} "[*] "'${.TARGET:Q}'" $$*" >> $$wrapperlog'; \
-		  ${ECHO} 'logprefix='$$logprefix; \
-		  ${ECHO} 'logmain='$$logmain; \
-		  ${ECHO} "${ECHO} '<.>' \"\$$logprefix\$$logmain\"$$logsuffix >> \$$wrapperlog"; \
+		  ${ECHO} 'shquote_args "$$@"';				\
+		  ${ECHO} '${ECHO} "[*] "'${.TARGET:Q}'"$$shquoted_args" >> $$wrapperlog'; \
+		  ${ECHO} 'logprefix='$$logprefix;			\
+		  ${ECHO} 'logmain='$$logmain;				\
+		  ${ECHO} "${ECHO} '<.>' \"\$$logprefix\$$logmain$$logsuffix\" >> \$$wrapperlog"; \
 		  ${ECHO} "$$script";					\
 		} > ${.TARGET:Q};					\
 		${CHMOD} +x ${.TARGET:Q};				\
