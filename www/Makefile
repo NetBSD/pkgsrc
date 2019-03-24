@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1378 2019/03/20 10:02:53 wiz Exp $
+# $NetBSD: Makefile,v 1.1379 2019/03/24 21:34:23 nia Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -112,6 +112,7 @@ SUBDIR+=	gallery2
 SUBDIR+=	ganglia-webfrontend
 SUBDIR+=	geckodriver
 SUBDIR+=	geeklog
+SUBDIR+=	gitea
 SUBDIR+=	gitweb
 SUBDIR+=	gnurl
 SUBDIR+=	go-ace
