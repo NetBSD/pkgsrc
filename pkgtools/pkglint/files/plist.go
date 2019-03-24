@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-func CheckLinesPlist(lines Lines) {
+func CheckLinesPlist(pkg *Package, lines Lines) {
 	if trace.Tracing {
 		defer trace.Call1(lines.FileName)()
 	}
@@ -28,18 +28,22 @@ func CheckLinesPlist(lines Lines) {
 	}
 
 	ck := PlistChecker{
+		pkg,
 		make(map[string]*PlistLine),
 		make(map[string]*PlistLine),
 		"",
-		Once{}}
+		Once{},
+		false}
 	ck.Check(lines)
 }
 
 type PlistChecker struct {
-	allFiles  map[string]*PlistLine
-	allDirs   map[string]*PlistLine
-	lastFname string
-	once      Once
+	pkg             *Package
+	allFiles        map[string]*PlistLine
+	allDirs         map[string]*PlistLine
+	lastFname       string
+	once            Once
+	nonAsciiAllowed bool
 }
 
 type PlistLine struct {
@@ -132,6 +136,7 @@ func (ck *PlistChecker) checkLine(pline *PlistLine) {
 
 	} else if m, cmd, arg := match2(text, `^@([a-z-]+)[\t ]*(.*)`); m {
 		pline.CheckDirective(cmd, arg)
+		ck.nonAsciiAllowed = pline.firstLine > 1
 
 	} else {
 		pline.Warnf("Invalid line type: %s", pline.Line.Text)
@@ -143,6 +148,7 @@ func (ck *PlistChecker) checkPath(pline *PlistLine) {
 	dirSlash, basename := path.Split(text)
 	dirname := strings.TrimSuffix(dirSlash, "/")
 
+	ck.checkPathNonAscii(pline)
 	ck.checkSorted(pline)
 	ck.checkDuplicate(pline)
 
@@ -182,7 +188,7 @@ func (ck *PlistChecker) checkPath(pline *PlistLine) {
 		ck.checkPathShare(pline)
 	}
 
-	if contains(text, "${PKGLOCALEDIR}") && G.Pkg != nil && !G.Pkg.vars.Defined("USE_PKGLOCALEDIR") {
+	if contains(text, "${PKGLOCALEDIR}") && ck.pkg != nil && !ck.pkg.vars.Defined("USE_PKGLOCALEDIR") {
 		pline.Warnf("PLIST contains ${PKGLOCALEDIR}, but USE_PKGLOCALEDIR is not set in the package Makefile.")
 	}
 
@@ -200,6 +206,34 @@ func (ck *PlistChecker) checkPath(pline *PlistLine) {
 	}
 	if contains(text, ".egg-info/") {
 		pline.Warnf("Include \"../../lang/python/egg.mk\" instead of listing .egg-info files directly.")
+	}
+}
+
+func (ck *PlistChecker) checkPathNonAscii(pline *PlistLine) {
+	text := pline.text
+
+	lex := textproc.NewLexer(text)
+	lex.NextBytesFunc(func(b byte) bool { return b >= ' ' && b <= '~' })
+	ascii := lex.EOF()
+
+	switch {
+	case !ck.nonAsciiAllowed && !ascii:
+		ck.nonAsciiAllowed = true
+
+		pline.Warnf("Non-ASCII filename %q.", escapePrintable(text))
+		pline.Explain(
+			"The great majority of filenames installed by pkgsrc packages",
+			"are ASCII-only. Filenames containing non-ASCII characters",
+			"can cause various problems since their name may already be",
+			"different when another character encoding is set in the locale.",
+			"",
+			"To mark a filename as intentionally non-ASCII, insert a PLIST",
+			"@comment with a convincing reason directly above this line.",
+			"That comment will allow this line and the lines directly",
+			"below it to contain non-ASCII filenames.")
+
+	case ck.nonAsciiAllowed && ascii:
+		ck.nonAsciiAllowed = false
 	}
 }
 
@@ -265,17 +299,19 @@ func (ck *PlistChecker) checkPathInfo(pline *PlistLine, dirname, basename string
 		return
 	}
 
-	if G.Pkg != nil && !G.Pkg.vars.Defined("INFO_FILES") {
+	if ck.pkg != nil && !ck.pkg.vars.Defined("INFO_FILES") {
 		pline.Warnf("Packages that install info files should set INFO_FILES in the Makefile.")
 	}
 }
 
 func (ck *PlistChecker) checkPathLib(pline *PlistLine, dirname, basename string) {
+	pkg := ck.pkg
+
 	switch {
-	case G.Pkg != nil && G.Pkg.EffectivePkgbase != "" && hasPrefix(pline.text, "lib/"+G.Pkg.EffectivePkgbase+"/"):
+	case pkg != nil && pkg.EffectivePkgbase != "" && hasPrefix(pline.text, "lib/"+pkg.EffectivePkgbase+"/"):
 		return
 
-	case pline.text == "lib/charset.alias" && (G.Pkg == nil || G.Pkg.Pkgpath != "converters/libiconv"):
+	case pline.text == "lib/charset.alias" && (pkg == nil || pkg.Pkgpath != "converters/libiconv"):
 		pline.Errorf("Only the libiconv package may install lib/charset.alias.")
 		return
 
@@ -286,7 +322,7 @@ func (ck *PlistChecker) checkPathLib(pline *PlistLine, dirname, basename string)
 
 	switch ext := path.Ext(basename); ext {
 	case ".la":
-		if G.Pkg != nil && !G.Pkg.vars.Defined("USE_LIBTOOL") && ck.once.FirstTime("USE_LIBTOOL") {
+		if pkg != nil && !pkg.vars.Defined("USE_LIBTOOL") && ck.once.FirstTime("USE_LIBTOOL") {
 			pline.Warnf("Packages that install libtool libraries should define USE_LIBTOOL.")
 		}
 	}
@@ -339,17 +375,19 @@ func (ck *PlistChecker) checkPathMan(pline *PlistLine) {
 }
 
 func (ck *PlistChecker) checkPathShare(pline *PlistLine) {
+	pkg := ck.pkg
 	text := pline.text
+
 	switch {
-	case hasPrefix(text, "share/icons/") && G.Pkg != nil:
-		if hasPrefix(text, "share/icons/hicolor/") && G.Pkg.Pkgpath != "graphics/hicolor-icon-theme" {
+	case hasPrefix(text, "share/icons/") && pkg != nil:
+		if hasPrefix(text, "share/icons/hicolor/") && pkg.Pkgpath != "graphics/hicolor-icon-theme" {
 			f := "../../graphics/hicolor-icon-theme/buildlink3.mk"
-			if !G.Pkg.included.Seen(f) && ck.once.FirstTime("hicolor-icon-theme") {
+			if !pkg.included.Seen(f) && ck.once.FirstTime("hicolor-icon-theme") {
 				pline.Errorf("Packages that install hicolor icons must include %q in the Makefile.", f)
 			}
 		}
 
-		if text == "share/icons/hicolor/icon-theme.cache" && G.Pkg.Pkgpath != "graphics/hicolor-icon-theme" {
+		if text == "share/icons/hicolor/icon-theme.cache" && pkg.Pkgpath != "graphics/hicolor-icon-theme" {
 			pline.Errorf("The file icon-theme.cache must not appear in any PLIST file.")
 			G.Explain(
 				"Remove this line and add the following line to the package Makefile.",
@@ -357,9 +395,9 @@ func (ck *PlistChecker) checkPathShare(pline *PlistLine) {
 				".include \"../../graphics/hicolor-icon-theme/buildlink3.mk\"")
 		}
 
-		if hasPrefix(text, "share/icons/gnome") && G.Pkg.Pkgpath != "graphics/gnome-icon-theme" {
+		if hasPrefix(text, "share/icons/gnome") && pkg.Pkgpath != "graphics/gnome-icon-theme" {
 			f := "../../graphics/gnome-icon-theme/buildlink3.mk"
-			if !G.Pkg.included.Seen(f) {
+			if !pkg.included.Seen(f) {
 				pline.Errorf("The package Makefile must include %q.", f)
 				G.Explain(
 					"Packages that install GNOME icons must maintain the icon theme",
@@ -367,15 +405,15 @@ func (ck *PlistChecker) checkPathShare(pline *PlistLine) {
 			}
 		}
 
-		if contains(text[12:], "/") && !G.Pkg.vars.Defined("ICON_THEMES") && ck.once.FirstTime("ICON_THEMES") {
+		if contains(text[12:], "/") && !pkg.vars.Defined("ICON_THEMES") && ck.once.FirstTime("ICON_THEMES") {
 			pline.Warnf("Packages that install icon theme files should set ICON_THEMES.")
 		}
 
 	case hasPrefix(text, "share/doc/html/"):
 		pline.Warnf("Use of \"share/doc/html\" is deprecated. Use \"share/doc/${PKGBASE}\" instead.")
 
-	case G.Pkg != nil && G.Pkg.EffectivePkgbase != "" && (hasPrefix(text, "share/doc/"+G.Pkg.EffectivePkgbase+"/") ||
-		hasPrefix(text, "share/examples/"+G.Pkg.EffectivePkgbase+"/")):
+	case pkg != nil && pkg.EffectivePkgbase != "" && (hasPrefix(text, "share/doc/"+pkg.EffectivePkgbase+"/") ||
+		hasPrefix(text, "share/examples/"+pkg.EffectivePkgbase+"/")):
 		// Fine.
 
 	case hasPrefix(text, "share/info/"):
