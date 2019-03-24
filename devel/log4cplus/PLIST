@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/11/11 20:09:56 sno Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/03/24 09:18:53 sno Exp $
 include/log4cplus/appender.h
 include/log4cplus/asyncappender.h
 include/log4cplus/boost/deviceappender.hxx
@@ -31,6 +31,7 @@ include/log4cplus/helpers/timehelper.h
 include/log4cplus/hierarchy.h
 include/log4cplus/hierarchylocker.h
 include/log4cplus/initializer.h
+include/log4cplus/internal/customloglevelmanager.h
 include/log4cplus/internal/cygwin-win32.h
 include/log4cplus/internal/env.h
 include/log4cplus/internal/internal.h
