@@ -6,92 +6,256 @@ import (
 	"strings"
 )
 
-// This file defines the specific type of some variables.
+// This file defines the type and the access permissions of most pkgsrc
+// variables.
 //
-// Some are plain values, some are lists.
-// Lists are split like in the shell, using "double" and 'single' quotes
-// to enclose spaces.
+// Some types are plain values, some are lists. Lists are split like in the
+// shell, using "double" and 'single' quotes to enclose spaces.
 //
 // See vartypecheck.go for how these types are checked.
+//
+// The permissions depend on the name of the file where the variable is
+// either assigned or used. There are several types of Makefile fragments
+// in pkgsrc, and some of them have very specific tasks, like buildlink3.mk,
+// builtin.mk and options.mk.
+//
+// TODO: There are separate permission rules for files from the pkgsrc
+//  infrastructure since the infrastructure basically provides the API, and
+//  the packages use the API.
+//
+// Variables that are defined by packages are usually used by the
+// infrastructure, and vice versa. There are also user-defined variables,
+// which from the view point of a package, are the same as variables
+// defined by the infrastructure.
+
+type VarTypeRegistry struct {
+	types map[string]*Vartype // varcanon => type
+}
+
+func NewVarTypeRegistry() VarTypeRegistry {
+	return VarTypeRegistry{make(map[string]*Vartype)}
+}
+
+func (reg *VarTypeRegistry) Canon(varname string) *Vartype {
+	vartype := reg.types[varname]
+	if vartype == nil {
+		vartype = reg.types[varnameCanon(varname)]
+	}
+	return vartype
+}
+
+func (reg *VarTypeRegistry) DefinedExact(varname string) bool {
+	return reg.types[varname] != nil
+}
+
+func (reg *VarTypeRegistry) DefinedCanon(varname string) bool {
+	return reg.Canon(varname) != nil
+}
+
+func (reg *VarTypeRegistry) DefineType(varcanon string, vartype *Vartype) {
+	reg.types[varcanon] = vartype
+}
+
+func (reg *VarTypeRegistry) Define(varname string, kindOfList KindOfList, basicType *BasicType, aclEntries ...ACLEntry) {
+	m, varbase, varparam := match2(varname, `^([A-Z_.][A-Z0-9_]*|@)(|\*|\.\*)$`)
+	G.Assertf(m, "invalid variable name")
+
+	vartype := Vartype{kindOfList, basicType, aclEntries, false}
+
+	if varparam == "" || varparam == "*" {
+		reg.types[varbase] = &vartype
+	}
+	if varparam == "*" || varparam == ".*" {
+		reg.types[varbase+".*"] = &vartype
+	}
+}
+
+// DefineParse defines a variable with the given type and permissions.
+//
+// A permission entry looks like this:
+//  "Makefile, Makefile.*, *.mk: default, set, append, use, use-loadtime"
+// Only certain filenames are allowed in the part before the colon,
+// to prevent typos. To use arbitrary filenames, prefix them with
+// "special:".
+//
+// TODO: To be implemented: when prefixed with "infra:", the entry only
+//  applies to files within the pkgsrc infrastructure. Without this prefix,
+//  the pattern only applies to files outside the pkgsrc infrastructure.
+//
+// FIXME: Force the permissions to always be in the same order:
+//  default, set, append, use, use-loadtime.
+func (reg *VarTypeRegistry) DefineParse(varname string, kindOfList KindOfList, basicType *BasicType, aclEntries ...string) {
+	parsedEntries := reg.parseACLEntries(varname, aclEntries...)
+	reg.Define(varname, kindOfList, basicType, parsedEntries...)
+}
 
 // InitVartypes initializes the long list of predefined pkgsrc variables.
 // After this is done, PKGNAME, MAKE_ENV and all the other variables
 // can be used in Makefiles without triggering warnings about typos.
-func (src *Pkgsrc) InitVartypes() {
+func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 
-	acl := func(varname string, kindOfList KindOfList, checker *BasicType, aclEntries string) {
-		m := mustMatch(varname, `^([A-Z_.][A-Z0-9_]*|@)(|\*|\.\*)$`)
-		varbase, varparam := m[1], m[2]
-
-		vartype := Vartype{kindOfList, checker, parseACLEntries(varname, aclEntries), false}
-
-		if varparam == "" || varparam == "*" {
-			src.vartypes[varbase] = &vartype
-		}
-		if varparam == "*" || varparam == ".*" {
-			src.vartypes[varbase+".*"] = &vartype
-		}
+	// acl defines the permissions of a variable by listing the permissions
+	// individually.
+	//
+	// Each variable that uses this function directly must document:
+	//  - which of the predefined permission sets is the closest
+	//  - how this individual permission set differs
+	//  - why the predefined permission set is not good enough
+	//  - which packages need this custom permission set.
+	acl := func(varname string, basicType *BasicType, aclEntries ...string) {
+		reg.DefineParse(varname, lkNone, basicType, aclEntries...)
 	}
 
-	// A package-defined variable may be set in all Makefiles except buildlink3.mk and builtin.mk.
-	pkg := func(varname string, kindOfList KindOfList, checker *BasicType) {
-		acl(varname, kindOfList, checker, ""+
-			"Makefile: set, use; "+
-			"buildlink3.mk, builtin.mk: none; "+
-			"Makefile.*, *.mk: default, set, use")
+	// acllist defines the permissions of a list variable by listing
+	// the permissions individually.
+	//
+	// Each variable that uses this function directly must document:
+	//  - which of the predefined permission sets is the closest
+	//  - how this individual permission set differs
+	//  - why the predefined permission set is not good enough
+	//  - which packages need this custom permission set.
+	acllist := func(varname string, basicType *BasicType, aclEntries ...string) {
+		reg.DefineParse(varname, lkShell, basicType, aclEntries...)
+	}
+
+	// A package-settable variable may be set in all Makefiles except buildlink3.mk and builtin.mk.
+	pkg := func(varname string, basicType *BasicType) {
+		acl(varname, basicType,
+			"buildlink3.mk, builtin.mk: none",
+			"Makefile, Makefile.*, *.mk: default, set, use")
 	}
 
 	// pkgload is the same as pkg, except that the variable may be accessed at load time.
-	pkgload := func(varname string, kindOfList KindOfList, checker *BasicType) {
-		acl(varname, kindOfList, checker, ""+
-			"Makefile: set, use, use-loadtime; "+
-			"buildlink3.mk, builtin.mk: none; "+
-			"Makefile.*, *.mk: default, set, use, use-loadtime")
+	pkgload := func(varname string, basicType *BasicType) {
+		reg.DefineParse(varname, lkNone, basicType,
+			"buildlink3.mk: none",
+			"builtin.mk: use, use-loadtime",
+			"Makefile, Makefile.*, *.mk: default, set, use, use-loadtime")
 	}
 
-	// A package-defined list may be appended to in all Makefiles except buildlink3.mk and builtin.mk.
-	// Simple assignment (instead of appending) is only allowed in Makefile and Makefile.common.
-	pkglist := func(varname string, kindOfList KindOfList, checker *BasicType) {
-		acl(varname, kindOfList, checker, ""+
-			"Makefile, Makefile.common, options.mk: append, default, set, use; "+
-			"buildlink3.mk, builtin.mk: none; "+
-			"*.mk: append, default, use")
+	// A package-defined list may be defined and appended to in all Makefiles
+	// except buildlink3.mk and builtin.mk. Simple assignment (instead of
+	// appending) is also allowed. If this leads of an unconditional
+	// assignment overriding a previous value, the redundancy check will
+	// catch it.
+	pkglist := func(varname string, basicType *BasicType) {
+		acllist(varname, basicType,
+			"buildlink3.mk, builtin.mk: none",
+			"Makefile, Makefile.*, *.mk: default, set, append, use")
 	}
 
-	// Some package-defined lists may also be appended in buildlink3.mk files,
-	// for example platform-specific CFLAGS and LDFLAGS.
-	pkglistbl3 := func(varname string, kindOfList KindOfList, checker *BasicType) {
-		acl(varname, kindOfList, checker, ""+
-			"Makefile, Makefile.common, options.mk: append, default, set, use; "+
-			"buildlink3.mk, builtin.mk, *.mk: append, default, use")
-	}
-
-	// sys declares a user-defined or system-defined variable that must not be modified by packages.
+	// pkgappend declares a variable that may use the += operator,
+	// even though it is not a list where each item can be interpreted
+	// on its own.
 	//
-	// It also must not be used in buildlink3.mk and builtin.mk files or at load-time,
-	// since the system/user preferences may not have been loaded when these files are included.
-	sys := func(varname string, kindOfList KindOfList, checker *BasicType) {
-		acl(varname, kindOfList, checker, "buildlink3.mk: none; *: use")
+	// This applies to lists in which a single logical list item is
+	// composed of several syntactical words, such as CONF_FILES, which is
+	// a list of filename pairs.
+	//
+	// This also applies to COMMENT, which is not a list at all but a string
+	// that is sometimes composed of a common prefix and a package-specific
+	// suffix.
+	pkgappend := func(varname string, basicType *BasicType) {
+		acl(varname, basicType,
+			"buildlink3.mk, builtin.mk: none",
+			"Makefile, Makefile.*, *.mk: default, set, append, use")
+	}
+	pkgappendbl3 := func(varname string, basicType *BasicType) {
+		acl(varname, basicType,
+			"Makefile, Makefile.*, *.mk: default, set, append, use")
+	}
+
+	// Some package-defined variables may be modified in buildlink3.mk files.
+	// These variables are typically related to compiling and linking files
+	// from C and related languages.
+	pkgbl3 := func(varname string, basicType *BasicType) {
+		reg.DefineParse(varname, lkNone, basicType,
+			"Makefile, Makefile.*, *.mk: default, set, use")
+	}
+	// Some package-defined lists may also be modified in buildlink3.mk files,
+	// for example platform-specific CFLAGS and LDFLAGS.
+	pkglistbl3 := func(varname string, basicType *BasicType) {
+		reg.DefineParse(varname, lkShell, basicType,
+			"Makefile, Makefile.*, *.mk: default, set, append, use")
+	}
+
+	// sys declares a user-defined or system-defined variable that must not
+	// be modified by packages.
+	//
+	// It also must not be used in buildlink3.mk and builtin.mk files or at
+	// load time since the system/user preferences may not have been loaded
+	// when these files are included.
+	//
+	// TODO: These timing issues should be handled separately from the permissions.
+	//  They can be made more precise.
+	sys := func(varname string, basicType *BasicType) {
+		acl(varname, basicType,
+			"buildlink3.mk: none",
+			"*: use")
+	}
+
+	sysbl3 := func(varname string, basicType *BasicType) {
+		acl(varname, basicType,
+			"*: use")
+	}
+
+	syslist := func(varname string, basicType *BasicType) {
+		acllist(varname, basicType,
+			"buildlink3.mk: none",
+			"*: use")
 	}
 
 	// usr declares a user-defined variable that must not be modified by packages.
-	usr := func(varname string, kindOfList KindOfList, checker *BasicType) {
-		acl(varname, kindOfList, checker, "buildlink3.mk: none; *: use-loadtime, use")
+	usr := func(varname string, basicType *BasicType) {
+		acl(varname, basicType,
+			// TODO: why is builtin.mk missing here?
+			"buildlink3.mk: none",
+			"*: use, use-loadtime")
+	}
+
+	// usr declares a user-defined list variable that must not be modified by packages.
+	usrlist := func(varname string, basicType *BasicType) {
+		acllist(varname, basicType,
+			// TODO: why is builtin.mk missing here?
+			"buildlink3.mk: none",
+			"*: use, use-loadtime")
 	}
 
 	// sysload declares a system-provided variable that may already be used at load time.
-	sysload := func(varname string, kindOfList KindOfList, checker *BasicType) {
-		acl(varname, kindOfList, checker, "*: use-loadtime, use")
+	sysload := func(varname string, basicType *BasicType) {
+		reg.DefineParse(varname, lkNone, basicType,
+			"*: use, use-loadtime")
 	}
 
-	bl3list := func(varname string, kindOfList KindOfList, checker *BasicType) {
-		acl(varname, kindOfList, checker, "buildlink3.mk, builtin.mk: append; *: use")
+	sysloadlist := func(varname string, basicType *BasicType) {
+		reg.DefineParse(varname, lkShell, basicType,
+			"*: use, use-loadtime")
 	}
 
-	cmdline := func(varname string, kindOfList KindOfList, checker *BasicType) {
-		acl(varname, kindOfList, checker, "buildlink3.mk, builtin.mk: none; *: use-loadtime, use")
+	// bl3list declares a list variable that is defined by buildlink3.mk and
+	// builtin.mk and can later be used by the package.
+	bl3list := func(varname string, basicType *BasicType) {
+		reg.DefineParse(varname, lkShell, basicType,
+			"buildlink3.mk, builtin.mk: append",
+			"*: use")
 	}
 
+	// cmdline declares a variable that is defined on the command line. There
+	// are only few variables of this type, such as PKG_DEBUG_LEVEL.
+	cmdline := func(varname string, basicType *BasicType) {
+		reg.DefineParse(varname, lkNone, basicType,
+			"buildlink3.mk, builtin.mk: none",
+			"*: use, use-loadtime")
+	}
+
+	// Only for infrastructure files; see mk/misc/show.mk
+	infralist := func(varname string, basicType *BasicType) {
+		acllist(varname, basicType,
+			"*: append")
+	}
+
+	// compilerLanguages reads the available languages that are typically
+	// bundled in a single compiler framework, such as GCC or Clang.
 	compilerLanguages := enum(
 		func() string {
 			mklines := LoadMk(src.File("mk/compiler.mk"), NotEmpty)
@@ -130,21 +294,26 @@ func (src *Pkgsrc) InitVartypes() {
 	// defval. This is mostly useful when testing pkglint.
 	enumFrom := func(filename string, defval string, varcanons ...string) *BasicType {
 		mklines := LoadMk(src.File(filename), NotEmpty)
-		values := make(map[string]bool)
+		if mklines == nil {
+			return enum(defval)
+		}
 
-		if mklines != nil {
-			for _, mkline := range mklines.mklines {
-				if mkline.IsVarassign() {
-					varcanon := mkline.Varcanon()
-					for _, vc := range varcanons {
-						if vc == varcanon {
-							words, _ := splitIntoMkWords(mkline.Line, mkline.Value())
-							for _, word := range words {
-								if !contains(word, "$") {
-									values[intern(word)] = true
-								}
-							}
-						}
+		values := make(map[string]bool)
+		for _, mkline := range mklines.mklines {
+			if !mkline.IsVarassign() {
+				continue
+			}
+
+			varcanon := mkline.Varcanon()
+			for _, vc := range varcanons {
+				if vc != varcanon {
+					continue
+				}
+
+				words := mkline.ValueFields(mkline.Value())
+				for _, word := range words {
+					if !contains(word, "$") {
+						values[intern(word)] = true
 					}
 				}
 			}
@@ -153,7 +322,8 @@ func (src *Pkgsrc) InitVartypes() {
 		if len(values) > 0 {
 			joined := keysJoined(values)
 			if trace.Tracing {
-				trace.Stepf("Enum from %s in %s with values: %s", strings.Join(varcanons, " "), filename, joined)
+				trace.Stepf("Enum from %s in %s with values: %s",
+					strings.Join(varcanons, " "), filename, joined)
 			}
 			return enum(joined)
 		}
@@ -164,9 +334,9 @@ func (src *Pkgsrc) InitVartypes() {
 		return enum(defval)
 	}
 
-	// enumFromDirs reads the directories from category, takes all that have
-	// a single number in them (such as php72) and ranks them from earliest
-	// to latest.
+	// enumFromDirs reads the package directories from category, takes all
+	// that have a single number in them (such as php72) and ranks them
+	// from earliest to latest.
 	//
 	// If the directories cannot be found, the allowed values are taken
 	// from defval. This is mostly useful when testing pkglint.
@@ -204,93 +374,102 @@ func (src *Pkgsrc) InitVartypes() {
 		"openjdk8 oracle-jdk8 openjdk7 sun-jdk7 sun-jdk6 jdk16 jdk15 kaffe",
 		"_PKG_JVMS.*")
 
-	// Last synced with mk/defaults/mk.conf revision 1.269 (2017-01-01).
-	usr("USE_CWRAPPERS", lkNone, enum("yes no auto"))
-	usr("ALLOW_VULNERABLE_PACKAGES", lkNone, BtYes)
-	usr("AUDIT_PACKAGES_FLAGS", lkShell, BtShellWord)
-	usr("MANINSTALL", lkShell, enum("maninstall catinstall"))
-	usr("MANZ", lkNone, BtYes)
-	usr("GZIP", lkShell, BtShellWord)
-	usr("MAKE_JOBS", lkNone, BtInteger)
-	usr("OBJHOSTNAME", lkNone, BtYes)
-	usr("OBJMACHINE", lkNone, BtYes)
-	usr("SIGN_PACKAGES", lkNone, enum("gpg x509"))
-	usr("X509_KEY", lkNone, BtPathname)
-	usr("X509_CERTIFICATE", lkNone, BtPathname)
-	usr("PATCH_DEBUG", lkNone, BtYes)
-	usr("PKG_COMPRESSION", lkNone, enum("gzip bzip2 none"))
-	usr("PKGSRC_LOCKTYPE", lkNone, enum("none sleep once"))
-	usr("PKGSRC_SLEEPSECS", lkNone, BtInteger)
-	usr("ABI", lkNone, enum("32 64"))
-	usr("PKG_DEVELOPER", lkNone, BtYesNo)
-	usr("USE_ABI_DEPENDS", lkNone, BtYesNo)
-	usr("PKG_REGISTER_SHELLS", lkNone, enum("YES NO"))
-	usr("PKGSRC_COMPILER", lkShell, compilers)
-	usr("PKGSRC_KEEP_BIN_PKGS", lkNone, BtYesNo)
-	usr("PKGSRC_MESSAGE_RECIPIENTS", lkShell, BtMailAddress)
-	usr("PKGSRC_SHOW_BUILD_DEFS", lkNone, BtYesNo)
-	usr("PKGSRC_RUN_TEST", lkNone, BtYesNo)
-	usr("PKGSRC_MKPIE", lkNone, BtYesNo)
-	usr("PKGSRC_USE_FORTIFY", lkNone, BtYesNo)
-	usr("PKGSRC_USE_RELRO", lkNone, BtYesNo)
-	usr("PKGSRC_USE_SSP", lkNone, enum("no yes strong all"))
-	usr("PREFER.*", lkNone, enum("pkgsrc native"))
-	usr("PREFER_PKGSRC", lkShell, BtIdentifier)
-	usr("PREFER_NATIVE", lkShell, BtIdentifier)
-	usr("PREFER_NATIVE_PTHREADS", lkNone, BtYesNo)
-	usr("WRKOBJDIR", lkNone, BtPathname)
-	usr("LOCALBASE", lkNone, BtPathname)
-	usr("CROSSBASE", lkNone, BtPathname)
-	usr("VARBASE", lkNone, BtPathname)
-	acl("X11_TYPE", lkNone, enum("modular native"), "*: use-loadtime, use")
-	acl("X11BASE", lkNone, BtPathname, "*: use-loadtime, use")
-	usr("MOTIFBASE", lkNone, BtPathname)
-	usr("PKGINFODIR", lkNone, BtPathname)
-	usr("PKGMANDIR", lkNone, BtPathname)
-	usr("PKGGNUDIR", lkNone, BtPathname)
-	usr("BSDSRCDIR", lkNone, BtPathname)
-	usr("BSDXSRCDIR", lkNone, BtPathname)
-	usr("DISTDIR", lkNone, BtPathname)
-	usr("DIST_PATH", lkNone, BtPathlist)
-	usr("DEFAULT_VIEW", lkNone, BtUnknown) // XXX: deprecate? pkgviews has been removed
-	usr("FETCH_CMD", lkNone, BtShellCommand)
-	usr("FETCH_USING", lkNone, enum("auto curl custom fetch ftp manual wget"))
-	usr("FETCH_BEFORE_ARGS", lkShell, BtShellWord)
-	usr("FETCH_AFTER_ARGS", lkShell, BtShellWord)
-	usr("FETCH_RESUME_ARGS", lkShell, BtShellWord)
-	usr("FETCH_OUTPUT_ARGS", lkShell, BtShellWord)
-	usr("FIX_SYSTEM_HEADERS", lkNone, BtYes)
-	usr("LIBTOOLIZE_PLIST", lkNone, BtYesNo)
-	usr("PKG_RESUME_TRANSFERS", lkNone, BtYesNo)
-	usr("PKG_SYSCONFBASE", lkNone, BtPathname)
-	usr("INIT_SYSTEM", lkNone, enum("rc.d smf"))
-	usr("RCD_SCRIPTS_DIR", lkNone, BtPathname)
-	usr("PACKAGES", lkNone, BtPathname)
-	usr("PASSIVE_FETCH", lkNone, BtYes)
-	usr("PATCH_FUZZ_FACTOR", lkNone, enum("-F0 -F1 -F2 -F3"))
-	usr("ACCEPTABLE_LICENSES", lkShell, BtIdentifier)
-	usr("SPECIFIC_PKGS", lkNone, BtYes)
-	usr("SITE_SPECIFIC_PKGS", lkShell, BtPkgPath)
-	usr("HOST_SPECIFIC_PKGS", lkShell, BtPkgPath)
-	usr("GROUP_SPECIFIC_PKGS", lkShell, BtPkgPath)
-	usr("USER_SPECIFIC_PKGS", lkShell, BtPkgPath)
-	usr("EXTRACT_USING", lkNone, enum("bsdtar gtar nbtar pax"))
-	usr("FAILOVER_FETCH", lkNone, BtYes)
-	usr("MASTER_SORT", lkShell, BtUnknown)
-	usr("MASTER_SORT_REGEX", lkShell, BtUnknown)
-	usr("MASTER_SORT_RANDOM", lkNone, BtYes)
-	usr("PATCH_DEBUG", lkNone, BtYes)
-	usr("PKG_FC", lkNone, BtShellCommand)
-	usr("IMAKEOPTS", lkShell, BtShellWord)
-	usr("PRE_ROOT_CMD", lkNone, BtShellCommand)
-	usr("SU_CMD", lkNone, BtShellCommand)
-	usr("SU_CMD_PATH_APPEND", lkNone, BtPathlist)
-	usr("FATAL_OBJECT_FMT_SKEW", lkNone, BtYesNo)
-	usr("WARN_NO_OBJECT_FMT", lkNone, BtYesNo)
-	usr("SMART_MESSAGES", lkNone, BtYes)
-	usr("BINPKG_SITES", lkShell, BtURL)
-	usr("BIN_INSTALL_FLAGS", lkShell, BtShellWord)
-	usr("LOCALPATCHES", lkNone, BtPathname)
+	// Last synced with mk/defaults/mk.conf revision 1.300 (fe3d998769f).
+	usr("USE_CWRAPPERS", enum("yes no auto"))
+	usr("ALLOW_VULNERABLE_PACKAGES", BtYes)
+	usrlist("AUDIT_PACKAGES_FLAGS", BtShellWord)
+	usrlist("MANINSTALL", enum("maninstall catinstall"))
+	usr("MANZ", BtYes)
+	usrlist("GZIP", BtShellWord)
+	usr("MAKE_JOBS", BtInteger)
+	usr("OBJHOSTNAME", BtYes)
+	usr("OBJMACHINE", BtYes)
+	usr("SIGN_PACKAGES", enum("gpg x509"))
+	usr("X509_KEY", BtPathname)
+	usr("X509_CERTIFICATE", BtPathname)
+	usr("PATCH_DEBUG", BtYes)
+	usr("PKG_COMPRESSION", enum("gzip bzip2 xz none"))
+	usr("PKGSRC_LOCKTYPE", enum("none sleep once"))
+	usr("PKGSRC_SLEEPSECS", BtInteger)
+	usr("ABI", enum("32 64"))
+	usr("PKG_DEVELOPER", BtYesNo)
+	usr("USE_ABI_DEPENDS", BtYesNo)
+	usr("PKG_REGISTER_SHELLS", enum("YES NO"))
+	usrlist("PKGSRC_COMPILER", compilers)
+	usr("PKGSRC_KEEP_BIN_PKGS", BtYesNo)
+	usrlist("PKGSRC_MESSAGE_RECIPIENTS", BtMailAddress)
+	usr("PKGSRC_SHOW_BUILD_DEFS", BtYesNo)
+	usr("PKGSRC_RUN_TEST", BtYesNo)
+	usr("PKGSRC_MKPIE", BtYesNo)
+	usr("PKGSRC_MKREPRO", BtYesNo)
+	usr("PKGSRC_USE_CTF", BtYesNo)
+	usr("PKGSRC_USE_FORTIFY", enum("no weak strong"))
+	usr("PKGSRC_USE_RELRO", enum("no partial full"))
+	usr("PKGSRC_USE_SSP", enum("no yes strong all"))
+	usr("PKGSRC_USE_STACK_CHECK", enum("no yes"))
+	usr("PREFER.*", enum("pkgsrc native"))
+	usrlist("PREFER_PKGSRC", BtIdentifier)
+	usrlist("PREFER_NATIVE", BtIdentifier)
+	usr("PREFER_NATIVE_PTHREADS", BtYesNo)
+	usr("WRKOBJDIR", BtPathname)
+	usr("LOCALBASE", BtPathname)
+	usr("CROSSBASE", BtPathname)
+	usr("VARBASE", BtPathname)
+
+	// X11_TYPE and X11BASE may be used in buildlink3.mk as well, which the
+	// standard sysload doesn't allow.
+	acl("X11_TYPE", enum("modular native"),
+		"*: use, use-loadtime")
+	acl("X11BASE", BtPathname,
+		"*: use, use-loadtime")
+
+	usr("MOTIFBASE", BtPathname)
+	usr("PKGINFODIR", BtPathname)
+	usr("PKGMANDIR", BtPathname)
+	usr("PKGGNUDIR", BtPathname)
+	usr("BSDSRCDIR", BtPathname)
+	usr("BSDXSRCDIR", BtPathname)
+	usr("DISTDIR", BtPathname)
+	usr("DIST_PATH", BtPathlist)
+	usr("DEFAULT_VIEW", BtUnknown) // XXX: deprecate? pkgviews has been removed
+	usr("FETCH_CMD", BtShellCommand)
+	usr("FETCH_USING", enum("auto curl custom fetch ftp manual wget"))
+	usrlist("FETCH_BEFORE_ARGS", BtShellWord)
+	usrlist("FETCH_AFTER_ARGS", BtShellWord)
+	usrlist("FETCH_RESUME_ARGS", BtShellWord)
+	usrlist("FETCH_OUTPUT_ARGS", BtShellWord)
+	usr("FIX_SYSTEM_HEADERS", BtYes)
+	usr("LIBTOOLIZE_PLIST", BtYesNo)
+	usr("PKG_RESUME_TRANSFERS", BtYesNo)
+	usr("PKG_SYSCONFBASE", BtPathname)
+	usr("INIT_SYSTEM", enum("rc.d smf"))
+	usr("RCD_SCRIPTS_DIR", BtPathname)
+	usr("PACKAGES", BtPathname)
+	usr("PASSIVE_FETCH", BtYes)
+	usr("PATCH_FUZZ_FACTOR", enum("none -F0 -F1 -F2 -F3"))
+	usrlist("ACCEPTABLE_LICENSES", BtIdentifier)
+	usr("SPECIFIC_PKGS", BtYes)
+	usrlist("SITE_SPECIFIC_PKGS", BtPkgPath)
+	usrlist("HOST_SPECIFIC_PKGS", BtPkgPath)
+	usrlist("GROUP_SPECIFIC_PKGS", BtPkgPath)
+	usrlist("USER_SPECIFIC_PKGS", BtPkgPath)
+	usr("EXTRACT_USING", enum("bsdtar gtar nbtar pax"))
+	usr("FAILOVER_FETCH", BtYes)
+	usrlist("MASTER_SORT", BtUnknown)
+	usrlist("MASTER_SORT_REGEX", BtUnknown)
+	usr("MASTER_SORT_RANDOM", BtYes)
+	usr("PATCH_DEBUG", BtYes)
+	usr("PKG_FC", BtShellCommand)
+	usrlist("IMAKEOPTS", BtShellWord)
+	usr("PRE_ROOT_CMD", BtShellCommand)
+	usr("SU_CMD", BtShellCommand)
+	usr("SU_CMD_PATH_APPEND", BtPathlist)
+	usr("FATAL_OBJECT_FMT_SKEW", BtYesNo)
+	usr("WARN_NO_OBJECT_FMT", BtYesNo)
+	usr("SMART_MESSAGES", BtYes)
+	usrlist("BINPKG_SITES", BtURL)
+	usrlist("BIN_INSTALL_FLAGS", BtShellWord)
+	usr("LOCALPATCHES", BtPathname)
 
 	// The remaining variables from mk/defaults/mk.conf may be overridden by packages.
 	// Therefore they need a separate definition of "user-settable".
@@ -302,938 +481,1116 @@ func (src *Pkgsrc) InitVartypes() {
 	// omitting this necessary inclusion.
 	//
 	// TODO: parse all the below information directly from mk/defaults/mk.conf.
-	usrpkg := func(varname string, kindOfList KindOfList, checker *BasicType) {
-		acl(varname, kindOfList, checker, ""+
-			"Makefile: default, set, use, use-loadtime; "+
-			"buildlink3.mk, builtin.mk: none; "+
-			"Makefile.*, *.mk: default, set, use, use-loadtime; "+
-			"*: use-loadtime, use")
+	usrpkg := func(varname string, basicType *BasicType) {
+		acl(varname, basicType,
+			"Makefile: default, set, use, use-loadtime",
+			"buildlink3.mk, builtin.mk: none",
+			"Makefile.*, *.mk: default, set, use, use-loadtime",
+			"*: use, use-loadtime")
+	}
+	usrpkglist := func(varname string, basicType *BasicType) {
+		acllist(varname, basicType,
+			"Makefile: default, set, use, use-loadtime",
+			"buildlink3.mk, builtin.mk: none",
+			"Makefile.*, *.mk: default, set, use, use-loadtime",
+			"*: use, use-loadtime")
 	}
 
-	usrpkg("ACROREAD_FONTPATH", lkNone, BtPathlist)
-	usrpkg("AMANDA_USER", lkNone, BtUserGroupName)
-	usrpkg("AMANDA_TMP", lkNone, BtPathname)
-	usrpkg("AMANDA_VAR", lkNone, BtPathname)
-	usrpkg("APACHE_USER", lkNone, BtUserGroupName)
-	usrpkg("APACHE_GROUP", lkNone, BtUserGroupName)
-	usrpkg("APACHE_SUEXEC_CONFIGURE_ARGS", lkShell, BtShellWord)
-	usrpkg("APACHE_SUEXEC_DOCROOT", lkShell, BtPathname)
-	usrpkg("ARLA_CACHE", lkNone, BtPathname)
-	usrpkg("BIND_DIR", lkNone, BtPathname)
-	usrpkg("BIND_GROUP", lkNone, BtUserGroupName)
-	usrpkg("BIND_USER", lkNone, BtUserGroupName)
-	usrpkg("CACTI_GROUP", lkNone, BtUserGroupName)
-	usrpkg("CACTI_USER", lkNone, BtUserGroupName)
-	usrpkg("CANNA_GROUP", lkNone, BtUserGroupName)
-	usrpkg("CANNA_USER", lkNone, BtUserGroupName)
-	usrpkg("CDRECORD_CONF", lkNone, BtPathname)
-	usrpkg("CLAMAV_GROUP", lkNone, BtUserGroupName)
-	usrpkg("CLAMAV_USER", lkNone, BtUserGroupName)
-	usrpkg("CLAMAV_DBDIR", lkNone, BtPathname)
-	usrpkg("CONSERVER_DEFAULTHOST", lkNone, BtIdentifier)
-	usrpkg("CONSERVER_DEFAULTPORT", lkNone, BtInteger)
-	usrpkg("CUPS_GROUP", lkNone, BtUserGroupName)
-	usrpkg("CUPS_USER", lkNone, BtUserGroupName)
-	usrpkg("CUPS_SYSTEM_GROUPS", lkShell, BtUserGroupName)
-	usrpkg("CYRUS_IDLE", lkNone, enum("poll idled no"))
-	usrpkg("CYRUS_GROUP", lkNone, BtUserGroupName)
-	usrpkg("CYRUS_USER", lkNone, BtUserGroupName)
-	usrpkg("DBUS_GROUP", lkNone, BtUserGroupName)
-	usrpkg("DBUS_USER", lkNone, BtUserGroupName)
-	usrpkg("DEFANG_GROUP", lkNone, BtUserGroupName)
-	usrpkg("DEFANG_USER", lkNone, BtUserGroupName)
-	usrpkg("DEFANG_SPOOLDIR", lkNone, BtPathname)
-	usrpkg("DEFAULT_IRC_SERVER", lkNone, BtIdentifier)
-	usrpkg("DEFAULT_SERIAL_DEVICE", lkNone, BtPathname)
-	usrpkg("DIALER_GROUP", lkNone, BtUserGroupName)
-	usrpkg("DT_LAYOUT", lkNone, enum("US FI FR GER DV"))
-	usrpkg("ELK_GUI", lkShell, enum("none xaw motif"))
-	usrpkg("EMACS_TYPE", lkNone, emacsVersions)
-	usrpkg("EXIM_GROUP", lkNone, BtUserGroupName)
-	usrpkg("EXIM_USER", lkNone, BtUserGroupName)
-	usrpkg("FLUXBOX_USE_XINERAMA", lkNone, enum("YES NO"))
-	usrpkg("FLUXBOX_USE_KDE", lkNone, enum("YES NO"))
-	usrpkg("FLUXBOX_USE_GNOME", lkNone, enum("YES NO"))
-	usrpkg("FLUXBOX_USE_XFT", lkNone, enum("YES NO"))
-	usrpkg("FOX_USE_XUNICODE", lkNone, enum("YES NO"))
-	usrpkg("FREEWNN_USER", lkNone, BtUserGroupName)
-	usrpkg("FREEWNN_GROUP", lkNone, BtUserGroupName)
-	usrpkg("GAMES_USER", lkNone, BtUserGroupName)
-	usrpkg("GAMES_GROUP", lkNone, BtUserGroupName)
-	usrpkg("GAMEMODE", lkNone, BtFileMode)
-	usrpkg("GAMEDIRMODE", lkNone, BtFileMode)
-	usrpkg("GAMEDATAMODE", lkNone, BtFileMode)
-	usrpkg("GAMEGRP", lkNone, BtUserGroupName)
-	usrpkg("GAMEOWN", lkNone, BtUserGroupName)
-	usrpkg("GRUB_NETWORK_CARDS", lkNone, BtIdentifier)
-	usrpkg("GRUB_PRESET_COMMAND", lkNone, enum("bootp dhcp rarp"))
-	usrpkg("GRUB_SCAN_ARGS", lkShell, BtShellWord)
-	usrpkg("HASKELL_COMPILER", lkNone, enum("ghc"))
-	usrpkg("HOWL_GROUP", lkNone, BtUserGroupName)
-	usrpkg("HOWL_USER", lkNone, BtUserGroupName)
-	usrpkg("ICECAST_CHROOTDIR", lkNone, BtPathname)
-	usrpkg("ICECAST_CHUNKLEN", lkNone, BtInteger)
-	usrpkg("ICECAST_SOURCE_BUFFSIZE", lkNone, BtInteger)
-	usrpkg("IMAP_UW_CCLIENT_MBOX_FMT", lkNone, enum("mbox mbx mh mmdf mtx mx news phile tenex unix"))
-	usrpkg("IMAP_UW_MAILSPOOLHOME", lkNone, BtFileName)
-	usrpkg("IMDICTDIR", lkNone, BtPathname)
-	usrpkg("INN_DATA_DIR", lkNone, BtPathname)
-	usrpkg("INN_USER", lkNone, BtUserGroupName)
-	usrpkg("INN_GROUP", lkNone, BtUserGroupName)
-	usrpkg("IRCD_HYBRID_NICLEN", lkNone, BtInteger)
-	usrpkg("IRCD_HYBRID_TOPICLEN", lkNone, BtInteger)
-	usrpkg("IRCD_HYBRID_SYSLOG_EVENTS", lkNone, BtUnknown)
-	usrpkg("IRCD_HYBRID_SYSLOG_FACILITY", lkNone, BtIdentifier)
-	usrpkg("IRCD_HYBRID_MAXCONN", lkNone, BtInteger)
-	usrpkg("IRCD_HYBRID_IRC_USER", lkNone, BtUserGroupName)
-	usrpkg("IRCD_HYBRID_IRC_GROUP", lkNone, BtUserGroupName)
-	usrpkg("IRRD_USE_PGP", lkNone, enum("5 2"))
-	usrpkg("JABBERD_USER", lkNone, BtUserGroupName)
-	usrpkg("JABBERD_GROUP", lkNone, BtUserGroupName)
-	usrpkg("JABBERD_LOGDIR", lkNone, BtPathname)
-	usrpkg("JABBERD_SPOOLDIR", lkNone, BtPathname)
-	usrpkg("JABBERD_PIDDIR", lkNone, BtPathname)
-	usrpkg("JAKARTA_HOME", lkNone, BtPathname)
-	usrpkg("KERBEROS", lkNone, BtYes)
-	usrpkg("KERMIT_SUID_UUCP", lkNone, BtYes)
-	usrpkg("KJS_USE_PCRE", lkNone, BtYes)
-	usrpkg("KNEWS_DOMAIN_FILE", lkNone, BtPathname)
-	usrpkg("KNEWS_DOMAIN_NAME", lkNone, BtIdentifier)
-	usrpkg("LIBDVDCSS_HOMEPAGE", lkNone, BtHomepage)
-	usrpkg("LIBDVDCSS_MASTER_SITES", lkShell, BtFetchURL)
-	usrpkg("LATEX2HTML_ICONPATH", lkNone, BtURL)
-	usrpkg("LEAFNODE_DATA_DIR", lkNone, BtPathname)
-	usrpkg("LEAFNODE_USER", lkNone, BtUserGroupName)
-	usrpkg("LEAFNODE_GROUP", lkNone, BtUserGroupName)
-	usrpkg("LINUX_LOCALES", lkShell, BtIdentifier)
-	usrpkg("MAILAGENT_DOMAIN", lkNone, BtIdentifier)
-	usrpkg("MAILAGENT_EMAIL", lkNone, BtMailAddress)
-	usrpkg("MAILAGENT_FQDN", lkNone, BtIdentifier)
-	usrpkg("MAILAGENT_ORGANIZATION", lkNone, BtUnknown)
-	usrpkg("MAJORDOMO_HOMEDIR", lkNone, BtPathname)
-	usrpkg("MAKEINFO_ARGS", lkShell, BtShellWord)
-	usrpkg("MECAB_CHARSET", lkNone, BtIdentifier)
-	usrpkg("MEDIATOMB_GROUP", lkNone, BtUserGroupName)
-	usrpkg("MEDIATOMB_USER", lkNone, BtUserGroupName)
-	usrpkg("MLDONKEY_GROUP", lkNone, BtUserGroupName)
-	usrpkg("MLDONKEY_HOME", lkNone, BtPathname)
-	usrpkg("MLDONKEY_USER", lkNone, BtUserGroupName)
-	usrpkg("MONOTONE_GROUP", lkNone, BtUserGroupName)
-	usrpkg("MONOTONE_USER", lkNone, BtUserGroupName)
-	usrpkg("MOTIF_TYPE", lkNone, enum("motif openmotif lesstif dt"))
-	usrpkg("MOTIF_TYPE_DEFAULT", lkNone, enum("motif openmotif lesstif dt"))
-	usrpkg("MTOOLS_ENABLE_FLOPPYD", lkNone, BtYesNo)
-	usrpkg("MYSQL_USER", lkNone, BtUserGroupName)
-	usrpkg("MYSQL_GROUP", lkNone, BtUserGroupName)
-	usrpkg("MYSQL_DATADIR", lkNone, BtPathname)
-	usrpkg("MYSQL_CHARSET", lkNone, BtIdentifier)
-	usrpkg("MYSQL_EXTRA_CHARSET", lkShell, BtIdentifier)
-	usrpkg("NAGIOS_GROUP", lkNone, BtUserGroupName)
-	usrpkg("NAGIOS_USER", lkNone, BtUserGroupName)
-	usrpkg("NAGIOSCMD_GROUP", lkNone, BtUserGroupName)
-	usrpkg("NAGIOSDIR", lkNone, BtPathname)
-	usrpkg("NBPAX_PROGRAM_PREFIX", lkNone, BtUnknown)
-	usrpkg("NMH_EDITOR", lkNone, BtIdentifier)
-	usrpkg("NMH_MTA", lkNone, enum("smtp sendmail"))
-	usrpkg("NMH_PAGER", lkNone, BtIdentifier)
-	usrpkg("NS_PREFERRED", lkNone, enum("communicator navigator mozilla"))
-	usrpkg("OPENSSH_CHROOT", lkNone, BtPathname)
-	usrpkg("OPENSSH_USER", lkNone, BtUserGroupName)
-	usrpkg("OPENSSH_GROUP", lkNone, BtUserGroupName)
-	usrpkg("P4USER", lkNone, BtUserGroupName)
-	usrpkg("P4GROUP", lkNone, BtUserGroupName)
-	usrpkg("P4ROOT", lkNone, BtPathname)
-	usrpkg("P4PORT", lkNone, BtInteger)
-	usrpkg("PALMOS_DEFAULT_SDK", lkNone, enum("1 2 3.1 3.5"))
-	usrpkg("PAPERSIZE", lkNone, enum("A4 Letter"))
-	usrpkg("PGGROUP", lkNone, BtUserGroupName)
-	usrpkg("PGUSER", lkNone, BtUserGroupName)
-	usrpkg("PGHOME", lkNone, BtPathname)
-	usrpkg("PILRC_USE_GTK", lkNone, BtYesNo)
-	usrpkg("PKG_JVM_DEFAULT", lkNone, jvms)
-	usrpkg("POPTOP_USE_MPPE", lkNone, BtYes)
-	usrpkg("PROCMAIL_MAILSPOOLHOME", lkNone, BtFileName)
-	usrpkg("PROCMAIL_TRUSTED_IDS", lkShell, BtUnknown) // Comma-separated list of string or integer literals.
-	usrpkg("PVM_SSH", lkNone, BtPathname)
-	usrpkg("QMAILDIR", lkNone, BtPathname)
-	usrpkg("QMAIL_QFILTER_TMPDIR", lkNone, BtPathname)
-	usrpkg("QMAIL_QUEUE_DIR", lkNone, BtPathname)
-	usrpkg("QMAIL_QUEUE_EXTRA", lkNone, BtMailAddress)
-	usrpkg("QPOPPER_FAC", lkNone, BtIdentifier)
-	usrpkg("QPOPPER_USER", lkNone, BtUserGroupName)
-	usrpkg("QPOPPER_SPOOL_DIR", lkNone, BtPathname)
-	usrpkg("RASMOL_DEPTH", lkNone, enum("8 16 32"))
-	usrpkg("RELAY_CTRL_DIR", lkNone, BtPathname)
-	usrpkg("RPM_DB_PREFIX", lkNone, BtPathname)
-	usrpkg("RSSH_SCP_PATH", lkNone, BtPathname)
-	usrpkg("RSSH_SFTP_SERVER_PATH", lkNone, BtPathname)
-	usrpkg("RSSH_CVS_PATH", lkNone, BtPathname)
-	usrpkg("RSSH_RDIST_PATH", lkNone, BtPathname)
-	usrpkg("RSSH_RSYNC_PATH", lkNone, BtPathname)
-	usrpkg("SAWFISH_THEMES", lkShell, BtFileName)
-	usrpkg("SCREWS_GROUP", lkNone, BtUserGroupName)
-	usrpkg("SCREWS_USER", lkNone, BtUserGroupName)
-	usrpkg("SDIST_PAWD", lkNone, enum("pawd pwd"))
-	usrpkg("SERIAL_DEVICES", lkShell, BtPathname)
-	usrpkg("SILC_CLIENT_WITH_PERL", lkNone, BtYesNo)
-	usrpkg("SSH_SUID", lkNone, BtYesNo)
-	usrpkg("SSYNC_PAWD", lkNone, enum("pawd pwd"))
-	usrpkg("SUSE_PREFER", lkNone, enum("13.1 12.1 10.0"))
-	usrpkg("TEXMFSITE", lkNone, BtPathname)
-	usrpkg("THTTPD_LOG_FACILITY", lkNone, BtIdentifier)
-	usrpkg("UNPRIVILEGED", lkNone, BtYesNo)
-	usrpkg("USE_CROSS_COMPILE", lkNone, BtYesNo)
-	usrpkg("USERPPP_GROUP", lkNone, BtUserGroupName)
-	usrpkg("UUCP_GROUP", lkNone, BtUserGroupName)
-	usrpkg("UUCP_USER", lkNone, BtUserGroupName)
-	usrpkg("VIM_EXTRA_OPTS", lkShell, BtShellWord)
-	usrpkg("WCALC_HTMLDIR", lkNone, BtPathname)
-	usrpkg("WCALC_HTMLPATH", lkNone, BtPathname) // URL path
-	usrpkg("WCALC_CGIDIR", lkNone, BtPrefixPathname)
-	usrpkg("WCALC_CGIPATH", lkNone, BtPathname) // URL path
-	usrpkg("WDM_MANAGERS", lkShell, BtIdentifier)
-	usrpkg("X10_PORT", lkNone, BtPathname)
-	usrpkg("XAW_TYPE", lkNone, enum("standard 3d xpm neXtaw"))
-	usrpkg("XLOCK_DEFAULT_MODE", lkNone, BtIdentifier)
-	usrpkg("ZSH_STATIC", lkNone, BtYes)
+	usrpkg("ACROREAD_FONTPATH", BtPathlist)
+	usrpkg("AMANDA_USER", BtUserGroupName)
+	usrpkg("AMANDA_TMP", BtPathname)
+	usrpkg("AMANDA_VAR", BtPathname)
+	usrpkg("APACHE_USER", BtUserGroupName)
+	usrpkg("APACHE_GROUP", BtUserGroupName)
+	usrpkglist("APACHE_SUEXEC_CONFIGURE_ARGS", BtShellWord)
+	usrpkglist("APACHE_SUEXEC_DOCROOT", BtPathname)
+	usrpkg("ARLA_CACHE", BtPathname)
+	usrpkg("BIND_DIR", BtPathname)
+	usrpkg("BIND_GROUP", BtUserGroupName)
+	usrpkg("BIND_USER", BtUserGroupName)
+	usrpkg("CACTI_GROUP", BtUserGroupName)
+	usrpkg("CACTI_USER", BtUserGroupName)
+	usrpkg("CANNA_GROUP", BtUserGroupName)
+	usrpkg("CANNA_USER", BtUserGroupName)
+	usrpkg("CDRECORD_CONF", BtPathname)
+	usrpkg("CLAMAV_GROUP", BtUserGroupName)
+	usrpkg("CLAMAV_USER", BtUserGroupName)
+	usrpkg("CLAMAV_DBDIR", BtPathname)
+	usrpkg("CONSERVER_DEFAULTHOST", BtIdentifier)
+	usrpkg("CONSERVER_DEFAULTPORT", BtInteger)
+	usrpkg("CUPS_GROUP", BtUserGroupName)
+	usrpkg("CUPS_USER", BtUserGroupName)
+	usrpkglist("CUPS_SYSTEM_GROUPS", BtUserGroupName)
+	usrpkg("CYRUS_IDLE", enum("poll idled no"))
+	usrpkg("CYRUS_GROUP", BtUserGroupName)
+	usrpkg("CYRUS_USER", BtUserGroupName)
+	usrpkg("DAEMONTOOLS_LOG_USER", BtUserGroupName)
+	usrpkg("DAEMONTOOLS_GROUP", BtUserGroupName)
+	usrpkg("DBUS_GROUP", BtUserGroupName)
+	usrpkg("DBUS_USER", BtUserGroupName)
+	usrpkg("DEFANG_GROUP", BtUserGroupName)
+	usrpkg("DEFANG_USER", BtUserGroupName)
+	usrpkg("DEFANG_SPOOLDIR", BtPathname)
+	usrpkg("DEFAULT_IRC_SERVER", BtIdentifier)
+	usrpkg("DEFAULT_SERIAL_DEVICE", BtPathname)
+	usrpkg("DIALER_GROUP", BtUserGroupName)
+	usrpkg("DJBDNS_AXFR_USER", BtUserGroupName)
+	usrpkg("DJBDNS_CACHE_USER", BtUserGroupName)
+	usrpkg("DJBDNS_LOG_USER", BtUserGroupName)
+	usrpkg("DJBDNS_RBL_USER", BtUserGroupName)
+	usrpkg("DJBDNS_TINY_USER", BtUserGroupName)
+	usrpkg("DJBDNS_DJBDNS_GROUP", BtUserGroupName)
+	usrpkg("DT_LAYOUT", enum("US FI FR GER DV"))
+	usrpkglist("ELK_GUI", enum("none xaw motif"))
+	usrpkg("EMACS_TYPE", emacsVersions)
+	usrpkg("EXIM_GROUP", BtUserGroupName)
+	usrpkg("EXIM_USER", BtUserGroupName)
+	usrpkg("FLUXBOX_USE_XINERAMA", enum("YES NO"))
+	usrpkg("FLUXBOX_USE_KDE", enum("YES NO"))
+	usrpkg("FLUXBOX_USE_GNOME", enum("YES NO"))
+	usrpkg("FLUXBOX_USE_XFT", enum("YES NO"))
+	usrpkg("FOX_USE_XUNICODE", enum("YES NO"))
+	usrpkg("FREEWNN_USER", BtUserGroupName)
+	usrpkg("FREEWNN_GROUP", BtUserGroupName)
+	usrpkg("GAMES_USER", BtUserGroupName)
+	usrpkg("GAMES_GROUP", BtUserGroupName)
+	usrpkg("GAMEMODE", BtFileMode)
+	usrpkg("GAMEDIRMODE", BtFileMode)
+	usrpkg("GAMEDATAMODE", BtFileMode)
+	usrpkg("GAMEGRP", BtUserGroupName)
+	usrpkg("GAMEOWN", BtUserGroupName)
+	usrpkg("GRUB_NETWORK_CARDS", BtIdentifier)
+	usrpkg("GRUB_PRESET_COMMAND", enum("bootp dhcp rarp"))
+	usrpkglist("GRUB_SCAN_ARGS", BtShellWord)
+	usrpkg("HASKELL_COMPILER", enum("ghc"))
+	usrpkg("HOWL_GROUP", BtUserGroupName)
+	usrpkg("HOWL_USER", BtUserGroupName)
+	usrpkg("ICECAST_CHROOTDIR", BtPathname)
+	usrpkg("ICECAST_CHUNKLEN", BtInteger)
+	usrpkg("ICECAST_SOURCE_BUFFSIZE", BtInteger)
+	usrpkg("IMAP_UW_CCLIENT_MBOX_FMT",
+		enum("mbox mbx mh mmdf mtx mx news phile tenex unix"))
+	usrpkg("IMAP_UW_MAILSPOOLHOME", BtFileName)
+	usrpkg("IMDICTDIR", BtPathname)
+	usrpkg("INN_DATA_DIR", BtPathname)
+	usrpkg("INN_USER", BtUserGroupName)
+	usrpkg("INN_GROUP", BtUserGroupName)
+	usrpkg("IRCD_HYBRID_NICLEN", BtInteger)
+	usrpkg("IRCD_HYBRID_TOPICLEN", BtInteger)
+	usrpkg("IRCD_HYBRID_SYSLOG_EVENTS", BtUnknown)
+	usrpkg("IRCD_HYBRID_SYSLOG_FACILITY", BtIdentifier)
+	usrpkg("IRCD_HYBRID_MAXCONN", BtInteger)
+	usrpkg("IRCD_HYBRID_IRC_USER", BtUserGroupName)
+	usrpkg("IRCD_HYBRID_IRC_GROUP", BtUserGroupName)
+	usrpkg("IRRD_USE_PGP", enum("5 2"))
+	usrpkg("JABBERD_USER", BtUserGroupName)
+	usrpkg("JABBERD_GROUP", BtUserGroupName)
+	usrpkg("JABBERD_LOGDIR", BtPathname)
+	usrpkg("JABBERD_SPOOLDIR", BtPathname)
+	usrpkg("JABBERD_PIDDIR", BtPathname)
+	usrpkg("JAKARTA_HOME", BtPathname)
+	usrpkg("KERBEROS", BtYes)
+	usrpkg("KERMIT_SUID_UUCP", BtYes)
+	usrpkg("KJS_USE_PCRE", BtYes)
+	usrpkg("KNEWS_DOMAIN_FILE", BtPathname)
+	usrpkg("KNEWS_DOMAIN_NAME", BtIdentifier)
+	usrpkg("LIBDVDCSS_HOMEPAGE", BtHomepage)
+	usrpkglist("LIBDVDCSS_MASTER_SITES", BtFetchURL)
+	usrpkg("LIBUSB_TYPE", enum("compat native"))
+	usrpkg("LATEX2HTML_ICONPATH", BtURL)
+	usrpkg("LEAFNODE_DATA_DIR", BtPathname)
+	usrpkg("LEAFNODE_USER", BtUserGroupName)
+	usrpkg("LEAFNODE_GROUP", BtUserGroupName)
+	usrpkglist("LINUX_LOCALES", BtIdentifier)
+	usrpkg("MAILAGENT_DOMAIN", BtIdentifier)
+	usrpkg("MAILAGENT_EMAIL", BtMailAddress)
+	usrpkg("MAILAGENT_FQDN", BtIdentifier)
+	usrpkg("MAILAGENT_ORGANIZATION", BtUnknown)
+	usrpkg("MAJORDOMO_HOMEDIR", BtPathname)
+	usrpkglist("MAKEINFO_ARGS", BtShellWord)
+	usrpkg("MECAB_CHARSET", BtIdentifier)
+	usrpkg("MEDIATOMB_GROUP", BtUserGroupName)
+	usrpkg("MEDIATOMB_USER", BtUserGroupName)
+	usrpkg("MIREDO_USER", BtUserGroupName)
+	usrpkg("MIREDO_GROUP", BtUserGroupName)
+	usrpkg("MLDONKEY_GROUP", BtUserGroupName)
+	usrpkg("MLDONKEY_HOME", BtPathname)
+	usrpkg("MLDONKEY_USER", BtUserGroupName)
+	usrpkg("MONOTONE_GROUP", BtUserGroupName)
+	usrpkg("MONOTONE_USER", BtUserGroupName)
+	usrpkg("MOTIF_TYPE", enum("motif openmotif lesstif dt"))
+	usrpkg("MOTIF_TYPE_DEFAULT", enum("motif openmotif lesstif dt"))
+	usrpkg("MTOOLS_ENABLE_FLOPPYD", BtYesNo)
+	usrpkg("MYSQL_USER", BtUserGroupName)
+	usrpkg("MYSQL_GROUP", BtUserGroupName)
+	usrpkg("MYSQL_DATADIR", BtPathname)
+	usrpkg("MYSQL_CHARSET", BtIdentifier)
+	usrpkglist("MYSQL_EXTRA_CHARSET", BtIdentifier)
+	usrpkg("NAGIOS_GROUP", BtUserGroupName)
+	usrpkg("NAGIOS_USER", BtUserGroupName)
+	usrpkg("NAGIOSCMD_GROUP", BtUserGroupName)
+	usrpkg("NAGIOSDIR", BtPathname)
+	usrpkg("NBPAX_PROGRAM_PREFIX", BtUnknown)
+	usrpkg("NMH_EDITOR", BtIdentifier)
+	usrpkg("NMH_MTA", enum("smtp sendmail"))
+	usrpkg("NMH_PAGER", BtIdentifier)
+	usrpkg("NS_PREFERRED", enum("communicator navigator mozilla"))
+	usrpkg("NULLMAILER_USER", BtUserGroupName)
+	usrpkg("NULLMAILER_GROUP", BtUserGroupName)
+	usrpkg("OPENSSH_CHROOT", BtPathname)
+	usrpkg("OPENSSH_USER", BtUserGroupName)
+	usrpkg("OPENSSH_GROUP", BtUserGroupName)
+	usrpkg("P4USER", BtUserGroupName)
+	usrpkg("P4GROUP", BtUserGroupName)
+	usrpkg("P4ROOT", BtPathname)
+	usrpkg("P4PORT", BtInteger)
+	usrpkg("PALMOS_DEFAULT_SDK", enum("1 2 3.1 3.5"))
+	usrpkg("PAPERSIZE", enum("A4 Letter"))
+	usrpkg("PGGROUP", BtUserGroupName)
+	usrpkg("PGUSER", BtUserGroupName)
+	usrpkg("PGHOME", BtPathname)
+	usrpkg("PILRC_USE_GTK", BtYesNo)
+	usrpkg("PKG_JVM_DEFAULT", jvms)
+	usrpkg("POPTOP_USE_MPPE", BtYes)
+	usrpkg("PROCMAIL_MAILSPOOLHOME", BtFileName)
+	// Comma-separated list of string or integer literals.
+	usrpkg("PROCMAIL_TRUSTED_IDS", BtUnknown)
+	usrpkg("PVM_SSH", BtPathname)
+	usrpkg("QMAILDIR", BtPathname)
+	usrpkg("QMAIL_ALIAS_USER", BtUserGroupName)
+	usrpkg("QMAIL_DAEMON_USER", BtUserGroupName)
+	usrpkg("QMAIL_LOG_USER", BtUserGroupName)
+	usrpkg("QMAIL_ROOT_USER", BtUserGroupName)
+	usrpkg("QMAIL_PASSWD_USER", BtUserGroupName)
+	usrpkg("QMAIL_QUEUE_USER", BtUserGroupName)
+	usrpkg("QMAIL_REMOTE_USER", BtUserGroupName)
+	usrpkg("QMAIL_SEND_USER", BtUserGroupName)
+	usrpkg("QMAIL_QMAIL_GROUP", BtUserGroupName)
+	usrpkg("QMAIL_NOFILES_GROUP", BtUserGroupName)
+	usrpkg("QMAIL_QFILTER_TMPDIR", BtPathname)
+	usrpkg("QMAIL_QUEUE_DIR", BtPathname)
+	usrpkg("QMAIL_QUEUE_EXTRA", BtMailAddress)
+	usrpkg("QPOPPER_FAC", BtIdentifier)
+	usrpkg("QPOPPER_USER", BtUserGroupName)
+	usrpkg("QPOPPER_SPOOL_DIR", BtPathname)
+	usrpkg("RASMOL_DEPTH", enum("8 16 32"))
+	usrpkg("RELAY_CTRL_DIR", BtPathname)
+	usrpkg("RPM_DB_PREFIX", BtPathname)
+	usrpkg("RSSH_SCP_PATH", BtPathname)
+	usrpkg("RSSH_SFTP_SERVER_PATH", BtPathname)
+	usrpkg("RSSH_CVS_PATH", BtPathname)
+	usrpkg("RSSH_RDIST_PATH", BtPathname)
+	usrpkg("RSSH_RSYNC_PATH", BtPathname)
+	usrpkglist("SAWFISH_THEMES", BtFileName)
+	usrpkg("SCREWS_GROUP", BtUserGroupName)
+	usrpkg("SCREWS_USER", BtUserGroupName)
+	usrpkg("SDIST_PAWD", enum("pawd pwd"))
+	usrpkglist("SERIAL_DEVICES", BtPathname)
+	usrpkg("SILC_CLIENT_WITH_PERL", BtYesNo)
+	usrpkg("SNIPROXY_USER", BtUserGroupName)
+	usrpkg("SNIPROXY_GROUP", BtUserGroupName)
+	usrpkg("SSH_SUID", BtYesNo)
+	usrpkg("SSYNC_PAWD", enum("pawd pwd"))
+	usrpkg("SUSE_PREFER", enum("13.1 12.1 10.0")) // TODO: extract
+	usrpkg("TEXMFSITE", BtPathname)
+	usrpkg("THTTPD_LOG_FACILITY", BtIdentifier)
+	usrpkg("UCSPI_SSL_USER", BtUserGroupName)
+	usrpkg("UCSPI_SSL_GROUP", BtUserGroupName)
+	usrpkg("UNPRIVILEGED", BtYesNo)
+	usrpkg("USE_CROSS_COMPILE", BtYesNo)
+	usrpkg("USERPPP_GROUP", BtUserGroupName)
+	usrpkg("UUCP_GROUP", BtUserGroupName)
+	usrpkg("UUCP_USER", BtUserGroupName)
+	usrpkglist("VIM_EXTRA_OPTS", BtShellWord)
+	usrpkg("WCALC_HTMLDIR", BtPathname)
+	usrpkg("WCALC_HTMLPATH", BtPathname) // URL path
+	usrpkg("WCALC_CGIDIR", BtPrefixPathname)
+	usrpkg("WCALC_CGIPATH", BtPathname) // URL path
+	usrpkglist("WDM_MANAGERS", BtIdentifier)
+	usrpkg("X10_PORT", BtPathname)
+	usrpkg("XAW_TYPE", enum("standard 3d xpm neXtaw"))
+	usrpkg("XLOCK_DEFAULT_MODE", BtIdentifier)
+	usrpkg("ZSH_STATIC", BtYes)
 
 	// some other variables, sorted alphabetically
 
-	acl(".CURDIR", lkNone, BtPathname, "buildlink3.mk: none; *: use, use-loadtime")
-	acl(".IMPSRC", lkShell, BtPathname, "buildlink3.mk: none; *: use, use-loadtime")
-	acl(".TARGET", lkNone, BtPathname, "buildlink3.mk: none; *: use, use-loadtime")
-	acl("@", lkNone, BtPathname, "buildlink3.mk: none; *: use, use-loadtime")
-	acl("ALL_ENV", lkShell, BtShellWord, "")
-	acl("ALTERNATIVES_FILE", lkNone, BtFileName, "")
-	acl("ALTERNATIVES_SRC", lkShell, BtPathname, "")
-	pkg("APACHE_MODULE", lkNone, BtYes)
-	sys("AR", lkNone, BtShellCommand)
-	sys("AS", lkNone, BtShellCommand)
-	pkglist("AUTOCONF_REQD", lkShell, BtVersion)
-	acl("AUTOMAKE_OVERRIDE", lkShell, BtPathmask, "")
-	pkglist("AUTOMAKE_REQD", lkShell, BtVersion)
-	pkg("AUTO_MKDIRS", lkNone, BtYesNo)
-	usr("BATCH", lkNone, BtYes)
-	acl("BDB185_DEFAULT", lkNone, BtUnknown, "")
-	sys("BDBBASE", lkNone, BtPathname)
-	pkg("BDB_ACCEPTED", lkShell, enum("db1 db2 db3 db4 db5 db6"))
-	acl("BDB_DEFAULT", lkNone, enum("db1 db2 db3 db4 db5 db6"), "")
-	sys("BDB_LIBS", lkShell, BtLdFlag)
-	sys("BDB_TYPE", lkNone, enum("db1 db2 db3 db4 db5 db6"))
-	sys("BIGENDIANPLATFORMS", lkShell, BtMachinePlatformPattern)
-	sys("BINGRP", lkNone, BtUserGroupName)
-	sys("BINMODE", lkNone, BtFileMode)
-	sys("BINOWN", lkNone, BtUserGroupName)
-	acl("BOOTSTRAP_DEPENDS", lkShell, BtDependencyWithPath, "Makefile, Makefile.common, *.mk: append")
-	pkg("BOOTSTRAP_PKG", lkNone, BtYesNo)
-	acl("BROKEN", lkNone, BtMessage, "")
-	pkg("BROKEN_GETTEXT_DETECTION", lkNone, BtYesNo)
-	pkglist("BROKEN_EXCEPT_ON_PLATFORM", lkShell, BtMachinePlatformPattern)
-	pkglist("BROKEN_ON_PLATFORM", lkShell, BtMachinePlatformPattern)
-	sys("BSD_MAKE_ENV", lkShell, BtShellWord)
+	// TODO: Instead of grouping them alphabetically, group them
+	//  by topic, like clean, fetch, patch, configure, build, install,
+	//  subst, buildlink3, checks. This will make them easier to
+	//  analyze and align the permissions.
+
+	sysload(".CURDIR", BtPathname)
+	sysload(".IMPSRC", BtPathname)
+	sys(".TARGET", BtPathname)
+	sys("@", BtPathname)
+	pkglistbl3("ALL_ENV", BtShellWord)
+	pkg("ALTERNATIVES_FILE", BtFileName)
+	pkglist("ALTERNATIVES_SRC", BtPathname)
+	pkg("APACHE_MODULE", BtYes)
+	sys("AR", BtShellCommand)
+	sys("AS", BtShellCommand)
+	pkglist("AUTOCONF_REQD", BtVersion)
+	pkglist("AUTOMAKE_OVERRIDE", BtPathmask)
+	pkglist("AUTOMAKE_REQD", BtVersion)
+	pkg("AUTO_MKDIRS", BtYesNo)
+	usr("BATCH", BtYes)
+	usr("BDB185_DEFAULT", BtUnknown)
+	sys("BDBBASE", BtPathname)
+	pkglist("BDB_ACCEPTED", enum("db1 db2 db3 db4 db5 db6"))
+	usr("BDB_DEFAULT", enum("db1 db2 db3 db4 db5 db6"))
+	syslist("BDB_LIBS", BtLdFlag)
+	sys("BDB_TYPE", enum("db1 db2 db3 db4 db5 db6"))
+	syslist("BIGENDIANPLATFORMS", BtMachinePlatformPattern)
+	sys("BINGRP", BtUserGroupName)
+	sys("BINMODE", BtFileMode)
+	sys("BINOWN", BtUserGroupName)
+	pkglist("BOOTSTRAP_DEPENDS", BtDependencyWithPath)
+	pkg("BOOTSTRAP_PKG", BtYesNo)
+	// BROKEN should better be a list of messages instead of a simple string.
+	pkgappend("BROKEN", BtMessage)
+	pkg("BROKEN_GETTEXT_DETECTION", BtYesNo)
+	pkglist("BROKEN_EXCEPT_ON_PLATFORM", BtMachinePlatformPattern)
+	pkglist("BROKEN_ON_PLATFORM", BtMachinePlatformPattern)
+	syslist("BSD_MAKE_ENV", BtShellWord)
 	// TODO: Align the permissions of the various BUILDLINK_*.* variables with each other.
-	acl("BUILDLINK_ABI_DEPENDS.*", lkShell, BtDependency, "buildlink3.mk, builtin.mk: append, use-loadtime; *: append")
-	acl("BUILDLINK_API_DEPENDS.*", lkShell, BtDependency, "buildlink3.mk, builtin.mk: append, use-loadtime; *: append")
-	acl("BUILDLINK_AUTO_DIRS.*", lkNone, BtYesNo, "buildlink3.mk: append")
-	acl("BUILDLINK_CONTENTS_FILTER", lkNone, BtShellCommand, "")
-	sys("BUILDLINK_CFLAGS", lkShell, BtCFlag)
-	bl3list("BUILDLINK_CFLAGS.*", lkShell, BtCFlag)
-	sys("BUILDLINK_CPPFLAGS", lkShell, BtCFlag)
-	bl3list("BUILDLINK_CPPFLAGS.*", lkShell, BtCFlag)
-	acl("BUILDLINK_CONTENTS_FILTER.*", lkNone, BtShellCommand, "buildlink3.mk: set")
-	acl("BUILDLINK_DEPENDS", lkShell, BtIdentifier, "buildlink3.mk: append")
-	acl("BUILDLINK_DEPMETHOD.*", lkShell, BtBuildlinkDepmethod, "buildlink3.mk: default, append, use; Makefile: set, append; Makefile.common, *.mk: append")
-	acl("BUILDLINK_DIR", lkNone, BtPathname, "*: use")
-	bl3list("BUILDLINK_FILES.*", lkShell, BtPathmask)
-	acl("BUILDLINK_FILES_CMD.*", lkNone, BtShellCommand, "")
-	acl("BUILDLINK_INCDIRS.*", lkShell, BtPathname, "buildlink3.mk: default, append; Makefile, Makefile.common, *.mk: use")
-	acl("BUILDLINK_JAVA_PREFIX.*", lkNone, BtPathname, "buildlink3.mk: set, use")
-	acl("BUILDLINK_LDADD.*", lkShell, BtLdFlag, "builtin.mk: set, default, append, use; buildlink3.mk: append, use; Makefile, Makefile.common, *.mk: use")
-	acl("BUILDLINK_LDFLAGS", lkShell, BtLdFlag, "*: use")
-	bl3list("BUILDLINK_LDFLAGS.*", lkShell, BtLdFlag)
-	acl("BUILDLINK_LIBDIRS.*", lkShell, BtPathname, "buildlink3.mk, builtin.mk: append; Makefile, Makefile.common, *.mk: use")
-	acl("BUILDLINK_LIBS.*", lkShell, BtLdFlag, "buildlink3.mk: append")
-	acl("BUILDLINK_PASSTHRU_DIRS", lkShell, BtPathname, "Makefile, Makefile.common, buildlink3.mk, hacks.mk: append")
-	acl("BUILDLINK_PASSTHRU_RPATHDIRS", lkShell, BtPathname, "Makefile, Makefile.common, buildlink3.mk, hacks.mk: append")
-	acl("BUILDLINK_PKGSRCDIR.*", lkNone, BtRelativePkgDir, "buildlink3.mk: default, use-loadtime")
-	acl("BUILDLINK_PREFIX.*", lkNone, BtPathname, "builtin.mk: set, use; Makefile, Makefile.common, *.mk: use")
-	acl("BUILDLINK_RPATHDIRS.*", lkShell, BtPathname, "buildlink3.mk: append")
-	acl("BUILDLINK_TARGETS", lkShell, BtIdentifier, "")
-	acl("BUILDLINK_FNAME_TRANSFORM.*", lkNone, BtSedCommands, "Makefile, buildlink3.mk, builtin.mk, hacks.mk: append")
-	acl("BUILDLINK_TRANSFORM", lkShell, BtWrapperTransform, "*: append")
-	acl("BUILDLINK_TRANSFORM.*", lkShell, BtWrapperTransform, "*: append")
-	acl("BUILDLINK_TREE", lkShell, BtIdentifier, "buildlink3.mk: append")
-	acl("BUILDLINK_X11_DIR", lkNone, BtPathname, "*: use")
-	acl("BUILD_DEFS", lkShell, BtVariableName, "Makefile, Makefile.common, options.mk: append")
-	pkglist("BUILD_DEFS_EFFECTS", lkShell, BtVariableName)
-	acl("BUILD_DEPENDS", lkShell, BtDependencyWithPath, "Makefile, Makefile.common, *.mk: append")
-	pkglist("BUILD_DIRS", lkShell, BtWrksrcSubdirectory)
-	pkglist("BUILD_ENV", lkShell, BtShellWord)
-	sys("BUILD_MAKE_CMD", lkNone, BtShellCommand)
-	pkglist("BUILD_MAKE_FLAGS", lkShell, BtShellWord)
-	pkglist("BUILD_TARGET", lkShell, BtIdentifier)
-	pkglist("BUILD_TARGET.*", lkShell, BtIdentifier)
-	pkg("BUILD_USES_MSGFMT", lkNone, BtYes)
-	acl("BUILTIN_PKG", lkNone, BtIdentifier, "builtin.mk: set, use-loadtime, use")
-	acl("BUILTIN_PKG.*", lkNone, BtPkgName, "builtin.mk: set, use-loadtime, use")
-	acl("BUILTIN_FIND_FILES_VAR", lkShell, BtVariableName, "builtin.mk: set")
-	acl("BUILTIN_FIND_FILES.*", lkShell, BtPathname, "builtin.mk: set")
-	acl("BUILTIN_FIND_GREP.*", lkNone, BtUnknown, "builtin.mk: set")
-	acl("BUILTIN_FIND_HEADERS_VAR", lkShell, BtVariableName, "builtin.mk: set")
-	acl("BUILTIN_FIND_HEADERS.*", lkShell, BtPathname, "builtin.mk: set")
-	acl("BUILTIN_FIND_LIBS", lkShell, BtPathname, "builtin.mk: set")
-	acl("BUILTIN_IMAKE_CHECK", lkShell, BtUnknown, "builtin.mk: set")
-	acl("BUILTIN_IMAKE_CHECK.*", lkNone, BtYesNo, "")
-	sys("BUILTIN_X11_TYPE", lkNone, BtUnknown)
-	sys("BUILTIN_X11_VERSION", lkNone, BtUnknown)
-	acl("CATEGORIES", lkShell, BtCategory, "Makefile: set, append; Makefile.common: set, default, append")
-	sysload("CC_VERSION", lkNone, BtMessage)
-	sysload("CC", lkNone, BtShellCommand)
-	pkglistbl3("CFLAGS", lkShell, BtCFlag)   // may also be changed by the user
-	pkglistbl3("CFLAGS.*", lkShell, BtCFlag) // may also be changed by the user
-	acl("CHECK_BUILTIN", lkNone, BtYesNo, "builtin.mk: default; Makefile: set")
-	acl("CHECK_BUILTIN.*", lkNone, BtYesNo, "Makefile, options.mk, buildlink3.mk: set; builtin.mk: default, use-loadtime; *: use-loadtime")
-	acl("CHECK_FILES_SKIP", lkShell, BtBasicRegularExpression, "Makefile, Makefile.common: append")
-	pkg("CHECK_FILES_SUPPORTED", lkNone, BtYesNo)
-	usr("CHECK_HEADERS", lkNone, BtYesNo)
-	pkglist("CHECK_HEADERS_SKIP", lkShell, BtPathmask)
-	usr("CHECK_INTERPRETER", lkNone, BtYesNo)
-	pkglist("CHECK_INTERPRETER_SKIP", lkShell, BtPathmask)
-	usr("CHECK_PERMS", lkNone, BtYesNo)
-	pkglist("CHECK_PERMS_SKIP", lkShell, BtPathmask)
-	usr("CHECK_PORTABILITY", lkNone, BtYesNo)
-	pkglist("CHECK_PORTABILITY_SKIP", lkShell, BtPathmask)
-	usr("CHECK_RELRO", lkNone, BtYesNo)
-	pkglist("CHECK_RELRO_SKIP", lkShell, BtPathmask)
-	pkg("CHECK_RELRO_SUPPORTED", lkNone, BtYesNo)
-	acl("CHECK_SHLIBS", lkNone, BtYesNo, "Makefile: set")
-	pkglist("CHECK_SHLIBS_SKIP", lkShell, BtPathmask)
-	acl("CHECK_SHLIBS_SUPPORTED", lkNone, BtYesNo, "Makefile: set")
-	pkglist("CHECK_WRKREF_SKIP", lkShell, BtPathmask)
-	pkg("CMAKE_ARG_PATH", lkNone, BtPathname)
-	pkglist("CMAKE_ARGS", lkShell, BtShellWord)
-	pkglist("CMAKE_ARGS.*", lkShell, BtShellWord)
-	pkglist("CMAKE_DEPENDENCIES_REWRITE", lkShell, BtPathmask) // Relative to WRKSRC
-	pkglist("CMAKE_MODULE_PATH_OVERRIDE", lkShell, BtPathmask) // Relative to WRKSRC
-	pkg("CMAKE_PKGSRC_BUILD_FLAGS", lkNone, BtYesNo)
-	pkglist("CMAKE_PREFIX_PATH", lkShell, BtPathmask)
-	pkglist("CMAKE_USE_GNU_INSTALL_DIRS", lkNone, BtYesNo)
-	pkg("CMAKE_INSTALL_PREFIX", lkNone, BtPathname) // The default is ${PREFIX}.
-	acl("COMMENT", lkNone, BtComment, "Makefile, Makefile.common: set, append")
-	sys("COMPILE.*", lkNone, BtShellCommand)
-	acl("COMPILER_RPATH_FLAG", lkNone, enum("-Wl,-rpath"), "*: use")
-	pkglist("CONFIGURE_ARGS", lkShell, BtShellWord)
-	pkglist("CONFIGURE_ARGS.*", lkShell, BtShellWord)
-	pkglist("CONFIGURE_DIRS", lkShell, BtWrksrcSubdirectory)
-	acl("CONFIGURE_ENV", lkShell, BtShellWord, "Makefile, Makefile.common: append, set, use; buildlink3.mk, builtin.mk: append; *.mk: append, use")
-	acl("CONFIGURE_ENV.*", lkShell, BtShellWord, "Makefile, Makefile.common: append, set, use; buildlink3.mk, builtin.mk: append; *.mk: append, use")
-	pkg("CONFIGURE_HAS_INFODIR", lkNone, BtYesNo)
-	pkg("CONFIGURE_HAS_LIBDIR", lkNone, BtYesNo)
-	pkg("CONFIGURE_HAS_MANDIR", lkNone, BtYesNo)
-	pkg("CONFIGURE_SCRIPT", lkNone, BtPathname)
-	acl("CONFIG_GUESS_OVERRIDE", lkShell, BtPathmask, "Makefile, Makefile.common: set, append")
-	acl("CONFIG_STATUS_OVERRIDE", lkShell, BtPathmask, "Makefile, Makefile.common: set, append")
-	acl("CONFIG_SHELL", lkNone, BtPathname, "Makefile, Makefile.common: set")
-	acl("CONFIG_SUB_OVERRIDE", lkShell, BtPathmask, "Makefile, Makefile.common: set, append")
-	pkglist("CONFLICTS", lkShell, BtDependency)
-	pkglist("CONF_FILES", lkNone, BtConfFiles)
-	pkg("CONF_FILES_MODE", lkNone, enum("0644 0640 0600 0400"))
-	pkglist("CONF_FILES_PERMS", lkShell, BtPerms)
-	sys("COPY", lkNone, enum("-c")) // The flag that tells ${INSTALL} to copy a file
-	sys("CPP", lkNone, BtShellCommand)
-	pkglist("CPPFLAGS", lkShell, BtCFlag)
-	pkglist("CPPFLAGS.*", lkShell, BtCFlag)
-	sys("CXX", lkNone, BtShellCommand)
-	pkglist("CXXFLAGS", lkShell, BtCFlag)
-	pkglist("CXXFLAGS.*", lkShell, BtCFlag)
-	pkglist("CWRAPPERS_APPEND.*", lkShell, BtShellWord)
-	sys("DEFAULT_DISTFILES", lkShell, BtFetchURL) // From mk/fetch/bsd.fetch-vars.mk.
-	acl("DEINSTALL_FILE", lkNone, BtPathname, "Makefile: set")
-	acl("DEINSTALL_SRC", lkShell, BtPathname, "Makefile: set; Makefile.common: default, set")
-	acl("DEINSTALL_TEMPLATES", lkShell, BtPathname, "Makefile: set, append; Makefile.common: set, default, append")
-	sys("DELAYED_ERROR_MSG", lkNone, BtShellCommand)
-	sys("DELAYED_WARNING_MSG", lkNone, BtShellCommand)
-	pkglist("DEPENDS", lkShell, BtDependencyWithPath)
-	usr("DEPENDS_TARGET", lkShell, BtIdentifier)
-	acl("DESCR_SRC", lkShell, BtPathname, "Makefile: set, append; Makefile.common: default, set")
-	sys("DESTDIR", lkNone, BtPathname)
-	acl("DESTDIR_VARNAME", lkNone, BtVariableName, "Makefile, Makefile.common: set")
-	sys("DEVOSSAUDIO", lkNone, BtPathname)
-	sys("DEVOSSSOUND", lkNone, BtPathname)
-	pkglist("DISTFILES", lkShell, BtFileName)
-	pkg("DISTINFO_FILE", lkNone, BtRelativePkgPath)
-	pkg("DISTNAME", lkNone, BtFileName)
-	pkg("DIST_SUBDIR", lkNone, BtPathname)
-	acl("DJB_BUILD_ARGS", lkShell, BtShellWord, "")
-	acl("DJB_BUILD_TARGETS", lkShell, BtIdentifier, "")
-	acl("DJB_CONFIG_CMDS", lkNone, BtShellCommands, "options.mk: set")
-	acl("DJB_CONFIG_DIRS", lkShell, BtWrksrcSubdirectory, "")
-	acl("DJB_CONFIG_HOME", lkNone, BtFileName, "")
-	acl("DJB_CONFIG_PREFIX", lkNone, BtPathname, "")
-	acl("DJB_INSTALL_TARGETS", lkShell, BtIdentifier, "")
-	acl("DJB_MAKE_TARGETS", lkNone, BtYesNo, "")
-	acl("DJB_RESTRICTED", lkNone, BtYesNo, "Makefile: set")
-	acl("DJB_SLASHPACKAGE", lkNone, BtYesNo, "")
-	acl("DLOPEN_REQUIRE_PTHREADS", lkNone, BtYesNo, "")
-	acl("DL_AUTO_VARS", lkNone, BtYes, "Makefile, Makefile.common, options.mk: set")
-	acl("DL_LIBS", lkShell, BtLdFlag, "")
-	sys("DOCOWN", lkNone, BtUserGroupName)
-	sys("DOCGRP", lkNone, BtUserGroupName)
-	sys("DOCMODE", lkNone, BtFileMode)
-	sys("DOWNLOADED_DISTFILE", lkNone, BtPathname)
-	sys("DO_NADA", lkNone, BtShellCommand)
-	pkg("DYNAMIC_SITES_CMD", lkNone, BtShellCommand)
-	pkg("DYNAMIC_SITES_SCRIPT", lkNone, BtPathname)
-	acl("ECHO", lkNone, BtShellCommand, "*: use")
-	sys("ECHO_MSG", lkNone, BtShellCommand)
-	sys("ECHO_N", lkNone, BtShellCommand)
-	pkg("EGDIR", lkNone, BtPathname) // Not defined anywhere but used in many places like this.
-	sys("EMACS_BIN", lkNone, BtPathname)
-	sys("EMACS_ETCPREFIX", lkNone, BtPathname)
-	sys("EMACS_FLAVOR", lkNone, enum("emacs xemacs"))
-	sys("EMACS_INFOPREFIX", lkNone, BtPathname)
-	sys("EMACS_LISPPREFIX", lkNone, BtPathname)
-	acl("EMACS_MODULES", lkShell, BtIdentifier, "Makefile, Makefile.common: set, append")
-	sys("EMACS_PKGNAME_PREFIX", lkNone, BtIdentifier) // Or the empty string.
-	sys("EMACS_TYPE", lkNone, enum("emacs xemacs"))
-	acl("EMACS_USE_LEIM", lkNone, BtYes, "")
-	acl("EMACS_VERSIONS_ACCEPTED", lkShell, emacsVersions, "Makefile: set")
-	sys("EMACS_VERSION_MAJOR", lkNone, BtInteger)
-	sys("EMACS_VERSION_MINOR", lkNone, BtInteger)
-	acl("EMACS_VERSION_REQD", lkShell, emacsVersions, "Makefile: set, append")
-	sys("EMULDIR", lkNone, BtPathname)
-	sys("EMULSUBDIR", lkNone, BtPathname)
-	sys("OPSYS_EMULDIR", lkNone, BtPathname)
-	sys("EMULSUBDIRSLASH", lkNone, BtPathname)
-	sys("EMUL_ARCH", lkNone, enum("arm i386 m68k none ns32k sparc vax x86_64"))
-	sys("EMUL_DISTRO", lkNone, BtIdentifier)
-	sys("EMUL_IS_NATIVE", lkNone, BtYes)
-	pkg("EMUL_MODULES.*", lkShell, BtIdentifier)
-	sys("EMUL_OPSYS", lkNone, enum("darwin freebsd hpux irix linux osf1 solaris sunos none"))
-	pkg("EMUL_PKG_FMT", lkNone, enum("plain rpm"))
-	usr("EMUL_PLATFORM", lkNone, BtEmulPlatform)
-	pkg("EMUL_PLATFORMS", lkShell, BtEmulPlatform)
-	usr("EMUL_PREFER", lkShell, BtEmulPlatform)
-	pkg("EMUL_REQD", lkShell, BtDependency)
-	usr("EMUL_TYPE.*", lkNone, enum("native builtin suse suse-10.0 suse-12.1 suse-13.1"))
-	sys("ERROR_CAT", lkNone, BtShellCommand)
-	sys("ERROR_MSG", lkNone, BtShellCommand)
-	sys("EXPORT_SYMBOLS_LDFLAGS", lkShell, BtLdFlag)
-	sys("EXTRACT_CMD", lkNone, BtShellCommand)
-	pkg("EXTRACT_DIR", lkNone, BtPathname)
-	pkg("EXTRACT_DIR.*", lkNone, BtPathname)
-	pkglist("EXTRACT_ELEMENTS", lkShell, BtPathmask)
-	pkglist("EXTRACT_ENV", lkShell, BtShellWord)
-	pkglist("EXTRACT_ONLY", lkShell, BtPathname)
-	acl("EXTRACT_OPTS", lkShell, BtShellWord, "Makefile, Makefile.common: set, append")
-	acl("EXTRACT_OPTS_BIN", lkShell, BtShellWord, "Makefile, Makefile.common: set, append")
-	acl("EXTRACT_OPTS_LHA", lkShell, BtShellWord, "Makefile, Makefile.common: set, append")
-	acl("EXTRACT_OPTS_PAX", lkShell, BtShellWord, "Makefile, Makefile.common: set, append")
-	acl("EXTRACT_OPTS_RAR", lkShell, BtShellWord, "Makefile, Makefile.common: set, append")
-	acl("EXTRACT_OPTS_TAR", lkShell, BtShellWord, "Makefile, Makefile.common: set, append")
-	acl("EXTRACT_OPTS_ZIP", lkShell, BtShellWord, "Makefile, Makefile.common: set, append")
-	acl("EXTRACT_OPTS_ZOO", lkShell, BtShellWord, "Makefile, Makefile.common: set, append")
-	pkg("EXTRACT_SUFX", lkNone, BtDistSuffix)
-	pkg("EXTRACT_USING", lkNone, enum("bsdtar gtar nbtar pax"))
-	sys("FAIL_MSG", lkNone, BtShellCommand)
-	sys("FAMBASE", lkNone, BtPathname)
-	pkg("FAM_ACCEPTED", lkShell, enum("fam gamin"))
-	usr("FAM_DEFAULT", lkNone, enum("fam gamin"))
-	sys("FAM_TYPE", lkNone, enum("fam gamin"))
-	acl("FETCH_BEFORE_ARGS", lkShell, BtShellWord, "Makefile: set, append")
-	pkglist("FETCH_MESSAGE", lkShell, BtShellWord)
-	pkg("FILESDIR", lkNone, BtRelativePkgPath)
-	pkglist("FILES_SUBST", lkShell, BtShellWord)
-	acl("FILES_SUBST_SED", lkShell, BtShellWord, "")
-	pkglist("FIX_RPATH", lkShell, BtVariableName)
-	pkglist("FLEX_REQD", lkShell, BtVersion)
-	acl("FONTS_DIRS.*", lkShell, BtPathname, "Makefile: set, append, use; Makefile.common: append, use")
-	sys("GAMEDATAMODE", lkNone, BtFileMode)
-	sys("GAMES_GROUP", lkNone, BtUserGroupName)
-	sys("GAMEDATA_PERMS", lkShell, BtPerms)
-	sys("GAMEDIR_PERMS", lkShell, BtPerms)
-	sys("GAMEMODE", lkNone, BtFileMode)
-	sys("GAMES_USER", lkNone, BtUserGroupName)
-	pkglist("GCC_REQD", lkShell, BtGccReqd)
-	pkglist("GENERATE_PLIST", lkNone, BtShellCommands)
-	pkg("GITHUB_PROJECT", lkNone, BtIdentifier)
-	pkg("GITHUB_TAG", lkNone, BtIdentifier)
-	pkg("GITHUB_RELEASE", lkNone, BtFileName)
-	pkg("GITHUB_TYPE", lkNone, enum("tag release"))
-	pkg("GMAKE_REQD", lkNone, BtVersion)
-	acl("GNU_ARCH", lkNone, enum("mips"), "")
-	acl("GNU_ARCH.*", lkNone, BtIdentifier, "buildlink3.mk: none; *: set, use")
-	acl("GNU_CONFIGURE", lkNone, BtYes, "Makefile, Makefile.common: set")
-	acl("GNU_CONFIGURE_INFODIR", lkNone, BtPathname, "Makefile, Makefile.common: set")
-	acl("GNU_CONFIGURE_LIBDIR", lkNone, BtPathname, "Makefile, Makefile.common: set")
-	pkg("GNU_CONFIGURE_LIBSUBDIR", lkNone, BtPathname)
-	acl("GNU_CONFIGURE_MANDIR", lkNone, BtPathname, "Makefile, Makefile.common: set")
-	acl("GNU_CONFIGURE_PREFIX", lkNone, BtPathname, "Makefile: set")
-	pkg("GOPATH", lkNone, BtPathname)
-	acl("HAS_CONFIGURE", lkNone, BtYes, "Makefile, Makefile.common: set")
-	pkglist("HEADER_TEMPLATES", lkShell, BtPathname)
-	pkg("HOMEPAGE", lkNone, BtHomepage)
-	pkg("ICON_THEMES", lkNone, BtYes)
-	acl("IGNORE_PKG.*", lkNone, BtYes, "*: set, use-loadtime")
-	sys("IMAKE", lkNone, BtShellCommand)
-	acl("INCOMPAT_CURSES", lkShell, BtMachinePlatformPattern, "Makefile: set, append")
-	acl("INCOMPAT_ICONV", lkShell, BtMachinePlatformPattern, "")
-	acl("INFO_DIR", lkNone, BtPathname, "") // relative to PREFIX
-	pkg("INFO_FILES", lkNone, BtYes)
-	sys("INSTALL", lkNone, BtShellCommand)
-	pkglist("INSTALLATION_DIRS", lkShell, BtPrefixPathname)
-	pkg("INSTALLATION_DIRS_FROM_PLIST", lkNone, BtYes)
-	sys("INSTALL_DATA", lkNone, BtShellCommand)
-	sys("INSTALL_DATA_DIR", lkNone, BtShellCommand)
-	pkglist("INSTALL_DIRS", lkShell, BtWrksrcSubdirectory)
-	pkglist("INSTALL_ENV", lkShell, BtShellWord)
-	acl("INSTALL_FILE", lkNone, BtPathname, "Makefile: set")
-	sys("INSTALL_GAME", lkNone, BtShellCommand)
-	sys("INSTALL_GAME_DATA", lkNone, BtShellCommand)
-	sys("INSTALL_LIB", lkNone, BtShellCommand)
-	sys("INSTALL_LIB_DIR", lkNone, BtShellCommand)
-	pkglist("INSTALL_MAKE_FLAGS", lkShell, BtShellWord)
-	sys("INSTALL_MAN", lkNone, BtShellCommand)
-	sys("INSTALL_MAN_DIR", lkNone, BtShellCommand)
-	sys("INSTALL_PROGRAM", lkNone, BtShellCommand)
-	sys("INSTALL_PROGRAM_DIR", lkNone, BtShellCommand)
-	sys("INSTALL_SCRIPT", lkNone, BtShellCommand)
-	acl("INSTALL_SCRIPTS_ENV", lkShell, BtShellWord, "")
-	sys("INSTALL_SCRIPT_DIR", lkNone, BtShellCommand)
-	acl("INSTALL_SRC", lkShell, BtPathname, "Makefile: set; Makefile.common: default, set")
-	pkg("INSTALL_TARGET", lkShell, BtIdentifier)
-	acl("INSTALL_TEMPLATES", lkShell, BtPathname, "Makefile: set, append; Makefile.common: set, default, append")
-	acl("INSTALL_UNSTRIPPED", lkNone, BtYesNo, "Makefile, Makefile.common: set")
-	pkg("INTERACTIVE_STAGE", lkShell, enum("fetch extract configure build test install"))
-	acl("IS_BUILTIN.*", lkNone, BtYesNoIndirectly, "builtin.mk: set, use-loadtime, use")
-	sys("JAVA_BINPREFIX", lkNone, BtPathname)
-	pkg("JAVA_CLASSPATH", lkNone, BtShellWord)
-	pkg("JAVA_HOME", lkNone, BtPathname)
-	pkg("JAVA_NAME", lkNone, BtFileName)
-	pkglist("JAVA_UNLIMIT", lkShell, enum("cmdsize datasize stacksize"))
-	pkglist("JAVA_WRAPPERS", lkShell, BtFileName)
-	pkg("JAVA_WRAPPER_BIN.*", lkNone, BtPathname)
-	sys("KRB5BASE", lkNone, BtPathname)
-	acl("KRB5_ACCEPTED", lkShell, enum("heimdal mit-krb5"), "")
-	usr("KRB5_DEFAULT", lkNone, enum("heimdal mit-krb5"))
-	sys("KRB5_TYPE", lkNone, BtIdentifier)
-	sys("LD", lkNone, BtShellCommand)
-	pkglistbl3("LDFLAGS", lkShell, BtLdFlag)      // May also be changed by the user.
-	pkglistbl3("LDFLAGS.*", lkShell, BtLdFlag)    // May also be changed by the user.
-	sysload("LIBABISUFFIX", lkNone, BtIdentifier) // Can also be empty.
-	sys("LIBGRP", lkNone, BtUserGroupName)
-	sys("LIBMODE", lkNone, BtFileMode)
-	sys("LIBOWN", lkNone, BtUserGroupName)
-	sys("LIBOSSAUDIO", lkNone, BtPathname)
-	pkglist("LIBS", lkShell, BtLdFlag)
-	pkglist("LIBS.*", lkShell, BtLdFlag)
-	sys("LIBTOOL", lkNone, BtShellCommand)
-	acl("LIBTOOL_OVERRIDE", lkShell, BtPathmask, "Makefile: set, append")
-	pkglist("LIBTOOL_REQD", lkShell, BtVersion)
-	acl("LICENCE", lkNone, BtLicense, "buildlink3.mk, builtin.mk: none; Makefile: set, append; *: default, set, append")
-	acl("LICENSE", lkNone, BtLicense, "buildlink3.mk, builtin.mk: none; Makefile: set, append; *: default, set, append")
-	pkg("LICENSE_FILE", lkNone, BtPathname)
-	sys("LINK.*", lkNone, BtShellCommand)
-	sys("LINKER_RPATH_FLAG", lkNone, BtShellWord)
-	sys("LITTLEENDIANPLATFORMS", lkShell, BtMachinePlatformPattern)
-	sys("LOWER_OPSYS", lkNone, BtIdentifier)
-	sys("LOWER_VENDOR", lkNone, BtIdentifier)
-	sys("LP64PLATFORMS", lkShell, BtMachinePlatformPattern)
-	acl("LTCONFIG_OVERRIDE", lkShell, BtPathmask, "Makefile: set, append; Makefile.common: append")
-	sysload("MACHINE_ARCH", lkNone, enumMachineArch)
-	sysload("MACHINE_GNU_ARCH", lkNone, enumMachineGnuArch)
-	sysload("MACHINE_GNU_PLATFORM", lkNone, BtMachineGnuPlatform)
-	sysload("MACHINE_PLATFORM", lkNone, BtMachinePlatform)
-	acl("MAINTAINER", lkNone, BtMailAddress, "Makefile: set; Makefile.common: default")
-	sysload("MAKE", lkNone, BtShellCommand)
-	pkglist("MAKEFLAGS", lkShell, BtShellWord)
-	acl("MAKEVARS", lkShell, BtVariableName, "buildlink3.mk, builtin.mk, hacks.mk: append")
-	pkglist("MAKE_DIRS", lkShell, BtPathname)
-	pkglist("MAKE_DIRS_PERMS", lkShell, BtPerms)
-	acl("MAKE_ENV", lkShell, BtShellWord, "Makefile, Makefile.common: append, set, use; buildlink3.mk, builtin.mk: append; *.mk: append, use")
-	acl("MAKE_ENV.*", lkShell, BtShellWord, "Makefile, Makefile.common: append, set, use; buildlink3.mk, builtin.mk: append; *.mk: append, use")
-	pkg("MAKE_FILE", lkNone, BtPathname)
-	pkglist("MAKE_FLAGS", lkShell, BtShellWord)
-	pkglist("MAKE_FLAGS.*", lkShell, BtShellWord)
-	usr("MAKE_JOBS", lkNone, BtInteger)
-	pkg("MAKE_JOBS_SAFE", lkNone, BtYesNo)
-	pkg("MAKE_PROGRAM", lkNone, BtShellCommand)
-	acl("MANCOMPRESSED", lkNone, BtYesNo, "Makefile: set; Makefile.common: default, set")
-	acl("MANCOMPRESSED_IF_MANZ", lkNone, BtYes, "Makefile: set; Makefile.common: default, set")
-	sys("MANGRP", lkNone, BtUserGroupName)
-	sys("MANMODE", lkNone, BtFileMode)
-	sys("MANOWN", lkNone, BtUserGroupName)
-	pkglist("MASTER_SITES", lkShell, BtFetchURL)
-	// TODO: Extract the MASTER_SITE_* definitions from mk/fetch/sites.mk instead of listing them here.
-	sys("MASTER_SITE_APACHE", lkShell, BtFetchURL)
-	sys("MASTER_SITE_BACKUP", lkShell, BtFetchURL)
-	sys("MASTER_SITE_CRATESIO", lkShell, BtFetchURL)
-	sys("MASTER_SITE_CYGWIN", lkShell, BtFetchURL)
-	sys("MASTER_SITE_DEBIAN", lkShell, BtFetchURL)
-	sys("MASTER_SITE_FREEBSD", lkShell, BtFetchURL)
-	sys("MASTER_SITE_FREEBSD_LOCAL", lkShell, BtFetchURL)
-	sys("MASTER_SITE_GENTOO", lkShell, BtFetchURL)
-	sys("MASTER_SITE_GITHUB", lkShell, BtFetchURL)
-	sys("MASTER_SITE_GNOME", lkShell, BtFetchURL)
-	sys("MASTER_SITE_GNU", lkShell, BtFetchURL)
-	sys("MASTER_SITE_GNUSTEP", lkShell, BtFetchURL)
-	sys("MASTER_SITE_IFARCHIVE", lkShell, BtFetchURL)
-	sys("MASTER_SITE_HASKELL_HACKAGE", lkShell, BtFetchURL)
-	sys("MASTER_SITE_KDE", lkShell, BtFetchURL)
-	sys("MASTER_SITE_LOCAL", lkShell, BtFetchURL)
-	sys("MASTER_SITE_MOZILLA", lkShell, BtFetchURL)
-	sys("MASTER_SITE_MOZILLA_ALL", lkShell, BtFetchURL)
-	sys("MASTER_SITE_MOZILLA_ESR", lkShell, BtFetchURL)
-	sys("MASTER_SITE_MYSQL", lkShell, BtFetchURL)
-	sys("MASTER_SITE_NETLIB", lkShell, BtFetchURL)
-	sys("MASTER_SITE_OPENBSD", lkShell, BtFetchURL)
-	sys("MASTER_SITE_OPENOFFICE", lkShell, BtFetchURL)
-	sys("MASTER_SITE_OSDN", lkShell, BtFetchURL)
-	sys("MASTER_SITE_PERL_CPAN", lkShell, BtFetchURL)
-	sys("MASTER_SITE_PGSQL", lkShell, BtFetchURL)
-	sys("MASTER_SITE_PYPI", lkShell, BtFetchURL)
-	sys("MASTER_SITE_R_CRAN", lkShell, BtFetchURL)
-	sys("MASTER_SITE_RUBYGEMS", lkShell, BtFetchURL)
-	sys("MASTER_SITE_SOURCEFORGE", lkShell, BtFetchURL)
-	sys("MASTER_SITE_SUNSITE", lkShell, BtFetchURL)
-	sys("MASTER_SITE_SUSE", lkShell, BtFetchURL)
-	sys("MASTER_SITE_TEX_CTAN", lkShell, BtFetchURL)
-	sys("MASTER_SITE_XCONTRIB", lkShell, BtFetchURL)
-	sys("MASTER_SITE_XEMACS", lkShell, BtFetchURL)
-	sys("MASTER_SITE_XORG", lkShell, BtFetchURL)
-	pkglist("MESSAGE_SRC", lkShell, BtPathname)
-	acl("MESSAGE_SUBST", lkShell, BtShellWord, "Makefile, Makefile.common, options.mk: append")
-	pkg("META_PACKAGE", lkNone, BtYes)
-	sys("MISSING_FEATURES", lkShell, BtIdentifier)
-	acl("MYSQL_VERSIONS_ACCEPTED", lkShell, mysqlVersions, "Makefile: set")
-	usr("MYSQL_VERSION_DEFAULT", lkNone, BtVersion)
-	sys("NATIVE_CC", lkNone, BtShellCommand) // See mk/platform/tools.NetBSD.mk (and some others).
-	sys("NM", lkNone, BtShellCommand)
-	sys("NONBINMODE", lkNone, BtFileMode)
-	pkg("NOT_FOR_COMPILER", lkShell, compilers)
-	pkglist("NOT_FOR_BULK_PLATFORM", lkShell, BtMachinePlatformPattern)
-	pkglist("NOT_FOR_PLATFORM", lkShell, BtMachinePlatformPattern)
-	pkg("NOT_FOR_UNPRIVILEGED", lkNone, BtYesNo)
-	pkglist("NOT_PAX_ASLR_SAFE", lkShell, BtPathmask)
-	pkglist("NOT_PAX_MPROTECT_SAFE", lkShell, BtPathmask)
-	acl("NO_BIN_ON_CDROM", lkNone, BtRestricted, "Makefile, Makefile.common: set")
-	acl("NO_BIN_ON_FTP", lkNone, BtRestricted, "Makefile, Makefile.common: set")
-	acl("NO_BUILD", lkNone, BtYes, "Makefile, Makefile.common: set; Makefile.*: default, set")
-	pkg("NO_CHECKSUM", lkNone, BtYes)
-	pkg("NO_CONFIGURE", lkNone, BtYes)
-	acl("NO_EXPORT_CPP", lkNone, BtYes, "Makefile: set")
-	pkg("NO_EXTRACT", lkNone, BtYes)
-	pkg("NO_INSTALL_MANPAGES", lkNone, BtYes) // only has an effect for Imake packages.
-	acl("NO_PKGTOOLS_REQD_CHECK", lkNone, BtYes, "Makefile: set")
-	acl("NO_SRC_ON_CDROM", lkNone, BtRestricted, "Makefile, Makefile.common: set")
-	acl("NO_SRC_ON_FTP", lkNone, BtRestricted, "Makefile, Makefile.common: set")
-	sysload("OBJECT_FMT", lkNone, enum("COFF ECOFF ELF SOM XCOFF Mach-O PE a.out"))
-	pkglist("ONLY_FOR_COMPILER", lkShell, compilers)
-	pkglist("ONLY_FOR_PLATFORM", lkShell, BtMachinePlatformPattern)
-	pkg("ONLY_FOR_UNPRIVILEGED", lkNone, BtYesNo)
-	sysload("OPSYS", lkNone, BtIdentifier)
-	acl("OPSYSVARS", lkShell, BtVariableName, "Makefile, Makefile.common: append")
-	acl("OSVERSION_SPECIFIC", lkNone, BtYes, "Makefile, Makefile.common: set")
-	sysload("OS_VERSION", lkNone, BtVersion)
-	sysload("OSX_VERSION", lkNone, BtVersion) // See mk/platform/Darwin.mk.
-	pkg("OVERRIDE_DIRDEPTH*", lkNone, BtInteger)
-	pkg("OVERRIDE_GNU_CONFIG_SCRIPTS", lkNone, BtYes)
-	acl("OWNER", lkNone, BtMailAddress, "Makefile: set; Makefile.common: default")
-	pkglist("OWN_DIRS", lkShell, BtPathname)
-	pkglist("OWN_DIRS_PERMS", lkShell, BtPerms)
-	sys("PAMBASE", lkNone, BtPathname)
-	usr("PAM_DEFAULT", lkNone, enum("linux-pam openpam solaris-pam"))
-	acl("PATCHDIR", lkNone, BtRelativePkgPath, "Makefile: set; Makefile.common: default, set")
-	pkglist("PATCHFILES", lkShell, BtFileName)
-	acl("PATCH_ARGS", lkShell, BtShellWord, "")
-	acl("PATCH_DIST_ARGS", lkShell, BtShellWord, "Makefile: set, append")
-	acl("PATCH_DIST_CAT", lkNone, BtShellCommand, "")
-	acl("PATCH_DIST_STRIP*", lkNone, BtShellWord, "buildlink3.mk, builtin.mk: none; Makefile, Makefile.common, *.mk: set")
-	acl("PATCH_SITES", lkShell, BtFetchURL, "Makefile, Makefile.common, options.mk: set")
-	acl("PATCH_STRIP", lkNone, BtShellWord, "")
-	sys("PATH", lkNone, BtPathlist)       // From the PATH environment variable.
-	sys("PAXCTL", lkNone, BtShellCommand) // See mk/pax.mk.
-	acl("PERL5_PACKLIST", lkShell, BtPerl5Packlist, "Makefile: set; options.mk: set, append")
-	acl("PERL5_PACKLIST_DIR", lkNone, BtPathname, "")
-	pkg("PERL5_REQD", lkShell, BtVersion)
-	sys("PERL5_INSTALLARCHLIB", lkNone, BtPathname) // See lang/perl5/vars.mk
-	sys("PERL5_INSTALLSCRIPT", lkNone, BtPathname)
-	sys("PERL5_INSTALLVENDORBIN", lkNone, BtPathname)
-	sys("PERL5_INSTALLVENDORSCRIPT", lkNone, BtPathname)
-	sys("PERL5_INSTALLVENDORARCH", lkNone, BtPathname)
-	sys("PERL5_INSTALLVENDORLIB", lkNone, BtPathname)
-	sys("PERL5_INSTALLVENDORMAN1DIR", lkNone, BtPathname)
-	sys("PERL5_INSTALLVENDORMAN3DIR", lkNone, BtPathname)
-	sys("PERL5_SUB_INSTALLARCHLIB", lkNone, BtPrefixPathname) // See lang/perl5/vars.mk
-	sys("PERL5_SUB_INSTALLSCRIPT", lkNone, BtPrefixPathname)
-	sys("PERL5_SUB_INSTALLVENDORBIN", lkNone, BtPrefixPathname)
-	sys("PERL5_SUB_INSTALLVENDORSCRIPT", lkNone, BtPrefixPathname)
-	sys("PERL5_SUB_INSTALLVENDORARCH", lkNone, BtPrefixPathname)
-	sys("PERL5_SUB_INSTALLVENDORLIB", lkNone, BtPrefixPathname)
-	sys("PERL5_SUB_INSTALLVENDORMAN1DIR", lkNone, BtPrefixPathname)
-	sys("PERL5_SUB_INSTALLVENDORMAN3DIR", lkNone, BtPrefixPathname)
-	pkg("PERL5_USE_PACKLIST", lkNone, BtYesNo)
-	sys("PGSQL_PREFIX", lkNone, BtPathname)
-	acl("PGSQL_VERSIONS_ACCEPTED", lkShell, pgsqlVersions, "")
-	usr("PGSQL_VERSION_DEFAULT", lkNone, BtVersion)
-	sys("PG_LIB_EXT", lkNone, enum("dylib so"))
-	sys("PGSQL_TYPE", lkNone, enumFrom("mk/pgsql.buildlink3.mk", "postgresql11-client", "PGSQL_TYPE"))
-	sys("PGPKGSRCDIR", lkNone, BtPathname)
-	sys("PHASE_MSG", lkNone, BtShellCommand)
-	usr("PHP_VERSION_REQD", lkNone, BtVersion)
-	acl("PHP_PKG_PREFIX", lkNone, enumFromDirs("lang", `^php(\d+)$`, "php$1", "php56 php71 php72 php73"), ""+
-		"special:phpversion.mk: set; "+
-		"*: use-loadtime, use")
-	sys("PKGBASE", lkNone, BtIdentifier)
-	acl("PKGCONFIG_FILE.*", lkShell, BtPathname,
-		"builtin.mk: set, append; special:pkgconfig-builtin.mk: use-loadtime")
-	acl("PKGCONFIG_OVERRIDE", lkShell, BtPathmask,
-		"Makefile: set, append; Makefile.common: append")
-	pkg("PKGCONFIG_OVERRIDE_STAGE", lkNone, BtStage)
-	pkg("PKGDIR", lkNone, BtRelativePkgDir)
-	sys("PKGDIRMODE", lkNone, BtFileMode)
-	sys("PKGLOCALEDIR", lkNone, BtPathname)
-	pkg("PKGNAME", lkNone, BtPkgName)
-	sys("PKGNAME_NOREV", lkNone, BtPkgName)
-	sysload("PKGPATH", lkNone, BtPathname)
-	acl("PKGREPOSITORY", lkNone, BtUnknown, "")
-	acl("PKGREVISION", lkNone, BtPkgRevision, "Makefile: set; *: none")
-	sys("PKGSRCDIR", lkNone, BtPathname)
-	acl("PKGSRCTOP", lkNone, BtYes, "Makefile: set")
-	sys("PKGSRC_SETENV", lkNone, BtShellCommand)
-	acl("PKGTOOLS_ENV", lkShell, BtShellWord, "")
-	sys("PKGVERSION", lkNone, BtVersion)
-	sys("PKGVERSION_NOREV", lkNone, BtVersion) // Without the nb* part.
-	sys("PKGWILDCARD", lkNone, BtFileMask)
-	sys("PKG_ADMIN", lkNone, BtShellCommand)
-	sys("PKG_APACHE", lkNone, enum("apache24"))
-	pkg("PKG_APACHE_ACCEPTED", lkShell, enum("apache24"))
-	usr("PKG_APACHE_DEFAULT", lkNone, enum("apache24"))
-	sysload("PKG_BUILD_OPTIONS.*", lkShell, BtOption)
-	usr("PKG_CONFIG", lkNone, BtYes)
+	acllist("BUILDLINK_ABI_DEPENDS.*", BtDependency,
+		"buildlink3.mk, builtin.mk: append, use-loadtime",
+		"*: append")
+	acllist("BUILDLINK_API_DEPENDS.*", BtDependency,
+		"buildlink3.mk, builtin.mk: append, use-loadtime",
+		"*: append")
+	acl("BUILDLINK_AUTO_DIRS.*", BtYesNo,
+		"buildlink3.mk: append",
+		"Makefile: set")
+	syslist("BUILDLINK_CFLAGS", BtCFlag)
+	bl3list("BUILDLINK_CFLAGS.*", BtCFlag)
+	acl("BUILDLINK_CONTENTS_FILTER.*", BtShellCommand,
+		"buildlink3.mk: set")
+	syslist("BUILDLINK_CPPFLAGS", BtCFlag)
+	bl3list("BUILDLINK_CPPFLAGS.*", BtCFlag)
+	acllist("BUILDLINK_DEPENDS", BtIdentifier,
+		"buildlink3.mk: append")
+	acllist("BUILDLINK_DEPMETHOD.*", BtBuildlinkDepmethod,
+		"buildlink3.mk: default, append, use",
+		"Makefile, Makefile.*, *.mk: default, set, append")
+	acl("BUILDLINK_DIR", BtPathname,
+		"*: use")
+	bl3list("BUILDLINK_FILES.*", BtPathmask)
+	pkgbl3("BUILDLINK_FILES_CMD.*", BtShellCommand)
+	acllist("BUILDLINK_INCDIRS.*", BtPathname,
+		"buildlink3.mk: default, append",
+		"Makefile, Makefile.*, *.mk: use")
+	acl("BUILDLINK_JAVA_PREFIX.*", BtPathname,
+		"buildlink3.mk: set, use")
+	acllist("BUILDLINK_LDADD.*", BtLdFlag,
+		"builtin.mk: default, set, append, use",
+		"buildlink3.mk: append, use",
+		"Makefile, Makefile.*, *.mk: use")
+	acllist("BUILDLINK_LDFLAGS", BtLdFlag,
+		"*: use")
+	bl3list("BUILDLINK_LDFLAGS.*", BtLdFlag)
+	acllist("BUILDLINK_LIBDIRS.*", BtPathname,
+		"buildlink3.mk, builtin.mk: append",
+		"Makefile, Makefile.*, *.mk: use")
+	acllist("BUILDLINK_LIBS.*", BtLdFlag,
+		"buildlink3.mk: append",
+		"Makefile, Makefile.*, *.mk: set, append, use")
+	acllist("BUILDLINK_PASSTHRU_DIRS", BtPathname,
+		"Makefile, Makefile.*, *.mk: append")
+	acllist("BUILDLINK_PASSTHRU_RPATHDIRS", BtPathname,
+		"Makefile, Makefile.*, *.mk: append")
+	acl("BUILDLINK_PKGSRCDIR.*", BtRelativePkgDir,
+		"buildlink3.mk: default, use-loadtime")
+	acl("BUILDLINK_PREFIX.*", BtPathname,
+		"builtin.mk: set, use",
+		"Makefile, Makefile.*, *.mk: use")
+	acllist("BUILDLINK_RPATHDIRS.*", BtPathname,
+		"buildlink3.mk: append")
+	acllist("BUILDLINK_TARGETS", BtIdentifier,
+		"Makefile, Makefile.*, *.mk: append")
+	acl("BUILDLINK_FNAME_TRANSFORM.*", BtSedCommands,
+		"Makefile, buildlink3.mk, builtin.mk, hacks.mk, options.mk: append")
+	acllist("BUILDLINK_TRANSFORM", BtWrapperTransform,
+		"*: append")
+	acllist("BUILDLINK_TRANSFORM.*", BtWrapperTransform,
+		"*: append")
+	acllist("BUILDLINK_TREE", BtIdentifier,
+		"buildlink3.mk: append")
+	acl("BUILDLINK_X11_DIR", BtPathname,
+		"*: use")
+	acllist("BUILD_DEFS", BtVariableName,
+		"Makefile, Makefile.*, *.mk: append")
+	pkglist("BUILD_DEFS_EFFECTS", BtVariableName)
+	acllist("BUILD_DEPENDS", BtDependencyWithPath,
+		"Makefile, Makefile.*, *.mk: append")
+	pkglist("BUILD_DIRS", BtWrksrcSubdirectory)
+	pkglist("BUILD_ENV", BtShellWord)
+	sys("BUILD_MAKE_CMD", BtShellCommand)
+	pkglist("BUILD_MAKE_FLAGS", BtShellWord)
+	pkglist("BUILD_TARGET", BtIdentifier)
+	pkglist("BUILD_TARGET.*", BtIdentifier)
+	pkg("BUILD_USES_MSGFMT", BtYes)
+	acl("BUILTIN_PKG", BtIdentifier,
+		"builtin.mk: set, use, use-loadtime",
+		"Makefile, Makefile.*, *.mk: use, use-loadtime")
+	acl("BUILTIN_PKG.*", BtPkgName,
+		"builtin.mk: set, use, use-loadtime")
+	pkglistbl3("BUILTIN_FIND_FILES_VAR", BtVariableName)
+	pkglistbl3("BUILTIN_FIND_FILES.*", BtPathname)
+	acl("BUILTIN_FIND_GREP.*", BtUnknown,
+		"builtin.mk: set")
+	acllist("BUILTIN_FIND_HEADERS_VAR", BtVariableName,
+		"builtin.mk: set")
+	acllist("BUILTIN_FIND_HEADERS.*", BtPathname,
+		"builtin.mk: set")
+	acllist("BUILTIN_FIND_LIBS", BtPathname,
+		"builtin.mk: set")
+	sys("BUILTIN_X11_TYPE", BtUnknown)
+	sys("BUILTIN_X11_VERSION", BtUnknown)
+	pkglist("CATEGORIES", BtCategory)
+	sysload("CC_VERSION", BtMessage)
+	sysload("CC", BtShellCommand)
+	pkglistbl3("CFLAGS", BtCFlag)   // may also be changed by the user
+	pkglistbl3("CFLAGS.*", BtCFlag) // may also be changed by the user
+	acl("CHECK_BUILTIN", BtYesNo,
+		"builtin.mk: default",
+		"Makefile: set")
+	acl("CHECK_BUILTIN.*", BtYesNo,
+		"Makefile, options.mk, buildlink3.mk: set",
+		"builtin.mk: default, use-loadtime",
+		"*: use-loadtime")
+	pkglist("CHECK_FILES_SKIP", BtBasicRegularExpression)
+	pkg("CHECK_FILES_SUPPORTED", BtYesNo)
+	usr("CHECK_HEADERS", BtYesNo)
+	pkglist("CHECK_HEADERS_SKIP", BtPathmask)
+	usr("CHECK_INTERPRETER", BtYesNo)
+	pkglist("CHECK_INTERPRETER_SKIP", BtPathmask)
+	usr("CHECK_PERMS", BtYesNo)
+	pkglist("CHECK_PERMS_SKIP", BtPathmask)
+	usr("CHECK_PORTABILITY", BtYesNo)
+	pkglist("CHECK_PORTABILITY_SKIP", BtPathmask)
+	usr("CHECK_RELRO", BtYesNo)
+	pkglist("CHECK_RELRO_SKIP", BtPathmask)
+	pkg("CHECK_RELRO_SUPPORTED", BtYesNo)
+	pkg("CHECK_SHLIBS", BtYesNo)
+	pkglist("CHECK_SHLIBS_SKIP", BtPathmask)
+	pkg("CHECK_SHLIBS_SUPPORTED", BtYesNo)
+	pkglist("CHECK_WRKREF_SKIP", BtPathmask)
+	pkg("CMAKE_ARG_PATH", BtPathname)
+	pkglist("CMAKE_ARGS", BtShellWord)
+	pkglist("CMAKE_ARGS.*", BtShellWord)
+	pkglist("CMAKE_DEPENDENCIES_REWRITE", BtPathmask) // Relative to WRKSRC
+	pkglist("CMAKE_MODULE_PATH_OVERRIDE", BtPathmask) // Relative to WRKSRC
+	pkg("CMAKE_PKGSRC_BUILD_FLAGS", BtYesNo)
+	pkglist("CMAKE_PREFIX_PATH", BtPathmask)
+	pkg("CMAKE_USE_GNU_INSTALL_DIRS", BtYesNo)
+	pkg("CMAKE_INSTALL_PREFIX", BtPathname) // The default is ${PREFIX}.
+	pkgappend("COMMENT", BtComment)
+	sys("COMPILE.*", BtShellCommand)
+	sys("COMPILER_RPATH_FLAG", enum("-Wl,-rpath"))
+	pkglist("CONFIGURE_ARGS", BtShellWord)
+	pkglist("CONFIGURE_ARGS.*", BtShellWord)
+	pkglist("CONFIGURE_DIRS", BtWrksrcSubdirectory)
+	pkglistbl3("CONFIGURE_ENV", BtShellWord)
+	pkglistbl3("CONFIGURE_ENV.*", BtShellWord)
+	pkg("CONFIGURE_HAS_INFODIR", BtYesNo)
+	pkg("CONFIGURE_HAS_LIBDIR", BtYesNo)
+	pkg("CONFIGURE_HAS_MANDIR", BtYesNo)
+	pkg("CONFIGURE_SCRIPT", BtPathname)
+	pkglist("CONFIG_GUESS_OVERRIDE", BtPathmask)
+	pkglist("CONFIG_STATUS_OVERRIDE", BtPathmask)
+	pkg("CONFIG_SHELL", BtPathname)
+	pkglist("CONFIG_SUB_OVERRIDE", BtPathmask)
+	pkglist("CONFLICTS", BtDependency)
+	pkgappend("CONF_FILES", BtConfFiles)
+	pkg("CONF_FILES_MODE", enum("0644 0640 0600 0400"))
+	pkglist("CONF_FILES_PERMS", BtPerms)
+	sys("COPY", enum("-c")) // The flag that tells ${INSTALL} to copy a file
+	sys("CPP", BtShellCommand)
+	pkglistbl3("CPPFLAGS", BtCFlag)
+	pkglistbl3("CPPFLAGS.*", BtCFlag)
+	sys("CXX", BtShellCommand)
+	pkglistbl3("CXXFLAGS", BtCFlag)
+	pkglistbl3("CXXFLAGS.*", BtCFlag)
+	pkglistbl3("CWRAPPERS_APPEND.*", BtShellWord)
+	syslist("DEFAULT_DISTFILES", BtFetchURL) // From mk/fetch/bsd.fetch-vars.mk.
+	pkglist("DEINSTALL_SRC", BtPathname)
+	pkglist("DEINSTALL_TEMPLATES", BtPathname)
+	sys("DELAYED_ERROR_MSG", BtShellCommand)
+	sys("DELAYED_WARNING_MSG", BtShellCommand)
+	pkglistbl3("DEPENDS", BtDependencyWithPath)
+	usrlist("DEPENDS_TARGET", BtIdentifier)
+	pkglist("DESCR_SRC", BtPathname)
+	sys("DESTDIR", BtPathname)
+	pkg("DESTDIR_VARNAME", BtVariableName)
+	sys("DEVOSSAUDIO", BtPathname)
+	sys("DEVOSSSOUND", BtPathname)
+	pkglist("DISTFILES", BtFileName)
+	pkg("DISTINFO_FILE", BtRelativePkgPath)
+	pkg("DISTNAME", BtFileName)
+	pkg("DIST_SUBDIR", BtPathname)
+	pkglist("DJB_BUILD_ARGS", BtShellWord)
+	pkglist("DJB_BUILD_TARGETS", BtIdentifier)
+	pkgappend("DJB_CONFIG_CMDS", BtShellCommands)
+	pkglist("DJB_CONFIG_DIRS", BtWrksrcSubdirectory)
+	pkg("DJB_CONFIG_HOME", BtFileName)
+	pkg("DJB_CONFIG_PREFIX", BtPathname)
+	pkglist("DJB_INSTALL_TARGETS", BtIdentifier)
+	pkg("DJB_MAKE_TARGETS", BtYesNo)
+	pkg("DJB_RESTRICTED", BtYesNo)
+	pkg("DJB_SLASHPACKAGE", BtYesNo)
+	pkg("DLOPEN_REQUIRE_PTHREADS", BtYesNo)
+	pkg("DL_AUTO_VARS", BtYes)
+	acllist("DL_LIBS", BtLdFlag,
+		"*: append, use")
+	sys("DOCOWN", BtUserGroupName)
+	sys("DOCGRP", BtUserGroupName)
+	sys("DOCMODE", BtFileMode)
+	sys("DOWNLOADED_DISTFILE", BtPathname)
+	sys("DO_NADA", BtShellCommand)
+	pkg("DYNAMIC_SITES_CMD", BtShellCommand)
+	pkg("DYNAMIC_SITES_SCRIPT", BtPathname)
+	sysbl3("ECHO", BtShellCommand)
+	sysbl3("ECHO_MSG", BtShellCommand)
+	sysbl3("ECHO_N", BtShellCommand)
+	pkg("EGDIR", BtPathname) // Not defined anywhere but used in many places like this.
+	sys("EMACS_BIN", BtPathname)
+	sys("EMACS_ETCPREFIX", BtPathname)
+	sys("EMACS_FLAVOR", enum("emacs xemacs"))
+	sys("EMACS_INFOPREFIX", BtPathname)
+	sys("EMACS_LISPPREFIX", BtPathname)
+	pkglistbl3("EMACS_MODULES", BtIdentifier)
+	sys("EMACS_PKGNAME_PREFIX", BtIdentifier) // Or the empty string.
+	sys("EMACS_TYPE", enum("emacs xemacs"))
+	pkglist("EMACS_VERSIONS_ACCEPTED", emacsVersions)
+	sys("EMACS_VERSION_MAJOR", BtInteger)
+	sys("EMACS_VERSION_MINOR", BtInteger)
+	pkglist("EMACS_VERSION_REQD", emacsVersions)
+	sys("EMULDIR", BtPathname)
+	sys("EMULSUBDIR", BtPathname)
+	sys("OPSYS_EMULDIR", BtPathname)
+	sys("EMULSUBDIRSLASH", BtPathname)
+	sys("EMUL_ARCH", enum("arm i386 m68k none ns32k sparc vax x86_64"))
+	sys("EMUL_DISTRO", BtIdentifier)
+	sys("EMUL_IS_NATIVE", BtYes)
+	pkglist("EMUL_MODULES.*", BtIdentifier)
+	sys("EMUL_OPSYS", enum("darwin freebsd hpux irix linux osf1 solaris sunos none"))
+	pkg("EMUL_PKG_FMT", enum("plain rpm"))
+	usr("EMUL_PLATFORM", BtEmulPlatform)
+	pkglist("EMUL_PLATFORMS", BtEmulPlatform)
+	usrlist("EMUL_PREFER", BtEmulPlatform)
+	pkglist("EMUL_REQD", BtDependency)
+	usr("EMUL_TYPE.*", enum("native builtin suse suse-10.0 suse-12.1 suse-13.1"))
+	sys("ERROR_CAT", BtShellCommand)
+	sys("ERROR_MSG", BtShellCommand)
+	syslist("EXPORT_SYMBOLS_LDFLAGS", BtLdFlag)
+	sys("EXTRACT_CMD", BtShellCommand)
+	pkg("EXTRACT_DIR", BtPathname)
+	pkg("EXTRACT_DIR.*", BtPathname)
+	pkglist("EXTRACT_ELEMENTS", BtPathmask)
+	pkglist("EXTRACT_ENV", BtShellWord)
+	pkglist("EXTRACT_ONLY", BtPathname)
+	pkglist("EXTRACT_OPTS", BtShellWord)
+	pkglist("EXTRACT_OPTS_BIN", BtShellWord)
+	pkglist("EXTRACT_OPTS_LHA", BtShellWord)
+	pkglist("EXTRACT_OPTS_PAX", BtShellWord)
+	pkglist("EXTRACT_OPTS_RAR", BtShellWord)
+	pkglist("EXTRACT_OPTS_TAR", BtShellWord)
+	pkglist("EXTRACT_OPTS_ZIP", BtShellWord)
+	pkglist("EXTRACT_OPTS_ZOO", BtShellWord)
+	pkg("EXTRACT_SUFX", BtDistSuffix)
+	pkg("EXTRACT_USING", enum("bsdtar gtar nbtar pax"))
+	sys("FAIL_MSG", BtShellCommand)
+	sys("FAMBASE", BtPathname)
+	pkglist("FAM_ACCEPTED", enum("fam gamin"))
+	usr("FAM_DEFAULT", enum("fam gamin"))
+	sys("FAM_TYPE", enum("fam gamin"))
+	pkglist("FETCH_BEFORE_ARGS", BtShellWord)
+	pkglist("FETCH_MESSAGE", BtShellWord)
+	pkg("FILESDIR", BtRelativePkgPath)
+	pkglist("FILES_SUBST", BtShellWord)
+	syslist("FILES_SUBST_SED", BtShellWord)
+	pkglist("FIX_RPATH", BtVariableName)
+	pkglist("FLEX_REQD", BtVersion)
+	pkglist("FONTS_DIRS.*", BtPathname)
+	sys("GAMEDATAMODE", BtFileMode)
+	sys("GAMES_GROUP", BtUserGroupName)
+	syslist("GAMEDATA_PERMS", BtPerms)
+	syslist("GAMEDIR_PERMS", BtPerms)
+	sys("GAMEMODE", BtFileMode)
+	sys("GAMES_USER", BtUserGroupName)
+	pkglistbl3("GCC_REQD", BtGccReqd)
+	pkgappend("GENERATE_PLIST", BtShellCommands)
+	pkg("GITHUB_PROJECT", BtIdentifier)
+	pkg("GITHUB_TAG", BtIdentifier)
+	pkg("GITHUB_RELEASE", BtFileName)
+	pkg("GITHUB_TYPE", enum("tag release"))
+	pkg("GMAKE_REQD", BtVersion)
+	// Some packages need to set GNU_ARCH.i386 to either i486 or i586.
+	pkg("GNU_ARCH.*", BtIdentifier)
+	// GNU_CONFIGURE needs to be tested in some buildlink3.mk files,
+	// such as lang/vala.
+	acl("GNU_CONFIGURE", BtYes,
+		"buildlink3.mk: none",
+		"builtin.mk: use, use-loadtime",
+		"Makefile, Makefile.*, *.mk: default, set, use, use-loadtime")
+	pkg("GNU_CONFIGURE_INFODIR", BtPathname)
+	pkg("GNU_CONFIGURE_LIBDIR", BtPathname)
+	pkg("GNU_CONFIGURE_LIBSUBDIR", BtPathname)
+	pkg("GNU_CONFIGURE_MANDIR", BtPathname)
+	pkg("GNU_CONFIGURE_PREFIX", BtPathname)
+	pkg("GOPATH", BtPathname)
+	pkgload("HAS_CONFIGURE", BtYes)
+	pkglist("HEADER_TEMPLATES", BtPathname)
+	pkg("HOMEPAGE", BtHomepage)
+	pkg("ICON_THEMES", BtYes)
+	acl("IGNORE_PKG.*", BtYes,
+		"*: set, use-loadtime")
+	sys("IMAKE", BtShellCommand)
+	pkglistbl3("INCOMPAT_CURSES", BtMachinePlatformPattern)
+	sys("INFO_DIR", BtPathname) // relative to PREFIX
+	pkg("INFO_FILES", BtYes)
+	sys("INSTALL", BtShellCommand)
+	pkglist("INSTALLATION_DIRS", BtPrefixPathname)
+	pkg("INSTALLATION_DIRS_FROM_PLIST", BtYes)
+	sys("INSTALL_DATA", BtShellCommand)
+	sys("INSTALL_DATA_DIR", BtShellCommand)
+	pkglist("INSTALL_DIRS", BtWrksrcSubdirectory)
+	pkglist("INSTALL_ENV", BtShellWord)
+	pkg("INSTALL_FILE", BtPathname)
+	sys("INSTALL_GAME", BtShellCommand)
+	sys("INSTALL_GAME_DATA", BtShellCommand)
+	sys("INSTALL_LIB", BtShellCommand)
+	sys("INSTALL_LIB_DIR", BtShellCommand)
+	pkglist("INSTALL_MAKE_FLAGS", BtShellWord)
+	sys("INSTALL_MAN", BtShellCommand)
+	sys("INSTALL_MAN_DIR", BtShellCommand)
+	sys("INSTALL_PROGRAM", BtShellCommand)
+	sys("INSTALL_PROGRAM_DIR", BtShellCommand)
+	sys("INSTALL_SCRIPT", BtShellCommand)
+	syslist("INSTALL_SCRIPTS_ENV", BtShellWord)
+	sys("INSTALL_SCRIPT_DIR", BtShellCommand)
+	pkglist("INSTALL_SRC", BtPathname)
+	pkglist("INSTALL_TARGET", BtIdentifier)
+	pkglist("INSTALL_TEMPLATES", BtPathname)
+	pkgload("INSTALL_UNSTRIPPED", BtYesNo)
+	pkglist("INTERACTIVE_STAGE", enum("fetch extract configure build test install"))
+	acl("IS_BUILTIN.*", BtYesNoIndirectly,
+		// These two differ from the standard,
+		// they are needed for devel/ncursesw.
+		"buildlink3.mk: use, use-loadtime",
+		// The "set" differs from the standard sys.
+		"builtin.mk: set, use, use-loadtime",
+		"Makefile, Makefile.*, *.mk: default, set, use, use-loadtime")
+	sys("JAVA_BINPREFIX", BtPathname)
+	pkg("JAVA_CLASSPATH", BtShellWord)
+	pkg("JAVA_HOME", BtPathname)
+	pkg("JAVA_NAME", BtFileName)
+	pkglist("JAVA_UNLIMIT", enum("cmdsize datasize stacksize"))
+	pkglist("JAVA_WRAPPERS", BtFileName)
+	pkg("JAVA_WRAPPER_BIN.*", BtPathname)
+	sys("KRB5BASE", BtPathname)
+	pkglist("KRB5_ACCEPTED", enum("heimdal mit-krb5"))
+	usr("KRB5_DEFAULT", enum("heimdal mit-krb5"))
+	sys("KRB5_TYPE", BtIdentifier)
+	sys("LD", BtShellCommand)
+	pkglistbl3("LDFLAGS", BtLdFlag)       // May also be changed by the user.
+	pkglistbl3("LDFLAGS.*", BtLdFlag)     // May also be changed by the user.
+	sysload("LIBABISUFFIX", BtIdentifier) // Can also be empty.
+	sys("LIBGRP", BtUserGroupName)
+	sys("LIBMODE", BtFileMode)
+	sys("LIBOWN", BtUserGroupName)
+	sys("LIBOSSAUDIO", BtPathname)
+	pkglist("LIBS", BtLdFlag)
+	pkglist("LIBS.*", BtLdFlag)
+	sys("LIBTOOL", BtShellCommand)
+	pkglist("LIBTOOL_OVERRIDE", BtPathmask)
+	pkglist("LIBTOOL_REQD", BtVersion)
+	pkgappend("LICENCE", BtLicense)
+	pkgappend("LICENSE", BtLicense)
+	pkg("LICENSE_FILE", BtPathname)
+	sys("LINK.*", BtShellCommand)
+	sys("LINKER_RPATH_FLAG", BtShellWord)
+	syslist("LITTLEENDIANPLATFORMS", BtMachinePlatformPattern)
+	sys("LOWER_OPSYS", BtIdentifier)
+	sys("LOWER_VENDOR", BtIdentifier)
+	syslist("LP64PLATFORMS", BtMachinePlatformPattern)
+	pkglist("LTCONFIG_OVERRIDE", BtPathmask)
+	sysload("MACHINE_ARCH", enumMachineArch)
+	sysload("MACHINE_GNU_ARCH", enumMachineGnuArch)
+	sysload("MACHINE_GNU_PLATFORM", BtMachineGnuPlatform)
+	sysload("MACHINE_PLATFORM", BtMachinePlatform)
+	pkg("MAINTAINER", BtMailAddress)
+	sysload("MAKE", BtShellCommand)
+	pkglist("MAKEFLAGS", BtShellWord)
+	pkglistbl3("MAKEVARS", BtVariableName)
+	pkglist("MAKE_DIRS", BtPathname)
+	pkglist("MAKE_DIRS_PERMS", BtPerms)
+	pkglistbl3("MAKE_ENV", BtShellWord)
+	pkglistbl3("MAKE_ENV.*", BtShellWord)
+	pkg("MAKE_FILE", BtPathname)
+	pkglist("MAKE_FLAGS", BtShellWord)
+	pkglist("MAKE_FLAGS.*", BtShellWord)
+	usr("MAKE_JOBS", BtInteger)
+	pkg("MAKE_JOBS_SAFE", BtYesNo)
+	pkg("MAKE_PROGRAM", BtShellCommand)
+	pkg("MANCOMPRESSED", BtYesNo)
+	pkg("MANCOMPRESSED_IF_MANZ", BtYes)
+	sys("MANGRP", BtUserGroupName)
+	sys("MANMODE", BtFileMode)
+	sys("MANOWN", BtUserGroupName)
+	pkglist("MASTER_SITES", BtFetchURL)
+	// TODO: Extract the MASTER_SITE_* definitions from mk/fetch/sites.mk
+	//  instead of listing them here.
+	syslist("MASTER_SITE_APACHE", BtFetchURL)
+	syslist("MASTER_SITE_BACKUP", BtFetchURL)
+	syslist("MASTER_SITE_CRATESIO", BtFetchURL)
+	syslist("MASTER_SITE_CYGWIN", BtFetchURL)
+	syslist("MASTER_SITE_DEBIAN", BtFetchURL)
+	syslist("MASTER_SITE_FREEBSD", BtFetchURL)
+	syslist("MASTER_SITE_FREEBSD_LOCAL", BtFetchURL)
+	syslist("MASTER_SITE_GENTOO", BtFetchURL)
+	syslist("MASTER_SITE_GITHUB", BtFetchURL)
+	syslist("MASTER_SITE_GNOME", BtFetchURL)
+	syslist("MASTER_SITE_GNU", BtFetchURL)
+	syslist("MASTER_SITE_GNUSTEP", BtFetchURL)
+	syslist("MASTER_SITE_IFARCHIVE", BtFetchURL)
+	syslist("MASTER_SITE_HASKELL_HACKAGE", BtFetchURL)
+	syslist("MASTER_SITE_KDE", BtFetchURL)
+	syslist("MASTER_SITE_LOCAL", BtFetchURL)
+	syslist("MASTER_SITE_MOZILLA", BtFetchURL)
+	syslist("MASTER_SITE_MOZILLA_ALL", BtFetchURL)
+	syslist("MASTER_SITE_MOZILLA_ESR", BtFetchURL)
+	syslist("MASTER_SITE_MYSQL", BtFetchURL)
+	syslist("MASTER_SITE_NETLIB", BtFetchURL)
+	syslist("MASTER_SITE_OPENBSD", BtFetchURL)
+	syslist("MASTER_SITE_OPENOFFICE", BtFetchURL)
+	syslist("MASTER_SITE_OSDN", BtFetchURL)
+	syslist("MASTER_SITE_PERL_CPAN", BtFetchURL)
+	syslist("MASTER_SITE_PGSQL", BtFetchURL)
+	syslist("MASTER_SITE_PYPI", BtFetchURL)
+	syslist("MASTER_SITE_R_CRAN", BtFetchURL)
+	syslist("MASTER_SITE_RUBYGEMS", BtFetchURL)
+	syslist("MASTER_SITE_SOURCEFORGE", BtFetchURL)
+	syslist("MASTER_SITE_SUNSITE", BtFetchURL)
+	syslist("MASTER_SITE_SUSE", BtFetchURL)
+	syslist("MASTER_SITE_TEX_CTAN", BtFetchURL)
+	syslist("MASTER_SITE_XCONTRIB", BtFetchURL)
+	syslist("MASTER_SITE_XEMACS", BtFetchURL)
+	syslist("MASTER_SITE_XORG", BtFetchURL)
+	pkglist("MESSAGE_SRC", BtPathname)
+	pkglist("MESSAGE_SUBST", BtShellWord)
+	pkg("META_PACKAGE", BtYes)
+	syslist("MISSING_FEATURES", BtIdentifier)
+	pkglist("MYSQL_VERSIONS_ACCEPTED", mysqlVersions)
+	usr("MYSQL_VERSION_DEFAULT", BtVersion)
+	sys("NATIVE_CC", BtShellCommand) // See mk/platform/tools.NetBSD.mk (and some others).
+	sys("NM", BtShellCommand)
+	sys("NONBINMODE", BtFileMode)
+	pkglist("NOT_FOR_COMPILER", compilers)
+	pkglist("NOT_FOR_BULK_PLATFORM", BtMachinePlatformPattern)
+	pkglist("NOT_FOR_PLATFORM", BtMachinePlatformPattern)
+	pkg("NOT_FOR_UNPRIVILEGED", BtYesNo)
+	pkglist("NOT_PAX_ASLR_SAFE", BtPathmask)
+	pkglist("NOT_PAX_MPROTECT_SAFE", BtPathmask)
+	pkg("NO_BIN_ON_CDROM", BtRestricted)
+	pkg("NO_BIN_ON_FTP", BtRestricted)
+	pkgload("NO_BUILD", BtYes)
+	pkg("NO_CHECKSUM", BtYes)
+	pkg("NO_CONFIGURE", BtYes)
+	pkg("NO_EXPORT_CPP", BtYes)
+	pkg("NO_EXTRACT", BtYes)
+	pkg("NO_INSTALL_MANPAGES", BtYes) // only has an effect for Imake packages.
+	pkg("NO_PKGTOOLS_REQD_CHECK", BtYes)
+	pkg("NO_SRC_ON_CDROM", BtRestricted)
+	pkg("NO_SRC_ON_FTP", BtRestricted)
+	sysload("OBJECT_FMT", enum("COFF ECOFF ELF SOM XCOFF Mach-O PE a.out"))
+	pkglist("ONLY_FOR_COMPILER", compilers)
+	pkglist("ONLY_FOR_PLATFORM", BtMachinePlatformPattern)
+	pkg("ONLY_FOR_UNPRIVILEGED", BtYesNo)
+	sysload("OPSYS", BtIdentifier)
+	pkglistbl3("OPSYSVARS", BtVariableName)
+	pkg("OSVERSION_SPECIFIC", BtYes)
+	sysload("OS_VERSION", BtVersion)
+	sysload("OSX_VERSION", BtVersion) // See mk/platform/Darwin.mk.
+	pkg("OVERRIDE_DIRDEPTH*", BtInteger)
+	pkg("OVERRIDE_GNU_CONFIG_SCRIPTS", BtYes)
+	pkg("OWNER", BtMailAddress)
+	pkglist("OWN_DIRS", BtPathname)
+	pkglist("OWN_DIRS_PERMS", BtPerms)
+	sys("PAMBASE", BtPathname)
+	usr("PAM_DEFAULT", enum("linux-pam openpam solaris-pam"))
+	pkg("PATCHDIR", BtRelativePkgPath)
+	pkglist("PATCHFILES", BtFileName)
+	pkglist("PATCH_ARGS", BtShellWord)
+	pkglist("PATCH_DIST_ARGS", BtShellWord)
+	pkg("PATCH_DIST_CAT", BtShellCommand)
+	pkg("PATCH_DIST_STRIP*", BtShellWord)
+	pkglist("PATCH_SITES", BtFetchURL)
+	pkg("PATCH_STRIP", BtShellWord)
+	sys("PATH", BtPathlist)       // From the PATH environment variable.
+	sys("PAXCTL", BtShellCommand) // See mk/pax.mk.
+	pkglist("PERL5_PACKLIST", BtPerl5Packlist)
+	pkg("PERL5_PACKLIST_DIR", BtPathname)
+	pkglist("PERL5_REQD", BtVersion)
+	sysbl3("PERL5_INSTALLARCHLIB", BtPathname) // See lang/perl5/vars.mk
+	sysbl3("PERL5_INSTALLSCRIPT", BtPathname)
+	sysbl3("PERL5_INSTALLVENDORBIN", BtPathname)
+	sysbl3("PERL5_INSTALLVENDORSCRIPT", BtPathname)
+	sysbl3("PERL5_INSTALLVENDORARCH", BtPathname)
+	sysbl3("PERL5_INSTALLVENDORLIB", BtPathname)
+	sysbl3("PERL5_INSTALLVENDORMAN1DIR", BtPathname)
+	sysbl3("PERL5_INSTALLVENDORMAN3DIR", BtPathname)
+	sysbl3("PERL5_SUB_INSTALLARCHLIB", BtPrefixPathname) // See lang/perl5/vars.mk
+	sysbl3("PERL5_SUB_INSTALLSCRIPT", BtPrefixPathname)
+	sysbl3("PERL5_SUB_INSTALLVENDORBIN", BtPrefixPathname)
+	sysbl3("PERL5_SUB_INSTALLVENDORSCRIPT", BtPrefixPathname)
+	sysbl3("PERL5_SUB_INSTALLVENDORARCH", BtPrefixPathname)
+	sysbl3("PERL5_SUB_INSTALLVENDORLIB", BtPrefixPathname)
+	sysbl3("PERL5_SUB_INSTALLVENDORMAN1DIR", BtPrefixPathname)
+	sysbl3("PERL5_SUB_INSTALLVENDORMAN3DIR", BtPrefixPathname)
+	pkg("PERL5_USE_PACKLIST", BtYesNo)
+	sys("PGSQL_PREFIX", BtPathname)
+	acllist("PGSQL_VERSIONS_ACCEPTED", pgsqlVersions,
+		// The "set" is necessary for databases/postgresql-postgis2.
+		"Makefile, Makefile.*, *.mk: default, set, append, use")
+	usr("PGSQL_VERSION_DEFAULT", BtVersion)
+	sys("PG_LIB_EXT", enum("dylib so"))
+	sys("PGSQL_TYPE",
+		enumFrom("mk/pgsql.buildlink3.mk", "postgresql11-client", "PGSQL_TYPE"))
+	sys("PGPKGSRCDIR", BtPathname)
+	sys("PHASE_MSG", BtShellCommand)
+	usr("PHP_VERSION_REQD", BtVersion)
+	acl("PHP_PKG_PREFIX",
+		enumFromDirs("lang", `^php(\d+)$`, "php$1", "php56 php71 php72 php73"),
+		"special:phpversion.mk: set",
+		"*: use, use-loadtime")
+	sys("PKGBASE", BtIdentifier)
+	// Despite its name, this is actually a list of filenames.
+	acllist("PKGCONFIG_FILE.*", BtPathname,
+		"builtin.mk: set, append",
+		"special:pkgconfig-builtin.mk: use-loadtime")
+	pkglist("PKGCONFIG_OVERRIDE", BtPathmask)
+	pkg("PKGCONFIG_OVERRIDE_STAGE", BtStage)
+	pkg("PKGDIR", BtRelativePkgDir)
+	sys("PKGDIRMODE", BtFileMode)
+	sys("PKGLOCALEDIR", BtPathname)
+	pkg("PKGNAME", BtPkgName)
+	sys("PKGNAME_NOREV", BtPkgName)
+	sysload("PKGPATH", BtPathname)
+	sys("PKGREPOSITORY", BtUnknown)
+	// This variable is special in that it really only makes sense to
+	// be set in a package Makefile.
+	// See VartypeCheck.PkgRevision for details.
+	acl("PKGREVISION", BtPkgRevision,
+		"Makefile: set")
+	sys("PKGSRCDIR", BtPathname)
+	// This definition is only valid in the top-level Makefile,
+	// not in category or package Makefiles.
+	acl("PKGSRCTOP", BtYes,
+		"Makefile: set")
+	sys("PKGSRC_SETENV", BtShellCommand)
+	syslist("PKGTOOLS_ENV", BtShellWord)
+	sys("PKGVERSION", BtVersion)
+	sys("PKGVERSION_NOREV", BtVersion) // Without the nb* part.
+	sys("PKGWILDCARD", BtFileMask)
+	sys("PKG_ADMIN", BtShellCommand)
+	sys("PKG_APACHE", enum("apache24"))
+	pkglist("PKG_APACHE_ACCEPTED", enum("apache24"))
+	usr("PKG_APACHE_DEFAULT", enum("apache24"))
+	sysloadlist("PKG_BUILD_OPTIONS.*", BtOption)
+	usr("PKG_CONFIG", BtYes)
 	// ^^ No, this is not the popular command from GNOME, but the setting
 	// whether the pkgsrc user wants configuration files automatically
 	// installed or not.
-	sys("PKG_CREATE", lkNone, BtShellCommand)
-	sys("PKG_DBDIR", lkNone, BtPathname)
-	cmdline("PKG_DEBUG_LEVEL", lkNone, BtInteger)
-	usr("PKG_DEFAULT_OPTIONS", lkShell, BtOption)
-	sys("PKG_DELETE", lkNone, BtShellCommand)
-	acl("PKG_DESTDIR_SUPPORT", lkShell, enum("destdir user-destdir"), "Makefile, Makefile.common: set")
-	pkglist("PKG_FAIL_REASON", lkShell, BtShellWord)
-	sysload("PKG_FORMAT", lkNone, BtIdentifier)
-	acl("PKG_GECOS.*", lkNone, BtMessage, "Makefile: set")
-	acl("PKG_GID.*", lkNone, BtInteger, "Makefile: set")
-	acl("PKG_GROUPS", lkShell, BtShellWord, "Makefile: set, append")
-	pkglist("PKG_GROUPS_VARS", lkShell, BtVariableName)
-	acl("PKG_HOME.*", lkNone, BtPathname, "Makefile: set")
-	acl("PKG_HACKS", lkShell, BtIdentifier, "hacks.mk: append")
-	sys("PKG_INFO", lkNone, BtShellCommand)
-	sys("PKG_JAVA_HOME", lkNone, BtPathname)
-	sys("PKG_JVM", lkNone, jvms)
-	acl("PKG_JVMS_ACCEPTED", lkShell, jvms, "Makefile: set; Makefile.common: default, set")
-	usr("PKG_JVM_DEFAULT", lkNone, jvms)
-	acl("PKG_LEGACY_OPTIONS", lkShell, BtOption, "")
-	acl("PKG_LIBTOOL", lkNone, BtPathname, "Makefile: set")
-	acl("PKG_OPTIONS", lkShell, BtOption, "bsd.options.mk: set; *: use-loadtime, use")
-	usr("PKG_OPTIONS.*", lkShell, BtOption)
-	acl("PKG_OPTIONS_DEPRECATED_WARNINGS", lkShell, BtShellWord, "")
-	acl("PKG_OPTIONS_GROUP.*", lkShell, BtOption, "Makefile, options.mk: set, append")
-	acl("PKG_OPTIONS_LEGACY_OPTS", lkShell, BtUnknown, "Makefile, Makefile.common, options.mk: append")
-	acl("PKG_OPTIONS_LEGACY_VARS", lkShell, BtUnknown, "Makefile, Makefile.common, options.mk: append")
-	acl("PKG_OPTIONS_NONEMPTY_SETS", lkShell, BtIdentifier, "")
-	acl("PKG_OPTIONS_OPTIONAL_GROUPS", lkShell, BtIdentifier, "options.mk: set, append")
-	acl("PKG_OPTIONS_REQUIRED_GROUPS", lkShell, BtIdentifier, "Makefile, options.mk: set")
-	acl("PKG_OPTIONS_SET.*", lkShell, BtOption, "")
-	acl("PKG_OPTIONS_VAR", lkNone, BtPkgOptionsVar, "Makefile, Makefile.common, options.mk: set; bsd.options.mk: use-loadtime")
-	acl("PKG_PRESERVE", lkNone, BtYes, "Makefile: set")
-	acl("PKG_SHELL", lkNone, BtPathname, "Makefile, Makefile.common: set")
-	acl("PKG_SHELL.*", lkNone, BtPathname, "Makefile, Makefile.common: set")
-	acl("PKG_SHLIBTOOL", lkNone, BtPathname, "")
-	pkglist("PKG_SKIP_REASON", lkShell, BtShellWord)
-	acl("PKG_SUGGESTED_OPTIONS", lkShell, BtOption, "Makefile, Makefile.common, options.mk: set, append")
-	acl("PKG_SUGGESTED_OPTIONS.*", lkShell, BtOption, "Makefile, Makefile.common, options.mk: set, append")
-	acl("PKG_SUPPORTED_OPTIONS", lkShell, BtOption, "Makefile: set, append; Makefile.common: set; options.mk: set, append, use")
-	acl("PKG_SYSCONFDIR*", lkNone, BtPathname, ""+
-		"Makefile: set, use, use-loadtime; "+
-		"buildlink3.mk, builtin.mk: use-loadtime; "+
-		"Makefile.*, *.mk: default, set, use, use-loadtime")
-	pkglist("PKG_SYSCONFDIR_PERMS", lkShell, BtPerms)
-	sys("PKG_SYSCONFBASEDIR", lkNone, BtPathname)
-	pkg("PKG_SYSCONFSUBDIR", lkNone, BtPathname)
-	acl("PKG_SYSCONFVAR", lkNone, BtIdentifier, "")
-	acl("PKG_UID", lkNone, BtInteger, "Makefile: set")
-	acl("PKG_USERS", lkShell, BtShellWord, "Makefile: set, append")
-	pkglist("PKG_USERS_VARS", lkShell, BtVariableName)
-	acl("PKG_USE_KERBEROS", lkNone, BtYes, "Makefile, Makefile.common: set")
-	pkgload("PLIST.*", lkNone, BtYes)
-	pkglist("PLIST_VARS", lkShell, BtIdentifier)
-	pkglist("PLIST_SRC", lkShell, BtRelativePkgPath)
-	pkglist("PLIST_SUBST", lkShell, BtShellWord)
-	acl("PLIST_TYPE", lkNone, enum("dynamic static"), "")
-	acl("PREPEND_PATH", lkShell, BtPathname, "")
-	acl("PREFIX", lkNone, BtPathname, "*: use")
-	acl("PREV_PKGPATH", lkNone, BtPathname, "*: use") // doesn't exist any longer
-	acl("PRINT_PLIST_AWK", lkNone, BtAwkCommand, "*: append")
-	acl("PRIVILEGED_STAGES", lkShell, enum("install package clean"), "")
-	acl("PTHREAD_AUTO_VARS", lkNone, BtYesNo, "Makefile: set")
-	sys("PTHREAD_CFLAGS", lkShell, BtCFlag)
-	sys("PTHREAD_LDFLAGS", lkShell, BtLdFlag)
-	sys("PTHREAD_LIBS", lkShell, BtLdFlag)
-	acl("PTHREAD_OPTS", lkShell, enum("native optional require"), "Makefile: set, append; Makefile.common, buildlink3.mk: append")
-	sysload("PTHREAD_TYPE", lkNone, BtIdentifier) // Or "native" or "none".
-	pkg("PY_PATCHPLIST", lkNone, BtYes)
-	acl("PYPKGPREFIX", lkNone, enumFromDirs("lang", `^python(\d+)$`, "py$1", "py27 py36"), ""+
-		"special:pyversion.mk: set; "+
-		"*: use-loadtime, use")
-	pkg("PYTHON_FOR_BUILD_ONLY", lkNone, enum("yes no test tool YES")) // See lang/python/pyversion.mk
-	pkglist("REPLACE_PYTHON", lkShell, BtPathmask)
-	pkglist("PYTHON_VERSIONS_ACCEPTED", lkShell, BtVersion)
-	pkglist("PYTHON_VERSIONS_INCOMPATIBLE", lkShell, BtVersion)
-	usr("PYTHON_VERSION_DEFAULT", lkNone, BtVersion)
-	usr("PYTHON_VERSION_REQD", lkNone, BtVersion)
-	pkglist("PYTHON_VERSIONED_DEPENDENCIES", lkShell, BtPythonDependency)
-	sys("RANLIB", lkNone, BtShellCommand)
-	pkglist("RCD_SCRIPTS", lkShell, BtFileName)
-	acl("RCD_SCRIPT_SRC.*", lkNone, BtPathname, "Makefile: set")
-	acl("RCD_SCRIPT_WRK.*", lkNone, BtPathname, "Makefile: set")
-	usr("REAL_ROOT_USER", lkNone, BtUserGroupName)
-	usr("REAL_ROOT_GROUP", lkNone, BtUserGroupName)
-	acl("REPLACE.*", lkNone, BtUnknown, "Makefile: set")
-	pkglist("REPLACE_AWK", lkShell, BtPathmask)
-	pkglist("REPLACE_BASH", lkShell, BtPathmask)
-	pkglist("REPLACE_CSH", lkShell, BtPathmask)
-	acl("REPLACE_EMACS", lkShell, BtPathmask, "")
-	acl("REPLACE_FILES.*", lkShell, BtPathmask, "Makefile, Makefile.common: set, append")
-	acl("REPLACE_INTERPRETER", lkShell, BtIdentifier, "Makefile, Makefile.common: append")
-	pkglist("REPLACE_KSH", lkShell, BtPathmask)
-	pkglist("REPLACE_LOCALEDIR_PATTERNS", lkShell, BtFileMask)
-	pkglist("REPLACE_LUA", lkShell, BtPathmask)
-	pkglist("REPLACE_PERL", lkShell, BtPathmask)
-	pkglist("REPLACE_PYTHON", lkShell, BtPathmask)
-	pkglist("REPLACE_SH", lkShell, BtPathmask)
-	pkglist("REQD_DIRS", lkShell, BtPathname)
-	pkglist("REQD_DIRS_PERMS", lkShell, BtPerms)
-	pkglist("REQD_FILES", lkShell, BtPathname)
-	pkg("REQD_FILES_MODE", lkNone, enum("0644 0640 0600 0400"))
-	pkglist("REQD_FILES_PERMS", lkShell, BtPerms)
-	pkg("RESTRICTED", lkNone, BtMessage)
-	usr("ROOT_USER", lkNone, BtUserGroupName)
-	usr("ROOT_GROUP", lkNone, BtUserGroupName)
-	pkglist("RPMIGNOREPATH", lkShell, BtPathmask)
-	acl("RUBY_BASE", lkNone, enumFromDirs("lang", `^ruby(\d+)$`, "ruby$1", "ruby22 ruby23 ruby24 ruby25"), ""+
-		"special:rubyversion.mk: set; "+
-		"*: use-loadtime, use")
-	usr("RUBY_VERSION_REQD", lkNone, BtVersion)
-	acl("RUBY_PKGPREFIX", lkNone, enumFromDirs("lang", `^ruby(\d+)$`, "ruby$1", "ruby22 ruby23 ruby24 ruby25"), ""+
-		"special:rubyversion.mk: set, default, use; "+
-		"*: use-loadtime, use")
-	sys("RUN", lkNone, BtShellCommand)
-	sys("RUN_LDCONFIG", lkNone, BtYesNo)
-	acl("SCRIPTS_ENV", lkShell, BtShellWord, "Makefile, Makefile.common: append")
-	usr("SETGID_GAMES_PERMS", lkShell, BtPerms)
-	usr("SETUID_ROOT_PERMS", lkShell, BtPerms)
-	pkg("SET_LIBDIR", lkNone, BtYes)
-	sys("SHAREGRP", lkNone, BtUserGroupName)
-	sys("SHAREMODE", lkNone, BtFileMode)
-	sys("SHAREOWN", lkNone, BtUserGroupName)
-	sys("SHCOMMENT", lkNone, BtShellCommand)
-	acl("SHLIB_HANDLING", lkNone, enum("YES NO no"), "")
-	acl("SHLIBTOOL", lkNone, BtShellCommand, "Makefile: use")
-	acl("SHLIBTOOL_OVERRIDE", lkShell, BtPathmask, "Makefile: set, append; Makefile.common: append")
-	sysload("SHLIB_TYPE", lkNone, enum("COFF ECOFF ELF SOM XCOFF Mach-O PE PEwin a.out aixlib dylib none"))
-	acl("SITES.*", lkShell, BtFetchURL, "Makefile, Makefile.common, options.mk: set, append, use")
-	usr("SMF_PREFIS", lkNone, BtPathname)
-	pkg("SMF_SRCDIR", lkNone, BtPathname)
-	pkg("SMF_NAME", lkNone, BtFileName)
-	pkg("SMF_MANIFEST", lkNone, BtPathname)
-	pkg("SMF_INSTANCES", lkShell, BtIdentifier)
-	pkg("SMF_METHODS", lkShell, BtFileName)
-	pkg("SMF_METHOD_SRC.*", lkNone, BtPathname)
-	pkg("SMF_METHOD_SHELL", lkNone, BtShellCommand)
-	pkglist("SPECIAL_PERMS", lkShell, BtPerms)
-	sys("STEP_MSG", lkNone, BtShellCommand)
-	sys("STRIP", lkNone, BtShellCommand) // see mk/tools/strip.mk
-	acl("SUBDIR", lkShell, BtFileName, "Makefile: append; *: none")
-	acl("SUBST_CLASSES", lkShell, BtIdentifier, "Makefile: set, append; *: append")
-	acl("SUBST_CLASSES.*", lkShell, BtIdentifier, "Makefile: set, append; *: append") // OPSYS-specific
-	acl("SUBST_FILES.*", lkShell, BtPathmask, "Makefile, Makefile.*, *.mk: set, append")
-	acl("SUBST_FILTER_CMD.*", lkNone, BtShellCommand, "Makefile, Makefile.*, *.mk: set")
-	acl("SUBST_MESSAGE.*", lkNone, BtMessage, "Makefile, Makefile.*, *.mk: set")
-	acl("SUBST_SED.*", lkNone, BtSedCommands, "Makefile, Makefile.*, *.mk: set, append")
-	pkg("SUBST_STAGE.*", lkNone, BtStage)
-	acl("SUBST_VARS.*", lkShell, BtVariableName, "Makefile, Makefile.*, *.mk: set, append")
-	pkglist("SUPERSEDES", lkShell, BtDependency)
-	acl("TEST_DEPENDS", lkShell, BtDependencyWithPath, "Makefile, Makefile.common, *.mk: append")
-	pkglist("TEST_DIRS", lkShell, BtWrksrcSubdirectory)
-	pkglist("TEST_ENV", lkShell, BtShellWord)
-	acl("TEST_TARGET", lkShell, BtIdentifier, "Makefile: set; Makefile.common: default, set; options.mk: set, append")
-	pkglist("TEXINFO_REQD", lkShell, BtVersion)
-	acl("TOOL_DEPENDS", lkShell, BtDependencyWithPath, "Makefile, Makefile.common, *.mk: append")
-	sys("TOOLS_ALIASES", lkShell, BtFileName)
-	sys("TOOLS_BROKEN", lkShell, BtTool)
-	sys("TOOLS_CMD.*", lkNone, BtPathname)
-	acl("TOOLS_CREATE", lkShell, BtTool, "Makefile, Makefile.common, options.mk: append")
-	acl("TOOLS_DEPENDS.*", lkShell, BtDependencyWithPath, "buildlink3.mk: none; Makefile, Makefile.*: set, default; *: use")
-	sys("TOOLS_GNU_MISSING", lkShell, BtTool)
-	sys("TOOLS_NOOP", lkShell, BtTool)
-	sys("TOOLS_PATH.*", lkNone, BtPathname)
-	sysload("TOOLS_PLATFORM.*", lkNone, BtShellCommand)
-	sys("TOUCH_FLAGS", lkShell, BtShellWord)
-	pkglist("UAC_REQD_EXECS", lkShell, BtPrefixPathname)
-	acl("UNLIMIT_RESOURCES", lkShell, enum("cputime datasize memorysize stacksize"), "Makefile: set, append; Makefile.common: append")
-	usr("UNPRIVILEGED_USER", lkNone, BtUserGroupName)
-	usr("UNPRIVILEGED_GROUP", lkNone, BtUserGroupName)
-	pkglist("UNWRAP_FILES", lkShell, BtPathmask)
-	usr("UPDATE_TARGET", lkShell, BtIdentifier)
-	pkg("USERGROUP_PHASE", lkNone, enum("configure build pre-install"))
-	usr("USER_ADDITIONAL_PKGS", lkShell, BtPkgPath)
-	pkg("USE_BSD_MAKEFILE", lkNone, BtYes)
-	acl("USE_BUILTIN.*", lkNone, BtYesNoIndirectly, "buildlink3.mk: use-loadtime; builtin.mk: set, use, use-loadtime; options.mk: use-loadtime")
-	pkg("USE_CMAKE", lkNone, BtYes)
-	usr("USE_DESTDIR", lkNone, BtYes)
-	pkglist("USE_FEATURES", lkShell, BtIdentifier)
-	acl("USE_GAMESGROUP", lkNone, BtYesNo, "buildlink3.mk, builtin.mk: none; *: set, default, use")
-	pkg("USE_GCC_RUNTIME", lkNone, BtYesNo)
-	pkg("USE_GNU_CONFIGURE_HOST", lkNone, BtYesNo)
-	acl("USE_GNU_ICONV", lkNone, BtYes, "Makefile, Makefile.common, options.mk: set")
-	acl("USE_IMAKE", lkNone, BtYes, "Makefile: set")
-	pkg("USE_JAVA", lkNone, enum("run yes build"))
-	pkg("USE_JAVA2", lkNone, enum("YES yes no 1.4 1.5 6 7 8"))
-	acl("USE_LANGUAGES", lkShell, compilerLanguages, "Makefile, Makefile.common, options.mk: set, append")
-	pkg("USE_LIBTOOL", lkNone, BtYes)
-	pkg("USE_MAKEINFO", lkNone, BtYes)
-	pkg("USE_MSGFMT_PLURALS", lkNone, BtYes)
-	pkg("USE_NCURSES", lkNone, BtYes)
-	pkg("USE_OLD_DES_API", lkNone, BtYesNo)
-	pkg("USE_PKGINSTALL", lkNone, BtYes)
-	pkg("USE_PKGLOCALEDIR", lkNone, BtYesNo)
-	usr("USE_PKGSRC_GCC", lkNone, BtYes)
-	acl("USE_TOOLS", lkShell, BtTool, "*: append, use-loadtime")
-	acl("USE_TOOLS.*", lkShell, BtTool, "*: append, use-loadtime")
-	pkg("USE_X11", lkNone, BtYes)
-	sys("WARNINGS", lkShell, BtShellWord)
-	sys("WARNING_MSG", lkNone, BtShellCommand)
-	sys("WARNING_CAT", lkNone, BtShellCommand)
-	sysload("WRAPPER_DIR", lkNone, BtPathname)
-	acl("WRAPPER_REORDER_CMDS", lkShell, BtWrapperReorder, "Makefile, Makefile.common, buildlink3.mk: append")
-	pkg("WRAPPER_SHELL", lkNone, BtShellCommand)
-	acl("WRAPPER_TRANSFORM_CMDS", lkShell, BtWrapperTransform, "Makefile, Makefile.common, buildlink3.mk: append")
-	sys("WRKDIR", lkNone, BtPathname)
-	pkg("WRKSRC", lkNone, BtWrkdirSubdirectory)
-	pkglist("X11_LDFLAGS", lkShell, BtLdFlag)
-	sys("X11_PKGSRCDIR.*", lkNone, BtPathname)
-	usr("XAW_TYPE", lkNone, enum("3d neXtaw standard xpm"))
-	acl("XMKMF_FLAGS", lkShell, BtShellWord, "")
-	pkglist("_WRAP_EXTRA_ARGS.*", lkShell, BtShellWord)
+	sys("PKG_CREATE", BtShellCommand)
+	sys("PKG_DBDIR", BtPathname)
+	cmdline("PKG_DEBUG_LEVEL", BtInteger)
+	usrlist("PKG_DEFAULT_OPTIONS", BtOption)
+	sys("PKG_DELETE", BtShellCommand)
+	pkglist("PKG_DESTDIR_SUPPORT", enum("destdir user-destdir"))
+	pkglist("PKG_FAIL_REASON", BtShellWord)
+	sysload("PKG_FORMAT", BtIdentifier)
+	pkg("PKG_GECOS.*", BtMessage)
+	pkg("PKG_GID.*", BtInteger)
+	pkglist("PKG_GROUPS", BtShellWord)
+	pkglist("PKG_GROUPS_VARS", BtVariableName)
+	pkg("PKG_HOME.*", BtPathname)
+	// PKG_HACKS is used to record the applied hacks in the binary package.
+	// Since only the hacks.mk can define hacks, appending to it only makes
+	// sense there.
+	//
+	// TODO: Is it possible to include hacks.mk files from the dependencies?
+	acllist("PKG_HACKS", BtIdentifier,
+		"hacks.mk: append")
+	sys("PKG_INFO", BtShellCommand)
+	sys("PKG_JAVA_HOME", BtPathname)
+	sys("PKG_JVM", jvms)
+	pkglist("PKG_JVMS_ACCEPTED", jvms)
+	usr("PKG_JVM_DEFAULT", jvms)
+	pkg("PKG_LIBTOOL", BtPathname)
 
-	// Only for infrastructure files; see mk/misc/show.mk
-	acl("_VARGROUPS", lkShell, BtIdentifier, "*: append")
-	acl("_USER_VARS.*", lkShell, BtIdentifier, "*: append")
-	acl("_PKG_VARS.*", lkShell, BtIdentifier, "*: append")
-	acl("_SYS_VARS.*", lkShell, BtIdentifier, "*: append")
-	acl("_DEF_VARS.*", lkShell, BtIdentifier, "*: append")
-	acl("_USE_VARS.*", lkShell, BtIdentifier, "*: append")
+	// begin PKG_OPTIONS section
+	//
+	// TODO: force the pkgsrc packages to only define options in the
+	//  options.mk file. Most packages already do this, but some still
+	//  define them in the Makefile or Makefile.common.
+	sysloadlist("PKG_OPTIONS", BtOption)
+	usrlist("PKG_OPTIONS.*", BtOption)
+	opt := pkg
+	optlist := pkglist
+	optlist("PKG_LEGACY_OPTIONS", BtOption)
+	optlist("PKG_OPTIONS_DEPRECATED_WARNINGS", BtShellWord)
+	optlist("PKG_OPTIONS_GROUP.*", BtOption)
+	optlist("PKG_OPTIONS_LEGACY_OPTS", BtUnknown)
+	optlist("PKG_OPTIONS_LEGACY_VARS", BtUnknown)
+	optlist("PKG_OPTIONS_NONEMPTY_SETS", BtIdentifier)
+	optlist("PKG_OPTIONS_OPTIONAL_GROUPS", BtIdentifier)
+	optlist("PKG_OPTIONS_REQUIRED_GROUPS", BtIdentifier)
+	optlist("PKG_OPTIONS_SET.*", BtOption)
+	opt("PKG_OPTIONS_VAR", BtPkgOptionsVar)
+	pkglist("PKG_SKIP_REASON", BtShellWord)
+	optlist("PKG_SUGGESTED_OPTIONS", BtOption)
+	optlist("PKG_SUGGESTED_OPTIONS.*", BtOption)
+	optlist("PKG_SUPPORTED_OPTIONS", BtOption)
+	// end PKG_OPTIONS section
+
+	pkg("PKG_PRESERVE", BtYes)
+	pkg("PKG_SHELL", BtPathname)
+	pkg("PKG_SHELL.*", BtPathname)
+	sys("PKG_SHLIBTOOL", BtPathname)
+	// The special exception for buildlink3.mk is only here because
+	// of textproc/xmlcatmgr.
+	acl("PKG_SYSCONFDIR*", BtPathname,
+		"Makefile: set, use, use-loadtime",
+		"buildlink3.mk, builtin.mk: use-loadtime",
+		"Makefile.*, *.mk: default, set, use, use-loadtime")
+	pkglist("PKG_SYSCONFDIR_PERMS", BtPerms)
+	sys("PKG_SYSCONFBASEDIR", BtPathname)
+	pkg("PKG_SYSCONFSUBDIR", BtPathname)
+	pkg("PKG_SYSCONFVAR", BtIdentifier)
+	pkg("PKG_UID", BtInteger)
+	pkglist("PKG_USERS", BtShellWord)
+	pkglist("PKG_USERS_VARS", BtVariableName)
+	pkg("PKG_USE_KERBEROS", BtYes)
+	pkgload("PLIST.*", BtYes)
+	pkglist("PLIST_VARS", BtIdentifier)
+	pkglist("PLIST_SRC", BtRelativePkgPath)
+	pkglist("PLIST_SUBST", BtShellWord)
+	pkg("PLIST_TYPE", enum("dynamic static"))
+	pkglistbl3("PREPEND_PATH", BtPathname)
+
+	acl("PREFIX", BtPathname,
+		"*: use")
+	// BtPathname instead of BtPkgPath since the original package doesn't exist anymore.
+	// It would be more precise to check for a PkgPath that doesn't exist anymore.
+	pkg("PREV_PKGPATH", BtPathname)
+	acl("PRINT_PLIST_AWK", BtAwkCommand,
+		"*: append")
+	pkglist("PRIVILEGED_STAGES", enum("build install package clean"))
+	pkgbl3("PTHREAD_AUTO_VARS", BtYesNo)
+	syslist("PTHREAD_CFLAGS", BtCFlag)
+	syslist("PTHREAD_LDFLAGS", BtLdFlag)
+	syslist("PTHREAD_LIBS", BtLdFlag)
+	pkglistbl3("PTHREAD_OPTS", enum("native optional require"))
+	sysload("PTHREAD_TYPE", BtIdentifier) // Or "native" or "none".
+	pkg("PY_PATCHPLIST", BtYes)
+	acl("PYPKGPREFIX",
+		enumFromDirs("lang", `^python(\d+)$`, "py$1", "py27 py36"),
+		"special:pyversion.mk: set",
+		"*: use, use-loadtime")
+	// See lang/python/pyversion.mk
+	pkg("PYTHON_FOR_BUILD_ONLY", enum("yes no test tool YES"))
+	pkglist("REPLACE_PYTHON", BtPathmask)
+	pkglist("PYTHON_VERSIONS_ACCEPTED", BtVersion)
+	pkglist("PYTHON_VERSIONS_INCOMPATIBLE", BtVersion)
+	usr("PYTHON_VERSION_DEFAULT", BtVersion)
+	usr("PYTHON_VERSION_REQD", BtVersion)
+	pkglist("PYTHON_VERSIONED_DEPENDENCIES", BtPythonDependency)
+	sys("RANLIB", BtShellCommand)
+	pkglist("RCD_SCRIPTS", BtFileName)
+	// TODO: Is the definition in www/squid3/Makefile detected as being redundant?
+	//  No, but it could if the RedundancyScope were able to resolve ${FILESDIR}
+	//  to "files".
+	pkg("RCD_SCRIPT_SRC.*", BtPathname)
+	pkg("RCD_SCRIPT_WRK.*", BtPathname)
+	usr("REAL_ROOT_USER", BtUserGroupName)
+	usr("REAL_ROOT_GROUP", BtUserGroupName)
+
+	// Example:
+	//  REPLACE.sys-AWK.old=    .*awk
+	//  REPLACE.sys-AWK.new=    ${AWK}
+	// BtUnknown since one of them is a regular expression and the other
+	// is a plain string.
+	pkg("REPLACE.*", BtUnknown)
+
+	pkglist("REPLACE_AWK", BtPathmask)
+	pkglist("REPLACE_BASH", BtPathmask)
+	pkglist("REPLACE_CSH", BtPathmask)
+	pkglist("REPLACE_FILES.*", BtPathmask)
+	pkglist("REPLACE_INTERPRETER", BtIdentifier)
+	pkglist("REPLACE_KSH", BtPathmask)
+	pkglist("REPLACE_LOCALEDIR_PATTERNS", BtFileMask)
+	pkglist("REPLACE_LUA", BtPathmask)
+	pkglist("REPLACE_PERL", BtPathmask)
+	pkglist("REPLACE_PYTHON", BtPathmask)
+	pkglist("REPLACE_SH", BtPathmask)
+	pkglist("REQD_DIRS", BtPathname)
+	pkglist("REQD_DIRS_PERMS", BtPerms)
+	pkglist("REQD_FILES", BtPathname)
+	pkg("REQD_FILES_MODE", enum("0644 0640 0600 0400"))
+	pkglist("REQD_FILES_PERMS", BtPerms)
+	pkg("RESTRICTED", BtMessage)
+	usr("ROOT_USER", BtUserGroupName)
+	usr("ROOT_GROUP", BtUserGroupName)
+	pkglist("RPMIGNOREPATH", BtPathmask)
+	acl("RUBY_BASE",
+		enumFromDirs("lang", `^ruby(\d+)$`, "ruby$1", "ruby22 ruby23 ruby24 ruby25"),
+		"special:rubyversion.mk: set",
+		"*: use, use-loadtime")
+	usr("RUBY_VERSION_REQD", BtVersion)
+	acl("RUBY_PKGPREFIX",
+		enumFromDirs("lang", `^ruby(\d+)$`, "ruby$1", "ruby22 ruby23 ruby24 ruby25"),
+		"special:rubyversion.mk: default, set, use",
+		"*: use, use-loadtime")
+	sys("RUN", BtShellCommand)
+	sys("RUN_LDCONFIG", BtYesNo)
+	pkglist("SCRIPTS_ENV", BtShellWord)
+	usrlist("SETGID_GAMES_PERMS", BtPerms)
+	usrlist("SETUID_ROOT_PERMS", BtPerms)
+	pkg("SET_LIBDIR", BtYes)
+	sys("SHAREGRP", BtUserGroupName)
+	sys("SHAREMODE", BtFileMode)
+	sys("SHAREOWN", BtUserGroupName)
+	sys("SHCOMMENT", BtShellCommand)
+	sys("SHLIBTOOL", BtShellCommand)
+	pkglist("SHLIBTOOL_OVERRIDE", BtPathmask)
+	sysload("SHLIB_TYPE",
+		enum("COFF ECOFF ELF SOM XCOFF Mach-O PE PEwin a.out aixlib dylib none"))
+	pkglist("SITES.*", BtFetchURL)
+	usr("SMF_PREFIS", BtPathname)
+	pkg("SMF_SRCDIR", BtPathname)
+	pkg("SMF_NAME", BtFileName)
+	pkg("SMF_MANIFEST", BtPathname)
+	pkglist("SMF_INSTANCES", BtIdentifier)
+	pkglist("SMF_METHODS", BtFileName)
+	pkg("SMF_METHOD_SRC.*", BtPathname)
+	pkg("SMF_METHOD_SHELL", BtShellCommand)
+	pkglist("SPECIAL_PERMS", BtPerms)
+	sys("STEP_MSG", BtShellCommand)
+	sys("STRIP", BtShellCommand) // see mk/tools/strip.mk
+	// Only valid in the top-level and the category Makefiles.
+	acllist("SUBDIR", BtFileName,
+		"Makefile: append")
+
+	pkglistbl3("SUBST_CLASSES", BtIdentifier)
+	pkglistbl3("SUBST_CLASSES.*", BtIdentifier) // OPSYS-specific
+	pkglistbl3("SUBST_FILES.*", BtPathmask)
+	pkgbl3("SUBST_FILTER_CMD.*", BtShellCommand)
+	pkgbl3("SUBST_MESSAGE.*", BtMessage)
+	pkgappendbl3("SUBST_SED.*", BtSedCommands)
+	pkgbl3("SUBST_STAGE.*", BtStage)
+	pkglistbl3("SUBST_VARS.*", BtVariableName)
+
+	pkglist("SUPERSEDES", BtDependency)
+	pkglist("TEST_DEPENDS", BtDependencyWithPath)
+	pkglist("TEST_DIRS", BtWrksrcSubdirectory)
+	pkglist("TEST_ENV", BtShellWord)
+	pkglist("TEST_TARGET", BtIdentifier)
+	pkglist("TEXINFO_REQD", BtVersion)
+	pkglistbl3("TOOL_DEPENDS", BtDependencyWithPath)
+	syslist("TOOLS_ALIASES", BtFileName)
+	syslist("TOOLS_BROKEN", BtTool)
+	sys("TOOLS_CMD.*", BtPathname)
+	pkglist("TOOLS_CREATE", BtTool)
+	pkglist("TOOLS_DEPENDS.*", BtDependencyWithPath)
+	syslist("TOOLS_GNU_MISSING", BtTool)
+	syslist("TOOLS_NOOP", BtTool)
+	sys("TOOLS_PATH.*", BtPathname)
+	sysload("TOOLS_PLATFORM.*", BtShellCommand)
+	syslist("TOUCH_FLAGS", BtShellWord)
+	pkglist("UAC_REQD_EXECS", BtPrefixPathname)
+	pkglistbl3("UNLIMIT_RESOURCES",
+		enum("cputime datasize memorysize stacksize"))
+	usr("UNPRIVILEGED_USER", BtUserGroupName)
+	usr("UNPRIVILEGED_GROUP", BtUserGroupName)
+	pkglist("UNWRAP_FILES", BtPathmask)
+	usrlist("UPDATE_TARGET", BtIdentifier)
+	pkg("USERGROUP_PHASE", enum("configure build pre-install"))
+	usrlist("USER_ADDITIONAL_PKGS", BtPkgPath)
+	pkg("USE_BSD_MAKEFILE", BtYes)
+	// USE_BUILTIN.* is usually set by the builtin.mk file, after checking
+	// whether the package is available in the base system. To override
+	// this check, a package may set this variable before including the
+	// corresponding buildlink3.mk file.
+	acl("USE_BUILTIN.*", BtYesNoIndirectly,
+		"Makefile, Makefile.*, *.mk: set, use, use-loadtime")
+	pkg("USE_CMAKE", BtYes)
+	usr("USE_DESTDIR", BtYes)
+	pkglist("USE_FEATURES", BtIdentifier)
+	pkg("USE_GAMESGROUP", BtYesNo)
+	pkg("USE_GCC_RUNTIME", BtYesNo)
+	pkg("USE_GNU_CONFIGURE_HOST", BtYesNo)
+	pkgload("USE_GNU_ICONV", BtYes)
+	pkg("USE_IMAKE", BtYes)
+	pkg("USE_JAVA", enum("run yes build"))
+	pkg("USE_JAVA2", enum("YES yes no 1.4 1.5 6 7 8"))
+	pkglist("USE_LANGUAGES", compilerLanguages)
+	pkg("USE_LIBTOOL", BtYes)
+	pkg("USE_MAKEINFO", BtYes)
+	pkg("USE_MSGFMT_PLURALS", BtYes)
+	pkg("USE_NCURSES", BtYes)
+	pkg("USE_OLD_DES_API", BtYesNo)
+	pkg("USE_PKGINSTALL", BtYes)
+	pkg("USE_PKGLOCALEDIR", BtYesNo)
+	usr("USE_PKGSRC_GCC", BtYes)
+
+	// USE_TOOLS is not similar to any predefined permissions set.
+	//
+	// It may be appended to in buildlink3 files to make tools available
+	// at runtime. Making tools available at load time would only work
+	// before bsd.prefs.mk has been included for the first time, and that
+	// cannot be guaranteed.
+	//
+	// There are a few builtin.mk files that check whether some tool is
+	// already contained in USE_TOOLS. For them, use-loadtime is allowed.
+	//
+	// All other files may also use = instead of +=. Cases where the tools
+	// list is accidentally overwritten are detected by the redundancy check.
+	//
+	// The use-loadtime is only for devel/ncurses/Makefile.common, which
+	// removes tbl from USE_TOOLS.
+	acllist("USE_TOOLS", BtTool,
+		"special:Makefile.common: set, append, use, use-loadtime",
+		"buildlink3.mk: append",
+		"builtin.mk: append, use-loadtime",
+		"*: set, append, use")
+	acllist("USE_TOOLS.*", BtTool, // OPSYS-specific
+		"buildlink3.mk, builtin.mk: append",
+		"*: set, append, use")
+
+	pkg("USE_X11", BtYes)
+	syslist("WARNINGS", BtShellWord)
+	sys("WARNING_MSG", BtShellCommand)
+	sys("WARNING_CAT", BtShellCommand)
+	sysload("WRAPPER_DIR", BtPathname)
+	pkglistbl3("WRAPPER_REORDER_CMDS", BtWrapperReorder)
+	pkg("WRAPPER_SHELL", BtShellCommand)
+	pkglist("WRAPPER_TRANSFORM_CMDS", BtWrapperTransform)
+	sys("WRKDIR", BtPathname)
+	pkg("WRKSRC", BtWrkdirSubdirectory)
+	pkglist("X11_LDFLAGS", BtLdFlag)
+	sys("X11_PKGSRCDIR.*", BtPathname)
+	usr("XAW_TYPE", enum("3d neXtaw standard xpm"))
+	pkglist("XMKMF_FLAGS", BtShellWord)
+	pkglist("_WRAP_EXTRA_ARGS.*", BtShellWord)
+
+	infralist("_VARGROUPS", BtIdentifier)
+	infralist("_USER_VARS.*", BtIdentifier)
+	infralist("_PKG_VARS.*", BtIdentifier)
+	infralist("_SYS_VARS.*", BtIdentifier)
+	infralist("_DEF_VARS.*", BtIdentifier)
+	infralist("_USE_VARS.*", BtIdentifier)
 }
 
 func enum(values string) *BasicType {
@@ -1249,47 +1606,33 @@ func enum(values string) *BasicType {
 	return &basicType
 }
 
-func parseACLEntries(varname string, aclEntries string) []ACLEntry {
-	if aclEntries == "" {
-		return nil
-	}
+func (reg *VarTypeRegistry) parseACLEntries(varname string, aclEntries ...string) []ACLEntry {
+
+	G.Assertf(len(aclEntries) > 0, "At least one ACL entry must be given.")
+
+	// TODO: Use separate rules for infrastructure files.
+	//  These rules would have the "infra:" prefix
+	//  that works similar to the already existing prefix "special:".
+	//  The "infra:" prefix applies to both mk/* and wip/mk/* files, and globs
+	//  without that prefix only apply to all files outside the infrastructure.
 
 	var result []ACLEntry
 	prevperms := "(first)"
-	for _, arg := range strings.Split(aclEntries, "; ") {
-		fields := strings.SplitN(arg, ": ", 2)
-		G.Assertf(len(fields) == 2, "Invalid ACL entry %q", arg)
-		globs, perms := fields[0], ifelseStr(fields[1] == "none", "", fields[1])
+	for _, arg := range aclEntries {
+		fields := strings.Split(arg, ": ")
+		G.Assertf(len(fields) == 2, "ACL entry %q must have exactly 1 colon.", arg)
+		globs, perms := fields[0], fields[1]
 
 		G.Assertf(perms != prevperms, "Repeated permissions %q for %q.", perms, varname)
 		prevperms = perms
 
-		var permissions ACLPermissions
-		for _, perm := range strings.Split(perms, ", ") {
-			switch perm {
-			case "append":
-				permissions |= aclpAppend
-			case "default":
-				permissions |= aclpSetDefault
-			case "set":
-				permissions |= aclpSet
-			case "use":
-				permissions |= aclpUse
-			case "use-loadtime":
-				permissions |= aclpUseLoadtime
-			case "":
-				break
-			default:
-				G.Assertf(false, "Invalid ACL permission %q for %q.", perm, varname)
-			}
-		}
+		permissions := reg.parsePermissions(varname, globs, perms)
 
 		for _, glob := range strings.Split(globs, ", ") {
 			switch glob {
 			case "*",
-				"Makefile", "Makefile.common", "Makefile.*",
-				"buildlink3.mk", "builtin.mk", "options.mk", "hacks.mk", "*.mk",
-				"bsd.options.mk":
+				"Makefile", "Makefile.*",
+				"buildlink3.mk", "builtin.mk", "options.mk", "hacks.mk", "*.mk":
 				break
 			default:
 				withoutSpecial := strings.TrimPrefix(glob, "special:")
@@ -1307,5 +1650,50 @@ func parseACLEntries(varname string, aclEntries string) []ACLEntry {
 			result = append(result, ACLEntry{glob, permissions})
 		}
 	}
+
 	return result
+}
+
+func (reg *VarTypeRegistry) parsePermissions(varname, globs, perms string) ACLPermissions {
+	if perms == "none" {
+		return aclpNone
+	}
+
+	splitPerms := strings.Split(perms, ", ")
+	var permissions ACLPermissions
+
+	remove := func(name string, perm ACLPermissions) {
+		if len(splitPerms) > 0 && splitPerms[0] == name {
+			permissions |= perm
+			splitPerms = splitPerms[1:]
+		}
+	}
+
+	// The order of the assignment permissions is in perceived
+	// chronological order. First the default assignment, which
+	// can later be overridden by an unconditional assignment,
+	// and that can be appended later to add more values.
+	remove("default", aclpSetDefault)
+	remove("set", aclpSet)
+	remove("append", aclpAppend)
+
+	// When using a variable, "use" comes first because it feels
+	// more general. Most variables that can be used at load time
+	// can also be used at run time.
+	//
+	// Using a variable at load time is a special access that
+	// applies to fewer variables. Therefore it comes last.
+	remove("use", aclpUse)
+	remove("use-loadtime", aclpUseLoadtime)
+
+	if len(splitPerms) > 0 {
+		G.Assertf(
+			false,
+			"Invalid ACL permission %q for %q in %q. "+
+				"Remaining parts are %q. "+
+				"Valid permissions are default, set, append, "+
+				"use, use-loadtime (in this order), or none.",
+			perms, varname, globs, strings.Join(splitPerms, ", "))
+	}
+	return permissions
 }

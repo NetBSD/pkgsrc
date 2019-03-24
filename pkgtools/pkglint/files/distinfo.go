@@ -13,15 +13,15 @@ import (
 	"strings"
 )
 
-func CheckLinesDistinfo(lines Lines) {
+func CheckLinesDistinfo(pkg *Package, lines Lines) {
 	if trace.Tracing {
 		defer trace.Call1(lines.FileName)()
 	}
 
 	filename := lines.FileName
 	patchdir := "patches"
-	if G.Pkg != nil && dirExists(G.Pkg.File(G.Pkg.Patchdir)) {
-		patchdir = G.Pkg.Patchdir
+	if pkg != nil && dirExists(pkg.File(pkg.Patchdir)) {
+		patchdir = pkg.Patchdir
 	}
 	if trace.Tracing {
 		trace.Step1("patchdir=%q", patchdir)
@@ -29,7 +29,7 @@ func CheckLinesDistinfo(lines Lines) {
 
 	distinfoIsCommitted := isCommitted(filename)
 	ck := distinfoLinesChecker{
-		lines, patchdir, distinfoIsCommitted,
+		pkg, lines, patchdir, distinfoIsCommitted,
 		nil, make(map[string]distinfoFileInfo)}
 	ck.parse()
 	ck.check()
@@ -40,8 +40,9 @@ func CheckLinesDistinfo(lines Lines) {
 }
 
 type distinfoLinesChecker struct {
+	pkg                 *Package
 	lines               Lines
-	patchdir            string // Relative to G.Pkg
+	patchdir            string // Relative to pkg
 	distinfoIsCommitted bool
 
 	filenames []string // For keeping the order from top to bottom
@@ -64,9 +65,9 @@ func (ck *distinfoLinesChecker) parse() {
 		switch {
 		case !hasPrefix(prevFilename, "patch-"):
 			return no
-		case G.Pkg == nil:
+		case ck.pkg == nil:
 			return unknown
-		case fileExists(G.Pkg.File(ck.patchdir + "/" + prevFilename)):
+		case fileExists(ck.pkg.File(ck.patchdir + "/" + prevFilename)):
 			return yes
 		default:
 			return no
@@ -146,12 +147,12 @@ func (ck *distinfoLinesChecker) checkAlgorithms(info distinfoFileInfo) {
 	// At this point, the file is either a missing patch file or a distfile.
 
 	case hasPrefix(filename, "patch-") && algorithms == "SHA1":
-		if G.Pkg.IgnoreMissingPatches {
+		if ck.pkg.IgnoreMissingPatches {
 			break
 		}
 
 		line.Warnf("Patch file %q does not exist in directory %q.",
-			filename, line.PathToFile(G.Pkg.File(ck.patchdir)))
+			filename, line.PathToFile(ck.pkg.File(ck.patchdir)))
 		G.Explain(
 			"If the patches directory looks correct, the patch may have been",
 			"removed without updating the distinfo file.",
@@ -193,10 +194,6 @@ func (ck *distinfoLinesChecker) checkAlgorithmsDistfile(info distinfoFileInfo) {
 	}
 
 	distdir := G.Pkgsrc.File("distfiles")
-	distSubdir := ""
-	if G.Pkg != nil {
-		distSubdir = G.Pkg.vars.LastValue("DIST_SUBDIR")
-	}
 
 	// It's a rare situation that the explanation is generated
 	// this far from the corresponding diagnostic.
@@ -206,7 +203,7 @@ func (ck *distinfoLinesChecker) checkAlgorithmsDistfile(info distinfoFileInfo) {
 		"To add the missing lines to the distinfo file, run",
 		sprintf("\t%s", bmake("distinfo")),
 		"for each variant of the package until all distfiles are downloaded to",
-		sprintf("%q.", cleanpath("${PKGSRCDIR}/distfiles/"+distSubdir)),
+		"${PKGSRCDIR}/distfiles.",
 		"",
 		"The variants are typically selected by setting EMUL_PLATFORM",
 		"or similar variables in the command line.",
@@ -221,7 +218,7 @@ func (ck *distinfoLinesChecker) checkAlgorithmsDistfile(info distinfoFileInfo) {
 		"which will find the downloaded distfiles and add the missing",
 		"hashes to the distinfo file.")
 
-	distfile := cleanpath(distdir + "/" + distSubdir + "/" + info.filename())
+	distfile := cleanpath(distdir + "/" + info.filename())
 	if !fileExists(distfile) {
 		return
 	}
@@ -301,10 +298,10 @@ func (ck *distinfoLinesChecker) checkAlgorithmsDistfile(info distinfoFileInfo) {
 }
 
 func (ck *distinfoLinesChecker) checkUnrecordedPatches() {
-	if G.Pkg == nil {
+	if ck.pkg == nil {
 		return
 	}
-	patchFiles, err := ioutil.ReadDir(G.Pkg.File(ck.patchdir))
+	patchFiles, err := ioutil.ReadDir(ck.pkg.File(ck.patchdir))
 	if err != nil {
 		if trace.Tracing {
 			trace.Stepf("Cannot read patchdir %q: %s", ck.patchdir, err)
@@ -317,7 +314,7 @@ func (ck *distinfoLinesChecker) checkUnrecordedPatches() {
 		if file.Mode().IsRegular() && ck.infos[patchName].isPatch != yes && hasPrefix(patchName, "patch-") {
 			line := NewLineWhole(ck.lines.FileName)
 			line.Errorf("Patch %q is not recorded. Run %q.",
-				line.PathToFile(G.Pkg.File(ck.patchdir+"/"+patchName)),
+				line.PathToFile(ck.pkg.File(ck.patchdir+"/"+patchName)),
 				bmake("makepatchsum"))
 		}
 	}
@@ -377,7 +374,7 @@ func (ck *distinfoLinesChecker) checkUncommittedPatch(info distinfoHash) {
 	line := info.line
 
 	patchFileName := ck.patchdir + "/" + patchName
-	resolvedPatchFileName := G.Pkg.File(patchFileName)
+	resolvedPatchFileName := ck.pkg.File(patchFileName)
 	if ck.distinfoIsCommitted && !isCommitted(resolvedPatchFileName) {
 		line.Warnf("%s is registered in distinfo but not added to CVS.", line.PathToFile(resolvedPatchFileName))
 	}
@@ -387,7 +384,7 @@ func (ck *distinfoLinesChecker) checkUncommittedPatch(info distinfoHash) {
 }
 
 func (ck *distinfoLinesChecker) checkPatchSha1(line Line, patchFileName, distinfoSha1Hex string) {
-	fileSha1Hex, err := computePatchSha1Hex(G.Pkg.File(patchFileName))
+	fileSha1Hex, err := computePatchSha1Hex(ck.pkg.File(patchFileName))
 	if err != nil {
 		line.Errorf("Patch %s does not exist.", patchFileName)
 		return
@@ -395,7 +392,7 @@ func (ck *distinfoLinesChecker) checkPatchSha1(line Line, patchFileName, distinf
 	if distinfoSha1Hex != fileSha1Hex {
 		fix := line.Autofix()
 		fix.Errorf("SHA1 hash of %s differs (distinfo has %s, patch file has %s).",
-			line.PathToFile(G.Pkg.File(patchFileName)), distinfoSha1Hex, fileSha1Hex)
+			line.PathToFile(ck.pkg.File(patchFileName)), distinfoSha1Hex, fileSha1Hex)
 		fix.Explain(
 			"To fix the hashes, either let pkglint --autofix do the work",
 			sprintf("or run %q.", bmake("makepatchsum")))
