@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.67 2019/02/26 11:32:12 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.68 2019/03/24 12:27:22 ryoon Exp $
 bin/thunderbird
 lib/thunderbird/application.ini
 lib/thunderbird/blocklist.xml
@@ -3734,6 +3734,7 @@ lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_loc
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/cs/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/cy/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/dsb/messages.json
+lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/de/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/el/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/en/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/en_GB/messages.json
@@ -3747,6 +3748,7 @@ lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_loc
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/hr/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/hsb/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/hu/messages.json
+lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/ia/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/id/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/it/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/ja/messages.json
@@ -3754,6 +3756,7 @@ lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_loc
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/kab/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/kk/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/ko/messages.json
+lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/nb_NO/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/nl/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/nn_NO/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/pl/messages.json
@@ -3762,13 +3765,16 @@ lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_loc
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/rm/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/ro/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/ru/messages.json
+lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/si/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/sk/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/sl/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/sq/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/sv_SE/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/th/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/tr/messages.json
+lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/uk/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/zh_CN/messages.json
+lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/vi/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/_locales/zh_TW/messages.json
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/background/background.js
 lib/thunderbird/features/wetransfer@extensions.thunderbird.net/webextension/content/moments.css
