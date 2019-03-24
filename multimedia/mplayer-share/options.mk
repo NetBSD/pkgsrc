@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.60 2018/04/04 12:26:24 triaxx Exp $
+# $NetBSD: options.mk,v 1.61 2019/03/24 20:38:25 rhialto Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -24,7 +24,7 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
 # Options supported by both mplayer* or mencoder*.
 
 PKG_SUPPORTED_OPTIONS=	gif jpeg mad dts dv png theora vorbis x264 debug
-PKG_SUPPORTED_OPTIONS+= dvdread dvdnav
+PKG_SUPPORTED_OPTIONS+= dvdread dvdnav libmpg123 opus
 .if ${OSS_TYPE} != "none"
 PKG_SUPPORTED_OPTIONS+=	oss
 .endif
@@ -83,7 +83,7 @@ PKG_SUPPORTED_OPTIONS+= xvid
 
 .for o in cdparanoia dv esound gif jpeg \
 	    dvdread dvdnav \
-	    lame mad mplayer-menu \
+	    lame libmpg123 mad mplayer-menu \
 	    mplayer-default-cflags mplayer-runtime-cpudetection \
 	    nas oss pulseaudio png sdl theora vorbis x264 xvid vdpau lirc
 .  if !empty(PKG_SUPPORTED_OPTIONS:M${o})
@@ -204,11 +204,25 @@ CONFIGURE_ARGS+=	--enable-jpeg
 CONFIGURE_ARGS+=	--disable-jpeg
 .endif
 
+.if !empty(PKG_OPTIONS:Mlibmpg123)
+# no --enable-mpg123: configure forgets to add -lmpg123.
+.  include "../../audio/mpg123/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-mpg123
+.endif
+
 .if !empty(PKG_OPTIONS:Mlame)
 CONFIGURE_ARGS+=	--enable-mp3lame
 .  include "../../audio/lame/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-mp3lame
+.endif
+
+.if !empty(PKG_OPTIONS:Mopus)
+CONFIGURE_ARGS+=	--enable-libopus
+.  include "../../audio/libopus/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-opus
 .endif
 
 .if !empty(PKG_OPTIONS:Mmad)
