@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1465 2019/03/24 19:43:09 wiedi Exp $
+$NetBSD: CHANGES-2019,v 1.1466 2019/03/24 20:50:27 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2354,3 +2354,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added graphics/materia-gtk-theme version 20190315 [nia 2019-03-24]
 	Updated security/p11-kit to 0.23.15 [ryoon 2019-03-24]
 	Updated editors/nano to 4.0 [wiedi 2019-03-24]
+	Updated sysutils/u-boot-bananapi-r2 to rc4nb1 [thorpej 2019-03-24]
