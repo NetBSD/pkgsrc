@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/03/24 15:57:52 nia Exp $
+
+SHA1 (materia-gtk-theme-20190315.tar.gz) = 87a6a29cc3620420d535078a9477ca6abf40f974
+RMD160 (materia-gtk-theme-20190315.tar.gz) = ca5ad24c5cca61db1969bd997f58f98aa9ba7a8b
+SHA512 (materia-gtk-theme-20190315.tar.gz) = 780bb22664036e61a0489aff884ab890cf2821746504bc28a022f54ecf6fec7e8df118ff9cf325b7b3b514d8c569c863b7a5aeb35215bcca3db0aa681eb1ded9
+Size (materia-gtk-theme-20190315.tar.gz) = 834501 bytes

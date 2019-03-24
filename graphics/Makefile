@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.814 2019/03/06 13:00:28 joerg Exp $
+# $NetBSD: Makefile,v 1.815 2019/03/24 15:57:52 nia Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -348,6 +348,7 @@ SUBDIR+=	mate-backgrounds
 SUBDIR+=	mate-icon-theme
 SUBDIR+=	mate-icon-theme-faenza
 SUBDIR+=	mate-themes
+SUBDIR+=	materia-gtk-theme
 SUBDIR+=	metacam
 SUBDIR+=	mgl
 SUBDIR+=	mng
