@@ -23,7 +23,7 @@ func (s *Suite) Test_CheckLinesDistinfo__parse_errors(c *check.C) {
 		"SHA1 (patch-nonexistent) = 1234")
 	G.Pkg = NewPackage(".")
 
-	CheckLinesDistinfo(lines)
+	CheckLinesDistinfo(G.Pkg, lines)
 
 	t.CheckOutputLines(
 		"ERROR: distinfo:1: Expected \"$"+"NetBSD$\".",
@@ -47,7 +47,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithms__nonexistent_distfile_
 		"SHA1 (patch-5.3.tar.gz) = 1234567890123456789012345678901234567890")
 	G.Pkg = NewPackage(".")
 
-	CheckLinesDistinfo(lines)
+	CheckLinesDistinfo(G.Pkg, lines)
 
 	// Even though the filename starts with "patch-" and therefore looks like
 	// a patch, it is a normal distfile because it has other hash algorithms
@@ -67,7 +67,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithms__wrong_distfile_algori
 		"MD5 (distfile.tar.gz) = 12345678901234567890123456789012",
 		"SHA1 (distfile.tar.gz) = 1234567890123456789012345678901234567890")
 
-	CheckLinesDistinfo(lines)
+	CheckLinesDistinfo(nil, lines)
 
 	t.CheckOutputLines(
 		"ERROR: distinfo:3: Expected SHA1, RMD160, SHA512, Size checksums " +
@@ -90,7 +90,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithms__ambiguous_distfile(c 
 		"",
 		"MD5 (patch-4.2.tar.gz) = 12345678901234567890123456789012")
 
-	CheckLinesDistinfo(lines)
+	CheckLinesDistinfo(nil, lines)
 
 	t.CheckOutputLines(
 		"ERROR: distinfo:3: Wrong checksum algorithms MD5 for patch-4.2.tar.gz.",
@@ -130,7 +130,7 @@ func (s *Suite) Test_distinfoLinesChecker_parse__empty(c *check.C) {
 		RcsID,
 		"")
 
-	CheckLinesDistinfo(lines)
+	CheckLinesDistinfo(nil, lines)
 
 	t.CheckOutputLines(
 		"NOTE: ~/distinfo:2: Trailing empty lines.")
@@ -218,7 +218,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithms__missing_patch_with_di
 		"SHA512 (patch-aa) = ...",
 		"Size (patch-aa) = ... bytes")
 
-	CheckLinesDistinfo(lines)
+	CheckLinesDistinfo(nil, lines)
 
 	// The file name certainly looks like a pkgsrc patch, but there
 	// is no corresponding file in the file system, and there is no
@@ -409,7 +409,7 @@ func (s *Suite) Test_CheckLinesDistinfo__manual_patches(c *check.C) {
 		"",
 		"SHA1 (patch-aa) = ...")
 
-	CheckLinesDistinfo(lines)
+	CheckLinesDistinfo(nil, lines)
 
 	// When a distinfo file is checked on its own, without belonging to a package,
 	// the PATCHDIR is not known and therefore no diagnostics are logged.
@@ -417,7 +417,7 @@ func (s *Suite) Test_CheckLinesDistinfo__manual_patches(c *check.C) {
 
 	G.Pkg = NewPackage(".")
 
-	CheckLinesDistinfo(lines)
+	CheckLinesDistinfo(G.Pkg, lines)
 
 	// When a distinfo file is checked in the context of a package,
 	// the PATCHDIR is known, therefore the check is active.
@@ -485,7 +485,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkPatchSha1(c *check.C) {
 	G.Pkg = NewPackage(t.File("category/package"))
 	distinfoLine := t.NewLine(t.File("category/package/distinfo"), 5, "")
 
-	checker := distinfoLinesChecker{}
+	checker := distinfoLinesChecker{G.Pkg, nil, "", false, nil, nil}
 	checker.checkPatchSha1(distinfoLine, "patch-nonexistent", "distinfo-sha1")
 
 	t.CheckOutputLines(
@@ -522,7 +522,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__add_missing_h
 		"\tTo add the missing lines to the distinfo file, run",
 		"\t\t"+confMake+" distinfo",
 		"\tfor each variant of the package until all distfiles are downloaded",
-		"\tto \"${PKGSRCDIR}/distfiles\".",
+		"\tto ${PKGSRCDIR}/distfiles.",
 		"",
 		"\tThe variants are typically selected by setting EMUL_PLATFORM or",
 		"\tsimilar variables in the command line.",

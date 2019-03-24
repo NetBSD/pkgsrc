@@ -118,12 +118,10 @@ func imax(a, b int) int {
 	return b
 }
 
-func mustMatch(s string, re regex.Pattern) []string {
-	m := G.res.Match(s, re)
-	if m == nil {
-		G.Assertf(false, "mustMatch %q %q", s, re)
+func assertNil(err error, format string, args ...interface{}) {
+	if err != nil {
+		panic("Pkglint internal error: " + sprintf(format, args...) + ": " + err.Error())
 	}
-	return m
 }
 
 func isEmptyDir(filename string) bool {
@@ -293,27 +291,27 @@ func varnameParam(varname string) string {
 }
 
 // defineVar marks a variable as defined in both the current package and the current file.
-func defineVar(mkline MkLine, varname string) {
-	if G.Mk != nil {
-		G.Mk.vars.Define(varname, mkline)
+func defineVar(pkg *Package, mklines MkLines, mkline MkLine, varname string) {
+	if mklines != nil {
+		mklines.vars.Define(varname, mkline)
 	}
-	if G.Pkg != nil {
-		G.Pkg.vars.Define(varname, mkline)
+	if pkg != nil {
+		pkg.vars.Define(varname, mkline)
 	}
 }
 
 // varIsDefinedSimilar tests whether the variable (or its canonicalized form)
 // is defined in the current package or in the current file.
-func varIsDefinedSimilar(varname string) bool {
-	return G.Mk != nil && (G.Mk.vars.DefinedSimilar(varname) || G.Mk.forVars[varname]) ||
-		G.Pkg != nil && G.Pkg.vars.DefinedSimilar(varname)
+func varIsDefinedSimilar(pkg *Package, mklines MkLines, varname string) bool {
+	return mklines != nil && (mklines.vars.DefinedSimilar(varname) || mklines.forVars[varname]) ||
+		pkg != nil && pkg.vars.DefinedSimilar(varname)
 }
 
 // varIsUsedSimilar tests whether the variable (or its canonicalized form)
 // is used in the current package or in the current file.
-func varIsUsedSimilar(varname string) bool {
-	return G.Mk != nil && G.Mk.vars.UsedSimilar(varname) ||
-		G.Pkg != nil && G.Pkg.vars.UsedSimilar(varname)
+func varIsUsedSimilar(pkg *Package, mklines MkLines, varname string) bool {
+	return mklines != nil && mklines.vars.UsedSimilar(varname) ||
+		pkg != nil && pkg.vars.UsedSimilar(varname)
 }
 
 func fileExists(filename string) bool {
@@ -414,9 +412,11 @@ func relpath(from, to string) (result string) {
 }
 
 func abspath(filename string) string {
-	abs, err := filepath.Abs(filename)
-	G.AssertNil(err, "abspath %q", filename)
-	return filepath.ToSlash(abs)
+	abs := filename
+	if !filepath.IsAbs(filename) {
+		abs = G.cwd + "/" + abs
+	}
+	return path.Clean(abs)
 }
 
 // Differs from path.Clean in that only "../../" is replaced, not "../".
@@ -979,7 +979,7 @@ func escapePrintable(s string) string {
 		case rune(byte(r)) == r && textproc.XPrint.Contains(byte(rest[j])):
 			escaped.WriteByte(byte(r))
 		case r == 0xFFFD && !hasPrefix(rest[j:], "\uFFFD"):
-			_, _ = fmt.Fprintf(&escaped, "<\\x%02X>", rest[j])
+			_, _ = fmt.Fprintf(&escaped, "<0x%02X>", rest[j])
 		default:
 			_, _ = fmt.Fprintf(&escaped, "<%U>", r)
 		}
