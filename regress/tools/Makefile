@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/03/24 08:40:07 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2019/03/24 11:29:19 rillig Exp $
 #
 
 DISTNAME=	# not applicable
@@ -14,7 +14,7 @@ LICENSE=	2-clause-bsd
 WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
 PLIST_SRC=	# none
-REGRESS_TESTS+=	logging
+REGRESS_TESTS+=	logging shquote
 REGRESS_TESTS+=	awk sed sh sort tar tr
 USE_TOOLS+=	awk sed sh sort tar tr
 
@@ -56,10 +56,10 @@ TOOLS_PATH.path-args=	echo
 TOOLS_ARGS.path-args=	" \"'\\$$" "*"
 
 do-build:
-.for t in ${REGRESS_TESTS}
-	${RUN} cd ${WRKSRC};						\
-	${ECHO_MSG} "Running testsuite "${t:Q};				\
-	${SH} ${FILESDIR}/${t:Q}-test.sh
+.for test in ${REGRESS_TESTS}
+	@${ECHO_MSG} "Running testsuite "${test:Q}
+	${RUN} cd ${WRKSRC} \
+	&& PKGSRCDIR=${PKGSRCDIR} ${SH} ${FILESDIR}/${test:Q}-test.sh
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
