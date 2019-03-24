@@ -437,9 +437,9 @@ func (s *Suite) Test_resolveVariableRefs__multilevel(c *check.C) {
 	mkline2 := t.NewMkLine("filename.mk", 11, "SECOND=\t${THIRD}")
 	mkline3 := t.NewMkLine("filename.mk", 12, "THIRD=\tgot it")
 	G.Pkg = NewPackage(t.File("category/pkgbase"))
-	defineVar(mkline1, "FIRST")
-	defineVar(mkline2, "SECOND")
-	defineVar(mkline3, "THIRD")
+	defineVar(G.Pkg, nil, mkline1, "FIRST")
+	defineVar(G.Pkg, nil, mkline2, "SECOND")
+	defineVar(G.Pkg, nil, mkline3, "THIRD")
 
 	// TODO: Add a similar test in which some of the variables are defined
 	//  conditionally or with differing values, just to see what pkglint does

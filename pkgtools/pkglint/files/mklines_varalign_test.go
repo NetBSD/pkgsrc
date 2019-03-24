@@ -66,20 +66,12 @@ func (vt *VaralignTester) run(autofix bool) {
 	varalign.Finish()
 
 	if autofix {
-		if len(vt.autofixes) > 0 {
-			t.CheckOutputLines(vt.autofixes...)
-		} else {
-			t.CheckOutputEmpty()
-		}
+		t.CheckOutput(vt.autofixes)
 
 		SaveAutofixChanges(mklines.lines)
 		t.CheckFileLinesDetab("Makefile", vt.fixed...)
 	} else {
-		if len(vt.diagnostics) > 0 {
-			t.CheckOutputLines(vt.diagnostics...)
-		} else {
-			t.CheckOutputEmpty()
-		}
+		t.CheckOutput(vt.diagnostics)
 	}
 }
 

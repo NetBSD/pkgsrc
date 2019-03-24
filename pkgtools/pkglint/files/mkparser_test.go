@@ -559,11 +559,7 @@ func (s *Suite) Test_MkParser_VarUseModifiers(c *check.C) {
 
 		t.Check(actual, deepEquals, varUse)
 		t.Check(p.Rest(), equals, rest)
-		if len(diagnostics) > 0 {
-			t.CheckOutputLines(diagnostics...)
-		} else {
-			t.CheckOutputEmpty()
-		}
+		t.CheckOutput(diagnostics)
 	}
 
 	// The !command! modifier is used so seldom that pkglint does not
@@ -599,11 +595,7 @@ func (s *Suite) Test_MkParser_varUseModifierSubst(c *check.C) {
 
 		t.Check(actual, deepEquals, varUse)
 		t.Check(p.Rest(), equals, rest)
-		if len(diagnostics) > 0 {
-			t.CheckOutputLines(diagnostics...)
-		} else {
-			t.CheckOutputEmpty()
-		}
+		t.CheckOutput(diagnostics)
 	}
 
 	test("${VAR:S", nil, "${VAR:S",
@@ -643,11 +635,7 @@ func (s *Suite) Test_MkParser_varUseModifierAt(c *check.C) {
 
 		t.Check(actual, deepEquals, varUse)
 		t.Check(p.Rest(), equals, rest)
-		if len(diagnostics) > 0 {
-			t.CheckOutputLines(diagnostics...)
-		} else {
-			t.CheckOutputEmpty()
-		}
+		t.CheckOutput(diagnostics)
 	}
 
 	test("${VAR:@", nil, "${VAR:@",

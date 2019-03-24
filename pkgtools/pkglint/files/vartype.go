@@ -39,16 +39,16 @@ const (
 	aclpUseLoadtime                            // OTHER := ${VAR}, OTHER != ${VAR}
 	aclpUse                                    // OTHER = ${VAR}
 
-	// TODO: Try what happens if this constant is removed.
-	//  All variables should have proper permission definitions for all files.
-	//  Missing permission definitions could also count as "none".
-	aclpUnknown
+	aclpNone ACLPermissions = 0
+
 	aclpAllWrite   = aclpSet | aclpSetDefault | aclpAppend
 	aclpAllRead    = aclpUseLoadtime | aclpUse
 	aclpAll        = aclpAllWrite | aclpAllRead
 	aclpAllRuntime = aclpAll &^ aclpUseLoadtime
 )
 
+// Contains returns whether each permission of the given subset is
+// contained in this permission set.
 func (perms ACLPermissions) Contains(subset ACLPermissions) bool {
 	return perms&subset == subset
 }
@@ -62,8 +62,7 @@ func (perms ACLPermissions) String() string {
 		ifelseStr(perms.Contains(aclpSetDefault), "set-default", ""),
 		ifelseStr(perms.Contains(aclpAppend), "append", ""),
 		ifelseStr(perms.Contains(aclpUseLoadtime), "use-loadtime", ""),
-		ifelseStr(perms.Contains(aclpUse), "use", ""),
-		ifelseStr(perms.Contains(aclpUnknown), "unknown", ""))
+		ifelseStr(perms.Contains(aclpUse), "use", ""))
 }
 
 func (perms ACLPermissions) HumanString() string {
@@ -81,7 +80,7 @@ func (vt *Vartype) EffectivePermissions(basename string) ACLPermissions {
 			return aclEntry.permissions
 		}
 	}
-	return aclpUnknown
+	return aclpNone
 }
 
 // Union returns the union of all possible permissions.
@@ -95,15 +94,63 @@ func (vt *Vartype) Union() ACLPermissions {
 	return permissions
 }
 
-// AllowedFiles lists the file patterns in which the given permissions are allowed.
-func (vt *Vartype) AllowedFiles(perms ACLPermissions) string {
-	files := make([]string, 0, len(vt.aclEntries))
+// AlternativeFiles lists the file patterns in which all of the given
+// permissions are allowed, readily formatted to be used in a diagnostic.
+//
+// If the permission is allowed nowhere, an empty string is returned.
+func (vt *Vartype) AlternativeFiles(perms ACLPermissions) string {
+	pos := make([]string, 0, len(vt.aclEntries))
+	neg := make([]string, 0, len(vt.aclEntries))
+
+	merge := func(slice []string) []string {
+		di := 0
+		for si, early := range slice {
+			redundant := false
+			for _, late := range slice[si+1:] {
+				matched, err := path.Match(late, early)
+				if err == nil && matched {
+					redundant = true
+					break
+				}
+			}
+			if !redundant {
+				slice[di] = early
+				di++
+			}
+		}
+		return slice[:di]
+	}
+
 	for _, aclEntry := range vt.aclEntries {
 		if aclEntry.permissions.Contains(perms) {
-			files = append(files, aclEntry.glob)
+			pos = append(pos, aclEntry.glob)
+		} else {
+			neg = append(neg, aclEntry.glob)
 		}
 	}
-	return joinSkipEmptyCambridge("or", files...)
+
+	if len(neg) == 0 {
+		pos = merge(pos)
+	}
+	if len(pos) == 0 {
+		neg = merge(neg)
+	}
+
+	positive := joinSkipEmptyCambridge("or", pos...)
+	if positive == "" {
+		return ""
+	}
+
+	negative := joinSkipEmptyCambridge("or", neg...)
+	if negative == "" {
+		return positive
+	}
+
+	if negative == "*" {
+		return positive + " only"
+	}
+
+	return positive + ", but not " + negative
 }
 
 // IsConsideredList returns whether the type is considered a list.
@@ -193,11 +240,7 @@ func (bt *BasicType) NeedsQ() bool {
 }
 
 func (vt *Vartype) IsPlainString() bool {
-	switch vt.basicType {
-	case BtComment, BtMessage, BtUnknown:
-		return true
-	}
-	return false
+	return vt.basicType == BtComment || vt.basicType == BtMessage
 }
 
 type BasicType struct {
@@ -281,6 +324,8 @@ var (
 	BtYes                    = &BasicType{"Yes", (*VartypeCheck).Yes}
 	BtYesNo                  = &BasicType{"YesNo", (*VartypeCheck).YesNo}
 	BtYesNoIndirectly        = &BasicType{"YesNoIndirectly", (*VartypeCheck).YesNoIndirectly}
+
+	btForLoop = &BasicType{".for loop", nil /* never called */}
 )
 
 // Necessary due to circular dependencies between the checkers.

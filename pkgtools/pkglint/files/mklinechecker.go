@@ -9,6 +9,7 @@ import (
 	"strings"
 )
 
+// MkLineChecker provides checks for a single line from a Makefile fragment.
 type MkLineChecker struct {
 	MkLine MkLine
 }
@@ -59,7 +60,7 @@ func (ck MkLineChecker) checkShellCommand() {
 	}
 
 	ck.checkText(shellCommand)
-	NewShellLine(mkline).CheckShellCommandLine(shellCommand)
+	NewShellLineChecker(mkline).CheckShellCommandLine(shellCommand)
 }
 
 func (ck MkLineChecker) checkInclude() {
@@ -220,7 +221,7 @@ func (ck MkLineChecker) checkDirectiveFor(forVars map[string]bool, indentation *
 		// The guessed flag could also be determined more correctly. As of November 2018,
 		// running pkglint over the whole pkgsrc tree did not produce any different result
 		// whether guessed was true or false.
-		forLoopType := Vartype{lkShell, BtUnknown, []ACLEntry{{"*", aclpAllRead}}, false}
+		forLoopType := Vartype{lkShell, btForLoop, []ACLEntry{{"*", aclpAllRead}}, false}
 		forLoopContext := VarUseContext{&forLoopType, vucTimeParse, VucQuotPlain, false}
 		for _, itemsVar := range mkline.DetermineUsedVariables() {
 			ck.CheckVaruse(&MkVarUse{itemsVar, nil}, &forLoopContext)
@@ -325,38 +326,39 @@ func (ck MkLineChecker) checkVarassignLeftPermissions() {
 	switch {
 	case perms.Contains(needed):
 		break
-	case perms == aclpUnknown:
-		if trace.Tracing {
-			trace.Step1("Unknown permissions for %q.", varname)
-		}
 	default:
 		alternativeActions := perms & aclpAllWrite
-		alternativeFiles := vartype.AllowedFiles(needed)
+		alternativeFiles := vartype.AlternativeFiles(needed)
 		switch {
 		case alternativeActions != 0 && alternativeFiles != "":
-			// FIXME: Sometimes the message says "ok in *", which is missing that in buildlink3.mk, none of the actions are allowed.
-			mkline.Warnf("The variable %s may not be %s (only %s) in this file; it would be ok in %s.",
+			mkline.Warnf("The variable %s should not be %s (only %s) in this file; it would be ok in %s.",
 				varname, needed.HumanString(), alternativeActions.HumanString(), alternativeFiles)
 		case alternativeFiles != "":
-			mkline.Warnf("The variable %s may not be %s in this file; it would be ok in %s.",
+			mkline.Warnf("The variable %s should not be %s in this file; it would be ok in %s.",
 				varname, needed.HumanString(), alternativeFiles)
 		case alternativeActions != 0:
-			mkline.Warnf("The variable %s may not be %s (only %s) in this file.",
+			mkline.Warnf("The variable %s should not be %s (only %s) in this file.",
 				varname, needed.HumanString(), alternativeActions.HumanString())
 		default:
-			mkline.Warnf("The variable %s may not be %s by any package.",
+			mkline.Warnf("The variable %s should not be %s by any package.",
 				varname, needed.HumanString())
 		}
 		ck.explainPermissions(varname, vartype)
 	}
 }
 
-func (ck MkLineChecker) explainPermissions(varname string, vartype *Vartype) {
+func (ck MkLineChecker) explainPermissions(varname string, vartype *Vartype, intro ...string) {
 	if !G.Logger.Opts.Explain {
 		return
 	}
 
 	var expl []string
+
+	if len(intro) > 0 {
+		expl = append(expl, intro...)
+		expl = append(expl, "")
+	}
+
 	expl = append(expl,
 		"The allowed actions for a variable are determined based on the file",
 		"name in which the variable is used or defined.",
@@ -374,7 +376,7 @@ func (ck MkLineChecker) explainPermissions(varname string, vartype *Vartype) {
 		if perms != "" {
 			expl = append(expl, sprintf("* in %s, it may be %s", files, perms))
 		} else {
-			expl = append(expl, sprintf("* in %s, it may not be accessed at all", files))
+			expl = append(expl, sprintf("* in %s, it should not be accessed at all", files))
 		}
 	}
 
@@ -450,15 +452,13 @@ func (ck MkLineChecker) checkVaruseUndefined(vartype *Vartype, varname string) {
 		break
 	case vartype != nil && !vartype.guessed:
 		// Well-known variables are probably defined by the infrastructure.
-	case varIsDefinedSimilar(varname):
+	case varIsDefinedSimilar(G.Pkg, G.Mk, varname):
 		break
 	case containsVarRef(varname):
 		break
-	case G.Pkgsrc.vartypes[varname] != nil:
+	case G.Pkgsrc.vartypes.DefinedCanon(varname):
 		break
-	case G.Pkgsrc.vartypes[varnameCanon(varname)] != nil:
-		break
-	case G.Mk != nil && !G.Mk.FirstTimeSlice("used but not defined: ", varname):
+	case G.Mk == nil || !G.Mk.FirstTimeSlice("used but not defined: ", varname):
 		break
 
 	default:
@@ -544,50 +544,136 @@ func (ck MkLineChecker) checkVarusePermissions(varname string, vartype *Vartype,
 
 	mkline := ck.MkLine
 	effPerms := vartype.EffectivePermissions(mkline.Basename)
-	if effPerms == aclpUnknown {
-		return
-	}
 	if effPerms.Contains(aclpUseLoadtime) {
+		// Skip any checks, assuming that if a variable may be used at
+		// load time, it may also be used at run time.
 		return
 	}
 
-	// Is the variable used at load time although that is not allowed?
+	// At this point the variable must not be used at load time.
+	// Now determine whether it is directly used at load time because
+	// the context already says so or, a little trickier, if it might
+	// be used at load time somewhere in the future because it is
+	// assigned to another variable, and that variable is allowed
+	// to be used at load time.
 	directly := vuc.time == vucTimeParse
-	indirectly := !directly && vuc.vartype != nil && vuc.vartype.Union().Contains(aclpUseLoadtime)
+	indirectly := !directly && vuc.vartype != nil &&
+		vuc.vartype.Union().Contains(aclpUseLoadtime)
 
-	if (directly || indirectly) && !vartype.guessed {
+	if vartype.guessed {
+		return
+	}
+
+	if directly || indirectly {
+		// At this point the variable is used at load time although that
+		// is not allowed.
+
+		// Whether a tool variable may be used at load time depends on
+		// whether bsd.prefs.mk has been included. That file examines the
+		// tools that have been added to USE_TOOLS up to this point and
+		// makes their variables available for use at load time.
 		if tool := G.ToolByVarname(varname); tool != nil {
 			if !tool.UsableAtLoadTime(G.Mk.Tools.SeenPrefs) {
 				ck.warnVaruseToolLoadTime(varname, tool)
 			}
-		} else {
-			ck.warnVaruseLoadTime(varname, indirectly)
+			return
 		}
+
+		// Continue to get a detailed warning showing alternative
+		// permissions and/or alternative files.
+
+	} else if effPerms.Contains(aclpUse) {
+		// At this point the variable is used at run time. Since that is
+		// allowed by the permissions, there is nothing more to check for.
+		return
 	}
 
-	if !effPerms.Contains(aclpUse) {
-		needed := aclpUse
-		if directly || indirectly {
-			needed = aclpUseLoadtime
-		}
-		alternativeFiles := vartype.AllowedFiles(needed)
-		if alternativeFiles != "" {
-			if G.Mk == nil || G.Mk.FirstTimeSlice("don't-use", varname, mkline.Filename) {
-				mkline.Warnf("%s may not be used in this file; it would be ok in %s.",
-					varname, alternativeFiles)
-			}
-		} else {
-			if G.Mk == nil || G.Mk.FirstTimeSlice("write-only", varname) {
-				mkline.Warnf("%s may not be used in any file; it is a write-only variable.", varname)
-			}
-		}
+	if G.Mk != nil && !G.Mk.FirstTimeSlice("checkVarusePermissions", varname) {
+		return
+	}
 
+	// Do not warn about unknown infrastructure variables.
+	// These have all permissions to prevent warnings when they are used.
+	// But when other variables are assigned to them it would seem as if
+	// these other variables could become evaluated at load time.
+	// And this is something that most variables do not allow.
+	if vuc.vartype != nil && vuc.vartype.basicType == BtUnknown {
+		return
+	}
+
+	// At this point the variable is used either at load time or at run
+	// time, and that particular use is not allowed in this file.
+	//
+	// If the variable is used at run time, it may or may not be used at
+	// load time in this file. Having a variable that may be used at load
+	// time but not at run time is not a practically important case.
+	// Therefore it is not handled specially here.
+	//
+	// Anyway, there must be a warning now since the requested use is not
+	// allowed. The only remaining question is about how detailed the
+	// warning will be.
+
+	anyPerms := vartype.Union()
+	if !anyPerms.Contains(aclpUse) && !anyPerms.Contains(aclpUseLoadtime) {
+		mkline.Warnf("%s should not be used in any file; it is a write-only variable.", varname)
+		ck.explainPermissions(varname, vartype)
+		return
+	}
+
+	if indirectly {
+		mkline.Warnf("%s should not be used indirectly at load time (via %s).",
+			varname, mkline.Varname())
+		ck.explainPermissions(varname, vartype,
+			"The variable on the left-hand side may be evaluated at load time,",
+			"but the variable on the right-hand side should not.",
+			"Because of the assignment in this line, the variable might be",
+			"used indirectly at load time, before it is guaranteed to be",
+			"properly initialized.")
+		return
+	}
+
+	needed := aclpUse
+	if directly {
+		needed = aclpUseLoadtime
+	}
+	alternativeFiles := vartype.AlternativeFiles(needed)
+
+	loadTimeExplanation := func() []string {
+		return []string{
+			"Many variables, especially lists of something, get their values incrementally.",
+			"Therefore it is generally unsafe to rely on their",
+			"value until it is clear that it will never change again.",
+			"This point is reached when the whole package Makefile is loaded and",
+			"execution of the shell commands starts; in some cases earlier.",
+			"",
+			"Additionally, when using the \":=\" operator, each $$ is replaced",
+			"with a single $, so variables that have references to shell",
+			"variables or regular expressions are modified in a subtle way."}
+	}
+
+	switch {
+	case alternativeFiles == "" && directly:
+		mkline.Warnf("%s should not be used at load time in any file.", varname)
+		ck.explainPermissions(varname, vartype, loadTimeExplanation()...)
+
+	case directly:
+		mkline.Warnf(
+			"%s should not be used at load time in this file; "+
+				"it would be ok in %s.",
+			varname, alternativeFiles)
+		ck.explainPermissions(varname, vartype, loadTimeExplanation()...)
+
+	default:
+		mkline.Warnf(
+			"%s should not be used in this file; it would be ok in %s.",
+			varname, alternativeFiles)
 		ck.explainPermissions(varname, vartype)
 	}
+
 }
 
 // warnVaruseToolLoadTime logs a warning that the tool ${varname}
-// may not be used at load time.
+// should not be used at load time.
 func (ck MkLineChecker) warnVaruseToolLoadTime(varname string, tool *Tool) {
 	// TODO: While using a tool by its variable name may be ok at load time,
 	//  doing the same with the plain name of a tool is never ok.
@@ -627,32 +713,6 @@ func (ck MkLineChecker) warnVaruseToolLoadTime(varname string, tool *Tool) {
 		"load time (see above for the tricky rules).",
 		"Therefore the tools can only be used at run time,",
 		"except in the package Makefile itself.")
-}
-
-func (ck MkLineChecker) warnVaruseLoadTime(varname string, isIndirect bool) {
-	mkline := ck.MkLine
-
-	if !isIndirect {
-		mkline.Warnf("%s should not be evaluated at load time.", varname)
-		G.Explain(
-			"Many variables, especially lists of something, get their values incrementally.",
-			"Therefore it is generally unsafe to rely on their",
-			"value until it is clear that it will never change again.",
-			"This point is reached when the whole package Makefile is loaded and",
-			"execution of the shell commands starts; in some cases earlier.",
-			"",
-			"Additionally, when using the \":=\" operator, each $$ is replaced",
-			"with a single $, so variables that have references to shell",
-			"variables or regular expressions are modified in a subtle way.")
-		return
-	}
-
-	mkline.Warnf("%s should not be evaluated indirectly at load time.", varname)
-	G.Explain(
-		"The variable on the left-hand side may be evaluated at load time,",
-		"but the variable on the right-hand side may not.",
-		"Because of the assignment in this line, the variable might be used indirectly",
-		"at load time, before it is guaranteed to be properly initialized.")
 }
 
 // CheckVaruseShellword checks whether a variable use of the form ${VAR}
@@ -870,22 +930,27 @@ func (ck MkLineChecker) checkVarassignLeftNotUsed() {
 		return
 	}
 
-	if varIsUsedSimilar(varname) {
+	if varIsUsedSimilar(G.Pkg, G.Mk, varname) {
 		return
 	}
 
-	if vartypes := G.Pkgsrc.vartypes; vartypes[varname] != nil || vartypes[varcanon] != nil {
+	vartypes := G.Pkgsrc.vartypes
+	if vartypes.DefinedExact(varname) || vartypes.DefinedExact(varcanon) {
 		return
 	}
 
-	if deprecated := G.Pkgsrc.Deprecated; deprecated[varname] != "" || deprecated[varcanon] != "" {
+	deprecated := G.Pkgsrc.Deprecated
+	if deprecated[varname] != "" || deprecated[varcanon] != "" {
 		return
 	}
 
-	if G.Mk != nil && !G.Mk.FirstTimeSlice("defined but not used: ", varname) {
+	if G.Mk == nil || !G.Mk.FirstTimeSlice("defined but not used: ", varname) {
 		return
 	}
 
+	// FIXME: Explain how to fix this warning.
+	//  For files like module.mk that are used by other packages,
+	//  documenting the variable already makes the warning disappear.
 	ck.MkLine.Warnf("%s is defined but not used.", varname)
 }
 

@@ -162,7 +162,7 @@ func (t *Tester) SetUpCommandLine(args ...string) {
 //
 // See SetUpTool for registering tools like echo, awk, perl.
 func (t *Tester) SetUpVartypes() {
-	G.Pkgsrc.InitVartypes()
+	G.Pkgsrc.vartypes.Init(G.Pkgsrc)
 }
 
 func (t *Tester) SetUpMasterSite(varname string, urls ...string) {
@@ -505,11 +505,13 @@ func (t *Tester) Chdir(relativeDirName string) {
 		t.c.Fatalf("Chdir must only be called once per test; already in %q.", t.relCwd)
 	}
 
-	_ = os.MkdirAll(t.File(relativeDirName), 0700)
-	if err := os.Chdir(t.File(relativeDirName)); err != nil {
+	absDirName := t.File(relativeDirName)
+	_ = os.MkdirAll(absDirName, 0700)
+	if err := os.Chdir(absDirName); err != nil {
 		t.c.Fatalf("Cannot chdir: %s", err)
 	}
 	t.relCwd = relativeDirName
+	G.cwd = absDirName
 }
 
 // Remove removes the file from the temporary directory. The file must exist.
@@ -689,8 +691,8 @@ func (t *Tester) NewMkLine(filename string, lineno int, text string) MkLine {
 	return NewMkLine(t.NewLine(filename, lineno, text))
 }
 
-func (t *Tester) NewShellLine(filename string, lineno int, text string) *ShellLine {
-	return NewShellLine(t.NewMkLine(filename, lineno, text))
+func (t *Tester) NewShellLineChecker(filename string, lineno int, text string) *ShellLineChecker {
+	return NewShellLineChecker(t.NewMkLine(filename, lineno, text))
 }
 
 // NewLines returns a list of simple lines that belong together.
@@ -759,11 +761,7 @@ func (t *Tester) Output() string {
 //
 // See CheckOutputLines.
 func (t *Tester) CheckOutputEmpty() {
-	output := t.Output()
-
-	actualLines := strings.Split(output, "\n")
-	actualLines = actualLines[:len(actualLines)-1]
-	t.Check(emptyToNil(actualLines), deepEquals, emptyToNil(nil))
+	t.CheckOutput(nil)
 }
 
 // CheckOutputLines checks that the output up to now equals the given lines.
@@ -773,7 +771,19 @@ func (t *Tester) CheckOutputEmpty() {
 // See CheckOutputEmpty.
 func (t *Tester) CheckOutputLines(expectedLines ...string) {
 	G.Assertf(len(expectedLines) > 0, "To check empty lines, use CheckLinesEmpty instead.")
+	t.CheckOutput(expectedLines)
+}
 
+// CheckOutput checks that the output up to now equals the given lines.
+// After the comparison, the output buffers are cleared so that later
+// calls only check against the newly added output.
+//
+// The expectedLines can be either empty or non-empty.
+//
+// When the output is always empty, use CheckOutputEmpty instead.
+// When the output always contain some lines, use CheckOutputLines instead.
+// This variant should only be used when the expectedLines are generated dynamically.
+func (t *Tester) CheckOutput(expectedLines []string) {
 	output := t.Output()
 	actualLines := strings.Split(output, "\n")
 	actualLines = actualLines[:len(actualLines)-1]

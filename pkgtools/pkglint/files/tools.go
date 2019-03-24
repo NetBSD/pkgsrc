@@ -214,7 +214,7 @@ func (tr *Tools) ParseToolLine(mkline MkLine, fromInfrastructure bool, addToUseT
 		switch mkline.Varcanon() {
 		case "TOOLS_CREATE":
 			if tr.IsValidToolName(value) {
-				tr.Define(value, "", mkline)
+				tr.def(value, "", false, AtRunTime)
 			}
 
 		case "_TOOLS_VARNAME.*":
