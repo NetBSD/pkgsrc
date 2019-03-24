@@ -625,10 +625,14 @@ func (s *Suite) Test_VartypeCheck_License(c *check.C) {
 	t := s.Init(c)
 	t.SetUpPkgsrc() // Adds the gnu-gpl-v2 and 2-clause-bsd licenses
 
-	G.Mk = t.NewMkLines("perl5.mk",
+	t.SetUpPackage("category/package")
+	G.Pkg = NewPackage(t.File("category/package"))
+
+	mklines := t.NewMkLines("perl5.mk",
 		MkRcsID,
 		"PERL5_LICENSE= gnu-gpl-v2 OR artistic")
-	G.Mk.collectDefinedVariables()
+	// Also registers the PERL5_LICENSE variable in the package.
+	mklines.collectDefinedVariables()
 
 	vt := NewVartypeCheckTester(t, (*VartypeCheck).License)
 
@@ -1402,26 +1406,26 @@ func (vt *VartypeCheckTester) Op(op MkOperator) {
 // Each value is interpreted as if it were written verbatim into a Makefile line.
 // That is, # starts a comment, and for the opUseMatch operator, all closing braces must be escaped.
 func (vt *VartypeCheckTester) Values(values ...string) {
-	for _, value := range values {
+
+	toText := func(value string) string {
 		op := vt.op
 		opStr := op.String()
 		varname := vt.varname
 
-		var text string
-		switch {
-		case contains(opStr, "="):
-			if hasSuffix(varname, "+") && opStr == "=" {
-				text = varname + " " + opStr + value
-			} else {
-				text = varname + opStr + value
-			}
-		case op == opUseMatch:
-			text = sprintf(".if ${%s:M%s} == \"\"", varname, value)
-		default:
+		if op == opUseMatch {
+			return sprintf(".if ${%s:M%s} == \"\"", varname, value)
+		}
+
+		if !contains(opStr, "=") {
 			panic("Invalid operator: " + opStr)
 		}
 
-		mkline := vt.tester.NewMkLine(vt.filename, vt.lineno, text)
+		space := ifelseStr(hasSuffix(varname, "+") && opStr == "=", " ", "")
+		return varname + space + opStr + value
+	}
+
+	test := func(mkline MkLine, value string) {
+		varname := vt.varname
 		comment := ""
 		if mkline.IsVarassign() {
 			mkline.Tokenize(value, true) // Produce some warnings as side-effects.
@@ -1447,11 +1451,19 @@ func (vt *VartypeCheckTester) Values(values ...string) {
 
 		for _, lineValue := range lineValues {
 			valueNovar := mkline.WithoutMakeVariables(lineValue)
-			vc := VartypeCheck{mkline, varname, op, lineValue, valueNovar, comment, false}
+			vc := VartypeCheck{mkline, varname, vt.op, lineValue, valueNovar, comment, false}
 			vt.checker(&vc)
 		}
+	}
 
+	for _, value := range values {
+		text := toText(value)
+
+		line := vt.tester.NewLine(vt.filename, vt.lineno, text)
+		mklines := NewMkLines(NewLines(vt.filename, []Line{line}))
 		vt.lineno++
+
+		mklines.ForEach(func(mkline MkLine) { test(mkline, value) })
 	}
 }
 

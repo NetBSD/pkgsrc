@@ -3,7 +3,6 @@ package pkglint
 import (
 	"gopkg.in/check.v1"
 	"os"
-	"runtime"
 	"testing"
 	"time"
 )
@@ -48,14 +47,6 @@ func (s *Suite) Test__regex_ReplaceFirst(c *check.C) {
 	c.Assert(m, check.NotNil)
 	c.Check(m, check.DeepEquals, []string{"a+b", "a", "+", "b"})
 	c.Check(rest, equals, "X+c+d")
-}
-
-func (s *Suite) Test_mustMatch(c *check.C) {
-	t := s.Init(c)
-
-	t.ExpectPanic(
-		func() { mustMatch("aaa", `b`) },
-		"Pkglint internal error: mustMatch \"aaa\" \"b\"")
 }
 
 func (s *Suite) Test_shorten(c *check.C) {
@@ -167,32 +158,6 @@ func (s *Suite) Test_relpath__quick(c *check.C) {
 
 	test("some/dir", ".", "../..")
 	test("some/dir/.", ".", "../..")
-}
-
-// This is not really an internal error but won't happen in practice anyway.
-// Therefore using ExpectPanic instead of ExpectFatal is ok.
-func (s *Suite) Test_relpath__failure_on_Windows(c *check.C) {
-	t := s.Init(c)
-
-	if runtime.GOOS == "windows" && hasPrefix(t.tmpdir, "C:/") {
-		t.ExpectPanic(
-			func() { relpath("c:/", "d:/") },
-			sprintf(
-				"Pkglint internal error: "+
-					"relpath from topdir %q to %q: "+
-					"Rel: can't make %s relative to %s",
-				t.tmpdir, "D:/", "D:/", t.tmpdir))
-	}
-}
-
-func (s *Suite) Test_abspath__failure_on_Windows(c *check.C) {
-	t := s.Init(c)
-
-	if runtime.GOOS == "windows" {
-		t.ExpectPanic(
-			func() { abspath("file\u0000name") },
-			"Pkglint internal error: abspath \"file\\x00name\": invalid argument")
-	}
 }
 
 func (s *Suite) Test_fileExists(c *check.C) {
@@ -682,7 +647,7 @@ func (s *Suite) Test_escapePrintable(c *check.C) {
 	c.Check(escapePrintable(""), equals, "")
 	c.Check(escapePrintable("ASCII only~\n\t"), equals, "ASCII only~\n\t")
 	c.Check(escapePrintable("Beep \u0007 control \u001F"), equals, "Beep <U+0007> control <U+001F>")
-	c.Check(escapePrintable("Bad \xFF character"), equals, "Bad <\\xFF> character")
+	c.Check(escapePrintable("Bad \xFF character"), equals, "Bad <0xFF> character")
 	c.Check(escapePrintable("Unicode \uFFFD replacement"), equals, "Unicode <U+FFFD> replacement")
 }
 

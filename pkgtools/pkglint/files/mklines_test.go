@@ -234,11 +234,7 @@ func (s *Suite) Test_MkLines_CheckForUsedComment(c *check.C) {
 
 		mklines.CheckForUsedComment(pkgpath)
 
-		if len(diagnostics) > 0 {
-			t.CheckOutputLines(diagnostics...)
-		} else {
-			t.CheckOutputEmpty()
-		}
+		t.CheckOutput(diagnostics)
 	}
 
 	lines := func(lines ...string) []string { return lines }
@@ -315,7 +311,6 @@ func (s *Suite) Test_MkLines_collectDefinedVariables(c *check.C) {
 		MkRcsID,
 		"",
 		"USE_TOOLS+=             autoconf213 autoconf",
-		"USE_TOOLS:=             ${USE_TOOLS:Ntbl}",
 		"",
 		"OPSYSVARS+=             OSV",
 		"OSV.NetBSD=             NetBSD-specific value",
@@ -334,7 +329,8 @@ func (s *Suite) Test_MkLines_collectDefinedVariables(c *check.C) {
 
 	// The tools autoreconf and autoheader213 are known at this point because of the USE_TOOLS line.
 	// The SUV variable is used implicitly by the SUBST framework, therefore no warning.
-	// The OSV.NetBSD variable is used implicitly via the OSV variable, therefore no warning.
+	// The OSV.NetBSD variable is used indirectly because OSV is declared
+	// as being OPSYS-specific, therefore no warning.
 	t.CheckOutputEmpty()
 }
 
@@ -416,6 +412,8 @@ func (s *Suite) Test_MkLines__private_tool_undefined(c *check.C) {
 		"WARN: filename.mk:3: Unknown shell command \"md5sum\".")
 }
 
+// Tools that are defined by a package by adding to TOOLS_CREATE can
+// be used without adding them to USE_TOOLS again.
 func (s *Suite) Test_MkLines__private_tool_defined(c *check.C) {
 	t := s.Init(c)
 
@@ -428,9 +426,7 @@ func (s *Suite) Test_MkLines__private_tool_defined(c *check.C) {
 
 	mklines.Check()
 
-	// TODO: Is it necessary to add the tool to USE_TOOLS? If not, why not?
-	t.CheckOutputLines(
-		"WARN: filename.mk:4: The \"md5sum\" tool is used but not added to USE_TOOLS.")
+	t.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_MkLines_Check__indentation(c *check.C) {

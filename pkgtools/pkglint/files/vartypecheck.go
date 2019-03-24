@@ -1045,16 +1045,16 @@ func (cv *VartypeCheck) ShellCommand() {
 		return
 	}
 	setE := true
-	NewShellLine(cv.MkLine).CheckShellCommand(cv.Value, &setE, RunTime)
+	NewShellLineChecker(cv.MkLine).CheckShellCommand(cv.Value, &setE, RunTime)
 }
 
 // ShellCommands checks for zero or more shell commands, each terminated with a semicolon.
 func (cv *VartypeCheck) ShellCommands() {
-	NewShellLine(cv.MkLine).CheckShellCommands(cv.Value, RunTime)
+	NewShellLineChecker(cv.MkLine).CheckShellCommands(cv.Value, RunTime)
 }
 
 func (cv *VartypeCheck) ShellWord() {
-	NewShellLine(cv.MkLine).CheckWord(cv.Value, true, RunTime)
+	NewShellLineChecker(cv.MkLine).CheckWord(cv.Value, true, RunTime)
 }
 
 func (cv *VartypeCheck) Stage() {
@@ -1089,6 +1089,11 @@ func (cv *VartypeCheck) Tool() {
 }
 
 // Unknown doesn't check for anything.
+//
+// Used for:
+//  - infrastructure variables that are not in vardefs.go
+//  - other variables whose type is unknown or uninteresting enough to
+//    warrant the creation of a specialized type
 func (cv *VartypeCheck) Unknown() {
 	// Do nothing.
 }
@@ -1259,6 +1264,13 @@ func (cv *VartypeCheck) Yes() {
 	}
 }
 
+// YesNo checks for variables that can be set to either yes or no. Undefined
+// means no.
+//
+// Most of these variables use the lowercase yes/no variant. Some use the
+// uppercase YES/NO, and the mixed forms Yes/No are practically never seen.
+// Testing these variables using the however-mixed pattern is done solely
+// because writing this pattern is shorter than repeating the variable name.
 func (cv *VartypeCheck) YesNo() {
 	const (
 		yes1 = "[yY][eE][sS]"
@@ -1269,6 +1281,7 @@ func (cv *VartypeCheck) YesNo() {
 	if cv.Op == opUseMatch {
 		switch cv.Value {
 		case yes1, yes2, no1, no2:
+			break
 		default:
 			cv.Warnf("%s should be matched against %q or %q, not %q.", cv.Varname, yes1, no1, cv.Value)
 		}

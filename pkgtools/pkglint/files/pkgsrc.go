@@ -41,8 +41,8 @@ type Pkgsrc struct {
 	// to BUILD_DEFS.
 	UserDefinedVars Scope
 
-	Deprecated map[string]string   //
-	vartypes   map[string]*Vartype // varcanon => type
+	Deprecated map[string]string
+	vartypes   VarTypeRegistry
 }
 
 func NewPkgsrc(dir string) *Pkgsrc {
@@ -59,7 +59,7 @@ func NewPkgsrc(dir string) *Pkgsrc {
 		make(map[string][]string),
 		NewScope(),
 		make(map[string]string),
-		make(map[string]*Vartype)}
+		NewVarTypeRegistry()}
 
 	return &src
 }
@@ -144,7 +144,7 @@ func (src *Pkgsrc) loadDefaultBuildDefs() {
 // simple, since setting up a realistic pkgsrc environment requires
 // a lot of files.
 func (src *Pkgsrc) LoadInfrastructure() {
-	src.InitVartypes()
+	src.vartypes.Init(src)
 	src.loadMasterSites()
 	src.loadPkgOptions()
 	src.loadDocChanges()
@@ -348,31 +348,37 @@ func (src *Pkgsrc) loadUntypedVars() {
 	// Setting guessed to false prevents the vartype.guessed case in MkLineChecker.CheckVaruse.
 	unknownType := Vartype{lkNone, BtUnknown, []ACLEntry{{"*", aclpAll}}, false}
 
-	handleLine := func(mkline MkLine) {
-		if mkline.IsVarassign() {
-			varcanon := mkline.Varcanon()
+	define := func(varcanon string, mkline MkLine) {
+		switch {
+		case
+			src.vartypes.DefinedCanon(varcanon),  // Already defined
+			src.Tools.ByVarname(varcanon) != nil, // Already known as a tool
+			hasPrefix(varcanon, "_"),             // Skip internal variables
+			contains(varcanon, "$"),              // Indirect or parameterized
+			hasSuffix(varcanon, "_MK"):           // Multiple-inclusion guard
 
-			switch {
-			case
-				src.vartypes[varcanon] != nil,        // Already defined
-				src.Tools.ByVarname(varcanon) != nil, // Already known as a tool
-				hasPrefix(varcanon, "_"),             // Skip internal variables
-				contains(varcanon, "$"),              // Indirect or parameterized
-				hasSuffix(varcanon, "_MK"):           // Multiple-inclusion guard
-
-			default:
-				if trace.Tracing {
-					trace.Stepf("Untyped variable %q in %s", varcanon, mkline)
-				}
-				src.vartypes[varcanon] = &unknownType
+		default:
+			if trace.Tracing {
+				trace.Stepf("Untyped variable %q in %s", varcanon, mkline)
 			}
+			src.vartypes.DefineType(varcanon, &unknownType)
 		}
 	}
 
 	handleMkFile := func(path string) {
 		mklines := LoadMk(path, 0)
 		if mklines != nil && len(mklines.mklines) > 0 {
-			mklines.ForEach(handleLine)
+			G.Assertf(G.Mk == nil, "asdf")
+			G.Mk = mklines // FIXME: This is because defineVar uses G.Mk instead of the method receiver.
+			mklines.collectDefinedVariables()
+			mklines.collectUsedVariables()
+			for varname, mkline := range mklines.vars.firstDef {
+				define(varnameCanon(varname), mkline)
+			}
+			for varname, mkline := range mklines.vars.used {
+				define(varnameCanon(varname), mkline)
+			}
+			G.Mk = nil
 		}
 	}
 
@@ -895,10 +901,8 @@ func (src *Pkgsrc) VariableType(varname string) (vartype *Vartype) {
 	// When scanning mk/** for otherwise unknown variables, their type
 	// is set to BtUnknown. These variables must not override the guess
 	// based on the variable name.
-	if vartype = src.vartypes[varname]; vartype != nil && vartype.basicType != BtUnknown {
-		return vartype
-	}
-	if vartype = src.vartypes[varnameCanon(varname)]; vartype != nil && vartype.basicType != BtUnknown {
+	vartype = src.vartypes.Canon(varname)
+	if vartype != nil && vartype.basicType != BtUnknown {
 		return vartype
 	}
 
@@ -965,10 +969,8 @@ func (src *Pkgsrc) guessVariableType(varname string) (vartype *Vartype) {
 	}
 
 	if gtype == nil {
-		if vartype = src.vartypes[varname]; vartype != nil {
-			return vartype
-		}
-		if vartype = src.vartypes[varnameCanon(varname)]; vartype != nil {
+		vartype = src.vartypes.Canon(varname)
+		if vartype != nil {
 			return vartype
 		}
 	}
