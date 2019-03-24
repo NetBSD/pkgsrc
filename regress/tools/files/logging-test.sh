@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: logging-test.sh,v 1.4 2019/03/23 22:59:11 rillig Exp $
+# $NetBSD: logging-test.sh,v 1.5 2019/03/24 08:40:08 rillig Exp $
 
 # Up to March 2019, the command logging for the wrapped tools didn't properly
 # quote the command line arguments. This meant the logging did not reflect
@@ -64,6 +64,8 @@ test_case "TOOLS_PATH without TOOLS_ARGS"
 	# argument. This is because the echo command doesn't get any
 	# additional arguments by the tool wrapper (TOOLS_ARGS.echo).
 
+	# TODO: To avoid unintended file expansion when replaying the
+	# commands, all arguments must be shquoted.
 	assert_log <<'EOF'
 [*] WRKDIR/.tools/bin/echo begin * * * end
 <.> echo  begin * * * end
@@ -92,20 +94,35 @@ test_case "TOOLS_PATH with TOOLS_ARGS"
 EOF
 }
 
+test_case "TOOLS_PATH with TOOLS_ARGS containing double quotes"
+{
+	run_tool path-args-dquot "and" \" "\"" '"'
+
+	assert_log <<'EOF'
+[*] WRKDIR/.tools/bin/path-args-dquot and " " "
+<.> echo \" "\"" '"' and " " "
+EOF
+}
+
+test_case "TOOLS_PATH with TOOLS_ARGS containing special characters"
+{
+	run_tool path-args "and" " \"'\\$" "*"
+
+	assert_log <<'EOF'
+[*] WRKDIR/.tools/bin/path-args and  "'\$ *
+<.> echo " \"'\\$" "*" and  "'\$ *
+EOF
+}
+
 test_case "TOOLS_SCRIPT with dquot"
 {
 	run_tool script-dquot
 
 	# The following log output contains a trailing whitespace. This
 	# is because the tool didn't get any actual arguments.
-	#
-	# FIXME: the "echo oops" occurs because the script is not
-	# properly quoted during logging.
 	assert_log <<'EOF'
 [*] WRKDIR/.tools/bin/script-dquot 
-[*] WRKDIR/.tools/bin/world 
-<.> echo oops
-oops
+<.> set args ; shift; echo "hello; world"
 EOF
 }
 
@@ -117,7 +134,7 @@ test_case "TOOLS_SCRIPT with backslashes"
 	# is because the tool didn't get any actual arguments.
 	assert_log <<'EOF'
 [*] WRKDIR/.tools/bin/script-backslash 
-<.> echo hello\;\ world
+<.> set args ; shift; echo hello\;\ world
 EOF
 }
 
@@ -125,10 +142,18 @@ test_case "TOOLS_SCRIPT with complicated replacement"
 {
 	run_tool for-loop "one" "two" "three"
 
-	# TODO: Add proper quoting for the printf argument inside the loop.
+	# The actual command is written to the log in a form as close as
+	# possible to replay it. Since the command may do anything with
+	# its arguments, it's the safest way to set them first and then
+	# just log the command verbatim.
+	#
+	# In this example, the $0 becomes unrealistic when the command
+	# is replayed. In practice $0 is seldom used.
+	#
+	# TODO: In the "set arg", the arguments must be shquoted.
 	assert_log <<'EOF'
 [*] WRKDIR/.tools/bin/for-loop one two three
-<.> printf '%s' WRKDIR/.tools/bin/for-loop;  for arg in one two three; do  printf ' <%s>' ;  done;  printf '\n'
+<.> set args one two three; shift; printf '%s' "$0";  for arg in "$@"; do  printf ' <%s>' "$arg";  done;  printf '\n'
 EOF
 }
 
@@ -143,6 +168,6 @@ test_case "TOOLS_SCRIPT with actual arguments containing quotes"
 	# TODO: Add proper quoting for the arguments.
 	assert_log <<'EOF'
 [*] WRKDIR/.tools/bin/for-loop -DSD="a b" -DSS='a b' -DDD="a b" -DB="a b"
-<.> printf '%s' WRKDIR/.tools/bin/for-loop;  for arg in -DSD="a b" -DSS='a b' -DDD="a b" -DB="a b"; do  printf ' <%s>' ;  done;  printf '\n'
+<.> set args -DSD="a b" -DSS='a b' -DDD="a b" -DB="a b"; shift; printf '%s' "$0";  for arg in "$@"; do  printf ' <%s>' "$arg";  done;  printf '\n'
 EOF
 }

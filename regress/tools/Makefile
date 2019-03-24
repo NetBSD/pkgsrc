@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/03/23 22:59:11 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2019/03/24 08:40:07 rillig Exp $
 #
 
 DISTNAME=	# not applicable
@@ -42,6 +42,18 @@ TOOLS_SCRIPT.for-loop= \
 		printf ' <%s>' "$$arg"; \
 	done; \
 	printf '\n'
+
+# Demonstrates that double quotes in both the TOOLS_ARGS and the actual
+# arguments are properly logged.
+TOOLS_CREATE+=			path-args-dquot
+TOOLS_PATH.path-args-dquot=	echo
+TOOLS_ARGS.path-args-dquot=	\" "\"" '"'
+
+# Demonstrates that both the TOOLS_ARGS and the actual arguments are
+# properly logged.
+TOOLS_CREATE+=		path-args
+TOOLS_PATH.path-args=	echo
+TOOLS_ARGS.path-args=	" \"'\\$$" "*"
 
 do-build:
 .for t in ${REGRESS_TESTS}
