@@ -1,7 +1,20 @@
-$NetBSD: distinfo,v 1.1 2019/01/03 05:12:49 thorpej Exp $
+$NetBSD: distinfo,v 1.2 2019/03/24 20:50:10 thorpej Exp $
 
-SHA1 (u-boot-2019.01-rc2.tar.bz2) = 4dd28d21a8bef3103301e4c15c7d4c88cf992a8b
-RMD160 (u-boot-2019.01-rc2.tar.bz2) = 7ae3ff0a892188665f51595e9fe65b53fd2ef8be
-SHA512 (u-boot-2019.01-rc2.tar.bz2) = d1c76fba9935c3bb7bee67219106af3a05f020cbad6ea2bf4865877d2c67d5ef76ba2d5d49ac623fe8db72fd5adfa5f13894ca80a22d1b0bdbc2549ffdab0815
-Size (u-boot-2019.01-rc2.tar.bz2) = 13253583 bytes
+SHA1 (BPI-R2-HEAD1-512b.img) = ef5ae9707d39654b8d931a0bd8c0825318591e69
+RMD160 (BPI-R2-HEAD1-512b.img) = 098f7c260353034a3d286d2113698c16605cd4b4
+SHA512 (BPI-R2-HEAD1-512b.img) = cd37dd2c3e12033fbc9a4601ef6be54be70a3f6f19fedc79acbc246fc58e66bd1d1e492611632d3a5bb7bc3b8ed0f9900c7e218d4a15252eb7381d4da28af012
+Size (BPI-R2-HEAD1-512b.img) = 1536 bytes
+SHA1 (BPI-R2-HEAD440-0k.img) = a597caa991bcd9693e2f2223f9c247657a89187b
+RMD160 (BPI-R2-HEAD440-0k.img) = a26ecd89e81aad4274fcf784c5fdcb214168273a
+SHA512 (BPI-R2-HEAD440-0k.img) = 1d194649c21fb922f2b0e2f59edbf41dc22c260580a8f25aee0fa1d4ec1cbb7b3a9bf8dc56c9743ec8676b408d4109c2026001b105b1d3caef819b95ca360451
+Size (BPI-R2-HEAD440-0k.img) = 440 bytes
+SHA1 (preloader_iotg7623Np1_sd_1600M.bin) = 51f2d73d6e1e47f9b961ec86b1cd624c8bc5e5d9
+RMD160 (preloader_iotg7623Np1_sd_1600M.bin) = bd13434a35e35ef334fb713ea5d2caec7ca0f663
+SHA512 (preloader_iotg7623Np1_sd_1600M.bin) = 5a5f580956ed9cc558c4b8b75f9dbeba6299d9950bbdbae8f5064d1d60ae7cb42ff89c9dd7f1bddebb955183780f88a731d8c2b71d61970c07e8356a9cc093a5
+Size (preloader_iotg7623Np1_sd_1600M.bin) = 91996 bytes
+SHA1 (u-boot-2019.04-rc4.tar.bz2) = 40bd6eb58ae0048da4221e28ec5fe98d6f4987f9
+RMD160 (u-boot-2019.04-rc4.tar.bz2) = 67c1b0effa8eb18872ed3608dd99c9ed521dc2b2
+SHA512 (u-boot-2019.04-rc4.tar.bz2) = 33a57e4acb51dbe04123055b159a5b3a933ea8340aa81a4148572ee5fc12288413a6c6c0b80b6fe099ac79ea6359be2d9034ead1edfcc0403895f3f8eb56746e
+Size (u-boot-2019.04-rc4.tar.bz2) = 13616834 bytes
+SHA1 (patch-Makefile) = b64ed7e0eac7299e9c621e32b4afb976c8dfda5a
 SHA1 (patch-lib_bch.c) = 151e5f311742a7da919359950ccac2521bcfaaff
