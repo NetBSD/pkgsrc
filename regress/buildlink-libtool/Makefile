@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/03/21 16:29:43 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/03/24 21:09:21 rillig Exp $
 
 DISTNAME=	regress-buildlink-libtool-0.0
 CATEGORIES=	regress
@@ -75,13 +75,13 @@ test1:
 	expected="";							\
 	${TEST_RESULT}
 
-# Check that the dependency_libs line of libregress2.lai is empty.
+# Check that libregress2.lai links with libregress1.lai.
 do-regress: test2
 test2:
 	@cd ${WRKSRC};							\
 	. .libs/libregress2.lai;					\
 	test="$$dependency_libs";					\
-	expected="-L${PREFIX}/lib -lregress1";				\
+	expected="${PREFIX}/lib/libregress1.la";			\
 	${TEST_RESULT}
 
 .include "../../mk/bsd.pkg.mk"
