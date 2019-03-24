@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1452 2019/03/24 07:34:24 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1453 2019/03/24 09:08:30 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2339,3 +2339,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/firefox-l10n to 66.0.1 [ryoon 2019-03-24]
 	Updated multimedia/ffmpeg4 to 4.1.2 [adam 2019-03-24]
 	Updated converters/help2man to 1.47.10 [adam 2019-03-24]
+	Updated www/php-nextcloud to 15.0.5 [ryoon 2019-03-24]
