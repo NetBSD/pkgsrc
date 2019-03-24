@@ -89,25 +89,38 @@ func (m MkVarUseModifier) MatchSubst() (ok bool, regex bool, from string, to str
 //
 // Example:
 //  MkVarUseModifier{"S,name,file,g"}.Subst("distname-1.0") => "distfile-1.0"
-func (m MkVarUseModifier) Subst(str string) string {
+func (m MkVarUseModifier) Subst(str string) (string, bool) {
 	// XXX: The call to MatchSubst is usually redundant because MatchSubst
 	// is typically called directly before calling Subst.
 	ok, regex, from, to, options := m.MatchSubst()
-	G.Assertf(ok && !regex, "Subst must only be called after MatchSubst.")
+	if !ok {
+		return "", false
+	}
+
 	leftAnchor := hasPrefix(from, "^")
 	if leftAnchor {
 		from = from[1:]
 	}
+
 	rightAnchor := hasSuffix(from, "$")
 	if rightAnchor {
 		from = from[:len(from)-1]
+	}
+
+	if regex {
+		if matches(from, `^[\w-]+$`) && matches(to, `^[^&$\\]*$`) {
+			regex = false
+		} else {
+			// TODO: Maybe implement regular expression substitutions later.
+			return "", false
+		}
 	}
 
 	result := mkopSubst(str, leftAnchor, from, rightAnchor, to, options)
 	if trace.Tracing && result != str {
 		trace.Stepf("Subst: %q %q => %q", str, m.Text, result)
 	}
-	return result
+	return result, true
 }
 
 // MatchMatch tries to match the modifier to a :M or a :N pattern matching.

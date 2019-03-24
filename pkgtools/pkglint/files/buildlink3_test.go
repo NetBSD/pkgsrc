@@ -130,6 +130,38 @@ func (s *Suite) Test_CheckLinesBuildlink3Mk__name_mismatch_Haskell_complete(c *c
 	t.CheckOutputEmpty()
 }
 
+func (s *Suite) Test_CheckLinesBuildlink3Mk__name_mismatch__Perl(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("x11/p5-gtk2",
+		"DISTNAME=\tGtk2-1.0",
+		"PKGNAME=\t${DISTNAME:C:Gtk2:p5-gtk2:}")
+	t.CreateFileLines("x11/p5-gtk2/buildlink3.mk",
+		MkRcsID,
+		"",
+		"BUILDLINK_TREE+=\tp5-gtk2",
+		"",
+		".if !defined(P5_GTK2_BUILDLINK3_MK)",
+		"P5_GTK2_BUILDLINK3_MK:=",
+		"",
+		"BUILDLINK_API_DEPENDS.p5-gtk2+=\tp5-gtk2>=1.0",
+		"BUILDLINK_ABI_DEPENDS.p5-gtk2+=\tp5-gtk2>=1.0",
+		"",
+		".endif\t# P5_GTK2_BUILDLINK3_MK",
+		"",
+		"BUILDLINK_TREE+=\t-p5-gtk2")
+
+	G.Check(t.File("x11/p5-gtk2"))
+
+	// Up to 2019-03-17, pkglint wrongly complained about a mismatch
+	// between the package name from buildlink3.mk (p5-gtk2) and the
+	// one from the package Makefile (Gtk2).
+	//
+	// Pkglint had taken this information from the DISTNAME variable,
+	// ignoring the fact that PKGNAME was also defined.
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_CheckLinesBuildlink3Mk__name_mismatch_multiple_inclusion(c *check.C) {
 	t := s.Init(c)
 
@@ -472,16 +504,14 @@ func (s *Suite) Test_CheckLinesBuildlink3Mk__PKGBASE_with_unknown_variable(c *ch
 	CheckLinesBuildlink3Mk(mklines)
 
 	t.CheckOutputLines(
-		"WARN: buildlink3.mk:3: LICENSE may not be used in any file; it is a write-only variable.",
+		"WARN: buildlink3.mk:3: LICENSE should not be used in this file; "+
+			"it would be ok in Makefile, Makefile.* or *.mk, but not buildlink3.mk or builtin.mk.",
 		"WARN: buildlink3.mk:3: The variable LICENSE should be quoted as part of a shell word.",
-		"WARN: buildlink3.mk:8: LICENSE should not be evaluated at load time.",
-		"WARN: buildlink3.mk:8: LICENSE should not be evaluated indirectly at load time.",
 		"WARN: buildlink3.mk:8: The variable LICENSE should be quoted as part of a shell word.",
-		"WARN: buildlink3.mk:9: LICENSE should not be evaluated at load time.",
-		"WARN: buildlink3.mk:9: LICENSE should not be evaluated indirectly at load time.",
 		"WARN: buildlink3.mk:9: The variable LICENSE should be quoted as part of a shell word.",
 		"WARN: buildlink3.mk:13: The variable LICENSE should be quoted as part of a shell word.",
-		"WARN: buildlink3.mk:3: Please replace \"${LICENSE}\" with a simple string (also in other variables in this file).")
+		"WARN: buildlink3.mk:3: Please replace \"${LICENSE}\" with a simple string "+
+			"(also in other variables in this file).")
 }
 
 func (s *Suite) Test_Buildlink3Checker_checkMainPart__if_else_endif(c *check.C) {

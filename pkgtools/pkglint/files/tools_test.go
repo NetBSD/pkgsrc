@@ -142,26 +142,26 @@ func (s *Suite) Test_Tools__load_from_infrastructure(c *check.C) {
 
 	// All tools are defined by name, but their variable names are not yet known.
 	// At this point they may not be used, neither by the pkgsrc infrastructure nor by a package.
-	c.Check(load.String(), equals, "load:::Nowhere")
-	c.Check(run.String(), equals, "run:::Nowhere")
-	c.Check(nowhere.String(), equals, "nowhere:::Nowhere")
+	c.Check(load.String(), equals, "load:::AtRunTime")
+	c.Check(run.String(), equals, "run:::AtRunTime")
+	c.Check(nowhere.String(), equals, "nowhere:::AtRunTime")
 
-	// The name RUN_CMD avoids conflicts with RUN.
+	// The variable name RUN is reserved by pkgsrc, therefore RUN_CMD.
 	tools.ParseToolLine(t.NewMkLine("varnames.mk", 2, "_TOOLS_VARNAME.load=    LOAD"), true, false)
 	tools.ParseToolLine(t.NewMkLine("varnames.mk", 3, "_TOOLS_VARNAME.run=     RUN_CMD"), true, false)
 	tools.ParseToolLine(t.NewMkLine("varnames.mk", 4, "_TOOLS_VARNAME.nowhere= NOWHERE"), true, false)
 
 	// At this point the tools can be found by their variable names, too.
 	// They still may not be used.
-	c.Check(load.String(), equals, "load:LOAD::Nowhere")
-	c.Check(run.String(), equals, "run:RUN_CMD::Nowhere")
-	c.Check(nowhere.String(), equals, "nowhere:NOWHERE::Nowhere")
+	c.Check(load.String(), equals, "load:LOAD::AtRunTime")
+	c.Check(run.String(), equals, "run:RUN_CMD::AtRunTime")
+	c.Check(nowhere.String(), equals, "nowhere:NOWHERE::AtRunTime")
 	c.Check(tools.ByVarname("LOAD"), equals, load)
 	c.Check(tools.ByVarname("RUN_CMD"), equals, run)
 	c.Check(tools.ByVarname("NOWHERE"), equals, nowhere)
-	c.Check(load.String(), equals, "load:LOAD::Nowhere")
-	c.Check(run.String(), equals, "run:RUN_CMD::Nowhere")
-	c.Check(nowhere.String(), equals, "nowhere:NOWHERE::Nowhere")
+	c.Check(load.String(), equals, "load:LOAD::AtRunTime")
+	c.Check(run.String(), equals, "run:RUN_CMD::AtRunTime")
+	c.Check(nowhere.String(), equals, "nowhere:NOWHERE::AtRunTime")
 
 	tools.ParseToolLine(t.NewMkLine("bsd.prefs.mk", 2, "USE_TOOLS+= load"), true, true)
 
@@ -213,7 +213,7 @@ func (s *Suite) Test_Tools__package_Makefile(c *check.C) {
 
 	c.Check(load.UsableAtRunTime(), equals, true)
 	c.Check(run.UsableAtRunTime(), equals, true)
-	c.Check(nowhere.UsableAtRunTime(), equals, false)
+	c.Check(nowhere.UsableAtRunTime(), equals, true)
 
 	// The seenPrefs variable is only relevant for the package Makefile.
 	// All other files must not use the tools at load time.
@@ -498,6 +498,32 @@ func (s *Suite) Test_Tools__cmake(c *check.C) {
 		".if defined(USE_CMAKE)",
 		"USE_TOOLS+=\tcmake cpack",
 		".endif")
+	G.Pkgsrc.LoadInfrastructure()
+
+	G.Check(t.File("category/package"))
+
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Tools__gmake(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"USE_TOOLS=\tgmake",
+		"",
+		"do-test:",
+		"\tcd ${WRKSRC} && make tests")
+	t.CreateFileLines("mk/tools/bsd.tools.mk",
+		".include \"defaults.mk\"",
+		".include \"replace.mk\"",
+		".include \"make.mk\"")
+	t.CreateFileLines("mk/tools/make.mk",
+		"TOOLS_CREATE+=\tmake",
+		"TOOLS_PATH.make=\t/usr/bin/make")
+	t.CreateFileLines("mk/tools/replace.mk",
+		"TOOLS_CREATE+=\tgmake",
+		"TOOLS_PATH.gmake=\t/usr/bin/gnu-make")
+
 	G.Pkgsrc.LoadInfrastructure()
 
 	G.Check(t.File("category/package"))
