@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/01/03 05:12:49 thorpej Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/03/24 20:50:10 thorpej Exp $
+share/u-boot/bananapi-r2/bpi-r2-sdmmc.img
+share/u-boot/bananapi-r2/u-boot.bin
 share/u-boot/bananapi-r2/u-boot-mtk.bin
