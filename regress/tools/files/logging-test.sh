@@ -1,14 +1,9 @@
 #! /bin/sh
-# $NetBSD: logging-test.sh,v 1.5 2019/03/24 08:40:08 rillig Exp $
+# $NetBSD: logging-test.sh,v 1.6 2019/03/24 11:29:19 rillig Exp $
 
 # Up to March 2019, the command logging for the wrapped tools didn't properly
 # quote the command line arguments. This meant the logging did not reflect
 # the actual tool command line.
-#
-# As of March 2019 the logging has been fixed for tool wrappers that consist
-# only of a TOOLS_PATH.${tool} and TOOLS_ARGS.${tool}. For tools with custom
-# TOOLS_SCRIPTS it's much more difficult to do the quoting properly. See the
-# wrapper for makeinfo for a good example.
 
 set -eu
 
@@ -64,17 +59,15 @@ test_case "TOOLS_PATH without TOOLS_ARGS"
 	# argument. This is because the echo command doesn't get any
 	# additional arguments by the tool wrapper (TOOLS_ARGS.echo).
 
-	# TODO: To avoid unintended file expansion when replaying the
-	# commands, all arguments must be shquoted.
 	assert_log <<'EOF'
-[*] WRKDIR/.tools/bin/echo begin * * * end
-<.> echo  begin * * * end
-[*] WRKDIR/.tools/bin/echo dquot " end
-<.> echo  dquot " end
-[*] WRKDIR/.tools/bin/echo squot ' end
-<.> echo  squot ' end
-[*] WRKDIR/.tools/bin/echo five \\\\\ end
-<.> echo  five \\\\\ end
+[*] WRKDIR/.tools/bin/echo begin '*' '*' '*' end
+<.> echo  begin '*' '*' '*' end
+[*] WRKDIR/.tools/bin/echo dquot '"' end
+<.> echo  dquot '"' end
+[*] WRKDIR/.tools/bin/echo squot ''\''' end
+<.> echo  squot ''\''' end
+[*] WRKDIR/.tools/bin/echo five '\\\\\' end
+<.> echo  five '\\\\\' end
 EOF
 }
 
@@ -84,13 +77,12 @@ test_case "TOOLS_PATH with TOOLS_ARGS"
 
 	run_tool mkdir "directory with spaces"
 
-	# The log doesn't show delimiters for the arguments, which makes
-	# the call to mkdir ambiguous. Doing proper shell quoting would
-	# require code similar to shquote from mk/scripts/shell-lib.
-	# This may make the tools wrapper slower.
+	# The TOOLS_ARGS are already quoted, therefore they all look
+	# different in the log. The actual arguments, on the other hand,
+	# all look the same.
 	assert_log <<'EOF'
-[*] WRKDIR/.tools/bin/mkdir directory with spaces
-<.> BINDIR/mkdir -p directory with spaces
+[*] WRKDIR/.tools/bin/mkdir 'directory with spaces'
+<.> BINDIR/mkdir -p 'directory with spaces'
 EOF
 }
 
@@ -99,18 +91,18 @@ test_case "TOOLS_PATH with TOOLS_ARGS containing double quotes"
 	run_tool path-args-dquot "and" \" "\"" '"'
 
 	assert_log <<'EOF'
-[*] WRKDIR/.tools/bin/path-args-dquot and " " "
-<.> echo \" "\"" '"' and " " "
+[*] WRKDIR/.tools/bin/path-args-dquot and '"' '"' '"'
+<.> echo \" "\"" '"' and '"' '"' '"'
 EOF
 }
 
 test_case "TOOLS_PATH with TOOLS_ARGS containing special characters"
 {
-	run_tool path-args "and" " \"'\\$" "*"
+	run_tool path-args "and" " \"'\\\$" "*"
 
 	assert_log <<'EOF'
-[*] WRKDIR/.tools/bin/path-args and  "'\$ *
-<.> echo " \"'\\$" "*" and  "'\$ *
+[*] WRKDIR/.tools/bin/path-args and ' "'\''\$' '*'
+<.> echo " \"'\\$" "*" and ' "'\''\$' '*'
 EOF
 }
 
@@ -118,11 +110,9 @@ test_case "TOOLS_SCRIPT with dquot"
 {
 	run_tool script-dquot
 
-	# The following log output contains a trailing whitespace. This
-	# is because the tool didn't get any actual arguments.
 	assert_log <<'EOF'
-[*] WRKDIR/.tools/bin/script-dquot 
-<.> set args ; shift; echo "hello; world"
+[*] WRKDIR/.tools/bin/script-dquot
+<.> set args; shift; echo "hello; world"
 EOF
 }
 
@@ -130,11 +120,9 @@ test_case "TOOLS_SCRIPT with backslashes"
 {
 	run_tool script-backslash
 
-	# The following log output contains a trailing whitespace. This
-	# is because the tool didn't get any actual arguments.
 	assert_log <<'EOF'
-[*] WRKDIR/.tools/bin/script-backslash 
-<.> set args ; shift; echo hello\;\ world
+[*] WRKDIR/.tools/bin/script-backslash
+<.> set args; shift; echo hello\;\ world
 EOF
 }
 
@@ -149,8 +137,6 @@ test_case "TOOLS_SCRIPT with complicated replacement"
 	#
 	# In this example, the $0 becomes unrealistic when the command
 	# is replayed. In practice $0 is seldom used.
-	#
-	# TODO: In the "set arg", the arguments must be shquoted.
 	assert_log <<'EOF'
 [*] WRKDIR/.tools/bin/for-loop one two three
 <.> set args one two three; shift; printf '%s' "$0";  for arg in "$@"; do  printf ' <%s>' "$arg";  done;  printf '\n'
@@ -165,9 +151,8 @@ test_case "TOOLS_SCRIPT with actual arguments containing quotes"
 		-DDD="\"a b\"" \
 		-DB=\"a\ b\"
 
-	# TODO: Add proper quoting for the arguments.
 	assert_log <<'EOF'
-[*] WRKDIR/.tools/bin/for-loop -DSD="a b" -DSS='a b' -DDD="a b" -DB="a b"
-<.> set args -DSD="a b" -DSS='a b' -DDD="a b" -DB="a b"; shift; printf '%s' "$0";  for arg in "$@"; do  printf ' <%s>' "$arg";  done;  printf '\n'
+[*] WRKDIR/.tools/bin/for-loop '-DSD="a b"' '-DSS='\''a b'\''' '-DDD="a b"' '-DB="a b"'
+<.> set args '-DSD="a b"' '-DSS='\''a b'\''' '-DDD="a b"' '-DB="a b"'; shift; printf '%s' "$0";  for arg in "$@"; do  printf ' <%s>' "$arg";  done;  printf '\n'
 EOF
 }
