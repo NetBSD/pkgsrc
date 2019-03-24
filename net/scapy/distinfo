@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2016/05/09 11:07:51 adam Exp $
+$NetBSD: distinfo,v 1.9 2019/03/24 19:44:48 gutteridge Exp $
 
 SHA1 (scapy-2.3.2.tar.gz) = 30ee94f6490371dc60544206d286ae4881987151
 RMD160 (scapy-2.3.2.tar.gz) = f217e70d0806dfcc1ed1961a74f9de437c2b8bdd
@@ -8,4 +8,4 @@ SHA1 (patch-aa) = 28357773231c1a55fffbe2ebf18ec2e5f63a2ae2
 SHA1 (patch-ab) = 12f7c4d0ae505d357692c05de658e393a0526ba1
 SHA1 (patch-ac) = d8ad1882d9b31e65dc3f7636e4caac9377805daf
 SHA1 (patch-ad) = f3647e471ba1168e054a5160d47fb0870243fb4b
-SHA1 (patch-af) = a5bec775992df06d89c296bd6d889ea13d586ead
+SHA1 (patch-af) = 3f570e78c6a30361a015b9f0e1cb5990166b49cf
