@@ -374,8 +374,8 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__append_URL_to_list_of_URLs(c *
 	t.SetUpMasterSite("MASTER_SITE_SOURCEFORGE", "http://downloads.sourceforge.net/sourceforge/")
 	mkline := t.NewMkLine("Makefile", 95, "MASTER_SITES=\t${HOMEPAGE}")
 
-	vuc := VarUseContext{G.Pkgsrc.vartypes["MASTER_SITES"], vucTimeRun, VucQuotPlain, false}
-	nq := mkline.VariableNeedsQuoting("HOMEPAGE", G.Pkgsrc.vartypes["HOMEPAGE"], &vuc)
+	vuc := VarUseContext{G.Pkgsrc.vartypes.Canon("MASTER_SITES"), vucTimeRun, VucQuotPlain, false}
+	nq := mkline.VariableNeedsQuoting("HOMEPAGE", G.Pkgsrc.vartypes.Canon("HOMEPAGE"), &vuc)
 
 	c.Check(nq, equals, no)
 
@@ -407,7 +407,7 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__eval_shell(c *check.C) {
 	MkLineChecker{mkline}.checkVarassign()
 
 	t.CheckOutputLines(
-		"WARN: builtin.mk:3: PKG_ADMIN should not be evaluated at load time.",
+		"WARN: builtin.mk:3: PKG_ADMIN should not be used at load time in any file.",
 		"NOTE: builtin.mk:3: The :Q operator isn't necessary for ${BUILTIN_PKG.Xfixes} here.")
 }
 
@@ -701,7 +701,6 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__backticks(c *check.C) {
 	// only appear completely unquoted. There is no practical way of
 	// using it inside backticks, and luckily there is no need for it.
 	t.CheckOutputLines(
-		"WARN: Makefile:4: COMMENT may not be used in any file; it is a write-only variable.",
 		// TODO: Better suggest that COMMENT should not be used inside backticks or other quotes.
 		"WARN: Makefile:4: The variable COMMENT should be quoted as part of a shell word.")
 }
@@ -781,7 +780,7 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__tool_in_shell_command(c *check
 func (s *Suite) Test_MkLine_VariableNeedsQuoting__uncovered_cases(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Wall,no-space")
+	t.SetUpCommandLine("-Wall,no-space", "--explain")
 	t.SetUpVartypes()
 
 	mklines := t.SetUpFileMkLines("Makefile",
@@ -796,20 +795,107 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__uncovered_cases(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputLines(
-		// TODO: Explain why the variable may not be set, by listing the current rules.
-		"WARN: ~/Makefile:4: The variable LINKER_RPATH_FLAG may not be set by any package.",
-		"WARN: ~/Makefile:4: Please use ${LINKER_RPATH_FLAG:S/-rpath/& /:Q} instead of ${LINKER_RPATH_FLAG:S/-rpath/& /}.",
-		"WARN: ~/Makefile:4: LINKER_RPATH_FLAG should not be evaluated at load time.",
-		"WARN: ~/Makefile:6: The variable PATH may not be set by any package.",
-		"WARN: ~/Makefile:6: PREFIX should not be evaluated at load time.",
-		"WARN: ~/Makefile:6: PATH should not be evaluated at load time.")
+		"WARN: ~/Makefile:4: The variable LINKER_RPATH_FLAG should not be set by any package.",
+		"",
+		"\tThe allowed actions for a variable are determined based on the file",
+		"\tname in which the variable is used or defined. The rules for",
+		"\tLINKER_RPATH_FLAG are:",
+		"",
+		"\t* in buildlink3.mk, it should not be accessed at all",
+		"\t* in any file, it may be used",
+		"",
+		"\tIf these rules seem to be incorrect, please ask on the",
+		"\ttech-pkg@NetBSD.org mailing list.",
+		"",
+		"WARN: ~/Makefile:4: Please use ${LINKER_RPATH_FLAG:S/-rpath/& /:Q} "+
+			"instead of ${LINKER_RPATH_FLAG:S/-rpath/& /}.",
+		"",
+		"\tSee the pkgsrc guide, section \"Echoing a string exactly as-is\":",
+		"\thttps://www.NetBSD.org/docs/pkgsrc/pkgsrc.html#echo-literal",
+		"",
+		"WARN: ~/Makefile:4: LINKER_RPATH_FLAG should not be used at load time in any file.",
+		"",
+		"\tMany variables, especially lists of something, get their values",
+		"\tincrementally. Therefore it is generally unsafe to rely on their",
+		"\tvalue until it is clear that it will never change again. This point",
+		"\tis reached when the whole package Makefile is loaded and execution",
+		"\tof the shell commands starts; in some cases earlier.",
+		"",
+		"\tAdditionally, when using the \":=\" operator, each $$ is replaced with",
+		"\ta single $, so variables that have references to shell variables or",
+		"\tregular expressions are modified in a subtle way.",
+		"",
+		"\tThe allowed actions for a variable are determined based on the file",
+		"\tname in which the variable is used or defined. The rules for",
+		"\tLINKER_RPATH_FLAG are:",
+		"",
+		"\t* in buildlink3.mk, it should not be accessed at all",
+		"\t* in any file, it may be used",
+		"",
+		"\tIf these rules seem to be incorrect, please ask on the",
+		"\ttech-pkg@NetBSD.org mailing list.",
+		"",
+		"WARN: ~/Makefile:6: The variable PATH should not be set by any package.",
+		"",
+		"\tThe allowed actions for a variable are determined based on the file",
+		"\tname in which the variable is used or defined. The rules for PATH",
+		"\tare:",
+		"",
+		"\t* in buildlink3.mk, it should not be accessed at all",
+		"\t* in any file, it may be used",
+		"",
+		"\tIf these rules seem to be incorrect, please ask on the",
+		"\ttech-pkg@NetBSD.org mailing list.",
+		"",
+		"WARN: ~/Makefile:6: PREFIX should not be used at load time in any file.",
+		"",
+		"\tMany variables, especially lists of something, get their values",
+		"\tincrementally. Therefore it is generally unsafe to rely on their",
+		"\tvalue until it is clear that it will never change again. This point",
+		"\tis reached when the whole package Makefile is loaded and execution",
+		"\tof the shell commands starts; in some cases earlier.",
+		"",
+		"\tAdditionally, when using the \":=\" operator, each $$ is replaced with",
+		"\ta single $, so variables that have references to shell variables or",
+		"\tregular expressions are modified in a subtle way.",
+		"",
+		"\tThe allowed actions for a variable are determined based on the file",
+		"\tname in which the variable is used or defined. The rules for PREFIX",
+		"\tare:",
+		"",
+		"\t* in any file, it may be used",
+		"",
+		"\tIf these rules seem to be incorrect, please ask on the",
+		"\ttech-pkg@NetBSD.org mailing list.",
+		"",
+		"WARN: ~/Makefile:6: PATH should not be used at load time in any file.",
+		"",
+		"\tMany variables, especially lists of something, get their values",
+		"\tincrementally. Therefore it is generally unsafe to rely on their",
+		"\tvalue until it is clear that it will never change again. This point",
+		"\tis reached when the whole package Makefile is loaded and execution",
+		"\tof the shell commands starts; in some cases earlier.",
+		"",
+		"\tAdditionally, when using the \":=\" operator, each $$ is replaced with",
+		"\ta single $, so variables that have references to shell variables or",
+		"\tregular expressions are modified in a subtle way.",
+		"",
+		"\tThe allowed actions for a variable are determined based on the file",
+		"\tname in which the variable is used or defined. The rules for PATH",
+		"\tare:",
+		"",
+		"\t* in buildlink3.mk, it should not be accessed at all",
+		"\t* in any file, it may be used",
+		"",
+		"\tIf these rules seem to be incorrect, please ask on the",
+		"\ttech-pkg@NetBSD.org mailing list.",
+		"")
 
 	// Just for branch coverage.
 	trace.Tracing = false
 	MkLineChecker{mklines.mklines[2]}.Check()
 
-	t.CheckOutputLines(
-		"WARN: ~/Makefile:3: GO_SRCPATH is defined but not used.")
+	t.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_MkLine__shell_varuse_in_backt_dquot(c *check.C) {
@@ -1131,6 +1217,9 @@ func (s *Suite) Test_MkLine_ResolveVarsInRelativePath__directory_depth(c *check.
 	mklines.Check()
 
 	t.CheckOutputLines(
+		"WARN: ~/multimedia/totem/bla.mk:2: "+
+			"The variable BUILDLINK_PKGSRCDIR.totem should not be given a default value in this file; "+
+			"it would be ok in buildlink3.mk.",
 		"ERROR: ~/multimedia/totem/bla.mk:2: There is no package in \"multimedia/totem\".")
 }
 
