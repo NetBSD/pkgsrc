@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2019/03/24 11:39:02 tnn Exp $
+
+SHA1 (binutils-2.32.tar.xz) = cd45a512af1c8a508976c1beb4f5825b3bb89f4d
+RMD160 (binutils-2.32.tar.xz) = cfff50aae6534512a51fbb720e30f37484f8193e
+SHA512 (binutils-2.32.tar.xz) = d326408f12a03d9a61a9de56584c2af12f81c2e50d2d7e835d51565df8314df01575724afa1e43bd0db45cfc9916b41519b67dfce03232aa4978704492a6994a
+Size (binutils-2.32.tar.xz) = 20774880 bytes
+SHA1 (crosstool-ng-esp32-2018r1.tar.gz) = 580503f801c3659e012a4a216c28cb5d5b0e2561
+RMD160 (crosstool-ng-esp32-2018r1.tar.gz) = d662fa708412e00b8e932207575010c89998e662
+SHA512 (crosstool-ng-esp32-2018r1.tar.gz) = f3989c34f44bd7b08366403cb1803705c52083d720cf08d1108cef5ca6bfe6004c89e519125f95f550ccaeebdf99d21ecd4e3a550ddaa83e7c7710b53fa94bd9
+Size (crosstool-ng-esp32-2018r1.tar.gz) = 2493670 bytes
