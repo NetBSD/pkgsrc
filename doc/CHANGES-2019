@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1449 2019/03/23 17:20:38 gdt Exp $
+$NetBSD: CHANGES-2019,v 1.1450 2019/03/24 05:45:06 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2335,3 +2335,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added misc/libreoffice6-bin version 6.2.2 [tsutsui 2019-03-23]
 	Updated emulators/PC6001VX to 3.1.2 [tsutsui 2019-03-23]
 	Updated pkgtools/pkg_rolling-replace to 0.24.5 [gdt 2019-03-23]
+	Updated www/firefox to 66.0.1 [ryoon 2019-03-24]
