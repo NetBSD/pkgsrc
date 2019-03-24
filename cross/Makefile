@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2018/06/07 19:36:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.83 2019/03/24 12:03:48 tnn Exp $
 #
 
 COMMENT=	Cross-platform development utilities
@@ -64,5 +64,7 @@ SUBDIR+=	pdp11-aout-binutils
 SUBDIR+=	pdp11-aout-gcc
 SUBDIR+=	stlink
 SUBDIR+=	uisp
+SUBDIR+=	xtensa-esp32-elf-binutils
+SUBDIR+=	xtensa-esp32-elf-gcc
 
 .include "../mk/misc/category.mk"
