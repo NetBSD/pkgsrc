@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1457 2019/03/24 12:28:10 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.1458 2019/03/24 12:29:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2346,3 +2346,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added cross/xtensa-esp32-elf-binutils version 2.32 [tnn 2019-03-24]
 	Added cross/xtensa-esp32-elf-gcc version 8.2.0 [tnn 2019-03-24]
 	Updated mail/thunderbird to 60.6.0 [ryoon 2019-03-24]
+	Updated mail/thunderbird-l10n to 60.6.0 [ryoon 2019-03-24]
