@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.143 2019/03/24 21:05:20 rhialto Exp $
+# $NetBSD: Makefile,v 1.144 2019/03/24 21:40:15 rhialto Exp $
 #
 # NOTE: if you are updating both mplayer and gmplayer, you must ensure
 # that *both* distinfo files contain the correct, up-to-date files and
@@ -114,7 +114,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mplayer ${DESTDIR}${PREFIX}/bin/gmplayer
 .for skin in ${SKINS}
 	( cd ${WRKDIR} && \
-		${PAX} -rw ${skin:C/-[0-9]+.[0-9]+${SKIN_EXTRACT_SUFX}//} \
+		${PAX} -rw ${skin:C/-[0-9.]+${SKIN_EXTRACT_SUFX}//} \
 		    ${DESTDIR}${PREFIX}/share/mplayer/skins \
 	)
 .endfor
