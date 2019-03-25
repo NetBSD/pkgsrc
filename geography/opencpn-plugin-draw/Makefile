@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.20 2018/11/14 22:21:33 kleink Exp $
+# $NetBSD: Makefile,v 1.21 2019/03/25 11:44:52 bouyer Exp $
 #
 
-VERSION=	1.5_20180827
+VERSION=	1.5_20190311
 DISTNAME=	ocpn_draw_pi-${VERSION}
 PKGNAME=	opencpn-plugin-draw-${VERSION}
-PKGREVISION=	2
+#PKGREVISION=	2
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jongough/}
 GITHUB_PROJECT=	ocpn_draw_pi
-GITHUB_TAG=	6c79970ce4aa83f089bcc6c67d559f2731fbac10
+GITHUB_TAG=	6b400ef572948cfe1ee6e511a982e50aad4a6427
 
 MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	https://opencpn.org/OpenCPN/plugins/draw.html
 COMMENT=	place georeferenced objects/items on the OpenCPN interface
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 USE_CMAKE=		yes
 
 CMAKE_ARGS+=	-DPREFIX:PATH=${PREFIX} -DPREFIX_PLUGINS:PATH=${PREFIX}/lib/opencpn
