@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2019/03/25 13:49:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.26 2019/03/25 22:29:45 wiz Exp $
 bin/vala
 bin/vala-0.44
 bin/vala-gen-introspect
@@ -33,6 +33,27 @@ man/man1/vapigen-${PKGVERSION}
 man/man1/vapigen.1
 share/aclocal/vala.m4
 share/aclocal/vapigen.m4
+share/devhelp/books/vala-0.44/Attributes.html
+share/devhelp/books/vala-0.44/Classes.html
+share/devhelp/books/vala-0.44/Concepts.html
+share/devhelp/books/vala-0.44/Delegates.html
+share/devhelp/books/vala-0.44/Enumerated_types__Enums_.html
+share/devhelp/books/vala-0.44/Errors.html
+share/devhelp/books/vala-0.44/Expressions.html
+share/devhelp/books/vala-0.44/GIDL_metadata_format.html
+share/devhelp/books/vala-0.44/GIR_metadata_format.html
+share/devhelp/books/vala-0.44/Generics.html
+share/devhelp/books/vala-0.44/Interfaces.html
+share/devhelp/books/vala-0.44/Methods.html
+share/devhelp/books/vala-0.44/Namespaces.html
+share/devhelp/books/vala-0.44/Overview.html
+share/devhelp/books/vala-0.44/Preprocessor.html
+share/devhelp/books/vala-0.44/Statements.html
+share/devhelp/books/vala-0.44/Structs.html
+share/devhelp/books/vala-0.44/Types.html
+share/devhelp/books/vala-0.44/default.css
+share/devhelp/books/vala-0.44/index.html
+share/devhelp/books/vala-0.44/vala-0.44.devhelp2
 share/vala-0.44/vapi/alsa.deps
 share/vala-0.44/vapi/alsa.vapi
 share/vala-0.44/vapi/atk.vapi
