@@ -1,3 +1,3 @@
 Syntax extension to define first class values representing record fields, to get
 and set record fields, iterate and fold over all fields of a record and create
-n ew record values
+new record values
