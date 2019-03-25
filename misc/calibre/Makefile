@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.217 2019/02/16 13:26:49 wiz Exp $
+# $NetBSD: Makefile,v 1.218 2019/03/25 13:11:56 wiz Exp $
 
-DISTNAME=	calibre-3.39.1
-PKGREVISION=	1
+DISTNAME=	calibre-3.40.1
 CATEGORIES=	misc
 #MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=calibre/}
 MASTER_SITES=	http://download.calibre-ebook.com/${PKGVERSION_NOREV}/
@@ -14,17 +13,26 @@ COMMENT=	E-book library management application
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-apsw>=3.7.17:../../databases/py-apsw
+DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
+DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
+DEPENDS+=	${PYPKGPREFIX}-crypto-[0-9]*:../../security/py-crypto
 DEPENDS+=	${PYPKGPREFIX}-css-parser-[0-9]*:../../textproc/py-css-parser
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=1.4.1:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-dns>=1.6.0:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-elementtree-[0-9]*:../../textproc/py-elementtree
+DEPENDS+=	${PYPKGPREFIX}-feedparser-[0-9]*:../../textproc/py-feedparser
+DEPENDS+=	${PYPKGPREFIX}-html2text-[0-9]*:../../textproc/py-html2text
 DEPENDS+=	${PYPKGPREFIX}-html5-parser-[0-9]*:../../textproc/py-html5-parser
+DEPENDS+=	${PYPKGPREFIX}-markdown-[0-9]*:../../textproc/py-markdown
 DEPENDS+=	${PYPKGPREFIX}-mechanize>=0.1.11nb1:../../www/py-mechanize
 DEPENDS+=	${PYPKGPREFIX}-msgpack-[0-9]*:../../devel/py-msgpack
 DEPENDS+=	${PYPKGPREFIX}-netifaces>=0.8:../../net/py-netifaces
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=2.7.0:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-psutil>=0.6.1:../../sysutils/py-psutil
+DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-regex-[0-9]*:../../textproc/py-regex
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-soupsieve-[0-9]*:../../www/py-soupsieve
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 # for installation
 BUILD_DEPENDS+=	xdg-utils>=1.0.2:../../misc/xdg-utils
@@ -72,7 +80,6 @@ REPLACE_PYTHON+=	recipes/animal_politico.recipe
 REPLACE_PYTHON+=	recipes/respekt_magazine.recipe
 REPLACE_PYTHON+=	recipes/kompiutierra.recipe
 REPLACE_PYTHON+=	recipes/trouw.recipe
-REPLACE_PYTHON+=	src/calibre/ebooks/markdown/extensions/*.py
 REPLACE_PYTHON+=	src/calibre/ebooks/metadata/odt.py
 REPLACE_PYTHON+=	src/calibre/utils/*.py
 REPLACE_PYTHON+=	src/odf/*.py
@@ -100,16 +107,21 @@ post-install:
 	${RM} ${DESTDIR}${PREFIX}/bin/calibre-uninstall
 
 .include "../../lang/python/application.mk"
+.include "../../archivers//bzip2/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 BUILDLINK_API_DEPENDS.chmlib+=	chmlib>=0.40
 .include "../../devel/chmlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libmtp+=	libmtp>=1.1.5
 .include "../../devel/libmtp/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libusb+=	libusb>=0.1.12
 .include "../../mk/libusb.buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/libwebp/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libwmf+=	libwmf>=0.2.8
 .include "../../graphics/libwmf/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 _PYSETUPTOOLSINSTALLARGS=	# empty
 # Get rid of --root=${DESTDIR}, use our own version from above instead.
