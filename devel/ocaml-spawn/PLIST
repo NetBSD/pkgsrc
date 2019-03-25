@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2019/03/25 09:07:07 jaapb Exp $
+${OCAML_SITELIB}/spawn/META
+${OCAML_SITELIB}/spawn/dune-package
+${OCAML_SITELIB}/spawn/libspawn_stubs.a
+${OCAML_SITELIB}/spawn/opam
+${PLIST.ocaml-opt}${OCAML_SITELIB}/spawn/spawn.a
+${OCAML_SITELIB}/spawn/spawn.cma
+${OCAML_SITELIB}/spawn/spawn.cmi
+${OCAML_SITELIB}/spawn/spawn.cmt
+${OCAML_SITELIB}/spawn/spawn.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/spawn/spawn.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/spawn/spawn.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/spawn/spawn.cmxs
+${OCAML_SITELIB}/spawn/spawn.ml
+${OCAML_SITELIB}/spawn/spawn.mli
+${OCAML_SITELIB}/stublibs/dllspawn_stubs.so
+share/doc/spawn/CHANGES.md
+share/doc/spawn/LICENSE.md
+share/doc/spawn/README.md
