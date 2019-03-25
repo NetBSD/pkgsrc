@@ -1,23 +1,18 @@
-$NetBSD: distinfo,v 1.23 2018/11/25 17:04:40 bouyer Exp $
+$NetBSD: distinfo,v 1.24 2019/03/25 11:34:05 bouyer Exp $
 
-SHA1 (OpenCPN-4.8.8.zip) = 96181b5785988b97d4fcfc851408652e1322aa59
-RMD160 (OpenCPN-4.8.8.zip) = fbb22e01f212943d4581cbf18bcab674fdb9786f
-SHA512 (OpenCPN-4.8.8.zip) = 7f3973c7f488c7a1924f4e4a20b626fdeb174a0b04d7f4c2fe4936022863c1aa00eec06477507a00bdcb654759c42f084d27afafeee318cfc2611ff2c83faef1
-Size (OpenCPN-4.8.8.zip) = 61811803 bytes
-SHA1 (patch-CMakeLists.txt) = f910ed2ba317070ec536fd1ee1230364964755da
-SHA1 (patch-FindPortaudio.cmake) = e1bebe2203c6f3dc76f92ee5bdcb01eca66b6b9a
-SHA1 (patch-plugins_chartdldr_pi_CMakeLists.txt) = 52962f6feac45a766fc2dff08d2802e946ccfc85
-SHA1 (patch-plugins_chartdldr_pi_cmake_PluginConfigure.cmake) = 29fbfaee37e2a932b923df6ff7541dad37e14d65
-SHA1 (patch-plugins_dashboard_pi_CMakeLists.txt) = 76a6198e58f81c129f15fa6671da180c263c231e
-SHA1 (patch-plugins_grib_pi_CMakeLists.txt) = 49f997c27aa4710721d36945a681854579112a49
+SHA1 (OpenCPN-5.0.0.zip) = e4f2c77001fafed835c2329a1f2a74afdd4858ca
+RMD160 (OpenCPN-5.0.0.zip) = e8ee55b1b00017f2fc885c147e8f69ec13c627aa
+SHA512 (OpenCPN-5.0.0.zip) = 146fe0bf29424f72138168cd20617aabc2f130d2ffd47b8da4aa1e0aa6d7176093b36d96d8f0d456af1f7805db13ed87be67f4f3af7a7a2d6abf0d5734834f7a
+Size (OpenCPN-5.0.0.zip) = 70056870 bytes
+SHA1 (patch-CMakeLists.txt) = 2a615ec6c11621e7b119f75d5db2b06f7f2a7221
+SHA1 (patch-FindPortaudio.cmake) = d13b7e6cf42ea5b837ea6230c16b4558e87aa16c
+SHA1 (patch-plugins_chartdldr_pi_CMakeLists.txt) = e193798a04082c3a20264214e2a3aa951f0ee514
+SHA1 (patch-plugins_dashboard_pi_CMakeLists.txt) = 5523e8bb960306a15367a7c9a8385f3787a2baf4
+SHA1 (patch-plugins_grib_pi_CMakeLists.txt) = 75338d3a85666eed26157e17d693f937b0356689
 SHA1 (patch-plugins_wmm_pi_CMakeLists.txt) = 88339a61dd4b78b823bbd34bd1b02863d150f046
-SHA1 (patch-plugins_wmm_pi_cmake_PluginConfigure.cmake) = f1c91cfa744ed76d938bfb5bdb4116df9f45604a
-SHA1 (patch-plugins_wmm_pi_src_MagneticPlotMap.cpp) = 885f940777b38c8e59cc5d2e4fdbd1bf9a91578d
-SHA1 (patch-src_chart1.cpp) = ae7c1d8a59c9a275914a613205de71e2dca89dc6
-SHA1 (patch-src_crashprint.cpp) = a96e8aa980eb3b19c3dce3343582511d608e6625
 SHA1 (patch-src_glu_CMakeLists.txt) = d63494a41071097252ac9e2cb95db75041f30b62
 SHA1 (patch-src_mipmap_mipmap.c) = 3bdb2c37e7a6d89fc6a531af6e0396a1ff385aeb
 SHA1 (patch-src_ocpndc.cpp) = 4a72093a49f29d66a42e3f64b99a1a40bf08a658
 SHA1 (patch-src_printtable.cpp) = 52ed0f09610d56e9acc5ec9b8e4cbdc7ad55d043
 SHA1 (patch-src_routeprintout.cpp) = c0f960b76b1b7a8acb7e5faca5f656a5c259f02c
-SHA1 (patch-src_tcmgr.cpp) = 3fb4edf3368f3f3907f231ebcabd8e5061699040
+SHA1 (patch-src_wxcurl_base.cpp) = 25c6d03dd1215885f15221d888327f0535080284
