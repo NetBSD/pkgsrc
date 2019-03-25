@@ -1,4 +1,7 @@
-# $NetBSD: waf.mk,v 1.6 2018/07/10 08:18:06 adam Exp $
+# $NetBSD: waf.mk,v 1.7 2019/03/25 14:09:55 tnn Exp $
+
+# XXX why does this does not respect the standard pkgsrc variables like
+# CONFIGURE_ENV et al?
 
 WAF_ENV+=	CC=${CC:Q}
 WAF_ENV+=	CFLAGS=${CFLAGS:Q}
