@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.99 2018/08/22 09:45:56 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2019/03/25 17:19:59 tnn Exp $
 #
 
-DISTNAME=	ntp-4.2.8p10
+DISTNAME=	ntp-4.2.8p13
 PKGNAME=	${DISTNAME:S/-dev-/-/}
-PKGREVISION=	1
 CATEGORIES=	net time
 MASTER_SITES=	http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-4.2/
 
