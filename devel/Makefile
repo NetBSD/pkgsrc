@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2844 2019/03/25 09:31:01 jaapb Exp $
+# $NetBSD: Makefile,v 1.2845 2019/03/25 09:35:09 jaapb Exp $
 #
 
 COMMENT=	Development utilities
@@ -873,6 +873,7 @@ SUBDIR+=	ocaml-ppx_optional
 SUBDIR+=	ocaml-ppx_pipebang
 SUBDIR+=	ocaml-ppx_sexp_conv
 SUBDIR+=	ocaml-ppx_sexp_message
+SUBDIR+=	ocaml-ppx_sexp_value
 SUBDIR+=	ocaml-ppx_stable
 SUBDIR+=	ocaml-ppx_tools
 SUBDIR+=	ocaml-ppx_tools_versioned
