@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.61 2019/03/24 20:38:25 rhialto Exp $
+# $NetBSD: options.mk,v 1.62 2019/03/25 22:55:14 rhialto Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -222,7 +222,7 @@ CONFIGURE_ARGS+=	--disable-mp3lame
 CONFIGURE_ARGS+=	--enable-libopus
 .  include "../../audio/libopus/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	--disable-opus
+CONFIGURE_ARGS+=	--disable-libopus
 .endif
 
 .if !empty(PKG_OPTIONS:Mmad)
