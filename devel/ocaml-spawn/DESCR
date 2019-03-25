@@ -1,0 +1,4 @@
+Spawn is a small library exposing only one function: Spawn.spawn. Its purpose is
+to start command in the background. Spawn aims to provide a few missing features
+of Unix.create_process such as providing a working directory as well as
+improving error reporting and performance.
