@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.30 2018/12/13 19:51:58 adam Exp $
+# $NetBSD: Makefile,v 1.31 2019/03/25 11:34:05 bouyer Exp $
 
-DISTNAME=	OpenCPN-4.8.8
+DISTNAME=	OpenCPN-5.0.0
 PKGNAME=	${DISTNAME:S/OpenCPN/opencpn/}
-PKGREVISION=	1
+#PKGREVISION=	1
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenCPN/}
 GITHUB_PROJECT=	OpenCPN
-GITHUB_TAG=	v4.8.8
+GITHUB_TAG=	v5.0.0
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	bouyer@NetBSD.org
@@ -14,7 +14,7 @@ HOMEPAGE=	http://www.opencpn.org/
 COMMENT=	Concise ChartPlotter/Navigator
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 USE_TOOLS+=	gettext pkg-config
 USE_CMAKE=	yes
 
@@ -40,6 +40,7 @@ SUBST_SED.prefix=	-e s,"/usr/local,"${PREFIX},g
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=	${EXPORT_SYMBOLS_LDFLAGS}
 
+.include "../../audio/libsndfile/buildlink3.mk"
 .include "../../devel/cmake/buildlink3.mk"
 .include "../../x11/wxGTK30/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
