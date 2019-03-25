@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2019/01/06 16:46:51 tnn Exp $
+# $NetBSD: Makefile,v 1.49 2019/03/25 19:56:08 markd Exp $
 
 DISTNAME=		rdesktop-1.8.4
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=rdesktop/}
 GITHUB_RELEASE=		v${PKGVERSION_NOREV}
