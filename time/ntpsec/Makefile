@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2019/03/25 15:40:35 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2019/03/25 15:44:42 tnn Exp $
 
 DISTNAME=	ntpsec-1.1.3
 CATEGORIES=	time
 MASTER_SITES=	http://ftp.ntpsec.org/pub/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	ftp://ftp.ntpsec.org/pub/releases/
+HOMEPAGE=	https://www.ntpsec.org/
 COMMENT=	Hardened & improved NTP implementation derived from NTP Classic
 LICENSE=	cc-by-v4.0 AND 2-clause-bsd AND modified-bsd AND mit
 
