@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1497 2019/03/25 23:07:04 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1498 2019/03/25 23:09:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2388,3 +2388,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/lua-lpeg to 1.0.2 [wiz 2019-03-25]
 	Updated mail/mblaze to 0.5.1 [wiz 2019-03-25]
 	Updated audio/musicpd to 0.21.6 [wiz 2019-03-25]
+	Updated devel/py-scandir to 1.10.0 [wiz 2019-03-25]
