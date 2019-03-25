@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2019/03/25 09:24:16 jaapb Exp $
+${OCAML_SITELIB}/base_bigstring/META
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base_bigstring/base_bigstring.a
+${OCAML_SITELIB}/base_bigstring/base_bigstring.cma
+${OCAML_SITELIB}/base_bigstring/base_bigstring.cmi
+${OCAML_SITELIB}/base_bigstring/base_bigstring.cmt
+${OCAML_SITELIB}/base_bigstring/base_bigstring.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base_bigstring/base_bigstring.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base_bigstring/base_bigstring.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base_bigstring/base_bigstring.cmxs
+${OCAML_SITELIB}/base_bigstring/base_bigstring.ml
+${OCAML_SITELIB}/base_bigstring/base_bigstring.mli
+${OCAML_SITELIB}/base_bigstring/dune-package
+${OCAML_SITELIB}/base_bigstring/libbase_bigstring_stubs.a
+${OCAML_SITELIB}/base_bigstring/opam
+${OCAML_SITELIB}/base_bigstring/runtime.js
+${OCAML_SITELIB}/stublibs/dllbase_bigstring_stubs.so
+share/doc/base_bigstring/LICENSE.md
