@@ -1,7 +1,7 @@
-$NetBSD: patch-src_Alarm.cpp,v 1.3 2018/08/27 15:59:07 bouyer Exp $
+$NetBSD: patch-src_Alarm.cpp,v 1.4 2019/03/25 11:46:50 bouyer Exp $
 
---- src/Alarm.cpp.orig	2018-08-25 23:08:44.000000000 +0200
-+++ src/Alarm.cpp	2018-08-27 16:00:48.979962717 +0200
+--- src/Alarm.cpp.orig	2019-02-28 05:20:36.000000000 +0100
++++ src/Alarm.cpp	2019-03-13 17:14:34.899970778 +0100
 @@ -27,6 +27,7 @@
  #include <map>
  
@@ -28,15 +28,7 @@ $NetBSD: patch-src_Alarm.cpp,v 1.3 2018/08/27 15:59:07 bouyer Exp $
              s = "N/A";
          else {
              wxString fmt("%.0f ");
-@@ -106,6 +107,7 @@
-                        m_Radius/1853.0/60.0,
-                        m_Longitude);
-         
-+        dc.SetBrush(*wxTRANSPARENT_BRUSH);
-         if(m_bEnabled) {
-             if(m_bFired)
-                 dc.SetPen(wxPen(*wxRED, 2));
-@@ -151,7 +152,7 @@
+@@ -152,7 +153,7 @@
  
  private:
      double Distance() {
@@ -45,7 +37,7 @@ $NetBSD: patch-src_Alarm.cpp,v 1.3 2018/08/27 15:59:07 bouyer Exp $
              return NAN;
          PlugIn_Position_Fix_Ex lastfix = g_watchdog_pi->LastFix();
  
-@@ -180,7 +181,7 @@
+@@ -181,7 +182,7 @@
  
      bool Test() {
          double error = CourseError();
@@ -54,7 +46,7 @@ $NetBSD: patch-src_Alarm.cpp,v 1.3 2018/08/27 15:59:07 bouyer Exp $
              return m_bNoData;
              
          return error > m_Tolerance;
-@@ -189,7 +190,7 @@
+@@ -190,7 +191,7 @@
      wxString GetStatus() {
          double courseerror = CourseError();
          wxString s;
@@ -63,7 +55,7 @@ $NetBSD: patch-src_Alarm.cpp,v 1.3 2018/08/27 15:59:07 bouyer Exp $
              s = "N/A";
          else {
              wxString fmt("%.0f ");
-@@ -210,7 +211,7 @@
+@@ -211,7 +212,7 @@
          double lat1 = lastfix.Lat, lon1 = lastfix.Lon, lat2, lon2, lat3, lon3;
          double dist = lastfix.Sog;
  
@@ -72,7 +64,7 @@ $NetBSD: patch-src_Alarm.cpp,v 1.3 2018/08/27 15:59:07 bouyer Exp $
              return;
  
          PositionBearingDistanceMercator_Plugin(lat1, lon1, m_Course+m_Tolerance,
-@@ -301,7 +302,7 @@
+@@ -302,7 +303,7 @@
  
      wxString GetStatus() {
          wxString s;
@@ -81,7 +73,7 @@ $NetBSD: patch-src_Alarm.cpp,v 1.3 2018/08/27 15:59:07 bouyer Exp $
              s = "N/A";
          else {
              wxString fmt("%.1f");
-@@ -335,7 +336,7 @@
+@@ -336,7 +337,7 @@
  
      bool Test() {
          double knots = Knots();
@@ -90,7 +82,7 @@ $NetBSD: patch-src_Alarm.cpp,v 1.3 2018/08/27 15:59:07 bouyer Exp $
              return m_bNoData;
  
          if(m_Mode == UNDERSPEED)
-@@ -390,7 +391,7 @@
+@@ -391,7 +392,7 @@
      {
          Alarm::OnTimer( tEvent );
          double sog = g_watchdog_pi->LastFix().Sog;
@@ -99,7 +91,7 @@ $NetBSD: patch-src_Alarm.cpp,v 1.3 2018/08/27 15:59:07 bouyer Exp $
              m_SOGqueue.push_front(sog);
          while((int)m_SOGqueue.size() > m_iAverageTime)
              m_SOGqueue.pop_back();
-@@ -452,12 +453,12 @@
+@@ -453,12 +454,12 @@
          switch(m_Mode) {
          case UNDERSPEED:
          case OVERSPEED:
@@ -114,7 +106,7 @@ $NetBSD: patch-src_Alarm.cpp,v 1.3 2018/08/27 15:59:07 bouyer Exp $
                  return "N/A";
              else
                  return wxString::Format(fmt + " < " + fmt + " < " + fmt,
-@@ -470,7 +471,7 @@
+@@ -471,7 +472,7 @@
      void Render(wdDC &dc, PlugIn_ViewPort &vp) {
          if(m_Mode != DIRECTION)
              return;
@@ -123,7 +115,7 @@ $NetBSD: patch-src_Alarm.cpp,v 1.3 2018/08/27 15:59:07 bouyer Exp $
              return;
          PlugIn_Position_Fix_Ex lastfix = g_watchdog_pi->LastFix();
  
-@@ -644,7 +645,7 @@
+@@ -645,7 +646,7 @@
          s += " ";
          
          double val = Value();
@@ -132,7 +124,7 @@ $NetBSD: patch-src_Alarm.cpp,v 1.3 2018/08/27 15:59:07 bouyer Exp $
              s += "N/A";
          else {
              wxString fmt("%.2f");
-@@ -783,7 +784,7 @@
+@@ -784,7 +785,7 @@
                  value = nmea.Mtw.Temperature;
              break;
          }
@@ -141,7 +133,7 @@ $NetBSD: patch-src_Alarm.cpp,v 1.3 2018/08/27 15:59:07 bouyer Exp $
              return;
  
          m_WeatherDataTime = wxDateTime::Now();
-@@ -965,7 +966,7 @@
+@@ -966,7 +967,7 @@
      bool Test() {
          PlugIn_Position_Fix_Ex lastfix = g_watchdog_pi->LastFix();
  
@@ -150,7 +142,7 @@ $NetBSD: patch-src_Alarm.cpp,v 1.3 2018/08/27 15:59:07 bouyer Exp $
              return m_bNoData;
  
          double lat1 = lastfix.Lat, lon1 = lastfix.Lon, lat2, lon2;
-@@ -980,7 +981,7 @@
+@@ -981,7 +982,7 @@
              while(count < 10 && dist1 > 1e-6) {
                  PositionBearingDistanceMercator_Plugin
                      (lastfix.Lat, lastfix.Lon, lastfix.Cog, dist + dist1, &lat2, &lon2);
@@ -159,7 +151,7 @@ $NetBSD: patch-src_Alarm.cpp,v 1.3 2018/08/27 15:59:07 bouyer Exp $
                      if(dist1 < 1) {
                          m_LandFallTime = wxTimeSpan::Seconds(3600.0 * (dist + dist1) / lastfix.Sog);
                          m_crossinglat1 = lat1, m_crossinglon1 = lon1;
-@@ -1072,7 +1073,7 @@
+@@ -1073,7 +1074,7 @@
  
      void Render(wdDC &dc, PlugIn_ViewPort &vp) {
          PlugIn_Position_Fix_Ex lastfix = g_watchdog_pi->LastFix();
@@ -168,7 +160,7 @@ $NetBSD: patch-src_Alarm.cpp,v 1.3 2018/08/27 15:59:07 bouyer Exp $
              return;
  
          wxPoint r1, r2, r3, r4;
-@@ -1234,7 +1235,7 @@
+@@ -1235,7 +1236,7 @@
      bool Test() {
          PlugIn_Position_Fix_Ex lastfix = g_watchdog_pi->LastFix();
  
@@ -213,5 +205,3 @@ $NetBSD: patch-src_Alarm.cpp,v 1.3 2018/08/27 15:59:07 bouyer Exp $
                  Json::Value jMsg;
                  Json::FastWriter writer;
                  jMsg["Source"] = "WATCHDOG_PI";
---- Alarm.cpp.orig	2018-08-27 16:54:18.043496648 +0200
-+++ Alarm.cpp	2018-08-27 16:54:21.910702531 +0200
