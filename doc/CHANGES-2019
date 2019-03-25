@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1472 2019/03/25 07:02:02 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1473 2019/03/25 08:56:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2360,3 +2360,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/mailman to 2.1.29 [jklos 2019-03-25]
 	Updated x11/xcompmgr to 1.1.8 [wiz 2019-03-25]
 	Updated devel/p5-ExtUtils-CppGuess to 0.13 [wiz 2019-03-25]
+	Updated devel/py-isort to 4.3.16 [adam 2019-03-25]
+	Updated www/py-httptools to 0.0.13 [adam 2019-03-25]
