@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.21 2019/03/25 13:49:55 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2019/03/25 13:56:25 wiz Exp $
 
 BUILDLINK_TREE+=	vala
 
 .if !defined(VALA_BUILDLINK3_MK)
 VALA_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.vala+=	vala>=0.44
+BUILDLINK_API_DEPENDS.vala+=	vala>=0.44.1
 BUILDLINK_PKGSRCDIR.vala?=	../../lang/vala
 
 VALAC=		${PREFIX}/bin/valac-0.44
