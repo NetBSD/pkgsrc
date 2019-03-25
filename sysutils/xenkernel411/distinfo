@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2019/03/07 11:13:26 bouyer Exp $
+$NetBSD: distinfo,v 1.4 2019/03/25 15:28:13 bouyer Exp $
 
 SHA1 (xen411/xen-4.11.1.tar.gz) = aeb45f3b05aaa73dd2ef3a0c533a975495b58c17
 RMD160 (xen411/xen-4.11.1.tar.gz) = c0eaf57cfbd4f762e8367bcf88e99912d2089084
@@ -21,3 +21,4 @@ SHA1 (patch-xen_Rules.mk) = c743dc63f51fc280d529a7d9e08650292c171dac
 SHA1 (patch-xen_arch_x86_Rules.mk) = 0bedfc53a128a87b6a249ae04fbdf6a053bfb70b
 SHA1 (patch-xen_arch_x86_boot_build32.mk) = b82c20de9b86ddaa9d05bbc1ff28f970eb78473c
 SHA1 (patch-xen_tools_symbols.c) = 6070b3b5ccc38a196283cfc1c52f5d87858beb18
+SHA1 (patch-zz-bouyer) = bf11b2b81d5c81992c911f670e75dd3aec5ab609
