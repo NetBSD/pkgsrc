@@ -1,0 +1,2 @@
+This little package provides a constant-time equality function on strings,
+needed to avoid timing attacks.
