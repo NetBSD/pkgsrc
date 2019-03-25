@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1494 2019/03/25 22:52:25 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1495 2019/03/25 22:55:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2385,3 +2385,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated archivers/cabextract to 1.9.1 [wiz 2019-03-25]
 	Updated print/latexmk to 463b [wiz 2019-03-25]
 	Updated security/libssh2 to 1.8.1 [wiz 2019-03-25]
+	Updated devel/lua-lpeg to 1.0.2 [wiz 2019-03-25]
