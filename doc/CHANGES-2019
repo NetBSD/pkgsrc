@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1471 2019/03/25 06:35:16 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1472 2019/03/25 07:02:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2359,3 +2359,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated misc/xfce4-weather-plugin to 0.9.1 [gutteridge 2019-03-24]
 	Updated mail/mailman to 2.1.29 [jklos 2019-03-25]
 	Updated x11/xcompmgr to 1.1.8 [wiz 2019-03-25]
+	Updated devel/p5-ExtUtils-CppGuess to 0.13 [wiz 2019-03-25]
