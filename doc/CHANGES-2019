@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1481 2019/03/25 13:12:09 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1482 2019/03/25 13:26:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2372,3 +2372,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated geography/opencpn-plugin-draw to 1.5_20190311 [bouyer 2019-03-25]
 	Updated geography/opencpn-plugin-watchdog to 20190228 [bouyer 2019-03-25]
 	Updated misc/calibre to 3.40.1 [wiz 2019-03-25]
+	Updated math/coinmp to 1.8.4 [wiz 2019-03-25]
