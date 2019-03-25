@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2019/03/25 09:30:27 jaapb Exp $
+${OCAML_SITELIB}/eqaf/META
+${OCAML_SITELIB}/eqaf/dune-package
+${PLIST.ocaml-opt}${OCAML_SITELIB}/eqaf/eqaf.a
+${OCAML_SITELIB}/eqaf/eqaf.cma
+${OCAML_SITELIB}/eqaf/eqaf.cmi
+${OCAML_SITELIB}/eqaf/eqaf.cmt
+${OCAML_SITELIB}/eqaf/eqaf.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/eqaf/eqaf.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/eqaf/eqaf.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/eqaf/eqaf.cmxs
+${OCAML_SITELIB}/eqaf/eqaf.ml
+${OCAML_SITELIB}/eqaf/eqaf.mli
+${OCAML_SITELIB}/eqaf/opam
+share/doc/eqaf/CHANGES.md
+share/doc/eqaf/LICENSE.md
+share/doc/eqaf/README.md
