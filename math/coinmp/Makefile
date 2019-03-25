@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2016/04/09 11:58:54 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2019/03/25 13:26:12 wiz Exp $
 
-DISTNAME=	CoinMP-1.8.3
+DISTNAME=	CoinMP-1.8.4
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	math
 MASTER_SITES=	http://www.coin-or.org/download/source/CoinMP/
