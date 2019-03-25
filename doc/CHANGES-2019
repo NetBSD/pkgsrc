@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1479 2019/03/25 09:34:19 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.1480 2019/03/25 11:51:37 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2368,3 +2368,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/ocaml-base_bigstring version 0.12.0 [jaapb 2019-03-25]
 	Added devel/ocaml-eqaf version 0.2 [jaapb 2019-03-25]
 	Added devel/ocaml-ppx_sexp_value version 0.12.0 [jaapb 2019-03-25]
+	Updated geography/opencpn to 5.5.0 [bouyer 2019-03-25]
+	Updated geography/opencpn-plugin-draw to 1.5_20190311 [bouyer 2019-03-25]
+	Updated geography/opencpn-plugin-watchdog to 20190228 [bouyer 2019-03-25]
