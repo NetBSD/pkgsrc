@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/03/21 14:56:45 jaapb Exp $
+# $NetBSD: Makefile,v 1.3 2019/03/25 09:38:57 jaapb Exp $
 
 GITHUB_PROJECT=	async_rpc_kernel
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -19,5 +19,5 @@ OCAML_USE_DUNE=	yes
 .include "../../devel/ocaml-async_kernel/buildlink3.mk"
 .include "../../devel/ocaml-core_kernel/buildlink3.mk"
 .include "../../devel/ocaml-ppx_jane/buildlink3.mk"
-#.include "../../net/ocaml-protocol_version_header/buildlink3.mk"
+.include "../../net/ocaml-protocol_version_header/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
