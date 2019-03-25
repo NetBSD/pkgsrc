@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.11 2018/08/27 15:54:09 bouyer Exp $
+$NetBSD: distinfo,v 1.12 2019/03/25 11:44:52 bouyer Exp $
 
-SHA1 (ocpn_draw_pi-1.5_20180827-6c79970ce4aa83f089bcc6c67d559f2731fbac10.tar.gz) = aac0af00d8c8066713481e6b46fb29ab09e6b327
-RMD160 (ocpn_draw_pi-1.5_20180827-6c79970ce4aa83f089bcc6c67d559f2731fbac10.tar.gz) = 8a8b71f2e7d9d2c5f1b88fac32a2207eff523ad8
-SHA512 (ocpn_draw_pi-1.5_20180827-6c79970ce4aa83f089bcc6c67d559f2731fbac10.tar.gz) = b3ee6a4ca06d49c2f4e1aaa5a2ba6ad09768d1a1c919eb4040bd02aa11485108e87d76347e06a3be4a14d9e04256a57f77df175922cf2b3adeccee51ddaa42a2
-Size (ocpn_draw_pi-1.5_20180827-6c79970ce4aa83f089bcc6c67d559f2731fbac10.tar.gz) = 1470795 bytes
+SHA1 (ocpn_draw_pi-1.5_20190311-6b400ef572948cfe1ee6e511a982e50aad4a6427.tar.gz) = df109921cf0ac663e30740e892ac4a7bf3bffcee
+RMD160 (ocpn_draw_pi-1.5_20190311-6b400ef572948cfe1ee6e511a982e50aad4a6427.tar.gz) = 00f89784b38c4bb53cf926a06887d5d8bbac405f
+SHA512 (ocpn_draw_pi-1.5_20190311-6b400ef572948cfe1ee6e511a982e50aad4a6427.tar.gz) = 84296a096dba18299834ae4fda356b8365a8bce5f1fefe761b1931679d2a715f4dcad499ec61e52d7a42234ca279f30db9a9da98ee5ffff4ab2fe5998868178f
+Size (ocpn_draw_pi-1.5_20190311-6b400ef572948cfe1ee6e511a982e50aad4a6427.tar.gz) = 1498840 bytes
 SHA1 (patch-cmake_PluginConfigure.cmake) = 05e92b88ff831ccaece00dbbefc82ce93a0dbf47
 SHA1 (patch-cmake_PluginInstall.cmake) = 43a906b0a75a1e358ccd96992e1c14d526d07b4b
