@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1486 2019/03/25 14:20:46 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1487 2019/03/25 15:29:13 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2377,3 +2377,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/vala to 0.44.1 [wiz 2019-03-25]
 	Updated sysutils/caja-dropbox to 1.22.0nb1 [gutteridge 2019-03-25]
 	Updated audio/openal-soft to 1.19.1 [wiz 2019-03-25]
+	Updated sysutils/xenkernel411 to 4.11.1nb2 [bouyer 2019-03-25]
