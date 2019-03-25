@@ -1,0 +1,3 @@
+Protocol_version_header is a small library that houses magic numbers for various
+protocols. It exposes a negotiate function that is magic number aware, returning
+human readable error messages when negotiation fails.
