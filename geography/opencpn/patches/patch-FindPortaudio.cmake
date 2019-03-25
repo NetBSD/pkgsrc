@@ -1,9 +1,9 @@
-$NetBSD: patch-FindPortaudio.cmake,v 1.2 2015/01/22 12:34:15 bouyer Exp $
+$NetBSD: patch-FindPortaudio.cmake,v 1.3 2019/03/25 11:34:05 bouyer Exp $
 
 really find portaudio in portaudio2 subdir
 
---- FindPortaudio.cmake.orig	2014-05-26 21:26:36.000000000 +0200
-+++ FindPortaudio.cmake	2014-05-26 21:30:22.000000000 +0200
+--- cmake/FindPortaudio.cmake.orig	2014-05-26 21:26:36.000000000 +0200
++++ cmake/FindPortaudio.cmake	2014-05-26 21:30:22.000000000 +0200
 @@ -45,24 +45,13 @@
  set(PORTAUDIO_FOUND TRUE)
  else (PORTAUDIO_LIBRARIES AND PORTAUDIO_INCLUDE_DIRS)
