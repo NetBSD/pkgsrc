@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2019/03/25 09:19:32 jaapb Exp $
+${OCAML_SITELIB}/protocol_version_header/META
+${OCAML_SITELIB}/protocol_version_header/dune-package
+${OCAML_SITELIB}/protocol_version_header/known_protocol.ml
+${OCAML_SITELIB}/protocol_version_header/known_protocol.mli
+${OCAML_SITELIB}/protocol_version_header/opam
+${PLIST.ocaml-opt}${OCAML_SITELIB}/protocol_version_header/protocol_version_header.a
+${OCAML_SITELIB}/protocol_version_header/protocol_version_header.cma
+${OCAML_SITELIB}/protocol_version_header/protocol_version_header.cmi
+${OCAML_SITELIB}/protocol_version_header/protocol_version_header.cmt
+${OCAML_SITELIB}/protocol_version_header/protocol_version_header.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/protocol_version_header/protocol_version_header.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/protocol_version_header/protocol_version_header.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/protocol_version_header/protocol_version_header.cmxs
+${OCAML_SITELIB}/protocol_version_header/protocol_version_header.ml
+${OCAML_SITELIB}/protocol_version_header/protocol_version_header.mli
+${OCAML_SITELIB}/protocol_version_header/protocol_version_header__.cmi
+${OCAML_SITELIB}/protocol_version_header/protocol_version_header__.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/protocol_version_header/protocol_version_header__.cmx
+${OCAML_SITELIB}/protocol_version_header/protocol_version_header__.ml
+${OCAML_SITELIB}/protocol_version_header/protocol_version_header__Known_protocol.cmi
+${OCAML_SITELIB}/protocol_version_header/protocol_version_header__Known_protocol.cmt
+${OCAML_SITELIB}/protocol_version_header/protocol_version_header__Known_protocol.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/protocol_version_header/protocol_version_header__Known_protocol.cmx
+share/doc/protocol_version_header/LICENSE.md
+share/doc/protocol_version_header/README.org
