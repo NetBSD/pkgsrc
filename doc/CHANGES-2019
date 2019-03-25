@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1476 2019/03/25 09:19:42 jaapb Exp $
+$NetBSD: CHANGES-2019,v 1.1477 2019/03/25 09:24:24 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2365,3 +2365,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/ocaml-spawn version 0.12.0 [jaapb 2019-03-25]
 	Added devel/ocaml-core version 0.12.0 [jaapb 2019-03-25]
 	Added net/ocaml-protocol_version_header version 0.12.0 [jaapb 2019-03-25]
+	Added devel/ocaml-base_bigstring version 0.12.0 [jaapb 2019-03-25]
