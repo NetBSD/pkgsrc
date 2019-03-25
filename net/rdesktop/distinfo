@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.25 2019/01/06 16:46:51 tnn Exp $
+$NetBSD: distinfo,v 1.26 2019/03/25 19:56:08 markd Exp $
 
 SHA1 (rdesktop-1.8.4.tar.gz) = b937573e3f76a494a2b9092a440c9ea3e862d1f3
 RMD160 (rdesktop-1.8.4.tar.gz) = 5ad95433c369a9cff11b765e181d97ac41bf8582
 SHA512 (rdesktop-1.8.4.tar.gz) = 9e4f6723eb0baab31ad11f1c5c29a4753c655386c2381d01646b7834c959ffc2ec1e0c2f3f73626255aa018889709758d97387c7563da98bb1b7f269610929ae
 Size (rdesktop-1.8.4.tar.gz) = 321448 bytes
 SHA1 (patch-aa) = a56f15d51e32b3e53fd1e42736944a6805cbe9e0
+SHA1 (patch-ssl.c) = 491b8d8dc8b39d013469fc803177d8163dd42fa3
