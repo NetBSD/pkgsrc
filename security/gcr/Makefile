@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2018/12/11 12:36:28 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2019/03/25 13:56:27 wiz Exp $
 
 DISTNAME=		gcr-3.28.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gcr/3.28/}
 EXTRACT_SUFX=		.tar.xz
