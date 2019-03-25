@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2017/12/04 01:52:58 maya Exp $
+@comment $NetBSD: PLIST,v 1.28 2019/03/25 01:52:02 jklos Exp $
 lib/mailman/Mailman/Archiver/Archiver.py
 lib/mailman/Mailman/Archiver/Archiver.pyc
 lib/mailman/Mailman/Archiver/HyperArch.py
@@ -320,6 +320,7 @@ lib/mailman/bin/list_admins
 lib/mailman/bin/list_lists
 lib/mailman/bin/list_members
 lib/mailman/bin/list_owners
+lib/mailman/bin/mailman-config
 lib/mailman/bin/mailmanctl
 lib/mailman/bin/mmsitepass
 lib/mailman/bin/msgfmt.py
@@ -384,6 +385,8 @@ lib/mailman/messages/de/LC_MESSAGES/mailman.po
 lib/mailman/messages/de/README.de
 lib/mailman/messages/el/LC_MESSAGES/mailman.mo
 lib/mailman/messages/el/LC_MESSAGES/mailman.po
+lib/mailman/messages/eo/LC_MESSAGES/mailman.mo
+lib/mailman/messages/eo/LC_MESSAGES/mailman.po
 lib/mailman/messages/es/LC_MESSAGES/mailman.mo
 lib/mailman/messages/es/LC_MESSAGES/mailman.po
 lib/mailman/messages/es/README.es
@@ -825,6 +828,41 @@ lib/mailman/templates/en/unsub.txt
 lib/mailman/templates/en/unsubauth.txt
 lib/mailman/templates/en/userpass.txt
 lib/mailman/templates/en/verify.txt
+lib/mailman/templates/eo/admlogin.html
+lib/mailman/templates/eo/approve.txt
+lib/mailman/templates/eo/archidxentry.html
+lib/mailman/templates/eo/archidxfoot.html
+lib/mailman/templates/eo/archidxhead.html
+lib/mailman/templates/eo/archlistend.html
+lib/mailman/templates/eo/archliststart.html
+lib/mailman/templates/eo/archtoc.html
+lib/mailman/templates/eo/archtocentry.html
+lib/mailman/templates/eo/archtocnombox.html
+lib/mailman/templates/eo/article.html
+lib/mailman/templates/eo/bounce.txt
+lib/mailman/templates/eo/cronpass.txt
+lib/mailman/templates/eo/disabled.txt
+lib/mailman/templates/eo/emptyarchive.html
+lib/mailman/templates/eo/help.txt
+lib/mailman/templates/eo/invite.txt
+lib/mailman/templates/eo/listinfo.html
+lib/mailman/templates/eo/masthead.txt
+lib/mailman/templates/eo/nomoretoday.txt
+lib/mailman/templates/eo/options.html
+lib/mailman/templates/eo/postack.txt
+lib/mailman/templates/eo/postauth.txt
+lib/mailman/templates/eo/postheld.txt
+lib/mailman/templates/eo/private.html
+lib/mailman/templates/eo/probe.txt
+lib/mailman/templates/eo/refuse.txt
+lib/mailman/templates/eo/roster.html
+lib/mailman/templates/eo/subauth.txt
+lib/mailman/templates/eo/subscribe.html
+lib/mailman/templates/eo/subscribeack.txt
+lib/mailman/templates/eo/unsub.txt
+lib/mailman/templates/eo/unsubauth.txt
+lib/mailman/templates/eo/userpass.txt
+lib/mailman/templates/eo/verify.txt
 lib/mailman/templates/es/admindbdetails.html
 lib/mailman/templates/es/admindbpreamble.html
 lib/mailman/templates/es/admindbsummary.html
@@ -2130,6 +2168,7 @@ lib/mailman/tests/bounces/dumbass_01.txt
 lib/mailman/tests/bounces/exim_01.txt
 lib/mailman/tests/bounces/groupwise_01.txt
 lib/mailman/tests/bounces/groupwise_02.txt
+lib/mailman/tests/bounces/groupwise_03.txt
 lib/mailman/tests/bounces/hotpop_01.txt
 lib/mailman/tests/bounces/llnl_01.txt
 lib/mailman/tests/bounces/microsoft_01.txt
