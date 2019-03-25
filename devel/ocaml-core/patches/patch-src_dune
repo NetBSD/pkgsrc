@@ -1,0 +1,16 @@
+$NetBSD: patch-src_dune,v 1.1 2019/03/25 09:14:48 jaapb Exp $
+
+Remove unknown argument
+--- src/dune.orig	2019-02-22 16:22:56.000000000 +0000
++++ src/dune
+@@ -11,7 +11,7 @@
+   pthread_np_stubs recvmmsg signal_stubs time_stamp_counter_stubs timespec
+   unix_stubs unix_time_stubs nss_stubs)
+  (preprocessor_deps config.h)
+- (preprocess (pps ppx_jane -check-doc-comments)))
++ (preprocess (pps ppx_jane)))
+ 
+ (alias (name runtest) (deps (:first_dep nss_stubs.c) nss_stubs.cinaps)
+- (action (bash "%{bin:cinaps} %{first_dep}")))
+\ No newline at end of file
++ (action (bash "%{bin:cinaps} %{first_dep}")))
