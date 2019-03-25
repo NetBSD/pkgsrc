@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2019/03/13 08:56:47 adam Exp $
+# $NetBSD: Makefile,v 1.12 2019/03/25 08:54:24 adam Exp $
 
-DISTNAME=	isort-4.3.15
+DISTNAME=	isort-4.3.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/isort/}
@@ -9,6 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/timothycrosley/isort
 COMMENT=	Python utility / library to sort imports
 LICENSE=	mit
+
+DEPENDS+=	${PYPKGPREFIX}-lama-[0-9]*:../../devel/py-lama
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} == 27
@@ -21,6 +24,9 @@ USE_LANGUAGES=	# none
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} isort isort-${PYVERSSUFFIX} || ${TRUE}
+
+do-test:
+	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} test_isort.py
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
