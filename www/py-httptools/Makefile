@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2018/04/03 17:59:31 adam Exp $
+# $NetBSD: Makefile,v 1.4 2019/03/25 08:56:23 adam Exp $
 
-DISTNAME=	httptools-0.0.11
+DISTNAME=	httptools-0.0.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httptools/}
