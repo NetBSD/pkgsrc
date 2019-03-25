@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18890 2019/03/25 13:50:05 wiz Exp $
+$NetBSD: TODO,v 1.18891 2019/03/25 14:01:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -464,7 +464,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cgen-20160301
 	o cgic-207
 	o checkbot-1.80
-	o cheese-2.32.0 [GNOME 2.32]
+	o cheese-2.32.0
 	o cheese-3.16.1
 	o cherokee-1.2.103 [pkg/48268]
 	o chimera-1.30a
@@ -582,7 +582,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o evolution-couchdb-0.4.5
 	o evolution-data-server-3.16.2
 	o evolution-exchange-3.5.2
-	o evolution-mapi-0.32.2 [GNOME 2.32]
+	o evolution-mapi-0.32.2
 	o ex-20050325
 	o exaile-3.4.4
 	o exiv2-0.27.0
@@ -635,11 +635,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gdeskcal-1.01
 	o gdk-pixbuf2-2.38.0
 	o gdl-3.16.0
-	o gdm-2.32.2 [GNOME 2.32]
+	o gdm-2.32.2
 	o gdm-3.0.3
 	o geany-plugins-1.34.1
 	o gecko-mediaplayer-1.0.9b
-	o gedit-plugins-2.32.0 [GNOME 2.32]
+	o gedit-plugins-2.32.0
 	o genius-1.0.21
 	o gens-2.15.5
 	o gentoo-0.20.4
@@ -655,48 +655,48 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gkrellm-snmp-1.0
 	o gkrellm-weather-2.0.8 [pkg/51463]
 	o glade3-3.18.3
-	o glade3-3.8.5 [GNOME 2.34]
+	o glade3-3.8.5
 	o gle-4.2.5 [wip]
 	o glib-networking-2.58.0
 	o glib2-2.58.3
 	o glib2-tools-2.58.3
 	o glibmm-2.58.0
 	o gliv-1.9.7
-	o glom-1.14.2 [GNOME 2.26]
+	o glom-1.14.2
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-3.30.1
 	o gnome-applets-3.14.0
-	o gnome-bluetooth-2.30.0 [GNOME 2.30]
+	o gnome-bluetooth-2.30.0
 	o gnome-chemistry-utils-0.14.11
 	o gnome-chess-3.12.3
-	o gnome-color-manager-2.32.0 [GNOME 2.32]
+	o gnome-color-manager-2.32.0
 	o gnome-commander-1.6.4
 	o gnome-control-center-3.8.3
-	o gnome-devel-docs-2.30.0 [GNOME 2.30]
-	o gnome-disk-utility-2.32.0 [GNOME 2.32]
+	o gnome-devel-docs-2.30.0
+	o gnome-disk-utility-2.32.0
 	o gnome-games-3.6.1
-	o gnome-games-extra-data-2.30.0 [GNOME 2.30]
+	o gnome-games-extra-data-2.30.0
 	o gnome-keyring-3.20.1 [wip]
-	o gnome-media-2.32.0 [GNOME 2.32]
+	o gnome-media-2.32.0
 	o gnome-media-3.4.0
 	o gnome-menus-3.8.0
-	o gnome-netstatus-2.28.2 [GNOME 2.32]
-	o gnome-nettool-2.32.0 [GNOME 2.32]
+	o gnome-netstatus-2.28.2
+	o gnome-nettool-2.32.0
 	o gnome-nettool-3.8.1
-	o gnome-packagekit-2.32.0 [GNOME 2.32]
+	o gnome-packagekit-2.32.0
 	o gnome-packagekit-3.2.1
 	o gnome-panel-3.14.0
-	o gnome-pilot-2.32.1 [GNOME 2.32]
-	o gnome-pilot-conduits-2.32.1 [GNOME 2.32]
-	o gnome-power-manager-2.32.0 [GNOME 2.32, wants UPower]
+	o gnome-pilot-2.32.1
+	o gnome-pilot-conduits-2.32.1
+	o gnome-power-manager-2.32.0 [wants UPower]
 	o gnome-power-manager-3.4.0 [wants UPower]
-	o gnome-session-2.32.1 [GNOME 2.32, wants UPower]
+	o gnome-session-2.32.1 [wants UPower]
 	o gnome-settings-daemon-3.8.3
 	o gnome-subtitles-1.3
-	o gnome-system-tools-2.32.0 [GNOME 2.32]
+	o gnome-system-tools-2.32.0
 	o gnome-system-tools-3.0.0
-	o gnome-user-share-2.30.2 [GNOME 2.32]
+	o gnome-user-share-2.30.2
 	o gnomeicu-0.99.16
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
@@ -710,8 +710,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnustep-objc-1.8
 	o gob-2.0.19
 	o gobby-0.5.0
-	o gobject-introspection-1.58.3
-	o gok-2.30.1 [GNOME 2.32]
+	o gobject-introspection-1.58.3 [needs glib2-2.58]
+	o gok-2.30.1
 	o golem-0.0.6
 	o goocanvas-2.0.2
 	o gossip-0.31
@@ -734,7 +734,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gtkglarea-2.1.0
 	o gtklevel9-5.1
 	o gtkmagnetic-23
-	o gtkmm-documentation-2.16.0 [GNOME 2.26]
+	o gtkmm-documentation-2.16.0
 	o gtksourceview4-4.0.3
 	o gtl-3.6
 	o gtodo-0.16.0rc2
@@ -745,7 +745,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gxine-0.99.9
 	o gxmessage-3.4.3
 	o h323plus-1.24.0 [replaces openh323, from http://www.h323plus.org/]
-	o hamster-applet-2.32.1 [GNOME 2.32]
+	o hamster-applet-2.32.1
 	o hanzim-3.5
 	o harminv-1.4
 	o haskell-mode-13.20
@@ -908,7 +908,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmediawiki-4.14.0
 	o libmilter-8.16.0.16
 	o libmtag-0.3.6
-	o liboobs-2.32.0 [GNOME 2.32]
+	o liboobs-2.32.0
 	o liboop-1.0.1
 	o libpcap-1.9.0
 	o libpgm-5.2.122
@@ -993,7 +993,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mono2-4.0.4.1
 	o monodevelop-5.10.1.6
 	o mopher-0.6.0
-	o moserial-2.30.0 [GNOME 2.30]
+	o moserial-2.30.0
 	o mousetweaks-3.12.0 [wip]
 	o mpdas-0.4.1
 	o mserv-devel-0.41
@@ -1009,7 +1009,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nant-0.92
 	o nap-1.5.3
 	o nas-auscope-1.9.4
-	o nautilus-actions-2.30.3 [GNOME 2.30]
+	o nautilus-actions-2.30.3
 	o ncview-2.1.6
 	o nessus-4.4.1
 	o netbt-hcidump-5.37
@@ -1064,7 +1064,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pcc-1.1.0
 	o pcc-current-20160305
 	o pdmenu-1.2.87
-	o pessulus-2.30.3 [GNOME 2.28]
+	o pessulus-2.30.3
 	o pflogsumm-1.1.5
 	o pgadmin4-1.0
 	o pgbuildfarm-4.17
@@ -1196,7 +1196,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ruby-redmine-4.0.1
 	o ruby-review-1.4.0 [wip]
 	o rump-20131213
-	o sabayon-2.30.1 [GNOME 2.30]
+	o sabayon-2.30.1
 	o sablecc-3.7
 	o sarg-2.2.5
 	o scew-1.1.7
@@ -1273,7 +1273,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o swfdec-gnome-2.30.1
 	o swt-4.5
 	o sysinfo-4.2.2
-	o system-tools-backends-2.10.1 [needs polkit|GNOME 2.30]
+	o system-tools-backends-2.10.1
 	o systrace-1.6e
 	o t-prot-3.4
 	o tacacs-4.0.4.29a
