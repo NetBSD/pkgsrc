@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2018/12/18 09:57:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/03/26 11:14:17 adam Exp $
 qt5/doc/qtdoc.qch
 qt5/doc/qtdoc/accelerators.html
 qt5/doc/qtdoc/accessibility.html
@@ -109,7 +109,7 @@ qt5/doc/qtdoc/images/open-project.png
 qt5/doc/qtdoc/images/project-view-2.png
 qt5/doc/qtdoc/images/project-view.png
 qt5/doc/qtdoc/images/project-wizard.png
-qt5/doc/qtdoc/images/qml-extending-types.png
+qt5/doc/qtdoc/images/qml-extending-types.gif
 qt5/doc/qtdoc/images/qml-uses-animation.png
 qt5/doc/qtdoc/images/qml-uses-integratingjs.png
 qt5/doc/qtdoc/images/qml-uses-layouts-anchors.png
@@ -550,6 +550,7 @@ qt5/doc/qtdoc/qtexamples.html
 qt5/doc/qtdoc/qtexamplesandtutorials.html
 qt5/doc/qtdoc/qtmain.html
 qt5/doc/qtdoc/qtmodules.html
+qt5/doc/qtdoc/qtopenglextensions.html
 qt5/doc/qtdoc/qtquick-debugging.html
 qt5/doc/qtdoc/qtquick-deployment.html
 qt5/doc/qtdoc/qtquick-internationalization.html
@@ -606,6 +607,7 @@ qt5/doc/qtdoc/uic.html
 qt5/doc/qtdoc/unicode.html
 qt5/doc/qtdoc/unix-signals.html
 qt5/doc/qtdoc/vxworks.html
+qt5/doc/qtdoc/wasm.html
 qt5/doc/qtdoc/webgl.html
 qt5/doc/qtdoc/whatsnew50.html
 qt5/doc/qtdoc/whatsnew51.html
