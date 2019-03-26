@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2019/03/02 13:23:36 adam Exp $
+# $NetBSD: Makefile,v 1.5 2019/03/26 20:54:55 adam Exp $
 
 .include "dist.mk"
 
 PKGNAME=	python37-${PY_DISTVERSION}
-PKGREVISION=	1
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -105,52 +104,52 @@ PRINT_PLIST_AWK+=	{ gsub(/python${PY_VER_SUFFIX}/, \
 TEST_TARGET=	test
 INSTALL_TARGET=	altinstall
 
-REPLACE_INTERPRETER+=	py37
-REPLACE.py37.old=	.*python[^ ]*
-REPLACE.py37.new=	${PREFIX}/bin/python${PY_VER_SUFFIX}
-REPLACE_FILES.py37+=	Lib/base64.py
-REPLACE_FILES.py37+=	Lib/cProfile.py
-REPLACE_FILES.py37+=	Lib/cgi.py
-REPLACE_FILES.py37+=	Lib/encodings/rot_13.py
-REPLACE_FILES.py37+=	Lib/idlelib/pyshell.py
-REPLACE_FILES.py37+=	Lib/keyword.py
-REPLACE_FILES.py37+=	Lib/lib2to3/pgen2/token.py
-REPLACE_FILES.py37+=	Lib/lib2to3/tests/data/different_encoding.py
-REPLACE_FILES.py37+=	Lib/lib2to3/tests/data/false_encoding.py
-REPLACE_FILES.py37+=	Lib/lib2to3/tests/pytree_idempotency.py
-REPLACE_FILES.py37+=	Lib/pdb.py
-REPLACE_FILES.py37+=	Lib/platform.py
-REPLACE_FILES.py37+=	Lib/profile.py
-REPLACE_FILES.py37+=	Lib/pydoc.py
-REPLACE_FILES.py37+=	Lib/quopri.py
-REPLACE_FILES.py37+=	Lib/smtpd.py
-REPLACE_FILES.py37+=	Lib/smtplib.py
-REPLACE_FILES.py37+=	Lib/symbol.py
-REPLACE_FILES.py37+=	Lib/tabnanny.py
-REPLACE_FILES.py37+=	Lib/tarfile.py
-REPLACE_FILES.py37+=	Lib/test/bisect.py
-REPLACE_FILES.py37+=	Lib/test/crashers/recursive_call.py
-REPLACE_FILES.py37+=	Lib/test/curses_tests.py
-REPLACE_FILES.py37+=	Lib/test/re_tests.py
-REPLACE_FILES.py37+=	Lib/test/regrtest.py
-REPLACE_FILES.py37+=	Lib/timeit.py
-REPLACE_FILES.py37+=	Lib/trace.py
-REPLACE_FILES.py37+=	Lib/turtledemo/__main__.py
-REPLACE_FILES.py37+=	Lib/turtledemo/bytedesign.py
-REPLACE_FILES.py37+=	Lib/turtledemo/clock.py
-REPLACE_FILES.py37+=	Lib/turtledemo/forest.py
-REPLACE_FILES.py37+=	Lib/turtledemo/fractalcurves.py
-REPLACE_FILES.py37+=	Lib/turtledemo/lindenmayer.py
-REPLACE_FILES.py37+=	Lib/turtledemo/minimal_hanoi.py
-REPLACE_FILES.py37+=	Lib/turtledemo/paint.py
-REPLACE_FILES.py37+=	Lib/turtledemo/peace.py
-REPLACE_FILES.py37+=	Lib/turtledemo/penrose.py
-REPLACE_FILES.py37+=	Lib/turtledemo/planet_and_moon.py
-REPLACE_FILES.py37+=	Lib/turtledemo/sorting_animate.py
-REPLACE_FILES.py37+=	Lib/turtledemo/tree.py
-REPLACE_FILES.py37+=	Lib/turtledemo/yinyang.py
-REPLACE_FILES.py37+=	Lib/uu.py
-REPLACE_FILES.py37+=	Lib/webbrowser.py
+REPLACE_INTERPRETER+=	python
+REPLACE.python.old=	.*python[^ ]*
+REPLACE.python.new=	${PREFIX}/bin/python${PY_VER_SUFFIX}
+REPLACE_FILES.python+=	Lib/base64.py
+REPLACE_FILES.python+=	Lib/cProfile.py
+REPLACE_FILES.python+=	Lib/cgi.py
+REPLACE_FILES.python+=	Lib/encodings/rot_13.py
+REPLACE_FILES.python+=	Lib/idlelib/pyshell.py
+REPLACE_FILES.python+=	Lib/keyword.py
+REPLACE_FILES.python+=	Lib/lib2to3/pgen2/token.py
+REPLACE_FILES.python+=	Lib/lib2to3/tests/data/different_encoding.py
+REPLACE_FILES.python+=	Lib/lib2to3/tests/data/false_encoding.py
+REPLACE_FILES.python+=	Lib/lib2to3/tests/pytree_idempotency.py
+REPLACE_FILES.python+=	Lib/pdb.py
+REPLACE_FILES.python+=	Lib/platform.py
+REPLACE_FILES.python+=	Lib/profile.py
+REPLACE_FILES.python+=	Lib/pydoc.py
+REPLACE_FILES.python+=	Lib/quopri.py
+REPLACE_FILES.python+=	Lib/smtpd.py
+REPLACE_FILES.python+=	Lib/smtplib.py
+REPLACE_FILES.python+=	Lib/symbol.py
+REPLACE_FILES.python+=	Lib/tabnanny.py
+REPLACE_FILES.python+=	Lib/tarfile.py
+REPLACE_FILES.python+=	Lib/test/bisect_cmd.py
+REPLACE_FILES.python+=	Lib/test/crashers/recursive_call.py
+REPLACE_FILES.python+=	Lib/test/curses_tests.py
+REPLACE_FILES.python+=	Lib/test/re_tests.py
+REPLACE_FILES.python+=	Lib/test/regrtest.py
+REPLACE_FILES.python+=	Lib/timeit.py
+REPLACE_FILES.python+=	Lib/trace.py
+REPLACE_FILES.python+=	Lib/turtledemo/__main__.py
+REPLACE_FILES.python+=	Lib/turtledemo/bytedesign.py
+REPLACE_FILES.python+=	Lib/turtledemo/clock.py
+REPLACE_FILES.python+=	Lib/turtledemo/forest.py
+REPLACE_FILES.python+=	Lib/turtledemo/fractalcurves.py
+REPLACE_FILES.python+=	Lib/turtledemo/lindenmayer.py
+REPLACE_FILES.python+=	Lib/turtledemo/minimal_hanoi.py
+REPLACE_FILES.python+=	Lib/turtledemo/paint.py
+REPLACE_FILES.python+=	Lib/turtledemo/peace.py
+REPLACE_FILES.python+=	Lib/turtledemo/penrose.py
+REPLACE_FILES.python+=	Lib/turtledemo/planet_and_moon.py
+REPLACE_FILES.python+=	Lib/turtledemo/sorting_animate.py
+REPLACE_FILES.python+=	Lib/turtledemo/tree.py
+REPLACE_FILES.python+=	Lib/turtledemo/yinyang.py
+REPLACE_FILES.python+=	Lib/uu.py
+REPLACE_FILES.python+=	Lib/webbrowser.py
 
 # XXX: It might be needed to add manually more paths like ${PREFIX}/qt5/lib
 # Test: python -c 'from ctypes.util import find_library; print(find_library("ffi"));'

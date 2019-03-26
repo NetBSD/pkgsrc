@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/12/31 10:07:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/03/26 20:54:55 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 ${PLIST.pymalloc}bin/python${PY_VER_SUFFIX}
@@ -1374,8 +1374,8 @@ lib/python${PY_VER_SUFFIX}/ensurepip/__init__.pyo
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.py
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyo
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-18.1-py2.py3-none-any.whl
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-40.6.2-py2.py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-19.0.3-py2.py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-40.8.0-py2.py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyo
@@ -2641,9 +2641,9 @@ lib/python${PY_VER_SUFFIX}/test/badsyntax_future7.py
 lib/python${PY_VER_SUFFIX}/test/badsyntax_future8.py
 lib/python${PY_VER_SUFFIX}/test/badsyntax_future9.py
 lib/python${PY_VER_SUFFIX}/test/badsyntax_pep3120.py
-lib/python${PY_VER_SUFFIX}/test/bisect.py
-lib/python${PY_VER_SUFFIX}/test/bisect.pyc
-lib/python${PY_VER_SUFFIX}/test/bisect.pyo
+lib/python${PY_VER_SUFFIX}/test/bisect_cmd.py
+lib/python${PY_VER_SUFFIX}/test/bisect_cmd.pyc
+lib/python${PY_VER_SUFFIX}/test/bisect_cmd.pyo
 lib/python${PY_VER_SUFFIX}/test/bytecode_helper.py
 lib/python${PY_VER_SUFFIX}/test/bytecode_helper.pyc
 lib/python${PY_VER_SUFFIX}/test/bytecode_helper.pyo
@@ -2686,6 +2686,7 @@ lib/python${PY_VER_SUFFIX}/test/cjkencodings/shift_jis-utf8.txt
 lib/python${PY_VER_SUFFIX}/test/cjkencodings/shift_jis.txt
 lib/python${PY_VER_SUFFIX}/test/cjkencodings/shift_jisx0213-utf8.txt
 lib/python${PY_VER_SUFFIX}/test/cjkencodings/shift_jisx0213.txt
+lib/python${PY_VER_SUFFIX}/test/clinic.test
 lib/python${PY_VER_SUFFIX}/test/cmath_testcases.txt
 lib/python${PY_VER_SUFFIX}/test/coding20731.py
 lib/python${PY_VER_SUFFIX}/test/coding20731.pyc
@@ -3122,6 +3123,7 @@ lib/python${PY_VER_SUFFIX}/test/support/script_helper.pyo
 lib/python${PY_VER_SUFFIX}/test/support/testresult.py
 lib/python${PY_VER_SUFFIX}/test/support/testresult.pyc
 lib/python${PY_VER_SUFFIX}/test/support/testresult.pyo
+lib/python${PY_VER_SUFFIX}/test/talos-2019-0758.pem
 lib/python${PY_VER_SUFFIX}/test/test___all__.py
 lib/python${PY_VER_SUFFIX}/test/test___all__.pyc
 lib/python${PY_VER_SUFFIX}/test/test___all__.pyo
