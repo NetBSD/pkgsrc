@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1504 2019/03/26 11:16:06 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1505 2019/03/26 11:48:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2396,3 +2396,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/yelp-xsl to 3.32.0 [triaxx 2019-03-26]
 	Updated x11/qt5 to 5.12.2 [adam 2019-03-26]
 	Updated misc/stellarium to 0.19.0 [adam 2019-03-26]
+	Updated devel/tevent to 0.10.0 [adam 2019-03-26]
+	Updated databases/tdb to 1.4.0 [adam 2019-03-26]
