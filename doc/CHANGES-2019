@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1499 2019/03/25 23:18:10 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1500 2019/03/26 06:20:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2390,3 +2390,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/musicpd to 0.21.6 [wiz 2019-03-25]
 	Updated devel/py-scandir to 1.10.0 [wiz 2019-03-25]
 	Updated devel/talloc to 2.2.0 [wiz 2019-03-25]
+	Updated devel/py-mercurial to 4.9.1 [wiz 2019-03-26]
