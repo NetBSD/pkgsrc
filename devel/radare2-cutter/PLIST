@@ -1,8 +1,23 @@
-@comment $NetBSD: PLIST,v 1.1 2018/02/19 01:48:57 kamil Exp $
-bin/cutter
-share/applications/cutter.desktop
-share/doc/radare2-cutter/Common-errors.md
-share/doc/radare2-cutter/Compiling-on-Windows.md
-share/doc/radare2-cutter/Compiling-with-CMake.md
-share/doc/radare2-cutter/screenshot.png
+@comment $NetBSD: PLIST,v 1.2 2019/03/26 19:40:08 ryoon Exp $
+bin/Cutter
+share/doc/radare2-cutter/Doxyfile
+share/doc/radare2-cutter/Makefile
+share/doc/radare2-cutter/apidoc.py
+share/doc/radare2-cutter/source/api.rst
+share/doc/radare2-cutter/source/building.rst
+share/doc/radare2-cutter/source/code.rst
+share/doc/radare2-cutter/source/common-errors.rst
+share/doc/radare2-cutter/source/conf.py
+share/doc/radare2-cutter/source/images/cutter_path_settings.png
+share/doc/radare2-cutter/source/images/screenshot.png
+share/doc/radare2-cutter/source/index.rst
+share/doc/radare2-cutter/source/plugins.rst
+share/doc/radare2-cutter/source/plugins/disasm-dynamic.png
+share/doc/radare2-cutter/source/plugins/disasm-static.png
+share/doc/radare2-cutter/source/plugins/mydockwidget-action.png
+share/doc/radare2-cutter/source/plugins/mydockwidget.png
+share/doc/radare2-cutter/source/plugins/preferences-plugins.png
+share/doc/radare2-cutter/source/plugins/tutorial-python.rst
+share/doc/radare2-cutter/source/shortcuts.rst
 share/icons/hicolor/scalable/apps/cutter.svg
+@pkgdir share/applications
