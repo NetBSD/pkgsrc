@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.85 2019/03/15 13:59:05 nia Exp $
+# $NetBSD: Makefile,v 1.86 2019/03/26 07:12:07 wiz Exp $
 
 DISTNAME=	simgear-2018.3.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=flightgear/release-2018.3/}
 EXTRACT_SUFX=	.tar.bz2
