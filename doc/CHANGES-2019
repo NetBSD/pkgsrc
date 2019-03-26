@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1513 2019/03/26 21:01:00 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.1514 2019/03/26 21:29:46 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2409,3 +2409,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-xdis to 3.9.0 [adam 2019-03-26]
 	Updated lang/py-uncompyle6 to 3.2.6 [adam 2019-03-26]
 	Updated www/apache-tomcat9 to 9.0.17 [ryoon 2019-03-26]
+	Updated lang/py37-html-docs to 3.7.3 [leot 2019-03-26]
