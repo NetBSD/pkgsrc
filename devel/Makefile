@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2845 2019/03/25 09:35:09 jaapb Exp $
+# $NetBSD: Makefile,v 1.2846 2019/03/26 16:36:02 he Exp $
 #
 
 COMMENT=	Development utilities
@@ -1722,6 +1722,7 @@ SUBDIR+=	p5-Test-Approx
 SUBDIR+=	p5-Test-Assertions
 SUBDIR+=	p5-Test-BDD-Cucumber
 SUBDIR+=	p5-Test-Base
+SUBDIR+=	p5-Test-Bits
 SUBDIR+=	p5-Test-CPAN-Meta
 SUBDIR+=	p5-Test-CPAN-Meta-YAML
 SUBDIR+=	p5-Test-CheckDeps
@@ -1750,6 +1751,7 @@ SUBDIR+=	p5-Test-File-ShareDir
 SUBDIR+=	p5-Test-Fixture-DBIC-Schema
 SUBDIR+=	p5-Test-HTTP-LocalServer
 SUBDIR+=	p5-Test-Harness
+SUBDIR+=	p5-Test-HexDifferences
 SUBDIR+=	p5-Test-HexString
 SUBDIR+=	p5-Test-Identity
 SUBDIR+=	p5-Test-InDistDir
