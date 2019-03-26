@@ -1,11 +1,11 @@
-$NetBSD: patch-libr_socket_run.c,v 1.3 2018/09/08 15:14:56 khorben Exp $
+$NetBSD: patch-libr_socket_run.c,v 1.4 2019/03/26 19:29:53 ryoon Exp $
 
 Support SunOS.
 
---- libr/socket/run.c.orig	2018-03-05 17:12:35.000000000 +0000
+--- libr/socket/run.c.orig	2019-02-19 12:35:24.000000000 +0000
 +++ libr/socket/run.c
-@@ -278,7 +278,7 @@ static void restore_saved_fd(int saved, 
- }
+@@ -286,7 +286,7 @@ static void restore_saved_fd(int saved, 
+ #endif
  
  static int handle_redirection_proc(const char *cmd, bool in, bool out, bool err) {
 -#if HAVE_PTY
