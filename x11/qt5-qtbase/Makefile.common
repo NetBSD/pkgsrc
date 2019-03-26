@@ -1,9 +1,10 @@
-# $NetBSD: Makefile.common,v 1.29 2018/12/18 09:57:18 adam Exp $
+# $NetBSD: Makefile.common,v 1.30 2019/03/26 11:14:16 adam Exp $
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
 # used by x11/qt5-psql/Makefile
 # used by x11/qt5-qtbase/Makefile
 # used by x11/qt5-qtcharts/Makefile
+# used by x11/qt5-qtconnectivity/Makefile
 # used by x11/qt5-qtdeclarative/Makefile
 # used by x11/qt5-qtdoc/Makefile
 # used by x11/qt5-qtgraphicaleffects/Makefile
