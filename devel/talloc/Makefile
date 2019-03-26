@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2019/03/25 23:18:00 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2019/03/26 12:17:11 ryoon Exp $
 
 DISTNAME=	talloc-2.2.0
 CATEGORIES=	devel
@@ -14,6 +14,8 @@ BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 # include/talloc.h
 CONFLICTS+=	samba<=4.6.8nb3
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_TOOLS+=		pkg-config
 HAS_CONFIGURE=		yes
