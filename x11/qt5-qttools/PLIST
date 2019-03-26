@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2019/01/26 23:20:41 tnn Exp $
+@comment $NetBSD: PLIST,v 1.11 2019/03/26 11:14:18 adam Exp $
 lib/pkgconfig/Qt5Designer.pc
 lib/pkgconfig/Qt5Help.pc
 lib/pkgconfig/Qt5UiTools.pc
@@ -14,6 +14,7 @@ qt5/bin/lupdate
 ${PLIST.mac}qt5/bin/macchangeqt
 ${PLIST.mac}qt5/bin/macdeployqt
 qt5/bin/pixeltool
+qt5/bin/qcollectiongenerator
 qt5/bin/qdbus
 qt5/bin/qdbusviewer
 qt5/bin/qdistancefieldgenerator
