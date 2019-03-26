@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/12/26 11:48:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.16 2019/03/26 11:14:16 adam Exp $
 
 DISTNAME=	qt5-${QTVERSION}
 
@@ -10,6 +10,7 @@ META_PACKAGE=	yes
 
 DEPENDS+=	qt5-qtbase-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtbase
 DEPENDS+=	qt5-qtcharts-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtcharts
+DEPENDS+=	qt5-qtconnectivity-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtconnectivity
 DEPENDS+=	qt5-qtdeclarative-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtdeclarative
 DEPENDS+=	qt5-qtdoc-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtdoc
 DEPENDS+=	qt5-qtgraphicaleffects-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtgraphicaleffects
