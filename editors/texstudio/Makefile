@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2019/02/16 13:26:49 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2019/03/26 07:12:08 wiz Exp $
 
 DISTNAME=	texstudio-2.12.14
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=texstudio-org/}
 
