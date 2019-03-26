@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/01/22 14:54:41 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/03/26 20:59:57 ryoon Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -49,6 +49,7 @@ share/tomcat/lib/servlet-api.jar
 share/tomcat/lib/tomcat-api.jar
 share/tomcat/lib/tomcat-coyote.jar
 share/tomcat/lib/tomcat-dbcp.jar
+share/tomcat/lib/tomcat-i18n-cs.jar
 share/tomcat/lib/tomcat-i18n-de.jar
 share/tomcat/lib/tomcat-i18n-es.jar
 share/tomcat/lib/tomcat-i18n-fr.jar
@@ -229,6 +230,7 @@ share/tomcat/webapps/examples/WEB-INF/classes/CookieExample.java
 share/tomcat/webapps/examples/WEB-INF/classes/HelloWorldExample.class
 share/tomcat/webapps/examples/WEB-INF/classes/HelloWorldExample.java
 share/tomcat/webapps/examples/WEB-INF/classes/LocalStrings.properties
+share/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_cs.properties
 share/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_de.properties
 share/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_es.properties
 share/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_fr.properties
@@ -299,8 +301,6 @@ share/tomcat/webapps/examples/WEB-INF/classes/examples/FooTagExtraInfo.class
 share/tomcat/webapps/examples/WEB-INF/classes/examples/FooTagExtraInfo.java
 share/tomcat/webapps/examples/WEB-INF/classes/examples/LogTag.class
 share/tomcat/webapps/examples/WEB-INF/classes/examples/LogTag.java
-share/tomcat/webapps/examples/WEB-INF/classes/examples/ShowSource.class
-share/tomcat/webapps/examples/WEB-INF/classes/examples/ShowSource.java
 share/tomcat/webapps/examples/WEB-INF/classes/examples/ValuesTag.class
 share/tomcat/webapps/examples/WEB-INF/classes/examples/ValuesTag.java
 share/tomcat/webapps/examples/WEB-INF/classes/filters/ExampleFilter.class
@@ -578,8 +578,6 @@ share/tomcat/webapps/examples/jsp/simpletag/foo.jsp.html
 share/tomcat/webapps/examples/jsp/snp/snoop.html
 share/tomcat/webapps/examples/jsp/snp/snoop.jsp
 share/tomcat/webapps/examples/jsp/snp/snoop.jsp.html
-share/tomcat/webapps/examples/jsp/source.jsp
-share/tomcat/webapps/examples/jsp/source.jsp.html
 share/tomcat/webapps/examples/jsp/tagplugin/choose.html
 share/tomcat/webapps/examples/jsp/tagplugin/choose.jsp
 share/tomcat/webapps/examples/jsp/tagplugin/choose.jsp.html
