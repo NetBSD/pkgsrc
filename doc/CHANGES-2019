@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1507 2019/03/26 19:40:52 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.1508 2019/03/26 19:41:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2401,3 +2401,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/p5-Test-Bits version 0.02 [he 2019-03-26]
 	Added devel/p5-Test-HexDifferences version 1.001 [he 2019-03-26]
 	Updated devel/radare2 to 3.3.0 [ryoon 2019-03-26]
+	Updated devel/radare2-cutter to 1.8.0 [ryoon 2019-03-26]
