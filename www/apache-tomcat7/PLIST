@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2019/01/22 14:46:49 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.22 2019/03/26 20:56:23 ryoon Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -273,8 +273,6 @@ share/tomcat/webapps/examples/WEB-INF/classes/examples/FooTagExtraInfo.class
 share/tomcat/webapps/examples/WEB-INF/classes/examples/FooTagExtraInfo.java
 share/tomcat/webapps/examples/WEB-INF/classes/examples/LogTag.class
 share/tomcat/webapps/examples/WEB-INF/classes/examples/LogTag.java
-share/tomcat/webapps/examples/WEB-INF/classes/examples/ShowSource.class
-share/tomcat/webapps/examples/WEB-INF/classes/examples/ShowSource.java
 share/tomcat/webapps/examples/WEB-INF/classes/examples/ValuesTag.class
 share/tomcat/webapps/examples/WEB-INF/classes/examples/ValuesTag.java
 share/tomcat/webapps/examples/WEB-INF/classes/filters/ExampleFilter.class
@@ -556,8 +554,6 @@ share/tomcat/webapps/examples/jsp/simpletag/foo.jsp.html
 share/tomcat/webapps/examples/jsp/snp/snoop.html
 share/tomcat/webapps/examples/jsp/snp/snoop.jsp
 share/tomcat/webapps/examples/jsp/snp/snoop.jsp.html
-share/tomcat/webapps/examples/jsp/source.jsp
-share/tomcat/webapps/examples/jsp/source.jsp.html
 share/tomcat/webapps/examples/jsp/tagplugin/choose.html
 share/tomcat/webapps/examples/jsp/tagplugin/choose.jsp
 share/tomcat/webapps/examples/jsp/tagplugin/choose.jsp.html
