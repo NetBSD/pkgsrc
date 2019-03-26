@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.114 2018/11/30 18:38:19 rillig Exp $
+# $NetBSD: java-vm.mk,v 1.115 2019/03/26 21:05:15 ryoon Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -11,6 +11,7 @@
 #
 #	Possible values: kaffe openjdk7 openjdk8
 #		sun-jdk6 sun-jdk7 oracle-jdk8
+#		openjdk-bin
 #	Default value: (platform-dependent)
 #
 # Package-settable variables:
@@ -27,9 +28,9 @@
 # USE_JAVA2
 #	When the package needs a Java 2 implementation, this variable
 #	should be set to "yes". It can also be set to "1.4", "1.5", "6".
-#	"7" or "8" require an even more recent implementation.
+#	"7", "8" and "9" require an even more recent implementation.
 #
-#	Possible values: yes no 1.4 1.5 6 7 8
+#	Possible values: yes no 1.4 1.5 6 7 8 9
 #	Default value: no
 #
 # PKG_JVMS_ACCEPTED
@@ -71,7 +72,8 @@ PKG_JVMS_ACCEPTED?=	${_PKG_JVMS}
 
 # This is a list of all of the JDKs that may be used.
 #
-_PKG_JVMS.8=		openjdk8 oracle-jdk8
+_PKG_JVMS.9=		openjdk-bin
+_PKG_JVMS.8=		${_PKG_JVMS.9} openjdk8 oracle-jdk8
 _PKG_JVMS.7=		${_PKG_JVMS.8} openjdk7 sun-jdk7
 _PKG_JVMS.6=		${_PKG_JVMS.7} sun-jdk6 jdk16
 _PKG_JVMS.1.5=		${_PKG_JVMS.6} jdk15
@@ -181,6 +183,9 @@ _ONLY_FOR_PLATFORMS.oracle-jdk8= \
 	Linux-*-x86_64 \
 	NetBSD-[6-9]*-i386 NetBSD-[6-9]*-x86_64 \
 	SunOS-5.11-x86_64
+_ONLY_FOR_PLATFORMS.openjdk-bin= \
+	Linux-*-x86_64 \
+	NetBSD-[6-9]*-x86_64
 
 # Set ONLY_FOR_PLATFORM based on accepted JVMs
 .for _jvm_ in ${PKG_JVMS_ACCEPTED}
@@ -202,6 +207,7 @@ _JAVA_PKGBASE.openjdk8=		openjdk8
 _JAVA_PKGBASE.sun-jdk6=		sun-jre6
 _JAVA_PKGBASE.sun-jdk7=		sun-jre7
 _JAVA_PKGBASE.oracle-jdk8=	oracle-jre8
+_JAVA_PKGBASE.openjdk-bin=	openjdk-bin
 
 # The following is copied from the respective JVM Makefiles.
 _JAVA_NAME.kaffe=		kaffe
@@ -210,6 +216,7 @@ _JAVA_NAME.openjdk8=		openjdk8
 _JAVA_NAME.sun-jdk6=		sun6
 _JAVA_NAME.sun-jdk7=		sun7
 _JAVA_NAME.oracle-jdk8=		oracle8
+_JAVA_NAME.openjdk-bin=		openjdk-bin
 
 # Mark the acceptable JVMs and check which JVM packages are installed.
 .for _jvm_ in ${_PKG_JVMS_ACCEPTED}
@@ -266,6 +273,7 @@ BUILDLINK_API_DEPENDS.sun-jdk7?=	sun-jdk7-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jre7?=	sun-jre7-[0-9]*
 BUILDLINK_API_DEPENDS.oracle-jdk8?=	oracle-jdk8-[0-9]*
 BUILDLINK_API_DEPENDS.oracle-jre8?=	oracle-jre8-[0-9]*
+BUILDLINK_API_DEPENDS.openjdk-bin?=	openjdk-bin-[0-9]*
 
 _JRE.kaffe=		kaffe
 _JRE.openjdk7=		openjdk7
@@ -273,6 +281,7 @@ _JRE.openjdk8=		openjdk8
 _JRE.sun-jdk6=		sun-jre6
 _JRE.sun-jdk7=		sun-jre7
 _JRE.oracle-jdk8=	oracle-jre8
+_JRE.openjdk-bin=	openjdk-bin
 
 _JAVA_BASE_CLASSES=	classes.zip
 
@@ -302,6 +311,11 @@ UNLIMIT_RESOURCES+=	datasize
 _JDK_PKGSRCDIR=		../../lang/oracle-jdk8
 _JRE_PKGSRCDIR=		../../lang/oracle-jre8
 _JAVA_HOME=		${LOCALBASE}/java/oracle-8
+UNLIMIT_RESOURCES+=	datasize
+.elif ${_PKG_JVM} == "openjdk-bin"
+_JDK_PKGSRCDIR=		../../lang/openjdk-bin
+_JRE_PKGSRCDIR=		../../lang/openjdk-bin
+_JAVA_HOME=		${LOCALBASE}/java/openjdk-bin
 UNLIMIT_RESOURCES+=	datasize
 .endif
 
