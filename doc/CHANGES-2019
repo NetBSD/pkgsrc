@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1501 2019/03/26 06:59:18 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1502 2019/03/26 07:28:12 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2392,3 +2392,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/talloc to 2.2.0 [wiz 2019-03-25]
 	Updated devel/py-mercurial to 4.9.1 [wiz 2019-03-26]
 	Updated print/poppler to 0.75.0 [wiz 2019-03-26]
+	Updated textproc/yelp-tools to 3.32.0 [triaxx 2019-03-26]
