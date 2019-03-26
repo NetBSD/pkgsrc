@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2018/12/18 09:57:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2019/03/26 11:14:16 adam Exp $
 lib/pkgconfig/Qt5Concurrent.pc
 lib/pkgconfig/Qt5Core.pc
 lib/pkgconfig/Qt5DBus.pc
@@ -1114,6 +1114,7 @@ qt5/include/QtGui/${PKGVERSION}/QtGui/private/qtouchdevice_p.h
 qt5/include/QtGui/${PKGVERSION}/QtGui/private/qtriangulatingstroker_p.h
 qt5/include/QtGui/${PKGVERSION}/QtGui/private/qtriangulator_p.h
 qt5/include/QtGui/${PKGVERSION}/QtGui/private/qvectorpath_p.h
+qt5/include/QtGui/${PKGVERSION}/QtGui/private/qvulkanfunctions_p.h
 qt5/include/QtGui/${PKGVERSION}/QtGui/private/qvulkanwindow_p.h
 qt5/include/QtGui/${PKGVERSION}/QtGui/private/qwindow_p.h
 qt5/include/QtGui/${PKGVERSION}/QtGui/private/qxbmhandler_p.h
@@ -1801,6 +1802,7 @@ qt5/include/QtPlatformHeaders/QCocoaWindowFunctions
 qt5/include/QtPlatformHeaders/QEGLNativeContext
 qt5/include/QtPlatformHeaders/QEglFSFunctions
 qt5/include/QtPlatformHeaders/QGLXNativeContext
+qt5/include/QtPlatformHeaders/QLinuxFbFunctions
 qt5/include/QtPlatformHeaders/QPlatformHeaderHelper
 qt5/include/QtPlatformHeaders/QWGLNativeContext
 qt5/include/QtPlatformHeaders/QWaylandWindowFunctions
@@ -1815,6 +1817,7 @@ qt5/include/QtPlatformHeaders/qcocoawindowfunctions.h
 qt5/include/QtPlatformHeaders/qeglfsfunctions.h
 qt5/include/QtPlatformHeaders/qeglnativecontext.h
 qt5/include/QtPlatformHeaders/qglxnativecontext.h
+qt5/include/QtPlatformHeaders/qlinuxfbfunctions.h
 qt5/include/QtPlatformHeaders/qplatformheaderhelper.h
 qt5/include/QtPlatformHeaders/qtplatformheadersversion.h
 qt5/include/QtPlatformHeaders/qwaylandwindowfunctions.h
@@ -2732,6 +2735,7 @@ qt5/mkspecs/common/llvm.conf
 qt5/mkspecs/common/mac.conf
 qt5/mkspecs/common/mac/qplatformdefs.h
 qt5/mkspecs/common/macx.conf
+qt5/mkspecs/common/msvc-based-version.conf
 qt5/mkspecs/common/msvc-desktop.conf
 qt5/mkspecs/common/msvc-version.conf
 qt5/mkspecs/common/nacl/g++-nacl32.conf
@@ -2862,6 +2866,7 @@ qt5/mkspecs/features/android/sdk.prf
 qt5/mkspecs/features/benchmark.prf
 qt5/mkspecs/features/build_pass.prf
 qt5/mkspecs/features/cmake_functions.prf
+qt5/mkspecs/features/cmdline.prf
 qt5/mkspecs/features/configure.prf
 qt5/mkspecs/features/configure_base.prf
 qt5/mkspecs/features/create_cmake.prf
@@ -2874,6 +2879,7 @@ qt5/mkspecs/features/data/cmake/Qt5ConfigVersion.cmake.in
 qt5/mkspecs/features/data/cmake/Qt5PluginTarget.cmake.in
 qt5/mkspecs/features/data/configure.json
 qt5/mkspecs/features/data/dummy.cpp
+qt5/mkspecs/features/data/dumpvcvars.bat
 qt5/mkspecs/features/data/mac/objc_namespace.sh
 qt5/mkspecs/features/data/macros.cpp
 qt5/mkspecs/features/data/unix/findclasslist.pl
@@ -2917,8 +2923,6 @@ qt5/mkspecs/features/qgltf.prf
 qt5/mkspecs/features/qlalr.prf
 qt5/mkspecs/features/qmake.conf
 qt5/mkspecs/features/qmake_use.prf
-qt5/mkspecs/features/qml1_module.prf
-qt5/mkspecs/features/qml1_plugin.prf
 qt5/mkspecs/features/qml_debug.prf
 qt5/mkspecs/features/qml_module.prf
 qt5/mkspecs/features/qml_plugin.prf
@@ -2994,7 +2998,6 @@ qt5/mkspecs/features/use_c_linker.prf
 qt5/mkspecs/features/vxworks.prf
 qt5/mkspecs/features/warn_off.prf
 qt5/mkspecs/features/warn_on.prf
-qt5/mkspecs/features/wasm/qt.prf
 qt5/mkspecs/features/wasm/wasm.prf
 qt5/mkspecs/features/wayland-scanner.prf
 qt5/mkspecs/features/win32/console.prf
@@ -3187,6 +3190,8 @@ qt5/mkspecs/unsupported/vxworks-simpentium-g++/qmake.conf
 qt5/mkspecs/unsupported/vxworks-simpentium-g++/qplatformdefs.h
 qt5/mkspecs/wasm-emscripten/qmake.conf
 qt5/mkspecs/wasm-emscripten/qplatformdefs.h
+qt5/mkspecs/win32-arm64-msvc2017/qmake.conf
+qt5/mkspecs/win32-arm64-msvc2017/qplatformdefs.h
 qt5/mkspecs/win32-clang-g++/qmake.conf
 qt5/mkspecs/win32-clang-g++/qplatformdefs.h
 qt5/mkspecs/win32-clang-msvc/qmake.conf
@@ -3203,6 +3208,8 @@ qt5/mkspecs/winrt-arm-msvc2015/qmake.conf
 qt5/mkspecs/winrt-arm-msvc2015/qplatformdefs.h
 qt5/mkspecs/winrt-arm-msvc2017/qmake.conf
 qt5/mkspecs/winrt-arm-msvc2017/qplatformdefs.h
+qt5/mkspecs/winrt-arm64-msvc2017/qmake.conf
+qt5/mkspecs/winrt-arm64-msvc2017/qplatformdefs.h
 qt5/mkspecs/winrt-x64-msvc2015/qmake.conf
 qt5/mkspecs/winrt-x64-msvc2015/qplatformdefs.h
 qt5/mkspecs/winrt-x64-msvc2017/qmake.conf

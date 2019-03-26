@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/12/18 09:57:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/03/26 11:14:18 adam Exp $
 lib/pkgconfig/Qt5Script.pc
 lib/pkgconfig/Qt5ScriptTools.pc
 qt5/include/QtScript/${PKGVERSION}/QtScript/private/qscriptable_p.h
@@ -25,6 +25,7 @@ qt5/include/QtScript/${PKGVERSION}/QtScript/private/qscriptstring_p.h
 qt5/include/QtScript/${PKGVERSION}/QtScript/private/qscriptsyntaxchecker_p.h
 qt5/include/QtScript/${PKGVERSION}/QtScript/private/qscriptvalue_p.h
 qt5/include/QtScript/${PKGVERSION}/QtScript/private/qscriptvariant_p.h
+qt5/include/QtScript/${PKGVERSION}/QtScript/private/qtscript-config_p.h
 qt5/include/QtScript/QScriptClass
 qt5/include/QtScript/QScriptClassPropertyIterator
 qt5/include/QtScript/QScriptContext
@@ -57,6 +58,7 @@ qt5/include/QtScript/qscriptprogram.h
 qt5/include/QtScript/qscriptstring.h
 qt5/include/QtScript/qscriptvalue.h
 qt5/include/QtScript/qscriptvalueiterator.h
+qt5/include/QtScript/qtscript-config.h
 qt5/include/QtScript/qtscriptglobal.h
 qt5/include/QtScript/qtscriptversion.h
 qt5/include/QtScriptTools/${PKGVERSION}/QtScriptTools/private/qscriptbreakpointdata_p.h
