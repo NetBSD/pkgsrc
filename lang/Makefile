@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.510 2019/03/09 09:31:41 bsiegert Exp $
+# $NetBSD: Makefile,v 1.511 2019/03/26 20:50:01 ryoon Exp $
 #
 
 COMMENT=	Programming languages
@@ -168,6 +168,7 @@ SUBDIR+=	ocaml
 SUBDIR+=	oo2c
 SUBDIR+=	open-cobol-ce
 SUBDIR+=	opencobol
+SUBDIR+=	openjdk-bin
 SUBDIR+=	openjdk7
 SUBDIR+=	openjdk8
 SUBDIR+=	opensource-cobol
