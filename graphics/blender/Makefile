@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.143 2019/03/27 11:05:57 markd Exp $
+# $NetBSD: Makefile,v 1.144 2019/03/27 19:53:29 markd Exp $
 
 DISTNAME=	blender-2.79b
 PKGREVISION=	2
@@ -46,7 +46,7 @@ REPLACE_PYTHON=		release/bin/blender-thumbnailer.py
 
 .include "options.mk"
 
-
+# Needs M=m when python has been built with the pymalloc option
 M=
 
 INSTALLATION_DIRS=	bin share/blender
