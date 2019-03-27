@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/11/06 10:49:41 adam Exp $
+# $NetBSD: Makefile,v 1.4 2019/03/27 20:47:36 bacon Exp $
 
 DISTNAME=	samtools-1.9
 CATEGORIES=	biology
@@ -21,6 +21,7 @@ REPLACE_PERL+=		misc/plot-bamstats
 REPLACE_PERL+=		test/test.pl
 REPLACE_PYTHON=		misc/*.py
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../biology/htslib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/curses.buildlink3.mk"
