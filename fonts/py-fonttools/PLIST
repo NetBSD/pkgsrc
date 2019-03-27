@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.24 2019/02/27 12:06:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2019/03/27 06:33:09 adam Exp $
 bin/fonttools-${PYVERSSUFFIX}
-bin/pyftinspect-${PYVERSSUFFIX}
 bin/pyftmerge-${PYVERSSUFFIX}
 bin/pyftsubset-${PYVERSSUFFIX}
 bin/ttx-${PYVERSSUFFIX}
@@ -70,9 +69,6 @@ ${PYSITELIB}/fontTools/feaLib/parser.pyo
 ${PYSITELIB}/fontTools/fontBuilder.py
 ${PYSITELIB}/fontTools/fontBuilder.pyc
 ${PYSITELIB}/fontTools/fontBuilder.pyo
-${PYSITELIB}/fontTools/inspect.py
-${PYSITELIB}/fontTools/inspect.pyc
-${PYSITELIB}/fontTools/inspect.pyo
 ${PYSITELIB}/fontTools/merge.py
 ${PYSITELIB}/fontTools/merge.pyc
 ${PYSITELIB}/fontTools/merge.pyo
