@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1516 2019/03/27 06:33:40 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1517 2019/03/27 06:45:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2415,3 +2415,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/py-lxml to 4.3.3 [adam 2019-03-27]
 	Updated finance/py-braintree to 3.52.0 [adam 2019-03-27]
 	Updated fonts/py-fonttools to 3.39.0 [adam 2019-03-27]
+	Updated www/nginx to 1.14.2nb1 [adam 2019-03-27]
+	Updated www/nginx-devel to 1.15.10 [adam 2019-03-27]
