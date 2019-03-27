@@ -1,0 +1,16 @@
+$NetBSD: patch-tools_extra_clangd_CMakeLists.txt,v 1.1 2019/03/27 06:24:22 adam Exp $
+
+Do not look for libatomic.
+
+--- tools/extra/clangd/CMakeLists.txt.orig	2019-03-25 08:39:03.000000000 +0000
++++ tools/extra/clangd/CMakeLists.txt
+@@ -3,9 +3,6 @@ set(LLVM_LINK_COMPONENTS
+   )
+ 
+ set(CLANGD_ATOMIC_LIB "")
+-if(NOT HAVE_CXX_ATOMICS64_WITHOUT_LIB)
+-  list(APPEND CLANGD_ATOMIC_LIB "atomic")
+-endif()
+ 
+ add_clang_library(clangDaemon
+   AST.cpp
