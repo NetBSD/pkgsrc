@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.118 2019/03/13 20:49:40 leot Exp $
+$NetBSD: distinfo,v 1.119 2019/03/27 10:50:30 jperkin Exp $
 
 SHA1 (webkitgtk-2.24.0.tar.xz) = 737fc7a6f5b5b5e2844c8488e60196d61802a952
 RMD160 (webkitgtk-2.24.0.tar.xz) = 6527bf43374911dd82943757ae2ba622d1792722
@@ -16,7 +16,7 @@ SHA1 (patch-Source_JavaScriptCore_runtime_MachineContext.h) = 23bc86a389f8009ec8
 SHA1 (patch-Source_ThirdParty_gtest_include_gtest_internal_gtest-port.h) = a5454eb891ad1f9d8285c28af2e9efb4ff439e6b
 SHA1 (patch-Source_WTF_wtf_FileSystem.cpp) = 9d6204ce6663f3b32d195e307540c5cc5e7a7988
 SHA1 (patch-Source_WTF_wtf_Platform.h) = 584720f4e248ff7e51166c267d08954786c28ab7
-SHA1 (patch-Source_WTF_wtf_RAMSize.cpp) = 21e442fc0025f7eb0a90f491d4bdfd35e26baadb
+SHA1 (patch-Source_WTF_wtf_RAMSize.cpp) = b440e7041f72e76ab840977fc4d48d6dd32ed2ed
 SHA1 (patch-Source_WTF_wtf_StackBounds.cpp) = 22a71daac8443f079ad8bcc7285cfd7319c972b3
 SHA1 (patch-Source_WebCore_Scripts_check-xcfilelists.sh) = 2a7ff15a2ec01a77481f85a6ca613bb7a3c18355
 SHA1 (patch-Source_WebCore_Scripts_generate-unified-sources.sh) = 740eb33931b6f9cb8008748323235f23466328dc
