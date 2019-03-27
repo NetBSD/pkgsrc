@@ -1,6 +1,7 @@
-# $NetBSD: Makefile.common,v 1.30 2018/12/23 00:11:39 adam Exp $
+# $NetBSD: Makefile.common,v 1.31 2019/03/27 06:24:22 adam Exp $
 # used by lang/clang/Makefile
 # used by lang/clang-static-analyzer/Makefile
+# used by lang/clang-tools-extra/Makefile
 
 DISTNAME=	cfe-7.0.1.src
 CATEGORIES=	lang devel
@@ -12,8 +13,6 @@ HOMEPAGE=	http://clang.llvm.org/
 COMMENT=	C language family frontend for LLVM
 LICENSE=	modified-bsd
 
-DISTINFO_FILE=		${.CURDIR}/../../lang/clang/distinfo
-PATCHDIR=		${.CURDIR}/../../lang/clang/patches
 CONFIGURE_DIRS=		${WRKDIR}/build
 CMAKE_ARG_PATH=		${WRKSRC}
 
@@ -138,4 +137,3 @@ post-extract:
 .include "../../lang/python/tool.mk"
 DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../lang/llvm
 .include "../../lang/llvm/buildlink3.mk"
-.include "../../mk/bsd.pkg.mk"
