@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/03/26 11:48:38 adam Exp $
+# $NetBSD: Makefile,v 1.38 2019/03/27 06:28:05 adam Exp $
 
 DISTNAME=	tdb-1.4.0
 CATEGORIES=	databases
@@ -14,6 +14,8 @@ BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 # both install tdbtool and tdbdump
 CONFLICTS+=	samba<3.6.6nb3
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes
