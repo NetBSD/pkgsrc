@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2019/03/20 19:09:10 adam Exp $
+# $NetBSD: Makefile,v 1.63 2019/03/27 06:28:05 adam Exp $
 
 DISTNAME=	samba-4.10.0
 CATEGORIES=	net
@@ -10,6 +10,8 @@ COMMENT=	SMB/CIFS protocol server suite
 LICENSE=	gnu-gpl-v3
 
 CONFLICTS+=	ja-samba-[0-9]* winbind-[0-9]*
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 GCC_REQD+=	4.4
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
