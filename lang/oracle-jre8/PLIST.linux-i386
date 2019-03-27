@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.11 2019/01/22 03:51:41 ryoon Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.12 2019/03/27 03:18:47 ryoon Exp $
 bin/oracle8-java
 bin/oracle8-javaws
 bin/oracle8-keytool
@@ -208,7 +208,6 @@ java/oracle-8/lib/i386/libjsdt.so
 java/oracle-8/lib/i386/libjsig.so
 java/oracle-8/lib/i386/libjsound.so
 java/oracle-8/lib/i386/libjsoundalsa.so
-java/oracle-8/lib/i386/libkcms.so
 java/oracle-8/lib/i386/liblcms.so
 java/oracle-8/lib/i386/libmanagement.so
 java/oracle-8/lib/i386/libmlib_image.so
