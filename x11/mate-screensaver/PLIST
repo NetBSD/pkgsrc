@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/01/16 18:11:05 youri Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/03/27 11:23:40 jperkin Exp $
 bin/mate-screensaver
 bin/mate-screensaver-command
 bin/mate-screensaver-preferences
@@ -30,7 +30,7 @@ share/dbus-1/services/org.mate.ScreenSaver.service
 share/desktop-directories/mate-screensaver.directory
 share/examples/mate-screensaver/xdg/autostart/mate-screensaver.desktop
 share/examples/mate-screensaver/xdg/menus/mate-screensavers.menu
-share/examples/pam.d/mate-screensaver
+${PLIST.pam}share/examples/pam.d/mate-screensaver
 share/glib-2.0/schemas/org.mate.screensaver.gschema.xml
 share/locale/af/LC_MESSAGES/mate-screensaver.mo
 share/locale/am/LC_MESSAGES/mate-screensaver.mo
