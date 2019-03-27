@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2019/01/23 15:44:34 jperkin Exp $
+# $NetBSD: Makefile,v 1.48 2019/03/27 06:24:22 adam Exp $
+
+.include "../../lang/clang/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/.src//:S/cfe/clang/}
 PKGREVISION=		1
@@ -10,4 +12,4 @@ CMAKE_ARGS+=	-DCLANG_ENABLE_STATIC_ANALYZER=OFF
 # We don't want to add a python runtime dependency for that.
 CHECK_INTERPRETER_SKIP+=	share/clang/*
 
-.include "../../lang/clang/Makefile.common"
+.include "../../mk/bsd.pkg.mk"
