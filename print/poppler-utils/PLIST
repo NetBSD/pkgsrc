@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/03/26 06:59:06 wiz Exp $
-bin/pdfattach
+@comment $NetBSD: PLIST,v 1.5 2019/03/27 11:18:38 wiz Exp $
 bin/pdfdetach
 bin/pdffonts
 bin/pdfimages
@@ -11,7 +10,6 @@ bin/pdftoppm
 bin/pdftops
 bin/pdftotext
 bin/pdfunite
-man/man1/pdfattach.1
 man/man1/pdfdetach.1
 man/man1/pdffonts.1
 man/man1/pdfimages.1
