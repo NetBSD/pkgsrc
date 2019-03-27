@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2019/03/27 09:48:16 jperkin Exp $
+# $NetBSD: Makefile,v 1.35 2019/03/27 10:12:01 ryoon Exp $
 
 DISTNAME=	talloc-2.2.0
 CATEGORIES=	devel
@@ -37,8 +37,6 @@ TEST_TARGET=		test
 PY_PATCHPLIST=		yes
 REPLACE_PYTHON+=	buildtools/bin/waf
 MAKE_FLAGS+=		WAF_BINARY=${PYTHONBIN}\ ${WRKSRC}/buildtools/bin/waf
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 SUBST_CLASSES+=		docbook
 SUBST_MESSAGE.docbook=	Fixing docbook URLs.
