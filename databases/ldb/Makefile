@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/03/20 19:06:56 adam Exp $
+# $NetBSD: Makefile,v 1.2 2019/03/27 10:08:42 adam Exp $
 
 # Before updating, make sure net/samba4 supports the newer version.
 DISTNAME=	ldb-1.5.4
@@ -12,6 +12,8 @@ LICENSE=	gnu-gpl-v3
 
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes
