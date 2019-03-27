@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2018/08/04 21:36:16 minskim Exp $
+$NetBSD: distinfo,v 1.6 2019/03/27 11:31:21 jperkin Exp $
 
 SHA1 (protobuf-c-1.3.0.tar.gz) = b1df242c1445e2cc22708ca1889f5ce63bcbfc6c
 RMD160 (protobuf-c-1.3.0.tar.gz) = 528c1ae07297990f1e3405db2e3129eef9823698
@@ -12,3 +12,4 @@ SHA1 (patch-protoc-c_c__generator.cc) = fc5795bec0c6536713ee7043777edd10b07db9b4
 SHA1 (patch-protoc-c_c__helpers.cc) = 236b1ead1a5f452cf8532507326bd6316e6c6c17
 SHA1 (patch-protoc-c_c__message.cc) = f36502a761f46cb555708ef14d26e4aec5725001
 SHA1 (patch-protoc-c_c__message.h) = b5f2761ab1f1f735fd0a795342b3479e6b253832
+SHA1 (patch-t_generated-code2_cxx-generate-packed-data.cc) = c23e890f088e51f1ce4e96a48f1bf3ea8b0f1d3a
