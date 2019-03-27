@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1514 2019/03/26 21:29:46 leot Exp $
+$NetBSD: CHANGES-2019,v 1.1515 2019/03/27 04:06:53 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2410,3 +2410,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/py-uncompyle6 to 3.2.6 [adam 2019-03-26]
 	Updated www/apache-tomcat9 to 9.0.17 [ryoon 2019-03-26]
 	Updated lang/py37-html-docs to 3.7.3 [leot 2019-03-26]
+	Updated x11/xfce4-whiskermenu-plugin to 2.3.2 [gutteridge 2019-03-27]
