@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/03/26 11:48:14 adam Exp $
+# $NetBSD: Makefile,v 1.5 2019/03/27 06:28:05 adam Exp $
 
 DISTNAME=	tevent-0.10.0
 CATEGORIES=	devel
@@ -13,6 +13,8 @@ BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 CONFLICTS+=	samba<=4.9.4nb1
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_TOOLS+=		pkg-config
 HAS_CONFIGURE=		yes
