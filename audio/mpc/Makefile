@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2018/11/30 15:06:56 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2019/03/27 09:53:18 pho Exp $
 
 DISTNAME=		mpc-0.31
 CATEGORIES=		audio
@@ -17,6 +17,10 @@ USE_TOOLS+=		pkg-config
 REPLACE_SH=		doc/*.sh
 
 LIBS+=			${BUILDLINK_LDADD.iconv}
+
+# By default it generates and installs HTML documentation if py-sphinx
+# is installed, causing our PLIST check to fail.
+MESON_ARGS+=		-Ddocumentation=disabled
 
 .include "../../devel/py-meson/build.mk"
 BUILDLINK_API_DEPENDS.libmpdclient+=	libmpdclient>=2.9
