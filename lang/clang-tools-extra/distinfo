@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2019/03/27 06:24:22 adam Exp $
+
+SHA1 (cfe-7.0.1.src.tar.xz) = 427e12762836d808583fb4149c033d02de0a8db2
+RMD160 (cfe-7.0.1.src.tar.xz) = 914adafed7c97e5ebab15a437670906c404cb8bd
+SHA512 (cfe-7.0.1.src.tar.xz) = df2f38153ebdc261bcfa6a569567f759bbb1a803192882a9d4eca55a47878166ac9057151a94ad341dc1281136547e4faa783a68070dfde2307b48cacd4b9194
+Size (cfe-7.0.1.src.tar.xz) = 12488668 bytes
+SHA1 (clang-tools-extra-7.0.1.src.tar.xz) = 6f4048482c4cf1818133120565c2dcd1d3a62747
+RMD160 (clang-tools-extra-7.0.1.src.tar.xz) = d0ec60e76157a99e7d6d5f04f7b7eda56ba450da
+SHA512 (clang-tools-extra-7.0.1.src.tar.xz) = f0aa73217560f952261201e9049310e4a038bc5d4b4120a4c5d13a42aacfbbfe702f1891745755e1702269751d3df19237271caecba43c810a6f50d35494c798
+Size (clang-tools-extra-7.0.1.src.tar.xz) = 901368 bytes
+SHA1 (patch-tools_extra_clangd_CMakeLists.txt) = f075acff791edd9b05e98c5297c1f8fde06ae9fe
