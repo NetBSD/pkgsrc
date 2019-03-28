@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1522 2019/03/27 16:46:52 leot Exp $
+$NetBSD: CHANGES-2019,v 1.1523 2019/03/28 17:35:26 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2422,3 +2422,4 @@ Changes to the packages collection and infrastructure in 2019:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2019Q1 branch [jperkin 2019-03-27]
 	Updated math/py-numba to 0.43.0nb1 [bacon 2019-03-27]
 	Updated security/gnutls to 3.6.7 [leot 2019-03-27]
+	Updated net/py-grpcio to 1.19.0 [leot 2019-03-28]
