@@ -1,11 +1,11 @@
-$NetBSD: patch-setup.py,v 1.2 2018/08/04 21:56:47 minskim Exp $
+$NetBSD: patch-setup.py,v 1.3 2019/03/28 17:35:14 leot Exp $
 
 Use dependencies in pkgsrc.
 
---- setup.py.orig	2018-06-28 00:44:17.000000000 +0000
+--- setup.py.orig	2019-02-26 17:31:26.000000000 +0000
 +++ setup.py
-@@ -184,18 +184,19 @@ EXTENSION_INCLUDE_DIRECTORIES = (
-     CARES_INCLUDE + ADDRESS_SORTING_INCLUDE)
+@@ -207,18 +207,19 @@ EXTENSION_INCLUDE_DIRECTORIES = (
+     NANOPB_INCLUDE + CARES_INCLUDE + ADDRESS_SORTING_INCLUDE)
  
  EXTENSION_LIBRARIES = ()
 -if "linux" in sys.platform:
@@ -34,18 +34,18 @@ Use dependencies in pkgsrc.
 +#  EXTENSION_LIBRARIES += ('cares',)
 +EXTENSION_LIBRARIES += ('grpc',)
  
- DEFINE_MACROS = (
-     ('OPENSSL_NO_ASM', 1), ('_WIN32_WINNT', 0x600),
-@@ -242,7 +243,7 @@ def cython_extensions_and_necessity():
+ DEFINE_MACROS = (('OPENSSL_NO_ASM', 1), ('_WIN32_WINNT', 0x600))
+ if not DISABLE_LIBC_COMPATIBILITY:
+@@ -265,7 +266,7 @@ def cython_extensions_and_necessity():
                    for name in CYTHON_EXTENSION_MODULE_NAMES]
    config = os.environ.get('CONFIG', 'opt')
    prefix = 'libs/' + config + '/'
--  if "darwin" in sys.platform:
-+  if False and "darwin" in sys.platform:
+-  if "darwin" in sys.platform or USE_PREBUILT_GRPC_CORE:
++  if False and "darwin" in sys.platform or USE_PREBUILT_GRPC_CORE:
      extra_objects = [prefix + 'libares.a',
                       prefix + 'libboringssl.a',
                       prefix + 'libgpr.a',
-@@ -254,7 +255,7 @@ def cython_extensions_and_necessity():
+@@ -277,7 +278,7 @@ def cython_extensions_and_necessity():
    extensions = [
        _extension.Extension(
            name=module_name,
