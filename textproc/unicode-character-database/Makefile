@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/08/12 11:43:44 tsutsui Exp $
+# $NetBSD: Makefile,v 1.3 2019/03/28 22:38:44 leot Exp $
 
 UCD_VERSION=	11.0.0
 DISTNAME=	unicode-character-database-${UCD_VERSION}
@@ -14,6 +14,7 @@ COMMENT=	Unicode Character Database
 LICENSE=	unicode
 
 USE_LANGUAGES=	# none
+USE_TOOLS+=	pax
 NO_BUILD=	YES
 NO_CONFIGURE=	YES
 
