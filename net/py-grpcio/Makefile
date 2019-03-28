@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.2 2018/08/04 21:56:47 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2019/03/28 17:35:14 leot Exp $
 
-DISTNAME=	grpcio-1.13.0
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	grpcio-1.19.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
-MASTER_SITES=   ${MASTER_SITE_PYPI:=g/grpcio/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=g/grpcio/}
 
 MAINTAINER=	kethzer.dr@gmail.com
 HOMEPAGE=	https://grpc.io/
 COMMENT=	HTTP/2-based RPC framework
 LICENSE=	apache-2.0
 
-DEPENDS+=       ${PYPKGPREFIX}-protobuf>=3.5.0:../../devel/py-protobuf
-DEPENDS+=       ${PYPKGPREFIX}-six>=1.5.2:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-protobuf>=3.5.0:../../devel/py-protobuf
+DEPENDS+=	${PYPKGPREFIX}-six>=1.5.2:../../lang/py-six
 
 .include "../../lang/python/pyversion.mk"
 .if "${PYPKGPREFIX}" == "py27"
