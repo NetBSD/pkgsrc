@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/03/27 10:08:42 adam Exp $
+# $NetBSD: Makefile,v 1.3 2019/03/29 09:52:00 prlw1 Exp $
 
 # Before updating, make sure net/samba4 supports the newer version.
 DISTNAME=	ldb-1.5.4
@@ -15,7 +15,7 @@ BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 HAS_CONFIGURE=		yes
 CONFIG_SHELL=		${PYTHONBIN}
 CONFIGURE_SCRIPT=	${WRKSRC}/buildtools/bin/waf
