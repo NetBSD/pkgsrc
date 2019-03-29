@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2018/12/15 21:12:19 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2019/03/29 00:09:31 gutteridge Exp $
 #
 
 DISTNAME=		apache-couchdb-2.1.1
@@ -73,6 +73,7 @@ CONFIGURE_ARGS+=	--skip-deps
 CONFIGURE_ARGS+=	--with-curl
 
 BUILD_TARGET=		release
+TEST_TARGET=		check
 
 INSTALLATION_DIRS+=	bin couchdb/lib
 INSTALLATION_DIRS+=	couchdb/share/server couchdb/share/www/docs
