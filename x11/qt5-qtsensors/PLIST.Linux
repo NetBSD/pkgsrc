@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2019/03/29 19:05:48 markd Exp $
+qt5/lib/cmake/Qt5Sensors/Qt5Sensors_IIOSensorProxySensorPlugin.cmake
+qt5/lib/cmake/Qt5Sensors/Qt5Sensors_LinuxSensorPlugin.cmake
+qt5/plugins/sensors/libqtsensors_iio-sensor-proxy.so
+qt5/plugins/sensors/libqtsensors_linuxsys.so
