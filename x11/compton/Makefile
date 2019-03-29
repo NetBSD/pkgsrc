@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/03/01 17:11:23 youri Exp $
+# $NetBSD: Makefile,v 1.8 2019/03/29 07:27:49 pho Exp $
 
 DISTNAME=	compton-5.1
 CATEGORIES=	x11 wm
@@ -18,6 +18,9 @@ USE_TOOLS+=	gmake pkg-config
 BUILD_TARGET=	compton docs
 MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}/man1
 MAKE_FLAGS+=	COMPTON_VERSION=${PKGVERSION}
+
+# compton uses __auto_type which is only available as of GCC 4.9.
+GCC_REQD+=	4.9
 
 INSTALLATION_DIRS+=	share/examples/compton
 
