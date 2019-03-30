@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2019/01/18 10:05:53 martin Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/03/30 05:18:11 gutteridge Exp $
 include/mate-settings-daemon/mate-settings-client.h
 include/mate-settings-daemon/mate-settings-plugin.h
 lib/mate-settings-daemon/a11y-keyboard.mate-settings-plugin
@@ -18,6 +18,7 @@ lib/mate-settings-daemon/libkeyboard.la
 lib/mate-settings-daemon/libmedia-keys.la
 lib/mate-settings-daemon/libmouse.la
 lib/mate-settings-daemon/libmpris.la
+${PLIST.rfkill}lib/mate-settings-daemon/librfkill.la
 ${PLIST.nss}lib/mate-settings-daemon/libsmartcard.la
 lib/mate-settings-daemon/libsound.la
 lib/mate-settings-daemon/libtyping-break.la
@@ -27,6 +28,7 @@ lib/mate-settings-daemon/libxsettings.la
 lib/mate-settings-daemon/media-keys.mate-settings-plugin
 lib/mate-settings-daemon/mouse.mate-settings-plugin
 lib/mate-settings-daemon/mpris.mate-settings-plugin
+${PLIST.rfkill}lib/mate-settings-daemon/rfkill.mate-settings-plugin
 ${PLIST.nss}lib/mate-settings-daemon/smartcard.mate-settings-plugin
 lib/mate-settings-daemon/sound.mate-settings-plugin
 lib/mate-settings-daemon/typing-break.mate-settings-plugin
@@ -34,6 +36,7 @@ lib/mate-settings-daemon/xrandr.mate-settings-plugin
 lib/mate-settings-daemon/xrdb.mate-settings-plugin
 lib/mate-settings-daemon/xsettings.mate-settings-plugin
 lib/pkgconfig/mate-settings-daemon.pc
+${PLIST.rfkill}lib/udev/rules.d/61-mate-settings-daemon-rfkill.rules
 libexec/mate-settings-daemon
 ${PLIST.polkit}libexec/msd-datetime-mechanism
 libexec/msd-locate-pointer
