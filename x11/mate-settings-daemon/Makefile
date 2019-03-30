@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/03/06 07:42:03 gutteridge Exp $
+# $NetBSD: Makefile,v 1.23 2019/03/30 05:18:11 gutteridge Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
@@ -11,8 +11,12 @@ PKGCONFIG_OVERRIDE+=	data/mate-settings-daemon.pc.in
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
+PLIST_VARS+=		rfkill
+
 .if ${OPSYS} != "Linux"
 CONFIGURE_ARGS+=	--disable-rfkill
+.else
+PLIST.rfkill=		yes
 .endif
 
 .include "options.mk"
