@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/03/06 06:02:25 gutteridge Exp $
+# $NetBSD: Makefile,v 1.18 2019/03/30 06:34:55 gutteridge Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
@@ -10,6 +10,8 @@ COMMENT=	File manager for the MATE desktop
 TOOL_DEPENDS+=		gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 PKGCONFIG_OVERRIDE+=	libcaja-extension/libcaja-extension.pc.in
+
+USE_LANGUAGES=		c99
 
 .include "options.mk"
 
