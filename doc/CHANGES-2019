@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1528 2019/03/31 20:41:52 leot Exp $
+$NetBSD: CHANGES-2019,v 1.1529 2019/03/31 20:43:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2428,3 +2428,4 @@ Changes to the packages collection and infrastructure in 2019:
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2019Q1 branch [jperkin 2019-03-31]
 	Updated net/gallery-dl to 1.8.1 [leot 2019-03-31]
 	Updated www/curl to 7.64.1 [leot 2019-03-31]
+	Updated net/ncdc to 1.21 [wiz 2019-03-31]
