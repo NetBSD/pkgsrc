@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.207 2019/02/06 08:02:48 adam Exp $
+# $NetBSD: Makefile,v 1.208 2019/03/31 20:41:29 leot Exp $
 
-DISTNAME=	curl-7.64.0
+DISTNAME=	curl-7.64.1
 CATEGORIES=	www
 MASTER_SITES=	https://curl.haxx.se/download/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://curl.haxx.se/
 COMMENT=	Client that groks URLs
 # not completely, but near enough
@@ -27,7 +27,7 @@ INSTALLATION_DIRS=	share/doc/curl
 .include "options.mk"
 
 post-install:
-.for f in MANUAL TheArtOfHttpScripting FAQ
+.for f in TheArtOfHttpScripting FAQ
 	${INSTALL_DATA} ${WRKSRC}/docs/${f} ${DESTDIR}${PREFIX}/share/doc/curl/
 .endfor
 
