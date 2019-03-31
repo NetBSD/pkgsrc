@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2018/07/03 05:03:37 adam Exp $
+# $NetBSD: Makefile,v 1.18 2019/03/31 09:04:01 bsiegert Exp $
 
 DISTNAME=	xmlada-${XMLADA_VERS}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	http://downloads.dragonlace.net/src/
 EXTRACT_SUFX=	.tar.bz2
