@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2019/03/24 10:41:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2019/03/31 10:33:58 leot Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -104,7 +104,6 @@ ${PYSITELIB}/Crypto/Cipher/_mode_siv.pyc
 ${PYSITELIB}/Crypto/Cipher/_mode_siv.pyi
 ${PYSITELIB}/Crypto/Cipher/_mode_siv.pyo
 ${PYSITELIB}/Crypto/Cipher/_raw_aes.so
-${PYSITELIB}/Crypto/Cipher/_raw_aesni.so
 ${PYSITELIB}/Crypto/Cipher/_raw_arc2.so
 ${PYSITELIB}/Crypto/Cipher/_raw_blowfish.so
 ${PYSITELIB}/Crypto/Cipher/_raw_cast.so
@@ -219,7 +218,6 @@ ${PYSITELIB}/Crypto/Hash/__init__.py
 ${PYSITELIB}/Crypto/Hash/__init__.pyc
 ${PYSITELIB}/Crypto/Hash/__init__.pyi
 ${PYSITELIB}/Crypto/Hash/__init__.pyo
-${PYSITELIB}/Crypto/Hash/_ghash_clmul.so
 ${PYSITELIB}/Crypto/Hash/_ghash_portable.so
 ${PYSITELIB}/Crypto/Hash/_keccak.so
 ${PYSITELIB}/Crypto/Hash/_poly1305.so
