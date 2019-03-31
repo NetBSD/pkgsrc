@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.23 2019/03/15 14:42:44 leot Exp $
+@comment $NetBSD: PLIST,v 1.24 2019/03/31 20:37:10 leot Exp $
 bin/gallery-dl
+etc/bash_completion.d/gallery-dl.bash_completion
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -45,12 +46,18 @@ ${PYSITELIB}/gallery_dl/exception.pyo
 ${PYSITELIB}/gallery_dl/extractor/2chan.py
 ${PYSITELIB}/gallery_dl/extractor/2chan.pyc
 ${PYSITELIB}/gallery_dl/extractor/2chan.pyo
+${PYSITELIB}/gallery_dl/extractor/35photo.py
+${PYSITELIB}/gallery_dl/extractor/35photo.pyc
+${PYSITELIB}/gallery_dl/extractor/35photo.pyo
 ${PYSITELIB}/gallery_dl/extractor/3dbooru.py
 ${PYSITELIB}/gallery_dl/extractor/3dbooru.pyc
 ${PYSITELIB}/gallery_dl/extractor/3dbooru.pyo
 ${PYSITELIB}/gallery_dl/extractor/4chan.py
 ${PYSITELIB}/gallery_dl/extractor/4chan.pyc
 ${PYSITELIB}/gallery_dl/extractor/4chan.pyo
+${PYSITELIB}/gallery_dl/extractor/500px.py
+${PYSITELIB}/gallery_dl/extractor/500px.pyc
+${PYSITELIB}/gallery_dl/extractor/500px.pyo
 ${PYSITELIB}/gallery_dl/extractor/8chan.py
 ${PYSITELIB}/gallery_dl/extractor/8chan.pyc
 ${PYSITELIB}/gallery_dl/extractor/8chan.pyo
@@ -132,6 +139,9 @@ ${PYSITELIB}/gallery_dl/extractor/hentaihere.pyo
 ${PYSITELIB}/gallery_dl/extractor/hitomi.py
 ${PYSITELIB}/gallery_dl/extractor/hitomi.pyc
 ${PYSITELIB}/gallery_dl/extractor/hitomi.pyo
+${PYSITELIB}/gallery_dl/extractor/hypnohub.py
+${PYSITELIB}/gallery_dl/extractor/hypnohub.pyc
+${PYSITELIB}/gallery_dl/extractor/hypnohub.pyo
 ${PYSITELIB}/gallery_dl/extractor/idolcomplex.py
 ${PYSITELIB}/gallery_dl/extractor/idolcomplex.pyc
 ${PYSITELIB}/gallery_dl/extractor/idolcomplex.pyo
@@ -345,3 +355,5 @@ ${PYSITELIB}/gallery_dl/util.pyo
 ${PYSITELIB}/gallery_dl/version.py
 ${PYSITELIB}/gallery_dl/version.pyc
 ${PYSITELIB}/gallery_dl/version.pyo
+share/man/man1/gallery-dl.1
+share/man/man5/gallery-dl.conf.5
