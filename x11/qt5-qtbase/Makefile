@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2019/03/27 10:16:34 markd Exp $
+# $NetBSD: Makefile,v 1.72 2019/03/31 19:00:24 markd Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
@@ -95,6 +95,12 @@ CONFIGURE_ARGS+=	-no-framework
 LDFLAGS+=		-lresolv
 .  endif
 .elif ${OPSYS} == "Linux"
+ FIXME: Try to move fix upstream
+# See $$lcan in mkspecs/features/qt_configure.prf
+# Also QMAKE_DEFAULT_LIBDIRS in mkspecs/features/toolchain.prf
+.  if ${LOWER_VENDOR} == "redhat" && ${MACHINE_ARCH} == "x86_64"
+CONFIGURE_ARGS+=	-L "/usr/lib64"
+.  endif
 LDFLAGS+=		-ldl
 .elif ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
 .  if exists(/usr/lib/libexecinfo.so)
