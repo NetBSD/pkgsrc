@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.93 2019/01/14 22:58:02 wiz Exp $
+$NetBSD: distinfo,v 1.94 2019/03/31 20:46:52 wiz Exp $
 
-SHA1 (gnucash-3.4.tar.bz2) = f3d58d6f1a06cf0fae8589b15bf416f814abcfb8
-RMD160 (gnucash-3.4.tar.bz2) = d6821fdca0190dc947906c2d35b61c8ac07b8b35
-SHA512 (gnucash-3.4.tar.bz2) = 4cebef0ba70e59a82d3b2b7b0b138ddb22e8866dc761e156ff1f15920145d12923719effef21ad4c65ccd62fbd14a1529cf0bfcaab70c5b33d103761d08062e0
-Size (gnucash-3.4.tar.bz2) = 13564432 bytes
-SHA1 (patch-libgnucash_engine_qoflog.cpp) = 8ba54382b8fc2507c0d146cae25a6764d3e1a5cb
+SHA1 (gnucash-3.5.tar.bz2) = bba13b850bc6332a437d07eec971bc79c4837fd5
+RMD160 (gnucash-3.5.tar.bz2) = 54d42e8670c9169644c9383efa8eebbca65d5e78
+SHA512 (gnucash-3.5.tar.bz2) = 76230d2fe1ba4cc605d0d58976ed3214b10a2549fc7eaa1e327bbf85c861baa082523c70ed088a59bb56deb6af9a7808752fc719eda0df3e9209cec05c9c8d13
+Size (gnucash-3.5.tar.bz2) = 13766397 bytes
