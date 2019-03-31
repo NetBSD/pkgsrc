@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/03/31 00:35:05 gdt Exp $
+# $NetBSD: Makefile,v 1.20 2019/03/31 11:51:51 gdt Exp $
 
 DISTNAME=	vte-0.54.3
 PKGNAME=	${DISTNAME:S/vte/vte3/}
@@ -18,7 +18,7 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config bash
 USE_LANGUAGES=		c c++14
 # for c++14 \todo
-GCC_REQD=		5
+GCC_REQD+=		5
 
 BUILDLINK_TRANSFORM+=	rm:-Werror=format=2
 
