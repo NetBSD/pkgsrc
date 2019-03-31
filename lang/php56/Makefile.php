@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.6 2018/12/09 12:14:36 taca Exp $
+# $NetBSD: Makefile.php,v 1.7 2019/03/31 20:48:18 wiz Exp $
 # used by lang/php56/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
@@ -66,6 +66,9 @@ LIBS.SunOS+=		-lcrypto
 .  else
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 .  endif
+PATCH_SITES+=		http://zettasystem.com/
+PATCHFILES+=		PHP-5.6.31-OpenSSL-1.1.0-compatibility-20170801.patch
+PATCH_DIST_STRIP=	-p1
 .else
 CONFIGURE_ARGS+=	--without-openssl
 .endif
