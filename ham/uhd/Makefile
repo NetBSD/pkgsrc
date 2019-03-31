@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2019/03/22 17:58:27 adam Exp $
+# $NetBSD: Makefile,v 1.45 2019/03/31 00:53:41 gdt Exp $
 
 DISTNAME=	uhd-3.13.1.0
 CATEGORIES=	ham
@@ -24,8 +24,14 @@ CMAKE_ARGS+=	-DENABLE_PYTHON3=ON
 # Upstream says C++11 is required, even though it is not documented.
 # It is documented that gcc 4.8 is required, when using gcc.
 # https://github.com/EttusResearch/uhd/issues/236
+#
+# Upstream does not seem to have any documentation that gnu++11 is
+# required, but it builds with tha and not with c++11 on netbsd-8.  No
+# ticket filed because #236 resulted in in-ticket clarification only
+# (and not a doc edit), and having experimented no clarification is
+# needed.
 USE_CMAKE=		yes
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c gnu++11
 USE_TOOLS+=		pkg-config
 GCC_REQD+=		4.8
 # to avoid extra pax_global_header
