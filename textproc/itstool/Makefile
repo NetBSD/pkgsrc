@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2018/11/30 15:04:02 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/03/31 00:32:39 gdt Exp $
 
 DISTNAME=	itstool-2.0.5
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://files.itstool.org/itstool/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,6 +12,12 @@ COMMENT=	ITS Tool allows you to translate XML documents with PO files
 LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=	yes
+
+# With 27, gnumeric112 fails to build the cs translation with
+# ascii/utf-8 confusion.  This is not understood, so just avoid
+# python27, as it increasingly seems that no one is using it and
+# debugging problems with that version.
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_PYTHON=	${WRKSRC}/itstool.in
 
