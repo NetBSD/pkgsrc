@@ -1,0 +1,16 @@
+$NetBSD: patch-Makefile,v 1.1 2019/03/31 20:52:16 leot Exp $
+
+Backport upstream commit 0eda3ec2ac78577a08ace4c18cd9e912a56609e6
+to fix the build for vimb released versions.
+
+--- Makefile.orig	2019-03-26 22:47:03.000000000 +0000
++++ Makefile
+@@ -3,7 +3,7 @@ include config.mk
+ 
+ all: version.h src.subdir-all
+ 
+-version.h: Makefile .git/index
++version.h: Makefile $(wildcard .git/index)
+ 	@echo "create $@"
+ 	$(Q)v="$$(git describe --tags 2>/dev/null)"; \
+ 	echo "#define VERSION \"$${v:-$(version)}\"" > $@
