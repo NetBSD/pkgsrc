@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1531 2019/03/31 20:48:53 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1532 2019/03/31 20:53:14 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2431,3 +2431,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/ncdc to 1.21 [wiz 2019-03-31]
 	Updated finance/gnucash to 3.5 [wiz 2019-03-31]
 	Updated lang/php56 to 5.6.40nb1 [wiz 2019-03-31]
+	Updated www/vimb to 3.4.0 [leot 2019-03-31]
