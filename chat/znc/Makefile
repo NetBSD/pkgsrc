@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2019/01/30 17:08:55 nia Exp $
+# $NetBSD: Makefile,v 1.5 2019/03/31 15:20:42 nia Exp $
 
-DISTNAME=	znc-1.7.2
+DISTNAME=	znc-1.7.3
 CATEGORIES=	net
 MASTER_SITES=	https://znc.in/releases/archive/
 
