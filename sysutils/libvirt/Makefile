@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2018/11/14 22:22:26 kleink Exp $
+# $NetBSD: Makefile,v 1.60 2019/03/31 13:41:38 bsiegert Exp $
 
 DISTNAME=		libvirt-1.2.9
 PKGREVISION=		26
@@ -13,6 +13,7 @@ LICENSE=		gnu-lgpl-v2
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-vbox=no --sysconfdir=${EGDIR} --localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--without-macvtap
+CONFIGURE_ARGS+=	--without-polkit
 USE_TOOLS+=		gmake pkg-config perl
 USE_LIBTOOL=		yes
 
