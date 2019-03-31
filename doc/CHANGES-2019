@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1524 2019/03/29 14:28:02 hauke Exp $
+$NetBSD: CHANGES-2019,v 1.1525 2019/03/31 15:20:51 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2424,3 +2424,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/gnutls to 3.6.7 [leot 2019-03-27]
 	Updated net/py-grpcio to 1.19.0 [leot 2019-03-28]
 	Updated mail/dovecot2 to 2.3.5.1 [hauke 2019-03-29]
+	Updated chat/znc to 1.7.3 [nia 2019-03-31]
