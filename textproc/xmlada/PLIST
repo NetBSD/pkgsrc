@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/01/01 22:30:00 rillig Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/03/31 09:04:01 bsiegert Exp $
 bin/xmlada-config
 include/xmlada/dom-core-attrs.adb
 include/xmlada/dom-core-attrs.ads
@@ -541,12 +541,14 @@ share/doc/xmlada/_static/comment-close.png
 share/doc/xmlada/_static/comment.png
 share/doc/xmlada/_static/contents.png
 share/doc/xmlada/_static/doctools.js
+share/doc/xmlada/_static/documentation_options.js
 share/doc/xmlada/_static/down-pressed.png
 share/doc/xmlada/_static/down.png
 share/doc/xmlada/_static/favicon.ico
 share/doc/xmlada/_static/file.png
-share/doc/xmlada/_static/jquery-3.1.0.js
+share/doc/xmlada/_static/jquery-3.2.1.js
 share/doc/xmlada/_static/jquery.js
+share/doc/xmlada/_static/language_data.js
 share/doc/xmlada/_static/minus.png
 share/doc/xmlada/_static/navigation.png
 share/doc/xmlada/_static/plus.png
