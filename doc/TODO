@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18913 2019/04/01 11:38:52 wiz Exp $
+$NetBSD: TODO,v 1.18914 2019/04/01 12:11:10 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1127,7 +1127,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pspp-0.10.1
 	o ptlib-2.16.2
 	o pure-ftpd-1.0.40
-	o putty-0.70
 	o pvs-6.0
 	o pwlib-1.11.1
 	o py-HappyDoc-3.0
