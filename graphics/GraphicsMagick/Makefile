@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2019/03/18 16:17:47 gdt Exp $
+# $NetBSD: Makefile,v 1.96 2019/04/01 09:21:23 abs Exp $
 
 PKGREVISION= 1
 .include "Makefile.common"
@@ -12,7 +12,7 @@ DEPENDS+=	urw-fonts-[0-9]*:../../fonts/urw-fonts
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake pkg-config:run gs:run
+USE_TOOLS+=		gmake pkg-config:run
 USE_FEATURES=		vsnprintf	# optional but recommended for security
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
