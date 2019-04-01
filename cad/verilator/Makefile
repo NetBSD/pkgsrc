@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/12/16 09:05:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2019/04/01 12:22:53 ryoon Exp $
 
-DISTNAME=	verilator-4.006
+DISTNAME=	verilator-4.012
 CATEGORIES=	cad
 MASTER_SITES=	https://www.veripool.org/ftp/
 EXTRACT_SUFX=	.tgz
@@ -14,6 +14,8 @@ GNU_CONFIGURE=	yes
 FLEX_REQD=	2.6.4
 USE_TOOLS+=	bison flex gmake perl pkg-config
 USE_LANGUAGES=	c c++
+
+TOOLS_PLATFORM.flex=	# Use flex from pkgsrc
 
 REPLACE_PERL+=	test_regress/*.pl
 REPLACE_PERL+=	test_regress/t/*.pl
