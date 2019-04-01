@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1543 2019/04/01 12:37:31 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1544 2019/04/01 12:41:47 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2447,3 +2447,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/firefox to 66.0.2 [ryoon 2019-04-01]
 	Updated devel/protobuf to 3.7.1 [adam 2019-04-01]
 	Updated devel/py-protobuf to 3.7.1 [adam 2019-04-01]
+	Updated www/firefox-l10n to 66.0.2 [ryoon 2019-04-01]
