@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/12/16 09:05:12 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/04/01 12:22:53 ryoon Exp $
 bin/verilator
 bin/verilator_bin
 bin/verilator_bin_dbg
@@ -35,8 +35,6 @@ share/verilator/include/gtkwave/fastlz.h
 share/verilator/include/gtkwave/fst_config.h
 share/verilator/include/gtkwave/fstapi.c
 share/verilator/include/gtkwave/fstapi.h
-share/verilator/include/gtkwave/lxt2_write.cpp
-share/verilator/include/gtkwave/lxt2_write.h
 share/verilator/include/gtkwave/lz4.c
 share/verilator/include/gtkwave/lz4.h
 share/verilator/include/gtkwave/wavealloca.h
@@ -55,8 +53,6 @@ share/verilator/include/verilated_fst_c.cpp
 share/verilator/include/verilated_fst_c.h
 share/verilator/include/verilated_heavy.h
 share/verilator/include/verilated_imp.h
-share/verilator/include/verilated_lxt2_c.cpp
-share/verilator/include/verilated_lxt2_c.h
 share/verilator/include/verilated_save.cpp
 share/verilator/include/verilated_save.h
 share/verilator/include/verilated_sc.h
