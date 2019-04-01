@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.25 2016/08/03 10:31:28 leot Exp $
+$NetBSD: distinfo,v 1.26 2019/04/01 16:48:37 ryoon Exp $
 
-SHA1 (groff-1.22.3.tar.gz) = 61a6808ea1ef715df9fa8e9b424e1f6b9fa8c091
-RMD160 (groff-1.22.3.tar.gz) = 8f6d364f759e559c12c497091118f6d68f3a3b85
-SHA512 (groff-1.22.3.tar.gz) = c526ab203d13a9c9d110bcd3149fe50d1cd0d309437e9e2731a7ce90d890507ebc0a2331899ecf4dba2938daa756b6094cf76fd347a0ded59797c70ccfd0c95c
-Size (groff-1.22.3.tar.gz) = 4188772 bytes
-SHA1 (patch-aa) = 3f5d2c29397377f673a863e0ea953eaac4088898
-SHA1 (patch-ab) = 64ba9805a0798bfce543a258cd66347caa1bf860
-SHA1 (patch-font_devpdf_Makefile.sub) = 2d73140fe036cf48fe93eea3ad71a273c181e298
+SHA1 (groff-1.22.4.tar.gz) = 2ce4ab107e3fab1414fef2c5b5312f562a4e4d35
+RMD160 (groff-1.22.4.tar.gz) = 6f0555695ac882a8e1f925cce22f7e3d267188cb
+SHA512 (groff-1.22.4.tar.gz) = 1c42d3cd71efaf067b5850945d9097fa1f0fadd5e2b6ba7446bd9d4f439fe1ad058e4ddb0d4e0f503682137dfc7c822944ce1e3e5cf981673f8ba197ea77126d
+Size (groff-1.22.4.tar.gz) = 4137480 bytes
+SHA1 (patch-aa) = 98c10a0ef1854ee4baca00c702746a948f5a0fe2
+SHA1 (patch-configure) = b4193e18b1e7159f5dfbc96f9a84787f6648f616
 SHA1 (patch-src_libs_libgroff_tmpfile.cpp) = 3794a028dc7c569e5adea6b7b876c3ac085376ba
