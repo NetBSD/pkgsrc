@@ -1,26 +1,17 @@
-$NetBSD: patch-aa,v 1.6 2015/10/15 14:11:20 richard Exp $
+$NetBSD: patch-aa,v 1.7 2019/04/01 16:48:37 ryoon Exp $
 
 Fix path to papers directory on NetBSD.
 Avoid arbitrary decisions wrt troff being present or not to use a g'prefix.
 Force it instead and use PKGGNUDIR logic to work it out.
 
---- Makefile.in.orig	2014-11-04 08:38:35.145524997 +0000
+--- Makefile.in.orig	2018-12-23 14:34:27.000000000 +0000
 +++ Makefile.in
-@@ -123,7 +123,7 @@ DVIPRINT=@DVIPRINT@
- # gtroff.  This doesn't affect programs like grops or groff that have
- # no Unix counterparts.  Note that the groff versions of eqn and tbl
- # will not work with Unix troff.
--g=@g@
-+g=g
- 
- # Common prefix for installation directories.
- # Used in definitions of exec_prefix, datasubdir, fontpath, manroot.
-@@ -237,7 +237,7 @@ tmac_an_prefix=\
- indexext=.i
+@@ -3681,7 +3681,7 @@ tmac_an_prefix = \
+ indexext = .i
  
  # Directory containing the default index for refer.
--indexdir=/usr/dict/papers
-+indexdir=/usr/share/dict/papers
+-indexdir = /usr/dict/papers
++indexdir = /usr/share/dict/papers
  
  # The filename (without suffix) of the default index for refer.
- indexname=Ind
+ indexname = Ind
