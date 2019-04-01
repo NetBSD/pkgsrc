@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/02/17 11:55:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/04/01 14:10:58 wiz Exp $
 bin/ledger
 include/ledger/account.h
 include/ledger/amount.h
@@ -28,7 +28,6 @@ include/ledger/lookup.h
 include/ledger/mask.h
 include/ledger/op.h
 include/ledger/option.h
-include/ledger/org.h
 include/ledger/output.h
 include/ledger/parser.h
 include/ledger/pool.h
