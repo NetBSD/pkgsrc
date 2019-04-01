@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.54 2019/03/27 09:42:15 jperkin Exp $
+$NetBSD: distinfo,v 1.55 2019/04/01 08:30:04 adam Exp $
 
-SHA1 (gnupg-2.2.14.tar.bz2) = f349c20e7498af88299b0d42a961e0364e5c37e7
-RMD160 (gnupg-2.2.14.tar.bz2) = e8972a7e145b5c9a49e34392b2a70d09748c30b3
-SHA512 (gnupg-2.2.14.tar.bz2) = 9d5216dee085efe6de300579d8fb773a5a55df639d5a435708611a974df522dd60dc995fbfcaad98065475dbeb731bbba19ecc3273e78b9b45fccff640dde69b
-Size (gnupg-2.2.14.tar.bz2) = 6707735 bytes
-SHA1 (patch-dirmngr_dns.c) = 5850d0cde376b076cc80d749ff3fb5b49ff9ee1e
+SHA1 (gnupg-2.2.15.tar.bz2) = 1909afdad3cf29583126c471298da290399270f4
+RMD160 (gnupg-2.2.15.tar.bz2) = c0c865319502a7497755e8ec8c6e26c0b5f71718
+SHA512 (gnupg-2.2.15.tar.bz2) = 7c6f0092d384fd71fc7a1c905ce23ae98df42ce131ee09fc190c275f9c8d0912be344b0782244cccb5b3938322ef3cfff8ed1ec7e949e761478b8c5110dde36a
+Size (gnupg-2.2.15.tar.bz2) = 6705912 bytes
