@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2018/08/17 15:22:37 minskim Exp $
+$NetBSD: distinfo,v 1.4 2019/04/01 13:19:46 wiz Exp $
 
-SHA1 (utf8proc-2.2.0.tar.gz) = 476efd08dbff38c63f01bb9176905edb09384e63
-RMD160 (utf8proc-2.2.0.tar.gz) = 1adb73edb8fbde7fd046a79ed22810dee38fa49c
-SHA512 (utf8proc-2.2.0.tar.gz) = ae19287e33bc4807475063963557c4d1d2f7d95577d61882ba8df380883662860eeb868e7391ac1b8111614ca2c1855f631925ade6eaa827d07d28cc4cdbab9c
-Size (utf8proc-2.2.0.tar.gz) = 156334 bytes
+SHA1 (utf8proc-2.3.0.tar.gz) = f13f0ea64b2ea955865d2c248f231806950b477d
+RMD160 (utf8proc-2.3.0.tar.gz) = a889cbce4caf404382c77d781036831393d082fc
+SHA512 (utf8proc-2.3.0.tar.gz) = 3935cd280e14ed570caa89a983b2d56a981e74da9298a1ea26064da78ece288ff48a73306446d3e1d777e6ecd8ea881f7a29169eaae2153cb015daefb8df8656
+Size (utf8proc-2.3.0.tar.gz) = 154282 bytes
 SHA1 (patch-CMakeLists.txt) = df574d345dd4d39ae83f2fe7d8669d28524a1a5e
