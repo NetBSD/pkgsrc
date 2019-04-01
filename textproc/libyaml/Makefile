@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2018/07/06 06:50:40 adam Exp $
+# $NetBSD: Makefile,v 1.12 2019/04/01 12:15:34 wiz Exp $
 
-DISTNAME=	yaml-0.2.1
+DISTNAME=	yaml-0.2.2
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	http://pyyaml.org/download/libyaml/
@@ -11,8 +11,20 @@ COMMENT=	YAML 1.1 parser and emitter written in C
 LICENSE=	mit
 
 USE_LIBTOOL=		yes
+USE_TOOLS+=		autoconf automake
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	yaml-0.1.pc.in
 TEST_TARGET=		check
+
+WRKSRC=		${WRKDIR}/lib${DISTNAME}
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fiv
+
+# cmake support is incomplete
+#USE_CMAKE=		yes
+#CMAKE_ARGS+=		-DBUILD_SHARED_LIBS:BOOL=ON
+#post-install:
+#	${RM} -rf ${DESTDIR}${PREFIX}/cmake
 
 .include "../../mk/bsd.pkg.mk"
