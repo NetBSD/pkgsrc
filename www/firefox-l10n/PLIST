@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.61 2018/09/05 15:32:30 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.62 2019/04/01 12:40:47 ryoon Exp $
 lib/firefox/browser/extensions/langpack-ach@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-an@firefox.mozilla.org.xpi
@@ -13,6 +13,7 @@ lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org.xpi
+lib/firefox/browser/extensions/langpack-cak@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org.xpi
@@ -45,6 +46,7 @@ lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-hsb@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org.xpi
+lib/firefox/browser/extensions/langpack-ia@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org.xpi
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org.xpi
