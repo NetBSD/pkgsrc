@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2019/02/17 11:55:03 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2019/04/01 14:10:58 wiz Exp $
 
-DISTNAME=	ledger-3.1.2
+DISTNAME=	ledger-3.1.3
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ledger/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
