@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2018/11/20 10:19:29 adam Exp $
+# $NetBSD: options.mk,v 1.8 2019/04/01 09:21:23 abs Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.GraphicsMagick
 PKG_SUPPORTED_OPTIONS=	x11 jasper ghostscript wmf
@@ -27,6 +27,7 @@ CONFIGURE_ARGS+=	--without-jp2
 .endif
 
 .if !empty(PKG_OPTIONS:Mghostscript)
+USE_TOOLS+=		gs:run
 .include "../../print/ghostscript/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-gslib
 .else
