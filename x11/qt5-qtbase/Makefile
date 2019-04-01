@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.73 2019/04/01 04:33:01 markd Exp $
+# $NetBSD: Makefile,v 1.74 2019/04/01 19:58:51 markd Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	C++ X GUI toolkit
 
 .include "../../x11/qt5-qtbase/Makefile.common"
@@ -95,12 +96,6 @@ CONFIGURE_ARGS+=	-no-framework
 LDFLAGS+=		-lresolv
 .  endif
 .elif ${OPSYS} == "Linux"
-# FIXME: Try to move fix upstream
-# See $$lcan in mkspecs/features/qt_configure.prf
-# Also QMAKE_DEFAULT_LIBDIRS in mkspecs/features/toolchain.prf
-.  if ${LOWER_VENDOR} == "redhat" && ${MACHINE_ARCH} == "x86_64"
-CONFIGURE_ARGS+=	-L "/usr/lib64"
-.  endif
 LDFLAGS+=		-ldl
 .elif ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
 .  if exists(/usr/lib/libexecinfo.so)
@@ -165,9 +160,15 @@ QMAKE_EXTRA=		QMAKE_PLATFORM += linux
 QMAKE_EXTRA=
 .endif
 
+COMPILER=	gcc
+.if !empty(PKGSRC_COMPILER:Mclang)
+COMPILER+=	clang llvm
+.endif
+
 pre-configure:
 	${SED}  -e 's:@LOCALBASE@:${LOCALBASE}:g' \
 		-e 's:@X11BASE@:${X11BASE}:g' \
+		-e 's:@COMPILER@:${COMPILER:Q}:g' \
 		-e 's:@CC@:${CC:Q}:g' \
 		-e 's:@CXX@:${CXX:Q}:g' \
 		-e 's:@LDFLAGS@:${LDFLAGS:Q}:g' \
