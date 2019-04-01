@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1534 2019/04/01 09:14:51 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1535 2019/04/01 10:26:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2436,3 +2436,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/gnupg2 to 2.2.15 [adam 2019-04-01]
 	Updated textproc/py-openpyxl to 2.6.2 [adam 2019-04-01]
 	Updated security/py-asyncssh to 1.16.1 [adam 2019-04-01]
+	Updated devel/py-xdis to 3.9.1 [adam 2019-04-01]
+	Updated textproc/py-jsbeautifier to 1.9.1 [adam 2019-04-01]
