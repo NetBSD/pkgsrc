@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1550 2019/04/01 21:41:06 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1551 2019/04/02 01:51:55 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2454,3 +2454,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/groff to 1.22.4 [ryoon 2019-04-01]
 	Updated net/youtube-dl to 20190401 [leot 2019-04-01]
 	Updated editors/Sigil to 0.9.13 [wiz 2019-04-01]
+	Added wm/chunkwm version 0.4.8 [jmmv 2019-04-02]
+	Added wm/skhd version 0.3.2 [jmmv 2019-04-02]
