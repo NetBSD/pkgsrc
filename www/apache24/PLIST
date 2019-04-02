@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2018/10/24 10:08:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2019/04/02 07:25:38 adam Exp $
 bin/ab
 bin/apxs
 bin/dbmmanage
@@ -170,6 +170,7 @@ lib/httpd/mod_slotmem_plain.so
 lib/httpd/mod_slotmem_shm.so
 lib/httpd/mod_socache_dbm.so
 lib/httpd/mod_socache_memcache.so
+lib/httpd/mod_socache_redis.so
 lib/httpd/mod_socache_shmcb.so
 lib/httpd/mod_speling.so
 lib/httpd/mod_ssl.so
