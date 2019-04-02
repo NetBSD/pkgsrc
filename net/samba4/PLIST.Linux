@@ -4,3 +4,5 @@ lib/libnss_wins.so
 lib/libnss_wins.so.2
 lib/samba/vfs/btrfs.so
 lib/samba/vfs/fileid.so
+man/man8/vfs_btrfs.8
+man/man8/vfs_fileid.8
