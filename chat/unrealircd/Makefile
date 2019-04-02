@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2019/04/02 12:42:44 nia Exp $
+# $NetBSD: Makefile,v 1.59 2019/04/02 13:20:21 wiz Exp $
 
 DISTNAME=	unrealircd-4.2.2
 PKGREVISION=	1
@@ -15,6 +15,9 @@ CONFLICTS+=	ircu-[0-9]*
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	aclocal autoconf autoheader automake bash
 USE_TOOLS+=	gmake gunzip pkg-config
+
+# 4.2.2 tarball was changed, remove on next update
+DIST_SUBDIR=	unrealircd-20190402
 
 .include "options.mk"
 
