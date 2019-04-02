@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/02/18 11:29:34 adam Exp $
+$NetBSD: distinfo,v 1.6 2019/04/02 08:31:48 adam Exp $
 
-SHA1 (redis-3.2.0.tar.gz) = a3e6218e8f406d65d0759ba04622185bcc5be511
-RMD160 (redis-3.2.0.tar.gz) = 57d55ff2a6fe0cc5383203c6fbc985c5c76a01b2
-SHA512 (redis-3.2.0.tar.gz) = 9620a85ab642e1b0096429873ee38a7b3adc84d3ba1dc5abd549b05ee70b081590e3c4a82e090cc2c366c8eafd122c2b075cb69eccfcc1d5f5a0bea070893b32
-Size (redis-3.2.0.tar.gz) = 124744 bytes
+SHA1 (redis-3.2.1.tar.gz) = 4f5f35fc8d340a9368d070c5ac5040704a951a41
+RMD160 (redis-3.2.1.tar.gz) = 6fda32dfdeb87abb79594650996ce791bcd49f53
+SHA512 (redis-3.2.1.tar.gz) = be51642a8895325c3c61993dd83c3299a9e2cefc1010e04f182833f720ff161bea43d3a57d28afba991949fcf6e967c4f778002967641bffe651d5db384f2e08
+Size (redis-3.2.1.tar.gz) = 124692 bytes
