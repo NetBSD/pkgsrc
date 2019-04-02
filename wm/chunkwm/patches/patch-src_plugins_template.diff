@@ -1,0 +1,16 @@
+$NetBSD: patch-src_plugins_template.diff,v 1.1 2019/04/02 01:49:09 jmmv Exp $
+
+Avoid references to the work directory in the built .so plugins.
+We rely on the pkgsrc Makefile to set PLUGINSDIR at build time.
+
+--- src/plugins/template/makefile.orig	2019-02-24 16:52:45.000000000 +0000
++++ src/plugins/template/makefile
+@@ -2,7 +2,7 @@ BUILD_FLAGS		= -O0 -g -std=c++11 -Wall
+ BUILD_PATH		= ./../../../plugins
+ SRC				= ./plugin.cpp
+ BINS			= $(BUILD_PATH)/template.so
+-LINK			= -shared -fPIC -framework Carbon -framework Cocoa -framework ApplicationServices
++LINK			= -shared -fPIC -framework Carbon -framework Cocoa -framework ApplicationServices -Wl,-install_name -Wl,$(PLUGINSDIR)/template.so
+ 
+ all: $(BINS)
+ 

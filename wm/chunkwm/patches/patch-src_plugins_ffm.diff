@@ -1,0 +1,16 @@
+$NetBSD: patch-src_plugins_ffm.diff,v 1.1 2019/04/02 01:49:09 jmmv Exp $
+
+Avoid references to the work directory in the built .so plugins.
+We rely on the pkgsrc Makefile to set PLUGINSDIR at build time.
+
+--- src/plugins/ffm/makefile.orig	2019-02-24 16:52:45.000000000 +0000
++++ src/plugins/ffm/makefile
+@@ -2,7 +2,7 @@ BUILD_FLAGS		= -O0 -g -DCHUNKWM_DEBUG -s
+ BUILD_PATH		= ./../../../plugins
+ SRC				= ./plugin.cpp
+ BINS			= $(BUILD_PATH)/ffm.so
+-LINK			= -shared -fPIC -framework Carbon -framework ApplicationServices
++LINK			= -shared -fPIC -framework Carbon -framework ApplicationServices -Wl,-install_name -Wl,$(PLUGINSDIR)/ffm.so
+ 
+ all: $(BINS)
+ 

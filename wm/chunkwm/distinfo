@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2019/04/02 01:49:09 jmmv Exp $
+
+SHA1 (chunkwm/v0.4.8.tar.gz) = 1c1337429d4595f7691e2c52194f21dd668a19e8
+RMD160 (chunkwm/v0.4.8.tar.gz) = a5177a6a9f7c65bb427a68c0eb4d6c434b02b28e
+SHA512 (chunkwm/v0.4.8.tar.gz) = b93b2081efba53268b1d2e83787bb3af505be84544d4becc688fb3da2673cf483e3b6acd6dbc7a8007685f6df4da54f2830727a5a4f1ea6a9efdf3bb981cd8eb
+Size (chunkwm/v0.4.8.tar.gz) = 161867 bytes
+SHA1 (patch-src_plugins_border.diff) = 76edaea66066b6697956654a91f87c63f9962d7a
+SHA1 (patch-src_plugins_ffm.diff) = 9e26031bd527568fabdb45fb36daf2dd3c8a4577
+SHA1 (patch-src_plugins_purify.diff) = 10ab103d8467f474439dc9e393d3057698f8d4a1
+SHA1 (patch-src_plugins_template.diff) = 1c95e16afae5d0919178a407d2495679d46cc889
+SHA1 (patch-src_plugins_tiling.diff) = eb4c74ad03bf18e3bdfb7c6ab91ef51809a91956
