@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2018/04/14 20:32:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2019/04/02 08:45:14 wiz Exp $
 bin/ikhal
 bin/khal
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -44,15 +44,12 @@ ${PYSITELIB}/khal/khalendar/exceptions.pyo
 ${PYSITELIB}/khal/khalendar/khalendar.py
 ${PYSITELIB}/khal/khalendar/khalendar.pyc
 ${PYSITELIB}/khal/khalendar/khalendar.pyo
-${PYSITELIB}/khal/khalendar/utils.py
-${PYSITELIB}/khal/khalendar/utils.pyc
-${PYSITELIB}/khal/khalendar/utils.pyo
 ${PYSITELIB}/khal/khalendar/vdir.py
 ${PYSITELIB}/khal/khalendar/vdir.pyc
 ${PYSITELIB}/khal/khalendar/vdir.pyo
-${PYSITELIB}/khal/log.py
-${PYSITELIB}/khal/log.pyc
-${PYSITELIB}/khal/log.pyo
+${PYSITELIB}/khal/parse_datetime.py
+${PYSITELIB}/khal/parse_datetime.pyc
+${PYSITELIB}/khal/parse_datetime.pyo
 ${PYSITELIB}/khal/settings/__init__.py
 ${PYSITELIB}/khal/settings/__init__.pyc
 ${PYSITELIB}/khal/settings/__init__.pyo
