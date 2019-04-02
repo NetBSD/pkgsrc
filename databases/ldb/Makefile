@@ -62,6 +62,7 @@ CONFIGURE_ARGS+=	--without-ldb-lmdb
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../databases/openldap-client/buildlink3.mk"
 .include "../../databases/tdb/buildlink3.mk"
 .include "../../devel/cmocka/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
