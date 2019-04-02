@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2018/07/03 05:34:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2019/04/02 08:59:13 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -169,6 +169,9 @@ ${PYSITELIB}/sqlalchemy/dialects/sqlite/__init__.pyo
 ${PYSITELIB}/sqlalchemy/dialects/sqlite/base.py
 ${PYSITELIB}/sqlalchemy/dialects/sqlite/base.pyc
 ${PYSITELIB}/sqlalchemy/dialects/sqlite/base.pyo
+${PYSITELIB}/sqlalchemy/dialects/sqlite/json.py
+${PYSITELIB}/sqlalchemy/dialects/sqlite/json.pyc
+${PYSITELIB}/sqlalchemy/dialects/sqlite/json.pyo
 ${PYSITELIB}/sqlalchemy/dialects/sqlite/pysqlcipher.py
 ${PYSITELIB}/sqlalchemy/dialects/sqlite/pysqlcipher.pyc
 ${PYSITELIB}/sqlalchemy/dialects/sqlite/pysqlcipher.pyo
@@ -388,9 +391,18 @@ ${PYSITELIB}/sqlalchemy/orm/unitofwork.pyo
 ${PYSITELIB}/sqlalchemy/orm/util.py
 ${PYSITELIB}/sqlalchemy/orm/util.pyc
 ${PYSITELIB}/sqlalchemy/orm/util.pyo
-${PYSITELIB}/sqlalchemy/pool.py
-${PYSITELIB}/sqlalchemy/pool.pyc
-${PYSITELIB}/sqlalchemy/pool.pyo
+${PYSITELIB}/sqlalchemy/pool/__init__.py
+${PYSITELIB}/sqlalchemy/pool/__init__.pyc
+${PYSITELIB}/sqlalchemy/pool/__init__.pyo
+${PYSITELIB}/sqlalchemy/pool/base.py
+${PYSITELIB}/sqlalchemy/pool/base.pyc
+${PYSITELIB}/sqlalchemy/pool/base.pyo
+${PYSITELIB}/sqlalchemy/pool/dbapi_proxy.py
+${PYSITELIB}/sqlalchemy/pool/dbapi_proxy.pyc
+${PYSITELIB}/sqlalchemy/pool/dbapi_proxy.pyo
+${PYSITELIB}/sqlalchemy/pool/impl.py
+${PYSITELIB}/sqlalchemy/pool/impl.pyc
+${PYSITELIB}/sqlalchemy/pool/impl.pyo
 ${PYSITELIB}/sqlalchemy/processors.py
 ${PYSITELIB}/sqlalchemy/processors.pyc
 ${PYSITELIB}/sqlalchemy/processors.pyo
@@ -490,9 +502,6 @@ ${PYSITELIB}/sqlalchemy/testing/plugin/__init__.pyo
 ${PYSITELIB}/sqlalchemy/testing/plugin/bootstrap.py
 ${PYSITELIB}/sqlalchemy/testing/plugin/bootstrap.pyc
 ${PYSITELIB}/sqlalchemy/testing/plugin/bootstrap.pyo
-${PYSITELIB}/sqlalchemy/testing/plugin/noseplugin.py
-${PYSITELIB}/sqlalchemy/testing/plugin/noseplugin.pyc
-${PYSITELIB}/sqlalchemy/testing/plugin/noseplugin.pyo
 ${PYSITELIB}/sqlalchemy/testing/plugin/plugin_base.py
 ${PYSITELIB}/sqlalchemy/testing/plugin/plugin_base.pyc
 ${PYSITELIB}/sqlalchemy/testing/plugin/plugin_base.pyo
@@ -511,9 +520,6 @@ ${PYSITELIB}/sqlalchemy/testing/replay_fixture.pyo
 ${PYSITELIB}/sqlalchemy/testing/requirements.py
 ${PYSITELIB}/sqlalchemy/testing/requirements.pyc
 ${PYSITELIB}/sqlalchemy/testing/requirements.pyo
-${PYSITELIB}/sqlalchemy/testing/runner.py
-${PYSITELIB}/sqlalchemy/testing/runner.pyc
-${PYSITELIB}/sqlalchemy/testing/runner.pyo
 ${PYSITELIB}/sqlalchemy/testing/schema.py
 ${PYSITELIB}/sqlalchemy/testing/schema.pyc
 ${PYSITELIB}/sqlalchemy/testing/schema.pyo
