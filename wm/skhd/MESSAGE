@@ -1,0 +1,13 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2019/04/02 01:50:30 jmmv Exp $
+
+skhd has been configured to start with your session.
+
+To get started, copy ${PREFIX}/share/examples/skhd/skhdrc to
+~/.skhdrc and edit at will.  The configuration file must be executable.
+
+Once done, launch skhd with:
+
+launchctl load /Library/LaunchAgents/com.koekeishiya.skhd.plist
+
+===========================================================================

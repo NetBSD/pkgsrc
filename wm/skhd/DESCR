@@ -1,0 +1,7 @@
+skhd is a simple hotkey daemon for macOS.
+
+skhd is a stripped version of khd (no longer maintained) (although
+rewritten from scratch), that sacrifices the more advanced features in
+favour of increased responsiveness and performance.  skhd is able to
+hotload its config file, meaning that hotkeys can be edited and updated
+live while skhd is running.
