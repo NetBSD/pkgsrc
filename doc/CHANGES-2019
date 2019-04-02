@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1559 2019/04/02 10:54:29 nia Exp $
+$NetBSD: CHANGES-2019,v 1.1560 2019/04/02 13:18:37 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2471,3 +2471,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-hypothesis to 4.14.2 [adam 2019-04-02]
 	Updated devel/py-test to 4.4.0 [adam 2019-04-02]
 	Updated net/dnscrypt-proxy2 to 2.0.22 [nia 2019-04-02]
+	Updated graphics/papirus-icon-theme to 20190331 [nia 2019-04-02]
