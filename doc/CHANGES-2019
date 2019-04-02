@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1554 2019/04/02 08:45:24 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1555 2019/04/02 08:52:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2463,3 +2463,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-cherrypy to 18.1.1 [adam 2019-04-02]
 	Updated databases/py-redis to 3.2.1 [adam 2019-04-02]
 	Updated time/khal to 0.10.1 [wiz 2019-04-02]
+	Updated devel/py-execnet to 1.6.0 [adam 2019-04-02]
+	Updated devel/py-test-mock to 1.10.3 [adam 2019-04-02]
