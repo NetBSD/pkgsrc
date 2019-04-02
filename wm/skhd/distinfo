@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/04/02 01:50:30 jmmv Exp $
+
+SHA1 (skhd/v0.3.2.tar.gz) = 1c2fd2a86bb4e8c6620fc2b93533ad436468eda1
+RMD160 (skhd/v0.3.2.tar.gz) = 8c0295ab11fc61402f696a3614d957abc545ea44
+SHA512 (skhd/v0.3.2.tar.gz) = 0cda57a032761ea57b6cab50310cf8d61ec15fbff23f23480c7cffb776f447cca119dab5d289f3cab241d3b2d996f8782f0d9f0b649d146935785790f8ad8bea
+Size (skhd/v0.3.2.tar.gz) = 23020 bytes

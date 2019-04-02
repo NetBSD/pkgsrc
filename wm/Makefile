@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2019/04/02 01:49:09 jmmv Exp $
+# $NetBSD: Makefile,v 1.137 2019/04/02 01:50:30 jmmv Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -76,6 +76,7 @@ SUBDIR+=	quartz-wm
 SUBDIR+=	ratpoison
 SUBDIR+=	sawfish
 SUBDIR+=	selectwm
+SUBDIR+=	skhd
 SUBDIR+=	skippy
 SUBDIR+=	spectrwm
 SUBDIR+=	trayer
