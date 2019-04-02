@@ -1,0 +1,14 @@
+chunkwm is a tiling window manager for macOS that uses a plugin
+architecture, successor to kwm.  chunkwm represents windows as the
+leaves of a binary tree, and supports binary space partitioned, monocle
+and floating desktops.
+
+Development is happening on macOS Mojave (10.14), but OSX El Capitan
+(10.11.6) and newer should work fine.  Older versions may or may not be
+compatible and will not be officially supported.
+
+chunkwm is controlled via the chunkc command-line utility, which sends
+commands to chunkwm to manipulate windows.
+
+chunkwm does not handle any keyboard input.  A third party program (e.g.
+skhd) is needed to map keyboard events to chunkwm actions via chunkc.
