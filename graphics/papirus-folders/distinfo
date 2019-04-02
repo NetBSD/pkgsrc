@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/11/30 16:42:33 nia Exp $
+$NetBSD: distinfo,v 1.2 2019/04/02 13:20:05 nia Exp $
 
-SHA1 (papirus-folders-1.0.0.tar.gz) = 2c13408f5aed0df53ed1a53cf4d40b044b3c4af7
-RMD160 (papirus-folders-1.0.0.tar.gz) = 66b76d2907f13fdd1f5b2c7ec11591c46cf2e936
-SHA512 (papirus-folders-1.0.0.tar.gz) = 2d19c9ef5615ab8d51badce190871fbb0632633b55725943fa934dbc8893fa240f77af1e38355eb80b2cf1b2693807134e662672c4499f6579ce1d42e09538b3
-Size (papirus-folders-1.0.0.tar.gz) = 8808 bytes
+SHA1 (papirus-folders-1.3.1.tar.gz) = a7aa478ee0ba39d8095a6ac1b4b29b3159da64b2
+RMD160 (papirus-folders-1.3.1.tar.gz) = f95586be3bb85a24aedd96a13cb696071384ffb9
+SHA512 (papirus-folders-1.3.1.tar.gz) = 162656ef89fcfa6a364b1eb37c86b46a393456cfaf0942567e0c312b3a9eb6a5a33bed55af8da2420c9b5a6bc8c667cd3e7063f46214a116ec04851ed5dc048f
+Size (papirus-folders-1.3.1.tar.gz) = 9113 bytes
