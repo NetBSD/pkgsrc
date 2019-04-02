@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1558 2019/04/02 09:44:14 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1559 2019/04/02 10:54:29 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2470,3 +2470,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/py-alembic to 1.0.8 [adam 2019-04-02]
 	Updated devel/py-hypothesis to 4.14.2 [adam 2019-04-02]
 	Updated devel/py-test to 4.4.0 [adam 2019-04-02]
+	Updated net/dnscrypt-proxy2 to 2.0.22 [nia 2019-04-02]
