@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/04/02 01:49:09 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2019/04/02 01:54:35 jmmv Exp $
 
 DISTNAME=	${PKGNAME:S/chunkwm-/v/}
 PKGNAME=	chunkwm-0.4.8
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 ONLY_FOR_PLATFORM=	Darwin-*-*
 
-USE_LANGUAGES=		c++11 obj-c++
+USE_LANGUAGES=		c99 c++11 obj-c++
 USE_TOOLS=		gmake
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
