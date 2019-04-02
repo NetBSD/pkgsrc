@@ -1,0 +1,16 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2019/04/02 01:49:09 jmmv Exp $
+
+chunkwm has been configured to start with your session.
+
+To get started, copy ${PREFIX}/share/examples/chunkwm/chunkwmrc to
+~/.chunkwmrc and edit at will.  The configuration file must be executable.
+
+Once done, launch chunkwm with:
+
+launchctl load /Library/LaunchAgents/com.koekeishiya.chunkwm.plist
+
+You should also install skhd, the keyboard daemon to capture key presses
+and send commands to chunkwm.
+
+===========================================================================

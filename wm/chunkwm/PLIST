@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2019/04/02 01:49:09 jmmv Exp $
+bin/chunkc
+bin/chunkwm
+libexec/chunkwm/border.so
+libexec/chunkwm/ffm.so
+libexec/chunkwm/purify.so
+libexec/chunkwm/template.so
+libexec/chunkwm/tiling.so
+share/chunkwm/com.koekeishiya.chunkwm.plist
+share/examples/chunkwm/chunkwmrc
