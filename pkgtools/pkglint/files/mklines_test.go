@@ -95,11 +95,17 @@ func (s *Suite) Test_MkLines__varuse_sh_modifier(c *check.C) {
 		"qore-version=\tqore --short-version | ${SED} -e s/-.*//",
 		"PLIST_SUBST+=\tQORE_VERSION=\"${qore-version:sh}\"")
 
-	vars2 := mklines.mklines[1].DetermineUsedVariables()
+	var vars2 []string
+	mklines.mklines[1].ForEachUsed(func(varUse *MkVarUse, time vucTime) {
+		vars2 = append(vars2, varUse.varname)
+	})
 
 	c.Check(vars2, deepEquals, []string{"SED"})
 
-	vars3 := mklines.mklines[2].DetermineUsedVariables()
+	var vars3 []string
+	mklines.mklines[2].ForEachUsed(func(varUse *MkVarUse, time vucTime) {
+		vars3 = append(vars3, varUse.varname)
+	})
 
 	// qore-version, despite its unusual name, is a pretty normal Make variable.
 	c.Check(vars3, deepEquals, []string{"qore-version"})
@@ -365,7 +371,6 @@ func (s *Suite) Test_MkLines_collectUsedVariables__simple(c *check.C) {
 	mklines := t.NewMkLines("filename.mk",
 		"\t${VAR}")
 	mkline := mklines.mklines[0]
-	G.Mk = mklines
 
 	mklines.collectUsedVariables()
 
@@ -385,7 +390,6 @@ func (s *Suite) Test_MkLines_collectUsedVariables__nested(c *check.C) {
 		"\t${outer.${inner}}")
 	assignMkline := mklines.mklines[2]
 	shellMkline := mklines.mklines[5]
-	G.Mk = mklines
 
 	mklines.collectUsedVariables()
 
@@ -876,14 +880,14 @@ func (s *Suite) Test_MkLines_Check__MASTER_SITE_in_HOMEPAGE(c *check.C) {
 
 	t.SetUpMasterSite("MASTER_SITE_GITHUB", "https://github.com/")
 	t.SetUpVartypes()
-	G.Mk = t.NewMkLines("devel/catch/Makefile",
+	mklines := t.NewMkLines("devel/catch/Makefile",
 		MkRcsID,
 		"HOMEPAGE=\t${MASTER_SITE_GITHUB:=philsquared/Catch/}",
 		"HOMEPAGE=\t${MASTER_SITE_GITHUB}",
 		"HOMEPAGE=\t${MASTER_SITES}",
 		"HOMEPAGE=\t${MASTER_SITES}${GITHUB_PROJECT}")
 
-	G.Mk.Check()
+	mklines.Check()
 
 	t.CheckOutputLines(
 		"WARN: devel/catch/Makefile:2: HOMEPAGE should not be defined in terms of MASTER_SITEs. "+
@@ -931,7 +935,7 @@ func (s *Suite) Test_MkLines_Check__extra_warnings(c *check.C) {
 	t.SetUpCommandLine("-Wextra")
 	t.SetUpVartypes()
 	G.Pkg = NewPackage(t.File("category/pkgbase"))
-	G.Mk = t.NewMkLines("options.mk",
+	mklines := t.NewMkLines("options.mk",
 		MkRcsID,
 		"",
 		".for word in ${PKG_FAIL_REASON}",
@@ -944,7 +948,7 @@ func (s *Suite) Test_MkLines_Check__extra_warnings(c *check.C) {
 		"CONDITIONAL=\"@comment\"",
 		"BUILD_DIRS=\t${WRKSRC}/../build")
 
-	G.Mk.Check()
+	mklines.Check()
 
 	t.CheckOutputLines(
 		"NOTE: options.mk:5: Please use \"# empty\", \"# none\" or \"# yes\" instead of \"# defined\".",

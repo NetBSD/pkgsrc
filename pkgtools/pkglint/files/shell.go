@@ -16,11 +16,12 @@ import (
 // Or it is a variable assignment line from a Makefile with a left-hand
 // side variable that is of some shell-like type; see Vartype.IsShell.
 type ShellLineChecker struct {
-	mkline MkLine
+	MkLines MkLines
+	mkline  MkLine
 }
 
-func NewShellLineChecker(mkline MkLine) *ShellLineChecker {
-	return &ShellLineChecker{mkline}
+func NewShellLineChecker(mklines MkLines, mkline MkLine) *ShellLineChecker {
+	return &ShellLineChecker{mklines, mkline}
 }
 
 var shellCommandsType = &Vartype{lkNone, BtShellCommands, []ACLEntry{{"*", aclpAllRuntime}}, false}
@@ -41,7 +42,7 @@ func (ck *ShellLineChecker) CheckWord(token string, checkQuoting bool, time Tool
 	// to the MkLineChecker. Examples for these are ${VAR:Mpattern} or $@.
 	p := NewMkParser(nil, token, false)
 	if varuse := p.VarUse(); varuse != nil && p.EOF() {
-		MkLineChecker{ck.mkline}.CheckVaruse(varuse, shellWordVuc)
+		MkLineChecker{ck.MkLines, ck.mkline}.CheckVaruse(varuse, shellWordVuc)
 		return
 	}
 
@@ -184,7 +185,7 @@ func (ck *ShellLineChecker) checkVaruseToken(atoms *[]*ShAtom, quoting ShQuoting
 	}
 
 	vuc := VarUseContext{shellCommandsType, vucTimeUnknown, quoting.ToVarUseContext(), true}
-	MkLineChecker{ck.mkline}.CheckVaruse(varuse, &vuc)
+	MkLineChecker{ck.MkLines, ck.mkline}.CheckVaruse(varuse, &vuc)
 
 	return true
 }
@@ -375,7 +376,7 @@ func (ck *ShellLineChecker) checkHiddenAndSuppress(hiddenAndSuppress, rest strin
 	case !contains(hiddenAndSuppress, "@"):
 		// Nothing is hidden at all.
 
-	case hasPrefix(G.Mk.target, "show-") || hasSuffix(G.Mk.target, "-message"):
+	case hasPrefix(ck.MkLines.target, "show-") || hasSuffix(ck.MkLines.target, "-message"):
 		// In these targets, all commands may be hidden.
 
 	case hasPrefix(rest, "#"):
@@ -470,7 +471,7 @@ func (scc *SimpleCommandChecker) checkCommandStart() {
 	case scc.handleComment():
 		break
 	default:
-		if G.Opts.WarnExtra && !(G.Mk != nil && G.Mk.indentation.DependsOn("OPSYS")) {
+		if G.Opts.WarnExtra && !(scc.MkLines != nil && scc.MkLines.indentation.DependsOn("OPSYS")) {
 			scc.mkline.Warnf("Unknown shell command %q.", shellword)
 			G.Explain(
 				"To make the package portable to all platforms that pkgsrc supports,",
@@ -490,7 +491,7 @@ func (scc *SimpleCommandChecker) handleTool() bool {
 
 	command := scc.strcmd.Name
 
-	tool, usable := G.Tool(command, scc.time)
+	tool, usable := G.Tool(scc.MkLines, command, scc.time)
 
 	if tool != nil && !usable {
 		scc.mkline.Warnf("The %q tool is used but not added to USE_TOOLS.", command)
@@ -530,14 +531,14 @@ func (scc *SimpleCommandChecker) handleCommandVariable() bool {
 	if varuse := parser.VarUse(); varuse != nil && parser.EOF() {
 		varname := varuse.varname
 
-		if vartype := G.Pkgsrc.VariableType(varname); vartype != nil && vartype.basicType.name == "ShellCommand" {
+		if vartype := G.Pkgsrc.VariableType(scc.MkLines, varname); vartype != nil && vartype.basicType.name == "ShellCommand" {
 			scc.checkInstallCommand(shellword)
 			return true
 		}
 
 		// When the package author has explicitly defined a command
 		// variable, assume it to be valid.
-		if G.Mk != nil && G.Mk.vars.DefinedSimilar(varname) {
+		if scc.MkLines != nil && scc.MkLines.vars.DefinedSimilar(varname) {
 			return true
 		}
 		if G.Pkg != nil && G.Pkg.vars.DefinedSimilar(varname) {
@@ -875,7 +876,7 @@ func (spc *ShellProgramChecker) canFail(cmd *MkShCommand) bool {
 	case "set":
 	}
 
-	tool, _ := G.Tool(cmdName, RunTime)
+	tool, _ := G.Tool(spc.MkLines, cmdName, RunTime)
 	if tool == nil {
 		return true
 	}
@@ -939,7 +940,7 @@ func (ck *ShellLineChecker) checkInstallCommand(shellcmd string) {
 		defer trace.Call0()()
 	}
 
-	if G.Mk == nil || !matches(G.Mk.target, `^(?:pre|do|post)-install$`) {
+	if ck.MkLines == nil || !matches(ck.MkLines.target, `^(?:pre|do|post)-install$`) {
 		return
 	}
 
@@ -1024,35 +1025,4 @@ func splitIntoShellTokens(line Line, text string) (tokens []string, rest string)
 	}
 
 	return
-}
-
-// Example: "word1 word2;;;" => "word1", "word2;;;"
-// Compare devel/bmake/files/str.c, function brk_string.
-//
-// TODO: Move to mkline.go or mkparser.go.
-//
-// TODO: Document what this function should be used for.
-//
-// TODO: Compare with brk_string from devel/bmake, especially for backticks.
-func splitIntoMkWords(line Line, text string) (words []string, rest string) {
-	if trace.Tracing {
-		defer trace.Call(line, text)()
-	}
-
-	p := NewShTokenizer(line, text, false)
-	atoms := p.ShAtoms()
-	word := ""
-	for _, atom := range atoms {
-		if atom.Type == shtSpace && atom.Quoting == shqPlain {
-			words = append(words, word)
-			word = ""
-		} else {
-			word += atom.MkText
-		}
-	}
-	if word != "" && atoms[len(atoms)-1].Quoting == shqPlain {
-		words = append(words, word)
-		word = ""
-	}
-	return words, word + p.parser.Rest()
 }

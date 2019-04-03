@@ -94,7 +94,7 @@ func NewPackage(dir string) *Package {
 // as resolved from the package's directory.
 // Variables that are known in the package are resolved, e.g. ${PKGDIR}.
 func (pkg *Package) File(relativeFileName string) string {
-	return cleanpath(resolveVariableRefs(pkg.dir + "/" + relativeFileName))
+	return cleanpath(resolveVariableRefs(nil, pkg.dir+"/"+relativeFileName))
 }
 
 func (pkg *Package) checkPossibleDowngrade() {
@@ -288,11 +288,11 @@ func (pkg *Package) loadPackageMakefile() (MkLines, MkLines) {
 	pkg.Patchdir = pkg.vars.LastValue("PATCHDIR")
 
 	// See lang/php/ext.mk
-	if varIsDefinedSimilar(pkg, nil, "PHPEXT_MK") {
-		if !varIsDefinedSimilar(pkg, nil, "USE_PHP_EXT_PATCHES") {
+	if pkg.vars.DefinedSimilar("PHPEXT_MK") {
+		if !pkg.vars.DefinedSimilar("USE_PHP_EXT_PATCHES") {
 			pkg.Patchdir = "patches"
 		}
-		if varIsDefinedSimilar(pkg, nil, "PECL_VERSION") {
+		if pkg.vars.DefinedSimilar("PECL_VERSION") {
 			pkg.DistinfoFile = "distinfo"
 		} else {
 			pkg.IgnoreMissingPatches = true
@@ -495,7 +495,7 @@ func (pkg *Package) findIncludedFile(mkline MkLine, includingFilename string) (i
 
 	// TODO: resolveVariableRefs uses G.Pkg implicitly. It should be made explicit.
 	// TODO: Try to combine resolveVariableRefs and ResolveVarsInRelativePath.
-	includedFile = resolveVariableRefs(mkline.ResolveVarsInRelativePath(mkline.IncludedFile()))
+	includedFile = resolveVariableRefs(nil, mkline.ResolveVarsInRelativePath(mkline.IncludedFile()))
 	if containsVarRef(includedFile) {
 		if trace.Tracing && !contains(includingFilename, "/mk/") {
 			trace.Stepf("%s:%s: Skipping include file %q. This may result in false warnings.",

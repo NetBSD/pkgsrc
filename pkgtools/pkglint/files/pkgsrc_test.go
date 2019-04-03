@@ -573,7 +573,7 @@ func (s *Suite) Test_Pkgsrc_VariableType(c *check.C) {
 	t.SetUpVartypes()
 
 	test := func(varname string, vartype string) {
-		actualType := G.Pkgsrc.VariableType(varname)
+		actualType := G.Pkgsrc.VariableType(nil, varname)
 		if vartype == "" {
 			c.Check(actualType, check.IsNil)
 		} else {
@@ -602,12 +602,12 @@ func (s *Suite) Test_Pkgsrc_VariableType__varparam(c *check.C) {
 
 	t.SetUpVartypes()
 
-	t1 := G.Pkgsrc.VariableType("FONT_DIRS")
+	t1 := G.Pkgsrc.VariableType(nil, "FONT_DIRS")
 
 	c.Assert(t1, check.NotNil)
 	c.Check(t1.String(), equals, "List of PathMask (guessed)")
 
-	t2 := G.Pkgsrc.VariableType("FONT_DIRS.ttf")
+	t2 := G.Pkgsrc.VariableType(nil, "FONT_DIRS.ttf")
 
 	c.Assert(t2, check.NotNil)
 	c.Check(t2.String(), equals, "List of PathMask (guessed)")
@@ -638,15 +638,15 @@ func (s *Suite) Test_Pkgsrc_VariableType__from_mk(c *check.C) {
 
 	G.Main("pkglint", "-Wall", pkg)
 
-	if typ := G.Pkgsrc.VariableType("PKGSRC_MAKE_ENV"); c.Check(typ, check.NotNil) {
+	if typ := G.Pkgsrc.VariableType(nil, "PKGSRC_MAKE_ENV"); c.Check(typ, check.NotNil) {
 		c.Check(typ.String(), equals, "List of ShellWord (guessed)")
 	}
 
-	if typ := G.Pkgsrc.VariableType("CPPPATH"); c.Check(typ, check.NotNil) {
+	if typ := G.Pkgsrc.VariableType(nil, "CPPPATH"); c.Check(typ, check.NotNil) {
 		c.Check(typ.String(), equals, "Pathlist (guessed)")
 	}
 
-	if typ := G.Pkgsrc.VariableType("OSNAME.Other"); c.Check(typ, check.NotNil) {
+	if typ := G.Pkgsrc.VariableType(nil, "OSNAME.Other"); c.Check(typ, check.NotNil) {
 		c.Check(typ.String(), equals, "Unknown")
 	}
 
@@ -672,10 +672,15 @@ func (s *Suite) Test_Pkgsrc_guessVariableType__SKIP(c *check.C) {
 
 	mklines.Check()
 
-	// FIXME: The permissions in guessVariableType say allRuntime, which excludes
-	//  aclpUseLoadtime. Therefore there should be a warning about the VarUse in
-	//  the .if line.
-	//  The check in MkLineChecker.checkVarusePermissions is disabled for guessed types.
+	vartype := G.Pkgsrc.VariableType(mklines, "MY_CHECK_SKIP")
+	t.Check(vartype.guessed, equals, true)
+	t.Check(vartype.EffectivePermissions("filename.mk"), equals, aclpAllRuntime)
+
+	// The permissions for MY_CHECK_SKIP say aclpAllRuntime, which excludes
+	// aclpUseLoadtime. Therefore there should be a warning about the VarUse in
+	// the .if line. As of March 2019, pkglint skips the permissions check for
+	// guessed variables since that variable might have an entirely different
+	// meaning; see MkLineChecker.checkVarusePermissions.
 	//
 	// There is no warning for the += operator in line 3 since the variable type
 	// (although guessed) is a list of things, and lists may be appended to.

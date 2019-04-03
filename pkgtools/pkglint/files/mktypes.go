@@ -137,6 +137,39 @@ func (m MkVarUseModifier) MatchMatch() (ok bool, positive bool, pattern string) 
 
 func (m MkVarUseModifier) IsToLower() bool { return m.Text == "tl" }
 
+// ChangesWords returns true if applying this modifier to a list variable
+// may change the number of words in the list, or their boundaries.
+func (m MkVarUseModifier) ChangesWords() bool {
+	text := m.Text
+
+	// See MkParser.VarUseModifiers for the meaning of these modifiers.
+	switch text[0] {
+
+	case 'E', 'H', 'M', 'N', 'O', 'R', 'T':
+		return false
+
+	case 'C', 'Q', 'S':
+		// For the :C and :S modifiers, a more detailed analysis could reveal
+		// cases that don't change the structure, such as :S,a,b,g or
+		// :C,[0-9A-Za-z_],.,g, but not :C,x,,g.
+		return true
+	}
+
+	switch text {
+
+	case "tl", "tu":
+		return false
+
+	case "sh", "tW", "tw":
+		return true
+	}
+
+	// If in doubt, be pessimistic. As of March 2019, the only code that
+	// actually uses this function doesn't issue a possibly wrong warning
+	// in such a case.
+	return true
+}
+
 func (vu *MkVarUse) Mod() string {
 	var mod strings.Builder
 	for _, modifier := range vu.modifiers {

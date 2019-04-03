@@ -679,9 +679,8 @@ func (s *Suite) Test_MkParser_PkgbasePattern(c *check.C) {
 	// as a version number.
 	testRest("pkgbase-${PKGNAME:C/^.*-//}-[0-9]*", "pkgbase", "-${PKGNAME:C/^.*-//}-[0-9]*")
 
-	// Using the [a-z] pattern in the package base is not seen in the wild.
-	// Therefore this rather strange parsing result is ok.
-	testRest("pkgbase-[a-z]-1.0", "pkgbase-", "[a-z]-1.0")
+	// Using the [a-z] pattern in the package base is only rarely seen in the wild.
+	testRest("pkgbase-[a-z]*-1.0", "pkgbase-[a-z]*", "-1.0")
 
 	// This is a valid dependency pattern, but it's more complicated
 	// than the patterns pkglint can handle as of January 2019.

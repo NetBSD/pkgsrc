@@ -74,10 +74,10 @@ func NewMkLines(lines Lines) MkLines {
 
 // UseVar remembers that the given variable is used in the given line.
 // This controls the "defined but not used" warning.
-func (mklines *MkLinesImpl) UseVar(mkline MkLine, varname string) {
-	mklines.vars.Use(varname, mkline)
+func (mklines *MkLinesImpl) UseVar(mkline MkLine, varname string, time vucTime) {
+	mklines.vars.Use(varname, mkline, time)
 	if G.Pkg != nil {
-		G.Pkg.vars.Use(varname, mkline)
+		G.Pkg.vars.Use(varname, mkline, time)
 	}
 }
 
@@ -85,9 +85,6 @@ func (mklines *MkLinesImpl) Check() {
 	if trace.Tracing {
 		defer trace.Call1(mklines.lines.FileName)()
 	}
-
-	G.Mk = mklines
-	defer func() { G.Mk = nil }()
 
 	// In the first pass, all additions to BUILD_DEFS and USE_TOOLS
 	// are collected to make the order of the definitions irrelevant.
@@ -128,7 +125,7 @@ func (mklines *MkLinesImpl) checkAll() {
 			mklines.Tools.SeenPrefs = true
 		}
 
-		ck := MkLineChecker{mkline}
+		ck := MkLineChecker{mklines, mkline}
 		ck.Check()
 
 		varalign.Process(mkline)
@@ -184,7 +181,7 @@ func (mklines *MkLinesImpl) checkAll() {
 func (mklines *MkLinesImpl) checkVarassignPlist(mkline MkLine) {
 	switch mkline.Varcanon() {
 	case "PLIST_VARS":
-		for _, id := range mkline.ValueFields(resolveVariableRefs(mkline.Value())) {
+		for _, id := range mkline.ValueFields(resolveVariableRefs(mklines, mkline.Value())) {
 			if !mklines.plistVarSkip && mklines.plistVarSet[id] == nil {
 				mkline.Warnf("%q is added to PLIST_VARS, but PLIST.%s is not defined in this file.", id, id)
 			}
@@ -244,7 +241,7 @@ func (mklines *MkLinesImpl) collectDefinedVariables() {
 			continue
 		}
 
-		defineVar(G.Pkg, mklines, mkline, mkline.Varname())
+		mklines.defineVar(G.Pkg, mkline, mkline.Varname())
 
 		varcanon := mkline.Varcanon()
 		switch varcanon {
@@ -267,22 +264,22 @@ func (mklines *MkLinesImpl) collectDefinedVariables() {
 			}
 
 		case "PLIST_VARS":
-			for _, id := range mkline.ValueFields(resolveVariableRefs(mkline.Value())) {
+			for _, id := range mkline.ValueFields(resolveVariableRefs(mklines, mkline.Value())) {
 				if trace.Tracing {
 					trace.Step1("PLIST.%s is added to PLIST_VARS.", id)
 				}
 
 				if containsVarRef(id) {
-					mklines.UseVar(mkline, "PLIST.*")
+					mklines.UseVar(mkline, "PLIST.*", mkline.Op().Time())
 					mklines.plistVarSkip = true
 				} else {
-					mklines.UseVar(mkline, "PLIST."+id)
+					mklines.UseVar(mkline, "PLIST."+id, mkline.Op().Time())
 				}
 			}
 
 		case "SUBST_VARS.*":
 			for _, substVar := range mkline.Fields() {
-				mklines.UseVar(mkline, varnameCanon(substVar))
+				mklines.UseVar(mkline, varnameCanon(substVar), mkline.Op().Time())
 				if trace.Tracing {
 					trace.Step1("varuse %s", substVar)
 				}
@@ -290,10 +287,18 @@ func (mklines *MkLinesImpl) collectDefinedVariables() {
 
 		case "OPSYSVARS":
 			for _, opsysVar := range mkline.Fields() {
-				mklines.UseVar(mkline, opsysVar+".*")
-				defineVar(G.Pkg, mklines, mkline, opsysVar)
+				mklines.UseVar(mkline, opsysVar+".*", mkline.Op().Time())
+				mklines.defineVar(G.Pkg, mkline, opsysVar)
 			}
 		}
+	}
+}
+
+// defineVar marks a variable as defined in both the current package and the current file.
+func (mklines *MkLinesImpl) defineVar(pkg *Package, mkline MkLine, varname string) {
+	mklines.vars.Define(varname, mkline)
+	if pkg != nil {
+		pkg.vars.Define(varname, mkline)
 	}
 }
 
@@ -303,7 +308,7 @@ func (mklines *MkLinesImpl) collectPlistVars() {
 		if mkline.IsVarassign() {
 			switch mkline.Varcanon() {
 			case "PLIST_VARS":
-				for _, id := range mkline.ValueFields(resolveVariableRefs(mkline.Value())) {
+				for _, id := range mkline.ValueFields(resolveVariableRefs(mklines, mkline.Value())) {
 					if containsVarRef(id) {
 						mklines.plistVarSkip = true
 					} else {
@@ -330,9 +335,9 @@ func (mklines *MkLinesImpl) collectElse() {
 
 func (mklines *MkLinesImpl) collectUsedVariables() {
 	for _, mkline := range mklines.mklines {
-		for _, varname := range mkline.DetermineUsedVariables() {
-			mklines.UseVar(mkline, varname)
-		}
+		mkline.ForEachUsed(func(varUse *MkVarUse, time vucTime) {
+			mklines.UseVar(mkline, varUse.varname, time)
+		})
 	}
 
 	mklines.collectDocumentedVariables()
@@ -357,7 +362,7 @@ func (mklines *MkLinesImpl) collectDocumentedVariables() {
 		if commentLines >= 3 && relevant {
 			for varname, mkline := range scope.used {
 				mklines.vars.Define(varname, mkline)
-				mklines.vars.Use(varname, mkline)
+				mklines.vars.Use(varname, mkline, vucTimeRun)
 			}
 		}
 
@@ -393,7 +398,7 @@ func (mklines *MkLinesImpl) collectDocumentedVariables() {
 			varcanon := varnameCanon(varname)
 			if varcanon == strings.ToUpper(varcanon) && matches(varcanon, `[A-Z]`) && parser.EOF() {
 				scope.Define(varcanon, mkline)
-				scope.Use(varcanon, mkline)
+				scope.Use(varcanon, mkline, vucTimeRun)
 			}
 
 			if words[1] == "Copyright" {

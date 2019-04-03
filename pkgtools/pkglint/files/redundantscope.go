@@ -153,12 +153,13 @@ func (s *RedundantScope) handleVarassign(mkline MkLine, ind *Indentation) {
 func (s *RedundantScope) handleVarUse(mkline MkLine) {
 	switch {
 	case mkline.IsVarassign():
-		for _, varname := range mkline.DetermineUsedVariables() {
+		mkline.ForEachUsed(func(varUse *MkVarUse, time vucTime) {
+			varname := varUse.varname
 			info := s.get(varname)
 			info.vari.Read(mkline)
 			info.lastAction = 1
 			s.access(varname)
-		}
+		})
 
 	case mkline.IsDirective():
 		// TODO: Handle varuse for conditions and loops.

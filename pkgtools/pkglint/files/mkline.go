@@ -423,47 +423,55 @@ func (mkline *MkLineImpl) ValueSplit(value string, separator string) []string {
 
 var notSpace = textproc.Space.Inverse()
 
-// ValueFields splits the given value, taking care of variable references.
-// Example:
+// ValueFields splits the given value in the same way as the :M variable
+// modifier, taking care of variable references. Example:
 //
-//  ValueFields("${VAR:Udefault value} ${VAR2}two words")
+//  ValueFields("${VAR:Udefault value} ${VAR2}two words;;; 'word three'")
 //  => "${VAR:Udefault value}"
 //     "${VAR2}two"
-//     "words"
+//     "words;;;"
+//     "'word three'"
 //
 // Note that even though the first word contains a space, it is not split
-// at that point since the space is inside a variable use.
+// at that point since the space is inside a variable use. Shell tokens
+// such as semicolons are also treated as normal characters. Only double
+// and single quotes are interpreted.
+//
+// Compare devel/bmake/files/str.c, function brk_string.
+//
+// TODO: Compare with brk_string from devel/bmake, especially for backticks.
 func (mkline *MkLineImpl) ValueFields(value string) []string {
-	tokens := mkline.Tokenize(value, false)
-	var split []string
-	cont := false
-
-	out := func(s string) {
-		if cont {
-			split[len(split)-1] += s
-		} else {
-			split = append(split, s)
-		}
+	if trace.Tracing {
+		defer trace.Call(mkline, value)()
 	}
 
-	for _, token := range tokens {
-		if token.Varuse != nil {
-			out(token.Text)
-			cont = true
+	p := NewShTokenizer(mkline.Line, value, false)
+	atoms := p.ShAtoms()
+
+	if len(atoms) > 0 && atoms[0].Type == shtSpace {
+		atoms = atoms[1:]
+	}
+
+	word := ""
+	var words []string
+	for _, atom := range atoms {
+		if atom.Type == shtSpace && atom.Quoting == shqPlain {
+			words = append(words, word)
+			word = ""
 		} else {
-			lexer := textproc.NewLexer(token.Text)
-			for !lexer.EOF() {
-				for lexer.NextBytesSet(textproc.Space) != "" {
-					cont = false
-				}
-				if word := lexer.NextBytesSet(notSpace); word != "" {
-					out(word)
-					cont = true
-				}
-			}
+			word += atom.MkText
 		}
 	}
-	return split
+	if word != "" && atoms[len(atoms)-1].Quoting == shqPlain {
+		words = append(words, word)
+		word = ""
+	}
+
+	// TODO: Handle parse errors
+	rest := word + p.parser.Rest()
+	_ = rest
+
+	return words
 }
 
 func (mkline *MkLineImpl) ValueTokens() ([]*MkToken, string) {
@@ -748,6 +756,12 @@ func splitMkLine(text string) (main string, tokens []*MkToken, rest string, spac
 		mainWithSpaces := main
 		main = rtrimHspace(main)
 		spaceBeforeComment = mainWithSpaces[len(main):]
+	} else {
+		restWithoutSpace := strings.TrimRightFunc(rest, func(r rune) bool { return isHspace(byte(r)) })
+		if len(restWithoutSpace) < len(rest) {
+			spaceBeforeComment = rest[len(restWithoutSpace):]
+			rest = restWithoutSpace
+		}
 	}
 
 	return
@@ -797,9 +811,9 @@ func matchMkDirective(text string) (m bool, indent, directive, args, comment str
 // This decision depends on many factors, such as whether the type of the context is
 // a list of things, whether the variable is a list, whether it can contain only
 // safe characters, and so on.
-func (mkline *MkLineImpl) VariableNeedsQuoting(varname string, vartype *Vartype, vuc *VarUseContext) (needsQuoting YesNoUnknown) {
+func (mkline *MkLineImpl) VariableNeedsQuoting(mklines MkLines, varuse *MkVarUse, vartype *Vartype, vuc *VarUseContext) (needsQuoting YesNoUnknown) {
 	if trace.Tracing {
-		defer trace.Call(varname, vartype, vuc, trace.Result(&needsQuoting))()
+		defer trace.Call(varuse, vartype, vuc, trace.Result(&needsQuoting))()
 	}
 
 	// TODO: Systematically test this function, each and every case, from top to bottom.
@@ -845,7 +859,7 @@ func (mkline *MkLineImpl) VariableNeedsQuoting(varname string, vartype *Vartype,
 
 	// Pkglint assumes that the tool definitions don't include very
 	// special characters, so they can safely be used inside any quotes.
-	if tool := G.ToolByVarname(varname); tool != nil {
+	if tool := G.ToolByVarname(mklines, varuse.varname); tool != nil {
 		switch vuc.quoting {
 		case VucQuotPlain:
 			if !vuc.IsWordPart {
@@ -879,6 +893,14 @@ func (mkline *MkLineImpl) VariableNeedsQuoting(varname string, vartype *Vartype,
 		if vucVartype.basicType == BtHomepage && vartype.basicType == BtFetchURL {
 			return no // Just for HOMEPAGE=${MASTER_SITE_*:=subdir/}.
 		}
+
+		// .for dir in ${PATH:C,:, ,g}
+		for _, modifier := range varuse.modifiers {
+			if modifier.ChangesWords() {
+				return unknown
+			}
+		}
+
 		return yes
 	}
 
@@ -889,42 +911,35 @@ func (mkline *MkLineImpl) VariableNeedsQuoting(varname string, vartype *Vartype,
 	}
 
 	if trace.Tracing {
-		trace.Step1("Don't know whether :Q is needed for %q", varname)
+		trace.Step1("Don't know whether :Q is needed for %q", varuse.varname)
 	}
 	return unknown
 }
 
-func (mkline *MkLineImpl) DetermineUsedVariables() []string {
-	// TODO: It would be good to have these variables as MkVarUse objects
-	//  including the context in which they are used.
+// ForEachUsed calls the action for each variable that is used in the line.
+func (mkline *MkLineImpl) ForEachUsed(action func(varUse *MkVarUse, time vucTime)) {
 
-	var varnames []string
+	var searchIn func(text string, time vucTime) // mutually recursive with searchInVarUse
 
-	add := func(varname string) {
-		varnames = append(varnames, varname)
-	}
-
-	var searchIn func(text string) // mutually recursive with searchInVarUse
-
-	searchInVarUse := func(varuse *MkVarUse) {
+	searchInVarUse := func(varuse *MkVarUse, time vucTime) {
 		varname := varuse.varname
 		if !varuse.IsExpression() {
-			add(varname)
+			action(varuse, time)
 		}
-		searchIn(varname)
+		searchIn(varname, time)
 		for _, mod := range varuse.modifiers {
-			searchIn(mod.Text)
+			searchIn(mod.Text, time)
 		}
 	}
 
-	searchIn = func(text string) {
+	searchIn = func(text string, time vucTime) {
 		if !contains(text, "$") {
 			return
 		}
 
 		for _, token := range NewMkParser(nil, text, false).MkTokens() {
 			if token.Varuse != nil {
-				searchInVarUse(token.Varuse)
+				searchInVarUse(token.Varuse, time)
 			}
 		}
 	}
@@ -932,27 +947,28 @@ func (mkline *MkLineImpl) DetermineUsedVariables() []string {
 	switch {
 
 	case mkline.IsVarassign():
-		searchIn(mkline.Varname())
-		searchIn(mkline.Value())
+		searchIn(mkline.Varname(), vucTimeParse)
+		searchIn(mkline.Value(), mkline.Op().Time())
 
 	case mkline.IsDirective() && mkline.Directive() == "for":
-		searchIn(mkline.Args())
+		searchIn(mkline.Args(), vucTimeParse)
 
 	case mkline.IsDirective() && mkline.Cond() != nil:
-		mkline.Cond().Walk(&MkCondCallback{VarUse: searchInVarUse})
+		mkline.Cond().Walk(&MkCondCallback{
+			VarUse: func(varuse *MkVarUse) {
+				searchInVarUse(varuse, vucTimeParse)
+			}})
 
 	case mkline.IsShellCommand():
-		searchIn(mkline.ShellCommand())
+		searchIn(mkline.ShellCommand(), vucTimeRun)
 
 	case mkline.IsDependency():
-		searchIn(mkline.Targets())
-		searchIn(mkline.Sources())
+		searchIn(mkline.Targets(), vucTimeParse)
+		searchIn(mkline.Sources(), vucTimeParse)
 
 	case mkline.IsInclude():
-		searchIn(mkline.IncludedFile())
+		searchIn(mkline.IncludedFile(), vucTimeParse)
 	}
-
-	return varnames
 }
 
 func (mkline *MkLineImpl) UnquoteShell(str string) string {
@@ -1026,6 +1042,15 @@ func NewMkOperator(op string) MkOperator {
 
 func (op MkOperator) String() string {
 	return [...]string{"=", "!=", ":=", "+=", "?=", "use", "use-loadtime", "use-match"}[op]
+}
+
+// Time returns the time at which the right-hand side of the assignment is
+// evaluated.
+func (op MkOperator) Time() vucTime {
+	if op == opAssignShell || op == opAssignEval {
+		return vucTimeParse
+	}
+	return vucTimeRun
 }
 
 // VarUseContext defines the context in which a variable is defined

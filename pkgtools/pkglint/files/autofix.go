@@ -82,7 +82,7 @@ func (fix *Autofix) Explain(explanation ...string) {
 	fix.explanation = explanation
 }
 
-// ReplaceAfter replaces "from" with "to", a single time.
+// Replace replaces "from" with "to", a single time.
 func (fix *Autofix) Replace(from string, to string) {
 	fix.ReplaceAfter("", from, to)
 }
@@ -227,7 +227,9 @@ func (fix *Autofix) Delete() {
 }
 
 // Anyway has the effect of showing the diagnostic even when nothing can
-// be fixed automatically, but only if neither --show-autofix nor
+// be fixed automatically.
+//
+// As usual, the diagnostic is only shown if neither --show-autofix nor
 // --autofix mode is given.
 func (fix *Autofix) Anyway() {
 	fix.anyway = !G.Logger.IsAutofix()
