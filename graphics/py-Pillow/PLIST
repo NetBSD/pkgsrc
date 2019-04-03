@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2018/07/03 07:44:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2019/04/03 08:05:44 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -181,9 +181,6 @@ ${PYSITELIB}/PIL/MpoImagePlugin.pyo
 ${PYSITELIB}/PIL/MspImagePlugin.py
 ${PYSITELIB}/PIL/MspImagePlugin.pyc
 ${PYSITELIB}/PIL/MspImagePlugin.pyo
-${PYSITELIB}/PIL/OleFileIO.py
-${PYSITELIB}/PIL/OleFileIO.pyc
-${PYSITELIB}/PIL/OleFileIO.pyo
 ${PYSITELIB}/PIL/PSDraw.py
 ${PYSITELIB}/PIL/PSDraw.pyc
 ${PYSITELIB}/PIL/PSDraw.pyo
