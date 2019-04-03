@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.121 2019/02/13 20:51:57 spz Exp $
+# $NetBSD: Makefile,v 1.122 2019/04/03 00:12:59 ryoon Exp $
 
-DISTNAME=	icu4c-63_1-src
+DISTNAME=	icu4c-64_1-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
-PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	http://download.icu-project.org/files/icu4c/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
@@ -130,4 +129,5 @@ SUBST_SED.icu-config+=	-e 's/l$${LIBICU}/l$${ICUPREFIX}/g'
 SUBST_SED.icu-config+=	-e '/l$${ICUPREFIX}/ s/$${ICULIBSUFFIX_VERSION}//g'
 .endif
 
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
