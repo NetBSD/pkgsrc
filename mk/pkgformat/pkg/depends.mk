@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.8 2018/01/25 00:34:27 joerg Exp $
+# $NetBSD: depends.mk,v 1.9 2019/04/03 18:38:16 rillig Exp $
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
@@ -275,3 +275,8 @@ _pkgformat-test-depends:
 .PHONY:
 acquire-test-depends-lock: acquire-lock
 release-test-depends-lock: release-lock
+
+_VARGROUPS+=		depends
+_PKG_VARS.depends=	TOOL_DEPENDS BUILD_DEPENDS TEST_DEPENDS DEPENDS
+_SORTED_VARS.depends=	TOOL_DEPENDS BUILD_DEPENDS TEST_DEPENDS DEPENDS
+_DEF_VARS.depends=	_DEPENDS_FILE _RDEPENDS_FILE
