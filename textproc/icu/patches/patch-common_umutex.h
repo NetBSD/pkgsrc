@@ -1,19 +1,17 @@
-$NetBSD: patch-common_umutex.h,v 1.1 2014/03/04 12:07:16 obache Exp $
+$NetBSD: patch-common_umutex.h,v 1.2 2019/04/03 00:13:00 ryoon Exp $
 
 * Add NetBSD MI atomic_ops(3) support
 
---- common/umutex.h.orig	2013-10-04 20:49:16.000000000 +0000
+--- common/umutex.h.orig	2019-03-27 18:47:14.000000000 +0000
 +++ common/umutex.h
-@@ -117,6 +117,34 @@ inline int32_t umtx_atomic_dec(u_atomic_
- U_NAMESPACE_END
+@@ -60,6 +60,31 @@ template struct std::atomic<int32_t>;
  
+ U_NAMESPACE_BEGIN
  
-+#elif U_HAVE_NETBSD_ATOMIC_OPS
++#if U_HAVE_NETBSD_ATOMIC_OPS
 +/*
 + * NetBSD MI atomic_ops(3)
 + */
-+
-+U_NAMESPACE_BEGIN
 +#include <sys/atomic.h>
 +typedef volatile uint32_t u_atomic_int32_t;
 +#define ATOMIC_INT32_T_INITIALIZER(val) val
@@ -33,9 +31,17 @@ $NetBSD: patch-common_umutex.h,v 1.1 2014/03/04 12:07:16 obache Exp $
 +inline int32_t umtx_atomic_dec(u_atomic_int32_t *p) {
 +    return atomic_dec_32_nv(p);
 +}
-+U_NAMESPACE_END
++#else
 +
-+
- #elif U_HAVE_GCC_ATOMICS
- /*
-  * gcc atomic ops. These are available on several other compilers as well.
+ /****************************************************************************
+  *
+  *   Low Level Atomic Operations, ICU wrappers for.
+@@ -84,7 +109,7 @@ inline int32_t umtx_atomic_inc(u_atomic_
+ inline int32_t umtx_atomic_dec(u_atomic_int32_t *var) {
+     return var->fetch_sub(1) - 1;
+ }
+-
++#endif
+ 
+ /*************************************************************************************************
+  *

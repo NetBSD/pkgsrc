@@ -1,12 +1,12 @@
-$NetBSD: patch-configure.ac,v 1.5 2015/10/09 23:15:34 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.6 2019/04/03 00:13:00 ryoon Exp $
 
 * Detect NetBSD libatomic
 * test(1) portability fix
 * Add support for Bitrig
 
---- configure.ac.orig	2015-10-08 04:00:26.000000000 +0000
+--- configure.ac.orig	2019-03-27 18:47:14.000000000 +0000
 +++ configure.ac
-@@ -427,6 +427,18 @@ if test "x$plugins" = "xtrue"; then
+@@ -449,6 +449,18 @@ if test "x$plugins" = "xtrue"; then
  fi
  
  
@@ -25,7 +25,7 @@ $NetBSD: patch-configure.ac,v 1.5 2015/10/09 23:15:34 ryoon Exp $
  U_ENABLE_DYLOAD=1
  enable=yes
  AC_MSG_CHECKING([whether to enable dynamic loading of plugins. Ignored if plugins disabled.])
-@@ -1251,7 +1263,7 @@ ICUDATA_CHAR=$U_ENDIAN_CHAR
+@@ -1260,7 +1272,7 @@ ICUDATA_CHAR=$U_ENDIAN_CHAR
  case "${host}" in
  	*-*-solaris*) 	platform=U_SOLARIS ;;
  	*-*-linux*|*-*-gnu|*-*-k*bsd*-gnu|*-*-kopensolaris*-gnu)        platform=U_LINUX ;;
@@ -34,7 +34,7 @@ $NetBSD: patch-configure.ac,v 1.5 2015/10/09 23:15:34 ryoon Exp $
  	*-*-aix*) 	platform=U_AIX ;;
  	*-*-hpux*) 	platform=U_HPUX ;;
  	*-apple-darwin*|*-apple-rhapsody*)	platform=U_DARWIN ;;
-@@ -1270,6 +1282,7 @@ case "${host}" in
+@@ -1279,6 +1291,7 @@ case "${host}" in
  	*-*-beos)		platform=U_BEOS ;;
  	*-*-irix*)		platform=U_IRIX ;;
  	*-ncr-*)		platform=U_MPRAS ;;
@@ -42,19 +42,3 @@ $NetBSD: patch-configure.ac,v 1.5 2015/10/09 23:15:34 ryoon Exp $
  	*) 		platform=U_UNKNOWN_PLATFORM ;;
  esac
  AC_SUBST(ICUDATA_CHAR)
-@@ -1287,13 +1300,13 @@ fi
- # Now that we're done using CPPFLAGS etc. for tests, we can change it
- # for build.
- 
--if test "${CC}" == "clang"; then
-+if test "${CC}" = "clang"; then
-    CLANGCFLAGS="-Qunused-arguments -Wno-parentheses-equality"
- else
-    CLANGCFLAGS=""
- fi
- 
--if test "${CXX}" == "clang++"; then
-+if test "${CXX}" = "clang++"; then
-    CLANGCXXFLAGS="-Qunused-arguments -Wno-parentheses-equality"
- else
-    CLANGCXXFLAGS=""
