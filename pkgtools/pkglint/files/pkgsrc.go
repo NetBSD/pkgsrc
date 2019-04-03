@@ -45,8 +45,8 @@ type Pkgsrc struct {
 	vartypes   VarTypeRegistry
 }
 
-func NewPkgsrc(dir string) *Pkgsrc {
-	src := Pkgsrc{
+func NewPkgsrc(dir string) Pkgsrc {
+	return Pkgsrc{
 		dir,
 		make(map[string]bool),
 		NewTools(),
@@ -60,8 +60,6 @@ func NewPkgsrc(dir string) *Pkgsrc {
 		NewScope(),
 		make(map[string]string),
 		NewVarTypeRegistry()}
-
-	return &src
 }
 
 func (src *Pkgsrc) loadDefaultBuildDefs() {
@@ -368,8 +366,6 @@ func (src *Pkgsrc) loadUntypedVars() {
 	handleMkFile := func(path string) {
 		mklines := LoadMk(path, 0)
 		if mklines != nil && len(mklines.mklines) > 0 {
-			G.Assertf(G.Mk == nil, "asdf")
-			G.Mk = mklines // FIXME: This is because defineVar uses G.Mk instead of the method receiver.
 			mklines.collectDefinedVariables()
 			mklines.collectUsedVariables()
 			for varname, mkline := range mklines.vars.firstDef {
@@ -378,7 +374,6 @@ func (src *Pkgsrc) loadUntypedVars() {
 			for varname, mkline := range mklines.vars.used {
 				define(varnameCanon(varname), mkline)
 			}
-			G.Mk = nil
 		}
 	}
 
@@ -893,7 +888,7 @@ func (src *Pkgsrc) loadPkgOptions() {
 // VariableType returns the type of the variable
 // (possibly guessed based on the variable name),
 // or nil if the type cannot even be guessed.
-func (src *Pkgsrc) VariableType(varname string) (vartype *Vartype) {
+func (src *Pkgsrc) VariableType(mklines MkLines, varname string) (vartype *Vartype) {
 	if trace.Tracing {
 		defer trace.Call(varname, trace.Result(&vartype))()
 	}
@@ -906,19 +901,19 @@ func (src *Pkgsrc) VariableType(varname string) (vartype *Vartype) {
 		return vartype
 	}
 
-	if tool := G.ToolByVarname(varname); tool != nil {
+	if tool := G.ToolByVarname(mklines, varname); tool != nil {
 		if trace.Tracing {
 			trace.Stepf("Use of tool %+v", tool)
 		}
 		perms := aclpUse
-		if tool.Validity == AfterPrefsMk && G.Mk.Tools.SeenPrefs {
+		if tool.Validity == AfterPrefsMk && mklines.Tools.SeenPrefs {
 			perms |= aclpUseLoadtime
 		}
 		return &Vartype{lkNone, BtShellCommand, []ACLEntry{{"*", perms}}, false}
 	}
 
 	if m, toolVarname := match1(varname, `^TOOLS_(.*)`); m {
-		if tool := G.ToolByVarname(toolVarname); tool != nil {
+		if tool := G.ToolByVarname(mklines, toolVarname); tool != nil {
 			return &Vartype{lkNone, BtPathname, []ACLEntry{{"*", aclpUse}}, false}
 		}
 	}

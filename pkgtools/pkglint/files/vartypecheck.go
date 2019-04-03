@@ -8,6 +8,8 @@ import (
 
 // VartypeCheck groups together the various checks for variables of the different types.
 type VartypeCheck struct {
+	MkLines MkLines
+
 	// Note: if "go vet" or "go test" complains about a "variable with invalid type", update to go1.11.4.
 	// See https://github.com/golang/go/issues/28972.
 	// That doesn't help though since pkglint contains these "more convoluted alias declarations"
@@ -274,7 +276,7 @@ func (cv *VartypeCheck) Comment() {
 // When a package is installed, the example file is installed as usual
 // and is then copied to its final location.
 func (cv *VartypeCheck) ConfFiles() {
-	words, _ := splitIntoMkWords(cv.MkLine.Line, cv.Value)
+	words := cv.MkLine.ValueFields(cv.Value)
 	if len(words)%2 != 0 {
 		cv.Warnf("Values for %s should always be pairs of paths.", cv.Varname)
 	}
@@ -298,7 +300,9 @@ func (cv *VartypeCheck) Dependency() {
 
 	parser := NewMkParser(nil, value, false)
 	deppat := parser.Dependency()
-	if deppat != nil && deppat.Wildcard == "" && (parser.Rest() == "{,nb*}" || parser.Rest() == "{,nb[0-9]*}") {
+	rest := parser.Rest()
+
+	if deppat != nil && deppat.Wildcard == "" && (rest == "{,nb*}" || rest == "{,nb[0-9]*}") {
 		cv.Warnf("Dependency patterns of the form pkgbase>=1.0 don't need the \"{,nb*}\" extension.")
 		G.Explain(
 			"The \"{,nb*}\" extension is only necessary for dependencies of the",
@@ -307,12 +311,12 @@ func (cv *VartypeCheck) Dependency() {
 			"For dependency patterns using the comparison operators,",
 			"this is not necessary.")
 
-	} else if deppat == nil && contains(value, "{") {
+	} else if deppat == nil && contains(cv.ValueNoVar, "{") {
 		// Don't warn about complicated patterns like "{ssh{,6}>=0,openssh>=0}"
 		// that pkglint doesn't understand as of January 2019.
 		return
 
-	} else if deppat == nil || !parser.EOF() {
+	} else if deppat == nil || rest != "" {
 		cv.Warnf("Invalid dependency pattern %q.", value)
 		G.Explain(
 			"Typical dependencies have the following forms:",
@@ -377,12 +381,27 @@ func (cv *VartypeCheck) Dependency() {
 
 func (cv *VartypeCheck) DependencyWithPath() {
 	value := cv.Value
-	if value != cv.ValueNoVar {
-		return // It's probably not worth checking this.
+	valueNoVar := cv.ValueNoVar
+
+	if valueNoVar == "" || valueNoVar == ":" {
+		return
 	}
 
-	if m, pattern, relpath, pkg := match3(value, `(.*):(\.\./\.\./[^/]+/([^/]+))$`); m {
-		MkLineChecker{cv.MkLine}.CheckRelativePkgdir(relpath)
+	parts := cv.MkLine.ValueSplit(value, ":")
+	if len(parts) == 2 {
+		pattern := parts[0]
+		relpath := parts[1]
+		pathParts := cv.MkLine.ValueSplit(relpath, "/")
+		pkg := pathParts[len(pathParts)-1]
+
+		if matches(relpath, `^\.\./[^.]`) {
+			cv.Warnf("Dependency paths should have the form \"../../category/package\".")
+			cv.MkLine.ExplainRelativeDirs()
+		}
+
+		if !containsVarRef(relpath) {
+			MkLineChecker{cv.MkLines, cv.MkLine}.CheckRelativePkgdir(relpath)
+		}
 
 		switch pkg {
 		case "gettext":
@@ -394,12 +413,7 @@ func (cv *VartypeCheck) DependencyWithPath() {
 		}
 
 		cv.WithValue(pattern).Dependency()
-		return
-	}
 
-	if matches(value, `:\.\./[^/]+$`) {
-		cv.Warnf("Dependencies should have the form \"../../category/package\".")
-		cv.MkLine.ExplainRelativeDirs()
 		return
 	}
 
@@ -660,7 +674,7 @@ func (cv *VartypeCheck) LdFlag() {
 }
 
 func (cv *VartypeCheck) License() {
-	(&LicenseChecker{cv.MkLine}).Check(cv.Value, cv.Op)
+	(&LicenseChecker{cv.MkLines, cv.MkLine}).Check(cv.Value, cv.Op)
 }
 
 func (cv *VartypeCheck) MachineGnuPlatform() {
@@ -748,7 +762,7 @@ func (cv *VartypeCheck) Option() {
 	}
 
 	if m, optname := match1(value, `^-?([a-z][-0-9a-z+]*)$`); m {
-		if G.Mk != nil && !G.Mk.FirstTimeSlice("option:", optname) {
+		if cv.MkLines != nil && !cv.MkLines.FirstTimeSlice("option:", optname) {
 			return
 		}
 
@@ -879,7 +893,7 @@ func (cv *VartypeCheck) PkgOptionsVar() {
 // Despite its name, it is more similar to RelativePkgDir than to RelativePkgPath.
 func (cv *VartypeCheck) PkgPath() {
 	pkgsrcdir := cv.MkLine.PathToFile(G.Pkgsrc.File("."))
-	MkLineChecker{cv.MkLine}.CheckRelativePkgdir(pkgsrcdir + "/" + cv.Value)
+	MkLineChecker{cv.MkLines, cv.MkLine}.CheckRelativePkgdir(pkgsrcdir + "/" + cv.Value)
 }
 
 func (cv *VartypeCheck) PkgRevision() {
@@ -964,7 +978,7 @@ func (cv *VartypeCheck) PythonDependency() {
 
 // RelativePkgDir refers to a package directory, e.g. ../../category/pkgbase.
 func (cv *VartypeCheck) RelativePkgDir() {
-	MkLineChecker{cv.MkLine}.CheckRelativePkgdir(cv.Value)
+	MkLineChecker{cv.MkLines, cv.MkLine}.CheckRelativePkgdir(cv.Value)
 }
 
 // RelativePkgPath refers to a file or directory, e.g. ../../category/pkgbase,
@@ -972,7 +986,7 @@ func (cv *VartypeCheck) RelativePkgDir() {
 //
 // See RelativePkgDir, which requires a directory, not a file.
 func (cv *VartypeCheck) RelativePkgPath() {
-	MkLineChecker{cv.MkLine}.CheckRelativePath(cv.Value, true)
+	MkLineChecker{cv.MkLines, cv.MkLine}.CheckRelativePath(cv.Value, true)
 }
 
 func (cv *VartypeCheck) Restricted() {
@@ -1045,16 +1059,16 @@ func (cv *VartypeCheck) ShellCommand() {
 		return
 	}
 	setE := true
-	NewShellLineChecker(cv.MkLine).CheckShellCommand(cv.Value, &setE, RunTime)
+	NewShellLineChecker(cv.MkLines, cv.MkLine).CheckShellCommand(cv.Value, &setE, RunTime)
 }
 
 // ShellCommands checks for zero or more shell commands, each terminated with a semicolon.
 func (cv *VartypeCheck) ShellCommands() {
-	NewShellLineChecker(cv.MkLine).CheckShellCommands(cv.Value, RunTime)
+	NewShellLineChecker(cv.MkLines, cv.MkLine).CheckShellCommands(cv.Value, RunTime)
 }
 
 func (cv *VartypeCheck) ShellWord() {
-	NewShellLineChecker(cv.MkLine).CheckWord(cv.Value, true, RunTime)
+	NewShellLineChecker(cv.MkLines, cv.MkLine).CheckWord(cv.Value, true, RunTime)
 }
 
 func (cv *VartypeCheck) Stage() {
@@ -1071,7 +1085,7 @@ func (cv *VartypeCheck) Tool() {
 		// no warning for package-defined tool definitions
 
 	} else if m, toolname, tooldep := match2(cv.Value, `^([-\w]+|\[)(?::(\w+))?$`); m {
-		if tool, _ := G.Tool(toolname, RunTime); tool == nil {
+		if tool, _ := G.Tool(cv.MkLines, toolname, RunTime); tool == nil {
 			cv.Errorf("Unknown tool %q.", toolname)
 		}
 

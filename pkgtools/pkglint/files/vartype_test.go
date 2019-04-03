@@ -156,8 +156,8 @@ func (s *Suite) Test_Vartype_IsConsideredList(c *check.C) {
 
 	t.SetUpVartypes()
 
-	c.Check(G.Pkgsrc.VariableType("COMMENT").IsConsideredList(), equals, false)
-	c.Check(G.Pkgsrc.VariableType("DEPENDS").IsConsideredList(), equals, true)
-	c.Check(G.Pkgsrc.VariableType("PKG_FAIL_REASON").IsConsideredList(), equals, true)
-	c.Check(G.Pkgsrc.VariableType("CONF_FILES").IsConsideredList(), equals, true)
+	c.Check(G.Pkgsrc.VariableType(nil, "COMMENT").IsConsideredList(), equals, false)
+	c.Check(G.Pkgsrc.VariableType(nil, "DEPENDS").IsConsideredList(), equals, true)
+	c.Check(G.Pkgsrc.VariableType(nil, "PKG_FAIL_REASON").IsConsideredList(), equals, true)
+	c.Check(G.Pkgsrc.VariableType(nil, "CONF_FILES").IsConsideredList(), equals, true)
 }

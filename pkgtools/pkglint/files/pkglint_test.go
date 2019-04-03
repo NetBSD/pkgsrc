@@ -425,7 +425,7 @@ func (s *Suite) Test_resolveVariableRefs__circular_reference(c *check.C) {
 
 	// TODO: It may be better to define MkLines.Resolve and Package.Resolve,
 	//  to clearly state the scope of the involved variables.
-	resolved := resolveVariableRefs("gcc-${GCC_VERSION}")
+	resolved := resolveVariableRefs(nil, "gcc-${GCC_VERSION}")
 
 	c.Check(resolved, equals, "gcc-${GCC_VERSION}")
 }
@@ -437,14 +437,14 @@ func (s *Suite) Test_resolveVariableRefs__multilevel(c *check.C) {
 	mkline2 := t.NewMkLine("filename.mk", 11, "SECOND=\t${THIRD}")
 	mkline3 := t.NewMkLine("filename.mk", 12, "THIRD=\tgot it")
 	G.Pkg = NewPackage(t.File("category/pkgbase"))
-	defineVar(G.Pkg, nil, mkline1, "FIRST")
-	defineVar(G.Pkg, nil, mkline2, "SECOND")
-	defineVar(G.Pkg, nil, mkline3, "THIRD")
+	G.Pkg.vars.Define("FIRST", mkline1)
+	G.Pkg.vars.Define("SECOND", mkline2)
+	G.Pkg.vars.Define("THIRD", mkline3)
 
 	// TODO: Add a similar test in which some of the variables are defined
 	//  conditionally or with differing values, just to see what pkglint does
 	//  in such a case.
-	resolved := resolveVariableRefs("you ${FIRST}")
+	resolved := resolveVariableRefs(nil, "you ${FIRST}")
 
 	c.Check(resolved, equals, "you got it")
 }
@@ -459,7 +459,7 @@ func (s *Suite) Test_resolveVariableRefs__special_chars(c *check.C) {
 	G.Pkg = NewPackage(t.File("category/pkg"))
 	G.Pkg.vars.Define("GST_PLUGINS0.10_TYPE", mkline)
 
-	resolved := resolveVariableRefs("gst-plugins0.10-${GST_PLUGINS0.10_TYPE}/distinfo")
+	resolved := resolveVariableRefs(nil, "gst-plugins0.10-${GST_PLUGINS0.10_TYPE}/distinfo")
 
 	c.Check(resolved, equals, "gst-plugins0.10-x11/distinfo")
 }
@@ -631,15 +631,15 @@ func (s *Suite) Test_Pkglint_Tool__prefer_mk_over_pkgsrc(c *check.C) {
 	t := s.Init(c)
 
 	mkline := t.NewMkLine("dummy.mk", 123, "DUMMY=\tvalue")
-	G.Mk = t.NewMkLines("Makefile", MkRcsID)
+	mklines := t.NewMkLines("Makefile", MkRcsID)
 	global := G.Pkgsrc.Tools.Define("tool", "TOOL", mkline)
-	local := G.Mk.Tools.Define("tool", "TOOL", mkline)
+	local := mklines.Tools.Define("tool", "TOOL", mkline)
 
 	global.Validity = Nowhere
 	local.Validity = AtRunTime
 
-	loadTimeTool, loadTimeUsable := G.Tool("tool", LoadTime)
-	runTimeTool, runTimeUsable := G.Tool("tool", RunTime)
+	loadTimeTool, loadTimeUsable := G.Tool(mklines, "tool", LoadTime)
+	runTimeTool, runTimeUsable := G.Tool(mklines, "tool", RunTime)
 
 	c.Check(loadTimeTool, equals, local)
 	c.Check(loadTimeUsable, equals, false)
@@ -650,11 +650,11 @@ func (s *Suite) Test_Pkglint_Tool__prefer_mk_over_pkgsrc(c *check.C) {
 func (s *Suite) Test_Pkglint_Tool__lookup_by_name_fallback(c *check.C) {
 	t := s.Init(c)
 
-	G.Mk = t.NewMkLines("Makefile", MkRcsID)
+	mklines := t.NewMkLines("Makefile", MkRcsID)
 	t.SetUpTool("tool", "", Nowhere)
 
-	loadTimeTool, loadTimeUsable := G.Tool("tool", LoadTime)
-	runTimeTool, runTimeUsable := G.Tool("tool", RunTime)
+	loadTimeTool, loadTimeUsable := G.Tool(mklines, "tool", LoadTime)
+	runTimeTool, runTimeUsable := G.Tool(mklines, "tool", RunTime)
 
 	// The tool is returned even though it may not be used at the moment.
 	// The calling code must explicitly check for usability.
@@ -670,15 +670,15 @@ func (s *Suite) Test_Pkglint_Tool__lookup_by_varname(c *check.C) {
 	t := s.Init(c)
 
 	mkline := t.NewMkLine("dummy.mk", 123, "DUMMY=\tvalue")
-	G.Mk = t.NewMkLines("Makefile", MkRcsID)
+	mklines := t.NewMkLines("Makefile", MkRcsID)
 	global := G.Pkgsrc.Tools.Define("tool", "TOOL", mkline)
-	local := G.Mk.Tools.Define("tool", "TOOL", mkline)
+	local := mklines.Tools.Define("tool", "TOOL", mkline)
 
 	global.Validity = Nowhere
 	local.Validity = AtRunTime
 
-	loadTimeTool, loadTimeUsable := G.Tool("${TOOL}", LoadTime)
-	runTimeTool, runTimeUsable := G.Tool("${TOOL}", RunTime)
+	loadTimeTool, loadTimeUsable := G.Tool(mklines, "${TOOL}", LoadTime)
+	runTimeTool, runTimeUsable := G.Tool(mklines, "${TOOL}", RunTime)
 
 	c.Check(loadTimeTool, equals, local)
 	c.Check(loadTimeUsable, equals, false)
@@ -690,11 +690,11 @@ func (s *Suite) Test_Pkglint_Tool__lookup_by_varname(c *check.C) {
 func (s *Suite) Test_Pkglint_Tool__lookup_by_varname_fallback(c *check.C) {
 	t := s.Init(c)
 
-	G.Mk = t.NewMkLines("Makefile", MkRcsID)
+	mklines := t.NewMkLines("Makefile", MkRcsID)
 	G.Pkgsrc.Tools.def("tool", "TOOL", false, Nowhere)
 
-	loadTimeTool, loadTimeUsable := G.Tool("${TOOL}", LoadTime)
-	runTimeTool, runTimeUsable := G.Tool("${TOOL}", RunTime)
+	loadTimeTool, loadTimeUsable := G.Tool(mklines, "${TOOL}", LoadTime)
+	runTimeTool, runTimeUsable := G.Tool(mklines, "${TOOL}", RunTime)
 
 	c.Check(loadTimeTool.String(), equals, "tool:TOOL::Nowhere")
 	c.Check(loadTimeUsable, equals, false)
@@ -706,11 +706,11 @@ func (s *Suite) Test_Pkglint_Tool__lookup_by_varname_fallback(c *check.C) {
 func (s *Suite) Test_Pkglint_Tool__lookup_by_varname_fallback_runtime(c *check.C) {
 	t := s.Init(c)
 
-	G.Mk = t.NewMkLines("Makefile", MkRcsID)
+	mklines := t.NewMkLines("Makefile", MkRcsID)
 	G.Pkgsrc.Tools.def("tool", "TOOL", false, AtRunTime)
 
-	loadTimeTool, loadTimeUsable := G.Tool("${TOOL}", LoadTime)
-	runTimeTool, runTimeUsable := G.Tool("${TOOL}", RunTime)
+	loadTimeTool, loadTimeUsable := G.Tool(mklines, "${TOOL}", LoadTime)
+	runTimeTool, runTimeUsable := G.Tool(mklines, "${TOOL}", RunTime)
 
 	c.Check(loadTimeTool.String(), equals, "tool:TOOL::AtRunTime")
 	c.Check(loadTimeUsable, equals, false)
@@ -722,23 +722,23 @@ func (s *Suite) Test_Pkglint_ToolByVarname__prefer_mk_over_pkgsrc(c *check.C) {
 	t := s.Init(c)
 
 	mkline := t.NewMkLine("dummy.mk", 123, "DUMMY=\tvalue")
-	G.Mk = t.NewMkLines("Makefile", MkRcsID)
+	mklines := t.NewMkLines("Makefile", MkRcsID)
 	global := G.Pkgsrc.Tools.Define("tool", "TOOL", mkline)
-	local := G.Mk.Tools.Define("tool", "TOOL", mkline)
+	local := mklines.Tools.Define("tool", "TOOL", mkline)
 
 	global.Validity = Nowhere
 	local.Validity = AtRunTime
 
-	c.Check(G.ToolByVarname("TOOL"), equals, local)
+	c.Check(G.ToolByVarname(mklines, "TOOL"), equals, local)
 }
 
 func (s *Suite) Test_Pkglint_ToolByVarname(c *check.C) {
 	t := s.Init(c)
 
-	G.Mk = t.NewMkLines("Makefile", MkRcsID)
+	mklines := t.NewMkLines("Makefile", MkRcsID)
 	G.Pkgsrc.Tools.def("tool", "TOOL", false, AtRunTime)
 
-	c.Check(G.ToolByVarname("TOOL").String(), equals, "tool:TOOL::AtRunTime")
+	c.Check(G.ToolByVarname(mklines, "TOOL").String(), equals, "tool:TOOL::AtRunTime")
 }
 
 func (s *Suite) Test_Pkglint_checkReg__other(c *check.C) {
