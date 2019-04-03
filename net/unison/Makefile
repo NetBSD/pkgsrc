@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.130 2019/03/21 11:05:02 jaapb Exp $
+# $NetBSD: Makefile,v 1.131 2019/04/03 00:33:01 ryoon Exp $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	unison-2.48.15v4
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
 
