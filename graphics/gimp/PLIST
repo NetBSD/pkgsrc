@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.64 2018/11/22 13:02:21 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.65 2019/04/03 06:02:29 wiz Exp $
 bin/gimp
 bin/gimp-2.10
 bin/gimp-console
@@ -311,7 +311,7 @@ lib/gimp/2.0/plug-ins/file-raw-placeholder/file-raw-placeholder
 lib/gimp/2.0/plug-ins/file-rawtherapee/file-rawtherapee
 lib/gimp/2.0/plug-ins/file-sgi/file-sgi
 lib/gimp/2.0/plug-ins/file-sunras/file-sunras
-${PLIST.svg}lib/gimp/2.0/plug-ins/file-svg/file-svg
+lib/gimp/2.0/plug-ins/file-svg/file-svg
 lib/gimp/2.0/plug-ins/file-tga/file-tga
 lib/gimp/2.0/plug-ins/file-tiff/file-tiff
 lib/gimp/2.0/plug-ins/file-wmf/file-wmf
