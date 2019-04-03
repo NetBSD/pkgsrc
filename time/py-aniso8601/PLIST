@@ -1,15 +1,26 @@
-@comment $NetBSD: PLIST,v 1.2 2019/01/09 09:01:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/04/03 09:31:40 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/aniso8601/__init__.py
 ${PYSITELIB}/aniso8601/__init__.pyc
 ${PYSITELIB}/aniso8601/__init__.pyo
-${PYSITELIB}/aniso8601/builder.py
-${PYSITELIB}/aniso8601/builder.pyc
-${PYSITELIB}/aniso8601/builder.pyo
+${PYSITELIB}/aniso8601/builders/__init__.py
+${PYSITELIB}/aniso8601/builders/__init__.pyc
+${PYSITELIB}/aniso8601/builders/__init__.pyo
+${PYSITELIB}/aniso8601/builders/python.py
+${PYSITELIB}/aniso8601/builders/python.pyc
+${PYSITELIB}/aniso8601/builders/python.pyo
+${PYSITELIB}/aniso8601/builders/tests/__init__.py
+${PYSITELIB}/aniso8601/builders/tests/__init__.pyc
+${PYSITELIB}/aniso8601/builders/tests/__init__.pyo
+${PYSITELIB}/aniso8601/builders/tests/test_init.py
+${PYSITELIB}/aniso8601/builders/tests/test_init.pyc
+${PYSITELIB}/aniso8601/builders/tests/test_init.pyo
+${PYSITELIB}/aniso8601/builders/tests/test_python.py
+${PYSITELIB}/aniso8601/builders/tests/test_python.pyc
+${PYSITELIB}/aniso8601/builders/tests/test_python.pyo
 ${PYSITELIB}/aniso8601/compat.py
 ${PYSITELIB}/aniso8601/compat.pyc
 ${PYSITELIB}/aniso8601/compat.pyo
@@ -34,9 +45,6 @@ ${PYSITELIB}/aniso8601/tests/__init__.pyo
 ${PYSITELIB}/aniso8601/tests/compat.py
 ${PYSITELIB}/aniso8601/tests/compat.pyc
 ${PYSITELIB}/aniso8601/tests/compat.pyo
-${PYSITELIB}/aniso8601/tests/test_builder.py
-${PYSITELIB}/aniso8601/tests/test_builder.pyc
-${PYSITELIB}/aniso8601/tests/test_builder.pyo
 ${PYSITELIB}/aniso8601/tests/test_date.py
 ${PYSITELIB}/aniso8601/tests/test_date.pyc
 ${PYSITELIB}/aniso8601/tests/test_date.pyo
@@ -55,9 +63,15 @@ ${PYSITELIB}/aniso8601/tests/test_time.pyo
 ${PYSITELIB}/aniso8601/tests/test_timezone.py
 ${PYSITELIB}/aniso8601/tests/test_timezone.pyc
 ${PYSITELIB}/aniso8601/tests/test_timezone.pyo
+${PYSITELIB}/aniso8601/tests/test_utcoffset.py
+${PYSITELIB}/aniso8601/tests/test_utcoffset.pyc
+${PYSITELIB}/aniso8601/tests/test_utcoffset.pyo
 ${PYSITELIB}/aniso8601/time.py
 ${PYSITELIB}/aniso8601/time.pyc
 ${PYSITELIB}/aniso8601/time.pyo
 ${PYSITELIB}/aniso8601/timezone.py
 ${PYSITELIB}/aniso8601/timezone.pyc
 ${PYSITELIB}/aniso8601/timezone.pyo
+${PYSITELIB}/aniso8601/utcoffset.py
+${PYSITELIB}/aniso8601/utcoffset.pyc
+${PYSITELIB}/aniso8601/utcoffset.pyo
