@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2019/03/26 16:12:28 gdt Exp $
+# $NetBSD: Makefile,v 1.79 2019/04/03 13:17:27 maya Exp $
 
 .include "dist.mk"
 
@@ -103,28 +103,22 @@ PLIST.qt=	yes
 .  endif
 .endif
 
-.if ${OPSYS} == "IRIX"
-# Assume that IRIX (and IRIX alone) does not support a libpython.so.
-# Assume that 32-bit IRIX has NIS and 64-bit IRIX does not.
-.  if ${ABI} == "64"
-PLIST.no-nis=	yes
-.  else
-PLIST.nis=	yes
-.  endif
-.else
+.if ${OPSYS} != "IRIX"
 PLIST.dll=	yes
-# Determine if lib-dynload/nis.so (PLIST.nis) or
-# lib-dynload/nis-failed.so (PLIST.no-nis) will be built.
-.  if ${OPSYS} == "MirBSD" || "${OS_VARIANT}" == "chromeos"
-# neither nis nor no-nis
-.  elif ${OPSYS} != "NetBSD" || exists(/usr/bin/ypcat)
-# \todo Explain the "!= NetBSD"; that seems to declare that any
-# remaining system other than NetBSD will have NIS, even if ypcat is
-# missing.
-PLIST.nis=	yes
-.  else
-PLIST.no-nis=	yes
+.endif
+
+.for incdir in ${_OPSYS_INCLUDE_DIRS}
+.  if (exists(${incdir}/rpc/rpc.h) || exists(${incdir}/tirpc/rpc/rpc.h))
+HAVE_RPC_H=	yes
 .  endif
+.  if (exists(${incdir}/rpcsvc/yp_prot.h) || exists(${incdir}/nsl/rpcsvc/yp_prot.h))
+HAVE_YP_PROT_H=	yes
+.  endif
+.endfor
+.if (${HAVE_RPC_H:Uno} == yes && ${HAVE_YP_PROT_H:Uno} == yes)
+PLIST.nis=	yes
+.else
+PLIST.no-nis=	yes
 .endif
 
 # configure complains about buggy getaddrinfo()
