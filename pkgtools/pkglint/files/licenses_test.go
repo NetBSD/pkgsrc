@@ -11,7 +11,7 @@ func (s *Suite) Test_LicenseChecker_Check(c *check.C) {
 		"The licenses for most software are designed to take away ...")
 	mkline := t.NewMkLine("Makefile", 7, "LICENSE=dummy")
 
-	licenseChecker := LicenseChecker{mkline}
+	licenseChecker := LicenseChecker{nil, mkline}
 	licenseChecker.Check("gpl-v2", opAssign)
 
 	t.CheckOutputLines(
