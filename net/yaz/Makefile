@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.73 2018/12/09 18:52:07 adam Exp $
+# $NetBSD: Makefile,v 1.74 2019/04/03 00:33:02 ryoon Exp $
 #
 
 DISTNAME=	yaz-4.1.6
 DISTNAME=	yaz-5.16.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.indexdata.dk/pub/yaz/
 

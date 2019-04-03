@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2018/12/09 18:52:07 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2019/04/03 00:33:04 ryoon Exp $
 
 BUILDLINK_TREE+=	kdesu
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kdesu
 KDESU_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kdesu+=	kdesu>=5.21.0
-BUILDLINK_ABI_DEPENDS.kdesu?=	kdesu>=5.47.0nb3
+BUILDLINK_ABI_DEPENDS.kdesu?=	kdesu>=5.47.0nb4
 BUILDLINK_PKGSRCDIR.kdesu?=	../../security/kdesu
 
 .include "../../devel/kpty/buildlink3.mk"
