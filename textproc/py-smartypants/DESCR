@@ -1,0 +1,14 @@
+smartypants can perform the following transformations:
+* Straight quotes (" and ') into "curly" quote HTML entities
+* Backticks-style quotes (``like this'') into "curly" quote HTML entities
+* Dashes (-- and ---) into en- and em-dash entities
+* Three consecutive dots (... or . . .) into an ellipsis entity
+
+This means you can write, edit, and save your posts using plain old ASCII
+straight quotes, plain dashes, and plain dots, but your published posts (and
+final HTML output) will appear with smart quotes, em-dashes, and proper
+ellipses.
+
+smartypants does not modify contents in some HTML element. Typically, these
+tags are used to display text where smart quotes and other "smart punctuation"
+would not be appropriate, such as source code or example markup.
