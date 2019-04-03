@@ -1,8 +1,25 @@
-# $NetBSD: gnu-configure.mk,v 1.17 2014/08/23 03:00:18 obache Exp $
+# $NetBSD: gnu-configure.mk,v 1.18 2019/04/03 19:10:26 rillig Exp $
+#
+# Package-settable variables:
+#
+# GNU_CONFIGURE
+#	Whether the package has a GNU-style configure script as the
+#	primary means of configuring itself to the platform.
+#
+#	Possible: yes no
+#	Default: undefined
+#
+# GNU_CONFIGURE_STRICT
+#	Whether unknown --enable/--disable/--with/--without options make
+#	the package fail immediately.
+#
+#	Possible: yes no
+#	Default: no
 
 _VARGROUPS+=			gnu-configure
 _USER_VARS.gnu-configure=	# none
-_PKG_VARS.gnu-configure=	GNU_CONFIGURE GNU_CONFIGURE_PREFIX \
+_PKG_VARS.gnu-configure=	\
+	GNU_CONFIGURE GNU_CONFIGURE_STRICT GNU_CONFIGURE_PREFIX \
 	SET_LIBDIR GNU_CONFIGURE_LIBSUBDIR \
 	GNU_CONFIGURE_LIBDIR GNU_CONFIGURE_INFODIR GNU_CONFIGURE_MANDIR \
 	CONFIGURE_HAS_LIBDIR CONFIGURE_HAS_MANDIR CONFIGURE_HAS_INFODIR \
@@ -173,3 +190,6 @@ configure-scripts-osdep:
 		depth=`${EXPR} $$depth + 1`; pattern="*/$$pattern";	\
 	done
 .endif
+
+GNU_CONFIGURE_STRICT?=	no
+CONFIGURE_ARGS+=	${"${GNU_CONFIGURE_STRICT:M[yY][eE][sS]}":?--enable-option-checking=fatal:}
