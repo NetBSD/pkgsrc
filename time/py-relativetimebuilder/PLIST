@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2019/04/03 14:50:44 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/relativetimebuilder/__init__.py
+${PYSITELIB}/relativetimebuilder/__init__.pyc
+${PYSITELIB}/relativetimebuilder/__init__.pyo
+${PYSITELIB}/relativetimebuilder/tests/__init__.py
+${PYSITELIB}/relativetimebuilder/tests/__init__.pyc
+${PYSITELIB}/relativetimebuilder/tests/__init__.pyo
+${PYSITELIB}/relativetimebuilder/tests/test_init.py
+${PYSITELIB}/relativetimebuilder/tests/test_init.pyc
+${PYSITELIB}/relativetimebuilder/tests/test_init.pyo
