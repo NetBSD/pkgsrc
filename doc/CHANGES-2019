@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1570 2019/04/03 15:23:43 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1571 2019/04/03 21:50:22 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2487,3 +2487,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added time/py-relativetimebuilder version 1.0.0 [adam 2019-04-03]
 	Updated print/py-reportlab to 3.5.17 [adam 2019-04-03]
 	Updated textproc/py-rst2pdf to 0.94 [adam 2019-04-03]
+	Updated pkgtools/pkglint to 5.7.4 [rillig 2019-04-03]
