@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2018/12/21 16:56:18 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2019/04/03 00:32:43 ryoon Exp $
 
 BUILDLINK_TREE+=	liblcf
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	liblcf
 LIBLCF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.liblcf+=	liblcf>=0.5.4
+BUILDLINK_ABI_DEPENDS.liblcf?=	liblcf>=0.6.0nb1
 BUILDLINK_PKGSRCDIR.liblcf?=	../../games/liblcf
 
 .include "../../textproc/expat/buildlink3.mk"

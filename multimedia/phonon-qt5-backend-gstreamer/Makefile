@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2018/12/09 18:52:38 adam Exp $
+# $NetBSD: Makefile,v 1.17 2019/04/03 00:32:55 ryoon Exp $
 
 DISTNAME=	phonon-backend-gstreamer-4.9.0
 PKGNAME=	${DISTNAME:S/-/-qt5-/}
-PKGREVISION=	11
+PKGREVISION=	12
 
 COMMENT=	Multimedia API for KF5 - GStreamer backend
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2019/03/20 00:48:35 manu Exp $
+# $NetBSD: Makefile,v 1.3 2019/04/03 00:32:42 ryoon Exp $
 
 GITHUB_PROJECT=	ltfs
 DISTNAME=	v2.4.2.0-pre0
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S/v//:S/-pre0/.0/}
+PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_GITHUB:=LinearTapeFileSystem/}/${GITHUB_PROJECT}/archive/
 DIST_SUBDIR=	${GITHUB_PROJECT}

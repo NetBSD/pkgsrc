@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.109 2019/03/19 23:44:46 gutteridge Exp $
+# $NetBSD: Makefile,v 1.110 2019/04/03 00:32:57 ryoon Exp $
 
 VERSION=	3.41.2
 DISTNAME=	FileZilla_${VERSION}_src
 PKGNAME=	filezilla-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	net x11
 MASTER_SITES=	https://download.filezilla-project.org/client/
 EXTRACT_SUFX=	.tar.bz2
