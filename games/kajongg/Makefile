@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2018/12/13 19:51:53 adam Exp $
+# $NetBSD: Makefile,v 1.50 2019/04/03 00:32:43 ryoon Exp $
 
 DISTNAME=	kajongg-${_KDE_VERSION}
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	games
 COMMENT=	Maj Jong game
 
