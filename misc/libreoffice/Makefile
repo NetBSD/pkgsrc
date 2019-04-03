@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.188 2019/04/03 00:32:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.189 2019/04/03 13:36:30 ryoon Exp $
 
 VERREL=		6.2.2
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -107,14 +107,15 @@ DISTFILES+=		${md}
 SITES.${md}=		https://dev-www.libreoffice.org/src/
 .endfor
 
-MORE_DISTFILES+=		49a64f3bcf20a7909ba2751349231d6652ded9cd2840e961b5164d09de3ffa63-opens___.ttf
+MORE_DISTFILES2+=		49a64f3bcf20a7909ba2751349231d6652ded9cd2840e961b5164d09de3ffa63-opens___.ttf
 SITES.49a64f3bcf20a7909ba2751349231d6652ded9cd2840e961b5164d09de3ffa63-opens___.ttf=	https://dev-www.libreoffice.org/extern/
 
-MORE_DISTFILES+=		harfbuzz-2.3.1.tar.bz2
-SITES.harfbuzz-2.3.1.tar.bz2=	https://www.freedesktop.org/software/harfbuzz/release/
+MORE_DISTFILES2+=		harfbuzz-2.4.0.tar.bz2
+SITES.harfbuzz-2.4.0.tar.bz2=	https://www.freedesktop.org/software/harfbuzz/release/
 
-DISTFILES+=	49a64f3bcf20a7909ba2751349231d6652ded9cd2840e961b5164d09de3ffa63-opens___.ttf
-DISTFILES+=	harfbuzz-2.3.1.tar.bz2
+.for md2 in ${MORE_DISTFILES2}
+DISTFILES+=		${md2}
+.endfor
 
 .include "options.mk"
 
@@ -247,7 +248,7 @@ debugrun:
 
 post-extract:
 	${MKDIR} -p ${WRKSRC}/src
-.for md in ${MORE_DISTFILES}
+.for md in ${MORE_DISTFILES} ${MORE_DISTFILES2}
 	${LN} -s ${DISTDIR}/${DIST_SUBDIR}/${md} ${WRKSRC}/src/${md}
 .endfor
 	mkdir ${WRKSRC}/tmp
