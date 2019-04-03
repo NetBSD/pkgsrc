@@ -162,7 +162,7 @@ func (t *Tester) SetUpCommandLine(args ...string) {
 //
 // See SetUpTool for registering tools like echo, awk, perl.
 func (t *Tester) SetUpVartypes() {
-	G.Pkgsrc.vartypes.Init(G.Pkgsrc)
+	G.Pkgsrc.vartypes.Init(&G.Pkgsrc)
 }
 
 func (t *Tester) SetUpMasterSite(varname string, urls ...string) {
@@ -531,22 +531,27 @@ func (t *Tester) Remove(relativeFileName string) {
 //  include("including.mk",
 //      include("other.mk",
 //          "VAR= other"),
-//      include("module.mk",
+//      include("subdir/module.mk",
 //          "VAR= module",
-//          include("version.mk",
+//          include("subdir/version.mk",
 //              "VAR= version"),
-//          include("env.mk",
+//          include("subdir/env.mk",
 //              "VAR= env")))
 //
 //  mklines := get("including.mk")
 //  module := get("module.mk")
+//
+// The filenames passed to the include function are all relative to the
+// same location, but that location is irrelevant in practice. The generated
+// .include lines take the relative paths into account. For example, when
+// subdir/module.mk includes subdir/version.mk, the include line is just:
+//  .include "version.mk"
 func (t *Tester) SetUpHierarchy() (
 	include func(filename string, args ...interface{}) MkLines,
 	get func(string) MkLines) {
 
 	files := map[string]MkLines{}
 
-	// FIXME: Define where the filename is relative to: to the file, or to the current directory.
 	include = func(filename string, args ...interface{}) MkLines {
 		var lines []Line
 		lineno := 1
@@ -561,7 +566,7 @@ func (t *Tester) SetUpHierarchy() (
 			case string:
 				addLine(arg)
 			case MkLines:
-				text := sprintf(".include %q", arg.lines.FileName)
+				text := sprintf(".include %q", relpath(path.Dir(filename), arg.lines.FileName))
 				addLine(text)
 				lines = append(lines, arg.lines.Lines...)
 			default:
@@ -570,9 +575,7 @@ func (t *Tester) SetUpHierarchy() (
 		}
 
 		mklines := NewMkLines(NewLines(filename, lines))
-		// FIXME: This filename must be relative to the including file.
-		G.Assertf(files[filename] == nil, "MkLines with name %q already exist.", filename)
-		// FIXME: This filename must be relative to the base directory.
+		G.Assertf(files[filename] == nil, "MkLines with name %q already exists.", filename)
 		files[filename] = mklines
 		return mklines
 	}
@@ -583,6 +586,37 @@ func (t *Tester) SetUpHierarchy() (
 	}
 
 	return
+}
+
+// Demonstrates that Tester.SetUpHierarchy uses relative paths for the
+// .include directives.
+func (s *Suite) Test_Tester_SetUpHierarchy(c *check.C) {
+	t := s.Init(c)
+
+	include, get := t.SetUpHierarchy()
+	include("including.mk",
+		include("other.mk",
+			"VAR= other"),
+		include("subdir/module.mk",
+			"VAR= module",
+			include("subdir/version.mk",
+				"VAR= version"),
+			include("subdir/env.mk",
+				"VAR= env")))
+
+	mklines := get("including.mk")
+
+	mklines.ForEach(func(mkline MkLine) { mkline.Notef("Text is: %s", mkline.Text) })
+
+	t.CheckOutputLines(
+		"NOTE: including.mk:1: Text is: .include \"other.mk\"",
+		"NOTE: other.mk:1: Text is: VAR= other",
+		"NOTE: including.mk:2: Text is: .include \"subdir/module.mk\"",
+		"NOTE: subdir/module.mk:1: Text is: VAR= module",
+		"NOTE: subdir/module.mk:2: Text is: .include \"version.mk\"",
+		"NOTE: subdir/version.mk:1: Text is: VAR= version",
+		"NOTE: subdir/module.mk:3: Text is: .include \"env.mk\"",
+		"NOTE: subdir/env.mk:1: Text is: VAR= env")
 }
 
 // Check delegates a check to the check.Check function.
@@ -691,8 +725,8 @@ func (t *Tester) NewMkLine(filename string, lineno int, text string) MkLine {
 	return NewMkLine(t.NewLine(filename, lineno, text))
 }
 
-func (t *Tester) NewShellLineChecker(filename string, lineno int, text string) *ShellLineChecker {
-	return NewShellLineChecker(t.NewMkLine(filename, lineno, text))
+func (t *Tester) NewShellLineChecker(mklines MkLines, filename string, lineno int, text string) *ShellLineChecker {
+	return NewShellLineChecker(mklines, t.NewMkLine(filename, lineno, text))
 }
 
 // NewLines returns a list of simple lines that belong together.

@@ -560,12 +560,20 @@ func (s *Suite) Test_Package__varuse_at_load_time(c *check.C) {
 	G.Check(t.File("category/pkgbase"))
 
 	t.CheckOutputLines(
+		"NOTE: ~/category/pkgbase/Makefile:14: Consider the :sh modifier instead of != for \"echo false=${FALSE:Q}\".",
 		"WARN: ~/category/pkgbase/Makefile:14: To use the tool ${FALSE} at load time, bsd.prefs.mk has to be included before.",
-		// TODO: "before including bsd.prefs.mk in line ###".
+		"NOTE: ~/category/pkgbase/Makefile:15: Consider the :sh modifier instead of != for \"echo nice=${NICE:Q}\".",
+
+		// TODO: replace "at load time" with "before including bsd.prefs.mk in line ###".
 		// TODO: ${NICE} could be used at load time if it were added to USE_TOOLS earlier.
 		"WARN: ~/category/pkgbase/Makefile:15: The tool ${NICE} cannot be used at load time.",
+
+		"NOTE: ~/category/pkgbase/Makefile:16: Consider the :sh modifier instead of != for \"echo true=${TRUE:Q}\".",
 		"WARN: ~/category/pkgbase/Makefile:16: To use the tool ${TRUE} at load time, bsd.prefs.mk has to be included before.",
-		"WARN: ~/category/pkgbase/Makefile:25: The tool ${NICE} cannot be used at load time.")
+		"NOTE: ~/category/pkgbase/Makefile:24: Consider the :sh modifier instead of != for \"echo false=${FALSE:Q}\".",
+		"NOTE: ~/category/pkgbase/Makefile:25: Consider the :sh modifier instead of != for \"echo nice=${NICE:Q}\".",
+		"WARN: ~/category/pkgbase/Makefile:25: The tool ${NICE} cannot be used at load time.",
+		"NOTE: ~/category/pkgbase/Makefile:26: Consider the :sh modifier instead of != for \"echo true=${TRUE:Q}\".")
 }
 
 func (s *Suite) Test_Package_loadPackageMakefile(c *check.C) {

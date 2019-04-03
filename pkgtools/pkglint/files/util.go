@@ -290,30 +290,6 @@ func varnameParam(varname string) string {
 	return ""
 }
 
-// defineVar marks a variable as defined in both the current package and the current file.
-func defineVar(pkg *Package, mklines MkLines, mkline MkLine, varname string) {
-	if mklines != nil {
-		mklines.vars.Define(varname, mkline)
-	}
-	if pkg != nil {
-		pkg.vars.Define(varname, mkline)
-	}
-}
-
-// varIsDefinedSimilar tests whether the variable (or its canonicalized form)
-// is defined in the current package or in the current file.
-func varIsDefinedSimilar(pkg *Package, mklines MkLines, varname string) bool {
-	return mklines != nil && (mklines.vars.DefinedSimilar(varname) || mklines.forVars[varname]) ||
-		pkg != nil && pkg.vars.DefinedSimilar(varname)
-}
-
-// varIsUsedSimilar tests whether the variable (or its canonicalized form)
-// is used in the current package or in the current file.
-func varIsUsedSimilar(pkg *Package, mklines MkLines, varname string) bool {
-	return mklines != nil && mklines.vars.UsedSimilar(varname) ||
-		pkg != nil && pkg.vars.UsedSimilar(varname)
-}
-
 func fileExists(filename string) bool {
 	st, err := os.Stat(filename)
 	return err == nil && st.Mode().IsRegular()
@@ -507,11 +483,12 @@ func (o *Once) check(key uint64) bool {
 // TODO: Merge this code with Var, which defines essentially the
 //  same features.
 type Scope struct {
-	firstDef map[string]MkLine // TODO: Can this be removed?
-	lastDef  map[string]MkLine
-	value    map[string]string
-	used     map[string]MkLine
-	fallback map[string]string
+	firstDef       map[string]MkLine // TODO: Can this be removed?
+	lastDef        map[string]MkLine
+	value          map[string]string
+	used           map[string]MkLine
+	usedAtLoadTime map[string]bool
+	fallback       map[string]string
 }
 
 func NewScope() Scope {
@@ -520,6 +497,7 @@ func NewScope() Scope {
 		make(map[string]MkLine),
 		make(map[string]string),
 		make(map[string]MkLine),
+		make(map[string]bool),
 		make(map[string]string)}
 }
 
@@ -565,21 +543,21 @@ func (s *Scope) Fallback(varname string, value string) {
 }
 
 // Use marks the variable and its canonicalized form as used.
-func (s *Scope) Use(varname string, line MkLine) {
-	if s.used[varname] == nil {
-		s.used[varname] = line
-		if trace.Tracing {
-			trace.Step2("Using %q in %s", varname, line.String())
+func (s *Scope) Use(varname string, line MkLine, time vucTime) {
+	use := func(name string) {
+		if s.used[name] == nil {
+			s.used[name] = line
+			if trace.Tracing {
+				trace.Step2("Using %q in %s", name, line.String())
+			}
+		}
+		if time == vucTimeParse {
+			s.usedAtLoadTime[name] = true
 		}
 	}
 
-	varcanon := varnameCanon(varname)
-	if varcanon != varname && s.used[varcanon] == nil {
-		s.used[varcanon] = line
-		if trace.Tracing {
-			trace.Step2("Using %q in %s", varcanon, line.String())
-		}
-	}
+	use(varname)
+	use(varnameCanon(varname))
 }
 
 // Defined tests whether the variable is defined.
@@ -622,6 +600,12 @@ func (s *Scope) UsedSimilar(varname string) bool {
 		return true
 	}
 	return s.used[varnameCanon(varname)] != nil
+}
+
+// UsedAtLoadTime returns true if the variable is used at load time
+// somewhere.
+func (s *Scope) UsedAtLoadTime(varname string) bool {
+	return s.usedAtLoadTime[varname]
 }
 
 // FirstDefinition returns the line in which the variable has been defined first.
