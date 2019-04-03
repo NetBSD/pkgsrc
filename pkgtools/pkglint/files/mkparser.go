@@ -603,7 +603,7 @@ func (p *MkParser) PkgbasePattern() string {
 	for {
 		if p.VarUse() != nil ||
 			lexer.SkipRegexp(G.res.Compile(`^[\w.*+,{}]+`)) ||
-			lexer.SkipRegexp(G.res.Compile(`^\[[\d-]+\]`)) {
+			lexer.SkipRegexp(G.res.Compile(`^\[[\w-]+\]`)) {
 			continue
 		}
 
@@ -633,6 +633,7 @@ type DependencyPattern struct {
 	Wildcard string // "[0-9]*", "1.5.*", "${PYVER}"
 }
 
+// Dependency parses a dependency pattern like "pkg>=1<2" or "pkg-[0-9]*".
 func (p *MkParser) Dependency() *DependencyPattern {
 	lexer := p.lexer
 
