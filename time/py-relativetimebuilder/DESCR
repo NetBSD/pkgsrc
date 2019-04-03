@@ -1,0 +1,5 @@
+aniso8601 builder for dateutil relativedeltas
+
+Features
+* Provides RelativeTimeBuilder compatible with aniso8601
+* Returns dateutil relativedelta objects for durations
