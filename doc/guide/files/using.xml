@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.45 2017/09/26 10:26:59 wiz Exp $ -->
+<!-- $NetBSD: using.xml,v 1.46 2019/04/03 15:41:06 sevan Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
 <title>Using pkgsrc</title>
@@ -13,8 +13,8 @@ and you can still use binary packages from someone else.</para>
 <sect1 id="using-pkg">
   <title>Using binary packages</title>
 
-  <para>On the <ulink url="ftp://ftp.NetBSD.org/">ftp.NetBSD.org</ulink>
-  server and its mirrors, there are collections of binary packages,
+  <para>On the <ulink url="https://cdn.NetBSD.org/">cdn.NetBSD.org</ulink>
+  site and mirrors, there are collections of binary packages,
   ready to be installed. These binary packages have been built using the
   default settings for the directories, that is:</para>
 
@@ -35,7 +35,7 @@ and you can still use binary packages from someone else.</para>
     <para>To install binary packages, you first need to know from where
     to get them. The first place where you should look is on the main
     pkgsrc FTP server in the directory <ulink
-    url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/"><filename>/pub/pkgsrc/packages</filename></ulink>.</para>
+    url="https://cdn.NetBSD.org/pub/pkgsrc/packages/"><filename>/pub/pkgsrc/packages</filename></ulink>.</para>
 
     <para>This directory contains binary packages for multiple
     platforms. First, select your operating system. (Ignore the
@@ -67,7 +67,7 @@ and you can still use binary packages from someone else.</para>
 
 <screen>
 &rprompt; <userinput>PATH="/usr/pkg/sbin:$PATH"</userinput>
-&rprompt; <userinput>PKG_PATH="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/<replaceable>OPSYS</replaceable>/<replaceable>ARCH</replaceable>/<replaceable>VERSIONS</replaceable>/All/"</userinput>
+&rprompt; <userinput>PKG_PATH="http://cdn.NetBSD.org/pub/pkgsrc/packages/<replaceable>OPSYS</replaceable>/<replaceable>ARCH</replaceable>/<replaceable>VERSIONS</replaceable>/All/"</userinput>
 &rprompt; <userinput>export PATH PKG_PATH</userinput>
 </screen>
 
@@ -142,7 +142,7 @@ and you can still use binary packages from someone else.</para>
       The NetBSD Security-Officer and Packages Groups maintain a list of
       known security vulnerabilities to packages which are (or have been)
       included in pkgsrc.  The list is available from the NetBSD
-      FTP site at <ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities"/>.
+      FTP site at <ulink url="http://ftp.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities"/>.
     </para>
 
     <para>
@@ -167,7 +167,7 @@ and you can still use binary packages from someone else.</para>
 
     <para>
       You may wish to have the
-      <ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities">vulnerabilities</ulink>
+      <ulink url="http://ftp.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities">vulnerabilities</ulink>
       file downloaded daily so that
       it remains current.  This may be done by adding an appropriate entry
       to the root users &man.crontab.5; entry.  For example the entry
