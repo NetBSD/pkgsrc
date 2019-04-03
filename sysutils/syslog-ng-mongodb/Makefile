@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2016/08/21 20:18:30 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2019/04/03 00:33:08 ryoon Exp $
 
 SYSLOG_MOD=		mongodb
 SYSLOG_MOD_DIR=		afmongodb
 COMMENT=		Syslog-ng MongoDB module
+PKGREVISION=		1
 
 .include "../../sysutils/syslog-ng/Makefile.module"
 
