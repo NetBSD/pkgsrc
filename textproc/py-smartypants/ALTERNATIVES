@@ -1,0 +1,1 @@
+bin/smartypants @PREFIX@/bin/smartypants-@PYVERSSUFFIX@
