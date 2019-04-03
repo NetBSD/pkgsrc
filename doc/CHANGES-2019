@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1569 2019/04/03 14:51:10 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1570 2019/04/03 15:23:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2485,3 +2485,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/gpgme to 1.13.0 [adam 2019-04-03]
 	Added textproc/py-smartypants version 2.0.1 [adam 2019-04-03]
 	Added time/py-relativetimebuilder version 1.0.0 [adam 2019-04-03]
+	Updated print/py-reportlab to 3.5.17 [adam 2019-04-03]
+	Updated textproc/py-rst2pdf to 0.94 [adam 2019-04-03]
