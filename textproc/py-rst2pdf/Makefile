@@ -1,29 +1,35 @@
-# $NetBSD: Makefile,v 1.2 2018/07/03 05:03:37 adam Exp $
+# $NetBSD: Makefile,v 1.3 2019/04/03 15:23:24 adam Exp $
 
-DISTNAME=      rst2pdf-0.93
-PKGNAME=       ${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=    python textproc
-MASTER_SITES=  ${MASTER_SITE_PYPI:=r/rst2pdf/}
+DISTNAME=	rst2pdf-0.94
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	python textproc
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/rst2pdf/}
 
-MAINTAINER=    darcy@NetBSD.org
-HOMEPAGE=      http://rst2pdf.ralsina.me/stories/index.html
-COMMENT=       Convert restructured text to PDF via reportlab
-LICENSE=       mit
+MAINTAINER=	darcy@NetBSD.org
+HOMEPAGE=	https://rst2pdf.org/
+COMMENT=	Convert restructured text to PDF via reportlab
+LICENSE=	mit
 
-USE_LANGUAGES=      # none
-PYTHON_VERSIONS_INCOMPATIBLE= 33 34 35 36 37
-REPLACE_PYTHON= rst2pdf/__init__.py
+DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
+DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
+DEPENDS+=	${PYPKGPREFIX}-pdfrw-[0-9]*:../../textproc/py-pdfrw
+DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
+DEPENDS+=	${PYPKGPREFIX}-reportlab-[0-9]*:../../print/py-reportlab
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-smartypants-[0-9]*:../../textproc/py-smartypants
 
-DEPENDS+= ${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
-DEPENDS+= ${PYPKGPREFIX}-pdfrw-[0-9]*:../../textproc/py-pdfrw
-DEPENDS+= ${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
-DEPENDS+= ${PYPKGPREFIX}-reportlab-[0-9]*:../../print/py-reportlab
-DEPENDS+= ${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
+USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_ACCEPTED=	27
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/rst2pdf ${DESTDIR}${PREFIX}/bin/rst2pdf-${PYVERSSUFFIX} || ${TRUE}
-	${MV} ${DESTDIR}/${PREFIX}/${PYSITELIB}/rst2pdf-0.93.dev0-py2.7.egg-info ${DESTDIR}/${PREFIX}/${PYSITELIB}/rst2pdf-0.93-py2.7.egg-info
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} rst2pdf rst2pdf-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/application.mk"
+# tests not included
+do-test:
+	${DO_NADA}
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
