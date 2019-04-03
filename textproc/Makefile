@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1029 2019/03/19 10:56:39 jaapb Exp $
+# $NetBSD: Makefile,v 1.1030 2019/04/03 14:49:27 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -843,6 +843,7 @@ SUBDIR+=	py-rebulk
 SUBDIR+=	py-regex
 SUBDIR+=	py-relatorio
 SUBDIR+=	py-rst2pdf
+SUBDIR+=	py-smartypants
 SUBDIR+=	py-snowballstemmer
 SUBDIR+=	py-sphinx
 SUBDIR+=	py-sphinx-autodoc-typehints
