@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2019/03/07 20:19:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.90 2019/04/03 15:36:48 gdt Exp $
 
 DISTNAME=	rustc-1.33.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -16,6 +16,10 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		bash ggrep gmake perl:build pkg-config
 # For internal llvm
 BUILD_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
+
+# The NetBSD/i386 bootstrap are built for NetBSD 8 (because rust
+# doesn't build on 7).
+BROKEN_ON_PLATFORM+=	NetBSD-7*-i386
 
 CHECK_PORTABILITY_SKIP+=vendor/openssl-src/openssl/.travis-create-release.sh
 
