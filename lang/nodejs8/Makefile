@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2018/12/15 17:27:21 maya Exp $
+# $NetBSD: Makefile,v 1.20 2019/04/03 00:32:50 ryoon Exp $
 
 DISTNAME=	node-v8.12.0
 
 # Stated by the changelog as of 8.2.0
 GCC_REQD+=	4.9.4
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "options.mk"
 
 CONFIGURE_ARGS+=	--with-intl=system-icu
