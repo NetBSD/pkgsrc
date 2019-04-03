@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.70 2018/12/09 18:52:07 adam Exp $
+# $NetBSD: Makefile,v 1.71 2019/04/03 00:33:02 ryoon Exp $
 
 DISTNAME=	PackageKit-0.4.0
-PKGREVISION=	51
+PKGREVISION=	52
 PKGNAME=	${DISTNAME:S/PackageKit/packagekit/}
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://www.freedesktop.org/software/PackageKit/releases/
