@@ -172,55 +172,114 @@ func (s *Suite) Test_VartypeCheck_ConfFiles(c *check.C) {
 		"WARN: filename.mk:5: The destination file \"/etc/bootrc\" should start with a variable reference.")
 }
 
+// See Test_MkParser_Dependency.
 func (s *Suite) Test_VartypeCheck_Dependency(c *check.C) {
 	vt := NewVartypeCheckTester(s.Init(c), (*VartypeCheck).Dependency)
 
 	vt.Varname("CONFLICTS")
 	vt.Op(opAssignAppend)
+
+	// comparison operators
 	vt.Values(
-		"Perl",
 		"perl5>=5.22",
-		"perl5-*",
-		"perl5-5.22.*",
-		"perl5-[5.10-5.22]*",
-		"py-docs",
-		"perl5-5.22.*{,nb*}",
 		"libkipi>=0.1.5<4.0",
-		"gtk2+>=2.16",
-		"perl-5.22",
+		"gtk2+>=2.16")
+	vt.OutputEmpty()
+
+	// pattern matching
+	vt.Values(
 		"perl-5*",
-		"gtksourceview-sharp-2.0-[0-9]*",
+		"perl5-*",
+		"perl-5.22",
+		"perl5-5.22.*",
+		"gtksourceview-sharp-2.0-[0-9]*")
+	vt.Output(
+		"WARN: filename.mk:11: Please use \"5.*\" instead of \"5*\" as the version pattern.",
+		"WARN: filename.mk:12: Please use \"perl5-[0-9]*\" instead of \"perl5-*\".",
+		"WARN: filename.mk:13: Please use \"5.22{,nb*}\" instead of \"5.22\" as the version pattern.",
+		"WARN: filename.mk:15: The version pattern \"2.0-[0-9]*\" should not contain a hyphen.")
+
+	// nb suffix
+	vt.Values(
+		"perl5-5.22.*{,nb*}",
 		"perl-5.22{,nb*}",
 		"perl-5.22{,nb[0-9]*}",
 		"mbrola-301h{,nb[0-9]*}",
+		"ncurses-${NC_VERS}{,nb*}",
+		"gnome-control-center>=2.20.1{,nb*}",
+		"gnome-control-center>=2.20.1{,nb[0-9]*}")
+	vt.Output(
+		"WARN: filename.mk:26: Dependency patterns of the form pkgbase>=1.0 don't need the \"{,nb*}\" extension.",
+		"WARN: filename.mk:27: Dependency patterns of the form pkgbase>=1.0 don't need the \"{,nb*}\" extension.")
+
+	// alternative patterns, using braces or brackets
+	vt.Values(
 		"mpg123{,-esound,-nas}>=0.59.18",
 		"mysql*-{client,server}-[0-9]*",
-		"postgresql8[0-35-9]-${module}-[0-9]*",
-		"ncurses-${NC_VERS}{,nb*}",
 		"{ssh{,6}-[0-9]*,openssh-[0-9]*}",
-		"gnome-control-center>=2.20.1{,nb*}",
-		"gnome-control-center>=2.20.1{,nb[0-9]*}",
-		"package-1.0|garbage",
+		"libao-[a-z]*-[0-9]*")
+	vt.OutputEmpty()
+
+	// variables
+	vt.Values(
+		"postgresql8[0-35-9]-${module}-[0-9]*",
 		"${_EMACS_CONFLICTS.${_EMACS_FLAVOR}}",
-		"package>=1.0:../../category/package",
-		"package-1.0>=1.0.3")
+		"${PYPKGPREFIX}-sqlite3",
+		"${PYPKGPREFIX}-sqlite3-${VERSION}",
+		"${PYPKGPREFIX}-sqlite3-${PYSQLITE_REQD}",
+		"${PYPKGPREFIX}-sqlite3>=${PYSQLITE_REQD}",
+		"${EMACS_PACKAGE}>=${EMACS_MAJOR}",
+
+		// The "*" is ambiguous. It could either continue the PKGBASE or
+		// start the version number.
+		"${PKGNAME_NOREV:S/jdk/jre/}*",
+
+		// The canonical form is "{,nb*}" instead of "{nb*,}".
+		// Plus, mentioning nb* is not necessary when using >=.
+		"dovecot>=${PKGVERSION_NOREV}{nb*,}",
+
+		"oxygen-icons>=${KF5VER}{,nb[0-9]*}",
+
+		// The following pattern should have "]*}" instead of "]}*".
+		"ja-vflib-lib-${VFLIB_VERSION}{,nb[0-9]}*",
+
+		// The following pattern uses both ">=" and "*", which doesn't make sense.
+		"${PYPKGPREFIX}-sphinx>=1.2.3nb1*",
+
+		"{${NETSCAPE_PREFERRED:C/:/,/g}}-[0-9]*")
 
 	vt.Output(
-		"WARN: filename.mk:1: Invalid dependency pattern \"Perl\".",
-		"WARN: filename.mk:3: Please use \"perl5-[0-9]*\" instead of \"perl5-*\".",
-		"WARN: filename.mk:5: Only [0-9]* is allowed in the numeric part of a dependency.",
-		"WARN: filename.mk:5: The version pattern \"[5.10-5.22]*\" should not contain a hyphen.",
-		"WARN: filename.mk:6: Invalid dependency pattern \"py-docs\".",
-		"WARN: filename.mk:10: Please use \"5.22{,nb*}\" instead of \"5.22\" as the version pattern.",
-		"WARN: filename.mk:11: Please use \"5.*\" instead of \"5*\" as the version pattern.",
-		"WARN: filename.mk:12: The version pattern \"2.0-[0-9]*\" should not contain a hyphen.",
-		"WARN: filename.mk:21: Dependency patterns of the form pkgbase>=1.0 don't need the \"{,nb*}\" extension.",
-		"WARN: filename.mk:22: Dependency patterns of the form pkgbase>=1.0 don't need the \"{,nb*}\" extension.",
-		"WARN: filename.mk:23: Invalid dependency pattern \"package-1.0|garbage\".",
+		"WARN: filename.mk:43: Invalid dependency pattern \"${PYPKGPREFIX}-sqlite3\".",
+		// This pattern is invalid because the variable name doesn't contain "VER".
+		"WARN: filename.mk:45: Invalid dependency pattern \"${PYPKGPREFIX}-sqlite3-${PYSQLITE_REQD}\".",
+		"WARN: filename.mk:48: Invalid dependency pattern \"${PKGNAME_NOREV:S/jdk/jre/}*\".",
+		"WARN: filename.mk:49: Invalid dependency pattern \"dovecot>=${PKGVERSION_NOREV}{nb*,}\".",
+		"WARN: filename.mk:50: Dependency patterns of the form pkgbase>=1.0 don't need the \"{,nb*}\" extension.",
+		"WARN: filename.mk:51: Invalid dependency pattern \"ja-vflib-lib-${VFLIB_VERSION}{,nb[0-9]}*\".",
+		"WARN: filename.mk:52: Invalid dependency pattern \"${PYPKGPREFIX}-sphinx>=1.2.3nb1*\".")
+
+	// invalid dependency patterns
+	vt.Values(
+		"Perl",
+		"py-docs",
+		"perl5-[5.10-5.22]*",
+		"package-1.0|garbage",
+		"package>=1.0:../../category/package",
+		"package-1.0>=1.0.3",
+		// This should be regarded as invalid since the [a-z0-9] might either
+		// continue the PKGBASE or start the version number.
+		"${RUBY_PKGPREFIX}-theme-[a-z0-9]*")
+	vt.Output(
+		"WARN: filename.mk:61: Invalid dependency pattern \"Perl\".",
+		"WARN: filename.mk:62: Invalid dependency pattern \"py-docs\".",
+		"WARN: filename.mk:63: Only [0-9]* is allowed in the numeric part of a dependency.",
+		"WARN: filename.mk:63: The version pattern \"[5.10-5.22]*\" should not contain a hyphen.",
+		"WARN: filename.mk:64: Invalid dependency pattern \"package-1.0|garbage\".",
 		// TODO: Mention that the path should be removed.
-		"WARN: filename.mk:25: Invalid dependency pattern \"package>=1.0:../../category/package\".",
+		"WARN: filename.mk:65: Invalid dependency pattern \"package>=1.0:../../category/package\".",
 		// TODO: Mention that version numbers in a pkgbase must be appended directly, without hyphen.
-		"WARN: filename.mk:26: Invalid dependency pattern \"package-1.0>=1.0.3\".")
+		"WARN: filename.mk:66: Invalid dependency pattern \"package-1.0>=1.0.3\".",
+		"WARN: filename.mk:67: Invalid dependency pattern \"${RUBY_PKGPREFIX}-theme-[a-z0-9]*\".")
 }
 
 func (s *Suite) Test_VartypeCheck_DependencyWithPath(c *check.C) {
@@ -228,6 +287,7 @@ func (s *Suite) Test_VartypeCheck_DependencyWithPath(c *check.C) {
 	vt := NewVartypeCheckTester(t, (*VartypeCheck).DependencyWithPath)
 
 	t.CreateFileLines("category/package/Makefile")
+	t.CreateFileLines("databases/py-sqlite3/Makefile")
 	t.CreateFileLines("devel/gettext/Makefile")
 	t.CreateFileLines("devel/gmake/Makefile")
 	t.CreateFileLines("devel/py-module/Makefile")
@@ -241,35 +301,56 @@ func (s *Suite) Test_VartypeCheck_DependencyWithPath(c *check.C) {
 		"Perl",
 		"perl5>=5.22:../perl5",
 		"perl5>=5.24:../../lang/perl5",
-		"broken0.12.1:../../x11/alacarte",
-		"broken[0-9]*:../../x11/alacarte",
-		"broken[0-9]*../../x11/alacarte",
-		"broken>=:../../x11/alacarte",
-		"broken=0:../../x11/alacarte",
-		"broken=:../../x11/alacarte",
-		"broken-:../../x11/alacarte",
-		"broken>:../../x11/alacarte",
 		"gtk2+>=2.16:../../x11/alacarte",
 		"gettext-[0-9]*:../../devel/gettext",
-		"gmake-[0-9]*:../../devel/gmake",
-		"${PYPKGPREFIX}-module>=0:../../devel/py-module")
+		"gmake-[0-9]*:../../devel/gmake")
 
 	vt.Output(
 		"WARN: ~/category/package/filename.mk:1: Invalid dependency pattern with path \"Perl\".",
-		"WARN: ~/category/package/filename.mk:2: Dependencies should have the form \"../../category/package\".",
+		"WARN: ~/category/package/filename.mk:2: Dependency paths should have the form \"../../category/package\".",
+		"ERROR: ~/category/package/filename.mk:2: Relative path \"../perl5\" does not exist.",
+		"WARN: ~/category/package/filename.mk:2: \"../perl5\" is not a valid relative package directory.",
+		"WARN: ~/category/package/filename.mk:2: Please use USE_TOOLS+=perl:run instead of this dependency.",
 		"ERROR: ~/category/package/filename.mk:3: Relative path \"../../lang/perl5\" does not exist.",
 		"ERROR: ~/category/package/filename.mk:3: There is no package in \"lang/perl5\".",
 		"WARN: ~/category/package/filename.mk:3: Please use USE_TOOLS+=perl:run instead of this dependency.",
-		"WARN: ~/category/package/filename.mk:4: Invalid dependency pattern \"broken0.12.1\".",
-		"WARN: ~/category/package/filename.mk:5: Invalid dependency pattern \"broken[0-9]*\".",
-		"WARN: ~/category/package/filename.mk:6: Invalid dependency pattern with path \"broken[0-9]*../../x11/alacarte\".",
-		"WARN: ~/category/package/filename.mk:7: Invalid dependency pattern \"broken>=\".",
-		"WARN: ~/category/package/filename.mk:8: Invalid dependency pattern \"broken=0\".",
-		"WARN: ~/category/package/filename.mk:9: Invalid dependency pattern \"broken=\".",
-		"WARN: ~/category/package/filename.mk:10: Invalid dependency pattern \"broken-\".",
-		"WARN: ~/category/package/filename.mk:11: Invalid dependency pattern \"broken>\".",
-		"WARN: ~/category/package/filename.mk:13: Please use USE_TOOLS+=msgfmt instead of this dependency.",
-		"WARN: ~/category/package/filename.mk:14: Please use USE_TOOLS+=gmake instead of this dependency.")
+		"WARN: ~/category/package/filename.mk:5: Please use USE_TOOLS+=msgfmt instead of this dependency.",
+		"WARN: ~/category/package/filename.mk:6: Please use USE_TOOLS+=gmake instead of this dependency.")
+
+	vt.Values(
+		"broken0.12.1:../../x11/alacarte", // missing version
+		"broken[0-9]*:../../x11/alacarte", // missing version
+		"broken[0-9]*../../x11/alacarte",  // missing colon
+		"broken>=:../../x11/alacarte",     // incomplete comparison
+		"broken=0:../../x11/alacarte",     // invalid comparison operator
+		"broken=:../../x11/alacarte",      // incomplete comparison
+		"broken-:../../x11/alacarte",      // incomplete pattern
+		"broken>:../../x11/alacarte")      // incomplete comparison
+
+	vt.Output(
+		"WARN: ~/category/package/filename.mk:11: Invalid dependency pattern \"broken0.12.1\".",
+		"WARN: ~/category/package/filename.mk:12: Invalid dependency pattern \"broken[0-9]*\".",
+		"WARN: ~/category/package/filename.mk:13: Invalid dependency pattern with path \"broken[0-9]*../../x11/alacarte\".",
+		"WARN: ~/category/package/filename.mk:14: Invalid dependency pattern \"broken>=\".",
+		"WARN: ~/category/package/filename.mk:15: Invalid dependency pattern \"broken=0\".",
+		"WARN: ~/category/package/filename.mk:16: Invalid dependency pattern \"broken=\".",
+		"WARN: ~/category/package/filename.mk:17: Invalid dependency pattern \"broken-\".",
+		"WARN: ~/category/package/filename.mk:18: Invalid dependency pattern \"broken>\".")
+
+	vt.Values(
+		"${PYPKGPREFIX}-sqlite3:../../${MY_PKGPATH.py-sqlite3}",
+		"${PYPKGPREFIX}-sqlite3:../../databases/py-sqlite3",
+		"${DEPENDS.NetBSD}",
+		"${DEPENDENCY_PATTERN.py-sqlite3}:${DEPENDENCY_PATH.py-sqlite}",
+		"${PYPKGPREFIX}-module>=0:../../devel/py-module",
+		"${EMACS_PACKAGE}>=${EMACS_MAJOR}:${EMACS_PKGDIR}",
+		"{${NETSCAPE_PREFERRED:C/:/,/g}}-[0-9]*:../../www/${NETSCAPE_PREFERRED:C/:.*//}")
+
+	vt.Output(
+		"WARN: ~/category/package/filename.mk:21: "+
+			"Invalid dependency pattern \"${PYPKGPREFIX}-sqlite3\".",
+		"WARN: ~/category/package/filename.mk:22: "+
+			"Invalid dependency pattern \"${PYPKGPREFIX}-sqlite3\".")
 }
 
 func (s *Suite) Test_VartypeCheck_DistSuffix(c *check.C) {
@@ -397,7 +478,7 @@ func (s *Suite) Test_VartypeCheck_FetchURL(c *check.C) {
 	vt.Values(
 		"https://example.org/download.cgi?filename=filename&sha1=12341234")
 
-	t.CheckOutputEmpty()
+	vt.OutputEmpty()
 
 	vt.Values(
 		"http://example.org/distfiles/",
@@ -405,7 +486,7 @@ func (s *Suite) Test_VartypeCheck_FetchURL(c *check.C) {
 		"http://example.org/download?filename=<distfile>;version=<version>")
 
 	vt.Output(
-		"WARN: filename.mk:8: \"http://example.org/download?filename=<distfile>;version=<version>\" is not a valid URL.")
+		"WARN: filename.mk:23: \"http://example.org/download?filename=<distfile>;version=<version>\" is not a valid URL.")
 }
 
 func (s *Suite) Test_VartypeCheck_Filename(c *check.C) {
@@ -517,7 +598,7 @@ func (s *Suite) Test_VartypeCheck_Homepage(c *check.C) {
 	// doesn't define MASTER_SITES, that variable cannot be expanded, which means
 	// the warning cannot refer to its value.
 	vt.Output(
-		"WARN: filename.mk:4: HOMEPAGE should not be defined in terms of MASTER_SITEs.")
+		"WARN: filename.mk:11: HOMEPAGE should not be defined in terms of MASTER_SITEs.")
 
 	delete(G.Pkg.vars.firstDef, "MASTER_SITES")
 	delete(G.Pkg.vars.lastDef, "MASTER_SITES")
@@ -528,7 +609,7 @@ func (s *Suite) Test_VartypeCheck_Homepage(c *check.C) {
 		"${MASTER_SITES}")
 
 	vt.Output(
-		"WARN: filename.mk:5: HOMEPAGE should not be defined in terms of MASTER_SITEs. " +
+		"WARN: filename.mk:21: HOMEPAGE should not be defined in terms of MASTER_SITEs. " +
 			"Use https://cdn.NetBSD.org/pub/pkgsrc/distfiles/ directly.")
 
 	delete(G.Pkg.vars.firstDef, "MASTER_SITES")
@@ -542,7 +623,7 @@ func (s *Suite) Test_VartypeCheck_Homepage(c *check.C) {
 	// When MASTER_SITES itself makes use of another variable, pkglint doesn't
 	// resolve that variable and just outputs the simple variant of this warning.
 	vt.Output(
-		"WARN: filename.mk:6: HOMEPAGE should not be defined in terms of MASTER_SITEs.")
+		"WARN: filename.mk:31: HOMEPAGE should not be defined in terms of MASTER_SITEs.")
 
 }
 
@@ -1424,7 +1505,7 @@ func (vt *VartypeCheckTester) Values(values ...string) {
 		return varname + space + opStr + value
 	}
 
-	test := func(mkline MkLine, value string) {
+	test := func(mklines MkLines, mkline MkLine, value string) {
 		varname := vt.varname
 		comment := ""
 		if mkline.IsVarassign() {
@@ -1437,21 +1518,19 @@ func (vt *VartypeCheckTester) Values(values ...string) {
 			effectiveValue = mkline.Value()
 		}
 
-		vartype := G.Pkgsrc.VariableType(varname)
+		vartype := G.Pkgsrc.VariableType(nil, varname)
 
 		// See MkLineChecker.checkVartype.
 		var lineValues []string
 		if vartype == nil || vartype.kindOfList == lkNone {
 			lineValues = []string{effectiveValue}
 		} else {
-			var rest string
-			lineValues, rest = splitIntoMkWords(mkline.Line, effectiveValue)
-			vt.tester.Check(rest, equals, "")
+			lineValues = mkline.ValueFields(effectiveValue)
 		}
 
 		for _, lineValue := range lineValues {
 			valueNovar := mkline.WithoutMakeVariables(lineValue)
-			vc := VartypeCheck{mkline, varname, vt.op, lineValue, valueNovar, comment, false}
+			vc := VartypeCheck{mklines, mkline, varname, vt.op, lineValue, valueNovar, comment, false}
 			vt.checker(&vc)
 		}
 	}
@@ -1463,7 +1542,7 @@ func (vt *VartypeCheckTester) Values(values ...string) {
 		mklines := NewMkLines(NewLines(vt.filename, []Line{line}))
 		vt.lineno++
 
-		mklines.ForEach(func(mkline MkLine) { test(mkline, value) })
+		mklines.ForEach(func(mkline MkLine) { test(mklines, mkline, value) })
 	}
 }
 
@@ -1471,10 +1550,12 @@ func (vt *VartypeCheckTester) Values(values ...string) {
 // the same as the expectedLines.
 func (vt *VartypeCheckTester) Output(expectedLines ...string) {
 	vt.tester.CheckOutputLines(expectedLines...)
+	vt.nextSection()
 }
 
 func (vt *VartypeCheckTester) OutputEmpty() {
 	vt.tester.CheckOutputEmpty()
+	vt.nextSection()
 }
 
 func (vt *VartypeCheckTester) nextSection() {
