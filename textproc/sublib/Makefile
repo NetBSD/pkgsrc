@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2018/12/09 18:52:09 adam Exp $
+# $NetBSD: Makefile,v 1.25 2019/04/03 00:33:09 ryoon Exp $
 
 DISTNAME=		sublib-0.9
-PKGREVISION=		21
+PKGREVISION=		22
 CATEGORIES=		multimedia textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sublib/}
 EXTRACT_SUFX=		.zip

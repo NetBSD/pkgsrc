@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.104 2018/12/13 19:51:40 adam Exp $
+# $NetBSD: Makefile,v 1.105 2019/04/03 00:32:25 ryoon Exp $
 
 DISTNAME=	bmpx-0.40.14
-PKGREVISION=	75
+PKGREVISION=	76
 CATEGORIES=	audio
 MASTER_SITES=	http://files.backtrace.info/releases/0.40/
 EXTRACT_SUFX=	.tar.bz2
