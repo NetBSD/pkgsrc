@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/02/15 13:23:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/04/04 09:40:17 adam Exp $
 bin/dmypy-${PYVERSSUFFIX}
 bin/mypy-${PYVERSSUFFIX}
 bin/stubgen-${PYVERSSUFFIX}
@@ -140,6 +140,9 @@ ${PYSITELIB}/mypy/messages.pyo
 ${PYSITELIB}/mypy/metastore.py
 ${PYSITELIB}/mypy/metastore.pyc
 ${PYSITELIB}/mypy/metastore.pyo
+${PYSITELIB}/mypy/mixedtraverser.py
+${PYSITELIB}/mypy/mixedtraverser.pyc
+${PYSITELIB}/mypy/mixedtraverser.pyo
 ${PYSITELIB}/mypy/modulefinder.py
 ${PYSITELIB}/mypy/modulefinder.pyc
 ${PYSITELIB}/mypy/modulefinder.pyo
@@ -158,9 +161,15 @@ ${PYSITELIB}/mypy/newsemanal/__init__.pyo
 ${PYSITELIB}/mypy/newsemanal/semanal.py
 ${PYSITELIB}/mypy/newsemanal/semanal.pyc
 ${PYSITELIB}/mypy/newsemanal/semanal.pyo
+${PYSITELIB}/mypy/newsemanal/semanal_classprop.py
+${PYSITELIB}/mypy/newsemanal/semanal_classprop.pyc
+${PYSITELIB}/mypy/newsemanal/semanal_classprop.pyo
 ${PYSITELIB}/mypy/newsemanal/semanal_enum.py
 ${PYSITELIB}/mypy/newsemanal/semanal_enum.pyc
 ${PYSITELIB}/mypy/newsemanal/semanal_enum.pyo
+${PYSITELIB}/mypy/newsemanal/semanal_infer.py
+${PYSITELIB}/mypy/newsemanal/semanal_infer.pyc
+${PYSITELIB}/mypy/newsemanal/semanal_infer.pyo
 ${PYSITELIB}/mypy/newsemanal/semanal_main.py
 ${PYSITELIB}/mypy/newsemanal/semanal_main.pyc
 ${PYSITELIB}/mypy/newsemanal/semanal_main.pyo
@@ -179,6 +188,9 @@ ${PYSITELIB}/mypy/newsemanal/semanal_pass3.pyo
 ${PYSITELIB}/mypy/newsemanal/semanal_shared.py
 ${PYSITELIB}/mypy/newsemanal/semanal_shared.pyc
 ${PYSITELIB}/mypy/newsemanal/semanal_shared.pyo
+${PYSITELIB}/mypy/newsemanal/semanal_typeargs.py
+${PYSITELIB}/mypy/newsemanal/semanal_typeargs.pyc
+${PYSITELIB}/mypy/newsemanal/semanal_typeargs.pyo
 ${PYSITELIB}/mypy/newsemanal/semanal_typeddict.py
 ${PYSITELIB}/mypy/newsemanal/semanal_typeddict.pyc
 ${PYSITELIB}/mypy/newsemanal/semanal_typeddict.pyo
@@ -266,6 +278,9 @@ ${PYSITELIB}/mypy/server/astmerge.pyo
 ${PYSITELIB}/mypy/server/aststrip.py
 ${PYSITELIB}/mypy/server/aststrip.pyc
 ${PYSITELIB}/mypy/server/aststrip.pyo
+${PYSITELIB}/mypy/server/aststripnew.py
+${PYSITELIB}/mypy/server/aststripnew.pyc
+${PYSITELIB}/mypy/server/aststripnew.pyo
 ${PYSITELIB}/mypy/server/deps.py
 ${PYSITELIB}/mypy/server/deps.pyc
 ${PYSITELIB}/mypy/server/deps.pyo
@@ -320,6 +335,9 @@ ${PYSITELIB}/mypy/stubutil.pyo
 ${PYSITELIB}/mypy/subtypes.py
 ${PYSITELIB}/mypy/subtypes.pyc
 ${PYSITELIB}/mypy/subtypes.pyo
+${PYSITELIB}/mypy/suggestions.py
+${PYSITELIB}/mypy/suggestions.pyc
+${PYSITELIB}/mypy/suggestions.pyo
 ${PYSITELIB}/mypy/test/__init__.py
 ${PYSITELIB}/mypy/test/__init__.pyc
 ${PYSITELIB}/mypy/test/__init__.pyo
@@ -332,6 +350,9 @@ ${PYSITELIB}/mypy/test/config.pyo
 ${PYSITELIB}/mypy/test/data.py
 ${PYSITELIB}/mypy/test/data.pyc
 ${PYSITELIB}/mypy/test/data.pyo
+${PYSITELIB}/mypy/test/hacks.py
+${PYSITELIB}/mypy/test/hacks.pyc
+${PYSITELIB}/mypy/test/hacks.pyo
 ${PYSITELIB}/mypy/test/helpers.py
 ${PYSITELIB}/mypy/test/helpers.pyc
 ${PYSITELIB}/mypy/test/helpers.pyo
@@ -437,6 +458,9 @@ ${PYSITELIB}/mypy/type_visitor.pyo
 ${PYSITELIB}/mypy/typeanal.py
 ${PYSITELIB}/mypy/typeanal.pyc
 ${PYSITELIB}/mypy/typeanal.pyo
+${PYSITELIB}/mypy/typeops.py
+${PYSITELIB}/mypy/typeops.pyc
+${PYSITELIB}/mypy/typeops.pyo
 ${PYSITELIB}/mypy/types.py
 ${PYSITELIB}/mypy/types.pyc
 ${PYSITELIB}/mypy/types.pyo
@@ -545,7 +569,6 @@ ${PYSITELIB}/mypy/typeshed/stdlib/2/pipes.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/platform.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/popen2.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/posix.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/2/pydoc.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/random.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/re.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/repr.pyi
@@ -723,6 +746,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/2and3/pty.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/pwd.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/py_compile.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/pyclbr.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/2and3/pydoc.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/pyexpat/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/pyexpat/errors.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/pyexpat/model.pyi
@@ -908,6 +932,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/3/multiprocessing/managers.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/multiprocessing/pool.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/multiprocessing/process.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/multiprocessing/queues.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/3/multiprocessing/spawn.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/multiprocessing/synchronize.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/nntplib.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/nturl2path.pyi
@@ -995,7 +1020,6 @@ ${PYSITELIB}/mypy/typeshed/third_party/2/kazoo/exceptions.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2/kazoo/recipe/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2/kazoo/recipe/watchers.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2/pathlib2.pyi
-${PYSITELIB}/mypy/typeshed/third_party/2/pycurl.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2/pymssql.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2/redis/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2/redis/client.pyi
@@ -1115,6 +1139,11 @@ ${PYSITELIB}/mypy/typeshed/third_party/2and3/attr/validators.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2and3/backports/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2and3/backports/ssl_match_hostname.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2and3/backports_abc.pyi
+${PYSITELIB}/mypy/typeshed/third_party/2and3/bleach/__init__.pyi
+${PYSITELIB}/mypy/typeshed/third_party/2and3/bleach/callbacks.pyi
+${PYSITELIB}/mypy/typeshed/third_party/2and3/bleach/linkifier.pyi
+${PYSITELIB}/mypy/typeshed/third_party/2and3/bleach/sanitizer.pyi
+${PYSITELIB}/mypy/typeshed/third_party/2and3/bleach/utils.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2and3/boto/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2and3/boto/auth.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2and3/boto/auth_handler.pyi
@@ -1269,6 +1298,7 @@ ${PYSITELIB}/mypy/typeshed/third_party/2and3/markupsafe/_native.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2and3/markupsafe/_speedups.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2and3/mock.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2and3/mypy_extensions.pyi
+${PYSITELIB}/mypy/typeshed/third_party/2and3/pycurl.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2and3/pymysql/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2and3/pymysql/charset.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/2and3/pymysql/connections.pyi
@@ -1416,6 +1446,7 @@ ${PYSITELIB}/mypy/typeshed/third_party/3/jwt/contrib/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/3/jwt/contrib/algorithms/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/3/jwt/contrib/algorithms/py_ecdsa.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/3/jwt/contrib/algorithms/pycrypto.pyi
+${PYSITELIB}/mypy/typeshed/third_party/3/orjson.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/3/pkg_resources/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/3/pkg_resources/py31compat.pyi
 ${PYSITELIB}/mypy/typeshed/third_party/3/six/__init__.pyi
@@ -1465,6 +1496,9 @@ ${PYSITELIB}/mypy/typeshed/third_party/3/typed_ast/conversions.pyi
 ${PYSITELIB}/mypy/typestate.py
 ${PYSITELIB}/mypy/typestate.pyc
 ${PYSITELIB}/mypy/typestate.pyo
+${PYSITELIB}/mypy/typetraverser.py
+${PYSITELIB}/mypy/typetraverser.pyc
+${PYSITELIB}/mypy/typetraverser.pyo
 ${PYSITELIB}/mypy/typevars.py
 ${PYSITELIB}/mypy/typevars.pyc
 ${PYSITELIB}/mypy/typevars.pyo
