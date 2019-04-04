@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.59 2016/03/31 13:56:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.60 2019/04/04 11:15:24 maya Exp $
 #
 
 DISTNAME=	umefont_610
 PKGNAME=	${DISTNAME:S/_/-ttf-0./}
 CATEGORIES=	fonts japanese
-MASTER_SITES=	${MASTER_SITE_OSDN:=ume-font/22212/}
+MASTER_SITES=	${MASTER_SITE_OSDN:=ume-font/63494/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
@@ -17,45 +17,10 @@ WRKSRC=		${WRKDIR}/${DISTNAME:C/([a-z]+)-//}
 CONFLICTS=	umefont<=0.421
 SUPERSEDES=	umefont<=0.421
 
-NO_CONFIGURE=	YES
-NO_BUILD=	YES
-
-DOCSDIR=	${PREFIX}/share/doc/${PKGBASE}
-
-INSTALLATION_DIRS=	share/fonts/X11/TTF \
-			${DOCSDIR}
-
-FONTDIR=	${PREFIX}/share/fonts/X11/TTF
-FONTS_DIRS.ttf=	${FONTDIR}
-
-INSTALL_FONTS=	ume-pgc4.ttf \
-		ume-pgc5.ttf \
-		ume-pgo4.ttf \
-		ume-pgo5.ttf \
-		ume-pgs4.ttf \
-		ume-pgs5.ttf \
-		ume-pmo3.ttf \
-		ume-pms3.ttf \
-		ume-tgc4.ttf \
-		ume-tgc5.ttf \
-		ume-tgo4.ttf \
-		ume-tgo5.ttf \
-		ume-tgs4.ttf \
-		ume-tgs5.ttf \
-		ume-tmo3.ttf \
-		ume-tms3.ttf \
-		ume-ugo4.ttf \
-		ume-ugo5.ttf
-INSTALL_DOCS=	license.html
-
-USE_LANGUAGES=	# none
+INSTALLATION_DIRS+=	${PREFIX}/share/doc/${PKGBASE}
 
 do-install:
-.for fontfile in ${INSTALL_FONTS}
-	${INSTALL_DATA} ${WRKSRC}/${fontfile} ${DESTDIR}${FONTDIR}
-.endfor
-.for docfile in ${INSTALL_DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${docfile} ${DESTDIR}${DOCSDIR}
-.endfor
+	${INSTALL_DATA} ${WRKSRC}/license.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
+.include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"
