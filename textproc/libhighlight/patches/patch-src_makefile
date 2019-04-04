@@ -1,10 +1,16 @@
-$NetBSD: patch-src_makefile,v 1.4 2018/10/14 12:17:50 schmonz Exp $
+$NetBSD: patch-src_makefile,v 1.5 2019/04/04 14:14:28 schmonz Exp $
 
 Use pkgsrc-specified compiler and flags.
 
---- src/makefile.orig	2018-10-13 19:26:45.000000000 +0000
+--- src/makefile.orig	2019-03-26 19:58:45.000000000 +0000
 +++ src/makefile
-@@ -13,13 +13,13 @@
+@@ -8,18 +8,18 @@
+ # See ../makefile for the definition of ${data_dir}
+ 
+ # Add -DHL_CONFIG_DIR=\"/your/path/\" to define the configuration directory
+-# (default: /etc/highlight)
++# (default: /etc/pkg/highlight)
+ 
  # See src/gui-qt/highlight.pro for the Qt GUI compilation options
  
  #CXX=clang++
@@ -20,7 +26,23 @@ Use pkgsrc-specified compiler and flags.
  #CFLAGS:=-ggdb ${CFLAGS} -std=c++11
  
  CFLAGS_DILU=-fno-strict-aliasing
-@@ -66,14 +66,17 @@ ifdef PIC
+@@ -54,27 +54,30 @@ REGEX_DIR=${CORE_DIR}re/
+ DILU_DIR=${CORE_DIR}Diluculum/
+ 
+ ifndef HL_CONFIG_DIR
+-	HL_CONFIG_DIR = /etc/highlight/
++	HL_CONFIG_DIR = /etc/pkg/highlight/
+ endif
+ ifndef HL_DATA_DIR
+-	HL_DATA_DIR = /usr/share/highlight/
++	HL_DATA_DIR = /opt/.pkg-20151023/share/highlight/
+ endif
+ ifndef HL_DOC_DIR
+-	HL_DOC_DIR = /usr/share/doc/highlight/
++	HL_DOC_DIR = /opt/.pkg-20151023/share/doc/highlight/
+ endif
+ 
+ ifdef PIC
  	CFLAGS+=-fPIC
  endif
  
@@ -40,7 +62,7 @@ Use pkgsrc-specified compiler and flags.
  
  # Data directories (data dir, configuration file dir)
  CXX_DIR=-DHL_DATA_DIR=\"${HL_DATA_DIR}\" -DHL_CONFIG_DIR=\"${HL_CONFIG_DIR}\"
-@@ -101,18 +104,18 @@ GUI_OBJECTS:=${GUI_QT_DIR}main.cpp ${GUI
+@@ -102,18 +105,18 @@ GUI_OBJECTS:=${GUI_QT_DIR}main.cpp ${GUI
  	${GUI_QT_DIR}showtextfile.cpp
  
  
@@ -63,7 +85,7 @@ Use pkgsrc-specified compiler and flags.
  	cd gui-qt && \
  	${QMAKE} 'DEFINES+=DATA_DIR=\\\"${HL_DATA_DIR}\\\" CONFIG_DIR=\\\"${HL_CONFIG_DIR}\\\" DOC_DIR=\\\"${HL_DOC_DIR}\\\" ' && \
  	$(MAKE)
-@@ -121,7 +124,7 @@ $(OBJECTFILES) : makefile
+@@ -122,7 +125,7 @@ $(OBJECTFILES) : makefile
  
  
  datadir.o: ${CORE_DIR}datadir.cpp ${INCLUDE_DIR}datadir.h ${INCLUDE_DIR}platform_fs.h
@@ -72,7 +94,7 @@ Use pkgsrc-specified compiler and flags.
  
  platform_fs.o: ${CORE_DIR}platform_fs.cpp ${INCLUDE_DIR}platform_fs.h
  	${CXX_COMPILE} ${CORE_DIR}platform_fs.cpp
-@@ -202,7 +205,7 @@ main.o: ${CLI_DIR}main.cpp ${CLI_DIR}mai
+@@ -203,7 +206,7 @@ main.o: ${CLI_DIR}main.cpp ${CLI_DIR}mai
    ${INCLUDE_DIR}syntaxreader.h ${INCLUDE_DIR}themereader.h ${INCLUDE_DIR}elementstyle.h \
    ${INCLUDE_DIR}stylecolour.h  ${INCLUDE_DIR}preformatter.h \
    ${CLI_DIR}help.h ${INCLUDE_DIR}version.h
