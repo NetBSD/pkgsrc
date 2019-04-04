@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1579 2019/04/04 07:27:11 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1580 2019/04/04 07:35:37 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2497,3 +2497,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/p5-HTML-Restrict to 3.0.0 [wen 2019-04-04]
 	Updated devel/py-setuptools to 40.9.0 [adam 2019-04-04]
 	Updated www/py-terminado to 0.8.2 [adam 2019-04-04]
+	Updated fonts/vera-ttf to 1.10nb6 [maya 2019-04-04]
