@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2017/11/26 10:44:42 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2019/04/04 08:21:11 maya Exp $
 
 DISTNAME=	VLGothic-20141206
 PKGNAME=	${DISTNAME:tl:S/-/-ttf-/}
@@ -11,16 +11,7 @@ MAINTAINER=	yamajun@ofug.net
 COMMENT=	Free Japanese TrueType fonts named 'VLGothic'
 LICENSE=	modified-bsd AND mplusfont
 
-NO_BUILD=	YES
-NO_CONFIGURE=	YES
+WRKSRC=		${WRKDIR}/VLGothic
 
-FONTDIR=	${PREFIX}/share/fonts/X11/TTF
-FONTS_DIRS.ttf+=${FONTDIR}
-WRKSRC=		${WRKDIR}/${DISTNAME:C/-[^-]*$//}
-
-do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${FONTDIR}
-	${INSTALL_DATA}	${WRKSRC}/VL-Gothic-Regular.ttf ${DESTDIR}${FONTDIR}
-	${INSTALL_DATA}	${WRKSRC}/VL-PGothic-Regular.ttf ${DESTDIR}${FONTDIR}
-
+.include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"
