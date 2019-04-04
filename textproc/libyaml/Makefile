@@ -1,9 +1,13 @@
-# $NetBSD: Makefile,v 1.12 2019/04/01 12:15:34 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/04/04 23:54:08 kamil Exp $
+
+DIST_SUBDIR=	yaml # Remove for next version
 
 DISTNAME=	yaml-0.2.2
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	http://pyyaml.org/download/libyaml/
+
+PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pyyaml.org/wiki/LibYAML
@@ -16,7 +20,7 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	yaml-0.1.pc.in
 TEST_TARGET=		check
 
-WRKSRC=		${WRKDIR}/lib${DISTNAME}
+#WRKSRC=		${WRKDIR}/lib${DISTNAME}
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fiv
