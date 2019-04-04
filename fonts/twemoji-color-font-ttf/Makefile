@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/11/30 15:46:48 nia Exp $
+# $NetBSD: Makefile,v 1.2 2019/04/04 11:55:22 maya Exp $
 
 PKGNAME=	twemoji-color-font-ttf-11.2.0
 DISTNAME=	TwitterColorEmoji-SVGinOT-Linux-${PKGVERSION_NOREV}
@@ -12,13 +12,5 @@ HOMEPAGE=	https://github.com/eosrei/twemoji-color-font
 COMMENT=	Twitter color emoji SVGinOT font
 LICENSE=	cc-by-v4.0 AND mit
 
-USE_LANGUAGES=	# none
-NO_BUILD=	yes
-
-INSTALLATION_DIRS+=	share/fonts/X11/TTF
-
-do-install:
-	${INSTALL_DATA} ${WRKSRC}/TwitterColorEmoji-SVGinOT.ttf \
-	    ${DESTDIR}${PREFIX}/share/fonts/X11/TTF
-
+.include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"
