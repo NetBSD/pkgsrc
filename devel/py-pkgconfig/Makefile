@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2018/08/22 12:53:13 adam Exp $
+# $NetBSD: Makefile,v 1.7 2019/04/04 09:30:05 adam Exp $
 
-DISTNAME=	pkgconfig-1.4.0
+DISTNAME=	pkgconfig-1.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pkgconfig/}
@@ -15,5 +15,5 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-nose>=1.0:../../devel/py-nose
 USE_LANGUAGES=	# none
 USE_TOOLS+=	pkg-config:run
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
