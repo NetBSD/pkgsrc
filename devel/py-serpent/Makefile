@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2018/08/07 06:05:58 adam Exp $
+# $NetBSD: Makefile,v 1.9 2019/04/04 12:27:08 adam Exp $
 
-DISTNAME=	serpent-1.27
+DISTNAME=	serpent-1.28
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/serpent/}
