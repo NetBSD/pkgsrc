@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2019/04/02 01:50:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2019/04/04 02:24:40 jmmv Exp $
 
-DISTNAME=	${PKGNAME:S/skhd-/v/}
-PKGNAME=	skhd-0.3.2
+DISTNAME=	skhd-0.3.2
 CATEGORIES=	wm
-MASTER_SITES=	${MASTER_SITE_GITHUB:=koekeishiya/}skhd/archive/
-DIST_SUBDIR=	skhd
+MASTER_SITES=	${MASTER_SITE_GITHUB:=koekeishiya/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	jmmv@NetBSD.org
 COMMENT=	Simple hotkey daemon for macOS
