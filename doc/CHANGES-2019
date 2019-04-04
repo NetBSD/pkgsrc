@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1585 2019/04/04 12:27:28 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1586 2019/04/04 14:15:35 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2506,3 +2506,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/zabbix to 4.0.6 [he 2019-04-04]
 	Updated www/py-sanic to 19.3.1 [adam 2019-04-04]
 	Updated devel/py-serpent to 1.28 [adam 2019-04-04]
+	Updated textproc/libhighlight to 3.50 [schmonz 2019-04-04]
+	Updated textproc/highlight to 3.50 [schmonz 2019-04-04]
+	Updated textproc/p5-highlight to 3.50 [schmonz 2019-04-04]
