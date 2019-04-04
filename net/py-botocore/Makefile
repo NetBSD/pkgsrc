@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2019/02/12 10:51:55 adam Exp $
+# $NetBSD: Makefile,v 1.28 2019/04/04 07:53:52 bsiegert Exp $
 
 DISTNAME=	botocore-1.12.92
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/botocore/}
@@ -15,7 +16,12 @@ DEPENDS+=	${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-jmespath>=0.7.1<1:../../textproc/py-jmespath
 DEPENDS+=	${PYPKGPREFIX}-urllib3-[0-9]*:../../www/py-urllib3
 
+.include "../../lang/python/egg.mk"
+
+.if ${PYPKGPREFIX} == "py27"
+DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
+.endif
+
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
