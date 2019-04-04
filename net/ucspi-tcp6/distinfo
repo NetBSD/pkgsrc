@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2019/03/21 15:16:36 schmonz Exp $
+$NetBSD: distinfo,v 1.10 2019/04/04 16:17:35 schmonz Exp $
 
-SHA1 (ucspi-tcp6-1.10.3.tgz) = 0afd1497658fbe72f4cdb3be5f48950bae2dd6e4
-RMD160 (ucspi-tcp6-1.10.3.tgz) = 36781766bda7ff14989b89482450610007c65eb5
-SHA512 (ucspi-tcp6-1.10.3.tgz) = ce8d61962c8b37a2dbf025b974171e6076ab232b4ea12b197afd7857324f3f4f66321dd55baefd921de19f7d3d3f5f6b54c28afbfce5bf56534762ae775fd2df
-Size (ucspi-tcp6-1.10.3.tgz) = 51200 bytes
+SHA1 (ucspi-tcp6-1.10.4.tgz) = cbe133c90ebc247db07ebffb77b7768cda3133db
+RMD160 (ucspi-tcp6-1.10.4.tgz) = db39ef8105318f6088eda272d474ab4b8a8574c6
+SHA512 (ucspi-tcp6-1.10.4.tgz) = 5933d77d464979670f893f9b67d1f352c9390281ce3b5423ca5286e95533760f693ae743ee55cc49af9fcf7888d48b6b11ceada36addfd657c35aad83e9a7c04
+Size (ucspi-tcp6-1.10.4.tgz) = 51200 bytes
