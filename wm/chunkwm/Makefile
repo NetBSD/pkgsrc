@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2019/04/02 01:54:35 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2019/04/04 02:24:40 jmmv Exp $
 
-DISTNAME=	${PKGNAME:S/chunkwm-/v/}
-PKGNAME=	chunkwm-0.4.8
+DISTNAME=	chunkwm-0.4.8
 CATEGORIES=	wm
-MASTER_SITES=	${MASTER_SITE_GITHUB:=koekeishiya/}chunkwm/archive/
-DIST_SUBDIR=	chunkwm
+MASTER_SITES=	${MASTER_SITE_GITHUB:=koekeishiya/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	jmmv@NetBSD.org
 COMMENT=	Tiling window manager for macOS based on plugin architecture
