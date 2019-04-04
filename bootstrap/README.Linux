@@ -1,4 +1,4 @@
-$NetBSD: README.Linux,v 1.6 2017/03/06 21:26:01 sevan Exp $
+$NetBSD: README.Linux,v 1.7 2019/04/04 04:20:26 gutteridge Exp $
 
 Please read the general README file as well.
 
@@ -27,8 +27,8 @@ cp -p /usr/lib/libattr.la /lib
 ==========================================================================
 
 Some versions of Linux (for example Debian GNU/Linux) need either libtermcap
-or libcurses (libncurses).  Installing the distributions libncurses-dev
-package (or equivalent) should fix the problem.
+or libcurses (libncurses).  Installing the distribution's libncurses-dev
+package (or equivalent) should fix related build problems.
 
 ==========================================================================
 
