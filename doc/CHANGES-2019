@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1578 2019/04/04 07:20:21 wen Exp $
+$NetBSD: CHANGES-2019,v 1.1579 2019/04/04 07:27:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2495,3 +2495,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/p5-CGI-Fast to 2.15 [wen 2019-04-04]
 	Updated www/p5-HTML-Form to 6.04 [wen 2019-04-04]
 	Updated www/p5-HTML-Restrict to 3.0.0 [wen 2019-04-04]
+	Updated devel/py-setuptools to 40.9.0 [adam 2019-04-04]
+	Updated www/py-terminado to 0.8.2 [adam 2019-04-04]
