@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1580 2019/04/04 07:35:37 maya Exp $
+$NetBSD: CHANGES-2019,v 1.1581 2019/04/04 09:36:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2498,3 +2498,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-setuptools to 40.9.0 [adam 2019-04-04]
 	Updated www/py-terminado to 0.8.2 [adam 2019-04-04]
 	Updated fonts/vera-ttf to 1.10nb6 [maya 2019-04-04]
+	Updated devel/py-pkgconfig to 1.5.1 [adam 2019-04-04]
+	Updated security/py-oath to 1.4.2 [adam 2019-04-04]
