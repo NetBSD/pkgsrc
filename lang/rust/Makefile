@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2019/04/03 18:34:01 gdt Exp $
+# $NetBSD: Makefile,v 1.92 2019/04/04 11:11:06 he Exp $
 
 DISTNAME=	rustc-1.33.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -209,7 +209,7 @@ RUST_STAGE0_VER=	1.33.0
 RUST_ARCH=		i686-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
-# Do not trust he@.
+# Bootstrap kit prepared by he@
 SITES.${RUST_STAGE0}=	ftp://golden-delicious.urc.uninett.no/pub/rust/
 SITES.${RUST_STD_STAGE0}=	ftp://golden-delicious.urc.uninett.no/pub/rust/
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
@@ -235,7 +235,7 @@ RUST_ARCH=		powerpc-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
-# Do not trust he@.
+# Bootstrap kit prepared by he@
 SITES.${RUST_STAGE0}=	ftp://golden-delicious.urc.uninett.no/pub/rust/
 SITES.${RUST_STD_STAGE0}=	ftp://golden-delicious.urc.uninett.no/pub/rust/
 pre-build-fix:
@@ -246,7 +246,7 @@ RUST_ARCH=		aarch64-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
-# Do not trust he@.
+# Bootstrap kit prepared by he@
 SITES.${RUST_STAGE0}=	ftp://golden-delicious.urc.uninett.no/pub/rust/
 SITES.${RUST_STD_STAGE0}=	ftp://golden-delicious.urc.uninett.no/pub/rust/
 pre-build-fix:
@@ -257,7 +257,7 @@ RUST_ARCH=		sparc64-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
-## Do not trust he@.
+# Bootstrap kit prepared by he@
 SITES.${RUST_STAGE0}=	ftp://golden-delicious.urc.uninett.no/pub/rust/
 SITES.${RUST_STD_STAGE0}=	ftp://golden-delicious.urc.uninett.no/pub/rust/
 pre-build-fix:
@@ -268,7 +268,7 @@ RUST_STAGE0_VER=	1.33.0
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
-# Do not trust he@.
+# Bootstrap kit prepared by he@
 SITES.${RUST_STAGE0}=	ftp://golden-delicious.urc.uninett.no/pub/rust/
 SITES.${RUST_STD_STAGE0}=	ftp://golden-delicious.urc.uninett.no/pub/rust/
 pre-build-fix:
