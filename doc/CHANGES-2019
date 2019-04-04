@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1582 2019/04/04 09:51:21 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1583 2019/04/04 10:02:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2502,3 +2502,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/py-oath to 1.4.2 [adam 2019-04-04]
 	Updated lang/py-mypy to 0.700 [adam 2019-04-04]
 	Updated devel/py-decorator to 4.4.0 [adam 2019-04-04]
+	Updated devel/meld to 3.20.1 [wiz 2019-04-04]
