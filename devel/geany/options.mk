@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2019/02/07 05:10:11 gutteridge Exp $
+# $NetBSD: options.mk,v 1.3 2019/04/04 04:13:51 gutteridge Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.geany
 PKG_OPTIONS_REQUIRED_GROUPS+=	toolkit
@@ -10,6 +10,7 @@ PLIST_VARS+=	gtk2 gtk3
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mgtk3)
+.include "../../graphics/adwaita-icon-theme/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-gtk3
 PLIST.gtk3=		yes
