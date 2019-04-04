@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1576 2019/04/04 06:58:57 wen Exp $
+$NetBSD: CHANGES-2019,v 1.1577 2019/04/04 07:07:38 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2493,3 +2493,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/p5-Dancer to 1.3512 [wen 2019-04-04]
 	Updated www/p5-CGI to 4.42 [wen 2019-04-04]
 	Updated www/p5-CGI-Fast to 2.15 [wen 2019-04-04]
+	Updated www/p5-HTML-Form to 6.04 [wen 2019-04-04]
