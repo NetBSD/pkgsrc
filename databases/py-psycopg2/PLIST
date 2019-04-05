@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2018/07/03 03:57:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2019/04/05 09:14:41 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -12,13 +12,22 @@ ${PYSITELIB}/psycopg2/_ipaddress.pyo
 ${PYSITELIB}/psycopg2/_json.py
 ${PYSITELIB}/psycopg2/_json.pyc
 ${PYSITELIB}/psycopg2/_json.pyo
+${PYSITELIB}/psycopg2/_lru_cache.py
+${PYSITELIB}/psycopg2/_lru_cache.pyc
+${PYSITELIB}/psycopg2/_lru_cache.pyo
 ${PYSITELIB}/psycopg2/_psycopg.so
 ${PYSITELIB}/psycopg2/_range.py
 ${PYSITELIB}/psycopg2/_range.pyc
 ${PYSITELIB}/psycopg2/_range.pyo
+${PYSITELIB}/psycopg2/compat.py
+${PYSITELIB}/psycopg2/compat.pyc
+${PYSITELIB}/psycopg2/compat.pyo
 ${PYSITELIB}/psycopg2/errorcodes.py
 ${PYSITELIB}/psycopg2/errorcodes.pyc
 ${PYSITELIB}/psycopg2/errorcodes.pyo
+${PYSITELIB}/psycopg2/errors.py
+${PYSITELIB}/psycopg2/errors.pyc
+${PYSITELIB}/psycopg2/errors.pyo
 ${PYSITELIB}/psycopg2/extensions.py
 ${PYSITELIB}/psycopg2/extensions.pyc
 ${PYSITELIB}/psycopg2/extensions.pyo
@@ -28,9 +37,6 @@ ${PYSITELIB}/psycopg2/extras.pyo
 ${PYSITELIB}/psycopg2/pool.py
 ${PYSITELIB}/psycopg2/pool.pyc
 ${PYSITELIB}/psycopg2/pool.pyo
-${PYSITELIB}/psycopg2/psycopg1.py
-${PYSITELIB}/psycopg2/psycopg1.pyc
-${PYSITELIB}/psycopg2/psycopg1.pyo
 ${PYSITELIB}/psycopg2/sql.py
 ${PYSITELIB}/psycopg2/sql.pyc
 ${PYSITELIB}/psycopg2/sql.pyo
