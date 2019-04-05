@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.146 2019/02/17 16:57:59 tsutsui Exp $
+# $NetBSD: Makefile,v 1.147 2019/04/05 12:14:58 tsutsui Exp $
 
-DISTNAME=	mlterm-3.8.7
-PKGREVISION=	3
+DISTNAME=	mlterm-3.8.8
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mlterm/}
 
@@ -28,8 +27,6 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 CONFIGURE_ARGS+=	--without-libiconv-prefix
 CONFIGURE_ARGS+=	--without-libintl-prefix
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
-# XXX not yet
-CONFIGURE_ARGS+=	--disable-utmp
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples
 
