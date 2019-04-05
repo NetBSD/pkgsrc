@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2018/07/06 07:51:21 adam Exp $
-bin/celery${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.5 2019/04/05 12:55:50 adam Exp $
+bin/celery-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -79,9 +79,15 @@ ${PYSITELIB}/celery/backends/__init__.pyo
 ${PYSITELIB}/celery/backends/amqp.py
 ${PYSITELIB}/celery/backends/amqp.pyc
 ${PYSITELIB}/celery/backends/amqp.pyo
+${PYSITELIB}/celery/backends/arangodb.py
+${PYSITELIB}/celery/backends/arangodb.pyc
+${PYSITELIB}/celery/backends/arangodb.pyo
 ${PYSITELIB}/celery/backends/asynchronous.py
 ${PYSITELIB}/celery/backends/asynchronous.pyc
 ${PYSITELIB}/celery/backends/asynchronous.pyo
+${PYSITELIB}/celery/backends/azureblockblob.py
+${PYSITELIB}/celery/backends/azureblockblob.pyc
+${PYSITELIB}/celery/backends/azureblockblob.pyo
 ${PYSITELIB}/celery/backends/base.py
 ${PYSITELIB}/celery/backends/base.pyc
 ${PYSITELIB}/celery/backends/base.pyo
@@ -94,6 +100,9 @@ ${PYSITELIB}/celery/backends/cassandra.pyo
 ${PYSITELIB}/celery/backends/consul.py
 ${PYSITELIB}/celery/backends/consul.pyc
 ${PYSITELIB}/celery/backends/consul.pyo
+${PYSITELIB}/celery/backends/cosmosdbsql.py
+${PYSITELIB}/celery/backends/cosmosdbsql.pyc
+${PYSITELIB}/celery/backends/cosmosdbsql.pyo
 ${PYSITELIB}/celery/backends/couchbase.py
 ${PYSITELIB}/celery/backends/couchbase.pyc
 ${PYSITELIB}/celery/backends/couchbase.pyo
@@ -130,6 +139,9 @@ ${PYSITELIB}/celery/backends/riak.pyo
 ${PYSITELIB}/celery/backends/rpc.py
 ${PYSITELIB}/celery/backends/rpc.pyc
 ${PYSITELIB}/celery/backends/rpc.pyo
+${PYSITELIB}/celery/backends/s3.py
+${PYSITELIB}/celery/backends/s3.pyc
+${PYSITELIB}/celery/backends/s3.pyo
 ${PYSITELIB}/celery/beat.py
 ${PYSITELIB}/celery/beat.pyc
 ${PYSITELIB}/celery/beat.pyo
