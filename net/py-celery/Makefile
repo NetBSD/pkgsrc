@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2018/08/07 08:41:26 adam Exp $
+# $NetBSD: Makefile,v 1.16 2019/04/05 12:55:50 adam Exp $
 
-DISTNAME=	celery-4.2.1
+DISTNAME=	celery-4.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/celery/}
@@ -22,7 +22,8 @@ pre-configure:
 	cd ${WRKSRC}/celery/backends && ${MV} async.py asynchronous.py || ${TRUE}
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} celery celery${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} celery celery-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
