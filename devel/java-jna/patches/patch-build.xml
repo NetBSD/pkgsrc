@@ -1,0 +1,61 @@
+$NetBSD: patch-build.xml,v 1.1 2019/04/05 12:55:15 nonaka Exp $
+
+--- build.xml.orig	2018-12-23 11:12:05.000000000 +0000
++++ build.xml	2019-02-20 08:20:34.689269655 +0000
+@@ -478,6 +478,10 @@
+ processor=x86;osname=freebsd,
+ com/sun/jna/freebsd-x86-64/libjnidispatch.so;
+ processor=x86-64;osname=freebsd,
++com/sun/jna/netbsd-x86/libjnidispatch.so;
++processor=x86;osname=netbsd,
++com/sun/jna/netbsd-x86-64/libjnidispatch.so;
++processor=x86-64;osname=netbsd,
+ com/sun/jna/openbsd-x86/libjnidispatch.so;
+ processor=x86;osname=openbsd,
+ com/sun/jna/openbsd-x86-64/libjnidispatch.so;
+@@ -490,6 +494,7 @@
+       <fileset dir="${classes}" excludes="${jar.omitted}">
+         <patternset refid="jar-compiled"/>
+       </fileset>
++<!--
+       <zipfileset src="${lib.native}/win32-x86.jar"
+                   includes="*jnidispatch*"
+                   prefix="com/sun/jna/win32-x86"/>
+@@ -556,6 +561,12 @@
+       <zipfileset src="${lib.native}/freebsd-x86-64.jar"
+                   includes="*jnidispatch*"
+                   prefix="com/sun/jna/freebsd-x86-64"/>
++      <zipfileset src="${lib.native}/netbsd-x86.jar"
++                  includes="*jnidispatch*"
++                  prefix="com/sun/jna/netbsd-x86"/>
++      <zipfileset src="${lib.native}/netbsd-x86-64.jar"
++                  includes="*jnidispatch*"
++                  prefix="com/sun/jna/netbsd-x86-64"/>
+       <zipfileset src="${lib.native}/openbsd-x86.jar"
+                   includes="*jnidispatch*"
+                   prefix="com/sun/jna/openbsd-x86"/>
+@@ -568,6 +579,7 @@
+       <zipfileset src="${lib.native}/w32ce-arm.jar"
+                   includes="*jnidispatch*"
+                   prefix="com/sun/jna/w32ce-arm"/>
++-->
+     </jar>
+     <zip zipfile="${build}/${minjar}">
+       <zipfileset src="${build}/${jar}" excludes="**/*jnidispatch*"/>
+@@ -730,6 +742,8 @@
+     <copy file="${lib.native}/out-of-date.jar" tofile="${lib.native}/linux-s390x.jar" overwrite="true"/>
+     <copy file="${lib.native}/out-of-date.jar" tofile="${lib.native}/freebsd-x86.jar" overwrite="true"/>
+     <copy file="${lib.native}/out-of-date.jar" tofile="${lib.native}/freebsd-x86-64.jar" overwrite="true"/>
++    <copy file="${lib.native}/out-of-date.jar" tofile="${lib.native}/netbsd-x86.jar" overwrite="true"/>
++    <copy file="${lib.native}/out-of-date.jar" tofile="${lib.native}/netbsd-x86-64.jar" overwrite="true"/>
+     <copy file="${lib.native}/out-of-date.jar" tofile="${lib.native}/openbsd-x86.jar" overwrite="true"/>
+     <copy file="${lib.native}/out-of-date.jar" tofile="${lib.native}/openbsd-x86-64.jar" overwrite="true"/>
+     <copy file="${lib.native}/out-of-date.jar" tofile="${lib.native}/sunos-x86.jar" overwrite="true"/>
+@@ -1018,6 +1032,7 @@
+         <attribute name="Specification-Version" value="${jni.version}"/>
+       </manifest>
+     </jar>
++    <copy file="${build}/${native.jar}" tofile="${build}/jna-native.jar"/>
+     <copy todir="${lib.native}">
+       <fileset dir="${build}" includes="${native.jar}"/>
+     </copy>
