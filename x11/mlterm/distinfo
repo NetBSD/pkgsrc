@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.75 2019/02/17 16:57:59 tsutsui Exp $
+$NetBSD: distinfo,v 1.76 2019/04/05 12:14:58 tsutsui Exp $
 
-SHA1 (mlterm-3.8.7.tar.gz) = 040363ea4428fbdbeaa49cf402f71f41b8dbaea7
-RMD160 (mlterm-3.8.7.tar.gz) = 4a9a4a053a6ae4c431564c84051a7ed95acaa311
-SHA512 (mlterm-3.8.7.tar.gz) = 6d2087d1433918f476e35dbde8d79940170fa6f133b9122e1db19006afc5081dbad7ed487bfa939b3d92ea29f3843a2b7c5540dc05e54b3c568bbe76ceb66ad2
-Size (mlterm-3.8.7.tar.gz) = 3994292 bytes
-SHA1 (patch-configure) = b29ee553686061f8fd0f93b8c1d68954c060338d
+SHA1 (mlterm-3.8.8.tar.gz) = 54f40fa50214656ab70f592d5d58805b1dfdc1c6
+RMD160 (mlterm-3.8.8.tar.gz) = 9a7675a86999541b57742099a5e9eac8a539b580
+SHA512 (mlterm-3.8.8.tar.gz) = 4db7de441300d30eadc85d1c780bb10c81d2555225fe163280508180ccc2114eeacf0e5772f9d69c1b59ef6f3ffb3444b75fe3e5ea508dd9e18e5850e78f78a5
+Size (mlterm-3.8.8.tar.gz) = 4035215 bytes
+SHA1 (patch-configure) = e95b426f028c9bcb9895e69bb85ce8450f78a8c8
 SHA1 (patch-etc_font-fb) = 03f0b2ecee20ef3201c8e4ce17f03ac90f657b00
-SHA1 (patch-uitoolkit_xlib_ui__window.c) = 6424d2cd55564bd2a3a5e61582d8bc156b0eb703
