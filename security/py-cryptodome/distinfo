@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2019/03/24 10:41:01 adam Exp $
+$NetBSD: distinfo,v 1.20 2019/04/05 09:18:33 adam Exp $
 
-SHA1 (pycryptodome-3.8.0.tar.gz) = 85a6c923420176f4b9b332db68c89230803c5dcc
-RMD160 (pycryptodome-3.8.0.tar.gz) = a54a9e618c9cbc5da2610c12bea36cbfe9cef875
-SHA512 (pycryptodome-3.8.0.tar.gz) = f7f3928e71a87accd9edf88e981b52c55bcd59a3da4c470ecf3d3e5f26f0cc265bedfb97bb1e5142f306a4678a1286f9ca8efc9cd84801a6a3db5b1824c91648
-Size (pycryptodome-3.8.0.tar.gz) = 11495774 bytes
+SHA1 (pycryptodome-3.8.1.tar.gz) = 453129fdaf21dd4d5462fae6e40d2868a787a8a9
+RMD160 (pycryptodome-3.8.1.tar.gz) = 76def3478a8e495494e763eac1d9441f7dcc9698
+SHA512 (pycryptodome-3.8.1.tar.gz) = aa560b3626de53afb70f155085bce8bb76e37b81762bb7d743c3905eeb1597efbff4c17d7fe26bd9ab102213356db95782fcd2b57377037c50df30a0dcfcbc7f
+Size (pycryptodome-3.8.1.tar.gz) = 11535959 bytes
