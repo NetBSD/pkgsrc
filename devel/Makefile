@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2846 2019/03/26 16:36:02 he Exp $
+# $NetBSD: Makefile,v 1.2847 2019/04/05 12:59:12 nonaka Exp $
 #
 
 COMMENT=	Development utilities
@@ -503,6 +503,7 @@ SUBDIR+=	intellij-ue-bin
 SUBDIR+=	isect
 SUBDIR+=	ivykis
 SUBDIR+=	jam
+SUBDIR+=	java-jna
 SUBDIR+=	java-subversion
 SUBDIR+=	javacc
 SUBDIR+=	javadeps
