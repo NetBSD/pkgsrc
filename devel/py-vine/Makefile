@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2019/01/15 11:40:03 adam Exp $
+# $NetBSD: Makefile,v 1.4 2019/04/05 12:54:27 adam Exp $
 
-DISTNAME=	vine-1.2.0
+DISTNAME=	vine-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/vine/}
@@ -10,8 +10,8 @@ HOMEPAGE=	http://vine.readthedocs.io/
 COMMENT=	Promises, promises, promises
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-case>=1.3.1:../../devel/py-case
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test>=3.0:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-case>=1.3.1:../../devel/py-case
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.0:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
