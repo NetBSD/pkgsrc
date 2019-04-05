@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2019/02/28 06:55:51 jnemeth Exp $
+# $NetBSD: Makefile,v 1.47 2019/04/05 19:33:53 maya Exp $
 #
 
 COMMENT=	File systems, and file system related packages
@@ -17,6 +17,7 @@ SUBDIR+=	fuse-curlftpfs
 SUBDIR+=	fuse-darling-dmg
 SUBDIR+=	fuse-djmount
 SUBDIR+=	fuse-encfs
+SUBDIR+=	fuse-exfat
 SUBDIR+=	fuse-ext2
 SUBDIR+=	fuse-gmailfs
 SUBDIR+=	fuse-gphotofs
