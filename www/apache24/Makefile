@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2019/04/02 07:25:38 adam Exp $
+# $NetBSD: Makefile,v 1.78 2019/04/05 13:48:38 jperkin Exp $
 #
 # When updating this package, make sure that no strings like
 # "PR 12345" are in the commit message. Upstream likes
@@ -7,6 +7,7 @@
 
 DISTNAME=	httpd-2.4.39
 PKGNAME=	${DISTNAME:S/httpd/apache/}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_APACHE:=httpd/}
 MASTER_SITES+=	http://archive.apache.org/dist/httpd/
@@ -52,8 +53,6 @@ BUILDLINK_API_DEPENDS.apr-util+=	apr-util>=1.5.3
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
-CONFIGURE_ARGS+=	--disable-xml2enc
-CONFIGURE_ARGS+=	--disable-proxy-html
 CONFIGURE_ARGS+=	--enable-proxy-fdpass
 
 DFLT_APACHE_MODULES+=	all
