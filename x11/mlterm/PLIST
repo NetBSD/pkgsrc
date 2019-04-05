@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2018/11/01 15:11:07 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.42 2019/04/05 12:14:58 tsutsui Exp $
 bin/mlcc
 bin/mlclient
 bin/mlclientx
@@ -42,12 +42,11 @@ ${PLIST.ind}lib/mlterm/libind_kannada.la
 ${PLIST.ind}lib/mlterm/libind_malayalam.la
 ${PLIST.ind}lib/mlterm/libind_oriya.la
 ${PLIST.ind}lib/mlterm/libind_punjabi.la
-${PLIST.ind}lib/mlterm/libind_tamil.la
 ${PLIST.ind}lib/mlterm/libind_telugu.la
 lib/mlterm/libmotif.la
 lib/mlterm/libmozmodern.la
-${PLIST.otl}lib/mlterm/libotl.la
 lib/mlterm/libnext.la
+${PLIST.otl}lib/mlterm/libotl.la
 lib/mlterm/libpixmap_engine.la
 lib/mlterm/libsample.la
 ${PLIST.cairo}lib/mlterm/libtype_cairo.la
