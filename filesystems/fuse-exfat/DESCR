@@ -1,0 +1,3 @@
+This project aims to provide a full-featured exFAT file system
+implementation for Unix-like systems. It consists of a FUSE module
+(fuse-exfat) and a set of utilities (exfat-utils).
