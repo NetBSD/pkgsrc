@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/10/24 10:06:40 adam Exp $
+$NetBSD: distinfo,v 1.5 2019/04/05 13:42:30 adam Exp $
 
-SHA1 (repmgr-4.2.0.tar.gz) = 5b1c6335474044678a89b8e4b40f5bdf37f3060c
-RMD160 (repmgr-4.2.0.tar.gz) = b60b99bafd79c133682948b94d054beff6e4ac59
-SHA512 (repmgr-4.2.0.tar.gz) = 457feeffbde0010d1017603da7a4739284e81f7dfb91c12f2703ebd688bdd53d79c3776d5d8a7efe8ff10799aae8760c1c413418dd6f5b1de125a8fbbef0677c
-Size (repmgr-4.2.0.tar.gz) = 341556 bytes
+SHA1 (repmgr-4.3.0.tar.gz) = 8664de9e889f91450f66060d6841775893fdaabb
+RMD160 (repmgr-4.3.0.tar.gz) = e4e01dd73633790c99513220bc8cc5fcaa695037
+SHA512 (repmgr-4.3.0.tar.gz) = 7714ad2ef174e647d54d4fe0fe2aa7953b50adcd1e09a15d88a6d68f27101db807f155be8dfb1fd48e1f3a148f102d66181a8ff57c792f153beb21b08f854a28
+Size (repmgr-4.3.0.tar.gz) = 385506 bytes
