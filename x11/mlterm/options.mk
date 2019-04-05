@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.15 2018/08/18 01:32:23 ryoon Exp $
+# $NetBSD: options.mk,v 1.16 2019/04/05 12:14:58 tsutsui Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mlterm
-PKG_SUPPORTED_OPTIONS=	cairo canna fcitx fribidi gdk_pixbuf2 ibus libind m17nlib mlterm-fb otl scim skk uim wnn4 xft2
-PKG_SUGGESTED_OPTIONS=	cairo fribidi gdk_pixbuf2 m17nlib otl xft2
+PKG_SUPPORTED_OPTIONS=	cairo canna fcitx fribidi gdk_pixbuf2 ibus libind m17nlib mlterm-fb otl scim skk uim utmp wnn4 xft2
+PKG_SUGGESTED_OPTIONS=	cairo fribidi gdk_pixbuf2 m17nlib otl utmp xft2
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux"
 PKG_SUGGESTED_OPTIONS+=	mlterm-fb
 .endif
@@ -111,6 +111,13 @@ PLIST.uim=		yes
 LICENSE+=		AND gnu-lgpl-v2
 .else
 CONFIGURE_ARGS+=	--disable-uim
+.endif
+
+.if !empty(PKG_OPTIONS:Mutmp)
+CONFIGURE_ARGS+=	--enable-utmp
+SPECIAL_PERMS+=		bin/mlterm ${REAL_ROOT_USER} utmp 2755
+.else
+CONFIGURE_ARGS+=	--disable-utmp
 .endif
 
 .if !empty(PKG_OPTIONS:Mwnn4)

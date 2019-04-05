@@ -1,15 +1,24 @@
-$NetBSD: patch-configure,v 1.17 2018/06/22 14:17:15 tsutsui Exp $
+$NetBSD: patch-configure,v 1.18 2019/04/05 12:14:58 tsutsui Exp $
 
-- setuid root is handled by SPECIAL_PERMS in pkgsrc
+- setuid root / setgid utmp is handled by SPECIAL_PERMS in pkgsrc
 
---- configure.orig	2018-03-07 13:17:24.000000000 +0000
+--- configure.orig	2019-03-31 13:10:47.000000000 +0000
 +++ configure
-@@ -22185,7 +22185,7 @@ else
- fi
+@@ -25536,7 +25536,7 @@ if test "$INSTALL_OPT" = ""; then
+ 	if test "$utmp_none_obj" = ""; then
+ 		has_utmp=`grep utmp /etc/group 2>/dev/null`
+ 		if test "$has_utmp" ; then
+-			INSTALL_OPT="-m 2755 -g utmp"
++			INSTALL_OPT=""
+ 		else
+ 			INSTALL_OPT="-m 4755 -o root"
+ 		fi
+@@ -25545,7 +25545,7 @@ if test "$INSTALL_OPT" = ""; then
+ 	fi
  
- if test "$gui" = "fb" ; then
--	INSTALL_OPT="-m 4755 -o root"
-+	INSTALL_OPT=""
+ 	if test "$gui" = "fb" ; then
+-		INSTALL_OPT="-m 4755 -o root"
++		INSTALL_OPT=""
+ 	fi
  fi
- 
  
