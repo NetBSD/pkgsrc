@@ -1,1 +1,1 @@
-bin/celery @PREFIX@/bin/celery@PYVERSSUFFIX@
+bin/celery @PREFIX@/bin/celery-@PYVERSSUFFIX@
