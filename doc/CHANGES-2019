@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1594 2019/04/05 13:12:17 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1595 2019/04/05 13:42:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2521,3 +2521,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/java-jna version 5.2.0 [nonaka 2019-04-05]
 	Updated parallel/py-billiard to 3.6.0.0 [adam 2019-04-05]
 	Updated devel/py-test-xdist to 1.28.0 [adam 2019-04-05]
+	Updated databases/repmgr to 4.3.0 [adam 2019-04-05]
