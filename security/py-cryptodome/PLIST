@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2019/03/31 10:33:58 leot Exp $
+@comment $NetBSD: PLIST,v 1.15 2019/04/05 09:18:33 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -645,6 +645,7 @@ ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_import_RSA.pyo
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p256.txt
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_private.der
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_private.pem
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_private_ecparams.pem
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_private_enc_aes128.pem
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_private_enc_aes192.pem
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_private_enc_aes256_gcm.pem
