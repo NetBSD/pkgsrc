@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1588 2019/04/05 09:18:54 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1589 2019/04/05 09:59:37 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2512,3 +2512,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/ucspi-tcp6 to 1.10.4 [schmonz 2019-04-04]
 	Updated databases/py-psycopg2 to 2.8 [adam 2019-04-05]
 	Updated security/py-cryptodome to 3.8.1 [adam 2019-04-05]
+	Updated mail/notmuch to 0.28.3nb2 [ryoon 2019-04-05]
