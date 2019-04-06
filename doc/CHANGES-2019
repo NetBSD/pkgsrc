@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1604 2019/04/06 19:28:28 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1605 2019/04/06 21:52:22 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2531,3 +2531,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/decode-dimms to 0.0.20190405 [pgoyette 2019-04-06]
 	Updated sysutils/py-diffoscope to 110nb1 [maya 2019-04-06]
 	Updated print/tex-overpic to 1.2nb1 [wiz 2019-04-06]
+	Updated net/youtube-dl to 20190407 [leot 2019-04-06]
