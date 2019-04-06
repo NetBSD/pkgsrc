@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1602 2019/04/06 11:00:42 pgoyette Exp $
+$NetBSD: CHANGES-2019,v 1.1603 2019/04/06 17:54:18 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2529,3 +2529,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated biology/chemtool to 1.6.14nb10 [bacon 2019-04-06]
 	Updated fonts/inconsolata-ttf to 20090207nb2 [wiz 2019-04-06]
 	Updated sysutils/decode-dimms to 0.0.20190405 [pgoyette 2019-04-06]
+	Updated sysutils/py-diffoscope to 110nb1 [maya 2019-04-06]
