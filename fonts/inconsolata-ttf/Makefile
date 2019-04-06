@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2014/06/01 16:35:34 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.12 2019/04/06 08:50:20 wiz Exp $
 
 DISTNAME=	Inconsolata.otf
 PKGNAME=	inconsolata-ttf-20090207
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.levien.com/type/myfonts/
 EXTRACT_SUFX=	# empty
@@ -17,18 +16,10 @@ CONFLICTS=	inconsolata-[0-9]*
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
-WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# empty
-NO_CONFIGURE=	YES
-NO_BUILD=	YES
-
-INSTALLATION_DIRS=	share/fonts/X11/TTF
-FONTS_DIRS.ttf=		${PREFIX}/share/fonts/X11/TTF
 
 do-extract:
 	${CP} ${_DISTDIR}/${DISTNAME} ${WRKSRC}
 
-do-install:
-	${INSTALL_DATA} ${WRKSRC}/${DISTNAME} ${DESTDIR}${PREFIX}/share/fonts/X11/TTF
-
+.include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"
