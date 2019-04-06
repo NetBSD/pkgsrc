@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.81 2019/04/01 17:41:59 leot Exp $
+@comment $NetBSD: PLIST,v 1.82 2019/04/06 21:52:07 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -80,6 +80,9 @@ ${PYSITELIB}/youtube_dl/extractor/addanime.pyo
 ${PYSITELIB}/youtube_dl/extractor/adn.py
 ${PYSITELIB}/youtube_dl/extractor/adn.pyc
 ${PYSITELIB}/youtube_dl/extractor/adn.pyo
+${PYSITELIB}/youtube_dl/extractor/adobeconnect.py
+${PYSITELIB}/youtube_dl/extractor/adobeconnect.pyc
+${PYSITELIB}/youtube_dl/extractor/adobeconnect.pyo
 ${PYSITELIB}/youtube_dl/extractor/adobepass.py
 ${PYSITELIB}/youtube_dl/extractor/adobepass.pyc
 ${PYSITELIB}/youtube_dl/extractor/adobepass.pyo
@@ -212,6 +215,9 @@ ${PYSITELIB}/youtube_dl/extractor/bellmedia.pyo
 ${PYSITELIB}/youtube_dl/extractor/bet.py
 ${PYSITELIB}/youtube_dl/extractor/bet.pyc
 ${PYSITELIB}/youtube_dl/extractor/bet.pyo
+${PYSITELIB}/youtube_dl/extractor/bfi.py
+${PYSITELIB}/youtube_dl/extractor/bfi.pyc
+${PYSITELIB}/youtube_dl/extractor/bfi.pyo
 ${PYSITELIB}/youtube_dl/extractor/bigflix.py
 ${PYSITELIB}/youtube_dl/extractor/bigflix.pyc
 ${PYSITELIB}/youtube_dl/extractor/bigflix.pyo
@@ -1442,6 +1448,9 @@ ${PYSITELIB}/youtube_dl/extractor/pinkbike.pyo
 ${PYSITELIB}/youtube_dl/extractor/pladform.py
 ${PYSITELIB}/youtube_dl/extractor/pladform.pyc
 ${PYSITELIB}/youtube_dl/extractor/pladform.pyo
+${PYSITELIB}/youtube_dl/extractor/platzi.py
+${PYSITELIB}/youtube_dl/extractor/platzi.pyc
+${PYSITELIB}/youtube_dl/extractor/platzi.pyo
 ${PYSITELIB}/youtube_dl/extractor/playfm.py
 ${PYSITELIB}/youtube_dl/extractor/playfm.pyc
 ${PYSITELIB}/youtube_dl/extractor/playfm.pyo
