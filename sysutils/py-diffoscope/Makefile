@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2019/02/09 14:13:25 khorben Exp $
+# $NetBSD: Makefile,v 1.9 2019/04/06 17:53:53 maya Exp $
 
 DISTNAME=	diffoscope-110
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/diffoscope/}
 
@@ -12,6 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-libarchive-c-[0-9]*:../../archivers/py-libarchive-c
 DEPENDS+=	${PYPKGPREFIX}-magic-[0-9]*:../../sysutils/py-magic
+DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 DEPENDS+=	${PYPKGPREFIX}-tlsh-[0-9]*:../../devel/py-tlsh
 DEPENDS+=	colordiff-[0-9]*:../../devel/colordiff
 # for xxd
