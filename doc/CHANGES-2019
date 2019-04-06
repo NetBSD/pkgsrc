@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1600 2019/04/06 00:56:05 bacon Exp $
+$NetBSD: CHANGES-2019,v 1.1601 2019/04/06 08:50:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2527,3 +2527,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added filesystems/fuse-exfat version 1.3.0 [maya 2019-04-05]
 	Updated pkgtools/pkg_install to 20190405 [sevan 2019-04-05]
 	Updated biology/chemtool to 1.6.14nb10 [bacon 2019-04-06]
+	Updated fonts/inconsolata-ttf to 20090207nb2 [wiz 2019-04-06]
