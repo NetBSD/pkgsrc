@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2018/01/07 21:56:35 rillig Exp $
+# $NetBSD: Makefile.common,v 1.30 2019/04/06 08:44:07 wiz Exp $
 #
 # used by fonts/cyberbit-ttf/Makefile
 # used by fonts/cyberbase-ttf/Makefile
@@ -23,14 +23,11 @@ USE_TOOLS+=     unzip
 DIST_SUBDIR=	cyberbit-ttf
 
 EXTRACT_ONLY=		${FONT_FILE}
-#EXTRACT_OPTS_ZIP=	-Laq
 
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
-AUTO_MKDIRS=	yes
+INSTALLATION_DIRS+=	share/doc/cyberbit-ttf
 
-do-install:
-	${INSTALL_DATA} ${WRKDIR}/*.ttf \
-		${DESTDIR}${PREFIX}/share/fonts/X11/TTF
+post-install:
 	${INSTALL_DATA} ${_DISTDIR}/ReadMe.htm \
 		${DESTDIR}${PREFIX}/share/doc/cyberbit-ttf
+
+.include "../../mk/fonts.mk"
