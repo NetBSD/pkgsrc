@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2019/04/04 07:53:52 bsiegert Exp $
+# $NetBSD: Makefile,v 1.29 2019/04/06 19:35:38 bsiegert Exp $
 
 DISTNAME=	botocore-1.12.92
 PKGREVISION=	1
@@ -11,17 +11,13 @@ HOMEPAGE=	https://github.com/boto/botocore
 COMMENT=	Low-level interface to a growing number of Amazon Web Services
 LICENSE=	apache-2.0
 
+DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.5.3<3:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-jmespath>=0.7.1<1:../../textproc/py-jmespath
 DEPENDS+=	${PYPKGPREFIX}-urllib3-[0-9]*:../../www/py-urllib3
 
-.include "../../lang/python/egg.mk"
-
-.if ${PYPKGPREFIX} == "py27"
-DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
-.endif
-
 USE_LANGUAGES=	# none
 
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
