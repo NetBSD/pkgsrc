@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/04/12 08:07:48 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2019/04/06 08:58:11 wiz Exp $
 
 VERSION=	0.83
 PKGNAME=	ubuntu-fonts-${VERSION}
@@ -12,28 +12,8 @@ HOMEPAGE=	http://font.ubuntu.com/
 COMMENT=	TrueType font family from Ubuntu
 LICENSE=	ubuntu-font-license
 
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
-
 DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
-FONTDIR=	${PREFIX}/share/fonts/X11/TTF
-FONTS_DIRS.ttf=	${FONTDIR}
-
-INSTALLATION_DIRS=	${DOCDIR} ${FONTDIR}
-
-INSTALL_FONTS=	Ubuntu-B.ttf			\
-		Ubuntu-BI.ttf			\
-		Ubuntu-C.ttf			\
-		Ubuntu-L.ttf			\
-		Ubuntu-LI.ttf			\
-		Ubuntu-M.ttf			\
-		Ubuntu-MI.ttf			\
-		Ubuntu-R.ttf			\
-		Ubuntu-RI.ttf			\
-		UbuntuMono-B.ttf		\
-		UbuntuMono-BI.ttf		\
-		UbuntuMono-R.ttf		\
-		UbuntuMono-RI.ttf
+INSTALLATION_DIRS+=	${DOCDIR}
 
 INSTALL_DOCS=	CONTRIBUTING.txt		\
 		FONTLOG.txt			\
@@ -43,12 +23,10 @@ INSTALL_DOCS=	CONTRIBUTING.txt		\
 		TRADEMARKS.txt			\
 		copyright.txt
 
-do-install:
-.for fontfile in ${INSTALL_FONTS}
-	${INSTALL_DATA} ${WRKSRC}/${fontfile} ${DESTDIR}${FONTDIR}
-.endfor
+post-install:
 .for docfile in ${INSTALL_DOCS}
 	${INSTALL_DATA} ${WRKSRC}/${docfile} ${DESTDIR}${DOCDIR}
 .endfor
 
+.include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"
