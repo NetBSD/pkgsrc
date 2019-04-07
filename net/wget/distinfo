@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.58 2019/02/10 19:49:58 spz Exp $
+$NetBSD: distinfo,v 1.59 2019/04/07 09:02:00 gutteridge Exp $
 
-SHA1 (wget-1.20.1.tar.lz) = 6c46afab96031eba0429ceba7e1d6f8206b9a036
-RMD160 (wget-1.20.1.tar.lz) = 82f71ce2a47a052ed7fb7b0d18f0a62e62142b75
-SHA512 (wget-1.20.1.tar.lz) = d35cdb390c1a28efb756b86c6cdb5c19d40809883266b7a98c7916cda515e34600951f2ad3d148864b3ace2451f8db726c2b7025cc2dd2d692aafc59dae200f8
-Size (wget-1.20.1.tar.lz) = 2120611 bytes
+SHA1 (wget-1.20.3.tar.lz) = 021929778956b7d71cf5c4fd98b4c719b293088d
+RMD160 (wget-1.20.3.tar.lz) = 799ac821c7ffde9d2cb3007a6ce4114a66181ce6
+SHA512 (wget-1.20.3.tar.lz) = 95fb064f0d79b0a3178a83322f58a85a3a036fb300ed759eb67a538f0bbacdd552f6cbeb60d63b4f0113e8467d923a5ce7ac5570b7a4ce1733b3dfd559bb33b2
+Size (wget-1.20.3.tar.lz) = 2135272 bytes
 SHA1 (patch-doc_wget.texi) = 6db25b3500ff4617b5ade34d9013b1f9876104f8
