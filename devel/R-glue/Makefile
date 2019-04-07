@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/05/18 01:00:59 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2019/04/07 13:19:52 wen Exp $
 
-DISTNAME=	glue_1.2.0
+DISTNAME=	glue_1.3.1
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
