@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.25 2017/11/11 19:43:06 maya Exp $
+$NetBSD: distinfo,v 1.26 2019/04/07 19:26:56 leot Exp $
 
-SHA1 (socat-1.7.3.2.tar.gz) = 28eca1f8efeadde3f96c1ac89e553c28d736d41d
-RMD160 (socat-1.7.3.2.tar.gz) = b20967255460adb348aa90f42aaa6bea062f4b7c
-SHA512 (socat-1.7.3.2.tar.gz) = 540658b2a3d1b87673196282e5c62b97681bd0f1d1e4759ff9d72909d11060235ee9e9521a973603c1b00376436a9444248e5fbc0ffac65f8edb9c9bc28e7972
-Size (socat-1.7.3.2.tar.gz) = 611707 bytes
-SHA1 (patch-mytypes.h) = 94df5a47f7fbadf867e0994edeeb857b467021df
-SHA1 (patch-test.sh) = f8e123d3e1a71d6ec34dc2dc42c6de0875a47754
+SHA1 (socat-1.7.3.3.tar.gz) = acbb6c4c303a9bd8428c7846545849f25d92bd76
+RMD160 (socat-1.7.3.3.tar.gz) = ed1e304fe3e0c7cffdab6dbb1f5f752c3dd53ca4
+SHA512 (socat-1.7.3.3.tar.gz) = b3ea4cb6081f7778a0281a3ec36ea7e5daf07dc19f2e0de08f767417112776e96e1bcac7962ebb6dd8b960ad91fc4a452f0da8327736d50e215e4ab43947ff78
+Size (socat-1.7.3.3.tar.gz) = 614101 bytes
