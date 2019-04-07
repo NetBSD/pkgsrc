@@ -1,3 +1,16 @@
-$NetBSD: CHANGES-pkgsrc-2019Q1,v 1.1.2.1 2019/03/31 20:25:27 jperkin Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q1,v 1.1.2.2 2019/04/07 15:00:50 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q1 branch:
+
+Pullup ticket #5926 - requested by markd
+x11/qt5-qtbase: build fix
+
+Pullup ticket #5927 - requested by markd
+x11/qt5-qtbase: build fix
+
+Pullup ticket #5928 - requested by nia
+chat/unrealircd: build fix
+
+Pullup ticket #5929 - requested by tsutsui
+devel/protobuf, devel/py-protobuf: update (mozc-server build fix)
+
