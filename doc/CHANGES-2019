@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1609 2019/04/07 01:58:03 wen Exp $
+$NetBSD: CHANGES-2019,v 1.1610 2019/04/07 02:01:55 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2536,3 +2536,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-File-BOM to 0.16 [wen 2019-04-07]
 	Updated devel/p5-File-Slurp to 9999.27 [wen 2019-04-07]
 	Updated devel/p5-GitLab-API-v3 to 1.05 [wen 2019-04-07]
+	Updated devel/p5-Inline to 0.82 [wen 2019-04-07]
