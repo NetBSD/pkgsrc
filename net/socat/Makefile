@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2018/07/04 13:40:31 jperkin Exp $
+# $NetBSD: Makefile,v 1.41 2019/04/07 19:26:56 leot Exp $
 
-DISTNAME=	socat-1.7.3.2
-PKGREVISION=	1
+DISTNAME=	socat-1.7.3.3
 CATEGORIES=	net
 MASTER_SITES=	http://www.dest-unreach.org/socat/download/
 
@@ -12,11 +11,10 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		YES
 
-USE_TOOLS+=	bash # test tool
+USE_TOOLS+=	bash:test
 REPLACE_BASH+=	*.sh
 
-do-test:
-	cd ${WRKSRC} && ${MAKE} test
+TEST_TARGET=	test
 
 .include "../../mk/bsd.prefs.mk"
 
