@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1639 2019/04/07 21:38:01 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.1640 2019/04/07 21:53:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2572,3 +2572,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/pixman to 0.38.2 [wiz 2019-04-07]
 	Updated audio/musicpd to 0.21.7 [wiz 2019-04-07]
 	Updated textproc/itstool to 2.0.6 [wiz 2019-04-07]
+	Updated lang/vala to 0.44.2 [wiz 2019-04-07]
