@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.4 2019/03/06 07:14:56 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/04/07 01:02:35 gutteridge Exp $
 bin/mate-volume-control
-bin/mate-volume-control-applet
+bin/mate-volume-control-status-icon
+libexec/mate-volume-control-applet
 man/man1/mate-volume-control-applet.1
 man/man1/mate-volume-control.1
 share/applications/mate-volume-control.desktop
-share/examples/mate-media/xdg/autostart/mate-volume-control-applet.desktop
+share/dbus-1/services/org.mate.panel.applet.GvcAppletFactory.service
+share/examples/mate-media/xdg/autostart/mate-volume-control-status-icon.desktop
 share/locale/af/LC_MESSAGES/mate-media.mo
 share/locale/am/LC_MESSAGES/mate-media.mo
 share/locale/an/LC_MESSAGES/mate-media.mo
@@ -177,6 +179,7 @@ share/mate-media/icons/hicolor/scalable/status/audio-input-microphone-low.svg
 share/mate-media/icons/hicolor/scalable/status/audio-input-microphone-medium.svg
 share/mate-media/icons/hicolor/scalable/status/audio-input-microphone-muted.svg
 share/mate-media/sounds/mate-sounds-default.xml
+share/mate-panel/applets/org.mate.applets.GvcApplet.mate-panel-applet
 share/sounds/mate/default/alerts/bark.ogg
 share/sounds/mate/default/alerts/drip.ogg
 share/sounds/mate/default/alerts/glass.ogg
