@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2019/02/09 00:47:03 wen Exp $
+# $NetBSD: Makefile,v 1.41 2019/04/07 02:01:15 wen Exp $
 #
 
-DISTNAME=	Inline-0.81
+DISTNAME=	Inline-0.82
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Inline/}
