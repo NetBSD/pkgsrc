@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1616 2019/04/07 07:39:31 wen Exp $
+$NetBSD: CHANGES-2019,v 1.1617 2019/04/07 08:01:12 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2543,3 +2543,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/p5-Encode to 3.01 [wen 2019-04-07]
 	Updated textproc/p5-Text-BibTeX to 0.87 [wen 2019-04-07]
 	Updated textproc/p5-Text-CSV_XS to 1.39 [wen 2019-04-07]
+	Updated textproc/p5-XML-Feed to 0.59 [wen 2019-04-07]
