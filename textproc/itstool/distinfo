@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2018/11/30 15:04:02 wiz Exp $
+$NetBSD: distinfo,v 1.10 2019/04/07 21:37:51 wiz Exp $
 
-SHA1 (itstool-2.0.5.tar.bz2) = 0341f6e980c00f95c6a5652228578cb13ebf0d98
-RMD160 (itstool-2.0.5.tar.bz2) = e46f5697195741bc755794ccaacd7cbebfea8d3a
-SHA512 (itstool-2.0.5.tar.bz2) = 67c55b83e43b5a4626a6633305b2e48a06a5defdf7725e78b00409edea213d166cb3d870a58eb402c48968bddd7c1778d9852acfa0ddebdd363f34ac13f32aa7
-Size (itstool-2.0.5.tar.bz2) = 102751 bytes
+SHA1 (itstool-2.0.6.tar.bz2) = 9a7a3cd6e33763f6f369a907e79da98cc47b86e7
+RMD160 (itstool-2.0.6.tar.bz2) = 536ebd2f700485fa7ebba81656eee703495b24e6
+SHA512 (itstool-2.0.6.tar.bz2) = 51058bdcb208f6fb84810f71f9bf67e42b00bf157a9756be45f060849c0aff36f695f4403404193720d4446818fa77de61fa94eed9e8789d26c07a2926072eb7
+Size (itstool-2.0.6.tar.bz2) = 103067 bytes
