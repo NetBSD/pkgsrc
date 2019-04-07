@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2018/12/16 18:02:41 adam Exp $
+# $NetBSD: Makefile,v 1.4 2019/04/07 16:02:01 adam Exp $
 
-DISTNAME=	emoji-0.5.1
+DISTNAME=	emoji-0.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/emoji/}
