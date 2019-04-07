@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2018/01/15 08:08:26 adam Exp $
+$NetBSD: distinfo,v 1.4 2019/04/07 18:23:52 adam Exp $
 
-SHA1 (mp4v2-3.0.3.0.tar.gz) = 0c97453ef25420bef1fc380a5e51c2fb3e67638a
-RMD160 (mp4v2-3.0.3.0.tar.gz) = 0329b24f75ec7eda913b25fb2b5717dc20d23134
-SHA512 (mp4v2-3.0.3.0.tar.gz) = 60c3b3538c2c582094a25d5b09e46f4cbe379babf2bce6cba11d03480f43af3995716609784d481a07f835edf610e624f990e6f1e636d90adbd7327ea578fb93
-Size (mp4v2-3.0.3.0.tar.gz) = 8522794 bytes
+SHA1 (mp4v2-4.1.0.0.tar.gz) = 52a8db96ddcdd215fd5f324e2cd8f1be3138f842
+RMD160 (mp4v2-4.1.0.0.tar.gz) = 2d7e2845c6c4d7bfd3fb6a44bf6a2fbdde973922
+SHA512 (mp4v2-4.1.0.0.tar.gz) = 7991fb0ed521a0fe9c17d96e6f2e00516841e80c101757cf094a4ec62a816e60e406c5e7c15ed020a15eec9732ebd4d30f2076bbc61b95cae0d45820a982a305
+Size (mp4v2-4.1.0.0.tar.gz) = 2755640 bytes
