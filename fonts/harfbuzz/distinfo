@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.87 2019/04/02 08:58:47 wiz Exp $
+$NetBSD: distinfo,v 1.88 2019/04/07 18:16:07 adam Exp $
 
-SHA1 (harfbuzz-2.4.0.tar.bz2) = f0f12b9eb1ba53a82533c25901ba023fa92af83c
-RMD160 (harfbuzz-2.4.0.tar.bz2) = d8425d624be09239d0981a00464bda92cec69502
-SHA512 (harfbuzz-2.4.0.tar.bz2) = 88919576ac23f1ba36705212c3bd1cd3c91294f99234c076f13c6cb1f5c78447638c5cfb1bb397f5948db799e6b343667aab2f631fe35295c3d10d10783fd12a
-Size (harfbuzz-2.4.0.tar.bz2) = 17922003 bytes
+SHA1 (harfbuzz-2.4.0/harfbuzz-2.4.0.tar.bz2) = 76a229231d35145fab8f3862dd5395a9a61c62aa
+RMD160 (harfbuzz-2.4.0/harfbuzz-2.4.0.tar.bz2) = 884745083c4dcaa9acdde63c6eabf009488c4eaa
+SHA512 (harfbuzz-2.4.0/harfbuzz-2.4.0.tar.bz2) = daeaf029bd5d0d0674f930a8d0dcdc4e0b1253b2369c732c7b4fd130ab9438d0d9526967224a583ee58974c3b492874acaccdac13c71b58c950f0b3f031e505c
+Size (harfbuzz-2.4.0/harfbuzz-2.4.0.tar.bz2) = 17919355 bytes
 SHA1 (patch-src_hb-blob.cc) = 54fdce34a93bb9fd85a82cf61f3a09e2e34813b3
