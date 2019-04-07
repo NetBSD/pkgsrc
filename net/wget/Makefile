@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.145 2019/04/03 00:33:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.146 2019/04/07 09:02:00 gutteridge Exp $
 
-DISTNAME=	wget-1.20.1
-PKGREVISION=	1
+DISTNAME=	wget-1.20.3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNU:=wget/}
 EXTRACT_SUFX=	.tar.lz
