@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1611 2019/04/07 03:58:18 wen Exp $
+$NetBSD: CHANGES-2019,v 1.1612 2019/04/07 07:18:12 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2538,3 +2538,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-GitLab-API-v3 to 1.05 [wen 2019-04-07]
 	Updated devel/p5-Inline to 0.82 [wen 2019-04-07]
 	Updated devel/p5-IO-AIO to 4.72 [wen 2019-04-07]
+	Updated devel/p5-Test-Simple to 1.302162 [wen 2019-04-07]
