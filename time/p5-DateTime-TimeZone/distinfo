@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.84 2019/01/04 02:41:09 wen Exp $
+$NetBSD: distinfo,v 1.85 2019/04/07 12:36:21 wen Exp $
 
-SHA1 (DateTime-TimeZone-2.23.tar.gz) = b213d840cd0e4ef15efb65d6403dc7992f40e2c6
-RMD160 (DateTime-TimeZone-2.23.tar.gz) = 0e69b8f70007cd79e5fb2e93f32895300fb96e6c
-SHA512 (DateTime-TimeZone-2.23.tar.gz) = e2edfde606bea8595df6f6cec9239fe6fe637d2c3ca2eb319da835c71061dab52ae8da0eb67da3d572b371f2e0820a35d681d9876e0c4dc8003e7504bdd41d06
-Size (DateTime-TimeZone-2.23.tar.gz) = 965468 bytes
+SHA1 (DateTime-TimeZone-2.34.tar.gz) = 0ae400de253c87356fcdbcc90b489143465c3bb6
+RMD160 (DateTime-TimeZone-2.34.tar.gz) = 63793bcb6a48a426eecf0960b3be157bc931abc5
+SHA512 (DateTime-TimeZone-2.34.tar.gz) = 8525542dfee39f8b889889db310d455b03dd0f270d391a06c337c46d9d457969e365ebf9b8fa42eef71b1dbf2bbd3e25c1ef710f19701a300729bc1816bcaa0c
+Size (DateTime-TimeZone-2.34.tar.gz) = 978557 bytes
