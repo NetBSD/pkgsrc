@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2018/09/09 06:57:27 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/04/07 01:56:06 wen Exp $
 
-DISTNAME=	GitLab-API-v3-1.04
+DISTNAME=	GitLab-API-v3-1.05
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/B/BL/BLUEFEET/}
@@ -15,8 +15,10 @@ DEPENDS+=	p5-Log-Any-Adapter-Screen-[0-9]*:../../devel/p5-Log-Any-Adapter-Screen
 DEPENDS+=	p5-Log-Any-Adapter-TAP-[0-9]*:../../devel/p5-Log-Any-Adapter-TAP
 DEPENDS+=	p5-YAML-[0-9]*:../../textproc/p5-YAML
 DEPENDS+=	p5-Role-REST-Client>=0.18:../../www/p5-Role-REST-Client
+DEPENDS+=	p5-Moo>=1.006:../../devel/p5-Moo
 
-REPLACE_PERL+=	bin/gitlab-api-v3
+PERL5_MODULE_TYPE=	Module::Build::Tiny
+REPLACE_PERL+=		script/gitlab-api-v3
 
 PERL5_PACKLIST=	auto/GitLab/API/v3/.packlist
 
