@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2019/03/25 22:29:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.27 2019/04/07 21:53:10 wiz Exp $
 bin/vala
 bin/vala-0.44
 bin/vala-gen-introspect
@@ -23,13 +23,13 @@ lib/vala-0.44/libvalaccodegen.la
 lib/valadoc/doclets/devhelp/libdoclet.la
 lib/valadoc/doclets/gtkdoc/libdoclet.la
 lib/valadoc/doclets/html/libdoclet.la
-man/man1/vala-gen-introspect-${PKGVERSION}
+man/man1/vala-gen-introspect-0.44.1
 man/man1/vala-gen-introspect.1
-man/man1/valac-${PKGVERSION}
+man/man1/valac-0.44.1
 man/man1/valac.1
-man/man1/valadoc-${PKGVERSION}
+man/man1/valadoc-0.44.1
 man/man1/valadoc.1
-man/man1/vapigen-${PKGVERSION}
+man/man1/vapigen-0.44.1
 man/man1/vapigen.1
 share/aclocal/vala.m4
 share/aclocal/vapigen.m4
