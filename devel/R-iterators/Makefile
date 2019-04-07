@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/04/13 16:05:44 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2019/04/07 13:16:02 wen Exp $
 
-DISTNAME=	iterators_1.0.9
+DISTNAME=	iterators_1.0.10
 CATEGORIES=	devel
 
 MAINTAINER=	mishka@NetBSD.org
