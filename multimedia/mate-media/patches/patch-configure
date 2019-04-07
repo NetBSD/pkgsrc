@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1 2019/04/07 01:02:35 gutteridge Exp $
+
+--- configure.orig	2019-04-01 10:25:27.200097504 +0000
++++ configure
+@@ -14708,7 +14708,7 @@ fi
+ # Sanity check: must build either status icon or panel applet
+ #============================================================================
+ 
+-if test "x$enable_statusicon" == "xno" && test "x$enable_panelapplet" == "xno"; then
++if test "x$enable_statusicon" = "xno" && test "x$enable_panelapplet" = "xno"; then
+ 	as_fn_error $? "must build either volume control status icon or volume control applet" "$LINENO" 5
+ fi
+ 
