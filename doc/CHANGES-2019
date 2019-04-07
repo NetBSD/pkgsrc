@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1607 2019/04/07 01:20:44 wen Exp $
+$NetBSD: CHANGES-2019,v 1.1608 2019/04/07 01:24:18 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2534,3 +2534,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/youtube-dl to 20190407 [leot 2019-04-06]
 	Updated multimedia/mate-media to 1.22.1 [gutteridge 2019-04-07]
 	Updated devel/p5-File-BOM to 0.16 [wen 2019-04-07]
+	Updated devel/p5-File-Slurp to 9999.27 [wen 2019-04-07]
