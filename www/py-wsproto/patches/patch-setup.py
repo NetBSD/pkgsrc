@@ -1,19 +1,25 @@
-$NetBSD: patch-setup.py,v 1.1 2018/02/26 12:09:18 leot Exp $
+$NetBSD: patch-setup.py,v 1.2 2019/04/07 15:58:33 adam Exp $
 
+Do not install tests.
 Avoid too strict version requirements.
 
---- setup.py.orig	2017-12-31 17:19:40.000000000 +0000
+--- setup.py.orig	2018-09-23 11:26:23.000000000 +0000
 +++ setup.py
-@@ -47,10 +47,10 @@ setup(
+@@ -35,7 +35,7 @@ setup(
+     author='Benno Rice',
+     author_email='benno@jeamland.net',
+     url='https://github.com/python-hyper/wsproto/',
+-    packages=find_packages(),
++    packages=find_packages(exclude=['test']),
+     package_data={'': ['LICENSE', 'README.rst']},
+     package_dir={'wsproto': 'wsproto'},
+     include_package_data=True,
+@@ -55,7 +55,7 @@ setup(
          'Programming Language :: Python :: Implementation :: PyPy',
      ],
      install_requires=[
--        'h11 ~= 0.7.0',  # means: 0.7.x where x >= 0
-+        'h11>=0.7.0',
+-        'h11 ~= 0.8.1',  # means: 0.8.x where x >= 1
++        'h11>=0.8.1',
      ],
      extras_require={
-         ':python_version == "2.7" or python_version == "3.3"':
--            ['enum34>=1.0.4, <2'],
-+            ['enum34>=1.0.4'],
-     }
- )
+         ':python_version == "2.7"':

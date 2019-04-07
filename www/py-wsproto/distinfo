@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2018/02/26 12:09:18 leot Exp $
+$NetBSD: distinfo,v 1.2 2019/04/07 15:58:32 adam Exp $
 
-SHA1 (wsproto-0.11.0.tar.gz) = acfb9cd1c58ed2573843a6390d03fdfe808c6fed
-RMD160 (wsproto-0.11.0.tar.gz) = cdf698bd685916b2c27f1b40394174cd2773dcc0
-SHA512 (wsproto-0.11.0.tar.gz) = 583e030dc88971b3733e5e84e5fbaa70d6043d01485cabbbf45470baa31e4f511aea55e108132fc298aeae0031542af7bdd22b7ae25b11832179025a2fde4bdd
-Size (wsproto-0.11.0.tar.gz) = 41179 bytes
-SHA1 (patch-setup.py) = 6c229f58d9dd44a46322c849535a2d9ad657ac1d
+SHA1 (wsproto-0.14.0.tar.gz) = 7a8de9f54c2bea675f673c4c344a81c59ac3412c
+RMD160 (wsproto-0.14.0.tar.gz) = 525936c256da69977097490353c2feaf18978285
+SHA512 (wsproto-0.14.0.tar.gz) = 91ffc51229434b8a3c1517b22a082dce0078e38e0f5e7ad016aca9b4d4f2a77c2f9901ea9227e80e61009e70d3ffebb44ed9ae4c988d54a9807b45076e81d43f
+Size (wsproto-0.14.0.tar.gz) = 51540 bytes
+SHA1 (patch-setup.py) = bf4b6885ce51d8ea1bd95c0eb98b16bec60f25d2

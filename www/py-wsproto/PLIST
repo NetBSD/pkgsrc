@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/02/26 12:09:18 leot Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/04/07 15:58:32 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -22,6 +22,12 @@ ${PYSITELIB}/wsproto/extensions.pyo
 ${PYSITELIB}/wsproto/frame_protocol.py
 ${PYSITELIB}/wsproto/frame_protocol.pyc
 ${PYSITELIB}/wsproto/frame_protocol.pyo
+${PYSITELIB}/wsproto/handshake.py
+${PYSITELIB}/wsproto/handshake.pyc
+${PYSITELIB}/wsproto/handshake.pyo
 ${PYSITELIB}/wsproto/utf8validator.py
 ${PYSITELIB}/wsproto/utf8validator.pyc
 ${PYSITELIB}/wsproto/utf8validator.pyo
+${PYSITELIB}/wsproto/utilities.py
+${PYSITELIB}/wsproto/utilities.pyc
+${PYSITELIB}/wsproto/utilities.pyo
