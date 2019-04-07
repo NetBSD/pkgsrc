@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1636 2019/04/07 19:49:27 leot Exp $
+$NetBSD: CHANGES-2019,v 1.1637 2019/04/07 21:15:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2569,3 +2569,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated multimedia/mp4v2 to 4.1.0.0 [adam 2019-04-07]
 	Updated net/socat to 1.7.3.3 [leot 2019-04-07]
 	Updated www/links to 2.19 [leot 2019-04-07]
+	Updated x11/pixman to 0.38.2 [wiz 2019-04-07]
