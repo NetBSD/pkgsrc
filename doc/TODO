@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18932 2019/04/07 22:04:01 wiz Exp $
+$NetBSD: TODO,v 1.18933 2019/04/08 15:32:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -647,6 +647,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ghc-8.2
 	o ghc7-7.10.1
 	o ghdl-0.33
+	o gimp-2.10.10
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-server-2.3.5
