@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.1648 2019/04/08 16:42:05 adam Exp $
+$NetBSD: CHANGES-2019,v 1.1649 2019/04/08 18:38:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -2593,3 +2593,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Added databases/go-ldap version 3.0.2 [adam 2019-04-08]
 	Updated devel/py-setuptools_scm_git_archive to 1.1 [adam 2019-04-08]
 	Updated math/py-numba to 0.43.1 [adam 2019-04-08]
+	Updated net/samba4 to 4.10.2 [adam 2019-04-08]
+	Updated www/py-django-admin-rangefilter to 0.3.14 [adam 2019-04-08]
